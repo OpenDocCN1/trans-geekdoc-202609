@@ -1,0 +1,3184 @@
+![](images/9780262367103.jpg)
+
+ 
+
+**Leonardo**
+
+Roger F. Malina, Executive Editor  
+Sean Cubitt, Editor-in-Chief
+
+*Synthetics: Aspects of Art & Technology in Australia, 1956-1975*, Stephen Jones, 2011
+
+*Hybrid Cultures: Japanese Media Arts in Dialogue with the West*, Yvonne Spielmann, 2012
+
+*Walking and Mapping: Artists as Cartographers*, Karen O’Rourke, 2013
+
+*The Fourth Dimension and Non-Euclidean Geometry in Modern Art, revised edition*, Linda Dalrymple Henderson, 2013
+
+*Illusions in Motion: Media Archaeology of the Moving Panorama and Related Spectacles*, Erkki Huhtamo, 2013
+
+*Relive: Media Art Histories*, edited by Sean Cubitt and Paul Thomas, 2013
+
+*Re-collection: Art, New Media, and Social Memory*, Richard Rinehart and Jon Ippolito, 2014
+
+*Biopolitical Screens: Image, Power, and the Neoliberal Brain*, Pasi Väliaho, 2014
+
+*The Practice of Light: A Genealogy of Visual Technologies from Prints to Pixels*, Sean Cubitt, 2014
+
+*The Tone of Our Times: Sound, Sense, Economy, and Ecology*, Frances Dyson, 2014
+
+*The Experience Machine: Stan VanDerBeek’s Movie-Drome and Expanded Cinema*, Gloria Sutton, 2014
+
+*Hanan al-Cinema: Affections for the Moving Image*, Laura U. Marks, 2015
+
+*Writing and Unwriting (Media) Art History: Erkki Kurenniemi in 2048*, edited by Joasia Krysa and Jussi Parikka, 2015
+
+*Control: Digitality as Cultural Logic*, Seb Franklin, 2015
+
+*New Tendencies: Art at the Threshold of the Information Revolution (1961-1978)*, Armin Medosch, 2016
+
+*Screen Ecologies: Art, Media, and the Environment in the Asia-Pacific Region*, Larissa Hjorth, Sarah Pink, Kristen Sharp, and Linda Williams, 2016
+
+*Pirate Philosophy: For a Digital Posthumanities*, Gary Hall, 2016
+
+*Social Media Archeology and Poetics*, edited by Judy Malloy, 2016
+
+*Practicable: From Participation to Interaction in Contemporary Art*, edited by Samuel Bianchini and Erik Verhagen, 2016
+
+*Machine Art in the Twentieth Century*, Andreas Broeckmann, 2016
+
+*Here/There: Telepresence, Touch, and Art at the Interface*, Kris Paulsen, 2017
+
+*Voicetracks: Attuning to Voice in Media and the Arts*, Norie Neumark, 2017
+
+*Ecstatic Worlds: Media, Utopias, Ecologies*, Janine Marchessault, 2017
+
+*Interface as Utopia: The Media Art and Activism of Fred Forest*, Michael F. Leruth, 2017
+
+*Making Sense: Art, Computing, Cognition, and Embodiment*, Simon Penny, 2017
+
+*Weather as Medium: Towards a Meteorological Art*, Janine Randerson, 2018
+
+*Laboratory Lifestyles: The Construction of Scientific Fictions*, edited by Sandra Kaji-O’Grady, Chris L. Smith, and Russell Hughes, 2018
+
+*Invisible Colors: The Arts of the Atomic Age*, Gabrielle Decamous, 2018
+
+*Virtual Menageries: Animals as Mediators in Network Cultures*, Jody Berland, 2019
+
+*From Fingers to Digits: An Artificial Aesthetic*, Ernest Edmonds and Margaret A. Boden, 2019
+
+*MATERIAL WITNESS: Media, Forensics, Evidence*, Susan Schuppli, 2020
+
+*Tactics of Interfacing: Encoding Affect in Art and Technology*, Ksenia Fedorova, 2020
+
+*Giving Bodies Back to Data: Image-Makers, Bricolage, and Reinvention in Magnetic Resonance Technology*, Silvia Casini, 2021
+
+*A Biography of the Pixel*, Alvy Ray Smith, 2021
+
+*Living Books: Experiments in the Posthumanities*, Janneke Adema, 2021
+
+*Art in the Age of Machine Learning*, Sofian Audry, 2021
+
+See ⟨[http://mitpress.mit.edu](http://mitpress.mit.edu)⟩ for a complete list of titles in this series.
+
+ 
+
+ 
+
+ 
+
+© 2021 Massachusetts Institute of Technology
+
+All rights reserved. No part of this book may be reproduced in any form by any electronic or mechanical means (including photocopying, recording, or information storage and retrieval) without permission in writing from the publisher.
+
+The MIT Press would like to thank the anonymous peer reviewers who provided comments on drafts of this book. The generous work of academic experts is essential for establishing the authority and quality of our publications. We acknowledge with gratitude the contributions of these otherwise uncredited readers.
+
+Library of Congress Cataloging-in-Publication Data
+
+Names: Audry, Sofian, author.
+
+Title: Art in the age of machine learning / Sofian Audry; foreword by Yoshua Bengio.
+
+Description: Cambridge, Massachusetts: The MIT Press, 2021. | Includes bibliographical references and index.
+
+Identifiers: LCCN 2021000765 | ISBN 9780262046183 (hardcover)
+
+Subjects: LCSH: Computer art. | Art and computers. | Machine learning.
+
+Classification: LCC N7433.8.A93 2021 | DDC 776—dc23
+
+LC record available at [https://lccn.loc.gov/2021000765](https://lccn.loc.gov/2021000765)
+
+d\_r0
+
+ 
+
+ 
+
+To Erin
+
+ 
+
+ 
+
+# **List of Figures**
+
+  [1.1](#chapter_1.xhtml#fig1-1)    Nicolas Baginsky, *Aglaopheme*, 1992
+
+  [1.2](#chapter_1.xhtml#fig1-2)    Components of a machine learning system
+
+  [2.1](#chapter_2.xhtml#fig2-1)    Images from *Galápagos* interactive exhibit, 1997
+
+  [2.2](#chapter_2.xhtml#fig2-2)    Komar and Melamid, *America’s Most Wanted*, 1994
+
+  [2.3](#chapter_2.xhtml#fig2-3)    Sample paintings generated by a Creative Adversarial Network (CAN)
+
+  [2.4](#chapter_2.xhtml#fig2-4)    Natalia Balska, *B-612*, 2014
+
+  [3.1](#chapter_3.xhtml#fig3-1)    Richard Dawkins, *Biomorphs*, 1986
+
+  [3.2](#chapter_3.xhtml#fig3-2)    William Latham, *FormGrow/Mutator Generated Art*, 1992/1993
+
+  [3.3](#chapter_3.xhtml#fig3-3)    Petra Gemeinboeck and Rob Saunders, *Zwischenräume*, 2010
+
+  [4.1](#chapter_4.xhtml#fig4-1)    Temporal evolution of first-order behaviors
+
+  [4.2](#chapter_4.xhtml#fig4-2)    Temporal evolution of an adaptive behavior
+
+  [4.3](#chapter_4.xhtml#fig4-3)    Justine Emard, *Co(AI)xistence*, 2017
+
+  [5.1](#chapter_5.xhtml#fig5-1)    Sofia Crespo, *Self Acceptance*, 2018
+
+  [5.2](#chapter_5.xhtml#fig5-2)    Comparison between traditional computer programming and machine learning
+
+  [6.1](#chapter_6.xhtml#fig6-1)    Diagram of a genetic algorithm
+
+  [6.2](#chapter_6.xhtml#fig6-2)    Stephen Kelly, *Open Ended Ensembles (Competitive Coevolution)*, 2016
+
+  [6.3](#chapter_6.xhtml#fig6-3)    Jon McCormack, *Eden*, 2004
+
+  [6.4](#chapter_6.xhtml#fig6-4)    Ruairi Glynn, *Performative Ecologies*, 2008
+
+  [7.1](#chapter_7.xhtml#fig7-1)    Diagram of a multilayer perceptron
+
+  [7.2](#chapter_7.xhtml#fig7-2)    Ursula Damm, *Memory of Space*, 2002
+
+  [7.3](#chapter_7.xhtml#fig7-3)    George Legrady, *Pockets Full of Memories*, 2001
+
+  [7.4](#chapter_7.xhtml#fig7-4)    Self-organizing “feature map” trained on images of black-and-white shapes
+
+  [7.5](#chapter_7.xhtml#fig7-5)    Feature map generated by Ben Bogart’s *Memory Association Machine*, 2008
+
+  [8.1](#chapter_8.xhtml#fig8-1)    Diagram of a deep neural network with many hidden layers
+
+  [8.2](#chapter_8.xhtml#fig8-2)    Example parametric space of simple geometric shapes
+
+  [8.3](#chapter_8.xhtml#fig8-3)    Latent space of handwritten digits
+
+  [8.4](#chapter_8.xhtml#fig8-4)    Mario Klingemann, *Neural Glitch*, 2018
+
+  [8.5](#chapter_8.xhtml#fig8-5)    Installation view of *ReRites* by David Jhave Johnston
+
+  [9.1](#chapter_9.xhtml#fig9-1)    Laetitia Sonami, *Spring Spyre*, 2014
+
+  [9.2](#chapter_9.xhtml#fig9-2)    Suzanne Kite, *Listener*, 2018
+
+  [9.3](#chapter_9.xhtml#fig9-3)    Sougwen Chung, *Drawing Operations #4*, 2018
+
+  [9.4](#chapter_9.xhtml#fig9-4)    Anna Ridler, *Mosaic Virus*, 2018
+
+  [9.5](#chapter_9.xhtml#fig9-5)    Anna Ridler, *Myriad (Tulips)*, 2018
+
+  [9.6](#chapter_9.xhtml#fig9-6)    Stephanie Dinkins, *Not the Only One*, 2018
+
+[10.1](#chapter_10.xhtml#fig10-1)    Libby Heaney, *Euro(re)vision*, 2019
+
+[10.2](#chapter_10.xhtml#fig10-2)    Holly Herndon and Jlin, *Godmother*, 2018
+
+[11.1](#chapter_11.xhtml#fig11-1)    Ben Bogart, *Watching (2001: A Space Odyssey)*, 2018
+
+[11.2](#chapter_11.xhtml#fig11-2)    So Kanno and Takahiro Yamaguchi, *Asemic Languages*, 2016
+
+[11.3](#chapter_11.xhtml#fig11-3)    Driessens & Verstappen, *Spotter #birds Amstelpark*, 2018
+
+[11.4](#chapter_11.xhtml#fig11-4)    Memo Akten, *Learning to see: We are made of star dust #2*, 2017
+
+ 
+
+# **Series Foreword**
+
+**Leonardo/International Society for the Arts, Sciences, and Technology (ISAST)**
+
+Leonardo, the International Society for the Arts, Sciences, and Technology, and the affiliated French organization Association Leonardo, have some very simple goals:
+
+1.  To advocate, document, and make known the work of artists, researchers, and scholars developing the new ways in which the contemporary arts interact with science, technology, and society.
+
+2.  To create a forum and meeting places where artists, scientists, and engineers can meet, exchange ideas, and, when appropriate, collaborate.
+
+3.  To contribute, through the interaction of the arts and sciences, to the creation of the new culture that will be needed to transition to a sustainable planetary society.
+
+When the journal *Leonardo* was started some fifty years ago, these creative disciplines usually existed in segregated institutional and social networks, a situation dramatized at that time by the “Two Cultures” debates initiated by C. P. Snow. Today we live in a different time of cross-disciplinary ferment, collaboration, and intellectual confrontation enabled by new hybrid organizations, new funding sponsors, and the shared tools of computers and the Internet. Sometimes captured in the “STEM to STEAM” movement, new forms of collaboration seem to integrate the arts, humanities, and design with science and engineering practices. Above all, new generations of artist-researchers and researcher-artists are now at work individually and collaboratively bridging the art, science, and technology disciplines. For some of the hard problems in our society, we have no choice but to find new ways to couple the arts and sciences. Perhaps in our lifetime we will see the emergence of “new Leonardos,” hybrid creative individuals or teams that will not only develop a meaningful art for our times but also drive new agendas in science and stimulate technological innovation that addresses today’s human needs.
+
+For more information on the activities of the Leonardo organizations and networks, please visit our Web sites at [http://www.leonardo.info/](http://www.leonardo.info/) and [http://www.olats.org/](http://www.olats.org/). Leonardo Books and journals are also available on our ARTECA art science technology aggregator: [http://arteca.mit.edu/](http://arteca.mit.edu/).
+
+Roger F. Malina
+
+Executive Editor, Leonardo Publications
+
+ISAST Governing Board of Directors: Raphael Arar, Diana Ayton-Shenker (CEO), Michael Bennett, Alan Boldon, Felicia Cleper-Borkovi, Nina Czegledy, Greg Harper, Marc Hebert (Chair), Gordon Knox, Roger Malina, Cynthia Selin, Xin Wei Sha, Joel Slayton, Tami Spector, JD Talasek, Darlene Tong, Ruth West
+
+Leonardo Book Series Editor-in-Chief: Sean Cubitt
+
+Advisory Board: Annick Bureaud, Steve Dietz, Machiko Kusahara, José-Carlos Mariategui, Laura U. Marks, Anna Munster, Monica Narula, Michael Punt, Sundar Sarukkai, Joel Slayton, Mitchell Whitelaw, Zhang Ga
+
+ 
+
+# **Foreword**
+
+What is the connection between art and artificial intelligence (AI)? Can AI systems based on machine learning (ML) produce art? Or, more realistically for now, can ML help artists to create works in a way that is fundamentally different from the tools and materials which enabled past art? How have artists of the past tried to take advantage of computers in their work? What are the basic concepts under the hood of modern twenty-first-century ML techniques that artists would gain in understanding? What sort of novel dynamics can emerge between an artist and a learning machine, or between an adaptive work of art and the human being experiencing such novel forms of art? Can the engaged artist use AI to denounce the nefarious uses of AI which arise from the motives of profit or power? Whereas ML systems are often constructed upon the principle of optimizing some objective, reaching some goal, doesn’t that philosophy clash with the open-ended activity of the artists, their lack of clear objective? What does it mean to explore novel configurations of pixels or sounds, and for what purpose are artists doing it?
+
+This book is full of such insightful questions and the corresponding discussions to feed our natural curiosity as humans and should be of great interest to artists who wish to better understand the scientific and technological revolution which seems under way with the progress of ML-based AI. This book may also be of interest for engineers or computer scientists who are attracted by the potential of ML for the arts. Finally, this book may be of interest to the layperson who wonders about that apparently contradictory marriage of art and state-of-the-art AI.
+
+When I read these pages, this book brings up even more questions for my own field of ML research. What is creativity, at least the kind that humans display? Keep in mind that a large part of the inspiration for deep learning (a highly successful form of ML which I have worked on most of my life) is the human brain. A large part of my own quest has rested on the idea that there exist a few key principles that explain human intelligence and could enable the design of artificial intelligence. Babies clearly are explorers and natural artists in a primitive way and it is clear that this kind of play—which seems to have no immediate goal—is crucial to our mental development. Art is also a form of expression with a crucial social value, to open our minds to different ways of thinking, step back, question, protest, reveal and highlight injustice or simply bring our emotions and thoughts in new territories, sometimes out of our comfort zone.
+
+However, humans’ ability to be creative and explore is more than about searching for novel territories; images formed as purely random configurations of pixels are each as different as one could be from each other and from existing natural images, yet they are generally uninteresting, both for the artist and the technologist. Human creativity clearly involves the ability to recombine elements of the old to form the new, in surprising configurations, calling upon our mysterious capacities for analogy and abstraction. This strength is interestingly in contrast with one of the crucial limitations of current AI; these systems perform well in familiar environments from which their training data is collected, but can fail miserably elsewhere, whereas humans are much more robust to these changes and can easily entertain imaginary worlds that are completely improbable. It thus seems to me that AI research should continue to seek inspiration and understanding from human cognitive processes, and the creative abilities of artists are an important part of that. This observation and the slow pace of scientific progress (despite what the media hype may sometimes suggest) thus suggest that AI systems are not about to replace human artists. On the contrary, the human artist and the ML tools may be able, together, to enter territories where none alone can (yet) easily go. Hence this timely book by my former collaborator and graduate student (and now professor) Sofian Audry, which I warmly recommend.
+
+Yoshua Bengio
+
+February 27, 2021
+
+ 
+
+# **Acknowledgments**
+
+Writing a book has been one of the most challenging creative endeavors I have ever set out to accomplish. None of this would have been possible without the help and support of many people.
+
+I would first like to thank Chris Salter, who put it in my mind that I could (and should) write this book. Thank you for your generosity and patience over all those years and for challenging me with acute and inspiring feedback, both as a peer and as a friend. I am also grateful to Yoshua Bengio, who introduced me to the absolutely fascinating field of machine learning and made me understand the importance of intuition in research. I would also like to thank Nick Montfort for generously sharing his knowledge and passion for book editing throughout and beyond my time at MIT.
+
+Throughout the process of writing this book, I had the opportunity and privilege to talk with many artists, musicians, and composers about their work with machine learning as an artistic practice. There is not enough space to name all of them here, but I would specially like to thank Memo Akten, Nicolas Baginsky, Natalia Balska, Ben Bogart, Ursula Damm, Cyril Diagne, Stephanie Dinkins, Erwin Driessens, Justine Emard, Petra Gemeinboeck, Ian Graham, David Jhave Johnston, Allison Parrish, Anna Ridler, Stephen Kelly, Suzanne Kite, Mario Klingemann, Gene Kogan, Rob Saunders, Alexander Schubert, Maria Verstappen, and others. My ideas were enriched by discussions with my academic peers over the years, again in numbers too large for all to be named here: Samuel Bianchini, Peter Cariani, Andrew Demirjian, Jean Dubois, Lynn Hughes, Jon Ippolito, Johndan Johnson-Eilola, Alex M. Lee, Jason E. Lewis, Simon Penny, Hugo Scurto, and Bart Simon, among others, deserve my gratitude.
+
+My most sincere thanks to the individuals and institutions who granted me permission to use art images in this book and to my esteemed colleague Jean-François Renaud, to whom I owe many of the excellent diagrams and illustrations of this book. I also want to acknowledge the assistance of Eliza Bennett in creating a database of machine learning art works for the purpose of this book and of Hugo Berard in generating some of the image content using deep learning. A special thanks to Michèle Martin for their invaluable support throughout the project, especially in revising the manuscript.
+
+At the MIT Press I would like to thank Doug Sery and Noah J. Springer, who believed in this project and supported it, as well as Sherry Gerstein at Westchester Publishing Services, for making it a reality. I am very grateful to the anonymous reviewers for their generous and insightful feedback on the manuscript, which helped me raise the quality of this project to a level I would never have been able to reach on my own. After this thorough process, if there are any remaining errors in the published text, the responsibility is entirely mine.
+
+I would like to thank my parents Édithe and Paul for their unfailing support. My gratitude to Bob and Christel for feeding me vegetarian burgers and muffins while I was writing from their home in Regina. Thanks to Étienne Gaudet, Patrice D’Amours, and Laura Noël for their friendship and support, as well as to Adèle, Daphnée, Frenchie, Camélia, and Pastel for their immortal nonhuman love. Finally, my earnest thanks to Erin Gee, who encouraged me with inspiriting enthusiasm throughout the process of writing this, offering me invaluable insights and help in the forms of proofreading, feedback, and reviewing the final version of the text.
+
+This manuscript was supported with funds from Fonds de recherche du Québec—Société et culture (FRQSC), Université du Québec à Montréal, University of Maine, Clarkson University, and Concordia University.
+
+ 
+
+# **1**   **Introduction**
+
+December 1992. Berlin. Aglaopheme becomes one with the electric guitar. Her six artificial brains just got reset, her floating-point synapses sprayed with fresh Gaussian noise, leaving her clueless face to her body-environment. An impish childlike spirit, ready to enact her own world. To explore and exploit the most intimate connections between outputs and inputs. To become and make become.
+
+The air is charged with static. The robotic siren hesitantly plucks the E string as she moves the slide in a downward fashion, producing a shrieking, distorted sound. Thus begins a long and monotonic solo, as Aglaopheme obsessively plays that E tone, over and over and over.
+
+Nicolas Baginsky is standing in front of her, mesmerized. The robot never behaved this way before. There must be a bug somewhere in the source code, a glitch in one of the rules governing her behavior. Maybe one of the pieces of hardware, like the pickup or the effects pedal, is not functioning properly. Yet Baginsky listens, enthralled by the strangeness of Aglaopheme’s performance as his own brain tries to make sense of the robot’s neurotic behavior.
+
+Twenty minutes pass that feel like twenty hours. The vibrations of the E string feed through the guitar pickup and then to a set of distortion devices. The filtered sound waves are converted into a frequency spectrum that is fed back into the robot’s six artificial neural networks. Each net emits a digital signal, competing for attention, and for the first time since her synapses have been reset, Aglaopheme’s A net screams louder than the E net, and the guitar-bot nonchalantly pinches the corresponding string, as if emerging from her torpor.
+
+During the rest of Berlin’s Second Electronic Art Syndrome festival—a three-day, twenty-four-hour event near Alexanderplatz—the robot began producing more complex sonic improvisations, self-organizing around the physical qualities of the sound spectrum, developing a style of her own. For the next two decades, Aglaopheme (see [figure 1.1](#chapter_1.xhtml#fig1-1)) would practice, rehearse, and perform, constantly adapting to the different sound environments to which she was exposed. Over these years, other robotic music players joined with her to form a jazz improvisation band called The Three Sirens. All music was played live, without any score, the result of the robots’ self-adapting interactions that came by jamming together in rehearsals and shows.
+
+![Figure 1.1 Nicolas Baginsky, Aglaopheme, 1992. Guitar robot. Courtesy of Nicolas Baginsky.](images/Figure1-1.png)
+
+[Figure 1.1](#chapter_1.xhtml#rfig1-1)  
+Nicolas Baginsky, *Aglaopheme*, 1992. Guitar robot. Courtesy of Nicolas Baginsky.
+
+*The Three Sirens* constitutes an early example of a growing field of practice within contemporary digital art that engages with a form of *artificial intelligence* (AI) known as *machine learning*. Machine learning proposes to endow machines with intelligence not by programming them directly with logic rules but rather by allowing them to program themselves by learning from their experience. Almost left for dead by the end of the 1990s, this approach has gained impressive impetus since the mid-2000s thanks to critical breakthroughs in fundamental research that triggered an unprecedented interest by the commercial sector and more recently in artistic circles. This has given rise to a loosely defined artistic movement, intimately related to previous computational artistic practices such as cybernetics art, artificial life art, and evolutionary art that I call machine learning art.^([1](#chapter_1.xhtml#chapter1-1))
+
+Machine learning is a branch of artificial intelligence that allows computers to learn from experience rather than by being “explicitly programmed” (Samuel, 1959). In the case of *The Three Sirens*, the robots learn from the sounds they record live from their environment—including the sound they themselves produce. This data is processed by a training process, an algorithm that gradually adjusts a mathematical function mapping inputs (sound waves) onto outputs (plucking the indicated string).
+
+This work shares many similarities with speech recognition software found on modern mobile devices such as Alexa or Siri. Most state-of-the-art speech recognition algorithms used today are also based on machine learning. Like Baginsky’s robots, these systems are subjected to streams of audio data from which they extract regularities. In the case of speech recognition applications, the sound information is associated with specific phonemes that have been previously annotated by humans. The algorithm then tries to predict the right phonemes given new streams of audio inputs, readjusting itself using the tagged data.
+
+These two examples share a common technology, but what truly distinguishes them is how and why they exploit it. Whereas a speech recognition system can be evaluated using a specific metric that measure its ability to perform well in its given task (i.e., translating sounds into text), Baginsky is not really interested in understanding how his robots come to make their decisions, let alone in measuring the accuracy of their musical performances—he simply decides whether he likes or dislikes what he hears. His interest lies in the possibilities that the technology offers and in the fact that these robotic performers are developing a unique, specific style, not by direct, hand-crafted programming but rather by being exposed to the world and finding their own way through it. Perhaps more profoundly, Baginsky is interested in what these adaptive entities, and the process of making them, can teach him about music.
+
+Recent breakthroughs in machine learning have sparked a “4th industrial revolution” (Schwab, 2016) in which adaptive computational systems are rapidly overtaking intellectual tasks in a diversity of fields such as medicine, transportation, and finance. As AI researcher Max Welling has stated, “where steam engines replaced physical labor during the industrial revolution, smart algorithms will soon replace mental labor in what some have dubbed the second machine age” (Welling, 2016). The spearhead of this revolution, *deep learning* (LeCun, Bengio, & Hinton, 2015; Goodfellow, Bengio, & Courville, 2016), involves using several interconnected layers of artificial neurons to represent and interpret patterns present in huge quantities of data. These highly “disruptive technologies” (Bower & Christensen, 1995) significantly alter the way business and society operate, in areas as diverse as self-driving cars, automated medical diagnosis, smart financial trading systems, autonomous weaponry, data mining, and surveillance. Indeed, economy, labor, justice, and the environment, are only a few of the many disciplines that are being transformed to their core by AI.
+
+Deep learning is the last offshoot of a technological lineage that originated in the late 1940s with the science of *cybernetics*, and further expanded in the 1980s with *connectionism*, an approach in cognitive science and AI that rests on using simplified mathematical models of neural networks found in the human brain. Its emergence since the beginning of the millennium is inseparable from the increased access to raw computing power—in particular, due to the development of graphical processing units (GPUs) incidentally pushed by the game and cinema industries—and the exponential growth of data, thanks to the explosive expansion of the internet as a platform for mass social media. AI has become an industrial science. It also has become more accessible: with the development of the internet and mobile devices, AI now lives with us at all time, within reach of our fingertips.
+
+With deep neural architectures computing billions of software neurons and trillions of synaptic connections on GPU clusters owned by the largest IT companies, attuned to our everyday actions in the most unobtrusive, steady, and inexorable fashion, the digital world we were used to, with its recognizable and explainable decision-making procedures based on hand-coded heuristics, is already gone. We are moving into a new era, in which pervasive, seemingly organic algorithms feeding on statistics are replacing rule-based systems, adaptively coupling to humanity in all-encompassing, distributed processes of control and optimization. To understand this new age, we need to extricate ourselves from an outdated vision of computational systems as formal, rule-based, logical constructs and start seeing them for the biologically inspired, statistically driven, agent-based, networked entities they have become.
+
+Our accelerated move into a world populated by these adaptive, autonomous, and uncanny forms of computation constitutes the realization of a particular form of cybernetic society that is highly contingent on the interests of big business^([2](#chapter_1.xhtml#chapter1-2)) and government powers. Artist Memo Akten highlights how in the same way that World War II gave rise to digital computers and the Cold War gave us the internet, today “the mass surveillance related to the War on Terror and Internet business models are giving us Artificial Intelligence and Deep Learning” (Akten, 2016b). In critical need of being reappropriated, deconstructed, torn apart, and democratized, artificial intelligence has thus become a critical space of engagement in the twenty-first century.
+
+## **Myths and Misconceptions**
+
+Despite the increased use of machine learning in many facets of contemporary industrial and commercial culture, until recently one area in which it had not made a meaningful impact was the field of artistic practice. This is certainly not true anymore: in the last decade, there has been an explosive interest in artificial intelligence and machine learning from the art world, with exhibitions such as *Uncanny Valley: Being Human in the Age of AI* (Young Museum, San Francisco, 2020–2021), *AI: More Than Human* (Barbican Centre, London, 2019), *Deep Feeling: AI and Emotions* (Petach Tikva Museum, Tel Aviv, 2019), *D3US EX M4CH1NA* (LABoral, Gijón, Spain, 2019), *Entangled Realities: Living with Artificial Intelligence* (House of Electronic Arts, Basel, 2019) *I Am Here To Learn: On Machinic Interpretations of the World* (Frankfurter Kunstverein, 2018), and *Machines Are Not Alone: A Machinic Trilogy* (Chronus Art Center, Shanghai, 2018). The 2019 edition of the Prix Ars Electronica included a new category called Artificial Intelligence & Life Art, a testimony to the established relevance of AI-oriented approaches to digital arts.
+
+This frenzied enthusiasm is accompanied by a number of myths and misconceptions that complicate the analysis of the situation. Here are some of them.
+
+**Myth 1: Artificial intelligence, machine learning, and deep learning are one and the same.**    This confusion arises because the term artificial intelligence is employed in at least three different ways. The first, which is the one used in this book, refers to a broad field of research that spans many competing approaches. One of these approaches is machine learning, which focuses on designing computer algorithms that can learn on their own. Deep learning is a specific approach within machine learning that uses a particular type of learning system known as artificial neural networks. The second definition of AI reserves the term to state-of-the-art systems while previous approaches are considered devoid of intelligence. According to this definition, in our day and age, only deep learning and other advanced forms of machine learning should be called AI, thus AI is often used as a synonym for these cutting-edge techniques. Finally, the third meaning of the term, more frequently used in everyday parlance, concerns artificial agents that may or may not rely on machine learning, as in the expression “an AI created this masterpiece.”
+
+**Myth 2: Machine learning art is new.**    Machine learning can be traced back to the early days of cybernetics in the 1940s. The expression *machine learning* first appeared in the 1950s around the same time as *artificial intelligence*. Artists have been using adaptive or learning computational systems since then, through various artistic movements such as systems art, algorithmic art, robotic art, and evolutionary art. Yet, the presence of such approaches in artistic works is often hard to trace because they are frequently used more as metaphors than as actual techniques. For example, the definitions of concepts such as *learning*, *adaptation*, and even *artificial intelligence* used by artists often differ greatly from the corresponding scientific definitions.
+
+**Myth 3: Machine learning can create art without artists.**    The idea of machines that can altogether replace artists is far from new. Consider, for example, Jean Tinguely’s *Métamatics* series of drawing machines from the late 1950s, or Harold Cohen’s painting program AARON, which he developed from 1973 to his death in 2016. Although some machine learning systems produce fascinating results, in fact, as we show in this book, machine learning art still requires a lot of labor. While some of the tasks usually associated with computer programming are borrowed, other cumbersome and often expensive tasks arise, such as the building of huge data sets, the fine tuning of training algorithms, and a lot of preprocessing and postprocessing. More importantly, even when some of the choices are left to a machine, art always involves a number of decisions that can be made only by the author of the work.
+
+**Myth 4: Machine learning will soon give rise to superhuman intelligence and creativity.**    This is a common myth about machine learning and also more generally about technologies. The appearance of every new technology has triggered a dread of human obsolescence. For example, in the early twentieth century, the Futurists claimed that mechanical technologies would soon overtake humanity (Versari, Doak, Evans, Bellow, & Curtin, 2016). With regard to current-day machine learning, although opinions diverge on the matter, the scientific community seems to largely agree that current systems are very limited. Although some systems currently in place are impressive, they are still limited to very narrow tasks and require a lot of examples to be trained. They have no common sense and are unable to apply knowledge outside of the problem on which they have been trained. A defining trait of creativity is the ability to “think outside the box,” to use one’s intuition to come up with ideas that rattle the status quo. Machines are still far from being able to do that—although they may be in a distant future.
+
+## **Understanding Machine Learning Art**
+
+As a field of research, new media arts have not often been a sustained topic of study for art historians, leaving a void that is only starting to be addressed. For the most part, it is new media artists themselves who have started building some of the theoretical tools for understanding their discipline through analyzing their own practices. By comparison, machine learning has been an essential part of the AI ecosystem since the 1950s. Although its role has often been peripheral, its presence has been exponentially growing since the deep learning revolution of the mid-2000s, largely due to machine learning’s unprecedented success in tackling major AI-related problems. Machine learning is thus a critical concept whose increasing presence in our world has vast sociotechnical repercussions.
+
+As these technologies are becoming increasingly popular and readily available, there currently exist almost no conceptual guidelines or theoretical frameworks for how to make these works and think about them. There has been some groundwork concerning generative and artificial life practices and concepts such as self-regulation, evolution, and emergence (Kac, 1997; Tenhaaf, 2000; Whitelaw, 2004), but there has been a smaller amount of rigorous work on machine learning and adaptive computation by artists.
+
+The renaissance of machine learning that we have been experiencing since the mid-2000s is occurring in the context of what Simon Penny calls the *crystallization* of new media (Penny, 2017) pushed by strong market forces that undervalue the kind of independent and experimental artistic practices that existed in the 1980s and 1990s. It has become crucial to start building aesthetic theories of machine learning systems in order to allow for a better understanding of artworks that use them, comprehend the processes entailed in working with them artistically, and reposition the role of the artist within this new landscape.
+
+This book seeks to lay the first blocks of such a conceptual framework to comprehend machine learning within the field of new media art. It attempts to bring some clarity to the early stages of the emerging industrial revolution through historical, practical, and theoretical examinations of machine learning in the arts. Through this, it aims to offer conceptual tools, accounts of practice, and historical perspectives to contemporary new media artists, musicians, composers, writers, curators, and theorists, in order to help them grasp what machine learning systems are and how they are related to experimental new media art practice, and to suggest ways that artists can engage with them and learn how to use them. This book does not set out to teach specific techniques but rather intends to translate basic definitions and challenges to nonscientific audiences while it connects them to core issues in new media art.
+
+In order to do so, we put machine learning systems on the operating table and carefully dissect them, examining their different dimensions and components through the lens of art practice. While pulling them apart, we discuss the aesthetic and artistic affordances and significance of each of these elements, while showing ways that artists engage with these elements. The goal of this process is to reveal the inner workings of machine learning and how it can and does operate within art practice. This process is reflected in the organization of the core chapters, each of which focuses on one of the three core components of learning systems: training processes, models, and data.
+
+The book situates machine learning within new media art by studying its relationships with key concepts in art such as indeterminacy, materiality, representation, and authorship. Examples of artworks and creative technologies from a wide variety of domains and formats are presented and discussed, with a focus on works produced by independent artists who are critically engaging with machine learning technologies rather than relying on off-the-shelf systems. As an artist who works with machine learning, I also, whenever it is relevant, bring examples from my own research and practice. This approach serves to illustrate the significance of deep learning technologies for the evolution of new media art in the twenty-first century and beyond as well as the contribution of artists to the field of machine learning.
+
+## **Why Machines Should Learn**
+
+In the Western world, intelligence is often conflated with rational thinking, mathematics, and logic. Back in the 1950s, most artificial intelligence experts thought that the Holy Grail of AI was to perform mathematically oriented tasks such as proving theorems or playing strategic games such as chess and checkers. However, it turned out that such problems are relatively easy for computers to solve because they exist in definite domains based on logical rules and symbols. For example, at any given point in a chess game, there is a finite set of permissible moves, as certain kinds of actions are forbidden, such as moving a piece halfway between two squares.
+
+By contrast, most real-world problems requiring intelligence are very different from playing board games. For example, although specialized work such as translation, financial trading, teaching, research, and medical diagnosis and treatment must follow sets of rules and guidelines, those tasks require a great deal of intuition and experience. Moreover, many tasks that may not seem to require much intelligence because we do them without thinking—such as moving, talking, recognizing objects, or driving a vehicle—are really hard for computers to accomplish.
+
+Take the example of walking. How do we walk? At first glance, one might believe that walking could be expressed with a simple algorithm:
+
+Step 1: Put one foot in front of the other.
+
+Step 2: Repeat.
+
+However, this procedure does not take into account all the dynamics involved in bipedal motion. It may represent the broad picture of most situations, but it does not address possible conditions that would require additional effort, such as moving across irregular surfaces or climbing; nor does it address more challenging situations such as being put off balance or carrying a weight. In fact, bipedal walking in humans is an extremely complex sensorimotor activity involving the coordinated control of muscles in many parts of the body.
+
+The truth is that we do not really know *how* we walk.
+
+But we surely know one thing about walking: we were not born walkers. Gradually, through trial and error and with supervision from our guardians, we *learned* how to walk, one baby step after the other.
+
+How can we program computers to do the things that we do and to know the things that we know when we do not even know *how* we do or know these things? Machine learning suggests that we let computers learn from their experience, just like we did for walking on two feet. Machine learning is hence directly related to the biologically rooted concept of *adaptation*, which refers to a “process whereby a structure is progressively modified to give better performance in its environment” (Holland, 1992, 7). Most machine learning systems learn iteratively, observing flows of data, incrementally refining their understanding of the problem they are trying to solve.
+
+## **Supervised, Unsupervised, and Reinforcement Learning**
+
+Machine learning algorithms are often divided into three subcategories, corresponding to three different types of *tasks*. In *supervised learning* (by far the most commonly used approach), the system learns from labeled data, that is, data for which the appropriate output has been assigned (usually by a human being). For example, imagine a database of pictures in which each has been tagged as an image of either a dog or a cat. The goal of the system is to learn from this information to become good at differentiating cats from dogs in pictures. In other words, given a not previously encountered image of either a cat or a dog, the machine learning algorithm must guess accurately which animal that it represents—in other words, its category or class.
+
+*Unsupervised learning* is used to make inferences from data sets that do not have such labels. Different outcomes may be desired, such as extracting a more compact representation of the data (e.g., dimensionality reduction or representation learning) or separating the data into different groups. Using the previous example of images of dogs and cats, imagine that we give a database of images to the learning system, and this time the images are unlabeled. We ask the system to classify the images into two unspecified categories. Depending on the database and the configuration of the system, it could decide to differentiate between dogs and cats, but because the classification has been left to the machine learning system, it could instead choose to separate the images into dark and bright, or colored and gray, depending on the data set, the type of machine learning system, and other system characteristics.
+
+Finally, *reinforcement learning* concerns situations in which an artificial agent^([3](#chapter_1.xhtml#chapter1-3)) is evolving into an environment and needs to learn how to behave optimally within it. Good decisions are reinforced by giving the system positive rewards, and bad actions are given negative rewards (i.e., punishments). Common uses of reinforcement learning include robot control, financial trading, delivery management, and adaptive agents for game AI.
+
+For example, imagine a trading software agent that tries to maximize its gains on the stock market. The program chooses either to buy or to sell some shares, on the basis of its observation of the market, which can include the prices of other shares and other information sources such as date and time, financial news, and so forth. On the basis of these decisions, the system receives a reward proportional to the money it has won (positive reward) or lost (negative reward). Over time, the system should learn how to make more profitable decisions. Another common example of reinforcement learning concerns a robot that moves in an environment and tries to collect items while also returning to its recharging station before its batteries are depleted. In this case, the robot needs to autonomously find a balance between exploring the space and managing its power.
+
+Although these techniques might seem highly abstract and mathematically distanced from how we normally understand the processes of learning and growing in biological systems, supervised, unsupervised, and reinforcement learning each corresponds to a form of learning found in real life. Hence, supervised learning is about learning with a guide such as a teacher or a reference document (consider, for example, a children’s book that shows pictures of animals along with their names). Unsupervised learning is about acquiring knowledge about the world through basic observations, such as how children can learn the fundamental laws of physics by playing with blocks (or later in life, by playing with fire). Reinforcement learning covers situations in which agents are rewarded (or punished) for their actions within the world, such as when a dog is fed a treat after bringing back a stick or when a young child trips on one of their blocks.
+
+These categories do not exist in isolation. Quite permeable, they often share models and algorithms, as the research carried out in one domain can often be applied to another. One famous example of this contributed to the resurrection of interest in neural computation and machine learning in the mid-2000s, when scientists discovered a method to train multiple layers of neurons in supervised learning and reinforcement learning systems by using unsupervised learning to facilitate training the lower-level layers of the neural architecture (Hinton, Osindero, & Teh, 2006).
+
+## **Components of a Machine Learning System**
+
+Machine learning systems can be further qualified by three constituents that interoperate: a *training process*, a *model*, and *data* (see [figure 1.2](#chapter_1.xhtml#fig1-2)). These items represent interdependent dimensions of a learning system that influence its outcomes—in particular, when applied to art, its aesthetic potentialities.
+
+![Figure 1.2 Components of a machine learning system. The training process trains a model over a set of data using an evaluation function to measure the performance of the model. Drawing by Jean-François Renaud.](images/Figure1-2.png)
+
+[Figure 1.2](#chapter_1.xhtml#rfig1-2)  
+Components of a machine learning system. The *training process* trains a *model* over a set of *data* using an *evaluation function* to measure the performance of the model. Drawing by Jean-François Renaud.
+
+Machine learning systems are trained on sets of examples that represent the empirical knowledge to which they have access. The *data* made available to the algorithm is one of the fundamental elements that influence the system’s behavior and performance: the system cannot acquire knowledge beyond the data that it is fed, unless it comes a priori, encoded in the data itself or in the system. An example usually consists of a group of numerical values, each representing a dimension of the learning space. For example, a data set consisting of 10 × 10 grayscale images would typically be represented as a series of points, each with one hundred different values (10 × 10).
+
+The knowledge the system has about the world is contained in a structure called the *model*. In the same way a scale model of a sailboat both represents the original ship while scaling it down to a more portable format by removing the irrelevant details, machine learning models can often be understood as more compact versions of the training data. To work well, a good model must be sufficiently complex to represent the important characteristics of the source data. However, it should not be too precise, as it then risks becoming to specific and unable to generalize to new examples outside of the training set.^([4](#chapter_1.xhtml#chapter1-4))
+
+There are many different kinds of such models, each with its own strengths and weaknesses. For example, artificial neural networks contain artificial neurons connected by synaptic *weights* (i.e., numerical values that represent the strength of the connection between two neurons). Such models can represent a wide range of mathematical functions and are usually considered good at recognizing patterns—hence their popularity in computer vision and speech recognition, among other applications. Another kind of model is a binary genetic code that represents a computer program, such as used in genetic programming (GP): such a model could potentially implement any algorithm, and could therefore be characterized as a general problem solver.^([5](#chapter_1.xhtml#chapter1-5))
+
+The model and the data set are, in essence, inert structures. A third component, the *training process*, binds them together by using the data to adjust the model. To guide its decisions, this procedure uses an *evaluation function* (also called cost, fitness, or reward function, depending on the context in which it is used) that measures the performance of the model over the data points (Alpaydin, 2004, pp. 35–36).
+
+A machine learning system can thus be summarized as follows. Given a certain kind of task (supervised, unsupervised, or reinforcement learning), a learning algorithm adjusts a model to improve its performance (measured using an evaluation criterion) over a data set. While this is roughly true across all fields of applications of machine learning, there exist many variations within the techniques that are suitable for each of these components.
+
+Machine learning therefore provides a generic framework for problem-solving that challenges not only traditional AI approaches but computer science in general. Rather than trying to solve a problem by designing a computer program that directly addresses it, machine learning suggests putting together different components (data, model, training process, and evaluation function) and letting the system find the solution autonomously. Although this approach did not work very well for many decades (due mainly to insufficient data and computing resources), since the mid-2000s it has moved from the background to the forefront of AI and has become a catalyst of profound social transformations.
+
+## **From Cybernetics to Deep Learning**
+
+The triumph of machine learning in the twenty-first century builds on more than five decades of research in computer science. Deep learning, an approach to machine learning that is inspired by the hierarchical and self-organizing nature of the brain, has enabled giant leaps in achieving (and sometimes overcoming) human-level performance on challenging problems such as computer vision and speech recognition, propelling the field of artificial intelligence into a new industrial era that promises to disrupt the very fabric of society. Yet, deep learning is merely the latest milestone in artificial intelligence, and more broadly, in humanity’s long, relentless journey of inquiry into the workings of living systems and human intelligence.
+
+One can trace the first concepts that led to the emergence of machine learning in the 1980s and then to its re-emergence in the 2000s, to the interdisciplinary science of *cybernetics*. Born during the post-war period in the United States and England, cybernetics sought to understand the workings of the brain and, in this endeavor, to comprehend fundamental mechanisms governing both organic and computational systems. Cyberneticians designed adaptive and autonomous machines (Walter, 1950; Ashby, 1954) and laid the foundations of new theories of control and communication (Wiener, 1961; Shannon, 1948).
+
+Some cyberneticians tried to address the workings of human cognition by looking at the brain’s most basic units: neurons. Walter Pitts and Warren S. McCulloch showed that simple interconnected neurons could be used to model logical gates (McCulloch & Pitts, 1943). Grey Walter and Ross Ashby created artificial devices that tried to simulate neurological mechanisms through feedback loops between interconnected units. At the end of the 1950s, following the work of neuroscientist Donald Hebb, psychologist Frank Rosenblatt proposed a neural-inspired system that could recognize patterns: the perceptron (Rosenblatt, 1957). Around the same time, Oliver Selfridge proposed a structure made up of sets of layered units of neurons for image recognition, which he called the pandemonium (Selfridge, 1959). Plagued by important practical and theoretical issues, the perceptron and the pandemonium nonetheless embodied core ideas forming the basis of contemporary deep learning systems: that the key to artificial intelligence lies in the design of autonomous systems made of stacked layers of self-oganizing units (i.e., neurons), in which each layer learns an increasingly higher-level degree of representation of what the system observes.
+
+Although cybernetics as a scientific field has more or less vanished, its significance in the development of computer technologies cannot be ignored, particularly in regard to the development of artificial intelligence and machine learning. What is less known is its influence on the society and culture of the 1960s, particularly in the field of contemporary art, in which cybernetics was closely related to movements such as conceptual art, performance art, and kinetic art. These revolutionary approaches attempted to move beyond the materiality of the art object, toward artworks conceived as computer programs and artificial systems (Burnham, 1968).
+
+This paradigm shift from objects to systems also resonates with an important theory of mind that emerged in the postwar era, which would profoundly impact the conception of the human subject in the Western world in subsequent decades. This current of thought, which we refer to as *computationalism* (also known as *cognitivism*), is a particular form of representationalism, a theory of mind that rests on the notion that we do not experience the world directly but rather through a representation of it. Computationalism posits that human cognitive capabilities are equivalent to computation—in other words, that intelligence is realized by applying operations over sets of symbols that represent the world. Computationalist theory claims that the brain is simply the *hardware* substrate that runs the *software* of such mental capacities. Consequently, it holds that a computer program able to reproduce human cognitive performances should be deemed intelligent even if it runs on a silicon-based machine (Turing, 1950).^([6](#chapter_1.xhtml#chapter1-6)) For computationalists, cognition is purely functional, hence immaterial. It is not defined by, or limited to, human brains, let alone subjective experience. Therefore, they argue, it is theoretically possible to design cognitive processes on computers.
+
+Computationalism was concomitant with the appearance and development of artificial intelligence in the 1950s, in parallel to cybernetics. Artificial intelligence as a field set as its core goal the study of how computers could simulate human intelligence. In those years, two notable approaches were already present, and they would be collaborating and competing throughout the history of AI. The first approach, *symbolic AI*,^([7](#chapter_1.xhtml#chapter1-7)) attempts to endow computers with intelligence by directly programming them to be smart. The second approach, *machine learning*, argues that rather than trying to explicitly implement intelligence in machines, we should instead seek to teach them how to learn by themselves. The same way that rule-based AI is tied to computationalism, machine learning seems intimately related to connectionism, a theory of mind that posits that cognition happens through multiple parallel interactions between interconnected units such as neurons.^([8](#chapter_1.xhtml#chapter1-8))
+
+In the first stage of AI history, symbolic AI rapidly gained impetus as computer programs were shown to perform incredibly well on tasks deemed difficult for humans, such as playing strategy games, whereas at the same time, connectionist learning systems such as the perceptron were shown to have severe theoretic limitations (Minsky & Papert, 1969). Scientists such as Marvin Minsky and Seymour Papert argued in favor of rule-based computing and heuristics, using the powerful calculation features of computers to solve problems with brute force. By the end of the 1970s, however, symbolic AI research plateaued and public funding came to a halt. AI entered a period of disfavor, later called the first *AI Winter*. Although research did not stop completely, interest in cybernetics and systems decreased in the artistic world as the Western world entered the 1980s, in favor of explorations of other computer capabilities such as graphics and sound production.
+
+In the mid-1980s, interest in AI surged once again with the revival of neural network research, tied mainly to new discoveries in training more complex forms of neural nets directly inspired by perceptrons. In parallel, some rule-based approaches to AI regained popularity through the development of expert systems, which aim to transfer the know-how of human experts into a set of logic rules.
+
+In addition to these two concurrent approaches to artificial intelligence, a crucial new field directly related to cybernetics appeared at the end of the 1980s: artificial life (ALife). Inspired by cybernetics, complexity theory, chaos theory, and artificial intelligence, ALife seeks to study living systems in their mode of operation, specifically by simulating living processes with the computer. ALife rests on a bottom-up approach that makes use of the raw power of the computer to simulate complex interactions between numerous units and then observes the result. ALife researchers explore how applying simple algorithmic instructions to low-level units can generate complex patterns at higher levels that sometimes look like living processes and organisms.
+
+At the end of the 1980s, both expert systems and neural networks had shown severe limitations in real-life settings, and interest in AI faded into a second AI winter. In response to these challenges, combining the successes of both ALife and machine learning, and downplaying the importance of representation in AI systems, Rodney Brooks suggested an alternative to AI called New AI. In opposition to both connectionism and symbolic AI, Brooks argued that intelligence did not need a representation of the world and that cognition could not be detached from happening in a situated/embodied manner: in other words, that the body was using the world as its own model. Therefore, he argued that the only way that AI could make real progress, was to design robots that could interact in their world and to gradually build them and teach them how to act within that environment.
+
+In the 1990s, both ALife and New AI became important sources of inspiration for new media artists. One notable example is the influence of ALife and complexity theory on video games; a number of important simulation games involving complex phenomena were given wide exposure through popular titles such as *SimCity* and *Civilization*. A particularly apropos example is Will Wright’s 1990 game *SimEarth: The Living Planet*, which allows the player to supervise the development of a planet through indirect means such as varying its volcanic activity, erosion, rainfall, and albedo. The main scenario follows the different eras of the history of an earth-like planet, from the formation of the crust to the appearance of the first oceans, and then to the emergence of life and civilizations.
+
+In contemporary art, ALife art became an art form in itself, for example, through the work of Nell Tenhaaf, Susie Ramsay, and Rafael Lozano-Hemmer, who in 1999 created the Art and Artificial Life International Awards (VIDA) with the support of Fundación Telefónica. The prize, which ran for sixteen years, sought to support artistic inquiries in the field of artificial life. Robotics artists Louis-Philippe Demers, Ken Rinaldo, and Bill Vorn, who were all directly inspired by Rodney Brooks’s New AI, are among the winners of this award. Also influenced by Brooks, artist and media theorist Simon Penny came up with the term *aesthetics of behavior* to describe the kind of work made by the creation of an artificial agent that interacts with the real world (Penny, 2000, 2017).
+
+From the mid-1990s to the mid-2000s, the development of the internet produced massive amounts of data, while at the same time computing power increased, in particular through the development of graphical processing units (GPUs), developed in response to the growing entertainment industry (video games and special effects), which specialize in matrix multiplication—exactly the kind of expansive mathematical operations required to compute extremely large artificial neural networks. These circumstances, together with support for fundamental research in Canada through the Canadian Institute for Advanced Research (CIFAR), created the context for a renaissance of neural network-based machine learning—sometimes referred to as the Canadian AI conspiracy. Although connectionist AI had been widely abandoned in the early 2000s, on the algorithmic side critical breakthroughs in the mid-2000s enabled the effective training of neural networks with many hierarchical layers, making it possible for such systems to reproduce and even exceed human performance on tasks deemed extremely difficult (such as computer vision, speech recognition, and text translation) in a truly autonomous fashion, by analyzing raw information without the need to rely on a priori knowledge or heuristics designed by humans.
+
+After more than fifty years of research, artificial intelligence technology was finally ripe for the taking. Giant corporations such as Google and Facebook began aggressively hiring top researchers of the field, often literally buying their labs, granting them not only outstanding salaries and funds but perhaps more importantly, access to huge sets of data on which to carry out their research, in the hope of leading the development of their current and future products.
+
+Within the scope of only a few years, corporate investment in artificial intelligence has skyrocketed and seems to grow exponentially, even prompting fear of an economic bubble. But there are strong signs that this is more than just hype. AI-driven technologies that looked like science fiction a few years ago are now on the market, including self-driving cars, speech-to-speech translation, and personal assistants such as Alexa and Siri. These, however, might be just the tip of the iceberg. We are experiencing a technological revolution at least as important as (and probably much more important than) the one following the appearance of the internet; the current revolution is already having a profound impact on society, similarly to previous large-scale industrial transformations. In much the same way that the industrial revolution of the eighteenth and nineteenth centuries brought societies into the first machine age, in which machines assisted humans in carrying out physical tasks, artificial intelligence is the driving force of a second machine age, in which smart algorithms are replacing cognitive tasks (Brynjolfsson & McAfee, 2014).
+
+Machine learning represents an immense potential for humanity that goes far beyond marketable applications such as self-driving cars and personalized advertisement. Moreover, these technologies present important socio-political and ethical issues that threaten democracy itself, such as the proliferation of fake news through AI-supported social media bubbles. Eminent deep learning experts Yoshua Bengio and Geoffrey Hinton have emphasized that the technology, which was developed largely through publicly funded fundamental research over decades, should not merely profit the private sector but should expand to public services such as health care and education, as well as other areas.
+
+Art is one alternative territory of exploration for machine learning’s potential. New media scholars Joline Blais and Jon Ippolito suggest that digital art acts as antibodies against technological invasions of the cultural and social body. “Science,” they claim, “has always offered us a future, and sometimes even a promise to repair the dangers it has unleashed on us in previous generations. But in an age when technology seems increasingly to have a mind of its own, art offers an important check on technology’s relentless proliferation.” (Blais & Ippolito, 2006, p. 9)^([9](#chapter_1.xhtml#chapter1-9))
+
+## **A Shift in Paradigm**
+
+The coming of age of machine learning has triggered a mix of fear and excitement in the media as well as in academia, which has turned contemporary discourse about AI technologies into a highly polarized debate. One camp warns against the dire impacts of AI on the labor market, such as robots and algorithms rapidly replacing humans in fields such as transportation, logistics, and office support;^([10](#chapter_1.xhtml#chapter1-10)) and the emergence of a much dreaded technological *singularity* following which AI will supplant humans as the superior intelligent species, with possibly dire consequences that could lead to the extinction of the human race (Kurzweil, 2006). On the other side of the debate, techno-optimist choirs chant the libertarian utopia of a postwork, postdemocratic world in which humanity’s problems will be smoothly resolved by benevolent artificial learning systems; more moderate voices point to the concrete benefits of machine learning in health care and education and believe that the advantages outweigh the drawbacks.
+
+In the 1950s and 1960s, the cyberneticians dreamed of a society regulated by smart, self-regulating, adaptive systems similar to those found in the human brain. This loosely organized group of interdisciplinary researchers suggested a complete change in paradigm about the way we consider technology and how it operates in the world. They criticized technologies of the past for their lack of adaptivity and autonomy driven by a human-centric worldview that sought to control nature (Pickering, 2010), and suggested an alternative vision of technological development that broke with these outdated principles.
+
+What if technologies were designed to adapt themselves to natural processes and entities, rather than the other way around? Can we envision technologies that are not meant to control nature but rather to take part in an ecosystem, trying to survive while allowing other processes to flow? Can we give artificial agencies the right to make mistakes? Can we allow them to be gracefully weak, imprecise, and hesitant, just as we are? In the field of AI, what would happen if we moved beyond the ideal of optimization and control, toward the most open-ended paradigm of adaptation as a living process?
+
+Although its story is deeply rooted in cybernetics (Goodfellow, Bengio, & Courville, 2016), current-day machine learning has not embraced the cyberneticians’s utopian dream of self-regulating technologies, relying instead on a relatively traditional engineering culture that attempts to efficiently solve concrete, measurable *problems* such as recognizing patterns or predicting future quantifiable events; in other words, attempting to gain control over nature.
+
+The potential repercussions of the industrial development of machine learning, for good and for bad, are immense. On the bright side, consider, for example, how automated translation technologies facilitate access to information beyond linguistic frontiers; how self-driving intelligent cars can potentially reduce traffic and accidents; and how image-based pattern recognition can improve the quality of medical diagnosis and help reduce suffering. Yet, as many observers have pointed out, the increasing presence of machine learning since the mid-2000s through rapid industrial deployment by major multinationals is problematic in many ways. As a source of important debates, many believe these technologies might in fact lead to increased inequalities and power imbalances, and fragilize democracies. As examples, think about the jobs lost due to automation in the transportation industry, the deep ethical implications of autonomous weaponry, the AI-aided fragmentation of society through the reinforcement of media bubbles and the dissemination of fake news, and the potentially nefarious implications of using learning technologies for crime prediction and human profiling.
+
+These discussions are critically needed and require the attention and participation of all sectors of society. As machine learning is likely to become one of the most important industrial technologies of the twenty-first century, how can artists engage in the material and intellectual debates that it brings forward? How can they work creatively and independently with a technology that has been aggressively privatized and is increasingly reliant on an industrial complex based on social media and advertising? Consider for example how Google’s DeepDream project,^([11](#chapter_1.xhtml#chapter1-11)) despite its attempt to make it open to the public as a creative tool, is inseparable from Google’s access to massive data, computing power, and scientific expertise.
+
+With their capacity to work both critically and creatively with material and experiential questions, artists have a unique standpoint for reflecting on the complex issues that surround machine learning. Art can suggest alternative ways of engaging with machine learning systems and imagining our relationship with them now and in the future. But how can artists work with technologies that seem so contingent on access to big databases, big computers, and big expertise? How can they approach algorithms that are largely meant for problem-solving and optimizing—both of which that have little to do with the arts? In other words, how can they relate to a field that has everything to do with engineering, science, and business and seems utterly disconnected from contemporary forms of artistic expression?
+
+As a way to approach these questions, consider the existence of a rich historical tradition in new media art of creators working with adaptive and self-organizing technologies such as machine learning. Since the ascent of modern computers after World War II, artists and other creative practitioners have been exploring self-organizing systems, artificial intelligence, and adaptive computation as base materials for the creation of aesthetic experiences. As early as the 1950s, artists were creating adaptive robots and generative works using cybernetic systems. Important movements such as Jack Burnham’s systems aesthetics, Roy Ascott’s cybernetics art, and robotic art and artificial life art marked the development of new media art from the postwar era onward. This tradition goes hand in hand with contemporary discourses surrounding the nature of life and cognition, such as autonomy, chaos, emergence, and the generation of novelty—what artificial life researcher Takashi Ikegami calls *living technology* (Ikegami, 2013).
+
+When we compare machine learning art to documented approaches in new media art that make sure of computational systems such as artifical life art (Langton, 1995; Tenhaaf, 2008; Penny, 2009) and situated robotic art (Brooks, 1999; Penny, 2013), one of the most important differences to keep in mind is that these approaches are bottom-up in nature, relying on the iterative building of emergence and self-organization by human-based trial and error. The artist engaged in these practices uses computation to simulate artificial life forms, looks at the result, tentatively changes a few things, and tries again until satisfied. In other words, they act as an adaptive device themselves, making choices among indeterminate processes.
+
+Machine learning suggests a different way to deal with self-organization, in which one assembles different ingredients (data, model, and training process) but lets the emergent system find its own way to achieve its goals, hence handing more control to the machine. This results in a different relationship with the machine that is closer to experimental science or to a form of a collaboration between the artist and the machine. It allows finer control over outcomes than with a purely emergent procedure. It also gives more options because the artist can still directly control the goal of the system in real time (as in ALife simulations) or intervene more indirectly by tweaking data, model, and/or evaluation function.
+
+We are moving into a world with computer technologies that are increasingly adaptive, whereas similar kinds of systems were previously found only in natural phenomena. These pervasive systems are newly meaningful for artists and cultural theorists because they suggest new approaches to working with self-organizing systems and open up novel ways to understand what it means to be alive and human. Machine learning also challenges the notion that artistic creation is a purely human-centric practice, as the creative agency becomes diffused between humans and machines that couple with one another. Finally, their rapid development in the age of big data and massive concentrations of wealth and power makes them a critical engagement space for the arts.
+
+There are important challenges for making art with machine learning. First, machine learning usually requires enormous amounts of data, which are difficult to generate or even access, because most of the largest databases are privately owned. Second, computer power is still relatively expensive, although costs have been steadily dropping. Third and perhaps more importantly, artists often lack the technical skills to work with these technologies in a meaningful way.
+
+Finally, in most cases, machine learning is an optimization process for problem-solving that attempts to maximize or minimize an evaluation function over time. For example, in supervised learning classification applications such as detecting cats and dogs in images, we usually try to minimize the number and range of errors made by the system. But art is specifically *not* about optimization because there is no objective evaluation function to minimize. There is no such thing as the best painting, just as there is no such thing as the best joke. Preferences are subjective and not mutually exclusive—for example, it is not unusual for someone to have many favorite movies.
+
+Fortunately, these difficulties are not insurmountable. Many of these issues can in fact be circumvented, as artists have needs and goals that differ from those of scientists and engineers. It could be appropriate to use smaller databases and less computer-intensive learning systems for a large variety of artistic applications. Furthermore, most of the technology is developed under a very open culture. Even when carried out within the walls of tech giants, research is for the most part made publicly available, and many big IT companies play an active role in making tools available to the public under open source licenses. Computational power is likely to increase fast in coming years, and the new generation of creative open hardware has multiple cores and GPUs.
+
+On the positive side, machine learning technologies are becoming increasingly easy to use. For example, neural-based machine learning used to be a sort of dark craft because it required extensive tuning and massaging of the data. One of the advantages of deep learning is that algorithms are now able to work with raw data, which is a huge gain for users and makes working with such systems much easier. There are reams of free software tools and online tutorials to learn about these techniques, and the democratization of these technologies through education is likely to become central in the development of societies in the coming decades.
+
+## **Chapter Breakdown**
+
+This book aims to provide conceptual tools, accounts of practice, and historical perspectives to understand and address machine learning technologies from an artistic standpoint. The text is organized in three parts generally following the different components that characterize machine learning systems: training process and evaluation functions (part 1); models and machines (part 2); and data (part 3). By dissecting the scientific description of learning algorithms and connecting their properties with artistic questions, I aim to establish a comprehensive framework that artists, musicians, composers, writers, curators, and media theorists can use to approach machine learning in works of art and within larger cultural questions. Throughout the book, I thus bring together an overview of the scientific theories, concepts, and definitions attached to the various components of learning machines, expressed in an accessible way; an examination, supported by examples, of the opportunities for artistic exploration and exploitation of machine learning, either through the application of off-the-shelf techniques in their intended use or by practices of hacking and hijacking; and the main limitations, challenges, and constraints of these components of machine learning algorithms, in the context of artistic creation.
+
+This book attempts to tackle head-on aesthetic and practical issues within the intricate landscape of machine learning art, maneuvering between questions of art and science, human and machine, and bodies and processes. Following posthumanist scholar Rosi Braidotti’s concept of *zigzagging* (Braidotti, 2013, p. 164), it embraces a nonlinear way of hobbling through this murky territory, using the materiality of machine learning systems themselves as a guide. As it builds on my own research-creation work as a transdisciplinary artist-researcher, I will also, at times, share examples and perspectives from my own practice and experience.
+
+The first part of the book delves into questions surrounding the training process. Chapter 2 positions the learning loop as an optimization process, therefore seemingly antithetical to the arts, which are specifically nonpurposeful and nonoptimizable. Art practices differ from those of scientists and engineers in being more process driven than goal driven. I thus argue that research in the field of computational creativity and creative AI that attempts to reproduce human-level creativity in a given artistic domain can be misleading, because such research often misunderstands the fundamental principles and values of contemporary art. In chapter 3, we look specifically at alternative approaches employed by artists to hijack the training process by playing with evaluation functions. Recalling the origins of machine learning in cybernetics, where an agent adapts to its environment, in chapter 4, I propose a framework to understand the aesthetic properties of adaptive behaviors.
+
+The second part examines what constitutes the true outputs of machine learning systems: models. In chapter 5, we consider how these self-organized *black boxes* act in ways that often defy human understanding and why these qualities provide a fertile ground for new types of practice and art forms. We then examine how different species of machine learning systems afford different kinds of artistic practices and aesthetic qualities: chapter 6 deals with parametric models and genetic algorithms, chapter 7 with shallow connectionist learning, and chapter 8 with deep learning.
+
+The third and last part of the book focuses on the role of data in machine learning art. Chapter 9 shows how artists use data as a raw material to shape machine learning systems and how it impacts the creative process. Chapter 10 makes the argument that machine learning allows novel forms of algorithmic remixes through the collection of data and the reuse of pretrained models. Finally, chapter 11 examines the correspondence between observation and generation in machine learning systems and how biases operate in these contexts. I conclude the book in chapter 12 by zooming out of the materiality of machine learning art, addressing broader issues related to the relationships artists establish with machine learning systems, the impact of machine learning on the art world and curatorial practices, and the sociopolitical implications of machine learning art in the twenty-first century.
+
+By organizing the chapters around different perspectives over machine learning and its connections with new media art, I hope that this book can provide an understanding of the fundamental design of machine learning algorithmic structures to the layperson, while at the same time framing such technologies within larger historical and conceptual spaces, and hence becomes a reference from which to draw knowledge and inspiration long after it has been read.
+
+# **Notes**
+
+1.  [1](#chapter_1.xhtml#chapter1_1). Digital contemporary art tends to resist simple classification. Thus, setting up a taxonomy for such works is challenging because there are many overlaps between categories, to the point that artists often find it difficult to classify their own work. In this book, machine learning art is proposed as a nonexclusive category that encompasses artistic works and approaches that at their core rely on machine learning principles. It assumes that categories such as digital art, algorithmic art, and machine learning art are not mutually exclusive, and thus framing works as belonging to the category of machine learning art is not an attempt to remove them from other categories to which they may have been assigned in the past or present, but rather to reveal that works that may otherwise seem unrelated belong to the same family.
+    
+2.  [2](#chapter_1.xhtml#chapter1_2). As proof of the importance of the field in contemporary society, consider the aggressive acquisition of machine learning startups and hiring of top scholars by major IT companies. For example, Geoffrey Hinton, the great-great-grandson of logician George Boole and an emeritus professor at University of Toronto in the field of artificial neural networks, joined Google in 2013 as distinguished researcher. Yann LeCun, another leading figure of the field, was appointed in 2012 to be the first director of Facebook AI research in New York City, and Andrew Ng, an authority in the field of reinforcement learning, became chief scientist at Baidu Research in Silicon Valley in 2014 (Markoff, 2013).
+    
+3.  [3](#chapter_1.xhtml#chapter1_3). In computer science, the word *agent* does not refer only to autonomous physical devices such as robots but also includes software systems that work by taking actions in reaction to observations.
+    
+4.  [4](#chapter_1.xhtml#chapter1_4). One of the challenges with training machine learning models resides in finding the right balance between the *capacity* (i.e., the expressive power) of the model and the difficulty of the problem. If the capacity is too low or if the model is not trained for enough iterations, it will fail to grasp important features of the data distribution, resulting in a problem called *underfitting*. Inversely, a model with too much capacity that is trained for too long will start tracing too precisely the contours of the training data, as if memorizing the data set by heart, hampering its ability to generalize to new examples, a problem called *overfitting*.
+    
+5.  [5](#chapter_1.xhtml#chapter1_5). For that reason, genetic programming is often appropriate when searching through a large problem space.
+    
+6.  [6](#chapter_1.xhtml#chapter1_6). The notion that human cognition could be computed on a machine can be traced back to Ada Lovelace, who in her translation of Luigi Federico Menabrea’s book on Babbage’s machine referred to “mathematical processes” that “pass through the human brain instead of through the medium of inanimate mechanism” (Lovelace, 1842).
+    
+7.  [7](#chapter_1.xhtml#chapter1_7). Symbolic AI is also referred to in the literature as classic AI, rule-based AI, or good old-fashioned AI (GOFAI).
+    
+8.  [8](#chapter_1.xhtml#chapter1_8). Connectionism can be seen as an alternative to computationalism because it rejects the idea that cognition rests on the mere manipulation of symbols. However, it is considered by some to instead be a form of computationalism because it also assumes that cognition can be implemented on the computer using connectionist systems such as artificial neural networks.
+    
+9.  [9](#chapter_1.xhtml#chapter1_9). Analyzing the connections between machine learning and art from a historical perspective is challenging. There exists a profound disconnection between scientific studies in computer science and artistic approaches, in terms of both methods and outcomes. This is true even when one considers machine learning researchers’ attempts at applying their algorithms to art making. In most instances, such research does not result in very compelling art or music. On the other hand, when artists use technologies to make art, they do so in very different ways, often diverging from how such technologies were meant to be used. Furthermore, artists rarely document, let alone publish the results of their work, making it difficult to find traces of such works and analyze them properly.
+    
+10.  [10](#chapter_1.xhtml#chapter1_10). In a 2013 study spanning 702 different occupations, economist Carl Benedikt Frey and machine learning expert Michael A. Osborne concluded that 47 percent of US jobs were at high risk of computerization (Frey and Osborne, 2017).
+     
+11.  [11](#chapter_1.xhtml#chapter1_11). DeepDream is a software program created by Google engineer Alexander Mordvintsev. It uses neural networks to generate strange, psychedelic images from an original picture.
+     
+
+ 
+
+# **I**   **TRAINING**
+
+ 
+
+# **2**   **Optimizing Art**
+
+This chapter begins with a personal story.
+
+In the early 2000s I completed a master’s degree in computer science at the University of Montréal. My gradudate research project at Yoshua Bengio’s Laboratoire d’Informatique des Systèmes Adaptatifs (Computer Science and Adaptive Systems Laboratory)^([1](#chapter_2.xhtml#chapter2-1)) focused on artificial neural network language models—forerunners of deep learning language models that currently run the most advanced speech recognition and automated translation systems. In those days, however, artificial neural networks were regarded by the majority of AI researchers as a dead end.
+
+Over my years as a graduate student, I had become disenchanted by the disciplinary, homogeneous, and conservative culture that prevailed in the field of computer science at the time. Soon after finishing my master’s, serendipitous circumstances and encounters led me to distance myself from artificial intelligence research and pushed me into the new media arts. Montréal in the early 2000s was a vibrant and exciting place for emerging new media artists with a rich, burgeoning ecosystem of artist-run centers, academic networks, and tech companies. Yet as I was making my first steps into the art world, my fascination with the arts was distorted by the engineering culture I had bathed in for almost a decade, which had left me with a naive and narrow view of art and society and a tendency to see everything as a problem to be solved.
+
+In that context, sometime during the winter of 2005, I developed a proposal for an artistic project that reflected my state of mind at that point. I sought to create an interactive installation that would display generative images to the visitors, who would then interactively select their preferred images. The apparatus would then use machine learning to adapt to the public’s tastes, generating increasingly aesthetically appealing images over time. In summary, I framed the artistic work as an opportunity for the public to optimize “beauty” through the optimizing power of machine learning, which I had been trained to use over so many years.
+
+My young computer scientist brain was absolutely convinced of the revolutionary character of this proposal. My project would generate an optimal solution to the “problem” of artistic creation and it could potentially replace artists altogether. This idea encompassed a certain degree of contempt for my artist peers, who had for the most part gone through art or film schools and (because they did not possess the knowledge and skills that I had) were surely unable to compete with my brilliant approach.…
+
+As questionable as this mindset might appear to any artist or curator, or anyone else remotely familiar with contemporary art, I remember thinking and feeling that way as a result of years of exposure to a narrow-minded disciplinary culture within AI that often perceived itself as superior to other disciplines—in particular, to the arts and humanities. Consequently, I and my computer science peers viewed artists as lazy daydreamers who had probably chosen the arts because they were not smart enough to work in the sciences.
+
+Nothing, of course, could be further from the truth. Making art is challenging. Making *good* art requires not only intuition and talent but relentless dedication and a strong dose of resilience. Artists work extremely hard under challenging conditions, facing harsh criticism and rejection on a regular basis. Not only do they need to find the means by which to produce their work, they need to present it and market it—most often in exchange for very low income. Artists usually have to invest in their career for decades until their work starts to pay off, and successful artists more often than not live frugal lives.
+
+Still, today perhaps more than ever, Silicon Valley culture, aided by the media, continues to fuel a certain myth of the bohemian artist whose only social function is to generate beauty while we are waiting for machines to do better. In particular, this distorted view persists in the field of *computational creativity* (CC), a branch of AI that attempts to understand and reproduce human creativity, and oftentimes tends to approach artistic creation through the same dualistic world view that has plagued computer science since the 1950s.
+
+Fortunately, I never produced the generative interactive installation project I had proposed. Through years of studying and working as an artist and learning from my new peers in the art world, the internalized biases that distorted my comprehension and appreciation of artistic creation slowly eroded. I came to understand that contemporary art was not so much about solving problems as it was about creating problems for the viewers by bringing them into an experience, allowing the revelation of otherwise unfathomable truths about the world through its estrangement.^([2](#chapter_2.xhtml#chapter2-2))
+
+## **Art, Purpose, Teleology**
+
+Years later as I was finishing my PhD at Concordia University within the Faculty of Fine Arts, I presented a work in Montréal that made use of reinforcement learning systems to generate luminous and sonic patterns. Rather than responding to the tastes of the viewers, these systems acted as indeterminate, self-sufficient, pattern-generating agents, trained in real time in response to their environment.
+
+I invited one of my former computer science colleagues to come to and see the work. After the performance, my peer, an outstanding deep-learning researcher, approached me with an idea on how one could apply machine learning to artistic creation. They suggested creating an online platform that would generate images and propose them to the public, allowing viewers to select their favorite works—in other words, crowdsourcing the attribution of an aesthetic value to generative pictures. Using that information, a deep learning algorithm would find an optimal solution to the problem and thus would autonomously create images with greater aesthetic appeal.
+
+My peer’s idea reminded me of my own proposal for an aesthetics-optimization system. Both of us had attempted to frame the artistic process as an optimization problem in which the aesthetic value of images was determined by a majority vote. Moreover, we both framed art making as a problem to be solved by defining the artistic value of a work as a quantifiable objective function.
+
+This story demonstrates one of the core issues that render traditional optimization approaches in machine learning (and more generally in computer science) fundamentally inadequate when applied to the arts. It also shows how artists work with machine learning in alternative ways that often run counterstream to machine learning conventions. The reasoning behind such aesthetic optimization systems is not entirely unsound. In fact, similar concepts have been implemented in the art world; one of the most famous is Karl Sims’s 1997 installation *Galápagos*, in which users control the evolution of virtual life forms by selecting their preferences (see [figure 2.1](#chapter_2.xhtml#fig2-1)). My old self understood that the value of an art work is subjective but nonetheless undertook a series of questionable mental leaps leading to the belief that one could *solve* art using machine learning.
+
+![Figure 2.1 Images from Galá-pagos interactive exhibit, 1997. Courtesy of Karl Sims.](images/Figure2-1.png)
+
+[Figure 2.1](#chapter_2.xhtml#rfig2-1)  
+Images from *Galá-pagos* interactive exhibit, 1997. Courtesy of Karl Sims.
+
+First, I made the assumption that the subjective value of an artwork could be translated into an objective value using statistics on people’s tastes. On that premise, I reasoned that while everyone has their own set of tastes and preferences, *good* works of art are generally appreciated by more people, and therefore one could assume the existence of hidden properties that make some works *better* than others. Finally, I presumed that these hidden properties could be approximated by a machine learning model such as a neural network that could be optimized to meet the preferences of the majority.
+
+Although this might seem reasonable from a mathematical perspective, it is built on inaccurate premises about art. First, it presumes that art can be described as an optimization problem, which is far from certain.^([3](#chapter_2.xhtml#chapter2-3)) There is no such thing as the *best* song or the *optimal* painting. The capacity of art to be optimized is at best fuzzy, and art is often described as precisely nonpurposeful and nonoptimizable.
+
+Second, it attempts to measure artistic value averaging people’s preferences. Value attribution in the art world is very complex and contextual, and in artistic circles the general public’s opinion usually counts for very little in assessing the value of an art work. Artistic value fluctuates according to geography, history, art form, and other factors and involves the judgement of experts such as collectors, curators, gallerists, and artistic peers.
+
+Third and perhaps more importantly, a series of independently generated objects such as images or sounds decouples the artistic gesture from its frame of production. Hence, it calls upon a formal, disembodied, and decontextualized definition of art. Art historian Andreas Broeckmann warns against such outdated understandings of art, explaining how throughout the twentieth century, art has been broadly defined as “a practice or a form of material production that displaces, that makes strange the sense of social artefacts and conventions” (Broeckmann, 2019, p. 3). Beauty and novelty are not as important to contemporary art than concept and context.^([4](#chapter_2.xhtml#chapter2-4))
+
+## **The Best Art**
+
+In the mid-1990s, Russian-born artistic duo Vitaly Komar and Alex Melamid took a conceptual and humorous shot at the idea of optimizing an art work on the basis of people’s preferences. In 1994, as part of their project *The People’s Choice*, they hired a marketing firm to conduct a survey of 1,001 American adults, which asked questions about their preferences such as favorite colors, shapes, and themes. Using the survey results, they created two paintings: *America’s Most Wanted* and *America’s Least Wanted*, which were exhibited in New York Cirty at the Alternative Museum and later on the web.
+
+Although the work was not without some irony, the artists insisted on the honest character of their process and of the result as a faithful portrait of people’s tastes. Yet, none of the works in that series—which eventually included *Most/Least Wanted* paintings created in response to surveys conducted in more than a dozen other countries—seems to have any strong artistic value in itself. With a few exceptions, the majority of the *Most Wanted* paintings display some kind of landscape painting (see [figure 2.2](#chapter_2.xhtml#fig2-2)), and the *Least Wanted* are often abstract paintings containing repetitive geometrical shapes. Once again, it was really the conceptual context in which the project was produced that made it interesting as a body of work and that allowed it to be supported by artistic institutions.
+
+![Figure 2.2 Komar and Melamid, America’s Most Wanted, 1994. Oil and acrylic on canvas, 24 × 32 inches. Photo: D. James Dee. Courtesy of the artists and Ronald Feldman Gallery, New York.](images/Figure2-2.png)
+
+[Figure 2.2](#chapter_2.xhtml#rfig2-2)  
+Komar and Melamid, *America’s Most Wanted*, 1994. Oil and acrylic on canvas, 24 × 32 inches. Photo: D. James Dee. Courtesy of the artists and Ronald Feldman Gallery, New York.
+
+Komar and Melamid remind us that there is no such thing as the *best* or *worst* painting, nor is there a *best* song or an *optimal* media art work. Art generally does not attempt to solve problems or provide answers, and a work of art is always situated in context. Art is often described as nonpurposeful and therefore nonoptimizable. Hence, despite the huge potential of machine learning for the art world that this book tries to discern, a fundamental challenge in applying learning methods to artistic creation lies at the heart of machine learning and more broadly artificial intelligence: the dominance of optimizing and problem solving as central approaches of the field.
+
+In machine learning, optimization is expressed through the definition of a cost function (sometimes called an evaluation function or an objective function) that one seeks to minimize or inversely a fitness or reward function to maximize. For example, in a typical classification task such as differentiating between images of cats and dogs the cost function will attribute a higher value when a system makes an error (i.e., identifying a cat as a dog and vice versa). Another example is reinforcement learning, in which an agent such as a program trying to play a video game makes decisions in the world and tries to achieve high scores.
+
+One can trace this optimization principle to Rosenblueth and Wiener’s *purposeful systems*, which tried to define systems’ behaviors through the concept of teleology (Rosenblueth, Wiener & Bigelow, 1943). In their seminal paper the authors distinguished random processes from processes with a purpose or goal. Among these purposeful systems, they further defined teleological systems as able to adjust their own decision process through a feedback loop.
+
+If art is precisely nonteleological, or even nonpurposeful, then basing art on machine learning seems bound to fail. Rather than favoring the emergence of possibilities, optimization reduces options as it pushes the system to converge on a specific goal. Artist Simon Penny has expressed a similar critique of artificial intelligence in general, claiming that he precisely seeks “anti-optimized” systems in order to increase the expressiveness and personality of his robotic art works.
+
+Inspired by their work with swarms of drawing robots, artist Leonel Moura and scholar Henrique Garcia Pereira have complemented Penny’s attack on optimization in their book *Man + Robots: Symbiotic Art* (Moura, 2004): “It is obvious that *any* teleological setting, linked to *any* kind of ‘objective function’ … should be banned from the conceptual background behind *any* ‘artistic’ application of technology (Moura, 2004, pp. 18–19).” They add that because the artistic output has no objective goal, it cannot be evaluated by such an objective function and thus using machine learning for art making is pointless.
+
+These critiques of optimization expose a fundamental difference between artistic and engineering practices. As I explained earlier, computer scientists tend to see everything through the lens of “problem solving,” and so they tend to believe that everything can be approached as an optimization problem. The result is that they tend to try to reproduce what already exists (i.e., the expected) whereas artists seek to create the unexpected.
+
+Optimization is therefore hardly applicable to artistic practice. A first problem is the existence of multiple maxima, even within a restricted domain such as the tastes of a single individual. Most people have several favorite films, novels, or songs. To take a casual example, let us say that my favorite films are Jane Campion’s *The Piano*, Spike Lee’s *Malcolm X*, and Stanley Kubrick’s *2001: A Space Odyssey*, it would be difficult for me to establish which of these three films is really my top choice, because I might like these films for different reasons—many of which I might not ever be able to describe precisely.
+
+Furthermore, the space of possibilities in which art works exist is infinite and incommensurable, which makes optimizing them even harder. My three favorite films are very different from each other and it is difficult to clearly establish what unites them. Moreover, even if they are my favorite movies, that does not mean that a film that appears similar to one of these movies will interest me. For example, *2010: The Year We Make Contact* is nearly not as good as Kubrick’s movie even though it is a sequel; many remakes are worse—or sometimes better—than the original. Campion, Lee, and Kubrick, have directed other films that I do not like as much. The qualities that make these films great are difficult to generalize to other cases.
+
+One last major challenge with approaching artistic creation as an optimization problem is that art does not always try to respond directly to the inclinations of an audience. Artists design aesthetic experiences that often go against the public’s preferences or question such preferences. Engineers and scientists who try to tackle art as an optimization problem confound art with entertainment, which seeks to please the masses.^([5](#chapter_2.xhtml#chapter2-5))
+
+## **Computational Creativity**
+
+The kinds of engineering and optimizing approaches to creation described in this chapter belong to the domain of computational creativity, an approach to AI that has grown in importance and interest over the past thirty years. In theory, computational creativity is not specifically interested in artistic creation but in the general notion of creativity that applies to many human activities such as science, engineering, and mathematics; however, in practice it seems currently to be importantly focused on artistic creativity. A broad, interdisciplinary field that brings together artists, designers, computer scientists, psychologists, and philosophers, computational creativity integrates many different approaches to and conceptions of creativity in computational systems. Yet, at its core it lies in the continuity of traditional AI in its interest in studying and engineering human-level creative capabilities of computers by, for example generating musical scores or poems indistinguishable from those produced by human experts.
+
+Philosopher Margaret A. Boden is a central figure of the field. Boden associates creativity with the ability to come up with ideas and artifacts that are both *original* and *valuable*. She further defines two forms of creativity: (1) *psychological creativity* or *P-creativity*, which refers to mundane, everyday activities that are novel from the perspective of the creating agent (e.g., the creativity of a child in an art class); and (2) *historical creativity* or *H-creativity*, which is recognized by society as creative (e.g., the creation of a masterpiece) (Boden, 1996, pp. 76).
+
+Boden further classifies creativity under three different types: (1) *exploratory*, (2) *combinatorial*, and (3) *transformational*. Exploratory creativity involves the exploration of a given space in order to generate new, unforeseen elements of that space. A striking example of exploratory creativity is AARON, a computer program by artist Harold Cohen that automatically creates drawings on the basis of a complex set of rules. Another example of exploratory creativity would be a neural network trained to generate songs that sound similar to those of a well-known performer such as Michael Jackson by training it on a database of that performer’s songs.
+
+Combinatorial creativity involves creating something new by combining two objects from different spaces. Jazz fusion, a musical genre prevalent in the 1960s that combined jazz and rock, is a good example of combinatorial creativity. Another example would be the NSynth, a method that uses deep learning to create new musical instruments by combining existing ones (Engel et al., 2017).
+
+Finally, transformational creativity involves disrupting some accepted conceptual space or cultural conventions. Marcel Duchamp’s concept of the readymade, which disrupted modernist artistic conventions, is a good example of transformational creativity.
+
+Boden traces the origins of computational creativity to Ada Lovelace who said of the analytical engine (a mechanical general-purpose computer designed by inventor Charles Babbage in the nineteenth century) that it could be able to compose complex musical scores (Lovelace, 1842). A century later, at the 1956 Dartmouth Conference that jumpstarted the field of AI, creativity was named as one of the core aspects of AI (McCarthy, Minsky, Rochester, & Shannon, 2006). Yet, for many decades creativity was ignored by the largest part of AI communities, who focused more on problem solving. Hence, the most successful early attempts at computer-based creativity were designed by people outside of AI. For example, throughout his career, visionary composer Iannis Xenakis used computers to generate musical scores based on his theory of stochastic music (Xenakis, 1992), and architect John Frazer received the Architectural Association prize in 1969 for his work on computer-generated environments.
+
+Many of the works of art discussed in this book can, indeed, fall into the category of computational creativity. Yet, one of the defining features of computational creativity is its attachment to AI as an effort to understand human creativity by engineering creative processes on the computer.
+
+From the 1990s onwards, as raw computation became more accessible and allowed for more complex AI systems to be designed, interest in creativity surged again within mainstream AI. Machine learning has been used in many computational creativity applications—with promising results in the mid-1990s, and with tremendous successes since the mid-2000s.
+
+Music generation is probably the most advanced domain of computational creativity. An example of a recent success is the DeepBach system for the generation of Bach-like chorale scores, which trained neural networks on a corpus of Johann Sebastian Bach’s polyphonic chorales. In an online test with 1,600 listeners, of whom about 25 percent had significant musical expertise, more than 50 percent confused scores generated by DeepBach with authentic pieces from the Baroque composer (Hadjeres, Pachet & Nielsen, 2016).
+
+Although computational creativity encompasses both artistic and scientific approaches, the field is still led by scientists, not artists, and its core objectives and methods are thus primarily scientific rather than artistic. For example, the ability of an algorithm to imitate the style of a master painter such as Van Gogh or Degas, such that even experts are fooled, is surely impressive and definitely interesting from an engineering perspective. Yet, it is not clear how such machine made *pastiches* contribute to contemporary artistic discourse and debates, any no more than would man-made imitations through the use of computers.
+
+Furthermore, the framing of creativity in computational terms and the equivalence framing of creativity as a sufficient condition of art are misleading. Art, like science, employs creative processes, but it is much more than that: it is first and foremost a domain of activity with its own communities, codes, and references. Therefore, while the field of computational creativity is of great interest for philosophy and science, and its recent advances certainly have merit, its relevance for the arts is more nuanced than it appears at first look.
+
+Questions of novelty and value to define creativity also present a number of problems. Novelty and value are capitalism’s most potent drivers of consumption, and artists who want to generate engaging and reflective worlds to suggest revolutionary modes of being and thinking need to be critical of such false idols. For example, a new pop remix of an old song might be valued by the masses, bringing in millions of dollars in revenue for the artist and the recording label, but it might not be as artistically relevant as an experimental work of art that reaches only a handful of people whose lives it significantly changes.
+
+## **The Imitation Game**
+
+To be fair, most of the studies that deal with artistic creation within computational creativity do not attack the problem by trying to directly match people’s tastes using a generative system. Rather, to avoid the direct intervention of humans, many studies use a proxy. Instead of using the audience’s feedback as a measure of optimization, these studies look at accepted canons, such as Baroque music, English poetry, or modernist painting and then design algorithms able to generate new works that fit within these categories. Their measure of success is generally a variation of the Turing test, in which they ask a group of human subjects to distinguish between original human works and those generated by the computer.^([6](#chapter_2.xhtml#chapter2-6))
+
+Take for example a 2017 study from the Art and Artificial Intelligence Lab at Rutgers University, which is among the most interesting in that type of research. The researchers designed a new deep learning system called *creative adversarial networks* (CAN) (Elgammal, Liu, Elhoseiny, & Mazzone, 2017) to create artistic images. Using a data set of 81,449 pictures of existing paintings representing artistic movements ranging from Fauvism and Pointillism to Abstract Expressionism, they not only trained their system to imitate existing styles but also adjusted the cost function in order to force the algorithm to generate work that is “novel, but not too novel” by maximizing its deviation from established styles while minimizing its distance from the norm (see [figure 2.3](#chapter_2.xhtml#fig2-3)).
+
+![Figure 2.3 Sample “paintings” generated by a Creative Adversarial Network (CAN) in Elgammal et al. (2017). Courtesy of Ahmed Elgammal – AICAN.io – Art & AI Lab, Rutgers.](images/Figure2-3.png)
+
+[Figure 2.3](#chapter_2.xhtml#rfig2-3)  
+Sample “paintings” generated by a Creative Adversarial Network (CAN) in Elgammal et al. (2017). Courtesy of Ahmed Elgammal – AICAN.io – Art & AI Lab, Rutgers.
+
+In order to validate their technique, they compared the results of the generative program to works made by human artists from two data sets: one of Abstract Expressionist paintings and one of paintings presented at the latest Art Basel fair. The authors argued that works shown at Art Basel, the “flagship art fair for contemporary art world wide,” are indicative of works existing “at the frontiers of human creativity in paintings” according to contemporary art experts. This was a good call by the authors, who explained that they did not just want to imitate existing styles, but to see whether their method can generate art that could be considered truly novel.
+
+The results of this study are quite telling. A random sample of non-experts attributed not only a higher degree of aesthetic quality but also of intentionality and “humanness”, to the computer-generated images than to those from Art Basel. While study participants rightfully believed that works from the Abstract Expressionist data set were human-made 85 percent of the time, this belief dropped to 41 percent when they considered images from Art Basel 2016; by contrast, they mistook 53 percent of the computer-generated images for human works. In other words, to the study’s participants CAN-generated paintings generally felt more “human” than actual works painted by human artists who are considered to be the *crème de la crème* of the international contemporary art scene.^([7](#chapter_2.xhtml#chapter2-7))
+
+Although this study has high scientific merit as AI research from the perspective of computational creativity, its contribution to the field of new media art is much less obvious than one would think. Like most studies of its kind, it wrongly presumes artistic value can be determined using some variation of the Turing test administered in a vacuum. As explained earlier, art history shows that with regard to making and showing art, context is key: artistic creation is embedded within cultural, historical, and institutional frameworks that directly interact with the artist’s own creative process.
+
+Art is a fluctuating domain of human life that is utterly intertwined with culture, technology, and history. The signification of modern painting cannot be distinguished from the sociotechnical environment in which it emerged in the mid-nineteenth century in Europe, from which it responded antagonistically to, on one hand, aesthetic norms of the time and, on the other hand, to the mechanization of images through photography. The value of Abstract Expressionism, which is examined in the Art and Artificial Intelligence Lab’s paper, lies as much in its formal aesthetics as in its relevance within art history. Its appearance in the post–World War II era in New York City was influenced by Surrealist automatism, aboriginal painting, and quantum mechanics (Paalen, 1943). The movement cannot be separated from the artistic community at its core, who had matured during the 1930s in New York City in a period of economic and political turmoil and had come to value art anchored in human experience, in particular through freeing the mind and releasing the unconscious. In other words, we attribute artistic value to these works because they were relevant in a certain context, yet if someone would create the same kinds of work today (like the CAN does) it would not necessarily be considered original, let alone artistic.
+
+Hence, while this kind of computational creativity study is interesting in showing how algorithms can generate novelty, it gives the illusion that in so doing the algorithms are being creative—or worse, that they are creating art. These shortcuts just add to the general confusion. They are tainted by computationalism, a form of dualism that is still the dominant world view within AI: the idea that human behavior is a form of computation that is completely independent of the human body, and by extension, of culture, society, and history.
+
+I reject this view, as I believe it is profoundly flawed and barren to understand and advance artistic practice. This engineering approach to art making is built on the false assumption that machine learning systems can circumvent the need for authorship by deferring the decision-making process to a neutral and creative black-box. In reality, decisions must be made at every step of the process in selecting the optimization algorithm, evaluation function, model, and data set. For example, even the most advanced research in the field of computational creativity is defined over a rather restricted domain for which enough data is available, such as the work of classical composers (Hadjeres, Pachet & Nielsen, 2016) or abstract paintings (Elgammal et al., 2017).
+
+Reproducing human-level performance for object detection or speech recognition is a rather easy task for machine learning systems, as it requires them to find regularities in the data—in other words, to look for the expected. However, artists like Nicolas Baginsky, who work with self-organizing systems, are more than often looking for the unexpected, the glitches, and the outliers. Furthermore, many artists are not as much interested in the end product as they are engaged, through the process of artmaking, in a creative inquiry that ultimately leads to the revelation of new knowledge and new worlds. From this perspective, attempts to *automate* art using artificial intelligence appear at the very least questionable.
+
+Beyond these problems, there is a host of ways in which artists use and misuse machine learning and other optimization methods. Optimization can take different forms, and even in machine learning research there exists a plethora of less restrictive optimization objective functions that encourage diversity and novelty. For example, much of the recent progress in deep learning is related to unsupervised learning and representation learning methods that aim at extracting regularities and patterns from data without necessarily trying to match data points to predetermined categories such as cats and dogs.
+
+We cannot deny that increasingly large aspects of artistic production are automated thanks to advances in computer science, and machine learning is already contributing to this. Although this new form of mechanization of creative processes, which allows mass production of novelty, should not to be equated with art, it will likely have a huge impact on the art world which will force artists and art historians to redefine its boundaries.
+
+Some will likely take refuge in anthropocentrism, claiming that art simply cannot be accomplished by machines because art is by definition a human activity. I believe this would be a mistake. While we need to be careful not to fall for Google-driven techno-optimism and embrace the idea of soon-to-come creative machines that will replace humans, we also have to consider how at least some dimensions of art might exist beyond the boundaries of the human species and its activities.^([8](#chapter_2.xhtml#chapter2-8))
+
+The automatization of creative labor made possible by machine learning and other artificial intelligence technologies is an important challenge faced by artists. There is a perceived threat, real or not, that artists, whose living conditions and social status are often fragile, will cease to have a valuable role in society because algorithms will steal their jobs. This threat should be taken seriously. Artists currently manage to survive by undertaking a plethora of creative activities, which include tasks that might be taken over at a lower cost by machine learning systems—such as doing work for the entertainment industries to pay the bills. Yet, machine learning also offers new opportunities for artists to further redefine relationships with machines by, for instance, imagining new ways to collaborate with them.
+
+Artists have always found ways to reclaim the technologies of their time and shape them to their needs. For instance, there is no requirement to define the evaluation function of a learning algorithm such that it attempts to approximate the public’s tastes or to imitate a particular style. This function can in fact be freely defined to achieve other purposes. Thus, one could adapt it to their own preferences; they could experiment with different evaluation measures to generate new content, and they could even change the evaluation function over time. In other words, while optimization appears antinomic for artistic practice, there are many ways by which optimization processes can be hijacked for creative practice such as tinkering with the data fed into the system, playing with the model, and tweaking the evaluation function.
+
+## **Learning in Real Time**
+
+Beyond trying to directly “solve the problem” of artistic creation through a popular survey, some artists choose to employ the fascinating generative process of the learning loop as a support for new forms of art. In this case, a system is optimized according to an objective target; however, the piece is constructed so that the *training process itself* is presented as part of the art work.
+
+A recent example is the work *Pachinko Machine* (2017) by UK artist Brigitta Zics. The piece takes its name and inspiration from Japanese pachinko, a gambling device similar to pinball. In pachinko, the player launches small metal balls into the machine using a spring-loaded handle. The balls then travel through the machine, bouncing on different brass pins and eventually fall into various catching slots. The goal of the game is to collect as many balls as possible.
+
+No human players are involved in Zics’s work. Instead, her video installation features an animated drawing of a pachinko that plays against itself. Throughout one day of the exhibition, the machine learning agent playing the game tries to optimize its actions to continually improve its playing skill. However, the pachinko agent is also playing against another algorithmic process whose goal is to add obstacles and confusion to the game. The work is meant as a metaphor for human life: our efforts to achieve our goals are disturbed by chance and chaos that lead us astray from our path, inspiring us to explore alternatives.
+
+The new media installation *B–612* (2014) by Polish artist Natalia Balska also centers on a reinforcement learning process happening in real time (see [figure 2.4](#chapter_2.xhtml#fig2-4)). Here, however, the pace is much slower; whereas Zics’s piece evolves over the course of one day, Balska’s learning loop runs over several months. The piece, originally inspired by the artist’s investigation of the concept of altruism, features a closed system in which a plant is nurtured by a machine learning system.
+
+![Figure 2.4 Natalia Balska, B-612, 2014. Courtesy of Natalia Balska.](images/Figure2-4.png)
+
+[Figure 2.4](#chapter_2.xhtml#rfig2-4)  
+Natalia Balska, *B-612*, 2014. Courtesy of Natalia Balska.
+
+Every day, a pool of ten individual units of water (10 milliliters each) must be shared between the plant and the machine learning system. The learning agent makes decisions about distributing the water supply, thus impacting the environment and in particular the health of the plant. The impact of the decision is evaluated by an external computer program, which, as a measure of the system’s performance sends a reinforcement signal to the agent in the form of a reward or penalty. Over the course of the exhibition, both the machine learning agent and the plant adapt to the situation staged by Balska.
+
+In the first two weeks of the exhibition, the actions of the learning agent are mostly random. Only after a few weeks does a pattern emerge. First, the agent appears very greedy for a few days, keeping all the water to itself, causing the plant to begin dying. In response to the signs of the plant’s decay, the artificial agent begins to share some of its resources for a few days. When the plan shows signs of recovery, the learning agent becomes greedy again. Eventually, after many months, the system becomes more efficient in its water management, resulting in more consistent and balanced decisions.
+
+For Balska, the purpose of the work is not so much to create an optimal plant care system but rather to generate interactions between reality and virtuality by creating a relationship between two adaptive systems, one computational and one biological. The audience is invited to discover this relationship and is left to interpret it in their individual ways. Although the work takes the form of an experimental apparatus, through this optimization process what is revealed is the unpredictability of the system, which can change depending on external factors such as the ambient humidity and temperature.
+
+## **Conclusion**
+
+Machine learning offers a unique challenge to art because of its historical entanglements with an engineering culture that idealizes optimization and problem-solving over open-endedness and diversity. Traditional engineering approaches to art making within computer science and artificial intelligence rest on false premises as they focus on techniques and outcomes rather than on processes and contexts.
+
+In other words, as machine learning is geared toward optimization, when experts of the field attempt to apply machine learning algorithms directly to artistic creation, they more than often miss the point. When all you have is a hammer, everything looks like a nail.
+
+This is a recurrent issue in computational creativity research. Directly applying machine learning to artistic creation requires framing art making as an optimization problem. However, the fact that these generative outputs are removed from any frame of reference is antithetical to how contemporary art operates. What the twentieth century has taught us, through the ongoing operation of the avant-garde is that art is not just about creating new, beautiful stuff. It is a dimension of culture that always responds to broader cultural, social, and political contexts. Furthermore, as Komar and Melamid’s *America’s Most Wanted* painting suggests, artistic value does not boil down to a vote of popularity.
+
+Artists have always found ways to engage critically with technologies by approaching them sideways. Machine learning artists use adaptive technologies as raw material, hijacking the optimization game to create meaningful experiences. In so doing, they do not attempt to answer questions or solve problems but rather ask questions and create problems for the audience to address. Machine learning art hence joins previously established artistic movements that have dealt with computational systems, such as cybernetics art, computer art, artificial life art, and generative art.
+
+How do machine learning artists do it? The next chapter delves more deeply into this process by examining how artists intervene in the training process of machine learning systems.
+
+# **Notes**
+
+1.  [1](#chapter_2.xhtml#chapter2_1). The laboratory is known today as the Montreal Institute for Learning Algorithms (MILA) and is currently one of the top academic hubs for deep learning research in the world.
+    
+2.  [2](#chapter_2.xhtml#chapter2_2). Of course, artists often need to solve problems as they create their work, but this is never the focus of their art.
+    
+3.  [3](#chapter_2.xhtml#chapter2_3). When it comes to art theory, I consider myself an anti-essentialist (Weitz, 1956). It is never possible to “pin down” art, to find a common set of properties that would encompass all its different forms. Art is best conceived of as a socially constructed, constantly fluctuating concept marked by an incommensurate richness and diversity. Art can be recognized, rejected, criticized, and debated but never reduced to an absolute set of essential characteristics.
+    
+4.  [4](#chapter_2.xhtml#chapter2_4). Decontextualized creation purely meant to please its audiences is usually called entertainment, not art.
+    
+5.  [5](#chapter_2.xhtml#chapter2_5). This confusion is not the preserve of engineers. It manifests itself, for example, through the development and promotion of creative industries in the Western world, in which creativity is confused with independent creation and art with mainstream entertainment.
+    
+6.  [6](#chapter_2.xhtml#chapter2_6). The Turing test is a test for machine intelligence in which a machine attempts to engage with a human subject, typically through conversation. If the human subject believes that its interlocutor is also human, the machine passes the test and should be considered a thinking being (Turing, 1950). In computational creativity studies, similar tests are typically used as a measure of machine creativity.
+    
+7.  [7](#chapter_2.xhtml#chapter2_7). The aesthetic value of works generated by the CAN is also rated higher than those from Art Basel. These results echo Komar and Melamid’s project *The People’s Choice*, in which the artists created paintings responding to the general public’s aesthetic judgment.
+    
+8.  [8](#chapter_2.xhtml#chapter2_8). For a thorough investigation into the question of computational creativity and its impact on art and music, please refer to Bown (2021).
+    
+
+ 
+
+# **3**   **Curbing the Training Curve**
+
+For good and for bad, machine learning algorithms are designed for optimization. Given a large set of examples, a training process optimizes a computational machine called a model to iteratively increase its performance. Most of that process remains out of the user’s hands: once the data, the model and the training process have been chosen, the system behaves more or less autonomously. Hence, machine learning artists always work at a distance from the computational process, unable to directly code the decisions of the system, only indirectly influencing its outcomes.
+
+Machine learning art reframes a well-known tension existing between the artist’s authorial control and the autonomy of materials and processes. This tension is particularly familiar to artists working with algorithms, but it is certainly not limited to computer-based art. Removing human intentionality from the creative process has been a recurring feature of many twentieth century avant-garde movements. One example is the automatist methods of Dadaists André Breton and Tristan Tzara, further deployed by Surrealists such as Salvador Dalí, André Masson, and Joan Miró as a way to express the subconscious; another example is the use of permutations and chance in the work of 1960s French literary movement OULIPO; and a third example is the application of stochastic mathematics in Iannis Xenakis’s formalized music.
+
+Paradoxically, whereas machine learning’s unprecedented popularity is due largely to its strong predictive capabilities, when used as an artistic material machine learning algorithms become extremely unpredictable. Although this aspect makes machine learning inadequate for some artistic practices and intentions, machine learning artists embrace this situation because they value the unpredictable nature of these processes and are ready to find ways to tame these wild algorithmic materials.
+
+## **Emergence versus Authorship**
+
+If machine learning processes are so unpredictable, how is it possible to control them to make art? Are these systems so autonomous that artists could eventually be removed from the loop altogether?
+
+Machine learning is not magic, and currently available machine learning systems can hardly be called intelligent. In fact, these algorithms are quite dumb: they can be really good at doing one very specific thing such as recognizing faces or diagnosing cancer but really poor at everything else.^([1](#chapter_3.xhtml#chapter3-1)) When attacking a new problem, engineers and data scientists working in the field often try different data sets, models, and parameters until they find the right setup for the task at hand. In other words, although they do automate some human work, machine learning systems still necessitate human intervention.
+
+Digital artist Marc Downie has brought an interesting perspective to the question of making choices in working with autonomous systems. Downie has worked on several interactive pieces with artificial social characters such as *AlphaWolf* (Tomlinson & Blumberg, 2002) and *Music Creatures* (2000–2003), using a mix of computational approaches to artificial agent control, including machine learning.
+
+In his PhD dissertation, Downie discussed the use of both artificial life and machine learning systems in art through the concept of *computational emergence*, a phenomenon whereby a computing system possesses properties that cannot be found in the parts that constitute it (Downie, 2005). For example, deep learning systems rest on the complex interactions of interconnected layers of artificial neurons, which self-organize to realize complex decision making. Individual neurons enable very simple decisions; through their collective work, complex predictions can be made.
+
+The artist-researcher contrasts computational emergence with the question of authorship in art practice. Emergence-based approaches such as machine learning and artificial life sidestep the question of authorship altogether by creating autonomous processes that supposedly work without human intervention (Downie, 2005, p. 29). Yet, despite decades of efforts we are still waiting for the advent of higher-order emergent systems (Bedau, 2000).
+
+Downie claims that while generating novetly is made relatively easy by computers, the challenge rests in how to put that potential to work. Once the fascination with emergence within self-organizing systems drops, what really matters is the aesthetic experience of the work, which is ultimately sourced from its human author. Hence when artists think about machine learning as an approach to art making, they should focus on the broader context of their intervention. Machine learning systems ask distinctive questions about authorship. What are the decisions made by the system? What data will be fed into it? With what criteria is the system being trained? How do the adaptive features of the system help or hinder what is meant to be expressed by the piece? In particular, the adaptive nature of the system forces a certain loss of control, conveying a sense of precariousness and uniqueness to the work—strong features that can be exploited for producing aesthetic experiences.
+
+## **Subjective Functions**
+
+How can artists intervene in machine learning processes that are highly automated and out of control? One can influence the learning by tuning the data fed to the algorithm or by changing the structure of computational system that is being adapted. We subsequently return to these strategies. Here, we look at a much more basic approach that consists of directly crafting the objectives of the system, hence steering the learning in a certain direction.
+
+One key characteristic of optimization is that it needs an objective. You never just optimize in the void; you need to optimize *something*. In machine learning terms, this amounts either to minimizing a loss, cost, or error or to maximizing a fitness or reward. In both cases, the principle is the same: machine learning algorithms attempt to train a machine over a set of data using a metric of the system’s performance. That metric, that we call the *evaluation function* or *objective function*, is the ultimate guide to the learning process: it tells the machine learning system whether or not it is doing a good job so that it can make appropriate adjustments.^([2](#chapter_3.xhtml#chapter3-2))
+
+Because the evaluation function is so central to the optimization process, it constitutes an important instrument for artists to influence the learning process in creating original works using machine learning. This is especially true with reinforcement learning and other agent-based works such as Brigitta Zic’s *Pachinko Machine* and Natalia Balska’s *B–612*, presented in the previous chapter. In supervised and unsupervised learning situations, most users use off-the-shelf evaluation functions and rely mostly on the data to influence the system.
+
+Two core strategies are employed by artists working on the side of evaluation functions: direct feedback, in which a human (typically the artist or the audience) directly intervenes to evaluate the system; and indirect feedback, in which the artist experiments with different evaluation functions to produce outcomes. In either case, in the hands of an artist the evaluation function is diverted from its role as an objective measure of performance to become a tool with which the artist steers the system toward subjective aspirations.
+
+## **Interactive Genetic Algorithms**
+
+One straightforward way that artists can use evaluation functions to guide the outcomes of adaptive systems in the desired directions is through direct control. In these situations, the practitioner bypasses the automated decision mechanism allowed by the evaluation function by directly evaluating the performance of the algorithm according to the artist’s own judgment.
+
+One such approach, known as interactive genetic algorithms (IGA), was first proposed in the 1980s by Richard Dawkins in his book *The Blind Watchmaker* (Dawkins, 1986). Dawkins discussed a computer program called *biomorphs*, which he created to demonstrate how natural evolution can create complex structures out of random processes through natural evolution.^([3](#chapter_3.xhtml#chapter3-3)) The biomorphs are two-dimensional (2-D) vectorized computer drawings determined by nine digital genes that can generate more than 118 billion different images. The user is asked to select their favorite biomorph among those displayed on the screen, thus causing the program to produce a new generation of evolutionary look-alikes that inherit some of the features of the selected parent. Dawkins showed how in a few iterations it is possible to generate shapes that look like living beings, such as insects^([4](#chapter_3.xhtml#chapter3-4)) (see [figure 3.1](#chapter_3.xhtml#fig3-1)).
+
+![Figure 3.1 Richard Dawkins, Biomorphs, 1986. Courtesy of Richard Dawkins.](images/Figure3-1.png)
+
+[Figure 3.1](#chapter_3.xhtml#rfig3-1)  
+Richard Dawkins, *Biomorphs*, 1986. Courtesy of Richard Dawkins.
+
+In the 1990s, artist William Latham and mathematician Stephen Todd applied IGAs as part of their groundbreaking work on generative three-dimensional (3-D) forms on the computer (Todd & Latham, 1992b). Their approach, which they called *evolutionism*, splits the artistic process into two separate stages. In the first stage, the artists define a form-generating system that allows the computer to generate different virtual objects. Latham and Todd’s system accomplishes that goal using FormGrow, a form-generation system inspired by Latham’s earlier work using pen and paper, based on a programmable grammar that recursively and hierarchically repeats shapes such as cones, spheres, and horns (see [figure 3.2](#chapter_3.xhtml#fig3-2)).
+
+![Figure 3.2 William Latham, FormGrow/Mutator Generated Art, 1992/1993. Software-based art using custom FormGrow and Mutator Software rendered on an IBM mainframe. The repetitive fractal horn structures are characteristic of FormGrow. Courtesy of William Latham.](images/Figure3-2.png)
+
+[Figure 3.2](#chapter_3.xhtml#rfig3-2)  
+William Latham, *FormGrow/Mutator Generated Art*, 1992/1993. Software-based art using custom FormGrow and Mutator Software rendered on an IBM mainframe. The repetitive fractal horn structures are characteristic of FormGrow. Courtesy of William Latham.
+
+In the second stage, an IGA implemented as part of their software Mutator “assists the artist to select preferred structures” (Todd & Latham, 1992a, p. 504) within a virtual world. During that stage, the artist becomes a “creative gardener” (Todd & Latham, 1992b, p. 12) whose job is not to directly draw 3-D forms but rather to carefully select and breed artificial structures using his own artistic judgment. Here the artificial evolutionary process is used as an advanced computing tool that automatically generates possibilities for the artist to choose from and facilitates the curation process, often producing outcomes “beyond the artist’s expectation and imagination” and making the computer a kind of “creative partner” (Todd & Latham, 1992a, p. 504).
+
+Karl Sims’s *Galápagos* (1997) is one of the most renowned examples of the use of IGA in an interactive installation. Here, the artist passes the gardener’s role to the visitors, who are asked to interactively select their favorite artificial 3-D creatures using a set of pedals, thus acting as demiurges in a strange Darwinian simulation. The creature’s genetic code is then used to create the next generation through mutations and crossovers. At the core of the work’s aesthetics is its participatory nature, engaging audiences in the production of novel forms through a playful and intriguing experience. For example, two viewers stepping on two foot pads at the same time mimic a sexual reproduction process as the genetic code of the corresponding creatures may be intermingled to create the next generation of offsprings (Fifield, 1994).^([5](#chapter_3.xhtml#chapter3-5))
+
+Similar procedures have been applied in reinforcement learning contexts to shape the behavior of robots and other agents by providing instant feedback in the form of positive and negative rewards—with limited success. There are important challenges to interactive attribution of rewards to control the development of machine learning agents that are even more acute in artistic contexts. The first problem is that most complex machine learning algorithms require a lot of data to be able to learn anything interesting. In this context, the need to manually evaluate each data point can be laborious, if not impossible.
+
+The second issue is that subjective evaluations can be very noisy and contradictory. One may choose to evaluate differently two similar states of the system or to give a similar rank to two completely different states. This can make it very hard for the learning algorithm to adapt to the user’s preferences.
+
+Finally, artists can easily confuse their own perceptions with those of the adaptive agent. For example, an artist looking at a robot might try to give feedback that is based on what she sees; however, the robot might have much more limited perceptions than its human critic, making it difficult for the artificial agent to truly understand what it did well or wrong and how to improve its performance. Consider as an example the impossibility of teaching a color-blind individual to distinguish between certain colors. Part of the art of training learning machines involves trying to put oneself in the machine’s place and to see through its artificial eyes—in other words, to intuitively understand its affordances in order to design it so that it is able to learn something—ideally, something of aesthetic interest.
+
+## **Artificial Curiosity**
+
+In their 2014 installation *Zwischenräume*, artist Petra Gemeinboeck and computer scientist Rob Saunders looked at the live adaptative performances of robotic agents that were motivated by curiosity (see [figure 3.3](#chapter_3.xhtml#fig3-3)). The robots are sandwiched between the gallery wall and a temporary wall. Each of them is equipped with a motorized system that allows it to move vertically and horizontally, covering a specific region of the wall. They are also equipped with a puncturing device that allows them to make holes through the surface, as well as a camera and a microphone for the purpose of sensing their environment. The robots combine the features extracted from the camera and microphone using an unsupervised learning neural network^([6](#chapter_3.xhtml#chapter3-6)) to detect similarities between images and a reinforcement learning program that tries to capture the most “interesting” images (Gemeinboeck & Saunders, 2013, p. 217).
+
+![Figure 3.3 Petra Gemeinboeck and Rob Saunders, Zwischenräume, 2010. Robotic installation. Photo credit: Petra Gemeinboeck. Courtesy of Petra Gemeinboeck and Rob Saunders.](images/Figure3-3.png)
+
+[Figure 3.3](#chapter_3.xhtml#rfig3-3)  
+Petra Gemeinboeck and Rob Saunders, *Zwischenräume*, 2010. Robotic installation. Photo credit: Petra Gemeinboeck. Courtesy of Petra Gemeinboeck and Rob Saunders.
+
+The evaluation function, provided in the form of a numerical reward, plays a major role in *Zwischenräume* by defining what kinds of pictures are considered to be “interesting” for the robots and what actions allow the robots to capture these images. The level of interest in the described system is based on a measure of “novelty and surprise” where “‘novelty’ is defined as a difference between an image and all previous images taken by the robot” and “‘surprise’ is defined as the unexpectedness of an image within a known situation.” (Gemeinboeck and Saunders, 2013, p. 217) These measurements are used as a proxy for the agents’ curiosity; they are provided as a reward to the robots in consequence of their actions. The robots’ behavior is not hardcoded; rather, they have to find an optimal strategy to maximize their own “novelty and surprise.” The artists’ hope is that the robots’ behavior will in turn appear new and surprising to the audience.
+
+The installation establishes a peculiar relationship between robots and audience. As they dig holes through the walls, the curiosity-motivated agents become an “audience to the audiences \[sic\] performance.” It is thus “not only the robots that perform, but also the audience that provokes, entertains and rewards the machines’ curiosity” because the “robots don’t only respond or adapt to the audience’s presence and behaviours, but also have the capacity to perceive the audience with a curious disposition” (Gemeinboeck and Saunders, 2013, p. 218).
+
+## **Chasing Agents**
+
+The installation/performance work *N-Polytope: Behaviors in Light and Sound After Iannis Xenakis* provides an example of tweaking reward functions in reinforcement learning systems to generate different kinds of real-time patterns. *N-Polytope* is a 2012 work created by Chris Salter in collaboration with myself, Marije Baalman, Adam Basanta, Elio Bidinost, and architect Thomas Spier. It brings the audience into an immersive spectacle of light and sound: a reinterpretation of famous composer Iannis Xenakis’s series of large-scale media installations known as the *Polytopes*.
+
+The physical structure consists of steel cables forming a customizable topological surface that is adapted to each venue. This architectural choice was not arbitrary but based on Xenakis’s interest in projective geometry and ruled surfaces. High-intensity LEDs are attached linearly along each cable, allowing the real-time individual control of up to 144 LEDs through pulse-width modulation. Different kinds of algorithmic patterns are used to orchestrate the light and sound effects produced in the piece.
+
+One of the pattern-generation procedures simulates a set of virtual agents moving across the cables. The agents are trained in real time using reinforcement learning. An agent’s position on a cable is indicated by a dim light, and a collision between two agents provokes an intense flash. Each agent is rewarded using a reward function created by combining three different types of reward: *touch*, which reward the agent (or punishes it) for being on the same spot as another agent; *move*, which rewards the agent for moving in a given direction (and punishes it for going the opposite way); and *stay*, which rewards the agent for staying put (and punishes it for moving). These parameters can be used independently (by keeping the other ones at zero) or combined to foster different behaviors in agents, as demonstrated in [table 3.1](#chapter_3.xhtml#tab3-1).
+
+ 
+
+[Table 3.1](#chapter_3.xhtml#rtab3-1)  
+Example reward functions for the *Chasers* procedure, with corresponding expected results.
+
+ 
+| Touch || Move || Stay || Resulting behavior |
+| --- | --- | --- | --- |
+| 1 || 0 || 0 || Try to catch other agents at all cost. |
+| --- | --- | --- | --- |
+| −1 || 0 || 1 || Try to evade other agents and otherwise stay still. |
+| 0 || 1 || 0 || Move left to right no matter what. |
+| 2 || −1 || 0 || Try to catch other agents, with a preference for moving right to left. |
+| −1 || 0 || −1 || Always move but avoid collisions. |
+
+More variations are achieved by putting agents with different reward functions moving on the same cable, thus generating different kinds of movements such as predator-prey chases and other adaptive dances. In the installation, we start by adding a few agents and allowing them to stabilize, which happens rather quickly. We then manipulate the tension between chaos and disorder in different ways.
+
+For example, we took advantage of a feature of the reinforcement learning optimization procedure: the tension between *exploration* and *exploitation*. A numerical parameter *ε* controls the probability that the agent will at any given step *explore* its environment by taking a completely random move or will *exploit* its current knowledge by taking a “greedy” action (i.e., moving in the direction it thinks will yield the highest reward).^([7](#chapter_3.xhtml#chapter3-7)) Choosing a low value for *ε* typically yields more structured, “smart” moves (especially after the agents have been given enough time to learn) whereas a high value generates random behaviors. By playing with *ε* we can influence the behavioral shapes visible to the human audience, moving them instantly between order and disorder.^([8](#chapter_3.xhtml#chapter3-8))
+
+## **Shake, Rattle, and Roll: Tweaking Cost Functions**
+
+Playing with evaluation functions is a popular approach for artists working with goal-driven systems such as evolutionary computation and reinforcement learning. It is much less frequent in data-driven systems such as supervised and unsupervised learning, where artists can rely on well established, off-the-shelf cost functions such as the mean squared error and the log-likelihood, which push the model to best espouse the training data set. In many instances, it is easier to adjust the data set to achieve one’s goals than to start playing with the complex mathematical formulas that make up the cost function.
+
+This is yet another contrast with computer science practice, where cost functions are often the object of many adjustments to add constraints to the system. For example, the Creative Adversarial Network presented in chapter 2 uses a custom-crafted cost function that maximizes the network’s appetite for novelty while minimizing its deviation from the average, thus encouraging the emergence of new forms while preventing them from being too extreme or random (Elgammal et al., 2017).
+
+While it is definitely not true of the majority, some particularly skilled artists work on the cost function side to achieve their goals. This is the case of Mario Klingemann, whose groundbreaking work with deep-learning generative art is characterized by an exceptional level of virtuosity and ingenuity. Tweaking cost functions by adjusting and balancing different components in the function formula and potentially writing custom cost functions are fundamental to his practice. As an example, in order to train his image-to-image generative models, Klingemann developed a cost function he calls “Shake, Rattle & Roll” that randomly applies, at each step, different kinds of loss function with different probabilities (Klingemann, 2017).
+
+Klingemann spends a lot of time training his own models, adjusting different hyperparameters such as the number of neurons and layers, and experimenting with different cost functions based on aesthetic or stylistic measures, novelty, semantic or categorical similarity. This allows the artist to generate outputs that convey an original and personal signature, standing out from those created using off-the-shelf systems.
+
+## **Conclusion**
+
+Machine learning as a field strives toward the development of fully autonomous systems that can learn on their own without human intervention. Currently such systems constitute the spearhead of artificial intelligence, in large part due to their proficiency in solving difficult problems such as speech recognition and image classification.
+
+Paradoxically, this acute automation makes these systems hard to harness, and in the hands of artists, they appear particularly unpredictable and out of control. Artists working with machine learning thus need to deal with the high autonomy of these systems, but they need to find ways to bend them to their own aesthetic needs.
+
+Whereas optimizing art is doomed to fail, there are many ways in which optimization can be used in artistic contexts. In one approach that has been heavily used by creators working with genetic algorithms such as William Latham and Karl Sims, the artist acts as a proxy for the objective function, directly steering the learning process by actively giving feedback to the learning process as it runs. Another approach, used primarily in reinforcement learning works, is to indirectly influence the training by establishing an objective function and observing how the system behaves in reaction to it.
+
+The latter approach is exemplified by projects such as *B–612*, *Zwischenräume*, and *N-Polytope*, which have something else in common: they all feature the learning process itself as the locus of the aesthetic experience. This idea is also present in works involving adaptive agents such as Nicolas Baginsky’s *The Three Sirens* and Marc Downie’s *Music Creatures*. The next chapter explores the aesthetic qualities of dynamics of adaptive behaviors in artistic works.
+
+# **Notes**
+
+1.  [1](#chapter_3.xhtml#chapter3_1). In other words, the most advanced of current-days machine learning systems still fall under the category of weak AI, as opposed to strong AI or artificial general intelligence (AGI), the hypothetical goal to design an AI system with the capacity to reproduce any kind of human intelligent task.
+    
+2.  [2](#chapter_3.xhtml#chapter3_2). The evaluation function is a general principle found in all machine learning algorithms. It takes different names depending on the kind of model or algorithm used. A general term often used is *objective function*. In classification or regression applications such as supervised and unsupervised learning, it is usually named the cost or the loss function; in reinforcement learning, the reward function; and in genetic algorithms, the fitness function.
+    
+3.  [3](#chapter_3.xhtml#chapter3_3). The name *biomorph* is attributed by Dawkins to painter Desmond Morris who used it to describe the strange zoomorphic shapes in his Surrealist paintings—which Morris claims to be the result of an evolution in his own imagination, which can be “traced through successive paintings” (Dawkins, 1986, 55).
+    
+4.  [4](#chapter_3.xhtml#chapter3_4). Dawkins would later push his experiments by increasing the complexity of his generative algorithm and trying to generate specific shapes using his system, such as letters of the alphabet (Dawkins, 1989).
+    
+5.  [5](#chapter_3.xhtml#chapter3_5). Sims’s direct use of learning methods toward aesthetic criteria may suffer from Moura and Pereira’s critique. Although the work appears open ended in the forms it can generate, it could be argued that the piece acts more or less like a demonstration of scientific and engineering methods for optimizing beauty using a kind of advanced voting booth.
+    
+6.  [6](#chapter_3.xhtml#chapter3_6). The authors use a self-organizing map (Kohonen, 1981), a type of unsupervised neural net that is often used for dimensionality reduction. We further discuss these machine learning models in chapter 7.
+    
+7.  [7](#chapter_3.xhtml#chapter3_7). This type of decision process, called an *ε*\-greedy policy, is one of the most well known in reinforcement learning applications (Sutton and Barto, 1998).
+    
+8.  [8](#chapter_3.xhtml#chapter3_8). For an extended discussion of the aesthetic strategies used in this work, see Salter and Audry (2018).
+    
+
+ 
+
+# **4**   **Aesthetics of Adaptive Behaviors**
+
+One recurring approach to machine learning art employs the training process itself as a source of aesthetic potential: Baginsky’s robotic band The Three Sirens features robotic instruments performing as they learn from their environment and their own improvisations, and Gemeinboeck and Saunder’s *Zwischenräume* involves curiosity-driven robots equipped with drills to peep through the gallery’s walls, reconfiguring their own environment and that of the audience. These works rely specifically on bringing the viewer to directly experience the learning process. Using machine learning to generate or reveal an adaptive artificial behavior is unique to artists and does not fit with traditional engineering and scientific methodologies.
+
+Indeed, within artificial intelligence research, machine learning is most often seen as a means to an end. Until recently, symbolic AI remained the dominant approach, largely because it simply achieved better results in real-world applications. AI as an engineering field relies primarily on conventions of measurements that allow different techniques to compete. For example, in image recognition the state of the art is established by comparing the classification rate of competing algorithms for classifying images on reference data sets. Whether or not an algorithm uses machine learning does not matter in itself: it just turns out that machine learning (more specifically, deep learning) currently performs better than competing approaches on most image recognition tasks.
+
+Yet, there is something deeply thrilling about observing a machine learn, starting from scratch and iteratively discovering something about its world. Throughout the learning process, these systems change themselves in certain ways, gradually increasing in complexity. This process has a certain *shape* that can be perceived by looking at a learning curve or, when possible, by observing the learning agent’s behavior as it is learning.
+
+Beyond theoretical investigations, the specific properties of the learning process is not seen by most engineers as a research outcome that can stand on its own. For them, what matters in the end is how a fully trained, maximally optimized system performs on specific tasks (on which they can be compared with other techniques) and not the process through which it the system was able to reach that point.
+
+However, as we have explained, optimality is not a panacea for artistic creation. Suboptimal learning machines can provide results as good as or even better than optimal ones, depending on the context and the artist’s intentions. Moreover, the transformations that a machine learning system goes through as it learns provide an immensely rich pool of generative patterns from which to dig and use in creating art.
+
+## **Aesthetics of Behavior**
+
+Such artistic usage of adaptive processes as part of new media aesthetics helps refine the concept of *aesthetics of behavior* defined by Simon Penny as a “new aesthetic field opened up by the possibility of cultural interaction with machine systems” (Penny, 2000). By destabilizing the “subject-object dual of conventional aesthetics,” this new territory moves aesthetics from representing to performing. “Art,” explains Penny, “is not longer a recording, a recollection, or a representation of something doing something: it *is* something doing something.” (Penny, 2017, p. 319)
+
+Penny has critiqued the engineering approach to artificial intelligence (in particular, robotics) for its heavily dualistic worldview. Behavior, he claims, should not be understood as a purely computational, disembodied thing called *software* but rather needs to be grasped as a situated process running through an agent’s body. Thus, behavior aesthetics rearticulates concepts of emergence and self-organization in artificial life by integrating them in a performative theory of behavior that places the agent’s body at the center of the equation. Behavior aesthetics is the latest development in a long tradition of machine-made art that can be traced to the emergence of computers in the 1950s through the interdisciplinary science of cybernetics. Art historian Edward A. Shanken describes the influence of cybernetics on art in the 1960s through the work of Roy Ascott (Shanken, 2002). Ascott’s reading of cyberneticians Norbert Wiener, Ross Ashby, and Frank H. George in 1961 made him envision a new conception of art as embodied in interactive systems rather than in physical objects. The scope of cybernetics as an encompassing theory of systems’ behavior and communication allowed Ascott to propose merging cybernetics and art in an effort to define the information exchanges between art and society through an interconnected network (Shanken, 2002).^([1](#chapter_4.xhtml#chapter4-1))
+
+British polymath Andrew Speedie Gordon Pask was a key figure of the cybernetic art movement led by Roy Ascott in the UK.^([2](#chapter_4.xhtml#chapter4-2)) Pask had allegedly discovered cybernetics as an undergraduate at Cambridge in the early 1950s through an impromptu meeting with Norbert Wiener (Pickering, 2010, p. 313). Although Pask is known mainly for his scientific work, Pask’s involvement with cybernetics started in the art world. During his years at Cambridge, Pask participated in the lighting design of theatrical shows in Cambridge and London and together with fellow student Robin McKinnon Wood a business specializing in the orchestration of musical comedies. In 1953 they invented a theatrical lighting system called the *Musicolour*, an apparatus that “used the sound of a musical performance to control a light show, with the aim of achieving a synesthetic combination of sounds and light” (Pickering, 2010, p. 316). Reacting adaptively to a sound signal, it generated patterns of light, interacting with human performers in real time. The device contained a “rudimentary learning facility” that was able to change the relationship between sound and light during the course of a performance.
+
+Gordon Pask’s own definition of behaviors, detailed in his 1968 book on cybernetics, offers a visionary perspective on behaviors that recalls that of Penny, while still allowing for a formalization in terms of their morphological evolution. In line with his view, I argue that behaviors are best defined not as algorithmic recipes but rather as real-time material patterns as they are recognized by an observing entity. As Pask wrote,
+
+As observers we expect the environment to change and try to describe those features that remain unchanged with the passage of time. An unchanging form of events due to the activity within an assembly is called a behavior. (Pask, 1968, 18)
+
+There are two important implications of this definition. First, although an agent’s behavior involves a sequence of events that constantly changes over time, its behavior has a recognizable *shape* that remains temporally invariant. Pask gives the example of a cat, which consists of “performances like eating and sleeping and, once again, it is an invariant form selected from the multitude of things a cat might possibly do” (p. 18).
+
+Second, although a behavior is always generated by a system—which could, but need not be, computational—it exists only through its perceptual effect on an observer. This implication is particularly appropriate to an aesthetic framework, as it focuses on the phenomenological experience generated by the agent-based performance as it unfolds through time and space in the material world. It echoes the pragmatic aesthetics of John Dewey, who claimed that works of art should not be thought of as objects but instead as “refined and intensified forms of experience” (Dewey, 1959, p. 3).
+
+Cybernetics went out of fashion in the 1960s with the development of artificial intelligence through what is known today as symbolic AI. Symbolic AI is usually associated with computationalism, a theory of mind based on the premise that the human mind is a kind of computer and that thought processes are a form of computing. In other words, computationalists believe that cognition and computation are the same thing (Dietrich, 1990).^([3](#chapter_4.xhtml#chapter4-3)) In 1950, Alan Turing proposed a test for machine intelligence using a simple imitation game that later became known as the Turing test. The goal of the machine was be to engage in a continuous chat with a human interrogator and try to pass as a human being. If the interrogator could not distinguish the machine from a human interlocutor, then that machine should, according to Turing, be considered a thinking being (Turing, 1950). In other words, what matters to Turing with regard to cognition is not the biological substrate in which it is rooted but the performance of the system on tasks that are deemed to require intelligence.
+
+This approach was dominant in the 1970s, but it the 1980s it started to crumble, both because of the failures of many of such approaches in solving real-world problems and deeper philosophical problems (Dreyfus, 1979). Toward the end of the 1980s, roboticist Rodney Brooks proposed an alternative approach to AI called new AI or *nouvelle AI*. As an efficient, bottom-up approach to robotics, nouvelle AI had an important influence on robotic art in the 1990s. In particular, North American robotists such as Louis-Philippe Demers, Bill Vorn, Ken Rinaldo, and Simon Penny claimed Brooks as a direct inspiration for their work (Demers & Vorn, 1995; Rinaldo, 1998).
+
+Directly inspired by Rodney Brooks’s revolutionary work on situated robotics from the late 1980s that critiques representational systems in AI, Penny argued for a new aesthetic framework for agent-based artworks that rejects the computationalist dogma that plagues computer science. Discussing this aesthetic of behavior in a 2012 interview, he explains:
+
+It is premised on the idea that when we use real time computational technologies for cultural practice we are doing a new aesthetic practice, which involves the designing of behavior. We are somehow building a contingent model for what might happen in the world, and how our system might respond in order to direct the aesthetic attention of the user to a direction consistent with the artwork itself. It is a complex and new aesthetic negotiation of the dynamics of interaction and authorial intent. (Kim & Galvin, 2012, p. 138)
+
+Penny thereby critiques the dualistic vision of behavior and cognition that taints symbolic AI. Behavior, he claims, should not be understood as a purely computational, disembodied thing called *software* but rather needs to be grasped as a situated process enacted through an agent’s body. Whereas behavior in a computational-based artwork has algorithmic components, in the hands of the artist code becomes another material with its own specific characteristics to be integrated with visual, sonic, and physical components in the construction of a global aesthetic experience.
+
+Whereas both Brooks’s nouvelle AI and Penny’s aesthetics of behavior are characterized by their reliance on a bottom-up approach to technical practice directly inspired from ALife research, their strong anti-computationalist stance is also directed at the rampant computationalism characteristic of 1980s AI. Thus, both nouvelle AI and behavior aesthetics rearticulate concepts of emergence and self-organization in ALife by integrating them in a performative theory of behavior that places the agent’s body at the center of the equation. As such, Penny’s proposed artistic framework is constitutionally different from concurrent disembodied art forms such as algorithmic art that essentially aim to produce stabilized forms such as computer-generated images, or artificial life art that produces time-based simulations of life forms on the computer.
+
+## **Degrees of Behavior**
+
+I argue that different categories of system architectures allow for the manifestation of different kinds of behaviors and aesthetic experiences. Existing taxonomies of cybernetics systems have focused mainly on relational and structural aspects of these systems (Cariani, 1989; Rosenblueth, Wiener & Bigelow, 1943). In this section, I present a taxonomy of embodied systems that focuses on the aesthetics of agent behaviors as their shapes unfold in time. This further refines Penny’s artistic frame of reference by looking more closely at embodied agents endowed with adaptive qualities.
+
+The zero degree of that categorization is whether the system possesses *internal state*—which I posit as a necessary condition to consider a system as being able to behave. Stateless systems such as *mappings* are fundamentally different from stateful systems such as *agents*, the former involving more-or-less direct transformations between inputs and outputs while the latter can change their inner structure in response to events. In other words, blurring an image or compressing a sound is not a behavior; and neither a statue^([4](#chapter_4.xhtml#chapter4-4)) nor a vocoder can be said to behave.
+
+By design, stateless devices are incapable of accumulating experience, because their outputs/actions depend entirely on their inputs/observations. Such systems are known in the the field of digital media art as *mappings*. Their widespread popularity in new media art is evidenced by the prevalence of data-flow software such as Max or Pure Data, often characterized under terms such as *visualisation* or *sonification*. Marc Downie has heavily criticized this hegemony of mapping in interactive arts. He argued that its apparent generality, seen as beneficial, makes it ineffective and sterile: because its definition has “no limits,” it also has “no use.” He wrote
+
+In practice one can sense in this “function-like” aspect of mapping is a kind of college-level, piecewise linear or otherwise smooth, locally stationary, state-less, typically decomposable relationship between input and output. Such a vision acts as a normative idea of how, in this field, numbers get transformed into numbers. The best work in the field, of course, pushes against this central tendency, but the rules and arena remain fixed. (Downie, 2005, p. 17)
+
+Devoid of any kind of autonomy and agency, mapping-based devices are behaviorless, their conduct relying almost entirely upon the data that is fed into them. Whatever sense of aliveness they convey truly lies in the systems generating this data, such as human performers, natural phenomena, and so forth. Their statelessness imprisons their *performance* into the instant: their world, if they have any, is a succession of independent moments. They are, in other words, zero-order behaviors or, simply put, *nonbehaviors*.^([5](#chapter_4.xhtml#chapter4-5))
+
+Agent-based systems are *behaviorful* in their ability to extend their world into the past through the use of some kind of inner structure. These stateful devices possess some sort of memory (whether it is discrete or continuous, long or short) that is modified by their interactions with the environment. In other words, their past experiences influence their present actions (at least within a certain time window).
+
+This statefulness, which implies some form of structure or trace, can be found in a variety of computer programs. For instance, formal devices as defined by Peter Cariani can possess states, typically recognizable in computer code as named variables of different types (i.e., booleans, integers, and floats), however these syntactic components are fixed. Behaviors generated by these systems are thus bound within a certain domain. Hence, while an agent’s response to sensory data may change depending on context, its behavior does not change over time. Given enough time, it will, inexorably, come to repeat similar patterns. We thus refer to these types of conduct as *first-order behaviors*.
+
+To understand this idea better, consider how a behavior possesses a certain recognizable morphology that exists in a domain different from other forms of noncomputational, stabilized media, such as an image or video or even, as I explained previously, real-time mappings such as sonifications or visualizations. The shape of a behavior is parameterized by the sensors, effectors, and processing capacities of the system that generates it and evolves within a certain space-time territory. Morphology and morphological processes have been used to describe time-based behaviors in the writings of contemporary music composers such as Iannis Xenakis and Agostino Di Scipio (Di Scipio, 1994; Solomos, 2006; Xenakis, 1981).
+
+Because of their inability to generate new forms and to transform their own form, I argue that the behavioral morphologies produced by formal, rule-based systems are fundamentally different from those produced by adaptive and evolutionary agents (see [figure 4.1](#chapter_4.xhtml#fig4-1) and [table 4.1](#chapter_4.xhtml#tab4-1)). The latter produce *second-order behaviors* involving the coming into being, and possibly transformation of their own (first-order) behavior. They therefore exist in a *different time* from their formal rule-based counterparts, affecting the overall aesthetic effects they can engender.
+
+![Figure 4.1 Temporal evolution of first-order behaviors (example). The vertical axis represents the behavior of the system, understood as the temporally invariant shape of observable events that the system generates. Recognizable behavior morphologies are represented using labels B1, …, B5. The horizontal axis represents the advance of time. The graphic shows how first-order behaviors remain temporally stable: (1) is unchanging while (2) fluctuates within the boundaries of a morphological kind. Graph by Jean-François Renaud after original by Audry.](images/Figure4-1.png)
+
+[Figure 4.1](#chapter_4.xhtml#rfig4-1)  
+Temporal evolution of first-order behaviors (example). The vertical axis represents the behavior of the system, understood as the temporally invariant shape of observable events that the system generates. Recognizable behavior morphologies are represented using labels B[1]*, …*, B[5]. The horizontal axis represents the advance of time. The graphic shows how first-order behaviors remain temporally stable: (1) is unchanging while (2) fluctuates within the boundaries of a morphological kind. Graph by Jean-François Renaud after original by Audry.
+
+ 
+
+[Table 4.1](#chapter_4.xhtml#rtab4-1)  
+Orders of behavior in agent-based systems.
+
+ 
+| Order || System Types || Properties |
+| --- | --- | --- |
+| 0^(th) || Stateless functions (mappings) || Actions are purely dependent on observations (no memory). |
+| --- | --- | --- |
+| 1^(st) || Formal / rule-based || Actions depend upon both a set of observations and a state (memory). Behavior is unable to transform. |
+| 2^(nd) || Adaptive / evolutionary / generative || The behavior itself transforms through time in response to the environment. |
+
+## **Behavior Morphologies**
+
+I propose to use the concepts of *morphogenesis*, *morphostasis*, and *metamorphosis* to further characterize the various processes by which behavioral morphologies exist, emerge and/or change over time. These notions are related, each in its own way, to ideas of emergence, self-organization, self-regulation, novelty, and autonomy. As these ideas bring to the fore the processes related to forms, they seem particularly appropriate to support an aesthetics of behavior.
+
+*Morphostasis* refers to the process whereby a behavior hovers around a stable state of being. Although the behavioral patterns might look like they are changing when considered over a certain period of time, morphostatic behaviors quickly exhaust the space of dynamic patterns they can generate and start appearing repetitive. These behaviors are immutable: they stay constant through time. First-order behaviors are purely morphostatic.
+
+*Morphogenesis* is the mechanism by which emergent behaviors develop their form in a continuous manner. Only systems capable of self-organization, such as adaptive and evolutionary agents, are able to display morphogenetic behaviors. The category implies the production of new behavioral morphologies through a system’s interaction with the world.
+
+*Metamorphosis* is intimately related to morphogenesis, and refers to the process by which behaviors change from one shape into another within adaptive or evolutionary agents. The term should be understood as it is used in common parlance, that is, as an outstanding transformation in a living being or thing. The two main dimensions of metamorphosis are (1) the *metaboly* or magnitude of the transformation undergone by the behavior; and (2) the *speed* at which the behavior transits from one form into the next.^([6](#chapter_4.xhtml#chapter4-6))
+
+These aspects of an agent’s performance should be seen less as hard-set categories than as conceptual tools for describing processes of behavior formation. From this perspective, different systems such as computer programs, symbolic AI, simple self-regulated devices, and pretrained machine learning algorithms produce morphostatic behaviors. However, they are distinct from each other in the kinds of first-order, repetitive patterns they produce, which are related to their different structural and behavioral properties, as highlighted previously.
+
+At the opposite end of the spectrum, some morphogenetic systems freely move from one behavioral embodiment into another, living in a constant state of metamorphosis, as if never fully coming into being. These systems are generative but nonadaptive: they evolve behaviors in a nonpurposeful way, as they have no objective relevance criteria to adapt to such as an evaluation function (Bown, 2012).
+
+Adaptive systems, on the other hand, evolve their morphologies in relationship to a usually indeterminate *ideal* behavior (i.e., optimal in regard to the prevailing evaluation function), which they try to approach and match. In this, they differ from nonadaptive second-order behaviors. Adaptation, like intentionality, requires an object: these systems do not simply adapt, they adapt *to* something. Adaptive systems are relational devices by definition: their behavior is often influenced by other behaviors in their environment, which in turn can be of zeroth-, first-, or second-order. Their experiences affect their inner structure so as to improve their prospective performances. In other words, their past feeds their future.
+
+Typically starting from a state of pure randomness, adaptive agents run through a learning process of morphogenesis in which they progressively and asymptotically modify the shape of their behavior to better perform in relationship to their evaluation function (see [figure 4.2](#chapter_4.xhtml#fig4-2)). When they reach their final form, they enter a state of morphostasis, exploiting the stabilized, learned behavior to which they have converged. Some adaptive systems have the ability to depart from this crystalized demeanor, either as a result of an internal intentionality or as a response to environmental changes that require drastic adjustments to their performance.
+
+![Figure 4.2 Temporal evolution of an adaptive behavior going through multiple phases of learning (example). The vertical axis represents the behavior of the system and recognizable behavior morphologies are represented using labels B1, …, B5. The horizontal axis represents the advance of time. Starting from a random behavior, the adaptive system runs through a morphogenetic phase until it converges to an optimal behavior, stabilizing into morphostasis. Then, subjected to changes in its environment, it needs to re-adjust itself, metamorphosing into another behavioral shape that performs better in the new conditions. Graph by Jean-François Renaud after original by Audry.](images/Figure4-2.png)
+
+[Figure 4.2](#chapter_4.xhtml#rfig4-2)  
+Temporal evolution of an adaptive behavior going through multiple phases of learning (example). The vertical axis represents the behavior of the system and recognizable behavior morphologies are represented using labels B[1]*, …*, B[5]. The horizontal axis represents the advance of time. Starting from a random behavior, the adaptive system runs through a morphogenetic phase until it converges to an optimal behavior, stabilizing into morphostasis. Then, subjected to changes in its environment, it needs to re-adjust itself, metamorphosing into another behavioral shape that performs better in the new conditions. Graph by Jean-François Renaud after original by Audry.
+
+Nicolas Baginsky, whose robotic band The Three Sirens was introduced at the beginning of this book, is familiar with these behavioral transitions. Over the three decades he has spent working with the robot instruments, he has experimented with different time scales, adjusting the neural networks governing the Sirens’ actions to get them to learn over different time spans ranging from a few minutes to several hours. Before a performance, he typically has to reboot the robots by meticulously injecting noise into the neural nets’ weights, thus allowing them to retrieve some of their flexibility and open-endedness while always preserving some of their behaviors inherited from previous shows and rehearsal sessions.
+
+Baginsky compares his robots’ behavior to those of biological adaptive beings such as animals, which undergo a noticeable metamorphosis from childhood to adulthood:
+
+And it is as expected, it is very wild and uncontrollable, and unforeseeable in its childhood, and when the learning progresses, it is still very flexible; and it matures in the mid-age and it gets narrow-minded, once the system gets old and just couldn’t be bothered to play more than one or two chords. The system seems to make up its mind for preferred chord or harmony in the end, where in the beginning it was very wild and playful and hard to listen to, of course, but interesting.^([7](#chapter_4.xhtml#chapter4-7))
+
+The aesthetic experience of these behaviors depends on a number of factors. During metamorphosis, the ratio between the magnitude and the duration of change—which in the case of machine learning systems is directly related to the learning rate—can be used as a measure of intensity. Abrupt, fast changes can bring a sense of astonishment or angst in the viewer—of a kind that artists working with interactive media have learned to exploit. In contrast, longer yet steady and noticeable changes can evoke curiosity, anxiety, and a feeling of the uncanny.
+
+In some cases in which the learning process happens over a duration of many months, the transformations in behavior are unnoticeable from the perspective of most human viewers, at least in the context of traditional presentation formats such as art exhibitions where most visitors spend a rather short time with a piece. In such cases, the metamorphic behavior of the system becomes much less experiential and more conceptual, as is the case for Natalia Balska’s *B–612* piece presented previously, for which the learning behavior happens over many months.
+
+Finally, adaptive behaviors convey a certain narrative. While they unfold before our eyes, we perceive fluctuating stories of trials and errors, of successes and failures that evoke our own experiences of learning as fallible and imperfect entities. As we observe learning agents in action, we make up hypotheses as to their volition and make projections about their future.
+
+I want to end with a few disclaimers. First, the *orders* of behaviors that I described should not be read as a hierarchy. From an artistic perspective, second-order behaviors are not better than behaviors of a lower order: they are merely different; both orders come with their own strengths and weaknesses, and both can be used efficiently (or badly) in art making.
+
+Second, these categories are porous. For example, some mapping functions, such as moving averages or delays, have a short *memory* and can thus be said to have a *state*, and some self-organizing adaptive systems have very limited structures that do not allow them to adjust significantly in the face of changing environments.
+
+Finally, these categories can be mixed together. Most agent-based adaptive installations bring together a mixture of different systems, staging different kinds of zero-, first-, and second-order behaviors, intertwining phases of morphological stasis, genesis, and transformation that intervene at different rates.^([8](#chapter_4.xhtml#chapter4-8)) The use of lower-order behaviors gives the artist more direct control over the outcomes, which is often crucial to a work’s successful deployment.^([9](#chapter_4.xhtml#chapter4-9))
+
+This categorization is not meant as a systematic classification scheme but rather as a frame of reference, a flexible analysis tool for artists and theorists. It gives an angle—a way to think about and discuss agent-based systems in art practice—that I hope can contribute to the language of new media as practitioners attempt to imagine new experiences and communicate their views with their peers.
+
+## **Adaptive Couplings**
+
+Experiencing the behavior of machine learning agents involves a form of co-adaptation between the viewer and the artificial agents in place. After all, we are ourselves adaptive systems, constantly trying to make sense of the world around us. So what happens when we stop being mere observers and directly interact with a learning agent?
+
+Paris-based artist Justine Emard has explored this idea in her 2018 video installation *Co(AI)xistence*. The 12 minute single-channel video shows the co-adaptive interplays between Japanese performer Mirai Moriyama and Alter, a robotic artificial life robot developed by Ishiguro lab at Osaka University and Ikegami lab at Tokyo University (see [figure 4.3](#chapter_4.xhtml#fig4-3)). Throughout the piece, we witness both agents as they try to communicate through dance, gestures, touch, and voice. For example, part of the video shows Moriyama dancing with a neon light under the mesmerized gaze of Alter, as they both explore gently moving and touching each other’s arms and scream together.
+
+![Figure 4.3 Justine Emard, Co(AI)xistence, 2017. Photo credit: © Justine Emard / Adagp, Paris 2020. Courtesy of Justine Emard.](images/Figure4-3.png)
+
+[Figure 4.3](#chapter_4.xhtml#rfig4-3)  
+Justine Emard, *Co(AI)xistence*, 2017. Photo credit: © Justine Emard / Adagp, Paris 2020. Courtesy of Justine Emard.
+
+Emard explains that the process of creating the work involved many trials and errors, and that Moriyama had to constantly change his approaches because the robot was constantly learning as she was filming. In other words, the learning qualities of Alter forced Moriyama to improvise and adapt while the android, in turn, adapted to the human performer.^([10](#chapter_4.xhtml#chapter4-10))
+
+*Co(AI)xistence* thus reveals adaptive behavioral processes of morphogenesis and metamorphosis involving the interactive coupling of Moriyama and Alter. The piece moves way beyond the traditional view of software versus hardware dichotomy and instead presents an *enactive* situation of human-machine relationships, effectively deploying a “dance of agencies” between human and nonhuman performers (Pickering, 1995).
+
+Enactivism is a theory in cognitive science that rests on a fusion between Mahayana Buddhism, Merleau-Ponty’s phenomenology of perception, and the theory of autopoiesis first articulated by Francisco J. Varela, Evan Thompson, and Eleanor Rosch in their landmark work *The Embodied Mind*. Bridging Eastern and Western philosophies, they describe the failure of computationalism to account for the bidirectional nature of interactions between actions and perceptions from the perspective of an embodied agent evolving in the real world (Varela et al., 1991, p. 8).
+
+The enactivist model of cognition rests upon two complementary principles: autonomy and coupling. On one hand, the cognizing agent continuously maintains and regenerates itself, keeping its own structure stable while resisting perturbations. This autonomy is what allows it to define itself as a separate unit from its environment and to adapt to environmental changes. At the same time, the organism also depends on its milieu to survive. It needs to maintain its coupling with the environment because it is precisely against this environment that it emerges as an embodied entity. “In defining what it is as unity,” argues Varela, “in the very same movement it defines what remains exterior to it, that is to say, its surrounding environment” (Varela, 1992, p. 7).
+
+Coupling is an important concept in phenomenology and embodied interaction. It refers to the way by which an object becomes an extension of the human body, such as a stick used to move forward in the dark (Dourish, 2001). It derives from Heidegger’s concept of an object being *ready-to-hand*. For Heidegger, this happens when the object somehow “disappears” into the background when one is using it. For example, as one keeps using a hammer, it eventually becomes an extension of one’s body and one ceases to notice it. However, if one needs to find a way to use the hammer differently, it suddenly “reappears” in the foreground: it is separated from one’s body again and one looks at it with a different attitude, which Heidegger calls *present-at-hand* (Heidegger, 1972).
+
+A distinctive characteristic of machine learning agents lies precisely in their ability to adapt so tightly to objects in their environment that they become ready-to-hand. In that sense, a system’s ability to adapt or learn is a necessary condition to coupling. A compelling consequence, if one considers the case of an adaptive agent’s environment populated by other adaptive agents, is that agents can become coupled to one another as they adapt to each other. Of course, an adaptive agent is not exactly like a hammer or a stick: as one *uses* it until it *disappears in the background*, one is also being *used* by the agent and both become *ready-to-each-other’s-hand*, so to speak.
+
+This coupling between two adaptive agents is precisely what *Co(AI)xistence* reveals through the hazardous, playful, sincere engagements of both human and nonhuman agents staged by Emard. It shows the potential for nonhuman adaptive systems such as Alter to generate a unique range of aesthetic experiences as they engage in a bidirectional coupling with human actors. Through a staging that takes the form of a scientific experiment, the work presents how two different forms of intelligence can learn to coexist through their embodied experience of the world.
+
+## **Conclusion**
+
+In the field of AI, the end usually justifies the means. Solving problems such as recognizing patterns and making decisions is the true *raison d’être* of machine learning, and the fact that this is achieved through an iterative adaptive process is somewhat accessory. But in the hands of artists, this learning process can become a source of aesthetic potential.
+
+In the postwar era, cybernetics provided the foundation for artificial intelligence and machine learning. It also was part of a revolution in the art world. Processes and behaviors, as opposed to material objects, became the focus of attention in the 1960s and 1970s contemporary art scenes. Creators such as Nicolas Schöffer and Gordon Pask proposed adaptive electromechanical installations deployed in real time and in the real world. Later, in the 1980s and 1990s with the development of bottom-up approaches in agent control such as *nouvelle AI*, a range of artists also used sensorimotor systems in their work, giving rise to the new artistic genre, unique to new media art, of behavior aesthetics.
+
+Some of these works rely specifically on bringing the viewer to directly experience the learning process of an adaptive system. This use of machine learning as a means of generating or revealing an adaptive artificial behavior is unique to artists and does not fit with traditional engineering and scientific methodologies.
+
+How do system properties such as embodiment, emergence, autonomy, adaptation, and learning play out aesthetically in behavioral patterns in agent-based machine learning artistic installations such as Nicolas Baginsky’s robotic band The Three Sirens Natalia Balska’s vegetal-computational installation *B–612* (2014), or Gemeinboeck and Saunders’s curiosity-driven robotic installation *Zwischenräume* (2014)? How do the adaptive nature of these works make them different from other computational art works?
+
+The temporal unfolding of behaviors displayed in these works can be interpreted through the evolution of their morphology. A taxonomic system was suggested to classify behaviors under three categories: nonbehaviors (also called mappings or zero-order behaviors), behaviors (of the first order), and metabehaviors (or second-order behaviors). The last category involves processes whereby the agent’s behavior itself undergoes morphological changes over time, which include morphostatis, morphogenesis, and metamorphosis.
+
+Machine learning processes pertain to the category of second-order behaviors and display morphogenetic patterns that lead to morphostasis once the agent has converged to optimum. Metamorphosis can be more or less abrupt, happening across different time spans that influence the experience of these systems. Moreover, most successful artistic installations use a melange of approaches, possibly bringing the agent through different stages of evolution and stability, in an effort to generate a specific experience for the viewer.
+
+Finally, the use of temporal properties of adaptive processes is not reserved for embodied systems such as robots. Memo Akten’s installation *Learning to See: Hello, World!* (2017), for example, shows the learning process of a neural network trained in real time on live capture from surveillance cameras. The morphogenetic process can also be reversed, such as in Canadian artist Erin Gee’s performance *Machine Unlearning* (2020), in which Gee uses *autonomous sensory meridian response* (ASMR) vocalization techniques to read a text generated by a neural network as the algorithm regresses over a period of about 15 minutes, metamorphosing from a fully trained state where it generates complete sentences and slowly decaying down to its starting state of pure randomness. In this chapter our attention has focused on the learning process, whereby a trainable machine is iteratively adjusted to improve its performance. In the next chapter, we look more closely at how different kinds of trainable machines such as genetic algorithms and neural networks impact artistic practice. We thus step away from the learning process itself and turn our gaze toward the machinic structures that are transformed through training, generating nonhuman forms of representation.
+
+# **Notes**
+
+1.  [1](#chapter_4.xhtml#chapter4_1). Cybernetics’ conceptions of adaptivity, homeostasis and feedback loops were thus an integral component of Ascott’s perspective, which he explained in his 1966 paper “Behaviourist Art and Cybernetic Vision” (Ascott, 2003).
+    
+2.  [2](#chapter_4.xhtml#chapter4_2). Evidently, it is Pask who originally explained cybernetics to Ascott at his request (Miller, 2014). Pask and Ascott actually worked together in the early 1960s as consultants on Price and Littlewood’s *Fun Palace*, an ambitious cybernetics architectural project that would never be built (Mathews, 2005).
+    
+3.  [3](#chapter_4.xhtml#chapter4_3). To understand the importance of this perspective in the history of AI, consider how the preamble of the project proposal for the Dartmouth conference, written in 1955, places it as a foundational component of the field: “The study is to proceed on the basis of the conjecture that every aspect of learning or any other feature of intelligence can in principle be so precisely described that a machine can be made to simulate it” (McCarthy et al., 2006, 12).
+    
+4.  [4](#chapter_4.xhtml#chapter4_4). This definition slightly raises the bar compared to Pask’s, which grants behaviors even to statues.
+    
+5.  [5](#chapter_4.xhtml#chapter4_5). Pask’s example of the “behaviour of a statue” is an extreme case of such a nonbehavior (Pask, 1968, 18).
+    
+6.  [6](#chapter_4.xhtml#chapter4_6). Or, inversely, the *duration* required for the behavior to metamorphose.
+    
+7.  [7](#chapter_4.xhtml#chapter4_7). Nicolas Anatol Baginsky, interview with the author, November 22, 2017.
+    
+8.  [8](#chapter_4.xhtml#chapter4_8). Indeed, while recent research in the field of robotics suggests that the use of machine learning in robots is key to the advancement of the field, it seems to work better when used in combination with rule-based systems, at least at present. In most studies, learning is used as a way to refine hand-coded processes or perform specific pattern recognition tasks (Quinlan, 2006; Chalup et al., 2007).
+    
+9.  [9](#chapter_4.xhtml#chapter4_9). This is, in essence, Downie’s argument: he critiques both mapping (zero-order behaviors) and emergence (second order) in favor of authorship in the design of programmed agents (of the first order) (Downie, 2005).
+    
+10.  [10](#chapter_4.xhtml#chapter4_10). The robot learns using a technique known as *learning by stimulation avoidance* (LSA) in which spiking neural networks learn using Hebbian rule but also through avoiding external stimulus by exploring available behavior (Sinapayen et al., 2017).
+     
+
+ 
+
+# **II**   **MODELS**
+
+ 
+
+# **5**   **Beyond Human Understanding**
+
+From outlandish virtual creatures evolved on the computer to unfettered robots playing the weirdest music in the world, machine learning art is characterized by a strangeness that continues to fascinate its practitioners. These artists are willing to cope with the difficulties and frustrations of working with these adaptive systems specifically because the way that the systems perceive and act upon the world seems to defy human understanding.
+
+Working with machine learning processes involves a uniquely indirect form of artistic gesture. While one can adjust parameters and modulate the data supplied to the training algorithm, the final decisions are made by the AI system beyond the immediate control of their designer. These decisions result from convoluted mathematical formulas that imperfectly mimic certain natural processes such as genetic evolution or brain connections and yet remain essentially alien to us. We should not be surprised then that the images, sounds, or behaviors generated by these systems are so unfathomable.
+
+Indeed, the opacity of machine learning systems is a well-known problem and is often considered an obstacle to their social acceptability (Burrell, 2016). In a way, it is the price to pay to reach the degree of performance and precision offered by these systems at the expense of transparency. By design, the decision boundaries of machine learning devices are closer to a form of intuition than to a rational, logical, explainable construct. This may seem paradoxical because on one hand machine learning systems are known to be good at making predictions, but on the other hand it remains difficult for a human being to predict the decisions of such learning processes.
+
+But their resistance to explanation is central to machine learning artists’ fascination with these technologies. New media artist Memo Akten describes how, despite the extremely tedious tasks of data collection, training, and debugging associated with machine learning art, he keeps coming back to it. He accepts the challenges posed by systems that are still so poorly understood because they offer so many unexplored areas, which means that there is a huge artistic potential to tap from these uncanny, wild techniques.
+
+If we locate machine learning art within the much broader field of computer-based art and more specifically the field of generative art practices, we can appreciate how machine learning systems are more unpredictable than computational approaches that directly rely on generative hard-coded programs. For example, in the 1990s artists such as William Latham and Karl Sims created complex generative programs using evolutionary processes. More recently, artists such as Sofia Crespo and Mario Klingemann have used deep convolutional neural networks to generate new kinds of images. Convolutional neural networks are a kind of deep learning system specifically designed for images, characterized by their ability to organize information hierarchically by looking at patterns in parts of the image and bringing all the information together at a higher level.
+
+Sofia Crespo’s *Neural Zoo* series presents images generated by neural networks and then remanipulated by the artist. These distorted images appear as enigmatic collages of organic-looking shapes, evoking strange, imaginary creatures that sometimes feel like landscapes (see [figure 5.1](#chapter_5.xhtml#fig5-1)). Mario Klingemann’s *Memories of Passersby* (2018) applies a similar process to a generative video installation that constantly creates human portraits in real time. Images generated by Klingemann’s apparatus are unpredictable, and yet they have a recognizable style reminiscent of that of Sofia Crespo and other artists using similar generative convolutional neural networks. This style is dependent both on the database used by the artist for training and on the characteristics specific to convolutional neural networks, among which is the tendency to focus their attention on the details deemed more important and inversely to leave some areas blurred, and the tendency to repeat certain patterns. These systems often behave counterintuitively, in ways that surprise even their author, in part because they are more autonomous and opaque than computational approaches that are purely based on the author’s coding.
+
+![Figure 5.1 Sofia Crespo, Self Acceptance, 2018. Part of the series Neural Zoo. Courtesy of Sofia Crespo (sofia crespo.com).](images/Figure5-1.png)
+
+[Figure 5.1](#chapter_5.xhtml#rfig5-1)  
+Sofia Crespo, *Self Acceptance*, 2018. Part of the series *Neural Zoo*. Courtesy of Sofia Crespo (sofia crespo.com).
+
+Let us contrast these works with one of the most famous examples of an autonomous art-generating system: Harold Cohen’s painting program AARON. From the early 1970s when he was a sabbatical researcher at the Stanford AI laboratory until his death in 2016, Cohen relentlessly wrote, debugged, and improved the code for AARON, designing a unique range of works that matured over four decades. Throughout this journey, the artist was driven by the investigation of creative processes in human cognition to understand the minimal conditions needed for a set of marks to evoke an image (Cohen, 1995, 2016).
+
+AARON program is fascinating because of its virtuosity and the diversity of works it can generate while preserving a recognizable personal style. Yet even in its latest versions, AARON is programmed using traditional coding practice: a carefully designed list of instructions that encodes its designer’s knowledge about drawing and painting. This expert system was written and fine tuned by the expert himself (Cohen) throughout the 43 years of its history.^([1](#chapter_5.xhtml#chapter5-1)) When programmers succeed in translating their ideas into code as Harold Cohen did for AARON, they follow the path of symbolic AI by designing a rule-based computational machine that performs operations over data (inputs) in order to produce a result (output). In order to design a successful program using computer code, one must be able to describe the underlying rules that govern a system by using algorithms, logic, and arithmetics.
+
+In machine learning, the program that turns inputs into outputs is not explicitly designed by a human coder. Rather, a training process uses an adjustable machine that is typically initialized randomly and thus usually performs poorly at the beginning of the procedure. The training algorithm then iteratively adjusts the machine through trial and error using a set of real-world examples, effectively producing a better performing machine at the end of the process (see [figure 5.2](#chapter_5.xhtml#fig5-2)).
+
+![Figure 5.2 Comparison between traditional computer programming and machine learning. Drawing by Jean-François Renaud after original by Audry.](images/Figure5-2.png)
+
+[Figure 5.2](#chapter_5.xhtml#rfig5-2)  
+Comparison between traditional computer programming and machine learning. Drawing by Jean-François Renaud after original by Audry.
+
+In machine learning systems, such adjustable, trainable machines come in many flavors such as feedforward neural networks, recurrent neural networks, genetic codes, decision trees, support vector machines (SVM), and other. Each comes with its own set of characteristics, advantages, and disadvantages.
+
+Understanding the underlying structures of these machines allows us to grasp the materiality of art forms that use these various strategies. Comparing a generative video work made with genetic algorithms to one made with artificial neural networks would be like comparing an apple to an orange, and comprehending the underlying structures of these algorithms can help with analyzing the conceptual underpinning of each approach. The materiality of some algorithms inherently affords fundamental questions about the world such as evolution, memory, cognitive processes, perception, and representation.
+
+In machine learning literature, these trainable machines are often called *models* because they implement a mathematical representation of the real world. Such representations can model the behavior of various systems such as the probability distribution of English words, the behavior of the Dow Jones Industrial Average, or the properties of human faces.
+
+Although the term *model* may be appropriate in most of the contexts where machine learning is currently used, such as pattern recognition, probability distribution estimation, and statistical regression, it remains problematic as a general principle for machine learning. It rests on a dualistic conception of intelligence whereby cognition requires an inner representation of the outside world that can then be used to determine high-level representations for decision-making purposes (e.g., transforming raw digital images into categories such as *dog* or *cat*).
+
+As discussed previously, the representationalist world view that gave us the concept of model has been under fire since the 1980s for its failure to acknowledge the primal role of the world-body interaction in cognition.^([2](#chapter_5.xhtml#chapter5-2)) In this book, I thus use a very broad notion of models that encompasses not only computable representations of the world such as those found in artificial neural networks but also more generally any kind of structure that is adapted during a learning procedure. Therefore, I make no overarching distinction between structures such as genetic codes, decision trees, neural nets, and even some physical assemblages such as Thompson’s evolutionary circuits, which are discussed in the next section. These malleable data structures generate self-organized connections with the world, establishing relationships that seem beyond human control. Because of the self-organizing nature of these systems as well as their connection to the real world, these technical arrangements are best interpreted as embodied sensorial systems rather than representational systems in the traditional sense. As a result, the distributed representations used by deep learning neural networks are drastically different from symbolic representations in symbolic AI, which depend on rule-based explanatory models that are hard-coded and inflexible.
+
+We may think of a model as a function that tries to approximate how data performs or behaves on the basis of examples sampled from the real world. The model uses vast amounts of data in order to learn the behavior of that data, but the models of concern in this section do not need to memorize or store the data itself. During learning, the model uses available data to generate predictions corresponding to a specific problem at hand, such as guessing which objects are displayed in an image or forecasting tomorrow’s weather on the basis of today’s conditions. Finally, the training process evaluates the model’s predictions using an evaluation function and adjusts the model in order to improve its future predictions, and the process is repeated until no further refinements are required.
+
+Once the model is fully trained, it should be able to make accurate predictions not only by using the examples it has seen during training but more importantly by successfully applying the patterns that it has learned on new, unseen examples. The ability for a machine learning system to expand its capabilities to new data is called generalization. It is the true measure of a machine learning system’s effectiveness, because such systems are good only if they are able to expand to new information rather than simply to learn by rote.
+
+After training, the learning algorithm and the data set become unnecessary: the trained model can be used directly, as it has absorbed all of the relevant information to accomplish its duty. As a result, models are all that remains after the training process: they are the true output of a machine learning system.
+
+Models are a core element of machine learning systems, and therefore they are of crucial consideration for artistic work based on learning. Machine learning systems are so complex and their history so convoluted that conversations about art made with them often vaguely depict them as automatic or even magical, whereas different streams and types of models actually speak much more broadly to notions of cognition, representation, structure, and life processes. Different types of models afford different kinds of aesthetic effects and often involve profoundly divergent sets of practices. As a result, specific artistic movements and genres have attached themselves to specific kinds of models. For example, evolutionary art concerns mostly generative adjustable models known as parametric systems, whereas recent-days neural art (Hertzmann, 2019) largely concerns itself with the artistic potential of generative deep learning neural networks.
+
+This chapter outlines how machine learning transforms generative art practices through the training of these models. Instead of building a program line by line that accomplishes preconceived artistic goals (an endeavor conceptually akin to architecture or engineering practice), machine learning artists adopt an experimental approach that more closely resembles scientific practices such as chemistry or biology. The materiality of code is radically different when one adopts such an approach. Rather than hardcoding programs, machine learning artists need to put the right sets of ingredients together, wait for the results, make changes, and repeat until they are satisfied with the outcomes. That process requires one to partly lose control and to let go of the need to fully understand what is going on.
+
+## **The Body Electric**
+
+In 1996, Adrian Thompson, a scientist working at the University of Sussex, wanted to know whether it would be possible to automatically design an electronic circuit using an evolutionary computing procedure. In Thompson (1996) he described his attempt at training a field-programmable gate array (FGPA) to discriminate between a 1 kHz and a 10 kHz tone. Commercialized in the 1980s, FGPAs are integrated circuits consisting in matrices of logic gates called *cells* that can be reconfigured at will to create highly efficient programs.
+
+In his experiments, Thompson generated random FGPA circuits, tested them on their ability to distinguish between the high- and low-frequency tones, and kept a subpopulation of the best circuits. He then applied genetic manipulations on these circuits such as crossovers and mutations. As Thompson repeated the process, he generated increasingly accurate results. After several iterations, the genetic process converged to an optimal circuit that could almost perfectly discriminate between the two signals. Thompson then tried to see if he could refine the circuit by removing some of the unused cells.
+
+Most of the cells on the main circuit turned out to be inessential to the circuit’s logical functions, as they were completely disconnected from the path through which the sound circulated; as a result they could (at least theoretically) be removed without affecting the system’s performance. Surprisingly, Thompson discovered that pruning some of these seemingly inessential parts in the circuits permanently disrupted the system’s accuracy. Taking advantage of tiny local magnetic interactions created by these presumably inessential areas of the circuit, the adaptive training loop had learned a solution to the problem that made use of the intrinsic, embodied, physical properties of the circuit, demonstrating a logic rooted in machine perception that no human could have possibly devised.^([3](#chapter_5.xhtml#chapter5-3))
+
+## **Black Boxing**
+
+Thompson’s experiment suggests two important issues with machine learning in general. First, it exemplifies how machine learning systems often make decisions based on mechanisms that are surprising and unfathomable even to their own designers. In particular, most of these systems are not based on rules of logic, but rather on intricate forms of nonlinear algebra, statistics, and probability and as in Thompson’s FGPA experiment, on physical properties of matter. Because they rely on inference rather than deduction, they are simply not meant to produce explanatory models of the world.
+
+Second, Thompson’s evolutionary circuit gives some perspective on the concept of models in machine learning. It shows a trainable structure that is not really a model or representation of the world but more akin to a material *body* embedded in the actual world. The experiment demonstrates the tension between representations and embodiment within AI, which has been the subject of vivid debates since the 1980s. Whereas machine learning has inherited the concept of models from symbolic AI, in which the goal of the system is to generate an algorithmic representation of the world using symbols and logic, Thompson’s experiment reminds us that although such representations might be useful in rounding up the problem at hand, there may ultimately be no need for them. To roboticist Rodney Brooks, the key to building intelligent systems is not so much to create good representations but to have these representations grounded in the physical world because “the world is its own best model.”^([4](#chapter_5.xhtml#chapter5-4))
+
+Thompson’s experiment may be read as a counterexample to computationalistic views of artificial intelligence systems. It rearticulates alternative perspectives expressed throughout the 1980s and 1990s by a range of researchers such as Rodney Brooks and Richard Dreyfus and artists such as Ken Rinaldo, Simon Penny, and Bill Vorn who opposed the dualistic worldview of symbolic AI. It blurs the line between hardware and software, revealing that in the case of self-organizing machine learning models, attempts at translating such models’ decision processes through human-understandable rules is doomed to failure because what is precisely asked from them is to generate their own set of representations in ways that are closer to the analog than to the digital. It therefore demonstrates how cognition cannot be separated from the situated interactions of an embodied system in the world. Yet it does not preclude that this system might be using, in this process, certain kinds of symbolic or subsymbolic operations that may help it perform in its environment—the same way that Thompson’s evolvable circuits uses a mix of logic gates and electrical interferences to perceive the world.
+
+Similar to Thompson’s elusive FGPA, other machine learning models such as artificial neural nets produce representations of reality that often defy human representations and understandings. As a result, these machine learning models are very different from classic artificial intelligence models such as expert systems, which rely on organized structures of recognizable elements programmed with the help of human experts.
+
+Indeed, a known limitation of many machine learning systems such as artificial neural networks is their lack explainability. Their efficiency at recognizing patterns comes at a cost, as machine learning systems often rely on complex and relatively obscure *black box* systems in which information is highly distributed among thousands of neurons connected by millions of weights, making the systems hard to interpret, let alone to explain in simple human language. As a result, the decisions they make are equally obscure, which can be problematic in certain circumstances—for example, when they are used to take an ethically charged decision such as sentencing someone to prison or identifying and killing a human target. There seems to be a trade-off between an AI model’s accuracy and its ability to be explained: more accurate predictive models such as deep learning systems are difficult to understand, whereas more human-readable models such as decision trees are usually less accurate in their predictions.
+
+Furthermore, direct attempts to help or improve machine learning systems by massaging data or tuning models are often counter-productive, as demonstrated in Thompson’s experiment. This is especially true with deep learning models, whose key ability is to learn directly from raw data, sidestepping any kind of human feature extraction through heuristics and prior knowledge. Trying to simplify models according to human a priori knowledge often misses the point because these shortcuts might obscure some important pieces of information in the raw data that could be useful to a machine learning system. The structural complexity of machine learning systems is precisely what fuels their efficiency, producing intricate behaviors that can make them perform better than humans in certain respects. Because of this gap between human and machine perception, it is not surprising that the patterns emerging from machine learning architectures remain perplexing to human observers.^([5](#chapter_5.xhtml#chapter5-5))
+
+The question remains whether machine learning models work as representations of the world. While deep learning systems indeed attempt to model some aspects of the real world by learning mathematical representations of the data, the notion of representation in machine learning literature differs from the humanist tradition of representation in Western art and philosophy. Representation learning in neural networks refers to ways that the system extracts relevant features from data, for example, by finding regularities in patterns. It thus closely follows internal processes of abstraction and compression of data found in the perceptual systems of the brain, specifically the visual cortex.
+
+For example, in a deep learning neural network trained on images such as those used by Sofia Crespo and Mario Klingemann, each layer of neurons grasps some increasingly abstract regularities in the data. The first layer may take the raw information (corresponding to the image projected onto the retina), whereas the next layer might represent this raw image data as a series of true/false values, each corresponding to the presence of a specific image feature such as an edge, a curve, or a bump, etc. Even if they still make use of traditional computation processes such as performing multiplication and addition, neural networks are not representational systems in the sense of traditional programming but are more akin to intricate *bodies* endowed with forms of plasticity that allow them to respond to the world.
+
+## **Getting to Know**
+
+Art works built using the sometimes unfathomable processes of machine learning display aesthetic qualities unique to their media, demanding novel kinds of artistic assessment and appreciation. Because the behavior of the algorithms that produce these artworks cannot be accounted for using logical rules, it is a challenge for audiences to describe them rationally or for artists to explain them. Although the technological function of an art work may not be important at all to the artistic vision of the artist, audiences often wish to know more about the technological functioning of a work in order to interpret its potential meaning. Traditional new media art works can usually be rationally explained and understood; for example, this photocell triggers that sound effect, that microphone activates that video sequence, that gesture causes the agent run in a circle for a minute, and so forth. As explained in chapter 4, their behavior is morphostatic, following a recognizable pattern that does not change through time. However, to experience adaptive systems in all their richness, one needs to get to know them phenomenologically through one’s own sensorimotor body. One needs to adapt to it, to change oneself, to become attuned to it until the machine’s behavior becomes physically felt rather than intellectually understood.
+
+This is especially true in the context of robotic art. Human observers of such agent-based art works interpret the behavioral patterns they generate in ways that are highly context dependent and subjective. “How does it work?” is one of the most common questions audience members ask me when I have shown robotic art installations. This initial curiosity about the functional dimension of the work reflects a widespread anxiety with technology and reveals cultural preconceptions about artificial intelligence. People more than often presuppose that robots are programmed using sets of rationally explainable rules (Audry, 2021).
+
+Over time, I have learned to avoid answering this question by turning it over: “How do you think it works?” In response, people usually come up with stories that have nothing to do with programming but rather with social and emotional subjects: “Look at these robots—are they fighting?” and “I think they’re making out!” and “This one likes to be alone.”
+
+Such speculations by observers on the systems’ demeanors are only a piece of the puzzle. When audience members come back to the question “How does it work?” I am left to answer that although I could describe the principles and technique with which the robots are built, these explanations would not necessarily tell us much about their behavior as we experience them. There is a huge gap between the inner workings of a system and how the system’s behavior is perceived by an external observer, including its author.
+
+The projected impressions of aliveness observed in robotic art works are largely supported by the unfathomable character of behaviors generated by the artificial agents in place. The affective perception of alien behavioral forms that cannot be described logically or narratively echoes the experience of other artists. For example, about his work *Eden* (2000–2010) in which an ecosystem of artificial audiovisual agents react indirectly to the visitors, Jon McCormack notices that while visitors do not understand the inner functionings of the system, they describe their experience of the work as “having a sense that it is somehow alive” (McCormack, 2009, p. 411).
+
+This can be explained by considering how observers are themselves adaptive systems trying to make sense of such unstable and complex behaviors that might be moving through morphogenetic and metamorphic phases. These self-organized systems need a particular context to be correctly apprehended; they cannot be consumed like more traditional reactive and/or interactive art works. One needs to spend time with these agents to get to know them—in other words, to adapt to them. Indeed, it has been my own experience that these works seem to have more impact on people who spend more time with the work.^([6](#chapter_5.xhtml#chapter5-6))
+
+In this sense, machine learning art may provide an escape from the expectations of new media art audiences, as creators often find themselves limited by the dry input-output, explanatory paradigms in which they are entangled—a context in which, paradoxically, artists struggle to *make it work* but are annoyed when the public’s only focus is *how it works*. When it is impossible for the artist to make it work in a human-rational way, the question can be avoided altogether: it is then the audiences who must make it work by engaging with the piece.
+
+## **The Best Audience**
+
+Machine learning sets the stage for the emergence of art forms that trigger new forms of art consumption. The impact of new technologies on the art world is not unprecedented: consider for example how the emergence of video art in the late 1960s forced art institutions to invent new presentation formats or how the internet has drastically transformed the film and music industries. The way that contemporary media art is currently presented in galleries and festivals—in which audiences sit, listen, and leave in an experience that usually runs for no more than a few minutes—is perhaps inappropriate for most works based on learning processes. Machine learning systems require an active interaction, often over a long period of time—an experience that traditional new media art presentation settings such as festivals often do not allow.
+
+Speaking to the power of nontraditional models for encountering new media art, Nicolas Baginsky recalls how his best experiences of presenting his robotic band through the 1990s and early 2000s occurred when the robots were shown in a nightclub where people would come and go, spending some time listening to the band and then going out for a cigarette. “And so in this ‘nightclub-ish’ environment,” Baginsky argues, the adaptive robotic performance “was at its best because as people were chilling out and enjoying stage music; they were prepared to hang out the entire night and take in whatever would come. The band performed very well,” he adds, because the robots were “not colliding with people’s expectations.”
+
+The artist reports a similar experience with his 1997 installation *Narcissism Enterprise*, which used facial recognition and machine learning. The installation ran for about 15 years at the Center for Culture & Communication in Budapest. Because Baginsky had to visit it every month for maintenance, he got to know the security guards very well. They kept telling him stories of their interactions with the work and their interpretations. As a captive audience sharing their everyday life with the installation, the security guards were able to form the strongest bonds with the piece.
+
+Adaptive systems require a lot of data in order to learn how to react to complex situations. They usually require a lot of time so that they can have access to many different experiences. Furthermore, because machine learning systems are designed to come up with their own decision processes on the basis of convoluted self-organized substrates, the kind of outputs that they generate are never fully intelligible. This condition can result in long-form, evolution-centric works that place value on duration and contemplation or in mesmerizing behaviors that are better felt than understood, which makes them more akin to practices of performance art in which similar concerns of embodiment and performativity come into play.
+
+Artists working with such systems (as well as the institutions that wish to showcase their work to the public) should provide appropriate contexts for audiences to experience them fully, facilitating the building of relationships with these systems so that visitors can *get to know them*. A first approach is to provide audiences with incentives to stay for a longer time, for example, by providing couches where they can experience the work without discomfort or even by offering refreshments.
+
+Another approach is to prepare audiences by explicitly making the piece’s duration an integral component of the work, for example, by presenting the work in a performance format with a predetermined duration that asks the public to stay for a certain time—a common practice in the performing arts. Consider for example *The Paradise Institute* (2001) by Janet Cardiff and George Bures Miller, an installation in which viewers enter a small-scale replica of a classic movie theater and put on a pair of headphones to experience a binaural soundtrack that gives the illusion of being in a real theater. Consider also the Time Farm art gallery in Cambridge, UK, which presents art works in a space where audience members need to stay for exactly 1 hour with the work without access to the internet or to mobile devices.
+
+A third approach is to present this kind of art work in real-life environments, where it can be more loosely observed by audiences. The Three Sirens’ night-long performances in Berlin night clubs is an example of that strategy. In addition, there is an opportunity to generate new media works specifically designed for private acquisition and collection and also to offer borrowable take-home works that would evolve inside one’s living quarters over several days or weeks.^([7](#chapter_5.xhtml#chapter5-7))
+
+## **Baking Models**
+
+Machine learning provides a rich alternative to traditional computer programming and software engineering. Classic coding practice involves custom-designed data structures and algorithms that attempt to translate ideas about the world into logical rules and structures. A typical coding pipeline involves processes of problem analysis, software architecture design, implementation through coding, and dealing with syntax and runtime errors.
+
+Computer programming is a bit like home building. If you know how to use a hammer, you can probably figure out how to build a small shed with little planning. However, building a larger and more durable structure requires much more foresight: one needs to make plans, pour strong foundations, build the structural skeleton, and so on. At every step, decisions need to be made to account for unforeseen events, but these decisions are always made in support of the final construction. Finally, quick fixes and cheap materials, especially in building the foundation and structure, can cause major problems for the house in the long run.
+
+As for home building, designing software requires planning, fabricating components, refactoring, and so forth, and thus borrows from architectural and engineering practices. In contrast, machine learning typically involves experimental processes that make it closer to scientific practices such as biology and chemistry. It is no coincidence that the practice of building software is referred to as software engineering and software architecture; whereas machine learning is often associated with the field of data science.
+
+When working with machine learning, one does not attempt to directly implement a solution to the problem at hand but rather to create the right conditions for the machine learning system to accomplish target tasks. This requires an intuitive comprehension of the problem and involves putting the right things together through trial and error. In the same way experimental science involves selecting the right set of ingredients, instruments, and procedures, machine learning requires the choosing of data, models, evaluation function, and training process, all of which will impact the final outcome. While closely following a recipe guarantees the reproducibility of an experiment, new discoveries necessitate experimentation and the use of intuition.
+
+The same is true about machine learning art. While machine learning is often falsely presented as some kind of *magic box* that can automatically solve problems without human involvement, the truth is much more nuanced. Machine learning systems are able to accomplish impressive feats independently of human supervision, such as driving a vehicle or recognizing images better than humans, but these feats involve a lot of human experimentation, invention, and fine tuning.
+
+Traditional computer science proceeds by identifying processes that can be automated using algorithms and implementing them using a programming language. In contrast, one engaged in a machine learning project accomplishes tasks such as identifying the type of task to be used (supervised, unsupervised, or reinforcement learning), selecting and preprocessing data, and choosing an evaluation function and an optimization procedure. One of the key components of that process is to choose the right kind of model for the task (such as a binary genetic code, a deep neural net, or a decision tree) as well as the parameters that determine the structure of the model (such as the number of neurons and layers in a deep learning network).
+
+Once the table is set with these elements, all one needs to do is launch the training process and wait. Once the model is fully trained, one can then analyze how it behaves and, depending on these results, choose to make adjustments to any of the components and retry the experiment. As some of these experiments can take hours, days, and in some cases even weeks and months to run, it is ideal to use more computational resources in order to run several experiments in parallel with different settings and configurations.
+
+Machine learning models thus have a very different materiality than traditional programs. Working with machine learning in the context of art making displaces the labor away from the inner workings of the algorithm and instead forces artists to think more globally. What type of data is needed? How many examples are required? What kind of model should be chosen? With how many weights, neurons, layers, and other parameters? While every day the internet brings up a new technique or a demo that shows new ways to generate content, exploring these recipes as creative material involves trial and error and demands from the creator an intuitive sense of how things fit together.
+
+## **A Menagerie of Models**
+
+Machine learning traces a territory of exploration distinct from symbolic AI. Correspondingly, there is a gap between the art forms that exist in these two algorithmic landscapes. Perhaps one of the most important gaps is related to automation and accessibility. While Harold Cohen had to develop AARON over a period of more than 40 years using a symbolist approach, artists such as Sofia Crespo and Mario Klingemann are able to create generative systems within the scope of a few weeks or months, often with limited expertise. Another difference is of a conceptual nature: while AARON started with an inquiry in cognition and image making that initially used purely internalist processes, the generative work of William Latham is much more focused on theories of evolution and artificial life, whereas recent works with deep learning such as Crespo’s and Klingemann’s work often play with processes of perception and imagination. The conceptual and practical aspects of these different approaches have an impact on the outcomes, sometimes even promoting certain kinds of subgenres such as evolutionary art or neural aesthetics. What are the aesthetic affordances of different kinds of approaches to computer-based art? How does the materiality of such approaches come to influence art practices and products?
+
+Since its emergence in the second part of the twentieth century, the field of machine learning has traversed multiple stages and employed a plethora of approaches, from early connectionist systems in the cybernetics era to deep learning, or from rote learning to genetic algorithms. Each of these approaches comes with its own set of preferred problems, practices, models, and algorithms. Similarly, when brought into the art world, these different approaches have enacted different sets of practices and outcomes, often corresponding to niche movements and sub-genres, thus impacting art in terms of form, concept, and practice.
+
+First, each species of model spans a specific aesthetic territory. Simple adaptive systems from the cybernetics era yielded themselves well to indeterminately behaving robotic devices such as Grey Walter’s *Machina Speculatrix* (1951), Nicolas Schöffer’s *CYSP 1* (1956), and Gordon Pask’s *Colloquy of Mobiles* (1968). In contrast, the development of evolutionary computation throughout the 1980s and 1990s spurred a range of artistic works associated with complex two-dimensional (2-D) and three-dimensional (3-D) forms relying on intricate mathematical expression, such as is present in the work of William Latham and Karl Sims. Finally, the recent development of generative image-based neural networks has provoked the emergence of a new range of works in which strange, dreamy visuals are generated by machines, such as in Crespo’s *Neural Zoo* series and Klingemann’s piece *Memories of Passersby*.
+
+Second, the nature of the approach often plays an important role in the concept of a piece. Think for example about how the imaginary space that is opened up by neural networks differs conceptually from that of evolutionary computation. Karl Sims’s installation *Galápagos* (1997–2000) plays with the richly evocative nature of evolution, allowing the user to take part in a story of genetic adaptation as the godlike subject that runs the natural selection process, whereas Ben Bogart’s installation *Dreaming Machine #2* (2009) reflexively involves neural networks in an artistic inquiry on memory and dreaming—two central topics in research on neurology that directly inspired computer-based neural nets.
+
+Third, models have specific structures that allow different forms of artistic manipulations, including strategies that take advantage of a model’s accidental features, to divert it from its habitual or intended use. Take for example the strategy employed by both Nicolas Baginsky in *The Three Sirens* and Yves Amu Klein in his robotic sculpture *Octofungi* (1996) to use the outputs learned by unsupervised neural networks to control robots in ways these machine learning systems were not designed for.
+
+## **Conclusion**
+
+Models are the cornerstones of machine learning systems. They embody one fundamental concept of machine learning, which is to indirectly design a computable system by exposing it to examples rather than directly through computer code. As they are trained, models such as genetic programming trees and neural networks self-organize, producing complex representations of the world that include uncanny ways to deal with information. As these systems have grown in complexity over the past 70 years, their design blurs the frontier between the analog and the digital. The decision process of these models, which is crystallized in the ways that they are adjusted through the learning procedure, are often surprising and even difficult to interpret by humans. This unfathomability is viscerally imbued in the models themselves, as in the genetic code or the weights of a neural net.
+
+Hence, the practice of working with machine learning differs from traditional programming; machine learning takes a much more bottom-up approach that is closer to experimental science, whereas coding is more of a top-down engineering approach. Working with machine learning implicates different processes that suggest more intuitive and embodied forms of interacting with the technology such as curating data, choosing model parameters, running experiments, and making adjustments in order to give shape to the appropriate model.
+
+The following three chapters examine how different types of models and corresponding machine learning approaches have influenced specific types of works. Given the very large number of types of models and approaches, multiplied by an even larger number of artistic practices such as dance, poetry, visual art, and media art, this will be far from an exhaustive analysis. However, it is my hope to give the reader at least a sense of the wide diversity that characterizes the nexus of machine learning and art, as well as the commonalities that exist within that landscape.
+
+We broadly consider three different species of models, which incidentally follow a chronological sequence. We begin in chapter 6 by looking at machines trained using evolutionary computation, while introducing the concepts of parametric and nonparametric systems in machine learning. In chapter 7 we consider different forms of shallow learning neural networks, with a focus on artists who have used unsupervised learning nets such as self-organizing maps (SOMs). Finally, chapter 8 focuses on deep learning, which constitutes a more recent category of models with many interesting representational and generative properties.
+
+# **Notes**
+
+1.  [1](#chapter_5.xhtml#chapter5_1). Pamela McCorduck’s seminal book *AARON’s Code: Meta-Art, Artificial Intelligence, and the Work of Harold Cohen* gives an in-depth account of Cohen’s journey as an artist working with AARON (McCorduck, 1990).
+    
+2.  [2](#chapter_5.xhtml#chapter5_2). For an in-depth review of the critiques of the representationalist worldview in artificial intelligence and cognitive science, read the excellent book *Making Sense* by artist-researcher Simon Penny (Penny, 2017).
+    
+3.  [3](#chapter_5.xhtml#chapter5_3). Thompson’s experiment has never been reproduced, which has cast doubts about its accuracy in some scientific communities. However, even if proven untrue, it provides a good metaphor for understanding the unfathomable nature of machine learning systems.
+    
+4.  [4](#chapter_5.xhtml#chapter5_4). Influenced by approaches in both machine learning and ALife, as well as by the work of Maturana and Varela (Maturana and Varela, 1980) and Dreyfus’s criticism of computationalism (Dreyfus, 1979), in the late 1980s Rodney Brooks challenged symbolic AI. He argued that AI had erred in trying to reproduce human cognition in computers—a position known as strong AI. In its inability to achieve that goal of AI, research had turned to solving problems in reduced domains of human performance, such as strategy games, simulated version of the real world, and specific fields of expertise such as expert systems. According to Brooks, living beings should not be seen as the mere substrates on which disembodied series of symbolic manipulation happen. On the contrary, Brooks argued for a resolutely antirepresentationalist view of cognition, proposing that intelligent behaviors displayed by living beings result from an embodied, situated interaction with their environment, which does not need intermediate symbolic representations (Brooks, 1987, 1999).
+    
+5.  [5](#chapter_5.xhtml#chapter5_5). An argument can be made that Thompson’s FGPA cannot be compared to purely digital models such as deep learning neural networks and decision trees because it possesses physical properties that have a direct impact on the system’s discriminatory features. I would argue that when they reach a certain level of complexity, purely digital systems such as deep learning networks have similar properties, such that trying to simplify or prune parts of a network might impact the system’s performance in unexpected ways. From a human perspective, a complex system such as a deep learning neural network containing millions of connections between tens of thousands of self-organizing neurons is as obscure as many physical systems when observed directly.
+    
+6.  [6](#chapter_5.xhtml#chapter5_6). This observation is reported by other artists such as Stephen Kelly with his *Open Ended Ensemble* (2014) series of installations involving genetic programming (GP), as well as by Christopher Salter with *N-Polytope: Behaviors in Light and Sound after Iannis Xenakis* (2012).
+    
+7.  [7](#chapter_5.xhtml#chapter5_7). Public art installations that would adapt to their environment over years also fit in this category. An example is Nicolas Schöffer’s ambitious project to build a tower higher than the Eiffel Tower equipped with hygrometers, thermometers, anemometers, photocells, microphones, and several thousand color projectors and flashes. The tower, proposed in 1970 to the city of Paris under the title *Tour Lumière Cybernétique*, was meant to adapt to its environment over time. The project received the support of then-President George Pompidou, but the president succumbed to cancer in 1974 and the project died with him.
+    
+
+ 
+
+# **6**   **Evolutionary Learning**
+
+Artists Erwin Driessens and Maria Verstappen have applied the adaptive capabilities of computer algorithms to art production since the 1990s. Their work *Breed* (1995–2007) rests on a generative computer program that can produce convoluted sculptural forms. In this work, the artists designed a family of generative programs, each of which can create a three-dimensional (3D) shape starting from a single cubic cell (or *voxel*) by repeatedly applying certain rules of cell division. When one of these programs is run, it produces a 3D model that can then be printed in different materials such as wood, nylon, or steel.
+
+The range of possibilities is enormous, and it would have been near-impossible for the artists to try them all. Hence, to partly automate the decision process, they relied on a training process known as a genetic algorithm. In this context, rather than defining their preferred set of rules by themselves, they redirected their work to defining an evaluation or *fitness* criterion to encourage certain kinds of outcomes, such as volume and complexity.
+
+Introduced previously in this book, genetic algorithms were initially popularized in the 1980s and evolved concurrently with artificial intelligence, artificial life, neural computation, and machine learning.^([1](#chapter_6.xhtml#chapter6-1)) Broadly speaking, genetic algorithms span a wide family of computer programs that borrow from evolutionary processes. From a machine learning perspective, genetic algorithms hence constitute a set of approaches that attempt to design systems able to learn on their own, inspired by how species adapt to their environment through diversity, reproduction, and natural selection.
+
+By simulating biological evolution on the computer, genetic algorithms inherit to some extent the creative potential of evolutionary processes. These generative properties make them readily applicable to creative practice, and over the years they have been used with success in many areas of visual arts, music, and architecture, making them one of the most popular learning technologies used by artists and other creative practitioners. Genetic algorithms are easy to implement and very versatile, partly because they defer a lot of the decisions to the author. But as we will see, flexibility also comes with a number of caveats.
+
+A genetic algorithm is a form of optimization procedure that attempts to solve problems by searching through a space of possible models using an evolutionary heuristic. The system learns by making local changes to a population of models regarding potential solutions to a problem, moving closer to the end goal in a stepwise manner. As a result of this iterative development, genetic algorithms can be used to train different kinds of models, including neural networks. However, in art practice genetic algorithms are most often applied to custom-made models in which the genetic algorithm is tasked with finding the best way to adjust the model’s parameters. These parametric models have corresponded to a recognizable range of works within the field of new media art.
+
+Although many research groups in the 1960s had already been working on computational models of evolution applied to AI,^([2](#chapter_6.xhtml#chapter6-2)) the invention of genetic algorithms as one of many approaches to evolutionary computation is usually attributed to scientist John Holland (Mitchell, 1998). Holland developed them in an effort to build a formal mathematical representation of genetic adaptation that could be run on computerized systems. In the preface to his foundational book *Adaptation in Natural and Artificial Systems*, Holland proposed a formal definition of adaptation, as a “process whereby a structure is progressively modified to give better performance in its environment” (Holland, 1992, p. xiii). With his definition, Holland formalized the story of evolution as an optimization process that performs a heuristic search in a definite space of possibilities by selecting the best individuals at each generation, preserving part of their genetic structure while combining and mutating them. Significantly, the same kind of genetic procedure that occurs in nature and results in the evolution of the fittest forms or organs in living systems could now be digitally simulated in order to develop better strategies of action in computational agents.
+
+Through this framework, Holland reframes natural evolution as an iterative optimization process that functions by evolving populations of individuals using basic genetic operators such as cross-overs and mutations, testing them against a *fitness function*^([3](#chapter_6.xhtml#chapter6-3)) and selecting only the best individuals to generate the next population (Holland, 1992). The basic form of genetic algorithms as proposed by Holland uses artificial chromosomes that are essentially sequences of bits defining the genotype of an individual (see [figure 6.1](#chapter_6.xhtml#fig6-1)). Segments of the string correspond to genes that determine actual characteristics of the individual—in other words, its phenotype. The performance of the individual can then be assessed using a fitness function that evaluates the performance of the individual (Mitchell, 1995).
+
+![Figure 6.1 Diagram of a genetic algorithm.](images/Figure6-1.png)
+
+[Figure 6.1](#chapter_6.xhtml#rfig6-1)  
+Diagram of a genetic algorithm.
+
+In the 1990s genetic algorithms influenced the development of *evolutionary art*, an artistic field spanning many disciplines from visual arts to video games, music and architecture and has been the subject of a plethora of publications and books (Corne and Bentley, 2001; Johnson and Cardalda, 2002; Jong, 2016; Romero and Machado, 2008; Todd & Latham, 1992b; Whitelaw, 2004). Because the subject has already been largely covered elsewhere, my goal here is not to provide an in-depth analysis of the field but to examine the specific qualities of evolutionary algorithms as compared with other machine learning approaches.
+
+As explained previously, genetic algorithms are flexible learning algorithms that can be used to train different kinds of models. They have been frequently applied to models or trainable machines directly defined by their authors—as in the case of Thompson’s experiment introduced in the previous chapter, where a hardware machine is optimized by a genetic procedure (Thompson, 1996). From a genetic algorithm perspective, the model corresponds to a data structure (the genotype) that defines a possible solution (the phenotype) in a space of possibilities. In generative art, of course, these solutions do not correspond to answers to a problem but to particular forms or objects, such as images, virtual entities, architectural designs, or sounds. For example, in Driessens and Verstappen’s Breed, the genotype corresponds to a set of rules, while the phenotype is the resulting 3D structure. What genetic algorithms hence offer is a computational method for efficiently searching that space of possibilities.
+
+## **Parametric Systems**
+
+One common approach to genetic algorithms is to design a parametric system: a computer program or model that can be adjusted. In this setup, the genotype is simply a series of parameters called *genes*, which usually correspond to numerical values. The phenotype is then the result of the predefined computer program adjusted with those parameters.
+
+Dawkins’s famous *biomorph* program introduced previously uses such a strategy with a set of nine genes controlling the drawing of a shape consisting of a symmetrical arrangement of lines that resemble branches or limbs. Each gene determines one particular aspect of the drawing process, such as angles, distances, and lengths. In Dawkins’s evolutionary procedure, there are no crossovers between parent genotypes but only mutations, which are implemented by slightly increasing or decreasing the value of each gene during one step.
+
+Karl Sims used the metaphor of an ensemble of knobs, each corresponding to a single parameter, that can be turned to change results.^([4](#chapter_6.xhtml#chapter6-4)) As one adds more and more knobs to achieve more variations, it becomes increasingly difficult for a user to make these adjustments. A genetic algorithm offers an alternative process whereby small changes are automatically introduced to an existing position of the knobs to produce one or more samples that are then evaluated to select the best results. This evolutionary process allows a more efficient exploration of the parametric space through small random steps without the need for the user to understand the role played by each parameter (Sims, 1991, p. 320).
+
+Parametric systems can be relatively easy to implement and, as Dawkins’s experiment shows, still yield truly interesting and surprising results. This flexibility, however, comes at a cost: most of the control is deferred to the system’s designer, who has to write a generative program and decide how genes will influence it. Because of this, the aesthetic qualities of the output do not originate with the genetic algorithm itself but rather with the program’s author, thus reducing the potential for surprise and novelty to emerge from the machine’s perspective. Indeed, as is the case for the biomorphs, parametric systems often have a strong *signature*, that is, a recognizable class of objects allowed by the system.
+
+## **Nonparametric Systems**
+
+An alternative approach to parametric systems (where a program’s decisions are indirectly affected by changing its parameters) consists of designing a flexible data structure that allows the genetic algorithm to directly generate programs or models—an approach often referred to as a form of *genetic programming* (Koza, 1992). In these kinds of *nonparametric systems*, the genotype is not just a bunch of numbers but is an evolving, flexible structure with specific properties.
+
+Introduced at the beginning of this chapter, Driessens and Verstappen’s project Breed (1995–2007) is an example of using such a nonparametric evolutionary program. Here, the artists used genetic algorithms to generate forms that were then used to create real objects. The program builds upon a recursive procedure that starts from a single voxel which is divided into eight smaller voxels according to a set of local rules that depend on the cell itself and the ones surrounding it. Each of these new voxels is then divided into eight cells, and so on, eventually resulting in a complicated sculpture.
+
+Each cell-division program is represented directly as a chain of bits. Since the number of possible programs is quite high, the artists worked by iteratively designing a fitness function that would automate the evolution of the most interesting shapes. The first fitness function they implemented demanded that the resulting object be fully connected: there could be no voxel floating into the air simply because such a form would be impossible to create in the real world. However, the results were disappointing because the genetic process would then converge to generate the simplest form: a single voxel. They thus added an additional rule to the fitness function to reward objects with more volume. However, this was also not fully satisfying because the generated forms, although bigger, still lacked diversity: the system tended to generate simple cubic or spherical objects.
+
+Thus they had to implement a third principle to encourage complexity, which they defined as the total surface area covered by the object. With these three simple rules (connection, volume, and surface) they were able to generate a large variety of forms that they then turned into real objects using different materials such as plywood, nylon, and steel.
+
+In the 1990s, many artists worked with nonparametric systems that could generate images using mathematical formulas, yielding much richer variations and capacity for novelty generation than parametric systems. The approach was introduced by none other than Karl Sims in 1991 (Sims, 1991) and inspired a generation of artists such as David Hart, Steven Rooke, and Tatsuo Unemi. Most of these generation systems are built upon a small set of mathematical functions and determine the color of each pixel on the basis of its neighborhood. It is even possible to recognize, by looking at images generated by a system, the kind of mathematical functions (e.g., fractals or noise) as well as the color space and type of coordinate systems in use (Lewis, 2008, p. 8).
+
+In both the parametric and the nonparametric approaches, the challenge for the designer of the system is to determine the range of possible outcomes by defining a class of generative processes. However, defining this space of possibilities brings back a problem that haunts most computational artists: the tension between the system’s autonomy and the artist’s control. Evolutionary artists make use of genetic algorithms as a way to generate new, surprising outputs. On one hand, the author might very clearly define the space of possibilities by to achieve desired aesthetic outcomes beforehand. Such a precisely crafted configuration will result in predictable and explainable outcomes, but it contradicts the intent of generating surprise. On the other hand, while more diverse and random spaces may produce more unanticipated results, many of those might not fit the designer’s taste or intention. While such noisier, less determined spaces may contain startling pearls, those will tend to be hidden among piles of garbage (Lewis, 2008, p. 21).
+
+As a result of this conundrum, when one looks at the different outputs generated through interactive selection in the most successful evolutionary design systems, the biases programmed by the designer seem to occupy most of the aesthetic space. Because of this, the generated images have a distinctive style or signature to them which originates from the human author rather than from the program itself. This partly defeats the purpose of using such systems to generate novelty.
+
+## **Genetic Programming**
+
+Canadian artist, musician, and AI researcher Stephen Kelly has produced a number of experimental works using genetic programming (GP)—a particular approach to genetic algorithms that evolves populations of nonparametric computer programs. In a typical GP application, populations of such programs are generated, tested on a problem, and then selected on the basis of their performance. The fittest candidates are used to generate new offspring using different genetic manipulations. Hence, GP is considered a form of *policy search*, in which the agents’ behaviors are evolved directly on the basis of their performance over a given task—as opposed to *value search* methods, in which agents are made more efficient through the adaptation of a value function that tries to predict the value of a specific action (Grefenstette, Moriarty, & Schultz, 2011).
+
+In Kelly’s 2016 installation *Open Ended Ensemble (Competitive Coevolution)*, robotic probes move along a linear fixture with four fluorescent lights, trying to find the region with the lowest electromagnetic radiation (see [figure 6.2](#chapter_6.xhtml#fig6-2)) while competing with an agent that controls which fluorescent lights are switched on. As they move clumsily along the light fixtures, the electromagnetic radiations emitted by the fluorescent tubes captured by the probes are rendered into sound by high-voltage amplifiers attached to the probes.
+
+![Figure 6.2 Stephen Kelly, Open Ended Ensembles (Competitive Coevolution), 2016. Photo credit: Caitlin Sutherland. Courtesy of Stephen Kelly.](images/Figure6-2.png)
+
+[Figure 6.2](#chapter_6.xhtml#rfig6-2)  
+Stephen Kelly, *Open Ended Ensembles (Competitive Coevolution)*, 2016. Photo credit: Caitlin Sutherland. Courtesy of Stephen Kelly.
+
+The system uses Tangled Program Graphs, a reinforcement learning technique based on GP that uses teams of small programs cooperating and coevolving together (Kelly, 2017). These teams can be understood as virtual organisms resulting from the symbiotic interactions of the programs that compose them.
+
+Over the course of the exhibition, two populations of about 200 such teams each compete and coevolve; one population is attached to the movements of probes while the other is linked to the control of lights. Once every minute, a pair of program teams is selected, one to control the probe and the other to control the lights. After a minute, the fitness of each team is evaluated and a new pair of teams is selected. Once every hour, half of the team population is deleted, preserving only the fittest individuals, and a genetic process of crossovers and mutations is applied to the remaining members to produce the next generation. As this evolutionary process is repeated, both the probe and the light behaviors become increasingly efficient at achieving their goals, as populations of teams of programs compete with one another.
+
+The agents in *Open Ended Ensemble* have imperfect control over their movements and their observations are limited, which places them into a partially unpredictable environment. The artist reported that one of the biggest challenges in creating this work was that in his opinion, the plastic, visual, and audio components of the piece were taking a much more prominent place in the work’s aesthetic space than was its behavior, obscuring the trial-and-error process. This remark resonates with my own observations working with adaptive agent-based systems in art. It is not at all clear how a learning behavior can be observed or felt by the audience while integrating it into an experience that manifests through different media in the creation of a global experience.^([5](#chapter_6.xhtml#chapter6-5)) Yet, as Kelly further points out, the material properties of the installation are crucial as they also give the audience a hint about the learning process driving the system.
+
+## **Ecosystems**
+
+Australian artist Jon McCormack has criticized the inherent limitations of genetic algorithms specific to image generation, such as the ones described previously, arguing that despite their claim for diversity, in actuality the images generated by such systems have trouble escaping the limits of the system that generates them.
+
+Indeed, in all uses of aesthetic selection the results produced are “of a certain class,” that is, they exhibit strong traits of the underlying formalized system that created them (the \[parametric\] system). A natural, but unsuccessful strategy has been to increase the scope and complexity of the parameterised system, giving an even larger gamut of possibilities in the phenotype. In all systems to date, this process is limited by the creativity of the artist or programmer, in that they must use their ingenuity to come up with representations and parameterisations they think will lead to interesting results. The search process has shifted up a level (from parameters to mechanisms), but it is still a search problem that needs to be undertaken by humans: it cannot (yet) be formalised, and hence, automated (McCormack, 2006, p. 7).
+
+One way to circumvent these limitations is to observe how such systems rely on a top-down paradigm in which the optimization algorithm is used directly to make selections in a space of possibilities. An alternative approach is to use a bottom-up approach that focuses less on the end goal of generating interesting outcomes, and instead makes use of the generative and adaptive properties of genetic algorithms to bring audiences into an experience. One kind of artistic works uses such an approach by creating artificial ecosystems in which groups of artificial agents evolve within a virtual or real environment.
+
+McCormack is one of the leading figures of this bottom-up or evolutionary approach. One of his most important works, *Eden* (2004), is an “evolutionary sonic ecosystem” that represents agents on a two-dimensional lattice, in a fashion as similar to cellular automata^([6](#chapter_6.xhtml#chapter6-6)) (see [figure 6.3](#chapter_6.xhtml#fig6-3)). The agents react to one another and to their environment using a set of rules that are encoded as binary chromosomes, which are then evolved using a learning classifier system (LCS), a machine learning technique invented by John Holland with close ties to reinforcement learning, supervised learning, and genetic algorithms (Holland, 1992; McCormack, 2009; Urbanowicz & Moore, 2009).
+
+![Figure 6.3 Jon McCormack, Eden, 2004. Interactive installation, computers, projection screens, audio, fog machine, artist’s software. Photo credit: Jon McCormack. Courtesy of Jon McCormack ©2004.](images/Figure6-3.png)
+
+[Figure 6.3](#chapter_6.xhtml#rfig6-3)  
+Jon McCormack, *Eden*, 2004. Interactive installation, computers, projection screens, audio, fog machine, artist’s software. Photo credit: Jon McCormack. Courtesy of Jon McCormack ©2004.
+
+The work takes the form of an audiovisual installation in which the simulated agents and their environment can be experienced as they move, mate, eat, and communicate with one another using sound signals. In contrast to Karl Sims’s *Galápagos*, in which the audience is asked to directly influence the evolutionary process by acting as the fitness indicator, here the agents react only indirectly to the visitors whose presence is necessary to add “food” to the environment, while the movements of the audience increase the mutation rate (McCormack, 2009).
+
+As for the public reception of the work, McCormack notices that while most people “are not aware of the learning system, camera sensing, even the fact that what they are experiencing is a complex artificial life system,” the system seems to be effective at engaging the public. In particular, he remarks that in many venues where the installation was shown, people returned to see the work over multiple days in order to witness the behavior of the environment metamorphosing over time (McCormack, 2009, p. 411):
+
+*Performative Ecologies* (2008–2010) by architect Ruairi Glynn (see [figure 6.4](#chapter_6.xhtml#fig6-4)) is described by its author as “an ongoing investigation into the design of conversational (interactive) environments” (Glynn, 2008). Inspired by the work of Gordon Pask, especially his 1968 installation *Colloquy of Mobiles*, Glynn’s installation creates a conversational space in which dancing robots evolve in constant interaction with one another and with the public.
+
+![Figure 6.4 Ruairi Glynn, Performative Ecologies, 2008. Courtesy of Ruairi Glynn.](images/Figure6-4.png)
+
+[Figure 6.4](#chapter_6.xhtml#rfig6-4)  
+Ruairi Glynn, *Performative Ecologies*, 2008. Courtesy of Ruairi Glynn.
+
+The performances are generated from a gene pool of evolving dances functioning in a Genetic Algorithm (G.A.) which uses facial recognition to assess attention levels & orientation of the audience before & after each performance as a way of assessing & assigning a fitness value to each new choreography. Over time successful maneuvers are kept & recombined to produce new performances while less effective ones are discarded. Mutation in the G.A. fluctuates based on how successful the sculptures become. If they get a lot of attention, mutation levels rise as if they are getting arrogant & as a result become more experimental. (Glynn, 2008, pp. 4–5)
+
+The robots start communicating with one another, sharing information about their most successful moves. New performances are evolved through genetic crossovers as the robots compare their performances and genotype with one another, sometimes accepting changes to their genetic code, allowing the most successful genes to circulate amongst them. Human and nonhuman agents thus come to form a rich ecosystem where they “operate as part of the conversational environment each performing independently, but continually negotiating their actions with each other” (p. 5).
+
+*Performative Ecologies* might be classified as an artwork that exists somewhere between situated robotics installations like Stephen Kelly’s *Open Ended Ensemble (Competitive Coevolution)* and interactive genetic systems such as Karl Sims’s *Galápagos*. Building upon the legacy of artist David Rokeby through his “experiments in complexity” and Gordon Pask’s conversation theory (which suggests a way for humans and machines to interact within their shared environments), Glynn uses machine learning as a way to engage the public in sophisticated interactions with machinic systems (Glynn, 2008, p. 3).
+
+## **Conclusion**
+
+Genetic algorithms have been widely used by artists, composers, and musicians as generative devices. Creators use them mostly to define a space of possible generative results, leveraging the evolutionary procedure to automate in part or in whole the discovery of interesting outcomes.
+
+Evolutionary art suffers from a common dilemma found in machine learning art: the tension between the nonhuman system’s autonomy and the human author’s control. The use of genetic algorithms for artistic purposes is often prompted by the appeal for unexpected, surprising outcomes. However, when the space of possibilities becomes too large, the majority of individuals generated by a genetic procedure somehow become *too* surprising to be valuable, and it can become difficult to find the pearl in such a chaotic soup. Adversely, restraining the space of possibilities reduces diversity, thus running against the *raison d’être* of using genetic algorithms in the first place because one risks ending up with generative objects that all seem to belong to the same type.
+
+Beyond this conundrum, there is an even more important quality of custom-coded parametric and nonparametric systems such as those commonly used in evolutionary computing—one that differentiates them from their close cousins, neural networks. Although evolutionary procedures allow for interesting emerging and surprising effects, in many instances they produce their outcomes without the influence of an external data set. Instead, they usually stem from an initial seed like a random number or, in the case of Driessens and Verstappen’s *Breed*, a single cubic cell.
+
+In contrast, artificial neural networks, which constitute a family of nonparametric systems, are more readily applicable to real-world information such as data sets of images or text. In the spirit of artificial ecosystems, these models allow artists to integrate generative work with a real-world environment through the use of data. They thus offer the possibility of creating relations between the machine and the world, allowing artists a form of bottom-up approach to embodied interaction and perception. This turn toward increased machine autonomy through learning from the real world is a central feature of artificial neural networks, which we examine in the next two chapters.
+
+# **Notes**
+
+1.  [1](#chapter_6.xhtml#chapter6_1). The history of genetic algorithms goes back to 1940 with Claude Shannon’s PhD thesis on theoretical genetics. Shannon would later become an important figure of cybernetics with his theory of information. In the 1950s, mathematician Nils Baricelli designed algorithms for gene evolution while visiting the Institute for Advanced Studies Princeton (Tenhaaf, 2014).
+    
+2.  [2](#chapter_6.xhtml#chapter6_2). For example, see Rechenberg’s *evolutionsstrategie* (Rechenberg, 1965, 1973) as well the “evolutionary programming” described in Fogel et al. (1967).
+    
+3.  [3](#chapter_6.xhtml#chapter6_3). A fitness function is an evaluation function that gives a value (typically as a real number) to an individual in a population, usually representing its performance over a problem that the GA tries to solve. For example, a GA used for learning how to play chess might generate populations of agents and have them play games against one another. The fitness function could then be the percentage of games won (with ties counting as a half-win).
+    
+4.  [4](#chapter_6.xhtml#chapter6_4). In other words, the array of knobs corresponds to the genotype, and the results correspond to the phenotype.
+    
+5.  [5](#chapter_6.xhtml#chapter6_5). I have experienced similar difficulties working on projects using reinforcement learning such as my underwater installation *Plasmosis* (2013) and *N-Polytope: Behaviors in Light and Sound After Iannis Xenakis*, which is described in more detail in chapter 3.
+    
+6.  [6](#chapter_6.xhtml#chapter6_6). A cellular automaton is a set of discrete cells arranged into a grid, each of which can be, at any given time, in only one of many states. Cells change state according to a set of rules that depends on the states of their immediate neighbors. Cellular automata were invented the early 1940s by John von Neumann and his student Stanislaw Ulam as computational models of living systems (von Neumann, 1951).
+    
+
+ 
+
+# **7**   **Shallow Learning**
+
+Parallel to the evolutionary art movement, in the 1990s and 2000s another set of artistic approaches appeared that used a specific category of generative machines: artificial neural networks. Artificial neural networks are based on a universal black box model in which designers only indirectly control the network by allowing it to learn from data. An important advantage of such approaches over evolutionary algorithms is that they circumvent the need for the system’s designer to define a space of solution using a custom-crafted system of rules.
+
+Toward the end of the 1990s, as Nicolas Baginsky continued adding new members to his neural network self-learning robotic band The Three Sirens, which he took on tour across Europe, French artist Yves Amu Klein used unsupervised neural networks similar to those used by Baginsky for the control of robotic systems in his artificial life project *Living Sculptures*. In the 2000s, artists such as Ben Bogart, George Legrady, and Ursula Damm also used such systems in installations that autonomously analyzed images filmed in real time at the exhibition site.
+
+These artists share a willingness to use off-the-shelf neural networks that possess their own space of possibilities. Thus whereas evolutionary artists tend to be interested mainly in the generative potential of human-crafted algorithmic systems, artists working with neural nets seem to be most motivated by the building of strange self-organizing machines that generate unexpected interactions with the world. Therefore, while William Latham defines himself as a “creative gardener” operating within the space of possibilities that he himself has carefully defined, Nicolas Baginsky steps even further away from his own authorship—to the point of presenting himself as his robot’s assistant, as he defines the basic parameters but lets the instruments perform the strangest music in the world, improvised by artificial beings who establish alien relations with their world. For artists Ben Bogart and Ursula Damm, artificial neural networks allow them to explore questions about human cognition and perception by presenting the world through the gaze of a machine over which the artists have only indirect control.
+
+## **Neural Networks**
+
+The previous chapter introduced an important distinction in machine learning between *parametric* and *nonparametric* models. Parametric systems correspond to mostly custom-coded programs or mathematical formulas that can be tuned using a set of values or parameters. To implement these systems, some assumptions must first be made about the kind of things that can be generated by the system. As a metaphor, imagine an analog synthesizer with a set of knobs, each controlling a predefined aspect of the sound wave generated, such as pitch, amplitude, modulation, or envelope. Turning the knobs in a certain configuration produces a certain sound wave; turning them in a different configuration creates a different one. In other words, by turning the knobs (parameters) one can explore the space of possible sounds that can be generated by the analog synthesizer.
+
+In contrast, nonparametric models do not make any assumption about the possible kinds of generative objects that can be created by the system and instead implement a category of programs or functions. Continuing with our analog synth example, imagine that instead of turning knobs, one directly puts together an electronic circuit using simple components such as wire, resistors, and capacitors. One configuration of such elements would result in a specific sound—which, in many of the system’s possible configurations would likely be silence or noise.
+
+In most evolutionary computing applications, such nonparametric systems are often created using some kind of tree-like structure in which each node represents either an operator or a value. These structures, however, are often limited in the range of programs they are able to represent. This representational limitation is perhaps the most important difference between them and their close cousins, artificial neural networks.
+
+Initially proposed in the 1950s, artificial neural networks are defined by their universality: a neural network of sufficient size can approximate any function learned by a genetic programming procedure; however, the opposite is not always true (Cybenko, 1989; Hornik, 1991). This perk partly explains the tremendous success of neural computing, especially since the early 2010s with the development of deep learning.
+
+Perhaps more significant to our discussion is *how* neural networks perform such function approximations. They do so by projecting input data into different layers of representation using ensembles of self-organizing units called *neurons*. These neurons act independently of one another but still manage to work together a common solution. Each layer of these artificial neurons constitutes a *distributed representation* of the neurons from the previous layer that tries to grasp the most relevant patterns in the data and encode them in a compact and informative way.
+
+Artists have found in these biologically inspired, technological modes of representation in artificial neural networks useful ways to explore questions pertaining to cognition, imagination, memory, and dreaming. The promise of neural networks in art appears to be based on the material reality of how the associations and processes manifest themselves through these systems. However, the practice is still young, and it is difficult to say how artists will develop this field in the future.
+
+In this moment, the art world appears to be eagerly embracing art made with neural networks, as artists seem to illustrate the promises and perils of these technologies in our everyday lives. The history of artificial neural networks is uneven, exhibiting periods of excitement followed by disappointment, abandonment, and rebirth. Through these waves, the field of neural networks has been rebranded under various names, such as connectionism and more recently deep learning. To get a better grasp on the contextual underpinnings of these models that are increasingly popular, it is worth taking a few steps back in time.
+
+## **Early Connectionism**
+
+In 1949, Canadian psychologist Donald O. Hebb proposed a revolutionary model for human neural networks, claiming that as brain cells subjected to certain types of stimuli respond simultaneously, they also increase their likelihood of firing together in the future when subjected to similar stimuli, forming self-organized assemblies of neurons. This principle, which Hebb called a “form of connectionism” (Hebb, 1949, p. xix) would come to be known as *Hebbian learning*, which it considers human memory as a subsymbolic, distributed, self-reinforcing process rather than as a collection of coded representations stored in the brain.^([1](#chapter_7.xhtml#chapter7-1))
+
+Building upon both Hebb’s work and cybernetic models of the brain, psychologist Frank Rosenblatt proposed in 1957 an adaptive connectionist device known as the *perceptron* (Rosenblatt, 1957), a simplified model of a human neural network able to classify a pattern in one of two categories. A perceptron could perceive whether a handwritten character is an *X* or an *O* by mapping a set of binary data known as *input neurons* to an *output neuron* using a layer of parametric values called *weights* corresponding to the synaptic connections between inputs and outputs. Initialized randomly, the weights are iteratively adjusted during the training phase in response to a series of example inputs for which the expected output is known—a form of supervised learning.^([2](#chapter_7.xhtml#chapter7-2))
+
+Perceptrons constitute a milestone in the history of machine learning. These simple systems combined ideas about logic, statistics, and self-organization into a computational apparatus that could be used for dedicated purposes through a supervised learning loop and would be used as a building block for later theories about machine learning and neural computation. However, perceptrons also possess an important flaw that soon was highlighted by proponents of a competing approach to artificial intelligence based on heuristics and symbol manipulation.
+
+Indeed, the 1950s–1960s excitement for connectionist structures inspired by human biology was substantially tamed upon the publication of Marvin Minksy and Seymour Papert’s forceful critique of perceptrons (Minsky & Papert, 1969), in which they demonstrated that even simple problems were unsolvable by such primitive neural networks, raising great concern about connectionist approaches. Following the demise of early neural nets in the late 1960s, artificial intelligence research turned toward more symbolic and heuristic approaches that would later be known as symbolic AI, classic AI, or *good old-fashioned AI* (GOFAI). This era was marked on one side by a dubious optimism as some researchers managed to rapidly achieve satisfying results on high-level problems such as playing checkers or chess (Newell, 1955) and responding effectively to simple text-based chat interactions, or solving problems in simulated *microworlds* (Winograd, 1970); and on the otherside by a heavy reliance on symbolic, rule-based systems and little or no interest in biologically inspired systems such as neural networks.
+
+## **Connectionist Rennaissance**
+
+Fast-forward to the mid-1980s, when scientists found an efficient way to compute more advanced neural networks based on the perceptron architecture (Rumelhart, Hinton, & Williams, 1986). These systems, known then as *multilayer perceptrons* (MLP) and today more generally referred to as *deep neural networks* (DNN), consist of multiple layers of perceptrons stacked on one other; they thus differ from perceptrons in having not only an input and an output layer of neurons but also one or more *hidden layers* between these inputs and outputs. Similar to the perceptron, a first set of weights maps the input neurons to an intermediate hidden layer in which abstract, higher-level representations of the inputs are learned. Finally, the hidden neurons are combined using a second set of weights that produce the next layer of neurons.^([3](#chapter_7.xhtml#chapter7-3)) This process proceeds from layer to layer until the final output layer is reached, yielding the result.
+
+In imitation of the neural networks of the human brain, connectionist networks such as MLPs represent information in a distributed, subsymbolic way as opposed to the local, symbolic, local representations commonly used in symbolic AI. At the beginning of the training process, the weights are initialized randomly, and therefore the network decisions are completely chaotic. By being exposed to the environment (in other words, by being subjected to examples sampled from a real world distribution), the network slowly adjusts and makes increasingly better predictions.
+
+To understand the concept of distributed representations in artificial neural networks, picture that the original perceptrons possess only a single layer of representation, which takes the raw representation (e.g., a black and white image of a letter) and projects it into a categorical representation (e.g., *X* or *O*) (see [figure 7.1](#chapter_7.xhtml#fig7-1)). An MLP, on the other hand, makes use of intermediate layers of neurons called hidden layers, each of which represents the information based on the representations outputted by the previous layer.
+
+![Figure 7.1 Diagram of a multilayer perceptron with a single hidden layer. The first layer is an ensemble of perceptrons mapping input neurons to hidden neurons. Each hidden neuron self-specializes in recognizing a specific pattern or feature (shown above the neuron) and activates when it encounters that pattern in the inputs. The second layer is another perceptron that combines these features to find the appropriate class. Drawing by Jean-François Renaud.](images/Figure7-1.png)
+
+[Figure 7.1](#chapter_7.xhtml#rfig7-1)  
+Diagram of a multilayer perceptron with a single hidden layer. The first layer is an ensemble of perceptrons mapping input neurons to hidden neurons. Each hidden neuron self-specializes in recognizing a specific pattern or *feature* (shown above the neuron) and activates when it encounters that pattern in the inputs. The second layer is another perceptron that combines these features to find the appropriate class. Drawing by Jean-François Renaud.
+
+During training, each of these hidden neurons becomes attuned to a specific self-taught category corresponding to one type of pattern. The predictions of all the neurons are then summed up in the second layer, which is in fact another perceptron. As its inputs, this neural network layer does not take the raw data but rather this new compressed, encoded data layer residing in the hidden layer. On the basis of this richer, compact representation of the raw data, this second layer emits a final prediction (*X* or *O*).
+
+These representations are autonomously learned in ways that might sometimes be surprising or unintelligible to humans observers. These hidden features are not really meant for human eyes but are rather used by the model to improve its performances. This unfathomability that lies somewhat beyond human control holds a potential for surprise and novelty that can be exploited by artists.
+
+## **Music and Connectionism**
+
+From the mid-1980s to the mid-1990s, connectionist approaches to computation experienced a certain revival. During this era the field of music was undoubtedly the most important place in the artistic realm for progress in the application of neural networks, especially in the analysis and generation of scores.^([4](#chapter_7.xhtml#chapter7-4))
+
+Connectionist approaches to music composition followed previous work that made use of mathematical processes called *Markov chains*. Markov chains are probabilistic systems that model transitions between states according to fixed probabilities. These transition probabilities can be custom-crafted or learned from a corpus of existing partitions. One important property of Markov chains is that they represent transitions between sequences of events using a limited window of previous events. For example, if the note most recently played was a C, a Markov chain could give a 25 percent chance to play a C again and a 75 percent chance to play an E. Thus in Markov chains only a limited number of events from the recent past affect the future.
+
+Composer Iannis Xenakis used Markov chains in 1959 for his *Analogique A* and *Analogique B* pieces as well as his composition for eighteen strings *Syrmos*. He explained his approach in his revolutionary book *Formalized Music*, describing the transitions from one note to the next in tables that he called *screens*, each of which configures the generative process used in a specific region of musical space (Xenakis, 1992).
+
+Many other composers have used Markov processes in their work as well. Two notable examples are found in commercial music software released in 1987: *Jam Factory* by David Zicarelli and *M* by Zicarelli, Joel Chadabe, John Offenhartz, and Anthony Widdoff. An important characteristic of these programs was their ability to generate transition probabilities from a corpus of musical scores provided by the user. Another key feature of these programs was their ability to grasp relationships between notes using a time window of up to four notes. In other words, while Xenakis and many others were using first-order chains in which only the last note influenced the next one, *Jam Factory* and *M* used fourth-order chains that allowed selection of the next note on the basis of the four previous ones. Although in theory one might make the assumption that fourth-order chains would lead to richer and less random musical compositions, in reality increasing the time window tended to make the software directly copy entire sequences of notes from the corpus, thus reducing originality (Ames, 1989; Baffioni et al., 1981).
+
+This drawback of using larger reference windows is a commonly known problem with Markov models trained on existing corpora of text or music. Markov chains often fail to grasp long-term structural dependencies between events. For example, a Markov chain trained on a database of blues music might be able to generate one or two measures but would have a hard time creating a coherent score with an appropriate beginning, middle, and ending. Because Markov chains use only local or given representations of events already existing in the material they are trained upon, they are incapable of perceiving high-level information such as the number of semitones between two notes. In other words, although Markov chains do share some properties with machine learning systems, they lack the kind of self-organizing and distributed representational capabilities offered by neural networks.
+
+In the late 1980s, Peter M. Todd explored the use of neural networks for algorithmic composition through multiple studies that made use of connectionist techniques as an alternative to Markov chains. When one engages with connectionism in algorithmic generation, neural networks are trained to predict the probability of subsequent notes given the previous *N* notes. After a note is chosen by the system, the process can be repeated until a complete score is generated (Todd, 1989).
+
+Along with researchers J. P. Lewis and Michael C. Mozer, Todd also published results obtained using *recurrent neural networks* (RNNs). A recurrent neural network is a kind of neural net that functions by feeding some of its outputs back into its inputs. This situation creates a feedback loop that allows the recurrent network to retain traces of the past—a kind of short-term memory of the data observed in a sequence. Hence these networks are popular for working with sequential or temporal data such as scores and also sound or text.
+
+This research in the applications of connectionist techniques to music during the 1980s would soon encounter the same core challenge that limited other research on neural nets in the 1990s. The low computing capacity available at the time combined with the small sizes of available databases as well as important theoretical limitations of connectionist networks made these emerging connectionist approaches effectively less efficient in practice than competing methods for score generation as Markov chains.
+
+## **Connectionism Meets Artificial Life**
+
+Not long after these early experiments with connectionist music score generation, in the early 1990s artist Nicolas Baginsky, introduced in the opening of this book, developed his own novel approach to the use of neural networks for live music generation. Baginsky was aware of the research being done in the field at the time, but as with many other artists of his era was not much impressed by the results of connectionist systems trained on pre-existing music, which as explained above did not do much better than simple Markov chains. The main reason for this still holds true: scientists who develop algorithmic strategies often do so with real-world utility in mind. This usually involves the imitation of pre-existing data (such as using machine learning to compose music in the style of Bach) or the classification of such information (to determine whether a given song was written by Bach or by one of his less accomplished contemporaries). These kinds of comparative systems seek the average rather than the outlier and therefore tend to generate mundane pastiches rather than coming up with something new. As a result, when artists use algorithms developed by scientific research, they must critically assess for themselves how the systems were designed and whether the machines might be engaged in processes that succeed technically, but in the end lack originality.
+
+Baginsky has chosen an alternative approach to these scientific studies. First, rather than generating sequences of notes using a computer, he works with embodied robot-instruments that respond directly to the raw sound environment as they experience it in real time through their sensorimotor bodies. Second, rather than training a neural network on existing content created by human authors using supervised learning, Baginsky generates live music using an unsupervised learning system known as a *self-organizing map* (SOM).^([5](#chapter_7.xhtml#chapter7-5))
+
+Self-organizing maps are a kind of unsupervised neural network similar to the perceptron (Kohonen, 1981). They are trained using a form of competitive learning in which neurons compete in a space of fewer dimensions than the input (typically one or two dimensions), generating through this process a mapping of the inputs. Because of their rich link with neurology, their ability to work autonomously, and the simplicity of their implementation, SOMs have been used by many artists. These artists use the self-organizing properties of SOMs as part of a decision-making process that diverts the technique from its expected usage—which is to extract regularities from a fixed data set.
+
+Indeed, Baginsky does not use SOMs in the way they were intended: he is not using them merely to find a more compact representation of some fixed data set; instead he is integrating them into a live, constantly adapting performance to allow his robots to find their own representations of the world and thus invent their own way of improvising music, without external supervision.
+
+The guitarist and bassist robots in Baginsky’s robotic band, The Three Sirens, use SOMs to direct their actions as they play live music in response to the sound environment in real time. Neurons in these SOMs correspond to specific strings on the guitars and compete with one another on the basis of the incoming sound spectrum. The winning neuron at each step directs the robot to play the corresponding string. Because the sonic environment is largely influenced by their own playing, the robotic band is also entangled in a feedback loop that runs through their bodies and their environment. A particularly fascinating aspect of the piece is how the robots have allegedly evolved through a number of years as the connections in their SOMs were preserved between performances:
+
+When the robot first started playing in december 1992, the six neural network \[sic\] that control the machine’s behaviour were randomly initialised. Today there are several different sets of networks available for different modes of operation (different speeds and tunings). All these sets are descendants of the primal neural nets from 1992. This means that the robot system now has the experience of about ten years of playing. Not constantly but regularly (Baginsky, 2005).
+
+Other artists who broadly claim to have made use of neural networks in their work during the 1990s were in fact using SOMs. Such is the case of sculptor Yves Amu Klein, who demonstrates an explicit commitment to creating autonomous robotic life forms. In his *Living Sculptures* project, the artist had used machine learning in order to “bring emotional intelligence and awareness to sculptured life forms” (Klein, 1998, p. 393). One piece of this series is a robotic sculpture called *Octofungi*, a reactive robot that responds to the presence of humans through subtle, unfathomable behaviors. Created in 1996, Octofungi relies on shape-memory alloy wire in order to control eight robotic legs arranged in a circle. The robot’s movements result from the interaction between the position of its legs and the value of eight photocell sensors measuring light coming from all directions. The data from both legs and photocells is fed into a SOM that autonomously extracts regularities from the input data space and chooses to activate one of the eight legs as a response. The SOM thus learns from its environment while it adapts to it in real time.^([6](#chapter_7.xhtml#chapter7-6))
+
+Significantly, both Baginsky and Klein use the self-organizing properties of SOMs as part of a decision-making process. This usage of the SOM architecture contradicts traditional usage of SOMs to compress high-dimensional data into fewer dimensions. Indeed, SOMs are typically applied to large data sets with many dimensions (for example, a 10 × 10 image has 100 dimensions), they identify the most important regularities in this raw input data and then project new data points into a more compact representational space such as a two-dimensional (2-D) or three-dimensional (3-D) space. This map associates input patterns with self-organizing neurons in such a way that similar patterns become attuned to nearby neurons.
+
+This ability to organically remap inputs into outputs in a meaningful way seems to be effectively used by both artists in order to generate novel behaviors that are organized but out of control and strangely nonhuman. These artists thus hijack the technology to pursue aesthetic and poetic goals. Their alternative approach to unsupervised learning—using it to allow an agent-based system such as a robot to make its own decisions without human intervention in a way that is purposeless—represents an original, creative interaction with machine learning as an artistic material.
+
+## **Connectionist Visions**
+
+Beyond robotic works, SOMs were used by artists in the early 2000s as a way to activate and interpret real-time imagery from the real world. For example, in her *InOutSite* interactive installations series (1997–2005), German artist Ursula Damm used SOMs to explore the behavior of passersby in public places. In this series of work, real-time video recordings of these sites are processed by different kinds of computer vision algorithms in an effort to invent interactive architectures that can adapt to their users.
+
+*Memory of Space* (2002) is the first work in the series in which Damm has made use of self-organizing maps (see [figure 7.2](#chapter_7.xhtml#fig7-2)). In this public art installation, a camera captures the pedestrians at the Puerta del Sol, one of the busiest places in Madrid, Spain. The coordinates of the public square are deformed in real time by a SOM fed with the direction of movement and the density of people per square meter. The resulting map is represented in real time as a 3-D visualization illustrating the behavior of pedestrians as it is autonomously interpreted by the neural network. The space, reinterpreted by an unsupervised machine learning program, gives the passerby a distorted view of the space, an estranged visual interpretation of human activity seen through a machine’s gaze.
+
+![Figure 7.2 Ursula Damm, Memory of Space, 2002. Programmer: Matthias Weber. Courtesy of Ursula Damm.](images/Figure7-2.png)
+
+[Figure 7.2](#chapter_7.xhtml#rfig7-2)  
+Ursula Damm, *Memory of Space*, 2002. Programmer: Matthias Weber. Courtesy of Ursula Damm.
+
+A more recent work by Ursula Damm, *Chromatographic Orchestra* (2013), uses SOMs in a more interactive fashion. Here, the artist uses a custom software framework designed by her collaborator Martin Schneider called Neurovision, which is directly inspired by the way that the human visual system works. As the software analyzes a live video capture of the exhibition’s surroundings, users are able to control the parameters of the visualization software through an electro-encephalogram (EEG) device. The apparatus allows the visitor to navigate the abstract and generative visual space created by a self-organizing map using her own brainwaves. Through this installation, Damm draws analogies to late nineteenth and early twentieth century art movements in painting such as Impressionism and Cubism in which “painting became more an analysis of the perception of a setting then a mere representation of the latter” by “fragmenting the items of observation while the way of representation was given by the nature of the human sensory system” (Damm, 2013).
+
+## **Emergent Representations**
+
+George Legrady was one of the first media artists to use SOMs as part of an art installation. His work *Pockets Full of Memories* was presented in the summer of 2001 at the Centre Pompidou in Paris (see [figure 7.3](#chapter_7.xhtml#fig7-3)). Throughout the exhibition, the public was invited to participate by scanning items in their possession and providing a list of keywords. More than 3,300 objects were thus contributed to the piece over the summer.^([7](#chapter_7.xhtml#chapter7-7)) In Legrady’s piece the SOM organizes these heterogeneous pieces of content, automatically placing the items’ photographs on a 2D map based on features extracted from their images and descriptions.
+
+![Figure 7.3 George Legrady, Pockets Full of Memories, 2001. Screen capture of digital data. Courtesy of George Legrady Studio © 2020.](images/Figure7-3.png)
+
+[Figure 7.3](#chapter_7.xhtml#rfig7-3)  
+George Legrady, *Pockets Full of Memories*, 2001. Screen capture of digital data. Courtesy of George Legrady Studio © 2020.
+
+The organization of that participatory collection thus somehow became a collaboration between the artist, the audience, and the neural network. While the items themselves had some special meaning for the participants, in *Pockets Full of Memories* that meaning is somehow repurposed, forming a new emergent meaning between the human and the nonhuman—a hybrid meaning generated by a computational agent, agnostic to human experience but whose structure is inspired by how memory works in the human brain and uses information elements provided by real humans.^([8](#chapter_7.xhtml#chapter7-8))
+
+Legrady has analogized the 2D arrangement of these objects to the map of a landscape. Similar items tend to be located in the same neighborhood. However, items that look similar might not be lumped together if their associated keywords differ, and by the same principle, two objects with similar descriptions might not be close to one another if their visual properties differ. “There are also cases,” he writes, “in which even the neighbors are rather far from each as there are occasionally dividing valleys and mountains ranges also in the natural landscapes” (Legrady, 2002).
+
+The ordering thus emerges from the contributions of the participants through the self-organizing properties of the neural net. “Metaphorically, similar items look for each other without any centralized command” (Legrady, 2002). The result is unpredictable and somewhat uncanny as personal significations are merged into a collective one, mediated by a machine learning system.
+
+## **Context Machines**
+
+Media artist Ben Bogart’s *Context Machines* is a series of situated generative artworks whose algorithms are derived from scientific models of creativity and memory. These works rely on live video capture analyzed by algorithms that automatically generate new forms of representation on the basis of their interpretation of the real world in real time. These machines are situated within their environment and respond to it in an embodied way, in the sense that the internal dynamics of these perceptive systems are causally tied to the real world.
+
+Although *Context Machines* makes use of models that represent reality, their author is more interested in the “concrete process of doing” than in the “abstract notion of representing.” Through this conceptual move, they reject computationalism which separates “doing from representing.” Yet the representational models created by such self-organizing adaptive processes are not virtual but *material*.
+
+From a materialist perspective, the act of representation is no less physical than any other process. The root of this dichotomy originates in the potential lack of continuity between material reality and artistic concept. The interest in doing is a desire for a rigorous integration of concept and material (Bogart & Pasquier, 2013, 116).
+
+I agree with this statement for the same reason that I consider Thompson’s physical adaptive FGPA presented earlier as belonging to the same conceptual category as neural nets and other models. Technological systems are not virtual or abstract because they are ultimately connected to material reality, activating electrical charges on minerals, on physical machines that consume real energy and generate real heat and energy.
+
+Bogart’s *Context Machines* is related to other site-specific camera-based installations such as David Rokeby’s *Sorting Daemon* (2003) and *Gathering* (2004). However, contrary to Rokeby’s surveillance collages, Bogart’s installations directly make use of machine learning models as they relate to cognitive processes (see [figure 7.4](#chapter_7.xhtml#fig7-4)). Bogart’s *Memory Association Machine* (2008), which is part of the *Context Machines* series, applies SOMs to generatively organize collages of images captured by the camera (see [figure 7.5](#chapter_7.xhtml#fig7-5)). Bogart is interested in SOMs because they facilitate a means of realizing a conception of human creativity as “a form of highly controlled association between memory components” through the assemblage of microfeatures (Bogart & Pasquier, 2013, 117).
+
+![Figure 7.4 Self-organizing feature map trained on images of black-and-white shapes using a SOM. The SOM learns how to organize the images along two axis on the sole basis of their raw pixel values. Courtesy of Ben Bogart.](images/Figure7-4.png)
+
+[Figure 7.4](#chapter_7.xhtml#rfig7-4)  
+Self-organizing *feature map* trained on images of black-and-white shapes using a SOM. The SOM learns how to organize the images along two axis on the sole basis of their raw pixel values. Courtesy of Ben Bogart.
+
+![Figure 7.5 Feature map generated by Ben Bogart’s Memory Association Machine, 2008. Screenshot from Memory Association Machine. Courtesy of Ben Bogart.](images/Figure7-5.png)
+
+[Figure 7.5](#chapter_7.xhtml#rfig7-5)  
+Feature map generated by Ben Bogart’s *Memory Association Machine*, 2008. Screenshot from *Memory Association Machine*. Courtesy of Ben Bogart.
+
+## **Conclusion**
+
+From the 1990s onwards, artists became interested in the unsupervised properties of artificial neural networks. These models present self-organization properties similar to those of artificial life and evolutionary computing, but offer an additional capacity to learn directly from data taken from the real world, following Hebbian principles of connectionist learning. Inspired from biological neural networks found in nervous systems and brains, they lend themselves well to artistic investigations of individual and collective modes of perception and representation. The groundbreaking artistic work created in the 1990s by Nicolas Baginsky and Yves Amu Klein, followed in the early 2000s by Ursula Damm, George Legrady, and Ben Bogart using unsupervised neural nets, set the stage for work that would soon emerge using even more powerful neural networks. During this time these artists were developing strategies for connectionist programming when most engineering communities thought of connectionism as a dead end.
+
+Yet around the mid-2000s, a revolution in the field of machine learning would allow for more complex, multilayer neural network architectures to be trained efficiently, bringing neural nets back to the forefront. From this breakthrough emerged a whole new field of research within machine learning called deep learning.
+
+These drastic changes provoked a rapid industrialization of machine learning systems with worldwide impact and would soon be followed by a whole new range of artistic works. These works repurposed and expanded many of the concepts of nonhuman representations and algorithmic assemblages that were present in the earlier works based on shallow neural net architectures such as SOMs described in this chapter. Deep neural network models and their associated artistic practices emerging in the 2010s are the focus of the next chapter.
+
+# **Notes**
+
+1.  [1](#chapter_7.xhtml#chapter7_1). Physiological theories of learning similar to Hebbian learning had been around since the nineteenth century. For an in-depth historical review, see Cooper (2005).
+    
+2.  [2](#chapter_7.xhtml#chapter7_2). It is worth mentioning that the perceptron was invented around the same time as another connectionist network inspired by the McCulloch-Pitts model (McCulloch & Pitts, 1943), the adaptive linear element or ADALINE (Widrow and Hoff, 1960), which uses a similar learning rule.
+    
+3.  [3](#chapter_7.xhtml#chapter7_3). One can look at an artificial neural network as a community of agents in which each hidden neuron is treated as a minimal agent that becomes an expert classifier over a specific domain. These agents are encouraged to divide the input space among them. They are then combined to produce the final output, as if they were voting.
+    
+4.  [4](#chapter_7.xhtml#chapter7_4). The mathematical and structured nature of music scores makes the problem of music composition ideal for artificial intelligence because the number of musical possibilities is greatly reduced through preexisting compositional rules and stylistic idioms, especially in comparison with other types of content such as raw sound, video, and human language, which have much more variations and complexities.
+    
+5.  [5](#chapter_7.xhtml#chapter7_5). Teuvo Kohonen developed SOMs in the early 1980s on the basis of research on cortical cells from the 1970s as well as Alan Turing’s famous work on morphogenesis.
+    
+6.  [6](#chapter_7.xhtml#chapter7_6). Other works from Klein’s *Living Sculpture* series also make use of SOMs, including *Scorpibot* (which was the artist’s first attempt at using them), *The Pods*, *Bella*, and *Flexicoatl*.
+    
+7.  [7](#chapter_7.xhtml#chapter7_7). The full collection can be found at: [http://tango.mat.ucsb.edu/pfom/databrowser.php](http://tango.mat.ucsb.edu/pfom/databrowser.php).
+    
+8.  [8](#chapter_7.xhtml#chapter7_8). Unexpectedly, many of the participants contributed images of their own body, such as heads, hands, and feet, at an increasing frequency as people started seeing more and more of these images on the video projection.
+    
+
+ 
+
+# **8**   **Deep Learning**
+
+Before the 2010s, artistic incursions into using machine learning remained marginal and were attached to broader artistic trends and movements such as artificial life and robotic art. In particular, works employing neural networks remained extremely rare. However, in the second decade of the millenium new advances in neural approaches to machine learning known as *deep learning* led to a rapid industrialization of machine learning systems and spread into all spheres of society, including the art world. In the mid-2010s subnetworks of early adopters active mostly on social media started exploring the creative properties of these new neural network technologies. This infatuation was further promoted by IT industries as part of a marketing strategy to promote the social acceptance of their AI products and services with as few regulations as possible, and these industries saw in artistic applications a way to engrave a positive view of AI in the collective imagination. Toward the end of the 2010s the contemporary art world adopted these new practices, as evidenced by a rapid proliferation of artistic exhibitions related to artificial intelligence.
+
+These new practices are associated with the emergence of new neural network architectures remarkably superior to their predecessors. These deep neural network essentially consist of neural networks with more weights and layers of neurons. They are characterized by greater autonomy, allowing their users to work directly with raw data, thus alleviating the need for tedious preprocessing typically associated with machine learning. Moreover, these systems are scalable: they are able to extract meaningful information from databases of unprecedented sizes. These characteristics make them more easily usable by neophytes: with the advent of deep learning, several open-source libraries allow users with basic programming skills to build simple neural architectures, and neural nets have ceased to be a kind of dark craft accessible only to trained engineers with doctoral degrees.
+
+The emergence of these new models thus enabled novel machine learning artistic practices. Some of these practices, such as inceptionism and GANs, are so widespread and have received so much media attention that they have quickly become banal. But in this turmoil, artists have nonetheless managed to develop original projects by exploring and exploiting these technologies.
+
+## **From Connectionism to Deep Learning**
+
+Until the mid-2000s, in most cases it was feasible to train only *shallow* neural architectures efficiently—that is, neural networks with no more than three layers. Yet a small group of researchers remained convinced that the field of machine learning could be further improved if we were able to create more complex neural network models with multiple layers, which seemed supported by the strong evidence from neuroscientific research that human brains are organized in deep architectures, processing sensory information through many different levels of abstraction (Bengio, 2009; Serre et al., 2007). For example, the visual cortex contains multiple layers of neurons that correspond to different degrees of representation, from more concrete and simple features such as edges and orientations to more abstract and complex shapes like human faces (Kruger et al., 2013).
+
+In the early 2000s, raw computational power became more readily available to scientists, fostering what machine learning expert Jürgen Schmidhuber called a “second Neural Network ReNNaissance” (Schmidhuber, Cireşan, Meier, Masci, & Graves, 2011)—a reference to their first renaissance in the 1980s triggered by the publication of the backpropagation algorithm (Rumelhart, Hinton, & Williams, 1986). This growth in computational power allowed researchers to run experiments over much larger models, encouraging the development of algorithmic techniques that addressed the shortcomings of shallow architectures.
+
+In 2006 researchers from Geoffrey Hinton’s group at University of Toronto came up with a solution for training deep neural networks (Hinton, Osindero, & Teh, 2006). This exciting development closed the gap that remained twenty years after Hinton last published his work on backpropagation with Rumelhart and Williams (Rumelhart, Hinton, & Williams, 1986).^([1](#chapter_8.xhtml#chapter8-1)) The method they proposed used unsupervised learning to pretrain the lower layers of the model before subjecting the whole system to a traditional supervised learning procedure. Their approach created a significant improvement in computer vision applications over competing approaches.
+
+This breakthrough, which happened alongside many other advances, provoked the emergence of a whole new field within machine learning called deep learning, whose main application lies in finding solutions to difficult problems (such as driving a car) by allowing computers to “learn from experience and understand the world in terms of a hierarchy of concepts, with each concept defined in terms of its relation to simpler concepts” (Goodfellow, Bengio, & Courville, 2016, p. 1). Deep learning attempts to fully automate the learning process by building complex and abstract concepts out of simpler ones in nested layers of interconnected neurons (see [figure 8.1](#chapter_8.xhtml#fig8-1)).
+
+![Figure 8.1 Diagram of a deep neural network with many hidden layers. Each hidden neuron self-specializes in recognizing a specific feature (shown above the neuron). Perceptible patterns become increasingly complex and diverse in higher layers as the neurons build upon features from previous layers. Each layer of neurons therefore encodes the input data in increasingly richer levels of representation. While the diagram shows an example of deep neural network for image classification, many different deep-learning architectures are possible based on the same core principles of stacking layers of interconnected neurons. Drawing by Jean-François Renaud.](images/Figure8-1.png)
+
+[Figure 8.1](#chapter_8.xhtml#rfig8-1)  
+Diagram of a deep neural network with many hidden layers. Each hidden neuron self-specializes in recognizing a specific feature (shown above the neuron). Perceptible patterns become increasingly complex and diverse in higher layers as the neurons build upon features from previous layers. Each layer of neurons therefore encodes the input data in increasingly richer levels of representation. While the diagram shows an example of deep neural network for image classification, many different deep-learning architectures are possible based on the same core principles of stacking layers of interconnected neurons. Drawing by Jean-François Renaud.
+
+Many seem to think that deep learning is the disruptive technology that AI has been waiting for all along. Through deep learning technologies, AI has officially made its way outside of academia and has become a core strategic element of the next industrial revolution. Deep learning has become the spearhead of major IT companies such as Google, Facebook, and Microsoft who consider it key to their competitiveness in the twenty-first century.^([2](#chapter_8.xhtml#chapter8-2)) But while evidence is building that deep learning technologies are vital to the future development and survival of businesses in multiple markets, one important challenge for the private sector is to cultivate public acceptance of these technologies. Real or imagined consequences of AI from the general public’s point of view represent a potential threat to the dissemination of future AI-powered products. For these companies, art becomes a low-cost, high return area of investment, as a promotional vehicle of *AI for good*.^([3](#chapter_8.xhtml#chapter8-3))
+
+## **Corporate Dreams**
+
+One of the defining moments of the 2010s era for machine learning art was the 2015 release by Google engineer Alexander Mordvintsev of DeepDream, a software that uses deep neural networks trained on millions of images to generate strange psychedelic patterns.^([4](#chapter_8.xhtml#chapter8-4)) Starting from an initial user-provided image, the network analyzes each section of the sample image’s visual details and is pushed to reinforce its sensitivity to the image’s content. The result of this heightened sensitivity to a specific image creates a kind of algorithmic pareidolia—the tendency humans have to seeing patterns and meaning in random observations, such as seeing an elephant in a Rorschach pattern or the face of Jesus Christ on a pizza.
+
+The release of DeepDream as an open-source tool provoked a lot of excitement, and soon after its release images of DeepDream-enhanced photographs began circulating through social media. In the year following its release, the Gray Area Foundation for the Arts in San Francisco held an exhibition and an auction in collaboration with Google Research focusing solely on DeepDream-generated artworks.
+
+As dreadful images of The Terminator made way to psychedelic landscapes dreamed by artistic neural nets as companions to online articles about AI, these interventions partly succeeded in displacing the attention of media outlets from cataclysmic articles about killer robots toward more positive material. One could frame this shift as a successful attempt to rehumanize AI by evoking its romantic human like attributes, recasting AI systems from *killing machines to dreaming machines*.
+
+DeepDream is a truly innovative and creative hijack of a machine learning process and has attracted a lot of attention within artistic communities as well as in public media. But can DeepDream be considered art, or is it just a form of viral marketing? Perhaps a victim of its own success, DeepDream remains in a gray zone: it is often promoted as a tool for creative expression and even as a new form of art, but it is impossible to separate it from the research, interests, and strategic agenda of the multinational company where it was born. Indeed, insofar as artistic work produced using DeepDream algorithms is easily recognizable as such, any artistic work created through use of these algorithms immediately perpetuates and refers to its originators, hence inevitably contributing to Google’s social media campaign.
+
+While it is well established that there are many forms of art and many audiences today, it is difficult to make an argument for DeepDream as a cultural object that facilitates the kinds of avant-garde critique, reinvention, and artistic point of view fostered through contemporary artistic circles in museums and galleries. The level of attention it has received in comparison with other creative tools or artistic works of equal or higher merit can hardly be disconnected from Google’s gargantuan capacity to promote its online presence, either indirectly or directly, through its search engines and internal advertising architectures. As a result, DeepDream can hardly be disconnected from its conspicuous point of origin and can hardly be coopted by individuals outside of its corporate structure who would want to modify or disassemble it.
+
+This is not to say that business in general is incompatible with art. There are many examples of valuable interchanges between private businesses and artists in new media art, some of which are discussed in this chapter. Consider for example fruitful collaborations between artists and private businesses such as Nicolas Schöffer’s *CYSP 1* (1956), produced in cooperation with Philips; and *9 Evenings: Theatre and Engineering* (1966), a series of live performances that brought together contemporary artists such as John Cage, Yvonne Rainer, and Robert Rauschenberg with engineers from Bell Laboratories. Consider as well the valuable contributions of scientists and engineers who did not identify as artists and yet participated in exhibitions such as *Cybernetics Serendipity* (1968) and *Software* (1970) that are now considered foundational in the field of new media art.
+
+Yet the severe power imbalances that exist between artists, scientists, and multinational corporations in the twenty-first century make art with machine learning problematic in a number of ways. In the twentieth century, new media artists explored and exploited existing technologies originally developed for nonartistic purposes. For example, the net.art movement of the 1990s used the internet, a technology first developed by the US Department of Defense that stayed mostly noncommercial until the 2000s, for creating a unique kind of art that could circulate outside traditional artistic networks. By comparison, in the twenty-first century artists wishing to engage with machine learning must do so in the context of the hegemony of a handful of IT businesses and the complications that it may represent.
+
+Collaborating with private AI companies can result in situations in which artists are effectively functioning as an underpaid cultural currency or even technical labor. Art and science initiatives such as the Google Cultural Institute and the Facebook Artist in Residence program cannot be separated from the strategic interests of the companies that support them. Aside from enhancing their public image, these kinds of residency programs also represent for these enterprises a convenient way to potentially capitalize on artists by getting access to their ideas and expertise at a low cost.^([5](#chapter_8.xhtml#chapter8-5))
+
+In summary, multinational-driven initiatives for AI-driven art and creativity such as DeepDream, Magenta, and Facebook Artist in Residence make palpable the tension that exists between, on one hand, private institutions that control the means of research and production of AI in the twenty-first century and, on the other hand, the freedom and independence required by contemporary art to maintain its critical engagement with society.
+
+## **Neural Aesthetics**
+
+The deep learning revolution of the mid-2000s inspired a loosely defined group of artists who actively explore the new range of possibilities offered by these technologies. Active mostly on online platforms such as Twitter and Medium, artists such as Memo Akten, Robbie Barrat, Sofia Crespo, Mario Klingemann, Gene Kogan, Helena Sarin, and Mike Tyka share code, models, documentation, and other resources directly online through social media, often tweeting half-baked experiments, demos, and animated GIFs. This tech-savvy community of artist-coders is characteristic of a new artistic genre and set of practices stemming from wild experimentations with deep neural networks (mostly through image generation inspired by or using deep generative systems such as DeepDream), which has been referred to by some as “neuro aesthetics” or “neural art”.
+
+Gene Kogan, an artist and educator who has created many free tutorials and educational materials for artists interested in machine learning, is a key figure in this niche group of early adopters and enthusiasts. He is one of a few creators who has explored the artistic potential of Mordvinstev’s inceptionism technique beyond applying it as an image filter. Soon after the release of DeepDream, Kogan developed many demos and software tools using variations and enhancements of the original technique. In particular, he has developed a set of techniques to explore the different kinds of generative content that can be created by inceptionism and has shown how to create animations, transitions, and loops using these image-making processes.
+
+Like many of his colleagues, Kogan distributes his work mostly outside traditional contemporary art networks, on online platforms such as Twitter and GitHub, in a spirit of openness, sharing, and collective discovery. He shares his ideas and work directly and publicly in various forms such as experiments, demos, tutorials, and unfinished works. As many of his peers, Kogan does not seem to care much whether his work belongs to the field of art or science, comparing his community to the 1990s net.art movement that emerged from the self-organization of online communities interested in the then-new possibilities offered by the internet, producing and circulating their work on the fringes of traditional art institutions.
+
+## **GAN Art**
+
+In 2014, the invention of a new kind of deep learning system called *generative adversarial networks* (GANs) opened the door to a whole new range of possibilities for generating images using deep learning systems, in even more flexible ways than DeepDream.^([6](#chapter_8.xhtml#chapter8-6)) The development of GANs allowed for a new range of works and artistic experiments, leading to the “first widespread trend in machine learning art” (Hertzman, 2020). The fast-paced ascent of GAN art on the contemporary art scene reached a turning point in 2018 when Robbie Barrat, a young new media artist who had just graduated from high school, posted to the code-sharing site GitHub a GAN program he had written and trained on databases of portraits painted between the fourteenth and twentieth centuries. Paris-based collective Obvious used Barrat’s code (and presumably copied his pretrained model) to generate a new painting in the form of a physical print on canvas, which subsequently sold at Christie’s auction house in New York City for the astounding price of US$432,500.^([7](#chapter_8.xhtml#chapter8-7)) The work can be interpreted as an algorithmic ready-made that proposes a comic comparison between the relentless appetite for novelty that marks both art markets and techno-optimistic networks on social media such as those of which Barrat is a member (Rolez, 2019).
+
+Like most machine learning algorithms used by artists, GANs were not originally developed for aesthetic reasons. They constitute a new category of deep learning systems that works very cleverly, by making two deep neural networks compete with one another in order to improve the performance of the system as a whole. While GANs have been used primarily in the image domain, the technology is as data-agnostic as those of any other machine learning system. As such, GANs can be applied to any kind of data and thus have applications in many fields such as finance, medicine, pharmacology, and speech recognition.
+
+The two neural networks forming a GAN are driven by antithetical goals. The first network (referred to as the generator or artist) attempts to generate counterfeit images that resemble the ones found in the training set in order to mislead the second network (the *discriminer* or *critic*), whose job is to discriminate between real and fake pictures. The beauty of the algorithm is that these two models evolve in parallel; thus as the discriminer becomes more and more efficient in distinguishing fake from real, the generator also becomes more and more adept at counterfeiting.
+
+Just as human beings are sensitive to a certain range of optical illusions that result from the specific features of our perceptual system, deep neural nets also have their own affordances and shortcomings when it comes to visual images. Because the images created by the generator net are not intended for the perceptual system but for that of an artificial neural network discriminer and because the generator network needs to create images using its own artificial structure, the images generated by a GAN, which are not drawn by a human hand nor intended for human eyes, open a new nonhuman aesthetic universe specific to GANs, which have been exploited by artists to create strange machinic illusions of reality.
+
+Soon after their appearance, many artists such as Refik Anadol, Robbie Barrat, Sofia Crespo, Mario Klingemann, Trevor Paglen, Jason Salavon, Helena Sarin, Mike Tyka, and Tom White, began to explore the potential of GANs to generate strange, distorted images whose unsettling visual character reminiscent of Surrealist paintings has been described by Mario Klingemann as the “Francis Bacon effect” (Schneider & Rea, 2018). The specific aesthetic qualities of a particular GAN derive from the databases on which the GAN is trained, the evaluation functions used, and the inherent qualities of the underlying neural nets. GAN-generated images appear as collages of patterns drawn from the training set that are assembled more or less regularly—what Bogart and Pasquier call *microfeatures* after Gabora’s theory of creativity (Bogart & Pasquier, 2013) (see chapter 7). GANs also often produce blurred, imprecise areas in their outputs, zones of uniform colors or textures resulting from statistical averaging. There are often imbalances in the details of the resultant image, with some areas drawn with more precision than others, often related to imbalances present in the training set. According to computer scientist Aaron Hertzmann, the visual indeterminacy inherent to GAN-generated images can be explained by looking at the generalization objectives of the algorithm. GANs do not just cut-and-paste elements from the training set; instead, they try to generate and arrange objects spatially into a scene and then colorize and texturize them.
+
+These arrangements and textures are not discrete but continuous—objects need not have distinct boundaries in the image, and need not be complete. This can yield impossible combinations of object identities, locations and textures that all bleed into one another. That is, the object creation and texturing steps do not operate on separate, distinct objects, and object parts and textures can merge and blend across objects, like filling in a coloring book where none of the outlines are closed and none of the shapes are quite right, or putting together puzzle pieces from different puzzles. This produces visual indeterminacy. (Hertzmann, 2020, p. 425)
+
+Mike Tyka, an artist and programmer who was involved with Alexander Mordvintsev and Christopher Olah in the development of inceptionism (the technique at the origin of DeepDream) while working at Google (Mordvinstev, Olah and Tyka, 2015), created a series titled *Portraits of Imaginary People* (2017) through the use of GANs. Inspired by the new forms of propaganda spreading through social media using fake identities, these works consist of high-resolution images of uncanny portraits resulting from a GAN that was trained on a data set of human faces scraped from the internet (Tyka, 2019). In creating this work Tyka faced many problems, some of which are well-known limitations of GANs. One of these problems, called *mode collapse*, occurs when the generator network collapses and starts producing a limited variety of outputs. Another problem in this case was the desire for Tyka to work with higher-resolution images. Images contain a lot of information (consider that even a small RGB image of 100×100 pixels needs to be represented using 30,000 values) and this makes machine learning from images an especially challenging task because the neural network needs to make sense of all that information using a limited number of examples (in the case of Tyka’s project, about 20,000 images). Back in 2017 when the work was produced, output images generated by GANs were typically limited to about 128×128 up to 256×256 pixels. To scale this up, the artist had to stack up multiple GANs, some trained specifically on a subset of higher-resolution images of explicit facial features such as eyes, hair, and skin and ingeniously combined the results to produce images up to 4,000×4,000 pixels.
+
+This process resulted in a set of enigmatic portraits floating between photorealism and Surrealism. To produce the limited series of digital and printed works that came out of this process, the artist selected the generated images that he preferred. What stands out most about this project is the uneven precision of the resultant images, which seem to respond primarily to formal rather than conceptual imperatives. Since that time the technology has already made impressive advances, and realistic, high-resolution images of people who do not exist can now be generated on demand. Beyond the results, what makes Tyka’s project particularly interesting is its conceptual simplicity and its imperfections, which makes his portraits open to the viewer’s own imagination.
+
+## **Latent Space**
+
+Tyka’s work introduces a key concept of deep learning: the latent space. A latent space is a mathematical space that constitutes a distributed representation of data learned by a deep neural network. For example, each layer of neurons in a neural network constitutes such as latent space; in particular, the input layer of the generator in Tyka’s GAN is a latent space of imaginary portraits.
+
+Recalling the discussion about multi-layer perceptrons from the previous chapter, remember how neural networks project inputs into intermediate layers of neurons called hidden layers, each encoding the information from the previous layer by extracting relevant features from it. For example, imagine a neural network trained to differentiate between images of handwritten *X*es and *O*s using a hidden layer of ten neurons. Once trained, each of the ten neurons will become specialized at recognizing a useful feature from the images. For instance, one of the neurons might become activated when the center of the image is empty, as this is a good indication of an *X*, and another neuron might be sensitive to a curve at the bottom of the image—a common feature of how some people write the character *O*.
+
+This layer of neurons hence comes to encode the information from the input image using a restricted number of features. These features correspond to abstract patterns learned automatically by the network, such as loops and edges. While the input layer represents an image using pixels, the hidden layer encodes the same information using more informative characteristics such as *no pixels in the center* or *curve at the bottom*. For example, suppose that after writing an *X* and sending it into the network’s inputs, the hidden layer emits the following values: 1.0, 0.8, 0.1, 0.2, 1.0, 0.2, 1.0, 0.9, 0.0, 0.9. These values represent a kind of code for the input data (i.e., the *X* that was written), each telling whether a particular “feature” is present (1.0), absent (0.0), or somewhere in between.
+
+This distributed representation resulting from the features automatically extracted by a neural network after training is called a latent space. In a multilayer perceptron, it is combined in the output layer to emit a prediction of the class of the input sample (*X* or *O*).
+
+Now, imagine that we could design a neural network that would be able to use that latent space not for classifying images but to generate new images instead. In other words, by setting the hidden layer to the values (1.0, 0.8, 0.1, 0.2, 1.0, 0.2, 1.0, 0.9, 0.0, 0.9), the neural network would generate an image of a handwritten *X* in its outputs. Furthermore, not only would this new network be able to generate *X*es and *O*s depending on the value of its neurons, but by choosing another set of ten different values, one might also be able to generate new kinds of images that interpolate between *X*es and *O*s (some kinds of *X*\-*O* hybrids) or even extrapolate (generating images that look like neither *X*es nor *O*s).
+
+The generator network in a GAN does just this. Once it has been trained, someone could directly change values in its first layer and generate new outputs. Because of the way neural nets are trained, this output will likely possess some of the characteristics from the training data set in the form of collaged parts of patterns. For example, by injecting ten random values into the system described earlier, I might get an *X*, an *O*, or something that does not look like either an *X* or an *O* but perhaps contains certain elements found in such characters (like a strange collage of loops and edges).
+
+Another very interesting aspect of GANs rests on the geometrical way in which the latent space self-organizes, allowing one to explore it in intuitive ways. For each point in the latent space, we could obtain a different generated image: another point close to the first one will give a similar but different image in a way that cannot be entirely predicted or predetermined by a human because it has been learned by the neural net using its own set of imperatives.
+
+Latent spaces are, in a way, the most recent iteration of the concept of generative spaces introduced earlier with genetic algorithms and SOMs. We have discussed how in the context of evolutionary computing a common approach is for the author to define a parametric space in which a set of values (the genotype) determines generative outputs (the phenotype) (see [figure 8.2](#chapter_8.xhtml#fig8-2)). For example, in Dawkins’s biomorphs, one set of such values corresponds to a particular drawing. Genetic algorithms then offer a way to search through that space and find preferred results. We have also described how complex the task is to define this search space because the responsibility remains entirely in the hands of the author, who has to design a generative program that will create objects on that space. Because the locus of control is highly deferred to the system’s designer it also reduces the potential for surprise, thus defying the original goal of such systems. Indeed, as is the case for the biomorphs, most of the parametric systems have a strong signature where only a recognizable class of objects is allowed by the system.
+
+![Figure 8.2 Example parametric space of simple geometric shapes. Each axis represents a specific parameter directly influencing one aspect of the resulting shape; the horizontal axis represents the number of edges, and the vertical axis represents the darkness of the fill. Graph by Jean-François Renaud after original by Audry.](images/Figure8-2.png)
+
+[Figure 8.2](#chapter_8.xhtml#rfig8-2)  
+Example parametric space of simple geometric shapes. Each axis represents a specific parameter directly influencing one aspect of the resulting shape; the horizontal axis represents the number of edges, and the vertical axis represents the darkness of the fill. Graph by Jean-François Renaud after original by Audry.
+
+Self-organizing maps constituted an upgrade from these kinds of processes, as SOMs learn automatically how to organize elements without human supervision. However, SOMs are not generative systems: they are able to find a distributed representation of the inputs but are not able to directly generate new inputs from a point in the mapped space. In other words, SOMs are able to place elements on a map, but they are unable to take a point on that map and generate a new element. One advantage they present over evolutionary computing is their ability to more easily work with data from the real world. Ursula Damm’s and Ben Bogart’s works presented previously make an ingenious use of these properties to create real-time representations of the real world.
+
+What is particularly new and interesting for artists working with GANs is that they are finally able to create a generative space without having to design it by coding but by finding the right kind of architecture and data in order to let a machine learning procedure define the space (see [figure 8.3](#chapter_8.xhtml#fig8-3)). One way to think about this is to imagine that instead of custom-coding his biomorphs and then creating a group of nine parameters (genes) that can control characteristics such as the number of branches and the angles between them, Dawkins had been able instead to use a generative learning network such as a GAN to create a latent space with nine neurons. Instead of directly creating the procedure that would transform these nine values into a biomorph, he would have created a data set of biomorphs (for example, he could have drawn many pictures of biomorphs in the way he imagined them) and then feed these images to the system. The system would have then found an optimal mapping between these neurons and new, unforeseen biomorphs.
+
+ ![Figure 8.3 Latent space learned by a neural network over a database of handwritten digits. Every digit was generated by neural network from the pair of parameters corresponding to its position in the two-dimensional space.8 Graph by Jean-François Renaud after original by Audry.](images/Figure8-3.png)
+
+[Figure 8.3](#chapter_8.xhtml#rfig8-3)  
+Latent space learned by a neural network over a database of handwritten digits. Every digit was generated by neural network from the pair of parameters corresponding to its position in the two-dimensional space.^([8](#chapter_8.xhtml#chapter8-8)) Graph by Jean-François Renaud after original by Audry.
+
+ 
+
+Two things may have then come as a surprise to Dawkins. First, because of the nature of distributed representations in neural nets the parameters chosen by the algorithm may not directly correspond to identifiable elements: there may not be one neuron directly controlling the number or depth of branches, for example, or the angles between them. Rather, the combination of multiple neurons smoothly determines the output, making the process of fine tuning the outputs tricky.
+
+Second, the cooperative nature of neurons within neural nets typically results in very smooth functions, which could make the resulting biomorphs more fuzzy or even occasionally displaying zones of the latent space (for some combination of the nine values) that result in images that are not biomorphs and may even be complete noise.^([9](#chapter_8.xhtml#chapter8-9)) What one gains with deep learning is the capacity to generate outputs that correspond to autonomously constructed visions of images from the world, whereas evolutionary computing generated more surprising combinations without any source material.
+
+Regarding the work of the previously mentioned artist Mike Tyka, we can see how GANs are able to automatically generate a latent space completely dependent upon the kind of data it is fed from the world. In other words, to produce his series *Portraits of Imaginary People*, Tyka created a GAN that allowed him to explore a latent space of human faces. One point in that latent space corresponds to a face; another point will generate a different one. Once the network is trained, the job of the artist is to find an interesting way to navigate within that space, explore it, and use it to achieve its goals.
+
+Tyka’s work is a straightforward use of this concept. Here the artist has chosen to directly use the technology in the way it was intended and push it to a higher degree of precision. The originality of the work is that through a selection process he is able to reveal the imperfections of the system in its attempts to generate new faces, producing strange photographic portraits.
+
+## **Re-articulating the Latent Space**
+
+Latent spaces can also be exploited outside of the world of image. Although most work done with GANs in the artistic realm has been with pictures, there are many interesting avant-garde works that have used GANs or other techniques applied to other forms of data. One particularly strong work is electronic poet Allison Parrish’s computer-generated book *Articulations* (Parrish, 2018). To produce the book, Parrish invented a technique to create a *poem space* on the basis of phonetic features of words (Parrish, 2017). In this space, each word is represented by a vector of values.
+
+The idea is not new: the first neural network language models appeared in the early 2000s. These neural network language models used a concept of *word embeddings* to represent words using a distributed representation that corresponds more or less to a latent space in the language domain (Bengio, Schwenk, Senécal, Morin, & Gauvain, 2006). These word spaces have several interesting properties worth noting. As a metaphor, imagine that all English words were spread across a landscape. Here, the words would be organized so that words that are close semantically (such as synonyms or antonyms) would also be close geographically. Moreover, a move in one direction on that land would correspond to a specific semantic relationship, allowing manipulations within that space using simple arithmetic operations. A classic case can be illustrated by the following example. Starting from the word *man*, imagine that you proceed to walk to the word *king*, keeping track of the direction and the number of footsteps you take. Then, teleporting yourself to the word *woman* and walking in exactly the same direction that you just took with exactly the same number of steps should lead you to the word *queen*. This example, which can be expressed in plain English as *king is to man as queen is to woman* corresponds in the latent space of word semantics to the simple arithmetic operation: king − man + woman = queen.
+
+Interestingly, because these relationships are learned they also reveal the biases of the semantic environment on which they have been trained. Hence, existing pretrained word embedding technologies such as Word2Vec contain the same set of prejudices found in the use of human language. A common set of examples concerns hidden sexism in such systems, in which the relationship between *father* and *doctor* projects the word *mother* into *nurse* and in which *man* is to *computer programmer* as *woman* is to *homemaker*.
+
+Memo Akten created two Twitter bots based on Word2Vec that explore such biases in a playful, exploratory way. Interesting results from one of the bots reveal some hidden biases of the underlying models: some gems include *authorities* − *philosopher* which results in *police* and *governments*, whereas *human* − *god* and *science* + *god* both become *animal* (Akten, 2016a).
+
+Parrish applies the same idea to a phonetic rather than semantic space. The technique she describes affords phonetic analogies (*whisky* is to *whimsy* as *frisky* is to *flimsy*); sound tinting (words can have their sound *tinted* by adding to them a constant vector, for example, creating a *spiky* version of a text by adding the vector *kiki* to all words, or a *round* version by adding the sound *babu*); and random walks through the phonetic space.
+
+This last approach is what Parrish used in order to generate *Articulations*. To produce the book, she first generated a database containing thousands of lines of poetry scraped from public digital library Project Gutenberg. She then projected each of these lines (rather than individual words) into a phonetic vector space using the approach described. Once that was done, she could run a simple program. Starting with a randomly selected line of poetry, the procedure finds the corresponding vector of that line in the phonetic vector space. Then, it picks the closest line and repeats the process, moving from one line of poetry to the one that sounds most like the previous one. “This radical composition technique,” writes Parrish, “results in a text that smoothly moves from one pattern of sounds to the next, evoking sound symbolism in uncanny ways. The procedure flattens semantic, syntactic and stylistic differences in favor of phonetic cohesion, while retaining the local-level grammatical coherence of the lines themselves” (Parrish, 2017, p. 103). Here is an excerpt from the book showing the result of this process:
+
+And like a dream sits like a dream: sits like a queen, shine like a queen.  
+When like a flash like a shell, fled like a shadow; like a shadow still.  
+Lies like a shadow still, aye, like a flash o light, shall I like a fool, quoth he, You shine like a lily like a mute shall I still languish—and still, I like Alaska.  
+Lies like a lily white is, like a lily, white. Like a flail, like a whale, like a wheel. Like a clock. Like a pea, like a flea, like a mill, like a pill, like a pill. Like a pall, hangs like a pall.  
+Hands like a bowl, bounds like a swallow!  
+Falls like a locust-swarm on boughs whose love was like a cloak for me. Whose form is like a wedge. But I was saved like a king; was lifted like a cup, or leave a kiss but in the cup the cup she fills again up she comes again.  
+Till she comes back again.  
+Till he comes back again. Till I come back again. Like mechanical toys. Like a pale antagonist. Like a beacon, like a star, not unlike a story compiled I too reckoned, like a boy, I take the cup you kindly reach, who smoke and sip the kindly cup, and give to each its purpose, like a king to work in—things had become difficult.
+
+Parrish’s approach turns text into a dynamic, malleable material that can be played with in ways that are similar to media such as image and sound. As similar-sounding lines of poetry are juxtaposed, the semantics and structural aspects of poetry are dropped in favor of the physicality of how words sound inside one’s mouth. In this sense, *Articulations* lies in a liminal space between poetry and contemporary art because the text is employed here as a raw material, which the artist plays with like an instrument.
+
+## **Neural Glitches**
+
+As in the evolutionary art images from the 1990s, GAN-generated imagery has a distinctive signature marked by distortion and fuzziness, seemingly a hybrid of Baroque painting, Surrealist collage, and glitch art. Only the most adroit artists are able to move beyond these limitations and to push the potential of image-generating neural networks to create rich and personal imagery.
+
+One alternative for overcomeing the homogeneity of deep learning systems is to intervene in the inner structure of the model. Here, rather than exploring the latent space of a generative neural net, the artist directly intervenes in the structure of a trained model, for example, by disconnecting neurons, adding new connections, or injecting noise into neural weights. This results in different kinds of glitches appearing in the outputs of the system in ways that are unspecified but display a certain level of coherence.
+
+Artist Mario Klingemann has recently started experimenting with intervening directly in GANs by disabling certain weights, a technique he calls *neural glitch* (see [figure 8.4](#chapter_8.xhtml#fig8-4)). His approach consists of training a GAN and then altering it by randomly deleting or interchanging some of its weights. “Due to the complex structure of the neural architectures,” he explains, “the glitches introduced this way occur on texture as well as on semantic levels which causes the models to misinterpret the input data in interesting ways, some of which could be interpreted as glimpses of autonomous creativity.” Klingemann is especially interested in how the same input data can produce a diversity of results depending on the way the weights are being affected through this process. Yet the same data submitted to the “same glitched model chain” produce a “coherent style and show the same semantic misinterpretations” (Klingemann, 2018).
+
+![Figure 8.4 Mario Klingemann, Neural Glitch, 2018. Courtesy of Mario Klingemann.](images/Figure8-4.png)
+
+[Figure 8.4](#chapter_8.xhtml#rfig8-4)  
+Mario Klingemann, *Neural Glitch*, 2018. Courtesy of Mario Klingemann.
+
+A similar approach was used for live text generation in *The Sense of Neoism?! Artificial Counter-Intelligence Machine*, which I created in 2018 in collaboration with multidisciplinary artist Istvan Kantor (a.k.a. Monty Cantsin). The work is a machine resembling an audio gear box with dozens of jack plugs that represents the inner workings of a neural network trained on a dataset containing several thousands of pages of writings from neoism?!, an avant-garde, anti-institutional movement that started in the late 1970s (Kantor, 2018). At the top of the monolith-like machine, an LED panel endlessly displays new neoist verses generated live by a deep neural network.
+
+Anyone can meddle directly with the artificial neural synapses by unplugging, replugging, and criss-crossing jack cables directly on the machine, thus deconstructing, reconstructing, and even destroying the generative capabilities of the system in real time. The artificial neural network is a purely digital structure that requires millions of calculations in order to generate each character. However, the physical hookups arranged on the machine correspond directly to connections on the neural net, therefore allowing visitors to manipulate them. Each cable unhooked on the machine disconnects several thousand synapses within the neural network; disconnecting, reconnecting and inverting the wiring allows visitors to reconfigure the system and to observe its effects on the generated texts in real time, effectively creating textual glitches that echo Klingemann’s work.
+
+The work revisits some of the core concepts behind neoism?!, such as plagiarism, subvertainment, participation, and destruction. The rough physical nature of the interaction provides a direct experience to the user of the uncanny yet very human character of neural networks. For example, one visitor mentioned how they felt estranged by the way the system worked and that the slow decay in the generative text that took place when they changed the connections suggested the cognitive decline of people suffering from brain damage and dementia.
+
+## **Recurrent Writing**
+
+The generative capabilities of *The Sense of Neoism?!* rests upon a type of deep learning neural network known as recurrent neural networks (RNNs), introduced previously. Unlike convolutional neural networks which are most suited for image processing, RNNs are most appropriate in learning from sequential data such are found in text and also in sound, music, and movement.
+
+In the preceding chapter we introduced attempts starting in the late 1980s to use recurring networks in automated music composition as an alternative to Markov chains to which a number of limitations have been posed, most importantly the difficulty of generating original work with a global structure and coherence. RNNs are now much better than Markov chains at grasping such long-term dependencies. Whereas in the late 1980s the technology was lacking, since the mid-2000s new RNN architectures have made their appearance and we have been seeing impressive progress in applications dealing with sequential data such as speech recognition, automated translation, and generative music and text.
+
+David Jhave Johnston is a digital poet who has been working a lot with different kinds of deep learning approaches to electronic poetry. To create his poetry project *ReRites*, from May 2017 to May 2018 he wrote twelve poetry books at the rate of one book per month. He achieved this feat by editing the raw material generated by a deep RNN of his own conception, trained on a data set of poetry in English.
+
+Almost every morning for a year, Johnston would sit in front of his computer and for a few hours edit lines of poetry generated by the algorithm. This rewriting process was documented by the artist in video format, showing the hybrid creative process between human and machine. The work serves as a testimony of how neural networks can augment human creativity while also criticizing the inherent limitations of these learning machines in their current state. The artist once compared the uncanny outputs of RNNs to the senseless speech of some old demented uncle from whom once in a while emerge words of perplexing wisdom.
+
+Compare the original, unedited excerpt generated by the RNN (on the left) with the version edited by Jhave in July 2017 (on the right):
+
+ 
+| Metal || Skin Epilogue |
+| --- | --- |
+|  ||  |
+| --- | --- |
+| scream—silence, too a epilogue from skin || A metaphor to leap narcissus, |
+| filament’s Warmly downfall for a metaphor || peace in this unhappy hour. |
+| As owners, openings in which to leap, narcissus, || they turn apart and speak of the influence of |
+| steamboats sir!”) ||     fact, |
+| Each time doubts, the that away is hill-sides, || the handles of cessation despising |
+| They take another ’gainst peace in this unhappy || love, and oh, when brightest It should do? |
+|     hour. || Summer comes forth (Johnston, 2018, p. 111). |
+| When they turn apart and speak to grapes in the ||  |
+|     influence of fact, ||  |
+| The handles of the cessation were despising, ||  |
+| Since this be sure, and love, and oh, when ||  |
+|     brightest It should do? ||  |
+| Summer comes forth, (Johnston, 2018, p. 111). ||  |
+
+Johnston has a unique perspective over the outputs of RNNs as opposed to Markov chains, having observed huge amounts of text generated by both kinds of systems. He has remarked that although both seem to follow “similar trajectories of word sequences,” the paths taken by Markov chains are more rigid whereas RNNs seem to flow more smoothly and to “capture more of the intrinsic play and cadence variations across clusters of words,” which results in a “contorted mutant quality” that differs from the “plausible logic” he associates with Markov chains.^([10](#chapter_8.xhtml#chapter8-10))
+
+![Figure 8.5 Installation view of ReRites by David Jhave Johnston: overhead video projection of human+AI editing onto limited edition box set prototype @ Anteism Books. Spring 2019. Installation design: Jhave in collaboration with Harley Smart and Ryan Thompson from Anteism. Photo credit: Jhave. Courtesy of the artist.](images/Figure8-5.png)
+
+Figure 8.5  
+Installation view of *ReRites* by David Jhave Johnston: overhead video projection of human+AI editing onto limited edition box set prototype @ Anteism Books. Spring 2019. Installation design: Jhave in collaboration with Harley Smart and Ryan Thompson from Anteism. Photo credit: Jhave. Courtesy of the artist.
+
+## **Conclusion**
+
+Over the years, machine learning has evolved and with it the kinds of practices and approaches that it affords. The improvement of automation is surely an important aspect of this evolution. Whereas Harold Cohen worked on his software AARON for decades, it is now possible for a high-school student to generate highly convincing computer-generated paintings using open source code and data sets found online. This evolution of the algorithms has also resulted in new possibilities for generative art.
+
+One key example is the parametric spaces and latent spaces that conceptually suggest abstract territories of possibilities, in which one point in the space results in one possible outcome such as an image or a word. In the 1980s and 1990s, such generative spaces needed to be custom-designed using programming, after which they could be searched using machine learning procedures such as genetic algorithms. But with the advent of deep learning in the mid-2000s and especially the recent explosive usage of generative models in the field, such generative spaces can now be defined directly using machine learning systems such as GANs to create a latent space.
+
+In this new era when neural nets prevail, artists are able to create algorithmic *snapshots* of the real world. Whereas William Latham pictured himself as a gardener of virtual artifacts using evolutionary systems, contemporary artists such as Memo Akten, Sofia Crespo, Mario Klingemann, and Mike Tyka cultivate images as living materials by curating digital images from the world and feeding them to GANs.
+
+Ultimately, machine learning allows artists to connect analogically with a world which has become digitized. Deep learning promises to expand our senses and to give us access to supreme, planet-broad cognitive capabilities and perception. But as artists explore these systems, they reveal that the imaginary landscapes circulating inside the intricate interconnected units of these neural-inspired models actually mirror our own perceptual processes in all their imperfections. These simulations of perceptive systems follow the rule of average, compressing the outliers and making them disappear in favor of the norm, and are strongly biased. The obfuscated character of these models also mirrors own contradictions, our lack of transparency, and our blind spots. It reminds us that reality is always mediated by some kind of perceptive interface.
+
+# **Notes**
+
+1.  [1](#chapter_8.xhtml#chapter8_1). This is an oversimplification of the history, of course, as scientific discoveries do not happen in a vaccuum. For a thorough analysis of the history of deep learning, please consult Schmidhuber (2015).
+    
+2.  [2](#chapter_8.xhtml#chapter8_2). As a consequence, these major IT companies have been aggressively buying out startups and hiring deep learning experts in recent years—so much that there is now a “shortage” of talent within academia (Waters, 2016).
+    
+3.  [3](#chapter_8.xhtml#chapter8_3). I find it amusing how many tech companies developing AI products and services now have an *AI for good* branch. It makes one wonder what their other AI branches are doing.…
+    
+4.  [4](#chapter_8.xhtml#chapter8_4). Paradoxically, DeepDream does not have much to do with dreams. It derives from the technique of inceptionism, a reference to Christopher Nolan’s sci-fi movie Inception (2010) where the protagonist plants ideas in people’s minds, and in particular to the expression “We need to go deeper” from the movie which became an internet meme (Mordvinstev, Olah, & Tyka, 2015; Szegedy et al., 2014). But an inquiry into machine dreaming was initiatedyears prior to the release of Mordvinstev’s article by artist-researcher Ben Bogart in their *Context Machines* installations, then continued in their *Watching and Dreaming* series which will be discussed in chapter 11. In these works, the artist sought to embody theories about dream and imagination into works of art using machine learning processes.
+    
+5.  [5](#chapter_8.xhtml#chapter8_5). Read Wilk (2016) for an in-depth analysis of the issues raised by such initiatives.
+    
+6.  [6](#chapter_8.xhtml#chapter8_6). The creative adversarial networks (CAN) introduced in chapter 2 is a type of GAN (Elgammal, Liu, Elhoseiny, & Mazzone, 2017).
+    
+7.  [7](#chapter_8.xhtml#chapter8_7). The work contains direct references to the science and history of GANs. First, its title *Portrait of Edmond Belamy* refers to the name of the scientist who invented GANs, Ian Goodfellow (*Belamy* sounds like the French *bel ami*, which means *good fellow*). Second, the work is signed using the mathematical expression of the cost function invented by Goodfellow for training GANs.
+    
+8.  [8](#chapter_8.xhtml#chapter8_8). The system uses a variational autoencoder (VAE) (Kingma and Welling, 2014) with a two-dimensional latent space, trained on the handwritten digits dataset MNIST (Deng, 2012).
+    
+9.  [9](#chapter_8.xhtml#chapter8_9). This kind of results usually happen with extreme values of the parameters.
+    
+10.  [10](#chapter_8.xhtml#chapter8_10). Excerpt from an email exchange with the artist, February 7, 2019.
+     
+
+ 
+
+# **III**   **DATA**
+
+ 
+
+# **9**   **Data as Code**
+
+The hypersonic integration of deep learning into tech markets in the first decades of the twenty-first century is inseparable from the accumulation of massive databases. Big IT businesses know that their future rests on deep learning algorithms and their ability to extract information from the zettabytes of digital data they have been accumulating over the years and are generating at an exponential rate. Contemporary deep learning algorithms are more scalable than their shallow learning predecessors and are therefore able to exploit large amounts of data without a need to dramatically increase computing resources. In the age of Big Data, the advent of deep learning reconfigures market power relationships by giving a huge competitive advantage to those who possess data over those who do not.
+
+If smart optimization algorithms constitute the backbone of machine learning systems and if complex models such as deep multilayered neural nets are the vital force that is driving them, then data is the necessary nutrient on which these systems must feed in order to accomplish their goals. What are the implications of this data dependency of machine learning for artistic creation? How will deep learning impact modes of production of computational media? What new forms of content and media production techniques are made possible by such complex data-driven technologies?
+
+In this chapter, we look at how machine learning reconfigures computer-based artistic practice by providing an alternative to coding through the use of data. We examine different strategies artists use to generate data instead of custom-coded programs, from creating their own data sets to curating existing data. Throughout this overview, we consider the challenges and limitations of data-driven practices in the context of current-day machine learning.
+
+## **Programming by Example**
+
+The computer revolution of the twentieth century allowed for the emergence of new forms of communication and artistic expression. Whereas early computational artworks used general-purpose programming languages such as BASIC, C, or even assembly code, over the years new programming frameworks specifically tailored to the needs of artists have seen the day. For example, visual dataflow software such as Max and Pure Data allow creators to design and run data mappings in real time by plugging virtual data connections into different filters, and creative coding frameworks such as Arduino and Processing provide high-level coding interfaces that allow users to focus on their creative work.
+
+Yet even these advanced creative tools for real-time data composition and interactivity ultimately rest on the custom design of a set of operations and rules by their user. Artists who use these tools are thus engaged in a set of creative practices that involve creating dedicated algorithms using programming languages or visual abstractions of rule-based computing systems, often with a very shallow understanding of computer science principles, if any.
+
+This situation has a number of disadvantages. Achieving expertise in a coding environment often takes years. The nature of coding—in which the programmer has the full responsibility for controlling all aspects of their software—is more often than not counterproductive in creative practice. Practitioners of the field know this very well; it is common for artists to spend most of their time developing the technological infrastructure necessary to support their work, with only a fraction spent on artistic and aesthetic work—which often occurs in the last few days before a show.^([1](#chapter_9.xhtml#chapter9-1))
+
+Perhaps more importantly, the practice of coding, refactoring, and debugging are in many ways detached from the actual experience of the work, and practitioners often find themselves dealing with frequent interruptions in the flow of creativity as they design a piece using computer algorithms. Finally, while integrating a few sensors and actuators together is relatively straightforward for average coders, even experienced programmers struggle to exploit the connections between vast amounts of inputs and outputs.
+
+These limitations have an impact on artistic practice. Creators tend to favor more easily coded one-to-one mappings between inputs and outputs and avoid many-to-many connections, which are more difficult to design for human coders. The result is that a large number of possible interactions remain untapped. In fact, the more complex interactions between inputs and outputs might be more interesting and natural for artists and audiences. As an example, recent research in music technologies found evidence that although simple one-to-one mappings were often the first choice of designers when creating digital instruments, performers usually preferred ones that facilitated more complex interactions between sensors and actuators, finding them more intuitive, engaging, powerful, and fun to use (Hunt, Wanderley, & Paradis, 2003).
+
+Machine learning provides an alternative to traditional creative coding approaches that has the potential to utterly revolutionize creative practice by facilitating the design of complex interactions between inputs and outputs. If we restrict ourselves to the design of mappings—arguably one of the most important paradigms in new media arts—we can coarsely frame the creative process as an attempt by the artist to establish an organized relationship between inputs and outputs by, for example, mapping certain kinds of gestures performed by the audience to specific visual or audio and effects. The artist must then try, through trial and error, to program a function that will generate the mapping that he or she has in mind. As we have discussed, this process can be long, cumbersome, and counterintuitive.
+
+Using a machine learning approach, the same artist could instead provide a set of input-output data that represents examples of the kinds of mappings they would like the system to achieve by, for example, generating examples of gestures and associating them with target audiovisual effects. The artist could then leave the design of the mapping function to a supervised learning algorithm, which would find an appropriate mapping between gestural triggers and audiovisual content. In other words, the hard job of designing the algorithmic mapping function could be deferred to the machine learning system, while the artist could focus on describing what she wanted by building a data set.
+
+This scenario has numerous consequences for new media arts: (1) it lowers the barriers of entry into the field because building a data set demands much less specialized training than coding; (2) it gives more flexibility because it is much easier to exchange, recombine, and remix sets of data than code; (3) it offers the potential for more stable and expressive creative software tools; (4) it reduces the costs and time involved in creative practice; and (5) it even allows for the design of more intricate and complex relationships between data that would be difficult, if not impossible, for humans to program on their own.
+
+## **Interactive Machine Learning**
+
+Computer scientist and musician Rebecca Fiebrink describes such an approach in the context of musical technologies. She is the creator of an open-source software called the Wekinator, which allows artists and students to design mappings interactively using supervised machine learning in real time. The tool provides a visual interface for users to easily record, erase, and modify their own sets of sensor-based data. These data sets can then be used to train simple classifiers that automatically learn mappings between inputs and outputs, as specified by the user. The new mapping can then immediately be evaluated, allowing the artist to make further adjustments (Fiebrink, 2017). The process is thus largely data driven, as the interface encourages the user to iteratively add and remove examples and retrain the system. By circumventing the need to design mathematical functions and source code, the software promotes direct, embodied engagements with the system. Fiebrink describes her technology as a *meta-instrument* because it can be used to intuitively design new digital music instruments in real time.
+
+Machine learning algorithms can facilitate new types of design *outcomes*: they enable people to create new types of digital musical instruments. But, I will argue, they are also valuable in facilitating new types of design *processes*, allowing the instrument creation process to become a more exploratory, playful, embodied, expressive partnership between human and machine. These qualities of the design process in turn influence the final form of the instrument that is created—as well as the instrument creator herself (p. 138).
+
+Interactive machine learning tools such as the Wekinator challenge traditional uses of machine learning, which usually rely on fine tuning the training of complex models and algorithms on huge sets of data extracted from the real world. Fiebrink’s research shows that basic learning systems and small, self-generated data sets can provide new types of outcomes and creative processes when they are integrated inside an intuitive interface that facilitates experimentation and exploration in a real-time environment.
+
+Laetitia Sonami, a sound artist and composer best known for her performance works using custom-made instruments, has collaborated with Fiebrink on the design of a unique instrument called the *Spring Spyre* (see [figure 9.1](#chapter_9.xhtml#fig9-1)) that synthesizes soundscapes in complex and unpredictable ways.^([2](#chapter_9.xhtml#chapter9-2)) The device consists of three springs attached to audio pickups, anchored to a metallic wheel. The raw signals generated as Sonami touches the springs are converted into eighteen features using digital processing filters that are then sent as inputs to thirty-eight artificial neural networks in the Wekinator, each producing a single output value. These signals produced by the neural nets control different parameters of a digital synthesizer that generates sound in real-time.
+
+![Figure 9.1 Laetitia Sonami, Spring Spyre, 2014. Photo credit: Brown University. Courtesy of Laetitia Sonami.](images/Figure9-1.png)
+
+[Figure 9.1](#chapter_9.xhtml#rfig9-1)  
+Laetitia Sonami, *Spring Spyre*, 2014. Photo credit: Brown University. Courtesy of Laetitia Sonami.
+
+The composition rests on Sonami carefully and patiently training the different neural network models. By playing with the width and variability of the data through her own gestures, the composer is able to indirectly affect the unpredictability of the system. As she explains:
+
+If I feed the system training examples whose sounds encompass wide changes based on how I touch the springs, trained models will move through all these points in unpredictable ways as the springs settle to a resting place. If I give it training examples with narrower changes, the sound will just oscillate slightly as I move the springs. I can thus easily scale the instrument between predictable and unpredictable results by changing how I train. (Fiebrink & Sonami, 2020, p. 239)
+
+By interactively manipulating the training process in such way, Sonami trains models with diverse degrees of predictability, finely negotiating between her own authorial control and the autonomy of the system. These experiments allow her to generate a range of pretrained neural network models, each embodying a specific mapping between inputs and outputs. Each piece composed for the *Spring Spyre* uses a specific palette of such models chosen from hundreds of models pretrained by the artist.
+
+Sonami has described her experience of working with the Wekinator as open-ended and flexible, which rewarded a more explorative approach than a goal-oriented one (Fiebrink, 2017, 148). Her testimony echoes that of Nicolas Baginsky describing his creative inquiry with *The Three Sirens*. It supports the previous claim that artists working with machine learning systems do so differently from traditional AI researchers. Artists are more interested in processes; they attribute more importance to the creative context; and they seek the unexpected rather than the average.
+
+While the supervised learning algorithms behind the Wekinator are goal-oriented, they do not attempt to directly generate new forms but rather assist the composer by automatically detecting patterns in the data that she provides, thus facilitating the configuration of intricate mappings between inputs and outputs while allowing composers to focus on their creation. The Wekinator thus supports the creative process by enhancing expressivity and playability, allowing artists not simply to record replayable content but to capture relationships within the content—all without writing a single line of code.^([3](#chapter_9.xhtml#chapter9-3))
+
+## **Knowing and Listening**
+
+Suzanne Kite is an Oglala Lakota performance artist, visual artist, and composer. She started using the Wekinator as part of her performative inquiries into contemporary Lakota mythologies and epistemologies. Her interest in machine learning emerged from a will to reach, as a performer, a dissociative state of perception on stage.
+
+Her piece *Listener* (2018) features Kite wearing a hair-braid interface and a garment, both equipped with different kinds of sensors, streaming data to the Wekinator (see [figure 9.2](#chapter_9.xhtml#fig9-2)). Throughout the eighteen minute performance, Kite interacts in real time with the generated video and soundscapes controlled by the Wekinator, reacting live to events happening around her. The feedback cycle between her decisions and the machine learning system’s is so tight that the boundaries between herself and the machine become blurred. As she thus becomes coupled with the machine, she can never tell where her own decisions end and where those of the machine begin.
+
+![Figure 9.2 Suzanne Kite, Listener, 2018. Photo credit: Florian Voggeneder. Courtesy of Suzanne Kite.](images/Figure9-2.png)
+
+[Figure 9.2](#chapter_9.xhtml#rfig9-2)  
+Suzanne Kite, *Listener*, 2018. Photo credit: Florian Voggeneder. Courtesy of Suzanne Kite.
+
+*Listener* is reminiscent of Justine Emard’s work *Co(AI)xistence* (see chapter 4) where performer Mirai Moriyama is shown interacting with android Alter. In both instances, a human performer tries to make sense in real time of a nonhuman entity. In Emard’s work, however, the artificial agent Alter continues to learn throughout the piece, and the behavior of the learning process itself becomes the focal point of the work. In contrast, Kite’s disembodied artificial system is pretrained by the artist and is not modified during the performance. In both cases, however, there is a process whereby a human performer attempts to figure out an artificial system whose responses are uncanny.
+
+Before using the Wekinator, Kite worked with more traditional mapping software with which she triggered media effects directly from single-sensor sources. As a performer, these one-to-one mappings would quickly become obvious to her, which would prevent her from reaching the kind of indeterminate state of being that she sought to attain. Machine learning became necessary to explore the in-betweens between her decisions and those of the computational system. The Wekinator allowed Kite to complicate things for herself as a performer, to make them more difficult, strange, and magical.
+
+Kite’s performative exploration of these in-betweens through the relationship she establishes with machine learning systems coincides with the Lakota concept of *wakȟá*ŋ, an “incomprehensible, mysterious, non-human instrumental power or energy, often glossed as ‘medicine”’ (Posthumus, 2018, p. 384), which in Lakota culture forms the basis of relationships between humans and nonhumans. Through her work, Kite is interested in establishing relationships with nonhumans agents such as artificial intelligence entities that respect indigenous ethics, which from a Lakota perspective means “knowing that non-humans have spirits that do not come from us or our imaginings but from elsewhere, from a place we cannot understand, a Great Mystery, wakȟáŋ: that which cannot be understood” (Lewis, Arista, Pechawis, & Kite, 2018).
+
+Suzanne Kite’s approach embraces machine learning systems’ ability to give access, through their inderminate, liminal state of being between human and nonhuman, to new forms of knowing. This knack resonates with Laetitia Sonami’s appetite for the experimental and explorative nature of interactive machine learning. These artists share an interest with their peers in using machine learning algorithms for their ability to generate enigmatic outcomes that are best understood experientially rather than rationally.
+
+## **Sympoietic Drawing**
+
+Since 2014, New York artist Sougwen Chung has been developing a series of projects involving painting robots that use machine learning driven by a software of her own making. The second version of the system, called Drawing Operations Unit: Generation 2 (or D.O.U.G. 2), involves a deep neural network trained on decades of drawings by the artist herself.
+
+The robot is involved in performance works in which the artist draws or paints in real time in collaboration with the robot (see [figure 9.3](#chapter_9.xhtml#fig9-3)). Throughout these events, both human and nonhuman performers react to one another, progressively filling up the canvas.
+
+![Figure 9.3 Sougwen Chung, Drawing Operations #4, 2018. Drawing, robotics, performance. Photo credit: Sougwen Chung. Courtesy of Sougwen Chung.](images/Figure9-3.png)
+
+[Figure 9.3](#chapter_9.xhtml#rfig9-3)  
+Sougwen Chung, *Drawing Operations #4*, 2018. Drawing, robotics, performance. Photo credit: Sougwen Chung. Courtesy of Sougwen Chung.
+
+Chung underlines the strangeness of certain decisions made by the robot. Although the robot is trained on her own drawings, the indeterminacy of the system nevertheless forces her hand, transmuting her gestures throughout the performance. By working in partnership with D.O.U.G., Chung’s drawings become self-reflexive as she has to constantly rethink her own work as an artist as she co-draws with the artificial entity.
+
+Through these projects, the artist explores questions related to automation, behavior, and creativity. Although initiated in drawing, D.O.U.G.’s presence has shifted the artist’s practice toward installation performances involving one or more robots. In 2019 she produced the piece *Exquisite Corpus* in which she explores the concept of sympoiesis, the art of doing-with. The performance, entirely improvised over a 30 minute period, unfolds through four different chapters with audiovisual compositions and features Chung with several robot-performers, painting in real time a large canvas located on the floor. The performances involve sympoietic, dynamic couplings between human and nonhuman which bring the artist to think through making.
+
+Chung’s performances are reminiscent of some of the automatist techniques of the Dadaists and Surrealists, which inspired expressionist artists such as Jackson Pollock. However, unlike these approaches, her use of automation is not so much an attempt at liberating her expressive self as one at nurturing a relationship between human and machine to explore new forms and ideas. While D.O.U.G. has its own volition, it is also imbued with Chung’s aesthetic by being pretrained on her own drawings. Hence the machine is not a purely random structure located outside of her but rather a strange algorithmic hybrid that lies beyond her immediate control but is also acquainted with her.
+
+## **Bring Your Own Data**
+
+The art installation *Mind the Machine* (2017) by painter Shantell Martin and computational cognitive neuroscientist Sarah Schwettmann offers an example of generating one’s own database to train a machine learning model in the visual arts. The project, which was presented in summer 2017 at the Open Gallery in Boston, features a robot that draws pictures inspired by the work of Martin. To realize this work, Martin and Schwettmann trained a deep neural network on a database of 300 drawings made specifically for the piece by Martin.
+
+The training set was produced over a period of one hundred days. Every day, Schwettman sent Martin three template drawings that the artist then needed to complete. The algorithm tried to match not only the style of Martin but also her own process of drawing, by analyzing the steps through which she went to achieve her work. The robot thus tried to imitate Martin’s way of completing drawings.
+
+The 300 original images that form the training set are displayed as part of the installation. They reveal the strenuous character of the creative process for Martin, who had to tune her work specifically to respond to the needs of the algorithm. But while producing hundreds of drawings may seem like a lot of work for a human, from a machine learning perspective 300 examples is a really small data set. Hence Martin had to reduce the dimensionality of the problem for the neural network by constraining herself to creating a body of works that look very much alike. This was accomplished by drawing with in a consistent style using recurrent patterns such as eyes, mouths, curly loops, and other objects.
+
+## **Viral Collections**
+
+London-based artist Anna Ridler has created multiple works using machine learning trained on custom-created training sets. Her interest in machine learning emerged from the artist’s preoccupation with the process of assembling and organizing collections.
+
+In order to produce her 2018 work *Mosaic Virus*, she created an impressive collection of 10,000 photos of tulips during the Dutch tulip season (see [figure 9.4](#chapter_9.xhtml#fig9-4)). She labeled the images according to characteristics of each tulip, such as its color and whether it possessed stripes. Ridler then used these images to train a generative adversarial network (GAN)—a revolutionary deep learning technique introduced in chapter 8 that can generate convincing new images that look similar to those in the training set (Goodfellow et al., 2014).
+
+![Figure 9.4 Anna Ridler, Mosaic Virus, 2018. Funded in part by the EMAP/EMARE programme (part of Creative Europe) and commissioned by Impakt. Courtesy of Anna Ridler.](images/Figure9-4.png)
+
+[Figure 9.4](#chapter_9.xhtml#rfig9-4)  
+Anna Ridler, *Mosaic Virus*, 2018. Funded in part by the EMAP/EMARE programme (part of Creative Europe) and commissioned by Impakt. Courtesy of Anna Ridler.
+
+The algorithm was then used as the basis of a video installation in which an ongoing flow of stunningly detailed images of tulips is generated in real time. None of the generated images appear in the original data set. Rather, each image is a complex stochastic collage of fragments learned by the neural network from the training set. The type of tulips generated follows the rate of bitcoins, an analogy between cryptocurrency market hype and Dutch seventeenth century tulip mania, in which the introduction of tulips to Europe gave way to a speculative bubble. In *Mosaic Virus*, the bitcoin value influences the categories of tulips produced, which mimics the way that tulip bulbs were valued during the Dutch Golden Age: Low bitcoin prices favor pale and white petals and high bitcoin values trigger more colored and striped flowers.
+
+Anna Ridler describes her process as incremental. She starts a small data set, trains a model over it, and sees what comes out. She then makes adjustments to the data set, improving the precision by adding more items or decreasing the precision by removing items. She thus crafts the generative process by making choices in the collection, attempting to find the right mix of images by trial and error. For example, she realized during the process that she had a tendency to select more colored tulips, which caused the system to become better at generating colored tulips, and so she had to add more white and pale tulips to the mix.
+
+ 
+
+For Ridler, machine learning is a process more than a tool. *Mosaic Virus* could have been done using other techniques such as time-based photography. However, using machine learning as a material for constructing the work brought a whole new dimension to the process, which in turn makes the end work more relevant. Her process of building her own data sets is iterative and experimental and in her opinion is more analog to environmental or land art practices than to traditional algorithmic art because it is possible to intuitively predict more or less what would happen without being able to fully control the outcomes—as if she were faced with a kind of *natural* system with a life of its own. This giving up of control is strangely contradictory to the extreme control the artist has over the data collection. The labor involved in crafting this data set is reminiscent of the invisible work of women and marginalized populations, and in recognition of its value the artist considers the data set itself as a work of art that stands on its own and presents it under the title *Myriad (Tulips)* (2018), shown in [figure 9.5](#chapter_9.xhtml#fig9-5).^([4](#chapter_9.xhtml#chapter9-4))
+
+![Figure 9.5 Anna Ridler, Myriad (Tulips), 2018. Funded in part by the EMAP/EMARE programme (part of Creative Europe) and commissioned by Impakt. Courtesy of Anna Ridler.](images/Figure9-5.png)
+
+[Figure 9.5](#chapter_9.xhtml#rfig9-5)  
+Anna Ridler, *Myriad (Tulips)*, 2018. Funded in part by the EMAP/EMARE programme (part of Creative Europe) and commissioned by Impakt. Courtesy of Anna Ridler.
+
+## **Crowdsourcing the Everyday**
+
+Relying on machine learning as an alternative to coding comes with its own set of challenges. One exchanges the difficult task of coding an original computer program for the no less gruelling and often expensive crafting of an original data set. While tools such as the Wekinator can facilitate the process, the efforts involved in generating one’s own database can be considerable.
+
+Yet, there exist a number of ways to generate data sets, some of which involve more reasonable amounts of labor. It is common for new media works to use different kinds sensing devices such as cameras, microphones, light sensors, ultrasonic range finders, pressure sensors, and infrared detectors. Once these systems have been launched, collecting the data generated by these devices is relatively straightforward, making it possible to apply machine learning algorithms or even to run learning loops in real time.
+
+In machine learning research, a frequently used approach to generate data is to crowdsource the labor. A good example is the large-scale publicly available database ImageNet, which was created by hiring an army of anonymous workers to label the 14 million images it contains. There exist various crowdsourcing online platforms that provide access to the labor of anonymous workers for a fee. It is also possible to create a website or a mobile app that collects data from exhibition visitors. George Legrady’s *Pockets Full of Memories* (2001), presented previously, involved such an approach in which participants were invited to scan their own objects to create a data set.
+
+More recently, New York artist Brian House resorted to a similar strategy for his 2017 project *Everything that Happens Will Happen Today*. He used a mobile app to track the daily movements of a thousand volunteers over a 1 year period in New York City. This gigantic database of sequences of GPS positions was then used to train a recurrent neural network. In the second phase of the project, House used the trained model to generate new samples of everyday journeys in the Big Apple. These directions appeared to him in real time on another mobile app of his own design, which he proceeded to follow, documenting these strange excursions using his phone camera. Although none of these generated paths exist in the original data set, they represent possible patterns of everyday itineraries. House attributes the singular character of these journeys to the social nature of the learning algorithm in its attempt to give a representative snapshot of people’s collective behavior:
+
+The intelligence of AI is not spontaneous, but socialized. It is uncanny not because it acts *as if* it were human, but because it *is* humans, plural. (House, 2017)
+
+House’s work can be interpreted as a socially constructed, technology-driven version of French situationist Guy Debord’s principle of *dérive*, a revolutionary technique involving playful yet constructive drifts in urban landscapes in which participants “let themselves be drawn by the attractions of the terrain and the encounters” (Debord, 1956). While early dérive experiments relied heavily on chance to force participants out of their habits, Debord warned against the uselessness of strolling caused by too much randomness. House’s approach to generating collectively constructed drifting experiences using machine learning hence better implements Debord’s ideal of the dérive than relying on coin flipping.
+
+## **Found Data**
+
+Many artists working with machine learning choose to use off-the-shelf datasets or to assemble their own using content created by other people. Consider for example Oscar Sharp’s short science-fiction movie *Sunspring* (2016), a 9 minute film that was shot on the basis of a screenplay written by Benjamin, a recurrent neural network trained on a database of sci-fi movie scripts. One of the songs in the movie features lyrics written by a similar algorithm trained on a database of folk songs. The result is a nonsensical amalgam of dialogs through which one can nonetheless perceive a sci-fi atmosphere in which the main characters seem constantly puzzled. The actors and the editing bring some form of narrativity which is mostly absent from the screenplay, which feels more like a disconnected sequence of short affirmations and questions.
+
+Since the appearance of GANs in 2014, a plethora of artists have been using the new technique to generate and explore latent generative spaces, especially in the visual domain, many of which employ pre-existing image databases found on the internet. For her work *A(.I.) Messianic Window* (2018), Theresa Reimann-Dubbers has trained a GAN on artistic images of Jesus Christ and used the resulting images to produce a stained glass window that reveals the machine learning system’s interpretation of the term *Messiah*. The piece is a critique of the current cultural landscape that applies “humanistic, cultural and non-universally defined concepts to artificial intelligence.” Because machine learning is as intelligent as the information it is fed, the questions become the following: “Who is feeding them and selecting this information? What biases and perspectives are being transferred to the machines?” (Reimann-Dubbers, 2018).
+
+## **Not the Only One**
+
+Transdisciplinary artist Stephanie Dinkins’s ongoing installation project *Not the Only One* (2018) employs a hybrid approach to data generation (see [figure 9.6](#chapter_9.xhtml#fig9-6)). The piece rests on a corpus of text built by the artist, which consists of hours of conversations between her and members of her immediate family from three different generations.
+
+![Figure 9.6 Stephanie Dinkins, Not the Only One, 2018. Cast black glass sculpture, deep learning AI, computer, Arduino, sensors. Courtesy of Stephanie Dinkins.](images/Figure9-6.png)
+
+[Figure 9.6](#chapter_9.xhtml#rfig9-6)  
+Stephanie Dinkins, *Not the Only One*, 2018. Cast black glass sculpture, deep learning AI, computer, Arduino, sensors. Courtesy of Stephanie Dinkins.
+
+The installation features a seashell-shaped glass sculpture embossed with the figures of the three family members. Audience members can pose questions directly to the installation, which responds with a single voice. This AI storyteller melds these multiple voices together in novel ways, some which may seem surprising and uncanny.
+
+In her work, Dinkins is interested in how we transfer knowledge, in particular through traditions of storytelling and narrativity such as the griots. *Not the Only One* initially started with a question: What would it be like to have an AI entity that was constructed by people of color? Dinkins, who is of Afro-American descent, spent months teaching herself the ropes, looking at the kinds of data and machine learning algorithms she would need for her project. The construction of the data set required an impressive amount of time and energy. She began by sitting down with family members, engaging in conversations, and asking similar questions to each one of them. After transcribing and cleaning up more than 15 hours of material, she found that she still did not have enough data for training a satisfying model. As a strategy to increase the size of her corpus, she appended texts from other sources such as places that the protagonists have inhabited, books they have read, papers, podcasts, TV shows, and other texts about Blackness and Black thought such a Du Bois’s *The Souls of Black Folk* (Du Bois, 1989).
+
+The model was then trained in two steps: first with the entire combined data set, so that the model could get a good overall understanding of how language works while staying in the broader domain defined by the artist, and then with only the smaller data sets containing the interviews in order to fine tune the model and bias it toward the conversation data.
+
+ 
+
+Initially, the artist sought to create a system that would become a kind of hard memoir of her family history and would give straight answers to the audience’s questions. Instead, she found herself engaged in a much more experimental process in which the learning system’s answers ranged from wonderful to enigmatic or nonsensical. Audiences’ reactions are as diverse as the machine’s utterances. Sometimes the system’s strangeness makes people frustrated and angry because the system defies their expectations. Other times, people give it space and make their own interpretation of whatever is going on, often with a dose of humor.
+
+As many other artists working with machine learning, Dinkins sees the indeterminacy of the system as a strength. In one of her earlier projects in which she had conversations with social android BINA48, she realized that she became much more interested in the robot’s responses when they were not logical, straight answers; in other words, when the artificial agent was struggling to say something, which often resulted in phrases that sort of made sense and yet were enveloped by a strangeness that almost felt poetic.
+
+Dinkins believes that art can be a catalyst for questioning new technologies, and thus can be a vehicle for changing and improving machine learning. Furthermore, people of color and other minorities need to be part of the conversation, as they bring different ways of thinking and alternative questions.
+
+## **Conclusion**
+
+Machine learning is a data-driven approach to implicitly creating computer programs embodied in adjustable models. Rather than directly programming the computer using code or visual abstractions of computing processes, artists working with machine learning can shape models by working on the side of data. Different strategies arise.
+
+Some artists create their own data, a challenging task given the necessity of using extremely large data sets for training deep learning models. One strategy, used by artists Laetitia Sonami and Suzanne Kite, is to train models interactively using data generated on the fly by the artist, using tools such as the Wekinator. Another approach is to use pre-existing data from the artist’s own collection. For example, Sougwen Chung has trained RNNs on a collection of decades of her own drawings as the basis for her performance installation works. Finally, artists such as Anna Ridler and Shantell Martin go through the extensive process of generating their own data set, carefully crafting a data set in order to influence the machine learning model they are training.
+
+Alternative approaches rely on data created by other parties. One approach consists in outsourcing the data generation, either by asking the audience such as in Legrady’s installation *Pocket Full of Memories* and in Brian House’s *Everything that Happens Will Happen Today*. Both projects summon assemblages of multiple agencies to foster a collective form of intelligence. Finally, another approach simply relies on using existing data found on the internet, such as movie scripts or annotated images.
+
+Of course, these different strategies do not live in isolation, and artists can combine them to achieve their goals. Hence Stephanie Dinkins relied on a mix of all these approaches to create her piece *Not the Only One* and used her own stories, interviews with members of her close family, and existing textual content.
+
+These works represent new forms of algorithmic remixes using collections of found digital objects. As we discuss in the next chapter, by turning data into content-generation processes, machine learning allows fundamentally novel approaches to artistic remixes never seen before.
+
+# **Notes**
+
+1.  [1](#chapter_9.xhtml#chapter9_1). I call this the “iceberg principle,” as most of the work involved in the design of a new media artwork is hidden under the surface.
+    
+2.  [2](#chapter_9.xhtml#chapter9_2). Sonami has been interested since the mid-1990s in using machine learning in her work, when she experimented with neural networks applied to sound synthesis with her instrument, the *lady’s glove*. The system she used at the time (Lee, Freed & Wessel, 1991) proved to be unsuitable for her needs and she decided to develop her glove instrument without machine learning.
+    
+3.  [3](#chapter_9.xhtml#chapter9_3). For an in-depth account of Laetitia Sonami’s and Rebecca Fiebrink’s first-hand experience with the Wekinator, please refer to their excellent 2020 paper *Reflections on Eight Years of Instrument Creation* with Machine Learning (Fiebrink & Sonami, 2020).
+    
+4.  [4](#chapter_9.xhtml#chapter9_4). *Myriad (Tulips)* (2018) also references the Iris data set, an early piece of machine learning history. British statistician and biologist Ronald Fisher introduced the data set in his 1936 paper in the *Annals of Eugenics* (Fisher, 1936) as a use case of species classification using numerical properties. The data set became a typical test case for many statistical classification techniques. The iris data set is widely used as a beginner’s data set for machine learning purposes and is included in many machine learning software packages. But Fisher’s support of eugenics and racism, for example through his interest in craniometry, also gestures at fundamental problems of biases and discrimination enforced through machine learning and data.
+    
+
+ 
+
+# **10**  **Deep Remixes**
+
+A music artist sings with the voice of her collaborator, their faces intermingled in a hazy algorithmic collage. A video self-portrait in which closeups of the artist’s face become galaxies and nebulae as seen through a neural network’s perspective. Real-life politicians perform strange AI-generated songs as a deceased singer speaks about contemporary politics.
+
+These cutting-edge works constitute early examples of the future of generative art. Specifically, they belong to a new range of remix practices enabled by deep learning technologies and by the availability of large data sets. These remixes happen at different levels. First, as discussed in the previous chapter, to a very large extent machine learning art rests on the creation of a data set, which can be done by generating one’s own material, crowdsourcing the work, or appropriating existing materials. The careful construction of a training set by blending data from different sources to train a desired model constitutes a first form of machine learning remix. Second, once a model has been trained, it can be reused as is to generate different outputs. This feature of deep learning has already opened new possibilities for artists by giving them access to models which would otherwise be quite expensive to train, for example through the release of Google’s BigGAN (Brock, 2019) as well as the GPT-n language models (Radford et al., 2019; Brown et al., 2020) and the music sample-generator Jukebox (Dhariwal, 2020) developed at OpenAI.
+
+Third, deep learning neural architectures are to some extent modifiable. Not only can a pretrained model be reused in different contexts but under certain conditions, it can be upgraded by, for example, retraining the neural network in whole or in part using a different data set, or by adding new layers of neurons on top of the existing ones.
+
+Finally, novel machine learning techniques such as style transfer (Gatys et al., 2015), pix2pix image-to-image translation (Isola et al., 2018; Wang et al. 2018) and Flow Machines (Pachet, Roy, & Carré, 2021) allow for a whole new range of algorithmic remixes in which a transformation from one domain to another is automated via training over a data set.
+
+Machine learning thus opens the door to a new era of remix culture in which not only content but content-generation *processes* can be easily reproduced, copied, modified, and remixed. This change is supported by the capacity of machine learning (in particular, deep learning) to rematerialize large collections of content (data) into dynamic structures (models) that can be activated as generative processes. Early examples are found in recent advances in image and voice synthesis and also in the emergence of new techniques such as style transfer (Gatys et al., 2015), program synthesis (Kant, 2018), and transfer learning (Thrun and Pratt, 1998). These techniques automate the production and transfer of complex, often nonintelligible pattern production mechanisms such as a writer’s style or a music genre.
+
+## **Remix Culture**
+
+In the late 1960s, Jamaican sound engineer Osbourne Ruddock was working as a disc cutter. As he was removing vocal tracks from recordings for DJs and MCs, he discovered that the mixing desk also allowed him to make other modifications to the musical tracks, thus creating different effects. Ruddock, who would later be known as King Tubby, thus started to use the mixer to create his own version of existing records; these versions could then be talked over by DJs. Through the 1970s, Tubby would become a leading figure in Jamaican dub music, as he further developed his remixing techniques by augmenting and mutating songs using echoes, phrasings, and reverbs.
+
+The mixing desk and sound systems allowed dub artists such as Tubby to invent a complete new genre of music built on pre-existing records rather than on sounds recorded from the real world. Later with the emergence of the computer, remixing became the dominant approach to music making and would spread to other media (for example, to photography with the introduction of digital editing tools such as Photoshop in the 1990s), favoring the emergence of what American scholar Lawrence Lessig has dubbed *remix culture* (Lessig, 2009).
+
+Sampling and remixes have defined the evolution of artistic practices and cultures throughout the twentieth century. In his book *Remix Theory*, media theorist Eduardo Navas explains these transformations in relationship to technological developments (Navas, 2012), tying the emergence of the remix to mechanical reproduction. Starting in the nineteenth century, new technologies allowed the recording of samples of the real world, first through photography and then through sound recording.
+
+Navas explains that in the 1920s, photo collages and photomontages constituted early examples of recycling existing materials and recombining them. The Dadaists used these strategies to undermine and subvert painting, photography, and poetry. Hannah Höch’s *Cut with the Kitchen Knife Dada Through the Beer-Belly of the Weimar Republic* (1919–1920) exposes the failure of Germany’s Weimar Republic to create a democratic and egalitarian regime by appropriating images and text from the mass media.^([1](#chapter_10.xhtml#chapter10-1)) In 1920 Dadaist poet Tristan Tzara published “To Make a Dadaist Poem,” a procedure that involved cutting up a newspaper article using a pair of scissors and randomly reorganizing the contents. Later, in the 1960s and 1970s, similar recombination techniques and other algorithmic procedures were used within avant-garde literary movements such as OULIPO and the Beat Generation.
+
+Beginning in the 1980s, Navas argues, new media pushed the tendency further by increasingly *privileging* sampling of existing material over real-world records. In the 1990s music remix became a genre of its own, pushed in the US by an industry that found in these principles an efficient program for music production, commercialization, and consumption.^([2](#chapter_10.xhtml#chapter10-2)) The increased availability of computers and the development of new software since the 1980s has facilitated processes of remixing in other fields, as well. For example, Photoshop and other image-manipulation tools have radically transformed photography, and copy-pasting has become one of the basic principles of writing thanks to word processors and the World Wide Web.
+
+As remixing practices were thus increasingly applied to media outside of the musical realm in the late 1990s, they quickly became the norm. Lawyer Lawrence Lessig sees the emergence of this remix culture as a positive development. He has argued that remixing (the practice of creating derivative works by transforming existing materials) is a beneficial and natural method to enhance human creativity that has been a common practice throughout human history. While copyright laws established in the late twentieth century have restricted such practices, in the twenty-first century remix culture is nonetheless thriving thanks to technological advances that facilitate copy-pasting, modifying, and mixing media. This is true not only for images, sounds, and video but also for source code.
+
+## **Open-Source Cultures**
+
+In the early 1980s in the midst of the growing spread of personal computers, commercially owned software had become the norm. Richard Stallman, then a programmer at MIT’s Artificial Intelligence Laboratory, started to create software tools for the Unix environment for which he made the source code publicly available. In 1983 he launched the GNU^([3](#chapter_10.xhtml#chapter10-3)) project to create a Unix-like environment that would run using only free, open-source software. In 1989, he wrote the GNU General Public License (GPL), which protected the rights of users and developers to use, copy, and modify software—in other words, to freely remix code.^([4](#chapter_10.xhtml#chapter10-4))
+
+In new media art, interconnections with free software and open-source communities can be traced to the early 1990s, for example, through the release by composer and musician Miller Puckette of Pure Data, a visual programming language for real-time interaction and sound. In the 2000s open-source software such as Arduino/Wiring, Processing, and Scratch, created for both educational and professional purposes, have pervaded the field.
+
+This softwares directly contributes to the remix culture described by Lessig within the niche field of new media art. They are surrounded by rich, multidisciplinary communities who share code on public forums and on source code repositories. As most new media practitioners know, producing technology-intensive art works such as audiovisual performances and interactive installations often involves patching together a number of pre-existing audio, video, hardware, and software components. Thus, artists fix, improve, and create new open-source code such as libraries and code snippets that they then redistribute to the community.^([5](#chapter_10.xhtml#chapter10-5))
+
+Machine learning is tightly knit with open-source culture. The core software tools currently used for deep learning such as Tensorflow and PyTorch are free and open source. Furthermore, deep learning research communities have historically been defined by a culture of sharing and open access; new results are quickly disseminated on the internet, often with source code, on open-access platforms and journals such as *arXiv* and *Journal of Machine Learning Research*.
+
+It is one thing to create a collage by combining different pictures; it is another to copy-paste code from different sources to create a new piece of software. But what happens when we can remix not just media content such as image or sound but processes that *generate* such content—for example, by applying the voice signature of a singer to one’s own voice, or redrawing a portrait in the style of a famous painter? And what new art forms and practices are allowed when we can share, modify, retrain, augment, and otherwise alter machine learning models?
+
+## **Machine Learning Remixes**
+
+While it has become trivial to sample content such as images, sounds, and even programming code, there are two kinds of content that still cannot be easily copy-pasted. First, until recently it was still difficult and expensive to modify certain components of time-based media, such as replacing or modifying the face of an actor in a movie or creating a synthetic voice indistinguishable from the original. Second and perhaps more importantly, it is difficult to copy and paste the generative *process* (or at least a model of the process) allowing the creation of new media content such as a new song, photograph, or painting.
+
+Indeed, copying and remixing the *style* of an author or a certain *genre* is a difficult task that until recently could hardly be automated by technological means. But what if it were possible to automatically get a snapshot not so much of a specific media work but of the process that generated it? What if one could then preserve that snapshot in a digital format? Furthermore, what if we could cut, paste, modify, and rearrange such algorithmic snapshots in the same way that Dadaists such as Hannah Höch were using pictures to make collages and photomontages or that King Tubby was reusing existing music samples to create his own tunes?
+
+Previous attempts have been made to imitate styles and genres using computation. For example, in computer graphics the field of non-photorealistic rendering (NPR) focuses on ways to render two-dimensional (2-D) and three-dimensional (3-D) objects in expressive styles; however the algorithms developed usually lack flexibility and scalability because a different algorithm needs to be created for each style (e.g., image filters for watercolor, impressionism, etc.). These algorithms often take years of research and development to design.
+
+What if we could design generative programs as easily as we can create a photomontage? What if we could as easily remix these programs to create new ones?
+
+Deep learning technologies foster the emergence of a new genre of algorithmic remixes that involves models and data rather than source code. Machine learning algorithms are able to turn a media-generation process into a model that can be saved on disk, exchanged, modified, and so forth. Moreover, some of these algorithmic objects are flexible enough that users can modify and mix them with one another to produce new models.
+
+## **Exploring Pretrained Models**
+
+The dazzling development of deep learning and its artistic applications are inseparable from the appearance of huge pretrained neural network models made available to users. These developments are promising considering the associated expertise and computing costs needed to train these systems at the moment. For example, the training costs of the GPT-3 language model is estimated at $4.6 million, which would make its training from scratch inaccessible to the vast majority of artists.
+
+In particular, GPT-3, which is 116 times larger than its predecessor GPT-2^([6](#chapter_10.xhtml#chapter10-6)) is able to infer new linguistic patterns or tasks from textual instructions given by the user. This capacity allows the user to interact with the model in a fluid fashion by giving instructions in natural language. Hence, it constitutes an alternative to traditional programming, where one can actually interact with the system to train it to do what one wants. Writer Gwern Branwen, who has worked extensively with GPT-3, explains that this form of prompt programming feels akin to teaching your pet some new tricks. “You can ask it, and it will do the trick perfectly sometimes, which makes it all the more frustrating when it rolls over to lick its butt instead—you know the problem is not that it can’t but that it won’t.” (Branwen, 2020)
+
+The use of pretrained models such as BigGAN and GPT-3 supports new forms of remix based on the exploration of the quasi-infinite generative spaces offered by these models. However, training these models requires so much resources that only big businesses are currently able to afford it. These models are thus biased and out of the immediate control of their users. This is a major difference with the free software movement that has supported the emergence of software developed by users, for users. The technoscientific open cultures fuelling machine learning research behind BigGAN and GPT-3 remain under the aegis of big multinationals, keeping these tools out of the direct control of its users.
+
+## **Alternative Faces**
+
+Deep learning remixes are not only supported by big IT: community-driven technologies are also appropriated for creative purposes, sometimes in unpredictable ways. In December 2017, it was reported that users in the Reddit community r/deepfakes were using a software tool to swap faces of actors in porn movies with those of other people such as celebrities, thus creating realistic-looking sex remixes. The technology was later banned on several websites such as Reddit, Twitter, and Pornhub (Cole, 2017).
+
+While the motivation of the r/deepfakes community was to generate new pornographic flix, the technology behind that phenomenon is a user-friendly software called FakeApp that can be applied to any kind of video content. One important trend is the insertion of actor Nicolas Cage in Hollywood movies such as *Forrest Gump*, *Raiders of the Lost Ark*, and *Superman*. Another popular style involves remixes of politicians, such as a remix featuring the president of Argentina, Mauricio Macri, superimposed on Adolf Hitler’s character in a scene from the film *Downfall*, and several experiments involving *deepfaking* US president Donald Trump.^([7](#chapter_10.xhtml#chapter10-7))
+
+Other recent developments allow even more fine-grained modification of audio and video content. Suwajanakorn, Seitz, & Kemelmacher-Shlizerman (2017) present a method to generate new videos of people speaking in a frighteningly realistic way. These computer scientists at the University of Washington trained a neural network on many hours of footage from US ex-president Barack Obama. In a new form of digital puppetry they were then able to generate convincing video sequences of Obama using only audio records of his voice (Suwajanakorn, Seitz, & Kemelmacher-Shlizerman, 2017).
+
+Artist Mario Klingemann used a similar technology in his 2017 video piece *Alternative Face v1.* In this work the ghostly figure of deceased French *yé yé* singer Françoise Hardy appears as an animated collage of original footage taken from different sources. The soundtrack is taken from a well-known interview with counselor to the president Kellyanne Conway on CNN on January 22, 2017, in which she used the expression *alternative facts* to describe press secretary Sean Spicer’s incorrect statements concerning the number of attendees at president Donald Trump’s inauguration. Hardy seems to be looking at the camera and following the movements of Conway’s face, eyes, and lips in the original footage, producing a chimerical creature constantly morphing between reality and fiction. Klingemann’s goal with producing this work was to mark the beginning of a new era of alternative facts in which people cannot trust their own eyes anymore (McMullan, 2018).
+
+More recently, British artist Libby Heaney used a similar technique to create *Euro(re)vision* (2019) (see [figure 10.1](#chapter_10.xhtml#fig10-1)). In this dual-screen video piece, two well-known female EU leaders (chancellor of Germany Angela Merkel and UK prime minister Theresa May) who were important figures during the Brexit negotiations perform in a contest-like setting that recalls legendary singing competition Eurovision. Throughout the performances, the glitchy figures of the two leaders speak in alien languages that sound like their native tongues—perhaps as they would sound to a nonspeaker of those languages. The parodic speeches eventually converge to a strange poetic mix between English and German, which Merkel and May perform simultaneously, symbolizing for Heaney the possibility of unification in the face of adversity.
+
+![Figure 10.1 Still from Euro(re)vision two-screen video, 2019 by Libby Heaney. Courtesy of Libby Heaney.](images/Figure10-1.png)
+
+[Figure 10.1](#chapter_10.xhtml#rfig10-1)  
+Still from *Euro(re)vision* two-screen video, 2019 by Libby Heaney. Courtesy of Libby Heaney.
+
+The artist used different machine learning techniques to create this algorithmic collage directly inspired from Dada poetry and more specifically Hugo Ball’s sound poems, which Ball describes as “verses without words” (Ball and Pinoncelli, 2011). The lyrics were composed from three different character-level RNNs trained on different political text corpora: one on the German Federal Parliament debates, one from the UK House of Commons, and one on a mix of those two.
+
+To create the work, Heaney herself performed in front of the camera, reading and singing the jabberwockian generative texts as she impersonated the two women and then used deepfake to replace her own face with the politicians’ faces. Throughout these contemporary performances of technological puppetry, the two animated caricatures appear dressed up in sequined gowns, gesticulating and speaking in tongues. The imperfections of the face replacement technology, which reveals itself at times in image glitches, have been left for the viewer to see.
+
+Heaney’s satiric work is a critique of political rhetoric and of its interconnections with artificial intelligence in a post-truth era—in which anyone can literally put words into the mouths of politicians. Her work embraces an aesthetics of technological glitch, which Heaney calls “good noise,” which depends on using machine learning systems “in ways for which they were unintended,” in other words, to “shake them, almost to \[the\] breaking point, to see what comes out, to see ourselves anew” (Heaney, 2019).
+
+Both Heaney’s and Klingemann’s works reveal the ethical, legal, and social repercussions of the new forms of media alterations made possible by deep learning tech. In the 1990s, image editing software such as Photoshop profoundly transformed advertising, culture, and the public’s relationship to the news. By expanding media manipulation into the realm of video and audio, deep learning technologies in the age of fake news will contribute to the transformations previously initiated by media editing technologies.
+
+## **Remixing the Generative**
+
+There is a profound consequence underlying machine learning software’s ability to *photoshop* audio and video content: the ability to automatically create and remix generative *processes* of media production. This is the natural result of the fundamental properties of contemporary machine learning systems. As we have described, machine learning algorithms are able to automatically transform generative processes into data structures (models) that can be stored, copied, and modified. These processes can then be used to generate new, unforeseen media content such as images and sound and also new agent behaviors for games and robotic art.
+
+Consider for example the emergence of digital technologies that allow the creation of synthetic voices able to convincingly imitate someone’s voice on the basis of a few samples. These digital voices are in fact complex mathematical functions embodied in a neural network’s weights that take text and transform it into words spoken using someone’s voice. In other words, it is a record or sample not of the voice itself but of the process that can generate the voice. Once trained, this process is turned into a piece of data that can be copied, pasted, and modified.
+
+The ability provided by deep learning systems to automate the creation of a content-generation program is unprecedented in human history at least to such a scale and with such flexibility. Another example is *style transfer*, a technology that allows the application of a specific style to an image. The first paper on the subject appeared in 2015 on *arXiv* (Gatys et al., 2015) explaining how to use a convolutional neural network in which the representations of content and style are separated and can thus be manipulated independently to produce new images.
+
+Similarly, research project Flow Machines aimed to transform musical styles into computational objects that could easily be remixed by composers and musicians. In September 2016 the group released two songs whose scores were generated by a style-imitating algorithm—one was trained on scores from the Beatles and the other on scores by a mix of American songwriters. Not long after, Google research group Magenta released a software tool called NSynth that can generate new digital instruments by mixing models of musical instruments (for example, a hybrid between an electric guitar and a trumpet).
+
+A recent work by electronic musicians Holly Herndon and Jlin, in collaboration with Mat Dryhurst and Jules LaPlace, provides a strong example of this new form of algorithmic remixes. The performed song, called *Godmother* (Herndon, 2018a), was generated using a complex set of algorithmic processes embodied in a “machine intelligence” named Spawn to which the artists attribute a true authorship (see [figure 10.2](#chapter_10.xhtml#fig10-2)). The system employs a kind of custom-built of augmented vocoder that uses style transfer, allowing Holly Herndon to sing using Jlin’s voice. The piece uses vocal fragments to produce an uncanny montage of machininc beatboxing. According to the creators, this feature was entirely “dreamed up” by the algorithm, presumably “learning from the stops and starts in Holly’s speech” (Kirn, 2018).
+
+![Figure 10.2 Holly Herndon and Jlin, Godmother, 2018. Still from the music video. Courtesy of Beggars Group Media Limited.](images/Figure10-2.png)
+
+[Figure 10.2](#chapter_10.xhtml#rfig10-2)  
+Holly Herndon and Jlin, *Godmother*, 2018. Still from the music video. Courtesy of Beggars Group Media Limited.
+
+In an official statement about the work, Herndon referred to Spawn as her infant, describing how the piece was created by the “nascent machine intelligence” listening to her “godmother” (Jlin) and reinterpreting her art in the voice of her “mother” (Herndon). “In nurturing collaboration with the enhanced capacities of Spawn,” she said, “I am able to create music with my voice that far surpass the physical limitations of my body.” She adds:
+
+Going through this process has brought about interesting questions about the future of music. The advent of sampling raised many concerns about the ethical use of material created by others, but the era of machine legible culture accelerates and abstracts that conversation. Simply through witnessing music, Spawn is already pretty good at learning to recreate signature composition styles or vocal characters, and will only get better, sufficient that anyone collaborating with her might be able to mimic the work of, or communicate through the voice of, another (Herndon, 2018b).
+
+The scalability of deep learning techniques posits that these early examples will open the door to many new creative options, profoundly impacting art practice and outcomes. New techniques of video style transfer will allow the hybridization of visual styles sampled from existing movies and other visual content. Romance novels could be automatically rewritten in the style of Margaret Atwood, and *The Handmaid’s Tale* turned into a coming of age novel. New variations will be automatically generated from a single movie genre or mixes of many (e.g., dramatic comedy and zombies). Machine learning will allow the creation of new character personalities for fiction, movies, and video games, including speech, movements, appearance, and other characteristics, by mixing existing characters.
+
+It will also be possible to make transfers across different media forms. For example, artists will be able to automatically generate a soundtrack based on a video scene captured from their smartphone, or correspondingly to generate image filters that match a soundtrack. It will also be possible to transpose natural patterns found in nature, such as the movements of a flame, into text, sound effects, or the behavior of a robot.
+
+With this revolution in remix culture will come a number of challenges and issues related to authorship and copyright. Herndon warns about the ethical implications of these new forms of remixing, which could result in a “permission-less mimicry” fostered by a “data-driven new musical ecosystem surgically tailored to give people more of what they like” with decreasing regard for the artistic identity of ideas. Referring to experimental composer George Lewis, she argues for a “more beautiful, symbiotic, path of machine/human collaboration” offering an opportunity “to reconsider who we are, and dream up new ways of creating and organizing accordingly” (Herndon, 2018b).
+
+## **An AI Opera**
+
+*Euro(re)vision* and *Godmother* are distinguished by the integration of several different techniques. The piece *Legend of Wrong Mountain* (2018) takes this principle to the extreme, in an attempt to create a Chinese *kunqu* opera entirely generated by learning algorithms (Huang et al., 2019). Created by an interdisciplinary team of artists, computer engineers and designers, the project is described by the authors as “a machine’s attempt at *Gesamtkunstwerk*,”^([8](#chapter_10.xhtml#chapter10-8)) the project is a complex technological remix integrating a plethora of learning algorithms trained on four different sets of data.
+
+Every component of the piece is thus computer generated. To create the music score, a RNN was trained on a hundred images of traditional Kunqu sheet music. For the script, the authors relied on a custom hierarchical system of Markov chains trained on a database of sixty traditional Kunqu scripts. This approach, they claim, allows them to preserve a logical structure with chapters, dialogues, and lyrics. The script was used for the generation of a video performance and also rendered as a computer-generated book of the script in traditional woodcut style, which was also generated by a neural network. Finally, the music and script are accompanied by generated visuals created from texture analysis and performer video clip poses as well as scene images.
+
+Whereas the result is a bit shaky, the project is nonetheless relevant as an experiment in machine learning art. It pushes the automation of a creative process to the extreme by the interplay of different techniques and data sets, all made possible by the distribution of machine learning tools under open-source licenses and by the availability of data sets. *Legend of Wrong Mountain* sets the stage for future machine learning based total works of Wagnerian magnitude in which data and algorithms are intermingled in spectacular machinic collages.
+
+## **Conclusion**
+
+Art always happens in context. From mere inspiration to copy and counterfeit, creators have always used each other’s works to support their own. In the twentieth century the automated reproducibility of media content led to the emergence of a remix culture that plainly embraced the production of derivative works.
+
+Until the emergence of deep learning, remixes always somehow followed the principle of the collage. Whether it was printed images, poetry lines, sound tracks, or code snippets that were remixed to generate new content, the basics remained the same: copy; paste; repeat.
+
+New machine learning technologies such as deepfakes just push this principle further, expanding the possibilities offered to artists. However, machine learning also opens the door to entirely new forms of remixes mediated by models—autonomously adapted structures processes crystallized into data structures. This happens, for example, through the indirect influence of machine learning models via the remix of training sets. Furthermore, the current fascination with machine learning has pushed a range of productions in which multiple media such as text, sound, and image are automated using learning algorithms to create new works.
+
+Perhaps more importantly, machine learning introduces the possibility of not just remixing content but also of generating media with processes that use technologies such as style transfer. The work of musicians Holly Herndon and Jlin is emblematic of this new kind of algorithmic remix, in which a performer can now sing with the voice imprint of another singer. We are only at the beginning of this technological revolution and as we move forward, the capabilities of machine learning systems are likely to drastically transform the conditions of artistic production and the landscape of remix cultures.
+
+# **Notes**
+
+1.  [1](#chapter_10.xhtml#chapter10_1). Marcel Duchamp’s *L.H.O.O.Q.* (1919) is another well-known example of such works, one in which the artist drew a moustache and beard on a postcard representing the *Mona Lisa*.
+    
+2.  [2](#chapter_10.xhtml#chapter10_2). In Europe, these principles were reappropriated and reimagined through, for example, the appearance of sub-genres such as breakbeat, down-tempo, jungle, and trip-hop.
+    
+3.  [3](#chapter_10.xhtml#chapter10_3). *GNU* is a recursive acronym that stands for *GNU is Not Unix*.
+    
+4.  [4](#chapter_10.xhtml#chapter10_4). The popularity of open-source software increased through the 1990s thanks to the development of Linux (a GPL distributed version of Unix released in 1991 by coder Linus Torvald) and the emergence of the internet. In the mid-1990s, private companies started to see a viable economic model in open source, one in which code could be shared and improved by the community and corporations could sell services rather than proprietary software products.
+    
+5.  [5](#chapter_10.xhtml#chapter10_5). The circulation of such works and the expansion of open-source based artistic practices has been supported by art organizations such as Eyebeam and PixelACHE that have helped develop and disseminate *open-culture* interdisciplinary practices. Many artist-run centers, galleries, and even museums have integrated the support of open source as part of their mission.
+    
+6.  [6](#chapter_10.xhtml#chapter10_6). At the time of writing this book, GPT-3 is the largest known deep learning model with its 175 billion neural weights.
+    
+7.  [7](#chapter_10.xhtml#chapter10_7). One of these Trump fakes was commissioned in 2018 by the Flemish Socialist Party of Belgium as part of a video campaign to draw attention to the problem of climate change.
+    
+8.  [8](#chapter_10.xhtml#chapter10_8). The term *Gesamtkunstwerk* (total work), attributed to composer Richard Wagner, describes the aesthetic ideal of bringing together all art forms into a single work.
+    
+
+ 
+
+# **11**  **Watching and Dreaming**
+
+Contemporary machine learning algorithms repose on artificial systems of representation. They make use of certain fundamental principles borrowed from nature such as chromosomes, neural networks, or physics laws. In particular, deep learning and genetic algorithms mimic structures and mechanisms adopted by living beings to efficiently respond to their environment. One of these principles is the capacity of living systems to project possible situations in order to make better forecasts, such as predicting the trajectory of a ball or an opponent’s next move, or to design new ways of acting and being, such as playing mind games or envisioning alternative futures. When it exists in human brains, this capacity is often called *imagination*.
+
+A distinctive feature of machine learning models is that the perceptive properties they build during training can often be harnessed for generative purposes. One can think about the generative process as the inverse of the perceptual function. Although the field of machine learning has always known about these generative capabilities, they have been often overlooked by researchers, at least until recently.
+
+As a machine learning systems is trained on a data set, it becomes attuned to that data and can generate data that increasingly looks and feels like what it has been trained on. Using machine learning reflexively in their work, artists Ben Bogart, Brian Clifton, Sougwen Chung, Heather Dewey-Hagborg, So Kanno, Sam Lavigne, Trevor Paglen, Alexander Peterhaensel, Francis Tseng, and Tom White explore questions about machine representation, inductive biases, and political power.
+
+Canadian artist Ben Bogart, whose work with SOMs has been introduced in chapter 7, has been working since the mid-2000s with machine learning and artificial neural networks. Bogart defines their approach as art-as-research (Busch, 2011), as they investigate through both art practice and research questions related to human and machine cognition and perception. Exploring questions related to dreams, perception, imagination, selforganization, and situatedness, Bogart has created multiple video works, as part of a series titled *Watching and Dreaming*, using different machine learning systems trained on images from famous sci-fi movies *Blade Runner; 2001: A Space Odyssey*; and TRON.^([1](#chapter_11.xhtml#chapter11-1)) In each of these works, the system is trained on the video and audio tracks from the corresponding movie. It is then used to generate a new version of the movie, thus destroying the original while preserving the statistical distribution of colors and sounds discovered by the neural net (see [figure 11.1](#chapter_11.xhtml#fig11-1)).
+
+![Figure 11.1 Ben Bogart, Watching (2001: A Space Odyssey), 2018. Still from HD Video. Courtesy of Ben Bogart.](images/Figure11-1.png)
+
+[Figure 11.1](#chapter_11.xhtml#rfig11-1)  
+Ben Bogart, *Watching (2001: A Space Odyssey)*, 2018. Still from HD Video. Courtesy of Ben Bogart.
+
+About the work *Through the haze of a machine’s mind we may glimpse our collective imaginations (Blade Runner)* (2017), the artist has written:
+
+The resulting images are softly undulating colour fields while the sounds flow between constant drone and glitch complexity due to the process of self-organization. The structure of the work is an emergent result of the interaction between the machine’s subjectivity and the underlying structure of Blade Runner. The incremental evolution of each scene’s sound-scape and colour field are realizations of the machine’s learning process, enabled by a self-organizing machine learning algorithm (Bogart, 2018).
+
+Bogart’s concept of *machine subjectivity*, which stems from their work on connectionist machine learning, is a new framework to think about subjectivity in both biological and computational agents. In this context, the artist defines subjectivity as “an interaction between sensation and imagination that forms a reinforcing pattern that results in perception.” This view of subjectivity is dependent on the assumption of, on one side, the existence of an outside world independent of the viewer and, on the other side, following French continental philosopher Merleau-Ponty, on the assumption that reality results from the co-construction of objects and subjects (Bogart, Audry, Parish, & O’Murchú, 2018).
+
+Bogart sees in machine learning systems an opportunity to study these questions by designing machinic forms of subjectivity. In this framework, the *machine sensations* are provided through the training data containing raw informational patterns from the real world, whereas the *machine imagination* is implemented through unsupervised machine learning algorithms that create their own categories from their sensations.
+
+Bogart explains that there exist different ways by which categorical boundaries can be drawn in a cloud of data points. Therefore, any imagination process that creates such boundaries from its sensations is subjective by definition, because there is no single solution for a specific data set and algorithm. The boundary is a unique function of the interaction between data and algorithm—including random initial conditions. In this context, according to Bogart, subjectivity is the process by which cognizing beings classify two different sensory patterns into the same imaginary category. What is given to see in each work of Bogart’s *Watching and Dreaming* series is the process by which such a *subjective machine* processes images from a movie (the sensation space) and projects new images on the basis of categorical representations learned by the system itself according to its own preferences and sensibilities (the perception/imagination space).
+
+Ben Bogart’s artistic approach to machine learning uses learning algorithms directly, not as a means to an end but really as a substrate to investigate broader questions—in this case, about cognition, sensation, imagination, and the nature of subjectivity. The neural networks used by Bogart are models of the mind that are especially good at learning categorical representations by extracting regularities from continuous patterns according to their own rules. Machine learning algorithms trained on big, real-world databases are often advertised as optimal models of reality that provide objective measurements of hidden features of the world around us. Through their *Watching and Dreaming* project, Bogart shows how such machinic representations of learning systems are, in the end, subjective because they come up with their own statistical representations that are highly dependent on the nature of their training set (sensation) as it interacts with the training algorithm that drives the way they make projections (imagination).
+
+## **Inductive Biases**
+
+Artist Heather Dewey-Hagborg explores the concept of inductive bias in her machine learning artwork *Listening Post* (2009). The work consists of an interface installed in the public sphere, which appears as a wooden box on which is mounted a sculpture of a human ear. The system constantly monitors its sonic environment, overhearing passersby. The collected speech data from anonymous pedestrians is then sent to a server that runs a machine learning system constantly trained and retrained on the incoming data (Dewey-Hagborg, 2011).
+
+From this audio data collected in real time, the system then generates new sounds by recombining chunks of overheard speech utterances using machine learning algorithms usually employed for public surveillance. Hence, a form of collectively constructed language is generated through the computer’s adaptive remixing of voice fragments.
+
+The artist is interested in what this work says about inductive bias, a challenging issue with machine learning systems. Machine learning systems are inductive systems, that is, they use empirical data to make generalizations. For this reason, they are inherently biased toward the data they are fed. As Ben Bogart suggests with the concept of machine subjectivity, machine learning models are in some sense subjective because they are biased toward what they have been given access to. This bias implies that the assumptions the system’s designer makes will always promote a certain perspective on the world.
+
+Dewey-Habgorg describes how this concept of inductive bias appeared to her as she worked on *Listening Post*. She initially envisioned some form of “community language” emerging from spoken fragments of passersby. However, as she worked on the project, she became aware of important limitations of the technology, which was very much tied to working with pure, denoised sounds, whereas the sounds she was recording were all but pure, being polluted by all kinds of background noises from the city environment. After spending endless hours trying to tweak the system to make it work in these impossible conditions, she suddenly realized the absurdity of the whole thing: “Why should I try to save this technology from its own pitfalls,” she thought, “when I could just allow it to naturally expose itself as the hilariously erroneous technique that it is?” (Dewey-Hagborg, 2011).
+
+This realization pushed her to change her attitude toward her own work. Rather than fighting against the technology, she decided to embrace the inherent biases of the machine learning system to reveal its inadequacies. Hence, more than trying to generate a new collective language through data analysis, *Listening Post* uses its environment as a playground, turning overheard conversations into a collective sound portrait.
+
+## **Technocultural Jamming**
+
+In her book *Weapons of Math Destruction*, data scientist Cathy O’Neil has examined the inductive biases of algorithmic systems relying on big data such as machine learning and their destructive effect on socioeconomic minorities (O’Neil, 2016). Criticizing so-called *precrime* software now commonly used by police precincts to forecast criminal activity, she explains how the rarity of high crimes makes them really hard to predict using such systems. On the basis of the unproven presumption that small crimes lead to big ones, these systems thus rely on petty crimes as a proxy. The result is that this crime-predicting software tends to target impoverished communities of color, leading to even more arrests in these communities for small crimes and misdemeanors, which in turn reinforces the system to focus even more on these areas in a machine-enhanced form of self-fulfilling prophecy.
+
+*White Collar Crime Risk Zones* (2017) by Brian Clifton, Sam Lavigne, and Francis Tseng is an online project that mimics crime analysis software criticized by O’Neil. Using the principles of culture jamming, they turn the technology against itself by applying it directly to the prediction of financial malfeasance. To create the work, they trained machine learning models on a data set of white collar crime and misdemeanors ranging from defamation to fraud in the US since 1964, crossed with other information from online sources. The result is a publicly available interactive map showing most at-risk zones in New York City. Each area can be interactively consulted to display crime-related information about the area, such as the most likely crimes and their average severity, as well as a computer-generated facial composite of the next likely offender.
+
+A similar attempt at subverting machine learning software to reveal its inadequacies has led artist Alexander Peterhaensel to create the project *Voting Booth* (2017). Building upon advances in the fields of psychometric and computer vision, he trained an artificial neural network on a data set of human portraits labeled with their political affiliations. The system is then used to automatically detect how a subject is most likely to vote based solely on an image of their face.
+
+The installation consists of a voting booth equipped with a camera. When a user enters the booth, their face is analyzed and automatically predicts how they will cast their vote, thus removing the need for them to actually put a mark on a ballot. The technology is disseminated by the artist under a fake corporation called Smile to Vote. The mock company’s website promotes the technology as a way to optimize twenty-first century governance in which the act of voting is reduced to that of taking a selfie.
+
+Peterhaensel’s work effectively builds from the research that it attempts to criticize, including studies in physiognomy that infer criminality (Wu & Zhang, 2016) and sexual orientation (Wang & Kosinski, 2017) from facial features, and others in psychometry that try to extract political convictions (Kosinski, Stillwell & Graepel, 2013), sometimes with alarming accuracy.
+
+Both *White Collar Crime Risk Zones* and *Voting Booth* deploy *culture jamming* strategies as part of machine learning art works. By applying state-of-the-art machine learning systems to politically charged issues as an element of technological satire, they reveal how these *weapons of math destruction* threaten democracy and justice.
+
+## **Beyond Human Writing**
+
+The installation *Asemic Languages* (2016) by artists So Kanno and Takahiro Yamaguchi explores questions about the acquisition of languages through a machine learning system trained on handwritten data (see [figure 11.2](#chapter_11.xhtml#fig11-2)). To create this work, the artists asked ten participating peers from different countries to write down their artist statement in their native language, using a graphic tablet capable of recording strokes. The data is thus not simply a two-dimensional image but includes information about the gestures made by the writer’s hand.
+
+![Figure 11.2 So Kanno and Takahiro Yamaguchi, Asemic Languages, 2016. XY Plotter, Paper, Pen, Computer, Handwritings. Machine learning programming: Hironori Sakamoto. Support: Nihon Unisys, Ltd., HAPS. Photo: Yoshihiro Kikuyama. Courtesy of So Kanno, Takahiro Yamaguchi, and Aichi Triennale Organizing Committee.](images/Figure11-2.png)
+
+[Figure 11.2](#chapter_11.xhtml#rfig11-2)  
+So Kanno and Takahiro Yamaguchi, *Asemic Languages*, 2016. XY Plotter, Paper, Pen, Computer, Handwritings. Machine learning programming: Hironori Sakamoto. Support: Nihon Unisys, Ltd., HAPS. Photo: Yoshihiro Kikuyama. Courtesy of So Kanno, Takahiro Yamaguchi, and Aichi Triennale Organizing Committee.
+
+Programmer Hironori Sakamoto had to develop a custom technology for this work. He used an unsupervised learning algorithm called *k*\-means (Lloyd, 1982) to automatically group stroke patterns into similar categories and then developed an automated procedure for joining the strokes smoothly. A different model was trained for each participating artist on their handwritten data set.
+
+These pretrained models are then used during the presentation. Pieces of large-format paper are solemnly placed on tables equipped with robotic plotters, each holding a pen. The pen moves across the paper, imitating the gestures of the author for which it has been trained. The result is a purely formal imitation of the original texts, which imperfectly reproduce the style of the writer and the specific forms found in each writing system.
+
+The artists were interested in the process of language acquisition and in how humans first learn the sounds of a language before grammar or meaning. In this piece, the machine learning system observes the visual properties of handwritten texts and then generates new images that mimic these properties. Through this process the original text’s meaning is lost, and for the viewer it is unclear whether this process is deceitful or revelatory of a possible meaning.
+
+## **Learning and Generating**
+
+Machine subjectivity offers a model to understand a range of art works that make use of interplay between the learning and generative properties of deep neural nets. Interestingly, some of the most recent advances in deep learning such as generative adversarial networks (GANs) are using the capacity of these systems to generate or imagine new data (Goodfellow et al., 2014). These generative capabilities, rather than being treated as a side effect, are used by these systems to improve their performance.
+
+Introduced in chapter 6, Dutch artist couple Erwin Driessens and Maria Verstappen have been developing artistic work since the 1990s by digging directly into computational materials inspired by natural and living processes. Their work *Spotter #bird Amstelpark*, presented as part of the Machine Wilderness exhibition at Zone2source in Amsterdam in summer 2018, follows that practice by involving GANs (see [figure 11.3](#chapter_11.xhtml#fig11-3)).
+
+![Figure 11.3 Driessens & Verstappen, Spotter #birds Amstelpark, 2018. Robotics, machine learning, GAN. Photo credit: Driessens & Verstappen. Courtesy of Machine Wilderness / Zone2Source Amsterdam.](images/Figure11-3.png)
+
+[Figure 11.3](#chapter_11.xhtml#rfig11-3)  
+Driessens & Verstappen, *Spotter #birds Amstelpark*, 2018. Robotics, machine learning, GAN. Photo credit: Driessens & Verstappen. Courtesy of Machine Wilderness / Zone2Source Amsterdam.
+
+Starting from the question “Can an artificial brain dream or fantasize?”, the artists created a site-specific installation that explores how deep learning systems perceive and represent natural processes. A speaker located outside of the space near the entrance plays bird songs continuously. One hardly notices that the sound is, in fact, generated by a deep learning system trained on sounds of blackbirds.
+
+Inside, a camera mounted on a motorized pan-tilt head looks around, its gaze trying to catch movements and colors hinting at the presence of blackbirds through the bay window of the gallery space. These images are then added to the database to improve the capabilities of the system to recognize more blackbirds. In the summer of 2018 there was a disease among the blackbirds, causing the robots to capture fewer of them than the artists anticipated. However there were magpies, crows, and pigeons instead, so the images captured by the Spotter became a mix of all these birds.^([2](#chapter_11.xhtml#chapter11-2))
+
+Driessens and Verstappen’s installation comprises two monitors showing images generated by a GAN trained on real photographs of birds captured by the camera. These images evolve slowly and have a wide variety. To the human eye, it is easy to recognize that these are not real images. Yet, most of them suggest or look like birds. In some other cases, the image becomes very abstract and we can only guess the presence of a bird, as if it out of focus, hiding behind blurry twirls of grass or branches. Our eye then starts behaving like the robotic camera, looking for birds even when there are none in the scene.
+
+By bringing back these computer-generated images of nature to our attention in a site-specific setting, Driessens & Verstappen’s work allows us to peek into a future in which machines can be vehicles for imagining alternative worlds. It makes us close to these machine learning systems and reveals something about their perception. Their work can be read as an investigation into the question of machine imagination in the anthropocene, in which artificial forms of life become increasingly present within collapsing ecosystems.^([3](#chapter_11.xhtml#chapter11-3))
+
+## **Invisible Images**
+
+The work of Driessens & Verstappen reveals the iterative process of image generation that comes through the interplay of two neural networks (a *discriminator* and a *generator*) within a GAN. If the birdlike hallucinations created by the system possess such strange qualities, it is because they are not meant for the human sight: after all, they are images generated by a machine (the generator), for a machine (the discriminator).
+
+Trevor Paglen, an American artist and geographer who explores questions of computer-enabled mass surveillance, has worked with GANs as an artist-in-residence at Stanford University, producing a series of prints titled *Adversarially Evolved Hallucinations* (2017). These works were generated by training GANs on different data sets of images associated with taxonomies such as capitalism, dreams, humans, monsters, omens, and war. The resulting images present the kind of uncanny, abstract, painting-like qualities often found in GAN-generated imagery.
+
+Paglen has observed that most images produced today are what he calls *invisible images*, created and distributed for machines by machines and not meant for human eyes.^([4](#chapter_11.xhtml#chapter11-4)) Somewhere around the turn of the century, we have entered a new phase of visual culture that has emancipated itself from the human gaze and has become mostly invisible to us. Although it has paradoxically been mostly unnoticed, this revolution in image production might potentially be more impactful than the advent of photography. From satellite photos of secret military bases to automated snapshots of license plates, the overwhelming majority of images produced nowadays are invisible, made by machines for machines, leading us into an era where human “visual culture” has become a “special case,” an “exception to the rule” (Paglen, 2016).^([5](#chapter_11.xhtml#chapter11-5))
+
+Paglen has proposed the concept of *machine realism* to describe the principles behind this new era, which he defines as “an aesthetic and interpretive mode defined by the autonomous attribution of meaning to images by machine learning and AI systems.” In this mode of understanding, the meaning of images has become purely operational and must be interpreted in relationship to the objectives of the systems for which they are meant.
+
+Paglen’s machine realism is reminiscent of Bogart’s machine subjectivity. Working with the materiality of machine learning systems has allowed these artists to understand the dependencies between the products of these systems and their operational target, which comes out of a complex coupling of their training sets, their mathematical structure, their cost functions, and other aspects of the systems. In these systems, the training process, the model and especially the data become sites of political power. “In Machine Realism,” Paglen writes, “he who controls the training sets controls the meanings of images” (Paglen, 2018).
+
+## **Exploring the Collective Imaginary**
+
+Computational artist Memo Akten sees in deep learning generative algorithms a way to explore the collective unconscious. Beginning in the mid-2010s, he explored this idea in a series of work using conditional GAN (CGAN), a type of GAN that can generate images on the basis of another input such as another image. *Learning to See* is a series of studies and finished works in which the artist pictures machine learning models as agents that are trying to make sense of the world. These systems have been pretrained by the artist on specific databases, making them sensitive to particular patterns found in everyday life. In the eyes of these machines, common objects such as a bunch of wires and car keys become flowers, ocean waves, flames, clouds, or mountains—depending on the kind of data set on which they were trained. In *Learning to see: We are made of star dust* (2017), a CGAN is trained on snapshots of the cosmos from the Hubble telescope (see [figure 11.4](#chapter_11.xhtml#fig11-4)). A dual-channel video shows closeups of the artist’s own face on the left, while on the right the machine’s perception is revealed. As the camera plunges into the eye of the artist, his iris, pupil, then hair and eventually part of his facial piercings become stars, galaxies, his and nebulae. Through the unraveling of this machinic translation from the micro to the macro, Akten brings our attention to our own mystical fascination with the universe and reveals our collective appetite to understand the mysteries of life. In the process, he also suggests that humanity’s relentless quest for knowledge cannot be detached from its own image, and that like the machinic processes in the work, we are constantly projecting our own perceptual biases on the universe.
+
+![Figure 11.4 Still image from Learning to see: We are made of star dust #2, 2017 by Memo Akten. Video and interactive installation. Courtesy of Memo Akten.](images/Figure11-4.png)
+
+[Figure 11.4](#chapter_11.xhtml#rfig11-4)  
+Still image from *Learning to see: We are made of star dust #2*, 2017 by Memo Akten. Video and interactive installation. Courtesy of Memo Akten.
+
+ 
+
+In another work of that series called *Google Art: Learning to dream*, Akten trains a similar system on images from the Google Art project, a database containing tens of thousands of art works from more than 6,000 artists, including paintings, drawings, religious images, prehistoric art, and so forth. In an installation version of the work that was presented in 2018 at the Grand Palais in Paris, the camera is turned toward the audience, unveiling what a deep learning system sees.
+
+While the statistics-driven representational properties of deep learning systems reveal hidden systems of oppression, they also open a unique and novel opportunity to delve into the collective. Works like Ursula Damm’s *Memory of Space* (2002) and Brian House’s *Everything that Happens Will Happen Today* (2017), discussed previously in this book, use machine learning to trace dynamic portraits of human behavior. The strange nature of these portraits is attributable not only to the mathematical modes of perceptions of the machine but also to the social character of the training data, which makes the system act as “humans” (plural) (House, 2017).
+
+In the same vein, Memo Akten uses machine learning as a bridge to collective imagination. Generative deep neural networks provide a unique look into collections of data so vast that it would otherwise be impossible for human eyes to witness. But Akten reminds us of the hidden biases and power dynamics existing in the age of Big Data and AI and its relationship to art. “We have a very intimate connection with the cloud,” he writes. “We confide in it. We confess to it. We appeal to it. We share secrets with it, secrets that we wouldn’t share with our family or closest friends.”
+
+But just as the Church was once the guardian of humanity’s imagination in the face of the divine, Akten argues, in the age of learning machines multinational IT companies like Google that feed on this economy of self-induced surveillance now hold the keys to our collective consciousness (Akten, 2017).^([6](#chapter_11.xhtml#chapter11-6))
+
+## **Conclusion**
+
+Machine learning systems are subjective representational devices. From a space of sensations falling upon their inputs, they extract their own micro categories and in the process generate an imaginary space which directly emerges from the data that they are fed. Hence, they provide a mirror image of the biases contained in the human and nonhuman environments that design them and more specifically in the examples contained in their training data.
+
+Artists Ben Bogart and Heather Dewey-Hagborg raise this issue in their work. While Bogart explores the subjectivity of machine learning systems by showing how artificial neural networks create their own representations of the information they are fed in a way that is far from neutral but is rather highly dependent upon the information on which they are trained, Dewey-Hagborg highlights how the nature of the technology itself makes such inductive biases unavoidable. In a recent work titled *How do you see me?* (2019) she makes use of adversarial neural nets to generate self-portraits that are recognized by another machine learning algorithm as being the artist herself and yet look nothing like her.
+
+Artists working with machine learning are directly exposed to this particularity of the medium. Some of them, like Ben Bogart, Erwin Driessens, Maria Verstappen and So Kanno, have used these imperfections to explore questions about the nature of perception, cognition, and language in humans and machines. Others, like Heather Dewey-Hagborg and Trevor Paglen, point to the impact of these representational and biased technologies on the fabric of society. Finally, using the principles of culture jamming, projects such as the *White Collar Crime Risk Zones* and the *Voting Booth* criticize the inadequacies of machine learning technologies by using them as part of odd or ludicrous applications, such as predicting the next white collar offender on Wall Street or allowing people to vote with their faces rather than with their feet.
+
+These works constitute a reflexive and materially engaged critique of machine learning technologies whose strong dependency on data propels profound cultural, economic, and sociopolitical transformations. Nigerian-American artist Mimi Onohua’s ongoing project *The Library of Missing Datasets* (2016), an archive of data sets that should and yet do not exist, illustrates the disruptive effects of the advent of deep learning technologies in the age of Big Data. The work consists of filing cabinets filled with empty dossiers, each titled with the name of a missing data set, such as unreported domestic and sexual violence, police brutality, white collar crime, capital reserves in fiscal havens, and others. While Onohua’s project reveals the power imbalances and cultural contexts behind these gaps, it also points out that there are sometimes benefits to nonexistence.
+
+# **Notes**
+
+1.  [1](#chapter_11.xhtml#chapter11_1). The series includes five works. The first, *Watching and Dreaming (2001: A Space Odyssey)* (2014) uses a multilayer perceptron similar to the one used in *Dreaming Machine #3* (2012). The works *Watching (Blade Runner)* (2016), *Watching (2001: A Space Odyssey)* (2018), and *Watching (TRON)* (2018) all rely on k-means clustering and mean shift segmentation to break frames and sounds into components. The work *Through the haze of a machine’s mind we may glimpse our collective imaginations (Blade Runner)* (2017) uses SOMs trained on input frames. At the start of each scene, a SOM is initialized using the original frame as initial weights. For each subsequent frame in the scene, pixels are sampled and used to train the SOM. The training process is happening over time with a relatively small number of iterations per frame. When the scene changes the SOM weights are reset and the process starts again.
+    
+2.  [2](#chapter_11.xhtml#chapter11_2). The original title of the work, *Spotter #blackbird*, was changed to *Spotter #birds Amstelpark* in response to that situation.
+    
+3.  [3](#chapter_11.xhtml#chapter11_3). The GAN used in the installation is in never-ending training: the oldest training samples are replaced by new snapshots taken by the camera. This introduces an ever-shifting context in time. For example, had the installation been on site for a year, one would have seen the effects of the seasons in the generated imagery.
+    
+4.  [4](#chapter_11.xhtml#chapter11_4). Paglen’s remark applies beyond the image domain. For example, a recent study by the National Bureau for Economic Research suggests that companies are increasingly tailoring their corporate filings to be read by machines (Cao, Jiang, Yang, & Zhang, 2020).
+    
+5.  [5](#chapter_11.xhtml#chapter11_5). Artist Tom White’s approach to deep learning neural nets echoes with Paglen’s work. He has created a drawing system that allows generative neural nets to create abstract ink prints revealing the inner working of their visual systems. Aided by deep learning systems, White creates real ink prints that are reliably categorized by these systems as belonging to specific categories such as *rabbit*, *banana*, or *killer whale*. While these prints are sometimes interpretable by humans, they really are images generated by machines, for machines.
+    
+6.  [6](#chapter_11.xhtml#chapter11_6). Ironically, as Akten notices, the digital heaven holding this collective imaginary is called the *cloud*.
+    
+
+ 
+
+# **12**  **Conclusion**
+
+Since the beginning of the millenium, an unprecedented growth in information and computational power has brought a revolution in machine learning, leading to the advent of an advanced form of connectionism known as deep learning. Artists across the spectrum from visual arts to music to literature have been growingly engaging with machine learning technologies. In contrast to computer engineers and scientists, these artists do not use machine learning because of its precision but for its open-endedness. They are not so much interested in playing the imitation game of computational creativity as they are in repurposing machine learning algorithms in ways for which they were not initially designed.
+
+Interplays between art and machine learning well predate this era. In the decades following World War II, cybernetics electromechanical apparatuses displaying adaptive behaviors appeared at the frontier of art and science, such as Nicolas Schöffer’s spatiodynamic sculptures, Grey Walter’s robotic tortoises, and the groundbreaking work of Gordon Pask.
+
+During these early days of artificial intelligence, two competing models of computing were proposed: in one, computation would consist purely of symbol manipulations using the language of mathematics (symbolic AI); in the other, computation would mimic the biological neural networks of the human brain, processing subsymbolic transitions and connections (connectionism). Following the demise of the latter in favor of the former in the 1960s, the increasing fascination for computational systems led to a crystallization of thought about intelligent systems known as computationalism, a dualistic worldview characterized by the separation of intelligence as a mathematical construct from its embodiment in the physical world (Penny, 2017). Computationalism’s focus on process over matter echoes principles of the 1960s–1970s conceptual art movement as well as Jack Burnham’s prophecy that ideas and processes and not their material realization in art objects should become the new focus of art (Burnham, 1968).
+
+The artificial life and evolutionary art movements of the 1980s and 1990s applied exponentially growing computing power to simulations of “life-as-it-could-be” in virtual worlds. However, the simulated processes started to drift away from symbolic AI, replacing logic with probabilities and statistics, discrete mathematics with continuous calculus, and integers with floating points. In other words, the algorithmic art works of the late twentieth century moved from the world of the digital to that of the simulated analog. While artificial life art might be read as an attempt to reproduce the functional organization of the natural world, art works of this period were more than often disconnected from the real world.
+
+Throughout the 1990s evolutionary artists such as Karl Sims and William Latham explored ways to custom-code parametric and nonparametric models and train them using processes of selection, mutation, and crossovers. In parallel, in the early 1990s scientist Rodney Brooks attempted to conciliate both AI and ALife by echoing a number of anticomputationalist voices and claiming that AI systems did not need representations but real world embodiment. Brook’s New AI influenced both robotic art and ALife art throughout the 1990s in the work of artists such as Louis-Philippe Demers, Simon Penny, Ken Rinaldo, and Bill Vorn.
+
+The 1990s also saw the discreet expansion of connectionism within engineering and computer science circles. Only a handful of artists such as Nicolas Baginsky and Yves Amu Klein explored the use of artificial neural networks during this period as an approach to robotic and ALife art. These shallow connectionist unsupervised learning systems allowed these artists to put embodied robotic systems in real-world situations where they would generate unforeseen and mesmerizing behaviors beyond their immediate control.
+
+Since the dawn of the 2000s machine learning art has expanded through the work of artists such as Ben Bogart and Ursula Damm, who use self-organizing neural nets to explore creativity and perception in machinic forms of subjectivity. More recently, artists such as Memo Akten, Sofian Crespo, Mario Klingemann, Gene Kogan, Allison Parrish, and Anna Ridler have been exploring the representational affordances of deep learning systems, creating works that question the boundaries of human imagination, cognition, and dream. These works are set in a postdigital era in which, through the commercialization of what was once called the *cyberspace* and the pervasiveness of social media platforms, the virtual has become the new reality as societies are increasingly controlled by statistical learning systems that mine valuable information from huge piles of data. The new perceptual spaces generated by these highly complex machines are fascinating and unearthly—perhaps not so much because they are nonhuman, but because they represent humanity in its multitude (House, 2017).
+
+Deep learning is the latest incarnation of the connectionist approach to AI first proposed in the post–World War II era. Its power lies in an ability to learn directly from raw data, which makes deep learning algorithms usable by a wider range of users, including artists. Deep learning systems still have important limitations, including that they currently require a lot of data to perform well (whereas human beings are able to learn complex patterns with only one or two examples). It is unclear whether humanity is soon to enter yet another AI Winter, where the technical limitations of deep learning, along with its damaging effects on society through the technology-enhanced proliferation of autonomous weapons, dissemination of fake news, systemic racism and sexism, and others, will make the quest for artificial intelligence vanish once again into global disappointment.^([1](#chapter_12.xhtml#chapter12-1))
+
+Deep learning systems rely upon self-organized machinic representations of raw data achieved through layers of massively interconnected artificial neurons operating at a subsymbolic level. Hence one of their most potent characteristics is the ability to project features of the world into latent generative spaces that are agnostic to the type of content that they are trained upon.^([2](#chapter_12.xhtml#chapter12-2))
+
+Machine learning seems to have asserted its importance over symbolic AI, at least for the time being. In this historic moment we are bearing witness to the collapse of computationalism and with it the dubious concept of digital life and intelligence based purely on symbol-based forms. As the dust settles, the world is increasingly populated by artificial systems that are closer to the analog than to the digital. Deep neural networks process zillions of data channels with smoothness and softness in ways that feel almost lifelike. Yet these processes are still executed through digital data running on general-purpose computer architectures, albeit at an unprecedented scale.
+
+Art in the age of machine learning is a testimony to a postdigital society overloaded by sensory stimuli in which the failure of humanism and modernism has given way to a world of computer-curated imagination. In this world, technologies model the paradoxical nature of our collective intelligence in all of its unfathomable wisdom. In this arena of sublime and unrelenting mesmerism illusion has become quintessential to the fabric of reality. Machine learning artists of this postvirtual and posttruth era reveal how nonhuman generative datacollages of images never meant to be seen and sounds never meant to be heard can now be reappropriated as hybrid algorithmic readymades.
+
+Perhaps here art becomes closer to the experimental and performative science of cyberneticians in which representation merges with intervention and the virtual becomes material. Art shows us a way to appreciate the aesthetic and resonant value of the fake because artists have always known how to navigate between fiction and reality. When all faces and voices can be faked, a twisted truth lies in the glitch, in the beautiful imperfections made possible within our shared technological reality.
+
+## **Zooming Out**
+
+The exploration of machine learning art in this book has taken the form of an expedition into the code and materiality of machine learning algorithms. We started our journey in the vascular system of the beast: the training loop. There we explored artistic strategies for critically engaging with optimization processes at the heart of training algorithms by for example taking advantage of the behavioral morphologies of such systems as they learn.
+
+Afterward we turned our gaze toward machine learning’s nervous system: the models. We looked at how such adaptable structures imply new forms of machinic representations and how different species of models such as parametric systems and neural networks allow for different artistic approaches and outcomes.
+
+The last part of our voyage took place in machine learning’s digestive system, looking at its most cherished food: data. Machine learning allows artists to substitute coding for data curation by reusing existing data sets, assembling new ones from existing data, or generating their own. Machine learning opens up new forms of algorithmic remix via the remixing of data and models, observed through the interplay between perception and imagination in machine learning works.
+
+Let us now zoom out from the body of the beast to get a better view of it as a whole.
+
+## **Plugging the Gap**
+
+Through this book I have endeavored to define machine learning art as a porous and nonexclusive subcategory of the digital arts. By examining the rich creative practice surrounding machine learning one can observe qualities specific to this art form that distinguish it from other approaches used by new media artists such as symbolic AI, ALife, and new AI.
+
+Symbolic AI favors a top-down approach in which programmers have a certain idea of what they want to accomplish and implement it within a system, progressing from the general to the particular. Harold Cohen’s AARON software is an iconic example of such an approach. The relationship to algorithmic matter in Cohen’s work is direct and cerebral: the creator seeks to express his intentionality through computer language. The top-down approach of symbolic AI gives creators a great deal of control because the artist is entirely responsible for translating their artistic vision into the program.
+
+However, highly controlled symbolic AI systems like AARON are not very autonomous, and depend almost entirely on the virtuosity of their designer. This programming mastery often represents a barrier of entry to many artists. Yet even for the experts symbolic AI requires important time investment to achieve meaningful and novel results—think about how Harold Cohen developed AARON over more than four decades. The inability of these systems to adapt to new contexts puts pressure on the designer to constrain the possibilities. In systems displaying behaviors, such as robotic installations, this rigidity prevents such rule-based systems from transforming over time. Whether with generative audiovisuals or robotics, symbolic AI approaches define a limited but expressive territory from the top down. Because the designer needs to represent their ideas using symbols and rules, symbolic AI also makes it difficult to represent or embody the kind of multidimensional processes that commonly happen in creative activities. In the same way that humans do not really *know* how they breathe, artists do not truly know how they create: while they may rely on a set of basic principles (such as how to arrange elements, light, colors, and other components), most of their creative decisions happen intuitively.
+
+While machine learning borrows from the goal-seeking and decision-making processes of symbolic AI, machine learning also shares with ALife and new AI the idea that global organization arises from subcomponents. The artistic practice of machine learning privileges a bottom-up approach in which meaning arises from an engagement with processes and materials, in contrast to the technoscientific approaches to machine learning that typically follow a top-down view through researching mathematically sound systems for accomplishing specific goals.
+
+What distinguishes machine learning from other practices stems from its particular materiality as an assemblage of three components: training process, model, and data. This triad offers artists a broad range of possibilities for intervention, allowing them to choose what they want to control and what they want to leave to the machine. For instance, in producing her installation *Not the Only One* artist Stephanie Dinkins had full control over the data set but used it as a way to influence the learning of a generative system that often emits strange responses rather than as an interactive archive. In contrast, to create their robotic installation *Zwischenräume* Petra Gemeinboeck and Rob Saunders carefully defined the reward function of the system to guide the training process and yet have little control over the data to which their curiosity-driven robots are exposed, which may vary depending on the venue, time of day, local culture, and other influences.
+
+Machine learning artists working in different fields recognize one another as members of a common family; the universality and the *data agnosticism* of machine learning systems allow for the transposition of ideas and methods from one disciplinary realm into another. Indeed, many artists active in machine learning (myself included) cross traditional media boundaries either by producing different works using different media or by combining many machine-enhanced media in a single work.
+
+By its capacity to learn from experience, machine learning endows autonomous self-organizing systems with an ability to relate to the real world. For instance, in the domain of image generation neither AARON (which uses symbolic AI approaches) nor Karl Sims’s artificial creatures (which uses artificial life methods) built themselves through exposure to real-world data. In contrast, image-based machine learning art projects such as Sofia Crespo’s *Neural Zoo*, Ben Bogart’s *Dreaming Machines* series, and Driessens & Verstappen’s *Spotted #bird Amstelpark* project generate new imagery derived from real-world images.
+
+By connecting self-organized autonomous systems with the real world, machine learning art reinterprets both the top-down 1960s–1980s symbolic AI obsession with symbols and rules and the bottom-up practices of 1980s–1990s artificial life and robotic art, allowing interactions between the virtuality of the machine and the reality of the physical world. The next frontier of this phenomenon is the interactions between computational and biological systems. Natalia Balska’s installation *B–612*, which brings a reinforcement learning computational neural network in a symbiotic loop with a plant over the course of many months, is an exemplary exploration of the tensions between reality and virtuality in the age of machine learning.
+
+## **Beyond Metacreation**
+
+Machine learning allows artists to connect self-organizing systems to the real world by allowing computer programs to design themselves in response to examples sampled from reality.^([3](#chapter_12.xhtml#chapter12-3)) Machine learning automates the process of connecting inputs to outputs, allowing its designers to avoid having to design a program from scratch. Instead, they can put together a learning context by carefully selecting its components such as data, model, evaluation function, and training process.
+
+Artificial life had already suggested ways to remove the human designer from the loop by simulating self-organizing systems on the computer. However, the basic rules of these systems still need to be designed by a human and therefore limit their possible outcomes to a certain realm of possibilities. Genetic algorithms, which lie at the fringe of ALife and machine learning, use the self-organizing and optimization capabilities of evolutionary systems as a way to learn from the retroaction between the system and some external data but rarely rely on data sets in the way that deep learning systems do. Karl Sims makes use of data only on the surface: while human decisions influence the fitness function, the strange creatures that his systems generate are purely computational, based on rules designed by Sims himself. This approach is very different from those leading to the virtual creatures in Sofia Crespo’s *Neural Zoo* series since the artist does not need to design the rules of the system but to train it on images of lifeforms taken from the real world.
+
+But while machine learning automates part of the work typically involved in coding, one needs to be wary of the idea that machine learning systems make things easier for artists or replace their authorship. Machine learning technologies displace and reconfigure the creative agencies involved in the artistic process, thereby nurturing new human-machine relationships as part of creative endeavors.
+
+## **Human-Machine Relationships**
+
+Although media coverage of AI-based art more than often presents new machine learning systems that can *make art*, artists working with these technologies rarely use the term *author* or *artist* to qualify their own machine learning systems because they are well aware of the intense human cognitive and creative labor involved in machine learning art.
+
+On the other hand, the terms *tool* or *instrument* seem equally unsatisfactory, given the important autonomy of these systems. Rebecca Fiebrink uses the concept of *metainstrument* to describe her interactive machine learning software the Wekinator. Fiebrink observes how artists such as Laetitia Sonami and Suzanne Kite use the Wekinator in their work in order to design new instruments. They apply it in an embodied, performative way, hence using the Wekinator as an instrument to create an instrument.
+
+The machine as *collaborator* is another commonly used metaphor to describe the interactions between artists and machine learning systems. This is how Sougwen Chung describes her relationship with her adaptive drawing robots D.O.U.G. that are involved in performative co-drawing sessions. In other cases, the relationship is more unidirectional, as the system is used as a source of inspiration rather than as an interactive cocreator, acting more like a *muse* whose unruly articulations can help the artist escape his own dullness and blockage. David Jhave Johnston’s poetry book series *ReRites*, for which the artist edited, day after day, the outputs of a deep learning recurrent neural network trained on poetry, provides an example of such a relationship. Sometimes such inspirational agencies become a reflection of the artist herself, revealing the idiosyncratic qualities of her own practice, such as reported by Anna Ridler when she found that the GANs used in her 2017 project *Fall of the House of Usher* revealed to her aspects of her own style, such as her tendency to draw eyebrows in the same way as eyes. Here, machine learning is perhaps best understood as *echo* in its mythological sense, performing its machine subjectivity through reflecting the voice of the artist. Its processes are not human but its functions are “crafted in imitation of and in response to human thought” (Gee & Audry, 2019).
+
+William Latham introduced the concept of the artist as a gardener, turning the machine into a generative *garden*. Machine learning can create boundless spaces of possible sounds, images, forms, and behaviors from which artists, audiences, or even other machines can pick. This idea is not reserved to evolutionary systems. Think of the multiple levels of gardening involved in the production of Anna Ridler’s *Mosaic Virus* installation, from carefully choosing the parameters of the model to selecting the right mix of images in the data set—not to overlook the actual gardening labor involved in growing the tulips!
+
+Memo Akten believes that machine learning is such a unique creature that no single metaphor can really account for the richness of its peculiar nature. For example, one can perhaps compare machine learning art practice to the action painting of Lenore “Lee” Krasner and Jackson Pollock for which the artist learns to master a chaotic system (splashing paint on a canvas) through trial and error. However, this metaphor is limited because contrary to the fluid dynamics involved in splashing paint over canvas, the rules involved in machine learning systems are man-made.
+
+As an alternative metaphor, Akten suggests that of taming a wild horse. In this case, one interacts with an autonomous creature and in this process both parties somehow need to tame one another, establishing a common language that does not necessarily come naturally to us, such as pulling the reins in order to turn or kicking in order to move forward. In this process you cannot really say that you are using the horse as a tool nor that you are collaborating with it. Although also imperfect, to Akten this metaphor echoes the concept of coupling evoked by autopoiesis (Varela, 1992) and embodied interaction theories (Dourish, 2001).
+
+## **Taming the Unknowable**
+
+Akten’s analogy with taming a wild animal, although incomplete, resonates with a concept that keeps coming back in machine learning art under a plethora of different attributes. Machine learning is said to be strange, surprising, indeterminate, unfathomable, uncanny, unexpected, unpredictable, unexplainable, and unknowable. The autonomy of these systems and the complexity of the mathematical models on which they rest produce outcomes that often defy rational understanding, not only for audiences but also for their designers.
+
+These characteristics of the medium make it very attractive to artists who choose to engage with it. Because of these qualities that perhaps echo the familiar strangeness of life in the twenty-first century, these artists are ready to accept the dire, time-consuming, and often frustrating work involved in working with machine learning technologies.
+
+Of course, all artists are confronted to some extent with the instability of the materials that they work with, be it paint, clay, words, or code. In the twentieth century, the use of chance and stochastic processes had a deep impact on contemporary art. Dadaist poets introduced the use of chance and algorithmic processes to free their minds when writing poetry. These techniques would later be developed by Beat Generation poets and the French OULIPO. The Surrealists invented the unpredictable *cadavre exquis* game to collective art making. Action painters explored the chaotic nature of dripping and splashing paint on canvas. In the 1960s John Cage, Yoko Ono, and Iannis Xenakis explored indeterminacy as part of their revolutionary approaches to sound and music.
+
+The appearance and development of computer technologies gave birth to computer art by opening up new forms of autonomy and unpredictability in artistic processes. The development of connectionism, genetic algorithms, and artificial life in the 1980s gave birth to a new range of artistic practices including generative art, ALife art, and evolutionary art. These movements were characterized by an embrace of the autonomous nature of the generative processes. However, contrary to the unpredictability of physical materials such as clay and paint pigments, these processes were ultimately custom coded by their designers, thus giving artists direct control over their outputs, at least in principle. Furthermore, computer art operated mostly in the realm of the virtual and was for the most part disconnected from the outside world.
+
+Machine learning art reconfigures the relationship between artists, audiences, and algorithmic processes in at least three ways. First, the training process itself becomes a source of aesthetic effects. Throughout learning, machine learning systems come to iteratively change their own behavior as they become attuned to their environment. This also opens up phenomenological forms of human-machine relationships through embodied couplings, both human and algorithm attempt to adapt to one another.
+
+Second, whereas computer art involves the artist-programmer in an engineering practice in which one has to build an algorithm, the practice of machine learning art is more analogous to experimental science. One has to choose a training algorithm, build a model, create a data set, and then leave the system to run and adapt—a process that is often not and can take several hours or days. Although in coming years, advances in computational power will erode the training time, it remains that the nature of the practice is very different from traditional computer programming. Furthermore, as processing power grows so does the size of data sets, so machine learning art might remain for the most part less instantaneous than coding.
+
+Finally, the artist’s influence on the system is indirect by design because the whole point of machine learning is the autonomy of the learning algorithm. Machine learning artists cannot merely change a line of code to fix a bug. In order to tame the beast, they need to play with the elements at their disposal, tweaking the hyperparameters and the objective function, remixing the data set and using their own intuition through trial and error. Paradoxically, artists themselves need to engage in an adaptive process as they try to shape the system to fit their needs as the system responds with its own decisions.
+
+## **Paradigm Shift in the Art World**
+
+In the late 1960s Jack Burnham suggested a revision of contemporary art inspired by cybernetics and systems theory. In this new regime the art object had to give way to processes. Burnham’s *systems art* echoed a dematerialization of aesthetics promoted by the avant-garde of his time, including conceptual and performance art and also an emerging computationalist worldview within computer science that would come to profoundly influence culture. This new version of Cartesian dualism reimagined through information technologies also favored de-materialized high-level processes (software) over mostly irrelevant low-level matter (hardware).
+
+In parallel to cognitive sciences finally moving away from computationalism and increasingly recognizing the importance of the body in cognition, the performative turn in the humanities has brought materiality back into the conversation. This paradigmatic shift calls for a more nuanced vision of the human in which processes and behaviors cannot be dissociated from their material embodiment. As an embodied conception of aesthetics that rejects a dualistic understanding of robotic behaviors, Penny’s aesthetics of behavior offers a contemporary alternative to Burnham’s systems art compatible with this shift.
+
+As humanity adapts to a series of planetary crises (global warming, pandemics, information wars, and many others) the centrality and exceptionalism of the human figure is increasingly called into question (Braidotti, 2013). Through their engagement with the algorithmic and informational materialities of machine learning systems, the artists presented in this book develop new ways of reimagining the relationship between human and nonhuman processes. The alien nature of these technologies may prevent us from falling into what media artist David Rokeby calls a “default form of humanism” by “shaking up our overfamiliarity” with ourselves (Kleber & Trojanowska, 2019). This cannot be done, however, without also reinventing how such novel artistic forms are being curated, disseminated, and consumed by their audiences.
+
+On the bright side, the widespread craze for AI in the media combined with an interest from the tech business sector in AI-driven digital arts has aroused keen interest from mainstream contemporary art networks that have otherwise been wary of new media art. However, this interest from mainstream contemporary art institutions is often ill-placed as it tends to narrativize AI through the fear and excitement found in mainstream media while promoting AI art that fits within the norm of accepted formats.^([4](#chapter_12.xhtml#chapter12-4))
+
+Machine learning art has also been fostered by a technoscientific network of multinational and industry-driven conferences. This kind of enthusiasm for art within scientific, engineering, and business circles is relatively uncommon—an exciting aspect of machine learning art that has facilitated its promotion throughout the general public. However, the broader agenda of the corporate-scientific network not only tends to diverge from that of new media artists but also broadly misunderstands or misinterprets media art theory and history. One of the most pervasive effects of this situation has been the disproportionate dissemination of works directly applying deep learning methods developed by the industry within the contexts of artistic institutions. This has resulted, for example, in the predominance of convolutional neural networks such as DeepDream and GANs in Google-supported works and creative AI exhibitions such as Machine Learning for Creativity and Design at NeurIPS. Considering the diversity of machine learning art approaches revealed throughout this book, this focus on convolutional networks’ generative imageries is not only impoverished; more importantly, it reinforces a restrictive definition of machine learning art so inseparable from Google’s algorithms that it becomes in effect a form of diffuse branding.
+
+The territory occupied by machine learning art goes far beyond the realm of GAN imagery. Its adopters are driven by a desire to move beyond existing aesthetic norms through an engagement with the unique materialities of machine learning. By approaching machine learning systems critically in their mode of operation, these practitioners reveal the imperfections, fragility, subjectivity, and materiality of these advanced technologies that have become part of the world’s fabric. Beyond the artificial, machinic, and virtual qualities of these automated systems, these artists bring to light their profoundly human dimensions. Engaging with such murky processes requires artists to embrace a certain decentering of their intentionality and a certain amount of letting go. In turn, it also demands that the public let go of their expectations for computer technologies to be precise, instantaneous, and user friendly: to engage with uncanny forms of technological behavior that expand beyond rational understanding.
+
+To support and promote the exceptional diversity and richness of these new aesthetic forms and practices, artistic institutions need to help reshape audience expectations and invent new presentation and dissemination formats. This in turn would allow for the emergence of new types of works made possible only by machine learning systems. Public works could run over many years, possibly across multiple generations, constantly modifying their behavior with the influx of new information. Adaptive art works could live inside homes, keeping a trace of past interactions in the way that they behave and act in the world, transcending time. Human-machine music bands would emerge, dissolve, and reassemble to perform personalized algorithmic remixes, releasing in a single day more songs that have ever been produced in history. Viral machine learning art would live among us—undercover, barely noticeable, playfully inspiring one another, their collective behavior seldom resurfacing to our view.
+
+Deep learning has brought back to the forefront the myth of the machine as artist (Broeckmann, 2019). While this idea is problematic in more than one way, it remains that the level of agency and creativity shown by deep learning algorithms forces a rethinking of the role and status of the artist in contemporary societies, and whether this role can be partly or wholly occupied by machines. As AI technologies develop at such a fast pace and as we correspondingly see increasing progress in the field of computational creativity, the debate is far from closed.
+
+While the possibility of machine-made art presents real threats to the status of the artist, the automation of creative processes may also make art more accessible and democratic, both by practitioners and consumers. If learning algorithms become so powerful that they succeed in going beyond the mere generation of novel images and contribute in meaningful ways to contemporary art, it will fundamentally change not only the art world but society as a whole. There is a legitimate concern that such machines could end up robbing artists of their livelihood and relegate art to the status of entertainment, with dire effects on societies. For example, what would happen if the role of artists became dominated by IT multinationals producing AI-generated art? Faced with this threat, artists and art institutions may have to reconsider their role and that of machines. But should we refuse altogether the idea that a machine can ever be the author of a work, for fear of losing our humanity? Shouldn’t we split the *artist function* of a machine-generated work in two parts, ascribing one artist function to the machine and a *meta-artist function* to its human designers (Audry & Ippolito, 2019)? Does it even make sense to maintain the anthropocentric notion that only humans can make art, when we know that machines cannot be decoupled from the humans that made them? Or should we, on the contrary, boldly embrace and explore the myth of the machine-as-artist by finding ways to generate these machines that respond to our values, like the Abraham project initiated by Gene Kogan to create an AI artist emerging from the collective work of a distributed community of human artists?^([5](#chapter_12.xhtml#chapter12-5))
+
+In the wake of these profound transformations, art institutions and curators need to understand and acknowledge the outstanding diversity of machine learning art and its potential to profoundly disrupt the practice and consumption of new media art. They should embrace the interdisciplinary nature of machine learning art practices that move beyond traditional media frontiers and allow artists to fluidly navigate from text to image, from sound to behavior. They should support machine learning artists’ craving for the unfathomable nature of adaptive algorithms by infecting the audiences with an appetite for technological artworks that cannot be explained rationally. These transformations align with a much needed paradigmatic shift that recognizes the complex nature of human-machine relationships and asks audiences to take an active part in the meaning-making process of the work.
+
+## **Final Thoughts**
+
+Machine learning brings us into a postvirtual era woven out of unending flows of data. These torrents of information are mobilized by adaptive systems of representation that defy rational understanding through advanced forms of machinic intuition. This new age of adaptive automation is already having a strong impact on society, notably through novel processes of control and surveillance that silently reconfigure relations of power and domination, for example by transforming users into data producers for social media businesses.
+
+In the hands of artists, machine learning systems become a new material whose autonomy resists artistic control. Unable to rationally explain machine learning art works, viewers can only fully experience them using their emotional intuition, heralding a new era in contemporary digital art. In contrast to approaches based on chance or self-organization, machine learning art opens new opportunities to establish relationships with various aspects of the real world.^([6](#chapter_12.xhtml#chapter12-6))
+
+Machine learning is already supporting a new range of practices by artists who do not need to code in order to design programs but can rather assemble data, interact with models, and explore the potentialities of training processes. They are able to explore and produce generative art without the need to code, by interfacing with the machine in a more embodied fashion. As in the twentieth century the computer enabled new forms of creation that included practitioners such as *artist-coders*, machine learning in the twenty-first century will allow a new range of *data science* artists to create the kind of works that formerly only coders were able to do.
+
+Beyond aesthetics, what are the politics of such practice? Today’s new media art provides one of the last remaining bastions for research that is simultaneously technophilic and yet against techno-utopianism and technodeterminism. There is little doubt that given sufficient time and resources, AI technologies will increasingly provide products and services that improves everyday life, and that consumer markets will soon be flooded with autonomous cars, autodiagnosis health systems, and useful robots to take care of tiring or dangerous tasks. However, as the crisis of social media has recently shown, novel technologies often work against the common good. The real challenge of history is not technological advancement: it is a process of becoming, and it is about figuring out the kind of human qualities we want to develop as a species and the kind of world we want to collectively enact.
+
+The advent of machine learning and its growing importance in the twenty-first century resonates with the performative turn in humanities, as it suggests that machinic intelligence has less to do with logic and rationality and more with lifelike processes of self-organization that run beyond traditional frameworks of representation toward a performative worldview. While the general public still perceives computers as things that accumulate and manipulate data by applying logical rules, the artificial agents that will populate our future will look less like advanced calculators and more like life forms. However, the price to pay is that the behavior and data processing of these artificial hybrids might lie even further beyond their users’ comprehension than today’s already opaque systems because these hypothetically adaptive devices would continuously adjust and improve their decision processes at too fast a pace for humans to keep up.
+
+Artists have an important role to play in addressing these technologies beyond their commercial and scientific applications. Through their experimental engagement with training processes, models, and data, machine learning artists have a unique vantage point that allows them to question these technologies before they crystallize into standardized, consumable formats. In some instances, artists might be able to address blind spots in an increasingly homogeneous research culture driven equally by militarism and neoliberal capitalism.
+
+The autonomy and unknowability of machine learning systems suggest new ways to make and experience art that force a rethinking of the art world in the twenty-first century. Grasping these tensions through material engagements with machine learning systems, artists can reveal the complexities and imperfections of the world and propose critical ways of understanding the global imaginary landscapes woven in the age of machine learning.
+
+# **Notes**
+
+1.  [1](#chapter_12.xhtml#chapter12_1). Future developments of the technology will likely rely on these systems’ capacity to imagine and generate new data, and to make out-of-distribution generalization (in other words, to think outside of the box), all of which demand a better understanding of creative processes.
+    
+2.  [2](#chapter_12.xhtml#chapter12_2). Think about how poet Allison Parrish transforms text into a new material that is more akin to image, and that can be freely manipulated.
+    
+3.  [3](#chapter_12.xhtml#chapter12_3). This connection is mediated by digitized data, which is of course an imperfect and biased representation of the world.
+    
+4.  [4](#chapter_12.xhtml#chapter12_4). This attitude gave us *Portrait of Edmond Belamy* (2018), an aesthetically and conceptually poor work, decried by the community of machine learning artists, which yet sold at a high price on the art market. The marketing of the piece as a ground-breaking AI-authored work ignores both contemporary new media art practices and art history, which abounds in examples of autonomous image-generating machines from Jean Tinguely to Harold Cohen.
+    
+5.  [5](#chapter_12.xhtml#chapter12_5). See [https://abraham.ai/](https://abraham.ai/).
+    
+6.  [6](#chapter_12.xhtml#chapter12_6). There is an intricate network of relationships between independent artists and the private sector. Big corporations such as Google and Facebook have cultural programs in which they give artists access to their databases, allowing them to produce unique work that then contributes to their hegemony. These organizations are facing a major threat with the social acceptance of AI, and philanthropy is a proven cost-effective way to influence mainstream culture.
+    
+
+ 
+
+# **Glossary**
+
+**adaptation** Process by which a system modifies its structure in order to improve its performance in its environment. See also **machine learning**.
+
+**agent** Autonomous entity that acts in an environment in response to its observations or state. See also **behavior**.
+
+**AI winter** A period of drought in research funding in the field of artificial intelligence, following criticism that the field had not achieved its goals. The first AI winter happened in the late 1970s, and the second occurred in the late 1980s through the mid-1990s.
+
+**algorithm** Finite and ordered set of instructions designed to accomplish a task and/or solve a problem. See also **algorithmic art**.
+
+**algorithmic art** A form of generative art in which an algorithm is used to produce a stabilized media such as an image or a music score. See also **generative art**.
+
+**ALife art** See **artificial life art**.
+
+**artificial intelligence** Branch of computer science that aims to reproduce intelligent behavior in computational systems.
+
+**artificial life** Interdisciplinary field of study combining computer science and biology that aims to simulate properties of living systems using computer programs, robotics, or biochemistry.
+
+**artificial life art** Art created using artificial life processes. See also **evolutionary art**.
+
+**artificial neural network** Computing machines or models inspired by biological neural networks, which involve ensembles of interconnected units (neurons). Although the term encompasses a large and varied number of such models, within the field of machine learning it generally refers to networks organized in layers of neurons that process data in parallel. See also **connectionism, deep learning, multilayer perceptron, perceptron**.
+
+**backpropagation** Algorithm used to calculate the contribution of synaptic weights to the cost function in an artificial neural network.
+
+**behavior** Temporally invariant form of observable events produced by an agent performing in its environment. See also **agent**.
+
+**behavior aesthetics** Aesthetic field characterized by the performance of machine systems as they behave within the real world. See also **agent, behavior**.
+
+**classic AI** See **symbolic AI**.
+
+**cognitivism** See **computationalism**.
+
+**computationalism** Theory of mind that posits that cognition is a form of computation, i.e., manipulation of symbols. See also **enactivism, symbolic AI**.
+
+**computer art** Art created using computers. Traditionally associated with computer-made art in the 1960s and 1970s. See also **digital art**.
+
+**connectionism** Theory of mind that posits that cognition is the result of the interaction between ensembles of interconnected units (neurons). See also **artificial neural network**.
+
+**convolutional neural network** Type of deep neural network typically used in image applications that organizes information hierarchically by looking at patterns in different parts of an image and smartly combining the information at a higher level.
+
+**cost function** Type of evaluation function used in supervised and unsupervised learning that attributes a value to a model’s decision. A machine learning algorithm attempts to minimize the cost over a data set. See also **evaluation function, supervised learning, unsupervised learning**.
+
+**cybernetic art** Art created following early cybernetics principles, in particular, systems and feedback.
+
+**cybernetics** Interdisciplinary study of control and communication in biological and machinic systems.
+
+**deep learning** Subfield of machine learning that uses artificial neural networks to automatically represent complex and abstract concepts out of simpler ones in nested layers of interconnected units called neurons. See also **multilayer perceptron, shallow learning**.
+
+**deep neural network** Artificial neural network with more than two layers. See also **multilayer perceptron**.
+
+**digital art** Art created using digital technologies such as digital devices, computers, or networks. See also **computer art**.
+
+**emergence** Phenomenon by which global characteristics of a system arise from local interactions between its constituents. See also **self-organization**.
+
+**enactivism** Theory of mind that posits that cognition emerges through the dynamic coupling between an embodied organism and its environment. See also **computationalism**.
+
+**evaluation function** A function used to measure the performance of a machine learning model over data. See also **cost function, fitness function, reward function**.
+
+**evolutionary art** A form of generative art that relies on evolutionary computation methods such as genetic algorithms to make art. See also **evolutionary computation, generative art, genetic algorithm**.
+
+**evolutionary computation** Subfield of artificial intelligence that relies on optimization algorithms inspired by biological evolution. See also **evolutionary art**.
+
+**fitness function** Type of evaluation function used in genetic algorithms that attributes a value to the digital genotype of an individual. A genetic algorithm usually attempts to maximize fitness by selecting individuals with higher fitness values. See also **evaluation function, genetic algorithm**.
+
+**generalization** Ability for a machine learning system to expand its capabilities to data it has not been trained on.
+
+**generative adversarial network** Type of convolutional neural network consisting of two competing neural networks: a generative network that tries to fool a classifier network by creating fake images.
+
+**generative art** Art created in part or in whole using an autonomous system, typically computational.
+
+**genetic algorithm** Adaptive optimization procedure in which digital genotypes are evolved to generate increasingly performing phenotypes by maximizing a fitness function. See also **evolutionary computation, fitness function**.
+
+**genetic programming** Type of genetic algorithm in which the individuals being evolved are computer programs. See also **genetic algorithm**.
+
+**good old-fashioned AI** See **symbolic AI**.
+
+**K-means** Unsupervised learning algorithm that automatically groups elements of a data set into separate clusters.
+
+**latent space** Mathematical space constituting a distributed representation of data learned by a deep neural network. See also **generative adversarial network, nonparametric system, parametric space**.
+
+**machine** Describes a model or another kind of adjustable structure that embodies what the system knows about the world. See also **model**.
+
+**machine learning** Subfield of artificial intelligence that develops and uses computer programs that learn from data rather than rely on explicit logical rules. See also **artificial intelligence**.
+
+**machine learning art** Art that uses machine learning at its core. See also **machine learning**.
+
+**model** In machine learning, a data structure that represents some information about the world that the system is trying to learn from data. See also **machine**.
+
+**multilayer perceptron** Artificial neural network made by stacking layers of perceptrons on one another. See also **artificial neural network, perceptron**.
+
+**new AI** Approach to artificial intelligence that attempts to produce intelligent behaviors in robots through direct interaction with the real world and without the use of representations or symbols. See also **enactivism**.
+
+**new media** Nontraditional media, typically associated with computational systems. See also **new media art**.
+
+**new media art** Art created using new media technologies. See also **new media**.
+
+**nonparametric system** A computer program whose behavior responds to a generic mathematical function that does not depend on a set of parameters. See also **parametric system**.
+
+**nouvelle AI** See **new AI**.
+
+**optimization** Set of methods and principles in computer science and mathematics that attempt to find the best solution to a problem among a group of possible solutions.
+
+**parametric space** Mathematical space associated with a parametric system, in which each point in the space corresponds to a set of values for the parameters. See also **parametric system**.
+
+**parametric system** A computer program whose behavior can be adjusted using a set of values called parameters. See also **nonparametric system, parametric space**.
+
+**perceptron** Simple artificial neural network able to classify a pattern in one of two categories. Perceptrons constitute the building blocks of deep learning architectures. See also **artificial neural network, multilayer perceptron**.
+
+**process** See **algorithm**.
+
+**program** See **algorithm**.
+
+**recurrent neural network** Type of neural network in which some of the outputs are connected back into the inputs, creating a feedback loop that allows the network to retrace the past. This property grants recurrent neural networks a kind of memory that makes them suitable for sequential data such as sound and text.
+
+**reinforcement learning** Category of machine learning problem in which the machine learning system is an agent that evolves in an environment and attempts to learn how to behave as efficiently as possible by maximizing a reward function. See also **supervised learning, unsupervised learning**.
+
+**reward function** Type of evaluation function used in reinforcement learning that attributes a value to an agent’s states and/or actions. A reinforcement learning agent usually attempts to maximize its reward over time by choosing actions that yield higher rewards. See also **evaluation function, reinforcement learning**.
+
+**self-organization** Process by which an organization at the global level emerges from the local interactions between an ensemble of subunits. See also **emergence**.
+
+**self-organizing map** Type of shallow artificial neural network that learns how to automatically organize elements in a low-dimensionality space (typically one- or two-dimensional).
+
+**shallow learning** In opposition to deep learning, refers to nonconnectionist machine learning models or to artificial neural networks with only a few layers, typically no more than three (input, hidden, and output). See also **deep learning, multilayer perceptron, perceptron**.
+
+**supervised learning** Category of machine learning problem in which the machine learning system is trained on prelabeled data, that is, data for which the appropriate output has been assigned (typically by a human being). See also **reinforcement learning, unsupervised learning**.
+
+**symbolic AI** Branch of artificial intelligence that attempts to explicitly represent knowledge using symbols and rules. See also **computationalism**.
+
+**system** Organized set of elements interacting with each other according to certain principles or rules. See also **cybernetics, systems art**.
+
+**training process** In machine learning, describes an iterative procedure that optimizes a machine or model on real-world data. See also **evaluation function, machine, model, optimization**.
+
+**unsupervised learning** Category of machine learning problem in which the machine learning system is trained on unabeled data and tries to automatically extract some information about the data, such as creating its own classes or representing it on a lower-dimensional space. See also **reinforcement learning, supervised learning**.
+
+ 
+
+# **Bibliography**
+
+*   Akten, Memo. 2016a. “AMI Residency Part 1”: Exploring (Word) Space, Projecting Meaning onto Noise, Learnt vs Human Bias.” Medium (blog). August 11, 2016. [https://medium.com/artists\-and\-machine\-intelligence/ami\-residency\-part\-1\-exploring\-word\-space\-andprojecting\-meaning\-onto\-noise\-98af7252f749](https://medium.com/artists-and-machine-intelligence/ami-residency-part-1-exploring-word-space-andprojecting-meaning-onto-noise-98af7252f749).
+*   Akten, Memo. 2016b. “Retune 2016, Part 1: The Dawn of Deep Learning.” Memo Akten (blog). October 10, 2016. [https://medium.com/@memoakten/retune\-2016\-part\-1\-the\-dawn\-of\-deep\-learning\-672b5490f5a2](https://medium.com/@memoakten/retune-2016-part-1-the-dawn-of-deep-learning-672b5490f5a2).
+*   Akten, Memo. 2017. “Learning to See.” Memo Akten (blog). 2017. [http://www.memo.tv/portfolio/learning\-to\-see/](http://www.memo.tv/portfolio/learning-to-see/).
+*   Alpaydin, Ethem. 2004. *Introduction to Machine Learning*. *Adaptive Computation and Machine Learning*. Cambridge, MA: MIT Press.
+*   Ames, Charles. 1989. “The Markov Process as a Compositional Model: A Survey and Tutorial.” *Leonardo* 22 (2): 175–187. [https://doi.org/10.2307/1575226](https://doi.org/10.2307/1575226).
+*   Ascott, Roy. 2003. “Behaviourist Art and the Cybernetic Vision.” In *Telematic Embrace: Visionary Theories of Art, Technology, and Consciousness*, 109–156. Berkeley: University of California Press.
+*   Ashby, William Ross. 1954. *Design for a Brain*. New York: Wiley.
+*   Audry, Sofian. 2021. “Behavior Morphologies of Machine Learning Agents in Media Artworks.” *Leonardo* 54 (3): 1–10.
+*   Audry, Sofian, and Jon Ippolito. 2019. “Can Artificial Intelligence Make Art without Artists? Ask the Viewer.” *Arts* 8 (1): 35. [https://doi.org/10.3390/arts8010035](https://doi.org/10.3390/arts8010035).
+*   Baffioni, Claudio, Francesco Guerra, and Laura Tedeschini-Lalli. 1981. Music and Aleatory Processes. In *Proceedings of the 5-Tage Kurs of the USP Mathematisierung*. Bielefeld, Germany: Bielefeld Universität.
+*   Baginsky, Nicolas Anatol. 2005. “Aglaopheme.” [http://www.baginsky.de/agl/agl\\\_index.html](http://www.baginsky.de/agl/agl%5C_index.html).
+*   Ball, Hugo, and Pierre Pinoncelli. 2011. *Le manifeste Dada*. Saint-Étienne, France: Le Réalgar.
+*   Bedau, Mark A. 2000. “Artificial Life VII: Looking Backward, Looking Forward (Editor’s Introduction to the Special Issue).” *Artif. Life* 6 (4): 261–264. [https://doi.org/10.1162/106454600300103629](https://doi.org/10.1162/106454600300103629).
+*   Bengio, Yoshua. 2009. “Learning Deep Architectures for AI. *Foundations and Trends in Machine Learning* 2 (1): 1–127. [https://doi.org/10.1561/2200000006](https://doi.org/10.1561/2200000006).
+*   Bengio, Yoshua, Holger Schwenk, Jean-Sébastien Senécal, Fréderic Morin, and Jean-Luc Gauvain. 2006. “Neural Probabilistic Language Models.” In *Innovations in Machine Learning*, eds. Professor Dawn E. Holmes and Professor Lakhmi C. Jain, 137–186. Studies in Fuzziness and Soft Computing series. Heidelberg: Springer.
+*   Blais, Joline, and Jon Ippolito. 2006. *At the Edge of Art*. London: Thames & Hudson.
+*   Boden, Margaret A. 1996. “What Is Creativity?” In *Dimensions of Creativity*, ed. Margaret A. Boden, 75–117. Cambridge, MA: MIT Press.
+*   Bogart, Ben. 2015. “Why DeepDream Has Nothing to Do with Dreaming (Inceptionism).” Ben Bogart (blog). June 19, 2015. [http://www.ekran.org/ben/wp/2015/inceptionism/](http://www.ekran.org/ben/wp/2015/inceptionism/).
+*   Bogart, Ben. 2018. “Ben Bogart—Art & Ideas.” [http://www.ekran.org/ben/wp/](http://www.ekran.org/ben/wp/).
+*   Bogart, Ben, Sofian Audry, Allison Parish and Nora O’Murchü. 2018. “Consciousness and the Poetic Machine.” Panel discussion. 2018. Ottawa. [https://vimeo.com/261115825](https://vimeo.com/261115825).
+*   Bogart, Benjamin David Robert, and Philippe Pasquier. 2013. “Context Machines: A Series of Situated and Self-Organizing Artworks.” *Leonardo* 46 (2): 114–143.
+*   Bower, Joseph L., and Clayton M. Christensen. 1995. “Disruptive Technologies: Catching the Wave.” *Harvard Business Review* 73 (1): 43–53.
+*   Bown, Oliver. 2012. “Generative and Adaptive Creativity: A Unified Approach to Creativity in Nature, Humans and Machines.” In *Computers and Creativity*, eds. Jon McCormack and Mark d’Inverno, 361–381. Heidelberg: Springer.
+*   Bown, Oliver. 2021. *Beyond the Creative Species: Making Machines That Make Art and Music*. Cambridge, Massachusetts: The MIT Press.
+*   Braidotti, Rosi. 2013. *The Posthuman*. Oxford, UK: Polity.
+*   Branwen, Gwern. 2020. “GPT-3 Creative Fiction.” Website of Gwern Branwen. June 19, 2020. [https://www.gwern.net/GPT\-3](https://www.gwern.net/GPT-3).
+*   Brock, Andrew, Jeff Donahue, and Karen Simonyan. 2019. “Large Scale GAN Training for High Fidelity Natural Image Synthesis.” *arXiv:1809.11096 \[Cs, Stat\]*, February. [http://arxiv.org/abs/1809.11096](http://arxiv.org/abs/1809.11096).
+*   Broeckmann, Andreas. 2019. “The Machine as Artist as Myth.” Arts 8 (1): 25. [https://doi.org/10.3390/arts8010025](https://doi.org/10.3390/arts8010025).
+*   Brooks, Rodney A. 1990. “Elephants Don’t Play Chess.” *Robotics and Autonomous Systems* 6: 3–15.
+*   Brooks, Rodney A. 1987. “Intelligence Without Representation.” *Artificial Intelligence* 47: 139–159.
+*   Brooks, Rodney Allen. 1999. *Cambrian Intelligence: The Early History of the New AI*. Cambridge, MA: MIT Press.
+*   Brown, Richard, Igor Aleksander, Jonathan MacKenzie, and Joe Faith. 2001. *Biotica: Art, Emergence and Artificial Life*. London: RCA CRD Research.
+*   Brown, Tom B., Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, et al. 2020. “Language Models Are Few-Shot Learners.” *arXiv:2005.14165 \[Cs\]*, July. [https://arxiv.org/abs/2005.14165](https://arxiv.org/abs/2005.14165).
+*   Brynjolfsson, Erik, and Andrew McAfee. 2014. *The Second Machine Age: Work, Progress, and Prosperity in a Time of Brilliant Technologies*. New York: W. W. Norton.
+*   Burnham, Jack. 1968. “Systems Esthetics.” *Artforum* 7 (1): 30–35.
+*   Burrell, Jenna. 2016. “How the Machine ‘Thinks’: Understanding Opacity in Machine Learning Algorithms.” *Big Data & Society*. [https://doi.org/10.1177/2053951715622512](https://doi.org/10.1177/2053951715622512).
+*   Busch, Kathrin. 2011. “Artistic Research and the Poetics of Knowledge.” *Art & Research* 2 (2).
+*   Cao, Sean, Wei Jiang, Baozhong Yang, and Alan L. Zhang. 2020. “How to Talk When a Machine Is Listening: Corporate Disclosure in the Age of AI.” *National Bureau of Economic Research*. [https://doi.org/10.3386/w27950](https://doi.org/10.3386/w27950)
+*   Cariani, Peter A. 1989. “On the Design of Devices with Emergent Semantic Functions.” PhD dissertation, State University of New York at Binghamton.
+*   Chalup, S. K., C. L. Murch, and M. J. Quinlan. 2007. “Machine Learning with AIBO Robots in the Four-Legged League of RoboCup.” *IEEE Transactions on Systems, Man, and Cybernetics, Part C: Applications and Reviews* 37 (3): 297–310. [https://doi.org/10.1109/TSMCC.2006.886964](https://doi.org/10.1109/TSMCC.2006.886964).
+*   Cohen, Harold. 1995. “The Further Exploits of Aaron, Painter.” *Stanford Humanities Review* 4 (2): 141–158.
+*   Cohen, Paul. 2016. “Harold Cohen and AARON.” *AI Magazine* 37 (4): 63–66. [https://doi.org/10.1609/aimag.v37i4.2695](https://doi.org/10.1609/aimag.v37i4.2695).
+*   Cole, Samantha. 2017. “AI-Assisted Fake Porn Is Here and We’re All Fucked.” Motherboard (blog). December 11, 2017. [https://motherboard.vice.com/en\_us/article/gydydm/gal\-gadot\-fake\-ai\-porn](https://motherboard.vice.com/en_us/article/gydydm/gal-gadot-fake-ai-porn).
+*   Cooper, Steven J. 2005. “Donald O. Hebb’s synapse and learning rule: A history and commentary.” *Neuroscience & Biobehavioral Reviews* 28 (8): 851–874. [https://doi.org/\\doiurl{10.1016/j.neubiorev.2004.09.009}](https://doi.org/%5Cdoiurl%7B10.1016/j.neubiorev.2004.09.009%7D).
+*   Corne, David W., and Peter J. Bentley. 2001. *Creative Evolutionary Systems*, First ed. San Francisco: Morgan Kaufmann.
+*   Cybenko, G. 1989. Approximation by superpositions of a sigmoidal function. *Mathematics of Control, Signals, and Systems* 2 (4): 303–314. [https://doi.org/\\doiurl{10.1007/BF02551274}](https://doi.org/%5Cdoiurl%7B10.1007/BF02551274%7D).
+*   Damm, Ursula. 2013. “Chromatographic Ballads \[2013\].” Ursula Damm (blog). [http://ursuladamm.de/nco\-neural\-chromatographic\-orchestra\-2012/](http://ursuladamm.de/nco-neural-chromatographic-orchestra-2012/).
+*   Dawkins, Richard. 1986. *The Blind Watchmaker*, 1st American ed. New York: Norton.
+*   Dawkins, Richard. 1989. “The Evolution of Evolvability.” In *Artificial Life: Proceedings Of An Interdisciplinary Workshop On The Synthesis And Simulation Of Living Systems*, ed. Christopher G. Langton, 201–219. Santa Fe Institute Studies in the Sciences of Complexity, V. 6. Redwood City, CA: Addison-Wesley.
+*   Debord, Guy. 1956. Theory of the Dérive. [https://www.cddc.vt.edu/sionline/si/theory.html](https://www.cddc.vt.edu/sionline/si/theory.html).
+*   Demers, Louis-Philippe, and Bill Vorn. 1995. “Real Artificial Life as an Immersive Media.” In *Convergence: Proceedings of the 5th Biennial Symposium for Arts and Technology*, 190–203. New London, CT: Center for Arts and Technology at Connecticut College.
+*   Deng, L. 2012. “The MNIST Database of Handwritten Digit Images for Machine Learning Research \[Best of the Web\].” *IEEE Signal Processing Magazine* 29 (6): 141–142. [https://doi.org/\\doiurl{10.1109/MSP.2012.2211477}](https://doi.org/%5Cdoiurl%7B10.1109/MSP.2012.2211477%7D).
+*   Dewey, John. 1959. *Art as experience*. New York: Perigree.
+*   Dewey-Hagborg, Heather. 2011. “Power/Play.” *Nictoglobe Online Magazine of Transmedial Arts & Acts*.
+*   Dhariwal, Prafulla, Heewoo Jun, Christine Payne, Jong Wook Kim, Alec Radford, and Ilya Sutskever. 2020. “Jukebox: A Generative Model for Music.” *arXiv*, April. [https://arxiv.org/abs/2005.00341](https://arxiv.org/abs/2005.00341)
+*   Di Scipio, Agostino. 1994. “Formal Processes of Timbre Composition: Challenging the Dualistic Paradigm of Computer Music.” In *Proceedings of the 1994 International Computer Music Conference*, 202–208. San Francisco: International Computer Music Association.
+*   Dietrich, Eric. 1990. “Computationalism.” *Social Epistemology* 4 (2): 135–154.
+*   Dourish, Paul. 2001. *Where The Action Is: The Foundations of Embodied Interaction*, Kindle edition. Cambridge, MA: MIT Press.
+*   Downie, Marc. 2005. “Choreographing the Extended Agent: Performance graphics for dance theater.” PhD. thesis, Massachusetts Institute of Technology.
+*   Dreyfus, Hubert L. 1979. *What Computers Can’t Do: The Limits of Artificial Intelligence*. New York: Harper & Row.
+*   Du Bois, William Edward Burghardt. 1989. *The Souls of Black Folk: Essays and Sketches*. New York: Bantam.
+*   Elgammal, Ahmed, Bingchen Liu, Mohamed Elhoseiny, and Marian Mazzone. 2017. “CAN: Creative Adversarial Networks, Generating ‘Art’ by Learning About Styles and Deviating from Style Norms.” *arXiv:1706.07068 \[cs\]*.
+*   Engel, Jesse, Cinjon Resnick, Adam Roberts, Sander Dieleman, Douglas Eck, Karen Simonyan, and Mohammad Norouzi. 2017. “Neural Audio Synthesis of Musical Notes with WaveNet Autoencoders.” *arXiv:1704.01279 \[cs\]*.
+*   Fiebrink, Rebecca. 2017. “Machine Learning as Meta-Instrument: Human-Machine Partnerships Shaping Expressive Instrumental Creation.” In *Musical Instruments in the 21st Century*, 137–151. Singapore: Springer. [https://doi.org/10.1007/978\-981\-10\-2951\-6\_10](https://doi.org/10.1007/978-981-10-2951-6_10).
+*   Fiebrink, Rebecca, and Laetitia Sonami. 2020. “Reflections on Eight Years of Instrument Creation with Machine Learning.” In *Proceedings of the International Conference on New Interfaces for Musical Expression*, edited by Romain Michon and Franziska Schroeder, 237–242. Birmingham, UK: Birmingham City University. [https://www.nime.org/proceedings/2020/nime2020\_paper45.pdf](https://www.nime.org/proceedings/2020/nime2020_paper45.pdf).
+*   Fifield, George. 1994. “Three Artists Who Make Art That Makes Art: Artificial Creativity.” *Art New England*, 1994.
+*   Fisher, R. A. 1936. “The Use of Multiple Measurements in Taxonomic Problems.” *Annals of Eugenics* 7 (2): 179–188. [https://doi.org/10.1111/j.1469\-1809.1936.tb02137.x](https://doi.org/10.1111/j.1469-1809.1936.tb02137.x).
+*   Fogel, L. J., A. J. Owens, and M. J. Walsh. 1967. *Artificial Intelligence Through Simulated Evolution*. New York: John Wiley and Sons.
+*   Frey, Carl Benedikt, and Michael A. Osborne. 2017. “The future of employment: How susceptible are jobs to computerisation?” *Technological Forecasting and Social Change* 114 (C): 254–280. [https://doi.org/10.1016/j.techfore.2016.08.019](https://doi.org/10.1016/j.techfore.2016.08.019).
+*   Gatys, Leon A., Alexander S. Ecker, and Matthias Bethge. 2015. “A Neural Algorithm of Artistic Style.” *arXiv:1508.06576 \[cs, q-bio\]*.
+*   Gee, Erin, and Sofian Audry. 2019. “Automation as Echo.” *ASAP/Journal* 4 (2): 307–312. [https://doi.org/10.1353/asa.2019.0025](https://doi.org/10.1353/asa.2019.0025).
+*   Gemeinboeck, Petra, and Rob Saunders. 2013. “Creative Machine Performance: Computational Creativity and Robotic Art.” In *Proceedings of the Fourth International Conference on Computational Creativity*. *ICCC2013*. Sydney: International Association for Computational Creativity.
+*   Glynn, Ruairi. 2008. “Conversational Environments Revisited.” In *Conference Proceedings for the 19th European Meeting on Cybernetics and Systems Research*. Bingley, UK: Emerald Group.
+*   Goodfellow, Ian, Yoshua Bengio, and Aaron Courville. 2016. *Deep Learning*. Cambridge, MA: MIT Press.
+*   Goodfellow, Ian J., Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, and Yoshua Bengio. 2014. “Generative Adversarial Networks.” *arXiv:1406.2661 \[cs, stat\]*.
+*   Grefenstette, J. J., D. E. Moriarty, and A. C. Schultz. 2011. “Evolutionary Algorithms for Reinforcement Learning.” *arXiv:1106.0221 \[cs\]*. [https://doi.org/\\doiurl{10.1613/jair.613}](https://doi.org/%5Cdoiurl%7B10.1613/jair.613%7D).
+*   Hadjeres, Gaëtan, François Pachet, and Frank Nielsen. 2016. “DeepBach: A Steerable Model for Bach Chorales Generation.” *arXiv:1612.01010 \[cs\]*.
+*   Heaney, Libby. 2019. “Euro(Re)Vision.” [https://www.goethe.de/ins/gb/en/kul/mag/21519780.html](https://www.goethe.de/ins/gb/en/kul/mag/21519780.html).
+*   Hebb, Donald Olding. 1949. *The Organization of Behavior*. New York: Wiley & Sons.
+*   Heidegger, Martin. 1972. *On Time and Being*. New York: Harper & Row.
+*   Herndon, Holly. 2018a. “Holly Herndon & Jlin (Featuring Spawn)—Godmother (Official Video).” [https://www.youtube.com/watch?v\=sc9OjL6Mjqo](https://www.youtube.com/watch?v=sc9OjL6Mjqo).
+*   Herndon, Holly. 2018b. “Holly Herndon: New Track and Video ‘Godmother’.” [http://www.4ad.com/news/4/12/2018/newtrackandvideogodmother](http://www.4ad.com/news/4/12/2018/newtrackandvideogodmother).
+*   Hertzmann, Aaron. March 2019. “Aesthetics of Neural Network Art.” *arXiv:1903.05696 \[cs\]*. [http://arxiv.org/abs/1903.05696](http://arxiv.org/abs/1903.05696).
+*   Hertzmann, Aaron. 2020. “Visual Indeterminacy in GAN Art.” *Leonardo* 53 (4): 424–28. [https://doi.org/10.1162/leon\_a\_01930](https://doi.org/10.1162/leon_a_01930).
+*   Hinton, Geoffrey E., Simon Osindero, and Yee Whye Teh. 2006. “A Fast Learning Algorithm for Deep Belief Nets.” *Neural Computation* 18 (7): 1527–1554.
+*   Holland, John H. 1992. *Adaptation in Natural and Artificial Systems: An Introductory Analysis with Applications to Biology, Control, and Artificial Intelligence*, New edition. Cambridge, MA: Bradford.
+*   Holland, John H. 1996. *Hidden Order: How Adaptation Builds Complexity*. Redwood City, CA: Addison Wesley Longman.
+*   Hornik, Kurt. 1991. “Approximation capabilities of multilayer feedforward networks.” *Neural Networks* 4 (2): 251–257. [https://doi.org/\\doiurl{10.1016/0893\-6080(91)90009\-T}](https://doi.org/%5Cdoiurl%7B10.1016/0893-6080\(91\)90009-T%7D).
+*   House, Brian. 2017. “Everything That Happens Will Happen Today.” [https://brianhouse.net/works/everything\_that\_happens\_will\_happen\_today/](https://brianhouse.net/works/everything_that_happens_will_happen_today/).
+*   Huang, Lingdong, Zheng Jiang, Syuan-Cheng Sun, Tong Bai, Eunsu Kang, and Barnabas Poczos. 2019. “Legend of Wrong Mountain: AI Generated Opera.” In *Proceedings of the 25th International Symposium on Electronic Art*, 255–261. New York: Springer.
+*   Hunt, Andy, Marcelo M. Wanderley, and Matthew Paradis. 2003. “The Importance of Parameter Mapping in Electronic Instrument Design.” *Journal of New Music Research* 32 (4): 429–440. [https://doi.org/10.1076/jnmr.32.4.429.18853](https://doi.org/10.1076/jnmr.32.4.429.18853).
+*   Ikegami, Takashi. 2013. “A Design for Living Technology: Experiments with the Mind Time Machine.” *Artificial Life* 19 (3\_4): 387–400. [https://doi.org/10.1162/ARTL\_a\_00113](https://doi.org/10.1162/ARTL_a_00113).
+*   Isola, Phillip, Jun-Yan Zhu, Tinghui Zhou, and Alexei A. Efros. 2018. “Image-to-Image Translation with Conditional Adversarial Networks.” *arXiv:1611.07004 \[Cs\]*, November. [http://arxiv.org/abs/1611.07004](http://arxiv.org/abs/1611.07004).
+*   Johnson, Colin G., and Juan Jesús Romero Cardalda. 2002. “Genetic Algorithms in Visual Art and Music.” *Leonardo* 35 (2): 175–184. [https://doi.org/10.1162/00240940252940559](https://doi.org/10.1162/00240940252940559).
+*   Johnston, David Jhave. 2018. “Rerites.” *Cream City Review* 42 (1): 107–115.
+*   Johnston, David Jhave. 2019. *ReRites: July 2017*. Vol. 3 of *ReRites*. Montréal: Anteism Books.
+*   Jong, Kenneth A. De. 2016. *Evolutionary Computation: A Unified Approach*. A Bradford Book. Cambridge, MA: MIT Press.
+*   Kac, Eduardo. 1997. “Foundation and Development of Robotic Art.” *Art Journal* 56: 60–67.
+*   Kant, Neel. 2018. “Recent Advances in Neural Program Synthesis.” *arXiv:1802.02353 \[cs\]*.
+*   Kantor, Istvan. 2018. *The Book of Neoism*. London: Black Dog.
+*   Kelly, Stephen. 2016. “Stephen Kelly: Open Ended Ensemble (Competitive Coevolution).” 2016. [http://www.theinc.ca/exhibitions/stephen\-kelly/](http://www.theinc.ca/exhibitions/stephen-kelly/).
+*   Kim, Jihoon Felix, and Kristen Galvin. 2012. “An Interview with Simon Penny: Techno-Utopianism, Embodied Interaction and the Aesthetics of Behavior.” *Leonardo Electronic Almanac (DAC09: After Media: Embodiment and Context)* 17 (2): 136–145.
+*   Kelly, Stephen, and Malcolm I. Heywood. 2017. “Emergent Tangled Graph Representations for Atari Game Playing Agents.” In *EuroGP 2017: Proceedings of the 20th European Conference on Genetic Programming*, 10196: 64–79. LNCS. Amsterdam: Springer Verlag. [https://doi.org/10.1007/978\-3\-319\-55696\-3s](https://doi.org/10.1007/978-3-319-55696-3s).
+*   Kingma, Diederik P., and Max Welling. 2014. “Auto-Encoding Variational Bayes.” *arXiv:1312.6114 \[cs, stat\]*.
+*   Kirn, Peter. 2018. “Jlin, Holly Herndon, and ‘Spawn’ Find Beauty in AI’s Flaws.” CDM Create Digital Music (blog). December 10, 2018. [http://cdm.link/2018/12/jlin\-holly\-herndon\-and\-spawn\-find\-beauty\-in\-ais\-flaws/](http://cdm.link/2018/12/jlin-holly-herndon-and-spawn-find-beauty-in-ais-flaws/).
+*   Kleber, Pia, and Tamara Trojanowska. 2019. “Performing the Digital and AI: In Conversation with Antje Budde and David Rokeby.” *TDR: The Drama Review* 63 (4): 99–112.
+*   Klein, Yves Amu. 1998. “Living Sculpture: The Art and Science of Creating Robotic Life.” *Leonardo* 31 (5): 393.
+*   Klingemann, Mario (@quasimondo). 2017. “Here Is a Technique I Call the ‘Shake, Rattle & Roll Loss’ Which I Am Now Using to Train the Generators in My #pix2pix GANs:” Twitter, November 21, 2017. [https://twitter.com/quasimondo/status/932898175718973441](https://twitter.com/quasimondo/status/932898175718973441).
+*   Klingemann, Mario. 2018. “Neural Glitch.” October 28, 2018. [http://underdestruction.com/2018/10/28/neural\-glitch/](http://underdestruction.com/2018/10/28/neural-glitch/).
+*   Kohonen, Teuvo. 1981. “Automatic Formation of Topological Maps of Patterns in a Self-organizing System.” In *Proceedings of 2SCIA*, eds. E. Oja and O. Simula, 214–220. Pattern Recognition Society of Finland. Espoo, Finland.
+*   Kosinski, Michal, David Stillwell, and Thore Graepel. 2013. “Private Traits and Attributes are Predictable from Digital Records of Human Behavior. *Proceedings of the National Academy of Sciences* 110 (15): 5802–5805. [https://doi.org/\\doiurl{10.1073/pnas.1218772110}](https://doi.org/%5Cdoiurl%7B10.1073/pnas.1218772110%7D).
+*   Koza, John R. 1992. *Genetic Programming: On the Programming of Computers by Means of Natural Selection*, First ed. Cambridge, MA: Bradford.
+*   Kruger, N., P. Janssen, S. Kalkan, M. Lappe, A. Leonardis, J. Piater, A. J. Rodriguez-Sanchez, and L. Wiskott. 2013. “Deep Hierarchies in the Primate Visual Cortex: What Can We Learn for Computer Vision?” *IEEE Transactions on Pattern Analysis and Machine Intelligence* 35 (8): 1847–1871. [https://doi.org/\\doiurl{10.1109/TPAMI.2012.272}](https://doi.org/%5Cdoiurl%7B10.1109/TPAMI.2012.272%7D).
+*   Kurzweil, Ray. 2006. *The Singularity Is Near: When Humans Transcend Biology*. New York: Penguin Books.
+*   Langton, Christopher G., ed. 1995. *Artificial Life: An Overview*. Cambridge, MA: MIT Press.
+*   LeCun, Yann, Yoshua Bengio, and Geoffrey Hinton. 2015. “Deep Learning.” *Nature* 521 (7553): 436–444. [https://doi.org/\\doiurl{10.1038/nature14539}](https://doi.org/%5Cdoiurl%7B10.1038/nature14539%7D).
+*   Lee, Michael A., Adrian Freed, and David Wessel. 1991. “Real-Time Neural Network Processing of Gestural and Acoustic Signals.” In *Proceedings of the International Computer Music Conference*, 277–280. Ann Arbor, MI: Michigan Publishing. [http://dblp.uni\-trier.de/db/conf/icmc/icmc1991.html#LeeFW91](http://dblp.uni-trier.de/db/conf/icmc/icmc1991.html#LeeFW91).
+*   Legrady, George. 2002. Pockets Full of Memories: An Interactive Museum Installation. *Visual Communication* 1 (2): 163–169. [https://doi.org/\\doiurl{10.1177/147035720200100202}](https://doi.org/%5Cdoiurl%7B10.1177/147035720200100202%7D).
+*   Lessig, Lawrence. 2009. *Remix: Making Art and Commerce Thrive in the Hybrid Economy*. New York: Penguin Books.
+*   Lewis, Jason Edward, Noelani Arista, Archer Pechawis, and Suzanne Kite. 2018. “Making Kin with the Machines.” *Journal of Design and Science*. [https://doi.org/\\doiurl{10.21428/bfafd97b}](https://doi.org/%5Cdoiurl%7B10.21428/bfafd97b%7D).
+*   Lewis, Matthew. 2008. “Evolutionary Visual Art and Design.” In *The Art of Artificial Evolution: A Handbook on Evolutionary Art and Music*, eds. Juan Romero and Penousal Machado. *Natural Computing Series*, 3–37. Heidelberg: Springer. [https://doi.org/\\doiurl{10.1007/978\-3\-540\-72877\-1\_1}](https://doi.org/%5Cdoiurl%7B10.1007/978-3-540-72877-1_1%7D).
+*   Lloyd, S. 1982. “Least Squares Quantization in PCM.” *IEEE Transactions on Information Theory* 28 (2): 129–137. [https://doi.org/10.1109/TIT.1982.1056489](https://doi.org/10.1109/TIT.1982.1056489).
+*   Lovelace, Ada. 1842. “Sketch of the Analytical Engine Invented by Charles Babbage: Notes by the Translator.” [http://psychclassics.yorku.ca/Lovelace/lovelace.htm](http://psychclassics.yorku.ca/Lovelace/lovelace.htm).
+*   Markoff, John. 2013. “Brainlike Computers, Learning From Experience.” *The New York Times*, December 28, 2013.
+*   Mathews, Stanley. 2005. “The Fun Palace: Cedric Price’s Experiment in Architecture and Technology.” *Technoetic Arts: A Journal of Speculative Research* 3 (2): 73–91.
+*   Maturana, Humberto R., and Francisco J. Varela. 1980. *Autopoiesis and Cognition: The Realization of the Living*. Dordrecht: D. Reidel.
+*   McCarthy, John, Marvin L. Minsky, Nathaniel Rochester, and Claude E. Shannon. 2006. “A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence,” August 31, 1955. *AI Magazine* 27 (4): 12. [https://doi.org/\\doiurl{10.1609/aimag.v27i4.1904}](https://doi.org/%5Cdoiurl%7B10.1609/aimag.v27i4.1904%7D).
+*   McCorduck, Pamela. 1990. *Aaron’s Code: Meta-Art, Artificial Intelligence and the Work of Harold Cohen*, First ed. New York: W. H. Freeman.
+*   McCormack, Jon. 2009. “The Evolution of Sonic Ecosystems,” 2nd ed. In *Artificial Life Models in Software*, eds. Maciej Komosinski and Andrew Adamatzky, 393–414. London: Springer.
+*   McCormack, Jon. 2006. “New Challenges for Evolutionary Music and Art.” *SIGEVOlution* 1 (1): 5–11. [https://doi.org/10.1145/1138470.1138472](https://doi.org/10.1145/1138470.1138472).
+*   McCulloch, Warren S., and Walter Pitts. 1943. “A Logical Calculus of the Ideas Immanent in Nervous Activity.” *The Bulletin of Mathematical Biophysics* 5 (4): 115–133. [https://doi.org/\\doiurl{10.1007/BF02478259}](https://doi.org/%5Cdoiurl%7B10.1007/BF02478259%7D).
+*   McMullan, Thomas. 2018. “Alternative Face: The Machine That Puts Kellyanne Conway’s Words into a French Singer’s Mouth.” [https://www.alphr.com/art/1005324/alternative\-face\-the\-machine\-that\-puts\-kellyanne\-conway\-s\-words\-into\-a\-french\-singer\-s/](https://www.alphr.com/art/1005324/alternative-face-the-machine-that-puts-kellyanne-conway-s-words-into-a-french-singer-s/)
+*   Miller, Arthur I. 2014. *Colliding Worlds: How Cutting-Edge Science Is Redefining Contemporary Art*. New York: W. W. Norton.
+*   Minsky, Marvin Lee, and Seymour Papert. 1969. *Perceptrons: An Introduction to Computational Geometry*. Cambridge, MA: MIT Press.
+*   Mitchell, Melanie. 1995. “Genetic Algorithms: An Overview.” *Complexity* 1 (1): 31–39. [https://doi.org/10.1002/cplx.6130010108](https://doi.org/10.1002/cplx.6130010108).
+*   Mitchell, Melanie. 1998. *An Introduction to Genetic Algorithms*, 3rd ed. Cambridge, MA: MIT Press.
+*   Mordvintsev, Alexander, Christopher Olah, and Mike Tyka. 2015. “Inceptionism: Going Deeper into Neural Networks.” Research Blog. June 17, 2015. http://googleresearch.blogspot.com/2015/06/inceptionism\-going\-deeper\-into\-neural.html.
+*   Moura, Leonel, and Henrique Garcia Pereira. 2004. *Man + Robots: Symbiotic Art*. Villeurbanne, France: Institut d’art contemporain.
+*   Navas, Eduardo. 2012. *Remix Theory: The Aesthetics of Sampling*. New York: Springer.
+*   Newell, Allen. 1955. “The Chess Machine: An Example of Dealing with a Complex Task by Adaptation.” In *Proceedings of the March 1-3, 1955, Western Joint Computer Conference*. *AFIPS ’55 (Western)*, 101–108. New York: ACM. [https://doi.org/\\doiurl{10.1145/1455292.1455312}](https://doi.org/%5Cdoiurl%7B10.1145/1455292.1455312%7D).
+*   O’Neil, Cathy. 2016. *Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy*, First ed. New York: Crown.
+*   Paalen, Wolfgang. 1943. “Totem Art.” In *Dyn: Amerindian Number*, Vol. 4-5. Coyoacan, D.F., Mexico: Talleres Gráficos de la Nación.
+*   Pachet, François, Pierre Roy, and Benoit Carré. 2021. “Assisted Music Creation with Flow Machines: Towards New Categories of New.” *arXiv:2006.09232 \[Cs, Eess\]*, January. [https://arxiv.org/abs/2006.09232](https://arxiv.org/abs/2006.09232).
+*   Paglen, Trevor. 2016. “Invisible Images (Your Pictures Are Looking at You).” The New Inquiry (blog). December 8, 2016. [https://thenewinquiry.com/invisible\-images\-your\-pictures\-are\-looking\-at\-you/](https://thenewinquiry.com/invisible-images-your-pictures-are-looking-at-you/).
+*   Paglen, Trevor. 2018. Machine Realism. In *I Was Raised on the Internet*. Chicago, IL: Munich; New York: Prestel.
+*   Parrish, Allison. 2018. *Articulations*. Denver, Colorado: Counterpath Press.
+*   Parrish, Allison. 2017. “Poetic Sound Similarity Vectors Using Phonetic Features.” In *Proceedings of the Thirteenth Artificial Intelligence and Interactive Digital Entertainment Conference (AIIDE)*, 99–106, Association for the Advancement of Artificial Intelligence.
+*   Pask, Gordon. 1968. *An approach to Cybernetics*. London: Hutchinson.
+*   Penny, Simon. 2000. “Agents as Artworks and Agent Design as Artistic Practice.” In *Advances in Consciousness Research*, ed. Kerstin Dautenhahn, Vol. 19, 395–414. Amsterdam: John Benjamins.
+*   Penny, Simon. 2009. “Art and Artificial Life—A Primer.” In *Proceedings of the Digital Arts and Culture Conference*. Irvine: University of California.
+*   Penny, Simon. 2013. “Art and Robotics: Sixty Years of Situated Machines.” *AI & SOCIETY* 28 (2): 147–156. [https://doi.org/\\doiurl{10.1007/s00146\-012\-0404\-4}](https://doi.org/%5Cdoiurl%7B10.1007/s00146-012-0404-4%7D).
+*   Penny, Simon. 1997. “Embodied Cultural Agents: At the Intersection of Robotics, Cognitive Science and Interactive Art.” In *AAAI Socially Intelligent Agents: Papers from the 1997 Fall Symposium*, ed. Kerstin Dautenhahn, 103–105. Menlo Park, CA: AAAI Press.
+*   Penny, Simon. 2017. *Making Sense: Cognition, Computing, Art, and Embodiment*. Cambridge, MA: MIT Press.
+*   Pickering, Andrew. 1995. *The Mangle of Practice: Time, Agency, and Science*. Chicago: University of Chicago Press.
+*   Pickering, Andrew. 2010. *The Cybernetic Brain: Sketches of Another Future*. Chicago: University of Chicago Press.
+*   Posthumus, David. 2018. *All My Relatives: Exploring Lakota Ontology, Belief, and Ritual*. Lincoln: University of Nebraska Press.
+*   Quinlan, Michael. 2006. “Machine Learning on AIBO Robots.” PhD thesis, University of Newcastle.
+*   Radford, Alec, Jeffrey Wu, Rewon Child, David Luan, Dario Amodei, and Ilya Sutskever. 2019. “Language Models Are Unsupervised Multitask Learners.” Technical report. [https://d4mucfpksywv.cloudfront.net/better\-language\-models/language\_models\_are\_unsupervised\_multitask\_learners.pdf](https://d4mucfpksywv.cloudfront.net/better-language-models/language_models_are_unsupervised_multitask_learners.pdf).
+*   Rechenberg, I. 1965. “Cybernetic Solution Path of an Experimental Problem.” In *Royal Aircraft Establishment Translation No. 1122, B. F. Toms, Trans.* Farnborough, UK: Ministry of Aviation, Royal Aircraft Establishment.
+*   Rechenberg, Ingo. 1973. *Evolutionsstrategie: Optimierung technischer Systeme nach Prinzipien der biologischen Evolution*. Stuttgart-Bad Cannstatt, Germany: Frommann-Holzboog.
+*   Reimann-Dubbers, Theresa. 2018. “A(.I.) Messianic Window.” 2018. [https://theresareimann\-dubbers.net](https://theresareimann-dubbers.net).
+*   Rinaldo, Kenneth E. 1998. “Technology Recapitulates Phylogeny: Artificial Life Art.” *Leonardo* 31 (5): 371–376.
+*   Rolez, Anaïs. 2019. “The Mechanical Art of Laughter.” *Arts* 8 (1): 2. [https://doi.org/\\doiurl{10.3390/arts8010002}](https://doi.org/%5Cdoiurl%7B10.3390/arts8010002%7D).
+*   Romero, Juan, and Penousal Machado, eds. 2008. *The Art of Artificial Evolution*. Natural Computing Series. Heidelberg: Springer. [https://doi.org/\\doiurl{10.1007/978\-3\-540\-72877\-1}](https://doi.org/%5Cdoiurl%7B10.1007/978-3-540-72877-1%7D).
+*   Rosenblatt, Frank. 1957. *The Perceptron—A Perceiving and Recognizing Automaton*, Technical Report 85-460-1, Cornell Aeronautical Laboratory, Buffalo, NY.
+*   Rosenblueth, Arturo, Norbert Wiener, and Julian Bigelow. 1943. “Behavior, Purpose and Teleology.” *Philosophy of Science* 10 (1): 18–24.
+*   Rumelhart, David E., Geoffrey E. Hinton, and Ronald J. Williams. 1986. “Learning Representations by Back-Propagating Errors.” *Nature* 323: 533–536.
+*   Salter, Chris, and Sofian Audry. 2018. “Towards Probabilistic Worldmaking: Xenakis, n-Polytope and the Cybernetic Path to Chaos.” In *Worldmaking as Techne: Exploring Worlds of Participatory Art, Architecture, and Music*, eds. Alberto de Campo, Mark David Hosale, and Sana Murrani, 2–28. Toronto: Riverside Architectural Press.
+*   Samuel, Arthur L. 1959. “Some Studies in Machine Learning Using the Game of Checkers.” *IBM Journal of Research and Development* 3 (3): 210–229. [https://doi.org/\\doiurl{10.1147/rd.33.0210}](https://doi.org/%5Cdoiurl%7B10.1147/rd.33.0210%7D).
+*   Schmidhuber, Jürgen. 2015. “Deep Learning in Neural Networks: An Overview.” *Neural Networks* 61: 85–117. [https://doi.org/\\doiurl{10.1016/j.neunet.2014.09.003}](https://doi.org/%5Cdoiurl%7B10.1016/j.neunet.2014.09.003%7D).
+*   Schmidhuber, Jürgen, Dan Cireşan, Ueli Meier, Jonathan Masci, and Alex Graves. 2011. “On Fast Deep Nets for AGI Vision.” In *Artificial General Intelligence*, eds. Jürgen Schmidhuber, Kristinn R. Thórisson, and Moshe Looks 243–246. Lecture Notes in Computer Science. Heidelberg: Springer. [https://doi.org/10.1007/978\-3\-642\-22887\-2\_25](https://doi.org/10.1007/978-3-642-22887-2_25).
+*   Schneider, Tim, and Naomi Rea. 2018. “Has Artificial Intelligence Given Us the Next Great Art Movement? Experts Say Slow Down, the ‘Field Is in Its Infancy.’” *Artnet News*. September 25, 2018. [https://news.artnet.com/art\-world/ai\-art\-comes\-to\-market\-is\-it\-worth\-the\-hype\-1352011](https://news.artnet.com/art-world/ai-art-comes-to-market-is-it-worth-the-hype-1352011).
+*   Schwab, Klaus. 2016. *The Fourth Industrial Revolution*. Geneva: World Economic Forum.
+*   Selfridge, Oliver G. 1959. “Pandemonium: A Paradigm for Learning.” In *Symposium on the Mechanization of Thought Processes*, eds. D. K. Blake and A. M. Uttley, Vol. 1, 511–531. London: HMSO.
+*   Senécal, Jean-Sébastien. 2016. “Machines That Learn: Aesthetics of Adaptive Behaviors in Agent-Based Art.” PhD dissertation Concordia University.
+*   Serre, Thomas, Gabriel Kreiman, Minjoon Kouh, Charles Cadieu, Ulf Knoblich, and Tomaso Poggio. 2007. “A quantitative theory of immediate visual recognition.” *Progress in Brain Research* 165. [https://doi.org/10.1016/S0079\-6123(06)65004\-8](https://doi.org/10.1016/S0079-6123\(06\)65004-8).
+*   Shanken, Edward A. 2002. “Cybernetics and Art: Cultural Convergence in the 1960s.” In *From Energy to Information*, eds. Bruce Clarke and Linda Dalrymple Henderson, 155–177. Stanford, CA: Stanford University Press.
+*   Shannon, Claude E. 1948. “A Mathematical Theory of Communication.” *Bell System Technical Journal* 27 (3): 379–423.
+*   Sims, Karl. 1991. “Artificial Evolution for Computer Graphics.” In *Proceedings of the 18th Annual Conference on Computer Graphics and Interactive Techniques*. *SIGGRAPH ’91*, 319–328. New York: ACM. [https://doi.org/\\doiurl{10.1145/122718.122752}](https://doi.org/%5Cdoiurl%7B10.1145/122718.122752%7D).
+*   Sinapayen, Lana, Atsushi Masumori, and Takashi Ikegami. 2017. “Learning by Stimulation Avoidance: A Principle to Control Spiking Neural Networks Dynamics”. *PLOS ONE* 12 (2): 0170388. [https://doi.org/10.1371/journal.pone.0170388](https://doi.org/10.1371/journal.pone.0170388).
+*   Solomos, Makis. 2005. “Cellular Automata in Xenakis’s Music. Theory and Practice.” In *Proceedings of the International Symposium Iannis Xenakis*, edited by Makis Solomos, Anastasia Georgaki, and Giorgos Zervos. Athens, Greece: University of Athens. [http://hal.archives\-ouvertes.fr/hal\-00770141](http://hal.archives-ouvertes.fr/hal-00770141).
+*   Sutton, Richard S., and Andrew G. Barto. 1998. *Reinforcement Learning: An Introduction*. *Adaptive Computation and Machine Learning*. Cambridge, MA: MIT Press.
+*   Suwajanakorn, Supasorn, Steven M. Seitz, and Ira Kemelmacher-Shlizerman. 2017. “Synthesizing Obama: Learning Lip Sync from Audio.” *ACM Trans. Graph.* 36 (4): 95–19513. [https://doi.org/\\doiurl{10.1145/3072959.3073640}](https://doi.org/%5Cdoiurl%7B10.1145/3072959.3073640%7D).
+*   Szegedy, Christian, Wei Liu, Yangqing Jia, Pierre Sermanet, Scott Reed, Dragomir Anguelov, Dumitru Erhan, Vincent Vanhoucke, and Andrew Rabinovich. 2014.”Going Deeper with Convolutions.” *ArXiv:1409.4842 \[Cs\]*, September. [http://arxiv.org/abs/1409.4842](http://arxiv.org/abs/1409.4842).
+*   Tenhaaf, Nell. 2008. “Art Embodies A-Life: The Vida Competition.” *Leonardo* 41 (1): 6–15.
+*   Tenhaaf, Nell. 2000. “Perceptions of Self in Art and Intelligent Agents.” In *Proceedings of the 2000 AAAI Fall Symposium on Socially Intelligent Agents: The Human in the Loop*, ed. Kerstin Dautenhahn. North Falmouth, MA: AAAI Press.
+*   Tenhaaf, Nell. 2014. “ ‘Trust Regions’ for Art/Sci.” In *Meta-Life: Biotechnologies, Synthetic Biology, ALife and the Arts*. Cambridge, MA: Leonardo/ISAST and MIT Press.
+*   Thompson, Adrian. 1996. An Evolved Circuit, Intrinsic in Silicon, Entwined with Physics. In *Proceedings of the First International Conference on Evolvable Systems: From Biology to Hardware*, *ICES ’96*, 390–405. London: Springer.
+*   Thrun, Sebastian, and Lorien Pratt, eds. 1998. *Learning to Learn*. New York: Springer.
+*   Todd, Peter M. 1989. “A Connectionist Approach to Algorithmic Composition.” *Computer Music Journal* 13 (4): 27–43. [https://doi.org/\\doiurl{10.2307/3679551}](https://doi.org/%5Cdoiurl%7B10.2307/3679551%7D).
+*   Todd, Stephan, and William Latham. 1992a. “Artificial Life or Surreal Art?” In *Toward a Practice of Autonomous Systems: Proceedings of the First European Conference on Artificial Life*, eds. Francisco J. Varela and Paul Bourgine, 504–513. Cambridge, MA: Bradford Books.
+*   Todd, Stephen, and William Latham. 1992b. *Evolutionary Art and Computers*. London: Academic Press.
+*   Tomlinson, Bill, and Bruce Blumberg. 2002. “AlphaWolf: Social Learning, Emotion and Development in Autonomous Virtual Agents.” In *Proceedings of First GSFC/JPL Workshop on Radical Agent Concepts*, 35–45. Heidelberg: Springer.
+*   Turing, A. M. 1950. “Computing Machinery and Intelligence.” *Mind* 59 (236): 433–460.
+*   Tyka, Mike. 2019. Portraits of Imaginary People. Montréal: Anteism Books.
+*   Urbanowicz, Ryan J., and Jason H. Moore. 2009. “Learning Classifier Systems: A Complete Introduction, Review, and Roadmap.” *Journal of Artificial Evolution & Applications* 2009: 1–25. [https://doi.org/\\doiurl{10.1155/2009/736398}](https://doi.org/%5Cdoiurl%7B10.1155/2009/736398%7D).
+*   Varela, Francisco J. 1992. “Autopoiesis and a Biology of Intentionality.” In *Proceedings of the Workshop “Autopoiesis and Perception*,” ed. Barry McMullin, 4–14. Dublin University.
+*   Varela, Francisco J. Evan Thompson, and Eleanor Rosch. 1991. *The Embodied Mind: Cognitive Science and Human Experience*. Cambridge, MA: MIT Press.
+*   Versari, Maria Elena, Connor Doak, Adam Evans, Juliet Bellow, and Adrian Curtin. 2016. “Futurism,” 1st ed. In *Routledge Encyclopedia of Modernism*. London: Routledge. [https://doi.org/10.4324/9781135000356\-REMO21\-1](https://doi.org/10.4324/9781135000356-REMO21-1).
+*   von Neumann, John. 1951. “The General and Logical Theory of Automata.” In *Cerebral Mechanisms in Behavior: The Hixon Symposium*, ed. Lloyd Jeffress, 1–41. New York: John Wiley and Sons.
+*   Walter, W. Grey. 1950. “An Electro-Mechanical ≪ Animal ≫.” *Dialectica* 4 (3): 206–213. [https://doi.org/10.1111/j.1746\-8361.1950.tb01020.x](https://doi.org/10.1111/j.1746-8361.1950.tb01020.x).
+*   Wang, Ting-Chun, Ming-Yu Liu, Jun-Yan Zhu, Andrew Tao, Jan Kautz, and Bryan Catanzaro. 2018. “High-Resolution Image Synthesis and Semantic Manipulation with Conditional GANs.” *arXiv:1711.11585 \[Cs\]*, August. [http://arxiv.org/abs/1711.11585](http://arxiv.org/abs/1711.11585).
+*   Wang, Yilun, and Michal Kosinski. 2017. “Deep Neural Networks are More Accurate than Humans at Detecting Sexual Orientation from Facial Images.”
+*   Waters, Richard. 2016. “AI Academic Warns on Brain Drain to Tech Groups.” *Financial Times*, November 22, 2016. [https://www.ft.com/content/298e2ac0\-b010\-11e6\-a37c\-f4a01f1b0fa1](https://www.ft.com/content/298e2ac0-b010-11e6-a37c-f4a01f1b0fa1).
+*   Weitz, Morris. 1956. “The Role of Theory in Aesthetics.” *The Journal of Aesthetics and Art Criticism* 15 (1): 27–35. [https://doi.org/\\doiurl{10.2307/427491}](https://doi.org/%5Cdoiurl%7B10.2307/427491%7D).
+*   Welling, Max. 2016. “How Will Artificial Intelligence Influence Your Future?” [https://www.youtube.com/watch?v\=OWMgUEAJXGU](https://www.youtube.com/watch?v=OWMgUEAJXGU).
+*   Whitelaw, Mitchell. 2004. *Metacreation: Art and Artificial Life*. Cambridge, MA: MIT Press.
+*   Widrow, B., and M. E. Hoff. 1960. “Adaptive Switching Circuits.” *1960 IRE WESCON Convention Record*.
+*   Wiener, Norbert. 1961. *Cybernetics: Or Control and Communication in the Animal and the Machine*. Cambridge, MA: MIT Press.
+*   Wilk, Elvia. 2016. “The Artist-in-Consultance: Welcome to the New Management.” E-Flux (blog). 2016. [http://www.e\-flux.com/journal/the\-artist\-in\-consultance\-welcome\-to\-the\-new\-management/](http://www.e-flux.com/journal/the-artist-in-consultance-welcome-to-the-new-management/).
+*   Winograd, Terry. 1970. “Procedures as a Representation for Data in a Computer Program for Understanding Natural Language.” PhD thesis, Massachusetts Institute of Technology.
+*   Wu, Xiaolin, and Xi Zhang. 2016. “Automated Inference on Criminality using Face Images.” *ArXiv* abs/1611.04135.
+*   Xenakis, Iannis. 1981. “Les chemins de la composition musicale.” In *Le Compositeur et l’ordinateur*, ed. Marc Battier, 13–32. Paris: Ircam - Centre Pompidou.
+*   Xenakis, Iannis. 1992. “*Formalized Music: Thought and Mathematics in Composition*.” Stuyvesant, NY: Pendragon Press.
+
+ 
+
+# **Name Index**
+
+*   Akten, Memo, [4](#chapter_1.xhtml#pg_4), [56](#chapter_4.xhtml#pg_56), [59](#chapter_5.xhtml#pg_59), [101](#chapter_8.xhtml#pg_101), [109](#chapter_8.xhtml#pg_109), [114](#chapter_8.xhtml#pg_114), [150–152](#chapter_11.xhtml#pg_150), [156](#chapter_12.xhtml#pg_156), [160–161](#chapter_12.xhtml#pg_160), [176n6 (chap. 11)](#chapter_11.xhtml#chapter11-6)
+*   Anadol, Refik, [103](#chapter_8.xhtml#pg_103)
+*   Ascott, Roy, [16](#chapter_1.xhtml#pg_16), [46](#chapter_4.xhtml#pg_46), [173n1–2 (chap. 4)](#chapter_4.xhtml#chapter4-1)
+*   Ashby, Ross, [11](#chapter_1.xhtml#pg_11), [46](#chapter_4.xhtml#pg_46)
+*   Atwood, Margaret, [141](#chapter_10.xhtml#pg_141)
+*   Baalman, Marije, [41](#chapter_3.xhtml#pg_41)
+*   Babbage, Charles, [27](#chapter_2.xhtml#pg_27), [171n6](#chapter_1.xhtml#chapter1-6)
+*   Bach, Johann Sebastian, [27](#chapter_2.xhtml#pg_27)
+*   Baginsky, Nicolas, [1–3](#chapter_1.xhtml#pg_1), [30](#chapter_2.xhtml#pg_30), [43](#chapter_3.xhtml#pg_43), [45](#chapter_4.xhtml#pg_45), [51](#chapter_4.xhtml#pg_51), [55](#chapter_4.xhtml#pg_55), [67–68](#chapter_5.xhtml#pg_67), [71](#chapter_5.xhtml#pg_71), [83](#chapter_7.xhtml#pg_83), [89](#chapter_7.xhtml#pg_89), [90](#chapter_7.xhtml#pg_90), [121](#chapter_9.xhtml#pg_121), [156](#chapter_12.xhtml#pg_156)
+*   Ball, Hugo, [138](#chapter_10.xhtml#pg_138)
+*   Balska, Natalia, [32–33](#chapter_2.xhtml#pg_32), [37](#chapter_3.xhtml#pg_37), [52](#chapter_4.xhtml#pg_52), [55](#chapter_4.xhtml#pg_55), [159](#chapter_12.xhtml#pg_159)
+*   Baricelli, Nils, [174n1 (chap. 6)](#chapter_6.xhtml#chapter6-1)
+*   Barrat, Robbie, [101–103](#chapter_8.xhtml#pg_101)
+*   Basanta, Adam, [41](#chapter_3.xhtml#pg_41)
+*   Bengio, Yoshua, [14](#chapter_1.xhtml#pg_14), [21](#chapter_2.xhtml#pg_21)
+*   Bidinost, Elio, [41](#chapter_3.xhtml#pg_41)
+*   Blais, Joline, [14](#chapter_1.xhtml#pg_14)
+*   Boden, Margaret A., [26](#chapter_2.xhtml#pg_26), [27](#chapter_2.xhtml#pg_27)
+*   Bogart, Ben, [71](#chapter_5.xhtml#pg_71), [83](#chapter_7.xhtml#pg_83), [93–94](#chapter_7.xhtml#pg_93), [103](#chapter_8.xhtml#pg_103), [105](#chapter_8.xhtml#pg_105), [143–145](#chapter_11.xhtml#pg_143), [150](#chapter_11.xhtml#pg_150), [152](#chapter_11.xhtml#pg_152), [156](#chapter_12.xhtml#pg_156), [159](#chapter_12.xhtml#pg_159), [175n4 (chap. 8)](#chapter_8.xhtml#chapter8-4)
+*   Boole, George, [171n2](#chapter_1.xhtml#chapter1-2)
+*   Braidotti, Rossi, [18](#chapter_1.xhtml#pg_18)
+*   Branwen, Gwern, [137](#chapter_10.xhtml#pg_137)
+*   Broeckmann, Andreas, [24](#chapter_2.xhtml#pg_24)
+*   Brooks, Rodney, [13](#chapter_1.xhtml#pg_13), [47–48](#chapter_4.xhtml#pg_47), [64](#chapter_5.xhtml#pg_64), [156](#chapter_12.xhtml#pg_156), [173n4 (chap. 5)](#chapter_5.xhtml#chapter5-4)
+*   Bures Miller, George, [68](#chapter_5.xhtml#pg_68)
+*   Burnham, Jack, [155](#chapter_12.xhtml#pg_155), [162](#chapter_12.xhtml#pg_162)
+*   Cage, John, [100](#chapter_8.xhtml#pg_100), [161](#chapter_12.xhtml#pg_161)
+*   Cantsin, Monty, [110](#chapter_8.xhtml#pg_110)
+*   Cardiff, Janet, [68](#chapter_5.xhtml#pg_68)
+*   Cariani, Peter, [49](#chapter_4.xhtml#pg_49)
+*   Chadabe, Joel, [88](#chapter_7.xhtml#pg_88)
+*   Chung, Sougwen, [122–123](#chapter_9.xhtml#pg_122), [130](#chapter_9.xhtml#pg_130), [143](#chapter_11.xhtml#pg_143), [160](#chapter_12.xhtml#pg_160)
+*   Clifton, Brian, [143](#chapter_11.xhtml#pg_143), [146](#chapter_11.xhtml#pg_146)
+*   Cohen, Harold, [27](#chapter_2.xhtml#pg_27), [61](#chapter_5.xhtml#pg_61), [70](#chapter_5.xhtml#pg_70), [113](#chapter_8.xhtml#pg_113), [158](#chapter_12.xhtml#pg_158)
+*   Crespo, Sofia, [60](#chapter_5.xhtml#pg_60), [66](#chapter_5.xhtml#pg_66), [70](#chapter_5.xhtml#pg_70), [101](#chapter_8.xhtml#pg_101), [103](#chapter_8.xhtml#pg_103), [114](#chapter_8.xhtml#pg_114), [159](#chapter_12.xhtml#pg_159)
+*   Dalí, Salvador, [35](#chapter_3.xhtml#pg_35)
+*   Damm, Ursula, [83](#chapter_7.xhtml#pg_83), [90](#chapter_7.xhtml#pg_90), [91](#chapter_7.xhtml#pg_91), [95](#chapter_7.xhtml#pg_95), [105](#chapter_8.xhtml#pg_105), [152](#chapter_11.xhtml#pg_152), [156](#chapter_12.xhtml#pg_156)
+*   Dawkins, Richard, [37](#chapter_3.xhtml#pg_37), [38](#chapter_3.xhtml#pg_38), [76](#chapter_6.xhtml#pg_76), [105](#chapter_8.xhtml#pg_105), [172n3–4 (chap. 3)](#chapter_3.xhtml#chapter3-3)
+*   Debord, Guy, [127](#chapter_9.xhtml#pg_127)
+*   Demers, Louis-Philippe, [13](#chapter_1.xhtml#pg_13), [47](#chapter_4.xhtml#pg_47), [156](#chapter_12.xhtml#pg_156)
+*   Dewey, John, [47](#chapter_4.xhtml#pg_47)
+*   Dewey-Hagborg, Heather, [143](#chapter_11.xhtml#pg_143), [145](#chapter_11.xhtml#pg_145), [152–153](#chapter_11.xhtml#pg_152)
+*   Di Scipio, Agostino, [49](#chapter_4.xhtml#pg_49)
+*   Dinkins, Stephanie, [128–131](#chapter_9.xhtml#pg_128), [158](#chapter_12.xhtml#pg_158)
+*   Downie, Marc, [36](#chapter_3.xhtml#pg_36), [43](#chapter_3.xhtml#pg_43), [49](#chapter_4.xhtml#pg_49), [173n9](#chapter_4.xhtml#chapter4-9)
+*   Dreyfus, Hubert, [173n4 (chap. 5)](#chapter_5.xhtml#chapter5-4)
+*   Dreyfus, Richard, [64](#chapter_5.xhtml#pg_64)
+*   Driessens, Erwin, [73](#chapter_6.xhtml#pg_73), [76](#chapter_6.xhtml#pg_76), [82](#chapter_6.xhtml#pg_82), [148–149](#chapter_11.xhtml#pg_148), [153](#chapter_11.xhtml#pg_153), [159](#chapter_12.xhtml#pg_159)
+*   Dryhurst, Mat, [140](#chapter_10.xhtml#pg_140)
+*   Du Bois, William Edward Burghardt, [128](#chapter_9.xhtml#pg_128)
+*   Duchamp, Marcel, [27](#chapter_2.xhtml#pg_27), [175n1 (chap. 10)](#chapter_10.xhtml#chapter10-1)
+*   Elgammal, Ahmed, [28–29](#chapter_2.xhtml#pg_28)
+*   Emard, Justine, [53–55](#chapter_4.xhtml#pg_53), [122](#chapter_9.xhtml#pg_122)
+*   Fiebrink, Rebecca, [119](#chapter_9.xhtml#pg_119), [160](#chapter_12.xhtml#pg_160)
+*   Fisher, Ronald, [175n4 (chap. 9)](#chapter_9.xhtml#chapter9-4)
+*   Frazer, John, [27](#chapter_2.xhtml#pg_27)
+*   Frey, Carl Benedikt, [172](#chapter_1.xhtml#pg_172)
+*   Gee, Erin, [56](#chapter_4.xhtml#pg_56)
+*   Gemeinboeck, Petra, [40–41](#chapter_3.xhtml#pg_40), [45](#chapter_4.xhtml#pg_45), [55](#chapter_4.xhtml#pg_55), [158](#chapter_12.xhtml#pg_158)
+*   George, Frank H., [46](#chapter_4.xhtml#pg_46)
+*   Glynn, Ruairi, [81–82](#chapter_6.xhtml#pg_81)
+*   Gogh, Van, [28](#chapter_2.xhtml#pg_28)
+*   Goodfellow, Ian, [175n6 (chap. 8)](#chapter_8.xhtml#chapter8-6)
+*   Hardy, Françoise, [137](#chapter_10.xhtml#pg_137)
+*   Hart, David, [77](#chapter_6.xhtml#pg_77)
+*   Heaney, Libby, [138](#chapter_10.xhtml#pg_138), [139](#chapter_10.xhtml#pg_139)
+*   Hebb, Donald O., [11](#chapter_1.xhtml#pg_11), [85](#chapter_7.xhtml#pg_85)
+*   Heidegger, Martin, [54](#chapter_4.xhtml#pg_54)
+*   Herndon, Holly, [140](#chapter_10.xhtml#pg_140), [142](#chapter_10.xhtml#pg_142)
+*   Hertzmann, Aaron, [103](#chapter_8.xhtml#pg_103)
+*   Hinton, Geoffrey, [14](#chapter_1.xhtml#pg_14), [98](#chapter_8.xhtml#pg_98), [171n2](#chapter_1.xhtml#chapter1-2)
+*   Höch, Hannah, [134](#chapter_10.xhtml#pg_134), [136](#chapter_10.xhtml#pg_136)
+*   Holland, John, [74](#chapter_6.xhtml#pg_74), [80](#chapter_6.xhtml#pg_80)
+*   House, Brian, [127](#chapter_9.xhtml#pg_127), [130](#chapter_9.xhtml#pg_130), [152](#chapter_11.xhtml#pg_152)
+*   Ikegami, Takashi, [16](#chapter_1.xhtml#pg_16), [53](#chapter_4.xhtml#pg_53)
+*   Ippolito, Jon, [14](#chapter_1.xhtml#pg_14)
+*   Jlin, [140](#chapter_10.xhtml#pg_140)
+*   Johnston, David Jhave, [112–113](#chapter_8.xhtml#pg_112), [160](#chapter_12.xhtml#pg_160)
+*   Kanno, So, [143](#chapter_11.xhtml#pg_143), [147](#chapter_11.xhtml#pg_147), [153](#chapter_11.xhtml#pg_153)
+*   Kantor, Istvan, [110](#chapter_8.xhtml#pg_110)
+*   Kelly, Stephen, [78](#chapter_6.xhtml#pg_78), [173n6 (chap. 5)](#chapter_5.xhtml#chapter5-6)
+*   Kite, Suzanne, [121–122](#chapter_9.xhtml#pg_121), [130](#chapter_9.xhtml#pg_130), [160](#chapter_12.xhtml#pg_160)
+*   Klein, Yves Amu, [71](#chapter_5.xhtml#pg_71), [83](#chapter_7.xhtml#pg_83), [90](#chapter_7.xhtml#pg_90), [156](#chapter_12.xhtml#pg_156), [174n6 (chap. 7)](#chapter_7.xhtml#chapter7-6)
+*   Klingemann, Mario, [42](#chapter_3.xhtml#pg_42), [60](#chapter_5.xhtml#pg_60), [66](#chapter_5.xhtml#pg_66), [70](#chapter_5.xhtml#pg_70), [101](#chapter_8.xhtml#pg_101), [103](#chapter_8.xhtml#pg_103), [110–111](#chapter_8.xhtml#pg_110), [114](#chapter_8.xhtml#pg_114), [137–139](#chapter_10.xhtml#pg_137), [156](#chapter_12.xhtml#pg_156)
+*   Kogan, Gene, [101](#chapter_8.xhtml#pg_101), [156](#chapter_12.xhtml#pg_156), [164](#chapter_12.xhtml#pg_164)
+*   Kohonen, Teuvo, [174n5 (chap. 7)](#chapter_7.xhtml#chapter7-5)
+*   Komar, Vitaly, [24–25](#chapter_2.xhtml#pg_24), [33](#chapter_2.xhtml#pg_33), [172n7 (chap. 2)](#chapter_2.xhtml#chapter2-7)
+*   LaPlace, Jules, [140](#chapter_10.xhtml#pg_140)
+*   Latham, William, [37](#chapter_3.xhtml#pg_37), [39](#chapter_3.xhtml#pg_39), [59](#chapter_5.xhtml#pg_59), [70](#chapter_5.xhtml#pg_70), [83](#chapter_7.xhtml#pg_83), [114](#chapter_8.xhtml#pg_114), [156](#chapter_12.xhtml#pg_156), [160](#chapter_12.xhtml#pg_160)
+*   Lavigne, Sam, [143](#chapter_11.xhtml#pg_143), [146](#chapter_11.xhtml#pg_146)
+*   LeCun, Yann, [171n2](#chapter_1.xhtml#chapter1-2)
+*   Legrady, George, [83](#chapter_7.xhtml#pg_83), [92](#chapter_7.xhtml#pg_92), [95](#chapter_7.xhtml#pg_95), [127](#chapter_9.xhtml#pg_127), [130](#chapter_9.xhtml#pg_130)
+*   Lessig, Lawrence, [134–135](#chapter_10.xhtml#pg_134)
+*   Lewis, George, [141](#chapter_10.xhtml#pg_141)
+*   Lewis, J. P., [88](#chapter_7.xhtml#pg_88)
+*   Littlewood, Joan, [173n2 (chap. 4)](#chapter_4.xhtml#chapter4-2)
+*   Lovelace, Ada, [27](#chapter_2.xhtml#pg_27), [171n6](#chapter_1.xhtml#chapter1-6)
+*   Lozano-Hemmer, Rafael, [13](#chapter_1.xhtml#pg_13)
+*   Macri, Mauricio, [137](#chapter_10.xhtml#pg_137)
+*   Martin, Shantell, [124](#chapter_9.xhtml#pg_124)
+*   Masson, André, [35](#chapter_3.xhtml#pg_35)
+*   Maturana, Humberto, [173n4 (chap. 5)](#chapter_5.xhtml#chapter5-4)
+*   McCorduck, Pamela, [173n1 (chap. 5)](#chapter_5.xhtml#chapter5-1)
+*   McCormack, Jon, [67](#chapter_5.xhtml#pg_67), [79](#chapter_6.xhtml#pg_79), [80](#chapter_6.xhtml#pg_80)
+*   McCulloch, Warren S., [11](#chapter_1.xhtml#pg_11), [174n2 (chap. 7)](#chapter_7.xhtml#chapter7-2)
+*   Melamid, Alex, [24–25](#chapter_2.xhtml#pg_24), [33](#chapter_2.xhtml#pg_33), [172n7 (chap. 2)](#chapter_2.xhtml#chapter2-7)
+*   Menabrea, Luigi Federico, [171n6](#chapter_1.xhtml#chapter1-6)
+*   Merleau-Ponty, Maurice, [53](#chapter_4.xhtml#pg_53), [144](#chapter_11.xhtml#pg_144)
+*   Minsky, Marvin, [12](#chapter_1.xhtml#pg_12)
+*   Miró, Joan, [35](#chapter_3.xhtml#pg_35)
+*   Mordvintsev, Alexander, [99](#chapter_8.xhtml#pg_99), [101](#chapter_8.xhtml#pg_101), [103](#chapter_8.xhtml#pg_103), [172n11](#chapter_1.xhtml#chapter1-11), [175n4](#chapter_8.xhtml#chapter8-4)
+*   Moriyama, Mirai, [53](#chapter_4.xhtml#pg_53), [122](#chapter_9.xhtml#pg_122)
+*   Morris, Desmond, [172n3 (chap. 3)](#chapter_3.xhtml#chapter3-3)
+*   Moura, Leonel, [25](#chapter_2.xhtml#pg_25), [172n5 (chap. 3)](#chapter_3.xhtml#chapter3-5)
+*   Mozer, Michael C., [88](#chapter_7.xhtml#pg_88)
+*   Navas, Eduardo, [134](#chapter_10.xhtml#pg_134)
+*   Ng, Andrew, [171n2](#chapter_1.xhtml#chapter1-2)
+*   O’Neil, Cathy, [146](#chapter_11.xhtml#pg_146)
+*   Obvious (collective), [102](#chapter_8.xhtml#pg_102)
+*   Offenhartz, John, [88](#chapter_7.xhtml#pg_88)
+*   Olah, Christopher, [103](#chapter_8.xhtml#pg_103)
+*   Ono, Yoko, [161](#chapter_12.xhtml#pg_161)
+*   Onohua, Mimi, [153](#chapter_11.xhtml#pg_153)
+*   Osborne, Michael A., [172n10](#chapter_1.xhtml#chapter1-10)
+*   Osbourne, Ruddock, [134](#chapter_10.xhtml#pg_134)
+*   Paglen, Trevor, [103](#chapter_8.xhtml#pg_103), [143](#chapter_11.xhtml#pg_143), [149–150](#chapter_11.xhtml#pg_149), [153](#chapter_11.xhtml#pg_153), [176n5 (chap. 11)](#chapter_11.xhtml#chapter11-5)
+*   Papert, Seymour, [12](#chapter_1.xhtml#pg_12), [85](#chapter_7.xhtml#pg_85)
+*   Parrish, Allison, [108–109](#chapter_8.xhtml#pg_108), [156](#chapter_12.xhtml#pg_156), [176n2 (chap. 12)](#chapter_12.xhtml#chapter12-2)
+*   Pask, Gordon, [46–47](#chapter_4.xhtml#pg_46), [55](#chapter_4.xhtml#pg_55), [70](#chapter_5.xhtml#pg_70), [81–82](#chapter_6.xhtml#pg_81), [155](#chapter_12.xhtml#pg_155), [173n2 (chap. 4)](#chapter_4.xhtml#chapter4-2)
+*   Penny, Simon, [6](#chapter_1.xhtml#pg_6), [13](#chapter_1.xhtml#pg_13), [25](#chapter_2.xhtml#pg_25), [46–48](#chapter_4.xhtml#pg_46), [64](#chapter_5.xhtml#pg_64), [156](#chapter_12.xhtml#pg_156), [162](#chapter_12.xhtml#pg_162)
+*   Pereira, Henrique Garcia, [25](#chapter_2.xhtml#pg_25), [172n5 (chap. 3)](#chapter_3.xhtml#chapter3-5)
+*   Peterhaensel, Alexander, [143](#chapter_11.xhtml#pg_143), [146](#chapter_11.xhtml#pg_146)
+*   Pitts, Walter, [11](#chapter_1.xhtml#pg_11), [174n2 (chap. 7)](#chapter_7.xhtml#chapter7-2)
+*   Pollock, Jackson, [123](#chapter_9.xhtml#pg_123), [160](#chapter_12.xhtml#pg_160)
+*   Price, Cedric, [173n2 (chap. 4)](#chapter_4.xhtml#chapter4-2)
+*   Puckette, Miller, [135](#chapter_10.xhtml#pg_135)
+*   Rainer, Yvonne, [100](#chapter_8.xhtml#pg_100)
+*   Ramsay, Susie, [13](#chapter_1.xhtml#pg_13)
+*   Rechenberg, Ingo, [174n2 (chap. 6)](#chapter_6.xhtml#chapter6-2)
+*   Reimann-Dubbers, Theresa, [128](#chapter_9.xhtml#pg_128)
+*   Ridler, Anna, [124–126](#chapter_9.xhtml#pg_124), [130](#chapter_9.xhtml#pg_130), [156](#chapter_12.xhtml#pg_156), [160](#chapter_12.xhtml#pg_160)
+*   Rinaldo, Ken, [13](#chapter_1.xhtml#pg_13), [47](#chapter_4.xhtml#pg_47), [64](#chapter_5.xhtml#pg_64), [156](#chapter_12.xhtml#pg_156)
+*   Rokeby, David, [82](#chapter_6.xhtml#pg_82), [94](#chapter_7.xhtml#pg_94), [162](#chapter_12.xhtml#pg_162)
+*   Rooke, Steven, [77](#chapter_6.xhtml#pg_77)
+*   Rosch, Eleanor, [53](#chapter_4.xhtml#pg_53)
+*   Rosenblatt, Frank, [11](#chapter_1.xhtml#pg_11), [85](#chapter_7.xhtml#pg_85)
+*   Rosenblueth, Arturo, [25](#chapter_2.xhtml#pg_25)
+*   Ruddock, Osbourne, [134](#chapter_10.xhtml#pg_134)
+*   Salavon, Jason, [103](#chapter_8.xhtml#pg_103)
+*   Salter, Chris, [41](#chapter_3.xhtml#pg_41), [173n6 (chap. 5)](#chapter_5.xhtml#chapter5-6)
+*   Sarin, Helena, [101](#chapter_8.xhtml#pg_101), [103](#chapter_8.xhtml#pg_103)
+*   Saunders, Rob, [40–41](#chapter_3.xhtml#pg_40), [55](#chapter_4.xhtml#pg_55), [158](#chapter_12.xhtml#pg_158)
+*   Schöffer, Nicolas, [55](#chapter_4.xhtml#pg_55), [70](#chapter_5.xhtml#pg_70), [100](#chapter_8.xhtml#pg_100), [155](#chapter_12.xhtml#pg_155), [173n7 (chap. 5)](#chapter_5.xhtml#chapter5-7)
+*   Schmidhuber, Jürgen, [98](#chapter_8.xhtml#pg_98), [174n1 (chap. 8)](#chapter_8.xhtml#chapter8-1)
+*   Schneider, Martin, [91](#chapter_7.xhtml#pg_91)
+*   Schwettmann, Sarah, [124](#chapter_9.xhtml#pg_124)
+*   Selfridge, Oliver, [11](#chapter_1.xhtml#pg_11)
+*   Shanken, Edward A., [46](#chapter_4.xhtml#pg_46)
+*   Shannon, Claude, [174n1](#chapter_6.xhtml#chapter6-1)
+*   Sims, Karl, [23](#chapter_2.xhtml#pg_23), [38](#chapter_3.xhtml#pg_38), [60](#chapter_5.xhtml#pg_60), [70](#chapter_5.xhtml#pg_70), [76–77](#chapter_6.xhtml#pg_76), [80–82](#chapter_6.xhtml#pg_80), [156](#chapter_12.xhtml#pg_156), [159](#chapter_12.xhtml#pg_159), [172](#chapter_1.xhtml#pg_172)
+*   Sonami, Laetitia, [119–122](#chapter_9.xhtml#pg_119), [130](#chapter_9.xhtml#pg_130), [160](#chapter_12.xhtml#pg_160), [175n2–3 (chap. 9)](#chapter_9.xhtml#chapter9-2)
+*   Stallman, Richard, [135](#chapter_10.xhtml#pg_135)
+*   Tenhaaf, Nell, [13](#chapter_1.xhtml#pg_13)
+*   Thompson, Adrian, [62–65](#chapter_5.xhtml#pg_62), [74](#chapter_6.xhtml#pg_74), 943, [169n (chap. 5)](#chapter_5.xhtml#chapter5-1) [173n3 (chap. 5)](#chapter_5.xhtml#chapter5-3)
+*   Thompson, Evan, [53](#chapter_4.xhtml#pg_53)
+*   Tinguely, Jean, [5](#chapter_1.xhtml#pg_5)
+*   Todd, Peter M., [88](#chapter_7.xhtml#pg_88)
+*   Todd, Stephen, [37](#chapter_3.xhtml#pg_37)
+*   Torvald, Linus, [175n4 (chap. 10)](#chapter_10.xhtml#chapter10-4)
+*   Tseng, Francis, [143](#chapter_11.xhtml#pg_143), [146](#chapter_11.xhtml#pg_146)
+*   Turing, Alan, [28](#chapter_2.xhtml#pg_28), [30](#chapter_2.xhtml#pg_30), [47](#chapter_4.xhtml#pg_47), [172n6 (chap. 2)](#chapter_2.xhtml#chapter2-6)
+*   Tyka, Mike, [101](#chapter_8.xhtml#pg_101), [103–104](#chapter_8.xhtml#pg_103), [108](#chapter_8.xhtml#pg_108), [114](#chapter_8.xhtml#pg_114)
+*   Tzara, Tristan, [35](#chapter_3.xhtml#pg_35), [134](#chapter_10.xhtml#pg_134)
+*   Ulam, Stanislaw, [174n6 (chap. 6)](#chapter_6.xhtml#chapter6-6)
+*   Unemi, Tatsuo, [77](#chapter_6.xhtml#pg_77)
+*   Varela, Francisco J., [53](#chapter_4.xhtml#pg_53), [173n4 (chap. 5)](#chapter_5.xhtml#chapter5-4)
+*   Verstappen, Maria, [73](#chapter_6.xhtml#pg_73), [76](#chapter_6.xhtml#pg_76), [82](#chapter_6.xhtml#pg_82), [148–149](#chapter_11.xhtml#pg_148), [153](#chapter_11.xhtml#pg_153), [159](#chapter_12.xhtml#pg_159)
+*   von Neumann, John, [174n6 (chap. 6)](#chapter_6.xhtml#chapter6-6)
+*   Vorn, Bill, [13](#chapter_1.xhtml#pg_13), [47](#chapter_4.xhtml#pg_47), [64](#chapter_5.xhtml#pg_64), [156](#chapter_12.xhtml#pg_156)
+*   Wagner, Richard, [176n8 (chap. 10)](#chapter_10.xhtml#chapter10-8)
+*   Walter, Grey, [11](#chapter_1.xhtml#pg_11), [70](#chapter_5.xhtml#pg_70), [155](#chapter_12.xhtml#pg_155)
+*   Welling, Max, [3](#chapter_1.xhtml#pg_3)
+*   White, Tom, [103](#chapter_8.xhtml#pg_103), [143](#chapter_11.xhtml#pg_143), [176n5 (chap. 11)](#chapter_11.xhtml#chapter11-5)
+*   Widdoff, Anthony, [88](#chapter_7.xhtml#pg_88)
+*   Wiener, Norbert, [25](#chapter_2.xhtml#pg_25), [46](#chapter_4.xhtml#pg_46)
+*   Wood, Robin McKinnon, [46](#chapter_4.xhtml#pg_46)
+*   Xenakis, Iannis, [27](#chapter_2.xhtml#pg_27), [35](#chapter_3.xhtml#pg_35), [41](#chapter_3.xhtml#pg_41), [49](#chapter_4.xhtml#pg_49), [88](#chapter_7.xhtml#pg_88), [161](#chapter_12.xhtml#pg_161)
+*   Yamaguchi, Takahiro, [147](#chapter_11.xhtml#pg_147)
+*   Zicarelli, David, [88](#chapter_7.xhtml#pg_88)
+*   Zics, Brigitta, [32](#chapter_2.xhtml#pg_32), [37](#chapter_3.xhtml#pg_37)
+
+ 
+
+# **Subject Index**
+
+*   *A(.I.) Messianic Window* (Reimann-Dubbers), [128](#chapter_9.xhtml#pg_128)
+*   AARON (Cohen), [5](#chapter_1.xhtml#pg_5), [28](#chapter_2.xhtml#pg_28), [61](#chapter_5.xhtml#pg_61), [70](#chapter_5.xhtml#pg_70), [113](#chapter_8.xhtml#pg_113), [158](#chapter_12.xhtml#pg_158), [159](#chapter_12.xhtml#pg_159), [173n1 (chap. 5)](#chapter_5.xhtml#chapter5-1)
+*   Abraham Project (Kogan), [164](#chapter_12.xhtml#pg_164)
+*   Action painting, [160–161](#chapter_12.xhtml#pg_160)
+*   Adaptation, [8](#chapter_1.xhtml#pg_8), [15](#chapter_1.xhtml#pg_15), [51](#chapter_4.xhtml#pg_51), [55](#chapter_4.xhtml#pg_55), [74](#chapter_6.xhtml#pg_74)
+*   *Adversarially Evolved Hallucinations* (Paglen), [149](#chapter_11.xhtml#pg_149)
+*   Agent, [8–9](#chapter_1.xhtml#pg_8), [13](#chapter_1.xhtml#pg_13), [38–39](#chapter_3.xhtml#pg_38), [46](#chapter_4.xhtml#pg_46), [66–67](#chapter_5.xhtml#pg_66), [171n3](#chapter_1.xhtml#chapter1-3)
+*   aliveness of, [49](#chapter_4.xhtml#pg_49), [67](#chapter_5.xhtml#pg_67), [165](#chapter_12.xhtml#pg_165)
+*   *Aglaopheme* (guitar robot), [1–2](#chapter_1.xhtml#pg_1). *See also* [Three Sirens (The)](#index-2.xhtml#ind4a)
+*   Agnosticism, data, [158–159](#chapter_12.xhtml#pg_158)
+*   AI. *See* [Artificial intelligence](#index-2.xhtml#ind1)
+*   AI winter, [12](#chapter_1.xhtml#pg_12), [156](#chapter_12.xhtml#pg_156)
+*   Algorithmic art, [48](#chapter_4.xhtml#pg_48)
+*   Alter (android), [53–55](#chapter_4.xhtml#pg_53)
+*   *Alternative Face v1* (Klingemann), [137](#chapter_10.xhtml#pg_137)
+*   *America’s Most Wanted* (Komar & Melamid), [24](#chapter_2.xhtml#pg_24)
+*   Analytical engine, [28](#chapter_2.xhtml#pg_28)
+*   Arduino (software), [118](#chapter_9.xhtml#pg_118)
+*   *Articulations* (Parrish), [160](#chapter_12.xhtml#pg_160)
+*   Artificial life, [12–13](#chapter_1.xhtml#pg_12), [53](#chapter_4.xhtml#pg_53), [158–159](#chapter_12.xhtml#pg_158)
+*   art, [13](#chapter_1.xhtml#pg_13), [48](#chapter_4.xhtml#pg_48), [156](#chapter_12.xhtml#pg_156), [161](#chapter_12.xhtml#pg_161)
+*   Artificial intelligence, [2](#chapter_1.xhtml#pg_2), [5](#chapter_1.xhtml#pg_5), [7](#chapter_1.xhtml#pg_7), [11–14](#chapter_1.xhtml#pg_11). *See also* [Machine learning](#index-2.xhtml#ind15); [Symbolic AI](#index-2.xhtml#ind21)
+*   Artificial neural network, [5](#chapter_1.xhtml#pg_5), [10](#chapter_1.xhtml#pg_10), [83–86](#chapter_7.xhtml#pg_83), [97–99](#chapter_8.xhtml#pg_97), [174n2 (chap. 7)](#chapter_7.xhtml#chapter7-2)
+*   convolutional, [60–61](#chapter_5.xhtml#pg_60), [112](#chapter_8.xhtml#pg_112), [163](#chapter_12.xhtml#pg_163)
+*   creative, [29–30](#chapter_2.xhtml#pg_29), [42](#chapter_3.xhtml#pg_42)
+*   deep, [97](#chapter_8.xhtml#pg_97), [98](#chapter_8.xhtml#pg_98), [101](#chapter_8.xhtml#pg_101), [102](#chapter_8.xhtml#pg_102), [104](#chapter_8.xhtml#pg_104), [122](#chapter_9.xhtml#pg_122), [124](#chapter_9.xhtml#pg_124), [152](#chapter_11.xhtml#pg_152)
+*   generative adversarial, [102–103](#chapter_8.xhtml#pg_102), [105](#chapter_8.xhtml#pg_105), [108](#chapter_8.xhtml#pg_108), [110](#chapter_8.xhtml#pg_110), [114](#chapter_8.xhtml#pg_114), [124](#chapter_9.xhtml#pg_124), [148–150](#chapter_11.xhtml#pg_148)
+*   language model, [21](#chapter_2.xhtml#pg_21), [108](#chapter_8.xhtml#pg_108)
+*   recurrent, [88](#chapter_7.xhtml#pg_88), [112–113](#chapter_8.xhtml#pg_112)
+*   shallow, [98](#chapter_8.xhtml#pg_98)
+*   spiking, [173n10](#chapter_4.xhtml#chapter4-10)
+*   *See also* [Connectionism](#index-2.xhtml#ind8)
+*   *Asemic Languages* (Kanno & Yamaguchi), [147](#chapter_11.xhtml#pg_147)
+*   Autonomy, [49](#chapter_4.xhtml#pg_49), [54](#chapter_4.xhtml#pg_54), [161–162](#chapter_12.xhtml#pg_161), [165](#chapter_12.xhtml#pg_165)
+*   control versus, [35](#chapter_3.xhtml#pg_35), [77](#chapter_6.xhtml#pg_77), [82](#chapter_6.xhtml#pg_82), [120](#chapter_9.xhtml#pg_120), [164](#chapter_12.xhtml#pg_164)
+*   coupling versus, [54](#chapter_4.xhtml#pg_54)
+*   Authorship, [31](#chapter_2.xhtml#pg_31), [35](#chapter_3.xhtml#pg_35), [36](#chapter_3.xhtml#pg_36), [83](#chapter_7.xhtml#pg_83), [140–141](#chapter_10.xhtml#pg_140), [159](#chapter_12.xhtml#pg_159). *See also* [Autonomy (control versus)](#index-2.xhtml#ind3); [Copyright](#index-2.xhtml#ind9)
+*   *B–612* (Balska), [33–34](#chapter_2.xhtml#pg_33), [37](#chapter_3.xhtml#pg_37), [43](#chapter_3.xhtml#pg_43), [52](#chapter_4.xhtml#pg_52), [55](#chapter_4.xhtml#pg_55), [159](#chapter_12.xhtml#pg_159)
+*   Backpropagation, [98](#chapter_8.xhtml#pg_98)
+*   Beat Generation, [134](#chapter_10.xhtml#pg_134), [161](#chapter_12.xhtml#pg_161)
+*   Behavior, [47](#chapter_4.xhtml#pg_47), [173n4–5 (chap. 4)](#chapter_4.xhtml#chapter4-4)
+*   aesthetics, [13](#chapter_1.xhtml#pg_13), [46–48](#chapter_4.xhtml#pg_46), [55](#chapter_4.xhtml#pg_55), [162](#chapter_12.xhtml#pg_162)
+*   morphologies, [50–53](#chapter_4.xhtml#pg_50)
+*   orders, [49–50](#chapter_4.xhtml#pg_49)
+*   Big data, [16](#chapter_1.xhtml#pg_16), [146](#chapter_11.xhtml#pg_146), [152–153](#chapter_11.xhtml#pg_152)
+*   BigGAN (model), [133](#chapter_10.xhtml#pg_133), [137](#chapter_10.xhtml#pg_137)
+*   BINA48 (android), [130](#chapter_9.xhtml#pg_130)
+*   Biomorph (program), [37–38](#chapter_3.xhtml#pg_37), [76](#chapter_6.xhtml#pg_76), [105–108](#chapter_8.xhtml#pg_105), [172n3–4 (chap. 3)](#chapter_3.xhtml#chapter3-3)
+*   Bottom-up, [12](#chapter_1.xhtml#pg_12), [16](#chapter_1.xhtml#pg_16), [47–48](#chapter_4.xhtml#pg_47), [71](#chapter_5.xhtml#pg_71), [79](#chapter_6.xhtml#pg_79), [80](#chapter_6.xhtml#pg_80), [158–159](#chapter_12.xhtml#pg_158)
+*   *Breed* (Driessens & Verstappen), [73](#chapter_6.xhtml#pg_73), [76](#chapter_6.xhtml#pg_76), [82](#chapter_6.xhtml#pg_82)
+*   Business, [16](#chapter_1.xhtml#pg_16), [98](#chapter_8.xhtml#pg_98), [117](#chapter_9.xhtml#pg_117), [137](#chapter_10.xhtml#pg_137)
+*   ethics, [98](#chapter_8.xhtml#pg_98), [175n3 (chap. 8)](#chapter_8.xhtml#chapter8-3)
+*   relationship with art, [16](#chapter_1.xhtml#pg_16), [100–101](#chapter_8.xhtml#pg_100), [162–164](#chapter_12.xhtml#pg_162)
+*   Cadavre exquis, [161](#chapter_12.xhtml#pg_161)
+*   CAN (Creative adversarial network), [29–30](#chapter_2.xhtml#pg_29), [42](#chapter_3.xhtml#pg_42)
+*   CC., *See* [Computational creativity](#index-2.xhtml#ind6)
+*   Classic AI., *See* [Symbolic AI](#index-2.xhtml#ind21)
+*   CNN (Convolutional neural network), [60–61](#chapter_5.xhtml#pg_60), [163](#chapter_12.xhtml#pg_163)
+*   *Co(AI)xistence* (Emard), [53–55](#chapter_4.xhtml#pg_53), [122](#chapter_9.xhtml#pg_122)
+*   *Colloquy of Mobiles* (Pask), [70](#chapter_5.xhtml#pg_70), [81](#chapter_6.xhtml#pg_81)
+*   Computational creativity, [18](#chapter_1.xhtml#pg_18), [22](#chapter_2.xhtml#pg_22), [26–28](#chapter_2.xhtml#pg_26), [31](#chapter_2.xhtml#pg_31), [34](#chapter_2.xhtml#pg_34)
+*   Computationalism, [11–12](#chapter_1.xhtml#pg_11), [31](#chapter_2.xhtml#pg_31), [47](#chapter_4.xhtml#pg_47), [155](#chapter_12.xhtml#pg_155)
+*   collapse of, [156](#chapter_12.xhtml#pg_156)
+*   critiques of, 00
+*   Computer art, [35](#chapter_3.xhtml#pg_35), [161](#chapter_12.xhtml#pg_161)
+*   Connectionism, [12–13](#chapter_1.xhtml#pg_12), [85–86](#chapter_7.xhtml#pg_85), [88](#chapter_7.xhtml#pg_88), [155–156](#chapter_12.xhtml#pg_155), [171n8](#chapter_1.xhtml#chapter1-8)
+*   *Context Machines* (Bogart), [93–94](#chapter_7.xhtml#pg_93)
+*   Control, [16](#chapter_1.xhtml#pg_16)
+*   autonomy vs, [35](#chapter_3.xhtml#pg_35), [77](#chapter_6.xhtml#pg_77), [82](#chapter_6.xhtml#pg_82), [120](#chapter_9.xhtml#pg_120), [164](#chapter_12.xhtml#pg_164)
+*   direct, [37](#chapter_3.xhtml#pg_37), [53](#chapter_4.xhtml#pg_53), [158](#chapter_12.xhtml#pg_158), [161](#chapter_12.xhtml#pg_161)
+*   indirect, [83](#chapter_7.xhtml#pg_83), [123](#chapter_9.xhtml#pg_123), [137](#chapter_10.xhtml#pg_137), [156](#chapter_12.xhtml#pg_156), [158](#chapter_12.xhtml#pg_158)
+*   loss of, [36](#chapter_3.xhtml#pg_36), [43](#chapter_3.xhtml#pg_43), [86](#chapter_7.xhtml#pg_86), [126](#chapter_9.xhtml#pg_126)
+*   over nature, [15](#chapter_1.xhtml#pg_15)
+*   *See also* [Autonomy](#index-2.xhtml#ind3); [Authorship](#index-2.xhtml#ind4)
+*   Convolutional neural network, [60–61](#chapter_5.xhtml#pg_60), [112](#chapter_8.xhtml#pg_112), [163](#chapter_12.xhtml#pg_163)
+*   Context (in art), [24](#chapter_2.xhtml#pg_24), [31](#chapter_2.xhtml#pg_31), [34](#chapter_2.xhtml#pg_34), [36](#chapter_3.xhtml#pg_36), [121](#chapter_9.xhtml#pg_121), [142](#chapter_10.xhtml#pg_142), [172n4 (chap. 2)](#chapter_2.xhtml#chapter2-4)
+*   Copyright, [135](#chapter_10.xhtml#pg_135), [141](#chapter_10.xhtml#pg_141)
+*   Coupling, [53–55](#chapter_4.xhtml#pg_53)
+*   Creative adversarial network, [29–30](#chapter_2.xhtml#pg_29), [42](#chapter_3.xhtml#pg_42)
+*   Creativity., *See* [Computational creativity](#index-2.xhtml#ind6)
+*   Cubism, [92](#chapter_7.xhtml#pg_92)
+*   Culture jamming, [146–147](#chapter_11.xhtml#pg_146), [153](#chapter_11.xhtml#pg_153)
+*   Curiosity, artificial, [40–41](#chapter_3.xhtml#pg_40)
+*   *Cut with the Kitchen Knife Dada through the Beer-Belly of the Weimar Republic* (Höch), [134](#chapter_10.xhtml#pg_134)
+*   Cybernetic art, [46](#chapter_4.xhtml#pg_46)
+*   Cybernetics, [11–12](#chapter_1.xhtml#pg_11), [46–48](#chapter_4.xhtml#pg_46), [55](#chapter_4.xhtml#pg_55), [70](#chapter_5.xhtml#pg_70), [155](#chapter_12.xhtml#pg_155), [173n1–2 (chap. 4)](#chapter_4.xhtml#chapter4-1)
+*   *CYSP 1* (Schöffer), [70](#chapter_5.xhtml#pg_70), [100](#chapter_8.xhtml#pg_100)
+*   D.O.U.G. (system) (Chung), [123](#chapter_9.xhtml#pg_123), [160](#chapter_12.xhtml#pg_160)
+*   Dadaism, [35](#chapter_3.xhtml#pg_35), [123](#chapter_9.xhtml#pg_123), [134](#chapter_10.xhtml#pg_134), [138](#chapter_10.xhtml#pg_138), [161](#chapter_12.xhtml#pg_161)
+*   Deep learning, [3–5](#chapter_1.xhtml#pg_3), [32](#chapter_2.xhtml#pg_32), [114](#chapter_8.xhtml#pg_114), [117](#chapter_9.xhtml#pg_117), [135](#chapter_10.xhtml#pg_135), [156](#chapter_12.xhtml#pg_156)
+*   architectures, [36](#chapter_3.xhtml#pg_36), [99](#chapter_8.xhtml#pg_99)
+*   history of, [4](#chapter_1.xhtml#pg_4), [6](#chapter_1.xhtml#pg_6), [11](#chapter_1.xhtml#pg_11), [70](#chapter_5.xhtml#pg_70), [97–98](#chapter_8.xhtml#pg_97)
+*   representations in, [62](#chapter_5.xhtml#pg_62), [65–66](#chapter_5.xhtml#pg_65), [104](#chapter_8.xhtml#pg_104)
+*   *See also* [Connectionism](#index-2.xhtml#ind8)
+*   Deep neural network. *See* [Artificial neural network (deep)](#index-2.xhtml#ind2)
+*   DeepBach (system), [28](#chapter_2.xhtml#pg_28)
+*   DeepDream (software), [15](#chapter_1.xhtml#pg_15), [99–102](#chapter_8.xhtml#pg_99), [163](#chapter_12.xhtml#pg_163), [172n11](#chapter_1.xhtml#chapter1-11), [175n4 (chap. 8)](#chapter_8.xhtml#chapter8-4)
+*   deepfake, [137](#chapter_10.xhtml#pg_137), [138](#chapter_10.xhtml#pg_138), [142](#chapter_10.xhtml#pg_142), [176n7 (chap. 10)](#chapter_10.xhtml#chapter10-7)
+*   *Dérive*, [127](#chapter_9.xhtml#pg_127)
+*   Digital art, [4](#chapter_1.xhtml#pg_4), [14](#chapter_1.xhtml#pg_14), [157](#chapter_12.xhtml#pg_157), [162](#chapter_12.xhtml#pg_162), [165](#chapter_12.xhtml#pg_165)
+*   *Drawing Operations #4* (Chung), [123](#chapter_9.xhtml#pg_123)
+*   *Dreaming Machines* (Bogart), [71](#chapter_5.xhtml#pg_71), [159](#chapter_12.xhtml#pg_159), [175n4 (chap. 8)](#chapter_8.xhtml#chapter8-4), [176n1 (chap. 11)](#chapter_11.xhtml#chapter11-1)
+*   *Eden* (McCormack), [67](#chapter_5.xhtml#pg_67), [80](#chapter_6.xhtml#pg_80)
+*   Environmental art, [126](#chapter_9.xhtml#pg_126)
+*   Embedding, [108](#chapter_8.xhtml#pg_108), [109](#chapter_8.xhtml#pg_109). *See also* [Representation (distributed)](#index-2.xhtml#ind19)
+*   Embodiment, [55](#chapter_4.xhtml#pg_55), [64–65](#chapter_5.xhtml#pg_64), [68](#chapter_5.xhtml#pg_68), [93](#chapter_7.xhtml#pg_93), [119](#chapter_9.xhtml#pg_119), [155–156](#chapter_12.xhtml#pg_155), [162](#chapter_12.xhtml#pg_162)
+*   Emergence, [16](#chapter_1.xhtml#pg_16), [46](#chapter_4.xhtml#pg_46), [48](#chapter_4.xhtml#pg_48)
+*   computational, [36](#chapter_3.xhtml#pg_36)
+*   *See also* [Self-organization](#index-2.xhtml#ind20)
+*   *Euro(re)vision* (Heaney), [138](#chapter_10.xhtml#pg_138)
+*   Evaluation function, [9](#chapter_1.xhtml#pg_9), [10](#chapter_1.xhtml#pg_10), [17](#chapter_1.xhtml#pg_17), [37](#chapter_3.xhtml#pg_37), [51](#chapter_4.xhtml#pg_51)
+*   cost or loss, 00
+*   fitness, [73](#chapter_6.xhtml#pg_73), [74](#chapter_6.xhtml#pg_74), [77](#chapter_6.xhtml#pg_77), [174n3 (chap. 6)](#chapter_6.xhtml#chapter6-3)
+*   reward, [8](#chapter_1.xhtml#pg_8), [38](#chapter_3.xhtml#pg_38), [40–42](#chapter_3.xhtml#pg_40)
+*   *Everything That Happens Will Happen Today* (House), [127](#chapter_9.xhtml#pg_127), [130](#chapter_9.xhtml#pg_130), [152](#chapter_11.xhtml#pg_152)
+*   Evolutionary art, [63](#chapter_5.xhtml#pg_63), [74](#chapter_6.xhtml#pg_74), [82–83](#chapter_6.xhtml#pg_82), [155](#chapter_12.xhtml#pg_155), [161](#chapter_12.xhtml#pg_161)
+*   Evolutionary computation, [70](#chapter_5.xhtml#pg_70), [74](#chapter_6.xhtml#pg_74). *See also* [Genetic algorithm](#index-2.xhtml#ind14)
+*   Expert system, [12](#chapter_1.xhtml#pg_12), [65](#chapter_5.xhtml#pg_65)
+*   *Exquisite Corpus* (Chung), [123](#chapter_9.xhtml#pg_123)
+*   Fake news, [15](#chapter_1.xhtml#pg_15), [139](#chapter_10.xhtml#pg_139), [156](#chapter_12.xhtml#pg_156)
+*   FakeApp (software), [137](#chapter_10.xhtml#pg_137). *See also* [Deepfake](#index-2.xhtml#ind11)
+*   *Fall of the House of Usher* (Ridler), [160](#chapter_12.xhtml#pg_160)
+*   FGPA (Field-programmable gate array), [63–64](#chapter_5.xhtml#pg_63)
+*   Feature, [65](#chapter_5.xhtml#pg_65), [66](#chapter_5.xhtml#pg_66), [93](#chapter_7.xhtml#pg_93), [99](#chapter_8.xhtml#pg_99)
+*   micro-, 00
+*   Formalized music, [35](#chapter_3.xhtml#pg_35), [88](#chapter_7.xhtml#pg_88)
+*   FormGrow (system) (Todd & Latham), [37](#chapter_3.xhtml#pg_37), [39](#chapter_3.xhtml#pg_39)
+*   Futurism, 00
+*   GA (Genetic algorithm), [73–77](#chapter_6.xhtml#pg_73), [79–81](#chapter_6.xhtml#pg_79)
+*   *Galápagos* (Sims), [71](#chapter_5.xhtml#pg_71), [80](#chapter_6.xhtml#pg_80), [82](#chapter_6.xhtml#pg_82)
+*   GAN. *See* [Generative adversarial network](#index-2.xhtml#ind13)
+*   Generalization, [63](#chapter_5.xhtml#pg_63), [103](#chapter_8.xhtml#pg_103), [145](#chapter_11.xhtml#pg_145)
+*   Generative adversarial network, [102](#chapter_8.xhtml#pg_102)
+*   conditional, [150](#chapter_11.xhtml#pg_150)
+*   mode collapse, [103](#chapter_8.xhtml#pg_103)
+*   Generative art, [59](#chapter_5.xhtml#pg_59), [63](#chapter_5.xhtml#pg_63), [74](#chapter_6.xhtml#pg_74), [133](#chapter_10.xhtml#pg_133)
+*   Genetic algorithm, [73–77](#chapter_6.xhtml#pg_73), [79–81](#chapter_6.xhtml#pg_79)
+*   interactive, [37–38](#chapter_3.xhtml#pg_37)
+*   Genetic programming, [10](#chapter_1.xhtml#pg_10), [76–78](#chapter_6.xhtml#pg_76)
+*   *Gesamtkunstwerk*, [141](#chapter_10.xhtml#pg_141), [176n8 (chap. 10)](#chapter_10.xhtml#chapter10-8)
+*   *Godmother* (Herndon & Jlin), [140](#chapter_10.xhtml#pg_140)
+*   *Google Art: Learning to dream* (Akten), [152](#chapter_11.xhtml#pg_152)
+*   GP (Genetic programming), [10](#chapter_1.xhtml#pg_10), [76](#chapter_6.xhtml#pg_76), [78](#chapter_6.xhtml#pg_78)
+*   GPT-n, [133](#chapter_10.xhtml#pg_133), [175n6 (chap. 10)](#chapter_10.xhtml#chapter10-6)
+*   GPU (Graphical processing unit), [4](#chapter_1.xhtml#pg_4), [13](#chapter_1.xhtml#pg_13), [17](#chapter_1.xhtml#pg_17)
+*   Hebbian learning, [85](#chapter_7.xhtml#pg_85), [174n1 (chap. 7)](#chapter_7.xhtml#chapter7-1)
+*   Hidden layer, [86](#chapter_7.xhtml#pg_86), [87](#chapter_7.xhtml#pg_87), [99](#chapter_8.xhtml#pg_99), [104](#chapter_8.xhtml#pg_104)
+*   *How do you see me?* (Dewey-Hagborg), [152](#chapter_11.xhtml#pg_152)
+*   IGA (Interactive genetic algorithm), [37](#chapter_3.xhtml#pg_37), [38](#chapter_3.xhtml#pg_38)
+*   Imagination, [70](#chapter_5.xhtml#pg_70), [143](#chapter_11.xhtml#pg_143), [156](#chapter_12.xhtml#pg_156), [157](#chapter_12.xhtml#pg_157), [175n4 (chap. 8)](#chapter_8.xhtml#chapter8-4)
+*   collective, [97](#chapter_8.xhtml#pg_97), [152](#chapter_11.xhtml#pg_152), [176n6 (chap. 11)](#chapter_11.xhtml#chapter11-6)
+*   machine, [144](#chapter_11.xhtml#pg_144), [148](#chapter_11.xhtml#pg_148), [149](#chapter_11.xhtml#pg_149)
+*   Impressionism, [92](#chapter_7.xhtml#pg_92), [136](#chapter_10.xhtml#pg_136)
+*   Inceptionism. *See* [DeepDream](#index-2.xhtml#ind10)
+*   Indigenous ethics, [122](#chapter_9.xhtml#pg_122)
+*   Inductive bias, [145](#chapter_11.xhtml#pg_145)
+*   *InOutSite* (Damm), [90](#chapter_7.xhtml#pg_90)
+*   Interactive genetic algorithm, [37](#chapter_3.xhtml#pg_37)
+*   Interactive machine learning, [119](#chapter_9.xhtml#pg_119), [122](#chapter_9.xhtml#pg_122), [160](#chapter_12.xhtml#pg_160)
+*   Jam Factory (software), [88](#chapter_7.xhtml#pg_88)
+*   Jukebox (software), [133](#chapter_10.xhtml#pg_133)
+*   K-means, [147](#chapter_11.xhtml#pg_147)
+*   Land art, [126](#chapter_9.xhtml#pg_126)
+*   Latent space, [104–105](#chapter_8.xhtml#pg_104), [107–110](#chapter_8.xhtml#pg_107)
+*   Learning classifier system (LCS), [80](#chapter_6.xhtml#pg_80)
+*   *Learning to See: Hello World* (Akten), [56](#chapter_4.xhtml#pg_56)
+*   *Learning to See: We are made of star dust* (Akten), [150](#chapter_11.xhtml#pg_150)
+*   *Legend of Wrong Mountain* (Huang et al.), [141](#chapter_10.xhtml#pg_141)
+*   *Library of Missing Datasets, The* (Onohua), [153](#chapter_11.xhtml#pg_153)
+*   *Listener* (Kite), [121–122](#chapter_9.xhtml#pg_121)
+*   *Listening Post* (Dewey-Hagborg), [145–146](#chapter_11.xhtml#pg_145)
+*   *Living Sculptures* (Klein), [83](#chapter_7.xhtml#pg_83), [90](#chapter_7.xhtml#pg_90), [174n6 (chap. 7)](#chapter_7.xhtml#chapter7-6)
+*   M (software), [88](#chapter_7.xhtml#pg_88)
+*   *Machina Speculatrix* (Walter), [70](#chapter_5.xhtml#pg_70)
+*   Machine learning, [2–5](#chapter_1.xhtml#pg_2), [7](#chapter_1.xhtml#pg_7)
+*   art, [3](#chapter_1.xhtml#pg_3), [5](#chapter_1.xhtml#pg_5)
+*   components, [9–10](#chapter_1.xhtml#pg_9)
+*   history, [12](#chapter_1.xhtml#pg_12)
+*   tasks, [8](#chapter_1.xhtml#pg_8)
+*   materiality, [18](#chapter_1.xhtml#pg_18), [63](#chapter_5.xhtml#pg_63), [70](#chapter_5.xhtml#pg_70), [150](#chapter_11.xhtml#pg_150), [163](#chapter_12.xhtml#pg_163)
+*   Machine realism, [150](#chapter_11.xhtml#pg_150)
+*   Machine subjectivity, [144–145](#chapter_11.xhtml#pg_144)
+*   *Machine Unlearning* (Gee), [56](#chapter_4.xhtml#pg_56)
+*   Materiality. *See* [Machine learning (materiality)](#index-2.xhtml#ind15)
+*   Mapping, [48–50](#chapter_4.xhtml#pg_48), [53](#chapter_4.xhtml#pg_53), [55](#chapter_4.xhtml#pg_55), [117–122](#chapter_9.xhtml#pg_117). *See also* [Behavior (order)](#index-2.xhtml#ind6a)
+*   Markov chain, [87–89](#chapter_7.xhtml#pg_87), [112–113](#chapter_8.xhtml#pg_112), [141](#chapter_10.xhtml#pg_141)
+*   Max (software), [117](#chapter_9.xhtml#pg_117)
+*   Meta-instrument, [119](#chapter_9.xhtml#pg_119)
+*   *Métamatics* (Tinguely), [5](#chapter_1.xhtml#pg_5)
+*   *Memories of Passersby* (Klingemann), [60](#chapter_5.xhtml#pg_60)
+*   *Memory Association Machine* (Bogart), [94](#chapter_7.xhtml#pg_94)
+*   *Memory of Space* (Damm), [91](#chapter_7.xhtml#pg_91), [152](#chapter_11.xhtml#pg_152)
+*   Microfeature, [94](#chapter_7.xhtml#pg_94), [103](#chapter_8.xhtml#pg_103)
+*   *Mind the Machine* (Martin & Schwettmann), [124](#chapter_9.xhtml#pg_124)
+*   MLP (Multilayer perceptron), [86](#chapter_7.xhtml#pg_86)
+*   Model, [7](#chapter_1.xhtml#pg_7), [9–10](#chapter_1.xhtml#pg_9), [42](#chapter_3.xhtml#pg_42), [62–65](#chapter_5.xhtml#pg_62), [68–71](#chapter_5.xhtml#pg_68), [114](#chapter_8.xhtml#pg_114), [171n4](#chapter_5.xhtml#chapter5-4), [173n5 (chap. 5)](#chapter_4.xhtml#chapter4-5)
+*   capacity of, [171n4](#chapter_1.xhtml#chapter1-4)
+*   nonparametric, [84](#chapter_7.xhtml#pg_84)
+*   parametric, [84](#chapter_7.xhtml#pg_84)
+*   pretrained, [133](#chapter_10.xhtml#pg_133), [136–137](#chapter_10.xhtml#pg_136)
+*   remix of, [139](#chapter_10.xhtml#pg_139)
+*   *See also* [Artificial neural networks](#index-2.xhtml#ind2); [Representation](#index-2.xhtml#ind19)
+*   *Mosaic Virus* (Ridler), [124–126](#chapter_9.xhtml#pg_124), [160](#chapter_12.xhtml#pg_160)
+*   Multilayer perceptron, [87](#chapter_7.xhtml#pg_87). *See also* [Perceptron](#index-2.xhtml#ind18)
+*   *Music Creatures* (Downie), [43](#chapter_3.xhtml#pg_43)
+*   Mutator (system) (Todd & Latham), [38](#chapter_3.xhtml#pg_38)
+*   *Myriad (Tulips)* (Ridler), [126](#chapter_9.xhtml#pg_126), [175n4 (chap. 9)](#chapter_9.xhtml#chapter9-4)
+*   *N-Polytope: Behaviors in Light and Sound after Iannis Xenakis* (Salter et al.), [41](#chapter_3.xhtml#pg_41), [173n6 (chap. 5)](#chapter_5.xhtml#chapter5-6), [174n5 (chap. 6)](#chapter_6.xhtml#chapter6-5)
+*   *Narcissism Enterprise* (Baginsky), [68](#chapter_5.xhtml#pg_68)
+*   Neoism?, [110–111](#chapter_8.xhtml#pg_110)
+*   Neural art, [101](#chapter_8.xhtml#pg_101)
+*   Neural glitch, [110–111](#chapter_8.xhtml#pg_110)
+*   Neural network. *See* [Artificial neural network](#index-2.xhtml#ind2)
+*   Neural network language model, [21](#chapter_2.xhtml#pg_21), [108](#chapter_8.xhtml#pg_108)
+*   *Neural Zoo* (Crespo), [60](#chapter_5.xhtml#pg_60), [159](#chapter_12.xhtml#pg_159)
+*   Net.art, [101](#chapter_8.xhtml#pg_101), [102](#chapter_8.xhtml#pg_102)
+*   Neuro aesthetics, [101](#chapter_8.xhtml#pg_101)
+*   New AI, [13](#chapter_1.xhtml#pg_13), [47](#chapter_4.xhtml#pg_47), [156](#chapter_12.xhtml#pg_156)
+*   New media art, [6–7](#chapter_1.xhtml#pg_6), [66–67](#chapter_5.xhtml#pg_66), [100](#chapter_8.xhtml#pg_100), [135](#chapter_10.xhtml#pg_135)
+*   Nonparametric system, [76](#chapter_6.xhtml#pg_76), [82](#chapter_6.xhtml#pg_82), [84](#chapter_7.xhtml#pg_84)
+*   *Not the Only One* (Dinkins), [128](#chapter_9.xhtml#pg_128), [129](#chapter_9.xhtml#pg_129), [131](#chapter_9.xhtml#pg_131), [158](#chapter_12.xhtml#pg_158)
+*   Nouvelle AI. *See* [New AI](#index-2.xhtml#ind16)
+*   Novelty, [29](#chapter_2.xhtml#pg_29), [32](#chapter_2.xhtml#pg_32), [40–42](#chapter_3.xhtml#pg_40), [102](#chapter_8.xhtml#pg_102)
+*   Objective function. *See* [Evaluation function](#index-2.xhtml#ind12)
+*   *Octofungi* (Klein), [71](#chapter_5.xhtml#pg_71), [90](#chapter_7.xhtml#pg_90)
+*   Open-source, [97](#chapter_8.xhtml#pg_97), [100](#chapter_8.xhtml#pg_100), [135](#chapter_10.xhtml#pg_135), [141](#chapter_10.xhtml#pg_141), [175n4 (chap. 10)](#chapter_10.xhtml#chapter10-4)
+*   *Open Ended Ensembles (Competitive Coevolution)* (Kelly), [78](#chapter_6.xhtml#pg_78), [173n6 (chap. 5)](#chapter_5.xhtml#chapter5-6)
+*   Optimization, [17](#chapter_1.xhtml#pg_17), [23–26](#chapter_2.xhtml#pg_23), [31](#chapter_2.xhtml#pg_31), [35–37](#chapter_3.xhtml#pg_35), [43](#chapter_3.xhtml#pg_43)
+*   OULIPO, [35](#chapter_3.xhtml#pg_35), [134](#chapter_10.xhtml#pg_134), [161](#chapter_12.xhtml#pg_161)
+*   *Pachinko Machine* (Zics), [33](#chapter_2.xhtml#pg_33), [37](#chapter_3.xhtml#pg_37)
+*   Pandemonium (model), [11](#chapter_1.xhtml#pg_11)
+*   *Paradise Institute, The* (Cardiff & Bures Miller), [68](#chapter_5.xhtml#pg_68)
+*   Parametric space, [76](#chapter_6.xhtml#pg_76), [106](#chapter_8.xhtml#pg_106), [113](#chapter_8.xhtml#pg_113)
+*   Parametric system, [76](#chapter_6.xhtml#pg_76), [84](#chapter_7.xhtml#pg_84), [105](#chapter_8.xhtml#pg_105)
+*   Perceptron, [11](#chapter_1.xhtml#pg_11), [12](#chapter_1.xhtml#pg_12), [85](#chapter_7.xhtml#pg_85)
+*   multilayer, [87](#chapter_7.xhtml#pg_87)
+*   *Performative Ecologies* (Glynn), [81](#chapter_6.xhtml#pg_81)
+*   Photoshop (software), [134](#chapter_10.xhtml#pg_134), [139](#chapter_10.xhtml#pg_139)
+*   *Pockets Full of Memories* (Legrady), [92](#chapter_7.xhtml#pg_92), [127n8](#chapter_8.xhtml#chapter8-8)
+*   *Portrait of Edmond Belamy* (Obvious), [176n6 (chap. 10)](#chapter_10.xhtml#chapter10-6)
+*   *Portraits of Imaginary People* (Tyka), [103](#chapter_8.xhtml#pg_103), [108](#chapter_8.xhtml#pg_108)
+*   Pragmatic aesthetics, [47](#chapter_4.xhtml#pg_47)
+*   Processing (software), [118](#chapter_9.xhtml#pg_118), [135](#chapter_10.xhtml#pg_135)
+*   Pure Data (software), [117](#chapter_9.xhtml#pg_117)
+*   PyTorch (software), [135](#chapter_10.xhtml#pg_135)
+*   Recurrent neural network, [88](#chapter_7.xhtml#pg_88), [112](#chapter_8.xhtml#pg_112)
+*   Reinforcement learning, [8–9](#chapter_1.xhtml#pg_8), [33](#chapter_2.xhtml#pg_33), [37](#chapter_3.xhtml#pg_37), [38](#chapter_3.xhtml#pg_38), [40–43](#chapter_3.xhtml#pg_40), [78](#chapter_6.xhtml#pg_78), [159](#chapter_12.xhtml#pg_159)
+*   exploitation and exploration, [41](#chapter_3.xhtml#pg_41)
+*   Remix culture, [133–135](#chapter_10.xhtml#pg_133), [141](#chapter_10.xhtml#pg_141), [142](#chapter_10.xhtml#pg_142)
+*   Representation, [11](#chapter_1.xhtml#pg_11), [46](#chapter_4.xhtml#pg_46), [61–65](#chapter_5.xhtml#pg_61), [71](#chapter_5.xhtml#pg_71), [143](#chapter_11.xhtml#pg_143), [145](#chapter_11.xhtml#pg_145), [156–157](#chapter_12.xhtml#pg_156), [165](#chapter_12.xhtml#pg_165)
+*   learning, [8](#chapter_1.xhtml#pg_8), [32](#chapter_2.xhtml#pg_32)
+*   local, [86](#chapter_7.xhtml#pg_86), [88](#chapter_7.xhtml#pg_88) (*see also* [Computationalism](#index-2.xhtml#ind7))
+*   distributed, [62](#chapter_5.xhtml#pg_62), [84](#chapter_7.xhtml#pg_84), [86](#chapter_7.xhtml#pg_86), [104](#chapter_8.xhtml#pg_104), [105](#chapter_8.xhtml#pg_105), [108](#chapter_8.xhtml#pg_108) (*see also* [Connectionism](#index-2.xhtml#ind8))
+*   *ReRites* (Johnston), [112–113](#chapter_8.xhtml#pg_112), [160](#chapter_12.xhtml#pg_160)
+*   RNN (Recurrent neural network), [112–113](#chapter_8.xhtml#pg_112)
+*   Search, [74](#chapter_6.xhtml#pg_74), [78](#chapter_6.xhtml#pg_78), [79](#chapter_6.xhtml#pg_79), [105](#chapter_8.xhtml#pg_105). *See also* [Optimization](#index-2.xhtml#ind17)
+*   *Self Acceptance* (Crespo), [60](#chapter_5.xhtml#pg_60)
+*   Self-organization, [16](#chapter_1.xhtml#pg_16), [46](#chapter_4.xhtml#pg_46), [71](#chapter_5.xhtml#pg_71), [84–85](#chapter_7.xhtml#pg_84), [144](#chapter_11.xhtml#pg_144)
+*   Self-organizing map, [89–91](#chapter_7.xhtml#pg_89), [93](#chapter_7.xhtml#pg_93), [105](#chapter_8.xhtml#pg_105)
+*   *Sense of Neoism?! Artificial Counter-Intelligence Machine, The* (Audry & Kantor), [112](#chapter_8.xhtml#pg_112)
+*   Shallow learning, [98](#chapter_8.xhtml#pg_98)
+*   *SimEarth: The Living Planet* (Wright), [13](#chapter_1.xhtml#pg_13)
+*   Smile to Vote (Peterhaensel), [146](#chapter_11.xhtml#pg_146)
+*   Spawn (software), [140](#chapter_10.xhtml#pg_140)
+*   *Spotter #birds Amstelpark* (Driessens & Verstappen), [149](#chapter_11.xhtml#pg_149), [176n2–3 (chap. 11)](#chapter_11.xhtml#chapter11-2)
+*   *Spring Spyre* (Sonami), [119–120](#chapter_9.xhtml#pg_119)
+*   Style transfer, [133](#chapter_10.xhtml#pg_133), [134](#chapter_10.xhtml#pg_134), [139–140](#chapter_10.xhtml#pg_139)
+*   Supervised learning, [8](#chapter_1.xhtml#pg_8), [9](#chapter_1.xhtml#pg_9), [17](#chapter_1.xhtml#pg_17), [85](#chapter_7.xhtml#pg_85), [98](#chapter_8.xhtml#pg_98), [118](#chapter_9.xhtml#pg_118)
+*   Surprise, [41](#chapter_3.xhtml#pg_41), [61](#chapter_5.xhtml#pg_61), [76](#chapter_6.xhtml#pg_76)
+*   Surrealism, [104](#chapter_8.xhtml#pg_104)
+*   Symbolic AI, [12](#chapter_1.xhtml#pg_12), [45](#chapter_4.xhtml#pg_45), [47](#chapter_4.xhtml#pg_47), [70](#chapter_5.xhtml#pg_70), [85](#chapter_7.xhtml#pg_85), [155](#chapter_12.xhtml#pg_155), [158–159](#chapter_12.xhtml#pg_158), [171n7](#chapter_1.xhtml#chapter1-7)
+*   Systems art, [162](#chapter_12.xhtml#pg_162)
+*   Tangled program graph, [78](#chapter_6.xhtml#pg_78)
+*   Tensorflow (software), [135](#chapter_10.xhtml#pg_135)
+*   *Three Sirens, The* (Baginsky), [1–3](#chapter_1.xhtml#pg_1), [45](#chapter_4.xhtml#pg_45), [51](#chapter_4.xhtml#pg_51), [68](#chapter_5.xhtml#pg_68), [71](#chapter_5.xhtml#pg_71), [83](#chapter_7.xhtml#pg_83), [89](#chapter_7.xhtml#pg_89)
+*   *Through the haze of a machine’s mind we may glimpse our collective imaginations (Blade Runner)* (Bogart), [144](#chapter_11.xhtml#pg_144), [176n1 (chap. 11)](#chapter_11.xhtml#chapter11-1)
+*   Top-down, [79](#chapter_6.xhtml#pg_79), [158](#chapter_12.xhtml#pg_158), [159](#chapter_12.xhtml#pg_159). *See also* [Bottom-up](#index-2.xhtml#ind5)
+*   Turing test, [29](#chapter_2.xhtml#pg_29), [31](#chapter_2.xhtml#pg_31), [47](#chapter_4.xhtml#pg_47), [172n6 (chap. 2)](#chapter_2.xhtml#chapter2-6)
+*   Unsupervised learning, [8](#chapter_1.xhtml#pg_8), [9](#chapter_1.xhtml#pg_9), [32](#chapter_2.xhtml#pg_32), [72](#chapter_5.xhtml#pg_72), [89–90](#chapter_7.xhtml#pg_89), [98](#chapter_8.xhtml#pg_98), [147](#chapter_11.xhtml#pg_147)
+*   *Voting Booth* (Peterhaensel), [146–147](#chapter_11.xhtml#pg_146), [153](#chapter_11.xhtml#pg_153)
+*   *yé yé*, [137](#chapter_10.xhtml#pg_137)
+*   *wakȟáŋ*, [122](#chapter_9.xhtml#pg_122)
+*   *Watching and Dreaming* (Bogart), [143](#chapter_11.xhtml#pg_143), [145](#chapter_11.xhtml#pg_145), [175n4 (chap. 8)](#chapter_8.xhtml#chapter8-4), [176n1 (chap. 11)](#chapter_11.xhtml#chapter11-1)
+*   *Watching (2001: A Space Odyssey)*, [144](#chapter_11.xhtml#pg_144)
+*   Weapons of math destruction, [146](#chapter_11.xhtml#pg_146), [147](#chapter_11.xhtml#pg_147)
+*   Weights (in neural networks), [10](#chapter_1.xhtml#pg_10), [51](#chapter_4.xhtml#pg_51), [85–86](#chapter_7.xhtml#pg_85), [110](#chapter_8.xhtml#pg_110)
+*   Wekinator (software) (Fiebrink), [119–122](#chapter_9.xhtml#pg_119), [127](#chapter_9.xhtml#pg_127), [130](#chapter_9.xhtml#pg_130), [160](#chapter_12.xhtml#pg_160), [175n3 (chap. 9)](#chapter_9.xhtml#chapter9-3)
+*   *White Collar Crime Risk Zones* (Clifton, Lavigne, & Tseng), [146–147](#chapter_11.xhtml#pg_146), [153](#chapter_11.xhtml#pg_153)
+*   Wiring (software), [135](#chapter_10.xhtml#pg_135)
+*   Word2Vec (method), [109](#chapter_8.xhtml#pg_109)
+*   *Zwischenräume* (Gemeinboeck & Saunders), [40](#chapter_3.xhtml#pg_40), [43](#chapter_3.xhtml#pg_43), [45](#chapter_4.xhtml#pg_45), [158](#chapter_12.xhtml#pg_158)
