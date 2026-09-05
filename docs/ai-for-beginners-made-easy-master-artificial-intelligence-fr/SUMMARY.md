@@ -1,0 +1,2 @@
++   [初学者 AI 入门：从生成式 AI 到机器学习精通人工智能——在 7 天内通过互动练习快速提升职业发展与生产力](README.md)
++   [初学者 AI 入门：从生成式 AI 到机器学习精通人工智能——在 7 天内通过互动练习快速提升职业发展与生产力](ai-for-beginners-made-easy-master-artificial-intelligence-fr_0.md)
