@@ -1,0 +1,2679 @@
+<p><img src="rsrc7.jpg" /></p>
+<p><span id="part0000.xhtml"></span></p>
+<div>
+<img src="rsrc7.jpg" class="s8-3" />
+</div>
+<p><span id="part0001.xhtml"></span></p>
+<div class="sF">
+Networking Hacking
+</div>
+<div class="sH">
+Complete guide tools for computer wireless network technology, connections and communications system.
+</div>
+<div class="sK">
+Practical penetration of a network via services and hardware.
+</div>
+<div class="sN">
+Karnel Erickson
+</div>
+<p><span id="part0002.xhtml"></span></p>
+<div class="sW">
+© Copyright 2019  – All rights reserved.
+</div>
+<div class="sY">
+The following e-book is reproduced below with the goal of providing information that is as accurate and reliable as possible. Regardless, purchasing this e-book can be seen as consent to the fact that both the publisher and the author of this book are in no way experts on the topics discussed within and that any recommendations or suggestions that are made herein are for entertainment purposes only. Professionals should be consulted as needed prior to undertaking any of the actions endorsed herein.
+</div>
+<div class="sY">
+This declaration is deemed fair and valid by both the American Bar Association and the Committee of Publishers Association and is legally binding throughout the United States.
+</div>
+<div class="sY">
+Furthermore, the transmission, duplication, or reproduction of any of the following work including specific information will be considered an illegal act irrespective of whether it is done electronically or in print. This extends to creating a secondary or tertiary copy of the work or a recorded copy and is only allowed with express written consent from the publisher. All additional rights reserved.
+</div>
+<div class="sY">
+The information in the following pages is broadly considered to be a truthful and accurate account of facts and as such any inattention, use, or misuse of the information in question by the reader will render any resulting actions solely under their purview. There are no scenarios in which the publisher or the original author of this work can be in any fashion deemed liable for any hardship or damages that may befall them after undertaking information described herein.
+</div>
+<div class="sY">
+Additionally, the information in the following pages is intended only for informational purposes and should thus be thought of as universal. As befitting its nature, it is presented without assurance regarding its prolonged validity or interim quality. Trademarks that are mentioned are done without written consent and can in no way be considered an endorsement from the trademark holder.
+</div>
+<p><span id="part0003.xhtml"></span></p>
+<div class="s19">
+Table of Contents
+</div>
+<div id="part0003.xhtml#Table_of_Contents" class="s1B">
+<a href="#part0004.xhtml" class="s1DD">Introduction</a>
+</div>
+<div class="s1D">
+<a href="#part0005.xhtml" class="s1DD">Chapter 1: The Basics of a Computer Network</a>
+</div>
+<div class="s1F">
+<a href="#part0005.xhtml#toc1_About_the_Origin_of_Hacking" class="s1D7">About the Origin of Hacking</a>
+</div>
+<div class="s1F">
+<a href="#part0005.xhtml#toc2_Common_Network_Hacking_Techniques" class="s1D7">Common Network Hacking Techniques</a>
+</div>
+<div class="s1F">
+<a href="#part0005.xhtml#toc3_Hacking_Skills" class="s1D7">Hacking Skills</a>
+</div>
+<div class="s1F">
+<a href="#part0005.xhtml#toc4_The_Basics_of_Networking" class="s1D7">The Basics of Networking</a>
+</div>
+<div class="s1F">
+<a href="#part0006.xhtml#toc5_The_Components_of_a_Network" class="s1D7">The Components of a Network</a>
+</div>
+<div class="s1F">
+<a href="#part0006.xhtml#toc10_About_Wireless_Networks" class="s1D7">About Wireless Networks</a>
+</div>
+<div class="s1P">
+<a href="#part0006.xhtml#a1AJ" class="s1D9">A Wireless Local Area Network (WLAN)</a>
+</div>
+<div class="s1P">
+<a href="#part0006.xhtml#toc7_The_Components_of_a_Wireless_Network" class="s1D9">The Components of a Wireless Network</a>
+</div>
+<div class="s1P">
+<a href="#part0006.xhtml#toc8_The_Configurations_of_a_Wireless_Network" class="s1D9">The Configurations of a Wireless Network</a>
+</div>
+<div class="s1P">
+<a href="#part0006.xhtml#toc9_The_Benefits_of_Wireless_Configurations" class="s1D9">The Benefits of Wireless Configurations</a>
+</div>
+<div class="s1F">
+<a href="#part0006.xhtml#a1AP" class="s1D7">About CISCO</a>
+</div>
+<div class="s1D">
+<a href="#part0007.xhtml" class="s1DD">Chapter 2: Introduction Into Hacking</a>
+</div>
+<div class="s1F">
+<a href="#part0007.xhtml#a1AS" class="s1D7">Different Terminologies Used in Hacking:</a>
+</div>
+<div class="s1F">
+<a href="#part0007.xhtml#toc14_The_Mindset_of_a_Hacker" class="s1D7">The Mindset of a Hacker</a>
+</div>
+<div class="s1F">
+<a href="#part0007.xhtml#a1AU" class="s1D7">What Motivates Hackers</a>
+</div>
+<div class="s1F">
+<a href="#part0007.xhtml#toc16_Planning_and_Performing_an_Attack" class="s1D7">Planning and Performing an Attack</a>
+</div>
+<div class="s1F">
+<a href="#part0007.xhtml#a1AW" class="s1D7">About the Dark Web and how to Access It Using the Tor Browser</a>
+</div>
+<div class="s1P">
+<a href="#part0007.xhtml#toc17_The_Main_Reason_Why_the_Dark_Web_Is_Hidden" class="s1D9">The Main Reason Why the Dark Web Is Hidden</a>
+</div>
+<div class="s1P">
+<a href="#part0007.xhtml#a1AY" class="s1D9">How Do You Access the Dark Web Sites?</a>
+</div>
+<div class="s1P">
+<a href="#part0007.xhtml#a1AZ" class="s1D9">About the Dark Web Search Engine</a>
+</div>
+<div class="s1P">
+<a href="#part0007.xhtml#toc20_The_Security_Guide_for_Accessing_the_Dark_Web" class="s1D9">The Security Guide for Accessing the Dark Web</a>
+</div>
+<div class="s1F">
+<a href="#part0007.xhtml#toc22_Managing_Anonymity" class="s1D7">Managing Anonymity</a>
+</div>
+<div class="s1D">
+<a href="#part0008.xhtml" class="s1DD">Chapter 3: Coming Up With a Hacking Plan</a>
+</div>
+<div class="s1F">
+<a href="#part0008.xhtml#a1B3" class="s1D7">Establishing Your Goals</a>
+</div>
+<div class="s1F">
+<a href="#part0008.xhtml#toc25_How_to_Determine_the_Specific_System_to_Hack" class="s1D7">How to Determine the Specific System to Hack</a>
+</div>
+<div class="s1F">
+<a href="#part0008.xhtml#a1B5" class="s1D7">Attack Tree Analysis</a>
+</div>
+<div class="s1F">
+<a href="#part0008.xhtml#a1B6" class="s1D7">Formulating Testing Standards</a>
+</div>
+<div class="s1P">
+<a href="#part0008.xhtml#toc27_Timing" class="s1D9">Timing</a>
+</div>
+<div class="s1P">
+<a href="#part0008.xhtml#toc28_Specific_Tests" class="s1D9">Specific Tests</a>
+</div>
+<div class="s1P">
+<a href="#part0008.xhtml#a1B9" class="s1D9">Blind Versus Knowledge Assessments</a>
+</div>
+<div class="s1P">
+<a href="#part0008.xhtml#toc30_Location" class="s1D9">Location</a>
+</div>
+<div class="s1F">
+<a href="#part0008.xhtml#a1BB" class="s1D7">How to React to the Vulnerabilities Present in the Network</a>
+</div>
+<div class="s1F">
+<a href="#part0009.xhtml" class="s1D7">Silly Assumptions</a>
+</div>
+<div class="s1F">
+<a href="#part0009.xhtml#a1BD" class="s1D7">Selecting Tools to Carry Out Security Assessment</a>
+</div>
+<div class="s1D">
+<a href="#part0010.xhtml" class="s1DD">Chapter 4: Hacking Methodologies</a>
+</div>
+<div class="s1F">
+<a href="#part0010.xhtml#toc36_Setting_the_Stage_for_the_Testing" class="s1D7">Setting the Stage for the Testing</a>
+</div>
+<div class="s1F">
+<a href="#part0010.xhtml#toc37_Seeing_What_Other_People_See" class="s1D7">Seeing What Other People See</a>
+</div>
+<div class="s1F">
+<a href="#part0010.xhtml#a1BH" class="s1D7">Gathering Public Information</a>
+</div>
+<div class="s1F">
+<a href="#part0010.xhtml#toc39_Assessing_Vulnerabilities" class="s1D7">Assessing Vulnerabilities</a>
+</div>
+<div class="s1F">
+<a href="#part0010.xhtml#toc40_Penetrating_the_System" class="s1D7">Penetrating the System</a>
+</div>
+<div class="s1D">
+<a href="#part0011.xhtml" class="s1DD">Chapter 5: Social Engineering</a>
+</div>
+<div class="s1F">
+<a href="#part0011.xhtml#toc42_About_Social_Engineering" class="s1D7">About Social Engineering</a>
+</div>
+<div class="s1F">
+<a href="#part0011.xhtml#a1BP" class="s1D7">Reasons Why External Attackers Use Social Engineering</a>
+</div>
+<div class="s1F">
+<a href="#part0011.xhtml#toc44_Understanding_the_Consequences_of_Social_Engineering" class="s1D7">Understanding the Consequences of Social Engineering</a>
+</div>
+<div class="s1F">
+<a href="#part0011.xhtml#a1BS" class="s1D7">Carrying Out Social Engineering Attacks</a>
+</div>
+<div class="s1F">
+<a href="#part0011.xhtml#toc46_Phishing_for_Information" class="s1D7">Phishing for Information</a>
+</div>
+<div class="s1F">
+<a href="#part0011.xhtml#a1BU" class="s1D7">Using the Internet</a>
+</div>
+<div class="s1F">
+<a href="#part0011.xhtml#a1BV" class="s1D7">Dumpster Diving</a>
+</div>
+<div class="s1F">
+<a href="#part0011.xhtml#a1BW" class="s1D7">Phone Systems</a>
+</div>
+<div class="s1F">
+<a href="#part0011.xhtml#a1BX" class="s1D7">Building Trust</a>
+</div>
+<div class="s1F">
+<a href="#part0011.xhtml#a1BY" class="s1D7">Exploiting a Relationship</a>
+</div>
+<div class="s1F">
+<a href="#part0011.xhtml#toc52_Deceit_Using_Words_and_Actions" class="s1D7">Deceit Using Words and Actions</a>
+</div>
+<div class="s1F">
+<a href="#part0011.xhtml#toc53_Deceit_Using_Technology" class="s1D7">Deceit Using Technology</a>
+</div>
+<div class="s1F">
+<a href="#part0011.xhtml#a1C1" class="s1D7">How to Counter Social Engineering Attacks</a>
+</div>
+<div class="s1D">
+<a href="#part0012.xhtml" class="s1DD">Chapter 6: Physical Security</a>
+</div>
+<div class="s1F">
+<a href="#part0012.xhtml#toc56_Physical_Vulnerabilities" class="s1D7">Physical Vulnerabilities</a>
+</div>
+<div class="s1F">
+<a href="#part0012.xhtml#a1C4" class="s1D7">Building Infrastructure</a>
+</div>
+<div class="s1F">
+<a href="#part0012.xhtml#a1C5" class="s1D7">Utilities</a>
+</div>
+<div class="s1F">
+<a href="#part0012.xhtml#a1C6" class="s1D7">Office Layout and Usage</a>
+</div>
+<div class="s1F">
+<a href="#part0012.xhtml#toc60_Network_Components_and_Computers" class="s1D7">Network Components and Computers</a>
+</div>
+<div class="s1D">
+<a href="#part0013.xhtml" class="s1DD">Chapter 7: Passwords</a>
+</div>
+<div class="s1F">
+<a href="#part0013.xhtml#toc62_Password_Vulnerabilities" class="s1D7">Password Vulnerabilities</a>
+</div>
+<div class="s1F">
+<a href="#part0013.xhtml#a1CA" class="s1D7">Organizational Password Vulnerabilities</a>
+</div>
+<div class="s1F">
+<a href="#part0013.xhtml#toc64_Technical_Password_Vulnerabilities" class="s1D7">Technical Password Vulnerabilities</a>
+</div>
+<div class="s1F">
+<a href="#part0013.xhtml#a1CC" class="s1D7">Cracking Passwords</a>
+</div>
+<div class="s1P">
+<a href="#part0013.xhtml#a1CD" class="s1D9">Social Engineering</a>
+</div>
+<div class="s1P">
+<a href="#part0013.xhtml#a1CE" class="s1D9">Shoulder Surfing</a>
+</div>
+<div class="s1P">
+<a href="#part0013.xhtml#toc67_Inference" class="s1D9">Inference</a>
+</div>
+<div class="s1P">
+<a href="#part0013.xhtml#a1CG" class="s1D9">Weak Authentication</a>
+</div>
+<div class="s1P">
+<a href="#part0013.xhtml#toc69_High-Tech_Password_Cracking" class="s1D9">High-Tech Password Cracking</a>
+</div>
+<div class="s1F">
+<a href="#part0013.xhtml#a1CJ" class="s1D7">Hacking WPA2 Wi-Fi</a>
+</div>
+<div class="s1P">
+<a href="#part0013.xhtml#toc71_The_Old_Techniques_Used_to_Crack_the_WPA2_Passwords" class="s1D9">The Old Techniques Used to Crack the WPA2 Passwords</a>
+</div>
+<div class="s1P">
+<a href="#part0013.xhtml#a1CM" class="s1D9">New Methods Used to Hack the WPA2 Wi-Fi</a>
+</div>
+<div class="s1F">
+<a href="#part0013.xhtml#a1CN" class="s1D7">Using Hcxtools and Hashcat</a>
+</div>
+<div class="s1P">
+<a href="#part0013.xhtml#toc74_What_Do_You_Need_" class="s1D9">What Do You Need?</a>
+</div>
+<div class="s1F">
+<a href="#part0013.xhtml#toc76_The_PMKID_Hashcat_Attacks_Ensure_the_Wi-Fi_Attacks_Are_Easier" class="s1D7">The PMKID Hashcat Attacks Ensure the Wi-Fi Attacks Are Easier</a>
+</div>
+<div class="s1F">
+<a href="#part0013.xhtml#toc82_Password-Cracking_Tools" class="s1D7">Password-Cracking Tools</a>
+</div>
+<div class="s1P">
+<a href="#part0013.xhtml#toc77_Cain___Abel" class="s1D9">Cain &amp; Abel</a>
+</div>
+<div class="s1P">
+<a href="#part0013.xhtml#a1CU" class="s1D9">Brutus</a>
+</div>
+<div class="s1P">
+<a href="#part0013.xhtml#toc79_RainbowCrack" class="s1D9">RainbowCrack</a>
+</div>
+<div class="s1P">
+<a href="#part0013.xhtml#a1CW" class="s1D9">Wfuzz</a>
+</div>
+<div class="s1P">
+<a href="#part0013.xhtml#a1CX" class="s1D9">John the Ripper</a>
+</div>
+<div class="s1F">
+<a href="#part0013.xhtml#toc83_THC_Hydra" class="s1D7">THC Hydra</a>
+</div>
+<div class="s1F">
+<a href="#part0013.xhtml#toc84_Medusa" class="s1D7">Medusa</a>
+</div>
+<div class="s1F">
+<a href="#part0013.xhtml#toc85_Ophcrack" class="s1D7">Ophcrack</a>
+</div>
+<div class="s1F">
+<a href="#part0013.xhtml#a1D1" class="s1D7">L0phtCrack</a>
+</div>
+<div class="s1D">
+<a href="#part0014.xhtml" class="s1DD">Conclusion</a>
+</div>
+<p><span id="part0004.xhtml"></span></p>
+<div id="part0004.xhtml#id_" class="s19">
+Introduction
+</div>
+<div class="sY">
+Congratulations on downloading a copy of the <span class="s1D8">Networking Hacking</span> . I am delighted that you have chosen to learn about network hacking using our handbook. In this handbook, the main focus will be on network hacking. You will get to learn more about different hacking techniques that you can use to access a certain network. A discussion will also ensue about how to find some of the security vulnerabilities as well as how to fix some of the present weaknesses on the network. There are two types of hackers: white-hat hackers and black-hat hackers. White-hat hackers engage in ethical hacking. The main focus of this context will be on ethical hacking. 
+</div>
+<div class="sY">
+Computer and network security are a subject that is quite complex. You should always stay a step ahead to make sure that your network has not been accessed by external attackers illegally. Some of the tools and techniques that can be used to ensure that your network is safe will also be outlined in this context. The best way to make sure that your network is safe is to understand the mindset of an external attacker. 
+</div>
+<div class="sY">
+You can use the knowledge that you have acquired to safeguard your network. Ethical hacking in this context will also focus more on some of the penetration techniques that can be used by a white-hat hacker or a security expert. We will also focus more on vulnerability testing. Some of these tests help you to identify some of the security flaws present in the network. Some of these loopholes can also be sealed to make sure that an external attacker will not access the network and access different types of information that they can use for their gain. At times, you are required not to be very strict on the budget but to look at the impact it will do in your life.
+</div>
+<p><span id="part0005.xhtml"></span></p>
+<div id="part0005.xhtml#a1AB" class="s4P">
+Chapter 1: The Basics of a Computer Network
+</div>
+<div class="sY">
+Network hacking is termed as the technical effort to always manipulate the behavior of a specific network connection. The people responsible for network hacking are known as hackers. Hacking is termed as constructive and technical work that is not entirely based on the basics of computer systems. Hackers are normally associated with the use of malicious programs that are used to attack different networks over the Internet.
+</div>
+<div id="part0005.xhtml#toc1_About_the_Origin_of_Hacking" class="s4T">
+About the Origin of Hacking
+</div>
+<div class="sY">
+The term hacking originated from some engineers who were present at M.I.T. during the 1950s and 1960s. The hackers would even hack the mainframe computers. Other people also went ahead to engage in the act of hacking outside M.I.T. Later, the Internet and computer networking gained some form of popularity and the number of people engaging in hacking activities increased drastically. Most of the people who engage in hacking began taking part in such activities at a young age.
+</div>
+<div id="part0005.xhtml#toc2_Common_Network_Hacking_Techniques" class="s4T">
+Common Network Hacking Techniques
+</div>
+<div class="sY">
+When carrying out network hacking, people make use of scripts and different network software. The network software is specially-designed, and they are used to manipulate different forms of data that are passing through a specific network. The hackers can obtain some bits of information that allow them to learn more about how the specific system operates. Numerous scripts have also been posted in the Internet, and they can be accessed by anyone. The people who look for the pre-packaged scripts are entry-level hackers. Most of the advanced hackers make an effort to study each of these scripts and they can also modify them as they wish. There are many skilled hackers and they have been hired by commercial firms so that they may protect some of the software within the company so that they cannot be accessed by unauthorized individuals.
+</div>
+<div class="sY">
+Besides hacking, there are other penetration techniques and they include the creation of DoS (denial of service) attacks and worms. Different measures are put in place so that a computer and network cannot be affected by phishing, malware, and Trojans. Most companies hire hackers since they possess more knowledge about hacking and they can deploy the necessary counterattacks.
+</div>
+<div id="part0005.xhtml#toc3_Hacking_Skills" class="s4T">
+Hacking Skills
+</div>
+<div class="sY">
+To become a professional hacker, you should possess certain personality traits as well as technical skills as follows:
+</div>
+<ul>
+<li><div class="s51">
+You must be able to work with numbers. Hacking involves perusing through large amounts of code, data, and various computer algorithms.
+</div></li>
+<li><div class="s51">
+You must possess logical reasoning and memory recall since you must assemble small details and facts as a hacker while planning an attack based on logic.
+</div></li>
+<li><div class="s57">
+You must be patient. The hacking process is quite complex and you may spend a lot of time trying to come up with an executable plan.
+</div></li>
+</ul>
+<div class="sY">
+The main reason why networking guidelines are important is that:
+</div>
+<ul>
+<li><div class="s57">
+Students can learn more about the advantages of networking.
+</div></li>
+<li><div class="s57">
+It assists students to utilize the knowledge they possess about networking.
+</div></li>
+<li><div class="s57">
+It ensures that students can easily plan for their next stage when it comes to network development.
+</div></li>
+<li><div class="s57">
+It provides a standard networking ‘model’ as well as some of the best practices that assist students when carrying out network planning.<br />
+ 
+</div></li>
+</ul>
+<div id="part0005.xhtml#toc4_The_Basics_of_Networking" class="s5N">
+The Basics of Networking
+</div>
+<div class="sY">
+A computer network is made up of a collection of computers and other gadgets that have been connected, and they also communicate with each other. The figure below showcases the example of a network and is made up of a local area network that connects the computers to the Internet and various servers.
+</div>
+<p><span id="part0006.xhtml"></span></p>
+<div>
+<img src="rsrc5Y.jpg" class="s5Z" />
+</div>
+<div class="sY">
+There are two types of networks and they are as follows;
+</div>
+<ol>
+<li><div class="s57">
+<span class="s1D6">Peer-To-Peer Networks:</span> They are normally implemented in areas where there are less than 10 computers, and strict security measures should not be necessarily applied. Each of the computers has the same status and they easily communicate with each other. It is also possible to share different files including spreadsheets and word processing documents can be shared across the entire network. Also, each of the computers on the network shares the same devices which include scanners and printers.
+</div></li>
+</ol>
+<ol start="2">
+<li><div class="s57">
+<span class="s1D6">Client/Server Networks:</span> They are well suited for larger networks. There is a central computer that acts as a ‘server’. It stores all the applications and files being shared on the entire network. The server possesses more capabilities as compared to a normal computer. It can control the network access of the computers that are connected to the network. The normal computers are normally used by the teachers and students in a school whereas the network administrator has access to the entire server.
+</div></li>
+</ol>
+<div id="part0006.xhtml#toc5_The_Components_of_a_Network" class="s4T">
+The Components of a Network
+</div>
+<div class="sY">
+A network is made up of the following components:
+</div>
+<ul>
+<li><div class="s57">
+At least two computers.
+</div></li>
+<li><div class="s51">
+Cables that are used to connect the computers to each other.
+</div></li>
+<li><div class="s57">
+Each computer will have a network interface device.
+</div></li>
+<li><div class="s51">
+A ‘Switch’ which is used to switch the data from one point to another.
+</div></li>
+<li><div class="s57">
+A network operating system software.
+</div></li>
+</ul>
+<div class="sY">
+<span class="s1D6">Structured Cabling:</span> The most popular cabling techniques include the thin coax and the twisted-pair.
+</div>
+<div class="sY">
+<span class="s1D6">Hubs and Switches:</span> These are devices used to connect a computer to a network. The hub usually directs information around the network and it also facilitates communication between all the connected devices. The switch is classified as a ‘smart hub’. The switches and hubs connect all the devices. When using switches, you can ensure that you have gotten a “dedicated bandwidth” while also operating at full speed. The hub usually shares the bandwidth across different connections and the activities from one PC can lower the Internet connection on the hub.
+</div>
+<div id="part0006.xhtml#toc10_About_Wireless_Networks" class="s4T">
+About Wireless Networks
+</div>
+<div class="sY">
+The term ‘wireless network’ normally refers to many computers that are communicating with each other using a standard network protocol and no cabling present. The computers can also use wireless radio signals while sending information from one network to another.
+</div>
+<div id="part0006.xhtml#a1AJ" class="s6V">
+A Wireless Local Area Network (WLAN)
+</div>
+<div class="sY">
+The network is made up of two primary components and they include a wireless card and an access point. It is possible to transmit information between two computers as long as they are close to each other.
+</div>
+<div class="sY">
+Advantages of a Wireless Local Area Network:
+</div>
+<ul>
+<li><div class="s57">
+It is easy to add workstations.
+</div></li>
+<li><div class="s51">
+It is possible to ensure that the areas where cabling is not possible can access the network.
+</div></li>
+<li><div class="s51">
+The installation process is fast and also easy. No cabling through the ceilings and walls is required.
+</div></li>
+<li><div class="s51">
+The network can also be accessed from anywhere as long as a person is within the access point.
+</div></li>
+<li><div class="s57">
+It comes in handy especially when ensuring that portable networks have access to the network.
+</div></li>
+<li><div class="s57">
+It is cheaper to install.
+</div></li>
+<li><div class="s57">
+It possesses long term cost benefits.
+</div></li>
+</ul>
+<div class="sY">
+Disadvantages of a Wireless Local Area Network:
+</div>
+<ul>
+<li><div class="s57">
+The data transfer rate is always slower depending on the number of computers that have been connected to the network.
+</div></li>
+<li><div class="s57">
+Standards change regularly and the wireless cards may also need to be replaced after some time.
+</div></li>
+<li><div class="s57">
+Lowering wireless bandwidths will lower the effectiveness of the network.
+</div></li>
+<li><div class="s51">
+The security of the network cannot be guaranteed and some configuration must be carried out.
+</div></li>
+<li><div class="s51">
+Devices can only operate within a limited distance from a certain access point.
+</div></li>
+<li><div class="s57">
+A wired local area network also provides a backbone to the wireless local area network.
+</div></li>
+<li><div class="s57">
+In a static environment, it is harder to achieve the long-term cost benefits.
+</div></li>
+</ul>
+<div id="part0006.xhtml#toc7_The_Components_of_a_Wireless_Network" class="s7Y">
+The Components of a Wireless Network
+</div>
+<div class="sY">
+There are numerous components used to configure a wireless local area network. Some of these components are also used when configuring a wired LAN. In both the wireless LAN and wired LAN, network adapter cards are used. The wireless LAN PC card normally contains a built-in antenna. It is then used to connect the computer to a surrounding wireless network. There is a slot where it should be inserted in the computer. It is also possible to connect a desktop computer to a wireless network. In a wireless network, there is the ‘access point’ and it has a similar function to the hub that is present in the wired networks. It normally receives and broadcasts a signal through an adapter card.
+</div>
+<div class="sY">
+The major difference between wireless and wired networks is that in a wireless network, the computers are connected using cables. As for the wireless network, there are no cables needed to formulate a connection between different computers. The network is made up of two primary components and they include a wireless card and an access point. It is possible to transmit information between two computers as long as they are close to each other.
+</div>
+<div id="part0006.xhtml#toc8_The_Configurations_of_a_Wireless_Network" class="s7Y">
+The Configurations of a Wireless Network
+</div>
+<div class="s83">
+A wireless network can be configured using a local area network or a peer-to-peer arrangement. 
+</div>
+<div class="sY">
+<span class="s1DB">Peer-to-peer configuration is termed as the most basic wireless network configuration. It normally relies on the use of wireless network adapters that are installed within the computers and they can easily communicate with each other. For the computers to connect, they should be within then transmitting range. If there are many computers connected, they should be close to each other. As for this type of network configuration, there is no network administration overhead. The configuration is mostly suitable for small installations</span> .
+</div>
+<div id="part0006.xhtml#toc9_The_Benefits_of_Wireless_Configurations" class="s6V">
+The Benefits of Wireless Configurations
+</div>
+<div class="sY">
+In a wired local area network, people take more time carrying out the cabling. As for the wireless configuration, it possesses the following benefits:
+</div>
+<ol>
+<li><div class="s51">
+The amount of work required to install the wireless local area network is minimal.
+</div></li>
+<li><div class="s51">
+The wireless network can also be accessed in areas where it would be difficult to carry out wiring. The network downtime is also minimized.
+</div></li>
+<li><div class="s51">
+When there is a wireless network, it is possible to stay connected to the network all the time regardless of the location of the equipment.
+</div></li>
+<li><div class="s51">
+The wireless network operates over in a spherical manner.
+</div></li>
+<li><div class="s57">
+It is possible to share documents over a wireless network.
+</div></li>
+</ol>
+<div class="sY">
+Additional Advantages of a Wireless Network:
+</div>
+<ol>
+<li><div class="s57">
+<span class="s1D6">Speed:</span> The network is quite convenient when it comes to sharing different files over the network. When a network is not available, documents can only be transferred from one point to another using flash disks and other physical mediums. When using physical mediums to transfer documents, the process is quite time consuming.
+</div></li>
+<li><div class="s57">
+<span class="s1D6">Cost:</span> There are numerous software programs and they are cost-effective.
+</div></li>
+<li><div class="s57">
+<span class="s1D6">Centralized Software Management:</span> When installing a network, it is possible to install the software on the file server and it can be used by all the computers that are connected in the network, meaning that the wireless network helps to save on time.
+</div></li>
+<li><div class="s57">
+<span class="s1D6">Resource Sharing:</span> It is possible to share resources on a network whereby numerous computers are connected.
+</div></li>
+<li><div class="s57">
+<span class="s1D6">Flexible Access:</span> People can access different files on any computer that has been connected to the specific network.
+</div></li>
+<li><div class="s57">
+<span class="s1D6">Security:</span> The files and programs on the network can be safeguarded using the “copy inhibit” feature. Passwords can also be used to safeguard different documents.
+</div></li>
+</ol>
+<div class="sY">
+The main challenges encountered when installing a network include:
+</div>
+<ol>
+<li><div class="s57">
+<span class="s1D6">Costs:</span> Although a wireless network is supposed to be cost-effective; however, the initial investment is costly since you will also have to hire a technician.
+</div></li>
+<li><div class="s57">
+<span class="s1D6">Administrative time is required:</span> A network should be maintained properly. A network administrator should be hired to handle such issues.
+</div></li>
+<li><div class="s57">
+<span class="s1D6">File server may fail:</span> A file server is quite susceptible in different ways. When the file server fails, the whole network cannot operate. Different files and programs may be lost in the process.
+</div></li>
+</ol>
+<div id="part0006.xhtml#a1AP" class="s4T">
+About CISCO
+</div>
+<div class="sY">
+CISCO is a company that offers networking for the Internet. The company has been operational since 1984. The network was also established by two scientists who were studying at Stanford University. The networking solutions offered by CISCO are being utilized by different service providers as well as numerous small and medium enterprises. The networking solutions offered by the company normally connect computing devices, people, and computer networks. People can now connect with others while also sharing different pieces of information. A large percent of Internet traffic has also been traveling across the CISCO systems. The company has also been using the Internet to run its own business online from managing inventories to product orders. When using the Internet, CISCO can also keep track of the travel and staff expenses. When exploring different possibilities that can be beneficial to your business, you should opt for the CISCO systems since the company has a better understanding of how you can get your business online. By taking advantage of the experience and knowledge that CISCO possesses, you can enhance the progressive growth of your business.
+</div>
+<p><span id="part0007.xhtml"></span></p>
+<div id="part0007.xhtml#a1AR" class="s19">
+Chapter 2: Introduction Into Hacking
+</div>
+<div class="sY">
+There are different types of hacking techniques and hacker categories. In this book, the main focus will be on ethical hacking. We will also look into network hacking to be precise. Some of the methods used to test the computers and their network for any security issues will also be discussed. All these vulnerabilities are going to be outlined since hackers use some of these loopholes to gain access to a network. As for ethical hacking, it mainly involves utilizing some of the professionally proven security techniques that are used to ensure that a network is secure. The tests are carried out by IT professionals and they perform such duties after receiving authorization from the owner of the network system.
+</div>
+<div id="part0007.xhtml#a1AS" class="s4T">
+Different Terminologies Used in Hacking:
+</div>
+<div class="sY">
+<span class="s1D6">Hackers:</span> These are people who try to compromise sensitive information that they have also obtained illegally. Some of the hackers usually target the systems that they deem well-protected since they want to elevate their status within their circles.
+</div>
+<div class="sW">
+<span class="s1D6">Malicious Internal Users:</span> They are also referred to as internal attackers. They normally try to compromise sensitive information since they can easily access it within the organization.
+</div>
+<div class="sW">
+<span class="s1D6">Ethical Hackers:</span> They are the good guys. They can hack into a system and ensure that they have notified the user about the present vulnerabilities. The owner of the network can then take the necessary measures to ensure that the computer systems and sensitive information cannot be accessed by malicious individuals.
+</div>
+<div class="sY">
+The term hacker can be defined in two ways. Traditionally, this term showcases that such individuals like to tamper with different electronic and software systems, and they also like to look into how a computer operates. At the moment, a hacker is a person who breaks into a system maliciously for their gain; these individuals usually gain access to critical forms of information and they use it to take advantage of other people.
+</div>
+<div class="s9R">
+Types of Hackers
+</div>
+<ol>
+<li><div class="s57">
+<span class="s1D6">Black-Hat Hackers:</span> The hackers who usually harbor ulterior motives.
+</div></li>
+<li><div class="s57">
+<span class="s1D6">White-Hat Hackers:</span> They are the good guys and they usually carry out ethical hacking. 
+</div></li>
+</ol>
+<div id="part0007.xhtml#toc14_The_Mindset_of_a_Hacker" class="s4T">
+The Mindset of a Hacker
+</div>
+<div class="sY">
+You need to assess how secure your system is so that you may get a better picture of what you are up against. Most of the vendors who deal with security products always offer advisory services on how people should protect their networks and computer systems from malicious users who may exist both internally and externally. The best way to understand how to protect your system is by looking into the mindset of a hacker. Some of the challenges that people face as a result of hackers will also be outlined in this context. It is also good to look into what motivates a hacker.
+</div>
+<div class="sY">
+Many hackers have been saying that the public normally fails to understand them, and there is some truth in that statement. It is easy to judge but quite hard to understand reality. The main issue is that most of the stereotypes surrounding hackers have been formed as a result of people being misinformed about reality. Hackers are also classified in different ways depending on their abilities as well as what motivates them to engage in such acts. Some hackers are very skilled, and they are always in the pursuit of knowledge. At the end of the day, it is evident that each hacker is after their gain. It is also good to note that there are both negative and positive aspects when it comes to hacking.
+</div>
+<div class="sY">
+Throughout history, hackers have always been on the pursuit of different forms of knowledge. They also enjoy the thrill of each challenge that comes their way. Some of the people who aspire to be hackers have limited skills, though. On the other hand, hackers have also proven to be innovative and they like the adventure. They always look for new ways that they can use to exploit different networks and computer systems. They always look into some of the areas that people overlook. In some instances, they also ask themselves some questions revolving around what would happen if they carried out certain activities including changing some codes within the installed programs. Some hackers also assume that they can carry out some improvements on the mechanical and electronic devices that are currently being used.
+</div>
+<div class="sW">
+Various forms of evidence also showcase that hackers can hack for different gains. For instance, they may have some political motives. Other companies may also hire them to get rid of the competition. In some instances, they hack into different networks for their financial gain. Some of the malicious acts have proven to affect many individuals negatively. It is also good to note that some of these hackers do not care about what happens to the individuals who are behind the firewall that is supposed to ensure that the network is safe. They always carry out attacks since they will gain a lot in the process.
+</div>
+<div class="sY">
+Some of the negative issues that arise from these attacks include jeopardizing the jobs of certain individuals who are in charge of securing the systems. In some instances, there is a high chance that some people within the company may be targeting various forms of information and they intend to use it for their gain. Such individuals are known as internal hackers. They normally root the files on different servers while also sharing every piece of information that they have managed to access. At times, they also delete sensitive pieces of information. It is hard to identify some of these individuals who harbor malicious motives. In some instances, they may also influence some of the employees within an organization negatively. 
+</div>
+<div class="sW">
+Some of the malicious users have a criminal background. It is advisable to perform certain checks when hiring people. Their past behaviors may influence them in different ways and they may compromise the integrity of your organization. Although a person may have a clean record, it does not mean that they cannot engage in criminal activities. Every criminal always starts from somewhere. Although hacking is quite bad, such people usually play a key role in the advancement of technology. When hackers managed to penetrate a network, security experts usually work towards ensuring that they have devised different measures they can use to secure the network.
+</div>
+<div class="sY">
+If the world did not have hackers, there is a high chance that people would care less about the presence of various tools that can prevent data leakage and tool scanning. Such a world would not be bad in any way; the main issue is that the technology would not be advanced. Technology has ensured that people have access to different employment opportunities and the field also progresses gradually.
+</div>
+<div class="sY">
+Although many technical security solutions have been formulated from time to time, it is not possible to bring an end to hacking because some of these hackers are always one step ahead. There are always people who will always be in the lookout trying to bring down different computer systems and networks. Such goals can be achieved through the formation of viruses in the form of worms and Trojans. The mentioned viruses have different effects on networks and computer systems. People are supposed to take the necessary measures so that their networks and systems are well-protected.
+</div>
+<div class="sY">
+Hackers who usually break into networks and computer systems have been present for many decades. The hacking activities became prevalent after the Internet became widespread during the 1990s. The mainstream media has also been talking more about hacking. There are many hackers; however, there are only a few who are widely known for their prowess when it comes to penetrating different networks. In most instances, hackers usually use aliases so that their real identities cannot be known by the public.
+</div>
+<div class="sY">
+Since there are many black-hat and white-hat hackers, it is easy to describe a typical hacker. In most cases, they are antisocial individuals who have a lot of time to themselves. Each hacker also has a unique set of skills and they use different methods to achieve their end goal. The hackers can be classified into the following categories depending on their skillset:
+</div>
+<div class="sY">
+<span class="s1DA-0">Script Kiddies:</span> <span class="s1DB"> They are normally computer novices and they take advantage of different hacking tools, documentations, and vulnerability scanners. Some of these tools are available on the Internet free of charge. They also do no possess any knowledge of the occurrences that take place behind the scenes. Although they are not well-versed with knowledge about hacking, they possess enough knowledge to cause a headache; however, they are quite sloppy and they do not know how to cover their tracks after taking part in different malicious acts. They can be tracked using their digital footprints.</span>
+</div>
+<div class="sY">
+<span class="s1DA-0">Criminal Hackers: </span> <span class="s1DB">These are hackers who possess a lot of knowledge and skills and they also come up with their hacking tools. They formulate different programs and scripts that are also used by ethical hackers and script kiddies. In most instances, they normally come up with viruses in the form of worms and other types of malware. They can easily access any system and they also know how to cover up their tracks. They never leave any digital footprints behind. They can make it look like a certain individual hacked into the network or computer system. Advanced hackers are very secretive. Before they share any information with other people, they must be deemed worthy to have access to such information. Some hackers are not well-ranked; however, for them to be worthy, they must have access to some unique bits of information that they can use to prove themselves to the high-profile hackers. These hackers are the worst enemies when it comes to information security. Although they may be deemed as professionals, they are not so different from the script kiddies.</span>
+</div>
+<div class="sY">
+<span class="s1DA-0">Security Researchers:</span> <span class="s1DB"> These are IT professionals who are also publicly known. They normally keep track of the activities on a computer system, networks, and different applications. Their main focus is on the vulnerabilities that may be present. They come up with different tools and scripts that they can use to exploit some of these vulnerabilities. If such experts were not in existence, there would be fewer security tools that can be accessed as open source. Some of the security researchers always post their findings on blogs and other media platforms. When you follow up on the content that they usually come up with, you can learn more about the present vulnerabilities that can affect your network or computer system.</span>
+</div>
+<div class="sAC">
+What matters most is the skill level of the hacker. Also, the source of their motivation equally matters.
+</div>
+<div class="sY">
+<span class="s1DA-0">Hacktivists:</span> <span class="s1DB"> They always try to spread social and political messages through their hacking activities. Their main focus is on raising public awareness about specific issues. At times, hackers may be focusing on raising awareness of the importance of legalizing marijuana and other major issues in the current world, and they may also launch DDoS (direct denial of service) attacks with specific reasons. </span>
+</div>
+<div class="sY">
+<span class="s1DA-0">Cyberterrorists:</span> <span class="s1DB"> They normally attack the government or any other public entities and hack into their computer systems and networks with different motives. For instance, they may be targeting the power grid or other areas. They also steal classified government information which is also used to their advantage. Some nations take the threats from cyberterrorists very seriously, and that is why they make use of different security protocols that can ensure that the government systems cannot be acceded by hackers. </span>
+</div>
+<div class="sY">
+<span class="s1DA-0">Hackers for Hire:</span> <span class="s1DB"> These hackers always take part in organized crime. Some of these hackers form organizations and always work together to carry out different attacks that may be targeting the government and other institutions. The population of hackers for hire is not as large. In most cases, most hackers prefer accessing different networks for fun while also seeking to expound on the knowledge that they possess. Sometimes, the greatest threat to an organization may be within the building and they may have a valid network account. As a result, they will not struggle as much to gain access to the network</span> .
+</div>
+<div id="part0007.xhtml#a1AU" class="s4T">
+What Motivates Hackers
+</div>
+<div class="sY">
+In most cases, they hack because they can. Hacking is more of a hobby for some people. Some of them look into different ways through which they can break into a system and some of the impossible scenarios that are present as they try to access a certain system. Although there are many types of hackers, the main focus in this context is on the hackers who try to access computer systems and networks.
+</div>
+<div class="sY">
+Most of them benefit a lot when they outsmart the government and other prominent institutions. They usually make headlines since they are engaging in illegal acts. When they gain access to the network of an entity that has some valuable and sensitive information, they always feel better about themselves. Most of the hackers normally feed off from the gratification that they get when they access a computer network; they become obsessed eventually. The adrenaline rush that they experience motivates them to hack into other systems. Hackers also gain a lot from the thrill they experience when penetrating a complex computer network.
+</div>
+<div class="sY">
+Hackers normally promote individualism. The information they possess is easily shared since they believe that information should be free and everyone can access it. They also assume that the cyberattacks are also different from the physical attacks in the real world. The hackers may also misunderstand their victims in some instances. Additionally, they may not be conversant with the consequences that arise during the hacking process.
+</div>
+<div class="sY">
+Majority of the hackers normally say that they do not intend to cause any form of harm or gain through some of the bad deeds they take part in. Most of the hackers never look for a tangible payoff. They just want to prove a point, and that feeling is substantial to most of the hackers. For starters, the self-esteem of most of them is boosted in some of these instances. When a person manages to hack different networks simultaneously, they may become addicted, and they will want to hack into other computer networks. Some hackers also want to ensure that the lives of other people have become miserable. They may also want to become famous as a result of some of their acts. Some of the motives that hackers may have include curiosity, revenge, vandalism, challenges, stealing for financial gain, blackmail, sabotage, extortion, and corporate espionage.
+</div>
+<div class="sY">
+Most of the hackers usually cite some of these motives when explaining why they have hacked into a certain network. Some of these motivations are cited regularly especially when the economic conditions are not favorable. Some of the hackers who have managed to gain access to the network may be looking for valuable pieces of information they can use to solicit some money that could help them to solve some of their financial problems. They also compete sometimes. Additionally, hackers may also be trying to exert revenge on other people for different reasons or they may just be trying to relieve their boredom while also satisfying their curiosity.
+</div>
+<div class="sY">
+In most instances, people believe that they may not possess important pieces of information that may prove to be of great value to a hacker. Such a mentality is not suitable for it motivates the hackers. They work hard to ensure that they have accessed a specific network. It is also good to note that hackers sometimes engage in such activities because they can. Hackers can also focus on high-profile systems. When a hacker hacks into a certain system, they will manage to fit into different circles made up of hackers with varying skill sets. They also exploit most of the vulnerabilities within a network and always look for everything that they can compromise. If a hacker fails to copy any information after accessing a network, it may be impossible to prove that they have accessed the network.
+</div>
+<div class="sY">
+Although hackers focus more on various vulnerabilities and they may also deface different websites, they also know that such activities may not be good for a person’s business. When a site has been hacked, the management and other people may decide to address the vulnerabilities as well as the threats that are present. Below are some of the reason why the computer network breaches have become easy.
+</div>
+<ol>
+<li><div class="s57">
+A huge population of people is using the Internet.
+</div></li>
+<li><div class="s57">
+Computer networks provide some form of anonymity.
+</div></li>
+<li><div class="s51">
+There is a considerable number of hacking tools at the moment.
+</div></li>
+<li><div class="s51">
+There are many wireless networks that ensure hackers can easily hide their digital footprint.
+</div></li>
+<li><div class="s57">
+The current codebase has become complex in some of the databases that have been developed at the moment.
+</div></li>
+<li><div class="s57">
+Most of the children possess knowledge about computers.
+</div></li>
+<li><div class="s57">
+It is unlikely that hackers are investigated after being caught.
+</div></li>
+</ol>
+<div class="sY">
+Some of the attacks are rarely reported, and when a hacker is caught, they are not prosecuted. When a hacker is caught, they mainly talk about how their services are beneficial to the society. They also go ahead to note that they were looking into some of the present vulnerabilities. Regardless of whether a hacker has been caught or not, what matters to them is that they have gained “fame and glory”. When they are caught by the authorities, the reward system that they normally thrive from is threatened.
+</div>
+<div class="sY">
+When a hacker is not caught, their malicious activities will go unnoticed. At times, it is good to maintain silence for the sake of the shareholders since they may panic when they get a hold of such negative news. The current laws on privacy and security are changing rapidly since a breach notification must be present. The cases of internal breaches are also becoming common, and they help to showcase the reality of what is happening in some of these organizations. When there is an internal breach, the responsible party is forced to resign. At the moment, when a breach takes place, the federal state and international laws and regulations will state that such activities should be reported to the relevant authorities. Whether a breach is internal or external or backup tapes have been lost, it should all be reported since they affect your business in one way or another.
+</div>
+<div id="part0007.xhtml#toc16_Planning_and_Performing_an_Attack" class="s4T">
+Planning and Performing an Attack
+</div>
+<div class="sY">
+There are different attacking styles used by hackers. Some hackers normally prepare for a large attack in advance. They always gather various bits of information first. The techniques they use to gather information are methodological. It is also difficult to track a hacker who uses such a technique. Other hackers and mostly the script kiddies always act before trying to look into the consequences of their actions. Such a hacker may try to access a specific network without even concealing their identity. It is easy to catch such a hacker since they always proceed without a plan. Malicious users are widely known, and they possess a lot of knowledge about computer networks within organizations. At times, such hackers try to carry out prodding and poking into a network that they are accessing illegally. They also do stupid things sometimes, and a network administrator can also track them down.
+</div>
+<div class="sY">
+Although hackers have formed underground communities, most of the hackers refrain from sharing information with other people. They work independently most of the time.
+</div>
+<div class="sY">
+When hackers are communicating, they normally make use of private message boards, hacker websites, anonymous email addresses, and the Internet Relay Chat (IRC). It is possible to log into one of these sites, and you may learn more about what hackers are doing; these sites are found on the Dark Web.
+</div>
+<div id="part0007.xhtml#a1AW" class="sBE">
+About the Dark Web and how to Access It Using the Tor Browser
+</div>
+<div class="sY">
+The World Wide Web is quite large. It contains a lot of information and to peruse through all this information, you might take a lot of time. There is the surface web and the dark web/deep web. Some of the common sites include Wikipedia and Google. The dark web belongs to the governments and the corporates who are avoiding public exposure. In the dark web, you can find government reports, medical records, and financial records. Such information cannot be accessed using search engines and it is also protected using powerful firewalls. In the dark web, you will be exposed to various forms of danger.
+</div>
+<div id="part0007.xhtml#toc17_The_Main_Reason_Why_the_Dark_Web_Is_Hidden" class="s6V">
+The Main Reason Why the Dark Web Is Hidden
+</div>
+<div class="sY">
+Some of the pieces of information stored on the dark web are not meant for the public eye; that is why the dark web is hidden. As king as such information is hidden, it is presumably safe. The main issue is that the information is present on the Internet since it is in the form of surface web applications. As for the Dark Web, it is somewhat complicated. Although it is a part of the World Wide Web, it runs on the private servers, and information can only be accessed through specific means. The high anonymity levels come in handy and the authorities cannot easily shut down some of these sites. Since the Dark Web ensures there are high anonymity levels, people have taken advantage of the situation and they are even engaging in the sale of illegal substances such as drugs.
+</div>
+<div class="sY">
+You may have come across the term cybercrime. Also, you may have heard of some cybercriminals who are mainly after money. They collect various forms of data including personal information and credit card information. All these pieces of information can be traded on the dark web. There are also illegal business dealings taking place on the Dark Web. Some of these dealings include the sale of drugs, firearms, and illegal wildlife.
+</div>
+<div id="part0007.xhtml#a1AY" class="s6V">
+How Do You Access the Dark Web Sites?
+</div>
+<div class="sY">
+Before you express your interest in accessing the dark web, you should understand that there are many illegal things happening on the platform. You may take the necessary precautions; however, it is not easy to stay fully anonymous. Access the platform at your own risk.
+</div>
+<ul>
+<li><div class="s57">
+<span class="s1D6">Download the Tor Browser and Install It.</span> The Tor browser allows you to gain access to the dark web. The platform was created to ensure that the intelligence information in the United States was safeguarded. Using the browser, you can access onion websites that are situated on the dark web. When using Tor, you can browse anonymously. The browser will also enlighten a user about the different things that can reveal their identity.
+</div></li>
+</ul>
+<div class="sBV-1">
+<img src="rsrcBU.jpg" alt="Tor Browser" class="sBV-0" />
+</div>
+<ul>
+<li><div class="s57">
+<span class="s1D6">Use a Virtual Private Network (VPN).</span> A virtual private network ensures that you can browse through the Internet anonymously. Your current location will be masked and you will be in a supposed location. It is good to note that Tor only masks your identity, but the platform does not mask your location. There are many VPN services and you can use NordVPN or ExpressVPN.
+</div></li>
+</ul>
+<ul>
+<li><div class="s57">
+<span class="s1D6">DuckDuckGo.</span> When navigating the dark web, DuckDuckGo is your friend. It is a search engine that helps you to maneuver the dark web easily. You can easily access the dark web index sites through the DuckDuckGo search engine.
+</div></li>
+</ul>
+<ul>
+<li><div class="s57">
+<span class="s1D6">Always Sign Up For a Secure Email Address.</span> Some email addresses are secure and also untraceable. You can use these email addresses to register for the .onion websites. Some of the secure email platforms that you may consider include:
+</div></li>
+</ul>
+<ul>
+<li><div class="s57">
+TORbox
+</div></li>
+<li><div class="s57">
+ProtonMail
+</div></li>
+<li><div class="s57">
+Mail2Tor
+</div></li>
+</ul>
+<div class="sW">
+All the listed options also have .onion domains and you can access them using the TOR browser. The regular browsers cannot work in this case.
+</div>
+<div id="part0007.xhtml#a1AZ" class="s6V">
+About the Dark Web Search Engine
+</div>
+<div class="sY">
+The .onion domains can only be used on the dark web. They are somewhat similar to the normal domains and they cannot be accessed using regular browsers. Some harmless .onion addresses exist. There are many sites on the dark web and you have to put in some effort so that you can find them. You should also note that you may stumble upon some illegal activities on the dark web.
+</div>
+<div class="s9R">
+Is It Safe to Play On the Dark Web?
+</div>
+<div class="sY">
+It may be exciting to try and explore the unknown; however, it is good to come to terms with some of the present dangers on the dark web. The bad guys will always be on the lookout to access various pieces of information. The law enforcement officers will also be on the dark web trying to capture some of the individuals engaging in illegal activities.
+</div>
+<div id="part0007.xhtml#toc20_The_Security_Guide_for_Accessing_the_Dark_Web" class="sCK">
+The Security Guide for Accessing the Dark Web
+</div>
+<div class="s83">
+We have noted that there are many terrifying things taking place on the Dark Web. You may take some necessary precautions so that you can avoid them. To stay safe, utilize the following guidelines:
+</div>
+<ol>
+<li><div class="sCP">
+<span class="s1DA-1">Ensure the Tor browser is up-to-date. </span> Use the Tor browser when accessing the .onion domain sites that are present on the Dark Web. Also, your Tor Browser should be updated so that you may be safe while accessing some of these sites<span class="s1DE">.</span>
+</div></li>
+</ol>
+<div class="sCX-1">
+<img src="rsrcCW.jpg" class="sCX-0" />
+</div>
+<ol start="2">
+<li><div class="sCP">
+<span class="s1DA-1">Use a reputable VPN. </span> The importance of using a VPN was discussed earlier. The VPN conceals your location whereas the Tor browser helps to hide your identity. The VPN you are using should be reputable. Some examples were also highlighted including the ExpressVPN.
+</div></li>
+<li><div class="sCP">
+<span class="s1DA-1">Do not use macros. </span> The macros normally run scripts including JavaScript. Using macros can open some worms, and the risk level will be high. If you are asked to enable scripts while surfing on the dark web, you should always think twice since you will be exposed to different forms of malware.
+</div></li>
+<li><div class="sCP">
+<span class="s1DA-1">Be careful with what you download. </span> The main agenda is to avoid malware and viruses. Some hackers attach some malicious codes on different files, and people cannot easily know until it is too late. You may use a virtual machine so that you may stay safe. 
+</div></li>
+<li><div class="sCP">
+<span class="s1DA-1">Always change your mindset. </span> There are many people who may assume that the dark web is safe since the cybersecurity experts may be working on ensuring that the Internet is free from cybercrime. Always change your mindset since the dark web is not safe. You should be cautious and must not trust anyone that you meet on the platform<span class="s1DE">.</span>
+</div></li>
+</ol>
+<div class="sY">
+Some people are faint-hearted. They may opt to act as tourists on the dark web. If you have ever visited the dark web, you will realize that most of the information about the platform is true and no rumors. There are many illegal activities taking place on the platform, and that is why you should ensure that you are safe. You should also be cautious since some of the people on the dark web will always try to take advantage of some of the ignorant individuals. Hackers like the dark web since they can easily discuss anything on the platform. They make use of message board and social media sites that have .onion domains.
+</div>
+<div class="sY">
+Most of the malicious users take advantage of some people’s ignorance. They also know more about some of the aspects of the real-world security. Hackers usually take different approaches as follows:
+</div>
+<ol>
+<li><div class="sCP">
+Most of the computer networks are not properly managed; some computer systems are not patched properly, monitored, or hardened. The attackers can easily gain access to such a network even though a firewall may be present as well as an access control system. The actions of some malicious users may not be tracked in any way. Additionally, they may have full access to the network and that means they can exploit it to their benefit. 
+</div></li>
+<li><div class="sCP">
+Most of the security and network administrators may be unable to keep up with some of the attack methods and new vulnerabilities within the system. In some instances, the network administrators may be occupied to an extent that they cannot keep track of every activity on the network. Additionally, they may fail to notice some unusual activity on the network since they may have failed to set goals and their time management skills may also be poor. 
+</div></li>
+<li><div class="sCP">
+Information systems become more complex with time. At times, the network and security administrators may be unable to keep track of everything happening on the network since the information systems become complex with time. An attacker will always use such information to their advantage. They will always attack during a period when the network and security administrator is unaware.
+</div></li>
+<li><div class="sCP">
+The attacks are usually carried out slowly and they cannot be easily detected.
+</div></li>
+<li><div class="sCP">
+The attacks may also be carried out after business hours and that means that the network and security administrator may not be present to keep track of the activities taking place within the network<span class="s1DE">.</span>
+</div></li>
+</ol>
+<div class="sY">
+To learn more about how hackers penetrate these networks, you may keep track of the magazines that talk about hacking and they may also be produced at least once or twice a month.
+</div>
+<div class="sY">
+Most of the hackers learn from their mistakes. When they make a mistake, they always know they are one step closer to gaining access to a certain network. They always use the knowledge they have gained to plan future attacks. As an ethical hacker, you will also have to learn from your mistakes.
+</div>
+<div id="part0007.xhtml#toc22_Managing_Anonymity" class="sDR">
+Managing Anonymity
+</div>
+<div class="sY">
+Smart hackers want to ensure that their identity is concealed. A hacker always prioritizes more on covering their tracks. The success of a hacker is dependent on whether they have remained unnoticed. They should also not raise any form of suspicion so that they can also go ahead to access the system as they wish in the future. Some of the resources that hackers use to remain anonymous include:
+</div>
+<ol>
+<li><div class="s57">
+VPN accounts that may be owned by previous employers or friends
+</div></li>
+<li><div class="s57">
+Public computers in malls, schools, or even libraries
+</div></li>
+<li><div class="s57">
+Internet proxies
+</div></li>
+<li><div class="s57">
+Open wireless networks
+</div></li>
+<li><div class="s57">
+Anonymous e-mail accounts
+</div></li>
+<li><div class="s57">
+Unsecured computers
+</div></li>
+<li><div class="s57">
+Open e-mail relays
+</div></li>
+</ol>
+<div class="sY">
+If a hacker develops a well-crafted plan, they cannot be easily traced.
+</div>
+<p><span id="part0008.xhtml"></span></p>
+<div id="part0008.xhtml#toc35_Chapter_3__Coming_Up_With_a_Hacking_Plan" class="s19">
+Chapter 3: Coming Up With a Hacking Plan
+</div>
+<div class="sY">
+This chapter will focus on the following areas:
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">Coming up with ethical hacking goals</span>
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">Selecting the networks to test</span>
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">Examining some of the hacking tools</span>
+</div>
+<div class="sY">
+As a hacker, you must come up with a plan before you commence on the hacking process. The plan will ensure that you have penetrated the network at ease and gives you confidence about what you are doing. Since there is a lot of seriousness when carrying out hacking, it is good to come up with a well-crafted plan. You may start by testing a program on your computer while outlining, documenting, and defining your goals. Make sure that you have determined your testing standards while also familiarizing and gathering different tools that will help you to facilitate the entire hacking process. In this chapter, you will get a step-by-step guide on how you can create a good hacking environment that can enhance your success levels when hacking into a network. As an ethical hacker, an approval from your clients and the management should be received before you implement the hacking plan that you had formulated.
+</div>
+<div id="part0008.xhtml#a1B3" class="sEP">
+Establishing Your Goals
+</div>
+<div class="sY">
+As a hacker, your goals should be outlined accordingly. The main goals that you may have as an ethical hacker entail looking into the vulnerabilities that are present within a network since the main focus is in ensuring that it has become more secure. Some of the steps that help you to outline your goals include:
+</div>
+<ol>
+<li><div class="s57">
+Define some of the specific goals. Align all your goals with the business objectives within the organization. Look into what the management is trying to get at the end of the entire process.
+</div></li>
+<li><div class="s51">
+Come up with a schedule that will start and end at a specific moment. The hacking timeline should also be outlined in the form of specific times and dates.
+</div></li>
+</ol>
+<div class="sY">
+It may take some time to establish all of your goals; nevertheless, it will all be worth it. The goals will offer some guidance. If you have any concerns, you should always refer to all of the goals that you have formulated so that you may stay on track.
+</div>
+<div id="part0008.xhtml#toc25_How_to_Determine_the_Specific_System_to_Hack" class="s4T">
+How to Determine the Specific System to Hack
+</div>
+<div class="sY">
+You may have numerous computer networks, but you cannot assess all of them at the same time. Ensure that the hacking project has been broken down into bits so that the entire process may be easily manageable. You can decide the specific systems that you want to test based on the analysis that you have carried out. Some of the questions that you should answer in the process include:
+</div>
+<ol>
+<li><div class="s57">
+Which are the most critical systems? There are some systems which when accessed without the necessary authorization will cause some trouble and you may also incur great losses.
+</div></li>
+<li><div class="s57">
+Which systems look like they can be easily hacked?
+</div></li>
+<li><div class="s57">
+Which systems have not been documented accordingly?
+</div></li>
+</ol>
+<div class="sY">
+After formulating all of your goals, you can now decide the specific system that you want to test. The main reason why the formulation of goals is important is that they help you to outline your expectations and you can also make a better estimate of the time and resources that you will use during the entire process. Some of the devices that you may need to test include:
+</div>
+<div class="sFB-0">
+<img src="rsrcFA.jpg" alt="Image result for routers and switches" class="sFB-1" />
+</div>
+<ol>
+<li><div class="s57">
+Routers and switches - a switch connects computers on one network whereas routers connect numerous networks together.
+</div></li>
+<li><div class="s57">
+Firewalls
+</div></li>
+<li><div class="s57">
+Web, applications, and database servers
+</div></li>
+<li><div class="s57">
+Wireless access points and bridges
+</div></li>
+<li><div class="s57">
+E-mail and files
+</div></li>
+<li><div class="s57">
+Workstations, tablets, and laptops
+</div></li>
+<li><div class="s57">
+Mobile devices used to store confidential pieces of information
+</div></li>
+<li><div class="s57">
+Client and server operating systems
+</div></li>
+</ol>
+<div class="sY">
+When you are dealing with a small network, it is possible to test everything. Some of the public facing hosts should be tested, and they include the web servers and emails. It is also good to that the ethical hacking process is also flexible. Always start with the networks that seem vulnerable. Also, consider the following factors:
+</div>
+<ol>
+<li><div class="s57">
+The specific operating system used to run the network
+</div></li>
+<li><div class="s57">
+The applications present in the network
+</div></li>
+<li><div class="s57">
+The specific amount of critical information that has been stored on the network
+</div></li>
+</ol>
+<div id="part0008.xhtml#a1B5" class="s4T">
+Attack Tree Analysis
+</div>
+<div class="sY">
+The attack tree analysis is the process whereby a hacker creates a flow chart that outlines how they will attack a certain network. The attack tree analysis is normally used by security teams when they are performing a high-level risk analysis. In most cases, such an analysis is carried out when planning out a new network project. If you want to improve your hacking skills, you should have planned each of your attacks methodologically.
+</div>
+<div class="sY">
+The main issue is the amount of time needed to draw the attack trees. Also, a lot of expertise is needed in such a case. Nowadays, it is also possible to use a computer to come up with the attack tree. Some of the tools that you may use include the SecurITree. An example of the attack tree analysis is as shown below.
+</div>
+<div class="sGB-0">
+<img src="rsrcGA.jpg" alt="Image result for a sample SecurITy attack tree analysis." class="sGB-1" />
+</div>
+<div class="sW">
+Ethical hacking is more detailed as compared to vulnerability assessments. As an ethical hacker, you are supposed to look for a lot of information about different systems. For instance, you should look for information about the organization and its network. Since ethical hacking is flexible; you can utilize different hacking techniques. If you are undecided on where to start, you should assess a system that has great visibility. You may also focus more on the firewall of the specific network.
+</div>
+<div id="part0008.xhtml#a1B6" class="s4T">
+Formulating Testing Standards
+</div>
+<div class="sY">
+When there is miscommunication, the system can easily crash when carrying out ethical hacking tests. To avoid coming across such challenges, you should come up with document testing standards. The standards should include:
+</div>
+<ol>
+<li><div class="s57">
+Specific tests that are being performed
+</div></li>
+<li><div class="s57">
+When are the tests being performed as well as the overall test time
+</div></li>
+<li><div class="s57">
+The amount of knowledge that you possess about a specific system
+</div></li>
+<li><div class="s57">
+How each of the tests will be performed and the IP address that will be used
+</div></li>
+<li><div class="s57">
+The best step to take after discovering different vulnerabilities
+</div></li>
+</ol>
+<div class="sY">
+Some of the suitable practices when carrying out ethical hacking include:
+</div>
+<div id="part0008.xhtml#toc27_Timing" class="sGW">
+Timing
+</div>
+<div class="sY">
+It is all about the timing. The timing concept applies to activities such as ethical hacking. When carrying out some tests, you should ensure that the business processes within an organization are not affected. Harmful situations that should be avoided include miscommunication. It is also good to avoid causing a Dos attack on an e-commerce site that has high traffic, especially during the day. If many people are working on a specific project, they should agree on the timing so that they may achieve their end goal.
+</div>
+<div class="sY">
+At times, it is good to always notify the ISP (Internet Service Providers). After they are aware that you are going to test the system to look for some vulnerabilities, they will not block any of your traffic in case they have suspected any malicious behavior that normally appears on the firewall.
+</div>
+<div class="sY">
+The testing timeline should comprise of some short-term dates when carrying out different tests. The milestones should also be outlined. You can come up with a timeline and key in the data into a spreadsheet so that it may offer some suitable form of guidance.
+</div>
+<div id="part0008.xhtml#toc28_Specific_Tests" class="s7Y">
+Specific Tests
+</div>
+<div class="sY">
+You may be tasked with carrying out a penetration test. Also, you may want to perform some specific tests including cracking passwords and trying to gain access to different web applications. At times, people also carry out social engineering tests while assessing the network. Regardless of the specific test, you may not want to reveal some information about the specifics of the test. The main reason why documenting is important is that it helps to get rid of any form of miscommunication that may arise in the future. Sometimes, people also make use of screen actions. You may not possess any knowledge about the general tests that you are supposed to perform; however, if you use automated tools, it may be impossible to learn more about the tests that you have conducted.
+</div>
+<div id="part0008.xhtml#a1B9" class="s6V">
+Blind Versus Knowledge Assessments
+</div>
+<div class="sY">
+It is good to possess huge amounts of knowledge about the system that you are supposed to test. Although such knowledge may not be necessary, you should at least possess a basic understanding of the system so that you are supposed to hack for you to easily protect yourself by making sure that you have not left any digital footprints that can be traced back to you. It is not hard to gain access to such information; you just have to survey so that you may gain a better understanding of the system that you are supposed to access. When you carry out some background research, you will not be hacking into the system blindly. When carrying out an assessment, the techniques that you use are always dependent on your needs.
+</div>
+<div class="sY">
+The most suitable approach is to plan on carrying out unlimited attacks. A hacker with a malicious motive does not hack into a system when using a limited scope. It is also good to confirm whether you want to carry out the tests and that they should not be detected by the network administrators as well as the security providers. You must also carry out physical security tests and social engineering. If there are too many people who know that you are about to test the system, they may change their habits, and the results of the test will not be accurate. However, that does not mean that you should not inform anyone. You should have a main contact within the organization and that they should have an authoritative position.
+</div>
+<div id="part0008.xhtml#toc30_Location" class="s6V">
+Location
+</div>
+<div class="sY">
+The tests that you are carrying out dictate the location that you should run them from. The main goal is for the network to be tested from a location that can be easily accessed by malicious hackers. You can also determine whether the network will be hacked by someone within the organization; as a result, it is good to ensure that all the bases have been covered. You may combine different tests and you can execute them both internally and externally.
+</div>
+<div class="sY">
+Some of the tests that you can carry out include cracking passwords and assessing the network infrastructure. At times, seeking the services of an outsider who may possess knowledge about how to hack into a network is advisable for they can perform tests on gadgets such as firewalls, routers, and different web applications. As for the external attacks, you should have a stable Internet connection. In some instances, you may also have to make use of an external proxy server. You can also assign a suitable IP address to your computer that cannot be traced back to you. To get a better view of the network, you should have it plugged into the network outside the firewall. Internal tests are quite easy since you only need to have some physical access to the network and the organization’s servers. You can also use a DLS line or a cable modem.
+</div>
+<div id="part0008.xhtml#a1BB" class="s4T">
+How to React to the Vulnerabilities Present in the Network
+</div>
+<div class="sY">
+When it comes to vulnerabilities, you need to come up with a sensible technique that you could use to seal the security loopholes that are present within the organization. You should not necessarily hack into the system forever since it will end up crashing in the process. You need to follow the path that you have outlined until you can no longer access the network. If you have any doubts, you should have outlined your goals and should stop after making sure that each of your goals has been achieved. If you discover a certain loophole, you should contact the right people so that they can fix the problem fast. If you do not fix the problem on time, some people may take advantage of the current loopholes and they can cause some irreversible damage. The employees should also try to ensure that they have not violated their employment agreement.
+</div>
+<p><span id="part0009.xhtml"></span></p>
+<div id="part0009.xhtml#toc33_Silly_Assumptions" class="s5N">
+Silly Assumptions
+</div>
+<div class="sY">
+When you assume things, you may fail to achieve your objectives. Below are some assumptions that people make when they are supposed to hack into a network.
+</div>
+<ol>
+<li><div class="s57">
+The networks are available during the testing process.
+</div></li>
+<li><div class="s57">
+You can assume that you have all the necessary testing tools.
+</div></li>
+<li><div class="s51">
+The testing tools that you utilize may minimize the possibility of the network crashing.
+</div></li>
+<li><div class="s57">
+You may know all the risks of each test.
+</div></li>
+</ol>
+<div class="sY">
+You should have documented all the assumptions that you have.
+</div>
+<div id="part0009.xhtml#a1BD" class="s4T">
+Selecting Tools to Carry Out Security Assessment
+</div>
+<div class="sY">
+The security assessment tools that you use depend on different factors depending on the tests that you are supposed to run. You can perform some ethical hacking tests using a telephone or a network. When performing a comprehensive test, you must have the necessary tools. If you do not know the specific tools that you should use, you will learn more about some of the tools used when hacking into a network in the preceding chapters. Some of these tools are free or commercial; you can use them accordingly to achieve your goals.
+</div>
+<div class="sY">
+You must know about the applications of all the hacking tools that are at your disposal. Some of these tools are also accompanied by manuals, while some have manuals that are not well-documented, and that can be frustrating. You can go ahead and search for some newsgroups as well as message boards to learn more about how some of these tools operate.
+</div>
+<div class="sY">
+Some of the tools may prove to be hazardous since they may affect the health of your network. You should be careful when using some of these tools. You should have an in-depth understanding of all the available options. You should not use any tools during the testing process if you do not have an in-depth understanding of some of these tools. Some of these precautions ensure that you will not be affected by DoS conditions. Also, you will not lose any data in the process. You may also not understand the importance of some of the open-source tools. If some of the freeware tools prove they are not worth it, you can go ahead and purchase the commercial versions since they may prove to be effective. Some of these tools may be expensive; however, what matters most is their functionality. Always make sure that you have gotten value for your money.
+</div>
+<p><span id="part0010.xhtml"></span></p>
+<div id="part0010.xhtml#toc41_Chapter_4__Hacking_Methodologies" class="s19">
+Chapter 4: Hacking Methodologies
+</div>
+<div class="sY">
+In this chapter, the main focus will be on:
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">Examining some of the successful steps during the hacking process</span>
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">How to obtain information about organizations</span>
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">Scanning a network</span>
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">Looking for loopholes on a network</span>
+</div>
+<div class="sY">
+Before you focus on becoming an ethical hacker, you need to have basic knowledge on how to formulate methods that can work well. Ethical hacking entails penetrating a network and also patching it. Some of the proven techniques can also guide you as you focus on learning more about hacking. When you use a specific methodology, you can easily achieve your goals. Also, you will be able to operate professionally and will gain a lot form your time and efforts.
+</div>
+<div id="part0010.xhtml#toc36_Setting_the_Stage_for_the_Testing" class="s4T">
+Setting the Stage for the Testing
+</div>
+<div class="sY">
+In the past, the hacking process was quite manual. Nowadays, people can utilize different tools so that they can accomplish various goals. Some of these tools ensure that you can perform the tests and there will be fewer steps involved during the testing process. Although these tools come in handy, it is also good to learn more about what happens in the background. Ethical hacking can also be likened to the software testing process. You must be able to think logically so that you can easily interact with the system components while also learning more about how they work. You are supposed to gather information in small bits. Also, when you begin testing the network, you will have many goals and tests to run. You will move closer until you can discover all the present security vulnerabilities.
+</div>
+<div class="sY">
+The processes used during the ethical hacking process are somewhat the same as the ones used by malicious hackers. The main difference is the goals and the motivation of the malicious and ethical hackers. Also, each individual attains their goals differently. The main difference also is that the ethical hacker will try to look into the vulnerabilities present in the system and they will also address each of these issues. As for the malicious hackers, they will exploit the present vulnerabilities and they will also access different pieces of information that they will use to their own advantage. Nowadays, attacks by malicious individuals can come from different angles. It is advisable to test each possible point which includes the client networks, partners, and vendors. Other areas that can also be tested include laptops, wireless LANs, and home users.
+</div>
+<div class="sY">
+When you begin to put your skills to the test as an ethical hacker, you should keep track of all the tests that you have been carrying out. Also, keep tabs on the tools that you have been using as well as the results that you have obtained. The information that you record can help you in the following ways:
+</div>
+<ol>
+<li><div class="s51">
+Tracking what has worked when carrying out tests previously.
+</div></li>
+<li><div class="s51">
+The information helps to prove that you did not hack the system with malicious motives.
+</div></li>
+<li><div class="s51">
+Correlating the tests with the intrusion detection systems as well as other log files is any questions arise.
+</div></li>
+<li><div class="s57">
+You should also document the final report.
+</div></li>
+</ol>
+<div class="sY">
+Besides taking some general notes, you can also take screenshots of your results since they may also come in handy. The screenshots can be used at a later period since they prove that certain occurrences took place. Additionally, they also come in handy when you are formulating the financial report. Depending on the specific set of tools that you have used, the screenshots will act as your evidence. Such evidence also comes in handy while trying to showcase that different exploits and vulnerabilities are present in the network.
+</div>
+<div class="sY">
+Your main focus should be on the simulation and gathering of information that may compromise the system. When carrying out the tests, you can carry out a partial attack on one of the computers in the network. In some instances, you can also go ahead and attack the entire network. You are mainly looking for weaknesses that can be exploited by malicious users. The internal system should also be assessed comprehensively. When looking for vulnerabilities, check how each of the systems is interconnected and how some of the private systems are operating. You should have looked into the information that has not been protected from malicious users.
+</div>
+<div class="sY">
+When performing ethical hacking, you may carry out a blind assessment, and you may start with basic pieces of information such as the name of the company. Such an approach ensures that you have started from the ground up and you will also able to gain access to sensible pieces of information that can also be easily accessed by the hacker. The main issue is that such a technique can take longer and you may also fail to notice some of the security vulnerabilities that are present within the network. An ethical hacker should not always worry about making sure that their digital footprints being traced since they are performing each task legitimately. Although such a hacker may be acting legitimately, it is advisable to work stealthily. Some of the techniques that hackers use to conceal each of their actions will also be discussed in detail in the forthcoming chapters. They also make use of different countermeasures.
+</div>
+<div id="part0010.xhtml#toc37_Seeing_What_Other_People_See" class="s4T">
+Seeing What Other People See
+</div>
+<div class="sY">
+You gain access to a lot of information about a company and its computer systems. They can also be easily accessed, and this is done using a technique known as foot printing. Information can also be gathered in the following ways:
+</div>
+<ol>
+<li><div class="s51">
+Using a web browser to search for information about a certain organization. Some of the search engines such as Google come in handy in such cases.
+</div></li>
+<li><div class="s57">
+Carrying out network scans, assessing vulnerabilities, and probing open ports so as to determine various pieces of information about the network. If you are accessing the network internally, you can use port scanners including GFI LanGuard so that you can also see what is accessible. Regardless of the probing technique that you use, you should limit the information that you are supposed to gather about a specific organization. The amount of time that you will use also matters. Some of the major factors to consider also include the size of the organization as well as the complexity of the information present within the organization.
+</div></li>
+</ol>
+<div id="part0010.xhtml#a1BH" class="s4T">
+Gathering Public Information
+</div>
+<div class="sY">
+The amount of information that you have been gathering about a specific organization as well as their network may be readily available on the Internet. Your main task is to find the present information. Such information ensures that a hacker can easily target specific areas within an organization. They may also focus more on specific individuals such as executives within the company.
+</div>
+<div class="sW">
+Some of the techniques that can be used to gather information about the target organization include:
+</div>
+<ol>
+<li><div class="s57">
+<span class="s1D6">Web Search:</span> When you perform a web search about an organization, you can gain access to the following pieces of information:
+</div></li>
+</ol>
+<ul>
+<li><div class="s51">
+The names of the employees and their contact information
+</div></li>
+<li><div class="s57">
+Some of the relevant company dates
+</div></li>
+<li><div class="s57">
+Incorporation filings
+</div></li>
+<li><div class="s57">
+SEC filings
+</div></li>
+<li><div class="s57">
+Mergers and acquisitions
+</div></li>
+<li><div class="s57">
+Press releases about some of the organizational changes, major moves, and new products
+</div></li>
+<li><div class="s57">
+Patents and trademarks
+</div></li>
+<li><div class="s51">
+Presentations, webcasts, and articles
+</div></li>
+</ul>
+<div class="sKV">
+Microsoft is ensuring that they have made headway in the search arena. Bing is a search engine, and the company falls second in line. As for many hackers, they prefer using Google. The search engine is free and easily accessible, and most of the hackers know how to use this tool to their won advantage.
+</div>
+<div class="sKX">
+When using Google, you can use the following techniques:
+</div>
+<ul>
+<li><div class="s57">
+Typing the keywords. You can find the relevant pieces of information that is present in millions of pages. It is also possible to access phone numbers, files, and addresses.
+</div></li>
+<li><div class="s51">
+Performing an advanced web search. Google has some advanced search options, and you can also find some sites that can also be linked back to the specific company’s website. Such a search will ensure that you have gained access to relevant pieces of information about the vendors, partners, and clients within the target company.
+</div></li>
+<li><div class="s57">
+By using switches so that you may dig deeper into the firm’s website.
+</div></li>
+</ul>
+<ol start="2">
+<li><div class="s57">
+<span class="s1D6">Web Crawling:</span> The web crawling utilities include the website copier, HTTrack, and you can also mirror a company by also downloading some of the files that can be accessed publicly. You can also inspect the website while offline. You can dig into the following areas:
+</div></li>
+</ol>
+<ul>
+<li><div class="s57">
+The layout and configuration of the website.
+</div></li>
+<li><div class="s51">
+The files and directories that may not be easily accessible.
+</div></li>
+<li><div class="s57">
+The script source code and the HTML codes and also be easily accessed.
+</div></li>
+<li><div class="s57">
+Command fields.
+</div></li>
+</ul>
+<div class="sKV">
+Some of the comment fields also contain certain pieces of information that may prove to be useful including email addresses and names of the internal IT personnel, developers, software versions, server names, some comments on how the code works, and IP addressing schemes.
+</div>
+<ol start="3">
+<li><div class="s57">
+<span class="s1D6">Websites:</span> There are some websites can provide different pieces information about various organizations as well as their employees.
+</div></li>
+</ol>
+<ol start="4">
+<li><div class="s57">
+<span class="s1D6">Mapping the Network:</span> When you map a network, you can go ahead and search some of the public resources and databases, and you can see what people may know about your network. Some of these websites include Whois tools that are readily available on the Internet that can also be used to check some of the domains that are available on the Internet. Such a tool comes in handy when starting a social engineering attack or when scanning a network.
+</div></li>
+</ol>
+<ol start="5">
+<li><div class="s57">
+<span class="s1D6">Google Groups:</span> Google Groups can help to reveal some network information about an organization. Some of the information that is accessible through such a platform is the IP addresses, domain names, and usernames. You can also gain access to other forms of private information, including:
+</div></li>
+</ol>
+<ul>
+<li><div class="s57">
+A message board that displays too much information about the current network and computer systems. There are many people who post messages on such platforms but they are not aware that the messages are being shared to the entire world.
+</div></li>
+<li><div class="s57">
+Confidential information about the company and it may be posted by the clients and employees.
+</div></li>
+</ul>
+<div class="sKV">
+After discovering that some confidential information has been shared on some online platforms, you should remove it.
+</div>
+<ol start="6">
+<li><div class="s57">
+<span class="s1D6">Privacy Policies:</span> Always check the privacy policies on your website. All your users need to know about the information that is collected when they visit your site. Also, they should know how their information is protected. The privacy policies are normally written by lawyers and they do not go-ahead to look into the information regarding your security infrastructure.
+</div></li>
+</ol>
+<ol start="7">
+<li><div class="s57">
+<span class="s1D6">Scanning Systems:</span> By engaging in active information gathering, you may be able to produce more details about your network and you can also see things from the perspective of a hacker. For example, you can do the following:
+</div></li>
+</ol>
+<ul>
+<li><div class="s51">
+Utilize the information that you may have gathered using the Whois searches so that you may also test each of the hostnames and IP addresses that are closely related. The information includes the determination of hostnames, IP addresses, running protocols, available shares, open ports, applications, and running services.
+</div></li>
+<li><div class="s51">
+Scan the internal hosts and adhere to the scope of your testing. Some of the outsiders cannot view some of these hosts; nevertheless, you need to test them so that you can see what some of the rogue individuals may be able to access.
+</div></li>
+</ul>
+<div class="sKV">
+In some instances, the hacker may have already accessed the system, and they can manipulate anything from the inside. To be safe, you should examine the entire system to look for any weaknesses. If you do not believe that your scanning systems are reliable, you can use different systems are run them on the virtual machine software.
+</div>
+<ol start="8">
+<li><div class="s57">
+<span class="s1D6">Hosts:</span> During the scanning process, also document some of the hosts that may be accessible within the internal network. Always start by pinging some host names using some of these tools
+</div></li>
+</ol>
+<ul>
+<li><div class="s57">
+A basic ping utility that is located within the operating system.
+</div></li>
+<li><div class="s57">
+Third-party utilities allow people to ping multiple addresses and they include the SuperScan and NetScanTools Pro. You can also use sites such as what ismyipaddress.com to show you how your gateway IP address appears as you browse on the Internet. The website will allow you to see the IP address that can be seen by outsiders.
+</div></li>
+</ul>
+<ol start="9">
+<li><div class="s57">
+<span class="s1D6">Open Ports:</span> You can scan for the open ports using different tools, including:
+</div></li>
+</ol>
+<ul>
+<li><div class="s57">
+Nmap and Superscan can help to scan network ports.
+</div></li>
+<li><div class="s57">
+You can use a network analyzer to listen to the network traffic. Some of the tools that you can use include Wireshark and OmniPeek.
+</div></li>
+</ul>
+<div class="sKV">
+It is easy to carry out a scan internally. You should connect your computer to the network and load different forms of software. You can also carry out scans outside the network, and you should start by assigning a public IP address to your computer before you can plug it into the router. In such an instance, your computer is not connected to the Internet. The connection will work regardless of whether you are connected to the Internet or not.
+</div>
+<div class="sY">
+Also, you need to determine what is running on the open ports. As an ethical hacker, you should gain access to such pieces of information after carrying out the scanning process.
+</div>
+<div class="sY">
+The information that you can access includes:
+</div>
+<ul>
+<li><div class="s57">
+The protocols being used
+</div></li>
+<li><div class="s57">
+The services that are running on the hosts which may include database applications, web servers, and e-mails
+</div></li>
+<li><div class="s57">
+The remote access services that are available which may include remote desktop
+</div></li>
+<li><div class="s57">
+VPN services
+</div></li>
+<li><div class="s57">
+Authentication that required for network shares
+</div></li>
+</ul>
+<div id="part0010.xhtml#toc39_Assessing_Vulnerabilities" class="s4T">
+Assessing Vulnerabilities
+</div>
+<div class="s83">
+After finding all the security loopholes, you should go ahead and look into some of the vulnerabilities that are present in your network. Before the testing process, you should also perform a manual search. You can conduct some research on the message boards used by hackers, vulnerability databases, and websites.
+</div>
+<div class="sY">
+<span class="s1DB">Some classified sites help to list different vulnerabilities. When looking for some of these vulnerabilities, you will realize that some of these vulnerabilities are somewhat generic. At times, you may also be forced to look into some of the vendor’s sites so that you can learn more about the present vulnerabilities. Some of the sites that can help to showcase different vulnerabilities include </span> <a href="http://www.sans.org/top20" class="s1DG">www.sans.org/top20</a> <span class="s1DB">. The site helps to showcase more than 20 vulnerabilities. The list of vulnerabilities is compiled by the SANS organization. </span>
+</div>
+<div class="sY">
+<span class="s1DB">If you do not see any need of looking into some of the present vulnerabilities in the network, you can go ahead and carry out the penetration testing. Some of the options that you have include</span> :
+</div>
+<ol>
+<li><div class="s57">
+<span class="s1D6">Manual Assessment:</span> You will be able to assess some of the potential vulnerabilities by establishing a connection to the ports. Some systems can also be assessed manually including some web applications. If you have a lot of time to spare, you can perform each of these tests manually.
+</div></li>
+<li><div class="s57">
+<span class="s1D6">Automated Assessment:</span> Manual assessments are suitable especially when you want to learn, however, the main issue is that most people do not have time to handle all these manual steps. You can scan for vulnerabilities automatically. There are also many vulnerability assessments tools that you can use and they are available on platforms such as UNIX and Windows. It is also possible to use each of these assessment tools on both wireless and wired networks. When using these tools, you can also come up with a map of the business logic. The software developers can also use some of these tools to test whether their lines of codes have different flaws. The main issue when using these tools is that they only scan individual vulnerabilities.
+</div></li>
+</ol>
+<div class="sW">
+Nowadays, some tools enable event-correlation, and multiple vulnerabilities can be scanned at a go. Some of the tools that you can use to scan vulnerabilities include QualysGuard Suite. The tools can be used to scan ports while also looking for any present vulnerabilities. Also, there is no need to use a computer if you are using the QualysGuard Suite since the tool is available as a SaaS (Software as a Service). You can always log in to the Qualys website and sign up for an account. You will have to pay a certain amount of money because the tool is meant for commercial purposes. You will then key in the specific IP address that you need to test. It is also possible to install the QualysGuard Suite into your network, and it will then scan all the systems internally. The assessments can then be scheduled and the system will then run the tests while also generating some detailed reports. The report will contain some general information about the scan. The details of the present vulnerabilities will also be listed.
+</div>
+<div class="sY">
+When assessing the vulnerabilities that are present with a network using tools such as the QualysGuard Suite, you must have some follow-up expertise since you cannot solely rely on the results of the scans alone. The vulnerability reports should be validated. You should study the reports comprehensively and test the systems critically.
+</div>
+<div id="part0010.xhtml#toc40_Penetrating_the_System" class="sDR">
+Penetrating the System
+</div>
+<div class="sY">
+You can identify some of the security loopholes within your network through the following ways:
+</div>
+<ol>
+<li><div class="s57">
+Make sure you have obtained enough information about the host and the present data.
+</div></li>
+<li><div class="s57">
+Ensure there is a remote command prompt.
+</div></li>
+<li><div class="s57">
+Start or stop some applications.
+</div></li>
+<li><div class="s57">
+Access different systems.
+</div></li>
+<li><div class="s51">
+Disabling different security controls.
+</div></li>
+<li><div class="s57">
+Capturing screenshots.
+</div></li>
+<li><div class="s57">
+Accessing some sensitive files.
+</div></li>
+<li><div class="s57">
+Sending an email as an administrator.
+</div></li>
+<li><div class="s57">
+Performing some SQL injection attacks.
+</div></li>
+<li><div class="sRB">
+<span class="s1D3-1">Launching a DoS attack.</span>
+</div></li>
+<li><div class="sRB">
+<span class="s1D3-1">Uploading a file to prove your victory.</span>
+</div></li>
+</ol>
+<div class="sY">
+You can exploit some of the vulnerabilities using the Metasploit framework. Some of these vulnerabilities allow you to penetrate the system completely. You need to decide on whether you want to penetrate your system fully and to make sure that you have proven that some vulnerabilities.
+</div>
+<p><span id="part0011.xhtml"></span></p>
+<div id="part0011.xhtml#toc55_Chapter_5__Social_Engineering" class="s19">
+Chapter 5: Social Engineering
+</div>
+<div class="sY">
+In this chapter, the main focus will be on the following areas:
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">Introducing Social Engineering</span>
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">The aftermath of social engineering</span>
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">Learning more about different social engineering techniques</span>
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">How to protect your organization against social engineering</span>
+</div>
+<div class="sY">
+Social engineering is a technique meant to take advantage of some of the weak links within an organization. The main focus is normally on the security defenses. Social engineering can be likened to “people hacking”. It involves the malicious exploitation of the trusting nature that human beings possess. Hackers make sure that they can obtain some personal information, and they use it for their gain. The main issue with social engineering is that it takes a lot of time, and a person must be skilled since they are also dealing with total strangers. In this chapter, the main focus will be on the consequences of social engineering. We will also look into some of the ways through which you can protect your organization from social engineering attacks.
+</div>
+<div id="part0011.xhtml#toc42_About_Social_Engineering" class="s4T">
+About Social Engineering
+</div>
+<div class="sY">
+Malicious users normally pose as another person so that they may gain access to some personal information that they cannot access through other means. They can use the information they have accessed to hack into a certain network. The information they have accessed can allow them to steal and delete different files. Malicious users can also go ahead and commit other forms of fraud. Social engineering is also different as compared to different exploits that are carried out physically. Some of the well-known physical exploits include dumpster diving and shoulder surfing.
+</div>
+<div class="sY">
+Different examples of social engineering include:
+</div>
+<ul>
+<li><div class="s57">
+<span class="s1D6">False support personnel:</span> They normally claim that they have to install some new software versions on the target’s computer. They normally lure the user so that they may download the software. After that, the malicious users can then access the network remotely.
+</div></li>
+<li><div class="s57">
+<span class="s1D6">False vendors:</span> They claim that they need to update a specific system and they will ask for the administrator passwords so that they may also gain full access.
+</div></li>
+<li><div class="s57">
+<span class="s1D6">Phishing e-mails:</span> Such e-mails are normally sent by some external hackers. They mainly gather different forms of information including IDs and passwords of the target users. The passwords can then be used to access the bank accounts of the targets among other things. At times, the external attackers can carry out cross site scripting. A discussion about web application security will also come about in the forthcoming chapters.
+</div></li>
+<li><div class="s57">
+<span class="s1D6">False employees:</span> In most cases, they normally contact the security desk and they can issue different lies. They may say that they have left their keys and they cannot access the computer room. They will then be issued a set of keys and they can go ahead and access the computer room. After that, they can access some sets of electronic and physical information about an organization and the network will then be vulnerable.
+</div></li>
+</ul>
+<div class="sY">
+At times, social engineers pose as well-knowledgeable employees. For instance, they can act as managers or even executives. They may even go ahead and pose as naïve employees. Some of the roles that they can assume include acting as maintenance individuals and IT consultants. The social engineers also fit into different roles. They always switch into different modes depending on the people that they are dealing with.
+</div>
+<div class="sY">
+Effective information security involves making sure that the organization is not prone to social engineering attacks. To ensure that your organization is not prone to such attacks, you need to keep track of all your users. Some of the measures that can be deployed include making sure that there are firewalls encryption and intrusion detection systems. Organizations can secure their information through the mentioned techniques. If an external attacker manages to get past all these defense systems the network within your organization will be vulnerable.
+</div>
+<div class="sY">
+Social engineering requires great skill, and it is highly dependent on a person’s personality and the knowledge that they possess about the target organization. If social engineering does not occur naturally for you, you should first need to learn more about this art. You can also hire a third party who can help to gather information about the target organization.
+</div>
+<div class="sW">
+After learning more about social engineering, you can devise certain techniques that will come in handy when ensuring that your organization’s network is secure. Social engineering can also harm the reputation of certain individuals since it involves a collection of people’s personal information. The reputation of different people may be at stake since the external hackers will focus more on obtaining some confidential information about these people. It is good to proceed with caution and that you should have thought about the consequences of your actions before you can act.
+</div>
+<div class="sY">
+There are numerous ways through which you can conduct a social engineering attack. In this book, we will not focus on training people about how to carry out social engineering attacks. The main focus will be on some of the social engineering techniques that have proven to be fruitful as in the case of different external attackers. You can also use some of these techniques so that they may suit your situation depending on your needs.
+</div>
+<div class="sY">
+If you want to carry out some of these techniques within your organization, you may want to act as an outsider, but the main issue may be that most of the people within the company know you. Recognition is a major risk. In some instances, it is good to outsource some of these services from trusted individuals so that they can conduct some of these tests on your behalf. The individuals handling the testing process should also be trusted. If you are seeking the services of an outsider, you may start by seeking references. After that, background checks may come in handy.
+</div>
+<div id="part0011.xhtml#a1BP" class="s4T">
+Reasons Why External Attackers Use Social Engineering
+</div>
+<div class="sY">
+Most of the external hackers use social engineering attacks because they can. They want to make sure that the network hacking process is as easy as possible. When a social engineer is determined to hack into a network, they will get past the access controls, firewalls, and each of the present authentication devices. In most cases, social engineers act slowly since they want to avoid getting caught. Also, they do not want to raise any form of suspicion. The social engineers will always gather small bits of information progressively and they will use all this information to create a bigger picture depending on the type of attack that they are planning. It is possible to carry out a personal attack through an e-mail or a phone call. The methods used during a social engineering attack normally depend on the abilities of the attacker.
+</div>
+<div class="sY">
+Social engineers are also conversant with the fact that some of these organizations do not have formal data classifications, incidence response plans, access control systems, and security awareness programs. They will always take advantage of such weaknesses, and they will exploit them to their advantage. Social engineers also possess some bits of information about the organization both internally and externally. The knowledge they possess helps them to facilitate each of these attacks.
+</div>
+<div class="sY">
+When a social engineer gathers a lot of information about an organization, they can easily pose as employees or any other trusted individuals within the organization. The knowledge that a social engineer possesses will give them an upper hand and will have an in-depth understanding of how the employees within the organization operate.
+</div>
+<div id="part0011.xhtml#toc44_Understanding_the_Consequences_of_Social_Engineering" class="s4T">
+Understanding the Consequences of Social Engineering
+</div>
+<div class="sY">
+Many organizations have competitors. Some of these competitors may turn into enemies at some point; these enemies may also see it fit to cause some trouble through social engineering. Besides competitors, the enemies may also be in the form of former employees or people currently working within the organization. At times, a hacker may carry out a social engineering attack since they want to prove their expertise.
+</div>
+<div class="sY">
+Regardless of the person causing the trouble, the main factor to consider is that each organization is always at risk. The Internet can facilitate the information gathering process while also facilitating different types of attacks. The most vulnerable companies are the widespread ones; nevertheless, the networks in smaller companies may also be attacked. Each of the employees within the organization may also be victims of social engineering attacks regardless of their position within the organization. As for the help desk employees, they are highly vulnerable since they are tasked with issuing different pieces of information.
+</div>
+<div class="sY">
+All social engineering attacks have different consequences. The main objective of the attack is to gather the information that will also be used to attack the network in an organization. A social engineer can effectively gather the following bits of information:
+</div>
+<ul>
+<li><div class="s57">
+User passwords
+</div></li>
+<li><div class="s57">
+Security badges that can be used to access the computer room
+</div></li>
+<li><div class="s57">
+Intellectual property
+</div></li>
+<li><div class="s51">
+Confidential financial reports
+</div></li>
+<li><div class="s57">
+A list of consumers and sales prospects
+</div></li>
+</ul>
+<div class="sY">
+If any of the listed pieces of information is leaked, the company may undergo some financial losses, employees may be demoralized, there will be some regulatory and legal compliance issues, and clients may also lose their trust in the specific organization. Social engineering attacks are not easily documented and that is why they cannot be easily prevented. The main issue about social engineering attacks is that a lot of methods can be used. The firewalls also create a sense of security that is false.
+</div>
+<div class="sY">
+As for social engineering, you can never predict the specific method that will be used by the attackers. The best step to take is making sure that you have remained vigilant while also trying to understand the methods used by external hackers. By doing so, you can raise some awareness within the organization.
+</div>
+<div id="part0011.xhtml#a1BS" class="s4T">
+Carrying Out Social Engineering Attacks
+</div>
+<div class="sY">
+The process of carrying out a social engineering attack is quite simple. Social engineers need to look into some of the organizational processes and also the information systems before they can go ahead and perform an attack. When an attacker has such pieces of information, they can go ahead and formulate their goals since they will be having a sense of direction.
+</div>
+<div class="sY">
+The steps used by social engineers during the attack process are as follows:
+</div>
+<ol>
+<li><div class="s57">
+Perform some research
+</div></li>
+<li><div class="s57">
+Build trust
+</div></li>
+<li><div class="s57">
+Exploit some relationships to gain different pieces of information
+</div></li>
+<li><div class="s51">
+Use the information that has been gathered to engage in some malicious attacks
+</div></li>
+</ol>
+<div class="sY">
+Some of these steps also have many sub-steps and different techniques should be used in the process. Everything depends on the specific attack that is being carried out.
+</div>
+<div class="sY">
+Before an external attacker performs a social engineering attack, they have to formulate different goals. The goals ensure that they are working towards something specific. During the goal formation process, the attacker should ask themselves what they want to achieve as well as what they are trying to hack. At times, the main focus may be on the security badges and server passwords. In some instances, a hacker may be trying to prove their prowess.
+</div>
+<div id="part0011.xhtml#toc46_Phishing_for_Information" class="s4T">
+Phishing for Information
+</div>
+<div class="sY">
+After a social engineer has come up with some goals, they can start the attack at ease. They will start gathering some information about the victims. To avoid raising any red flags, the social engineers always act slowly. Since information gathering is an important step in social engineering, reinforcing some security measures that may hinder such processes is possible. Regardless of the research method being used by a hacker, the important pieces of information needed during the hacking process include internal phone numbers, a list of employees, and a company calendar.
+</div>
+<div id="part0011.xhtml#a1BU" class="s4T">
+Using the Internet
+</div>
+<div class="sY">
+The Internet is used as a basic research medium. A lot of information can be accessed using the search engines. What matters most is you need to gather correct keywords. By gathering different pieces of information, you can carry out a social engineering attack. At times, people pay a certain amount of money to some professionals who may carry out a comprehensive background check. The search can allow you to gain access to private and public information about specific people.
+</div>
+<div id="part0011.xhtml#a1BV" class="s4T">
+Dumpster Diving
+</div>
+<div class="sY">
+Dumpster diving is risky to some extent and is also messy; nevertheless, it is very effective when looking for specific pieces of information. When using this method, you will have to ravage through trash cans while looking for information about a specific firm. Dumpster diving can also allow you to gain access to some confidential pieces of information since the employees may try to assume that, when some information is sent to the trash can, it is not accessible by other individuals. Everything that you throw away may harbor some important pieces of information. A social engineer will always look for the following types of documents:
+</div>
+<ul>
+<li><div class="s57">
+Organizational charts
+</div></li>
+<li><div class="s57">
+Internal phone lists
+</div></li>
+<li><div class="s57">
+Employee handbooks in which the main focus will be on the security policies
+</div></li>
+<li><div class="s57">
+Password lists
+</div></li>
+<li><div class="s57">
+Network diagrams
+</div></li>
+<li><div class="s57">
+Spreadsheets and reports
+</div></li>
+<li><div class="s57">
+Meeting notes
+</div></li>
+<li><div class="s57">
+E-mail printouts that contain some sensitive information
+</div></li>
+</ul>
+<div class="sY">
+Paper shredding comes in handy, however, it is only suitable if the papers are shredded into tiny bits that cannot be reassembled. Some shredders shred papers into long strips. The social engineers will always assemble these papers and they will then gain access to some confidential pieces of information. They will just have to spare some time and use some clear tape and the documents will be pieces back together.
+</div>
+<div class="sY">
+A hacker can gather some confidential pieces of information from conversations that also took place in areas such as coffee shops or restaurants. Sensitive pieces of information can also be gathered from the people who also speak loudly when they are conversing over the phone. In some instances, the external attackers also look for the DVDs and CD-ROMs that have been placed in the trash can.
+</div>
+<div id="part0011.xhtml#a1BW" class="s4T">
+Phone Systems
+</div>
+<div class="sY">
+An attacker can gain access to different pieces of information using the dial-by-name feature that is inbuilt into the voicemail systems. Such a feature can be accessed by pressing 0 after you have contacted the company using a person’s mailbox. Such a trick comes in handy especially during the afterhours. During such hours, there will be no one present to answer your phone calls. Attackers will also use certain techniques to make sure that their identity has been concealed. Some of the techniques used by hackers include:
+</div>
+<ul>
+<li><div class="s57">
+<span class="s1D6">Residential Phones:</span> Such phones can help to conceal the user’s caller ID. You just have to dial *67 before dialing the specific number that you want to call.
+</div></li>
+<li><div class="s57">
+<span class="s1D6">Business Phones:</span> In any business, it may be difficult to spoof when you are using a phone switch. The attacker needs a user guide as well as the administrator passwords for the phone switch software being used within the organization. In some switches, a source number can be keyed in. The number may also be falsified.
+</div></li>
+<li><div class="s57">
+<span class="s1D6">VoIP Servers:</span> Many servers can be found as open source and they can also be used to configure any number. The social engineers can find some important pieces of information when using such a technique. The attacker can listen to different pieces of information through podcasts and voicemail messages. They can also study the voices of the victims and they will also be able to impersonate them perfectly when the time comes to visit the organization physically.
+</div></li>
+</ul>
+<div id="part0011.xhtml#a1BX" class="s4T">
+Building Trust
+</div>
+<div class="sY">
+Trust cannot be easily gained and it can also be easily lost. Social engineering relies heavily on trust.
+</div>
+<div class="sY">
+People trust each other unless the situation is dire. In most cases, people are kind-hearted, and if they have built some trust amongst each other, some requests may seem reasonable. People like to work together in teams while at the workplace. The main issue is that some of these people do not understand the repercussions that may arise when they issue many pieces of information to a “trusted” source.
+</div>
+<div class="sY">
+Social engineers take advantage of the trust, and they will make sure that they have achieved their goals either way. Some of the social engineers can gain the trust of some of the employees within the organization easily. The social engineers use the following techniques to earn peoples trust:
+</div>
+<ul>
+<li><div class="s57">
+<span class="s1D6">Likability:</span> It is easy to relate with a nice person and that is why social engineers are friendly. They do not go overboard in any instance so they can easily gain access to the information that they need. Social engineers will also take time to build a relationship with people whom they share common interests. They can use the information that have gained to determine the likes of the victims.
+</div></li>
+<li><div class="s57">
+<span class="s1D6">Believability:</span> Social engineers tend to know whether they are likeable or not. Social engineers will always use impersonation to their advantage. They can pose as new employees and they will always approach people that do not know them physically within the organization. They are also very influential and they can do nice things so that they may lure their targets accordingly. At times, they may also pose as team players as they try to build a relationship with some of the employees within the organization.
+</div></li>
+</ul>
+<div id="part0011.xhtml#a1BY" class="s4T">
+Exploiting a Relationship
+</div>
+<div class="sY">
+After gaining the trust of some of the employees, the social engineers can easily coerce them to give up different pieces of information that may come in handy during the network hacking process.
+</div>
+<div id="part0011.xhtml#toc52_Deceit_Using_Words_and_Actions" class="s4T">
+Deceit Using Words and Actions
+</div>
+<div class="sY">
+Social engineers will gain access to some inside information from each of their victims by using different techniques. They will initiate a conversation and make sure that the victim cannot suspect anything. If a social engineer makes a sloppy move when carrying out a social engineering attack, they can easily get caught. Some of the red flags include:
+</div>
+<ul>
+<li><div class="s57">
+Mentioning some names of the prominent employees within the firm
+</div></li>
+<li><div class="s57">
+Acting eager
+</div></li>
+<li><div class="s57">
+Bragging about the authority they have within an organization
+</div></li>
+<li><div class="s57">
+Issuing certain threats
+</div></li>
+<li><div class="s57">
+Acting nervous (the body language tells a lot and it can easily give them away)
+</div></li>
+<li><div class="s57">
+Experiencing different psychological changes
+</div></li>
+<li><div class="s57">
+Placing some emphasis on certain details
+</div></li>
+<li><div class="s57">
+May appear like they are being rushed
+</div></li>
+<li><div class="s57">
+Refusal to issue some information
+</div></li>
+<li><div class="s57">
+Volunteering to issue different pieces of information while also answering some questions that they have not been asked
+</div></li>
+<li><div class="s57">
+Having access to some pieces of information that cannot be accessed by outsiders
+</div></li>
+<li><div class="s57">
+Asking some queer questions
+</div></li>
+<li><div class="s57">
+Using some slang used within the organization
+</div></li>
+<li><div class="s57">
+Misspelling some words
+</div></li>
+</ul>
+<div class="sY">
+A professional social engineer will see to it that they are not sloppy and they will conceal their motives. They have accorded the victim a favor first and they will, in turn, ask for some assistance from the person that they had helped. Such a trick has proven to be very effective. At times, such people also carry out reverse social engineering. They will offer their assistance when it comes to handling a specific problem. After fixing the problem, they can be termed as heroes.
+</div>
+<div class="sY">
+Social engineers mainly target some of the unsuspecting employees and they will ask for a favor. Many people fall into this trap. To the social engineers, impersonation is easy. They have a fake badge and ID so that they can fit easily within the target organization.
+</div>
+<div id="part0011.xhtml#toc53_Deceit_Using_Technology" class="s4T">
+Deceit Using Technology
+</div>
+<div class="sY">
+Technology makes sure that some things are easier especially for social engineers. Some of the malicious requests are issued through a computer or any other electronic device. It is also easy to spoof details such as e-mail addresses, computer names, network addresses, and fax numbers.
+</div>
+<div class="sY">
+Hackers can easily deceive their targets using technology. They can use e-mails while asking victims for some critical information. The social engineers usually attach links to these e-mails and the victim will be redirected to a website that looks legitimate and presentable. Some of the pieces of information that can be accessed using the above technique include passwords, user IDs, and social security numbers. The external attackers may also use such a technique on platforms such as Myspace and Facebook.
+</div>
+<div class="sY">
+Some of the phishing and spam messages make use of such a technique. The users are forced to let their guard down using different techniques, and they may end up opening some of the attachments. The e-mails are also presented professionally. A victim is duped into disclosing different bits of information. A hacker will always deploy some of these social engineering techniques after they have accessed the network so they can easily send some messages and create some pop-up windows. Some of these tricks can also be used when engaging in cellphone messaging. In some instances, the external attackers will pose as Microsoft employees, posing as a vendor. After the victim has installed the “patch,” their computers will be infected by different programs such as Trojans and worms. The attacker can then gain access to different pieces of information by creating a backdoor within the network. The backdoor will allow the attacker to gain access to different pieces of information freely using the victim’s computer and they can also launch different attacks. The worms and Trojans can come in handy when performing a social engineering attack.
+</div>
+<div class="sY">
+There are different types of worms. After the victim opens some of the spam emails, it will be too late. The computer will be already infected and they will not achieve what they initially wanted. Some of the social engineering attacks that are conducted using technology are performed anonymously. The attacker will make use of an Internet proxy server, remailers, anonymizers, and some SMTP servers to make sure that there is an open relay. When people become victims of instances whereby they are supposed to issue some personal information that is also confidential, they should know that they cannot track the source of the social engineering attack.
+</div>
+<div id="part0011.xhtml#a1C1" class="s4T">
+How to Counter Social Engineering Attacks
+</div>
+<div class="sY">
+There are different ways through which you can safeguard your network from a social engineering attack. Although the security systems may also be strong, some of the naïve network administrators may be manipulated by the social engineer.
+</div>
+<div class="sY">
+Some security policies can ensure that social engineers cannot access the network, and they include:
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">       </span> <span class="s1D3-0">Data classification</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">       </span> <span class="s1D3-0">Setting up user IDs for all the employees and contractors</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">      </span> <span class="s1D3-0">Getting rid of the IDs of the employees who are no longer working within the organization</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">       </span> <span class="s1D3-0">Establishing acceptable computer usage</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">       </span> <span class="s1D3-0">Resetting and also setting password</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">       </span> <span class="s1D3-0">Handling confidential information appropriately</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">       </span> <span class="s1D3-0">Responding to some security incidents accordingly</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">       </span> <span class="s1D3-0">Escorting guests</span>
+</div>
+<div class="sY">
+Some of these policies can be enforced for all the employees within the organization. The policies should also be kept up to date for all the individuals within the organization. The end-users should also be notified about some of the policy changes.
+</div>
+<div class="sY">
+The best line of defense when trying to prevent a social engineering attack is to have well-trained employees who know how they should respond to different social engineering attacks. By ensuring that you have raised awareness, it is possible that the social engineering attacks do not take place. During the training process, the focus should be more on some of the security policies. You can also outsource the security training services. The employees should also take security training seriously. Some of the tips that can help you to get rid of social engineering attacks on a long-term basis include:
+</div>
+<ul>
+<li><div class="s57">
+Security awareness and training should be termed as a business investment.
+</div></li>
+<li><div class="s57">
+The users should also be trained to be always aware of some of the security policies.
+</div></li>
+<li><div class="s57">
+Ensure that the employees are responsible for some of the privacy and security tasks within the company.
+</div></li>
+<li><div class="s51">
+Ensure that the training content has been tailor made depending on the needs of your organization.
+</div></li>
+<li><div class="s51">
+Come up with a social engineering awareness program that also aligns with your business functions.
+</div></li>
+<li><div class="s57">
+Make sure that your messages are non-technical.
+</div></li>
+<li><div class="s51">
+Come up with incentive programs for reporting and preventing some incidents.
+</div></li>
+<li><div class="s57">
+Always lead by example.
+</div></li>
+</ul>
+<div class="sY">
+There are also some tips that you can share with the employees within the company:
+</div>
+<ul>
+<li><div class="s57">
+You cannot share some confidential bits of information with other people unless you can verify that they are indeed who they claim to be. At times, a request can be made through a phone call in such an instance, you should verify the identity of the caller first.
+</div></li>
+<li><div class="s57">
+Do not click any e-mail links that will redirect you to a website that needs to be updated. Some of these emails are usually from some sources that cannot be trusted.
+</div></li>
+<li><div class="s57">
+Always be cautious when sharing some confidential information on different sites including LinkedIn and Facebook. Always be on the lookout for people who claim to be your “friends”. Some of them may have some malicious motives.
+</div></li>
+<li><div class="s57">
+Never open an e-mail attachment from a total stranger.
+</div></li>
+<li><div class="s57">
+Escort each of the guests within the building.
+</div></li>
+<li><div class="s57">
+Do not give out any of your passwords.
+</div></li>
+</ul>
+<div class="sY">
+Other suitable suggestions include:
+</div>
+<ul>
+<li><div class="s51">
+Strangers should not easily access your network regardless of whether it is wired or wireless. An attacker can place some malware and a network analyzer into the network after accessing it for a few seconds.
+</div></li>
+<li><div class="s51">
+All information should be classified. The employees should also be trained on how to handle different pieces of information.
+</div></li>
+<li><div class="s51">
+Develop some policies that are supposed to enforce the media and documents on the computer. The policies will make sure that the data can be handled carefully and it will also stay where it should be.
+</div></li>
+<li><div class="s51">
+The preferred paper shredded should carry out cross-shredding. There are some companies that carry out paper shredding and they offer quality services.
+</div></li>
+</ul>
+<div class="sY">
+Some techniques that come in handy when reinforcing the content on formal training include:
+</div>
+<ul>
+<li><div class="s57">
+The training launches and the employee orientation
+</div></li>
+<li><div class="s57">
+Brochures that contain some information about how to survive social engineering attacks
+</div></li>
+<li><div class="sY2">
+Trinkets that can also be used as mouse pads screen savers, and sticky notes
+</div></li>
+</ul>
+<p><span id="part0012.xhtml"></span></p>
+<div id="part0012.xhtml#toc61_Chapter_6__Physical_Security" class="s19">
+Chapter 6: Physical Security
+</div>
+<div class="sY">
+In this chapter, the main focus will be on:
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">Learning about the importance of physical security</span>
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">Looking for different vulnerabilities</span>
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">Implementing some countermeasures in case of an attack</span>
+</div>
+<div class="sY">
+Physical security entails protecting physical forms of property. The focus should be on the nontechnical and technical components.
+</div>
+<div class="sY">
+Physical security is overlooked in some instances and it is an important aspect of information security programs. If you can secure your site physically, you can also easily secure different pieces of information. In this chapter, we will discuss some of the present physical security weaknesses and their relation to information and computer network security. Some of the suitable countermeasures will also be outlined and they will help to minimize the physical vulnerabilities within your business. When carrying out a physical security test, you should break into the system. It is good to use the perspective of an outsider. During the testing phase, you can also discover some security loopholes that need to be sealed.
+</div>
+<div id="part0012.xhtml#toc56_Physical_Vulnerabilities" class="sYJ">
+Physical Vulnerabilities
+</div>
+<div class="sY">
+Regardless of the technology used on your computer network, it may be hacked using different techniques and that is why we are looking into some of the physical security vulnerabilities and how they can be fixed so that external attackers cannot exploit some of these loopholes. Some of these physical vulnerabilities may not be a major issue in some of the small companies. The factors influencing different physical vulnerabilities include:
+</div>
+<ul>
+<li><div class="s57">
+The number of buildings
+</div></li>
+<li><div class="s57">
+The size of the building
+</div></li>
+<li><div class="s57">
+The population of employees
+</div></li>
+<li><div class="s57">
+The places where the exit points are located
+</div></li>
+<li><div class="s57">
+The placement of confidential pieces of information
+</div></li>
+</ul>
+<div class="sW">
+Many physical security vulnerabilities exist. The external attackers will always be on the lookout for some of these physical vulnerabilities. To stay safe, you should look for these physical vulnerabilities first. After that, you can look for a suitable solution to these security issues. Some of the physical vulnerabilities that are present within organizations include:
+</div>
+<ul>
+<li><div class="s57">
+The lack of a receptionist
+</div></li>
+<li><div class="s57">
+Failure to escort visitors within the building
+</div></li>
+<li><div class="s57">
+Some of the employees may trust some visitors since they may be wearing vendor uniforms and they may also claim that they are there to work on some issue in the computer room.
+</div></li>
+<li><div class="s57">
+The doors may lack access controls.
+</div></li>
+<li><div class="s57">
+Security footage may be accessible through the network.
+</div></li>
+<li><div class="s57">
+The computer room may be easily accessed by the public.
+</div></li>
+<li><div class="s57">
+Doors are propped open.
+</div></li>
+<li><div class="s57">
+The backup media may be stored recklessly.
+</div></li>
+<li><div class="s57">
+There may be unsecured laptops and other computer hardware.
+</div></li>
+<li><div class="s57">
+The DVDs and CDs that contain some sensitive information may be disposed recklessly into the trash can.
+</div></li>
+</ul>
+<div class="sY">
+When some of the physical security vulnerabilities are exploited, some bad things may happen eventually. The main issue is that some unauthorized personnel may have access to the building. After the intruders enter the building, they can access the computer room, and the organization’s network will be compromised in the process. The unauthorized users may also steal some pieces of information and they will use the information to their advantage.
+</div>
+<div class="sY">
+The external attackers will also take advantage of all the physical vulnerabilities, including the weaknesses that may be present in the office layout, the infrastructure of the building and the computer room design. In some instances, you should also consider some factors such as the proximity of the building to amenities such as a police and fire station. The crime statistics in the area also matter since they will ensure that you can understand what you are up against.
+</div>
+<div class="sW">
+When assessing the physical security within a company it is also good to consider some of the vulnerabilities that have been discussed in this context. The assessment process will not require any expensive tools or equipment. Additionally, the technical expertise you possess will also not act as a hindrance during the physical security assessment process. As for large facilities, the assessment period may take a lot of time. You need to be practical during the assessment process.
+</div>
+<div id="part0012.xhtml#a1C4" class="s4T">
+Building Infrastructure
+</div>
+<div class="sY">
+Some of the critical components of a building include windows, doors, and walls. It is good to consider the infrastructure of the computer room since some of the sensitive pieces of data are stored there.
+</div>
+<div class="sY">
+<span class="s1D6">Attack Points:</span> The external attackers will take advantage of some of the building infrastructure vulnerabilities. Some of the attack points that should be overlooked include:
+</div>
+<ul>
+<li><div class="s57">
+Are the doors opened? If yes, why are they opened?
+</div></li>
+<li><div class="s57">
+Can any device fit through some of the door gaps present in the doors at the computer room? Also, how can the sensors be triggered in the computer room?
+</div></li>
+<li><div class="s51">
+Is it easy to open some of the doors?
+</div></li>
+<li><div class="s57">
+Which materials were used during the construction of the computer room? Are the walls of the computer room strong enough? Is the material used during the construction process resistant to calamities such as earthquakes?
+</div></li>
+<li><div class="s57">
+Are the windows or doors made of glass? Where are the hinges placed? Which type of glass has been used during the construction process?
+</div></li>
+<li><div class="s57">
+Is there a state of the art alarm system attached to the windows and doors within the building?
+</div></li>
+<li><div class="s57">
+Are there any drop ceilings? Are there any tiles that can be pushed up?
+</div></li>
+</ul>
+<div class="sY">
+Assessing the design process makes sure that you can learn more about the present physical vulnerabilities.
+</div>
+<div class="sY">
+<span class="s1D6">Countermeasures:</span> Some of the countermeasures may require carrying out some form of maintenance. You can hire some experts who will assist you during the building design process and the construction phase. Some of the best techniques to ensure that the security within your building is top-notch include:
+</div>
+<ul>
+<li><div class="s57">
+Use strong doors and locks.
+</div></li>
+<li><div class="s51">
+Ensure that the alarm system is being monitored continuously. Some network-based CCTV cameras should also be placed in all the access points.
+</div></li>
+<li><div class="s57">
+The computer room should have walls that do not have windows.
+</div></li>
+<li><div class="s51">
+The exit points should have proper lighting.
+</div></li>
+<li><div class="s57">
+Mantraps should also be placed in some points within the building.
+</div></li>
+<li><div class="s51">
+The fence may be made of barbed wire.
+</div></li>
+</ul>
+<div id="part0012.xhtml#a1C5" class="s4T">
+Utilities
+</div>
+<div class="sY">
+It is good to consider some of the utilities that will be used in the computer room. Some of these utilities include power, fire suppression, and water. Such factors should always be considered during the physical security assessment process. Some of these utilities come in handy when fighting a fire incident and also making sure that all the access controls will be up and running despite a power loss incident.
+</div>
+<div class="sY">
+<span class="s1D6">Attack Points:</span> The intruders can exploit some of the vulnerabilities that are utility-related. Some of the common attack points that are normally overlooked include:
+</div>
+<ul>
+<li><div class="s51">
+The power-protection equipment including the generators and surge protectors. At times, they may be quite accessible and the external attackers may switch them on and off easily.
+</div></li>
+<li><div class="s57">
+When there is a power failure, which are the physical security mechanisms that have been put in place? Always assess whether the physical security mechanisms are working well since people may easily access the computer room when there is a power failure.
+</div></li>
+<li><div class="s57">
+Which fire suppression and detection devices are being used and where are they located? Some of these devices include fire extinguishers, alarm sensors, and sprinkler systems. Always determine whether an external attacker can manipulate each of these devices.
+</div></li>
+<li><div class="s57">
+Where are the gas and water shutoff valves situated? Can they be accessed easily?
+</div></li>
+<li><div class="s57">
+Are the local telecom wires running outside the building situated above or below the ground? Depending on their location, can someone tap into the telecom wires? Can any digging activity damage the telecom wires? If the telecom wires are situated on telephone poles, are they vulnerable to traffic accidents that may displace them?
+</div></li>
+</ul>
+<div class="sY">
+<span class="s1D6">Countermeasures:</span> It is good to involve some experts during the physical vulnerabilities assessment period. They will also help during the design process. The major placements include:
+</div>
+<ul>
+<li><div class="s57">
+The location of the major utility controls. They should be located in closed doors that are also lockable.
+</div></li>
+<li><div class="s51">
+Can the controls be accessed easily by anyone in the building? The covers for the on and off switches act as effective defense mechanisms.
+</div></li>
+</ul>
+<div id="part0012.xhtml#a1C6" class="sDR">
+Office Layout and Usage
+</div>
+<div class="sY">
+The design of the office and the usage can come in handy when ensuring that there is physical security.
+</div>
+<div class="sY">
+<span class="s1D6">Attack Points:</span> The external attackers will take advantage of some of the office vulnerabilities. Some of the attack points that should be considered include:
+</div>
+<ul>
+<li><div class="s57">
+Look into whether the security guard or the receptionist monitors the traffic within the building.
+</div></li>
+<li><div class="s51">
+Do the employees possess any confidential information that is placed on their desks? Are their mails and different packages left around lying around such that they can be easily accessed by other external parties?
+</div></li>
+<li><div class="s57">
+The location of the trash cans also matters. The dumpsters should not be easily accessed by external parties. Also, are there are shredders within the office?
+</div></li>
+</ul>
+<div class="sY">
+The external attackers will always carry out dumpster diving when looking for some information that may have been disposed recklessly. They will always look for memos and phone lists. Dumpster diving is dangerous since it may expose your company badly.
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">       </span> <span class="s1D3-0">Are the copy and mail rooms secure?</span>
+</div>
+<div class="sY">
+If an external attacker can easily access these rooms, they can steal some important pieces of information and they will use it against you.
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">       </span> <span class="s1D3-0">Are the CCTV cameras being monitored on a full-time basis?</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">      </span> <span class="s1D3-0">Which access controls are present on the windows and doors? Which security measures have been deployed? If there are regular keys, who can access them?</span>
+</div>
+<div class="sY">
+Different users normally share some pieces of information including the programmable keypad combinations. There needs to be accountability. Always make sure that you have kept track of the number of people that have used certain keys and combinations.
+</div>
+<div class="sY">
+<span class="s1D6">Countermeasures:</span> There are some measures that can be implemented to reduce the exposure of your organization and they include:
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">      </span> <span class="s1D3-0">The security guard and receptionist should keep track of the people entering and exiting the building. Such a countermeasure is critical. Make sure that each visitor has signed the register. Also, some of the people who cannot be trusted should also be escorted.</span>
+</div>
+<div class="sY">
+Enforce some policies whereby the employees should always question the strangers while also reporting any strange behavior that has been taking place in the building. Some signs showcasing <span class="s1D8">Employees Only</span> should also be put in place.
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">       </span> <span class="s1D3-0">There should be a single entry and exit point within the building.</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">       </span> <span class="s1D3-0">CCTV cameras</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">       </span> <span class="s1D3-0">The dumpsters should be placed in secure areas.</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">      </span> <span class="s1D3-0">It is advisable to use the cross-cut shredders when getting rid of hard copy documents that contain some sensitive information.</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">       </span> <span class="s1D3-0">The number of passcode combinations should also be limited.</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">       </span> <span class="s1D3-0">The biometrics identification system should also be effective.</span>
+</div>
+<div id="part0012.xhtml#toc60_Network_Components_and_Computers" class="sBE">
+Network Components and Computers
+</div>
+<div class="sY">
+After an external attacker has gained physical access to the target’s building, they will start by looking for the computer room. They will also look for any available computer devices.
+</div>
+<div class="sW">
+<span class="s1D6">Attack Points:</span> After gaining access to the computer room, the external attacker will go ahead to penetrate the network when using different techniques. A malicious attacker can carry out the following acts:
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">      </span> <span class="s1D3-0">Obtaining access to the network and sending spam emails while acting as a logged-in user working in the organization.</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">      </span> <span class="s1D3-0">Cracking and obtaining passwords directly from a computer after the booting process. Some of the tools that can be used to crack passwords include Ophcrack Live CD.</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">      </span> <span class="s1D3-0">Stealing files from the computers and the external attacker will make use of a removable storage device.</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">      </span> <span class="s1D3-0">Entering a computer room that is unlocked and also tampering with the firewalls and the servers as well as network devices such as routers.</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">       </span> <span class="s1D3-0">Walking out with the contact lists network diagrams, and some incident-response plans.</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">      </span> <span class="s1D3-0">Obtaining phone numbers and such information can be used to carry out an attack in the future.</span>
+</div>
+<div class="sY">
+The external attacker can gain access to all the encrypted pieces of information on the network. They can analyze the information in the future using the following techniques:
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">       </span> <span class="s1D3-0">Connecting a network analyzer to a device such as a router</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">       </span> <span class="s1D3-0">Ensuring a network analyzer is connected to an existing computer in the organization.</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">       </span> <span class="s1D3-0">The remote administration software also come in handy.</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">      </span> <span class="s1D3-0">Some attackers also have the ability to bind a public IP address to the computers only if they are outside the firewall. Some experienced hackers can also configure the firewall rules to suit their needs.</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">      </span> <span class="s1D3-0">Can a computer be accessed on a regular basis? Is it possible to access the computer during the business after hours?</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">       </span> <span class="s1D3-0">Are the routers firewalls and switches mounted in lockable racks?</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">      </span> <span class="s1D3-0">Are the laptops stored in desks that have secured locks? Are the hard drives encrypted?</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">      </span> <span class="s1D3-0">Are the passwords stored in easily accessible areas such as sticky notes on the desktop?</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">      </span> <span class="s1D3-0">Is the backup media stored in safes? Are the safes well rated such that they cannot melt when there is a fire incident? Who can access the safe?</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">       </span> <span class="s1D3-0">Is the backup media on the computer susceptible to theft?</span>
+</div>
+<div class="sY">
+Are other technological gadgets such as smartphones unsecured? The devices have some value, and the external attackers will make sure they will gain access to each of these devices. Some of these devices are not protected by some of the security protocols within the organization. Each of these devices such that even an external attacker will have a hard time trying to gain access to the information present in these devices. Some of the major factors to consider include:
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">      </span> <span class="s1D3-0">Can the wireless access point signal be easily accessed? If it is not secure, make sure that you can configured the necessary security protocols.</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">      </span> <span class="s1D3-0">Can the routers, firewalls, hubs, and switches be easily accessed? Such considerations are important so that the network cannot be easily accessed by external attackers.</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">      </span> <span class="s1D3-0">Are there cable traps to ensure that the network cables cannot be unplugged by the hackers?</span>
+</div>
+<div class="sW">
+<span class="s1D6">Countermeasures:</span> Some of the mentioned countermeasures are easy to implement; nevertheless, they may be difficult to enforce since a person is supposed to make a follow up frequently. Here are some insights:
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">       </span> <span class="s1D3-0">They require you to lock your screen after leaving your computer.</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">       </span> <span class="s1D3-0">Always use strong passwords.</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">      </span> <span class="s1D3-0">The laptop users should store their laptops well so that they cannot be accessed by third parties.</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">       </span> <span class="s1D3-0">The entire laptop will require you to use encryption technologies.</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">       </span> <span class="s1D3-0">The computer room should be closed and monitored.</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">      </span> <span class="s1D3-0">An inventory of the software and hardware being used within the organization should be kept.</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">       </span> <span class="s1D3-0">The computer media should be secured using some appropriate techniques.</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">       </span> <span class="s1D3-0">Make sure that all the security loopholes within the network have been sealed.</span>
+</div>
+<div class="sEH">
+<span class="s1D4">✓</span> <span class="s1D5">       </span> <span class="s1D3-0">Make use of bulk erasers.</span>
+</div>
+<p><span id="part0013.xhtml"></span></p>
+<div id="part0013.xhtml#a1C8" class="s19">
+Chapter 7: Passwords
+</div>
+<div class="sY">
+In this chapter, the discussion will revolve around the following areas:
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">Looking into the password vulnerabilities</span>
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">Examining password hacking techniques and tools</span>
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">Hacking files that have been protected by passwords</span>
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">How to protect the system from password hacking</span>
+</div>
+<div class="sY">
+A hacker can easily gain access to a network through password hacking. They will focus more on the user administrator passwords so that they can easily access the entire network. Some people use strong passwords; a hacker who is determined to hack the passwords regardless of the time it will take to crack the password. In a security chain, a password is the weakest link. In most cases, the passwords rely on secrecy. Once the password is compromised, many people can easily access the network. It is good to make sure that you are accountable for all your passwords.
+</div>
+<div class="sY">
+External attackers can hack your passwords using different techniques. They can access your passwords by asking for them. They can also carry out shoulder surfing. In some instances, the attackers can also use password cracking software. To obtain passwords, the external attackers will make use of keyloggers and network analyzers. In this chapter, you will realize how external attackers can easily gain access to your passwords by penetrating your network. Some of the password vulnerabilities will also be mentioned and the suitable countermeasures will also be outlined. The countermeasures will ensure that external attackers cannot easily exploit your system. If you carry out some of the vulnerability tests and also implement the mentioned countermeasures, you will be able to secure the passwords that can be used to access your network.
+</div>
+<div id="part0013.xhtml#toc62_Password_Vulnerabilities" class="s4T">
+Password Vulnerabilities
+</div>
+<div class="sY">
+After balancing the cost of the security and the value of the information within your company, the passwords being used within the company will be adequate. Passwords will issue a false sense of security. The attackers will always try to crack the passwords when they are trying to penetrate the network.
+</div>
+<div class="sY">
+The main issue about relying on passwords to secure valuable pieces of information is that many people will have access to the password. The main issue is that you cannot know a person fully. Also, although a person may know the passwords, they may not be authorized users. There are also two classifications of password vulnerabilities and they include:
+</div>
+<ol>
+<li><div class="s57">
+<span class="s1D6">User Vulnerabilities:</span> This classification entails the lack of policies that are meant to protect the passwords. Additionally, the lack of security awareness is also not advisable.
+</div></li>
+<li><div class="s57">
+<span class="s1D6">Technical Vulnerabilities:</span> This involves the use of encryption methods that are weak. Also, the passwords may also be stored unsecurely.
+</div></li>
+</ol>
+<div class="sY">
+Securing the physical environment is also among the best ways to protect the network passwords. The technique was working well. The main issue is that nowadays computers also have network connectivity and the physical security is now gone.
+</div>
+<div id="part0013.xhtml#a1CA" class="s4T">
+Organizational Password Vulnerabilities
+</div>
+<div class="sY">
+Convenience matters a lot especially if a person has to remember numerous passwords at a go. The passwords are hard to maneuver and external attackers experience many challenges during the password cracking process. The main advantage that attackers have is that people normally come up with passwords that they can remember easily. They always come up with different combinations until they come across the correct password. After that, they can
+</div>
+<div class="sW">
+access the network easily.
+</div>
+<div class="sY">
+The users should be educated and also reminded about the importance of using strong passwords. The main problem is that some users come up with passwords that are easy to guess. Users rarely change their passwords. The passwords are reused to secure numerous points within the network. After an attacker gains access to a password hat has been reused, they can access many points within the system. They may be written down in places that are not secure. Difficult passwords cannot be easily cracked. The main issue is that when a person comes up with a complex password, there is a high likelihood that they will write it down. When the attackers gain access to these passwords, they will go ahead and use such information against you.
+</div>
+<div id="part0013.xhtml#toc64_Technical_Password_Vulnerabilities" class="s4T">
+Technical Password Vulnerabilities
+</div>
+<div class="sY">
+After exploiting some of the organizational password vulnerabilities, you may also find some technical vulnerabilities and they include:
+</div>
+<ul>
+<li><div class="s51">
+Weak password encryption schemes. The hackers can use some strong mechanisms to crack weak passwords. In this chapter, we will also discuss more about some of the techniques used by external attackers to crack passwords. There are many vendors who believe that passwords are usually safe as long as they have not published the source code that they have used during the formulation of the encryption algorithms. Some of the patient hackers who are also persistent will take their time to crack each of the security protocols as fast as they can. After cracking the code, they will take advantage of the weak encryption.
+</div></li>
+<li><div class="s57">
+Programs that normally store the passwords in unsecured files and databases that are easily accessible.
+</div></li>
+<li><div class="s57">
+The user applications that normally display the passwords on the screens when a person is typing.
+</div></li>
+</ul>
+<div id="part0013.xhtml#a1CC" class="s14C">
+Cracking Passwords
+</div>
+<div class="sY">
+The external attackers enjoy the password hacking process. They mainly enjoy the sense of exploration that is present during the password cracking process. Although you may not be interested in exploring the passwords of numerous individuals, it is good to approach the hacking process using such a mindset. After obtaining one password, it is easy to gain access to other multiple passwords that can allow you to access the network easily. Most attackers will mainly target the root and administrator passwords.
+</div>
+<div class="sY">
+The administrator passwords are important since they will grant the external attackers more access to the network. As long as you have administrative access, you can manipulate and access anything on the network. When you are looking for the password vulnerabilities within the organization, always start by testing the high access levels such as the network administrator. Most of the attackers will use such a tactic. You can exploit the system in different ways. You can use high and low tech methods. Some of the low tech methods are as follows:
+</div>
+<div id="part0013.xhtml#a1CD" class="sGW">
+Social Engineering
+</div>
+<div class="sY">
+This is a low-tech method and it is also very popular when it comes to gathering passwords. The social engineering topic has already been covered in previous chapters. As for social engineering, it focuses on exploiting the trusting nature of people. After gaining access to the passwords and other pieces of information, an attacker can go ahead and use such information for their own personal gain.
+</div>
+<div class="sY">
+<span class="s1D6">Techniques:</span> To access a password when using social engineering, you just have to ask for it. Since the technique involves manipulation, you just pose as an employee within the organization and ask for the password using an email or any other technique.
+</div>
+<div class="sY">
+At times, the users can issue their passwords to the individuals responsible for the security testing process. Passwords should always be reset after the testing phase is over. After resetting the passwords, you will not be accountable for any information that may be lost within the network afterward.
+</div>
+<div class="sY">
+<span class="s1D6">Countermeasures:</span> Ensure that you have brought about awareness through security training programs; that way, you can easily ensure that the attacker cannot gather any information through social engineering. The individuals who have access to the network should be trained on how they can spot attackers. For instance, they should know that attackers make use of fake phone calls and spam emails. They should ignore each of these emails. It is also good to notify the security administrator about any suspicious activity such as the presence of some suspicious phone calls.
+</div>
+<div id="part0013.xhtml#a1CE" class="s6V">
+Shoulder Surfing
+</div>
+<div class="sY">
+This is a technique that involves looking over a person’s shoulder. The attacker will mainly do so in a bid to gain access to the passwords being used to access the network.
+</div>
+<div class="sY">
+<span class="s1D6">Techniques:</span> To coordinate such an attack, the attacker should be close to the target and they will try to conceal their hidden motives. They will collect the password by monitoring the keyboard and the screen of the users as they log in into the network. An external attacker that has a good eye will easily gain access to the password. Shoulder surfing is quite easy and you can also try it on your own.
+</div>
+<div class="sY">
+<span class="s1D6">Countermeasures:</span> Always encourage the users to be on the lookout so that an external attacker cannot gain access to their passwords. They should not key in their passwords whenever they spot some strange activities within their environment. If a person is looking over your shoulder, you should have dismissed them politely. Make sure that they cannot see your password as you type it.
+</div>
+<div id="part0013.xhtml#toc67_Inference" class="s14T">
+Inference
+</div>
+<div class="sY">
+It is the situation whereby the attacker can guess the passwords depending on the information that they have gathered about the users. Some of the details include the date of birth, phone numbers, and even favorite television shows. The main issue with the external attackers is that they are very determined to achieve their goals.
+</div>
+<div class="sY">
+The best defense mechanism is to educate the users appropriately about the creation of secure passwords that do not also relate to some personal information such as the date of birth. The users should also be reminded constantly about the importance of secure password creation.
+</div>
+<div id="part0013.xhtml#a1CG" class="s6V">
+Weak Authentication
+</div>
+<div class="sY">
+Malicious users and external attackers will try to obtain passwords through different means. They may also take advantage of some of the past operating systems since they do not require any passwords during the login process. Some phones are not secured using passwords.
+</div>
+<div id="part0013.xhtml#toc69_High-Tech_Password_Cracking" class="s6V">
+High-Tech Password Cracking
+</div>
+<div class="sY">
+High-tech password cracking entails the use of different programs to guess the passwords that can be used to access the network. The tools ensure that it is possible to come up with different password combinations. Some of the high-tech techniques are used to access database files that are protected by passwords. The major password cracking techniques include brute-force attacks, dictionary attacks, and rainbow attacks.
+</div>
+<div id="part0013.xhtml#a1CJ" class="s4T">
+Hacking WPA2 Wi-Fi
+</div>
+<div class="sY">
+The techniques used to crack the WPA2 networks have not changed over the years. The latest techniques require you to interact less and make sure that you are well-informed as compared to some of the previous techniques. You can also access various networks although they may not be connected. WPA2 network can be accessed using the PMKID. Some of the tools that you can use include Hashcat. The tool will enable you to crack the WPA2 Wi-Fi passwords. Also, when using such tools, you can easily identify some of the networks that have weak passwords.
+</div>
+<div id="part0013.xhtml#toc71_The_Old_Techniques_Used_to_Crack_the_WPA2_Passwords" class="s6V">
+The Old Techniques Used to Crack the WPA2 Passwords
+</div>
+<div class="sW">
+The old techniques have been used for many years and you should disconnect a connected device momentarily from the access point that you want to crack. As a hacker, you have to understand some of these essential points.
+</div>
+<div class="sW">
+The main challenge is that someone must be connected to the network so that you may launch an attack. The password that has been used should also be weak so that the attacker may break in easily. If there is no connected device, it will be hard to connect to the network since you will lack the opportunity to capture a handshake, and that is why you will be unable to hack into the network.
+</div>
+<div class="sY">
+The other challenge of such a technique is that it is legally troubling and noisy. You will be forced to send some packets intentionally so that you may disconnect an authorized user from the network. You will be launching a DoS attack, and as a result, the network will be jammed. You may also get into trouble since you can be easily caught.
+</div>
+<div id="part0013.xhtml#a1CM" class="s6V">
+New Methods Used to Hack the WPA2 Wi-Fi
+</div>
+<div class="sY">
+Instead of trying to intercept the two-way communication that is present between two Wi-Fi devices so that you can crack the password, the attacker can use new techniques to communicate directly with a vulnerable access point. Some of the tools that can be used by attackers include Hashcat. The tool can be used to launch a brute-force attack, and it mainly collects information that can facilitate such an attack easily.
+</div>
+<div class="sY">
+As always, the attacker needs to be close to the WPA Wi-Fi network that they are planning to attack. The main objective will be to use a compatible wireless network adapter, and it will be possible to gain access to certain pieces of information that can be used to facilitate the attack. The wireless attack tool has also proven to be more efficient as compared to Aircarck-ng and Aireplay-ng.
+</div>
+<div id="part0013.xhtml#a1CN" class="s4T">
+Using Hcxtools and Hashcat
+</div>
+<div class="sY">
+Hcxpcaptool and hcxdumptool are tools that are used to carry out penetration testing on Wi-Fi networks and also carrying out an audit. When using these tools, you can easily capture a WPA2 handshake and PMKID hashes. Minimal arguments are required when launching an attack when using the command line. The tool can also be run against some convenient targets. The attack over the SSH can also be executed. Devices such as Raspberry Pi can also be used although they do not have screens.
+</div>
+<div class="sY">
+After capturing the PMKID, the hash should be loaded into the Hashcat in a bid to crack the WPA2 Wi-Fi password. The hcxpcaptool is used to convert the PCAPNG file to a version that can be compatible with the Hashcat. The brute force attempts can then take place.
+</div>
+<div class="sY">
+To attack each network when using this technique could not be possible. The success rate is not as high depending on the complexity of all the passwords on the targeted WPA2 Wi-Fi networks. Various factors determine whether you can access the PMKID.
+</div>
+<div id="part0013.xhtml#toc74_What_Do_You_Need_" class="s6V">
+What Do You Need?
+</div>
+<div class="sY">
+When performing such an attack, you have to use the Kali Linux software. Also, you should be able to access a wireless network adapter and it should also support the packet injection and monitor mode. Many guides come in handy when you are trying to select a compatible wireless network adapter.
+</div>
+<div class="sY">
+Apart from the network adapter offered by Kali Linux, the system should be fully updated and upgraded. Failure to do so, you will find that some of the packages are out of date and some issues during the capturing process will be encountered.
+</div>
+<div class="s9R">
+Step 1: Install the Hashcat and Hxctools
+</div>
+<div class="s15J">
+First, you should install the tools that you need. To download the necessary tools, key in the following text on the terminal window.
+</div>
+<div class="s15P-0">
+<img src="rsrc15N.jpg" class="s15P-1" />
+</div>
+<div class="sY">
+After the installation process is complete, you will then install the hxctools. To do so, open the terminal window and also paste everything line by line. If an error occurs, type the <span class="s1D6">sudo</span> command before the text.
+</div>
+<div class="s15P-0">
+<img src="rsrc15U.jpg" class="s15P-1" />
+</div>
+<div class="sY">
+You will then install the Hashcat tool. The process should be easy. Make sure that you have installed the latest version of the Hashcat tool.
+</div>
+<div class="s15P-0">
+<img src="rsrc15Y.jpg" class="s15P-1" />
+</div>
+<div class="s9R">
+Step 2: Preparing the Wireless Network Adapter
+</div>
+<div class="sW">
+After you have plugged in the wireless network adapter, you can find the names of the WPA2 networks by typing <span class="s1D6">ip a</span> or <span class="s1D6">ipconfig.</span> The network names usually vary. First, make sure that the card has been put into the wireless monitor mode. You will then be able to listen to the Wi-Fi traffic. You should type the following commands into the terminal window and you should also substitute the name of the wireless network adapter.
+</div>
+<div class="sY">
+hcxdumptool -i wlan1tue -o galleria.pcapng –enable__status=1
+</div>
+<div class="sY">
+The name of the wireless adapter may also be wlan1tue. It helps to save PMKIDs that have been captured and they are saved in a file known as “galleria.pcapng.” The status value can be specified.
+</div>
+<div class="sW">
+warning: Network Manager is running with pid 555
+</div>
+<div class="sW">
+warning: wpa_supplicant is running with pid 611
+</div>
+<div class="sW">
+warning: wlan1mon is probably a monitor interface
+</div>
+<div class="sY">
+start capturing (stop with ctrl+c)
+</div>
+<div class="sW">
+INTERFACE.…………: wlan1mon
+</div>
+<div class="sW">
+FILTERLIST………….: 0 entries
+</div>
+<div class="sW">
+The wireless network adapter should also be in the monitor mode.
+</div>
+<div class="s9R">
+Step 3: Use the Hxcdump When Capturing the PMKIDs That Are From the Local Networks
+</div>
+<div class="s15J">
+You can capture the PMKIDs of the devices that you want to try to attack. Some of the commands that you can execute include:
+</div>
+<div class="s16F-0">
+<img src="rsrc16E.jpg" class="s16F-1" />
+</div>
+<div class="sY">
+After gathering enough information, you can end the attack. A PCAPNG file will then be produced and it will contain all the information that you need to facilitate the brute-force attack. The information should also be converted into a format can be easily understood by the Hashcat tool.
+</div>
+<div class="s16J">
+Step 4: Using the Hxcpcaptool to Convert the Dump for Hashcat
+</div>
+<div class="s15J">
+The hcxpcaptool is used to convert the PCAPNG file. A few arguments are also specified. In the same folder where the PCAPNG files are saved, you should key in the following commands in the terminal window.
+</div>
+<div class="s15P-0">
+<img src="rsrc16P.jpg" class="s15P-1" />
+</div>
+<div class="sY">
+After running the command, the terminal window will showcase the following pieces of information:
+</div>
+<div>
+<img src="rsrc16U.jpg" class="s16V" />
+</div>
+<div class="sY">
+The context show that you have gathered at least 21 PMKIDs within a short period. The "galleriaHC.16800" file can now be used to crack the network passwords.
+</div>
+<div class="s16Y">
+Step 5: Select a Password List and Use the Brute Force With Hashcat
+</div>
+<div class="s15J">
+When you start attacking the Wi-Fi networks that you have managed to capture, you must start by picking a good password list. After picking a good password list, you can put all the passwords in a similar folder with the .16800 file after you have converted it. You should then run the following commands in the terminal window:
+</div>
+<div>
+<img src="rsrc172.jpg" class="s173" />
+</div>
+<div class="s175">
+The Hashcat should be started in the 16800 mode. The attack on the WPA-PMKID-PBKDF2 network protocols will then be attacked. You should also specify the name of the files that you need to crack of which in this instance we are using the "galleriaHC.16800." The <span class="s1D6">–force</span> option will then ignore any warnings that appear when proceeding with the attack. The brute force attack is quite effective and in this context, we are making use of the "topwifipass.txt."
+</div>
+<div class="s179-0">
+<img src="rsrc178.jpg" class="s179-1" />
+</div>
+<div class="sY">
+The time needed to complete the attack depends on the size of the password list and the hardware speed. To see the status updates, you should always press the S key.
+</div>
+<div class="s16J">
+Step 6: Interpreting the Results
+</div>
+<div class="s15J">
+As the Hashcat command tries to crack the Wi-Fi passwords, you can also check the present progress.
+</div>
+<div class="s15P-0">
+<img src="rsrc17F.jpg" class="s15P-1" />
+</div>
+<div class="s17H">
+As the password list comes to an end, the Hashcat adjusts the workload and you will get a final report afterwards.
+</div>
+<div>
+<img src="rsrc17M.jpg" class="s17N" />
+</div>
+<div class="sY">
+If you have managed to crack some passwords, you will notice that you can see all of them there. As for the test run, the PMKIDs that were gathered contained passwords in the password list, so it’s impossible to crack any of the hashes. When hacking into certain networks, you may come across such issues especially when there is a strong password.
+</div>
+<div id="part0013.xhtml#toc76_The_PMKID_Hashcat_Attacks_Ensure_the_Wi-Fi_Attacks_Are_Easier" class="s4T">
+The PMKID Hashcat Attacks Ensure the Wi-Fi Attacks Are Easier
+</div>
+<div class="sY">
+Although this technique has proven to be effective, some of the past tactics to crack WPA2 Wi-Fi passwords are still effective. If the network does not support some of the security elements that contain the PMKID, the Wi-Fi hacking process may not be successful. You can use the hcxtools to first audit your network and learn whether they are susceptible to attacks. Although your network may be vulnerable, there should be a strong password so that the efforts of the attacker to attack the network may prove to be futile.
+</div>
+<div class="sY">
+Most of these attacks rely on guessing some passwords that may be used to access the Wi-Fi network, during the guessing process, you may start by guessing some default passwords which may include “password” and “12345678”. Such passwords can be easily cracked. During the guessing process, you can also go ahead and try to utilize some breached data. Some techniques used to access such data include carrying out a social engineering attack since it will help to recover some sensitive information. The passwords may also be reused on different accounts. Such a technique may also prove to be very effective.
+</div>
+<div id="part0013.xhtml#toc82_Password-Cracking_Tools" class="sYJ">
+Password-Cracking Tools
+</div>
+<div class="sY">
+You can use different tools to crack the passwords and operating systems in different organizations. Some of the renowned password cracking tools include:
+</div>
+<div id="part0013.xhtml#toc77_Cain___Abel" class="s6V">
+Cain &amp; Abel
+</div>
+<div class="sY">
+The Cain &amp; Abel password recovery tool is meant for the Microsoft operating system. It allows people to recover passwords since the tool sniffs a network of your choice. You can also crack different passwords using the Cain &amp; Abel dictionary, cryptanalysis attacks, brute force, decoding scrambled passwords, recording VoIP conversations, revealing password boxes, recovering wireless network keys, analyzing routing protocols, and uncovering cached passwords.
+</div>
+<div class="sY">
+The tool is updated regularly and the latest version has numerous features including APR and enables a person to sniff on the switched local area networks. You can also launch a Man-in-the-Middle attack. The sniffer can also analyze some of the encrypted protocols including HTTPS and SSH-1. They also contain filters that capture the credentials of specific users. The latest version of Cain &amp; Abel also ships the route extractors, routing protocols, brute-force, and  dictionary attacks for the common hashing algorithms numerous password calculators, specific authentications, password decoders, cryptanalysis attacks, and some utilities commonly related to the network security.
+</div>
+<div class="s9R">
+Who Should Use the Cain &amp; Abel Tool?
+</div>
+<div class="sY">
+The specific target audience for the Cain &amp; Abel tool is network administrators, professional penetration testers, teachers, forensic staff, security professionals, and security software vendors.
+</div>
+<div class="sW">
+<span class="s1D6">Requirements:</span> To successfully install Cain &amp; Abel, your system should have the following specifications:
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">A hard disk space of at least 10MB</span>
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">Microsoft Windows XP/ 2000/Vista</span>
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">Winpcap Packet Driver</span>
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">Airpcap Packet Driver</span>
+</div>
+<div class="s175">
+<span class="s1D6">Installation:</span> You should start by downloading Cain &amp; Abel. Run the executable file and follow each of the installation instructions.
+</div>
+<div>
+<img src="rsrc189.jpg" alt="Image result for cain and abel password cracking tool" class="s18A" />
+</div>
+<div id="part0013.xhtml#a1CU" class="sGW">
+Brutus
+</div>
+<div class="sY">
+Brutus is a popular tool used to crack passwords. It is quite flexible and fast. The password cracking tool is also available free of charge and can only be used on the Microsoft Windows operating systems.
+</div>
+<div class="sY">
+It supports the following formats: POP3, HTTP (Form, HRML, CGI), SMB, FTP, IMAP, Telnet, NetBus, and NNTP. You can also create your authentication types. The tool is also widely known since it supports multi-stage authentication engines. You can also resume and load different options after pausing some of the current activities.
+</div>
+<div id="part0013.xhtml#toc79_RainbowCrack" class="s6V">
+RainbowCrack
+</div>
+<div class="sY">
+The password cracking tool cracks passwords at a fast rate as compared to other tools used to launch brute-force attacks. The tool makes use of a large time memory in the form of a computational process that calculates the hash pairs and plain text. RainbowCrack makes use of selected hash algorithms. After the computation process is over, the results will appear under the rainbow table. The process takes a lot of time. After the table is ready, you can crack any WPA2 network passwords fast as compared to when you are using the brute force tools.
+</div>
+<div class="sY">
+You have to come up with rainbow tablets individually. The people who developed the RainbowCrack had generated the NTLM rainbow tables and the LM rainbow tables. Other tables that were also produced include the Sha 1 rainbow tables and the MD5 rainbow tables. The tables are also available for free and come in handy during the password cracking process.
+</div>
+<div class="sY">
+This tool is available for both Linux and Microsoft Windows systems.
+</div>
+<div id="part0013.xhtml#a1CW" class="sGW">
+Wfuzz
+</div>
+<div class="sY">
+Wfuzz is also used to crack passwords. The tool makes use of brute-force attack. It can also be used to find some of the hidden resources including scripts, directories, and servlets. The tool can also be used to identify different types of injections including XSS Injection, SQL Injection, and LDAP Injection in different web applications.
+</div>
+<div class="sY">
+The major features of the Wfuzz tool:
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">Post, headers and authentication data brute-forcing</span>
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">Capability of injection via multiple points with multiple dictionary</span>
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">Time delay between requests</span>
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">Proxy and SOCK Support, multiple proxy support</span>
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">Output in colored HTML</span>
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">POST and GET brute-forcing</span>
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">Brute force HTTP password</span>
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">Multi-Threading</span>
+</div>
+<div class="sEH">
+<span class="s1DC">➢</span> <span class="s1D5">       </span> <span class="s1D3-0">Cookies fuzzing</span>
+</div>
+<div id="part0013.xhtml#a1CX" class="s14T">
+John the Ripper
+</div>
+<div class="sY">
+This tool is widely known since it is open source and compatible with other platforms including Linux, Mac OS, and UNIX. A Microsoft Windows version is also available. The tool is mainly used during the detection of weak passwords. There is a pro version and it has more features.
+</div>
+<div>
+<img src="rsrc192.jpg" alt="Image result for john the ripper" class="s193" />
+</div>
+<div class="s195">
+Figure 1: Zip password cracking using John the Ripper
+</div>
+<div id="part0013.xhtml#toc83_THC_Hydra" class="s4T">
+THC Hydra
+</div>
+<div class="sY">
+THC Hydra has gained a lot of popularity since the tool is fast when it comes to the password cracking process. It has been compared to other tools and that is has been issued a positive review. It is also easy to install new modules into the password cracking tool. The modules come in handy when enhancing the features of THC Hydra. The tool can be used on different platforms including FreeBSD, Microsoft Windows, Linux, Solaris, and OS X. THC Hydra also supports numerous network protocols including AFP, Asterisk, Cisco, Cisco auth, AAA, CVS, Cisco enable, FTP, Firebird, HTTP-FORM-POST, HTTP-FORM-GET, HTTP-HEAD, HTTPS-FORM-GET, HTTP-GET, HTTPS-FORM-POST, HTTP-PROXY, HTTP-Proxy, HTTPS-GET, ICQ, HTTPS-HEAD, IRC, IMAP, MYSQL, LDAP, MS-SQL, NNTP, NCP, Oracle SID, Oracle Listener, POP3, PC-Anywhere, RDP, PCNFS, Rlogin, Oracle, Rexec, POSTGRES, SAP/R3, rsh, SMTP Enum, SMTP, SIP, SOCKS5, SMB, Telnet, SSH (v1 and v2), SNMP, VMware-Auth, , Subversion, VNC, Teamspeak (TS2), and XMPP.
+</div>
+<div class="s175">
+Developers are also encouraged to contribute towards the development of the THC Hydra password hacking tool.
+</div>
+<div>
+<img src="rsrc19B.jpg" class="s5Z" />
+</div>
+<div id="part0013.xhtml#toc84_Medusa" class="s4T">
+Medusa
+</div>
+<div class="sY">
+Medusa is somewhat similar to THC Hydra. It supports numerous network protocols including FTP, HTTP, IMAP, MYSQL, POP3, NNTP, CVS, pcAnywhere, AFP, rsh, SMTP, MS SQL, PostgreSQL, SMB, SSH, NCP, SNMP, VmAuthd, rlogin, Telnet, VNC, and SVN. Medusa is in the form of a command-line tool, so you need to first learn about the commands. The network connectivity determines the efficiency of the Medusa password cracking tool. When trying to penetrate a local network, Medusa can crack at least 2,000 passwords in one minute. When using this tool, you can perform a parallel attack. It also comes in handy when cracking the passwords of multiple email accounts at a go. You should come up with a password list and a username list.
+</div>
+<div id="part0013.xhtml#toc85_Ophcrack" class="s4T">
+Ophcrack
+</div>
+<div class="sY">
+This password-cracking tool is meant for the Microsoft Windows operating system. It is also the most popular password-cracking tool for the Windows platform. It can also be used on the Mac OS and Linux operating systems and comes in handy when cracking the NTLM and LM hashes. There are also rainbow tables and they are free.
+</div>
+<div id="part0013.xhtml#a1D1" class="sYJ">
+L0phtCrack
+</div>
+<div class="sY">
+It can be used as an alternative for the Ophcrack. It normally cracks passwords on the Windows platform. When cracking passwords, it uses the network servers, Windows workstations, active directory, and the domain controllers. The tool makes use of brute-force and dictionary attacks to generate and guess passwords. Some of the features present include the schedule routine audit feature. It can be set weekly or even monthly when carrying out an audit. Depending on the scheduled time, the tool starts the scan on time.
+</div>
+<div class="s19N-0">
+<img src="rsrc19M.jpg" class="s19N-1" />
+</div>
+<div class="s179-0">
+<img src="rsrc19S.jpg" class="s179-1" />
+</div>
+<div class="sY">
+The password-cracking tools normally take a set of passwords that may be compiled through guesswork and run each one of them through an algorithm. Encrypted hashes come about in the process and then compared at a high speed to the password hashes that have been extracted from the initial password database. After finding a match, it means that the network password has been cracked. The external attacker can then gain access to the network and launch different attacks while also gathering various pieces of information.
+</div>
+<div class="sY">
+Some of the password-cracking tools also try to hack into a network using some of the usernames and passwords that may have been predefined. The dictionary attacks work in such a manner and they include Brutus among other password-cracking tools. In most cases, the predetermined passwords eventually lose. The main advantage is that these tools are easily accessible; you can use it when testing whether a network is secure. You have to look for the weaknesses within the network before the malicious users can. During the password cracking process, some of the user accounts may be locked out and there might be some interruptions in the process. In some instances, there will be a DoS attack and users will not be able to access the network.
+</div>
+<div class="sY">
+Passwords are normally encrypted. They are also stored on the computer using specific encryption algorithms such as MD5 and DES. The hashed passwords are represented by encrypted strings that are fixed in length and by the same passwords. The hashes cannot be reversed which means that it is impossible to decrypt the passwords. Some of the passwords in platforms such as Linux normally have a random value commonly known as “salt” and it makes sure there is a degree of randomness. As a result, although two people have the same password, each password will not have the same hash value.
+</div>
+<p><span id="part0014.xhtml"></span></p>
+<div id="part0014.xhtml#a1D2" class="s19">
+Conclusion
+</div>
+<div class="sY">
+Thank you for reading the <span class="s1D8">Networking Hacking</span> to the end. I hope the book was informative and you were able to gain access to all the tools that you required to achieve all your goals regardless of what they may be. Although you may have finished reading it, we have not exhausted all the present information about the topic. You can expand your knowledge of the specific area by also carrying out more research on the topic.
+</div>
+<div class="sW">
+The next step is to ensure that you can practically use the information that you have grasped. You can also create a schedule whereby you can learn more about network hacking. You can make use of some of the network hacking tools that have been outlined in the context above. Some of these tools are free and they also come with a user manual.
+</div>
+<div class="sW">
+Studies showcase that networks are vulnerable. External attackers come up with different techniques that they can use to penetrate a network. They also come up with scripts that can help them to attack a certain network. The skillset of the hacker also matters. Additionally, the hacker must have goals that will also act as their motivation during the hacking process. Although a network can be accessed in different ways, there are ways in which you can assess the vulnerabilities and also seal any present security loopholes.
+</div>
+<div class="sW">
+Finally, if the book is indeed informative, you can also issue a positive review. Your positive feedback will always be appreciated.
+</div>
