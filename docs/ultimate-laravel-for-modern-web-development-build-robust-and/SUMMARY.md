@@ -1,0 +1,2 @@
++   [现代 Web 开发终极 Laravel：使用 Laravel 的 MVC、身份验证、API 和云部署构建健壮且交互的企业级 Web 应用（英文版）](README.md)
++   [现代 Web 开发终极 Laravel：使用 Laravel 的 MVC、身份验证、API 和云部署构建健壮且交互的企业级 Web 应用（英文版）](ultimate-laravel-for-modern-web-development-build-robust-and_0.md)
