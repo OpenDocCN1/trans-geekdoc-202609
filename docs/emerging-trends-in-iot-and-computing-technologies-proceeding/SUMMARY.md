@@ -1,0 +1,2 @@
++   [物联网与计算技术新兴趋势论文集：第二届国际物联网与计算技术新兴趋势会议-2023 (ICEICT-2023)，Goel 技术学院](README.md)
++   [物联网与计算技术新兴趋势论文集：第二届国际物联网与计算技术新兴趋势会议-2023 (ICEICT-2023)，Goel 技术学院](emerging-trends-in-iot-and-computing-technologies-proceeding_0.md)
