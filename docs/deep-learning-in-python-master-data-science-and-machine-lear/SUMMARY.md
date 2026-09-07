@@ -1,0 +1,2 @@
++   [Python 深度学习：使用 Python、Theano 和 TensorFlow 现代神经网络精通数据科学与机器学习](README.md)
++   [Python 深度学习：使用 Python、Theano 和 TensorFlow 现代神经网络精通数据科学与机器学习](deep-learning-in-python-master-data-science-and-machine-lear_0.md)

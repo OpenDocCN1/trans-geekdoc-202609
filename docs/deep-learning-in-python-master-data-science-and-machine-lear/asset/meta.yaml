@@ -1,0 +1,49 @@
+name: Deep Learning in Python： Master Data Science and Machine Learning with Modern
+  Neural Networks written in Python, Theano, and TensorFlow
+name_cn: Python 深度学习：使用 Python、Theano 和 TensorFlow 现代神经网络精通数据科学与机器学习
+slug: deep-learning-in-python-master-data-science-and-machine-lear
+toc:
+- - '#'
+  - 第 2 章：生物学类比
+- - '##'
+  - 兴奋阈值 (Excitability Threshold)
+- - '##'
+  - 兴奋性与抑制性连接 (Excitatory and Inhibitory Connections)
+- - '##'
+  - 重复与熟悉度 (Repetition and Familiarity)
+- - '##'
+  - 练习 (Exercise)
+- - '#'
+  - 第 3 章：从神经网络获取输出
+- - '##'
+  - 获取一些数据进行工作
+- - '##'
+  - 我们将使用的目标函数是什么？
+- - '##'
+  - 为什么它被称为“反向传播”？
+- - '##'
+  - 在 Theano 中神经网络
+- - '##'
+  - 练习
+- - '#'
+  - 第 6 章：TensorFlow
+- - '##'
+  - TensorFlow 基础
+- - '##'
+  - TensorFlow 中的简单优化问题
+- - '##'
+  - TensorFlow 中的神经网络
+- - '##'
+  - (此处已删除重复项)
+- - '##'
+  - 正则化
+- - '##'
+  - 早停
+- - '##'
+  - 噪声注入
+- - '##'
+  - 数据增强
+- - '##'
+  - 逻辑回归
+- - '##'
+  - 结论
