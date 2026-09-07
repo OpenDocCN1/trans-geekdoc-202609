@@ -1,0 +1,328 @@
+name: Machine Learning for iOS Developers
+name_cn: iOS 开发者机器学习指南
+slug: machine-learning-for-ios-developers
+toc:
+- - '#'
+  - iOS 开发者机器学习指南
+- - '#'
+  - 第 6 章
+- - '#'
+  - 第 8 章
+- - '##'
+  - 本书涵盖哪些内容？
+- - '###'
+  - 第 1 章：机器学习简介
+- - '###'
+  - 第 2 章：机器学习方法
+- - '###'
+  - 第 3 章：数据探索与预处理
+- - '###'
+  - 第 4 章：在移动应用中实现机器学习
+- - '###'
+  - 第 5 章：使用预训练模型进行目标检测
+- - '###'
+  - 第 6 章：使用 Create ML 应用创建图像分类器
+- - '###'
+  - 第 7 章：使用 Create ML 创建表格分类器
+- - '###'
+  - 第 8 章：创建决策树分类器
+- - '###'
+  - 第 9 章：使用 Scikit-learn 和 Core ML 创建逻辑回归模型
+- - '###'
+  - 第 10 章：使用 Keras 构建深度卷积神经网络
+- - '#'
+  - 第 1 章：机器学习简介
+- - '##'
+  - 什么是机器学习？
+- - '###'
+  - 数据科学家常用的工具
+- - '###'
+  - 常见术语
+- - '###'
+  - 机器学习在现实世界中的应用
+- - '##'
+  - 机器学习系统的类型
+- - '###'
+  - 监督学习
+- - '###'
+  - 无监督学习
+- - '###'
+  - 监督学习
+- - '###'
+  - 无监督学习
+- - '###'
+  - 强化学习
+- - '##'
+  - 基于模型的学习
+- - '##'
+  - 常见机器学习算法
+- - '###'
+  - 线性回归
+- - '###'
+  - 支持向量机
+- - '###'
+  - 逻辑回归
+- - '##'
+  - '[图 1.9] Sigmoid 函数'
+- - '##'
+  - '[图 1.10] 使用 sigmoid 函数进行二分类'
+- - '##'
+  - '[图 1.11] Softmax 逻辑回归'
+- - '###'
+  - 决策树
+- - '##'
+  - '[图 1.12] 决策树可视化'
+- - '###'
+  - 人工神经网络
+- - '##'
+  - '[图 1.13] ANN 的结构'
+- - '##'
+  - 机器学习数据集的来源
+- - '###'
+  - Scikit-learn 数据集
+- - '###'
+  - AWS 公共数据集
+- - '###'
+  - Kaggle.com 数据集
+- - '###'
+  - UCI 机器学习仓库
+- - '##'
+  - 总结
+- - '#'
+  - 第 2 章：机器学习方法
+- - '##'
+  - 传统的基于规则的方法
+- - '##'
+  - 机器学习系统
+- - '###'
+  - 选择输入特征
+- - '###'
+  - 表 2.1：类型与范围
+- - '###'
+  - 表 2.2：将分类特征转换为数值
+- - '###'
+  - 准备训练集和测试集
+- - '###'
+  - 选择机器学习算法
+- - '###'
+  - 评估模型性能
+- - '##'
+  - 机器学习流程
+- - '###'
+  - 数据收集与预处理
+- - '###'
+  - 训练集、测试集和验证集的准备
+- - '###'
+  - 模型构建
+- - '###'
+  - 模型评估
+- - '###'
+  - 模型调优
+- - '###'
+  - 模型部署
+- - '##'
+  - 总结
+- - '#'
+  - 第 3 章：数据探索与预处理
+- - '##'
+  - 数据预处理技术
+- - '###'
+  - 获取数据概览
+- - '###'
+  - 有多少缺失值？
+- - '###'
+  - 另一种确定 dataframe 中缺失值数量的方法。
+- - '###'
+  - 这个 dataframe 是否有名索引？如果是，它是什么？
+- - '###'
+  - 设置索引后，dataframe 中有多少行和多少列？
+- - '###'
+  - 将目标属性提取到自己的 dataframe 中
+- - '###'
+  - 创建包含 10 个特征变量的 dataframe
+- - '###'
+  - 目标变量两个类别之间的划分情况是怎样的？
+- - '###'
+  - 分类属性 'Embarked' 的唯一值和计数
+- - '###'
+  - 包含 NaN 标记
+- - '###'
+  - 目标变量直方图
+- - '###'
+  - 特征直方图
+- - '###'
+  - 区间数量的选择
+- - '###'
+  - 单个特征的直方图 - Age
+- - '###'
+  - 尝试不同的箱宽（bin widths）以更好地了解数值的分布是一个好主意。
+- - '###'
+  - 理解 Bins
+- - '###'
+  - 分类属性 'Embarked' 的直方图
+- - '###'
+  - 根据 value_counts() 函数的输出计算
+- - '###'
+  - 统计特征
+- - '###'
+  - 获取数据的统计特征
+- - '###'
+  - display the columns of the dataframe.
+- - '###'
+  - display number of missing values in the columns
+- - '###'
+  - 创建新特征
+- - '###'
+  - create a numeric feature called FamilySize that is the sum of the SibSp and Parch
+    features.
+- - '###'
+  - generate new categorical feature AgeCategory
+- - '###'
+  - 转换数值特征
+- - '###'
+  - generate new feature NormalizedAge using MinMaxScaler
+- - '###'
+  - generate new feature StandardizedAge using StandardScaler
+- - '###'
+  - histogram of Age, NormalizedAge, StandardizedAge
+- - '###'
+  - 分类特征的独热编码
+- - '###'
+  - 使用独热编码将分类属性转换为二数值属性
+- - '###'
+  - 显示数据框的列。
+- - '###'
+  - 删弃 Name, Ticket, Sex_female, CabinIsKnown_False
+- - '###'
+  - 以获得可以用于线性或逻辑回归的数据框
+- - '##'
+  - 选择训练特征
+- - '###'
+  - 相关性
+- - '###'
+  - 哪些特征与目标的相关性最强？
+- - '###'
+  - 使用散点图矩阵可视化
+- - '###'
+  - 特征之间的关系
+- - '###'
+  - 为了计算 Pearson 相关系数，创建一个包含 df_titanic_features 所有属性以及生存属性的数据框
+- - '###'
+  - 特征工程后哪些特征与目标变量相关性最强？
+- - '###'
+  - 主成分分析
+- - '###'
+  - 'use PCA to reduce the number of features in df_titanic_features_numeric so as
+    to preserve 99.90% of the variance. '
+- - '###'
+  - 递归特征消除
+- - '###'
+  - use recursive feature elimination to work out the relative importance of the features
+    in the df_titanic_features_numeric dataset
+- - '###'
+  - 总结
+- - '#'
+  - 第 4 章：在移动应用中实现机器学习
+- - '##'
+  - 基于设备的方法 vs. 基于服务器的方法
+- - '###'
+  - 模型级框架
+- - '###'
+  - 转换器
+- - '###'
+  - 迁移学习工具
+- - '####'
+  - TURI CREATE
+- - '##'
+  - CREATE ML
+- - '##'
+  - 第三方机器学习框架与工具
+- - '##'
+  - 总结
+- - '#'
+  - 第 5 章：使用预训练模型进行检测
+- - '##'
+  - 什么是目标检测？
+- - '##'
+  - 人工神经网络简述
+- - '##'
+  - 下载 ResNet50 模型
+- - '##'
+  - 创建 iOS 项目
+- - '###'
+  - 创建用户界面
+- - '###'
+  - 更新隐私设置
+- - '###'
+  - 在 iOS 项目中使用 Resnet50 模型
+- - '##'
+  - 总结
+- - '#'
+  - 第 6 章：使用 Create ML App 创建图像分类器
+- - '##'
+  - Create ML App 简介
+- - '##'
+  - 使用 Create ML App 创建分类模型
+- - '##'
+  - 创建 iOS 项目
+- - '###'
+  - 创建用户界面
+- - '###'
+  - 更新隐私设置
+- - '###'
+  - 在 iOS 项目中使用 Core ML 模型
+- - '###'
+  - 5. 在 `ViewController.swift` 文件中如下所示实现 `processResults(for:, error:)` 方法：
+- - '###'
+  - '6. 现在，你已经编写了创建 `VNCoreMLRequest` 并处理图像分类结果的代码，你只需要编写代码，在用户选择图像时创建并执行 `VNCoreMLRequest`
+    即可。在本章早些时候，你创建了一个名为 `func detectPet(in image: UIImage)` 的空方法。请将该空方法替换为以下内容：'
+- - '#'
+  - 第 7 章使用 Create ML 创建表格分类器
+- - '##'
+  - 为 Create ML 应用准备数据集
+- - '###'
+  - histogram of columns
+- - '###'
+  - split the df_iris dataframe into two dataframes—a 13-column dataframe called df_wine_features
+    that contains all the feature attributes, and a 1-column dataframe called df_wine_target
+    that contains the target variable.
+- - '##'
+  - 创建 iOS 项目
+- - '###'
+  - 创建用户界面
+- - '###'
+  - 在 iOS 项目中使用分类模型
+- - '###'
+  - 3. 从模型概述页的 Model 类部分访问自动生成的 Swift 类（参见图 7.25）。
+- - '###'
+  - 4. 在项目导航器中选择 `ViewController.swift` 文件，并在文件顶部添加以下 `import` 以导入 Core ML 框架。
+- - '###'
+  - 5. 修改 `ViewController.swift` 文件中的 `onGetWineQuality(_ sender:Any)` 方法，使其如下所示：
+- - '###'
+  - 测试 App
+- - '###'
+  - 总结
+- - '#'
+  - 第 8 章 创建决策树分类器
+- - '##'
+  - 决策树回顾
+- - '##'
+  - 检查数据集
+- - '###'
+  - 目标直方图
+- - '###'
+  - 转换为字符串
+- - '###'
+  - 统计特征
+- - '###'
+  - 训练集和测试集
+- - '##'
+  - 使用 Scikit-learn 创建决策树
+- - '##'
+  - 逻辑回归模型
+- - '##'
+  - 创建 iOS 项目
+- - '#'
+  - 第 9 章：使用 Scikit-learn 和 Core ML 创建逻辑回归模型
+- - '#'
+  - 第 10 章：使用 Keras 构建深度卷积神经网络
