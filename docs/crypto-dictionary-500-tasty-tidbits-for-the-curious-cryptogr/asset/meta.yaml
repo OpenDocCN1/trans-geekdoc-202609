@@ -1,0 +1,566 @@
+name: Crypto Dictionary ： 500 Tasty Tidbits for the Curious Cryptographer
+name_cn: 加密词典：好奇加密学者的 500 个趣味秘籍
+slug: crypto-dictionary-500-tasty-tidbits-for-the-curious-cryptogr
+toc:
+- - '#'
+  - 加密词典：好奇加密学者的 500 个趣味秘籍
+- - '##'
+  - 关于作者
+- - '##'
+  - 关于技术评审员
+- - '##'
+  - 前言
+- - '##'
+  - 序言
+- - '##'
+  - 致谢
+- - '##'
+  - 密码词典
+- - '###'
+  - '2013'
+- - '###'
+  - '65537'
+- - '###'
+  - A
+- - '####'
+  - A5/0
+- - '####'
+  - A5/1
+- - '####'
+  - A5/2
+- - '####'
+  - A5/3
+- - '####'
+  - A5/4
+- - '####'
+  - 自适应攻击 (Adaptive attack)
+- - '####'
+  - AEAD（关联数据的认证加密）
+- - '##'
+  - 不同的 AEAD 构造
+- - '####'
+  - AES (高级加密标准)
+- - '####'
+  - AES-CCM
+- - '####'
+  - AES-GCM
+- - '##'
+  - AES-GCM 的阿喀琉斯之踵
+- - '##'
+  - AES-GCM-SIV
+- - '##'
+  - AES-NI
+- - '##'
+  - AES-SIV
+- - '##'
+  - AIM (高级信息安全机)
+- - '##'
+  - AKA
+- - '##'
+  - 3GPP 标准中的 AKA
+- - '##'
+  - AKS (Agrawal–Kayal–Saxena)
+- - '##'
+  - A
+- - '##'
+  - 代数密码分析
+- - '##'
+  - Alice
+- - '##'
+  - 全或全无变换 (AONT)
+- - '##'
+  - 匿名签名
+- - '##'
+  - 应用密码学
+- - '##'
+  - ARC4
+- - '##'
+  - Argon2
+- - '###'
+  - ASIACRYPT
+- - '###'
+  - 非对称加密
+- - '###'
+  - 攻击
+- - '###'
+  - 并非所有攻击都是攻击
+- - '###'
+  - 基于属性的加密 (ABE)
+- - '####'
+  - 用于访问控制的 ABE
+- - '###'
+  - 10 基于属性的加密 (ABE)
+- - '###'
+  - 认证密码文
+- - '###'
+  - Axolotl
+- - '###'
+  - B
+- - '###'
+  - 后门
+- - '###'
+  - 回溯抗性
+- - '###'
+  - 后向安全性
+- - '###'
+  - Base64
+- - '###'
+  - Bassomatic
+- - '###'
+  - BB84
+- - '###'
+  - bcrypt
+- - '###'
+  - 双立图密码分析
+- - '###'
+  - BIKE (位翻转密钥封装)
+- - '###'
+  - BIP (比特币改进提议)
+- - '###'
+  - 位金 (Bit Gold)
+- - '###'
+  - 比特币 (Bitcoin)
+- - '###'
+  - 黑 (Black)
+- - '###'
+  - BLAKE
+- - '###'
+  - BLAKE2
+- - '###'
+  - BLAKE3
+- - '###'
+  - 14 位金 (14 Bit Gold)
+- - '###'
+  - Bleichenbacher 攻击
+- - '###'
+  - 为什么 Bleichenbacher 是不
+- - '###'
+  - 盲签名 (Blind signature)
+- - '###'
+  - 块密码 (Block cipher)
+- - '###'
+  - 感谢，区块链？(Thanks, blockchain?)
+- - '###'
+  - 好莱坞的 Blowfish (Blowfish in Hollywood)
+- - '###'
+  - BLS (Boneh-Lynn-Shacham) 签名
+- - '####'
+  - BLS (Boneh-Lynn-Shacham) 签名 17
+- - '###'
+  - Bob
+- - '###'
+  - 布尔函数
+- - '####'
+  - 为什么密码学家关注布尔函数
+- - '###'
+  - 回旋镖攻击 (Boomerang attack)
+- - '###'
+  - BQP (有界误差量子多项式时间)
+- - '####'
+  - 隐藏子群问题
+- - '###'
+  - 辫群加密 (Braid group cryptography)
+- - '###'
+  - Brainpool 曲线
+- - '####'
+  - Brainpool 曲线 19
+- - '###'
+  - 破解 (Break-in recovery)
+- - '###'
+  - 广播加密 (Broadcast encryption)
+- - '####'
+  - 广播加密的应用
+- - '###'
+  - 暴力攻击 (Brute-force attack)
+- - '###'
+  - 弹证明 (Bulletproof)
+- - '###'
+  - 拜庭容错 (Byzantine fault tolerance)
+- - '###'
+  - C
+- - '###'
+  - CAESAR
+- - '####'
+  - CAESAR 针对 AEAD 的深度防御
+- - '##'
+  - 凯撒加密 (Caesar’s cipher)
+- - '##'
+  - CAVP (密码学算法验证计划)
+- - '##'
+  - CBC (密码块链接模式)
+- - '##'
+  - CECPQ (结合椭圆曲线与后量子算法)
+- - '##'
+  - 细胞自动机 (Cellular automata)
+- - '##'
+  - 仪式 (Ceremony)
+- - '##'
+  - 证书 (Certificate)
+- - '##'
+  - 证书机构 (CA)
+- - '##'
+  - 证书透明度 (CT)
+- - '##'
+  - ChaCha20
+- - '##'
+  - CHACHA20：诞生论坛
+- - '##'
+  - CHES (密码学硬件与嵌入系统)
+- - '##'
+  - CIA
+- - '##'
+  - 密文窃取 (Ciphertext stealing)
+- - '##'
+  - 'Clipper '
+- - '##'
+  - CMVP (加密模块验证计划)
+- - '###'
+  - 承诺（Commitment）
+- - '###'
+  - 并发零知识（Concurrent zero-knowledge）
+- - '###'
+  - 共识协议（Consensus protocol）
+- - '###'
+  - 控制字（Control word）
+- - '###'
+  - COPACOBANA（成本优化并行密码破解器）
+- - '###'
+  - 集体权威（Cothorority / collective authority）
+- - '###'
+  - 密码学分析（Cryptanalysis）
+- - '###'
+  - 26 并发零知识
+- - '###'
+  - 隐世生物（Cryptids）
+- - '###'
+  - Crypto
+- - '###'
+  - CRYPTO
+- - '###'
+  - Crypto AG
+- - '###'
+  - 史上最强大的后门
+- - '###'
+  - 密码学（Cryptography）
+- - '###'
+  - 密码学（Cryptonomicon）
+- - '###'
+  - 加密周期（Crypto period）
+- - '###'
+  - 加密变量（Crypto variable）
+- - '###'
+  - 加密大战（Crypto wars）
+- - '###'
+  - 生物悬浮（Cryptobiosis）
+- - '###'
+  - 28 加密周期
+- - '###'
+  - 加密货币（Cryptocurrency）
+- - '###'
+  - 密码（Crypto-Gram）
+- - '###'
+  - C
+- - '###'
+  - 密码学（Cryptography）
+- - '###'
+  - 密码学体系（Cryptology）
+- - '##'
+  - 隐睾丸症 (Cryptorchidism)
+- - '##'
+  - 密码病毒学 (Cryptovirology)
+- - '##'
+  - CRYPTREC
+- - '###'
+  - CRYPTREC 推荐算法
+- - '##'
+  - CSIDH（同源超奇异同映射迪菲-海尔曼）
+- - '##'
+  - C
+- - '##'
+  - CTF (夺旗赛)
+- - '##'
+  - 立方体攻击 (Cube attack)
+- - '####'
+  - 立方体攻击何时有效
+- - '##'
+  - 差分密码分析
+- - '##'
+  - 迪菲-赫尔曼
+- - '##'
+  - 披露
+- - '##'
+  - 离散对数问题
+- - '##'
+  - 区分器
+- - '##'
+  - 分布式随机性
+- - '##'
+  - Dolev–Yao 模型
+- - '##'
+  - 双棘轮
+- - '###'
+  - 单棘轮
+- - '###'
+  - 龙鳞 (Dragonfly)
+- - '##'
+  - DRBG (确定性随机生成器)
+- - '##'
+  - DSA (数字签名)
+- - '##'
+  - DVB-CSA
+- - '###'
+  - E
+- - '###'
+  - E0
+- - '##'
+  - ECB (电子密码)
+- - '##'
+  - ECC
+- - '###'
+  - 38 DVB-CSA
+- - '###'
+  - Eve
+- - '###'
+  - Elliptic (椭圆曲线)
+- - '###'
+  - Ed5519
+- - '###'
+  - 密码本
+- - '###'
+  - ECDLP (椭圆曲线离散数问题)
+- - '###'
+  - ECDSA (椭圆曲线数字签名)
+- - '###'
+  - ECIES (椭圆曲线集成加密)
+- - '###'
+  - Ed25519
+- - '###'
+  - EdDSA
+- - '###'
+  - EKMS (电子密钥管理)
+- - '###'
+  - 40 Ed25519
+- - '###'
+  - ElGamal
+- - '###'
+  - Elligator
+- - '###'
+  - Enigma
+- - '###'
+  - Eurocrypt
+- - '###'
+  - 密码过程
+- - '##'
+  - F
+- - '###'
+  - 密钥托管 (Key escrow)
+- - '###'
+  - 密钥管理 (Key management)
+- - '###'
+  - 密钥封装 (Key wrapping)
+- - '###'
+  - 格式保留 (Format)
+- - '###'
+  - FIPS 140-2
+- - '###'
+  - FIPS 140-3
+- - '###'
+  - Fialka (Фиалка)
+- - '###'
+  - Feistel 网络
+- - '###'
+  - FOX
+- - '##'
+  - G
+- - '###'
+  - GNFS (通用数域筛)
+- - '###'
+  - Grain
+- - '###'
+  - Gröbner basis
+- - '###'
+  - Group signature
+- - '###'
+  - Grover’s algorithm
+- - '##'
+  - H
+- - '###'
+  - H (Hasty)
+- - '###'
+  - HFE (Hidden Field Equations)
+- - '###'
+  - HMAC
+- - '###'
+  - Hash function
+- - '###'
+  - Hash-based MAC
+- - '###'
+  - Heartbleed
+- - '###'
+  - Homomorphic encryption
+- - '###'
+  - Hedged signature
+- - '###'
+  - HSM (硬件模块)
+- - '###'
+  - HASTY (Hasty)
+- - '###'
+  - HASTY PUDDING CIPHER
+- - '###'
+  - HTTP/3
+- - '##'
+  - I
+- - '###'
+  - I (集成加密)
+- - '##'
+  - J
+- - '###'
+  - 'J: 密码学 (JoC)'
+- - '##'
+  - K
+- - '###'
+  - KASUMI
+- - '###'
+  - Keccak
+- - '###'
+  - KeeLoq
+- - '###'
+  - KEM (密钥封装机制)
+- - '###'
+  - Kerberos
+- - '###'
+  - Kupyna (Купина)
+- - '##'
+  - L
+- - '###'
+  - L-Massey (Lai–Massey)
+- - '###'
+  - Leakage-resilient cryptography (抗泄露加密)
+- - '##'
+  - M
+- - '###'
+  - MASH (模算术安全哈希)
+- - '###'
+  - MAC (message authentication code)
+- - '###'
+  - McEliece 加密方案
+- - '###'
+  - MD4
+- - '###'
+  - MD5
+- - '###'
+  - MDC-2)
+- - '###'
+  - Mersenne twister (森旋转算法)
+- - '###'
+  - Miller-Rabin
+- - '###'
+  - MINERVA
+- - '##'
+  - N
+- - '###'
+  - NIST (美国标准)
+- - '###'
+  - NBS (国家标准局)
+- - '###'
+  - NIZK (非交互零知识)
+- - '###'
+  - Noise (随机数)
+- - '##'
+  - O
+- - '###'
+  - O (椭圆曲线)
+- - '###'
+  - OCB (偏移密码)
+- - '###'
+  - OAEP (最优填充)
+- - '###'
+  - ORAM (盲点访问)
+- - '###'
+  - OPAQUE
+- - '##'
+  - P
+- - '###'
+  - Paillier
+- - '###'
+  - Pairing (配对)
+- - '###'
+  - Paradigm (范式)
+- - '###'
+  - PRF (伪随机函数)
+- - '##'
+  - R
+- - '###'
+  - RSA
+- - '###'
+  - R
+- - '###'
+  - Rabin 加系统
+- - '###'
+  - Range proof (范围证明)
+- - '###'
+  - Rainbow tables (彩虹表)
+- - '###'
+  - Related-key attack (相关密钥攻击)
+- - '###'
+  - Research papers (研究论文)
+- - '###'
+  - Rumba20
+- - '##'
+  - S
+- - '###'
+  - S (S盒)
+- - '###'
+  - S (安全)
+- - '###'
+  - Scalar (标量)
+- - '###'
+  - SAEP (Simplified OAEP)
+- - '###'
+  - Salsa20
+- - '###'
+  - Sandwich attack (三明治攻击)
+- - '###'
+  - S-box (S盒)
+- - '###'
+  - scrypt
+- - '###'
+  - Searchable encryption
+- - '###'
+  - secp256k1
+- - '###'
+  - sci.crypt
+- - '###'
+  - Scrambler (扰码器)
+- - '##'
+  - T
+- - '###'
+  - T (夺旗赛)
+- - '##'
+  - Q
+- - '###'
+  - QUIC (Quick UDP Internet Connections)
+- - '##'
+  - W
+- - '###'
+  - W (工作证明)
+- - '##'
+  - 多项式复杂度
+- - '##'
+  - 破坏后安全性
+- - '##'
+  - 后量子密码学
+- - '###'
+  - 深入研究后量子
+- - '###'
+  - 后量子 RSA
+- - '##'
+  - 预测抵抗
+- - '##'
+  - 原像
+- - '##'
+  - PRESENT
+- - '##'
+  - 隐私信息检索 (PIR)
+- - '##'
+  - . . . . 的证明
