@@ -1,0 +1,937 @@
+<p><span id="part0000.xhtml"></span></p>
+<div id="part0000.xhtml#aid-1">
+<p><span id="part0000.xhtml#_Toc424077738"><span style=" font-size:2.2rem; font-weight:bold">PHP</span></span></p>
+<p><span style=" font-size:2.2rem; font-weight:bold"> </span></p>
+<p><span id="part0000.xhtml#_Toc424077739"><span style=" font-size:1.8rem; font-weight:bold; font-style:italic">Learn PHP and MySQL with the Ultimate Beginners Crash Course In No Time!</span></span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; font-style:italic"> </span></p>
+<h1 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"></h1>
+<div style="page-break-after:always">
+
+</div>
+<br />
+<span id="part0000.xhtml#_Toc380314684"></span><span id="part0000.xhtml#_Toc380588558"></span><span id="part0000.xhtml#_Toc381365466"></span><span id="part0000.xhtml#_Toc381365717"></span><span id="part0000.xhtml#_Toc424077740"><span style=" font-size:1.3rem; font-weight:bold">Table Of Contents</span></span>
+</h1>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span id="part0000.xhtml#toc"></span><a href="#part0000.xhtml#_Toc424077741"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">Introduction</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077742"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">Chapter 1: Introduction to PHP</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077743"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">Why You Should Learn PHP</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077744"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">Setting Up PHP on Your Computer</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077745"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">Chapter 2: MySQL</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077746"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">So What Is MySQL Exactly?</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077747"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">MySQL vs. PostgreSQL</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077748"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">Do you need to learn MySQL?</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077749"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">Chapter 3: Syntax, Comments, Case Sensitivity, New Line, and Forms</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077750"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">Syntax</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077751"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">Comments</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077752"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">Case Sensitivity</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077753"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">New Line</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077754"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">Dealing with Forms</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077755"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">Chapter 4: Arrays</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077756"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">How to Create an Array</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077757"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">The Square Bracket Syntax</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077758"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">Some of the Most Commonly Used Array Functions</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077759"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">Chapter 5: Conditional Statements</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077760"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">The If Statement</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077761"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">The If… Else Statement</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077762"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">The If… Else if… Else Statement</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077763"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">The Switch Statement</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077764"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">The Break Statement</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077765"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">The Continue Statement</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077766"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">Chapter 6: Numbers and Mathematical Operations</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077767"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">Mathematical Operators</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077768"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">The Order of Operations</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077769"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">Increments and Decrements</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077770"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">Built-In Higher Mathematical Functions</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077771"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">Formatting Numbers</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077772"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">Chapter 7: Opening, Reading, Writing, and Closing Files</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077773"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">Opening and Closing Files</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077774"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">Reading Files</span></a></p>
+<p><a href="#part0000.xhtml#_Toc424077775"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">Writing Files</span></a></p>
+<p><a href="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">Conclusion</span></a></p>
+<h1 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"></h1>
+<div style="page-break-after:always">
+
+</div>
+<br />
+<span id="part0000.xhtml#_TOC753"></span><span id="part0000.xhtml#_Toc380314685"></span><span id="part0000.xhtml#_Toc381365718"></span><span id="part0000.xhtml#_Toc424077741"><span style=" font-size:1.3rem; font-weight:bold">Introduction</span></span>
+</h1>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">I want to thank you and congratulate you for downloading the book, “PHP: Learn PHP and MySQL with the Ultimate Beginners Crash Course In No Time!”</span></p>
+<p><span style=" font-size:1.0rem">This book contains proven steps and strategies on how to create codes using the correct syntax, keywords, and punctuation marks. It also provides tips on how to correctly use arrays and conditional statements. </span></p>
+<p><span style=" font-size:1.0rem">To be able to make full use of its applications, you will also learn how to perform mathematical operations. You will also learn how to open, read, write, and close files in PHP.</span></p>
+<p><span style=" font-size:1.0rem">There are sample programs that can serve as your guidelines when writing your code. This book also contains useful information about MySQL and PHP, including their features. It even discusses the differences between MySQL and PostgreSQL. </span></p>
+<p><span style=" font-size:1.0rem">Thanks again for downloading this book. I hope you enjoy it!</span></p>
+<div style="page-break-after:always">
+
+</div>
+<br />
+<span id="part0000.xhtml#_TOC1229"></span><span id="part0000.xhtml#_Toc380314686"></span><span id="part0000.xhtml#_Toc381365719"></span><span id="part0000.xhtml#_Toc424077742"><span style=" font-size:1.0rem; font-weight:bold ;letter-spacing:0.25rem"></span><span style=" font-size:1.0rem; font-weight:bold"> Copyright 2015 by Olivia Dunham - All rights reserved.</span></span>
+</p>
+<p><span style=" font-size:1.0rem; font-weight:bold"> </span></p>
+<p><span style=" font-size:1.0rem">This document is geared towards providing exact and reliable information in regards to the topic and issue covered. The publication is sold with the idea that the publisher is not required to render accounting, officially permitted, or otherwise, qualified services. If advice is necessary, legal or professional, a practiced individual in the profession should be ordered. </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">- From a Declaration of Principles which was accepted and approved equally by a Committee of the American Bar Association and a Committee of Publishers and Associations. </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">In no way is it legal to reproduce, duplicate, or transmit any part of this document in either electronic means or in printed format. Recording of this publication is strictly prohibited and any storage of this document is not allowed unless with written permission from the publisher. All rights reserved. </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">The information provided herein is stated to be truthful and consistent, in that any liability, in terms of inattention or otherwise, by any usage or abuse of any policies, processes, or directions contained within is the solitary and utter responsibility of the recipient reader. Under no circumstances will any legal responsibility or blame be held against the publisher for any reparation, damages, or monetary loss due to the information herein, either directly or indirectly. </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Respective authors own all copyrights not held by the publisher. </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">The information herein is offered for informational purposes solely, and is universal as so. The presentation of the information is without contract or any type of guarantee assurance. </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">The trademarks that are used are without any consent, and the publication of the trademark is without permission or backing by the trademark owner. All trademarks and brands within this book are for clarifying purposes only and are the owned by the owners themselves, not affiliated with this document. </span></p>
+<h1 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"></h1>
+<div style="page-break-after:always">
+
+</div>
+<br />
+<span style=" font-size:1.3rem; font-weight:bold">Chapter 1: Introduction to PHP</span>
+</h1>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">PHP stands for PHP: Hypertext Preprocessor, an open source scripting language whose scripts are executed on the server. It is downloadable and available for free. It is ideal for web development and recommended for beginners. It can be embedded into HTML. In addition, it can be used for WordPress and Facebook.</span></p>
+<p><span style=" font-size:1.0rem">A PHP file can contain HTML, JavaScript, CSS, PHP code, and text. What differentiates PHP from client-side JavaScript is that the codes are executed on the server, which generates the HTML that is sent to the client. After running the script, the client receives the results even if he does not know the underlying code. It is possible to configure the web server for the purpose of processing HTML files using PHP.</span></p>
+<p><span style=" font-size:1.0rem">PHP is simple enough to be understood by newbies, but it also offers a lot of advanced features for advanced programmers. You can even start writing simple scripts within just a few hours. </span></p>
+<p><span style=" font-size:1.0rem">Note that although its creation is focused on server-side scripting, there is so much more you can do with it.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h2 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span id="part0000.xhtml#_Toc424077743"><span style=" font-size:1.2rem; font-weight:bold; font-style:italic">Why You Should Learn PHP</span></span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">You may think that learning PHP is no longer necessary if you are adept at using JavaScript. However, JavaScript is actually much limited compared to PHP. JavaScript runs in the client or browser, which means that it only knows what occurs in your browser and the websites that you visit.</span></p>
+<p><span style=" font-size:1.0rem">On the other hand, PHP runs on the same computer or server as the website that you go to. It has access to every file and information on that computer, which enables it to create custom HTML pages that it sends to your browser, run tasks, perform calculations, and handle cookies from that website.</span></p>
+<p><span style=" font-size:1.0rem">PHP can open, create, write, read, close, and delete files on the server. It can generate page content, collect form data, and send and receive cookies. It can also delete, add, and modify data in the database. In addition, it can encrypt data as well as control user access.</span></p>
+<p><span style=" font-size:1.0rem">With PHP, you can output PDF files, images, and Flash movies. You are not limited to just HTML. You can even output texts, such as XML and XHTML. In other words, PHP can practically do anything. Since it is focused on server-side scripting, it can do anything that other CGI programs can do and more. </span></p>
+<p><span style=" font-size:1.0rem">PHP scripts are mainly used in the following areas:</span></p>
+<ul>
+<li><span style=" font-size:1.0rem">Server-side scripting.</span></li>
+</ul>
+<p><span style=" font-size:1.0rem">It is the primary target field for PHP. To make it work, you have to use a PHP parser, a web browser, and a web server. You can have to run the web server that has an installed PHP. You can use the web browser to access the PHP program and view the PHP page. If you have just started experimenting with PHP, you can do all of these on your computer.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<ul>
+<li><span style=" font-size:1.0rem">Command line scripting.</span></li>
+</ul>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Even if you do not have a browser or a server, you can still run PHP. You just need to have a PHP parser. It is recommended for scripts that are executed regularly using Task Scheduler for Windows or cron for Linux. You can also use these scripts for simple text processing.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<ul>
+<li><span style=" font-size:1.0rem">Creating desktop applications</span></li>
+</ul>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">While it is true that PHP is not the number one choice for creating desktop applications with graphical user interfaces, you can still use it if you want to include advanced features in your applications. You can use PHP-GTK to create such client-side applications. Also, you can write cross-platform applications. PHP-GTK is actually a PHP extension and it is not available in the primary distribution.</span></p>
+<p><span style=" font-size:1.0rem">You can use PHP on any major operating system, including Unix, Linux, Microsoft Windows, RISC OS, and Mac OS X. PHP is also supported by majority of the web servers that are popular today, such as Apache and IIS. Any web server that can use FastCGI PHP binary, such as nginx and lighttpd can also use PHP. PHP can serve as a CGI processor or a module.</span></p>
+<p><span style=" font-size:1.0rem">You are free to choose any web server and operating system with PHP. Moreover, you can choose object oriented programming, procedural programming, or a combination of both. PHP can autogenerate your files and save them in your file system rather than printing them out.</span></p>
+<p><span style=" font-size:1.0rem">One of the main advantages of PHP is that it supports a variety of databases. It is very easy to write a database-enabled web page using a database specific extension or an abstraction layer, such as PDO. You can also connect to a database that supports the Open Database Connection standard through the ODBC extension.</span></p>
+<p><span style=" font-size:1.0rem">What’s more, PHP has support for communication with other services via protocols such as IMAP, LDAP, SNMP, POP3, NNTP, COM, and HTTP. You can even interact and open raw network sockets using a protocol of your choice. PHP supports Java installation as well as WDDX data exchange between all programming languages.</span></p>
+<p><span style=" font-size:1.0rem">PHP also features text processing, including Perl Compatible Regular Expressions and other tools for parsing and accessing XML files. PHP standardizes XML extensions as well as adds XML Reader, XML Writer, and Simple XML support. PHP also has added PECL extensions, such as XDebug.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h2 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span id="part0000.xhtml#_Toc424077744"><span style=" font-size:1.2rem; font-weight:bold; font-style:italic">Setting Up PHP on Your Computer</span></span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">In order to begin using PHP, you have to look for a web host that supports MySQL and PHP. You can also install a web server and then install MySQL and PHP. However, if your server already supports PHP, then you no longer have to do the above instructions. You simply have to create .php files and put them in your direction. The server will then parse them automatically. There is no more need for you to compile or install anything. Majority of the web hosts today actually support PHP because it is free.</span></p>
+<h1 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"></h1>
+<div style="page-break-after:always">
+
+</div>
+<br />
+<span id="part0000.xhtml#_TOC1264"></span><span id="part0000.xhtml#_Toc424077745"><span style=" font-size:1.3rem; font-weight:bold">Chapter 2: MySQL</span></span>
+</h1>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">MySQL is an open source Relational Database Management System (RDBMS) that is available for free. It makes use of Structured Query Language (SQL), which is the most commonly used language for accessing, managing, and adding content in databases. It is also known for its proven reliability, quick processing, flexibility, and ease of use. MySQL is a crucial part of nearly every open source PHP application. Some of the most popular PHP/MySQL-based scripts include Joomla, phpBB, and osCommerce.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h2 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span id="part0000.xhtml#_Toc424077746"><span style=" font-size:1.2rem; font-weight:bold; font-style:italic">So What Is MySQL Exactly?</span></span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">To understand what MySQL is, you have to know what a computer database is. Essentially, a computer database is a collection of data. MySQL and other specialized database software are simply programs that allow users to store and retrieve data efficiently.</span></p>
+<p><span style=" font-size:1.0rem">Specialized database software programs are used to avoid experiencing problems with storing and retrieving data. For instance, if you save your files using no-brainer file names, such as </span><span style=" font-size:1.0rem; font-style:italic">a.doc</span><span style=" font-size:1.0rem">, </span><span style=" font-size:1.0rem; font-style:italic">b.doc</span><span style=" font-size:1.0rem">, and </span><span style=" font-size:1.0rem; font-style:italic">c.doc</span><span style=" font-size:1.0rem">, you will have a hard time looking for your files when you need them. You need a more efficient method for data storage.</span></p>
+<p><span style=" font-size:1.0rem">A database is a computer software program that is meant to store huge amounts of data. It is basically a structured collection of data that can be anything from picture galleries to shopping lists to corporate network information. With database software, you can keep lists that contain vital information. </span></p>
+<p><span style=" font-size:1.0rem">For instance, if you are running a store, using a database will help you keep everything organized. You can create a list of your customers and their addresses. If you need to obtain information from a particular customer, there is no more need for you to check your data one by one.</span></p>
+<p><span style=" font-size:1.0rem">In order to access, process, and add data stored in your database, you need a database management system like MySQL Server. Because computers are efficient at handling huge amounts of data, you can greatly benefit from database management systems. They are ideal for computing, as part of applications, and as standalone units.</span></p>
+<p><span style=" font-size:1.0rem">MySQL databases are also relational. They store data in separate tables instead of storing all of the data in a single storeroom. Logical models with objects such as tables, rows, columns, views, and databases offer flexible programming environments. As a user, you can create your own rules with regard to the relationships between data fields, including one-to-many, one-to-one, unique, optional, required, and pointers between tables. Your database then enforces such rules so your application does not see duplicate, inconsistent, mission, orphan, or outdated data.</span></p>
+<p><span style=" font-size:1.0rem">SQL in MySQL actually stands for Structured Query Language. It is defined by the ANSI/ISO SQL Standard, which has been in existent since 1986. It is the most well-known standardized language for accessing databases. You may directly enter SQL to perform certain actions such as generating reports; embed SQL statements into codes that were created using other languages; or use language-specific application programming interfaces (APIs) that conceal SQL.</span></p>
+<p><span style=" font-size:1.0rem">MySQL database servers are fast, scalable, and reliable. They are also easy to use, which is why they can be used by beginners. They can run well on desktops or laptops, alongside other web servers and applications. They do not require much attention, which make them easy to maintain. You can also adjust your settings to make the most of the available memory, I/O capacity, and CPU power if you use a machine specifically for MySQL.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h2 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span id="part0000.xhtml#_Toc424077747"><span style=" font-size:1.2rem; font-weight:bold; font-style:italic">MySQL vs. PostgreSQL</span></span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">When it comes to open source relational database management systems, a lot of people experience difficulty choosing between MySQL and PostgreSQL. MySQL is the most well-known and commonly used RDBMS while PostgreSQL is the most advanced open source objective RDBMS. Both are excellent solutions that are comparable to proprietary database software.</span></p>
+<p><span style=" font-size:1.0rem">PostgreSQL, also referred to as Postgres, is an object-relational database management system (ORDBMS) that focuses on standards-compliance and extensibility. It stores data, supports the best practices, and allows for retrieval. It can also handle workloads, including single-machine applications and Internet-facing applications.</span></p>
+<p><span style=" font-size:1.0rem">Many users presume MySQL to have fewers features yet faster than PostgreSQL. Conversely, they presume PostgreSQL to be densely featured and similar to Oracle. Developers prefer MySQL for software projects due to its ease of use and speed, but many developers who have a background on SQL Server and Oracle also use PostgreSQL.</span></p>
+<p><span style=" font-size:1.0rem">MySQL has a couple of layers, a layer for several storage engines and an upper layer. PostgreSQL, on the other hand, has just one storage engine. Remember that storage engines mostly differ in terms of performance and functionality. Depending on what environment your database system runs in, you can optimize it.</span></p>
+<p><span style=" font-size:1.0rem">Some of the most significant features of PostgreSQL include TOAST data compression, parameterized and static SQL executor, improved cache management, large scalability, asynchronous commit, and advanced cost-based optimizer. PostgreSQL has the ability to decompress and compress data using a speedy compression scheme that allows it to fit data into a specific disk space. Compressing data is great because it saves disk space as well as reads data faster.</span></p>
+<p><span style=" font-size:1.0rem">Some of the core features of MySQL include a broad ANSI SQL 99 subset and extensions, table partitioning through LIST, SET, HASH, and RANGE, network protocol compression, built-in replication though row-change events or statements, triggers, SSL support, cursors, stored procedures, updateable views, and Unicode support.</span></p>
+<p><span style=" font-size:1.0rem">If you are a webmaster who does not write programs for your website, you may not find the differences between MySQL and PostgreSQL to be such a big deal. Your concerns may be mainly about your web host having database software that you need for your application. In general, if you use CMS or any other popular software for blogging, you can expect it to be MySQL. Nearly all commercial web hosts have MySQL as part of their hosting packages.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h2 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span id="part0000.xhtml#_Toc424077748"><span style=" font-size:1.2rem; font-weight:bold; font-style:italic">Do you need to learn MySQL?</span></span><span style=" font-size:1.2rem; font-weight:bold; font-style:italic"> </span></h2>
+<p><span style=" font-size:1.0rem">Average webmasters do not need to study SQL or MySQL because the software they use is most likely to do the storing and retrieving of data. They just have to learn how to use their software. Think of MySQL and similar databases as car engines. There is really no need for you to learn how to design car engines just to be able to use cars. Similarly, there is no need for you to learn how to directly read and write MySQL databases to be able to use blogging software.</span></p>
+<p><span style=" font-size:1.0rem">On the other hand, if you are a programmer, you need to study SQL to be able to write computer programs that access MySQL and other SQL databases. Of course, you also need to learn a suitable programming language. If you are wondering if you have to be a programmer to become a webmaster, the answer is no. You can be a webmaster without knowing how to program. You can create a website by manually coding it in HTML.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h1 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"></h1>
+<div style="page-break-after:always">
+
+</div>
+<br />
+<span id="part0000.xhtml#_TOC1299"></span><span id="part0000.xhtml#_Toc380314688"></span><span id="part0000.xhtml#_Toc381365721"></span><span id="part0000.xhtml#_Toc424077749"><span style=" font-size:1.3rem; font-weight:bold">Chapter 3: Syntax, Comments, Case Sensitivity, New Line, and Forms</span></span>
+</h1>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h2 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span id="part0000.xhtml#_Toc424077750"><span style=" font-size:1.2rem; font-weight:bold; font-style:italic">Syntax</span></span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">You can place PHP scripts anywhere in you document. They generally begin with </span><span style=" font-size:1.0rem; font-style:italic">&lt;?php</span><span style=" font-size:1.0rem"> and end with </span><span style=" font-size:1.0rem; font-style:italic">?&gt;:</span><span style=" font-size:1.0rem">. Their file extension is </span><span style=" font-size:1.0rem; font-style:italic">.php</span><span style=" font-size:1.0rem"> and they normally contain PHP scripting codes and HTML tags. Do not forget to use a semicolon (;) to end a PHP statement.</span></p>
+<p><span style=" font-size:1.0rem">Consider the following example of a PHP code:</span></p>
+<p><span style=" font-size:1.0rem">&lt;?php</span></p>
+<p><span style=" font-size:1.0rem">echo “Testing code”;</span></p>
+<p><span style=" font-size:1.0rem">?&gt;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">If you run this code, you will get an output of:</span></p>
+<p><span style=" font-size:1.0rem">Testing code</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h2 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span id="part0000.xhtml#_Toc424077751"><span style=" font-size:1.2rem; font-weight:bold; font-style:italic">Comments</span></span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Comments are lines that are not executed or read as part of the program. Their sole purpose is to be read by users who may need additional information. You can include comments in your program if you want other people to gain a better understanding of it or you want to be reminded of what you did. In case you decide to look back at your program after a few years, your comments can be helpful. They can remind you about your thoughts during the time when you created your code.</span></p>
+<p><span style=" font-size:1.0rem">Consider the following example:</span></p>
+<p><span style=" font-size:1.0rem">&lt;?php</span></p>
+<p><span style=" font-size:1.0rem"># This is a single line comment</span></p>
+<p><span style=" font-size:1.0rem">//This is a single line comment</span></p>
+<p><span style=" font-size:1.0rem">/* </span></p>
+<p><span style=" font-size:1.0rem">This is a </span></p>
+<p><span style=" font-size:1.0rem">multiple line </span></p>
+<p><span style=" font-size:1.0rem">comment</span></p>
+<p><span style=" font-size:1.0rem">*/</span></p>
+<p><span style=" font-size:1.0rem">//This is a comment that leaves out a part of a code line</span></p>
+<p><span style=" font-size:1.0rem">$w = 2 /* + 10 */ + 3;</span></p>
+<p><span style=" font-size:1.0rem">echo $w;</span></p>
+<p><span style=" font-size:1.0rem">?&gt;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">If you run this code, you will get an output of:</span></p>
+<p><span style=" font-size:1.0rem">5</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h2 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span id="part0000.xhtml#_Toc424077752"><span style=" font-size:1.2rem; font-weight:bold; font-style:italic">Case Sensitivity</span></span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Functions, keywords, and classes are not case sensitive in PHP. </span></p>
+<p><span style=" font-size:1.0rem">Consider this example:</span></p>
+<p><span style=" font-size:1.0rem">&lt;?php</span></p>
+<p><span style=" font-size:1.0rem">echo “Testing code ”;</span></p>
+<p><span style=" font-size:1.0rem">ECHO “Testing code ”;</span></p>
+<p><span style=" font-size:1.0rem">EcHo “Testing code ”;</span></p>
+<p><span style=" font-size:1.0rem">?&gt;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">If you run this code, you will get an output of:</span></p>
+<p><span style=" font-size:1.0rem">Testing code Testing code Testing code</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">However, variable names are case sensitive in PHP.</span></p>
+<p><span style=" font-size:1.0rem">Take a look at this example:</span></p>
+<p><span style=" font-size:1.0rem">&lt;?php</span></p>
+<p><span style=" font-size:1.0rem">$color = “blue”;</span></p>
+<p><span style=" font-size:1.0rem">echo “The sky is ” . $color . “\n“;</span></p>
+<p><span style=" font-size:1.0rem">echo “The sky is “ . $coLOR . “\n“;</span></p>
+<p><span style=" font-size:1.0rem">echo “The sky is “ . $COLOR . “\n“;</span></p>
+<p><span style=" font-size:1.0rem">?&gt;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">If you run this code, you will get an output of:</span></p>
+<p><span style=" font-size:1.0rem">The sky is blue </span></p>
+<p><span style=" font-size:1.0rem">The sky is </span></p>
+<p><span style=" font-size:1.0rem">The sky is</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">If you notice, the first statement is the only one that displays the value of the variable $color. This is because $color, $coLOR, and $COLOR are treated as different variables.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h2 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span id="part0000.xhtml#_Toc424077753"><span style=" font-size:1.2rem; font-weight:bold; font-style:italic">New Line</span></span></h2>
+<p><span style=" font-size:1.0rem">To create a new line, you simply have to place </span><span style=" font-size:1.0rem; font-style:italic">\n</span><span style=" font-size:1.0rem"> after your statement.</span></p>
+<p><span style=" font-size:1.0rem">Take a look at this example:</span></p>
+<p><span style=" font-size:1.0rem">&lt;?php</span></p>
+<p><span style=" font-size:1.0rem">echo “The sky is blue. \n“;</span></p>
+<p><span style=" font-size:1.0rem">echo “The rose is red. \n“;</span></p>
+<p><span style=" font-size:1.0rem">?&gt;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">If you run this code, you will get an output of:</span></p>
+<p><span style=" font-size:1.0rem">The sky is blue.</span></p>
+<p><span style=" font-size:1.0rem">The rose is red.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h2 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span id="part0000.xhtml#_Toc424077754"><span style=" font-size:1.2rem; font-weight:bold; font-style:italic">Dealing with Forms</span></span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Amongst the greatest advantages of PHP is that it can deal with HTML forms. Take note that form elements are automatically available in PHP scripts.</span></p>
+<h1 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"></h1>
+<div style="page-break-after:always">
+
+</div>
+<br />
+<span id="part0000.xhtml#_TOC1334"></span><span id="part0000.xhtml#_Toc380314689"></span><span id="part0000.xhtml#_Toc381365722"></span><span id="part0000.xhtml#_Toc424077755"><span style=" font-size:1.3rem; font-weight:bold">Chapter 4: Arrays</span></span>
+</h1>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">An array is a special variable that stores multiple values one at a time. It is basically a list of items. For instance, if you want to store a list of names, you can store them in single variables such as:</span></p>
+<p><span style=" font-size:1.0rem">$name1 = “Wendy”;</span></p>
+<p><span style=" font-size:1.0rem">$name2 = “Dawn”;</span></p>
+<p><span style=" font-size:1.0rem">$name3 = “David”;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">However, if you want to create a loop through these names, you need an array. Arrays can hold numerous values in one name and allow you to access these values when you refer to an index number.</span></p>
+<p><span style=" font-size:1.0rem">To put it in a much simpler perspective, an array is like a grocery list. It lets you store more than one item in one variable. When you create your grocery list, you can use separate pieces of paper for every item that you have to buy. These items are like the variables that you store.</span></p>
+<p><span style=" font-size:1.0rem">Using separate pieces of paper for your grocery items is unnecessary though. It is such a hassle and a total waste of paper. So, instead of doing this, you can just write down everything you need to buy in a single piece of paper. This single piece of paper is just like an array.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h2 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span id="part0000.xhtml#_Toc424077756"><span style=" font-size:1.2rem; font-weight:bold; font-style:italic">How to Create an Array</span></span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">The array ( ) function in PHP is used to create arrays. Any number of comma-separated </span><span style=" font-size:1.0rem; font-style:italic">key =&gt; value</span><span style=" font-size:1.0rem"> pairs can be used as arguments. For instance,</span></p>
+<p><span style=" font-size:1.0rem">array (</span></p>
+<p><span style=" font-size:1.0rem">              key1 =&gt; value1,</span></p>
+<p><span style=" font-size:1.0rem">key2 =&gt; value2,</span></p>
+<p><span style=" font-size:1.0rem">…</span></p>
+<p><span style=" font-size:1.0rem">)</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">The last array may or may not have a comma. Single-line arrays are actually better off without commas. So instead of writing </span><span style=" font-size:1.0rem; font-style:italic">array (1, 2, )</span><span style=" font-size:1.0rem">, you should write </span><span style=" font-size:1.0rem; font-style:italic">array (1, 2)</span><span style=" font-size:1.0rem">. Multi-line arrays, however, are preferred to have trailing commas because they make the addition of new elements easier.</span></p>
+<p><span style=" font-size:1.0rem">There are actually three types of arrays: associative, indexed, and multidimensional. Associative arrays are arrays that have named keys. Indexed arrays are arrays that have a numeric index. Multidimensional arrays are arrays that contain one or more arrays.</span></p>
+<p><span style=" font-size:1.0rem">The syntax for associative arrays is:</span></p>
+<p><span style=" font-size:1.0rem">array (key =&gt; value, key =&gt; value, etc.);</span></p>
+<p><span style=" font-size:1.0rem">For example:</span></p>
+<p><span style=" font-size:1.0rem">&lt;?php</span></p>
+<p><span style=" font-size:1.0rem">$price = array (“cantaloupes” =&gt; “2”, “grapes” =&gt; “3”, “strawberries” =&gt; “4”);</span></p>
+<p><span style=" font-size:1.0rem">echo “Cantaloupes cost “ . $price [‘oranges’] . “dollars each.”;</span></p>
+<p><span style=" font-size:1.0rem">?&gt;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">The syntax for index arrays is:</span></p>
+<p><span style=" font-size:1.0rem">array (value1, value2, etc.);</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">There are two ways on how you can write indexed arrays. You can allow the index to be automatically assigned or assign it manually.</span></p>
+<p><span style=" font-size:1.0rem">Take a look at this example of an automatically assigned index:</span></p>
+<p><span style=" font-size:1.0rem">$fruits = array (“apples”, “bananas”, “kiwis”);</span></p>
+<p><span style=" font-size:1.0rem">And here is an example of a manually assigned index:</span></p>
+<p><span style=" font-size:1.0rem">$fruits [0] = “apples”;</span></p>
+<p><span style=" font-size:1.0rem">$fruits [1] = “bananas”;</span></p>
+<p><span style=" font-size:1.0rem">$fruits [2] = “kiwis”;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">As for multidimensional array, here is an example of a two-dimensional array:</span></p>
+<p><span style=" font-size:1.0rem">&lt;?php</span></p>
+<p><span style=" font-size:1.0rem">$fruits = array (</span></p>
+<p><span style=" font-size:1.0rem">array (“apples”, 10, 6),</span></p>
+<p><span style=" font-size:1.0rem">array (“bananas”, 4, 5),</span></p>
+<p><span style=" font-size:1.0rem">array (“kiwis”, 11, 10)</span></p>
+<p><span style=" font-size:1.0rem">);</span></p>
+<p><span style=" font-size:1.0rem">?&gt;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">In PHP 5.4, </span><span style=" font-size:1.0rem; font-style:italic">array ( )</span><span style=" font-size:1.0rem"> can be replaced with </span><span style=" font-size:1.0rem; font-style:italic">[ ]</span><span style=" font-size:1.0rem">. This is called the short array syntax. For example:</span></p>
+<p><span style=" font-size:1.0rem">&lt;?php</span></p>
+<p><span style=" font-size:1.0rem">$name = array (</span></p>
+<p><span style=" font-size:1.0rem">              “Wendy” =&gt; “Dawn”,</span></p>
+<p><span style=" font-size:1.0rem">              “Dawn” =&gt; “Wendy”,</span></p>
+<p><span style=" font-size:1.0rem">);</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">can be written like this if you are using PHP 5.4:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">&lt;?php</span></p>
+<p><span style=" font-size:1.0rem">$name = [</span></p>
+<p><span style=" font-size:1.0rem">              “Wendy” =&gt; “Dawn”,</span></p>
+<p><span style=" font-size:1.0rem">              “Dawn” =&gt; “Wendy”,</span></p>
+<p><span style=" font-size:1.0rem">];</span></p>
+<p><span style=" font-size:1.0rem">?&gt;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">A string or an integer can be the key. The value can also be of any type. In addition, these key casts are expected to occur:</span></p>
+<p><span style=" font-size:1.0rem">Float. It is cast to an integer, truncating the fractional part. For example, the key </span><span style=" font-size:1.0rem; font-style:italic">9.7</span><span style=" font-size:1.0rem"> is going to be stored under </span><span style=" font-size:1.0rem; font-style:italic">9</span><span style=" font-size:1.0rem">.</span></p>
+<p><span style=" font-size:1.0rem">String. A string that contains a valid integer is cast to the integer type. For example, the key </span><span style=" font-size:1.0rem; font-style:italic">9</span><span style=" font-size:1.0rem"> is going to be stored under </span><span style=" font-size:1.0rem; font-style:italic">9</span><span style=" font-size:1.0rem"> while the key </span><span style=" font-size:1.0rem; font-style:italic">09</span><span style=" font-size:1.0rem"> is not going to be cast since it is not a valid decimal integer.</span></p>
+<p><span style=" font-size:1.0rem">Bool. It is also cast to an integer. For example, the key </span><span style=" font-size:1.0rem; font-style:italic">false</span><span style=" font-size:1.0rem"> is going to be stored under </span><span style=" font-size:1.0rem; font-style:italic">0</span><span style=" font-size:1.0rem"> while the key </span><span style=" font-size:1.0rem; font-style:italic">true</span><span style=" font-size:1.0rem"> is going to be stored under </span><span style=" font-size:1.0rem; font-style:italic">1</span><span style=" font-size:1.0rem">.</span></p>
+<p><span style=" font-size:1.0rem">Null. It is cast to an empty string. For example, the key </span><span style=" font-size:1.0rem; font-style:italic">null </span><span style=" font-size:1.0rem">is going to be stored under </span><span style=" font-size:1.0rem; font-style:italic">“ “</span><span style=" font-size:1.0rem">.</span></p>
+<p><span style=" font-size:1.0rem">Objects and arrays can never be used as keys. If you try to use them as keys, you will get an </span><span style=" font-size:1.0rem; font-style:italic">illegal offset type</span><span style=" font-size:1.0rem"> warning.</span></p>
+<p><span style=" font-size:1.0rem">If you declare multiple elements with the same key, the last one is going to be used while the others are going to be overwritten.</span></p>
+<p><span style=" font-size:1.0rem">Consider the following example:</span></p>
+<p><span style=" font-size:1.0rem">&lt;?php</span></p>
+<p><span style=" font-size:1.0rem">$array = array (</span></p>
+<p><span style=" font-size:1.0rem">              1 =&gt; “w”,</span></p>
+<p><span style=" font-size:1.0rem">              “1” =&gt; “x”,</span></p>
+<p><span style=" font-size:1.0rem">              1.5 =&gt; “y”,</span></p>
+<p><span style=" font-size:1.0rem">              true =&gt; “z”,</span></p>
+<p><span style=" font-size:1.0rem">);</span></p>
+<p><span style=" font-size:1.0rem">var_dump ($array);</span></p>
+<p><span style=" font-size:1.0rem">?&gt;</span></p>
+<p><span style=" font-size:1.0rem">If you run this code, you will get an output of:</span></p>
+<p><span style=" font-size:1.0rem">array (1)  {</span></p>
+<p><span style=" font-size:1.0rem">              [1] =&gt;</span></p>
+<p><span style=" font-size:1.0rem">              string (1) “z”</span></p>
+<p><span style=" font-size:1.0rem">}</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">This is the resulting output because all the keys are cast to 1. For every new element, the value is overwritten, which is why the value “</span><span style=" font-size:1.0rem; font-style:italic">z</span><span style=" font-size:1.0rem">” is left. String and integer keys can be contained in PHP arrays all at once since PHP cannot differentiate associative and indexed arrays.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h2 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span id="part0000.xhtml#_Toc424077757"><span style=" font-size:1.2rem; font-weight:bold; font-style:italic">The Square Bracket Syntax</span></span></h2>
+<p><span style=" font-size:1.0rem">The </span><span style=" font-size:1.0rem; font-style:italic">array [key]</span><span style=" font-size:1.0rem"> syntax can be used to access array elements. Both curly braces and square brackets can be used interchangeably if you want to access array elements. Since PHP 5.4, you can array deference the results of method calls and function calls directly. In the earlier versions, you can only array deference with the use of a temporary variable. Since PHP 5.5, you can already array deference array literals. Then again, take note that you cannot access array keys that have not been defined just as you cannot access any other undefined variables. If you do, you will get an E_NOTICE-level error message and a NULL output.</span></p>
+<p><span style=" font-size:1.0rem">When it comes to creating or modifying arrays using square bracket syntax, you can explicitly set values in them. You can do this by assigning values to the arrays. The keys should be specified in brackets or omitted to result in empty brackets </span><span style=" font-size:1.0rem; font-style:italic">([])</span><span style=" font-size:1.0rem">. If you wish to change a value, you can assign another value to the element through its key. If you wish to remove a value pair or key, you can use the </span><span style=" font-size:1.0rem; font-style:italic">unset ( )</span><span style=" font-size:1.0rem"> function.</span></p>
+<p><span style=" font-size:1.0rem">However, the array cannot be re-indexed. If you wish to </span><span style=" font-size:1.0rem; font-style:italic">remove and shift</span><span style=" font-size:1.0rem">, you can use the </span><span style=" font-size:1.0rem; font-style:italic">array_values ( )</span><span style=" font-size:1.0rem"> function to re-index the array. Keep in mind that if you do not specify any key, the maximum integer indices will be taken. This will result in the new key being the maximum value plus one. If there are no integer indices, the key is going to be zero. The maximum integer key does not have to exist in the array currently though. It only has to exist in the array again after the array gets re-indexed.</span></p>
+<p><span style=" font-size:1.0rem">Whenever you use a string literal array index, make sure that you do not forget to use quotes. Also, you should never write $foo[bar]. Instead, you should write $foo[‘bar’]. Even though it works, it is still wrong. If you notice, it uses an undefined constant instead of a string. </span><span style=" font-size:1.0rem; font-style:italic">Bar</span><span style=" font-size:1.0rem"> is the undefined constant while </span><span style=" font-size:1.0rem; font-style:italic">‘bar’</span><span style=" font-size:1.0rem"> is the string.</span></p>
+<h2 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span id="part0000.xhtml#_Toc424077758"><span style=" font-size:1.2rem; font-weight:bold; font-style:italic">Some of the Most Commonly Used Array Functions</span></span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">array_change_key_case – it changes a key’s case</span></p>
+<p><span style=" font-size:1.0rem">array_column – it returns the value from a column in an input array</span></p>
+<p><span style=" font-size:1.0rem">array_chunk – it splits arrays into chunks</span></p>
+<p><span style=" font-size:1.0rem">array_combine – it uses an array for value and another one for keys to create an array</span></p>
+<p><span style=" font-size:1.0rem">array_count_values – it counts an array’s values</span></p>
+<p><span style=" font-size:1.0rem">array_diff_assoc – it calculates the difference of arrays with an added index check</span></p>
+<p><span style=" font-size:1.0rem">array_diff_uassoc – it calculates the difference of arrays with an added index check using a callback function</span></p>
+<p><span style=" font-size:1.0rem">array_diff_key – it calculates the difference of arrays with keys</span></p>
+<p><span style=" font-size:1.0rem">array_diff_ukey – it calculates the difference of arrays with a callback function</span></p>
+<p><span style=" font-size:1.0rem">array_diff – it calculates the difference of arrays</span></p>
+<p><span style=" font-size:1.0rem">array_fill – it fills arrays with values</span></p>
+<p><span style=" font-size:1.0rem">array_fill_keys – it fills arrays with values but specifies the keys</span></p>
+<p><span style=" font-size:1.0rem">array_filter – it filters the elements of the array with a callback function</span></p>
+<p><span style=" font-size:1.0rem">array_intersect – it calculates array intersection</span></p>
+<p><span style=" font-size:1.0rem">array_keys – it returns the keys or key subsets of arrays</span></p>
+<p><span style=" font-size:1.0rem">array_key_exists – it verifies if the index or key exists in an array</span></p>
+<p><span style=" font-size:1.0rem">array_merge – it merges at least one array</span></p>
+<p><span style=" font-size:1.0rem">array_merge_recursive – it recursively merges at least two arrays</span></p>
+<p><span style=" font-size:1.0rem">array_multisort – it sorts multi-dimensional or multiple arrays</span></p>
+<p><span style=" font-size:1.0rem">array_pop – it pops elements off the ends of arrays</span></p>
+<p><span style=" font-size:1.0rem">array_pad – it pads arrays to a specific length with values</span></p>
+<p><span style=" font-size:1.0rem">array_product – it calculates the product of values</span></p>
+<p><span style=" font-size:1.0rem">array_rand – it randomly chooses at least one entry out of arrays</span></p>
+<p><span style=" font-size:1.0rem">array_push – it pushes at least one element towards the ends of arrays</span></p>
+<p><span style=" font-size:1.0rem">array_reduce – it iteratively reduces arrays to single values with callback functions</span></p>
+<p><span style=" font-size:1.0rem">array_replace – it replaces an element from a passed array into the first array</span></p>
+<p><span style=" font-size:1.0rem">array_search – it searches an array for a value and then returns the key</span></p>
+<p><span style=" font-size:1.0rem">array_reverse – it returns arrays in reverse order</span></p>
+<p><span style=" font-size:1.0rem">array_shift – it shifts elements off the start of arrays</span></p>
+<p><span style=" font-size:1.0rem">array_slice – it extracts slices of arrays</span></p>
+<p><span style=" font-size:1.0rem">array_splice – it removes part of an array and replaces it</span></p>
+<p><span style=" font-size:1.0rem">array_sum – it calculates the sum of values</span></p>
+<p><span style=" font-size:1.0rem">array_unique – it eliminates duplicate values</span></p>
+<p><span style=" font-size:1.0rem">array_values – it returns the value of the array</span></p>
+<p><span style=" font-size:1.0rem">array_unshift – it prepends at least one element to the start of the array</span></p>
+<p><span style=" font-size:1.0rem">array_walk – it applies functions supplied by the user to each member of the array</span></p>
+<p><span style=" font-size:1.0rem">asort – it sorts arrays as well as maintains index associations</span></p>
+<p><span style=" font-size:1.0rem">arsort – it sorts arrays in reverse order as well as maintains index associations</span></p>
+<p><span style=" font-size:1.0rem">array – it creates arrays</span></p>
+<p><span style=" font-size:1.0rem">count – it counts every element in the array</span></p>
+<p><span style=" font-size:1.0rem">compact – it creates arrays that contain values and variables</span></p>
+<p><span style=" font-size:1.0rem">current – it returns the current elements in arrays</span></p>
+<p><span style=" font-size:1.0rem">each – it returns the current keys and value pairs from arrays as well as advances the array cursors</span></p>
+<p><span style=" font-size:1.0rem">end – it sets the internal pointers of arrays to their last elements</span></p>
+<p><span style=" font-size:1.0rem">extract – it imports variables into their current symbol tables</span></p>
+<p><span style=" font-size:1.0rem">in_array – it verifies if values exist in arrays</span></p>
+<p><span style=" font-size:1.0rem">key_exists – it is another name for array_key_exists</span></p>
+<p><span style=" font-size:1.0rem">ksort – it sorts arrays by key</span></p>
+<p><span style=" font-size:1.0rem">krsort – it sorts arrays by key but in reverse order</span></p>
+<p><span style=" font-size:1.0rem">key – it fetches keys from arrays</span></p>
+<p><span style=" font-size:1.0rem">list – it assigns variables like they were arrays</span></p>
+<p><span style=" font-size:1.0rem">natsort – it sorts arrays through a natural order algorithm</span></p>
+<p><span style=" font-size:1.0rem">natcasesort – it sorts arrays though a natural order algorithm that is not case sensitive</span></p>
+<p><span style=" font-size:1.0rem">next – it advances internal array pointers</span></p>
+<p><span style=" font-size:1.0rem">prev – it rewinds internal array pointers</span></p>
+<p><span style=" font-size:1.0rem">pos – it is another term for current</span></p>
+<p><span style=" font-size:1.0rem">range – it creates arrays that contain a wide variety of elements</span></p>
+<p><span style=" font-size:1.0rem">rsort – it sorts arrays in reverse order</span></p>
+<p><span style=" font-size:1.0rem">reset – it sets internal pointers to their first element</span></p>
+<p><span style=" font-size:1.0rem">shuffle – it shuffles arrays</span></p>
+<p><span style=" font-size:1.0rem">sort – it sorts arrays</span></p>
+<p><span style=" font-size:1.0rem">sizeof – it is another term for count</span></p>
+<p><span style=" font-size:1.0rem">uasort – it sorts arrays using user-defined comparison functions as well as maintains index associations</span></p>
+<p><span style=" font-size:1.0rem">uksort – it sorts arrays by keys with user-defined comparison functions</span></p>
+<p><span style=" font-size:1.0rem">usort – it sorts arrays by values with user-defined comparison functions</span></p>
+<h1 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"></h1>
+<div style="page-break-after:always">
+
+</div>
+<br />
+<span id="part0000.xhtml#_TOC1369"></span><span id="part0000.xhtml#_Toc380314690"></span><span id="part0000.xhtml#_Toc381365723"></span><span id="part0000.xhtml#_Toc424077759"><span style=" font-size:1.3rem; font-weight:bold">Chapter 5: Conditional Statements</span></span>
+</h1>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Conditional statements are used for performing various actions for various conditions. Oftentimes, when you write a code, you aim to perform actions for specific purposes. In PHP, you can use these conditional statements:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Switch statement – it lets you choose a block of code to execute</span></p>
+<p><span style=" font-size:1.0rem">If statement – it lets you execute a code if the condition is true</span></p>
+<p><span style=" font-size:1.0rem">If… Else If… Else statement – it lets you specific a new condition for testing if the previous condition is false</span></p>
+<p><span style=" font-size:1.0rem">If… Else statement – it lets you execute a code if the condition is true, and another one if it is false</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h2 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span id="part0000.xhtml#_Toc424077760"><span style=" font-size:1.2rem; font-weight:bold; font-style:italic">The If Statement</span></span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">As mentioned above, the if statement lets you execute a code if your condition is found to be true. Its syntax is:</span></p>
+<p><span style=" font-size:1.0rem">if (condition)</span></p>
+<p><span style=" font-size:1.0rem">{</span></p>
+<p><span style=" font-size:1.0rem">              block of code;</span></p>
+<p><span style=" font-size:1.0rem">}</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Take a look at the following example:</span></p>
+<p><span style=" font-size:1.0rem">&lt;?php</span></p>
+<p><span style=" font-size:1.0rem">$time = date (“Hour”);</span></p>
+<p><span style=" font-size:1.0rem">If ($time &lt; “10”)</span></p>
+<p><span style=" font-size:1.0rem">{</span></p>
+<p><span style=" font-size:1.0rem">              echo “Good morning!”;</span></p>
+<p><span style=" font-size:1.0rem">}</span></p>
+<p><span style=" font-size:1.0rem">?&gt;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">If you run this code, you will get an output of:</span></p>
+<p><span style=" font-size:1.0rem">Good morning!</span></p>
+<p><span style=" font-size:1.0rem">if and only if the hour or time is less than 10.</span></p>
+<h2 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span id="part0000.xhtml#_Toc424077761"><span style=" font-size:1.2rem; font-weight:bold; font-style:italic">The If… Else Statement</span></span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">You can use the if… else statement to execute a code when the condition is found to be true, and then another code when the condition is found to be false. Its syntax is:</span></p>
+<p><span style=" font-size:1.0rem">if (condition)</span></p>
+<p><span style=" font-size:1.0rem">{</span></p>
+<p><span style=" font-size:1.0rem">              block of code to execute if the condition is true;</span></p>
+<p><span style=" font-size:1.0rem">}</span></p>
+<p><span style=" font-size:1.0rem">              else </span></p>
+<p><span style=" font-size:1.0rem">{</span></p>
+<p><span style=" font-size:1.0rem">              block of code to execute if the condition is false;</span></p>
+<p><span style=" font-size:1.0rem">}</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Consider the following example:</span></p>
+<p><span style=" font-size:1.0rem">&lt;?php</span></p>
+<p><span style=" font-size:1.0rem">$time = date (“Hour”);</span></p>
+<p><span style=" font-size:1.0rem">if ($time &lt; “10”)</span></p>
+<p><span style=" font-size:1.0rem">{</span></p>
+<p><span style=" font-size:1.0rem">              echo “Good morning!”;</span></p>
+<p><span style=" font-size:1.0rem">}</span></p>
+<p><span style=" font-size:1.0rem">              else</span></p>
+<p><span style=" font-size:1.0rem">{</span></p>
+<p><span style=" font-size:1.0rem">              echo “Good afternoon!”;</span></p>
+<p><span style=" font-size:1.0rem">}</span></p>
+<p><span style=" font-size:1.0rem">?&gt;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">If you run this code, you will get an output of:</span></p>
+<p><span style=" font-size:1.0rem">Good morning!</span></p>
+<p><span style=" font-size:1.0rem">if the time is less than 10. Otherwise, you will get an output of:</span></p>
+<p><span style=" font-size:1.0rem">Good afternoon!</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h2 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span id="part0000.xhtml#_Toc424077762"><span style=" font-size:1.2rem; font-weight:bold; font-style:italic">The If… Else if… Else Statement</span></span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">This statement is used to specify new conditions to test if the first condition is found to be false. Its syntax is:</span></p>
+<p><span style=" font-size:1.0rem">if (condition)</span></p>
+<p><span style=" font-size:1.0rem">{</span></p>
+<p><span style=" font-size:1.0rem">              block of code to execute if the condition is true;</span></p>
+<p><span style=" font-size:1.0rem">}</span></p>
+<p><span style=" font-size:1.0rem">              else if (condition)</span></p>
+<p><span style=" font-size:1.0rem">{</span></p>
+<p><span style=" font-size:1.0rem">              block of code to execute if the condition is true;</span></p>
+<p><span style=" font-size:1.0rem">}</span></p>
+<p><span style=" font-size:1.0rem">              else </span></p>
+<p><span style=" font-size:1.0rem">{</span></p>
+<p><span style=" font-size:1.0rem">              block of code to execute if the condition is false;</span></p>
+<p><span style=" font-size:1.0rem">}</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Take a look at the following example:</span></p>
+<p><span style=" font-size:1.0rem">&lt;?php</span></p>
+<p><span style=" font-size:1.0rem">$time = date (“Hour”);</span></p>
+<p><span style=" font-size:1.0rem">if ($time &lt; “10”)</span></p>
+<p><span style=" font-size:1.0rem">{</span></p>
+<p><span style=" font-size:1.0rem">              echo “Good morning!”;</span></p>
+<p><span style=" font-size:1.0rem">}</span></p>
+<p><span style=" font-size:1.0rem">              else if ($time &lt; “20”)</span></p>
+<p><span style=" font-size:1.0rem">{</span></p>
+<p><span style=" font-size:1.0rem">              echo “Good afternoon!”;</span></p>
+<p><span style=" font-size:1.0rem">}</span></p>
+<p><span style=" font-size:1.0rem">              else</span></p>
+<p><span style=" font-size:1.0rem">{</span></p>
+<p><span style=" font-size:1.0rem">              echo “Good night!”;</span></p>
+<p><span style=" font-size:1.0rem">}</span></p>
+<p><span style=" font-size:1.0rem">?&gt;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">If you run this code, you will get an output of:</span></p>
+<p><span style=" font-size:1.0rem">Good morning!</span></p>
+<p><span style=" font-size:1.0rem">if the time is less than 10. You will get an output of:</span></p>
+<p><span style=" font-size:1.0rem">Good afternoon!</span></p>
+<p><span style=" font-size:1.0rem">if the time is less than 20. Otherwise, you will get an output of:</span></p>
+<p><span style=" font-size:1.0rem">Good night!</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h2 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span id="part0000.xhtml#_Toc424077763"><span style=" font-size:1.2rem; font-weight:bold; font-style:italic">The Switch Statement</span></span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">It is used to perform actions depending on the given conditions. In PHP, there are many blocks of codes but you can use switch to choose a specific block of code that you want to execute. Its syntax is:</span></p>
+<p><span style=" font-size:1.0rem">switch (name) {</span></p>
+<p><span style=" font-size:1.0rem">              case label 1:</span></p>
+<p><span style=" font-size:1.0rem">                            block of code if name = label 1;</span></p>
+<p><span style=" font-size:1.0rem">                            break;</span></p>
+<p><span style=" font-size:1.0rem">              case label 2:</span></p>
+<p><span style=" font-size:1.0rem">                            block of code if name = label 2;</span></p>
+<p><span style=" font-size:1.0rem">                            break;</span></p>
+<p><span style=" font-size:1.0rem">              …</span></p>
+<p><span style=" font-size:1.0rem">              default:</span></p>
+<p><span style=" font-size:1.0rem">                            block of code if name is different from all the labels;</span></p>
+<p><span style=" font-size:1.0rem">}</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem; font-style:italic"> </span></p>
+<h2 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span id="part0000.xhtml#_Toc424077764"><span style=" font-size:1.2rem; font-weight:bold; font-style:italic">The Break Statement</span></span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem; font-style:italic">Break</span><span style=" font-size:1.0rem"> is used to prevent the block of code from automatically running into the succeeding case. </span><span style=" font-size:1.0rem; font-style:italic">Default</span><span style=" font-size:1.0rem"> is used if a match is not found. Consider the following example:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">&lt;?php</span></p>
+<p><span style=" font-size:1.0rem">$color = “pink”;</span></p>
+<p><span style=" font-size:1.0rem">switch ($color) </span></p>
+<p><span style=" font-size:1.0rem">{</span></p>
+<p><span style=" font-size:1.0rem">              case “pink”:</span></p>
+<p><span style=" font-size:1.0rem">                            echo “The color of the shirt is pink!”;</span></p>
+<p><span style=" font-size:1.0rem">                            break;</span></p>
+<p><span style=" font-size:1.0rem">              case “yellow”:</span></p>
+<p><span style=" font-size:1.0rem">                            echo “The color of the shirt is yellow!”;</span></p>
+<p><span style=" font-size:1.0rem">                            break;</span></p>
+<p><span style=" font-size:1.0rem">              case “purple”:</span></p>
+<p><span style=" font-size:1.0rem">                            echo “The color of the shirt is purple!”;</span></p>
+<p><span style=" font-size:1.0rem">                            break;</span></p>
+<p><span style=" font-size:1.0rem">              default:</span></p>
+<p><span style=" font-size:1.0rem">                            echo “The color of the shirt is neither pink, yellow, nor purple!”;</span></p>
+<p><span style=" font-size:1.0rem">}</span></p>
+<p><span style=" font-size:1.0rem">?&gt;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">If you run this code, you will get an output of:</span></p>
+<p><span style=" font-size:1.0rem">The color of the shirt is pink!</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">When writing your code, it is always a good idea to include a default case in your switch statements. Take note that the word </span><span style=" font-size:1.0rem; font-style:italic">case</span><span style=" font-size:1.0rem"> is not present before the word </span><span style=" font-size:1.0rem; font-style:italic">default</span><span style=" font-size:1.0rem"> because </span><span style=" font-size:1.0rem; font-style:italic">default</span><span style=" font-size:1.0rem"> is a special keyword.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h2 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span id="part0000.xhtml#_Toc424077765"><span style=" font-size:1.2rem; font-weight:bold; font-style:italic">The Continue Statement</span></span></h2>
+<p><span style=" font-size:1.0rem; font-style:italic">Continue</span><span style=" font-size:1.0rem"> is used to stop the current iteration of a loop. It halts, but does not terminate it. It is also placed inside the statement block that contains the code which the loop executes, just like </span><span style=" font-size:1.0rem; font-style:italic">break</span><span style=" font-size:1.0rem">. It is preceded by the conditional test. In a pass encountering continue statement, the next pass begins while skipping the rest of the loop code. For example:</span></p>
+<p><span style=" font-size:1.0rem">&lt;?php</span></p>
+<p><span style=" font-size:1.0rem">$array = array (2, 4, 6, 8, 10);</span></p>
+<p><span style=" font-size:1.0rem">foreach ($array as $value)</span></p>
+<p><span style=" font-size:1.0rem">{</span></p>
+<p><span style=" font-size:1.0rem">if ($value ==4) continue;</span></p>
+<p><span style=" font-size:1.0rem">echo “The value is $value &lt;br/&gt;”;</span></p>
+<p><span style=" font-size:1.0rem">}</span></p>
+<p><span style=" font-size:1.0rem">?&gt;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">If you run this code, you will get an output of:</span></p>
+<p><span style=" font-size:1.0rem">The value is 2</span></p>
+<p><span style=" font-size:1.0rem">The value is 4</span></p>
+<p><span style=" font-size:1.0rem">The value is 6</span></p>
+<p><span style=" font-size:1.0rem">The value is 10</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">In the above example, the loop displays the value of the array. When the condition becomes true, however, it skips the code and prints the next value.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h1 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span id="part0000.xhtml#_Toc424077766"><span style=" font-size:1.3rem; font-weight:bold">Chapter 6: Numbers and Mathematical Operations</span></span></h1>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">The data types </span><span style=" font-size:1.0rem; font-style:italic">integer</span><span style=" font-size:1.0rem"> and </span><span style=" font-size:1.0rem; font-style:italic">float</span><span style=" font-size:1.0rem"> are numbers and can be stored in variables.</span></p>
+<p><span style=" font-size:1.0rem">For example:</span></p>
+<p><span style=" font-size:1.0rem">$intvar = 5;</span></p>
+<p><span style=" font-size:1.0rem">$floatvar = 11.4;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">In PHP, values are automatically stored as the appropriate data types. You can also perform mathematical operations. You simply have to indicate the mathematical operations by using a mathematical operator and two numbers.</span></p>
+<p><span style=" font-size:1.0rem">For example, you can use the plus (+) sign operator.</span></p>
+<p><span style=" font-size:1.0rem">2 + 3</span></p>
+<p><span style=" font-size:1.0rem">You can also use variables.</span></p>
+<p><span style=" font-size:1.0rem">$var2 + $var3;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">If you want to use numbers in your mathematical operations, however, you should not enclose them in quotes when you assign them to variables. If you use quotes, you will set the numbers as character strings and you will not be able to perform mathematical operations on these character strings. Unlike other languages, PHP automatically converts strings to numbers.</span></p>
+<p><span style=" font-size:1.0rem">Consider the following example:</span></p>
+<p><span style=" font-size:1.0rem">$var1 = “2”;</span></p>
+<p><span style=" font-size:1.0rem">$var2 = 4;</span></p>
+<p><span style=" font-size:1.0rem">$total = $var1 + $var2;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">It is obviously not possible to add the two given numbers because </span><span style=" font-size:1.0rem; font-style:italic">$var1</span><span style=" font-size:1.0rem"> is a character string. Nevertheless, because string is automatically converted to a number in PHP, the numbers are added upon reaching the third statement. So if you use these statements, the strings will be converted and the numbers will be added.</span></p>
+<p><span style=" font-size:1.0rem">$var1 = “y”;</span></p>
+<p><span style=" font-size:1.0rem">$var2 = 4;</span></p>
+<p><span style=" font-size:1.0rem">$total = $var1 + $var2;</span></p>
+<p><span style=" font-size:1.0rem">Since </span><span style=" font-size:1.0rem; font-style:italic">y</span><span style=" font-size:1.0rem"> is not a number that can be converted in PHP, </span><span style=" font-size:1.0rem; font-style:italic">0</span><span style=" font-size:1.0rem"> is used in the addition process. Hence, the result of </span><span style=" font-size:1.0rem; font-style:italic">$total</span><span style=" font-size:1.0rem"> becomes 4. More often than not, such conversion is not what programmers expect. You should still be careful when you depend on the automatic conversion feature in PHP because there are times when you will not get the result that you expect, such as in the example given above.</span></p>
+<p><span style=" font-size:1.0rem">In addition, you can get unexpected results because PHP does not understand human notation. If you use the following example, you can get an incorrect result:</span></p>
+<p><span style=" font-size:1.0rem">$var1 = “3,000”;</span></p>
+<p><span style=" font-size:1.0rem">$var2 = 3;</span></p>
+<p><span style=" font-size:1.0rem">$total = $var1 + $var2;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">You may understand commas and their function, but PHP does not. If you use a comma in your code, PHP will automatically stop reading at the comma. So if you execute the code given above, your </span><span style=" font-size:1.0rem; font-style:italic">$total</span><span style=" font-size:1.0rem"> will be read as </span><span style=" font-size:1.0rem; font-style:italic">3</span><span style=" font-size:1.0rem"> and not </span><span style=" font-size:1.0rem; font-style:italic">3,000</span><span style=" font-size:1.0rem">.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h2 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span id="part0000.xhtml#_Toc424077767"><span style=" font-size:1.2rem; font-weight:bold; font-style:italic">Mathematical Operators</span></span><span style=" font-size:1.2rem; font-weight:bold; font-style:italic"> </span></h2>
+<p><span style=" font-size:1.0rem">+ represents the addition process. It is used to add numbers.</span></p>
+<p><span style=" font-size:1.0rem">- represents the subtraction process. It is used to subtract the second number from the first one.</span></p>
+<p><span style=" font-size:1.0rem">* represents the multiplication process. It is used to multiply numbers.</span></p>
+<p><span style=" font-size:1.0rem">/ represents the division process. It is used to divide the first number by the second number.</span></p>
+<p><span style=" font-size:1.0rem">% is called the modulus. It identifies the remainder when you do the division process.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h2 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span id="part0000.xhtml#_Toc424077768"><span style=" font-size:1.2rem; font-weight:bold; font-style:italic">The Order of Operations</span></span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">It is possible to perform multiple mathematical operations all at once. Take a look at the following example:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">$total = 2 + 3 * 4 + 2;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Keep in mind that the order of your mathematical statement is crucial. You may get a different output. Hence, you have to be careful when you use mathematical operators in your code. In PHP, division and multiplication are performed first. Then, subtraction and addition are done. Also, PHP can start from the left towards the right if all other considerations are equal. </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">If you run the code given above, you will get an output of:</span></p>
+<p><span style=" font-size:1.0rem">16</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">You get 16 because PHP performs the multiplication process first. In </span><span style=" font-size:1.0rem; font-style:italic">$total = 2 + 3 * 4 + 2</span><span style=" font-size:1.0rem">, </span><span style=" font-size:1.0rem; font-style:italic">3 * 4</span><span style=" font-size:1.0rem"> is done first. So multiplying </span><span style=" font-size:1.0rem; font-style:italic">3</span><span style=" font-size:1.0rem"> by </span><span style=" font-size:1.0rem; font-style:italic">4</span><span style=" font-size:1.0rem">, you get </span><span style=" font-size:1.0rem; font-style:italic">12</span><span style=" font-size:1.0rem">. Since the other operators for addition, PHP reads the code from the left. It adds </span><span style=" font-size:1.0rem; font-style:italic">2</span><span style=" font-size:1.0rem"> to </span><span style=" font-size:1.0rem; font-style:italic">12</span><span style=" font-size:1.0rem">, which is the result of </span><span style=" font-size:1.0rem; font-style:italic">3 * 4</span><span style=" font-size:1.0rem">. Finally, it performs the last addition process. </span><span style=" font-size:1.0rem; font-style:italic">2 + 12</span><span style=" font-size:1.0rem"> is </span><span style=" font-size:1.0rem; font-style:italic">14</span><span style=" font-size:1.0rem">, and that is added to </span><span style=" font-size:1.0rem; font-style:italic">2</span><span style=" font-size:1.0rem">, so you get </span><span style=" font-size:1.0rem; font-style:italic">16</span><span style=" font-size:1.0rem">.</span></p>
+<p><span style=" font-size:1.0rem">If you want to change the order of operations, you can use parentheses. When you use a parenthesis, whatever is inside it will be performed first. Take a look at the following example:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">$total = (2 + 3) * 4 + 2;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">If you run this code, you will get an output of:</span></p>
+<p><span style=" font-size:1.0rem">22</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">You get </span><span style=" font-size:1.0rem; font-style:italic">22</span><span style=" font-size:1.0rem"> because </span><span style=" font-size:1.0rem; font-style:italic">2 + 3</span><span style=" font-size:1.0rem"> is performed first since they are within the parenthesis. Adding </span><span style=" font-size:1.0rem; font-style:italic">2</span><span style=" font-size:1.0rem"> and </span><span style=" font-size:1.0rem; font-style:italic">3</span><span style=" font-size:1.0rem"> results in </span><span style=" font-size:1.0rem; font-style:italic">5</span><span style=" font-size:1.0rem">, which is then multiplied by </span><span style=" font-size:1.0rem; font-style:italic">4</span><span style=" font-size:1.0rem">. Your code practically becomes </span><span style=" font-size:1.0rem; font-style:italic">(5) * 4 + 2</span><span style=" font-size:1.0rem">. As mentioned earlier, the multiplication and division processes are performed first by default. However, since you have used a set of parenthesis, the operation inside it is performed first. Since you do not have any division process to be done, multiplication is performed. You get </span><span style=" font-size:1.0rem; font-style:italic">20 + 2</span><span style=" font-size:1.0rem">. Finally, you perform the last addition process. Adding </span><span style=" font-size:1.0rem; font-style:italic">20</span><span style=" font-size:1.0rem"> and </span><span style=" font-size:1.0rem; font-style:italic">2 </span><span style=" font-size:1.0rem">equals to </span><span style=" font-size:1.0rem; font-style:italic">22</span><span style=" font-size:1.0rem">.</span></p>
+<p><span style=" font-size:1.0rem">It is also possible to use a set of parenthesis within another set of parenthesis. You can do this if you want to change the order of operations within that set of parenthesis. Ideally, if your mathematical statement has more than one answer, you should use parentheses where they are necessary.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h2 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span id="part0000.xhtml#_Toc424077769"><span style=" font-size:1.2rem; font-weight:bold; font-style:italic">Increments and Decrements</span></span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">In PHP, you can use a shortcut to add 1 to a variable. Consider the following example:</span></p>
+<p><span style=" font-size:1.0rem">$counter = $counter + 1;</span></p>
+<p><span style=" font-size:1.0rem">Likewise, you can write a shorter code that performs exactly the same operation:</span></p>
+<p><span style=" font-size:1.0rem">$counter++;</span></p>
+<p><span style=" font-size:1.0rem">Take a look at this example:</span></p>
+<p><span style=" font-size:1.0rem">$counter = 0;</span></p>
+<p><span style=" font-size:1.0rem">$counter++;</span></p>
+<p><span style=" font-size:1.0rem">$echo $counter;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">If you run the above code, you will get an output of:</span></p>
+<p><span style=" font-size:1.0rem">1</span></p>
+<p><span style=" font-size:1.0rem">This is because using </span><span style=" font-size:1.0rem; font-style:italic">++</span><span style=" font-size:1.0rem"> adds 1 to your existing value for </span><span style=" font-size:1.0rem; font-style:italic">$counter</span><span style=" font-size:1.0rem">. Similarly, you can subtract 1 by using </span><span style=" font-size:1.0rem; font-style:italic">--</span><span style=" font-size:1.0rem">. So if you want to subtract </span><span style=" font-size:1.0rem; font-style:italic">1</span><span style=" font-size:1.0rem"> from your existing value for </span><span style=" font-size:1.0rem; font-style:italic">$counter</span><span style=" font-size:1.0rem">, you just have to write </span><span style=" font-size:1.0rem; font-style:italic">$counter--;</span><span style=" font-size:1.0rem">.</span></p>
+<p><span style=" font-size:1.0rem">There is another shortcut you can use to add a number to a certain variable. You can use +=1 to add 1 to that particular variable. You can also add any number to the variable through this shortcut. Likewise, you can use it to subtract, divide, or multiply. Take a look at the following example. Here are some of the statements you can use with the same format:</span></p>
+<p><span style=" font-size:1.0rem">$counter/=2;</span></p>
+<p><span style=" font-size:1.0rem">$counter*=3;</span></p>
+<p><span style=" font-size:1.0rem">$counter-=2;</span></p>
+<p><span style=" font-size:1.0rem">$counter+=3;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">The above statements add the value of </span><span style=" font-size:1.0rem; font-style:italic">3</span><span style=" font-size:1.0rem">, subtract </span><span style=" font-size:1.0rem; font-style:italic">2</span><span style=" font-size:1.0rem">, multiply by </span><span style=" font-size:1.0rem; font-style:italic">3</span><span style=" font-size:1.0rem">, and divide by </span><span style=" font-size:1.0rem; font-style:italic">2</span><span style=" font-size:1.0rem"> with reference to </span><span style=" font-size:1.0rem; font-style:italic">$counter</span><span style=" font-size:1.0rem">.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h2 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span id="part0000.xhtml#_Toc424077770"><span style=" font-size:1.2rem; font-weight:bold; font-style:italic">Built-In Higher Mathematical Functions</span></span><span style=" font-size:1.2rem; font-weight:bold; font-style:italic"> </span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">In PHP, you can actually perform complicated mathematical operations, such as getting the square root of a particular number. Take a look at this example:</span></p>
+<p><span style=" font-size:1.0rem">$rootvar = sqrt (25);</span></p>
+<p><span style=" font-size:1.0rem">$rootvar = srqt ($number);</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Using the above example, there is no more need for you to write all the mathematical operators necessary to compute for the square root of </span><span style=" font-size:1.0rem; font-style:italic">25</span><span style=" font-size:1.0rem">. You simply have to use the built-in higher mathematical function included in PHP. The square root of 25 is done in the first statement, while the square root of the value of the variable is done in the second statement.</span></p>
+<p><span style=" font-size:1.0rem">Aside from getting the square root, you can also perform other operations, such as rounding up and rounding down integers. For example, if you want to round up to the next integer, you can use </span><span style=" font-size:1.0rem; font-style:italic">$upnumber</span><span style=" font-size:1.0rem"> and </span><span style=" font-size:1.0rem; font-style:italic">ceil</span><span style=" font-size:1.0rem">. Conversely, if you want to round down, you can use </span><span style=" font-size:1.0rem; font-style:italic">$downnumber</span><span style=" font-size:1.0rem"> and </span><span style=" font-size:1.0rem; font-style:italic">floor</span><span style=" font-size:1.0rem">. Take a look at the following example:</span></p>
+<p><span style=" font-size:1.0rem">$upnumber = ceil (28.65);</span></p>
+<p><span style=" font-size:1.0rem">If you run the above example, you will get an output of:</span></p>
+<p><span style=" font-size:1.0rem">29</span></p>
+<p><span style=" font-size:1.0rem">because 29 is the next integer after 28. On the other hand, if you write</span></p>
+<p><span style=" font-size:1.0rem">$downnumber = floor (28.65);</span></p>
+<p><span style=" font-size:1.0rem">you will get an output of:</span></p>
+<p><span style=" font-size:1.0rem">28</span></p>
+<p><span style=" font-size:1.0rem">obviously because the closest integer to that value is 28.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">In PHP, there are a lot of mathematical functions. You can use minimum, maximum, and random numbers for simple mathematical operations. You can also use functions, such as tangent and sine, if you want to do advanced mathematics. You can even convert binary and octal numbers.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h2 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span id="part0000.xhtml#_Toc424077771"><span style=" font-size:1.2rem; font-weight:bold; font-style:italic">Formatting Numbers</span></span></h2>
+<p><span style=" font-size:1.0rem">If you wish to display a number in a specific format, you can do that in PHP. You can actually display numbers with commas to represent thousands or use decimals if you want to write currency amounts. For example, if you write </span><span style=" font-size:1.0rem; font-style:italic">10.00</span><span style=" font-size:1.0rem">, it would be shown as </span><span style=" font-size:1.0rem; font-style:italic">10</span><span style=" font-size:1.0rem">. You just have to determine the exact way that you want your number to be displayed.</span></p>
+<p><span style=" font-size:1.0rem">You can use </span><span style=" font-size:1.0rem; font-style:italic">number_format</span><span style=" font-size:1.0rem"> to format numbers. Its general form is </span></p>
+<p><span style=" font-size:1.0rem; background-color:#e5e5e5">number_format (number, decimals, “decimalsep”, “thousandsep”)</span></p>
+<p><span style=" font-size:1.0rem">Every input has a specific function.</span></p>
+<p><span style=" font-size:1.0rem; font-style:italic">_number</span><span style=" font-size:1.0rem"> represents the number that is to be formatted. It is necessary to include it in all your codes.</span></p>
+<p><span style=" font-size:1.0rem; font-style:italic">_decimals</span><span style=" font-size:1.0rem"> represents how many decimal places you desire. If you do not include decimals in your code, the program will automatically consider </span><span style=" font-size:1.0rem; font-style:italic">0</span><span style=" font-size:1.0rem"> to be the number of your decimal places. Also, number will be rounded to the integer closest to its value. Take note that if you use </span><span style=" font-size:1.0rem; font-style:italic">decimalsep</span><span style=" font-size:1.0rem"> and </span><span style=" font-size:1.0rem; font-style:italic">thousandsep</span><span style=" font-size:1.0rem">, you have to include </span><span style=" font-size:1.0rem; font-style:italic">decimals</span><span style=" font-size:1.0rem">.</span></p>
+<p><span style=" font-size:1.0rem; font-style:italic">_thousandsep</span><span style=" font-size:1.0rem"> represents the character that separates a number into thousands. The comma is the default for this. Take note that if you use this parameter in your code, you also have to use </span><span style=" font-size:1.0rem; font-style:italic">decimalsep</span><span style=" font-size:1.0rem">.</span></p>
+<p><span style=" font-size:1.0rem; font-style:italic">_decimalsep</span><span style=" font-size:1.0rem"> represents the character that separates the decimal places. The decimal point is the default for this. Take note that if you use this parameter in your code, you also have to use </span><span style=" font-size:1.0rem; font-style:italic">thousandsep</span><span style=" font-size:1.0rem">.</span></p>
+<p><span style=" font-size:1.0rem">Take a look at the following examples of </span><span style=" font-size:1.0rem; font-style:italic">number_format</span><span style=" font-size:1.0rem"> statements together with their corresponding outputs:</span></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p><span style=" font-size:1.0rem">$number</span></p></td>
+<td><p><span style=" font-size:1.0rem">Format</span></p></td>
+<td><p><span style=" font-size:1.0rem">Output</span></p></td>
+</tr>
+<tr class="even">
+<td><p><span style=" font-size:1.0rem">12345</span></p></td>
+<td><p><span style=" font-size:1.0rem">number_format ($number)</span></p></td>
+<td><p><span style=" font-size:1.0rem">12,345</span></p></td>
+</tr>
+<tr class="odd">
+<td><p><span style=" font-size:1.0rem">12345.77</span></p></td>
+<td><p><span style=" font-size:1.0rem">number_format ($number, 2)</span></p></td>
+<td><p><span style=" font-size:1.0rem">12,345.77</span></p></td>
+</tr>
+<tr class="even">
+<td><p><span style=" font-size:1.0rem">12345.77</span></p></td>
+<td><p><span style=" font-size:1.0rem">number_format ($number)</span></p></td>
+<td><p><span style=" font-size:1.0rem">12,345</span></p></td>
+</tr>
+<tr class="odd">
+<td><p><span style=" font-size:1.0rem">12345.7</span></p></td>
+<td><p><span style=" font-size:1.0rem">number_format ($number, 3)</span></p></td>
+<td><p><span style=" font-size:1.0rem">12,345.700</span></p></td>
+</tr>
+<tr class="even">
+<td><p><span style=" font-size:1.0rem">12345</span></p></td>
+<td><p><span style=" font-size:1.0rem">number_format ($number, 0, “.”, “.”)</span></p></td>
+<td><p><span style=" font-size:1.0rem">12.345</span></p></td>
+</tr>
+<tr class="odd">
+<td><p><span style=" font-size:1.0rem">12345.77</span></p></td>
+<td><p><span style=" font-size:1.0rem">number_format ($number, 2, “.”. “ “)</span></p></td>
+<td><p><span style=" font-size:1.0rem">12345.77</span></p></td>
+</tr>
+</tbody>
+</table>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Once formatting is done, the number gets converted into a string data type. Thus, you should always perform your desired mathematical operation on a number before you decide to format it.</span></p>
+<p><span style=" font-size:1.0rem">If you need to do a complicated formatting procedure, you have to use </span><span style=" font-size:1.0rem; font-style:italic">sprintf</span><span style=" font-size:1.0rem"> and </span><span style=" font-size:1.0rem; font-style:italic">printf</span><span style=" font-size:1.0rem">.</span></p>
+<p><span style=" font-size:1.0rem; font-style:italic">_sprintf</span><span style=" font-size:1.0rem"> stores the formatted number into a variable.</span></p>
+<p><span style=" font-size:1.0rem; font-style:italic">_printf</span><span style=" font-size:1.0rem"> directly outputs the formatted number.</span></p>
+<p><span style=" font-size:1.0rem">You can use both formatting statements to format numbers and character strings, as well as to output numbers and strings in the same output statement.</span></p>
+<h1 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span id="part0000.xhtml#_Toc424077772"><span style=" font-size:1.3rem; font-weight:bold">Chapter 7: Opening, Reading, Writing, and Closing Files</span></span></h1>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h2 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span id="part0000.xhtml#_Toc424077773"><span style=" font-size:1.2rem; font-weight:bold; font-style:italic">Opening and Closing Files</span></span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">In PHP, the function </span><span style=" font-size:1.0rem; font-style:italic">fopen ( )</span><span style=" font-size:1.0rem"> is used to open files. It requires two arguments that state the file name and the mode in which it has to operate.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p><span style=" font-size:1.0rem">File Mode</span></p></td>
+<td><p><span style=" font-size:1.0rem">Purpose</span></p></td>
+</tr>
+<tr class="even">
+<td><p><span style=" font-size:1.0rem">r</span></p></td>
+<td><p><span style=" font-size:1.0rem">It opens the file for the sole purpose of reading. It positions the pointer at the start of the file.</span></p></td>
+</tr>
+<tr class="odd">
+<td><p><span style=" font-size:1.0rem">r+</span></p></td>
+<td><p><span style=" font-size:1.0rem">It opens the file both for reading and writing. It positions the pointer at the start of the file.</span></p></td>
+</tr>
+<tr class="even">
+<td><p><span style=" font-size:1.0rem">w</span></p></td>
+<td><p><span style=" font-size:1.0rem">It opens the file for the sole purpose of writing. It positions the pointer at the start of the file, as well as truncates it to zero length. If there are no files, it tries to create one.</span></p></td>
+</tr>
+<tr class="odd">
+<td><p><span style=" font-size:1.0rem">w+</span></p></td>
+<td><p><span style=" font-size:1.0rem">It opens the file for both reading and writing. It positions the pointer at the start of the file, as well as truncates it to zero length. If there are no files, it tries to create one.</span></p></td>
+</tr>
+<tr class="even">
+<td><p><span style=" font-size:1.0rem">a</span></p></td>
+<td><p><span style=" font-size:1.0rem">It opens the file for the sole purpose of writing. It positions the pointer at the end of the file. If there are no files, it tries to create one.</span></p></td>
+</tr>
+<tr class="odd">
+<td><p><span style=" font-size:1.0rem">a+</span></p></td>
+<td><p><span style=" font-size:1.0rem">It opens the file for both reading and writing. It positions the pointer at the end of the file. If there are no files, it tries to create one.</span></p></td>
+</tr>
+</tbody>
+</table>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">The function </span><span style=" font-size:1.0rem; font-style:italic">fopen ( )</span><span style=" font-size:1.0rem"> returns the value of false in case opening a file does not become successful. Otherwise, it returns a </span><span style=" font-size:1.0rem; font-style:italic">file pointer</span><span style=" font-size:1.0rem"> to write or read to that particular file.</span></p>
+<p><span style=" font-size:1.0rem">Once you are done making changes to your file, you have to close it using the function </span><span style=" font-size:1.0rem; font-style:italic">fclose ( )</span><span style=" font-size:1.0rem">. It requires a </span><span style=" font-size:1.0rem; font-style:italic">file pointer</span><span style=" font-size:1.0rem"> as an argument. It returns true if the closure is successful and false if it is not.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h2 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span id="part0000.xhtml#_Toc424077774"><span style=" font-size:1.2rem; font-weight:bold; font-style:italic">Reading Files</span></span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">After you open a file using the function </span><span style=" font-size:1.0rem; font-style:italic">fopen ( )</span><span style=" font-size:1.0rem">, you can read it using the function </span><span style=" font-size:1.0rem; font-style:italic">fread ( )</span><span style=" font-size:1.0rem">. It requires two arguments. It reads the length bytes from the file pointer referenced by the handle. It stops reading as soon as it has read the length bytes, reaches the end of the file, a socket timeout occurs, or a packet becomes available.  </span></p>
+<p><span style=" font-size:1.0rem">You can use the function </span><span style=" font-size:1.0rem; font-style:italic">filesize ( )</span><span style=" font-size:1.0rem"> to find the length of your file. It takes the file name as an argument and returns its size in bytes. It also returns false on failure or the read string. Take note that the function </span><span style=" font-size:1.0rem; font-style:italic">fread( )</span><span style=" font-size:1.0rem"> reads from the current position of your file pointer. If you want to find the current position of the file pointer, you have to use the function </span><span style=" font-size:1.0rem; font-style:italic">ftell ( )</span><span style=" font-size:1.0rem">. If you wish to rewind the position of the file pointer, you have to use </span><span style=" font-size:1.0rem; font-style:italic">rewind ( )</span><span style=" font-size:1.0rem">.</span></p>
+<p><span style=" font-size:1.0rem">Take a look at the following example:</span></p>
+<p><span style=" font-size:1.0rem">&lt;?php</span></p>
+<p><span style=" font-size:1.0rem">$filename = “/testfile.txt”;</span></p>
+<p><span style=" font-size:1.0rem">$file = fopen ($filename, “r”);</span></p>
+<p><span style=" font-size:1.0rem">if ($file == false)</span></p>
+<p><span style=" font-size:1.0rem">{</span></p>
+<p><span style=" font-size:1.0rem">echo (“Opening File Error”);</span></p>
+<p><span style=" font-size:1.0rem">exit ( );</span></p>
+<p><span style=" font-size:1.0rem">}</span></p>
+<p><span style=" font-size:1.0rem">$filesize = filesize ($filename);</span></p>
+<p><span style=" font-size:1.0rem">$filetext = fread ($file, $filesize);</span></p>
+<p><span style=" font-size:1.0rem">fclose ($file);</span></p>
+<p><span style=" font-size:1.0rem">echo (“The size of the file is  $filesize bytes”);</span></p>
+<p><span style=" font-size:1.0rem">echo (“&lt;pre&gt; $text &lt;/pre&gt;”;</span></p>
+<p><span style=" font-size:1.0rem">?&gt;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">In the above example, the content of the text file </span><span style=" font-size:1.0rem; font-style:italic">testfile.txt</span><span style=" font-size:1.0rem"> is assigned to a variable and then displayed as the output.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h2 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span id="part0000.xhtml#_Toc424077775"><span style=" font-size:1.2rem; font-weight:bold; font-style:italic">Writing Files</span></span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">If you want to write a new file or append a text to an existing file, you can use the function </span><span style=" font-size:1.0rem; font-style:italic">fwrite ( )</span><span style=" font-size:1.0rem">. It requires two arguments to specify the file pointer and the data string to be written. You can include a third integer argument if you want to specify the length of the data to be written. This third integer argument is optional, though. If you do not include any third argument, writing would stop upon reaching the specified length.</span></p>
+<p><span style=" font-size:1.0rem">The function </span><span style=" font-size:1.0rem; font-style:italic">fwrite ( )</span><span style=" font-size:1.0rem"> writes the contents of the string to the file stream pointed to by the handle. It returns false on error or the number of bytes. If you are using a system that differentiates between text files and binary files, such as Windows, you should open your file with ‘b’ included in the </span><span style=" font-size:1.0rem; font-style:italic">fopen ( )</span><span style=" font-size:1.0rem"> mode parameter. Also, if the handle is opened in append mode, </span><span style=" font-size:1.0rem; font-style:italic">fwrite ( )</span><span style=" font-size:1.0rem"> becomes atomic, except when the size of the string exceeds the block size of the file system. There is no more need to </span><span style=" font-size:1.0rem; font-style:italic">flock ( )</span><span style=" font-size:1.0rem"> a resource before you call </span><span style=" font-size:1.0rem; font-style:italic">fwrite ( )</span><span style=" font-size:1.0rem">. You can write all data without any interruption.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Take a look at the following example:</span></p>
+<p><span style=" font-size:1.0rem">&lt;?php</span></p>
+<p><span style=" font-size:1.0rem">$file = fopen (“testfile.txt”, “w”);</span></p>
+<p><span style=" font-size:1.0rem">echo fwrite ($file, “Testing sample!”);</span></p>
+<p><span style=" font-size:1.0rem">fclose ($file);</span></p>
+<p><span style=" font-size:1.0rem">?&gt;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">If you run the above code, you will get an output of:</span></p>
+<p><span style=" font-size:1.0rem">15</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Why? You get 15 because </span><span style=" font-size:1.0rem; font-style:italic">Testing sample</span><span style=" font-size:1.0rem">! has fifteen characters including spacing.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div style="page-break-after:always">
+
+</div>
+<br />
+<span id="part0000.xhtml#_TOC1439"></span><span id="part0000.xhtml#_Toc380314692"></span><span id="part0000.xhtml#_Toc381365725"><span style=" font-size:1.3rem; font-weight:bold; font-style:italic">Preview of my other books that might interest you:</span></span>
+</p>
+<p><span style=" font-size:1.3rem"> </span></p>
+<p><a href="http://www.amazon.com/gp/product/B00YDSJ8VC?*Version*=1&amp;*entries*=0"><span style=" font-size:1.2rem; font-weight:bold; text-decoration:underline; color:#0000ff">HTML: Step by Step Beginners Guide to HTML</span></a></p>
+<p><span style=" font-size:1.0rem; font-style:italic; ">The book “</span><span style=" font-size:1.0rem; font-weight:bold; font-style:italic; ">HTML: Step by Step Beginners Guide to HTML</span><span style=" font-size:1.0rem; font-style:italic; ">” will provide all essential information and training during the book which you’ll need in order to upgrade your skills later with other languages and even with more sophisticated HTML.</span></p>
+<p><span style=" font-size:1.0rem; font-style:italic; "> </span></p>
+<p><span style=" font-size:1.0rem; font-style:italic; ">The reason why we start our “Learn Web Design” series with HTML is because he is the core to every website out there. No matter how basic or sophisticated one website is the HTML is always there and is essential for its existence.</span></p>
+<p><span style=" font-size:1.0rem; font-style:italic; ">In order to perfectly understand the material we’ll go through everything from the absolute beginning. We’ll do some exercises because the only way to master programming is by constant exercise and learning. </span></p>
+<p><span style=" font-size:1.0rem; font-style:italic">All the material in this book can be learned in less than a day but exercising and upgrading your skills later on is essential to becoming a good programmer. </span></p>
+<p><span style=" font-size:1.2rem; font-style:italic">You can check/download the book from </span><a href="http://www.amazon.com/gp/product/B00YDSJ8VC?*Version*=1&amp;*entries*=0"><span style=" font-size:1.2rem; font-style:italic; text-decoration:underline; color:#0000ff">HERE</span></a><span style=" font-size:1.2rem; font-style:italic">.</span></p>
+<div style="page-break-after:always">
+
+</div>
+<br />
+<span style=" font-size:1.2rem; font-weight:bold; ">Java </span>
+</p>
+<p><span style=" font-size:1.2rem; font-weight:normal; ">Learn Java Programming with the Ultimate Crash Course for Beginners in no Time!</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem; ">Today’s applications are becoming increasingly powerful, especially with computers, smartphones, and tablets getting more processing power and memory every year. However, all of these devices are nothing without the operating system and programs they contain. </span></p>
+<p><span style=" font-size:1.0rem; ">You might already be familiar with Java, whether it’s from an introductory course in programming or a platform you had to install to make certain programs work on your computer, and that’s not surprising at all since Java remains one of the most popular and in-demand programming languages in the world!</span></p>
+<p><span style=" font-size:1.0rem; ">Despite the popularity of Java as a language and a platform, there remains still a shortage of qualified programmers to create meaningful and useful Java applications. Whether you’re completely new to Java, or even to programming, or you feel that there’s still a lot of room for improvement in terms of your current Java programming skills, this book will give you a strong foundation in both programming and Java. </span></p>
+<p><span style=" font-size:1.0rem; ">If you’re still wondering whether or not this book is for you, here are some statements to help you decide:</span></p>
+<ul>
+<li><span style=" font-size:0.83rem; ">You’re a complete newbie and you need a book that introduces you gently to the world of programming</span></li>
+<li><span style=" font-size:0.83rem; ">You’re already a Java developer but you’d like to sharpen your skills and create more efficient, error-free code</span></li>
+<li><span style=" font-size:0.83rem; ">You want to find a book that isn’t overly technical but at the same time, not too dumbed-down</span></li>
+<li><span style=" font-size:0.83rem; ">You enjoy solving riddles and challenges </span></li>
+<li><span style=" font-size:0.83rem; ">You have a really good idea for a program and nobody has thought about it just yet</span></li>
+<li><span style=" font-size:0.83rem; ">You want to help people by creating programs that they need but can’t seem to find</span></li>
+</ul>
+<p><span style=" font-size:1.0rem; ">If you can identify with any of these statements, then you’ve come to the right place. This book provides a self-paced comprehensive crash course in Java, from the very definition of programming to the most advanced topics in Java. This book will provide plenty of source codes for you to play and experiment with in order to help you understand Java better. After finishing this book, you should be able to create Java programs confidently. </span></p>
+<p><span style=" font-size:1.0rem; ">This book can serve as both a reference and a walkthrough in Java, so feel free to skip and skim through chapters that talk about things you’re already well acquainted with and jump back and forth between chapters if that works better for you. </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.2rem; font-style:italic">You can check/download the book from </span><a href="http://www.amazon.com/Java-Programming-Ultimate-Course-Beginners-ebook/dp/B010W1D3KA/ref=sr_1_15?s=digital-text&amp;ie=UTF8&amp;qid=1436021586&amp;sr=1-15&amp;keywords=java+programming"><span style=" font-size:1.2rem; font-style:italic; text-decoration:underline; color:#0000ff">HERE</span></a><span style=" font-size:1.2rem; font-style:italic">.</span></p>
+<p><span style=" font-size:1.2rem; font-weight:bold; font-style:italic; ">C#: Learn C# Programming with the Ultimate Crash Course for Beginners in No Time!</span></p>
+<p><span style=" font-size:1.0rem; ">This book contains proven steps and strategies on how to start writing programs with C# in the soonest time possible!</span></p>
+<p><span style=" font-size:1.0rem; ">If you have prior knowledge about the world of </span><span style=" font-size:1.0rem; font-style:italic; ">C++ </span><span style=" font-size:1.0rem; ">programming, then you may find familiar terms and code structure with </span><span style=" font-size:1.0rem; font-style:italic; ">C# </span><span style=" font-size:1.0rem; ">(pronounced as </span><span style=" font-size:1.0rem; font-style:italic; ">See Sharp</span><span style=" font-size:1.0rem; ">)</span><span style=" font-size:1.0rem; font-style:italic; ">. </span><span style=" font-size:1.0rem; ">It works with Microsoft </span><span style=" font-size:1.0rem; font-style:italic; ">.NET </span><span style=" font-size:1.0rem; ">framework and was initially designed to be the answer to </span><span style=" font-size:1.0rem; font-style:italic; ">Java. </span><span style=" font-size:1.0rem; ">Today, both are being used extensively by companies and are also a friendly language for beginners. </span></p>
+<p><span style=" font-size:1.0rem; ">Here are some of the essential lessons you will find inside:</span></p>
+<ul>
+<li><span style=" font-size:1.0rem; font-style:italic; ">Comprehending the C# Program Structure</span></li>
+<li><span style=" font-size:1.0rem; font-style:italic; ">The Coding Conventions for C#</span></li>
+<li><span style=" font-size:1.0rem; font-style:italic; ">Mastering Variables and Data Types</span></li>
+<li><span style=" font-size:1.0rem; font-style:italic; ">Getting Using Input and Using Type Conversions</span></li>
+<li><span style=" font-size:1.0rem; font-style:italic; ">Arithmetic, Conditional, Relational, and Logical Operators</span></li>
+<li><span style=" font-size:1.0rem; font-style:italic; ">Using Flow Control Statements</span></li>
+<li><span style=" font-size:1.0rem; font-style:italic; ">Generating Random Numbers</span></li>
+<li><span style=" font-size:1.0rem; font-style:italic; ">And much more!</span></li>
+</ul>
+<p><span style=" font-size:1.0rem; font-weight:bold; ">I hope you enjoy it!</span></p>
+<p><span style=" font-size:1.2rem; font-style:italic">You can check/download the book from </span><a href="http://www.amazon.com/Learn-Programming-Ultimate-Course-Beginners-ebook/dp/B010N2OLRW/ref=asap_bc?ie=UTF8"><span style=" font-size:1.2rem; font-style:italic; text-decoration:underline; color:#0000ff">HERE</span></a><span style=" font-size:1.2rem; font-style:italic">.</span></p>
+<div style="page-break-after:always">
+
+</div>
+<br />
+<span style=" font-size:1.2rem; font-weight:bold; font-style:italic">HTML5 &amp; CSS3: Learn CSS3 and HTML5 in One Day with Hands-on project and learn them Well!</span>
+</p>
+<p><span style=" font-size:1.0rem">This book contains proven steps and strategies on how to design projects using HTML5 and CSS3.</span></p>
+<p><span style=" font-size:1.0rem">It’s not only hardware that is evolving. The software that makes our hardware tick has also evolved by leaps and bounds. And the programmed processes that these software undertake have even shared in this progress.</span></p>
+<p><span style=" font-size:1.0rem">This book will teach you about the most important aspects of two of the Internet’s next-gen technologies -- HTML5 and CSS3. These systems will be running in each and every cutting-edge site, web app, or mobile application in the very near future -- in fact, many have adapted it even now. Read on to be on the forefront of the Internet’s next frontier!</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold">I hope you enjoy it!</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.2rem; font-style:italic">You can check/download the book from </span><a href="http://www.amazon.com/HTML5-CSS3-Hands--Programming-Beginners-ebook/dp/B010WC4YIY/ref=asap_bc?ie=UTF8"><span style=" font-size:1.2rem; font-style:italic; text-decoration:underline; color:#0000ff">HERE</span></a><span style=" font-size:1.2rem; font-style:italic">.</span></p>
+<h1 style="margin:1.85% 0.00% 0.46%; text-align:center; page-break-after:avoid"></h1>
+<div style="page-break-after:always">
+
+</div>
+<br />
+<span style=" font-size:1.3rem; font-weight:bold">Conclusion</span>
+</h1>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Thank you again for downloading this book!  </span></p>
+<p><span style=" font-size:1.0rem">I hope this book was able to help you learn about PHP and MySQL, and how to write codes.  </span></p>
+<p><span style=" font-size:1.0rem">The next step is to apply what you have learned in this book. </span></p>
+<p><img src="Images/image00067.jpeg" width="576" height="360" /></p>
+<p><span style=" font-size:1.0rem">Finally, if you enjoyed this book, please take the time to share your thoughts and post a review on Amazon.  It’d be greatly appreciated!</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><a href="http://www.amazon.com/gp/product/B010Y767LO?*Version*=1&amp;*entries*=0"><span style=" font-size:1.0rem; text-decoration:underline; color:#0000ff">Click here to leave a review on Amazon.</span></a></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Thank you and good luck!</span></p>
+<div style="page-break-after:always">
+
+</div>
+<br />
+<span style=" font-size:1.2rem; font-weight:bold; font-style:italic">Subscribe for FREE Kindle Books</span>
+</p>
+<p><span style=" font-size:1.2rem; font-style:italic"> </span></p>
+<p><a href="http://unibulpress.com/"><img src="Images/image00068.jpeg" alt="Description: C:\Users\Pec\Desktop\^320A1A588BAA7A0F9532997D5981C977CAF16C594CC0851607^pimgpsh_fullsize_distr.jpg" width="627" height="435" /></a></p>
+<p><a href="http://unibulpress.com/"><span style=" font-size:1.2rem; font-style:italic; text-decoration:underline; color:#0000ff">Click here to subscribe to our list and start receiving Free Kindle Books in your inbox.</span></a></p>
+<h1 style="margin:1.85% 0.00% 0.46%; text-align:justify; page-break-after:avoid"><span style=" font-size:1.3rem; font-weight:bold"> </span></h1>
+<p><span id="part0000.xhtml#_TOC1799"></span><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+</div>

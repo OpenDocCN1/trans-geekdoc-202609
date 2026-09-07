@@ -1,0 +1,1931 @@
+- fmt: '
+
+    # PHP
+
+
+    Learn PHP and MySQL with the Ultimate Beginners Crash Course In No Time!
+
+
+    ## Table Of Contents
+
+    - [Introduction](#
+
+    - [Chapter 1: Introduction to PHP](#
+
+    - [Why You Should Learn PHP](#
+
+    - [Setting Up PHP on Your Computer](#
+
+    - [Chapter 2: MySQL](#
+
+    - [So What Is MySQL Exactly?](#
+
+    - [MySQL vs. PostgreSQL](#
+
+    - [Do you need to learn MySQL?](#
+
+    - [Chapter 3: Syntax, Comments, Case Sensitivity, New Line, and Forms](#
+
+    - [Syntax](#
+
+    - [Comments](#
+
+    - [Case Sensitivity](#
+
+    - [New Line](#
+
+    - [Dealing with Forms](#
+
+    - [Chapter 4: Arrays](#
+
+    - [How to Create an Array](#
+
+    - [The Square Bracket Syntax](#
+
+    - [Some of the Most Commonly Used Array Functions](#
+
+    - [Chapter 5: Conditional Statements](#
+
+    - [The If Statement](#
+
+    - [The If… Else Statement](#
+
+    - [The If… Else if… Else Statement](#
+
+    - [The Switch Statement](#
+
+    - [The Break Statement](#
+
+    - [The Continue Statement](#
+
+    - [Chapter 6: Numbers and Mathematical Operations](#
+
+    - [Mathematical Operators](#
+
+    - [The Order of Operations](#
+
+    - [Increments and Decrements](#
+
+    - [Built-In Mathematical Functions](#
+
+    - [Formatting Numbers](#
+
+    - [Chapter 7: Opening, Reading, Writing, and Closing](#
+
+    - [Opening and Closing Files](#
+
+    - [Reading Files](#
+
+    - [Writing Files](#
+
+    - [Conclusion](#
+
+
+    ## Introduction
+
+    I want to thank you and congratulate you for downloading the book, `PHP: Learn
+    PHP and MySQL with the Ultimate Beginners Crash Course In No Time!` This book
+    contains proven steps and strategies on how to create codes using the correct
+    syntax, keywords. It also provides tips on how to correctly use arrays and conditional
+    statements. To be able to make full use of its applications, you will also learn
+    how to perform mathematical operations. You will also learn how to open, read,
+    write, and close files. There are sample programs that can serve as your guidelines
+    when writing. This book also contains useful information about `MySQL` and `PHP`,
+    including their features it even discusses the differences between `MySQL` and
+    `PostgreSQL`. Thanks again for downloading! This document is geared towards providing
+    exact and reliable information in regards to the topic covered. The publication
+    is sold with the idea that the publisher is not required to render, officially
+    permitted, or otherwise.
+
+
+    ## Chapter 1: Introduction to PHP
+
+    PHP stands for `PHP: Hypertext Preprocessor`, an open source scripting language
+    whose scripts are executed on the server. It is downloadable and available for
+    free. It is ideal for web development and recommended for beginners. It can be
+    embedded into `HTML`. In addition, it can be used for `WordPress` and `Facebook`.
+
+
+    A `PHP` file can contain `HTML`, `JavaScript`, `CSS`, `PHP` code, and text. What
+    differentiates `PHP` from client-side `JavaScript` is that the codes are executed
+    on the server, which generates the `HTML` that is sent to the client. After running
+    the script, the client receives the results even if he does not know the underlying
+    code. It is possible to configure the web server for the purpose of processing
+    `HTML` files using `PHP`.
+
+
+    PHP is simple enough to be understood by newbies, but it also offers a lot of
+    advanced features for advanced programmers. You can even start writing simple
+    scripts within just a few hours. Note that although its creation is focused on
+    server-side scripting, there is so much more you can do with it.
+
+
+    ## Why You Should Learn PHP
+
+    You may think that learning PHP is no longer necessary if you are adept at using
+    `JavaScript`. However, `JavaScript` is actually much limited compared to `PHP`.
+    `JavaScript` runs in the client or browser, which means that it only knows what
+    occurs in your browser and the websites that you visit.
+
+
+    On the other hand, `PHP` runs on the same computer or server as the website that
+    you go to. It has access to every file and information on that computer, which
+    enables it to create custom `HTML` pages that it sends to your browser, run tasks,
+    perform calculations, and handle cookies from that website.
+
+
+    PHP can open, create, write, read, close, and delete files on the server. It can
+    generate page content, collect form data, and send and receive cookies. It can
+    also delete, add, and modify data in the database. In addition, it can encrypt
+    data as well as control user access.
+
+
+    With `PHP`, you can output `PDF` files, images, and Flash movies. You are not
+    limited to just `HTML`. You can even output texts, such as `XML` and `XHTML`.
+    In other words, `PHP` can practically do anything. Since it is focused on server-side
+    scripting, it can do anything that other `CGI` programs can do and more.
+
+
+    `PHP` scripts are mainly used in the following areas:
+
+
+    - Server-side scripting.
+
+    - Command line scripting.
+
+    '
+  raw: "\n\nPHP\n\nLearn PHP and MySQL with the Ultimate Beginners Crash Course In\
+    \ No Time!\n\n# \n\nTable Of Contents \n\n[Introduction](#part0000.xhtml#_Toc424077741)\n\
+    \n[Chapter 1: Introduction to PHP](#part0000.xhtml#_Toc424077742)\n\n[Why You\
+    \ Should Learn PHP](#part0000.xhtml#_Toc424077743)\n\n[Setting Up PHP on Your\
+    \ Computer](#part0000.xhtml#_Toc424077744)\n\n[Chapter 2: MySQL](#part0000.xhtml#_Toc424077745)\n\
+    \n[So What Is MySQL Exactly?](#part0000.xhtml#_Toc424077746)\n\n[MySQL vs. PostgreSQL](#part0000.xhtml#_Toc424077747)\n\
+    \n[Do you need to learn MySQL?](#part0000.xhtml#_Toc424077748)\n\n[Chapter 3:\
+    \ Syntax, Comments, Case Sensitivity, New Line, and Forms](#part0000.xhtml#_Toc424077749)\n\
+    \n[Syntax](#part0000.xhtml#_Toc424077750)\n\n[Comments](#part0000.xhtml#_Toc424077751)\n\
+    \n[Case Sensitivity](#part0000.xhtml#_Toc424077752)\n\n[New Line](#part0000.xhtml#_Toc424077753)\n\
+    \n[Dealing with Forms](#part0000.xhtml#_Toc424077754)\n\n[Chapter 4: Arrays](#part0000.xhtml#_Toc424077755)\n\
+    \n[How to Create an Array](#part0000.xhtml#_Toc424077756)\n\n[The Square Bracket\
+    \ Syntax](#part0000.xhtml#_Toc424077757)\n\n[Some of the Most Commonly Used Array\
+    \ Functions](#part0000.xhtml#_Toc424077758)\n\n[Chapter 5: Conditional Statements](#part0000.xhtml#_Toc424077759)\n\
+    \n[The If Statement](#part0000.xhtml#_Toc424077760)\n\n[The If… Else Statement](#part0000.xhtml#_Toc424077761)\n\
+    \n[The If… Else if… Else Statement](#part0000.xhtml#_Toc424077762)\n\n[The Switch\
+    \ Statement](#part0000.xhtml#_Toc424077763)\n\n[The Break Statement](#part0000.xhtml#_Toc424077764)\n\
+    \n[The Continue Statement](#part0000.xhtml#_Toc424077765)\n\n[Chapter 6: Numbers\
+    \ and Mathematical Operations](#part0000.xhtml#_Toc424077766)\n\n[Mathematical\
+    \ Operators](#part0000.xhtml#_Toc424077767)\n\n[The Order of Operations](#part0000.xhtml#_Toc424077768)\n\
+    \n[Increments and Decrements](#part0000.xhtml#_Toc424077769)\n\n[Built-In Higher\
+    \ Mathematical Functions](#part0000.xhtml#_Toc424077770)\n\n[Formatting Numbers](#part0000.xhtml#_Toc424077771)\n\
+    \n[Chapter 7: Opening, Reading, Writing, and Closing Files](#part0000.xhtml#_Toc424077772)\n\
+    \n[Opening and Closing Files](#part0000.xhtml#_Toc424077773)\n\n[Reading Files](#part0000.xhtml#_Toc424077774)\n\
+    \n[Writing Files](#part0000.xhtml#_Toc424077775)\n\n[Conclusion](XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX)\n\
+    \n# \n\nIntroduction \n\nI want to thank you and congratulate you for downloading\
+    \ the book, “PHP: Learn PHP and MySQL with the Ultimate Beginners Crash Course\
+    \ In No Time!”\n\nThis book contains proven steps and strategies on how to create\
+    \ codes using the correct syntax, keywords, and punctuation marks. It also provides\
+    \ tips on how to correctly use arrays and conditional statements. \n\nTo be able\
+    \ to make full use of its applications, you will also learn how to perform mathematical\
+    \ operations. You will also learn how to open, read, write, and close files in\
+    \ PHP.\n\nThere are sample programs that can serve as your guidelines when writing\
+    \ your code. This book also contains useful information about MySQL and PHP, including\
+    \ their features. It even discusses the differences between MySQL and PostgreSQL.\
+    \ \n\nThanks again for downloading this book. I hope you enjoy it!\n\n Copyright\
+    \ 2015 by Olivia Dunham - All rights reserved. \n\nThis document is geared towards\
+    \ providing exact and reliable information in regards to the topic and issue covered.\
+    \ The publication is sold with the idea that the publisher is not required to\
+    \ render accounting, officially permitted, or otherwise, qualified services. If\
+    \ advice is necessary, legal or professional, a practiced individual in the profession\
+    \ should be ordered. \n\n\\- From a Declaration of Principles which was accepted\
+    \ and approved equally by a Committee of the American Bar Association and a Committee\
+    \ of Publishers and Associations. \n\nIn no way is it legal to reproduce, duplicate,\
+    \ or transmit any part of this document in either electronic means or in printed\
+    \ format. Recording of this publication is strictly prohibited and any storage\
+    \ of this document is not allowed unless with written permission from the publisher.\
+    \ All rights reserved. \n\nThe information provided herein is stated to be truthful\
+    \ and consistent, in that any liability, in terms of inattention or otherwise,\
+    \ by any usage or abuse of any policies, processes, or directions contained within\
+    \ is the solitary and utter responsibility of the recipient reader. Under no circumstances\
+    \ will any legal responsibility or blame be held against the publisher for any\
+    \ reparation, damages, or monetary loss due to the information herein, either\
+    \ directly or indirectly. \n\nRespective authors own all copyrights not held by\
+    \ the publisher. \n\nThe information herein is offered for informational purposes\
+    \ solely, and is universal as so. The presentation of the information is without\
+    \ contract or any type of guarantee assurance. \n\nThe trademarks that are used\
+    \ are without any consent, and the publication of the trademark is without permission\
+    \ or backing by the trademark owner. All trademarks and brands within this book\
+    \ are for clarifying purposes only and are the owned by the owners themselves,\
+    \ not affiliated with this document. \n\n# \n\nChapter 1: Introduction to PHP\
+    \ \n\nPHP stands for PHP: Hypertext Preprocessor, an open source scripting language\
+    \ whose scripts are executed on the server. It is downloadable and available for\
+    \ free. It is ideal for web development and recommended for beginners. It can\
+    \ be embedded into HTML. In addition, it can be used for WordPress and Facebook.\n\
+    \nA PHP file can contain HTML, JavaScript, CSS, PHP code, and text. What differentiates\
+    \ PHP from client-side JavaScript is that the codes are executed on the server,\
+    \ which generates the HTML that is sent to the client. After running the script,\
+    \ the client receives the results even if he does not know the underlying code.\
+    \ It is possible to configure the web server for the purpose of processing HTML\
+    \ files using PHP.\n\nPHP is simple enough to be understood by newbies, but it\
+    \ also offers a lot of advanced features for advanced programmers. You can even\
+    \ start writing simple scripts within just a few hours. \n\nNote that although\
+    \ its creation is focused on server-side scripting, there is so much more you\
+    \ can do with it.\n\n## Why You Should Learn PHP\n\nYou may think that learning\
+    \ PHP is no longer necessary if you are adept at using JavaScript. However, JavaScript\
+    \ is actually much limited compared to PHP. JavaScript runs in the client or browser,\
+    \ which means that it only knows what occurs in your browser and the websites\
+    \ that you visit.\n\nOn the other hand, PHP runs on the same computer or server\
+    \ as the website that you go to. It has access to every file and information on\
+    \ that computer, which enables it to create custom HTML pages that it sends to\
+    \ your browser, run tasks, perform calculations, and handle cookies from that\
+    \ website.\n\nPHP can open, create, write, read, close, and delete files on the\
+    \ server. It can generate page content, collect form data, and send and receive\
+    \ cookies. It can also delete, add, and modify data in the database. In addition,\
+    \ it can encrypt data as well as control user access.\n\nWith PHP, you can output\
+    \ PDF files, images, and Flash movies. You are not limited to just HTML. You can\
+    \ even output texts, such as XML and XHTML. In other words, PHP can practically\
+    \ do anything. Since it is focused on server-side scripting, it can do anything\
+    \ that other CGI programs can do and more. \n\nPHP scripts are mainly used in\
+    \ the following areas:\n\n*   Server-side scripting.\n\nIt is the primary target\
+    \ field for PHP. To make it work, you have to use a PHP parser, a web browser,\
+    \ and a web server. You can have to run the web server that has an installed PHP.\
+    \ You can use the web browser to access the PHP program and view the PHP page.\
+    \ If you have just started experimenting with PHP, you can do all of these on\
+    \ your computer.\n\n*   Command line scripting."
+  toc: []
+  trans: '
+
+
+    # PHP
+
+
+    通过这个终极初学者速成课程，快速学习 PHP 和 MySQL！
+
+
+    ## 目录
+
+    - [引言](#
+
+    - [第 1 章：PHP 简介](#
+
+    - [为什么你应该学习 PHP](#
+
+    - [在你的电脑上安装 PHP](#
+
+    - [第 2 章：MySQL](#
+
+    - [MySQL 到底是什么？](#
+
+    - [MySQL 对比 PostgreSQL](#
+
+    - [你需要学习 MySQL 吗？](#
+
+    - [第 3 章：语法、注释、大小写敏感性、换行和表单](#
+
+    - [语法](#
+
+    - [注释](#
+
+    - [大小写敏感性](#
+
+    - [换行](#
+
+    - [处理表单](#
+
+    - [第 4 章：数组](#
+
+    - [如何创建数组](#
+
+    - [方括号语法](#
+
+    - [一些最常用的数组函数](#
+
+    - [第 5 章：条件语句](#
+
+    - [If 语句](#
+
+    - [If… Else 语句](#
+
+    - [If… Else if… Else 语句](#
+
+    - [Switch 语句](#
+
+    - [Break 语句](#
+
+    - [Continue 语句](#
+
+    - [第 6 章：数字与数学运算](#
+
+    - [数学运算符](#
+
+    - [运算顺序](#
+
+    - [自增自减](#
+
+    - [内置数学函数](#
+
+    - [数字格式化](#
+
+    - [第 7 章：打开、读取、写入和关闭](#
+
+    - [打开和关闭文件](#
+
+    - [读取文件](#
+
+    - [写入文件](#
+
+    - [结论](#
+
+
+    ## 引言
+
+    感谢你的下载，并祝贺你下载了`PHP: Learn PHP and MySQL with the Ultimate Beginners Crash Course
+    In No Time!`。这本书包含了关于如何使用正确的语法和关键词创建代码的经过证明步骤和策略。它还提供了如何正确使用数组和条件语句的提示。为了充分利用其应用作用，你还将学习如何执行数学运算。你也将学习如何打开、读取、写入和关闭文件。书中包含示例程序，可以作为你编写代码时的指南。本书还包含了关于
+    `MySQL` 和 `PHP` 的有用信息，包括它们的特性，甚至讨论了 `MySQL` 和 `PostgreSQL` 之间的差异。再次感谢下载！本文旨在就涵盖的主题提供准确且可靠的信息。本书的销售基于以下理念：出版者不承担渲染、官方许可或其他形式的责任。
+
+
+    ## 第 1 章：PHP 简介
+
+    PHP 代表 `PHP: Hypertext Preprocessor`（超文本预处理器），是一种开源脚本语言，其脚本在服务器上执行。它可以免费下载并使用。它是
+    Web 开发的理想选择，推荐初学者学习。它可以嵌入 `HTML` 中。此外，它还可以用于 `WordPress` 和 `Facebook`。
+
+
+    一个 `PHP` 文件可以包含 `HTML`、`JavaScript`、`CSS`、`PHP` 代码和文本。`PHP` 与客户端 `JavaScript`
+    的区别在于代码是在服务器上执行的生成发送给客户端的 `HTML`。运行脚本后，即使客户端不知道底层代码也能收到结果。可以配置 Web 服务器使用 `PHP`
+    处理 `HTML` 文件。
+
+
+    PHP 简单到初学者也能理解，但它也为高级程序员提供了许多高级特性。你甚至可以在几小时内开始编写简单的脚本。请注意，尽管它的创建重点是服务器端脚本，但你可以用它做更多事情。
+
+
+    ## 为什么你应该学习 PHP
+
+    你可能认为，如果你精通使用 `JavaScript`，那么学习 PHP 就不不再了。然而，与 `PHP` 相比，`JavaScript` 实际上限制大得多。`JavaScript`
+    运行在客户端或浏览器中，这意味着它只知道你浏览器中发生的情况以及你访问的网站。
+
+
+    另一方面，`PHP` 运行在你访问的网站所在的计算机或服务器上。它可以访问该计算机上的每个文件和信息，这使其能够创建发送到浏览器的自定义 `HTML` 页面、运行任务、执行计算并处理该网站的
+    cookie。
+
+
+    PHP 可以在服务器上打开、创建、写入、读取、关闭和删除文件。它可以生成页面内容、收集表单数据并发送和接收 cookie。它还可以删除、添加和修改数据库中的数据。此外，它可以加密数据以及控制用户访问。
+
+
+    通过 `PHP`，你可以输出 `PDF` 文件、图像和 Flash 电影。你不局限于 `HTML`。你甚至可以输出文本，例如 `XML` 和 `XHTML`。换句话说，`PHP`
+    实际上可以做任何事情。由于它专注于服务器端脚本，它可以完成任何其他 `CGI` 程序能做的事情以及更多。
+
+
+    `PHP` 脚本主要用于以下领域：
+
+
+    - 服务器端脚本。
+
+    - 命令行脚本。
+
+
+    '
+- fmt: "\nEven if you do not have a browser or a server, you can still run PHP. You\
+    \ just need to have a PHP parser. It is recommended for scripts that are executed\
+    \ regularly using Task Scheduler for Windows or `cron` for Linux. You can also\
+    \ use these scripts for simple text processing.\n\n### Creating desktop applications\n\
+    \nWhile it is true that PHP is not the number one choice for creating desktop\
+    \ applications with graphical user interfaces, you can still use it if you want\
+    \ to include advanced features in your applications. You can use `PHP-GTK` to\
+    \ create such client-side applications. Also, you can write cross-platform applications.\
+    \ `PHP-GTK` is actually a PHP extension and it is not available in the primary\
+    \ distribution.\n\nYou can use PHP on any major operating system, including Unix,\
+    \ Linux, Microsoft Windows, RISC OS, and Mac OS X. PHP is also supported by majority\
+    \ of the web servers that are popular today, such as `Apache` and `IIS`. Any web\
+    \ server that can use `FastCGI` PHP binary, such as `nginx` and `lighttpd` can\
+    \ also use PHP. PHP can serve as a CGI processor or a module.\n\nYou are free\
+    \ to choose any web server and operating system with PHP. Moreover, you can choose\
+    \ object oriented programming, procedural programming, or a combination of both.\
+    \ PHP can autogenerate your files and save them in your file system rather than\
+    \ printing them out.\n\nOne of the main advantages of PHP is that it supports\
+    \ a variety of databases. It is very easy to write a database-enabled web page\
+    \ using a database specific extension or an abstraction layer, such as `PDO`.\
+    \ You can also connect to a database that supports the Open Database Connection\
+    \ standard through the `ODBC` extension.\n\nWhat’s more, PHP has support for communication\
+    \ with other services via protocols such as `IMAP`, `LDAP`, `SNMP`, `POP3`, `NNTP`,\
+    \ `COM`, and `HTTP`. You can even interact and open raw network sockets using\
+    \ a protocol of your choice. PHP supports Java installation as well as `WDDX`\
+    \ data exchange between all programming languages.\n\nPHP also features text processing,\
+    \ including Perl Compatible Regular Expressions and other tools for parsing and\
+    \ accessing XML files. PHP standardizes XML extensions as well as adds `XML Reader`,\
+    \ `XML Writer`, and `Simple XML` support. PHP also has added `PECL` extensions,\
+    \ such as `XDebug`.\n\n# Setting Up PHP on Your Computer\n\nIn order to begin\
+    \ using PHP, you have to look for a web host that supports `MySQL` and PHP. You\
+    \ can also install a web server and then install `MySQL` and PHP. However, if\
+    \ your server already supports PHP, then you no longer have to do the above instructions.\
+    \ You simply have to create `.php` files and put them in your direction. The server\
+    \ will then parse them automatically. There is no more need for you to compile\
+    \ or install anything. Majority of the web hosts today actually support PHP because\
+    \ it is free.\n\n# Chapter 2: MySQL \n\n`MySQL` is an open source Relational Database\
+    \ Management System (RDBMS) that is available for free. It makes use of Structured\
+    \ Query Language (`SQL`), which is the most commonly used language for accessing,\
+    \ managing, and adding content in databases. It is also known for its proven reliability,\
+    \ quick processing, flexibility, and ease of use. `MySQL` is a crucial part of\
+    \ nearly every open source PHP application. Some of the most popular PHP/MySQL-based\
+    \ scripts include `Joomla`, `phpBB`, and `osCommerce`.\n\n## So What Is MySQL\
+    \ Exactly?\n\nTo understand what `MySQL` is, you have to know what a computer\
+    \ database is. Essentially, a computer database is a collection of data. `MySQL`\
+    \ and other specialized database software are simply programs that allow users\
+    \ to access, manage, and add content in databases.\n\n`MySQL` and other specialized\
+    \ database software are simply programs that allow users to access, manage, and\
+    \ add content in databases.\n\n`MySQL` and other specialized database software\
+    \ are simply programs that allow users to access, manage, and add content in databases.\n\
+    \nSpecialized database software for retrieval.\n\nSpecialized database software\
+    \ for retrieval.\n\nSpecialized database software for retrieval.\n\nSpecialized\
+    \ database software for retrieval.\n\nSpecialized database software for retrieval.\n\
+    \nSpecialized database software for retrieval.\n\n`MySQL` database system.\n\n\
+    `MySQL` database management system.\n\n`MySQL` database servers.\n\n` MySQL vs.\
+    \ servers\n\n"
+  raw: "Even if you do not have a browser or a server, you can still run PHP. You\
+    \ just need to have a PHP parser. It is recommended for scripts that are executed\
+    \ regularly using Task Scheduler for Windows or cron for Linux. You can also use\
+    \ these scripts for simple text processing.\n\n*   Creating desktop applications\n\
+    \nWhile it is true that PHP is not the number one choice for creating desktop\
+    \ applications with graphical user interfaces, you can still use it if you want\
+    \ to include advanced features in your applications. You can use PHP-GTK to create\
+    \ such client-side applications. Also, you can write cross-platform applications.\
+    \ PHP-GTK is actually a PHP extension and it is not available in the primary distribution.\n\
+    \nYou can use PHP on any major operating system, including Unix, Linux, Microsoft\
+    \ Windows, RISC OS, and Mac OS X. PHP is also supported by majority of the web\
+    \ servers that are popular today, such as Apache and IIS. Any web server that\
+    \ can use FastCGI PHP binary, such as nginx and lighttpd can also use PHP. PHP\
+    \ can serve as a CGI processor or a module.\n\nYou are free to choose any web\
+    \ server and operating system with PHP. Moreover, you can choose object oriented\
+    \ programming, procedural programming, or a combination of both. PHP can autogenerate\
+    \ your files and save them in your file system rather than printing them out.\n\
+    \nOne of the main advantages of PHP is that it supports a variety of databases.\
+    \ It is very easy to write a database-enabled web page using a database specific\
+    \ extension or an abstraction layer, such as PDO. You can also connect to a database\
+    \ that supports the Open Database Connection standard through the ODBC extension.\n\
+    \nWhat’s more, PHP has support for communication with other services via protocols\
+    \ such as IMAP, LDAP, SNMP, POP3, NNTP, COM, and HTTP. You can even interact and\
+    \ open raw network sockets using a protocol of your choice. PHP supports Java\
+    \ installation as well as WDDX data exchange between all programming languages.\n\
+    \nPHP also features text processing, including Perl Compatible Regular Expressions\
+    \ and other tools for parsing and accessing XML files. PHP standardizes XML extensions\
+    \ as well as adds XML Reader, XML Writer, and Simple XML support. PHP also has\
+    \ added PECL extensions, such as XDebug.\n\n## Setting Up PHP on Your Computer\n\
+    \nIn order to begin using PHP, you have to look for a web host that supports MySQL\
+    \ and PHP. You can also install a web server and then install MySQL and PHP. However,\
+    \ if your server already supports PHP, then you no longer have to do the above\
+    \ instructions. You simply have to create .php files and put them in your direction.\
+    \ The server will then parse them automatically. There is no more need for you\
+    \ to compile or install anything. Majority of the web hosts today actually support\
+    \ PHP because it is free.\n\n# \n\nChapter 2: MySQL \n\nMySQL is an open source\
+    \ Relational Database Management System (RDBMS) that is available for free. It\
+    \ makes use of Structured Query Language (SQL), which is the most commonly used\
+    \ language for accessing, managing, and adding content in databases. It is also\
+    \ known for its proven reliability, quick processing, flexibility, and ease of\
+    \ use. MySQL is a crucial part of nearly every open source PHP application. Some\
+    \ of the most popular PHP/MySQL-based scripts include Joomla, phpBB, and osCommerce.\n\
+    \n## So What Is MySQL Exactly?\n\nTo understand what MySQL is, you have to know\
+    \ what a computer database is. Essentially, a computer database is a collection\
+    \ of data. MySQL and other specialized database software are simply programs that\
+    \ allow users to store and retrieve data efficiently.\n\nSpecialized database\
+    \ software programs are used to avoid experiencing problems with storing and retrieving\
+    \ data. For instance, if you save your files using no-brainer file names, such\
+    \ as a.doc, b.doc, and c.doc, you will have a hard time looking for your files\
+    \ when you need them. You need a more efficient method for data storage.\n\nA\
+    \ database is a computer software program that is meant to store huge amounts\
+    \ of data. It is basically a structured collection of data that can be anything\
+    \ from picture galleries to shopping lists to corporate network information. With\
+    \ database software, you can keep lists that contain vital information. \n\nFor\
+    \ instance, if you are running a store, using a database will help you keep everything\
+    \ organized. You can create a list of your customers and their addresses. If you\
+    \ need to obtain information from a particular customer, there is no more need\
+    \ for you to check your data one by one.\n\nIn order to access, process, and add\
+    \ data stored in your database, you need a database management system like MySQL\
+    \ Server. Because computers are efficient at handling huge amounts of data, you\
+    \ can greatly benefit from database management systems. They are ideal for computing,\
+    \ as part of applications, and as standalone units.\n\nMySQL databases are also\
+    \ relational. They store data in separate tables instead of storing all of the\
+    \ data in a single storeroom. Logical models with objects such as tables, rows,\
+    \ columns, views, and databases offer flexible programming environments. As a\
+    \ user, you can create your own rules with regard to the relationships between\
+    \ data fields, including one-to-many, one-to-one, unique, optional, required,\
+    \ and pointers between tables. Your database then enforces such rules so your\
+    \ application does not see duplicate, inconsistent, mission, orphan, or outdated\
+    \ data.\n\nSQL in MySQL actually stands for Structured Query Language. It is defined\
+    \ by the ANSI/ISO SQL Standard, which has been in existent since 1986. It is the\
+    \ most well-known standardized language for accessing databases. You may directly\
+    \ enter SQL to perform certain actions such as generating reports; embed SQL statements\
+    \ into codes that were created using other languages; or use language-specific\
+    \ application programming interfaces (APIs) that conceal SQL.\n\nMySQL database\
+    \ servers are fast, scalable, and reliable. They are also easy to use, which is\
+    \ why they can be used by beginners. They can run well on desktops or laptops,\
+    \ alongside other web servers and applications. They do not require much attention,\
+    \ which make them easy to maintain. You can also adjust your settings to make\
+    \ the most of the available memory, I/O capacity, and CPU power if you use a machine\
+    \ specifically for MySQL.\n\n## MySQL vs. PostgreSQL\n\nWhen it comes to open\
+    \ source relational database management systems, a lot of people experience difficulty\
+    \ choosing between MySQL and PostgreSQL. MySQL is the most well-known and commonly\
+    \ used RDBMS while PostgreSQL is the most advanced open source objective RDBMS.\
+    \ Both are excellent solutions that are comparable to proprietary database software.\n\
+    \nPostgreSQL, also referred to as Postgres, is an object-relational database management\
+    \ system (ORDBMS) that focuses on standards-compliance and extensibility. It stores\
+    \ data, supports the best practices, and allows for retrieval. It can also handle\
+    \ workloads, including single-machine applications and Internet-facing applications.\n\
+    \nMany users presume MySQL to have fewers features yet faster than PostgreSQL.\
+    \ Conversely, they presume PostgreSQL to be densely featured and similar to Oracle.\
+    \ Developers prefer MySQL for software projects due to its ease of use and speed,\
+    \ but many developers who have a background on SQL Server and Oracle also use\
+    \ PostgreSQL.\n\nMySQL has a couple of layers, a layer for several storage engines\
+    \ and an upper layer. PostgreSQL, on the other hand, has just one storage engine.\
+    \ Remember that storage engines mostly differ in terms of performance and functionality.\
+    \ Depending on what environment your database system runs in, you can optimize\
+    \ it."
+  toc: []
+  trans: '
+
+    即使你没有浏览器或服务器，你仍然可以运行 PHP。你只需要一个 PHP 解析器。对于使用 Windows 任务计划程序或 Linux 的 `cron` 定期执行的脚本，建议使用
+    PHP。你也可以使用这些脚本进行简单的文本处理。
+
+
+    ### 创建桌面应用程序
+
+
+    虽然 PHP 并不是创建带有图形用户界面的桌面应用程序的首选，但如果你想在应用程序中包含高级功能，仍然可以使用它。你可以使用 `PHP-GTK` 来创建此类客户端应用程序。此外，你还可以编写跨平台应用程序。`PHP-GTK`
+    实际上是一个 PHP 扩展，它在主发行版中并不可用。
+
+
+    你可以在任何主流操作系统上使用 PHP，包括 Unix、Linux、Microsoft Windows、RISC OS 和 Mac OS X。PHP 还支持今天大多数流行的
+    Web 服务器，如 `Apache` 和 `IIS`。任何可以使用 `FastCGI` PHP 二进制文件的 Web 服务器（如 `nginx` 和 `lighttpd`）也可以使用
+    PHP。PHP 可以作为 CGI 处理器或模块存在。
+
+
+    你可以自由地选择任何支持 PHP 的 Web 服务器和操作系统。此外，你可以选择面向对象编程、过程化编程或两者的结合。PHP 可以自动生成你的文件并将其保存到文件系统中，而不是将其打印出来。
+
+
+    PHP 的主要优势之一是它支持多种数据库。使用特定的数据库扩展或抽象层（如 `PDO`），可以非常容易地编写启用数据库支持的网页。你还可以通过 `ODBC`
+    扩展连接到支持开放数据库连接标准的数据库。
+
+
+    此外，PHP 支持通过 `IMAP`、`LDAP`、`SNMP`、`POP3`、`NNTP`、`COM` 和 `HTTP` 等协议与其他服务进行通信。你甚至可以使用你选择的协议进行交互并打开原始网络套接字。PHP
+    还支持 Java 安装以及在所有编程语言之间的 `WDDX` 数据交换。
+
+
+    PHP 还具有文本处理功能，包括 Perl 兼容正则表达式以及用于解析和访问 XML 文件的其他工具。PHP 标准化了 XML 扩展，并增加了 `XML Reader`、`XML
+    Writer` 和 `Simple XML` 支持。PHP 还有增加了 `PECL` 扩展，例如 `XDebug`。
+
+
+    # 在你的电脑上设置 PHP
+
+
+    为了开始使用 PHP，你需要寻找支持 `MySQL` 和 PHP 的 Web 托管。你也可以先安装 Web 服务器，然后安装 `MySQL` 和 PHP。然而，如果你的服务器已经支持
+    PHP，那么你就不再需要执行上述指令。你只需要创建 `.php` 文件并将它们放在你的目录中。服务器将自动解析它们。你不再需要编译或安装任何东西。今天大多数
+    Web 托管实际上都支持 PHP，因为它是免费的。
+
+
+    # 第 2 章：MySQL
+
+
+    `MySQL` 是一个免费提供的开源关系型数据库管理系统 (RDBMS)。它利用结构化查询语言 (`SQL`)，这是访问、管理和添加数据库内容最常用的语言。它还以经过证明的可靠性、快速处理、灵活性易用性而闻名。`MySQL`
+    是几乎每个开源 PHP 应用程序的关键部分。一些最流行的基于 PHP/MySQL 的脚本包括 `Joomla`、`phpBB` 和 `osCommerce`。
+
+
+    ## MySQL 到底是什么？
+
+
+    要理解 `MySQL` 是什么，你必须知道什么是计算机数据库。本质上，计算机数据库是数据的集合。`MySQL` 和其他专门的数据库软件只是允许用户访问、管理和添加数据库内容的程序。
+
+
+    `MySQL` 和其他专门的数据库软件只是允许用户访问、管理和添加数据库内容的程序。
+
+
+    `MySQL` 和其他专门的数据库软件只是允许用户访问、管理和添加数据库内容的程序。
+
+
+    用于检索的专门数据库软件。
+
+
+    用于检索的专门数据库软件。
+
+
+    用于检索的专门数据库软件。
+
+
+    用于检索的专门数据库软件。
+
+
+    用于检索的专门数据库软件。
+
+
+    用于检索的专门数据库软件。
+
+
+    `MySQL` 数据库系统。
+
+
+    `MySQL` 数据库管理系统。
+
+
+    `MySQL` 数据库服务器。
+
+
+    ` MySQL 与服务器
+
+
+
+    '
+- fmt: "\nSome of the most significant features of PostgreSQL include TOAST data compression,\
+    \ parameterized and static SQL executor, improved cache management, large scalability,\
+    \ asynchronous commit, and advanced cost-based optimizer. PostgreSQL has the ability\
+    \ to decompress and compress data using a speedy compression scheme that allows\
+    \ it to fit data into a specific disk space. Compressing data is great because\
+    \ it saves disk space as well as reads data faster.\n\nSome of the core features\
+    \ of MySQL include a broad ANSI SQL 99 subset and extensions, table partitioning\
+    \ through `LIST`, `SET`, `HASH`, and `RANGE`, network protocol compression, built-in\
+    \ replication though row-change events or statements, triggers, SSL support, cursors,\
+    \ stored procedures, updateable views, and Unicode support.\n\nIf you are a webmaster\
+    \ who does not write programs for your website, you may not find the differences\
+    \ between MySQL and PostgreSQL to be such a big deal. Your concerns may be mainly\
+    \ about your web host having database software that you need for your application.\
+    \ In general, if you use CMS or any other popular software for blogging, you can\
+    \ expect it to be MySQL. Nearly all commercial web hosts have MySQL as part of\
+    \ their hosting packages.\n\n## Do you need to learn MySQL?\n\nAverage webmasters\
+    \ do not need to study SQL or MySQL because the software they use is most likely\
+    \ to do the storing and retrieving of data. They just have to learn how to use\
+    \ their software. Think of MySQL and similar databases as car engines. There is\
+    \ really no need for you to learn how to design car engines just to be able to\
+    \ use cars. Similarly, there is no need for you to learn how to directly read\
+    \ and write MySQL databases to be able to use blogging software.\n\nOn the other\
+    \ hand, if you are a programmer, you need to study SQL to be able to write computer\
+    \ programs that access MySQL and other SQL databases. Of course, you also need\
+    \ to learn a suitable programming language. If you are wondering if you have to\
+    \ be a programmer to become a webmaster, the answer is no. You can be a webmaster\
+    \ without knowing how to program. You can create a website by manually coding\
+    \ it in HTML.\n\n# Chapter 3: Syntax, Comments, Case Sensitivity, New Line, and\
+    \ Forms\n\n## Syntax\n\nYou can place PHP scripts anywhere in you document. They\
+    \ generally begin with `<?php` and end with `?>`. Their file extension is `.php`\
+    \ and they normally contain PHP scripting codes and HTML tags. Do not forget to\
+    \ use a semicolon (`;`) to end a PHP statement.\n\nConsider the following example\
+    \ of a PHP code:\n\n```php\n<?php\necho “Testing code”;\n?>\n```\n\nIf you run\
+    \ this code, you will get an output of:\nTesting code\n\n## Comments\n\nComments\
+    \ are lines that are not executed or read as part of the program. Their sole purpose\
+    \ is to be read by users who may need additional information. You can include\
+    \ comments in your program if you want other people to gain a better understanding\
+    \ of it or you want to be reminded of what you did. In case you decide to look\
+    \ back at your program after a few years, your comments can be helpful. They can\
+    \ remind you about your thoughts during the time when you created your code.\n\
+    \nConsider the following example:\n\n```php\n<?php\n# This is a single line comment\n\
+    //This is a single line comment\n/* \nThis is a \nmultiple line \ncomment\n*/\n\
+    //This is a comment that leaves out a part of a code line\n$w = 2 /* + 10 */ +\
+    \ 3;\necho $w;\n?>\n```\n\nIf you run this code, you will get an output of:\n\
+    5\n\n## Case Sensitivity\n\nFunctions, keywords, and classes are not case sensitive\
+    \ in PHP. \n\nConsider this example:\n\n```php\n<?php\necho “Testing code ”;\n\
+    ECHO “Testing code ”;\nEcHo “Testing code ”;\n?>\n```\n\nIf you run this code,\
+    \ you will get an output of:\nTesting code Testing code Testing code\n\nHowever,\
+    \ variable names are case sensitive in PHP.\n\nTake a look at this example:\n\n\
+    ```php\n<?php\n$color = “blue”;\necho “The sky is ” . $color . \"\\n“;\necho “The\
+    \ sky is “ . $coLOR . \"\\n“;\necho “The sky is “ . $COLOR . \"\\n“;\n?>\n```\n\
+    \nIf you run this code, you will get an output of:\nThe sky is blue \nThe sky\
+    \ is \nThe sky is\n\nIf you notice, the first statement is the only one that displays\
+    \ the value of the variable `$color`. This is because `$color`, `$coLOR`, and\
+    \ `$COLOR` are treated as different variables.\n\n## New Line\n\nTo create a new\
+    \ line, you simply have to place `\\n` after your statement.\n\nConsider the following:\n\
+    \n```php\n<?php\necho “The sky is \\n“;\necho “The rose is \\n“;\n?>\n```\n\n\
+    If you run this code, you will get an output of:\nThe sky is\nThe rose is\n\n\
+    ## Dealing with Forms\n\nAmong the greatest advantages of PHP is that it can deal\
+    \ with forms.\n\n# Chapter 4: Arrays\n\nAn array is a special variable that can\
+    \ hold multiple values. For instance, you can store more than one item in an array.\n\
+    \n```php\n$name1 = “Wendy”;\n$name2 = “Dawn”;\n```\n\n## How to Create an Array\n\
+    \nThe `array() ` function is used to create arrays. Any number of arguments can\
+    \ be passed. There are actually three types of arrays: associative, indexed, and\
+    \ multidimensional.\n\n### Associative Arrays\n\nAssociative arrays have named\
+    \ keys. The syntax for associative arrays is `array(key => value)`. For example:\n\
+    \n```php\n<?php\n$price = array (“cantaloupes” => “2”, “grapes” => “3”, “strawberries”\
+    \ => “4”);\necho “Cantaloupes cost “ . $price['oranges'] . “dollars each.”;\n\
+    ?>\n```\n\n### Indexed Arrays\n\nIndexed arrays have numeric index. The syntax\
+    \ for index arrays is `array(value1, value2)`. There are two ways on how you can\
+    \ write indexed arrays: you can allow the index to be automatically assigned or\
+    \ assign it manually.\n\nAutomatically assigned:\n```php\n$fruits = array (“apples”,\
+    \ “bananas”, “kiwis”);\n```\n\nManually assigned:\n```php\n$fruits[0] = “apples”;\n\
+    $fruits[1] = “bananas”;\n$fruits[2] = “kiwis”;\n```\n\n### Multidimensional Arrays\n\
+    \nMultidimensional arrays contain other arrays. Here is an example of a two-dimensional\
+    \ array:\n\n```php\n<?php\n$fruits = array (\narray (“apples”, 10, 6),\narray\
+    \ (“bananas”, 4, 5),\narray (“kiwis”, 11, 10)\n);\n?>\n```\n\nIn PHP 5.4, `array()`\
+    \ can be replaced with `[]`. This is called the short array syntax. For example:\n\
+    \n```php\n<?php\n$name = [\n    “Wendy” => “Dawn”,\n    “Dawn” => “Wendy”,\n];\n\
+    ?>\n```\n\nA string or an integer can be the key. The value can also be of any\
+    \ type. In addition, these key casts are expected to occur:\n\nFloat: It is cast\
+    \ to an integer, truncating the fractional part. For example, the key `9.7` is\
+    \ going to be stored under `9`.\n"
+  raw: "Some of the most significant features of PostgreSQL include TOAST data compression,\
+    \ parameterized and static SQL executor, improved cache management, large scalability,\
+    \ asynchronous commit, and advanced cost-based optimizer. PostgreSQL has the ability\
+    \ to decompress and compress data using a speedy compression scheme that allows\
+    \ it to fit data into a specific disk space. Compressing data is great because\
+    \ it saves disk space as well as reads data faster.\n\nSome of the core features\
+    \ of MySQL include a broad ANSI SQL 99 subset and extensions, table partitioning\
+    \ through LIST, SET, HASH, and RANGE, network protocol compression, built-in replication\
+    \ though row-change events or statements, triggers, SSL support, cursors, stored\
+    \ procedures, updateable views, and Unicode support.\n\nIf you are a webmaster\
+    \ who does not write programs for your website, you may not find the differences\
+    \ between MySQL and PostgreSQL to be such a big deal. Your concerns may be mainly\
+    \ about your web host having database software that you need for your application.\
+    \ In general, if you use CMS or any other popular software for blogging, you can\
+    \ expect it to be MySQL. Nearly all commercial web hosts have MySQL as part of\
+    \ their hosting packages.\n\n## Do you need to learn MySQL? \n\nAverage webmasters\
+    \ do not need to study SQL or MySQL because the software they use is most likely\
+    \ to do the storing and retrieving of data. They just have to learn how to use\
+    \ their software. Think of MySQL and similar databases as car engines. There is\
+    \ really no need for you to learn how to design car engines just to be able to\
+    \ use cars. Similarly, there is no need for you to learn how to directly read\
+    \ and write MySQL databases to be able to use blogging software.\n\nOn the other\
+    \ hand, if you are a programmer, you need to study SQL to be able to write computer\
+    \ programs that access MySQL and other SQL databases. Of course, you also need\
+    \ to learn a suitable programming language. If you are wondering if you have to\
+    \ be a programmer to become a webmaster, the answer is no. You can be a webmaster\
+    \ without knowing how to program. You can create a website by manually coding\
+    \ it in HTML.\n\n# \n\nChapter 3: Syntax, Comments, Case Sensitivity, New Line,\
+    \ and Forms \n\n## Syntax\n\nYou can place PHP scripts anywhere in you document.\
+    \ They generally begin with <?php and end with ?>:. Their file extension is .php\
+    \ and they normally contain PHP scripting codes and HTML tags. Do not forget to\
+    \ use a semicolon (;) to end a PHP statement.\n\nConsider the following example\
+    \ of a PHP code:\n\n<?php\n\necho “Testing code”;\n\n?>\n\nIf you run this code,\
+    \ you will get an output of:\n\nTesting code\n\n## Comments\n\nComments are lines\
+    \ that are not executed or read as part of the program. Their sole purpose is\
+    \ to be read by users who may need additional information. You can include comments\
+    \ in your program if you want other people to gain a better understanding of it\
+    \ or you want to be reminded of what you did. In case you decide to look back\
+    \ at your program after a few years, your comments can be helpful. They can remind\
+    \ you about your thoughts during the time when you created your code.\n\nConsider\
+    \ the following example:\n\n<?php\n\n\\# This is a single line comment\n\n//This\
+    \ is a single line comment\n\n/\\* \n\nThis is a \n\nmultiple line \n\ncomment\n\
+    \n\\*/\n\n//This is a comment that leaves out a part of a code line\n\n$w = 2\
+    \ /\\* + 10 \\*/ + 3;\n\necho $w;\n\n?>\n\nIf you run this code, you will get\
+    \ an output of:\n\n5\n\n## Case Sensitivity\n\nFunctions, keywords, and classes\
+    \ are not case sensitive in PHP. \n\nConsider this example:\n\n<?php\n\necho “Testing\
+    \ code ”;\n\nECHO “Testing code ”;\n\nEcHo “Testing code ”;\n\n?>\n\nIf you run\
+    \ this code, you will get an output of:\n\nTesting code Testing code Testing code\n\
+    \nHowever, variable names are case sensitive in PHP.\n\nTake a look at this example:\n\
+    \n<?php\n\n$color = “blue”;\n\necho “The sky is ” . $color . “\\\\n“;\n\necho\
+    \ “The sky is “ . $coLOR . “\\\\n“;\n\necho “The sky is “ . $COLOR . “\\\\n“;\n\
+    \n?>\n\nIf you run this code, you will get an output of:\n\nThe sky is blue \n\
+    \nThe sky is \n\nThe sky is\n\nIf you notice, the first statement is the only\
+    \ one that displays the value of the variable $color. This is because $color,\
+    \ $coLOR, and $COLOR are treated as different variables.\n\n## New Line\n\nTo\
+    \ create a new line, you simply have to place \\\\n after your statement.\n\n\
+    Take a look at this example:\n\n<?php\n\necho “The sky is blue. \\\\n“;\n\necho\
+    \ “The rose is red. \\\\n“;\n\n?>\n\nIf you run this code, you will get an output\
+    \ of:\n\nThe sky is blue.\n\nThe rose is red.\n\n## Dealing with Forms\n\nAmongst\
+    \ the greatest advantages of PHP is that it can deal with HTML forms. Take note\
+    \ that form elements are automatically available in PHP scripts.\n\n# \n\nChapter\
+    \ 4: Arrays \n\nAn array is a special variable that stores multiple values one\
+    \ at a time. It is basically a list of items. For instance, if you want to store\
+    \ a list of names, you can store them in single variables such as:\n\n$name1 =\
+    \ “Wendy”;\n\n$name2 = “Dawn”;\n\n$name3 = “David”;\n\nHowever, if you want to\
+    \ create a loop through these names, you need an array. Arrays can hold numerous\
+    \ values in one name and allow you to access these values when you refer to an\
+    \ index number.\n\nTo put it in a much simpler perspective, an array is like a\
+    \ grocery list. It lets you store more than one item in one variable. When you\
+    \ create your grocery list, you can use separate pieces of paper for every item\
+    \ that you have to buy. These items are like the variables that you store.\n\n\
+    Using separate pieces of paper for your grocery items is unnecessary though. It\
+    \ is such a hassle and a total waste of paper. So, instead of doing this, you\
+    \ can just write down everything you need to buy in a single piece of paper. This\
+    \ single piece of paper is just like an array.\n\n## How to Create an Array\n\n\
+    The array ( ) function in PHP is used to create arrays. Any number of comma-separated\
+    \ key => value pairs can be used as arguments. For instance,\n\narray (\n\n             \
+    \ key1 => value1,\n\nkey2 => value2,\n\n…\n\n)\n\nThe last array may or may not\
+    \ have a comma. Single-line arrays are actually better off without commas. So\
+    \ instead of writing array (1, 2, ), you should write array (1, 2). Multi-line\
+    \ arrays, however, are preferred to have trailing commas because they make the\
+    \ addition of new elements easier.\n\nThere are actually three types of arrays:\
+    \ associative, indexed, and multidimensional. Associative arrays are arrays that\
+    \ have named keys. Indexed arrays are arrays that have a numeric index. Multidimensional\
+    \ arrays are arrays that contain one or more arrays.\n\nThe syntax for associative\
+    \ arrays is:\n\narray (key => value, key => value, etc.);\n\nFor example:\n\n\
+    <?php\n\n$price = array (“cantaloupes” => “2”, “grapes” => “3”, “strawberries”\
+    \ => “4”);\n\necho “Cantaloupes cost “ . $price \\[‘oranges’\\] . “dollars each.”;\n\
+    \n?>\n\nThe syntax for index arrays is:\n\narray (value1, value2, etc.);\n\nThere\
+    \ are two ways on how you can write indexed arrays. You can allow the index to\
+    \ be automatically assigned or assign it manually.\n\nTake a look at this example\
+    \ of an automatically assigned index:\n\n$fruits = array (“apples”, “bananas”,\
+    \ “kiwis”);\n\nAnd here is an example of a manually assigned index:\n\n$fruits\
+    \ \\[0\\] = “apples”;\n\n$fruits \\[1\\] = “bananas”;\n\n$fruits \\[2\\] = “kiwis”;\n\
+    \nAs for multidimensional array, here is an example of a two-dimensional array:\n\
+    \n<?php\n\n$fruits = array (\n\narray (“apples”, 10, 6),\n\narray (“bananas”,\
+    \ 4, 5),\n\narray (“kiwis”, 11, 10)\n\n);\n\n?>\n\nIn PHP 5.4, array ( ) can be\
+    \ replaced with \\[ \\]. This is called the short array syntax. For example:\n\
+    \n<?php\n\n$name = array (\n\n              “Wendy” => “Dawn”,\n\n             \
+    \ “Dawn” => “Wendy”,\n\n);\n\ncan be written like this if you are using PHP 5.4:\n\
+    \n<?php\n\n$name = \\[\n\n              “Wendy” => “Dawn”,\n\n              “Dawn”\
+    \ => “Wendy”,\n\n\\];\n\n?>\n\nA string or an integer can be the key. The value\
+    \ can also be of any type. In addition, these key casts are expected to occur:\n\
+    \nFloat. It is cast to an integer, truncating the fractional part. For example,\
+    \ the key 9.7 is going to be stored under 9."
+  toc: []
+  trans: "\n\nPostgreSQL 的一些重要特性包括 TOAST 数据压缩、参数化和静态 SQL 执行器、改进的缓存管理、强大的可扩展性、异步提交以及先进的基于成本的优化器。PostgreSQL\
+    \ 能够使用快速的压缩方案对数据进行解压缩和压缩，使其能够存放在特定的磁盘空间中。压缩数据非常好，因为它不仅节省磁盘空间，还能更快地读取数据。\n\nMySQL\
+    \ 的一些核心特性包括广泛的 ANSI SQL 99 子集及扩展、通过 `LIST`、`SET`、`HASH` 和 `RANGE` 进行表分区、网络协议压缩、通过行更改事件或语句的内置复制、触发器、SSL\
+    \ 支持、游标、存储过程、可更新视图以及 Unicode 支持。\n\n如果你是一个不为自己的网站编写程序的站管理员，你可能不会觉得 MySQL 和 PostgreSQL\
+    \ 之间的差异有多大。你关心的可能主要是你的 Web 主机是否拥有你应用程序所需的数据库软件。通常情况下，如果你使用 CMS 或任何其他流行的博客软件，可以预期它使用\
+    \ MySQL。几乎所有的商业 Web 主机都将 MySQL 作为其托管包的一部分。\n\n## 你需要学习 MySQL 吗？\n\n普通的站管理员不需要学习\
+    \ SQL 或 MySQL，因为他们使用的软件极可能完成了数据的存储和检索。他们只需要学习如何使用他们的软件。将 MySQL 和类似的数据库想象成汽车引擎。为了能够开车，你真的不需要学习如何设计汽车引擎。同样，为了能够使用博客软件，你不需要学习直接读写\
+    \ MySQL 数据库。\n\n另一方面，如果你是一个程序员，你需要学习 SQL，以便编写访问 MySQL 和其他 SQL 数据库的计算机程序。当然，你还需要学习一种合适的编程语言。如果你想是否必须成为程序员才能成为站管理员，答案是否定的。你可以在不知道编程的情况下成为站管理员。你可以通过手动编写\
+    \ HTML 代码来创建一个网站。\n\n# 第 3 章：语法、注释、大小写敏感、换行和表单\n\n## 语法\n\n你可以将 PHP 脚本放在文档的任何地方。它们通常以\
+    \ `<?php` 开始，以 `?>` 结束。它们的文件扩展名为 `.php`，通常包含 PHP 脚本代码和 HTML 标签。不要忘记使用分号（`;`）结束\
+    \ PHP 语句。\n\n考虑以下 PHP 代码示例：\n\n```php\n<?php\necho “Testing code”;\n?>\n```\n\n\
+    如果你运行这段代码，你将得到输出：\nTesting code\n\n## 注释\n\n注释是不执行或不作为程序一部分读取的代码。它们的唯一目的是供可能需要额外信息的用户阅读。如果你想让其他人更好地理解你的程序，或者你想提醒自己曾经做过什么，你可以在程序中包含注释。如果你决定在几年后回来看你的程序，你的注释将非常有帮助。它们可以提醒你自己在创建代码时的想法。\n\
+    \n考虑以下示例：\n\n```php\n<?php\n# 这是一个单行注释\n// 这是一个单行注释\n/* \n这是一个 \n多行\n注释\n*/\n\
+    // 这是一个省略了代码行部分内容的注释\n$w = 2 /* + 10 */ + 3;\necho $w;\n?>\n```\n\n如果你运行这段代码，你将得到输出：\n\
+    5\n\n## 大小写敏感\n\nPHP 中的函数、关键字和类是不区分大小写的。\n\n  考虑这个示例：\n\n```php\n<?php\necho “Testing\
+    \ code ”;\nECHO “Testing code ”;\nEcHo “Testing code ”;\n?>\n```\n\n如果你运行这段代码，你将得到输出：\n\
+    Testing code Testing code Testing code\n\n然而，PHP 中的变量名是区分大小写的。\n\n看这个示例：\n\n```php\n\
+    <?php\n$color = “blue”;\necho “The sky is ” . $color . \"\\n“;\necho “The sky\
+    \ is “ . $coLOR . \"\\n“;\necho “The sky is “ . $COLOR . \"\\n“;\n?>\n```\n\n\
+    如果你运行这段代码，你将得到输出：\nThe sky is blue \nThe sky is \nThe sky is\n\n你会发现，第一个语句是唯一显示变量\
+    \ `$color` 值的。这是因为 `$color`、`$coLOR` 和 `$COLOR` 被视为不同的变量。\n\n## 换行\n\n要创建一个新行，你只需要在语句后放置\
+    \ `\\n`。\n\n考虑以下内容：\n\n```php\n<?php\necho “The sky is \\n“;\necho “The rose is\
+    \ \\n“;\n?>\n```\n\n如果你运行这段代码，你将得到输出：\nThe sky is\nThe rose is\n\n## 处理表单\n\n\
+    PHP 的最大优势之一是它可以处理表单。\n\n# 第 4 章：数组\n\n数组是一个可以存储多个值的特殊变量。例如，你可以在数组中存储多个项目。\n\n\
+    ```php\n$name1 = “Wendy”;\n$name2 = “Dawn”;\n```\n\n## 如何创建数组\n\n使用 `array()`\
+    \ 函数来创建数组。可以传递任意数量的参数。实际上有三种数组：关联数组、索引数组和多维数组。\n\n### 关联数组\n\n关联数组具有命名的键。关联数组的语法为\
+    \ `array(key => value)`。例如：\n\n```php\n<?php\n$price = array (“cantaloupes” =>\
+    \ “2”, “grapes” => “3”, “strawberries” => “4”);\necho “Cantaloupes cost “ . $price['oranges']\
+    \ . “dollars each.”;\n?>\n```\n\n### 索引数组\n\n索引数组具有数字索引。索引数组的语法为 `array(value1,\
+    \ value2)`。编写索引数组有两种：你可以允许索引自动分配，也可以手动分配。\n\n自动分配：\n```php\n$fruits = array (“apples”,\
+    \ “bananas”, “kiwis”);\n```\n\n手动分配：\n```php\n$fruits[0] = “apples”;\n$fruits[1]\
+    \ = “bananas”;\n$fruits[2] = “kiwis”;\n```\n\n### 多维数组\n\n多维数组包含其他数组。这是一个二维数组的示例：\n\
+    \n```php\n<?php\n$fruits = array (\narray (“apples”, 10, 6),\narray (“bananas”,\
+    \ 4, 5),\narray (“kiwis”, 11, 10)\n);\n?>\n```\n\n在 PHP 5.4 中，`array()` 可以被 `[]`\
+    \ 替换。这被称为短数组语法。例如：\n\n```php\n<?php\n$name = [\n    “Wendy” => “Dawn”,\n    “Dawn”\
+    \ => “Wendy”,\n];\n?>\n```\n\n字符串或整数可以是键。值也可以是任何类型。此外，预计会发生以下键转换：\n\n浮点数：它被转换为整数，截断小数部分。例如，键\
+    \ `9.7` 将存储在 `9` 下。\n\n"
+- fmt: "\n`String`. A string that contains a valid integer is cast to the integer\
+    \ type. For example, the key `9` is going to be stored under `9` while the key\
+    \ `09` is not going to be cast since it is not a valid decimal integer.\n\n`Bool`.\
+    \ It is also cast to an integer. For example, the key `false` is going to be stored\
+    \ under `0` while the key `true` is going to be stored under `1`.\n\n`Null`. It\
+    \ is cast to an empty string. For example, the key `null` is going to be stored\
+    \ under `\" \"`.\n\nObjects and arrays can never be used as keys. If you try to\
+    \ use them as keys, you will get an illegal offset type warning.\n\nIf you declare\
+    \ multiple elements with the same key, the last one is going to be used while\
+    \ the others are going to be overwritten.\n\nConsider the following example:\n\
+    \n```php\n<?php\n$array = array (\n    1 => \"w\",\n    \"1\" => \"x\",\n    1.5\
+    \ => \"y\",\n    true => \"z\",\n);\n\nvar_dump ($array);\n?>\n```\n\nIf you run\
+    \ this code, you will get an output of:\n\n```text\narray (1) {\n    [1] =>\n\
+    \    string (1) \"z\"\n}\n```\n\nThis is the resulting output because all the\
+    \ keys are cast to `1`. For every new element, the value is overwritten, which\
+    \ is why the value `\"z\"` is left. String and integer keys can be contained in\
+    \ PHP arrays all at once since PHP cannot differentiate associative and indexed\
+    \ arrays.\n\n## The Square Bracket Syntax\n\nThe array `[key]` syntax can be used\
+    \ to access array elements. Both curly braces and square brackets can be used\
+    \ interchangeably if you want to access array elements. Since PHP 5.4, you can\
+    \ array deference the results of method calls and function calls directly. In\
+    \ the earlier versions, you can only array deference with the use of a temporary\
+    \ variable. Since PHP 5.5, you can already array deference array literals. Then\
+    \ again, take note that you cannot access array keys that have not been defined\
+    \ just as you cannot access any other undefined variables. If you do, you will\
+    \ get an `E_NOTICE`-level error message and a `NULL` output.\n\nWhen it comes\
+    \ to creating or modifying arrays using square bracket syntax, you can explicitly\
+    \ set values in them. You can do this by assigning values to the arrays. The keys\
+    \ should be specified in brackets or omitted to result in empty brackets `[]`.\
+    \ If you wish to change a value, you can assign another value to the element through\
+    \ its key. If you wish to remove a value pair or key, you can use the `unset()`\
+    \ function.\n\nHowever, the array cannot be re-indexed. If you wish to remove\
+    \ and shift, you can use the `array_values()` function to.\n\n## Some of the Most\
+    \ Used Array Functions\n\n- `asort`: it sorts arrays as well as maintains index.\n\
+    - `arsort`: it sorts arrays in reverse order as well as maintains index.\n- `array`:\
+    \ it creates arrays\n- `compact`: it creates arrays that contain variables\n-\
+    \ `current`: it returns the current elements in arrays\n- `each`: it returns the\
+    \ current keys and value pairs from arrays as well as advances the array\n- `end`:\
+    \ it sets internal pointers to their last elements\n- `extract`: it imports variables\
+    \ into their current symbol tables.\n- `in_array`: it verifies if values exist\
+    \ in arrays\n- `key_exists`: it is another name for `array_key_exists`\n- `ksort`:\
+    \ it sorts arrays by key\n- `krsort`: it sorts arrays by key but in reverse order\n\
+    - `key`: it fetches keys from arrays\n- `list`: it assigns variables like they\
+    \ were arrays\n- `natsort`: it sorts arrays through a natural order\n- `natcasesort`:\
+    \ it sorts arrays a natural order algorithm that is not case sensitive\n- `next`:\
+    \ it advances internal array pointers\n- `prev`: it rewinds internal array pointers\n\
+    - `pos`: it is another term for `current`\n- `range`: it creates arrays that contain\
+    \ a wide variety of elements\n- `rsort`: it sorts arrays in reverse order\n- `reset`:\
+    \ it sets internal pointers to their first element\n- `shuffle`: it shuffles arrays\n\
+    - `sort`: it sorts arrays\n- `sizeof`: it is another term for `count`\n- `uasort`:\
+    \ it sorts arrays using user-defined comparison functions as well as maintains\
+    \ index.\n- `uksort`: it sorts arrays by keys with user-defined comparison functions\n\
+    - `usort`: it sorts arrays by values with user-defined comparison functions\n\
+    - `array_chunk`: it splits arrays into\n- `array_combine`: it merges arrays into\n\
+    - `array_count_values`: it counts every\n- `array_diff`: it calculates difference\
+    \ of\n- `array_diff_assoc`: it calculates difference of\n- `array_diff_key`: it\
+    \ calculates difference of\n- `array_diff_unique`: it calculates difference of\n\
+    - `array_fill`: it fills arrays with\n- `array_fill_keys`: it fills arrays with\n\
+    - `array_filter`: it filters arrays\n- `array_group`: it groups the array\n- `array_key_diff`:\
+    \ it calculates difference of\n- `array_key_diff_assoc`: it calculates difference\
+    \ of\n- `array_key_diff_key`: it calculates difference of\n- `array_key_diff_unique`:\
+    \ it calculates difference of\n- `array_keys`: it returns the keys\n- `array_intersect`:\
+    \ it calculates intersection\n- `array_intersect_assoc`: it calculates intersection\
+    \ of\n- `array_intersect_key`: it calculates intersection of\n- `array_intersect_unique`:\
+    \ it calculates intersection of\n- `array_merge`: it merges arrays\n- `array_merge_recursive`:\
+    \ it merges recursively\n- `array_multisort`: it sorts arrays multiple\n- `array_pop`:\
+    \ it pops elements off\n- `array_pad`: it pads arrays with\n- `array_product`:\
+    \ it calculates the product\n- `array_rand`: it randomly chooses one\n- `array_push`:\
+    \ it pushes at least one\n- `array_reduce`: it iteratively reduces\n- `array_replace`:\
+    \ it replaces the array\n- `array_shift`: it shifts elements off the start\n-\
+    \ `array_slice`: it extracts part of\n- `array_splice`: it removes part of\n-\
+    \ `array_sum`: it calculates the sum of\n- `array_unique`: it eliminates duplicate\
+    \ values\n- `array_values`: it returns the value\n- `array_unshift`: it prepends\
+    \ at least one to the start\n- `array_walk`: it applies functions supplied by\
+    \ user to each member of the array\n\n# \n\nChapter 5: Conditional Statements\n\
+    \nConditional statements are used for performing various actions for various conditions.\
+    \ Oftentimes, when you write a code, you aim to perform actions for specific purposes.\
+    \ In PHP, you can use these conditional statements:\n\n- `switch`: it lets you\
+    \ choose a block of code to execute\n- `if`: it lets you execute a code if the\
+    \ condition is true\n- `if...else...else`: it lets you specific a new condition\
+    \ for testing if the previous condition is false\n- `if...else`: it lets you execute\
+    \ a code if the condition is true, and another one if it is false\n\n## The If\
+    \ Statement\n"
+  raw: "String. A string that contains a valid integer is cast to the integer type.\
+    \ For example, the key 9 is going to be stored under 9 while the key 09 is not\
+    \ going to be cast since it is not a valid decimal integer.\n\nBool. It is also\
+    \ cast to an integer. For example, the key false is going to be stored under 0\
+    \ while the key true is going to be stored under 1.\n\nNull. It is cast to an\
+    \ empty string. For example, the key null is going to be stored under “ “.\n\n\
+    Objects and arrays can never be used as keys. If you try to use them as keys,\
+    \ you will get an illegal offset type warning.\n\nIf you declare multiple elements\
+    \ with the same key, the last one is going to be used while the others are going\
+    \ to be overwritten.\n\nConsider the following example:\n\n<?php\n\n$array = array\
+    \ (\n\n              1 => “w”,\n\n              “1” => “x”,\n\n              1.5\
+    \ => “y”,\n\n              true => “z”,\n\n);\n\nvar\\_dump ($array);\n\n?>\n\n\
+    If you run this code, you will get an output of:\n\narray (1)  {\n\n             \
+    \ \\[1\\] =>\n\n              string (1) “z”\n\n}\n\nThis is the resulting output\
+    \ because all the keys are cast to 1. For every new element, the value is overwritten,\
+    \ which is why the value “z” is left. String and integer keys can be contained\
+    \ in PHP arrays all at once since PHP cannot differentiate associative and indexed\
+    \ arrays.\n\n## The Square Bracket Syntax\n\nThe array \\[key\\] syntax can be\
+    \ used to access array elements. Both curly braces and square brackets can be\
+    \ used interchangeably if you want to access array elements. Since PHP 5.4, you\
+    \ can array deference the results of method calls and function calls directly.\
+    \ In the earlier versions, you can only array deference with the use of a temporary\
+    \ variable. Since PHP 5.5, you can already array deference array literals. Then\
+    \ again, take note that you cannot access array keys that have not been defined\
+    \ just as you cannot access any other undefined variables. If you do, you will\
+    \ get an E\\_NOTICE-level error message and a NULL output.\n\nWhen it comes to\
+    \ creating or modifying arrays using square bracket syntax, you can explicitly\
+    \ set values in them. You can do this by assigning values to the arrays. The keys\
+    \ should be specified in brackets or omitted to result in empty brackets (\\[\\\
+    ]). If you wish to change a value, you can assign another value to the element\
+    \ through its key. If you wish to remove a value pair or key, you can use the\
+    \ unset ( ) function.\n\nHowever, the array cannot be re-indexed. If you wish\
+    \ to remove and shift, you can use the array\\_values ( ) function to re-index\
+    \ the array. Keep in mind that if you do not specify any key, the maximum integer\
+    \ indices will be taken. This will result in the new key being the maximum value\
+    \ plus one. If there are no integer indices, the key is going to be zero. The\
+    \ maximum integer key does not have to exist in the array currently though. It\
+    \ only has to exist in the array again after the array gets re-indexed.\n\nWhenever\
+    \ you use a string literal array index, make sure that you do not forget to use\
+    \ quotes. Also, you should never write $foo\\[bar\\]. Instead, you should write\
+    \ $foo\\[‘bar’\\]. Even though it works, it is still wrong. If you notice, it\
+    \ uses an undefined constant instead of a string. Bar is the undefined constant\
+    \ while ‘bar’ is the string.\n\n## Some of the Most Commonly Used Array Functions\n\
+    \narray\\_change\\_key\\_case – it changes a key’s case\n\narray\\_column – it\
+    \ returns the value from a column in an input array\n\narray\\_chunk – it splits\
+    \ arrays into chunks\n\narray\\_combine – it uses an array for value and another\
+    \ one for keys to create an array\n\narray\\_count\\_values – it counts an array’s\
+    \ values\n\narray\\_diff\\_assoc – it calculates the difference of arrays with\
+    \ an added index check\n\narray\\_diff\\_uassoc – it calculates the difference\
+    \ of arrays with an added index check using a callback function\n\narray\\_diff\\\
+    _key – it calculates the difference of arrays with keys\n\narray\\_diff\\_ukey\
+    \ – it calculates the difference of arrays with a callback function\n\narray\\\
+    _diff – it calculates the difference of arrays\n\narray\\_fill – it fills arrays\
+    \ with values\n\narray\\_fill\\_keys – it fills arrays with values but specifies\
+    \ the keys\n\narray\\_filter – it filters the elements of the array with a callback\
+    \ function\n\narray\\_intersect – it calculates array intersection\n\narray\\\
+    _keys – it returns the keys or key subsets of arrays\n\narray\\_key\\_exists –\
+    \ it verifies if the index or key exists in an array\n\narray\\_merge – it merges\
+    \ at least one array\n\narray\\_merge\\_recursive – it recursively merges at least\
+    \ two arrays\n\narray\\_multisort – it sorts multi-dimensional or multiple arrays\n\
+    \narray\\_pop – it pops elements off the ends of arrays\n\narray\\_pad – it pads\
+    \ arrays to a specific length with values\n\narray\\_product – it calculates the\
+    \ product of values\n\narray\\_rand – it randomly chooses at least one entry out\
+    \ of arrays\n\narray\\_push – it pushes at least one element towards the ends\
+    \ of arrays\n\narray\\_reduce – it iteratively reduces arrays to single values\
+    \ with callback functions\n\narray\\_replace – it replaces an element from a passed\
+    \ array into the first array\n\narray\\_search – it searches an array for a value\
+    \ and then returns the key\n\narray\\_reverse – it returns arrays in reverse order\n\
+    \narray\\_shift – it shifts elements off the start of arrays\n\narray\\_slice\
+    \ – it extracts slices of arrays\n\narray\\_splice – it removes part of an array\
+    \ and replaces it\n\narray\\_sum – it calculates the sum of values\n\narray\\\
+    _unique – it eliminates duplicate values\n\narray\\_values – it returns the value\
+    \ of the array\n\narray\\_unshift – it prepends at least one element to the start\
+    \ of the array\n\narray\\_walk – it applies functions supplied by the user to\
+    \ each member of the array\n\nasort – it sorts arrays as well as maintains index\
+    \ associations\n\narsort – it sorts arrays in reverse order as well as maintains\
+    \ index associations\n\narray – it creates arrays\n\ncount – it counts every element\
+    \ in the array\n\ncompact – it creates arrays that contain values and variables\n\
+    \ncurrent – it returns the current elements in arrays\n\neach – it returns the\
+    \ current keys and value pairs from arrays as well as advances the array cursors\n\
+    \nend – it sets the internal pointers of arrays to their last elements\n\nextract\
+    \ – it imports variables into their current symbol tables\n\nin\\_array – it verifies\
+    \ if values exist in arrays\n\nkey\\_exists – it is another name for array\\_key\\\
+    _exists\n\nksort – it sorts arrays by key\n\nkrsort – it sorts arrays by key but\
+    \ in reverse order\n\nkey – it fetches keys from arrays\n\nlist – it assigns variables\
+    \ like they were arrays\n\nnatsort – it sorts arrays through a natural order algorithm\n\
+    \nnatcasesort – it sorts arrays though a natural order algorithm that is not case\
+    \ sensitive\n\nnext – it advances internal array pointers\n\nprev – it rewinds\
+    \ internal array pointers\n\npos – it is another term for current\n\nrange – it\
+    \ creates arrays that contain a wide variety of elements\n\nrsort – it sorts arrays\
+    \ in reverse order\n\nreset – it sets internal pointers to their first element\n\
+    \nshuffle – it shuffles arrays\n\nsort – it sorts arrays\n\nsizeof – it is another\
+    \ term for count\n\nuasort – it sorts arrays using user-defined comparison functions\
+    \ as well as maintains index associations\n\nuksort – it sorts arrays by keys\
+    \ with user-defined comparison functions\n\nusort – it sorts arrays by values\
+    \ with user-defined comparison functions\n\n# \n\nChapter 5: Conditional Statements\
+    \ \n\nConditional statements are used for performing various actions for various\
+    \ conditions. Oftentimes, when you write a code, you aim to perform actions for\
+    \ specific purposes. In PHP, you can use these conditional statements:\n\nSwitch\
+    \ statement – it lets you choose a block of code to execute\n\nIf statement –\
+    \ it lets you execute a code if the condition is true\n\nIf… Else If… Else statement\
+    \ – it lets you specific a new condition for testing if the previous condition\
+    \ is false\n\nIf… Else statement – it lets you execute a code if the condition\
+    \ is true, and another one if it is false\n\n## The If Statement"
+  toc: []
+  trans: "\n\n`String`。包含有效整数的字符串会被转换为整数类型。例如，键 `9` 将被存储在 `9` 下，而键 `09` 不会被转换，因为它不是有效的十进制整数。\n\
+    \n`Bool`。它也会转换为整数。例如，键 `false` 将被存储在 `0` 下，而键 `true` 将被存储在 `1` 下。\n\n`Null`。它被转换为空字符串。例如，键\
+    \ `null` 将被存储在 `\" \"` 下。\n\n对象和数组永远不能用键。如果你尝试将它们用键，将得到一个非法偏移类型警告。\n\n如果你声明了多个具有相同键的元素，最后一个将使用使用，而其他的将被覆盖。\n\
+    \n考虑以下示例：\n\n```php\n<?php\n$array = array (\n    1 => \"w\",\n    \"1\" => \"\
+    x\",\n    1.5 => \"y\",\n    true => \"z\",\n);\n\nvar_dump ($array);\n?>\n```\n\
+    \n如果你运行这段代码，你将得到如下输出：\n\n```text\narray (1) {\n    [1] =>\n    string (1) \"z\"\
+    \n}\n```\n\n这是结果输出，因为所有的键都被转换成了 `1`。对于每一个新元素，值都会被覆盖，这就是为什么留下了值 `\"z\"`。PHP 数组中可以同时包含字符串键和整数键，因为\
+    \ PHP 无法区分关联数组和索引数组。\n\n## 方括号语法\n\n数组 `[key]` 语法可以用于访问数组元素。如果你想访问数组元素，大括号和方括号可以交替使用。从\
+    \ PHP 5.4 开始，你可以直接对方法调用和函数调的结果进行数组引用。在较早的版本中，你只能使用临时变量进行数组引用。从 PHP 5.5 开始，你已经可以对数组字面量进行数组引用。再次注意，你不能访问未定义的键，就像你不能访问任何未定义的变量一样。如果你这样做，将得到一个\
+    \ `E_NOTICE` 级别的错误消息和 `NULL` 输出。\n\n当使用方括号语法创建或修改数组时，你可以显式地在它们中设置值。你可以通过给数组赋值来实现这一点。键应该在括号中指定，或者省略产生空括号\
+    \ `[]`。如果你想更改一个值，可以通过其键为元素分配另一个值。如果你想删除一个键值对或键，可以使用 `unset()` 函数。\n\n然而，数组不能重新索引。如果你想删除并移动，可以使用\
+    \ `array_values()` 函数。\n\n## 一些常用的数组函数\n\n- `asort`：它对数组排序并保持索引。\n- `arsort`：它反序对数组排序并保持索引。\n\
+    - `array`：它创建数组\n- `compact`：它创建包含变量的数组\n- `current`：它返回数组中的当前元素\n- `each`：它从数组返回当前的键和值对，并移动数组。\n\
+    - `end`：它将内部指针设置为最后一个元素。\n- `extract`：它将变量导入到当前的符号表中。\n- `in_array`：它验证值是否存在于数组中\n\
+    - `key_exists`：它是 `array_key_exists` 的另一个名字。\n- `ksort`：它按键对数组排序。\n- `krsort`：它按键对数组排序，但是反序的。\n\
+    - `key`：它从数组获取键。\n- `list`：它像处理数组一样分配变量。\n- `natsort`：它通过自然顺序对数组排序。\n- `natcasesort`：它按不区分大小的自然排序算法对数组排序。\n\
+    - `next`：它移动内部数组指针。\n- `prev`：它回溯内部数组指针。\n- `pos`：它是 `current` 的另一个术语。\n- `range`：它创建包含各种元素的数组。\n\
+    - `rsort`：它反序对数组排序。\n- `reset`：它将内部指针设置为第一个元素。\n- `shuffle`：它打乱数组。\n- `sort`：它对数组排序。\n\
+    - `sizeof`：它是 `count` 的另一个术语。\n- `uasort`：它使用用户定义的比较函数对数组排序并保持索引。\n- `uksort`：它使用用户定义的比较函数按键排序数组。\n\
+    - `usort`：它使用用户定义的比较函数按值排序数组。\n- `array_chunk`：它将数组分割为\n- `array_combine`：它将数组合并为\n\
+    - `array_count_values`：它统计每个\n- `array_diff`：它计算差集\n- `array_diff_assoc`：它计算差集\n\
+    - `array_diff_key`：它计算差集\n- `array_diff_unique`：它计算差集\n- `array_fill`：它用...填充数组\n\
+    - `array_fill_keys`：它用...填充数组\n- `array_filter`：它过滤数组\n- `array_group`：它分组数组\n\
+    - `array_diff`：它计算差集\n- `array_diff_assoc`：它计算差集\n- `array_diff_key`：它计算差集\n-\
+    \ `array_diff_unique`：它计算差集\n- `array_keys`：它返回键\n- `array_intersect`：它计算交集\n\
+    - `array_intersect_assoc`：它计算关联交集\n- `array_intersect_key`：它计算键交集\n- `array_intersect_unique`：它计算唯一交集\n\
+    - `array_merge`：它合并数组\n- `array_merge_recursive`：它递归合并\n- `array_multisort`：它对多个数组排序\n\
+    - `array_pop`：它弹出最后一个元素\n- `array_pad`：它用...填充数组\n- `array_product`：它计算乘积\n- `array_rand`：它随机选择一个\n\
+    - `array_push`：它推送至少一个\n- `array_reduce`：它迭代减少\n- `array_replace`：它替换数组\n- `array_shift`：它从头部移动元素\n\
+    - `array_slice`：它截取部分\n- `array_splice`：它删除部分\n- `array_sum`：它计算和\n- `array_unique`：它消除重复值\n\
+    - `array_values`：它返回值\n- `array_unshift`：它在开头前置至少一个一个\n- `array_walk`：它将用户提供的函数应用到数组的每个成员\n\
+    \n# 第 5 章：条件语句\n\n条件语句用于根据不同的条件执行各种操作。通常，当你编写代码时，目标是针对特定目的执行操作。在 PHP 中，你可以使用这些条件语句：\n\
+    \n- `switch`：它让你选择一个要执行的代码块。\n- `if`：如果条件为真，它让你执行代码。\n- `if...else...else`：如果上一个条件为假，它让你指定一个新的测试条件。\n\
+    - `if...else`：如果条件为真，它让你执行一段代码，如果为假，则执行另一个。\n\n## if 语句\n\n"
+- fmt: "\nAs mentioned above, the `if` statement lets you execute a code if your condition\
+    \ is found to be true. Its syntax is:\n\n```\nif (condition)\n{\n    block of\
+    \ code;\n}\n```\n\nTake a look at the following example:\n\n```php\n<?php\n$time\
+    \ = date (“Hour”);\nIf ($time < “10”)\n{\n    echo “Good morning!”;\n}\n?>\n```\n\
+    \nIf you run this code, you will get an output of:\n\nGood morning!\n\nif and\
+    \ only if the hour or time is less than 10.\n\n## The If… Else Statement\n\nYou\
+    \ can use the `if… else` statement to execute a code when the condition is found\
+    \ to be true, and then another code when the condition is found to be false. Its\
+    \ syntax is:\n\n```\nif (condition)\n{\n    block of code to execute if the condition\
+    \ is true;\n}\nelse \n{\n    block of code to execute if the condition is false;\n\
+    }\n```\n\nConsider the following example:\n\n```php\n<?php\n$time = date (“Hour”);\n\
+    if ($time < “10”)\n{\n    echo “Good morning!”;\n}\nelse\n{\n    echo “Good afternoon!”;\n\
+    }\n?>\n```\n\nIf you run this code, you will get an output of:\n\nGood morning!\n\
+    \nif the time is less than 10. Otherwise, you will get an output of:\n\nGood afternoon!\n\
+    \n## The If… Else if… Else Statement\n\nThis statement is used to specify new\
+    \ conditions to test if the first condition is found to be false. Its syntax is:\n\
+    \n```\nif (condition)\n{\n    block of code to execute if the condition is true;\n\
+    }\nelse if (condition)\n{\n    block of code to execute if the condition is true;\n\
+    }\nelse \n{\n    block of code to execute if the condition is false;\n}\n```\n\
+    \nTake a look at the following example:\n\n```php\n<?php\n$time = date (“Hour”);\n\
+    if ($time < “10”)\n{\n    echo “Good morning!”;\n}\nelse if ($time < “20”)\n{\n\
+    \    echo “Good afternoon!”;\n}\nelse\n{\n    echo “Good night!”;\n}\n?>\n```\n\
+    \nIf you run this code, you will get an output of:\n\nGood morning!\n\nif the\
+    \ time is less than 10. You will get an output of:\n\nGood afternoon!\n\nif the\
+    \ time is less than 20. Otherwise, you will get an output of:\n\nGood night!\n\
+    \n## The Switch Statement\n\nIt is used to perform actions depending on the given\
+    \ conditions. In PHP, there are many blocks of codes you can use `switch` to choose\
+    \ a specific block of code you want to execute. Its syntax is:\n\n```\nswitch\
+    \ (name) {\n    case label 1:\n        block of code if name = label 1;\n    \
+    \    break;\n    case label 2:\n        block of code if name = label 2;\n   \
+    \     break;\n    …\n    default:\n        block of code if name is different\
+    \ from all the labels;\n}\n```\n\n## The Break Statement\n\n`Break` is used to\
+    \ prevent the block of code from automatically running into the succeeding `case`.\
+    \ `Default` is used if a match is not found. Consider the following example:\n\
+    \n```php\n<?php\n$color = “pink”;\nswitch ($color)\n{\n    case “pink”:\n    \
+    \    echo “The color of the shirt is pink!”;\n        break;\n    case “yellow”:\n\
+    \        echo “The color of the shirt is yellow!”;\n        break;\n    case “purple”:\n\
+    \        echo “The color of the shirt is purple!”;\n        break;\n    default:\n\
+    \        echo “The color of the shirt is neither pink, yellow, nor purple!”;\n\
+    }\n?>\n```\n\nIf you run this code, you will get an output of:\n\nThe color of\
+    \ the shirt is pink!\n\nWhen writing your code, it is always a good idea to include\
+    \ a `default` case in your `switch` statements. Take note that the word `case`\
+    \ is not present before the word `default` because `default` is a special keyword.\n\
+    \n## The Continue Statement\n\n`Continue` is used to stop the current iteration\
+    \ of a loop. It halts, but does not terminate it. It is also placed inside the\
+    \ statement block that contains the code which the loop executes, just like `break`.\
+    \ It is preceded by the conditional test. In a pass encountering `continue` statement,\
+    \ the next pass begins while skipping the rest of the loop code. For example:\n\
+    \n```php\n<?php\n$array = array (2, 4, 6, 8, 10);\nforeach ($array as $value)\n\
+    {\n    if ($value ==4) continue;\n    echo “The value is $value <br/>”;\n}\n?>\n\
+    ```\n\nIf you run this code, you will get an output of:\n\nThe value is 2\nThe\
+    \ value is 4\nThe value is 6\nThe value is 10\n\nIn the above example, the loop\
+    \ displays the value of the array. When the condition becomes true, however, it\
+    \ skips the code and prints the next value.\n\n# Chapter 6: Numbers and Mathematical\
+    \ Operations\n\nThe data types `integer` and `float` are numbers and can be stored\
+    \ in variables.\n\nFor example:\n\n```\n$intvar = 5;\n$floatvar = 11.4;\n```\n\
+    \nIn PHP, values are automatically stored as the appropriate data types. You can\
+    \ also perform mathematical operations. You simply have to indicate the mathematical\
+    \ operations by using a mathematical operator and two numbers.\n\nFor example,\
+    \ you can use the plus (`+`) sign operator:\n\n```\n2 + 3\n```\n\nYou can also\
+    \ use variables:\n\n```\n$var2 + $var3;\n```\n\nIf you want to use numbers in\
+    \ your mathematical operations, however, you should not enclose them in quotes\
+    \ when you assign them to variables. If you use quotes, you will not be able to\
+    \ perform mathematical operations on these strings.\n\nConsider the following\
+    \ example:\n\n```php\n<?php\n$var1 = “2”;\n$var2 = 4;\n$total = $var1 + $var2;\n\
+    ?>\n```\n\nSince `var1` is a string, PHP automatically converts strings to numbers.\
+    \ Nevertheless, the numbers are added upon reaching the third statement.\n\n```php\n\
+    <?php\n$var1 = “y”;\n$var2 = 4;\n$total = $var1 + $var2;\n?>\n```\n\nSince `y`\
+    \ is not a number that can be converted in PHP, the result of `$total` becomes\
+    \ 4. More often than not, such conversion is not what programmers expect.\n\n\
+    ## Mathematical Operators\n\n- `+` represents the addition process. It is used\
+    \ to add numbers.\n- `-` represents the subtraction process. It is used to subtract\
+    \ the second number from the first one.\n- `*` represents the multiplication process.\
+    \ It is used to multiply numbers.\n- `/` represents the division process. It is\
+    \ used to divide the first number by the second number.\n- `%` is called the modulus.\
+    \ It identifies the remainder when you do the division process.\n\n## The Order\
+    \ of Operations\n\nIt is possible to perform multiple mathematical operations\
+    \ all at once. Take a look at the following example:\n\n```\n$total = 2 + 3 *\
+    \ 4 + 2;\n```\n\nKeep in mind that the order of your mathematical statement is\
+    \ crucial. You may get a different output. Hence, you have to be careful when\
+    \ you use mathematical operators in your code. In PHP, division and multiplication\
+    \ are performed first. Then, subtraction and addition are done. Also, PHP can\
+    \ start from the left towards the right if all other considerations are equal.\n\
+    \nIf you run the code given above, you will get an output of:\n\n16\n"
+  raw: "As mentioned above, the if statement lets you execute a code if your condition\
+    \ is found to be true. Its syntax is:\n\nif (condition)\n\n{\n\n             \
+    \ block of code;\n\n}\n\nTake a look at the following example:\n\n<?php\n\n$time\
+    \ = date (“Hour”);\n\nIf ($time < “10”)\n\n{\n\n              echo “Good morning!”;\n\
+    \n}\n\n?>\n\nIf you run this code, you will get an output of:\n\nGood morning!\n\
+    \nif and only if the hour or time is less than 10.\n\n## The If… Else Statement\n\
+    \nYou can use the if… else statement to execute a code when the condition is found\
+    \ to be true, and then another code when the condition is found to be false. Its\
+    \ syntax is:\n\nif (condition)\n\n{\n\n              block of code to execute\
+    \ if the condition is true;\n\n}\n\n              else \n\n{\n\n             \
+    \ block of code to execute if the condition is false;\n\n}\n\nConsider the following\
+    \ example:\n\n<?php\n\n$time = date (“Hour”);\n\nif ($time < “10”)\n\n{\n\n             \
+    \ echo “Good morning!”;\n\n}\n\n              else\n\n{\n\n              echo\
+    \ “Good afternoon!”;\n\n}\n\n?>\n\nIf you run this code, you will get an output\
+    \ of:\n\nGood morning!\n\nif the time is less than 10. Otherwise, you will get\
+    \ an output of:\n\nGood afternoon!\n\n## The If… Else if… Else Statement\n\nThis\
+    \ statement is used to specify new conditions to test if the first condition is\
+    \ found to be false. Its syntax is:\n\nif (condition)\n\n{\n\n              block\
+    \ of code to execute if the condition is true;\n\n}\n\n              else if (condition)\n\
+    \n{\n\n              block of code to execute if the condition is true;\n\n}\n\
+    \n              else \n\n{\n\n              block of code to execute if the condition\
+    \ is false;\n\n}\n\nTake a look at the following example:\n\n<?php\n\n$time =\
+    \ date (“Hour”);\n\nif ($time < “10”)\n\n{\n\n              echo “Good morning!”;\n\
+    \n}\n\n              else if ($time < “20”)\n\n{\n\n              echo “Good afternoon!”;\n\
+    \n}\n\n              else\n\n{\n\n              echo “Good night!”;\n\n}\n\n?>\n\
+    \nIf you run this code, you will get an output of:\n\nGood morning!\n\nif the\
+    \ time is less than 10. You will get an output of:\n\nGood afternoon!\n\nif the\
+    \ time is less than 20. Otherwise, you will get an output of:\n\nGood night!\n\
+    \n## The Switch Statement\n\nIt is used to perform actions depending on the given\
+    \ conditions. In PHP, there are many blocks of codes but you can use switch to\
+    \ choose a specific block of code that you want to execute. Its syntax is:\n\n\
+    switch (name) {\n\n              case label 1:\n\n                           \
+    \ block of code if name = label 1;\n\n                            break;\n\n             \
+    \ case label 2:\n\n                            block of code if name = label 2;\n\
+    \n                            break;\n\n              …\n\n              default:\n\
+    \n                            block of code if name is different from all the\
+    \ labels;\n\n}\n\n## The Break Statement\n\nBreak is used to prevent the block\
+    \ of code from automatically running into the succeeding case. Default is used\
+    \ if a match is not found. Consider the following example:\n\n<?php\n\n$color\
+    \ = “pink”;\n\nswitch ($color) \n\n{\n\n              case “pink”:\n\n             \
+    \               echo “The color of the shirt is pink!”;\n\n                           \
+    \ break;\n\n              case “yellow”:\n\n                            echo “The\
+    \ color of the shirt is yellow!”;\n\n                            break;\n\n             \
+    \ case “purple”:\n\n                            echo “The color of the shirt is\
+    \ purple!”;\n\n                            break;\n\n              default:\n\n\
+                                echo “The color of the shirt is neither pink, yellow,\
+    \ nor purple!”;\n\n}\n\n?>\n\nIf you run this code, you will get an output of:\n\
+    \nThe color of the shirt is pink!\n\nWhen writing your code, it is always a good\
+    \ idea to include a default case in your switch statements. Take note that the\
+    \ word case is not present before the word default because default is a special\
+    \ keyword.\n\n## The Continue Statement\n\nContinue is used to stop the current\
+    \ iteration of a loop. It halts, but does not terminate it. It is also placed\
+    \ inside the statement block that contains the code which the loop executes, just\
+    \ like break. It is preceded by the conditional test. In a pass encountering continue\
+    \ statement, the next pass begins while skipping the rest of the loop code. For\
+    \ example:\n\n<?php\n\n$array = array (2, 4, 6, 8, 10);\n\nforeach ($array as\
+    \ $value)\n\n{\n\nif ($value ==4) continue;\n\necho “The value is $value <br/>”;\n\
+    \n}\n\n?>\n\nIf you run this code, you will get an output of:\n\nThe value is\
+    \ 2\n\nThe value is 4\n\nThe value is 6\n\nThe value is 10\n\nIn the above example,\
+    \ the loop displays the value of the array. When the condition becomes true, however,\
+    \ it skips the code and prints the next value.\n\n# Chapter 6: Numbers and Mathematical\
+    \ Operations\n\nThe data types integer and float are numbers and can be stored\
+    \ in variables.\n\nFor example:\n\n$intvar = 5;\n\n$floatvar = 11.4;\n\nIn PHP,\
+    \ values are automatically stored as the appropriate data types. You can also\
+    \ perform mathematical operations. You simply have to indicate the mathematical\
+    \ operations by using a mathematical operator and two numbers.\n\nFor example,\
+    \ you can use the plus (+) sign operator.\n\n2 + 3\n\nYou can also use variables.\n\
+    \n$var2 + $var3;\n\nIf you want to use numbers in your mathematical operations,\
+    \ however, you should not enclose them in quotes when you assign them to variables.\
+    \ If you use quotes, you will set the numbers as character strings and you will\
+    \ not be able to perform mathematical operations on these character strings. Unlike\
+    \ other languages, PHP automatically converts strings to numbers.\n\nConsider\
+    \ the following example:\n\n$var1 = “2”;\n\n$var2 = 4;\n\n$total = $var1 + $var2;\n\
+    \nIt is obviously not possible to add the two given numbers because $var1 is a\
+    \ character string. Nevertheless, because string is automatically converted to\
+    \ a number in PHP, the numbers are added upon reaching the third statement. So\
+    \ if you use these statements, the strings will be converted and the numbers will\
+    \ be added.\n\n$var1 = “y”;\n\n$var2 = 4;\n\n$total = $var1 + $var2;\n\nSince\
+    \ y is not a number that can be converted in PHP, 0 is used in the addition process.\
+    \ Hence, the result of $total becomes 4. More often than not, such conversion\
+    \ is not what programmers expect. You should still be careful when you depend\
+    \ on the automatic conversion feature in PHP because there are times when you\
+    \ will not get the result that you expect, such as in the example given above.\n\
+    \nIn addition, you can get unexpected results because PHP does not understand\
+    \ human notation. If you use the following example, you can get an incorrect result:\n\
+    \n$var1 = “3,000”;\n\n$var2 = 3;\n\n$total = $var1 + $var2;\n\nYou may understand\
+    \ commas and their function, but PHP does not. If you use a comma in your code,\
+    \ PHP will automatically stop reading at the comma. So if you execute the code\
+    \ given above, your $total will be read as 3 and not 3,000.\n\n## Mathematical\
+    \ Operators \n\n\\+ represents the addition process. It is used to add numbers.\n\
+    \n\\- represents the subtraction process. It is used to subtract the second number\
+    \ from the first one.\n\n\\* represents the multiplication process. It is used\
+    \ to multiply numbers.\n\n/ represents the division process. It is used to divide\
+    \ the first number by the second number.\n\n% is called the modulus. It identifies\
+    \ the remainder when you do the division process.\n\n## The Order of Operations\n\
+    \nIt is possible to perform multiple mathematical operations all at once. Take\
+    \ a look at the following example:\n\n$total = 2 + 3 \\* 4 + 2;\n\nKeep in mind\
+    \ that the order of your mathematical statement is crucial. You may get a different\
+    \ output. Hence, you have to be careful when you use mathematical operators in\
+    \ your code. In PHP, division and multiplication are performed first. Then, subtraction\
+    \ and addition are done. Also, PHP can start from the left towards the right if\
+    \ all other considerations are equal. \n\nIf you run the code given above, you\
+    \ will get an output of:\n\n16"
+  toc: []
+  trans: "\n如上所述，`if` 语句允许您在条件判定为真时执行代码。其语法如下：\n\n```\nif (condition)\n{\n    block\
+    \ of code;\n}\n```\n\n请看以下示例：\n\n```php\n<?php\n$time = date (“Hour”);\nIf ($time\
+    \ < “10”)\n{\n    echo “Good morning!”;\n}\n?>\n```\n\n如果您运行这段代码，您将得到如下输出：\n\n\
+    Good morning!\n\n当且仅当小时或时间小于 10 时。\n\n## If… Else 语句\n\n您可以使用 `if… else` 语句在条件判定为真时执行一段代码，在条件判定为假时执行另一段代码。其语法如下：\n\
+    \n```\nif (condition)\n{\n    block of code to execute if the condition is true;\n\
+    }\nelse \n{\n    block of code to execute if the condition is false;\n}\n```\n\
+    \n请考虑以下示例：\n\n```php\n<?php\n$time = date (“Hour”);\nif ($time < “10”)\n{\n  \
+    \  echo “Good morning!”;\n}\nelse\n{\n    echo “Good afternoon!”;\n}\n?>\n```\n\
+    \n如果您运行这段代码，您将得到如下输出：\n\nGood morning!\n\n当时间小于 10 时。否则，您将得到如下输出：\n\nGood afternoon!\n\
+    \n## If… Else if… Else 语句\n\n该语句用于在第一个条件判定为假时指定新的测试条件。其语法如下：\n\n```\nif (condition)\n\
+    {\n    block of code to execute if the condition is true;\n}\nelse if (condition)\n\
+    {\n    block of code to execute if the condition is true;\n}\nelse \n{\n    block\
+    \ of code to execute if the condition is false;\n}\n```\n\n请看以下示例：\n\n```php\n\
+    <?php\n$time = date (“Hour”);\nif ($time < “10”)\n{\n    echo “Good morning!”;\n\
+    }\nelse if ($time < “20”)\n{\n    echo “Good afternoon!”;\n}\nelse\n{\n    echo\
+    \ “Good night!”;\n}\n?>\n```\n\n如果您运行这段代码，您将得到如下输出：\n\nGood morning!\n\n当时间小于\
+    \ 10 时。您将得到如下输出：\n\nGood afternoon!\n\n当时间小于 20 时。否则，您将得到如下输出：\n\nGood night!\n\
+    \n## Switch 语句\n\n它用于根据给定的条件执行操作。在 PHP 中，有许多代码块可以使用 `switch` 来选择您想要执行的特定代码块。其语法如下：\n\
+    \n```\nswitch (name) {\n    case label 1:\n        block of code if name = label\
+    \ 1;\n        break;\n    case label 2:\n        block of code if name = label\
+    \ 2;\n        break;\n    …\n    default:\n        block of code if name is different\
+    \ from all the labels;\n}\n```\n\n## Break 语句\n\n`Break` 用于防止代码块自动运行到下一个 `case`。如果未找到匹配项，则使用\
+    \ `Default`。请考虑以下示例：\n\n```php\n<?php\n$color = “pink”;\nswitch ($color)\n{\n\
+    \    case “pink”:\n        echo “The color of the shirt is pink!”;\n        break;\n\
+    \    case “yellow”:\n        echo “The color of the shirt is yellow!”;\n     \
+    \   break;\n    case “purple”:\n        echo “The color of the shirt is purple!”;\n\
+    \        break;\n    default:\n        echo “The color of the shirt is neither\
+    \ pink, yellow, nor purple!”;\n}\n?>\n```\n\n如果您运行这段代码，您将得到如下输出：\n\nThe color\
+    \ of the shirt is pink!\n\n在编写代码时，在 `switch` 语句中包含一个 `default` 情况始终是一个好主意。请注意，`default`\
+    \ 之前没有 `case` 单词，因为 `default` 是一个特殊的关键字。\n\n## Continue 语句\n\n`Continue` 用于停止循环的当前迭代。它会停止但不终止循环。它也被放在包含循环执行代码的语句块内部，就像\
+    \ `break` 一样。它的前面是条件测试。在遇到 `continue` 语句的迭代中，将在跳过循环剩余代码的情况下开始下一次迭代。例如：\n\n```php\n\
+    <?php\n$array = array (2, 4, 6, 8, 10);\nforeach ($array as $value)\n{\n    if\
+    \ ($value ==4) continue;\n    echo “The value is $value <br/>”;\n}\n?>\n```\n\n\
+    如果您运行这段代码，您将得到如下输出：\n\nThe value is 2\nThe value is 4\nThe value is 6\nThe value\
+    \ is 10\n\n在上面的示例中，循环显示数组的值。然而，当条件变为真时，它跳过了代码并打印了下一个值。\n\n# 第 6 章：数字与数学运算\n\n\
+    数据类型 `integer` 和 `float` 是数字，可以存储在变量中。\n\n例如：\n\n```\n$intvar = 5;\n$floatvar\
+    \ = 11.4;\n```\n\n在 PHP 中，值会自动存储为相应的数据类型。您也可以执行数学运算。您只需要通过使用数学运算符两个数字来指示数学运算即可。\n\
+    \n例如，您可以使用加号 (`+`) 运算符：\n\n```\n2 + 3\n```\n\n您也可以使用变量：\n\n```\n$var2 + $var3;\n\
+    ```\n\n如果您想在数学运算中使用数字，但不应将它们包含在引号中。如果您使用了引号，将无法对这些字符串执行数学运算。\n\n请考虑以下示例：\n\n```php\n\
+    <?php\n$var1 = “2”;\n$var2 = 4;\n$total = $var1 + $var2;\n?>\n```\n\n由于 `var1`\
+    \ 是字符串，PHP 会将其转换为数字。然而，在到达第三条语句时数字进行了相加。\n\n```php\n<?php\n$var1 = “y”;\n$var2\
+    \ = 4;\n$total = $var1 + $var2;\n?>\n```\n\n由于 `y` 不是 PHP 可以转换的数字，`total` 的结果变成了\
+    \ 4。通常，这种转换并不是程序员预期的。\n\n## 数学运算符\n\n- `+` 表示加法。用于数字相加。\n- `-` 表示减法。用于从第一个数字中减去第二个数字。\n\
+    - `*` 表示乘法。用于数字相乘。\n- `/` 表示除法。用于用第一个数字除以第二个数字。\n- `%` 称为模。它在执行除法时识别余数。\n\n##\
+    \ 运算顺序\n\n可以同时执行多个数学运算。请看以下示例：\n\n```\n$total = 2 + 3 * 4 + 2;\n```\n\n记住，您的数学语句的顺序至关重要。您可能会得到不同的输出。因此，当您在代码中使用数学运算符时必须小心。在\
+    \ PHP 中，先执行除法和乘法。然后执行减法和加法。此外，在所有其他因素相等的情况下，PHP 可以从左到右开始。\n\n如果您运行上面的代码，您将得到如下输出：\n\
+    \n16\n"
+- fmt: "\nYou get 16 because PHP performs the multiplication process first. In `$total\
+    \ = 2 + 3 * 4 + 2`, `3 * 4` is done first. So multiplying `3` by `4`, you get\
+    \ `12`. Since the other operators for addition, PHP reads the code from the left.\
+    \ It adds `2` to `12`, which is the result of `3 * 4`. Finally, it performs the\
+    \ last addition process. `2 + 12` is `14`, and that is added to `2`, so you get\
+    \ `16`.\n\nIf you want to change the order of operations, you can use parentheses.\
+    \ When you use a parenthesis, whatever is inside it will be performed first. Take\
+    \ a look at the following example:\n\n```php\n$total = (2 + 3) * 4 + 2;\n```\n\
+    \nIf you run this code, you will get an output of:\n\n```\n22\n```\n\nYou get\
+    \ 22 because `2 + 3` is performed first since they are within the parenthesis.\
+    \ Adding `2` and `3` results in `5`, which is then multiplied by `4`. Your code\
+    \ practically becomes `(5) * 4 + 2`. As mentioned earlier, the multiplication\
+    \ and division processes are performed first by default. However, since you have\
+    \ used a set of parenthesis, the operation inside it is performed first. Since\
+    \ you do not have any division process to be done, multiplication is performed.\
+    \ You get `20 + 2`. Finally, you perform the last addition process. Adding `20`\
+    \ and `2` equals to `22`.\n\nIt is also possible to use a set of parenthesis within\
+    \ another set of parenthesis. You can do this if you want to change the order\
+    \ of operations within that set of parenthesis. Ideally, if your mathematical\
+    \ statement has more than one answer, you should use parentheses where they are\
+    \ necessary.\n\n## Increments and Decrements\n\nIn PHP, you can use a shortcut\
+    \ to add 1 to a variable. Consider the following example:\n\n```php\n$counter\
+    \ = $counter + 1;\n```\n\nLikewise, you can write a shorter code that performs\
+    \ exactly the same operation:\n\n```php\n$counter++;\n```\n\nTake a look at this\
+    \ example:\n\n```php\n$counter = 0;\n$counter++;\n$echo $counter;\n```\n\nIf you\
+    \ run the above code, you will get an output of:\n\n```\n1\n```\n\nThis is because\
+    \ using `++` adds `1` to your existing value for `$counter`. Similarly, you can\
+    \ subtract 1 by using `--`. So if you want to subtract 1 from your existing value\
+    \ for `$counter`, you just have to write `$counter--;`.\n\nThere is another shortcut\
+    \ you can use to add a number to a certain variable. You can use `+=1` to add\
+    \ `1` to that particular variable. You can also add any number to the variable\
+    \ through this shortcut. Likewise, you can use it to subtract, divide, or multiply.\
+    \ Take a look at the following example. Here are some of the statements you can\
+    \ use with the same format:\n\n```php\n$counter/=2;\n$counter*=3;\n$counter-=2;\n\
+    $counter+=3;\n```\n\nThe above statements add the value of `3`, subtract `2`,\
+    \ multiply by `3`, and divide by `2` with reference to `$counter`.\n\n## Built-In\
+    \ Higher Mathematical Functions \n\nIn PHP, you can actually perform complicated\
+    \ mathematical operations, such as getting the square root of a particular number.\
+    \ Take a look at this example:\n\n```php\n$rootvar = sqrt (25);\n$rootvar = srqt\
+    \ ($number);\n```\n\nUsing `$rootvar = sqrt (25)`, `$rootvar = srqt ($number)`\
+    \ (Note: `srqt` is likely a typo for `sqrt`), PHP provides built-in functions\
+    \ to handle these operations.\n\n## Formatting Numbers\n\nIf you want to format\
+    \ numbers, you can use `number_format()`. This allows you to specify the number\
+    \ of decimals, the decimal separator, and the thousands separator.\n"
+  raw: "You get 16 because PHP performs the multiplication process first. In $total\
+    \ = 2 + 3 \\* 4 + 2, 3 \\* 4 is done first. So multiplying 3 by 4, you get 12.\
+    \ Since the other operators for addition, PHP reads the code from the left. It\
+    \ adds 2 to 12, which is the result of 3 \\* 4. Finally, it performs the last\
+    \ addition process. 2 + 12 is 14, and that is added to 2, so you get 16.\n\nIf\
+    \ you want to change the order of operations, you can use parentheses. When you\
+    \ use a parenthesis, whatever is inside it will be performed first. Take a look\
+    \ at the following example:\n\n$total = (2 + 3) \\* 4 + 2;\n\nIf you run this\
+    \ code, you will get an output of:\n\n22\n\nYou get 22 because 2 + 3 is performed\
+    \ first since they are within the parenthesis. Adding 2 and 3 results in 5, which\
+    \ is then multiplied by 4. Your code practically becomes (5) \\* 4 + 2. As mentioned\
+    \ earlier, the multiplication and division processes are performed first by default.\
+    \ However, since you have used a set of parenthesis, the operation inside it is\
+    \ performed first. Since you do not have any division process to be done, multiplication\
+    \ is performed. You get 20 + 2. Finally, you perform the last addition process.\
+    \ Adding 20 and 2 equals to 22.\n\nIt is also possible to use a set of parenthesis\
+    \ within another set of parenthesis. You can do this if you want to change the\
+    \ order of operations within that set of parenthesis. Ideally, if your mathematical\
+    \ statement has more than one answer, you should use parentheses where they are\
+    \ necessary.\n\n## Increments and Decrements\n\nIn PHP, you can use a shortcut\
+    \ to add 1 to a variable. Consider the following example:\n\n$counter = $counter\
+    \ + 1;\n\nLikewise, you can write a shorter code that performs exactly the same\
+    \ operation:\n\n$counter++;\n\nTake a look at this example:\n\n$counter = 0;\n\
+    \n$counter++;\n\n$echo $counter;\n\nIf you run the above code, you will get an\
+    \ output of:\n\n1\n\nThis is because using ++ adds 1 to your existing value for\
+    \ $counter. Similarly, you can subtract 1 by using \\--. So if you want to subtract\
+    \ 1 from your existing value for $counter, you just have to write $counter--;.\n\
+    \nThere is another shortcut you can use to add a number to a certain variable.\
+    \ You can use +=1 to add 1 to that particular variable. You can also add any number\
+    \ to the variable through this shortcut. Likewise, you can use it to subtract,\
+    \ divide, or multiply. Take a look at the following example. Here are some of\
+    \ the statements you can use with the same format:\n\n$counter/=2;\n\n$counter\\\
+    *=3;\n\n$counter-=2;\n\n$counter+=3;\n\nThe above statements add the value of\
+    \ 3, subtract 2, multiply by 3, and divide by 2 with reference to $counter.\n\n\
+    ## Built-In Higher Mathematical Functions \n\nIn PHP, you can actually perform\
+    \ complicated mathematical operations, such as getting the square root of a particular\
+    \ number. Take a look at this example:\n\n$rootvar = sqrt (25);\n\n$rootvar =\
+    \ srqt ($number);\n\nUsing the above example, there is no more need for you to\
+    \ write all the mathematical operators necessary to compute for the square root\
+    \ of 25. You simply have to use the built-in higher mathematical function included\
+    \ in PHP. The square root of 25 is done in the first statement, while the square\
+    \ root of the value of the variable is done in the second statement.\n\nAside\
+    \ from getting the square root, you can also perform other operations, such as\
+    \ rounding up and rounding down integers. For example, if you want to round up\
+    \ to the next integer, you can use $upnumber and ceil. Conversely, if you want\
+    \ to round down, you can use $downnumber and floor. Take a look at the following\
+    \ example:\n\n$upnumber = ceil (28.65);\n\nIf you run the above example, you will\
+    \ get an output of:\n\n29\n\nbecause 29 is the next integer after 28. On the other\
+    \ hand, if you write\n\n$downnumber = floor (28.65);\n\nyou will get an output\
+    \ of:\n\n28\n\nobviously because the closest integer to that value is 28.\n\n\
+    In PHP, there are a lot of mathematical functions. You can use minimum, maximum,\
+    \ and random numbers for simple mathematical operations. You can also use functions,\
+    \ such as tangent and sine, if you want to do advanced mathematics. You can even\
+    \ convert binary and octal numbers.\n\n## Formatting Numbers\n\nIf you wish to\
+    \ display a number in a specific format, you can do that in PHP. You can actually\
+    \ display numbers with commas to represent thousands or use decimals if you want\
+    \ to write currency amounts. For example, if you write 10.00, it would be shown\
+    \ as 10. You just have to determine the exact way that you want your number to\
+    \ be displayed.\n\nYou can use number\\_format to format numbers. Its general\
+    \ form is \n\nnumber\\_format (number, decimals, “decimalsep”, “thousandsep”)\n\
+    \nEvery input has a specific function.\n\n\\_number represents the number that\
+    \ is to be formatted. It is necessary to include it in all your codes.\n\n\\_decimals\
+    \ represents how many decimal places you desire. If you do not include decimals\
+    \ in your code, the program will automatically consider 0 to be the number of\
+    \ your decimal places. Also, number will be rounded to the integer closest to\
+    \ its value. Take note that if you use decimalsep and thousandsep, you have to\
+    \ include decimals.\n\n\\_thousandsep represents the character that separates\
+    \ a number into thousands. The comma is the default for this. Take note that if\
+    \ you use this parameter in your code, you also have to use decimalsep.\n\n\\\
+    _decimalsep represents the character that separates the decimal places. The decimal\
+    \ point is the default for this. Take note that if you use this parameter in your\
+    \ code, you also have to use thousandsep.\n\nTake a look at the following examples\
+    \ of number\\_format statements together with their corresponding outputs:\n\n\
+    | $number || Format || Output |\n\n| --- | --- | --- |\n\n| 12345 || number\\\
+    _format ($number) || 12,345 |\n\n| 12345.77 || number\\_format ($number, 2) ||\
+    \ 12,345.77 |\n\n| 12345.77 || number\\_format ($number) || 12,345 |\n\n| 12345.7\
+    \ || number\\_format ($number, 3) || 12,345.700 |\n\n| 12345 || number\\_format\
+    \ ($number, 0, “.”, “.”) || 12.345 |\n\n| 12345.77 || number\\_format ($number,\
+    \ 2, “.”. “ “) || 12345.77 |\n\nOnce formatting is done, the number gets converted\
+    \ into a string data type. Thus, you should always perform your desired mathematical\
+    \ operation on a number before you decide to format it.\n\nIf you need to do a\
+    \ complicated formatting procedure, you have to use sprintf and printf.\n\n\\\
+    _sprintf stores the formatted number into a variable.\n\n\\_printf directly outputs\
+    \ the formatted number.\n\nYou can use both formatting statements to format numbers\
+    \ and character strings, as well as to output numbers and strings in the same\
+    \ output statement.\n\n# Chapter 7: Opening, Reading, Writing, and Closing Files\n\
+    \n## Opening and Closing Files\n\nIn PHP, the function fopen ( ) is used to open\
+    \ files. It requires two arguments that state the file name and the mode in which\
+    \ it has to operate.\n\n| File Mode || Purpose |\n\n| --- | --- |\n\n| r || It\
+    \ opens the file for the sole purpose of reading. It positions the pointer at\
+    \ the start of the file. |\n\n| r+ || It opens the file both for reading and writing.\
+    \ It positions the pointer at the start of the file. |\n\n| w || It opens the\
+    \ file for the sole purpose of writing. It positions the pointer at the start\
+    \ of the file, as well as truncates it to zero length. If there are no files,\
+    \ it tries to create one. |\n\n| w+ || It opens the file for both reading and\
+    \ writing. It positions the pointer at the start of the file, as well as truncates\
+    \ it to zero length. If there are no files, it tries to create one. |\n\n| a ||\
+    \ It opens the file for the sole purpose of writing. It positions the pointer\
+    \ at the end of the file. If there are no files, it tries to create one. |\n\n\
+    | a+ || It opens the file for both reading and writing. It positions the pointer\
+    \ at the end of the file. If there are no files, it tries to create one. |\n\n\
+    The function fopen ( ) returns the value of false in case opening a file does\
+    \ not become successful. Otherwise, it returns a file pointer to write or read\
+    \ to that particular file."
+  toc: []
+  trans: '
+
+    你得到 16 是因为 PHP 先执行乘法过程。在 `$total = 2 + 3 * 4 + 2` 中，`3 * 4` 先执行。因此，将 `3` 乘以 `4`
+    得到 `12`。对于其他的加法运算符，PHP 从左到右读取代码。它将 `2` 加到 `12`（即 `3 * 4` 的结果）上。最后，它执行最后一个加法过程。`2
+    + 12` 等于 `14`，然后加上 `2`，所以你得到了 `16`。
+
+
+    如果你想改变操作顺序，可以使用括号。当你使用括号时，括号内的任何内容都会首先执行。看下面的示例：
+
+
+    ```php
+
+    $total = (2 + 3) * 4 + 2;
+
+    ```
+
+
+    如果你运行这段代码，你将得到输出：
+
+
+    ```
+
+    22
+
+    ```
+
+
+    你得到 22 是因为 `2 + 3` 在括号内，所以它们先执行。`2` 和 `3` 相加得到 `5`，然后乘以 `4`。你的代码实际上变成了 `(5) *
+    4 + 2`。如之前提到的，默认情况下先执行乘法和除法。但由于你使用了一组括号，内部的操作会先执行。由于没有需要执行的除法，因此执行了乘法。你得到 `20
+    + 2`。最后，你执行最后一个加法过程。`20` 加 `2` 等于 `22`。
+
+
+    在一组括号内嵌套另一组括号也是可能的。如果你想改变该括号内部的操作顺序，可以这样做。理想情况下，如果你的数学表达式有多个答案，你应该在需要的地方使用括号。
+
+
+    ## 递增与递减
+
+
+    在 PHP 中，你可以使用快捷方法给变量加 1。考虑以下示例：
+
+
+    ```php
+
+    $counter = $counter + 1;
+
+    ```
+
+
+    同样地，你可以编写更短的代码来执行完全相同的操作：
+
+
+    ```php
+
+    $counter++;
+
+    ```
+
+
+    看这个示例：
+
+
+    ```php
+
+    $counter = 0;
+
+    $counter++;
+
+    $echo $counter;
+
+    ```
+
+
+    如果你运行上述代码，你将得到输出：
+
+
+    ```
+
+    1
+
+    ```
+
+
+    这是因为使用 `++` 会向你 `$counter` 的现有值加 `1`。同样，你也可以使用 `--` 减 1。所以，如果你想从 `$counter` 的现有值中减
+    1，只需编写 `$counter--;` 即可。
+
+
+    还有另一个快捷方法可以给变量加上数字。你可以使用 `+=1` 给该特定变量加 `1`。你也可以通过这个快捷方法给变量加任何数字。同样，你也可以用它来进行减法、除法或乘法。看下面的示例。以下你可以使用相同格式的一些语句：
+
+
+    ```php
+
+    $counter/=2;
+
+    $counter*=3;
+
+    $counter-=2;
+
+    $counter+=3;
+
+    ```
+
+
+    上述语句相对于 `$counter` 分别加上数值 `3`、减去 `2`、乘以 `3` 并除以 `2`。
+
+
+    ## 内置高级数学函数
+
+
+    在 PHP 中，你实际上可以执行复杂的数学运算，例如获取数字的平方根。看这个示例：
+
+
+    ```php
+
+    $rootvar = sqrt (25);
+
+    $rootvar = srqt ($number);
+
+    ```
+
+
+    使用 `$rootvar = sqrt (25)` 和 `$rootvar = srqt ($number)`（注意：`srqt` 可能是 `sqrt` 的拼写错误），PHP
+    提供了内置函数来处理这些操作。
+
+
+    ## 数字格式化
+
+
+    如果你想格式化数字，可以使用 `number_format()`。这允许你指定小数位数、小数点分隔符和千分位分隔符。
+
+    '
+- fmt: "\nOnce you are done making changes to your file, you have to close it using\
+    \ the function `fclose()`. It requires a file pointer as an argument. It returns\
+    \ true if the closure is successful and false if it is not.\n\n## Reading Files\n\
+    \nAfter you open a file using the function `fopen()`, you can read it using the\
+    \ function `fread()`. It requires two arguments. It reads the length bytes from\
+    \ the file pointer referenced by the handle. It stops reading as soon as it has\
+    \ read the length bytes, reaches the end of the file, a socket timeout occurs,\
+    \ or a packet becomes available. \n\nYou can use the function `filesize()` to\
+    \ find the length of your file. It takes the file name as an argument and returns\
+    \ its size in bytes. It also returns false on failure or the read string. Take\
+    \ note that the function `fread()` reads from the current position of your file\
+    \ pointer. If you want to find the current position of the file pointer, you have\
+    \ to use the function `ftell()`. If you wish to rewind the position of the file\
+    \ pointer, you have to use `rewind()`.\n\nTake a look at the following example:\n\
+    \n```php\n<?php\n$filename = \"/testfile.txt\";\n$file = fopen($filename, \"r\"\
+    );\nif ($file == false)\n{\n    echo (\"Opening File Error\");\n    exit();\n\
+    }\n$filesize = filesize($filename);\n$filetext = fread($file, $filesize);\nfclose($file);\n\
+    echo (\"The size of the file is $filesize bytes\");\necho(\"<pre> $text </pre>\"\
+    );\n?>\n```\n\nIn the above example, the content of the text file `testfile.txt`\
+    \ is assigned to a variable and then displayed as the output.\n\n## Writing Files\n\
+    \nIf you want to write a new file or append a text to an existing file, you can\
+    \ use the function `fwrite()`. It requires two arguments to specify the file pointer\
+    \ and the data string to be written. You can include a third integer argument\
+    \ if you want to specify the length of the data to be written. This third integer\
+    \ argument is optional, though. If you do not include any third argument, writing\
+    \ would stop upon reaching the specified length.\n\nThe function `fwrite()` writes\
+    \ the contents of the string to the file stream pointed to by the handle. It returns\
+    \ false on error or the number of bytes. If you are using a system that differentiates\
+    \ between text files and binary files, such as Windows, you should open your file\
+    \ with `'b'` included in the `fopen()` mode parameter. Also, if the handle is\
+    \ opened in append mode, `fwrite()` becomes atomic, except when the size of the\
+    \ string exceeds the block size of the file system. There is no more need to `flock()`\
+    \ a resource before you call `fwrite()`. You can write all data without any interruption.\n\
+    \nTake a look at the following example:\n\n```php\n<?php\n$file = fopen(\"testfile.txt\"\
+    , \"w\");\necho fwrite($file, \"Testing sample!\");\nfclose($file);\n?>\n```\n\
+    \nIf you run the above code, you will get an output of:\n\n15\n\nWhy? You get\
+    \ 15 because `Testing sample!` has fifteen characters including spacing.\n\nPreview\
+    \ of my other books that might interest you: \n\n[HTML: Step by Step Beginners\
+    \ Guide to HTML](http://www.amazon.com/gp/product/B00YDSJ8VC?Version=1&entries=0)\n\
+    \nThe book “HTML: Step by Step Beginners Guide to HTML” will provide all essential\
+    \ information and training during the book which you’ll need in order to upgrade\
+    \ your skills later with other languages and even with more sophisticated HTML.\n\
+    \nThe reason why we start our “Learn Web Design” series with HTML is because he\
+    \ is the core to every website out there. No matter how basic or sophisticated\
+    \ one website is, the HTML is always there and is essential for its existence.\n\
+    \nIn order to perfectly understand the material we’ll go through everything from\
+    \ the absolute beginning. We’ll do some exercises because the only way to master\
+    \ programming is by constant exercise and learning. \n\nAll the material in this\
+    \ book can be learned in less than a day but exercising and upgrading your skills\
+    \ later on is essential to becoming a good programmer. \n\nYou can check/download\
+    \ the book from [HERE](http://www.amazon.com/gp/product/B00YDSJ8VC?Version=1&entries=0).\n\
+    \n## Java  \n\nLearn Java Programming with the Ultimate Crash Course for Beginners\
+    \ in no Time!\n\nToday’s applications are becoming increasingly powerful with\
+    \ smartphones and tablets. Both are being used extensively by companies and are\
+    \ also a friendly language for beginners. \n\nDespite the popularity of Java as\
+    \ a platform, there remains a shortage of qualified programmers. Whether you’re\
+    \ completely new to Java or even with other languages, this book will provide\
+    \ a strong foundation. \n\nThe reason why we start our “Learn Web Design” series\
+    \ with HTML is because he is the core to every website out there. No matter how\
+    \ basic or sophisticated one website is, the HTML is always there and is essential\
+    \ for its existence.\n\nIn order to perfectly understand the material we’ll go\
+    \ through everything from the absolute beginning. We’ll do some exercises because\
+    \ the only way to master programming is by constant exercise and learning. \n\n\
+    All the material in this book can be learned in less than a day but exercising\
+    \ and upgrading your skills later on is essential to becoming a good programmer.\
+    \ \n\nYou can check/download the book from [HERE](http://www.amazon.com/gp/product/B00YDSJ8VC?Version=1&entries=0).\n\
+    \n## C# \n\nLearn C# Programming with the Ultimate Crash Course for Beginners\
+    \ in no Time!\n\nIf you have prior knowledge about the world of C++ programming,\
+    \ then you may find familiar terms and code structure with `C#` (pronounced as\
+    \ See Sharp). It works with `.NET` framework and was initially designed to be\
+    \ the answer to Java. \n\nToday, both are being used extensively by companies\
+    \ and are also a friendly language for beginners. \n\nHere are some of the essential\
+    \ lessons you will find inside:\n\n- Comprehending the `C#` Program Structure\n\
+    - The Coding Conventions for `C#`\n- Mastering Variables and Data Types\n- Getting\
+    \ Using Input and Using Type Conversions\n- Arithmetic, Conditional, Relational,\
+    \ and Logical Operators\n- Using Flow Control Statements\n- Generating Random\
+    \ Numbers\n- And much more!\n\nI hope you enjoy it!\n\nYou can check/download\
+    \ the book from [HERE](http://www.amazon.com/Learn-Programming-Ultimate-Course-Beginners-ebook/dp/B010N2OLRW).\n\
+    \n## HTML5 & CSS3 \n\nLearn CSS3 and HTML5 in One Day with Hands-on project and\
+    \ learn them Well! \n\nThis book contains proven steps and strategies on how to\
+    \ design projects using HTML5 and CSS3.\n"
+  raw: "Once you are done making changes to your file, you have to close it using\
+    \ the function fclose ( ). It requires a file pointer as an argument. It returns\
+    \ true if the closure is successful and false if it is not.\n\n## Reading Files\n\
+    \nAfter you open a file using the function fopen ( ), you can read it using the\
+    \ function fread ( ). It requires two arguments. It reads the length bytes from\
+    \ the file pointer referenced by the handle. It stops reading as soon as it has\
+    \ read the length bytes, reaches the end of the file, a socket timeout occurs,\
+    \ or a packet becomes available.  \n\nYou can use the function filesize ( ) to\
+    \ find the length of your file. It takes the file name as an argument and returns\
+    \ its size in bytes. It also returns false on failure or the read string. Take\
+    \ note that the function fread( ) reads from the current position of your file\
+    \ pointer. If you want to find the current position of the file pointer, you have\
+    \ to use the function ftell ( ). If you wish to rewind the position of the file\
+    \ pointer, you have to use rewind ( ).\n\nTake a look at the following example:\n\
+    \n<?php\n\n$filename = “/testfile.txt”;\n\n$file = fopen ($filename, “r”);\n\n\
+    if ($file == false)\n\n{\n\necho (“Opening File Error”);\n\nexit ( );\n\n}\n\n\
+    $filesize = filesize ($filename);\n\n$filetext = fread ($file, $filesize);\n\n\
+    fclose ($file);\n\necho (“The size of the file is  $filesize bytes”);\n\necho\
+    \ (“<pre> $text </pre>”;\n\n?>\n\nIn the above example, the content of the text\
+    \ file testfile.txt is assigned to a variable and then displayed as the output.\n\
+    \n## Writing Files\n\nIf you want to write a new file or append a text to an existing\
+    \ file, you can use the function fwrite ( ). It requires two arguments to specify\
+    \ the file pointer and the data string to be written. You can include a third\
+    \ integer argument if you want to specify the length of the data to be written.\
+    \ This third integer argument is optional, though. If you do not include any third\
+    \ argument, writing would stop upon reaching the specified length.\n\nThe function\
+    \ fwrite ( ) writes the contents of the string to the file stream pointed to by\
+    \ the handle. It returns false on error or the number of bytes. If you are using\
+    \ a system that differentiates between text files and binary files, such as Windows,\
+    \ you should open your file with ‘b’ included in the fopen ( ) mode parameter.\
+    \ Also, if the handle is opened in append mode, fwrite ( ) becomes atomic, except\
+    \ when the size of the string exceeds the block size of the file system. There\
+    \ is no more need to flock ( ) a resource before you call fwrite ( ). You can\
+    \ write all data without any interruption.\n\nTake a look at the following example:\n\
+    \n<?php\n\n$file = fopen (“testfile.txt”, “w”);\n\necho fwrite ($file, “Testing\
+    \ sample!”);\n\nfclose ($file);\n\n?>\n\nIf you run the above code, you will get\
+    \ an output of:\n\n15\n\nWhy? You get 15 because Testing sample! has fifteen characters\
+    \ including spacing.\n\nPreview of my other books that might interest you: \n\n\
+    [HTML: Step by Step Beginners Guide to HTML](http://www.amazon.com/gp/product/B00YDSJ8VC?*Version*=1&*entries*=0)\n\
+    \nThe book “HTML: Step by Step Beginners Guide to HTML” will provide all essential\
+    \ information and training during the book which you’ll need in order to upgrade\
+    \ your skills later with other languages and even with more sophisticated HTML.\n\
+    \nThe reason why we start our “Learn Web Design” series with HTML is because he\
+    \ is the core to every website out there. No matter how basic or sophisticated\
+    \ one website is the HTML is always there and is essential for its existence.\n\
+    \nIn order to perfectly understand the material we’ll go through everything from\
+    \ the absolute beginning. We’ll do some exercises because the only way to master\
+    \ programming is by constant exercise and learning. \n\nAll the material in this\
+    \ book can be learned in less than a day but exercising and upgrading your skills\
+    \ later on is essential to becoming a good programmer. \n\nYou can check/download\
+    \ the book from [HERE](http://www.amazon.com/gp/product/B00YDSJ8VC?*Version*=1&*entries*=0).\n\
+    \nJava  \n\nLearn Java Programming with the Ultimate Crash Course for Beginners\
+    \ in no Time!\n\nToday’s applications are becoming increasingly powerful, especially\
+    \ with computers, smartphones, and tablets getting more processing power and memory\
+    \ every year. However, all of these devices are nothing without the operating\
+    \ system and programs they contain. \n\nYou might already be familiar with Java,\
+    \ whether it’s from an introductory course in programming or a platform you had\
+    \ to install to make certain programs work on your computer, and that’s not surprising\
+    \ at all since Java remains one of the most popular and in-demand programming\
+    \ languages in the world!\n\nDespite the popularity of Java as a language and\
+    \ a platform, there remains still a shortage of qualified programmers to create\
+    \ meaningful and useful Java applications. Whether you’re completely new to Java,\
+    \ or even to programming, or you feel that there’s still a lot of room for improvement\
+    \ in terms of your current Java programming skills, this book will give you a\
+    \ strong foundation in both programming and Java. \n\nIf you’re still wondering\
+    \ whether or not this book is for you, here are some statements to help you decide:\n\
+    \n*   You’re a complete newbie and you need a book that introduces you gently\
+    \ to the world of programming\n\n*   You’re already a Java developer but you’d\
+    \ like to sharpen your skills and create more efficient, error-free code\n\n*\
+    \   You want to find a book that isn’t overly technical but at the same time,\
+    \ not too dumbed-down\n\n*   You enjoy solving riddles and challenges \n\n*  \
+    \ You have a really good idea for a program and nobody has thought about it just\
+    \ yet\n\n*   You want to help people by creating programs that they need but can’t\
+    \ seem to find\n\nIf you can identify with any of these statements, then you’ve\
+    \ come to the right place. This book provides a self-paced comprehensive crash\
+    \ course in Java, from the very definition of programming to the most advanced\
+    \ topics in Java. This book will provide plenty of source codes for you to play\
+    \ and experiment with in order to help you understand Java better. After finishing\
+    \ this book, you should be able to create Java programs confidently. \n\nThis\
+    \ book can serve as both a reference and a walkthrough in Java, so feel free to\
+    \ skip and skim through chapters that talk about things you’re already well acquainted\
+    \ with and jump back and forth between chapters if that works better for you.\
+    \ \n\nYou can check/download the book from [HERE](http://www.amazon.com/Java-Programming-Ultimate-Course-Beginners-ebook/dp/B010W1D3KA/ref=sr_1_15?s=digital-text&ie=UTF8&qid=1436021586&sr=1-15&keywords=java+programming).\n\
+    \nC#: Learn C# Programming with the Ultimate Crash Course for Beginners in No\
+    \ Time!\n\nThis book contains proven steps and strategies on how to start writing\
+    \ programs with C# in the soonest time possible!\n\nIf you have prior knowledge\
+    \ about the world of C++ programming, then you may find familiar terms and code\
+    \ structure with C# (pronounced as See Sharp). It works with Microsoft .NET framework\
+    \ and was initially designed to be the answer to Java. Today, both are being used\
+    \ extensively by companies and are also a friendly language for beginners. \n\n\
+    Here are some of the essential lessons you will find inside:\n\n*   Comprehending\
+    \ the C# Program Structure\n\n*   The Coding Conventions for C#\n\n*   Mastering\
+    \ Variables and Data Types\n\n*   Getting Using Input and Using Type Conversions\n\
+    \n*   Arithmetic, Conditional, Relational, and Logical Operators\n\n*   Using\
+    \ Flow Control Statements\n\n*   Generating Random Numbers\n\n*   And much more!\n\
+    \nI hope you enjoy it!\n\nYou can check/download the book from [HERE](http://www.amazon.com/Learn-Programming-Ultimate-Course-Beginners-ebook/dp/B010N2OLRW/ref=asap_bc?ie=UTF8).\n\
+    \nHTML5 & CSS3: Learn CSS3 and HTML5 in One Day with Hands-on project and learn\
+    \ them Well! \n\nThis book contains proven steps and strategies on how to design\
+    \ projects using HTML5 and CSS3."
+  toc: []
+  trans: "\n一旦你完成对文件的修改，就必须使用函数 `fclose()`将其关闭。它需要一个文件指针作为参数。如果关闭成功，它返回 true；如果失败则返回\
+    \ false。\n\n## 读取文件\n\n在使用 `fopen()` 函数打开文件后，你可以使用 `fread()` 函数对其进行读取。它需要两个参数。它从句柄引用的文件指针读取指定长度的字节。当读取到指定长度、到达文件末尾、发生套接超时或数据包可用时，它将停止读取。\n\
+    \n你可以使用 `filesize()` 函数查找文件的长度。它接受文件名作为参数，并返回以字节为单位的大小。如果失败或返回读取的字符串，它会返回 false。请注意，`fread()`\
+    \ 函数是从文件指针的当前位置读取的。如果你想找到文件指针的当前位置，必须使用 `ftell()` 函数。如果你想回退文件指针的位置，则必须使用 `rewind()`。\n\
+    \n请看下面的示例：\n\n```php\n<?php\n$filename = \"/testfile.txt\";\n$file = fopen($filename,\
+    \ \"r\");\nif ($file == false)\n{\n    echo (\"Opening File Error\");\n    exit();\n\
+    }\n$filesize = filesize($filename);\n$filetext = fread($file, $filesize);\nfclose($file);\n\
+    echo (\"The size of the file is $filesize bytes\");\necho(\"<pre> $text </pre>\"\
+    );\n?>\n```\n\n在上面的示例中，文本文件 `testfile.txt`的内容被赋值给变量，然后作为输出显示。\n\n## 写入文件\n\n如果你想写入新文件或向现有文件追加文本，可以使用\
+    \ `fwrite()` 函数。它需要两个参数来指定文件指针和要写入的数据字符串。如果你想指定写入数据的长度，可以包含第三个整数参数。尽管第三个整数参数是可选的。如果你不包含第三个参数，写入将在达到指定长度后停止。\n\
+    \n`fwrite()` 函数将字符串的内容写入句柄指向的文件流。在出错时返回 false，否则返回字节数。如果你使用的是区分区分文本文件和二进制文件的系统（例如\
+    \ Windows），你应该在 `fopen()` 的模式参数中包含 `'b'` 来打开文件。此外，如果句柄是以追加模式打开的，`fwrite()` 将变成原子的，除非字符串的大小超过了文件系统的块大小。你不再需要在调用\
+    \ `fwrite()` 之前对资源进行 `flock()` 操作。你可以无中断地写入所有数据。\n\n请看下面的示例：\n\n```php\n<?php\n\
+    $file = fopen(\"testfile.txt\", \"w\");\necho fwrite($file, \"Testing sample!\"\
+    );\nfclose($file);\n?>\n```\n\n如果你运行上述代码，你将得到输出：\n\n15\n\n为什么？你得到 15 是因为 `Testing\
+    \ sample!` 包括空格在内共有十五个字符。\n\n我可能让你感兴趣的其他书籍预览：\n\n[HTML：从入门到精通学者指南](http://www.amazon.com/gp/product/B00YDSJ8VC?Version=1&entries=0)\n\
+    \n《HTML: Step by Step Beginners Guide to HTML》一本书将在书中提供所有必要的信息和培训，你将需要这些信息之后使用其他语言甚至更复杂的\
+    \ HTML 来提升你的技能。\n\n我们之所以从 HTML 开始我们的“学习 Web 设计”系列，是因为它是世界上每个网站的核心。无论一个网站是多么基础或复杂，HTML\
+    \ 始终存在那里，并且对于它的存在至关重要。\n\n为了完美理解这些材料，我们将从最基础开始学习一切。我们将进行一些练习，因为掌握编程的唯一途径就是不断的练习和学习。\n\
+    \n书中的所有材料可以在一天内学完，但以后练习和提升你的技能对于成为一名优秀的程序员是至关重要的。\n\n你可以从[此处]查看/下载书籍](http://www.amazon.com/gp/product/B00YDSJ8VC?Version=1&entries=0)。\n\
+    \n## Java\n\n通过这本初学者极速入门课程快速学习 Java 编程！\n\n随着智能手机和平板电脑的发展，今天的应用程序变得越来越强大。两者都被公司广泛使用，而且对初学者来说是一种友好的语言。\n\
+    \n尽管 Java 作为一个平台非常流行，但合格程序员仍然短缺。无论你是 Java 的完全新手，还是已经熟悉其他语言，这本书都将提供一个坚实的基础。\n\n\
+    我们之所以从 HTML 开始我们的“学习 Web 设计”系列，是因为它是世界上每个网站的核心。无论一个网站是多么基础或复杂，HTML 始终存在那里，并且对于它的存在至关重要。\n\
+    \n为了完美理解这些材料，我们将从最基础开始学习一切。我们将进行一些练习，因为掌握编程的唯一途径就是不断的练习和学习。\n\n书中的所有材料可以在一天内学完，但以后练习和提升你的技能对于成为一名优秀的程序员是至关重要的。\n\
+    \n你可以从[此处]查看/下载书籍](http://www.amazon.com/gp/product/B00YDSJ8VC?Version=1&entries=0)。\n\
+    \n## C#\n\n通过这本初学者极速入门课程快速学习 C# 编程！\n\n如果你对 C++ 编程世界有先验知识，那么你会在 `C#`（读作 See Sharp）中发现熟悉的术语和代码结构。它与\
+    \ `.NET` 框架配合工作，最初设计作为 Java 的答案。\n\n今天，两者都被公司广泛使用，而且对初学者来说是一种友好的语言。\n\n以下是你将在书内找到的一些核心课程：\n\
+    \n- 理解 `C#` 程序结构\n- `C#` 编码规范\n- 精通变量和数据类型\n- 获取输入和使用类型转换\n- 算术、条件、关系和逻辑运算符\n\
+    - 使用流程控制语句\n- 生成随机数\n- 以及更多！\n\n我希望你喜欢它！\n\n你可以从[此处]查看/下载书籍](http://www.amazon.com/Learn-Programming-Ultimate-Course-Beginners-ebook/dp/B010N2OLRW)。\n\
+    \n## HTML5 & CSS3\n\n通过实践项目在一天内学习 CSS3 和 HTML5 并熟练掌握它们！\n\n这本书包含了关于如何使用 HTML5\
+    \ 和 CSS3 设计项目的经过证明的步骤和策略。\n"
+- fmt: '
+
+    It’s not only hardware that is evolving. The software that makes our hardware
+    tick has also evolved by leaps and bounds. And the programmed processes that these
+    software undertake have even shared in this progress.
+
+
+    This book will teach you about the most important aspects of two of the Internet’s
+    next-gen technologies -- `HTML5` and `CSS3`. These systems will be running in
+    each and every cutting-edge site, web app, or mobile application in the very near
+    future -- in fact, many have adapted it even now. Read on to be on the forefront
+    of the Internet’s next frontier!
+
+
+    I hope you enjoy it!
+
+
+    You can check/download the book from [HERE](http://www.amazon.com/HTML5-CSS3-Hands--Programming-Beginners-ebook/dp/B010WC4YIY/ref=asap_bc?ie=UTF8).
+
+
+    # Conclusion
+
+
+    Thank you again for downloading this book!
+
+
+    I hope this book was able to help you learn about `PHP` and `MySQL`, and how to
+    write codes.
+
+
+    The next step is to apply what you have learned in this book.
+
+
+    ![](Images/image00067.jpeg)
+
+
+    Finally, if you enjoyed this book, please take the time to share your thoughts
+    and post a review on Amazon. It’d be greatly appreciated!
+
+
+    [Click here to leave a review on Amazon.](http://www.amazon.com/gp/product/B010Y767LO?*Version*=1&*entries*=0)
+
+
+    Thank you and good luck!
+
+
+    # Subscribe for FREE Kindle Books
+
+
+    [![Description: C:\Users\Pec\Desktop\^320A1A588BAA7A0F9532997D5981C977CAF16C594CC0851607^pimgpsh\_fullsize\_distr.jpg](Images/image00068.jpeg)](http://unibulpress.com/)]
+
+
+    [Click here to subscribe to our list and start receiving Free Kindle Books in
+    your inbox.](http://unibulpress.com/)
+
+    '
+  raw: "It’s not only hardware that is evolving. The software that makes our hardware\
+    \ tick has also evolved by leaps and bounds. And the programmed processes that\
+    \ these software undertake have even shared in this progress.\n\nThis book will\
+    \ teach you about the most important aspects of two of the Internet’s next-gen\
+    \ technologies -- HTML5 and CSS3. These systems will be running in each and every\
+    \ cutting-edge site, web app, or mobile application in the very near future --\
+    \ in fact, many have adapted it even now. Read on to be on the forefront of the\
+    \ Internet’s next frontier!\n\nI hope you enjoy it!\n\nYou can check/download\
+    \ the book from [HERE](http://www.amazon.com/HTML5-CSS3-Hands--Programming-Beginners-ebook/dp/B010WC4YIY/ref=asap_bc?ie=UTF8).\n\
+    \n# \n\nConclusion \n\nThank you again for downloading this book!  \n\nI hope\
+    \ this book was able to help you learn about PHP and MySQL, and how to write codes. \
+    \ \n\nThe next step is to apply what you have learned in this book. \n\n![](Images/image00067.jpeg)\n\
+    \nFinally, if you enjoyed this book, please take the time to share your thoughts\
+    \ and post a review on Amazon.  It’d be greatly appreciated!\n\n[Click here to\
+    \ leave a review on Amazon.](http://www.amazon.com/gp/product/B010Y767LO?*Version*=1&*entries*=0)\n\
+    \nThank you and good luck!\n\nSubscribe for FREE Kindle Books \n\n[![Description:\
+    \ C:\\\\Users\\\\Pec\\\\Desktop\\\\^320A1A588BAA7A0F9532997D5981C977CAF16C594CC0851607^pimgpsh\\\
+    _fullsize\\_distr.jpg](Images/image00068.jpeg)](http://unibulpress.com/)\n\n[Click\
+    \ here to subscribe to our list and start receiving Free Kindle Books in your\
+    \ inbox.](http://unibulpress.com/)\n\n#"
+  toc: []
+  trans: '
+
+
+    不断进化的不仅是硬件。驱动我们硬件的软件也发生了飞跃性的发展。这些软件所承担的程序化流程也同样共享这一进步。
+
+
+    本书将向你介绍互联网下一代技术中最重要的两个方面——`HTML5` 和 `CSS3`。在极不遥的未来，这些系统将运行在每一个尖端网站、Web 应用或移动应用程序中——事实上，许多平台现在已经适配了它们。继续读下去，站在互联网下一代边疆的前沿吧！
+
+
+    希望你喜欢这本书！
+
+
+    你可以从[此处](http://www.amazon.com/HTML5-CSS3-Hands--Programming-Beginners-ebook/dp/B010WC4YIY/ref=asap_bc?ie=UTF8)查看或下载本书。
+
+
+    # 结
+
+
+    再次感谢你下载这本书！
+
+
+    希望这本书能够帮助你学习 `PHP` 和 `MySQL`，以及如何编写代码。
+
+
+    下一步是应用你在书中学到的所有知识。
+
+
+    ![](img/image00067.jpeg)
+
+
+    最后，如果你喜欢这本书，请花时间分享你的想法并在 Amazon 上发表评论。我们将不胜感激！
+
+
+    [点击此处在 Amazon 上发表评论。](http://www.amazon.com/gp/product/B010Y767LO?*Version*=1&*entries*=0)
+
+
+    感谢并祝你好运！
+
+
+    # 订阅免费 Kindle 电子书
+
+
+    ![Description: C:\Users\Pec\Desktop\³²⁰A1A588BAA7A0F9532997D5981C977CAF16C594CC0851607^pimgpsh\_fullsize\_distr.jpg](http://unibulpress.com/)]
+
+
+    [点击此处订阅我们的列表，开始在收件箱中接收免费的 Kindle 电子书。](http://unibulpress.com/)
+
+
+    '
