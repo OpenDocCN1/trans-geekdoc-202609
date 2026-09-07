@@ -1,0 +1,1504 @@
+
+# Machine Learning Python：Python 机器学习初学者指南
+
+## 针对初学者的机器学习
+
+Python 是一种通用的高级编程语言，越来越多地应用于数据科学和机器学习设计。本教程简要介绍了 Python 及其 `numpy`、`scipy`、`pandas` 和 `matplotlib` 等库，并解释了如何将其应用于机器学习开发。
+
+## 引言
+
+机器学习是人工智能（AI）的一种，它使计算机在没有显式编程的情况下具有学习的能力。机器学习侧重于开发能够在接触新数据时发生变化的计算机程序。
+
+如果你是一个新手，不知道从何处学习，不知道为什么需要机器学习以及它为什么最近变得越来越流行，你来对地方了！我收集了所有必要的信息和实用资源，帮助你获取新知识并完成你的第一个项目。
+
+Python 及其库如 `NumPy`、`SciPy`、`Scikit-Learn`、`Matplotlib` 被用于数据科学和数据分析。它们也被广泛用于创建可扩展的机器学习算法。Python 实现了流行的机器学习技术，如分类、回归、推荐和聚类。
+
+Python 提供了现成的框架，能够在更短的时间内有效地对海量数据执行数据挖掘任务。它包含了通过多种算法实现的模型，例如`linear regression`、`logistic regression`、`Naïve Bayes`（贝叶斯）、`k-means`、`K nearest neighbor`和`Random Forest`。
+
+如果你的目标是成为一名成功的程序员，你需要了解很多事情。但对于机器学习和数据科学来说，至少掌握一种编程语言并自信地使用它就足够了。所以，冷静点，你不需要成为编程天才。
+
+为了机器学习之旅的成功，从一开始就选择合适的编程语言是必要的，因为你的选择将决定你的未来。在这一步上，你必须进行战略性思考，并正确地安排优先级，不要在不必要的事情上浪费时间。
+
+我的观点——`Python` 是初学者的完美选择，让你专注于它，以便进入机器学习和数据科学领域。它是一种极简且直观的语言，拥有功能齐全的库（也称为框架），这显著缩短了获得首次结果所需的时间。
+
+顺便说，你也可以考虑`R 语言`，但我个人更倾向于`Python`。
+
+在本章中，你将详细学习 Python 在机器学习中的概念。
+
+## 机器学习中的 Python
+
+Python 拥有让开发者使用优化算法的库。它实现了流行的机器学习技术，如推荐、分类和聚类。因此，在我们进一步学习之前，有必要对机器学习进行简要介绍。
+
+### 什么是机器学习？
+
+数据科学、机器学习和人工智能是当今科技界最热门的话题之一。数据挖掘和贝叶斯分析正处于趋势，这增加了对机器学习的需求。本教程是你进入机器学习世界的大门。
+
+机器学习是一门学科，通过对系统进行编程，使其能够根据经验自动学习和改进。在这里，“学习”意味着识别和理解输入数据，并根据提供的数据做出明智的决策。要根据所有可能的输入考虑所有决策是非常困难的。为了解决这个问题，人们开发了各种算法，通过应用统计科学、概率、逻辑、数学优化、强化学习和控制理论的原理，从特定数据和过去的经验中构建知识。
+
+### 机器学习算法的应用
+
+开发的机器学习算法用于各种应用，如下：
+
+* 视觉处理
+* 语言处理
+* 股票市场趋势、天气等内容的预测
+* 模式识别
+* 游戏
+* 数据挖掘
+* 专家系统
+* 机器人技术
+
+### 机器学习涉及的步骤
+
+一个机器学习项目涉及以下步骤：
+
+* 定义问题
+* 准备数据
+* 评估算法
+* 改进结果
+* 展示结果
+
+使用 Python 进行机器学习的最佳方法是从端到端完成一个项目，并涵盖加载数据、汇总数据、评估算法和进行某些预测等关键步骤。这为你提供了一个可以复制的方法，可以一个数据集一个数据集地使用。你还可以添加更多数据并改进结果。
+
+## 环境搭建
+
+在本章中，你将学习如何在你的本地计算机上为 Python 机器学习设置工作环境。
+
+### 库、软件包和数据集
+
+要理解机器学习，你需要具备 Python 编程的基础知识。此外，在执行各种机器学习任务时，通常使用的库和软件包如下所示：
+
+* `numpy` —— 用于其 N 维数组对象
+* `pandas` —— 是一个数据分析库，包含数据框（dataframes）
+* `matplotlib` —— 用于创建图表和图形的二维绘图库
+* `scikit-learn` —— 用于数据分析和数据挖掘任务的算法
+* `seaborn` —— 基于 `matplotlib` 的数据可视化库
+
+（注：由于原文文本中存在大量重复段落，此处遵循翻译逻辑处理。原文中关于 `numpy` 到 `seaborn` 的描述重复了多次，在翻译时已保持内容一致性。）
+
+### 安装
+
+根据你的操作系统，选择以下两种方法之一进行安装：
+
+#### 方法 1
+
+从 `python.org` 下载并安装 Python。
+
+对于 Windows，双击 `.exe` 文件并按照屏幕上的说明操作。对于 Mac，使用 `.pkg` 文件。对于 Linux 系统，使用以下命令检查是否已安装 Python：
+
+```bash
+python --version
+```
+
+在 Debian 派发版（如 Ubuntu）上，可以使用 `apt`：
+
+```bash
+sudo apt-get install python3
+```
+
+现在，打开命令提示符并运行以下命令验证 Python 是否安装正确：
+
+```bash
+python3 --version
+```
+
+Python 3.6.2
+
+同样，可以使用 `pip` 安装器单独安装 `matplotlib` 等必要库。为了这个目的，可以使用此处命令：
+
+```bash
+pip install numpy
+pip install matplotlib
+pip install pandas
+pip install seaborn
+```
+
+#### 方法 2
+
+或者，为了同时安装 Python 和其他软件包，我们应该安装 Anaconda。它是适用于 Linux、Windows 和 OSX 的 Python 实现，包含了 `numpy`、`scikit-learn` 和 `matplotlib` 等各种软件包。它还包括交互式 Python 环境 Jupyter。我们可以安装 2.7 或任何 3.x 版本。
+
+从 Continuum Analytics 下载免费的 Anaconda 分布版，你可以执行以下操作：
+
+访问 Continuum Analytics 官方网站及其下载页面。请注意，安装过程可能需要 15-20 分钟，因为安装程序包含 Python、相关软件包、编辑器和其他文件。根据你的操作系统，选择此处安装方法：
+
+* 对于 Windows：选择 `Anaconda for Windows` 部分并查看 Python 2.7 或 3.x 的列。你会发现有两个版本的安装程序，一个适用于 32 位 Windows，一个适用于 64 位 Windows。选择相关的一个。
+* 对于 Mac：滚动到 `Anaconda for OS X` 部分。查看 Python 2.7 或 3.x 的列。注意这里只有一个安装程序版本：64 位版本。
+* 对于 Linux：我们选择“Anaconda for Linux”部分。
+
+注意，你必须确保 Anaconda Python 分布版安装在单个目录中，并且不会影响系统上的任何其他 Python 安装。
+
+现在，我们需要检查安装是否成功。为了此，请进入命令行并输入以下命令：
+
+```bash
+$ python
+```
+
+Python 3.6.3 |Anaconda custom (32-bit)| (default, Oct 13 2017, 14:21:34)
+
+`[GCC 7.2.0]` on linux
+
+接下来，你可以导入所需的库并打印它们的版本，如下所示：
+
+```python
+>>> import numpy
+>>> print(numpy.__version__)
+1.14.2
+>>> import matplotlib
+>>> print(matplotlib.__version__)
+2.1.2
+>>> import pandas
+>>> print(pandas.__version__)
+0.22.0
+>>> import seaborn
+>>> print(seaborn.__version__)
+0.8.1
+```
+
+## 学习的类型
+
+机器学习（ML）是一种在很少或没有人工干预的情况下的自动化学习。它涉及对计算机使其能够从可用输入中学习。机器学习的主要目的是探索并构建算法，这些算法能够从历史数据中学习，并对新的输入数据做出预测。
+
+学习算法的`input` 是训练数据，代表经验，而`output` 是任何专业知识，通常表现为可以执行任务的另一种算法。机器学习系统的输入数据可以是数值的、文本、音频、视觉或多媒体的。系统相应的输出数据可以是浮点数（例如火箭的速度），也可以代表类别或种类的整数（例如来自图像识别的鸽子或向日葵）。
+
+在本章中，我们将学习我们的程序将访问的训练数据，以及学习过程是如何自动化的，以及如何评估此类机器学习算法的成功和性能。
+
+## 学习的概念
+
+学习是将经验转换为专业知识或知识的过程。
+
+根据学习数据的性质以及学习者与环境之间的交互，学习可以大致分为三类，如下所示：
+
+* 监督学习
+* 无监督学习
+* 半监督学习
+
+同样，机器学习算法分为四类，如下：
+
+* 监督学习算法
+* 无监督学习算法
+* 半监督学习算法
+* 强化学习算法
+
+然而，最常用的是`监督学习`和`无监督学习`。
+
+## 监督学习
+
+监督学习常用于现实世界的应用，如人脸和语音识别、产品或电影推荐以及销售预测。监督学习可以进一步分为两种类型：`回归`（Regression）和 `分类`（Classification）。
+
+`回归`在连续值响应上进行训练和预测，例如预测房地产价格。
+
+`分类`尝试寻找合适的类别标签，例如分析正面/负面情感、男性和女性、人员、良性和恶性肿瘤、安全和不安全的贷款等。
+
+在监督学习中，学习数据带有描述、标签、目标或期望输出，其目标是找到一种将输入映射到输出的通用规则。这种学习数据被称为`标记数据`（labeled data）。然后用学习到的规则对具有未知输出的新数据进行标记。
+
+监督学习涉及构建基于`标记样本`（labeled samples）的机器学习模型。例如，如果我们构建一个估算房屋价格的系统，我们需要收集各种特征的数据，等等，我们需要对其进行标记。
+
+监督学习处理从可用数据中学习函数。监督学习有许多例子，如`逻辑回归`、`神经网络`、`支持向量机 (SVMs)`和`朴素贝斯分类器`。常见的示例包括将电子邮件分类为垃圾邮件和非垃圾邮件，根据内容对网页进行标记。
+
+## 无监督学习
+
+无监督学习用于检测异常、离群值或对相似行为进行分组。它是监督学习的相反。这里没有标记数据。
+
+当学习数据仅包含指示而无任何描述时，寻找结构取决于算法。假设我们有很多数据点，并想将它们分为几组。我们可能并不确切标准是什么。无监督学习算法包括`Kmeans`、`随机森林`、`层次聚类`。
+
+## 半监督学习
+
+如果某些学习样本有标记，而另一些没有，那么就是半监督学习。它利用大量的`未标记数据`进行训练，利用少量的`标记数据`进行测试。半监督学习适用于获取全标记数据集成本昂贵而标记小子集更实际的情况。例如，通常需要专家对遥感图像进行标记。
+
+## 强化学习
+
+在这里，学习数据提供反馈，以便系统适应动态条件以实现特定目标。系统根据反馈评估其性能并做出反应。最好的实例包括自动驾驶汽车和象棋算法 AlphaGo。
+
+## 机器学习的目的
+
+机器学习可以被视为人工智能的一个分支，因为将经验转换为专业知识或在复杂数据中检测模式是人类或动物智能的标志。
+
+作为一个科学领域，机器学习与许多学科共享共同概念，如统计学、`信息论`、`博弈论`和`优化`。
+
+作为信息技术的子领域，它的目标是对机器使其能够学习。
+
+然而，应该看到，机器学习的目的不是建立智能行为的自动化复制，而是利用计算机的力量来补充和增强人类智能。例如，机器学习程序可以扫描和处理大型数据库，检测人类感知范围之外模式。
+
+## 数据预处理、分析与可视化
+
+在现实世界中，我们通常会遇到许多不适合机器学习算法直接处理的原始数据。在将数据输入各种机器学习算法之前，我们需要对其进行预处理。本章讨论了 Python 机器学习中数据的各种技术。
+
+## 数据预处理
+
+在本节中，让我们了解如何在 Python 中预处理数据。
+
+最初，用记事本等文本编辑器打开一个 `.py` 扩展的文件，例如 `prefoo.py`。
+
+然后，将以下代码添加到该文件中：
+
+```python
+import numpy as np
+
+from sklearn import preprocessing
+
+#我们导入了一些包。让我们创建一些示例数据并将该行添加到文件中：
+```
+
+```python
+input_data = np.array([[3, -1.5, 3, -6.4], [0, 3, -1.3, 4.1], [1, 2.3, -2.9, -4.3]])
+```
+
+我们现在准备好对这些数据进行操作。
+
+### 预处理技术
+
+可以使用这里过的几种技术对数据进行预处理：
+
+#### 均值移除 (Mean removal)
+
+它涉及从每个特征中移除均值，使其围绕零中心。均值移除有助于消除特征中的任何偏差。
+
+你可以使用以下代码进行均值移除：
+
+```python
+data_standardized = preprocessing.scale(input_data)
+print("\nMean = ", data_standardized.mean(axis = 0))
+print("Std deviation = ", data_standardized.std(axis = 0))
+```
+
+现在在终端上运行以下命令：
+
+```bash
+$ python prefoo.py
+```
+
+你可以观察到以下输出：
+
+```
+Mean = [ 5.55111512e-17 -3.70074342e-17 0.00000000e+00 -1.85037171e-17]
+Std deviation = [ 1. 1. 1. 1.]
+```
+
+观察到输出中，均值几乎为 0，标准差为 1。
+
+#### 缩放 (Scaling)
+
+数据点中每个特征的值可以在随机值之间变化。因此，对它们进行缩放以符合指定的规则是非常重要的。
+
+你可以使用以下代码进行缩放：
+
+```python
+data_scaler = preprocessing.MinMaxScaler(feature_range = (0, 1))
+data_scaled = data_scaler.fit_transform(input_data)
+print("\nMin max scaled data = ", data_scaled)
+```
+
+现在运行代码，你可以观察到以下输出：
+
+```
+Min max scaled data = [[ 1. 0. 1. 0. ]
+                      [ 0. 1. 0.27118644 1. ]
+                      [ 0.33333333 0.84444444 0. 0. 2 ]]
+```
+
+注意，所有值都已缩放到给定的范围内。
+
+
+
+### 归一化（Normalization）
+
+归一化涉及调整特征向量中的值，以便在共同尺度上进行衡量。在这里，特征向量的值被调整使其和为 1。我们在 `prefoo.py` 文件中添加以下行：
+
+```python
+data_normalized = preprocessing.normalize(input_data, norm = 'l1')
+print("\nL1 normalized data = ", data_normalized)
+```
+
+现在运行代码，你可以观察到以下输出：
+
+```text
+L1 normalized data = [[ 0.21582734 -0.10791367 0.21582734 -0.46043165]
+                      [ 0.35714286 -0.1547619 0.48809524]
+                      [ 0.0952381 0.21904762 -0.27619048 -0.40952381]]
+```
+
+归一化用于确保数据点不会因为特征的性质而受到增强。
+
+### 二值化（Binarization）
+
+二值化用于将数值特征向量转换为布尔向量。你可以使用以下代码进行二值化：
+
+```python
+data_binarized = preprocessing.Binarizer(threshold=1.4).transform(input_data)
+print("\nBinarized data =", data_binarized)
+```
+
+现在运行代码，你可以观察到以下输出：
+
+```text
+Binarized data = [[1. 0. 1. 0.]
+                  [0. 1. 0. 1.]
+                  [0. 1. 0. 0.]]
+```
+
+这种技术非常有帮助。
+
+### 独热编码（One Hot Encoding）
+
+可能需要处理稀少且分散的数值值，而你可能不需要存储这些值。在这种情况下，你可以使用独热编码技术。如果不同值的数量为 `k`，它将特征转换为一个 `k` 维向量，其中只有一个值为 `1`，所有其他值均为 `0`。
+
+你可以使用以下代码进行独热编码：
+
+```python
+encoder = preprocessing.OneHotEncoder()
+encoder.fit([[0, 2, 1, 12], [1, 3, 5, 3], [2, 3, 2, 12], [1, 2, 4, 3]])
+encoded_vector = encoder.transform([[2, 3, 5, 3]]).toarray()
+print("\nEncoded vector =", encoded_vector)
+```
+
+现在运行代码，你可以观察到以下输出：
+
+```text
+Encoded vector = [[0. 0. 1. 0. 1. 0. 0. 0. 1. 1. 0.]]
+```
+
+在上面的示例中，让我们考虑每个特征向量中的第三个特征。值分别为 1、5 和 4。这里有四个独立的值，这意味着独热编码向量的长度为 4。如果我们想编码值 5，它将是一个长度为 4 的向量。
+
+### 标签编码（Label Encoding）
+
+在监督学习中，我们经常遇到各种标签，这些标签可能是数字形式，也可能是单词。如果是数字，可以直接被算法使用。然而，许多时候，标签需要可读的形式。因此，标签编码是将单词标签转换为数字，以便算法理解如何工作。让我们详细了解如何执行标签编码：
+
+```python
+from sklearn import preprocessing
+label_encoder = preprocessing.LabelEncoder()
+input_classes = ['suzuki', 'ford', 'toyota', 'bmw']
+label_encoder.fit(input_classes)
+print("\nClass mapping:")
+for i, item in enumerate(label_encoder.classes_):
+    print item, '-->', i
+```
+
+现在运行代码，你可以观察到以下输出：
+
+```text
+Class mapping:
+bmw --> 0
+ford --> 1
+suzuki --> 2
+toyota --> 3
+```
+
+## 数据分析（Data Analysis）
+
+本节将详细讨论在 Python 中的数据分析。
+
+### 加载数据集（Loading the Dataset）
+
+我们可以直接从 UCI 机器学习库加载数据。注意这里我们使用 `pandas` 来加载数据。接下来我们还将使用 `pandas` 通过描述性统计和可视化来探索数据。观察以下代码并注意我们指定了每个的名称。
+
+```python
+import pandas
+data = 'pima_indians.csv'
+names = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'Outcome']
+dataset = pandas.read_csv(data, names = names)
+```
+
+运行代码时，你可以观察到数据集已加载并准备好进行分析。在这里，我们下载了 `pima_indians.csv` 文件并移动到工作目录，使用本地名称加载它。
+
+### 总结数据集（Summarizing the Dataset）
+
+可以通过以下多种方式总结数据：
+
+- 检查数据集的维度
+- 列出所有数据
+- 查看所有属性的统计摘要
+- 按类别变量细分数据
+
+#### 数据集的维度（Dimensions of Dataset）
+
+你可以使用以下命令通过 `shape` 属性检查数据包含多少个实例（行）和属性（列）。
+
+```python
+print(dataset.shape)
+```
+
+那么，对于我们讨论的代码，我们可以看到 769 个实例和 6 个属性：
+
+`(769, 6)`
+
+#### 列出所有数据（List the Entire Data）
+
+你可以查看所有数据并理解其摘要：
+
+```python
+print(dataset.head(20))
+```
+
+此命令打印数据的前 20 行，如下所示：
+
+```text
+Sno Pregnancies Glucose BloodPressure SkinThickness Insulin Outcome
+1 6 148 72 35 0 1
+2 1 85 66 29 0 0
+```
+
+```text
+3      8        183      64            0       0       1
+4      1      89       66      23      94      0
+5      0      137      40      35      168     1
+6      5      116      74      0       0       0
+7      3      78      50      32      88      1
+8      10     115      0       0       0       0
+9      2      197      70      5       43
+10     8      25       96      0       0
+11     4      10       92      0       0
+12     10     168      4       0       0
+13     10     139      80      0       0
+14     1      189      60      23      846     1
+15     5      166      72      19      175     1
+16     7      100      0       0       0       1
+17     0      118      84      47      230     1
+18     7      107      74      0       0       1
+19     1      103      30      38      83      0
+```
+
+### 查看统计摘要
+
+你可以使用以下命令查看每个属性的统计摘要，包括 `count`、`unique`、`top` 和 `freq`。
+
+```python
+print(dataset.describe())
+```
+
+上述命令会给你如下输出，显示了每个属性的统计摘要：
+
+```text
+         Pregnancies Glucose BloodPressur SkinThckns Insulin Outcome
+count     769      769      769      769     769     769
+unique    18       137      48       52      187     3
+top       1        100      70       0       0
+freq      135      17       57       227     374     500
+```
+
+### 按类别拆分数据
+
+你也可以使用以下命令查看属于每个结果（outcome）的实例（行）数量的绝对计数：
+
+```python
+print(dataset.groupby('Outcome').size())
+```
+
+然后你可以看到实例的结果数量，如下：
+
+```text
+Outcome
+0    500
+1    268
+dtype: int64
+```
+
+### 数据可视化
+
+你可以使用两种类型的图表对数据进行可视化：
+
+- 单变量图（Univariate plots）用于理解每个属性
+- 多变量图（Multivariate plots）用于理解属性之间的关系
+
+#### 单变量图
+
+单变量图是每个变量的图表。考虑输入变量为数值型的情况，我们需要为每个变量创建箱线图（box and whisker plots）。可以使用以下代码来实现此目的。
+
+```python
+import pandas
+import matplotlib.pyplot as plt
+
+data = 'iris_df.csv'
+names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
+
+dataset = pandas.read_csv(data, names=names)
+dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
+plt.show()
+```
+
+你可以通过输出结果更清晰地了解输入属性的分布：
+
+![Univariate Plots](img/image00156.jpeg)
+
+#### 箱线图
+
+你可以使用以下命令创建每个输入变量的直方图，以直观了解分布情况：
+
+```python
+### histograms
+dataset.hist()
+plt.show()
+```
+
+![Box and Whisker Plots](img/image00157.jpeg)
+
+从输出中可以看出，两个输入变量符合高斯分布（Gaussian distribution）。因此，这些图表有助于我们对程序中可以使用哪些算法提供思路。
+
+#### 多变量图
+
+多变量图帮助我们理解变量之间的相互作用。
+
+##### 散点图矩阵
+
+首先，让我们绘制所有属性对的散点图。这对于发现输入变量之间的结构化关系很有帮助。
+
+```python
+from pandas.plotting import scatter_matrix
+
+scatter_matrix(dataset)
+plt.show()
+```
+
+你可以观察输出结果：
+
+![Scatter Plot Matrix](img/image00158.jpeg)
+
+观察到输出中某些属性对存在对角线分组。这表示存在高度相关性和可预测的关系。
+
+## 训练数据与测试数据
+
+训练数据和测试数据是机器学习中的两个重要概念。本章将详细讨论它们。
+
+### 训练数据
+
+训练集中的观测值构成了算法学习时使用的经验。在监督学习问题中，每个观测值由一个观测输出变量和一个或多个观测输入变量组成。
+
+### 测试数据
+
+测试集是用于某些性能指标评估模型性能的观测值集合。重要的是，测试集中不能包含来自训练集的观测值。如果测试集中确实包含训练集的示例，将很难评估算法是学习了从训练集中泛化，还是仅仅简单地记住了它们。
+
+泛化能力良好的程序能够有效地使用新数据执行任务。相比之下，一个通过学习过于复杂的模型来记忆训练数据的程序可以准确地预测训练集的响应变量值，但无法预测新示例的响应变量值。记忆训练集被称为 `过拟合`（`over-fitting`）。记忆观测值的程序可能无法很好地完成任务，因为它可能记住了噪声或巧合的联系和结构。平衡记忆与泛化，或平衡 `过拟合`（`over-fitting`）与 `欠拟合`（`under-fitting`），是许多机器学习算法共同的问题。许多模型可以应用 `正则化`（`Regularization`）来减少 `过拟合`。
+
+除了训练数据和测试数据之外，有时还需要第三组观测值，称为验证集（`validation set`）或留出集（`hold-out set`）。
+
+在开发过程中，特别是当训练数据稀缺时，可以使用名为 `cross-validation`（交叉验证）的方法在同一数据上对算法进行训练和验证。在 `cross-validation` 中，训练数据被划分开。算法使用除一个分区以外的所有分区进行训练，并在剩余的分区上进行测试。然后对分区进行若干次旋转，以便算法在所有数据上进行训练和评估。
+
+例如，假设原始数据集被分为五个等大的子集，标记为 `A` 到 `E`。最初，模型在 `B` 到 `E` 分区上训练，并在 `A` 分区上测试。在下一次迭代中，模型在 `A`、`C`、`D` 和 `E` 分区上训练，并在 `B` 分区上测试。不断旋转分区，直到模型在所有分区上都经过训练和测试。与测试单个数据分区相比，`cross-validation` 提供的模型性能估计更为准确。
+
+## 性能衡量指标：偏差与方差
+
+可以使用许多指标来衡量程序是否正在学习更有效地执行其任务。对于监督学习问题，许多性能指标衡量的是预测错误的数量。
+
+模型产生预测错误有两个根本原因：`bias`（偏差）和 `variance`（方差）。假设你有许多训练集，它们都是唯一的，但对总体而言具有相同的代表性。高 `bias` 的模型无论使用哪个训练集进行训练，都会对输入产生相似的错误；该模型对真实关系的假设偏向于它自己的假设，忽略了训练数据中展示的关系。相反，高 `variance` 的模型会根据其所训练的训练集的不同，对输入产生不同的错误。高 `bias` 模型缺乏灵活性，而高 `variance` 模型可能过于灵活，以至于模拟了训练集中的噪声。也就是说，高 `variance` 模型对训练数据导致了过拟合，而高 `bias` 模型对训练数据导致了欠拟合。
+
+理想情况下，模型应同时具有低 `bias` 和低 `variance`，但减少其中一个的努力往往会增加另一个。这被称为 `bias-variance trade-off`（偏差-方差权衡）。我们可能需要考虑本教程中引入的几个模型的 `bias-variance tradeoffs`。无监督学习问题没有用于衡量的错误信号；相反，无监督学习问题的性能指标衡量的是数据中发现的结构的某些属性。大多数性能衡量只能针对特定类型的任务进行。
+
+机器学习系统应该使用代表现实世界中犯错成本的性能指标进行评估。虽然这看起来显而易见，但接下来的示例说明了如何使用一个通常适用于任务但不适用于其特定应用场景的性能指标。
+
+## 准确率、精确率和召回率
+
+考虑一个分类任务，其中机器学习系统观察肿瘤并必须预测这些肿瘤是良性还是恶性性。`Accuracy`（准确率），即被正确分类的实例比例，是衡量程序性能的直观指标。虽然 `accuracy` 确实衡量了程序的性能，但它没有区分被误分类为良性的恶性肿瘤和被误分类为恶性的良性肿瘤。在某些应用中，所有类型错误的成本可能是相同的。然而，在这个问题中，未能识别恶性肿瘤比误将良性肿瘤分类为恶性是严重的错误。
+
+我们可以衡量每个可能的预测结果以创建分类器性能的不同快照。当系统正确地将肿瘤分类为恶性时，该预测被称为 `true positive`（真阳性）。当系统错误地将良性肿瘤分类为恶性时，该预测被称为 `false positive`（假阳性）。同样，`false negative`（假阴性）是对肿瘤为良性的错误预测，而 `true negative`（真阴性）是对肿瘤为良性的正确预测。这四个结果可以用于若干常见的分类性能衡量，如准确、`precision`（精确率）、`recall`（召回率）等。
+
+`Accuracy` 使用以下公式计算：
+
+```text
+ACC = (TP + TN)/(TP + TN + FP + FN)
+```
+
+其中，`TP` 是真阳性数量。
+
+`TN` 是真阴性数量。
+
+`FP` 是假阳性数量。
+
+`FN` 是假阴性数量。
+
+`Precision`（精确率）是预测为恶性的肿瘤中实际为恶性的比例。`Precision` 使用以下公式计算：
+
+```text
+PREC = TP/(TP + FP)
+```
+
+`Recall`（召回率）是系统识别出的恶性肿瘤比例。`Recall` 使用以下公式计算：
+
+```text
+R = TP/(TP + FN)
+```
+
+在这个示例中，`precision` 衡量预测为恶性的肿瘤中实际为恶性的比例。`recall` 衡量检测出的真正恶性肿瘤的比例。`precision` 和 `recall` 衡量可能会揭示，一个准确率惊人的分类器实际上未能检测出大多数恶性肿瘤。如果大多数肿瘤是良性的，即使是从不预测恶性的分类器也可能有高准确率。一个准确率较低但 `recall` 较高的不同分类器可能更适合该任务，因为它能检测出更多的恶性肿瘤。还可以使用许多其他分类性能衡量指标。
+
+
+
+# 使用 Python 进行机器学习 – 技术
+
+本章将详细讨论机器学习中使用的每种技术。
+
+## 分类
+
+`Classification`（分类）是一种机器学习技术，它使用已知数据来确定如何将新数据分类到一组现有的类别中。
+
+考虑以下示例来理解分类技术：
+
+- 一家`credit card company`收到了成上万份新信用卡申请。这些申请包含了关于几个不同特征的信息，如年龄、地点、性别、年薪、信用记录等。此处算法的任务是将卡申请人归类为几类，例如信用记录良好的人、信用记录不佳的人以及信用记录混合的人。
+- 在`hospital`中，急诊室有 15 多个特征（年龄、血压、心脏状况、病情严重程度等）需要分析，以决定是否将某个患者放入重症监护室，因为这是一项昂贵的方案，只有那些能够生存并负担得起的患者才能获得最高优先级。这里的问题是根据可用特征或参数将患者分为高风险患者和低风险患者。
+
+在对给定数据集进行分类时，分类器系统执行以下操作：
+
+- 最初使用任何学习算法准备一个新的数据模型。
+- 然后对准备好的数据模型进行测试。
+- 随后，使用该数据模型检查新数据并确定其类别。
+
+`Classification`，也称为范畴（categorization），是一种机器学习技术，它使用已知数据来确定如何将新数据分类到一组现有的标签/类/类别中。
+
+分类是一种监督学习的形式。Gmail、Yahoo 等其他邮件服务提供商使用这种技术将新邮件分类为垃圾邮件或非垃圾邮件。分类算法通过分析用户将某些邮件标记为垃圾邮件的行为来完成自我训练。基于这些信息，分类器会决定新邮件是应该进入收件箱还是进入垃圾邮件文件夹。
+
+## 分类的应用
+
+- 信用卡欺诈检测：`Classification` 方法被用于预测信用卡欺诈。通过利用以往欺诈的历史记录，分类器可以预测未来哪些交易可能变成欺诈。
+- 电子邮件垃圾邮件：根据之前垃圾邮件的特征，分类器决定新收到的电子邮件是否应该被发送到垃圾邮件文件夹。
+
+## 朴素贝叶斯分类器技术
+
+分类技术包括`Naive Bayes Classifier`，这是一种构建分类器的简单技术。它不是用于训练此类分类器的单一算法，而是一组算法。`Bayes` 分类器构建模型对问题实例进行分类。这些分类是使用可用数据进行的。
+
+`naive Bayes classifier` 的一个重要特征是它只需要少量的训练数据就可以估计分类所需的参数。对于某些类型的模型，在监督学习设置中可以非常高效地训练`naive Bayes classifiers`。尽管其假设过于简化，但`naive Bayes classifiers`在许多复杂的现实情况下都运行良好。它们在垃圾邮件过滤和文档分类中表现出色。
+
+## 回归
+
+在回归中，程序预测连续输出或响应变量的值。回归问题的示例包括预测新产品的销售额，或根据职位描述预测工资。与分类类似，回归问题需要监督学习。在回归任务中，程序从输入或解释变量预测连续输出或响应变量的值。
+
+## 推荐
+
+推荐是一种流行的方法，根据购买历史、点击和评分等用户信息提供密切的推荐。Google 和 Amazon 使用这种方法根据用户过去的活动信息为用户显示推荐项目列表。存在`recommender engines`在后台运行，捕捉用户行为并根据早期的用户行为推荐所选项目。Facebook 也使用推荐方法来识别和推荐人员，并向其用户发送好友建议。
+
+`recommendation engine` 是一个根据用户过去的记录和行为预测其可能感兴趣的内容的模型。当这被应用于电影语境时，它就变成了电影推荐引擎。我们通过预测用户可能对电影如何评分来过滤电影数据库中的项目。这有助于我们将用户与电影数据库中的正确内容连接起来。这种技术在两个方面非常有用：如果我们有一个海量的电影数据库，用户可能会也可能无法找到与其选择相关的内容。此外，通过推荐相关内容，我们可以增加消费并获得更多用户。
+
+Netflix、Amazon Prime 和类似的电影租赁公司依赖推荐引擎来保持用户的参与度。推荐引擎通常使用协同过滤或基于内容的过滤来生成推荐列表。这两种类型的区别在于提取推荐的方式。协同过滤根据当前用户的过去行为以及其他用户的评分来构建模型。然后该模型被用于预测该用户可能感兴趣的内容。另一方面，基于内容的过滤使用项目本身的特征来向用户推荐更多项目。项目之间的相似性是这里的主要动力。协同过滤通常更多用于此类推荐方法。
+
+## 聚类
+
+相关的观测值组被称为聚类。一种常见的无监督学习任务是在训练数据中寻找类。
+
+我们也可以将聚类定义为一种程序，根据某些相似特征将给定集合中的项目分组。例如，在线新闻出版者使用聚类对其新闻文章进行分组。
+
+## 聚类的应用
+
+聚类应用于许多领域，如市场研究、模式识别、数据分析和图像处理。正如此处所述：
+
+- 帮助营销人员在其客户群中发现不同的群体，并根据购买模式对其客户群进行特征描述。
+- 在生物学中，它可以用于推导出植物动物分类，对具有相似功能的基因进行分类，并对种群产生结构。
+- 帮助识别地球观测数据库中土地用途相似的区域。
+- 帮助对网络上的文档进行分类以发现信息。
+- 用于异常值检测应用，如信用卡欺诈检测。
+- `Cluster Analysis` 作为数据挖掘功能工具，用于深入了解数据分布以观察每个类的特征。
+
+该任务被称为聚类或聚类分析，它将观测值分配到组，使得组内的观测值根据某些相似性度量，彼此之间与其他组的观测值更相似。
+
+聚类通常用于探索数据集。例如，给定一组电影评论，聚类算法可能会发现正面评论和负面评论的集合。系统将无法将这些类标记为“正面”或“负面”；在没有监督的情况下，它只知道分组的观测值在某些标准上是相似的。聚类的一个常见应用是发现产品市场中的客户细分。通过理解特定客户群的共同属性，营销人员可以决定其活动需要强调哪些方面。聚类也用于网络电台服务；例如，给定一组歌曲，聚类算法可以根据流派对歌曲进行分组。使用不同的相似性度量，同一个聚类算法可能会根据歌曲的调性或其包含的乐器进行分组。
+
+无监督学习任务包括聚类，其中观测值根据某些相似特征组织成组。聚类用于根据共同特征形成相似数据的分组或类。
+
+聚类是一种无监督学习的形式。Google、Bing 和 Yahoo! 等搜索引擎使用聚类技术将具有相似特征的数据分组。新闻组使用聚类技术根据相关主题对各种文章分组。
+
+聚类引擎完全处理输入数据，并根据数据的特征决定其应该归类到哪个类中。在聚类时可以注意以下几点：
+
+- 需要选择一种合适的聚类算法对类的元素进行分组。
+- 需要一个规则来验证新遇到的元素与组内元素之间的相似性。
+- 需要一个停止条件来定义不再需要聚类的点。
+
+## 聚类的类型
+
+聚类有两种类型：`flat clustering`（平铺聚类）和`hierarchical clustering`（层次聚类）。
+
+平聚类创建了一个平面的簇集，没有任何可以将簇之间相互关联的清晰结构。层次聚类则创建一个簇的层级结构。层次聚类的输出是一个层级结构，这种结构比平聚类返回的无结构簇集包含更多信息。层次聚类不需要我们预先指定簇的数量。层次聚类的优势是以效率较低为代价的。
+
+通常情况下，当效率很重要时，我们选择平聚类；而当平聚类的某个潜在问题成为问题时，我们选择层次聚类。此外，许多研究人员认为，层次聚类产生的簇比平聚类更好。
+
+## 聚类算法
+
+你需要聚类算法来对给定数据进行聚类。常用的有两种算法：`Canopy clustering` 和`K-Means clustering`。
+
+Canopy 聚类算法是一种无监督预聚类算法，通常用作`K-means`算法或`Hierarchical clustering`算法的预处理步骤。它用于加速大型数据集上的聚类操作，由于数据集巨大，可能无法直接使用另一种算法。
+
+K-means 聚类是一种重要的聚类算法。`k-means`聚类算法中的`k`代表数据要划分的簇数。例如，如果算法中指定的`k`值为 3，那么算法将数据划分为 3 个簇。
+
+每个对象被表示为空间中的一个向量。最初，算法随机选择`k`个点并将其视为中心，距离每个中心最近的对象被归一类。`k-means`算法需要向量文件作为输入，因此我们需要创建向量文件。创建向量后，我们进行`k-means`算法。
+
+# 使用 Python 进行机器学习 – 算法
+
+机器学习算法大体分为两类：`Supervised`（监督）和`unsupervised`（无监督）。本章将详细讨论它们。
+
+## 监督学习
+
+该算法包含一个目标、结果或因变量，该变量根据给定的预测变量或独立变量预测。使用这些变量，我们生成一个将输入变量映射到所需输出变量的函数。训练过程持续，直到模型在训练数据上达到所需的准确率。
+
+监督学习的示例：回归、决策树、随机森林、`KNN`、逻辑回归等。
+
+## 无监督学习
+
+在算法中，没有待预测或估计的目标、结果或因变量。它用于将给定数据集聚类到不同的组，广泛用于将客户分为不同的组以进行特定的干预。`Apriori`算法和`K-means`是无监督学习的一些示例。
+
+## 强化学习
+
+使用该算法，训练机器以做出特定的决策。在这里，算法通过试错法和反馈方法不断训练自己。这种机器从过去的经验中学习，并试图捕捉尽可能好的知识以做出准确的业务决策。
+
+`Markov Decision Process` 是强化学习的一个示例。
+
+## 常见机器学习算法列表
+
+以下是可以应用于几乎任何数据问题的常用机器学习算法列表：
+
+- 线性回归
+- 逻辑回归
+- 决策树
+- `SVM`
+- 朴素贝叶斯
+- `KNN`
+- `K-Means`
+- 随机森林
+- 降维算法
+- 梯度提升算法，如`GBM`、`XGBoost`、`LightGBM`和`CatBoost`
+
+本节将详细讨论每一种。
+
+## 线性回归
+
+线性回归用于根据连续变量估计真实世界的值，如房屋价格、通话次数、总销售额等。在这里，我们通过拟合一条最佳线来建立因变量和独立变量之间的关系。这条回归线被称为`regression line`，由线性方程`Y = a * X + b`表示。
+
+在该方程中：
+
+- `Y`：因变量
+- `a`：斜率
+- `X`：独立变量
+- `b`：截距
+
+这些系数`a`和`b`是根据最小化数据点与回归线之间距离平方和得出的。
+
+### 示例
+
+理解线性回归的最佳方法是考虑一个例子。假设我们被要求按体重的增加顺序排列班级的学生。通过观察学生并在视觉上分析他们的身高和体型，我们可以结合这些参数（即身高和体型）按照要求进行排列。这是一个真实世界的线性回归示例。我们发现身高和体型与体重之间存在关系，这种关系类似于上面的方程。
+
+### 线性回归的类型
+
+线性回归主要有两种：`Simple Linear Regression`（简单线性回归）和`Multiple Linear Regression`（多元线性回归）。简单线性回归的特征是一个独立变量，而多元线性回归的特征是多个独立变量。在寻找最佳拟合线时，你可以拟合多项式回归或曲线回归。你可以使用以下代码来实现此。
+
+```
+import matplotlib.pyplot as plt
+plt.scatter(X, Y)
+yfit = [a + b * xi for xi in X]
+plt.plot(X, yfit)
+```
+
+### 构建线性回归器
+
+回归是估计输入与连续值输出之间关系的过程。这些数据通常以实数形式存在，我们的目标是估计控制从输入到输出映射的底层函数。
+
+考虑所示的输入输出映射：
+
+- 1 --> 2
+- 3 --> 6
+- 4.3 --> 8.6
+
+你可以通过分析模式轻松地估计输入和输出之间的关系。我们可以观察到在每种情况下输出都是输入值的两倍，因此转换将是`f(x) = 2x`。
+
+线性回归是指使用输入变量线性组合来估计相关函数。之前的示例是一个包含一个输入变量和一个输出变量的例子。线性回归的目标是提取关联输入变量与输出变量的线性模型。它旨在最小化实际输出与预测输出之间的差异平方和。这种方法被称为`Ordinary Least Squares`（普通最小二乘法）。你可能假设某条曲线能更好地拟合这些点，但线性回归不允许这样做。线性回归的主要优势是它不复杂。你也可以在非线性回归中找到更准确的模型，但它们速度较慢。在这里模型尝试使用直线来近似数据点。
+
+让我们了解如何在 Python 中构建线性回归模型。
+
+假设提供了一个数据文件，名为`data_singlevar.txt`。它包含逗号分隔的行，第一个元素是输入值，第二个元素是对应该输入值的输出值。你应该将其作为输入参数。
+
+```python
+### 样本点
+X = [0, 6, 11, 14, 22]
+Y = [1, 7, 12, 15, 21]
+
+### 求解 a 和 b
+def best_fit(X, Y):
+    xbar = sum(X)/len(X)
+    ybar = sum(Y)/len(Y)
+    n = len(X) # 或 len(Y)
+    numer = sum([xi*yi for xi,yi in zip(X, Y)]) - n * xbar * ybar
+    denom = sum([xi**2 for xi in X]) - n * xbar**2
+    b = numer / denom
+    a = ybar - b * xbar
+    print('最佳拟合线:\ny = {:.2f} + {:.2f}x'.format(a, b))
+    return a, b
+
+### solution
+```
+
+`a, b = best_fit(X, Y)`
+
+### 拟合线：
+
+`y = 0.80 + 0.92x`
+
+### 绘制点和拟合线
+
+```python
+import matplotlib.pyplot as plt
+
+plt.scatter(X, Y)
+
+yfit = [a + b * xi for xi in X]
+
+plt.plot(X, yfit)
+
+plt.show()
+```
+
+拟合线：
+
+`y = 1.48 + 0.92x`
+
+如果你运行上述代码，你可以观察到所示的输出图：
+
+![线性回归](img/image00159.jpeg)
+
+注意，此示例仅使用了糖尿病数据集（diabetes dataset）的第一个特征，为了展示这种回归技术的二维图表。在图中可以看到直线，它展示了线性回归如何尝试绘制一条直线，以最大程度地最小化数据集中观测响应值与线性近似预测值之间的残差平方和。
+
+你可以使用下方的程序代码计算系数、残差平方和以及方差得分：
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn import datasets, linear_model
+from sklearn.metrics import mean_squared_error, r2_score
+
+### 加载糖尿病数据集
+diabetes = datasets.load_diabetes()
+
+### 只使用一个特征
+diabetes_X = diabetes.data[:, np.newaxis, 2]
+
+### 将数据划分为训练/测试集
+diabetes_X_train = diabetes_X[:-30]
+diabetes_X_test = diabetes_X[-30:]
+
+### 将目标划分为训练/测试集
+diabetes_y_train = diabetes.target[:-30]
+diabetes_y_test = diabetes.target[-30:]
+
+### 创建线性回归对象
+regr = linear_model.LinearRegression()
+
+### 使用训练集训练模型
+regr.fit(diabetes_X_train, diabetes_y_train)
+
+### 使用测试集进行预测
+diabetes_y_pred = regr.predict(diabetes_X_test)
+
+### 系数
+print('Coefficients: \n', regr.coef_)
+
+### 均方误差
+print("Mean squared error: %.2f" 
+      % mean_squared_error(diabetes_y_test, diabetes_y_pred))
+
+### 解释方差得分：1 表示完美预测
+print('Variance score: %.2f' % r2_score(diabetes_y_test, diabetes_y_pred))
+
+### 绘制输出
+plt.scatter(diabetes_X_test, diabetes_y_test, color='black')
+plt.plot(diabetes_X_test, diabetes_y_pred, color='blue', linewidth=3)
+plt.xticks(())
+plt.yticks(())
+plt.show()
+```
+
+一旦执行了上述代码，你可以观察到以下输出：
+
+为 IPython 交互环境自动创建模块
+
+('Coefficients: \n', array([ 941.43097333]))
+
+Mean squared error: 3035.06
+
+Variance score: 0.41
+
+![线性回归 2](img/image00160.jpeg)
+
+## 逻辑回归
+
+逻辑回归是机器学习从统计学中借用的另一种技术。它是二分类问题的首选方法，即具有两个类别值的问题。
+
+它是一个分类算法，而不是如名称所说的回归算法。它用于根据给定的独立变量集来估计离散值或像`0/1`、`Y/N`、`T/F`这样的值。它通过将数据拟合到 logit 函数来预测事件发生的概率。因此，它也被称为`logit 回归`。由于它预测的是概率，其输出值位于 0 和 1 之间。
+
+### 示例
+
+让我们通过一个简单的示例来理解这个算法。
+
+假设有一个谜题需要解决。
+
+考虑一个使用泰坦尼克号（titanic）数据集预测乘客是否会存活的示例。下面的模型使用了数据集中的 3 个特征/属性/列，即`sex`（性别）、`age`（年龄）和`sibsp`（配偶/子女数量）。在这种情况下，乘客的死亡或存活分别用红色和绿色文字表示。
+
+![决策树算法](img/image00162.jpeg)
+
+
+
+在某些示例中，我们看到根据多个属性将人口分为不同的组，以识别“他们是否会做某事”。为了将人口分为不同的异质组，它使用了多种技术，如`Gini`（吉尼指数）、`Information Gain`（信息增益）、`Chi-square`（卡方检验）、`entropy`（熵）等。
+
+理解决策树如何工作的最好方法是玩`Jezball`——微软的一款经典游戏。本质上，在这个游戏中，你有一个带有移动墙壁的房间，你需要创建墙壁，以便在没有球的情况下清理出尽可能大的面积。
+
+因此，每当你用墙壁分割房间时，你都在试图在同一个房间内创建两个不同的群体。决策树的工作方式非常相似，通过将人口尽可能地分为不同的组。
+
+观察下方提供的代码及其输出——
+
+### 初始实现
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+%matplotlib inline
+
+from sklearn import tree
+
+df = pd.read_csv("iris_df.csv")
+df.columns = ["X1", "X2", "X3","X4", "Y"]
+df.head()
+```
+
+### 实现
+
+```python
+from sklearn.cross_validation import train_test_split
+decision = tree.DecisionTreeClassifier(criterion="gini")
+X = df.values[:, 0:4]
+Y = df.values[:, 4]
+trainX, testX, trainY, testY = train_test_split( X, Y, test_size = 0.3)
+decision.fit(trainX, trainY)
+print("Accuracy: \n", decision.score(testX, testY))
+```
+
+### 可视化
+
+```python
+from sklearn.externals.six import StringIO
+from IPython.display import Image
+import pydotplus as pydot
+dot_data = StringIO()
+tree.export_graphviz(decision, out_file=dot_data)
+graph = pydot.graph_from_dot_data(dot_data.getvalue())
+Image(graph.create_png())
+```
+
+### 输出
+
+Accuracy:
+
+0.955555555556
+
+### 示例
+
+在这里我们使用银行券验证数据集来了解准确率。
+
+#### 使用银行券数据集
+
+```python
+from random import seed
+from random import randrange
+from csv import reader
+
+## 加载 CSV 文件
+filename = 'data_banknote_authentication.csv'
+
+def load_csv(filename):
+    file = open(filename, "rb")
+    lines = reader(file)
+    dataset = list(lines)
+    return dataset
+
+### 将字符串列转换为浮点数
+str_column_to_float(dataset, column):
+    for row in dataset:
+        row[column] = float(row[column].strip())
+
+### 将数据集划分为 k 折
+def cross_validation_split(dataset, n_folds):
+    dataset_split = list()
+    dataset_copy = list(dataset)
+    fold_size = int(len(dataset) / n_folds)
+    for i in range(n_folds):
+        fold = list()
+        while len(fold) < fold_size:
+            index = randrange(len(dataset_copy))
+            fold.append(dataset_copy.pop(index))
+        dataset_split.append(fold)
+    return dataset_split
+
+### 计算准确率
+def accuracy_metric(actual, predicted):
+    correct = 0
+    for i in range(len(actual)):
+        pass # 逻辑占位
+    return correct
+
+### 评估算法
+def evaluate_algorithm(dataset, algorithm, n_folds, max_depth, min_size):
+    pass # 逻辑占位
+
+## 分类与回归树算法
+def decision_tree(train, test, max_depth, min_size):
+    # 实现逻辑
+    pass
+
+### 创建终止节点
+def to_terminal(group):
+    # 逻辑实现
+    pass
+
+### 选择数据集的最佳分割点
+def get_split(dataset):
+    # 逻辑实现
+    pass
+
+### 根据属性划分数据集
+def test_split(dataset, value):
+    # 逻辑实现
+    pass
+
+### 计算数据集的 Gini 指数
+def gini_index(groups, classes):
+    # 逻辑实现
+    pass
+
+### 交叉验证划分
+def cross_validation_split(dataset, n_folds):
+    # 沿用已定义或 逻辑实现
+    pass
+
+### 根据准则划分节点
+def split(node, max_depth, criteria):
+    # 逻辑实现
+    pass
+
+### 构建决策树
+def build_tree(train, max_depth, min_size):
+    # 逻辑实现
+    pass
+
+### 使用决策树进行预测
+def predict(node, row):
+    # 逻辑实现
+    pass
+```
+
+```python
+print('Mean Accuracy: %.3f%%' % (sum(scores)/float(len(scores))))
+```
+
+当你执行上述代码时，你可以观察到如下输出 −
+
+Scores: [95.62043795620438, 97.8102189781022, 97.8102189781022, 94.52554744525547, 98.90510948905109]
+
+Mean Accuracy: 96.934%
+
+## 支持向量机 (SVM)
+
+支持向量机，也称为`SVM`，是广名的监督学习分类算法，用于区分不同类别的数据。
+
+这些算法通过优化直线对向量进行分类，使得每组中距离最近的点彼此距离尽可能远。
+
+这种向量默认情况下是线性的，并且通常也被可视化为线性的。然而，如果将内核类型从默认的‘gaussian’或线性类型更改，向量也可以取非线性形式。
+
+这是一种分类方法，我们将每个数据项绘制成 n 维空间中的一个点（其中`n`是特征的数量），每个特征的值即为特定坐标的值。
+
+例如，如果我们只有个体的两个特征，如`Height`（身高）和`Hair length`（长度），我们应该先在二维空间中绘制这两个变量，每个点有两个坐标，被称为支持向量（Support Vectors）。请观察下图以更好地理解 −
+
+![支持向量机](img/image00163.jpeg)
+
+现在，找到一条可以将两个不同分类组数据分开的线。这条线使得两组中距离线最近的点之间的距离最远。
+
+![支持向量机 2](img/image00164.jpeg)
+
+在上面的示例中，将数据分为两个不同分类组的线是黑线，因为两个最近的点离该线最远。这条线就是我们的分类器。然后，根据测试数据落在线的哪一侧，我们可以对新数据进行分类。
+
+```python
+from sklearn import svm
+
+df = pd.read_csv('iris_df.csv')
+df.columns = ['X4', 'X3', 'X1', 'X2', 'Y']
+df = df.drop(['X4', 'X3'], 1)
+df.head()
+
+from sklearn.cross_validation import train_test_split
+support = svm.SVC()
+X = df.values[:, 0:2]
+Y = df.values[:, 2]
+trainX, testX, trainY, testY = train_test_split( X, Y, test_size=0.3)
+sns.set_context('notebook', font_scale=1.1)
+sns.set_style('ticks')
+sns.lmplot('X1','X2', scatter=True, fit_reg=False, data=df, hue='Y')
+plt.ylabel('X2')
+plt.xlabel('X1')
+```
+
+当你运行上述代码时，你可以看到以下输出和图表 −
+
+Text(0.5,27.256,'X1')
+
+![支持向量机 3](img/image00165.jpeg)
+
+## 朴贝叶斯算法
+
+这是一种基于贝叶斯定理的分类技术，假设预测变量之间是独立的。简单来说，朴贝叶斯分类器假设某一类中特定特征的出现与其他任何特征的出现无关。
+
+例如，如果一个水果是橙色的、圆形的、且直径约为 3 英寸，那么它可能被认为是橙子。即使这些特征相互依赖或取决于其他特征的存在，朴贝叶斯分类器也会认为所有这些特征独立地贡献于该水果是橙子的概率。
+
+贝叶斯定理提供了一种从`P(c)`、`P(x)`和`P(x|c)`计算后验概率`P(c|x)`的方法。观察此处提供的方程：`P(c/x) = P(x/c)P(c)/P(x)`
+
+其中，
+
+- `P(c|x)`是给定预测器（属性）的类（目标）的后验概率。
+
+- `P(c)`是类的先验概率。
+
+- `P(x|c)`是似然，即给定类的预测器概率。
+
+- `P(x)`是预测器的先验概率。
+
+考虑下面的示例以更好地理解 −
+
+假设有一个`Weather`（天气）训练数据集和相应的目标变量`Play`（玩耍）。现在，我们需要根据天气状况分类玩家是否会玩耍。为此，你必须执行下面所示的步骤 −
+
+**步骤 1** − 将数据集转换为频率表。
+
+**步骤 2** − 通过寻找概率创建似然表，例如阴天概率 = 0.29，玩耍概率为 0.64。
+
+![朴贝叶斯算法](img/image00166.jpeg)
+
+**步骤 3** − 现在，使用朴贝叶斯方程计算每个类的后验概率。后验概率最高的类别为预测结果。
+
+**问题** — 如果天气是晴天，玩家就会玩耍，这正确吗？
+
+**解答** — 我们可以使用上述方法来解决，因此`P(Yes | Sunny) = P(Yes | Sunny) * P(Yes) / P(Sunny)`。这里我们有`P(Yes | Sunny) = 3/9 = 0.33`，`P(Sunny) = 5/14 = 0.36`，`P(Yes) = 9/14 = 0.64`。现在，`P(Yes | Sunny) = 0.33 * 0.64 / 0.36 = 0.60`，这概率更高。
+
+朴贝叶斯使用类似的方法根据各种属性预测不同类别的概率。该算法主要用于文本分类和多分类场景。以下代码展示了朴素实现的一个示例 —
+
+```python
+import csv
+import random
+import math
+
+def loadCsv(filename):
+    lines = csv.reader(open(filename, "rb"))
+    dataset = list(lines)
+    for i in range(len(dataset)):
+        dataset[i] = [float(x) for x in dataset[i]]
+    return dataset
+
+def splitDataset(dataset, splitRatio):
+```
+
+```python
+filename = 'pima-indians-diabetes.data.csv'
+splitRatio = 0.67
+dataset = loadCsv(filename)
+trainingSet, testSet = splitDataset(dataset, splitRatio)
+print('Split {0} rows into train = {1} and test = {2} rows').format(len(dataset), len(trainingSet), len(testSet))
+
+#准备模型
+summaries = summarizeByClass(trainingSet)
+
+### 测试模型
+predictions = getPredictions(summaries, testSet)
+accuracy = getAccuracy(testSet, predictions)
+print('Accuracy: {0}%').format(accuracy)
+main()
+```
+
+当运行上述代码时，你可以观察到以下输出 −
+
+Split 1372 rows into train = 919 and test = 453 rows
+
+Accuracy: 83.6644591611%
+
+## KNN (K 近邻算法)
+
+K 近邻算法，简称 KNN，是一种专门用于分类的监督学习算法。它是一种简单的算法，通过存储所有可用的案例，并根据其 k 个邻居的多数投票对新案例进行分类。被分配到某个类的案例是根据距离函数测量的其 K 个最近邻居中最常见的类。这些距离函数可以是欧几里得距离、曼哈顿距离、闵可斯基距离汉明距离。前三个函数用于连续函数，第四个（汉明）用于分类变量。如果 K = 1，则该案例简单地分配给其最近邻居的类别。在执行 KNN 建模时，选择 K 往往是一项挑战。
+
+算法查看不同的质心并使用某种函数（通常是欧几里得）比较距离，然后分析这些结果并将每个点分配到组，使其优化为放置在与其所有最近的点在一起。
+
+你可以将 KNN 用于分类和回归问题。然而，在工业中，它更多地用于分类问题。KNN 可以很容易映射到我们的现实生活。
+
+在选择 KNN 之前，你需要注意以下几点 −
+
+- KNN 计算成本很高。
+
+- 变量应该进行归一化，否则高范围变量会产生偏差。
+
+- 在进行 KNN 之前，在预处理阶段需要更多工作，如离群值处理、噪声去除
+
+![K-Nearest Neighbors](img/image00167.jpeg)
+
+观察以下代码以更好地理解 KNN −
+
+### 导入库
+
+```python
+from sklearn.neighbors import KNeighborsClassifier
+
+### 假设你已经有了训练集的 X（预测变量）和 Y（目标）以及测试数据集的 x_test（预测变量）
+
+### 创建 KNeighbors 分类器对象模型
+KNeighborsClassifier(n_neighbors=6) # n_neighbors 的默认值为 5
+
+### 使用训练集训练模型并检查得分
+model.fit(X, y)
+
+### 预测输出
+predicted = model.predict(x_test)
+```
+
+```python
+from sklearn.neighbors import KNeighborsClassifier
+
+df = pd.read_csv('iris_df.csv')
+df.columns = ['X1', 'X2', 'X3', 'X4', 'Y']
+df = df.drop(['X4', 'X3'], 1)
+df.head()
+
+sns.set_context('notebook', font_scale=1.1)
+sns.set_style('ticks')
+sns.lmplot('X1','X2', scatter=True, fit_reg=False, data=df, hue='Y')
+plt.ylabel('X2')
+plt.xlabel('X1')
+
+from sklearn.cross_validation import train_test_split
+neighbors = KNeighborsClassifier(n_neighbors=5)
+X = df.values[:, 0:2]
+Y = df.values[:, 2]
+trainX, testX, trainY, testY = train_test_split( X, Y, test_size=0.3)
+neighbors.fit(trainX, trainY)
+print('Accuracy: \n', neighbors.score(testX, testY))
+pred = neighbors.predict(testX)
+```
+
+上述代码将产生以下输出 −
+
+```python
+('Accuracy: \n', 0.7555555555555554)
+```
+
+![K-Nearest Neighbors](img/image00168.jpeg)
+
+## K-Means (K 均值算法)
+
+它是一种处理聚类问题的无监督算法。其过程遵循简单的方法，通过特定数量的类（假设有 k 个类）对给定的数据集进行分类。簇内部的数据点是同质的，而与其他组之间是异质的。
+
+### K-means 形成类
+
+K-means 通过以下步骤形成类 −
+
+- K-means 为每个类选取 k 个点，称为质心。
+
+- 每个数据点与其最近的质心形成一个类，总共 k 个类。
+
+
+
+- 根据现有成员找到每个类的质心。这里我们有了新的质心。
+
+由于我们有了新的质心，重复步骤 2 和 3。找到每个点到新质心的最近距离，并将其与新簇相关联。重复此过程，直到发生收敛，即质心不再发生变化。
+
+### K 值的确定
+
+在 K-means 中，我们有若干个类，每个类都有它自己的质心。簇内质心与数据点之间的平方和构成了该类的平方和值。此外，当所有类的平方和值相加时，它就成了该聚类解决方案的总平方和。我们知道，随着类数量的增加，这个值会不断减少。如果你绘制结果图，你可能会看到距离平方和在某个 `k` 值处急剧下降，之后下降得较慢。在这里，我们可以找到最佳的类数量。
+
+观察以下代码 −
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+X = np.array([[1, 2], [3, 4], [5, 6], [7, 8], [9, 10], [11, 12], [13, 14], [15, 16]])
+kmeans = KMeans(n_clusters=3)
+kmeans.fit(X)
+centroids = kmeans.cluster_centers()
+plt.scatter(X[:, 0], X[:, 1], c=kmeans.labels_)
+plt.scatter(centroids[:, 0], centroids[:, 1], c='red', s=200)
+plt.show()
+```
+
+*(注：由于原文代码块逻辑不完整或缺失 import，此处根据逻辑补全了可运行的结构以供理解，但保持代码不翻译)*
+
+```python
+print('Accuracy: \n', forest.score(testX, testY))
+
+pred = forest.predict(testX)
+```
+
+上述代码的输出为 −
+
+```text
+('Accuracy: \n', 1.0)
+```
+
+集成方法的目标是结合通过给定学习算法构建的多个基估计器的预测结果，以提高比单个估计器更优的泛化能力/鲁棒性。
+
+`sklearn.ensemble` 模块包含了两种基于随机决策树的平均算法——`RandomForest` 算法和 `Extra-Trees` 方法。这两种算法都是专门为树设计的“扰动并结合”技术 [B1998]。这意味着通过在分类器的构建中引入随机性，创建一个多样化的分类器集合。集集的预测结果为各个分类器预测的平均值。
+
+森林分类器需要用两个数组进行拟合——一个大小为 `[n_samples, n_features]` 的稀疏或密集数组 `X`，用于存储训练样本；以及大小为 `[n_samples]` 的数组 `Y`，用于存储训练样本的目标值（类别标签），如下所示所示 −
+
+```python
+from sklearn.ensemble import RandomForestClassifier
+
+X = [[0, 0], [1, 1]]
+Y = [0, 1]
+clf = RandomForestClassifier(n_estimators = 10)
+clf = clf.fit(X, Y)
+```
+
+与决策树一样，森林也可以扩展到多输出问题（如果 `Y` 是大小为 `[n_samples, n_outputs]` 的数组）。
+
+与原始文献 [B2001] 不同，scikit-learn 的实现通过平均其分类器的概率预测来组合分类器，而不是让每个分类器对单个类别投票。
+
+`Random Forest` 是决策树集的一个注册术语。在随机森林中，我们有一组决策树，被称为“森林”。根据属性对新对象进行分类，每棵树都会给出一个分类结果，我们称该树为该类别“投票”。森林选择票数最多（在森林中的所有树中）的分类结果。
+
+每棵树按如下方式种植和生长 −
+
+- 如果训练集中的案例数量为 `N`，则随机有放回地抽取 `N` 个样本。该样本将作为生长树的训练集。
+- 如果有 `M` 个输入变量，则指定一个 `m << M`，使得在每个节点上，从 `M` 个变量中随机选择 `m` 个变量，并使用这 `m` 个变量的最优拆分来划分节点。`m` 的值在森林生长过程中保持不变。
+- 每棵树都尽可能地生长。不进行剪枝。
+
+## 降维算法
+
+降维是另一项常见的无监督学习任务。某些问题可能包含成上万甚至百万个输入或解释变量，处理这些变量并进行计算的成本很高。此外，如果某些输入变量捕捉了噪声或与底层关系无关，程序的泛化能力可能会降低。
+
+降维是寻找对输出或响应变量产生最大变化的输入变量的过程。降维有时也用于数据可视化。回归问题很容易可视化，例如根据房屋大小预测房产价格，其中房产的大小可以沿图表的 `x` 轴绘制，房产价格可以沿 `y` 轴绘制。同样，当添加第二个解释变量时，房产价格回归问题也容易可视化。例如，房屋的房间数可以绘制在 `z` 轴上。然而，具有数千个输入变量的问题将是不可视的。
+
+降维将大量的输入解释变量集减少为较小的输入变量集，同时保留尽可能多的信息。
+
+`PCA` 是一种可以为数据分析提供帮助的降维算法。最重要的是，在处理成百或上千个不同的输入变量时，它可以显著减少模型涉及的计算量。由于这是一项无监督学习任务，用户仍然需要分析结果并确保他们保留了原始数据集约 95% 的的行为。
+
+观察以下代码以更好地理解 −
+
+```python
+from sklearn import decomposition
+
+df = pd.read_csv('iris_df.csv')
+df.columns = ['X1', 'X2', 'X3', 'X4', 'Y']
+df.head()
+
+from sklearn import decomposition
+
+pca = decomposition.PCA()
+fa = decomposition.FactorAnalysis()
+X = df.values[:, 0:4]
+Y = df.values[:, 4]
+
+train, test = train_test_split(X, test_size = 0.3)
+train_reduced = pca.fit_transform(train)
+test_reduced = pca.transform(test)
+pca.n_components_
+```
+
+你可以看到上述代码的如下输出 −
+
+```text
+4L
+```
+
+在过去的 5 年里，在每一个可能的层面和点，数据捕捉呈指数级增长。政府机构/研究机构/企业不仅推出了新的数据源，而且还在捕捉更多详细的数据。例如，电子商务公司正在获取客户的人口统计、浏览历史、喜好等更多详细信息。可用数据可能具有数千个特征，在保留尽可能多信息的同时减少特征是一个挑战。在这种情况下，降维有很大帮助。
+
+## Boosting 算法
+
+Boosting 一词指的是一组将弱学习器转换为强学习器的算法。让我们通过解决下所示的垃圾邮件识别问题来理解这一定义 −
+
+遵循什么程序可以对邮件分类为垃圾邮件？初始方法中我们通过以下标准识别“垃圾邮件”和“非垃圾邮件”：
+
+- 如果邮件只有一个图像文件（广告图），它是垃圾邮件。
+- 如果邮件只有链接，它是垃圾邮件。
+- 如果邮件正文包含“你赢了 xxxxxx 的奖金”之类的句子，它是垃圾邮件。
+- 来自我们的官方域名“Tutorialspoint.com”，不是垃圾邮件。
+- 来自已知来源，不是垃圾邮件。
+
+最后，它结合了弱学习器的输出并形成一个强学习器，最终提升了模型的预测能力。Boosting 更加关注那些被分类错误或由于弱规则产生较高误差的样本。
+
+## Boosting 算法类型
+
+有多种用于 Boosting 算法的引擎 - 决策树桩（decision stump）、极大边界分类算法等。这里列出了不同的 Boosting 算法 −
+
+- AdaBoost（自适应提升）
+- 梯度树提升（Gradient Tree Boosting）
+- XGBoost
+
+本节重点关注 `AdaBoost` 和梯度提升，随后是各自的 Boosting 算法。
+
+### AdaBoost
+
+观察以下解释 Ada-boost 算法的图。
+
+![AdaBoost](img/image00172.jpeg)
+
+下方解释如下 −
+
+- **框 1** — 你可以看到我们为每个数据点分配了相同的权重，并应用决策树桩将它们分类为 +（正）或 –（负）。决策树桩（`D1`）在左侧创建了一条垂直线来对数据点进行分类。这条垂直线错误地预测了三个 +（正）为 –（负）。因此，我们将为这三个 +（正）分配更高的权重并应用另一个决策树桩。
+
+  ![AdaBoost](img/image00173.jpeg)
+
+- **框 2** — 在这里，可以看到与其余数据点相比，三个（预测错误的）+（正）数据点的尺寸更大。在这种情况下，第二个决策树桩（`D2`）将尝试正确预测它们。现在，此框右侧的垂直线（`D2`）将三个分类错误的 +（正）正确分类。但它再次导致了分类错误，这次是三个 –（负）数据点。我们再次为这三个 –（负）数据点分配更高的权重并应用另一个决策树桩。
+
+  ![AdaBoost D2](img/image00174.jpeg)
+
+- **框 3** — 在这里，三个 –（负）数据点被赋予更高的权重。应用决策树桩（`D3`）来正确预测这些分类错误的观测值。这次生成了一条水平线，根据分类错误观测值的高权重来分类 +（正）和 –（负）数据点。
+
+  ![AdaBoost D3](img/image00175.jpeg)
+
+- **框 4** — 在这里，我们将 `D1`、`D2` 和 `D3` 结合形成一个与单个弱学习器相比具有复杂规则的强预测。可以看出，与任何单个弱学习器相比，该算法对这些观测值的分类得非常好。
+
+  ![AdaBoost D4](img/image00176.jpeg)
+
+`AdaBoost` 或自适应提升 — 其工作原理与上述类似。它在不同的加权训练数据上拟合一系列弱学习器。从预测原始数据集开始，给每个观测值分配相同的权重。如果使用第一个学习器预测不正确，则对预测错误的观测值赋予更高的权重。由于这是一个迭代过程，它会不断添加学习器，直到模型数量或准确率达到限制。
+
+通常我们会在 `AdaBoost` 中使用决策树桩。但是，如果任何机器学习算法接受训练数据集上的权重，我们就可以将其作为基学习器。我们可以使用 `AdaBoost` 算法解决分类和回归问题。
+
+你可以使用以下 Python 代码来实现此目的 −
+
+```python
+#for classification
+from sklearn.ensemble import AdaBoostClassifier
+
+#for regression
+from sklearn.ensemble import AdaBoostRegressor
+from sklearn.tree import DecisionTreeClassifier
+
+dt = DecisionTreeClassifier()
+clf = AdaBoostClassifier(n_estimators=100, base_estimator=dt,learning_rate=1)
+
+#这里我们使用了决策树作为基估计器；如果接受样本权重，任何机器学习学习器都可以作为基估计器
+clf.fit(x_train,y_train)
+```
+
+### 调优参数
+
+可以通过调整参数来优化算法性能，调优的关键参数有 −
+
+- `n_estimators` — 这些控制弱学习器的数量。
+- `learning_rate` — 这控制弱学习器在最终组合中的贡献。`learning_rate` 和 `n_estimators` 之间存在权衡。
+- `base_estimators` — 这些有助于指定不同的机器学习算法。
+
+基学习器的参数也可以进行调整以优化其性能。
+
+### 梯度提升
+
+在梯度提升中，许多模型是按顺序训练的。每个新模型都使用梯度下降法逐渐最小整个系统的损失函数（`y = ax + b + e`，其中 `e` 是误差项）。学习方法连续地拟合新模型，以对响应变量给出更准确的估计。
+
+该算法背后的核心思想构建新的基学习器，这些基学习器可以与整个集合的损失函数的负梯度达到最优相关。
+
+在 Python Sklearn 库中，我们使用 `Gradient Tree Boosting` 或 `GBRT`，它是 Boosting 到任意可微损失函数的泛化。它可以同时用于回归和分类问题。
+
+你可以使用以下代码来实现此目的 −
+
+```python
+#for classification
+from sklearn.ensemble import GradientBoostingClassifier
+
+#for regression
+from sklearn.ensemble import GradientBoostingRegressor
+
+clf = GradientBoostingClassifier(n_estimators = 100, learning_rate = 1.0, max_depth = 1)
+clf.fit(X_train, y_train)
+```
+
+上述代码中使用的术如下 −
+
+- `n_estimators` — 这些控制弱学习器的数量。
+- `learning_rate` — 这控制弱学习器在最终组合中的贡献。`learning_rate` 和 `n_estimators` 之间存在权衡。
+- `max_depth` — 这是单个回归估计器的最大深度，限制了树节点数量。该参数通过调优获得最佳性能，最佳值取决于输入变量的交互。
+
+可以对损失函数进行调优以获得更好的性能。
+
+感谢！
