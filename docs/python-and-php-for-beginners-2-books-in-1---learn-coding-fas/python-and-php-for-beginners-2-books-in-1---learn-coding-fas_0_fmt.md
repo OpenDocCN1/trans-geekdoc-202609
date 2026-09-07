@@ -1,0 +1,3282 @@
+
+# 初学者 Python 与 PHP 指南：2 本合 1
+
+快速学习编程！Python 和 PHP 速成课程、快速启动指南、程序示例教程书，简单易懂！
+
+![](img/rsrc7.jpg)
+
+![](img/rsrc7.jpg)
+
+`Python` 是一种简单、易学、强大、高级且面向对象的编程语言。Python 也是一种解释型脚本语言。Guido Van Rossum 被称为 Python 编程的创始人。
+
+Python 是一种通用的、动态、高级且解释型的编程语言。它支持面向对象的编程方法来开发应用程序。它简单易于学习，并提供了许多高级数据结构。
+
+Python 是一种易于学习又强大且多功能的脚本语言，这使其对应用程序开发非常有吸引力。Python 的语法和动态类型结合其解释特性，使其成为脚本和快速应用程序开发的理想语言。
+
+Python 支持多种编程模式，包括面向对象、命令式、函数式或过程化编程风格。Python 并非用于网络编程等特殊领域。这就是为什么它被称为多用途语言，因为它可以用于 Web、企业级、3D CAD 等领域。
+
+## 第一章：安装 Python
+
+访问链接 [`www.python.org/downloads/`](https://www.python.org/downloads/) 下载最新版本的 Python。
+
+![install 1.jpg](img/rsrc61.jpg)
+
+双击下载的可执行文件；将打开以下窗口。选择“自定义安装”（Customize installation）并继续。
+
+![install 2.jpg](img/rsrc67.jpg)
+
+现在点击“立即安装”（Install Now）。完成后，你会看到一个显示“安装成功”的屏幕。
+
+## 开始使用 PyCharm
+
+在我们的第一个程序中，我们在 CentOS 上使用了 `gedit` 作为编辑器。在 Windows 上，我们有替代方案，如 `notepad` 或 `notepad++` 来编辑代码。
+
+然而，这些编辑器没有被作为 Python 的 IDE，因为它们无法显示与语法相关的建议。JetBrains 提供了最流行且广泛使用的跨平台 IDE `PyCharm` 来运行 Python 程序。
+
+### 安装 PyCharm
+
+正如我们已经说过的，PyCharm 是一个跨平台 IDE，因此它可以安装在各种操作系统上。在教程的这一部分，我们将涵盖在 Windows、MacOS、CentOS 和 Ubuntu 上安装 PyCharm 的过程。
+
+#### Windows
+
+在 Windows 上安装 PyCharm 非常简单。要在 Windows 操作系统上安装 PyCharm，请访问链接 [`www.jetbrains.com/pycharm/download/download-thanks.html?platform=windows`](https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=windows) 下载可执行安装程序。
+
+双击安装程序（`.exe` 文件），并在每一步点击“下一步”（next）来安装 PyCharm。
+
+## Hello World：创建你的第一个 Python 程序
+
+在上一个教程中，我们完成了 Python 的安装和设置。现在是创建第一个程序了。
+
+### 创建第一个程序
+
+**步骤 1）** 打开 PyCharm 编辑器。你会看到 PyCharm 的介绍界面。要创建一个新项目，点击“创建新项目”（Create New Project）。
+
+![](img/rsrc73.jpg)
+
+**步骤 2）** 你需要选择一个位置。
+
+1. 你可以选择想要创建项目的位置。如果你不想更改位置，请保持原样，但至少将名称从“untitled”更改为更有意义的名称，例如“FirstProject”。
+
+2. PyCharm 应该已经找到了你之前安装的 Python 解释器。
+
+3. 下一步点击“创建”（Create）按钮。
+
+**步骤 3）** 现在转到“文件”（File）菜单并选择“新建”（New）。接下来，选择“Python 文件”（Python File）。
+
+![](img/rsrc7H.jpg)
+
+**步骤 4）** 弹出一个新窗口。接下来，输入你想要的文件名（这里我们给“HelloWorld”）并点击“确定”（OK）。
+
+![](img/rsrc7S.jpg)
+
+**步骤 5）** 接下来输入一个简单的程序：`print (‘Hello World!')`。
+
+(rs r c7Z.jpg)
+
+**步骤 6）** 现在转到“运行”（Run）菜单并选择“运行”（Run）来运行你的程序。
+
+![](img/rsrc84.jpg)
+
+**步骤 7）** 你可以在底部看到程序的输出。
+
+# 第 3 章：变量作用域
+
+一旦函数调用结束，局部变量 `f` 就会被销毁。在第 12 行，当我们再次打印 `"f"` 的值时，它显示的是全局变量 `f = 101` 的值。
+
+## Python 2 示例
+
+### 声明变量并初始化
+
+```python
+f = 101
+print f
+```
+
+### 函数中的全局变量与局部变量
+
+```python
+def someFunction():
+    # global f
+    f = 'I am learning Python'
+    print f
+
+someFunction()
+print f
+```
+
+## Python 3 示例
+
+### 声明变量并初始化
+
+```python
+f = 101
+print(f)
+```
+
+### 函数中的全局变量与局部变量
+
+```python
+def someFunction():
+    # global f
+    f = 'I am learning Python'
+    print(f)
+
+someFunction()
+print(f)
+```
+
+使用关键字 `global` 可以在函数内部引用全局变量。
+
+1. 变量 `"f"` 在全局作用范围内，并被赋值为 `101`，该值在输出中被打印。
+
+2. 使用关键字 `global` 声明变量 `f`。这不是一个局部变量，而是之前声明的同一个全局变量。因此我们打印它的值，输出为 `101`。
+
+3. 我们在函数内部更改了 `"f"` 的值。一旦函数调用结束，变量 `"f"` 的改变就会持续。在第 12 行，当我们再次打印 `"f"` 的值时，它显示的是值 `"changing global variable"`。
+
+## Python 2 示例
+
+```python
+f = 101
+print f
+
+### 函数中的全局变量与局部变量
+def someFunction():
+  global f
+  print f
+
+f = "changing global variable"
+someFunction()
+print f
+```
+
+## Python 3 示例
+
+```python
+f = 101
+print(f)
+
+### 函数中的全局变量与局部变量
+def someFunction():
+  global f
+  print(f)
+
+f = "changing global variable"
+someFunction()
+print(f)
+```
+
+### 删除变量
+
+我们也可以使用 `del "variable name"` 命令删除变量。在下面的示例中，我们删除了变量 `f`，当我们尝试打印它时，会得到错误 `"variable name is not defined"`，这意味着你已经删除了变量。
+
+```python
+f = 11
+print(f)
+del f
+print(f)
+```
+
+### 总结
+
+- 变量被视为“信封”或“桶”，在其中可以维护和引用信息。像任何其他编程语言一样，Python 也使用变量来存储信息。
+- 变量可以使用任何名称声明，甚至是字母如 `a`、`aa`、`abc` 等。
+- 即使在我们已经声明过一次之后，也可以重新声明。
+- 在 Python 中，我们不能直接将字符串与数字拼接，你需要将它们声明为独立的变量，之后就可以将数字与字符串拼接。
+- 在需要时声明局部变量。
+- 当想要在程序的剩余部分使用同一个变量时声明全局变量。
+- 删除变量使用 `del`。
+
+---
+
+# 第 2 章：字符串
+
+到目前，我们讨论了数字作为数据类型。在这一节中，我们将讨论最流行的数据类型：即字符串。字符串可以通过单引号、双引号或三引号包裹字符序列来创建。
+
+考虑以下示例：
+
+```python
+str = "Hi !"
+```
+
+在 Python 中，如果使用 `type(str)` 检查 `str` 的类型，它将打印 `<class 'str'>`。字符串被视为一个序列。与其他语言一样，字符串的索引从 `0` 开始。例如，字符串 `"HELLO"` 的索引所示。
+
+## 更新字符串
+
+更新字符串的内容并不容易，因为字符串在 Python 中是不可变的。考虑下面的示例 1：
+
+```python
+str = "HELLO"
+str[0] = "h"
+print(str)
+```
+
+输出：
+
+```text
+Traceback (most recent call last):
+  File "12.py", line 2, in <module>
+TypeError: 'str' object does not support item assignment
+```
+
+然而，在示例 2 中，字符串可以完全赋值为一个内容：
+
+```python
+str = "HELLO"
+print(str)
+str = "hello"
+print(str)
+```
+
+输出：
+
+```text
+HELLO
+hello
+```
+
+## 字符串运算符
+
+考虑以下示例来理解 Python 运算符在字符串上的实际用途：
+
+```python
+str = "Hello "
+str1 = " world "
+```
+
+- **拼接**：`print(str + str1)` 打印 `Hello world `。
+- **重复**：`print(str * 3)` 打印 `Hello Hello Hello `。
+- **索引**：`print(str[4])` 打印 `o`。
+- **切片**：`print(str[2:4])` 打印 `ll`。
+- **成员测试**：`print('w' in str)` 打印 `False`，而 `print('wo' in str1)` 打印 `True`。
+- **格式化**：`print("The string str : %s " % str)` 打印 `The string str : Hello `。
+
+## 格式化运算符
+
+Python 允许我们使用 C 语言 `printf` 语句中的格式化符。Python 中的格式化符处理方式与 C 相同。
+
+Python 提供了一个额外的运算符 `%`，作为格式化符与其值之间的接口。换句话说，我们可以说它将格式化符绑定到值。
+
+考虑以下示例：
+
+```python
+Integer = 10
+Float = 1.290
+String = "Ayush"
+print("Hi I am Integer ... My value is %d\nHi I am float ... My value is %f\nHi I am string ... My value is %s" % (Integer, Float, String))
+```
+
+**输出：**
+
+```text
+Hi I am Integer ... My value is 10
+Hi I am float ... My value is 1.290000
+Hi I am string ... My value is Ayush
+```
+
+# 第 3 章：Python 元组（Tuple）
+
+元组用于存储不可变 Python 对象的序列。元组与列表相似，因为列表所存储的项目值可以更改，而元组是不可变的，元组中存储的项目值不能更改。
+
+元组可以写成用小括号括起来的逗号分隔值的集合。元组可以如下所示定义：
+
+```python
+T1 = (101, "Ayush" , 22)
+T2 = ("Apple" , "Banana" , "Orange" )
+```
+
+## 示例
+
+```python
+tuple1 = (10, 20, 30, 40, 50, 60)
+print (tuple1)
+count = 0
+for i in tuple1:
+    print ("tuple1[%d] = %d" %(count, i));
+```
+
+**输出：**
+
+```text
+(10, 20, 30, 40, 50, 60)
+tuple1[0] = 10
+tuple1[1] = 20
+tuple1[2] = 30
+tuple1[3] = 40
+tuple1[4] = 50
+tuple1[5] = 60
+```
+
+## 示例 2
+
+```python
+tuple1 = tuple(input("Enter the tuple elements ..." ))
+print (tuple1)
+count = 0
+for i in tuple1:
+    print ("tuple1[%d] = %s" %(count, i));
+```
+
+**输出：**
+
+```text
+Enter the tuple elements ...12345
+('1', '2', '3', '4', '5')
+tuple1[0] = 1
+tuple1[1] = 2
+tuple1[2] = 3
+tuple1[3] = 4
+tuple1[4] = 5
+```
+
+然而，如果我们尝试重新分配元组的项目，我们将得到一个错误，因为元组对象不支持项目赋值。空元组可以如下所示：
+
+```python
+T3 = ()
+```
+
+包含单个值的元组必须包含一个逗号，如下所示：
+
+```python
+T4 = (90,)
+```
+
+元组的索引方式与列表相同。可以通过特定的索引值访问元组中的项目。我们将在教程的本节中介绍元组的所有方面。
+
+## 元组的索引与分割
+
+元组中的索引和切片与列表相似。元组的索引从 `0` 开始到 `length(tuple) - 1`。可以使用切片运算符访问元组的项目。
+
+Python 还允许我们使用冒号运算符访问元组中的多个项目。请查看下面的图片以详细了解索引和分割。
+
+![Tuple 1.jpg](img/rsrcGB.jpg)
+
+与列表不同，由于元组是不可变的，不能使用 `del` 关键字删除元组项目。要删除整个元组，可以使用 `del` 关键字配合元组名称。考虑以下示例：
+
+```python
+tuple1 = (1, 2, 3, 4, 5, 6)
+print (tuple1)
+del tuple1[0]
+print (tuple1)
+del tuple1
+print (tuple1)
+```
+
+**输出：**
+
+```text
+(1, 2, 3, 4, 5, 6)
+Traceback (most recent call last):
+  File "tuple.py", line 4, in <module>
+    print(tuple1)
+NameError: name 'tuple1' is not defined
+```
+
+与列表一样，元组元素可以从两个方向进行访问。可以使用索引 `-1` 访问元组最右侧（最后一个）的元素。使用负索引可以从左到右遍历元素。考虑以下示例：
+
+```python
+tuple1 = (1, 2, 3, 4, 5)
+print (tuple1[-1])
+print (tuple1[-4])
+```
+
+**输出：** `5 2`
+
+## 元组的使用场景
+
+在以下场景中，会使用元组代替列表：
+
+1. 使用元组代替列表给了我们一个明确的思路，即元组数据是常量且不能更改。
+2. 元组可以模拟没有键的字典。考虑下面的嵌套结构，它可以用作字典：
+
+   ```python
+   [(101, "John" , 22), (102, "Mike" , 28), (103, "Dustin" , 30)]
+   ```
+
+3. 由于元组的不可变性，元组可以作为字典内部的键。
+
+字典用于在 Python 中实现键值对（key-value pair）。字典是 Python 中的数据类型，可以模拟现实生活的数据安排，即某些特定的键对应特定的值。
+
+换句话说，我们可以说字典是键值对的集合，其中值可以是任何 Python 对象，而键必须是不可变的 Python 对象，即数字、字符串或元组。字典在 Python 中模拟了 Java 的 hash-map 功能。
+
+## 创建字典
+
+可以使用多个包含在小括号 `()` 中并用冒号（`:`）分隔的键值对来创建字典。键值对的集合包含在大括号 `{}` 中。定义字典的语法如下：
+
+`Dict = {"Name" : "Ayush" ,"Age" : 22}`
+
+在上面的字典 `Dict` 中，键 `Name` 和 `Age` 是字符串，字符串是一种不可变对象。让我们来看一个创建字典并打印其内容的示例。
+
+```python
+Employee = {"Name" : "John" , "Age" : 29, "salary" :25000,"Company" :"GOOGLE" }
+print (type(Employee))
+print ("printing Employee data .... " )
+print (Employee)
+```
+
+输出：
+
+`<class 'dict'>`
+
+`printing Employee data .... {'Age': 29, 'salary': 25000, 'Name': 'John', 'Company': 'GOOGLE'}`
+
+## 访问字典值
+
+我们已经讨论过如何使用索引来访问列表和元组中的数据。然而，在字典中，可以使用键来访问值，因为键在字典中是唯一的。可以通过以下方式访问字典值。
+
+
+
+```python
+Employee = { "Name " : "John " , "Age " : 2 9 , "salary " : 2500 0 , "Company " : "GOOGLE " }
+print (type(Employee))
+print ( "printing Employee data .... " )
+print ( "Name : %s " %Employee["Name "]])
+print ( "Age : %d " %Employee["Age "]])
+print ( "Salary : %d " %Employee["salary "]])
+print ( "Company : %s " %Employee["Company "])
+```
+
+输出：
+
+`<class 'dict'>`
+
+printing Employee data .... Name : John Age : 29 Salary : 25000 Company : GOOGLE
+
+Python 为我们提供了使用 `get()` 方法访问字典值的替代方案。它将产生与索引访问相同的结果。
+
+### 更新字典值
+
+字典是一种可变数据类型，可以使用特定的键来更新其值。让我们来看更新字典值的示例。
+
+```python
+Employee = { "Name " : "John " , "Age " : 2 9 , "salary " : 2500 0 , "Company " : "GOOGLE " }
+print (type(Employee))
+print ( "printing Employee data .... " )
+print (Employee)
+print ( "Enter the details of the new employee.... " );
+Employee["Name "] = input( "Name: " );
+Employee["Age "] = int(input( "Age: "));
+Employee["salary "] = int(input( "Salary: "));
+Employee["Company "] = input( "Company: " );
+print ( "printing the new data " );
+print (Employee)
+```
+
+输出：
+
+`<class 'dict'>`
+
+printing Employee data .... {'Name': 'John', 'salary': 25000, 'Company': 'GOOGLE', 'Age': 29}
+
+Enter the details of the new employee....
+
+Name: David
+
+Age: 19
+
+Salary: 8900
+
+Company: JTP
+
+printing the new data {'Name': 'David', 'salary': 8900, 'Company': 'JTP', 'Age': 19}
+
+### 使用 `del` 关键字删除元素
+
+可以使用下方的 `del` 关键字删除字典的项。
+
+```python
+Employee = { "Name " : "John " , "Age " : 2 9 , "salary " : 2500 0 , "Company " : "GOOGLE " }
+print (type(Employee))
+print ( "printing Employee data .... " )
+print (Employee)
+print ( "Deleting some of the employee data " )
+del Employee["Name "]
+del Employee["Company "]
+print ( "printing the modified information " )
+print (Employee)
+print ( "Deleting the dictionary: " );
+del Employee
+print ( "Lets to print it again " );
+print (Employee)
+```
+
+输出：
+
+`<class 'dict'>`
+
+printing Employee data .... {'Age': 29, 'Company': 'GOOGLE', 'Name': 'John', 'salary': 25000}
+
+Deleting some of the employee data
+
+modified information {'Age': 29, 'salary': 25000}
+
+Deleting the dictionary:
+
+Lets to print it again
+
+Traceback (most recent call last):
+
+File "list.py", line 13, in <module>
+
+print(Employee)
+
+Error: name 'Employee' is not defined
+
+### 迭代字典
+
+可以使用下方的 `for` 循环对字典进行迭代。
+
+### 示例 1：使用 `for` 循环打印字典的所有键
+
+```python
+Employee = { "Name " : "John " , "Age " : 2 9 , "salary " : 2500 0 , "Company " : "GOOGLE " }
+for x in Employee:
+    print (x);
+```
+
+输出：
+
+Name Company salary Age
+
+### 示例 2：使用 `for` 循环打印字典的所有值
+
+```python
+Employee = { "Name " : "John " , "Age " : 2 9 , "salary " : 2500 0 , "Company " : "GOOGLE " }
+for x in Employee:
+    print (Employee[x]);
+```
+
+输出：
+
+29 GOOGLE John 25000
+
+### 示例 3：使用 `values()` 方法通过 `for` 循环打印字典的值
+
+```python
+Employee = { "Name " : "John " , "Age " : 2 9 , "salary " : 2500 0 , "Company " : "GOOGLE " }
+for x in Employee.values():
+    print (x);
+```
+
+输出：
+
+GOOGLE 25000 John 29
+
+### 示例 4：使用 `items()` 方法通过 `for` 循环打印字典的项
+
+```python
+Employee = { "Name " : "John " , "Age " : 2 9 , "salary " : 2500 0 , "Company " : "GOOGLE " }
+for x in Employee.items():
+    print (x);
+```
+
+输出：
+
+('Name', 'John') ('Age', 29) ('salary', 25000) ('Company', 'GOOGLE')
+
+### 字典键的属性
+
+1. 字典不支持同一个键存储多个值。如果为一个键传递了多个值，则最后赋值的值被视为该键的值。请看以下示例。
+
+```python
+Employee = { "Name " : "John " , "Age " : 2 9 , "Salary " : 2500 0 , "Company " : "GOOGLE " , "Name " : "Johnn " }
+for x,y in Employee.items():
+    print (x,y)
+```
+
+输出：
+
+Salary 25000 Company GOOGLE Name Johnn Age 29
+
+2. 在 Python 中，键不能是可变对象。可以使用数字、字符串或元组作为键，但不能在字典中使用列表等可变对象作为键。请看以下示例。
+
+```python
+Employee = { "Name " : "John " , "Age " : 2 9 , "salary " : 2500 0 , "Company " : "GOOGLE " , [ 100 , 201 , 301 ]: "Department ID " }
+for x,y in Employee.items():
+    print (x,y)
+```
+
+输出：
+
+Traceback (most recent call last):
+
+File "list.py", line 2, in Employee
+
+Employee = {"Name": "John", "Age": 29, "salary":25000,"Company":"GOOGLE",[100,201,301]:"Department ID"}
+
+TypeError: unhashable type: 'list'
+
+## 第 5 章 Python 运算符
+
+运算符可以定义为负责两个操作数之间特定操作的符号。运算符是程序的逻辑支柱，在特定的编程语言中，逻辑是基于此构建的。Python 提供了多种运算符，描述如下：
+
+- 算术运算符
+- 比较运算符
+- 赋值运算符
+- 逻辑运算符
+- 位运算符
+- 成员运算符
+- 标识符运算符
+
+### 算术运算符
+
+算术运算符用于在两个操作数之间执行算术运算。它包括 `+`（加法）、`-`（减法）、`*`（乘法）、`/`（除法）、`%`（取模）、`//`（地板除）和 `**`（幂）。请参考下表详细了解算术运算符。
+
+| 运算符 | 描述 |
+| :--- | :--- |
+| `+` (Addition) | 用于相两个操作数。例如，如果 `a = 20`, `b = 10` => `a+b = 30` |
+| `-` (Subtraction) | 用于从第一个操作数中减去第二个操作数。如果第一个操作数小于第二个操作数，则结果为负值。例如，如果 `a = 20`, `b = 10` => `a - b = 10` |
+| `/` (divide) | 返回第一个操作数除以第二个操作数后的商。例如，如果 `a = 20`, `b = 10` => `a/b = 2` |
+| `*` (Multiplication) | 用于将一个操作数与另一个操作数相乘。例如，如果 `a = 20`, `b = 10` => `a * b = 200` |
+| `%` (reminder) | 返回第一个操作数除以第二个操作数后的余。例如，如果 `a = 20`, `b = 10` => `a%b = 0` |
+| `**` (Exponent) | 这是一个幂运算符，表示为计算第一个操作数的第二个操作数次方。 |
+| `//` (Floor division) | 给出两个操作数除法所得商的地板值。 |
+
+### 比较运算符
+
+比较运算符用于比较两个操作数的值，并相应地返回布尔真或假。比较运算符在下表中描述。
+
+| 运算符 | 描述 |
+| :--- | :--- |
+| `==` | 如果两个操作数的值相等，则条件为真。 |
+| `!=` | 如果两个操作数的值不相等，则条件为真。 |
+| `<=` | 如果第一个操作数小于或等于第二个操作数，则条件为真。 |
+| `>=` | 如果第一个操作数大于或等于第二个操作数，则条件为真。 |
+| `<>` | 如果两个操作数的值不相等，则条件为真。 |
+| `>` | 如果第一个操作数大于第二个操作数，则条件为真。 |
+| `<` | 如果第一个操作数小于第二个操作数，则条件为真。 |
+
+### Python 赋值运算符
+
+赋值运算符用于将右表达式的值赋值给左操作数。赋值运算符在下表中描述。
+
+| 运算符 | 描述 |
+| :--- | :--- |
+| `=` | 将右表达式的值赋值给左操作数。 |
+| `+=` | 将左操作数的值增加右操作数的值并将修改后的值赋回操作数。例如，如果 `a = 10`, `b = 20` => `a += b` 等于 `a = 30`。 |
+| `-=` | 将左操作数的值减去右操作数的值并将修改后的值赋回操作数。例如，如果 `a = 20`, `b = 10` => `a -= b` 等于 `a = 10`。 |
+| `*=` | 将左操作数的值乘以右操作数的值并将修改后的值赋回操作数。例如，如果 `a = 10`, `b = 20` => `a *= b` 等于 `a = 200`。 |
+| `%=` | 将左操作数的值除以右操作数的值并将余数赋回操作数。例如，如果 `a = 20`, `b = 10` => `a %= b` 等于 `a = 0`。 |
+| `**=` | 计算左操作数的右操作数次幂并将结果赋回操作数。例如，如果 `a = 4`, `b = 2`, `a**= b` 等于 `a = 16`。 |
+| `//=` | 执行左操作数除以右操作数的地板除并将结果赋给操作数。例如，如果 `a = 4`, `b = 3`, `a//= b` 等于 `a = 1`。 |
+
+### 位运算符
+
+位运算符对操作数的值进行逐位操作。例如，如果 `a = 7` (111) 和 `b = 6` (110)，那么：
+
+- `binary(a)` = 111
+- `binary(b)` = 110
+- `a & b` = 110
+- `a | b` = 111
+- `a ^ b` = 001
+
+| 运算符 | 描述 |
+| :--- | :--- |
+| `&` | 按位与 |
+| `|` | 按位或 |
+| `^` | 按位异异 |
+| `~` | 取反 |
+| `<<` | 左移 |
+| `>>` | 右移 |
+
+### 逻辑运算符
+
+逻辑运算符主要用于表达式求值决策。Python 支持以下逻辑运算符。
+
+| 运算符 | 描述 |
+| :--- | :--- |
+| `and` | 如果两个运算符都为真，则条件为真。如果 `a` 和 `b` 均为真，则结果为真。 |
+| `or` | 如果其中一个运算符为真，则条件为真。如果 `a` 或 `b` 为真，则结果为真。 |
+| `not` | 如果 `a` 为真则为假，反之。 |
+
+### 成员运算符
+
+成员运算符用于检查数据结构中的值。如果值存在数据结构中，则返回真，否则返回假。
+
+| 运算符 | 描述 |
+| :--- | :--- |
+| `in` | 如果第一个操作数在第二个操作数（列表、元组或字典）中，则为真。 |
+| `not in` | 如果第一个操作数不在第二个操作数（列表、元组或字典）中，则为真。 |
+
+### 标识运算符
+
+| 运算符 | 描述 |
+| :--- | :--- |
+| `is` | 如果两边的引用指向同一个对象，则为真。 |
+| `is not` | 如果两边的引用不指向同一个对象，则为真。 |
+
+### 运算符优先级
+
+运算符的优先级非常重要，因为它使我们知道应该先计算哪个运算符。Python 运算符的优先级如下所示：
+
+| 运算符 | 描述 |
+| :--- | :--- |
+| `**` | 幂运算符的优先级高于表达式中使用的其他运算符。 |
+| `~`, `+`, `-` | 取反、一元加和减。 |
+| `*`, `/`, `%`, `//` | 乘法、除法、取模和地板除。 |
+| `+`, `-` | 二级加和减。 |
+| `>>`, `<<` | 右移和左移。 |
+| `&` | 二位与。 |
+| `^`, `|` | 二位异异和或。 |
+| `<=`, `<`, `>=` | 比较运算符（小于、小于等于、大于、大于等于）。 |
+| `<>`, `==`, `!=` | 相等运算符。 |
+
+# 第 6 章 Python 函数
+
+函数是应用程序中最重要的部分。函数可以被定义为组织良好的、可重用的代码块，可以在需要时随时调用。Python 允许我们将一个大型程序划分为称为函数的基本构建单元。函数包含封装在 `{}` 中的一组组编程语句。函数可以被多次调用，以为 Python 程序提供可重用性和模块化。换句话说，我们可以说函数的集合创建了一个程序。在其他编程语言中，函数也称为过程（procedure）或子程序（subroutine）。Python 为我们提供了各种内置函数，如 `range()` 或 `print()`。尽管如此，用户也可以创建自己的函数，这些被称为用户自定义函数。
+
+### Python 函数的优势
+
+Python 函数具有以下优点：
+
+- 通过使用函数，我们可以避免在程序中反复编写相同的逻辑/代码。
+- 我们可以在程序的任何地方、以任意的次数调用 Python 函数。
+- 当一个大型 Python 程序被分为多个函数时，我们可以轻松地追踪它。
+- 可重用性是 Python 函数的主要成就。
+- 然而，函数调用在 Python 程序中始终存在开销。
+
+### 创建函数
+
+在 Python 中，我们可以使用 `def` 关键字来定义函数。Python 中定义函数的语法所示：
+
+```python
+def my_function():
+    function-suite
+    return <expression>
+```
+
+函数块以冒号（`:`）开始，所有相同层级的块语句都保持相同的缩进。函数可以接受任意数量的参数，这些参数在定义和函数调用时必须一致。
+
+### 函数调用
+
+在 Python 中，必须在调用函数之前定义函数，否则 Python 解释器会报错。一旦定义了函数，我们就可以从另一个函数或 Python 提示符调用它。要调用函数，使用函数名后跟括号。下面是一个打印“Hello Word”消息的简单函数。
+
+```python
+def hello_world():
+    print("hello world ")
+
+hello_world()
+```
+
+输出：hello world
+
+### 函数中的参数
+
+信息可以作为参数传递到函数中。参数在括号指定。我们可以给出任意数量的参数，但必须用逗号将其分隔。考虑以下示例，它包含一个接受字符串作为参数并打印它的函数。
+
+### 示例 1
+
+### 定义函数
+
+```python
+def func(name):
+    print("Hi ",name);
+
+### 调用函数
+func("Ayush ")
+```
+
+
+
+## 示例 2
+
+### 计算两个变量之的 Python 函数
+
+```python
+### 定义函数
+def sum(a,b):
+    return a+b
+
+### 从用户获取值
+a = int(input("Enter a: "))
+b = int(input("Enter b: "))
+### 打印 a 和 b 的和
+print("Sum = ",sum(a,b))
+```
+
+输出：`Enter a: 10 Enter b: 20 Sum = 30`
+
+### Python 中的按引用传递
+
+在 Python 中，所有函数都是通过引用调用的，即：函数内部对引用所做的所有更改都会恢复到该引用所指的原始值。然而，在可变对象的情况下有一个例外，因为对字符串等可变对象所做的更改不会恢复到原始字符串，而是会创建一个新的字符串对象，因此会打印两个不同的对象。
+
+### 示例 1 传递不可变对象（列表）
+
+### 定义函数
+
+```python
+def change_list(list1):
+    list1.append(20);
+    list1.append(30);
+    print("list inside function = ",list1)
+
+### 定义列表
+list1 = [10, 30, 40, 50]
+
+### 调用函数
+change_list(list1)
+print("list outside function = ",list1)
+```
+
+输出：`list inside function = [10, 30, 40, 50, 20, 30] list outside function = [10, 30, 40, 50, 20, 30]`
+
+### 示例 2 传递可变对象（字符串）
+
+### 定义函数
+
+```python
+def change_string(str):
+    str = str + " Hows you "
+    print("printing the string inside function : ",str)
+
+string1 = "Hi I am there "
+### 调用函数
+change_string(string1)
+print("printing the string outside function : ",string1)
+```
+
+输出：`printing the string inside function : Hi I am there Hows you printing the string outside function : Hi I am there`
+
+### 参数类型
+
+在调用函数时可以传递多种类型的参数：
+
+1. 必需参数 (Required arguments)
+2. 关键字参数 (Keyword arguments)
+3. 默认参数 (Default arguments)
+4. 可变长度参数 (Variable-length arguments)
+
+### 必须参数
+
+到目前为止，我们学习了 Python 中的函数调用。然而，我们可以在函数调用时提供参数。
+
+关于必须参数（required arguments），这些是在函数调用时必须传递的参数，且其位置必须与函数调用和函数定义中的位置完全匹配。如果在函数调用中没有提供其中一个参数，或者参数的位置发生了变化，Python 解释器将显示错误。考虑以下示例。
+
+### 示例 1
+
+参数 `name` 是函数 `func` 的必须参数。
+
+```python
+def func(name):
+    message = "Hi " +name
+    return message
+name = input("Enter the name? ")
+print(func(name))
+```
+
+输出: `Enter the name?John Hi John`
+
+### 示例 2
+
+函数 `simple_interest` 三个参数并相应返回单利。
+
+```python
+def simple_interest(p,t,r):
+    return (p*t*r)/ 100
+p = float(input("Enter the principle amount? "))
+r = float(input("Enter the rate of interest? "))
+t = float(input("Enter the time in years? "))
+print("Simple Interest: ",simple_interest(p,r,t))
+```
+
+输出: `Enter the principle amount? 10000 Enter the rate of interest? 5 Enter the time in years? 2 Simple Interest: 1000.0`
+
+### 示例 3
+
+函数 `calculate` 返回两个参数 `a` 和 `b` 的和。
+
+```python
+def calculate(a,b):
+    return a+b
+calculate(10) # 这会导致错误，因为我们缺少一个必须的参数 b .
+```
+
+输出: `TypeError: calculate() missing 1 required positional argument: 'b'`
+
+### 关键字参数
+
+Python 允许我们使用关键字参数调用函数。这种函数调用允许我们以随机顺序传递参数。参数名称被视为关键字并在函数调用和定义中进行匹配。如果找到了相同的匹配，参数的值将复制到函数定义中。考虑以下示例。
+
+### 示例 1
+
+使用 `name` 和 `message` 作为关键字参数调用函数 `func`。
+
+```python
+def func(name,message):
+    print("printing the message with ",name,,"and ",message)
+func(name = "John ",message="hello ") #name 和 message 分别带值 John 和 hello 被复制
+```
+
+输出: `printing the message with John and hello`
+
+### 示例 2
+
+在调用时以不同的顺序提供值。
+
+使用关键字参数调用函数 `simple_interest(p, t, r)`；在这种情况下参数的顺序并不重要。
+
+```python
+def simple_interest(p,t,r):
+    return (p*t*r)/ 100
+print("Simple Interest: ",simple_interest(t=10,r=10,p=1900))
+```
+
+输出: `Simple Interest: 1900.0`
+
+如果我们在函数调用时提供了不同的参数名称，将抛出错误。考虑以下示例。
+
+### 示例 3
+
+使用关键字参数调用函数 `simple_interest(p, t, r)`。
+
+```python
+def simple_interest(p,t,r):
+    return (p*t*r)/ 100
+print("Simple Interest: ",simple_interest(time=10,rate=10,principle=1900)) # 未能找到参数名称（关键字）的精确匹配
+```
+
+输出: `TypeError: simple_interest() got an unexpected keyword argument 'time'`
+
+Python 允许我们在函数调用时混合使用必须参数和关键字参数。然而，在函数调用时，必须参数必须放在关键字参数之前。考虑以下示例。
+
+### 示例 4
+
+```python
+def func(name,message):
+    print("printing the message with ",name,,"and ",message)
+func("John ",message="hello ") #必须参数不能在关键字参数之后
+```
+
+输出: `printing the message with John and hello`
+
+由于必须参数和关键字参数的混合，以下示例会导致错误。
+
+### 示例 5
+
+```python
+def func(name1,message2):
+    print("printing the message with ",name1)
+func(message="hello ", "John ")
+```
+
+输出: `SyntaxError: positional argument follows keyword argument`
+
+### 默认参数
+
+Python 允许我们在函数定义时初始化参数。如果在函数调用时没有提供某个参数的值，则可以使用定义中的默认值。
+
+### 示例 1
+
+```python
+def printme(name,age=2):
+    print("My name is ",name,"and age ",age)
+printme("john")
+```
+
+输出: `My name is john and age 2`
+
+### 示例 2
+
+```python
+def printme(name,age=2):
+    print("My name is ",name,"and age ",age)
+printme(name="David")
+```
+
+输出: `My name is David and age 2`
+
+### 可变长度参数
+
+大型项目中，我们可能无法预知参数的数量。在这种情况下，Python 允许我们提供逗号分隔的值，这些在函数调用时被视为元组。在函数定义中，我们必须使用 `*name` 来定义变量。考虑以下示例。
+
+```python
+def printme(*names):
+    print("type of passed argument is ",type(names))
+    print("printing the arguments...")
+    for name in names:
+        print(name)
+printme("john ", "David ", "smith ", "nick ")
+```
+
+输出:
+
+`type of passed argument is <class 'tuple'>`
+
+`printing the arguments...`
+
+`john `
+
+`David `
+
+`smith `
+
+`nick `
+
+### 变量的作用域
+
+变量的作用域取决于变量声明的位置。程序某部分定义的变量可能在其他部分访问。在 Python 中，变量分为两种类型的作用域。
+
+### 全局变量
+
+在函数外部定义的变量具有全局作用域，而在函数内部定义的变量具有局部作用域。考虑以下示例。
+
+### 示例 1
+
+```python
+def print_message():
+    message = "hello !! I am going to print a message." #  message 是函数局部的
+    print(message)
+print_message()
+print(message) # 这会导致错误，因为在这里无法访问局部变量。
+```
+
+输出:
+
+`hello !! I am going to print a message.`
+
+`File "/root/PycharmProjects/PythonTest/Test1.py", line 6, in print(message)`
+
+`NameError: name 'message' is not defined`
+
+### 局部变量
+
+```python
+def calculate(*args):
+    sum = 0
+    for arg in args:
+        sum = sum + arg
+    print("The sum is ",sum)
+sum = 0
+calculate(10, 20, 30) # 60 将作为和打印
+print("Value of sum outside the function: ",sum) # 0 将被打印
+```
+
+输出:
+
+`The sum is 60`
+
+`Value of sum outside the function: 0`
+
+## 第 7 章 Python If-else 语句
+
+决策是几乎所有编程语言中最重要的方面。正如其名称所示，决策允许我们根据特定的决定运行特定的代码块。在这里，决策是根据特定条件的有效性做出的。条件检查是决策的骨。在 Python 中，决策通过以下语句实现。
+
+| 语句 | 描述 |
+| :--- | :--- |
+| If 语句 | `if` 语句用于测试特定条件。如果条件为真，则将执行代码块（`if-block`）。 |
+| If-else 语句 | `if-else` 语句与 `if` 语句相似，不同之处在于，它还为被检查条件的虚假情况提供了代码块。如果 `if` 语句中提供的条件为假，则将执行 `else` 语句。 |
+| 嵌套 if 语句 | 嵌套 `if` 语句允许我们在外层 `if` 语句内部使用 `if-else` 语句。 |
+
+### Python 中的缩进
+
+为了方便编程和实现简单性，python 不允许使用括号来块级代码。在 Python 中，使用缩进来声明一个块。如果两个语句处于相同的缩进级别，那么它们就是同一个块的一部分。通常，使用四个空格来缩进语句，这是 python 中典型的缩进量。缩进是 python 语言中最常用的部分，因为它声明了代码块。一个块的所有语句都对齐在相同的缩进级别。我们将看到 Python 中决策和其他内容中实际是如何进行缩进的。
+
+### if 语句
+
+`if` 语句用于测试特定条件，如果条件为真，它会执行名为 `if-block` 的代码块。`if` 语句的条件可以是任何有效的逻辑表达式，可以被求值为真或假。
+
+![if else 1.jpg](img/rsrc124.jpg)
+
+`if`-语句的语法下所示。
+
+```python
+if expression:
+    statement
+```
+
+### 示例 1
+
+```python
+num = int(input("enter the number? "))
+if num % 2 == 0:
+    print("Number is even ")
+```
+
+输出：`enter the number?10 Number is even`
+
+### 示例 2：打印三个数中最大值的程序。
+
+```python
+a = int(input("Enter a? "))
+b = int(input("Enter b? "))
+c = int(input("Enter c? "))
+if a > b and a > c:
+    print("a is largest ")
+if b > a and b > c:
+    print("b is largest ")
+if c > a and c > b:
+    print("c is largest ")
+```
+
+输出：`Enter a? 100 Enter b? 120 Enter c? 130 c is largest `
+
+### if-else 语句
+
+`if-else` 语句提供了一个与 `if` 语句结合的 `else` 块，在条件假的情况下执行。如果条件为真，则执行 `if-block`。否则，执行 `else-block`。
+
+![if else 2.jpg](img/rsrc136.jpg)
+
+`if-else` 语句的语法下所示。
+
+```python
+if condition:
+    #block of statements
+else:
+    #another block of statements (else-block)
+```
+
+### 示例 1：检查一个人是否有投票权的程序。
+
+```python
+age = int(input("Enter your age? "))
+if age >= 18:
+    print("You are eligible to vote !! ")
+else:
+    print("Sorry! you have to wait !! ")
+```
+
+输出：`Enter your age? 90 You are eligible to vote !!`
+
+### 示例 2：检查数字是否为偶数的程序。
+
+```python
+num = int(input("enter the number? "))
+if num % 2 == 0:
+    print("Number is even ")
+else:
+    print("Number is odd ")
+```
+
+输出：`enter the number?10 Number is even`
+
+### elif 语句
+
+`elif` 语句允许我们检查多个条件并根据真条件执行特定的语句。我们可以根据需要从程序中使用任意数量的 `elif` 语句。然而，使用 `elif` 是可选的。`elif` 语句的作用类似于 C 语言中的 `if-else-if` 语句。它必须后跟在 `if` 语句之后。`elif` 的语法下所示。
+
+```python
+if expression 1:
+    # block of statements
+elif expression 2:
+    # block of statements
+elif expression 3:
+    # block of statements
+else:
+    # block of statements
+```
+
+![if else 3.jpg](img/rsrc14E.jpg)
+
+### 示例 1
+
+
+
+```python
+number = int(input("Enter the number? "))
+if number <= 10:
+    print("number is equals to 10 ")
+elif number <= 50:
+    print("number is equal to 50 ")
+elif number <= 100:
+    print("number is equal to 100 ")
+else:
+    print("number is not equal to 10, 50 or 100 ")
+```
+
+输出：`Enter the number?15` `number is not equal to 10, 50 or 100`
+
+# 第 8 章 Python 循环
+
+程序的流程默认是顺序的。有时我们需要改变程序的流程。特定代码的执行可能需要重复多次。为了这个目的，编程语言提供了各种类型的循环，能够多次执行某些特定代码。考虑下面的图来理解循环语句的工作。
+
+![loops 1.jpg](img/rsrc158.jpg)
+
+### 为什么在 Python 中使用循环？
+
+循环将复杂问题简化为简单问题。它允许我们改变程序的流程，以便我们不需要反复编写相同的代码，而是可以在有限次数重复相同的代码。例如，如果我们需要打印前 10 个自然数，那么我们不需要使用 10 次打印语句，而可以在运行 10 次迭代的循环中打印。
+
+### 循环的优点
+
+以下是 Python 循环的优点。
+
+1. 它提供了代码的可重用性。
+2. 使用循环，我们不需要反复编写相同的代码。
+3. 使用循环，我们可以遍历数据结构（数组或链表）中的元素。
+
+Python 中有以下循环语句。
+
+### 循环语句及描述
+
+- `for` 循环用于在满足给定条件之前，需要执行某部分代码的情况。`for` 循环也被称为预测试循环。如果提前知道迭代次数，使用 `for` 循环更好。
+- `while` 循环用于事先不知道迭代次数的场景。在 `while` 循环中，执行语句块，直到 `while` 循环中指定的条件满足为止。它也被称为预测试循环。
+- `do-while` 循环（`do-while` 循环）持续执行直到给定条件满足为止。它也被称为后测试循环。它用于必须至少执行一次循环的情况（通常是菜单驱动程序）。
+
+### Python for 循环
+
+Python 中的 `for` 循环用于多次迭代语句或程序的某部分。它经常被用于遍历 `list`、`tuple` 或 `dictionary` 等数据结构。Python 中 `for` 循环的语法如下。
+
+```python
+for iterating_var in sequence:
+    statement(s)
+```
+
+**示例**
+
+```python
+i=1
+n=int(input("Enter the number up to which you want to print the natural numbers?"))
+for i in range(0,10):
+    print(i,end = ' ')
+```
+
+输出：`0 1 2 3 4 5 6 7 8 9`
+
+**Python for 循环示例：打印给定数字的法表**
+
+```python
+i= 1
+num = int(input("Enter a number: "));
+for i in range(1 , 11):
+    print("%d X %d = %d " %(num,i,num*i));
+```
+
+输出：
+
+`Enter a number:10`
+
+`10 X 1 = 10`
+
+`10 X 2 = 20`
+
+`10 X 3 = 30`
+
+`10 X 4 = 40`
+
+`10 X 5 = 50`
+
+`10 X 6 = 60`
+
+`10 X 7 = 70`
+
+`10 X 8 = 80`
+
+`10 X 9 = 90`
+
+`10 X 10 = 100`
+
+### Python 中的嵌套 for 循环
+
+Python 允许我们在 `for` 循环内部嵌套任意数量的 `for` 循环。外层循环每迭代一次，内层循环就会执行 `n` 次。Python 中嵌套 `for` 循环的语法如下。
+
+```python
+for iterating_var1 in sequence:
+    for iterating_var2 in sequence:
+        #block of statements
+        #Other statements
+```
+
+**示例 1**
+
+```python
+n = int(input("Enter the number of rows you want to print? "))
+i,j= 0 , 0
+for i in range(0 ,n):
+    print ()
+    for j in range(0 ,i+ 1 ):
+        print("* ",end="")
+```
+
+输出：
+
+`Enter the number of rows you want to print?5`
+
+`* *** **** *****`
+
+### 在 for 循环中使用 else 语句
+
+与 `C`、`C++` 或 `Java` 等语言不同，Python 允许在 `for` 循环中使用 `else` 语句，它只有在所有迭代耗尽时才会执行。这里我们必须注意，如果循环包含任何 `break` 语句，则 `else` 语句将不会执行。
+
+**示例 1**
+
+```python
+for i in range(0 , 5 ):
+    print(i)
+else:
+    print("for loop completely exhausted, since there is no break.");
+```
+
+在上面的示例中，由于循环中没有 `break` 语句，循环完全执行。控制权跳出循环，因此执行了 `else` 块。
+
+输出：`0 1 2 3 4`
+
+`for loop completely exhausted, since there is no break.`
+
+**示例 2**
+
+```python
+for i in range(0 , 5 ):
+    print(i)
+    break;
+else:
+    print("for loop is exhausted ");
+print("The loop is broken due to break statement...came out of loop ")
+```
+
+在上面的示例中，循环由于 `break` 语句被中断，因此 `else` 语句将不会执行。紧接在 `else` 块之后的语句将执行。
+
+输出：`0`
+
+### Python while 循环
+
+`while` 循环也被称为预测试循环。通常，`while` 循环允许只要给定条件为真，就执行部分代码。它可以被视为一个重复的 `if` 语句。`while` 循环主要用于事先未知迭代次数的情况。语法如下。
+
+```python
+while expression:
+    statements
+```
+
+在这里，`statements` 可以是一个单独的语句也可以是一组语句。`expression` 应该是任何产生真或假值的有效 Python 表达式。`true` 是任何非零值。
+
+**示例 1**
+
+```python
+i= 1 ;
+while i<= 10 :
+    print(i);
+    i=i+ 1 ;
+```
+
+输出：`1 2 3 4 5 6 7 8 9 10`
+
+### 无限 while 循环
+
+如果 `while` 循环中给定的条件永远不会变为假，那么 `while` 循环永远不会终止，导致无限 `while` 循环。`while` 循环中的任何非零值都表示条件始终为真，而 `0` 表示始终为假。如果我们希望程序在循环中持续运行而不受任何干扰，那么这种方法是很有用的。
+
+**示例 1**
+
+```python
+while ( 1 ):
+    print ("Hi! we are inside the infinite while loop ");
+```
+
+输出：`Hi! we are inside the infinite while loop`（无限次）
+
+**示例 2**
+
+```python
+var = 1
+while var != 2 :
+    i = int(input("Enter the number? "))
+    print ("Entered value is %d " %(i))
+```
+
+输出：
+
+`Enter the number?102`
+
+`Entered value is 102`
+
+`Enter the number?102`
+
+`Entered value is 102`
+
+`Enter the number?103`
+
+`Entered value is 103`
+
+`Enter the number?103`（无限循环）
+
+### 在 Python while 循环中使用 else
+
+Python 允许我们在 `while` 循环中使用 `else` 语句。当 `while` 循环中的条件变为假时，执行 `else` 块。与 `for` 循环一样，如果 `while` 循环通过 `break` 中断，则 `else` 块将不会执行。`else` 块之后的语句将执行。请考虑以下示例。
+
+```python
+i= 1 ;
+while i<= 5 :
+    print(i)
+    i=i+ 1 ;
+else:
+    print ("The loop exhausted ");
+```
+
+输出：`1 2 3 4 5`
+
+`The loop exhausted`
+
+### Python break 语句
+
+`break` 是 Python 中的一个关键字，用于将程序控制带出循环。`break` 语句中断循环，在嵌套循环的情况下，它首先中断内层循环，然后继续外层循环。换句话说，可以说 `break` 用于终止当前执行并跳转到循环后的下一行。`break` 通常用于根据给定条件中断循环的情况。`break` 的语法如下。
+
+```python
+break;
+```
+
+**示例 1**
+
+```python
+list = [1 , 2 , 3 , 4 ]
+count = 1 ;
+for i in list:
+    if i == 4 :
+        print ("item matched ")
+        count = count + 1 ;
+        break
+print ("found at ",count,"location ");
+```
+
+输出：
+
+`item matched`
+
+`found at 2 location`
+
+### Python continue 语句
+
+Python 中的 `continue` 语句用于将程序控制带回循环开头。它跳过循环内部的剩余代码。它主要用于循环内的特定条件，以便我们根据特定条件跳过某些代码。Python `continue` 语句的语法如下。
+
+```python
+continue
+#the code to be skipped
+```
+
+**示例 1**
+
+```python
+i = 0 ;
+while i!= 10 :
+    print ( "%d " %i);
+    continue ;
+    i=i+1 ;
+```
+
+输出：无限循环
+
+# 对象
+
+`object` 是一个具有状态和行为的实体。它可以是任何现实世界的物体，如鼠标、键盘、椅子、桌子、笔等。在 Python 中，一切都是对象，几乎每个对象都具有属性和方法。所有函数都有一个内置属性 `__doc__`，它返回在函数源代码中定义的文档字符串（doc string）。
+
+# 类
+
+`class` 可以被定义为对象的集合。它是一个具有某些特定属性和方法的逻辑实体。例如：如果你有一个 `employee` 类，那么它应该包含一些属性和方法，即电子邮件 ID、姓名、年龄、工资等。
+
+### 语法
+
+```python
+class ClassName:
+    <statement-1>
+    ...
+    <statement-N>
+```
+
+### 方法
+
+`method` 是与对象关联的函数。在 Python 中，`method` 并不是类实例所有的。任何对象类型都可以拥有方法。
+
+### 继承
+
+`Inheritance` 是面向对象编程中最重要的方面，它模拟了现实世界的继承概念。它规定子对象获取父对象的所有属性和行为。通过继承，我们可以创建一个使用另一个类的所有属性和行为的类。新类被称为派生类或子类，而属性被获取的类被称为基类或父类。它提供了代码的可重用。
+
+### 多态
+
+`Polymorphism` 包含两个词“poly”和“morphs”。Poly 意味着“多”，Morphs 意味着“形式、形状”。通过多态，我们理解任务可以通过不同的方式执行。例如，你有一个 `animal` 类，所有的动物都会说话。但它们说话的方式不同。在这里，“speak”行为在意义上是多态的，取决于具体的动物。因此，抽象的“animal”概念本身并不会“speak”，但特定的动物（如狗和猫）拥有“speak”这一动作的具体实现。
+
+### 封装
+
+`Encapsulation` 也是面向对象编程的一个重要方面。它用于限制对方法和变量的访问。在封装中，代码和数据被封装在一个单元内，防止被意外修改。
+
+### 数据抽象
+
+`Data abstraction`（数据抽象）和封装通常被用作同义词。两者几乎同义，因为数据抽象是通过封装实现的。抽象用于隐藏内部细节并只显示功能。抽象某个事物意味着给事物命名，使该名称捕捉函数或整个程序的功能的核心内容。
+
+### 面试题与答案
+
+以下列出了针对新手和有经验开发者的常用 Python 面试问题及答案。
+
+### 1) 什么是 Python？
+
+Python 是一种通用计算机编程语言。它是一种高级、面向对象的语言，可以同样运行在 Windows、Linux、UNIX 和 Macintosh 等不同平台上。它广泛用于数据科学、机器学习和人工智能领域。它易于学习，开发应用程序代码较少。
+
+### 2) Python 的应用有哪些？
+
+Python 用于各种软件领域，以下是一些应用领域：
+
+*   Web 和互联网开发
+*   游戏
+*   科学和计算应用
+*   语言开发
+*   图像处理和图形设计应用
+*   企业级和业务应用开发
+*   操作系统
+*   基于 GUI 的桌面应用
+
+Python 提供了各种用于开发 Web 应用的框架。流行的 Python Web 框架有 `Django`、`Pyramid`、`Flask`。
+
+### 3) Python 的优点？
+
+*   解释型
+*   免费开源
+*   可扩展
+*   面向对象
+*   内置数据结构
+*   可读性高
+*   高级
+*   可移植
+
+### 4) 什么是 PEP 8？
+
+`PEP8` 是一种编码规范，规定了如何编写代码。
+
+### 5) 字面量（literals）是指什么？
+
+字面量可以定义为变量或常量。Python 支持以下内容：
+
+*   **字符串字面量**：字符串字面量通过单引号或双引号包裹文本形成。例如："man", 'woman'。
+*   **数字字面量**：Python 支持三种类型：整数、浮点和复数。
+*   **布尔字面量**：布尔字面量用于表示布尔值。包含 `True` 或 `False`。
+
+### 6) 解释 Python 函数？
+
+`function` 是程序的一个部分或代码块，编写一次并在程序需要时随时执行。函数是一个自包含的块，具有有效的名称、参数列表和函数体。函数使编程更具功能性。函数有两种类型：
+
+*   **内置函数**：`copy()`、`len()`、`count()`
+*   **自定义函数**：由用户定义的函数。
+
+示例：用户自定义函数的通用语法如下：
+
+```python
+def function_name(parameters list):
+    # statements
+    return value
+```
+
+### 7) Python 中哪些与文件相关的库/模块？
+
+Python 提供了许多库/模块，方便我们操作文件系统上的文本文件和二进制文件。通过使用这些库，我们可以创建文件、更新内容、复制和删除文件。这些库是 `os`、`os.path` 和 `shutil`。
+
+*   `os` 和 `path`：这些库包含了访问文件系统的函数。
+*   `shutil`：此库用于复制和删除文件。
+
+### 8) Python 支持哪些不同的文件处理模式？
+
+Python 提供了三种打开文件的模式。只读、只写、读写和追加模式。`'r'` 用于以只读模式打开文件，`'w'` 用于以只写模式打开文件，`'rw'` 用于读写模式打开，`'a'` 用于以追加模式打开文件。如果未指定模式，默认以只读模式打开文件。
+
+*   **只读模式**：以只读模式打开文件。这是默认模式。
+*   **只写模式**：以只写模式打开文件。如果文件包含数据，数据将丢失。否则会创建一个新文件。
+*   **读写模式**：以读、写模式打开文件。这意味着更新模式。
+*   **追加模式**：以写模式打开文件，如果文件存在，则追加到文件末尾。
+
+## 9. Python 有哪些不同的运算符？
+
+Python 使用了丰富的运算符集合来执行各种操作。某些单独的运算符，如成员运算符和身份运算符并不那么常见，但允许执行特定的操作。
+
+- 算术运算符
+- 关系运算符
+- 赋值运算符
+- 逻辑运算符
+- 成员运算符
+- 身份运算符
+- 位运算符
+
+## 10. 如何在 Python 中创建 Unicode 字符串？
+
+在 Python 3 中，旧的 `Unicode` 类型已被 `str` 类型取代，且字符串默认被视为 Unicode。我们可以通过使用 `art.title.encode("utf-8")` 函数来创建 Unicode 字符串。
+
+## 11. Python 是解释型语言吗？
+
+Python 是一种解释型语言。Python 程序直接从源代码运行。它将源代码转换为中间语言代码，然后再次被翻译成必须执行的机器语言。与 Java 或 C 不同，Python 在执行之前不需要编译。
+
+
+
+## 12. Python 中局部变量和全局变量的规则是什么？
+
+在 Python 中，仅在函数内部被引用的变量被称为隐式全局变量。如果在函数体内的任何地方为变量赋值了新值，则它被认为是局部变量。如果变量在函数内部被赋值过新值，该变量就是隐式局部的，我们需要显式地将其声明为`global`。要使变量变为全局变量，我们需要使用`global`关键字对其进行声明。局部变量仅在局部体内可用。全局变量可以在程序的任何地方访问，任何函数都可以访问并修改它的值。
+
+## 13. Python 中的命名空间（Namespace）是什么？
+
+在 Python 中，每个名称都有一个存放的地方，这被称为命名空间。它就像一个盒子，变量名映射到放置其中的对象。每当搜索变量时，都会搜索这个盒子以获取对应的对象。
+
+## 14. Python 中的迭代器（Iterators）是什么？
+
+在 Python 中，迭代器用于遍历一组元素，如列表等容器。迭代器是项的集合，可以是列表、元组或字典。Python 迭代器实现了`__iter__`和`next()`方法来遍历存储的元素。在 Python 中，我们通常使用循环来遍历集合（列表、元组）。
+
+## 15. Python 中的生成器（Generator）是什么？
+
+在 Python 中，生成器是一种指定如何实现迭代器的方法。它是一个普通函数，除了在函数中`yield`表达式之外。它没有实现`__iter__`和`next()`方法，减少了其他开销。如果一个函数包含至少`yield`语句，它就会变成生成器。`yield`关键字通过保存当前状态暂停当前执行，并在需要时从相同的位置继续。
+
+## 16. Python 中的切片（Slicing）是什么？
+
+切片是一种用于从列表、元组和字符串等序列类型中选择范围项的机制。使用切片方法从范围内获取元素是有益且简单的。它需要一个`:`（冒号）来分隔字段的起始和结束索引。所有的数据集合类型`List`或`tuple`都允许我们使用切片来获取元素。虽然我们可以通过指定索引获取元素，但只能获取单个元素，而使用切片我们可以获取一组元素。
+
+## 17. Python 中的负索引是什么？
+
+Python 序列可以使用正数和负数索引进行访问。例如，0 是第一个正索引，1 是第二个正索引，依此类推。对于负索引，-1 是最后一个负索引，-2 是倒数第二个负索引，依此类推。索引从左到右遍历，并递加一直到列表结束。负索引从右到左遍历，逐个迭代直到列表开始。负索引用于反序遍历元素。
+
+## 18. Python 中的序列化（Pickling）和反序列化（Unpickling）是什么？
+
+Pickling 是`pickle`模块接受任何 Python 对象，将其转换为字符串表示并使用`dump()`函数将其导出到文件的过程。Unpickling 是从存储的字符串表示中检索原始 Python 对象以供使用的过程。`Pickle`是一个标准模块，用于 Python 对象结构进行序列化和反序列化。
+
+## 19. Python 2.x 和 Python 3.x 之间有什么区别？
+
+Python 2.x 是 Python 的旧版本。Python 3.x 是较新且最新的版本。Python 2.x 现在是遗留版本。Python 3.x 是该语言的现在和未来。Python 2 和 Python3 之间最可见的区别在于 print 语句（函数）。在 Python 2 中，它看起来像`print "Hello"`，而在 Python 3 中，它是`print ("Hello")`。Python 2 中的字符串隐式为 ASCII，而在 Python 3 中是 Unicode。`xrange()`方法已从 Python 3 版本中移除。在错误处理中引入了新关键字`is`。
+
+## 20. 如何用 Python 语言发送电子邮件？
+
+要发送电子邮件，Python 提供了`smtplib`和`email`模块。将这些模块导入创建的邮件脚本并通过身份验证发送邮件。它有一个方法`SMTP(smtp-server, port)`。它需要两个参数来建立 SMTP 连接。下面是一个发送邮件的简单示例。
+
+```python
+import smtplib
+### Calling SMTP
+s = smtplib.SMTP('smtp.gmail.com' , 587)
+# TLS for network security
+s.starttls()
+# User email Authentication
+s.login("sender_email_id" , "sender_email_id_password" )
+### message to be sent
+message = "Message_you_need_to_send"
+### sending the mail
+s.sendmail("sender_email_id" , "receiver_email_id" , message)
+```
+
+# PHP 入学者教程 第 1 章
+
+## 关于 PHP
+
+### 什么是 PHP？
+
+`PHP`是一种服务器端脚本语言，用于开发静态网站、动态网站或 Web 应用程序。`PHP`代表`Hypertext Pre-processor`（超文本处理器），早期曾代表`Personal Home Pages`（个人首页）。`PHP`脚本只能在安装了`PHP`的服务器上进行解释。访问`PHP`脚本的客户端电脑只需要 浏览器。`PHP`文件包含`PHP`标签并以`.php`扩展名结尾。
+
+### 脚本语言
+
+脚本是一组在运行时解释的编程指令。脚本语言是一种在运行时解释脚本的语言。脚本通常嵌入到其他软件环境中。脚本的通常是为了增强性能或为应用程序执行例行任务。服务器端脚本在服务器上进行解释，而客户端脚本由客户端应用程序解释。`PHP`是一种在服务器上解释的服务器端脚本，而`JavaScript`是一个由客户端浏览器解释的客户端脚本示例。`PHP`和`JavaScript`都可以嵌入到 HTML 页面中。
+
+### 编程语言 VS 脚本语言
+
+| 编程语言 | 脚本语言 |
+| :--- | :--- |
+| 拥有开发完整应用程序所需的所有功能 | 主要用于例行任务 |
+| 代码在执行前必须经过编译 | 代码通常无需编译即可执行 |
+| 不需要嵌入到其他语言中 | 通常嵌入到其他软件环境中 |
+
+### PHP 代表什么？
+
+`PHP`的意思是`Personal Home Page`（个人首页），但它现在代表递归回缩写`PHP: Hypertext Preprocessor`（PHP：超文本处理器）。`PHP`代码可以嵌入 HTML 代码中，也可以与各种 Web 模板系统、Web 内容管理系统和 Web 框架结合。
+
+### PHP 语法
+
+`PHP`文件也可以包含如`HTML`等标签以及`JavaScript`等客户端脚本。
+
+* `HTML`是学习`PHP`语言时的额外优势。你甚至可以在不知道`HTML`的情况下学习`PHP`，但建议你至少了解`HTML`的基础。
+* 用于数据库驱动应用程序的数据库管理系统`DBMS`。
+* 对于交互式应用程序和 Web 服务等高级主题，你需要`JavaScript`和`XML`。下所示流程图说明了`PHP` Web 的基本架构以及服务器如何处理请求。
+
+### 为什么要使用 PHP？
+
+你显然听过许多编程语言；你可能想知道为什么要把`PHP`作为我们 Web 编程的选择。以下是一些具有说服力的理由。
+
+* `PHP`是开源且免费的。
+* 与`JSP`、`ASP`等语言相比，学习曲线较短。
+* 庞大的社区文档。
+* 大多数 Web 托管服务器默认支持`PHP`，不像`ASP`等需要`IIS`的语言。这使得`PHP`成为一个高效益的选择。
+* `PHP`定期更新以跟上最新的技术趋势。
+* 使用`PHP`的其他好处是它是一种服务器端脚本语言；这意味着你只需要在服务器上安装它，向服务器请求资源的客户端电脑不需要安装`PHP`；仅需 浏览器即可。
+* `PHP`内置支持与`MySQL`协同工作；这并不意味着你可以将`PHP`与其他数据库管理系统配合。你仍然可以使用
+  * `Postgres`
+  * `Oracle`
+  * `MS SQL Server`
+  * `ODBC` 等
+* `PHP`是跨平台的；这意味着你可以将应用程序部署在多个不同的操作系统上，如`windows`、`Linux`、`Mac OS`等。
+
+### PHP 的用途与市场份额
+
+在市场份额方面，互联网上有超过 2000 万个使用`PHP`脚本语言开发的网站和应用程序。这可能归因于以下几点；下图显示了一些使用`PHP`的流行站点![](img/src1N.jpg)
+
+# 第 2 章
+
+## 安装 PHP
+
+为了安装`PHP`，我们需要`Apache`、`MySQL`和`PHP`栈。它在不同的操作系统上可用。以下是某些选项：
+
+* `WAMP` 用于 Windows
+* `LAMP` 用于 Linux
+* `MAMP` 用于 Mac
+* `SAMP` 用于 Solaris
+* `FAMP` 用于 FreeBSD
+* `XAMPP` 用于跨平台
+
+`XAMPP`包含了`Apache`、`MySQL`等组件等。
+
+### 什么是 XAMPP
+
+`XAMPP`是在服务器上解释的`Apache`、`MySQL`、`PHP`和`Perl`软件包。它由`Apache`维护`XAMPP`代表：
+
+* `X` - 操作系统
+* `A` - Apache
+* `M` - MySQL
+* `P` - PHP
+* `P` - Perl
+
+### 为什么使用 XAMPP？
+
+为了使用`PHP`，你需要安装`Apache`和`MySQL`。`XAMPP`提供了一个易于使用的控制面板来管理`Apache`。如果你单独安装`Apache`，你仍然需要设置和集成它。`XAMPP`处理`PHP`和`Perl`的复杂性。你不需要记住启动`Apache`的命令。
+
+* 下载`XAMPP`安装程序：http://www.apachefriends.org/en/xampp.html
+
+### 安装
+
+`XAMPP`就像安装其他 Windows 程序一样。在我们测试`XAMPP`安装之前，让我们先看看基础目录。
+
+#### 基础 Web 服务器配置
+
+本教程假设你在 Windows 的`C`上安装。以下是你需要了解的基础目录列表：
+
+* `htdocs`：这是 Web 根目录。所有的`PHP`代码将放在此目录中。
+* `mysql`：此目录包含与`MySQL`数据库引擎相关的所有信息，默认运行在端口`3306`。
+* `php`：此目录包含`PHP`安装文件。它包含一个名为`php.ini`的重要文件。该目录用于配置`PHP`在服务器上的行为。默认情况下，`Apache` Web 服务器运行在端口`80`。如果端口`80`被其他 Web 服务器占用，可以使用不同的端口。
+
+#### 控制面板
+
+控制面板用于管理通过`XAMPP`安装的程序。打开`XAMPP`控制面板：
+
+* 点击开始菜单
+* 程序目录并找到`Apache Friends`，然后是`XAMPP`，如图所示![](img/src1MV.jpg)
+* 下图显示了控制面板![](img/src1NC.jpg)
+
+### 3) 此部分包含实用的工具，如`Netsat`、Windows 服务快捷方式等。
+
+### 4) 此部分显示模块的状态信息。控制面板可用于：
+
+* 安装和卸载通过`XAMPP`安装的服务，如`Apache`、`MySQL`等
+* 启动和停止服务。
+* 打开配置文件等。
+
+### 配置 XAMPP
+
+现在让我们来看看开始使用`XAMPP`安装程序开发 PHP 驱动网站之前需要的基础配置。在您喜爱的浏览器中输入 URL `http://localhost/xampp/`。最好的 PHP IDE 是什么？PHP IDE 是一个允许您轻松编写 PHP 代码的程序。PHP IDE 通常配有语法高亮功能，在某些情况下还具有自动补全功能。这意味着如果你写了一个 PHP 解释器识别的 PHP 关键字，该关键字将显示为与普通语句不同的颜色。自动补全功能会在你输入时自动弹出已知的 PHP 关键字。
+
+`Notepad`也可以用于编写和编辑 PHP 代码。使用如`Notepad`这样的编辑器的缺点是调试脚本变得困难，因为很难发现诸如关键字拼写错误、未闭合括号等错误，而 IDE 会高亮带有错误的语句，让你易于发现它们。下表显示了 5 种流行的 PHP 编辑器
+
+| 编辑器 | 许可证 | 跨平台 | 简要描述 |
+| --- | --- | --- | --- |
+| Netbeans IDE | 开源 | 是 | ● 专用的 PHP 编码环境，具有关键字和其他已知信息的语法高亮和代码补全。● 支持与 PHP MVC 框架集成，例如`Zend`。● 显示文件更改的代码历史。● 通过插件支持`SFTP`、`FTP`和`SVN`。 |
+| Dreamweaver | 商业 | 是 | ● 支持`HTML`和`PHP`。● 关键字和其他已知信息的语法高亮、代码折叠和补全。● 支持`SFTP`和`FTP`。 |
+| Zend studio | 商业 | 是 | ● 与`Zend Server`、`Zend PHP`框架、`PHPUnit`、`phpDocumentor`等集成。● 具有语法高亮、代码折叠。● 支持 Web 服务等。 |
+| PHP Eclipse | 开源 | 是 | ● 代码格式化。● 支持`SVN`、`SSH/FTP` |
+| Notepad ++ | 免费软件 | 仅 Windows | ● 语法高亮。● 通过插件支持`SFTP`和`FTP`。 |
+
+### Netbeans IDE PHP 编辑器
+
+如上表简述，`Netbeans IDE`具有增强 PHP 代码人员效率的强大功能。可以从`http://netbeans.org/downloads/index.html`免费下载该 IDE。
+
+* 语法高亮和自动补全功能提高了您的工作效率
+* 它对`MySQL`等数据库系统有原生支持。你不需要使用两个程序来编写和开发数据库。
+* IDE 可以在协作环境中使用。当你需要与其他开发者以团队形式工作时，这非常有用。
+* IDE 支持其他语言，如：
+  * `Java SE`
+  * `Java EE`
+  * `C`
+  * `C++`
+
+### Netbeans IDE 简介
+
+在成功安装`Netbeans IDE` PHP 编辑器后，像运行任何其他 Windows 程序一样运行它。
+
+1. **项目资源管理器 (Project explorer)** – 此面板用于显示所有打开的项目。项目以树形视图列出。
+2. **快捷工具栏 (Shortcuts tool bar)** – 此工具栏包含经常执行任务的快捷方式，如创建新项目、打开现有项目、撤销和重做操作等。
+3. **启动页 (Startup page)** – 此页面包含 3 个标签页，即`Learn & Discover`、`My Netbeans`和`What’s New`。
+   * 第一个标签`[Learn and Discover]`向您介绍`Netbeans IDE`的功能，展示了一些可以在`Netbeans IDE`中开发的演示和教程。
+   * 第二个标签`[My Netbeans]`列出最近打开的项目，允许您安装插件并激活 IDE 的功能。
+4. **输出窗口 (Output window)** – 用于显示来自 Java 控制台应用程序的输出。它还用于显示日志和调试信息。
+
+`Netbeans PHP editor`允许与`Symfony`和`Zend`等 PHP MVC 框架集成。目前我们不选择任何 MVC 框架。点击完成 (Finish)。
+
+* 您新创建的项目将显示在项目浏览器中，并为您创建一个`index.php`页面。
+* 新创建的页面包含一些 HTML 代码。将其替换为下方所示的代码。
+
+### 运行您的第一个 PHP 示例
+
+```php
+<?php
+echo "Hello World!";
+?>
+```
+
+* 点击工具栏上的运行按钮
+* 您的默认浏览器将打开 URL `http://localhost/phplessons/index.php`。浏览器中将显示输出“Hello World!”。
+* `XAMPP`是`X-cross platform`（跨平台）、`Apache`、`MySQL`、`PHP`和`Perl`的缩写。
+* PHP 编辑器是一个允许您在最短时间内编写 PHP 代码，并允许您在设计时调试语法错误的程序。
+* `Netbeans PHP editor`是一个跨平台的开源编辑器，可以提高 PHP 开发人员的效率。
+
+### 第 3 章 PHP 数据类型、变量、常量、运算符
+
+### 数据类型
+
+数据类型是根据属性将数据归入不同的类别；
+
+* 字母数字字符被归类为字符串
+* 整数被归类为整数
+* 带有小数点的数字归类为浮点数
+* 真或假值被归类为布尔（Boolean）
+
+PHP 是一种弱类型语言；它没有显式定义的数据类型。PHP 通过分析提供的数据属性来确定数据类型。PHP 隐式支持以下数据类型
+
+* **整数 (Integer)** – 整数，例如`-3`、`0`、`69`。整数的最大值取决于平台。在 32 位机器上，通常约为 20 亿。64 位机器具有更大的值。使用常量`PHP_INT_MAX`来确定最大值。
+
+```php
+<?php
+echo PHP_INT_MAX;
+?>
+```
+
+`?> Output: 9223372036854775807`
+
+● **浮点数** – 小进制数字，例如`3.14`。它们也被称为双精度或实数。浮点数的最大值取决于平台。浮点数大于整数。
+
+● **字符字符串** – 例如`Hello World`
+
+
+
+- 布尔值 – 例如 `True` 或 `false`。
+
+## PHP 变量
+
+变量是赋值给在运行时存储数据的内存位置的名称。变量的作用域决定了它的可见性。`PHP` 全局变量可以被应用程序中的所有脚本访问。局部变量仅对定义它的脚本可见。
+
+将变量想象成一个装有水的杯子。你可以向杯子里加水、把水全部喝光、重新装水等。变量也是如此。变量用于存储数据并在需要时提供所存储的数据。与其它编程语言一样，`PHP` 也支持变量。现在让我们来看一下在 `PHP` 中创建变量时遵循的规则。
+
+- 所有变量名必须以美元符号 `$` 开头，例如 `$` 后跟一个字母或下划线。
+
+![Learn about PHP Variable, Operators and Data types](img/rsrc1UT.jpg)
+
+- 变量名大小写敏感；这意味着 `$my_var` 与 `$MY_VAR` 不同。
+
+![Learn about PHP Variable, Operators and Data types](img/rsrc1V0.jpg)
+
+- 所有变量名必须以字母开头，后跟其他字符，例如 `$my_var1`。`$1my_var` 不是合法的变量名。
+
+![Learn about PHP Variable, Operators and Data types](img/rsrc1V6.jpg)
+
+- 变量名不能包含任何空格，`$first name` 不是合法的名称。你可以使用下划线代替空格，例如 `$first_name`。你不能使用美元符号或减号字符来分隔变量名。
+
+![Learn about PHP Variable, Operators and Data types](img/rsrc1VC.jpg)
+
+现在让我们来看 `PHP` 如何根据所提供数据的属性来确定数据类型。
+
+```php
+<?php  
+$my_var = 1;  
+echo $my_var;  
+?>
+```
+
+`?> Output: 1`
+
+### 浮点数
+
+```php
+<?php  
+$my_var = 3.14;  
+echo $my_var;  
+?>
+```
+
+`?> Output: 3.14`
+
+### 字符字符串
+
+```php
+<?php  
+$my_var ="Hypertext Pre Processor";  
+echo $my_var;  
+?>
+```
+
+`?> Output: Hypertext Pre Processor`
+
+## 变量的使用
+
+变量有助于将数据与程序算法分离。同一个算法可以用于不同的输入数据值。例如，假设你正在开发一个将两个数字相加的计算器程序，你可以创建两个变量来接收这些数字，然后在执行加法的表达式中使用这些变量名。
+
+## 变量类型转换
+
+在 `C#` 等语言中使用对变量进行算术运算，需要变量具有相同的数据类型。类型转换是将变量或值转换为所需的数据类型。在执行需要变量具有相同数据类型的算术运算时，这非常有用。`PHP` 中的类型转换是由解释器完成的。在 `C#` 等其他语言中，你必须转换变量。`PHP` 也允许你转换数据类型。这被称为显式转换。
+
+```php
+<?php  
+$a = 1;  
+$b = 1.5;  
+$c = $a + $b;  
+$c = $a + (int) $b;  
+echo $c;  
+?>
+```
+
+`?> Output: 2`
+
+上述代码输出 2。
+
+`var_dump` 函数用于确定数据类型。下面的代码演示了如何使用 `var_dump` 函数。
+
+```php
+<?php  
+$a = 1;  
+var_dump($a);  
+$b = 1.5;  
+var_dump($b);  
+$c = "I Love PHP";  
+var_dump($c);  
+$d = true;  
+var_dump($d);  
+?>
+```
+
+`?> Output: int(1) float(1.5) string(10) "I Love PHP" bool(true)`
+
+## PHP 常量
+
+定义常量：常量是一个运行时无法更改值的变量。假设我们正在开发一个使用 `PI` 值 `3.14` 的程序，我们可以使用常量来存储它的值。现在让我们来看一个定义常量的示例。
+
+```php
+define('PI',3.14); // 创建一个值为 3.14 的常量
+```
+
+一旦你定义 `PI` 为 `3.14`，编写下面的代码将产生错误：
+
+```php
+PI = 4; // PI 已定义为常量，因此不允许赋值。
+```
+
+## PHP 运算符
+
+### 算术运算符
+
+算术运算符用于对数值数据进行算术运算。连接运算符也作用于字符串值。`PHP` 支持以下运算符。
+
+| 运算符 | 名称 | 描述 | 示例 | 输出 |
+| --- | --- | --- | --- | --- |
+| `+` | 加法 | x 和 y 的和 | `1 + 1;` | `2` |
+| `-` | 减法 | x 和 y 的差 | `1 – 1;` | `0` |
+| `*` | 乘法 | x 和 y 的积 | `1 * 1;` | `1` |
+| `/` | 除法 | x 和 y 的商 | `1 / 1;` | `1` |
+| `%` | 取模 | x 除 y 的余数 | `1 % 1;` | `0` |
+| `**` | 幂 | x 的次方 | `2 ** 3;` | `8` |
+
+### 赋值运算符
+
+赋值运算符用于向变量赋值。它们也可以与算术运算符结合使用。
+
+| 运算符 | 名称 | 描述 | 示例 | 输出 |
+| --- | --- | --- | --- | --- |
+| `=` | 赋值 | 将值赋予 x | `x = 5;` | `5` |
+| `+=` | 加法 | x 增加 | `x += 1;` | `6` |
+| `-=` | 减法 | 从 x 中减去 | `x -= 2;` | `3` |
+| `*=` | 乘法 | x 乘以 | `x *= 3;` | `9` |
+| `/=` | 除法 | x 除以 | `x /= 2;` | `2` |
+| `%=` | 取模 | x 对 y 的余数 | `x %= 2;` | `1` |
+
+### 比较运算符
+
+比较运算符用于比较值和数据类型。
+
+| 运算符 | 名称 | 描述 | 示例 | 输出 |
+| --- | --- | --- | --- | --- |
+| `==` | 等于 | 比较 x 和 y，如果相等则返回真 | `1 == "1";` | `1` |
+| `===` | 恒等 | 同时比较值和数据类型 | `1 === "1";` | `0` |
+| `!=`, `<>` | 不等于 | 比较 x 和 y，如果不相等则返回真 | `2 != 1;` | `1` |
+| `>` | 大于 | 比较 x 和 y，如果 x 大于 y 则返回真 | `3 > 1;` | `1` |
+| `<` | 小于 | 比较 x 和 y，如果 x 小于 y 则返回真 | `2 < 1;` | `0` |
+| `>=` | 大于等于 | 比较 x 和 y，如果 x 大于等于 y 则返回真 | `1 >=1` | `1` |
+| `<=` | 小于等于 | 比较 x 和 y，如果 x 小于等于 y 则返回真 | `8 <= 6` | `0` |
+
+### 逻辑运算符
+
+在使用逻辑运算符时，任何大于或小于零（0）的数字均求值为真。零（0）求值为假。
+
+| 运算符 | 名称 | 描述 | 示例 | 输出 |
+| --- | --- | --- | --- | --- |
+| `and`, `&&` | 与 | 如果 x 和 y 都为真则返回真 | `1 and 4;True&& False;` | `1` 或 `0` |
+| `or`, `||` | 或 | 如果 x 或 y 只要有一个为真则返回真 | `6 or 9;0 || 0;` | `1` 或 `0` |
+| `xor` | 异或 | 如果仅 x 为真或仅 y 为真则返回真 | `1 xor 1;1 xor 0;` | `0` 或 `1` |
+| `!` | 非 | 如果 x 为假则返回真，如果 x 为真则返回假 | `!0;` | `1` |
+
+- `PHP` 是一种弱类型语言。
+- 变量是用于存储数据的内存位置。
+- 常量的值在运行时不能更改。
+- 类型强制转换用于将值或变量转换为所需的数据类型。
+- 算术运算符用于处理数值数据。
+- 赋值运算符用于将数据分配给变量。
+- 比较运算符用于比较变量或值。
+- 逻辑运算符用于比较条件或值。
+
+# 第 4 章 PHP 数组：关联数组、多维数组
+
+`PHP` `array`（数组）是一种变量，它可以在单个变量中存储多个相关数据。将数组想象成一个内部带有隔板的巧克力盒。盒子代表数组本身，而装有巧克力的空间代表存储在数组中的值。
+
+## 索引数组
+
+索引数组使用数字作为访问键。`access key` 是数组变量中内存槽的引用。每当我们想要读取或为数组元素分配新值时，都会使用 `access key`。下面是在 `PHP` 中创建索引数组的语法格式。
+
+```php
+<?php  
+$variable_name[n] = value;  
+?> 
+```
+
+或者：
+
+```php
+<?php  
+$variable_name = array(n => value, …);  
+?>
+```
+
+这里：
+
+- `$variable_name...` 是变量名。
+- `[n]` 是元素的访问索引数字。
+- `value` 是分配给数组元素的值。
+
+现在让我们来看一个索引数组的示例。假设我们有 5 部电影想要存储在数组变量中。我们可以使用如下所示的示例来实现。
+
+```php
+<?php  
+$movie[0] = 'Shaolin Monk';  
+$movie[1] = 'Drunken Master';  
+$movie[2] = 'American Ninja';  
+$movie[3] = 'Once upon a time in China';  
+$movie[4] = 'Replacement Killers';  
+?>
+```
+
+每部电影都分配了一个索引数字，用于检索或修改其值。观察以下代码：
+
+```php
+<?php  
+$movie[0]="Shaolin Monk";  
+$movie[1]="Drunken Master";  
+$movie[2]="American Ninja";  
+$movie[3]="Once upon a time in China";  
+$movie[4]="Replacement Killers";  
+
+echo $movie[3];  
+$movie[3] = " Eastern Condors";  
+echo $movie[3];  
+?>
+```
+
+输出：
+
+Once upon a time in China
+
+Eastern Condors
+
+如从上面的示例所示，在 `PHP` 中处理相同性质的多个值时，操作数组是非常简单灵活的。此外，上面的数组变量也可以以下代码创建。
+
+```php
+<?php  
+$movie = array(0 => "Shaolin Monk",  
+               1 => "Drunken Master",  
+               2 => "American Ninja",  
+               3 => "Once upon a time in China",  
+               4 =>"Replacement Killers" );  
+echo $movie[4];  
+?>
+```
+
+输出：Replacement Killers
+
+## PHP 关联数组
+
+关联数组与索引数组的区别在于，关联数组使用描述性名称作为 `id` 键（key）。下面是在 `PHP` 中创建关联数组的语法格式。
+
+```php
+<?php  
+$variable_name['key_name'] = value;  
+$variable_name = array('key_name' => value);  
+?>
+```
+
+这里：
+
+- `$variable_name...` 是变量名。
+- `['key_name']` 是元素的访问索引数字。
+- `value` 是分配给数组元素的值。
+
+假设我们有一组人，并想要将每个人的性别分配给他们的名字。我们可以使用关联数组来实现。下面的代码可以帮助我们完成操作。
+
+```php
+<?php  
+$persons = array("Mary" => "Female", "John" => "Male", "Mirriam" => "Female");  
+print_r($persons);  
+echo "";  
+echo "Mary is a " . $persons["Mary"];  
+?>
+```
+
+## PHP 数组函数
+
+### count 函数
+
+`count` 函数用于统计 `PHP` 数组包含的元素数量。下面的代码显示了实现。
+
+```php
+<?php  
+$lecturers = array("Mr. Jones", "Mr. Banda", "Mrs. Smith");  
+echo count($lecturers);  
+?>
+```
+
+输出：3
+
+### is_array 函数
+
+`is_array` 函数用于判断变量是否为数组。现在来看一个示例。
+
+```php
+<?php  
+$lecturers = array("Mr. Jones", "Mr. Banda", "Mrs. Smith");  
+echo is_array($lecturers);  
+?>
+```
+
+### sort 函数
+
+`sort` 函数用于排序数组。如果值是字母数字，它将按字母顺序排序。如果值是数值，它将按升序排序。接下来的示例：
+
+```php
+<?php  
+$persons = array("Mary" => "Female", "John" => "Male", "Mirriam" => "Female");  
+sort($persons);  
+print_r($persons);  
+?>
+```
+
+### ksort 函数
+
+`ksort` 函数用于按键对数组排序。接下来的示例：
+
+```php
+<?php  
+$persons = array("Mary" => "Female", "John" => "Male", "Mirriam" => "Female");  
+ksort($persons);  
+print_r($persons);  
+?>
+```
+
+### asort 函数
+
+`asort` 函数用于按值对数组排序。接下来的示例：
+
+```php
+<?php  
+$persons = array("Mary" => "Female", "John" => "Male", "Mirriam" => "Female");  
+asort($persons);  
+print_r($persons);  
+?>
+```
+
+### 为什么要使用数组？
+
+- 数组有助于分组相关信息。
+- 数组有助于编写整洁的代码。
+- 数组可以扩展。
+
+# 第 5 章 PHP 控制结构
+
+## If else, Switch Case
+
+什么是控制结构？代码执行可以如下所示：
+
+- **顺序**：按照编写顺序执行所有代码。
+- **决策**：在给定选项的情况下进行选择。代码执行取决于条件。
+
+控制结构是根据值决定程序执行路径的代码块。现在来看 `PHP` 支持的一些控制结构。
+
+## If Else
+
+`if... then... else` 是简单的控制结构。你有一段仅在条件为真时执行的代码。`if... then... else` 的语法如下：
+
+```php
+if (condition is true) { 
+block one 
+else 
+block two 
+}
+```
+
+这里：
+
+- `if (condition is true)` 是控制结构。
+- `block one` 是条件为真时执行的代码。
+- `{...else}` 是条件为假时的备选。
+- `block two` 是条件为假时执行的代码块。
+
+工作原理：下面的代码使用 `if... then... else` 来确定两个数字之间的较大值。
+
+```php
+<?php  
+$first_number = 7;  
+$second_number = 21;  
+
+if ($first_number > $second_number){  
+  echo "$first_number is greater than $second_number";  
+}else{
+  echo "$second_number is greater than $first_number";  
+}  
+?>
+```
+
+输出：21 is greater than 7
+
+## Switch Case
+
+`Switch... case` 类似于 `if then... else` 控制结构。它根据条件的值只执行单个代码块。如果没有满足任何条件，则执行 `default` 代码块。它具有以下基本语法：
+
+```php
+switch(condition){
+  case value:  
+    //要执行的代码块
+    break;  
+  case value2:  
+    //要执行的代码块
+    break;  
+  default:  
+    // 默认块代码
+    break;  
+}
+```
+
+## Switch 结构（Switch Structure）
+
+这里：
+
+- `switch(…){…}` 是控制结构块代码。
+- `case value: case…` 是根据条件值执行的代码块。
+- `default:` 是当没有值与条件匹配时执行的代码块。
+
+### 工作原理
+
+下方的流程图展示了 `switch` 控制结构是如何工作的：
+
+![](img/rsrc2F1.jpg)
+
+## PHP 循环：For、ForEach、While、Do While
+
+[示例]
+
+循环（Loop）是一种迭代控制结构，它涉及到在满足特定条件之前重复执行相同次数的代码。
+
+### PHP For 循环
+
+上述代码输出“21 大于 7”。
+
+### For 循环
+
+
+
+`for...` 循环按指定的次数执行代码块。`for` 循环主要有两种类型：
+
+- `for`
+- `for... each`
+
+现在，让我们分别单独查看它们。
+
+## For 循环
+
+它具有以下基本语法：
+
+```php
+<?php
+for (initialize; condition; increment){
+  // 要执行的代码
+}
+?>
+```
+
+这里：
+
+- `for...{...}` 是循环块
+- `initialize` 通常是一个整数，用于设置计数器的初始值。
+- `condition` 是每次 PHP 执行时评估的条件。如果评估结果为真，则终止 `for...` 循环。如果评估结果为假，则继续执行 `for...` 循环。
+- `increment` 用于增加计数器整数的初始值。
+
+## 工作原理
+
+下方的流程图展示了 PHP 中的 `for` 循环是如何工作的：
+
+![](img/rsrc2FS.jpg)
+
+## 如何编写代码
+
+下面的代码使用 `for...` 循环打印 10 乘以 0 到 10 的结果：
+
+```php
+<?php
+for ($i = 0; $i < 10; $i++){
+  $product = 10 * $i;
+  echo "The product of 10 * $i is $product <br/>";
+}
+?>
+```
+
+输出：
+
+```
+The product of 10 x 0 is 0
+The product of 10 x 1 is 10
+The product of 10 x 2 is 20
+The product of 10 x 3 is 30
+The product of 10 x 4 is 40
+The product of 10 x 5 is 50
+The product of 10 x 6 is 60
+The product of 10 x 7 is 70
+The product of 10 x 8 is 80
+The product of 10 x 9 is 90
+```
+
+## PHP For Each 循环
+
+`php foreach` 循环用于遍历数组值。它具有以下基本语法：
+
+```php
+<?php
+foreach($array_variable as $array_value){
+  // 代码块
+}
+?>
+```
+
+这里：
+
+- `foreach(...){...}` 是循环块
+- `$array_data` 是要循环的数组
+- `$array_value` 是持有当前项目的临时变量
+- `block of code`
+
+## 工作原理
+
+下方的流程图展示了 `foreach` 循环是如何工作的：
+
+![](img/src2GK.jpg)
+
+## While 循环
+
+While 循环用于执行代码块，直到满足某个条件。
+
+### 何时使用 While 循环
+
+- While 循环用于从数据库查询中读取记录。
+
+### While 循环的类型
+
+- `do... while` - 在条件之前至少执行一次代码块
+- `while...` - 先检查条件。如果评估结果为真，则只要条件满足就执行代码块。如果评估结果为假，则终止执行。
+
+## While 循环
+
+它具有以下语法：
+
+```php
+<?php
+while (condition){
+  // 要执行的代码块
+}
+?>
+```
+
+这里：
+
+- `while(...){...}` 是循环块
+- `condition` 是 while 循环评估的条件
+- `block of code`
+
+## 工作原理
+
+下方的流程图展示了 while 循环是如何工作的：
+
+![](img/src2HF.jpg)
+
+## PHP Do While
+
+`while...` 循环与 `do... while` 循环的区别在于，`do... while` 在评估条件之前至少执行一次。
+
+现在，让我们来看 `do... while` 循环的基本语法：
+
+```php
+<?php
+do{
+  // 要执行的代码块
+} while (condition);
+?>
+```
+
+这里：
+
+- `do{...} while(...)` 是循环块
+- `condition` 是 while 循环评估的条件
+- `block of code`
+
+## 工作原理
+
+下方的流程图展示了 `while...` 循环如何工作：
+
+![](img/src2J5.jpg)
+
+# 第 6 章 PHP 字符串函数：substr, strlen, strtolower, explode, strpos, str_replace
+
+## 什么是字符串？
+
+字符串是字符集合。字符串是 PHP 支持的数据类型之一。字符串变量可以包含字母数字。字符串在以下情况下创建：
+
+- 你声明变量并为其分配字符串字符
+- 你可以直接在 `echo` 语句中使用它们
+- 字符串是语言结构，有助于捕捉词汇。
+
+学习 PHP 中字符串的工作原理以及如何操作它们将使你成为一名高效且多产的开发者。
+
+## PHP 创建字符串
+
+现在让我们来看创建字符串的不同方式。
+
+### 创建字符串
+
+**使用单引号**：创建字符串最简单的方法是使用单引号。让我们看一个在 PHP 中创建简单字符串的示例：
+
+```php
+<?php
+var_dump("You need to be logged in to view this page");
+?>
+```
+
+输出：`string(42) "You need to be logged in to view this page"`
+
+**转义单引号**：如果单引号是字符串值的一部分，可以使用反斜杠对其进行转义。下面的代码展示了如何转义单引号：
+
+```php
+<?php
+echo "I \\'ll be back after 20 minutes";
+?>
+```
+
+输出：我将在 20 分钟后回来
+
+# PHP 函数：数值、内置、字符串、日期、用户定义
+
+## 什么是函数？
+
+函数是执行特定操作的可重用代码段或块。函数在调用时可以返回值，也可以简单地执行操作而不返回任何值。`PHP` 拥有 700 多个`内置`函数，用于执行不同的任务。
+
+## 为什么使用函数？
+
+- **更好的代码组织**：函数允许我们将执行特定任务的相关代码块组合在一起。
+- **可重用性**：一旦定义，函数就可以在 `PHP` 文件中的多个脚本中调用。这节省了我们在执行如连接数据库等例行任务时重复"造轮子"的时间。
+- **易于维护**：系统的更新只需要在一个地方进行即可。
+
+## 内置函数
+
+内置函数是存在于 `PHP` 安装包中的函数。这些内置函数使 `PHP` 成为一种非常高效且高产的脚本语言。内置函数可以分为许多类。以下是类别列表。
+
+### 字符串函数
+
+这些是处理字符串数据的函数，请参考关于字符串的文章获取字符串函数的实现示例。
+
+### 数值函数
+
+数值函数是返回数值结果的函数。`Numeric php function` 可用于格式化数字、返回常量、执行数学计算等。
+
+### 日期函数
+
+`date` 函数用于将 `Unix` 日期和时间格式化为人类可读的格式。查看 `PHP` `date` 函数文章获取更多详情。
+
+### 其他函数
+
+这些包括：
+
+- **数组**：请查看关于数组的文章示例
+- **文件**：请查看关于文件的文章获取示例
+- **数据库函数**：请查看 `MySQL PHP` 和其他数据库访问方法 v2 文章
+
+## 为什么使用用户定义函数？
+
+在以下情况下，用户定义函数会非常有用：
+
+- 你的应用程序中有例行任务，例如向数据库中添加数据
+- 对数据进行验证检查
+- 在系统中对用户进行身份验证等。
+
+这些活动将分布在多个页面中。创建一个所有页面都可以调用的函数是使 `PHP` 成为强大脚本语言的特性之一。
+
+在我们创建第一个用户定义函数之前，让我们先看看创建自己的函数时必须遵循的规则：
+
+- 函数名必须以字母或下划线开头，但不能以数字开头。
+- 函数名必须是唯一的。
+- 函数名不能包含空格。
+- 使用描述性的函数名被认为是一种良好的实践。
+- 函数还可以选择接受参数并返回值。
+
+现在让我们创建第一个函数。我们将创建一个非常基础的函数，用于说明 `PHP` 函数的主要组成部分：
+
+```php
+<?php  
+//定义一个显示 hello function 的函数
+function add_numbers(){  
+    echo 1 + 2;  
+}  
+add_numbers ();  
+?>
+```
+
+输出：3
+
+在这里：
+
+- `function...(){}` 是函数块，告诉 `PHP` 你正在定义一个自定义函数。
+- `add_numbers` 是使用函数时将调用的函数名。
+- `()` 可用于向函数传递参数。
+- `echo 'Hello function!';` 是执行的函数代码块。它可以是上述示例之外的任何代码。
+
+现在来看一个相当复杂的示例，它接受一个参数并像上面的函数一样显示消息。假设我们想要写一个在屏幕上打印用户名的函数，我们可以写一个接受用户名的自定义函数：
+
+```php
+<?php  
+function display_name($name) {
+    echo "Hello " . $name;  
+}  
+display_name("Martin King");
+?>
+```
+
+输出：Hello King
+
+在这里：
+
+- `($name)` 是参数，并初始化为匿名。如果没有向函数传递参数，将导致错误。
+
+现在我们来看一个接受参数并返回值的函数。我们将创建一个将千米转换为英里的函数：
+
+```php
+<?php  
+function kilometers_to_miles($kilometers) {
+    $miles = 0;
+    return $miles;  
+}  
+echo kilometers_to_miles(100);  
+?>
+```
+
+输出：62
+
+# 使用 GET 方法的 PHP 表单
+
+## 什么是表单？
+
+表单是一个包含用户界面项（如输入框、按钮等）的 HTML 标签。表单使用 `<form>` 标签定义。
+
+## 为什么使用表单？
+
+- 表单对于开发动态应用程序有用。
+- 表单可编辑数据库中的现有数据。
+- 我们将使用 HTML 标签来创建表单。
+
+## 示例
+
+下面的代码创建了一个注册表单：
+
+```html
+<html>
+<head>
+    <title>注册表单</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+    <h2>注册表单</h2>
+    <form action="registration.php" method="POST">
+        First name: <input type="text" name="firstname"> <br>
+        Last name: <input type="text" name="lastname"> <br>
+        <input type="hidden" name="form_submitted" value="1" />
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+```
+
+在网络浏览器中查看上述代码将显示以下表单：
+
+- `<form>...</form>` 是表单的开始和结束标签。
+- `action="registration.php" method="POST"` 指定了目标 URL 和提交类型。
+- `First name/Last name:` 是输入框的标签。
+- `<input type="text">` 是输入框标签。
+- `<br>` 是换行。
+- `<input type="hidden" name="form_submitted" value="1"/>` 是用于检查表单是否提交的隐藏值。
+- `<input type="submit" value="Submit">` 是按钮，点击时会将表单提交到服务器进行处理。
+
+## PHP POST 方法
+
+这是内置的 `PHP` 超全局数组变量，用于获取通过 HTTP POST 方法提交的值。该数组变量可以从程序中的任何脚本访问；它具有全局作用域。
+
+使用 post 方法的一个良好示例是向服务器提交登录详情。它的语法如下：
+
+```php
+<?php  
+$_POST['variable_name'];  
+```
+
+`$_POST[...]` 是 PHP 数组。`'variable_name'` 是 URL 变量名。
+
+## PHP GET 方法
+
+`$_GET` 是 PHP 内置的超全局数组变量，用于获取通过 HTTP GET 方法提交的值。
+
+- 该数组变量可以从程序中的任何脚本访问；它具有全局作用域。
+- 此方法会在 URL 中显示表单值。
+- 它非常适合搜索引擎表单，因为它允许用户对结果进行收藏。
+
+它具有以下语法：
+
+```php
+<?php
+$_GET['variable_name'];
+?>
+```
+
+在这里，`$_GET[...]` 是 PHP 数组。`'variable_name'` 是 URL 变量名。
+
+# 第 7 章 PHP File() 函数：`file_exists`, `Fopen`, `fwrite`, `Fclose`, `Fgets`, `copy`, `unlink`
+
+## 什么是文件？
+
+文件简单来说是计算机上存储信息的资源。文件通常用于存储此类信息：
+
+- 程序的配置设置
+- 简单的数据，例如电话号码对应的联系人。
+- 图像、图片、照片等。
+
+## PHP 文件格式支持
+
+PHP 文件函数支持广泛的文件格式，包括：
+
+- `File.txt`
+- `File.log`
+- `File.custom_extension`，即 `file.xyz`
+- `File.csv`
+- `File.gif`, `file.jpg` 等
+
+与需要其他软件和技能来管理 DBMS 系统相比，文件为简单数据提供了永久且高效的数据存储解决方案：
+
+- 你想要存储简单数据（如服务器日志）以便后续检索和分析。
+- 你想要存储程序设置，即 `program.ini`
+
+## PHP 函数
+
+PHP 通过其丰富的内置函数集合提供了一种方便的文件处理方法。Windows 和 MAC OS 等操作系统对大小写不敏感，而 Linux 或 Unix 操作系统对大小写敏感。采用仅使用小写字母进行文件命名的规范是一种良好的做法，可以确保最大的跨平台兼容性。
+
+现在让我们来看一些常用的 PHP 文件函数。
+
+### PHP `file_exists` 函数
+
+此函数用于判断文件是否存在。
+
+- 当我们想在处理文件之前知道该文件是否存在时，它非常有用。
+- 当你创建一个新文件并想确保该文件不存在时，也可以使用此函数。
+
+`file_exists` 函数具有以下语法：
+
+```php
+<?php
+file_exists($filename);
+?>
+```
+
+在这里，`file_exists()` 是 PHP 函数，如果文件存在则返回 true，如果不存在则返回 false。`$file_name` 是要检查的文件路径和名称。以下代码使用 `file_exists` 来判断 `settings.txt` 是否存在：
+
+```php
+<?php
+if (file_exists('settings.txt')) {
+    echo 'file found!';
+} else {
+    echo 'settings.txt does not exist';
+}
+?>
+```
+
+将上述代码保存名为 `file_function.php` 的文件中。假设你将文件保存在 htdocs 中的 `phptuts` 文件夹中，打开 URL `http://localhost/phptuts/file_function.php`。
+
+## PHP Try Catch 示例：异常与错误处理
+
+### 什么是异常？
+
+错误是程序本身无法处理的意外程序结果。错误通过修复程序来解决。错误的一个例子是永不停止执行的无限循环。
+
+异常是程序本身可以处理的意外程序结果。异常的示例包括尝试打开一个不存在的文件。这种异常可以通过创建文件或向用户提供搜索文件的选项来处理。
+
+## PHP 错误处理
+
+当发生错误时，取决于你的配置设置，PHP 会在浏览器中显示与发生错误相关的信息。PHP 提供了多种处理错误的方法。我们将查看三种常用方法：
+
+1. **Die 语句**：`die` 函数将 `echo` 和 `exit` 函数合并为一。当我们希望在发生错误时输出一条消息并停止脚本执行时，它非常有用。
+2. **自定义错误处理器**：这些是每当发生错误时就会调用的用户自定义函数。
+3. **PHP 错误报告**：错误消息取决于你的 PHP 错误报告设置。这种方法在开发环境中非常有用，因为你可能不知道导致错误的原因。显示的信息可以帮助你调试应用程序。
+
+# 20 个 PHP 面试题解答
+
+### 1) 什么是 PHP？
+
+PHP 是一种基于脚本的 Web 语言，允许开发者动态创建生成的网页。
+
+### 2) PHP 的缩写代表什么？
+
+PHP 代表 `PHP`：Hypertext Preprocessor（超文本预处理器）。
+
+### 3) PHP 像哪种编程语言？
+
+PHP 的语法类似于 Perl 和 `C`。
+
+### 4) PEAR 代表什么？
+
+PEAR 代表 "PHP Extension and Application Repository（PHP 扩展与应用程序库）。它扩展了 PHP 并为 Web 开发者提供了更高层次的编程。
+
+### 5) 实际使用的 PHP 版本是什么？
+
+推荐使用的 PHP 版本是 `7.1` 或 `7.2`。
+
+### 6) 如何从命令行执行 PHP 脚本？
+
+只需使用 PHP 命令行界面 (`CLI`) 并指定要执行的脚本文件名，如下：
+
+```
+php script.php
+```
+
+### 7) 如何从命令行界面运行交互式 PHP Shell？
+
+只需使用带有 `-a` 选项的 PHP CLI 程序如下：
+
+```
+php -a
+```
+
+
+
+### 8) 启动和结束 PHP 代码块的正确且最常用的方法是什么？
+
+启动和结束 PHP 脚本最常用的方法是：
+
+```php
+<?php --- PHP 代码---- ?>
+```
+
+和
+
+```php
+<? <? PHP 代码 --- ?>
+```
+
+### 9) 如何直接将输出显示到浏览器？
+
+为了能够将输出显示到浏览器，我们必须使用特殊标签`<?=`和`?>`。
+
+### 10) PHP 4 和 PHP 5 的主要区别是什么？
+
+PHP 5 提供了许多额外的 OOP（面向对象编程）特性。
+
+### 11) PHP 支持多重继承吗？
+
+PHP 只支持单继承；这意味着一个类只能使用`extended`关键字从一个类进行扩展。
+
+### 12) final 类（final class）和 final 方法（final method）什么含义？
+
+`final`是`PHP5`中引入的。final 类意味着该类不能被扩展，final 方法不能被重写。
+
+### 13) PHP 中如何对对象进行比较？
+
+我们使用运算符`==`来测试两个对象是否实例化自同一个类，并且具有相同的属性和相等的值。我们可以通过恒等运算符`===`来测试两个对象是否引用自同类的同一个实例。
+
+### 14) PHP 和 HTML 如何交互？
+
+可以通过 PHP 脚本生成 HTML，也可以从 HTML 向 PHP 传递部分信息。
+
+### 15) 当通过表单或 URL 传递值时，需要什么类型的操作？
+
+如果我们想通过表单或 URL 传递值，我们需要使用`htmlspecialchars()`和`urlencode()`对它们进行编码和解码。
+
+### 16) PHP 和 Javascript 如何交互？
+
+PHP 和 Javascript 无法直接交互，因为 PHP 是服务端语言而 Javascript 是客户端语言。但是，我们可以交换变量，因为 PHP 可以生成供浏览器执行的 Javascript 代码，并且可以通过 URL 将特定变量传回 PHP。
+
+### 17) 使用图像函数需要什么？
+
+执行图像函数需要 GD 库。
+
+### 18) 函数`imagetypes()`的作用是什么？
+
+`imagetypes()`提供当前 GD-PHP 版本支持的图像格式和类型。
+
+### 19) 获取图像属性（尺寸、宽度和高度）使用哪些函数？
+
+这些函数是用于尺寸的`getimagesize()`、用于宽度的`imagesx()`和用于高度的`imagesy()`。
+
+### 20) 如何处理`include()`和`require()`函数在执行失败的情况？
+
+如果`require()`函数无法访问该文件，它将以致命错误（fatal error）结束。然而，`include()`函数会产生警告，PHP 脚本将继续执行。
+
+## 第 8 章 初学者入门 MySQL
+
+MySQL 是最流行的开源数据库。本课程从数据库基础知识、规范化和`MySQL Workbench`的安装开始。随后，它将教授 MySQL 命令，如`Select`、`Insert`、`Group By`，以及`通配符` & `函数`等高级主题。
+
+### 数据库与 SQL
+
+### 什么是数据？
+
+简单来说，数据可以是与所考虑的任何对象相关的实。例如，你的名字、年龄、身高、体重等都是与你相关的数据。图片、`image`、`file`、`pdf`等也可以被视为数据。
+
+### 什么是数据库？
+
+数据库是数据的系统集合。数据库支持数据的存储和操作。数据库使数据管理变得简单。让我们讨论几个例子：
+
+* 在线电话簿肯定会使用数据库来存储与人员、电话号码、其他联系方式等相关的数据。
+
+* 你的电力服务供应商显然正在使用数据库来管理账单、客户相关问题、处理故障数据等。
+
+* 我们也考虑`facebook`。它需要存储、操作和展示与成员、其朋友、成员活动、消息、广告等更多相关的数据。
+
+### 什么是数据库管理系统 (DBMS)？
+
+数据库管理系统（DBMS）是一个程序集合，使用户能够访问数据库、操作数据、报告/表示数据。它还有助于控制对数据库的访问。数据库管理系统并不是新概念，最早于 20 世纪 60 年代实现。查尔斯·巴赫的集成数据存储（`IDS`）被认为是历史上第一个 DBMS。随着时间的推移，数据库技术发生了巨大演变，而数据库的使用和预期功能也大幅增加。
+
+### DBMS 的类型
+
+让我们看看 DBMS 家族是如何随时间演变的。下面的图展示了 DBMS 类别的演变。
+
+* **层次型** - 这种类型的 DBMS 采用“父子”关系来存储数据。这种类型的 DBMS 现在很少使用。它的结构像一棵树，节点代表记录，分支代表字段。`Windows XP`中使用的`windows registry`是层次型数据库的一个示例。配置设置以带有节点的树结构形式存储。
+
+* **网络型 DBMS** - 这种类型的 DBMS 支持多对多关系。这通常会导致复杂的数据库结构。`RDM Server`是实现网络模型的数据库管理系统示例。
+
+* **关系型 DBMS** - 这种类型的 DBMS 以表的形式（也称为关系）定义数据库关系。与网络型 DBMS 不同，`RDBMS`不支持多对多关系。关系型 DBMS 通常具有它们支持的预定义数据类型。这是市场上最流行的 DBMS 类型。关系型数据库管理系统包括`MySQL`、`Oracle`和`Microsoft SQL Server`数据库。
+
+* **对象关系 DBMS** - 这种类型支持新数据类型的存储。要存储的数据以对象的形式存在。存储在数据库中的对象具有属性（例如`gender`、`age`）和定义如何处理数据的方法`PostgreSQL`是对象关系 DBMS 的示例。
+
+### 什么是 SQL？
+
+* 结构化查询语言（`SQL`）读作 "S-Q-L"，有时读作 "See-Quel"，实际上是处理关系型数据库的标准语言。
+
+* `SQL`编程可以有效地用于插入、搜索、更新、删除数据库记录。
+
+* 这并不意味着`SQL`不能做这些之外的事情。
+
+* 事实上它可以它可以很多事情，包括但不限于数据库的优化和维护。
+
+* 关系型数据库如`MySQL Database`、`Oracle`、`Ms SQL server`、`Sybase`等都使用`SQL`！
+
+* 这些数据库使用的`SQL`语法几乎相似，不同之处在于某些使用少量不同的语法甚至是专有的`SQL`语法。
+
+### SQL 示例
+
+```
+SELECT * FROM Members WHERE Age > 30
+```
+
+### 为什么要使用 MySQL？
+
+市场上有很多关系型数据库管理系统。关系型数据库的示例包括`Microsoft SQL Server`、`Microsoft Access`、`Oracle`、`DB2`等。人们可能会问为什么选择`MySQL`而不是其他数据库管理系统。
+
+### MySQL workbench - SQL 开发工具
+
+结构化查询语言（`SQL`）允许我们操作关系型数据库。`SQL`是所有关系型数据库的核心。
+
+* `MySQLworkbench`内置了`SQL`可视编辑器。
+
+* `Visual SQL`编辑器允许开发者针对`MySQL server`数据库构建、编辑和运行查询。它具有查看和导出数据的实用程序。
+
+* 它的语法高亮有助于开发者轻松编写和调试`SQL`语句。
+
+* 可以运行多个查询，结果会自动显示在不同的标签页中。
+
+* 查询还保存在历史面板中，以便稍后检索和运行。
+
+### MySQL workbench - 管理工具
+
+服务器管理对于保护公司数据起着至关重要的作用。服务器管理的主要问题是用户管理、服务器配置、服务器日志等。`Workbench MySQL`具有以下功能，简化了`MySQL server`管理过程：
+
+* **用户管理** - 用于管理用户的可视化实用程序，让数据库管理员在需要时轻松添加新用户和删除现有用户，授予和删除权限并查看用户配置文件。
+
+* **服务器配置** - 允许对服务器进行高级配置并微调以获得最佳性能。
+
+* **数据库备份和还原** - 用于导出/导入`MySQL dump`文件的可视化工具。`MySQL dump`文件包含用于创建数据库、表、视图、存储过程和插入数据的 SQL 脚本。
+
+* **服务器日志** - 查看`MySQL server logs`的可视化工具。日志包括`error logs`、`binary logs`和`InnodDB logs`。这些日志在对服务器进行诊断时非常有用。下图显示了`MySQL Workbench`的建模窗口。
+
+数据库设计的主要目标是为建议的数据库系统产生逻辑和物理设计模型。逻辑模型侧于数据需求和要存储的数据，且独立于物理考虑。它不涉及数据将如何存储或在物理上存储何处。物理数据设计模型涉及利用硬件资源和软件系统（如数据库管理系统`DBMS`）将数据库的逻辑设计转换为物理介质上的设计。
+
+### 为什么数据库设计如此重要？
+
+数据库设计对于高性能数据库系统至关重要。除了提高性能外，设计良好的数据库易于维护、提高数据一致性，并在磁盘存储空间方面具有成本效益。注意，数据库的精之处在于其设计。使用`SQL`进行数据操作相对简单。
+
+### 数据库设计阶段
+
+- **逻辑模型**：此阶段涉及根据需求开发数据库模型。整个设计都在纸面上完成，没有任何物理实现或特定的`DBMS`考虑。
+
+- **物理模型**：此阶段在考虑`DBMS`和物理实现因素的基础上对数据库的逻辑模型进行实现。
+
+### 实现
+
+- **数据转换与加载**：此阶段涉及将数据从旧系统导入并转换到新数据库。
+
+- **测试**：此阶段涉及识别新实现系统中的错误。它根据需求规范检查数据库。
+
+### 两种类型的数据库技术
+
+1. 规范化
+
+2. ER 建模
+
+### MySQL 创建数据库、表、数据类型
+
+### 创建数据库的步骤
+
+MySQL 有两种方式创建数据库：
+
+1) 通过执行简单的`SQL`查询
+
+2) 在`MySQL Workbench`中使用正向工程
+
+`CREATE DATABASE`是创建数据库的`SQL`命令。假设你需要创建一个名为 "movies" 的数据库。你可以通过执行以下`SQL`命令来实现。
+
+```sql
+CREATE DATABASE movies;
+```
+
+注意：你也可以使用命令`CREATE SCHEMA`代替`CREATE DATABASE`。现在让我们改进我们的`SQL`查询，添加更多参数和规范。IF NOT EXISTS
+
+一个`MySQL`服务器可以拥有多个数据库。如果你不是唯一访问同一`MySQL`服务器的人，或者你必须处理多个数据库，那么可能会尝试创建一个与现有数据库同名的新数据库。`IF NOT EXISTS`允许指示`MySQL`服务器在创建数据库之前检查是否存在名称相似的数据库。当使用`IF NOT EXISTS`时，只有在给定的名称与现有数据库名称冲突时才会创建数据库。如果不使用`IF NOT EXISTS`，`MySQL`将抛出错误。
+
+```sql
+CREATE DATABASE IF NOT EXISTS movies;
+```
+
+### 创建表
+
+可以使用`CREATE TABLE`语句创建 MySQL 表，其实际语法如下。
+
+```sql
+CREATE TABLE [IF NOT EXISTS] `TableName` (`fieldname` dataType [optional parameters]) ENGINE = storage Engine;
+```
+
+- `"CREATE TABLE"`负责在数据库中创建表。
+
+- `""[IF NOT EXISTS]"`是可选的，只有在未找到匹配的表名时才创建表。
+
+- "`fieldName"`是字段名，`"data Type"`定义了存储在字段中的数据性质。
+
+- `"[optional parameters]"`关于字段的额外信息，例如`AUTO_INCREMENT`、`NOT NULL`等。
+
+**创建表示例：**
+
+```sql
+CREATE TABLE IF NOT EXISTS `MyFlixDB`.`Members` (
+  `membership_number` INT AUTOINCREMENT,
+  `full_names` VARCHAR(150) NOT NULL,
+  `gender` VARCHAR(6),
+  `date_of_birth` DATE,
+  `physical_address` VARCHAR(255),
+  `postal_address` VARCHAR(255),
+  `contact_number` VARCHAR(75),
+  `email` VARCHAR(255),
+  PRIMARY KEY (`membership_number`)
+) ENGINE = InnoDB;
+```
+
+现在让我们看看`MySQL`的数据类型有哪些。你可以根据需要使用任何一种。在创建数据库时，你应该尽量避免低估或高估潜在的数据范围。
+
+## 第 10 章 数据类型
+
+数据类型定义了可以在表的特定列中存储的数据的性质。`MySQL`有 3 大类数据类型，如下：
+
+1. 数值
+
+2. 文本
+
+3. 日期/时间
+
+### 数值数据类型
+
+数值数据类型用于存储数值。确保你的数据范围在数值数据类型的上下边界之间是极其重要的。
+
+### MySQL SELECT 语句
+
+### SQL SELECT 语句语法
+
+SQL SELECT 语句是最常用的 SQL 命令，其具有以下通用语法：
+
+```sql
+SELECT [DISTINCT|ALL ] { * | [fieldExpression [AS newName]]} FROM tableName [alias] [WHERE condition][GROUP BY fieldName(s)] [HAVING condition] ORDER BY fieldName(s)
+```
+
+这里
+
+* `SELECT`是 SQL 关键字，告诉数据库你想检索数据。
+
+* `[DISTINCT | ALL]`是可选关键字，可用于微调 SQL SELECT 语句返回的结果。如果未指定任何内容，则默认为`ALL`。
+
+* `{*|[fieldExpression [AS newName]]}`必须指定至少一部分，`*`从指定的表名选择所有字段，`fieldExpression`对指定的字段执行某些计算，例如数字相加或将两个字符串字段合并为一个字段。
+
+* `FROM tableName`是强制性的，必须包含至少一个表，多个表必须使用逗号分隔，或使用`JOIN`关键字进行连接。
+
+* `WHERE condition`是可选的，可用于指定查询返回的结果集中的标准。
+
+* `GROUP BY`用于将具有相同字段值的记录组合。
+
+* `HAVING condition`用于在使用`GROUP BY`关键字时指定标准。
+
+* `ORDER BY`用于指定结果集的排序顺序。
+
+星号`*`用于选择表中的所有列。一个简单的 SELECT 语句示例所示：
+
+```sql
+SELECT * FROM `members`;
+```
+
+上述语句从`members`表中选择所有字段。分号是语句的终止符。它不是强制性的，但像这样结束语句被认为是一种良好的习惯。
+
+### MySQL WHERE 子句
+
+### 什么是 WHERE 子句？
+
+在上一个教程中，我们学习了如何使用`SELECT`语句从数据库查询数据。`SELECT`语句返回了查询数据库表的所有结果。然而，某些时候我们希望将查询结果限制在指定的条件下。SQL 的`WHERE`子句在这种情况下派上用场。
+
+### WHERE 子句语法
+
+在`SELECT`语句中使用`WHERE`子句的基本语法如下。
+
+```sql
+SELECT * FROM tableName WHERE condition;
+```
+
+这里
+
+* `"SELECT * FROM tableName"`是标准的`SELECT`语句
+
+* `"WHERE"`是限制我们的选择查询结果集的关键字，`"condition"`是应用于结果的过滤器。过滤器可以是范围、单值或子查询。
+
+现在让我们来看一个实际示例。假设我们要根据会员编号 1 从`members`表中获取成员的个人详情，我们将使用以下脚本来实现目标。
+
+```sql
+SELECT * FROM `members` WHERE `membership_number` = 1;
+```
+
+### WHERE 子句结合 - AND 逻辑运算符
+
+当`WHERE`子句与`AND`逻辑运算符一起使用时，只有在满足所有指定的过滤标准时，才会执行。现在让我们来看一个实际示例——假设我们要获取 2008 年发布的类别为 2 的所有电影列表，我们将使用下所示的脚本来实现。
+
+```sql
+SELECT * FROM `movies` WHERE `category_id` = 2 AND `year_released` = 2008;
+```
+
+### WHERE 子句结合 - OR 逻辑运算符
+
+当`WHERE`子句与`OR`运算符一起使用时，只有在满足任何或全部指定的过滤标准时才会执行。以下脚本获取类别 1 或类别 2 中的所有电影
+
+```sql
+SELECT * FROM `movies` WHERE `category_id` = 1 OR `category_id` = 2;
+```
+
+### WHERE 子句结合 - IN 关键字
+
+当`WHERE`子句与`IN`关键字一起使用时，仅影响值匹配`IN`关键字提供的值列表的行。`IN`有助于减少你可能需要使用的`OR`子句数量。以下查询提供了`membership_number`为 1、2 或 3 的行
+
+```sql
+SELECT * FROM `members` WHERE `membership_number` IN (1,2,3);
+```
+
+### WHERE 子句结合 - NOT IN 关键字
+
+
+
+当 `WHERE` 子句与 `NOT IN` 关键字一起使用时，**不会**影响值匹配 `NOT IN` 关键字提供的值列表的行。以下查询提供了 `membership_number` 不是 1、2 或 3 的行：
+
+```sql
+SELECT * FROM `members` WHERE `membership_number` NOT IN (1,2,3);
+```
+
+## WHERE 子句结合 - 比较运算符
+
+小于 `<`、等于 `=`、不等于 `!=` 等比较运算符可以与 `WHERE` 子句配合使用。
+
+### 等
+
+以下脚本使用等于比较运算符从 `members` 表中获取所有女性成员：
+
+```sql
+SELECT * FROM `members` WHERE `gender` = 'Female';
+```
+
+## MySQL 查询 INSERT INTO 表
+
+### 什么是 INSERT INTO？
+
+数据库系统的主要目标是在表中存储数据。数据通常由运行在数据库之上的应用程序提供。为此，SQL 拥有 `INSERT` 命令，用于将数据存储到表中。
+
+### 基础语法
+
+让我们来看 `INSERT` 语法：
+
+```sql
+INSERT INTO tableName (column1, column2, ...) VALUES (value1, value2, ...);
+```
+
+这里：
+
+- `INSERT INTO tableName` 告诉 MySQL 向表中添加行。
+- `(column1, column2, ...)` 指定要插入的列。
+- `VALUES (value1, value2, ...)` 指定要添加的值。
+
+## MySQL UPDATE & DELETE 查询
+
+### 什么是 DELETE 关键字？
+
+SQL `DELETE` 命令用于从数据库表中删除不再需要的行。它删除表中的整行。`DELETE` 命令在从数据库中删除临时或过时数据时派上用场。`DELETE` 命令可以在一次查询中删除表中的多行。一旦行被删除，将无法恢复。因此，强烈建议在从数据库删除任何数据之前进行备份。
+
+### DELETE 命令语法
+
+`DELETE` 命令的基本语法如下所示：
+
+```sql
+DELETE FROM tableName [WHERE condition];
+```
+
+这里：
+
+- `DELETE FROM tableName` 告诉 MySQL 从表中删除行。
+- `[WHERE condition]` 是可选的，用于设置过滤器限制影响 `DELETE` 查询的行数。如果 `DELETE` 查询没有使用 `WHERE` 子句，则给定表中的所有行都将被删除。
+
+在详细讨论 `DELETE` 命令之前，让我们先向 `movies` 表中插入一些示例数据以便操作：
+
+```sql
+INSERT INTO `movies` (title, director, year_released, category_id) VALUES ('The Great Dictator', 'Chalie Chaplie', 1920, 7);
+```
+
+```sql
+INSERT INTO `movies` (`title`, `director`, `category_id`) VALUES ('sample movie', 'Anonymous', 8);
+INSERT INTO movies (`title`, `director`, `year_released`, `category_id`) VALUES ('movie 3', 'John Brown', 1920, 8);
+```
+
+执行上述脚本将向 `movies` 表中添加三（3）部电影。在继续后续课程之前，让我们获取表中的所有电影。下方的脚本即可实现此操作：
+
+```sql
+SELECT * FROM `movies`;
+```
+
+- `DELETE` 命令用于从表中删除不再需要的数据。
+- `WHERE` 子句用于限制受 `DELETE` 查询影响的行数。
+- 一旦数据被删除，将无法恢复，因此强烈建议在删除数据之前进行备份。
+- `UPDATE` 命令用于修改现有数据。
+- `WHERE` 子句用于限制受 `UPDATE` 查询影响的行数。
+
+## SQL 对比 MySQL：它们之间有什么区别？
+
+### 什么是 SQL？
+
+SQL 是一种用于操作你的数据库的语言。SQL 是所有数据库通用的基础语言。不同数据库之间的语法存在细微差异，但基础 SQL 语法在很大程度上保持不变。SQL 是结构化查询语言（Structured Query Language）的缩写。根据 `ANSI`（美国国家标准协会）的标准，`SQL` 是操作关系型数据库管理系统的标准语言。SQL 用于数据库数据的访问、更新和处理。它的设计允许管理 RDBMS（如 `MYSQL`）中的数据。SQL 语言还用于控制数据访问以及数据库架构（Schemas）的创建和修改。
+
+### 什么是 MYSQL？
+
+`MySQL` 开发于 90 年代中期，是市场上首批可用的开源数据库之一。今天有许多 `MySQL` 的替代变体，这些变体之间的差异并不显著，因为它们使用相同的语法，且基本功能也保持一致。`MySQL` 是一种 RDBMS，允许使数据库中的数据保持组织良好。`MySQL` 的读音为 "My S-Q-L"，但也被称为 "My Sequel"。它以联合创始人 Michael Widenius 的女儿命名。`MySQL` 提供了对数据库的多用户访问。该 RDBMS 系统通常与 `PHP` 和 `Apache Web 服务器` 结合并运行在 Linux 发行版之上。`MySQL` 使用 `SQL` 语言来查询数据库。
+
+# 20 道 SQL 面试题解答
+
+### 1. 什么是 DBMS？
+
+数据库管理系统（`DBMS`）是一个控制数据库创建、维护和使用的程序。`DBMS` 可以称为文件管理器，它管理数据库中的数据，而不是将其保存在文件系统中。
+
+### 2. 什么是 RDBMS？
+
+RDBMS 代表关系型数据库管理系统。`RDBMS` 将数据存储在表集合中，这些表通过列之间的公共字段相互关联。它还提供了关系操作符来操纵存储在表中的数据。例如：SQL Server。
+
+### 3. 什么是 SQL？
+
+SQL 代表结构化查询语言，用于与数据库通信。这是一种用于执行从数据库中检索、更新、插入和删除数据等任务的标准语言。标准的 SQL 命令有 `Select`。
+
+### 4. 什么是数据库？
+
+数据库无非是为了方便访问、存储、检索和管理数据而组织的有组织的数据。它被称为数据的结构化形式，可以通过多种方式访问。例如：学校管理数据库、银行管理数据库。
+
+### 5. 什么是表（Tables）和字段（Fields）？
+
+表是一组按照列和行组织在模型中的数据。列可以分为垂直方向，行是水平方向。表具有指定数量的列，称为字段，但可以有任意数量的行，称为记录。例如：表：员工。字段：员工 ID、员工姓名、出生日期。数据：201456、David、11/15/1960。
+
+### 6. 什么是主键（Primary key）？
+
+主键是字段的组合，用于唯一指定某行。这是一种特殊的唯一键，它具有隐式的 `NOT NULL` 约束。这意味着主键值不能为 `NULL`。
+
+### 7. 什么是唯一键（Unique key）？
+
+`Unique key` 约束唯一地标识数据库中的每条记录。它为列或一组列提供了唯一性。`Primary key` 约束在其上定义了自动的唯一约束。但唯一键的情况不是。每个表可以定义多个唯一约束，但每个表只能定义一个 `Primary key` 约束。
+
+### 8. 什么是外键（Foreign key）？
+
+外键是指与另一个表的主键关联的表。需要通过引用另一个表的主键并引用外键在两个表之间建立关系。
+
+### 9. 什么是连接（Join）？
+
+这是一个关键字，用于根据表字段之间的关系从多个表中查询数据。在使用 `JOINs` 时，键起着主要作用。
+
+### 10. 连接有哪些类型？请解释每种。
+
+有多种类型的连接用于检索数据，这取决于表与表之间的关系。
+
+- **内连接（Inner Join）**：当表之间至少存在一组匹配的行时，内连接返回这些行。
+- **右连接（Right Join）**：右连接返回表之间公共的行以及右侧表的所有行。简单来说，即使左侧表没有匹配项，它也会返回右侧表的所有行。
+- **左连接（Left Join）**：左连接返回表之间公共的行以及左侧表的所有行。简单来说，即使右侧表没有匹配项，它也会返回左侧表的所有行。
+- **全连接（Full Join）**：当任何一个表中存在匹配的行时，全连接返回这些行。这意味着它会返回左侧表的所有行和右侧表的所有行。
+
+### 11. 什么是规范化（Normalization）？
+
+规范化是通过组织数据库的字段和表来最小化冗余和依赖的过程。规范化的主要目标是在单个表中对字段进行添加、删除或修改。
+
+### 12. 什么是反规范化（Denormalization）？
+
+反规范化是一种用于从数据库的高级规范范式访问数据的技术。它也是通过合并相关表中的数据向表中引入冗余的过程。
+
+### 13. 所有的不同的规范化形式有哪些？
+
+范式可以分为 5 种，解释如下：
+
+- **第一范式（1NF）**：这应该移除表中的所有重复列。为相关数据创建表并识别唯一列。
+- **第二范式（2NF）**：满足第一范式的所有要求。将数据子集放在单独的表中，并使用主键在表之间建立关系。
+- **第三范式（3NF）**：这应该满足 2NF 的所有要求。移除不依赖于主键约束的列。
+- **第四范式（4NF）**：满足第三范式的所有要求，且不应具有多值依赖。
+
+### 14. 什么是视图（View）？
+
+视图是一个虚拟表，它包含表中数据的子集。视图在物理上并不存在，存储所需的空间较少。视图可以包含一个或多个表的数据，取决于它们的关系。
+
+### 15. 什么是索引（Index）？
+
+索引是一种性能调优方法，允许更快速地从表中检索记录。索引为每个值创建一个条目，这样检索数据会更快。
+
+### 16. 索引有所有不同的类型？
+
+索引有三种类型：
+
+- **唯一索引（Unique Index）**：如果列是唯一的，则此索引不允许字段具有重复值。在定义主键时可以应用唯一索引。
+- **聚集索引（Clustered Index）**：这种类型的索引会重新排列表的物理顺序，并根据值进行搜索。每个表只能有一个聚集索引。
+- **非聚集索引（NonClustered Index）**：非聚集索引不改变表的物理顺序，而是维护数据的逻辑顺序。每个表可以有 999 个非聚集索引。
+
+### 17. 什么是游标（Cursor）？
+
+数据库游标是一种允许遍历表中的行或记录的控件。这可以被看作是行集中某一个行的指针。游标对于遍历检索、添加和删除数据库记录非常有用。
+
+### 18. 什么是关系（Relationship）？它们有哪些？
+
+数据库关系定义为数据库表之间的连接。有多种数据基础关系，如下：
+
+- 一对一关系。
+- 一对多关系。
+- 多对一关系。
+- 自引用关系。
+
+### 19. 什么是查询（Query）？
+
+数据库查询是为了从数据库中获取信息而编写的代码。查询可以设计成符合我们对结果集的预期。简单来说，就是向数据库提问。
+
+### 20. 什么是子查询（Subquery）？
+
+子查询是嵌套在查询中的查询。外部查询称为主查询，内部查询称为子查询。子查询总是先执行，子查询的结果被传递给主查询。
+
+最后，如果你喜欢这本书，我想请求你帮我个忙，在 Amazon 上给这本书留评价。只需登录你的 Amazon 账户并为这本书写评价即可。感谢你并祝你好运！
