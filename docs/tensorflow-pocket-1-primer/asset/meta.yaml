@@ -1,0 +1,544 @@
+name: TensorFlow Pocket 1 Primer
+name_cn: TensorFlow 入门指南
+slug: tensorflow-pocket-1-primer
+toc:
+- - '#'
+  - TensorFlow 入门指南
+- - '##'
+  - TensorFlow 数据集
+- - '##'
+  - 线性回归
+- - '##'
+  - 逻辑回归
+- - '#'
+  - 索引
+- - '#'
+  - 第一章 TensorFlow 简介
+- - '##'
+  - 什么是 TensorFlow？
+- - '##'
+  - TensorFlow 架构（高视图）
+- - '##'
+  - TensorFlow 特性
+- - '##'
+  - TensorFlow 用例
+- - '##'
+  - 其他 TensorFlow 工具包
+- - '##'
+  - 为什么使用 TF 1.x 而不是 TF 2？
+- - '##'
+  - 什么是 TensorFlow 张量（Tensor）？
+- - '##'
+  - TensorFlow 数据类型
+- - '##'
+  - TensorFlow 原始类型
+- - '###'
+  - TF 常量 (Constants)
+- - '##'
+  - TensorFlow 图 (Graphs)
+- - '##'
+  - TensorFlow 版本号
+- - '###'
+  - 'LISTING 1: tf-version.py'
+- - '##'
+  - 带有 TF.SESSION() 的 TensorFlow 图
+- - '###'
+  - 'LISTING 2: tf-session.py'
+- - '###'
+  - 'output: Tensor("Const:0", shape=(), dtype=float32)'
+- - '###'
+  - 'output: 3.0'
+- - '###'
+  - => 有一种更好的方法……
+- - '###'
+  - 自动关闭 "sess"
+- - '##'
+  - TF SESSION 中的占位符和 FEED_DICT
+- - '##'
+  - TF SESSION 中的常量和变量
+- - '##'
+  - TENSORFLOW 中的常量（重温）
+- - '###'
+  - tf.rank() API
+- - '###'
+  - TF 张量的形状
+- - '##'
+  - TENSORFLOW 中的占位符（重温）
+- - '###'
+  - TF 和 FEED_DICT
+- - '##'
+  - TF 变量对比 TF 张量
+- - '##'
+  - 在 TensorFlow 图中初始化变量
+- - '##'
+  - TensorFlow 图的执行
+- - '##'
+  - TF 图中的算术运算
+- - '##'
+  - TF 图与内置函数
+- - '##'
+  - WHILE 循环中的 TF.LESS() API
+- - '##'
+  - TF ONE_HOT() API
+- - '##'
+  - TENSORFLOW 中的数组 (1)
+- - '##'
+  - TENSORFLOW 中的数组 (2)
+- - '##'
+  - TENSORFLOW 中的数组 (3)
+- - '##'
+  - TF 中两个数组相乘 (CPU)
+- - '##'
+  - TF 中两个数组相乘 (GPU)
+- - '##'
+  - 将 Python 数组转换为 TF 数组
+- - '##'
+  - 什么是 TensorBoard?
+- - '##'
+  - 其他云平台
+- - '##'
+  - GCP SDK
+- - '##'
+  - 总结
+- - '#'
+  - 第 2 章
+- - '##'
+  - 有用的 TensorFlow API
+- - '##'
+  - TF 张量操作
+- - '##'
+  - TensorFlow 与缓冲区
+- - '##'
+  - 带有随机数的 TF 操作
+- - '##'
+  - TF 数组与最大值
+- - '##'
+  - TF RANGE() API
+- - '##'
+  - 节点操作 (1)
+- - '##'
+  - 节点操作 (2)
+- - '##'
+  - 节点操作 (3)
+- - '##'
+  - TF.EVAL() API
+- - '##'
+  - TF.SIZE(), TF.SHAPE(), AND TF.RANK() API
+- - '###'
+  - the shape of 't' is [2, 3]
+- - '##'
+  - TF.RESHAPE() API
+- - '##'
+  - TF.EQUAL() API (1)
+- - '##'
+  - TF.EQUAL() API (2)
+- - '##'
+  - TF.ARGMAX() API (1)
+- - '##'
+  - TF.ARGMAX() API (2)
+- - '##'
+  - TF.ARGMAX() API (3)
+- - '##'
+  - 结合 TF.ARGMAX() 和 TF.EQUAL() API
+- - '##'
+  - TF.ONE_HOT() API (回顾)
+- - '##'
+  - 使用随机值初始化 TF 数组
+- - '##'
+  - 其他实用的 TF API
+- - '#'
+  - 第三章
+- - '##'
+  - TENSORFLOW 数据集
+- - '###'
+  - TensorFlow 数据集的基本步骤
+- - '###'
+  - 简单的 TensorFlow 数据集
+- - '##'
+  - 简单的 TensorFlow Dataset
+- - '###'
+  - TENSORFLOW 不规则常量和张量（可选）
+- - '###'
+  - '列表 3.2: tf-raggedtensors.py'
+- - '###'
+  - '列表 3.3: tf-ragged-tensors.py'
+- - '##'
+  - 什么是 LAMBDA 表达式？
+- - '##'
+  - TENSORFLOW 中的 LAMBDA 表达式
+- - '###'
+  - '列表 3.4: tf-plusone.py'
+- - '##'
+  - 什么是迭代器（ITERATORS）？
+- - '##'
+  - TensorFlow 迭代器
+- - '##'
+  - TensorFlow 重用迭代器
+- - '###'
+  - '列表 3.5: tf-init-iterator.py'
+- - '##'
+  - TensorFlow 的 filter() 运算符
+- - '##'
+  - TensorFlow TEXTLINEDATASET (1)
+- - '##'
+  - TensorFlow TEXTLINEDATASET (2)
+- - '##'
+  - TensorFlow TEXTLINEDATASET (3)
+- - '##'
+  - TensorFlow BATCH() 运算符 (1)
+- - '##'
+  - TensorFlow BATCH() 运算符 (2)
+- - '##'
+  - TENSORFLOW 的 MAP() 操作符 (2)
+- - '##'
+  - TENSORFLOW 的 FLATMAP() 操作符 (1)
+- - '##'
+  - TENSORFLOW 的 FLATMAP() 操作符 (2)
+- - '##'
+  - TENSORFLOW 的 FLAT_MAP() 和 FILTER() 操作符
+- - '##'
+  - TENSORFLOW 的 REPEAT() 操作符
+- - '##'
+  - TENSORFLOW 的 TAKE() 运算符
+- - '##'
+  - 结合 TF MAP() 和 TAKE() 运算符
+- - '##'
+  - 结合 TF ZIP() 和 BATCH() 运算符
+- - '##'
+  - 结合 TF ZIP() 和 TAKE() 运算符
+- - '###'
+  - '列表 3.26: simple.csv'
+- - '###'
+  - '列表 3.27: tf-csv-dataset.py'
+- - '##'
+  - 使用 TF.ESTIMATORS 和 TF.LAYERS（可选）
+- - '###'
+  - 什么是 TF Estimators？
+- - '###'
+  - TF Estimators 和 tf.data.Dataset
+- - '###'
+  - '列表 3.28: tf2-estimator.py'
+- - '##'
+  - 使用 TF.ESTIMATORS 和 TF.LAYERS（可选）
+- - '###'
+  - 什么是 TF Estimators？
+- - '###'
+  - TF Estimators 和 tf.data.Dataset
+- - '###'
+  - 什么是 tf.layers？
+- - '###'
+  - TensorFlow 其他有用
+- - '###'
+  - 简单的 TFRecord
+- - '##'
+  - 总结
+- - '#'
+  - 第 4 章：线性回归
+- - '##'
+  - 简单的 TFRecord
+- - '##'
+  - 什么是线性回归？
+- - '##'
+  - 什么多变量分析？
+- - '##'
+  - 其他类型的回归
+- - '##'
+  - 平上的直线操作（可选）
+- - '##'
+  - 什么是多变量分析？
+- - '##'
+  - 其他类型的回归
+- - '##'
+  - 平面的直线操作（可选）
+- - '##'
+  - 为什么“扰动”很有用
+- - '##'
+  - 使用 NUMPY 和 MATPLOT 散图
+- - '##'
+  - 使用 NUMPY 和 MATPLOT 绘制点图
+- - '##'
+  - MSE 公式
+- - '##'
+  - 误差类型
+- - '##'
+  - 使用 NP.LINSPACE() 对数据拟合
+- - '##'
+  - TENSORFLOW 中的简单 2D 数据
+- - '##'
+  - TENSORFLOW 中的简单线性模型
+- - '##'
+  - TENSORFLOW 梯度下降 (1)
+- - '###'
+  - 使用 NP.LINSPACE() 计算 MSE
+- - '###'
+  - TF.ESTIMATOR 模型
+- - '###'
+  - TF.ESTIMATOR 进行线性回归
+- - '##'
+  - 总结
+- - '#'
+  - 第 5 章：逻辑回归
+- - '##'
+  - 什么是分类？
+- - '##'
+  - 什么是分类器？
+- - '##'
+  - 常见分类器
+- - '##'
+  - 什么是线性分类器？
+- - '##'
+  - 什么是激活函数？
+- - '##'
+  - 为什么激活函数？
+- - '##'
+  - 常见激活函数
+- - '##'
+  - TENSORFLOW 激活函数
+- - '##'
+  - ReLU 激活函数
+- - '##'
+  - ReLU 的优缺点
+- - '##'
+  - ELU
+- - '##'
+  - Sigmoids
+- - '##'
+  - Softmax
+- - '##'
+  - Softplus
+- - '##'
+  - Tanh
+- - '##'
+  - Sigmoid 和 hardmax
+- - '##'
+  - TensorFlow 与 sigmoid 激活函数
+- - '##'
+  - 什么是逻辑回归？
+- - '##'
+  - TensorFlow 与逻辑回归 (1)
+- - '##'
+  - TensorFlow 与逻辑回归 (2)
+- - '##'
+  - 使用 KERAS
+- - '##'
+  - KERAS 和 MNIST 数据
+- - '##'
+  - 目的,128
+- - '##'
+  - 工作,129
+- - '##'
+  - Adam 优化器, 108
+- - '##'
+  - 算术运算, 32
+- - '##'
+  - 在 TensorFlow 图中,16–17
+- - '##'
+  - 数组
+- - '##'
+  - 带有随机值,51–53
+- - '##'
+  - 在 TensorFlow 中,23–25
+- - '##'
+  - 将 Python 数组转换为,26–27
+- - '##'
+  - 两个相乘,25–26
+- - '##'
+  - 变量,99,102
+- - '##'
+  - arr1 常量,24,25
+- - '##'
+  - B
+- - '##'
+  - basic-linreg1.py,106
+- - '##'
+  - basic-linreg2.py,107
+- - '##'
+  - '`batch()` 运算符,71–73'
+- - '##'
+  - '`zip()` 运算符和,81–82'
+- - '##'
+  - 拟合线,93–96,111
+- - '##'
+  - 缓冲区,33–34
+- - '##'
+  - 内置函数, TensorFlow 图和,17–18
+- - '##'
+  - C
+- - '##'
+  - 分类数据,51
+- - '##'
+  - “分块”效应,71
+- - '##'
+  - 分类,126
+- - '##'
+  - 分类器,126
+- - '##'
+  - 常见的,127
+- - '##'
+  - 线性,127
+- - '##'
+  - 线性回归的闭式解,94–95
+- - '##'
+  - CNN 卷积神经网络
+- - '##'
+  - “注释掉”的代码块,74
+- - '##'
+  - comments.txt,77, 78
+- - '##'
+  - 常见的激活函数,129–130
+- - '##'
+  - 常见的分类器,127
+- - '##'
+  - 常量
+- - '##'
+  - aconst,9
+- - '##'
+  - arr1,24,25
+- - '##'
+  - target,23
+- - '##'
+  - 在 TensorFlow 中,7,10–13
+- - '##'
+  - 在 tf.Session() 中,10–11
+- - '##'
+  - 阈值,22
+- - '##'
+  - Conv2D 层,88
+- - '##'
+  - 卷积神经网络 (CNN),32,35,50,127
+- - '##'
+  - cost 函数,140
+- - '##'
+  - cost 变量,108
+- - '##'
+  - cost1 变量,140
+- - '##'
+  - CPU,25,28
+- - '##'
+  - csv_file,85
+- - '##'
+  - 曲线拟合 对比 线性回归,93–94
+- - '##'
+  - D
+- - '##'
+  - '`Dataset.flat_map()`,75'
+- - '##'
+  - '`dataset.flat_map()`,78'
+- - '##'
+  - '`Dataset.map()`,75'
+- - '##'
+  - '`dataset.map()`,73'
+- - '##'
+  - Datasets,60
+- - '##'
+  - 基础步骤,60
+- - '##'
+  - 从 CSV 文件,84–85
+- - '##'
+  - 和随机数,83–84
+- - '##'
+  - 简单的,60–61
+- - '##'
+  - 延迟执行,3
+- - '##'
+  - 数字数据集,62
+- - '##'
+  - display_step,120
+- - '##'
+  - dsX 变量,137
+- - '##'
+  - dsY 变量,137
+- - '##'
+  - '`dx.map()`,64'
+- - '##'
+  - E
+- - '##'
+  - 饿 Determine 执行,3
+- - '##'
+  - 使用 for 循环,20–21
+- - '##'
+  - 使用 while 循环,21–22
+- - '##'
+  - ELU 参见 指数线性单元
+- - '##'
+  - 欧几得平面上的直线方程,96–97
+- - '##'
+  - 欧几得平面,95
+- - '##'
+  - 中的线,96–98,106,107
+- - '##'
+  - Example 类,89–90
+- - '##'
+  - 注释代码块
+- - '##'
+  - 指线性单元 (ELU),130
+- - '##'
+  - 指数值,19
+- - '##'
+  - F
+- - '##'
+  - Feature 类
+- - '##'
+  - feature_columns,124
+- - '##'
+  - 特性变量,84
+- - '##'
+  - 可馈迭代器
+- - '##'
+  - feed_dict,7
+- - '##'
+  - 占位符和,10
+- - '##'
+  - file.txt,68
+- - '##'
+  - '`filter()` 运算符,67,78'
+- - '##'
+  - '`flat_map()`,75'
+- - '##'
+  - for 循环,20–21
+- - '##'
+  - G
+- - '##'
+  - Google SDK,29
+- - '##'
+  - 广义线性,95
+- - '##'
+  - Google,1,5
+- - '##'
+  - 云平台 (GCP),29
+- - '##'
+  - Colaboratory,28–29
+- - '##'
+  - GPU,25,28
+- - '##'
+  - 带有数据点的梯度,111–113
+- - '##'
+  - 使用 TensorFlow,107–111
+- - '##'
+  - 图,7–8
+- - '##'
+  - 图中的算术运算,16–17
+- - '##'
+  - 和内置函数,17–18
+- - '##'
+  - 执行,16
+- - '##'
+  - 在...初始化变量,16
+- - '##'
+  - H
+- - '##'
+  - 代码示例是如何创建的？是如何创建的？
+- - '##'
+  - 代码示例是如何创建的？
+- - '##'
+  - 本书的技术前提条件是什么？
+- - '##'
+  - 本书的非技术前提条件是什么？
+- - '##'
+  - 哪些主题未包含在内？
+- - '##'
+  - 我如何设置 Shell？
+- - '##'
+  - 完成本书后的“下一步”是什么？
+- - '##'
+  - 配套文件
