@@ -1,0 +1,2 @@
++   [Python 数据科学：计算机编程与网络编码指南。学习用于数据分析的机器学习、人工智能以及 NumPy 和 Pandas 包。包含循序渐进的练习。](README.md)
++   [Python 数据科学：计算机编程与网络编码指南。学习用于数据分析的机器学习、人工智能以及 NumPy 和 Pandas 包。包含循序渐进的练习。](python-for-data-science-guide-to-computer-programming-and-we_0.md)
