@@ -1,0 +1,2 @@
++   [深度强化学习实用指南：应用现代强化学习方法，涵盖深度 Q 网络、值迭代、策略梯度、TRPO、AlphaGo Zero 等更多](README.md)
++   [深度强化学习实用指南：应用现代强化学习方法，涵盖深度 Q 网络、值迭代、策略梯度、TRPO、AlphaGo Zero 等更多](deep-reinforcement-learning-hands-on-apply-modern-rl-methods_0.md)
