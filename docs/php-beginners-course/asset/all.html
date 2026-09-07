@@ -1,0 +1,1977 @@
+<p><span id="part0000.xhtml"></span></p>
+<div id="part0000.xhtml#aid-1" class="WordSection1">
+<p><span id="part0000.xhtml#PHP_Beginners_Course"></span><span lang="DE"> </span></p>
+<p><span lang="DE"> </span></p>
+<p><span lang="DE"> </span></p>
+<p><span lang="DE"> </span></p>
+<h1><span id="part0000.xhtml#_Toc470681560"></span><span id="part0000.xhtml#_Toc469765117"><span lang="EN-US">PHP Beginners Course</span></span><span id="part0000.xhtml#Title"></span><span lang="EN-US"><br />
+Understand basics of PHP / MySQL programming in 5 days</span></h1>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;
+"> </span></p>
+<div style="page-break-after:always">
+
+</div>
+<h2><span id="part0000.xhtml#_Toc470681561"></span><span id="part0000.xhtml#_Toc469765118"><span lang="EN-US">Imprint</span></span></h2>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Copyright © 2017 Klaus Thenmayer<br />
+All rights reserved</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Initial release May 2012 as ebook at Amazon KDP and Smashwords Inc.<br />
+English translation December 2016<br />
+6th edition January 2017<br />
+<br />
+</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">All brand and product names are trademarks of their respective owners. We accept no liability for any damage to software / hardware, all information without guarantee. The text of this book may not be reproduced without permission. When quoting please rely on the Amazon book page link.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Cover design: Klaus Thenmayer<br />
+Cover Photo: © MWiner / Fotolia.com</span></p>
+<p><span id="part0000.xhtml#ToC"></span><span lang="EN-US" style="font-size:1.08rem;
+color:#A5A5A5"> </span></p>
+<div style="page-break-after:always">
+
+</div>
+<h2><span id="part0000.xhtml#_Toc470681562"></span><span id="part0000.xhtml#_Toc469765119"><span lang="EN-US">Table of Content</span></span></h2>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681563"><span lang="EN-US">Preamble</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681564"><span lang="EN-US">Welcome!</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681565"><span lang="EN-US">Prerequisites</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681566"><span lang="EN-US">Day 1</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681567"><span lang="EN-US">PHP </span><span lang="EN-US" style="">– </span><span lang="EN-US">DEFINITION AND HISTORY</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681568"><span lang="EN-US">Setting up the development environment (Windows, Linux or Mac OS)</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681569"><span lang="EN-US">Windows</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681570"><span lang="EN-US">Linux</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681571"><span lang="EN-US">MacOS</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681572"><span lang="EN-US">Text editors</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681573"><span lang="EN-US">The first PHP program (Welcome the whole world)</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681574"><span lang="EN-US">Variables (information stores)</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681575"><span lang="EN-US">Initialize variables</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681576"><span lang="EN-US">Comment the code</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681577"><span lang="EN-US">Arithmetic operations (basic arithmetic)</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681578"><span lang="EN-US">Combining several variables (arrays)</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681579"><span lang="EN-US">Sort arrays</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681580"><span lang="EN-US">Multidimensional arrays</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681581"><span lang="EN-US">Day 2</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681582"><span lang="EN-US">Fill variables with user information (GET / POST)</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681583"><span lang="EN-US">Identify and read GET variables</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681584"><span lang="EN-US">Identify and read POST variables</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681585"><span lang="EN-US">Conditions, program control (IF/ELSE/ELSEIF)</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681586"><span lang="EN-US">Case analysis (switch / case)</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681587"><span lang="EN-US">Loops for repetitive tasks (While / For / Foreach)</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681588"><span lang="EN-US">While() Loop</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681589"><span lang="EN-US">For() Loop</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681590"><span lang="EN-US">Foreach() loop</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681591"><span lang="EN-US">Day 3</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681592"><span lang="EN-US">Date and Time (Who has turned the clock?)</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681593"><span lang="EN-US">DATE()</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681594"><span lang="EN-US">microtime()</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681595"><span lang="EN-US">Give a point in time to DATE() function with mktime()</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681596"><span lang="EN-US">Text functions (String operations)</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681597"><span lang="EN-US">Write your own functions</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681598"><span lang="EN-US">Split the code in several files</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681599"><span lang="EN-US">Day 4</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681600"><span lang="EN-US">Storing and reading information with a database (MySQL)</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681601"><span lang="EN-US">Connect to a database within PHP</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681602"><span lang="EN-US">Create a new database</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681603"><span lang="EN-US">Select our database</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681604"><span lang="EN-US">Create tables</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681605"><span lang="EN-US">Write data to the database</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681606"><span lang="EN-US">Retrieve data from the database</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681607"><span lang="EN-US">Delete data from the database</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681608"><span lang="EN-US">File operations (read / write files)</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681609"><span lang="EN-US">Save to a text file</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681610"><span lang="EN-US">Reading from a text file</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681611"><span lang="EN-US">Manage sessions</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681612"><span lang="EN-US">Day 5</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681613"><span lang="EN-US">Write clean code (which is still understandable in a year)</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681614"><span lang="EN-US">Security within PHP scripts</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681615"><span lang="EN-US">Principle: Never trust data coming from outside</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681616"><span lang="EN-US">Protection against SQL Injections</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681617"><span lang="EN-US">Keep your passwords encrypted</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681618"><span lang="EN-US">Add salt to your passwords</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681619"><span lang="EN-US">Website tips</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681620"><span lang="EN-US">Book tips</span></a></span></p>
+<p><span lang="DE"><a href="#part0000.xhtml#_Toc470681621"><span lang="EN-US">Epilogue</span></a></span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span id="part0000.xhtml#Preamble"></span><span lang="EN-US" style="font-size:1.08rem;
+color:#A5A5A5"> </span></p>
+<div style="page-break-after:always">
+
+</div>
+<h2><span id="part0000.xhtml#_Toc470681563"></span><span id="part0000.xhtml#_Toc469765120"><span lang="EN-US">Preamble</span></span></h2>
+<div style="page-break-after:always">
+
+</div>
+<h3><span id="part0000.xhtml#_Toc470681564"></span><span id="part0000.xhtml#_Toc469765121"><span lang="EN-US">Welcome!</span></span></h3>
+<p><span lang="EN-US" style="font-size:1.08rem;">So you want to learn quickly how to program in PHP? This book is the right choice. You will learn within easy-to-understand chapters the basics of developing dynamic websites in PHP. It places special emphasis on full code examples which run independently of each other.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">It begins with setting up the development environment on your computer. Immediately after you write your first PHP script and execute it in your newly installed server. Then you will learn how you can query information and control the program sequence in order to create dynamic websites. You also learn how you can save the information in databases or files, and read again.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Finally, you will get a short introduction to more advanced topics such as writing clean and safe program code.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">You will not become a professional web developer by reading only this book, but you will get very good fundamentals and a guide in programming your first dynamic websites.</span></p>
+<div style="page-break-after:always">
+
+</div>
+<h3><span id="part0000.xhtml#_Toc470681565"></span><span id="part0000.xhtml#_Toc469765122"><span lang="EN-US">Prerequisites</span></span></h3>
+<p><span lang="EN-US" style="font-size:1.08rem;">There is no special knowledge necessary. If you want to learn programming in PHP, I assume that you know how to install applications on your computer.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Some knowledge of HTML to format texts cannot harm but is not mandatory and it will be the main HTML code explained in the appropriate places.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">On hardware you need is a computer with monitor, mouse and keyboard. Since we program websites, of course an internet connection helps to get the needed software and more tutorials, but isn’t needed during development, as we install our own little server. You only need to download some (free) software from the Internet, more on that later.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">You are free, what operating system you use for development. The book will show you how to do the installation of a PHP server with MySQL support on Windows, Linux and MacOS and it will give you some examples of modern text editors.</span></p>
+<div style="page-break-after:always">
+
+</div>
+<h2><span id="part0000.xhtml#_Toc470681566"></span><span id="part0000.xhtml#_Toc469765123"></span><span id="part0000.xhtml#Day1"></span><span id="part0000.xhtml#Day_1"></span><span lang="EN-US">Day 1</span><span id="part0000.xhtml#0101_PHP_DEFINITION_AND_HISTOR"></span></h2>
+<div style="page-break-after:always">
+
+</div>
+<h3><span id="part0000.xhtml#_Toc470681567"></span><span id="part0000.xhtml#_Toc469765124"><span lang="EN-US">PHP </span></span><span lang="EN-US" style="font-size:1.08rem;
+">– </span><span lang="EN-US">DEFINITION AND HISTORY</span></h3>
+<p><span lang="EN-US" style="font-size:1.08rem;">PHP is a scripting language that is used primarily to develop dynamic webpages. PHP scripts are executed directly on the server and not in the browser of a visitor.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">PHP was developed in 1995 by Rasmus Lerdorf. His goal was to create a simple replacement for the collection of use-ful Perl scripts. This is how Personal Home Page Tools came into being. Soon after, he recreated the tool collection in the programming language C. Today, PHP is still developed in C, a very powerful programming language. It was soon fol-lowed by the first version, PHP / FI (Form Interpreter).</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">In 1998, Andi Gutmans and Zeev Suraski, in cooperation with Lerdorf, created PHP 3 from scratch to make it ready for use, particularly in the booming e-commerce business. Gutmans and Suraski founded the company Zend Technol-ogies Ltd., which contributed the main parts of PHP 4.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">In 2004, PHP5 introduced enhanced support for object-oriented programming and greatly increased the speed of the PHP interpreter.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Eleven years later, in 2015, PHP 7 was released. It is powered by a new engine with a fast speed. PHP 6 was skipped because projects planned to carry out the program were never finished and so the developers focused on a completely new core engine. Most scripts execute twice as fast as in PHP 5.x. The majority of old PHP 5 scripts only need small changes to run in PHP 7. Scripts in this book are all updated to be fully compatible. </span></p>
+<p><span id="part0000.xhtml#_Toc469765125"></span><span id="part0000.xhtml#0102_Setting_up_the_developmen"></span><span lang="EN-US" style="font-size:
+1rem;color:#6E6E6E"> </span></p>
+<div style="page-break-after:always">
+
+</div>
+<h3><span id="part0000.xhtml#_Toc470681568"><span lang="EN-US">Setting up the development environment (Windows, Linux or Mac OS)</span></span></h3>
+<h4><span id="part0000.xhtml#_Toc470681569"></span><span id="part0000.xhtml#_Toc469765126"><span lang="EN-US">Windows</span></span></h4>
+<p><span lang="EN-US" style="font-size:1.08rem;">On Windows, the prefabricated server packages make it extremely easy to install the server. For the development, I prefer the package of Xampp (www.apachefriends.org).</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Download the installer for Windows and run the installation. I recommend to keep C:/xampp/ as the default folder path. If you install the package under C:/Programs/XAMPP/, the server may make problems because the necessary file permissions are not set correctly. During the installation, it will be asked whether the individual server components should be installed as a service in the operating system. You must not do so, otherwise the server will constantly run in the background (until you stop the services manually), consume resources, and will be continuously available over the network.</span></p>
+<h4><span id="part0000.xhtml#_Toc470681570"></span><span id="part0000.xhtml#_Toc469765127"><span lang="EN-US">Linux</span></span></h4>
+<p><span lang="EN-US" style="font-size:1.08rem;">In Linux, it would be better to install an Apache web server and a MySQL server using the Package Manager and to perform the configuration manually. But, for this book, I recommend that the beginners use a prepared package from www.apachefriends.org, which has all the necessary server features and PHP extensions. Beneath the download links, you will find the Linux installation instructions and some tips on how you can start and stop the server quickly.</span></p>
+<h4><span id="part0000.xhtml#_Toc470681571"></span><span id="part0000.xhtml#_Toc469765128"><span lang="EN-US">MacOS</span></span></h4>
+<p><span lang="EN-US" style="font-size:1.08rem;">There are Apachefriends.org packages even for MacOS. But I prefer the package of MAMP for MacOS users. Its oper-ation is similar but has given me fewer problems. The application is available for free under www.mamp.info. There is also a paid Pro version, but we do not need this for our first programming experience. After downloading the setup file, please install MAMP in your Application folder.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">All the abovementioned server packages contain a directory with the label ‘htdocs.’ We will use this to store files that can be accessed via a browser from the server. So, open your browser and enter the following URL: http://127.0.0.1</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Under MacOS, you have to enter the port number of the server (the default number is 4444, so the entire URL should be: http://127.0.0.1:4444)</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">You should be greeted from your server package’s website (XAMPP / MAMP) and receive some information about the server.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">127.0.0.1 always leads to the local computer. This means that the browser tries to find a local web server. Alternatively, you could use http://localhost. This should lead to the same result.</span></p>
+<h4><span id="part0000.xhtml#_Toc470681572"></span><span id="part0000.xhtml#_Toc469765129"><span lang="EN-US">Text editors</span></span></h4>
+<p><span lang="EN-US" style="font-size:1.08rem;">Each operating system has a lot of good text editors. However, in this case, Microsoft Office Word or LibreOffice Writer cannot be regarded as text editors because they save a lot of information about the page and text formatting apart from the text. A text editor saves the exact characters of the entered text as it appears in the editor. Modern text editors colour text to make it more readable. The colouring will not be saved, but shown dynamically when you reopen the file. This function is called syntax highlighting. Syntax is the term used to describe the code, and highlighting it in a text editor means that various commands and functions of a programming language are coloured.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">There are also Integrated Development Environments (IDEs), which help a lot to write and manage the program code and all other parts of a software project. IDEs automatically detect cross-references to functions in the program code and can display the recently used functions while writing notes.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">There are large IDE projects, which are available as open source items, or under different licenses for all operating sys-tems. Many developers use the IDEs Eclipse (www.eclipse.org) or NetBeans (www.netbeans.org).</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">If you have a low-performance computer or want to quickly test some short PHP scripts, then I recommend using the text editor jEdit, which has been developed as an open source software and can be downloaded from www.jedit.org. In the larger Linux distributions, jEdit is available via a Software Channel (Package Manager) in a somewhat outdated version.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">For this book, it does not matter whether you are using an IDE or a simple text editor. If you are going to be a profes-sional PHP developer, you will come in contact with an IDE sooner or later.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">In order to issue a specific recommendation, I would personally suggest that you write the first scripts in a text editor like jEdit, and more advanced scripts into the surface of an IDE, only after finishing a handful of small PHP projects. </span></p>
+<p><span id="part0000.xhtml#_Toc469765130"></span><span id="part0000.xhtml#0103_The_first_PHP_program_Wel"></span><span lang="EN-US" style="font-size:
+1rem;color:#6E6E6E"> </span></p>
+<div style="page-break-after:always">
+
+</div>
+<h3><span id="part0000.xhtml#_Toc470681573"><span lang="EN-US">The first PHP program (Welcome the whole world)</span></span></h3>
+<p><span lang="EN-US" style="font-size:1.08rem;">We will now write our first small PHP script.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Open the text editor of your choice and type in the following lines of code:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US"> echo "Hello World!";</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Save this text in the htdocs folder inside the web server installation and name the file hello.php.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Already the file extension .php shows that there is a PHP script on one file. Our script begins with the line are PHP code and not 1 &lt;?php, which our server will recognize that the following lines to ?&gt;: 1 output, but to be first processed by our PHP interpreter.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">In the world of programming, there are so-called interpreters and compilers. Compilers first process a complete program code and generate a finished program in machine language that can be supplied clean packed, for example in an .exe or .app file to the customer. This process is called compiling. The compilation of complex projects can sometimes take a long time. Especially in the field of dynamic web development the visitors don’t want to wait to long for the site to be fully assembled. So PHP is always interpreted fresh out of the code, that is, on every page request the code line by line and went for quasi live assembled the page (it is still only the finished page delivered to the visitors).</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">In our short code example, we find also the line echo "Hello World!"; which is our original script. Each command within PHP is terminated with a semicolon, which is located at the end of the line. A command could be long over several lines, then only the last line is terminated with a semicolon. The echo command returns in PHP a text string to the visitor's browser. Strings must be enclosed by quotation marks, so that PHP knows what’s a command and what’s a string. Whether single or double quotes are used, in most cases, does not matter. Just be aware that once again includes all strings with the same character. Most text editors raise strings produce color and thus can be recognized, if they were again closed properly easy.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">When we call now following in our browser the following address</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">http://127.0.0.1/hello.php (or http://127.0.0.1:4444/hello.php depending on the operating system)</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">our script from PHP gets executed.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">If the server is set up correctly and the PHP script could be executed, then the following output is displayed within the browser:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">Hello World!</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">If this is the case for you, congratulations on your first PHP script.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">If not, it could be a possible source of error that either the server is not running or has disabled itself, or that the semicolon is missing at the end of the line of code with the echo command.</span></p>
+<div style="page-break-after:always">
+
+</div>
+<h3><span id="part0000.xhtml#_Toc470681574"></span><span id="part0000.xhtml#_Toc469765131"></span><span id="part0000.xhtml#0104_Variables_information_sto"></span><span lang="EN-US">Variables (information stores)</span></h3>
+<p><span lang="EN-US" style="font-size:1.08rem;">One of the key components of a modern programming language are variables. These serve as small information stores. Variables can store values ​​of various kinds. E.g. text characters (called String), numbers (without decimal digits they are named Integer, with Decimal or Float), a date or a number of other values.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">In many programming languages ​​you to define which type of values you want to save when you create a variable. So there are Char variables that can store text strings only, or so-called integer variables, where you can store numbers. PHP is dynamic in variable types. You don’t need to specify whether a variable can only store numbers, characters, or else a certain type of information. A variable in PHP can also first contain a text and later in the script only a sequence of numbers.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Later in this text you will learn how to anticipate or control the variable program runoff depending on the current value of a variable.</span></p>
+<h4><span id="part0000.xhtml#_Toc470681575"></span><span id="part0000.xhtml#_Toc469765132"><span lang="EN-US">Initialize variables</span></span></h4>
+<p><span lang="EN-US" style="font-size:1.08rem;">In our previous first PHP script, we wrote the text "Hello World!". Now we would not set the text right behind the echo command, but save it first in a variable and then the echo command should give us the content of this variable.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $myText = "Hello World!";</span></p>
+<p><span lang="EN-US">  echo $myText;</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">In PHP variables are preceded by a dollar sign ($). The variable name is arbitrary, but it must not contain spaces, but only small and uppercase letters, numbers and underscores.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">To print the contents of several variables in succession, they must be separated by a point:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $part1 = "Hello ";</span></p>
+<p><span lang="EN-US">  $part2 = "World!";</span></p>
+<p><span lang="EN-US">  echo $part1 . $part2;</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">This gives the same output as in our first example. We can also output text blocks with variables together:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $part1 = "Hello";</span></p>
+<p><span lang="EN-US">  echo $part1 . " World!";</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">If you are looking for errors in a program, use the command var_dump any time to find out by means of the function, the nature of the information within a variable:</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $part1 = "Hello";</span></p>
+<p><span lang="EN-US">  var_dump($part1);</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Output:</span></p>
+<code></code>
+<p><span lang="EN-US">string(5) "Hello"</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">This means that the contents of our variable is of type "string" and contains a string with 5 characters, namely "Hello".</span></p>
+<p><span id="part0000.xhtml#_Toc469765133"></span><span id="part0000.xhtml#0105_Comment_the_code"></span><span lang="EN-US" style="font-size:1rem;
+color:#6E6E6E"> </span></p>
+<div style="page-break-after:always">
+
+</div>
+<h3><span id="part0000.xhtml#_Toc470681576"><span lang="EN-US">Comment the code</span></span></h3>
+<p><span lang="EN-US" style="font-size:1.08rem;">If our scripts are only a few lines long, it is easy to recognize at first glance what a code block does. However, as soon as the script becomes longer, it may be necessary to leave comments within the program code, so that everyone who reads the code later immediately knows what the following lines of code object are.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">There are single-line and multi-line comments in PHP. Line comments start with two forward slashes //. Anything written after the two slashes on the current line is no longer treated as a code.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Multi-line comments begin with a slash and a star, /*, and end with a star and a slash, */.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Here is another example:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  // I am a single line comment</span></p>
+<p><span lang="EN-US">  echo "I am code";</span></p>
+<p><span lang="EN-US">  /*</span></p>
+<p><span lang="EN-US">  I</span></p>
+<p><span lang="EN-US">  am</span></p>
+<p><span lang="EN-US">  a</span></p>
+<p><span lang="EN-US">  multiline</span></p>
+<p><span lang="EN-US">  comment</span></p>
+<p><span lang="EN-US">  */</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">This script outputs only the following text:</span></p>
+<code></code>
+<p><span lang="EN-US">I am code</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">A good programmer should, of course, always have as a goal writing a program code that reveals all purposes on its own. This can be achieved, for example, by logical variable and function names. Variables termed $a, $b, and $c indicate ‘less than’ if the variables are named $total_price, $sales_tax, and $gross_price.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Nevertheless, for example, it is helpful if you write meaningful comments when you are programming complex algorithms or codes. You could divide the program code via comments in several blocks.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">So, should a program block start with the comment,</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">/* ********************</span></p>
+<p><span lang="EN-US">process user input</span></p>
+<p><span lang="EN-US">******************** */</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">and the next block is labelled as follows:</span></p>
+<code></code>
+<p><span lang="EN-US">/* ********************</span></p>
+<p><span lang="EN-US">perform calculations</span></p>
+<p><span lang="EN-US">******************** */</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">and the last block, for example, is as follows:</span></p>
+<code></code>
+<p><span lang="EN-US">/* ********************</span></p>
+<p><span lang="EN-US">output results</span></p>
+<p><span lang="EN-US">******************** */</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">then any programmer, who wants to update the calculations, knows immediately in which area of the code he has to look.</span></p>
+<p><span id="part0000.xhtml#_Toc469765134"></span><span id="part0000.xhtml#0106_Arithmetic_operations_bas"></span><span lang="EN-US" style="font-size:
+1rem;color:#6E6E6E"> </span></p>
+<div style="page-break-after:always">
+
+</div>
+<h3><span id="part0000.xhtml#_Toc470681577"><span lang="EN-US">Arithmetic operations (basic arithmetic)</span></span></h3>
+<p><span lang="EN-US" style="font-size:1.08rem;">If you save only numbers in variables instead of letters, then you can calculate with these.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Here is an example (in this example, the HTML code &lt;br /&gt; is used, which is indicated in the browser as a line break):</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $number1 = 2;</span></p>
+<p><span lang="EN-US">  $number2 = 3;</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  $addition = $number1 + $number2;</span></p>
+<p><span lang="EN-US">  $subtraction = $number1 - $number2;</span></p>
+<p><span lang="EN-US">  $multiplication = $number1 * $number2;</span></p>
+<p><span lang="EN-US">  $division = $number1 / $number2;</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  echo "Number 1: " . $number1;</span></p>
+<p><span lang="EN-US">  echo "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  echo "Number 2: " . $number2;</span></p>
+<p><span lang="EN-US">  echo "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  echo "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  echo "Addition: " . $addition;</span></p>
+<p><span lang="EN-US">  echo "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  echo "Subtraction: " . $subtraction;</span></p>
+<p><span lang="EN-US">  echo "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  echo "Multiplication: " . $multiplication;</span></p>
+<p><span lang="EN-US">  echo "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  echo "Division: " . $division;</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">This script has the following output in the browser:</span></p>
+<code></code>
+<p><span lang="EN-US">Number 1: 2</span></p>
+<p><span lang="EN-US">Number 2: 3</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">Addition: 5</span></p>
+<p><span lang="EN-US">Subtraction: -1</span></p>
+<p><span lang="EN-US">Multiplication: 6</span></p>
+<p><span lang="EN-US">Division: 0.66666666666667</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">There is an alternative spelling for simple arithmetic:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $value1 = 2;</span></p>
+<p><span lang="EN-US">  $value2 = 3; </span></p>
+<p><span lang="EN-US">  $value1 = $value1 + $value2;</span></p>
+<p><span lang="EN-US">  $value2 = $value2 * $value2;</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  echo $value1;</span></p>
+<p><span lang="EN-US">  echo "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  echo $value2;</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">It gives the same output as the following:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $value1 = 2;</span></p>
+<p><span lang="EN-US">  $value2 = 3; </span></p>
+<p><span lang="EN-US">  $value1 += $value2;</span></p>
+<p><span lang="EN-US">  $value2 *= $value2;</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  echo $value1;</span></p>
+<p><span lang="EN-US">  echo "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  echo $value2;</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Output:</span></p>
+<code></code>
+<p><span lang="EN-US">5</span></p>
+<p><span lang="EN-US">9</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">As a small task, you could write a script that calculates the following:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">One website has 30,000 visitors daily.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">An ad-blocking plug-in is used by 60% of the visitors. In other words, 40% of the visitors see a banner advertisement on our website. Of these 40% visitors, 10% click on the banners. For every 1,000 clicks, we get €200.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">How much do we earn per month (calculated as 30 days)?</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Use all values in the variables; then you can calculate very fast how much we could earn when our website has 100,000 visitors daily.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">The answer is on the next page.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;
+"> </span></p>
+<span lang="EN-US" style="font-size:1.08rem;
+"></span>
+<div style="page-break-after:always">
+
+</div>
+<br />
+</span>
+<p><span lang="EN-US" style="font-size:1.08rem;
+"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">As a solution, you should get the following: €240 and €800.<span id="part0000.xhtml#0107_Combining_several_variabl"></span></span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Example solution:</span></p>
+<code></code>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1rem;">&lt;?php</span></p>
+<p><span lang="EN-US" style="font-size:1rem;">  $dailyVisitors = 30000;</span></p>
+<p><span lang="EN-US" style="font-size:1rem;">  $seesads = 0.4; // 60% get blocked</span></p>
+<p><span lang="EN-US" style="font-size:1rem;">  $clickratio = 0.1;</span></p>
+<p><span lang="EN-US" style="font-size:1rem;">  $earnings = 200; // per 1000 clicks</span></p>
+<p><span lang="EN-US" style="font-size:1rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1rem;">  $ads = $dailyVisitors * $seesads;</span></p>
+<p><span lang="EN-US" style="font-size:1rem;">  $clicks = $ads * $clickratio;</span></p>
+<p><span lang="EN-US" style="font-size:1rem;">  echo ($clicks / 1000) * $earnings;</span></p>
+<p><span lang="EN-US" style="font-size:1rem;">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1.08rem;
+"> </span></p>
+<div style="page-break-after:always">
+
+</div>
+<h3><span id="part0000.xhtml#_Toc470681578"></span><span id="part0000.xhtml#_Toc469765135"><span lang="EN-US">Combining several variables (arrays)</span></span></h3>
+<p><span lang="EN-US" style="font-size:1.08rem;">If you have several variables to represent a number of similar values, it makes sense to include them in an array.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Here are two examples that have the same output:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $value1 = 2;</span></p>
+<p><span lang="EN-US">  $value2 = 4;</span></p>
+<p><span lang="EN-US">  $value3 = 8;</span></p>
+<p><span lang="EN-US">  $value4 = 16;</span></p>
+<p><span lang="EN-US">  $value5 = 32;</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  echo $value1 . "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  echo $value2 . "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  echo $value3 . "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  echo $value4 . "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  echo $value5 . "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $valueArray = array(2,4,8,16,32);</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  echo $valueArray[0] . "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  echo $valueArray[1] . "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  echo $valueArray[2] . "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  echo $valueArray[3] . "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  echo $valueArray[4] . "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Both have the following output:</span></p>
+<code></code>
+<p><span lang="EN-US">2</span></p>
+<p><span lang="EN-US">4</span></p>
+<p><span lang="EN-US">8</span></p>
+<p><span lang="EN-US">16</span></p>
+<p><span lang="EN-US">32</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">You can access the values of an array by using $array[index]. The entries are numbered in ascending order from 0 to the number of elements. You can also set the index by yourself:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $myArray = array("index1" =&gt; "value1");</span></p>
+<p><span lang="EN-US">  echo $myArray["index1"];</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  echo "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  $myArray["index1"] = "value2";</span></p>
+<p><span lang="EN-US">  echo $myArray["index1"];</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Output:</span></p>
+<code></code>
+<p><span lang="EN-US">value1</span></p>
+<p><span lang="EN-US">value2</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Later, we will learn how to automate the output of all the values in an array in succession and process them. This is useful in arrays that contain dozens of entries.</span></p>
+<h4><span id="part0000.xhtml#_Toc470681579"></span><span id="part0000.xhtml#_Toc469765136"><span lang="EN-US">Sort arrays</span></span></h4>
+<p><span lang="EN-US" style="font-size:1.08rem;">If we fill an array dynamically and we want to sort the values alphabetically, there is a simple function: sort();</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $myArray = array("Zita", "Anton", "Hans");</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  // unsorted output</span></p>
+<p><span lang="EN-US">  echo $myArray[0];</span></p>
+<p><span lang="EN-US">  echo "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  echo $myArray[1];</span></p>
+<p><span lang="EN-US">  echo "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  echo $myArray[2];</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  // Sort array</span></p>
+<p><span lang="EN-US">  sort($myArray);</span></p>
+<p><span lang="EN-US">  echo "&lt;br /&gt;&lt;br /&gt;";</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  // Sorted output</span></p>
+<p><span lang="EN-US">  echo $myArray[0];</span></p>
+<p><span lang="EN-US">  echo "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  echo $myArray[1];</span></p>
+<p><span lang="EN-US">  echo "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  echo $myArray[2];</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Output:</span></p>
+<code></code>
+<p><span lang="EN-US">Zita</span></p>
+<p><span lang="EN-US">Anton</span></p>
+<p><span lang="EN-US">Hans</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">Anton</span></p>
+<p><span lang="EN-US">Hans</span></p>
+<p><span lang="EN-US">Zita</span></p>
+</code>
+<h4><span id="part0000.xhtml#_Toc470681580"></span><span id="part0000.xhtml#_Toc469765137"><span lang="EN-US">Multidimensional arrays</span></span></h4>
+<p><span lang="EN-US" style="font-size:1.08rem;">An array could, again, contain as a value, another array:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $myArray = array();</span></p>
+<p><span lang="EN-US">  $myArray["index1"] = array("value1", "value2");</span></p>
+<p><span lang="EN-US">  $myArray["index2"] = array("value3", "value4");</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  echo $myArray["index1"][0];</span></p>
+<p><span lang="EN-US">  echo "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  echo $myArray["index2"][1];</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Output:</span></p>
+<code></code>
+<p><span lang="EN-US">value1</span></p>
+<p><span lang="EN-US">value4</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">So, you could save coordinates and read them, for example, as a coordinate system with X, Y:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  [...]</span></p>
+<p><span lang="EN-US">  echo $chessboard[10][2];</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">This would depend on how your script is constructed. For example, you could show the pitch in the 10th row and the second column.<span id="part0000.xhtml#Day_2-1"></span></span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<div style="page-break-after:always">
+
+</div>
+<h2><span id="part0000.xhtml#_Toc470681581"></span><span id="part0000.xhtml#_Toc469765138"><span lang="EN-US">Day 2</span></span><span id="part0000.xhtml#0201_Fill_variables_with_user_"></span></h2>
+<div style="page-break-after:always">
+
+</div>
+<h3><span id="part0000.xhtml#_Toc470681582"></span><span id="part0000.xhtml#_Toc469765139"><span lang="EN-US">Fill variables with user information (GET / POST)</span></span></h3>
+<p><span lang="EN-US" style="font-size:1.08rem;">So far, although we have had our variables always filled with values within the code, the result has not been a dynamic website. We now want to receive information from ‘outside’.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">For a user to send to our PHP script data, there are, among other things, two simple methods: POST and GET.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">POST information is transmitted, for example, in an appropriately configured form to our server when the user is registered for or, when he makes a new forum entry. Then, there is the GET information, which is received via invoked URL. You must have noticed the long URLs in web shops, which include many letters and numbers and automatically generated parts.</span></p>
+<h4><span id="part0000.xhtml#_Toc470681583"></span><span id="part0000.xhtml#_Toc469765140"><span lang="EN-US">Identify and read GET variables</span></span></h4>
+<p><span lang="EN-US" style="font-size:1.08rem;">GET variables are passed as parameters in an URL:</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">http://www.myurl.com/script.php?variable1=value1&amp;variable2=value2&amp;variable3=value3</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">The number of variables and values is virtually not limited, but old browsers and a lot of servers have a limit of 1024 characters in the URL.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">When this URL is called in the browser, the computer first attempts to address the call, www.myurl.at. The file is then requested from the server, script.php, and three variables are received. The first variable has a question mark (?), the other variables, an ampersand (&amp;).</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Let us expand our welcome script to a dynamic component to greet our visitors in my name:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $vistorsname = $_GET['name'];</span></p>
+<p><span lang="EN-US">  echo "Hello ".$vistorsname;</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Save the script, for example, under the name hello2.php in your htdocs folder.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Within PHP, there are always some automatically existing variables. There are, for example, an array called $_GET and one named $_POST from which the transmitted GET and POST information can be read. These variables are arrays, and the name of the values are the array index.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">If you now call the script by the URL,</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">http://127.0.0.1/hello2.php?name=Klaus</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">the following text appears in the browser:</span></p>
+<code></code>
+<p><span lang="EN-US">Hello Klaus</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Congratulations! You have, now, programmed your first dynamic website and you are a bit ahead of other programmers who can write only simple HTML.</span></p>
+<h4><span id="part0000.xhtml#_Toc470681584"></span><span id="part0000.xhtml#_Toc469765141"><span lang="EN-US">Identify and read POST variables</span></span></h4>
+<p><span lang="EN-US" style="font-size:1.08rem;">Would you query longer texts, including special characters, so that you could get on with the transmission via GET variables in the URL problems? For such purposes, there is the POST method, which is used as follows:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">my_form.html</span></p>
+<code></code>
+<p><span lang="EN-US">&lt;form method="POST" action="read_form.php"&gt;</span></p>
+<p><span lang="EN-US">  &lt;textarea name="myText"&gt;&lt;/textarea&gt;</span></p>
+<p><span lang="EN-US">  &lt;input type="submit" value="Send" /&gt;</span></p>
+<p><span lang="EN-US">&lt;/form&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">read_form.php</span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $myText = $_POST["myText"];</span></p>
+<p><span lang="EN-US">  echo nl2br($myText);</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">In the first file, we define a form by HTML. Each form element from which we want to get information, gets the property (tag attributes) name=‘...’. This enables us to extract all information through the global variable, $_POST, in our second file.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Since we use a text box with multiple lines, we have, on the issue, in our PHP script the function nl2br, which stands for a new line to break or to make line breaks in the text output automatically &lt;br /&gt;.</span></p>
+<p><span id="part0000.xhtml#_Toc469765142"></span><span id="part0000.xhtml#0202_Conditions_program_contro"></span><span lang="EN-US" style="font-size:
+1rem;color:#6E6E6E"> </span></p>
+<div style="page-break-after:always">
+
+</div>
+<h3><span id="part0000.xhtml#_Toc470681585"><span lang="EN-US">Conditions, program control (IF/ELSE/ELSEIF)</span></span></h3>
+<p><span lang="EN-US" style="font-size:1.08rem;">We can, already, according to the user input, output dynamic text, but we cannot run our script differently depending on user input. In programming, there are many cases, which can be written as follows: when the user, A, enters exactly something, do this, otherwise, do that. In PHP, this is written in English and a few diacritical marks.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">if ($input == "A") {</span></p>
+<p><span lang="EN-US">  do this;</span></p>
+<p><span lang="EN-US">} </span></p>
+<p><span lang="EN-US">else {</span></p>
+<p><span lang="EN-US">  do that;</span></p>
+<p><span lang="EN-US">}</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">’If’, followed by a condition written within normal parentheses ( ), the following code is only executed when the condition in the parentheses ( ) is met. The code block after the parentheses should be writtin within two brackets { }. </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">If the conditions inside the parentheses () are not applied, the else block, also bounded by braces, will be executed. Then the program will continue underneath the braces with the rest of the script.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">One can combine ‘if’ and ‘else’ also to successively query multiple conditions and even attach an ‘else’ clause if none of the previous conditions are true:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">if ($input == "A") {</span></p>
+<p><span lang="EN-US">  do this;</span></p>
+<p><span lang="EN-US">} </span></p>
+<p><span lang="EN-US">elseif ($input == "A") {</span></p>
+<p><span lang="EN-US">  do this;</span></p>
+<p><span lang="EN-US">} </span></p>
+<p><span lang="EN-US">else {</span></p>
+<p><span lang="EN-US">  do that;</span></p>
+<p><span lang="EN-US">}</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Conditions are compared with different characters. If a variable has a certain value, you have to write two actual equal signs ==. If you write just one equal sign, =, the program will simply store the value on the right side of the quotation mark in the variable.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Other conditions are defined as follows:</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">== equals</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">!= is not equal</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">&gt; is greater</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">&lt; less</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">&gt;= greater than or equal</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">&lt;= less than or equal</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Several conditions can be linked with a double ampersand, &amp;&amp;. A double vertical line would mean an OR operation ||.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Thus, $a == 1 &amp;&amp; $b == 1 would mean that both the variables, $a and $b, must contain the value 1. If one variable had another value, the else clause would be executed.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">$a == 1 || $b == 1 would mean that either the variable, $a or the variable, $b or both the variables must contain the value 1. You can combine multiple conditions by putting them in further parantheses:</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">if (($a == 1 &amp;&amp; $b == 1) || $c == 1) would mean that either $a and $b must have the value 1 or $c must have the value 1. </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">To make the benefits of the if-else function more understandable, here is an example:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $username = $_GET["username"];</span></p>
+<p><span lang="EN-US">  $password = $_GET["password"];</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  if ($username == "admin" &amp;&amp; $password == "mystrongandsecretpassword") {</span></p>
+<p><span lang="EN-US">    echo "Welcome Administrator!";</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US">  elseif ($username == "admin" &amp;&amp; $password != "mystrongandsecretpassword") {</span></p>
+<p><span lang="EN-US">    echo "Hello administrator, unfortunately, you have entered the password incorrectly!";</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US">  else {</span></p>
+<p><span lang="EN-US">    echo "Error: The login data entered were incorrect!";</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">In the script above, first, the values from the GET array are stored in variables. Of course, it would also be possible to use the GET array directly in the if-function, but that would make the code more complicated.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">If a visitor in the URL has transmitted the correct login information, we welcome him as an administrator, otherwise, we will check if he has, at least, entered the user name correctly. If the username and password are incorrect, we will give an error message.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Output when calling</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">script.php?username=admin&amp;password=mystrongandsecretpassword</span></p>
+<code></code>
+<p><span lang="EN-US">Welcome Administrator!</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Output when calling</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">script.php?username=admin&amp;password=xxx</span></p>
+<code></code>
+<p><span lang="EN-US">Hello administrator, unfortunately, you have entered the password incorrectly!</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Output when calling</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">script.php?username=abc&amp;password=xxx</span></p>
+<code></code>
+<p><span lang="EN-US">Error: The login data entered were incorrect!</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">If the contents of a variable do not matter, and we just want to check if a variable has any content, then we can accomplish this as follows: </span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $myTrueValue = "myTest";</span></p>
+<p><span lang="EN-US">  if ($myTrueValue) {</span></p>
+<p><span lang="EN-US">    echo 1;</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US">  else {</span></p>
+<p><span lang="EN-US">    echo 0;</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  echo "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  $myTrueValue = "";</span></p>
+<p><span lang="EN-US">  if ($myTrueValue) {</span></p>
+<p><span lang="EN-US">    echo 1;</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US">  else {</span></p>
+<p><span lang="EN-US">    echo 0;</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Output:</span></p>
+<code></code>
+<p><span lang="EN-US">1</span></p>
+<p><span lang="EN-US">0</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">In the first query, if the variable has a content, then the ‘if’ block and not the ‘else’ block is executed. In the second review, the variable is empty. When you do not test any condition like == or !=, ..., it is checked whether the variable is empty or contains a Boolean value. A Boolean value consists in programming as a variable or a value of true or false, it can also be written as 1 or 0.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Here, the previous example is slightly extended:</span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $myTrueValue = "myTest";</span></p>
+<p><span lang="EN-US">  if ($myTrueValue) {</span></p>
+<p><span lang="EN-US">    echo 1;</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US">  else {</span></p>
+<p><span lang="EN-US">    echo 0;</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  echo "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  $myTrueValue = false;</span></p>
+<p><span lang="EN-US">  if ($myTrueValue) {</span></p>
+<p><span lang="EN-US">    echo 1;</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US">  else {</span></p>
+<p><span lang="EN-US">    echo 0;</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  echo "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  $myTrueValue = 0;</span></p>
+<p><span lang="EN-US">  if ($myTrueValue) {</span></p>
+<p><span lang="EN-US">    echo 1;</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US">  else {</span></p>
+<p><span lang="EN-US">    echo 0;</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Output:</span></p>
+<code></code>
+<p><span lang="EN-US">1</span></p>
+<p><span lang="EN-US">0</span></p>
+<p><span lang="EN-US">0</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Furthermore, it is often important to know whether a variable exists at all and is, therefore, initialised in the program already:</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $myVar = "123";</span></p>
+<p><span lang="EN-US">  if (isset($myVar)) {</span></p>
+<p><span lang="EN-US">    echo "myVar exists";</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US">  else {</span></p>
+<p><span lang="EN-US">    echo "myVar does not exist";</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Output:</span></p>
+<code></code>
+<p><span lang="EN-US">myVar exists</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $myVar = "123";</span></p>
+<p><span lang="EN-US">  if (isset($otherVar)) {</span></p>
+<p><span lang="EN-US">    echo "myVar exists";</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US">  else {</span></p>
+<p><span lang="EN-US">    echo "myVar does not exists";</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Output:</span></p>
+<code></code>
+<p><span lang="EN-US">otherVar does not exists</span></p>
+</code>
+<p><span id="part0000.xhtml#_Toc469765143"></span><span id="part0000.xhtml#0203_Case_analysis_switch_case"></span><span lang="EN-US" style="font-size:
+1rem;color:#6E6E6E"> </span></p>
+<div style="page-break-after:always">
+
+</div>
+<h3><span id="part0000.xhtml#_Toc470681586"><span lang="EN-US">Case analysis (switch / case)</span></span></h3>
+<p><span lang="EN-US" style="font-size:1.08rem;">Let us suppose we have a variable and want to check for many different contents. We already know the function of if, elseif and else. However, it may quickly become confusing; moreover, it is easier to write a redundant code to check only a single variable. There is the practical function switch case which is programmed as follows:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $username = $_GET["username"];</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  switch ($username) {</span></p>
+<p><span lang="EN-US">    case "Klaus":</span></p>
+<p><span lang="EN-US">      echo "Hello administrator!";</span></p>
+<p><span lang="EN-US">      break;</span></p>
+<p><span lang="EN-US">    case "Dagmar":</span></p>
+<p><span lang="EN-US">      echo "Hello sister!";</span></p>
+<p><span lang="EN-US">      break;</span></p>
+<p><span lang="EN-US">    case "Bill Gates":</span></p>
+<p><span lang="EN-US">      echo "Hello richest man in the world!";</span></p>
+<p><span lang="EN-US">      break;</span></p>
+<p><span lang="EN-US">    default:</span></p>
+<p><span lang="EN-US">      echo "Hello visitor!";</span></p>
+<p><span lang="EN-US">      break;</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">As we see, the head of the switch function is pretty similar to the ‘if’ function; it just has no parameters defined. Thereafter, each multiple case block must be completed with a break; that breaks the review on to other cases.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">If, in neither case, the condition is met, the default block is executed. If you do not use breaks, you could run the same for two or more case code blocks:</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $username = $_GET["username"];</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  switch ($username) {</span></p>
+<p><span lang="EN-US">    case "Klaus":</span></p>
+<p><span lang="EN-US">    case "Dagmar":</span></p>
+<p><span lang="EN-US">      echo "Hello administrator!";</span></p>
+<p><span lang="EN-US">      break;</span></p>
+<p><span lang="EN-US">    case "Bill Gates":</span></p>
+<p><span lang="EN-US">      echo "Hello richest man in the world!";</span></p>
+<p><span lang="EN-US">      break;</span></p>
+<p><span lang="EN-US">    default:</span></p>
+<p><span lang="EN-US">      echo "Hello visitor!";</span></p>
+<p><span lang="EN-US">      break;</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<div style="page-break-after:always">
+
+</div>
+<h3><span id="part0000.xhtml#_Toc470681587"></span><span id="part0000.xhtml#_Toc469765144"></span><span id="part0000.xhtml#0204_Loops_for_repetitive_task"></span><span lang="EN-US">Loops for repetitive tasks (While / For / Foreach)</span></h3>
+<h4><span id="part0000.xhtml#_Toc470681588"></span><span id="part0000.xhtml#_Toc469765145"><span lang="EN-US">While() Loop</span></span></h4>
+<p><span lang="EN-US" style="font-size:1.08rem;">Often, there are tasks for our script to be repeated many times. This could be, for example, a kind of numbering in a particular order:</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $number = 1;</span></p>
+<p><span lang="EN-US">  while ($number &lt; 100) {</span></p>
+<p><span lang="EN-US">    echo $number . "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">    $number++;</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">This short script gives back each number 1 to 99. It is used in a so-called while() loop. The header of the while() loop is used to specify a condition as an ‘if’ function. The loop is repeated as long as the condition is true or till a break, a command is invoked inside the loop.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">The script also has a small gimmick. It took over from C++ to PHP: ++ increases the value of a variable by +1, -- reduces it to -1.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Here is another example of the same output, only this time, it is written in a quasi-infinite loop because the condition is true. The loop runs until there is a break; the command is cancelled:</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $number = 1;</span></p>
+<p><span lang="EN-US">  while (true) {</span></p>
+<p><span lang="EN-US">    echo $number . "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">    $number++;</span></p>
+<p><span lang="EN-US">    if ($number &gt; 99) {</span></p>
+<p><span lang="EN-US">      break;</span></p>
+<p><span lang="EN-US">    }</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+<p><span lang="EN-US"> </span></p>
+</code>
+<h4><span id="part0000.xhtml#_Toc470681589"></span><span id="part0000.xhtml#_Toc469765146"><span lang="EN-US">For() Loop</span></span></h4>
+<p><span lang="EN-US" style="font-size:1.08rem;">For fixed numbers, there is a much more beautiful loop: the for() loop.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">The function of the for() loop is as follows:</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">for (start value; condition; to repeat command at each execution) {</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">}</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Here is a brief example:</span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  for ($x = 1; $x &lt; 100; $x++) {</span></p>
+<p><span lang="EN-US">    echo $x . "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">This would result in the same output as we had with our while() loop. The third parameter of the function specifies a command to be executed after each loop. In this case, we increase the value of the variable $x by 1. The variable can be used only within the loop.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<h4><span id="part0000.xhtml#_Toc470681590"></span><span id="part0000.xhtml#_Toc469765147"><span lang="EN-US">Foreach() loop</span></span></h4>
+<p><span lang="EN-US" style="font-size:1.08rem;">There is another loop function to work through arrays: foreach()</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Here is an example of how this is used:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $valueArray = array(2,4,8,16,32);</span></p>
+<p><span lang="EN-US">  foreach ($valueArray as $index =&gt; $value) {</span></p>
+<p><span lang="EN-US">    echo $value . "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Output:</span></p>
+<code></code>
+<p><span lang="EN-US">2</span></p>
+<p><span lang="EN-US">4</span></p>
+<p><span lang="EN-US">8</span></p>
+<p><span lang="EN-US">16</span></p>
+<p><span lang="EN-US">32</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Within the function, the $index and $value variables are available. With $index, you can determine which entry you have entered within the array (counted from 0 ascending), or if you have defined the index of an array entry, you have this within the loop. The names of the variables are freely definable; but it should be clear within the loop code block what the variables are used for.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">If you do not need the array index within the loop, for example, as you only want to output the values in sequence, it is even easier:</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $valueArray = array(2,4,8,16,32);</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  foreach ($valueArray as $value) {</span></p>
+<p><span lang="EN-US">    echo $value . "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1.08rem;
+"> </span></p>
+<div style="page-break-after:always">
+
+</div>
+<h2><span id="part0000.xhtml#_Toc470681591"></span><span id="part0000.xhtml#_Toc469765148"><span lang="EN-US">Day 3</span></span></h2>
+<div style="page-break-after:always">
+
+</div>
+<h3><span id="part0000.xhtml#_Toc470681592"></span><span id="part0000.xhtml#_Toc469765149"><span lang="EN-US">Date and Time (Who has turned the clock?)</span></span></h3>
+<h4><span id="part0000.xhtml#_Toc470681593"></span><span id="part0000.xhtml#_Toc469765150"><span lang="EN-US">DATE()</span></span></h4>
+<p><span lang="EN-US" style="font-size:1.08rem;">With the function date(format [, time]), you can print a certain time in a formatted form. The first parameter specifies the format, while a second optional parameter states a specific time. If the second parameter is absent, the current server time is as shown below.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Here is an example:</span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  echo date("Y-m-d");</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Output (if the actual server time is 24 December 2016):</span></p>
+<p><span lang="EN-US" style="font-size:1rem;">2016-12-24</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">The second parameter must be specified in the PHP time() format:</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">This output would be the same:</span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  echo date("Y-m-d", time());</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">The time() function returns the desired time as a number. The value is always the number of seconds after the UNIX time. This began on 1 January 1970 through 00:00:00 GMT.</span></p>
+<h4><span id="part0000.xhtml#_Toc470681594"></span><span id="part0000.xhtml#_Toc469765151"><span lang="EN-US">microtime()</span></span></h4>
+<p><span lang="EN-US" style="font-size:1.08rem;">More precisely, but not suitable for the date() function, is the function of microtime(). The parameter can specify optionally whether you want to receive the return value as point number. The function returns the current date in the UNIX time in the exact number of microseconds. This is, for example, useful for measuring how long a script has run in order to find programs that would still have potential for optimization: </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $start = microtime(true);</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  /*</span></p>
+<p><span lang="EN-US">  Two dummy variables, so that we can generate some computing time for the script:</span></p>
+<p><span lang="EN-US">  */</span></p>
+<p><span lang="EN-US">  $dummyVariable1 = 1;</span></p>
+<p><span lang="EN-US">  $dummyVariable2 = 3;</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  $x = 0;</span></p>
+<p><span lang="EN-US">  while ($x &lt; 1000000) {</span></p>
+<p><span lang="EN-US">    $x++;</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">    $dummyVariable1 *= $dummyVariable2;</span></p>
+<p><span lang="EN-US">    $dummyVariable1 = $dummyVariable1 / $dummyVariable2;</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  $end = microtime(true);</span></p>
+<p><span lang="EN-US">  echo "Runtime: " . ($end - $start) . "ms";</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">This has, for example, the output:</span></p>
+<code></code>
+<p><span lang="EN-US" style="font-size:1rem;">Runtime: 0.0886830329895ms</span></p>
+</code>
+<h4><span id="part0000.xhtml#_Toc470681595"></span><span id="part0000.xhtml#_Toc469765152"><span lang="EN-US">Give a point in time to DATE() function with mktime()</span></span></h4>
+<p><span lang="EN-US" style="font-size:1.08rem;">If you want to specify a certain time, you have to do this, for example, with the function mktime(hour, minute, second, month, day, year):</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  echo date("Y-m-d", mktime(0, 0, 0, 12, 24, 2012));</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">It would have the same output again.<br />
+<br />
+</span></p>
+<p><strong><span lang="EN-US" style="font-size:1.08rem;">strtotime()</span></strong></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">To forestall a function from the chapter of text functions from this book, I shall tell you the right strtotime("date in text format"). With this, you can convert one written text in human readable form of a certain time in the time() format for the date() function:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  echo date("Y-m-d", strtotime("May 17th, 2012"));</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Some examples of such conversions are as follows:</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<code></code>
+<p><span lang="EN-US">strtotime("now")</span></p>
+<p><span lang="EN-US">strtotime("2012-05-17")</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">You can even do some simple calculations from the actual point in time:</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<code></code>
+<p><span lang="EN-US">strtotime("next Friday")</span></p>
+<p><span lang="EN-US">strtotime("last Monday")</span></p>
+<p><span lang="EN-US">strtotime("+1 day")</span></p>
+<p><span lang="EN-US">strtotime("+1 week 2 days 3 hours 4 seconds")</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><strong><span lang="EN-US" style="font-size:1.08rem;">The following formats are possible: </span></strong></p>
+<p><strong><span lang="EN-US" style="font-size:1.08rem;">Day</span></strong></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">d</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Day of the month, two digits with leading zeros</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">01 to 31</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">D</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Weekday, truncated to three letters</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Mon to Sun</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">j</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Day of the month without leading zeros</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">1 to 31</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">l (lower case 'L')</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Full weekday</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Sunday to Saturday</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">N</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Numeric representation of the day of the week according to ISO 8601 (in PHP 5.1.0 added)</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">1 (Monday) to 7 (Sunday)</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">S</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">English ordinal suffix for day of the month, two characters. Recommended for use with j</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">st, nd, rd or th. </span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">w</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Numeric day of the week</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">0 (Sunday) to 6 (Saturday)</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">z</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">The day of the year (starting from 0)</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">0 to 365</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><strong><span lang="EN-US" style="font-size:1.08rem;">Week</span></strong></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">W</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">ISO 8601 week number of year, weeks starting on Monday</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Example: 42 (the 42nd week of the year)</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><strong><span lang="EN-US" style="font-size:1.08rem;">Month</span></strong></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">F</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Month as a whole word, such as January or March</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">January to December</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">m</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Month as a number, with leading zeros</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">01 to 12</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">M</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Month name with three letters</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Jan to Dec</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">n</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Month number without leading zeros</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">1 to 12</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">t</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Number of days of that month</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">28 to 31</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><strong><span lang="EN-US" style="font-size:1.08rem;">Year</span></strong></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">L</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Leap year or not</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">1 is when it is a leap year, otherwise 0</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">o</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Year, in accordance with ISO8601. This is the same value as Y, except when the ISO calendar week (W) belongs to the previous or next year, in which case that year is used.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Example: 1999 or 2003</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Y</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Four-digit year</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Example: 1999 or 2003</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">y</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Year, double-digit</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Example: 99 or 03</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><strong><span lang="EN-US" style="font-size:1.08rem;">Time</span></strong></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">a</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Lowercase ante meridiem (morning) and post meridiem (afternoon)</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">am or pm</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">A</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Capital letters: ante meridiem (morning) and post meridiem (afternoon)</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">AM or PM</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">B</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Swatch Internet Time</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">From 000 to 999 per day</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">g</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Hour in 12-hour format, without leading zeros</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">1 to 12</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">G</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Hour in 24-hour format, without leading zeros</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">0 to 23</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">h</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Hour in 12-hour format, with leading zeros</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">01 to 12</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">H</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Hour in 24-hour format, with leading zeros</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">00 to 23</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">i</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Minutes, with leading zeros</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">00 to 59</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">s</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Seconds, with leading zeros</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">00 to 59</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">u</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Microseconds </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Example: 654321</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><strong><span lang="EN-US" style="font-size:1.08rem;">Time zone</span></strong></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">e</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Name of the time zone </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Example: UTC, GMT, Atlantic/Azores</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">I (upper case 'i')</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">A date in the daylight (summer) time</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">1 if it is in daylight time, otherwise 0.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">O</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Difference to Greenwich time (GMT) in hours</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Example: +0200</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">P</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Difference to Greenwich time (GMT) in hours with colon between hours and minutes </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Example: +02:00</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">T</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Abbreviation for time zone</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Example: EST, MDT</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Z</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Time zone offset in seconds. The offset for time zones west of UTC is always negative and for time zones east of UTC it is always positive.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">-43200 to 50400</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><strong><span lang="EN-US" style="font-size:1.08rem;">Complete date/time</span></strong></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">c</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">ISO 8601 date</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">2004-02-12T15:19:21+00:00</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">r</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">According to RFC 2822 formatted date</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Example: Thu, 21 Dec 2000 16:01:07 +0200</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">U</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Seconds since the Unix epoch (1 January 1970, 00:00:00 GMT)</span></p>
+<div style="page-break-after:always">
+
+</div>
+<h3><span id="part0000.xhtml#_Toc470681596"></span><span id="part0000.xhtml#_Toc469765153"></span><span id="part0000.xhtml#0302_Text_functions_String_ope"></span><span lang="EN-US">Text functions (String operations)</span></h3>
+<p><span lang="EN-US" style="font-size:1.08rem;">In PHP, there are a large number of functions for manipulating text, such as splitting a longer string and assemble it different again, search for characters, and more. I wish to show you the key functions, so that you can solve almost all the problems of the manipulation of strings. There are many other functions, which would be beyond the scope of this book for beginners. But you can find some links at the end of the book to sites where all available PHP functions are explained.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><strong><span lang="EN-US" style="font-size:1.08rem;">str_replace</span></strong></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">A function that is commonly used is str_replace. This function looks at a text after the occurrence of a particular string and replaces it. The first parameter is the text to replace, the second is the one to be used instead of this text, and the third is the text to be searched in. The function returns the complete text with the replaced needles. As an optional parameter, you could specify the number of replacements to be performed. </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Here is an example for application:</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $myText = "I am learning to program Java";</span></p>
+<p><span lang="EN-US">  echo $myText;</span></p>
+<p><span lang="EN-US">  $myText = str_replace("Java", "PHP", $myText);</span></p>
+<p><span lang="EN-US">  echo "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  echo $myText;</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Output:</span></p>
+<code></code>
+<p><span lang="EN-US">I am learning to program Java</span></p>
+<p><span lang="EN-US">I am learning to program PHP</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><strong><span lang="EN-US" style="font-size:1.08rem;">substr</span></strong></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Another text function that is used frequently is substr(). This is the abbreviation for substring. It allows you to detach a part of a string. The first parameter that the function expects is the string, the second is the point – counting from 0, to get returned for the first character from the part of your text (substring) – and as an optional parameter, the third one is the length of the returned string.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Here is another example:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $myText = "I am learning to program PHP";</span></p>
+<p><span lang="EN-US">  echo $myText;</span></p>
+<p><span lang="EN-US">  $myText = substr($myText, 5, 8);</span></p>
+<p><span lang="EN-US">  echo "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  echo $myText;</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Output:</span></p>
+<code></code>
+<p><span lang="EN-US">I am learning to program PHP</span></p>
+<p><span lang="EN-US">learning</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><strong><span lang="EN-US" style="font-size:1.08rem;">strtolower</span></strong></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">This function returns a given string in lowercase:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $myText = "I am learning to program PHP";</span></p>
+<p><span lang="EN-US">  echo $myText;</span></p>
+<p><span lang="EN-US">  $myText = strtolower($myText);</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  echo "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  echo $myText;</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Output:</span></p>
+<code></code>
+<p><span lang="EN-US">I am learning to program PHP</span></p>
+<p><span lang="EN-US">i am learning to program php</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><strong><span lang="EN-US" style="font-size:1.08rem;">strtoupper</span></strong></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">This function returns a given string in uppercase:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $myText = "I am learning to program PHP";</span></p>
+<p><span lang="EN-US">  echo $myText;</span></p>
+<p><span lang="EN-US">  $myText = strtoupper($myText);</span></p>
+<p><span lang="EN-US">  echo "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  echo $myText;</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Output:</span></p>
+<code></code>
+<p><span lang="EN-US">I am learning to program PHP</span></p>
+<p><span lang="EN-US">I AM LEARNING TO PROGRAM PHP</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><strong><span lang="EN-US" style="font-size:1.08rem;">strpos</span></strong></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">With this function, you can search for a particular character or string within a text. This is used, for example, in combination with the above stated function substr practical. The first parameter you need to pass is the text to be searched, while the second one is the string to be searched. </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">It is entered in the format strpos(string, search term [, from character #]).</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Here's an example:</span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $myText = "I am learning to program PHP";</span></p>
+<p><span lang="EN-US">  echo strpos($myText, "learn");</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Output:</span></p>
+<code></code>
+<p><span lang="EN-US">5</span></p>
+<p><span lang="EN-US"> </span></p>
+</code>
+<p><strong><span lang="EN-US" style="font-size:1.08rem;">strrpos</span></strong></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">It is entered in the format strrpos(string, search term, [, from character #]).</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">This function is used as strpos to find a specific string within a text, but the last occurrence of the string to be searched is returned:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $myText = "I am learning to program PHP";</span></p>
+<p><span lang="EN-US">  echo strrpos($myText, "m");</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Output:</span></p>
+<code></code>
+<p><span lang="EN-US">23</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><strong><span lang="EN-US" style="font-size:1.08rem;">strlen</span></strong></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">This function returns the length of a string.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $myText = "I am learning to program PHP";</span></p>
+<p><span lang="EN-US">  echo strlen($myText);</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Output:</span></p>
+<code></code>
+<p><span lang="EN-US">28</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><strong><span lang="EN-US" style="font-size:1.08rem;">explode</span></strong></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Sometimes, you would use the explode() function in your projects. This splits a string by a delimiter into an array. You could, for example, multiply values from a text file with the piped | isolated standing in a row, and then read as follows disassemble: </span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $myText = "value1|value2|value3";</span></p>
+<p><span lang="EN-US">  $valueeArray = explode("|", $myText);</span></p>
+<p><span lang="EN-US">  var_dump($valueeArray);</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Output:</span></p>
+<code></code>
+<p><span lang="EN-US">array(3) { [0]=&gt; string(5) "value1" [1]=&gt; string(5) "value2" [2]=&gt; string(5) "value3" }</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><strong><span lang="EN-US" style="font-size:1.08rem;">implode</span></strong></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">With the implode function, you can accomplish exactly the opposite: You can create a string from an array, while each value has the possibility to separate, on request, by means of a separator (glue). </span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $meinArray = array("Hello", "World,", "how", "are", "you?");</span></p>
+<p><span lang="EN-US">  $text = implode(" ", $meinArray);</span></p>
+<p><span lang="EN-US">  echo $text;</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Output:</span></p>
+<code></code>
+<p><span lang="EN-US">Hello World, how are you?</span></p>
+</code>
+<p><span id="part0000.xhtml#0303_Write_your_own_functions"></span><span lang="EN-US" style="font-size:1rem;
+color:#6E6E6E"> </span></p>
+<div style="page-break-after:always">
+
+</div>
+<h3><span id="part0000.xhtml#_Toc470681597"></span><span id="part0000.xhtml#_Toc469765154"><span lang="EN-US">Write your own functions</span></span></h3>
+<p><span lang="EN-US" style="font-size:1.08rem;">We have already learnt a lot of useful functions that are included in PHP. But it is also possible to write your own functions. A PHP function must always consist of a name and optionally specified parameters. </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Here is an example of two functions to which we give a numerical value and a value for the sales tax. So a net to gross amount and vice versa is calculated: </span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  function toNetto($amount, $vat_percent = 20) {</span></p>
+<p><span lang="EN-US">    $amount_netto = $amount / (100 + $vat_percent) * 100;</span></p>
+<p><span lang="EN-US">    return $amount_netto;</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  function toBrutto($amount, $vat_percent = 20) {</span></p>
+<p><span lang="EN-US">    $amount_brutto = $amount * (100 + $vat_percent) / 100;</span></p>
+<p><span lang="EN-US">    return $amount_brutto;</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  $amount = 1000;</span></p>
+<p><span lang="EN-US">  $amount_brutto = toBrutto($amount);</span></p>
+<p><span lang="EN-US">  echo $amount_brutto;</span></p>
+<p><span lang="EN-US">  echo "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  echo toNetto($amount_brutto);</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Output:</span></p>
+<code></code>
+<p><span lang="EN-US">1200</span></p>
+<p><span lang="EN-US">1000</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">In this example, we have included some of the same special features of functions. A function is defined with the preceding word function. Our two functions have two parameters each: One is for the amount and the tax rate; the second parameter is present in the function definition, which is already filled with the value 20. This means that the parameter is optional and if it is not specified when calling the function, the value specified in the definition is used.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Let us, for example, convert an amount of the Austrian VAT (20%) to the German VAT (19%), which goes with our two functions easily: </span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  function toNetto($amount, $vat_percent = 20) {</span></p>
+<p><span lang="EN-US">  $amount_netto = $amount / (100 + $vat_percent) * 100;</span></p>
+<p><span lang="EN-US">  return $amount_netto;</span></p>
+<p><span lang="EN-US"> }</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US"> function toBrutto($amount, $vat_percent = 20) {</span></p>
+<p><span lang="EN-US">  $amount_brutto = $amount * (100 + $vat_percent) / 100;</span></p>
+<p><span lang="EN-US">   return $amount_brutto;</span></p>
+<p><span lang="EN-US"> }</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  $price_austria = 1256;</span></p>
+<p><span lang="EN-US">  $price_netto = toNetto($price_austria);</span></p>
+<p><span lang="EN-US">  $price_germany = toBrutto($price_netto, 19);</span></p>
+<p><span lang="EN-US">  echo round($price_germany, 2);</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Output:</span></p>
+<code></code>
+<p><span lang="EN-US">1245.<span id="part0000.xhtml#0304_Split_the_code_in_several"></span>53</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">With the round() function at the end we make the number better readable.</span></p>
+<div style="page-break-after:always">
+
+</div>
+<h3><span id="part0000.xhtml#_Toc470681598"></span><span id="part0000.xhtml#_Toc469765155"><span lang="EN-US">Split the code in several files</span></span></h3>
+<p><span lang="EN-US" style="font-size:1.08rem;">So far, we have written only short scripts of less than 100 lines. Once you work on larger projects that are partly made up of tens of thousands of lines of code, it can soon become confusing within a file. It makes more sense, for example, to outsource function collections in another .php file and integrate them into our main project file.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">So, we create two files:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">functions_accounting.php</span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  function toNetto($amount, $vat_percent = 20) {</span></p>
+<p><span lang="EN-US">    $amount_netto = $amount / (100 + $vat_percent) * 100;</span></p>
+<p><span lang="EN-US">    return $amount_netto;</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  function toBrutto($amount, $vat_percent = 20) {</span></p>
+<p><span lang="EN-US">    $amount_brutto = $amount * (100 + $vat_percent) / 100;</span></p>
+<p><span lang="EN-US">    return $amount_brutto;</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">vat_calculator.php</span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  include "functions_accounting.php";</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  $price_austria = 1256;</span></p>
+<p><span lang="EN-US">  $price_netto = toNetto($price_austria);</span></p>
+<p><span lang="EN-US">  $price_germany = toBrutto($price_netto, 19);</span></p>
+<p><span lang="EN-US">  echo $price_germany;</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">If, for example, in addition to our vat calculator.php, the file functions of accounting.php are located in the folder ‘functions’, we would have to specify it with the following:</span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  include "functions/functions_accounting.php";</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  $price_austria = 1256;</span></p>
+<p><span lang="EN-US">  $price_netto = toNetto($price_austria);</span></p>
+<p><span lang="EN-US">  $price_germany = toBrutto($price_netto, 19);</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  echo $price_germany;</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">You could also specify full absolute paths on the server, such as the following:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php </span></p>
+<p><span lang="EN-US">  include "/var/www/web1/html/functions/functions_accounting.php";</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">However, if you do this, the path may never change and you may have problems when you transfer your script to a different server. </span></p>
+<p><strong><span lang="EN-US" style="font-size:1rem;"> </span></strong></p>
+<p><span id="part0000.xhtml#Day_4"></span><span id="part0000.xhtml#Day_4-1"></span><span lang="EN-US" style="font-size:1.08rem;color:#A5A5A5"> </span></p>
+<div style="page-break-after:always">
+
+</div>
+<h2><span id="part0000.xhtml#_Toc470681599"></span><span id="part0000.xhtml#_Toc469765156"><span lang="EN-US">Day 4</span></span><span id="part0000.xhtml#0401_Storing_and_reading_infor"></span></h2>
+<div style="page-break-after:always">
+
+</div>
+<h3><span id="part0000.xhtml#_Toc470681600"></span><span id="part0000.xhtml#_Toc469765157"><span lang="EN-US">Storing and reading information with a database (MySQL)</span></span></h3>
+<p><span lang="EN-US" style="font-size:1.08rem;">Now, we can query, process and output a lot of information. However, we still lack an important feature of programming: the storage of data and a technique to retrieve it in future. Most PHP projects use an SQL database.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Within each database, data is stored in tables. Like MS Excel, each table consists of individual columns and rows. We will learn how to access the individual values in this chapter.</span></p>
+<h4><span id="part0000.xhtml#_Toc470681601"></span><span id="part0000.xhtml#_Toc469765158"><span lang="EN-US">Connect to a database within PHP</span></span></h4>
+<p><span lang="EN-US" style="font-size:1.08rem;">First, we need to connect to a database server from our PHP script.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">If you have not modified the basic installation of the server, as described in the first chapter, then the database server access is possible using the user root and without a password. Otherwise, you may need to assign a password in the server management software.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Here is an example of how to connect and reconnect to the database server: </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $mysqli=new mysqli('localhost','my_user','my_password','my_db'); </span></p>
+<p><span lang="EN-US">  $mysqli-&gt;close();</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">The object, MySQL, expects as parameter, the server, the username on the MySQL server, and the password. The server is usually localhost if the MySQL server is installed on the same machine as the Apache web server.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">By default, MySQL connections are automatically closed at the end of a script, so $mysqli-&gt;close() is not necessary. If we want to program cleanly and know that from a certain point in the script no database connection is necessary, we should close it, as soon as possible, to save resources.</span></p>
+<h4><span id="part0000.xhtml#_Toc470681602"></span><span id="part0000.xhtml#_Toc469765159"><span lang="EN-US">Create a new database</span></span></h4>
+<p><span lang="EN-US" style="font-size:1.08rem;">If we are successfully connected to our database server, we need to select a database to work with. Most web developers usually work with a graphical database management tool. With XAMPP, MAMP and so on and the most preconfigured webserver offered on the Internet, PhpMyAdmin is installed by default. With this, you can easily create and manage new databases, tables and the like. Default t is available at http://localhost/phpmyadmin/or http://localhost/phpMyAdmin/. </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">However, we would like to try to create our new database directly within our PHP script:</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $mysqli=new mysqli('localhost','root',''); </span></p>
+<p><span lang="EN-US">  $result= $mysqli-&gt;query("CREATE DATABASE `test`;");</span></p>
+<p><span lang="EN-US">  $mysqli-&gt;close();</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  var_dump($result);</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">You already know the functions of connecting and disconnecting to the MySQL server. The new function in the example is $mysqli-&gt;query. By queries, you tell MySQL what to do. Such queries, as in our example, can also be commands or instructions to update something in our database. However, a result is always returned as to whether the request could be successfully executed.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">If you run the script more than once, you will receive a success message only on the first run, then there will be error messages indicating that the given database name has already been assigned.</span></p>
+<h4><span id="part0000.xhtml#_Toc470681603"></span><span id="part0000.xhtml#_Toc469765160"><span lang="EN-US">Select our database</span></span></h4>
+<p><span lang="EN-US" style="font-size:1.08rem;">If we know what our database is called, we need to specify the script to use it:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $mysqli=new mysqli('localhost','root','', 'test');</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">The database, which should be used, is defined as the last parameter. All following queries are now sent to the selected database.</span></p>
+<h4><span id="part0000.xhtml#_Toc470681604"></span><span id="part0000.xhtml#_Toc469765161"><span lang="EN-US">Create tables</span></span></h4>
+<p><span lang="EN-US" style="font-size:1.08rem;">Now we want to create a table, for example, to store personal records:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $mysqli=new mysqli('localhost','root', '','test');</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  $result = $mysqli-&gt;query("</span></p>
+<p><span lang="EN-US"> CREATE TABLE IF NOT EXISTS `persons` (</span></p>
+<p><span lang="EN-US">`id` int(10) unsigned AUTO_INCREMENT,</span></p>
+<p><span lang="EN-US">`firstname` varchar(50),</span></p>
+<p><span lang="EN-US">`lastname` varchar(50),</span></p>
+<p><span lang="EN-US">PRIMARY KEY (`id`)</span></p>
+<p><span lang="EN-US"> )"</span></p>
+<p><span lang="EN-US"> );</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  var_dump($result);</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">This query is a bit more complex. We tell MySQL to create a table named persons, if it does not already exist. When creating the columns, we must already specify which type they will be. Unlike PHP, the database server must know exactly whether a value is a text, a number, a date or any other given type.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">We create the column ID of type Integer(10). Integers are numbers without commas. The unsigned attribute means that no sign is to be stored, so there will be no minus sign. Furthermore, we use AUTO_INCREMENT to indicate that the ID column automatically increases by the value of 1 compared to the last highest entry when we insert a new row into the table. Thus, we have a consecutive number that we can use as the primary key as we specify it in the last line of the table. Each table must have a primary key. This must be unique for each table row so that the primary key allows you to always address a specific table row. The number ten in the brackets (10) defines that the number can have the length of maximum ten digits, so, the maximum number is 9,999,999,999.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">We also create a column for the first names and one before the last names of both the variable character (VARCHAR) types. This means that we do not yet know what the length of the string, to be stored, will be, but we limit it to a maximum of 50 characters. Alternatively, we could use the type, TEXT, which has no limitation on a certain number of characters but consumes considerably more memory.</span></p>
+<h4><span id="part0000.xhtml#_Toc470681605"></span><span id="part0000.xhtml#_Toc469765162"><span lang="EN-US">Write data to the database</span></span></h4>
+<p><span lang="EN-US" style="font-size:1.08rem;">After we have created our table, we will now fill it with the first data:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $mysqli=new mysqli('localhost','root', '','test');</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  $result = $mysqli-&gt;query("INSERT INTO persons (firstname, lastname) VALUES ('Hans', 'Meier');");</span></p>
+<p><span lang="EN-US">  var_dump($result);</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">If you, now, look at the table in PhpMyAdmin, you will see the entry you just added.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">To insert data into a table, there is the INSERT INTO SQL statement, followed by the table name and the fields to be filled, which is followed by the VALUES statement, and the values in the same order as the fields specified. If you would like to insert more than one line into the table, you only need to write ‘VALUES’ once and separate the individual line values with the words:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $mysqli=new mysqli('localhost','root', '','test');</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  $result = $mysqli-&gt;query("INSERT INTO persons (firstname, lastname) VALUES ('Max', 'Meier'),('Maria', 'Mauser');");</span></p>
+<p><span lang="EN-US">  var_dump($result);</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<h4><span id="part0000.xhtml#_Toc470681606"></span><span id="part0000.xhtml#_Toc469765163"><span lang="EN-US">Retrieve data from the database</span></span></h4>
+<p><span lang="EN-US" style="font-size:1.08rem;">After we have written some lines in the table, we would like to query them again in our script. This is done with the SQL statement, SELECT:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $mysqli=new mysqli('localhost','root', '','test');</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  $result = $mysqli-&gt;query("SELECT firstname, lastname FROM persons;");</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  while ($row = $result-&gt;fetch_array()) {</span></p>
+<p><span lang="EN-US">    echo $row["firstname"]. " " . $row["lastname"] . "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">The SELECT statement will still be your faithful companion when you write PHP / SQL scripts. A data query using SELECT is followed by the table columns; alternatively you could also write a *, if you want to query all table columns. This is followed by the FROM statement and the name of the table from which the data is to be queried.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">After we have submitted the query, we use the function, $result-&gt; fetch_array() to run the result until we can no longer get any more rows. From each line, we access the entries, first name, and last name.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">At this point, it is important to know how to access a particular entry in the table by optionally extending the SELECT statement with a condition clause, WHERE:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $mysqli=new mysqli('localhost','root', '','test');</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  $result = $mysqli-&gt;query('SELECT firstname, lastname FROM persons WHERE firstname = "Hans";');</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  while ($row = $result-&gt;fetch_array()) {</span></p>
+<p><span lang="EN-US">    echo $row["firstname "]. " " . $row["lastname"]. "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Now, we get only rows returned, where in the column, first name, the value is Hans. Likewise, we could now query a specific ID. With this knowledge, you already have the ability to permanently store data and process it with another PHP script in the future.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">There are hundreds of books to understand the many other SQL statements and how to create efficient databases or resource-conserving queries. This is very important especially for projects with hundreds of thousands of table rows and dozens of queries per minute. At the end of the book, you will find some good tips and links to free knowledge sources about SQL.</span></p>
+<h4><span id="part0000.xhtml#_Toc470681607"></span><span id="part0000.xhtml#_Toc469765164"><span lang="EN-US">Delete data from the database</span></span></h4>
+<p><span lang="EN-US" style="font-size:1.08rem;">The deletion of data f a database is nearly the same SQL statement like the SELECT. You can choose which data should be deleted by filtering it with the WHERE clause.</span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $mysqli=new mysqli('localhost','root', '','test');</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  $result = $mysqli-&gt;query('DELETE FROM persons WHERE firstname = "Hans";');</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">All lines from the database, where the field firstname is Hans, will be deleted. So be careful to double check your WHERE clause.</span></p>
+<p><span id="part0000.xhtml#_Toc469765165"></span><span id="part0000.xhtml#0402_File_operations_read_writ"></span><span lang="EN-US" style="font-size:
+1.08rem;"> </span></p>
+<div style="page-break-after:always">
+
+</div>
+<h3><span id="part0000.xhtml#_Toc470681608"><span lang="EN-US">File operations (read / write files)</span></span></h3>
+<p><span lang="EN-US" style="font-size:1.08rem;">In order to import text files into PHP or write to them, they have to be integrated into the script with the use of a filehandler:</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $myFile = "myfile.txt";</span></p>
+<p><span lang="EN-US">  $filehandler = fopen($myFile, "r");</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">The fopen function returns the desired filehandler. As a first parameter, the function expects a filename if the file is in the same directory as the PHP script or the relative path to the file. As a second parameter, the function expects the access mode to the file. This specifies whether we want to have read access with a filehandler for a file or whether we can describe or alter it with our own content.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">These are the following access modes for fopen():</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">'r' Read only, place the file pointer at the beginning</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">'r+' Read and write, place the file pointer at the beginning</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">'w' Write only, place the file pointer at the beginning; if the file exists, then empty it</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">'w+' Read and write, place the file pointer at the beginning; if the file exists, then empty it</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">'a' Write only, place the file pointer at the end</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">'a+' Read and write, place the file pointer at the end</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">'x' Write only, if the file already exists, then return an error</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">'x+' Read and write, if the file already exists, then return an error</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">'c' Write only, place the file pointer at the beginning; if the file exists, then do not empty</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">'c+' Read and write, place the file pointer at the beginning; if the file exists, then do not empty.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<h4><span id="part0000.xhtml#_Toc470681609"></span><span id="part0000.xhtml#_Toc469765167"><span lang="EN-US">Save to a text file</span></span></h4>
+<p><span lang="EN-US" style="font-size:1.08rem;">In the following script, the PHP function, frwite(), is used, which first gets our filehandler, and as a second parameter, we have to specify the content which should be added to the file.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">To create a new file or extend an existing one, we could use the following script:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $myFile = "myfile.txt";</span></p>
+<p><span lang="EN-US">  $filehandler = fopen($myFile, "a");</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  fwrite($filehandler, "I am a new line.\nI am a second new line.\n");</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  fclose($filehandler);</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1.08rem;">In the directory where your .php script file is saved, a new file is created. If you look at the text file now, you will notice that it has been filled by two lines. Everytime you call the php script, two new lines are added. Line breaks must be passed to fwrite using \n. </span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<h4><span id="part0000.xhtml#_Toc470681610"></span><span id="part0000.xhtml#_Toc469765166"><span lang="EN-US">Reading from a text file</span></span></h4>
+<p><span lang="EN-US" style="font-size:1.08rem;">We would like to read this file now into our php script:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $myFile = "myfile.txt";</span></p>
+<p><span lang="EN-US">  $filehandler = fopen($myFile, "r");</span></p>
+<p><span lang="EN-US">  $contents = fread($filehandler, filesize($myFile));</span></p>
+<p><span lang="EN-US">  fclose($filehandler);</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  echo nl2br($contents);</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">In the above script, the PHP function, fread(), is used, which first gets our filehandler, and as a second parameter, we have to specify how much of the file should be read.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">We simply pass the size of the file, to be read, using the practical filesize() function. With the function, nl2br(), the line endings from a text file can be converted to HTML-&lt;br/&gt;.</span></p>
+<p><span id="part0000.xhtml#043_Manage_sessions"></span><span lang="EN-US" style="font-size:1.08rem;
+"> </span></p>
+<p><span id="part0000.xhtml#_Toc469765168"><span lang="EN-US" style="font-size:
+1rem;color:#6E6E6E"> </span></span></p>
+<div style="page-break-after:always">
+
+</div>
+<h3><span id="part0000.xhtml#_Toc470681611"><span lang="EN-US">Manage sessions</span></span></h3>
+<p><span lang="EN-US" style="font-size:1.08rem;">If we want to recognize a returning visitor, it is necessary to use the so-called sessions. Within sessions, variables can be stored, and they can be used across files. If we start a session for a visitor, a unique identification number, the session ID, is generated.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">If we want to open a session for a visitor, it is enough to simply call the function session_start(). You can then set values in the $_SESSION global array. If the same session is to be reused on the next call, it is sufficient to call it session_start() at the beginning of the script. In the visitor’s browser is stored a cookie with the session ID; the values of the $_SESSION array are stored on the server in a temporary cache. If you want to end the session securely, you must use the session_destroy() function.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Here is an example of how to use sessions:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">session1.php</span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  session_start();</span></p>
+<p><span lang="EN-US">  $_SESSION["username"] = "Walter";</span></p>
+<p><span lang="EN-US">  echo "Hello " . $_SESSION["username"];</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">session2.php</span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  session_start();</span></p>
+<p><span lang="EN-US">  if (isset ($_SESSION["username"])) {</span></p>
+<p><span lang="EN-US">    echo "Hello " . $_SESSION["username"];</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US">  else {</span></p>
+<p><span lang="EN-US">    "First please open the page session1.php!";</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">After the call of session_start() in the second file, the same content of the $_SESSION array is usable as in the first file.</span></p>
+<p><span id="part0000.xhtml#Day_5-1"></span><span lang="EN-US" style="font-size:
+1.08rem;color:#A5A5A5"> </span></p>
+<div style="page-break-after:always">
+
+</div>
+<h2><span id="part0000.xhtml#_Toc470681612"></span><span id="part0000.xhtml#_Toc469765169"><span lang="EN-US">Day 5</span></span><span id="part0000.xhtml#0501_Write_clean_code_which_is"></span></h2>
+<div style="page-break-after:always">
+
+</div>
+<h3><span id="part0000.xhtml#_Toc470681613"></span><span id="part0000.xhtml#_Toc469765170"><span lang="EN-US">Write clean code (which is still understandable in a year)</span></span></h3>
+<p><span lang="EN-US" style="font-size:1.08rem;">Before you acquire an unclean programming style, I would like to give you some tips on how to write a ‘clean’ code on your way as a programmer.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">On the one hand, it is extremely important, as has already been described in the chapter on variables, to use appropriate and self-describing variables and function names. Nothing is more disappointing than to read variables like $a, $b, or $x in an unknown code because they do not show what will be stored in them.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Use tab stops in your code writing. Individual programming studios sometimes have a somewhat different form, but many OpenSource projects have the following syntax style:</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<code></code>
+<p><span lang="EN-US">function name (parameter) {</span></p>
+<p><span lang="EN-US">  code block</span></p>
+<p><span lang="EN-US">}</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">That is, a space between function name, a space after the parenthesis with the parameters followed by a curved parenthesis. The code block of the function is inserted by a tab step, and the closing curved bracket is again at the height of the function name. This makes it very easy to see where a function starts and stops.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Do not save with comments. You do not have to comment on any one-line If query, but a certain structure for longer scripts is essential.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Do not write a code twice, that is, avoid redundancy. Once a code is used several times, write a function. This increases the clarity of the code and saves valuable memory space. In addition, you need to make corrections or extensions only at one code point.</span></p>
+<p><span id="part0000.xhtml#_Toc469765171"></span><span id="part0000.xhtml#0502_Security_within_PHP_scrip"></span><span lang="EN-US" style="font-size:
+1rem;color:#6E6E6E"> </span></p>
+<div style="page-break-after:always">
+
+</div>
+<h3><span id="part0000.xhtml#_Toc470681614"><span lang="EN-US">Security within PHP scripts</span></span></h3>
+<p><span lang="EN-US" style="font-size:1.08rem;">Here are some of the most important tips to give you some idea on how to make your PHP scripts safer:</span></p>
+<h4><span id="part0000.xhtml#_Toc470681615"></span><span id="part0000.xhtml#_Toc469765172"><span lang="EN-US">Principle: Never trust data coming from outside</span></span></h4>
+<p><span lang="EN-US" style="font-size:1.08rem;">If you follow this principle, you have already won half the battle against crackers and hackers. Regarding the mistrust of external data, I mean you should validate the input data to see if it corresponds to the expected format. This means that, if a number is to be entered, it is best to check if the function is numeric ($input), whether it is really a number, or whether an e-mail address is set up as it should be (exactly one @ character and a domain must be specified at the end). This brings us to the next topic.</span></p>
+<h4><span id="part0000.xhtml#_Toc470681616"></span><span id="part0000.xhtml#_Toc469765173"></span><span id="part0000.xhtml#0503_Protection_against_SQL_In"></span><span lang="EN-US">Protection against SQL Injections</span></h4>
+<p><span lang="EN-US" style="font-size:1.08rem;">An SQL injection is a way manipulate an SQL Query so that it does something other than what it was meant for. This happens if you do not filter the entered data.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Suppose we have the following script to offer a login functionality for a web page:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $username = $_GET["username"];</span></p>
+<p><span lang="EN-US">  $password = $_GET["password"];</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  $sql = "SELECT * FROM users WHERE username = "".$username."" AND password = "" . $password ."" ";</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  $mysqli=new mysqli('localhost','root','', 'test');</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  $result = $mysqli-&gt;query("$sql);</span></p>
+<p><span lang="EN-US"> </span></p>
+<p><span lang="EN-US">  echo "Found the following user(s): ";</span></p>
+<p><span lang="EN-US">  while ($row = $result-&gt;fetch_array())) {</span></p>
+<p><span lang="EN-US">    echo $row["username"]. "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  }</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">This functionality has no problem if the users are just entering their username or password. But, unfortunately, there are technically savvy crackers who look for such simple logins, some use automated bots to find these logins, and try to enter the following:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">Username: admin</span></p>
+<p><span lang="EN-US">Password: " OR 1=1</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">If we pass this text unfiltered into our SQL query, we get the following SQL statement:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">SELECT * FROM users WHERE username = "admin" AND password = "" OR 1=1</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Since 1 is always equal to 1, a result is always returned. So the cracker is logged in as admin or even adds his users:</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">Username: x</span></p>
+<p><span lang="EN-US">Password: x"; INSERT INTO users (username, password) VALUES ("mynewuser", "mypassword");</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">The SQL would be:</span></p>
+<code></code>
+<p><span lang="EN-US">SELECT * FROM users WHERE username = "x" AND password = "x"; INSERT INTO users (username, password) VALUES ("mynewuser", "mypassword");</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Both SQL statements would be executed and the cracker would have already created a new user account. Theoretically, he could also send a DELETE command and thus destroy our database or, for example, change the password of the administrator.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">But how can you protect yourself against this?</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Either you filter the specified data for only allowed characters (a-z, A-Z, 0-9) or you ‘escape’ the input data. This means, all special characters as well as the entire string are encapsulated by apostrophes and are thus made ‘harmless’. There is the ready-made function $mysqli-&gt;real_escape_string(), which gets a string as parameter and returns a safe escaped version of it.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Example:</span></p>
+<code></code>
+<p><span lang="EN-US">$password =$mysqli-&gt;real_escape_string($password);</span></p>
+</code>
+<h4><span id="part0000.xhtml#_Toc470681617"></span><span id="part0000.xhtml#_Toc469765174"></span><span id="part0000.xhtml#0504_Keep_your_passwords_encry"></span><span lang="EN-US">Keep your passwords encrypted</span></h4>
+<p><span lang="EN-US" style="font-size:1.08rem;">Something even large global companies have had to learn through bitter experience the need to always store passwords always encrypted in the database. There are encryption methods that encrypt only in one direction and generate so-called hashes from arbitrarily long strings. These are strings of a previously known length. PHP delivers its own well tested hashing library since PHP 5.5. You can use it e.g. with the function password_hash($password, ALGORITHM).</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<code></code>
+<p><span lang="EN-US">&lt;?php</span></p>
+<p><span lang="EN-US">  $password = "password123";</span></p>
+<p><span lang="EN-US">  $hash = password_hash($password, PASSWORD_BCRYPT);</span></p>
+<p><span lang="EN-US">  echo $password;<br />
+  echo "&lt;br /&gt;";</span></p>
+<p><span lang="EN-US">  echo $hash;</span></p>
+<p><span lang="EN-US">?&gt;</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Output (the hash may differ from server to server and generated every time):</span></p>
+<code></code>
+<p><span lang="EN-US">password123</span></p>
+<p><span lang="EN-US">$2y$10$K6JP7Lfu2.wjuEGLzCact.8GZaok5oSWhH49.TzTZm5/PPfDzXYMW</span></p>
+</code>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">The hash can no longer be deciphered in plaintext. Now you can save these password hashes in your database. Every time a user wants to log in, you use the password_hash() function to generate the hash for the data the user put in. If the hashes are the same, the user entered the correct password. If a hacker wants to steal your database, he would need a lot of time to try all his word lists, because the password_hash() function needs some time to generate the hashes. You can add an optional $options parameter and define that a more complex method of hashing should be used so that the hashing gets even slower and is harder to crack.<span id="part0000.xhtml#0505_Add_salt_to_your_password"></span></span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<h4><span id="part0000.xhtml#_Toc470681618"></span><span id="part0000.xhtml#_Toc469765175"><span lang="EN-US">Add salt to your passwords</span></span></h4>
+<p><span lang="EN-US" style="font-size:1.08rem;">Another security aspect is to protect oneself against users with unsafe passwords. Statistics from large user databases show that a considerable percentage of the users always use the same passwords, as, for example, asdf123, password, 1234567890. If a cracker gets our username with the hashes, it would be easy for him to match the hashes against the 1000 most commonly used passwords on the Internet. To prevent this, I recommend adding a long random string for each project, such as ‘afdsoin23oidvnio3iosdvn09832jknlsd’.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">If a user logs in again and uses the password ‘password’, we store the hash for ‘passwordafdsoin23oidvnio3iosdvn09832jknlsd’. With each login, we attach this string to the entered password in our script and calculate the hash. If someone is collecting our user database, it is impossible for him to check the hashes if he does not know our string.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">The password_hash() function already adds a random salt automatically.</span></p>
+<p><span id="part0000.xhtml#0506_website_tips"></span><span lang="EN-US" style="font-size:1rem;color:#6E6E6E"> </span></p>
+<div style="page-break-after:always">
+
+</div>
+<h3><span id="part0000.xhtml#_Toc470681619"></span><span id="part0000.xhtml#_Toc469765176"><span lang="EN-US">Website tips</span></span></h3>
+<p><strong><span lang="EN-US" style="font-size:1.08rem;">PHP</span></strong></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">www.php.net/manual/en/<br />
+Official guide to PHP with a good documentation on all functions existing in PHP, including numerous examples, is always updated when a new PHP version is released.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">www.w3schools.com/php/<br />
+A very good tutorial site, explaining all available functions and </span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><strong><span lang="EN-US" style="font-size:1.08rem;">SQL</span></strong></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">dev.mysql.com/doc/<br />
+Official site with large functional reference, but with somewhat complex examples</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">www.php.net/manual/en/book.mysqli.php<br />
+Part of the official PHP guide/documentation with all PHP functions available around MySQL</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">forums.mysql.com<br />
+Official MySQL forum with a very active community</span></p>
+<p><span id="part0000.xhtml#0507_book_tips"></span><span lang="EN-US" style="font-size:1rem;color:#6E6E6E"> </span></p>
+<div style="page-break-after:always">
+
+</div>
+<h3><span id="part0000.xhtml#_Toc470681620"></span><span id="part0000.xhtml#_Toc469765177"><span lang="EN-US">Book tips</span></span></h3>
+<p><span lang="EN-US" style="font-size:1.08rem;">All of the following books are also available as e-books.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><strong><span lang="EN-US" style="font-size:1.08rem;">PHP and MySQL for Dynamic Web Sites, Fourth Edition: Visual QuickPro Guide</span></strong></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">by Larry Ullman </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Peachpit Press</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">ISBN 0321784073<br />
+A good book covering most of the PHP and MySQL functions. Try to get the newest version, as there are a lot of changes in the latest PHP releases.</span></p>
+<p><span lang="EN-US" style="font-size:1rem"> </span></p>
+<p><strong><em><span lang="EN-US" style="font-size:1.08rem;">Head First PHP &amp; MySQL: A Brain-Friendly Guide Kindle Edition</span></em></strong></p>
+<p><em><span lang="EN-US" style="font-size:1.08rem;">by Lynn Beighley  and Michael Morrison<br />
+</span></em><span lang="EN-US" style="font-size:1.08rem;">O'Reilly Media</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">ISBN-10: 0596006306<br />
+ISBN-13: 978-0596006303<br />
+An easy to understand book on PHP and MySQL. I hope there is a new version released soon to cover the PHP 7 extras.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><strong><span lang="EN-US" style="font-size:1.08rem;">PHP Objects, Patterns, and Practice</span></strong></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">by Matt Zandstra</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">ISBN-13: 978-1430260318</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">ISBN-10: 1430260319</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">A good book on programming patterns with focus on PHP. You will learn how to write clean code with standardized programming patterns. A very important topic in programming is the development of object-oriented projects. In any case, it is recommended as soon as you are familiar with the basics of PHP.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><strong><span lang="EN-US" style="font-size:1.08rem;">Wikibook PHP Programming</span></strong></p>
+<p><em><span lang="EN-US" style="font-size:1.08rem;">https://en.wikibooks.org/wiki/PHP_Programming</span></em></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Wikibooks is a Wikipedia-based platform where, similar to the Wikipedia encyclopaedia, a large community writes non-fiction texts that are edited in book form. Some of the books have even appeared in print versions. The online Wikibooks have the advantage, thanks to the active community, that they are almost ‘live’ and kept up-to-date.<span id="part0000.xhtml#0508_Epilogue"></span></span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;
+"> </span></p>
+<div style="page-break-after:always">
+
+</div>
+<h2><span id="part0000.xhtml#_Toc470681621"></span><span id="part0000.xhtml#_Toc469765178"><span lang="EN-US">Epilogue</span></span></h2>
+<p><span lang="EN-US" style="font-size:1.08rem;">I hope you enjoyed the introduction to the world of web development with PHP and MySQL and you are now ready to implement your first own small projects.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">If you need ideas about to try next: you could use the knowledge this course provides, for example, to create a guest book for a website, or a small script that displays a different greeting, depending on the day of the week and the time.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Or, how about having a page for collecting signatures or votes? The page could write the data to a database, but it should check beforehand whether an e-mail address and/or a certain combination of first and last names already exists.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">Do you have any feedback on this book? I would be very pleased.</span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;"> </span></p>
+<p><span lang="EN-US" style="font-size:1.08rem;">I am available at the e-mail address books@theklaus.at.</span></p>
+</div>

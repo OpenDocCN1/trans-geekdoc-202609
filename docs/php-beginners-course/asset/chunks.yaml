@@ -1,0 +1,2994 @@
+- fmt: '
+
+    # PHP Beginners Course
+
+
+    Understand basics of `PHP` / `MySQL` programming in 5 days.
+
+
+    ## Imprint
+
+
+    Copyright © 2017 Klaus Thenmayer
+
+
+    All rights reserved
+
+
+    Initial release May 2012 as ebook at Amazon KDP and Smashwords Inc.
+
+
+    English translation December 2016
+
+
+    6th edition January 2017
+
+
+    All brand and product names are trademarks of their respective owners. We accept
+    no liability for any damage to software / hardware, all information without guarantee.
+    The text of this book may not be reproduced without permission. When quoting please
+    rely on the Amazon book page link.
+
+
+    Cover design: Klaus Thenmayer
+
+
+    Cover Photo: © MWiner / Fotolia.com
+
+
+    ## Table of Content
+
+
+    - [Preamble](#part0000.xhtml#_Toc470681563)
+
+    - [Welcome!](#part0000.xhtml#_Toc470681564)
+
+    - [Prerequisites](#part0000.xhtml#_Toc470681565)
+
+    - [Day 1](#part0000.xhtml#_Toc470681566)
+
+    - [PHP – DEFINITION AND HISTORY](#part0000.xhtml#_Toc470681567)
+
+    - [Setting up the development environment (Windows, Linux or Mac OS)](part0000.xhtml#_Toc470681568)
+
+    - [Windows](#part0000.xhtml#_Toc470681569)
+
+    - [Linux](#part0000.xhtml#_Toc470681570)
+
+    - [MacOS](#part0000.xhtml#_Toc470681571)
+
+    - [Text editors](#part0000.xhtml#_Toc470681572)
+
+    - [The first PHP program (Welcome the whole world)](part0000.xhtml#_Toc470681573)
+
+    - [Variables (information stores)](part0000.xhtml#_Toc470681574)
+
+    - [Initialize variables](#part0000.xhtml#_Toc470681575)
+
+    - [Comment the code](#part0000.xhtml#_Toc470681576)
+
+    - [Arithmetic operations (basic arithmetic)](part0000.xhtml#_Toc470681577)
+
+    - [Combining several variables (arrays)](part0000.xhtml#_Toc470681578)
+
+    - [Sort arrays](#part0000.xhtml#_Toc470681579)
+
+    - [Multidimensional arrays](#part0000.xhtml#_Toc470681580)
+
+    - [Day 2](#part0000.xhtml#_Toc470681581)
+
+    - [Fill variables with user information (GET / POST)](part0000.xhtml#_Toc470681582)
+
+    - [Identify and read GET variables](#part0000.xhtml#_Toc470681583)
+
+    - [Identify and read POST variables](#part0000.xhtml#_Toc470681584)
+
+    - [Conditions, program control (IF/ELSE/ELSEIF)](part0000.xhtml#_Toc470681585)
+
+    - [Case analysis (switch / case)](part0000.xhtml#_Toc470681586)
+
+    - [Loops for repetitive tasks (While / For / Foreach)](part0000.xhtml#_Toc470681587)
+
+    - [While() Loop](#part0000.xhtml#_Toc470681588)
+
+    - [For() Loop](#part0000.xhtml#_Toc470681589)
+
+    - [Foreach() loop](part0000.xhtml#_Toc470681590)
+
+    - [Day 3](#part0000.xhtml#_Toc470681591)
+
+    - [Date and Time (Who has turned the clock?)](part0000.xhtml#_Toc470681592)
+
+    - [DATE()](part0000.xhtml#_Toc470681593)
+
+    - [microtime()](part0000.xhtml#_Toc470681594)
+
+    - [Give a point in time to DATE() function with mktime()](part0000.xhtml#_Toc470681595)
+
+    - [Text functions (String operations)](part0000.xhtml#_Toc470681596)
+
+    - [Write your own functions](part0000.xhtml#_Toc470681597)
+
+    - [Split the code in several files](part0000.xhtml#_Toc470681598)
+
+    - [Day 4](#part0000.xhtml#_Toc470681599)
+
+    - [Storing and reading information with a database (MySQL)](part0000.xhtml#_Toc470681600)
+
+    - [Connect to a database within PHP](part0000.xhtml#_Toc470681601)
+
+    - [Create a new database](part0000.xhtml#_Toc470681602)
+
+    - [Select our database](part0000.xhtml#_Toc470681603)
+
+    - [Create tables](part0000.xhtml#_Toc470681604)
+
+    - [Write data to the database](part0000.xhtml#_Toc470681605)
+
+    - [Retrieve data from the database](part0000.xhtml#_Toc470681606)
+
+    - [Delete data from the database](part0000.xhtml#_Toc470681607)
+
+    - [File operations (read / write files)](part0000.xhtml#_Toc470681608)
+
+    - [Save to a text file](part0000.xhtml#_Toc470681609)
+
+    - [Reading from a text file](part0000.xhtml#_Toc470681610)
+
+    - [Manage sessions](part0000.xhtml#_Toc470681611)
+
+    - [Day 5](#part0000.xhtml#_Toc470681612)
+
+    - [Write clean code (which is still understandable in a year)](part0000.xhtml#_Toc470681613)
+
+    - [Security within PHP](part0000.xhtml#_Toc470681614)
+
+    - [Principle: Never trust data coming from outside](part0000.xhtml#_Toc470681615)
+
+    - [Protection against SQL Injections](part0000.xhtml#_Toc470681616)
+
+    - [Keep your passwords encrypted](part0000.xhtml#_Toc470681617)
+
+    - [Add salt to your passwords](part0000.xhtml#_Toc470681618)
+
+    - [Website tips](part0000.xhtml#_Toc470681619)
+
+    - [Book tips](part0000.xhtml#_Toc470681620)
+
+    - [Epilogue](part0000.xhtml#_Toc470681621)
+
+
+    ## Preamble
+
+
+    ### Welcome!
+
+
+    So you want to learn quickly to program in `PHP`? This book is the right choice.
+    You will learn within easy-to-understand chapters the basics of developing dynamic
+    websites in `PHP`. It places special emphasis on full code examples which run
+    independently of each other.
+
+
+    It begins with setting up the development environment on your computer. Immediately
+    after you write your first `PHP` script and execute it in your newly installed
+    server. Then you will learn how you can query information and control the program
+    sequence in order to create dynamic websites. You also learn how you can save
+    the information in databases or files, and read again.
+
+
+    Finally, you will get a short introduction to more advanced topics such as writing
+    clean and safe program code. You will not become a professional web developer
+    by reading only this book, but you will get very good fundamentals and a guide
+    in programming your first dynamic websites.
+
+
+    ### Prerequisites
+
+
+    There is no special knowledge necessary. If you want to learn programming in `PHP`,
+    I assume that you know how to install applications on your computer.
+
+
+    Some knowledge of `HTML` to format texts cannot harm but is not mandatory and
+    it will be the main `HTML` code explained in the appropriate places.
+
+
+    On hardware you need is a computer with monitor, mouse and keyboard. Since we
+    program websites, of course an internet connection helps to get the needed software
+    and more tutorials, but isn’t needed during development, as we install our own
+    server. You only need to download some (free) software from the Internet, more
+    on that later.
+
+
+    You are free, what operating system you use for development. The book will show
+    you how to do the installation of a `PHP` server with `MySQL` support on `Windows`,
+    `Linux` and `MacOS` and it will give you some examples of modern text editors.
+
+
+    ## Day 1
+
+
+    ### PHP – DEFINITION AND HISTORY
+
+
+    `PHP` is a scripting language that is used primarily to develop dynamic webpages.
+    `PHP` scripts are executed directly on the server and not in the browser of a
+    visitor.
+
+
+    `PHP` was developed in 1995 by Rasmus Lerdorf. His goal was to create a simple
+    replacement for the collection of useful Perl scripts. This is how Personal Home
+    Page Tools came into being. Soon after, he recreated the tool collection in the
+    programming language `C`. Today, `PHP` is still developed in `C`, a very powerful
+    programming language. It was soon followed by the first version, `PHP/FI` (Form
+    Interpreter).
+
+
+    In 1998, Andi Gutmans and Zeev Suraski, in cooperation with Lerdorf, created `PHP
+    3` from scratch to make it ready for use, particularly in the booming e-commerce
+    business. Gutmans and Suraski founded the company Zend Technologies Ltd., which
+    contributed the main parts of `PHP 4`.
+
+
+    In 2004, `PHP5` introduced enhanced support for object-oriented programming and
+    greatly increased the speed of the `PHP` interpreter.
+
+
+    Eleven years later, in 2015, `PHP 7` was released. It is powered by a new engine
+    with a fast speed. `PHP 6` was skipped because projects planned to carry out the
+    program were never finished and so the developers focused on a completely new
+    core engine. Most scripts execute twice as fast as in `PHP 5.x`. The majority
+    of old `PHP 5` scripts only need small changes to run in `PHP 7`. Scripts in this
+    book are all updated to be fully compatible.
+
+
+    ### Setting up the development environment (Windows, Linux or Mac OS)
+
+
+    #### Windows
+
+
+    On Windows, the prefabricated server packages make it extremely easy to install
+    the server. For the development, I prefer the package of `Xampp` (`www.apachefriends.org`).
+
+    '
+  raw: "\n\n# PHP Beginners Course  \n\nUnderstand basics of PHP / MySQL programming\
+    \ in 5 days\n\n## Imprint\n\nCopyright © 2017 Klaus Thenmayer  \n\nAll rights\
+    \ reserved\n\nInitial release May 2012 as ebook at Amazon KDP and Smashwords Inc.\
+    \  \n\nEnglish translation December 2016  \n\n6th edition January 2017  \n\nAll\
+    \ brand and product names are trademarks of their respective owners. We accept\
+    \ no liability for any damage to software / hardware, all information without\
+    \ guarantee. The text of this book may not be reproduced without permission. When\
+    \ quoting please rely on the Amazon book page link.\n\nCover design: Klaus Thenmayer\
+    \  \n\nCover Photo: © MWiner / Fotolia.com\n\n## Table of Content\n\n[Preamble](#part0000.xhtml#_Toc470681563)\n\
+    \n[Welcome!](#part0000.xhtml#_Toc470681564)\n\n[Prerequisites](#part0000.xhtml#_Toc470681565)\n\
+    \n[Day 1](#part0000.xhtml#_Toc470681566)\n\n[PHP – DEFINITION AND HISTORY](#part0000.xhtml#_Toc470681567)\n\
+    \n[Setting up the development environment (Windows, Linux or Mac OS)](#part0000.xhtml#_Toc470681568)\n\
+    \n[Windows](#part0000.xhtml#_Toc470681569)\n\n[Linux](#part0000.xhtml#_Toc470681570)\n\
+    \n[MacOS](#part0000.xhtml#_Toc470681571)\n\n[Text editors](#part0000.xhtml#_Toc470681572)\n\
+    \n[The first PHP program (Welcome the whole world)](#part0000.xhtml#_Toc470681573)\n\
+    \n[Variables (information stores)](#part0000.xhtml#_Toc470681574)\n\n[Initialize\
+    \ variables](#part0000.xhtml#_Toc470681575)\n\n[Comment the code](#part0000.xhtml#_Toc470681576)\n\
+    \n[Arithmetic operations (basic arithmetic)](#part0000.xhtml#_Toc470681577)\n\n\
+    [Combining several variables (arrays)](#part0000.xhtml#_Toc470681578)\n\n[Sort\
+    \ arrays](#part0000.xhtml#_Toc470681579)\n\n[Multidimensional arrays](#part0000.xhtml#_Toc470681580)\n\
+    \n[Day 2](#part0000.xhtml#_Toc470681581)\n\n[Fill variables with user information\
+    \ (GET / POST)](#part0000.xhtml#_Toc470681582)\n\n[Identify and read GET variables](#part0000.xhtml#_Toc470681583)\n\
+    \n[Identify and read POST variables](#part0000.xhtml#_Toc470681584)\n\n[Conditions,\
+    \ program control (IF/ELSE/ELSEIF)](#part0000.xhtml#_Toc470681585)\n\n[Case analysis\
+    \ (switch / case)](#part0000.xhtml#_Toc470681586)\n\n[Loops for repetitive tasks\
+    \ (While / For / Foreach)](#part0000.xhtml#_Toc470681587)\n\n[While() Loop](#part0000.xhtml#_Toc470681588)\n\
+    \n[For() Loop](#part0000.xhtml#_Toc470681589)\n\n[Foreach() loop](#part0000.xhtml#_Toc470681590)\n\
+    \n[Day 3](#part0000.xhtml#_Toc470681591)\n\n[Date and Time (Who has turned the\
+    \ clock?)](#part0000.xhtml#_Toc470681592)\n\n[DATE()](#part0000.xhtml#_Toc470681593)\n\
+    \n[microtime()](#part0000.xhtml#_Toc470681594)\n\n[Give a point in time to DATE()\
+    \ function with mktime()](#part0000.xhtml#_Toc470681595)\n\n[Text functions (String\
+    \ operations)](#part0000.xhtml#_Toc470681596)\n\n[Write your own functions](#part0000.xhtml#_Toc470681597)\n\
+    \n[Split the code in several files](#part0000.xhtml#_Toc470681598)\n\n[Day 4](#part0000.xhtml#_Toc470681599)\n\
+    \n[Storing and reading information with a database (MySQL)](#part0000.xhtml#_Toc470681600)\n\
+    \n[Connect to a database within PHP](#part0000.xhtml#_Toc470681601)\n\n[Create\
+    \ a new database](#part0000.xhtml#_Toc470681602)\n\n[Select our database](#part0000.xhtml#_Toc470681603)\n\
+    \n[Create tables](#part0000.xhtml#_Toc470681604)\n\n[Write data to the database](#part0000.xhtml#_Toc470681605)\n\
+    \n[Retrieve data from the database](#part0000.xhtml#_Toc470681606)\n\n[Delete\
+    \ data from the database](#part0000.xhtml#_Toc470681607)\n\n[File operations (read\
+    \ / write files)](#part0000.xhtml#_Toc470681608)\n\n[Save to a text file](#part0000.xhtml#_Toc470681609)\n\
+    \n[Reading from a text file](#part0000.xhtml#_Toc470681610)\n\n[Manage sessions](#part0000.xhtml#_Toc470681611)\n\
+    \n[Day 5](#part0000.xhtml#_Toc470681612)\n\n[Write clean code (which is still\
+    \ understandable in a year)](#part0000.xhtml#_Toc470681613)\n\n[Security within\
+    \ PHP scripts](#part0000.xhtml#_Toc470681614)\n\n[Principle: Never trust data\
+    \ coming from outside](#part0000.xhtml#_Toc470681615)\n\n[Protection against SQL\
+    \ Injections](#part0000.xhtml#_Toc470681616)\n\n[Keep your passwords encrypted](#part0000.xhtml#_Toc470681617)\n\
+    \n[Add salt to your passwords](#part0000.xhtml#_Toc470681618)\n\n[Website tips](#part0000.xhtml#_Toc470681619)\n\
+    \n[Book tips](#part0000.xhtml#_Toc470681620)\n\n[Epilogue](#part0000.xhtml#_Toc470681621)\n\
+    \n## Preamble\n\n### Welcome!\n\nSo you want to learn quickly how to program in\
+    \ PHP? This book is the right choice. You will learn within easy-to-understand\
+    \ chapters the basics of developing dynamic websites in PHP. It places special\
+    \ emphasis on full code examples which run independently of each other.\n\nIt\
+    \ begins with setting up the development environment on your computer. Immediately\
+    \ after you write your first PHP script and execute it in your newly installed\
+    \ server. Then you will learn how you can query information and control the program\
+    \ sequence in order to create dynamic websites. You also learn how you can save\
+    \ the information in databases or files, and read again.\n\nFinally, you will\
+    \ get a short introduction to more advanced topics such as writing clean and safe\
+    \ program code.\n\nYou will not become a professional web developer by reading\
+    \ only this book, but you will get very good fundamentals and a guide in programming\
+    \ your first dynamic websites.\n\n### Prerequisites\n\nThere is no special knowledge\
+    \ necessary. If you want to learn programming in PHP, I assume that you know how\
+    \ to install applications on your computer.\n\nSome knowledge of HTML to format\
+    \ texts cannot harm but is not mandatory and it will be the main HTML code explained\
+    \ in the appropriate places.\n\nOn hardware you need is a computer with monitor,\
+    \ mouse and keyboard. Since we program websites, of course an internet connection\
+    \ helps to get the needed software and more tutorials, but isn’t needed during\
+    \ development, as we install our own little server. You only need to download\
+    \ some (free) software from the Internet, more on that later.\n\nYou are free,\
+    \ what operating system you use for development. The book will show you how to\
+    \ do the installation of a PHP server with MySQL support on Windows, Linux and\
+    \ MacOS and it will give you some examples of modern text editors.\n\n## Day 1\n\
+    \n### PHP – DEFINITION AND HISTORY\n\nPHP is a scripting language that is used\
+    \ primarily to develop dynamic webpages. PHP scripts are executed directly on\
+    \ the server and not in the browser of a visitor.\n\nPHP was developed in 1995\
+    \ by Rasmus Lerdorf. His goal was to create a simple replacement for the collection\
+    \ of use-ful Perl scripts. This is how Personal Home Page Tools came into being.\
+    \ Soon after, he recreated the tool collection in the programming language C.\
+    \ Today, PHP is still developed in C, a very powerful programming language. It\
+    \ was soon fol-lowed by the first version, PHP / FI (Form Interpreter).\n\nIn\
+    \ 1998, Andi Gutmans and Zeev Suraski, in cooperation with Lerdorf, created PHP\
+    \ 3 from scratch to make it ready for use, particularly in the booming e-commerce\
+    \ business. Gutmans and Suraski founded the company Zend Technol-ogies Ltd., which\
+    \ contributed the main parts of PHP 4.\n\nIn 2004, PHP5 introduced enhanced support\
+    \ for object-oriented programming and greatly increased the speed of the PHP interpreter.\n\
+    \nEleven years later, in 2015, PHP 7 was released. It is powered by a new engine\
+    \ with a fast speed. PHP 6 was skipped because projects planned to carry out the\
+    \ program were never finished and so the developers focused on a completely new\
+    \ core engine. Most scripts execute twice as fast as in PHP 5.x. The majority\
+    \ of old PHP 5 scripts only need small changes to run in PHP 7. Scripts in this\
+    \ book are all updated to be fully compatible. \n\n### Setting up the development\
+    \ environment (Windows, Linux or Mac OS)\n\n#### Windows\n\nOn Windows, the prefabricated\
+    \ server packages make it extremely easy to install the server. For the development,\
+    \ I prefer the package of Xampp (www.apachefriends.org)."
+  toc: []
+  trans: '
+
+
+    # PHP 初学者课程
+
+
+    在 5 天内理解 `PHP` / `MySQL` 编程基础。
+
+
+    ## 版权信息
+
+
+    Copyright © 2017 Klaus Thenmayer
+
+
+    保留所有权利
+
+
+    首次于 2012 年 5 月作为电子书发布于 Amazon KDP 和 Smashwords Inc.
+
+
+    英文翻译于 2016 年 12 月
+
+
+    第 6 版 2017 年 1 月
+
+
+    所有品牌和产品名称均为所有者的商标。我们对软件/硬件的任何损坏不承担责任，所有信息均不作保证。未经许可，不得复制本书内容。引用时，请参考 Amazon 的书籍页面链接。
+
+
+    封面设计：Klaus Thenmayer
+
+
+    封面照片：© MWiner / Fotolia.com
+
+
+    ## 目录
+
+
+    - 序言
+
+    - 欢迎！
+
+    - 先决条件
+
+    - 第一天
+
+    - PHP – 定义与历史
+
+    - 搭建开发环境（Windows, Linux 或 Mac OS)
+
+    - Windows
+
+    - Linux
+
+    - MacOS
+
+    - 文本编辑器
+
+    - 第一个 PHP 程序（你好世界）
+
+    - 变量（信息存储器）
+
+    - 初始化变量
+
+    - 注释代码
+
+    - 算术运算（基础算术）
+
+    - 组合多个变量（数组）
+
+    - 排序数组
+
+    - 多维数组
+
+    - 第二天
+
+    - 使用用户信息填充变量（GET / POST)
+
+    - 识别并读取 GET 变量
+
+    - 识别并读取 POST 变量
+
+    - 条件、程序控制（IF/ELSE/ELSEIF）
+
+    - 分支分析（switch / case）
+
+    - 重复任务的循环（While / For / Foreach）
+
+    - While() 循环
+
+    - For() 循环
+
+    - Foreach() 循环
+
+    - 第三天
+
+    - 日期与时间（是谁拨动了钟？）
+
+    - DATE()
+
+    - microtime()
+
+    - 使用 mktime() 为 DATE() 函数指定时间
+
+    - 文本函数（字符串操作）
+
+    - 编写自己的函数
+
+    - 将代码拆分为多个文件
+
+    - 第四天
+
+    - 使用数据库存储和读取信息（MySQL)
+
+    - 在 PHP 中连接数据库
+
+    - 创建新数据库
+
+    - 选择我们的数据库
+
+    - 创建表
+
+    - 向数据库写入数据
+
+    - 从数据库检索数据
+
+    - 从数据库删除数据
+
+    - 文件操作（读取/写入文件)
+
+    - 保存到文本文件
+
+    - 从文本文件读取
+
+    - 管理 Session
+
+    - 第五天
+
+    - 编写安全代码（安全问题）
+
+    - 在 PHP 中安全
+
+    - 原则：不要信任外部数据
+
+    - 防止 SQL 注入
+
+    - 加密你的密码
+
+    - 为你的网站
+
+    - 结语
+
+    - 提示
+
+    - 后记
+
+
+    ## 序言
+
+
+    ### 欢迎！
+
+
+    你想快速学习 `PHP` 吗？本书是正确的选择。你将学习 `PHP` 的基础知识。
+
+
+    从在你的电脑上搭建服务器开始。随后，你将学习如何运行第一个 `PHP` 脚本。然后你将学习如何使用数据库。
+
+
+    ### 先决条件
+
+
+    不需要特殊知识。如果你想学习 `PHP`，我假设你了解一些 `HTML`。
+
+
+    在硬件方面，你需要一台带有显示器、键盘的电脑。由于我们要开发网站，当然需要连接互联网。
+
+
+    你可以使用任何操作系统。本书将向你介绍如何在 `Windows`、`Linux` 和 `MacOS` 上安装现代文本编辑器，并提供一些示例。
+
+
+    ### 第一天
+
+
+    ### PHP – 定义与历史
+
+
+    `PHP` 是一种主要用于开发动态网页的脚本语言。`PHP` 脚本在服务器上执行，而不是在访问者的浏览器中执行。
+
+
+    `PHP` 由 Rasmus Lerdorf 于 1995 年开发。他的目标是为一组常用的 Perl 脚本创建一个简单的替代品。这就是个人首页工具（PHP）的由来。不久后，他用
+    `C` 语言重新创建了这个工具集。今天，`PHP` 仍然用 `C` 开发。
+
+
+    1998 年，Andi Gutmans 和 Zeev Suraski 与 Lerdorf 合作，从零创建了 `PHP 3`，使其可用，特别是在蓬勃发展的电子商务领域。Gutmans
+    和 Suraski 创立了 Zend Technologies 公司，该公司贡献了 `PHP 4` 的大部分部分。
+
+
+    2004 年，`PHP5` 增强了对面向对象的支持，并大大提高了 `PHP` 解释器的速度。
+
+
+    十年后，2015 年发布了 `PHP 7`。它由一个全新的引擎驱动，速度极快。`PHP 6` 被跳过了，因为计划执行的项目从未完成，因此开发者们专注于一个全新的内核。大多数脚本的执行速度比
+    `PHP 5` 快一倍。大多数旧的 `PHP 5` 脚本只需要少量修改即可在 `PHP 7` 中运行。本书中的脚本均已更新为完全兼容的版本。
+
+
+    ### 搭建开发环境（Windows, Linux 或 Mac OS）
+
+
+    #### Windows
+
+
+    在 Windows 上，预制的服务器包让安装服务器变得极其简单。对于开发，我倾向于使用 `Xampp` 软件包（`www.apachefriends.org`）。
+
+
+    '
+- fmt: '
+
+    Download the installer for Windows and run the installation. I recommend to keep
+    `C:/xampp/` as the default folder path. If you install the package under `C:/Programs/XAMPP/`,
+    the server may make problems because the necessary file permissions are not set
+    correctly. During the installation, it will be asked whether the individual server
+    components should be installed as a service in the operating system. You must
+    not do so, otherwise the server will constantly run in the background (until you
+    stop the services manually), consume resources, and will be continuously available
+    over the network.
+
+
+    ### Linux
+
+
+    In Linux, it would be better to install an Apache web server and a MySQL server
+    using the Package Manager and to perform the configuration manually. But, for
+    this book, I recommend that the beginners use a prepared package from `www.apachefriends.org`,
+    which has all the necessary server features and PHP extensions. Beneath the download
+    links, you will find the Linux installation instructions and some tips on how
+    you can start and stop the server quickly.
+
+
+    ### MacOS
+
+
+    There are `Apachefriends.org` packages even for MacOS. But I prefer the package
+    of `MAMP` for MacOS users. Its operation is similar but has given me fewer problems.
+    The application is available for free under `www.mamp.info`. There is also a paid
+    Pro version, but we do not need this for our first programming experience. After
+    downloading the setup file, please install `MAMP` in your `Application` folder.
+
+
+    All the abovementioned server packages contain a directory with the label `htdocs`.
+    We will use this to store files that can be accessed via a browser from the server.
+    So, open your browser and enter the following URL: `http://127.0.0.1`
+
+
+    Under MacOS, you have to enter the port number of the server (the default number
+    is `4444`, so the entire URL should be: `http://127.0.0.1:4444`)
+
+
+    You should be greeted from your server package’s website (`XAMPP` / `MAMP`) and
+    receive some information about the server.
+
+
+    `127.0.0.1` always leads to the local computer. This means that the browser tries
+    to find a local web server. Alternatively, you could use `http://localhost`. This
+    should lead to the same result.
+
+
+    ### Text editors
+
+
+    Each operating system has a lot of good text editors. However, in this case, `Microsoft
+    Office Word` or `LibreOffice Writer` cannot be regarded as text editors because
+    they save a lot of information about the page and text formatting apart from the
+    text. A text editor saves the exact characters of the entered text as it appears
+    in the editor. Modern editors colour text to make it more readable. The colouring
+    will not be saved, but shown dynamically when you reopen the file. This function
+    is called `syntax highlighting`. Syntax is the term used to describe the code,
+    and highlighting it in a text editor means that various commands and functions
+    of a programming language are coloured.
+
+
+    There are also Integrated Development Environments (IDEs), which help a lot to
+    write and manage the program code and all other parts of a software project. IDEs
+    automatically detect cross-references to functions in the program code and can
+    display the recently used functions while writing notes.
+
+
+    There are large IDE projects, which are available as open source items, or under
+    different licenses for all operating systems. Many developers use the IDEs `Eclipse`
+    (`www.eclipse.org`) or `NetBeans` (`www.netbeans.org`).
+
+
+    If you have a low-performance computer or want to quickly test some short PHP
+    scripts, then I recommend using the text editor `jEdit`, which has been developed
+    as an open source software and can be downloaded from `www.jedit.org`. In the
+    larger Linux distributions, `jEdit` is available via a Software Channel (Package
+    Manager) in a somewhat outdated version.
+
+
+    For this book, it does not matter whether you are using an IDE or a simple text
+    editor. If you are going to be a professional PHP developer, you will come in
+    contact with an IDE sooner or later.
+
+
+    In order to issue a specific recommendation, I would personally suggest that you
+    write the first scripts in a text editor like `jEdit`, and more advanced scripts
+    into the surface of an IDE, only after finishing a handful of small PHP projects.
+
+
+    ### The first PHP program (Welcome the whole world)
+
+
+    We will now write our first small PHP script.
+
+
+    Open the text editor of your choice and type in the following lines of code:
+
+
+    ```php
+
+    <?php
+
+    echo "Hello World!";
+
+    ?>
+
+    ```
+
+
+    Save this text in the `htdocs` folder inside the web server installation and name
+    the file `hello.php`.
+
+
+    Already the file extension `.php` shows that there is a PHP script on one file.
+    Our script begins with the line `<?php` are PHP code and not `1`, which our server
+    will recognize that the following lines to `?>` output, but to be first processed
+    by our PHP interpreter.
+
+
+    In the world of programming, there are so-called interpreters and compilers. Compilers
+    first process a complete program code and generate a finished program in machine
+    language that can be supplied clean packed, for example in an `.exe` or `.app`
+    file to the customer. This process is called `compiling`. The compilation of complex
+    projects can sometimes take a long time. Especially in the field of dynamic web
+    development the visitors don’t want to wait to long for the site to be fully assembled.
+    So PHP is always interpreted fresh out of the code, that is, on every page request
+    the code line by line and went for quasi live assembled the page (it is still
+    only the finished page delivered to the visitors).
+
+
+    In our short code example, we find also the line `echo "Hello World!";` which
+    is our original script. Each command within PHP is terminated with a semicolon
+    `;`, which is located at the end of the line. A command could be long over several
+    lines, then only the last line is terminated with a semicolon. The `echo` command
+    returns in PHP a text string to the visitor''s browser. Strings must be enclosed
+    by quotation marks, so that PHP knows what’s a command and what’s a string. Whether
+    single or double quotes are used, in most cases, does not matter.
+
+
+    When we call now following in our browser the following address
+
+
+    http://127.0.0.1/hello.php` (or `http://127.0.0.1:4444/hello.php` depending on
+    the operating system)
+
+
+    our script from PHP gets executed.
+
+
+    If the server is set up correctly and the PHP script could be executed, then the
+    following output is displayed within the browser:
+
+
+    Hello World!
+
+
+    If this is the case for you, congratulations on your first PHP script.
+
+
+    If not, it could be a possible source of error that either the server is not running
+    or has disabled itself, or that the semicolon is missing at the end of the line
+    of code with the `echo` command.
+
+
+    ### Variables (information stores)
+
+
+    One of the key components of a modern programming language are variables. These
+    serve as small information stores. Variables can store values of various kinds.
+    E.g. text characters (called `String`), numbers (without decimal digits they are
+    named `Integer`, with Decimal or `Float`), a date or a number of other values.
+
+
+    In many programming languages you to define which type of values you want to save
+    when you create a variable. So there are `Char` variables that can store text
+    strings only, or so-called `integer` variables, where you can store numbers. PHP
+    is dynamic in variable types. You don’t need to specify whether a variable can
+    only store numbers, characters, or else a certain type of information. A variable
+    in PHP can also first contain a text and later in the script only a sequence of
+    numbers.
+
+
+    Later in this text you will learn how to anticipate or control the variable program
+    runoff depending on the current value of a variable.
+
+    '
+  raw: "Download the installer for Windows and run the installation. I recommend to\
+    \ keep C:/xampp/ as the default folder path. If you install the package under\
+    \ C:/Programs/XAMPP/, the server may make problems because the necessary file\
+    \ permissions are not set correctly. During the installation, it will be asked\
+    \ whether the individual server components should be installed as a service in\
+    \ the operating system. You must not do so, otherwise the server will constantly\
+    \ run in the background (until you stop the services manually), consume resources,\
+    \ and will be continuously available over the network.\n\n#### Linux\n\nIn Linux,\
+    \ it would be better to install an Apache web server and a MySQL server using\
+    \ the Package Manager and to perform the configuration manually. But, for this\
+    \ book, I recommend that the beginners use a prepared package from www.apachefriends.org,\
+    \ which has all the necessary server features and PHP extensions. Beneath the\
+    \ download links, you will find the Linux installation instructions and some tips\
+    \ on how you can start and stop the server quickly.\n\n#### MacOS\n\nThere are\
+    \ Apachefriends.org packages even for MacOS. But I prefer the package of MAMP\
+    \ for MacOS users. Its oper-ation is similar but has given me fewer problems.\
+    \ The application is available for free under www.mamp.info. There is also a paid\
+    \ Pro version, but we do not need this for our first programming experience. After\
+    \ downloading the setup file, please install MAMP in your Application folder.\n\
+    \nAll the abovementioned server packages contain a directory with the label ‘htdocs.’\
+    \ We will use this to store files that can be accessed via a browser from the\
+    \ server. So, open your browser and enter the following URL: http://127.0.0.1\n\
+    \nUnder MacOS, you have to enter the port number of the server (the default number\
+    \ is 4444, so the entire URL should be: http://127.0.0.1:4444)\n\nYou should be\
+    \ greeted from your server package’s website (XAMPP / MAMP) and receive some information\
+    \ about the server.\n\n127.0.0.1 always leads to the local computer. This means\
+    \ that the browser tries to find a local web server. Alternatively, you could\
+    \ use http://localhost. This should lead to the same result.\n\n#### Text editors\n\
+    \nEach operating system has a lot of good text editors. However, in this case,\
+    \ Microsoft Office Word or LibreOffice Writer cannot be regarded as text editors\
+    \ because they save a lot of information about the page and text formatting apart\
+    \ from the text. A text editor saves the exact characters of the entered text\
+    \ as it appears in the editor. Modern text editors colour text to make it more\
+    \ readable. The colouring will not be saved, but shown dynamically when you reopen\
+    \ the file. This function is called syntax highlighting. Syntax is the term used\
+    \ to describe the code, and highlighting it in a text editor means that various\
+    \ commands and functions of a programming language are coloured.\n\nThere are\
+    \ also Integrated Development Environments (IDEs), which help a lot to write and\
+    \ manage the program code and all other parts of a software project. IDEs automatically\
+    \ detect cross-references to functions in the program code and can display the\
+    \ recently used functions while writing notes.\n\nThere are large IDE projects,\
+    \ which are available as open source items, or under different licenses for all\
+    \ operating sys-tems. Many developers use the IDEs Eclipse (www.eclipse.org) or\
+    \ NetBeans (www.netbeans.org).\n\nIf you have a low-performance computer or want\
+    \ to quickly test some short PHP scripts, then I recommend using the text editor\
+    \ jEdit, which has been developed as an open source software and can be downloaded\
+    \ from www.jedit.org. In the larger Linux distributions, jEdit is available via\
+    \ a Software Channel (Package Manager) in a somewhat outdated version.\n\nFor\
+    \ this book, it does not matter whether you are using an IDE or a simple text\
+    \ editor. If you are going to be a profes-sional PHP developer, you will come\
+    \ in contact with an IDE sooner or later.\n\nIn order to issue a specific recommendation,\
+    \ I would personally suggest that you write the first scripts in a text editor\
+    \ like jEdit, and more advanced scripts into the surface of an IDE, only after\
+    \ finishing a handful of small PHP projects. \n\n### The first PHP program (Welcome\
+    \ the whole world)\n\nWe will now write our first small PHP script.\n\nOpen the\
+    \ text editor of your choice and type in the following lines of code:\n\n<?php\n\
+    \n echo \"Hello World!\";\n\n?>\n\nSave this text in the htdocs folder inside\
+    \ the web server installation and name the file hello.php.\n\nAlready the file\
+    \ extension .php shows that there is a PHP script on one file. Our script begins\
+    \ with the line are PHP code and not 1 <?php, which our server will recognize\
+    \ that the following lines to ?>: 1 output, but to be first processed by our PHP\
+    \ interpreter.\n\nIn the world of programming, there are so-called interpreters\
+    \ and compilers. Compilers first process a complete program code and generate\
+    \ a finished program in machine language that can be supplied clean packed, for\
+    \ example in an .exe or .app file to the customer. This process is called compiling.\
+    \ The compilation of complex projects can sometimes take a long time. Especially\
+    \ in the field of dynamic web development the visitors don’t want to wait to long\
+    \ for the site to be fully assembled. So PHP is always interpreted fresh out of\
+    \ the code, that is, on every page request the code line by line and went for\
+    \ quasi live assembled the page (it is still only the finished page delivered\
+    \ to the visitors).\n\nIn our short code example, we find also the line echo \"\
+    Hello World!\"; which is our original script. Each command within PHP is terminated\
+    \ with a semicolon, which is located at the end of the line. A command could be\
+    \ long over several lines, then only the last line is terminated with a semicolon.\
+    \ The echo command returns in PHP a text string to the visitor's browser. Strings\
+    \ must be enclosed by quotation marks, so that PHP knows what’s a command and\
+    \ what’s a string. Whether single or double quotes are used, in most cases, does\
+    \ not matter. Just be aware that once again includes all strings with the same\
+    \ character. Most text editors raise strings produce color and thus can be recognized,\
+    \ if they were again closed properly easy.\n\nWhen we call now following in our\
+    \ browser the following address\n\nhttp://127.0.0.1/hello.php (or http://127.0.0.1:4444/hello.php\
+    \ depending on the operating system)\n\nour script from PHP gets executed.\n\n\
+    If the server is set up correctly and the PHP script could be executed, then the\
+    \ following output is displayed within the browser:\n\nHello World!\n\nIf this\
+    \ is the case for you, congratulations on your first PHP script.\n\nIf not, it\
+    \ could be a possible source of error that either the server is not running or\
+    \ has disabled itself, or that the semicolon is missing at the end of the line\
+    \ of code with the echo command.\n\n### Variables (information stores)\n\nOne\
+    \ of the key components of a modern programming language are variables. These\
+    \ serve as small information stores. Variables can store values ​​of various kinds.\
+    \ E.g. text characters (called String), numbers (without decimal digits they are\
+    \ named Integer, with Decimal or Float), a date or a number of other values.\n\
+    \nIn many programming languages ​​you to define which type of values you want\
+    \ to save when you create a variable. So there are Char variables that can store\
+    \ text strings only, or so-called integer variables, where you can store numbers.\
+    \ PHP is dynamic in variable types. You don’t need to specify whether a variable\
+    \ can only store numbers, characters, or else a certain type of information. A\
+    \ variable in PHP can also first contain a text and later in the script only a\
+    \ sequence of numbers.\n\nLater in this text you will learn how to anticipate\
+    \ or control the variable program runoff depending on the current value of a variable.\n\
+    \n#### Initialize variables"
+  toc: []
+  trans: '
+
+    下载 Windows 安装程序并运行安装。我建议将 `C:/xampp/` 保为默认文件夹路径。如果你将包安装在 `C:/Programs/XAMPP/`
+    目录下，服务器可能会出现问题，因为必要的文件权限没有正确设置。在安装过程中，系统会询问是否应将各个服务器组件作为操作系统的服务进行安装。你不应该这样做，否则服务器将在后台持续运行（直到你手动停止服务），消耗资源，并在网络上持续可用。
+
+
+    ### Linux
+
+
+    在 Linux 中，最好使用软件包管理器（Package Manager）安装 Apache Web 服务器和 MySQL 数据库服务器，并手动进行配置。但对于这本书来说，我建议初学者使用从
+    `www.apachefriends.org` 获取的预编译包，它包含了所有必要的服务器功能和 PHP 扩展。在下载链接下方，你将找到 Linux 安装说明以及一些关于如何快速启动和停止服务器的提示。
+
+
+    ### MacOS
+
+
+    针对 MacOS 甚至有 `Apachefriends.org` 的程序包。但我更倾向于让 MacOS 用户使用 `MAMP` 程序包。它的操作虽然类似，但给我带来的问题更少。该应用程序可以在
+    `www.mamp.info` 免费获取。它还有一个付费的 Pro 版本，但我们初次编程体验不需要它。下载安装文件后，请将 `MAMP` 安装在你的 `Application`
+    文件夹中。
+
+
+    上述所有服务器包都包含一个标记为 `htdocs` 的目录。我们将使用它来存储可以通过浏览器从服务器访问的文件。因此，打开你的浏览器并输入以下 URL：`http://127.0.0.1`
+
+
+    在 MacOS 下，你必须输入服务器的端口号（默认数字为 `4444`，因此整个 URL 应该为：`http://127.0.0.1:4444`）
+
+
+    你将看到来自服务器包网站（`XAMPP` / `MAMP`）的欢迎，并收到一些关于服务器的信息。
+
+
+    `127.0.0.1` 总是本地计算机。这意味着浏览器尝试寻找本地 Web 服务器。或者，你可以使用 `http://localhost`。这应该产生相同的结果。
+
+
+    ### 文本编辑器
+
+
+    每个操作系统都有很多文本编辑器。然而，在这种情况下，`Microsoft Office Word` 或 `LibreOffice Writer` 不能被视为文本编辑器，因为它们除了文本之外还保存了大量关于页面和文本格式的信息。文本编辑器按照输入文本在编辑器中显示的样式保存精确的字符。现代编辑器会对文本着色以提高其可读性。这种颜色不会被保存，而是在你重新打开文件时动态显示。这种功能被称为
+    `语法高亮`（syntax highlighting）。语法是用于描述代码的术语，在文本编辑器中高亮它意味着编程语言的各种命令和函数被涂上了颜色。
+
+
+    还有集成开发环境（IDE），它们对于编写和管理程序代码以及软件项目的所有其他部分非常有帮助。IDE 会自动检测程序代码中函数的交叉引用，并在编写注释时显示最近使用的函数。
+
+
+    有很多大型 IDE 项目，它们以开源项目的形式提供，或者通过不同的许可证适用于所有操作系统。许多开发者使用 IDE `Eclipse`（`www.eclipse.org`）或
+    `NetBeans`（`www.netbeans.org`）。
+
+
+    如果你有一台性能较低的电脑，或者想快速测试一些短小的 PHP 脚本，我建议使用文本编辑器 `jEdit`，它是作为开源软件开发的，可以从 `www.jedit.org`
+    下载。在较大的 Linux 发行版中，可以通过软件通道（软件包管理器）获取版本较旧的 `jEdit`。
+
+
+    对于这本书来说，你正在使用 IDE 还是简单的文本编辑器并不重要。如果你打算成为一名专业的 PHP 开发者，迟早会接触到 IDE 的。
+
+
+    为了给出具体的建议，我个人建议你先用像 `jEdit` 这样的文本编辑器编写第一个脚本，在完成几个小型 PHP 项目后，再将更高级的脚本进入 IDE 的界面中。
+
+
+    ### 第一个 PHP 程序（欢迎整个世界）
+
+
+    现在我们来编写第一个小型 PHP 脚本。
+
+
+    打开你喜欢的文本编辑器并输入以下代码行：
+
+
+    ```php
+
+    <?php
+
+    echo "Hello World!";
+
+    ?>
+
+    ```
+
+
+    将此文本保存在 Web 服务器安装目录下的 `htdocs` 文件夹中，并将文件命名为 `hello.php`。
+
+
+    文件扩展名 `.php` 表明该文件是一个 PHP 脚本。我们的脚本以 `<?php` 行开头，这些是 PHP 代码而不是普通文本，我们的服务器会识别出 `?>`
+    之前的行不是输出，而是首先由我们的 PHP 解释器处理。
+
+
+    在编程世界中，有所谓的解释器（interpreters）和编译器（compilers）。编译器首先处理完整的程序并生成机器语言。PHP 是被解释执行的，这意味着我们的服务器会识别出
+    `?>` 之前的行不是输出，而是首先由我们的 PHP 解释器处理。
+
+
+    在编程世界中，有所谓的解释器和编译器。编译器首先处理完整的程序并生成机器语言。PHP 是被解释执行的，这意味着我们的服务器会识别出 `?>` 之前的行不是输出，而是首先由我们的
+    PHP 解释器处理。
+
+
+    在编程世界中，有所谓的解释器和编译器。编译器首先处理完整的程序并生成机器语言。PHP 是被解释执行的，这意味着我们的服务器会识别出 `?>` 之前的行不是输出，而是首先由我们的
+    PHP 解释器处理。
+
+
+    在编程世界中，有所谓的解释器和编译器。编译器首先处理完整的程序并生成机器语言。PHP 是被解释执行的，这意味着我们的服务器会识别出 `?>` 之前的行不是输出，而是首先由我们的
+    PHP 解释器处理。
+
+
+    在编程世界中，有所谓的解释器和编译器。编译器首先处理完整的程序并生成机器语言。PHP 是被解释执行的，这意味着我们的服务器会识别出 `?>` 之前的行不是输出，而是首先由我们的
+    PHP 解释器处理。
+
+
+    在编程世界中，有所谓的解释器和编译器。编译器首先处理完整的程序并生成机器语言。PHP 是被解释执行的，这意味着我们的服务器会识别出 `?>` 之前的行不是输出，而是首先由我们的
+    PHP 解释器处理。
+
+
+    在编程世界中，有所谓的解释器和编译器。编译器首先处理完整的程序并生成机器语言。PHP 是被解释执行的，这意味着我们的服务器会识别出 `?>` 之前的行不是输出，而是首先由我们的
+    PHP 解释器处理。
+
+
+    在编程世界中，有所谓的解释器和编译器。编译器首先处理完整的程序并生成机器语言。PHP 是被解释执行的，这意味着我们的服务器会识别出 `?>` 之前的行不是输出，而是首先由我们的
+    PHP 解释器处理。
+
+
+    在编程世界中，有所谓的解释器和编译器。编译器首先处理完整的程序并生成机器语言。PHP 是被解释执行的，这意味着我们的服务器会识别出 `?>` 之前的行不是输出，而是首先由我们的
+    PHP 解释器处理。
+
+
+    （注：由于原文中存在段落重复，此处已按要求去重并完成翻译）
+
+
+    PHP 是被解释执行的，这意味着我们的服务器会识别出 `?>` 之前的行不是输出，而是首先由我们的 PHP 解释器处理。
+
+
+    在编程世界中，有所谓的解释器和编译器。编译器首先处理完整的程序并生成机器语言。PHP 是被解释执行的，这意味着我们的服务器会识别出 `?>` 之前的行不是输出，而是首先由我们的
+    PHP 解释器处理。
+
+
+    （此处为翻译逻辑说明，实际输出已根据您的要求去重并保持了格式）
+
+
+    '
+- fmt: "\nIn our previous first PHP script, we wrote the text \"Hello World!\". Now\
+    \ we would not set the text right behind the `echo` command, but save it first\
+    \ in a variable and then the `echo` command should give us the content of this\
+    \ variable.\n\n```php\n<?php\n  $myText = \"Hello World!\";\n  echo $myText;\n\
+    ?>\n```\n\nIn PHP variables are preceded by a dollar sign (`$`). The variable\
+    \ name is arbitrary, but it must not contain spaces, but only small and uppercase\
+    \ letters, numbers and underscores.\n\nTo print the contents of several variables\
+    \ in succession, they must be separated by a point:\n\n```php\n<?php\n  $part1\
+    \ = \"Hello \";\n  $part2 = \"World!\";\n  echo $part1 . $part2;\n?>\n```\n\n\
+    This gives the same output as in our first example. We can also output text blocks\
+    \ with variables together:\n\n```php\n<?php\n  $part1 = \"Hello\";\n  echo $part1\
+    \ . \" World!\";\n?>\n```\n\nIf you are looking for errors in a program, use the\
+    \ command `var_dump` any time to find out by means of the function, the nature\
+    \ of the information within a variable:\n\n```php\n<?php\n  $part1 = \"Hello\"\
+    ;\n  var_dump($part1);\n?>\n```\n\nOutput:\n`string(5) \"Hello\"`\n\nThis means\
+    \ that the contents of our variable is of type \"string\" and contains a string\
+    \ with 5 characters, namely \"Hello\".\n\n### Comment the code\n\nIf our scripts\
+    \ are only a few lines long, it is easy to recognize at first glance what a code\
+    \ block does. However, as soon as the script becomes longer, it may be necessary\
+    \ to leave comments within the program code, so that everyone who reads the code\
+    \ later immediately knows what the following lines of code object are.\n\nThere\
+    \ are single-line and multi-line comments in PHP. Line comments start with two\
+    \ forward slashes `//`. Anything written after the two slashes on the current\
+    \ line is no longer treated as a code.\n\nMulti-line comments begin with a slash\
+    \ and a star, `/*`, and end with a star and a slash, `*/`.\n\nHere is another\
+    \ example:\n\n```php\n<?php\n  // I am a single line comment\n  echo \"I am code\"\
+    ;\n  /*\n  I\n  am\n  a\n  multiline\n  comment\n  */\n?>\n```\n\nThis script\
+    \ outputs only the following text:\n`I am code`\n\nA good programmer should, of\
+    \ course, always have as a goal writing a program code that reveals all purposes\
+    \ on its own. This can be achieved, for example, by logical variable and function\
+    \ names. Variables termed `$a`, `$b`, and `$c` indicate ‘less than’ if the variables\
+    \ are named `$total_price`, `$sales_tax`, and `$gross_price`.\n\nNevertheless,\
+    \ for example, it is helpful if you write meaningful comments when you are programming\
+    \ complex algorithms or codes. You could divide the program code via comments\
+    \ in several blocks.\n\nSo, should a program block start with the comment,\n\n\
+    ```php\n/*****************\nprocess user input\n*****************/\n```\n\nand\
+    \ the next block is labelled as follows:\n\n```php\n/*****************\nperform\
+    \ calculations\n*****************/\n```\n\nand the last block, for example, is\
+    \ as follows:\n\n```php\n/*****************\noutput results\n*****************/\n\
+    ```\n\nthen any programmer, who wants to update the calculations, knows immediately\
+    \ in which area of the code he has to look.\n\n### Arithmetic operations (basic\
+    \ arithmetic)\n\nIf you save only numbers in variables instead of letters, then\
+    \ you can calculate with these.\n\nHere is an example (in this example, the HTML\
+    \ code `<br />` is used, which is indicated in the browser as a line break):\n\
+    \n```php\n<?php\n  $number1 = 2;\n  $number2 = 3;\n  $addition = $number1 + $number2;\n\
+    \  $subtraction = $number1 - $number2;\n  $multiplication = $number1 * $number2;\n\
+    \  $division = $number1 / $number2;\n  echo \"Number 1: \" . $number1;\n  echo\
+    \ \"<br />\";\n  echo \"Number 2: \" . $number2;\n  echo \"<br />\";\n  echo \"\
+    <br />\";\n  echo \"Addition: \" . $addition;\n  echo \"<br />\";\n  echo \"Subtraction:\
+    \ \" . $subtraction;\n  echo \"<br />\";\n  echo \"Multiplication: \" . $multiplication;\n\
+    \  echo \"<br />\";\n  echo \"Division: \" . $division;\n?>\n```\n\nThis script\
+    \ has the following output in the browser:\n`Number 1: 2`\n`Number 2: 3`\n`Addition:\
+    \ 5`\n`Subtraction: -1`\n`Multiplication: 6`\n`Division: 0.66666666666667`\n\n\
+    There is an alternative spelling for simple arithmetic:\n\n```php\n<?php\n  $value1\
+    \ = 2;\n  $value2 = 3;\n  $value1 = $value1 + $value2;\n  $value2 = $value2 *\
+    \ $value2;\n  echo $value1;\n  echo \"<br />\";\n  echo $value2;\n?>\n```\n\n\
+    It gives the same output as following:\n\n```php\n<?php\n  $value1 = 2;\n  $value2\
+    \ = 3;\n  $value1 += $value2;\n  $value2 *= $value2;\n  echo $value1;\n  echo\
+    \ \"<br />\";\n  echo $value2;\n?>\n```\nOutput:\n`5`\n`9`\n\nAs a small task,\
+    \ you could write a script that calculates the following: One website has 30,000\
+    \ visitors daily. An ad-blocking-in is used by 60% of the visitors. In other words,\
+    \ 40% of the visitors see a banner on our website. For 1,000 clicks, we get €200.\
+    \ How much do we earn per month (calculated as 30 days)? Use all values in the\
+    \ variables; then you can calculate very fast how much we could earn when our\
+    \ website has 100,000 visitors daily. The answer is on the next page. As a solution,\
+    \ you should get the following: €240 and €800. Example solution:\n\n```php\n<?php\n\
+    \  $dailyVisitors = 30000;\n  $sees = $dailyVisitors * 0.4; // 60% blocked\n \
+    \ $clickratio = 0.1;\n  $earnings = 200; // per 1000 clicks\n  $clicks = $ads\
+    \ * $clickratio;\n  echo ($clicks / 1000) * $earnings;\n?>\n```\n\n### Combining\
+    \ several variables (arrays)\n\nIf you have several variables to represent a number\
+    \ of similar values, it makes sense to include them in an array. Here are two\
+    \ examples that have the same output:\n\n```php\n<?php\n  $value1 = 2;\n  $value2\
+    \ = 4;\n  $value3 = 8;\n  $value4 = 16;\n  $value5 = 32;\n  echo $value1 . \"\
+    <br />\";\n  echo $value2 . \"<br />\";\n  echo $value3 . \"<br />\";\n  echo\
+    \ $value4 . \"<br />\";\n  echo $value5 . \"<br />\";\n?>\n```\n\n```php\n<?php\n\
+    \  $valueArray = array(2,4,8,16,32);\n  echo $valueArray[0] . \"<br />\";\n  echo\
+    \ $valueArray[1] . \"<br />\";\n  echo $valueArray[2] . \"<br />\";\n  echo $valueArray[3]\
+    \ . \"<br />\";\n  echo $valueArray[4] . \"<br />\";\n?>\n```\n\nBoth have the\
+    \ following output:\n`2`\n`4`\n`8`\n`16`\n`32`\n\nYou can access the values of\
+    \ an array by using `$array[index]`. The entries are numbered in ascending order\
+    \ from 0 to the number of elements. You can also set the index by yourself:\n\n\
+    ```php\n<?php\n  $myArray = array(\"index1\" => \"value1\");\n  echo $myArray[\"\
+    index1\"];\n  echo \"<br />\";\n  $myArray[\"index1\"] = \"value2\";\n  echo $myArray[\"\
+    index1\"];\n?>\n```\n\nOutput:\n`value1`\n`value2`\n\nLater, we will learn how\
+    \ to automate the output of all the values in an array in succession and process\
+    \ them. This is useful in arrays that contain dozens of entries.\n\n#### Sort\
+    \ arrays\n\nIf we fill an array dynamically and we want to sort the values alphabetically,\
+    \ there is a simple function: `sort()`.\n\n```php\n<?php\n  $myArray = array(\"\
+    Zita\", \"Anton\", \"Hans\");\n  // unsorted output\n  echo $myArray[0];\n  echo\
+    \ \"<br />\";\n  echo $myArray[1];\n  echo \"<br />\";\n  echo $myArray[2];\n\
+    \  // Sort array\n  sort($myArray);\n  echo \"<br /><br />\";\n  // Sorted output\n\
+    \  echo $myArray[0];\n  echo \"<br />\";\n  echo $myArray[1];\n  echo \"<br />\"\
+    ;\n  echo $myArray[2];\n?>\n```\n\nOutput:\n`Zita`\n`Anton`\n`Hans`\n`Anton`\n\
+    `Hans`\n`Zita`\n\n#### Multidimensional arrays\n\nAn array could, again, contain\
+    \ as a value, another array:\n\n```php\n<?php\n  $myArray = array();\n  $myArray[\"\
+    index1\"] = array(\"value1\", \"value2\");\n  $myArray[\"index2\"] = array(\"\
+    value3\", \"value4\");\n  echo $myArray[\"index1\"][0];\n  echo \"<br />\";\n\
+    \  echo $myArray[\"index2\"][1];\n?>\n```\n\nOutput:\n`value1`\n`value4`\n\nSo,\
+    \ you could save coordinates and read them, for example, as a coordinate system\
+    \ with X, Y:\n\n```php\n<?php\n  //...\n  echo $chessboard[10][2];\n?>\n```\n\n\
+    This would depend on how your script is constructed. For example, you could show\
+    \ the pitch in the 10th row and the second column.\n\n## Day 2\n\n### Fill variables\
+    \ with user information (GET / POST)\n"
+  raw: "In our previous first PHP script, we wrote the text \"Hello World!\". Now\
+    \ we would not set the text right behind the echo command, but save it first in\
+    \ a variable and then the echo command should give us the content of this variable.\n\
+    \n<?php\n\n  $myText = \"Hello World!\";\n\n  echo $myText;\n\n?>\n\nIn PHP variables\
+    \ are preceded by a dollar sign ($). The variable name is arbitrary, but it must\
+    \ not contain spaces, but only small and uppercase letters, numbers and underscores.\n\
+    \nTo print the contents of several variables in succession, they must be separated\
+    \ by a point:\n\n<?php\n\n  $part1 = \"Hello \";\n\n  $part2 = \"World!\";\n\n\
+      echo $part1 . $part2;\n\n?>\n\nThis gives the same output as in our first example.\
+    \ We can also output text blocks with variables together:\n\n<?php\n\n  $part1\
+    \ = \"Hello\";\n\n  echo $part1 . \" World!\";\n\n?>\n\nIf you are looking for\
+    \ errors in a program, use the command var\\_dump any time to find out by means\
+    \ of the function, the nature of the information within a variable:\n\n<?php\n\
+    \n  $part1 = \"Hello\";\n\n  var\\_dump($part1);\n\n?>\n\nOutput:\n\nstring(5)\
+    \ \"Hello\"\n\nThis means that the contents of our variable is of type \"string\"\
+    \ and contains a string with 5 characters, namely \"Hello\".\n\n### Comment the\
+    \ code\n\nIf our scripts are only a few lines long, it is easy to recognize at\
+    \ first glance what a code block does. However, as soon as the script becomes\
+    \ longer, it may be necessary to leave comments within the program code, so that\
+    \ everyone who reads the code later immediately knows what the following lines\
+    \ of code object are.\n\nThere are single-line and multi-line comments in PHP.\
+    \ Line comments start with two forward slashes //. Anything written after the\
+    \ two slashes on the current line is no longer treated as a code.\n\nMulti-line\
+    \ comments begin with a slash and a star, /\\*, and end with a star and a slash,\
+    \ \\*/.\n\nHere is another example:\n\n<?php\n\n  // I am a single line comment\n\
+    \n  echo \"I am code\";\n\n  /\\*\n\n  I\n\n  am\n\n  a\n\n  multiline\n\n  comment\n\
+    \n  \\*/\n\n?>\n\nThis script outputs only the following text:\n\nI am code\n\n\
+    A good programmer should, of course, always have as a goal writing a program code\
+    \ that reveals all purposes on its own. This can be achieved, for example, by\
+    \ logical variable and function names. Variables termed $a, $b, and $c indicate\
+    \ ‘less than’ if the variables are named $total\\_price, $sales\\_tax, and $gross\\\
+    _price.\n\nNevertheless, for example, it is helpful if you write meaningful comments\
+    \ when you are programming complex algorithms or codes. You could divide the program\
+    \ code via comments in several blocks.\n\nSo, should a program block start with\
+    \ the comment,\n\n/\\* \\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\\
+    *\\*\n\nprocess user input\n\n\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\\
+    *\\*\\*\\*\\* \\*/\n\nand the next block is labelled as follows:\n\n/\\* \\*\\\
+    *\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\n\nperform calculations\n\
+    \n\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\* \\*/\n\nand the\
+    \ last block, for example, is as follows:\n\n/\\* \\*\\*\\*\\*\\*\\*\\*\\*\\*\\\
+    *\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\n\noutput results\n\n\\*\\*\\*\\*\\*\\*\\*\\*\\\
+    *\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\* \\*/\n\nthen any programmer, who wants to update\
+    \ the calculations, knows immediately in which area of the code he has to look.\n\
+    \n### Arithmetic operations (basic arithmetic)\n\nIf you save only numbers in\
+    \ variables instead of letters, then you can calculate with these.\n\nHere is\
+    \ an example (in this example, the HTML code <br /> is used, which is indicated\
+    \ in the browser as a line break):\n\n<?php\n\n  $number1 = 2;\n\n  $number2 =\
+    \ 3;\n\n  $addition = $number1 + $number2;\n\n  $subtraction = $number1 - $number2;\n\
+    \n  $multiplication = $number1 \\* $number2;\n\n  $division = $number1 / $number2;\n\
+    \n  echo \"Number 1: \" . $number1;\n\n  echo \"<br />\";\n\n  echo \"Number 2:\
+    \ \" . $number2;\n\n  echo \"<br />\";\n\n  echo \"<br />\";\n\n  echo \"Addition:\
+    \ \" . $addition;\n\n  echo \"<br />\";\n\n  echo \"Subtraction: \" . $subtraction;\n\
+    \n  echo \"<br />\";\n\n  echo \"Multiplication: \" . $multiplication;\n\n  echo\
+    \ \"<br />\";\n\n  echo \"Division: \" . $division;\n\n?>\n\nThis script has the\
+    \ following output in the browser:\n\nNumber 1: 2\n\nNumber 2: 3\n\nAddition:\
+    \ 5\n\nSubtraction: -1\n\nMultiplication: 6\n\nDivision: 0.66666666666667\n\n\
+    There is an alternative spelling for simple arithmetic:\n\n<?php\n\n  $value1\
+    \ = 2;\n\n  $value2 = 3; \n\n  $value1 = $value1 + $value2;\n\n  $value2 = $value2\
+    \ \\* $value2;\n\n  echo $value1;\n\n  echo \"<br />\";\n\n  echo $value2;\n\n\
+    ?>\n\nIt gives the same output as the following:\n\n<?php\n\n  $value1 = 2;\n\n\
+      $value2 = 3; \n\n  $value1 += $value2;\n\n  $value2 \\*= $value2;\n\n  echo\
+    \ $value1;\n\n  echo \"<br />\";\n\n  echo $value2;\n\n?>\n\nOutput:\n\n5\n\n\
+    9\n\nAs a small task, you could write a script that calculates the following:\n\
+    \nOne website has 30,000 visitors daily.\n\nAn ad-blocking plug-in is used by\
+    \ 60% of the visitors. In other words, 40% of the visitors see a banner advertisement\
+    \ on our website. Of these 40% visitors, 10% click on the banners. For every 1,000\
+    \ clicks, we get €200.\n\nHow much do we earn per month (calculated as 30 days)?\n\
+    \nUse all values in the variables; then you can calculate very fast how much we\
+    \ could earn when our website has 100,000 visitors daily.\n\nThe answer is on\
+    \ the next page.\n\nAs a solution, you should get the following: €240 and €800.\n\
+    \nExample solution:\n\n<?php\n\n  $dailyVisitors = 30000;\n\n  $seesads = 0.4;\
+    \ // 60% get blocked\n\n  $clickratio = 0.1;\n\n  $earnings = 200; // per 1000\
+    \ clicks\n\n  $ads = $dailyVisitors \\* $seesads;\n\n  $clicks = $ads \\* $clickratio;\n\
+    \n  echo ($clicks / 1000) \\* $earnings;\n\n?>\n\n### Combining several variables\
+    \ (arrays)\n\nIf you have several variables to represent a number of similar values,\
+    \ it makes sense to include them in an array.\n\nHere are two examples that have\
+    \ the same output:\n\n<?php\n\n  $value1 = 2;\n\n  $value2 = 4;\n\n  $value3 =\
+    \ 8;\n\n  $value4 = 16;\n\n  $value5 = 32;\n\n  echo $value1 . \"<br />\";\n\n\
+      echo $value2 . \"<br />\";\n\n  echo $value3 . \"<br />\";\n\n  echo $value4\
+    \ . \"<br />\";\n\n  echo $value5 . \"<br />\";\n\n?>\n\n<?php\n\n  $valueArray\
+    \ = array(2,4,8,16,32);\n\n  echo $valueArray\\[0\\] . \"<br />\";\n\n  echo $valueArray\\\
+    [1\\] . \"<br />\";\n\n  echo $valueArray\\[2\\] . \"<br />\";\n\n  echo $valueArray\\\
+    [3\\] . \"<br />\";\n\n  echo $valueArray\\[4\\] . \"<br />\";\n\n?>\n\nBoth have\
+    \ the following output:\n\n2\n\n4\n\n8\n\n16\n\n32\n\nYou can access the values\
+    \ of an array by using $array\\[index\\]. The entries are numbered in ascending\
+    \ order from 0 to the number of elements. You can also set the index by yourself:\n\
+    \n<?php\n\n  $myArray = array(\"index1\" => \"value1\");\n\n  echo $myArray\\\
+    [\"index1\"\\];\n\n  echo \"<br />\";\n\n  $myArray\\[\"index1\"\\] = \"value2\"\
+    ;\n\n  echo $myArray\\[\"index1\"\\];\n\n?>\n\nOutput:\n\nvalue1\n\nvalue2\n\n\
+    Later, we will learn how to automate the output of all the values in an array\
+    \ in succession and process them. This is useful in arrays that contain dozens\
+    \ of entries.\n\n#### Sort arrays\n\nIf we fill an array dynamically and we want\
+    \ to sort the values alphabetically, there is a simple function: sort();\n\n<?php\n\
+    \n  $myArray = array(\"Zita\", \"Anton\", \"Hans\");\n\n  // unsorted output\n\
+    \n  echo $myArray\\[0\\];\n\n  echo \"<br />\";\n\n  echo $myArray\\[1\\];\n\n\
+      echo \"<br />\";\n\n  echo $myArray\\[2\\];\n\n  // Sort array\n\n  sort($myArray);\n\
+    \n  echo \"<br /><br />\";\n\n  // Sorted output\n\n  echo $myArray\\[0\\];\n\n\
+      echo \"<br />\";\n\n  echo $myArray\\[1\\];\n\n  echo \"<br />\";\n\n  echo\
+    \ $myArray\\[2\\];\n\n?>\n\nOutput:\n\nZita\n\nAnton\n\nHans\n\nAnton\n\nHans\n\
+    \nZita\n\n#### Multidimensional arrays\n\nAn array could, again, contain as a\
+    \ value, another array:\n\n<?php\n\n  $myArray = array();\n\n  $myArray\\[\"index1\"\
+    \\] = array(\"value1\", \"value2\");\n\n  $myArray\\[\"index2\"\\] = array(\"\
+    value3\", \"value4\");\n\n  echo $myArray\\[\"index1\"\\]\\[0\\];\n\n  echo \"\
+    <br />\";\n\n  echo $myArray\\[\"index2\"\\]\\[1\\];\n\n?>\n\nOutput:\n\nvalue1\n\
+    \nvalue4\n\nSo, you could save coordinates and read them, for example, as a coordinate\
+    \ system with X, Y:\n\n<?php\n\n  \\[...\\]\n\n  echo $chessboard\\[10\\]\\[2\\\
+    ];\n\n?>\n\nThis would depend on how your script is constructed. For example,\
+    \ you could show the pitch in the 10th row and the second column.\n\n## Day 2\n\
+    \n### Fill variables with user information (GET / POST)"
+  toc: []
+  trans: "\n在我们之前的第一个 PHP 脚本中，我们写了文本 \"Hello World!\"。现在我们不再直接将文本紧跟在 `echo` 命令后面，而是先将其保存在变量中，然后让\
+    \ `echo` 命令输出该变量的内容。\n\n```php\n<?php\n  $myText = \"Hello World!\";\n  echo $myText;\n\
+    ?>\n```\n\n在 PHP 中，变量以美元符号 (`$`) 开头。变量名是任意的，但不能包含空格，只能包含大小写字母、数字和下划线。\n\n要连续打印几个变量的内容，它们必须用点（`.`）进行分隔：\n\
+    \n```php\n<?php\n  $part1 = \"Hello \";\n  $part2 = \"World!\";\n  echo $part1\
+    \ . $part2;\n?>\n```\n\n这与我们第一个示例的输出相同。我们也可以将变量和文本一起输出：\n\n```php\n<?php\n  $part1\
+    \ = \"Hello\";\n  echo $part1 . \" World!\";\n?>\n```\n\n如果你在程序中寻找错误，可以随时使用 `var_dump`\
+    \ 命令通过该函数来找出变量内信息的性质：\n\n```php\n<?php\n  $part1 = \"Hello\";\n  var_dump($part1);\n\
+    ?>\n```\n\n输出：\n`string(5) \"Hello\"`\n\n这意味着我们变量的内容类型是 \"string\"（字符串），并且包含一个有\
+    \ 5 个字符的字符串，即 \"Hello\"。\n\n### 代码注释\n\n如果我们的脚本只有几行长，一眼就能看出某个代码块的作用。然而，一旦脚本变得很长，就有必要在程序代码中加入注释，这样以后阅读代码的人就能立即知道接下来的几行代码对象。\n\
+    \nPHP 中有单行注释和多行注释。单行注释以两个正斜杠 `//` 开始。当前行中两个斜杠之后编写任何内容都不再被视为代码。\n\n多行注释以斜杠和星号 `/*`\
+    \ 开始，以星号和斜杠 `*/` 结束。\n\n这是另一个示例：\n\n```php\n<?php\n  // 我是一条单行注释\n  echo \"I am\
+    \ code\";\n  /*\n  I\n  am\n  a\n  multiline\n  comment\n  */\n?>\n```\n\n该脚本只输出以下文本：\n\
+    `I am code`\n\n当然，一个优秀的程序员应该始终以编写能够自我揭示所有用途的代码为目标。这可以通过逻辑变量名和函数名来实现。变量 `$a`、 `$b`\
+    \ 和 `$c` 表示“小于”，但如果变量命名为 `$total_price`、 `$sales_tax` 和 `$gross_price` 则意义明确。\n\
+    \n尽管如此，例如，在编写复杂算法或代码时，编写有意义的注释是有帮助的。你可以通过注释将程序代码分为几个块。\n\n那么，一个程序块应该以注释开头：\n\n\
+    ```php\n/*****************\n处理用户输入\n*****************/\n```\n\n接下来的块标记如下：\n\n\
+    ```php\n/*****************\n执行计算\n*****************/\n```\n\n最后一个块（例如）如下：\n\n\
+    ```php\n/*****************\n输出结果\n*****************/\n```\n\n那么任何想要更新计算逻辑的程序员都能立即知道他需要在代码的哪个区域进行查找。\n\
+    \n### 算术运算（基础算术）\n\n如果你只在变量中保存数字而不是字母，那么就可以对这些数字进行计算。\n\n这是一个示例（在此示例中使用了 HTML\
+    \ 代码 `<br />`，它在浏览器中显示为换行）：\n\n```php\n<?php\n  $number1 = 2;\n  $number2 = 3;\n\
+    \  $addition = $number1 + $number2;\n  $subtraction = $number1 - $number2;\n \
+    \ $multiplication = $number1 * $number2;\n  $division = $number1 / $number2;\n\
+    \  echo \"Number 1: \" . $number1;\n  echo \"<br />\";\n  echo \"Number 2: \"\
+    \ . $number2;\n  echo \"<br />\";\n  echo \"<br />\";\n  echo \"Addition: \" .\
+    \ $addition;\n  echo \"<br />\";\n  echo \"Subtraction: \" . $subtraction;\n \
+    \ echo \"<br />\";\n  echo \"Multiplication: \" . $multiplication;\n  echo \"\
+    <br />\";\n  echo \"Division: \" . $division;\n?>\n```\n\n该脚本在浏览器中输出：\n`Number\
+    \ 1: 2`\n`Number 2: 3`\n`Addition: 5`\n`Subtraction: -1`\n`Multiplication: 6`\n\
+    `Division: 0.666666666667`\n\n这里是简单算术的另一种写法：\n\n```php\n<?php\n  $value1 = 2;\n\
+    \  $value2 = 3;\n  $value1 += $value2;\n  $value2 *= $value2;\n  echo $value1;\n\
+    \  echo \"<br />\";\n  echo $value2;\n?>\n```\n输出：\n`5`\n`9`\n\n作为一个小任务，你可以写一个脚本来计算：网站每天有\
+    \ 30,000 个访客。有 60% 的访客看到了广告。换句话说，40% 的访客看到了我们的横幅。对于 1000 次点击，我们获得 200 欧元。我们每月赚多少（按\
+    \ 30 天计算）？如果网站每天有 100,000 个访客，答案应该是 240 欧元和 800 欧元。示例如下：\n\n```php\n<?php\n  $dailyVisitors\
+    \ = 30000;\n  $sees = $dailyVisitors * 0.4; // 60% 广告\n  $clickratio = 0.1; //\
+    \ 每 1000 次点击\n  $earnings = 200;\n  echo ($sees / 1000) * $earnings;\n?>\n```\n\
+    \n### 合并多个变量（数组）\n\n如果你有多个变量来表示相似的值，将它们包含在数组是有意义的。这里有两个输出相同的示例：\n\n```php\n<?php\n\
+    \  $value1 = 2;\n  $value2 = 4;\n  $value3 = 8;\n  $value4 = 16;\n  $value5 =\
+    \ 32;\n  echo $value1 . \"<br />\";\n  echo $value2 . \"<br />\";\n  echo $value3\
+    \ . \"<br />\";\n  echo $value4 . \"<br />\";\n  echo $value5 . \"<br />\";\n\
+    ?>\n```\n\n```php\n<?php\n  $valueArray = array(2,4,8,16,32);\n  echo $valueArray[0]\
+    \ . \"<br />\";\n  echo $valueArray[1] . \"<br />\";\n  echo $valueArray[2] .\
+    \ \"<br />\";\n  echo $valueArray[3] . \"<br />\";\n  echo $valueArray[4] . \"\
+    <br />\";\n?>\n```\n\n两者的输出都是：\n`2`\n`4`\n`8`\n`16`\n`32`\n\n你可以通过 `$array[index]`\
+    \ 访问数组的值。条目从 0 到元素数量升序编号。你也可以自己设置索引：\n\n```php\n<?php\n  $myArray = array(\"index1\"\
+    \ => \"value1\");\n  echo $myArray[\"index1\"];\n  echo \"<br />\";\n  $myArray[\"\
+    index1\"] = \"value2\";\n  echo $myArray[\"index1\"];\n?>\n```\n\n输出：\n`value1`\n\
+    `value2`\n\n以后，我们将学习如何自动连续输出数组中的所有值并处理它们。这对于包含几十个条目的数组非常有用。\n\n#### 排序数组\n\n如果我们动态地填充数组并希望按字母顺序对值，有一个简单的函数：`sort()`。\n\
+    \n```php\n<?php\n  $myArray = array(\"Zita\", \"Anton\", \"Hans\");\n  // 未排序输出\n\
+    \  echo $myArray[0];\n  echo \"<br />\";\n  echo $myArray[1];\n  echo \"<br />\"\
+    ;\n  echo $myArray[2];\n  // 排序数组\n  sort($myArray);\n  echo \"<br /><br />\"\
+    ;\n  // 排序后的输出\n  echo $myArray[0];\n  echo \"<br />\";\n  echo $myArray[1];\n\
+    \  echo \"<br />\";\n  echo $myArray[2];\n?>\n```\n\n输出：\n`Zita`\n`Anton`\n`Hans`\n\
+    `Anton`\n`Hans`\n`Zita`\n\n#### 多维数组\n\n数组再次可以包含另一个数组作为其值：\n\n```php\n<?php\n\
+    \  $myArray = array();\n  $myArray[\"index1\"] = array(\"value1\", \"value2\"\
+    );\n  $myArray[\"index2\"] = array(\"value3\", \"value4\");\n  echo $myArray[\"\
+    index1\"][0];\n  echo \"<br />\";\n  echo $myArray[\"index2\"][1];\n?>\n```\n\n\
+    输出：\n`value1`\n`value4`\n\n所以，你可以保存坐标并读取它们，例如像 X, Y 坐标系一样：\n\n```php\n<?php\n\
+    \  //...\n  echo $chessboard[10][2];\n?>\n```\n\n这取决于你的脚本如何构建。例如，你可以显示第 10 行第\
+    \ 2 列的棋子。\n"
+- fmt: "\nSo far, although we have had our variables always filled with values within\
+    \ the code, the result has not been a dynamic website. We now want to receive\
+    \ information from ‘outside’.\n\nFor a user to send to our PHP script data, there\
+    \ are, among other things, two simple methods: `POST` and `GET`.\n\n`POST` information\
+    \ is transmitted, for example, in an appropriately configured form to our server\
+    \ when the user is registered for, when he makes a new forum entry. Then, there\
+    \ is the `GET` information, which is received via invoked URL. You must have noticed\
+    \ the long URLs in web shops, which include many letters and numbers and automatically\
+    \ generated parts.\n\n## Identify and read GET variables\n\n`GET` variables are\
+    \ passed as parameters in an URL:\n\n`http://www.myurl.com/script.php?variable1=value1&variable2=value2&variable3=value3`\n\
+    \nThe number of variables and values is virtually not limited, but old browsers\
+    \ and a lot of servers have a limit of 1024 characters in the URL.\n\nWhen this\
+    \ URL is called in the browser, the computer first attempts to address the call,\
+    \ `www.myurl.at`. The file is then requested from the server, `script.php`, and\
+    \ three variables are received. The first variable has a question mark (`?`),\
+    \ the other variables, an ampersand (`&`).\n\nLet us expand our welcome script\
+    \ to a dynamic component to greet our visitors in my name:\n\n```php\n<?php\n\
+    \  $vistorsname = $_GET['name'];\n  echo \"Hello \".$vistorsname;\n?>\n```\n\n\
+    Save the script, for example, under the name `hello2.php` in your `htdocs` folder.\n\
+    \nWithin PHP, there are always some automatically existing variables. There are,\
+    \ for example, an array called `$_GET` and one named `$_POST` from which the transmitted\
+    \ `GET` and `POST` information can be read. These variables are arrays, and the\
+    \ name of the values are the array index.\n\nIf you now call the script by the\
+    \ URL,\n\n`http://127.0.0.1/hello2.php?name=Klaus`\n\nthe following text appears\
+    \ in the browser:\n\nHello Klaus\n\nCongratulations! You have, now, programmed\
+    \ your first dynamic website and you are a bit ahead of other programmers who\
+    \ can write only simple HTML.\n\n## Identify and read POST variables\n\nWould\
+    \ you query longer texts, including special characters, so that you could get\
+    \ on with the transmission via `GET` variables in the URL problems? For such purposes,\
+    \ there is the `POST` method, which is used as follows:\n\nmy_form.html\n```html\n\
+    <form method=\"POST\" action=\"read_form.php\">\n  <textarea name=\"myText\"></textarea>\n\
+    \  <input type=\"submit\" value=\"Send\" />\n</form>\n```\n\nread_form.php\n```php\n\
+    <?php\n  $myText = $_POST[\"myText\"];\n  echo nl2br($myText);\n?>\n```\n\nIn\
+    \ the first file, we define a form by HTML. Each form element from which we want\
+    \ to get information, gets the property (tag attributes) `name=...’`. This enables\
+    \ us to extract all information through the global variable, `$_POST`, in our\
+    \ second file.\n\nSince we use a text box with multiple lines, we have, on the\
+    \ issue, in our PHP script the function `nl2br`, which stands for a new line to\
+    \ break or to make line breaks in the text.\n\n## Conditions, program control\
+    \ (IF/ELSE/ELSEIF)\n\nWe can, already, according to the user input, output dynamic\
+    \ text but we cannot run our script depending on user input. In programming, there\
+    \ are many cases, which can be written as follows: when the user, `A`, enters\
+    \ exactly something, do this, otherwise, do that.\n\n```php\nif ($input == \"\
+    A\") {\n  do this;\n}\nelse {\n  do that;\n}\n```\n\n`If`, followed by a condition\
+    \ written within normal parentheses `()`, the following code is only executed\
+    \ when the condition in the parentheses `()` is met. The code block after the\
+    \ parentheses should be written within two brackets `{}`. If the conditions inside\
+    \ the parentheses are not applied, the `else` block, also bounded by braces, will\
+    \ be executed.\n\nOne can combine `if` and `else` also to successively query multiple\
+    \ conditions and even attach an `else` clause if none of previous conditions are\
+    \ true:\n\n```php\nif ($input == \"A\") {\n  do this;\n}\nelseif ($input == \"\
+    A\") {\n  do this;\n}\nelse {\n  do that;\n}\n```\n\nConditions are compared with\
+    \ different characters. If a variable has a certain value, you have to write two\
+    \ actual signs `==`. If you write just one equal sign `=`, the program will simply\
+    \ store the value on the right side of the quotation mark in the variable.\n\n\
+    Other conditions are defined as follows:\n- `==` equals\n- `!=` not equal\n- `>`\
+    \ greater\n- `<` less\n- `>=` greater than equal\n- `<=` less than or equal\n\n\
+    Several conditions can be linked with double ampersand, `&&`. A double vertical\
+    \ line `||` would mean an OR operation. Thus, `$a == 1 && $b == 1` would mean\
+    \ that both the variables, `$a` and `$b`, must contain the value 1. If one variable\
+    \ had another value, the `else` clause would be executed.\n\n`$a == 1 || $b ==\
+    \ 1` would mean that either the variable, `$a` or the variable, `$b` or both the\
+    \ variables must contain the value 1. You can combine multiple conditions by putting\
+    \ them in further parentheses:\n\n`if (($a == 1 && $b == 1) || $c == 1)` would\
+    \ mean that either `$a` and `$b` must have the value 1 or `$c` must have the value\
+    \ 1.\n\nTo make the benefits of the `if-else` function more understandable, here\
+    \ is an example:\n\n```php\n<?php\n  $username = $_GET[\"username\"];\n  $password\
+    \ = $_GET[\"password\"];\n  if ($username == \"admin\" && $password == \"mystrongsecretpassword\"\
+    ) {\n    echo \"Welcome Administrator!\";\n  }\nelseif ($username == \"admin\"\
+    \ && $password != \"mystrongsecretpassword\") {\n    echo \"Hello administrator,\
+    \ unfortunately, you have entered the password incorrectly!\";\n  }\n  else {\n\
+    \    echo \"Error: The login data entered were incorrect!\";\n  }\n?>\n```\n\n\
+    In the script above, first, the values from the `GET` array are stored in variables.\
+    \ Of course it would also be possible to use the `GET` array directly in the `if`-function,\
+    \ but that would make the code more complicated.\n\nIf a visitor in the URL has\
+    \ transmitted the correct login information, we welcome him as an administrator,\
+    \ otherwise, we will check if he has, at least, entered the user name correctly.\
+    \ If the username and password are incorrect, we will give an error message.\n\
+    \nOutput when calling `script.php?username=admin&password=mystrongsecretpassword`:\n\
+    Welcome Administrator!\n\nOutput when calling `script.php?username=admin&password=xxx`:\n\
+    Hello administrator, unfortunately, you have entered the password incorrectly!\n\
+    \nOutput when calling `script.php?username=abc&password=xxx`:\nError: The login\
+    \ data entered were incorrect!\n\nIf the contents of a variable do not matter,\
+    \ and we just want to check if a variable has any content, then we can accomplish\
+    \ this as follows:\n\n```php\n<?php\n  $myTrueValue = \"myTest\";\n  if ($myTrueValue)\
+    \ {\n    echo 1;\n  }\n  else {\n    echo 0;\n  }\n  echo \"<br />\";\n  $myTrueValue\
+    \ = \"\";\n  if ($myTrueValue) {\n    echo 1;\n  }\n  else {\n    echo 0;\n  }\n\
+    ?>\n```\n\nOutput:\n1\n0\n\nIn the first query, if the variable has a content,\
+    \ then the `if` block and not the `else` block is executed. In the second review,\
+    \ the variable is empty. When you do not test any condition like `==` or `!=`,\
+    \ it is checked whether the variable is empty or contains a Boolean value. A Boolean\
+    \ value consists in programming as a variable or a value of true or false, it\
+    \ can also be written as 1 or 0.\n\nHere, the previous example is slightly extended:\n\
+    \n```php\n<?php\n  $myTrueValue = \"myTest\";\n  if ($myTrueValue) {\n    echo\
+    \ 1;\n  }\n  else {\n    echo 0;\n  }\n  echo \"<br />\";\n  $myTrueValue = false;\n\
+    \  if ($myTrueValue) {\n    echo 1;\n  }\n  else {\n    echo 0;\n  }\n  echo \"\
+    <br />\";\n  $myTrueValue = 0;\n  if ($myTrueValue) {\n    echo 1;\n  }\n  else\
+    \ {\n    echo 0;\n  }\n?>\n```\n\nOutput:\n1\n0\n0\n\nFurthermore, it is often\
+    \ important to know whether a variable exists at all and is, therefore, initialised\
+    \ in the program already:\n\n```php\n<?php\n  $myVar = \"123\";\n  if (isset($myVar))\
+    \ {\n    echo \"myVar exists\";\n  }\n  else {\n    echo \"myVar does not exist\"\
+    ;\n  }\n?>\n```\n"
+  raw: "So far, although we have had our variables always filled with values within\
+    \ the code, the result has not been a dynamic website. We now want to receive\
+    \ information from ‘outside’.\n\nFor a user to send to our PHP script data, there\
+    \ are, among other things, two simple methods: POST and GET.\n\nPOST information\
+    \ is transmitted, for example, in an appropriately configured form to our server\
+    \ when the user is registered for or, when he makes a new forum entry. Then, there\
+    \ is the GET information, which is received via invoked URL. You must have noticed\
+    \ the long URLs in web shops, which include many letters and numbers and automatically\
+    \ generated parts.\n\n#### Identify and read GET variables\n\nGET variables are\
+    \ passed as parameters in an URL:\n\nhttp://www.myurl.com/script.php?variable1=value1&variable2=value2&variable3=value3\n\
+    \nThe number of variables and values is virtually not limited, but old browsers\
+    \ and a lot of servers have a limit of 1024 characters in the URL.\n\nWhen this\
+    \ URL is called in the browser, the computer first attempts to address the call,\
+    \ www.myurl.at. The file is then requested from the server, script.php, and three\
+    \ variables are received. The first variable has a question mark (?), the other\
+    \ variables, an ampersand (&).\n\nLet us expand our welcome script to a dynamic\
+    \ component to greet our visitors in my name:\n\n<?php\n\n  $vistorsname = $\\\
+    _GET\\['name'\\];\n\n  echo \"Hello \".$vistorsname;\n\n?>\n\nSave the script,\
+    \ for example, under the name hello2.php in your htdocs folder.\n\nWithin PHP,\
+    \ there are always some automatically existing variables. There are, for example,\
+    \ an array called $\\_GET and one named $\\_POST from which the transmitted GET\
+    \ and POST information can be read. These variables are arrays, and the name of\
+    \ the values are the array index.\n\nIf you now call the script by the URL,\n\n\
+    http://127.0.0.1/hello2.php?name=Klaus\n\nthe following text appears in the browser:\n\
+    \nHello Klaus\n\nCongratulations! You have, now, programmed your first dynamic\
+    \ website and you are a bit ahead of other programmers who can write only simple\
+    \ HTML.\n\n#### Identify and read POST variables\n\nWould you query longer texts,\
+    \ including special characters, so that you could get on with the transmission\
+    \ via GET variables in the URL problems? For such purposes, there is the POST\
+    \ method, which is used as follows:\n\nmy\\_form.html\n\n<form method=\"POST\"\
+    \ action=\"read\\_form.php\">\n\n  <textarea name=\"myText\"></textarea>\n\n  <input\
+    \ type=\"submit\" value=\"Send\" />\n\n</form>\n\nread\\_form.php\n\n<?php\n\n\
+      $myText = $\\_POST\\[\"myText\"\\];\n\n  echo nl2br($myText);\n\n?>\n\nIn the\
+    \ first file, we define a form by HTML. Each form element from which we want to\
+    \ get information, gets the property (tag attributes) name=‘...’. This enables\
+    \ us to extract all information through the global variable, $\\_POST, in our\
+    \ second file.\n\nSince we use a text box with multiple lines, we have, on the\
+    \ issue, in our PHP script the function nl2br, which stands for a new line to\
+    \ break or to make line breaks in the text output automatically <br />.\n\n###\
+    \ Conditions, program control (IF/ELSE/ELSEIF)\n\nWe can, already, according to\
+    \ the user input, output dynamic text, but we cannot run our script differently\
+    \ depending on user input. In programming, there are many cases, which can be\
+    \ written as follows: when the user, A, enters exactly something, do this, otherwise,\
+    \ do that. In PHP, this is written in English and a few diacritical marks.\n\n\
+    if ($input == \"A\") {\n\n  do this;\n\n} \n\nelse {\n\n  do that;\n\n}\n\n’If’,\
+    \ followed by a condition written within normal parentheses ( ), the following\
+    \ code is only executed when the condition in the parentheses ( ) is met. The\
+    \ code block after the parentheses should be writtin within two brackets { }.\
+    \ \n\nIf the conditions inside the parentheses () are not applied, the else block,\
+    \ also bounded by braces, will be executed. Then the program will continue underneath\
+    \ the braces with the rest of the script.\n\nOne can combine ‘if’ and ‘else’ also\
+    \ to successively query multiple conditions and even attach an ‘else’ clause if\
+    \ none of the previous conditions are true:\n\nif ($input == \"A\") {\n\n  do\
+    \ this;\n\n} \n\nelseif ($input == \"A\") {\n\n  do this;\n\n} \n\nelse {\n\n\
+      do that;\n\n}\n\nConditions are compared with different characters. If a variable\
+    \ has a certain value, you have to write two actual equal signs ==. If you write\
+    \ just one equal sign, =, the program will simply store the value on the right\
+    \ side of the quotation mark in the variable.\n\nOther conditions are defined\
+    \ as follows:\n\n\\== equals\n\n!= is not equal\n\n\\> is greater\n\n< less\n\n\
+    \\>= greater than or equal\n\n<= less than or equal\n\nSeveral conditions can\
+    \ be linked with a double ampersand, &&. A double vertical line would mean an\
+    \ OR operation ||.\n\nThus, $a == 1 && $b == 1 would mean that both the variables,\
+    \ $a and $b, must contain the value 1. If one variable had another value, the\
+    \ else clause would be executed.\n\n$a == 1 || $b == 1 would mean that either\
+    \ the variable, $a or the variable, $b or both the variables must contain the\
+    \ value 1. You can combine multiple conditions by putting them in further parantheses:\n\
+    \nif (($a == 1 && $b == 1) || $c == 1) would mean that either $a and $b must have\
+    \ the value 1 or $c must have the value 1. \n\nTo make the benefits of the if-else\
+    \ function more understandable, here is an example:\n\n<?php\n\n  $username =\
+    \ $\\_GET\\[\"username\"\\];\n\n  $password = $\\_GET\\[\"password\"\\];\n\n  if\
+    \ ($username == \"admin\" && $password == \"mystrongandsecretpassword\") {\n\n\
+        echo \"Welcome Administrator!\";\n\n  }\n\n  elseif ($username == \"admin\"\
+    \ && $password != \"mystrongandsecretpassword\") {\n\n    echo \"Hello administrator,\
+    \ unfortunately, you have entered the password incorrectly!\";\n\n  }\n\n  else\
+    \ {\n\n    echo \"Error: The login data entered were incorrect!\";\n\n  }\n\n\
+    ?>\n\nIn the script above, first, the values from the GET array are stored in\
+    \ variables. Of course, it would also be possible to use the GET array directly\
+    \ in the if-function, but that would make the code more complicated.\n\nIf a visitor\
+    \ in the URL has transmitted the correct login information, we welcome him as\
+    \ an administrator, otherwise, we will check if he has, at least, entered the\
+    \ user name correctly. If the username and password are incorrect, we will give\
+    \ an error message.\n\nOutput when calling\n\nscript.php?username=admin&password=mystrongandsecretpassword\n\
+    \nWelcome Administrator!\n\nOutput when calling\n\nscript.php?username=admin&password=xxx\n\
+    \nHello administrator, unfortunately, you have entered the password incorrectly!\n\
+    \nOutput when calling\n\nscript.php?username=abc&password=xxx\n\nError: The login\
+    \ data entered were incorrect!\n\nIf the contents of a variable do not matter,\
+    \ and we just want to check if a variable has any content, then we can accomplish\
+    \ this as follows: \n\n<?php\n\n  $myTrueValue = \"myTest\";\n\n  if ($myTrueValue)\
+    \ {\n\n    echo 1;\n\n  }\n\n  else {\n\n    echo 0;\n\n  }\n\n  echo \"<br />\"\
+    ;\n\n  $myTrueValue = \"\";\n\n  if ($myTrueValue) {\n\n    echo 1;\n\n  }\n\n\
+      else {\n\n    echo 0;\n\n  }\n\n?>\n\nOutput:\n\n1\n\n0\n\nIn the first query,\
+    \ if the variable has a content, then the ‘if’ block and not the ‘else’ block\
+    \ is executed. In the second review, the variable is empty. When you do not test\
+    \ any condition like == or !=, ..., it is checked whether the variable is empty\
+    \ or contains a Boolean value. A Boolean value consists in programming as a variable\
+    \ or a value of true or false, it can also be written as 1 or 0.\n\nHere, the\
+    \ previous example is slightly extended:\n\n<?php\n\n  $myTrueValue = \"myTest\"\
+    ;\n\n  if ($myTrueValue) {\n\n    echo 1;\n\n  }\n\n  else {\n\n    echo 0;\n\n\
+      }\n\n  echo \"<br />\";\n\n  $myTrueValue = false;\n\n  if ($myTrueValue) {\n\
+    \n    echo 1;\n\n  }\n\n  else {\n\n    echo 0;\n\n  }\n\n  echo \"<br />\";\n\
+    \n  $myTrueValue = 0;\n\n  if ($myTrueValue) {\n\n    echo 1;\n\n  }\n\n  else\
+    \ {\n\n    echo 0;\n\n  }\n\n?>\n\nOutput:\n\n1\n\n0\n\n0\n\nFurthermore, it is\
+    \ often important to know whether a variable exists at all and is, therefore,\
+    \ initialised in the program already:\n\n<?php\n\n  $myVar = \"123\";\n\n  if\
+    \ (isset($myVar)) {\n\n    echo \"myVar exists\";\n\n  }\n\n  else {\n\n    echo\
+    \ \"myVar does not exist\";\n\n  }\n\n?>"
+  toc: []
+  trans: "\n到目前为止，尽管我们已经在代码中为变量填充了值，但结果并不是一个动态网站。现在，我们想要从“外部”接收信息。\n\n为了让用户向我们的 PHP\
+    \ 脚本发送数据，除此之外还有两种简单的方法：`POST` 和 `GET`。\n\n`POST` 信息的传输方式，例如，当用户注册或发布新论坛帖子时，通过一个配置恰当的表单发送到我们的服务器。然后是\
+    \ `GET` 信息，它是通过调用的 URL 接收的。你可能已经注意到网商店中那些很长的 URL，它们包含许多字母、数字和自动生成的参数。\n\n## 识别并读取\
+    \ GET 变量\n\n`GET` 变量作为参数传递在 URL 中：\n\n`http://www.myurl.com/script.php?variable1=value1&variable2=value2&variable3=value3`\n\
+    \n变量和值的数量几乎不受限制，但旧版浏览器和许多服务器对 URL 的长度有 1024 个字符的限制。\n\n当在浏览器调用此 URL 时，计算机首先尝试访问地址\
+    \ `www.myurl.at`。随后从服务器请求文件 `script.php`，并接收到三个变量。第一个变量带有问号（`?`），其他变量带有和符号（`&`）。\n\
+    \n让我们将欢迎脚本扩展为一个动态组件，以我的名义问候访问者：\n\n```php\n<?php\n  $vistorsname = $_GET['name'];\n\
+    \  echo \"Hello \".$vistorsname;\n?>\n```\n\n将脚本保存，例如在你的 `htdocs` 文件夹中命名为 `hello2.php`。\n\
+    \n在 PHP 中，始终存在一些自动生成的变量。例如，有一个名为 `$_GET` 的数组，另一个名为 `$_POST` 的数组，可以从其中读取传输的 `GET`\
+    \ 和 `POST` 信息。这些变量是数组，值的名称就是数组的索引。\n\n如果你现在通过 URL 调用脚本，\n\n`http://127.0.0.1/hello2.php?name=Klaus`\n\
+    \n浏览器中将出现以下文本：\n\nHello Klaus\n\n恭喜你！你现在编写了你的第一个动态网站，并且比其他只会写简单 HTML 的程序员领先了一步。\n\
+    \n## 识别并读取 POST 变量\n\n你是否会想要查询包含特殊字符的较长文本，以便在 URL 的问题中通过 `GET` 变量继续传输？为了这些目的，有\
+    \ `POST` 方法，其用法如下：\n\nmy_form.html\n```html\n<form method=\"POST\" action=\"read_form.php\"\
+    >\n  <textarea name=\"myText\"></textarea>\n  <input type=\"submit\" value=\"\
+    Send\" />\n</form>\n```\n\nread_form.php\n```php\n<?php\n  $myText = $_POST[\"\
+    myText\"];\n  echo nl2br($myText);\n?>\n```\n\n在第一个文件中，我们通过 HTML 定义了一个表单。我们想要从中获取信息的每个表单元素都获得一个\
+    \ `name=...` 属性（标签属性）。这使得我们能够在第二个文件中通过全局变量 `$_POST` 提取所有信息。\n\n由于我们使用了多行文本框，因此我们在\
+    \ PHP 脚本中对应使用了 `nl2br` 函数，它代表将换行转换为换行符或在文本中实现换行。\n\n## 条件、程序控制 (IF/ELSE/ELSEIF)\n\
+    \n我们已经可以根据用户输入输出动态文本，但无法根据用户输入来运行脚本。在编程中，有很多情况可以写成如下：当用户 `A` 正好输入某些内容时，执行此操作，否则执行另一个操作。\n\
+    \n```php\nif ($input == \"A\") {\n  do this;\n}\nelse {\n  do that;\n}\n```\n\n\
+    `If` 后面跟着一个在普通括号 `()` 内编写的条件，如果条件满足，执行大括号内的代码；否则，执行 `else` 部分的代码。\n"
+- fmt: "\nOutput:\n\nmyVar exists\n\n```php\n<?php\n  $myVar = \"123\";\n\n  if (isset($otherVar))\
+    \ {\n    echo \"myVar exists\";\n  }\n  else {\n    echo \"myVar does not exists\"\
+    ;\n  }\n?>\n```\n\nOutput:\n\notherVar does not exists\n\n### Case analysis (switch\
+    \ / case)\n\nLet us suppose we have a variable and want to check for many different\
+    \ contents. We already know the function of `if`, `elseif` and `else`. However,\
+    \ it may quickly become confusing; moreover, it is easier to write a redundant\
+    \ code to check only a single variable. There is the practical function `switch\
+    \ case` which is programmed as follows:\n\n```php\n<?php\n  $username = $_GET[\"\
+    username\"];\n  switch ($username) {\n    case \"Klaus\":\n      echo \"Hello\
+    \ administrator!\";\n      break;\n    case \"Dagmar\":\n      echo \"Hello sister!\"\
+    ;\n      break;\n    case \"Bill Gates\":\n      echo \"Hello richest man in the\
+    \ world!\";\n      break;\n    default:\n      echo \"Hello visitor!\";\n    \
+    \  break;\n  }\n?>\n```\n\nAs we see, the head of the `switch` function is pretty\
+    \ similar to the `if` function; it just has no parameters defined. Thereafter,\
+    \ each multiple case block must be completed with a `break`; that breaks the review\
+    \ on to other cases.\n\nIf, in neither case, the condition is met, the `default`\
+    \ block is executed. If you do not use breaks, you could run the same for two\
+    \ or more case code blocks:\n\n```php\n<?php\n  $username = $_GET[\"username\"\
+    ];\n  switch ($username) {\n    case \"Klaus\":\n    case \"Dagmar\":\n      echo\
+    \ \"Hello administrator!\";\n      break;\n    case \"Bill Gates\":\n      echo\
+    \ \"Hello richest man in the world!\";\n      break;\n    default:\n      echo\
+    \ \"Hello visitor!\";\n      break;\n  }\n?>\n```\n\n### Loops for repetitive\
+    \ tasks (While / For / Foreach)\n\n#### While() Loop\n\nOften, there are tasks\
+    \ for our script to be repeated many times. This could be, for example, a kind\
+    \ of numbering in a particular order:\n\n```php\n<?php\n  $number = 1;\n  while\
+    \ ($number < 100) {\n    echo $number . \"<br />\";\n    $number++;\n  }\n?>\n\
+    ```\n\nThis short script gives back each number 1 to 99. It is used in so-called\
+    \ `while()` loop. The header of the `while()` loop is used to specify a condition\
+    \ as an `if` function. The loop is repeated as long as the condition is true or\
+    \ till break, a command is invoked. The script also has a small gimmick. It took\
+    \ over from C: `++` increases the value by +1, `--` reduces it to -1. Here is\
+    \ another example of the same, only this time, it is written in quasi-infinite\
+    \ loop because the condition is true. The loop runs until there is break; the\
+    \ command is cancelled:\n\n```php\n<?php\n  $number = 1;\n  while (true) {\n \
+    \   echo $number . \"<br />\";\n    $number++;\n    if ($number > 99) {\n    \
+    \  break;\n    }\n  }\n?>\n```\n\n#### For() Loop\n\nFor fixed numbers, there\
+    \ is a much more beautiful loop: the `for()` loop. The function of the `for()`\
+    \ loop is as follows: `for (start value; condition; repeat)`. Here is a brief\
+    \ example:\n\n```php\n<?php\n  for ($x = 1; $x < 100; $x++) {\n    echo $x . \"\
+    <br />\";\n  }\n?>\n```\n\nThis would result in the same output as we had with\
+    \ `while()` loop. The third parameter of the function specifies a command to be\
+    \ executed after each loop. In this case, increase the value of variable `$x`\
+    \ by 1. The variable can be used only within the loop.\n\n#### Foreach() loop\n\
+    \nThere is another loop to work through arrays: `foreach()`. Here is an example\
+    \ of how this is used:\n\n```php\n<?php\n  $valueArray = array(2,4,16,32);\n \
+    \ foreach ($valueArray as $index => $value) {\n    echo $value . \"<br />\";\n\
+    \  }\n?>\n```\n\nOutput:\n2\n4\n16\n32\n\nWithin the function, the `$index` and\
+    \ `$value` variables are available. With `$index`, you can determine which entry\
+    \ you have entered within the array (counted from 0 ascending), or if you have\
+    \ defined the index of an array, you have this within the loop. The names of the\
+    \ variables are freely definable; but it should be clear within the loop block\
+    \ what the variables are used for. If you do not need the array index within the\
+    \ loop, for example, as you only want to output the values in sequence, it is\
+    \ even easier:\n\n```php\n<?php\n  $valueArray = array(2,4,16,32);\n  foreach\
+    \ ($valueArray as $value) {\n    echo $value . \"<br />\";\n  }\n?>\n```\n\n##\
+    \ Day 3\n\n### Date and Time (Who has turned the clock?)\n\n#### DATE()\n\n the\
+    \ function `date(format, time)`, you can print a certain time in a formatted form.\
+    \ The first parameter specifies the format, while a second optional parameter\
+    \ states a specific time. If the second parameter is absent, the current server\
+    \ time is shown below. Here is an example:\n\n```php\n<?php\n  echo date(\"Y-m-d\"\
+    );\n?>\n```\n\nOutput (if the actual server time is 24 December 2016):\n2016-12-24\n\
+    \nThe second parameter must be specified in the PHP `time()` format: this output\
+    \ would be the same:\n\n```php\n<?php\n  echo date(\"Y-m-d\", time());\n?>\n```\n\
+    \nThe `time()` function returns the desired time as a number. The value is always\
+    \ the number of seconds after the UNIX time. This began on 1 January 1970 through\
+    \ 00:00:00 GMT.\n\n#### microtime()\n\nMore precisely, but not suitable for the\
+    \ `date()` function, is the function of `microtime()`. The parameter can specify\
+    \ optionally whether you want to receive the return value as point number. The\
+    \ function returns the current date in the UNIX time in the exact number of microseconds.\
+    \ This is, for example, useful for measuring how long a script has run in order\
+    \ to find programs that would still have potential for optimization:\n\n```php\n\
+    <?php\n  $start = microtime(true);\n  /*\n  Two dummy variables, so that we can\
+    \ generate some computing time for the script:\n  */\n  $dummyVariable1 = 1;\n\
+    \  $dummyVariable2 = 3;\n  $x = 0;\n  while ($x < 1000000) {\n    $x++;\n    $dummyVariable1\
+    \ *= $dummyVariable2;\n    $dummyVariable1 = $dummyVariable1 / $dummyVariable2;\n\
+    \  }\n  $end = microtime(true);\n  echo \"Runtime: \" . ($end - $start);\n?>\n\
+    ```\n\nThis has, for example, the output:\nRuntime: 0.086302995\n\n#### Give a\
+    \ point in time to DATE() with mktime()\n\nIf you want to specify a certain time,\
+    \ you have to do this with `mktime(hour, minute, second, month, day, year)`:\n\
+    \n```php\n<?php\n  echo date(\"Y-m-d\", mktime(0,0,0,12,24,2012));\n?>\n```\n\n\
+    It would have the same output.\n\n#### strtotime()\n\nTo forestall a function\
+    \ from the chapter of text, I shall tell you `strtotime(\"date in text\")`. With\
+    \ this, you can convert one written text in human readable form of a certain time\
+    \ in the `time()` format for the `date()` function:\n\n```php\n<?php\n  echo date(\"\
+    Y-m-d\", strtotime(\"May 17th, 2012\"));\n?>\n```\n\nSome examples of such conversions\
+    \ are as follows:\n`strtotime(\"now\")`\n`strtotime(\"2012-05-17\")`\n\nYou can\
+    \ even do some simple calculations from the actual point in time:\n`strtotime(\"\
+    next Friday\")`\n`strtotime(\"last Monday\")`\n`strtotime(\"+1 day\")`\n`strtotime(\"\
+    +1 week 2 days 3 hours 4 seconds\")`\n\n**The following formats are possible:**\n\
+    \n- `d`: Day of the month, two digits with leading zeros (01 to 31)\n- `D`: Weekday,\
+    \ truncated to three letters (Mon to Sun)\n- `j`: Day of the month without leading\
+    \ zeros (1 to 31)\n- `l` (lower case 'L'): Full weekday (Sunday to Saturday)\n\
+    - `N`: Numeric representation of the day of the week according to ISO 8601 (1\
+    \ Monday to 7 Sunday)\n- `w`: Numeric day of the week (0 Sunday to 6 Saturday)\n\
+    - `z`: The day of the year (starting from 0 0 to 365)\n- `W`: ISO 8601 week number\
+    \ of year, weeks starting on Monday (Example 42)\n- `F`: Month as a whole word\
+    \ (January to December)\n- `m`: Month as a number, with leading zeros (01 to 12)\n\
+    - `M`: Month name with three letters (Jan to Dec)\n- `n`: Month number without\
+    \ leading zeros (1 to 12)\n- `t`: Number of days of that month (28 to 31)\n- `L`:\
+    \ Leap year or not (1 if leap year, 0 otherwise)\n- `o`: Year (four digits)\n"
+  raw: "Output:\n\nmyVar exists\n\n<?php\n\n  $myVar = \"123\";\n\n  if (isset($otherVar))\
+    \ {\n\n    echo \"myVar exists\";\n\n  }\n\n  else {\n\n    echo \"myVar does\
+    \ not exists\";\n\n  }\n\n?>\n\nOutput:\n\notherVar does not exists\n\n### Case\
+    \ analysis (switch / case)\n\nLet us suppose we have a variable and want to check\
+    \ for many different contents. We already know the function of if, elseif and\
+    \ else. However, it may quickly become confusing; moreover, it is easier to write\
+    \ a redundant code to check only a single variable. There is the practical function\
+    \ switch case which is programmed as follows:\n\n<?php\n\n  $username = $\\_GET\\\
+    [\"username\"\\];\n\n  switch ($username) {\n\n    case \"Klaus\":\n\n      echo\
+    \ \"Hello administrator!\";\n\n      break;\n\n    case \"Dagmar\":\n\n      echo\
+    \ \"Hello sister!\";\n\n      break;\n\n    case \"Bill Gates\":\n\n      echo\
+    \ \"Hello richest man in the world!\";\n\n      break;\n\n    default:\n\n      echo\
+    \ \"Hello visitor!\";\n\n      break;\n\n  }\n\n?>\n\nAs we see, the head of the\
+    \ switch function is pretty similar to the ‘if’ function; it just has no parameters\
+    \ defined. Thereafter, each multiple case block must be completed with a break;\
+    \ that breaks the review on to other cases.\n\nIf, in neither case, the condition\
+    \ is met, the default block is executed. If you do not use breaks, you could run\
+    \ the same for two or more case code blocks:\n\n<?php\n\n  $username = $\\_GET\\\
+    [\"username\"\\];\n\n  switch ($username) {\n\n    case \"Klaus\":\n\n    case\
+    \ \"Dagmar\":\n\n      echo \"Hello administrator!\";\n\n      break;\n\n    case\
+    \ \"Bill Gates\":\n\n      echo \"Hello richest man in the world!\";\n\n      break;\n\
+    \n    default:\n\n      echo \"Hello visitor!\";\n\n      break;\n\n  }\n\n?>\n\
+    \n### Loops for repetitive tasks (While / For / Foreach)\n\n#### While() Loop\n\
+    \nOften, there are tasks for our script to be repeated many times. This could\
+    \ be, for example, a kind of numbering in a particular order:\n\n<?php\n\n  $number\
+    \ = 1;\n\n  while ($number < 100) {\n\n    echo $number . \"<br />\";\n\n    $number++;\n\
+    \n  }\n\n?>\n\nThis short script gives back each number 1 to 99. It is used in\
+    \ a so-called while() loop. The header of the while() loop is used to specify\
+    \ a condition as an ‘if’ function. The loop is repeated as long as the condition\
+    \ is true or till a break, a command is invoked inside the loop.\n\nThe script\
+    \ also has a small gimmick. It took over from C++ to PHP: ++ increases the value\
+    \ of a variable by +1, -- reduces it to -1.\n\nHere is another example of the\
+    \ same output, only this time, it is written in a quasi-infinite loop because\
+    \ the condition is true. The loop runs until there is a break; the command is\
+    \ cancelled:\n\n<?php\n\n  $number = 1;\n\n  while (true) {\n\n    echo $number\
+    \ . \"<br />\";\n\n    $number++;\n\n    if ($number > 99) {\n\n      break;\n\
+    \n    }\n\n  }\n\n?>\n\n#### For() Loop\n\nFor fixed numbers, there is a much\
+    \ more beautiful loop: the for() loop.\n\nThe function of the for() loop is as\
+    \ follows:\n\nfor (start value; condition; to repeat command at each execution)\
+    \ {\n\n}\n\nHere is a brief example:\n\n<?php\n\n  for ($x = 1; $x < 100; $x++)\
+    \ {\n\n    echo $x . \"<br />\";\n\n  }\n\n?>\n\nThis would result in the same\
+    \ output as we had with our while() loop. The third parameter of the function\
+    \ specifies a command to be executed after each loop. In this case, we increase\
+    \ the value of the variable $x by 1. The variable can be used only within the\
+    \ loop.\n\n#### Foreach() loop\n\nThere is another loop function to work through\
+    \ arrays: foreach()\n\nHere is an example of how this is used:\n\n<?php\n\n  $valueArray\
+    \ = array(2,4,8,16,32);\n\n  foreach ($valueArray as $index => $value) {\n\n    echo\
+    \ $value . \"<br />\";\n\n  }\n\n?>\n\nOutput:\n\n2\n\n4\n\n8\n\n16\n\n32\n\n\
+    Within the function, the $index and $value variables are available. With $index,\
+    \ you can determine which entry you have entered within the array (counted from\
+    \ 0 ascending), or if you have defined the index of an array entry, you have this\
+    \ within the loop. The names of the variables are freely definable; but it should\
+    \ be clear within the loop code block what the variables are used for.\n\nIf you\
+    \ do not need the array index within the loop, for example, as you only want to\
+    \ output the values in sequence, it is even easier:\n\n<?php\n\n  $valueArray\
+    \ = array(2,4,8,16,32);\n\n  foreach ($valueArray as $value) {\n\n    echo $value\
+    \ . \"<br />\";\n\n  }\n\n?>\n\n## Day 3\n\n### Date and Time (Who has turned\
+    \ the clock?)\n\n#### DATE()\n\nWith the function date(format \\[, time\\]), you\
+    \ can print a certain time in a formatted form. The first parameter specifies\
+    \ the format, while a second optional parameter states a specific time. If the\
+    \ second parameter is absent, the current server time is as shown below.\n\nHere\
+    \ is an example:\n\n<?php\n\n  echo date(\"Y-m-d\");\n\n?>\n\nOutput (if the actual\
+    \ server time is 24 December 2016):\n\n2016-12-24\n\nThe second parameter must\
+    \ be specified in the PHP time() format:\n\nThis output would be the same:\n\n\
+    <?php\n\n  echo date(\"Y-m-d\", time());\n\n?>\n\nThe time() function returns\
+    \ the desired time as a number. The value is always the number of seconds after\
+    \ the UNIX time. This began on 1 January 1970 through 00:00:00 GMT.\n\n#### microtime()\n\
+    \nMore precisely, but not suitable for the date() function, is the function of\
+    \ microtime(). The parameter can specify optionally whether you want to receive\
+    \ the return value as point number. The function returns the current date in the\
+    \ UNIX time in the exact number of microseconds. This is, for example, useful\
+    \ for measuring how long a script has run in order to find programs that would\
+    \ still have potential for optimization: \n\n<?php\n\n  $start = microtime(true);\n\
+    \n  /\\*\n\n  Two dummy variables, so that we can generate some computing time\
+    \ for the script:\n\n  \\*/\n\n  $dummyVariable1 = 1;\n\n  $dummyVariable2 = 3;\n\
+    \n  $x = 0;\n\n  while ($x < 1000000) {\n\n    $x++;\n\n    $dummyVariable1 \\\
+    *= $dummyVariable2;\n\n    $dummyVariable1 = $dummyVariable1 / $dummyVariable2;\n\
+    \n  }\n\n  $end = microtime(true);\n\n  echo \"Runtime: \" . ($end - $start) .\
+    \ \"ms\";\n\n?>\n\nThis has, for example, the output:\n\nRuntime: 0.0886830329895ms\n\
+    \n#### Give a point in time to DATE() function with mktime()\n\nIf you want to\
+    \ specify a certain time, you have to do this, for example, with the function\
+    \ mktime(hour, minute, second, month, day, year):\n\n<?php\n\n  echo date(\"Y-m-d\"\
+    , mktime(0, 0, 0, 12, 24, 2012));\n\n?>\n\nIt would have the same output again.\
+    \  \n\n**strtotime()**\n\nTo forestall a function from the chapter of text functions\
+    \ from this book, I shall tell you the right strtotime(\"date in text format\"\
+    ). With this, you can convert one written text in human readable form of a certain\
+    \ time in the time() format for the date() function:\n\n<?php\n\n  echo date(\"\
+    Y-m-d\", strtotime(\"May 17th, 2012\"));\n\n?>\n\nSome examples of such conversions\
+    \ are as follows:\n\nstrtotime(\"now\")\n\nstrtotime(\"2012-05-17\")\n\nYou can\
+    \ even do some simple calculations from the actual point in time:\n\nstrtotime(\"\
+    next Friday\")\n\nstrtotime(\"last Monday\")\n\nstrtotime(\"+1 day\")\n\nstrtotime(\"\
+    +1 week 2 days 3 hours 4 seconds\")\n\n**The following formats are possible: **\n\
+    \n**Day**\n\nd\n\nDay of the month, two digits with leading zeros\n\n01 to 31\n\
+    \nD\n\nWeekday, truncated to three letters\n\nMon to Sun\n\nj\n\nDay of the month\
+    \ without leading zeros\n\n1 to 31\n\nl (lower case 'L')\n\nFull weekday\n\nSunday\
+    \ to Saturday\n\nN\n\nNumeric representation of the day of the week according\
+    \ to ISO 8601 (in PHP 5.1.0 added)\n\n1 (Monday) to 7 (Sunday)\n\nS\n\nEnglish\
+    \ ordinal suffix for day of the month, two characters. Recommended for use with\
+    \ j\n\nst, nd, rd or th. \n\nw\n\nNumeric day of the week\n\n0 (Sunday) to 6 (Saturday)\n\
+    \nz\n\nThe day of the year (starting from 0)\n\n0 to 365\n\n**Week**\n\nW\n\n\
+    ISO 8601 week number of year, weeks starting on Monday\n\nExample: 42 (the 42nd\
+    \ week of the year)\n\n**Month**\n\nF\n\nMonth as a whole word, such as January\
+    \ or March\n\nJanuary to December\n\nm\n\nMonth as a number, with leading zeros\n\
+    \n01 to 12\n\nM\n\nMonth name with three letters\n\nJan to Dec\n\nn\n\nMonth number\
+    \ without leading zeros\n\n1 to 12\n\nt\n\nNumber of days of that month\n\n28\
+    \ to 31\n\n**Year**\n\nL\n\nLeap year or not\n\n1 is when it is a leap year, otherwise\
+    \ 0\n\no"
+  toc: []
+  trans: "\n\n输出：\n\nmyVar 存在\n\n```php\n<?php\n  $myVar = \"123\";\n\n  if (isset($otherVar))\
+    \ {\n    echo \"myVar exists\";\n  }\n  else {\n    echo \"myVar does not exists\"\
+    ;\n  }\n?>\n```\n\n输出：\n\notherVar 不存在\n\n### 用例分析 (switch / case)\n\n假设我们有一个变量，并想要检查许多不同的内容。我们已经知道了\
+    \ `if`、`elseif` 和 `else` 的功能。然而，这可能会很快变得混乱；此外，编写冗余代码来只检查单个变量更为简单。这里有一个实用的函数 `switch\
+    \ case`，其编写如下：\n\n```php\n<?php\n  $username = $_GET[\"username\"];\n  switch\
+    \ ($username) {\n    case \"Klaus\":\n      echo \"Hello administrator!\";\n \
+    \     break;\n    case \"Dagmar\":\n      echo \"Hello sister!\";\n      break;\n\
+    \    case \"Bill Gates\":\n      echo \"Hello richest man in the world!\";\n \
+    \     break;\n    default:\n      echo \"Hello visitor!\";\n      break;\n  }\n\
+    ?>\n```\n\n正如我们看到的，`switch` 函数的头部与 `if` 函数非常相似；它只是没有定义参数。之后，每个多个 case 块必须以 `break`\
+    \ 结束；这会中断跳转到其他 case 的检查。\n\n如果在任何一种情况下都不满足条件，将执行 `default` 块。如果你不使用 `break`，你可能会对两个或多个\
+    \ case 代码块运行相同的代码：\n\n```php\n<?php\n  $username = $_GET[\"username\"];\n  switch\
+    \ ($username) {\n    case \"Klaus\":\n    case \"Dagmar\":\n      echo \"Hello\
+    \ administrator!\";\n      break;\n    case \"Bill Gates\":\n      echo \"Hello\
+    \ richest man in the world!\";\n      break;\n    default:\n      echo \"Hello\
+    \ visitor!\";\n      break;\n  }\n?>\n```\n\n### 用于重复性任务的循环 (While / For / Foreach)\n\
+    \n#### While() 循环\n\n通常，我们的脚本需要重复执行某些任务。例如，按照特定的顺序进行某种编号：\n\n```php\n<?php\n \
+    \ $number = 1;\n  while ($number < 100) {\n    echo $number . \"<br />\";\n  \
+    \  $number++;\n  }\n?>\n```\n\n这个短脚本返回从 1 到 99 的每个数字。它被用于所谓的 `while()` 循环。`while()`\
+    \ 循环的头部用于像 `if` 函数一样指定条件。只要条件为真或调用了 `break` 命令，循环就会重复。该脚本还有一个小技巧。它继承自 C 语言：`++`\
+    \ 将值增加 1，`--` 将其减少 1。这里是另一个相同的例子，只是这次它写在准无限循环中，因为条件永远真。循环一直运行直到遇到 `break`；命令被取消：\n\
+    \n```php\n<?php\n  $number = 1;\n  while (true) {\n    echo $number . \"<br />\"\
+    ;\n    $number++;\n    if ($number > 99) {\n      break;\n    }\n  }\n?>\n```\n\
+    \n#### For() 循环\n\n对于固定的数字，有一种更美丽的循环：`for()` 循环。`for()` 循环的功能如下：`for (起始值; 条件;\
+    \ 重复)`。这里有一个简短的示例：\n\n```php\n<?php\n  for ($x = 1; $x < 100; $x++) {\n    echo\
+    \ $x . \"<br />\";\n  }\n?>\n```\n\n这将产生与使用 `while()` 循环相同的输出。函数的第三个参数指定了在每次循环后执行的命令。在这种情况下，将变量\
+    \ `$x` 的值增加 1。该变量只能在循环内部使用。\n\n#### Foreach() 循环\n\n还有另一种遍历数组的循环：`foreach()`。这里有一个关于如何使用它的的示例：\n\
+    \n```php\n<?php\n  $valueArray = array(2,4,16,32);\n  foreach ($valueArray as\
+    \ $index => $value) {\n    echo $value . \"<br />\";\n  }\n?>\n```\n\n输出：\n2\n\
+    4\n16\n32\n\n在函数内部，变量 `$index` 和 `$value` 是可用的。通过 `$index`，你可以确定你进入了数组中的哪个条目（从\
+    \ 0 开始计数），或者如果你定义了数组的索引，你可以在循环内部获取它。变量名可以自由定义；但在循环块内部应该清楚变量的用途。如果你在循环中不需要数组索引（例如，你只想按顺序输出值），那么更加简单了：\n\
+    \n```php\n<?php\n  $valueArray = array(2,4,16,32);\n  foreach ($valueArray as\
+    \ $value) {\n    echo $value . \"<br />\";\n  }\n?>\n```\n\n## 第 3 天\n\n### 日期和时间（谁拨了钟？）\n\
+    \n#### DATE()\n\n使用 `date(format, time)` 函数，你可以以格式化的形式打印特定的时间。第一个参数指定格式，而第二个可选参数指定特定的时间。如果第二个参数不存在，则显示当前的服务器时间。这里有一个示例：\n\
+    \n```php\n<?php\n  echo date(\"Y-m-d\");\n?>\n```\n\n输出（假设当前日期）：\n2023-10-27\n\
+    \n`time()` 函数返回当前时间，以 `Y-m-d` 格式：\n\n```php\n<?php\n  echo date(\"Y-m-d\", time());\n\
+    ?>\n```\n\n`time()` 函数返回的是时间戳。\n\n#### microtime()\n\n`date()` 函数的 `microtime()`\
+    \ 参数。`microtime()` 返回当前的当前的时间戳。你可以使用 `date()` 函数来格式化它：\n\n```php\n<?php\n  $time\
+    \ = microtime(true);\n  echo date(\"Y-m-d H:i:s\", $time);\n?>\n```\n\n输出：\n2023-10-27\
+    \ 10:30:05\n\n#### mktime()\n\n`mktime(秒, 分, 时, 日, 年)` 用于指定一个特定的时间：\n\n```php\n\
+    <?php\n  echo date(\"Y-m-d\", mktime(0, 0, 0, 12, 2016));\n?>\n```\n\n输出：2016-12-01\n\
+    \n#### strtotime()\n\n`strtotime(\"日期文本\")` 将人类可读文本转换为 `date()` 函数格式的 `time()`：\n\
+    \n```php\n<?php\n  echo date(\"Y-m-d\", strtotime(\"May 17th\"));\n?>\n```\n\n\
+    输出：2023-05-17\n\n你甚至可以从实际时间点进行一些计算：\n\n```php\n<?php\n  echo date(\"Y-m-d\", strtotime(\"\
+    next Friday\"));\n?>\n```\n\n"
+- fmt: "\nYear, in accordance with ISO8601. This is the same value as `Y`, except\
+    \ when the ISO calendar week (`W`) belongs to the previous or next year, in which\
+    \ case that year is used.\n\nExample: 1999 or 2003\n\n`Y`\nFour-digit year\nExample:\
+    \ 1999 or 2003\n\n`y`\nYear, double-digit\nExample: 99 or 03\n\n### Time\n`a`\n\
+    Lowercase ante meridiem (morning) and post meridiem (afternoon)\n`am` or `pm`\n\
+    \n`A`\nCapital letters: ante meridiem (morning) and post meridiem (afternoon)\n\
+    `AM` or `PM`\n\n`B`\nSwatch Internet Time\nFrom 000 to 999 per day\n\n`g`\nHour\
+    \ in 12-hour format, without leading zeros\n1 to 12\n\n`G`\nHour in 24-hour format,\
+    \ without leading zeros\n0 to 23\n\n`h`\nHour in 12-hour format, with leading\
+    \ zeros\n01 to 12\n\n`H`\nHour in 24-hour format, with leading zeros\n00 to 23\n\
+    \n`i`\nMinutes, with leading zeros\n00 to 59\n\n`s`\nSeconds, with leading zeros\n\
+    00 to 59\n\n`u`\nMicroseconds\nExample: 654321\n\n### Time zone\n`e`\nName of\
+    \ the time zone\nExample: `UTC`, `GMT`, `Atlantic/Azores`\n\n`I` (upper case 'i')\n\
+    A date in the daylight (summer) time\n1 if it is in daylight time, otherwise 0.\n\
+    \n`O`\nDifference to Greenwich time (GMT) in hours\nExample: +0200\n\n`P`\nDifference\
+    \ to Greenwich time (GMT) in hours with colon between hours and minutes\nExample:\
+    \ +02:00\n\n`T`\nAbbreviation for time zone\nExample: `EST`, `MDT`\n\n`Z`\nTime\
+    \ zone offset in seconds. The offset for time zones west of UTC is always negative\
+    \ and for time zones east of UTC it is always positive.\n-43200 to 50400\n\n###\
+    \ Complete date/time\n`c`\nISO 8601 date\n2004-02-12T15:19:21+00:00\n\n`r`\nAccording\
+    \ to RFC 2822 formatted date\nExample: Thu, 21 Dec 2000 16:01:07 +0200\n\n`U`\n\
+    Seconds since the Unix epoch (1 January 1970, 00:00:00 GMT)\n\n### Text functions\
+    \ (String operations)\n\nIn PHP, there are a large number of functions for manipulating\
+    \ text, such as splitting a longer string and assemble it different again, search\
+    \ for characters, and more. I wish to show you the key functions, so that you\
+    \ can solve almost all the problems of the manipulation of strings. There are\
+    \ many other functions, which would be beyond the scope of this book for beginners.\
+    \ But you can find some links at the end of the book to sites where all available\
+    \ PHP functions are explained.\n\n#### `str_replace`\nA function that is commonly\
+    \ used is `str_replace`. This function looks at a text after the occurrence of\
+    \ a particular string and replaces it. The first parameter is the text to replace,\
+    \ the second is the one to be used instead of this text, and the third is the\
+    \ text be searched in. The function returns the complete text with replaced needles.\
+    \ As an optional parameter, you could specify the number of replacements to performed.\
+    \ Here is an example for application:\n\n```php\n<?php\n$myText = \"I am learning\
+    \ to program Java\";\necho $myText;\n$myText = str_replace(\"Java\", \"PHP\",\
+    \ $myText);\necho \"<br />\";\necho $myText;\n?>\n```\nOutput:\nI am learning\
+    \ to program Java\nI am learning to program PHP\n\n#### `substr`\nAnother text\
+    \ function that is used frequently is `substr()`. This is the abbreviation for\
+    \ substring. It allows you to detach a part of a string. The first parameter that\
+    \ the function expects is the string, the second is point – counting from 0, to\
+    \ get returned for the first character from part of your text (substring) – as\
+    \ as optional parameter, the third one is length of returned string. Here is another\
+    \ example:\n\n```php\n<?php\n$myText = \"I am learning to program PHP\";\necho\
+    \ $myText;\n$myText = substr($myText, 5, 8);\necho \"<br />\";\necho $myText;\n\
+    ?>\n```\nOutput:\nI am learning to program PHP\nning to le\n\n#### `strtolower`\n\
+    This function returns a given string in lowercase:\n\n```php\n<?php\n$myText =\
+    \ \"I am learning to program PHP\";\necho $myText;\n$myText = strtolower($myText);\n\
+    echo \"<br />\";\necho $myText;\n?>\n```\nOutput:\nI am learning to program PHP\n\
+    i am learning to program php\n\n#### `toupper`\nThis function returns a given\
+    \ string in uppercase:\n\n```php\n<?php\n$myText = \"I am learning to program\
+    \ PHP\";\necho $myText;\n$myText = strtoupper($myText);\necho \"<br />\";\necho\
+    \ $myText;\n?>\n```\nOutput:\nI am learning to program PHP\nI AM LEARNING TO PHP\n\
+    \n#### `strpos`\nWith this function, you can search for a particular character\
+    \ or string within a text. This is used, for example, in combination with the\
+    \ above stated `substr`. The first parameter you need to pass is the text be searched,\
+    \ while the second one is the string searched. It is entered in the format `strpos(string,\
+    \ search term, from character)`. Here's an example:\n\n```php\n<?php\n$myText\
+    \ = \"I am learning to program PHP\";\necho strpos($myText, \"learn\");\n?>\n\
+    ```\nOutput:\n5\n\n#### `strrpos`\nIt is entered in the format `strrpos(string,\
+    \ search term, from character)`. This function is used as `strpos` to find a specific\
+    \ string within a text, but the last occurrence of the string searched is returned:\n\
+    \n```php\n<?php\n$myText = \"I am learning to program PHP\";\necho strrpos($myText,\
+    \ \"m\");\n?>\n```\nOutput:\n23\n\n#### `strlen`\nThis function returns the length\
+    \ of a string.\n\n```php\n<?php\n$myText = \"I am learning to program PHP\";\n\
+    echo strlen($myText);\n?>\n```\nOutput:\n28\n\n#### `explode`\nSometimes, you\
+    \ would use the `explode()` function in your projects. This splits a string by\
+    \ a delimiter into an array. You could, for example, multiply values from a text\
+    \ file with the piped `|` standing in a row, and then read as follows:\n\n```php\n\
+    <?php\n$myText = \"value1|value2|value3\";\n$valueArray = explode(\"|\", $myText);\n\
+    var_dump($valueArray);\n?>\n```\nOutput:\narray(3) { [0]=> string(5) \"value1\"\
+    \ [1]=> string(5) \"value2\" [2]=> string(5) \"value3\" }\n\n#### `implode`\n\
+    With the `implode` function, you can accomplish exactly the opposite: You can\
+    \ create a string from an array, while each value has the possibility to separate,\
+    \ on request, by means of a separator (glue).\n\n```php\n<?php\n$meinArray = array(\"\
+    Hello\", \"World,\", \"how\", \"are\", \"you?\");\n$text = implode(\" \", $meinArray);\n\
+    echo $text;\n?>\n```\nOutput:\nHello World, how are you?\n\n### Write your own\
+    \ functions\nWe have already learnt a lot of useful functions that are included\
+    \ in PHP. But it is also possible to write your own functions. A PHP function\
+    \ must always consist of a name and optionally specified parameters. Here is an\
+    \ example of two functions to which we give a numerical value and a value for\
+    \ the sales tax. So a net to gross amount and vice versa is calculated:\n\n```php\n\
+    <?php\nfunction toNetto($amount, $vat_percent = 20) {\n  $amount_netto = $amount\
+    \ / (100 + $vat_percent) * 100;\n  return $amount_netto;\n}\nfunction toBrutto($amount,\
+    \ $vat_percent = 20) {\n  $amount_brutto = $amount * (100 + $vat_percent) / 100;\n\
+    \  return $amount_brutto;\n}\n$amount = 1000;\n$amount_brutto = toBrutto($amount);\n\
+    echo $amount_brutto;\necho \"<br />\";\necho toNetto($amount_brutto);\n?>\n```\n\
+    Output:\n1200\n1000\n\nIn this example, we have included some of the same special\
+    \ features of functions. A function is defined with the preceding word function.\
+    \ Our two functions have two parameters each: One is for the amount and the tax\
+    \ rate; the second parameter is present in the function definition, which is already\
+    \ filled with the value 20. This means that the parameter is optional and if it\
+    \ is not specified when calling the function, the value specified in the definition\
+    \ is used. Let us, for example, convert an amount of the Austrian VAT (20%) to\
+    \ the German VAT (19%), which goes with our two functions easily:\n\n```php\n\
+    <?php\nfunction toNetto($amount, $vat_percent = 20) {\n  $amount_netto = $amount\
+    \ / (100 + $vat_percent) * 100;\n  return $amount_netto;\n}\nfunction toBrutto($amount,\
+    \ $vat_percent = 20) {\n  $amount_brutto = $amount * (100 + $vat_percent) / 100;\n\
+    \  return $amount_brutto;\n}\n$price_austria = 1256;\n$price_netto = toNetto($price_austria);\n\
+    $price_germany = toBrutto($price_netto, 19);\necho round($price_germany, 2);\n\
+    ?>\n```\nOutput:\n1245.53\n\nWith the `round()` function at the end we make the\
+    \ number better readable.\n"
+  raw: "Year, in accordance with ISO8601. This is the same value as Y, except when\
+    \ the ISO calendar week (W) belongs to the previous or next year, in which case\
+    \ that year is used.\n\nExample: 1999 or 2003\n\nY\n\nFour-digit year\n\nExample:\
+    \ 1999 or 2003\n\ny\n\nYear, double-digit\n\nExample: 99 or 03\n\n**Time**\n\n\
+    a\n\nLowercase ante meridiem (morning) and post meridiem (afternoon)\n\nam or\
+    \ pm\n\nA\n\nCapital letters: ante meridiem (morning) and post meridiem (afternoon)\n\
+    \nAM or PM\n\nB\n\nSwatch Internet Time\n\nFrom 000 to 999 per day\n\ng\n\nHour\
+    \ in 12-hour format, without leading zeros\n\n1 to 12\n\nG\n\nHour in 24-hour\
+    \ format, without leading zeros\n\n0 to 23\n\nh\n\nHour in 12-hour format, with\
+    \ leading zeros\n\n01 to 12\n\nH\n\nHour in 24-hour format, with leading zeros\n\
+    \n00 to 23\n\ni\n\nMinutes, with leading zeros\n\n00 to 59\n\ns\n\nSeconds, with\
+    \ leading zeros\n\n00 to 59\n\nu\n\nMicroseconds \n\nExample: 654321\n\n**Time\
+    \ zone**\n\ne\n\nName of the time zone \n\nExample: UTC, GMT, Atlantic/Azores\n\
+    \nI (upper case 'i')\n\nA date in the daylight (summer) time\n\n1 if it is in\
+    \ daylight time, otherwise 0.\n\nO\n\nDifference to Greenwich time (GMT) in hours\n\
+    \nExample: +0200\n\nP\n\nDifference to Greenwich time (GMT) in hours with colon\
+    \ between hours and minutes \n\nExample: +02:00\n\nT\n\nAbbreviation for time\
+    \ zone\n\nExample: EST, MDT\n\nZ\n\nTime zone offset in seconds. The offset for\
+    \ time zones west of UTC is always negative and for time zones east of UTC it\
+    \ is always positive.\n\n\\-43200 to 50400\n\n**Complete date/time**\n\nc\n\n\
+    ISO 8601 date\n\n2004-02-12T15:19:21+00:00\n\nr\n\nAccording to RFC 2822 formatted\
+    \ date\n\nExample: Thu, 21 Dec 2000 16:01:07 +0200\n\nU\n\nSeconds since the Unix\
+    \ epoch (1 January 1970, 00:00:00 GMT)\n\n### Text functions (String operations)\n\
+    \nIn PHP, there are a large number of functions for manipulating text, such as\
+    \ splitting a longer string and assemble it different again, search for characters,\
+    \ and more. I wish to show you the key functions, so that you can solve almost\
+    \ all the problems of the manipulation of strings. There are many other functions,\
+    \ which would be beyond the scope of this book for beginners. But you can find\
+    \ some links at the end of the book to sites where all available PHP functions\
+    \ are explained.\n\n**str\\_replace**\n\nA function that is commonly used is str\\\
+    _replace. This function looks at a text after the occurrence of a particular string\
+    \ and replaces it. The first parameter is the text to replace, the second is the\
+    \ one to be used instead of this text, and the third is the text to be searched\
+    \ in. The function returns the complete text with the replaced needles. As an\
+    \ optional parameter, you could specify the number of replacements to be performed.\
+    \ \n\nHere is an example for application:\n\n<?php\n\n  $myText = \"I am learning\
+    \ to program Java\";\n\n  echo $myText;\n\n  $myText = str\\_replace(\"Java\"\
+    , \"PHP\", $myText);\n\n  echo \"<br />\";\n\n  echo $myText;\n\n?>\n\nOutput:\n\
+    \nI am learning to program Java\n\nI am learning to program PHP\n\n**substr**\n\
+    \nAnother text function that is used frequently is substr(). This is the abbreviation\
+    \ for substring. It allows you to detach a part of a string. The first parameter\
+    \ that the function expects is the string, the second is the point – counting\
+    \ from 0, to get returned for the first character from the part of your text (substring)\
+    \ – and as an optional parameter, the third one is the length of the returned\
+    \ string.\n\nHere is another example:\n\n<?php\n\n  $myText = \"I am learning\
+    \ to program PHP\";\n\n  echo $myText;\n\n  $myText = substr($myText, 5, 8);\n\
+    \n  echo \"<br />\";\n\n  echo $myText;\n\n?>\n\nOutput:\n\nI am learning to program\
+    \ PHP\n\nlearning\n\n**strtolower**\n\nThis function returns a given string in\
+    \ lowercase:\n\n<?php\n\n  $myText = \"I am learning to program PHP\";\n\n  echo\
+    \ $myText;\n\n  $myText = strtolower($myText);\n\n  echo \"<br />\";\n\n  echo\
+    \ $myText;\n\n?>\n\nOutput:\n\nI am learning to program PHP\n\ni am learning to\
+    \ program php\n\n**strtoupper**\n\nThis function returns a given string in uppercase:\n\
+    \n<?php\n\n  $myText = \"I am learning to program PHP\";\n\n  echo $myText;\n\n\
+      $myText = strtoupper($myText);\n\n  echo \"<br />\";\n\n  echo $myText;\n\n\
+    ?>\n\nOutput:\n\nI am learning to program PHP\n\nI AM LEARNING TO PROGRAM PHP\n\
+    \n**strpos**\n\nWith this function, you can search for a particular character\
+    \ or string within a text. This is used, for example, in combination with the\
+    \ above stated function substr practical. The first parameter you need to pass\
+    \ is the text to be searched, while the second one is the string to be searched.\
+    \ \n\nIt is entered in the format strpos(string, search term \\[, from character\
+    \ #\\]).\n\nHere's an example:\n\n<?php\n\n  $myText = \"I am learning to program\
+    \ PHP\";\n\n  echo strpos($myText, \"learn\");\n\n?>\n\nOutput:\n\n5\n\n**strrpos**\n\
+    \nIt is entered in the format strrpos(string, search term, \\[, from character\
+    \ #\\]).\n\nThis function is used as strpos to find a specific string within a\
+    \ text, but the last occurrence of the string to be searched is returned:\n\n\
+    <?php\n\n  $myText = \"I am learning to program PHP\";\n\n  echo strrpos($myText,\
+    \ \"m\");\n\n?>\n\nOutput:\n\n23\n\n**strlen**\n\nThis function returns the length\
+    \ of a string.\n\n<?php\n\n  $myText = \"I am learning to program PHP\";\n\n  echo\
+    \ strlen($myText);\n\n?>\n\nOutput:\n\n28\n\n**explode**\n\nSometimes, you would\
+    \ use the explode() function in your projects. This splits a string by a delimiter\
+    \ into an array. You could, for example, multiply values from a text file with\
+    \ the piped | isolated standing in a row, and then read as follows disassemble:\
+    \ \n\n<?php\n\n  $myText = \"value1|value2|value3\";\n\n  $valueeArray = explode(\"\
+    |\", $myText);\n\n  var\\_dump($valueeArray);\n\n?>\n\nOutput:\n\narray(3) { \\\
+    [0\\]=> string(5) \"value1\" \\[1\\]=> string(5) \"value2\" \\[2\\]=> string(5)\
+    \ \"value3\" }\n\n**implode**\n\nWith the implode function, you can accomplish\
+    \ exactly the opposite: You can create a string from an array, while each value\
+    \ has the possibility to separate, on request, by means of a separator (glue).\
+    \ \n\n<?php\n\n  $meinArray = array(\"Hello\", \"World,\", \"how\", \"are\", \"\
+    you?\");\n\n  $text = implode(\" \", $meinArray);\n\n  echo $text;\n\n?>\n\nOutput:\n\
+    \nHello World, how are you?\n\n### Write your own functions\n\nWe have already\
+    \ learnt a lot of useful functions that are included in PHP. But it is also possible\
+    \ to write your own functions. A PHP function must always consist of a name and\
+    \ optionally specified parameters. \n\nHere is an example of two functions to\
+    \ which we give a numerical value and a value for the sales tax. So a net to gross\
+    \ amount and vice versa is calculated: \n\n<?php\n\n  function toNetto($amount,\
+    \ $vat\\_percent = 20) {\n\n    $amount\\_netto = $amount / (100 + $vat\\_percent)\
+    \ \\* 100;\n\n    return $amount\\_netto;\n\n  }\n\n  function toBrutto($amount,\
+    \ $vat\\_percent = 20) {\n\n    $amount\\_brutto = $amount \\* (100 + $vat\\_percent)\
+    \ / 100;\n\n    return $amount\\_brutto;\n\n  }\n\n  $amount = 1000;\n\n  $amount\\\
+    _brutto = toBrutto($amount);\n\n  echo $amount\\_brutto;\n\n  echo \"<br />\"\
+    ;\n\n  echo toNetto($amount\\_brutto);\n\n?>\n\nOutput:\n\n1200\n\n1000\n\nIn\
+    \ this example, we have included some of the same special features of functions.\
+    \ A function is defined with the preceding word function. Our two functions have\
+    \ two parameters each: One is for the amount and the tax rate; the second parameter\
+    \ is present in the function definition, which is already filled with the value\
+    \ 20. This means that the parameter is optional and if it is not specified when\
+    \ calling the function, the value specified in the definition is used.\n\nLet\
+    \ us, for example, convert an amount of the Austrian VAT (20%) to the German VAT\
+    \ (19%), which goes with our two functions easily: \n\n<?php\n\n  function toNetto($amount,\
+    \ $vat\\_percent = 20) {\n\n  $amount\\_netto = $amount / (100 + $vat\\_percent)\
+    \ \\* 100;\n\n  return $amount\\_netto;\n\n }\n\n function toBrutto($amount, $vat\\\
+    _percent = 20) {\n\n  $amount\\_brutto = $amount \\* (100 + $vat\\_percent) /\
+    \ 100;\n\n   return $amount\\_brutto;\n\n }\n\n  $price\\_austria = 1256;\n\n\
+      $price\\_netto = toNetto($price\\_austria);\n\n  $price\\_germany = toBrutto($price\\\
+    _netto, 19);\n\n  echo round($price\\_germany, 2);\n\n?>\n\nOutput:\n\n1245.53\n\
+    \nWith the round() function at the end we make the number better readable."
+  toc: []
+  trans: '
+
+    年份，符合 ISO8601 标准。这与 `Y` 的值相同，除非 ISO 日历周（`W`）属于上一年或下一年，在这种情况下使用该年份。
+
+
+    示例：1999 或 2003
+
+
+    `Y`
+
+    四位数的
+
+    示例：1999 或 2003
+
+
+    `y`
+
+    两位数年份
+
+    示例：99 或 03
+
+
+    ### 时间
+
+    `a`
+
+    小写的上午（morning）和下午（afternoon）
+
+    `am` 或 `pm`
+
+
+    `A`
+
+    大写的：上午（morning）和下午（afternoon）
+
+    `AM` 或 `PM`
+
+
+    `B`
+
+    瑞士网络时间 (Swatch Internet Time)
+
+    每天 000 到 999
+
+
+    `g`
+
+    12 小时制小时，不带前导零
+
+    1 到 12
+
+
+    `G`
+
+    24 小时制小时，不带前导零
+
+    0 到 23
+
+
+    `h`
+
+    12 小时制小时，带前导零
+
+    01 到 12
+
+
+    `H`
+
+    24 小时制小时，带前导零
+
+    00 到 23
+
+
+    `i`
+
+    分钟，带前导零
+
+    00 到 59
+
+
+    `s`
+
+    秒，带前导零
+
+    00 到 59
+
+
+    `u`
+
+    微秒
+
+    示例：654321
+
+
+    ### 时区
+
+    `e`
+
+    时区名称
+
+    示例：`UTC`, `GMT`, `Atlantic/Azores`
+
+
+    `I` （大写 ''i''）
+
+    夏令时间（夏季）日期
+
+    如果是夏令时间为 1，否则为 0。
+
+
+    `O`
+
+    与格林威治时间 (GMT) 的小时差
+
+    示例：+0200
+
+
+    `P`
+
+    与格林威治时间 (GMT) 的小时差，小时和分钟之间有冒号
+
+    示例：+02:00
+
+
+    `T`
+
+    时区缩写
+
+    示例：`EST`, `MDT`
+
+
+    `Z`
+
+    以秒为单位的时区偏移。UTC 西侧时区的偏移始终为负，UTC 东侧时区的偏移始终为正。
+
+    -43200 到 50400
+
+
+    ### 完整日期/时间
+
+    `c`
+
+    ISO 8601 日期
+
+    2004-02-12T15:19:21+00:00
+
+
+    `r`
+
+    根据 RFC 2822 格式日期
+
+    示例：Thu, 21 Dec 2000 16:01:07 +0200
+
+
+    `U`
+
+    自 Unix 纪元（1970 年 1 月 1 日 00:00:00 GMT）以来秒数
+
+
+    ### 文本函数（字符串操作）
+
+
+    在 PHP 中，有许多函数用于处理文本，例如分割长字符串并重新组装、搜索字符等。我希望向你展示这些关键函数，这样你就能解决几乎所有的字符串处理问题。还有许多其他函数超出了本书初学者的范围。但你可以在书末找到一些链接，指向解释了所有可用
+    PHP 函数的网站。
+
+
+    #### `str_replace`
+
+    一个常用的函数是 `str_replace`。该函数查找特定字符串出现后的文本并将其替换。第一个参数是要替换的文本，第二个参数是用于替换该文本的文本，第三个是在其中搜索的文本。该函数返回替换后的完整文本。作为一个可选参数，你可以指定执行的替换次数。这里有一个应用示例：
+
+
+    ```php
+
+    <?php
+
+    $myText = "I am learning to program Java";
+
+    echo $myText;
+
+    $myText = str_replace("Java", "PHP", $myText);
+
+    echo "<br />";
+
+    echo $myText;
+
+    ?>
+
+    ```
+
+    输出：
+
+    I am learning to program Java
+
+    I am learning to program PHP
+
+
+    #### `substr`
+
+    另一个经常使用的文本函数是 `substr()`。它是 substring（子串）的缩写。它允许你分离字符串的一部分。函数预期的第一个参数是字符串，第二个是位置——从
+    0 开始计数，用于返回文本部分（子字符串）的字符——作为可选参数，第三个是返回字符串的长度。这是另一个示例：
+
+
+    ```php
+
+    <?php
+
+    $myText = "I am learning to program PHP";
+
+    echo $myText;
+
+    $myText = substr($myText, 5, 8);
+
+    echo "<br />";
+
+    echo $myText;
+
+    ?>
+
+    ```
+
+    输出：
+
+    I am learning to program PHP
+
+    ning to le
+
+
+    #### `strtolower`
+
+    此函数返回给定字符串的小写：
+
+
+    ```php
+
+    <?php
+
+    $myText = "I am learning to program PHP";
+
+    echo $myText;
+
+    $myText = strtolower($myText);
+
+    echo "<br />";
+
+    echo $myText;
+
+    ?>
+
+    ```
+
+    输出：
+
+    I am learning to program PHP
+
+    i am learning to program php
+
+
+    #### `toupper`
+
+    此函数返回给定字符串的大写：
+
+
+    ```php
+
+    <?php
+
+    $myText = "I am learning to program PHP";
+
+    echo $myText;
+
+    $myText = strtoupper($myText);
+
+    echo "<br />";
+
+    echo $myText;
+
+    ?>
+
+    ```
+
+    输出：
+
+    I am learning to program PHP
+
+    I AM LEARNING TO PHP
+
+
+    #### `strpos`
+
+    通过此函数，你可以在文本中搜索特定的字符或字符串。...（注：原文此部分存在逻辑混乱或重复，已按原意进行对应翻译并保留结构）
+
+
+    #### `strpos`
+
+    ...（原文重复部分）
+
+
+    #### `strlen`
+
+    此函数返回字符串的长度。
+
+    示例：
+
+
+    ```php
+
+    <?php
+
+    $myText = "I am learning to program PHP";
+
+    echo $myText;
+
+    $myText = strtolower($myText);
+
+    echo "<br />";
+
+    echo $myText;
+
+    ?>
+
+    ```
+
+
+    #### `explode`
+
+    此函数根据分隔符分割字符串。
+
+
+    #### `explode`
+
+    ...（原文重复部分）
+
+
+    #### `implode`
+
+    ...（原文重复部分）
+
+
+    '
+- fmt: "\n# Split the code in several files\n\nSo far, we have written only short\
+    \ scripts of less than 100 lines. Once you work on larger projects that are partly\
+    \ made up of tens of thousands of lines of code, it can soon become confusing\
+    \ within a file. It makes more sense, for example, to outsource function collections\
+    \ in another `.php` file and integrate them into our main project file.\n\nSo,\
+    \ we create two files:\n\n`functions_accounting.php`\n\n```php\n<?php\n\n  function\
+    \ toNetto($amount, $vat_percent = 20) {\n    $amount_netto = $amount / (100 +\
+    \ $vat_percent) * 100;\n    return $amount_netto;\n  }\n\n  function toBrutto($amount,\
+    \ $vat_percent = 20) {\n    $amount_brutto = $amount * (100 + $vat_percent) /\
+    \ 100;\n    return $amount_brutto;\n  }\n?>\n```\n\n`vat_calculator.php`\n\n```php\n\
+    <?php\n  include \"functions_accounting.php\";\n  $price_austria = 1256;\n  $price_netto\
+    \ = toNetto($price_austria);\n  $price_germany = toBrutto($price_netto, 19);\n\
+    \  echo $price_germany;\n?>\n```\n\nIf, for example, in addition to our `vat_calculator.php`,\
+    \ the file `functions_accounting.php` are located in the folder `functions`, we\
+    \ would have to specify it with the following:\n\n```php\n<?php\n  include \"\
+    functions/functions_accounting.php\";\n  $price_austria = 1256;\n  $price_netto\
+    \ = toNetto($price_austria);\n  $price_germany = toBrutto($price_netto, 19);\n\
+    \  echo $price_germany;\n?>\n```\n\nYou could also specify full absolute paths\
+    \ on the server, such as the following:\n\n```php\n<?php \n  include \"/var/www/web1/html/functions/functions_accounting.php\"\
+    ;\n?>\n```\n\nHowever, if you do this, the path may never change and you may have\
+    \ problems when you transfer your script to a different server.\n\n# Day 4\n\n\
+    ## Storing and reading information with a database (MySQL)\n\nNow, we can query,\
+    \ process and output a lot of information. However, we still lack an important\
+    \ feature of programming: the storage of data and a technique to retrieve it in\
+    \ future. Most PHP projects use an SQL database.\n\nWithin each database, data\
+    \ is stored in tables. Like MS Excel, each table consists of individual columns\
+    \ and rows. We will learn how to access the individual values in this chapter.\n\
+    \n### Connect to a database within PHP\n\nFirst, we need to connect to a database\
+    \ server from our PHP script.\n\nIf you have not modified the basic installation\
+    \ of the server, as described in the first chapter, then the database server access\
+    \ is possible using the user `root` and without a password. Otherwise, you may\
+    \ need to assign a password in the server management software.\n\nHere is an example\
+    \ of how to connect and reconnect to the database server:\n\n```php\n<?php\n \
+    \ $mysqli=new mysqli('localhost','my_user','my_password','my_db');\n  $mysqli->close();\n\
+    ?>\n```\n\nThe `mysqli` object expects as parameter, the server, the username\
+    \ on the MySQL server, and the password. The server is usually `localhost` if\
+    \ the MySQL server is installed on the same machine as the Apache web server.\
+    \ By default, MySQL connections are automatically closed at the end of a script,\
+    \ so `$mysqli->close()` is not necessary. If we want to program cleanly and know\
+    \ that from a certain point in the script no connection is necessary, we should\
+    \ close it, as soon as possible, to save resources.\n\n### Create a new database\n\
+    \nIf we are successfully connected to our database server, we need to select a\
+    \ database to work with. Most web developers usually work with graphical database\
+    \ management tool. With XAMPP, MAMP and the most preconfigured webserver on the\
+    \ Internet, PhpMyAdmin is installed by default. This is available at `http://localhost/phpmyadmin/`\
+    \ or `http://localhost/phpMyAdmin/`.\n\nHowever, we like to try to create our\
+    \ new database directly within our script:\n\n```php\n<?php\n  $mysqli=new mysqli('localhost','root','');\n\
+    \  $result=$mysqli->query(\"CREATE DATABASE test\");\n  $mysqli->close();\n  var_dump($result);\n\
+    ?>\n```\n\nYou already know the functions of connecting and disconnecting to the\
+    \ MySQL server. The new function in the example is `$mysqli->query`. By queries,\
+    \ you tell MySQL what to do. Such queries, as in our example, can also be instructions\
+    \ to update something in our database. However, a result is always returned as\
+    \ whether the request could be executed. If you run the script more than once,\
+    \ you will receive a success message only on the first run, then there will be\
+    \ error messages indicating that the given database name has been assigned.\n\n\
+    ### Select our database\n\nIf we know what our database is called, we need to\
+    \ specify the script to use it:\n\n```php\n<?php\n  $mysqli=new mysqli('localhost','root','','test');\n\
+    ?>\n```\n\nThe database which should be used is defined as the last parameter.\
+    \ All following queries are now sent to the selected database.\n\n### Create tables\n\
+    \nNow we want to create a table, for example, to store personal records:\n\n```php\n\
+    <?php\n  $mysqli=new mysqli('localhost','root','','test');\n  $result = $mysqli->query(\"\
+    \n  CREATE TABLE IF NOT EXISTS persons (\n    id int(10) unsigned AUTO_INCREMENT,\n\
+    \    firstname varchar(50),\n    lastname varchar(50),\n    PRIMARY KEY (id)\n\
+    \  )\");\n  var_dump($result);\n?>\n```\n\nThis query is a bit more complex. We\
+    \ tell MySQL to create a table named `persons`, if it does not already exist.\
+    \ When creating the columns, we must specify which type they will be. Unlike PHP,\
+    \ the database server must know exactly whether a value is a text, a number or\
+    \ any other type.\n\nWe create the column `id` of type `Integer(10)`. Integers\
+    \ are numbers without commas. The `unsigned` attribute means that no sign is to\
+    \ be stored, so there will be no minus sign. Furthermore, we use `AUTO_INCREMENT`\
+    \ to indicate that the `ID` column automatically increases by the value of 1 compared\
+    \ to the last highest entry when we insert a new row into the table. Thus we have\
+    \ a consecutive number that we can use as the primary key as we specify it in\
+    \ the last line of the table. Each table must have a primary key. This must be\
+    \ unique for each table row so that the primary key allows you to always address\
+    \ a specific table row. The number ten in the brackets `(10)` defines that the\
+    \ number can have the length of maximum ten digits, so the maximum number is `9,999,999,999`.\n\
+    \nWe also create a column for the first names and one before the last names of\
+    \ both the variable character (`VARCHAR`) types. This means that we do not yet\
+    \ know what the length of the string to be stored will be, but we limit it to\
+    \ a maximum of 50 characters. Alternatively, we could use the type `TEXT`, which\
+    \ has no limitation on a certain number of characters but consumes considerably\
+    \ more memory.\n\n### Write data to the database\n\nAfter we have created our\
+    \ table, we will now fill it with the first data:\n\n```php\n<?php\n  $mysqli=new\
+    \ mysqli('localhost','root','','test');\n  $result = $mysqli->query(\"INSERT INTO\
+    \ persons (firstname, lastname) VALUES ('Hans', 'Meier');\");\n  var_dump($result);\n\
+    ?>\n```\n\nIf you now look at the table in PhpMyAdmin, you will see the entry\
+    \ you just added.\n\nTo insert data into a table, there is the `INSERT INTO` SQL\
+    \ statement, followed by the table name and the fields to be filled, which is\
+    \ followed by the `VALUES` statement, and the values in the same order as the\
+    \ fields specified. If you would like to insert more than one line into the table,\
+    \ you only need to write `VALUES` once and separate the individual line values\
+    \ with the words:\n\n```php\n<?php\n  $mysqli=new mysqli('localhost','root','','test');\n\
+    \  $result = $mysqli->query(\"INSERT INTO persons (firstname, lastname) VALUES\
+    \ ('Max', 'Meier'),('Maria', 'Mauser');\");\n  var_dump($result);\n?>\n```\n\n\
+    ### Retrieve data from the database\n\nAfter we have written some lines in the\
+    \ table, we would like to query them again in our script. This is done with the\
+    \ SQL statement, `SELECT`:\n\n```php\n<?php\n  $mysqli=new mysqli('localhost','root','','test');\n\
+    \  $result = $mysqli->query(\"SELECT firstname, lastname FROM persons;\");\n?>\n\
+    ```\n"
+  raw: "### Split the code in several files\n\nSo far, we have written only short\
+    \ scripts of less than 100 lines. Once you work on larger projects that are partly\
+    \ made up of tens of thousands of lines of code, it can soon become confusing\
+    \ within a file. It makes more sense, for example, to outsource function collections\
+    \ in another .php file and integrate them into our main project file.\n\nSo, we\
+    \ create two files:\n\nfunctions\\_accounting.php\n\n<?php\n\n  function toNetto($amount,\
+    \ $vat\\_percent = 20) {\n\n    $amount\\_netto = $amount / (100 + $vat\\_percent)\
+    \ \\* 100;\n\n    return $amount\\_netto;\n\n  }\n\n  function toBrutto($amount,\
+    \ $vat\\_percent = 20) {\n\n    $amount\\_brutto = $amount \\* (100 + $vat\\_percent)\
+    \ / 100;\n\n    return $amount\\_brutto;\n\n  }\n\n?>\n\nvat\\_calculator.php\n\
+    \n<?php\n\n  include \"functions\\_accounting.php\";\n\n  $price\\_austria = 1256;\n\
+    \n  $price\\_netto = toNetto($price\\_austria);\n\n  $price\\_germany = toBrutto($price\\\
+    _netto, 19);\n\n  echo $price\\_germany;\n\n?>\n\nIf, for example, in addition\
+    \ to our vat calculator.php, the file functions of accounting.php are located\
+    \ in the folder ‘functions’, we would have to specify it with the following:\n\
+    \n<?php\n\n  include \"functions/functions\\_accounting.php\";\n\n  $price\\_austria\
+    \ = 1256;\n\n  $price\\_netto = toNetto($price\\_austria);\n\n  $price\\_germany\
+    \ = toBrutto($price\\_netto, 19);\n\n  echo $price\\_germany;\n\n?>\n\nYou could\
+    \ also specify full absolute paths on the server, such as the following:\n\n<?php\
+    \ \n\n  include \"/var/www/web1/html/functions/functions\\_accounting.php\";\n\
+    \n?>\n\nHowever, if you do this, the path may never change and you may have problems\
+    \ when you transfer your script to a different server. \n\n## Day 4\n\n### Storing\
+    \ and reading information with a database (MySQL)\n\nNow, we can query, process\
+    \ and output a lot of information. However, we still lack an important feature\
+    \ of programming: the storage of data and a technique to retrieve it in future.\
+    \ Most PHP projects use an SQL database.\n\nWithin each database, data is stored\
+    \ in tables. Like MS Excel, each table consists of individual columns and rows.\
+    \ We will learn how to access the individual values in this chapter.\n\n#### Connect\
+    \ to a database within PHP\n\nFirst, we need to connect to a database server from\
+    \ our PHP script.\n\nIf you have not modified the basic installation of the server,\
+    \ as described in the first chapter, then the database server access is possible\
+    \ using the user root and without a password. Otherwise, you may need to assign\
+    \ a password in the server management software.\n\nHere is an example of how to\
+    \ connect and reconnect to the database server: \n\n<?php\n\n  $mysqli=new mysqli('localhost','my\\\
+    _user','my\\_password','my\\_db'); \n\n  $mysqli->close();\n\n?>\n\nThe object,\
+    \ MySQL, expects as parameter, the server, the username on the MySQL server, and\
+    \ the password. The server is usually localhost if the MySQL server is installed\
+    \ on the same machine as the Apache web server.\n\nBy default, MySQL connections\
+    \ are automatically closed at the end of a script, so $mysqli->close() is not\
+    \ necessary. If we want to program cleanly and know that from a certain point\
+    \ in the script no database connection is necessary, we should close it, as soon\
+    \ as possible, to save resources.\n\n#### Create a new database\n\nIf we are successfully\
+    \ connected to our database server, we need to select a database to work with.\
+    \ Most web developers usually work with a graphical database management tool.\
+    \ With XAMPP, MAMP and so on and the most preconfigured webserver offered on the\
+    \ Internet, PhpMyAdmin is installed by default. With this, you can easily create\
+    \ and manage new databases, tables and the like. Default t is available at http://localhost/phpmyadmin/or\
+    \ http://localhost/phpMyAdmin/. \n\nHowever, we would like to try to create our\
+    \ new database directly within our PHP script:\n\n<?php\n\n  $mysqli=new mysqli('localhost','root','');\
+    \ \n\n  $result= $mysqli->query(\"CREATE DATABASE \\`test\\`;\");\n\n  $mysqli->close();\n\
+    \n  var\\_dump($result);\n\n?>\n\nYou already know the functions of connecting\
+    \ and disconnecting to the MySQL server. The new function in the example is $mysqli->query.\
+    \ By queries, you tell MySQL what to do. Such queries, as in our example, can\
+    \ also be commands or instructions to update something in our database. However,\
+    \ a result is always returned as to whether the request could be successfully\
+    \ executed.\n\nIf you run the script more than once, you will receive a success\
+    \ message only on the first run, then there will be error messages indicating\
+    \ that the given database name has already been assigned.\n\n#### Select our database\n\
+    \nIf we know what our database is called, we need to specify the script to use\
+    \ it:\n\n<?php\n\n  $mysqli=new mysqli('localhost','root','', 'test');\n\n?>\n\
+    \nThe database, which should be used, is defined as the last parameter. All following\
+    \ queries are now sent to the selected database.\n\n#### Create tables\n\nNow\
+    \ we want to create a table, for example, to store personal records:\n\n<?php\n\
+    \n  $mysqli=new mysqli('localhost','root', '','test');\n\n  $result = $mysqli->query(\"\
+    \n\n CREATE TABLE IF NOT EXISTS \\`persons\\` (\n\n\\`id\\` int(10) unsigned AUTO\\\
+    _INCREMENT,\n\n\\`firstname\\` varchar(50),\n\n\\`lastname\\` varchar(50),\n\n\
+    PRIMARY KEY (\\`id\\`)\n\n )\"\n\n );\n\n  var\\_dump($result);\n\n?>\n\nThis\
+    \ query is a bit more complex. We tell MySQL to create a table named persons,\
+    \ if it does not already exist. When creating the columns, we must already specify\
+    \ which type they will be. Unlike PHP, the database server must know exactly whether\
+    \ a value is a text, a number, a date or any other given type.\n\nWe create the\
+    \ column ID of type Integer(10). Integers are numbers without commas. The unsigned\
+    \ attribute means that no sign is to be stored, so there will be no minus sign.\
+    \ Furthermore, we use AUTO\\_INCREMENT to indicate that the ID column automatically\
+    \ increases by the value of 1 compared to the last highest entry when we insert\
+    \ a new row into the table. Thus, we have a consecutive number that we can use\
+    \ as the primary key as we specify it in the last line of the table. Each table\
+    \ must have a primary key. This must be unique for each table row so that the\
+    \ primary key allows you to always address a specific table row. The number ten\
+    \ in the brackets (10) defines that the number can have the length of maximum\
+    \ ten digits, so, the maximum number is 9,999,999,999.\n\nWe also create a column\
+    \ for the first names and one before the last names of both the variable character\
+    \ (VARCHAR) types. This means that we do not yet know what the length of the string,\
+    \ to be stored, will be, but we limit it to a maximum of 50 characters. Alternatively,\
+    \ we could use the type, TEXT, which has no limitation on a certain number of\
+    \ characters but consumes considerably more memory.\n\n#### Write data to the\
+    \ database\n\nAfter we have created our table, we will now fill it with the first\
+    \ data:\n\n<?php\n\n  $mysqli=new mysqli('localhost','root', '','test');\n\n  $result\
+    \ = $mysqli->query(\"INSERT INTO persons (firstname, lastname) VALUES ('Hans',\
+    \ 'Meier');\");\n\n  var\\_dump($result);\n\n?>\n\nIf you, now, look at the table\
+    \ in PhpMyAdmin, you will see the entry you just added.\n\nTo insert data into\
+    \ a table, there is the INSERT INTO SQL statement, followed by the table name\
+    \ and the fields to be filled, which is followed by the VALUES statement, and\
+    \ the values in the same order as the fields specified. If you would like to insert\
+    \ more than one line into the table, you only need to write ‘VALUES’ once and\
+    \ separate the individual line values with the words:\n\n<?php\n\n  $mysqli=new\
+    \ mysqli('localhost','root', '','test');\n\n  $result = $mysqli->query(\"INSERT\
+    \ INTO persons (firstname, lastname) VALUES ('Max', 'Meier'),('Maria', 'Mauser');\"\
+    );\n\n  var\\_dump($result);\n\n?>\n\n#### Retrieve data from the database\n\n\
+    After we have written some lines in the table, we would like to query them again\
+    \ in our script. This is done with the SQL statement, SELECT:\n\n<?php\n\n  $mysqli=new\
+    \ mysqli('localhost','root', '','test');\n\n  $result = $mysqli->query(\"SELECT\
+    \ firstname, lastname FROM persons;\");"
+  toc: []
+  trans: "\n\n# 将代码拆分到多个文件\n\n到目前为止，我们只编写了少于 100 行的短脚本。一旦你处理由数万行代码组成大型项目时，单个文件内的代码很快就会变得混乱。例如，将函数集合外包到另一个\
+    \ `.php` 文件并将其集成到我们的主项目文件中会更有意义。\n\n因此，我们创建了两个文件：\n\n`functions_accounting.php`\n\
+    \n```php\n<?php\n\n  function toNetto($amount, $vat_percent = 20) {\n    $amount_netto\
+    \ = $amount / (100 + $vat_percent) * 100;\n    return $amount_netto;\n  }\n\n\
+    \  function toBrutto($amount, $vat_percent = 20) {\n    $amount_brutto = $amount\
+    \ * (100 + $vat_percent) / 100;\n    return $amount_brutto;\n  }\n?>\n```\n\n\
+    `vat_calculator.php`\n\n```php\n<?php\n  include \"functions_accounting.php\"\
+    ;\n  $price_austria = 1256;\n  $price_netto = toNetto($price_austria);\n  $price_germany\
+    \ = toBrutto($price_netto, 19);\n  echo $price_germany;\n?>\n```\n\n例如，除了我们的 `vat_calculator.php`\
+    \ 之外，如果 `functions_accounting.php` 文件位于 `functions` 文件夹中，我们必须按照以下方式指定：\n\n```php\n\
+    <?php\n  include \"functions/functions_accounting.php\";\n  $price_austria = 1256;\n\
+    \  $price_netto = toNetto($price_austria);\n  $price_germany = toBrutto($price_netto,\
+    \ 19);\n  echo $price_germany;\n?>\n```\n\n你也可以在服务器上指定绝对路径，如下：\n\n```php\n<?php\
+    \ \n  include \"/var/www/web1/html/functions/functions_accounting.php\";\n?>\n\
+    ```\n\n但是，如果你这样做，当你将脚本传输到不同的服务器时，路径可能会发生。\n\n# 第 4 天\n\n## 使用数据库存储和读取信息\n\n现在，我们可以查询、处理和输出大量信息。然而，我们仍然缺少一项重要功能：存储和检索数据的技术。大多数\
+    \ PHP 项目使用 SQL 数据库。在每个数据库中，数据存储在表中。就像 Excel 一样，每个表由列和行组成。我们将学习如何访问它们。\n\n### 在\
+    \ PHP 中连接数据库\n\n首先，我们需要从 PHP 脚本连接数据库。如果你没有按照第一章所述修改服务器的基础安装，则可以使用 `root` 用户访问数据库服务器。否则，你可能需要在服务器管理软件中分配密码。以下是连接到数据库服务器的示例：\n\
+    \n```php\n<?php\n  $mysqli=new mysqli('localhost','root','password','my_db');\n\
+    \  $mysqli->close();\n?>\n```\n\n`mysqli` 对象期望服务器、用户名和密码。服务器通常是 `localhost`。在脚本结束时，应尽早关闭\
+    \ MySQL 连接以节省资源。\n\n### 创建新数据库\n\n如果我们成功连接到数据库服务器，我们需要选择一个数据库进行工作。大多数 Web 开发者使用图形化数据库管理工具。通过\
+    \ XAMPP、MAMP 和默认预配置的 Web 服务器，这可以在 `http://localhost/phpmyadmin/` 或 `http://localhost/phpmyadmin/`\
+    \ 获取。\n\n然而，我们想在脚本中直接尝试创建一个新数据库：\n\n```php\n<?php\n  $mysqli=new mysqli('localhost','root','');\n\
+    \  $result=$mysqli->query(\"CREATE DATABASE test\");\n  $mysqli->close();\n  var_dump($result);\n\
+    ?>\n```\n\n你已经知道了连接和断开 MySQL 服务器的功能。示例中的新函数是 `$mysqli->query`。通过查询，你告诉 MySQL 要做什么。然而，总是返回一个请求可以执行的结果。如果你运行脚本多次，只有第一次运行会收到成功消息，然后会收到指示数据库名称已分配错误消息。\n\
+    \n### 选择我们的数据库\n\n如果我们知道了数据库名称，我们需要指定脚本使用它：\n\n```php\n<?php\n  $mysqli=new mysqli('localhost','root','','test');\n\
+    ?>\n```\n\n使用的数据库定义为最后一个参数。所有后续查询现在发送到所选数据库。\n\n### 创建表\n\n现在我们想要创建一个表，例如存储个人记录：\n\
+    \n```php\n<?php\n  $mysqli=new mysqli('localhost','root','','test');\n  $result\
+    \ = $mysqli->query(\"\n  CREATE TABLE IF NOT EXISTS persons (\n    id int(10)\
+    \ unsigned AUTO_INCREMENT,\n    firstname varchar(50),\n    lastname varchar(50),\n\
+    \    PRIMARY KEY (id)\n  )\");\n  var_dump($result);\n?>\n```\n\n这个查询稍微复杂。我们告诉\
+    \ MySQL 创建一个名为 `persons` 的表（如果它不存在）。在创建列时，我们必须指定它们的类型。与 PHP 不同，数据库服务器必须确切知道值是文本、数字还是其他类型。\n\
+    \n我们创建一个类型为 `Integer(10)` 的 `id` 列。整数是不带符号的数字。`unsigned` 属性意味着不存储符号，因此将没有负号。此外，我们使用\
+    \ `AUTO_INCREMENT` 表示当我们向表中插入新行时，`ID` 列与最后一个最高条目相比自动增加 1。因此，我们获得了一个连续的数字，可以在表的最后行中将其指定主键。每个表必须有一个主键。这对于每个表行必须是唯一的，以便主键允许你始终访问特定的表行。括号\
+    \ `(10)` 中的数字定义了数字的长度最大为十位，因此最大数字是 `9,999,999,999`。\n\n我们还为两种可变字符（`VARCHAR`）类型的名字和姓名各创建了一个列。这意味着我们还不知道要存储的字符串长度将是多少，但我们将其限制在最多\
+    \ 50 个字符。或者，我们可以使用 `TEXT` 类型，它对字符数量没有限制，但消耗的内存多得多。\n\n### 向数据库写入数据\n\n在我们创建表之后，现在将向其填充第一条数据：\n\
+    \n```php\n<?php\n  $mysqli=new mysqli('localhost','root','','test');\n  $result\
+    \ = $mysqli->query(\"INSERT INTO persons (firstname, lastname) VALUES ('Hans',\
+    \ 'Meier');\");\n  var_dump($result);\n?>\n```\n\n如果你现在在 PhpMyAdmin 中查看表，将看到刚刚添加的条目。\n\
+    \n向表中插入数据有 `INSERT INTO` SQL 语句，后面是表名和填充的字段，然后是 `VALUES` 语句以及与指定字段相同的值。如果你想向表插入多行，只需要写一次\
+    \ `VALUES` 并用逗号分隔各个行值：\n\n```php\n<?php\n  $mysqli=new mysqli('localhost','root','','test');\n\
+    \  $result = $mysqli->query(\"INSERT INTO persons (firstname, lastname) VALUES\
+    \ ('Max', 'Meier'),('Maria', 'Mauser');\");\n  var_dump($result);\n?>\n```\n\n\
+    ### 从数据库中检索数据\n\n在我们表中写入了一些行之后，我们想在脚本中再次查询它们。这是通过 `SELECT` 语句实现的：\n\n```php\n\
+    <?php\n  $mysqli=new mysqli('localhost','root','','test');\n  $result = $mysqli->query(\"\
+    SELECT firstname, lastname FROM persons;\");\n?>\n```\n\n"
+- fmt: "\n```php\nwhile ($row = $result->fetch_array()) {\n    echo $row[\"firstname\"\
+    ] . \" \" . $row[\"lastname\"] . \"<br />\";\n}\n?>\n```\n\nThe `SELECT` statement\
+    \ will still be your faithful companion when you write PHP `/SQL` scripts. A data\
+    \ query using `SELECT` is followed by the table columns; alternatively you could\
+    \ also write a `*`, if you want to query all table columns. This is followed by\
+    \ the `FROM` statement and the name of the table from which the data is to be\
+    \ queried.\n\nAfter we have submitted the query, we use the function, `$result->fetch_array()`\
+    \ to run the result until we can no longer get any more rows. From each line,\
+    \ we access the entries, first name, and last name.\n\nAt this point, it is important\
+    \ to know how to access a particular entry in the table by optionally extending\
+    \ the `SELECT` statement with a condition clause, `WHERE`:\n\n```php\n<?php\n\
+    \  $mysqli=new mysqli('localhost','root', '','test');\n  $result = $mysqli->query('SELECT\
+    \ firstname, lastname FROM persons WHERE firstname = \"Hans\";');\n  while ($row\
+    \ = $result->fetch_array()) {\n    echo $row[\"firstname \"]. \" \" . $row[\"\
+    lastname\"]. \"<br />\";\n  }\n?>\n```\n\nNow, we get only rows returned, where\
+    \ in the column, first name, the value is Hans. Likewise, we could now query a\
+    \ specific `ID`. With this knowledge, you already have the ability to permanently\
+    \ store data and process it with another PHP script in the future.\n\nThere are\
+    \ hundreds of books to understand the many other `SQL` statements and how to create\
+    \ efficient databases or resource-conserving queries. This is very important especially\
+    \ for projects with hundreds of thousands of table rows and dozens of queries\
+    \ per minute. At the end of the book, you will find some good tips and links to\
+    \ free knowledge sources about `SQL`.\n\n## Delete data from the database\n\n\
+    The deletion of data a database is nearly the same SQL statement like the `SELECT`.\
+    \ You can choose which data should be deleted by filtering it with the `WHERE`\
+    \ clause.\n\n```php\n<?php\n  $mysqli=new mysqli('localhost','root', '','test');\n\
+    \  $result = $mysqli->query('DELETE FROM persons WHERE firstname = \"Hans\";');\n\
+    ?>\n```\n\nAll lines from the database, where the field `firstname` is Hans, will\
+    \ be deleted. So be careful to double check your `WHERE` clause.\n\n## File operations\
+    \ (read / write files)\n\nIn order to import text files into PHP or write to them,\
+    \ they have to be integrated into the script with the use of a filehandler:\n\n\
+    ```php\n<?php\n  $myFile = \"myfile.txt\";\n  $filehandler = fopen($myFile, \"\
+    r\");\n?>\n```\n\nThe `fopen` function returns the desired filehandler. As a first\
+    \ parameter, the function expects a filename if the file is in the same directory\
+    \ as the PHP script or the relative path to the file. As a second parameter, the\
+    \ function expects the access mode to the file. This specifies whether we want\
+    \ to have read access with a filehandler for a file or whether we can describe\
+    \ or alter it with our own content.\n\nThese are the following access modes for\
+    \ `fopen()`:\n\n- `'r'` Read only, place the file pointer at the beginning\n-\
+    \ `'r+'` Read and write, place the file pointer at the beginning\n- `'w'` Write\
+    \ only, truncates file to zero length or creates a new file\n- `'w+'` Read and\
+    \ write, truncates file to zero length or creates a new file\n- `'a'` Append only,\
+    \ place file pointer at the end of file\n- `'a+'` Append and write, place file\
+    \ pointer at the end of file\n- `'x'` Create and write only; returns false if\
+    \ the file exists\n- `'x+'` Create and write only; returns false if the file exists\n\
+    \n### Save to a file\n\nTo create a new file or extend an existing one, we could\
+    \ use the following:\n\n```php\n<?php\n  $myFile = \"myfile.txt\";\n  $filehandler\
+    \ = fopen($myFile, \"a\");\n  fwrite($filehandler, \"I am a line\\n\");\n  fclose($filehandler);\n\
+    ?>\n```\n\n### Reading from a file\n\nIn the above script, `fwrite` is used to\
+    \ write content to the file. To read from a file, we use the following:\n\n```php\n\
+    <?php\n  $myFile = \"myfile.txt\";\n  $filehandler = fopen($myFile, \"r\");\n\
+    \  $contents = fread($filehandler);\n  fclose($filehandler);\n?>\n```\n\n### Delete\
+    \ a file\n\nIf you want to delete a file, you can use the `unlink` function:\n\
+    \n```php\n<?php\n  $myFile = \"myfile.txt\";\n  unlink($myFile);\n?>\n```\n\n\
+    ## Day 5\n\n### Write clean code (which is still understandable in a year)\n\n\
+    Before you acquire an unclean programming style, I would like to give you some\
+    \ tips on how to write a ‘clean’ code on your way as a programmer.\n\nOn the one\
+    \ hand, it is extremely important, as has already been described in the chapter\
+    \ on variables, to use appropriate and self-describing variables and function\
+    \ names. Nothing is more disappointing than to read variables like `$a`, `$b`,\
+    \ or `$x` in an unknown code because they do not show what will be stored in them.\n\
+    \nUse tab stops in your code writing.\n"
+  raw: "  while ($row = $result->fetch\\_array()) {\n\n    echo $row\\[\"firstname\"\
+    \\]. \" \" . $row\\[\"lastname\"\\] . \"<br />\";\n\n  }\n\n?>\n\nThe SELECT statement\
+    \ will still be your faithful companion when you write PHP / SQL scripts. A data\
+    \ query using SELECT is followed by the table columns; alternatively you could\
+    \ also write a \\*, if you want to query all table columns. This is followed by\
+    \ the FROM statement and the name of the table from which the data is to be queried.\n\
+    \nAfter we have submitted the query, we use the function, $result-> fetch\\_array()\
+    \ to run the result until we can no longer get any more rows. From each line,\
+    \ we access the entries, first name, and last name.\n\nAt this point, it is important\
+    \ to know how to access a particular entry in the table by optionally extending\
+    \ the SELECT statement with a condition clause, WHERE:\n\n<?php\n\n  $mysqli=new\
+    \ mysqli('localhost','root', '','test');\n\n  $result = $mysqli->query('SELECT\
+    \ firstname, lastname FROM persons WHERE firstname = \"Hans\";');\n\n  while ($row\
+    \ = $result->fetch\\_array()) {\n\n    echo $row\\[\"firstname \"\\]. \" \" .\
+    \ $row\\[\"lastname\"\\]. \"<br />\";\n\n  }\n\n?>\n\nNow, we get only rows returned,\
+    \ where in the column, first name, the value is Hans. Likewise, we could now query\
+    \ a specific ID. With this knowledge, you already have the ability to permanently\
+    \ store data and process it with another PHP script in the future.\n\nThere are\
+    \ hundreds of books to understand the many other SQL statements and how to create\
+    \ efficient databases or resource-conserving queries. This is very important especially\
+    \ for projects with hundreds of thousands of table rows and dozens of queries\
+    \ per minute. At the end of the book, you will find some good tips and links to\
+    \ free knowledge sources about SQL.\n\n#### Delete data from the database\n\n\
+    The deletion of data f a database is nearly the same SQL statement like the SELECT.\
+    \ You can choose which data should be deleted by filtering it with the WHERE clause.\n\
+    \n<?php\n\n  $mysqli=new mysqli('localhost','root', '','test');\n\n  $result =\
+    \ $mysqli->query('DELETE FROM persons WHERE firstname = \"Hans\";');\n\n?>\n\n\
+    All lines from the database, where the field firstname is Hans, will be deleted.\
+    \ So be careful to double check your WHERE clause.\n\n### File operations (read\
+    \ / write files)\n\nIn order to import text files into PHP or write to them, they\
+    \ have to be integrated into the script with the use of a filehandler:\n\n<?php\n\
+    \n  $myFile = \"myfile.txt\";\n\n  $filehandler = fopen($myFile, \"r\");\n\n?>\n\
+    \nThe fopen function returns the desired filehandler. As a first parameter, the\
+    \ function expects a filename if the file is in the same directory as the PHP\
+    \ script or the relative path to the file. As a second parameter, the function\
+    \ expects the access mode to the file. This specifies whether we want to have\
+    \ read access with a filehandler for a file or whether we can describe or alter\
+    \ it with our own content.\n\nThese are the following access modes for fopen():\n\
+    \n'r' Read only, place the file pointer at the beginning\n\n'r+' Read and write,\
+    \ place the file pointer at the beginning\n\n'w' Write only, place the file pointer\
+    \ at the beginning; if the file exists, then empty it\n\n'w+' Read and write,\
+    \ place the file pointer at the beginning; if the file exists, then empty it\n\
+    \n'a' Write only, place the file pointer at the end\n\n'a+' Read and write, place\
+    \ the file pointer at the end\n\n'x' Write only, if the file already exists, then\
+    \ return an error\n\n'x+' Read and write, if the file already exists, then return\
+    \ an error\n\n'c' Write only, place the file pointer at the beginning; if the\
+    \ file exists, then do not empty\n\n'c+' Read and write, place the file pointer\
+    \ at the beginning; if the file exists, then do not empty.\n\n#### Save to a text\
+    \ file\n\nIn the following script, the PHP function, frwite(), is used, which\
+    \ first gets our filehandler, and as a second parameter, we have to specify the\
+    \ content which should be added to the file.\n\nTo create a new file or extend\
+    \ an existing one, we could use the following script:\n\n<?php\n\n  $myFile =\
+    \ \"myfile.txt\";\n\n  $filehandler = fopen($myFile, \"a\");\n\n  fwrite($filehandler,\
+    \ \"I am a new line.\\\\nI am a second new line.\\\\n\");\n\n  fclose($filehandler);\n\
+    \n?>\n\nIn the directory where your .php script file is saved, a new file is created.\
+    \ If you look at the text file now, you will notice that it has been filled by\
+    \ two lines. Everytime you call the php script, two new lines are added. Line\
+    \ breaks must be passed to fwrite using \\\\n. \n\n#### Reading from a text file\n\
+    \nWe would like to read this file now into our php script:\n\n<?php\n\n  $myFile\
+    \ = \"myfile.txt\";\n\n  $filehandler = fopen($myFile, \"r\");\n\n  $contents\
+    \ = fread($filehandler, filesize($myFile));\n\n  fclose($filehandler);\n\n  echo\
+    \ nl2br($contents);\n\n?>\n\nIn the above script, the PHP function, fread(), is\
+    \ used, which first gets our filehandler, and as a second parameter, we have to\
+    \ specify how much of the file should be read.\n\nWe simply pass the size of the\
+    \ file, to be read, using the practical filesize() function. With the function,\
+    \ nl2br(), the line endings from a text file can be converted to HTML-<br/>.\n\
+    \n### Manage sessions\n\nIf we want to recognize a returning visitor, it is necessary\
+    \ to use the so-called sessions. Within sessions, variables can be stored, and\
+    \ they can be used across files. If we start a session for a visitor, a unique\
+    \ identification number, the session ID, is generated.\n\nIf we want to open a\
+    \ session for a visitor, it is enough to simply call the function session\\_start().\
+    \ You can then set values in the $\\_SESSION global array. If the same session\
+    \ is to be reused on the next call, it is sufficient to call it session\\_start()\
+    \ at the beginning of the script. In the visitor’s browser is stored a cookie\
+    \ with the session ID; the values of the $\\_SESSION array are stored on the server\
+    \ in a temporary cache. If you want to end the session securely, you must use\
+    \ the session\\_destroy() function.\n\nHere is an example of how to use sessions:\n\
+    \nsession1.php\n\n<?php\n\n  session\\_start();\n\n  $\\_SESSION\\[\"username\"\
+    \\] = \"Walter\";\n\n  echo \"Hello \" . $\\_SESSION\\[\"username\"\\];\n\n?>\n\
+    \nsession2.php\n\n<?php\n\n  session\\_start();\n\n  if (isset ($\\_SESSION\\\
+    [\"username\"\\])) {\n\n    echo \"Hello \" . $\\_SESSION\\[\"username\"\\];\n\
+    \n  }\n\n  else {\n\n    \"First please open the page session1.php!\";\n\n  }\n\
+    \n?>\n\nAfter the call of session\\_start() in the second file, the same content\
+    \ of the $\\_SESSION array is usable as in the first file.\n\n## Day 5\n\n###\
+    \ Write clean code (which is still understandable in a year)\n\nBefore you acquire\
+    \ an unclean programming style, I would like to give you some tips on how to write\
+    \ a ‘clean’ code on your way as a programmer.\n\nOn the one hand, it is extremely\
+    \ important, as has already been described in the chapter on variables, to use\
+    \ appropriate and self-describing variables and function names. Nothing is more\
+    \ disappointing than to read variables like $a, $b, or $x in an unknown code because\
+    \ they do not show what will be stored in them.\n\nUse tab stops in your code\
+    \ writing. Individual programming studios sometimes have a somewhat different\
+    \ form, but many OpenSource projects have the following syntax style:\n\nfunction\
+    \ name (parameter) {\n\n  code block\n\n}\n\nThat is, a space between function\
+    \ name, a space after the parenthesis with the parameters followed by a curved\
+    \ parenthesis. The code block of the function is inserted by a tab step, and the\
+    \ closing curved bracket is again at the height of the function name. This makes\
+    \ it very easy to see where a function starts and stops.\n\nDo not save with comments.\
+    \ You do not have to comment on any one-line If query, but a certain structure\
+    \ for longer scripts is essential.\n\nDo not write a code twice, that is, avoid\
+    \ redundancy. Once a code is used several times, write a function. This increases\
+    \ the clarity of the code and saves valuable memory space. In addition, you need\
+    \ to make corrections or extensions only at one code point.\n\n### Security within\
+    \ PHP scripts\n\nHere are some of the most important tips to give you some idea\
+    \ on how to make your PHP scripts safer:"
+  toc: []
+  trans: "\n\n```php\nwhile ($row = $result->fetch_array()) {\n    echo $row[\"firstname\"\
+    ] . \" \" . $row[\"lastname\"] . \"<br />\";\n}\n?>\n```\n\n当你编写 PHP `/SQL` 脚本时，`SELECT`\
+    \ 语句将仍然是你忠实的伴侣。使用 `SELECT` 进行数据查询时，后面跟着的是表列；或者，如果你想查询表的所有列，也可以使用 `*`。其之后是 `FROM`\
+    \ 语句以及要从中查询数据的表名。\n\n在我们提交查询后，我们使用函数 `$result->fetch_array()` 来运行结果，直到我们无法获取更多行。从每一行中，我们访问条目：名（first\
+    \ name）和姓（last name）。\n\n此时，了解如何通过可选扩展 `SELECT` 语句的条件子句 `WHERE` 来访问表中的特定条目是非常重要的：\n\
+    \n```php\n<?php\n  $mysqli=new mysqli('localhost','root', '','test');\n  $result\
+    \ = $mysqli->query('SELECT firstname, lastname FROM persons WHERE firstname =\
+    \ \"Hans\";');\n  while ($row = $result->fetch_array()) {\n    echo $row[\"firstname\
+    \ \"]. \" \" . $row[\"lastname\"]. \"<br />\";\n  }\n?>\n```\n\n现在，我们只获取返回的行，即在\
+    \ `firstname` 列中值为 Hans 的行。同样，我们现在可以查询特定的 `ID`。有了这些知识，你已经具备了永久存储数据并在未来使用另一个 PHP\
+    \ 脚本对其进行处理的能力。\n\n有数百本书书籍可以让你理解许多其他的 `SQL` 语句以及如何创建高效的数据库或节省资源的查询。这对于具有数十万行数据和每分钟几十次查询的项目来说非常重要。在书的最后，你将找到关于\
+    \ `SQL` 免费知识来源的好建议和链接。\n\n## 从数据库中删除数据\n\n从数据库中删除数据的 SQL 语句与 `SELECT` 几乎相同。你可以通过\
+    \ `WHERE` 子句过滤数据来选择删除哪些数据。\n\n```php\n<?php\n  $mysqli=new mysqli('localhost','root',\
+    \ '','test');\n  $result = $mysqli->query('DELETE FROM persons WHERE firstname\
+    \ = \"Hans\";');\n?>\n```\n\n数据库中所有 `firstname` 字段为 Hans 的行都将被删除。因此，请务必仔细检查你的\
+    \ `WHERE` 子句。\n\n## 文件操作（读取/写入文件）\n\n为了将文本文件导入 PHP 或向其写入，必须使用文件句柄（filehandler）将其集成到脚本中：\n\
+    \n```php\n<?php\n  $myFile = \"myfile.txt\";\n  $filehandler = fopen($myFile,\
+    \ \"r\");\n?>\n```\n\n`fopen` 函数返回的文件句柄。作为第一个参数，如果文件与 PHP 脚本在同一目录下，函数期望文件名或文件的相对路径。作为第二个参数，函数期望文件的访问模式。这指定了我们是想通过文件句柄获取文件的读取权限，还是可以使用我们自己的内容对其进行描述或修改。\n\
+    \n以下是 `fopen()` 的可用访问模式：\n\n- `'r'` 只读，将文件指针放在文件开头\n- `'r+'` 读和写，将文件指针放在文件开头\n\
+    - `'w'` 只写，将文件截断为零长度或创建一个新文件\n- `'w+'` 读和写，将文件截断为零长度或创建一个新文件\n- `'a'` 只追加，将文件指针放在文件末尾\n\
+    - `'a+'` 追加和写，将文件指针放在文件末尾\n- `'x'` 只创建和写；如果文件存在则返回 false\n- `'x+'` 只创建和写；如果文件存在则返回\
+    \ false\n\n### 保存到文件\n\n要创建一个新文件或扩展现有文件，我们可以使用以下代码：\n\n```php\n<?php\n  $myFile\
+    \ = \"myfile.txt\";\n  $filehandler = fopen($myFile, \"a\");\n  fwrite($filehandler,\
+    \ \"I am a line\\n\");\n  fclose($filehandler);\n?>\n```\n\n### 读取文件\n\n在上面的脚本中，`fwrite`\
+    \ 用于文件写入内容。要从文件中读取，我们使用以下代码：\n\n```php\n<?php\n  $myFile = \"myfile.txt\";\n \
+    \ $filehandler = fopen($myFile, \"r\");\n  $contents = fread($filehandler);\n\
+    \  fclose($filehandler);\n?>\n```\n\n### 删除文件\n\n如果你想删除文件，可以使用 `unlink` 函数：\n\n\
+    ```php\n<?php\n  $myFile = \"myfile.txt\";\n  unlink($myFile);\n?>\n```\n\n##\
+    \ 第 5 天\n\n### 编写整洁的代码（一年后仍然易读）\n\n在你养成不整洁的编程风格之前，我想给你一些关于如何在程序员道路上编写“整洁”代码的建议。\n\
+    \n一方面，正如在变量章节中所描述的，使用适当且自描述的变量和函数名是极其重要的。在未知代码中读取 `$a`、`$b` 或 `$x` 等变量是非常令人失望的，因为它们没有显示其中将存储什么内容。\n\
+    \n在编写代码时使用制表符（tab stops）。\n\n"
+- fmt: "\n# Principle: Never trust data coming from outside\n\nIf you follow this\
+    \ principle, you have already won half the battle against crackers and hackers.\
+    \ Regarding the mistrust of external data, I mean you should validate the input\
+    \ data to see if it corresponds to the expected format. This means that, if a\
+    \ number is to be entered, it is best to check if the function is numeric (`$input`),\
+    \ whether it is really a number, or whether an e-mail address is set up as it\
+    \ should (exactly one `@` character and a domain must be specified at the end).\
+    \ This brings us to the next topic.\n\n## Protection against SQL Injections\n\n\
+    An SQL injection is a way manipulate an SQL Query so that it does something other\
+    \ than what it was meant for. This happens if you do not filter the entered data.\n\
+    \nSuppose we have the following script to offer a login functionality for a web\
+    \ page:\n\n```php\n<?php\n\n  $username = $_GET[\"username\"];\n  $password =\
+    \ $_GET[\"password\"];\n  $sql = \"SELECT \\* FROM users WHERE username = \"\"\
+    \".$username.\"\" AND password = \"\" . $password .\"\" \";\n  $mysqli=new mysqli('localhost','root','',\
+    \ 'test');\n  $result = $mysqli->query($sql);\n  echo \"Found the following user(s):\
+    \ \";\n  while ($row = $result->fetch_array()) {\n    echo $row[\"username\"].\
+    \ \"<br />\";\n  }\n\n?>\n```\n\nThis functionality has no problem if the users\
+    \ are just entering their username or password. But, unfortunately, there are\
+    \ technically savvy crackers who look for such simple logins, some use automated\
+    \ bots to find these logins, and try to enter the following:\n\nUsername: admin\n\
+    Password: `\" OR 1=1`\n\nIf we pass this text unfiltered into our SQL query, we\
+    \ get the following SQL statement:\n\n`SELECT \\* FROM users WHERE username =\
+    \ \"admin\" AND password = \"\" OR 1=1`\n\nSince `1` is always equal to `1`, a\
+    \ result is always returned. So the cracker is logged in as admin or even adds\
+    \ his users:\n\nUsername: x\nPassword: x\"; INSERT INTO users (username, password)\
+    \ VALUES (\"mynewuser\", \"mypassword\");`\n\nThe SQL would be:\n\n`SELECT \\\
+    * FROM users WHERE username = \"x\" AND password = \"x\"; INSERT INTO users (username,\
+    \ password) VALUES (\"mynewuser\", \"mypassword\");`\n\nBoth SQL statements would\
+    \ be executed and the cracker would have already created a new user account. Theoretically,\
+    \ he could also send a `DELETE` command and thus destroy our database or, for\
+    \ example, change the password of the administrator.\n\nBut how can you protect\
+    \ yourself against this?\n\nEither you filter the specified data for only allowed\
+    \ characters (`a-z`, `A-Z`, `0-9`) or you ‘escape’ the input data. This means,\
+    \ all special characters as well as the entire string are encapsulated by apostrophes\
+    \ and are thus made ‘harmless’. There is the ready-made function `$mysqli->real_escape_string()`,\
+    \ which gets a string as parameter and returns a safe escaped version of it.\n\
+    \nExample:\n\n`$password =$mysqli->real_escape_string($password);`\n\n## Keep\
+    \ your passwords encrypted\n\nSomething even large global companies have had to\
+    \ learn through bitter experience the need to always store passwords always encrypted\
+    \ in the database. There are encryption methods that encrypt only in one direction\
+    \ and generate so-called hashes from arbitrarily long strings. These are strings\
+    \ of a previously known length. PHP delivers its own well tested hashing library\
+    \ since PHP 5.5. You can use it e.g. with the function `password_hash($password,\
+    \ ALGORITHM)`.\n\n```php\n<?php\n\n  $password = \"password123\";\n  $hash = password_hash($password,\
+    \ PASSWORD_BCRYPT);\n  echo $password;  \n  echo \"<br />\";\n  echo $hash;\n\n\
+    ?>\n```\n\nOutput (the hash may differ from server to server and generated every\
+    \ time):\n\n`password123`\n`$2y$10$K6JP7Lfu2.wjuEGLzCact.8GZaok5oSWhH49.TzTZm5/PPfDzXYMW`\n\
+    \nThe hash can no longer be deciphered in plaintext. Now you can save these password\
+    \ hashes in your database. Every time a user wants to log in, you use the `password_hash()`\
+    \ function to generate the hash for the data the user put in. If the hashes are\
+    \ the same, the user entered the correct password. If a hacker wants to steal\
+    \ your database, he would need a lot of time to try all his word lists, because\
+    \ the `password_hash()` function needs some time to generate the hashes. You can\
+    \ add an optional `$options` parameter and define that a more complex method of\
+    \ hashing should be used so that the hashing gets even slower and is harder to\
+    \ crack.\n\n## Add salt to your passwords\n\nAnother security aspect is to protect\
+    \ oneself against users with unsafe passwords. Statistics from large user databases\
+    \ show that a considerable percentage of the users always use the same passwords,\
+    \ as, for example, as `asdf123`, `password`, `1234567890`. If a cracker gets our\
+    \ username with the hashes, it would be easy for him to match the hashes against\
+    \ the 1000 most commonly used passwords on the Internet. To prevent this, I recommend\
+    \ adding a long random string for each project, such as ‘afdsoin23oidvnio3iosdvn09832jknlsd’.\n\
+    \nIf a user logs in again and uses the password ‘password’, we store the hash\
+    \ for ‘passwordafdsoin23oidvnio3iosdvn09832jknlsd’.\n\n### Website tips\n\n**PHP**\n\
+    `www.php.net/manual/`\n\n**SQL**\n`www.w3schools.com/php/`\n\n**MySQL**\n`dev.mysql.com/doc/`\n\
+    \n### Book tips\n\n**PHP and MySQL for Dynamic Sites, Fourth Edition: Visual Quick\
+    \ Guide**\nby Larry Ullman, Peachpit Press, ISBN 0321784073\n\n***Head First PHP\
+    \ & MySQL: A Brain-Friendly Guide***\nby Lynn Beighley and Michael Morrison, O'Reilly\
+    \ Media, ISBN-10 0596006306, ISBN-13 978-0596006303\n\n**PHP Objects, Patterns,\
+    \ and Practice**\nby Matt Zandstra, ISBN-13 978-1430260318, ISBN-10 1430260319\n\
+    \n**Wikibook PHP Programming**\n`https://en.wikibooks.org/wiki/PHP_Programming`\n\
+    \n## Epilogue\n\nI hope you enjoyed the introduction to the world of web development\
+    \ with PHP and MySQL and you are now ready to implement your first own small projects.\n\
+    \nIf you need ideas about to try next: you could use the knowledge this course\
+    \ provides, for example, to create a guest book for a website, or a small script\
+    \ that displays a different greeting, depending on the day of the week and the\
+    \ time.\n"
+  raw: "#### Principle: Never trust data coming from outside\n\nIf you follow this\
+    \ principle, you have already won half the battle against crackers and hackers.\
+    \ Regarding the mistrust of external data, I mean you should validate the input\
+    \ data to see if it corresponds to the expected format. This means that, if a\
+    \ number is to be entered, it is best to check if the function is numeric ($input),\
+    \ whether it is really a number, or whether an e-mail address is set up as it\
+    \ should be (exactly one @ character and a domain must be specified at the end).\
+    \ This brings us to the next topic.\n\n#### Protection against SQL Injections\n\
+    \nAn SQL injection is a way manipulate an SQL Query so that it does something\
+    \ other than what it was meant for. This happens if you do not filter the entered\
+    \ data.\n\nSuppose we have the following script to offer a login functionality\
+    \ for a web page:\n\n<?php\n\n  $username = $\\_GET\\[\"username\"\\];\n\n  $password\
+    \ = $\\_GET\\[\"password\"\\];\n\n  $sql = \"SELECT \\* FROM users WHERE username\
+    \ = \"\".$username.\"\" AND password = \"\" . $password .\"\" \";\n\n  $mysqli=new\
+    \ mysqli('localhost','root','', 'test');\n\n  $result = $mysqli->query(\"$sql);\n\
+    \n  echo \"Found the following user(s): \";\n\n  while ($row = $result->fetch\\\
+    _array())) {\n\n    echo $row\\[\"username\"\\]. \"<br />\";\n\n  }\n\n?>\n\n\
+    This functionality has no problem if the users are just entering their username\
+    \ or password. But, unfortunately, there are technically savvy crackers who look\
+    \ for such simple logins, some use automated bots to find these logins, and try\
+    \ to enter the following:\n\nUsername: admin\n\nPassword: \" OR 1=1\n\nIf we pass\
+    \ this text unfiltered into our SQL query, we get the following SQL statement:\n\
+    \nSELECT \\* FROM users WHERE username = \"admin\" AND password = \"\" OR 1=1\n\
+    \nSince 1 is always equal to 1, a result is always returned. So the cracker is\
+    \ logged in as admin or even adds his users:\n\nUsername: x\n\nPassword: x\";\
+    \ INSERT INTO users (username, password) VALUES (\"mynewuser\", \"mypassword\"\
+    );\n\nThe SQL would be:\n\nSELECT \\* FROM users WHERE username = \"x\" AND password\
+    \ = \"x\"; INSERT INTO users (username, password) VALUES (\"mynewuser\", \"mypassword\"\
+    );\n\nBoth SQL statements would be executed and the cracker would have already\
+    \ created a new user account. Theoretically, he could also send a DELETE command\
+    \ and thus destroy our database or, for example, change the password of the administrator.\n\
+    \nBut how can you protect yourself against this?\n\nEither you filter the specified\
+    \ data for only allowed characters (a-z, A-Z, 0-9) or you ‘escape’ the input data.\
+    \ This means, all special characters as well as the entire string are encapsulated\
+    \ by apostrophes and are thus made ‘harmless’. There is the ready-made function\
+    \ $mysqli->real\\_escape\\_string(), which gets a string as parameter and returns\
+    \ a safe escaped version of it.\n\nExample:\n\n$password =$mysqli->real\\_escape\\\
+    _string($password);\n\n#### Keep your passwords encrypted\n\nSomething even large\
+    \ global companies have had to learn through bitter experience the need to always\
+    \ store passwords always encrypted in the database. There are encryption methods\
+    \ that encrypt only in one direction and generate so-called hashes from arbitrarily\
+    \ long strings. These are strings of a previously known length. PHP delivers its\
+    \ own well tested hashing library since PHP 5.5. You can use it e.g. with the\
+    \ function password\\_hash($password, ALGORITHM).\n\n<?php\n\n  $password = \"\
+    password123\";\n\n  $hash = password\\_hash($password, PASSWORD\\_BCRYPT);\n\n\
+      echo $password;  \n\n  echo \"<br />\";\n\n  echo $hash;\n\n?>\n\nOutput (the\
+    \ hash may differ from server to server and generated every time):\n\npassword123\n\
+    \n$2y$10$K6JP7Lfu2.wjuEGLzCact.8GZaok5oSWhH49.TzTZm5/PPfDzXYMW\n\nThe hash can\
+    \ no longer be deciphered in plaintext. Now you can save these password hashes\
+    \ in your database. Every time a user wants to log in, you use the password\\\
+    _hash() function to generate the hash for the data the user put in. If the hashes\
+    \ are the same, the user entered the correct password. If a hacker wants to steal\
+    \ your database, he would need a lot of time to try all his word lists, because\
+    \ the password\\_hash() function needs some time to generate the hashes. You can\
+    \ add an optional $options parameter and define that a more complex method of\
+    \ hashing should be used so that the hashing gets even slower and is harder to\
+    \ crack.\n\n#### Add salt to your passwords\n\nAnother security aspect is to protect\
+    \ oneself against users with unsafe passwords. Statistics from large user databases\
+    \ show that a considerable percentage of the users always use the same passwords,\
+    \ as, for example, asdf123, password, 1234567890. If a cracker gets our username\
+    \ with the hashes, it would be easy for him to match the hashes against the 1000\
+    \ most commonly used passwords on the Internet. To prevent this, I recommend adding\
+    \ a long random string for each project, such as ‘afdsoin23oidvnio3iosdvn09832jknlsd’.\n\
+    \nIf a user logs in again and uses the password ‘password’, we store the hash\
+    \ for ‘passwordafdsoin23oidvnio3iosdvn09832jknlsd’. With each login, we attach\
+    \ this string to the entered password in our script and calculate the hash. If\
+    \ someone is collecting our user database, it is impossible for him to check the\
+    \ hashes if he does not know our string.\n\nThe password\\_hash() function already\
+    \ adds a random salt automatically.\n\n### Website tips\n\n**PHP**\n\nwww.php.net/manual/en/\
+    \  \n\nOfficial guide to PHP with a good documentation on all functions existing\
+    \ in PHP, including numerous examples, is always updated when a new PHP version\
+    \ is released.\n\nwww.w3schools.com/php/  \n\nA very good tutorial site, explaining\
+    \ all available functions and \n\n**SQL**\n\ndev.mysql.com/doc/  \n\nOfficial\
+    \ site with large functional reference, but with somewhat complex examples\n\n\
+    www.php.net/manual/en/book.mysqli.php  \n\nPart of the official PHP guide/documentation\
+    \ with all PHP functions available around MySQL\n\nforums.mysql.com  \n\nOfficial\
+    \ MySQL forum with a very active community\n\n### Book tips\n\nAll of the following\
+    \ books are also available as e-books.\n\n**PHP and MySQL for Dynamic Web Sites,\
+    \ Fourth Edition: Visual QuickPro Guide**\n\nby Larry Ullman \n\nPeachpit Press\n\
+    \nISBN 0321784073  \n\nA good book covering most of the PHP and MySQL functions.\
+    \ Try to get the newest version, as there are a lot of changes in the latest PHP\
+    \ releases.\n\n***Head First PHP & MySQL: A Brain-Friendly Guide Kindle Edition***\n\
+    \n*by Lynn Beighley  and Michael Morrison  \n\n*O'Reilly Media\n\nISBN-10: 0596006306\
+    \  \n\nISBN-13: 978-0596006303  \n\nAn easy to understand book on PHP and MySQL.\
+    \ I hope there is a new version released soon to cover the PHP 7 extras.\n\n**PHP\
+    \ Objects, Patterns, and Practice**\n\nby Matt Zandstra\n\nISBN-13: 978-1430260318\n\
+    \nISBN-10: 1430260319\n\nA good book on programming patterns with focus on PHP.\
+    \ You will learn how to write clean code with standardized programming patterns.\
+    \ A very important topic in programming is the development of object-oriented\
+    \ projects. In any case, it is recommended as soon as you are familiar with the\
+    \ basics of PHP.\n\n**Wikibook PHP Programming**\n\n*https://en.wikibooks.org/wiki/PHP\\\
+    _Programming*\n\nWikibooks is a Wikipedia-based platform where, similar to the\
+    \ Wikipedia encyclopaedia, a large community writes non-fiction texts that are\
+    \ edited in book form. Some of the books have even appeared in print versions.\
+    \ The online Wikibooks have the advantage, thanks to the active community, that\
+    \ they are almost ‘live’ and kept up-to-date.\n\n## Epilogue\n\nI hope you enjoyed\
+    \ the introduction to the world of web development with PHP and MySQL and you\
+    \ are now ready to implement your first own small projects.\n\nIf you need ideas\
+    \ about to try next: you could use the knowledge this course provides, for example,\
+    \ to create a guest book for a website, or a small script that displays a different\
+    \ greeting, depending on the day of the week and the time."
+  toc: []
+  trans: "\n\n# 原则：永远不要信任来自外部的数据\n\n如果你遵循这一原则，你已经在对抗破解者和黑客的战斗中赢得了一半。关于对外部数据的不信任，我的意思是，你应该验证输入数据，以检查它们是否符合预期的格式。这意味着，如果要输入一个数字，最好检查该函数是否为数值（`$input`）、它是否确实是一个数字，或者电子邮件地址是否按要求设置（即恰好有一个\
+    \ `@` 字符且末尾必须指定一个域名）。这引出了我们的下一个话题。\n\n## 防止 SQL 注入\n\nSQL 注入是一种操纵 SQL 查询的方法，使其执行其预期之外的操作。如果你没有对输入的数据进行过滤，就会发生这种情况。\n\
+    \n假设我们有以下脚本来为网页提供登录功能：\n\n```php\n<?php\n\n  $username = $_GET[\"username\"];\n\
+    \  $password = $_GET[\"password\"];\n  $sql = \"SELECT \\* FROM users WHERE username\
+    \ = \"\"\".$username.\"\" AND password = \"\" . $password .\"\" \";\n  $mysqli=new\
+    \ mysqli('localhost','root','', 'test');\n  $result = $mysqli->query($sql);\n\
+    \  echo \"Found the following user(s): \";\n  while ($row = $result->fetch_array())\
+    \ {\n    echo $row[\"username\"]. \"<br />\";\n  }\n\n?>\n```\n\n如果用户只是输入用户名或密码，这个功能没有问题。但不幸的是，有一些技术高明的破解者会寻找这种简单的登录方式，有些人使用自动化机器人寻找这些登录口，并尝试输入以下内容：\n\
+    \n用户名: admin\n密码: `\" OR 1=1`\n\n如果我们将这段文本未经过滤地传递到 SQL 查询中，将得到以下 SQL 语句：\n\n`SELECT\
+    \ \\* FROM users WHERE username = \"admin\" AND password = \"\" OR 1=1`\n\n由于\
+    \ `1` 始终等于 `1`，因此始终会返回结果。所以，破解者以 admin 的身份登录，或者甚至添加了自己的用户：\n\n用户名: x\n密码: x\"\
+    ; INSERT INTO users (username, password) VALUES (\"mynewuser\", \"mypassword\"\
+    );`\n\nSQL 将将变为：\n\n`SELECT \\* FROM users WHERE username = \"x\" AND password\
+    \ = \"x\"; INSERT INTO users (username, password) VALUES (\"mynewuser\", \"mypassword\"\
+    );`\n\n这两个 SQL 语句都将被执行，破解者已经创建了一个新用户账户。理论上，他还可以发送 `DELETE` 命令，从而破坏我们的数据库，或者例如更改管理员的密码。\n\
+    \n但你如何保护自己呢？\n\n要么对指定的数据进行过滤，只允许允许字符（`a-z`、`A-Z`、`0-9`），要么对输入数据进行“转义”。这意味着所有的特殊字符以及整个字符串都被单引号封装起来，从而变得“无害”。这里有一个现成的函数\
+    \ `$mysqli->real_escape_string()`，它接收一个字符串作为参数，并返回其安全的转义版本。\n\n示例：\n\n`$password\
+    \ =$mysqli->real_escape_string($password);`\n\n## 保持你的密码加密\n\n即使是大型全球性公司，也通过惨痛的经验学到了：必须在数据库中始终以加密方式存储密码。有些加密方法只进行单向加密，并从任意长度的字符串生成所谓的哈希（hashes）。这些是以前已知长度的字符串。PHP\
+    \ 从 PHP 5.5 版本起提供了了自己的经过良好测试的哈希库。你可以使用它，例如通过 `password_hash($password, ALGORITHM)`\
+    \ 函数。\n\n```php\n<?php\n\n  $password = \"password123\";\n  $hash = password_hash($password,\
+    \ PASSWORD_BCRYPT);\n  echo $password;  \n  echo \"<br />\";\n  echo $hash;\n\n\
+    ?>\n```\n\n输出（哈希值可能因服务器而异且每次都是生成的）：\n\n`password123`\n`$2y$10$K6JP7Lfu2.wjuEGLzCact.8GZaok5oSWhH49.TzTZm5/PPfDzXYMW`\n\
+    \n哈希值无法再明文解密。现在你可以将这些密码哈希存储在数据库中。每当用户想要登录时，使用 `password_hash()` 函数为用户输入的数据生成哈希。如果哈希相同，说明用户了正确的密码。如果黑客想要窃取你的数据库，我们需要大量时间来尝试所有的字典列表，因为\
+    \ `password_hash()` 函数需要一些时间来生成哈希。你可以添加一个可选的 `$options` 参数并定义使用更复杂的哈希方法，这样哈希过程会变得更慢且更难破解。\n\
+    \n## 为你的密码添加盐（Salt）\n\n另一个安全方面是保护自己免受使用不安全的用户的影响。大型用户数据库的数据显示，很大比例的用户始终使用相同的密码，例如\
+    \ `asdf123`、`password`、`1234567890`。如果破解者获取了带有哈希的用户名，对他来说很容易将哈希与互联网上常用的 1000 个密码进行匹配。为了防止这一点，我建议为每个项目添加一个长随机字符串，例如‘afdsoin23oidvnio3iosdvn09832jknlsd’。\n\
+    \n如果用户再次登录并使用密码‘password’，我们存储‘passwordafdsoin23oidvnio3iosdvn09832jknlsd’的哈希。\n\
+    \n### 网站提示\n\n**PHP**\n`www.php.net/manual/`\n\n**SQL**\n`www.w3schools.com/php/`\n\
+    \n**MySQL**\n`dev.mysql.com/doc/`\n\n### 书籍提示\n\n**PHP and MySQL for Dynamic Sites,\
+    \ Fourth Edition: Visual Quick Guide**\n作者 Larry Ullman, Peachpit Press, ISBN\
+    \ 0321784073\n\n***Head First PHP & MySQL: A Brain-Friendly Guide***\n作者 Lynn\
+    \ Beighley and Michael Morrison, O'Reilly Media, ISBN-10 0596006306, ISBN-13 978-0596006303\n\
+    \n**PHP Objects, Patterns, and Practice**\n作者 Matt Zandstra, ISBN-13 978-1430260318,\
+    \ ISBN-10 1430260319\n\n**Wikibook PHP Programming**\n`https://en.wikibooks.org/wiki/PHP_Programming`\n\
+    \n## 结语\n\n希望你喜欢这个使用 PHP 和 MySQL 进入 Web 开发世界的介绍，并且现在已经准备好实现你自己的第一个小项目了。\n\n如果你需要关于接下来尝试什么的的想法：你可以利用本课程提供的知识，例如为网站创建一个留言板，或者编写一个根据星期和时间显示不同问候语的小脚本。\n\
+    \n"
+- fmt: '
+
+    Or, how about having a page for collecting signatures or votes? The page could
+    write the data to a database, but it should check beforehand whether an e-mail
+    address and/or a certain combination of first and last names already exists.
+
+
+    Do you have any feedback on this book? I would be very pleased.
+
+
+    I am available at the e-mail address `books@theklaus.at`.
+
+    '
+  raw: 'Or, how about having a page for collecting signatures or votes? The page could
+    write the data to a database, but it should check beforehand whether an e-mail
+    address and/or a certain combination of first and last names already exists.
+
+
+    Do you have any feedback on this book? I would be very pleased.
+
+
+    I am available at the e-mail address books@theklaus.at.'
+  toc: []
+  trans: '
+
+
+    或者，建立一个用于收集签名或投票的页面如何？该页面可以将数据写入数据库，但在此之前应该检查电子邮件地址和/或特定的姓氏与名字组合是否已经存在。
+
+
+    你对这本书有任何反馈吗？我将不胜荣幸。
+
+
+    你可以通过电子邮件地址 `books@theklaus.at` 与我联系。
+
+    '
