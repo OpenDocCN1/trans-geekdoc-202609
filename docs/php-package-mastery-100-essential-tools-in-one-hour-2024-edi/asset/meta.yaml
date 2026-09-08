@@ -1,0 +1,422 @@
+name: PHP Package Mastery： 100 Essential Tools in One Hour – 2024 Edition
+name_cn: PHP 包精通：一小时掌握 100 个核心工具 – 2024 版
+slug: php-package-mastery-100-essential-tools-in-one-hour-2024-edi
+toc:
+- - '#'
+  - PHP 包精通：一小时掌握 100 个核心工具 – 2024 版
+- - '##'
+  - 索引
+- - '##'
+  - 第 1 章：引言
+- - '##'
+  - 第 2 章：标准库
+- - '##'
+  - 第 3 章：外部库
+- - '###'
+  - 3. BCMath
+- - '###'
+  - 示例:BCMath
+- - '###'
+  - 4. exif
+- - '###'
+  - 示例:exif
+- - '###'
+  - 5. Phar
+- - '###'
+  - 示例:Phar
+- - '###'
+  - 6. DOMDocument
+- - '###'
+  - 示例:DOMDocument
+- - '###'
+  - 7. DateTime
+- - '###'
+  - 8. hash
+- - '###'
+  - 9. Reflection
+- - '###'
+  - 10. stream_context_create
+- - '###'
+  - 11. imagick
+- - '###'
+  - Ex:imagick
+- - '###'
+  - 12. sockets
+- - '###'
+  - Ex:sockets
+- - '###'
+  - 13. 文件系统函数
+- - '###'
+  - Ex:Filesystem Functions
+- - '###'
+  - 14. file_exists 和 is_writable
+- - '###'
+  - Ex:file_exists and is_writable
+- - '###'
+  - 15. SPL (标准 PHP 库)
+- - '###'
+  - 示例：SPL (标准 PHP 库)
+- - '###'
+  - 16. CURL
+- - '###'
+  - 示例：CURL
+- - '###'
+  - 17. JSON
+- - '###'
+  - 示例：JSON
+- - '###'
+  - 18. 多字节字符串 (mbstring)
+- - '###'
+  - 示例：多字节字符串 (mbstring)
+- - '###'
+  - 19. XML 解析器 (Parser)
+- - '###'
+  - 示例：XML 解析器
+- - '###'
+  - 20. SimpleXML
+- - '###'
+  - 示例：SimpleXML
+- - '###'
+  - 21. ZipArchive (压缩存档)
+- - '###'
+  - 示例：ZipArchive
+- - '###'
+  - 22. Filter (过滤器)
+- - '###'
+  - 示例：Filter
+- - '###'
+  - 23. PCNTL
+- - '###'
+  - 24. posix
+- - '###'
+  - 25. Intl
+- - '###'
+  - 26. GMP (GNU Multiple Precision)
+- - '###'
+  - 27. mysqli
+- - '###'
+  - 示例：mysqli
+- - '###'
+  - 28. ftp
+- - '###'
+  - 示例：ftp
+- - '###'
+  - 29. array_diff
+- - '###'
+  - 示例：array_diff
+- - '###'
+  - 30. array_map
+- - '###'
+  - 示例：array_map
+- - '###'
+  - 1. Guzzle
+- - '###'
+  - 示例：Guzzle
+- - '###'
+  - 2. PHPMailer
+- - '###'
+  - 示例：PHPMailer
+- - '###'
+  - 3. Intervention Image
+- - '###'
+  - 示例：Intervention Image
+- - '###'
+  - 4. PHP dotenv
+- - '###'
+  - 示例：PHP dotenv
+- - '###'
+  - 5. Slim Framework
+- - '###'
+  - 示例：Slim Framework
+- - '###'
+  - 6. Laminas
+- - '###'
+  - 示例：Laminas
+- - '###'
+  - 7. Twig
+- - '###'
+  - 示例：Twig
+- - '###'
+  - 8. RedBeanPHP
+- - '###'
+  - 示例：RedBeanPHP
+- - '####'
+  - '设置 RedBeanPHP:'
+- - '####'
+  - 数据库连接：
+- - '####'
+  - 创建和存储 Bean（实体）：
+- - '####'
+  - 获取和显示数据：
+- - '####'
+  - 优势：
+- - '###'
+  - 9. Phinx
+- - '###'
+  - 示例：Phinx
+- - '####'
+  - 步骤与概念：
+- - '###'
+  - 10. BulletPHP
+- - '###'
+  - 示例：BulletPHP
+- - '####'
+  - 步骤与概念：
+- - '###'
+  - 11. Spatie Image Optimizer
+- - '###'
+  - 示例：Spatie Image Optimizer
+- - '###'
+  - 12. Barryvdh Laravel Debugbar
+- - '###'
+  - 示例：Barryvdh Laravel Debugbar
+- - '###'
+  - 13. ReactPHP
+- - '###'
+  - 示例：ReactPHP
+- - '###'
+  - 14. Ratchet
+- - '###'
+  - 示例：Ratchet
+- - '###'
+  - 15. PHPUnit
+- - '###'
+  - 示例：PHPUnit
+- - '###'
+  - 16. Behat
+- - '###'
+  - 示例：Behat
+- - '###'
+  - 简单的 Behat 特性示例
+- - '###'
+  - 17. Carbon
+- - '###'
+  - 示例：Carbon
+- - '###'
+  - 18. PHP-DI
+- - '###'
+  - 示例：PHP-DI
+- - '###'
+  - 19. PHP-Scoper
+- - '###'
+  - 示例：PHP-Scoper
+- - '###'
+  - 20. VichUploaderBundle
+- - '###'
+  - 示例：VichUploaderBundle
+- - '###'
+  - 21. PHP League 的 Flysystem
+- - '###'
+  - 示例：PHP League's Flysystem
+- - '###'
+  - 22. Propel
+- - '###'
+  - 示例：Propel
+- - '###'
+  - 23. Carbon
+- - '###'
+  - 示例：Carbon
+- - '###'
+  - 24. Monolog
+- - '###'
+  - 示例：Monolog
+- - '###'
+  - 25. Snappy
+- - '###'
+  - 示例：Snappy
+- - '###'
+  - 26. PHPLeague's Glide
+- - '###'
+  - ：PHPLeague's Glide
+- - '###'
+  - 27. VarDumper
+- - '###'
+  - ：VarDumper
+- - '###'
+  - 28. PsySH
+- - '###'
+  - ：PsySH
+- - '###'
+  - 29. GuzzleHttp
+- - '###'
+  - 示例:GuzzleHttp
+- - '###'
+  - '200'
+- - '###'
+  - 30. PHPMailer
+- - '###'
+  - 示例:PHPMailer
+- - '###'
+  - 邮件已发送
+- - '###'
+  - 31. Aura.Sql
+- - '###'
+  - 示例:Aura.Sql
+- - '###'
+  - '"users" 表中 ID 为 1, 2 和 3 的用户的 JSON 表达。'
+- - '###'
+  - 32. League\ColorExtractor
+- - '###'
+  - 33. Swoole
+- - '###'
+  - 34. ReactPHP Promise
+- - '###'
+  - 35. Carbon Fields
+- - '###'
+  - 36. Whoops
+- - '###'
+  - Ex:Whoops
+- - '###'
+  - 37. Faker
+- - '###'
+  - Ex:Faker
+- - '###'
+  - 38. HTMLPurifier
+- - '###'
+  - Ex:HTMLPurifier
+- - '###'
+  - 39. PHPLeague's Plates
+- - '###'
+  - 40. PhpSpreadsheet
+- - '###'
+  - 41. Sodium
+- - '###'
+  - 42. PHPBench
+- - '###'
+  - 43. Imagine
+- - '###'
+  - 示例：Imagine
+- - '###'
+  - 44. Faker
+- - '###'
+  - 示例：Faker
+- - '###'
+  - 45. Symfony
+- - '###'
+  - 示例：Symfony
+- - '###'
+  - 46. Stomp PHP
+- - '###'
+  - 示例：Stomp PHP
+- - '###'
+  - 47. Imagine
+- - '###'
+  - 示例：Imagine
+- - '###'
+  - 48. PHP League's CSV
+- - '###'
+  - 示例：PHP League's CSV
+- - '###'
+  - 49. Symfony Validator
+- - '###'
+  - 示例：Symfony Validator
+- - '###'
+  - 50. Laravel Excel
+- - '###'
+  - 示例：Laravel Excel
+- - '###'
+  - 51. PHP_Sniffer
+- - '###'
+  - 示例：PHP_Sniffer
+- - '###'
+  - 52. PHPMD (检测器)
+- - '###'
+  - 示例：PHPMD (检测器)
+- - '###'
+  - 53. GuzzleHttp\Psr7
+- - '###'
+  - 示例：GuzzleHttp\Psr7
+- - '###'
+  - 54. League\Uri
+- - '###'
+  - 示例：League\Uri
+- - '###'
+  - 55. Symfony Process
+- - '###'
+  - 示例：Symfony Process
+- - '###'
+  - 56. PHP League 的 Omnipay
+- - '###'
+  - 示例：PHP League's Omnipay
+- - '###'
+  - 57. Symfony HttpFoundation
+- - '###'
+  - 示例：Symfony HttpFoundation
+- - '###'
+  - 58. League\Period
+- - '###'
+  - 示例：League\Period
+- - '###'
+  - 59. Symfony Finder
+- - '###'
+  - 示例：Symfony Finder
+- - '###'
+  - 60. Respect\Validation
+- - '###'
+  - 示例：Respect\Validation
+- - '###'
+  - 61. Laravel-Excel
+- - '###'
+  - 示例：Laravel-Excel
+- - '###'
+  - 62. PHPStan
+- - '###'
+  - 示例：PHPStan
+- - '###'
+  - 63. EasyRDF
+- - '###'
+  - 示例：EasyRDF
+- - '###'
+  - 64. Doctrine Cache
+- - '###'
+  - 示例：Doctrine Cache
+- - '###'
+  - 65. Doctrine ORM
+- - '###'
+  - 示例：Doctrine ORM
+- - '###'
+  - 66. Flysystem
+- - '###'
+  - 示例：Flysystem
+- - '###'
+  - 67. Laravel Dusk
+- - '###'
+  - 示例：Laravel Dusk
+- - '###'
+  - 68. PHPStan
+- - '###'
+  - 示例：PHPStan
+- - '###'
+  - 69. Symfony Console
+- - '###'
+  - 示例：Symfony Console
+- - '###'
+  - 70. PHP-DI
+- - '###'
+  - 示例：PHP-DI
+- - '###'
+  - 71. Respect\Validation
+- - '###'
+  - 示例：Respect\Validation
+- - '###'
+  - 72. PHP League's OAuth2 Client
+- - '###'
+  - 示例：PHP League's OAuth2 Client
+- - '###'
+  - 73. PsySH
+- - '###'
+  - 示例：PsySH
+- - '###'
+  - 74. PHPStan
+- - '###'
+  - 示例：PHPStan
+- - '###'
+  - 75. SwiftMailer
+- - '###'
+  - 示例：SwiftMailer
+- - '###'
+  - 76. PHPExcel (现名为 PhpSpreadsheet)
+- - '###'
+  - 77. Whoops
+- - '###'
+  - 78. Predis
