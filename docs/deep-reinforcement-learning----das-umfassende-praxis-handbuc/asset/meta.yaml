@@ -1,0 +1,464 @@
+name: Deep Reinforcement Learning -- Das umfassende Praxis-Handbuch
+name_cn: 深度强化学习——全面实践指南
+slug: deep-reinforcement-learning----das-umfassende-praxis-handbuc
+toc:
+- - '#'
+  - 深度强化学习——全面实践指南
+- - '##'
+  - 第三部分：基于策略的算法](../Text/teil_III.xhtml)
+- - '###'
+  - 13.6 总结](../Text/13.xhtml#sigil_toc_id_176
+- - '#'
+  - 第 14 章：通过强化学习训练机器人](../Text/14.xhtml)
+- - '###'
+  - 14.1 机器人 - 概述](../Text/14.xhtml#sigil_toc_id_177
+- - '###'
+  - 14.2 机器人训练](../Text/14.xhtml#sigil_toc_id_178
+- - '###'
+  - 14.3 自然语言处理](../Text/14.xhtml#sigil_toc_id_179
+- - '####'
+  - 14.3.1 循环神经网络](../Text/14.xhtml#sigil_toc_id_180
+- - '####'
+  - 14.3.2 词嵌入](../Text/14.xhtml#sigil_toc_id_181
+- - '####'
+  - 14.3.3 编码器-解码器](../Text/14.xhtml#sigil_toc_id_182
+- - '###'
+  - 14.4 Seq2Seq 训练](../Text/14.xhtml#sigil_toc_id_183
+- - '####'
+  - 14.4.1 对数似然训练](../Text/14.xhtml#sigil_toc_id_184
+- - '####'
+  - 14.4.2 BLEU 评分](../Text/14.xhtml#sigil_toc_id_185
+- - '####'
+  - 14.4.3 RL 和 Seq2Seq](../Text/14.xhtml#sigil_toc_id_186
+- - '####'
+  - 14.4.4 自回归序列训练 (SCST)](../Text/14.xhtml#sigil_toc_id_198)
+- - '###'
+  - 14.5 机器人示例](../Text/14.xhtml#sigil_toc_id_188
+- - '####'
+  - 14.5.1 示例结构](../Text/14.xhtml#sigil_toc_id_189
+- - '####'
+  - 14.5.2 模块：cornell.py 和 data.py](../Text/14.xhtml#sigil_toc_id_190
+- - '####'
+  - 14.5.3 BLEU 评分和 utils.py](../Text/14.xhtml#sigil_toc_id_191
+- - '####'
+  - 14.5.4 模型](../Text/14.xhtml#sigil_toc_id_192
+- - '###'
+  - 14.6 检查数据](../Text/14.xhtml#sigil_toc_id_193
+- - '###'
+  - 14.7 训练：交叉熵](../Text/14.xhtml#sigil_toc_id_194
+- - '####'
+  - 14.7.1 实现](../Text/14.xhtml#sigil_toc_id_195
+- - '####'
+  - 14.7.2 结果](../Text/14.xhtml#sigil_toc_id_196
+- - '###'
+  - 14.8 训练：自回归序列训练 (SCST)](../Text/14.xhtml#sigil_toc_id_198)
+- - '####'
+  - 14.8.1 实现](../Text/14.xhtml#sigil_toc_id_199
+- - '####'
+  - 14.8.2 结果](../Text/14.xhtml#sigil_toc_id_200
+- - '###'
+  - 14.9 使用数据测试模型](../Text/14.xhtml#sigil_toc_id_201
+- - '###'
+  - 14.10 Telegram 机器人](../Text/14.xhtml#sigil_toc_id_202
+- - '###'
+  - 14.11 总结](../Text/14.xhtml#sigil_toc_id_203
+- - '#'
+  - 第 15 章：TextWorld 环境](../Text/15.xhtml)
+- - '###'
+  - 15.1 交互式小说](../Text/15.xhtml#sigil_toc_id_204
+- - '###'
+  - 15.2 环境](../Text/15.xhtml#sigil_toc_id_205
+- - '####'
+  - 15.2.1 安装](../Text/15.xhtml#sigil_toc_id_206
+- - '####'
+  - 15.2.2 创建](../Text/15.xhtml#sigil_toc_id_207
+- - '####'
+  - 15.2.3 观测与动作空间](../Text/15.xhtml#sigil_toc_id_208
+- - '####'
+  - 15.2.4 额外信息](../Text/15.xhtml#sigil_toc_id_209
+- - '###'
+  - 15.3 简单 DQN](../Text/15.xhtml#sigil_toc_id_210
+- - '####'
+  - 15.3.1 预处理观测](../Text/15.xhtml#sigil_toc_id_211
+- - '####'
+  - 15.3.2 嵌入与编码器](../Text/15.xhtml#sigil_toc_id_212
+- - '####'
+  - 15.3.3 DQN与智能体](../Text/15.xhtml#sigil_toc_id_213
+- - '####'
+  - 15.3.4 训练](../Text/15.xhtml#sigil_toc_id_214
+- - '####'
+  - 15.3.5 训练结果](../Text/15.xhtml#sigil_toc_id_215
+- - '###'
+  - 15.4 生成模型](../Text/15.xhtml#sigil_toc_id_216
+- - '####'
+  - 15.4.1 实现](../Text/15.xhtml#sigil_toc_id_217
+- - '####'
+  - 15.4.2 结果](../Text/15.xhtml#sigil_toc_id_218
+- - '####'
+  - 15.4.3 DQN训练](../Text/15.xhtml#sigil_toc_id_219
+- - '###'
+  - 15.5 总结](../Text/15.xhtml#sigil_toc_id_221
+- - '#'
+  - 第 16 章：Web导航](../Text/16.xhtml)
+- - '###'
+  - 16.1 Web导航](../Text/16.xhtml#sigil_toc_id_222
+- - '####'
+  - 16.1.1 浏览器自动化与RL](../Text/16.xhtml#sigil_toc_id_223
+- - '####'
+  - 16.1.2 World of Bits](../Text/16.xhtml#sigil_toc_id_224
+- - '###'
+  - 16.2 OpenAI Universe](../Text/16.xhtml#sigil_toc_id_225
+- - '####'
+  - 16.2.1 安装](../Text/16.xhtml#sigil_toc_id_226
+- - '####'
+  - 16.2.2 动作与观测](../Text/16.xhtml#sigil_toc_id_227
+- - '####'
+  - 16.2.3 创建环境](../Text/16.xhtml#sigil_toc_id_228
+- - '####'
+  - 16.2.4 稳定性](../Text/16.xhtml#sigil_toc_id_229
+- - '###'
+  - 16.3 简单任务](../Text/16.xhtml#sigil_toc_id_230
+- - '####'
+  - 16.3.1 网格上的动作](../Text/16.xhtml#sigil_toc_id_231
+- - '####'
+  - 16.3.2 示例概述](../Text/16.xhtml#sigil_toc_id_232
+- - '####'
+  - 16.3.3 模型](../Text/16.xhtml#sigil_toc_id_233
+- - '####'
+  - 16.3.4 训练代码](../Text/16.xhtml#sigil_toc_id_234
+- - '####'
+  - 16.3.5 启动容器](../Text/16.xhtml#sigil_toc_id_235
+- - '####'
+  - 16.3.6 训练过程](../Text/16.xhtml#sigil_toc_id_236
+- - '####'
+  - 16.3.7 检查学习到的策略](../Text/16.xhtml#sigil_toc_id_237
+- - '####'
+  - 16.3.8 简单任务的问题](../Text/16.xhtml#sigil_toc_id_238
+- - '###'
+  - 16.4 人类演示](../Text/16.xhtml#sigil_toc_id_239
+- - '####'
+  - 16.4.1 记录演示](../Text/16.xhtml#sigil_toc_id_240
+- - '####'
+  - 16.4.2 记录格式](../Text/16.xhtml#sigil_toc_id_241
+- - '####'
+  - 16.4.3 通过演示训练](../Text/16.xhtml#sigil_toc_id_242
+- - '####'
+  - 16.4.4 结果](../Text/16.xhtml#sigil_toc_id_243
+- - '####'
+  - 16.4.5 井字棋 (Tic-Tac-Toe](../Text/16.xhtml#sigil_toc_id_244)
+- - '###'
+  - 16.5 添加描述文本](../Text/16.xhtml#sigil_toc_id_245
+- - '####'
+  - 16.5.1 实现](../Text/16.xhtml#sigil_toc_id_246
+- - '####'
+  - 16.5.2 结果](../Text/16.xhtml#sigil_toc_id_247
+- - '###'
+  - 16.6 更多可能性](../Text/16.xhtml#sigil_toc_id_248
+- - '###'
+  - 16.7 总结](../Text/16.xhtml#sigil_toc_id_249
+- - '#'
+  - 第四部分：高级算法与技术](../Text/teil_IV.xhtml)
+- - '##'
+  - 第 17 章：连续动作空间](../Text/17.xhtml)
+- - '###'
+  - 17.1 为什么需要连续动作空间](../Text/17.xhtml#sigil_toc_id_250
+- - '###'
+  - 17.2 动作空间](../Text/17.xhtml#sigil_toc_id_251
+- - '###'
+  - 17.3 环境](../Text/17.xhtml#sigil_toc_id_252
+- - '###'
+  - 17.4 A2C 算法](../Text/17.xhtml#sigil_toc_id_253
+- - '####'
+  - 17.4.1 实现](../Text/17.xhtml#sigil_toc_id_254
+- - '####'
+  - 17.4.2 结果](../Text/17.xhtml#sigil_toc_id_255
+- - '####'
+  - 17.4.3 使用模型](../Text/17.xhtml#sigil_toc_id_256
+- - '###'
+  - 17.5 确定性策略梯度](../Text/17.xhtml#sigil_toc_id_257
+- - '####'
+  - 17.5.1 探索](../Text/17.xhtml#sigil_toc_id_258
+- - '####'
+  - 17.5.2 实现](../Text/17.xhtml#sigil_toc_id_259
+- - '####'
+  - 17.5.3 结果](../Text/17.xhtml#sigil_toc_id_260
+- - '###'
+  - 17.6 分布策略梯度 (Distributional Policy Gradients](../Text/17.xhtml#sigil_toc_id_261
+- - '####'
+  - 17.6.1 架构](../Text/17.xhtml#sigil_toc_id_262
+- - '####'
+  - 17.6.2 实现](../Text/17.xhtml#sigil_toc_id_263
+- - '####'
+  - 17.6.3 结果](../Text/17.xhtml#sigil_toc_id_264
+- - '####'
+  - 17.6.4 视频记录](../Text/17.xhtml#sigil_toc_id_265
+- - '###'
+  - 17.7 更多可能性](../Text/17.xhtml#sigil_toc_id_266
+- - '###'
+  - 17.8 总结](../Text/17.xhtml#sigil_toc_id_267
+- - '##'
+  - 第 18 章：机器人学习中的 RL](../Text/18.xhtml)
+- - '###'
+  - 18.1 机器人与机器人技术](../Text/18.xhtml#sigil_toc_id_268
+- - '####'
+  - 18.1.2 硬件](../Text/18.xhtml#sigil_toc_id_269
+- - '####'
+  - 18.1.5 执行器](../Text/18.xhtml#sigil_toc_id_270
+- - '####'
+  - 18.1.6 框架](../Text/18.xhtml#sigil_toc_id_271
+- - '###'
+  - 18.2 一个训练目标](../Text/18.xhtml#sigil_toc_id_274
+- - '###'
+  - 18.3 仿真器和模型](../Text/18.xhtml#sigil_toc_id_275
+- - '####'
+  - 18.3.1 模型文件](../Text/18.xhtml#sigil_toc_id_276
+- - '####'
+  - 18.3.2 robot 类](../Text/18.xhtml#sigil_toc_id_277
+- - '###'
+  - 18.4 DDPG 训练和结果](../Text/18.xhtml#sigil_toc_id_278
+- - '###'
+  - 18.5 硬件控制](../Text/18.xhtml#sigil_toc_id_279
+- - '####'
+  - 18.5.1 MicroPython](../Text/18.xhtml#sigil_toc_id_280
+- - '####'
+  - 18.5.2 传感器处理](../Text/18.xhtml#sigil_toc_id_281
+- - '####'
+  - 18.5.3 驱动舵机](../Text/18.xhtml#sigil_toc_id_282
+- - '####'
+  - 18.5.4 在硬件上部署模型](../Text/18.xhtml#sigil_toc_id_283
+- - '####'
+  - 18.5.5 组合所有](../Text/18.xhtml#sigil_toc_id_284
+- - '###'
+  - 18.6 策略实验](../Text/18.xhtml#sigil_toc_id_285
+- - '###'
+  - 18.7 总结](../Text/18.xhtml#sigil_toc_id_286
+- - '##'
+  - 第 19 章：置信区域 – PPO, TRPO, ACKTR 和 SAC](../Text/19.xhtml)
+- - '###'
+  - 19.1 Roboschool](../Text/19.xhtml#sigil_toc_id_289
+- - '###'
+  - 19.2 标准 A2C 算法](../Text/19.xhtml#sigil_toc_id_290
+- - '####'
+  - 19.2.1 实现](../Text/19.xhtml#sigil_toc_id_291
+- - '####'
+  - 19.2.2 结果](../Text/19.xhtml#sigil_toc_id_292
+- - '####'
+  - 19.2.3 视频记录](../Text/19.xhtml#sigil_toc_id_293
+- - '###'
+  - 19.3 近端策略优化 (PPO](../Text/19.xhtml#sigil_toc_id_294
+- - '####'
+  - 19.3.1 实现](../Text/19.xhtml#sigil_toc_id_295
+- - '####'
+  - 19.3.2 结果](../Text/19.xhtml#sigil_toc_id_296
+- - '###'
+  - 19.4 置信区域策略优化 (TRPO](../Text/19.xhtml#sigil_toc_id_297
+- - '####'
+  - 19.4.1 实现](../Text/19.xhtml#sigil_toc_id_298
+- - '####'
+  - 19.4.2 结果](../Text/19.xhtml#sigil_toc_id_299
+- - '###'
+  - 19.5 带有优势的 Actor-Critic (ACKTR](../Text/19.xhtml#sigil_toc_id_300)
+- - '####'
+  - 19.5.1 实现](../Text/19.xhtml#sigil_toc_id_301
+- - '####'
+  - 19.5.2 结果](../Text/19.xhtml#sigil_toc_id_302
+- - '###'
+  - 19.6 软 Actor-Critic (SAC](../Text/19.xhtml#sigil_toc_id_303)
+- - '####'
+  - 19.6.1 实现](../Text/19.xhtml#sigil_toc_id_304
+- - '####'
+  - 19.6.2 结果](../Text/19.xhtml#sigil_toc_id_305
+- - '###'
+  - 19.7 总结](../Text/19.xhtml#sigil_toc_id_306
+- - '#'
+  - 第 20 章：强化学习中的黑盒](../Text/20.xhtml)
+- - '###'
+  - 20.1 黑盒算法](../Text/20.xhtml#sigil_toc_id_307
+- - '###'
+  - 20.2 演化策略 (ES](../Text/20.xhtml#sigil_toc_id_308
+- - '###'
+  - 20.3 用于 CartPole 的 ES](../Text/20.xhtml#sigil_toc_id_309
+- - '###'
+  - 20.4 用于 HalfCheetah 的 ES](../Text/20.xhtml#sigil_toc_id_310
+- - '####'
+  - 20.4.1 实现](../Text/20.xhtml#sigil_toc_id_311
+- - '####'
+  - 20.4.2 结果](../Text/20.xhtml#sigil_toc_id_312
+- - '###'
+  - 20.5 遗传算法 (GA](../Text/20.xhtml#sigil_toc_id_313
+- - '###'
+  - 20.6 用于 CartPole 的 GA](../Text/20.xhtml#sigil_toc_id_314
+- - '####'
+  - 20.6.1 结果](../Text/20.xhtml#sigil_toc_id_315
+- - '###'
+  - 20.7 GA 优化](../Text/20.xhtml#sigil_toc_id_316
+- - '####'
+  - 20.7.1 Deep GA](../Text/20.xhtml#sigil_toc_id_317
+- - '####'
+  - 20.7.2 新颖性搜索 (Novelty Search](../Text/20.xhtml#sigil_toc_id_318)
+- - '###'
+  - 20.8 用于 HalfCheetah 的 GA](../Text/20.xhtml#sigil_toc_id_319
+- - '###'
+  - 20.9 总结](../Text/20.xhtml#sigil_toc_id_320
+- - '#'
+  - 第 21 章：高级探索](../Text/21.xhtml)
+- - '###'
+  - 21.1 探索的重要性](../Text/21.xhtml#sigil_toc_id_321
+- - '###'
+  - 21.2 什么是 $\epsilon$-Greedy 策略](../Text/21.xhtml#sigil_toc_id_322
+- - '###'
+  - 21.3 备用探索方法](../Text/21.xhtml#sigil_toc_id_323
+- - '####'
+  - 21.3.1 噪声网络](../Text/21.xhtml#sigil_toc_id_324
+- - '####'
+  - 21.3.2 基于计数器的算法](../Text/21.xhtml#sigil_toc_id_325
+- - '####'
+  - 21.3.3 基于预测的算法](../Text/21.xhtml#sigil_toc_id_326
+- - '###'
+  - 21.4 MountainCar 实验](../Text/21.xhtml#sigil_toc_id_327
+- - '####'
+  - 21.4.1 使用 $\epsilon$-Greedy 策略的 DQN](../Text/21.xhtml#sigil_toc_id_328
+- - '####'
+  - 21.4.2 带有噪声网络的 DQN](../Text/21.xhtml#sigil_toc_id_329
+- - '####'
+  - 21.4.3 带有状态计数器的 DQN](../Text/21.xhtml#sigil_toc_id_330
+- - '####'
+  - 21.4.4 PPO 算法](../Text/21.xhtml#sigil_toc_id_331
+- - '####'
+  - 21.4.5 带有噪声网络的 PPO 算法](../Text/21.xhtml#sigil_toc_id_332
+- - '####'
+  - 21.4.6 带有计数器探索的 PPO 算法](../Text/21.xhtml#sigil_toc_id_333
+- - '####'
+  - 21.4.7 使用网络蒸馏的 PPO 算法](../Text/21.xhtml#sigil_toc_id_334
+- - '###'
+  - 21.5 Atari 实验](../Text/21.xhtml#sigil_toc_id_335
+- - '####'
+  - 21.5.1 使用 $\epsilon$-Greedy 策略的 DQN](../Text/21.xhtml#sigil_toc_id_336
+- - '####'
+  - 21.5.2 经典的 PPO 算法](../Text/21.xhtml#sigil_toc_id_337
+- - '####'
+  - 21.5.3 使用网络蒸馏的 PPO](../Text/21.xhtml#sigil_toc_id_338
+- - '####'
+  - 21.5.4 带有噪声网络的 PPO](../Text/21.xhtml#sigil_toc_id_339
+- - '###'
+  - 21.6 总结](../Text/21.xhtml#sigil_toc_id_340
+- - '###'
+  - 21.7 参考文献](../Text/21.xhtml#sigil_toc_id_341
+- - '#'
+  - 第 22 章：无模型——想象](../Text/22.xhtml)
+- - '###'
+  - 22.1 基于模型](../Text/22.xhtml#sigil_toc_id_345
+- - '####'
+  - 22.1.1 基于无模型的算法](../Text/22.xhtml#sigil_toc_id_346
+- - '###'
+  - 22.2 模型的局限性](../Text/22.xhtml#sigil_toc_id_347
+- - '###'
+  - 22.3 想象智能体](../Text/22.xhtml#sigil_toc_id_348
+- - '####'
+  - 22.3.1 环境](../Text/22.xhtml#sigil_toc_id_349
+- - '####'
+  - 22.3.2 展开策略 (Rollout](../Text/22.xhtml#sigil_toc_id_350
+- - '####'
+  - 22.3.3 编码器](../Text/22.xhtml#sigil_toc_id_351
+- - '####'
+  - 22.3.4 训练](../Text/22.xhtml#sigil_toc_id_352
+- - '###'
+  - 22.4 用于 Breakout 的 A2C](../Text/22.xhtml#sigil_toc_id_353
+- - '####'
+  - 22.4.1 标准 A2C 智能体](../Text/22.xhtml#sigil_toc_id_354
+- - '####'
+  - 22.4.2 环境](../Text/22.xhtml#sigil_toc_id_355
+- - '####'
+  - 22.4.3 想象智能体](../Text/22.xhtml#sigil_toc_id_356
+- - '###'
+  - 22.5 实验](../Text/22.xhtml#sigil_toc_id_357
+- - '####'
+  - 22.5.1 基础智能体](../Text/22.xhtml#sigil_toc_id_358
+- - '####'
+  - 22.5.2 权重](../Text/22.xhtml#sigil_toc_id_359
+- - '####'
+  - 22.5.3 使用 A2C 模型](../Text/22.xhtml#sigil_toc_id_360
+- - '###'
+  - 22.6 总结](../Text/22.xhtml#sigil_toc_id_361
+- - '###'
+  - 22.7 参考文献](../Text/22.xhtml#sigil_toc_id_362
+- - '#'
+  - 第 23 章：AlphaGo](../Text/23.xhtml)
+- - '###'
+  - 23.1 棋类游戏](../Text/23.xhtml#sigil_toc_id_363
+- - '###'
+  - 23.2 AlphaGo-Zero 算法](../Text/23.xhtml#sigil_toc_id_364
+- - '####'
+  - 23.2.1 概述](../Text/23.xhtml#sigil_toc_id_365
+- - '####'
+  - 23.2.2 蒙特卡洛树 (MCTS](../Text/23.xhtml#sigil_toc_id_366
+- - '####'
+  - 23.2.3 自弈 (Self-Playing](../Text/23.xhtml#sigil_toc_id_367
+- - '####'
+  - 23.2.4 训练与评估](../Text/23.xhtml#sigil_toc_id_368
+- - '###'
+  - 23.3 围棋机器人](../Text/23.xhtml#sigil_toc_id_369
+- - '####'
+  - 23.3.1 游戏模型](../Text/23.xhtml#sigil_toc_id_370
+- - '####'
+  - 23.3.2 蒙特卡洛树实现](../Text/23.xhtml#sigil_toc_id_371
+- - '####'
+  - 23.3.3 模型](../Text/23.xhtml#sigil_toc_id_372
+- - '####'
+  - 23.3.4 训练](../Text/23.xhtml#sigil_toc_id_373
+- - '###'
+  - 23.4 围棋胜：结果](../Text/23.xhtml#sigil_toc_id_374
+- - '###'
+  - 23.5 总结](../Text/23.xhtml#sigil_toc_id_375
+- - '###'
+  - 23.6 参考文献](../Text/23.xhtml#sigil_toc_id_376
+- - '#'
+  - 第 24 章：RL 与离散优化](../Text/24.xhtml)
+- - '###'
+  - 24.1 强化学习的声誉](../Text/24.xhtml#sigil_toc_id_378
+- - '###'
+  - 24.2 魔法骰子与组合优化](../Text/24.xhtml#sigil_toc_id_379
+- - '###'
+  - 24.3 最优性与数量](../Text/24.xhtml#sigil_toc_id_380
+- - '###'
+  - 24.4 解决方案](../Text/24.xhtml#sigil_toc_id_381
+- - '####'
+  - 24.4.1 数据表示](../Text/24.xhtml#sigil_toc_id_382
+- - '####'
+  - 24.4.2 动作](../Text/24.xhtml#sigil_toc_id_383
+- - '####'
+  - 24.4.3 状态](../Text/24.xhtml#sigil_toc_id_384
+- - '###'
+  - 24.5 训练过程](../Text/24.xhtml#sigil_toc_id_385
+- - '####'
+  - 24.5.1 神经网络架构](../Text/24.xhtml#sigil_toc_id_386
+- - '####'
+  - 24.5.2 训练](../Text/24.xhtml#sigil_toc_id_387
+- - '###'
+  - 24.6 模型](../Text/24.xhtml#sigil_toc_id_388
+- - '###'
+  - 24.7 结果](../Text/24.xhtml#sigil_toc_id_389
+- - '####'
+  - 24.7.1 通用库](../Text/24.xhtml#sigil_toc_id_390
+- - '####'
+  - 24.7.2 动作与观测](../Text/24.xhtml#sigil_toc_id_391
+- - '####'
+  - 24.7.3 创建环境](../Text/24.xhtml#sigil_toc_id_392
+- - '####'
+  - 24.7.4 稳定性](../Text/24.xhtml#sigil_toc_id_393
+- - '###'
+  - 24.8 遗传算法 (GA](../Text/24.xhtml#sigil_toc_id_394)
+- - '####'
+  - 24.8.1 遗传算法](../Text/24.xhtml#sigil_toc_id_395
+- - '####'
+  - 24.8.2 结果](../Text/24.xhtml#sigil_toc_id_396
+- - '###'
+  - 24.9 GA 优化](../Text/24.xhtml#sigil_toc_id_397
+- - '####'
+  - 24.9.1 深度 GA](../Text/24.xhtml#sigil_toc_id_398
+- - '####'
+  - 24.9.2 新颖性](../Text/24.xhtml#sigil_toc_id_399
+- - '###'
+  - 24.10 用于 HalfCheetah 的 GA](../Text/24.xhtml#sigil_toc_id_400
+- - '###'
+  - 24.11 总结](../Text/24.xhtml#sigil_toc_id_401
