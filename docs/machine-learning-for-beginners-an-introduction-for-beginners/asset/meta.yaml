@@ -1,0 +1,118 @@
+name: Machine Learning for Beginners： An Introduction for Beginners, Why Machine Learning
+  Matters Today and How Machine Learning Networks, Algorithms, Concepts and Neural
+  Networks Really Work
+name_cn: 初学者机器学习入门：为什么机器学习在今天很重要，以及机器学习网络、算法、概念和神经网络的运作原理
+slug: machine-learning-for-beginners-an-introduction-for-beginners
+toc:
+- - '#'
+  - 初学者机器学习入门：为什么机器学习在今天很重要，以及机器学习网络、算法、概念和神经网络的运作原理
+- - '#'
+  - 序言
+- - '##'
+  - 图书目标
+- - '##'
+  - 目标用户
+- - '##'
+  - 这本书适合我吗？
+- - '#'
+  - 引言
+- - '#'
+  - 第 2 章：机器学习对比人工智能与深度学习
+- - '##'
+  - 问题
+- - '##'
+  - 第 1 步：规划与基础设施
+- - '##'
+  - 第 2 步：可行性与数据
+- - '##'
+  - 第 3 步：训练与调优
+- - '###'
+  - 1. 分类 (Classification)
+- - '###'
+  - 2. 回归 (Regression)
+- - '###'
+  - 3. 相似性或异常性 (Similarity or Anomaly)
+- - '###'
+  - 4. 排名 (Ranking)
+- - '###'
+  - 5. 序列预测 (Sequential Prediction)
+- - '##'
+  - 监督学习
+- - '##'
+  - 参数化/非参数算法
+- - '##'
+  - 线性回归
+- - '##'
+  - 参数化问题 (Parametric Problems)
+- - '###'
+  - 过拟合 (Overfitting)
+- - '###'
+  - 欠拟合 (Underfitting)
+- - '##'
+  - 逻辑回归 (Logistic Regression)
+- - '##'
+  - 决策树
+- - '##'
+  - 支持向量机
+- - '##'
+  - 核（Kernels）
+- - '##'
+  - 问题
+- - '#'
+  - 第 6 章：无监督学习
+- - '##'
+  - 聚类
+- - '##'
+  - 降维
+- - '##'
+  - 神经网络
+- - '##'
+  - 深度学习
+- - '##'
+  - 不要重复轮子
+- - '##'
+  - 与其他项目协作
+- - '##'
+  - 问题
+- - '#'
+  - 第 9 章：算法与应用
+- - '##'
+  - 学习算法
+- - '##'
+  - 基于文本的服务
+- - '##'
+  - 计算机视觉
+- - '##'
+  - 音频处理
+- - '##'
+  - 数据库挖掘
+- - '##'
+  - 问题
+- - '#'
+  - 第 10 章：机器学习的成功案例
+- - '##'
+  - Spotify 和 Pandora
+- - '##'
+  - Uber
+- - '##'
+  - Facebook
+- - '##'
+  - Gmail
+- - '##'
+  - Closing
+- - '#'
+  - 第 11 章：机器学习的未来
+- - '##'
+  - 金融
+- - '##'
+  - 语言
+- - '##'
+  - 结语
+- - '##'
+  - 问题
+- - '#'
+  - 结论
+- - '#'
+  - 不要错过！
+- - '##'
+  - Steven Cooper 的其他作品
