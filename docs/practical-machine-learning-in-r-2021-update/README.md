@@ -1,0 +1,7 @@
+# R 机器学习实用指南 (2021 更新版)
+
+> 原文：[Practical Machine Learning in R (2021 Update)]()
+> 
+> 译者：[飞龙](https://github.com/wizardforcel)
+> 
+> 协议：[CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)
