@@ -1,0 +1,449 @@
+- "# PHP编程初学者指南：逐步解答你的所有问题\n\n\n\n\n\n\n\n## 第 1 章：PHP 语言简介\n\n### 1. 什么是 PHP？\ni)\
+  \ `PHP` 代表“超文本预处理器”（Hypertext Preprocessor）\nii) 它被用于创建“动态网页”\niii) 它是一门“**服务器端脚本**”语言，可以替代\
+  \ `ASP`、`JSP`、`PERL`。\niv) 它是一项“开源软件”\n\n### 2. 列出 PHP 的特性：\ni) `PHP` 易于阅读和理解。\n\
+  ii) 不需要包含像 `C` 那样的库。\niii) 它是开源的——因此可以“免费使用”。\niv) 它是一门服务器端脚本语言。\nv) 它是跨平台的（即它可以运行在任何操作系统上——Windows、Mac\
+  \ 等）。\nvi) 它提供了与数据库的连接（如 `Oracle`、`MySQL`、`Ms-Access` 等）。\nvii) `PHP` 是面向对象的。\n\n\
+  ### 3. 列出运行 PHP 的要求。\ni) 一个 Web 服务器（如 `IIS Web server`、`Apache Web server` 等）\n\
+  ii) Web 浏览器（如 `IE`、`Google Chrome`）\niii) 文本编辑器（`Notepad` 或 `Notepad++`）\n\n###\
+  \ 4. PHP 和 HTML 的区别。\n\n| 序号 | PHP | HTML |\n| --- | --- | --- |\n| 1 | `PHP` 用于设计动态网页\
+  \ | `HTML` 用于设计静态网页 |\n| 2 | `PHP` 文件在服务器端执行 | `HTML` 文件由浏览器解释并执行 |\n| 3 | `PHP`\
+  \ 文件先由 `PHPengine` 执行，在发送给客户端之前转换为 `HTML` 代码 | 因为它在客户端浏览器上运行，所以速度更快 |\n\n### 5.\
+  \ 服务器端脚本与客户端脚本的区别。\n\n| 序号 | 服务器端脚本 | 客户端脚本 |\n| --- | --- | --- |\n| 1 | 通常用 `ASP`、`JSP`\
+  \ 或 `PHP` 编写 | 它是用 `VBScript` 或 `JavaScript` 编写 |\n| 2 | 始终由 Web 服务器处理 | 由客户端的 Web\
+  \ 浏览器处理 |\n| 3 | 能够根据用户需求创建 `HTML` 文件 | 无法根据需求创建 `HTML` 文件 |\n\n### 6. 什么是 IIS Web\
+  \ 服务器？\ni) `Internet Information Services (IIS)` 是由 `Microsoft Inc.` 创建的 Web 服务器。\n\
+  ii) 它是开发和运行 `PHP` 文件的选项之一。\niii) 使用 `IIS` 时，`PHP` 文件必须保存在 `C:\\INETPUB\\WWWROOT\\\
+  ` 文件夹中。\n\n### 7. 什么是 Apache Web 服务器？\ni) `Apache` 是最广泛使用的 Web 服务器软件。\nii) `Apache`\
+  \ 是一个免费提供的开源软件。\niii) 可以 `XAMPP` 安装 `Apache` Web 服务器。\niv) 使用 `XAMPP` 时，PHP 文件必须保存在\
+  \ `C:\\htdocs\\` 文件夹中。\n\n### 8. 如何在网页中引入 PHP？\ni) 使用\n```php\n<?php echo \"hello\
+  \ world\"; ?>\n```\nii) 使用 `<script language=\"php\">`\n\n### 9. PHP 中分号 (;) 的作用是什么？\n\
+  i) 分号（`;`）用于终止/结束一条命令。\nii) 示例：\n```php\n<?php echo \"hello world\"; ?>\n```\n\n\
+  ### 10. PHP 中如何编写注释？\ni) 单行注释 (`//`)\nii) 多行注释 (`/* */`）\niii) 示例：\n```php\n/* 这个\
+  \ echo 语句将打印消息 */\necho “Hello World”;\n// 我也可以显示欢迎消息\necho “Ajay”;\n// 以防用户名为 Ajay\n\
+  ```\n\n### 11. 变量（Variable）是指什么？\ni) 变量是一个命名的位置。\nii) 变量的值在执行过程中可以改变。\niii) PHP\
+  \ 变量示例：\n```php\n<?php\n$x = 52;\necho $x;\n?>\n```\n\n### 12. 关于变量需要记忆的点：\ni) 所有变量以\
+  \ `$` 开头，后跟变量名。\nii) 变量名只能包含字母、数字和下划线（_）。\niii) 变量名不能以数字开头。\niv) 变量名是对大小敏感的。\nv)\
+  \ 变量名不能包含空格。\nvi) 变量在初始化时可以没有值。\nvii) 变量的值可以是任何类型。\nviii) 变量在定义时必须赋值。\nix) 变量在作用域内是有效的。\n\
+  \n### 13. 变量赋值（Assignment）是指什么？\ni) 将一个值赋给变量的过程。\nii) 赋值操作可以在执行过程中完成。\niii) 赋值示例：\n\
+  ```php\n<?php\n$name = \"John\";\necho $name;\n?>\n```\n\n### 14. 作用域（Scope）是指什么？\n\
+  i) 变量在程序中可以访问的范围。\nii) PHP 中有三种作用域：\n   - 局部作用域（在函数内部）\n   - 全局作用域（在函数外部）\n   -\
+  \ 静态作用域（使用 `static` 关键字）\n\n### 15. 常量（Constants）是指什么？\ni) 常量是指一旦定义就不能更改的值。\nii)\
+  \ 使用 `define()` 函数或 `const` 关键字定义。\niii) 常量示例：\n```php\n<?php\ndefine(\"SITE_URL\"\
+  , \"localhost\");\necho SITE_URL;\n?>\n```\n\n### 16. 数组（Arrays）是指什么？\ni) 数组是用于存储多个值的变量。\n\
+  ii) PHP 支持三种主要类型的数组：\n   - 索引数组（Indexed arrays）\n   - 关联数组（Associative arrays）\n\
+  \   - 多维数组（Multidimensional arrays）\niii) 数组示例：\n```php\n<?php\n$colors = array(\"\
+  Red\", \"Green\", \"Blue\");\necho $colors[0];\n?>\n```\n\n### 17. 什么是函数（Functions）？\n\
+  i) 函数是执行特定任务的代码块。\nii) 它们通过 `function` 关键字进行定义。\niii) 函数示例：\n```php\n<?php\nfunction\
+  \ greet($name) {\n    echo \"Hello, $name!\";\n}\ngreet(\"World\");\n?>\n``````\n\
+  \n### 18. 超局变量（Superglobals）是指什么？\ni) 超局变量是 PHP 中预定义的内置变量，在脚本的任何地方都可以访问。\nii) 常见的超局变量包括：\n\
+  \   - `$_GET`\n   - `$_POST`\n   - `$_REQUEST`\n   - `$_SESSION`\n   - `$_COOKIE`\n\
+  \   - `$_SERVER`\n   - `$_ENV`\n   - `$_GLOBALS`\n   - `$_FILES`\n\n\n\n\n\n```php\n\
+  Print gettype($myAge); // 返回 : Integer\n$age=(string) $myAge;\nPrint gettype($age);\
+  \ // 返回 : String\n```\n\n# 第 2 章：PHP 中的运算符\n\n## 1. 什么是表达式（Expression）？\n\ni) `Expression`\
+  \ 表达式是值、变量、运算符和函数的组合，结果产生一个值。\n\nii) 示例：`$Num=5+15/2;`\n\n## 2. 什么是运算符（Operators）？\n\
+  \ni) `Operators` 运算符字符（或一组字符），用于在 PHP 代码中执行特殊操作。\n\nii) 示例：`$ Num=5+15/2;` // `=`,\
+  \ `+`, ` /` 是运算符。\n\n## 3. 解释 PHP 运算符的类型：\n\ni) 赋值运算符\nii) 算术运算符\niii) 一元和二元运算符\n\
+  iv) 复合赋值运算符\nv) 比较运算符\nvi) 逻辑运算符\nvii) 增减运算符\nviii) 三元运算符\n\n## 4. 结合示例解释赋值运算符：\n\
+  \ni) 赋值运算符 `=` 用于给变量赋值值。\n\nii) 示例：`$Num=7`\n\n## 5. 复合赋值\n\n赋值运算符可以与算术运算符结合创建复合运算符。\n\
+  \n例如 `+=`, `-=`, `/=`, `*=`, `%=`。复合赋值运算符允许编写更短的表达式。例如：\n\n```php\n<?php\n    $i\
+  \ = 100;\n    $i = $i + 10;\n    echo $i;\n?>\n```\n\n可以写为\n\n```php\n<?php\n  \
+  \  $i = 100;\n    $i += 10;\n?>\n```\n\n## 6. PHP 中的字符串运算符有哪些？\n\ni) 用于字符串拼接和追加操作的运算符。\n\
+  \nii) 字符串运算符列表：\n\niii) PHP 有两个专门为字符串设计的运算符。\n\n| 运算符 | 名称 | 示例 | 结果 |\n| --- |\
+  \ --- | --- | --- |\n| `.` | 拼接 | `$txt1 . $txt2` | `$txt1` 和 `$txt2` 的拼接 |\n| `.=`\
+  \ | 拼接赋值 | `$txt1 .= $txt2` | 将 `$txt2` 追加到 `$txt1` 后 |\n\n## 7. 结合示例解释算术运算符：\n\n\
+  i) 这些是通用的数学运算符。\n\nii) 算术运算符列表：\n\n| 运算符 | 用途 |\n| --- | --- |\n| `+` | 加法 |\n|\
+  \ `-` | 减法 |\n| `*` | 乘法 |\n| `/` | 除法 |\n| `%` | 取模 |\n\niii) `/` 运算符返回商，`%`（模）返回除法所得余数。\n\
+  \n## 8. 结合示例解释一元运算符：\n\ni) 一元运算符只处理一个参数（通常是一个单一变量）。在 PHP 中，只有几个，如下所示：\n\n| 运算符 |\
+  \ 用途 |\n| --- | --- |\n| `!` | 取反 |\n| `++` | 加 1 |\n| `--` | 减 1 |\n\nii) 以下是这些运算符使用的一些示例。\n\
+  \n```php\n<?php\n// 取反\n$bool = true;\n$bool = !$bool; // $bool 现在将为 false\n$k =\
+  \ 0; // 将 k 的值初始化为 0\n// 加 1\n$k++;\necho \"k = \".$k; // 输出: k = 1\n// 减 1\n$k--;\n\
+  echo \"k = \".$k; // 输出: k = 0\n?>\n```\n\n## 9. 结合示例解释二元运算符：\n\ni) 二元运算符是处理两个参数的运算符，两个参数都是变量或常量。二元运算符的一些示例如下：\n\
+  \n| 运算符 | 用途 |\n| --- | --- |\n| `+` | 加法 |\n| `-` | 减法 |\n| `*` | 乘法 |\n| `/` |\
+  \ 除法 |\n| `%` | 取模 |\n| `=` | 赋值 |\n| `==` | 等于 |\n| `>` | 大于 |\n| `<` | 小于 |\n\
+  | `&&` | 与 (AND) |\n| `||` | 或 (OR) |\n\nii) 这些运算符是 PHP 中最直观的运算符。它们非常容易理解，因为学校里都学过。例如，看这段代码：\n\
+  \n```php\n<?php\n$a = 5;\n$b = 6;\n$c = $a + $b; // $c 现在是 11\n?>\n```\n\n## 10.\
+  \ PHP 中的比较运算符有哪些？\n\ni) 用于比较并返回 true 或 False 的运算符。\n\nii) PHP 比较运算符列表：\n\n| 运算符\
+  \ | 名称 | 示例 | 结果 |\n| --- | --- | --- | --- |\n| `==` | 等于 | `$x == $y` | 如果 `$x`\
+  \ 等于 `$y` 则返回 true |\n| `===` | 恒等 | `$x === $y` | 如果 `$x` 等于 `$y` 且它们类型相同则返回 true\
+  \ |\n| `!=` | 不等于 | `$x != $y` | 如果 `$x` 不等于 `$y` 则返回 true |\n| `<>` | 不等于 | `$x\
+  \ <> $y` | 如果 `$x` 不等于 `$y` 则返回 true |\n| `!==` | 不恒等 | `$x !== $y` | 如果 `$x` 不等于\
+  \ `$y` 或类型不同则返回 true |\n| `>` | 大于 | `$x > $y` | 如果 `$x` 大于 `$y` 则返回 true |\n| `<`\
+  \ | 小于 | `$x < $y` | 如果 `$x` 小于 `$y` 则返回 true |\n| `>=` | 大于等于 | `$x >= $y` | 如果\
+  \ `$x` 大于等于 `$y` 则返回 true |\n| `<=` | 小于等于 | `$x <= $y` | 如果 `$x` 小于等于 `$y` 则返回\
+  \ true |\n\n## 11. 逻辑运算符有哪些？\n\ni) 用于逻辑操作并返回 true 或 False 的运算符。\n\nii) 逻辑运算符。\n\n\
+  iii) 逻辑运算符：\n\n| 运算符 | 名称 | 示例 | 结果 |\n| --- | --- | --- | --- |\n| `and` | 与 |\
+  \ `$x and $y` | 如果 `$x` 和 `$y` 都为真 |\n| `or` | 或 | `$x or $y` | 如果 `$x` 或 `$y` 任为真\
+  \ |\n| `&&` | 与 | `$x && $y` | 如果 `$x` 和 `$y` 都为真 |\n| `||` | 或 | `$x || $y` | 如果\
+  \ `$x` 或 `$y` 任为真 |\n| `!` | 取反 | `!$x` | 如果 `$x` 不为真 |\n\n## 12. PHP 中的增减运算符有哪些？\n\
+  \ni) 增运算符用于增加变量的值。\n\nii) PHP 递减运算符用于减少变量的值。\n\n| 运算符 | 名称 | 描述 |\n| --- | --- |\
+  \ --- |\n| `++x` | 前置增 | `$x` 增加 1 |\n| `$x++` | 后置增 | `$x` 增加 1 |\n| `--x` | 前置减\
+  \ | `$x` 减少 1 |\n| `$x--` | 后置减 | `$x` 减少 1 |\n\n## 13. 三元运算符有哪些？\n\ni) 用于 `if/else`\
+  \ 语句的简写形式。\n\nii) 语法：`condition ? expression1 : expression2`\n\niii) 示例 1：\n```php\n\
+  $x = 10;\n$y = 15;\n$z = ($x > $y) ? \"true\" : \"false\";\necho $z; // 输出: false\n\
+  ```\n\niv) 示例 2：\n```php\n$age = 20;\n$z = ($age >= 18) ? \"Eligible\" : \"Not Eligible\"\
+  ;\necho $z; // 输出: Eligible\n```\n\n## 14. PHP 中的数组运算符有哪些？\n\ni) 用于执行数组操作的运算符。\n\
+  \nii) 数组运算符列表。\n\niii) PHP 运算符用于比较数组。\n\n| 运算符 | 名称 | 示例 | 结果 |\n| --- | --- | ---\
+  \ | --- |\n| `+` | 合并 | `$x + $y` | `$x` 和 `$y` 的合并 |\n| `==` | 等于 | `$x == $y`\
+  \ | 如果 `$x` 和 `$y` 相同 |\n| `===` | 恒等 | `$x === $y` | 如果 `$x` 和 `$y` 相同且类型相同 |\n\
+  | `!=` | 不等于 | `$x != $y` | 如果 `$x` 不等于 `$y` |\n| `<>` | 不等于 | `$x <> $y` | 如果 `$x`\
+  \ 不等于 `$y` |\n| `!==` | 不恒等 | `$x !== $y` | 如果 `$x` 不等于 `$y` 或类型不同 |\n\n## 15. 什么是常量（Constant）？\n\
+  \ni) 常量是一个命名的内存位置。\n\nii) 常量的值在执行期间不能更改。\n\niii) 常量使用 `define` 关键字定义。\n\niv) 常量名称通常使用大写。\n\
+  \nv) `constant()` 可以显示常量的值。\n\nvi) PHP 常量的示例：\n```php\ndefine(\"PI\",3.14);\ndefine(\"\
+  MAXSIZE\",100);\necho \"Value of Pi is \" . PI . \"<BR>\";\necho \"six is \" . MAXSIZE;\n\
+  echo constant(\"PI\");\n```\n\n## 16. 什么是字面量（Literal）？\n\n字面量是用于表示常量值的字符序列。\n\n\
+  ## 17. 解释字符串类型：\n\ni) 单引号\n单引号用于表示“字面量”。字面量不会尝试解析特殊字符或变量。\n\n```php\n<?php\necho\
+  \ 'This is my string, look at how pretty it is.'; // 无需解析简单字符串\n?>\n```\n\nii) 双引号\n\
+  双引号不仅会解析变量，还会解析各种特殊字符，如 `\\n` 换行、`\\t` 制表符等。\n\n```php\n<?php\necho 'phptherightway\
+  \ is '.$adjective.'. // 单引号示例，使用了多次拼接用于\n.\"\\n\" // 变量和转义字符串\n.'I love learning'.$code.'!';\n\
+  \n// 对比\necho\"phptherightway is $adjective.\\n I love learning $code!\"; // 相比多次拼接，使用双引号\n\
+  ?>\n```\n\n\n\n\n\n//enablesustouseaparsablestring\n\n双引号可以包含变量；这被称为“插值”。\n\n```php\n\
+  <?php\n$juice='plum';\necho\"I like $juicejuice\";//Output:Ilikeplumjuice\n```\n\
+  \n在使用插值时，变量通常会紧挨另一个字符。这会导致对哪些是变量名、哪些是字面字符产生混淆。\n\n为了解决这个问题，请将变量包裹在花括号中。\n\n```php\n\
+  <?php\n$juice='plum';\necho\"I drank some juice made of $juices\";// $juice 无法解析\n\
+  ```\n\n\n```php\n$juice='plum';\n```\n\n## 常量和变量之间有什么区别？\n\n常量和变量的区别在于：\n\ni) 常量前面不需要写美元符号（`$\
+  \ `），而变量则必须写美元符号。\n\nii) 常量不能通过简单的赋值定义，只能使用 `define()` 函数定义。\n\niii) 常量可以在任何地方定义和访问，而不受变量作用域规则的。\n\
+  \niv) 常量一旦设置，就不能重新定义或取消定义。\n\n## 运算符优先级是指什么？\n\ni) 运算符优先级决定了表达式中项的分组。某些运算符会在其他运算符之前执行。\n\
+  \nii) 示例：\n\n```php\n$x=7+3\\*2;\n```\n\n这里 `$x` 被赋值为 13 而不是 20，因为运算符 `*` 的优先级高于\
+  \ `+`，所以它先乘以 `3*2`，然后加到 `7`。\n\n### 列出运算符优先级\n\n| 顺序 | 运算符 | 操作 |\n| :--- | :---\
+  \ | :--- |\n| 1 | | 逻辑非 |\n| 2 | `++` | 增 |\n| 3 | `--` | 递减 |\n| 5 | `*` | 乘法 |\n\
+  | 6 | `/` | 除法 |\n| 7 | `%` | 取模 |\n| 8 | `+` | 加法 |\n| 9 | `-` | 减法 |\n| 10 | |\
+  \ 字符串拼接 |\n| 11 | `<`, `<=` | 小于、小于等于 |\n| 12 | `>`, `=>` | 大于、大于等于 |\n| 13 | `=`\
+  \ | 值相等 |\n| 14 | `!=`, `<>` | 不相等 |\n| 15 | `===` | 类型和值相等 |\n| 16 | `!==` | 类型和值不相等\
+  \ |\n| 17 | `&&` | 逻辑与 |\n| 18 | `||` | 逻辑或 |\n| 19 | `?:` | 三元运算符 |\n| 20 | `=`\
+  \ | 赋值 |\n| 21 | `+=`, `-=`, `*=`, `/=`, `.=`, `%=`, `&=`, `|=`, `^=`, `~=`, `<<=`,\
+  \ `>>=` | 带运算的赋值 |\n| 22 | `and` | 逻辑与 |\n| 23 | `xor` | 逻辑异或 |\n| 24 | `or` | 逻辑或\
+  \ |\n| 25 | | 列表分隔符 |\n\n# 第 3 章：PHP 内置函数\n\n## 1 什么是函数？\n\ni) 函数是一段代码，它以参数的形式接收一个或多个输入，进行某些处理并返回一个值。\n\
+  \nii) 函数可以反复重复使用。\n\n## 2 函数 get 什么类型？\n\ni) 内置/系统定义函数\n\nii) 用户定义函数\n\n## 3 函数有什么用处？\n\
+  \ni) 函数可以反复重复使用\n\nii) 易调试\n\n## 4 什么是内置函数？\n\ni) 内置函数是系统定义的函数\n\nii) 示例：\n\n##\
+  \ 5 解释字符串处理函数：\n\ni) `strtoupper()`：将你的字符串转换为全大写\n```php\n$name = \"Matthew \";\n\
+  echo strtolower($name); // matthew\n```\n\nii) `strtolower()`：将你的字符串转换为全小写\n```php\n\
+  $name = \"Matthew \";\necho strtolower($name); // matthew\n```\n\niii) `strlen()`：它通过传递字符串或变量来工作，然后返回包括空格在内的字符总数。\n\
+  ```php```\n\niv) `strchr()`：此函数用于找到字符串第一次出现的位置，并返回从搜索位置到字符串末尾的所有字符。\n```php\n$x=”CBSE\
+  \ Multimedia and Web Technology\";\n$y = strchr($x, ‘M’)\necho $y // 输出将为 : Multimedia\
+  \ and Web Technology\n```\n\nv) `strpos()`：此函数用于找到字符串第一次出现的位置，返回值为一个数字。\n语法：`strpos(string,\
+  \ find, start)`\n`start` 是可选的\n```php\n$x=”CBSE Multimedia and Web Technology\"\
+  ;\n$y = strpos($x, ‘M’,0)\necho $y // 输出将为 : 5\n```\n\nvi) `ord()`：此函数用于找到字符串第一个字符的\
+  \ ASCII 值。\n```php\n$x=”CBSE Multimedia and Web Technology\";\n$y = ord($x)\necho\
+  \ $y // 输出将为 : 67\n```\n\nvii) `chr()`：此函数用于将指定的 ASCII 值转换为对应的字符并返回它。\n```php\n\
+  $x= chr(67)\n```\n\nviii) `trim()`，`ltrim()`，`rtrim()`：这些函数用于去除指定的字符。\n\nix) `substr()`：此函数用于从指定位置开始截取字符串。\n\
+  语法：`substr(string, start, length)`\n`start` 是可选的\n```php\nx = Multimedia and Web\
+  \ Technology\n```\n\nx) `strrev()`：此函数用于反转字符串。\n```php\n$x = Multimedia\n```\n\n\
+  xi) `str_replace()`：此函数用于替换字符串中的某些字符。\n```php\n$x = Multimedia\n```\n\nxii) `str_count()`：此函数用于统计字符串中字符出现的次数。\n\
+  ```php\n$x = Multimedia\n```\n\nxiii) `str_split()`：此函数用于将字符串分割为数组。\n```php\n$x\
+  \ = Multimedia\n```\n\nxiv) `preg_replace()`：此函数用于使用正则表达式替换字符串中的内容。\n```php\n$x\
+  \ = Multimedia\n```\n\nxv) `preg_match()`：此函数用于根据正则表达式匹配字符串内容。\n```php\n$x = Multimedia\n\
+  ```\n\n## 6 解释数值函数：\n\ni) `abs()`：此函数返回数字的绝对值。去掉负号。\n```php\necho abs(-48.6); //\
+  \ 返回 48\n```\n\nii) `atan()`：此函数返回指定数的反正切。\n\niii) `cos()`：此函数返回指定数的余弦。\n\niv) `ceil()`：此函数返回\
+  \ x 的向上取整。不小于 x 的最小整数。\n```php\necho ceil(48.6); // 返回 49\necho ceil(48.1); // 返回\
+  \ 49\necho ceil(-48.1); // 返回 -48\n```\n\nv) `exp()`：此函数返回 e 的幂，即 e 的几次方。\n```php\n\
+  echo exp(1); // 返回 2.7182818284\n```\n\nvi) `floor()`：此函数返回 x 的向下取整。不大于 x 的最大整数。即\
+  \ x 之后的整数。\n```php\necho floor(48.6); // 返回 48\necho floor(48.1); // 返回 48\necho\
+  \ floor(-48.1); // 返回 -49\n```\n\nvii) `log()`：此函数返回指定数的自然对数。\n\nviii) `pow()`：此函数返回\
+  \ x 的 y 次。\n```php\necho pow(5,2); // 返回 25\n```\n\nix) `rand()`：该函数返回一个随机数。\n语法：`rand(min,max)`\n\
+  `min` 和 `max` 是可选的。如果你不带参数使用 `rand()`，将返回 0 到 32767 之间的任意数字。\n```php\necho rand();\
+  \ // 返回 1254\necho rand(5,15); // 返回 13\n```\n\nx) `sin()`：此函数返回指定数的正弦。\n\n) `round()`：此函数用于根据其值四舍五入。任何\
+  \ .5 或以上的小数都会四舍五入，任何小于 .5 的都会向下舍入。甚至可以作为可选参数指定指定的保留后位数。\n语法：`round(number, optional_decimal)`\n\
+  ```php\necho round(3.141) // 返回 3\necho round(3.67) // 返回 4\necho round(3.9078,\
+  \ 2) // 返回 3.91\n```\n\n\n\nxii)`sqrt()`：此函数返回数字的平方根。\n\n示例：\n```php\necho sqrt(144)\
+  \ // return: 12\n```\n\nxiii)`tan()`：此函数返回指定数字的正切值。\n\n## 7 解释日期和时间函数：\n\n| 参数字符串\
+  \ | 格式 | 描述 | 返回示例 |\n| :--- | :--- | :--- | :--- |\n| **天** | d | 月份中的几天，2 位数，带前导零\
+  \ | 01 到 31 |\n| | D | 日期的文本表示，三个字母 | Mon 到 Sun |\n| | j | 不带前导零的月份中的几天 | 1 到 31\
+  \ |\n| | l(小写 'L') | 星期几完整文本表示 | Sunday 到 Saturday |\n| | N | 星期几的 ISO-8601 数字表示法（在\
+  \ PHP 5.1.0 中添加） | 1（周一）到 7（周日） |\n| | S | 月份中的英文序数后缀，2 字符 | st, nd, rd 或 th。与 j\
+  \ 配合良好。 |\n| | w | 星期几的数字表示 | 0（周日）到 6（周六） |\n| | z | 一年中的第（从 0 开始） | 0 到 365 |\n\
+  | **周** | W | ISO-8601 年周，每周从周一开始（在 PHP 4.1.0 中添加） | 示例：42（年的第 42 周） |\n| **月**\
+  \ | F | 月份的完整文本表示，例如 January 或 March | January 到 December |\n| | m | 月份的数字表示，带前导零\
+  \ | 01 到 12 |\n| | M | 月份的短文本表示，三个字母 | Jan 到 Dec |\n| | n | 不带前导零的月份的数字表示 | 1 到\
+  \ 12 |\n| | t | 给定月份的天数 | 28 到 31 |\n| **年** | L | 是否为闰年 | 如果是闰年则为 1，否则为 0。 |\n\
+  | | o | ISO-8601 年数。此值与 Y 相同，但如果 ISO 周数 (W) 属于上一年或明年，则使用该年份。（在 PHP 5.1.0 中添加） |\
+  \ 示例：1999 或 2003 |\n| | Y | 年份的完整数字表示，4 位数 | 示例：1999 或 2003 |\n| | y | 年份的两位表示 |\
+  \ 示例：99 或 03 |\n| **时间** | a | 小写的上午和下午 | am 或 pm |\n| | A | 大写的上午和下午 | AM 或 PM\
+  \ |\n| | B | 瑞士标准网络时间 | 000 到 999 |\n| | g | 不带前导零的 12 小时制小时 | 1 到 12 |\n| | G |\
+  \ 不带前导零的 24 小时制小时 | 0 到 23 |\n| | h | 带前导零的 12 小时制小时 | 01 到 12 |\n| | H | 带前导零的\
+  \ 24 小时制小时 | 00 到 23 |\n| | i | 带前导零的分钟 | 00 到 59 |\n| | s | 带前导零的秒 | 00 到 59 |\n\
+  | | u | 微秒（在 PHP 5.2 中添加）。注意 `date()` 始终生成 000000，因为它接受 `integer` 参数，而 `DateTime::format()`\
+  \ 支持微秒。 | 示例：654321 |\n| | e | 时区标识符（在 PHP 5.1.0 中添加） | 示例：UTC,Azores |\n| | I(大)\
+  \ 是否为夏令时 | 如果是夏令时为 1，否则为 0。 |\n| | O | 与格林威治时间 (GMT) 的小时偏移 | 示例：+0200 |\n| | P |\
+  \ 与格林威治时间 (GMT) 的小时分钟偏移（带冒号） | 示例：+02:00 |\n| | T | 时区缩写 | 示例：EST,MDT |\n| | Z |\
+  \ 秒偏移。UTC 时区的偏移始终为负，东区的偏移始终为正。 | -43200 到 5400 |\n\n### 日期和时间函数\n\n1) `date_default_timezone_set()`：设置时区的函数。代码为\
+  \ \"Asia/Calcutta\"。\n\n2) `date_default_timezone_get()`：显示已设置时区的函数。\n```php\ndate_default_timezone_set('Asia/Calcutta');\n\
+  echo date_default_timezone_get();\n```\n结果：Asia/Calcutta\n\n3) `date()`：此函数根据指定的格式字符串或时间戳返回字符串。\n\
+  语法\n`date(format,timestamp)`\n\n示例：显示日期\n```php\necho \"Today is \" . date(\"Y/m/d\"\
+  ) . \"<br>\";\necho \"Today is \" . date(\"m.d\") . \"<br>\";\necho \"Today is \"\
+  \ . date(\"Y-m-d\") . \"<br>\";\necho \"Today is \" . date(\"l\");\n```\n以下是日期常用的字符：\n\
+  - `d` - 代表月份中的几天（01 到 31）\n- `m` - 代表月份（01 到 12）\n- `Y` - 代表年份（四位数）\n- `l`(小写 'L')\
+  \ - 代表星期几\n结果：\nToday is 2016/08/03\nToday is 2016.08.03\nToday is 2016-08-03\n\
+  Today is Wednesday\n\n示例：显示时间\n```php\necho \"The time is \" . date(\"h:i:sa\");\n\
+  ```\n以下是时间常用的字符：\n- `h` - 带前导零的 12 小时制小时（01 到 12）\n- `i` - 带前导零的分钟（00 到 59）\n- `s`\
+  \ - 带前导零的秒（00 到 59）\n- `a` - 小写的上午和下午（am 或 pm）\n结果：The time is 11:01:19am\n\n4)\
+  \ `time()`：作为时间戳返回当前时间。\n返回自 Unix Epoch（1970 年 1 月 1 日 00:00:00 GMT）开始的秒数。\n- 这是一个很大的数字，必须使用\
+  \ `date()` 格式化后易读。\n示例：\n```php\n$t=time();\necho($t . \"<br>\");\necho(date(\"\
+  Y-m-d\",$t));\n```\n结果：\n1470236933 // 这个数字无法理解\n2016-08-03 // 使用 date()将其格式化为年、月、日\n\
+  \n5) `gettimeofday()`：作为数组返回当前时间。\n数组项：\n- `sec` - 自 Unix Epoch 开始的秒\n- `usec` -\
+  \ 微秒\n- `minuteswest` - 格林威治以西分钟\n- `dsttime` - 夏令时修正类型\n\n示例：\n```php\n// 打印 gettimeofday()\
+  \ 的数组\nprint_r(gettimeofday());\n// 打印 gettimeofday() 的浮点数\necho gettimeofday(true);\n\
+  ```\n结果：\nArray ([sec] => 1470237375 [usec] => 298062 [minuteswest] => 240 [dsttime]\
+  \ => 1 )\n1470237375.298062\n\nxii)`sqrt()`：此函数返回数字的平方根。\n\n示例：\n```php\necho sqrt(144)\
+  \ // return: 12\n```\n\nxiii)`tan()`：此函数返回指定数字的正切值。\n\n## 6 `mktime()`：此函数返回对应于参数的时间戳\n\
+  语法\n`mktime(hour,minute,day,month,year,dst)`\n\n示例：\n```php\n以下每一行都会产生字符串 \"23:00:00\"\
+  \n```\n...（等待，原文是碎片化的，保留逻辑）\n\n## 7 `strtotime()`：将英文日期时间解析为 Unix 时间戳\n示例：\n```php\n\
+  echo(date(\"Y/m/d\",strtotime(\"now\"))).\"<br>\";\necho(date(\"Y/m/d\",strtotime(\"\
+  3 October 2005\")) . \"<br>\";\necho(date(\"Y/m/d\",strtotime(\"+5 hours\")) . \"\
+  <br>\";\necho(date(\"Y/m/d\",strtotime(\"+1 week\")) . \"<br>\";\necho(date(\"Y/m/d\"\
+  ,strtotime(\"+1 week 3 days 7 hours 5 seconds\"))).\"<br>\";\necho(date(\"Y/m/d\"\
+  ,strtotime(\"next Monday\")) . \"<br>\";\n```\n结果：\n2016/08/03\n2005/10/03\n2016/08/03\n\
+  2016/08/10\n2016/08/14\n2016/08/08\n2016/07/31\n\n## 8 `cal_days_in_months()`：它返回指定年份月份的天数。\n\
+  语法\n`cal_days_in_months(calendar,month,year)`\n\n示例：\n```php\n$d=cal_days_in_months(CAL_GREGORIAN,10,2005);\n\
+  echo \"There was $d days in October 2005\";\n```\n结果：There was 28 days in February\
+  \ 1965.\nThere was 29 days in February 2004.\n\n# 第 4 章：PHP 中的分支\n\n1 分支\n\n- 分支的主要两个结构是\
+  \ if 和 switch。\n- If 是核心工具，通常是任何人学习的第一个条件结构。\n- 在某些情况下，如果你想根据单个值有多个可能的分支，且一系列 if\
+  \ 语句会很繁琐，Switch 是一个非常有用的替代方案。\n\n1.If-else\n\n- 语法：\n\n```php\nif (condition)\n\
+  ```\n\n\n\n\n\n```\n{ \nstatement-1 \n} \n```\n\n或者带有可选的 `else` 分支：\n\n```php\n\
+  if (condition) \n{ \nstatement-1 \n} \nelse \n{ \nstatement-2 \n}\n```\n\n- 当处理\
+  \ `if` 语句时，会评估测试表达式，并将结果解释为布尔值。\n- 如果 `condition` 为真（true），则执行 `statement-1`。如果\
+  \ `condition` 不为真，且存在 `else` 子句，则执行 `statement-2`。\n- 如果 `condition` 为假（false），且没有\
+  \ `else` 子句，执行将直接继续 `if` 结构之后的下一个语句。\n\n### 示例:-1 (简单 If)\n\n```php\n<?php\n $a=10;\
+  \ \n if ($a == 10) \n { \n echo $a; \n } \n?>\n```\n\n### 示例:-2 (简单 If 和 Else)\n\
+  ```php\n<?php\n $a=10;\n$b=4; \n if ($a > $b) \n { \n echo \"A is greater than\"\
+  ; \n } \n else \n { \n echo \"B is greater than\"; \n } \n?>\n```\n\n### 示例:-3 (Elseif)\n\
+  ```php\n<?php\n $a=2; \n if ($a == 1) \n { \n print \"Mon\"; \n }\nelseif($a==2)\
+  \ \n { \n print \"Thu\"; \n } \n else \n { \n print \"wrong choice\"; \n } \n?>\n\
+  ```\n\n### 示例:-4 (嵌套 if……else)\n```php\n<?php\n $a=1; \n $b=2; \n $c=3; \n if ($a\
+  \ > $b) \n { \n if ($a > $c)  {  print \"a is max\";  } \n else  {  print \"c is\
+  \ max\";  }  } \n else \n { \n if ($b > $c) \n { \n print \"b is max\";\n} \n else\
+  \ \n { \n print \"c is max\"; \n } \n } \n?>\n```\n\n## Switch\n\n- 对于特定类型的多路分支，`switch`\
+  \ 结构非常有用。\n- `switch` 并不是根据任意逻辑表达式进行分支，而是根据单个表达式的值采取不同的路径。\n- 语法如下，可选部分包含在方括号 `[]`\
+  \ 中：\n\n```\nswitch(expression) \n{ \ncase value-1: \nstatement-1 \nstatement-2\
+  \ \n... \n[break;] \ncase value-2: \nstatement-3 \nstatement-4 \n... \n[break;]\
+  \ \n..... \n…… \n[default: \ndefault-statement] \n}\n```\n\n- 表达式可以是变量或任何其他表达式，只要它评估结果为一个简单值（即整数、双精度浮数或字符串）。\n\
+  - 该结构通过评估表达式，然后将结果与每个 `case` 值进行等值性测试来执行。\n- 一旦找到匹配的值，后续语句将按顺序执行，直到遇到特殊语句 `break;`\
+  \ 或到达 `switch` 结构的末尾。\n- 在末尾可以使用特殊的 `default` 标签，如果目前为止没有其他 `case` 匹配该表达式，则它将匹配该表达式。\n\
+  \n### 示例:\n```php\n<?php\n $a=6; \n switch($a) \n { \n case 1: \n print \"Mon\"\
+  ; \n break; \n case 2: \n print \"Tue\"; \n break;\ncase 3: \n print \"Wen\"; \n\
+  \ break; \n case 4: \n print \"Thu\"; \n break; \n case 5: \n print \"Fri\"; \n\
+  \ break; \n case 6: \n print \"sat\"; \n break; \n case 7: \n print \"Sun\"; \n\
+  \ break; \n default: \n print \"Wrong Choice\"; \n } \n?>\n```\n\n# 第 5 章：PHP 中的循环\n\
+  \n循环：它允许程序员执行一个可以重复执行的操作，直到给定的条件为真。\n\n### 1. While\n\n- 最 的 PHP 循环结构是 `while`，它具有如下语法：\n\
+  \n```\nwhile (condition) \n{ \nStatement \n}\n```\n\n- `while` 循环将条件表达式评估为布尔值——如果为真，则执行\
+  \ `statement` 然后通过重新评估 `condition` 开始循环。\n- 如果 `condition` 为假，`while` 循环终止。当然，就像\
+  \ `if` 一样，`statement` 可以是一个单独的语句，也可以是一个大括号包裹的块。\n- 示例:-\n\n```php\n<?php\n $a=1;\
+  \ \n while ($a <= 10) \n { \n print \"count is $a<BR>\"; \n $a = $a + 1; \n } \n\
+  ?>\n```\n\n### 2. do-while\n\n- `do-while` 结构与 `while` 类似，不同在于测试发生在循环的末尾。\n- 语法为：\n\
+  \n```\ndo \n{ \ncode to be executed; \n} \nwhile (condition);\n```\n\n- 语句执行一次，然后评估表达式。\n\
+  - 如果表达式为真，则重复语句，直到表达式变为假。\n- `while` 和 `do-while` 之间唯一的实际区别是 `do-while` 至少执行一次语句。\n\
+  - 示例:-\n\n```php\n<?php\n $a=1; \n do \n { \n print \"count is $a<BR>\"; \n $a =\
+  \ $a + 1; \n } while ($a <= 10);\n?>\n```\n\n### 3. for\n\n- 最复杂的循环结构是 `for`，它具有如下语法：\n\
+  \n```\nfor (initialization; condition; increment) \n{ \nstatement\n}\n```\n\n- `for`\
+  \ 循环通过初始化、评估条件和增量来执行。\n- 只要条件为真，循环就会继续执行。\n- 示例:-\n\n```php\n<?php\n for ($i=0;\
+  \ $i<10; $i++) \n { \n echo $i; \n } \n?>\n```\n\n### 4. foreach\n\n- 存在 `foreach`\
+  \ 作用于数组。\n- `foreach` 语法如下：\n\n```\nforeach (array as value) \n{ \nstatement \n\
+  }\n```\n\n- 示例:-\n\n```php\n<?php\n $authors = array(\"Rahul\", \"ravi\", \"ajit\"\
+  , \"pratik\");\nforeach ($authors as $name) \n { \n echo $name;\n } \n?>\n```\n\n\
+  ### 5. Break 和 continue\n\n- `break` 和 `continue` 命令提供了控制循环的方法。\n- `break` 命令退出它所所在的内层循环。\n\
+  - `continue` 命令跳过当前迭代。\n\n- 示例(Break):\n\n```php\n<?php\n for ($i=0; $i<10; $i++)\
+  \ \n { \n if ($i == 6) break;\n echo $i; \n } \n?>\n```\n\n- 示例(Continue):\n\n```php\n\
+  <?php\n for ($i=0; $i<10; $i++) \n { \n if ($i == 5) continue;\n echo $i; \n } \n\
+  ?>\n```\n\n\n\nstring: \n\n```php\n$a = array( “Rahul”, “ravi”, “ajit”, “pratik”\
+  \ ); \n$b = $a[0]; // $myAuthor contains “Rahul” \n$c = $a[1]; // $anotherAuthor\
+  \ contains “ravi” \n$a = array( “Rahul”, “ravi”, “ajit”, “pratik” ); \n$pos = 2;\
+  \ \necho $a[$pos + 1]; // Displays “ajit”\n```\n\n## 使用 `print_r()` 输出整个数组\n\n你不能像打印普通变量那样直接用\
+  \ `print()` 或 `echo()` 来打印数组，因为这些函数一次只能处理一个值。\n\n不过，PHP 确实为你提供了一个名为 `print_r()`\
+  \ 的函数，你可以用它来输出数组的内容以便调试。\n\n使用 `print_r()` 非常简单简单——只需将你想要输出的数组传递给它即可：\n\n```php\n\
+  print_r( $a);\n```\n\n以下示例代码创建了一个索引数组和一个关联数组，然后显示这两个数组：\n\n```php\n<?php\n $a =\
+  \ array( \"Rahul\", \"ravi\", \"ajit\", \"pratik\" ); \nprint_r ( $a ); \n?>\n```\n\
+  \n## `foreach` 循环结构\n\n- 存在一种 `foreach` 结构（命令），它可以对数组中的每个值执行一组语句。\n- 然而，它只对数组有效，如果你尝试对其他类型的变量使用它，它会给出一个巨大的错误。\n\
+  - 你的 `foreach` 命令语法如下所示：\n\n```php\nforeach ($array_variable as $value_variable)\
+  \ \n{ \n    // .. 对 $value_variable 中的值进行某些操作\n} \n\nforeach ($array_variable as\
+  \ $key_var => $value_var) \n{\n    // .. 对 $key_var 和/或 $value_var 进行某些操作\n}\n```\n\
+  \n- 示例：\n\n```html\n<html\n<head>\n<title>For Each 结构</title>\n</head>\n<body>\n\
+  <?php\n $a[] = \"Rahul\"; \n $a[] = \"Ravi\"; \n $a[] = \"Pratik\"; \necho \"My\
+  \ Name -->\".'</br>'; \nforeach ($a as $b) \n{ \n    // 只要 $a 中还有值，这些行就会执行 \n  \
+  \  echo $b.'</br>'; \n} \n?>\n</body>\n</html>\n```\n\n## 数组数组的内置函数：`sort()` 和 `rsort()`\n\
+  \n### i. `sort()`\n\n- 对数组排序。\n- 定义和用法：`sort()` 函数按值对数组进行排序。\n- 此函数为数组中的元素分配新键。现有的键将被删除。\n\
+  - 此函数在成功时返回 `TRUE`，失败时返回 `FALSE`。\n- 语法：`sort(array,sorttype)`\n  - `Array`: 必须。指定要排序的数组。\n\
+  \  - `Sorttype`: 可选。指定如何对数组值排序。可能的值有：\n    - `SORT_REGULAR`: 默认。按原样处理值（不改变类型）。\n\
+  \    - `SORT_NUMERIC`: 以数值方式处理值。\n    - `SORT_STRING`: 将值视为字符串处理。\n    - `SORT_LOCALE_STRING`:\
+  \ 根据本地设置将值视为字符串处理。\n- 示例：\n\n```php\n<?php\n$animal = array(\"a\" => \"Dog\", \"\
+  b\" => \"Cat\", \"c\" => \"Horse\");\nsort($animal);\nprint_r($animal);\n?>\n```\n\
+  - 输出：\nArray ( [0] => Cat [1] => Dog [2] => Horse )\n\n### ii. `rsort()`\n\n- 按降序顺序返回数组。\n\
+  - 定义和用法：`rsort()` 函数按降序顺序返回数组。\n- `Array`: 必须。指定一个数组。\n- `Preserve`: 可选。可能的值为：`true`\
+  \ 或 `false`。指定该函数是否应该保留数组的键。\n- 示例：\n\n```php\n<?php\n$a=array(\"a\"=>\"Dog\",\"\
+  b\"=>\"Cat\",\"c\"=>\"Horse\");\nprint_r(rsort($a));\n?>\n```\n- 输出： Array ( [c]\
+  \ => Horse [b] => Cat [a] => Dog )\n\n# 第 7 章：自定义函数和全局变量\n\n## 函数\n\n函数在代码需要多处使用时最有用，但即使在只使用一次的情况下也有帮助，因为可以使你的代码更具可读性。\n\
+  \n### 语法\n函数定义具有以下形式：\n\n```php\nfunction function-name ($argument-1, $argument-2)\n\
+  {\n    statement-1;\n    statement-2;\n    ...\n}\n```\n\n### 示例-1\n```php\n<?php\n\
+  function add($a, $b) \n{ \n    $c=$a+$b; \n    echo \"Total\".$c; \n} \n$x = 10;\
+  \ \n$y = 20; \nadd($x,$y); \n?>\n```\n\n### 示例-2 (返回值)\n```php\n<?php\nfunction\
+  \ add($a, $b) \n{ \n    return $a+$b; \n} \n$x = 10; \n$y = 20; \n$c=add($x,$y);\
+  \ \necho \"Total\".$c; \n?>\n```\n\n### 形参数与实际参数\n\n在前面的示例中，我们传递给函数的参数恰好是变量，但这不是要求的。实际参数（即函数调用中的参数）可以是任何求值为某个值的表达式。在我们的示例中，我们可以向函数调用传递数字而不是变量，如：`add(10,20)`。\n\
+  \n还要注意，在示例中，我们有几种情况实际参数变量的名称与形参数相同（例如 `$a`），而且我们也有实际名称和形名称不同的情况（`$x` 不等于 `$a`）。正如我们将在下一节中看到的，这种名称的一致并不重要——函数形参数的名称完全独立于函数外部，包括函数调用本身。\n\
+  \n示例：\n```php\n<?php\nfunction add($a,$b) \n{ \n    $c=$a+$b; \n    echo \"Addition\"\
+  .$c.'</br>'; \n} \nfunction sub($d,$e) \n{ \n    $f=$d-$e; \n    echo \"Sub\".$f;\
+  \ \n} \nadd(10,20); \n$x=20; \n$y=10; \nsub($x,$y); \n?>\n```\n\n### 参数传递：传值传递与引用传递\n\
+  \nPHP 提供了两种方式传递参数：传值传递和引用传递。\n\n#### 值传递\nPHP 默认行为是值传递。这意味着当你向函数调用传递变量时，PHP 会创建变量值的副本。如果你只想通过函数的返回值使用函数，这种行为是很好的，但如果你想修改传递的变量，可能会导致困惑。\n\
+  \n示例：\n```php\n<?php\nfunction display($b1,$b2) \n{ \n    $b1 = 30; \n    $b2 =\
+  \ 40; \n} \n$a1=10; \n$a2=20; \ndisplay($a1,$a2); \necho $a1; \necho $a2; \n?>\n\
+  ```\n输出：\n10\n20\n\n#### 引用传递\nPHP 提供了不同的方式让函数实际修改参数：在函数定义和函数调用中。\n\n示例：\n```php\n\
+  <?php\nfunction display(&$b1,&$b2) \n{ \n    $b1 = 30; \n    $b2 = 40; \n} \n$a1=10;\
+  \ \n$a2=20; \ndisplay($a1,$a2); \necho $a1; \necho $a2; \n?>\n```\n输出：\n30\n40\n\
+  \n### 返回\n通过可选的 `return` 语句返回值。任何类型都可以被返回，包括数组和对象。这会导致函数结束执行并将控制权交回调用它的行。如果从函数内部调用，`return()`\
+  \ 函数会立即结束当前函数的执行，并将参数作为函数调的值。\n\n示例：\n```php\n<?php\nfunction sum($a,$b) \n{ \n\
+  \    $c=$a+$b; \n    return $c; \n} \n$x = 10; \n$y = 20; \n$z=sum($x,$y); \necho\
+  \ $z; \n?>\n```\n输出：30\n\n### 默认参数\n要定义带有默认参数的函数，将形参数名称转换为赋值表达式。如果实际调用的参数少于定义的形参数，PHP\
+  \ 将匹配实际和形参数直到实际参数耗尽，然后将使用默认赋值填充剩余部分。\n\n示例：\n```php\n<?php\nfunction info($fname=\"\
+  rahul\",$lname=\"patel\") \n{ \n    echo $fname; \necho $lname.'</br>'; \n} \ninfo();\
+  \ \ninfo(\"ravi\"); \ninfo(\"ravi\",\"dave\"); \n?>\n```\n输出：\nRahulpatel\nRavipatel\n\
+  Ravidave\n\n## 变量的作用域和生命周期\n\n### 局部变量\n正如你所见的，函数的局部变量不存在于函数外部。事实上，在函数内部声明的所有变量在函数退出时被删除，并在下次调用函数时重新创建。\n\
+  \n\n\n\n\n- 这通常是你希望发生的情况，因为这允许你编写出良好的、自包含的函数，这些函数之间可以独立运行。\n- 然而，有时创建一个生命周期较长的局部变量也是很有用的。\n\
+  - 静态变量（static variables）让你能够实现这一点。这些类型的变量在意义上仍然是函数的局部的，因为它们只能在函数代码内部被访问。\n- 但是，与退出函数后就会消失的局部变量不同，静态变量会记住从一次函数调用到下一次调用的值。\n\
+  - 要将局部变量声明为静态的，你只需要在变量名之前编写 `static` 关键字，并为变量分配一个初始值：\n\n```\nstatic $var = 0;\n\
+  ```\n\n- 当函数第一次被调用时，该变量被设置为它的初始值（在本例中为 0）。\n- 但是，如果变量的值在函数内部被更改，那么在下一次调用函数时将记住这个新值。\n\
+  - 该值只在脚本运行期间被记住，因此当你下次运行脚本时，变量将重新初始化。\n\n### 示例：（局部变量）\n\n```php\n<?php\nfunction\
+  \ nextNumber()\n{\n  $counter = 0;\n  return ++$counter;\n}\n\necho \"I’ve counted\
+  \ to:\".nextNumber().\" <br/> \";\necho \"I’ve counted to:\".nextNumber().\" <br/>\"\
+  ;\necho \"I’ve counted to:\".nextNumber().\" <br/>\";\n?>\n```\n\n输出：\n```\nI’ve\
+  \ counted to: 1\nI’ve counted to: 1\nI’ve counted to: 1\n```\n\n- 每每次调用 `nextNumber()`\
+  \ 函数时，它的局部变量 `$counter` 都会被重新创建并初始化为 0。\n- 随后它被递增到 1，并将其值返回给调用代码。\n- 因此，无论调用多少次，该函数始终返回\
+  \ 1。\n\n### 示例：（静态变量）\n\n```php\n<?php\nfunction nextNumber()\n{\n  static $counter\
+  \ = 0;\n  return ++$counter;\n}\n\necho \"I’ve counted to:\".nextNumber().\" <br/>\
+  \ \";\necho \"I’ve counted to:\".nextNumber().\" <br/>\";\necho \"I’ve counted to:\"\
+  .nextNumber().\" <br/>\";\n?>\n```\n\n输出：\n```\nI’ve counted to: 1\nI’ve counted\
+  \ to: 2\nI’ve counted to: 3\n```\n\n- 你可能不会频繁使用静态变量，而且你通常可以使用全局变量来实现相同的效果（尽管风险更大）。\n\
+  \n## 全局变量\n\n- 尽管变量作用域的概念非常有用，但有时你确实想要创建一个可以在脚本中任何地方被访问的变量，无论是在函数内部还是外部。这种变量被称为全局变量（global\
+  \ variable）。\n- PHP 支持全局变量，但如果你习惯其他编程语言，你会发现 PHP 处理全局变量的方式略有不同。\n- 在 PHP 中，所有在函数外部创建的变量某种意义上都是全局的，因为它们可以被脚本中任何函数之外的任何代码访问。\n\
+  - 要在函数内部使用此类变量，请在函数代码中编写 `global` 关键字后跟变量名。\n\n### 示例：\n\n```php\n<?php\n$myGlobal\
+  \ = \"Hello\";\nfunction hello()\n{\n  global $myGlobal;\n  echo \"$myGlobal\";\n\
+  }\nhello(); // 显示 Hello\n```\n\n- 你可以看到，`hello()` 函数通过使用 `global` 语句将 `$myGlobal`\
+  \ 变量声明为全局来访问它。\n- 随后函数可以使用该变量来显示问候。事实上，你不需要在函数外部创建变量就可以将其作为全局变量使用。\n- 查看下面的脚本：\n\
+  \n```php\n<?php\nfunction setup()\n{\n  global $myGlobal;\n  $myGlobal = \"Hello\
+  \ there!\";\n}\n\nfunction hello()\n{\n  global $myGlobal;\n  echo \"$myGlobal\"\
+  ;\n}\nsetup();\nhello(); // 显示 Hello there!\n?>\n```\n\n- 在此脚本中，首先调用了 `setup()`\
+  \ 函数。\n- 它将 `$myGlobal` 变量声明为全局，并给它赋值。\n- 然后调用了 `hello()` 函数。\n- 它也将 `$myGlobal`\
+  \ 声明为全局，这意味着它现在可以访问之前由 `setup()` 设置的值并将其显示。\n- 顺便说一下，你还可以在同一行上使用逗号同时声明多个全局变量：\n\n\
+  ```php\nfunction myFunction()\n{\n  global $oneGlobal, $anotherGlobal;\n}\n```\n\
+  \n- 最后，你还可以使用 `$GLOBALS` 数组访问全局变量。\n- 该数组是一种特殊的变量类型，称为超级全局（superglobal），这意味着你可以从任何地方访问它而无需使用\
+  \ `global` 语句。\n- 它包含了所有全局变量列表，变量名存储在键中，变量值存储在值中。这里有一个使用 `$GLOBALS` 的示例：\n\n```php\n\
+  <?php\n$myGlobal = \"Hello\";\nfunction hello()\n{\n  echo $GLOBALS[\"myGlobal\"\
+  ];\n}\nhello(); // 显示 Hello\n?>\n```\n\n- `hello()` 函数通过 `$GLOBALS` 数组访问 `$myGlobal`\
+  \ 变量的内容。注意，函数不需要将 `$myGlobal` 变量声明为全局即可访问其值。\n\n## SUPERGLOBALS\n\n### 1. PHP 超全局变量\n\
+  PHP 中的几个内置变量是“超级全局变量”，这意味着无论在函数、类还是文件中，都可以访问它们。\n\n### 2. 超全局变量列表\n- `$GLOBALS`\n\
+  - `$_SERVER`\n- `$_REQUEST`\n- `$_POST`\n- `$_GET`\n- `$_FILES`\n- `$_ENV`\n- `$_COOKIE`\n\
+  - `$_SESSION`\n\n`$GLOBALS` 是一个 PHP 超全局变量，它将全局变量存储在一个数组中。\na. 它的索引是变量名。\nb. 下面的示例展示了如何使用\
+  \ `$GLOBALS`：\n\n```php\n<?php\n$x = 75;\n$y = 25;\nfunction addition() {\n  $GLOBALS['z']\
+  \ = $GLOBALS['x'] + $GLOBALS['y'];\n}\naddition();\necho $z;\n?>\n```\n输出:100\n\n\
+  `$_SERVER` 是 PHP 超全局变量，包含了标头、路径和脚本位置的信息。\na. 下面的示例展示了如何使用 `$_SERVER` 中的某些元素：\n\n\
+  ```php\n<?php\necho $_SERVER['PHP_SELF'];\necho \"<br>\";\necho $_SERVER['SERVER_NAME'];\n\
+  echo \"<br>\";\necho $_SERVER['HTTP_HOST'];\necho \"<br>\";\necho $_SERVER['HTTP_REFERER'];\n\
+  echo \"<br>\";\necho $_SERVER['HTTP_USER_AGENT'];\necho \"<br>\";\necho $_SERVER['SCRIPT_NAME'];\n\
+  ?>\n```\n输出：\n```\n/php/demo_global.php\nwww.w3schools.com\nwww.w3schools.com\n\
+  http://www.w3schools.com/php.asp?filename=demo_global\nMozilla/5.0 (Windows NT 6.1)\
+  \ AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36\n/php/demo_global.php\n\
+  ```\n\n下表列出了 `$_SERVER` 中最重要的元素：\n\n| 元素/代码 | 说明 |\n| --- | --- |\n| `$_SERVER['PHP_SELF']`\
+  \ | 返回当前执行的文件 |\n| `$_SERVER['GATEWAY_INTERFACE']` | 返回服务器使用的通用网关接口 (CGI) 版本 |\n\
+  | `$_SERVER['SERVER_ADDR']` | 返回服务器的 IP 地址 |\n| `$_SERVER['SERVER_NAME']` | 返回服务器名称（例如\
+  \ www.w3schools.com） |\n| `$_SERVER['SERVER_SOFTWARE']` | 返回服务器标识字符串（例如 Apache/2.2.24）\
+  \ |\n| `$_SERVER['SERVER_PROTOCOL']` | 返回协议协议名称和修订（例如 HTTP/1.1） |\n| `$_SERVER['REQUEST_METHOD']`\
+  \ | 返回访问页面的请求方法（例如 POST） |\n| `$_SERVER['REQUEST_TIME']` | 返回请求开始的时间戳（例如 1377687496）\
+  \ |\n| `$_SERVER['QUERY_STRING']` | 如果通过查询字符串访问页面，则返回查询字符串 |\n| `$_SERVER['HTTP_ACCEPT']`\
+  \ | 返回当前请求中的 Accept 头部 |\n| `$_SERVER['HTTP_ACCEPT_CHARSET']` | 返回当前请求中的 Accept_Charset\
+  \ 头部（例如 utf-8,ISO-8859-1） |\n| `$_SERVER['HTTP_HOST']` | 返回当前请求中的 Host 头部 |\n\n\n\
+  \n\n\n| `$_SERVER['HTTP_REFERER']` | 说明 |\n| :--- | :--- |\n| `$_SERVER['HTTP_REFERER']`\
+  \ | 返回当前页面的完整 URL（不可靠，因为并非所有用户代理都支持） |\n| `$_SERVER['HTTPS']` | 表示脚本是否通过安全的 HTTP\
+  \ 协议查询 |\n| `$_SERVER['REMOTE_ADDR']` | 返回用户查看当前页面的 IP 地址 |\n| `$_SERVER['REMOTE_HOST']`\
+  \ | 返回用户查看当前页的主机名 (Host) |\n| `$_SERVER['REMOTE_PORT']` | 返回用户机器上与 Web 服务器通信使用的端口\
+  \ |\n| `$_SERVER['SCRIPT_FILENAME']` | 返回当前执行脚本的绝对路径 |\n| `$_SERVER['SERVER_ADMIN']`\
+  \ | 返回 Web 服务器配置文件中 `SERVER_ADMIN` 指令赋的值（如果你的脚本运行在虚拟主机上，它将是该虚拟主机定义的值），例如 `someone@w3schools.com`\
+  \ |\n| `$_SERVER['SERVER_PORT']` | 返回服务器机器上 Web 服务器使用的端口（例如 80） |\n| `$_SERVER['SERVER_SIGNATURE']`\
+  \ | 返回添加到服务器生成页面中的服务器版本和虚拟主机名称 |\n| `$_SERVER['PATH_TRANSLATED']` | 返回指向当前脚本的文件系统路径\
+  \ |\n| `$_SERVER['SCRIPT_NAME']` | 返回当前脚本的路径 |\n| `$_SERVER['SCRIPT_URI']` | 返回当前页面的\
+  \ URI |\n\n# 第 8 章：PHP 表单处理与表单验证\n（使用 `$_GET`, `$_POST`, `$_REQUEST`）\n\n## 1. `<FORM>`\
+  \ 标签的 `ACTION` 属性\n\n`ACTION` 属性在点击“提交”按钮时调用指定的 ASP 文件。如果 `<FORM>` 没有给出 `ACTION`\
+  \ 属性，则 ASP 将请求自身，即这是一个“自引用”页面。\n\n## 2. `GET` 和 `POST` 方法\n\na. `GET` 方法通过将表单的变量名和键值对连接到\
+  \ URL 中作为查询字符串（Query String）来发送数据。\n\nb. `POST` 方法将表单的变量名和键值对编码后随 HTTP 请求头一起发送。\n\
+  \ni. `POST` 的优点：信息的安全性。\n\nii. `POST` 的缺点：生成的响应页面无法加入书签。\n\n## 3. PHP 有两个全局变量 `$_GET`\
+  \ 和 `$_POST`，用于从 HTML 表单获取用户输入信息。\n\n## 4. 超全局变量 `$_REQUEST` 用于收集输入字段的值，而不是使用 `$_GET`\
+  \ 或 `$_POST`。\n\n## 5. 实际示例：分离 HTML 和 PHP 文件。\n\n### Q. 编写 HTML 和 PHP 程序创建欢迎消息：\n\
+  \n![](img/image00172.jpeg)\n\n**答：保存在桌面的 HTML 文件 (wel.html)**\n\n```html\n<html>\
+  \  \n<body>\n<form action=\"welcome.php\" method=\"post\">\nName: <input type=\"\
+  text\" name=\"name\"><br>\nE-mail: <input type=\"text\" name=\"email\"><br>\n<input\
+  \ type=\"submit\">\n</form>\n</body>\n</html>\n```\n\n**保存在 htdocs 中的 PHP 文件 (welcome.php)**\n\
+  \n```php\n<?php\necho \"Your name is: \" . $_POST[\"name\"], \"<br>\";\necho \"\
+  You Email is \" . $_POST[\"email\"];\n?>\n```\n\n**输出：**\nWelcome John\nYour email\
+  \ address is john.doe@example.com\n\n## 实际示例：带有 HTML 表单的单个 PHP 文件。\n\n### Q. 编写单个\
+  \ PHP 文件，包含一个可以接受用户姓名和年龄的表单，并在点击提交按钮时显示这些内容。（注意：示例使用了 `$_GET`。）\n\n**答：**\n\n```html\n\
+  <html>\n<head>\n<title>$_POST result in URL</title>\n</head>\n<body>\n<FONT SIZE=\"\
+  6pt\" color=blue FACE=\"Comic Sans MS\">\n<H3>处理 HTML 表单</H3>\n</FONT>\n<HR>\n<form\
+  \ name=\"DisplayDetails\" method=\"GET\" action=\"<?php echo $_SERVER[\"PHP_SELF\"\
+  ]; ?>\">\nName: <input type=\"text\" name=\"fname\" />\nAge: <input type=\"text\"\
+  \ name=\"age\" />\n<input type=\"submit\" name=\"btnSubmit\" id=\"btnSubmit\" value=\"\
+  Submit\"/>\n</form>\n<?php\necho \"Your name is: \" . $_GET[\"fname\"], \"<br>\"\
+  ;\necho \"You age is \" . $_GET[\"age\"];\n?>\n</body>\n</html>\n```\n\n## 实际示例：表单验证\n\
+  \n### Q. 编写 PHP 程序，显示一个接受用户名的表单。然后验证用户名是否为空并显示消息。（注意：示例使用了 `$_REQUEST`。）\n\n**答：**\n\
+  \n```html\n<html>\n<body>\n<form method=\"post\" action=\"<?php echo$_SERVER['PHP_SELF'];?>\"\
+  >\n  Name: <input type=\"text\" name=\"fname\">\n  <input type=\"submit\">\n</form>\n\
+  <?php\nif ($_SERVER[\"REQUEST_METHOD\"] == \"POST\") {\n    // 收集输入字段的值\n    $name\
+  \ = $_REQUEST['fname']; \n    if (empty($name)) {\n        echo \"Name is empty\"\
+  ;\n    } else {\n        echo \"Welcome, \" . $name;\n    }\n}\n?>\n</body>\n</html>\n\
+  ```\n\n\n\n\n\n- 客户端与服务器的交互被称为会话（session）。\n- 会话通过 `session_start()` 函数启动。\n- 用户关闭浏览器窗口或调用\
+  \ `session_destroy()` 函数时，会话结束。\n- 每个会话都有一个唯一的 `SessionID`。\n- 可以创建会话变量来存储用户信息。\n\
+  - 会话变量比 Cookie 更安全，因为会话变量存储在服务器端，而 Cookie 存储在客户端计算机上。\n\n### 示例\n\n```php\n<?php\n\
+  // Start the session\nsession_start();\n?>\n```\n\n```php\n<?php\n// Set session\
+  \ variables\n$_SESSION[\"favcolor\"] = \"green\";\n$_SESSION[\"favanimal\"] = \"\
+  cat\";\necho \"Session variables are set.\";\n?>\n```\n\n```php\n<?php\nsession_start();\n\
+  ?>\n```\n\n```php\n<?php\n// Echo session variables that were set on previous page\n\
+  echo \"Favorite color is \" . $_SESSION[\"favcolor\"] . \".<br>\";\necho \"Favorite\
+  \ animal is \" . $_SESSION[\"favanimal\"] . \".\";\n?>\n```\n\n```php\n<?php\nsession_start();\n\
+  ?>\n```\n\n```php\n<?php\nprint_r($_SESSION);\n?>\n```\n\n### 修改 PHP 会话变量\n\n```php\n\
+  <?php\nsession_start();\n?>\n```\n\n```php\n<?php\n// to change a session variable,\
+  \ just overwrite it \n$_SESSION[\"favcolor\"] = \"yellow\";\nprint_r($_SESSION);\n\
+  ?>\n```\n\n### 销毁 PHP 会话\n\n要移除所有全局会话变量并销毁会话，使用 `session_unset()` 和 `session_destroy()`：\n\
+  \n```php\n<?php\nsession_start();\n?>\n```\n\n```php\n<?php\n// remove all session\
+  \ variables\nsession_unset(); \n// destroy the session \nsession_destroy(); \n?>\n\
+  ```\n\n# 第 9 章：PHP 中的文件操作与错误处理\n\n本章将解释以下与文件相关的函数——\n- 打开文件\n- 读取文件\n- 写入文件\n- 关闭文件\n\
+  \n## I. 打开和关闭文件\n\n### 1. fopen() 函数：\ni) PHP `fopen()` 函数用于打开文件。它需要两个参数，首先是文件名，然后是操作模式。\n\
+  ii) 如果尝试打开文件失败，`fopen` 返回 `false` 值，否则返回一个文件指针，用于对该文件进行后续读取或写入。\niii) 文件模式可以指定为表中的六个选项之一。\n\
+  \n| 模式 | 目的 |\n| --- | --- |\n| r | 以只读模式打开文件。将文件指针放在文件开头。 |\n| r+ | 以读写模式打开文件。将文件指针放在文件开头。\
+  \ |\n| w | 以只写模式打开文件。将文件指针放在文件开头并将文件截断为零长度。如果文件不存在，则尝试创建文件。 |\n| w+ | 以读写模式打开文件。将文件指针放在文件开头并将文件截断为零长度。如果文件不存在，则尝试创建文件。\
+  \ |\n| a | 以只写模式打开文件。将文件指针放在文件末尾。如果文件不存在，则尝试创建文件。 |\n| a+ | 以读写模式打开文件。将文件指针放在文件末尾。如果文件不存在，则尝试创建文件。\
+  \ |\n\n如果文件不存在，则尝试创建文件。\n\n### 2. fclose() 函数：\na. 在对打开的文件进行更改后，使用 `fclose()` 函数关闭它非常重要。`fclose()`\
+  \ 函数需要一个文件指针作为参数，关闭成功时返回 `true`，失败时返回 `false`。\n\n## II. 读取文件\n\n### 1. fread()\
+  \ 函数：\na. 一旦使用 `fopen()` 打开文件，就可以用 `fread()` 读取。\nb. 该函数需要两个参数：文件指针和以字节为单位的文件长度。\n\
+  \n### 2. fgets() 函数：\n`fgets()` 函数用于从文件中读取单行，调用该函数后文件指针将移动到下一行。\n\n### 3. fgetc()\
+  \ 函数：\n`fgetc()` 函数从文件中读取单个字符，调用该函数后文件指针将移动到下一个字符。\n\n### 4. filesize() 函数：\n可以使用\
+  \ `filesize()` 函数查找长度，它接收文件名作为参数并返回以字节为单位的文件大小。\n\n### 5. feof() 函数：\n如果到达文件末尾则返回\
+  \ `True`，否则返回 `False`。\n\nPHP 读取文件的步骤如下：\n- 使用 `fopen()` 函数打开文件。\n- 使用 `filesize()`\
+  \ 函数获取文件长度。\n- 使用 `fread()` 函数读取内容。\n- 使用 `fclose()` 函数关闭文件。\n\n#### 示例 1：PHP 读取文件\n\
+  \n```php\n<?php\n$fileName=\"myFile.txt\";\n$fp = fopen($fileName,\"r\");\nif($fp==false)\n\
+  {\n  echo (\"Error in file\");\nexit();\n}\n$fileSize=filesize($fileName);\n$fileData=fread($fp,\
+  \ $fileSize);\n?>\n```\n\n#### 示例 2：逐行读取文件\n\n示例：\n```php\n<?php\n$fileName=\"myFile.txt\"\
+  ;\n$fp = fopen($fileName,\"r\");\nif($fp==false)\n{\n  echo (\"Error in file\");\n\
+  exit();\n}\nwhile(!feof($fp))\n{\necho fgets($fp). \"<br>\";\n}\n?>\n```\n\n####\
+  \ 示例 3：逐字符读取文件并显示次数\n\n示例：\n```php\n<?php\n$fileName=\"myFile.txt\";\n$fp = fopen($fileName,\"\
+  r\");\nif($fp==false)\n{\n  echo (\"Error in file\");\nexit();\n}\nwhile(!feof($fp))\n\
+  {\nif(fgetc($fp)==\" \")\n{\n$count++;\n}\n}\necho “The total number of times is\
+  \ :).count;\n?>\n```\n\n## III. PHP 写入文件\n\n### 1. fwrite() 函数：\na. 使用 `fwrite()`\
+  \ 函数可以写入新文件或向现有文件追加文本。\nb. 该函数需要两个参数：文件指针和要写入的字符串。\nc. 可选的第三整数参数可以指定数据长度。如果使用了第三参数，文件将在达到指定长度后停止。\n\
+  \n#### 示例 1：PHP 写入文件\n\n```php\n<?php\n$fileName=\"myFile.txt\";\n$fp = fopen($fileName,\"\
+  w\");\nif($fp==false)\n{\n  echo (\"Error in file\");\nexit();\n}\nfwrite( $fp,\"\
+  This is sample text to write\");\n?>\n```\n\n## IV. PHP 关闭文件\n\n### 1. fclose()\
+  \ 函数：\n在 PHP 中，使用后关闭所有文件并不是必须的，因为文件会自动关闭。你可以使用 `fclose()` 函数关闭文件。\n\n示例：\n```php\n\
+  <?php\n$fileName=\"myFile.txt\";\n$fp = fopen($fileName,\"w\");\nif($fp==false)\n\
+  {\n  echo (\"Error in file\");\nexit();\n}\n//some code to be executed\nfclose(\
+  \ $fp);\n?>\n```\n\n### 2. file() 函数：\na. PHP `file()` 函数用于将整个内容读取到数组中。\nb. 该函数也会以读模式打开文件，不需要单独打开和关闭文件。\n\
+  c. 每个数组元素包含文件中的一行。\n\n示例：使用 `file()` 读取整个文本文件并逐行显示的 PHP 程序。\n\n```php\n<?php\n$FArray=file('myFile.txt');\n\
+  foreach($FArray as $line)\n{\necho $line.'<br>';\n}\n?>\n```\n\n# 第 10 章：PHP 错误处理\n\
+  \n## 1. 错误类型\n- **语法错误 (Syntax Error)**：当我们违反编程规则时发生。例如：`$abc=”hello\"`（缺少分号）。\n\
+  - **运行时 (Run time error)**：程序运行时发生的错误。例如：当数据库服务器关闭时尝试连接数据库。\n- **逻辑错误 (Logical Error)**：由于编程中算法错误导致的错误。\n\
+  \n## 2. PHP 通过三种方法处理错误：\n- PHP `die()` 函数\n- 设置自定义处理程序和触发错误\n- 错误报告\n\n## 3. 使用\
+  \ PHP die() 函数：\n`die()` 函数显示消息并停止执行当前脚本。\n示例：打开文本文件时，如果文件没有打开，则显示错误消息并停止脚本。\n\n\
+  ```php\n<?php\n$file=fopen(\"welcome.txt\",\"r\");\nif(!file_exists(\"welcome.txt\"\
+  )) \n{\n  die(\"File not found\");\n} \nelse \n{\n  $file=fopen(\"welcome.txt\"\
+  ,\"r\");\necho “File is ready for reading”;\n}\n?>\n```\n\n## 4. 创建自定义错误处理器与 PHP\
+  \ 错误报告：\na. 可以通过 `CustomError()` 函数覆盖默认 PHP 错误。\n\n\n\n\nb. 该函数必须处理至少 2 个参数（错误级别和错误消息）\n\
+  \nc. 自定义错误处理函数的示例：\n\n```php\n<?php\nfunction handleError($errno, $errstr, $error_file,\
+  \ $error_line)\n{\n    echo \"<b>Error:</b> [$errno] $errstr – $error_file:$error_line\"\
+  ;\n    echo \"<br />\";\n    echo \"Terminating PHP Script\";\n    die();\n}\n//\
+  \ 设置错误处理函数\nset_error_handler(\"handleError\");\n// 触发错误\nmyFunction();\n?>\n```\n\
+  \nd. `set_error_handler()` 函数：可以使用此函数更改 PHP 的默认错误处理程序。\n\ne. `trigger_error()` 函数：PHP\
+  \ 还提供了 `trigger_error()` 函数，可以用于触发错误。\n\n示例：\n\n```php\n<?php\n$test=2;\nif ($test>=1)\
+  \ {\n  trigger_error(\"Value must be 1 or below\");\n}\n?>\n```\n"
