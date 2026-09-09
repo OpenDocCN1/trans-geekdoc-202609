@@ -1,0 +1,668 @@
+<p><span id="part0000.xhtml"></span></p>
+<div>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid"><span style=" font-size:3.6rem; font-weight:bold; color:#0070c0">PHP</span><span style=" font-size:1.2rem; font-weight:bold; color:#0070c0">Cheatsheets of Functions</span></h2>
+<p><span style=" font-size:1.0rem; font-weight:bold; color:#0070c0">Get to Know Functions and Constants Used for PHP DateTime Forma</span><span style=" font-size:1.0rem; font-weight:bold; color:#0070c0 ;letter-spacing:0.26rem">t</span><span style=" font-size:1.0rem; font-weight:bold; color:#0070c0">…</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; color:#0070c0"> </span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; color:#0070c0">By:</span><span style=" font-size:1.0rem; font-weight:bold; color:#0070c0 ;letter-spacing:0.26rem"> </span><span style=" font-size:1.0rem; font-weight:bold; color:#0070c0">Daniel Billotte</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">PHP date and time can be formatted in multiple different ways in your PHP code. You might need a Unix timestamp or GMT date, a DateTime object or an ISO date. Therefore, it is important to learn functions that are applied to manipulate PHP DateTime format.</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">PHP date formatting is not that hard, but you still have to have specific knowledge and expertise. Fetching the date and time from the server you are using is only the first step. Don't let a wrong time zone or PHP date format throw you off your feet!</span></p>
+</div>
+<p><span id="part0001.xhtml"></span></p>
+<div>
+<table border="1" cellpadding="0" cellspacing="3" style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-collapse:separate; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-spacing:2pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; float:left;margin:0.00% 3.13%; width:271.35pt">
+<tbody>
+<tr style="height:36.2pt">
+<td colspan="2" style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:255.8pt">
+<h2 style="margin:0.40% 0.00% 0.00%; text-align:center; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold; color:#0070c0">Contents</span></h2>
+</div>
+</td>
+</tr>
+<tr style="height:28.15pt">
+<td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:161.7pt">
+<p><a href="#part0002.xhtml#_DateTime_Functions"><span style=" font-size:1.0rem; text-decoration:underline; color:#0563c1">DateTime Functions</span></a></p>
+</td>
+<td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:81.3pt">
+<p><span style=" font-size:1.0rem; color:#0070c0">4</span></p>
+</td>
+</tr>
+<tr style="height:28.15pt">
+<td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:161.7pt">
+<p><a href="#part0002.xhtml#_Error_Functions"><span style=" font-size:1.0rem; text-decoration:underline; color:#0563c1">Error Functions</span></a></p>
+</td>
+<td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:81.3pt">
+<p><span style=" font-size:1.0rem; color:#0070c0">10</span></p>
+</td>
+</tr>
+<tr style="height:28.8pt">
+<td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:161.7pt">
+<p><a href="#part0002.xhtml#_File_Function"><span style=" font-size:1.0rem; text-decoration:underline; color:#0563c1">File Function</span></a></p>
+</td>
+<td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:81.3pt">
+<p><span style=" font-size:1.0rem; color:#0070c0">17</span></p>
+</td>
+</tr>
+<tr style="height:28.15pt">
+<td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:161.7pt">
+<p><a href="#part0002.xhtml#_Filter"><span style=" font-size:1.0rem; text-decoration:underline; color:#0563c1">Filter</span></a></p>
+</td>
+<td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:81.3pt">
+<p><span style=" font-size:1.0rem; color:#0070c0">26</span></p>
+</td>
+</tr>
+<tr style="height:28.15pt">
+<td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:161.7pt">
+<p><a href="#part0003.xhtml#_Math_Functions"><span style=" font-size:1.0rem; text-decoration:underline; color:#0563c1">Math Functions</span></a></p>
+</td>
+<td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:81.3pt">
+<p><span style=" font-size:1.0rem; color:#0070c0">32</span></p>
+</td>
+</tr>
+<tr style="height:28.8pt">
+<td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:161.7pt">
+<p><a href="#part0003.xhtml#_Mail_Function"><span style=" font-size:1.0rem; text-decoration:underline; color:#0563c1">Mail Function</span></a></p>
+</td>
+<td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:81.3pt">
+<p><span style=" font-size:1.0rem; color:#0070c0">38</span></p>
+</td>
+</tr>
+<tr style="height:28.15pt">
+<td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:161.7pt">
+<p><a href="#part0004.xhtml#_Miscellaneous_Functions"><span style=" font-size:1.0rem; text-decoration:underline; color:#0563c1">Miscellaneous Functions</span></a></p>
+</td>
+<td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:81.3pt">
+<p><span style=" font-size:1.0rem; color:#0070c0">42</span></p>
+</td>
+</tr>
+<tr style="height:28.15pt">
+<td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:161.7pt">
+<p><a href="#part0004.xhtml#_PHP_Date_Format"><span style=" font-size:1.0rem; text-decoration:underline; color:#0563c1">PHP Date Format</span></a></p>
+</td>
+<td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:81.3pt">
+<p><span style=" font-size:1.0rem; color:#0070c0">47</span></p>
+</td>
+</tr>
+<tr style="height:28.15pt">
+<td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:161.7pt">
+<p><a href="#part0004.xhtml#_String_Functions"><span style=" font-size:1.0rem; text-decoration:underline; color:#0563c1">String Functions</span></a></p>
+</td>
+<td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:81.3pt">
+<p><span style=" font-size:1.0rem; color:#0070c0">53</span></p>
+</td>
+</tr>
+<tr style="height:28.8pt">
+<td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:161.7pt">
+<p><a href="#part0004.xhtml#_PHP_Array_Functions"><span style=" font-size:1.0rem; text-decoration:underline; color:#0563c1">Array Functions</span></a></p>
+</td>
+<td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:81.3pt">
+<p><span style=" font-size:1.0rem; color:#0070c0">61</span></p>
+</td>
+</tr>
+<tr style="height:18.75pt">
+<td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:161.7pt">
+<p><a href="#part0004.xhtml#_Directory_Functions"><span style=" font-size:1.0rem; text-decoration:underline; color:#0563c1">Directory Functions</span></a></p>
+</td>
+<td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; padding-left:5.03pt; padding-right:5.03pt; vertical-align:middle; width:81.3pt">
+<p><span style=" font-size:1.0rem; color:#0070c0">68</span></p>
+</td>
+</tr>
+<tr style=" ">
+<td style="width:175.5pt; border:none">
+</td>
+<td style="width:95.1pt; border:none">
+</td>
+</tr>
+</tbody>
+</table>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:0.89rem; letter-spacing:-0.2pt; "> Copyright 2019 by Daniel Billotte- All rights reserved.</span></p>
+<p><span style=" font-size:0.89rem; letter-spacing:-0.2pt; "> </span></p>
+<p><span style=" font-size:0.89rem; letter-spacing:-0.2pt; ">This is a legally binding declaration that is considered both valid and fair by both the Committee of Publishers Association.</span></p>
+</div>
+<p><span id="part0002.xhtml"></span></p>
+<div>
+<h1 style="margin:2.38% 0.00% 0.00%; text-align:justify; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.8rem"><span id="part0002.xhtml#_DateTime_Functions"></span><span style=" font-size:1.8rem; font-weight:bold; color:#2e74b5">DateTime Functions</span></h1>
+<h4 style="margin:0.00% 0.00%; text-align:justify; page-break-inside:avoid; page-break-after:avoid;   font-weight:normal"><span style=" font-size:1.9rem; font-style:italic; letter-spacing:-0.2pt; ">Contents</span></h4>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">1.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> PHP DateTime Format: Main Tips</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">2.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> Runtime Configuration</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">3.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> Time And Date Functions</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">4.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> List of Predefined Constants</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">5.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> PHP DateTime Format: Summary</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span id="part0002.xhtml#_PHP_DateTime_Format_"></span><span style=" font-size:1.5rem; font-weight:bold">PHP DateTime Format: Main Tips</span></h2>
+<ul>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Time and date PHP functions allow you to get date and time from the server you're using.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">These functions are inbuilt into the PHP core.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Keep in mind that these functions are dependant on your server's locale setting.</span></li>
+</ul>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">Runtime Configuration</span></h2>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">When using these functions to set PHP DateTime format, remember that how they behave will be affected by the settings located in php.ini:</span></p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p><span style=" font-size:0.59rem; font-weight:bold; letter-spacing:-0.2pt; ">Name</span></p></td>
+<td><p><span style=" font-size:0.59rem; font-weight:bold; letter-spacing:-0.2pt; ">Description</span></p></td>
+<td><p><span style=" font-size:0.59rem; font-weight:bold; letter-spacing:-0.2pt; ">Default</span></p></td>
+<td><p><span style=" font-size:0.59rem; font-weight:bold; letter-spacing:-0.2pt; ">PHP Version</span></p></td>
+</tr>
+<tr class="even">
+<td><p><span style=" font-size:0.59rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">date.timezone</span></p></td>
+<td><p><span style=" font-size:0.59rem; letter-spacing:-0.2pt; ">Default timezone (is used by all PHP date/time functions)</span></p></td>
+<td><p><span style=" font-size:0.59rem; letter-spacing:-0.2pt; ">""</span></p></td>
+<td><p><span style=" font-size:0.59rem; letter-spacing:-0.2pt; ">PHP 5.1 and newer</span></p></td>
+</tr>
+<tr class="odd">
+<td><p><span style=" font-size:0.59rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">date.default_latitude</span></p></td>
+<td><p><span style=" font-size:0.59rem; letter-spacing:-0.2pt; ">Default latitude (is used by date_sunrise() and date_sunset())</span></p></td>
+<td><p><span style=" font-size:0.59rem; letter-spacing:-0.2pt; ">"31.7667"</span></p></td>
+<td><p><span style=" font-size:0.59rem; letter-spacing:-0.2pt; ">PHP 5.0 and newer</span></p></td>
+</tr>
+<tr class="even">
+<td><p><span style=" font-size:0.59rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">date.default_longitude</span></p></td>
+<td><p><span style=" font-size:0.59rem; letter-spacing:-0.2pt; ">Default longitude (is used by date_sunrise() and date_sunset())</span></p></td>
+<td><p><span style=" font-size:0.59rem; letter-spacing:-0.2pt; ">"35.2333"</span></p></td>
+<td><p><span style=" font-size:0.59rem; letter-spacing:-0.2pt; ">PHP 5.0 and newer</span></p></td>
+</tr>
+<tr class="odd">
+<td><p><span style=" font-size:0.59rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">date.sunrise_zenith</span></p></td>
+<td><p><span style=" font-size:0.59rem; letter-spacing:-0.2pt; ">Default sunrise zenith (is used by date_sunrise() and date_sunset())</span></p></td>
+<td><p><span style=" font-size:0.59rem; letter-spacing:-0.2pt; ">"90.83"</span></p></td>
+<td><p><span style=" font-size:0.59rem; letter-spacing:-0.2pt; ">PHP 5.0 and newer</span></p></td>
+</tr>
+<tr class="even">
+<td><p><span style=" font-size:0.59rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">date.sunset_zenith</span></p></td>
+<td><p><span style=" font-size:0.59rem; letter-spacing:-0.2pt; ">Default sunset zenith (is used by date_sunrise() and date_sunset())</span></p></td>
+<td><p><span style=" font-size:0.59rem; letter-spacing:-0.2pt; ">"90.83"</span></p></td>
+<td><p><span style=" font-size:0.59rem; letter-spacing:-0.2pt; ">PHP 5.0 and up</span></p></td>
+</tr>
+</tbody>
+</table>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">Time And Date Functions</span></h2>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Analyze the table below. It is a handy guide for the inbuilt functions that can be used for all your needs when it comes to setting the PHP DateTime format. Feel free to return to it whenever you need a reminder.</span></p>
+<p><img src="Images/image00055.jpeg" /></p>
+<p><img src="Images/image00056.jpeg" /></p>
+<p><img src="Images/image00057.jpeg" /></p>
+<p><img src="Images/image00058.jpeg" /></p>
+<p><img src="Images/image00059.jpeg" /></p>
+<p><img src="Images/image00060.jpeg" /></p>
+<p><img src="Images/image00061.jpeg" /></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">List of Predefined Constants</span></h2>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">There are also a few predefined constants that can be used in PHP date formatting. Take a look at their names and descriptions:</span></p>
+<p><img src="Images/image00062.jpeg" /></p>
+<p><img src="Images/image00063.jpeg" /></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">PHP DateTime Format: Summary</span></h2>
+<ul>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">To get dates and time, inbuilt PHP time and date functions and constants are used.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">These functions are related to the locale settings of the server you're using.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Always keep time inconsistencies (such as daylight savings, time zones and leap years) in mind when working with PHP date functions.</span></li>
+</ul>
+<h1 style="margin:2.38% 0.00% 0.00%; text-align:justify; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.8rem"><span id="part0002.xhtml#_Error_Functions"></span><span style=" font-size:1.8rem; font-weight:bold; color:#2e74b5">Error Functions</span></h1>
+<h3 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span style=" font-size:1.0rem; color:#1f4d78">How to Fix PHP Error: A Guide on Handlers, Functions and Constants</span></h3>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">You already learned how PHP error handling works, what PHP errors are in their essence, and how to work with them. Still, there is a lot of functions you don't know. Some of them (like PHP display errors) may come in handy often.</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">PHP error handling is not a task you'd want to put away for long. Therefore, in this tutorial, we will introduce you with various functions and constants that will prove helpful to you as you're using PHP error handlers and creating custom error logs.</span></p>
+<h4 style="margin:0.00% 0.00%; text-align:justify; page-break-inside:avoid; page-break-after:avoid;   font-weight:normal"><span style=" font-size:1.9rem; font-style:italic; letter-spacing:-0.2pt; ">Contents</span></h4>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">1.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> PHP Error: Main Tips</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">2.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> Settings for Runtime Configuration</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">3.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> List of Functions to Handle Errors</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">4.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> Relevant Predefined Constants</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">5.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> PHP Error: Summary</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">PHP Error: Main Tips</span></h2>
+<ul>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">PHP error functions are meant for dealing with error handling and logging tasks.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Error functions allow you to define how PHP errors will be handled and logged.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Logging errors means sending their messages to be saved in specified files, emails and other kind of system logs.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Error report functions let you customize how certain PHP errors are reacted to, and the level of feedback.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">The functions are inbuilt into the PHP core.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">This tutorial explains in detail what is a PHP error.</span></li>
+</ul>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">Settings for Runtime Configuration</span></h2>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">The way these functions behave is affected by the settings located in php.ini:</span></p>
+<p><img src="Images/image00064.jpeg" /></p>
+<p><img src="Images/image00065.jpeg" /></p>
+<p><img src="Images/image00066.jpeg" /></p>
+<p><img src="Images/image00067.jpeg" /></p>
+<p><img src="Images/image00068.jpeg" /></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">List of Functions to Handle Errors</span></h2>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">For the PHP error management, you are welcome to use the following functions. The table below indicates the most common methods that might be applied to get information on the latest errors, set different handler functions and perform other related actions:</span></p>
+<p><img src="Images/image00069.jpeg" /></p>
+<p><img src="Images/image00070.jpeg" /></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">Relevant Predefined Constants</span></h2>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">In PHP error handling, you can use the predefined constants that are designed for allowing you to set which errors are supposed to be displayed. Take a look at the following table and learn the meaning of each constant:</span></p>
+<p><img src="Images/image00071.jpeg" /></p>
+<p><img src="Images/image00072.jpeg" /></p>
+<p><img src="Images/image00073.jpeg" /></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">PHP Error: Summary</span></h2>
+<ul>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">To handle and log errors, you should use special PHP error functions.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">When an error is logged, their messages are sent and saved in a log, such as a specified file or email.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Using PHP error reporting, you can define system's feedback to particular PHP errors and its level.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">These functions don't require special installation.</span></li>
+</ul>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h1 style="margin:2.38% 0.00% 0.00%; text-align:justify; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.8rem"><span id="part0002.xhtml#_File_Function"></span><span style=" font-size:1.8rem; font-weight:bold; color:#2e74b5">File Function</span></h1>
+<h3 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span style=" font-size:1.0rem; color:#1f4d78">How to Use Any PHP File Function: Copy, Delete and Many More</span></h3>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">In developing, functions are tools that you combine with your skills to achieve the desired effect. For example, using any PHP file function, you can quickly and easily read a file into an array, be it characters or binary data such as pictures.</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">The navigation of the filesystem becomes effortless when you know which PHP file function needs to be applied in certain situations. In this tutorial, we will provide you with a handy list of functions used to manipulate PHP filesystems and files.</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">We will review the most frequently used method: the PHP file() function, applied when it is necessary to read a file into an array. Additionally, you will learn the techniques to change groups, modes, and owners of files.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h4 style="margin:0.00% 0.00%; text-align:justify; page-break-inside:avoid; page-break-after:avoid;   font-weight:normal"><span style=" font-size:1.9rem; font-style:italic; letter-spacing:-0.2pt; ">Contents</span></h4>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">1.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> PHP File Function: Main Tips</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">2.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> Most Common Method: file()</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">3.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> Options for Runtime Configuration</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">4.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> List of Functions</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">5.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> PHP File Function: Summary</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> </span></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid;   "><span style=" font-size:2.0rem; font-weight:bold; letter-spacing:-0.2pt; ">PHP File Function: Main Tips</span></h2>
+<ul>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">PHP file functions allow accessing and manipulating filesystems.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">These functions are inbuilt into the PHP core.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">When using this function on Unix, forward slash (/) is used to separate directories.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">On Windows, forward (/) and backward (\) slashes may be used for that.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">One of the most important methods is the PHP file() function, used to read a file into array.</span></li>
+</ul>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">Most Common Method: file()</span></h2>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">As we have mentioned, among the most used methods stands the PHP file function that reads a file into an array. Each element of the array will represent a line from a file. Before PHP 4.3, using </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9884fc; background-color:#f4f2ff">file()</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> PHP could only read character data, but now it also works with binary data such as pictures.</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Let's view the correct syntax that is needed for PHP file function to be executed correctly:</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9884fc; background-color:#f4f2ff">file(path,include path,context)</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Only the first of the parameters is required, as it names the exact file for PHP </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9884fc; background-color:#f4f2ff">file()</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> to read.</span></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">Options for Runtime Configuration</span></h2>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">The way PHP filesystem functions behave is inevitably affected by the settings located in </span><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; ">php.ini</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">. Let's see the different options we can use for the configuration:</span></p>
+<p><img src="Images/image00074.jpeg" /></p>
+<p><img src="Images/image00075.jpeg" /></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">List of Functions</span></h2>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">In the table below, you have the list of functions PHP provides to make your work with the PHP filesystem easier.</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Some of them (such as </span><a href="https://www.bitdegree.org/learn/php-fopen#fopen"><span style=" font-size:1.0rem; text-decoration:underline; letter-spacing:-0.2pt; color:#9884fc">fopen()</span></a><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">) you might also recognize from our previous lessons, in which we learned to work with PHP code to open external files:</span></p>
+<p><img src="Images/image00076.jpeg" /></p>
+<p><img src="Images/image00077.jpeg" /></p>
+<p><img src="Images/image00078.jpeg" /></p>
+<p><img src="Images/image00079.jpeg" /></p>
+<p><img src="Images/image00080.jpeg" /></p>
+<p><img src="Images/image00081.jpeg" /></p>
+<p><img src="Images/image00082.jpeg" /></p>
+<p><img src="Images/image00083.jpeg" /></p>
+<p><img src="Images/image00084.jpeg" /></p>
+<p><img src="Images/image00085.jpeg" /></p>
+<p><img src="Images/image00086.jpeg" /></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">PHP File Function: Summary</span></h2>
+<ul>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Inbuilt PHP functions that are used to access and manipulate filesystems can simply called filesystem functions. They don't require installation.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Directories are separated using forward slashes (/). On Windows you can use backward slashes (\) as well.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">PHP file function is probably used the most. You can read a file into array using it. PHP </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9884fc; background-color:#f4f2ff">file()</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> is able to read both binary data and characters.</span></li>
+</ul>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> </span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> </span></p>
+<h1 style="margin:2.38% 0.00% 0.00%; text-align:justify; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.8rem"><span id="part0002.xhtml#_Filter"></span><span style=" font-size:1.8rem; font-weight:bold; color:#2e74b5">Filter</span></h1>
+<h3 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span style=" font-size:1.0rem; color:#1f4d78">Learn to Use PHP Filter: Functions to up Your Security Level</span></h3>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> </span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">We might have already discussed PHP filters once or twice. Using them is important for the safety of the website or application you are creating.</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">We prepared a clear list of PHP filter functions and predefined constants that you can quickly refer to. If suddenly you need to PHP validate strings, encode special characters or perform other filtering duties, we are here for your every need.</span></p>
+</div>
+<p><span id="part0003.xhtml"></span></p>
+<div>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> </span></p>
+<h4 style="margin:0.00% 0.00%; text-align:justify; page-break-inside:avoid; page-break-after:avoid;   font-weight:normal"><span style=" font-size:1.9rem; font-style:italic; letter-spacing:-0.2pt; ">Contents</span></h4>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">1.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> PHP Filter: Main Tips</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">2.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> Options for Runtime Configuration</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">3.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> List of Functions to Apply</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">4.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> Relevant Predefined Constants</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">5.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> PHP Filter: Summary</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">PHP Filter: Main Tips</span></h2>
+<ul>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">PHP filters are used to sort, validate and otherwise filter data using PHP script.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Since the PHP version 5.2.0, the filter functions are available by default, so they don't have to be installed.</span></li>
+<li><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9884fc; background-color:#f4f2ff">filter_var</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> in PHP might be considered one of the most valuable functions.</span></li>
+</ul>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">Options for Runtime Configuration</span></h2>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Always remember that the work of these functions is affected by the settings located in </span><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; ">php.ini</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">:</span></p>
+<p><img src="Images/image00087.jpeg" /></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">List of Functions to Apply</span></h2>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">In the table below, you can see a list of useful functions that can be used with PHP filters. They are valid in PHP 5.2 and all newer versions:</span></p>
+<p><img src="Images/image00088.jpeg" /></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">Relevant Predefined Constants</span></h2>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Take a look at these predefined constants. You may find them useful when performing PHP filtering as well:</span></p>
+<p><img src="Images/image00089.jpeg" /></p>
+<p><img src="Images/image00090.jpeg" /></p>
+<p><img src="Images/image00091.jpeg" /></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">PHP Filter: Summary</span></h2>
+<ul>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">PHP filtering is useful for coders who need to handle (in most cases, validate and sort) the data.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Inbuilt PHP filters have been introduced with version 5.2. If you're using this version or a newer one, there's no need to install these functions separately.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Coders use </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9884fc; background-color:#f4f2ff">filter_var</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> in PHP codes very often for its flexibility.</span></li>
+</ul>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> </span></p>
+<h1 style="margin:2.38% 0.00% 0.00%; text-align:justify; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.8rem"><span id="part0003.xhtml#_Math_Functions"></span><span style=" font-size:1.8rem; font-weight:bold; color:#2e74b5">Math Functions</span></h1>
+<h3 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span style=" font-size:1.0rem; color:#1f4d78">Use PHP Math Functions: Understand Mathematical Processes in Your Code</span></h3>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Out of eight PHP data types, only two hold numerical values. You can perform the most basic arithmetic actions using operators, such as PHP modulo or PHP division.</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">For more complex mathematical operations, PHP math functions are used. To start using them, you do not need to install any extensions or packages.</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> </span></p>
+<h4 style="margin:0.00% 0.00%; text-align:justify; page-break-inside:avoid; page-break-after:avoid;   font-weight:normal"><span style=" font-size:1.9rem; font-style:italic; letter-spacing:-0.2pt; ">Contents</span></h4>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">1.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> PHP Math Functions: Main Tips</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">2.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> List of Functions</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">3.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> Predefined Constants</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">4.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> PHP Math Functions: Summary</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> </span></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">PHP Math Functions: Main Tips</span></h2>
+<ul>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">PHP math functions are used for handling </span><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; ">float</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> and </span><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; ">integer</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> variables.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">These functions are inbuilt into PHP.</span></li>
+</ul>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">List of Functions</span></h2>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">In the table below, all the PHP math functions are listed alphabetically. If you are using PHP 4 or a newer version, you can use any of them freely. In case you forget any of these functions, return to this table to refresh your memory! Have a look:</span></p>
+<p><img src="Images/image00092.jpeg" /></p>
+<p><img src="Images/image00093.jpeg" /></p>
+<p><img src="Images/image00094.jpeg" /></p>
+<p><img src="Images/image00095.jpeg" /></p>
+<p><img src="Images/image00096.jpeg" /></p>
+<p><img src="Images/image00097.jpeg" /></p>
+<p><img src="Images/image00098.jpeg" /></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">Predefined Constants</span></h2>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Now, let's see some predefined constants that are also used in PHP mathematics. The column on the right indicates version of PHP in which a particular constant has been introduced:</span></p>
+<p><img src="Images/image00099.jpeg" /></p>
+<p><img src="Images/image00100.jpeg" /></p>
+<p><img src="Images/image00101.jpeg" /></p>
+<p><img src="Images/image00102.jpeg" /></p>
+<p><img src="Images/image00103.jpeg" /></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">PHP Math Functions: Summary</span></h2>
+<ul>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">PHP math functions don't need to be installed separately, as they are inbuilt.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">They are meant to only be used with variables that contain numerical values: integers and floats.</span></li>
+</ul>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> </span></p>
+<h1 style="margin:2.38% 0.00% 0.00%; text-align:justify; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.8rem"><span id="part0003.xhtml#_Mail_Function"></span><span style=" font-size:1.8rem; font-weight:bold; color:#2e74b5">Mail Function</span></h1>
+<h3 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span style=" font-size:1.0rem; color:#1f4d78">PHP Mail Function: Communicating With Your Users via Emails</span></h3>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> </span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">The easiest way to interact with your users is to make PHP send emails, using special </span><a href="https://www.bitdegree.org/learn/php-form-example"><span style=" font-size:1.0rem; text-decoration:underline; letter-spacing:-0.2pt; color:#9884fc">forms</span></a><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> and the PHP mail function. The main idea of it is that a developer can create special PHP email forms for sending emails straight from the script.</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Using PHP mail() you can, for example, send weekly newsletters, or configure your email box to receive error messages. Therefore, the function provides with not only means of communication but also a custom error log.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h4 style="margin:0.00% 0.00%; text-align:justify; page-break-inside:avoid; page-break-after:avoid;   font-weight:normal"><span style=" font-size:1.9rem; font-style:italic; letter-spacing:-0.2pt; ">Contents</span></h4>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">1.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> PHP mail Function: Main Tips</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">2.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> Options for Runtime Configuration</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">3.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> Functions for Email Sending</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">4.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> PHP mail Function: Summary</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> </span></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">PHP mail Function: Main Tips</span></h2>
+<ul>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">PHP mail function allows you to send emails directly by using PHP script.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">This function is integrated into PHP's core, but requires a working email system installed to your system (which must be defined in the php.ini file)</span></li>
+</ul>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">Options for Runtime Configuration</span></h2>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">The way PHP </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9884fc; background-color:#f4f2ff">mail()</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> function behaves is always affected by the settings defined inside </span><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; ">php.ini</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">. The table below provides a list of these runtime configurations that you can apply:</span></p>
+<p><img src="Images/image00104.jpeg" /></p>
+<p><img src="Images/image00105.jpeg" /></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">Functions for Email Sending</span></h2>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">In the table below, you can see the functions you can use when you want to PHP send email:</span></p>
+<p><img src="Images/image00106.jpeg" /></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">PHP mail Function: Summary</span></h2>
+<ul>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.25pt; ">Using an inbuilt </span><span style=" font-size:0.74rem; letter-spacing:-0.25pt; color:#9884fc; background-color:#f4f2ff">mail()</span><span style=" font-size:1.0rem; letter-spacing:-0.25pt; "> function, you can send emails via your PHP script.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.25pt; ">For this function to work properly, your system must have an email system installed, working, and defined in php.ini.</span></li>
+</ul>
+</div>
+<p><span id="part0004.xhtml"></span></p>
+<div>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.25pt; "> </span></p>
+<h1 style="margin:2.38% 0.00% 0.00%; text-align:justify; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.8rem"><span id="part0004.xhtml#_Miscellaneous_Functions"></span><span style=" font-size:1.8rem; font-weight:bold; color:#2e74b5">Miscellaneous Functions</span></h1>
+<h3 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span style=" font-size:1.0rem; color:#1f4d78">PHP Function Use Guide: Miscellaneous Functions and Constants</span></h3>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> </span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Explaining PHP function use is smoother when methods can be categorized into clear groups. However, some single functions and constants stand alone and don't belong to any specific categories.</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Even though such functions are not a part of a chain of similar methods, they still need to be addressed. Therefore, we dedicate a tutorial to PHP miscellaneous functions.</span></p>
+<h4 style="margin:0.00% 0.00%; text-align:justify; page-break-inside:avoid; page-break-after:avoid;   font-weight:normal"><span style=" font-size:1.9rem; font-style:italic; letter-spacing:-0.2pt; ">Contents</span></h4>
+<p><a href="https://www.bitdegree.org/learn/php-function-use#php-function-use-main-tips"><span style=" font-size:1.0rem; letter-spacing:-0.2pt; color:#9884fc">1.</span><span style=" font-size:1.0rem; text-decoration:none; letter-spacing:-0.2pt; "> PHP Function Use: Main Tips</span></a></p>
+<p><a href="https://www.bitdegree.org/learn/php-function-use#runtime-configuration"><span style=" font-size:1.0rem; letter-spacing:-0.2pt; color:#9884fc">2.</span><span style=" font-size:1.0rem; text-decoration:none; letter-spacing:-0.2pt; "> Runtime Configuration</span></a></p>
+<p><a href="https://www.bitdegree.org/learn/php-function-use#list-of-methods"><span style=" font-size:1.0rem; letter-spacing:-0.2pt; color:#9884fc">3.</span><span style=" font-size:1.0rem; text-decoration:none; letter-spacing:-0.2pt; "> List of Methods</span></a></p>
+<p><a href="https://www.bitdegree.org/learn/php-function-use#predefined-constants"><span style=" font-size:1.0rem; letter-spacing:-0.2pt; color:#9884fc">4.</span><span style=" font-size:1.0rem; text-decoration:none; letter-spacing:-0.2pt; "> Predefined Constants</span></a></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; color:#9884fc">5.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> PHP Function Use: Summary</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> </span></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">PHP Function Use: Main Tips</span></h2>
+<ul>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">PHP miscellaneous functions are functions which just don't fit into the other major categories.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">They can prove useful in PHP configuration or other tasks.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Every function in this tutorial is a PHP built in function.</span></li>
+</ul>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">Runtime Configuration</span></h2>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">The way PHP miscellaneous functions behave always depends on the settings inside the </span><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; ">php.ini</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> file. Let's have a look at the options we have for PHP configuration using miscellaneous functions:</span></p>
+<p><img src="Images/image00107.jpeg" /></p>
+<p><img src="Images/image00108.jpeg" /></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">List of Methods</span></h2>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">In this section, you will be informed of the PHP function use of this miscellaneous category. For instance, you can set a function to be executed later with the PHP </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9884fc; background-color:#f4f2ff">sleep()</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> method. There are many methods to analyze in the table below. However, we are sure that some of them will prove themselves to be useful.</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> </span></p>
+<p><img src="Images/image00109.jpeg" /></p>
+<p><img src="Images/image00110.jpeg" /></p>
+<p><img src="Images/image00111.jpeg" /></p>
+<p><img src="Images/image00112.jpeg" /></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">Predefined Constants</span></h2>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">This list below contains the constant names, descriptions and versions in which these PHP constants can be executed:</span></p>
+<p><img src="Images/image00113.jpeg" /></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">PHP Function Use: Summary</span></h2>
+<ul>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">All the functions that just don't seem to belong to any particular category are defined as PHP miscellaneous functions.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">While they stand alone, every miscellaneous PHP built in function is still very useful in the process of PHP configuration.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">If you are using PHP 5 or a newer version, none of these functions require installation.</span></li>
+</ul>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> </span></p>
+<h1 style="margin:2.38% 0.00% 0.00%; text-align:justify; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.8rem"><span id="part0004.xhtml#_PHP_Date_Format"></span><span style=" font-size:1.8rem; font-weight:bold; color:#2e74b5">PHP Date Format</span></h1>
+<h3 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span style=" font-size:1.0rem; color:#1f4d78">PHP Date Format</span></h3>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h4 style="margin:0.00% 0.00%; text-align:justify; page-break-inside:avoid; page-break-after:avoid;   font-weight:normal"><span style=" font-size:1.9rem; font-style:italic; letter-spacing:-0.2pt; ">Contents</span></h4>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">1.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> PHP Date Format: Main Tips</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">2.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> Syntax Rules Explained</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">3.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> Common Formatting Characters</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">4.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> List of Predefined Constants</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> </span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> </span></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">PHP Date Format: Main Tips</span></h2>
+<ul>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">This date() function is used in formatting date and time in your code.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">There are special formatting characters: PHP year, week, day, etc.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">You can use it to make PHP get timestamp automatically and update the copyright dates on your website.</span></li>
+</ul>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> </span></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">Syntax Rules Explained</span></h2>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">The syntax rules for entering a date are rather simple:</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9884fc; background-color:#f4f2ff">date(format, timestamp)</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">The </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9884fc; background-color:#f4f2ff">timestamp</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> part describes an integer Unix timestamp. Entering it is optional - if you don't do it, it will result in making PHP get timestamp automatically and display the current local time (</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9884fc; background-color:#f4f2ff">time()</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">).</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Now, for the </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9884fc; background-color:#f4f2ff">format</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> part, it's a different story. It is necessary to enter because that's how you specify how your PHP date formats will look.</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> </span></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">Common Formatting Characters</span></h2>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">In PHP years, months and days are often referred to by using special symbols. There are four characters most commonly used with PHP date function:</span></p>
+<ul>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">d (01-31) represents the day number.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">m (01-12) represents a month number.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Y (four digits) represents a year number.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">l (lowercase 'L') indicates the day of the week.</span></li>
+</ul>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">More symbols (</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9884fc; background-color:#f4f2ff">/</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">, </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9884fc; background-color:#f4f2ff">.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">, </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9884fc; background-color:#f4f2ff">-</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">) can be added for additional PHP date formatting.</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">In the code example below, you can see four different ways to create PHP date formats:</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9b9b9b">&lt;?php</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">  </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#569cd6">echo</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">"Today is "</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> . date(</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">"Y/m/d"</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">) . </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">"&lt;br&gt;"</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">;</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">  </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#569cd6">echo</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">"Today is "</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> . date(</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">"Y.m.d"</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">) . </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">"&lt;br&gt;"</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">;</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">  </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#569cd6">echo</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">"Today is "</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> . date(</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">"Y-m-d"</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">) . </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">"&lt;br&gt;"</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">;</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">  </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#569cd6">echo</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">"Today is "</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> . date(</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">"l"</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">);</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9b9b9b">?&gt;</span></p>
+<p><img src="Images/image00114.jpeg" /></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt;  ">Now, the four characters listed above might be the most commonly used with datetime PHP function, but your choices are not limited to them. Let's have a look at the whole list of characters you can use for PHP date formats and what they indicate:</span></p>
+<p><img src="Images/image00115.jpeg" /></p>
+<p><img src="Images/image00116.jpeg" /></p>
+<p><img src="Images/image00117.jpeg" /></p>
+<p><img src="Images/image00118.jpeg" /></p>
+<p><img src="Images/image00119.jpeg" /></p>
+<p><img src="Images/image00120.jpeg" /></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">List of Predefined Constants</span></h2>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">There are also a few predefined constants for datetime PHP that developers use. Take a look at the table below:</span></p>
+<p><img src="Images/image00121.jpeg" /></p>
+<p><img src="Images/image00122.jpeg" /></p>
+<h1 style="margin:2.38% 0.00% 0.00%; text-align:justify; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.8rem"><span id="part0004.xhtml#_String_Functions"></span><span style=" font-size:1.8rem; font-weight:bold; color:#2e74b5">String Functions</span></h1>
+<h3 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span style=" font-size:1.0rem; color:#1f4d78">PHP String Functions Made Easy: Handle Strings in a More Efficient Way</span></h3>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Out of all eight data types, PHP strings is considered one of the simplest, along with integers, floats, and booleans.</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">There are built-in PHP string functions for manipulating strings. One of the common uses is to use one of the PHP functions to split the string into smaller parts if the length of a string. You can also use them to have a specific PHP string replaced, modified, or perform other actions.</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> </span></p>
+<h4 style="margin:0.00% 0.00%; text-align:justify; page-break-inside:avoid; page-break-after:avoid;   font-weight:normal"><span style=" font-size:1.9rem; font-style:italic; letter-spacing:-0.2pt; ">Contents</span></h4>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">1.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> PHP String Functions: Main Tips</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">2.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> List of Methods</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">3.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> PHP String Functions: Summary</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> </span></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">PHP String Functions: Main Tips</span></h2>
+<ul>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">As the naming suggests, PHP string functions help to perform different actions on string data.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">They are integrated into the core of PHP.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Among the most basic and widely used are PHP compare strings and PHP trim string functions.</span></li>
+</ul>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">List of Methods</span></h2>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Let's see the complete list of PHP string functions and their descriptions. The table is organized in alphabetical order, so you can always find a particular one quickly when you need to, say, have a certain PHP string replaced:</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> </span></p>
+<p><img src="Images/image00123.jpeg" /></p>
+<p><img src="Images/image00124.jpeg" /></p>
+<p><img src="Images/image00125.jpeg" /></p>
+<p><img src="Images/image00126.jpeg" /></p>
+<p><img src="Images/image00127.jpeg" /></p>
+<p><img src="Images/image00128.jpeg" /></p>
+<p><img src="Images/image00129.jpeg" /></p>
+<p><img src="Images/image00130.jpeg" /></p>
+<p><img src="Images/image00131.jpeg" /></p>
+<p><img src="Images/image00132.jpeg" /></p>
+<p><img src="Images/image00133.jpeg" /></p>
+<p><img src="Images/image00134.jpeg" /></p>
+<p><img src="Images/image00135.jpeg" /></p>
+<p><img src="Images/image00136.jpeg" /></p>
+<p><img src="Images/image00137.jpeg" /></p>
+<p><img src="Images/image00138.jpeg" /></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">PHP String Functions: Summary</span></h2>
+<ul>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">When performing various actions using string data, PHP string functions come in handy. For example, you can easily turn PHP array to string or PHP string to array.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">PHP string functions are inbuilt and don't require any installation.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">One of the most commonly used methods are applied to PHP compare strings and PHP trim string.</span></li>
+</ul>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> </span></p>
+<p><span style=" font-size:1.6rem"> </span></p>
+<h1 style="margin:2.38% 0.00% 0.00%; text-align:justify; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.8rem"><span id="part0004.xhtml#_PHP_Array_Functions"></span><span style=" font-size:1.8rem; font-weight:bold; color:#2e74b5">PHP Array Functions</span></h1>
+<h3 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span style=" font-size:1.0rem; color:#1f4d78">PHP Array Functions</span></h3>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h4 style="margin:0.00% 0.00%; text-align:justify; page-break-inside:avoid; page-break-after:avoid;   font-weight:normal"><span style=" font-size:1.9rem; font-style:italic; letter-spacing:-0.2pt; ">Contents</span></h4>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">1.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> PHP array Functions: Main Tips</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">2.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> Usage of array ()</span></p>
+<p><span style=" font-size:0.89rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">2.1.</span><span style=" font-size:0.89rem; letter-spacing:-0.2pt; "> Correct Syntax</span></p>
+<p><span style=" font-size:0.89rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">2.2.</span><span style=" font-size:0.89rem; letter-spacing:-0.2pt; "> Practice: Code Examples</span></p>
+<p><span style=" font-size:0.89rem; letter-spacing:-0.2pt; "> </span></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">PHP array Functions: Main Tips</span></h2>
+<ul>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Introduced in PHP 4, it creates an array of the specified parameters.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">A PHP array functions as a variable that holds multiples values.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">There are 3 types of PHP arrays: indexed (numeric index), associative (named keys) and multidimensional (multiple arrays in one).</span></li>
+</ul>
+<p><span style=" font-size:0.89rem; letter-spacing:-0.2pt; "> </span></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">Usage of array ()</span></h2>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">You could call </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9884fc; background-color:#f4f2ff">array()</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> the base of all PHP array functions. To put it shortly, it is used to create an array. Let's see a simple example:</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9b9b9b">&lt;?php</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">  $food = [</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">'IceCream'</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">, </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">'Pizza'</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">, </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">'Burger'</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">]; </span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">  </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#569cd6">echo</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">"I like "</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> . $food[</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">0</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">] . </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">", "</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> . $food[</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">1</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">] . </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">" and "</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> . $food[</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">2</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">] . </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">"."</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">;</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9b9b9b">?&gt;</span></p>
+<p><img src="Images/image00139.jpeg" /></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">Correct Syntax</span></h2>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">You are probably aware that it's crucial to pay attention to correct syntax when coding, and it's no different when you're using PHP array functions. Let's see how a piece of script should be written for an indexed array:</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9884fc; background-color:#f4f2ff">array(value1,value2,value3,...);</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Now, for the associative array PHP syntax is a bit different. They can also be called PHP key value arrays, as pairs of keys and values define them. Note that either numbers or a string can represent the key:</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9884fc; background-color:#f4f2ff">array(key=&gt;value,key=&gt;value,key=&gt;value,...);</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">In both cases of using PHP array functions, </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9884fc; background-color:#f4f2ff">value</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> elements define each value an array contains to make PHP create array.</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">In the short version of array syntax introduced in PHP 5.4, </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9884fc; background-color:#f4f2ff">array()</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> can be replaced with </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9884fc; background-color:#f4f2ff">[]</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">. For example, instead of </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9884fc; background-color:#f4f2ff">$food=array("IceCream","Pizza");</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> you can simply type </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9884fc; background-color:#f4f2ff">$food=["IceCream","Pizza"];</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> to make PHP create array. It will not change the way the new PHP array functions.</span></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">Practice: Code Examples</span></h2>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">The code in the example below creates an </span><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; ">associative array</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> PHP script refers to as </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9884fc; background-color:#f4f2ff">$age</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">:</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9b9b9b">&lt;?php</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">  $age = [</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">    </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">'Drago'</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> =&gt; </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">69</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">,</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">    </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">'Mark'</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> =&gt; </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">32</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">,</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">    </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">'Luke'</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> =&gt; </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">35</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">  ];</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">  </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#569cd6">echo</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">"Mark is "</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> . $age[</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">'Mark'</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">] . </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">" years old."</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">;</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9b9b9b">?&gt;</span></p>
+<p><img src="Images/image00140.jpeg" /></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt;  ">If we wanted to execute an </span><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt;  ">associative array</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt;  "> PHP loop and print its values, our code would look like this:</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9b9b9b">&lt;?php</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">  $food = [</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">    </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">'Pizza'</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> =&gt; </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">5.90</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">,</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">    </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">'IceCream'</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> =&gt; </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">1.90</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">,</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">    </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">'Burger'</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> =&gt; </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">2.90</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">  ];</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc"> </span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">  </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#569cd6">foreach</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">($food </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#569cd6">as</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> $z =&gt; $z_value) {</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">    </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#569cd6">echo</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">"Key="</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> . $z . </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">", Value="</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> . $z_value;</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">    </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#569cd6">echo</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">"&lt;br&gt;"</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">;</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">  }</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9b9b9b">?&gt;</span></p>
+<p><img src="Images/image00141.jpeg" /></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Now, the script in this example loops through an </span><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; ">indexed array</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> and prints its values:</span></p>
+<p><span style=" font-size:0.89rem; letter-spacing:-0.2pt; "> </span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9b9b9b">&lt;?php</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">  $food = [</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">'IceCream'</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">, </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">'Pizza'</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">, </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">'Burger'</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">];</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">  $arrayLength = count($food);</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc"> </span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">  </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#569cd6">for</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">($z = </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">0</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">; $z &lt; $arrayLength; $z++) {</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">    </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#569cd6">echo</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> $food[$z];</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">    </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#569cd6">echo</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">"&lt;br&gt;"</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">;</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">  }</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9b9b9b">?&gt;</span></p>
+<p><img src="Images/image00142.jpeg" /></p>
+<p><span style=" font-size:0.89rem; letter-spacing:-0.2pt; "> </span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; ;color:black;">Note:</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ;color:black;"> when looping though arrays, choose </span><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; ;color:black;">for</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ;color:black;"> and </span><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; ;color:black;">foreach</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ;color:black;"> loops.</span></p>
+<p><span style=" font-size:0.89rem; letter-spacing:-0.2pt; "> </span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Now, let's see how creating a </span><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; ">multidimensional array</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> would look like:</span></p>
+<p><span style=" font-size:0.89rem; letter-spacing:-0.2pt; "> </span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9b9b9b">&lt;?php</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">  </span><span style=" font-size:0.74rem; font-style:italic; letter-spacing:-0.2pt; color:#57a64a">// A two-dimensional array</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">  $food = [</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">    [</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">'IceCream'</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">, </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">50</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">, </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">32</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">],</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">    [</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">'Pizza'</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">, </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">40</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">, </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">39</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> ],</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">    [</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">'Burger'</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">, </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">35</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">, </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">20</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> ]</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">  ];</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> </span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">  </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#569cd6">echo</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> $food[</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">0</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">][</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">0</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">].</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">": Ordered: "</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">.$food[</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">0</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">][</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">1</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">].</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">". Sold: "</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">.$food[</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">0</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">][</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">2</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">].</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">"&lt;br&gt;"</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">;</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">  </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#569cd6">echo</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> $food[</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">1</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">][</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">0</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">].</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">": Ordered: "</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">.$food[</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">1</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">][</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">1</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">].</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">". Sold: "</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">.$food[</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">1</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">][</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">2</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">].</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">"&lt;br&gt;"</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">;</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">  </span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#569cd6">echo</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e"> $food[</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">2</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">][</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">0</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">].</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">": Ordered: "</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">.$food[</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">2</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">][</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">1</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">].</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">". Sold: "</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">.$food[</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">2</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">][</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#b8d7a3">2</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">].</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#d69d85">"&lt;br&gt;"</span><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#dcdcdc; background-color:#1e1e1e">;</span></p>
+<p><span style=" font-size:0.74rem; letter-spacing:-0.2pt; color:#9b9b9b">?&gt;</span></p>
+<p><img src="Images/image00143.jpeg" /></p>
+<p><span style=" font-size:0.89rem; letter-spacing:-0.2pt; "> </span></p>
+<p><span style=" font-size:0.89rem; letter-spacing:-0.2pt; "> </span></p>
+<h1 style="margin:2.38% 0.00% 0.00%; text-align:justify; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.8rem"><span id="part0004.xhtml#_Directory_Functions"></span><span style=" font-size:1.8rem; font-weight:bold; color:#2e74b5">Directory Functions</span></h1>
+<h3 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span style=" font-size:1.0rem; color:#1f4d78">The Complete Guide on PHP Directory: Master Functions</span></h3>
+<p><span style=" font-size:0.89rem; letter-spacing:-0.2pt; "> </span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">A PHP directory is a structure used to catalog and keep our files. It's a part of an organizing system that lets us keep track of our projects and code files more easily.</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">PHP has a bunch of inbuilt functions that let us quickly fetch information about particular PHP files in the directory. Additionally, it is possible to retrieve data about a whole specific PHP directory. We can easily make PHP list files in directory, open specified handles, and perform other tasks.</span></p>
+<p><span style=" font-size:0.89rem; letter-spacing:-0.2pt; "> </span></p>
+<h4 style="margin:0.00% 0.00%; text-align:justify; page-break-inside:avoid; page-break-after:avoid;   font-weight:normal"><span style=" font-size:1.9rem; font-style:italic; letter-spacing:-0.2pt; ">Contents</span></h4>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">1.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> PHP Directory: Main Tips</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">2.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> List of Useful Functions</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc">3.</span><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> PHP Directory: Summary</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold; letter-spacing:-0.2pt; color:#9884fc"> </span></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">PHP Directory: Main Tips</span></h2>
+<ul>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Directory functions allow you to get info about various PHP directories and what they contain.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">These functions are inbuilt into the PHP's core.</span></li>
+</ul>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">List of Useful Functions</span></h2>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">The following list contains the functions you can apply in order to manipulate every PHP directory you create:</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> </span></p>
+<p><img src="Images/image00144.jpeg" /></p>
+<p><img src="Images/image00145.jpeg" /></p>
+<h2 style="margin:0.40% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:1.5rem; font-weight:bold">PHP Directory: Summary</span></h2>
+<ul>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">Information on any PHP file directory and the files it contains can be obtained using PHP directory functions.</span></li>
+<li><span style=" font-size:1.0rem; letter-spacing:-0.2pt; ">These functions are inbuilt, and therefore don't require installation.</span></li>
+</ul>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> </span></p>
+<p><span style=" font-size:1.5rem; font-weight:bold; letter-spacing:-0.2pt; ">THE END</span></p>
+<p><span style=" font-size:1.0rem; letter-spacing:-0.2pt; "> </span></p>
+<h2 style="margin:0.40% 0.00% 0.00% 12.50%; text-indent:-1.3em; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:0.74rem; font-weight:bold">•</span><span style="font:7.0pt &#39;Times New Roman&#39;">        </span><span style=" font-size:1.5rem; font-weight:bold">PHP and MySQL</span></h2>
+<h2 style="margin:0.40% 0.00% 0.00% 12.50%; text-indent:-1.3em; page-break-inside:avoid; page-break-after:avoid; line-height:150%; font-size:1.5rem"><span style=" font-size:0.74rem; font-weight:bold">•</span><span style="font:7.0pt &#39;Times New Roman&#39;">        </span><span style=" font-size:1.5rem; font-weight:bold">PHP and XML</span></h2>
+</div>
