@@ -1,0 +1,965 @@
+<p><img src="images/cover.jpg" /></p>
+<p><span id="01_Cover.xhtml"></span></p>
+<img src="images/cover.jpg" alt="Cover: Advancing lot platforms interoperability, written by Ovidiu Vermesan, published by Taylor &amp; Francis Group" class="cover" />
+<p><span id="02_Copyright01.xhtml"></span></p>
+<section type="copyright-page" data-aria-label="copyright page">
+<p><span id="02_Copyright01.xhtml#p2" data-aria-label=" page 2. " type="pagebreak" data-role="doc-pagebreak"></span>Published 2018 by River Publishers</p>
+<p>River Publishers</p>
+<p>Alsbjergvej 10, 9260 Gistrup, Denmark</p>
+<p><a href="http://www.riverpublishers.com">www.riverpublishers.com</a></p>
+<p>Distributed exclusively by Routledge</p>
+<p>4 Park Square, Milton Park, Abingdon, Oxon OX14 4RN 605</p>
+<p>Third Avenue, New York, NY 10017, USA</p>
+<p><strong>Open Access</strong></p>
+<p>This book is distributed under the terms of the Creative Commons Attribution-NonCommercial 4.0 International License, CC-BY-NC 4.0) (<a href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</a>), which permits use, duplication, adaptation, distribution and reproduc- tion in any medium or format, as long as you give appropriate credit to the original author(s) and the source, a link is provided to the Creative Commons license and any changes made are indicated. The images or other third party material in this book are included in the work’s Creative Commons license, unless indicated otherwise in the credit line; if such material is not included in the work’s Creative Commons license and the respective action is not permitted by statutory regulation, users will need to obtain permission from the license holder to duplicate, adapt, or reproduce the material.</p>
+<p>The use of general descriptive names, registered names, trademarks, service marks, etc. in this publication does not imply, even in the absence of a specific statement, that such names are exempt from the relevant protective laws and regulations and therefore free for general use.</p>
+<p>The publisher, the authors and the editors are safe to assume that the advice and information in this book are believed to be true and accurate at the date of publication. Neither the publisher nor the authors or the editors give a warranty, express or implied, with respect to the material contained herein or for any errors or omissions that may have been made.</p>
+<p><em>Advancing IoT Platforms Interoperability</em> / by Ovidiu Vermesan.</p>
+<p>© The Editor(s) (if applicable) and The Author(s) 2018. This book is published open access.</p>
+<p>Routledge is an imprint of the Taylor &amp; Francis Group, an informa business</p>
+<p>ISBN 978-87-7022-006-4 (print)</p>
+<p>While every effort is made to provide dependable information, the publisher, authors, and editors cannot be held responsible for any errors or omissions.</p>
+<p> </p>
+<span id="02_Copyright01.xhtml#p3" data-aria-label=" page 3. " type="pagebreak" data-role="doc-pagebreak"></span>
+<figure>
+<img src="images/img01.jpg" />
+</figure>
+</section>
+<p><span id="03_Fm01.xhtml"></span></p>
+<section data-aria-labelledby="Disclaimer">
+<h1 id="03_Fm01.xhtml#Disclaimer" class="fmtitle1" type="title"><span id="03_Fm01.xhtml#p4" data-aria-label=" page 4. " type="pagebreak" data-role="doc-pagebreak"></span>Disclaimer</h1>
+<p>The information in this document is provided as is and no guarantee or warranty is given that the information is fit for any particular purpose. The user thereof uses the information at its sole risk and liability.</p>
+<p>The document reflects only the authors’ views and the EC is not liable for any use that may be made of the information contained therein.</p>
+</section>
+<p><span id="04_Contents.xhtml"></span></p>
+<p><span id="05_Chapter01.xhtml"></span></p>
+<h1 class="chno" type="title"><span class="ordinal">1</span> <span class="chtitle"><span id="05_Chapter01.xhtml#p7" data-aria-label=" page 7. " type="pagebreak" data-role="doc-pagebreak"></span>Executive summary</span></h1>
+<p>The IoT European Platforms Initiative (IoT-EPI) projects are addressing the topic of Internet of Things and Platforms for Connected Smart Objects and aim to deliver an IoT extended into a web of platforms for connected devices and objects that supports smart environments, businesses, services and persons with dynamic and adaptive configuration capabilities. The specific areas of focus of the research activities are architectures and semantic interoperability, which reliably cover multiple use cases. The goal is to deliver dynamically-configured infrastructure and integration platforms for connected smart objects covering multiple technologies and multiple intelligent artefacts. The IoT-EPI ecosystem has been created with the objective of increasing the impact of the IoT-related European research and innovation, including seven European promising projects on IoT platforms: AGILE, BIG IoT, INTER-IoT, VICINITY, SymbIoTe, bIoTope, and TagItSmart.</p>
+<p>This white paper provides an insight regarding interoperability in the IoT platforms and ecosystems created and used by IoT-EPI. The scope of this document covers the interoperability aspects, challenges and approaches that cope with interoperability in the current existing IoT platforms and presents some insights regarding the future of interoperability in this context. It presents possible solutions, and a possible IoT interoperability platform architecture.</p>
+<p><span id="05_Chapter01.xhtml#p8" data-aria-label=" page 8. " type="pagebreak" data-role="doc-pagebreak"></span>Due to the critical and important role of interoperability in IoT systems, it is strongly related with many relevant topics and aspects in IoT: performance, compatibility, integration, ROI, market acceptance, development design, architecture.</p>
+<p>The creation and development of this white paper has taken advantage from outcomes and available information from other activities in the framework of the IoT-EPI projects. In particular, important sources of information that complement the authors’ research are the IoT-EPI platforms reports and the exchange of information among the projects during the work in task forces.</p>
+<p>Regarding the output of this work, this white paper intends to be a useful source of information of interoperability in IoT platforms. This critical aspect in IoT systems has relevance and impact on the topics of each Task Force of the IoT-EPI (Innovation, Platform Interoperability, Community Building, Business Models, Educational Platforms, International Cooperation).</p>
+<p>The research regarding interoperability architecture is useful for the current and future IoT platforms and IoT projects, as it provides deep awareness and valuable insights regarding the critical aspect of interoperability in them, as well as possible architecture solutions to the challenges that the achievement of platform interoperability involves. This information can be valuable in the development of new services, applications and businesses on top of IoT platforms.</p>
+<p>Lack of platform interoperability causes major technologic and economic drawbacks such as impossibility to plug non-interoperable IoT devices into heterogeneous IoT platforms, impossibility to develop IoT applications exploiting multiple platforms, slowness of IoT technology introduction at a large-scale, discouragement in adopting IoT technology, vertical silos in IoT ecosystems and markets, increase of costs, scarce reusability of technical solutions, or user dissatisfaction.</p>
+<p>In contrast, interoperability among platforms will provide numerous benefits such as new market opportunities, the disappearance of vertical silos, and vertically-oriented closed systems, architectures and application areas, to move towards open systems and platforms, <span id="05_Chapter01.xhtml#p9" data-aria-label=" page 9. " type="pagebreak" data-role="doc-pagebreak"></span>and a major cooperation among platforms to offer better solutions to the consumer and the users. The cross-availability of services and data will allow current service providers to reach new markets with their services, but perhaps, more importantly, we expect new business opportunities to emerge from the ability to manage data from diverse sources to create innovative solutions.<span id="05_Chapter01.xhtml#p10" data-aria-label=" page 10. " type="pagebreak" data-role="doc-pagebreak"></span></p>
+<p><span id="06_Chapter02.xhtml"></span></p>
+<h1 class="chno" type="title"><span id="06_Chapter02.xhtml#p11" data-aria-label=" page 11. " type="pagebreak" data-role="doc-pagebreak"></span><span class="ordinal">2</span> <span class="chtitle">IoT platforms landscape</span></h1>
+<section data-aria-labelledby="sec2_1">
+<h2 id="06_Chapter02.xhtml#sec2_1" class="head2" type="title"><span class="blue">2.1.</span> Definitions</h2>
+<p>An IoT platform can be defined as an intelligent layer that connects the things to the network and that abstracts applications from the things with the goal to enable the development of services. IoT platforms achieve several main objectives such as flexibility (being able to deploy things in different contexts), usability (being able to make the user experience easy) and productivity (enabling service creation in order to improve efficiency, but also enabling new service development). An IoT platform facilitates communication, data flow, device management, and the functionality of applications. The goal is to build IoT applications within an IoT platform framework. An IoT platform allows applications to connect machines, devices, applications, and people to data and control centres [<a href="#10_References.xhtml#ref_1" id="06_Chapter02.xhtml#rref_1">1</a>].</p>
+<p>IoT platforms’ functionalities cover the digital value chain from sensors/actuators, hardware to connectivity, cloud and applications, as illustrated in <a href="#06_Chapter02.xhtml#fig2_1" class="fig">Figure 2.1</a>. Hardware connectivity platforms are used for connecting the edge devices and processing the data outside the datacentre (edge computing/fog computing), and program the devices to make decisions on the fly. The key benefits are security, interoperability, scalability and manageability by using advanced data management and analytics from sensor to datacentre. IoT software platforms include the integration of heterogeneous sensors/actuators; various <span id="06_Chapter02.xhtml#p12" data-aria-label=" page 12. " type="pagebreak" data-role="doc-pagebreak"></span>communication protocols abstract all those complexities and present developers with simple APIs to communicate with any sensor over any network.</p>
+<figure>
+<img src="images/fig2_1.jpg" alt="Figure 2.1. IoT Platforms covering the data value chain [1]" /><figcaption><strong><span type="label">Figure</span> <span type="ordinal">2.1</span>.</strong> IoT Platforms covering the data value chain [<a href="#10_References.xhtml#ref_1">1</a>]</figcaption>
+</figure>
+<p>IoT platforms also assist with data ingestion, storage, and analytics, so developers can focus on building applications and services, which is where the real value lies in IoT. Cloud-based IoT platforms are offered by cloud providers to support developers to build IoT solutions on their clouds. Infrastructure as a Service (IaaS) providers and Platform as a Service (PaaS) providers have solutions for IoT developers covering different application areas. PaaS solutions, abstract the underlying network, compute, and storage infrastructure, have focus on mobile and big data functionality, while moving to abstract edge devices (sensors/actuators) <span id="06_Chapter02.xhtml#p13" data-aria-label=" page 13. " type="pagebreak" data-role="doc-pagebreak"></span>and adding features for data ingestion/processing and analytics services [<a href="#10_References.xhtml#ref_1">1</a>].</p>
+<p>IoT platform definitions may differ in subtle and perhaps secondary details while overlapping on major features. One of the most succinct definitions of an IoT platform has been proposed by Gartner [<a href="#10_References.xhtml#ref_2" id="06_Chapter02.xhtml#rref_2">2</a>]. It defines the IoT platform as a software suite or a PaaS cloud offering that monitors, and may manage and control, various types of endpoints, often via applications end users build on the platform. It facilitates operations involving IoT endpoints and integration with enterprise resources. Platforms should be capable of:</p>
+<ul>
+<li><span class="bl">•  </span>Provisioning and management of devices and their application software</li>
+<li><span class="bl">•  </span>Data aggregation, integration, transformation, storage and management (often collectively referred to as “data digestion”)</li>
+<li><span class="bl">•  </span>Event processing (rule engine/orchestration/BPM)</li>
+<li><span class="bl">•  </span>Customizing and building applications (SDK, app server, IDE and others)</li>
+<li><span class="bl">•  </span>IoT data analysis and visualization</li>
+<li><span class="bl">•  </span>Cybersecurity</li>
+<li><span class="bl">•  </span>IoT device communications (network and/or Internet)</li>
+<li><span class="bl">•  </span>Adapter (API hub, gateway software but also to the application on endpoint)</li>
+<li><span class="bl">•  </span>User interfaces for both end users and developers</li>
+</ul>
+<p>IoT platforms facilitate communication, data flow, device management, and the functionality of applications. A platform is not the application itself, although many applications can be built entirely within an IoT platform framework. It links machines, devices, applications, and people to data and control centres. It is not confined to brick-and-mortar central command; ideally, it can be accessed and managed from many different locus points. It employs better, quicker search engines and data storage systems with the capacity and sophistication to handle volume far beyond what has brought industry to the present moment [<a href="#10_References.xhtml#ref_3" id="06_Chapter02.xhtml#rref_3">3</a>]. Most of its elements are cloud-based <span id="06_Chapter02.xhtml#p14" data-aria-label=" page 14. " type="pagebreak" data-role="doc-pagebreak"></span>and running on wireless connectivity, which may be established via third-party providers, application programming interfaces (APIs), cellular capabilities, or -most likely- a combination of these technologies.</p>
+<p>Through dashboards, APIs, data engines, and algorithms, a platform enables elements and sectors of a business network to connect, monitor, and communicate with each other with far greater speed and flexibility than we have yet seen. Data from an ever-expanding ecosystem can be collected, sorted, and harnessed entirely online. The platform also can enable data prioritization, a feature of critical importance at a time when machines, sensors, and other objects are beginning to generate new floods of information.</p>
+<p>IoT platforms provide security features, scalability, and capacity for pulling in, storing, and analysing data. It may connect machines, people, applications, or all three. Like any intelligent network, it provides innate predictive qualities that use data for the purposes of maintenance and troubleshooting. The user interfaces are intuitive and extensible, allowing for the future development of application extensions and the necessary scalability to track an increasing number of connected devices, people, and data sources.</p>
+<p>Essentially, an IoT platform allows for greater concentration of resources in value-added applications. Instead of requiring companies to focus on the lower levels of the technology stack, which are essential but not value-positive, attention can be paid to application development; a smarter, more integrated IoT ecosystem; and intelligent data generation.</p>
+<p>Using IoT platforms applications are sent to market faster and with better support. Connectivity and data management - which historically have required huge investments in time and development costs - are “givens” on the IoT platform, as reliable as electricity generation, and just as liberating to users.</p>
+<p>The root of the IoT is connectivity: more things, more people, and the matrix of connections that springs up between them. Yet, in less than a decade, the technology has moved far beyond this fundamental <span id="06_Chapter02.xhtml#p15" data-aria-label=" page 15. " type="pagebreak" data-role="doc-pagebreak"></span>consideration. Where many companies may have believed it was advantageous to build out a platform internally, it is becoming clear that much of the technology stack can now be implemented with out-of-the box tools and effective engagement with vendors.</p>
+<p>ThingWorx [<a href="#10_References.xhtml#ref_4" id="06_Chapter02.xhtml#rref_4">4</a>] defines an IoT platform as a suite of components that enable:</p>
+<ul>
+<li><span class="bl">•</span>  Deployment of applications that monitor, manage, and control connected devices.</li>
+<li><span class="bl">•</span>  Remote data collection from connected devices.</li>
+<li><span class="bl">•</span>  Independent and secure connectivity between devices.</li>
+<li><span class="bl">•</span>  Device/sensor management.</li>
+<li><span class="bl">•</span>  Integration with third party systems.</li>
+</ul>
+<p>IoT platforms exist independently between the hardware and the application layers of the IoT technology stack. The ideal platform will integrate with any connected device, blend in with device applications, and enable implementation of IoT features and functions into any device in the same way.</p>
+<p>Link Labs [<a href="#10_References.xhtml#ref_5" id="06_Chapter02.xhtml#rref_5">5</a>] defines an IoT platform at a high level as “the support software that connects edge hardware, access points, and data networks to other parts of the value chain (which are generally the end-user applications). IoT platforms typically handle ongoing management tasks and data visualization, which allow users to automate their environment. You can think of these platforms as the middleman between the data collected at the edge and the user-facing SaaS or mobile application”.</p>
+<p>IoT platforms are often referred to as middleware solutions, which can collectively be referred to as the value chain of IoT, that are the “plumbing” of the IoT. Generally, an IoT or M2M solution is a mash-up of functions from multiple vendors, which include:</p>
+<ul>
+<li><span class="bl">•</span>  Sensors or controllers.</li>
+<li><span class="bl">•</span>  A gateway device to aggregate and transmit data back and forth to the data network.</li>
+<li><span class="bl">•</span>  <span id="06_Chapter02.xhtml#p16" data-aria-label=" page 16. " type="pagebreak" data-role="doc-pagebreak"></span>A communications network to send data.</li>
+<li><span class="bl">•</span>  Software for analysing and translating data.</li>
+<li><span class="bl">•</span>  The end application service, which creates much of the value.</li>
+</ul>
+</section>
+<p><span id="07_Chapter03.xhtml"></span></p>
+<h1 class="chno" type="title"><span id="07_Chapter03.xhtml#p17" data-aria-label=" page 17. " type="pagebreak" data-role="doc-pagebreak"></span><span class="ordinal">3</span> <span class="chtitle">IoT platforms interoperability concepts, approaches and principles</span></h1>
+<p>Achieving interoperability is one of the main objectives of the IoT. As the name Internet of Things already states, it is all about connecting things and make them easily accessible just like the Internet today. “Broadly speaking, interoperability can be defined as a measure of the degree to which diverse systems, organizations, and/or individuals are able to work together to achieve a common goal” [<a href="#10_References.xhtml#ref_6" id="07_Chapter03.xhtml#rref_6">6</a>]. However, interoperability is a complex thing and there are many aspects to it. In literature, there exists quite a lot of different classifications of these aspects of interoperability, often also called levels of interoperability. One of the most important classification of levels of interoperability for technical systems is called <em><strong>Levels of Conceptual Interoperability Model</strong></em> (LCIM) and is depicted in <a href="#07_Chapter03.xhtml#fig3_1" class="fig">Figure 3.1</a>. Although it was created in the context simulation theory it has a much broader applicability. It defines six levels of interoperability: technical, syntactic, semantic, pragmatic, dynamic and conceptual interoperability.</p>
+<p>The European Interoperability Framework designed “to support the delivery of pan-European eGovernment services to citizens and enterprises” [<a href="#10_References.xhtml#ref_8" id="07_Chapter03.xhtml#rref_8">8</a>] defines only three levels: technical, semantic and organisational interoperability.</p>
+<figure>
+<img src="images/fig3_1.jpg" alt="Figure 3.1 The Levels of Conceptual Interoperability Model [7]." /><figcaption><strong><span type="label">Figure</span> <span type="ordinal">3.1</span></strong> The Levels of Conceptual Interoperability Model [<a href="#10_References.xhtml#ref_7" id="07_Chapter03.xhtml#rref_7">7</a>].</figcaption>
+</figure>
+<p><span id="07_Chapter03.xhtml#p18" data-aria-label=" page 18. " type="pagebreak" data-role="doc-pagebreak"></span>A more IoT-specific classification is provided by ETSI and AIOTI and defines four levels [<a href="#10_References.xhtml#ref_9" id="07_Chapter03.xhtml#rref_9">9</a>]: technical, syntactic, semantic and organisational interoperability. In short, they are defined as follows.</p>
+<ul>
+<li><span class="bl">•</span>  <strong>Technical Interoperability</strong>: usually associated with communication protocols and the infrastructure needed for those protocols to operate.</li>
+<li><span class="bl">•</span>  <strong>Syntactic Interoperability</strong>: usually associated with data formats and encodings, e.g., XML, JSON and RDF.</li>
+<li><span class="bl">•</span>  <strong>Semantic Interoperability</strong>: associated with the common understand of the meaning of the exchanged content (information).</li>
+<li><span class="bl">•</span>  <strong>Organisational Interoperability</strong>: associated with the ability of organisations to effectively communicate and transfer information <span id="07_Chapter03.xhtml#p19" data-aria-label=" page 19. " type="pagebreak" data-role="doc-pagebreak"></span>even across different information systems, infrastructures or geographic regions and cultures.</li>
+</ul>
+<p>As this is the most agreed-upon classification of interoperability levels within the IoT domain we follow it in this document.</p>
+<section data-aria-labelledby="sec3_1">
+<h2 id="07_Chapter03.xhtml#sec3_1" class="head2" type="title"><span class="blue">3.1.</span>   IoT platforms interoperability challenges</h2>
+<section data-aria-labelledby="sec3_1_1">
+<h3 id="07_Chapter03.xhtml#sec3_1_1" class="head3">3.1.1.   Patterns of IoT interoperability</h3>
+<p>Achieving interoperability on the IoT, requires a closer look at interactions of the key components in IoT ecosystems. Before looking into the specifics of technical interoperability, syntactic interoperability, semantic interoperability, and organizational interoperability, we analyse here those interactions and we identify in <a href="#07_Chapter03.xhtml#fig3_2" class="fig">Figure 3.2</a> six generic interoperability patterns for IoT ecosystems. This subsection is based on the material published in [<a href="#10_References.xhtml#ref_10" id="07_Chapter03.xhtml#rref_10">10</a>].</p>
+<p>The “Cross Platform Access” pattern (<a href="#07_Chapter03.xhtml#fig3_2" class="fig">Figure 3.2, I</a>) is the basic characteristic of an interoperable IoT ecosystem. The goal of this pattern is to hide that an application or service accesses resources (information or functions) from different platforms through the same interface specification. The challenge of realizing this goal lays in allowing applications or services to discover platforms with relevant information, and enabling platforms that are potentially from different providers to have the same interface and use the same formats to communicate data.</p>
+<p>The pattern “Cross Application Domain Access” (<a href="#07_Chapter03.xhtml#fig3_2" class="fig">Figure 3.2, II</a>) extends the “Cross Platform Access” pattern. The goal is that services/applications are able to access information and functions not only from different platforms, but also from platforms, which host information from multiple application domains. Thereby, it is crucial that semantic interoperability is given through well-defined and shared information models. A cross-domain application that accesses multiple IoT platforms, could e.g. air quality information and traffic data to provide green routing through a city.</p>
+<figure>
+<img src="images/fig3_2.jpg" alt="Figure 3.2. The patterns of interoperability [10]." /><figcaption><strong><span type="label">Figure</span> <span type="ordinal">3.2.</span></strong> The patterns of interoperability [<a href="#10_References.xhtml#ref_10">10</a>].</figcaption>
+</figure>
+<p><span id="07_Chapter03.xhtml#p20" data-aria-label=" page 20. " type="pagebreak" data-role="doc-pagebreak"></span><span id="07_Chapter03.xhtml#p21" data-aria-label=" page 21. " type="pagebreak" data-role="doc-pagebreak"></span>The goal of the pattern “Platform Independence” (<a href="#07_Chapter03.xhtml#fig3_2" class="fig">Figure 3.2, III</a>) is to allow a single application or service to be used on top of different IoT platforms (e.g. in different regions). For example, these can be multiple deployments of a “smart parking” service used in two different geographic regions, which utilize different platforms with information about parking spots. This is especially challenging, when the sensors producing the IoT data are based on entirely different technology (e.g., radar-based parking spot observation, or counting in and outs of a parking lot).</p>
+<p>The goal of the “Platform-Scale Independence” pattern (<a href="#07_Chapter03.xhtml#fig3_2" class="fig">Figure 3.2, IV</a>) is to hide different platform scales towards the connecting services and applications. The so called <em><strong>server-level</strong></em> platforms are platforms with many devices connected (e.g. a cloud platform), whereas <em><strong>device-level</strong></em> platforms grant direct access to attached sensors, and <em><strong>fog-level</strong></em> platforms are intermediaries such as edge gateways. A platform implementing this pattern has to hide its scale from applications and services accessing it.</p>
+<p>Finally, the pattern “Higher-level Service Facades” (<a href="#07_Chapter03.xhtml#fig3_2" class="fig">Figure 3.2, V</a>) extends the interoperability requirements from platforms to higher-level services. Here, services are acting similar to platforms and also provide IoT offerings via a common interface. Such a service acts as a façade towards an IoT platform and use or process the IoT offerings of the platform to provide added value.</p>
+<p>Once the above described patterns are implemented, they ensure ecosystem interoperability and allow an easy re-usage of IoT offerings from the various platforms of the ecosystem.</p>
+<p>Organizational interoperability can be realized by <em><strong>IoT platform federations</strong></em> formed by multiple partnering institutions that collaborate by sharing IoT resources in locations originally out of their reach. This represents an additional horizontal integration that enables “Open networked” IoT business models according to the classification in [<a href="#10_References.xhtml#ref_11" id="07_Chapter03.xhtml#rref_11">11</a>].</p>
+<p>We can define an IoT platform federation as an association of several platforms enabling their secure interoperation, collaboration <span id="07_Chapter03.xhtml#p22" data-aria-label=" page 22. " type="pagebreak" data-role="doc-pagebreak"></span>and sharing of resources. Platforms can be enabled to perform collaborative sensing/actuation tasks and to interact directly so as to trade/share resources. A mechanism for defining and monitoring Service Level Agreements (SLAs) should be in place, while we can also envision the emergence of roaming <em><strong>IoT devices</strong></em>, where a device registered and managed by one platform is nomadic and can interact with resources in smart spaces managed by another federated platform (in a <em><strong>visited smart space</strong></em>). Federated platforms should of course control the terms under which a roaming IoT device is allowed to use resources in environments operated by visited platforms.</p>
+<p>Platform-to-platform direct interactions enable existing (native) applications to use resources managed and operated by other federated platforms as if they were offered by a single platform, as shown in <a href="#07_Chapter03.xhtml#fig3_2" class="fig">Figure 3.2.VI</a>. This reduces the burden of interacting with multiple platforms from an application or a service, while platforms increase the portfolio of offered resources. For example, if Platform 2 offers to barter data produced by its static temperature sensors within a federation formed by platforms 1 and 2, this means that Platform 1 can use and offer temperature readings produced by those sensors as if Platform 1 was managing the devices.</p>
+<p>Platform 1 offers in turn its temperature sensors located in another location to Platform 2. Therefore, an application or service can use the sensors from a single platform. Note that oneM2M has also identified such interaction between two platforms and tags the interface for platform interworking Mcc’ (between two services providers).</p>
+</section>
+<section data-aria-labelledby="sec3_1_2">
+<h3 id="07_Chapter03.xhtml#sec3_1_2" class="head3">3.1.2.   Semantic Interoperability</h3>
+<p>Semantics, as seen in linguistics and philosophy, refers to the study of meaning, which means the relation of signifiers like words, symbols or signs and their denotation [<a href="#10_References.xhtml#ref_12" id="07_Chapter03.xhtml#rref_12">12</a>]. In computer science, the meaning of semantics is the same, but here the relations of signifiers and their denotation need to be understandable and process able by machines.</p>
+<p><span id="07_Chapter03.xhtml#p23" data-aria-label=" page 23. " type="pagebreak" data-role="doc-pagebreak"></span>The most common way to achieve this is by using an ontology which is ‘an explicit specification of a [shared] conceptualization’ [<a href="#10_References.xhtml#ref_6">6</a>] and can be imaged like a formally defined information model. This is in line with the idea of the Semantic Web [<a href="#10_References.xhtml#ref_13" id="07_Chapter03.xhtml#rref_13">13</a>] introduced by Tim Berners-Lee in 2001, proposing the evolution of the Internet from a web of documents to a web of machine-readable and -understandable data. The corner stone technologies of the Semantic Web are the Resource Description Format<a href="#07_Chapter03.xhtml#fn2_1" id="07_Chapter03.xhtml#rfn2_1"><sup>1</sup></a> (RDF), a lightweight (meta data) data model for describing ontologies, and SPARQL Protocol and RDF Query Language<a href="#07_Chapter03.xhtml#fn2_2" id="07_Chapter03.xhtml#rfn2_2"><sup>2</sup></a> (SPARQL), which both are standardized by the World Wide Web Consortium (W3C).</p>
+<p>To enable building new innovative applications which, make use of data from multiple IoT systems, spanning existing “IoT silos” these systems must not only be able to exchange raw data but also have a common understanding of its meaning. Unfortunately, even if today’s IoT systems are willing to expose their data and resources to others, their semantically incompatible information models, offering different descriptions or even understandings of resources and operational procedures become an issue. Therefore, semantic interoperability is defined as “the ability of computer systems to exchange data with unambiguous, shared meaning” [<a href="#10_References.xhtml#ref_14" id="07_Chapter03.xhtml#rref_14">14</a>] is the key to “data exchange and service creation across large vertical applications”, which is the next step of evolution of the IoT [<a href="#10_References.xhtml#ref_15" id="07_Chapter03.xhtml#rref_15">15</a>].</p>
+<p>The challenge in achieving semantic interoperability is to find a way to provide this unambiguous, shared meaning of things, i.e. bridging the semantic gap between two (or more) platforms. <a href="#07_Chapter03.xhtml#fig3_4" class="fig">Figure 3.4</a>. shows possible approaches to semantic interoperability and their classification into three types. The shown approaches are an extension to the ones presented in [<a href="#10_References.xhtml#ref_16" id="07_Chapter03.xhtml#rref_16">16</a>] and form a solution space where each approach to semantic interoperability can be located. The solution space in the original paper ranges from the <em><strong>Core Information Model</strong></em> approach where all communicating platforms agree on one shared model to the <em><strong>Mapping between Platform-Specific Information Models</strong></em> <span id="07_Chapter03.xhtml#p24" data-aria-label=" page 24. " type="pagebreak" data-role="doc-pagebreak"></span>approach where each platform is free to use whatever information model they like and interoperability is only achieved through mapping between them. We define two more approaches extending this range called <em><strong>Arbitrary Information Model (+ Domain-Specific Models)</strong></em> which do not solve the problem of semantic interoperability in general but already provide the mechanisms needed to address semantic interoperability and therefore allow solving it on a different level.</p>
+<figure>
+<img src="images/fig3_4.jpg" alt="Figure 3.4. Possible approaches to semantic interoperability and their classification (based on [16])." /><figcaption><strong><span type="label">Figure</span> <span type="ordinal">3.4.</span></strong> Possible approaches to semantic interoperability and their classification (based on [<a href="#10_References.xhtml#ref_16">16</a>]).</figcaption>
+</figure>
+<p>We also provide a classification of these approaches according to three types of (semantic) interoperability: <em><strong>by chance, by standardization</strong></em> and <em><strong>by mapping</strong></em>. Semantic interoperability <em><strong>by chance</strong></em> means, that each platform is free to use whatever model they like but is only interoperable to any other platform that, by chance, uses the same model. Semantic Interoperability <em><strong>by standardization</strong></em> refers to the fact that there is some kind of agreement or standardization regarding at least parts of the used model and (semantic) interoperability <em><strong>by mapping</strong></em> refers to the fact that mapping logic is used to translate between different models.</p>
+</section>
+</section>
+<p> </p>
+<section type="footnotes">
+
+</section>
+<p><span id="08_Chapter04.xhtml"></span></p>
+<h1 class="chno" type="title"><span id="08_Chapter04.xhtml#p25" data-aria-label=" page 25. " type="pagebreak" data-role="doc-pagebreak"></span><span class="ordinal">4</span> <span class="chtitle">IoT-EPI Projects approaches addressing IoT platforms interoperability</span></h1>
+<section data-aria-labelledby="sec4_1">
+<h2 id="08_Chapter04.xhtml#sec4_1" class="head2" type="title"><span class="blue">4.1.</span>   IoT-EPI Platforms - Architectural mapping</h2>
+<p>The IoT platforms adoption is driven by factors such as economics that add cloud services and the development of partner ecosystems. In this context, device manufacturers provide built in solutions and models with the IoT SDKs to provide ease of use that allows the use of multiple portals and applications to get the IoT platforms and devices fully configured. The relationship with the service providers is increasingly important with the integration within the IoT suite and the various offerings from service providers.</p>
+<p>The development of standardisation is accelerating in the area of device discovery to support ability for heterogeneous devices to communicate and interoperate. Standards are key to enabling interoperability, driving down costs and stimulating growth. However, standards processes are complex, take a long time to evolve and be adopted, and will still take some time to have mature, stable standards dominating, so suppliers and buyers are having to over-invest in multiple standards.</p>
+<p>In this complex environment, the IoT-EPI projects are developing interoperability solutions that are addressing different layers in the IoT architecture <span id="08_Chapter04.xhtml#p26" data-aria-label=" page 26. " type="pagebreak" data-role="doc-pagebreak"></span>and offer mechanisms for providing interoperability between different IoT platforms addressing various use cases and applications.</p>
+<p>In the following paragraphs, we briefly discuss the mapping of the IoT architecture layers to the activities and solutions provided by the IoT-EPI projects.</p>
+<p><strong>AGILE</strong> builds a modular hardware and software gateway for the IoT focusing on the physical, network communication, processing, storage and application layers. The AGILE software modules are addressing functions such as device management, communication networks like area and sensor networks and solution for distributed storage. The project considers all the modules needed to provide a robust security management solution.</p>
+<p><strong>bIoTope</strong> provides an architecture and recommendations for the use of open standards and use case implementations that enable stakeholders to easily create new IoT systems and services and to rapidly harness available information using advanced Systems-of-Systems (SoS) capabilities for Connected Smart Objects. bIoTope also develops and provides standardised open APIs to enable interoperability. The project addresses all eight layers of the IoT architecture and validates the interoperability solutions in a cross-domain environment.</p>
+<p><strong>BIG IoT</strong> develops a generic, unified Web API for IoT platforms implemented. As part of the project, 8 partner IoT platforms are being integrated with the ecosystem plus several additional platforms are joining via the community building process. The project focuses on the upper layers of the IoT architecture by addressing the security management, APIs, service integration, external system services, applications, and the business enterprise.</p>
+<p><strong>INTER-IoT</strong> project addresses an open cross-layer framework, an associated methodology and tools to enable voluntary interoperability among heterogeneous IoT platforms by focusing on six layers of the IoT architecture with modules covering the QoS and device management, service integration, external system services, storage and virtualisation. The project addresses all network communication layer and the full security management suite.</p>
+<p><span id="08_Chapter04.xhtml#p27" data-aria-label=" page 27. " type="pagebreak" data-role="doc-pagebreak"></span><strong>symbIoTe</strong> is providing an abstraction layer for a unified view on various IoT platforms and sensing/actuating resources. Applications can use symbIoTe Core Services implementing a semantic IoT engine to find adequate resources offered by symbIoTe-enabled platforms and subsequently access platform’s virtual resources directly for data acquisition and actuation. The project focuses on seven layers of the IoT architecture from physical to application layer and proposes a full security management suite.</p>
+<p><strong>TagItSmart</strong>! offers a set of tools and enabling technologies that can be integrated into different IoT platforms using provided APIs to enable users across the value chain to fully exploit the power of condition-dependent functional codes to connect mass-market products with the digital world across multiple application sectors.</p>
+<p><strong>VICINITY</strong> focuses on a platform and ecosystem that provides “interoperability as a service” for infrastructures in the IoT and addresses the five-upper layer of the IoT architecture. The work considers the service integration, business logic, virtualisation, storage, APIs, tools, external system services, applications, data analytics and cloud services.</p>
+</section>
+<section data-aria-labelledby="sec4_2">
+<h2 id="08_Chapter04.xhtml#sec4_2" class="head2" type="title"><span class="blue">4.2</span>   AGILE</h2>
+<p>The AGILE project aims to address technical and syntactic interoperability at hardware and software levels. On the hardware front the project designs hardware components extending the current state-of-the-art of available IoT gateway platforms with a twofold objective: to develop a so called “Maker’s Gateway” by extending the capabilities of the most adopted and low-cost Raspberry Pi platform; and to develop a modular hardware gateway design for industrial purposes. For the Maker’s Gateway, the project contributes a shield following the Raspberry HAT specification<a href="#08_Chapter04.xhtml#fn4_3" id="08_Chapter04.xhtml#rfn4_3"><sup>3</sup></a> to the Open Hardware community, extending the capabilities of the platform by two additional sockets for radio modules, with <span id="08_Chapter04.xhtml#p28" data-aria-label=" page 28. " type="pagebreak" data-role="doc-pagebreak"></span>several sensors including a GPS, and with further wired sensor connectivity options. The project also provides code that helps developers visualise and eventually use the features of these in a web-based visual application development environment called Node-Red. The ease of use for these tools enables people with no software / hardware competences to assemble their required solutions in a fast prototyping environment used also for testing purposes and before mass production.</p>
+<p>On the software front the objectives of the AGILE project are to release open source code through the Eclipse Foundation to the community of IoT software developers / makers, helping them to easily configure their devices or gateways according to the platform environment these will be part of. The code is designed with gateway platform interoperability in mind, minimizing dependencies and thus supporting not just the two gateways hardware platform variants developed inside the project but also other platforms available on the market. To this end, Docker containerization (<a href="https://www.docker.com/">https://www.docker.com/</a>) is used to separate software components from each other and from the underlying HW/OS. In fact, Docker is the leading containerisation technology for software containers, packages that contain software binary executables, runtimes and all related dependencies.</p>
+<p>To further facilitate HW support, the project also contributes to the development of the Linux Yocto-based ResinOS operating system, specifically tuned for docker-based multi-container deployments adaptable to a large number of IoT gateway platforms.</p>
+<p>Interoperability of platforms is therefore more easily fostered with the creation of an ecosystem of IoT applications that can be shared between users and developers leveraging existing initiatives like the Docker container ecosystem. Users are able to discover, install/manage and share components that have been developed for interoperability purposes in a secure way through the Docker app marketplace.</p>
+<p><a href="#08_Chapter04.xhtml#fig4_1" class="fig">Figure 4.1</a> gives a more detailed view of what the AGILE Architecture looks like and which are the various modules that, run as executable <span id="08_Chapter04.xhtml#p29" data-aria-label=" page 29. " type="pagebreak" data-role="doc-pagebreak"></span>images in a container platform, enable it to address interoperability. Worth highlighting for this purpose the IoT Device and HW module Discovery and IoT Device Communication (hardware interoperability) and the Device Management UI and IoT Data Management UI (software interoperability) that encompass all aspects of syntactic interoperability.</p>
+<figure>
+<img src="images/fig4_1.jpg" alt="Figure 4.1. AGILE Detailed Architecture" /><figcaption><strong><span type="label">Figure</span> <span type="ordinal">4.1.</span></strong> AGILE Detailed Architecture</figcaption>
+</figure>
+<p>The top part of the picture shows how AGILE achieves <span class="underline1">horizontal interoperability</span> of existing IoT platforms by allowing users to utilise external platforms for data management (e.g., Dropbox and Google-Drive), APIs for IoT devices (like wearable device APIs, home automation APIs, etc.) and application scalable deployment (e.g., support <span id="08_Chapter04.xhtml#p30" data-aria-label=" page 30. " type="pagebreak" data-role="doc-pagebreak"></span>for CloudFoundry PaaS and integration of FIWARE enablers, Microsoft Azure, etc.). AGILE addresses these challenges at the software level by providing IoT platform specific modules for its Node-Red based visual application composition environment. With the categorization of <a href="#07_Chapter03.xhtml#fig3_2"><span class="bl">Figure 3.2</span></a>, this approach is similar to the “Cross Platform Access” pattern, with the notable difference that AGILE provides support in form of Node-Red modules, of which the application that uses features of both AGILE and several other cloud platforms can be composed.</p>
+<p>The project does not address any approach to semantic interoperability.</p>
+</section>
+<section data-aria-labelledby="sec4_3">
+<h2 id="08_Chapter04.xhtml#sec4_3" class="head2" type="title"><span class="blue">4.3.</span>   BIG IoT</h2>
+<p>The goal of the <strong>BIG IoT</strong> project is to remove technological market entry barriers of service and application providers of the Internet of Things by exploiting the capabilities of <strong>smart object platforms</strong> through establishing <strong><em>syntactic</em></strong> and <strong><em>semantic</em> interoperability</strong> via an open BIG IoT API and BIG IoT Marketplace to enable cross-standard, cross-platform, and cross-domain IoT services and applications. Thereby, the project is defining a comprehensive architecture [<a href="#10_References.xhtml#ref_17" id="08_Chapter04.xhtml#rref_17">17</a>] for IoT ecosystems including a solid security design [<a href="#10_References.xhtml#ref_18" id="08_Chapter04.xhtml#rref_18">18</a>] and service composition approach [<a href="#10_References.xhtml#ref_19" id="08_Chapter04.xhtml#rref_19">19</a>], while at the same time providing business models [<a href="#10_References.xhtml#ref_20" id="08_Chapter04.xhtml#rref_20">20</a>] that sustain the ecosystem.</p>
+<section data-aria-labelledby="sec4_3_1">
+<h3 id="08_Chapter04.xhtml#sec4_3_1" class="head3">4.3.1   The BIG IoT Architecture</h3>
+<p>This subsection is based on the material published in [<a href="#10_References.xhtml#ref_10">10</a>] and [<a href="#10_References.xhtml#ref_17">17</a>]. Below, the architectural approach and related interoperability aspects of the BIG IoT project are outlined. <a href="#08_Chapter04.xhtml#fig4_2" class="fig">Figure 4.2</a> presents an overview of the BIG IoT architecture for IoT ecosystems. The architecture has been specifically designed to support all of the above-described patterns of interoperability (Section 4.1.1). The architecture is centred around a common set of interfaces, referred to as the BIG IoT API, that are <span id="08_Chapter04.xhtml#p31" data-aria-label=" page 31. " type="pagebreak" data-role="doc-pagebreak"></span><span id="08_Chapter04.xhtml#p32" data-aria-label=" page 32. " type="pagebreak" data-role="doc-pagebreak"></span>supported both by offering providers and consumers, as well as the marketplace, where resources are traded. These interfaces include the following basic interactions:</p>
+<figure>
+<img src="images/fig4_2.jpg" alt="Figure 4.2. BIG IoT Architecture Overview A [10] and B [17]." /><figcaption><strong><span type="label">Figure</span> <span type="ordinal">4.2.</span></strong> BIG IoT Architecture Overview A [<a href="#10_References.xhtml#ref_10">10</a>] and B [<a href="#10_References.xhtml#ref_17">17</a>].</figcaption>
+</figure>
+<ul>
+<li><span class="bl">•</span>  M1: Authentication &amp; authorization of offering providers and consumers</li>
+<li><span class="bl">•</span>  M2: Registration of offerings (through offering providers)</li>
+<li><span class="bl">•</span>  M3: Querying of offerings (through offering consumers)</li>
+<li><span class="bl">•</span>  M4: Accounting of offering access</li>
+<li><span class="bl">•</span>  A1: Access to offerings requested by offering consumers</li>
+</ul>
+<p>These interfaces are the basis for enabling interoperability and realizing the patterns I – V (Section 4.1.1). Thereby, key challenges for realizing patterns II, III, and V are e.g.:</p>
+<ul>
+<li><span class="bl">•</span>  The offering providers and consumers are from different application domains (II);</li>
+<li><span class="bl">•</span>  The IoT offerings are hosted on different IoT platforms, e.g. located in different regions (III);</li>
+<li><span class="bl">•</span>  The IoT offerings are on different provider systems, e.g. an IoT platform or a service (V).</li>
+</ul>
+<p>Important in this figure is also the concepts of the BIG IoT Consumer and Provider Libs. For example, the Provider Lib implements the Register interface (M2) for uploading a description of an offering to the marketplace and offers the Access interface (A1) to provide the information to a consumer. The benefit of these libraries is that developers of platforms, services and applications are supported in advertising their offerings on the marketplace or use the marketplace to discover and access them. They only have to implement once the Provider (P1) or Consumer (P2) interface and can easily update the libraries in order to further comply in case of changes in the details of the underlying message formats and interactions. For the registration process via the Register interface (M2) a semantic description is used that is called an Offering Description and relies on the Resource Description Framework (RDF).</p>
+</section>
+<section data-aria-labelledby="sec4_3_2">
+<h3 id="08_Chapter04.xhtml#sec4_3_2" class="head3">4.3.2.   <span id="08_Chapter04.xhtml#p33" data-aria-label=" page 33. " type="pagebreak" data-role="doc-pagebreak"></span>IoT platforms interoperability approach</h3>
+<p>A central goal of the BIG IoT architecture is to facilitate the integration of IoT platforms through the BIG IoT ecosystem. Both infrastructure as well as device-level platforms are targeted. From an architectural perspective, specifically considering the implementation of the BIG IoT API and integration with marketplaces, we have identified the following types of IoT platforms:</p>
+<blockquote>
+<p><strong>Type 1: Server Infrastructure or Cloud based IoT Platform</strong> assumed to be “always online” and anytime accessible by applications or services via the Internet.</p>
+<p><strong>Type 2: Device-level IoT Platform, hosted on devices that are <span class="underline1"><em>unconstrained</em><sup>4</sup></span> with respect to communication, compute and memory resources</strong> assumed to be “always online” whereby connectivity and communication resources is assumed to be charged on a “flat-rate” plan.</p>
+<p><strong>Type 3: Device-level IoT Platform, hosted on devices that are <span class="underline1"><em>unconstrained</em></span> with respect to communication, compute and memory resources, but are “not always online”</strong>.</p>
+<p><strong>Type 4: Device-level IoT Platform, hosted on devices that are <span class="underline1"><em>unconstrained</em></span> with respect to communication, compute and memory resources, but are connected to the Internet via a “pay-per-use” plan</strong>, Type 4 devices are often also of Type 3.</p>
+<p><strong>Type 5: Device-level IoT Platform, hosted on devices that are <span class="underline1"><em>constrained<sup>5</sup></em></span> with respect to communication, compute and/or memory resources</strong>.</p>
+</blockquote>
+<p><span id="08_Chapter04.xhtml#p34" data-aria-label=" page 34. " type="pagebreak" data-role="doc-pagebreak"></span>In the BIG IoT Project, overall 8 platforms are integrated by the partners. First, 6 cloud- or infrastructure-level platforms are part of the ecosystem: Bosch’s Smart City platform, based on the Bosch IoT Suite<a href="#08_Chapter04.xhtml#fn4_6" id="08_Chapter04.xhtml#rfn4_6"><sup>6</sup></a> (<strong>Type 1; Mode 1, Mode 2, Mode 4</strong>), CSI’s Smart Data<a href="#08_Chapter04.xhtml#fn4_7" id="08_Chapter04.xhtml#rfn4_7"><sup>7</sup></a> platform (<strong>Type 1; Mode 3</strong>), OpenIoT<a href="#08_Chapter04.xhtml#fn4_8" id="08_Chapter04.xhtml#rfn4_8"><sup>8</sup></a> (<strong>Type 1; Mode 1, Mode 2</strong>), VMZ’s TIC<a href="#08_Chapter04.xhtml#fn4_9" id="08_Chapter04.xhtml#rfn4_9"><sup>9</sup></a> platform (<strong>Type 1; Mode 1, Mode 2</strong>), Siemens APM platform (<strong>Type 1; Mode 2</strong>), and WorldSensing<a href="#08_Chapter04.xhtml#fn4_10" id="08_Chapter04.xhtml#rfn4_10"><sup>10</sup></a> (<strong>Type 1; Mode 1, Mode 2</strong>). Further, there are 2 device-level platforms: Bosch’s BEZIRK<a href="#08_Chapter04.xhtml#fn4_11" id="08_Chapter04.xhtml#rfn4_11"><sup>11</sup></a> platform (<strong>Type 2, Type 3, Type 4; Mode 1, Mode 4</strong>) and Econais’ Wubby<a href="#08_Chapter04.xhtml#fn4_12" id="08_Chapter04.xhtml#rfn4_12"><sup>12</sup></a> platform (<strong>Type 2, Type 3, Type 4, Type 5; Mode 4</strong>).</p>
+<p>Those now <strong><em>BIG IoT-enabled platforms</em></strong> are integrated via the BIG IoT API and BIG IoT Marketplace and currently being rolled out and tested in 3 European Pilot sites and applied in IoT scenarios for Smart Cities: Barcelona (BCN), Berlin/Wolfsburg (NG), and the region of Piedmont (Pied). Our Use Cases are divided in 9 clusters: Smart Parking (NG, BCN, Pied), Smart Traffic Management (BCN, Pied), Public Transport Optimization (NG, BCN), Healthy Bike Navigation (BCN, Pied), Smart Bike Sharing (NG, BCN, Pied), Incentive-based Green route Planning (BCN, Pied), Multi-Modal Route Optimizer (NG), Smart Charging (NG, BCN), Device-to-Device Communication (BCN), Smart Living (NG). In NG we use Bosch’s Smart City platform, VMZ’s TIC platform, Siemens APM Platform; in BCN are used OpenIoT, WorldSensing, Bosch’s BEZIRK; Pied integrates CSI’s Smart Data and Econais’ Wubby platform.</p>
+</section>
+<section data-aria-labelledby="sec4_3_3">
+<h3 id="08_Chapter04.xhtml#sec4_3_3" class="head3">4.3.3.   Interoperability aspects</h3>
+<p>Solving interoperability issues related to these patterns requires the use of common information models, e.g., offered through Semantic <span id="08_Chapter04.xhtml#p35" data-aria-label=" page 35. " type="pagebreak" data-role="doc-pagebreak"></span>Web technologies. Those common information models need to allow the description of offerings, so that their consumers (e.g., services or applications) can work with them, even if they are from different domains or systems. The BIG IoT Core Model defines the core vocabulary required to create an Offering Description. The Offering Description relies on the work done within the W3C Web of Things (WoT) group, in particular, the Thing Description (TD) format [<a href="#10_References.xhtml#ref_21" id="08_Chapter04.xhtml#rref_21">21</a>] and going to be mapped also to W3C SSN/SOSA. The semantics are further enriched by domain independent and domain dependent models. A domain dependent model is used to semantically annotate the metadata, offering category and input/output data of an Offering Description. The BIG IoT semantic Application Domain Model is created using the BIG IoT semantic Core Model, domain independent and/or domain models. This model establishes the relationship between the core model and domain model. Along with offering categorization and data modeling, the Domain Model also defines the vocabulary to semantically annotate the domain dependent features of an offering. For example, the class “mobility:ParkingSpace” can be used to annotate a parking space and its features such as parking space id, or parking space location.</p>
+<p>For the semantic annotation of offering descriptions, e.g., defining the semantics of inputs, outputs and offering category, a well-defined vocabulary of domain terms is needed. This vocabulary should be widely shared and agreed upon so that all consumers and providers of IoT platforms can rely on it. Further, it should evolve in an open community process to allow active engagement by ecosystem stakeholders. We have selected schema.org as a basis for our domain model, as it provides a vendor-neutral, community-developed vocabulary for structured data.</p>
+<p>The central pillar of the ecosystem is the Marketplace. Here, a Provider (e.g., an IoT platform) registers its resources by uploading an offering description (Section 3.2). To facilitate a provider in conforming with the BIG IoT API for offering its resources in the ecosystem, the Provider Library (Lib) can be utilized. It can be used to establish <span id="08_Chapter04.xhtml#p36" data-aria-label=" page 36. " type="pagebreak" data-role="doc-pagebreak"></span>a gateway to the actual resources and implements the BIG IoT API and the various interactions and workflows (Section 3.4). The library authenticates the provider with the Marketplace and registers its offerings. It also offers a Web API to grant access to the resources.</p>
+<p>Beyond these mechanisms for providing access to IoT platforms, the Marketplace enriches the ecosystem with the possibility of monetizing the consumption of resources. Therefore, both sides, the consumer and provider, report accounting data (e.g. number of resource records obtained/provided) back to the Marketplace. This is the basis for charging and billing, and the foundation for business opportunities around the ecosystem.</p>
+<p>The above described IoT ecosystem is platform-scale independent. I.e., IoT platforms can operate either on cloud-level (e.g., server, data centre), on fog-level (e.g., gateway, cellular communication base station), or on device-level (e.g., Raspberry PI, smartphone). In the last case, the IoT platform can represent an IoT ‘thing’. The BIG IoT API can be used independent of this scale of the platform.</p>
+</section>
+<section data-aria-labelledby="sec4_3_4">
+<h3 id="08_Chapter04.xhtml#sec4_3_4" class="head3">4.3.4. Uniqueness and specific features of the approach</h3>
+<p>The BIG IoT approach comprises the following objectives: First, it openly defines the so-called BIG IoT API, a generic, Web-based application programming interface (API) for the adoption by smart object platforms.</p>
+<p>Second, at the core of BIG IoT ecosystem stands an open marketplace. Once the BIG IoT API provides the building blocks for a syntactically and semantically interoperable IoT and inter-platform connectivity and exchange is enabled, the marketplace lays the foundation for an ecosystem of platforms and services offerings. The marketplace enables the advertisement, quality control, and monetization of applications and services developed on top of the BIG IoT API. A marketplace can be setup for specific domains, e.g., by stakeholders for the industry or energy domain, or by Smart Cities for the mobility or building domain.</p>
+<p><span id="08_Chapter04.xhtml#p37" data-aria-label=" page 37. " type="pagebreak" data-role="doc-pagebreak"></span>Third, BIG IoT supports the development of applications and services by providing a dedicated software infrastructure. In addition, it provides functionality to discover and orchestrate services. This functionality is based on semantic service descriptions and an automated service chaining will be enabled through semantic reasoners. These functionalities facilitate the reusing of existing services.</p>
+<p>Fourth, BIG IoT project engages with current standardization initiatives to receive input and further on, we will contribute to those standardization activities with the results elaborated in the project.</p>
+<p>Finally, the core technologies related to BIG IoT API and Marketplace will be available as open source under Eclipse. The BIG IoT proposal has been approved and the Eclipse Bridge.IoT project has been created (<a href="https://projects.eclipse.org/proposals/eclipse-bridge.iot">https://projects.eclipse.org/proposals/eclipse-bridge.iot</a>)</p>
+<p>Used approach to semantic interoperability: Arbitrary Information Model and Domain-Specific Models</p>
+</section>
+</section>
+<section data-aria-labelledby="sec4_4">
+<h2 id="08_Chapter04.xhtml#sec4_4" class="head2" type="title"><span class="blue">4.4.</span>   bIoTope</h2>
+<p>A primary goal of bIoTope is to enable companies to easily create new IoT systems and rapidly harness available information using advanced Systems-of-Systems (SoS) capabilities for Connected Smart Objects. This SoS approach signifies that all five patterns of interoperability in <a href="#07_Chapter03.xhtml#fig3_2">Figure 3.2</a> are implemented through open standards that can be combined and used together in different ways. The SoS approach taken by bIoTope differs from most other proposed architectures for IoT systems in the sense that there is no layered architecture regarding the physical size or computational capabilities of the communicating systems. With this SoS approach, patterns I-III in <a href="#07_Chapter03.xhtml#fig3_2">Figure 3.2</a> are basic requirements that are implemented by default. Any system that implements the necessary IoT standards can communicate directly with any other system that implements and understands the same standards, as illustrated in <a href="#08_Chapter04.xhtml#fig4_3" class="fig">Figure 4.3</a>. This capability implements pattern <strong><em>IV) “Platform-Scale Independence”</em></strong> in <a href="#07_Chapter03.xhtml#fig3_2">Figure 3.2</a>.</p>
+<p><span id="08_Chapter04.xhtml#p38" data-aria-label=" page 38. " type="pagebreak" data-role="doc-pagebreak"></span>Systems that do not natively support the necessary IoT standards can join by what we call Wrappers in bIoTope, i.e. software components that expose the services that should be published to the IoT level using the appropriate standards (this corresponds to pattern <strong><em>V) “Higher-level Service Facades</em></strong>” in <a href="#07_Chapter03.xhtml#fig3_2">Figure 3.2</a>). This also signifies ensuring that data and services that are not public remain non-accessible to unauthorized parties.</p>
+<figure>
+<img src="images/fig4_3.jpg" alt="Figure 4.3. bIoTope Systems of Systems type cross-connected (non-layered) connectivity." /><figcaption><strong><span type="label">Figure</span> <span type="ordinal">4.3.</span></strong> bIoTope Systems of Systems type cross-connected (non-layered) connectivity.</figcaption>
+</figure>
+<p>In bIoTope, “IoT standard” signifies a limited set of appropriate standards around the “waist” of the standards landscape as illustrated in <a href="#08_Chapter04.xhtml#fig4_4" class="fig">Figure 4.4</a>. If the IoT is expected to become a similar success story as the World Wide Web (WWW), it will need a similar foundation with a set of simple, well-defined, generic and <span id="08_Chapter04.xhtml#p39" data-aria-label=" page 39. " type="pagebreak" data-role="doc-pagebreak"></span>powerful standards. The WWW started with HTTP and HTML as the initial core standards. Over time supplementary functionality has been introduced by other standards that augment the capabilities of WWW applications but the fundamental building blocks and principles are still the same.</p>
+<figure>
+<img src="images/fig4_4.jpg" alt="Figure 4.4. Illustration of bIoTope standards landscape." /><figcaption><strong><span type="label">Figure</span> <span type="ordinal">4.4.</span></strong> Illustration of bIoTope standards landscape.</figcaption>
+</figure>
+<p>The core IoT standards used in bIoTope are shown in bold. The other standards are used depending on the domain and requirements of different applications. When other standards (or proprietary protocols and formats) than the core IoT standards are used, bIoTope uses a Wrapper (i.e., a <strong><em>Service Facade</em></strong>) for making them compliant with the core IoT standards.</p>
+<p>bIoTope takes full advantage of messaging standards developed and officially published by The Open Group, notably the Open Messaging Interface (O-MI) and Open Data Format (O-DF) standards<a href="#08_Chapter04.xhtml#fn4_13" id="08_Chapter04.xhtml#rfn4_13"><sup>13</sup></a> <span id="08_Chapter04.xhtml#p40" data-aria-label=" page 40. " type="pagebreak" data-role="doc-pagebreak"></span>[<a href="#10_References.xhtml#ref_22" id="08_Chapter04.xhtml#rref_22">22</a>] [<a href="#10_References.xhtml#ref_23" id="08_Chapter04.xhtml#rref_23">23</a>]. Those standards emerged out of past EU FP6-FP7 projects, where real-life industrial applications required the collection and management of product instance-level information for many domains involving heavy and personal vehicles, household equipment, etc. Based on the needs of those real-life applications, and as no existing standards could be identified that would fulfil those requirements without extensive modification or extensions, the partner consortia started the specification of new IoT interoperability standards. O-MI mainly provides Technical Interoperability in the stack of <a href="#06_Chapter02.xhtml#fig2_1">Figure 2.1</a> with the necessary functionality needed for implementing generic IoT systems that is not provided by protocols such HTTP. O-MI can be used for implementing RESTful IoT information systems, also using other underlying protocols than HTTP as illustrated in <a href="#08_Chapter04.xhtml#fig4_5" class="fig">Figure 4.5</a>.</p>
+<p>O-DF provides a generic content description model for Objects in the IoT that can be extended with more specific vocabularies (e.g., using domain-specific ontology vocabularies). O-DF currently uses XML as the underlying syntax but it provides a minimal, generic set of semantics for annotating IoT (and other) data. O-DF could be considered to bridge Level 2 (syntactic interoperability) and Level 3 (semantic interoperability) in <a href="#08_Chapter04.xhtml#fig4_5" class="fig">Figure 4.5</a> because it provides a capability to reference external taxonomies, ontologies and vocabularies in a platform-, domain- and scale-agnostic way.</p>
+<p><a href="#08_Chapter04.xhtml#fig4_5" class="fig">Figure 4.5</a> illustrates a bIoTope ecosystem, where the different IoT standard compliant systems (through Wrappers or not) are aware of each other’s existence and the different data and services that they provide to each other<a href="#08_Chapter04.xhtml#fn4_14" id="08_Chapter04.xhtml#rfn4_14"><sup>14</sup></a>. When a new system needs to “join” a bIoTope compliant ecosystem, e.g. a car that arrives into a new city and needs to discover available services, bIoTope will provide discovery mechanisms for discovering relevant O-MI nodes. Certain nodes will implement <span id="08_Chapter04.xhtml#p41" data-aria-label=" page 41. " type="pagebreak" data-role="doc-pagebreak"></span>the bIoTope loTBnB API, which is a marketplace for IoT compliant services.</p>
+<figure>
+<img src="images/fig4_5.jpg" alt="Figure 4.5. bIoTope ecosystem illustration." /><figcaption><strong><span type="label">Figure</span> <span type="ordinal">4.5.</span></strong> bIoTope ecosystem illustration.</figcaption>
+</figure>
+<p><a href="#08_Chapter04.xhtml#fig4_6" class="fig">Figure 4.6</a> illustrates how different platforms, systems and services can publish the desired data and services using IoT standards. The Open Data Format (O-DF) provides means for annotating “any” IoT data or service using existing or new vocabularies, such as schema.org, SSN, GML, etc., as shown in <a href="#08_Chapter04.xhtml#fig4_4" class="fig">Figure 4.4</a>. It is even possible to use several different vocabularies within one O-DF structure (including proprietary ones) by linked data principles.</p>
+<figure>
+<img src="images/fig4_6.jpg" alt="Figure 4.6. bIoTope architecture illustration." /><figcaption><strong><span type="label">Figure</span> <span type="ordinal">4.6.</span></strong> bIoTope architecture illustration.</figcaption>
+</figure>
+<p><span id="08_Chapter04.xhtml#p42" data-aria-label=" page 42. " type="pagebreak" data-role="doc-pagebreak"></span><span id="08_Chapter04.xhtml#p43" data-aria-label=" page 43. " type="pagebreak" data-role="doc-pagebreak"></span>The bIoTope architecture is heavily influenced by a Micro-Services Architecture (MSA) thinking, where different “small” standards can be used jointly in the best way depending on application requirements. MSA is a generic way of implementing pattern <strong><em>V) “Higher-level Service Facades”</em></strong> in <a href="#07_Chapter03.xhtml#fig3_2">Figure 3.2</a>. Support for MSA is a fundamental design principle of O-MI and O-DF in the sense that services of “any” size can be published and consumed, no matter if it is a simple request for a current sensor value or a request for available parking places in proximity of a car’s current location.</p>
+<p>Such an MSA approach provides several advantages regarding system flexibility and lean software principles because new IoT standards-compliant services can be composed from smaller, existing services. It also provides a risk management advantages in the current competitive IoT standardization landscape because different standard-compliant software components and wrappers can be adapted to support new or “winning” standards without impacting the whole system architecture.</p>
+<p>Whilst bIoTope should be understood as a highly flexible and dynamic ecosystem capable of seamlessly integrating arbitrary proprietary IoT platforms, it nevertheless builds upon a number of several core components presented in the top layer of <a href="#08_Chapter04.xhtml#fig4_6" class="fig">Figure 4.6</a>, which provide essential functionality. The basic viewpoint coordinates of from the architectural framework is presented in <a href="#08_Chapter04.xhtml#fig4_7" class="fig">Figure 4.7</a>. This figure adopts the conventions established, for example, by NIST<a href="#08_Chapter04.xhtml#fn4_15" id="08_Chapter04.xhtml#rfn4_15"><sup>15</sup></a> or IoT-A<a href="#08_Chapter04.xhtml#fn4_16" id="08_Chapter04.xhtml#rfn4_16"><sup>16</sup></a> with regards to the meanings of the cardinal directions North-South-East-West and set interaction patterns to human (north / west) and machines (south / east).</p>
+<figure>
+<img src="images/fig4_7.jpg" alt="Figure 4.7. bIoTope concept illustration." /><figcaption><strong><span type="label">Figure</span> <span type="ordinal">4.7.</span></strong> bIoTope concept illustration.</figcaption>
+</figure>
+<p>Nevertheless, the presented Services (XaaS) can be seen basically as chained micro services or functional blocks. Composed functional blocks result in a specific services, which as well can be part of an aggregation of several services. <a href="#08_Chapter04.xhtml#fig4_8" class="fig">Figure 4.8</a> introduces a functional view onto those micro services, labelled as functional blocks. Basis for all <span id="08_Chapter04.xhtml#p44" data-aria-label=" page 44. " type="pagebreak" data-role="doc-pagebreak"></span>functional blocks inside the ecosystem is the compliance to O-MI and O-DF. This compliance brings automatically the fundamental services for “publication” and “consumption” and their inherited sub-functions. For the interconnection of various services appearing in the ecosystem, the “marketplace / service catalogue” sets a cornerstone to interact as an intermediator between services. One possible instance of this services is represented by the IoTBnB<a href="#08_Chapter04.xhtml#fn4_17" id="08_Chapter04.xhtml#rfn4_17"><sup>17</sup></a> implementation. This specific implementation is as well supported by the Security &amp; Privacy service that handles unauthorized actions. Inside of the ecosystem are other services (Visualization, Context Provisioning, Service Composition and RDF Integration &amp; Semantics) that help to realize the stated core components / services on the top layer of <a href="#08_Chapter04.xhtml#fig4_6" class="fig">Figure 4.6</a>.</p>
+<figure>
+<img src="images/fig4_8.jpg" alt="Figure 4.8. bIoTope reference architecture." /><figcaption><strong><span type="label">Figure</span> <span type="ordinal">4.8.</span></strong> bIoTope reference architecture.</figcaption>
+</figure>
+<p><span id="08_Chapter04.xhtml#p45" data-aria-label=" page 45. " type="pagebreak" data-role="doc-pagebreak"></span>Used approach to semantic interoperability: Arbitrary Information Model + Domain-Specific Models</p>
+</section>
+<section data-aria-labelledby="sec4_5">
+<h2 id="08_Chapter04.xhtml#sec4_5" class="head2" type="title"><span class="blue">4.5.</span>   INTER-IoT</h2>
+<section data-aria-labelledby="sec4_5_1">
+<h3 id="08_Chapter04.xhtml#sec4_5_1" class="head3">4.5.1.   Uniqueness and special features of the approach</h3>
+<p>INTER-IoT offers a layer-oriented solution for enabling seamless IoT platforms’ interoperability. With this solution, different platforms can be interconnected and transparently interoperate among them at any specific layer or level (Device, Network, Middleware, Application and Data and Semantics). INTER-IoT is the first approach in providing universal <span id="08_Chapter04.xhtml#p46" data-aria-label=" page 46. " type="pagebreak" data-role="doc-pagebreak"></span>semantic translation among platforms. It also provides a methodology (INTER-METH) for guiding and easing the implementation. INTER-IoT open framework (INTER-FW) offers a set of tools for interoperability at each specific layer which can be accessed through an API. Furthermore, INTER-IoT offers a virtualized version of each layer solution to facilitate a quick implementation with Docker.</p>
+<figure>
+<img src="images/fig4_9.jpg" alt="Figure 4.9. INTER-IoT layered architecture" /><figcaption><strong><span type="label">Figure</span> <span type="ordinal">4.9.</span></strong> INTER-IoT layered architecture</figcaption>
+</figure>
+<p>INTER-IoT solution can be applied to any application domain and across domains in which there is a need for interconnection and/or interoperability. INTER-IoT will facilitate the formation of interoperable IoT ecosystems, make the design of IoT devices, smart objects or services easier to companies and developers, and support launching them to the <span id="08_Chapter04.xhtml#p47" data-aria-label=" page 47. " type="pagebreak" data-role="doc-pagebreak"></span>market quickly to a broader client base. In the long term, the ability for applications to connect to and interact with heterogeneous smart objects will become a huge enabler for new products and services.</p>
+</section>
+<section data-aria-labelledby="sec4_5_2">
+<h3 id="08_Chapter04.xhtml#sec4_5_2" class="head3">4.5.2.   INTER-IoT Architecture</h3>
+<p>INTER-IoT presents a novel layer-oriented solution for interoperability, to provide interoperability at any layer and across layers among different IoT systems and platforms. Contrary to a more general global approach, the INTER-IoT layered approach has a higher potential in order to provide interoperability. It facilitates a tight bidirectional integration, higher performance, complete modularity, high adaptability and flexibility, and presents increased reliability.</p>
+<p>This layer-oriented solution is achieved through INTER-LAYER, several interoperability solutions dedicated to specific layers. Each interoperability infrastructure layer has a strong coupling with adjacent layers and provides an interface. Interfaces will be controlled by a meta-level framework to provide global interoperability. Every interoperability mechanism can be accessed through an API. The interoperability infrastructure layers can communicate and interoperate through the interfaces. This cross-layering allows to achieve a deeper and more complete integration.</p>
+</section>
+<section data-aria-labelledby="sec4_5_3">
+<h3 id="08_Chapter04.xhtml#sec4_5_3" class="head3">4.5.3.   Layers and interoperability aspects</h3>
+<p><strong>Device layer (D2D)</strong>: At the device level, D2D solution will allow the seamless inclusion of novel IoT devices and their interoperation with already existing ones. D2D solution is a modular gateway that supports a vast range of protocols as well as raw forwarding. It is composed on a physical part that only handles network access and communication protocols, and a virtual part that handles all other gateway operations and services (<strong>gw virtualization</strong>). When connection is lost, the virtual part remains functional and is capable to answer the API and Middleware requests. The gateway follows a modular approach to allow the addition of optional service blocks to adapt to the specific case, allowing a fast growth of smart objects ecosystems.</p>
+<p><span id="08_Chapter04.xhtml#p48" data-aria-label=" page 48. " type="pagebreak" data-role="doc-pagebreak"></span><strong>Network layer (N2N)</strong>: N2N solution enables seamless Network-to-Network interoperability, allowing transparent smart object mobility, and information routing support. It will also allow offloading and roaming, what implies the interconnection of gateways and platforms through the network. Interoperability is achieved through the creation of a virtual network, using SDN and NFV paradigms, with the support of the N2N API. The N2N solution will allow the design and implementation of fully interconnected ecosystems, and solve the smart object mobility problem.</p>
+<p><strong>Middleware layer (MW2MW)</strong>: At the middleware level INTER-IoT solution will enable seamless resource discovery and management system for the IoT devices in heterogeneous IoT platforms. Interoperability at the middleware layer is achieved through the establishment of an abstraction layer and the attachment of IoT platforms to it. Different modules included at this level provide services to manage the virtual representation of the objects, creating the abstraction layer to access all their features and information. Those services are accessible through a general API. Interoperability at this layer will allow a global exploitation of smart objects in large scale multi-platform IoT systems.</p>
+<p><strong>Application and Services layer (AS2AS)</strong>: INTER-IoT will enable the use of heterogeneous services among different IoT platforms. Our approach will allow the discovery, catalogue, use and even composition of services from different platforms. AS2AS will also provide an API as an integration toolbox to facilitate the development of new applications that integrate existing heterogeneous IoT services.</p>
+<p><strong>Semantics and Data layer (DS2DS)</strong>: INTER-IoT guarantees a common interpretation of data and information among different IoTplatforms and heterogeneous data sources that typically employ different data formats and ontologies, and are unable to directly share information among them. INTER-IoT DS2DS approach is the first solution that provides <strong>universal semantic and syntactic interoperability</strong> among heterogeneous IoT platforms. It is based on a novel approach, a semantic translation of IoT platforms’ ontologies to/from a common Central Ontology that INTER-IoT employs, instead of direct platform-to-platform translations. This technique reduces dramatically the number of potential combinations of <span id="08_Chapter04.xhtml#p49" data-aria-label=" page 49. " type="pagebreak" data-role="doc-pagebreak"></span>semantic translations required for universal semantic interoperability. INTER-IoT semantic interoperability tools work with any vocabulary, or ontology. INTER-IoT own modular Central Ontology, called GOIoTP, for all IoT platforms, devices and services, is available at <a href="http://docs.inter-iot.eu/ontology">http://docs.inter-iot.eu/ontology</a>. Also, syntactic translators allow interoperability between different data formats, such as JSON, XML, and others. Although the pilot deployments of INTER-IoT realize the Core Information Model with Extensions approach to semantic interoperability, INTER-IoT supports any solutions between its pilot approach and Core Information Model.</p>
+<p><strong>Cross-Layer</strong>: Inter-IoT also guarantees non-functional aspects that must be present across all layers: trust, security, privacy, and quality of service (QoS). As well, INTER-IoT provides a virtualized version of the solution for each layer, to offer the possibility of a quick and easy deployment. Security is guaranteed inside each individual layer, and the external API access is securitized through encrypted communication, authentication and security tokens. INTER-IoT accomplishes the new European Data Privacy Law, and in the specific case of e-Health, in which information is highly sensitive, the Medical Device Regulation law.</p>
+<p>Regarding the architectural interoperability patterns described in <a href="#07_Chapter03.xhtml#sec3_1_1">Section 3.1.1</a>, INTER-IoT supports all six patterns of interoperability:</p>
+<ul>
+<li><span class="bl">•</span>  Cross Platform Access, which is accomplished through AS2AS services or through MW2MW.</li>
+<li><span class="bl">•</span>  Cross Application Domain Access, as far as INTER-IoT is domain-agnostic and has universal semantic interoperability by means of the DS2DS solution.</li>
+<li><span class="bl">•</span>  Platform Independence, through AS2AS service composition and DS2DS semantic and syntactic translation.</li>
+<li><span class="bl">•</span>  Platform-Scale Independence, by means of INTER-IoT AS2AS.</li>
+<li><span class="bl">•</span>  Higher-level Service Facades, through INTER-IoT AS2AS services.</li>
+<li><span class="bl">•</span>  Platform-to-Platform interaction, INTER-IoT main goal by design. It is achieved through D2D and/or MW2MW solutions.</li>
+</ul>
+<p>All the aforementioned patterns are architectural. INTER-IoT has identified main patterns of interoperability from a different point <span id="08_Chapter04.xhtml#p50" data-aria-label=" page 50. " type="pagebreak" data-role="doc-pagebreak"></span>of view or analysis: from the semantic point of view, regarding semantic interoperability and from the middleware interoperability point of view (related with syntactic and functional interoperability). INTER-IoT has its own macro and micropatterns that match with this approach.</p>
+<p>Finally, regarding the three main types of interoperability (functional, syntactic, semantic), INTER-IoT enables all of them. Universal syntactic and semantic interoperability among any platforms with different data formats and ontologies is possible through the INTER-IoT DS2DS solution. Moreover, other INTER-IoT layers (D2D &amp; N2N) can provide functional interoperability among smart elements, enabling connectivity to the network.</p>
+</section>
+</section>
+<section data-aria-labelledby="sec4_6">
+<h2 id="08_Chapter04.xhtml#sec4_6" class="head2" type="title"><span class="blue">4.6.</span>   symbIoTe</h2>
+<p>The main goal of <strong>symbIoTe (symbiosis of smart objects across IoT environments)</strong> is to devise a <strong>flexible and secure interoperability middleware</strong> across IoT platforms facilitating rapid development of IoT applications across platforms, platform collaborations as well as dynamic and adaptive smart spaces. This is accomplished by 1) a <strong>semantic IoT search engine</strong> for connected (virtualized) smart objects (i.e., IoT resources) registered by platform providers, 2) <strong>abstraction layer</strong> for unified and secure usage of those resources across platforms, 3) <strong>high-level, domain-specific APIs</strong> (“Enablers”) for rapid cross-platform application development, 4) <strong>IoT platform federations</strong>, i.e., associations between two platforms facilitating their secure interaction, collaboration and bartering of resources, 5) <strong>dynamic and self-configurable</strong> smart spaces offering interoperability for collocated devices and gateways, and 6) <strong>secure interworking protocol</strong> between the IoT platforms, gateways and smart devices. This supports SMEs and new entrants in the IoT market to build innovative IoT services within short development life cycles.</p>
+<figure>
+<img src="images/fig4_10.jpg" alt="Figure 4.10. The symbIoTe high-level architecture" /><figcaption><strong><span type="label">Figure</span> <span type="ordinal">4.10.</span></strong> The symbIoTe high-level architecture</figcaption>
+</figure>
+<span id="08_Chapter04.xhtml#p51" data-aria-label=" page 51. " type="pagebreak" data-role="doc-pagebreak"></span>
+<section data-aria-labelledby="sec4_6_1">
+<h3 id="08_Chapter04.xhtml#sec4_6_1" class="head3">4.6.1.   The symbIoTe Architecture</h3>
+<p>The symbIoTe architecture [<a href="#10_References.xhtml#ref_24" id="08_Chapter04.xhtml#rref_24">24</a>] is built around a layered IoT stack connecting various devices (sensors, actuators and IoT gateways) within Smart Spaces with the Cloud. Smart Spaces share available local resources (connectivity, computing and storage), while platform services running in the Cloud enable IoT Platform Federations and open the Interworking API<a href="#08_Chapter04.xhtml#fn4_18" id="08_Chapter04.xhtml#rfn4_18"><sup>18</sup></a> to third parties with flexible access control. The architecture comprises four layered domains, as depicted in <a href="#08_Chapter04.xhtml#fig4_10" class="fig">Figure 4.10</a>.</p>
+<p><span id="08_Chapter04.xhtml#p52" data-aria-label=" page 52. " type="pagebreak" data-role="doc-pagebreak"></span>1) Application Domain enables platforms to register IoT devices which they want to advertise and make accessible via the Interworking API, while symbIoTe provides the means to search for IoT devices across platforms by means of its Core Services. We also build domain-specific back-end services (Enablers) which utilize the infrastructure provided by the underlying platforms to offer value-added services, e.g., data analytics on top of sensor data acquired from different platforms. Enablers ease the process of cross-platform and domain-specific application development (specifically for mobile and web IoT applications).</p>
+<p>Cloud Domain provides a uniform and attribute-controlled access [<a href="#10_References.xhtml#ref_25" id="08_Chapter04.xhtml#rref_25">25</a>] to virtualized IoT devices exposed by platforms to third parties through an open API (Interworking API). In addition, it builds services for IoT Platform Federations enabling close platform collaboration and resource bartering, in accordance with platform-specific business goals and defined Service Level Agreements (SLAs).</p>
+<p>Smart Space Domain offers services for discovery and interworking of collocated IoT devices and gateways in local spaces, while Smart Device Domain relates to the roaming capabilities of smart devices that maintain their identity while moving through different spaces.</p>
+</section>
+<section data-aria-labelledby="sec4_6_2">
+<h3 id="08_Chapter04.xhtml#sec4_6_2" class="head3">4.6.2.   IoT platforms interoperability approach</h3>
+<p>symbIoTe allows for flexible IoT platforms interoperability mechanisms (direct platform-to-platform interactions within <strong>platform federations</strong>, platform-to-platform interactions <strong>within Smart Spaces</strong>) which is achieved by an incremental deployment of symbIoTe functionality across the introduced architectural domains so that platform providers can choose an appropriate interoperability solution and integrate only selected features with their platforms. This in effect influences the level of platform interoperability and collaboration with other platforms within a symbIoTe-enabled ecosystem. The currently conceived solution has a minimal impact on existing IoT platforms as it requires mostly the development of a small interworking module. In addition symbIoTe is adding security layer offers a distributed, and effective mechanism for controlled access to resources in a federation of heterogeneous IoT platforms.</p>
+<figure>
+<img src="images/fig4_11.jpg" alt="Figure 4.11 symbIoTe Compliance Levels" /><figcaption><strong><span type="label">Figure</span> <span type="ordinal">4.11</span></strong> symbIoTe Compliance Levels</figcaption>
+</figure>
+<span id="08_Chapter04.xhtml#p53" data-aria-label=" page 53. " type="pagebreak" data-role="doc-pagebreak"></span>
+</section>
+<section data-aria-labelledby="sec4_6_3">
+<h3 id="08_Chapter04.xhtml#sec4_6_3" class="head3">4.6.3.   Interoperability Aspects</h3>
+<p>The symbIoTe approach defines <strong>four interoperability levels</strong>, as depicted in <a href="#08_Chapter04.xhtml#fig4_11" class="fig">Figure 4.11</a>. We also refer to them as <strong>compliance levels</strong>, when considering them from the perspective of an IoT platform wanting to become interoperable. In all four levels, interoperability is achieved by offering a unified and secure way to advertise, find and consume IoT resources, but in each level, a different interoperability scenario is enabled offering various degrees of details about the involved resources.</p>
+<p><strong>Level 1</strong> enables interactions between IoT applications and virtualized IoT resources (<strong>both sensors and actuators</strong>), i.e., applications can find and use resources across platforms through uniform interfaces. In addition, platforms can integrate symbIoTe components for flexible attribute-based access control. <strong>Level 2</strong> allows IoT platforms to collaborate <span id="08_Chapter04.xhtml#p54" data-aria-label=" page 54. " type="pagebreak" data-role="doc-pagebreak"></span>closely by forming <strong>federations</strong>. Federations can be considered as a closed and distributed version of the Core Services, i.e., the platforms can advertise and barter resources only to the members of the federation. <strong>Level 3</strong> enables <strong>dynamic smart spaces</strong>: adoption of new resources at the gateway level and direct interactions between symbIoTe-enabled IoT devices (e.g. mobile devices and Arduino boards) in collocated smart spaces, even if they are connected to various gateways and managed by different IoT platforms. This enables resource migration between collocated and in proximity IoT gateways to prevent vendor lock-in. <strong>Level 4</strong> offers support for <strong>roaming of IoT devices</strong> which maintain their unique identity while on the move, and can always be found via the Core Services, regardless of their current location. Level 1 can be directly mapped to <strong><em>semantic and syntactic interoperability</em></strong>, as defined in the IERC Whitepaper on Interoperability [<a href="#10_References.xhtml#ref_26" id="08_Chapter04.xhtml#rref_26">26</a>]. Levels 2, 3 and 4 relate to <strong><em>organizational interoperability</em></strong>. symbIoTe proposes here an original approach with finer granularity of organizational interoperability by placing specific interoperability concepts in either the Cloud or Smart Space.</p>
+</section>
+<section data-aria-labelledby="sec4_6_4">
+<h3 id="08_Chapter04.xhtml#sec4_6_4" class="head3">4.6.4.   Uniqueness and specific features of the approach</h3>
+<p>The first unique feature of symbIoTe is its solution for semantic interoperability that follows the <strong><em>Core Information Model with Extensions</em></strong> approach presented in <a href="#07_Chapter03.xhtml#sec3_1_2">Section 3.1.2</a>. The <strong><em>Core Information Model</em></strong> (CIM) is the central information model used to describe resources registered to symbIoTe and is shared between all platforms. It is designed to be as abstract and minimalistic as possible and at the same time as specific as needed to create a minimal mutual understanding. This way, the CIM enables limited out-of-the-box interoperability between all platforms. To actually register resources with symbIoTe, platforms use <strong><em>Platform-Specific Information Models</em></strong> (PIMs) that are extensions of the CIM including platform-specific terms. As each PIM is an extension of the CIM, basic interoperability is ensured, even between platforms using different PIMs. Such flexibility goes beyond the state of the art and is expected to lead to a high acceptance by platform owners, especially SMEs, as the process of adapting their platform’s <span id="08_Chapter04.xhtml#p55" data-aria-label=" page 55. " type="pagebreak" data-role="doc-pagebreak"></span>information model to symbIoTe is significantly simplified while it offers the means to use their existing information models.</p>
+<p>Furthermore, symbIoTe develops a strategy to enable a higher-level of interoperability between platforms using different PIMs. It is based on a translation between different PIMs based on declarative mappings using SPARQL query re-writing and data translation. This concept has the potential to create high impact on semantic interoperability for IoT solutions since the process of information model standardization is frequently lengthy and cumbersome, while it also limits platform’s flexibility.</p>
+<p>The second unique feature relates to the implemented <strong><em>semantic search engine for IoT resources</em></strong> that is provided by the Core Services that let IoT application developers find adequate IoT resources for various cross-platform and cross-domain applications. The search engine uses and supports the listed symbIoTe information models.</p>
+<p>The third uniqueness relates to direct platform-to-platform interactions within <strong><em>platform federations</em></strong> for closer collaboration between platforms. Here symbIoTe goes a step further to provide novel functionalities for enriching platform interactions: resource bartering, trust and SLA management, as well as support for smart device roaming across federated platforms.</p>
+<p>The fourth uniqueness relates to the <strong><em>security perspective</em></strong>. symbIoTe implements a flexible, distributed, and effective mechanism for controlled access to resources, both sensors and actuators, in a federation of heterogeneous IoT platforms. The conceived methodology grounds its roots in the powerful Attribute-Based Access Control mechanism. A specific access policy, defined as a combination of attributes (i.e., user’s properties, roles, details) is assigned to each resource, while the access to that resource can be granted only to users in possession of a set of attributes matching the aforementioned policy.</p>
+<p>The above listed features allow symbIoTe to support all six patterns of interoperability presented in <a href="#07_Chapter03.xhtml#sec3_1_1">Section 3.1.1</a>.</p>
+<p>All six patterns of interoperability presented in <a href="#07_Chapter03.xhtml#sec3_1_1">Section 3.1.1</a> are supported by symbIoTe and can be mapped to the above listed features. Pattern I, II and III are supported through the provided Core services (e.g. <span id="08_Chapter04.xhtml#p56" data-aria-label=" page 56. " type="pagebreak" data-role="doc-pagebreak"></span>search for resources), the Interworking API, support for PIMs and semantic mapping. Pattern IV (<em><strong>Platform-Scale Independence</strong></em>) fits to the four interoperability/compliance levels of symbIoTe; pattern V (<em><strong>Higher-Level Service Facade</strong></em>) matches the concept of Enablers and pattern VI (<em><strong>Platform-to-Platform Direct Interactions</strong></em>) the concept of federations as defined in symbIoTe.</p>
+<p>symbIoTe is implementing an <strong>Open Source</strong> middleware prototype available at <a href="https://github.com/symbiote-h2020">https://github.com/symbiote-h2020</a>, following an <strong>agile-like</strong> approach. Developers from all consortium partners join forces in the implementation of the software components using the microservices architecture to fulfil the requirements of incremental feature deployment and scalability of the highly-distributed IoT ecosystem. Regarding <strong>licensing</strong>, the consortium has selected a “copyleft” license for the Core Services (LGPL-3.0), so that updates, bug fixes and new features are always given back to the Open Source Community. For the middleware components residing at the platforms’ side the licensing is following the “non-copyleft” approach (the BSD 3-Clause is selected).</p>
+</section>
+</section>
+<section data-aria-labelledby="sec4_7">
+<h2 id="08_Chapter04.xhtml#sec4_7" class="head2" type="title"><span class="blue">4.7</span>   TagItSmart</h2>
+<p>A comprehensive view of TagItSmart architecture components is presented in <a href="#08_Chapter04.xhtml#fig4_12" class="fig">Figure 4.12</a>. TagItSmart is designed as a set loosely coupled components which can be integrated in and across different environments (IoT platforms). To this end, components providing specific TagItSmart functionality like smart tag encoding, decoding etc. come with their own APIs, while more generic IoT functions are reused from the underlying IoT platform used. This approach makes use of TagItSmart functionality rather straightforward in different settings and reduces the learning curve for developers.</p>
+<figure>
+<img src="images/fig4_12.jpg" alt="Figure 4.12. TagItSmart Platform Functional Architecture" /><figcaption><strong><span type="label">Figure</span> <span type="ordinal">4.12.</span></strong> TagItSmart Platform Functional Architecture</figcaption>
+</figure>
+<p>From the functional point of view, the <strong><em>User/Developer level</em></strong> provides the front end functionality enabling access to different TagItSmart components. Additionally, at this level, the TagItSmart SDK enables integration of the smart tag decoding functionality into third party (smartphone) applications.</p>
+<p><span id="08_Chapter04.xhtml#p57" data-aria-label=" page 57. " type="pagebreak" data-role="doc-pagebreak"></span>At the <strong><em>Service level</em></strong>, we can find the following functional blocks:</p>
+<ul>
+<li><span class="bl">•</span>  <em><strong>Security</strong></em> components deal with aspects such as authentication, authorisation and access control to the rest of the components. The security is addressed on several levels: the security of the smart tags is ensured with Ciphertext Policy Attribute Based Encryption (CP-ABE) by embedding policy contained in the ciphered tag in order to enforce access control policies associated with the different users; the security of the web platform and the APIs are ensured with the identity management based on credentials and authentication mechanism; and trustworthiness and data integrity hinge on the distributed ledger technology.</li>
+<li><span class="bl">•</span>  <span id="08_Chapter04.xhtml#p58" data-aria-label=" page 58. " type="pagebreak" data-role="doc-pagebreak"></span><em><strong>Service Execution</strong></em> components include those that enable execution of services registered in the platform, as well as the service templates used to trigger dynamic creation of workflows. The overall process allows users of the platform to issue service requests that are then processed by the platform, resolved in terms of sub-services that need to be “glued together” to support the overall service request and are then executed. In order for this to take place, a series of repositories are leveraged to first of all expose the services that are available in the platform, so they can be discovered, configured, triggered and reused appropriately. In addition, a component that intercepts the service requests and is able to break them down to services that are needed are involved (Service Manager). The service templates guide this process of identifying <span id="08_Chapter04.xhtml#p59" data-aria-label=" page 59. " type="pagebreak" data-role="doc-pagebreak"></span>what a service request needs in terms of sub-services as well user information. The latter both for making sure that only authorised users are allowed to access the platform and issue service requests as well as be served through the platform (e.g. an FC-scanner user to be able to use a decoding or stream processing component that is hosted in the TagItSmart platform) but also for identifying appropriate resources based on ownership, location and other availability criteria that need to be involved during a service request execution. Eventually the runtime execution of a service is undertaken by the Workflow Enforcer, which acts as a a “middle man” between components, passing information between components appropriately and handling errors so that other components can focus solely on their functional operation.</li>
+<li><span class="bl">•</span>  <em><strong>Data Processing</strong></em> components provide additional functionality to handle and work with the data generated in the platform.</li>
+<li><span class="bl">•</span>  <em><strong>SmartTags</strong></em> components facilitate integration, creation and scanning of the SmartTags.</li>
+<li><span class="bl">•</span>  <em><strong>Data Access</strong></em> components provide the corresponding registries, semantic models and repositories on which TagItSmart operates.</li>
+</ul>
+<p><strong>Table 4.1</strong> Integration Strategies</p>
+<figure>
+<img src="images/tab4_1.jpg" />
+</figure>
+<p>At the <strong><em>Virtual Entity</em></strong> level, the actual representations of the objects that are part of the platform provide access to their data and defined actions based on the semantic models.</p>
+<p>Taking the architecture described above as the starting point, here we describe how TagItSmart functionality can be implemented in practice:</p>
+<p><strong><em>Full Implementation of an IoT Platform with TagItSmart</em></strong>: this scenario builds up from scratch all the components defined in the architecture of TagItSmart the functionality is integrated in the same codebase. The infrastructure needed to support the platform is provisioned by the implementation provider.</p>
+<p><span id="08_Chapter04.xhtml#p60" data-aria-label=" page 60. " type="pagebreak" data-role="doc-pagebreak"></span><strong><em>Hosted in a third party IoT platform</em></strong>: this scenario integrates TagItSmart functionality in an already existing IoT platform. Components implementation might need some adaptation to comply with the existing platform, yet they should be interoperable by following the correspondent API. Infrastructure needs are set up by the third party IoT platform provider.</p>
+<p><strong><em>Shared and hosted externally</em></strong>: this scenario considers TagItSmart as a standalone set of services that expose an open API and that can be accessed from different platforms simultaneously. Deployment and infrastructure needs are handled independently from the IoT Platform.</p>
+<p>The components defined in <a href="#08_Chapter04.xhtml#fig4_12" class="fig">Figure 4.12</a>. are the set of components needed to fulfil the requirements extracted from the different use cases, while enabling creation and lifecycle management of the SmartTags. Based on the chosen integration strategy, mapping of some of the components to real implementations and deployments in a specific IoT platform will be different.</p>
+<table>
+<caption><strong><span class="label">Table</span> <span class="ordinal">4.2.</span></strong> TagItSmart APIs example</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><p><strong>OPERATION</strong></p></th>
+<th><p><strong>API</strong></p></th>
+<th><p><strong>DESCRIPTION</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>SmartTag activation</p></td>
+<td><p>POST/product/set-smart-tag-date</p></td>
+<td><p>This method is used to activate the SmartTag to be enable it use in the system.</p></td>
+</tr>
+<tr class="even">
+<td><p>SmartTag scan</p></td>
+<td><p>POST/product/product-context</p></td>
+<td><p>This method is used to POST the location where the product was scanned and returns all related context for the product including reviews and sensor states.</p></td>
+</tr>
+<tr class="odd">
+<td><p>SmartTag recycle</p></td>
+<td><p>POST /recycl3r/api/v1/recycling_info</p></td>
+<td><p>This method is used to get information about sorting and location for product recycling.</p></td>
+</tr>
+</tbody>
+</table>
+<p><span id="08_Chapter04.xhtml#p61" data-aria-label=" page 61. " type="pagebreak" data-role="doc-pagebreak"></span>As stated above, TagltSmart components define a common set of API methods to guarantee interoperability and seamless integration, as well as enabling creation of the third-party applications on top of its components (<a href="#08_Chapter04.xhtml#tab4_1">Table 4.1</a>).</p>
+</section>
+<section data-aria-labelledby="sec4_8">
+<h2 id="08_Chapter04.xhtml#sec4_8" class="head2" type="title"><span class="blue">4.8.</span>   VICINITY</h2>
+<p>The VICINITY project is built around the concept of connecting different IoT ecosystems through the VICINITY platform (interoperability as a service), which enables to interact with IoT objects from other different ecosystems as if they were their own. The interoperability services create an environment where value-added services can be deployed and processes make available cross-domain information.</p>
+<figure>
+<img src="images/fig4_13.jpg" alt="Figure 4.13. VICINITY Concept" /><figcaption><strong><span type="label">Figure</span> <span type="ordinal">4.13.</span></strong> VICINITY Concept</figcaption>
+</figure>
+<figure>
+<img src="images/fig4_14.jpg" alt="Figure 4.14. VICINITY Semantic interoperability approach" /><figcaption><strong><span type="label">Figure</span> <span type="ordinal">4.14.</span></strong> VICINITY Semantic interoperability approach</figcaption>
+</figure>
+</section>
+<p>In the presented figure, two separate ecosystems are presented: intelligent building and energy ecosystem. Each of these ecosystems <span id="08_Chapter04.xhtml#p62" data-aria-label=" page 62. " type="pagebreak" data-role="doc-pagebreak"></span><span id="08_Chapter04.xhtml#p63" data-aria-label=" page 63. " type="pagebreak" data-role="doc-pagebreak"></span>is integrated into VICINITY by its VICINITY Adapter through the VICINITY Gateway. Based on the setup of virtual neighbourhoods in the VICINITY Neighbourhood manager, VICINITY Adapters may access remote IoT objects based on semantic interoperability, for example a battery in an Energy ecosystem, and use them as a part of their ecosystem. Moreover, IoT objects shared by the VICINITY Adapter within a virtual neighbourhood may be accessed by value-added services to provide cross-domain services using a common VICINITY ontology.</p>
+<figure>
+<img src="images/fig4_15.jpg" alt="Figure 4.15. Semantic interoperability approach for Discovery" /><figcaption><strong><span type="label">Figure</span> <span type="ordinal">4.15.</span></strong> Semantic interoperability approach for Discovery</figcaption>
+</figure>
+<p>One of the main challenges of implementing interoperability in the IoT context is to enable consumers to discover, in a distributed and dynamic scenario, those IoT objects that are relevant to their needs but without having any prior knowledge about them. The VICINITY cross-domain interoperability relies on:</p>
+<figure>
+<img src="images/fig4_16.jpg" alt="Figure 4.16. Semantic interoperability approach for Access" /><figcaption><strong><span type="label">Figure</span> <span type="ordinal">4.16.</span></strong> Semantic interoperability approach for Access</figcaption>
+</figure>
+<ul>
+<li><span class="bl">•</span>  <span id="08_Chapter04.xhtml#p64" data-aria-label=" page 64. " type="pagebreak" data-role="doc-pagebreak"></span>The VICINITY ontology<a href="#08_Chapter04.xhtml#fn4_19" id="08_Chapter04.xhtml#rfn4_19"><sup>19</sup></a> as the common and abstract information model to be used;</li>
+<li><span class="bl">•</span>  The Semantic agent platform as the semantic repository. The W3C Web of Things Thing Description (TD) is the framework to be used for describing any IoT object integrated in VICINITY;</li>
+<li><span class="bl">•</span>  <span id="08_Chapter04.xhtml#p65" data-aria-label=" page 65. " type="pagebreak" data-role="doc-pagebreak"></span>Gateway Adapter APIs are the semantic mediators between the actual consumers, e.g., Adapters, and the repository of Thing Descriptions (TDs). Therefore, they provide an interface for discovery requests;</li>
+<li><span class="bl">•</span>  Gateway Adapter APIs must be able to specify discovery needs as semantic-based search criteria (SPARQL query).</li>
+</ul>
+<p>The first goal of semantic interoperability in VICINITY is to securely discover IoT objects. A discovery search initiated on a VICINITY Node through the Gateway API is performed in the Thing Description repository and constrained by the current setup virtual neighbourhood in the Neighbourhood Manager (discovered IoT objects are filtered by access rules defined on the virtual neighbourhood manager).</p>
+<p>The second goal of semantic interoperability in VICINITY is to enable accessing to heterogeneous IoT objects in such a way that any of their interaction resources can be effectively <em><strong>consumed</strong></em> after they were discovered. Based on the result of the discovery process, IoT objects are accessed directly in the P2P network or through the Communication server services sending consumption request messages.</p>
+<p>The Gateway API processes response messages separately and applies the corresponding access mappings specified in the previously given Virtual TED. For each response and after the data <em><strong>lifting</strong></em> process is completed, the Gateway API extracts the property value by querying the just lifted semantic data. Finally, the Gateway API returns each result obtained and represented in the common VICINITY format.</p>
+<p>Used approach to semantic interoperability: Core Information Model with Extensions.<span id="08_Chapter04.xhtml#p66" data-aria-label=" page 66. " type="pagebreak" data-role="doc-pagebreak"></span></p>
+<p> </p>
+<section type="footnotes">
+
+</section>
+<p><span id="09_Chapter05.xhtml"></span></p>
+<h1 class="chno" type="title"><span id="09_Chapter05.xhtml#p67" data-aria-label=" page 67. " type="pagebreak" data-role="doc-pagebreak"></span><span class="ordinal">5</span> <span class="chtitle">Advancing IoT platforms interoperability</span></h1>
+<p>The IoT-EPI efforts towards providing a framework for IoT platforms interoperability have already provided new advanced IoT platforms interoperability mechanisms and approaches. In this context, several interoperability gaps have been identified, that require further investigation and future research efforts.</p>
+<p>Internet of Things (IoT) environments are rather complex with heterogeneous physical devices supporting various communication protocols, while they are possibly connected to an intermediary gateway and then to their virtual representations (i.e. services) running on different platforms. Thus, it is possible to interact with a single IoT device in many ways using its varied interfaces and representations.</p>
+<p>IoT platforms require interoperability on multiple levels, which means finding the characteristic functionalities of each layer and defining meta-protocols that can be mapped on the ones used in the platforms (i.e. on the level of syntactic interoperability, the characteristic functionality is resource access). Resource access is realised through different protocols, for example O-MI, REST-based with JavaScript Online Notation (JSON) based on the W3C Web of Things (WoT) Description, OData-like and so on. While the functionality the protocols provide is basically the same (e.g. get/set/update/subscribe <span id="09_Chapter05.xhtml#p68" data-aria-label=" page 68. " type="pagebreak" data-role="doc-pagebreak"></span>to a resource identified by some kind of identifier), the resource discovery functionality must be addressed across protocols.</p>
+<p>Research on a layer-oriented approach is required to address providing tighter interoperability at all layers of IoT systems (device, network, middleware, application, data and semantics) with a strong focus on guaranteeing trust, privacy and security aspects within this interoperability. This interoperability approach also provides modules covering quality of service (QoS) and device management, service integration, external system services, storage and virtualisation.</p>
+<p>Regarding semantic interoperability, current work focuses on defining and standardizing common vocabularies in given domains (e.g. <a href="http://iot.schema.org">http://iot.schema.org</a>). Interesting direction is also the effort towards domain-agnostic aspects of any IoT object, following the WoT approach (with interaction patterns, links and security). However, standardization of models is not always a viable option. Therefore, research should also focus on techniques that enable semantic interoperability even if different information models are used like semantic mapping.</p>
+<p>Layered approaches for interoperability allow the stakeholders or platform operators to select the best mechanism for interoperation. Management of such options provides coordination between layers, enhances cooperative solutions (e.g. gateways and network) and enables security management.</p>
+<p>With regard to gateway interoperability, the inclusion of a programmable network layer based on software-defined networking (SDN)/network functions virtualisation (NFV) is critical for merging IoT and 5G and following the existing architectures. Using a programmable network has two advantages: management of mobility and management of QoS for massive IoT management.</p>
+<p>The most promising aspects of a common framework for IoT interoperability are finding common approaches to resource access, resource discovery as well as semantic interoperability.</p>
+<p>Further research is needed to address interoperability in the systems-of-systems view where all devices, ‘things’ and other information systems should be able to interoperate at the level of Internet <span id="09_Chapter05.xhtml#p69" data-aria-label=" page 69. " type="pagebreak" data-role="doc-pagebreak"></span>protocols (TCP/IP, etc.) or even at the World Wide Web (WWW) level (HTTP, WebSockets, etc.). This signifies that lower-level protocols (Zigbee, LoRa, etc.) are abstracted away behind ‘wrappers’ and services using a limited set of IoT standards.</p>
+<p>All IoT applications need to cope with the complex nature and sustainability requirements of interoperability in the IoT. For this, a framework is required for sustainable interoperability that especially targets the specific characteristics and constraints of the IoT.</p>
+<p>A possible framework for sustainable interoperability in the IoT should be able to address the following aspects:</p>
+<ul>
+<li><span class="bl">•</span>  Scalability management of interoperability in the IoT: to correctly support interoperability in the IoT, interoperability resources must be efficiently and effectively managed.</li>
+<li><span class="bl">•</span>  Capacity of interoperability measurement in the IoT: to properly manage and execute interoperability in the IoT, a method must be reached to quantify and/or qualify the interoperability itself.</li>
+<li><span class="bl">•</span>  Dynamic interoperability techniques and methodologies for the IoT: to achieve enduring interoperability in the complex IoT ecosystem, ‘things’ must be permitted to enter and dynamically interoperate without the need for heavy modification.</li>
+</ul>
+<p>The validation aspect is very important in interoperability in general and even more so for the IoT. Testing and validating assert that interoperability methods, protocols and so on can cope with the specific nature and requirements of the IoT. We need to provide efficient and accurate test suites and an associated interoperability testing methodology that helps in testing thoroughly both the underlying protocols used by interconnected ‘things’, machines and smart objects, and the embedded services and applications. In this view, we have to consider that to most of the existing testing methods, interconnected ‘resources’ in the IoT are naturally distributed. As they are distributed, the usual and classical approach of a single centralised testing system dealing with all these components and the test execution is no longer <span id="09_Chapter05.xhtml#p70" data-aria-label=" page 70. " type="pagebreak" data-role="doc-pagebreak"></span>applicable. The distributed nature of the tested components requires moving towards distributed testing methods.</p>
+<p>The IoT research community has to agree on data sets for evaluating IoT platform ingestion performance, as well as agree on sets of real-time queries for evaluating an IoT platform digestion performance. Testing/experiment sequences have to be made explicit, transparent and consensus-based to ensure a fair and unbiased benchmarking process.</p>
+<p>Implementation of the interoperability solutions should aim for an open source approach using different business models. The solutions need to be sustainable even after the end of the projects. Further research should focus on the key aspect of API homogenisation between platforms and federation authentication. This should allow for flexible cross-domain/cross-platform business process creation.</p>
+<p>Utilising IoT (platform) technology for handling automated complex systems is a key challenge for the future. In this context, complex systems relate to systems that are heavily composed of rich sensing capabilities (e.g. radar, visual) and advanced actuation (e.g. controlling robot arms). The automation of these complex systems requires intelligent sensor data processing and reasoning to meaningfully control the actuation. IoT platform technology has the potential to facilitate and enhance the creation of systems significantly by being the interoperable interface within and between complex systems and the automation. Sensors, actuators and ‘things’ description formats, communication protocols and APIs defined by the IoT community need to use a lingua franca to enable such intelligent processing and reasoning.</p>
+<p>Examples for such automated complex systems where IoT platform technology can provide a drastic development boost range from connected robots and robotic ecosystems over automated manufacturing lines that are integrated with logistic chains to automated vehicles (ships, aircrafts, trains, trucks, cars) and fleets.</p>
+<p>Connecting components and systems to more complex systems is becoming possible with IoT platform technology. Thereby, intelligent and automated collaboration within and between such complex systems <span id="09_Chapter05.xhtml#p71" data-aria-label=" page 71. " type="pagebreak" data-role="doc-pagebreak"></span>will be a central challenge. Automatically creating compositions of IoT components out of a pool of existing components (populated via a repository) will increase economic impact because reusing the components in multiple compositions will increase revenue created. Instead of controlling the composition centrally, it will be organised decentralised through intelligent choreographies.</p>
+<p>In the future, complex services might even be created on the fly, for example when a car arrives in a new city and needs a specific service from the city’s IoT ecosystem. How such context-based service composition can be implemented efficiently is one of the core research topics that requires further study.</p>
+<p>Current efforts on semantic interoperability in the context of IoT focus on ‘interoperability by standardization’ trying to define standardized vocabularies to be used by multiple platforms and thus establishing semantic interoperability. However, there always will be scenarios where standardization is not desired or not even possible. To provide semantic interoperability in these cases other approaches to semantic interoperability are needed. The most prominent and promising is using data and query translation based on semantic mappings between the different information models used by the platforms. However, since the semantic mapping technologies are not trivial tools that would significantly make easier the process are required.</p>
+<p>The unique identity of ‘things’ that spans across all platforms is still an unresolved issue. For instance, a car can be identified by a serial number or vehicle identification number (VIN), registration plate number, insurance number or some other identifier. The most appropriate one might depend on the usage context, so this feature should be a requirement for any IoT information system.</p>
+<p>Although there are multiple ways of assigning identity to each individual ‘thing’ and each individual item, the work on aligning these different identity approaches and enabling their mapping to allow easy use of the same ‘thing’ in different environments has to continue.</p>
+<p>The research work on a common IoT interoperability framework needs to be continued and requires a detailed and broad analysis of <span id="09_Chapter05.xhtml#p72" data-aria-label=" page 72. " type="pagebreak" data-role="doc-pagebreak"></span>the different interoperability levels and their protocols paired with intensive scientific research as well as standardisation work.</p>
+<p>A roadmap regarding interoperability is linked with the creation of the IoT ecosystems mainly with developers around the existing solutions (i.e. IoT-EPI). The functionalities of the interoperability solutions must be extended, including self-* mechanisms for controlling actuation, especially in future IoT autonomous systems.</p>
+<p><span id="10_References.xhtml"></span></p>
+<section type="bibliography" data-role="doc-bibliography">
+<h1 class="chno" type="title"><span id="10_References.xhtml#p73" data-aria-label=" page 73. " type="pagebreak" data-role="doc-pagebreak"></span><span class="ordinal">6</span> <span class="chtitle">References</span></h1>
+<ol>
+<li><span id="10_References.xhtml#ref_1">[<a href="#06_Chapter02.xhtml#rref_1">1</a>]    A. Gluhak, O. Vermessan, R. Bahr, F. Clari, T. Macchia, M. T. Delgado, A. Hoeer, F. Boesenberg, M. Senigalliesi and V. Barchetti, „Report on IoT platform activities,” online at <a href="http://www.internet-of-things-research.eu/pdf/D03_01_WP03_H2020_UNIFY-IoT_Final.pdf">http://www.internet-of-things-research.eu/pdf/D03_01_WP03_H2020_UNIFY-IoT_Final.pdf</a>, 2016.</span></li>
+<li><span id="10_References.xhtml#ref_2">[<a href="#06_Chapter02.xhtml#rref_2">2</a>]    A. Velosa, Y. V. Natis, M. Pezzini, B. Lheureux and E. Goodness, <em>Gartner’s Market Guide for IoT Platforms, 2015</em>, online at: <a href="https://www.gartner.com/doc/3086918/market-guide-iot-platforms">https://www.gartner.com/doc/3086918/market-guide-iot-platforms</a>.</span></li>
+<li><span id="10_References.xhtml#ref_3">[<a href="#06_Chapter02.xhtml#rref_3">3</a>]    M. J. Perry, <em>Evaluating and Choosing an IoT Platform, 2016</em>, online at: <a href="https://www.thingworx.com/wp-content/uploads/WP_oreilly-media_evaluating-and-choosing-an-iot-platform_978-1-491-95203-0_EN.pdf">https://www.thingworx.com/wp-content/uploads/WP_oreilly-media_evaluating-and-choosing-an-iot-platform_978-1-491-95203-0_EN.pdf</a>.</span></li>
+<li><span id="10_References.xhtml#ref_4">[<a href="#06_Chapter02.xhtml#rref_4">4</a>]    <em>ThingWorx IoT Technology Platform</em>, online at: <a href="https://www.thingworx.com/platforms">https://www.thingworx.com/platforms</a>.</span></li>
+<li><span id="10_References.xhtml#ref_5">[<a href="#06_Chapter02.xhtml#rref_5">5</a>]    L. Labs, online at: <a href="https://www.link-labs.com/blog/what-is-an-iot-platform">https://www.link-labs.com/blog/what-is-an-iot-platform</a>.</span></li>
+<li><span id="10_References.xhtml#ref_6">[<a href="#07_Chapter03.xhtml#rref_6">6</a>]    T. R. Gruber and et al., „A translation approach to portable ontology specifications,” <em>Knowledge acquisition</em>, 1993.</span></li>
+<li><span id="10_References.xhtml#ref_7">[<a href="#07_Chapter03.xhtml#rref_7">7</a>]    A. Tolk and J. A. Muguira, „The levels of conceptual interoperability model,” in <em>Proceedings of the 2003 Fall Simulation Interoperability Workshop</em>, Citeseer, 2003, pp. 1-11.</span></li>
+<li><span id="10_References.xhtml#ref_8">[<a href="#07_Chapter03.xhtml#rref_8">8</a>]    European Commission, European interoperability framework for pan-European egovernment services, ISBN 92-894-8389-X, 2011.</span></li>
+<li><span id="10_References.xhtml#ref_9">[<a href="#07_Chapter03.xhtml#rref_9">9</a>]    H. van der Veer and A. Wiles, „Achieving Technical Interoperability – the ETSI Approach,” <em>ETSI White Paper No.3, 3rd edition</em>, April 2008.</span></li>
+<li><span id="10_References.xhtml#ref_10">[<a href="#07_Chapter03.xhtml#rref_10">10</a>]    A. Bröring, S. Schmid, C.-K. Schindhelm and A. Khelil, „Enabling IoT Ecosystems through Platform Interoperability,” <em>IEEE Software</em>, <span class="volume">34</span>(1), pp. 54-61, 2017.</span></li>
+<li><span id="10_References.xhtml#ref_11">[<a href="#07_Chapter03.xhtml#rref_11">11</a>]    <span id="10_References.xhtml#p74" data-aria-label=" page 74. " type="pagebreak" data-role="doc-pagebreak"></span> S. Leminen, M. Westerlund, M. Rajahonka and R. Siurua, „Towards IoT ecosystems and business models,” <em>Internet of Things, Smart Spaces, and Next Generation Networking</em>, pp. 15-26, 2012.</span></li>
+<li><span id="10_References.xhtml#ref_12">[<a href="#07_Chapter03.xhtml#rref_12">12</a>]    <em>Merrian-Webster dictionary</em>, online at: <a href="https://www.merriam-webster.com/dictionary/semantics">https://www.merriam-webster.com/dictionary/semantics</a>.</span></li>
+<li><span id="10_References.xhtml#ref_13">[<a href="#07_Chapter03.xhtml#rref_13">13</a>]    T. Berners-Lee and L. Ora, „The semantic web,” <em>Scientific american</em>, pp. 28-37, 2001.</span></li>
+<li><span id="10_References.xhtml#ref_14">[<a href="#07_Chapter03.xhtml#rref_14">14</a>]    Network Centric Operations Industry Consortium, „Systems, capabilities, operations, programs, and enterprises (SCOPE) model for interoperability assessment,” 2008.</span></li>
+<li><span id="10_References.xhtml#ref_15">[<a href="#07_Chapter03.xhtml#rref_15">15</a>]    European Commission, „Reaping the full benefits of a digital single market,” 2016.</span></li>
+<li><span id="10_References.xhtml#ref_16">[<a href="#07_Chapter03.xhtml#rref_16">16</a>]    M. Jacoby, A. Antonic, K. Kreiner, R. Lapacz and J. Pielorz, „Semantic Interoperability as Key to IoT Platform Federation,” <em>Interoperability and Open-Source Solutions for the Internet of Things</em>, Forthcoming 2017.</span></li>
+<li><span id="10_References.xhtml#ref_17">[<a href="#08_Chapter04.xhtml#rref_17">17</a>]    S. Schmid, A. Bröring, D. Kramer, S. Kaebisch, A. Zappa, M. Lorenz, Y. Wang and L. Gioppo, „An Architecture for Interoperable IoT Ecosystems,” in <em>Interoperability and Open-Source Solutions for the Internet of Things. InterOSS-IoT 2016</em>, Stuttgart, 2017.</span></li>
+<li><span id="10_References.xhtml#ref_18">[<a href="#08_Chapter04.xhtml#rref_18">18</a>]    J. Hernandez-Serrano, J. Munoz, A. Bröring, O. Esparza, L. Mikkelsen, W. Schwarzott, O. Leon and J. Zibuschka, „On the Road to Secure and Privacy-preserving IoT Ecosystems,” in <em>2nd International Workshop on Interoperability &amp; Open Source Solutions for the Internet of Things (Inter-OSS-IoT 2016) at the 6th International Conference on the Internet of Things (IoT 2016)</em>, Stuttgart, Germany, 2017.</span></li>
+<li><span id="10_References.xhtml#ref_19">[<a href="#08_Chapter04.xhtml#rref_19">19</a>]    A. S. Thuluva, A. Bröring, G. P. Medagoda Hettige Don and D. Anicic, „Recipes for the Semantic Composition of IoT Ingredients,” in <em>7th International Conference on the Internet of Things (IoT 2017)</em>, Linz, Austria, 2017.</span></li>
+<li><span id="10_References.xhtml#ref_20">[<a href="#08_Chapter04.xhtml#rref_20">20</a>]    W. Schladofsky, J. Mitic, A. Megner, C. Simonato, L. Gioppo, D. Leonardos and A. Bröring, „Business Models for Interoperable IoT Ecosystems,” in <em>Interoperability and Open-Source Solutions for the Internet of Things. InterOSS-IoT 2016</em>, Stuttgart, Germany, 2017.</span></li>
+<li><span id="10_References.xhtml#ref_21">[<a href="#08_Chapter04.xhtml#rref_21">21</a>]    W. W. W. C. (W3C), <em>Web of Things at W3C, W3C Begins Standards Work on Web of Things to Reduce IoT Fragmentation</em>, online at: <a href="https://www.w3.org/WoT/">https://www.w3.org/WoT/</a>.</span></li>
+<li><span id="10_References.xhtml#ref_22">[<a href="#08_Chapter04.xhtml#rref_22">22</a>]  T. O. Group, <em>An Introduction to Internet of Things (IoT) and Lifecycle Management, Maximizing Boundaryless Information Flow through Whole-of-Life Lifecycle Management Across IoT</em>, online at: <a href="https://www2.opengroup.org/ogsys/catalog/W167.">https://www2.opengroup.org/ogsys/catalog/W167.</a></span></li>
+<li><span id="10_References.xhtml#ref_23">[<a href="#08_Chapter04.xhtml#rref_23">23</a>]    <span id="10_References.xhtml#p75" data-aria-label=" page 75. " type="pagebreak" data-role="doc-pagebreak"></span> Främling, Kary, Kubler, Sylvain, Buda and Andrea, „Universal Messaging Standards for the IoT from a Lifecycle Management Perspective.,” <em>IEEE Internet of Things</em>, Bd. 1, Nr. 4, pp. 319-327, 2014.</span></li>
+<li><span id="10_References.xhtml#ref_24">[<a href="#08_Chapter04.xhtml#rref_24">24</a>]    I. Podnar Zarko et al, „Towards an IoT framework for semantic and organizational interoperability,” in <em>Global Internet of Things Summit (GIoTS)</em>, Geneva, 2017.</span></li>
+<li><span id="10_References.xhtml#ref_25">[<a href="#08_Chapter04.xhtml#rref_25">25</a>]    S. Sciancalepore, M. Pilc, S. Schrder, G. Bianchi, G. Boggia, P. M., P. G. M. Plocielnik and H. Weisgrab, „Atribute-based access control scheme in federated IoT platforms,” <em>LNCS 10218: Interoperability and Open-Source Solutions for the Internet of Things</em>, pp. 123-138, 2017.</span></li>
+<li><span id="10_References.xhtml#ref_26">[<a href="#08_Chapter04.xhtml#rref_26">26</a>]    IERC, „IoT Semantic Interoperability: Research Challenges, Best Practices, Recommendations and Next Steps. Position Paper March 2015”.</span></li>
+<li><span id="10_References.xhtml#ref_27">[<a href="#13_Annex.xhtml#rref_27">27</a>]    Consorzio per il Sistema Informativo (CSI-Piemonte), online at: <a href="http://www.csipiemonte.it/web/en/">http://www.csipiemonte.it/web/en/</a>.</span></li>
+<li><span id="10_References.xhtml#ref_28">[<a href="#13_Annex.xhtml#rref_28">28</a>]    Wubby, online at: <a href="http://www.wubby.io/.">http://www.wubby.io/.</a></span></li>
+<li><span id="10_References.xhtml#ref_29">[<a href="#13_Annex.xhtml#rref_29">29</a>]    OpenIoT Consortium, online at: <a href="http://www.openiot.eu/">http://www.openiot.eu/</a>.</span></li>
+<li><span id="10_References.xhtml#ref_30">[<a href="#13_Annex.xhtml#rref_30">30</a>]    Verkehrsinformationszentrale Berlin (VIZ), online at: <a href="https://viz.berlin.de/">https://viz.berlin.de/</a>.</span></li>
+<li><span id="10_References.xhtml#ref_31">[<a href="#13_Annex.xhtml#rref_31">31</a>]    World Sensing, online at: <a href="http://www.worldsensing.com/">http://www.worldsensing.com/</a>.</span></li>
+<li><span id="10_References.xhtml#ref_32">[<a href="#13_Annex.xhtml#rref_32">32</a>]    <em>Amazon AWS IoT</em>, Online at: <a href="http://docs.aws.amazon.com/iot/latest/developerguide/what-is-aws-iot.html">http://docs.aws.amazon.com/iot/latest/developerguide/what-is-aws-iot.html</a>.</span></li>
+<li>[33]    M. Ganzha, M. Paprzycki, W. Pawłowski and P. Szmeja, „Towards common vocabulary for IoT ecosystems—preliminary considerations,” <em>Intelligent Information and Database Systems - 9th Asian Conference, ACIIDS</em>, 3-5 April 2017.</li>
+<li>[34]    M. Ganzha, M. Paprzycki, W. Pawlowski, P. Szmeja and K. Wasielewska, „Semantic Technologies for the IoT-An INTER-IoT Perspective,” <em>Internet-of-Things Design and Implementation (IoTDI), 2016 IEEE First International Conference</em>, pp. 271-276, April 2016.</li>
+<li>[35]    K. Vandikas and V. Tsiatsis, „Performance Evaluation of an IoT Platform,” <em>Eighth International Conference on Next Generation Mobile Apps, Services and Technologies, IEEE</em>, p. 141–146, 2014.</li>
+<li>[36]    F. Ramparany, F. Marquez, J. Soriano and T. Elsaleh, „Handling smart environment devices, data and services at the semantic level with the FI-WARE core platform,” <em>IEEE International Conference on Big Data (Big Data)</em>, pp. 14-20, 2014.</li>
+<li>[37]    M. Serrano, H. Nguyen Mau Quoc, D. Le Phuoc, M. Hauswirth, J. Soldatos, N. Kefalakis, P. Prakash Jayaraman and A. Zaslavsky, „Defining the Stack for Service Delivery Models and Interoperability in the Internet of Things: A Practical Case With OpenIoT-VDK,” <cite>III Journal on Selected Areas in Communications</cite>, 2015.</li>
+<li>[38]    <span id="10_References.xhtml#p76" data-aria-label=" page 76. " type="pagebreak" data-role="doc-pagebreak"></span>BETaaS Consortium, <a href="http://www.betaas.eu.">http://www.betaas.eu.</a></li>
+<li>[39]    BETaaS, <em>Building the Environment for the Things as a Service, TaaA Reference Model, 2013</em>, online at: <a href="http://www.betaas.eu/docs/deliverables/BETaaS%20-%20D1.4.2%20-%20TaaS%20Reference%20Model%20v1.0.pdf">http://www.betaas.eu/docs/deliverables/BETaaS%20-%20D1.4.2%20-%20TaaS%20Reference%20Model%20v1.0.pdf</a>.</li>
+<li>[40]    Nextworks, <em>Symphony, the harmony of living</em>, online at: <a href="http://www.hello-symphony.it/eng/home-eng">http://www.hello-symphony.it/eng/home-eng</a>.</li>
+<li>[41]    FIWARE, <em>FIWARE Data Models</em>, online at: <a href="https://www.fiware.org/data-models/">https://www.fiware.org/data-models/</a>.</li>
+<li>[42]    FIWARE, <em>FIWARE Accelerator Programme</em>, online at: <a href="https://www.fiware.org/fiware-accelerator-programme/">https://www.fiware.org/fiware-accelerator-programme/</a>.</li>
+<li>[43]    W. W. W. C. (W3C), <em>Resource Description Framework (RDF)</em>, online at: <a href="https://www.w3.org/RDF/">https://www.w3.org/RDF/</a>.</li>
+<li>[44]    W. W. C. (W3C), <em>SPARQL 1.1 Overview, W3C Recommendation 21 March 2013</em>, online at: <a href="https://www.w3.org/TR/sparql11-overview/">https://www.w3.org/TR/sparql11-overview/</a>.</li>
+<li>[45]    W. W. W. C. (W3C), <em>W3C Quality Assurance</em>, online at: <a href="https://www.w3.org/QA/Test/">https://www.w3.org/QA/Test/</a>.</li>
+<li>[46]    O. G. C. (OGC), online at: <a href="https://cite.opengeospatial.org/">https://cite.opengeospatial.org/</a>.</li>
+<li>[47]    H. Stuckenschmidt, C. Parent and S. Spaccapietra, <em>Modular ontologies: concepts, theories and techniques for knowledge modularization, (Vol.5445) Springer, 2009</em>, online at: <a href="http://sociotal.eu/">http://sociotal.eu/</a>.</li>
+<li>[48]    FIWARE, <em>FIWARE Architecture</em>, online at: <a href="https://forge.fiware.org/plugins/mediawiki/wiki/fiware/index.php/FIWARE_Architecture">https://forge.fiware.org/plugins/mediawiki/wiki/fiware/index.php/FIWARE_Architecture</a>.</li>
+<li>[49]    <em>Microsoft Azure Documentation Reference Architecture</em>, online at: <a href="https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/">https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/</a>.</li>
+<li>[50]    <em>Transaction Processing Performance Council (TPC)</em>, online at: <a href="http://www.tpc.org/">http://www.tpc.org/</a>.</li>
+<li>[51]    <em>Predix Architecture</em>, online at: <a href="https://www.predix.com/sites/default/files/ge-predix-architecture-r092615.pdf">https://www.predix.com/sites/default/files/ge-predix-architecture-r092615.pdf</a>.</li>
+<li>[52]    <em>Tibbo Agregate IoT Integration platform</em>, online at: <a href="http://aggregate.tibbo.com/.">http://aggregate.tibbo.com/.</a></li>
+<li>[53]    A. Foster, <em>Enhanced data storage capabilities for IBM Watson IoT Platform</em>, online at: <a href="https://developer.ibm.com/iotplatform/2016/07/25/enhanced-data-storage-capabilities-for-ibm-watson-iot-platform/">https://developer.ibm.com/iotplatform/2016/07/25/enhanced-data-storage-capabilities-for-ibm-watson-iot-platform/</a>.</li>
+</ol>
+</section>
+<p><span id="11_Authors.xhtml"></span></p>
+<section data-aria-labelledby="author">
+<h1 id="11_Authors.xhtml#author" class="bmtitle"><span id="11_Authors.xhtml#p77" data-aria-label=" page 77. " type="pagebreak" data-role="doc-pagebreak"></span>Authors</h1>
+<p>Arne Bröring, Siemens, Germany.</p>
+<p>Achille Zappa, Insight Centre for Data Analytics, National University of Ireland Galway, Ireland.</p>
+<p>Ovidiu Vermesan, SINTEF, Norway.</p>
+<p>Kary Främling, Aalto University, Finland.</p>
+<p>Arkady Zaslavsky, CSIRO, Australia.</p>
+<p>Regel Gonzalez-Usach, Universitat Politecnica de Valencia (UPV), Spain.</p>
+<p>Pawel Szmeja, Systems Research Institute, Polish Academy of Sciences (SRIPAS), Poland.</p>
+<p>Carlos E. Palau, Universitat Politecnica de Valencia (UPV), Spain.</p>
+<p>Michael Jacoby, Fraunhofer IOSB, Germany.</p>
+<p>Ivana Podnar Zarko, Univ. of Zagreb, Faculty of Electrical Engineering and Computing, Croatia.</p>
+<p>Sergios Soursos, Intracom Telecom, Greece.</p>
+<p>Corinna Schmitt, University of Zurich, Department of Informatics, Switzerland.</p>
+<p>Marcin Plociennik, PSNC, IBCh PAS, Poland.</p>
+<p>Srdjan Krco, DunavNET, Serbia.</p>
+<p>Stylianos Georgoulas, University of Surrey, UK.</p>
+<p>Iker Larizgoitia, Evrythng, UK.</p>
+<p>Nenad Gligoric, DunavNET, Serbia.</p>
+<p>Raúl García-Castro, Universidad Politécnica de Madrid, Spain.</p>
+<p>Fernando Serena, Universidad Politécnica de Madrid, Spain.</p>
+<p>Viktor Oravec, bAvenir, Slovakia.</p>
+<p>Raffaele Giaffreda, FBK CREATE-NET, Italy.</p>
+<p>Csaba Kiraly. FBK CREATE-NET, Italy.</p>
+</section>
+<p><span id="12_Contributors.xhtml"></span></p>
+<section type="contributors">
+<h1 class="bmtitle"><span id="12_Contributors.xhtml#p78" data-aria-label=" page 78. " type="pagebreak" data-role="doc-pagebreak"></span>Contributors</h1>
+<p>Stefan Schmid, Bosch Corporate Research, Germany.</p>
+<p>Corina-Kim Schindhelm, Siemens, Germany.</p>
+<p>Abdelmajid Khelil, Landshut University of Applied Sciences, Germany.</p>
+<p>Sebastian Käbisch, Siemens, Germany.</p>
+<p>Denis Kramer, Bosch Software Innovations, Germany.</p>
+<p>Danh Le Phuoc, Technical University of Berlin, Germany.</p>
+<p>Jelena Mitic and Darko Anicic, Siemens, Germany.</p>
+<p>Ernest Teniente, Universitat Politècnica de Catalunya, Spain.</p>
+<p>Robert Hellbach, BIBA, Germany.</p>
+<p>Sylvain Kubler, University of Luxembourg, Luxembourg.</p>
+<p>Jérémy Robert, University of Luxembourg, Luxembourg.</p>
+<p>Johan Schabbink, Neways Electronics, Netherlands.</p>
+<p>João Garcia, Ubiwhere, Portugal.</p>
+<p>Ricardo Vitorino, Ubiwhere, Portugal.</p>
+<p>Gerhard Duennebeil, AIT, Austria.</p>
+<p>Matteo Pardi, Nextworks, Italy.</p>
+<p>Michele Bertolacci, Navigo, Italy.</p>
+<p>Raquel Ventura Miravet, S&amp;C, Spain.</p>
+<p>Elena Garrido Ostermann, ATOS, Spain.</p>
+<p>Aleksandar Antonic, University of Zagreb, Croatia.</p>
+<p>Riccardo Pozza, University of Surrey, UK.</p>
+<p>Pekka Liedes, UPCode, Finland.</p>
+<p>Colin O’Reilly, University of Surrey, UK.</p>
+<p>Liisa Hakola, VTT, Finland.</p>
+<p>Mick Wilson, Fujitsu, UK.</p>
+<p>Roy Bahr, SINTEF, Norway.</p>
+<p>Rafał Tkaczyk, SRIPAS, Poland.</p>
+<p>Clara Valero, UPV, Spain.</p>
+</section>
+<p><span id="13_Annex.xhtml"></span></p>
+<section data-aria-labelledby="Annex">
+<h1 id="13_Annex.xhtml#Annex" class="chno" type="title"><span id="13_Annex.xhtml#p79" data-aria-label=" page 79. " type="pagebreak" data-role="doc-pagebreak"></span><span class="ordinal">7</span> <span class="chtitle">Annex</span></h1>
+<p>The following section captures the different platforms the IoT-EPI projects are utilizing in their project.</p>
+<p>The purpose is to present the current state of play and to get a nover view of for the diversity and overlap of IoT platforms across the seven emerging ecosystems.</p>
+<p>The analysis briefly introduces the IoT platform name, whether the platform is commercial or not and provides a brief description of its main purpose.</p>
+<table>
+<caption>AGILE</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><p>IoT platform</p></th>
+<th><p>Nature of platform</p></th>
+<th><p>Brief description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>Resin.io</p></td>
+<td><p>Commercial</p></td>
+<td><p>Device management platform for Linux based IoT devices. It makes it simple to deploy, update, and maintain code running on remote devices.</p></td>
+</tr>
+<tr class="even">
+<td><p>Eclipse IoT</p></td>
+<td><p>Open source</p></td>
+<td><p>Eclipse IoT provides the technology needed to build IoT Devices, Gateways, and Cloud Platforms. It also provides open source implementations for IoT standards such as MQTT, CoAP, LWM2M, OneM2M, OPC-UA and more.</p></td>
+</tr>
+<tr class="odd">
+<td><p>NodeRED</p></td>
+<td><p>Open source</p></td>
+<td><p>Tool for wiring together hardware devices, APIs and online services in new and interesting way. IoT service enablement platform developed by IBM.</p></td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption>BIG IoT</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><p>IoT platform</p></th>
+<th><p>Nature of platform</p></th>
+<th><p>Brief description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>Smart Data Platform</p></td>
+<td><p>Open source</p></td>
+<td><p>CSI Piemonte’s Smart Data Platform (SDP) is a self-service platform enabling application development based on Internet of Things and Big Data [<a href="#10_References.xhtml#ref_27" id="13_Annex.xhtml#rref_27">27</a>]. SDP is based on project Yucca which allows for interconnecting applications, social networks, systems and distributed objects and collecting data and information, by processing and analysing them to develop end-to-end solutions</p></td>
+</tr>
+<tr class="even">
+<td><p>Smart City Platform</p></td>
+<td><p>Commercial, Bosch</p></td>
+<td><p>Considering solutions for Smart Cities, the requirements differ from those known for classical enterprise applications. In fact, Smart City installations are composed of many different solutions individually customized for the city, but with a common need w.r.t. operation, data sharing and security. The Smart City platform (SCP) targets to connect the silos in the Smart City, i.e., governance, mobility, energy, environment, industry life, tourism, etc. Bosch SCP offers tools and methods to develop, operate and maintain such systems without sacrificing data security and privacy.</p></td>
+</tr>
+<tr class="odd">
+<td><p>Wubby Platform</p></td>
+<td><p>Commercial, Econais</p></td>
+<td><p>Wubby is an ecosystem of software components and services for rapid development of everyday objects [<a href="#10_References.xhtml#ref_28" id="13_Annex.xhtml#rref_28">28</a>]. Everyday objects are physical objects embedded with electronics, software, sensors and network connectivity to collect and exchange data.</p></td>
+</tr>
+<tr class="even">
+<td><p>OpenIoT Platform</p></td>
+<td><p>Open Source</p></td>
+<td><p>OpenIoT is a sensor middleware platform that eases the collection of data from heterogeneous sensors, while ensuring their semantic annotations [<a href="#10_References.xhtml#ref_29" id="13_Annex.xhtml#rref_29">29</a>]. It enables semantic interoperability in the cloud and provides IoT app development tools.</p></td>
+</tr>
+<tr class="odd">
+<td><p>Traffic Information Centre Platform</p></td>
+<td><p>Commercial, VMZ</p></td>
+<td><p>The TIC mobility platform provided by VMZ is a data and service platform that has been developed to provide comprehensive information on all mobility options available in Berlin [<a href="#10_References.xhtml#ref_30" id="13_Annex.xhtml#rref_30">30</a>]. The platform includes real-time data from the traffic information center, mobility operators and infrastructure providers and provides a multimodal routing platform using the modal router offered by third parties.</p></td>
+</tr>
+<tr class="even">
+<td><p>Bitcarrier/Sensefield/FastPrk</p></td>
+<td><p>Commercial, World Sensing</p></td>
+<td><p>Worldsensing provides a unique traffic management portfolio for Smart Cities that includes Bitcarrier, a real-time intelligent traffic management and information solution designed for both road and urban environments [<a href="#10_References.xhtml#ref_31" id="13_Annex.xhtml#rref_31">31</a>]. Fastprk provides an intelligent parking system and Sensefields provides an innovative system for detecting and monitoring vehicles and traffic flow.</p></td>
+</tr>
+<tr class="odd">
+<td><p>BEZIRK Platform</p></td>
+<td><p>Open Source</p></td>
+<td><p>Bosch’s Bezirk platform is a peer-to-peer IoT middleware for both communication and service execution on local devices following the service-oriented paradigm. Bezirk is developed with a view to facilitate asynchronous interactions between the different components of an application with respect to distribution across different devices in a network.</p></td>
+</tr>
+</tbody>
+</table>
+<span id="13_Annex.xhtml#p80" data-aria-label=" page 80. " type="pagebreak" data-role="doc-pagebreak"></span> <span id="13_Annex.xhtml#p81" data-aria-label=" page 81. " type="pagebreak" data-role="doc-pagebreak"></span> <span id="13_Annex.xhtml#p82" data-aria-label=" page 82. " type="pagebreak" data-role="doc-pagebreak"></span>
+<table>
+<caption>BioTope</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><p>IoT platform</p></th>
+<th><p>Nature of platform</p></th>
+<th><p>Brief description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>O-MI/O-DF Reference Implementation</p></td>
+<td><p>Open source</p></td>
+<td><p>Implementation of O-MI and O-DF standards for the IoT that makes it easy to set up standard-based IoT node instances. Mainly used for “sandbox” installations but can be scaled up for “industry-level” purposes.</p></td>
+</tr>
+<tr class="even">
+<td><p>DIALOG</p></td>
+<td><p>Open source</p></td>
+<td><p>IoT Middleware originally developed by Aalto in 2001, which has been further developed and used in numerous research projects as well as industrial pilots.</p></td>
+</tr>
+<tr class="odd">
+<td><p>NodeRED</p></td>
+<td><p>Open source</p></td>
+<td><p>Tool for wiring together hardware devices, APIs and online services in new and interesting way. Visual IoT service enablement platform developed by IBM.</p></td>
+</tr>
+<tr class="even">
+<td><p>Warp 10</p></td>
+<td><p>Open source</p></td>
+<td><p>Platform for storage, management and analysis of IoT data, especially for Geo Time Series.</p></td>
+</tr>
+<tr class="odd">
+<td><p>FIWARE</p></td>
+<td><p>Open source</p></td>
+<td><p>FIWARE is a middleware platform for the development and global deployment of applications for Future Internet. It is an outcome of a large investment of the EU into large-scale research programme involving network vendors and operators.</p></td>
+</tr>
+<tr class="even">
+<td><p>Open IoT</p></td>
+<td><p>Open source</p></td>
+<td><p>OpenIoT is a sensor middleware platform that eases the collection of data from heterogeneous sensors, while ensuring their semantic annotations. It enables semantic interoperability in the cloud and provides IoT app development tools.</p></td>
+</tr>
+<tr class="odd">
+<td><p>Mist</p></td>
+<td><p>Closed-source</p></td>
+<td><p>Software stack for distributed, secure IoT deployments of ControlThings.</p></td>
+</tr>
+<tr class="even">
+<td><p>eAir web</p></td>
+<td><p>Closed-source</p></td>
+<td><p>Cloud service for remote use and management of Enervent Air Handling units.</p></td>
+</tr>
+<tr class="odd">
+<td><p>Other</p></td>
+<td><p>Open/Closedsource</p></td>
+<td><p>Numerous platforms such as BMW’s platform, several Smart Parking platforms in Helsinki, OpenDataSoft’s platform. Estimated over 10 different platforms used now or in the future.</p></td>
+</tr>
+</tbody>
+</table>
+<span id="13_Annex.xhtml#p83" data-aria-label=" page 83. " type="pagebreak" data-role="doc-pagebreak"></span> <span id="13_Annex.xhtml#p84" data-aria-label=" page 84. " type="pagebreak" data-role="doc-pagebreak"></span>
+<table>
+<caption>INTER-IoT</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><p>IoT platform</p></th>
+<th><p>Nature of platform</p></th>
+<th><p>Brief description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>SEAMS</p></td>
+<td><p>EU project</p></td>
+<td><p>Smart, Energy-Efficient and Adaptive Management Platform (SEAMS) is a state-of-the art prototype-monitoring tool developed and implemented within the framework of the European project SEA TERMINALS at Noatum Container Terminal Valencia. The SEAMS platform prototype is capable of monitoring the machines and equipment that are being used at a Port Container Terminal.</p></td>
+</tr>
+<tr class="even">
+<td><p>I3WSN</p></td>
+<td><p>Academic platform</p></td>
+<td><p>Industrial Intelligent Wireless Sensor Networks for indoor environments, platform developed by Universitat Politécnica de Valencia</p></td>
+</tr>
+<tr class="odd">
+<td><p>Unical BodyCloud</p></td>
+<td><p>Open source</p></td>
+<td><p>BodyCloud is an open platform for the integration of BSNs with a Cloud Platform-as-a-Service (PaaS) infrastructure and it’s currently based on Google App Engine.</p></td>
+</tr>
+<tr class="even">
+<td><p>NodeRED</p></td>
+<td><p>Open source</p></td>
+<td><p>Tool for wiring together hardware devices, APIs and online services in new and interesting way. We will use it in the AS2AS interoperability framework</p></td>
+</tr>
+<tr class="odd">
+<td><p>OpenIoT</p></td>
+<td><p>Open source</p></td>
+<td><p>OpenIoT is a sensor middleware platform that eases the collection of data from heterogeneous sensors, while ensuring their semantic annotations. It enables semantic interoperability in the cloud and provides IoT app development tools.</p></td>
+</tr>
+<tr class="even">
+<td><p>FIWARE</p></td>
+<td><p>Open source</p></td>
+<td><p>FIWARE is a middleware platform for the development and global deployment of applications for Future Internet. It is an outcome of a large investment of the EU into large-scale research programme involving network vendors and operators.</p></td>
+</tr>
+<tr class="odd">
+<td><p>UniversAAL</p></td>
+<td><p>Open Source</p></td>
+<td><p>UniversAAL is an IoT platform developed in the framework of an FP7 project and applied currently in different AAL, eHealth and AHA environments.</p></td>
+</tr>
+<tr class="even">
+<td><p>Eclipse OM2M</p></td>
+<td><p>Open Source</p></td>
+<td><p>The Eclipse OM2M project, initiated by LAAS-CNRS, is an open source implementation of oneM2M and SmartM2M standard.</p></td>
+</tr>
+<tr class="odd">
+<td><p>WSO2</p></td>
+<td><p>Open Source ASL2.0</p></td>
+<td><p>WSO2 IoT Server enables device manufacturers and enterprises to connect and manage their devices, build apps, manage events, secure devices and data, and visualize sensor data in a scalable manner.</p></td>
+</tr>
+<tr class="even">
+<td><p>Microsoft Azure IoT Suite</p></td>
+<td><p>Proprietary Microsoft</p></td>
+<td><p>Microsoft Azure is a full cloud-based platform with IoT specific components to support connection of devices to the cloud, analyse, store and visualize captured data. Microsoft Azure Suite provides an easy to configure back-end for IoT deployments. It is domain agnostic and provides no models for data. It can be combined with advanced data analytics, machine learning and other components.</p></td>
+</tr>
+<tr class="odd">
+<td><p>Amazon AWS IoT</p></td>
+<td><p>Proprietary Amazon</p></td>
+<td><p>AWS module specially intended to IoT systems [<a href="#10_References.xhtml#ref_32" id="13_Annex.xhtml#rref_32">32</a>]. It enables a straightforward access to Amazon Cloud thanks to an easy to use management interface and a REST API to control the status of the things connected. Once data is sent to the AWS IoT, then it can be used the huge ecosystem of AWS cloud solutions. This platform is completely domain agnostic and provides a strong security protection.</p></td>
+</tr>
+</tbody>
+</table>
+<span id="13_Annex.xhtml#p85" data-aria-label=" page 85. " type="pagebreak" data-role="doc-pagebreak"></span> <span id="13_Annex.xhtml#p86" data-aria-label=" page 86. " type="pagebreak" data-role="doc-pagebreak"></span>
+<table>
+<caption>TagItSmart</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><p>IoT platform</p></th>
+<th><p>Nature of platform</p></th>
+<th><p>Brief description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>SocIoTal</p></td>
+<td><p>Open source</p></td>
+<td><p>Community IoT platform with privacy aware data sharing. Developed by the FP7 SOCIATAL project.</p></td>
+</tr>
+<tr class="even">
+<td><p>FIWARE</p></td>
+<td><p>Open Source</p></td>
+<td><p>FIWARE is a middleware platform for the development and global deployment of applications for Future Internet. It is an outcome of a large investment of the EU into large-scale research programme involving many network vendors and operators.</p></td>
+</tr>
+<tr class="odd">
+<td><p>EVRYTHNG</p></td>
+<td><p>Commercial</p></td>
+<td><p>IoT Smart product platforms. The platform collects, manages and applies real-time data from smart products and smart packaging to drive IoT applications.</p></td>
+</tr>
+<tr class="even">
+<td><p>RunMyProcess</p></td>
+<td><p>Commercial</p></td>
+<td><p>Build device independent, connected applications with strong business process integration; Deploy systems at global scale; Run secure, reliable and scalable operations. Thousands of pre-built connectors to quickly integrate IoT-enabled devices, cloud services, and social media with on premise enterprise applications and systems.</p></td>
+</tr>
+<tr class="odd">
+<td><p>Microsoft Azure</p></td>
+<td><p>Commercial</p></td>
+<td><p>Full cloud-based platform with IoT specific components to support connection of devices to the cloud, analyse, store and visualize captured data. Can be combined with advanced data analytics, machine learning and other components.</p></td>
+</tr>
+</tbody>
+</table>
+<span id="13_Annex.xhtml#p87" data-aria-label=" page 87. " type="pagebreak" data-role="doc-pagebreak"></span>
+<table>
+<caption>symbioTe</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><p>IoT platform</p></th>
+<th><p>Nature of platform</p></th>
+<th><p>Brief description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p><strong>OpenIoT</strong></p></td>
+<td><p><strong>Open source</strong></p></td>
+<td><p>OpenIoT is a sensor middleware platform that eases the collection of data from heterogeneous sensors, while ensuring their semantic annotations. It enables semantic interoperability in the cloud and provides IoT app development tools.</p></td>
+</tr>
+<tr class="even">
+<td><p><strong>Symphony</strong></p></td>
+<td><p><strong>Commercial, Nextworks</strong></p></td>
+<td><p>Networks platform for the integration of home and building control systems. Symphony can monitor, supervise and control many different building systems, devices, controllers and networks available from third-party suppliers. It is a service-oriented middleware, able to integrate several functional subsystems into a unified IP based platform.</p></td>
+</tr>
+<tr class="odd">
+<td><p><strong>Mobility Back-end as a Service (MoBaaS)</strong></p></td>
+<td><p><strong>Commercial, Ubiwhere</strong></p></td>
+<td><p>System integration platform to wrap around different city data sources. Application enablement environment geared towards smart city apps focusing on transport and mobility aspects of cities.</p></td>
+</tr>
+<tr class="even">
+<td><p><strong>nAssist</strong></p></td>
+<td><p><strong>Commercial, Sensing and Control Systems S.L</strong>.</p></td>
+<td><p>A software platform designed and conceived to allow agile, continuous management of data in the fields of energy efficiency, security and automation. Cloud-based communication software that enables clients to easily and intelligently connect machines and devices to the cloud and then process, transform, organize and store machine and sensor data.</p></td>
+</tr>
+<tr class="odd">
+<td><p><strong>Navigo Digitale IoT platform</strong></p></td>
+<td><p><strong>Commercial, Navigo</strong></p></td>
+<td><p>A vertical IoT platform created to manage digital assets pertaining to harbours used for boating and yachting. Its focus is to provide services to the harbour’s activities (B2B) and to its end-users (B2C).</p></td>
+</tr>
+<tr class="even">
+<td><p><strong>KIOLA</strong></p></td>
+<td><p><strong>Commercial, AIT</strong></p></td>
+<td><p>A mobile health data collection and online therapy management system. It integrates different sensor devices on the client side and provides backend interfaces for health management systems.</p></td>
+</tr>
+</tbody>
+</table>
+<span id="13_Annex.xhtml#p88" data-aria-label=" page 88. " type="pagebreak" data-role="doc-pagebreak"></span> <span id="13_Annex.xhtml#p89" data-aria-label=" page 89. " type="pagebreak" data-role="doc-pagebreak"></span>
+<table>
+<caption>VICINITY</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><p>IoT platform</p></th>
+<th><p>Nature of platform</p></th>
+<th><p>Brief description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>LinkSmart</p></td>
+<td><p>Open source</p></td>
+<td><p>IoT middleware originally developed in the Hydra project. It allows developers to incorporate heterogeneous physical devices into their applications through easy-to-use web services for controlling any device.</p></td>
+</tr>
+<tr class="even">
+<td><p>IoTivity</p></td>
+<td><p>Open Source</p></td>
+<td><p>IoTivity is an open source software framework enabling seamless device-to-device connectivity to address the emerging needs of the Internet of Things.</p></td>
+</tr>
+<tr class="odd">
+<td><p>SiteWhere</p></td>
+<td><p>Open Source</p></td>
+<td><p>The Open Platform for the Internet of Things provides a set of APIs to connect devices through MQTT, AMQP, Stomp and other protocols, enabling self-registration of devices and manipulation with devices using batches.</p></td>
+</tr>
+<tr class="even">
+<td><p>Eclipse Kura</p></td>
+<td><p>Open Source</p></td>
+<td><p>Eclipse Kura is Java/OSGi-based framework for IoT gateways including a set of APIs to access to hardware in/outputs, management of network configurations, communication with M2M/IoT Integration Platforms. Moreover, Eclipse Kura supports Apache Camel routes to introduce business logic on the level of the IoT gateway.</p></td>
+</tr>
+<tr class="odd">
+<td><p>TinyMesh</p></td>
+<td><p>Commercial</p></td>
+<td><p>Self-managed and self-healing mesh network platform for TinyMesh compatible devices that enables the collection of measures and performance in the network.</p></td>
+</tr>
+<tr class="even">
+<td><p>Gorenje Cloud services</p></td>
+<td><p>Commercial</p></td>
+<td><p>Cloud based IoT platform to control and maintain Gorenje household appliances.</p></td>
+</tr>
+</tbody>
+</table>
+<span id="13_Annex.xhtml#p90" data-aria-label=" page 90. " type="pagebreak" data-role="doc-pagebreak"></span>
+</section>
+<p><span id="14_ListofFiguresandTables.xhtml"></span></p>
+<section type="loi">
+<h1 class="bmtitle" type="title"><span id="14_ListofFiguresandTables.xhtml#p91" data-aria-label=" page 91. " type="pagebreak" data-role="doc-pagebreak"></span>List of Figures and Tables</h1>
+<p><a href="#06_Chapter02.xhtml#fig2_1">Figure 2.1. IoT Platforms covering the data value chain [1].</a></p>
+<p><a href="#07_Chapter03.xhtml#fig3_1">Figure 3.1. The Levels of Conceptual Interoperability Model [7].</a></p>
+<p><a href="#07_Chapter03.xhtml#fig3_2">Figure 3.2. The patterns of interoperability [10].</a></p>
+<p><a href="#07_Chapter03.xhtml#fig3_4">Figure 3.4. Possible approaches to semantic interoperability and their classification (based on [16]).</a></p>
+<p><a href="#08_Chapter04.xhtml#fig4_1">Figure 4.1. <em>AGILE</em> Detailed Architecture.</a></p>
+<p><a href="#08_Chapter04.xhtml#fig4_2">Figure 4.2. BIG IoT Architecture Overview A [10] and B [17].</a></p>
+<p><a href="#08_Chapter04.xhtml#fig4_3">Figure 4.3. bIoTope Systems of Systems type cross-connected (non-layered) connectivity.</a></p>
+<p><a href="#08_Chapter04.xhtml#fig4_4">Figure 4.4. Illustration of bIoTope standards landscape.</a></p>
+<p><a href="#08_Chapter04.xhtml#fig4_5">Figure 4.5. bIoTope ecosystem illustration.</a></p>
+<p><a href="#08_Chapter04.xhtml#fig4_6">Figure 4.6. bIoTope architecture illustration.</a></p>
+<p><a href="#08_Chapter04.xhtml#fig4_7">Figure 4.7. bIoTope concept illustration.</a></p>
+<p><a href="#08_Chapter04.xhtml#fig4_8">Figure 4.8. bIoTope reference architecture.</a></p>
+<p><a href="#08_Chapter04.xhtml#fig4_9">Figure 4.9. INTER-IoT layered architecture.</a></p>
+<p><a href="#08_Chapter04.xhtml#fig4_10">Figure 4.10. The symbIoTe high-level architecture.</a></p>
+<p><a href="#08_Chapter04.xhtml#fig4_11">Figure 4.11. symbIoTe Compliance Levels.</a></p>
+<p><a href="#08_Chapter04.xhtml#fig4_12">Figure 4.12. TagItSmart Platform Functional Architecture.</a></p>
+<p><a href="#08_Chapter04.xhtml#fig4_13">Figure 4.13. VICINITY Concept.</a></p>
+<p><a href="#08_Chapter04.xhtml#fig4_14">Figure 4.14. VICINITY Semantic interoperability approach.</a></p>
+<p><a href="#08_Chapter04.xhtml#fig4_15">Figure 4.15. Semantic interoperability approach for Discovery.</a></p>
+<p><a href="#08_Chapter04.xhtml#fig4_16">Figure 4.16. Semantic interoperability approach for Access.</a></p>
+<p><a href="#08_Chapter04.xhtml#tab4_1">Table 4.1. Integration Strategies.</a></p>
+<p><a href="#08_Chapter04.xhtml#tab4_2">Table 4.2. TagItSmart APIs example.</a></p>
+</section>

@@ -1,0 +1,82 @@
+name: Advancing IoT Platforms Interoperability
+name_cn: 物联网平台互操作性进阶
+slug: advancing-iot-platforms-interoperability
+toc:
+- - '#'
+  - 物联网平台互操作性进阶
+- - '#'
+  - 免责声明
+- - '#'
+  - 1 执行摘要
+- - '#'
+  - 2 物联网平台格局
+- - '##'
+  - 2.1 定义
+- - '##'
+  - 3.1 物联网平台互操作性挑战
+- - '###'
+  - 3.1.1 物联网互操作性模式
+- - '##'
+  - 4 处理 IoT 互操作性的 IoT-EPI 项目
+- - '##'
+  - 4.1 IoT-EPI 平台 - 架构映射
+- - '##'
+  - 4.2 AGILE
+- - '##'
+  - 4.3 BIG IoT
+- - '###'
+  - 4.3.1 The BIG IoT Architecture
+- - '###'
+  - 4.3.2 IoT 平台互操作方法
+- - '###'
+  - 4.3.3 互操作性方面
+- - '###'
+  - 4.3.4 该方法的唯一性与特定特性
+- - '##'
+  - 4.4 bIoTope
+- - '##'
+  - 4.5.3 层次与互操作性方面
+- - '##'
+  - 4.6 symbIoTe
+- - '###'
+  - 图 4.10. symbIoTe 高层架构
+- - '###'
+  - symbIoTe 架构
+- - '###'
+  - IoT 平台互操作方法
+- - '###'
+  - 互操作性方面
+- - '###'
+  - 该方法的独特特性与特定功能
+- - '##'
+  - 4.7 TagItSmart
+- - '##'
+  - 4.8 VICINITY
+- - '#'
+  - 5 推进 IoT 平台互操作性
+- - '#'
+  - 6 参考文献
+- - '#'
+  - 作者
+- - '#'
+  - 7 附录
+- - '##'
+  - 敏捷 (AGILE)
+- - '##'
+  - 大数据 (BIG IoT)
+- - '#'
+  - Wubby Platform
+- - '#'
+  - BioTope
+- - '#'
+  - INTER-IoT
+- - '#'
+  - TagItSmart
+- - '#'
+  - Microsoft Azure
+- - '##'
+  - symbioTe
+- - '##'
+  - VICINITY
+- - '#'
+  - 图表列表
