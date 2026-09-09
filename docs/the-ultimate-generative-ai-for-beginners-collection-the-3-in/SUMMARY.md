@@ -1,0 +1,2 @@
++   [初学者生成式 AI 全集：三合一指南，每天只需几分钟，通过实用项目学习 AI、深度学习与 ChatGPT —— 即使你不是技术专家](README.md)
++   [初学者生成式 AI 全集：三合一指南，每天只需几分钟，通过实用项目学习 AI、深度学习与 ChatGPT —— 即使你不是技术专家](the-ultimate-generative-ai-for-beginners-collection-the-3-in_0.md)
