@@ -1,0 +1,438 @@
+- "# Python 入门指南：数据科学与量化金融 (2.0)\n\n\n\n![](img/Image00000.jpg)\n![](img/Image00000.jpg)\n\
+  ![](img/Image00002.jpg)![](img/Image00003.jpg)\n\n# 第二版序言\n\n学习 Python 并不是本书的目的，解决底层问题才是。在所有脚本语言中，Python\
+  \ 的主导地位得益于协作的社会工程：它是开源的，可以从开发者世界获得免费且无限制的支持，并吸引越来越多的数据科学家和工程师通过行业特定功能来支持其增长。\n\n\
+  本小书从编程介绍开始，并通过一些示例展示了这些内容如何融入金融专业人士的日常工作中。由于大多数示例都是为投资银行的真实工作生活定制的，因此本书适用于初学者也适用于中级金融专业人士。\n\
+  \n在第三章中，学习曲线变得更加陡峭，并引入了定量建模和参数分析示例。如果你是金融专业的毕业生，或者对从事量化金融领域感兴趣，这本书也为你提供了一个机会，让你在申请投资银行职位之前提升技能。\n\
+  \n话虽如此，这并不是面试面试用书。它是一份说明或介绍，旨在帮助你向量化金融领域的大跨越做好准备。\n\n\n\n\n### 关于作者\n\n\n\n\n\n\
+  ## 1.1 编程语言基础\n\n当我高中向我妈妈展示我的第一份编程作业时，那是一个基于命令行的数学游戏，目的是猜一个数字——一个实数，而不是复数。它涉及到一些随机生成的种子和一些预定义的计算，以及另一个随机生成的实数作为目标答案。我还可以设置难度级别来让玩家更容易通过。我清楚地记得我妈妈看着那个黑白色的类\
+  \ DOS 屏幕，希望能播放一首欢快的歌曲。是的，一旦我猜对了，那个声音就会响起来奖励获胜者。那是上世纪的故事，我不记得我当时使用的是什么语言了。它运行在我拥有的第一台电脑上，可能在几十年前就已经回收利用了（希望如此）。\n\
+  \n故事暂暂不谈，让我们来看看编程的定义：编程是将算法并将其编码为一种符号（即编程语言），以便计算机可以执行的过程。重要的第一步是找到解决问题或需求的解决方案。编程通常是我们创建解决方案表示形式的方式。\n\
+  \n### 阿姆斯特数（Armstrong Numbers）\n\n让我们从一个小例子开始：阿姆斯特数。一个三位阿姆斯特数是一个整数，其各位数字的立方之和等于该数字本身。例如，371\
+  \ 是一个阿姆斯特数，因为 `3³ + 7³ + 1³ = 371`。我们该如何为此编写算法或解决方案呢？现在我们有一个需求和一个需要解决的问题。其次，在尝试解决方案之前，我们必须分解问题（抽象化）。最小的阿姆斯特数是\
+  \ 1，因为 `1³ = 1`。对于单数字整数来说很简单，我们只需要获取输入并将其乘以三次。如果它等于输入的整数，它就是阿姆斯特数，否则不是。\n\n两位、三位、四位甚至五位的整数呢？如果我们想打印给定上限范围内所有的阿姆斯特数怎么办？现在我们需要一个算法或一个更有结构性的计划：首先，我们逐位读取整数的数字（为了这样做，我们必须将整数转换为字符串，然后对每个数字重复\
+  \ `i3` 操作并累加）。这涉及一个 `for` 循环：\n\n```python\nl = 0\ns = str(n)\nfor i in s:\n   \
+  \ l = int(i)*int(i)*int(i) + l\n```\n\n我们通过 `s = str(n)` 将多位整数转换为字符串 `s`，其中 `n`\
+  \ 是输入整数。`for` 循环读取字符串的每个字符并计算 `i3`。这里通过编写 `int(i)` 完成从字符串到整数的数据类型转换，以便进行算运算。由于目的是累加每个数字的\
+  \ `i3`，我们需要在每个 `for` 循环步骤中加上之前的计算结果，否则如果只用 `l=int(i)*int(i)*int(i)`，只会得到最后一位数字的立方。对于\
+  \ `n = 123`，上述代码的结果为 `1³ + 2³ + 3³ = 36`。\n\n现在我们需要将其封装成一个函数，以便以后从主函数中复用。假设下一步是找到\
+  \ 1 到某个上限之间所有的阿姆斯特数。现在你必须脑海中涉及到一种 `for` 循环来计算该范围内的每个整数，如果它符合阿姆斯特数的标准，我们就保留并打印它。如果不符合，我们就继续。因此，需要一个阿姆斯特数测试函数来检查是否满足标准。\n\
+  \n首先，我们将刚刚提到的算法封装进函数 `arm(n)`（Python 函数将在第 1.6 节介绍），处理输入 `n` 为单位整数的情况：\n\n```python\n\
+  def arm(n):\n    l = 0\n    if len(str(n)) <2: #单位整数情况\n        return n*n*n\n \
+  \   else:\n        s = str(n)\n        for i in s:\n            l = int(i)*int(i)*int(i)+\
+  \ l\n        return l\n```\n\n测试函数名为 `arm_test(x)`。它读取输入数字 `x` 并将其与阿姆斯特数计算函数 `arm(n)`\
+  \ 进行比较：\n\n```python\ndef arm_test(x):\n    if x == arm(x):\n        print (x, \"\
+  is an Armstrong number!\")\n    else:\n        print (x, \"isn't an Armstrong number\"\
+  )\n```\n\n最后，总有一个主部分来定义输入输出，以及如何调用不同的函数，以及结果如何作为另一个函数的中间输入。完整代码位于后面的 Python 函数章节\
+  \ 1.6 中。\n\n## 1.2 什么是 Python？\n\nPython 是一种用于通用编程的解释型高级编程语言。由 Guido van Rossum\
+  \ 创建并在 1991 年首次发布，Python 的设计哲学强调代码的可读性，特别使用了大量的空白字符。Python 具有动态类型系统和自动内存管理。它支持多种编程范式，包括面向对象、命令式和函数式编程，并拥有庞大的标准库。\n\
+  \nPython 使用空白（空格和制表符）而不是大括号 `{}`。这称为缩进。因此，当你输入 Python 代码时，需要注意空格键，因为它可能会引入结构错误。下面是\
+  \ Java 中带有 `for` 循环的公共函数示例：\n\n```java\npublic static int sumList(int[] liste) {\n\
+  \    int total = 0;\n    for(int val : liste) {\n        total += val;\n    }\n\
+  \    return total;\n}\n```\n\n在 Python 中，你不需要在方法前面声明公共或私有，也不需要声明变量类型。以下代码是 Python\
+  \ 中的样子：\n\n```python\ndef sumList(liste):\n    total = 0\n    for val in liste:\n\
+  \        total += val\n    return total\n```\n\nPython 可读且语法简单，这使得它对用户更友好且不那么复杂。因此，它很容易供初学者学习，并具有许多交互特性。最重要的是，在过去的几十年里，这种语言经历了巨大的演变，有许多开源包可用于执行复杂的算法。\n\
+  \n\n\n\n\n## 1.3 Python 开发环境\n\n在开始编程之前，你需要一个代码编辑器，或 IDE - 集成开发环境。`Spyder` 是学者入门的良好选择，特别是对于那些不需要使用\
+  \ `PyCharm` 中包含的一些高级功能的人来说。它轻量且易于安装，并且通常带有 Python 包。它不需要许可证，在运行程序时也不会消耗过多内存。`PyCharm`\
+  \ 适用于熟悉 IDE 及其集成功能（如调试、单步进入断点、重构以及涉及多个文件、包和多名开发人员的大规模开发）的高级用户。如果你有一个庞大的 Python 程序库，你需要一个像\
+  \ `PyCharm` 这样的工具。\n\n开始 Python 编码的一个很好的选择是使用命令行的 shell 环境或控制台。经典的 DOS 命令行也可以配合文本编辑器使用。控制台是你在命令解释器内部输入、与数据交互并将其可视化的地方。在控制台中输入的所有命令都会被立即执行，从而允许用户自由地中断任何进程。\n\
+  \n另一个流行的开发环境是 `Jupyter Notebook`。它是一个开源 Web 应用程序，允许你创建和共享包含实时代码、方程和图表的文档。它具有与控制台式开发环境相同的优势，但更符合视觉习惯且功能强大。存在各种集成数据科学平台（例如\
+  \ `Anaconda`），其中开发环境和开源包已经预先下载。在本书中，所有的代码示例要么基于 `Jupyter notebook`，要么基于 `Python\
+  \ Console`（大多数 如 `Spyder` 和 `PyCharm` 都有控制台窗口）。可以在此处下载 `Anaconda` [https://www.anaconda.com/]。`Anaconda\
+  \ Navigator` 是一个基于 GUI 的工具，允许你轻松地找到 `Anaconda` 提供的所有不同工具包和软件。运行该程序将显示界面：![](img/Image00005.jpg)\
+  \ 如你所见，有很多程序供你使用。点击 Launch 打开 `Jupyter Notebook` 程序。浏览器将打开一个新标签页，显示主目录下的文件夹和文件列表。\n\
+  \n## 1.4 Python 中的基本数据类型\n\n我在下表中列出了基本数据类型，并附有相关的注释和示例：\n\n| 类型 | 示例 | 注释 |\n| :---\
+  \ | :--- | :--- |\n| `bool` | `True`, `False` | 这是一个“逻辑”值 |\n| `int` | `123` | 整数\
+  \ |\n| `float` | `1.23` | Python 中的 `float` 类型指定浮点数，在内部表示为二进制（基 2）分数。大多数小数无法精确地表示为二进制分数，因此在大多数情况下，浮点数的内部表示是实际值的近似。在实践中，实际值与表示值之间的差异非常小，不应引起显著问题\
+  \ |\n| `complex` | `1.2+3j` | 复数的指定格式为 `<实部>+<虚部>j`，两者均为浮点数值。 |\n| `Str` | `\"hello\"\
+  `, `''` | 字符串是字符数据的序列。Python 中的字符串可以包含你任意数量的字符。唯一的限制是你机器的内存资源。字符串可以是空的 |\n| `list`\
+  \ | `[1,2,3]`, `[2,5,'python']`, `[[2,4],[3,6]]` | `list` 可以包含一系列相同类型或不同类型的值，并由方括号\
+  \ `[]` 定义。Python 中的所有列表都从 0 开始索引。列表不限于单一维度。可以通过逗号分隔多个方括号 `[]` 来声明多个维度。`List` 是动态且可变的。\
+  \ |\n| `tuple` | `(1,2,3)` | `tuples` 是类似于列表的一组值，以类似的方式操作。然而，元组的大小是固定的（不可变的），一旦赋值，成员就无法更改。`Tuples`\
+  \ 由括号 `()` 定义。 |\n| `dict` | `{'Age': 17, 'name': 'Peter'}` | Python 中的字典是 `Key:\
+  \ Value` 对的列表。这是一种强大的数据类型，可以存储大量通过 `keys` 关联的相关信息。字典的主要操作是根据 `key` 名称提取值。与使用索引的列表不同，字典允许使用\
+  \ `key` 来访问其成员。字典还可以用于排序、迭代和比较数据。字典使用大括号 `{}` 创建，值对之间用逗号分隔，键和值对之间用冒号关联：字典中的每个 `Key`\
+  \ 必须是唯一的。 |\n\n以上是 Python 中最常见的数据类型，我们可以使用下面的代码行来检查 Python 数据类型。例如：`type(variable)`\n\
+  \n## 1.5 循环与条件\n\n循环可能是编程世界中最重要的逻辑操作之一。只要满足特定条件，循环就会重复执行。\n\n### For 语句\n让我们看看 `range(x)`\
+  \ 的含义：\n- 迭代器从 0 开始并遍历 `x` 个整数\n- 如果 `x > 2`，则为 `(0, 1,2,…..x)`\n\n```python\nfor\
+  \ i in range(3):\n    print(i)\n### 输出: 0 1 2\n```\n\n### While 语句\n```python\n\
+  j = 4\nwhile j > 0:\n    print(j)\n    j = j-1\n### 输出: 4 3 2 1\n```\n\n### For\
+  \ 还是 while？\n如果我们知道执行主体的最大次数，则使用 `for` 循环。例如，如果我们正在遍历元素列表，我们知道可能需要的迭代次数是“列表中的所有元素”。相反，如果我们需要重复某些计算直到满足某个条件，且无法预先计算何时发生，那么我们需要一个\
+  \ `while` 循环。我们将第一种情况（for 循环）称为“确定性迭代”；后一种情况（while 循环）称为“不确定性迭代”——我们甚至不确定需要多少次迭代！\n\
+  \n### 条件语句\n为了编写实用的程序，我们几乎总是检查条件并据此更改程序的行为。条件提供了这种能力。最简单的形式是 `if` 语句：\n\n```python\n\
+  if 布尔表达式:\n    语句\n```\n`if` 语句后面的布尔表达式称为 `条件`。如果它为真，则执行所有的缩进语句。如果条件为假会发生什么；我们是做其他事情还是设置另一个条件？另一个条件由\
+  \ `elif` 引导，默认语句由 `else` 引导：\n\n```python\nif type(i) == list:\n    print(\"是列表类型\"\
+  )\nelif type(i) == int:\n    print(\"是整数类型\")\nelse:\n    print(\"是其他类型\")\n```\n\
+  \n\n\n\n\n## 1.6 Python 函数\n\n`function`（函数）是一个只有在被调用时才会运行的代码块。当从另一个函数调用或直接从 Python\
+  \ 提示符调用时，我们可以传递参数（也称为参数）。函数可以执行打印、修改值、进行代数运算等任务，并返回数据作为结果。我们可以在 Python 控制台中输入代码：\n\
+  \n```python\ndef first_function(a):\n    print (\"the input is\", a)\n    result\
+  \ = a+a*2\n    return result\n```\n\n`def` 表示这是一个函数，可以通过提供正确的输入在代码的其它地方进行调用。与之前的命令行编码风格相比，它是代码复用一个示例。当我们执行或调用此函数时，我们只需要将数据/参数传递到函数中：\n\
+  \n```python\n>>> first_function(2)\nthe input is 2\n6\n```\n此外还有设置默认参数的可能性。默认参数是指当在函数调用中没有为该参数提供值时，它会假设一个默认值的参数。对于上面的示例，我们可以增加它的复杂性：\n\
+  \n```python\ndef first_function(a, type = 'int'):\n    print (\"the input is\",\
+  \ a, \"and the data type is\", type(a))\n    if type == 'int':\n        result =\
+  \ a + a*2\n    else:\n        result = a[0] + a[0]*2\n    return result\n```\n\n\
+  `a[0]` 是访问列表元素的方法。`a[0]` 是列表的第一个元素，`a[1]` 表示第二个元素，以此此类推。如果尝试访问列表长度之外的元素位置，通常会抛出错误\
+  \ `list index out of range`。如果我们在调用函数时不指定 `type = `，它将使用在函数定义参数中设置的默认值（在本例中，它是 `type\
+  \ = int`）。请注意，许多 Python 预定义函数都有默认参数，使用它们时我们应该注意它们的默认值。\n\n```python\n>>> first_function(2)\n\
+  the input is 2 and the type is int\n6\n```\n这里 `6` 是 `a + a*2 = 2 + 2*2 = 6` 的结果。\n\
+  \n```python\n>>> first_function([2,3,4])\nthe input is [2, 3, 4] and the type is\
+  \ int\n[2, 3, 4, 2, 3, 4, 2, 3, 4]\n```\n在这种情况下，在函数中没有指定类型，因此类型为默认值 `int`，因此计算结果\
+  \ `a + a*2`（当 `a = [2,3,4]` 时）变为了：`[2,3,4] + [2,3,4] * 2 = [2, 3, 4, 2, 3, 4, 2,\
+  \ 3, 4]`。但如果我们修改参数并覆盖了它的默认值，结果就会不同：\n\n```python\n>>> first_function([2,3,4], 'list')\n\
+  the input is [2, 3, 4] and the type is list\n6\n```\n这里 `6` 是 `a[0] + a[0]*2` 的结果，其中\
+  \ `a[0] = 2`，是输入列表 `[2,3,4]` 的第一个元素。对于安姆斯特数（Armstrong number）的情况，显示了完整的代码。你应该能够在\
+  \ PyCharm 或 Spyder 等 IDE 上运行这段代码。\n\n`arm()` 是用于计算输入数字的安姆斯特数的。\n\n```python\ndef\
+  \ arm ( num ):\n    calnumber = 0\n    if len ( str ( num )) < 2 : # 单位数情况\n   \
+  \     return num * num * num\n    else:\n        string = str ( num )\n        for\
+  \ i in string:\n            calnumber = int (i)* int (i)* int (i)+calnumber\n  \
+  \  return calnumber\n```\n\n`arm_test()` 是用于测试从输入计算出的安姆斯特数是否为安姆斯特数。\n\n```python\n\
+  def arm_test ( num ):\n    if num == arm( num ):\n        print ( num , \"is an\
+  \ Armstrong number! )\n    else:\n        print ( num , \"isn't an Armstrong number\"\
+  )\n\ndef arm_list ( limit ):\n    for i in range ( 1 , limit ):\n        if i ==\
+  \ arm(i):\n            print (i, \"is an Armstrong number!\" )\n        else:\n\
+  \            continue\n\nwhile True :\n    while True :\n        try:\n        \
+  \    NUMBER = int ( input ( \"Enter the number:\" ))\n            break\n      \
+  \  except ValueError :\n            print ( \" Opps that was not a valid number,\
+  \ try again....\")\n    print ( \"You have just entered: %d \" %NUMBER)\n    arm_test(NUMBER)\n\
+  \    LIMIT = int ( input ( \"Enter the upper limit:\" ))\n    arm_list(LIMIT)\n\
+  \    VAR = input ( \"Would you like to play again? (Y/N): \" )\n    if VAR == \"\
+  N\" or VAR == \"n\" :\n        break\n```\n\n取决于你与程序的交互，输出大致如下：\nEnter the number:12\n\
+  You have just entered: 12\n12 isn't an Armstrong number\nEnter the upper limit:1000\n\
+  1 is an Armstrong number!\n153 is an Armstrong number!\n370 is an Armstrong number!\n\
+  371 is an Armstrong number!\n407 is an Armstrong number!\nWould you like to play\
+  \ again? (Y/N): n\n\n如果你对最后一个问题 `Would you like to play again?` 回答 `Y`，整个程序将再次运行，因为整个循环会持续。请注意，如果你在第二个输入中选择了一个非常高的上限，Python\
+  \ 代码需要一段时间来计算并找到所有的安姆斯特数。\n\n## 1.7 示例\n\n在通过安姆斯特数示例介绍 Python 基础之后，将演示更多利用 Python\
+  \ 函数和循环的示例，这些都是基础模块。\n\n### 1.7.1 第一个示例：欧拉数 e\n\nLeonhard Euler 是 18 世纪的一位瑞士数学家。他对数学的不同分支都有许多贡献。在他许多发现和发展中，我们将观察最著名的数学常数之一——欧拉数\
+  \ `e`，它大约等于 2.71828，代表对数的自然底。我们尝试计算或估计与三角学相关的数学常数 `e`。在这个示例中，我们将从金融中的复利中获得灵感。基于复利利率的\
+  \ `e` 估计公式所示。\n\n一个更通用的指数函数 `ex` 或 `exp(x)` 可以编写。根据 `ex` 的导数等于 `ex` 本身以及著名的泰勒级数定义，当\
+  \ `x = 1` 时，`ex` 可以通过无穷级数的和来计算。\n\n```python\ndef recur_factorial (n):\n    if n\
+  \ ==1 :\n        return n\n    else :\n        return n * recur_factorial(n -1)\n\
+  ```\n\n\n\n\n\n```python\nj = 1\ne2 = 0\ne = 1+1/1 #initialize e\nwhile j <= 5:\n\
+  \    if j == 2:\n        e2 = 1/2\n        e = e + e2\n        print ('mathematical\
+  \ constant e is', e)\n    if j == 3:\n        e2 = 1/6\n        e = e + e2\n   \
+  \     print ('mathematical constant e is', e)\n    if j == 4:\n        e2 = 1/24\n\
+  \        e = e + e2\n        print ('mathematical constant e is', e)\n    if j ==\
+  \ 5:\n        e2 = 1/120\n        e = e + e2\n        print ('mathematical constant\
+  \ e is', e)\n    j = j + 1\n```\n输出为：mathematical constant e is 2.5 mathematical\
+  \ constant e is 2.6666666666666665 mathematical constant e is 2.708333333333333\
+  \ mathematical constant e is 2.7166666666666663\n\n我们将迭代限制设为 5，并使用 `while` 循环来计算\
+  \ `n` 等于 5 的无限级数。这是一个独立的计算，只要没有达到迭代限制，`if` 条件就可以继续执行。它没有调用 Python 函数 `recur_factorial(n)`，因为\
+  \ `n!` 的计算是内联完成的，这并不是理想的，因为随着迭代的增加，这种计算会变得复杂并可能引入错误，从而降低精度。\n\n方法 2，使用函数 `recur_factorial(n)`\
+  \ 来计算 `n!` 并使用 `while` 循环来累加阶乘。迭代次数设为 9。\n- `while j < 10` 意味着循环在 `j` 达到 9 时停止。\n\
+  ```python\nj = 0\ne = 1.0 #initialize e\nwhile j < 10:\n    e2 = 1/recur_factorial(j\
+  \ +1)\n    e = e2 + e\n    print ('e is', e, 'and iteration number is', j)\n   \
+  \ j = j + 1\n```\n输出为：e is 2.0 and iteration number is 0 e is 2.5 and iteration\
+  \ number is 1 e is 2.6666666666666665 and iteration number is 2 e is 2.708333333333333\
+  \ and iteration number is 3 e is 2.7166666666666663 and iteration number is 4 e\
+  \ is 2.718055555555555 and iteration number is 5 e is 2.718253968253968 and iteration\
+  \ number is 6 e is 2.71827876984127 and iteration number is 7 e is 2.718281525573192\
+  \ and iteration number is 8 e is 2.71828180114638 and iteration number is 9\n\n\
+  我们可以看到，随着迭代的增加，数学常数 `e` 的精度得到了提高，特别是当 `n` 高于 5 时。方法 3 与方法 2 非常相似。唯一的区别是使用了 `for`\
+  \ 循环而不是 `while` 循环。在这种情况下，我们不需要手动增加 `j`。\n\n使用 `for`：\n```python\ne = 1.0 #initialize\
+  \ e\nfor j in range (10):\n    e2 = 1/recur_factorial(j +1)\n    e = e2 + e #sum-up\n\
+  \    print ('e is', e, 'and iteration number is', j)\n```\n输出为：e is 2.0 and iteration\
+  \ number is 0 e is 2.5 and iteration number is 1 e is 2.6666666666666665 and iteration\
+  \ number is 2 e is 2.708333333333333 and iteration number is 3 e is 2.7166666666666663\
+  \ and iteration number is 4 e is 2.718055555555555 and iteration number is 5 e is\
+  \ 2.718253968253968 and iteration number is 6 e is 2.71827876984127 and iteration\
+  \ number is 7 e is 2.718281525573192 and iteration number is 8 e is 2.71828180114638\
+  \ and iteration number is 9\n\n方法 4 使用了强大的 Python `List` 类型来方便累加。在方法 3 中，累加是在 `for`\
+  \ 循环中实现的，而不同 `n` 的阶乘值被存储在列表中。累加是通过 Python `sum()` 函数实现的：当 `a` 是列表时，`sum(a)` 会加上列表\
+  \ `a` 中的所有数字。在代码中，我们调用 `recur_factorial(n)` 并打印列表 `e2`，它包含了不同 `n` 的 `1/n!` 值：`1/1,\
+  \ 1/2, 1/6,1/24……`\n```python\nn = 9\ne2 = [1/recur_factorial(i) for i in range\
+  \ (1 ,n)]\nprint(e2)\ne = 1+sum(e2)\nprint ('e is', e, 'and the number of iteration\
+  \ is', n)\n```\n输出类似于：[1.0, 0.5, 0.16666666666666666, 0.041666666666666664, 0.008333333333333333,\
+  \ 0.001388888888888889, 0.0001984126984126984, 2.48015873015873e-05] e is 2.71827876984127\
+  \ and the number of iteration is 9\n\n有一种更好的方法可以完全在主代码中消除 `for`（或 `while`）循环，但这需要对函数\
+  \ `recur_factorial(n)` 进行修改，以扩展其功能，包含根据 `n` 值对不同阶乘进行累加。我将这个留给你的练习。\n\n\n\n\n\n###\
+  \ 1.7.2 第二个示例：欧拉等式\n\n由于我对欧拉和自然对数底 `e` 充满热情，我们将来看欧拉发明的另一个杰作：图 1‑4 写了欧拉等式，我假设你对复数及其几何表示已经熟悉了。\n\
+  \n![](img/Image00010.jpg)\n图 1‑4 欧拉等式，其中 `e` 是我们在第一个示例中估算的欧拉数。`i` 是虚数单位，定义为 `i²\
+  \ = -1`，`π` 是圆周率，即圆周长与直径的比值。从图 1‑2 中，我们设置 `x = iπ`，得到 `e^{iπ}:`![](img/Image00011.jpg)\n\
+  \n我们知道当 `n` 趋于无穷时，`e^{iπ}` 会于 -1。我们实现了一个收敛逻辑来检查 `n \\in [0,100]` 时 `e^{iπ}` 的值。与之前估计\
+  \ `e` 的示例类似，我们创建了一个函数来执行迭代。这里与函数 `recur_factorial(n)` 的区别在于我们使用了图 1‑3 中的公式，该公式包含显式的迭代\
+  \ `n` 和隐式的迭代 `n_local`。\n\n![](img/Image00012.jpg)\n图 1‑5 全局变量 `n` 向局部变量 `n_local`\
+  \ 传递的示意。`n_local` 是函数调用时创建的局部变量。它只在函数内部使用：`euler_id_loop (n_local)`。它控制此函数调用需要多少局部迭代。`n`\
+  \ 是全局变量，从局部迭代的角度来看它是无关的，因为它由主函数中的关键语句决定：`for n in range (1, 1000)`。请参见图 1‑5 的示意，代码表示如下：\n\
+  \n```python\ndef euler_id_loop (n_local):\n    if n_local ==1:\n        return (1+\
+  \ (math.pi * complex (0, 1)) / n)\n    else:\n        return (1+ (math.pi * complex\
+  \ (0, 1)) / n) * euler_id_loop(n_local -1)\n```\n\n主函数变为：\n\n```python\nimport math\
+  \ as math\nimport matplotlib.pyplot as plt\nreal = []\nimag = []\nfor n in range\
+  \ (1, 1000):\n    #n 是全局变量，控制循环迭代\n    if n == 1:\n        eulerid = (1+ (math.pi\
+  \ * complex (0, 1)) /1)\n        print(n, eulerid)\n    else:\n        eulerid =\
+  \ euler_id_loop (n) #n 被传递给函数以形成一个新的局部变量\n        real.append(eulerid.real)\n  \
+  \      imag.append(eulerid.imag)\n    real.append(eulerid.real)\n    imag.append(eulerid.imag)\n\
+  plt.scatter(real,imag)\nplt.xlabel('real')\nplt.ylabel('imaginary')\nplt.grid()\n\
+  plt.show()\n```\n![](img/Image00013.jpg)\n图 1‑6 图形中的欧拉等式收敛证明\n\n如果我们对 `iπ` 做些处理，将其变为变量并设置迭代来遍历整个频谱会怎样？如果我们的迭代和循环逻辑足够好，它应该显示出一个完整的圆，因为有\
+  \ `e^{iπ} = -1` 和 `e^{2iπ} = 0`。我们设置了一个名为 `euler_id_loop_pi (pi_size, n_local)`\
+  \ 的函数，其中 `pi_size` 代表变量 `nπ`，`n` 从 0 到我们需要完整圆的数量。一个完整的圆是 `2π`。与 `euler_id_loop (n_local)`\
+  \ 来说，这里的逻辑是相同的，只是用额外的局部变量 `pi_size` 代替了简单的 `math.pi`，因为这里的 `pi_size` 是随时间变化的变量。`n_local`\
+  \ 是迭代器。\n\n```python\ndef euler_id_loop_pi (pi_size, n_local):\n    if n_local ==\
+  \ 1:\n        return (1+ (pi_size * complex (0, 1)) / n)\n    else:\n        return\
+  \ (1+ (pi_size * complex (0, 1)) / n) * euler_id_loop_pi(pi_size, n_local -1)\n\
+  ```\n\n我们然后编写主部分来遍历圆并绘图：\n\n```python\nimport numpy as np\nreal = []\nimag = []\n\
+  n = 2000 #迭代，增加值以提高精度\nfull_circle = 2 # 2Π 意味着一个圆，4 Π 意味着两个圆\nfor i in np.arange\
+  \ (0, full_circle * math.pi *1.0, full_circle * math.pi /100):\n    eulerid = euler_id_loop_pi\
+  \ (i, n)\n    real.append(eulerid.real)\n    imag.append(eulerid.imag)\nplt.scatter(real,imag)\n\
+  plt.grid()\nplt.xlabel('real')\nplt.ylabel('imaginary')\nplt.show()\n```\n![](img/Image00014.jpg)\n\
+  图 1‑7 当 `π \\in[0,100]` 时欧拉数 `e^{iπ}` 的完整圆。如果迭代不够大，即使我们遍历了整个频谱，在 -1 和 0 处也会不匹配。\n\
+  \n![](img/Image00015.jpg)\n图 1‑8 欧拉收敛\n\n关于这个奇妙数学方程的最后思考。沿着整个视野这个带有实部和虚部的美丽圆。如果我们从连续的角度来看，只有四条线是真正的\
+  \ 100% 实部或 100% 虚部。其余部分（无限数量的线条都是实部和虚部的混合）。在生活中，不也是如此吗？如果有错误但不被修正，不断重复（迭代）。\n\n\
+  # 2 Python 包\n\n在本章中，我们将仔细研究三个常用的 Python 包：用于数学和统计的 NumPy，用于数据分析的 Pandas 以及用于可视化的\
+  \ Matplotlib。\n\n## 2.1 数学 - NumPy\n\nNumPy 是 Python 编程语言的一个库，增加了对大型多维数组和矩阵的支持，以及许多高级数学函数（如线性代数、傅里叶变换和随机数功能），用于对这些数组进行操作。除了明显的科学用途外，NumPy\
+  \ 还可以作为高效的通用数据多维容器。可以定义任意的数据类型。这使得 NumPy 能够与各种数据库无缝且快速地集成。\n\n\n\n\n\n### 2.1.1\
+  \ Numpy 简介\n\n在安装 Numpy 包之前，你首先需要安装好 `python`。例如，如果你是通过 Anaconda 安装的 `python`，那么\
+  \ NumPy 和其他有用的课程包已经安装好了。如果没有，请在控制台窗口中输入以下命令使用 `pip` 安装：\n\n```bash\npip install\
+  \ numpy\n```\n\nNumPy 提供了高性能的多维数组，以及用于计算和操作这些数组的基本工具。数组是一个由相同类型的元素（通常是数字）组成的表格，通过一个正整数元组进行索引。在\
+  \ NumPy 中，维度被称为轴（axes）。Numpy 的多维数组被称为 `ndarray`。注意，它与标准 Python 库中的类 `array.array`\
+  \ 不同，后者只处理一维数组且提供的功能较少。\n\n我们首先导入 `numpy` 包以使用它，并给它取了一个简短名称 `np`：\n\n```python\n\
+  import numpy as np\n```\n\n然后，我们创建一个从 0 到 15、维度为 3x5 的多维数组（矩阵）：\n\n```python\na\
+  \ = np.arange(15).reshape(3, 5)\n```\n\n要查看创建的对象 `a`，只需在控制台输入它并按回车键：\n\n```python\n\
+  a\narray([[ 0, 1, 2, 3, 4], [5, 6, 7, 8, 9], [10, 11, 12, 13, 14]])\n```\n\n如果我们想检查数组的维度和大小，我们使用\
+  \ `shape` 命令，它会返回一个整数元组，表示数组在每个维度上的尺寸：\n\n```python\na.shape (3, 5)\n```\n\n你也可以使用\
+  \ `size` 来获取数组内部元素的数量。在上面的示例中，它仅仅是 `3 x 5 = 15`。但 `size` 不告诉数组的维度：\n\n```python\n\
+  a.size 15\n```\n\n`ndim` 命令返回数组的轴的数量——即维度的数量，它不会显示每个轴上的元素总数，例如，数组 `a` 有两个维度：\n\n\
+  ```python\na.ndim 2\n```\n\n我们还可以创建一个三维数组并应用相同的函数。将下面的示例与上面的示例比较，`reshape` 完成了矩阵形状操作的工作。\n\
+  \n```python\nb = np.arange(16).reshape(2, 4, 2)\nb\narray([[[0, 1], [2, 3], [4,\
+  \ 5], [6, 7]], [[8, 9], [10, 11], [12, 13], [14, 15]]])\n```\n\n数组 `b` 有三个维度：\n\n\
+  ```python\nb.ndim 3\n```\n\n数组 `b` 有三个维度，每个维度分别有 2, 4, 2 个元素：\n\n```python\nb.shape\
+  \ (2, 4, 2)\nb.size 16\n```\n\n为了访问 3D 数组特定位置的值，我们必须指定这三个维度：\n\n```python\nb[0][0][1]\
+  \ 1\nb[0][1][1] 3\n```\n\n或者只取数组的一个子集：\n\n```python\nb[1][2]\narray([12, 13])\n\
+  b[1]\narray([[8, 9], [10, 11], [12, 13], [14, 15]])\n```\n\n创建数组有多种方法：\n\n```python\n\
+  a = np.array([2,3,4])\na\narray([2, 3, 4])\n```\n\n数组将序列的序列转换为二维数组，将序列的序列转换为三维数组，依此类推：\n\
+  \n```python\nb = np.array([(1.5,2,3), (4,5,6)])\nb\narray([[1.5, 2., 3.], [4., 5.,\
+  \ 6.]])\nb.ndim 2\n```\n\n数组类型在创建时也可以显式指定：\n\n```python\nc = np.array([[1,2], [3,4]],\
+  \ dtype = float)\nc\narray([[1., 2.], [3., 4.]])\n```### 2.1.2 其他 Numpy 示例\n\n通常，数组的元素是未知的，但其尺寸是知的。因此，NumPy\
+  \ 提供了几个创建带有初始内容的数组函数。这减少了增长数组的开销。`zeros` 函数创建一个全零数组，`ones` 函数创建一个全 1 数组，而 `empty`\
+  \ 函数创建一个初始内容取决于内存状态的数组。默认情况下，创建的数组的 `dtype` 是 `float64`。\n\n全零数组：\n\n```python\n\
+  np.zeros((3,4))\narray([[0., 0., 0., 0.], [0., 0., 0., 0.], [0., 0., 0., 0.]])\n\
+  ```\n\n全 1 数组：\n\n```python\na = np.ones((2,3,4), dtype=np.int16)\na\narray([[[1,\
+  \ 1, 1], [1, 1, 1], [1, 1, 1]], ...]])\n```\n\n我们也可以轻松地更改创建的 `ndarray` 的值：\n\n```python\n\
+  a[:] = 3.41\na\narray([[3, 3, 3], [3, 3, 3], [3, 3, 3]])\n```\n\n你可能奇怪为什么值是 3 而不是\
+  \ 3.41？这是因为我们创建的 `ndarray` 的数据类型指定为 `int16`。下面的代码可以使用 `astype` 通过重新分配类型来解决这个问题：\n\
+  \n```python\na = a.astype('float64')\na[:] = 3.41\na\narray([[3.41, 3.41, 3.41],\
+  \ [3.41, 3.41, 3.41]])\n```\n\n创建数字序列，NumPy 提供了类似于 `range()` 的函数，返回的是数组而不是列表：\n\n\
+  ```python\nnp.arange(10, 30, 5)\narray([10, 15, 20, 25])\n```\n\n当 `arange` 使用浮点数参数时，由于浮点精度问题，通常无法预测元素的数量。由于这个原因，通常使用\
+  \ `linspace` 函数来接收元素的数量：\n\n```python\nnp.linspace(0, 2, 6)\narray([0. , 0.4, 0.8,\
+  \ 1.2, 1.6, 2. ])\n```\n\n#### 基础操作\n\n在数组上的算术运算符可以逐元素应用。会创建一个填充了结果的新数组。\n\n```python\n\
+  a = np.array([20,30,40,50])\nb = np.arange(4)\nb\narray([0, 1, 2, 3])\n```\n\n在创建\
+  \ `a` 和 `b` 后，我们尝试进行减法：\n\n```python\nc = a - b\nc\narray([20, 29, 38, 47])\n```\n\
+  \n乘法：`b` 数组每个元素的平方：\n\n```python\nb**2\narray([0, 1, 4, 9])\n```\n\n其他类的数学运算：\n\n\
+  ```python\n10*np.sin(a)\narray([ 9.12945251, -9.88031624, 7.4511316, -2.62374854])\n\
+  ```\n\n也可以应用逻辑函数测试数组的每个元素：\n\n```python\na < 35\narray([ True, True, False, False])\n\
+  ```\n\n与许多矩阵语言不同，乘法运算符 `*` 在 NumPy 中是逐元素操作：\n\n```python\nA = np.array([[1,1], [0,1]])\n\
+  B = np.array([[2,0],[3,4]])\nA * B # 这是逐元素乘积\narray([[2, 0], [0, 4]])\n```\n\n矩阵乘积可以使用\
+  \ `dot` 函数执行：\n\n```python\nA.dot(B) #矩阵乘积\narray([[5, 4], [3, 4]])\n```\n\n一些经典操作，例如数组所有元素的和：\n\
+  \n```python\na = np.array([[0.2, 0.3, 0.4],[0.5, 0.6, 0.7]])\na\narray([[0.2, 0.3,\
+  \ 0.4], [0.5, 0.6, 0.7]])\na.sum() 2.7000000000000002\n```\n\n其他经典函数是：\n\n```python\n\
+  a.max() 0.6999999999999996\na.mean() 0.4500000000000001\na.min() 0.2000000000000001\n\
+  ```\n\n与和或最大相比，乘积是一个相对复杂的操作。它正在做的是：`0.2*0.3*0.4*0.5*0.6*0.7`\n\n```python\na.prod()\
+  \ 0.0050399999999999993\n```\n\n默认情况下，这些操作应用于数组就像它是是一个数字列表，无论其形状如何。但是，通过指定 `axis`\
+  \ 参数，你可以沿着数组的指定轴应用操作：\n\n```python\nb = np.arange(12).reshape(3,4)\nb\narray([[0,\
+  \ 1, 2, 3], [4, 5, 6, 7], [8, 9, 10, 11]])\n```\n\n\n\n\n现在我们有一个 2D `ndarray`，并尝试对每一列和每一行进行一些操作：\n\
+  \n```python\n>>> b.sum(axis=0) # 每列求和 array([12, 15, 18, 21])\n>>> b.min(axis=1)\
+  \ # 每行的最小值 array([0, 4, 8])\n>>> b.cumsum(axis=1) # 每行的累加和 array([[ 0,  1,  3, \
+  \ 6], [ 4,  9, 15, 22], [ 8, 17, 27, 38]]])\n>>> b.prod(axis = 0) # 每列的矩阵乘积 array([\
+  \  0,  45, 120, 231])\n```\n\n由于 `ndarray` 是二维二维的，如果我们设置 `axis = 2`，它将返回错误：\n\n\
+  ```python\n>>> b.prod(axis = 2) \nAxisError: axis 2 is out of bounds for array of\
+  \ dimension 2\n```\n\nNumPy 还提供了熟悉的数学函数，如 `sin`、`cos`、`exp` 和 `sqrt`。在 NumPy 中，这些被称为“通用函数”（`ufunc`）。\n\
+  \n```python\n>>> a = 2.4\n>>> np.sqrt(a) 1.5491933384829668\n>>> np.exp(a) 11.023176380641601\n\
+  ```\n\n在 NumPy 中，这些函数在数组上进行逐元素操作，产生一个数组作为输出：\n\n```python\n>>> B = np.arange(3)\n\
+  >>> B\narray([0, 1, 2])\n>>> np.exp(B)\narray([ 1.,  2.71828183,  7.3890561 ])\n\
+  >>> np.sqrt(B)\narray([ 0.,  1.,  1.41421356])\n>>> C = np.array([2., -1., 4.])\n\
+  >>> np.add(B, C)\narray([ 2.,  0.,  6.])\n```\n\n多维数组对象也是如此。你将在本书后面介绍的各种示例中看到更多\
+  \ Numpy 的用法。NumPy 的用途之一是用于蒙特卡洛模拟方法的 `ndarray` 类。\n\n## 2.2 数据分析 /  - Pandas\n\n\
+  Pandas 是一个开源的、BSD 许可库，为 Python 编程语言提供了高性能、易用的数据结构和数据分析工具。它与动物熊猫无关，名字源于术语 `panel\
+  \ data`（面板数据），这是一个计量经济学中包含同一对象在多个时期观测值的数据集。\n\n该库具有以下特性：\n\n*   用于数据操作的集成索引 `DataFrame`\
+  \ 对象。\n*   用于在内存数据结构与不同文件格式之间读写数据的工具。\n*   数据对齐和对缺失数据的集成处理。\n*   数据集的重塑和透视（pivot）。\n\
+  *   基于标签的大数据集切片和子集提取。\n*   数据结构的列插入和删除。\n*   分组引擎（Group by），允许对数据集进行拆分-应用-合并（split-apply-combine）操作。\n\
+  *   数据集的合并和连接。\n*   分级轴索引，用于在低维数据结构中处理高维数据。\n*   时间序列功能：日期范围生成和频率转换、移动窗口统计、移动窗口线性回归、日期偏移和滞后。\n\
+  \n### 2.2.1 股票市场分析示例\n\n`DataFrame` 及其包含的所有函数非常强大。以下示例是 Pandas 包在金融数据时间序列中的应用。需要将输入数据文件存储在本地，例如在\
+  \ `C:\\Temp` 中，算法是读取输入数据并根据不同的统计目的对其进行处理。道斯琼工业平均指数历史数据可以从各种互联网源下载，例如 `yahoo finance`。我们将\
+  \ CSV 文件保存到：`C:\\Temp\\DJI.csv`。\n\n在这个示例中，我们查看从 2007/11/20 到 2018/11/20 的历史数据范围，数据所示（Image0016.jpg）。代码的第一部分是创建\
+  \ Pandas 数据并将此 csv 文件读取到 dataframe：\n\n```python\nimport pandas as pd\nimport numpy\
+  \ as np\nlocation = r'C:\\Temp\\DJI.csv'\ndf = pd.read_csv(location)\n```\n\n正如我们从\
+  \ (Image0017.jpg) 中看到的，`df` 拥有 2771 行 x 7 列。我们可以计算 `Close` 列的最大值：\n\n```python\n\
+  df['Close'].max()\n```\n\n我们可以找到最大 `Close` 值的索引：\n\n```python\ndf['Close'].idxmax()\n\
+  ```\n\n如果我们想知道更多关于那一天的信息，可以简单地使用 `loc`：\n\n```python\ndf.loc[id]\n```\n\n输出所示（Image0018.jpg）：\n\
+  \n```python\nid = df['Close'].idxmax()\nsortedDF = df.sort_values('Volume', ascending=True)\n\
+  print(sortedDF)\n```\n\n我们注意到，尽管列出了前 10 个成交量，但原始 dataframe 的索引没有改变。\n\n### 2.2.2\
+  \ 进一步练习\n\n让我们根据 (Image0019.jpg) 做一个稍微高级的练习。使用此公式计算每日收益率。Pandas 是基于 NumPy 的。NumPy\
+  \ 速度的关键是一次性对整个数组执行操作，而不是逐行或逐项。因此，我们先将 pandas 序列转换为 `ndarray`：\n\n```python\nadjClose\
+  \ = df['Close'].values\n```\n\n输出所示（Image0020.jpg）。为了理解 `adjClose[1:]` 和 `adjClose[:-1]`\
+  \ 它们实际上代表什么，我创建了图 2-1，希望从视觉角度容易理解：\n\n```python\nret = (adjClose[1:] - adjClose[:-1])\
+  \ / adjClose[:-1]\n```\n\n道斯琼工业平均指数每日收益率 (ret) 数组为：[-0.01622578, 0.0142073, -0.01829148,\
+  \ ..., 0.00490133, -0.01557383]$。或者，我们只需要遍历（循环会降低算法速度）Pand dataframe 中的所有项。首先，我们需要定义大小正确的空\
+  \ NumPy `ndarray`。你会发现这与定义一个全零的 NumPy `ndarray` 不是回事。应该谨慎使用，如果定义了比需要更大的空数组，会导致数组末尾出现额外的非零值，反过来会混淆或导致我们的计算结果出错。\n\
+  \n```python\nret = np.empty(adjClose.size-1)\nfor i in range(adjClose.size-1):\n\
+  \    ret[i] = (adjClose[i+1] - adjClose[i]) / adjClose[i]\n```\n\n\n\n\n```python\n\
+  print (ret) array([-0.01622578,  0.0142073 , -0.01829148, ..., 0.00490133, -0.01557383])\n\
+  ```\n返回值的输出与第一种相同。使用 `Pandas` series 特性的第一种方法快得多（对于不熟悉 `Pandas` 数据序列结构的人来说可能可能那么直观），而且更加高级。\n\
+  \n### 练习 2\n另一个我们可以轻松练习的练习是计算每日收益率的平均值和标准差：\n```python\nmean = ret.mean()\nstdv\
+  \ = ret.std()\nprint('the mean of the daily return is' , mean)\nprint('the standard\
+  \ deviation is' , stdv)\n```\n每日收益率的平均值为 `0.0005977280989583951`，标准差为 `0.007498175157038745`。\n\
+  \n### 练习 3\n计算收益率后，我们需要通过将计算出的每日收益率写回新的 csv 文件来存储它们。第一方法是传统的循环方法（缓慢！），它涉及逐个插入项目：\n\
+  ```python\nadjClose = df['Adj Close']\nadjCloseArray = adjClose.values\nret = (adjCloseArray[1:]\
+  \ - adjCloseArray[:-1])/ adjCloseArray[:-1]\ni = 0\nwhile i < adjClose.size- 1 :\n\
+  \    df.loc[i, ('return')] = ret[i]\n    i = i+ 1\n```\n`loc[]` 在行级别工作，要访问列只需使用\
+  \ `df['xxx']`，其中 `xxx` 是数据框列名。上述是行和列组合的示例：\n```python\nprint (df)\n```\n![](img/Image00021.jpg)\
+  \ [2771 行 x 8 列]\n\n第二种方法是将转换后的 `Pandas` series 直接插入整个 `DataFrame` 而不使用循环，这种方法更快且更直观。我们首先将收益率数组转换为\
+  \ `Pandas DataFrame`，然后使用带有相关参数的 `insert()` 函数：\n```python\ndf_ret = pd.DataFrame(ret,\
+  \ dtype = 'float')\ndf.insert(loc = 0, column = 'return ', value = df_ret)\n```\n\
+  结果如下：![](img/Image00022.jpg) 我们也可以通过将 `loc = 0` 改为其他值（只要 `0 <= loc <= len(columns)`）来更改此新创建列的位置。有许多替代方案，例如使用\
+  \ `.apply()` 函数。如果你感兴趣，我将留给你们去探索所有这些。本章的主要目的是介绍 Python 或者预热其相关包在金融数据领域的适用用法知识。\n\
+  \n### 练习 4\n在计算平均值和标准差后，我们可以进行简单的过滤，查看每日收益率值中的异常值。我们将离群值定义为偏离平均值两倍标准差的值。\n```python\n\
+  upLimit = mean+2*stdv\nlowLimit = mean-2*stdv\n### 从数据框中过滤出所需行的逻辑条件\ndf[(df['return']\
+  \ > upLimit) | (df['return'] < lowLimit)]\n```\n![](img/Image00023.jpg) 图 2‑2 用于道斯指数数据的\
+  \ pandas 数据框架。它在每日限制报告中非常有用。通常，在面对大量的每日数据或历史数据时，我们需要过滤出有多少天或多少实体超过了业务或法规预设的限制。一个典型的例子是\
+  \ `VaR` 或 `Expected Shortfall`预期缺口分析。`VaR`（或 `ES`）决定了银行在特定时间内可以承受的损失限制。对于每年（或其他时间段）超过此限制的天数有一个阈值。使用一些简单的逻辑，我们可以轻松地提取这些异常值。\n\
+  \n### 2.2.3 报告生成\n现在我们将带有新插入列值的数据框作为报告保存，例如本地或共享驱动器上的 csv 文件。\n```python\ndf.to_csv(r'C:/Temp/DJI_return.csv')\n\
+  ```\n你应该能看到 `C:/Temp` 下创建了新文件 `DJI_return.csv`。你可能会认为 csv 文件并不那么“强大”，你更倾向于使用 Excel\
+  \ 作为报告模板，并嵌入图形图表。以下是对道琼斯指数历史数据进行数据分析示例的完整代码，并生成一个带有图形图表的 Excel 工作表作为报告模板。\n```python\n\
+  from pandas import read_csv\nimport pandas as pd\nlocation = r'C:/Temp/DJI.csv'\n\
+  df = pd.read_csv(location)\n# 现在我们创建了一个 pandas Data Frames\nadjClose = df['Adj Close']\n\
+  adjCloseArray = adjClose.values\n### 计算每日收益率\nret = (adjCloseArray[1:] - adjCloseArray[:-1])/\
+  \ adjCloseArray[:-1]\n### 将每日收益率插回数据\ndf_ret = pd.DataFrame(ret, dtype = 'float')\n\
+  df.insert(loc = 0, column = 'return ', value = df_ret)\n### 将 Pandas DataFrame 保存到\
+  \ Excel 表格\nout_path = r'C:/Temp/Dow_return.xlsx'\nwriter = pd.ExcelWriter(out_path,\
+  \ engine = 'xlsxwriter')\ndf.to_excel(writer, sheet_name= 'Sheet1', startrow=0)\n\
+  ### 获取簿和表对象以便进一步操作\nbook = writer.book\nsheet = writer.sheets['Sheet1']\n### 计算平均值和标准差以计算异常值。这里我们使用\
+  \ 2 倍标准差作为标准\nmean = ret.mean()\nstdv = ret.std()\nupLimit = mean+2*stdv\nlowLimit\
+  \ = mean-2*stdv\n### 使用条件格式将异常值设为红色\nformat1 = book.add_format({'font_color': '#E93423'})\n\
+  sheet.conditional_format('B2:B2771', {'type': 'cell', 'criteria': '<=', 'value':\
+  \ lowLimit, 'format': format1})\n### 整个期间的图表\nchart = book.add_chart({'type': 'column'})\n\
+  chart.add_series({'values': '=Sheet1!B2: B2771', 'name': '=Sheet1!B1', 'categories':\
+  \ '=Sheet1!$C$2:$C$2771'})\n### 我们在正确的位置插入每日收益率图表\nsheet.insert_chart('K10', chart)\n\
+  writer.save()\n```\n可以看出，与生成包含结果的简单 csv 文件相比，拥有 Excel 工作簿作为报告模板需要更多的代码行和配置。生成的报告看起来\
+  \ ![](img/Image00024.jpg) 图 2‑3 生成的报告。我们已经解释了 `Pandas` 包在数据分析方面可以提供的基础函数，它极其依赖于具有重复操作的大规模数据，例如每日报告的生成或对标准数据的每日分析。在报告生成方面，有进一步的可能性通过更个性化的格式和专用的标题等来扩展工作表功能。我将留给你们去探索这个选项。尽管如此，我们不需要把生活变得得太复杂，因为某些事情直接在工作表上做更容易。在数据科学部分，也有可能直接在\
+  \ Yahoo 数据上工作而无需将其下载为本地保存文件，这允许使用更高级的“数据科学”方法来分析多个股票的金融市场。由于组合管理和算法投资不是本书的主题，我将留给你们根据兴趣探索这一领域。\n\
+  \n\n\n\n\n## 2.3 可视化图形 – Matplotlib\n\nMatplotlib 图形表示在金融领域非常重要。让我们来看看如何绘制数据。我们需要先导入绘图包。最常用的包名为\
+  \ `matplotlib`。典型的导入标题格式为：\n\n```python\nimport matplotlib\nimport matplotlib.pyplot\
+  \ as plt\n```\n\n在下方的代码示例中，假设上述导入已执行`plt` 代表 `matplotlib.pyplot`。以 `pandas` 包为例，通过简单的命令即可完成单列数据的简单图表：`df['Adj\
+  \ Close'].plot(grid = True)`。\n\n![](img/Image00025.jpg)图 2‑4 输入数据中的 `AdjClose`\
+  \ 时间序列\n\n这种图非常简单且原始，没有图表标题也没有关于其代表含义的轴信息。x 轴本应代表 `Date` 类型，但它显示的是不同的信息。让我们通过一种更复杂的方法，在同一张图表中绘制每日收益率和\
+  \ `Adj close` 数据，但它们各自拥有独立的刻度。\n\n要正确绘制 `Date` 类型并不显而易见，因为从源文件加载时，DataFrame 中的 `Date`\
+  \ 列是字符串类型。如果我们将其转换为 `int/float`，它可以正常工作，但在 x 轴上显示 `int/float` 类型在视觉上是不直观的。例如，上面简单绘制了某些数据的图，我们很难直观地理解\
+  \ x 轴 `[0-2500]` 代表什么：点的间隔还是仅仅不同的步骤等。\n\n`Pandas` 包提供了一个简单的方法来实现。在早期当我们将 csv 文件读取到\
+  \ `Pandas` DataFrame 时，只需添加额外的参数 `parse_date`，这是一个将字符串列序列转换为 datetime 实例数组的函数：`df\
+  \ = pd.read_csv(location, parse_dates=['Date'])`, `date = df['Date'].values`。\n\n\
+  变量 `date` 的类型是 `numpy.ndarray`，但通过插入这个额外参数 `parse_dates=['Date']`，它的元素类型已从字符串变为了\
+  \ `numpy.datetime64`。以下代码将产生描述的图表：\n\n```python\nimport matplotlib\nimport matplotlib.pyplot\
+  \ as plt\nfig, ax1 = plt.subplots()\n\ncolor = 'red'\nax1.set_xlabel('Date')\nax1.set_ylabel('daily\
+  \ return', color=color)\nax1.plot(date[:-1], ret, color=color) # 这是为了适应 x 和 y 轴的大小，因为\
+  \ ret 的元素比其他少一个\nax1.tick_params(axis='y', labelcolor=color)\n\nax2 = ax1.twinx()\
+  \ # 实例化共享相同 x 轴的第二个轴\ncolor = 'blue'\nax2.set_ylabel('Adj Close', color=color)\n\
+  ax2.plot(date, adjCloseArray, color=color) # 这里我们使用了 Numpy ，也可以使用 pandas 数据序列如 df['Adj\
+  \ Close']\nax2.tick_params(axis='y', labelcolor=color)\nplt.title('Historical Daily\
+  \ return and Adj close value')\nplt.grid()\nplt.show()\n```\n\n![](img/Image00026.jpg)图\
+  \ 2‑5 一图中的两个图表，左侧（红色）为每日收益率时间序列，右轴（蓝色）为调整后收盘价时间序列\n\n与第一个简单图相比，这里有几个特点：\n* 我们有了图表标题和每个轴的名称来指示它们代表的含义\n\
+  * 在同一图中绘制了两个不同的刻度值，它们各自拥有自己的刻度\n* 非易处理的 `Date` 类型已正确转换\n\n## 2.4 结论\n\n我们已经了解了什么是编程语言以及什么是\
+  \ Python：从基础数据类型、循环、条件到 Python 函数。显然，它与其他编程语言有许多相似之处，例如在金融领域也常用的 `R` 和 `VBA`。然后，我们学习了三个最常用的\
+  \ Python 包：`Numpy`、`Pandas` 和 `Matplotlib`。所有这些内容都结合示例进行了解释。在下一章《进阶 Python 示例》中，我们将提高学习曲线的门槛，通过引入数学建模示例和面向对象编程概念来进一步探索这三个包。\n\
+  \n# 3 高级 Python 示例\n\n在本章中，我将进一步探索一些使用不同 Python 包的高级 Python 示例，创建不同的函数并引入面向对象编程\
+  \ (OOP)。对于初学者，我更建议在开始更高级的旅程之前，先阅读上一章并玩玩该章节中的示例。这里还介绍了量化金融模型及其数学表示。这需要一些基础的量化金融背景。\n\
+  \n## 3.1 数学建模\n\n我们看过了一个应用 `Pandas` 包的示例，其中分析了道斯琼平均指数的历史价格数据。现在我们想要构建一个程序来预测资产价格运动的未来路径。示例中有三种可能的建模选择：\n\
+  \n第一个是**确定性模型** (Deterministic Model)，这意味着资产路径遵循确定性路径，并以无风险利率 `r` 的速度增长——就像我们银行账户里的资金，其年利率是知的。假设资产\
+  \ `S` 以无风险利率 `r` 增长，标准公式为：\n\n![](img/Image00027.jpg)其中 `t = [1, T]`，`T` 是底层交易 `S`\
+  \ 的到期日，`S` 是底层资产价格，`r` 是无风险利率，`dt` 是时间的无限小增量，`dS-1` 是 `S` 的无限小增量，等于 `S`：\n\n![](img/Image0028.jpg)t-1\n\
+  \n第二个模型假设资产既增加也不减少，它保持在初始水平。公式变为：![](img/Image00029.jpg)其中 `T` 是该工具的到期日。\n\n第三个是**随机模型**\
+  \ (stochastic Model)。显然，它是三个模型中最复杂的，但也很好地代表了现实情况，即未来的资产路径是未知的，由漂移率 `μ` ![](img/Image0004.jpg)驱动，并由随机运动中的随机变量伴随\
+  \ ![](img/Image0030.jpg)假设资产 `S` 以恒定的漂移率 `μ` 增长，且恒定的波动率 ![](img/Image0031.jpg)，经典公式为：![](img/Image00032.jpg)其中\
+  \ `t = [1, T]`，`T` 是底层交易的到期日 ![](img/Image0033.jpg)`μ` 是资产增长率，`dt` 是时间的无限小增量，`dS-1`\
+  \ 是 `S` 的无限小增量，等于 `S`：`dW` 是资产随机性的随机运动，我们有：![](img/Image0028.jpg)t-1 实现方式是简化的，意味着不涉及市场数据，也没有校准。这只是为了概念理解和说明。三个模型被实现为\
+  \ Python 函数：\n\n```python\ndef deterministic_model(s_1, r, dt):\n    #假设资产以无风险利率\
+  \ r 增长\n    s = s_1 * (1 + r * dt)\n    return s\n\ndef constant_model(s_1):\n \
+  \   s = s_1\n    return s\n\ndef stochastic_model(s_1, dt, mu, vol):\n    dW = np.random.randn(1)[0]*\
+  \ np.sqrt(dt) #numpy ndarray 返回数组类型，由于其中只有一个随机数，我们使用 [0] 取值\n    ds = mu * s_1 *\
+  \ dt + vol * s_1 * dW\n    s = s_1 + ds\n    return s\n```\n\n未来的资产路径是沿时间轴的时间序列。对于随机模型，我们需要蒙特卡洛技术，这在这里通过\
+  \ NumPy 包实现。由于不确定性（与确定性或恒定模型不同），我们不仅要在时间轴上模拟，还需要在多个路径上进行，从而获得潜在资产价格路径的概述。在代码开头，我通过硬编码了某些市场数据。显然，这些参数可以不同的值，但必须遵守某些条件：\n\
+  \n\n\n\n\n### 参数设置\n\n1. `volatility` 不能超过 100% - 在这里我们将 `volatility` 设置为 `10%`。\n\
+  2. `漂移率 μ ( mu )` 和 `无风险利率 r` 需要是一个较小的数字 – 我们将无风险利率设置为 `1%`，将漂移率设置为 `4%`，这代表了当前的费率和经济增长水平。\n\
+  3. `dt` 是时间步长，需要足够小以符合其概念意义 – 我们将 `dt` 设置为 `0.1`。\n4. `time_step` 与底层资产的到期期限相关。\n\
+  5. `sim_step` 决定了模拟结果的准确性。\n\n在这里为了说明目的，我们将 `time_step` 和 `sim_step` 都设置了较小的值以加快运行速度。在下一页中，你将找到完整的代码。\n\
+  \n```python\nimport numpy as np # 我们定义市场数据和模型参数\nvol = 0.1\nr = 0.01\nmu = 0.04\n\
+  s_1 = 100\ndt = 0.1\nsim_step = 40 # 可以增加以提高准确性，但会减慢速度\ntime_step = 80 # 与底层资产的到期期限相关\n\
+  \n### 初始化 ndarray 输出\ndet_model_output = np.zeros(time_step) # 确定性模型，所以我们需要 1D 数组\n\
+  const_model_output = np.zeros(time_step) # 常数，我们不需要模拟\nstoc_model_output = np.zeros((time_step,\
+  \ sim_step))\nconst_model_output[:] = s_1\ndet_model_output[0] = s_1\nstoc_model_output[0:]\
+  \ = s_1 # 为确定性和随机模型启动循环\nfor column in range(0, sim_step):\n    for row in range(1,\
+  \ time_step):\n        if column == 0:\n            det_model_output[row] = deterministic_model(det_model_output[row-1],\
+  \ r, dt)\n        # 确定性模型只有一个维度，即时间范围\n        stoc_model_output[row][column] =\
+  \ stochastic_model(stoc_model_output[row-1][column], dt, mu, vol)\n```\n\n`stoc_model_output`\
+  \ 的缩进非常重要，因为只有随机模型的 2D 矩阵会通过嵌套 循环（见图 3-1）。确定性模型没有随机性，因此除列零之外（其他模拟路径结果）在这里并不重要。现在我们有了用于确定性资产价格、常量资产价格和随机资产价格的\
+  \ `det_model_output`、`const_model_output` 和 `stoc_model_output`。算法包含嵌套 循环，这不是我们想要的特性。在这里纯粹是为了说明（见图\
+  \ 3-1），我们构建了一个二维数组（`ndarray`），其中每列代表每个模拟步，每行代表时间步。![](img/Image00034.jpg)\n图 3-1\
+  \ 二维数组 - 嵌套循环\n\n模拟未来资产路径并对其进行编码有很多替代方案，其中一些比其他的更优，另一些只是不同的思考方式。\n\n## 3.2 可视化图形示例\n\
+  \n为了可视化资产路径及其指示的未来价格，我们需要在图 3-2 中导入 `matplotlib` 进行图形化表示。\n\n```python\nimport matplotlib\n\
+  import matplotlib.pyplot as plt\n\nplt.plot(det_model_output, 'g')\nplt.title('Deterministic\
+  \ model output')\nplt.xlabel('time step')\nplt.ylabel('Asset Price')\nplt.grid()\n\
+  plt.show()\n```\n![](img/Image00035.jpg)\n图 3-2 基于确定性模型的资产价格路径\n\n对于常量模型输出 `const_model_output`：见图\
+  \ 3-3：\n```python\nplt.plot(const_model_output, 's')\nplt.title('constant model\
+  \ output')\nplt.xlabel('time step')\nplt.ylabel('Asset Price')\nplt.grid()\nplt.show()\n\
+  ```\n![](img/Image00036.jpg)\n图 3-3 常量（无噪声）资产路径\n\n为了绘制随机资产路径，我们需要一个 循环和 `np.transpose()`。由于我们要沿着\
+  \ x 轴绘制时间步，所以我们需要先转置输出以符合我们的图形表示：见图 3-4 用于：\n```python\nfor i in range(0, sim_step):\n\
+  \    plt.plot(np.transpose(stoc_model_output)[i])\n\nplt.plot(np.mean(stoc_model_output,\
+  \ axis=1), 'bs')\nplt.title('stochastic model output')\nplt.xlabel('time step')\n\
+  plt.ylabel('Asset Price')\nplt.grid()\nplt.show()\n```\n![](img/Image00037.jpg)\n\
+  图 3-4 基于随机模型的资产价格路径\n\n从图 3-4 可以看到粗蓝线是每个时间步资产价格的平均（期望）。如果我们想绘制平均值，见图 3-5：\n```python\n\
+  plt.plot(np.mean(stoc_model_output, axis=1))\n```\n![](img/Image00038.jpg)\n图 3-5\
+  \ 随机模型下的平均值\n\n## 3.3 模型参数分析\n\n...\n![](img/Image00039.jpg)\n图 3-6 模拟步的平均资产价格\n\
+  \n## 3.4 代码实现细节\n\n随机模型的结果非常有趣，对于那些不熟悉经典几何布朗运动（GBM）模型的人来说可能会发现输出很反常。首先，回顾函数：\n\n\
+  ```python\ndef stochastic_model(s_1, dt, mu, vol):\n    dW = np.random.randn(1)[0]\
+  \ * np.sqrt(dt)\n    ds = mu * s_1 * dt + vol * s_1 * dW\n    s = s_1 + ds\n   \
+  \ return s\n```\n\n我们稍微修改了主代码部分以包含随机建模输出 `ndarray` ：\n\n```python\ndef cal(vol):\n\
+  \    dt = 0.1\n    r = 0.01\n    mu = 0.04\n    s_1 = 100\n    dt = 0.1\n    sim_step\
+  \ = 40\n    time_step = 80\n    stoc_model_output = np.zeros((time_step, sim_step))\n\
+  \    stoc_model_output[0:] = s_1 # 我们设置初始值\n    for column in range(0, sim_step):\n\
+  \        for row in range(1, time_step):\n            if column == 0:\n        \
+  \        det_model_output[row] = deterministic_model(det_model_output[row-1], r,\
+  \ dt)\n            stoc_model_output[row][column] = stochastic_model(stoc_model_output[row-1][column],\
+  \ dt, mu, vol)\n    return np.mean(stoc_model_output, axis=1)\n```\n\n现在我们开始主部分，包括绘图部分和我们分析的目标变量\
+  \ – `volatility`。已经设置了一个不同波动率列表，使用 for 循环，波动率列表中的每个值都发送到函数 `cal()` 进行分析：导入 `matplotlib`。\n\
+  \n\n\n\n\n```python\nimport matplotlib.pyplot as plt\nimport numpy as np\nvol =\
+  \ [ 0.0 , 0.2 , 0.5 , 0.8 , 1.0 ]\nmu = 0.02\n\nfig = plt.figure()\n\nax = plt.subplot(\
+  \ 111 )\n\nfor j in range ( len ( vol)):\n    vol_i = vol [j]\n    x = cal(vol_i)\n\
+  \    ax.plot( x , label= '$vol = %.1f$' %vol_i)\n\nax.legend()\nplt.title( 'different\
+  \ asset price under different vols for mu = %.2f' %mu ) plt.xlabel( 'time step'\
+  \ ) plt.ylabel( 'Asset Price' )\n\nplt.show()\n```\n\n总的来说，与低波动率相比，高波动率具有更多的“随机”轨迹（例如\
+  \ `vol = 1.0`）：当 `vol = 0.0` 时，资产价格路径等同于确定性模型的输出。![](img/Image00040.jpg)图 3-7 `mu\
+  \ = 0.02` 时不同波动率下的资产价格路径\n\n一旦我们改变漂移率 `mu` (μ) 值，整个情况也会发生变化。当 `μ` 较高时，向上趋势更加明显。看图\
+  \ 3-8 ![](img/Image00041.jpg)图 3-8 `mu = 0.18` 时不同波动率下的资产价格路径\n\n如果漂移 `u` 变为负数，趋势将变为向下。看图\
+  \ 3-9 ![](img/Image00042.jpg)图 3-9 `mu = -0.1` 时不同波动率下的资产价格路径\n\n现在，我们使用类似的分析机制，重点关注漂移率\
+  \ `u` 而不是波动率 `σ`。我们只需保留上述示例中的 `stochastic_model()` 函数，并稍作修改 `cal()` 函数：\n\n```python\n\
+  def cal ( mu ):\n    dt = 0.1\n    r = 0.01\n    s_1 = 100\n    sim_step = 40\n\
+  \    time_step = 80\n    stoc_model_output = np.zeros((time_step, sim_step))\n \
+  \   stoc_model_output [0][:] = s_1\n    for column in range ( 0 ,sim_step):\n  \
+  \      for row in range ( 1 ,time_step):\n            stoc_model_output[row][column]\
+  \ = stochastic_model(stoc_model_output[row- 1][column], dt, mu , vol)\n    return\
+  \ np.mean(stoc_model_output, axis= 1 )\n```\n\n我们还需要修改绘图代码部分并更改全局变量：`u` 的列表。在分析示例中，我们将波动率设置为\
+  \ 0.2\n\n```python\nmu = [- 0.2 , -0.1 , 0.0 , 0.2 ]\nvol = 0.2\nfig = plt.figure()\n\
+  \nax = plt.subplot(111)\n\nfor j in range(len(mu)):\n    mu_i = mu[j]\n    x = cal(mu_i)\n\
+  \    ax.plot( x , label= '$mu = %.1f$' %mu_i)\n\nax.legend()\nplt.title (\"different\
+  \ asset price under different drift for vol = %.2f\"% vol) plt.xlabel( 'time step'\
+  \ ) plt.ylabel( 'Asset Price' )\nplt.grid()\nplt.show()\n```\n\n![](img/Image00043.jpg)图\
+  \ 3-10 `vol = 0.2` 时不同漂移率下的资产价格路径\n\n对于那些关注细节的人，`plt.grid()` 与之前相比为图表添加了网格。看图 3-10\
+  \ 较高的 `μ` 驱动了趋势（Higher `μ` drives the trend）。\n\n\n\n\n\n`>>> z.calculate_price()`\
+  \ 97.5257618399161 每每次执行上述两行代码时，输出都是不同的，因为每次在调用类函数 `Stochastic_model.calculate_price()`\
+  \ 时，都会调用类 `Stochastic_model` 的内部函数 `calculate_dW()` 来生成用于随机价格计算的随机数。这是一个典型的封装示例，它从外部视图“隐藏”了\
+  \ `calculate_dW()` 函数及其相关数据。你可以发现面向对象编程（OOP）的缺点：`x`、`y` 和 `z` 对象都有有自己的 `calculate_price()`\
+  \ 函数，但在相同的输入变量下输出不同的结果。如果我们不关注每个 `calculate_price()` 函数的类层级实现，困惑和错误将不可避免的。正如之前提到的，市场数据参数是为了说明目的而预定义的。代码的主要部分是：\n\
+  \n```python\nimport numpy as np\nvol = 0.1\ndt = 0.1\nr = 0.01 mu = 0.02\ns_1 =\
+  \ 100\nsim_step = 40\ntime_step = 80\ndet_model_output = np.zeros(time_step)\nconst_model_output\
+  \ = np.zeros(time_step)\nstoc_model_output = np.zeros((time_step, sim_step)) # 设置常量模型输出的值，因为它不需要进行模拟\n\
+  const_model_output[:] = s_1 # 第零步初始化\ndet_model_output[0] = s_1\nstoc_model_output[0:]\
+  \ = s_1\nfor column in range ( 0 , sim_step):\n    for row in range ( 1 , time_step):\n\
+  \        if column == 0 :\n            det_model_output[row] = Deterministic_model(det_model_output[row\
+  \ - 1],dt, r).calculate_price() # 先调用其构造函数创建一个随机模型对象\n            s_model_obj =Stochastic_model(stoc_model_output[row\
+  \ -1][column], dt,mu,vol)\n            stoc_model_output[row][column] = s_model_obj.calculate_price()\n\
+  ```\n\n我演示了两种生成类对象并调用其成员函数的方法。第一种（确定性模型对象）是使用一行代码创建对象并调用其计算价格函数 - `obj.calculate_price()`。第二种方法（随机模型对象）是先调用其构造函数创建一个中间模型对象，然后通过创建的对象调用其函数：`obj\
+  \ = model_constructor()` `obj.calculate_price()`\n\n```python\nimport matplotlib\n\
+  import matplotlib.pyplot as plt\nfor i in range ( 0 , sim_step):\n    plt.plot(np.transpose(stoc_model_output)[i])\n\
+  plt.plot(np.mean(stoc_model_output, axis= 1 ), 'bs' )\nplt.title( 'Stochastic model\
+  \ output' )\nplt.xlabel( 'time step' ) plt.ylabel( 'Asset Price' )\nplt.grid()\n\
+  plt.show()\n```\n\n对 `stoc_model_output` 使用相同的绘图代码，我们得到了随机建模资产价格路径的图 3-11，这与之前的非\
+  \ OOP 实现非常相似![](img/Image00044.jpg)图 3-11 随机建模资产价格路径。只需将这三块紫色背景的代码复制到 Spyder 或 Jupyter\
+  \ notebook 等 Python 编辑器中，你就可以获得此处演示代码相同的结果，因为这里的代码是可以执行的。\n\n### 关于作者\n\n2008 年\
+  \ 1 月抵达伦敦在摩根大通（JP Morgan）工作并不是什么平凡的事，至少对于我这个来自普通背景、与西方世界毫无联系、并由谦逊的父母支持的人来说是如此的。此外，我没有\
+  \ MBA 学位，也没有来自牛津或常春藤等名校大学的金融硕士学位来换取优厚的待遇和额外的酌扣奖金。2008 年在我的记忆中以及金融史上都是非常不寻的一年。那是\
+  \ 2008 年 9 月，在雷曼兄弟倒产期间。当时我被分配到前台的 Hybrids 部门，负责信用衍生品的定价和建模。为了简单介绍一下 Hybrids 和 Exotics（奇异产品）：我们有\
+  \ CDO、CDO2、杠杆分档以及使用多名信用投资组合建模的档位期权。是的，它们听起来都既复杂又令人兴奋。在信用衍生品交易台的日子里就像地狱，但是一个充满学习机会和让你开眼界的地狱，让你看到一个并不多人洞察的世界；那是一个有着漫长工作时间、不断的叫喊声以及需要应对贪婪和疯狂的地狱。现在回想起来，我发现我的记忆过滤掉了糟糕和悲伤的部分，只留下了兴奋和回报。那些辛劳而狂野的日子塑造了现在这个具有韧性、坚韧不拔和决心的自我。随着我所获得的那些金字不可求的职业技能，我现在拥有一套强大的工具箱，可以应对各种环境，尤其是恶劣的环境。将编程视为一段通往解决方案的旅程并享受这段旅程，有助于我们欣赏通往目标本身的每一个元素。\n\
+  \n"
