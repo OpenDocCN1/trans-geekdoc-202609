@@ -1,0 +1,1707 @@
+- fmt: "\n![](image_rsrc2TZ.jpg)\n\n# Go Programming For Beginners Quick Start Guide\n\
+    Ray Yao\n\nCopyright © 2015 by Ray Yao All Rights Reserved. Neither part of this\
+    \ book nor whole of this book may be reproduced or transmitted in any form or\
+    \ by any means electronic, photographic or mechanical, including photocopying,\
+    \ recording, or by any information storage or retrieval system, without prior\
+    \ written permission from the author. All rights reserved! Ray Yao.\n\n## Preface\n\
+    \n“Go Programming” covers all essential Go language knowledge. You can learn complete\
+    \ primary skills of Go programming fast and easily.\n\nThe book includes more\
+    \ than 60 practical examples for beginners and includes tests & answers for the\
+    \ college exam, the engineer certification exam, and the job interview exam.\n\
+    \n**Note:** This book is only for Go beginners, it is not suitable for experienced\
+    \ Go programmers.\n\n### Source Code for Download\nThis book provides source code\
+    \ for download; you can download the source code for better study, or copy the\
+    \ source code to your favorite editor to test the programs.\nSource Code Download\
+    \ Link: [https://forms.aweber.com/form/34/1805492434.htm](https://forms.aweber.com/form/34/1805492434.htm)\n\
+    \n## Table of Content\n\n- [Hour 1](#part0006.xhtml)\n- [What is Go?](#part0007.xhtml)\n\
+    - [Install Go](#part0008.xhtml)\n- [Environment Variables](#part0009.xhtml)\n\
+    - [First Program of Go](#part0010.xhtml)\n- [Comment](#part0011.xhtml)\n- [Identifier](#part0012.xhtml)\n\
+    - [Summary](#part0013.xhtml)\n- [Hour 2](#part0014.xhtml)\n- [Line Separator](#part0015.xhtml)\n\
+    - [About “{”](#part0016.xhtml)\n- [Keywords](#part0017.xhtml)\n- [Data Type](#part0018.xhtml)\n\
+    - [Variables](#part0019.xhtml)\n- [Multiply Variables’ Declaration](#part0020.xhtml)\n\
+    - [:= assignment operator](#part0021.xhtml)\n- [Summary](#part0022.xhtml)\n- [Hour\
+    \ 3](#part0023.xhtml)\n- [Constants](#part0024.xhtml)\n- [iota](#part0025.xhtml)\n\
+    - [Arithmetic Operators](#part0026.xhtml)\n- [Relational Operators](#part0027.xhtml)\n\
+    - [Logical Operators](#part0028.xhtml)\n- [Assignment Operators](#part0029.xhtml)\n\
+    - [Operators Precedence](#part0030.xhtml)\n- [Summary](#part0031.xhtml)\n- [Hour\
+    \ 4](#part0032.xhtml)\n- [If Statement](#part0033.xhtml)\n- [if…else statement](#part0034.xhtml)\n\
+    - [Switch Statement](#part0035.xhtml)\n- [Select Statement](#part0036.xhtml)\n\
+    - [For Loop](#part0037.xhtml)\n- [Summary](#part0038.xhtml)\n- [Hour 5](#part0039.xhtml)\n\
+    - [Break](#part0040.xhtml)\n- [Continue](#part0041.xhtml)\n- [Goto](#part0042.xhtml)\n\
+    - [Function](#part0043.xhtml)\n- [Working Scope](#part0044.xhtml)\n- [Summary](#part0045.xhtml)\n\
+    - [Hour 6](#part0046.xhtml)\n- [Array](#part0047.xhtml)\n- [Pointers](#part0048.xhtml)\n\
+    - [Nil Pointer](#part0049.xhtml)\n- [Summary](#part0050.xhtml)\n- [Hour 7](#part0051.xhtml)\n\
+    - [Structures](#part0052.xhtml)\n- [Slice](#part0053.xhtml)\n- [append() & copy()](#part0054.xhtml)\n\
+    - [Summary](#part0055.xhtml)\n- [Hour 8](#part0056.xhtml)\n- [GOROUTINE](#part0057.xhtml)\n\
+    - [Range](#part0058.xhtml)\n- [Map](#part0059.xhtml)\n- [Type Conversion](#part0060.xhtml)\n\
+    - [Recursion](#part0061.xhtml)\n- [Summary](#part0062.xhtml)\n- [Appendix 1](#part0063.xhtml)\n\
+    - [Concurrency](#part0064.xhtml)\n- [Appendix 2](#part0065.xhtml)\n- [Tests](#part0066.xhtml)\n\
+    - [Answers](#part0067.xhtml)\n- [Source Code Download](#part0068.xhtml)\n\n##\
+    \ Hour 1\n\n### What is Go?\nGo is an open source programming language released\
+    \ by Google in 2009. Go is a new language, a concurrent and fast compiled language\
+    \ with garbage collection. It has a great characteristic: it can compile a large\
+    \ Go program in a few seconds on a computer. Go provides a model for software\
+    \ construction that makes dependency easier. Go is a statically typed language,\
+    \ and its type definition has no hierarchy, so users don't have to spend time\
+    \ defining relationships between types, which make users feel it is lighter than\
+    \ a typical object-oriented language. Go can provide a way to construct system\
+    \ software on a multicore machine. The Go language programming is optimized for\
+    \ multiprocessor system applications that can be faster than `C++` and more securely\
+    \ support parallel processes. The feature of the Go language:\n\n1. Simple, fast\
+    \ and safe\n2. Parallel, open source\n3. Memory management, array security, fast\
+    \ compilation\n\n### Install Go\nThis book uses Windows OS as examples to install\
+    \ Go. Download Link: [https://golang.org/dl/](https://golang.org/dl/)\n1. Click\
+    \ the link, go to the download web page. (image_rsrc2U0.jpg)\n2. Click the `go1.11.2\
+    \ windows-amd64.msi`, download the Go Installer to the local computer.\n3. Click\
+    \ the Go Installer, begin to install (image_rsrc2U1.jpg)\n4. Click the `Next`.\
+    \ By default, MSI files will be installed in the `C:\\Go` directory.\n5. When\
+    \ the installation is complete, please click the `Finish`. (image_rsrc2U2.jpg)\n\
+    \n### Environment Variables\nAfter installing Go, you need to add `C:\\Go\\bin`\
+    \ to the `PATH` of environment variables. Please configure the environment variables.\
+    \ Go to “Control Panel” > `System` > `Advanced System Settings` > `Advanced` >\
+    \ `Environment Variables` > `Path` > `Edit…` > `New`. Please add `C:\\Go\\bin`\
+    \ to the end of the Path. (image_rsrc2U3.jpg)\nNote: The setting interface is\
+    \ different in different Windows OS. Please restart the computer so that the setting\
+    \ will take effect.\n\n### First Program of Go\nPlease create a working folder\
+    \ `myGo` under `C:\\`, open the Notepad editor, and write the following code into\
+    \ the editor.\n\nExample 1.1\n```go\npackage main\nimport \"fmt\"\nfunc main()\
+    \ {\n    fmt.Println(\"Hello, World!\")\n}\n```\nSave the file as `hello.go` in\
+    \ the `C:\\myGo`. Open the Command Line with `cmd`, enter the following commands:\
+    \ (image_rsrc2U4.jpg)\nOutput: `Hello World!`\n\nExplanation: `package main` defines\
+    \ the name of the package as `main`. Each Go application must include a package\
+    \ called `main`. The imported package `fmt` contains I/O functions. `func main()`\
+    \ is the first function to execute in the Go application. `fmt.Println(\"Hello,\
+    \ World!\")` outputs the text `Hello, World!`. `C:\\Windows\\system32>cd\\` goes\
+    \ back to C: root directory. `C:\\cd myGo` enters the `myGo` folder. `go run`\
+    \ is a command to execute the Go program.\n\n### Comment\n```go\n//\n/* ... */\n\
+    ```\n`//` is the symbol of single-line comment. `/*` and `*/` are the symbols\
+    \ of multi-line comment. Comments will not be compiled. The Go compiler will ignore\
+    \ all comments.\n\nExample 1.2\n```go\npackage main // package declaration\nimport\
+    \ \"fmt\"\nfunc main() {\n    // define a main function\n    fmt.Println(\"Hello,\
+    \ World!\")\n}\n/* The output of the above code is: Hello, World! */\n```\nPlease\
+    \ use `go run` command to run this program, and check the result.\n"
+  raw: "\n\n![](image_rsrc2TZ.jpg)\n\nGo Programming For Beginners Quick Start Guide\
+    \ Ray Yao \n\nCopyright © 2015 by Ray Yao All Rights Reserved Neither part of\
+    \ this book nor whole of this book may be reproduced or transmitted in any form\
+    \ or by any means electronic, photographic or mechanical, including photocopying,\
+    \ recording, or by any information storage or retrieval system, without prior\
+    \ written permission from the author. All rights reserved! Ray Yao \n\nRay Yao’s\
+    \ eBooks & Books on Amazon Advanced C++ Programming by Ray Yao Advanced Java Programming\
+    \ by Ray Yao AngularJs Programming by Ray Yao C# Programming by Ray Yao C# Interview\
+    \ & Certification Exam C++ Programming by Ray Yao C++ Interview & Certification\
+    \ Exam Django Programming by Ray Yao Go Programming by Ray Yao Html Css Programming\
+    \ by Ray Yao Html Css Interview & Certification Exam Java Programming by Ray Yao\
+    \ Java Interview & Certification Exam JavaScript Programming by Ray Yao JavaScript\
+    \ 50 Useful Programs JavaScript Interview & Certification Exam JQuery Programming\
+    \ by Ray Yao JQuery Interview & Certification Exam Kotlin Programming by Ray Yao\
+    \ Linux Command Line Linux Interview & Certification Exam MySql Programming by\
+    \ Ray Yao Node.Js Programming by Ray Yao Php Interview & Certification Exam Php\
+    \ MySql Programming by Ray Yao PowerShell Programming by Ray Yao Python Programming\
+    \ by Ray Yao Python Interview & Certification Exam R Programming by Ray Yao Ruby\
+    \ Programming by Ray Yao Rust Programming by Ray Yao Scala Programming by Ray\
+    \ Yao Shell Scripting Programming by Ray Yao Visual Basic Programming by Ray Yao\
+    \ Visual Basic Interview & Certification Exam Xml Json Programming by Ray Yao\
+    \ \n\nPreface “Go Programming” covers all essential Go language knowledge. You\
+    \ can learn complete primary skills of Go programming fast and easily.  \n\nThe\
+    \ book includes more than 60 practical examples for beginners and includes tests\
+    \ & answers for the college exam, the engineer certification exam, and the job\
+    \ interview exam.  \n\nNote: This book is only for Go beginners, it is not suitable\
+    \ for experienced Go programmers. Source Code for Download This book provides\
+    \ source code for download; you can download the source code for better study,\
+    \ or copy the source code to your favorite editor to test the programs. Source\
+    \ Code Download Link: [https://forms . aweber . com/form/34/1805492434 . htm](https://forms.aweber.com/form/34/1805492434.htm)\
+    \ \n\nTable of Content [Hour 1](#part0006.xhtml) [What is Go?](#part0007.xhtml)\
+    \ [Install Go](#part0008.xhtml) [Environment Variables](#part0009.xhtml) [First\
+    \ Program of Go](#part0010.xhtml) [Comment](#part0011.xhtml) [Identifier](#part0012.xhtml)\
+    \ [Summary](#part0013.xhtml) [Hour 2](#part0014.xhtml) [Line Separator](#part0015.xhtml)\
+    \ [About “{”](#part0016.xhtml) [Keywords](#part0017.xhtml) [Data Type](#part0018.xhtml)\
+    \ [Variables](#part0019.xhtml) [Multiply Variables’ Declaration](#part0020.xhtml)\
+    \ [:= assignment operator](#part0021.xhtml) [Summary](#part0022.xhtml) [Hour 3](#part0023.xhtml)\
+    \ [Constants](#part0024.xhtml) [iota](#part0025.xhtml) [Arithmetic Operators](#part0026.xhtml)\
+    \ [Relational Operators](#part0027.xhtml) [Logical Operators](#part0028.xhtml)\
+    \ [Assignment Operators](#part0029.xhtml) [Operators Precedence](#part0030.xhtml)\
+    \ [Summary](#part0031.xhtml) [Hour 4](#part0032.xhtml) [If Statement](#part0033.xhtml)\
+    \ [if…else statement](#part0034.xhtml) [Switch Statement](#part0035.xhtml) [Select\
+    \ Statement](#part0036.xhtml) [For Loop](#part0037.xhtml) [Summary](#part0038.xhtml)\
+    \ [Hour 5](#part0039.xhtml) [Break](#part0040.xhtml) [Continue](#part0040.xhtml#a2SB)\
+    \ [Goto](#part0041.xhtml) [Function](#part0042.xhtml) [Working Scope](#part0043.xhtml)\
+    \ [Summary](#part0044.xhtml) [Hour 6](#part0045.xhtml) [Array](#part0046.xhtml)\
+    \ [Pointers](#part0047.xhtml) [Nil Pointer](#part0048.xhtml) [Summary](#part0049.xhtml)\
+    \ [Hour 7](#part0050.xhtml) [Structures](#part0051.xhtml) [Slice](#part0052.xhtml)\
+    \ [append() & copy()](#part0053.xhtml) [Summary](#part0054.xhtml) [Hour 8](#part0055.xhtml)\
+    \ [GOROUTINE](#part0056.xhtml) [Range](#part0057.xhtml) [Map](#part0058.xhtml)\
+    \ [Type Conversion](#part0059.xhtml) [Recursion](#part0060.xhtml) [Summary](#part0061.xhtml)\
+    \ [Appendix 1](#part0062.xhtml) [Concurrency](#part0063.xhtml) [Appendix 2](#part0064.xhtml)\
+    \ [Tests](#part0065.xhtml) [Answers](#part0066.xhtml) [Source Code Download](#part0068.xhtml)\
+    \ \n\nHour 1 \n\nWhat is Go? Go is an open source programming language released\
+    \ by Google in 2009. Go is a new language, a concurrent and fast compiled language\
+    \ with garbage collection. It has a great characteristic: it can compile a large\
+    \ Go program in a few seconds on a computer. Go provides a model for software\
+    \ construction that makes dependency analysis easier. Go is a statically typed\
+    \ language, and its type definition has no hierarchy, so users don't have to spend\
+    \ time defining relationships between types, which make users feel that it is\
+    \ lighter than a typical object-oriented language. Go can provide a way to construct\
+    \ system software on a multicore machine. The Go language programming is optimized\
+    \ for multiprocessor system applications that can be faster than C or C++ code\
+    \ and more securely support parallel processes. The feature of the Go language:\
+    \ \n\n1.  Simple, fast and safe\n\n2.  Parallel, interesting, open source\n\n\
+    3.  Memory management, array security, fast compilation.\n\nInstall Go This book\
+    \ uses Windows OS as examples to install Go. Download Link: [https://golan g .\
+    \ org/dl/](https://golang.org/dl/) 1. Click the link, go to the download web page.\
+    \ ![](image_rsrc2U0.jpg)2. Click the “go1.11.2 windows-amd64.msi ”, download the\
+    \ Go Installer to the local computer. 3. Click the Go Installer, begin to install……\
+    \ ![](image_rsrc2U1.jpg)4. Click the “Next”……. By default. Msi files will be installed\
+    \ in the c:\\\\Go directory. …….. …….. 5. When the installation is complete, please\
+    \ click the “Finish”. ![](image_rsrc2U2.jpg)\n\nEnvironment Variables After installing\
+    \ Go, You need to add the c:\\\\Go\\\\bin to the PATH of environment variables.\
+    \ Please configure the environment variables. Go to “Control Panel” > “System”\
+    \ > “Advanced System Settings” > “Advanced” > “Environment Variables” > “Path”\
+    \ > “Edit…” > “New”. Please add “C:\\\\Go\\\\bin ” to the end of the Path. ![](image_rsrc2U3.jpg)Note:\
+    \ The setting interface is different in different Windows OS. Please restart the\
+    \ computer so that the setting will take effect. \n\nFirst Program of Go Please\
+    \ create a working folder “myGo ” under C:\\\\, open the NotePad editor, and write\
+    \ the following code into the editor. Example 1.1 \n\n| package main import \"\
+    fmt\" func main() { fmt. Println(\"Hello, World! \") }  |\n\n| --- |\n\nSave the\
+    \ file as “hello. go” in the C:\\\\myGo. Open the Command Line with “cmd”, enter\
+    \ the following commands: ![](image_rsrc2U4.jpg)Output: Hello World! Explanation:\
+    \ “package main” defines the name of the package as main. Each Go application\
+    \ must include a package called main. The  imported package “fmt” contains I/O\
+    \ functions. “func main()” is the first function to execute in the Go application.\
+    \ fmt. Println(\"Hello, World! \") outputs the text “Hello, World! ”. C:\\\\Windows\\\
+    \\system32>cd\\\\   goes back to C: root directory. C:\\\\cd  myGo    enters the\
+    \ “myGo” folder. “go run ” is a command to execute the Go program. \n\nComment\
+    \ \n\n| //  |\n\n| --- |\n\n| /\\* ……. \\*/  |\n\n“// ” is the symbol of single-line\
+    \ comment. “/\\* ” and “\\*/ ” are the symbols of multi-line comment. Comments\
+    \ will not be compiled. The Go compiler will ignore all comments. Example 1.2\
+    \ \n\n| package main  // package declaration import \"fmt\" func main() {     //\
+    \ define a main function fmt. Println(\"Hello, World! \") } /\\* The output of\
+    \ the above code is: Hello, World! \\*/  |\n\n| --- |\n\nPlease use “go run ”\
+    \ command to run this program, and check the result. "
+  toc: []
+  trans: "\n\n![](img/image_rsrc2TZ.jpg)\n\n# 初学者 Go 编程快速入门指南\nRay Yao\n\nCopyright\
+    \ © 2015 Ray Yao 版权所有。未经作者事先书面许可，本书的任何部分或全文不得以任何形式或通过任何电子、照相或机械手段（包括复印、录音，或通过任何信息存储或检索系统）进行复制或传输。所有权利保留！Ray\
+    \ Yao。\n\n## 前言\n\n“Go 语言编程”涵盖了 Go 语言的所有核心知识。你可以快速、轻松地学习 Go 编程的完整基础技能。\n\n本书包含了\
+    \ 60 多个针对初学者的实用示例，并包含了大学考试、工程师认证考试以及工作面试的测试题与答案。\n\n**注意：** 本书仅适用于 Go 初学者，不适合有经验的\
+    \ Go 程序员。\n\n### 源代码下载\n本书提供了源代码下载；你可以下载源代码以更好地学习，或者将源代码复制到你喜喜欢的编辑器中测试程序。\n源代码下载链接：[`forms.aweber.com/form/34/1805492434.htm`](https://forms.aweber.com/form/34/1805492434.htm)\n\
+    \n## 目录\n\n- 第 1 小\n- 什么是 Go?\n- 安装 Go\n- 环境变量\n- Go 的第一个程序\n- 注释\n- 标识符\n- 总结\n\
+    - 第 2 小\n- 换行符\n- 关于“{”\n- 关键字\n- 数据类型\n- 变量\n- 多变量声明\n- := 赋值运算符\n- 总结\n- 第 3\
+    \ 小\n- 常量\n- iota\n- 算术运算符\n- 关系运算符\n- 逻辑运算符\n- 赋值运算符\n- 运算符优先级\n- 总结\n- 第 4 小\n\
+    - if 语句\n- if...else 语句\n- switch 语句\n- select 语句\n- for 循环\n- 总结\n- 第 5 小\n-\
+    \ break\n- continue\n- goto\n- 函数\n- 作用域\n- 总结\n- 第 6 小\n- 数组\n- 指针\n- nil\n-\
+    \ 总结\n- 第 7 小\n- 结构体\n- 切片\n- append()\n- 总结\n- 第 8 小\n- goroutine\n- range\n\
+    - map\n- 类型转换\n- 递归\n- 总结\n- 附录 1\n- 并发\n- 附录 2\n- 测试\n- 答案\n- 源代码下载\n\n![](img/image_rsrc2TZ.jpg)\n\
+    \n# 初学者 Go 语言编程快速入门指南\nRay Yao\n\n## 前言\n\n“Go 语言编程”涵盖了 Go 语言的所有核心知识。你可以快速、轻松地学习\
+    \ Go 编程的完整基础技能。\n\n本书包含了 60 多个针对初学者的实用示例，并包含了大学考试、工程师认证考试以及工作面试的测试题与答案。\n\n**注意：**\
+    \ 本书仅适用于 Go 初学者，不适合有经验的 Go 程序员。\n\n### 源代码下载\n本书提供了源代码下载；你可以下载源代码以更好地学习，或者将源代码复制到你喜喜欢的编辑器中测试程序。\n\
+    源代码下载链接：[`forms.aweber.com/form/34/1805492434.htm`](https://forms.aweber.com/form/34/1805492434.htm)\n\
+    \n## 目录\n\n- 第 1 小\n- 什么是 Go?\n- 安装 Go\n- 环境变量\n- Go 的第一个程序\n- 注释\n- 标识符\n- 总结\n\
+    - 第 2 小\n- 换行符\n- 关于“{”\n- 关键字\n- 数据类型\n- 变量\n- 多变量声明\n- := 赋值运算符\n- 总结\n- 第 3\
+    \ 小\n- 常量\n- iota\n- 算术运算符\n- 关系运算符\n- 逻辑运算符\n- 赋值运算符\n- 运算符优先级\n- 总结\n- 第 4 小\n\
+    - if 语句\n- if...else 语句\n- switch 语句\n- select 语句\n- for 循环\n- 总结\n- 第 5 小\n-\
+    \ break\n- continue\n- goto\n- 函数\n- 作用域\n- 总结\n- 第 6 小\n- 数组\n- 指针\n- nil\n-\
+    \ 总结\n- 第 7 小\n- 结构体\n- 切片\n- append()\n- 总结\n- 第 8 小\n- goroutine\n- range\n\
+    - map\n- 类型转换\n- 递归\n- 总结\n- 附录 1\n- 并发\n- 附录 2\n- 测试\n- 答案\n- 源代码下载\n\n## 什么是\
+    \ Go?\nGo 是一种由 Google 在 2009 年推出的开源、高效的编程语言。它具有强大的并发支持，并且易于学习。它具有许多现代特性。\n\n##\
+    \ 安装 Go\n你可以从以下链接下载安装包：[`golang.org/dl/`](https://golang.org/dl/)\n1. 根据你的操作系统下载对应的安装程序（image_rsrc20）。\n\
+    2. 运行安装程序并按照提示完成安装（image_rsrc21）。\n3. 默认情况下，Go 将安装在 `C:\\Go` 目录。\n4. 安装完成后，点击“完成”（image_rsrc22）。\n\
+    5. 下载链接：[`forms.aweber.com/form/34/1805492434.htm`](https://forms.aweber.com/form/34/1805492434.htm)\n\
+    \n## 环境变量\n安装 Go 后，你需要将 `C:\\Go\\bin` 添加到环境变量的 `PATH` 中。请前往“控制面板” > “系统” > “高级系统”\
+    \ > “环境变量” > “Path” > “编辑” > “新建”。将 `C:\\Go\\bin` 添加到末尾。（image_rsrc23）\n注意：不同\
+    \ Windows 版本的界面可能不同。请重启电脑使设置生效。\n\n## Go 的第一个程序\n请在 `C:\\` 下创建一个名为 `myGo` 的工作文件夹，打开记事本并将以下代码写入编辑器。\n\
+    \n示例 1.1\n```go\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n    fmt.Println(\"\
+    Hello, World!\")\n}\n```\n将文件保存为 `hello.go` 位于 `C:\\myGo` 中。打开命令行（cmd），输入以下命令：（image_rsrc24）\n\
+    输出：`Hello World!`\n\n解释：`package main` 定义包名为 `main`。每个 Go 应用程序必须包含名为 `main` 的包。导入的\
+    \ `fmt` 包包含了 I/O 函数。`func main()` 是程序中执行的第一个函数。`fmt.Println(\"Hello, World!\"\
+    )` 输出文本 `Hello, World!`。`C:\\Windows\\system32>cd\\` 返回 C: 根目录。`C:\\cd myGo` 进入\
+    \ `myGo` 文件夹。`go run` 是执行 Go 程序的命令。\n\n## 注释\n```go\n//\n/* ... */\n```\n`//`\
+    \ 是单行注释的符号。`/*` 和 `*/` 是多行注释的符号。注释不会被编译。Go 编译器会忽略所有注释。\n\n示例 1.2\n```go\npackage\
+    \ main // 包声明\n\nimport \"fmt\"\n\nfunc main() {\n    // 定义 main 函数\n    fmt.Println(\"\
+    Hello, World!\")\n}\n/* 上述代码的输出是：Hello, World! */\n```\n请使用 `go run` 命令运行此程序并检查结果。\n\
+    \n"
+- fmt: "\n# Identifiers\nIdentifiers are used to name variables, functions, expressions,\
+    \ and so on. An identifier consists of one or more letters (A~Z and a~z), numbers\
+    \ (0~9) and an underscore, but the first character must be a letter or underscore.\
+    \ The first character of identifier cannot be a number.\n\nThe following identifiers\
+    \ are valid: `myVariable`, `_Variable`, `variable100`.\nThe following identifiers\
+    \ are invalid:\n- `continue` // “continue” is a keyword of Go language\n- `100Variable`\
+    \ // begin with a number\n\n## Summary\n`\"package main\"` defines the name of\
+    \ the package as `main`. Each Go application must include a package called `main`.\
+    \ The imported package `\"fmt\"` contains I/O functions. `func main()` is the\
+    \ first function to execute in the Go application. `fmt.Println(\"Hello, World!\
+    \ \")` outputs the text `\"Hello, World! \"`. `//` is the symbol of single-line\
+    \ comment. `/*` and `*/` are the symbols of multi-line comment. Comments will\
+    \ not be compiled. The Go compiler will ignore all comments.\n\n# Hour 2\n\n##\
+    \ Line Separator\nIn a Go language, each statement does not need a semicolon to\
+    \ end the line. For example:\n\n```go\nfmt.Println(\"Hi, My friend! \")\nfmt.Println(\"\
+    Hi, Guy! \")\n```\nThere are two lines in the above code, one line represents\
+    \ the end of a statement, each statement don’t need a semicolon to end the line.\n\
+    \n## About \"{\"\n`{` cannot be placed on a single line, so the following code\
+    \ produces an error at run time. For example:\n\n```go\nfunc main() {\n    //\
+    \ error\n    fmt.Println(\"Hello, World! \")\n}\n```\n\nThe following code is\
+    \ correct:\n```go\nfunc main() {\n    // { is placed in here, correct!\n    fmt.Println(\"\
+    Hello, World! \")\n}\n```\n\n## Keywords\nThere are 25 keywords in Go language.\n\
+    \n| break | default |\n| :--- | :--- |\n| case | defer |\n| chan | else |\n| const\
+    \ | fallthrough |\n| continue | for |\n\nKeywords cannot work as a name of variable,\
+    \ constant and and function, etc.\n\n## Data Type\nIn Go language, when we define\
+    \ a variable or function, we need to use a data type. The use of data types is\
+    \ conducive to Go programming. Chiefly, there are four kinds of data type in Go\
+    \ language, they are very commonly used in Go coding.\n\n### 1. Boolean types\n\
+    Boolean type consists of two predefined constants: For example: (1) `true` (2)\
+    \ `false`\n\n### 2. Numeric types\nThe number types are integer `int`, floating-point\
+    \ `float32`, `float64`, and complex number. For example: `100`, `200`, `88`, `168888`,\
+    \ `168`.\n\n### 3. String types\nString types are a sequence joined together by\
+    \ a fixed length of characters. A string is concatenated by a single byte. The\
+    \ bytes of the Go language string identify Unicode text using `utf-8` encoding.\
+    \ For example: `\"jQuery in 8 Hours\"` is a string.\n\n### 4. Derived types\n\
+    Derived types mean (1) Channel types, (2) Map types, (3) Interface types, (4)\
+    \ Slice types, (5) Function types, (6) Union types, (7) Structure types, (8) Array\
+    \ types, (9) Pointer types. For example: `var arr [10]int` // * arr is an array\
+    \ of length 10 *\n\n## Variables\nVariable names of Go language consist of letters,\
+    \ numbers and underscores, where the first character cannot be a number. There\
+    \ are three ways to declare a variable.\n\n(1) The first syntax to declare a variable\
+    \ is:\n```go\nvar variable_name type variable_name = value\n```\nFor example:\
+    \ `var a int = 100`\n\n(2) The second syntax to declare a variable is:\n```go\n\
+    var variable_name = value\n```\nFor example: `var b = \"ruby in 8 hours\"`\n\n\
+    (3) The third syntax to declare a variable is:\n```go\nvariable_name := value\n\
+    ```\nFor example: `c := 100`\n\n```go\npackage main\nfunc main(){\n    var a =\
+    \ \"C# in 8 Hours\"\n    var b string = \"is\"\n    var c bool = true\n    println(a,\
+    \ b, c)\n}\n```\nOutput: `C# in 8 Hours is true`\n\n## Multiply Variables Declaration\n\
+    There are three ways to declare the multi-variables:\n\n(1) `var name1, name2,\
+    \ name3 type value1, value2, value3`\nFor example: `var a, b, c int = 100, 200,\
+    \ 300`\n\n(2) `var name1, name2, name3 = value1, value2, value3`\nFor example:\
+    \ `var a, b, c = 100, 200, 300`\n\n(3) `name1, name2, name3 := value1, value2,\
+    \ value3`\n`:=` assignment operator is used to assign a value to a variable. Note:\
+    \ the variable should not be declared previously, which would result in compilation\
+    \ error. Namely, when `=` is used, the variable should be declared at time.\n\n\
+    ```go\npackage main\nfunc main(){\n    var a, b, c int = 100, 200, 300\n    var\
+    \ d, e, f = 400, 500, 600\n    s1, s2, s3 := \"R in 8 Hours\", \"is\", \"good\
+    \ book.\"\n    println(a, b, c)\n    println(d, e, f)\n}\n```\nOutput: `100 200\
+    \ 300 400 500 600`\n\n## Summary\nIn a Go language, each statement does not need\
+    \ a semicolon to end the line. `{` cannot be placed on a single line, so the following\
+    \ code produces an error. Keywords cannot work as a name of variable, constant\
+    \ and function. Variable names of Go language consist of letters, numbers and\
+    \ underscores, where the first character cannot be a number. There are three ways\
+    \ to declare the multi-variables:\n1. `var name1, name2, name3 type value1, value2,\
+    \ value3`\n2. `var name1, name2, name3 = value1, value2, value3`\n3. `name1, name2,\
+    \ name3 := value1, value2, value3` `:=` assignment operator is used to assign\
+    \ a value to a variable.\n\n# Hour 3\n\n## Constants\nA constant is an identifier\
+    \ whose value is not changed while the program is running. The syntax to define\
+    \ a constant is:\n`const name [type] = value`\nOr\n`const name = value`\n\n###\
+    \ 3.1\n```go\npackage main\nfunc main() {\n    const x, y, z int = 10, 20, 30\
+    \ // define three constants\n    const s = \"jQuery in 8 Hours!\"\n    const b\
+    \ bool = true\n    println(x, y, z)\n    println(s)\n    println(b)\n}\n```\n\
+    Output: `10 20 30 jQuery in 8 Hours! true`\nExplanation: `const` is used to define\
+    \ a constant.\n\n### 3.2\n```go\npackage main\n// Define constants as enumerations\n\
+    func main() {\n    const (\n        // enumeration\n        color1 = \"Blue\"\n\
+    \        color2 = \"Pink\"\n        color3 = \"Gray\"\n    )\n    println(color1,\
+    \ color2, color3)\n}\n```\nOutput: `Blue Pink Gray`\nExplanation: The constants\
+    \ `color1`, `color2`, `color3` is defined in an enum mode.\n\n`iota` is a special\
+    \ constants. The value of the first `iota` is equal to 0, and its value is automatically\
+    \ incremented by 1 whenever `iota` is used in a new row.\n\n### 3.3\n```go\npackage\
+    \ main\nfunc main() {\n    const (\n        x = iota // the first iota value is\
+    \ 0\n        y = iota\n        z = iota\n    )\n    println(x)\n    println(y)\n\
+    \    println(z)\n}\n```\nOutput: `0 1 2`\nExplanation: The first `iota` value\
+    \ is 0, the second `iota` value is 1, the third `iota` value is 2.\n\n## Arithmetic\
+    \ Operators\n| Operator |\n| :--- |\n| `+` |\n| `-` |\n| `*` |\n| `/` |\n| `%`\
+    \ |\n| `++` |\n| `--` |\n\nFor example: Given: `a = 100`, `b = 2`.\nCalculation:\n\
+    - `a + b` returns `102`\n- `a - b` returns `98`\n- `a * b` returns `200`\n- `a\
+    \ / b` returns `50`\n- `a % b` returns `0`\n- `a ++` returns `101`\n- `a --` returns\
+    \ `99`\n\n## Relational Operators\n| Operators |\n| :--- |\n| `>` |\n| `<` |\n\
+    | `>=` |\n| `<=` |\n| `==` |\n| `!=` |\n\nFor example: Given: `a = 100`, `b =\
+    \ 2`.\nCalculation:\n- `a > b` returns `true`\n- `b < b` returns `false`\n- `a\
+    \ >= b` returns `true`\n- `a <= b` returns `false`\n- `a == b` returns `false`\n\
+    - `a != b` returns `true`\n\n## Logical Operators\n| Operators |\n| :--- |\n|\
+    \ `&&` |\n| `||` |\n| `!` |\n\nFor example: Given: `a = true`, `b = false`.\n\
+    Calculation:\n- `a && b` returns `false`\n- `a || b` returns `true`\n- `! a` returns\
+    \ `false`\n"
+  raw: "Identifier Identifiers are used to name variables, functions, expressions,\
+    \ and so on. An identifier consists of one or more letters (A~Z and a~z), numbers\
+    \ (0~9) and an underscore, but the first character must be a letter or underscore.\
+    \ The first character of identifier cannot be a number. For example: The following\
+    \ identifiers are valid: myVariable \\_Variable variable100 The following identifiers\
+    \ are invalid: continue       // “continue” is a keyword of Go language 100Variable        //  begin\
+    \ with a number \n\nSummary “package main” defines the name of the package as\
+    \ main. Each Go application must include a package called main. The  imported\
+    \ package “fmt” contains I/O functions. “func main()” is the first function to\
+    \ execute in the Go application. fmt. Println(\"Hello, World! \") outputs the\
+    \ text “Hello, World! ”. “// ” is the symbol of single-line comment. “/\\* ” and\
+    \ “\\*/ ” are the symbols of multi-line comment. Comments will not be compiled.\
+    \ The Go compiler will ignore all comments. Identifiers are used to name variables,\
+    \ functions, expressions, and so on. An identifier consists of one or more letters\
+    \ (A~Z and a~z), numbers (0~9) and an underscore, but the first character must\
+    \ be a letter or underscore. The first character of identifier cannot be a number.\
+    \ \n\nHour 2 \n\nLine Separator In a Go language, each statement does not need\
+    \ a semicolon to end the line. For example: \n\n| fmt. Println(\"Hi, My friend!\
+    \ \") fmt. Println(\"Hi, Guy! \")  |\n\n| --- |\n\nThere are two lines in the\
+    \ above code, one line represents the end of a statement, each statement don’t\
+    \ need a semicolon to end the line. \n\nAbout “{” “{“ cannot be placed on a single\
+    \ line, so the following code produces an error at run time. For example: \n\n\
+    | func main() {     / error fmt. Println(\"Hello, World! \") }  |\n\n| --- |\n\
+    \nThe following code is correct: \n\n| func main() {     / { is placed in here,\
+    \ correct! fmt. Println(\"Hello, World! \") }  |\n\n| --- |\n\nKeywords There\
+    \ are 25 keywords in Go language. \n\n| break  || default  |\n\n| --- | --- |\n\
+    \n| case  || defer  |\n\n| chan  || else  |\n\n| const  || fallthrough  |\n\n\
+    | continue  || for  |\n\nKeywords cannot work as a name of variable, constant\
+    \ and  function, etc. \n\nData Type In Go language, when we define a variable\
+    \ or function, we need to use a data type. The use of data types is conducive\
+    \ to Go programming. Chiefly, there are four kinds of data type in Go language,\
+    \ they are very commonly used in Go coding. \n\n1.  Boolean types\n\nBoolean type\
+    \ consists of two predefined constants: For example: (1) true (2) false \n\n2.\
+    \  Numeric types\n\nThe number types are integer int, floating-point float32,\
+    \ float64, and complex number. For example: 100,  200. 88, 168888. 168 \n\n3.\
+    \  String types\n\nString types are a sequence joined together by a fixed length\
+    \ of characters. A string is concatenated by a single byte. The bytes of the Go\
+    \ language string identify Unicode text using utf-8 encoding. For example: “jQuery\
+    \ in 8 Hours” is a string. \n\n4.  Derived types\n\nDerived types mean (1) Channel\
+    \ types,(2) Map types, (3) Interface types, (4) Slice types, (5) Function types,\
+    \ (6) Union types, (7) Structure types, (8) Array types, (9) Pointer types. For\
+    \ example: Var arr \\[10\\] int     / \\* arr is an array of length 10 \\* / \n\
+    \nVariables Variable names of Go language consist of letters, numbers and underscores,\
+    \ where the first character cannot be a number. There are three ways to declare\
+    \ a variable. (1) The first syntax to declare a variable is: \n\n| var  variable\\\
+    _name  type variable\\_name = value  |\n\n| --- |\n\nFor example: var a int a\
+    \ = 100 (2) The second syntax to declare a variable is: \n\n| var variable\\_name\
+    \ = value  |\n\n| --- |\n\nFor example: var b = “ruby in 8 hours” (3) The third\
+    \ syntax to declare a variable is: \n\n| variable\\_name : = value  |\n\n| ---\
+    \ |\n\nFor example: c : = 100 Example 2.1 package main func main(){ var a = \"\
+    C# in 8 Hours\" var b string = \"is\" c: =\"a good book! \" var e bool = true\
+    \ println(a, b, c, e) } Output: C# in 8 Hours is a good book!   True Explanation:\
+    \ “var a = \"C# in 8 Hours\", var b string = \"is a good book! \", var c bool\
+    \ = true” declare two string variables, one Boolean variable. \n\nMultiply Variables’\
+    \ Declaration There are three ways to declare the multi-variables: (1) \n\n| var\
+    \ vname1, vname2, vname3  type vname1, vname2, vname3 = v1, v2, v3  |\n\n| ---\
+    \ |\n\nFor example: var a, b, c int a, b, c  = 100, 200, 300 (2) \n\n| var vname1,\
+    \ vname2, vname3 = v1, v2, v3  |\n\n| --- |\n\nFor example: var a, b, c = 100,\
+    \ 200, 300 (3) \n\n| vname1, vname2, vname3 : = v1, v2, v3  |\n\n| --- |\n\nFor\
+    \ example: a, b, c : = 100, 200, 300 \n\n:= assignment operator \n\n| variable\
+    \ := value  |\n\n| --- |\n\n:= assignment operator is used to assign a value to\
+    \ a variable. Note: the variable should not be declared previously, which would\
+    \ result in a compilation error. Namely, when : = is used, the variable should\
+    \ be declared at first time. Example 2.2 package main func main(){ var a, b, c\
+    \ int a, b, c  = 100, 200, 300 var d, e, f = 400, 500, 600 s1, s2, s3 := \"R in\
+    \ 8 Hours\", \"is\", \"good book. \" println(a, b, c) println(d, e, f) println(s1,\
+    \ s2, s3) } Output: 100  200  300 400  500  600 R in 8 Hours is a good book. Explanation:\
+    \ s1, s2, s3 := \"R in 8 Hours\", \"is\", \"good book. \" assign variables s1,\
+    \ s2, s3 respectively three string values. \n\nSummary In a Go language, each\
+    \ statement does not need a semicolon to end the line. “{“ cannot be placed on\
+    \ a single line, so the following code produces an error at run time. Keywords\
+    \ cannot work as a name of variable, constant and function, etc. Variable names\
+    \ of Go language consist of letters, numbers and underscores, where the first\
+    \ character cannot be a number. There are three ways to declare the multi-variables:\
+    \ 1. var vname1, vname2, vname3  type vname1, vname2, vname3 = v1, v2, v3 2. var\
+    \ vname1, vname2, vname3 = v1, v2, v3 3. vname1, vname2, vname3 : = v1, v2, v3\
+    \ := assignment operator is used to assign a value to a variable. \n\nHour 3 \n\
+    \nConstants A constant is an identifier whose value is not changed while the program\
+    \ is running. The syntax to define a constant is: \n\n| const  contant\\_name  \\\
+    [type\\] = value  |\n\n| --- |\n\nOr \n\n| const  contant\\_name = value  |\n\n\
+    | --- |\n\nExample 3.1 package main func main() { const x, y, z int = 10, 20,\
+    \ 30   // define three constants const s = \"jQuery in 8 Hours! \" const b bool\
+    \ = true println(x, y, z) println(s) println(b)       } Output: 10  20  30 jQuery\
+    \ in 8 Hours! true Explanation: “const” is used to define a constant. Example\
+    \ 3.2 package main   // Define constants as enumerations func main() { const (   //\
+    \ enumeration color1 = \"Blue\" color2 = \"Pink\" color3 = \"Gray\" ) println(color1,\
+    \ color2, color3)     } Output: Blue   Pink   Gray Explanation: The constants\
+    \ color1, color2, color3 is defined in an enum mode. \n\niota “iota” is a special\
+    \ constants. The value of the first iota is equal to 0, and its value is automatically\
+    \ incremented by 1 whenever iota is used in a new row. Example 3.3 package main\
+    \ func main() { const ( x = iota  // the first iota value is 0 y = iota z = iota\
+    \ ) println(x) println(y)    println(z) } Output: 0 1 2 Explanation: The first\
+    \ iota value is 0, the second iota value is 1, the third iota value is 2. \n\n\
+    Arithmetic Operators \n\n| Operator  |\n\n| --- |\n\n| \\+  |\n\n| \\-  |\n\n\
+    | \\*  |\n\n| /  |\n\n| %  |\n\n| ++  |\n\n| \\- -  |\n\nFor example: Given:       a\
+    \ = 100      b = 2 Calculation: a + b returns 102 a – b returns 98 a \\* b returns\
+    \ 200 a / b returns 50 a % b returns 0 a ++ returns 101 a - - returns 99 \n\n\
+    Relational Operators \n\n| Operators  |\n\n| --- |\n\n| \\>  |\n\n| <  |\n\n|\
+    \ \\>=  |\n\n| <=  |\n\n| \\==  |\n\n| ! =  |\n\nFor example: Given:    a =  100      b\
+    \ = 2 Calculation: a > b returns true b <  returns false a >= b returns true a\
+    \ <= b returns false a == b returns false a ! = b returns true \n\nLogical Operators\
+    \ \n\n| Operators  |\n\n| --- |\n\n| &&  |\n\n| ||  |\n\n| !  |\n\nFor example:\
+    \ Given:    a =  true      b = false Calculation: a && b returns false a || b\
+    \ returns true ! a returns false Explanation: "
+  toc: []
+  trans: "\n\n# 标识符\n标识符用于命名变量、函数、表达式等。标识符由一个或多个字母（A~Z 和 a~z）、数字（0~9）和下划线组成，但第一个字符必须是字母或下划线。标识符的第一个字符不能是数字。\n\
+    \n以下标识符是有效的：`myVariable`、`_Variable`、`variable100`。\n以下标识符是无效的：\n- `continue`\
+    \ // “continue”是 Go 语言的关键字\n- `100Variable` // 以数字开头\n\n## 总结\n`\"package main\"\
+    ` 定义包名为 `main`。每个 Go 应用必须包含一个名为 `main` 的包。导入包 `\"fmt\"` 包含了 I/O 函数。`func main()`\
+    \ 是 Go 应用中执行的第一个函数。`fmt.Println(\"Hello, World! \")` 输出文本 `\"Hello, World! \"\
+    `。`//` 是单行注释的符号。`/*` 和 `*/` 是多行注释的符号。注释不会被编译。Go 编译器将忽略所有注释。\n\n# 第 2 小时\n\n##\
+    \ 分隔符\n在 Go 语言中，每个语句不需要分号来结束行。例如：\n\n```go\nfmt.Println(\"Hi, My friend! \")\n\
+    fmt.Println(\"Hi, Guy! \")\n```\n上述代码中有两行，其中一行代表一个语句的结束，每个语句都不需要分号来结束行。\n\n##\
+    \ 关于 \"{\"\n`{` 不能放在单行上，因此以下代码会在运行时产生错误。例如：\n\n```go\nfunc main() {\n    // error\n\
+    \    fmt.Println(\"Hello, World! \")\n}\n```\n\n以下代码是正确的：\n```go\nfunc main()\
+    \ {\n    // { 放在这里，是正确的！\n    fmt.Println(\"Hello, World! \")\n}\n```\n\n## 关键字\n\
+    Go 语言中有 25 个关键字。\n\n| break | default |\n| :--- | :--- |\n| case | defer |\n|\
+    \ chan | else |\n| const | fallthrough |\n| continue | for |\n\n关键字不能作为变量、常量和函数等的名称。\n\
+    \n## 数据类型\n在 Go 语言中，当我们定义变量或函数时，需要使用数据类型。数据类型的使用有利于 Go 编程。主要有 Go 语言中的四种数据类型，它们在\
+    \ Go 代码中非常常用。\n\n### 1. 布尔类型\n布尔类型由两个定义常量组成：例如：(1) `true` (2) `false`\n\n### 2.\
+    \ 数值类型\n数字类型包括整数 `int`、浮点数 `float32`、`float64` 和复数。例如：`100`、`200`、`88`、`168888`、`168`。\n\
+    \n### 3. 字符串类型\n字符串类型是固定长度字符序列。字符串通过单个字节连接。Go 语言字符串使用 `utf-8` 编码识别 Unicode 文本。例如：`\"\
+    jQuery in 8 Hours\"` 是字符串。\n\n### 4. 衍生类型\n衍生类型意味着 (1) 通道类型，(2) Map 类型，(3) 接口类型，(4)\
+    \ 切片类型，(5) 函数类型，(6) 联合类型，(7) 结构体类型，(8) 数组类型，(9) 指针类型。例如：`var arr [10]int` // *\
+    \ arr 是长度为 10 的数组 *\n\n## 变量\nGo 语言的变量名由字母、数字和下划线组成，其中第一个字符不能是数字。声明变量有三种方式。\n\n\
+    (1) 声明变量的第一种语法是：\n```go\nvar variable_name type variable_name = value\n```\n例如：`var\
+    \ a int = 100`\n\n(2) 声明变量的第二种语法是：\n```go\nvar variable_name = value\n```\n例如：`var\
+    \ b = \"ruby\"`\n\n(3) 声明变量的第三种语法是：\n```go\nvariable_name := value\n```\n例如：`c\
+    \ := 100`\n\n```go\npackage main\nfunc main(){\n    var a = \"C#\"\n    var b\
+    \ string = \"is\"\n    var c bool = true\n    println(a, b, c)\n}\n```\n输出：`C#\
+    \ is true`\n\n## 多变量声明\n有三种方式声明多个变量：\n\n(1) `var name1, name2, name3 type value1,\
+    \ value2, value3`\n(2) `var name1, name2, name3 = value1, value2, value3`\n例如：`var\
+    \ a, b, c int = 100, 200, 300`\n(3) `name1, name2, name3 := value1, value2, value3`\n\
+    `:=` 运算符用于给变量赋值。注意：变量应该预先声明，否则会导致编译错误。\n\n```go\npackage main\nfunc main(){\n\
+    \    var a, b, c int = 100, 200, 300\n    var d, e, f = 400, 500, 600\n    println(a,\
+    \ b, c)\n    println(d, e, f)\n}\n```\n输出：`100 200 300 400 500 600`\n\n## 总结\n\
+    在 Go 语言中，每个语句不需要分号来结束。`{` 不能放在单行上，所以以下代码产生错误。关键字不能作为变量、常量和函数的名称。变量名由字母、数字和下划线组成，第一个字符不能是数字。有三种方式声明多个变量：\n\
+    1. `var name1, name2, name3 type value1, value2, value3`\n2. `var name1, name2,\
+    \ name3 = value1, value2, value3`\n3. `name1, name2, name3 := value1, value2,\
+    \ value3` `:=` 运算符用于给变量赋值。\n\n# 第 3 小时\n\n## 常量\n常量是在程序运行时不会改变的标识符。定义常量的语法是：\n\
+    `const name [type] = value`\n或\n`const name = value`\n\n### 3.1\n```go\npackage\
+    \ main\nfunc main() {\n    const x, y, z int = 10, 20, 30 // 定义三个常量\n    const\
+    \ s = \"jQuery in 8 Hours!\"\n    const b bool = true\n    println(x, y, z)\n\
+    \    println(s)\n    println(b)\n}\n```\n输出：`10 20 30 jQuery in 8 Hours! true`\n\
+    解释：`const` 用于定义常量。\n\n### 3.2\n```go\npackage main\n// 定义枚举作为常量\nfunc main() {\n\
+    \    const (\n        // enumeration\n        color1 = \"Blue\"\n        color2\
+    \ = \"Pink\"\n        color3 = \"Gray\"\n    )\n    println(color1, color2, color3)\n\
+    }\n```\n输出：`Blue Pink Gray`\n解释：常量 `color1`、`color2`、`color3` 在枚举模式下定义。\n\n`iota`\
+    \ 是一个特殊的常量。第一个 `iota` 的值为 0，每当在新行中使用 `iota` 时，它的值会自动加 1。\n\n### 3.3\n```go\npackage\
+    \ main\nfunc main() {\n    const (\n        x = iota //第一个 iota 值为 0\n       \
+    \ y = iota\n        z = iota\n    )\n    println(x)\n    println(y)\n    println(z)\n\
+    }\n```\n输出：`0 1 2`\n解释：第一个 `iota` 的值为 0，第二个 `iota` 的值为 1，第三个 `iota` 的值为 2。\n\n\
+    ## 算术运算符\n| 运算符 |\n| :--- |\n| `+` |\n| `-` |\n| `*` |\n| `/` |\n| `%` |\n| `++`\
+    \ |\n| `--` |\n\n例如：给定 `a = 100`, `b = 2`。\n计算：\n- `a + b` 返回 `102`\n- `a - b`\
+    \ 返回 `98`\n- `a * b` 返回 `200`\n- `a / b` 返回 `50`\n- `a % b` 返回 `0`\n- `a ++` 返回\
+    \ `101`\n- `a --` 返回 `99`\n\n## 关系运算符\n| 运算符 |\n| :--- |\n| `>` |\n| `<` |\n|\
+    \ `>=` |\n| `<=` |\n| `==` |\n| `!=` |\n\n例如：给定 `a = 100`, `b = 2`。\n计算：\n- `a\
+    \ > b` 返回 `true`\n- `b < b` 返回 `false`\n- `a >= b` 返回 `true`\n- `a <= b` 返回 `false`\n\
+    - `a == b` 返回 `false`\n- `a != b` 返回 `true`\n\n"
+- fmt: "\n| `true && true; returns true;` || `true && false; returns false;` || `false\
+    \ && false; returns false;` |\n| --- | --- | --- |\n| `true || true; returns true;`\
+    \ || `true || false; returns true;` || `false || false; return false;` |\n| `!\
+    \ false; returns true;` || `! true; returns false;` ||   |\n\n## Assignment Operators\n\
+    \n| Operators | Examples: |\n| --- | --- |\n| `+=` | `x+=y` |\n| `-=` | `x-=y`\
+    \ |\n| `*=` | `x*=y` |\n| `/=` | `x/=y` |\n| `%=` | `x%=y` |\n\nFor example: Given:\
+    \ `x=200;` `y=100;` Explanation: `x+=y;` // `x=x+y;` outputs 300 `x/=y;` // `x=x\
+    \ / y;` outputs 2 `x-=y;` // `x=x \\- y;` outputs 100 `x%=y;` // `x=x%y;` outputs\
+    \ 0\n\n## Operators Precedence\nThe following table lists the operator precedence:\
+    \ (From top to bottom means priority from high to low).\n\n| Priority |\n| ---\
+    \ |\n| 7 |\n| 6 |\n| 5 |\n| 4 |\n| 3 |\n| 2 |\n| 1 |\n\n## Summary\nA constant\
+    \ is an identifier whose value is not changed while the program is running. The\
+    \ syntax to define a constant is: `const constant_name [type] = value` or `const\
+    \ constant_name = value`. “iota” is a special constants. The value of the first\
+    \ `iota` is equal to 0, and its value is automatically incremented by 1 whenever\
+    \ `iota` is used in a new row. There are following operators: arithmetic operators,\
+    \ relational operators, logical operators, assignment operators.\n\n## Hour 4\n\
+    \n### If Statement\n\n| `if test-expression { // if true do this; }` |\n| ---\
+    \ |\n\n“if statement” executes codes inside `{ … }` only if a specified condition\
+    \ is true, does not execute any codes inside `{…}` if the condition is false.\n\
+    \nExample 4.1\n```go\npackage main\nimport \"fmt\"\nfunc main() {\n    var num\
+    \ int = 100\n    if num > 50 {\n        fmt.Printf(\"num is greater than 50\"\
+    )\n    }\n}\n```\nOutput: num is greater than 50\nExplanation: Because the value\
+    \ of `num` is greater than 50, the code inside the `{ }` has been executed.\n\n\
+    ### if…else statement\n\n| `if test_expression{ // if true do this } else { //\
+    \ if false do this }` |\n| --- |\n\n“if... else statement” runs some code if a\
+    \ condition is true and runs another code if the condition is false.\n\nExample\
+    \ 4.2\n```go\npackage main\nfunc main() {\n    var num int = 100\n    if num >\
+    \ 200 {\n        println(\"num is greater than 200\")\n    } else {\n        println(\"\
+    num is less than 200\")\n    } \n}\n```\nOutput: num is less than 200\nExplanation:\
+    \ Because the value of `num` is less than 200, the `else { }` code has been executed.\n\
+    \n### Switch Statement\n\n| `switch (variable ) { case 1: if equals this case,\
+    \ do this case 2: if equals this case, do this case 3: if equals this case, do\
+    \ this case default : if equals any case, run default }` |\n| --- |\n\nThe value\
+    \ of the `variable` will compare each `case` first, if equals one of the `case`\
+    \ value; it will execute that `case` code.\n\nExample 4.3\n```go\npackage main\n\
+    func main() {\n    var number int=20\n    switch ( number ) {\n        case 10:\
+    \ println (\"Running case 10\")\n        case 20: println (\"Running case 20\"\
+    )\n        case 30: println (\"Running case 30\")\n        default: println (\"\
+    Running default\")\n    }\n}\n```\nOutput: Running case 20\nExplanation: The `number`\
+    \ value is 20; it will match `case 20`, so it will run the code in `case 20`.\n\
+    \n### Select Statement\nSelect Statement is a bit like Switch Statement. Switch\
+    \ Statement executes case code sequentially. Select Statement executes case code\
+    \ randomly.\n\n1) `make(chan int, number)`\n“make(chan int, number)`” creates\
+    \ a channel with buffer. `chan` means a channel. For example: `make(chan int,\
+    \ 2)` creates a channel with 2 buffers; `make(chan int, 10)` creates a channel\
+    \ with 10 buffers.\n\n2) `chan <- data`\n“chan <- data” sends data to a channel.\
+    \ `data <- chan` receives data from a channel.\n\n3) `select { case receive or\
+    \ send data : statement(s); default : optional statement(s); }`\nIf more than\
+    \ one case can run, Select will randomly pick one to execute and the others not.\
+    \ If no case can run, Select will execute `default` clause.\n\nExample 4.4\n```go\n\
+    package main\nimport \"fmt\"\nfunc main() {\n    c1:=make(chan int,1024) // create\
+    \ a channel\n    c2:=make(chan int,1024)\n    c3:=make(chan int,1024)\n    c1\
+    \ <- 100 // send data to a channel\n    c2 <- 200\n    c3 <- 300\n    select {\n\
+    \        case <-c1: fmt.Println(\"Receive data from c1\")\n        case <-c2:\
+    \ fmt.Println(\"Receive data from c2\")\n        case <-c3: fmt.Println(\"Receive\
+    \ data from c3\")\n        default: fmt.Println(\"Not receive data yet\")\n  \
+    \  }\n}\n```\nOutput: Receive data from c2\nExplanation: The select statement\
+    \ executes one of the case codes randomly.\n\n### For Loop\nFor Loop is a control\
+    \ structure that can execute a specified number of loops.\n\n1) `for init; condition;\
+    \ in/decrease { }`\n`init`: assign a first value to a variable.\n`condition`:\
+    \ `a` test expression.\n`in/decrease`: increement or decreement.\n\nExample 4.5\n\
+    ```go\npackage main\nfunc main() {\n    for a := 0; a <= 5; a++ {\n        print(a)\n\
+    \    }\n}\n```\nOutput: 0 1 2 3 4 5\nExplanation: `a :=0` assigns 0 to `a`. `a<=5`\
+    \ is a test expression. `a++` is an increement.\n\n2) `for test_expression { }`\n\
+    `test_expression` checks if the condition is true or false.\n\nExample 4.6\n```go\n\
+    package main\nfunc main() {\n    var a int =0\n    var b int = 5\n    for a <\
+    \ b {\n        a++\n        print(a)\n    }\n}\n```\nOutput: 1 2 3 4 5\nExplanation:\
+    \ `for a < b` checks if `a` is greater than `b`.\n\n## Summary\n“if statement”\
+    \ executes codes inside `{ … }` only if a specified condition is true, does not\
+    \ execute any codes inside `{…}` if the condition is false. In “switch statement”,\
+    \ the value of the variable will compare each `case` first, if equals one of the\
+    \ `case` value; it will execute that `case` code. Select Statement is a bit like\
+    \ Switch Statement. Switch Statement executes case code sequentially. Select Statement\
+    \ executes case code randomly. For Loop is a control structure that can execute\
+    \ a specified number of loops.\n\n## Hour 5\n\n### Break\n| `break` |\n| --- |\n\
+    The break statement is used to terminate the loop. Break statement also is used\
+    \ to terminate the case in switch statement.\n\nExample 5.1\n```go\npackage main\n\
+    func main() {\n    var num int = 20\n    for num < 30 {\n        print(num,\"\
+    \ \");\n        num++;\n        if num > 25 {\n            break; // terminate\
+    \ the for loop\n        }\n    }\n}\n```\nOutput: 20 21 22 23 24 25\nExplanation:\
+    \ if `num > 25` is a test expression, if true, the `break` statement will terminate\
+    \ the loop.\n\n### Continue\n| `continue` |\n| --- |\nThe continue statement skips\
+    \ the current loop to execute the next one.\n\nExample 5.2\n```go\npackage main\n\
+    func main() {\n    var num int = 20\n    for num < 30 {\n        if num == 25\
+    \ {\n            num = num + 1;\n            continue; // skip the current loop\n\
+    \        }\n        print(num, \" \")\n        num++;\n    }\n}\n```\nOutput:\
+    \ 20 21 22 23 24 26 27 28 29\nExplanation: if `num == 25` is a test expression,\
+    \ if true, the `continue` statement will skip the current loop, and execute the\
+    \ next one. Note: there is no 25 in the result.\n\n### Goto\n| `goto label; ...\
+    \ label: statement;` |\n| --- |\nThe goto statement can go to the specified code\
+    \ and execute them unconditionally.\n\nExample 5.3\n```go\npackage main\nfunc\
+    \ main() {\n    var num int = 10\n    if num > 10{ goto code01 }\n    if num ==\
+    \ 10{ goto code02 }\n    code01: print(\"num > 10\")\n    code02: print(\"num\
+    \ == 10\")\n}\n```\nOutput: num == 10\nExplanation: `goto code01` means to execute\
+    \ the statement with label `code01`. `goto code02` means to execute the statement\
+    \ with label `code02`.\n\n### Function\nA function is a block of code that is\
+    \ reused to perform the same task.\n\n1) The syntax to define a function is: `func\
+    \ function_name ( parameter type) type { …… return … }`\n`func`: define a function\n\
+    `return`: pass the result to the caller.\n\n2) The syntax to call a function is:\
+    \ `variable = function_name ( parameter type )`\n"
+  raw: "| true && true; returns true;  || true && false; returns false;  || false\
+    \ &&false; returns false;  |\n\n| --- | --- | --- |\n\n| true II true; returns\
+    \ true;  || true II false; returns true;  || false II false; return false;  |\n\
+    \n| ! false; returns true;  || ! true; returns false;  ||  |\n\nAssignment Operators\
+    \ \n\n| Operators  || Examples:  |\n\n| --- | --- |\n\n| +=  || x+=y  |\n\n| \\\
+    - =  || x\\- =y  |\n\n| \\* =  || x\\* =y  |\n\n| / =  || x/ =y  |\n\n| %=  ||\
+    \ x%=y  |\n\nFor exampl e ： Given:     x=200;      y=100; Explanation: x+=y;   //\
+    \ x=x+y;  outputs 300 x/ =y;   // x=x / y;  outputs 2 x\\- =y;    //  x=x \\-\
+    \ y;  outputs 100 x%=y;    // x=x%y;   outputs  0 \n\nOperators Precedence The\
+    \ following table lists the operator precedence: (From top to bottom means priority\
+    \ from high to low). \n\n| Priority  |\n\n| --- |\n\n| 7  |\n\n| 6  |\n\n| 5 \
+    \ |\n\n| 4  |\n\n| 3  |\n\n| 2  |\n\n| 1  |\n\nSummary A constant is an identifier\
+    \ whose value is not changed while the program is running. The syntax to define\
+    \ a constant is: const  contant\\_name  \\[type\\] = value const  contant\\_name\
+    \ = value “iota” is a special constants. The value of the first iota is equal\
+    \ to 0, and its value is automatically incremented by 1 whenever iota is used\
+    \ in a new row. There are following operators: arithmetic operators, relational\
+    \ operators, logical operators, assignment operators. \n\nHour 4 \n\nIf Statement\
+    \ \n\n| if   test-expression  {   // if true do this;    }  |\n\n| --- |\n\n“if\
+    \ statement” executes codes inside { … } only if a specified condition is true,\
+    \ does not execute any codes inside {…} if the condition is false. Example 4.1\
+    \ package main import \"fmt\" func main() { var num int = 100 if num > 50 { fmt.\
+    \ Printf(\"num is greater than 50\" ) } } Output: num is greater than 50 Explanation:\
+    \ Because the value of num is greater than 50, the code inside the { } has been\
+    \ executed. \n\nif…else statement \n\n| if test\\_expression{ // if true do this\
+    \ } else { // if false do this }  |\n\n| --- |\n\n“if... else statement” runs\
+    \ some code if a condition is true and runs another code if the condition is false.\
+    \ Example 4.2 package main func main() { var num int = 100; if num > 200 { println(\"\
+    num is greater than 200\" ); } else { println(\"num is less than 200\" ); } }\
+    \ Output: num is less than 200 Explanation: Because the value of num is less than\
+    \ 200, the else{ } code has been executed. \n\nSwitch Statement \n\n| switch (variable\
+    \ ) { case 1: if equals this case, do this case 2: if equals this case, do this\
+    \ case 3: if equals this case, do this default : if not equals any case, run default\
+    \ code }  |\n\n| --- |\n\nThe value of the variable will compare each case first,\
+    \ if equals one of the “case” value; it will execute that “case” code. Example4.3\
+    \ package main func main() { var number int=20 switch ( number ) {  // number \
+    \ value compares each case case 10 : println ( \"Running case 10\" )  case 20\
+    \ : println ( \"Running case 20\" )  case 30 : println ( \"Running case 30\" ) \
+    \ default : println ( \"Running default code\" )    } } Output: Running case 20\
+    \ Explanation: The number value is 20; it will match case 20, so it will run the\
+    \ code in case 20. \n\nSelect Statement Select Statement is a bit like Switch\
+    \ Statement. Switch Statement executes case code sequentially. Select Statement\
+    \ executes case code randomly.  \n\n(1) \n\n| make(chan int, number)  |\n\n| ---\
+    \ |\n\n“ make(chan int, number ) ” creates a channel with a buffer. “chan” means\
+    \ a channel. For example: make(chan int, 2)  creates a channel with 2 buffers\
+    \ make(chan int, 10) creates a channel with 10 buffer s . (2) \n\n| chan <\\-\
+    \ data data <\\- 　chan  |\n\n| --- |\n\n“chan <\\- data” sends data to a channel.\
+    \ “data <\\- 　chan” receives data from a channel. (3) \n\n| select { case receive\
+    \ or send data : statement(s);      case receive or send data : statement(s);\
+    \ default :  // optional statement(s); }  |\n\n| --- |\n\nIf more than one case\
+    \ can be run, Select will randomly and fairly pick one to execute and the others\
+    \ will not. If no case can be run, Select will execute default clause. Example\
+    \ 4.4 package main import \"fmt\" func main() { c1:=make (chan int,1024)    //\
+    \ create a channel c2:=make (chan int,1024) c3:=make (chan int,1024) c1 <\\- 100    //\
+    \ send data to a channel c2 <\\- 200 c3 <\\- 300   select {      // randomly execute\
+    \ one case . case <\\- c1:     // receive data from a channel fmt. Println(\"\
+    Receive data from c1\") case <\\- c2: fmt. Println(\"Receive data from c2\") case\
+    \ <\\- c2: fmt. Println(Rreceive data from c3\") default: fmt. Println(\"Not receive\
+    \ data yet\") } } Output: Receive data from c2 Explanation: The select statement\
+    \ executes one of the case codes randomly. \n\nFor Loop For Loop is a control\
+    \ structure that can execute a specified number of loops. (1) \n\n| for init;\
+    \ condiction; in/decrease { }  |\n\n| --- |\n\ninit:   assign a first value to\
+    \ a variable. condition:    a test expression in/decrease:    increasement or\
+    \ decreasement Example 4.5 package main func main() { for a := 0; a <= 5; a++\
+    \ { print(a) } } Output: 0 1 2 3 4 5 Explanation: a: =0 assigns 0 to a.   a<=5\
+    \ is a test expression.   a++ is an increasement. (2) \n\n| for test\\_expression\
+    \ { }  |\n\n| --- |\n\ntest\\_ expression checks if the condition is true or false.\
+    \ Example 4.6 package main func main() { var a int =0 var b int = 5 for a < b\
+    \ { a++ print(a) } } Output: 1 2 3 4 5 Explanation: for a < b checks if a is greater\
+    \ than b. \n\nSummary “if statement” executes codes inside { … } only if a specified\
+    \ condition is true, does not execute any codes inside {…} if the condition is\
+    \ false. In “switch statement”, the value of the variable will compare each case\
+    \ first, if equals one of the “case” value; it will execute that “case” code.\
+    \ Select Statement is a bit like Switch Statement. Switch Statement executes case\
+    \ code sequentially. Select Statement executes case code randomly. For Loop is\
+    \ a control structure that can execute a specified number of loops. \n\nHour 5\
+    \ \n\nBreak \n\n| break  |\n\n| --- |\n\nThe break statement is used to terminate\
+    \ the loop. Break statement also is used to terminate the case in switch statement.\
+    \ Example 5.1 package main func main() { var num int = 20 for num < 30 { print(num,\"\
+    \ \"); num++; if num > 25 { break;     // terminate the for loop } } } Output:\
+    \ 20 21 22 23 24 25 Explanation: if num > 25 is a test expression, if true, the\
+    \ break statement will terminate the loop. Continue \n\n| continue  |\n\n| ---\
+    \ |\n\nThe continue statement skips the current loop to execute the next one.\
+    \ Example 5.2 package main func main() { var num int = 20 for num < 30 { if num\
+    \ == 25 { num = num + 1; continue;      // skip the current for loop } print(num,\
+    \ \" \") num++;     } } Output: 20 21 22 23 24 26 27 28 29 Explanation: if num\
+    \ == 25 is a test expression, if true, the continue statement will skip the current\
+    \ for loop, and execute the next one. Note: there is no 25 in the result. \n\n\
+    Goto \n\n| goto label; ... label: statement;  |\n\n| --- |\n\nThe goto statement\
+    \ can go to the specified code and execute them unconditionally. Example 5.3 package\
+    \ main func main() { var num int = 10 if num > 10{ goto code01 } if num == 10{\
+    \ goto code02 } code01: print(\"num > 10\") code02: print(\"num == 10\") } Output:\
+    \ num == 10 Explanation: goto code01 means to execute the statement with label\
+    \ code01. goto code02 means to execute the statement with label code02. \n\nFunction\
+    \ A function is a block of code that is reused to perform the same task. (1) The\
+    \ syntax to define a function is as follows: \n\n| func function\\_name ( parameter\
+    \ type) type { …… return … }  |\n\n| --- |\n\nfunc:  define a function return:  \
+    \ pass the result to the caller. (2) The syntax to call a function is as follows:\
+    \ \n\n| variable = function\\_name ( parameter type )  |\n\n| --- |"
+  toc: []
+  trans: "\n\n| `true && true; returns true;` || `true && false; returns false;` ||\
+    \ `false && false; returns false;` |\n| --- | --- | --- |\n| `true || true; returns\
+    \ true;` || `true || false; returns true;` || `false || false; return false;`\
+    \ |\n| `! false; returns true;` || `! true; returns false;` ||   |\n\n## 赋值运算符\n\
+    \n| 运算符 | 示例: |\n| --- | --- |\n| `+=` | `x+=y` |\n| `-=` | `x-=y` |\n| `*=` |\
+    \ `x*=y` |\n| `/=` | `x/=y` |\n| `%=` | `x%=y` |\n\n例如：给定：`x=200;` `y=100;` 解释：`x+=y;`\
+    \ // `x=x+y;` 输出 300 `x/=y;` // `x=x / y;` 输出 2 `x-=y;` // `x=x \\- y;` 输出 100\
+    \ `x%=y;` // `x=x%y;` 输出 0\n\n## 运算符优先级\n下表列出了运算符的优先级：（从上到下表示优先级从高到低）。\n\n| 优先级\
+    \ |\n| --- |\n| 7 |\n| 6 |\n| 5 |\n| 4 |\n| 3 |\n| 2 |\n| 1 |\n\n## 总结\n常量是在程序运行期间值不会改变的标识符。定义常量的语法为：`const\
+    \ constant_name [type] = value` 或 `const constant_name = value`。“iota”是一个特殊的常量。第一个\
+    \ `iota` 的值等于 0，每当在新的行中使用 `iota` 时候，它的值就会自动加 1。后续有以下运算符：算术运算符、关系运算符、逻辑运算符、赋值运算符。\n\
+    \n## 第 4 小\n\n### If 语句\n\n| `if test-expression { // 如果为真执行此操作; }` |\n| --- |\n\
+    \n“if 语句”仅在指定条件为真时执行 `{ … }` 内部的代码；如果条件为假，则不执行 `{…}` 内部的代码。\n\n示例 4.1\n```go\n\
+    package main\nimport \"fmt\"\nfunc main() {\n    var num int = 100\n    if num\
+    \ > 50 {\n        fmt.Printf(\"num is greater than 50\")\n    }\n}\n```\n输出: num\
+    \ is greater than 50\n解释：因为 `num` 的值大于 50，所以执行了 `{ }` 内部的代码。\n\n### if…else 语句\n\
+    \n| `if test_expression{ // 如果为真执行此操作 } else { // 如果为假执行此操作 }` |\n| --- |\n\n\
+    “if... else 语句”在条件为真时运行某些代码，在条件为假时运行另一段代码。\n\n示例 4.2\n```go\npackage main\nfunc\
+    \ main() {\n    var num int = 100\n    if num > 200 {\n        println(\"num is\
+    \ greater than 200\")\n    } else {\n        println(\"num is less than 200\"\
+    )\n    } \n}\n```\n输出: num is less than 200\n解释：因为 `num` 的值小于 200，所以执行了 `else\
+    \ { }` 代码。\n\n### Switch 语句\n\n| `switch (variable ) { case 1: 如果等于此 case，执行此\
+    \ case case 2: 如果等于此 case，执行此 case case 3: 如果等于此 case，执行此 case default : 如果等于任何\
+    \ case，运行 default }` |\n| --- |\n\n`variable`（变量）的值将首先与每个 `case` 进行比较，如果等于其中一个\
+    \ `case` 的值，它将执行该 `case` 代码。\n\n示例 4.3\n```go\npackage main\nfunc main() {\n \
+    \   var number int=20\n    switch ( number ) {\n        case 10: println (\"Running\
+    \ case 10\")\n        case 20: println (\"Running case 20\")\n        case 30:\
+    \ println (\"Running case 30\")\n        default: println (\"Running default\"\
+    )\n    }\n}\n```\n输出: Running case 20\n解释：`number` 的值为 20；它匹配了 `case 20`。\n\n\
+    ### Select 语句\nSelect 语句有点像 Switch 语句。Switch 语句顺序执行 case 代码，Select 语句随机执行 case\
+    \ 代码。\n\n1) `make(chan int, number)`\n“make(chan int, number)`”创建一个具有 `number`\
+    \ 个缓冲区的通道。例如：`make(chan int, 10)` 创建具有 10 个缓冲区的通道。\n\n2) `chan <- data`\n“chan\
+    \ <- data”向通道发送数据。`data <- chan` 从通道接收数据。\n\n3) `select { case 接收或发送数据 : 语句; default\
+    \ : 语句 }`\n如果多个 case 都可以运行，Select 将随机选择一个执行。如果没有 case 能够运行，Select 将执行 `default`\
+    \ 子句。\n\n示例 4.4\n```go\npackage main\nimport \"fmt\"\nfunc main() {\n    c1:=make(chan\
+    \ int,24) // 创建通道\n    c2:=make(chan int,24)\n    c3:=make(chan int,24)\n    c1\
+    \ <- 100 // 向通道发送数据\n    c2 <- 200\n    c3 <- 300\n    select {\n        case\
+    \ <-c1: fmt.Println(\"Receive data from c1\")\n        case <-c2: fmt.Println(\"\
+    Receive data from c2\")\n        case <-c3: fmt.Println(\"Receive data from c3\"\
+    )\n        default: fmt.Println(\"Not receive yet\")\n    }\n}\n```\n输出: Receive\
+    \ data from c2\n解释：select 语句随机执行了一个 case。\n\n### For 循环\nFor 循环是一种可以执行指定次数循环的控制结构。\n\
+    \n1) `for init; condition; in/decrease { }`\n`init`：给变量赋初始值。\n`condition`：测试表达式。\n\
+    `in/decrease`：递增或递减。\n\n示例 4.5\n```go\npackage main\nfunc main() {\n    for a\
+    \ := 0; a <= 5; a++ {\n        print(a)\n    }\n}\n```\n输出: 0 1 2 3 4 5\n解释：`a\
+    \ :=0` 给 `a` 赋值 0。`a<=5` 是测试表达式。`a++` 是递增。\n\n2) `for test_expression { }`\n`test_expression`\
+    \ 检查条件为真为假。\n\n示例 4.6\n```go\npackage main\nfunc main() {\n    var a int =0\n\
+    \    var b int = 5\n    for a < b {\n        a++\n        print(a)\n    }\n}\n\
+    ```\n输出: 1 2 3 4 5\n解释：`for a < b` 检查 `a` 是否小于 `b`。\n\n## 总结\n“if 语句”仅在指定条件为真时执行\
+    \ `{ … }` 内部的代码；如果条件为假，不执行 `{…}` 内部的任何代码。在“switch 语句”中，变量的值首先与每个 `case` 进行比较，如果等于其中一个\
+    \ `case` 的值，将执行该 `case` 代码。Select 语句有点像 Switch 语句。Switch 语句顺序执行 case 代码。Select\
+    \ 语句随机执行 case 代码。For 循环是一种可以执行指定次数循环的控制结构。\n\n## 第 5 小\n\n### Break\n| `break`\
+    \ |\n| --- |\nbreak 语句用于终止循环。break 语句也用于终止 switch 语句中的 case。\n\n示例 5.1\n```go\n\
+    package main\nfunc main() {\n    var num int = 20\n    for num < 30 {\n      \
+    \  print(num,\" \");\n        num++;\n        if num > 25 {\n            break;\
+    \ // 终止 for 循环\n        }\n    }\n}\n```\n输出: 20 21 22 23 24 25\n解释：如果 `num >\
+    \ 25` 测试表达式为真，`break` 语句将终止循环。\n\n### Continue\n| `continue` |\n| --- |\ncontinue\
+    \ 语句跳过当前循环执行下一次。\n\n示例 5.2\n```go\npackage main\nfunc main() {\n    var num int\
+    \ = 20\n    for num < 30 {\n        if num == 25 {\n            num = num + 1;\n\
+    \            continue; // 跳过当前循环\n        }\n        print(num, \" \")\n     \
+    \   num++;\n    }\n}\n```\n输出: 20 21 22 23 24 26 27 28 29\n解释：如果 `num == 25` 测试表达式为真，`continue`\
+    \ 语句将跳过当前循环并执行下一次。注意：结果中没有 25。\n\n### Goto\n| `goto label; ... label: statement;`\
+    \ |\n| --- |\ngoto 语句可以跳转到指定的代码并无条件执行。\n\n示例 5.3\n```go\npackage main\nfunc main()\
+    \ {\n    var num int = 10\n    if num > 10{ goto code01 }\n    if num == 10{ goto\
+    \ code02 }\n    code01: print(\"num > 10\")\n    code02: print(\"num == 10\")\n\
+    }\n```\n输出: num == 10\n解释：`goto code01` 意味着执行带有标签 `code01` 的语句。`goto code02` 意味着执行带有标签\
+    \ `code02` 的语句。\n\n"
+- fmt: "\n## Example 5.4\n```go\npackage main\nfunc main() {\n  var a int = 10\n \
+    \ var b int = 20\n  var result int\n  result = add(a, b)\n  // call the function\n\
+    \  print(\"The sum is \", result)\n}\nfunc add(num1, num2 int) int {\n  // define\
+    \ a function\n  return num1 + num2\n  // pass the result to the caller\n}\n```\n\
+    **Output:** The sum is 30\n**Explanation:** `add(a, b)` calls the function `add(a,\
+    \ b)`, and pass the parameter values of `a` and `b` to `num1` and `num2`. `func\
+    \ add(num1, num2 int) int` defines a function `add(…)`, `num1` and `num2` receive\
+    \ the value from `a` and `b`. `return num1 + num2` passes the result value to\
+    \ the caller `add(…)`.\n\n## Example 5.5\n```go\npackage main\nimport \"fmt\"\n\
+    func swap (a, b string) (string, string) {\n  // define a function\n  return b,\
+    \ a\n  // returns two values to the caller\n}\nfunc main() {\n  x, y := swap(\"\
+    in 8 Hours\", \"JavaScript\")\n  //call the function\n  fmt.Println(x, y)\n}\n\
+    ```\n**Output:** JavaScript in 8 Hours\n**Explanation:** `func swap(a, b string)\
+    \ (string, string) {…}` defines a function. `swap(\"in 8 Hours\", \"JavaScript\"\
+    )` call the function `swap(…)`, and pass the two parameters to the function `swap(…){…}`.\n\
+    \n## Working Scope\nThe working scope in any coding is a range where a variable\
+    \ can be accessed, and outside that working scope the variable cannot be accessed.\n\
+    \n- Variables defined within a function are called **local variables**.\n- Variables\
+    \ defined outside a function are called **global variables**.\n\n## Example 5.6\n\
+    ```go\npackage main\nfunc main() {\n  var a, b, c int\n  // defines local variables\n\
+    \  a = 100\n  b = 200\n  c = a + b\n  print(a, b, c)\n}\n```\n**Output:** 100\
+    \ 200 300\n**Explanation:** `var a, b, c int` define three local variables inside\
+    \ a function.\n\n## Example 5.7\n```go\npackage main\nvar v int = 100\n// define\
+    \ a global variable\nfunc main(){\n  print (\"The value of the global variable\
+    \ is \", v)\n}\n```\n**Output:** The value of the global variable is 100.\n**Explanation:**\
+    \ `var v int = 100` defines a global variable.\n\n## Summary\n- The `break` statement\
+    \ is used to terminate the loop. `break` statement also is used to terminate the\
+    \ `case` in `switch` statement.\n- The `continue` statement skips the current\
+    \ loop to execute the next one.\n- The `goto` statement can go to the specified\
+    \ code and execute them unconditionally.\n1. The syntax to define a function is\
+    \ as follows: `func function_name ( parameter type) type { …… return … }`\n2.\
+    \ The syntax to call a function is as follows: `variable = function_name ( parameter\
+    \ type )`\n- Variables defined within a function are called **local variables**.\
+    \ Variables defined outside a function are called **global variables**.\n\n##\
+    \ Hour 6\n### Array\nAn array is a collection of variables of the same type and\
+    \ name.\n- **Array element**: each variable in an array.\n- **Array index**: also\
+    \ called as key, the numbers on each element.\n- **Note**: the array index or\
+    \ array key starts from zero.\n\nThere are several ways to define an array:\n\
+    1. `var array_name[length] type` // define an array\n2. `array_name[key] = value`\
+    \ // assign value to the element\n\n#### Example 6.1\n```go\npackage main\nfunc\
+    \ main() {\n  var arr [3]int\n  // define an array with three elements\n  arr[0]\
+    \ = 100\n  // assign a value to the element\n  arr[1] = 101\n  arr[2] = 102\n\
+    \  print(arr[0], arr[1], arr[2])\n}\n```\n**Output:** 100 101 102\n**Explanation:**\
+    \ `var arr [3]int` defines an array with three elements. `arr` is the array name.\
+    \ `3` is length. The type is `int`. `arr[0]=100` assigns a value to the element.\
+    \ `arr` is the array name, `0` is an index or key.\n\n#### Example 6.2\n```go\n\
+    package main\nfunc main() {\n  var arr [3]int = make([int], 3)\n  // define an\
+    \ array\n  arr[0] = 100\n  // assign a value to the element\n  arr[1] = 101\n\
+    \  arr[2] = 102\n  print(arr[0], arr[1], arr[2])\n}\n```\n**Output:** 100 101\
+    \ 102\n**Explanation:** `var arr [3]int = make([int], 3)` defines an array with\
+    \ three elements.\n\n#### Example 6.3\n```go\npackage main\nfunc main() {\n  var\
+    \ arr [3]int = {100, 101, 102}\n  // define an array with values\n  print(arr[0],\
+    \ arr[1], arr[2])\n}\n```\n**Output:** 100 101 102\n**Explanation:** `var arr\
+    \ [3]int = {100, 101, 102}` defines an array with values.\n\n#### Example 6.4\n\
+    ```go\npackage main\nfunc main() {\n  var arr = [...]int{100, 101, 102}\n  //\
+    \ defines an array\n  print(arr[0], arr[1], arr[2])\n}\n```\n**Output:** 100 101\
+    \ 102\n**Explanation:** `var arr = [...]int{100, 101, 102}` defines an array with\
+    \ values.\n\n### Pointers\nA pointer represents the value of a memory address.\n\
+    1. `&variable` // get the memory address of a variable\n2. `var variable_name\
+    \ *type` // declare a pointer; `*variable_name` // get the variable value in the\
+    \ address\n\nFor example:\n- `var ipoint *int` // declare an int pointer\n- `var\
+    \ fpoint *float32` // declare a float32 pointer\n- `*ipoint` // gets the ipoint\
+    \ value in the memory address\n- `*fpoint` // gets the fpoint value in the memory\
+    \ address\n\n#### Example 6.6\n```go\npackage main\nimport \"fmt\"\nfunc main()\
+    \ {\n  var num int = 100\n  var pt *int\n  // declare a pointer\n  pt = &num\n\
+    \  // &num get address and assign to pt\n  fmt.Printf(\"The address of num: %x\\\
+    n\", &num)\n  fmt.Printf(\"The address in pt: %x\\n\", pt)\n  fmt.Printf(\"The\
+    \ value of the *pt: %d\\n\", *pt)\n}\n```\n**Output:**\nThe address of num: C000044058\n\
+    The address in pt: C000044058\nThe value of the *pt: 100\n**Explanation:** `&num`\
+    \ gets the memory address from `num`. `pt = &num` assigns the memory address to\
+    \ `pt`. `*pt` returns the `pt` value in the memory address.\n\n#### Example 6.7\n\
+    ```go\npackage main\nimport \"fmt\"\nfunc main() {\n  var a string = \"Hello\"\
+    \n  var b *string\n  var c string\n  b = &a\n  // &a gets the memory address\n\
+    \  c = *b\n  // *b gets the value in memory address\n  fmt.Println(a)\n  fmt.Println(b)\n\
+    \  fmt.Println(c)\n}\n```\n**Output:**\nHello\n0xc000381c8\nHello\n**Explanation:**\
+    \ `&a` returns the memory address of `a`. `*b` returns the value in memory address.\n\
+    \n### Nil Pointer\nWhen a pointer is defined and not assigned to any variable\
+    \ address, its value is `nil`.\n\n#### Example 6.8\n```go\npackage main\nimport\
+    \ \"fmt\"\nfunc main() {\n  var npt *int\n  fmt.Printf(\"The address stored in\
+    \ npt: %x\\n\", npt)\n}\n```\n**Output:** The address stored in npt: 0\n**Explanation:**\
+    \ `npt` is a pointer, which has not yet assigned any address, so the value is\
+    \ 0.\n\n## Hour 7\n### Structures\nA structure is a collection of data with the\
+    \ same or different types of data.\n1. **Define Structure Type**: `type structure_name\
+    \ struct { member1 type; member2 type; ... member3 type; }`\n2. **Access Structure\
+    \ Members**: `structure_name{member1: value1, member2: value2, … }`\n\n#### Example\
+    \ 7.1\n```go\npackage main\nimport \"fmt\"\ntype Flower struct {\n  // define\
+    \ a structure type\n  color string\n  // structure member\n  size string\n  number\
+    \ int\n}\nfunc main() {\n  fmt.Println(Flower{color:\"Red\", size:\"Large\", number:10\
+    \ })\n}\n```\n**Output:** {Red Large 10}\n**Explanation:** `type Flower struct`\
+    \ defines a structure type.\n"
+  raw: "Example 5.4 package main func main() {   var a int = 10 var b int = 20 var\
+    \ result int result = add(a, b)     // call the function print( \"The sum is \"\
+    , result ) } func add(num1, num2 int) int {  // define a function return num1\
+    \ + num2     // pass the result to the caller } Output: The sum is 30 Explanation:\
+    \ add(a, b) calls the function add(a, b), and pass the parameter values of a and\
+    \ b to num1 and num2. func add(num1, num2 int) int defines a function add(…),\
+    \ num1 and num2 receive the value from a and b. return num1 + num2 passes the\
+    \ result value to the caller add(…). Example 5.5 package main import \"fmt\" func\
+    \ swap (a, b string) (string, string) { // define a function return b, a    //\
+    \ returns two values to the caller . } func main() { x, y : = swap(\"in 8 Hours\"\
+    , \"JavaScript\")   //call the function fmt. Println(x, y) } Output: JavaScript\
+    \ in 8 Hours Explanation: func swap(a, b string) (string, string) {…} defines\
+    \ a function. swap(\"in 8 Hours\", \"JavaScript\") call the function swap(…),\
+    \ and pass the two parameters to the function swap(…){…}. \n\nWorking Scope The\
+    \ working scope in any coding is a range where a variable can be accessed, and\
+    \ outside that working scope the variable cannot be accessed . \n\n| Variables\
+    \ defined within a function are called local variables . Variables defined outside\
+    \ a function are called global variables .  |\n\n| --- |\n\nExample 5.6 package\
+    \ main func main() { var a, b, c int     // defines local variables a = 100 b\
+    \ = 200 c = a + b print(a, b, c) } Output: 100 200 300 Explanation: var a, b,\
+    \ c int define three local variables inside a function. Example 5.7 package main\
+    \ var v int = 100     // define a global variable func main(){ print (\"The value\
+    \ of the global variable is \",  v) } Output: The value of the global variable\
+    \ is 100. Explanation: var v int = 100 defines a global variable. \n\nSummary\
+    \ The break statement is used to terminate the loop. Break statement also is used\
+    \ to terminate the case in switch statement. The continue statement skips the\
+    \ current loop to execute the next one. The goto statement can go to the specified\
+    \ code and execute them unconditionally. (1) The syntax to define a function is\
+    \ as follows: func function\\_name ( parameter type) type { …… return … } (2)\
+    \ The syntax to call a function is as follows: variable = function\\_name ( parameter\
+    \ type ) Variables defined within a function are called local variables. Variables\
+    \ defined outside a function are called global variables. \n\nHour 6 \n\nArray\
+    \ An array is a collection of variables of the same type and name. Array element:\
+    \ each variable in an array. Array index:  also called as key, the numbers on\
+    \ each element. Note: the array index or array key starts from zero. There are\
+    \ several kinds of way to define an array: (1) \n\n| var  array\\_name\\[ length\\\
+    ] type     // define an array array\\_name\\[key\\] = value  // assign value to\
+    \ the element  |\n\n| --- |\n\nExample 6.1 package main func main(){ var arr \\\
+    [3\\]int      // define an array with three elements arr\\[0\\]=100     // assign\
+    \ a value to the array element arr\\[1\\]=101 arr\\[2\\]=102 print(arr\\[0\\],\
+    \ \" \", arr\\[1\\], \" \", arr\\[2\\]) } Output: 100  101  102 Explanation: var\
+    \ arr \\[3\\]int defines an array with three elements. “arr” is the array name.\
+    \ 3 is array length. The array type is int. arr\\[0\\]=100 assigns a value to\
+    \ the array element. “arr” is the array name, \\[0\\] is an index or key. (2)\
+    \ \n\n| var array\\_name \\[ \\] type = make( \\[ \\] type, length )   |\n\n|\
+    \ --- |\n\nmake( \\[ \\] type, length) defines an array. Example 6.2 package main\
+    \ func main(){ var arr \\[ \\]int = make(\\[ \\]int, 3)   // define an array arr\\\
+    [0\\]=100   // assign a value to the array element arr\\[1\\]=101 arr\\[2\\]=102\
+    \ print(arr\\[0\\], \" \", arr\\[1\\], \" \", arr\\[2\\]) } Output: 100  101  102\
+    \ Explanation: var arr \\[ \\]int = make(\\[ \\]int, 3) defines an array with\
+    \ three elements. (3) \n\n| var array\\_name = \\[length\\] type {value1,value2,\
+    \ ... }  |\n\n| --- |\n\n\\[length\\] type {value1,value2, ... } defines an array\
+    \ with values. Example 6.3 package main func main(){ var arr = \\[3\\] int {100,101,\
+    \ 102} // define an array with values print(arr\\[0\\], \" \", arr\\[1\\], \"\
+    \ \", arr\\[2\\]) } Output: 100  101 102 Explanation: var arr = \\[3\\] int {100,101,\
+    \ 102} defines an array with three values 100, 101, and 102. (4) \n\n| var array\\\
+    _name = \\[... \\] type {value1,value2, … }  |\n\n| --- |\n\n\\[... \\] type {value1,value2…\
+    \ } defines an array with values. Example 6.4 package main func main(){ var arr\
+    \ = \\[...\\] int {100,101, 102}   // defines an array print(arr\\[0\\], \" \"\
+    , arr\\[1\\], \" \", arr\\[2\\]) } Output: 100  101  102 Explanation: var arr\
+    \ = \\[… \\] int {100,101, 102} defines an array with three values 100, 101, and\
+    \ 102. \n\nPointers A pointer represents the value of a memory address. (1) \n\
+    \n| &variable    // get the memory address of a variable  |\n\n| --- |\n\nExample\
+    \ 6.5 package main import \"fmt\" func main() { var num int = 10   fmt. Printf(\"\
+    The address of the variable: %x\\\\n\", &num   ) } Output: The address of the\
+    \ variable: C000044058 Explanation: &num returns the address of the variable num.\
+    \ (2) \n\n| var variable\\_name \\* type     // declare a pointer \\*variable\\\
+    _name   // get the variable value in the address  |\n\n| --- |\n\nFor example:\
+    \ var ipoint \\*int        // declare an int pointer var fpoint \\*float32   \
+    \ // declare a float32 pointer \\*ipoint    // gets the ipoint value in the memory\
+    \ address . \\*fpoint    // gets the fpoint value in the memory address . Example\
+    \ 6.6 package main import \"fmt\" func main() { var num int= 100   var pt \\*int\
+    \        // declare a pointer pt pt = &num    // &num get address and assign to\
+    \ pt fmt. Printf(\"The address of num: %x\\\\n\", &num  ) fmt. Printf(\"The address\
+    \ in pt: %x\\\\n\", pt ) fmt. Printf(\"The value of the \\*pt: %d\\\\n\", \\*pt\
+    \ ) } Output: The address of num: C000044058 The address in pt: C000044058 The\
+    \ value of the \\*pt: 100  Explanation: &num gets the memory address from num.\
+    \ pt = &num assigns the memory address to pt \\*pt returns the pt value in the\
+    \ memory address. Example 6.7 package main import \"fmt\" func main() { var a\
+    \ string=\"Hello\" var b \\*string var c string b=&a     //&a gets the memory\
+    \ address c=\\*b      //\\*b gets the value in memory address fmt. Println(a)\
+    \ fmt. Println(b) fmt. Println(c) } Output: Hello 0xc0000381c8 Hello Explanation:\
+    \ &varilabe returns a memory address. \\*variable returns a value in the memory\
+    \ address. \n\nNil Pointer When a pointer is defined and not assigned to any variable\
+    \ address, its value is nil. Example 6.8 package main import \"fmt\" func main()\
+    \ { var  npt \\*int fmt. Printf(\"The address stored in npt: %x\\\\n\", npt  )\
+    \ } Output: The address stored in npt: 0 Explanation: “npt” is a pointer, which\
+    \ has not yet been assigned any address, so the value of npt is 0. \n\nSummary\
+    \ An array is a collection of variables of the same type and name. Array element:\
+    \ each variable in an array. Array index:  also called as key, the numbers on\
+    \ each element. Note: the array index or array key starts from zero. A pointer\
+    \ represents the value of a memory address. &variable    // get the memory address\
+    \ of a variable var variable\\_name \\* type     // declare a pointer \\*variable\\\
+    _name   // get the variable value in the address When a pointer is defined and\
+    \ not assigned to any variable address, its value is nil. \n\nHour 7 \n\nStructures\
+    \ A structure is a collection of data with the same or different types of data.\
+    \ (1) Define Structure Type. \n\n| type structure\\_name struct { member1  type;\
+    \ member2  type; ... member3  type; }  |\n\n| --- |\n\n(2) Access Structure Members\
+    \ \n\n| structure\\_name{member1: value1, member2: value2, … }  |\n\n| --- |\n\
+    \nExample 7.1 package main import \"fmt\" type Flower struct {  // define a structure\
+    \ type color string   // structure member size string number int } func main()\
+    \ { fmt. Println(Flower{color:\"Red\", size:\"Large\", number:10 }) } Output:\
+    \ Red   Large  10 Explanation: “type Flower struct” defines a structure type (3)\
+    \ Declare Structure Variables \n\n| var variable structure\\_name  |\n\n| ---\
+    \ |\n\n(4) Assign Values to Structure Members \n\n| variable . member = value\
+    \  |"
+  toc: []
+  trans: "\n\n## Example 5.4\n```go\npackage main\nfunc main() {\n  var a int = 10\n\
+    \  var b int = 20\n  var result int\n  result = add(a, b)\n  // call the function\n\
+    \  print(\"The sum is \", result)\n}\nfunc add(num1, num2 int) int {\n  // define\
+    \ a function\n  return num1 + num2\n  // pass the result to the caller\n}\n```\n\
+    **Output:** The sum is 30\n**Explanation:** `add(a, b)` 调用了函数 `add(a, b)`，并将参数\
+    \ `a` 和 `b` 的值传递给 `num1` 和 `num2`。`func add(num1, num2 int) int` 定义了一个函数 `add(…)`，`num1`\
+    \ 和 `num2` 接收来自 `a` 和 `b` 的值。`return num1 + num2` 将结果值传递给调用者 `add(…)`。\n\n## Example\
+    \ 5.5\n```go\npackage main\nimport \"fmt\"\nfunc swap (a, b string) (string, string)\
+    \ {\n  // define a function\n  return b, a\n  // returns two values to the caller\n\
+    }\nfunc main() {\n  x, y := swap(\"in 8 Hours\", \"JavaScript\")\n  //call the\
+    \ function\n  fmt.Println(x, y)\n}\n```\n**Output:** JavaScript in 8 Hours\n**Explanation:**\
+    \ `func swap(a, b string) (string, string){…}` 定义了一个函数。`swap(\"in 8 Hours\", \"\
+    JavaScript\")` 调用函数 `swap(…)`，并将两个参数传递给函数 `swap(…){…}`。\n\n## Working Scope\n\
+    任何编码中的工作作用域都是变量可以被访问的范围，在该作用域之外，变量无法被访问。\n\n- 在函数内部定义的变量被称为**局部变量**。\n- 在函数外部定义的变量被称为**全局变量**。\n\
+    \n## Example 5.6\n```go\npackage main\nfunc main() {\n  var a, b, c int\n  //\
+    \ defines local variables\n  a = 100\n  b = 200\n  c = a + b\n  print(a, b, c)\n\
+    }\n```\n**Output:** 100 200 300\n**Explanation:** `var a, b, c int` 在函数内部定义了三个局部变量。\n\
+    \n## Example 5.7\n```go\npackage main\nvar v int = 100\n// define a global variable\n\
+    func main(){\n  print (\"The value of the global variable is \", v)\n}\n```\n\
+    **Output:** The value of the global variable is 100.\n**Explanation:** `var v\
+    \ int = 100` 定义了一个全局变量。\n\n## Summary\n- `break` 语句用于终止循环。`break` 语句也用于终止 `switch`\
+    \ 语句中的 `case`。\n- `continue` 语句跳过当前循环并执行下一个循环。\n- `goto` 语句可以到指定的代码处并无条件执行。\n\
+    1. 定义函数的语法如下：`func function_name ( parameter type) type { …… return … }`\n2. 调用函数的语法如下：`variable\
+    \ = function_name ( parameter type )`\n- 在函数内部定义的变量被称为**局部变量**。在函数外部定义的变量被称为**全局变量**。\n\
+    \n## Hour 6\n### Array\n数组是相同类型和名称的变量的集合。\n- **Array element**（数组元素）：数组中的每个变量。\n\
+    - **Array index**（数组索引）：也称为键，每个元素上的数字。\n- **Note**：数组索引或数组键从零开始。\n\n定义数组有几种方法方法：\n\
+    1. `var array_name[length] type` // 定义数组\n2. `array_name[key] = value` // 给元素赋值\n\
+    \n#### Example 6.1\n```go\npackage main\nfunc main() {\n  var arr [3]int\n  //\
+    \ define an array\n  arr[0] = 100\n  arr[1] = 101\n  arr[2] = 102\n  print(arr[0],\
+    \ arr[1], arr[2])\n}\n```\n**Output:** 100 101 102\n**Explanation:** `var arr\
+    \ [3]int` 定义了一个带有三个元素的数组。`arr` 是数组名，`3` 是长度，类型是 `int`。`arr[0]=100` 给元素赋值，`0` 是索引或键。\n\
+    \n#### Example 6.2\n```go\npackage main\nfunc main() {\n  var arr [3]int\n  //\
+    \ define an array\n  arr[0] = 100\n  arr[1] = 101\n  arr[2] = 102\n  print(arr[0],\
+    \ arr[1], arr[2])\n}\n```\n**Output:** 100 101 102\n**Explanation:** `var arr\
+    \ [3]int` 定义了一个带有三个元素的数组。\n\n#### Example 6.3\n```go\npackage main\nfunc main()\
+    \ {\n  var arr [3]int\n  // define an array\n  arr[0] = 100\n  arr[1] = 101\n\
+    \  arr[2] = 102\n  print(arr[0], arr[1], arr[2])\n}\n```\n**Output:** 100 101\
+    \ 102\n**Explanation:** `var arr [3]int` 定义了一个带有三个元素的数组。\n\n#### Example 6.4\n\
+    ```go\npackage main\nfunc main() {\n  var arr [3]int\n  // define an array\n \
+    \ arr[0] = 100\n  arr[1] = 101\n  arr[2] = 102\n  print(arr[0], arr[1], arr[2])\n\
+    }\n```\n**Output:** 100 101 102\n**Explanation:** `var arr [3]int` 定义了一个带有三个元素的数组。\n\
+    \n### Pointers\n指针代表内存地址的值。\n1. `&variable` // 获取变量的地址\n2. `var variable_name\
+    \ *type` // 声明指针；`*variable_name` 获取地址中的的值\n\n例如：\n- `var ipoint *int` // 声明 int\
+    \ 指针\n- `var fpoint *float32` // 声明 float32 指针\n- `*ipoint` // 获取地址中的 ipoint 值\n\
+    - `*fpoint` // 获取地址中的 fpoint 值\n\n#### Example 6.6\n```go\npackage main\nimport\
+    \ \"fmt\"\nfunc main() {\n  var num int = 100\n  var pt *int\n  // declare a pointer\n\
+    \  pt = &num\n  // &num get address and assign to pt\n  fmt.Printf(\"The address\
+    \ of num: %x\\n\", &num)\n  fmt.Printf(\"The address in pt: %x\\n\", pt)\n  fmt.Printf(\"\
+    The value of the *pt: %d\\n\", *pt)\n}\n```\n**Output:**\nThe address of num:\
+    \ C00004058\nThe address in pt: C00004058\nThe value of the *pt: 100\n**Explanation:**\
+    \ `&num` 从 `num` 获取地址。`pt = &num` 将地址赋值给 `pt`。`*pt` 返回地址中的 `pt` 值。\n\n#### Example\
+    \ 6.7\n```go\npackage main\nimport \"fmt\"\nfunc main() {\n  var a string = \"\
+    Hello\"\n  var b *string\n  var c string\n  b = &a\n  // &a gets the memory address\n\
+    \  c = *b\n  // *b gets the value in memory address\n  fmt.Println(a)\n  fmt.Println(b)\n\
+    \  fmt.Println(c)\n}\n```\n**Output:**\nHello\n0xc000381c8\nHello\n**Explanation:**\
+    \ `&a` 返回 `a` 的内存地址。`*b` 返回内存地址的值。\n\n### Nil Pointer\n当指针被定义且未分配任何变量地址时，它的值为\
+    \ `nil`。\n\n#### Example 6.8\n```go\npackage main\nimport \"fmt\"\nfunc main()\
+    \ {\n  var npt *int\n  fmt.Printf(\"The address stored in npt: %x\\n\", npt)\n\
+    }\n```\n**Output:** The address stored in npt: 0\n**Explanation:** `npt` 是一个指针，尚未分配任何地址，所以值为\
+    \ 0。\n\n## Hour 7\n### Structures\n结构体是相同或不同类型数据的集合。\n1. **定义结构体类型**：`type structure_name\
+    \ struct { member1 type; member2 type; ... member3 type; }`\n2. **访问结构体成员**：`structure_name{member1:\
+    \ value1, member2: value2, … }`\n\n#### Example 7.1\n```go\npackage main\nimport\
+    \ \"fmt\"\ntype Flower struct {\n  // define a structure type\n  color string\n\
+    \  // structure member\n  size string\n  number int\n}\nfunc main() {\n  fmt.Println(Flower{color:\"\
+    Red\", size:\"Large\", number:10 })\n}\n```\n**Output:** {Red Large 10}\n**Explanation:**\
+    \ `type Flower struct` 定义了一个结构体类型。\n\n"
+- fmt: "\n## Example 7.2\n\n```go\npackage main\ntype Flower struct {\n  // define\
+    \ a structure type\n  color string\n  // structure member\n  size string\n  number\
+    \ int\n}\nfunc main() {\n  var Rose Flower   // declare a structure variable Rose\n\
+    \  Rose.color = \"Red\"    // assign value to structure member\n  Rose.size =\
+    \ \"Large\"\n  Rose.number = 10\n  println(\"Rose color : \", Rose.color);\n \
+    \ println(\"Rose size : \", Rose.size);\n  println(\"Rose number : \", Rose.number);\n\
+    }\n```\n**Output:**\n```\nRose color: Red\nRose size: Large\nRose number: 10\n\
+    ```\n**Explanation:** `var Rose Flower` declares a structure variable `Rose`.\
+    \ `Rose.color = \"Red\"` assigns value to structure member `Rose.color`.\n\n##\
+    \ Slice\n\n`Slice` is a special array, but its length is changeable. (1) The first\
+    \ syntax to create a `Slice` is as follows:\n\n`slice_name := []type{val1, val2,\
+    \ … }`\n\n### Example 7.3\n\n```go\npackage main\nimport \"fmt\"\nfunc main()\
+    \ {\n  s := []int{1,2,3,4,5}    // create a slice\n  fmt.Println(s)\n}\n```\n\
+    **Output:**\n```\n1 2 3 4 5\n```\n**Explanation:** `s := []int{1,2,3,4,5}` creates\
+    \ a `Slice` with five values. (2) The second syntax to create a `Slice` is as\
+    \ follows:\n\n`slice_name := make([]type, len, cap)`\n\n`len` means the length\
+    \ of the slice. `cap` means the capacity to contain slice elements.\n\n### Example\
+    \ 7.4\n\n```go\npackage main\nimport \"fmt\"\nfunc main() {\n  s := make([]int,\
+    \ 5, 8)\n  fmt.Printf(\"len=%d cap=%d slice=%v\\n\",len(s),cap(s),s)\n}\n```\n\
+    **Output:**\n```\nlen=5   cap=8   slice=[00000]\n```\n**Explanation:** `len(s)`\
+    \ gets the length of the slice. `cap(s)` gets the capacity to contain all elements.\
+    \ Because `Slice` elements have not been assigned any values yet, the five values\
+    \ of this `Slice` are zero. (3) Get some value from `Slice` elements:\n\n`slice_name[key1,\
+    \ key2]`\n\nGet the value from `key1` to `key2-1`.\n\n### Example 7.5\n\n```go\n\
+    package main\nimport \"fmt\"\nfunc main() {\n  var s = []int{0, 1, 2, 3, 4, 5,\
+    \ 6, 7, 8}\n  mySlice:= s[2:6]  // get the value from s[2] to s[5]\n  fmt.Println(mySlice)\n\
+    }\n```\n**Output:**\n```\n2 3 4 5\n```\n**Explanation:** `s[2: 6]` gets the value\
+    \ from `s[2]` to `s[5]`. (4) Assign value to `Slice` elements.\n\n`slice_name[key]\
+    \ = value`\n\n### Example 7.6\n\n```go\npackage main\nimport \"fmt\"\nfunc main()\
+    \ {\n  var s = []int{0, 1, 2, 3, 4, 5, 6, 7, 8}\n  s[3] = 10      // assign a\
+    \ new value to s[3]\n  s[6] = 100     // assign a new value to s[6]\n  fmt.Println(s)\n\
+    }\n```\n**Output:**\n```\n[0 1 2 10 4 5 100 7 8]\n```\n**Explanation:** `s[3]\
+    \ = 10` // assign a new value to `s[3]`; `s[6] = 100` // assign a new value to\
+    \ `s[6]`.\n\n## append() & copy()\n\n`append(slice_name, values)` // append values\
+    \ to a `Slice`\n`copy(new_slice, old_slice)` // copy old `Slice` to new `Slice`\n\
+    \n### Example 7.7\n\n```go\npackage main\nimport \"fmt\"\nfunc main() {\n  mySlice\
+    \ := make([]int, 0, 0)\n  showSlice(mySlice)\n  mySlice = append(mySlice, 10,20,30)\
+    \  // append\n  newSlice := make([]int, len(mySlice), cap(mySlice)*2)\n  copy(newSlice,mySlice)\
+    \  // copy\n  showSlice(newSlice)\n}\nfunc showSlice(x []int){\n  fmt.Printf(\"\
+    len=%d cap=%d slice=%v\\n\",len(x),cap(x),x)\n}\n```\n**Output:**\n```\nlen=0\
+    \ cap=0 slice=[]\nlen=3 cap=4 slice=[10 20 30]\n```\n**Explanation:** `append(mySlice,\
+    \ 10,20,30)` appends three values to `mySlice`. `cap(mySlice)*2` makes the capacity\
+    \ double. `copy(newSlice,mySlice)` copies the contents of `mySlice` to `newSlice`.\n\
+    \n## Summary\n\nA `structure` is a collection of data with the same or different\
+    \ types of data.\n(1) Define `Structure` Type:\n```go\ntype structure_name struct\
+    \ {\n  member1 type\n  member2 type\n  ...\n  member3 type\n}\n```\n(2) Access\
+    \ `Structure` Members: `structure_name{member1: value1, member2: value2, …}`\n\
+    (3) Declare `Structure` Variables: `var structure_name`\n(4) Assign Values to\
+    \ Structure Members: `member = value`\n\n`Slice` is a special array, but its length\
+    \ is changeable. `append(slice_name, values)` // append values to a `Slice`; `copy(old_slice)`\
+    \ // copy old Slice to new Slice.\n\n## Hour 8: GOROUTINE\n\n`goroutine` is used\
+    \ to run multiple tasks, which means `goroutine` function can execute multiple\
+    \ threads at the same time by `go` keyword. The following example is to define\
+    \ a `goroutine` function, and run the `goroutine` function.\n\n```go\ngo func(arguments)\
+    \ { // define goroutine function }\n(arguments) // run the goroutine function\n\
+    ```\n\n### Example 8.1\n\n```go\npackage main\nimport \"fmt\"\nfunc fn(s string)\
+    \ {\n  for i := 0; i < 5; i++ {\n    fmt.Println(s)\n  }\n}\nfunc main() {\n \
+    \ fn(\"Thread B\")\n  go func(msg string) { // define goroutine function\n   \
+    \ fmt.Println(msg)\n  } (\"Press to Stop!\") // run the goroutine function\n \
+    \ fmt.Scanln() // accept user input from keyboard\n  fmt.Println(\"Complete!\"\
+    )\n}\n```\n**Output:**\n```\nThread B\nThread B\nThread B\nThread B\nThread B\n\
+    Complete!\n```\n**Explanation:** `go func(msg string) {…}` defines a `goroutine`\
+    \ function. `(\"Press to Stop!\")` runs the `goroutine` function, and pass the\
+    \ parameter to `goroutine` function.\n\n## Range\n\n`Range` is a built-in function\
+    \ of the Go language, it is used to iterate over arrays, slices and maps.\n* Iterating\
+    \ over array, slice returns index and value.\n* Iterating over map returns keys\
+    \ and value.\n* Iterating over channel returns values.\n\n### (1) Iterating Over\
+    \ Array/slice\n\n```go\nfor key, value := range array/slice {}\n```\n\n### Example\
+    \ 8.2\n\n```go\npackage main\nimport \"fmt\"\nfunc main() {\n  for key, value\
+    \ := range []int{10,11,12,13} {\n    fmt.Printf(\"key:%d value:%d\\n\", key, value)\n\
+    \  }\n}\n```\n**Output:**\n```\nkey:0 value:10\nkey:1 value:11\nkey:2 value:12\n\
+    key:3 value:13\n```\n**Explanation:** `range []int{10,11,12,13}` iterates over\
+    \ an array or slice, and returns the keys and values.\n\n### (2) Iterating Over\
+    \ String\n\n```go\nfor key, value := range str {}\n```\n\n### Example 8.3\n\n\
+    ```go\npackage main\nimport \"fmt\"\nfunc main() {\n  var str = \"hello\"\n  for\
+    \ key, value := range str {\n    fmt.Printf(\"key:%d value:0x%x\\n\", key, value)\n\
+    \  }\n}\n```\n**Output:**\n```\nkey:0 value:0x68\nkey:1 value:0x65\nkey:2 value:0x6c\n\
+    key:3 value:0x6c\nkey:4 value:0x6f\n```\n**Explanation:** `range str { }` iterate\
+    \ over a string, returns its keys and values.\n\n### (3) Iterating Over Channel\n\
+    \n```go\nfor value := range channel {}\n```\n\n### Example 8.4\n\n```go\npackage\
+    \ main\nimport \"fmt\"\nfunc main() {\n  c := make(chan int)\n  go func() { //\
+    \ define a goroutine function\n    c <- 1 // send datas to channels\n    c <-\
+    \ 2\n    c <- 3\n    close(c) // close channels\n  }() // call the goroutine function\n\
+    \  for v := range c { // iterate over the channels\n    fmt.Println(\"Send data\
+    \ to channel: \",v)\n  }\n}\n```\n**Output:**\n```\nSend data to channel: 1\n\
+    Send data to channel: 2\nSend data to channel: 3\n```\n**Explanation:** `range\
+    \ c` iterates over the channels. `go func(){}` defines a goroutine function. `()`\
+    \ calls the goroutine function.\n\n## Map\n\n`Map` is an unordered collection\
+    \ of key-value pairs. `Map` is used to quickly retrieve data by key, which is\
+    \ similar to an index and points to the value of the data. Two syntaxes to define\
+    \ a `map` is as follows:\n\n(1) `m1 := map[key_type]value_type{}`\n`m1` is a map\
+    \ variable.\n(2) `m2 := make(map[key_type] value_type)`\n`m2` is a map variable.\n\
+    \n### Example 8.5\n\n```go\npackage main\nimport \"fmt\"\nfunc main() {\n  m1\
+    \ := map[int]int{}\n  m2 := make(map[int]int)\n  m1[1] = 10\n  m2[2] = 20\n  for\
+    \ key, value := range m1 {\n    fmt.Println(\"Key: \", key, \"Value: \", value)\n\
+    \  }\n  for key, value := range m2 {\n    fmt.Println(\"Key: \", key, \"Value:\
+    \ \", value)\n  }\n}\n```\n**Output:**\n```\nKey: 1 Value: 10\nKey: 2 Value: 20\n\
+    ```\n**Explanation:** `m1 := map[int]int{}` defines a map `m1`. `m2 := make(map[int]int)`\
+    \ defines a map `m2`.\n\n## Type Conversion\n\nType conversion means the one data\
+    \ type of a variable being converted into another data type.\n\n`data_type (variables)`\n\
+    \n### Example 8.6\n\n```go\npackage main\nimport \"fmt\"\nfunc main() {\n  var\
+    \ num1 int = 100\n  var num2 int = 3\n  var result float32\n  result = float32(num1)/float32(num2)\
+    \ // conversion\n  fmt.Printf(\"The result is %f\\n\", result)\n}\n```\n**Output:**\n\
+    ```\nThe result is 33.333332\n```\n**Explanation:** `float32(num1)/float32(num2)`\
+    \ converts the data type from `int` into `float32`.\n"
+  raw: "| --- |\n\nExample 7.2 package main type Flower struct {  // define a structure\
+    \ type color string   // structure member size string number int } func main()\
+    \ { var Rose Flower   // declare a structure variable Rose Rose.color = \"Red\"\
+    \    // assign value to structure member Rose.size = \"Large\" Rose.number = 10\
+    \ println( \"Rose color : \", Rose. color); println( \"Rose size : \", Rose. size);\
+    \ println( \"Rose number : \", Rose. number); } Output: Rose color:   Red Rose\
+    \ size: Large Rose number: 10 Explanation: “var Rose Flower” declares a structure\
+    \ variable Rose. Rose. color = \"Red\" assigns value to structure member Rose.\
+    \ color. \n\nSlice Slice is a special array, but its length is changeable. (1)\
+    \ The first syntax to create a Slice is as follows: \n\n| slice\\_name : = \\\
+    [ \\] type {val1, val2, … }  |\n\n| --- |\n\nExample 7.3 package main import \"\
+    fmt\" func main(){ s := \\[ \\]int{1,2,3,4,5}     // create a slice fmt. Println(s)\
+    \ } Output: 1 2 3 4 5 Explanation: “s : = \\[ \\]int{1,2,3,4,5}” creates a Slice\
+    \ with five values. (2) The second syntax to create a Slice is as follows: \n\n\
+    | slice\\_name: = make (\\[ \\] type, len, cap)  |\n\n| --- |\n\nleg means the\
+    \ length of the slice. cap means the capacity to contain slice elements Example\
+    \ 7.4 package main import \"fmt\" func main() { s := make(\\[ \\]int, 5, 8) fmt.\
+    \ Printf(\"len=%d cap=%d slice=%v\\\\n\",len(s),cap(s),s) } Output: len=5   cap=8   slice=\\\
+    [00000\\]   Explanation: len(s) gets the length of the slice. cap(s) gets the\
+    \ capacity to contain all elements. Because Slice elements have not been assigned\
+    \ any values yet, the five values of this Slice are zero. (3) Get some value from\
+    \ Slice elements: \n\n| slice\\_name \\[key1, key2\\]  |\n\n| --- |\n\nGet the\
+    \ value from key1 to key2-1. Example 7.5 package main import \"fmt\" func main()\
+    \ { var s = \\[9\\]int{0, 1, 2, 3, 4, 5, 6, 7, 8} mySlice:= s\\[2:6\\]   // get\
+    \ the value from s\\[2\\] to s\\[5\\] fmt. Println(mySlice) } Output: 2  3  4  5\
+    \ Explanation: “s\\[2: 6\\]” gets the value from s\\[2\\] to s\\[5\\] (4) Assign\
+    \ value to Slice elements. \n\n| slice\\_name \\[key\\] = value  |\n\n| --- |\n\
+    \nExample 7.6 package main import \"fmt\" func main() { var s = \\[9\\]int{0,\
+    \ 1, 2, 3, 4, 5, 6, 7, 8} s\\[3\\] = 10       // assign a new value to s\\[3\\\
+    ] s\\[6\\] = 100     // assign a new value to s\\[6\\] fmt. Println(s) } Output:\
+    \ \\[0  1  2  10  4  5  100 7  8\\] Explanation: s\\[3\\] = 10      // assign\
+    \ a new value to s\\[3\\] s\\[6\\] = 100    // assign a new value to s\\[6\\]\
+    \ \n\nappend() & copy() \n\n| append(slice\\_name, values)   // append values\
+    \ to a Slice copy(new\\_slice, old\\_slice)   // copy old Slice to new Slice \
+    \ |\n\n| --- |\n\nExample 7.7 package main import \"fmt\" func main() { mySlice\
+    \ : = make(\\[\\]int, 0, 0) showSlice(mySlice) mySlice = append(mySlice, 10,20,30) \
+    \ // append showSlice(mySlice) newSlice : = make(\\[\\]int, len(mySlice), (cap(mySlice))\\\
+    *2) copy(newSlice,mySlice)    // copy showSlice(newSlice)   } func showSlice(x\
+    \ \\[\\]int){ fmt. Printf(\"len=%d cap=%d slice=%v\\\\n\",len(x),cap(x),x) } Output:\
+    \ len=0  cap=0  slice=\\[ \\] len=3  cap=4  slice=\\[10  20  30 \\] len=3  cap=8  slice=\\\
+    [ 10  20  30\\] Explanation: append(mySlice, 10,20,30) appends three values to\
+    \ mySlice. cap(mySlice))\\*2  makes the capacity double. copy(newSlice,mySlice)\
+    \ copys the contents of mySlice  to newSlice. \n\nSummary A structure is a collection\
+    \ of data with the same or different types of data. (1) Define Structure Type.\
+    \ type structure\\_name struct { member1  type; member2  type; ... member3  type;\
+    \ } (2) Access Structure Members structure\\_name{member1: value1, member2: value2,\
+    \ …} (3) Declare Structure Variables var variable structure\\_name (4) Assign\
+    \ Values to Structure Members variable . member = value Slice is a special array,\
+    \ but its length is changeable. append(slice\\_name, values)   // append values\
+    \ to a Slice copy(new\\_slice, old\\_slice)   // copy old Slice to new Slice \n\
+    \nHour 8 \n\nGOROUTINE “goroutine” is used to run multiple tasks simultaneously,\
+    \ which means that goroutine function can execute multiple threads at the same\
+    \ time by using go keyword. The following example is to define a goroutine function,\
+    \ and run the goroutine function. \n\n| go func(arguments) {     // define a goroutine\
+    \ function } (arguments )      // run the goroutine function  |\n\n| --- |\n\n\
+    Example 8.1 package main import \"fmt\" func fn(s string) {   // define a function\
+    \ fn for i := 0; i < 5; i++ { fmt. Println(s) } } func main() { fn(\"Thread B\"\
+    )    // call the function fn go func(msg string) {    // define a goroutine function\
+    \ fmt. Println(msg) } (\"Press Enter to Stop! \")    // run the goroutine function\
+    \ fmt. Scanln()      // accept user input from keyboard fmt. Println(\"Complete!\
+    \ \") } Output: Thread B Thread B Thread B Thread B Thread B Press Enter to Stop!\
+    \ Explanation: go func(msg string) {…} defines a goroutine function. (\"Press\
+    \ Enter to Stop! \")  runs the goroutine function, and pass the parameter to the\
+    \ gorountine function. \n\nRange Range is a built-in function of the Go language,\
+    \ it is used to iterate over arrays, slices, strings and maps. \\* Iterating over\
+    \ array, slice, string returns index and value. \\* Iterating over map returns\
+    \ keys and value. \\* Iterating over channel return values. (1) Iterating Over\
+    \ Array/slice \n\n| for key, value : = range array/slice { }  |\n\n| --- |\n\n\
+    Example 8.2 package main import \"fmt\" func main(){ for key, value : = range\\\
+    [ \\]int{10, 11, 12, 13} { fmt. Printf(\"key:%d  value:%d\\\\n\", key, value)\
+    \ } } Output: key: 0    value: 10 key: 1    value: 11 key: 2    value: 12 key:\
+    \ 3    value: 13 Explanation: range\\[ \\]int{10, 11, 12, 13} iterates over an\
+    \ array or slice, and returns the keys and values. (2) Iterating Over String \n\
+    \n| for key, value : = range str { }  |\n\n| --- |\n\nExample 8.3 package main\
+    \ import \"fmt\" func main(){ var str = \"hello\" for key, value : = range str\
+    \ { fmt. Printf(\"key:%d value:0x%x\\\\n\", key, value) } } Output: key : 0     value\
+    \ : 0x68 key : 1     value : 0x65 key : 2     value : 0x6c key : 3     value :\
+    \ 0x6c key : 4     value : 0x6f Explanation: “range str { }” iterate over a string, \
+    \ returns its keys and values. (3) Iterating Over Channel \n\n| for value : =\
+    \ range channel  |\n\n| --- |\n\nExample 8.4 package main import \"fmt\" func\
+    \ main(){ c : = make(chan int) go func() {  // define a goroutine function c <\\\
+    - 　1    // send datas to channels c <\\- 　2 c <\\- 　3 close(c)   // close channels\
+    \ } ( )    // call the goroutine function for v := range c {   // iterate over\
+    \ the channels fmt. Println(\"Send data to channel: \",v) } } Output: Send data\
+    \ to channel: 1 Send data to channel: 2 Send data to channel: 3 Explanation: “range\
+    \ c” iterates over the channels. go func(){  defines a goroutine function. } (\
+    \ ) calls the goroutine function. \n\nMap Map is an unordered collection of key-value\
+    \ pairs. Map is used to quickly retrieve data by key, which is similar to an index\
+    \ and points to the value of the data. Two syntaxes to define a map is as follows:\
+    \ (1) \n\n| m1 : = map\\[key\\_type\\]value\\_type{ }  |\n\n| --- |\n\n“m1” is\
+    \ a map variable. (2) \n\n| m2 : = make(map\\[key\\_type\\] value\\_type)  |\n\
+    \n| --- |\n\n“m2” is a map variable. Example 8.5 package main import \"fmt\" func\
+    \ main() { m1 := map\\[int\\]int{}      // define a map m1 m2 := make(map\\[int\\\
+    ]int)    // define a map m2 m1\\[1\\] = 10 m2\\[2\\] = 20 for key, value : = range\
+    \ m1 { fmt. Println(\"Key: \", key, \"Value: \", value) } for key, value : = range\
+    \ m2 { fmt. Println(\"Key: \", key, \"Value: \", value) } } Output: Key: 1    Value:\
+    \ 10 Key: 2    Value: 20 Explanation: “m1 : = map\\[int\\]int{}”  defines a map\
+    \ m1 “m2 : = make(map\\[int\\]int)” defines a map m2 \n\nType Conversion Type\
+    \ conversion means the one data type of a variable being converted into another\
+    \ data type. \n\n| data\\_type (variables)  |\n\n| --- |\n\nExample 8.6 package\
+    \ main import \"fmt\" func main() { var num1 int = 100 var num2 int = 3 var result\
+    \ float32 result = float32(num1)/float32(num2)    // conversion fmt. Printf(\"\
+    The result is %f\\\\n\", result) } Output: The result is 33. 333332 Explanation:\
+    \ float32(num1)/float32(num2) converts the data type from int into float32. "
+  toc: []
+  trans: "\n\n## 示例 7.2\n\n```go\npackage main\ntype Flower struct {\n  // 定义一个结构类型\n\
+    \  color string\n  // 结构成员\n  size string\n  number int\n}\nfunc main() {\n  var\
+    \ Rose Flower   // 声明一个结构变量 Rose\n  Rose.color = \"Red\"    // 给结构成员赋值\n  Rose.size\
+    \ = \"Large\"\n  Rose.number = 10\n  println(\"Rose color : \", Rose.color);\n\
+    \  println(\"Rose size : \", Rose.size);\n  println(\"Rose number : \", Rose.number);\n\
+    }\n```\n**输出：**\n```\nRose color: Red\nRose size: Large\nRose number: 10\n```\n\
+    **解释：** `var Rose Flower` 声明了一个结构变量 `Rose`。`Rose.color = \"Red\"` 给结构成员 `Rose.color`\
+    \ 赋值。\n\n## 切片 (Slice)\n\n`Slice` 是一种特殊的数组，但它的长度是可变的。(1) 创建 `Slice` 的种语法如下：\n\n\
+    `slice_name := []type{val1, val2, … }`\n\n### 示例 7.3\n\n```go\npackage main\n\
+    import \"fmt\"\nfunc main() {\n  s := []int{1,2,3,4,5}    // 创建一个切片\n  fmt.Println(s)\n\
+    }\n```\n**输出：**\n```\n1 2 3 4 5\n```\n**解释：** `s := []int{1,2,3,4,5}` 创建了一个包含五个值的\
+    \ `Slice`。(2) 创建 `Slice` 的第二种语法如下：\n\n`slice_name := make([]type, len, cap)`\n\
+    \n`len` 表示切片的长度。`cap` 表示包含切片元素的容量。\n\n### 示例 7.4\n\n```go\npackage main\nimport\
+    \ \"fmt\"\nfunc main() {\n  s := make([]int, 5, 8)\n  fmt.Printf(\"len=%d cap=%d\
+    \ slice=%v\\n\",len(s),cap(s),s)\n}\n```\n**输出：**\n```\nlen=5   cap=8   slice=[00000]\n\
+    ```\n**解释：** `len(s)` 获取切片的长度。`cap(s)` 获取包含所有元素的容量。由于 `Slice` 元素尚未分配任何值，因此这个 `Slice`\
+    \ 的五个值均为零。(3) 从 `Slice` 元素中获取某些值：\n\n`slice_name[key1, key2]`\n\n获取从 `key1` 到\
+    \ `key2-1` 的值。\n\n### 示例 7.5\n\n```go\npackage main\nimport \"fmt\"\nfunc main()\
+    \ {\n  var s = []int{0, 1, 2, 3, 4, 5, 6, 7, 8}\n  mySlice:= s[2:6]  // 获取从 s[2]\
+    \ 到 s[5] 的值\n  fmt.Println(mySlice)\n}\n```\n**输出：**\n```\n2 3 4 5\n```\n**解释：**\
+    \ `s[2: 6]` 获取从 `s[2]` 到 `s[5]` 的值。(4) 给 `Slice` 元素赋值。\n\n`slice_name[key] = value`\n\
+    \n### 示例 7.6\n\n```go\npackage main\nimport \"fmt\"\nfunc main() {\n  var s =\
+    \ []int{0, 1, 2, 3, 4, 5, 6, 7, 8}\n  s[3] = 10      // 给 s[3] 赋新值\n  s[6] = 100\
+    \     // 给 s[6] 赋新值\n  fmt.Println(s)\n}\n```\n**输出：**\n```\n[0 1 2 10 4 5 100\
+    \ 7 8]\n```\n**解释：** `s[3] = 10` // 给 `s[3]` 赋新值；`s[6] = 100` // 给 `s[6]` 赋新值。\n\
+    \n## append() & copy()\n\n`append(slice_name, values)` // 向 `Slice` 中追加值\n`copy(new_slice,\
+    \ old_slice)` // 将旧 `Slice` 拷贝到新的 `Slice`\n\n### 示例 7.7\n\n```go\npackage main\n\
+    import \"fmt\"\nfunc main() {\n  mySlice := make([]int, 0, 0)\n  showSlice(mySlice)\n\
+    \  mySlice = append(mySlice, 10,20,30)  // 追加\n  newSlice := make([]int, len(mySlice),\
+    \ cap(mySlice)*2)\n  copy(newSlice,mySlice)  // 拷贝\n  showSlice(newSlice)\n}\n\
+    func showSlice(x []int){\n  fmt.Printf(\"len=%d cap=%d slice=%v\\n\",len(x),cap(x),x)\n\
+    }\n```\n**输出：**\n```\nlen=0 cap=0 slice=[]\nlen=3 cap=4 slice=[10 20 30]\n```\n\
+    **解释：** `append(mySlice, 10,20,30)` 为 `mySlice` 添加了三个值。`newSlice := make([]int,\
+    \ len(mySlice), cap(mySlice)*2)` 创建了一个新切片，容量是原来的倍。`copy(newSlice,mySlice)` 执行了拷贝。\n\
+    \n## 总结\n\n`Slice` 是一个特殊的数组，但它的长度是可变的。\n(1) 定义结构体类型：\n```go\ntype structure_name\
+    \ struct {\n  member1 type\n  member2 type\n  member3 type\n}\n```\n(2) 访问结构体成员：`structure_name.member1`\n\
+    (3) 声明结构体变量：`var structure_name`\n(4) 给结构体成员赋值：`member = value`\n\n## 第 8 章 GORoutine\n\
+    \n`goroutine` 用于运行多个任务，意味着通过 `go` 关键字同时执行多个线程。以下示例是定义 `goroutine` 函数并运行它：\n\n\
+    ```go\ngo func(arguments) { // 定义 goroutine\n}(arguments) // 运行 goroutine\n```\n\
+    \n### 示例 8.1\n\n```go\npackage main\nimport \"fmt\"\nfunc fn(s string) {\n  for\
+    \ i := 0; i < 5; i++ {\n    fmt.Println(s)\n  }\n}\nfunc main() {\n  fn(\"Thread\
+    \ A\")\n  go func() { // 定义 goroutine\n    fmt.Println(\"Thread B\")\n  }() //\
+    \ 运行 goroutine\n  fmt.Scan() // 从键盘输入\n  fmt.Println(\"Complete!\")\n}\n```\n\
+    **输出：**\n```\nThread A\nThread B\nComplete!\n```\n**解释：** `go func(string) { ...\
+    \ }` 定义了 `goroutine` 函数。`(\"Thread B\")` 运行了该 `goroutine`。\n\n## Range\n\n`Range`\
+    \ 是 Go 语言的内置函数，用于遍历数组、切片和映射。\n* 遍历数组、切片返回索引和值。\n* 遍历映射返回键和值。\n* 遍历通道返回值。\n\n(1)\
+    \ 遍历数组/切片\n\n```go\nfor index, value := range array/slice {}\n```\n\n### 示例 8.2\n\
+    \n```go\npackage main\nimport \"fmt\"\nfunc main() {\n  for key, value := range\
+    \ []int{10,11,12,13} {\n    fmt.Printf(\"key:%d value:%d\\n\", key, value)\n \
+    \ }\n}\n```\n**输出：**\n```\nkey:0 value:10\nkey:1 value:11\nkey:2 value:12\nkey:3\
+    \ value:13\n```\n**解释：** `range []int{10,11,12,13}` 遍历了切片并返回索引和值。\n\n(2) 遍历字符串\n\
+    \n```go\nfor key, value := range str {}\n```\n\n### 示例 8.3\n\n```go\npackage main\n\
+    import \"fmt\"\nfunc main() {\n  var str = \"hello\"\n  for key, value := range\
+    \ str {\n    fmt.Printf(\"key:%d value:%0x\\n\", key, value)\n  }\n}\n```\n**输出：**\n\
+    ```\nkey:0 value:0x68\nkey:1 value:0x65\nkey:2 value:0x6c\nkey:3 value:0x6c\n\
+    key:4 value:0x6f\n```\n**解释：** `range str` 遍历字符串，返回其键（索引）和值（字符）。\n\n(3) 遍历通道\n\
+    \n```go\nfor value := range channel {}\n```\n\n### 示例 8.4\n\n```go\npackage main\n\
+    import \"fmt\"\nfunc main() {\n  c := make(chan int)\n  go func() { // 定义 goroutine\n\
+    \    c <- 1 // 向通道发送数据\n    c <- 2\n    c <- 3\n    close(c) // 关闭通道\n  }() //\
+    \ 调用 goroutine 函数\n  for v := range c { // 遍历通道\n    fmt.Println(\"Send data to\
+    \ channel: \",v)\n  }\n}\n```\n**输出：**\n```\nSend data to channel: 1\nSend data\
+    \ to channel: 2\nSend data to channel: 3\n```\n**解释：** `range c` 遍历通道。`go func(){}`\
+    \ 定义了 `goroutine` 函数。`()` 调用了函数。\n\n## Map\n\n`Map` 是键值对的无序集合。`Map` 用于通过键快速检索数据，类似于索引并指向数据的值。定义\
+    \ `map` 的两种语法如下：\n\n(1) `m1 := map[key_type]value_type{}`\n`m1` 是一个 map 变量。\n\
+    (2) `m2 := make(map[key_type] value_type)`\n`m2` 是一个 map 变量。\n\n### 示例 8.5\n\n\
+    ```go\npackage main\nimport \"fmt\"\nfunc main() {\n  m1 := map[int]int{}\n  m2\
+    \ := make(map[int]int)\n  m1[1] = 10\n  m2[2] = 20\n  for key, value := range\
+    \ m1 {\n    fmt.Println(\"Key: \", key, \"Value: \", value)\n  }\n  for key, value\
+    \ := range m2 {\n    fmt.Println(\"Key: \", key, \"Value: \", value)\n  }\n}\n\
+    ```\n**输出：**\n```\nKey: 1 Value: 10\nKey: 2 Value: 20\n```\n**解释：** `m1 := map[int]int{}`\
+    \ 定义了 map `m1`。`m2 := make(map[int]int)` 定义了 map `m2`。\n\n## 类型转换\n\n类型转换意味着变量的一种数据类型转换为另一种数据类型。\n\
+    \n`data_type (variables)`\n\n### 示例 8.6\n\n```go\npackage main\nimport \"fmt\"\
+    \nfunc main() {\n  var num1 int = 100\n  var num2 int = 3\n  var result float32\n\
+    \  result = float32(num1)/float32(num2) // 转换\n  fmt.Printf(\"The result is %f\\\
+    n\", result)\n}\n```\n**输出：**\n```\nThe result is 33.333332\n```\n**解释：** `float32(num1)/float32(num2)`\
+    \ 将数据类型从 `int` 转换为 `float32`。\n\n"
+- fmt: "\n# Recursion\n\nRecursion means that the function calls itself.\n\n```go\n\
+    func recursion() { \n    recursion() // call itself \n} \nfunc main() { \n   \
+    \ recursion() \n}\n```\n\n### Example 8.7\n```go\npackage main\nimport \"fmt\"\
+    \nfunc myRecur(n int) int { \n    if n == 0 { return 1 }\n    return n * myRecur(n-1)\
+    \ // call itself \n}\nfunc main() { \n    fmt.Print(\"Factorial of 10 is \") \n\
+    \    fmt.Print(myRecur(10)) \n}\n```\n**Output:** Factorial of 10 is 3628800 \
+    \ \n**Explanation:** `myRecur(n-1)` calls itself. The recursion doesn't stop until\
+    \ `myRecur(0)` occurs.\n\n# Summary\n\n- `goroutine` is used to run multiple tasks\
+    \ simultaneously, which means that `goroutine` function can execute multiple threads\
+    \ at the same time by using the `go` keyword.\n- `Range` is a built-in function\
+    \ of the Go language, it is used to iterate over arrays, `slices`, `strings` and\
+    \ `maps`.\n- `Map` is an unordered collection of key-value pairs. `Map` is used\
+    \ to quickly retrieve data by key, which is similar to an index and points to\
+    \ the value of the data.\n- Type conversion means the one data type of a variable\
+    \ being converted into another data type.\n- `data_type` (variables)\n- Recursion\
+    \ means that the function calls itself.\n\n```go\nfunc recursion() { \n    recursion()\
+    \ // call itself \n} \nfunc main() { \n    recursion() \n}\n```\n\n# Appendix\
+    \ 1\n\n## Concurrency\n\nGo language supports concurrency, we can use the `go`\
+    \ keyword to call a function, start a new runtime thread `goroutine`. The syntax\
+    \ to call a function with `go` keyword is as follows:\n\n`go function_name (arguments)`\n\
+    \n### Example:\n```go\npackage main\nimport (\n    \"fmt\"\n    \"time\"\n)\n\
+    func fn(s string) { \n    // define a function fn\n    for i := 0; i < 5; i++\
+    \ { \n        time.Sleep(200 * time.Millisecond) // delay running\n        fmt.Println(s)\
+    \ \n    } \n}\nfunc main() { \n    go fn(\"Thread A\") // call the function fn\
+    \ \n    fn(\"Thread B\") // call the function fn \n    go func(msg string) { \n\
+    \        // define a goroutine function\n        fmt.Println(msg) \n    }(\"Press\
+    \ Enter to Stop!\") // run the goroutine function \n    fmt.Scanln() // accept\
+    \ user input from keyboard \n    fmt.Println(\"Complete! \") \n}\n```\n**Output:**\
+    \ Thread B Thread A Thread B Thread A Thread B Thread A Thread B Thread A Press\
+    \ Enter to Stop! Thread A Complete!  \n**Explanation:** `go fn(\"Thread A\")`\
+    \ calls the function `fn` with `go` keyword, start a new thread `goroutine`.\n\
+    \n# Appendix 2\n\n## Tests\n\nPlease choose the correct answer.\n\n**(01)** \n\
+    ```go\npackage main \nimport \"fill in\" // import a built-in function \nfunc\
+    \ main() { \n    fmt.Println(\"Hello, World! \") \n}\n```\nA. `iostream` | B.\
+    \ `math` | C. `i/o` | D. `fmt`\n\n**(02)** \n```go\nfill in a int // declare a\
+    \ variable \na = 100\n```\nA. `variable` | B. `variab` | C. `var` | D. `va`\n\n\
+    **(03)** \n```go\npackage main \nfunc main() { \n    const ( \n        x = fill\
+    \ in // a special constant \n        y = fill in \n        z = fill in \n    )\
+    \ \n    print(x, y, z) \n}\n```\n**Output:** 0 1 2  \nA. `const` | B. `iota` |\
+    \ C. `constant` | D. `iote`\n\n**(04)** \n```go\npackage main \nfunc main() {\
+    \ \n    var number int=20 \n    fill in ( number ) { // let number compares each\
+    \ case \n    case 10 : println (\"Running case 10\") \n    case 20 : println (\"\
+    Running case 20\") \n    case 30 : println (\"Running case 30\") \n    default\
+    \ : println (\"Running default code\") \n    } \n}\n```\nA. `If` | B. `While`\
+    \ | C. `Do` | D. `Switch`\n\n**(05)** \n```go\npackage main \nfunc main() { \n\
+    \    var num int = 10 \n    if num > 10{ fill in code01 // run the specified code\
+    \ next \n    } \n    if num == 10{ fill in code02 // run the specified code next\
+    \ \n} \ncode01: print(\"num > 10\") \ncode02: print(\"num == 10\")\n}\n```\nA.\
+    \ `goto` | B. `go` | C. `to` | D. `return`\n\n**(06)** \n```go\npackage main \n\
+    func main(){ \n    var arr []int = fill in ([]int, 3) // define an array \n  \
+    \  arr[0]=100 // assign a value to the array \n    arr[1]=101 \n    arr[2]=102\
+    \ \n    print(arr[0], arr[1], arr[2]) \n}\n```\nA. `array` | B. `define` | C.\
+    \ `make`\n\n**(07)** \n```go\npackage main \nimport \"fmt\" \ntype fill in { //\
+    \ define a structure \n    color string // member \n    size string \n    number\
+    \ int \n} \nfunc main() { \n    fmt.Println(Flower{color:\"Red\", size:\"Large\"\
+    , number:10}) \n}\n```\nA. `structure` | B. `struct` | C. `string`\n\n**(08)**\
+    \ \n```go\npackage main \nimport \"fmt\" \nfunc fn(s string) { // define a function\
+    \ \n    for i := 0; i < 5; i++ { \n        fmt.Println(s) \n    } \n} \nfunc main()\
+    \ { \n    fn(\"Thread B\") // call the function \n    fill in func(msg string)\
+    \ { // define a goroutine function\n        fmt.Println(msg) \n    }(\"Press Enter\
+    \ to Stop!\") // run the goroutine function \n    fmt.Scanln() // accept user\
+    \ input from keyboard \n    fmt.Println(\"Complete! \") \n}\n```\nA. `goto` |\
+    \ B. `go` | C. `to` | D. `goroutine`\n\n**(09)** \n```go\npackage main \nfunc\
+    \ main(){ \n    var a = \"C# in 8 Hours\" \n    var b string = \"is\" \n    c\
+    \ =\"a book! \" // assign value to c \n    var e in = true \n    println(a, b,\
+    \ c, e) \n}\n```\nA. `string` | B. `boolean` | C. `bool` | D. `char`\n\n**(10)**\
+    \ \n**Given:** `a = 100`, `b = 2`  \n**Calculation:** \n`a + b` returns `102`\
+    \  \n`a – b` returns `98`  \n`a * b` returns `200`  \n`a / b` returns `50`  \n\
+    `a % b` returns fill in\nA. `0` | B. `1` | C. `2` | D. `3`\n\n**(11)** \n```go\n\
+    package main \nimport \"fmt\" \nfunc main() { \n    c1:=make(chan int,1024) //\
+    \ create a channel \n    c2:=make(chan int,1024) \n    c3:=make(chan int,1024)\
+    \ \n    c1<-100 // send data to a channel \n    c2<-200 \n    c3<-300 \n    fill\
+    \ in { // randomly execute one case .\n    case c1: // receive data from a channel\n\
+    \        fmt.Println(\"Receive data from c1\") \n    case c2: fmt.Println(\"Receive\
+    \ data from c2\") \n    case c3: fmt.Println(\"Receive data from c3\") \n    default:\
+    \ fmt.Println(\"Not receive data yet\") \n    } \n}\n```\nA. `switch` | B. `select`\
+    \ | C. `while` | D. `if`\n\n**(12)** \n```go\npackage main \nimport \"fmt\" \n\
+    fill in swap (a, b string) (string, string) { // define a function\n    return\
+    \ b, a // returns two values to the caller . \n} \nfunc main() { \n    x, y :=\
+    \ swap(\"in 8 Hours\", \"JavaScript\") //call the function \n    fmt.Println(x,\
+    \ y) \n}\n```\nA. `function` | B. `def` | C. `void` | D. `func`\n\n**(13)** \n\
+    ```go\npackage main \nimport \"fmt\" \nfunc main() { \n    var num int= 100 \n\
+    \    var pt *int // declare a pointer \n    pt = fill in // &num get address and\
+    \ assign to pt\n    fmt.Printf(\"The address of num: %x\\n\", &num) \n    fmt.Printf(\"\
+    The address in pt: %x\\n\", pt) \n    fmt.Printf(\"The value of the *pt: %d\\\
+    n\", *pt) \n}\n```\nA. `*num` | B. `$num` | C. `&num` | D. `#num`\n\n**(14)**\
+    \ \n```go\npackage main \nimport \"fmt\" \nfunc main(){ \n    s := fill in int{1,2,3,4,5}\
+    \ // create a slice \n    fmt.Println(s) \n}\n```\nA. `[]` | B. `[0]` | C. `[1]`\n\
+    \n**(15)** \n```go\npackage main \nimport \"fmt\" \nfunc main(){ \n    c := make(chan\
+    \ int) \n    go func() { // define a goroutine function\n        c<-1 // send\
+    \ data to channels\n        c<-2 \n        c<-3 \n        close(c) // close channels\n\
+    \    }() \n    for v := fill in c { // iterate over channels\n        fmt.Println(\"\
+    Send to channel: \",v) \n    } \n}\n```\nA. `iterate` | B. `chan` | C. `in` |\
+    \ D. `range`\n\n**(16)** \n```go\npackage main \nfunc main(){ \n    var a = \"\
+    C# in 8 Hours\" \n    var b string = \"is\" \n    c =\"a book! \" // assign value\
+    \ to c \n    var e fill in = true \n    println(a, b, c, e) \n}\n```\nA. `<` |\
+    \ B. `=`\n\n**(17)** \n| `true && true` returns `true` | `true && false` returns\
+    \ `false` | `false && false` returns `false` |\n| --- | --- | --- |\n| `true ||\
+    \ true` returns `true` | `true || false` returns fill in | `false || false` returns\
+    \ fill in |\n\nA. `true` | B. `false` | C. `true` | D. `false`\n\n**(18)** \n\
+    ```go\npackage main \nfunc main() { \n    var a int =0 \n    var b int = 5 \n\
+    \    fill in a < b { // loop statement \n    a++ \n    print(a) \n}\n```\n**Output:**\
+    \ 1 2 3 4 5  \nA. `while` | B. `if` | C. `do` | D. `for`\n\n**(19)** \n```go\n\
+    package main \nimport \"fmt\" \nfunc swap (a, b string) (string, string) { //\
+    \ define a function\n    fill in b, a // pass two values to the caller . \n} \n\
+    func main() { \n    x, y := swap(\"in 8 Hours\", \"JavaScript\") //call the function\
+    \ \n    fmt.Println(x, y) \n}\n```\nA. `pass` | B. `return` | C. `send` | D. `goto`\n\
+    \n**(20)** \n```go\npackage main \nimport \"fmt\" \nfunc main() { \n    var n\
+    \ *int \n    fmt.Printf( n) \n} // What is the output?\n```\nA. `0` | B. `1` |\
+    \ C. `2` | D. `3` (21)\n"
+  raw: "Recursion Recursion means that the function calls itself. \n\n| func recursion()\
+    \ { recursion()  // call itself } func main() { recursion() }  |\n\n| --- |\n\n\
+    Example 8.7 package main import \"fmt\" func myRecur(n int) int {   if n == 0\
+    \ { return 1 } return n \\* myRecur(n-1)      // call itself } func main() { fmt.\
+    \ Print(\"Factorial of 10 is \")  fmt. Print(myRecur(10)) } Output: Factorial\
+    \ of 10 is 3628800 Explanation: myRecur(n-1)  calls itself.   The recursion doesn't\
+    \ stop until myRecur(0) occurs. \n\nSummary “goroutine” is used to run multiple\
+    \ tasks simultaneously, which means that goroutine function can execute multiple\
+    \ threads at the same time by using go keyword. Range is a built-in function of\
+    \ the Go language, it is used to iterate over arrays, slices, strings and maps.\
+    \ Map is an unordered collection of key-value pairs. Map is used to quickly retrieve\
+    \ data by key, which is similar to an index and points to the value of the data.\
+    \ Type conversion means the one data type of a variable being converted into another\
+    \ data type. data\\_type (variables) Recursion means that the function calls itself.\
+    \ func recursion() { recursion()  // call itself } func main() { recursion() }\
+    \ \n\nAppendix 1 \n\nConcurrency Go language supports concurrency, we can use\
+    \ “go” keyword to call a function, start a new runtime thread goroutine. The syntax\
+    \ to call a function with go keyword is as follows: \n\n| go function\\_name (arguments)\
+    \  |\n\n| --- |\n\nExample: package main import ( \"fmt\" \"time\" ) func fn(s\
+    \ string) {   // define a function fn for i : = 0; i < 5; i++ { time. Sleep(200\
+    \ \\* time. Millisecond)    // delay running fmt. Println(s) } } func main() {\
+    \ go fn(\"Thread A\")      // call the function fn fn(\"Thread B\")    // call\
+    \ the function fn go func(msg string) {    // define a goroutine function fmt.\
+    \ Println(msg) }(\"Press Enter to Stop! \")    // run the goroutine function fmt.\
+    \ Scanln()       // accept user input from keyboard fmt. Println(\"Complete! \"\
+    ) } Output: Thread B Thread A Thread B Thread A Thread B Thread A Thread B Thread\
+    \ A Thread B Press Enter to Stop! Thread A Complete! Explanation: go fn(\"Thread\
+    \ A\") calls the function fn with “go” keyword, start a new thread goroutine.\
+    \ \n\nAppendix 2 \n\nTests Please choose the correct answer. (01) package main\
+    \ import \" fill in \"   // import a built-in function func main() { fmt. Println(\"\
+    Hello, World! \") } A. iostream     B. math     C. i/o     D. fmt (02) fill in\
+    \ a int    // declare a variable a = 100 A. variable     B. variab     C. var     D.\
+    \ va (03) package main func main() { const ( x = fill in    // a special constant\
+    \ y = fill in z = fill in ) print(x, y, z) } Output:    0  1  2 A. const     B.\
+    \ iota     C. constant     D. iote (04) package main func main() { var number\
+    \ int=20 fill in ( number ) {  // let number compares each case case 10 : println\
+    \ ( \"Running case 10\" )  case 20 : println ( \"Running case 20\" )  case 30\
+    \ : println ( \"Running case 30\" )  default : println ( \"Running default code\"\
+    \ )    } } A.   If      B. While      C. Do      D. Switch (05) package main func\
+    \ main() { var num int = 10 if num > 10{ fill in code01     // run the specified\
+    \ code next } if num == 10{ fill in code02     // run the specified code next\
+    \ } code01: print(\"num > 10\") code02: print(\"num == 10\") } A. goto     B.\
+    \ go     C. to     D. return (06) package main func main(){ var arr \\[ \\]int\
+    \ = fill in (\\[ \\]int, 3)   // define an array arr\\[0\\]=100   // assign a\
+    \ value to the array element arr\\[1\\]=101 arr\\[2\\]=102 print(arr\\[0\\], \"\
+    \ \", arr\\[1\\], \" \", arr\\[2\\]) } A. array     B. define     C. make     d.\
+    \ arr (07) package main import \"fmt\" type Flower fill in {  // define a structure\
+    \ type color string   // structure member size string number int } func main()\
+    \ { fmt. Println(Flower{color:\"Red\", size:\"Large\", number:10 }) } A. structure     B.\
+    \ struct     C. string     D. type (08) package main import \"fmt\" func fn(s\
+    \ string) {   // define a function fn for i := 0; i < 5; i++ { fmt. Println(s)\
+    \ } } func main() { fn(\"Thread B\")    // call the function fn fill in func(msg\
+    \ string) {    // define a goroutine function fmt. Println(msg) } (\"Press Enter\
+    \ to Stop! \")    // run the goroutine function fmt. Scanln()      // accept user\
+    \ input from keyboard fmt. Println(\"Complete! \") } A. goto     B. go     C.\
+    \ to     D. goroutine (09) package main func main(){ var a = \"C# in 8 Hours\"\
+    \ var b string = \"is\" c: =\"a good book! \" var e fill in = true println(a,\
+    \ b, c, e) } A. string     B. boolean     C. bool     D. char (10) Given:       a\
+    \ = 100      b = 2 Calculation: a + b returns 102 a – b returns 98 a \\* b returns\
+    \ 200 a / b returns 50 a % b returns fill in A. 0     B. 1.        C. 2        D.\
+    \ 3 (11) package main import \"fmt\" func main() { c1:=make (chan int,1024)    //\
+    \ create a channel c2:=make (chan int,1024) c3:=make (chan int,1024) c1 <\\- 100    //\
+    \ send data to a channel c2 <\\- 200 c3 <\\- 300   fill in {      // randomly\
+    \ execute one case . case <\\- c1:     // receive data from a channel fmt. Println(\"\
+    Receive data from c1\") case <\\- c2: fmt. Println(\"Receive data from c2\") case\
+    \ <\\- c2: fmt. Println(Rreceive data from c3\") default: fmt. Println(\"Not receive\
+    \ data yet\") } } A.    switch     B. select     C. while     D. if (12) package\
+    \ main import \"fmt\" fill in swap (a, b string) (string, string) { // define\
+    \ a function return b, a    // returns two values to the caller . } func main()\
+    \ { x, y : = swap(\"in 8 Hours\", \"JavaScript\")   //call the function fmt. Println(x,\
+    \ y) } A. function     B. def     C. void     D. func (13) package main import\
+    \ \"fmt\" func main() { var num int= 100   var pt \\*int        // declare a pointer\
+    \ pt pt = fill in    // &num get address and assign to pt fmt. Printf(\"The address\
+    \ of num: %x\\\\n\", &num  ) fmt. Printf(\"The address in pt: %x\\\\n\", pt )\
+    \ fmt. Printf(\"The value of the \\*pt: %d\\\\n\", \\*pt ) } A. \\*num     B.\
+    \ $num     C. &num     D. #num (14) package main import \"fmt\" func main(){ s\
+    \ := fill in int{1,2,3,4,5}     // create a slice fmt. Println(s) } A.   \\[ \\\
+    ]      B. \\[0\\]     C\\[1\\]     D. \\[2\\] (15) package main import \"fmt\"\
+    \ func main(){ c : = make(chan int) go func() {  // define a goroutine function\
+    \ c <\\- 　1    // send datas to channels c <\\- 　2 c <\\- 　3 close(c)   // close\
+    \ channels } ( )    // call the goroutine function for v := fill in c {   // iterate\
+    \ over the channels fmt. Println(\"Send data to channel: \",v) } } A. iterate     B.\
+    \ chan     C. in     D.   range (16) package main func main(){ var a = \"C# in\
+    \ 8 Hours\" var b string = \"is\" c fill in \"a good book! \"  // assign value\
+    \ to c var e bool = true println(a, b, c, e) } A. <\\-   　 B. : =      C. =      D.\
+    \ <= (17) \n\n| true && true; returns true;  || true && false; returns false;\
+    \  || false &&false; returns false;  |\n\n| --- | --- | --- |\n\n| true II true;\
+    \ returns true;  || true II false; returns fill in ;  || false II false; return\
+    \ fill in ;  |\n\n| ! false; returns true;  || ! true; returns false;  ||  |\n\
+    \nA. true       true B. false      false C. true       false D. false      true\
+    \ (18) package main func main() { var a int =0 var b int = 5 fill in a < b {      //\
+    \ loop statement a++ print(a) } } Output: 1 2 3 4 5 A. while      B. if      C.\
+    \ do      D. for (19) package main import \"fmt\" func swap (a, b string) (string,\
+    \ string) { // define a function fill in b, a    // pass two values to the caller\
+    \ . } func main() { x, y : = swap(\"in 8 Hours\", \"JavaScript\")   //call the\
+    \ function fmt. Println(x, y) } A. pass     B. return     C. send     D. goto\
+    \ (20) package main import \"fmt\" func main() { var  npt \\*int fmt. Printf(\
+    \ npt  ) } //  What is the output? A. 0      B. 1      C. 2      D. 3 (21)  "
+  toc: []
+  trans: "\n\n# 递归\n\n递归意味着函数调用自己。\n\n```go\nfunc recursion() { \n    recursion()\
+    \ // 调用自己 \n} \nfunc main() { \n    recursion() \n}\n```\n\n### 示例 8.7\n```go\n\
+    package main\nimport \"fmt\"\nfunc myRecur(n int) int { \n    if n == 0 { return\
+    \ 1 }\n    return n * myRecur(n-1) // 调用自己 \n}\nfunc main() { \n    fmt.Print(\"\
+    Factorial of 10 is \") \n    fmt.Print(myRecur(10)) \n}\n```\n**输出:** Factorial\
+    \ of 10 is 3628800  \n**解释：** `myRecur(n-1)` 调用了自身。递归会一直进行，直到出现 `myRecur(0)`。\n\
+    \n# 总结\n\n- `goroutine` 用于同时运行多个任务，这意味着 `goroutine` 函数可以通过使用 `go` 关键字同时执行多个线程。\n\
+    - `Range` 是 Go 语言的内置函数，用于遍历数组、`slices`、`strings` 和 `maps`。\n- `Map` 是键值对的无序集合。`Map`\
+    \ 用于通过键快速检索数据，类似于索引并指向数据的值。\n- 类型转换意味着将变量的一种数据类型转换为另一种数据类型。\n- `data_type`（变量）\n\
+    - 递归意味着函数调用自己。\n\n```go\nfunc recursion() { \n    recursion() // 调用自己 \n} \nfunc\
+    \ main() { \n    recursion() \n}\n```\n\n# 附录 1\n\n## 并发\n\nGo 语言支持并发，我们可以使用 `go`\
+    \ 关键字来调用函数，启动一个新的运行时线程 `goroutine`。使用 `go` 关键字调用函数的语法如下：\n\n`go function_name\
+    \ (arguments)`\n\n### 示例：\n```go\npackage main\nimport (\n    \"fmt\"\n    \"\
+    time\"\n)\nfunc fn(s string) { \n    // 定义一个函数 fn\n    for i := 0; i < 5; i++\
+    \ { \n        time.Sleep(200 * time.Millisecond) // 延迟运行\n        fmt.Println(s)\
+    \ \n    } \n}\nfunc main() { \n    go fn(\"Thread A\") // 调用函数 fn \n    fn(\"\
+    Thread B\") // 调用函数 fn \n    go func(msg string) { \n        // 定义一个 goroutine\
+    \ 函数\n        fmt.Println(msg) \n    }(\"Press Enter to Stop!\") // 运行 goroutine\
+    \ 函数\n    fmt.Scanln() // 从键盘接受用户输入 \n    fmt.Println(\"Complete! \") \n}\n```\n\
+    **输出:** Thread B Thread A Thread B Thread A Thread B Thread A Thread B Thread\
+    \ A Press Enter to Stop! Thread A Complete!  \n**解释：** `go fn(\"Thread A\")` 使用\
+    \ `go` 关键字调用函数 `fn`，启动了一个新线程 `goroutine`。\n\n# 附录 2\n\n## 测试\n\n请选择正确答案。\n\n**(01)**\
+    \ \n```go\npackage main \nimport \"fill in\" // 导入内置函数 \nfunc main() { \n    fmt.Println(\"\
+    Hello, World! \") \n}\n```\nA. `iostream` | B. `math` | C. `i/o` | D. `fmt`\n\n\
+    **(02)** \n```go\nfill in a int // 声明变量 \na = 100\n```\nA. `variable` | B. `variab`\
+    \ | C. `var` | D. `va`\n\n**(03)** \n```go\npackage main \nfunc main() { \n  \
+    \  const ( \n        x = fill in // 特殊常量 \n        y = fill in\n        z = fill\
+    \ in \n    ) \n    print(x, y, z) \n}\n```\n**输出:** 0 1 2  \nA. `const` | B. `iota`\
+    \ | C. `constant` | D. `iote`\n\n**(04)** \n```go\npackage main \nfunc main()\
+    \ { \n    var number int=20 \n    fill in ( number ) { // 让 number 比较每个 case \n\
+    \    case 10 : println (\"Running case 10\") \n    case 20 : println (\"Running\
+    \ case 20\") \n    case 30 : println (\"Running case 30\") \n    default : println\
+    \ (\"Running default code\") \n    } \n}\n```\nA. `If` | B. `While` | C. `Do`\
+    \ | D. `Switch`\n\n**(05)** \n```go\npackage main \nfunc main() { \n    var num\
+    \ int = 10 \n    if num > 10{ fill in code01 // 接下来运行指定的代码 \n    } \n    if num\
+    \ == 10{ fill in code02 // 接下来运行指定的代码 \n} \ncode01: print(\"num > 10\") \ncode02:\
+    \ print(\"num == 10\")\n}\n```\nA. `goto` | B. `go` | C. `to` | D. `return`\n\n\
+    **(06)** \n```go\npackage main \nfunc main(){ \n    var arr []int = fill in ([]int,\
+    \ 3) // 定义数组 \n    arr[0]=100 // 给数组赋值 \n    arr[1]=101 \n    arr[2]=102 \n  \
+    \  print(arr[0], arr[1], arr[2]) \n}\n```\nA. `array` | B. `define` | C. `make`\n\
+    \n**(07)** \n```go\npackage main \nimport \"fmt\" \ntype fill in { // 定义结构体 \n\
+    \    color string // 成员 \n    size string \n    number int \n} \nfunc main() {\
+    \ \n    fmt.Println(Flower{color:\"Red\", size:\"Large\", number:10}) \n}\n```\n\
+    A. `structure` | B. `struct` | C. `string`\n\n**(08)** \n```go\npackage main \n\
+    import \"fmt\" \nfunc fn(s string) { // 定义函数 \n    for i := 0; i < 5; i++ { \n\
+    \        fmt.Println(s) \n    } \n} \nfunc main() { \n    fn(\"Thread B\") //\
+    \ 调用函数 \n    fill in func(msg string) { // 定义 goroutine 函数\n        fmt.Println(msg)\n\
+    \    }(\"Press Enter to Stop!\") // 运行 goroutine 函数\n    fmt.Scanln() // 从键盘接受用户输入\
+    \ \n    fmt.Println(\"Complete! \") \n}\n```\nA. `goto` | B. `go` | C. `to` |\
+    \ D. `goroutine`\n\n**(09)** \n```go\npackage main \nfunc main(){\n    var a =\
+    \ \"C# in 8 Hours\"\n    var b string = \"is\"\n    c =\"a book! \" // 给 c 赋值\
+    \ \n    var e = true\n    println(a, b, c, e)\n}\n```\nA. `string` | B. `boolean`\
+    \ | C. `bool` | D. `char`\n\n**(10)** \n**给定：** `a = 100`, `b = 2`  \n**计算：**\
+    \ `a + b` 返回 `102`  \n`a - b` 返回 `98`  \n`a * b` 返回 `200`  \n`a / b` 返回 `50` \
+    \ \n`a % b` 返回 fill in\nA. `0` | B. `1` | C. `2` | D. `3`\n\n**(11)** \n```go\n\
+    package main \nimport \"fmt\" \nfunc main() { \n    c1:=make(chan int,10) // 创建\
+    \ channel \n    c2:=make(chan int,10)\n    c3:=make(chan int,10)\n    c1<-100\
+    \ // 向 channel 发送数据 \n    c2<-200\n    c3<-300 \n    fill in { // 随机执行一个 case\n\
+    \    case c1: fmt.Println(\"Receive data from c1\")\n    case c2: fmt.Println(\"\
+    Receive data from c2\")\n    case c3: fmt.Println(\"Receive data from c3\")\n\
+    \    default: fmt.Println(\"Not receive data yet\") \n    }\n}\n```\nA. `switch`\
+    \ | B. `select` | C. `while` | D. `if`\n\n**(12)** \n```go\npackage main \nimport\
+    \ \"fmt\" \nfill in (a, b string) (string, string) { // 定义函数\n    return b, a\
+    \ // 返回两个值给调用者 . \n} \nfunc main() { \n    x, y := swap(\"in 8 Hours\", \"JavaScript\"\
+    ) // 调用函数\n    fmt.Println(x, y) \n}\n```\nA. `function` | B. `def` | C. `void`\
+    \ | D. `func`\n\n**(13)** \n```go\npackage main \nimport \"fmt\" \nfunc main()\
+    \ { \n    var num int=100 \n    var pt *int // 声明指针\n    pt = fill in // 获取地址并赋值给\
+    \ pt\n    fmt.Printf(\"The address of num: %x\\n\", &num) \n    fmt.Printf(\"\
+    The address in pt: %x\\n\", pt) \n    fmt.Printf(\"The value of pt: %d\\n\", *pt)\
+    \ \n}\n```\nA. `*num` | B. `$num` | C. `&num` | D. `#num`\n\n**(14)** \n```go\n\
+    package main \nimport \"fmt\" \nfunc main(){ \n    s := fill in int{1,2,3,4,5}\
+    \ // 创建 slice \n    fmt.Println(s) \n}\n```\nA. `[]` | B. `[0]` | C. `[1]`\n\n\
+    **(15)** \n```go\npackage main \nimport \"fmt\" \nfunc main(){ \n    c := make(chan\
+    \ int)\n    go func() { // 定义 goroutine 函数\n        c<-1 // 向 channels 发送数据\n\
+    \        c<-2 \n        c<-3 \n        close(c) // 关闭 channels\n    }() \n   \
+    \ for v := in c { // 遍历 channels\n        fmt.Println(\"Send to channel: \",v)\
+    \ \n    } \n}\n```\nA. `iterate` | B. `chan` | C. `in` | D. `range`\n\n**(16)**\
+    \ \n```go\npackage main \nfunc main(){ \n    var a = \"C# in 8 Hours\" \n    var\
+    \ b string = \"is\"\n    c =\"a book! \" // 给 c 赋值 \n    var e fill in = true\n\
+    \    println(a, b, c, e) \n}\n```\nA. `<` | B. `=`\n\n**(17)** \n| `true && true`\
+    \ 返回 `true` | `true && false` 返回 `false` | `false && false` 返回 `false` |\n| ---\
+    \ | --- | --- |\n| `true || true` 返回 `true` | `true || false` 返回 fill in | `false\
+    \ || false` 返回 fill in |\n\nA. `true` | B. `false` | C. `true` | D. `false`\n\n\
+    **(18)** \n```go\npackage main \nfunc main() { \n    var a int =0 \n    var b\
+    \ int = 5 \n    fill in a < b { // 语句 \n    a++ \n    print(a) \n}\n```\n**输出:**\
+    \ 1 2 3 4 5  \nA. `while` | B. `if` | C. `do` | D. `for`\n\n**(19)** \n```go\n\
+    package main \nimport \"fmt\" \nfunc swap (a, b string) (string, string) { //\
+    \ 定义函数\n    fill in b, a // 将两个值传递给调用者 . \n} \nfunc main() { \n    x, y := swap(\"\
+    in 8 Hours\", \"JavaScript\") // 调用函数\n    fmt.Println(x, y) \n}\n```\nA. `pass`\
+    \ | B. `return` | C. `send` | D. `goto`\n\n**(20)** \n```go\npackage main \nimport\
+    \ \"fmt\" \nfunc main() { \n    var n *int \n    fmt.Printf( n) \n} // 输出是什么？\n\
+    ```\nA. `0` | B. `1` | C. `2` | D. `3` (21)\n\n"
+- fmt: "\n### 22\n```go\npackage main\nimport \"fmt\"\nfunc main() {\n    var s =\
+    \ [9]int{0, 1, 2, 3, 4, 5, 6, 7, 8}\n    mySlice := s[fill in]   // get four values\n\
+    \    fmt.Println(mySlice)\n}\n```\nOutput: `2 3 4 5`\nA. `2:6`\nB. `1:5`\nC. `3:7`\n\
+    D. `3:6`\n\n### 23\n```go\npackage main\nimport \"fmt\"\nfunc main() {\n    m1\
+    \ := fill in [int]int{}      // define a map\n    m1 m2 := fill in (map[int]int)\
+    \ // define a map\n    m1[1] = 10\n    m2[2] = 20\n    for key, value := range\
+    \ m1 {\n        fmt.Println(\"Key: \", key, \"Value: \", value)\n    }\n    for\
+    \ key, value := range m2 {\n        fmt.Println(\"Key: \", key, \"Value: \", value)\n\
+    \    }\n}\n```\nA. `make`\nB. `make map`\nC. `map make`\nD. `map map`\n\n### 24\n\
+    ```go\npackage main\nimport \"fmt\"\nfunc myRecur(n int) int {\n    if n == 0\
+    \ {\n        return 1\n    }\n    return n * fill in      // recursion\n}\nfunc\
+    \ main() {\n    fmt.Print(\"Factorial of 10 is \")\n    fmt.Print(myRecur(10))\n\
+    }\n```\nA. `myRecur(0)`\nB. `myRecur(n-1)`\nC. `recursion(0)`\nD. `recursion(n-1)`\n\
+    \n### 25\n```go\npackage main\nimport (\n    \"fmt\"\n    \"time\"\n)\nfunc fn(s\
+    \ string) {\n    // define a function fn\n    for i := 0; i < 5; i++ {\n     \
+    \   time.Sleep(200 * time.Millisecond) // delay running\n        fmt.Println(s)\n\
+    \    }\n}\nfunc main() {\n    fill in fn(\"Thread A\")      // call the function\
+    \ fn\n    fn(\"Thread B\")             // call the function fn\n}\n```\nA. `goroutine`\n\
+    B. `goto`\nC. `to`\nD. `go`\n\n#### Answers\n| 题目 | 答案 |\n| --- | --- |\n| 01.\
+    \ | D |\n| 02. | C |\n| 03. | B |\n| 04. | D |\n| 05. | A |\n| 06. | C |\n| 07.\
+    \ | B |\n| 08. | B |\n| 09. | C |\n| 10. | A |\n| 11. | B |\n| 12. | D |\n\nNote:\
+    \ This book is only for beginners, it is not suitable for experienced programmers.\n\
+    Source Code Download Link: [https://forms.aweber.com/form/34/1805492434.htm](https://forms.aweber.com/form/34/1805492434.htm)\n\
+    \n#### Source Code\nRay Yao’s eBooks & Books on Amazon\n- Advanced C++ Programming\
+    \ by Ray Yao\n- Advanced Java Programming by Ray Yao\n- AngularJs Programming\
+    \ by Ray Yao\n- C# Programming by Ray Yao\n- C# Interview & Certification Exam\n\
+    - C++ Programming by Ray Yao\n- C++ Interview & Certification Exam\n- Django Programming\
+    \ by Ray Yao\n- Go Programming by Ray Yao\n- Html Css Programming by Ray Yao\n\
+    - Html Css Interview & Certification Exam\n- Java Programming by Ray Yao\n- Java\
+    \ Interview & Certification Exam\n- JavaScript Programming by Ray Yao\n- JavaScript\
+    \ 50 Useful Programs JavaScript Interview & Certification Exam\n- JQuery Programming\
+    \ by Ray Yao\n- JQuery Interview & Certification Exam\n- Kotlin Programming by\
+    \ Ray Yao\n- Linux Command Line Linux Interview & Certification Exam\n- MySql\
+    \ Programming by Ray Yao\n- Node.Js Programming by Ray Yao\n- Php Interview &\
+    \ Certification Exam\n- Php MySql Programming by Ray Yao\n- PowerShell Programming\
+    \ by Ray Yao\n- Python Programming by Ray Yao\n- Python Interview & Certification\
+    \ Exam\n- R Programming by Ray Yao\n- Ruby Programming by Ray Yao\n- Rust Programming\
+    \ by Ray Yao\n- Scala Programming by Ray Yao\n- Shell Scripting Programming by\
+    \ Ray Yao\n- Visual Basic Programming by Ray Yao\n- Visual Basic Interview & Certification\
+    \ Exam\n- Xml Json Programming by Ray Yao\n"
+  raw: "package main import \"fmt\" func main() { var s = \\[9\\]int{0, 1, 2, 3, 4,\
+    \ 5, 6, 7, 8} mySlice:= s\\[ fill in \\]   // get four values fmt. Println(mySlice)\
+    \ } Output: 2  3  4  5 A.   2: 6       B. 1: 5       C. 3: 7       D. 3: 6 (22)\
+    \ package main import \"fmt\" func main() { m1 := fill in \\[int\\]int{}     \
+    \ // define a map m1 m2 := fill in (map\\[int\\]int)    // define a map m2 m1\\\
+    [1\\] = 10 m2\\[2\\] = 20 for key, value : = range m1 { fmt. Println(\"Key: \"\
+    , key, \"Value: \", value) } for key, value : = range m2 { fmt. Println(\"Key:\
+    \ \", key, \"Value: \", value) } } A.    make      make B.    make      map C.\
+    \    map        make D.    map        map (23) package main import \"fmt\" func\
+    \ myRecur(n int) int {   if n == 0 { return 1 } return n \\* fill in      // recursion\
+    \ } func main() { fmt. Print(\"Factorial of 10 is \")  fmt. Print(myRecur(10))\
+    \ } A.   myRecur(0) B.   myRecur(n-1)   C.   recursion(0) D.   recursion(n-1)\
+    \ (24) package main import ( \"fmt\" \"time\" ) func fn(s string) {   // define\
+    \ a function fn for i : = 0; i < 5; i++ { time. Sleep(200 \\* time. Millisecond)    //\
+    \ delay running fmt. Println(s) } } func main() { fill in fn(\"Thread A\")      //\
+    \ call the function fn fn(\"Thread B\")    // call the function fn } A.   goroutine     B.\
+    \ goto     C. to     D. go \n\nAnswers \n\n| 01.   D  |\n\n| --- |\n\n| 02.   C\
+    \  |\n\n| 03.   B  |\n\n| 04.   D  |\n\n| 05.   A  |\n\n| 06.   C  |\n\n| 07.\
+    \   B  |\n\n| 08.   B  |\n\n| 09.   C  |\n\n| 10.   A  |\n\n| 11.   B  |\n\n|\
+    \ 12.   D  |\n\nNote: This book is only for beginners, it is not suitable for\
+    \ experienced programmers . Source Code Download Link: [https://forms . aweber\
+    \ . com/form/34/1805492434 . htm](https://forms.aweber.com/form/34/1805492434.htm)\
+    \ \n\nSource Code Download Ray Yao’s eBooks & Books on Amazon Advanced C++ Programming\
+    \ by Ray Yao Advanced Java Programming by Ray Yao AngularJs Programming by Ray\
+    \ Yao C# Programming by Ray Yao C# Interview & Certification Exam C++ Programming\
+    \ by Ray Yao C++ Interview & Certification Exam Django Programming by Ray Yao\
+    \ Go Programming by Ray Yao Html Css Programming by Ray Yao Html Css Interview\
+    \ & Certification Exam Java Programming by Ray Yao Java Interview & Certification\
+    \ Exam JavaScript Programming by Ray Yao JavaScript 50 Useful Programs JavaScript\
+    \ Interview & Certification Exam JQuery Programming by Ray Yao JQuery Interview\
+    \ & Certification Exam Kotlin Programming by Ray Yao Linux Command Line Linux\
+    \ Interview & Certification Exam MySql Programming by Ray Yao Node.Js Programming\
+    \ by Ray Yao Php Interview & Certification Exam Php MySql Programming by Ray Yao\
+    \ PowerShell Programming by Ray Yao Python Programming by Ray Yao Python Interview\
+    \ & Certification Exam R Programming by Ray Yao Ruby Programming by Ray Yao Rust\
+    \ Programming by Ray Yao Scala Programming by Ray Yao Shell Scripting Programming\
+    \ by Ray Yao Visual Basic Programming by Ray Yao Visual Basic Interview & Certification\
+    \ Exam Xml Json Programming by Ray Yao Source Code Download Link: [https://forms\
+    \ . aweber . com/form/34/1805492434 . htm](https://forms.aweber.com/form/34/1805492434.htm)"
+  toc: []
+  trans: "\n\n### 22\n```go\npackage main\nimport \"fmt\"\nfunc main() {\n    var\
+    \ s = [9]int{0, 1, 2, 3, 4, 5, 6, 7, 8}\n    mySlice := s[fill in]   // 获取四个值\n\
+    \    fmt.Println(mySlice)\n}\n```\n输出: `2 3 4 5`\nA. `2:6`\nB. `1:5`\nC. `3:7`\n\
+    D. `3:6`\n\n### 23\n```go\npackage main\nimport \"fmt\"\nfunc main() {\n    m1\
+    \ := fill in [int]int{}      // 定义一个 map\n    m1 m2 := fill in (map[int]int) //\
+    \ 定义一个 map\n    m1[1] = 10\n    m2[2] = 20\n    for key, value := range m1 {\n\
+    \        fmt.Println(\"Key: \", key, \"Value: \", value)\n    }\n    for key,\
+    \ value := range m2 {\n        fmt.Println(\"Key: \", key, \"Value: \", value)\n\
+    \    }\n}\n```\nA. `make`\nB. `make map`\nC. `map make`\nD. `map map`\n\n### 24\n\
+    ```go\npackage main\nimport \"fmt\"\nfunc myRecur(n int) int {\n    if n == 0\
+    \ {\n        return 1\n    }\n    return n * fill in      // 递归\n}\nfunc main()\
+    \ {\n    fmt.Print(\"Factorial of 10 is \")\n    fmt.Print(myRecur(10))\n}\n```\n\
+    A. `myRecur(0)`\nB. `myRecur(n-1)`\nC. `recursion(0)`\nD. `recursion(n-1)`\n\n\
+    ### 25\n```go\npackage main\nimport (\n    \"fmt\"\n    \"time\"\n)\nfunc fn(s\
+    \ string) {\n    // 定义一个函数 fn\n    for i := 0; i < 5; i++ {\n        time.Sleep(200\
+    \ * time.Millisecond) // 延迟运行\n        fmt.Println(s)\n    }\n}\nfunc main() {\n\
+    \    fill in fn(\"Thread A\")      // 调用函数 fn\n    fn(\"Thread B\")          \
+    \   // 调用函数 fn\n}\n```\nA. `goroutine`\nB. `goto`\nC. `to`\nD. `go`\n\n#### 答案\n\
+    | 题目 | 答案 |\n| --- | --- |\n| 01. | D |\n| 02. | C |\n| 03. | B |\n| 04. | D |\n\
+    | 05. | A |\n| 06. | C |\n| 07. | B |\n| 08. | B |\n| 09. | C |\n| 10. | A |\n\
+    | 11. | B |\n| 12. | D |\n\n注：本书仅供初学者，不适合有经验的程序员。\n源码下载链接：[`forms.aweber.com/form/34/1805492434.htm`](https://forms.aweber.com/form/34/1805492434.htm)\n\
+    \n#### 源码\nRay Yao 在亚马逊上的电子书与书籍\n- Ray Yao 著《Advanced C++ Programming》\n- Ray\
+    \ Yao 著《Advanced Java Programming》\n- Ray Yao 著《AngularJs Programming》\n- Ray\
+    \ Yao 著《C# Programming》\n- 《C# 面试与认证》\n- Ray Yao 著《C++ Programming》\n- 《C++ 面试与认证》\n\
+    - Ray Yao 著《Django Programming》\n- Ray Yao 著《Go Programming》\n- Ray Yao 著《Html\
+    \ Css Programming》\n- 《Html Css 面试与认证》\n- Ray Yao 著《Java Programming》\n- 《Java\
+    \ 面试与认证》\n- Ray Yao 著《JavaScript Programming》\n- 《JavaScript 50 Useful Programs\
+    \ JavaScript 面试与认证》\n- Ray Yao 著《JQuery Programming》\n- 《JQuery 面试与认证》\n- Ray\
+    \ Yao 著《Kotlin Programming》\n- 《Linux Command Line Linux 面试与认证》\n- Ray Yao 著《MySql\
+    \ Programming》\n- Ray Yao 著《Node.Js Programming》\n- 《Php 面试与认证》\n- Ray Yao 著《Php\
+    \ MySql Programming》\n- Ray Yao 著《PowerShell Programming》\n- Ray Yao 著《Python\
+    \ Programming》\n- 《Python 面试与认证》\n- Ray Yao 著《R Programming》\n- Ray Yao 著《Ruby\
+    \ Programming》\n- Ray Yao 著《Rust Programming》\n- Ray Yao 著《Scala Programming》\n\
+    - Ray Yao 著《Shell Scripting Programming》\n- Ray Yao 著《Visual Basic Programming》\n\
+    - 《Visual Basic 面试与认证》\n- Ray Yao 著《Xml Json Programming》\n\n"
