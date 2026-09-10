@@ -1,0 +1,1676 @@
+<p><img src="image8.jpg" /></p>
+<p><span id="part0000.xhtml"></span></p>
+<div>
+<img src="image8.jpg" class="class9" />
+</div>
+<p><span id="part0001.xhtml"></span></p>
+<div class="class16">
+PYTHON MACHINE LEARNING
+</div>
+<p><span id="part0002.xhtml"></span></p>
+<div class="class23">
+Python Machine Learning
+</div>
+<div class="class25">
+Ultimate Hands-On Beginner's Guide to Machine Learning in Python
+</div>
+<div class="class27">
+By: Leonard Lee
+</div>
+<p><span id="part0003.xhtml"></span></p>
+<div class="class34">
+Legal Notice
+</div>
+<div class="class36">
+Copyright (c) 2018 Leonard Lee.
+</div>
+<div class="class36">
+All rights are reserved. No portion of this book may be reproduced or duplicated using any form whether mechanical, electronic, or otherwise. No portion of this book may be transmitted, stored in a retrieval database, or otherwise made available in any manner whether public or private unless specific permission is granted by the publisher.
+</div>
+<div class="class36">
+This book does not offer advice, but merely provides information. The author offers no advice whether medical, financial, legal, or otherwise, nor does the author encourage any person to pursue any specific course of action discussed in this book. This book is not a substitute for professional advice. The reader accepts complete and sole responsibility for the manner in which this book and its contents are used. The publisher and the author will not be held liable for any damages caused.
+</div>
+<p><span id="part0004.xhtml"></span></p>
+<div class="class45">
+Contents
+</div>
+<div id="part0004.xhtml#Table_of_Contents" class="class47">
+<a href="#part0005.xhtml" class="class846">Machine Learning</a>
+</div>
+<div class="class49">
+<a href="#part0005.xhtml#toc0_What_is_Machine_Learning_" class="class846">What is Machine Learning?</a>
+</div>
+<div class="class49">
+<a href="#part0006.xhtml" class="class846">Machine Learning Tasks</a>
+</div>
+<div class="class49">
+<a href="#part0007.xhtml" class="class846">Learning</a>
+</div>
+<div class="class53">
+<a href="#part0007.xhtml#toc2_Supervised_Learning" class="class846">Supervised Learning</a>
+</div>
+<div class="class49">
+<a href="#part0008.xhtml" class="class846">Unsupervised Learning</a>
+</div>
+<div class="class49">
+<a href="#part0009.xhtml" class="class846">Machine Learning Applications</a>
+</div>
+<div class="class53">
+<a href="#part0010.xhtml" class="class846">Classification</a>
+</div>
+<div class="class53">
+<a href="#part0011.xhtml" class="class846">Clustering</a>
+</div>
+<div class="class53">
+<a href="#part0012.xhtml" class="class846">Density Estimation</a>
+</div>
+<div class="class53">
+<a href="#part0013.xhtml" class="class846">Dimensionality Reduction</a>
+</div>
+<div class="class53">
+<a href="#part0014.xhtml" class="class846">Regression Analysis</a>
+</div>
+<div class="class47">
+<a href="#part0015.xhtml" class="class846">Machine Learning in Python</a>
+</div>
+<div class="class49">
+<a href="#part0016.xhtml" class="class846">Scikit – learn</a>
+</div>
+<div class="class49">
+<a href="#part0017.xhtml" class="class846">TensorFlow</a>
+</div>
+<div class="class49">
+<a href="#part0018.xhtml" class="class846">What Version of Python to Use?</a>
+</div>
+<div class="class49">
+<a href="#part0022.xhtml" class="class846">Installing the relevant libraries (If not using Anaconda)</a>
+</div>
+<div class="class49">
+<a href="#part0024.xhtml" class="class846">Introductory Machine Learning in Python: Iris Flowers</a>
+</div>
+<div class="class53">
+<a href="#part0026.xhtml" class="class846">Importing the Requisite Libraries and data</a>
+</div>
+<div class="class53">
+<a href="#part0027.xhtml" class="class846">Summarizing the Data Set</a>
+</div>
+<div class="class53">
+<a href="#part0028.xhtml" class="class846">Data Visualization</a>
+</div>
+<div class="class53">
+<a href="#part0029.xhtml" class="class846">Creating Data Models</a>
+</div>
+<div class="class53">
+<a href="#part0030.xhtml" class="class846">Making Predictions</a>
+</div>
+<div class="class53">
+<a href="#part0031.xhtml" class="class846">Conclusion</a>
+</div>
+<div class="class49">
+<a href="#part0032.xhtml" class="class846">Common Data Models Used in Machine Learning</a>
+</div>
+<div class="class53">
+<a href="#part0033.xhtml" class="class846">Simple Linear Algorithms</a>
+</div>
+<div class="class53">
+<a href="#part0034.xhtml" class="class846">Nonlinear Algorithms</a>
+</div>
+<div class="class49">
+<a href="#part0035.xhtml" class="class846">TensorFlow</a>
+</div>
+<div class="class53">
+<a href="#part0036.xhtml" class="class846">Tensors</a>
+</div>
+<div class="class53">
+<a href="#part0037.xhtml" class="class846">What is a Neural Network?</a>
+</div>
+<div class="class80">
+<a href="#part0038.xhtml" class="class846">Sample Neural Network Code</a>
+</div>
+<p><span id="part0005.xhtml"></span></p>
+<div id="part0005.xhtml#id_" class="class87">
+Machine Learning
+</div>
+<div id="part0005.xhtml#toc0_What_is_Machine_Learning_" class="class89">
+What is Machine Learning?
+</div>
+<div class="class91">
+Machine learning as a term encompasses a concept that is simple enough to understand, but extremely difficult and complex in its execution: the ability of a computer, or a "machine", to "learn", or get better at a specific type of task using data that they receive, without being explicitly programmed. This means that the programmer must be able to code in such a way to enable this behavior, as this independence from hard – coding is highly reliant on the programmer's algorithm.
+</div>
+<div class="class93">
+Machine learning is usually done by creating a set of algorithms that process incoming data and use this data as basis for predictions or decisions, actions that would normally be hard – coded in a static program. This allows for adaptation, and the program will begin to react in a different manner depending on the data received, as compared to traditional static programs where following a certain series of inputs will always result in the same result. This model – creation from inputted data is useful in many cases where static traditional programs would be impractical or impossible if a favorable result is desired, such as in the creation of electronic – mail spam filters, detection of possible malicious intruders attempting to breach the security of a network, or in cases where the programmer is attempting to implement some level of computer vision.
+</div>
+<div class="class93">
+This adaptability has been used to enhance various functions of computers and has been growing in complexity through the years. However, machine learning is far from a new concept in data science, and in fact, machine learning as a concept has been condensed by prominent data scientist Tom Mitchell into the line of: "<span class="class848">A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P if its performance at tasks in T, as measured by P, improves with experience E". As machine learning is a fairly well – developed concept, there are many things that programmers are capable of implementing through it, and there are two general "tasks" that machine learning algorithms carry out.</span>
+</div>
+<p><span id="part0006.xhtml"></span></p>
+<div id="part0006.xhtml#id_0SFBEX_iTHaf3cRR-BrLhw817" class="class101">
+Machine Learning Tasks
+</div>
+<div class="class91">
+The "tasks" of machine learning refer to what the algorithm is supposed to do, and through what method it "learns". As such, there are two general categories of machine learning tasks:
+</div>
+<p><span id="part0007.xhtml"></span></p>
+<div id="part0007.xhtml#toc3_Learning" class="class101">
+Learning
+</div>
+<div class="class110">
+Given that machine learning has the word learning in it, learning would be the major task of any machine learning algorithm. There are multiple methods of machine learning, however, depending on what the aim of the programmer is, as well as what kind of data the algorithm is meant to parse. The following should give the reader an overview of a few of the more popular and major categories of machine learning.
+</div>
+<div id="part0007.xhtml#toc2_Supervised_Learning" class="class112">
+Supervised Learning
+</div>
+<div class="class110">
+Supervised learning is a method wherein the computer is fed information, usually in the format of a paired input – output data and uses this information to construct a model which will result in improved predictions or in a more favorable output method. It does this by inferring training data through the given "training examples", which then allows the machine learning algorithm to eventually produce an inferred function using the given examples, that will be used to map more examples and will optimally result in determining the classes of unseen instances, which requires the algorithm to be able to generalize results from the training data to unseen examples in a more reasonable way. Note that the paired teaching data is usually referred to as the "vector" for the input half of the pair, and the output portion is referred to as the "supervisory signal"
+</div>
+<div class="class115">
+Steps in Creating a Flowchart to Solving a Supervised Learning Problem
+</div>
+<div class="class117">
+The first step in creating an algorithm to solve a supervised learning problem is to determine the data type of the training examples to be used. For example, when writing a program in order to conduct handwriting data analysis, the programmer has to decide if they wish to use individual characters, single words, or even entire lines at once in order to train the program. Once the type of data has been determined, the next step is to gather a sufficient sample size of data in order to create the training set to be used for the algorithm. This means that multiple input objects should be gathered, and their expected output counterparts should also be readied.
+</div>
+<div class="class117">
+Once the training set has been completed, the programmer needs to then figure out how exactly they wish their input features to be represented. This means that the input will be converted into a vector, with a number of variables describing it. While it is impossible to perfectly describe the object due to the "curse of dimensionality", the programmer should be able to include a sufficient number of descriptive variables for the computer to have a proper idea of the object. Once this has been completed, the programmer can then determine how they wish their learning function to be structured and how they want to create their algorithm, by using methods such as support vector machines or decision – tree creation, algorithm methods that will be discussed in a later chapter.
+</div>
+<div class="class120">
+Once this has been completed, the programmer can then begin to run the simulation to train their program. Note that certain supervised learning algorithms need a number of control parameters to be determined by the user, and further adjustment may be necessary in order to optimize performance. Once the algorithm has been tested and the program has been trained, the programmer can then try and test their function on a test set differing from the training set, and check as to whether or not their program is able to come up with the reasonably expected output results.
+</div>
+<div class="class122">
+Curse of Dimensionality
+</div>
+<div class="class120">
+While the "curse of dimensionality" sounds like a very complex concept, and one that comes from a science fiction or fantasy novel at that, it merely refers to how it is difficult to measure three – dimensional physical objects in the high – dimensional space that data scientists and mathematicians work in, and the various phenomena that arise from this fact. This problem is caused by the fact that as the number of dimensions increase, the volume of the space increases at a rapid space, so much so that data becomes difficult to gather. One example of how this affects data scientists is the organization of data in high – dimensional space: due to the large amount of data points, many objects look dissimilar though they are similar in reality, which renders many common data organization methods and strategies useless or impractical.
+</div>
+<div class="class125">
+Semi – Supervised Learning
+</div>
+<div class="class110">
+A subset of the supervised learning method, also known as optimal experimental design, it combines elements of supervised learning and unsupervised learning, as unlabeled data entries are included in the training set given to the program. This means that the program learns to calibrate itself through inductive or transductive learning methods, where given the rest of the training set, it infers the proper labels for the unclassified data sets. In fact, the proportion tends to be skewed in favor of unlabeled data sets, with a small portion of the total training set being labeled sets, and the rest being unlabeled data. This can be likened to a math teacher giving worksheets to their students, where the first few problems are already solved, with the solution and answer given, and the rest of the worksheet is left blank. Students learn from the examples, and extrapolate the proper method to solve them through the given problems. This method cuts down on costs, as finding or acquiring labeled data is often a resource drain, as it requires a human expert to convert data into a type useable and accessible by a computer. Semi – supervised learning as a method has also been shown to result in higher accuracy in results.
+</div>
+<div class="class125">
+Active Supervised Learning
+</div>
+<div class="class110">
+Active supervised learning is a type of supervised learning where the program is given the ability to actively ask the user questions regarding the label of the data sets. This method uses a combination of labeled and unlabeled data sets, and due to the high cost of manually labeling each data set, the active supervised learning method can be used instead. This allows the computer to attempt to learn using the training set, but if the margin of error in labeling of a particular data set is too high for the program to "tolerate", then the algorithm usually asks the user in order that it may properly self – correct. This active participation by a human user is the reason that this method is referred to as the active supervised learning method, and unlike most other methods where little to no human interaction is required once the algorithm starts to run, this method needs a human to be able to fully complete its training set.
+</div>
+<div class="class125">
+Reinforcement Learning
+</div>
+<div class="class91">
+Reinforcement learning is a unique method of supervised learning, in that training sets are not provided. Instead, what happens is that the program is left to carry out actions in an environment, and it learns based on a rewards and incentives method, where if their action is correct, then it is reinforced. This allows the program to find different results, and the focus is taken off of correcting sub – optimal results, but rather finding the method that results in the best performance. This method is often carried out by feedback – intensive activities, such as when playing games against a human user or even driving cars. Reinforcement learning is how some programs such as OpenAI have been able to beat human players in video games, and how Google has been able to develop an autonomous, self – driving car. This learning method often uses the Monte Carlo heuristic method, which allows the computer to calculate probabilities in a resource – starved environment.
+</div>
+<p><span id="part0008.xhtml"></span></p>
+<div id="part0008.xhtml#toc4_Unsupervised_Learning" class="class101">
+Unsupervised Learning
+</div>
+<div class="class93">
+In unsupervised learning, the algorithm is made to parse through totally unlabeled sets of data in order to train itself. This means that there is a higher possibility for errors as to compared to the supervised learning method earlier discussed. Unsupervised learning is generally used more for clustering data and values and sees the most use in statistical analysis where there is a need for density estimation functions. Unsupervised learning is more weighted to finding out probabilities of outcomes, such as the probability of Y for any particular X value, and this is why statisticians are the ones that make the most use of this particular machine learning task. However, when it comes to more conventional requirements such as training a program to recognize or predict particular outcomes given a set condition, it would most likely be more effective to make use of a supervised learning method rather than the unsupervised counterpart.
+</div>
+<p><span id="part0009.xhtml"></span></p>
+<div id="part0009.xhtml#id_0SFBEX_iTHaf3cRR-BrLhw821" class="class101">
+Machine Learning Applications
+</div>
+<div class="class93">
+Learning deals with managing possible future input: while requiring, for the most part, input – output pairs, the machine learning process is there to teach the program what to do with future input. When it comes to machine learning applications, this is where the output of the machine learning program is addressed. There are multiple application types, too many to discuss here, thanks to the versatility and flexibility machine learning offers to users. However, there are a few major types, the following which we will discuss here.
+</div>
+<p><span id="part0010.xhtml"></span></p>
+<div id="part0010.xhtml#toc5_Classification" class="class151">
+Classification
+</div>
+<div class="class93">
+In data science, more specifically in the fields of statistics and machine learning, classification is a type of problem where a particular observation, or data point, is placed into a category where it belongs, on the basis of similar characteristics, which in this case is based on the training set fed to the program, which contains instances or observations which the program can identify the membership of the said data points. One common example of a classification output in action would be an electronic mail spam filter, which classifies our electronic mail into one of two categories: "spam" (unwanted e – mail), and non – spam (legitimate e – mail messages). A more advanced type of classification in machine learning is how some new programs are trying to provide diagnostic services, and they provide diagnoses based on recorded symptoms of the patient as well as certain factors such as age, sex, and race, which allows the program to better predict the likely diagnosis.
+</div>
+<div class="class93">
+Classification is mainly a type of pattern recognition, and is usually created through a supervised learning method, where the algorithm is taught using a set of data points where properly identified and categorized learning is already available. Classifiers are algorithms that implements the classification method, but the term "classifier" is also used in order to refer to a mathematical function that directs and categorizes input data into a certain category, but for the purposes of this guide, classifiers are classification method algorithms. Classifiers are usually created by splitting data points into certain variables, which may have various properties, such as categorical properties of blood types *"A -", "O +", "AB +"), ordinal (tall, regular, short), or even integer – valued (such as for spam filters which count for the number of occurrences of particular words). Some other classifiers are built using comparative observation, which have a function that compares distance or similarity between the two.
+</div>
+<p><span id="part0011.xhtml"></span></p>
+<div id="part0011.xhtml#toc6_Clustering" class="class151">
+Clustering
+</div>
+<div class="class93">
+Much like classification, clustering involves grouping together particular data points or observations based on a list of characteristics that would make them belong in the same category. However, clustering tends to be of a broader scope, and less clear – cut as compared to how classification decides to segment its categories. Clustering, or cluster analysis is mostly used by statisticians and data scientists, especially when it comes to solving problems of information retrieval, data compression, or density estimation functions. As was briefly explained earlier, the clustering function is usually created through an unsupervised machine learning algorithm, as compared to classification functions created through supervised learning. This is because clustering does not emphasize specificity as much and works more to gather similar objects together rather than individually define each object into a specific class.
+</div>
+<p><span id="part0012.xhtml"></span></p>
+<div id="part0012.xhtml#id_0SFBEX_iTHaf3cRR-BrLhw824" class="class151">
+Density Estimation
+</div>
+<div class="class91">
+In what is basically a sub – type of clustering, the density estimation output method is an estimate built based on various observations, of an underlying probability density function, which is often unobservable. This function usually takes random samples from a population, and using the random sample, the unobservable density function that is to be estimated tends to be the density distribution of the larger population.
+</div>
+<p><span id="part0013.xhtml"></span></p>
+<div id="part0013.xhtml#toc8_Dimensionality_Reduction" class="class151">
+Dimensionality Reduction
+</div>
+<div class="class93">
+Dimensionality reduction is a type of output that tries to reduce the complexity of objects and simplifies the input by mapping them into a lower – dimensional space, which eventually allows the user to simplify the objects and allow them to undergo feature selection or extraction, which is the process of identifying the most relevant attributes, or "features", in order to be better able to build a model. This is useful especially since there tends to be a problem in the increase of available dimensions and as such, sparser relevant data when objects are placed in high – dimensional space, so dimensionality reduction is often a necessary factor to making objects more accessible and useable.
+</div>
+<p><span id="part0014.xhtml"></span></p>
+<div id="part0014.xhtml#toc9_Regression_Analysis" class="class151">
+Regression Analysis
+</div>
+<div class="class93">
+Regression, a word that many people hear and immediately fear due to its complexity, is a statistical process that people use in order to estimate and define relationships between and among various variables. Regression as a whole refers to multiple techniques that allow us to model the relationship between a dependent variable and one or multiple independent variables, known as predictors. Regression analysis is very useful for helping us understand how the criterion variable, or the dependent variable as it is commonly known, is affected and changes whenever some independent variable changes, while the other independent variables, if any, remain fixed. Regression analysis is also used to help estimate the conditional expectation of the criterion variable given the predictors, so we know what the criterion variable's value the predictors will be once they are fixed. However, there are also those that use regression analysis to focus on some location parameters of the dependent variable's distribution in relation to the independent variables.
+</div>
+<div class="class93">
+Notably, due to the characteristics of regression analysis, where the data points fluctuate depending on what is being controlled for, the outputs tend to be in a continuous form rather than in a discrete form, matching the changes in real – time.
+</div>
+<p><span id="part0015.xhtml"></span></p>
+<div id="part0015.xhtml#toc30_Machine_Learning_in_Python" class="class87">
+Machine Learning in Python
+</div>
+<div class="class93">
+Now that we have a basic overview of what machine learning is, and what it can be capable of, now we move back into Python, and how we can integrate the two. At this point, your Python should be set up, and you should already have a basic mastery of creating Python code and algorithms, and you should be used to the development environment by now, so we can move on to more advanced concepts such as these. However, as machine learning is not built – in for Python, unlike many of the functions that beginning programmers tend to use, we need to import a few libraries in order to give our Python the capability to run machine learning algorithms. <span class="class848">Python is a high – level programming language that was initially developed by a programmer by the name of Guido van Rossum, and the first publicly available version was released in the year 1991. Python is commonly used for teaching programming to beginners due to its ease of use and simplicity, but due to the power of the language, it also functions well in higher – level uses, as it scales well and can be used for larger programs. This scaling includes the capability to run machine learning functions when certain libraries are imported.</span> There are a few libraries that we can make use of, but here we will focus on two major libraries: Scikit – learn and TensorFlow
+</div>
+<p><span id="part0016.xhtml"></span></p>
+<div id="part0016.xhtml#toc12_Scikit___learn" class="class101">
+Scikit – learn
+</div>
+<div class="class93">
+Scikit – learn is one of the more popular freeware machine learning libraries for Python and was initially developed in the year 2007 by a programmer known as David Cornapeau, who was later joined by one Mattheiu Brucher, and thanks to the involvement of the French Institute for Research in Computer Science and Automation, scikit – learn was eventually made available for public download and use in early 2010.
+</div>
+<div class="class93">
+Scikit – learn derives its name from the intent of the software package, which is to be able to enhance the capabilities of a user who is using the SciPy toolkit, the scientific library of Python, as well as the numerical library, NumPy. Thus, scikit – learn is a module meant for extending the Python library when it comes to adding various functions and methods for classification, regression, and clustering, being a "SciPy toolkit".
+</div>
+<div class="class93">
+As mentioned, Scikit – learn contains classification, clustering, and regression algorithms that make use of gradient boosting, random forests, support vector machines, k – means, and DBSCAN, which allows the user a far more expanded range of capability for their Python usage.
+</div>
+<p><span id="part0017.xhtml"></span></p>
+<div id="part0017.xhtml#toc13_TensorFlow" class="class101">
+TensorFlow
+</div>
+<div class="class93">
+TensorFlow is a google – created software library initially created for proprietary use, but eventually released for public download and use under an open – source license in 2015. TensorFlow focuses mainly on data – flow programming and is a symbolic math library that is used for machine learning that makes use of neural network functions.
+</div>
+<div class="class93">
+TensorFlow is a more advanced programming library that we will discuss in more detail as this guide goes along, but for now, we will begin with a basic introduction to machine learning functions in Python.
+</div>
+<p><span id="part0018.xhtml"></span></p>
+<div id="part0018.xhtml#toc14_What_Version_of_Python_to_Use_" class="class101">
+What Version of Python to Use?
+</div>
+<div class="class91">
+By now, the reader should have a familiarity with Python, and should already have Python installed on their machine. For the purposes of this guide, the user should be running a modern version of Python, Python 3.5, but this guide is also applicable for users of Python 2.7. If by some chance the reader does not have Python yet, this is how they can install the base version of Python:
+</div>
+<p><span id="part0019.xhtml"></span></p>
+<div class="class220">
+Installing Python on the Windows Platform
+</div>
+<div class="class222">
+In order to get Python to run on Windows, download an installer from the official Python website, www.python.org or from a mirror website that offers the same download. Once this has been downloaded, most likely the file being named python – 3.1 msi, simply run the executable file and accept the default configuration. This should automatically install Python without a hitch, including IDLE, the built – in integrated development environment, which will be covered in more depth later on.
+</div>
+<p><span id="part0020.xhtml"></span></p>
+<div class="class229">
+Installing Python on other Platforms
+</div>
+<div class="class117">
+<span class="class848">In order to get python to run on other platforms, the user will have to go to the official Python website,</span> <a href="http://www.python.org/" class="class848">www.python.org</a> <span class="class848">, and find the version and language compatible with the hardware the user wishes. Some hardware platforms, such as the Raspberry Pi, have Python automatically installed in their operating systems, such as in the Pi Debian OS. Once the user has found the file, all that should be done is to download it and install it, and the default configuration should suffice. The Python installer sourced from python.org should have IDLE built in, the default Python integrated development environment.</span>
+</div>
+<div class="class232">
+However, if the reader wishes, another Python application other than the base Python is available, and may be more useful to the reader, especially if the reader is not as confident, as this variant, known as Anaconda, already has the requisite libraries built – in.
+</div>
+<p><span id="part0021.xhtml"></span></p>
+<div class="class229">
+Installing Anaconda on the Windows Platform
+</div>
+<div class="class240">
+In order to install "Anaconda" on Windows, simply access the site at the following link: https://www.anaconda.com/download/ and choose which version of Python the user wishes to have installed. It is recommended to get the latest version in order to make use of new features, but in some cases such as for access to certain libraries or backwards – compatibility problems, the user may wish to install an older edition of the Python libraries. When installing the Anaconda application, make sure to install the graphics UI as well.
+</div>
+<p><span id="part0022.xhtml"></span></p>
+<div id="part0022.xhtml#id_0SFBEX_iTHaf3cRR-BrLhw831" class="class101">
+Installing the relevant libraries (If not using Anaconda)
+</div>
+<div class="class91">
+For our basic machine learning use in Python, we will be needing five libraries to be imported. These libraries are the following:
+</div>
+<div class="class249">
+1) Scipy
+</div>
+<ul>
+<li><span class="class848">Scipy is the scientific python module that contains various modules for optimization, linear algebra, and other special functions. This expands on the Numpy library, and is included in the NumPy stack, which includes the matplotlib and the pandas modules</span></li>
+</ul>
+<div class="class249">
+2) Numpy
+</div>
+<ul>
+<li><span class="class848">NumPy is the numerical Python module that provides rapid mathematical functions. It also allows for more robust data structures that users can employ to note multi – dimensional objects.</span></li>
+</ul>
+<div class="class249">
+3) Matplotlib
+</div>
+<ul>
+<li><span class="class848">Matplotlib is the plotting library for Python and is usually used in conjunction with NumPy. It provides an object - oriented application programming interface that allows users to make use of its functions on the standard GUI</span></li>
+</ul>
+<div class="class249">
+4) Pandas
+</div>
+<ul>
+<li><span class="class848">The Pandas Module provides Data Frame Objects for data manipulation, as well as provides reading &amp; writing data functions. Notably,  Data Frames can hold different data types in multidimensional arrays.</span></li>
+</ul>
+<div class="class249">
+5) sklearn
+</div>
+<ul>
+<li><span class="class848">SK learn is one of the major machine learning libraries that contains numerous functions and mathematical models related to machine learning.</span></li>
+</ul>
+<div class="class249">
+In case the reader has forgotten about libraries, here is a quick briefer about libraries and initialization:
+</div>
+<p><span id="part0023.xhtml"></span></p>
+<div class="class229">
+How to import and initialize libraries
+</div>
+<div class="class240">
+Libraries are simply a bundle of multiple modules that is made available to the Python program in the device. These packages are usually stored within the same folder that Python is installed in, which by default for is:
+</div>
+<div class="class275">
+<span class="class-0">For Windows users : C:/ Python27 / Lib / site – packages /</span>
+</div>
+<div class="class275">
+<span class="class-0">For Linux users : / usr / lib / python /site -packages</span>
+</div>
+<div class="class240">
+Libraries are not immediately useable even if they are already in the proper folder, as they must first be initialized using the syntax as follows:
+</div>
+<div class="class275">
+<span class="class-0">library_name /__init__.pylibrary_name/module_name.py</span>
+</div>
+<div class="class240">
+Once the library has been initialized, the modules inside can then be imported through the process discussed in the previous section, through:
+</div>
+<div class="class275">
+<span class="class-0">import module_name</span>
+</div>
+<div class="class249">
+Once the libraries have been imported and initialized, we can check as to whether they have been properly installed by typing the following in your Python IDE:
+</div>
+<div class="class249">
+# Checking the versions of each of the libraries
+</div>
+<div class="class249">
+# This shows the Python version installed on the machine
+</div>
+<div class="class285">
+import sys
+</div>
+<div class="class285">
+print("Python: {}".format(sys.version))
+</div>
+<div class="class249">
+# This shows the scipy version installed on the machine
+</div>
+<div class="class285">
+import scipy
+</div>
+<div class="class285">
+print("scipy: {}".format(scipy.__version__))
+</div>
+<div class="class249">
+# This shows the numpy version installed on the machine
+</div>
+<div class="class285">
+import numpy
+</div>
+<div class="class285">
+print("numpy: {}".format(numpy.__version__))
+</div>
+<div class="class249">
+# This shows the matplotlib version installed on the machine
+</div>
+<div class="class285">
+import matplotlib
+</div>
+<div class="class285">
+print("matplotlib: {}".format(matplotlib.__version__))
+</div>
+<div class="class249">
+# This shows the pandasversion installed on the machine
+</div>
+<div class="class285">
+import pandas
+</div>
+<div class="class285">
+print("pandas: {}".format(pandas.__version__))
+</div>
+<div class="class249">
+# This shows the scikit – learn version installed on the machine
+</div>
+<div class="class285">
+import sklearn
+</div>
+<div class="class285">
+print("sklearn: {}".format(sklearn.__version__))
+</div>
+<div class="class249">
+If the libraries have been installed properly, the output should look something like the following lines:
+</div>
+<div class="class249">
+Python: 3. 6. 0
+</div>
+<div class="class249">
+scipy: 1. 1 . 0
+</div>
+<div class="class249">
+numpy: 1. 14. 5
+</div>
+<div class="class249">
+matplotlib: 2. 2. 2
+</div>
+<div class="class249">
+pandas: 0. 23. 2
+</div>
+<div class="class249">
+sklearn: 0. 19. 2
+</div>
+<div class="class222">
+At this point, this means that the proper libraries have been installed. Do not worry if your library versions do not exactly match the ones seen here, as the API does not tend to change drastically, and the code that we will discuss shortly is still most likely applicable even if the versions are different.
+</div>
+<p><span id="part0024.xhtml"></span></p>
+<div id="part0024.xhtml#toc22_Introductory_Machine_Learning_in_Python__Iris_Flowers" class="class101">
+Introductory Machine Learning in Python: Iris Flowers
+</div>
+<div class="class91">
+When beginning to learn basic programming in almost any language, the first program that the aspiring programmer is taught is most likely the "Hello World" program. This is because it is simple, interactive, and is useful to explain the basics of programming. However, as we are creating an introduction to machine learning, this already assumes that the reader has a basic working knowledge of the Python language and is far beyond "Hello World". However, when it comes to machine learning, there is also a classic program with a well – known data set that is often used to introduce machine learning, and this is known as the iris flowers program. The iris flowers program is meant to take the iris flowers data set, which contains multiple attributes, and use these attributes in order to predict what the species of flowers are from the given attributes.
+</div>
+<p><span id="part0025.xhtml"></span></p>
+<div class="class229">
+Iris flowers data set
+</div>
+<div class="class324">
+The iris flowers data set is one of the most well – known data sets, as it has been used as the introductory data set for machine learning students and statisticians around the world. This data set has a hundred and fifty data points about flowers. Each of these hundred and fifty data points is categorized under five attributes: the petal length in centimeters, the petal width in centimeters, the sepal length in centimeters, the sepal width in centimeters, and the class / species of the particular flower. Note as well that there are three species of iris flowers in this data set, and the one hundred and fifty data points are distributed accordingly, with fifty points for each flower species.
+</div>
+<p><span id="part0026.xhtml"></span></p>
+<div id="part0026.xhtml#id_0SFBEX_iTHaf3cRR-BrLhw833" class="class151">
+Importing the Requisite Libraries and data
+</div>
+<div class="class222">
+Our first step in the process of solving a machine learning problem is to identify and gather the data we need. As we are using the iris flower data set, a well – known and publicly available data set, our work here will be quick and easy. All we have to do is to import the requisite libraries, modules, and objects in order to have all the data we need to work with at our fingertips. This can be done by entering the following lines of code:
+</div>
+<div class="class249">
+# Importing the requisite libraries
+</div>
+<div class="class285">
+import pandas
+</div>
+<div class="class285">
+from pandas.plotting
+</div>
+<div class="class285">
+import scatter_matrix
+</div>
+<div class="class285">
+import matplotlib.pyplot as plt
+</div>
+<div class="class285">
+from sklearn import model_selection
+</div>
+<div class="class285">
+from sklearn.metrics import classification_report
+</div>
+<div class="class285">
+from sklearn.metrics import confusion_matrix
+</div>
+<div class="class285">
+from sklearn.metrics import accuracy_score
+</div>
+<div class="class285">
+from sklearn.linear_model import LogisticRegression
+</div>
+<div class="class285">
+from sklearn.tree import DecisionTreeClassifier
+</div>
+<div class="class285">
+from sklearn.neighbors import KNeighborsClassifier
+</div>
+<div class="class285">
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+</div>
+<div class="class240">
+from sklearn.naive_bayes import GaussianNB
+</div>
+<div class="class285">
+from sklearn.svm import SV
+</div>
+<div class="class222">
+The preceding lines of code allow us to bring over code that allows us to categorize the various flowers through the various classifiers, as well as allows us to display our data on a matrix and imports various regression functions in order to simplify our task, as it may be too difficult to expect a beginner programmer to write their own regression function algorithm just in order to test a basic machine learning program. Once this is done, all the tools that we need should be ready, and we can move on to loading the data onto our machine. This data can be downloaded onto our machine directly from the University of California Irvine – Machine Learning repository with a few simple lines of code and an internet connection, as seen through the following lines of code:
+</div>
+<div class="class222">
+# Load dataset
+</div>
+<div class="class222">
+url = "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
+</div>
+<div class="class222">
+names = ["sepal - length", "sepal - width", "petal - length", "petal - width", "species"]
+</div>
+<div class="class222">
+dataset = pandas.read_csv(url, names=names)
+</div>
+<div class="class222">
+If you remember, we are loading functions with function arguments, so once they have been loaded, each column of data will already have labels, namely the sepal – length, sepal – width, petal – length, petal – width, and the species. This will make our job much easier when we try to manipulate and access the data. However, if there is a problem with the url, and the dataset does not download, the raw data can be accessed here: https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data and the user can simply manually save it in their working directory and replace the given URL with the local address of the file.
+</div>
+<p><span id="part0027.xhtml"></span></p>
+<div id="part0027.xhtml#id_0SFBEX_iTHaf3cRR-BrLhw834" class="class151">
+Summarizing the Data Set
+</div>
+<div class="class110">
+At this point, thanks to the previous two steps, we have the data that we need for this program, and the tools to analyze the data. Now we have to learn how to manipulate this data in order to get a tangible result. In this step we will attempt to do four things: First, we will get the dimensions of the data set at our disposal. Second, we will try and take a look at the raw data itself. Third, we will try and get a summary of the statistics of each attribute. Fourth and last, we will try and break down the data as per the "species" variable.
+</div>
+<div class="class125">
+Finding the Dimension of the Data Set (Learning the shape property)
+</div>
+<div class="class362">
+Remember how arrays and lists work in Python? Each array / list can be imagined in a two – dimensional space (or three or more) and so we can organize our data as in columns or rows, if we are using a two – dimensional array.
+</div>
+<div class="class122">
+List Data Type
+</div>
+<div class="class365">
+The List data type is one of the most useful data types when it comes to organizing data. The list data type is also commonly known as an "array" in other programming languages. Lists allow the programmer to store multiple types of data in a single longer variable, and call it back using the reference number contained in the list. Lists are declared by having brackets beside the variable name, which tells Python to read it as a list. For example, List == Hello will simply be considered as the <span class="class852">String</span> List containing the "Hello" data. However, List [0] == Hello will allow Python to store "Hello" in the first element of a list.
+</div>
+<div class="class365">
+Note that the index of lists begin with '0', not '1', so the first container of a list is [0]. Lists can contain multiple data types within them, and lists can even contain lists inside them. While it may be difficult for a person to keep track if the dimensions become too many, two – dimensional lists are commonly used. List [ [] , [] ] is an example of a two – dimensional list, where the first bracket refers to the "row", and the second bracket refers to the "column", which is a visual aid many use in order to keep track of how the list stores data.
+</div>
+<div class="class365">
+Lists in Python are dynamic, meaning that they can store multiple data types and have the values contained changed as the program needs them to, which differentiates them from a similar data type, the Tuple.
+</div>
+<div class="class222">
+Now our libraries that we have imported give us the ability to access the data set easily, and as it has been imported in an array form as declared, we can simply call it using the <span class="class852">shape</span> property written into our modules like so:
+</div>
+<div class="class370">
+print (dataset. shape)
+</div>
+<div class="class222">
+That simple line of code instructs the machine to pull the "shape" of the dataset, or how many rows and columns it has. As we already know the dimensions of our data set, which is a hundred and fifty instances, or "rows", and five attributes, or "columns", this command simply acts to verify, which it should by returning a value of:
+</div>
+<div class="class373">
+(150, 5)
+</div>
+<div class="class125">
+Taking a Look at the Raw Data (Learning the head() function)
+</div>
+<div class="class93">
+While most of the time programmers will not look at the raw data when writing their code because it is not their job, and because it's often too tedious to scroll past each and every element, there may be some instances where it would be useful to be able to take a peek at a few elements of the data set here and there. In order to do so, the command is as follows:
+</div>
+<div class="class377">
+print (dataset.head(20))
+</div>
+<div class="class93">
+The "head" function instructs the program to pull the first x data points from the data set, where x is the argument passed into the head function. Once the dataset receives the "head()" function call, it should print the following data points:
+</div>
+<div class="class285">
+Sepal - length sepal - width petal - length petal - width species
+</div>
+<div class="class249">
+0              5. 1                   3. 5                1. 4               0. 2               Iris - setos a
+</div>
+<div class="class249">
+1              4. 9                   3. 0                1. 4               0. 2               Iris - setos a
+</div>
+<div class="class249">
+2              4. 7                   3. 2                1. 3               0. 2               Iris - setos a
+</div>
+<div class="class249">
+3              4. 6                  3. 1                1. 5               0. 2               Iris - setos a
+</div>
+<div class="class249">
+4              5. 0                  3. 6                1. 4               0. 2               Iris - setos a
+</div>
+<div class="class249">
+5              5. 4                 3. 9                1. 7               0. 4               Iris - setosa
+</div>
+<div class="class249">
+6              4. 6                 3. 4                1. 4               0. 3               Iris - setos a
+</div>
+<div class="class249">
+7              5. 0                 3. 4               1. 5               0. 2               Iris - setos a
+</div>
+<div class="class249">
+8              4. 4                 2. 9                1. 4               0. 2               Iris - setos a
+</div>
+<div class="class249">
+9              4. 9                 3. 1                1. 5               0. 1               Iris - setos a
+</div>
+<div class="class249">
+10            5. 4                 3. 7                1. 5               0. 2               Iris - setos a
+</div>
+<div class="class249">
+11            4. 8                 3. 4                1. 6               0. 2               Iris - setos a
+</div>
+<div class="class249">
+12            4. 8                 3. 0                1. 4               0. 1               Iris - setos a
+</div>
+<div class="class249">
+13            4. 3                 3. 0                1. 1               0. 1               Iris - setos a
+</div>
+<div class="class249">
+14            5. 8                 4. 0                1. 2               0. 2               Iris - setos a
+</div>
+<div class="class249">
+15            5. 7                 4. 4                1. 5               0. 4               Iris - setos a
+</div>
+<div class="class249">
+16            5. 4                 3. 9                1. 3               0. 4               Iris - setos a
+</div>
+<div class="class249">
+17            5. 1                 3. 5               1. 4               0. 3               Iris - setos a
+</div>
+<div class="class249">
+18            5. 7                 3. 8                1. 7               0. 3               Iris - setos a
+</div>
+<div class="class249">
+19            5. 1                 3. 8                1. 5               0.3                Iris - setos a
+</div>
+<div class="class362">
+The above should come out as output from the head() function, which allows the programmer to call the first few elements of the given data set.
+</div>
+<div class="class125">
+Examining the Statistical Summary of the Given Data Set (Learning the describe() function)
+</div>
+<div class="class222">
+Now that we know how to obtain the dimensions of the data set, as well as take a peek at the first "x" elements of each set, another handy tool that we can use to parse our data set is to examine the statistical summary of the elements. The tool that we need in order to do this is the "describe ()" function, which gives us eight attributes: the count of the elements, the mean, the standard, the minimum and maximum values, as well as three percentiles: twenty – five percent, fifty percent, and seventy – five percent. In order to use the describe () function, we write a line of code as follows:
+</div>
+<div class="class285">
+print (dataset.describe())
+</div>
+<div class="class222">
+With our given data set, it will summarize and display the various attributes that describe () uses, as listed above. This will result in a table being output, looking something like this:
+</div>
+<div class="class275">
+<span class="class-0">Sepal - length sepal - width petal - length   petal - width</span>
+</div>
+<div class="class249">
+count                150. 000000       150. 000000   150. 000000   150. 000000
+</div>
+<div class="class249">
+mean                   5. 843333             3. 054000         3. 758667      1.  198667
+</div>
+<div class="class249">
+std                        0. 828066            0. 433594         1. 764420       0. 763161
+</div>
+<div class="class249">
+min                      4. 300000             2. 000000         1. 000000       0. 100000
+</div>
+<div class="class249">
+25%                     5. 100000             2. 800000          1. 600000        0. 300000
+</div>
+<div class="class249">
+50%                     5. 800000            3. 000000            4. 350000      1. 300000
+</div>
+<div class="class249">
+75%                     6. 400000            3. 300000            5. 100000      1. 800000
+</div>
+<div class="class249">
+Max                    7. 900000             4. 400000           6. 900000       2. 500000
+</div>
+<div class="class362">
+Note that as the species category simply consists of string variables, the describe () function is not capable of describing them in the given data types, so we only have four columns rather than five.
+</div>
+<div class="class125">
+Examining the Class Distribution of the Given Data Set (using the groupby() function)
+</div>
+<div class="class93">
+However, though the previous function, describe () was not able to give a description of the classes (our "species" variable), there is a function that examines how exactly the various classes are distributed. This function is the "groupby()" function, which clusters each element together. This function can be called by typing the following line:
+</div>
+<div class="class370">
+print (dataset.groupby("species").size())
+</div>
+<div class="class222">
+The argument of the groupby function is the particular class type that we are looking for, which in this case is the "species" variable. The line that we have should result in the following output, given our data set:
+</div>
+<div class="class222">
+species
+</div>
+<div class="class222">
+Iris - setosa       50
+</div>
+<div class="class222">
+Iris - versicolor 50
+</div>
+<div class="class222">
+Iris - virginica   50
+</div>
+<p><span id="part0028.xhtml"></span></p>
+<div id="part0028.xhtml#toc18_Data_Visualization" class="class151">
+Data Visualization
+</div>
+<div class="class110">
+Now that we have a few basic functions under our belt that we can use to examine the data, we now need to find a method to use in order to put this data to good use. However, before we can do that, it would make our jobs much easier if we could make a visualization of that data. In this section, we will examine two methods of doing so: Univariate plots, and multivariate plots.
+</div>
+<div class="class125">
+Univariate Plots (Box and Whisper Plot, Histogram)
+</div>
+<div class="class93">
+We use univariate plots in order to be more capable of understanding single variables, which would give us a better idea of the distribution of the attributes. One type of plot we can create is the box and whisper plot, which will create and display the plot of each attribute. We can do this with the following line of code:
+</div>
+<div class="class370">
+dataset.plot (kind = "box", subplots = True, layout = (2,2), sharex = False, sharey = False)
+</div>
+<div class="class370">
+plt.show()
+</div>
+<div class="class222">
+The aforementioned code has the "plot" function and the "show" function. The plot function takes the various arguments to create the type of box, which in this case will create a two by two box, with the x and y variable names hidden. The show function instructs the computer to display the particular graph created.
+</div>
+<div class="class222">
+Also available for our use is the creation of histogram plots, which can easily be done by using the following line of code:
+</div>
+<div class="class370">
+dataset.hist()
+</div>
+<div class="class370">
+plt.show()
+</div>
+<div class="class362">
+This will automatically create a histogram graph using the "hist()" function, and will instruct the computer to display said graph through the "show" function. If the code is run, it will show that some variables seem to have a Gaussian distribution, which may be a useful assumption to make later on when it comes to constructing our algorithm.
+</div>
+<div class="class125">
+Multivariate Plots (Scatter Matrices)
+</div>
+<div class="class93">
+Multivariate plots are used to examine the relationships between multiple variables, as compared to univariate plots which we use in order to better examine the construction of a single variable. As we are taking multiple variables into account, the type of graph that would serve our purposes the most here would be a scatter plot graph which will help us find structured relationships between each variable. In order to create the scatter plot graph, we simply have to use the following code:
+</div>
+<div class="class370">
+scatter_matrix(dataset)
+</div>
+<div class="class370">
+plt.show()
+</div>
+<div class="class222">
+We are using the imported scatter_matrix function in order to create a graph with little fuss, with the dataset itself being the argument that we place into the function, calling it and using its contents to structure the graph. Much like before, the show function is there in order to create a displayed output. If the user runs this code, we should see that there are certain linked pairs, showing a structured relationship between certain variables.
+</div>
+<p><span id="part0029.xhtml"></span></p>
+<div id="part0029.xhtml#id_0SFBEX_iTHaf3cRR-BrLhw836" class="class151">
+Creating Data Models
+</div>
+<div class="class110">
+At this point, we already know how to examine our data, manipulate it, and display it either in raw data form, summaries, or in graph form. Now we have to create an algorithm to be fully able to create a model. In this section, we will be setting aside a validation data set, creating a test harness to use a method called the ten – fold cross validation, build five different models to test the accuracy of each one, then select a model.
+</div>
+<div class="class125">
+Creating a Validation Data Set
+</div>
+<div class="class93">
+As we know by now, machine learning needs to "learn" from data points in order to caliberate itself. However, as we have a limited data set, the data set of the iris flowers, we will be setting aside a few of these data points, which will not go into the algorithm, as we will use these data points to test the effectivity and accuracy of our algorithms. In order to train our algorithm, we will be splitting the data set 80 percent to 20 percent, where eighty percent is our training set, and twenty percent is our validation set, meaning that we have a hundred and twenty data points to train the algorithm, and the last thirty will be used to see whether or not our algorithm has been properly calibrated to give accurate predictions. The following code will be used in order to segregate the various data points that we need.
+</div>
+<div class="class370">
+array = dataset.values
+</div>
+<div class="class365">
+X = array[:,0:4]
+</div>
+<div class="class370">
+Y = array[:,4]
+</div>
+<div class="class370">
+validation_size = 0. 20
+</div>
+<div class="class370">
+seed = 9
+</div>
+<div class="class240">
+X _ train, X _ validation, Y _t rain, Y _ validation = model _ selection. Train _ test _ split (X, Y, test_size = validation _ size, random _ state = seed)
+</div>
+<div class="class460">
+The previous code should now create four separate arrays, where <span class="class852">x_train</span> and <span class="class852">Y_train</span> are the arrays containing the data points we will use to train the algorithm, and the <span class="class852">X_validation</span> and <span class="class852">Y_validation</span> are what we will use in order to test our calibration.
+</div>
+<div class="class125">
+Creating a Test Harness
+</div>
+<div class="class91">
+Now that we have partitioned our data set into a testing group and a validation group, we need to set up a testing method for accuracy. Here we will be making use of the ten – fold cross validation to train and test our algorithm, which means that it will partition by every ten data points, and train nine points and test on the tenth, and repeat this method for all combinations of train – test splits that the program will be carrying out. This can be initialized by using the following lines of code:
+</div>
+<div class="class285">
+seed = 9
+</div>
+<div class="class285">
+scoring = "accuracy"
+</div>
+<div class="class460">
+The value of the seed does not really matter, as this is just a seed for a pseudo – random number generator. The scoring method is the accuracy of the algorithm, which is measured by the ratio of correctly predicted observations over the number of total possible observations, multiplied by one hundred in order to result in a percentage format. This scoring variable will be used to evaluate each model that we will be building.
+</div>
+<div class="class122">
+Pseudo – random Number Generators
+</div>
+<div class="class120">
+Random numbers are useful for many reasons, as this allows the programmer to better replicate the randomness of the real world. However, computers cannot truly generate randomness, as they are designed to be precise and iterate rationally. As such, there is a pseudo – random number generator that produces a series of "random" numbers based on the initial "seed" used. While these numbers may look random, it is important to note that as long as the seed used is the same, the same set of numbers will come out. If the seed is not set, then the numbers that will come out may be based on the clock of the computer, on the mili – second or the second the number request was generated. So for all intents and purposes, the initial seed is not crucial to getting a "random" number, and the number generated is not truly random.
+</div>
+<div class="class125">
+Building Models
+</div>
+<div class="class93">
+Now we come to the most crucial part: the actual algorithm. We will be testing six different models in our program in order to see which model will result in the highest accuracy. These six models are some of the most well – used data models in machine learning, and as such, they will be used as our examples in this chapter. These models are: G<span class="class848">aussian Naive Bayes (N B) Support Vector Machines (S V M) Logistic Regression (L R) Linear Discriminant Analysis (L D A) K-Nearest Neighbors (K N N). Classification and Regression Trees (C A R T).</span>
+</div>
+<div class="class222">
+Take note that the reason that we had to import a number of libraries and modules at the start of this section, or that we recommended the user download the Anaconda development environment is so that we have access to various modules and packages that will simplify our programming. Among these packages are the software algorithms to carry out each of these six data models. While it may seem like we are taking a shortcut, it is simply impractical for a beginner to be able to read up and study how to construct these models, which would most likely take a specialized degree to properly understand and create. However, as long as the user is able to understand the general function of each of these models (which will be taken in a later section), and understands how to use them, then this should suffice for creating machine learning programs.
+</div>
+<div class="class222">
+Note that the Logistic Regression and the Linear Discriminant Analysis models are simple linear algorithms, while the Gaussian Naïve Bayes, Support Vector Machines, K – Nearest Neighbors, and the Classification and Regression Trees are considered to be nonlinear algorithms. Now that we have the models that we will use, the following code should build, create, and run these models in our datasets:
+</div>
+<div class="class473">
+# The following lines of code are to check the various algorithms
+</div>
+<div class="class473">
+models = []
+</div>
+<div class="class473">
+models.append (('LR', LogisticRegression()))
+</div>
+<div class="class473">
+models.append (('LDA', LinearDiscriminantAnalysis()))
+</div>
+<div class="class473">
+models.append (('KNN', KNeighborsClassifier()))
+</div>
+<div class="class473">
+models.append (('CART', DecisionTreeClassifier()))
+</div>
+<div class="class473">
+models.append (('NB', GaussianNB()))
+</div>
+<div class="class473">
+models.append (('SVM', SVC()))
+</div>
+<div class="class473">
+# The following code uses each model in turn in order to examine the data set and print results
+</div>
+<div class="class473">
+results = []
+</div>
+<div class="class473">
+names = []
+</div>
+<div class="class473">
+for name, model in models:
+</div>
+<div class="class473">
+kfold = model_selection. KFold(n_splits = 10, random_state = seed)
+</div>
+<div class="class487">
+cv_results = model_selection.cross_val_score(model, X_train, Y_train, cv=kfold, scoring = scoring)
+</div>
+<div class="class473">
+results.append( cv_results )
+</div>
+<div class="class473">
+names.append( name )
+</div>
+<div class="class487">
+msg = "%s: %f (%f)" % (name, cv_results. mean(), cv_results. std())
+</div>
+<div class="class473">
+print( msg )
+</div>
+<div class="class493">
+The previous lines of code build the model and run them using our designed ten – fold cross validation test harness. They run the data set through each model, and print out the resulting accuracy numbers along with the label. Running the said code should result in an output giving the results of each particular data model:
+</div>
+<div class="class222">
+L D A: 0. 975000 (0. 038188)
+</div>
+<div class="class222">
+L R: 0. 966667 (0. 040825)
+</div>
+<div class="class222">
+C A R T: 0. 975000 (0. 038188)
+</div>
+<div class="class222">
+N B: 0. 975000 (0. 053359)
+</div>
+<div class="class222">
+S V M: 0. 981667 (0. 025000)
+</div>
+<div class="class222">
+K N N: 0. 983333 (0. 033333)
+</div>
+<div class="class222">
+Here we see that the K – Nearest Neighbors has the highest accuracy score in our particular test run, at ninety – eight - point three percent estimated accuracy. Note however that because of the seed of the pseudo – random number generator, there is a chance that the results may differ when you run this code, in case the seed is different. We can also create a plot of the test results for each algorithm, as the algorithm tested each data model ten times thanks to our test harness method. The code to do so is as follows:
+</div>
+<div class="class502">
+# The following lines of code compare Algorithms
+</div>
+<div class="class502">
+tres= plt.figure()
+</div>
+<div class="class502">
+tres.suptitle("Comparing Algorithms")
+</div>
+<div class="class502">
+ax = tres.add_subplot(111)
+</div>
+<div class="class502">
+plt.boxplot(results)
+</div>
+<div class="class502">
+ax.set_xticklabels(names)
+</div>
+<div class="class502">
+plt.show()
+</div>
+<div class="class222">
+This creates and displays a bar graph with the X axis labeled as the type of test and the Y axis labeled as the percent accuracy of each test. For those that want a more visual representation of results, this may be a good snippet of code to make use of.
+</div>
+<p><span id="part0030.xhtml"></span></p>
+<div id="part0030.xhtml#id_0SFBEX_iTHaf3cRR-BrLhw837" class="class151">
+Making Predictions
+</div>
+<div class="class91">
+Now that we have created the algorithm to test our data sets, and we have seen which was predicted to be the most effective test, the K – nearest neighbors test, we can now check it against our validation data set that was put aside earlier. This secondary test allows us to ensure that our algorithm is truly accurate and can properly make predictions as to what species the flower is depending on the measurements of the flower petals and sepals. The code to do so is as follows:
+</div>
+<div class="class285">
+# Using the validation data set in order to make predictions
+</div>
+<div class="class285">
+knn = KNeighborsClassifier()
+</div>
+<div class="class285">
+knn.fit(X_train, Y_train)
+</div>
+<div class="class285">
+predictions = knn.predict(X_validation)
+</div>
+<div class="class285">
+print( accuracy_score(Y_validation, predictions))
+</div>
+<div class="class285">
+print( confusion_matrix(Y_validation, predictions))
+</div>
+<div class="class285">
+print( classification_report(Y_validation, predictions))
+</div>
+<div class="class249">
+The code provided will test the algorithm against the validation set that we set aside earlier, and will also display the results, giving the final accuracy in practice, where the errors were made, and will breakdown some other figures such as the precision, recall, f1 – score, and support in order to give a better idea of how well the test was run. This should look like the following: <span class="class850">I</span>
+</div>
+<div class="class249">
+0.9
+</div>
+<div class="class249">
+[ [  7  0  0] <span class="class850">a  s</span>
+</div>
+<div class="class249">
+[ 0  11   1] <span class="class850">I</span>
+</div>
+<div class="class249">
+[ 0   2   9] ]
+</div>
+<div class="class530">
+<span class="class-2">precision    recall     f1 - score   support</span>
+</div>
+<div class="class249">
+Iris - setosa       1. 00          1. 00          1. 00         7
+</div>
+<div class="class249">
+Iris - versicolor   0. 85         0. 92         0. 88        12
+</div>
+<div class="class249">
+Iris - virginica    0. 90          0. 82         0. 86        11
+</div>
+<div class="class249">
+Average / total   0. 90        0. 90          0. 90        30
+</div>
+<p><span id="part0031.xhtml"></span></p>
+<div id="part0031.xhtml#toc21_Conclusion" class="class151">
+Conclusion
+</div>
+<div class="class93">
+Now the reader has a working code that allows them to use basic machine learning processes. The reader should be able to use the previous code in order to create software that can parse through data and predict with reasonable accuracy certain results based on the correlation between various attributes. The next few chapters will be dealing with the concepts that were introduced in the sample code, in order to better assist the reader in progressing and learning and developing their own code in the future.
+</div>
+<p><span id="part0032.xhtml"></span></p>
+<div id="part0032.xhtml#id_0SFBEX_iTHaf3cRR-BrLhw839" class="class101">
+Common Data Models Used in Machine Learning
+</div>
+<div class="class93">
+As we have seen from the previous code, there are differing data models that statisticians and data scientists use in order to parse, organize, and test various data and observations. In this chapter we will be examining these models in order to give the reader a better understanding of how they were developed, when best to use them, and what kind of data they work best with.
+</div>
+<p><span id="part0033.xhtml"></span></p>
+<div id="part0033.xhtml#id_0SFBEX_iTHaf3cRR-BrLhw840" class="class151">
+Simple Linear Algorithms
+</div>
+<div class="class93">
+Linear algorithms are used by mathematicians and data scientists in order to create mathematical models that attempt to find the most optimal outcome. For this reason, linear programming is also known as mathematical optimization. However, it is necessary that the requirements are in linear form, meaning that they can be expressed in a 2 – dimensional form. It is for this reason that this type of algorithm is widely used in planning, routing, and scheduling problems, and is often used by engineers in the transport and power sector, as well as economists. In fact, it has its roots in mathematicians trying to solve transport and expenditure problems during wartime, with Dantzig being one of the most famous examples of those that used this in order to benefit their military, in this case the United States Air Force right after the Second World War.
+</div>
+<div class="class110">
+As mentioned earlier, two of the more commonly used data models, Linear Regression and Linear Discriminant Analysis are types of Simple Linear Algorithms.
+</div>
+<div class="class125">
+Linear Regression
+</div>
+<div class="class93">
+Linear regression is a type of linear algorithm, a linear approach that is often used to model the relationship between a dependent variable (a variable that has a scalar response) and one or more independent variables (also referred to as explanatory variables). Depending on whether or not there is only one or multiple independent variables, linear regression can be called simple or multiple linear regression. However, both these types are different from what is called the multi – variate linear regression, as this deals with multiple dependent variables (scalar response variables) and the previous two only deal with a singular scalar response variable.
+</div>
+<div class="class93">
+For linear regression algorithms, these relationships are modeled through various predictor functions, where the parameters are unknown, but they are extrapolated from the data, where the machine learning aspect comes in. These models are called linear models. Linear regression focuses mainly on the probability distribution of the response of the scalar variable given how the predictor variables (the independent variables) value changes, as opposed to other mathematical models that try to map the joint probability distribution of all the variables involved.
+</div>
+<div class="class93">
+Linear regression analysis is one of the most popular types of regression analysis, due to the fact that models that have a linear dependency on their unknowns are easier to work with as compared to models whose parameters are related to each other in a non – linear fashion. In addition, the linear nature allows for easier determination of the various statistical attributes of the estimators.
+</div>
+<div class="class93">
+Linear regression is most commonly used for two general categories. The first is prediction: forecasting and error minimization problems tend to have a linear regression solution, as a linear regression analysis is helpful in creating a predictive model if the user has an established set of observations when it comes to the dependent and independent variables, and linear regression can be used to extrapolate from there. Once a model has been created, more examples of explanatory variables can be collected, and even without an observed reponse value, the model should be able to create a reasonable prediction of the value of the response.
+</div>
+<div class="class93">
+The second major use of linear regression is to explain variation in response variables, where such variation can be attributed to the variation in the values of the independent variables, allowing the user to quantify the strength of the link, or the relationship between the dependent and independent variables, and even determine whether or not they are related at all, or if some independent variables have a redundant function.
+</div>
+<div class="class93">
+The following sample code format shows how a linear regression algorithm skeleton would go:
+</div>
+<div class="class222">
+#Import other necessary libraries, such as the NumPy Stack
+</div>
+<div class="class370">
+from sklearn import linear_model
+</div>
+<div class="class222">
+# Train and Test datasets
+</div>
+<div class="class365">
+#Identify attributes and dependent variable ( s ) and values must be numerical and numpy arrays
+</div>
+<div class="class365">
+x_train=input_variables_values_training_datasets
+</div>
+<div class="class370">
+y_train=target_variables_values_training_datasets
+</div>
+<div class="class370">
+x_test=input_variables_values_test_datasets
+</div>
+<div class="class222">
+# Creating linear - regression object
+</div>
+<div class="class370">
+linear = linear_model. Linear Regression()
+</div>
+<div class="class222">
+# Calibrating the regression model using the assigned training sets and checking the score
+</div>
+<div class="class370">
+Linear.fit (x_train, y_train)
+</div>
+<div class="class370">
+Linear.score (x_train, y_train)
+</div>
+<div class="class222">
+#Checking the equation's co - efficient and Intercept
+</div>
+<div class="class370">
+print("The Co – efficient is: \n, linear.coef_)
+</div>
+<div class="class370">
+print("The Intercept is: \n", linear.intercept_)
+</div>
+<div class="class222">
+#Predict Output
+</div>
+<div class="class362">
+predicted= linear.predict (x_test)
+</div>
+<div class="class125">
+Linear Discriminant Analysis
+</div>
+<div class="class93">
+Linear discriminant analysis is a common type of statistical analysis similar to the famous Fisher's linear discriminant, which allows the user to find a linear amalgamation of attributes that can be used to define multiple classes of objects and / or events. The combination from this can be used as a classifier, or even used to reduce the dimensionality of an object for further classification later on. In fact, Linear discriminant analysis is similar to the ANOVA test (analysis of variance) and linear regression analysis, in that all of these types of tests try to express the response (dependent) variable as a combination of various attributes. However, discriminant analysis uses continuous explanatory (independent) variables and a categorical response variable, while ANOVA has categorical explanatory variables and a continuous response variable. In this, regression is similar to linear discriminant analysis.
+</div>
+<div class="class93">
+Linear discriminant analysis looks for linear combinations of the various observations which gives a best – fit explanation of the said data. However, unlike a similar method known as principal component analysis, linear discriminant analysis actively attempts to create a model of the difference of the various classes of data. Linear discriminant analysis is best use when the explanatory variables are continuous quantities, and where the groups are already known beforehand, unlike in cluster analysis when groups are to be determined by the algorithm. Discriminant analysis is best used in classification functions, when there is a need to distribute objects into classes or categories, assigning them depending on their characteristics.
+</div>
+<div class="class93">
+A Linear Discriminant Analysis Machine Learning algorithm would look like the following:
+</div>
+<div class="class222">
+#Import Library
+</div>
+<div class="class370">
+from sklearn.linear_model import LogisticRegression
+</div>
+<div class="class365">
+x_train=input_variables_values_training_datasets
+</div>
+<div class="class370">
+y_train=target_variables_values_training_datasets
+</div>
+<div class="class370">
+x_test=input_variables_values_test_datasets
+</div>
+<div class="class222">
+# Creating the object of the logistic regression
+</div>
+<div class="class370">
+model = LogisticRegression()
+</div>
+<div class="class222">
+# Calibrating the regression model using the assigned training sets and checking the score
+</div>
+<div class="class370">
+Model.fit (X, y)
+</div>
+<div class="class370">
+Model.score (X, y)
+</div>
+<div class="class222">
+#Checking the equation's co - efficient and Intercept
+</div>
+<div class="class370">
+print("The Co – efficient is: \n, linear.coef_)
+</div>
+<div class="class370">
+print("The Intercept is: \n", linear.intercept_)
+</div>
+<div class="class232">
+#Predict Output
+</div>
+<div class="class370">
+predicted= model. predict(x_test)
+</div>
+<p><span id="part0034.xhtml"></span></p>
+<div id="part0034.xhtml#id_0SFBEX_iTHaf3cRR-BrLhw841" class="class151">
+Nonlinear Algorithms
+</div>
+<div class="class110">
+Nonlinear algorithms are any type of algorithm that deals with problems where the objective function is non – linear and the constrained space of the problem is not a polytope. These functions include concave, convex, and quadratic functions, which have to be solved with a different approach as compared to the standard linear simplex methods. These nonlinear problems are usually problems of optimization, solving for the extrema of an objective function when there is a set of unknown variables.
+</div>
+<div class="class125">
+Support Vector Machine
+</div>
+<div class="class93">
+Support vector machines are one of the most popular models in machine learning, also known as support vector networks. These support vector machines fall under the supervised learning model, which use learning algorithms that examine data used for classification and standard regression analysis. These models work by taking a set of calibration data points, where each data point is labeled as belonging to either one or another category, a support vector machine model takes new samples and assigns them to either of the two given categories based on their characteristics, making the support vector machine algorithm a non – probabilistic binary linear classifier.
+</div>
+<div class="class93">
+The support vector machine can be imagined as a representation of data points as points in space, where there is a clear gap between data points in either categories. Any new data point that the support vector machine receives is placed into that space and a prediction is made as to what side of the gap they will be placed in based on their characteristics. In addition to being made for linear classification, support vector machines are also capable of performing non – linear classification through the so – called "kernel trick", which implicitly places their input into high – dimensional spaces.
+</div>
+<div class="class93">
+Support vector machines can also work with a unsupervised learning approach, as this unsupervised learning tries to find natural clusters, and any new data received maps them into said clusters. This vector clustering algorithm is an expansion of standard support vector machine functionality, allowing them to make use of unlabeled data, and was developed by Vladimir Vapnik and Hava Siegelmann, and has developed into becoming one of the most popular clustering algorithms in industrial application and settings. An example of how the Support vector Machine algorithm looks like is provided here:
+</div>
+<div class="class370">
+import numpy as np
+</div>
+<div class="class370">
+X = np.array([ [- 2,5,- 2], [3,5,- 1], [4, 8, - 2], [2, 4, - 1], [6, 5, -1 ], ])
+</div>
+<div class="class365">
+y = np.array([- 1,- 1, 1, 1, 1])
+</div>
+<div class="class370">
+def svm_sgd(X, Y):
+</div>
+<div class="class616">
+<span class="class-0">w = np.zeros(len(X[0]))</span>
+</div>
+<div class="class616">
+<span class="class-0">esa = 1</span>
+</div>
+<div class="class616">
+<span class="class-0">era = 100000</span>
+</div>
+<div class="class616">
+<span class="class-0">for era in range(1,epochs):</span>
+</div>
+<div class="class621">
+<span class="class-0">for i, x in enumerate(X):</span>
+</div>
+<div class="class623">
+<span class="class-0">if (Y [i]*np.dot( X[ I ], w)) &lt; 1:</span>
+</div>
+<div class="class623">
+<span class="class-0">w = w + esa * ( (X[ I ] * Y[ I ]) + (-2 *(1 / era)* w) )</span>
+</div>
+<div class="class623">
+<span class="class-0">else:</span>
+</div>
+<div class="class623">
+<span class="class-0">w = w + esa * (- 2 *( 1 / era)* w)</span>
+</div>
+<div class="class616">
+<span class="class-0">return w</span>
+</div>
+<div class="class370">
+w = svm_sgd(X,y)
+</div>
+<div class="class370">
+print(w)
+</div>
+<div class="class362">
+The X and Y arrays contain the objects to be classified, and the algorithm is set to run 1000000 times, with the learning parameter set to 1, and the regularizing parameter being 1 / era, so it decreases as the <span class="class852">era</span> variable slowly increases.
+</div>
+<div class="class125">
+Gaussian Naïve Bayes
+</div>
+<div class="class93">
+The Gaussian Naïve Bayes model is a model that is based on probabilistic classifiers, which work after observing an input and returning a probability distribution of a set of classes it may belong to, rather than simply outputting a single most likely category that the input should be placed in. The Gaussian Naïve Bayes model takes this one step further and adds an assumption that these features are strongly independent from each other. In order to simplify this, it means that the Gaussian Naïve Bayes model does not link attributes to each other in order to reach a conclusion, but rather takes attributes independently and weighs their contribution to their owner's likeliness to belong to a category equally and independently of any other attribute.
+</div>
+<div class="class110">
+This particular method is popular when developing spam filters, text recognition and categorization, and has even found uses in the medical field, as use for medical diagnostics functions. One benefit of the Gaussian Naïve Bayes model is that they are very scalable, needing only linear parameters to variables in learning a problem, and maximum – likelihood training can be done using a closed – form expression, which due to its use of linear time, is a much lower drain on resources as compared to iterative approximation used by many other classifiers.
+</div>
+<div class="class125">
+K – Nearest Neighbors
+</div>
+<div class="class93">
+K – nearest neighbors algorithm is a type of pattern recognition algorithm that happens to be a non – parametric method, meaning that it is not based on parameters of standard probability distributions, and is in fact based on being distribution – free, or with the distribution's parameters being left unspecified. The K – nearest neighbors algorithm is also used for classification and regression of various data points, and the input in these cases consist of <span class="class854">k</span> closest examples in the feature's space. The output, however is dependent on whether or not the K – N N method is being used to classify things or as a regression method. If the K – N N is being used for classification, the output of the K – N N is a class category, as the object will be classified by the majority of its neighbors, being assigned to the class that is most common among the <span class="class854">k</span> nearest neighbors, for <span class="class854">k</span> being a small assigned integer. In fact, if <span class="class854">k</span> is set to be equal to one, then the object in question will simply adopt the class of its neighbor. However, for K – N N regression, the output is the so – called "property value" of the object. The object's "property value" is taken by taking the average of the values of the nearest <span class="class854">k</span> neighbors.
+</div>
+<div class="class93">
+The K – N N method is known as a type of instance – based learning, or so – called lazy learning, as the function only approximates from local values or objects, and computation does not happen until the classification itself is to be done. This means that the K – N N algorithm itself is counted among the easiest to use and among the simplest of machine learning algorithms. However, the K – N N algorithm can be modified by adding a weighting scheme, for example, the closer the neighbor is to the object in question, the greater weight it is given. A common weighting scheme follows the formula 1 / d, where d is the distance from the object to its neighbor. The neighbors themselves are taken from objects whose class has been identified (if using K - N N for classification) or the property value is known (if using K – N N for regression purposes). This already functions as the "training set" for the K – N N machine learning algorithm, though no additional explicit training is needed due to the peculiar nature of the K – N N algorithm in its' sensitivity to the locality of the data.
+</div>
+<div class="class222">
+If we dissect the K – N N method and attempt to implement it into python, it would only look like a fairly short snippet of code, which is fitting due to the simplicity of the K N N classification method as compared to other data modeling methods:
+</div>
+<div class="class285">
+def train(X_train, y_train):
+</div>
+<div class="class240">
+return
+</div>
+<div class="class249">
+Remember that the training method of K N N is unnecessary, so the train function does literally nothing in this case. The major component that we have to write is the prediction function, which computes the distance between the object and its neighbors in the "training" set, selects the <span class="class852">K</span> amount that is closest, performs a vote from the majority, and once this is done, assigns a class to the object.
+</div>
+<div class="class285">
+def predict(X_train, y_train, x_test, k):
+</div>
+<div class="class285">
+# The following lines create the requisite lists
+</div>
+<div class="class285">
+distances = []
+</div>
+<div class="class285">
+neighbors= []
+</div>
+<div class="class285">
+for i in range(len(X_train)):
+</div>
+<div class="class285">
+# The following line computes the euclidean distance
+</div>
+<div class="class285">
+distance = np.sqrt(np.sum(np.square(x_test - X_train[i, :])))
+</div>
+<div class="class285">
+# We now add it to the list containing the various distances
+</div>
+<div class="class285">
+distances.append([distance, i])
+</div>
+<div class="class285">
+# Now we sort the list from least to greatest distances
+</div>
+<div class="class285">
+distances = sorted(distances)
+</div>
+<div class="class285">
+# We can now make a list of the targets if <span class="class852">k</span> neighbors
+</div>
+<div class="class285">
+for i in range(k): index = distances[i][1]
+</div>
+<div class="class285">
+neighbors.append(y_train[index])
+</div>
+<div class="class285">
+# The following line conducts the "vote", I.e returns the most common object <span class="class852">k</span> distance away
+</div>
+<div class="class285">
+return Counter(targets).most_common(1)[0][0]
+</div>
+<div class="class249">
+That previous code searched for all the objects <span class="class852">k</span> distance away from the initial defined object, stored it in the neighbors array, and returned the class of object that was most common. Now that we have the code that allows us to find the nearest <span class="class852">k</span> neighbor, the following code allows us to loop every example and make the proper prediction.
+</div>
+<div class="class285">
+def kNearestNeighbor (X_train, y_train, X_test, predictions, k):
+</div>
+<div class="class285">
+# trains on the input
+</div>
+<div class="class285">
+train(X_train, y_train)
+</div>
+<div class="class285">
+# The following for loop allows the function to run through all the objects
+</div>
+<div class="class285">
+for i in range( len( X_test)):
+</div>
+<div class="class285">
+predictions. append( predict (X_train, y_train, X_test[i, :], k))
+</div>
+<div class="class249">
+Now that we have our code, we can now run it alongside the optimal <span class="class852">K</span> value from the cross – validation method earlier:
+</div>
+<div class="class285">
+# declaring the predictions list
+</div>
+<div class="class285">
+predictions = []
+</div>
+<div class="class285">
+kNearestNeighbor(X_train, y_train, X_test, predictions, 7)
+</div>
+<div class="class285">
+# converting the predictions into array data type
+</div>
+<div class="class285">
+predictions = np. asarray( predictions )
+</div>
+<div class="class285">
+# Calculating the accuracy of our algorithm
+</div>
+<div class="class285">
+accuracy = accuracy_score (y_test, predictions)
+</div>
+<div class="class673">
+print('\n Our <span class="class852">K</span> - Nearest Neighbors algorithm has %d%%' % accuracy*100)
+</div>
+<div class="class125">
+Classification and Regression Trees
+</div>
+<div class="class93">
+Classification and regression trees are another fairly simple method of machine learning. The main structure of a classification and regression tree, or C A R T for short is the binary tree. From the beginning point, the root node <span class="class854">x</span> represents an input, and from there the tree splits into two paths containing the output variable <span class="class854">y</span> that results in a prediction. For example, if we have <span class="class854">x</span> being 100 kilograms as the root node input, and the leaf nodes are if x is greater or equal to 100, then it is "heavy", and if x is less than 100, it is "light", <span class="class854">y</span> will take on the value of "heavy", as x is indeed greater than or equal to 100. If we see this in code, it would look like:
+</div>
+<div class="class377">
+If x&gt;= 100:
+</div>
+<div class="class377">
+Y = "heavy"
+</div>
+<div class="class377">
+Else
+</div>
+<div class="class377">
+Y = "light"
+</div>
+<div>
+This is a simplistic portrayal of a binary tree, but the classification and regression trees simply use that branching principle over and over again until the amount of features and attributes of the object have been iterated through and the model is capable of assigning it to a proper classification. Note that Classification and Regression Trees make heavy uses of indexes, so here's a quick refresher on indexes and sorting through them:
+</div>
+<div class="class122">
+Indexing for loops (len() function)
+</div>
+<div class="class365">
+Indexing is a convenient way of parsing through the range much faster. If you imagine the range of a loop to be a bunch of boxes stacked on top of each other, you would need to pull out all the boxes one by one before reaching the bottom. Indexing provides a way to pull out the bottom box, or any box in the sequence as the programmer chooses.
+</div>
+<div class="class365">
+In order to index a variable, we need to take note of the len() function. This len() function allows the programmer to parse a sequence and assign a value to it, the value being the number of elements contained within the sequence. For example, len(hello) would have a value of 5 due to hello having five characters.
+</div>
+<div class="class365">
+Now that we have a function that allows us to call length, we simply remember our previous lesson in terms of arrays. Each sequence is in fact an array, or a "list", and thus we can access the list starting at various points through the <span class="class852">sequence[].</span> Since we have the word length, such as "hello" having five, we can access the third letter easily by calling word[2] (remember that the index begins at 0), which should call the third element of the word "hello", which is the letter l.
+</div>
+<div class="class687">
+The following code is a sample of a decision tree classifier using the "gini" index:
+</div>
+<div class="class249">
+clf_gini = CRTClassifier(criterion = "gini", random_state = 100, max_depth = 3, min_samples_leaf = 5)
+</div>
+<div class="class249">
+clf_gini.fit (X_train , y_train)
+</div>
+<div class="class249">
+In addition to this, we can include the code of the output in order to see the result using the gini tree criterion:
+</div>
+<div class="class249">
+CRTClassifier(class_weight = None, criterion="gini", max_depth = 3, max_features = None, max_leaf_nodes = None, min_samples_leaf = 5, min_samples_split = 2, min_weight_fraction_leaf = 0. 0, presort = False, random_state = 100, splitter = 'best')
+</div>
+<div class="class91">
+Accessing the Gini Index function looks like as follows:
+</div>
+<div class="class249">
+# Calculating the Gini index for a split dataset
+</div>
+<div class="class249">
+def gini_index( groups, classes):
+</div>
+<div class="class249">
+# count all samples at split point
+</div>
+<div class="class285">
+n_instances = float(sum([len(group) for group in groups]))
+</div>
+<div class="class249">
+# Getting the sum of the weighted Gini index for each class
+</div>
+<div class="class249">
+gini = 0.0
+</div>
+<div class="class249">
+for group in groups:
+</div>
+<div class="class701">
+size = float(len (group))
+</div>
+<div class="class249">
+# avoid divide by zero
+</div>
+<div class="class285">
+if size == 0:
+</div>
+<div class="class701">
+continue score = 0.0
+</div>
+<div class="class249">
+# Scoring the class based on the score for each group
+</div>
+<div class="class285">
+for class_val in classes:
+</div>
+<div class="class285">
+p = [row[-1] for row in group].count(class_val) / size
+</div>
+<div class="class285">
+score += p * p
+</div>
+<div class="class249">
+# Weighting the group score by the relative size
+</div>
+<div class="class285">
+gini += (1.0 - score) * (size / n_ instances)
+</div>
+<div class="class249">
+return gini
+</div>
+<p><span id="part0035.xhtml"></span></p>
+<div id="part0035.xhtml#toc29_TensorFlow" class="class718">
+TensorFlow
+</div>
+<div class="class93">
+The previous codes and data types were all carried out mainly through the use of scikit – learn, but what about TensorFlow?
+</div>
+<div class="class91">
+TensorFlow is a google – created software library initially created for proprietary use, but eventually released for public download and use under an open – source license in 2015. TensorFlow focuses mainly on data – flow programming and is a symbolic math library that is used for machine learning that makes use of neural network functions.
+</div>
+<div class="class93">
+Though TensorFlow can also be used much like scikit – learn, as it also contains numerical and scientific functions, its main advantage is in its capability in creating neural networks. However, before we can move to that, we first have to learn what a tensor is.
+</div>
+<p><span id="part0036.xhtml"></span></p>
+<div id="part0036.xhtml#id_0SFBEX_iTHaf3cRR-BrLhw843" class="class728">
+Tensors
+</div>
+<div class="class93">
+A tensor is, reduced to its simplest form, a multidimensional data array. So TensorFlow is literally named after the flow of tensors, or the continuous flow of operations on multidimensional data arrays which neural networks perform. That bit of trivia aside, let's dig a little deeper into the subject of tensors.
+</div>
+<div class="class110">
+What one has to remember is that computations by neural networks are done on data flow graphs, where nodes represent mathematical formulae and operations being carried out by the machine, and the edges are the multi – dimensional operators, or tensors that contain all the relevant data. Before we go even deeper, however, it is important to review a few concepts in linear algebra and vector calculus, as these are keys to understanding tensors and why they are so crucial to neural networks.
+</div>
+<div class="class732">
+Plane Vectors
+</div>
+<div class="class117">
+When a person hears the word vector, they may think of the physics meaning, a quantity that has both a magnitude and a direction. However, in data and computer science, vectors are referring to something a bit different in concept. While similar, the programmer sees a vector as a type of matrix, an ordered collection of numbers but with only one column, though it may have multiple rows. In this case, if the data is plotted out, it looks one dimensional. In a way, one can still imagine these vectors as a scalar value that was given direction, fulfilling its definition as we know it from basic physics. However, mathematical vectors have a strange characteristic in while their value / magnitude remains fixed and absolute, their direction is totally relative based on a given point of reference.
+</div>
+<div class="class117">
+Now what about plane vectors? Plane vectors are what one may consider the simplest type of tensor, and they have much the same characteristics as the standard vector. However, plane vectors are found in vector space, a collection of other vectors that can interact with each other through mathematical operations. For example, we have a 2 x 1 vector. This means that the vector has a pairing of two real numbers, a part of two – dimensional space. This leads us to the conventional ray vector on the (x , y) plane, and we can plot it easily. In a two – dimensional space, understanding this vector is easy due to the fact that we are used to working with the cartesian coordinate system, and we can simply assign an origin with coordinates (0, 0) to determine the direction of our created vector. The X coordinate is found on the first value of the vector, and the Y coordinate is found on the second row value.
+</div>
+<div class="class117">
+However, as vectors grow larger, it becomes more complicated. Take for example a vector of size 3 x 1, which can now be visualized as being on an (x , y , z) coordinate plane, or three – dimensional space. This time we can create a three - dimensional figure where we can assign values to the positions they hold in the vector space, representing them on the coordinate plane. It gets more and more complicated to visualize, however, as the amount of dimensions of the vector go up, and this is where the curse of dimensionality begins to kick in as explained in an earlier chapter. However, one has to remember that the entire point in having a vector is allowing one to perform mathematical operations on them. One convenient way of carrying out operations is simply expressing vectors as base vectors or unit vectors, simplifying the process.
+</div>
+<div class="class117">
+Unit vectors are vectors that only have a value of one. These are usually denoted by lower case letters with circumflexes, affectionately nicknamed "hats". These unit vectors are convenient especially when attempting to express a two – dimensional or three – dimensional vector as a sum of multiple orthogonal components, such as the x –, y- , and z- axes.Note as well that vectors themselves are the sum of their component vectors, and they can be expressed as such if the need arises.
+</div>
+<div class="class93">
+Returning to tensors as a whole, in addition to plane vectors, co – vectors and linear operators are also certain specialized types of tensors. Remember that a vector is a scalar value that has been assigned a single direction. A tensor is something that is considered to be the mathematical representation of a physical object that has a magnitude and more than one direction, which while difficult to fathom, is a concept that is integral to understanding how all this works. Scalars are represented by a single number, the magnitude. Vectors are represented with a sequence of numbers, corresponding to the dimensions they exist in, such as two – dimensional vectors having two assigned values, and three – dimensional vectors having three assigned values. Tensors, however, are represented by an array of 3R numbers in three – dimensional space.
+</div>
+<div class="class93">
+In this case, the "R" in 3R represents the rank of the tensor. For example, a second – rank tensor is represented by 3 raised to two, or nine numbers. So to put it mathematically, scalars will always only require one number in an N – dimensional space, vectors will be defined by N values in N – dimensional space, and tensors will be defined by N^R values in N – dimensional space. This makes scalar values be considered as tensors, as they are rank 0 tensors, as anything raised to the 0<span class="class851">th</span> power results in 1. Scalars are represented by a number, vectors can be represented by a set of number, and tensors are represented by an array of numbers.
+</div>
+<div class="class93">
+How is this important, however? Tensors are special because of how component vectors and basis vectors combine. Basis vectors transform between reference frames, but the component vectors transform along with them in such a manner as to keep their combination the same and maintain a consistent value.
+</div>
+<p><span id="part0037.xhtml"></span></p>
+<div id="part0037.xhtml#id_0SFBEX_iTHaf3cRR-BrLhw844" class="class151">
+What is a Neural Network?
+</div>
+<div class="class93">
+A neural network, more properly known as an artificial neural network, commonly abbreviated as (ANN), is a processing method or device loosely modeled after the operation of mammalian brains, specifically our human brains.
+</div>
+<div class="class93">
+Neural networks tend to be organized in layers, with each layer consisting of multiple nodes, each with its own activation function. Input patterns are presented to the network through the input layer, which transmits the information to other, "hidden" layers that carry out the actual data processing through weighted connections. Once the data has been processed, they are transmitted to the output layer of the ANN. What makes the artificial neural network similar to how human brains work is the learning process, where the connections and weights between layers are modified as input is received, meaning that the more information is fed to the neural network, the more it is capable of reaching a reasonable output, much like a child that is constantly shown pictures of dogs will learn how a dog looks like.
+</div>
+<div class="class93">
+Neural networks have numerous types of learning rules, but for now, we will cover the most basic one, the delta rule. The delta rule is one of the most common rules, as it is utilized by a type of neural network known as backpropagational neural networks, or B P N Ns, which are among the most common types of neural networks. Backpropagation stands for the backwards propagation of error. The delta rule allows for a supervised learning process that happens each time the network undergoes a cycle, or an "epoch", which is whenever a new input pattern is received. Whenever an epoch starts, there is a forward flow of output, but a backwards weight adjustment happens afterwards. To simplify the process, it is as if when the neural network receives an input pattern, it simply hazards a guess as to what it may be. Once it does this, it is able to see how far away its answer was from the correct one and makes adjustments to the connections in order to be able to make a better guess the next time it receives a similar input pattern.
+</div>
+<div class="class93">
+Once the neural network has "learned" enough from controlled input where the output is known, then it may be employed as an analytical tool to parse data that is no longer labeled. In order to carry out this function, the programmer must specify that it is no longer carrying out training runs, and the neural network will continue to function solely in forward propagation mode, where new input is presented to the input pattern and received as normal, and processed similarly as in the training mode, but there is no more backpropagation and the output is simply displayed. This output from the forward propagation run is then the data model that is used for analysis and interpretation by the user.
+</div>
+<div class="class110">
+The reason that neural networks are not kept on an eternal "training run" is that there is a chance that it will become too specialized and "learn" to respond to a specific type of input alone, which if likened to a human equivalent, becomes rote memorization instead of actual pattern recognition. If ever this over – training happens, the neural network loses much of its value as it no longer recognizes anything but the single input, and this type of ANN is refered to as a "grandmothered" network.
+</div>
+<div class="class125">
+What's the difference between Neural Networks and Conventional Computers?
+</div>
+<div class="class91">
+First the reader has to remember how a conventional computer works, and how it processes information. Conventional, or "serial" computers have central processors that have access to specific memory locations which store both data and instructions. Computations are carried out by these processors by reading the instruction and data from the specific memory address, which is then executed and the results saved in yet another memory location. The standard computing system has a sequential and logical method, and a variable's state can be tracked and be given a defined value at any point in the process, from beginning to end.
+</div>
+<div class="class91">
+However, neural networks do not contain any central processors, but rather have a multitude of small simple ones, that do not do much on their own, and in fact often simply take the sum of the input from other processors (or "nodes"). Neural networks do not access instructions in the conventional way, as they respond in parallel to input rather than in a sequential method like conventional computers. One of the biggest things as well is that there is no dedicated data storage or memory address for neural networks, but instead information is contained in the "state" of the network, where the knowledge is the network itself, which then becomes more than simply the sum of its parts.
+</div>
+<p><span id="part0038.xhtml"></span></p>
+<div id="part0038.xhtml#id_0SFBEX_iTHaf3cRR-BrLhw845" class="class151">
+Sample Neural Network Code
+</div>
+<div class="class93">
+Now that we know the general background of tensors, let's see an example of a simple neural network code using TensorFlow
+</div>
+<div class="class249">
+1) import tensorflow as tf
+</div>
+<div class="class249">
+#importing the tensorflow library
+</div>
+<div class="class249">
+2) T, F = 2.0, - 2.0
+</div>
+<div class="class249">
+#True has the + 2.0 value and False has - 2.0, notably, any value can be assigned to true or false, as long as they are distinct
+</div>
+<div class="class249">
+3) bias = 1.0
+</div>
+<div class="class249">
+4) training_input = [    [T, T, bias],    [T, F, bias],    [F, T, bias],    [F, F, bias],
+</div>
+<div class="class249">
+5) ]
+</div>
+<div class="class249">
+6) training_output = [ [T],    [F],    [F],    [F],
+</div>
+<div class="class249">
+7) ]
+</div>
+<div class="class249">
+8) w = tf.Variable (tf. random_normal([ 3, 1]), dtype=  tf.float32)
+</div>
+<div class="class249">
+# step(x) = { 1 if x &gt; 0; -1 otherwise }
+</div>
+<div class="class249">
+9) def step(x):
+</div>
+<div class="class249">
+10)    is_greater = tf.greater(x, 0)   
+</div>
+<div class="class249">
+11) as_float = tf.to_float(is_greater)   
+</div>
+<div class="class249">
+12) doubled = tf.multiply(as_float, 2)
+</div>
+<div class="class249">
+13)    return tf.subtract(doubled, 1)
+</div>
+<div class="class249">
+14) output = step(tf.matmul (training_input, w))
+</div>
+<div class="class249">
+15) error = tf.subtract(training_output, output)
+</div>
+<div class="class249">
+16) mse = tf.reduce_mean (tf. square(error))
+</div>
+<div class="class249">
+17) delta = tf.matmul (training_input, error, transpose_a = True)
+</div>
+<div class="class249">
+18) train = tf.assign (w, tf.add(w, delta))
+</div>
+<div class="class249">
+19) sess = tf.Session ()
+</div>
+<div class="class249">
+20) sess. run(tf.global_variables_initializer())
+</div>
+<div class="class249">
+21) err, target = 1, 0
+</div>
+<div class="class249">
+22) epoch, max_epochs = 0, 10
+</div>
+<div class="class249">
+23) while err &gt; target and epoch &lt; max_epochs:   
+</div>
+<div class="class249">
+24) epoch += 1   
+</div>
+<div class="class249">
+25) err, _ = sess.run([mse, train])
+</div>
+<div class="class249">
+26) print('epoch:', epoch, 'mse:', err)
+</div>
+<div class="class249">
+27) print(sess.run(w))
+</div>
+<div class="class222">
+Line 1: This line imports the TensorFlow library that gives us access to neural network functions and allows us to make use and operate with tensors in a more efficient manner
+</div>
+<div class="class222">
+Line 2: This line is used to assign values to true and false, but in this case we assigned positive two and negative two, just to buck the trend. Truth be told, any value will suffice, provided that they are distinct.
+</div>
+<div class="class222">
+Line 3: Bias tends to be a constant chosen by the programmer, usually just one or negative one, and the neural network decides what constant it should be multiplied by in order to get the proper function that needs to be approximated. Note that bias is usually used in order to shift the graph a certain way once it is plotted, in order to make it easier to work with. Since the bias will remain constant throughout the operations in the neural network, it does not change the computation or the value, but it allows for easier and more convenient interaction with the graphically represented values.
+</div>
+<div class="class222">
+Line 4 to 5: These lines are the input data that will serve as the training set for the neural network. All the possible values of the true and false combinations are there, True – True, True – False, False – True, and False – False, along with <span class="class852">b</span> as an added bias term.
+</div>
+<div class="class222">
+Line 6 to 7: These lines represent the output data of the training set, which results in True, False, False, and False, respectively. The neural network should be able to examine the training input values declared in lines four and five, and examine the training output from lines 6 and 7, and as such should be able to approximate the function 'AND' that we want to create.
+</div>
+<div class="class222">
+Line 8: The data of the input (x) and the output (y) of our training set will remain constant all throughout our program, so the neural network has to approximate the function by estimating the weight, which has a variable of "w". In this scenario, 3 x 1 because we have three input values corresponding to a single output value, so N N will constantly adjust the weight during the training loops in order to find the proper value, which is why it has been declared as a variable. The variables used were initialzied to normal – distribution random numbers, hence the tf. Random _ normal module usage. This line is the reason why neural networks are often referred to as the equation "y = Wx".
+</div>
+<div class="class222">
+Line 9 – 13: This segment of code defines the model that we are using. This starts with the step function, and step activation functions are needed for binary classification methods. This means that if ever it is necessary for an input pattern to be categorized into one of two groups, a binary classifier with a step activation function can be made use of to make things simpler. However, when the neural network becomes deeper and more complex, the step function begins to lose its usefulness, and other activation functions become more useful in its place, such as the fancifully named sigmoid, tanh, relu, and leakyrelu functions, which are non – linear activation functions. However, our current step function simply returns a value of 1 if the parameter is greater than 1, and returns – 1 if not, which is the reason as to why the values we assign to true or false are mostly irrelevant.
+</div>
+<div class="class222">
+Line 14 – 16: After our step function has been created, we create the output, error, and the mean squared error functions in these few lines. The error function computes how off the model predictions are from the known output values of the training set as defined. The mean – squared error is also calculated in order to check the deviation from the standard of the error, and acts as the second moment, containing both the variance (distance between data samples) and bias (distance between estimated value and the true value) of the estimator.
+</div>
+<div class="class222">
+Line 17 – 18: The evaluation of the weight functions allows us to adjust the content of our pre – defined variables, making it a more accurate number. The desired adjustment, or delta, was based on the error as computed and defined a few lines earlier, and this gets added to the weight in order to fine – tune the algorithm.
+</div>
+<div class="class222">
+Line 19 – 20: The model that we just created is evaluated by the TensorFlow session that was instantiated before the rest of the code, in line 1. Note that this happened even before any initializing of variables happened. In addition, the sessions function allows us to integrate with the C++ backend of Tensorflow, allowing us to write this code in Python but have some functions carried out in C++, which as a lower level language tends to have faster run – times.
+</div>
+<div class="class222">
+Line 21 – 27: Now that the model has been completed and evaluated by the tensorflow session, it can be run through training epoch, which will automatically adjust the weights every time by evaluating the train function. As we are using a true / false input / output, which is binary, at some point a perfect result will occur with a mean squared error value of 0, and due to the simple nature of the program, this will execute very quickly. The session.run return is continuous, and will return whatever was the latest evaluated value. Each epoch also evaluates the mse function in order to track the progress of the training epochs, and the train function adjusts the weights as needed.
+</div>
+<p><span id="part0039.xhtml"></span></p>
+<div class="class23">
+Python Machine Learning
+</div>
+<div class="class25">
+Ultimate Hands-On Beginner's Guide to Machine Learning in Python
+</div>
+<div class="class810">
+By: Leonard Lee
+</div>
