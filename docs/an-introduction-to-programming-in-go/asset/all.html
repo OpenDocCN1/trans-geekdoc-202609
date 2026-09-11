@@ -1,0 +1,2225 @@
+<p><span id="titlepage.xhtml"></span></p>
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewbox="0 0 450 751" preserveaspectratio="none">
+<image width="450" height="751" href="cover1.jpeg"></image>
+</svg>
+</div>
+<p><span id="part0000.html"></span></p>
+<div id="part0000.html#calibre_pb_0" class="calibre1">
+
+</div>
+<h2 id="part0000.html#toc" class="calibre2">Table of Contents</h2>
+<p><a href="#part0001.html#UGI1-4f426f79846848278b4673500ac196fe">Getting Started</a></p>
+<p> </p>
+<p><a href="#part0002.html#1T141-4f426f79846848278b4673500ac196fe">Your First Program</a></p>
+<p> </p>
+<p><a href="#part0003.html#2RHM1-4f426f79846848278b4673500ac196fe">Types</a></p>
+<p> </p>
+<p><a href="#part0004.html#3Q281-4f426f79846848278b4673500ac196fe">Variables</a></p>
+<p> </p>
+<p><a href="#part0005.html#4OIQ1-4f426f79846848278b4673500ac196fe">Control Structures</a></p>
+<p> </p>
+<p><a href="#part0006.html#5N3C1-4f426f79846848278b4673500ac196fe">Arrays, Slices and Maps</a></p>
+<p> </p>
+<p><a href="#part0007.html#6LJU1-4f426f79846848278b4673500ac196fe">Functions</a></p>
+<p> </p>
+<p><a href="#part0008.html#7K4G1-4f426f79846848278b4673500ac196fe">Pointers</a></p>
+<p> </p>
+<p><a href="#part0009.html#8IL21-4f426f79846848278b4673500ac196fe">Structs and Interfaces</a></p>
+<p> </p>
+<p><a href="#part0010.html#9H5K1-4f426f79846848278b4673500ac196fe">Concurrency</a></p>
+<p> </p>
+<p><a href="#part0011.html#AFM61-4f426f79846848278b4673500ac196fe">Packages</a></p>
+<p> </p>
+<p><a href="#part0012.html#BE6O1-4f426f79846848278b4673500ac196fe">Testing</a></p>
+<p> </p>
+<p><a href="#part0013.html#CCNA1-4f426f79846848278b4673500ac196fe">The Core Packages</a></p>
+<p> </p>
+<p><a href="#part0014.html#DB7S1-4f426f79846848278b4673500ac196fe">Next Steps</a></p>
+<p> </p>
+<p><span id="part0001.html"></span></p>
+<h2 id="part0001.html#UGI1-4f426f79846848278b4673500ac196fe" class="calibre2">Getting Started</h2>
+<p>Computer programming is the art, craft and science of writing programs which define how computers operate. This book will teach you how to write computer programs using a programming language designed by Google named Go.</p>
+<p>Go is a general purpose programming language with advanced features and a clean syntax. Because of its wide availability on a variety of platforms, its robust well-documented common library, and its focus on good software engineering principles, Go is an ideal language to learn as your first programming language.</p>
+<p>The process we use to write software using Go (and most programming languages) is fairly straightforward:</p>
+<ul>
+<li>Gather requirements</li>
+<li>Find a solution</li>
+<li>Write source code to implement the solution</li>
+<li>Compile the source code into an executable</li>
+<li>Run and test the program to make sure it works</li>
+</ul>
+<p>This process is iterative (meaning its done many times) and the steps usually overlap. But before we write our first program in Go there are a few prerequisite concepts we need to understand.</p>
+<h3 id="part0001.html#section1" class="calibre7">Files and Folders</h3>
+<p>A file is a collection of data stored as a unit with a name. Modern operating systems (like Windows or Mac OSX) contain millions of files which store a large variety of different types of information – everything from text documents to executable programs to multimedia files.</p>
+<p>All files are stored in the same way on a computer: they all have a name, a definite size (measured in bytes) and an associated type. Typically the file's type is signified by the file's extension – the part of the file name that comes after the last <code class="calibre8">.</code>. For example a file with the name <code class="calibre8">hello.txt</code> has the extension <code class="calibre8">txt</code> which is used to represent textual data.</p>
+<p>Folders (also called directories) are used to group files together. They can also contain other folders. On Windows file and folder paths (locations) are represented with the <code class="calibre8">\</code> (backslash) character, for example: <code class="calibre8">C:\Users\john\example.txt</code>. <code class="calibre8">example.txt</code> is the file name, it is contained in the folder <code class="calibre8">john</code>, which is itself contained in the folder <code class="calibre8">Users</code> which is stored on drive <code class="calibre8">C</code> (which represents the primary physical hard drive in Windows). On OSX (and most other operating systems) file and folder paths are represented with the <code class="calibre8">/</code> (forward slash) character, for example: <code class="calibre8">/Users/john/example.txt</code>. Like on Windows <code class="calibre8">example.txt</code> is the file name, it is contained in the folder <code class="calibre8">john</code>, which is in the folder <code class="calibre8">Users</code>. Unlike Windows, OSX does not specify a drive letter where the file is stored.</p>
+<h4 class="calibre9">Windows</h4>
+<p>On Windows files and folders can be browsed using Windows Explorer (accessible by double-clicking “My Computer” or typing win+e):</p>
+<p><img src="images/00002.jpeg" class="block" /></p>
+<h4 class="calibre9">OSX</h4>
+<p>On OSX files and folders can be browsed using Finder (accessible by clicking the Finder icon – the face icon in the lower left bar):</p>
+<p><img src="images/00003.jpeg" class="block" /></p>
+<h3 id="part0001.html#section2" class="calibre7">The Terminal</h3>
+<p>Most of the interactions we have with computers today are through sophisticated graphical user interfaces (GUIs). We use keyboards, mice and touchscreens to interact with visual buttons or other types of controls that are displayed on a screen.</p>
+<p>It wasn't always this way. Before the GUI we had the terminal – a simpler textual interface to the computer where rather than manipulating buttons on a screen we issued commands and received replies. We had a conversation with the computer.</p>
+<p>And although it might appear that most of the computing world has left behind the terminal as a relic of the past, the truth is that the terminal is still the fundamental user interface used by most programming languages on most computers. The Go programming language is no different, and so before we write a program in Go we need to have a rudimentary understanding of how a terminal works.</p>
+<h4 class="calibre9">Windows</h4>
+<p>In Windows the terminal (also known as the command line) can be brought up by typing the windows key + r (hold down the windows key then press r), typing <code class="calibre8">cmd.exe</code> and hitting enter. You should see a black window appear that looks like this:</p>
+<p><img src="images/00004.jpeg" class="block" /><br />
+By default the command line starts in your home directory. (In my case this is <code class="calibre8">C:\Users\caleb</code>) You issue commands by typing them in and hitting enter. Try entering the command <code class="calibre8">dir</code>, which lists the contents of a directory. You should see something like this:</p>
+<pre class="calibre10"><code>C:\Users\caleb&gt;dir
+ Volume in drive C has no label.
+ Volume Serial Number is B2F5-F125</code></pre>
+<p>Followed by a list of the files and folders contained in your home directory. You can change directories by using the command <code class="calibre8">cd</code>. For example you probably have a folder called <code class="calibre8">Desktop</code>. You can see its contents by entering <code class="calibre8">cd Desktop</code> and then entering <code class="calibre8">dir</code>. To go back to your home directory you can use the special directory name <code class="calibre8">..</code> (two periods next to each other): <code class="calibre8">cd ..</code>. A single period represents the current folder (known as the working folder), so <code class="calibre8">cd .</code> doesn't do anything. There are a lot more commands you can use, but this should be enough to get you started.</p>
+<h4 class="calibre9">OSX</h4>
+<p>In OSX the terminal can be reached by going to Finder → Applications → Utilities → Terminal. You should see a window like this:</p>
+<p><img src="images/00005.jpeg" class="block" /><br />
+By default the terminal starts in your home directory. (In my case this is <code class="calibre8">/Users/caleb</code>) You issue commands by typing them in and hitting enter. Try entering the command <code class="calibre8">ls</code>, which lists the contents of a directory. You should see something like this:</p>
+<pre class="calibre10"><code>caleb-min:~ caleb$ ls
+Desktop      Downloads      Movies     Pictures
+Documents    Library        Music      Public</code></pre>
+<p>These are the files and folders contained in your home directory (in this case there are no files). You can change directories using the <code class="calibre8">cd</code> command. For example you probably have a folder called <code class="calibre8">Desktop</code>. You can see its contents by entering <code class="calibre8">cd Desktop</code> and then entering <code class="calibre8">ls</code>. To go back to your home directory you can use the special directory name <code class="calibre8">..</code> (two periods next to each other): <code class="calibre8">cd ..</code>. A single period represents the current folder (known as the working folder), so <code class="calibre8">cd .</code> doesn't do anything. There are a lot more commands you can use, but this should be enough to get you started.</p>
+<h3 id="part0001.html#section3" class="calibre7">Text Editors</h3>
+<p>The primary tool programmers use to write software is a text editor. Text editors are similar to word processing programs (Microsoft Word, Open Office, …) but unlike such programs they don't do any formatting, (No bold, italic, …) instead they operate only on plain text. Both OSX and Windows come with text editors but they are highly limited and I recommend installing a better one.</p>
+<p>To make the installation of this software easier an installer is available at the book's website: <a href="http://www.golang-book.com/">http://www.golang-book.com/</a>. This installer will install the Go tool suite, setup environmental variables and install a text editor.</p>
+<h4 class="calibre9">Windows</h4>
+<p>For windows the installer will install the Scite text editor. You can open it by going to Start → All Programs → Go → Scite. You should see something like this:</p>
+<p><img src="images/00006.jpeg" class="block" /><br />
+The text editor contains a large white text area where text can be entered. To the left of this text area you can see the line numbers. At the bottom of the window is a status bar which displays information about the file and your current location in it (right now it says that we are on line 1, column 1, text is being inserted normally, and we are using windows-style newlines).</p>
+<p>You can open files by going to File → Open and browsing to your desired file. Files can be saved by going to File → Save or File → Save As.</p>
+<p>As you work in a text editor it is useful to learn keyboard shortcuts. The menus list the shortcuts to their right. Here are a few of the most common:</p>
+<ul>
+<li>Ctrl + S – save the current file</li>
+<li>Ctrl + X – cut the currently selected text (remove it and put it in your clipboard so it can be pasted later)</li>
+<li>Ctrl + C – copy the currently selected text</li>
+<li>Ctrl + V – paste the text currently in the clipboard</li>
+<li>Use the arrow keys to navigate, Home to go to the beginning of the line and End to go to the end of the line</li>
+<li>Hold down shift while using the arrow keys (or Home and End) to select text without using the mouse</li>
+<li>Ctrl + F – brings up a find in file dialog that you can use to search the contents of a file</li>
+</ul>
+<h4 class="calibre9">OSX</h4>
+<p>For OSX the installer installs the Text Wrangler text editor:</p>
+<p><img src="images/00007.jpeg" class="block" /></p>
+<p>Like Scite on Windows Text Wrangler contains a large white area where text is entered. Files can be opened by going to File → Open. Files can be saved by going to File → Save or File → Save As. Here are some useful keyboard shortcuts: (Command is the ⌘ key)</p>
+<ul>
+<li>Command + S – save the current file</li>
+<li>Command + X – cut the currently selected text (remove it and put it in your clipboard so it can be pasted later)</li>
+<li>Command + C – copy the currently selected text</li>
+<li>Command + V – paste the text currently in the clipboard</li>
+<li>Use the arrow keys to navigate</li>
+<li>Command + F – brings up a find in file dialog that you can use to search the contents of a file<br />
+</li>
+</ul>
+<h3 id="part0001.html#section4" class="calibre7">Go Tools</h3>
+<p>Go is a compiled programming language, which means source code (the code you write) is translated into a language that your computer can understand. Therefore before we can write a Go program, we need the Go compiler.</p>
+<p>The installer will setup Go for you automatically. We will be using version 1 of the language. (More information can be found at <a href="http://www.golang.org">http://www.golang.org</a>)</p>
+<p>Let's make sure everything is working. Open up a terminal and type the following:</p>
+<pre class="calibre10"><code>go version</code></pre>
+<p>You should see the following:</p>
+<pre class="calibre10"><code>go version go1.0.2</code></pre>
+<p>Your version number may be slightly different. If you get an error about the command not being recognized try restarting your computer.</p>
+<p>The Go tool suite is made up of several different commands and sub-commands. A list of those commands is available by typing:</p>
+<pre class="calibre10"><code>go help</code></pre>
+<p>We will see how they are used in subsequent chapters.</p>
+<p><span id="part0002.html"></span></p>
+<h2 id="part0002.html#1T141-4f426f79846848278b4673500ac196fe" class="calibre2">Your First Program</h2>
+<p>Traditionally the first program you write in any programming language is called a “Hello World” program – a program that simply outputs <code class="calibre8">Hello World</code> to your terminal. Let's write one using Go.</p>
+<p>First create a new folder where we can store our program. The installer you used in chapter 1 created a folder in your home directory named <code class="calibre8">Go</code>. Create a folder named <code class="calibre8">~/Go/src/golang-book/chapter2</code>. (Where <code class="calibre8">~</code> means your home directory) From the terminal you can do this by entering the following commands:</p>
+<pre class="calibre10"><code>mkdir Go/src/golang-book
+mkdir Go/src/golang-book/chapter2</code></pre>
+<p>Using your text editor type in the following:</p>
+<pre class="calibre10"><code>package main
+
+import &quot;fmt&quot;
+
+// this is a comment
+
+func main() {
+    fmt.Println(&quot;Hello World&quot;)
+}</code></pre>
+<p>Make sure your file is identical to what is shown here and save it as <code class="calibre8">main.go</code> in the folder we just created. Open up a new terminal and type in the following:</p>
+<pre class="calibre10"><code>cd Go/src/golang-book/chapter2
+go run main.go</code></pre>
+<p>You should see <code class="calibre8">Hello World</code> displayed in your terminal. The <code class="calibre8">go run</code> command takes the subsequent files (separated by spaces), compiles them into an executable saved in a temporary directory and then runs the program. If you didn't see <code class="calibre8">Hello World</code> displayed you may have made a mistake when typing in the program. The Go compiler will give you hints about where the mistake lies. Like most compilers, the Go compiler is extremely pedantic and has no tolerance for mistakes.</p>
+<h3 id="part0002.html#section1" class="calibre7">How to Read a Go Program</h3>
+<p>Let's look at this program in more detail. Go programs are read top to bottom, left to right. (like a book) The first line says this:</p>
+<pre class="calibre10"><code>package main</code></pre>
+<p>This is known as a “package declaration”. Every Go program must start with a package declaration. Packages are Go's way of organizing and reusing code. There are two types of Go programs: executables and libraries. Executable applications are the kinds of programs that we can run directly from the terminal. (in Windows they end with <code class="calibre8">.exe</code>) Libraries are collections of code that we package together so that we can use them in other programs. We will explore libraries in more detail later, for now just make sure to include this line in any program you write.</p>
+<p>The next line is a blank line. Computers represent newlines with a special character (or several characters). Newlines, spaces and tabs are known as whitespace (because you can't see them). Go mostly doesn't care about whitespace, we use it to make programs easier to read. (You could remove this line and the program would behave in exactly the same way)</p>
+<p>Then we see this:</p>
+<pre class="calibre10"><code>import &quot;fmt&quot;</code></pre>
+<p>The <code class="calibre8">import</code> keyword is how we include code from other packages to use with our program. The <code class="calibre8">fmt</code> package (shorthand for format) implements formatting for input and output. Given what we just learned about packages what do you think the <code class="calibre8">fmt</code> package's files would contain at the top of them?</p>
+<p>Notice that <code class="calibre8">fmt</code> above is surrounded by double quotes. The use of double quotes like this is known as a “string literal” which is a type of “expression”. In Go strings represent a sequence of characters (letters, numbers, symbols, …) of a definite length. Strings are described in more detail in the next chapter, but for now the important thing to keep in mind is that an opening <code class="calibre8">"</code> character must eventually be followed by another <code class="calibre8">"</code> character and anything in between the two is included in the string. (The <code class="calibre8">"</code> character itself is not part of the string)</p>
+<p>The line that starts with <code class="calibre8">//</code> is known as a comment. Comments are ignored by the Go compiler and are there for your own sake (or whoever picks up the source code for your program). Go supports two different styles of comments: <code class="calibre8">//</code> comments in which all the text between the <code class="calibre8">//</code> and the end of the line is part of the comment and <code class="calibre8">/* */</code> comments where everything between the <code class="calibre8">*</code>s is part of the comment. (And may include multiple lines)</p>
+<p>After this you see a function declaration:</p>
+<pre class="calibre10"><code>func main() {
+    fmt.Println(&quot;Hello World&quot;)
+}</code></pre>
+<p>Functions are the building blocks of a Go program. They have inputs, outputs and a series of steps called statements which are executed in order. All functions start with the keyword <code class="calibre8">func</code> followed by the name of the function (<code class="calibre8">main</code> in this case), a list of zero or more “parameters” surrounded by parentheses, an optional return type and a “body” which is surrounded by curly braces. This function has no parameters, doesn't return anything and has only one statement. The name <code class="calibre8">main</code> is special because it's the function that gets called when you execute the program.</p>
+<p>The final piece of our program is this line:</p>
+<pre class="calibre10"><code>    fmt.Println(&quot;Hello World&quot;)</code></pre>
+<p>This statement is made of three components. First we access another function inside of the <code class="calibre8">fmt</code> package called <code class="calibre8">Println</code> (that's the <code class="calibre8">fmt.Println</code> piece, <code class="calibre8">Println</code> means Print Line). Then we create a new string that contains <code class="calibre8">Hello World</code> and invoke (also known as call or execute) that function with the string as the first and only argument.</p>
+<p>At this point we've already seen a lot of new terminology and you may be a bit overwhelmed. Sometimes its helpful to deliberately read your program out loud. One reading of the program we just wrote might go like this:</p>
+<p>Create a new executable program, which references the <code class="calibre8">fmt</code> library and contains one function called <code class="calibre8">main</code>. That function takes no arguments, doesn't return anything and does the following: Access the <code class="calibre8">Println</code> function contained inside of the <code class="calibre8">fmt</code> package and invoke it using one argument – the string <code class="calibre8">Hello World</code>.</p>
+<p>The <code class="calibre8">Println</code> function does the real work in this program. You can find out more about it by typing the following in your terminal:</p>
+<pre class="calibre10"><code>godoc fmt Println</code></pre>
+<p>Among other things you should see this:</p>
+<pre class="calibre10"><code>Println formats using the default formats for its operands and writes to standard output. Spaces are always added between operands and a newline is appended. It returns the number of bytes written and any write error encountered.</code></pre>
+<p>Go is a very well documented programming language but this documentation can be difficult to understand unless you are already familiar with programming languages. Nevertheless the <code class="calibre8">godoc</code> command is extremely useful and a good place to start whenever you have a question.</p>
+<p>Back to the function at hand, this documentation is telling you that the <code class="calibre8">Println</code> function will send whatever you give to it to standard output – a name for the output of the terminal you are working in. This function is what causes <code class="calibre8">Hello World</code> to be displayed.</p>
+<p>In the next chapter we will explore how Go stores and represents things like <code class="calibre8">Hello World</code> by learning about types.</p>
+<h4 class="calibre9">Problems</h4>
+<ul>
+<li>What is whitespace?</li>
+<li>What is a comment? What are the two ways of writing a comment?</li>
+<li>Our program began with <code class="calibre8">package main</code>. What would the files in the <code class="calibre8">fmt</code> package begin with?</li>
+<li>We used the <code class="calibre8">Println</code> function defined in the <code class="calibre8">fmt</code> package. If we wanted to use the <code class="calibre8">Exit</code> function from the <code class="calibre8">os</code> package what would we need to do?</li>
+<li>Modify the program we wrote so that instead of printing <code class="calibre8">Hello World</code> it prints <code class="calibre8">Hello, my name is</code> followed by your name.</li>
+</ul>
+<p><span id="part0003.html"></span></p>
+<h2 id="part0003.html#2RHM1-4f426f79846848278b4673500ac196fe" class="calibre2">Types</h2>
+<p>In the last chapter we used the data type string to store <code class="calibre8">Hello World</code>. Data types categorize a set of related values, describe the operations that can be done on them and define the way they are stored. Since types can be a difficult concept to grasp we will look at them from a couple different perspectives before we see how they are implemented in Go.</p>
+<p>Philosophers sometimes make a distinction between types and tokens. For example suppose you have a dog named Max. Max is the token (a particular instance or member) and dog is the type (the general concept). “Dog” or “dogness” describes a set of properties that all dogs have in common. Although oversimplistic we might reason like this: All dogs have 4 legs, Max is a dog, therefore Max has 4 legs. Types in programming languages work in a similar way: All strings have a length, x is a string, therefore x has a length.</p>
+<p>In mathematics we often talk about sets. For example: ℝ (the set of all real numbers) or ℕ (the set of all natural numbers). Each member of these sets shares properties with all the other members of the set. For example all natural numbers are associative: “for all natural numbers a, b, and c, a + (b + c) = (a + b) + c and a × (b × c) = (a × b) × c.” In this way sets are similar to types in programming languages since all the values of a particular type share certain properties.</p>
+<p>Go is a statically typed programming language. This means that variables always have a specific type and that type cannot change. Static typing may seem cumbersome at first. You'll spend a large amount of your time just trying to fix your program so that it finally compiles. But types help us reason about what our program is doing and catch a wide variety of common mistakes.</p>
+<p>Go comes with several built-in data types which we will now look at in more detail.</p>
+<h3 id="part0003.html#section1" class="calibre7">Numbers</h3>
+<p>Go has several different types to represent numbers. Generally we split numbers into two different kinds: integers and floating-point numbers.</p>
+<h4 class="calibre9">Integers</h4>
+<p>Integers – like their mathematical counterpart – are numbers without a decimal component. (…, -3, -2, -1, 0, 1, …) Unlike the base-10 decimal system we use to represent numbers, computers use a base-2 binary system.</p>
+<p>Our system is made up of 10 different digits. Once we've exhausted our available digits we represent larger numbers by using 2 (then 3, 4, 5, …) digits put next to each other. For example the number after 9 is 10, the number after 99 is 100 and so on. Computers do the same, but they only have 2 digits instead of 10. So counting looks like this: 0, 1, 10, 11, 100, 101, 110, 111 and so on. The other difference between the number system we use and the one computers use is that all of the integer types have a definite size. They only have room for a certain number of digits. So a 4 bit integer might look like this: 0000, 0001, 0010, 0011, 0100. Eventually we run out of space and most computers just wrap around to the beginning. (Which can result in some very strange behavior)</p>
+<p>Go's integer types are: <code class="calibre8">uint8</code>, <code class="calibre8">uint16</code>, <code class="calibre8">uint32</code>, <code class="calibre8">uint64</code>, <code class="calibre8">int8</code>, <code class="calibre8">int16</code>, <code class="calibre8">int32</code> and <code class="calibre8">int64.</code> 8, 16, 32 and 64 tell us how many bits each of the types use. <code class="calibre8">uint</code> means “unsigned integer” while <code class="calibre8">int</code> means “signed integer”. Unsigned integers only contain positive numbers (or zero). In addition there two alias types: <code class="calibre8">byte</code> which is the same as <code class="calibre8">uint8</code> and <code class="calibre8">rune</code> which is the same as <code class="calibre8">int32</code>. Bytes are an extremely common unit of measurement used on computers (1 byte = 8 bits, 1024 bytes = 1 kilobyte, 1024 kilobytes = 1 megabyte, …) and therefore Go's <code class="calibre8">byte</code> data type is often used in the definition of other types. There are also 3 machine dependent integer types: <code class="calibre8">uint</code>, <code class="calibre8">int</code> and <code class="calibre8">uintptr</code>. They are machine dependent because their size depends on the type of architecture you are using.</p>
+<p>Generally if you are working with integers you should just use the <code class="calibre8">int</code> type.</p>
+<h4 class="calibre9">Floating Point Numbers</h4>
+<p>Floating point numbers are numbers that contain a decimal component (real numbers). (1.234, 123.4, 0.00001234, 12340000) Their actual representation on a computer is fairly complicated and not really necessary in order to know how to use them. So for now we need only keep the following in mind:</p>
+<ul>
+<li>Floating point numbers are inexact. Occasionally it is not possible to represent a number. For example computing <code class="calibre8">1.01 - 0.99</code> results in <code class="calibre8">0.020000000000000018</code> – A number extremely close to what we would expect, but not exactly the same.</li>
+<li>Like integers floating point numbers have a certain size (32 bit or 64 bit). Using a larger sized floating point number increases it's precision. (how many digits it can represent)</li>
+<li>In addition to numbers there are several other values which can be represented: “not a number” (<code class="calibre8">NaN</code>, for things like <code class="calibre8">0/0</code>) and positive and negative infinity. (<code class="calibre8">+∞</code> and <code class="calibre8">−∞</code>)</li>
+</ul>
+<p>Go has two floating point types: <code class="calibre8">float32</code> and <code class="calibre8">float64</code> (also often referred to as single precision and double precision respectively) as well as two additional types for representing complex numbers (numbers with imaginary parts): <code class="calibre8">complex64</code> and <code class="calibre8">complex128</code>. Generally we should stick with <code class="calibre8">float64</code> when working with floating point numbers.</p>
+<h4 class="calibre9">Example</h4>
+<p>Let's write an example program using numbers. First create a folder called <code class="calibre8">chapter3</code> and make a <code class="calibre8">main.go</code> file containing the following:</p>
+<pre class="calibre10"><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    fmt.Println(&quot;1 + 1 =&quot;, 1 + 1)
+}</code></pre>
+<p>If you run the program and you should see this:</p>
+<pre class="calibre10"><code>$ go run main.go
+1 + 1 = 2</code></pre>
+<p>Notice that this program is very similar to the program we wrote in chapter 2. It contains the same package line, the same import line, the same function declaration and uses the same <code class="calibre8">Println</code> function. This time instead of printing the string <code class="calibre8">Hello World</code> we print the string <code class="calibre8">1 + 1 =</code> followed by the result of the expression <code class="calibre8">1 + 1</code>. This expression is made up of three parts: the numeric literal <code class="calibre8">1</code> (which is of type <code class="calibre8">int</code>), the <code class="calibre8">+</code> operator (which represents addition) and another numeric literal <code class="calibre8">1</code>. Let's try the same thing using floating point numbers:</p>
+<pre class="calibre10"><code>    fmt.Println(&quot;1 + 1 =&quot;, 1.0 + 1.0)</code></pre>
+<p>Notice that we use the <code class="calibre8">.0</code> to tell Go that this is a floating point number instead of an integer. Running this program will give you the same result as before.</p>
+<p>In addition to addition Go has several other operators:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>+</td>
+<td>addition</td>
+</tr>
+<tr class="even">
+<td>-</td>
+<td>subtraction</td>
+</tr>
+<tr class="odd">
+<td>*</td>
+<td>multiplication</td>
+</tr>
+<tr class="even">
+<td>/</td>
+<td>division</td>
+</tr>
+<tr class="odd">
+<td>%</td>
+<td>remainder</td>
+</tr>
+</tbody>
+</table>
+<h3 id="part0003.html#section2" class="calibre7">Strings</h3>
+<p>As we saw in chapter 2 a string is a sequence of characters with a definite length used to represent text. Go strings are made up of individual bytes, usually one for each character. (Characters from other languages like Chinese are represented by more than one byte)</p>
+<p>String literals can be created using double quotes <code class="calibre8">"Hello World"</code> or back ticks <code class="calibre8">`Hello World`</code>. The difference between these is that double quoted strings cannot contain newlines and they allow special escape sequences. For example <code class="calibre8">\n</code> gets replaced with a newline and <code class="calibre8">\t</code> gets replaced with a tab character.</p>
+<p>Several common operations on strings include finding the length of a string: <code class="calibre8">len("Hello World")</code>, accessing an individual character in the string: <code class="calibre8">"Hello World"[1]</code>, and concatenating two strings together: <code class="calibre8">"Hello " + "World"</code>. Let's modify the program we created earlier to test these out:</p>
+<pre class="calibre10"><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    fmt.Println(len(&quot;Hello World&quot;))
+    fmt.Println(&quot;Hello World&quot;[1])
+    fmt.Println(&quot;Hello &quot; + &quot;World&quot;)
+}</code></pre>
+<p>A few things to notice:</p>
+<ul>
+<li>A space is also considered a character, so the string's length is 11 not 10 and the 3rd line has <code class="calibre8">"Hello "</code> instead of <code class="calibre8">"Hello"</code>.</li>
+<li>Strings are “indexed” starting at 0 not 1. <code class="calibre8">[1]</code> gives you the 2nd element not the 1st. Also notice that you see <code class="calibre8">101</code> instead of <code class="calibre8">e</code> when you run this program. This is because the character is represented by a byte (remember a byte is an integer).<br />
+<br />
+One way to think about indexing would be to show it like this instead: <code class="calibre8">"Hello World"</code><code class="calibre8">1</code>. You'd read that as “The string Hello World sub 1,” “The string Hello World at 1” or “The second character of the string Hello World”.</li>
+<li>Concatenation uses the same symbol as addition. The Go compiler figures out what to do based on the types of the arguments. Since both sides of the <code class="calibre8">+</code> are strings the compiler assumes you mean concatenation and not addition. (Addition is meaningless for strings)</li>
+</ul>
+<h3 id="part0003.html#section3" class="calibre7">Booleans</h3>
+<p>A boolean value (named after George Boole) is a special 1 bit integer type used to represent true and false (or on and off). Three logical operators are used with boolean values:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>&amp;&amp;</td>
+<td>and</td>
+</tr>
+<tr class="even">
+<td>||</td>
+<td>or</td>
+</tr>
+<tr class="odd">
+<td>!</td>
+<td>not</td>
+</tr>
+</tbody>
+</table>
+<p>Here is an example program showing how they can be used:</p>
+<pre class="calibre10"><code>func main() {
+    fmt.Println(true &amp;&amp; true)
+    fmt.Println(true &amp;&amp; false)
+    fmt.Println(true || true)
+    fmt.Println(true || false)
+    fmt.Println(!true)
+}</code></pre>
+<p>Running this program should give you:</p>
+<pre class="calibre10"><code>$ go run main.go
+true
+false
+true
+true
+false</code></pre>
+<p>We usually use truth tables to define how these operators work:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Expression</td>
+<td>Value</td>
+</tr>
+<tr class="even">
+<td>true &amp;&amp; true</td>
+<td>true</td>
+</tr>
+<tr class="odd">
+<td>true &amp;&amp; false</td>
+<td>false</td>
+</tr>
+<tr class="even">
+<td>false &amp;&amp; true</td>
+<td>false</td>
+</tr>
+<tr class="odd">
+<td>false &amp;&amp; false</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr class="odd">
+<td>Expression</td>
+<td>Value</td>
+</tr>
+<tr class="even">
+<td>true || true</td>
+<td>true</td>
+</tr>
+<tr class="odd">
+<td>true || false</td>
+<td>true</td>
+</tr>
+<tr class="even">
+<td>false || true</td>
+<td>true</td>
+</tr>
+<tr class="odd">
+<td>false || false</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr class="odd">
+<td>Expression</td>
+<td>Value</td>
+</tr>
+<tr class="even">
+<td>!true</td>
+<td>false</td>
+</tr>
+<tr class="odd">
+<td>!false</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p>These are the simplest types included with Go and form the foundation from which all later types are built.</p>
+<h4 class="calibre9">Problems</h4>
+<ul>
+<li>How are integers stored on a computer?</li>
+<li>We know that (in base 10) the largest 1 digit number is 9 and the largest 2 digit number is 99. Given that in binary the largest 2 digit number is 11 (3), the largest 3 digit number is 111 (7) and the largest 4 digit number is 1111 (15) what's the largest 8 digit number? (hint: 101-1 = 9 and 102-1 = 99)</li>
+<li>Although overpowered for the task you can use Go as a calculator. Write a program that computes <code class="calibre8">32132 × 42452</code> and prints it to the terminal. (Use the <code class="calibre8">*</code> operator for multiplication)</li>
+<li>What is a string? How do you find its length?</li>
+<li>What's the value of the expression <code class="calibre8">(true &amp;&amp; false) || (false &amp;&amp; true) || !(false &amp;&amp; false)</code>?</li>
+</ul>
+<p><span id="part0004.html"></span></p>
+<h2 id="part0004.html#3Q281-4f426f79846848278b4673500ac196fe" class="calibre2">Variables</h2>
+<p>Up until now we have only seen programs that use literal values (numbers, strings, etc.) but such programs aren't particularly useful. To make truly useful programs we need to learn two new concepts: variables and control flow statements. This chapter will explore variables in more detail.</p>
+<p>A variable is a storage location, with a specific type and an associated name. Let's change the program we wrote in chapter 2 so that it uses a variable:</p>
+<pre class="calibre10"><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    var x string = &quot;Hello World&quot;
+    fmt.Println(x)
+}</code></pre>
+<p>Notice that the string literal from the original program still appears in this program, but rather than send it directly to the <code class="calibre8">Println</code> function we assign it to a variable instead. Variables in Go are created by first using the <code class="calibre8">var</code> keyword, then specifying the variable name (<code class="calibre8">x</code>), the type (<code class="calibre8">string</code>) and finally assigning a value to the variable (<code class="calibre8">Hello World</code>). The last step is optional so an alternative way of writing the program would be like this:</p>
+<pre class="calibre10"><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    var x string
+    x = &quot;Hello World&quot;
+    fmt.Println(x)
+}</code></pre>
+<p>Variables in Go are similar to variables in algebra but there are some subtle differences:</p>
+<p>First when we see the <code class="calibre8">=</code> symbol we have a tendency to read that as “x equals the string Hello World”. There's nothing wrong with reading our program that way, but it's better to read it as “x takes the string Hello World” or “x is assigned the string Hello World”. This distinction is important because (as their name would suggest) variables can change their value throughout the lifetime of a program. Try running the following:</p>
+<pre class="calibre10"><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    var x string
+    x = &quot;first&quot;
+    fmt.Println(x)
+    x = &quot;second&quot;
+    fmt.Println(x)
+}</code></pre>
+<p>In fact you can even do this:</p>
+<pre class="calibre10"><code>var x string
+x = &quot;first &quot;
+fmt.Println(x)
+x = x + &quot;second&quot;
+fmt.Println(x)</code></pre>
+<p>This program would be nonsense if you read it like an algebraic theorem. But it makes sense if you are careful to read the program as a list of commands. When we see <code class="calibre8">x = x + "second"</code> we should read it as “assign the concatenation of the value of the variable x and the string literal second to the variable x.” The right side of the <code class="calibre8">=</code> is done first and the result is then assigned to the left side of the <code class="calibre8">=</code>.</p>
+<p>The <code class="calibre8">x = x + y</code> form is so common in programming that Go has a special assignment statement: <code class="calibre8">+=</code>. We could have written <code class="calibre8">x = x + "second"</code> as <code class="calibre8">x += "second"</code> and it would have done the same thing. (Other operators can be used the same way)</p>
+<p>Another difference between Go and algebra is that we use a different symbol for equality: <code class="calibre8">==</code>. (Two equal signs next to each other) <code class="calibre8">==</code> is an operator like <code class="calibre8">+</code> and it returns a boolean. For example:</p>
+<pre class="calibre10"><code>    var x string = &quot;hello&quot;
+    var y string = &quot;world&quot;
+    fmt.Println(x == y)</code></pre>
+<p>This program should print <code class="calibre8">false</code> because <code class="calibre8">hello</code> is not the same as <code class="calibre8">world</code>. On the other hand:</p>
+<pre class="calibre10"><code>    var x string = &quot;hello&quot;
+    var y string = &quot;hello&quot;
+    fmt.Println(x == y)</code></pre>
+<p>This will print <code class="calibre8">true</code> because the two strings are the same.</p>
+<p>Since creating a new variable with a starting value is so common Go also supports a shorter statement:</p>
+<pre class="calibre10"><code>    x := &quot;Hello World&quot;</code></pre>
+<p>Notice the <code class="calibre8">:</code> before the <code class="calibre8">=</code> and that no type was specified. The type is not necessary because the Go compiler is able to infer the type based on the literal value you assign the variable. (Since you are assigning a string literal, <code class="calibre8">x</code> is given the type <code class="calibre8">string</code>) The compiler can also do inference with the <code class="calibre8">var</code> statement:</p>
+<pre class="calibre10"><code>    var x = &quot;Hello World&quot;</code></pre>
+<p>The same thing works for other types:</p>
+<pre class="calibre10"><code>    x := 5
+    fmt.Println(x)</code></pre>
+<p>Generally you should use this shorter form whenever possible.</p>
+<h3 id="part0004.html#section1" class="calibre7">How to Name a Variable</h3>
+<p>Naming a variable properly is an important part of software development. Names must start with a letter and may contain letters, numbers or the <code class="calibre8">_</code> (underscore) symbol. The Go compiler doesn't care what you name a variable so the name is meant for your (and others) benefit. Pick names which clearly describe the variable's purpose. Suppose we had the following:</p>
+<pre class="calibre10"><code>    x := &quot;Max&quot;
+    fmt.Println(&quot;My dog&#39;s name is&quot;, x)</code></pre>
+<p>In this case x is not a very good name for a variable. A better name would be:</p>
+<pre class="calibre10"><code>    name := &quot;Max&quot;
+    fmt.Println(&quot;My dog&#39;s name is&quot;, name)</code></pre>
+<p>or even:</p>
+<pre class="calibre10"><code>    dogsName := &quot;Max&quot;
+    fmt.Println(&quot;My dog&#39;s name is&quot;, dogsName)</code></pre>
+<p>In this last case we use a special way to represent multiple words in a variable name known as lower camel case (also know as mixed case, bumpy caps, camel back or hump back). The first letter of the first word is lowercase, the first letter of the subsequent words is uppercase and all the other letters are lowercase.</p>
+<h3 id="part0004.html#section2" class="calibre7">Scope</h3>
+<p>Going back to the program we saw at the beginning of the chapter:</p>
+<pre class="calibre10"><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    var x string = &quot;Hello World&quot;
+    fmt.Println(x)
+}</code></pre>
+<p>Another way of writing this program would be like this:</p>
+<pre class="calibre10"><code>package main
+
+import &quot;fmt&quot;
+
+var x string = &quot;Hello World&quot;
+
+func main() {
+    fmt.Println(x)
+}</code></pre>
+<p>Notice that we moved the variable outside of the main function. This means that other functions can access this variable:</p>
+<pre class="calibre10"><code>var x string = &quot;Hello World&quot;
+
+func main() {
+    fmt.Println(x)
+}
+
+func f() {
+    fmt.Println(x)
+}</code></pre>
+<p>The <code class="calibre8">f</code> function now has access to the <code class="calibre8">x</code> variable. Now suppose that we wrote this instead:</p>
+<pre class="calibre10"><code>func main() {
+    var x string = &quot;Hello World&quot;
+    fmt.Println(x)
+}
+
+func f() {
+    fmt.Println(x)
+}</code></pre>
+<p>If you run this program you should see an error:</p>
+<pre class="calibre10"><code>.\main.go:11: undefined: x</code></pre>
+<p>The compiler is telling you that the <code class="calibre8">x</code> variable inside of the <code class="calibre8">f</code> function doesn't exist. It only exists inside of the <code class="calibre8">main</code> function. The range of places where you are allowed to use <code class="calibre8">x</code> is called the scope of the variable. According to the language specification “Go is lexically scoped using blocks”. Basically this means that the variable exists within the nearest curly braces <code class="calibre8">{</code> <code class="calibre8">}</code> (a block) including any nested curly braces (blocks), but not outside of them. Scope can be a little confusing at first; as we see more Go examples it should become more clear.</p>
+<h3 id="part0004.html#section3" class="calibre7">Constants</h3>
+<p>Go also has support for constants. Constants are basically variables whose values cannot be changed later. They are created in the same way you create variables but instead of using the <code class="calibre8">var</code> keyword we use the <code class="calibre8">const</code> keyword:</p>
+<pre class="calibre10"><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    const x string = &quot;Hello World&quot;
+    fmt.Println(x)
+}</code></pre>
+<p>This:</p>
+<pre class="calibre10"><code>    const x string = &quot;Hello World&quot;
+    x = &quot;Some other string&quot;</code></pre>
+<p>Results in a compile-time error:</p>
+<pre class="calibre10"><code>.\main.go:7: cannot assign to x</code></pre>
+<p>Constants are a good way to reuse common values in a program without writing them out each time. For example <code class="calibre8">Pi</code> in the <code class="calibre8">math</code> package is defined as a constant.</p>
+<h3 id="part0004.html#section4" class="calibre7">Defining Multiple Variables</h3>
+<p>Go also has another shorthand when you need to define multiple variables:</p>
+<pre class="calibre10"><code>var (
+    a = 5
+    b = 10
+    c = 15
+)</code></pre>
+<p>Use the keyword <code class="calibre8">var</code> (or <code class="calibre8">const</code>) followed by parentheses with each variable on its own line.</p>
+<h3 id="part0004.html#section5" class="calibre7">An Example Program</h3>
+<p>Here's an example program which takes in a number entered by the user and doubles it:</p>
+<pre class="calibre10"><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    fmt.Print(&quot;Enter a number: &quot;)
+    var input float64
+    fmt.Scanf(&quot;%f&quot;, &amp;input)
+    
+    output := input * 2
+    
+    fmt.Println(output)    
+}</code></pre>
+<p>We use another function from the <code class="calibre8">fmt</code> package to read the user input (<code class="calibre8">Scanf</code>). <code class="calibre8">&amp;input</code> will be explained in a later chapter, for now all we need to know is that <code class="calibre8">Scanf</code> fills input with the number we enter.</p>
+<h4 class="calibre9">Problems</h4>
+<ul>
+<li>What are two ways to create a new variable?</li>
+<li>What is the value of <code class="calibre8">x</code> after running:<br />
+<code class="calibre8">x := 5; x += 1</code>?</li>
+<li>What is scope and how do you determine the scope of a variable in Go?</li>
+<li>What is the difference between <code class="calibre8">var</code> and <code class="calibre8">const</code>?</li>
+<li>Using the example program as a starting point, write a program that converts from Fahrenheit into Celsius. (<code class="calibre8">C = (F - 32) * 5/9</code>)</li>
+<li>Write another program that converts from feet into meters. (<code class="calibre8">1 ft = 0.3048 m</code>)</li>
+</ul>
+<p><span id="part0005.html"></span></p>
+<h2 id="part0005.html#4OIQ1-4f426f79846848278b4673500ac196fe" class="calibre2">Control Structures</h2>
+<p>Now that we know how to use variables it's time to start writing some useful programs. First let's write a program that counts to 10, starting from 1, with each number on its own line. Using what we've learned so far we could write this:</p>
+<pre class="calibre10"><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    fmt.Println(1)
+    fmt.Println(2)
+    fmt.Println(3)
+    fmt.Println(4)
+    fmt.Println(5)
+    fmt.Println(6)
+    fmt.Println(7)
+    fmt.Println(8)
+    fmt.Println(9)
+    fmt.Println(10)
+}</code></pre>
+<p>Or this:</p>
+<pre class="calibre10"><code>package main
+import &quot;fmt&quot;
+
+func main() {
+    fmt.Println(`1
+2
+3
+4
+5
+6
+7
+8
+9
+10`)
+}</code></pre>
+<p>But both of these programs are pretty tedious to write. What we need is a way of doing something multiple times.</p>
+<h3 id="part0005.html#section1" class="calibre7">For</h3>
+<p>The <code class="calibre8">for</code> statement allows us to repeat a list of statements (a block) multiple times. Rewriting our previous program using a <code class="calibre8">for</code> statement looks like this:</p>
+<pre class="calibre10"><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    i := 1
+    for i &lt;= 10 {
+        fmt.Println(i)
+        i = i + 1
+    }
+}</code></pre>
+<p>First we create a variable called <code class="calibre8">i</code> that we use to store the number we want to print. Then we create a <code class="calibre8">for</code> loop by using the keyword <code class="calibre8">for</code>, providing a conditional expression which is either <code class="calibre8">true</code> or <code class="calibre8">false</code> and finally supplying a block to execute. The for loop works like this:</p>
+<ul>
+<li>We evaluate (run) the expression <code class="calibre8">i &lt;= 10</code> (“i less than or equal to 10”). If this evaluates to true then we run the statements inside of the block. Otherwise we jump to the next line of our program after the block. (in this case there is nothing after the for loop so we exit the program)</li>
+<li>After we run the statements inside of the block we loop back to the beginning of the for statement and repeat step 1.</li>
+</ul>
+<p>The <code class="calibre8">i = i + 1</code> line is extremely important, because without it <code class="calibre8">i &lt;= 10</code> would always evaluate to <code class="calibre8">true</code> and our program would never stop. (When this happens this is referred to as an infinite loop)</p>
+<p>As an exercise lets walk through the program like a computer would:</p>
+<ul>
+<li>Create a variable named <code class="calibre8">i</code> with the value 1</li>
+<li>Is <code class="calibre8">i &lt;= 10</code>? Yes.</li>
+<li>Print <code class="calibre8">i</code></li>
+<li>Set <code class="calibre8">i</code> to <code class="calibre8">i + 1</code> (<code class="calibre8">i</code> now equals 2)</li>
+<li>Is <code class="calibre8">i &lt;= 10</code>? Yes.</li>
+<li>Print <code class="calibre8">i</code></li>
+<li>Set <code class="calibre8">i</code> to <code class="calibre8">i + 1</code> (<code class="calibre8">i</code> now equals 3)</li>
+<li>…</li>
+<li>Set <code class="calibre8">i</code> to <code class="calibre8">i + 1</code> (<code class="calibre8">i</code> now equals 11)</li>
+<li>Is <code class="calibre8">i &lt;= 10</code>? No.</li>
+<li>Nothing left to do, so exit</li>
+</ul>
+<p>Other programming languages have a lot of different types of loops (while, do, until, foreach, …) but Go only has one that can be used in a variety of different ways. The previous program could also have been written like this:</p>
+<pre class="calibre10"><code>func main() {
+    for i := 1; i &lt;= 10; i++ {
+        fmt.Println(i)
+    }
+}</code></pre>
+<p>Now the conditional expression also contains two other statements with semicolons between them. First we have the variable initialization, then we have the condition to check each time and finally we “increment” the variable. (adding 1 to a variable is so common that we have a special operator: <code class="calibre8">++</code>. Similarly subtracting 1 can be done with <code class="calibre8">--</code>)</p>
+<p>We will see additional ways of using the for loop in later chapters.</p>
+<h3 id="part0005.html#section2" class="calibre7">If</h3>
+<p>Let's modify the program we just wrote so that instead of just printing the numbers 1-10 on each line it also specifies whether or not the number is even or odd. Like this:</p>
+<pre class="calibre10"><code>1 odd
+2 even
+3 odd
+4 even
+5 odd
+6 even
+7 odd
+8 even
+9 odd
+10 even</code></pre>
+<p>First we need a way of determining whether or not a number is even or odd. An easy way to tell is to divide the number by 2. If you have nothing left over then the number is even, otherwise it's odd. So how do we find the remainder after division in Go? We use the <code class="calibre8">%</code> operator. <code class="calibre8">1 % 2</code> equals <code class="calibre8">1</code>, <code class="calibre8">2 % 2</code> equals <code class="calibre8">0</code>, <code class="calibre8">3 % 2</code> equals <code class="calibre8">1</code> and so on.</p>
+<p>Next we need a way of choosing to do different things based on a condition. For that we use the <code class="calibre8">if</code> statement:</p>
+<pre class="calibre10"><code>if i % 2 == 0 {
+  // even
+} else {
+  // odd
+}</code></pre>
+<p>An <code class="calibre8">if</code> statement is similar to a <code class="calibre8">for</code> statement in that it has a condition followed by a block. If statements also have an optional <code class="calibre8">else</code> part. If the condition evaluates to <code class="calibre8">true</code> then the block after the condition is run, otherwise either the block is skipped or if the <code class="calibre8">else</code> block is present that block is run.</p>
+<p>If statements can also have <code class="calibre8">else if</code> parts:</p>
+<pre class="calibre10"><code>if i % 2 == 0 {
+    // divisible by 2
+} else if i % 3 == 0 {
+    // divisible by 3
+} else if i % 4 == 0 {
+    // divisible by 4
+}</code></pre>
+<p>The conditions are checked top down and the first one to result in true will have its associated block executed. None of the other blocks will execute, even if their conditions also pass. (So for example the number 8 is divisible by both 4 and 2, but the <code class="calibre8">// divisible by 4</code> block will never execute because the <code class="calibre8">// divisible by 2</code> block is done first)</p>
+<p>Putting it all together we have:</p>
+<pre class="calibre10"><code>func main() {
+    for i := 1; i &lt;= 10; i++ {
+       if i % 2 == 0 {
+            fmt.Println(i, &quot;even&quot;)
+        } else {
+            fmt.Println(i, &quot;odd&quot;)
+        }
+    }
+}</code></pre>
+<p>Let's walk through this program:</p>
+<ul>
+<li>Create a variable <code class="calibre8">i</code> of type <code class="calibre8">int</code> and give it the value <code class="calibre8">1</code></li>
+<li>Is <code class="calibre8">i</code> less than or equal to <code class="calibre8">10</code>? Yes: jump to the block</li>
+<li>Is the remainder of <code class="calibre8">i</code> ÷ <code class="calibre8">2</code> equal to <code class="calibre8">0</code>? No: jump to the <code class="calibre8">else</code> block</li>
+<li>Print <code class="calibre8">i</code> followed by <code class="calibre8">odd</code></li>
+<li>Increment <code class="calibre8">i</code> (the statement after the condition)</li>
+<li>Is <code class="calibre8">i</code> less than or equal to <code class="calibre8">10</code>? Yes: jump to the block</li>
+<li>Is the remainder of <code class="calibre8">i</code> ÷ <code class="calibre8">2</code> equal to <code class="calibre8">0</code>? Yes: jump to the <code class="calibre8">if</code> block</li>
+<li>Print <code class="calibre8">i</code> followed by <code class="calibre8">even</code></li>
+<li>…<br />
+</li>
+</ul>
+<p>The remainder operator, while rarely seen outside of elementary school, turns out to be really useful when programming. You'll see it turn up everywhere from zebra striping tables to partitioning data sets.</p>
+<h3 id="part0005.html#section3" class="calibre7">Switch</h3>
+<p>Suppose we wanted to write a program that printed the English names for numbers. Using what we've learned so far we might start by doing this:</p>
+<pre class="calibre10"><code>if i == 0 { 
+    fmt.Println(&quot;Zero&quot;) 
+} else if i == 1 {
+    fmt.Println(&quot;One&quot;)
+} else if i == 2 {
+    fmt.Println(&quot;Two&quot;)
+} else if i == 3 {
+    fmt.Println(&quot;Three&quot;)
+} else if i == 4 { 
+    fmt.Println(&quot;Four&quot;)
+} else if i == 5 {
+    fmt.Println(&quot;Five&quot;)
+}</code></pre>
+<p>Since writing a program in this way would be pretty tedious Go provides another statement to make this easier: the <code class="calibre8">switch</code> statement. We can rewrite our program to look like this:</p>
+<pre class="calibre10"><code>switch i {
+case 0: fmt.Println(&quot;Zero&quot;)
+case 1: fmt.Println(&quot;One&quot;)
+case 2: fmt.Println(&quot;Two&quot;)
+case 3: fmt.Println(&quot;Three&quot;)
+case 4: fmt.Println(&quot;Four&quot;)
+case 5: fmt.Println(&quot;Five&quot;)
+default: fmt.Println(&quot;Unknown Number&quot;)
+}</code></pre>
+<p>A switch statement starts with the keyword <code class="calibre8">switch</code> followed by an expression (in this case <code class="calibre8">i</code>) and then a series of <code class="calibre8">case</code>s. The value of the expression is compared to the expression following each <code class="calibre8">case</code> keyword. If they are equivalent then the statement(s) following the <code class="calibre8">:</code> is executed.</p>
+<p>Like an if statement each case is checked top down and the first one to succeed is chosen. A switch also supports a default case which will happen if none of the cases matches the value. (Kind of like the else in an if statement)</p>
+<p>These are the main control flow statements. Additional statements will be explored in later chapters.</p>
+<h4 class="calibre9">Problems</h4>
+<ul>
+<li><p>What does the following program print:</p>
+<pre class="calibre10"><code>i := 10
+if i &gt; 10 {
+    fmt.Println(&quot;Big&quot;)
+} else {
+    fmt.Println(&quot;Small&quot;)
+}</code></pre></li>
+<li>Write a program that prints out all the numbers evenly divisible by 3 between 1 and 100. (3, 6, 9, etc.)</li>
+<li>Write a program that prints the numbers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".</li>
+</ul>
+<p><span id="part0006.html"></span></p>
+<h2 id="part0006.html#5N3C1-4f426f79846848278b4673500ac196fe" class="calibre2">Arrays, Slices and Maps</h2>
+<p>In chapter 3 we learned about Go's basic types. In this chapter we will look at three more built-in types: arrays, slices and maps.</p>
+<h3 id="part0006.html#section1" class="calibre7">Arrays</h3>
+<p>An array is a numbered sequence of elements of a single type with a fixed length. In Go they look like this:</p>
+<pre class="calibre10"><code>var x [5]int</code></pre>
+<p><code class="calibre8">x</code> is an example of an array which is composed of 5 <code class="calibre8">int</code>s. Try running the following program:</p>
+<pre class="calibre10"><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    var x [5]int
+    x[4] = 100
+    fmt.Println(x)
+}</code></pre>
+<p>You should see this:</p>
+<pre class="calibre10"><code>[0 0 0 0 100]</code></pre>
+<p><code class="calibre8">x[4] = 100</code> should be read “set the 5th element of the array x to 100”. It might seem strange that <code class="calibre8">x[4]</code> represents the 5th element instead of the 4th but like strings, arrays are indexed starting from 0. Arrays are accessed in a similar way. We could change <code class="calibre8">fmt.Println(x)</code> to <code class="calibre8">fmt.Println(x[4])</code> and we would get 100.</p>
+<p>Here's an example program that uses arrays:</p>
+<pre class="calibre10"><code>func main() {
+    var x [5]float64
+    x[0] = 98
+    x[1] = 93
+    x[2] = 77
+    x[3] = 82
+    x[4] = 83
+    
+    var total float64 = 0
+    for i := 0; i &lt; 5; i++ {
+        total += x[i]
+    }
+    fmt.Println(total / 5)
+}</code></pre>
+<p>This program computes the average of a series of test scores. If you run it you should see <code class="calibre8">86.6</code>. Let's walk through the program:</p>
+<ul>
+<li>First we create an array of length 5 to hold our test scores, then we fill up each element with a grade</li>
+<li>Next we setup a for loop to compute the total score</li>
+<li>Finally we divide the total score by the number of elements to find the average</li>
+</ul>
+<p>This program works, but Go provides some features we can use to improve it. First these 2 parts: <code class="calibre8">i &lt; 5</code> and <code class="calibre8">total / 5</code> should throw up a red flag for us. Say we changed the number of grades from 5 to 6. We would also need to change both of these parts. It would be better to use the length of the array instead:</p>
+<pre class="calibre10"><code>    var total float64 = 0
+    for i := 0; i &lt; len(x); i++ {
+        total += x[i]
+    }
+    fmt.Println(total / len(x))</code></pre>
+<p>Go ahead and make these changes and run the program. You should get an error:</p>
+<pre class="calibre10"><code>$ go run tmp.go
+# command-line-arguments
+.\tmp.go:19: invalid operation: total / 5 (mismatched types float64 and int)</code></pre>
+<p>The issue here is that <code class="calibre8">len(x)</code> and <code class="calibre8">total</code> have different types. <code class="calibre8">total</code> is a <code class="calibre8">float64</code> while <code class="calibre8">len(x)</code> is an <code class="calibre8">int</code>. So we need to convert <code class="calibre8">len(x)</code> into a <code class="calibre8">float64</code>:</p>
+<pre class="calibre10"><code>fmt.Println(total / float64(len(x)))</code></pre>
+<p>This is an example of a type conversion. In general to convert between types you use the type name like a function.</p>
+<p>Another change to the program we can make is to use a special form of the for loop:</p>
+<pre class="calibre10"><code>var total float64 = 0
+for i, value := range x {
+    total += value
+}
+fmt.Println(total / float64(len(x)))</code></pre>
+<p>In this for loop <code class="calibre8">i</code> represents the current position in the array and <code class="calibre8">value</code> is the same as <code class="calibre8">x[i]</code>. We use the keyword <code class="calibre8">range</code> followed by the name of the variable we want to loop over.</p>
+<p>Running this program will result in another error:</p>
+<pre class="calibre10"><code>$ go run tmp.go
+# command-line-arguments
+.\tmp.go:16: i declared and not used</code></pre>
+<p>The Go compiler won't allow you to create variables that you never use. Since we don't use <code class="calibre8">i</code> inside of our loop we need to change it to this:</p>
+<pre class="calibre10"><code>var total float64 = 0
+for _, value := range x {
+    total += value
+}
+fmt.Println(total / float64(len(x)))</code></pre>
+<p>A single <code class="calibre8">_</code> (underscore) is used to tell the compiler that we don't need this. (In this case we don't need the iterator variable)</p>
+<p>Go also provides a shorter syntax for creating arrays:</p>
+<pre class="calibre10"><code>x := [5]float64{ 98, 93, 77, 82, 83 }</code></pre>
+<p>We no longer need to specify the type because Go can figure it out. Sometimes arrays like this can get too long to fit on one line, so Go allows you to break it up like this:</p>
+<pre class="calibre10"><code>x := [5]float64{ 
+    98, 
+    93, 
+    77, 
+    82, 
+    83,
+}</code></pre>
+<p>Notice the extra trailing <code class="calibre8">,</code> after <code class="calibre8">83</code>. This is required by Go and it allows us to easily remove an element from the array by commenting out the line:</p>
+<pre class="calibre10"><code>x := [4]float64{ 
+    98, 
+    93, 
+    77, 
+    82, 
+    // 83,
+}</code></pre>
+<h3 id="part0006.html#section2" class="calibre7">Slices</h3>
+<p>A slice is a segment of an array. Like arrays slices are indexable and have a length. Unlike arrays this length is allowed to change. Here's an example of a slice:</p>
+<pre class="calibre10"><code> var x []float64</code></pre>
+<p>The only difference between this and an array is the missing length between the brackets. In this case <code class="calibre8">x</code> has been created with a length of <code class="calibre8">0</code>.</p>
+<p>If you want to create a slice you should use the built-in <code class="calibre8">make</code> function:</p>
+<pre class="calibre10"><code>x := make([]float64, 5)</code></pre>
+<p>This creates a slice that is associated with an underlying <code class="calibre8">float64</code> array of length 5. Slices are always associated with some array, and although they can never be longer than the array, they can be smaller. The <code class="calibre8">make</code> function also allows a 3rd parameter:</p>
+<pre class="calibre10"><code>x := make([]float64, 5, 10)</code></pre>
+<p>10 represents the capacity of the underlying array which the slice points to:</p>
+<p><img src="images/00008.jpeg" class="block" />Another way to create slices is to use the <code class="calibre8">[low : high]</code> expression:</p>
+<pre class="calibre10"><code>arr := [5]float64{1,2,3,4,5}
+x := arr[0:5]</code></pre>
+<p><code class="calibre8">low</code> is the index of where to start the slice and <code class="calibre8">high</code> is the index where to end it (but not including the index itself). For example while <code class="calibre8">arr[0:5]</code> returns <code class="calibre8">[1,2,3,4,5]</code>, <code class="calibre8">arr[1:4]</code> returns <code class="calibre8">[2,3,4]</code>.</p>
+<p>For convenience we are also allowed to omit <code class="calibre8">low</code>, <code class="calibre8">high</code> or even both <code class="calibre8">low</code> and <code class="calibre8">high</code>. <code class="calibre8">arr[0:]</code> is the same as <code class="calibre8">arr[0:len(arr)]</code>, <code class="calibre8">arr[:5]</code> is the same as <code class="calibre8">arr[0:5]</code> and <code class="calibre8">arr[:]</code> is the same as <code class="calibre8">arr[0:len(arr)]</code>.</p>
+<h4 class="calibre9">Slice Functions</h4>
+<p>Go includes two built-in functions to assist with slices: <code class="calibre8">append</code> and <code class="calibre8">copy</code>. Here is an example of <code class="calibre8">append</code>:</p>
+<pre class="calibre10"><code>func main() {
+    slice1 := []int{1,2,3}
+    slice2 := append(slice1, 4, 5)
+    fmt.Println(slice1, slice2)
+}</code></pre>
+<p>After running this program <code class="calibre8">slice1</code> has <code class="calibre8">[1,2,3]</code> and <code class="calibre8">slice2</code> has <code class="calibre8">[1,2,3,4,5]</code>. <code class="calibre8">append</code> creates a new slice by taking an existing slice (the first argument) and appending all the following arguments to it.</p>
+<p>Here is an example of copy:</p>
+<pre class="calibre10"><code>func main() {
+    slice1 := []int{1,2,3}
+    slice2 := make([]int, 2)
+    copy(slice2, slice1)
+    fmt.Println(slice1, slice2)
+}</code></pre>
+<p>After running this program <code class="calibre8">slice1</code> has <code class="calibre8">[1,2,3]</code> and <code class="calibre8">slice2</code> has <code class="calibre8">[1,2]</code>. The contents of <code class="calibre8">slice1</code> are copied into <code class="calibre8">slice2</code>, but since <code class="calibre8">slice2</code> has room for only two elements only the first two elements of <code class="calibre8">slice1</code> are copied.</p>
+<h3 id="part0006.html#section3" class="calibre7">Maps</h3>
+<p>A map is an unordered collection of key-value pairs. Also known as an associative array, a hash table or a dictionary, maps are used to look up a value by its associated key. Here's an example of a map in Go:</p>
+<pre class="calibre10"><code>var x map[string]int</code></pre>
+<p>The map type is represented by the keyword <code class="calibre8">map</code>, followed by the key type in brackets and finally the value type. If you were to read this out loud you would say “<code class="calibre8">x</code> is a map of <code class="calibre8">string</code>s to <code class="calibre8">int</code>s.”</p>
+<p>Like arrays and slices maps can be accessed using brackets. Try running the following program:</p>
+<pre class="calibre10"><code>var x map[string]int
+x[&quot;key&quot;] = 10
+fmt.Println(x)</code></pre>
+<p>You should see an error similar to this:</p>
+<pre class="calibre10"><code>panic: runtime error: assignment to entry in nil map
+
+goroutine 1 [running]:
+main.main()
+  main.go:7 +0x4d
+
+goroutine 2 [syscall]:
+created by runtime.main
+        C:/Users/ADMINI~1/AppData/Local/Temp/2/bindi
+t269497170/go/src/pkg/runtime/proc.c:221
+exit status 2</code></pre>
+<p>Up till now we have only seen compile-time errors. This is an example of a runtime error. As the name would imply, runtime errors happen when you run the program, while compile-time errors happen when you try to compile the program.</p>
+<p>The problem with our program is that maps have to be initialized before they can be used. We should have written this:</p>
+<pre class="calibre10"><code>x := make(map[string]int)
+x[&quot;key&quot;] = 10
+fmt.Println(x[&quot;key&quot;])</code></pre>
+<p>If you run this program you should see <code class="calibre8">10</code> displayed. The statement <code class="calibre8">x["key"] = 10</code> is similar to what we saw with arrays but the key, instead of being an integer, is a string because the map's key type is <code class="calibre8">string</code>. We can also create maps with a key type of <code class="calibre8">int</code>:</p>
+<pre class="calibre10"><code>x := make(map[int]int)
+x[1] = 10
+fmt.Println(x[1])</code></pre>
+<p>This looks very much like an array but there are a few differences. First the length of a map (found by doing <code class="calibre8">len(x)</code>) can change as we add new items to it. When first created it has a length of 0, after <code class="calibre8">x[1] = 10</code> it has a length of 1. Second maps are not sequential. We have <code class="calibre8">x[1]</code>, and with an array that would imply there must be an <code class="calibre8">x[0]</code>, but maps don't have this requirement.</p>
+<p>We can also delete items from a map using the built-in <code class="calibre8">delete</code> function:</p>
+<pre class="calibre10"><code>delete(x, 1)</code></pre>
+<p>Let's look at an example program that uses a map:</p>
+<pre class="calibre10"><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    elements := make(map[string]string)
+    elements[&quot;H&quot;] = &quot;Hydrogen&quot;
+    elements[&quot;He&quot;] = &quot;Helium&quot;
+    elements[&quot;Li&quot;] = &quot;Lithium&quot;
+    elements[&quot;Be&quot;] = &quot;Beryllium&quot;
+    elements[&quot;B&quot;] = &quot;Boron&quot;
+    elements[&quot;C&quot;] = &quot;Carbon&quot;
+    elements[&quot;N&quot;] = &quot;Nitrogen&quot;
+    elements[&quot;O&quot;] = &quot;Oxygen&quot;
+    elements[&quot;F&quot;] = &quot;Fluorine&quot;
+    elements[&quot;Ne&quot;] = &quot;Neon&quot;
+    
+    fmt.Println(elements[&quot;Li&quot;])
+}</code></pre>
+<p><code class="calibre8">elements</code> is a map that represents the first 10 chemical elements indexed by their symbol. This is a very common way of using maps: as a lookup table or a dictionary. Suppose we tried to look up an element that doesn't exist:</p>
+<pre class="calibre10"><code>fmt.Println(elements[&quot;Un&quot;])</code></pre>
+<p>If you run this you should see nothing returned. Technically a map returns the zero value for the value type (which for strings is the empty string). Although we could check for the zero value in a condition (<code class="calibre8">elements["Un"] == ""</code>) Go provides a better way:</p>
+<pre class="calibre10"><code>name, ok := elements[&quot;Un&quot;]
+fmt.Println(name, ok)</code></pre>
+<p>Accessing an element of a map can return two values instead of just one. The first value is the result of the lookup, the second tells us whether or not the lookup was successful. In Go we often see code like this:</p>
+<pre class="calibre10"><code>if name, ok := elements[&quot;Un&quot;]; ok {    
+    fmt.Println(name, ok)
+}</code></pre>
+<p>First we try to get the value from the map, then if it's successful we run the code inside of the block.</p>
+<p>Like we saw with arrays there is also a shorter way to create maps:</p>
+<pre class="calibre10"><code>elements := map[string]string{
+    &quot;H&quot;: &quot;Hydrogen&quot;,
+    &quot;He&quot;: &quot;Helium&quot;,
+    &quot;Li&quot;: &quot;Lithium&quot;,
+    &quot;Be&quot;: &quot;Beryllium&quot;,
+    &quot;B&quot;: &quot;Boron&quot;,
+    &quot;C&quot;: &quot;Carbon&quot;,
+    &quot;N&quot;: &quot;Nitrogen&quot;,
+    &quot;O&quot;: &quot;Oxygen&quot;,
+    &quot;F&quot;: &quot;Fluorine&quot;,
+    &quot;Ne&quot;: &quot;Neon&quot;,
+}</code></pre>
+<p>Maps are also often used to store general information. Let's modify our program so that instead of just storing the name of the element we store its standard state (state at room temperature) as well:</p>
+<pre class="calibre10"><code>func main() {
+    elements := map[string]map[string]string{
+        &quot;H&quot;: map[string]string{
+            &quot;name&quot;:&quot;Hydrogen&quot;, 
+            &quot;state&quot;:&quot;gas&quot;,
+        },
+        &quot;He&quot;: map[string]string{
+            &quot;name&quot;:&quot;Helium&quot;, 
+            &quot;state&quot;:&quot;gas&quot;,
+        },
+        &quot;Li&quot;: map[string]string{
+            &quot;name&quot;:&quot;Lithium&quot;, 
+            &quot;state&quot;:&quot;solid&quot;,
+        },
+        &quot;Be&quot;: map[string]string{
+            &quot;name&quot;:&quot;Beryllium&quot;, 
+            &quot;state&quot;:&quot;solid&quot;,
+        },
+        &quot;B&quot;:  map[string]string{
+            &quot;name&quot;:&quot;Boron&quot;,
+            &quot;state&quot;:&quot;solid&quot;,
+        },
+        &quot;C&quot;:  map[string]string{
+            &quot;name&quot;:&quot;Carbon&quot;,
+            &quot;state&quot;:&quot;solid&quot;,
+        },
+        &quot;N&quot;:  map[string]string{
+            &quot;name&quot;:&quot;Nitrogen&quot;,
+            &quot;state&quot;:&quot;gas&quot;,
+        },
+        &quot;O&quot;:  map[string]string{
+            &quot;name&quot;:&quot;Oxygen&quot;,
+            &quot;state&quot;:&quot;gas&quot;,
+        },
+        &quot;F&quot;:  map[string]string{
+            &quot;name&quot;:&quot;Fluorine&quot;,
+            &quot;state&quot;:&quot;gas&quot;,
+        },
+        &quot;Ne&quot;:  map[string]string{
+            &quot;name&quot;:&quot;Neon&quot;,
+            &quot;state&quot;:&quot;gas&quot;,
+        },
+    }
+
+    if el, ok := elements[&quot;Li&quot;]; ok {    
+        fmt.Println(el[&quot;name&quot;], el[&quot;state&quot;])
+    }
+}</code></pre>
+<p>Notice that the type of our map has changed from <code class="calibre8">map[string]string</code> to <code class="calibre8">map[string]map[string]string</code>. We now have a map of strings to maps of strings to strings. The outer map is used as a lookup table based on the element's symbol, while the inner maps are used to store general information about the elements. Although maps are often used like this, in chapter 9 we will see a better way to store structured information.</p>
+<h4 class="calibre9">Problems</h4>
+<ul>
+<li>How do you access the 4th element of an array or slice?</li>
+<li>What is the length of a slice created using: <code class="calibre8">make([]int, 3, 9)</code>?</li>
+<li><p>Given the array:</p>
+<pre class="calibre10"><code>x := [6]string{&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;,&quot;e&quot;,&quot;f&quot;}</code></pre>
+<p>what would <code class="calibre8">x[2:5]</code> give you?</p></li>
+<li><p>Write a program that finds the smallest number in this list:</p>
+<pre class="calibre10"><code>x := []int{
+    48,96,86,68,
+    57,82,63,70,
+    37,34,83,27,
+    19,97, 9,17,
+}</code></pre></li>
+</ul>
+<p><span id="part0007.html"></span></p>
+<h2 id="part0007.html#6LJU1-4f426f79846848278b4673500ac196fe" class="calibre2">Functions</h2>
+<p>A function is an independent section of code that maps zero or more input parameters to zero or more output parameters. Functions (also known as procedures or subroutines) are often represented as a black box: (the black box represents the function)</p>
+<p><img src="images/00009.jpeg" class="block" />Until now the programs we have written in Go have used only one function:</p>
+<pre class="calibre10"><code>func main() {}</code></pre>
+<p>We will now begin writing programs that use more than one function.</p>
+<h3 id="part0007.html#section1" class="calibre7">Your Second Function</h3>
+<p>Remember this program from chapter 6:</p>
+<pre class="calibre10"><code>func main() {
+    xs := []float64{98,93,77,82,83}
+    
+    total := 0.0
+    for _, v := range xs {
+        total += v
+    }
+    fmt.Println(total / float64(len(xs)))
+}</code></pre>
+<p>This program computes the average of a series of numbers. Finding the average like this is a very general problem, so its an ideal candidate for definition as a function.</p>
+<p>The <code class="calibre8">average</code> function will need to take in a slice of <code class="calibre8">float64</code>s and return one <code class="calibre8">float64</code>. Insert this before the <code class="calibre8">main</code> function:</p>
+<pre class="calibre10"><code>func average(xs []float64) float64 {
+    panic(&quot;Not Implemented&quot;)
+}</code></pre>
+<p>Functions start with the keyword <code class="calibre8">func</code>, followed by the function's name. The parameters (inputs) of the function are defined like this: <code class="calibre8">name type, name type, …</code>. Our function has one parameter (the list of scores) that we named <code class="calibre8">xs</code>. After the parameters we put the return type. Collectively the parameters and the return type are known as the function's signature.</p>
+<p>Finally we have the function body which is a series of statements between curly braces. In this body we invoke a built-in function called <code class="calibre8">panic</code> which causes a run time error. (We'll see more about panic later in this chapter) Writing functions can be difficult so it's a good idea to break the process into manageable chunks, rather than trying to implement the entire thing in one large step.</p>
+<p>Now lets take the code from our main function and move it into our average function:</p>
+<pre class="calibre10"><code>func average(xs []float64) float64 {    
+    total := 0.0
+    for _, v := range xs {
+        total += v
+    }
+    return total / float64(len(xs))
+}</code></pre>
+<p>Notice that we changed the <code class="calibre8">fmt.Println</code> to be a <code class="calibre8">return</code> instead. The return statement causes the function to immediately stop and return the value after it to the function that called this one. Modify <code class="calibre8">main</code> to look like this:</p>
+<pre class="calibre10"><code>func main() {
+    xs := []float64{98,93,77,82,83}
+    fmt.Println(average(xs))
+}</code></pre>
+<p>Running this program should give you exactly the same result as the original. A few things to keep in mind:</p>
+<ul>
+<li>The names of the parameters don't have to match in the calling function. For example we could have done this:</li>
+</ul>
+<pre class="calibre10"><code>func main() {
+    someOtherName := []float64{98,93,77,82,83}
+    fmt.Println(average(someOtherName))
+}</code></pre>
+<ul>
+<li>Functions don't have access to anything in the calling function. This won't work:</li>
+</ul>
+<pre class="calibre10"><code>func f() {
+    fmt.Println(x)
+}
+func main() {
+    x := 5
+    f()
+}</code></pre>
+<ul>
+</ul>
+<pre class="calibre10"><code>func f(x int) {
+    fmt.Println(x)
+}
+func main() {
+    x := 5
+    f(x)
+}</code></pre>
+<ul>
+</ul>
+<pre class="calibre10"><code>var x int = 5
+func f() {
+    fmt.Println(x)
+}
+func main() {
+    f()
+}</code></pre>
+<ul>
+<li>Functions are built up in a “stack”. Suppose we had this program:</li>
+</ul>
+<pre class="calibre10"><code>func main() {
+    fmt.Println(f1())
+}
+func f1() int {
+    return f2()
+}
+func f2() int {
+    return 1
+}</code></pre>
+<ul>
+<li><p>We can also name the return type:</p>
+<pre class="calibre10"><code>func f2() (r int) {
+    r = 1
+    return
+}</code></pre></li>
+</ul>
+<h3 id="part0007.html#section2" class="calibre7">Returning Multiple Values</h3>
+<p>Go is also capable of returning multiple values from a function:</p>
+<pre class="calibre10"><code>func f() (int, int) {
+    return 5, 6
+}
+
+func main() {
+    x, y := f()
+}</code></pre>
+<p>Three changes are necessary: change the return type to contain multiple types separated by <code class="calibre8">,</code>, change the expression after the return so that it contains multiple expressions separated by <code class="calibre8">,</code> and finally change the assignment statement so that multiple values are on the left side of the <code class="calibre8">:=</code> or <code class="calibre8">=</code>.</p>
+<p>Multiple values are often used to return an error value along with the result (<code class="calibre8">x, err := f()</code>), or a boolean to indicate success (<code class="calibre8">x, ok := f()</code>).</p>
+<h3 id="part0007.html#section3" class="calibre7">Variadic Functions</h3>
+<p>There is a special form available for the last parameter in a Go function:</p>
+<pre class="calibre10"><code>func add(args ...int) int {
+    total := 0
+    for _, v := range args {
+        total += v
+    }
+    return total
+}
+func main() {
+    fmt.Println(add(1,2,3))
+}</code></pre>
+<p>By using <code class="calibre8">...</code> before the type name of the last parameter you can indicate that it takes zero or more of those parameters. In this case we take zero or more <code class="calibre8">int</code>s. We invoke the function like any other function except we can pass as many <code class="calibre8">int</code>s as we want.</p>
+<p>This is precisely how the <code class="calibre8">fmt.Println</code> function is implemented:</p>
+<pre class="calibre10"><code>func Println(a ...interface{}) (n int, err error)</code></pre>
+<p>The <code class="calibre8">Println</code> function takes any number of values of any type. (The special <code class="calibre8">interface{}</code> type will be discussed in more detail in chapter 9)</p>
+<p>We can also pass a slice of <code class="calibre8">int</code>s by following the slice with <code class="calibre8">...</code>:</p>
+<pre class="calibre10"><code>func main() {
+    xs := []int{1,2,3}
+    fmt.Println(add(xs...))
+}</code></pre>
+<h3 id="part0007.html#section4" class="calibre7">Closure</h3>
+<p>It is possible to create functions inside of functions:</p>
+<pre class="calibre10"><code>func main() {
+    add := func(x, y int) int {
+        return x + y
+    }
+    fmt.Println(add(1,1))    
+}</code></pre>
+<p><code class="calibre8">add</code> is a local variable that has the type <code class="calibre8">func(int, int) int</code> (a function that takes two <code class="calibre8">int</code>s and returns an <code class="calibre8">int</code>). When you create a local function like this it also has access to other local variables (remember scope from chapter 4):</p>
+<pre class="calibre10"><code>func main() {
+    x := 0
+    increment := func() int {
+        x++
+        return x
+    }
+    fmt.Println(increment())
+    fmt.Println(increment())    
+}</code></pre>
+<p><code class="calibre8">increment</code> adds 1 to the variable <code class="calibre8">x</code> which is defined in the <code class="calibre8">main</code> function's scope. This <code class="calibre8">x</code> variable can be accessed and modified by the <code class="calibre8">increment</code> function. This is why the first time we call <code class="calibre8">increment</code> we see 1 displayed, but the second time we call it we see 2 displayed.</p>
+<p>A function like this together with the non-local variables it references is known as a closure. In this case <code class="calibre8">increment</code> and the variable <code class="calibre8">x</code> form the closure.</p>
+<p>One way to use closure is by writing a function which returns another function which – when called – can generate a sequence of numbers. For example here's how we might generate all the even numbers:</p>
+<pre class="calibre10"><code>func makeEvenGenerator() func() uint {
+    i := uint(0)
+    return func() (ret uint) {
+        ret = i
+        i += 2
+        return
+    }
+}
+func main() {
+    nextEven := makeEvenGenerator()
+    fmt.Println(nextEven()) // 0
+    fmt.Println(nextEven()) // 2
+    fmt.Println(nextEven()) // 4
+}</code></pre>
+<p><code class="calibre8">makeEvenGenerator</code> returns a function which generates even numbers. Each time it's called it adds 2 to the local <code class="calibre8">i</code> variable which – unlike normal local variables – persists between calls.</p>
+<h3 id="part0007.html#section5" class="calibre7">Recursion</h3>
+<p>Finally a function is able to call itself. Here is one way to compute the factorial of a number:</p>
+<pre class="calibre10"><code>func factorial(x uint) uint {
+    if x == 0 {
+        return 1
+    }
+
+    return x * factorial(x-1)
+}</code></pre>
+<p><code class="calibre8">factorial</code> calls itself, which is what makes this function recursive. In order to better understand how this function works, lets walk through <code class="calibre8">factorial(2)</code>:</p>
+<ul>
+<li>Is <code class="calibre8">x == 0</code>? No. (<code class="calibre8">x</code> is 2)</li>
+<li>Find the factorial of <code class="calibre8">x – 1</code>
+<ul>
+<li>Is <code class="calibre8">x == 0</code>? No. (<code class="calibre8">x</code> is 1)</li>
+<li>Find the <code class="calibre8">factorial</code> of <code class="calibre8">x – 1</code>
+<ul>
+<li>Is <code class="calibre8">x == 0</code>? Yes, return 1.</li>
+</ul></li>
+<li>return <code class="calibre8">1 * 1</code></li>
+</ul></li>
+<li>return <code class="calibre8">2 * 1</code></li>
+</ul>
+<p>Closure and recursion are powerful programming techniques which form the basis of a paradigm known as functional programming. Most people will find functional programming more difficult to understand than an approach based on for loops, if statements, variables and simple functions.</p>
+<h3 id="part0007.html#section6" class="calibre7">Defer, Panic &amp; Recover</h3>
+<p>Go has a special statement called <code class="calibre8">defer</code> which schedules a function call to be run after the function completes. Consider the following example:</p>
+<pre class="calibre10"><code>package main
+
+import &quot;fmt&quot;
+
+func first() {
+    fmt.Println(&quot;1st&quot;)
+}
+func second() {
+    fmt.Println(&quot;2nd&quot;)
+}
+func main() {
+    defer second()
+    first()
+}</code></pre>
+<p>This program prints <code class="calibre8">1st</code> followed by <code class="calibre8">2nd</code>. Basically defer moves the call to <code class="calibre8">second</code> to the end of the function:</p>
+<pre class="calibre10"><code>func main() {
+    first()
+    second()
+}</code></pre>
+<p><code class="calibre8">defer</code> is often used when resources need to be freed in some way. For example when we open a file we need to make sure to close it later. With <code class="calibre8">defer</code>:</p>
+<pre class="calibre10"><code>f, _ := os.Open(filename)
+defer f.Close()</code></pre>
+<p>This has 3 advantages: (1) it keeps our <code class="calibre8">Close</code> call near our <code class="calibre8">Open</code> call so its easier to understand, (2) if our function had multiple return statements (perhaps one in an <code class="calibre8">if</code> and one in an <code class="calibre8">else</code>) <code class="calibre8">Close</code> will happen before both of them and (3) deferred functions are run even if a run-time panic occurs.</p>
+<h4 class="calibre9">Panic &amp; Recover</h4>
+<p>Earlier we created a function that called the <code class="calibre8">panic</code> function to cause a run time error. We can handle a run-time panic with the built-in <code class="calibre8">recover</code> function. <code class="calibre8">recover</code> stops the panic and returns the value that was passed to the call to <code class="calibre8">panic</code>. We might be tempted to use it like this:</p>
+<pre class="calibre10"><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    panic(&quot;PANIC&quot;)
+    str := recover()
+    fmt.Println(str)
+}</code></pre>
+<p>But the call to <code class="calibre8">recover</code> will never happen in this case because the call to <code class="calibre8">panic</code> immediately stops execution of the function. Instead we have to pair it with <code class="calibre8">defer</code>:</p>
+<pre class="calibre10"><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    defer func() {    
+        str := recover()
+        fmt.Println(str)
+    }()
+    panic(&quot;PANIC&quot;)
+}</code></pre>
+<p>A panic generally indicates a programmer error (for example attempting to access an index of an array that's out of bounds, forgetting to initialize a map, etc.) or an exceptional condition that there's no easy way to recover from. (Hence the name “panic”)</p>
+<h4 class="calibre9">Problems</h4>
+<ul>
+<li><code class="calibre8">sum</code> is a function which takes a slice of numbers and adds them together. What would its function signature look like in Go?</li>
+<li>Write a function which takes an integer and halves it and returns true if it was even or false if it was odd. For example <code class="calibre8">half(1)</code> should return <code class="calibre8">(0, false)</code> and <code class="calibre8">half(2)</code> should return <code class="calibre8">(1, true)</code>.</li>
+<li>Write a function with one variadic parameter that finds the greatest number in a list of numbers.</li>
+<li>Using <code class="calibre8">makeEvenGenerator</code> as an example, write a <code class="calibre8">makeOddGenerator</code> function that generates odd numbers.</li>
+<li>The Fibonacci sequence is defined as: <code class="calibre8">fib(0) = 0</code>, <code class="calibre8">fib(1) = 1</code>, <code class="calibre8">fib(n) = fib(n-1) + fib(n-2)</code>. Write a recursive function which can find <code class="calibre8">fib(n)</code>.</li>
+<li>What are defer, panic and recover? How do you recover from a run-time panic?</li>
+</ul>
+<p><span id="part0008.html"></span></p>
+<h2 id="part0008.html#7K4G1-4f426f79846848278b4673500ac196fe" class="calibre2">Pointers</h2>
+<p>When we call a function that takes an argument, that argument is copied to the function:</p>
+<pre class="calibre10"><code>func zero(x int) {
+    x = 0
+}
+func main() {
+    x := 5
+    zero(x)
+    fmt.Println(x) // x is still 5
+}</code></pre>
+<p>In this program the <code class="calibre8">zero</code> function will not modify the original <code class="calibre8">x</code> variable in the <code class="calibre8">main</code> function. But what if we wanted to? One way to do this is to use a special data type known as a pointer:</p>
+<pre class="calibre10"><code>func zero(xPtr *int) {
+    *xPtr = 0
+}
+func main() {
+    x := 5
+    zero(&amp;x)
+    fmt.Println(x) // x is 0
+}</code></pre>
+<p>Pointers reference a location in memory where a value is stored rather than the value itself. (They point to something else) By using a pointer (<code class="calibre8">*int</code>) the <code class="calibre8">zero</code> function is able to modify the original variable.</p>
+<h3 id="part0008.html#section1" class="calibre7">The * and &amp; operators</h3>
+<p>In Go a pointer is represented using the <code class="calibre8">*</code> (asterisk) character followed by the type of the stored value. In the <code class="calibre8">zero</code> function <code class="calibre8">xPtr</code> is a pointer to an <code class="calibre8">int</code>.</p>
+<p><code class="calibre8">*</code> is also used to “dereference” pointer variables. Dereferencing a pointer gives us access to the value the pointer points to. When we write <code class="calibre8">*xPtr = 0</code> we are saying “store the <code class="calibre8">int</code> 0 in the memory location <code class="calibre8">xPtr</code> refers to”. If we try <code class="calibre8">xPtr = 0</code> instead we will get a compiler error because <code class="calibre8">xPtr</code> is not an <code class="calibre8">int</code> it's a <code class="calibre8">*int</code>, which can only be given another <code class="calibre8">*int</code>.</p>
+<p>Finally we use the <code class="calibre8">&amp;</code> operator to find the address of a variable. <code class="calibre8">&amp;x</code> returns a <code class="calibre8">*int</code> (pointer to an int) because <code class="calibre8">x</code> is an <code class="calibre8">int</code>. This is what allows us to modify the original variable. <code class="calibre8">&amp;x</code> in <code class="calibre8">main</code> and <code class="calibre8">xPtr</code> in <code class="calibre8">zero</code> refer to the same memory location.</p>
+<h3 id="part0008.html#section2" class="calibre7">new</h3>
+<p>Another way to get a pointer is to use the built-in <code class="calibre8">new</code> function:</p>
+<pre class="calibre10"><code>func one(xPtr *int) {
+    *xPtr = 1
+}
+func main() {
+    xPtr := new(int)
+    one(xPtr)
+    fmt.Println(*xPtr) // x is 1
+}</code></pre>
+<p><code class="calibre8">new</code> takes a type as an argument, allocates enough memory to fit a value of that type and returns a pointer to it.</p>
+<p>In some programming languages there is a significant difference between using <code class="calibre8">new</code> and <code class="calibre8">&amp;</code>, with great care being needed to eventually delete anything created with <code class="calibre8">new</code>. Go is not like this, it's a garbage collected programming language which means memory is cleaned up automatically when nothing refers to it anymore.</p>
+<p>Pointers are rarely used with Go's built-in types, but as we will see in the next chapter, they are extremely useful when paired with structs.</p>
+<h4 class="calibre9">Problems</h4>
+<ul>
+<li>How do you get the memory address of a variable?</li>
+<li>How do you assign a value to a pointer?</li>
+<li>How do you create a new pointer?</li>
+<li><p>What is the value of x after running this program:</p>
+<pre class="calibre10"><code>func square(x *float64) {
+    *x = *x * *x
+}
+func main() {
+    x := 1.5
+    square(&amp;x)
+}</code></pre></li>
+<li>Write a program that can swap two integers (<code class="calibre8">x := 1; y := 2; swap(&amp;x, &amp;y)</code> should give you <code class="calibre8">x=2</code> and <code class="calibre8">y=1</code>).</li>
+</ul>
+<p><span id="part0009.html"></span></p>
+<h2 id="part0009.html#8IL21-4f426f79846848278b4673500ac196fe" class="calibre2">Structs and Interfaces</h2>
+<p>Although it would be possible for us to write programs only using Go's built-in data types, at some point it would become quite tedious. Consider a program that interacts with shapes:</p>
+<pre class="calibre10"><code>package main
+
+import (&quot;fmt&quot;; &quot;math&quot;)
+
+func distance(x1, y1, x2, y2 float64) float64 {
+    a := x2 – x1
+    b := y2 – y1
+    return math.Sqrt(a*a + b*b)
+}
+func rectangleArea(x1, y1, x2, y2 float64) float64 {
+    l := distance(x1, y1, x1, y2)
+    w := distance(x1, y1, x2, y1)
+    return l * w
+}
+func circleArea(x, y, r float64) float64 {
+    return math.Pi * r*r
+}
+func main() {
+    var rx1, ry1 float64 = 0, 0
+    var rx2, ry2 float64 = 10, 10
+    var cx, cy, cr float64 = 0, 0, 5
+
+    fmt.Println(rectangleArea(rx1, ry1, rx2, ry2))
+    fmt.Println(circleArea(cx, cy, cr))
+}</code></pre>
+<p>Keeping track of all the coordinates makes it difficult to see what the program is doing and will likely lead to mistakes.</p>
+<h3 id="part0009.html#section1" class="calibre7">Structs</h3>
+<p>An easy way to make this program better is to use a struct. A struct is a type which contains named fields. For example we could represent a Circle like this:</p>
+<pre class="calibre10"><code>type Circle struct {
+    x float64
+    y float64
+    r float64
+}</code></pre>
+<p>The <code class="calibre8">type</code> keyword introduces a new type. It's followed by the name of the type (<code class="calibre8">Circle</code>), the keyword <code class="calibre8">struct</code> to indicate that we are defining a <code class="calibre8">struct</code> type and a list of fields inside of curly braces. Each field has a name and a type. Like with functions we can collapse fields that have the same type:</p>
+<pre class="calibre10"><code>type Circle struct {
+    x, y, r float64
+}</code></pre>
+<h4 class="calibre9">Initialization</h4>
+<p>We can create an instance of our new Circle type in a variety of ways:</p>
+<pre class="calibre10"><code>var c Circle</code></pre>
+<p>Like with other data types, this will create a local Circle variable that is by default set to zero. For a <code class="calibre8">struct</code> zero means each of the fields is set to their corresponding zero value (<code class="calibre8">0</code> for <code class="calibre8">int</code>s, <code class="calibre8">0.0</code> for <code class="calibre8">float</code>s, <code class="calibre8">""</code> for <code class="calibre8">string</code>s, <code class="calibre8">nil</code> for pointers, …) We can also use the new function:</p>
+<pre class="calibre10"><code>c := new(Circle)</code></pre>
+<p>This allocates memory for all the fields, sets each of them to their zero value and returns a pointer. (<code class="calibre8">*Circle</code>) More often we want to give each of the fields a value. We can do this in two ways. Like this:</p>
+<pre class="calibre10"><code>c := Circle{x: 0, y: 0, r: 5}</code></pre>
+<p>Or we can leave off the field names if we know the order they were defined:</p>
+<pre class="calibre10"><code>c := Circle{0, 0, 5}</code></pre>
+<h4 class="calibre9">Fields</h4>
+<p>We can access fields using the <code class="calibre8">.</code> operator:</p>
+<pre class="calibre10"><code>fmt.Println(c.x, c.y, c.r)
+c.x = 10
+c.y = 5</code></pre>
+<p>Let's modify the <code class="calibre8">circleArea</code> function so that it uses a <code class="calibre8">Circle</code>:</p>
+<pre class="calibre10"><code>func circleArea(c Circle) float64 {
+    return math.Pi * c.r*c.r
+}</code></pre>
+<p>In main we have:</p>
+<pre class="calibre10"><code>c := Circle{0, 0, 5}
+fmt.Println(circleArea(c))</code></pre>
+<p>One thing to remember is that arguments are always copied in Go. If we attempted to modify one of the fields inside of the <code class="calibre8">circleArea</code> function, it would not modify the original variable. Because of this we would typically write the function like this:</p>
+<pre class="calibre10"><code>func circleArea(c *Circle) float64 {
+    return math.Pi * c.r*c.r
+}</code></pre>
+<p>And change main:</p>
+<pre class="calibre10"><code>c := Circle{0, 0, 5}
+fmt.Println(circleArea(&amp;c))</code></pre>
+<h3 id="part0009.html#section2" class="calibre7">Methods</h3>
+<p>Although this is better than the first version of this code, we can improve it significantly by using a special type of function known as a method:</p>
+<pre class="calibre10"><code>func (c *Circle) area() float64 {
+    return math.Pi * c.r*c.r
+}</code></pre>
+<p>In between the keyword <code class="calibre8">func</code> and the name of the function we've added a “receiver”. The receiver is like a parameter – it has a name and a type – but by creating the function in this way it allows us to call the function using the <code class="calibre8">.</code> operator:</p>
+<pre class="calibre10"><code>fmt.Println(c.area())</code></pre>
+<p>This is much easier to read, we no longer need the <code class="calibre8">&amp;</code> operator (Go automatically knows to pass a pointer to the circle for this method) and because this function can only be used with <code class="calibre8">Circle</code>s we can rename the function to just <code class="calibre8">area</code>.</p>
+<p>Let's do the same thing for the rectangle:</p>
+<pre class="calibre10"><code>type Rectangle struct {
+    x1, y1, x2, y2 float64
+}
+func (r *Rectangle) area() float64 {
+    l := distance(r.x1, r.y1, r.x1, r.y2)
+    w := distance(r.x1, r.y1, r.x2, r.y1)
+    return l * w
+}</code></pre>
+<p><code class="calibre8">main</code> has:</p>
+<pre class="calibre10"><code>r := Rectangle{0, 0, 10, 10}
+fmt.Println(r.area())</code></pre>
+<h4 class="calibre9">Embedded Types</h4>
+<p>A struct's fields usually represent the has-a relationship. For example a <code class="calibre8">Circle</code> has a <code class="calibre8">radius</code>. Suppose we had a person struct:</p>
+<pre class="calibre10"><code>type Person struct {
+    Name string
+}
+func (p *Person) Talk() {
+    fmt.Println(&quot;Hi, my name is&quot;, p.Name)
+}</code></pre>
+<p>And we wanted to create a new <code class="calibre8">Android</code> struct. We could do this:</p>
+<pre class="calibre10"><code>type Android struct {
+    Person Person
+    Model string
+}</code></pre>
+<p>This would work, but we would rather say an Android is a Person, rather than an Android has a Person. Go supports relationships like this by using an embedded type. Also known as anonymous fields, embedded types look like this:</p>
+<pre class="calibre10"><code>type Android struct {
+    Person
+    Model string
+}</code></pre>
+<p>We use the type (<code class="calibre8">Person</code>) and don't give it a name. When defined this way the <code class="calibre8">Person</code> struct can be accessed using the type name:</p>
+<pre class="calibre10"><code>a := new(Android)
+a.Person.Talk()</code></pre>
+<p>But we can also call any <code class="calibre8">Person</code> methods directly on the <code class="calibre8">Android</code>:</p>
+<pre class="calibre10"><code>a := new(Android)
+a.Talk()</code></pre>
+<p>The is-a relationship works this way intuitively: People can talk, an android is a person, therefore an android can talk.</p>
+<h3 id="part0009.html#section3" class="calibre7">Interfaces</h3>
+<p>You may have noticed that we were able to name the <code class="calibre8">Rectangle</code>'s <code class="calibre8">area</code> method the same thing as the <code class="calibre8">Circle</code>'s <code class="calibre8">area</code> method. This was no accident. In both real life and in programming, relationships like these are commonplace. Go has a way of making these accidental similarities explicit through a type known as an Interface. Here is an example of a <code class="calibre8">Shape</code> interface:</p>
+<pre class="calibre10"><code>type Shape interface {
+    area() float64
+}</code></pre>
+<p>Like a struct an interface is created using the <code class="calibre8">type</code> keyword, followed by a name and the keyword <code class="calibre8">interface</code>. But instead of defining fields, we define a “method set”. A method set is a list of methods that a type must have in order to “implement” the interface.</p>
+<p>In our case both <code class="calibre8">Rectangle</code> and <code class="calibre8">Circle</code> have area methods which return <code class="calibre8">float64</code>s so both types implement the <code class="calibre8">Shape</code> interface. By itself this wouldn't be particularly useful, but we can use interface types as arguments to functions:</p>
+<pre class="calibre10"><code>func totalArea(shapes ...Shape) float64 {
+    var area float64
+    for _, s := range shapes {
+        area += s.area()
+    }
+    return area
+}</code></pre>
+<p>We would call this function like this:</p>
+<pre class="calibre10"><code>fmt.Println(totalArea(&amp;c, &amp;r))</code></pre>
+<p>Interfaces can also be used as fields:</p>
+<pre class="calibre10"><code>type MultiShape struct {
+    shapes []Shape
+}</code></pre>
+<p>We can even turn <code class="calibre8">MultiShape</code> itself into a <code class="calibre8">Shape</code> by giving it an area method:</p>
+<pre class="calibre10"><code>func (m *MultiShape) area() float64 {
+    var area float64
+    for _, s := range m.shapes {
+        area += s.area()
+    }
+    return area
+}</code></pre>
+<p>Now a <code class="calibre8">MultiShape</code> can contain <code class="calibre8">Circle</code>s, <code class="calibre8">Rectangle</code>s or even other <code class="calibre8">MultiShape</code>s.</p>
+<h4 class="calibre9">Problems</h4>
+<ul>
+<li>What's the difference between a method and a function?</li>
+<li>Why would you use an embedded anonymous field instead of a normal named field?</li>
+<li>Add a new method to the <code class="calibre8">Shape</code> interface called <code class="calibre8">perimeter</code> which calculates the perimeter of a shape. Implement the method for <code class="calibre8">Circle</code> and <code class="calibre8">Rectangle</code>.</li>
+</ul>
+<p><span id="part0010.html"></span></p>
+<h2 id="part0010.html#9H5K1-4f426f79846848278b4673500ac196fe" class="calibre2">Concurrency</h2>
+<p>Large programs are often made up of many smaller sub-programs. For example a web server handles requests made from web browsers and serves up HTML web pages in response. Each request is handled like a small program.</p>
+<p>It would be ideal for programs like these to be able to run their smaller components at the same time (in the case of the web server to handle multiple requests). Making progress on more than one task simultaneously is known as concurrency. Go has rich support for concurrency using goroutines and channels.</p>
+<h3 id="part0010.html#section1" class="calibre7">Goroutines</h3>
+<p>A goroutine is a function that is capable of running concurrently with other functions. To create a goroutine we use the keyword <code class="calibre8">go</code> followed by a function invocation:</p>
+<pre class="calibre10"><code>package main
+
+import &quot;fmt&quot;
+
+func f(n int) {
+    for i := 0; i &lt; 10; i++ {
+        fmt.Println(n, &quot;:&quot;, i)
+    }
+}
+
+func main() {
+    go f(0)
+    var input string
+    fmt.Scanln(&amp;input)
+}</code></pre>
+<p>This program consists of two goroutines. The first goroutine is implicit and is the main function itself. The second goroutine is created when we call <code class="calibre8">go f(0)</code>. Normally when we invoke a function our program will execute all the statements in a function and then return to the next line following the invocation. With a goroutine we return immediately to the next line and don't wait for the function to complete. This is why the call to the <code class="calibre8">Scanln</code> function has been included; without it the program would exit before being given the opportunity to print all the numbers.</p>
+<p>Goroutines are lightweight and we can easily create thousands of them. We can modify our program to run 10 goroutines by doing this:</p>
+<pre class="calibre10"><code>func main() {
+    for i := 0; i &lt; 10; i++ {
+        go f(i)
+    }
+    var input string
+    fmt.Scanln(&amp;input)
+}</code></pre>
+<p>You may have noticed that when you run this program it seems to run the goroutines in order rather than simultaneously. Let's add some delay to the function using <code class="calibre8">time.Sleep</code> and <code class="calibre8">rand.Intn</code>:</p>
+<pre class="calibre10"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;time&quot;
+    &quot;math/rand&quot;
+)
+
+func f(n int) {
+    for i := 0; i &lt; 10; i++ {
+        fmt.Println(n, &quot;:&quot;, i)
+        amt := time.Duration(rand.Intn(250))
+        time.Sleep(time.Millisecond * amt)
+    }
+}
+func main() {
+    for i := 0; i &lt; 10; i++ {
+        go f(i)
+    }
+    var input string
+    fmt.Scanln(&amp;input)
+}</code></pre>
+<p><code class="calibre8">f</code> prints out the numbers from 0 to 10, waiting between 0 and 250 ms after each one. The goroutines should now run simultaneously.</p>
+<h3 id="part0010.html#section2" class="calibre7">Channels</h3>
+<p>Channels provide a way for two goroutines to communicate with one another and synchronize their execution. Here is an example program using channels:</p>
+<pre class="calibre10"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;time&quot;
+)
+
+func pinger(c chan string) {
+    for i := 0; ; i++ {
+        c &lt;- &quot;ping&quot;
+    }
+}
+func printer(c chan string) {
+    for {
+        msg := &lt;- c
+        fmt.Println(msg)
+        time.Sleep(time.Second * 1)
+    }
+}
+func main() {
+    var c chan string = make(chan string)
+    
+    go pinger(c)
+    go printer(c)
+    
+    var input string
+    fmt.Scanln(&amp;input)
+}</code></pre>
+<p>This program will print “ping” forever (hit enter to stop it). A channel type is represented with the keyword <code class="calibre8">chan</code> followed by the type of the things that are passed on the channel (in this case we are passing strings). The <code class="calibre8">&lt;-</code> (left arrow) operator is used to send and receive messages on the channel. <code class="calibre8">c &lt;- </code><code class="calibre8">"ping"</code> means send <code class="calibre8">"ping"</code>. <code class="calibre8">msg := &lt;- c</code> means receive a message and store it in <code class="calibre8">msg</code>. The <code class="calibre8">fmt</code> line could also have been written like this: <code class="calibre8">fmt.Println(&lt;-c)</code> in which case we could remove the previous line.</p>
+<p>Using a channel like this synchronizes the two goroutines. When <code class="calibre8">pinger</code> attempts to send a message on the channel it will wait until <code class="calibre8">printer</code> is ready to receive the message. (this is known as blocking) Let's add another sender to the program and see what happens. Add this function:</p>
+<pre class="calibre10"><code>func ponger(c chan string) {
+    for i := 0; ; i++ {
+        c &lt;- &quot;pong&quot;
+    }
+}</code></pre>
+<p>And modify <code class="calibre8">main</code>:</p>
+<pre class="calibre10"><code>func main() {
+    var c chan string = make(chan string)
+    
+    go pinger(c)
+    go ponger(c)
+    go printer(c)
+    
+    var input string
+    fmt.Scanln(&amp;input)
+}</code></pre>
+<p>The program will now take turns printing “ping” and “pong”.</p>
+<h4 class="calibre9">Channel Direction</h4>
+<p>We can specify a direction on a channel type thus restricting it to either sending or receiving. For example pinger's function signature can be changed to this:</p>
+<pre class="calibre10"><code>func pinger(c chan&lt;- string)</code></pre>
+<p>Now <code class="calibre8">c</code> can only be sent to. Attempting to receive from c will result in a compiler error. Similarly we can change printer to this:</p>
+<pre class="calibre10"><code>func printer(c &lt;-chan string)</code></pre>
+<p>A channel that doesn't have these restrictions is known as bi-directional. A bi-directional channel can be passed to a function that takes send-only or receive-only channels, but the reverse is not true.</p>
+<h4 class="calibre9">Select</h4>
+<p>Go has a special statement called <code class="calibre8">select</code> which works like a <code class="calibre8">switch</code> but for channels:</p>
+<pre class="calibre10"><code>func main() {
+    c1 := make(chan string)
+    c2 := make(chan string)
+    
+    go func() {
+        for {
+            c1 &lt;- &quot;from 1&quot;
+            time.Sleep(time.Second * 2)
+        }
+    }()
+    go func() {
+        for {
+            c2 &lt;- &quot;from 2&quot;
+            time.Sleep(time.Second * 3)
+        }
+    }()
+    go func() {
+        for {
+            select {
+            case msg1 := &lt;- c1:
+                fmt.Println(msg1)
+            case msg2 := &lt;- c2:
+                fmt.Println(msg2)
+            }
+        }
+    }()
+    
+    var input string
+    fmt.Scanln(&amp;input)
+}</code></pre>
+<p>This program prints “from 1” every 2 seconds and “from 2” every 3 seconds. <code class="calibre8">select</code> picks the first channel that is ready and receives from it (or sends to it). If more than one of the channels are ready then it randomly picks which one to receive from. If none of the channels are ready, the statement blocks until one becomes available.</p>
+<p>The <code class="calibre8">select</code> statement is often used to implement a timeout:</p>
+<pre class="calibre10"><code>select {
+case msg1 := &lt;- c1:
+    fmt.Println(&quot;Message 1&quot;, msg1)
+case msg2 := &lt;- c2:
+    fmt.Println(&quot;Message 2&quot;, msg2)
+case &lt;- time.After(time.Second):
+    fmt.Println(&quot;timeout&quot;)
+}</code></pre>
+<p><code class="calibre8">time.After</code> creates a channel and after the given duration will send the current time on it. (we weren't interested in the time so we didn't store it in a variable) We can also specify a <code class="calibre8">default</code> case:</p>
+<pre class="calibre10"><code>select {
+case msg1 := &lt;- c1:
+    fmt.Println(&quot;Message 1&quot;, msg1)
+case msg2 := &lt;- c2:
+    fmt.Println(&quot;Message 2&quot;, msg2)
+case &lt;- time.After(time.Second):
+    fmt.Println(&quot;timeout&quot;)
+default:
+    fmt.Println(&quot;nothing ready&quot;)
+}</code></pre>
+<p>The default case happens immediately if none of the channels are ready.</p>
+<h4 class="calibre9">Buffered Channels</h4>
+<p>It's also possible to pass a second parameter to the make function when creating a channel:</p>
+<pre class="calibre10"><code>c := make(chan int, 1)</code></pre>
+<p>This creates a buffered channel with a capacity of 1. Normally channels are synchronous; both sides of the channel will wait until the other side is ready. A buffered channel is asynchronous; sending or receiving a message will not wait unless the channel is already full.</p>
+<h4 class="calibre9">Problems</h4>
+<ul>
+<li>How do you specify the direction of a channel type?</li>
+<li>Write your own <code class="calibre8">Sleep</code> function using <code class="calibre8">time.After</code>.</li>
+<li>What is a buffered channel? How would you create one with a capacity of 20?</li>
+</ul>
+<p><span id="part0011.html"></span></p>
+<h2 id="part0011.html#AFM61-4f426f79846848278b4673500ac196fe" class="calibre2">Packages</h2>
+<p>Go was designed to be a language that encourages good software engineering practices. An important part of high quality software is code reuse – embodied in the principle “Don't Repeat Yourself.”</p>
+<p>As we saw in chapter 7 functions are the first layer we turn to allow code reuse. Go also provides another mechanism for code reuse: packages. Nearly every program we've seen so far included this line:</p>
+<pre class="calibre10"><code>import &quot;fmt&quot;</code></pre>
+<p><code class="calibre8">fmt</code> is the name of a package that includes a variety of functions related to formatting and output to the screen. Bundling code in this way serves 3 purposes:</p>
+<ul>
+<li>It reduces the chance of having overlapping names. This keeps our function names short and succinct</li>
+<li>It organizes code so that its easier to find code you want to reuse.</li>
+<li>It speeds up the compiler by only requiring recompilation of smaller chunks of a program. Although we use the package <code class="calibre8">fmt</code>, we don't have to recompile it every time we change our program.</li>
+</ul>
+<h3 id="part0011.html#section1" class="calibre7">Creating Packages</h3>
+<p>Packages only really make sense in the context of a separate program which uses them. Without this separate program we have no way of using the package we create. Let's create an application that will use a package we will write. Create a folder in <code class="calibre8">~/Go/src/golang-book</code> called <code class="calibre8">chapter11</code>. Inside that folder create a file called <code class="calibre8">main.go</code> which contains this:</p>
+<pre class="calibre10"><code>package main
+
+import &quot;fmt&quot;
+import &quot;golang-book/chapter11/math&quot;
+
+func main() {
+    xs := []float64{1,2,3,4}
+    avg := math.Average(xs)
+    fmt.Println(avg)
+}</code></pre>
+<p>Now create another folder inside of the <code class="calibre8">chapter11</code> folder called <code class="calibre8">math</code>. Inside of this folder create a file called <code class="calibre8">math.go</code> that contains this:</p>
+<pre class="calibre10"><code>package math
+
+func Average(xs []float64) float64 {
+    total := float64(0)
+    for _, x := range xs {
+        total += x
+    }
+    return total / float64(len(xs))
+}</code></pre>
+<p>Using a terminal in the <code class="calibre8">math</code> folder you just created run <code class="calibre8">go install</code>. This will compile the <code class="calibre8">math.go</code> program and create a linkable object file: <code class="calibre8">~/Go/pkg/os_arch/golang-book/chapter11/math.a</code>. (where <code class="calibre8">os</code> is something like <code class="calibre8">windows</code> and <code class="calibre8">arch</code> is something like <code class="calibre8">amd64</code>)</p>
+<p>Now go back to the <code class="calibre8">chapter11</code> folder and run <code class="calibre8">go run main.go</code>. You should see <code class="calibre8">2.5</code>. Some things to note:</p>
+<ul>
+<li><code class="calibre8">math</code> is the name of a package that is part of Go's standard distribution, but since Go packages can be hierarchical we are safe to use the same name for our package. (The real <code class="calibre8">math</code> package is just <code class="calibre8">math</code>, ours is <code class="calibre8">golang-book/chapter11/math</code>)</li>
+<li>When we import our math library we use its full name (<code class="calibre8">import "golang-book/chapter11/math"</code>), but inside of the <code class="calibre8">math.go</code> file we only use the last part of the name (<code class="calibre8">package math</code>).</li>
+<li><p>We also only use the short name <code class="calibre8">math</code> when we reference functions from our library. If we wanted to use both libraries in the same program Go allows us to use an alias:</p>
+<pre class="calibre10"><code>import m &quot;golang-book/chapter11/math&quot;
+
+func main() {
+    xs := []float64{1,2,3,4}
+    avg := m.Average(xs)
+    fmt.Println(avg)
+}</code></pre>
+<p><code class="calibre8">m</code> is the alias.</p></li>
+<li>You may have noticed that every function in the packages we've seen start with a capital letter. In Go if something starts with a capital letter that means other packages (and programs) are able to see it. If we had named the function <code class="calibre8">average</code> instead of <code class="calibre8">Average</code> our <code class="calibre8">main</code> program would not have been able to see it. It's a good practice to only expose the parts of our package that we want other packages using and hide everything else. This allows us to freely change those parts later without having to worry about breaking other programs, and it makes our package easier to use.</li>
+<li>Package names match the folders they fall in. There are ways around this, but it's a lot easier if you stay within this pattern.</li>
+</ul>
+<h3 id="part0011.html#section2" class="calibre7">Documentation</h3>
+<p>Go has the ability to automatically generate documentation for packages we write in a similar way to the standard package documentation. In a terminal run this command:</p>
+<pre class="calibre10"><code>godoc golang-book/chapter11/math Average</code></pre>
+<p>You should see information displayed for the function we just wrote. We can improve this documentation by adding a comment before the function:</p>
+<pre class="calibre10"><code>// Finds the average of a series of numbers
+func Average(xs []float64) float64 {</code></pre>
+<p>If you run <code class="calibre8">go install</code> in the <code class="calibre8">math</code> folder, then re-run the <code class="calibre8">godoc</code> command you should see our comment below the function definition. This documentation is also available in web form by running this command:</p>
+<pre class="calibre10"><code>godoc -http=&quot;:6060&quot;</code></pre>
+<p>and entering this URL into your browser:</p>
+<pre class="calibre10"><code>http://localhost:6060/pkg/</code></pre>
+<p>You should be able to browse through all of the packages installed on your system.</p>
+<h4 class="calibre9">Problems</h4>
+<ul>
+<li>Why do we use packages?</li>
+<li>What is the difference between an identifier that starts with a capital letter and one which doesn’t? (<code class="calibre8">Average</code> vs <code class="calibre8">average</code>)</li>
+<li>What is a package alias? How do you make one?</li>
+<li>We copied the average function from chapter 7 to our new package. Create <code class="calibre8">Min</code> and <code class="calibre8">Max</code> functions which find the minimum and maximum values in a slice of <code class="calibre8">float64</code>s.</li>
+<li>How would you document the functions you created in #3?</li>
+</ul>
+<p><span id="part0012.html"></span></p>
+<h2 id="part0012.html#BE6O1-4f426f79846848278b4673500ac196fe" class="calibre2">Testing</h2>
+<p>Programming is not easy; even the best programmers are incapable of writing programs that work exactly as intended every time. Therefore an important part of the software development process is testing. Writing tests for our code is a good way to ensure quality and improve reliability.</p>
+<p>Go includes a special program that makes writing tests easier, so let's create some tests for the package we made in the last chapter. In the <code class="calibre8">math</code> folder from <code class="calibre8">chapter11</code> create a new file called <code class="calibre8">math_test.go</code> that contains this:</p>
+<pre class="calibre10"><code>package math
+
+import &quot;testing&quot;
+
+func TestAverage(t *testing.T) {
+    var v float64
+    v = Average([]float64{1,2})
+    if v != 1.5 {
+        t.Error(&quot;Expected 1.5, got &quot;, v)
+    }
+}</code></pre>
+<p>Now run this command:</p>
+<pre class="calibre10"><code>go test</code></pre>
+<p>You should see this:</p>
+<pre class="calibre10"><code>$ go test
+PASS
+ok      golang-book/chapter11/math      0.032s</code></pre>
+<p>The <code class="calibre8">go test</code> command will look for any tests in any of the files in the current folder and run them. Tests are identified by starting a function with the word <code class="calibre8">Test</code> and taking one argument of type <code class="calibre8">*testing.T</code>. In our case since we're testing the <code class="calibre8">Average</code> function we name the test function <code class="calibre8">TestAverage</code>.</p>
+<p>Once we have the testing function setup we write tests that use the code we're testing. In this case we know the average of <code class="calibre8">[1,2]</code> should be <code class="calibre8">1.5</code> so that's what we check. It's probably a good idea to test many different combinations of numbers so let's change our test program a little:</p>
+<pre class="calibre10"><code>package math
+
+import &quot;testing&quot;
+
+type testpair struct {
+    values []float64
+    average float64
+}
+
+var tests = []testpair{
+    { []float64{1,2}, 1.5 },
+    { []float64{1,1,1,1,1,1}, 1 },
+    { []float64{-1,1}, 0 },
+}
+
+func TestAverage(t *testing.T) {
+    for _, pair := range tests {
+        v := Average(pair.values)
+        if v != pair.average {
+            t.Error(
+                &quot;For&quot;, pair.values, 
+                &quot;expected&quot;, pair.average,
+                &quot;got&quot;, v,
+            )
+        }
+    }
+}</code></pre>
+<p>This is a very common way to setup tests (abundant examples can be found in the source code for the packages included with Go). We create a <code class="calibre8">struct</code> to represent the inputs and outputs for the function. Then we create a list of these <code class="calibre8">struct</code>s (pairs). Then we loop through each one and run the function.</p>
+<h4 class="calibre9">Problems</h4>
+<ul>
+<li>Writing a good suite of tests is not always easy, but the process of writings tests often reveals more about a problem then you may at first realize. For example, with our <code class="calibre8">Average</code> function what happens if you pass in an empty list (<code class="calibre8">[]float64{}</code>)? How could we modify the function to return <code class="calibre8">0</code> in this case?</li>
+<li>Write a series of tests for the <code class="calibre8">Min</code> and <code class="calibre8">Max</code> functions you wrote in the previous chapter.</li>
+</ul>
+<p><span id="part0013.html"></span></p>
+<h2 id="part0013.html#CCNA1-4f426f79846848278b4673500ac196fe" class="calibre2">The Core Packages</h2>
+<p>Instead of writing everything from scratch, most real world programming depends on our ability to interface with existing libraries. This chapter will take a look at some of the most commonly used packages included with Go.</p>
+<p>First a word of warning: although some of these libraries are fairly obvious (or have been explained in previous chapters), many of the libraries included with Go require specialized domain specific knowledge (for example: cryptography). It is beyond the scope of this book to explain these underlying technologies.</p>
+<h3 id="part0013.html#section1" class="calibre7">Strings</h3>
+<p>Go includes a large number of functions to work with strings in the <code class="calibre8">strings</code> package:</p>
+<pre class="calibre10"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;strings&quot;
+)
+
+func main() {
+    fmt.Println(    
+        // true
+        strings.Contains(&quot;test&quot;, &quot;es&quot;), 
+
+        // 2
+        strings.Count(&quot;test&quot;, &quot;t&quot;),
+
+        // true
+        strings.HasPrefix(&quot;test&quot;, &quot;te&quot;), 
+
+        // true
+        strings.HasSuffix(&quot;test&quot;, &quot;st&quot;), 
+
+        // 1
+        strings.Index(&quot;test&quot;, &quot;e&quot;), 
+
+        // &quot;a-b&quot;
+        strings.Join([]string{&quot;a&quot;,&quot;b&quot;}, &quot;-&quot;),
+
+        // == &quot;aaaaa&quot;
+        strings.Repeat(&quot;a&quot;, 5), 
+
+        // &quot;bbaa&quot;
+        strings.Replace(&quot;aaaa&quot;, &quot;a&quot;, &quot;b&quot;, 2),
+
+        // []string{&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;,&quot;e&quot;}
+        strings.Split(&quot;a-b-c-d-e&quot;, &quot;-&quot;), 
+
+        // &quot;test&quot;
+        strings.ToLower(&quot;TEST&quot;), 
+
+        // &quot;TEST&quot;
+        strings.ToUpper(&quot;test&quot;), 
+
+    )
+}</code></pre>
+<p>Sometimes we need to work with strings as binary data. To convert a string to a slice of bytes (and vice-versa) do this:</p>
+<pre class="calibre10"><code>arr := []byte(&quot;test&quot;)
+str := string([]byte{&#39;t&#39;,&#39;e&#39;,&#39;s&#39;,&#39;t&#39;})</code></pre>
+<h3 id="part0013.html#section2" class="calibre7">Input / Output</h3>
+<p>Before we look at files we need to understand Go's <code class="calibre8">io</code> package. The <code class="calibre8">io</code> package consists of a few functions, but mostly interfaces used in other packages. The two main interfaces are <code class="calibre8">Reader</code> and <code class="calibre8">Writer</code>. <code class="calibre8">Reader</code>s support reading via the <code class="calibre8">Read</code> method. <code class="calibre8">Writer</code>s support writing via the <code class="calibre8">Write</code> method. Many functions in Go take <code class="calibre8">Reader</code>s or <code class="calibre8">Writer</code>s as arguments. For example the <code class="calibre8">io</code> package has a <code class="calibre8">Copy</code> function which copies data from a <code class="calibre8">Reader</code> to a <code class="calibre8">Writer</code>:</p>
+<pre class="calibre10"><code>func Copy(dst Writer, src Reader) (written int64, err error)</code></pre>
+<p>To read or write to a <code class="calibre8">[]byte</code> or a <code class="calibre8">string</code> you can use the <code class="calibre8">Buffer</code> struct found in the <code class="calibre8">bytes</code> package:</p>
+<pre class="calibre10"><code>var buf bytes.Buffer
+buf.Write([]byte(&quot;test&quot;))</code></pre>
+<p>A <code class="calibre8">Buffer</code> doesn't have to be initialized and supports both the <code class="calibre8">Reader</code> and <code class="calibre8">Writer</code> interfaces. You can convert it into a <code class="calibre8">[]byte</code> by calling <code class="calibre8">buf.Bytes()</code>. If you only need to read from a string you can also use the <code class="calibre8">strings.NewReader</code> function which is more efficient than using a buffer.</p>
+<h3 id="part0013.html#section3" class="calibre7">Files &amp; Folders</h3>
+<p>To open a file in Go use the <code class="calibre8">Open</code> function from the <code class="calibre8">os</code> package. Here is an example of how to read the contents of a file and display them on the terminal:</p>
+<pre class="calibre10"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;os&quot;
+)
+
+func main() {
+    file, err := os.Open(&quot;test.txt&quot;)
+    if err != nil {
+        // handle the error here
+        return
+    }
+    defer file.Close()
+    
+    // get the file size
+    stat, err := file.Stat()
+    if err != nil {
+        return
+    }
+    // read the file
+    bs := make([]byte, stat.Size())
+    _, err = file.Read(bs)
+    if err != nil {
+        return
+    }
+
+    str := string(bs)
+    fmt.Println(str)
+}</code></pre>
+<p>We use <code class="calibre8">defer file.Close()</code> right after opening the file to make sure the file is closed as soon as the function completes. Reading files is very common, so there's a shorter way to do this:</p>
+<pre class="calibre10"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;io/ioutil&quot;
+)
+
+func main() {
+    bs, err := ioutil.ReadFile(&quot;test.txt&quot;)
+    if err != nil {
+        return
+    }
+    str := string(bs)
+    fmt.Println(str)
+}</code></pre>
+<p>Here is how we can create a file:</p>
+<pre class="calibre10"><code>package main
+
+import (
+    &quot;os&quot;
+)
+
+func main() {
+    file, err := os.Create(&quot;test.txt&quot;)
+    if err != nil {
+        // handle the error here
+        return
+    }
+    defer file.Close()
+
+    file.WriteString(&quot;test&quot;)
+}</code></pre>
+<p>To get the contents of a directory we use the same <code class="calibre8">os.Open</code> function but give it a directory path instead of a file name. Then we call the <code class="calibre8">Readdir</code> method:</p>
+<pre class="calibre10"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;os&quot;
+)
+
+func main() {
+    dir, err := os.Open(&quot;.&quot;)
+    if err != nil {
+        return
+    }
+    defer dir.Close()
+
+    fileInfos, err := dir.Readdir(-1)
+    if err != nil {
+        return
+    }
+    for _, fi := range fileInfos {
+        fmt.Println(fi.Name())
+    }
+}</code></pre>
+<p>Often we want to recursively walk a folder (read the folder's contents, all the sub-folders, all the sub-sub-folders, …). To make this easier there's a <code class="calibre8">Walk</code> function provided in the <code class="calibre8">path/filepath</code> package:</p>
+<pre class="calibre10"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;os&quot;
+    &quot;path/filepath&quot;
+)
+
+func main() {
+    filepath.Walk(&quot;.&quot;, func(path string, info os.FileInfo, err error) error {
+        fmt.Println(path)
+        return nil
+    })
+}</code></pre>
+<p>The function you pass to <code class="calibre8">Walk</code> is called for every file and folder in the root folder. (in this case <code class="calibre8">.</code>)</p>
+<h3 id="part0013.html#section4" class="calibre7">Errors</h3>
+<p>Go has a built-in type for errors that we have already seen (the <code class="calibre8">error</code> type). We can create our own errors by using the <code class="calibre8">New</code> function in the <code class="calibre8">errors</code> package:</p>
+<pre class="calibre10"><code>package main
+
+import &quot;errors&quot;
+
+func main() {
+    err := errors.New(&quot;error message&quot;)
+}</code></pre>
+<h3 id="part0013.html#section5" class="calibre7">Containers &amp; Sort</h3>
+<p>In addition to lists and maps Go has several more collections available underneath the container package. We'll take a look at the <code class="calibre8">container/list</code> package as an example.</p>
+<h4 class="calibre9">List</h4>
+<p>The <code class="calibre8">container/list</code> package implements a doubly-linked list. A linked list is a type of data structure that looks like this:</p>
+<p><img src="images/00011.jpeg" class="block" />Each node of the list contains a value (1, 2, or 3 in this case) and a pointer to the next node. Since this is a doubly-linked list each node will also have pointers to the previous node. This list could be created by this program:</p>
+<pre class="calibre10"><code>package main
+
+import (&quot;fmt&quot; ; &quot;container/list&quot;)
+
+func main() {
+    var x list.List
+    x.PushBack(1)
+    x.PushBack(2)
+    x.PushBack(3)
+
+    for e := x.Front(); e != nil; e=e.Next() {
+        fmt.Println(e.Value.(int))
+    }
+}</code></pre>
+<p>The zero value for a <code class="calibre8">List</code> is an empty list (a <code class="calibre8">*List</code> can also be created using <code class="calibre8">list.New</code>). Values are appended to the list using <code class="calibre8">PushBack</code>. We loop over each item in the list by getting the first element, and following all the links until we reach nil.</p>
+<h4 class="calibre9">Sort</h4>
+<p>The sort package contains functions for sorting arbitrary data. There are several predefined sorting functions (for slices of ints and floats) Here's an example for how to sort your own data:</p>
+<pre class="calibre10"><code>package main
+
+import (&quot;fmt&quot; ; &quot;sort&quot;)
+
+type Person struct { 
+    Name string
+    Age int
+}
+
+type ByName []Person
+
+func (this ByName) Len() int {
+    return len(this)
+}
+func (this ByName) Less(i, j int) bool {
+    return this[i].Name &lt; this[j].Name
+}
+func (this ByName) Swap(i, j int) {
+    this[i], this[j] = this[j], this[i]
+}
+
+func main() {
+    kids := []Person{
+        {&quot;Jill&quot;,9},
+        {&quot;Jack&quot;,10},
+    }
+    sort.Sort(ByName(kids))
+    fmt.Println(kids)
+}</code></pre>
+<p>The <code class="calibre8">Sort</code> function in <code class="calibre8">sort</code> takes a <code class="calibre8">sort.Interface</code> and sorts it. The <code class="calibre8">sort.Interface</code> requires 3 methods: <code class="calibre8">Len</code>, <code class="calibre8">Less</code> and <code class="calibre8">Swap</code>. To define our own sort we create a new type (<code class="calibre8">ByName</code>) and make it equivalent to a slice of what we want to sort. We then define the 3 methods.</p>
+<p>Sorting our list of people is then as easy as casting the list into our new type. We could also sort by age by doing this:</p>
+<pre class="calibre10"><code>type ByAge []Person
+func (this ByAge) Len() int {
+    return len(this)
+}
+func (this ByAge) Less(i, j int) bool {
+    return this[i].Age &lt; this[j].Age
+}
+func (this ByAge) Swap(i, j int) {
+    this[i], this[j] = this[j], this[i]
+}</code></pre>
+<h3 id="part0013.html#section6" class="calibre7">Hashes &amp; Cryptography</h3>
+<p>A hash function takes a set of data and reduces it to a smaller fixed size. Hashes are frequently used in programming for everything from looking up data to easily detecting changes. Hash functions in Go are broken into two categories: cryptographic and non-cryptographic.</p>
+<p>The non-cryptographic hash functions can be found underneath the hash package and include <code class="calibre8">adler32</code>, <code class="calibre8">crc32</code>, <code class="calibre8">crc64</code> and <code class="calibre8">fnv</code>. Here's an example using <code class="calibre8">crc32</code>:</p>
+<pre class="calibre10"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;hash/crc32&quot;
+)
+
+func main() {
+    h := crc32.NewIEEE()
+    h.Write([]byte(&quot;test&quot;))
+    v := h.Sum32()
+    fmt.Println(v)
+}</code></pre>
+<p>The <code class="calibre8">crc32</code> hash object implements the <code class="calibre8">Writer</code> interface, so we can write bytes to it like any other <code class="calibre8">Writer</code>. Once we've written everything we want we call <code class="calibre8">Sum32()</code> to return a <code class="calibre8">uint32</code>. A common use for <code class="calibre8">crc32</code> is to compare two files. If the <code class="calibre8">Sum32</code> value for both files is the same, it's highly likely (though not 100% certain) that the files are the same. If the values are different then the files are definitely not the same:</p>
+<pre class="calibre10"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;hash/crc32&quot;
+    &quot;io/ioutil&quot;
+)
+
+func getHash(filename string) (uint32, error) {
+    bs, err := ioutil.ReadFile(filename)
+    if err != nil {
+        return 0, err
+    }
+    h := crc32.NewIEEE()
+    h.Write(bs)
+    return h.Sum32(), nil
+}
+
+func main() {
+    h1, err := getHash(&quot;test1.txt&quot;)
+    if err != nil {
+        return
+    }
+    h2, err := getHash(&quot;test2.txt&quot;)
+    if err != nil {
+        return
+    }
+    fmt.Println(h1, h2, h1 == h2)
+}</code></pre>
+<p>Cryptographic hash functions are similar to their non-cryptographic counterparts, but they have the added property of being hard to reverse. Given the cryptographic hash of a set of data, it's extremely difficult to determine what made the hash. These hashes are often used in security applications.</p>
+<p>One common cryptographic hash function is known as SHA-1. Here's how it is used:</p>
+<pre class="calibre10"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;crypto/sha1&quot;
+)
+
+func main() {
+    h := sha1.New()
+    h.Write([]byte(&quot;test&quot;))
+    bs := h.Sum([]byte{})
+    fmt.Println(bs)
+}</code></pre>
+<p>This example is very similar to the <code class="calibre8">crc32</code> one, because both <code class="calibre8">crc32</code> and <code class="calibre8">sha1</code> implement the <code class="calibre8">hash.Hash</code> interface. The main difference is that whereas <code class="calibre8">crc32</code> computes a 32 bit hash, <code class="calibre8">sha1</code> computes a 160 bit hash. There is no native type to represent a 160 bit number, so we use a slice of 20 bytes instead.</p>
+<h3 id="part0013.html#section7" class="calibre7">Servers</h3>
+<p>Writing network servers in Go is very easy. We will first take a look at how to create a TCP server:</p>
+<pre class="calibre10"><code>package main
+
+import (
+    &quot;encoding/gob&quot;
+    &quot;fmt&quot;
+    &quot;net&quot;
+)
+
+func server() {
+    // listen on a port
+    ln, err := net.Listen(&quot;tcp&quot;, &quot;:9999&quot;)
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    for {
+        // accept a connection
+        c, err := ln.Accept()
+        if err != nil {
+            fmt.Println(err)
+            continue
+        }
+        // handle the connection
+        go handleServerConnection(c)
+    }
+}
+
+func handleServerConnection(c net.Conn) {
+    // receive the message
+    var msg string
+    err := gob.NewDecoder(c).Decode(&amp;msg)
+    if err != nil {
+        fmt.Println(err)
+    } else {
+        fmt.Println(&quot;Received&quot;, msg)
+    }
+    
+    c.Close()
+}
+
+func client() {
+    // connect to the server
+    c, err := net.Dial(&quot;tcp&quot;, &quot;127.0.0.1:9999&quot;)
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+
+    // send the message
+    msg := &quot;Hello World&quot;
+    fmt.Println(&quot;Sending&quot;, msg)
+    err = gob.NewEncoder(c).Encode(msg)
+    if err != nil {
+        fmt.Println(err)
+    }
+
+    c.Close()
+}
+
+func main() {
+    go server()
+    go client()
+    
+    var input string
+    fmt.Scanln(&amp;input)
+}</code></pre>
+<p>This example uses the <code class="calibre8">encoding/gob</code> package which makes it easy to encode Go values so that other Go programs (or the same Go program in this case) can read them. Additional encodings are available in packages underneath <code class="calibre8">encoding</code> (like <code class="calibre8">encoding/json</code>) as well as in 3rd party packages. (for example we could use <code class="calibre8">labix.org/v2/mgo/bson</code> for bson support)</p>
+<h4 class="calibre9">HTTP</h4>
+<p>HTTP servers are even easier to setup and use:</p>
+<pre class="calibre10"><code>package main
+
+import (&quot;net/http&quot; ; &quot;io&quot;)
+
+func hello(res http.ResponseWriter, req *http.Request) {
+    res.Header().Set(
+        &quot;Content-Type&quot;, 
+        &quot;text/html&quot;,
+    )
+    io.WriteString(
+        res, 
+        `&lt;doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Hello World&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        Hello World!
+    &lt;/body&gt;
+&lt;/html&gt;`,
+    )
+}
+func main() {
+    http.HandleFunc(&quot;/hello&quot;, hello)
+    http.ListenAndServe(&quot;:9000&quot;, nil)
+}</code></pre>
+<p><code class="calibre8">HandleFunc</code> handles a URL route (<code class="calibre8">/hello</code>) by calling the given function. We can also handle static files by using <code class="calibre8">FileServer</code>:</p>
+<pre class="calibre10"><code>http.Handle(
+    &quot;/assets/&quot;, 
+    http.StripPrefix(
+        &quot;/assets/&quot;, 
+        http.FileServer(http.Dir(&quot;assets&quot;)),
+    ),
+)</code></pre>
+<h4 class="calibre9">RPC</h4>
+<p>The <code class="calibre8">net/rpc</code> (remote procedure call) and <code class="calibre8">net/rpc/jsonrpc</code> packages provide an easy way to expose methods so they can be invoked over a network. (rather than just in the program running them)</p>
+<pre class="calibre10"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;net&quot;
+    &quot;net/rpc&quot;
+)
+
+type Server struct {}
+func (this *Server) Negate(i int64, reply *int64) error {
+    *reply = -i
+    return nil
+}
+
+func server() {
+    rpc.Register(new(Server))
+    ln, err := net.Listen(&quot;tcp&quot;, &quot;:9999&quot;)
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    for {
+        c, err := ln.Accept()
+        if err != nil {
+            continue
+        }
+        go rpc.ServeConn(c)
+    }
+}
+func client() {
+    c, err := rpc.Dial(&quot;tcp&quot;, &quot;127.0.0.1:9999&quot;)
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    var result int64
+    err = c.Call(&quot;Server.Negate&quot;, int64(999), &amp;result)
+    if err != nil {
+        fmt.Println(err)
+    } else {
+        fmt.Println(&quot;Server.Negate(999) =&quot;, result)
+    }
+}
+func main() {
+    go server()
+    go client()
+    
+    var input string
+    fmt.Scanln(&amp;input)
+}</code></pre>
+<p>This program is similar to the TCP example, except now we created an object to hold all the methods we want to expose and we call the <code class="calibre8">Negate</code> method from the client. See the documentation in <code class="calibre8">net/rpc</code> for more details.</p>
+<h3 id="part0013.html#section8" class="calibre7">Parsing Command Line Arguments</h3>
+<p>When we invoke a command on the terminal it's possible to pass that command arguments. We've seen this with the <code class="calibre8">go</code> command:</p>
+<pre class="calibre10"><code>go run myfile.go</code></pre>
+<p>run and myfile.go are arguments. We can also pass flags to a command:</p>
+<pre class="calibre10"><code>go run -v myfile.go</code></pre>
+<p>The flag package allows us to parse arguments and flags sent to our program. Here's an example program that generates a number between 0 and 6. We can change the max value by sending a flag (<code class="calibre8">-max=100</code>) to the program:</p>
+<pre class="calibre10"><code>package main
+
+import (&quot;fmt&quot;;&quot;flag&quot;;&quot;math/rand&quot;)
+
+func main() {
+    // Define flags
+    maxp := flag.Int(&quot;max&quot;, 6, &quot;the max value&quot;)
+    // Parse
+    flag.Parse()
+    // Generate a number between 0 and max
+    fmt.Println(rand.Intn(*maxp))
+}</code></pre>
+<p>Any additional non-flag arguments can be retrieved with <code class="calibre8">flag.Args()</code> which returns a <code class="calibre8">[]string</code>.</p>
+<h3 id="part0013.html#section9" class="calibre7">Synchronization Primitives</h3>
+<p>The preferred way to handle concurrency and synchronization in Go is through goroutines and channels as discussed in chapter 10. However Go does provide more traditional multithreading routines in the <code class="calibre8">sync</code> and <code class="calibre8">sync/atomic</code> packages.</p>
+<h4 class="calibre9">Mutexes</h4>
+<p>A mutex (mutal exclusive lock) locks a section of code to a single thread at a time and is used to protect shared resources from non-atomic operations. Here is an example of a mutex:</p>
+<pre class="calibre10"><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;sync&quot;
+    &quot;time&quot;
+)
+func main() {
+    m := new(sync.Mutex)
+    
+    for i := 0; i &lt; 10; i++ {
+        go func(i int) {
+            m.Lock()
+            fmt.Println(i, &quot;start&quot;)
+            time.Sleep(time.Second)
+            fmt.Println(i, &quot;end&quot;)
+            m.Unlock()
+        }(i)
+    }
+
+    var input string
+    fmt.Scanln(&amp;input)
+}</code></pre>
+<p>When the mutex (<code class="calibre8">m</code>) is locked any other attempt to lock it will block until it is unlocked. Great care should be taken when using mutexes or the synchronization primitives provided in the <code class="calibre8">sync/atomic</code> package.</p>
+<p>Traditional multithreaded programming is difficult; it's easy to make mistakes and those mistakes are hard to find, since they may depend on a very specific, relatively rare, and difficult to reproduce set of circumstances. One of Go's biggest strengths is that the concurrency features it provides are much easier to understand and use properly than threads and locks.</p>
+<p><span id="part0014.html"></span></p>
+<h2 id="part0014.html#DB7S1-4f426f79846848278b4673500ac196fe" class="calibre2">Next Steps</h2>
+<p>We now have all the information we need to write most Go programs. But it would be dangerous to conclude that therefore we are competent programmers. Programming is as much a craft as it is just having knowledge. This chapter will provide you with some suggestions about how best to master the craft of programming.</p>
+<h3 id="part0014.html#section1" class="calibre7">Study the Masters</h3>
+<p>Part of becoming a good artist or writer is studying the works of the masters. It's no different with programming. One of the best ways to become a skilled programmer is to study the source code produced by others. Go is well suited to this task since the source code for the entire project is freely available.</p>
+<p>For example we might take a look at the source code to the <code class="calibre8">io/ioutil</code> library available at:</p>
+<p><a href="http://golang.org/src/pkg/io/ioutil/ioutil.go">http://golang.org/src/pkg/io/ioutil/ioutil.go</a></p>
+<p>Read the code slowly and deliberately. Try to understand every line and read the supplied comments. For example in the <code class="calibre8">ReadFile</code> method there's a comment that says this:</p>
+<pre class="calibre10"><code>// It&#39;s a good but not certain bet that FileInfo
+// will tell us exactly how much to read, so
+// let&#39;s try it but be prepared for the answer
+// to be wrong.</code></pre>
+<p>This method probably started out simpler than what it became so this is a great example of how programs can evolve after testing and why it's important to supply comments with those changes. All of the source code for all of the packages is available at:</p>
+<p><a href="http://golang.org/src/pkg/">http://golang.org/src/pkg/</a></p>
+<h3 id="part0014.html#section2" class="calibre7">Make Something</h3>
+<p>One of the best ways to hone your skills is to practice coding. There are a lot of ways to do this: You could work on challenging programming problems from sites like Project Euler (<a href="http://projecteuler.net/">http://projecteuler.net/</a>) or try your hand at a larger project. Perhaps try to implement a web server or write a simple game.</p>
+<h3 id="part0014.html#section3" class="calibre7">Team Up</h3>
+<p>Most real-world software projects are done in teams, therefore learning how to work in a team is crucial. If you can, find a friend – maybe a classmate – and team up on a project. Learn how to divide a project into pieces you can both work on simultaneously.</p>
+<p>Another option is to work on an open source project. Find a 3rd party library, write some code (perhaps fix a bug), and submit it to the maintainer. Go has a growing community which can be reached via the mailing list (<a href="http://groups.google.com/group/golang-nuts">http://groups.google.com/group/golang-nuts</a>).</p>
