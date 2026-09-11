@@ -1,0 +1,2226 @@
+<p><img src="rsrcW1.jpg" /></p>
+<p><span id="part0000.xhtml"></span></p>
+<div>
+<img src="rsrcW1.jpg" class="s8" />
+</div>
+<p><span id="part0001.xhtml"></span></p>
+<div id="part0001.xhtml#page_1" class="sF">
+Python Blockchain
+</div>
+<div class="sH">
+Python Technologies
+</div>
+<div class="sK">
+By:- Vishal Gupta
+</div>
+<p><span id="part0002.xhtml"></span></p>
+<div id="part0002.xhtml#page_2" class="sU">
+All rights reserved
+</div>
+<div class="sW">
+No part of this book may be reproduced, or stored in a retrieval system, or transmitted in any form or by any means, electronic, mechanical, photocopying, recording, or otherwise, without express written permission of the publisher.
+</div>
+<p><span id="part0003.xhtml"></span></p>
+<div id="part0003.xhtml#page_3" class="s13">
+I would like to dedicate the book to the students who will be using it. I wish you future career success and hope you never stop learning.
+</div>
+<p><span id="part0004.xhtml"></span></p>
+<div id="part0004.xhtml#page_4" class="s1A">
+TABLE OF CONTENT
+</div>
+<div id="part0004.xhtml#Table_of_Contents" class="s1C">
+<a href="#part0005.xhtml" class="sVW">Introduction</a>
+</div>
+<div class="s1E">
+<a href="#part0006.xhtml" class="sVW">Developing Client</a>
+</div>
+<div class="s1E">
+<a href="#part0007.xhtml" class="sVW">Client Class</a>
+</div>
+<div class="s1E">
+<a href="#part0008.xhtml" class="sVW">Transaction Class</a>
+</div>
+<div class="s1E">
+<a href="#part0009.xhtml" class="sVW">Creating Multiple Transactions</a>
+</div>
+<div class="s1E">
+<a href="#part0010.xhtml" class="sVW">Block Class</a>
+</div>
+<div class="s1E">
+<a href="#part0011.xhtml" class="sVW">Creating Genesis Block</a>
+</div>
+<div class="s1E">
+<a href="#part0012.xhtml" class="sVW">Python Creating Blockchain</a>
+</div>
+<div class="s1E">
+<a href="#part0013.xhtml" class="sVW">Adding Genesis Block</a>
+</div>
+<div class="s1E">
+<a href="#part0014.xhtml" class="sVW">Creating Miners</a>
+</div>
+<div class="s1E">
+<a href="#part0015.xhtml" class="sVW">Adding Blocks</a>
+</div>
+<div class="s1E">
+<a href="#part0016.xhtml" class="sVW">Scope and Conclusion</a>
+</div>
+<p><span id="part0005.xhtml"></span></p>
+<div id="part0005.xhtml#page_5" class="s1Z">
+Introduction
+</div>
+<div class="s21">
+In the tutorial on Blockchain, we have learnt in detail about the theory behind blockchain. The blockchain is the fundamental building block behind the world’s most popular digital currency Bitcoin. The tutorial deeply dealt with the intricacies of Bitcoin explaining fully the blockchain architecture. The next step is to build our own blockchain.
+</div>
+<div class="s21">
+Satoshi Nakamoto created the first virtual currency in the world called Bitcoin. Looking at the success of Bitcoin, many others created their own virtual currencies. To name a few − Litecoin, Zcash, and so on.
+</div>
+<div class="s21">
+Now, you may also like to launch your own currency. Let us call this as TPCoin (TutorialsPoint Coin). You will write a blockchain to record all transactions that deal with TPCoin. The TPCoin can be used for buying Pizzas, Burgers, Salads, etc. There may be other service providers who would join your network and start accepting TPCoin as the currency for giving out their services. The possibilities are endless.
+</div>
+<div class="s21">
+In this tutorial, let us understand how to construct such a system and launch your own digital currency in the market.
+</div>
+<div class="s26">
+Components Involved in Blockchain Project Development
+</div>
+<div class="s21">
+The entire blockchain project development consists of three major components −
+</div>
+<ul>
+<li><span class="sVN">Client</span></li>
+<li><span class="sVN">Miners</span></li>
+<li><span class="sVN">Blockchain</span></li>
+</ul>
+<div class="s26">
+Client
+</div>
+<div class="s21">
+The Client is the one who will buy goods from other vendors. The <span id="part0005.xhtml#page_6"></span> client himself may become a vendor and will accept money from others against the goods he supplies. We assume here that the client can both be a supplier and a recipient of TPCoins. Thus, we will create a client class in our code that has the ability to send and receive money.
+</div>
+<div class="s26">
+Miner
+</div>
+<div class="s21">
+The Miner is the one who picks up the transactions from a transaction pool and assembles them in a block. The miner has to provide a valid proof-of-work to get the mining reward. All the money that miner collects as a fee will be for him to keep. He may spend that money on buying goods or services from other registered vendors on the network, just the way a Client described above does.
+</div>
+<div class="s26">
+Blockchain
+</div>
+<div class="s21">
+Finally, a Blockchain is a data structure that chains all the mined blocks in a chronological order. This chain is immutable and thus temper-proof.
+</div>
+<div class="s2P">
+You may follow this tutorial by typing out the code presented in each step in a new Jupyter notebook. Alternatively, you may download the entire Jupyter notebook from <span class="sVY">www.anaconda.com</span> .
+</div>
+<div class="s2S">
+In the next chapter, we will develop a client that uses our blockchain system.
+</div>
+<p><span id="part0006.xhtml"></span></p>
+<div id="part0006.xhtml#page_7" class="s2Z">
+Developing Client
+</div>
+<div class="s2P">
+A client is somebody who holds TPCoins and transacts those for goods/services from other vendors on the network including his own. We should define a <span class="sVR">Client</span>  class for this purpose. To create a globally unique identification for the client, we use PKI (Public Key Infrastructure). In this chapter, let us talk about this in detail.
+</div>
+<div class="s21">
+The client should be able to send money from his wallet to another known person. Similarly, the client should be able to accept money from a third party. For spending money, the client would create a transaction specifying the sender’s name and the amount to be paid. For receiving money, the client will provide his identity to the third party − essentially a sender of the money. We do not store the balance amount of money the client holds in his wallet. During a transaction, we will compute the actual balance to ensure that the client has sufficient balance to make the payment.
+</div>
+<div class="s2P">
+To develop the <span class="sVR">Client</span>  class and for the rest of the code in the project, we will need to import many Python libraries. These are listed below −
+</div>
+<div class="s34">
+# import libraries
+</div>
+<div class="s34">
+import hashlib
+</div>
+<div class="s34">
+import random
+</div>
+<div class="s34">
+import string
+</div>
+<div class="s34">
+import json
+</div>
+<div class="s34">
+import binascii
+</div>
+<div class="s34">
+import numpy as np
+</div>
+<div class="s34">
+import pandas as pd
+</div>
+<div class="s34">
+import pylab as pl
+</div>
+<div class="s34">
+import logging
+</div>
+<div class="s34">
+import datetime
+</div>
+<div id="part0006.xhtml#page_8" class="s34">
+import collections
+</div>
+<div class="s21">
+In addition to the above standard libraries, we are going to sign our transactions, create hash of the objects, etc. For this, you will need to import the following libraries −
+</div>
+<div class="s34">
+# following imports are required by PKI
+</div>
+<div class="s34">
+import Crypto
+</div>
+<div class="s34">
+import Crypto.Random
+</div>
+<div class="s34">
+from Crypto.Hash import SHA
+</div>
+<div class="s34">
+from Crypto.PublicKey import RSA
+</div>
+<div class="s34">
+from Crypto.Signature import PKCS1_v1_5
+</div>
+<div class="s2S">
+In the next chapter, let us talk about client class.
+</div>
+<p><span id="part0007.xhtml"></span></p>
+<div id="part0007.xhtml#page_9" class="s2Z">
+Client Class
+</div>
+<div class="s2P">
+The <span class="sVR">Client</span>  class generates the <span class="sVR">private</span>  and <span class="sVR">public</span>  keys by using the built-in Python <span class="sVR">RSA</span>  algorithm. The interested reader may refer to <span class="sVR">this tutorial</span>  for the implementation of RSA. During the object initialization, we create private and public keys and store their values in the instance variable.
+</div>
+<div class="s34">
+self._private_key = RSA.generate(1024, random)
+</div>
+<div class="s34">
+self._public_key = self._private_key.publickey()
+</div>
+<div class="s21">
+Note that you should never lose your private key. For record keeping, the generated private key may be copied on a secured external storage or you may simply write down the ASCII representation of it on a piece of paper.
+</div>
+<div class="s2P">
+The generated <span class="sVR">public</span>  key will be used as the client’s identity. For this, we define a property called <span class="sVR">identity</span>  that returns the HEX representation of the public key.
+</div>
+<div class="s4E">
+<div class="s44">
+@property
+</div>
+<div class="s46">
+<span class="sVT-0">def</span> <span class="sVP-0">identity</span> <span class="sVS-1">(</span> <span class="sVT-0">self</span> <span class="sVS-1">):</span>
+</div>
+<div class="s48">
+<span class="sVT-2">return</span>
+</div>
+<div class="s4A">
+binascii<span class="sVS-0">.</span> hexlify<span class="sVS-0">(</span> <span class="sVT-1">self</span> <span class="sVS-0">.</span> _public_key<span class="sVS-0">.</span> exportKey<span class="sVS-0">(</span> format<span class="sVS-0">=</span> <span class="sVU-1">'DER'</span> <span class="sVS-0">))</span>
+</div>
+<div class="s4C">
+<span class="sVS-0">.</span> decode<span class="sVS-0">(</span> <span class="sVU-1">'ascii'</span> <span class="sVS-0">)</span>
+</div>
+</div>
+<div class="s2P">
+The <span class="sVR">identity</span>  is unique to each client and can be made publicly available. Anybody would be able to send virtual currency to you using this <span class="sVR">identity</span>  and it will get added to your wallet.
+</div>
+<div class="s2P">
+The full code for the <span class="sVR">Client</span>  class is shown here −
+</div>
+<div class="s4E">
+<div id="part0007.xhtml#page_10" class="s4J">
+<span class="sVT-1">class</span> <span class="sVV-0">Client</span> <span class="sVS-0">:</span>
+</div>
+<div class="s46">
+<span class="sVT-0">def</span> <span class="sVP-0">__init__</span> <span class="sVS-1">(</span> <span class="sVT-0">self</span> <span class="sVS-1">):</span>
+</div>
+<div class="s48">
+<span class="sVP-1">random</span> <span class="sVS-2">=</span> <span class="sVV-2">Crypto</span> <span class="sVS-2">.</span> <span class="sVV-2">Random</span> <span class="sVS-2">.</span> <span class="sVT-2">new</span> <span class="sVS-2">().</span> <span class="sVP-1">read</span>
+</div>
+<div class="s48">
+<span class="sVT-2">self</span> <span class="sVS-2">.</span> <span class="sVP-1">_private_key</span> <span class="sVS-2">=</span> <span class="sVP-1">RSA</span> <span class="sVS-2">.</span> <span class="sVP-1">generate</span> <span class="sVS-2">(</span> <span class="sVX-2">1024</span> <span class="sVS-2">,</span> <span class="sVP-1">random</span> <span class="sVS-2">)</span>
+</div>
+<div class="s48">
+<span class="sVT-2">self</span> <span class="sVS-2">.</span> <span class="sVP-1">_public_key</span> <span class="sVS-2">=</span> <span class="sVT-2">self</span> <span class="sVS-2">.</span> <span class="sVP-1">_private_key</span> <span class="sVS-2">.</span> <span class="sVP-1">publickey</span> <span class="sVS-2">()</span>
+</div>
+<div class="s48">
+<span class="sVT-2">self</span> <span class="sVS-2">.</span> <span class="sVP-1">_signer</span> <span class="sVS-2">=</span> <span class="sVP-1">PKCS1_v1_5</span> <span class="sVS-2">.</span> <span class="sVT-2">new</span> <span class="sVS-2">(</span> <span class="sVT-2">self</span> <span class="sVS-2">.</span> <span class="sVP-1">_private_key</span> <span class="sVS-2">)</span>
+</div>
+<div class="s4T">
+<span class="sVX-0">@property</span>
+</div>
+<div class="s46">
+<span class="sVT-0">def</span> <span class="sVP-0">identity</span> <span class="sVS-1">(</span> <span class="sVT-0">self</span> <span class="sVS-1">):</span>
+</div>
+<div class="s48">
+<span class="sVT-2">return</span>
+</div>
+<div class="s4C">
+binascii<span class="sVS-0">.</span> hexlify<span class="sVS-0">(</span> <span class="sVT-1">self</span> <span class="sVS-0">.</span> _public_key<span class="sVS-0">.</span> exportKey<span class="sVS-0">(</span> format<span class="sVS-0">=</span> <span class="sVU-1">'DER'</span> <span class="sVS-0">)).</span> decode<span class="sVS-0">(</span> <span class="sVU-1">'ascii'</span> <span class="sVS-0">)</span>
+</div>
+</div>
+<div class="s26">
+Testing Client
+</div>
+<div class="s2P">
+Now, we will write code that will illustrate how to use the <span class="sVR">Client</span>  class −
+</div>
+<div class="s34">
+Dinesh = Client()
+</div>
+<div id="part0007.xhtml#page_11" class="s34">
+print (Dinesh.identity)
+</div>
+<div class="s2P">
+The above code creates an instance of <span class="sVR">Client</span>  and assigns it to the variable <span class="sVR">Dinesh</span> . We print the public key of <span class="sVR">Dinesh</span>  by calling its <span class="sVR">identity</span>  method. The output is shown here −
+</div>
+<div class="s34">
+30819f300d06092a864886f70d010101050003818d0030818902818100b547fafceeb131e07
+</div>
+<div class="s34">
+0166a6b23fec473cce22c3f55c35ce535b31d4c74754fecd820aa94c1166643a49ea5f49f72
+</div>
+<div class="s34">
+3181ff943eb3fdc5b2cb2db12d21c06c880ccf493e14dd3e93f3a9e175325790004954c34d3
+</div>
+<div class="s34">
+c7bc2ccc9f0eb5332014937f9e49bca9b7856d351a553d9812367dc8f2ac734992a4e6a6ff6
+</div>
+<div class="s34">
+6f347bd411d07f0203010001
+</div>
+<div class="s2S">
+Now, we let us move on to create a transaction in the next chapter.
+</div>
+<p><span id="part0008.xhtml"></span></p>
+<div id="part0008.xhtml#page_12" class="s2Z">
+Transaction Class
+</div>
+<div class="s2P">
+In this chapter, let us create a <span class="sVR">Transaction</span>  class so that a client will be able to send money to somebody. Note that a client can be both a sender or a recipient of the money. When you want to receive money, some other sender will create a transaction and specify your <span class="sVR">public</span>  address in it. We define the initialization of a transaction class as follows −
+</div>
+<div class="s4E">
+<div class="s4J">
+<span class="sVT-1">def</span> __init__<span class="sVS-0">(</span> <span class="sVT-1">self</span> <span class="sVS-0">,</span> sender<span class="sVS-0">,</span> recipient<span class="sVS-0">,</span> <span class="sVT-1">value</span> <span class="sVS-0">):</span>
+</div>
+<div class="s46">
+<span class="sVT-0">self</span> <span class="sVS-1">.</span> <span class="sVP-0">sender</span> <span class="sVS-1">=</span> <span class="sVP-0">sender</span>
+</div>
+<div class="s46">
+<span class="sVT-0">self</span> <span class="sVS-1">.</span> <span class="sVP-0">recipient</span> <span class="sVS-1">=</span> <span class="sVP-0">recipient</span>
+</div>
+<div class="s46">
+<span class="sVT-0">self</span> <span class="sVS-1">.</span> <span class="sVT-0">value</span> <span class="sVS-1">=</span> <span class="sVT-0">value</span>
+</div>
+<div class="s5N">
+<span class="sVT-0">self</span> <span class="sVS-1">.</span> <span class="sVP-0">time</span> <span class="sVS-1">=</span> <span class="sVP-0">datetime</span> <span class="sVS-1">.</span> <span class="sVP-0">datetime</span> <span class="sVS-1">.</span> <span class="sVP-0">now</span> <span class="sVS-1">()</span>
+</div>
+</div>
+<div class="s2P">
+The <span class="sVR">init</span>  method takes three parameters − the sender’s <span class="sVR">public</span>  key, the recipient’s <span class="sVR">public</span>  key, and the amount to be sent. These are stored in the instance variables for use by other methods. Additionally, we create one more variable for storing the time of transaction.
+</div>
+<div class="s2P">
+Next, we write a utility method called <span class="sVR">to_dict</span>  that combines all the four above-mentioned instance variables in a dictionary object. This is just to put the entire transaction information accessible through a single variable.
+</div>
+<div class="s2P">
+As you know from the earlier tutorial that the first block in the blockchain is a <span class="sVR">Genesis</span>  block. The Genesis block contains the first transaction initiated by the creator of the blockchain. The identity of this person may be kept a secret like in the case of Bitcoins. So when this first transaction is created, the creator may just send his identity as <span class="sVR">Genesis</span> <span id="part0008.xhtml#page_13"></span> . Thus, while creating the dictionary, we check if the sender is <span class="sVR">Genesis</span>  and if so we simply assign some string value to the identity variable; else, we assign the sender’s identity to the <span class="sVR">identity</span>  variable.
+</div>
+<div class="s4E">
+<div class="s4J">
+<span class="sVT-1">if</span> <span class="sVT-1">self</span> <span class="sVS-0">.</span> sender <span class="sVS-0">==</span> <span class="sVU-1">"Genesis"</span> <span class="sVS-0">:</span>
+</div>
+<div class="s46">
+<span class="sVP-0">identity</span> <span class="sVS-1">=</span> <span class="sVU-0">"Genesis"</span>
+</div>
+<div class="s4A">
+<span class="sVT-1">else</span> <span class="sVS-0">:</span>
+</div>
+<div class="s5N">
+<span class="sVP-0">identity</span> <span class="sVS-1">=</span> <span class="sVT-0">self</span> <span class="sVS-1">.</span> <span class="sVP-0">sender</span> <span class="sVS-1">.</span> <span class="sVP-0">identity</span>
+</div>
+</div>
+<div class="s21">
+We construct the dictionary using following line of code
+</div>
+<div class="s4E">
+<div class="s4J">
+<span class="sVT-1">return</span> collections<span class="sVS-0">.</span> <span class="sVV-0">OrderedDict</span> <span class="sVS-0">({</span>
+</div>
+<div class="s46">
+<span class="sVU-0">'sender'</span> <span class="sVS-1">:</span> <span class="sVP-0">identity</span> <span class="sVS-1">,</span>
+</div>
+<div class="s46">
+<span class="sVU-0">'recipient'</span> <span class="sVS-1">:</span> <span class="sVT-0">self</span> <span class="sVS-1">.</span> <span class="sVP-0">recipient</span> <span class="sVS-1">,</span>
+</div>
+<div class="s46">
+<span class="sVU-0">'value'</span> <span class="sVS-1">:</span> <span class="sVT-0">self</span> <span class="sVS-1">.</span> <span class="sVT-0">value</span> <span class="sVS-1">,</span>
+</div>
+<div class="s5N">
+<span class="sVU-0">'time'</span> <span class="sVS-1">:</span> <span class="sVT-0">self</span> <span class="sVS-1">.</span> <span class="sVP-0">time</span> <span class="sVS-1">})</span>
+</div>
+</div>
+<div class="s2P">
+The entire code for the <span class="sVR">to_dict</span>  method is shown below −
+</div>
+<div class="s4E">
+<div class="s4J">
+<span class="sVT-1">def</span> to_dict<span class="sVS-0">(</span> <span class="sVT-1">self</span> <span class="sVS-0">):</span>
+</div>
+<div class="s46">
+<span class="sVT-0">if</span> <span class="sVT-0">self</span> <span class="sVS-1">.</span> <span class="sVP-0">sender</span> <span class="sVS-1">==</span> <span class="sVU-0">"Genesis"</span> <span class="sVS-1">:</span>
+</div>
+<div class="s48">
+<span class="sVP-1">identity</span> <span class="sVS-2">=</span> <span id="part0008.xhtml#page_14" class="class-1"></span> <span class="sVU-2">"Genesis"</span>
+</div>
+<div class="s46">
+<span class="sVT-0">else</span> <span class="sVS-1">:</span>
+</div>
+<div class="s48">
+<span class="sVP-1">identity</span> <span class="sVS-2">=</span> <span class="sVT-2">self</span> <span class="sVS-2">.</span> <span class="sVP-1">sender</span> <span class="sVS-2">.</span> <span class="sVP-1">identity</span>
+</div>
+<div class="s4T">
+<span class="sVT-0">return</span> <span class="sVP-0">collections</span> <span class="sVS-1">.</span> <span class="sVV-1">OrderedDict</span> <span class="sVS-1">({</span>
+</div>
+<div class="s48">
+<span class="sVU-2">'sender'</span> <span class="sVS-2">:</span> <span class="sVP-1">identity</span> <span class="sVS-2">,</span>
+</div>
+<div class="s48">
+<span class="sVU-2">'recipient'</span> <span class="sVS-2">:</span> <span class="sVT-2">self</span> <span class="sVS-2">.</span> <span class="sVP-1">recipient</span> <span class="sVS-2">,</span>
+</div>
+<div class="s48">
+<span class="sVU-2">'value'</span> <span class="sVS-2">:</span> <span class="sVT-2">self</span> <span class="sVS-2">.</span> <span class="sVT-2">value</span> <span class="sVS-2">,</span>
+</div>
+<div class="s6H">
+<span class="sVU-2">'time'</span> <span class="sVS-2">:</span> <span class="sVT-2">self</span> <span class="sVS-2">.</span> <span class="sVP-1">time</span> <span class="sVS-2">})</span>
+</div>
+</div>
+<div class="s2P">
+Finally, we will sign this dictionary object using the private key of the sender. As before, we use the built-in PKI with SHA algorithm. The generated signature is decoded to get the ASCII representation for printing and storing it in our blockchain. The <span class="sVR">sign_transaction</span>  method code is shown here −
+</div>
+<div class="s34">
+def sign_transaction(self):
+</div>
+<div class="s6P">
+private_key = self.sender._private_key
+</div>
+<div class="s6P">
+signer = PKCS1_v1_5.new(private_key)
+</div>
+<div class="s6P">
+h = SHA.new(str(self.to_dict()).encode('utf8'))
+</div>
+<div class="s6P">
+return binascii.hexlify(signer.sign(h)).decode('ascii')
+</div>
+<div class="s2P">
+We will now test this <span class="sVR">Transaction</span> <span id="part0008.xhtml#page_15"></span> class.
+</div>
+<div class="s6W">
+Testing Transaction Class
+</div>
+<div class="s2P">
+For this purpose, we will create two users, called <span class="sVR">Dinesh</span>  and <span class="sVR">Ramesh</span> . Dinesh will send 5 TPCoins to Ramesh. For this first we create the clients called Dinesh and Ramesh.
+</div>
+<div class="s34">
+Dinesh = Client()
+</div>
+<div class="s34">
+Ramesh = Client()
+</div>
+<div class="s2P">
+Remember that when you instantiate a <span class="sVR">Client</span>  class, the <span class="sVR">public and</span>  private keys unique to the client would be created. As Dinesh is sending payment to Ramesh, he will need the public key of Ramesh which is obtained by using the identity property of the client.
+</div>
+<div class="s21">
+Thus, we will create the transaction instance using following code −
+</div>
+<div class="s34">
+t = Transaction(
+</div>
+<div class="s6P">
+Dinesh,
+</div>
+<div class="s6P">
+Ramesh.identity,
+</div>
+<div class="s6P">
+5.0
+</div>
+<div class="s34">
+)
+</div>
+<div class="s2P">
+Note that the first parameter is the sender, the second parameter is the public key of the recipient and the third parameter is the amount to be transferred. The <span class="sVR">sign_transaction</span>  method retrieves the sender’s private key from the first parameter for singing the transaction.
+</div>
+<div class="s2P">
+After the transaction object is created, you will sign it by calling its <span class="sVR">sign_transaction</span>  method. This method returns the generated signature in the printable format. We generate and print the signature using following two lines of code −
+</div>
+<div class="s34">
+signature = t.sign_transaction()
+</div>
+<div class="s34">
+print (signature)
+</div>
+<div id="part0008.xhtml#page_16" class="s21">
+When you run the above code, you will see the output similar to this −
+</div>
+<div class="s34">
+7c7e3c97629b218e9ec6e86b01f9abd8e361fd69e7d373c38420790b655b9abe3b575e343c7
+</div>
+<div class="s34">
+13703ca1aee781acd7157a0624db3d57d7c2f1172730ee3f45af943338157f899965856f6b0
+</div>
+<div class="s34">
+0e34db240b62673ad5a08c8e490f880b568efbc36035cae2e748f1d802d5e8e66298be826f5
+</div>
+<div class="s34">
+c6363dc511222fb2416036ac04eb972
+</div>
+<div class="s2S">
+Now as our basic infrastructure of creating a client and a transaction is ready, we will now have multiple clients doing multiple transactions as in a real life situation.
+</div>
+<p><span id="part0009.xhtml"></span></p>
+<div id="part0009.xhtml#page_17" class="s2Z">
+Creating Multiple Transactions
+</div>
+<div class="s21">
+The transactions made by various clients are queued in the system; the miners pick up the transactions from this queue and add it to the block. They will then mine the block and the winning miner would have the privilege of adding the block to the blockchain and thereby earn some money for himself.
+</div>
+<div class="s21">
+We will describe this mining process later when we discuss the creation of the blockchain. Before we write the code for multiple transactions, let us add a small utility function to print the contents of a given transaction.
+</div>
+<div class="s6W">
+Displaying Transaction
+</div>
+<div class="s2P">
+The <span class="sVR">display_transaction</span>  function accepts a single parameter of transaction type. The dictionary object within the received transaction is copied to a temporary variable called <span class="sVR">dict</span>  and using the dictionary keys, the various values are printed on the console.
+</div>
+<div class="s34">
+def display_transaction(transaction):
+</div>
+<div class="s6P">
+#for transaction in transactions:
+</div>
+<div class="s6P">
+dict = transaction.to_dict()
+</div>
+<div class="s6P">
+print ("sender: " + dict['sender'])
+</div>
+<div class="s6P">
+print ('-----')
+</div>
+<div class="s6P">
+print ("recipient: " + dict['recipient'])
+</div>
+<div class="s6P">
+print ('-----')
+</div>
+<div class="s6P">
+print ("value: " + str(dict['value']))
+</div>
+<div class="s6P">
+print ('-----')
+</div>
+<div class="s6P">
+print ("time: " + str(dict['time']))
+</div>
+<div class="s6P">
+print ('-----')
+</div>
+<div class="s21">
+Next, we define a transaction queue for storing our transaction <span id="part0009.xhtml#page_18"></span> objects.
+</div>
+<div class="s26">
+Transaction Queue
+</div>
+<div class="s2P">
+To create a queue, we declare a global <span class="sVR">list</span>  variable called <span class="sVR">transactions</span>  as follows −
+</div>
+<div class="s34">
+transactions = []
+</div>
+<div class="s21">
+We will simply append each newly created transaction to this queue. Please note that for brevity, we will not implement the queue management logic in this tutorial.
+</div>
+<div class="s26">
+Creating Multiple Clients
+</div>
+<div class="s21">
+Now, we will start creating transactions. First, we will create four clients who will send money to each other for obtaining various services or goods from others.
+</div>
+<div class="s34">
+Dinesh = Client()
+</div>
+<div class="s34">
+Ramesh = Client()
+</div>
+<div class="s34">
+Seema = Client()
+</div>
+<div class="s34">
+Vijay = Client()
+</div>
+<div class="s21">
+At this point, we have four clients called Dinesh, Ramesh, Seema, and Vijay. We currently assume that each of these clients hold some TPCoins in their wallets for transacting. The identity of each of these clients would be specified by using the identity property of these objects.
+</div>
+<div class="s26">
+Creating First Transaction
+</div>
+<div class="s21">
+Now, we initiate our first transaction as follows −
+</div>
+<div class="s4E">
+<div class="s4J">
+t1 <span class="sVS-0">=</span> <span class="sVV-0">Transaction</span> <span class="sVS-0">(</span>
+</div>
+<div class="s46">
+<span class="sVV-1">Dinesh</span> <span class="sVS-1">,</span>
+</div>
+<div class="s46">
+<span class="sVV-1">Ramesh</span> <span class="sVS-1">.</span> <span class="sVP-0">identity</span> <span id="part0009.xhtml#page_19" class="class-2"></span> <span class="sVS-1">,</span>
+</div>
+<div class="s46">
+<span class="sVX-0">15.0</span>
+</div>
+<div class="s8T">
+)
+</div>
+</div>
+<div class="s21">
+In this transaction Dinesh sends 5 TPCoins to Ramesh. For transaction to be successful, we will have to ensure that Dinesh has sufficient money in his wallet for this payment. Note that, we will need a genesis transaction to start TPCoin circulation in the system. You will write the transaction code for this genesis transaction very shortly as you read along.
+</div>
+<div class="s21">
+We will sign this transaction using Dinesh’s private key and add it to the transaction queue as follows −
+</div>
+<div class="s34">
+t1.sign_transaction()
+</div>
+<div class="s34">
+transactions.append(t1)
+</div>
+<div class="s21">
+After the first transaction made by Dinesh, we will create several more transactions between different clients that we created above.
+</div>
+<div class="s26">
+Adding More Transactions
+</div>
+<div class="s21">
+We will now create several more transactions, each transaction given out a few TPCoins to another party. When somebody spends money, it is not necessary that he has to check for sufficient balances in this wallet. The miner in anyway would be validating each transaction for the balance that the sender has while initiating the transaction.
+</div>
+<div class="s21">
+In case of insufficient balance, the miner will mark this transaction as invalid and would not add it to this block.
+</div>
+<div class="s21">
+The following code creates and adds nine more transactions to our queue.
+</div>
+<div class="s34">
+t2 = Transaction<span id="part0009.xhtml#page_20"></span> (
+</div>
+<div class="s6P">
+Dinesh,
+</div>
+<div class="s6P">
+Seema.identity,
+</div>
+<div class="s6P">
+6.0
+</div>
+<div class="s34">
+)
+</div>
+<div class="s34">
+t2.sign_transaction()
+</div>
+<div class="s34">
+transactions.append(t2)
+</div>
+<div class="s34">
+t3 = Transaction(
+</div>
+<div class="s6P">
+Ramesh,
+</div>
+<div class="s6P">
+Vijay.identity,
+</div>
+<div class="s6P">
+2.0
+</div>
+<div class="s34">
+)
+</div>
+<div class="s34">
+t3.sign_transaction()
+</div>
+<div class="s34">
+transactions.append(t3)
+</div>
+<div class="s34">
+t4 = Transaction(
+</div>
+<div class="s6P">
+Seema,
+</div>
+<div class="s6P">
+Ramesh.identity,
+</div>
+<div class="s6P">
+4.0
+</div>
+<div class="s34">
+)
+</div>
+<div class="s34">
+t4.sign_transaction()
+</div>
+<div class="s34">
+transactions.append(t4)
+</div>
+<div class="s34">
+t5 = Transaction(
+</div>
+<div class="s6P">
+Vijay,
+</div>
+<div class="s6P">
+Seema.identity,
+</div>
+<div class="s6P">
+7.0
+</div>
+<div class="s34">
+)
+</div>
+<div id="part0009.xhtml#page_21" class="s34">
+t5.sign_transaction()
+</div>
+<div class="s34">
+transactions.append(t5)
+</div>
+<div class="s34">
+t6 = Transaction(
+</div>
+<div class="s6P">
+Ramesh,
+</div>
+<div class="s6P">
+Seema.identity,
+</div>
+<div class="s6P">
+3.0
+</div>
+<div class="s34">
+)
+</div>
+<div class="s34">
+t6.sign_transaction()
+</div>
+<div class="s34">
+transactions.append(t6)
+</div>
+<div class="s34">
+t7 = Transaction(
+</div>
+<div class="s6P">
+Seema,
+</div>
+<div class="s6P">
+Dinesh.identity,
+</div>
+<div class="s6P">
+8.0
+</div>
+<div class="s34">
+)
+</div>
+<div class="s34">
+t7.sign_transaction()
+</div>
+<div class="s34">
+transactions.append(t7)
+</div>
+<div class="s34">
+t8 = Transaction(
+</div>
+<div class="s6P">
+Seema,
+</div>
+<div class="s6P">
+Ramesh.identity,
+</div>
+<div class="s6P">
+1.0
+</div>
+<div class="s34">
+)
+</div>
+<div class="s34">
+t8.sign_transaction()
+</div>
+<div class="s34">
+transactions.append(t8)
+</div>
+<div class="s34">
+t9 = Transaction(
+</div>
+<div class="s6P">
+Vijay<span id="part0009.xhtml#page_22"></span> ,
+</div>
+<div class="s6P">
+Dinesh.identity,
+</div>
+<div class="s6P">
+5.0
+</div>
+<div class="s34">
+)
+</div>
+<div class="s34">
+t9.sign_transaction()
+</div>
+<div class="s34">
+transactions.append(t9)
+</div>
+<div class="s34">
+t10 = Transaction(
+</div>
+<div class="s6P">
+Vijay,
+</div>
+<div class="s6P">
+Ramesh.identity,
+</div>
+<div class="s6P">
+3.0
+</div>
+<div class="s34">
+)
+</div>
+<div class="s34">
+t10.sign_transaction()
+</div>
+<div class="s34">
+transactions.append(t10)
+</div>
+<div class="s21">
+When you run the above code, you will have ten transactions in the queue for the miners to create their blocks.
+</div>
+<div class="s26">
+Dumping Transactions
+</div>
+<div class="s2P">
+As a blockchain manager, you may periodically like to review the contents of transaction queue. For this purpose, you can use the <span class="sVR">display_transaction</span>  function that we developed earlier. To dump all transactions in the queue, just iterate the transactions list and for each referenced transaction, call the <span class="sVR">display_transaction</span>  function as shown here −
+</div>
+<div class="s34">
+for transaction in transactions:
+</div>
+<div class="s6P">
+display_transaction (transaction)
+</div>
+<div class="s6P">
+print ('--------------')
+</div>
+<div class="s21">
+The transactions are separated by a dashed line for distinction. If you run the above code, you would see the transaction list as shown below −
+</div>
+<div id="part0009.xhtml#page_23" class="s34">
+sender:
+</div>
+<div class="s34">
+30819f300d06092a864886f70d010101050003818d0030818902818100bb064c99c49214
+</div>
+<div class="s34">
+4a9f463480273aba93ac1db1f0da3cb9f3c1f9d058cf499fd8e54d244da0a8dd6ddd329e
+</div>
+<div class="s34">
+c86794b04d773eb4841c9f935ea4d9ccc2821c7a1082d23b6c928d59863407f52fa05d8b
+</div>
+<div class="s34">
+47e5157f8fe56c2ce3279c657f9c6a80500073b0be8093f748aef667c03e64f04f84d311
+</div>
+<div class="s34">
+c4d866c12d79d3fc3034563dfb0203010001
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+recipient:
+</div>
+<div class="s34">
+30819f300d06092a864886f70d010101050003818d0030818902818100be93b516b28c6e
+</div>
+<div class="s34">
+674abe7abdb11ce0fdf5bb728b75216b73f37a6432e4b402b3ad8139b8c0ba541a72c8ad
+</div>
+<div class="s34">
+d126b6e1a1308fb98b727beb63c6060356bb177bb7d54b54dbe87aee7353d0a6baa93977
+</div>
+<div class="s34">
+04de625d1836d3f42c7ee5683f6703259592cc24b09699376807f28fe0e00ff882974484
+</div>
+<div class="s34">
+d805f874260dfc2d1627473b910203010001
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+value: 15.0
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+time: 2019-01-14 16:18:01.859915
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+--------------
+</div>
+<div id="part0009.xhtml#page_24" class="s34">
+sender:
+</div>
+<div class="s34">
+30819f300d06092a864886f70d010101050003818d0030818902818100bb064c99c49214
+</div>
+<div class="s34">
+4a9f463480273aba93ac1db1f0da3cb9f3c1f9d058cf499fd8e54d244da0a8dd6ddd329e
+</div>
+<div class="s34">
+c86794b04d773eb4841c9f935ea4d9ccc2821c7a1082d23b6c928d59863407f52fa05d8b
+</div>
+<div class="s34">
+47e5157f8fe56c2ce3279c657f9c6a80500073b0be8093f748aef667c03e64f04f84d311
+</div>
+<div class="s34">
+c4d866c12d79d3fc3034563dfb0203010001
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+recipient:
+</div>
+<div class="s34">
+30819f300d06092a864886f70d010101050003818d0030818902818100a070c82b34ae14
+</div>
+<div class="s34">
+3cbe59b3a2afde7186e9d5bc274955d8112d87a00256a35369acc4d0edfe65e8f9dc93fb
+</div>
+<div class="s34">
+d9ee74b9e7ea12334da38c8c9900e6ced1c4ce93f86e06611e656521a1eab561892b7db0
+</div>
+<div class="s34">
+961b4f212d1fd5b5e49ae09cf8c603a068f9b723aa8a651032ff6f24e5de00387e4d0623
+</div>
+<div class="s34">
+75799742a359b8f22c5362e5650203010001
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+value: 6.0
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+time: 2019-01-14 16:18:01.860966
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+--------------
+</div>
+<div id="part0009.xhtml#page_25" class="s34">
+sender:
+</div>
+<div class="s34">
+30819f300d06092a864886f70d010101050003818d0030818902818100be93b516b28c6e
+</div>
+<div class="s34">
+674abe7abdb11ce0fdf5bb728b75216b73f37a6432e4b402b3ad8139b8c0ba541a72c8ad
+</div>
+<div class="s34">
+d126b6e1a1308fb98b727beb63c6060356bb177bb7d54b54dbe87aee7353d0a6baa93977
+</div>
+<div class="s34">
+04de625d1836d3f42c7ee5683f6703259592cc24b09699376807f28fe0e00ff882974484
+</div>
+<div class="s34">
+d805f874260dfc2d1627473b910203010001
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+recipient:
+</div>
+<div class="s34">
+30819f300d06092a864886f70d010101050003818d0030818902818100cba097c0854876
+</div>
+<div class="s34">
+f41338c62598c658f545182cfa4acebce147aedf328181f9c4930f14498fd03c0af6b0cc
+</div>
+<div class="s34">
+e25be99452a81df4fa30a53eddbb7bb7b203adf8764a0ccd9db6913a576d68d642d8fd47
+</div>
+<div class="s34">
+452590137869c25d9ff83d68ebe6d616056a8425b85b52e69715b8b85ae807b84638d8f0
+</div>
+<div class="s34">
+0e321b65e4c33acaf6469e18e30203010001
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+value: 2.0
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+time: 2019-01-14 16:18:01.861958
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+--------------
+</div>
+<div id="part0009.xhtml#page_26" class="s2P">
+For brevity, I have printed only first few transactions in the list. In the above code, we print all transactions beginning with the very first transaction except for the genesis transaction which was never added to this list. As the transactions are added to the blocks periodically, you will generally be interested in viewing only the list of transactions which are yet to be mined. In that case, you will need to create an appropriate <span class="sVR">for</span>  loop to iterate through the transactions which are not yet mined.
+</div>
+<div class="s2S">
+So far, you have learned how to create clients, allow them to among themselves and maintain a queue of the pending transactions which are to be mined. Now, comes the most important part of this tutorial and that is creating a blockchain itself. You will learn this in the next lesson.
+</div>
+<p><span id="part0010.xhtml"></span></p>
+<div id="part0010.xhtml#page_27" class="s2Z">
+Block Class
+</div>
+<div class="s2P">
+A block consists of a varying number of transactions. For simplicity, in our case we will assume that the block consists of a fixed number of transactions, which is three in this case. As the block needs to store the list of these three transactions, we will declare an instance variable called <span class="sVR">verified_transactions</span>  as follows −
+</div>
+<div class="s34">
+self.verified_transactions = []
+</div>
+<div class="s2P">
+We have named this variable as <span class="sVR">verified_transactions</span>  to indicate that only the verified valid transactions will be added to the block. Each block also holds the hash value of the previous block, so that the chain of blocks becomes immutable.
+</div>
+<div class="s21">
+To store the previous hash, we declare an instance variable as follows −
+</div>
+<div class="s34">
+self.previous_block_hash = ""
+</div>
+<div class="s2P">
+Finally, we declare one more variable called <span class="sVR">Nonce</span>  for storing the nonce created by the miner during the mining process.
+</div>
+<div class="s34">
+self.Nonce = ""
+</div>
+<div class="s2P">
+The full definition of the <span class="sVR">Block</span>  class is given below −
+</div>
+<div class="s34">
+class Block:
+</div>
+<div class="s6P">
+def __init__(self):
+</div>
+<div class="sDP">
+self.verified_transactions = []
+</div>
+<div class="sDP">
+self.previous_block_hash = ""
+</div>
+<div class="sDP">
+self.Nonce = ""
+</div>
+<div class="s2P">
+As each block needs the value of the previous block’s hash we declare a global variable called <span class="sVR">last_block_hash</span>  as follows −
+</div>
+<div class="s34">
+last_block_hash = ""
+</div>
+<div class="s2S">
+Now let us create our first block in the blockchain.
+</div>
+<p><span id="part0011.xhtml"></span></p>
+<div id="part0011.xhtml#page_28" class="s2Z">
+Creating Genesis Block
+</div>
+<div class="s2P">
+We assume that the originator of TPCoins initially gives out 500 TPCoins to a known client <span class="sVR">Dinesh</span> . For this, he first creates a Dinesh instance −
+</div>
+<div class="s34">
+Dinesh = Client()
+</div>
+<div class="s21">
+We then create a genesis transaction and send 500 TPCoins to Dinesh’s public address.
+</div>
+<div class="s34">
+t0 = Transaction (
+</div>
+<div class="s6P">
+"Genesis",
+</div>
+<div class="s6P">
+Dinesh.identity,
+</div>
+<div class="s6P">
+500.0
+</div>
+<div class="s34">
+)
+</div>
+<div class="s2P">
+Now, we create an instance of <span class="sVR">Block</span>  class and call it <span class="sVR">block0</span> .
+</div>
+<div class="s34">
+block0 = Block()
+</div>
+<div class="s2P">
+We initialize the <span class="sVR">previous_block_hash</span>  and <span class="sVR">Nonce</span>  instance variables to <span class="sVR">None</span> , as this is the very first transaction to be stored in our blockchain.
+</div>
+<div class="s34">
+block0.previous_block_hash = None
+</div>
+<div class="s34">
+Nonce = None
+</div>
+<div class="s2P">
+Next, we will add the above t0 transaction to the <span class="sVR">verified_transactions</span>  list maintained within the block −
+</div>
+<div class="s34">
+block0.verified_transactions.append (t0)
+</div>
+<div class="s2P">
+At this point, the block is completely initialized and is ready to be added to our blockchain. We will be creating the blockchain for this purpose. Before we add the block to the blockchain, we will hash the block and store its value in the global variable called <span class="sVR">last_block_hash</span>  that we declared previously. This value will be used by the next miner in his block.
+</div>
+<div id="part0011.xhtml#page_29" class="s21">
+We use the following two lines of coding for hashing the block and storing the digest value.
+</div>
+<div class="s34">
+digest = hash (block0)
+</div>
+<div class="s34">
+last_block_hash = digest
+</div>
+<div class="s2S">
+Finally, we create a blockchain as we see in the next chapter.
+</div>
+<p><span id="part0012.xhtml"></span></p>
+<div id="part0012.xhtml#page_30" class="s2Z">
+Python Creating Blockchain
+</div>
+<div class="s21">
+A blockchain contains a list of blocks chained to each other. To store the entire list, we will create a list variable called TPCoins −
+</div>
+<div class="s34">
+TPCoins = []
+</div>
+<div class="s2P">
+We will also write a utility method called <span class="sVR">dump_blockchain</span>  for dumping the contents of the entire blockchain. We first print the length of the blockchain so that we know how many blocks are currently present in the blockchain.
+</div>
+<div class="s34">
+def dump_blockchain (self):
+</div>
+<div class="s6P">
+print ("Number of blocks in the chain: " + str(len (self)))
+</div>
+<div class="s21">
+Note that as the time passes, the number of blocks in the blockchain would be extraordinarily high for printing. Thus, when you print the contents of the blockchain you may have to decide on the range that you would like to examine. In the code below, we have printed the entire blockchain as we would not be adding too many blocks in the current demo.
+</div>
+<div class="s2P">
+To iterate through the chain, we set up a <span class="sVR">for</span>  loop as follows −
+</div>
+<div class="s34">
+for x in range (len(TPCoins)):
+</div>
+<div class="s6P">
+block_temp = TPCoins[x]
+</div>
+<div class="s2P">
+Each referenced block is copied to a temporary variable called <span class="sVR">block_temp</span> .
+</div>
+<div class="s21">
+We print the block number as a heading for each block. Note that the numbers would start with zero, the first block is a genesis block that is numbered zero.
+</div>
+<div class="s34">
+print ("block # " + str(x))
+</div>
+<div class="s2P">
+Within each block, we have stored a list of three transactions (except for the genesis block) in a variable called <span class="sVR">verified_transactions</span> . We iterate this list in a <span class="sVR">for</span>  loop and for each retrieved item, we call <span class="sVR">display_transaction</span>  function to <span id="part0012.xhtml#page_31"></span> display the transaction details.
+</div>
+<div class="s34">
+for transaction in block_temp.verified_transactions:
+</div>
+<div class="s6P">
+display_transaction (transaction)
+</div>
+<div class="s21">
+The entire function definition is shown below −
+</div>
+<div class="s34">
+def dump_blockchain (self):
+</div>
+<div class="s6P">
+print ("Number of blocks in the chain: " + str(len (self)))
+</div>
+<div class="s6P">
+for x in range (len(TPCoins)):
+</div>
+<div class="sDP">
+block_temp = TPCoins[x]
+</div>
+<div class="sDP">
+print ("block # " + str(x))
+</div>
+<div class="sDP">
+for transaction in block_temp.verified_transactions:
+</div>
+<div class="sFK">
+display_transaction (transaction)
+</div>
+<div class="sFK">
+print ('--------------')
+</div>
+<div class="sDP">
+print ('=====================================')
+</div>
+<div class="s21">
+Note that here we have inserted the separators at appropriate points in the code to demarcate the blocks and transactions within it.
+</div>
+<div class="s2S">
+As we have now created a blockchain for storing blocks, our next task is to create blocks and start adding it to the blockchain. For this purpose, we will add a genesis block that you have already created in the earlier step.
+</div>
+<p><span id="part0013.xhtml"></span></p>
+<div id="part0013.xhtml#page_32" class="s2Z">
+Adding Genesis Block
+</div>
+<div class="s2P">
+Adding a block to the blockchain involves appending the created block to our <span class="sVR">TPCoins</span>  list.
+</div>
+<div class="s34">
+TPCoins.append (block0)
+</div>
+<div class="s2P">
+Note that unlike the rest of the blocks in the system, the genesis block contains only one transaction which is initiated by the originator of the TPCoins system. Now, you will dump the contents of the blockchain by calling our global function <span class="sVR">dump_blockchain</span>  −
+</div>
+<div class="s34">
+dump_blockchain(TPCoins)
+</div>
+<div class="s21">
+When you execute this function, you will see the following output −
+</div>
+<div class="s34">
+Number of blocks in the chain: 1
+</div>
+<div class="s34">
+block # 0
+</div>
+<div class="s34">
+sender: Genesis
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+recipient:
+</div>
+<div class="s34">
+30819f300d06092a864886f70d010101050003818d0030818902818100ed272b52ccb539
+</div>
+<div class="s34">
+e2cd779c6cc10ed1dfadf5d97c6ab6de90ed0372b2655626fb79f62d0e01081c163b0864
+</div>
+<div class="s34">
+cc68d426bbe9438e8566303bb77414d4bfcaa3468ab7febac099294de10273a816f7047d
+</div>
+<div class="s34">
+4087b4bafa11f141544d48e2f10b842cab91faf33153900c7bf6c08c9e47a7df8aa7e60d
+</div>
+<div class="s34">
+c9e0798fb2ba3484bbdad2e4430203010001
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+value: 500.0
+</div>
+<div id="part0013.xhtml#page_33" class="s34">
+-----
+</div>
+<div class="s34">
+time: 2019-01-14 16:18:02.042739
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+--------------
+</div>
+<div class="s34">
+=====================================
+</div>
+<div class="s2S">
+At this point the blockchain system is ready to use. We will now enable the interested clients to become miners by providing them a mining functionality.
+</div>
+<p><span id="part0014.xhtml"></span></p>
+<div id="part0014.xhtml#page_34" class="s2Z">
+Creating Miners
+</div>
+<div class="s21">
+For enabling mining, we need to develop a mining function. The mining functionality needs to generate a digest on a given message string and provide a proof-of-work. Let us discuss this in this chapter.
+</div>
+<div class="s6W">
+Message Digest Function
+</div>
+<div class="s2P">
+We will write a utility function called <span class="sVR">sha256</span>  for creating a digest on a given message −
+</div>
+<div class="s34">
+def sha256(message):
+</div>
+<div class="s34">
+return hashlib.sha256(message.encode('ascii')).hexdigest()
+</div>
+<div class="s2P">
+The <span class="sVR">sha256</span>  function takes a <span class="sVR">message</span>  as a parameter, encodes it to ASCII, generates a hexadecimal digest and returns the value to the caller.
+</div>
+<div class="s6W">
+Mining Function
+</div>
+<div class="s2P">
+We now develop the <span class="sVR">mine</span>  function that implements our own mining strategy. Our strategy in this case would be to generate a hash on the given message that is prefixed with a given number of 1’s. The given number of 1’s is specified as a parameter to <span class="sVR">mine</span>  function specified as the difficulty level.
+</div>
+<div class="s21">
+For example, if you specify a difficulty level of 2, the generated hash on a given message should start with two 1’s - like 11xxxxxxxx. If the difficulty level is 3, the generated hash should start with three 1’s - like 111xxxxxxxx. Given these requirements, we will now develop the mining function as shown in the steps given below.
+</div>
+<div class="s26">
+Step 1
+</div>
+<div class="s21">
+The mining function takes two parameters - the message and the difficulty level.
+</div>
+<div class="s34">
+def mine(message, difficulty=1):
+</div>
+<div id="part0014.xhtml#page_35" class="s26">
+Step 2
+</div>
+<div class="s21">
+The difficulty level needs to be greater or equal to 1, we ensure this with the following assert statement −
+</div>
+<div class="s34">
+assert difficulty &gt;= 1
+</div>
+<div class="s26">
+Step 3
+</div>
+<div class="s2P">
+We create a <span class="sVR">prefix</span>  variable using the set difficulty level.
+</div>
+<div class="s34">
+prefix = '1' * difficulty
+</div>
+<div class="s21">
+Note if the difficulty level is 2 the prefix would be “11” and if the difficulty level is 3, the prefix would be “111”, and so on. We will check if this prefix exists in the generated digest of the message. To digest the message itself, we use the following two lines of code −
+</div>
+<div class="s34">
+for i in range(1000):
+</div>
+<div class="s6P">
+digest = sha256(str(hash(message)) + str(i))
+</div>
+<div class="s2P">
+We keep on adding a new number <span class="sVR">i</span>  to the message hash in each iteration and generate a new digest on the combined message. As the input to the <span class="sVR">sha256</span>  function changes in every iteration, the <span class="sVR">digest</span>  value would also change. We check if this <span class="sVR">digest</span>  value has above-set <span class="sVR">prefix</span> .
+</div>
+<div class="s34">
+if digest.startswith(prefix):
+</div>
+<div class="s2P">
+If the condition is satisfied, we will terminate the <span class="sVR">for</span>  loop and return the <span class="sVR">digest</span>  value to the caller.
+</div>
+<div class="s2P">
+The entire <span class="sVR">mine</span>  code is shown here −
+</div>
+<div class="s34">
+def mine(message, difficulty=1):
+</div>
+<div class="s6P">
+assert difficulty &gt;= 1
+</div>
+<div class="s6P">
+prefix = '1' * difficulty
+</div>
+<div class="s6P">
+for i in range(1000):
+</div>
+<div class="sDP">
+digest = sha256(str(hash(message)) + str(i)<span id="part0014.xhtml#page_36"></span> )
+</div>
+<div class="sDP">
+if digest.startswith(prefix):
+</div>
+<div class="sFK">
+print ("after " + str(i) + " iterations found nonce: "+ digest)
+</div>
+<div class="sDP">
+return digest
+</div>
+<div class="s2P">
+For your understanding, we have added the <span class="sVR">print</span>  statement that prints the digest value and the number of iterations it took to meet the condition before returning from the function.
+</div>
+<div class="s26">
+Testing Mining Function
+</div>
+<div class="s21">
+To test our mining function, simply execute the following statement −
+</div>
+<div class="s34">
+mine ("test message", 2)
+</div>
+<div class="s21">
+When you run the above code, you will see the output similar to the one below −
+</div>
+<div class="s34">
+after 138 iterations found nonce:
+</div>
+<div class="s34">
+11008a740eb2fa6bf8d55baecda42a41993ca65ce66b2d3889477e6bfad1484c
+</div>
+<div class="s21">
+Note that the generated digest starts with “11”. If you change the difficulty level to 3, the generated digest will start with “111”, and of course, it will probably require more number of iterations. As you can see, a miner with more processing power will be able to mine a given message earlier. That’s how the miners compete with each other for earning their revenues.
+</div>
+<div class="s2S">
+Now, we are ready to add more blocks to our blockchain. Let us learn this in our next chapter.
+</div>
+<p><span id="part0015.xhtml"></span></p>
+<div id="part0015.xhtml#page_37" class="s2Z">
+Adding Blocks
+</div>
+<div class="s21">
+Each miner will pick up the transactions from a previously created transaction pool. To track the number of messages already mined, we have to create a global variable −
+</div>
+<div class="s34">
+last_transaction_index = 0
+</div>
+<div class="s21">
+We will now have our first miner adding a block to the blockchain.
+</div>
+<div class="s6W">
+Adding First Block
+</div>
+<div class="s2P">
+To add a new block, we first create an instance of the <span class="sVR">Block</span>  class.
+</div>
+<div class="s34">
+block = Block()
+</div>
+<div class="s21">
+We pick up the top 3 transactions from the queue −
+</div>
+<div class="s34">
+for i in range(3):
+</div>
+<div class="s6P">
+temp_transaction = transactions[last_transaction_index]
+</div>
+<div class="s6P">
+# validate transaction
+</div>
+<div class="s21">
+Before adding the transaction to the block the miner will verify the validity of the transaction. The transaction validity is verified by testing for equality the hash provided by the sender against the hash generated by the miner using sender’s public key. Also, the miner will verify that the sender has sufficient balance to pay for the current transaction.
+</div>
+<div class="s2P">
+For brevity, we have not included this functionality in the tutorial. After the transaction is validated, we add it to the <span class="sVR">verified_transactions</span>  list in the <span class="sVR">block</span>  instance.
+</div>
+<div class="s34">
+block.verified_transactions.append (temp_transaction)
+</div>
+<div class="s21">
+We increment the last transaction index so that the next miner will pick up subsequent transactions in the queue.
+</div>
+<div class="s34">
+last_transaction_index += 1
+</div>
+<div class="s2P">
+We add exactly three transactions to the block. Once this is done, we will initialize the rest of the instance variables of the <span class="sVR">Block</span> <span id="part0015.xhtml#page_38"></span>  class. We first add the hash of the last block.
+</div>
+<div class="s34">
+block.previous_block_hash = last_block_hash
+</div>
+<div class="s21">
+Next, we mine the block with a difficulty level of 2.
+</div>
+<div class="s34">
+block.Nonce = mine (block, 2)
+</div>
+<div class="s2P">
+Note that the first parameter to the <span class="sVR">mine</span>  function is a binary object. We now hash the entire block and create a digest on it.
+</div>
+<div class="s34">
+digest = hash (block)
+</div>
+<div class="s2P">
+Finally, we add the created block to the blockchain and re-initialize the global variable <span class="sVR">last_block_hash</span>  for the use in next block.
+</div>
+<div class="s21">
+The entire code for adding the block is shown below −
+</div>
+<div class="s34">
+block = Block()
+</div>
+<div class="s34">
+for i in range(3):
+</div>
+<div class="s6P">
+temp_transaction = transactions[last_transaction_index]
+</div>
+<div class="s6P">
+# validate transaction
+</div>
+<div class="s6P">
+# if valid
+</div>
+<div class="s6P">
+block.verified_transactions.append (temp_transaction)
+</div>
+<div class="s6P">
+last_transaction_index += 1
+</div>
+<div class="sKA">
+block.previous_block_hash = last_block_hash
+</div>
+<div class="s34">
+block.Nonce = mine (block, 2)
+</div>
+<div class="s34">
+digest = hash (block)
+</div>
+<div class="s34">
+TPCoins.append (block)
+</div>
+<div class="s34">
+last_block_hash = digest
+</div>
+<div class="s26">
+Adding More Blocks
+</div>
+<div id="part0015.xhtml#page_39" class="s21">
+We will now add two more blocks to our blockchain. The code for adding the next two blocks is given below −
+</div>
+<div class="s4E">
+<div class="sKJ">
+# Miner 2 adds a block
+</div>
+<div class="s4A">
+block <span class="sVS-0">=</span> <span class="sVV-0">Block</span> <span class="sVS-0">()</span>
+</div>
+<div class="sKN">
+<span class="sVT-1">for</span> i <span class="sVT-1">in</span> range<span class="sVS-0">(</span> <span class="sVX-1">3</span> <span class="sVS-0">):</span>
+</div>
+<div class="s46">
+<span class="sVP-0">temp_transaction</span> <span class="sVS-1">=</span> <span class="sVP-0">transactions</span> <span class="sVS-1">[</span> <span class="sVP-0">last_transaction_index</span> <span class="sVS-1">]</span>
+</div>
+<div class="s46">
+<span class="sVZ"># validate transaction</span>
+</div>
+<div class="s46">
+<span class="sVZ"># if valid</span>
+</div>
+<div class="s46">
+<span class="sVP-0">block</span> <span class="sVS-1">.</span> <span class="sVP-0">verified_transactions</span> <span class="sVS-1">.</span> <span class="sVP-0">append</span> <span class="sVS-1">(</span> <span class="sVP-0">temp_transaction</span> <span class="sVS-1">)</span>
+</div>
+<div class="s46">
+<span class="sVP-0">last_transaction_index</span> <span class="sVS-1">+=</span> <span class="sVX-0">1</span>
+</div>
+<div class="s4A">
+block<span class="sVS-0">.</span> previous_block_hash <span class="sVS-0">=</span> last_block_hash
+</div>
+<div class="s4A">
+block<span class="sVS-0">.</span> <span class="sVV-0">Nonce</span> <span class="sVS-0">=</span> mine <span class="sVS-0">(</span> block<span class="sVS-0">,</span> <span class="sVX-1">2</span> <span class="sVS-0">)</span> digest <span class="sVS-0">=</span> hash <span class="sVS-0">(</span> block<span class="sVS-0">)</span>
+</div>
+<div class="s4A">
+<span class="sVV-0">TPCoins</span> <span class="sVS-0">.</span> append <span class="sVS-0">(</span> block<span class="sVS-0">)</span> last_block_hash <span class="sVS-0">=</span> digest
+</div>
+<div class="sKZ">
+# Miner 3 adds a block
+</div>
+<div class="s4A">
+block <span class="sVS-0">=</span> <span class="sVV-0">Block</span> <span id="part0015.xhtml#page_40"></span> <span class="sVS-0">()</span>
+</div>
+<div class="sKN">
+<span class="sVT-1">for</span> i <span class="sVT-1">in</span> range<span class="sVS-0">(</span> <span class="sVX-1">3</span> <span class="sVS-0">):</span>
+</div>
+<div class="s46">
+<span class="sVP-0">temp_transaction</span> <span class="sVS-1">=</span> <span class="sVP-0">transactions</span> <span class="sVS-1">[</span> <span class="sVP-0">last_transaction_index</span> <span class="sVS-1">]</span>
+</div>
+<div class="s46">
+<span class="sVZ">#display_transaction (temp_transaction)</span>
+</div>
+<div class="s46">
+<span class="sVZ"># validate transaction</span>
+</div>
+<div class="s46">
+<span class="sVZ"># if valid</span>
+</div>
+<div class="s46">
+<span class="sVP-0">block</span> <span class="sVS-1">.</span> <span class="sVP-0">verified_transactions</span> <span class="sVS-1">.</span> <span class="sVP-0">append</span> <span class="sVS-1">(</span> <span class="sVP-0">temp_transaction</span> <span class="sVS-1">)</span>
+</div>
+<div class="s46">
+<span class="sVP-0">last_transaction_index</span> <span class="sVS-1">+=</span> <span class="sVX-0">1</span>
+</div>
+<div class="sKN">
+block<span class="sVS-0">.</span> previous_block_hash <span class="sVS-0">=</span> last_block_hash
+</div>
+<div class="s4A">
+block<span class="sVS-0">.</span> <span class="sVV-0">Nonce</span> <span class="sVS-0">=</span> mine <span class="sVS-0">(</span> block<span class="sVS-0">,</span> <span class="sVX-1">2</span> <span class="sVS-0">)</span>
+</div>
+<div class="s4A">
+digest <span class="sVS-0">=</span> hash <span class="sVS-0">(</span> block<span class="sVS-0">)</span>
+</div>
+<div class="sKN">
+<span class="sVV-0">TPCoins</span> <span class="sVS-0">.</span> append <span class="sVS-0">(</span> block<span id="part0015.xhtml#page_41"></span> <span class="sVS-0">)</span>
+</div>
+<div class="s4C">
+last_block_hash <span class="sVS-0">=</span> digest
+</div>
+</div>
+<div class="s21">
+When you add these two blocks, you will also see the number of iterations it took to find the Nonce. At this point, our blockchain consists of totally 4 blocks including the genesis block.
+</div>
+<div class="s26">
+Dumping Entire Blockchain
+</div>
+<div class="s21">
+You can verify the contents of the entire blockchain using the following statement −
+</div>
+<div class="s34">
+dump_blockchain(TPCoins)
+</div>
+<div class="s21">
+You would see the output similar to the one shown below −
+</div>
+<div class="s34">
+Number of blocks in the chain: 4
+</div>
+<div class="s34">
+block # 0
+</div>
+<div class="s34">
+sender: Genesis
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+recipient:
+</div>
+<div class="s34">
+30819f300d06092a864886f70d010101050003818d0030818902818100ed272b52ccb539e2cd779
+</div>
+<div class="s34">
+c6cc10ed1dfadf5d97c6ab6de90ed0372b2655626fb79f62d0e01081c163b0864cc68d426bbe943
+</div>
+<div class="s34">
+8e8566303bb77414d4bfcaa3468ab7febac099294de10273a816f7047d4087b4bafa11f141544d4
+</div>
+<div class="s34">
+8e2f10b842cab91faf33153900c7bf6c08c9e47a7df8aa7e60dc9e0798fb2ba3484bbdad2e44302
+</div>
+<div class="s34">
+03010001
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+value: 500.0
+</div>
+<div id="part0015.xhtml#page_42" class="s34">
+-----
+</div>
+<div class="s34">
+time: 2019-01-14 16:18:02.042739
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+--------------
+</div>
+<div class="s34">
+=====================================
+</div>
+<div class="s34">
+block # 1
+</div>
+<div class="s34">
+sender:
+</div>
+<div class="s34">
+30819f300d06092a864886f70d010101050003818d0030818902818100bb064c99c492144a9f463
+</div>
+<div class="s34">
+480273aba93ac1db1f0da3cb9f3c1f9d058cf499fd8e54d244da0a8dd6ddd329ec86794b04d773e
+</div>
+<div class="s34">
+b4841c9f935ea4d9ccc2821c7a1082d23b6c928d59863407f52fa05d8b47e5157f8fe56c2ce3279
+</div>
+<div class="s34">
+c657f9c6a80500073b0be8093f748aef667c03e64f04f84d311c4d866c12d79d3fc3034563dfb02
+</div>
+<div class="s34">
+03010001
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+recipient:
+</div>
+<div class="s34">
+30819f300d06092a864886f70d010101050003818d0030818902818100be93b516b28c6e674abe7
+</div>
+<div class="s34">
+abdb11ce0fdf5bb728b75216b73f37a6432e4b402b3ad8139b8c0ba541a72c8add126b6e1a1308f
+</div>
+<div class="s34">
+b98b727beb63c6060356bb177bb7d54b54dbe87aee7353d0a6baa9397704de625d1836d3f42c7ee
+</div>
+<div class="s34">
+5683f6703259592cc24b09699376807f28fe0e00ff882974484d805f874260dfc2d1627473b9102
+</div>
+<div class="s34">
+03010001
+</div>
+<div id="part0015.xhtml#page_43" class="s34">
+-----
+</div>
+<div class="s34">
+value: 15.0
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+time: 2019-01-14 16:18:01.859915
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+--------------
+</div>
+<div class="s34">
+sender:
+</div>
+<div class="s34">
+30819f300d06092a864886f70d010101050003818d0030818902818100bb064c99c492144a9f463
+</div>
+<div class="s34">
+480273aba93ac1db1f0da3cb9f3c1f9d058cf499fd8e54d244da0a8dd6ddd329ec86794b04d773e
+</div>
+<div class="s34">
+b4841c9f935ea4d9ccc2821c7a1082d23b6c928d59863407f52fa05d8b47e5157f8fe56c2ce3279
+</div>
+<div class="s34">
+c657f9c6a80500073b0be8093f748aef667c03e64f04f84d311c4d866c12d79d3fc3034563dfb02
+</div>
+<div class="s34">
+03010001
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+recipient:
+</div>
+<div class="s34">
+30819f300d06092a864886f70d010101050003818d0030818902818100a070c82b34ae143cbe59b
+</div>
+<div class="s34">
+3a2afde7186e9d5bc274955d8112d87a00256a35369acc4d0edfe65e8f9dc93fbd9ee74b9e7ea12
+</div>
+<div class="s34">
+334da38c8c9900e6ced1c4ce93f86e06611e656521a1eab561892b7db0961b4f212d1fd5b5e49ae
+</div>
+<div class="s34">
+09cf8c603a068f9b723aa8a651032ff6f24e5de00387e4d062375799742a359b8f22c5362e56502
+</div>
+<div class="s34">
+03010001
+</div>
+<div id="part0015.xhtml#page_44" class="s34">
+-----
+</div>
+<div class="s34">
+value: 6.0
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+time: 2019-01-14 16:18:01.860966
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+--------------
+</div>
+<div class="s34">
+sender:
+</div>
+<div class="s34">
+30819f300d06092a864886f70d010101050003818d0030818902818100be93b516b28c6e674abe7
+</div>
+<div class="s34">
+abdb11ce0fdf5bb728b75216b73f37a6432e4b402b3ad8139b8c0ba541a72c8add126b6e1a1308f
+</div>
+<div class="s34">
+b98b727beb63c6060356bb177bb7d54b54dbe87aee7353d0a6baa9397704de625d1836d3f42c7ee
+</div>
+<div class="s34">
+5683f6703259592cc24b09699376807f28fe0e00ff882974484d805f874260dfc2d1627473b9102
+</div>
+<div class="s34">
+03010001
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+recipient:
+</div>
+<div class="s34">
+30819f300d06092a864886f70d010101050003818d0030818902818100cba097c0854876f41338c
+</div>
+<div class="s34">
+62598c658f545182cfa4acebce147aedf328181f9c4930f14498fd03c0af6b0cce25be99452a81d
+</div>
+<div class="s34">
+f4fa30a53eddbb7bb7b203adf8764a0ccd9db6913a576d68d642d8fd47452590137869c25d9ff83
+</div>
+<div class="s34">
+d68ebe6d616056a8425b85b52e69715b8b85ae807b84638d8f00e321b65e4c33acaf6469e18e302
+</div>
+<div class="s34">
+03010001
+</div>
+<div id="part0015.xhtml#page_45" class="s34">
+-----
+</div>
+<div class="s34">
+value: 2.0
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+time: 2019-01-14 16:18:01.861958
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+--------------
+</div>
+<div class="s34">
+=====================================
+</div>
+<div class="s34">
+block # 2
+</div>
+<div class="s34">
+sender:
+</div>
+<div class="s34">
+30819f300d06092a864886f70d010101050003818d0030818902818100a070c82b34ae143cbe59b
+</div>
+<div class="s34">
+3a2afde7186e9d5bc274955d8112d87a00256a35369acc4d0edfe65e8f9dc93fbd9ee74b9e7ea12
+</div>
+<div class="s34">
+334da38c8c9900e6ced1c4ce93f86e06611e656521a1eab561892b7db0961b4f212d1fd5b5e49ae
+</div>
+<div class="s34">
+09cf8c603a068f9b723aa8a651032ff6f24e5de00387e4d062375799742a359b8f22c5362e56502
+</div>
+<div class="s34">
+03010001
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+recipient:
+</div>
+<div class="s34">
+30819f300d06092a864886f70d010101050003818d0030818902818100be93b516b28c6e674abe7
+</div>
+<div class="s34">
+abdb11ce0fdf5bb728b75216b73f37a6432e4b402b3ad8139b8c0ba541a72c8add126b6e1a1308f
+</div>
+<div class="s34">
+b98b727beb63c6060356bb177bb7d54b54dbe87aee7353d0a6baa9397704de625d1836d3f42c7ee
+</div>
+<div class="s34">
+5683f6703259592cc24b09699376807f28fe0e00ff882974484d80<span id="part0015.xhtml#page_46"></span> 5f874260dfc2d1627473b9102
+</div>
+<div class="s34">
+03010001
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+value: 4.0
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+time: 2019-01-14 16:18:01.862946
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+--------------
+</div>
+<div class="s34">
+sender:
+</div>
+<div class="s34">
+30819f300d06092a864886f70d010101050003818d0030818902818100cba097c0854876f41338c
+</div>
+<div class="s34">
+62598c658f545182cfa4acebce147aedf328181f9c4930f14498fd03c0af6b0cce25be99452a81d
+</div>
+<div class="s34">
+f4fa30a53eddbb7bb7b203adf8764a0ccd9db6913a576d68d642d8fd47452590137869c25d9ff83
+</div>
+<div class="s34">
+d68ebe6d616056a8425b85b52e69715b8b85ae807b84638d8f00e321b65e4c33acaf6469e18e302
+</div>
+<div class="s34">
+03010001
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+recipient:
+</div>
+<div class="s34">
+30819f300d06092a864886f70d010101050003818d0030818902818100a070c82b34ae143cbe59b
+</div>
+<div class="s34">
+3a2afde7186e9d5bc274955d8112d87a00256a35369acc4d0edfe65e8f9dc93fbd9ee74b9e7ea12
+</div>
+<div class="s34">
+334da38c8c9900e6ced1c4ce93f86e06611e656521a1eab561892b7db0961b4f212d1fd5b5e49ae
+</div>
+<div class="s34">
+09cf8c603a068f9b723aa8a651032ff6f24e5de00387e4d06237579<span id="part0015.xhtml#page_47"></span> 9742a359b8f22c5362e56502
+</div>
+<div class="s34">
+03010001
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+value: 7.0
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+time: 2019-01-14 16:18:01.863932
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+--------------
+</div>
+<div class="s34">
+sender:
+</div>
+<div class="s34">
+30819f300d06092a864886f70d010101050003818d0030818902818100be93b516b28c6e674abe7
+</div>
+<div class="s34">
+abdb11ce0fdf5bb728b75216b73f37a6432e4b402b3ad8139b8c0ba541a72c8add126b6e1a1308f
+</div>
+<div class="s34">
+b98b727beb63c6060356bb177bb7d54b54dbe87aee7353d0a6baa9397704de625d1836d3f42c7ee
+</div>
+<div class="s34">
+5683f6703259592cc24b09699376807f28fe0e00ff882974484d805f874260dfc2d1627473b9102
+</div>
+<div class="s34">
+03010001
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+recipient:
+</div>
+<div class="s34">
+30819f300d06092a864886f70d010101050003818d0030818902818100a070c82b34ae143cbe59b
+</div>
+<div class="s34">
+3a2afde7186e9d5bc274955d8112d87a00256a35369acc4d0edfe65e8f9dc93fbd9ee74b9e7ea12
+</div>
+<div class="s34">
+334da38c8c9900e6ced1c4ce93f86e06611e656521a1eab561892b7db0961b4f212d1fd5b5e49ae
+</div>
+<div class="s34">
+09cf8c603a068f9b723aa8a651032ff6f24e5de00387e4d06237579<span id="part0015.xhtml#page_48"></span> 9742a359b8f22c5362e56502
+</div>
+<div class="s34">
+03010001
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+value: 3.0
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+time: 2019-01-14 16:18:01.865099
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+--------------
+</div>
+<div class="s34">
+=====================================
+</div>
+<div class="s34">
+block # 3
+</div>
+<div class="s34">
+sender:
+</div>
+<div class="s34">
+30819f300d06092a864886f70d010101050003818d0030818902818100a070c82b34ae143cbe59b
+</div>
+<div class="s34">
+3a2afde7186e9d5bc274955d8112d87a00256a35369acc4d0edfe65e8f9dc93fbd9ee74b9e7ea12
+</div>
+<div class="s34">
+334da38c8c9900e6ced1c4ce93f86e06611e656521a1eab561892b7db0961b4f212d1fd5b5e49ae
+</div>
+<div class="s34">
+09cf8c603a068f9b723aa8a651032ff6f24e5de00387e4d062375799742a359b8f22c5362e56502
+</div>
+<div class="s34">
+03010001
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+recipient:
+</div>
+<div class="s34">
+30819f300d06092a864886f70d010101050003818d0030818902818100bb064c99c492144a9f463
+</div>
+<div class="s34">
+480273aba93ac1db1f0da3cb9f3c1f9d058cf499fd8e54d244da0a8dd6ddd329ec86794b04d773e
+</div>
+<div class="s34">
+b4841c9f935ea4d9ccc2821c7a1082d23b6c928d59863407f52fa05<span id="part0015.xhtml#page_49"></span> d8b47e5157f8fe56c2ce3279
+</div>
+<div class="s34">
+c657f9c6a80500073b0be8093f748aef667c03e64f04f84d311c4d866c12d79d3fc3034563dfb02
+</div>
+<div class="s34">
+03010001
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+value: 8.0
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+time: 2019-01-14 16:18:01.866219
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+--------------
+</div>
+<div class="s34">
+sender:
+</div>
+<div class="s34">
+30819f300d06092a864886f70d010101050003818d0030818902818100a070c82b34ae143cbe59b
+</div>
+<div class="s34">
+3a2afde7186e9d5bc274955d8112d87a00256a35369acc4d0edfe65e8f9dc93fbd9ee74b9e7ea12
+</div>
+<div class="s34">
+334da38c8c9900e6ced1c4ce93f86e06611e656521a1eab561892b7db0961b4f212d1fd5b5e49ae
+</div>
+<div class="s34">
+09cf8c603a068f9b723aa8a651032ff6f24e5de00387e4d062375799742a359b8f22c5362e56502
+</div>
+<div class="s34">
+03010001
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+recipient:
+</div>
+<div class="s34">
+30819f300d06092a864886f70d010101050003818d0030818902818100be93b516b28c6e674abe7
+</div>
+<div class="s34">
+abdb11ce0fdf5bb728b75216b73f37a6432e4b402b3ad8139b8c0ba541a72c8add126b6e1a1308f
+</div>
+<div class="s34">
+b98b727beb63c6060356bb177bb7d54b54dbe87aee7353d0a6baa<span id="part0015.xhtml#page_50"></span> 9397704de625d1836d3f42c7ee
+</div>
+<div class="s34">
+5683f6703259592cc24b09699376807f28fe0e00ff882974484d805f874260dfc2d1627473b9102
+</div>
+<div class="s34">
+03010001
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+value: 1.0
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+time: 2019-01-14 16:18:01.867223
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+--------------
+</div>
+<div class="s34">
+sender:
+</div>
+<div class="s34">
+30819f300d06092a864886f70d010101050003818d0030818902818100cba097c0854876f41338c
+</div>
+<div class="s34">
+62598c658f545182cfa4acebce147aedf328181f9c4930f14498fd03c0af6b0cce25be99452a81d
+</div>
+<div class="s34">
+f4fa30a53eddbb7bb7b203adf8764a0ccd9db6913a576d68d642d8fd47452590137869c25d9ff83
+</div>
+<div class="s34">
+d68ebe6d616056a8425b85b52e69715b8b85ae807b84638d8f00e321b65e4c33acaf6469e18e302
+</div>
+<div class="s34">
+03010001
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+recipient:
+</div>
+<div class="s34">
+30819f300d06092a864886f70d010101050003818d0030818902818100bb064c99c492144a9f463
+</div>
+<div class="s34">
+480273aba93ac1db1f0da3cb9f3c1f9d058cf499fd8e54d244da0a8dd6ddd329ec86794b04d773e
+</div>
+<div class="s34">
+b4841c9f935ea4d9ccc2821c7a1082d23b6c928d59863407f52fa05<span id="part0015.xhtml#page_51"></span> d8b47e5157f8fe56c2ce3279
+</div>
+<div class="s34">
+c657f9c6a80500073b0be8093f748aef667c03e64f04f84d311c4d866c12d79d3fc3034563dfb02
+</div>
+<div class="s34">
+03010001
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+value: 5.0
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+time: 2019-01-14 16:18:01.868241
+</div>
+<div class="s34">
+-----
+</div>
+<div class="s34">
+--------------
+</div>
+<div class="sUN">
+=====================================
+</div>
+<p><span id="part0016.xhtml"></span></p>
+<div id="part0016.xhtml#page_52" class="s2Z">
+Scope and Conclusion
+</div>
+<div class="s21">
+In this tutorial, we have learnt how to construct a blockchain project in Python. There are many areas where you need to add further functionality to this project.
+</div>
+<div class="s21">
+For instance, you will need to write functions for managing the transactions queue. After the transactions are mined and the mined block is accepted by the system, they need not be stored any more.
+</div>
+<div class="s21">
+Also, the miners would certainly prefer to pick up the transactions with the highest fee. At the same time, you will have to ensure that the transactions with low or no fee would not starve forever.
+</div>
+<div class="s2P">
+You will need to develop algorithms for managing the queue. Also, the current tutorial does not include the client interface code. You will need to develop this for both normal clients and the miners. The full-fledged blockchain project would run into several more lines of code and is beyond the scope of this tutorial. The interested reader may download the <span class="sVY">bitcoin source</span>  for further study.
+</div>
+<div class="s6W">
+Conclusions
+</div>
+<div class="s21">
+This crisp tutorial should get you started on creating your own blockchain project.
+</div>
+<div class="s2P">
+For full-fledged blockchain project development, you can learn more from the <span class="sVY">bitcoin source</span> .
+</div>
+<div class="sV4">
+For larger commercial or non-commercial projects, you may consider using <span class="sVY">Ethereum</span>  − a ready to use blockchain app platform.
+</div>
