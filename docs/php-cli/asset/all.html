@@ -1,0 +1,1831 @@
+<p><span id="titlepage.xhtml"></span></p>
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewbox="0 0 913 1186" preserveaspectratio="none">
+<image width="913" height="1186" href="images/00004.jpeg"></image>
+</svg>
+</div>
+<p><span id="part0000.html"></span></p>
+<h2 id="part0000.html#calibre_pb_0" class="calibre1">PHP CLI</h2>
+<h3 class="calibre2">Create effective CLI scripts using PHP</h3>
+<p> </p>
+<h4 class="calibre4">Rob Aley</h4>
+<p> </p>
+<p>This book is for sale at <a href="http://leanpub.com/phpcli">http://leanpub.com/phpcli</a></p>
+<p>This version was published on 2016-01-27</p>
+<p><img src="images/00001.jpeg" alt="publisher&#39;s logo" id="publisher-logo" class="calibre5" /></p>
+<p>*   *   *   *   *</p>
+<p>This is a <a href="http://leanpub.com">Leanpub</a> book. Leanpub empowers authors and publishers with the Lean Publishing process. <a href="http://leanpub.com/manifesto">Lean Publishing</a> is the act of publishing an in-progress ebook using lightweight tools and many iterations to get reader feedback, pivot until you have the right book and build traction once you do.</p>
+<p>*   *   *   *   *</p>
+<div class="calibre6">
+© 2016 Rob Aley
+</div>
+<p><span id="part0001_split_000.html"></span></p>
+<section type="frontmatter toc">
+<h2 id="part0001_split_000.html#toc" class="calibre7">Table of Contents</h2>
+<nav epub="http://www.idpf.org/2007/ops" type="toc">
+<ol>
+<li><a href="#part0002.html#leanpub-auto-welcome" class="calibre9">Welcome</a>
+<ol>
+<li><a href="#part0002.html#leanpub-auto-about-the-author" class="calibre9">About the author</a></li>
+<li><a href="#part0002.html#leanpub-auto-acknowledgements" class="calibre9">Acknowledgements</a></li>
+</ol></li>
+<li><a href="#part0003.html#leanpub-auto-introduction" class="calibre9"><span class="section-number">1. </span>Introduction</a>
+<ol>
+<li><a href="#part0003.html#leanpub-auto-use-php-were-not-building-a-website-you-know" class="calibre9"><span class="section-number">1.1 </span>“Use PHP? We’re not building a website, you know!”.</a></li>
+<li><a href="#part0003.html#leanpub-auto-are-you-new-to-php" class="calibre9"><span class="section-number">1.2 </span>Are you new to PHP?</a></li>
+<li><a href="#part0003.html#leanpub-auto-reader-prerequisites-or-what-this-book-isnt" class="calibre9"><span class="section-number">1.3 </span>Reader prerequisites. Or, what this book isn’t</a></li>
+<li><a href="#part0003.html#leanpub-auto-an-important-note-for-windows-and-mac-users" class="calibre9"><span class="section-number">1.4 </span>An important note for Windows and Mac users</a></li>
+<li><a href="#part0003.html#leanpub-auto-about-the-sample-code" class="calibre9"><span class="section-number">1.5 </span>About the sample code</a></li>
+<li><a href="#part0003.html#leanpub-auto-external-resources" class="calibre9"><span class="section-number">1.6 </span>External resources</a></li>
+<li><a href="#part0003.html#leanpub-auto-english-the-real-english" class="calibre9"><span class="section-number">1.7 </span>English. The Real English.</a></li>
+</ol></li>
+<li><a href="#part0004.html#leanpub-auto-getting-away-from-the-web---an-overview-of-cli-programming-in-php" class="calibre9"><span class="section-number">2. </span>Getting away from the Web - an overview of CLI programming in PHP</a>
+<ol>
+<li><a href="#part0004.html#leanpub-auto-php-without-a-web-server" class="calibre9"><span class="section-number">2.1 </span>PHP without a web server</a></li>
+<li><a href="#part0004.html#leanpub-auto-php-versions---whats-yours" class="calibre9"><span class="section-number">2.2 </span>PHP versions - what’s yours?</a></li>
+<li><a href="#part0004.html#leanpub-auto-a-few-good-reasons-not-to-do-it-in-php" class="calibre9"><span class="section-number">2.3 </span>A few good reasons NOT to do it in PHP</a></li>
+<li><a href="#part0004.html#leanpub-auto-thinking-about-security" class="calibre9"><span class="section-number">2.4 </span>Thinking about security</a></li>
+<li><a href="#part0004.html#leanpub-auto-cli-specific-code-frameworks" class="calibre9"><span class="section-number">2.5 </span>CLI specific Code Frameworks</a></li>
+</ol></li>
+<li><a href="#part0005.html#leanpub-auto-understanding-and-using-the-cli-sapi" class="calibre9"><span class="section-number">3. </span>Understanding and using the CLI SAPI</a>
+<ol>
+<li><a href="#part0005.html#leanpub-auto-whats-different-about-the-cli-sapi" class="calibre9"><span class="section-number">3.1 </span>What’s different about the CLI SAPI?</a></li>
+<li><a href="#part0005.html#leanpub-auto-cli-sapi-installation" class="calibre9"><span class="section-number">3.2 </span>CLI SAPI installation</a></li>
+<li><a href="#part0005.html#leanpub-auto-php-command-line-options" class="calibre9"><span class="section-number">3.3 </span>PHP command line options</a></li>
+<li><a href="#part0005.html#leanpub-auto-command-line-arguments-for-your-script" class="calibre9"><span class="section-number">3.4 </span>Command line arguments for your script</a></li>
+<li><a href="#part0005.html#leanpub-auto-the-many-ways-to-call-php-scripts" class="calibre9"><span class="section-number">3.5 </span>The many ways to call PHP scripts</a>
+<ol>
+<li><a href="#part0005.html#leanpub-auto-from-a-file"><span class="section-number1">3.5.1 </span>From a file</a></li>
+<li><a href="#part0005.html#leanpub-auto-from-a-string"><span class="section-number1">3.5.2 </span>From a string</a></li>
+<li><a href="#part0005.html#leanpub-auto-from-stdin-"><span class="section-number1">3.5.3 </span>From STDIN :</a></li>
+<li><a href="#part0005.html#leanpub-auto-as-a-self-executing-script--unixlinux"><span class="section-number1">3.5.4 </span>As a self executing script : Unix/Linux</a></li>
+<li><a href="#part0005.html#leanpub-auto-as-a-self-executing-script--windows"><span class="section-number1">3.5.5 </span>As a self executing script : Windows</a></li>
+<li><a href="#part0005.html#leanpub-auto-windows-php-winexe"><span class="section-number1">3.5.6 </span>Windows php-win.exe</a></li>
+</ol></li>
+<li><a href="#part0005.html#leanpub-auto-quitting-your-script" class="calibre9"><span class="section-number">3.6 </span>Quitting your script</a></li>
+<li><a href="#part0005.html#leanpub-auto-php-repls" class="calibre9"><span class="section-number">3.7 </span>PHP REPLs</a></li>
+</ol></li>
+<li><a href="#part0006.html#leanpub-auto-user-facing-software" class="calibre9"><span class="section-number">4. </span>User facing software</a>
+<ol>
+<li><a href="#part0006.html#leanpub-auto-command-line-interface-basics" class="calibre9"><span class="section-number">4.1 </span>Command line interface basics</a></li>
+<li><a href="#part0006.html#leanpub-auto-advanced-command-line-input" class="calibre9"><span class="section-number">4.2 </span>Advanced command line input</a></li>
+<li><a href="#part0006.html#leanpub-auto-using-stdin-stout--stderr" class="calibre9"><span class="section-number">4.3 </span>Using STDIN, STOUT &amp; STDERR</a></li>
+<li><a href="#part0006.html#leanpub-auto-cli-helper-libraries" class="calibre9"><span class="section-number">4.4 </span>CLI helper libraries</a></li>
+</ol></li>
+<li><a href="#part0007.html#leanpub-auto-php-cli-scripts-and-your-system" class="calibre9"><span class="section-number">5. </span>PHP CLI scripts and your system</a>
+<ol>
+<li><a href="#part0007.html#leanpub-auto-starting-external-processes-from-php-or-shelling-out" class="calibre9"><span class="section-number">5.1 </span>Starting external processes from PHP, or “shelling out”</a></li>
+<li><a href="#part0007.html#leanpub-auto-file-status-and-realpath-caches" class="calibre9"><span class="section-number">5.2 </span>File Status and Realpath caches</a></li>
+<li><a href="#part0007.html#leanpub-auto-apc-and-other-code-caches" class="calibre9"><span class="section-number">5.3 </span>APC and other code caches</a></li>
+</ol></li>
+<li><a href="#part0008.html#leanpub-auto-where-now-or-thanks--feedback" class="calibre9"><span class="section-number">6. </span>Where now? or, Thanks &amp; feedback</a>
+<ol>
+<li><a href="#part0008.html#leanpub-auto-upgrade-to-php-beyond-the-web-for-only-5" class="calibre9"><span class="section-number">6.1 </span>Upgrade to “PHP Beyond The Web” for only $5!</a></li>
+<li><a href="#part0008.html#leanpub-auto-giving-feedback-and-getting-help-and-support" class="calibre9"><span class="section-number">6.2 </span>Giving feedback, and getting help and support</a></li>
+<li><a href="#part0008.html#leanpub-auto-are-you-reading-a-pirated-copy" class="calibre9"><span class="section-number">6.3 </span>Are you reading a “pirated” copy?</a></li>
+</ol></li>
+<li><a href="#part0009.html#leanpub-auto-appendix-a--compiling-and-installing-php-extensions-and-libraries" class="calibre9">Appendix A : Compiling and installing PHP, extensions and libraries</a>
+<ol>
+<li><a href="#part0009.html#leanpub-auto-compiling-and-installing-php-itself" class="calibre9">Compiling and installing PHP itself</a></li>
+<li><a href="#part0009.html#leanpub-auto-compiling-and-installing-extra-core-extensions" class="calibre9">Compiling and installing (extra) core extensions</a></li>
+<li><a href="#part0009.html#leanpub-auto-installing-multiple-versions-of-php" class="calibre9">Installing multiple versions of PHP</a></li>
+<li><a href="#part0009.html#leanpub-auto-pear-and-pecl" class="calibre9">PEAR and PECL</a></li>
+<li><a href="#part0009.html#leanpub-auto-composer" class="calibre9">Composer</a></li>
+<li><a href="#part0009.html#leanpub-auto-symfony2-bundles" class="calibre9">Symfony2 bundles</a></li>
+</ol></li>
+<li><a href="#part0010.html#leanpub-auto-appendix-b--sources-of-help" class="calibre9">Appendix B : Sources of help</a>
+<ol>
+<li><a href="#part0010.html#leanpub-auto-the-php-manual" class="calibre9">The PHP manual</a></li>
+<li><a href="#part0010.html#leanpub-auto-official-mailing-lists" class="calibre9">Official mailing lists</a></li>
+<li><a href="#part0010.html#leanpub-auto-stack-overflow" class="calibre9">Stack Overflow</a></li>
+<li><a href="#part0010.html#leanpub-auto-other-books" class="calibre9">Other books</a></li>
+<li><a href="#part0010.html#leanpub-auto-newsgroups" class="calibre9">Newsgroups</a></li>
+<li><a href="#part0010.html#leanpub-auto-php-subredit" class="calibre9">PHP Subredit</a></li>
+<li><a href="#part0010.html#leanpub-auto-php-on-github" class="calibre9">PHP on Github</a></li>
+<li><a href="#part0010.html#leanpub-auto-php-news-sites" class="calibre9">PHP news sites</a></li>
+</ol></li>
+</ol>
+</nav>
+</section>
+<p><span id="part0001_split_001.html"></span></p>
+<section type="frontmatter toc">
+<nav epub="http://www.idpf.org/2007/ops" type="landmarks" id="guide" data-amznremoved="mobi7" class="calibre14">
+<h2 id="part0001_split_001.html#calibre_pb_1" class="calibre1">Guide</h2>
+<ol>
+<li><a href="#part0002.html#1T140-89b0fa556d1946adbe34489539d937fa">Begin Reading</a></li>
+</ol>
+</nav>
+</section>
+<p><span id="part0002.html"></span></p>
+<div class="calibre6">
+<h2 id="part0002.html#leanpub-auto-welcome" class="calibre1">Welcome</h2>
+<h3 id="part0002.html#leanpub-auto-about-the-author" class="calibre2">About the author</h3>
+<p>I’ve been programming in PHP since late 2000. Initially it wasn’t by choice as my preferred languages at the time were Perl and Delphi (also known as Object Pascal). Things began to change after I graduated from the University of Leeds with a degree in Computer Science in 1999 and started out in a career as a freelance web developer. After only a couple of months I was offered the opportunity to take over a (relatively speaking) substantial government website contract from a friend who was exiting the freelance world for the safer and saner world of full-time employment. The only catch was that several thousand lines of code had already been written, and they were written in a relatively new language called “PHP”. Oh, and the only other catch was that I had about a week to learn it before taking over the site. So, as was the way at the time, I popped down to the local Waterstones bookshop (for the younger among you that’s where we used to get books. Books made of paper. And we had to go out and get them. Or order online and wait days for them to be delivered. Did I mention they were made of paper?). With my paper copy of “The Generic Beginners Complete Guide to PHP and MySQL for Dummies Compendium” book in hand (I may not have recalled the title completely correctly) I settled down with a pint of ale (I’m in Yorkshire at this point, remember) and set about reading it. A few days later I was coding like a pro (well, stuff was working) and 12 years later I haven’t looked back. After a varied career as a freelancer and starting up a couple of, er, start-ups (IT related and not) with varying (usually dismal) success, I’m now a full-time programmer at The University of Oxford. My day job involves medium-scale data acquisition and management, statistical analysis and providing user interfaces for researchers and the public. The majority of my development work is done in PHP, either developing new projects or gluing together other peoples software, systems and databases.</p>
+<p>Through-out my career I’ve always used PHP for web development, but for Desktop GUI work I initially used Delphi (and then Free-Pascal/Lazarus), complimented with bash shell scripting for other tasks. This was mainly due to learning them while at University. However, as PHP has matured I’ve increasingly used it beyond the web, and now I rarely use anything else for any programming or scripting task I encounter. Having been immersed in other languages like C++, Javascript, Fortran, Lisp (and probably others that my brain has chosen deliberately not to remember) by necessity during University and in some of my freelance jobs, I can honestly say that PHP is now my language of choice, rather than of necessity.</p>
+<p>When I’m not tied to a computer, I would like to say I have lots of varied and interesting hobbies. I used to have. I could write a whole book (which wouldn’t sell well) about where I’ve been and what I’ve done and I’d like to think it’s made me a well rounded person. But these days I don’t. In large part this is due to the demands of my three gorgeous young daughters Ellie, Izzy and Indy, my gorgeous wife Parv and my even more gorgeous cat Mia. And I wouldn’t have it any other way. That’s what I tell myself, anyway…</p>
+<h3 id="part0002.html#leanpub-auto-acknowledgements" class="calibre2">Acknowledgements</h3>
+<p>Isaac Newton said “If I have seen further, it is by standing on the shoulders of giants”. This book builds on, and hopefully adds to, the work of many others. The most notable of whom I would like to acknowledge below.</p>
+<p><strong>The authors of, and contributors to, the official PHP manual</strong><br />
+An invaluable reference for PHP functions and syntax, to which I referred frequently during writing this book, both for fact checking and as an aide-memoir. Thanks!</p>
+<p><strong>The collective PHP wisdom of the Internet</strong><br />
+For over 12 years I’ve used you for learning, research, play and profit. Too many sites &amp; too many people to list here, if you’ve written about PHP on web then you may well be one of them. Thanks!</p>
+<p><strong>My Family</strong><br />
+For allowing me a modicum of time to write this book, and supporting me unconditionally in everything I do. Usually. If I ask first. And there’s not something more important going on. And usually with conditions. Thanks!</p>
+</div>
+<p><span id="part0003.html"></span></p>
+<div class="calibre6">
+<h2 id="part0003.html#leanpub-auto-introduction" class="calibre1"><span class="section-number">1. </span>Introduction</h2>
+<p>If your e-reader has bought you directly to this page, or your fingers have flipped straight through the pages of the paper copy to here, then you have (perhaps wisely) skipped the books “front matter”, containing the front cover, table of contents, about-the-author section, acknowledgements and a few more bits and bobs. If that interests you, then scroll or flip backwards. Otherwise, read on to start your journey through the wider world of PHP software.</p>
+<h3 id="part0003.html#leanpub-auto-use-php-were-not-building-a-website-you-know" class="calibre2"><span class="section-number">1.1 </span>“Use PHP? We’re not building a website, you know!”.</h3>
+<p>Both it’s current recursive moniker (“PHP : PHP HyperText Preprocessor”), as well as the name originally bestowed upon it by it’s creator Rasmus Lerdorf (“PHP : Personal Home Page”) reinforce the widely held view that PHP is a scripting language for the web. And that was true, back in 1995 when PHP was first created, and for a number of years afterwards. In the web arena PHP excels : it’s easy to use, quick to develop in, widely deployed, tightly integrated into web stacks (it’s usually the P in LAMP,WAMP,MAMP etc.), and of course because it is free and open source.</p>
+<p>But many people don’t realise (or haven’t noticed, or choose not to notice) that PHP has evolved and grown up. It now closely resembles a modern, general purpose programming language. This lack of recognition is partly PHP’s own fault as it took a long time to get some of the fundamentals in place, such as OOP language constructs and even the ability to run at all without a web server being involved. However the programming community hasn’t helped; many programmers had a hard time seeing the potential for PHP to bring its rapid dynamic development model out of the web and into the wider computing environment, and many simply stuck with the “web scripting for beginners” dogma that was only really true of its early years.</p>
+<p>Recent releases in particular have brought mainstream language features (e.g. closures, traits, better language support, namespaces &amp; late static binding among many others) to the table. Performance has jumped up and up and up, memory usage (a bugbear of older versions) has dropped considerably, and PHP is now one of the more lean popular scripting languages. For even higher performance needs PHP 7 has dramatically rewritten Zend Engine (giving up to twice the performance of 5.6), and Facebook (the biggest user of PHP around) are one of several groups who are releasing alternative interpreters/VM’s, leading to performance increases of up to 6 times that achievable with the old Zend Engine. The recent release of PHP 7, and the upswing in community involvement, are indicative that reports of PHP’s demise are quite premature!</p>
+<p>But why, why, oh why create Command Line Scripts in PHP? Why not whip up a bash shell script? Why not learn C++ or another language typically used for software projects? The truth is these are valid options, and life may well work out just fine for you. But why turn down the opportunity to use your existing skills? Why not use PHP’s integrated database access, reuse existing code and data from your web projects, take advantage of PHP’s easy to use network libraries and functions, wallow in flexible text and data handling, and mix shell commands and other languages into PHP as needed to get best of both worlds? In short, why the heck not?</p>
+<p>Hopefully I’ve sold you on the story that PHP is a cross-platform, rapid-development focused, versatile language and is ideal for many different types of software. The aim of this book is to give you, the PHP coder, an insight into one specific type of software : using PHP to build command line tools that live beyond the web. I’ll show you the essential ingredients needed to transform your existing web based PHP skills to the command line, to allow you to get up and running as quickly as possible with the tools you already know.</p>
+<p>And if this book whets your appetite for web-less PHP programming, you can get a large discount on “PHP Beyond The Web”, my other book that covers many more types of PHP software and off-line programming topics. See the last Chapter for details.</p>
+<aside class="information">
+<p><strong>Further Reading</strong></p>
+<p>“PHP is much better than you think” - An article by Fabien Pontencier outlining the positives of PHP development and talking about the changes in the PHP ecosystem<br />
+<a href="http://fabien.potencier.org/article/64/php-is-much-better-than-you-think">http://fabien.potencier.org/article/64/php-is-much-better-than-you-think</a></p>
+</aside>
+<h3 id="part0003.html#leanpub-auto-are-you-new-to-php" class="calibre2"><span class="section-number">1.2 </span>Are you new to PHP?</h3>
+<p>This book is aimed at showing PHP developers how they can use their existing skills to write CLI software instead of web pages. However I appreciate that some readers may be new to PHP and are reading this book to get a feel for what PHP is capable of. If you’re already a programmer, albeit not well versed in PHP, the comprehensive official PHP manual may be the best place to begin to get a feel for the differences between PHP and the languages you are used to.</p>
+<p>If you’re not already a programmer, there are numerous “beginning PHP” books available from your favourite e-book retailer. In either case, the wider web also provides its usual breadth of in-depth knowledge and tutorials, just a judicious google away.</p>
+<p>And finally, newcomer or experienced programmer, if you’re thinking of getting serious about PHP, it may be worth having a look at some PHP “best practice” websites before diving headlong into coding. It may save you a lot of trouble in the long run.</p>
+<aside class="information">
+<p><strong>Further Reading</strong></p>
+<p>The Official PHP Manual<br />
+<a href="http://www.php.net/manual">http://www.php.net/manual</a></p>
+<p>A free online PHP course for beginners<br />
+<a href="http://ureddit.com/class/55471/programming-in-php">http://ureddit.com/class/55471/programming-in-php</a></p>
+<p>“PHP The Right Way” - A quick reference for PHP best practices, accepted coding standards, and links to authoritative tutorials<br />
+<a href="http://www.phptherightway.com/">http://www.phptherightway.com/</a></p>
+<p>“PHP Best Practices” - A short, practical guide for common and confusing PHP tasks<br />
+<a href="http://phpbestpractices.org/">http://phpbestpractices.org/</a></p>
+<p>“PHP Study Guide” - A PHP Study Guide aimed at those wanting to pass the ZCE (Zend Certified Engineer) exam<br />
+<a href="http://php-guide.evercodelab.com/">http://php-guide.evercodelab.com/</a></p>
+<p>“Zend Certification Preparation Pack” - Sample questions &amp; answers plus a guide to preparing and taking the ZCE exam<br />
+<a href="https://leanpub.com/zce?a=0_YKAEBrn4BvyagDZlmBZy&amp;subID=b">https://leanpub.com/zce</a></p>
+<p>“PSR-What?” - A guide to the “PSR” PHP Standards Recommendations<br />
+<a href="http://www.lornajane.net/posts/2013/psr-what">http://www.lornajane.net/posts/2013/psr-what</a></p>
+</aside>
+<h3 id="part0003.html#leanpub-auto-reader-prerequisites-or-what-this-book-isnt" class="calibre2"><span class="section-number">1.3 </span>Reader prerequisites. Or, what this book isn’t</h3>
+<p>To make the most of this book, you should have basic experience of programming in PHP (most likely for the web), a general programming or IT background, and a willingness to learn and be taken outside of your comfort zone.</p>
+<p>This book isn’t an introduction to PHP or programming in general. Although you don’t need a computing degree or knowledge of advanced programming concepts, the book is hopefully pitched to the level of an average PHP programmer (one who has explored more than the very basics of PHP) and tries to explain any necessary concepts as we go along. It is also useful for advanced programmers who may choose to use it as a quick reference for exploring the PHP CLI features.</p>
+<h3 id="part0003.html#leanpub-auto-an-important-note-for-windows-and-mac-users" class="calibre2"><span class="section-number">1.4 </span>An important note for Windows and Mac users</h3>
+<p>Most of the examples given in the book are run and tested under Linux (the latest Ubuntu Desktop/Server flavour in most cases). PHP runs on many operating systems, including MS Windows and Apple OS X, and code often runs in an identical manner. However there are, of course, differences due to the file system, OS, available libraries etc., but to cover these all in this book would not be practical. In addition, some features such as those reliant on POSIX standards aren’t (easily) available on some systems like Windows. As OS X was derived from a POSIX compliant operating system, you will likely find more of the code compatible than with Windows, but your experience may still vary. A good source of information for OS specific issues is the official PHP online manual, and in particular the user comments at the bottom of each page. Where possible areas specific to these other OSes have also been covered, for instance we will look at how to access the Windows Registry.</p>
+<h3 id="part0003.html#leanpub-auto-about-the-sample-code" class="calibre2"><span class="section-number">1.5 </span>About the sample code</h3>
+<p>As you’ll see throughout the book I mainly use “traditional” imperative/procedural PHP in my coding examples to keep things as simple as possible for coders of all abilities. This book isn’t designed to be a lesson in coding best practices or style, a guide to OOP programming or to push any kind of programming model or dogma. I also avoid the use of any code frameworks. Many frameworks are based around the web model and don’t always perform as intended in the kind of applications we’ll be looking at, although some do now have “console” or “cli” modules. MVC style frameworks can be useful when building GUI applications (indeed the MVC paradigm pre-dates the web considerably!), but because of the many different implementation details and styles we’ll stick to framework-less code here.</p>
+<p>It should be clear from the plain, straight forward PHP code presented how it can be used or adapted to suit your own programming style, framework or model. We will be mainly looking at task specific implementation details, leaving the hot topic of programming itself to the many other books available.</p>
+<p>All of the sample PHP source code in this book is available for you to use and do with as you please without limit or license. Use or abuse it as you see fit!</p>
+<p>If you have trouble running or understanding the sample code, see the feedback section in the last chapter of this book for details on how to contact the author for help.</p>
+<h3 id="part0003.html#leanpub-auto-external-resources" class="calibre2"><span class="section-number">1.6 </span>External resources</h3>
+<p>Through out the book we will point you in the direction of external tools, resources and information, in one of two ways :</p>
+<aside class="calibre17">
+<table>
+<tbody>
+<tr class="odd">
+<td><img src="images/00003.gif" class="calibre5" /></td>
+<td><strong><em>A “toolbox” like this</em></strong></td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td>Toolboxes like this contain details of useful tools and software</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><strong><em>Main website</em></strong> : <a href="http://www.a-useful.tool/">http://www.a-useful.tool/</a></td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><strong><em>Main documentation and installation info</em></strong> : <a href="http://wiki.a-useful.tool/">http://wiki.a-useful.tool/</a></td>
+</tr>
+</tbody>
+</table>
+</aside>
+<aside class="information">
+<p><strong>Further Reading</strong></p>
+<p>Useful articles, tutorials and reference information will be presented in Further Reading sections like this<br />
+<a href="https://www.very-useful-info.book/">https://www.very-useful-info.book/</a></p>
+</aside>
+<h3 id="part0003.html#leanpub-auto-english-the-real-english" class="calibre2"><span class="section-number">1.7 </span>English. The Real English.</h3>
+<p>Just a quick note to say that, no, those aren’t spelling mistakes, it’s British English (you know, the one that kicked it all off) as your humble author hails from the other side of the pond. Deal with it, we spell things differently. Any genuine spelling mistakes you spot will be dismissed as part of an evolving language, and then quietly fixed while you’re not looking.</p>
+</div>
+<p><span id="part0004.html"></span></p>
+<div class="calibre6">
+<h2 id="part0004.html#leanpub-auto-getting-away-from-the-web---an-overview-of-cli-programming-in-php" class="calibre1"><span class="section-number">2. </span>Getting away from the Web - an overview of CLI programming in PHP</h2>
+<p>This chapter takes a look at the basic steps involved in breaking free from the web with PHP. We’ll cover the technical steps involved, and also at the differences in programming practises and focus.</p>
+<h3 id="part0004.html#leanpub-auto-php-without-a-web-server" class="calibre2"><span class="section-number">2.1 </span>PHP without a web server</h3>
+<p>Most PHP programmers have used PHP strictly in a web-server environment. In such an environment PHP is a CGI/Fast GGI or server module, called and controlled by the HTTP server (usually Apache, IIS, Nginx or similar). The HTTP server receives a request for a PHP based web page and calls the PHP process to execute it, which usually returns output back to the HTTP server to be sent on to the end user.</p>
+<p>There have been a number of attempts to create local applications (scripting systems, desktop apps and so forth) with PHP using a locally installed web server, with some success. However the downsides of using this web-type model for local apps are numerous:</p>
+<ul>
+<li>For the value they provide in these scenarios, web servers such as Apache are often very over specified and resource hungry</li>
+<li>Unless properly locked down, a web server running locally introduces a point of access to your machine for malicious visitors from the outside world</li>
+<li>HTTP is a verbose protocol and (arguably) ideally suited for the web, however it’s often overkill for local inter-process communication and adds another resource and complexity overhead to your application</li>
+<li>Your application interface typically runs in a web browser, and therefore looks anything but local (and comes with additional support/upgrade headaches unless you install a browser specifically for your app)</li>
+</ul>
+<p>PHP, as of version 5.4, includes a built-in web-server which removes some of the problems described above. However it was designed for local testing of PHP scripts designed to be deployed on a fully-fledged HTTP server such as Apache in a live environment. It is a route that can be explored for some local apps, particularly where you want to run a private instance of a PHP web app that already exists. However its stability, reliability and suitability for production-ready local apps is yet to be proven, and it still comes with the baggage of HTTP and web browsers.</p>
+<p>Since version 4.3, PHP has had an ace hidden up its sleeve which solves all of these problems. The PHP CLI SAPI (“Command Line Interface” “Server Application Programming Interface”), to give it its formal name, is essential a long way of saying “stand-alone PHP”. It cuts out the need for a web server and provides a stand alone PHP binary for you to interact with. For instance, typing the following at a shell prompt</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 ~$ php /home/myfiles/myprogram.php</code></pre>
+</div>
+</figure>
+<p>will simply execute your <code class="calibre25">myprogram.php</code> file (which you write mostly like any other PHP script) and return any output back to the terminal (unless you tell it otherwise) instead of being sent to the web server (which doesn’t exist!).</p>
+<p>In general, PHP scripts called directly using the PHP CLI SAPI will behave in the same way as when called through a web server, although there are some differences. For instance, you won’t find any <code class="calibre25">$_GET</code> or <code class="calibre25">$_POST</code> arrays, and PHP won’t send any HTTP headers by default, as these concepts don’t mean much beyond the web. Default settings like <code class="calibre25">max_execution_time</code> are set to sensible values for local use (in this case to 0 so your scripts won’t time out), output buffering is turned off, and error messages are displayed in plain text rather than HTML.</p>
+<p>Full details of how to install (if necessary) and use the CLI SAPI are given in the next chapter.</p>
+<h3 id="part0004.html#leanpub-auto-php-versions---whats-yours" class="calibre2"><span class="section-number">2.2 </span>PHP versions - what’s yours?</h3>
+<p>PHP has supported the CLI SAPI since version 4.3.0, so many of the examples in this book will run on any PHP version since then. At the time of writing, the current version of PHP is 7.02 and the code in this book has been tested against this version. If you find that a particular function doesn’t appear to exist or work as expected, check the online PHP manual for that function. This shows which versions support which functions, and describe any breaking changes created by newer versions.</p>
+<p>If you are using an older version, there are some very good reasons to upgrade.</p>
+<ul>
+<li>Performance has increased markedly (and, correspondingly, resources used have decreased) in recent versions</li>
+<li>Although security is not always as critical with non-web applications (see the discussion on security later in this chapter for caveats), the security enhancements and security related bug fixes in recent versions are essential if you’re handling data from external sources, and if you’re using the same version for web work as well</li>
+<li>Modern language features are available, which can help your coding productivity, as well as helping others take your code more seriously</li>
+</ul>
+<p>As with the web versions of PHP, you can compile your own version of the CLI SAPI if you find the need. If you want to include extensions not pre-packaged by your OS software repositories, remove non essential code for performance reasons, or use any of the other compile-time options that PHP supports then learning to “roll your own” version may be worthwhile. A starter guide to compiling and installing PHP and related extensions can be found in Appendix A.</p>
+<h3 id="part0004.html#leanpub-auto-a-few-good-reasons-not-to-do-it-in-php" class="calibre2"><span class="section-number">2.3 </span>A few good reasons NOT to do it in PHP</h3>
+<p>Tell someone you’re going to be writing CLI scripts in PHP, and often they’ll rail about how PHP is a web language, that you should choose a language “more suitable” to the task. This book is focused on doing everything in PHP, and for 90% of tasks PHP will do all that is asked of it. PHP is now a general purpose language, it’s Turing complete, and while it’s still used in the main to run “websites”, more and more that means backend services as well. But before you commit to rewrite your world in PHP, there are a few pertinent issues that you may want to consider carefully before jumping in.</p>
+<ul>
+<li><strong>High performance requirements</strong></li>
+</ul>
+<p>If you need very high performance, particularly on limited hardware, PHP may not be for you. Performance has come on leaps and bounds in recent versions of PHP and regularly trounces languages like Python and frameworks like Ruby-on-Rails in benchmarks. However at its heart PHP is an abstracted scripting language which is never going to get the same performance for some tasks as lower level languages like C, which are closer to the bare metal. Don’t write it off for all high-performance tasks though, if you’re looking at performance with an eye to costs, you may find that the cost savings on developer time through speed of development in PHP outweighs the cost of the extra hardware you throw at it to get the performance.</p>
+<ul>
+<li><strong>Don’t (necessarily) re-invent the wheel</strong></li>
+</ul>
+<p>You <em>can</em> write a web server in PHP (see Appendix D for examples), but won’t <em>existing</em> servers like Apache do what you need? For many or most infrastructure “itches”, software exists (written in many different languages) that will give you the “scratch” you need. Unless you really need other features, the time spent writing your own is usually going to be greater than the time learning and implementing an existing piece of software. Of course, for some people the converse is true. “Because I can” can be a valid reason, and writing software is always a valuable learning experience.</p>
+<ul>
+<li><strong>Keeping the source closed</strong></li>
+</ul>
+<p>PHP is a scripting language, and this means that if you are writing software to sell or deploy elsewhere, you will be revealing your source code to the recipients. Many (including your author) will argue that being “open-source”, even commercially, is a good thing. But if that’s not your bag then you will need to go to greater lengths to protect your code. Source code obfuscaters are available online which use various tricks to make your code hard (but not impossible) to read, and a number of PHP compilers are available to produce binary programs (albeit with limitations in terms of syntax and extension coverage). But the main PHP project hasn’t expressed any intention to support code hiding or compiling, and so the viability of such methods long term is not certain. The business case for closed-source software is also not a done-deal in the medium to long term.</p>
+<h3 id="part0004.html#leanpub-auto-thinking-about-security" class="calibre2"><span class="section-number">2.4 </span>Thinking about security</h3>
+<p>Every programmer worth their salt is at least aware of the security implications of building web sites and online apps. You deliberately expose your code to the public, to the world, to anyone and everyone who will come (good people and bad). One of the early failings of PHP was to prioritise ease of use over security of code (the horror stories from relics like <code class="calibre25">register_globals</code> are only a quick google away). With newer, more secure defaults and functions like <code class="calibre25">register_globals</code> being depreciated PHP is safer than ever online. And although most security problems are caused by the programmer rather than the language, even the newest web coders seem to have an appreciation of security issues right off the bat these days.</p>
+<p>Step into the world of off-line software, however, and things are markedly different. Typically we see software for trusted users only, deployed locally on trusted machines and under the full control of the benevolent user. The user isn’t going to deliberately attack the software or machine, they’re working with their own data. Functionality absolutely can’t be compromised. Security is rarely considered at all when developing command line programs and desktop apps, let alone being features specified at design time, because it’s not “necessary”.</p>
+<p>Except the world doesn’t work like that. Take a look at any software vulnerability mailing list like BugTraq and you’ll find an abundance of vulnerabilities in “offline” apps like Adobe Reader, Microsoft Word and even open-source stalwarts like GIMP. The fact is, security is important even in local apps, for two main reasons. The first is the perennial problem of “typical user” behaviour. This is not a problem for an intelligent tech-literate user who never makes mistakes (like you dear reader), but for any software used by the rest of us disaster is only an accidental-click-on-a-dodgy-email away. The second reason security is important is that for most machines, many non-web applications aren’t really “off-line”. Even when a desktop app or a system daemon doesn’t interact with the web, local network or other external services itself, the machine it is connected to will invariably have an Ethernet cable plugged into it or a WiFi/3G/4G connection active. Your software will not run in its own cosy little realm, insulated from the world outside. Perfectly sand-boxed virtual machines not withstanding, of course.</p>
+<p>Software security is the topic of a whole other book (of which others have written plenty, see the further reading section below), and many of the same principles apply to systems software as to web software so you will be able to use your existing knowledge of web based PHP security practices to guide you. The following list of typical vulnerability types and attack vectors in both user-facing and systems software should be considered when planning your script security measures and monitoring.</p>
+<ul>
+<li><strong>Compromised data files</strong></li>
+</ul>
+<p>Compromised files from external sources (loaded deliberately or accidentally by users). These are usually data files, and particularly at risk is software registered as a default viewer for a particular file type, as accidental and malicious file activation is much easier.</p>
+<ul>
+<li><strong>Exploitation by malware</strong></li>
+</ul>
+<p>Malware looking for innocent software to exploit to gain privilege escalation. Scripted software like PHP code can be easier for malware to re-write or alter, and the availability of the source code in an un-compiled form can be of help to the malware authors.</p>
+<ul>
+<li><strong>User misbehaviour</strong></li>
+</ul>
+<p>Legitimate users misbehaving. John Smith looking for a way to view the files or surfing history of his boss Jane Doe on their shared business system, for instance.</p>
+<ul>
+<li><strong>Privilege escalation</strong></li>
+</ul>
+<p>Similar to legitimate users misbehaving, this is legitimate software misbehaving, either accidentally or deliberately trying to gain &amp; use access permissions it does not have.</p>
+<ul>
+<li><strong>Dependency vulnerability</strong></li>
+</ul>
+<p>PHP vulnerabilities, and vulnerabilities in other dependencies and related software. Your software will be completely free of security issues, of course, but it invariably depends on other libraries, software and PHP extensions, and of course lets not forget the PHP interpreter itself. Any of these can contain security bugs and attack vectors.</p>
+<p>The above section lists common sources of security issues in all types of software, not just in PHP. Minimise your risks by planning for these in the design stage, and testing for them before deployment. Then cross your fingers…</p>
+<aside class="information">
+<p><strong>Further Reading</strong></p>
+<p>“Securing PHP: Core Concepts” and “Securing PHP: The Usual Suspects” by Chris Cornutt<br />
+<a href="https://leanpub.com/securingphp-coreconcepts">https://leanpub.com/securingphp-coreconcepts</a><br />
+<a href="https://leanpub.com/securingphp-usualsuspects">https://leanpub.com/securingphp-usualsuspects</a></p>
+<p>A free online course in Penetration Testing. Focuses on web based penetration, but relevant also to off-line software.<br />
+<a href="https://www.pentesterlab.com/">https://www.pentesterlab.com/</a></p>
+<p>Free online book covering PHP security<br />
+<a href="http://phpsecurity.readthedocs.org/en/latest/index.html">http://phpsecurity.readthedocs.org/en/latest/index.html</a></p>
+<p>“Building Secure PHP Apps” by Ben Edmunds<br />
+<a href="https://leanpub.com/buildingsecurephpapps">https://leanpub.com/buildingsecurephpapps</a></p>
+</aside>
+<h3 id="part0004.html#leanpub-auto-cli-specific-code-frameworks" class="calibre2"><span class="section-number">2.5 </span>CLI specific Code Frameworks</h3>
+<p>There are many coding frameworks for PHP, and many of them can be used with CLI applications, although there is only one that is specifically created for non-web programming. Code in various frameworks may assume that it will be called in an http related context, so you may need to do extra work to code around this. When deciding whether to use a Framework, or which one to use, you should bear in mind their applicability (in terms of their focus on the web) and whether your application’s performance will suffer from the overhead they may bring. You will usually also need to look at their license, as they will usually have components that need to be distributed with your scripts. That’s not to say that they can’t be useful in general purpose programming, however there are none that your author can currently recommend specifically for non-web projects. If you’re currently comfortable using a particular framework on your web projects, it may be worth seeing if there is a CLI/Console module or recommended code path for that particular framework.</p>
+<aside class="information">
+<p><strong>Further Reading</strong></p>
+<p>The CLImax CLI oriented PHP framework<br />
+<a href="https://github.com/apinstein/climax/">https://github.com/apinstein/climax/</a></p>
+<p>The PHP Framework Interop Group - standardising interoperability between Frameworks<br />
+<a href="http://www.php-fig.org/">http://www.php-fig.org/</a></p>
+<p>The Symfony Console Component (also used to build the Laravel Artisan Console software)<br />
+<a href="http://symfony.com/doc/current/components/console/introduction.html">http://symfony.com/doc/current/components/console/introduction.html</a><br />
+<a href="https://laravel.com/docs/5.1/artisan">https://laravel.com/docs/5.1/artisan</a></p>
+<p>ZendConsole - Console routes and routing in Zend Framework 2<br />
+<a href="http://framework.zend.com/manual/current/en/modules/zend.console.routes.html">http://framework.zend.com/manual/current/en/modules/zend.console.routes.html</a></p>
+<p>Example of using Zend Framework with a CLI script<br />
+<a href="http://stackoverflow.com/questions/2325338/running-a-zend-framework-action-from-command-line">http://stackoverflow.com/questions/2325338/running-a-zend-framework-action-from-command-line</a></p>
+<p>Framework comparison matrix<br />
+<a href="http://matrix.include-once.org/framework/">http://matrix.include-once.org/framework/</a></p>
+</aside>
+</div>
+<p><span id="part0005.html"></span></p>
+<div class="calibre6">
+<h2 id="part0005.html#leanpub-auto-understanding-and-using-the-cli-sapi" class="calibre1"><span class="section-number">3. </span>Understanding and using the CLI SAPI</h2>
+<p>As we mentioned in the previous chapter, PHP CLI scripting involves using the PHP CLI SAPI. It’s therefore important to have a good grasp of how to use it, the options for configuring and running it, and how it differs from the web based SAPIs you are used to. Luckily the differences are minimal, and many are intuitive.</p>
+<h3 id="part0005.html#leanpub-auto-whats-different-about-the-cli-sapi" class="calibre2"><span class="section-number">3.1 </span>What’s different about the CLI SAPI?</h3>
+<p>The following are the main differences between the CLI SAPI and the standard web implementation :</p>
+<ul>
+<li>No HTTP headers are written to the output by default. This makes sense as they hold no meaning in the command line and so would be just extraneous text printed above your genuine output. If your output will later be funnelled out to a web browser, you will need to manually add any necessary headers (for instance by using the <code class="calibre25">header()</code> PHP function).</li>
+<li>PHP does not change the working directory to that of the PHP script being executed. To do this manually, use <code class="calibre25">getcwd()</code> and <code class="calibre25">chdir()</code> to get and set the current directory. Otherwise, the current working directory will be that from which you invoked the script. For instance, if you are currently in <code class="calibre25">/home/rob</code> and you type <code class="calibre25">php /home/peter/some_script.php</code>, the working directory used in PHP will be <code class="calibre25">/home/rob</code>, not <code class="calibre25">/home/peter</code>.</li>
+<li>Any error or warning messages are output in plain text, rather than HTML formatted text. If you want HTMLified errors, for instance if you are producing static HTML files, you can override this by setting the <code class="calibre25">html_errors</code> runtime configuration directive to true in your script using <code class="calibre25">ini_set('html_errors', 1);</code></li>
+<li>PHP implicitly ‘flushes’ all output immediately and doesn’t buffer by default. Online performance can often be harmed by sending output straight to a browser, so instead output is buffered and sent in optimal sized chunks when the chunk is full. Off-line this is not likely to be an issue, and so HTML blocks and output from constructs like print and echo are sent to the shell straight away. There is no need to use <code class="calibre25">flush()</code> to clear a buffer when you are waiting for further output. You can still use PHP’s output buffering functions to capture and control output if you wish, see the “Output Control Functions” section in the PHP manual for more information.</li>
+<li>There is no execution time limit set. Your script will run continuously until it exits of its own volition, PHP will not terminate it even if it hangs. If you want to set a time limit to reign in misbehaving scripts you can do so from within the script using the <code class="calibre25">set_time_limit()</code> function.</li>
+<li>The variables <code class="calibre25">$argc</code> and <code class="calibre25">$argv</code> which describe any command line arguments passed to your script are automatically set. These are discussed fully later in this chapter.</li>
+<li>PHP defines the constants <code class="calibre25">STDIN</code>, <code class="calibre25">STDOUT</code> and <code class="calibre25">STDERR</code> relating to the standard streams of the same name, and automatically opens I/O streams for them. These give your application instant access to “standard input” (STDIN), “standard output” (STDOUT) and “standard error” (STDERR) streams.</li>
+</ul>
+<aside class="information">
+<p><strong>Further Reading</strong></p>
+<p>Output Control Functions in the PHP manual<br />
+<a href="http://www.php.net/manual/en/ref.outcontrol.php">http://www.php.net/manual/en/ref.outcontrol.php</a></p>
+<p>Standard Streams (STDIN, STDOUT, STDERR) on Wikipedia<br />
+<a href="http://en.wikipedia.org/wiki/Standard_streams">http://en.wikipedia.org/wiki/Standard_streams</a></p>
+</aside>
+<h3 id="part0005.html#leanpub-auto-cli-sapi-installation" class="calibre2"><span class="section-number">3.2 </span>CLI SAPI installation</h3>
+<p>To use the PHP CLI SAPI, you may need to install it first. Appendix A gives details on installing (and compiling, where necessary) PHP. However you may find that it is already installed if you have PHP installed (often in a folder called sapi/cli in the PHP program folders), and if not it is usually available in modern OS software repositories (e.g. in Ubuntu a package called <code class="calibre25">php5-cli</code> exists and can be installed from any package manager or via the command line with <code class="calibre25">sudo apt-get install php5-cli</code>). If it is installed in the command line search path, typing <code class="calibre25">php -v</code> on the command line will print the version details, confirming it is indeed installed.</p>
+<h3 id="part0005.html#leanpub-auto-php-command-line-options" class="calibre2"><span class="section-number">3.3 </span>PHP command line options</h3>
+<p>The PHP binary will accept a number of command line options/switches/arguments which affect its operation. A full list can be seen by typing <code class="calibre25">php -h</code>. Although some apply only to the CGI SAPI (used when there is not a “module” such as the PHP Apache module), the following are some of the more interesting and common ones used when interacting with the CLI SAPI:</p>
+<ul>
+<li><code class="calibre25">-f</code> <em>or</em> <code class="calibre25">--file</code></li>
+</ul>
+<p>This allows you to specify the filename of the script to be run, and is optional. The <code class="calibre25">-f</code> option exists to allow compatibility with software and scripts such as automation software which can programmatically call command line programs but require filename arguments to be formed in this way. It also allows default filetype handlers to be easily set on Windows for PHP scripts. The only real difference in usage between the two versions of the command above come when interpreting command line arguments passed to the script, which we look at in the “Command line arguments for your script” section below. In most cases, the two following lines are mostly equivalent :</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 ~$ php -f myscript.php
+2 ~$ php myscript.php</code></pre>
+</div>
+</figure>
+<ul>
+<li><code class="calibre25">-a</code> <em>or</em> <code class="calibre25">--interactive</code></li>
+</ul>
+<p>Runs PHP interactively. This allows you to type in PHP code, line by line, rather than executing a saved PHP script. This mode of operation is often called a “REPL” (Read-Eval-Print-Loop). As well as providing an interactive interface for testing and developing code, it can also act as an enhanced PHP enabled shell or command-line, and we’ll look at this more closely later in this chapter.</p>
+<ul>
+<li><code class="calibre25">-c</code> <em>or</em> <code class="calibre25">--php-ini</code></li>
+</ul>
+<p>Specifies the PHP ini file that PHP will use for this application. This is particularly useful if you are also running web services using PHP on the same machine, as if it is not specified PHP will look in various default locations for <code class="calibre25">php.ini</code> and may end up using the same one as your web service. By providing one specifically for your CLI applications you can “open up” various restrictions that make more sense for offline applications. Note that by using the CLI SAPI, PHP will automatically override several <code class="calibre25">php.ini</code> settings regardless of whether you specify a custom ini file using this option. These overridden settings are those that affect the behaviour outlined in the “Whats different about the CLI SAPI?” above, and while the <code class="calibre25">php.ini</code> file is ignored in these cases you can revert or change these settings directly in your code using <code class="calibre25">ini_set()</code> function or similar. You can also use the -d or <code class="calibre25">--define</code> option to set options (e.g. <code class="calibre25">php -d max_execution_time=2000 myscript.php</code>). If you are deploying software onto machines that you do not control (e.g. if you are selling software for users to install on their own machines), it makes sense to use one of these mechanisms to ensure that PHP will be running with the settings you expect, not the settings the user may happen to have. See <code class="calibre25">-n</code> below as well.</p>
+<ul>
+<li><code class="calibre25">-n</code> <em>or</em> <code class="calibre25">--no-php-ini</code></li>
+</ul>
+<p>This tells PHP not to load a <code class="calibre25">php.ini</code> file at all. This can be useful if you do not wish to ship one with your application and instead set all of the settings directly within your code using <code class="calibre25">ini_set()</code> or similar. PHP will use its default settings if no ini file is provided, and it is worth remembering that these default settings may change from version to version of PHP (and indeed have done so in the past). You shouldn’t rely on the current defaults being suitable for your application. You can use <code class="calibre25">php --ini</code> to show the default path that PHP will look for ini files when the <code class="calibre25">-n</code> option isn’t used and <code class="calibre25">-c</code> isn’t used to specify a file.</p>
+<ul>
+<li><code class="calibre25">-e</code> <em>or</em> <code class="calibre25">--profile-info</code></li>
+</ul>
+<p>This puts PHP into “Extended Information Mode”. EIM generates extra information for use by profilers and debuggers. If you’re not using a profiler or debugger that requires this mode, you should not enable it as it can degrade performance. More information on profilers and debuggers can be found in the next chapter.</p>
+<ul>
+<li><code class="calibre25">-i</code> <em>or</em> <code class="calibre25">--info</code></li>
+</ul>
+<p>Calls the <code class="calibre25">phpinfo()</code> function and prints the output. This outputs a <em>large</em> range of information about the PHP installation, in plain text format rather than the usual HTML (it detects we are calling it from the CLI SAPI). This can be useful in tracking down issues with the installation itself, as well as giving you version information, lists of extensions installed, relevant file paths etc. As with any other shell command, the output can be piped to other commands, e.g. grep. So if you wanted to check if IPv6 was enabled in your PHP binary for instance, you could try :</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 ~$ php -i | grep -i &quot;ipv6&quot;</code></pre>
+</div>
+</figure>
+<ul>
+<li><code class="calibre25">-l</code> <em>or</em> <code class="calibre25">--syntax-check</code></li>
+</ul>
+<p>Parses the file, checking for syntax errors. This is a basic “lint” type checker, more advanced static code analysis tools are discussed in the next chapter. Be aware that this option only checks for basic syntax errors, the sort that cause the PHP engine to fail. More subtle bugs, problems in your program logic, and errors that are created at run time will not be detected. Your code is not executed, so it can help pick up basic errors before running code that may alter data and cause problems if it fails. Even when you run such code in a testing environment, resetting data and setting up for another test can take time, so a quick check for basic syntax errors first can be a time saver. Some IDE’s and text editors run <code class="calibre25">php -l</code> in the background to highlight syntax errors as you type. For instance the linter-php1 package in Github’s Atom editor uses this method for live linting of PHP code.</p>
+<ul>
+<li><code class="calibre25">-m</code> <em>or</em> <code class="calibre25">--modules</code></li>
+</ul>
+<p>Lists all of the loaded PHP &amp; Zend modules/extensions. These are modules that PHP has been compiled with, and may include things like “core”, “mysql”, “PDO”, “json” and more. This is useful for checking the PHP installation has the functionality that your application requires. You can also check from within your scripts using the <code class="calibre25">extension_loaded()</code> function or by calling the <code class="calibre25">phpinfo()</code> function. <code class="calibre25">-m</code> provides a subset of the information given with the <code class="calibre25">-i</code> flag described above, and <code class="calibre25">-i</code> (or the <code class="calibre25">phpinfo()</code> function) will return more information about the configuration, version etc. of the modules.</p>
+<ul>
+<li><code class="calibre25">-r</code> <em>or</em> <code class="calibre25">--run</code></li>
+</ul>
+<p>Runs a line of PHP code supplied as the argument, rather than executing it from a file. The line of code should be enclosed by single quotes, as shells like bash will try and interpolate PHP variables as if they were shell variables if you use double quotes. This performs a similar role to the <code class="calibre25">-a</code> interactive mode, except that PHP’s “state” is cleared after each line is executed. This means that the line of code supplied is treated as the whole script to be executed, and execution is terminated once it has been run. An Example would be:</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 ~$ php -r &#39;echo (2+2).&quot;\n&quot;;&#39;</code></pre>
+</div>
+</figure>
+<p>which will print out <code class="calibre25">4</code> followed by a new line character. Note that the line must be well-formed syntactically correct PHP, so don’t miss out the semi-colon at the end! We will return to <code class="calibre25">-r</code> later in this chapter in the section “The many ways to call PHP scripts”.</p>
+<ul>
+<li><code class="calibre25">-B</code> <em>or</em> <code class="calibre25">--process-begin</code><br />
+<code class="calibre25">-R</code> <em>or</em> <code class="calibre25">--process-code</code><br />
+<code class="calibre25">-F</code> <em>or</em> <code class="calibre25">--process-file</code><br />
+<code class="calibre25">-E</code> <em>or</em> <code class="calibre25">--process-end</code></li>
+</ul>
+<p>These four arguments allow you to specify PHP code to be executed before, during and after input from <code class="calibre25">STDIN</code> is processed by PHP. <code class="calibre25">-B</code> specifies a line of code to execute before the input is processed, <code class="calibre25">-R</code> specifies a line of code to execute for every line of input whilst <code class="calibre25">-F</code> specifies a PHP file to execute for each line. Finally <code class="calibre25">-E</code> executes a line of code at the end of the input process. In <code class="calibre25">-R</code> and <code class="calibre25">-F</code>, two special variables are available; <code class="calibre25">$argn</code> - the text of the line being processed, and <code class="calibre25">$argi</code> - the number of the line being processed. This is mainly useful when using PHP directly in shell scripts. For instance, to print out a text file with line numbers, you can do something like:</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 ~$  cat my_text_file.txt | php -B &#39;echo &quot;Lets add line numbers...\n&quot;;&#39;
+2         -R &#39;echo &quot;$argi: $argn\n&quot;;&#39; -E &#39;echo &quot;That&#39;&#39;s the end folks\n&quot;;&#39;</code></pre>
+</div>
+</figure>
+<p>which will output something like</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 Lets add line numbers...
+2 1: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+3 2: eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+4 3: minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+5 4: ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+6 That&#39;s the end folks</code></pre>
+</div>
+</figure>
+<ul>
+<li><code class="calibre25">-s</code> <em>or</em> <code class="calibre25">--syntax-highlight</code></li>
+</ul>
+<p>This outputs an HTML version of the PHP script, with coloured syntax highlighting. The PHP script is not executed or validated, it’s simply made “pretty”. The pretty HTML is printed to STDOUT, and can be useful when pouring over code looking for errors, issues and optimisations. This only works with PHP in files, not with code provided by the <code class="calibre25">-r</code> option. Most modern IDE’s and code editors provide syntax highlighting by default, however this can be useful if your only access to a machine is on the command line and the editor you are using doesn’t do syntax highlighting. In this case, use <code class="calibre25">-s</code> to create a coloured version of your script, and either download it or view it through your web browser if the machine has a web server installed.</p>
+<ul>
+<li><code class="calibre25">-v</code> <em>or</em> <code class="calibre25">--version</code></li>
+</ul>
+<p>This outputs the PHP version information. This can also be found in amongst the output of the <code class="calibre25">-i</code> option described above. Be careful when assuming a particular format, some package repositories (Ubuntu for instance) include their name and their own build numbers in the version string, so don’t just filter it for any numerics.</p>
+<ul>
+<li><code class="calibre25">-w</code> <em>or</em> <code class="calibre25">--strip</code></li>
+</ul>
+<p>This outputs the contents of the source code with any unnecessary white space and any comments removed. This can only be used with code files (not with lines of code supplied by <code class="calibre25">-r</code>) and does not work with the syntax highlighting option above. This is used to “minify” a file, i.e. reduce the file size. Contrary to popular opinion, this will not speed up most scripts, the overhead of parsing comments and white space is extremely negligible. You should also be wary of support &amp; debugging issues even if a copy of the “full” code is kept, as line numbers in error reports will no longer match between the original and stripped versions. It also does not minify identifies like variable names, and so cannot be used to obfuscate your code. There are very few reason to use this option these days. To make a file smaller for distribution, using proper compression (e.g. adding it to a zip file) is usually a better method.</p>
+<ul>
+<li><code class="calibre25">-z</code> <em>or</em> <code class="calibre25">--zend-extension</code></li>
+</ul>
+<p>This specifies the filename/path for a Zend Extension to be loaded before your script is run. This allows dynamic loading of extensions, which can alternatively be specified in the <code class="calibre25">php.ini</code> file if they are always to be loaded.</p>
+<ul>
+<li><code class="calibre25">--rf</code> <em>or</em> <code class="calibre25">--rfunction</code><br />
+<code class="calibre25">--rc</code> <em>or</em> <code class="calibre25">--rclass</code><br />
+<code class="calibre25">--re</code> <em>or</em> <code class="calibre25">--rextension</code><br />
+<code class="calibre25">--rz</code> <em>or</em> <code class="calibre25">--rzendextension</code><br />
+<code class="calibre25">--ri</code> <em>or</em> <code class="calibre25">--rextinfo</code></li>
+</ul>
+<p>These options allow you to explore PHP structures using reflection. Reflection is the process by which PHP can perform runtime “introspection”, which is the means to allow you to look into elements and structures of your code at run time. The first three options above print reflection information about a named function, class or extension. The last two print basic information about a Zend extension or a standard extension, as returned by the <code class="calibre25">phpinfo()</code> function. This reflection information, which is very detailed, is only available if PHP is compiled with reflection support. These options can be used as a quick but precise reference guide to the entities listed above, and are particularly useful in interrogating unknown code written by others.</p>
+<aside class="information">
+<p><strong>Further Reading</strong></p>
+<p>Reflection information in the PHP Manual<br />
+<a href="http://www.php.net/manual/en/book.reflection.php">http://www.php.net/manual/en/book.reflection.php</a></p>
+<p>“Introspection and Reflection in PHP” by Octavia Anghel<br />
+<a href="http://www.sitepoint.com/introspection-and-reflection-in-php/">http://www.sitepoint.com/introspection-and-reflection-in-php/</a></p>
+</aside>
+<h3 id="part0005.html#leanpub-auto-command-line-arguments-for-your-script" class="calibre2"><span class="section-number">3.4 </span>Command line arguments for your script</h3>
+<p>As we’ve seen above, passing arguments to PHP itself is straightforward and done in the normal way. However passing arguments for use by your PHP script is a little more complicated, as PHP needs to know where its own arguments stop and where your script’s start. The best way to examine how PHP deals with this is through some examples. Consider the following PHP script:</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 &lt;?
+2 
+3 echo &quot;Number of arguments given :&quot;.$argc.&quot;\n&quot;;
+4 
+5 echo &quot;List of arguments given :\n&quot;;
+6 
+7 print_r($argv);</code></pre>
+</div>
+</figure>
+<p>There are two special variables in the script above :</p>
+<ul>
+<li><code class="calibre25">$argc</code> : This records the number of command line arguments passed to the script</li>
+<li><code class="calibre25">$argv</code> : This is an array of the actual arguments passed.</li>
+</ul>
+<p>Lets save the script as <code class="calibre25">arguments.php</code>. Now lets call it as follows :</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 ~$ php -e arguments.php -i -b=big -l red white &quot;and blue&quot;</code></pre>
+</div>
+</figure>
+<p>You will get the following output :</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code> 1 Number of arguments given :7
+ 2 List of arguments given :
+ 3 Array
+ 4 (
+ 5     [0] =&gt; arguments.php
+ 6     [1] =&gt; -i
+ 7     [2] =&gt; -b=big
+ 8     [3] =&gt; -l
+ 9     [4] =&gt; red
+10     [5] =&gt; white
+11     [6] =&gt; and blue
+12 )</code></pre>
+</div>
+</figure>
+<p>As you can see, all of the arguments given from the filename onwards in the command are passed to the script. The first, <code class="calibre25">-e</code>, which is used by PHP itself is not passed through. So, as a general rule, everything after the filename is treated as an argument to the script, anything before the filename is treated as an argument for PHP itself, and the filename is shared between the two.</p>
+<p>There is, of course, an exception. As we learned above, in addition to specifying the filename of your script on its own, we can also pass it as part of the -f flag. So if we execute the following command:</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 ~$ php -e -f arguments.php -i -b=big -l red white &quot;and blue&quot;</code></pre>
+</div>
+</figure>
+<p>we get the following unexpected output :</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code> 1 phpinfo()
+ 2 PHP Version =&gt; 5.4.6-1ubuntu1.3
+ 3 
+ 4 System =&gt; Linux dev-system 3.5.0-37-generic #58-Ubuntu SMP Mon Jul 8 22:10:2\
+ 5 8 U
+ 6 TC 2013 i686
+ 7 Build Date =&gt; Jul 15 2013 18:23:34
+ 8 Server API =&gt; Command Line Interface
+ 9 Virtual Directory Support =&gt; disabled
+10 Configuration File (php.ini) Path =&gt; /etc/php5/cli
+11 &lt;rest of output removed for brevity&gt;</code></pre>
+</div>
+</figure>
+<p>You may recognise this as the output of calling <code class="calibre25">php -i</code>. Rather than treating arguments after the filename as belonging to the script, PHP has treated the -i argument (and those afterwards) as one of it’s own. As <code class="calibre25">-i</code> is a valid PHP argument, it decides that it was what you wanted and invokes its “information” mode. If you need to pass the filename as part of the -f flag rather than as an argument on it’s own, you will need to separate your scripts arguments using <code class="calibre25">--</code>. So, for the command above to work as expected, we need to alter it to read:</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 ~$ php -e -f arguments.php -- -i -b=big -l red white &quot;and blue&quot;</code></pre>
+</div>
+</figure>
+<p>Everything after the <code class="calibre25">--</code>, plus the script filename, is passed as arguments to the script, and we get the output we were expecting.</p>
+<p>This can make your scripts a little messy, particularly if you are passing lots of arguments, so you may want to look at the sub-section on self-executing scripts in the next section, which will show you how to embed PHPs arguments in the script itself, allowing the script to claim any and all arguments passed as its own.</p>
+<h3 id="part0005.html#leanpub-auto-the-many-ways-to-call-php-scripts" class="calibre2"><span class="section-number">3.5 </span>The many ways to call PHP scripts</h3>
+<p>As you can probably tell from the command line options in the previous section, there are several different ways to execute PHP code when using the CLI SAPI. Although we’ve covered a couple of these already, they are discussed here again for completeness.</p>
+<h4 id="part0005.html#leanpub-auto-from-a-file" class="calibre4"><span class="section-number1">3.5.1 </span>From a file</h4>
+<p>You can tell PHP to execute a particular PHP source code file. For instance:</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 php myscript.php
+2 php -f myscript.php</code></pre>
+</div>
+</figure>
+<p>Note that -f is optional, the above two lines are functionally equivalent. The PHP command line options detailed above, where appropriate, work in this method. E.g.</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 ~$ php -e myscript.php</code></pre>
+</div>
+</figure>
+<p>will execute the file <code class="calibre25">myscript.php</code> in Extended Information Mode.</p>
+<p>As with the web version of PHP, source files can be interpolated (mixed) with HTML (or, more usefully on the command line, plain text). So you will still need your opening <code class="calibre25">&lt;?</code> or <code class="calibre25">&lt;?php</code> tags, otherwise your source code will just be printed straight out without being executed.</p>
+<h4 id="part0005.html#leanpub-auto-from-a-string" class="calibre4"><span class="section-number1">3.5.2 </span>From a string</h4>
+<p>You can execute a single line of code with the <code class="calibre25">-r</code> flag :</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 ~$ php -r &#39;echo(&quot;Hello World!\n&quot;);&#39;</code></pre>
+</div>
+</figure>
+<p>Many of the other command line options are not available with the <code class="calibre25">-r</code> method, such as syntax highlighting. Watch out for shell variable substitution (use single quotes rather than double quotes around your code) and other mangling of your code by the shell. Unless it really is a quick one-off, it is likely safer and easier to pop the relevant line into a file and execute that instead. One common use of the <code class="calibre25">-r</code> option is for executing PHP generated by other (possibly non-PHP) shell commands where the whole shell script needs to execute in memory without touching disk (for instance where permissions prohibit disk write access).</p>
+<h4 id="part0005.html#leanpub-auto-from-stdin-" class="calibre4"><span class="section-number1">3.5.3 </span>From STDIN :</h4>
+<p>If you do not specify a file or use the <code class="calibre25">-r</code> option, PHP will treat the contents of <code class="calibre25">STDIN</code> as the PHP code to be executed, as shown here:</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 ~$ echo &#39;&lt;? echo &quot;hello\n&quot;;?&gt;&#39; | php</code></pre>
+</div>
+</figure>
+<p>You can also use this method with <code class="calibre25">-B</code>,<code class="calibre25">-R</code>,<code class="calibre25">-F</code> and <code class="calibre25">-E</code> to makes PHP a first class citizen in shell scripting, giving you the ability to pipe data in and out of PHP. For instance, to reverse every line of a file (or any data source that you pipe into it), use</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 ~$ cat file.txt | php -R &#39;echo strrev($argn).&quot;\n&quot;;&#39; | grep php</code></pre>
+</div>
+</figure>
+<p>In this line of code, we pipe the contents of a text file into PHP. The <code class="calibre25">-R</code> option tells PHP to execute the following PHP code on each line of input, where the line is stored in the special variable <code class="calibre25">$argn</code>. In this case, we reverse <code class="calibre25">$argn</code> using the string reversing function <code class="calibre25">strrev()</code> and then echo the reversed string out again. Any <code class="calibre25">echo</code>‘d output goes to <code class="calibre25">STDOUT</code>, which is either printed to the shell or, as in this case, can be piped to another shell command. In our case we then use <code class="calibre25">grep</code> to only display the lines containing the string ‘php’, which is ‘php’ backwards. More details on <code class="calibre25">-R</code> and its siblings are given in the previous section.</p>
+<p>If you want to use options like <code class="calibre25">-R</code>, but have too much PHP code to fit comfortably on the command line, you can put the code in a normal PHP source code file and <code class="calibre25">include()</code> it, e.g.</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 ~$ cat something.txt &gt; php -R &#39;include(&quot;complicated.php&quot;);&#39;</code></pre>
+</div>
+</figure>
+<p>If it is a non-trivial PHP script, it may be more efficient to package it up into functions and include it once with -B (-B means it’s executed before the main code), and then execute the function each time with -R. The following example loads the content of <code class="calibre25">my_functions.php</code> once at the start, and then the function <code class="calibre25">complicated()</code> from that file is called on each line (each <code class="calibre25">$argn</code>) from the data file (<code class="calibre25">data.txt</code>).</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 php -B &#39;include(&quot;my_functions.php&quot;);&#39; -R &#39;complicated($argn);&#39;
+2 	-f &#39;data.txt&#39;</code></pre>
+</div>
+</figure>
+<p>Although these commands look relatively simple, there is of course no arbitrary limit to the PHP code you can put behind them. You can use classes and objects, multiple files, and most of the code and techniques explored in this book, exposing only functions or methods at the shell level as an interface for the user. You can also open the standard streams as PHP streams within PHP and access their file pointers to read data in from, negating the need to use -R, as discussed in the next chapter.</p>
+<h4 id="part0005.html#leanpub-auto-as-a-self-executing-script--unixlinux" class="calibre4"><span class="section-number1">3.5.4 </span>As a self executing script : Unix/Linux</h4>
+<p>On Unix/Linux type systems you can make a PHP script file into a directly executable shell command. Simply make the very first line of the script file a <code class="calibre25">#!</code> line (usually pronounce “shebang line” or “hashbang line”) with path to the PHP binary, e.g.</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 #!/usr/bin/php
+2 &lt;?
+3 
+4 echo(&#39;Hello World!&#39;);</code></pre>
+</div>
+</figure>
+<p>and set the executable bit using <code class="calibre25">chmod</code> or similar, e.g.</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 ~$ chmod a+x myscript.php</code></pre>
+</div>
+</figure>
+<p>Then simply typing <code class="calibre25">./myscript.php</code> at the command line to execute it. You can also rename the file to remove the <code class="calibre25">.php</code> extension (assuming you had one in the first place), so you would just type</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 ~$ ./myscript</code></pre>
+</div>
+</figure>
+<p>at the shell prompt to run it. You can further simplify it to remove the initial <code class="calibre25">./</code> by moving it to a directory somewhere in your shell’s search path. Note that when running a script in this manor, any command line options are passed directly to the script and not to PHP. In fact, you cannot pass extra command line parameters to PHP at runtime using this method, you must include them in the “shebang” line when constructing your script. For instance, in the example above, if you wanted to use “Extended Information Mode”, you would alter the first line of the script to read:</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 #!/usr/bin/php -e</code></pre>
+</div>
+</figure>
+<p>If you were to instead call the script as follows :</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 ~$ myscript -e</code></pre>
+</div>
+</figure>
+<p>then the <code class="calibre25">-e</code> flag would be passed as an argument to the script, not to PHP directly, and so PHP would not enter EIM. This is useful for scripts that have lots of user supplied arguments, but also makes options like <code class="calibre25">-B</code> and <code class="calibre25">-R</code> discussed in the method above cumbersome to use for processing <code class="calibre25">STDIN</code> data, as you have to include all of the PHP on the shebang line where it is harder to change. However you can simply <code class="calibre25">include()</code> the necessary files and use standard file streams to process the <code class="calibre25">STDIN</code> stream (created and opened by the CLI SAPI automatically for you) line by line instead.</p>
+<aside class="information">
+<p><strong>Further Reading</strong></p>
+<p>Standard IO Streams information in the PHP Manual<br />
+<a href="http://php.net/manual/en/features.commandline.io-streams.php">http://php.net/manual/en/features.commandline.io-streams.php</a></p>
+</aside>
+<p>If your script may be used on other systems, please bear in mind that the PHP binary will quite often be located in a different directory to the one on your system. In this scenario, you will need to change the shebang line for each system if you hard-code the location in it. Fortunately, if installed correctly, PHP sets an environment variable with its location, available via the <code class="calibre25">/usr/bin/env</code> shell command. So if you change the shebang line as follows, your script should be executable wherever PHP is located :</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 #!/usr/bin/env php</code></pre>
+</div>
+</figure>
+<p>On Windows, the “shebang” line can be left in, as PHP will recognise it and ignore it. However it will not execute the file as it does on *nix.</p>
+<h4 id="part0005.html#leanpub-auto-as-a-self-executing-script--windows" class="calibre4"><span class="section-number1">3.5.5 </span>As a self executing script : Windows</h4>
+<p>In a similar manner, scripts can be executed by calling them directly under Windows. However, the process for setting Windows up to do this is slightly more involved, requiring changes to the Registry and file type associations. I therefore recommend reading the official PHP documentation which covers this in detail.</p>
+<aside class="information">
+<p><strong>Further Reading</strong></p>
+<p>Setting up the PHP Command Line environment on Windows<br />
+<a href="http://php.net/manual/en/install.windows.commandline.php">http://php.net/manual/en/install.windows.commandline.php</a></p>
+</aside>
+<h4 id="part0005.html#leanpub-auto-windows-php-winexe" class="calibre4"><span class="section-number1">3.5.6 </span>Windows php-win.exe</h4>
+<p>PHP for Windows also ships with php-win.exe, which is similar to the CLI build of PHP, except that it does not open a command line window. This is useful for running system software in the background or running scripts which create their own graphical interface.</p>
+<aside class="information">
+<p><strong>Futher Reading</strong></p>
+<p>An instructive comment on spawning php-win.exe processes on Windows<br />
+<a href="http://www.php.net/manual/en/features.commandline.php#62162">http://www.php.net/manual/en/features.commandline.php#62162</a></p>
+</aside>
+<h3 id="part0005.html#leanpub-auto-quitting-your-script" class="calibre2"><span class="section-number">3.6 </span>Quitting your script</h3>
+<p>We’ve looked at starting your scripts, but what happens when it comes time to finish running them?</p>
+<p>Like web based PHP scripts, CLI scripts will terminate happily when we hit the end of the script file, and will tidy up all the resources used in the same way. Likewise, if we want to end early, we can call the <code class="calibre25">exit</code> (or equivalent <code class="calibre25">die</code>) language construct.</p>
+<p>However in the world of CLI scripts this isn’t considered very polite. Because CLI command are designed to work together, often in chains of commands, most shell programs and scripts will provide an “exit code” when they terminate to let the other programs around them know <em>why</em> they finished. Were they done? Did they encounter an error? Were they called incorrectly? Enquiring minds want to know.</p>
+<p>It is particularly important to supply an exit code when your script may be the last item in a shell script, as the exit code of the shell script as a whole is taken to be the last exit code returned within it. We can make our PHP script provide an exit code, simply by including it as a parameter to <code class="calibre25">exit</code> or <code class="calibre25">die</code>. An exit code is an integer, and there are a number of common exit codes :</p>
+<ul>
+<li><strong>0</strong> : Success - we’ve exited normally.</li>
+<li><strong>1</strong> : General Error - usually used for application/language specific errors and syntax errors</li>
+<li><strong>2</strong> : Incorrect Usage</li>
+<li><strong>126</strong> : Command is not executable - usually permissions related</li>
+<li><strong>127</strong> : Command Not Found</li>
+<li><strong>128+N</strong> (up to <strong>165</strong>): Command terminated by POSIX Signal number N - e.g. In the case of <code class="calibre25">kill -9 myscript.php</code> it should return code 137 (128+9)</li>
+<li><strong>130</strong> : Command terminated by Ctrl-C (Ctrl-C is POSIX code 2, so as above 128+2 = 130)</li>
+</ul>
+<aside class="information">
+<p><strong>Further Reading</strong></p>
+<p>POSIX Signals on Wikipedia<br />
+<a href="http://en.wikipedia.org/wiki/Unix_signal#POSIX_signals">http://en.wikipedia.org/wiki/Unix_signal#POSIX_signals</a></p>
+</aside>
+<p>Any other positive integer is generally construed as exiting due to an unspecified error. So, for instance, if you decide the command line arguments provided by your user are not in the correct format, you should terminate your script using <code class="calibre25">exit(2)</code>. If instead all goes well and your script continues to the end of its script file, you can actually let it exit by itself (or by calling <code class="calibre25">exit</code> without a parameter), as it returns status code 0 by default.</p>
+<p>As with web scripts, you can register functions to be executed when your PHP script exits using the <code class="calibre25">register_shutdown_function()</code> function. One use for this may be to check that all is well and evaluate which exit code should be returned. The exit code used as the parameter to <code class="calibre25">exit</code> or <code class="calibre25">die</code> within a registered shutdown functions overrides the code used in the initial exit call that initiated shutdown. This means that you can happily <code class="calibre25">exit(0)</code> everywhere, then <code class="calibre25">exit(76)</code> from your shutdown function if you detect that the foo conflaganation isn’t aligned with the bar initispations in your metaspacialatific object. Or similar.</p>
+<h3 id="part0005.html#leanpub-auto-php-repls" class="calibre2"><span class="section-number">3.7 </span>PHP REPLs</h3>
+<p>When you want to test out a few lines of PHP, your default instinct may be to create a new PHP file, save it, and then execute it with PHP. There is a better, faster and more interactive, way however. The PHP “Interactive Shell”, also known as the PHP REPL (Read-Eval-Print-Loop), is a quick and easy way to type in code and have it execute immediately. Unlike executing single lines of code using <code class="calibre25">php -r</code>, the REPL (started by calling <code class="calibre25">php -a</code>) keeps the scripts state (e.g. contents of variables and objects) in-between each line that you type, until you exit. You can use all of PHP’s functions, although no libraries are loaded by default, and you can <code class="calibre25">include()</code> or <code class="calibre25">require()</code> existing files of PHP code. This latter capability is useful for debugging the final output of a problematic script; simply <code class="calibre25">include()</code> your script which will execute the script and, as long the script doesn’t terminate prematurely, then you can <code class="calibre25">echo()</code> or <code class="calibre25">print_r()</code> or otherwise explore the state of the variables and other resources at the end of the run. Other brands of REPL are available, and are listed later in this section. By it’s nature, it can also be used as a CLI / Shell in it’s own right, calling other PHP and non-PHP programs as you would in, for instance, a bash shell.</p>
+<p>The following example is a capture of an actual interactive REPL session using the standard PHP REPL.</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code> 1 ~$ php -a
+ 2 Interactive shell
+ 3 
+ 4 php &gt; # As we can type any valid PHP, I have added comments
+ 5 php &gt; # directly to the REPL, rather than afterwards in editing!
+ 6 php &gt; 
+ 7 php &gt; # Lets start with some simple assignments :
+ 8 php &gt; 
+ 9 php &gt; $a = 5;
+10 php &gt; $b = 6;
+11 php &gt; 
+12 php &gt; # The REPL will throw Notices, Warnings and Errors as appropriate, 
+13 php &gt; # in real-time :
+14 php &gt; 
+15 php &gt; $c = nothingdefined;
+16 PHP Notice:  Use of undefined constant nothingdefined - assumed 
+17 &#39;nothingdefined&#39; in php shell code on line 1
+18 php &gt; 
+19 php &gt; # Just as with normal PHP source files, we can split commands across 
+20 php &gt; # lines. The interpreter only kicks in when it hits the terminating 
+21 php &gt; # semicolon :
+22 php &gt; 
+23 php &gt; $d 
+24 php &gt; =
+25 php &gt; 7
+26 php &gt; ;
+27 php &gt; 
+28 php &gt; # The following shows that the state in the variables above has been
+29 php &gt; # kept :
+30 php &gt;
+31 php &gt; echo $a + $b + $c + $d .&quot;\n&quot;;
+32 18
+33 php &gt; 
+34 php &gt; # Next, a more interesting example. Use the REPL instead of the 
+35 php &gt; # shell to get the first line from a file :
+36 php &gt; 
+37 php &gt; echo file (&#39;/proc/version&#39;)[0];
+38 Linux version 3.5.0-21-generic (buildd@roseapple) (gcc version 4.7.2 
+39 (Ubuntu/Linaro 4.7.2-2ubuntu1) ) #32-Ubuntu SMP Tue Dec 11 18:52:46 UTC 
+40 2012
+41 php &gt;
+42 php &gt; # Of course all of the usual protocol wrappers are available, so we 
+43 php &gt; # can see what is happening in the world...
+44 php &gt; 
+45 php &gt; $page = file (&#39;http://news.bbc.co.uk&#39;);
+46 php &gt; 
+47 php &gt; echo $page[0];
+48 &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML+RDFa 1.0//EN&quot; &quot;http://www.w3.org/
+49 MarkUp/DTD/xhtml-rdfa-1.dtd&quot;&gt;
+50 php &gt; 
+51 php &gt; # and maybe get a hash of that...
+52 php &gt; 
+53 php &gt; echo md5 ( implode ( $page, &quot;\n&quot; ) ) . &quot;\n&quot;;
+54 0319bf4e62db39fb2c89210e48783d70
+55 php &gt; 
+56 php &gt; # when we are done ...
+57 php &gt; 
+58 php &gt; exit;
+59 php &gt; 
+60 php &gt; # doesn&#39;t work, as its just evaluated as PHP (and the REPL ignores
+61 php &gt; # exit/die calls. To exit the REPL, enter the word &#39;exit&#39; on its own
+62 php &gt; # on a new line
+63 php &gt; 
+64 php &gt; exit
+65 ~$</code></pre>
+</div>
+</figure>
+<p>Sometimes you’ll want to execute your commands within the “environment” of other scripts. For instance, you may have a script that declares constants, sets up database connections and does other routine tasks that you normally <code class="calibre25">include()</code> at the start of your main PHP scripts. As noted above you can <code class="calibre25">include()</code> these files in the REPL too, but you may forget to do so and then wonder why things didn’t work as they should. One facility PHP offers us, which applies not only to the REPL but to all forms of PHP execution, is the <code class="calibre25">auto_prepend_file</code> configuration directive. This tells PHP to execute a given file each time PHP is run before it starts to do anything else (like executing the script you have asked it to). This can either be set in php.ini, or via the <code class="calibre25">-d</code> flag on the command line. The following is an example of presetting some constants/variables. First, we create a script called <code class="calibre25">initialise.php</code> with the following content.</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 &lt;?
+2 
+3 const FOUR = 4; # Declare a constant value
+4 
+5 $five = 5; # Instantiate a variable with another value</code></pre>
+</div>
+</figure>
+<p>and then, at the command line, start and run a REPL session as follows, using <code class="calibre25">-d</code> to execute the <code class="calibre25">initialise.php</code> script first.</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 $&gt; php -d auto_prepend_file=initialise.php -a
+2 Interactive shell
+3 
+4 php &gt; echo (FOUR + $five).&quot;\n&quot;;
+5 9
+6 php &gt; exit
+7 $&gt;</code></pre>
+</div>
+</figure>
+<p>As you can see, the constant and variable we had set up in the initialise.php file were available for use from the REPL without having to manually declare them. The <code class="calibre25">-d</code> flag is used here, but the option could be set in php.ini as well if you want to always use the same file. If you regularly use a few different initialisation files like this, you can create shell aliases to commands using the <code class="calibre25">-d</code> flag. For instance, you could add lines similar to the following to your <code class="calibre25">~/.bash_profile</code>:</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 alias php-cl=&quot;php -d auto_prepend_file=clientSetup.php -a&quot;
+2 alias php-in=&quot;php -d auto_prepend_file=ourSiteSetup.php -a&quot;</code></pre>
+</div>
+</figure>
+<p>As well as the built in PHP REPL explored above, there are a number of third-party REPLs available, some of which include features such as a history of commands typed, tab-completion of commands, protection from fatal errors and even abbreviated function documentation.</p>
+<aside class="calibre17">
+<table>
+<tbody>
+<tr class="odd">
+<td><img src="images/00003.gif" class="calibre5" /></td>
+<td><strong><em>phpsh</em></strong></td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td>Developed at Facebook, phpsh is an interactive shell for PHP that features readline history, tab completion, quick access to documentation</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><strong><em>Main website &amp; documentation</em></strong> : <a href="http://phpsh.org/">http://phpsh.org/</a></td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><strong><em>Installation info</em></strong> : <a href="https://github.com/facebook/phpsh/blob/master/README.md">https://github.com/facebook/phpsh/blob/master/README.md</a></td>
+</tr>
+</tbody>
+</table>
+</aside>
+<aside class="calibre17">
+<table>
+<tbody>
+<tr class="odd">
+<td><img src="images/00003.gif" class="calibre5" /></td>
+<td><strong><em>php shell</em></strong></td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td>A REPL with tab-completion, fatal error handling, inline help and default autoload() inclusion.</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><strong><em>Main website, installation info &amp; documentation</em></strong> : <a href="http://jan.kneschke.de/projects/php-shell/">http://jan.kneschke.de/projects/php-shell/</a></td>
+</tr>
+</tbody>
+</table>
+</aside>
+<aside class="calibre17">
+<table>
+<tbody>
+<tr class="odd">
+<td><img src="images/00003.gif" class="calibre5" /></td>
+<td><strong><em>Boris</em></strong></td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td>A small but robust REPL for PHP</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><strong><em>Main website</em></strong> : <a href="https://github.com/d11wtq/boris">https://github.com/d11wtq/boris</a></td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><strong><em>Main documentation &amp; installation info</em></strong> : <a href="https://github.com/d11wtq/boris#usage">https://github.com/d11wtq/boris#usage</a></td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><strong><em>Extension for Symfony and Drupal</em></strong> : <a href="http://vvv.tobiassjosten.net/php/php-repl-for-symfony-and-drupal/">http://vvv.tobiassjosten.net/php/php-repl-for-symfony-and-drupal/</a></td>
+</tr>
+</tbody>
+</table>
+</aside>
+<aside class="calibre17">
+<table>
+<tbody>
+<tr class="odd">
+<td><img src="images/00003.gif" class="calibre5" /></td>
+<td><strong><em>phpa</em></strong></td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td>A simple replacement for <code class="calibre25">php -a</code>, written in PHP.</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><strong><em>Main website, installation info &amp; documentation</em></strong> : <a href="http://david.acz.org/phpa/">http://david.acz.org/phpa/</a></td>
+</tr>
+</tbody>
+</table>
+</aside>
+<aside class="calibre17">
+<table>
+<tbody>
+<tr class="odd">
+<td><img src="images/00003.gif" class="calibre5" /></td>
+<td><strong><em>PHP Interactive</em></strong></td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td>An web based REPL that allows better support of displaying HTML output. Project is an Alpha release.</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><strong><em>Main website</em></strong> : <a href="http://www.hping.org/phpinteractive/">http://www.hping.org/phpinteractive/</a></td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><strong><em>Installation info</em></strong> : Readme file in source download <a href="http://www.hping.org/phpinteractive/phpinteractive-0.2.tar.gz">http://www.hping.org/phpinteractive/phpinteractive-0.2.tar.gz</a></td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><strong><em>Main documentation</em></strong> : None</td>
+</tr>
+</tbody>
+</table>
+</aside>
+<aside class="calibre17">
+<table>
+<tbody>
+<tr class="odd">
+<td><img src="images/00003.gif" class="calibre5" /></td>
+<td><strong><em>Sublime-worksheet</em></strong></td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td>An inline REPL for the Sublime Text editor.</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><strong><em>Main website</em></strong> : <a href="https://github.com/jcartledge/sublime-worksheet">https://github.com/jcartledge/sublime-worksheet</a></td>
+</tr>
+</tbody>
+</table>
+</aside>
+<aside class="calibre17">
+<table>
+<tbody>
+<tr class="odd">
+<td><img src="images/00003.gif" class="calibre5" /></td>
+<td><strong><em>iPHP</em></strong></td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td>An extensible PHP shell</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><strong><em>Main website</em></strong> : <a href="https://github.com/apinstein/iphp">https://github.com/apinstein/iphp</a></td>
+</tr>
+</tbody>
+</table>
+</aside>
+</div>
+<p><span id="part0006.html"></span></p>
+<div class="calibre6">
+<h2 id="part0006.html#leanpub-auto-user-facing-software" class="calibre1"><span class="section-number">4. </span>User facing software</h2>
+<p>After slugging through the preliminary information necessary to understand developing PHP in a non-web context, we’re now getting to the nitty-gritty of how to start communicating with our users without the rendering engine of a web browser.</p>
+<h3 id="part0006.html#leanpub-auto-command-line-interface-basics" class="calibre2"><span class="section-number">4.1 </span>Command line interface basics</h3>
+<p>Although graphical interfaces seem to rule the roost these days, there are still plenty of uses for text-based interfaces, particularly in environments with technically-adept users. When creating a text based program to run on the command line, there are three primary considerations over-and-above the PHP you are already accustomed to. These are</p>
+<ol>
+<li>Getting keyboard input</li>
+<li>Outputting text (and graphics) to the screen</li>
+<li>Program flow control</li>
+</ol>
+<p>Rather than describe each one in isolation, we will instead look through a simple program that contains elements of each. Read through the code and comments below. The program is a screen-saver type routine which fills the shell with colour via a wiggling snake-like cursor.</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>  1 &lt;?
+  2 
+  3 # First we will define some named constants.
+  4 # These are shell escape codes, used for formatting
+  5 # Defining them as named constants helps to make our code more readable.
+  6 
+  7 define(&quot;ESC&quot;, &quot;\033&quot;);
+  8 define(&quot;CLEAR&quot;, ESC.&quot;[2J&quot;);
+  9 define(&quot;HOME&quot;, ESC.&quot;[0;0f&quot;);
+ 10 
+ 11 # We will output some instructions to the user. Note that we use
+ 12 # fwrite rather than echo. The aim is to write our output back to the 
+ 13 # shell where the user will see it. fwrite(STDOUT... writes to the
+ 14 # php://stdout stream. Echo (and print) write to the php://output
+ 15 # stream. Usually these are both the same thing, but they don&#39;t have to
+ 16 # be. Additionally php://output is subject to the Output control &amp;
+ 17 # buffering functions (http://www.php.net/manual/en/book.outcontrol.php) 
+ 18 # which may or may not be desirable. 
+ 19 
+ 20 fwrite(STDOUT, &quot;Press Enter To Begin, And Enter Again To End&quot;);
+ 21 
+ 22 # Now we wait for the user to press enter. By default, STDIN is
+ 23 # a blocking stream, which means that when we try to read from it,
+ 24 # our script will stop and wait some input. Keyboard input to the shell
+ 25 # is passed to our script (via fread) when the user presses Enter.
+ 26 
+ 27 fread(STDIN,1);
+ 28 
+ 29 # We want the program to run until the user presses enter again. This 
+ 30 # means that we want to periodically check for input with fread, but not 
+ 31 # to pause/block the program if there isn&#39;t any input. So we set STDIN to
+ 32 # be non-blocking.
+ 33 
+ 34 stream_set_blocking(STDIN, 0);
+ 35 
+ 36 # In preparation for our output, we want to clear the terminal and draw a
+ 37 # pretty frame around it. To do this we need to know how big the terminal
+ 38 # window currently is. There is no in-built way to do this, so we call an
+ 39 # external shell command called tput, which gives information about the
+ 40 # current terminal.
+ 41 
+ 42 $rows = intval(`tput lines`);
+ 43 $cols = intval(`tput cols`);
+ 44 
+ 45 # We now write two special escape codes to the terminal, the first 
+ 46 # of which (\033[2J) clears the screen, the second of which (\033[0;0f)
+ 47 # puts the cursor at the top left of the screen. We&#39;ve already defined 
+ 48 # these as the constants CLEAR and HOME at the start of the script
+ 49 
+ 50 fwrite(STDOUT, CLEAR.HOME);
+ 51  
+ 52 # Now we want to draw a frame around our window. The simplest way to draw
+ 53 # &quot;graphics&quot; (or &quot;semigraphics&quot;) in the terminal is to use box drawing
+ 54 # characters that are included with most fixed-width fonts used in 
+ 55 # terminals.
+ 56 
+ 57 # Draw the vertical frames by moving the cursor step-by-step down each
+ 58 # side. The cursor is moved with the escape code generated by 
+ 59 # ESC.&quot;[$rowcount;1f&quot;
+ 60 
+ 61 for ($rowcount = 2; $rowcount &lt; $rows; $rowcount++) {
+ 62 	fwrite(STDOUT, ESC.&quot;[$rowcount;1f&quot;.&quot;║&quot;); # e.g. \033[7;1f║ for line 7
+ 63 	fwrite(STDOUT, ESC.&quot;[$rowcount;${cols}f&quot;.&quot;║&quot;);
+ 64 }
+ 65 
+ 66 # Now do the same for the horizontal frames.
+ 67 
+ 68 for ($colcount = 2; $colcount &lt; $cols; $colcount++) {
+ 69 	fwrite(STDOUT, ESC.&quot;[1;${colcount}f&quot;.&quot;═&quot;);
+ 70 	fwrite(STDOUT, ESC.&quot;[$rows;${colcount}f&quot;.&quot;═&quot;);
+ 71 }
+ 72 
+ 73 # And finally fill in the corners.
+ 74 
+ 75 fwrite(STDOUT, ESC.&quot;[1;1f&quot;.&quot;╔&quot;);
+ 76 fwrite(STDOUT, ESC.&quot;[1;${cols}f&quot;.&quot;╗&quot;);
+ 77 fwrite(STDOUT, ESC.&quot;[$rows;1f&quot;.&quot;╚&quot;);
+ 78 fwrite(STDOUT, ESC.&quot;[$rows;${cols}f&quot;.&quot;╝&quot;);
+ 79 
+ 80 # You can see the range of box drawing characters available at 
+ 81 # http://en.wikipedia.org/wiki/Box-drawing_character
+ 82 # They are just &quot;text&quot; like any other character, so you can easily copy
+ 83 # and paste them into most editors.
+ 84 
+ 85 # $p is an array [x,y] that holds the position of our cursor. We will
+ 86 # initialise it to be the centre of the screen.
+ 87 
+ 88 $p = [&quot;x&quot;=&gt;intval($cols/2), &quot;y&quot;=&gt;intval($rows/2)];
+ 89 
+ 90 # Now for our first element of flow control. We need to keep the program
+ 91 # running until the user provides input. The simplest way to do this is to
+ 92 # use a never-ending loop using while(1). &quot;1&quot; always evaluates to true, so
+ 93 # the while loop will never end. When we (or the user) are ready to end 
+ 94 # the program, we can use the &quot;break&quot; construct to step out of the loop
+ 95 # and continue the remaining script after the end of the loop.
+ 96 
+ 97 while (1) {
+ 98 
+ 99 	# Each time we go through the loop, we want to check if the user has
+100 	# pressed enter while we were in the last loop. Remember that STDIN is
+101 	# no longer blocking, so if there is no input the program continues
+102 	# immediately. If there is input we use break to leave the while loop.
+103 
+104 	if (fread(STDIN,1)) { break; };
+105 
+106 	# We will step the position of the cursor, stored in $p, by a random
+107 	# amount in both the x and y axis. This makes our snake crawl!
+108 
+109 	$p[&#39;x&#39;] = $p[&#39;x&#39;] + rand(-1,1);
+110 	$p[&#39;y&#39;] = $p[&#39;y&#39;] + rand(-1,1);
+111 
+112 	# We check that our snake won&#39;t step onto or over the frame, to keep
+113 	# it in its box!
+114 
+115 	if ($p[&#39;x&#39;] &gt; ($cols-1)) { $p[&#39;x&#39;] = ($cols-1);};
+116 	if ($p[&#39;y&#39;] &gt; ($rows-1)) { $p[&#39;y&#39;] = ($rows-1);};
+117 	if ($p[&#39;x&#39;] &lt; 2) { $p[&#39;x&#39;] = 2;};
+118 	if ($p[&#39;y&#39;] &lt; 2) { $p[&#39;y&#39;] = 2;};
+119 
+120 	# We want a pretty trail, so we need to pick random colours for the
+121 	# foreground and background colour of our snake, that change at 
+122 	# each step. Colours in the terminal are set with yet more escape 
+123 	# codes, from a limited palette, specified by integers.
+124 
+125 	$fg_color = rand(30,37);
+126 	$bg_color = rand(40,47);
+127 
+128 	# Once chosen, we set the colours by outputting the escape codes. This
+129 	# doesn&#39;t immediately print anything, it just sets the colour of 
+130 	# whatever else follows.
+131 
+132 	fwrite(STDOUT, ESC.&quot;[${fg_color}m&quot;); # \033[$32m sets green foreground
+133 	fwrite(STDOUT, ESC.&quot;[${bg_color}m&quot;); # \033[$42m sets green background 
+134 
+135 	# Finally we output a segment of snake (another box drawing character)
+136 	# at the new location. It will appear with the colours we just set, at
+137 	# the location stored in $p
+138 
+139 	fwrite(STDOUT, ESC.&quot;[${p[&#39;y&#39;]};${p[&#39;x&#39;]}f&quot;.&quot;╬&quot;);
+140 
+141 	# Before we let the while loop start again, we need to do one more 
+142 	# very important thing. We need to give your processor a rest.
+143 	# If we just continued our loop straight away, you would find your
+144 	# processor being hammered, just for our relatively simple program.
+145 	# Our snake would also consume the screen at super-speed!
+146 	# usleep pauses execution of the program, so others can use the 
+147 	# processor or the processor can &quot;rest&quot;. Every little bit helps the
+148 	# responsiveness of your machine, so even if you need your program
+149 	# to loop as fast as possible, consider even a small usleep if you can
+150 
+151 	usleep(1000);
+152 };
+153 
+154 # If this line of code has been reached, it means that we have &#39;break&#39;d
+155 # from the while loop.
+156 
+157 # To be a good citizen of the terminal, we need to clean up the screen
+158 # before we exit. Otherwise, the cursor will remain on which-ever line
+159 # our snake left it, and the background/foreground colours will be
+160 # the last ones chosen for our snake segment. 
+161 
+162 # The following escape code tells the terminal to use its default colours.
+163 
+164 fwrite(STDOUT, ESC.&quot;[0m&quot;);
+165 
+166 # We then clear the screen and put the cursor at the top-left, as we
+167 # did earlier.
+168 
+169 fwrite(STDOUT, CLEAR.HOME);</code></pre>
+</div>
+</figure>
+<p>This program should demonstrate the three basics we listed earlier.</p>
+<ol>
+<li>Getting keyboard input. You can read from <code class="calibre25">STDIN</code> in the same way you would any stream.</li>
+<li>Outputting text (and graphics) to the screen. You can output to <code class="calibre25">STDOUT</code> (or use <code class="calibre25">echo</code>/<code class="calibre25">print</code>), control the appearance and cursor with escape characters, and use block drawing characters to make “semigraphics”.</li>
+<li>Program flow control. A <code class="calibre25">while(1)</code> loop is useful for keeping a program running, with <code class="calibre25">break</code> to continue flow outside the loop. It’s important to use <code class="calibre25">usleep</code> or <code class="calibre25">sleep</code> to stop your process hogging a processor.</li>
+</ol>
+<h3 id="part0006.html#leanpub-auto-advanced-command-line-input" class="calibre2"><span class="section-number">4.2 </span>Advanced command line input</h3>
+<p>In the section above we used <code class="calibre25">fread()</code> to read keyboard input. This is suitable for simple programs, but if you are looking to create a more complex interface to allow users to issue commands then you may wish to look at the readline extension, which you can use to implement a shell-like editable command line program.</p>
+<p>The following example script shows how to implement a simple bespoke command line type interface with the readline library.</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>  1 &lt;?
+  2 
+  3 # Create arrays to hold our command history and list of valid commands.
+  4 
+  5 $history = array();
+  6 $validCommands = array();
+  7 
+  8 # Define some valid commands.
+  9 
+ 10 $validCommands[] = &#39;kill&#39;;
+ 11 $validCommands[] = &#39;destroy&#39;;
+ 12 $validCommands[] = &#39;obliterate&#39;;
+ 13 $validCommands[] = &#39;history&#39;;
+ 14 $validCommands[] = &#39;byebye&#39;;
+ 15 
+ 16 # We want to enable tab-completion of commands, which allows the user to
+ 17 # start typing a command and then press tab to have it completed, as 
+ 18 # happens in Bash shells and the like. We need to provide a function (via
+ 19 # readline_completion_function) that will provide an array of possible 
+ 20 # functions names. This can be based on the $partial characters the user
+ 21 # has typed or the point in the program we are at, or any other 
+ 22 # factors we want. In our case, we&#39;ll simply provide an array of ALL of
+ 23 # the valid commands we have.
+ 24 
+ 25 function tab_complete ($partial) {
+ 26 	global $validCommands;
+ 27 	return $validCommands;
+ 28 };
+ 29 
+ 30 readline_completion_function(&#39;tab_complete&#39;);
+ 31 
+ 32 # We now enter our main program loop. Note that we don&#39;t include a usleep,
+ 33 # as readline pauses our program execution while it waits for input from
+ 34 # the user.
+ 35 
+ 36 while (1) {
+ 37 
+ 38 	# We call readline with a string that forms the command prompt. In our
+ 39 	# case we&#39;ll put the date &amp; time in there to show that we can change 
+ 40 	# it each time its called. Whatever the user enters is returned. This 
+ 41 	# one simple line implements most of the readline magic. At this stage 
+ 42 	# the user can take advantage of tab-completion, history (use up/down 
+ 43 	# cursor keys) and so on.
+ 44 
+ 45 	$line = readline(date(&#39;H:i:s&#39;).&quot; Enter command &gt; &quot;);
+ 46 
+ 47 	# We need to manually add commands to the history. This is used for 
+ 48 	# the command history that the user accesses with the up/down cursor 
+ 49 	# keys. We could choose to ignore commands (mis-typed ones or
+ 50 	# intermediate input, for example) if we want.
+ 51 	
+ 52 	readline_add_history($line);
+ 53 	
+ 54 	# If we want to programmatically retrieve the history, we can use a 
+ 55 	# function called readline_list_history(). However, this is only
+ 56 	# available if PHP has been compiled using libreadline. In most cases,
+ 57 	# modern distributions compile it using the compatible libedit library
+ 58 	# for licensing and other reasons. So we will keep a parallel copy of
+ 59 	# the history in an array for programatic access.
+ 60 
+ 61 	$history[] = $line;
+ 62 
+ 63 	# Now we decide what to do with the users input. In real life, we may
+ 64 	# want to trim(), strtolower() and otherwise filter the input first.
+ 65 
+ 66 	switch ($line) {
+ 67 
+ 68 	    case &quot;kill&quot;:
+ 69 	        echo &quot;You don&#39;t want to do that.\n&quot;;
+ 70 	        break;
+ 71 
+ 72 	    case &quot;destroy&quot;:
+ 73 	        echo &quot;That really isn&#39;t a good idea.\n&quot;;
+ 74 	        break;
+ 75 
+ 76 	    case &quot;obliterate&quot;:
+ 77 	        echo &quot;Well, if we really must.\n&quot;;
+ 78 	        break;
+ 79 
+ 80 		case &quot;history&quot;:
+ 81 
+ 82 			# We will use the parallel copy of the command history that we
+ 83 			# created earlier to display the command history.
+ 84 
+ 85         	$counter = 0;
+ 86 
+ 87 			foreach($history as $command) {
+ 88 				$counter++;
+ 89 				echo(&quot;$counter: $command\n&quot;);
+ 90 			};
+ 91 
+ 92 	        break;
+ 93 
+ 94 	    case &quot;byebye&quot;:
+ 95 
+ 96 	    	# If it&#39;s time to leave, we want to break from both the switch
+ 97 	    	# statement and the while loop, so we break with a level of 2.
+ 98 
+ 99     	    break 2;
+100 
+101     	default : 
+102 
+103     		# Always remember to give feedback in the case of user error.
+104 
+105     		echo(&quot;Sorry, command &quot;.$line.&quot; was not recognised.\n&quot;);
+106 	}
+107 
+108 };
+109 
+110 # If we reached here, the user typed byebye. 
+111 
+112 echo(&quot;Bye bye, come again soon!\n&quot;);</code></pre>
+</div>
+</figure>
+<p>You may have noticed that I chose to use <code class="calibre25">byebye</code> as the command to quit the program. This was not just a whimsical choice on my part, but to illustrate the need to think about discoverability. If you were presented with this program, without seeing the source code above, and asked to close it, it’s likely you would try <code class="calibre25">quit</code>, <code class="calibre25">exit</code>, <code class="calibre25">end</code> and so on, before resorting to a good old <code class="calibre25">Ctrl-C</code>. In a GUI interface, you would have no such problems when faced with a button that said “Bye Bye!”. With text based input, it is best to stick to common and memorable formats for commands, provide visual guidance and clues where possible, and aid in discoverability with good documentation, a <code class="calibre25">help</code> command, and user training.</p>
+<aside class="information">
+<p><strong>Further Reading</strong></p>
+<p>Readline extension in the PHP Manual<br />
+<a href="http://www.php.net/manual/en/intro.readline.php">http://www.php.net/manual/en/intro.readline.php</a></p>
+</aside>
+<h3 id="part0006.html#leanpub-auto-using-stdin-stout--stderr" class="calibre2"><span class="section-number">4.3 </span>Using STDIN, STOUT &amp; STDERR</h3>
+<p>The PHP CLI SAPI automatically opens the standard streams for you when your script starts, so there is no need to issue commands like <code class="calibre25">fopen('php://stdin', 'r')</code>. You can treat these streams just like any other PHP stream, and start using them straight away. We’ve included some examples above, but here are a few more to illustrate the options available.</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code> 1 &lt;?
+ 2 
+ 3 # Get one line of input from STDIN
+ 4 
+ 5 echo (&#39;Please Type Something In : &gt;&#39;);
+ 6 
+ 7 $line1 = fgets(STDIN);
+ 8 
+ 9 echo (&#39;**** Line 1 : &#39;.$line1.&quot; ****\n\n&quot;);
+10 
+11 # Get one line of input, without the newline character
+12 
+13 echo (&#39;Please Type Something Else In : &gt;&#39;);
+14 
+15 $line2 = trim(fgets(STDIN));
+16 
+17 echo (&#39;**** Line 2 : &#39;.$line2.&quot; ****\n\n&quot;);
+18 
+19 # Write an array out to STDOUT in CSV format.
+20 # First, create an array of arrays...
+21 
+22 $records[] = array(&#39;User&#39;, &#39;Full Name&#39;, &#39;Gender&#39;);
+23 $records[] = array(&#39;Rob&#39;, &#39;Robert Aley&#39;, &#39;M&#39;);
+24 $records[] = array(&#39;Ada&#39;, &#39;Augusta Ada King, Countess of Lovelace&#39;, &#39;F&#39;);
+25 $records[] = array(&#39;Grete&#39;, &#39;Grete Hermann&#39;, &#39;F&#39;);
+26 
+27 echo (&quot;The following is your Data in CSV format :\n\n&quot;);
+28 
+29 # ...then convert each array to CSV on the fly as we write it out
+30 
+31 foreach ($records as $record) {
+32 	fputcsv(STDOUT, $record);
+33 };
+34 
+35 echo (&quot;\n\nEnd of your CSV data\n&quot;);
+36 
+37 # Pause until the user enters something starting with a number 
+38 
+39 echo (&#39;Please type one or more numbers : &gt;&#39;);
+40 
+41 while (! fscanf(STDIN, &quot;%d\n&quot;, $your_number) ) { 
+42 
+43 	echo (&quot;No numbers found :&gt;&quot;); 
+44 
+45 };
+46 
+47 echo (&quot;Your number was $your_number\n\n&quot;);
+48 
+49 # Send the text of a web page to STDOUT
+50 
+51 echo (&quot;Press enter for some interwebs :\n\n&quot;);
+52 
+53 fread(STDIN, 1); # fread blocks until enter pressed
+54 
+55 fwrite(STDOUT, strip_tags( file_get_contents(&#39;http://www.cam.ac.uk&#39;) ) );
+56 
+57 # Send an error message to STDERR. You can just fwrite(STDERR,...
+58 # if you want, or you can use the error_log function, which uses the 
+59 # defined error handling routine. By default for the CLI SAPI this is
+60 # printing to STDERR. 
+61 
+62 error_log(&#39;System ran out of beer. ABORT. ABORT.&#39;,4);</code></pre>
+</div>
+</figure>
+<p>The error logged on the last line will usually appear in your shell along with the other output, as that is where most shells put <code class="calibre25">STDERR</code> by default. If you want to check that it did come via <code class="calibre25">STDERR</code> rather than <code class="calibre25">STDOUT</code>, the following bash command will highlight any <code class="calibre25">STDERR</code> output (denoted by the <code class="calibre25">2&gt;</code>) in red. It uses escape codes to colour the error (31 sets the colour to red, 07 reverses it, then 0 clears it) :</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 php script.php 2&gt; &gt;(while read errors; do echo -e &quot;\e[07;31m$errors\e[0m&quot; 
+2 	&gt;&amp;2;  done)</code></pre>
+</div>
+</figure>
+<p>In short, we can use the standard streams in any number of ways, often treating them as standard file pointers or streams.</p>
+<h3 id="part0006.html#leanpub-auto-cli-helper-libraries" class="calibre2"><span class="section-number">4.4 </span>CLI helper libraries</h3>
+<p>There are some pre-written libraries/components available that can take some of the effort out of creating interactive console software. I’ve listed three common ones below. As with most libraries of this type, they are quite “opinionated” in how your program should be structured, so do look thoroughly through the documentation of each before choosing which best suites your project. The Symfony console (part of the Symfony Framework project) is well tested and very stable, as with most Symfony components it is well documented and supported. If you are familiar with the Symfony Framework then the code style should be familiar, but it is equally at home with other Frameworks (it is used for the Laravel Framework Artisan Console tool). The Webmozart Console toolkit is a re-factored version of the Symfony Console component, so has similar features, but a different coding style. It is also currently still in Beta. Finally, the Hoa Console is perhaps the most distinct of the three, with a coding style that focuses on real-world tasks and is arguably easier to get to grips with as a developer.</p>
+<aside class="calibre17">
+<table>
+<tbody>
+<tr class="odd">
+<td><img src="images/00003.gif" class="calibre5" /></td>
+<td><strong><em>Symfony Console</em></strong></td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td>The Console component of the Symfony PHP Framework project</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><strong><em>Main website</em></strong> : <a href="https://github.com/symfony/Console">https://github.com/symfony/Console</a></td>
+</tr>
+</tbody>
+</table>
+</aside>
+<aside class="calibre17">
+<table>
+<tbody>
+<tr class="odd">
+<td><img src="images/00003.gif" class="calibre5" /></td>
+<td><strong><em>Webmozart Console</em></strong></td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td>A (beta) Console component re-factored from the Symfony Console</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><strong><em>Main website</em></strong> : <a href="https://github.com/webmozart/console">https://github.com/webmozart/console</a></td>
+</tr>
+</tbody>
+</table>
+</aside>
+<aside class="calibre17">
+<table>
+<tbody>
+<tr class="odd">
+<td><img src="images/00003.gif" class="calibre5" /></td>
+<td><strong><em>The HoaConsole library</em></strong></td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td>A Console library aimed at industrial and research use</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><strong><em>Main website</em></strong> : <a href="https://github.com/hoaproject/Console">https://github.com/hoaproject/Console</a></td>
+</tr>
+</tbody>
+</table>
+</aside>
+</div>
+<p><span id="part0007.html"></span></p>
+<div class="calibre6">
+<h2 id="part0007.html#leanpub-auto-php-cli-scripts-and-your-system" class="calibre1"><span class="section-number">5. </span>PHP CLI scripts and your system</h2>
+<p>There are a number of areas where PHP CLI scripts typically interact with your system. While most system interactions are identical to those you’re used to with web scripts, there are a few area’s that you may not have used much, and we’ll look at a few gotcha’s that might trip you up.</p>
+<h3 id="part0007.html#leanpub-auto-starting-external-processes-from-php-or-shelling-out" class="calibre2"><span class="section-number">5.1 </span>Starting external processes from PHP, or “shelling out”</h3>
+<p>A common feature of CLI scripts is calling and interacting with other scripts and processes. Using other scripts and programs as “building blocks” within your script is a common pattern of CLI programming. As we’ve seen earlier, you can often combine your PHP script with others in general purpose shell scripts, but often it is useful for the PHP script itself to start other software when it needs to. This is often referred to as “shelling out”.</p>
+<p>There are a number functions available in PHP to achieve this, each doing it in a slightly different way and with different benefits:</p>
+<ul>
+<li><code class="calibre25">exec()</code> : Executes a program and sends the text output to the user</li>
+<li><code class="calibre25">passthru()</code> : Executes a program and sends the binary output to the user</li>
+<li><code class="calibre25">system()</code> : Executes a program and gathers the output for use by PHP</li>
+<li><code class="calibre25">shell_exec()</code> : Executes a command via a shell and gathers it’s output for use by PHP</li>
+<li>Backtick operator (e.g. <code class="calibre25">\</code>command`<code class="calibre25">) : identical to </code>shell_exec()` above</li>
+<li><code class="calibre25">pcntl_exe()</code> : Executes a program in the current process space, that is to say it stops the current PHP script and replaces it with the specified program</li>
+<li><code class="calibre25">popen()</code> : Executes a program and opens a file pointer (identical to the pointers returned by <code class="calibre25">fopen()</code> for example) to read or write to the process via STDOUT or STDIN. Can only read or write, not both.</li>
+<li><code class="calibre25">proc_open()</code> : Like <code class="calibre25">popen</code>(), but with more control. Allows both reading and writing at the same time. Not as simple to use as <code class="calibre25">popen()</code>.</li>
+</ul>
+<p>Which method you choose depends on what you intend to do with the newly opened process and how (or indeed if) you want to talk to it. If you’re not sure from the descriptions above which function is appropriate for your use, the Further Reading list below gives some pointers, information and examples of implementations which should give you some direction.</p>
+<aside class="information">
+<p><strong>Further Reading</strong></p>
+<p>“Cookbook” recipes for using the functions listed above<br />
+<a href="http://pleac.sourceforge.net/pleac_php/processmanagementetc.html">http://pleac.sourceforge.net/pleac_php/processmanagementetc.html</a></p>
+<p>“Proc_Open: Communicate with the Outside World” tutorial by Timothy Boronczyk<br />
+<a href="http://www.sitepoint.com/proc-open-communicate-with-the-outside-world/">http://www.sitepoint.com/proc-open-communicate-with-the-outside-world/</a></p>
+<p>“Shelling Out Sucks” by Stefan Karpinski, an article on the downsides of calling external programs via an intermediate shell<br />
+<a href="http://julialang.org/blog/2012/03/shelling-out-sucks/">http://julialang.org/blog/2012/03/shelling-out-sucks/</a></p>
+</aside>
+<p>When calling external scripts, remember that using untrusted user input in command names or options is a recipe for a bad security day! The <code class="calibre25">escapeshellarg()</code> function can protect you from some inadvertent mistakes, but won’t stop you executing “bad” functions or files.</p>
+<aside class="information">
+<p><strong>Further Reading</strong></p>
+<p>Sanatising shell arguments using <code class="calibre25">escapeshellarg()</code> in the PHP manual<br />
+<a href="http://www.php.net/escapeshellarg">http://www.php.net/escapeshellarg</a></p>
+</aside>
+<h3 id="part0007.html#leanpub-auto-file-status-and-realpath-caches" class="calibre2"><span class="section-number">5.2 </span>File Status and Realpath caches</h3>
+<p>On the web, speed is king. PHP operates two information caches to speed up access to the filesystem. The first is the file status cache, which caches information about a given file (like whether it exists, whether it is readable, it’s size and type, and so on). The second is the realpath cache, which caches the actual, real path for a given file or directory (expanding out symlinks, relative paths, ‘.’ and ‘..’ paths, include_path’s and so on). Information is added to the cache automatically by PHP each time it encounters a new file, and is then used by any number of functions the next time they attempt to look at that same file. With a web page that’s gone in the blink of an eye where little may have happened on the filesystem, this is often a good trade-off for increased performance.</p>
+<p>However the chances that the details of a file or path may change while your script runs obviously increase with the length of time that your script takes to execute. Therefore PHP gives us a couple of options for working with these two caches.</p>
+<p>The following example shows the file status cache in action, and how to use <code class="calibre25">clearstatcache()</code> to clear it.</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code> 1 &lt;?
+ 2 
+ 3 # Create a file and add some text to it
+ 4 
+ 5 $filename = &#39;test.txt&#39;;
+ 6 
+ 7 $handle = fopen($filename, &#39;w+&#39;);
+ 8 
+ 9 fwrite($handle, &#39;test&#39;);
+10 
+11 # The following should print 4
+12 
+13 echo stat($filename)[&quot;size&quot;].&quot;\n&quot;;
+14 
+15 # Now write some data to the file, increasing the file size.
+16 
+17 fwrite($handle, &#39;more test&#39;);
+18 
+19 # Intuitively, the following command should print 13 as the file is now
+20 # bigger than before. However it still prints 4, because the filesize 
+21 # value for this file is now cached.
+22 
+23 echo stat($filename)[&quot;size&quot;].&quot;\n&quot;;
+24 
+25 # If we clear the cache ....
+26 
+27 clearstatcache();
+28 
+29 # then the next line should print 13 as expected
+30 
+31 echo stat($filename)[&quot;size&quot;].&quot;\n&quot;;
+32 
+33 fclose($handle);</code></pre>
+</div>
+</figure>
+<p>The realpath cache operates in a similar way, and can be cleared by calling <code class="calibre25">clearstatcache(true)</code>, i.e. by calling it with true as the first parameter. You can also clear the cache for just one particular file by calling <code class="calibre25">clearstatcache(true, 'myfile.txt')</code>, where the second parameter is the filename (and the first must be set to true, that is, you must also clear the realpath cache).</p>
+<p>Of course clearing these caches may not be necessary in your application and doing so has performance implications. Consider each file access on a case-by-case basis.</p>
+<h3 id="part0007.html#leanpub-auto-apc-and-other-code-caches" class="calibre2"><span class="section-number">5.3 </span>APC and other code caches</h3>
+<p>You may be aware of the APC caching system and other code caching systems that act to speed up the startup time of your script. APC, and most other systems, will not work with CLI scripts (or at least not add any benefit) as they work on a shared process model found with webservers such as Apache. As PHP CLI scripts (typically) terminate their own process when they complete, these will not work.</p>
+</div>
+<p><span id="part0008.html"></span></p>
+<div class="calibre6">
+<h2 id="part0008.html#leanpub-auto-where-now-or-thanks--feedback" class="calibre1"><span class="section-number">6. </span>Where now? or, Thanks &amp; feedback</h2>
+<p>If you’ve read this far, thank you. I sincerely hope that this book has held your interest and at the very least informed some areas of your future PHP programming. If it has, I would encourage you to start some coding right now based on one or more topics in this book while they are still fresh in your mind. People far smarter than me have shown that the sooner relevant activity occurs after learning, the easier it is to retain information and techniques over the longer term. If you use any of the techniques presented in the book in “real-life”, I would be very interested to know! Finally, if you’ve not already headed for the keyboard, don’t forget to glance through the Appendices that follow. There may be something interesting or useful in there for you (either to use now or to be aware of for the future).</p>
+<h3 id="part0008.html#leanpub-auto-upgrade-to-php-beyond-the-web-for-only-5" class="calibre2"><span class="section-number">6.1 </span>Upgrade to “PHP Beyond The Web” for only $5!</h3>
+<p>The content in this book is an adapted subset of one of another book I wrote called “PHP Beyond The Web” . As well as CLI scripts, it covers the many other things you can do with PHP including (but not limited to) writing software daemons, desktop GUI applications, interface with other software processes and hardware like printers, and even control electronics with a Raspberry Pi. It also looks further into topics like performance, development tools, garbage collection and other topics that get more revelant when you build big off-line systems.</p>
+<p>As a reader of this book, you can check out a sample, peruse the table of contents and can get PHP Beyond The Web for only $5 USD (+VAT where applicable) from Leanpub simply by visiting <a href="http://leanpub/php/c/upgrade">http://leanpub/php/c/upgrade</a> . And even at that price, it still comes with the Leanpub unconditional, no risk, 100% happiness guarantee, which is a long way of saying an unconditional 45-day two-click refund.</p>
+<h3 id="part0008.html#leanpub-auto-giving-feedback-and-getting-help-and-support" class="calibre2"><span class="section-number">6.2 </span>Giving feedback, and getting help and support</h3>
+<p>E-mail : author@phpbeyondtheweb.com</p>
+<p>Your feedback on this book, good or bad, fundamental or trivial, is solicited and very much welcomed. Tell me what you thought about the book, overall or a particular section. Let me know if any areas weren’t covered in enough depth (or in too much detail), if any topics you were expecting weren’t present, or any of the information wasn’t clear. Likewise, if you have any problems getting the sample code to run, or issues implementing the techniques discussed please do drop me a line and I’ll see if there is any way I can help.</p>
+<h3 id="part0008.html#leanpub-auto-are-you-reading-a-pirated-copy" class="calibre2"><span class="section-number">6.3 </span>Are you reading a “pirated” copy?</h3>
+<p>There are times in my life when I have read “unauthorised” copies of books; when I couldn’t afford them, when they weren’t easily available through legitimate channels (local bookshops, online sales, libraries), or (for e-books) when DRM thwarted my efforts to read them on the devices I had available. So I quite understand if you are in this position, and I don’t want to criticise your choice. If you are unable to afford this book, perhaps you could consider purchasing it in the future when you are able, and in the meantime I would ask that you do me a favour in return - please consider helping me to promote it by recommending it to those that can afford it, have a go at reviewing it online, and otherwise spread the word. If you’re reading an unauthorised copy because there was something else (other than cost) blocking your access to a legitimate copy, please let me know and I’ll do my very best to remove that obstacle. I want to enable everybody who wants to buy and read this book to be able to do so with the minimum of fuss. This is why I won’t employ DRM on my work, because for every “pirate” that it stops (and it won’t be many), there are likely to be ten times as many legitimate readers who it annoys.</p>
+<p>If you are reading an unauthorised copy because you simply don’t want to pay for it, then that is between you and your conscience.</p>
+</div>
+<p><span id="part0009.html"></span></p>
+<div class="calibre6">
+<h2 id="part0009.html#leanpub-auto-appendix-a--compiling-and-installing-php-extensions-and-libraries" class="calibre1">Appendix A : Compiling and installing PHP, extensions and libraries</h2>
+<p>There are a dozen different ways to get PHP, including downloading &amp; compiling it yourself, downloading pre-compiled binaries, using package managers and software repositories, and finding it pre-installed by a forward thinking administrator. On most Linux distributions, PHP can be installed with a one-line command such as <code class="calibre25">sudo apt-get install php5</code> or through graphical package managers like the Synaptic Package Manager or the Ubuntu Software Centre. Many common PHP extensions and add-ons are likewise available as pre-built packages or alternatively through the PECL and PEAR systems.</p>
+<p>However there are times when it becomes necessary to do a little more work to install PHP, such as :</p>
+<ul>
+<li>when your project has requirements for a specific version of PHP that is different to the one shipped with your OS</li>
+<li>where you need extensions not available as packages,</li>
+<li>or when you want to compile a customised version of PHP specific to your needs.</li>
+</ul>
+<p>Like anything involved in computers and software development, compiling PHP can take you down a rabbit-hole of options, customisations, compatibility issues, libraries and dependencies. A whole book could be written about the different possibilities (and possible headaches) involved. Luckily for us, in most use cases, the basics of compiling a standard version are quite straightforward. And like most things in life, it gets easier once you have done it once. The first section below will go over the steps necessary for getting, compiling and installing PHP and its core extensions. PHP is written in C, and as many of you may not be familiar with the process of compiling C programs, I have tried to explain each step below to give you an idea of what is happening. This makes the process seem a little more verbose, but in reality it is quite straightforward. Go ahead and try it if you don’t believe me! The next sections are also worth a read, as they cover installing extras like libraries and extensions from the PECL, PEAR and Packagist repositories.</p>
+<h3 id="part0009.html#leanpub-auto-compiling-and-installing-php-itself" class="calibre2">Compiling and installing PHP itself</h3>
+<p>Note for Windows devs - These steps are for Linux/Unix type systems, and use free compiler tools almost always included with the OS. For Windows, the proprietary Visual Studio compiler is required, and the steps are somewhat different and beyond the scope of this book. Windows source code, pre-built binaries and instructions for compiling can be found at <a href="http://windows.php.net/download/">http://windows.php.net/download/</a> , with older versions in the archive at <a href="http://windows.php.net/downloads/releases/archives/">http://windows.php.net/downloads/releases/archives/</a>.</p>
+<p>Note for OS X devs - while the steps below are similar to those on a Mac, there are some issues you may run into depending on the version of OS X you are using. A great look at getting PHP (and related software) up and running on OS X Mavericks can be found at <a href="http://akrabat.com/computing/setting-up-php-mysql-on-os-x-mavericks/">http://akrabat.com/computing/setting-up-php-mysql-on-os-x-mavericks/</a>.</p>
+<p>On *nix machines, our first step is to download the PHP source code from the PHP website at <a href="http://www.php.net/downloads.php">http://www.php.net/downloads.php</a> . This page lists the current stable release and the previous supported stable release. Newer versions which are still under development are available at <a href="http://snaps.php.net/">http://snaps.php.net/</a>, and older end-of-life versions are available at <a href="http://museum.php.net/">http://museum.php.net/</a> . Git users can also pull the source code down from the official mirror at <a href="https://github.com/php">https://github.com/php</a>.</p>
+<p>When you have identified which version you want, make a note of the URL of the .tar.gz source code file which we will use later.</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 ~$ mkdir php5.4
+2 ~$ cd php5.4
+3 ~$ wget http://uk3.php.net/get/php-5.4.6.tar.gz/from/uk.php.net/mirror 
+4 	-o php-5.4.6.tar.gz
+5 ~$ tar zxvf php-5.4.6.tar.gz
+6 ~$ cd php-5.4.6</code></pre>
+</div>
+</figure>
+<p>The first two lines creates a directory for our work and steps into it. The directory holds the source code and intermediate files, and can be deleted once PHP is installed if you want. However it is often a good idea to keep it in-case you need/want to re-install or check what version of the file you downloaded later. The third line downloads a copy of the source code file into our directory. Change the URL in the third line to that of the .tar.gz file you want to use, and the <code class="calibre25">-o</code> option to the name of the file (otherwise, in the above example, wget will simply call your file “mirror”). The fifth line unpacks the archive into a directory containing the individual source code files, change the name of the file to the one you used on line 3. Finally, the last line steps us into the source code directory. Now we start the actual compilation process.</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 ~$ ./configure</code></pre>
+</div>
+</figure>
+<p>The configure command creates the “setup” for compilation. We use it to provide the settings and arguments we want for our compilation session. For instance, we can specify which core extensions we want to include in our build. If we don’t specify any arguments as above, the defaults provided by the PHP dev team are used. This is a good choice if you don’t have any particular needs and want a version that is fairly similar/compatible with the versions included with most distributions. You can also install extensions at a later date either individually or by re-compiling PHP from scratch, which we will discuss in the next section. If you want to include an extension at this stage that’s not included in the default settings, then this is the place to do it. For example, if you wanted to include the ldap extension, then you would change the command above to <code class="calibre25">./configure --with-ldap[=DIR]</code> where <code class="calibre25">[=DIR]</code> is the base installation directory of ldap on your system. The exact option to use and any necessary dependencies can be found in the PHP manual, under the “Installing/Configuring” section for the extension in question. For example, details for the ldap extension can be found at <a href="http://www.php.net/manual/en/ldap.setup.php">http://www.php.net/manual/en/ldap.setup.php</a>. A (slightly out-of-date) list of options that you can pass to the configure command can be found at <a href="http://www.php.net/manual/en/configure.about.php">http://www.php.net/manual/en/configure.about.php</a> or, for a full list of those supported on your system in the current version you are trying to compile, you can issue the command <code class="calibre25">autoconf</code> followed by <code class="calibre25">./configure --help</code>. More information about the configure command can be found at <a href="http://www.airs.com/ian/configure/">http://www.airs.com/ian/configure/</a>. Now we will actually compile PHP.</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 ~$ make clean
+2 ~$ make
+3 ~$ sudo make install</code></pre>
+</div>
+</figure>
+<p>We compile the binary PHP files using the “make” tool. The first line removes any previously created files and resets us to the start of the “make” process. This is not strictly necessary on your first run at compiling, but it can help if your attempt fails for some reason (such as missing dependencies, incorrect settings, unintended interruptions to the process etc.) so including it by default is often a good choice. The second line does the actual building and compiling of the files. The third line then takes those files and installs them on the system. By default, PHP will usually be installed in the <code class="calibre25">/usr/bin</code> directory on Linux. However you can choose where to install it by specifying a “prefix” directory at the <code class="calibre25">./configure</code> stage above. Simply add the switch <code class="calibre25">--prefix=/path/to/dir</code> where <code class="calibre25">/path/to/dir</code> is the directory into which you want PHP to be installed. This is often useful if you want to install multiple versions on the same machine (although be aware that there are other considerations when doing so). Note that the <code class="calibre25">make install</code> line must be run with higher permissions (<code class="calibre25">sudo</code>) to allow it to copy files into “privileged” locations.</p>
+<p>If all goes well, congratulations, you have installed PHP! To check that the correct version is installed and available, use <code class="calibre25">php -v</code> at the command line and PHP will display the current version number. If you have installed PHP in a location outside of your search path you will need to specify the full path name, e.g. <code class="calibre25">/path/to/dir/php -v</code>. To check which extensions and other options were installed, use <code class="calibre25">php -i</code> at the command line to run the <code class="calibre25">phpinfo()</code> function. As well as extension information (and a lot more besides), this returns a list of the options used with the <code class="calibre25">./configure</code> command. This can be useful when re-installing PHP or when trying to clone an installation on another machine (where the same binaries cannot just be re-used).</p>
+<p>If all doesn’t go well, have a close look at the errors produced. The most common type of errors happen when your system doesn’t have the relevant dependencies installed for a particular extension. Often the error message will say this explicitly, but even if it just gives you an obscure error message mentioning the name of an extension, the best advice is to double-check the installation section for that extension in the the PHP manual to find out exactly what dependencies are required. Missing dependencies can often be installed using your systems package manager rather than having to manually compile them. You should also check that you have provided the location of any dependencies at the configure stage above if required.</p>
+<p>If all else fails, copy and paste the exact error message into your favourite internet search engine, probably starting with the first error message shown if multiple errors appear. Many, many people have compiled PHP, and most errors have been encountered and documented online. Don’t let all this talk of errors put you off having a go at compiling PHP. Errors are more likely to occur the more complicated you make your configuration, and if you’re careful about dependencies you can often avoid them altogether. So have a go at a straight forward compilation with the default options to get the hang of things, and take it from there!</p>
+<p>More information on installations, with a general focus on web servers but otherwise useful, can be found in the PHP manual at <a href="http://www.php.net/manual/en/install.php">http://www.php.net/manual/en/install.php</a>.</p>
+<h3 id="part0009.html#leanpub-auto-compiling-and-installing-extra-core-extensions" class="calibre2">Compiling and installing (extra) core extensions</h3>
+<p>As we saw in the previous section, the most common way to install core extensions is to enable the relevant flags at the configure stage during compilation of the main PHP installation (note by default, many extensions are automatically enabled). However it’s not uncommon to come across the need to install an additional extension later on, for instance as the requirements for your program change from its initial design. There are two ways to approach this. The first, which you’ll find recommended a lot online, is to re-do the compilation/installation of PHP from scratch, adding the newly required modules at the configure stage (after issuing <code class="calibre25">php -i</code> to remember what configure options you used the first time). While this works perfectly well, compiling the full PHP binaries is a bit of a slog which can take older PCs in particular a long time to complete. There is a short cut however.</p>
+<p>Each of the core extensions is actual a separate .so binary, and can be compiled independently. To do this, follow the first steps in the previous section to download and unpack the PHP source code and step into the directory. If you haven’t deleted it from when you compiled PHP itself, it should be ready to go. Within the source code is a directory called ext, inside of which are separate directories for each of the extensions.</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 ~$ cd ext
+2 ~$ ls</code></pre>
+</div>
+</figure>
+<p>This will show you all of the core extensions available. For instance, if we want to add the pcntl extension (used in this book for daemon software), we can enter the pnctl directory and compile/install just that extension in a similar manner to how we compiled the whole PHP package in the previous section.</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 ~$ cd pcntl
+2 ~$ phpize
+3 ~$ ./configure
+4 ~$ make clean
+5 ~$ make
+6 ~$ sudo make install</code></pre>
+</div>
+</figure>
+<p>The additional command above, <code class="calibre25">phpize</code>, is used to prepare the build environment for the extension. This is not necessary when building the full PHP binaries, but it is when building individual extensions. If you find that you don’t have phpize on your system, it is often available through your systems package manager in the <code class="calibre25">php-dev</code> package (e.g. on Ubuntu it is available as <code class="calibre25">phpize5</code> in the <code class="calibre25">php5-dev</code> package). More details about phpize and getting it can be found at <a href="http://us.php.net/manual/en/install.pecl.phpize.php">http://us.php.net/manual/en/install.pecl.phpize.php</a>.</p>
+<p>Once the commands above have been run, you should find that a <code class="calibre25">.so</code> file (<code class="calibre25">pcntl.so</code> in our example) has been compiled and placed in PHP’s extension directory. The final step is to tell PHP about it, by adding the following line somewhere in your <code class="calibre25">php.ini</code> file:</p>
+<figure class="code">
+<div class="highlight">
+<pre class="calibre24"><code>1 extension=pcntl.so</code></pre>
+</div>
+</figure>
+<p>If you’re not sure where your <code class="calibre25">php.ini</code> file is, you can run <code class="calibre25">php -i | grep "Loaded Configuration File"</code> on the command line to find out. You can also use <code class="calibre25">php -i</code> to check that your extension is now correctly installed and available for use.</p>
+<h3 id="part0009.html#leanpub-auto-installing-multiple-versions-of-php" class="calibre2">Installing multiple versions of PHP</h3>
+<p>Sometimes (particularly on development machines) you may want to install multiple versions of PHP at the same time, for instance if you are deploying to end users with PHP already installed but who may have different versions. One straight forward way to achieve this is to create a set of virtual machines (I use VirtualBox for this) with a different version of PHP installed in each. In this scenario you can always be sure which version you are running and that the installation and configuration of one version isn’t interfering with that of another. The downside is that it can be slow to start up and shut down different VMs (or a hit on resources to run them all at once), and if you are using proprietary OSes like Windows you can incur additional licensing costs. As I noted in a previous section, it is possible to have multiple versions installed and running directly on the same machine. However if you are not careful it can become a nightmare trying to keep the versions and their dependencies separate and making sure you know which version you are using at all times. As such I am not going to delve into it in this book. However below are two articles from respected PHP community members who have done just that, which may give you some pointers on what to do and the pitfalls involved. I would suggest that before you try this, you become intimately familiar with compiling and installing PHP, the file and directory structures and locations that PHP uses, and how to check which versions of PHP and extensions are running.</p>
+<p>There are also a couple of relevant tools listed below. The first is php-build, which automatically builds multiple versions of PHP from source, although you still need to exercise care installing and using them simultaneously. The second is 3v4l.org, a web service which allows you to test chunks of code in 90+ versions of PHP at the same time. This may avoid the need for installing multiple versions at all. And the final tool is a library which simulates many functions from newer versions for use with older versions.</p>
+<aside class="information">
+<p><strong>Further Reading</strong></p>
+<p>Installing multiple versions, using SVN<br />
+<a href="http://derickrethans.nl/multiple-php-version-setup.html">http://derickrethans.nl/multiple-php-version-setup.html</a></p>
+<p>Installing multiple versions, using GIT<br />
+<a href="http://mark-story.com/posts/view/installing-multiple-versions-of-php-from-source">http://mark-story.com/posts/view/installing-multiple-versions-of-php-from-source</a></p>
+</aside>
+<aside class="calibre17">
+<table>
+<tbody>
+<tr class="odd">
+<td><img src="images/00003.gif" class="calibre5" /></td>
+<td><strong><em>php-build</em></strong></td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td>php-build automatically builds multiple PHP versions from source</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><strong><em>Main website &amp; documentation</em></strong> : <a href="http://www.christophh.net/php-build/">http://www.christophh.net/php-build/</a></td>
+</tr>
+</tbody>
+</table>
+</aside>
+<aside class="calibre17">
+<table>
+<tbody>
+<tr class="odd">
+<td><img src="images/00003.gif" class="calibre5" /></td>
+<td><strong><em>3v4l.org</em></strong></td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td>Web service which allows you test chunks of code in 90+ versions of PHP with the click of 1 button.</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><strong><em>Main website</em></strong> : <a href="http://3v4l.org/">http://3v4l.org/</a></td>
+</tr>
+</tbody>
+</table>
+</aside>
+<aside class="calibre17">
+<table>
+<tbody>
+<tr class="odd">
+<td><img src="images/00003.gif" class="calibre5" /></td>
+<td><strong><em>upgrade.php</em></strong></td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td>Library to emulate newer functions for older versions of PHP.</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><strong><em>Main website</em></strong> : <a href="http://include-once.org/p/upgradephp/">http://include-once.org/p/upgradephp/</a></td>
+</tr>
+</tbody>
+</table>
+</aside>
+<h3 id="part0009.html#leanpub-auto-pear-and-pecl" class="calibre2">PEAR and PECL</h3>
+<p>PEAR (PHP Extension and Application Repository) is a library of code and extensions written in PHP, with an easy to use packaging and distribution system. PECL (PHP Extension Community Library) is essentially the same, but for extensions written in C.</p>
+<p>Both PECL and PEAR work in a similar way to package managers such as Debians apt-get. For example to install the Cairo graphics extension from PECL, simply do <code class="calibre25">sudo pecl install cairo</code> at the command line. This will download, compile and install Cairo for you and you can then start using it from within your PHP scripts. Similarly, to install the RDF extension from PEAR, use <code class="calibre25">pear install rdf</code>.</p>
+<p>The <code class="calibre25">pear</code> and <code class="calibre25">pecl</code> commands are included as standard with PHP, however some package managers put them in the optional <code class="calibre25">php-dev</code> or <code class="calibre25">php-pear</code> package. On Ubuntu, for instance, use <code class="calibre25">sudo apt-get install php-pear</code> to install it.</p>
+<p>More information on both as well as the hundreds of extensions and libraries available, can be found at <a href="http://pear.php.net">http://pear.php.net</a> and <a href="http://pecl.php.net">http://pecl.php.net</a> respectively.</p>
+<h3 id="part0009.html#leanpub-auto-composer" class="calibre2">Composer</h3>
+<p>Composer is a dependency manager. While it deals with packages, it is not a package manager like PEAR. Rather than installing packages centrally, it deals with them on a per-project basis, ensuring that the appropriate versions of the relevant packages, and their dependencies, are installed automatically for that project.</p>
+<p>The basic Composer workflow happens as follows :</p>
+<ul>
+<li>You install Composer.</li>
+<li>In the base directory of your project, you create a json-formatted file called <code class="calibre25">composer.json</code> that specifies which packages (and versions) your project needs</li>
+<li>In that directory, you run Composer. It will fetch and install of the specified packages, and will automatically also install any of the other packages that those you have specified depend on (and so on until all dependencies are satisfied)</li>
+<li>In your PHP code, simply add the function <code class="calibre25">require 'vendor/autoload.php';</code> and your libraries will be automatically available when you use them.</li>
+</ul>
+<p>Fully comprehensive documentation, aimed at beginners as well as advanced users, is available on the composer website. Composer itself doesn’t host any packages, that is the job of package repositories. Packagist is the main, and currently the only, comprehensive public repository, and is the default used by Composer. You can browse the thousands of available packages on the Packagist website. You can of course specify a different repository and indeed create and use your own packages privately if you need to.</p>
+<aside class="calibre17">
+<table>
+<tbody>
+<tr class="odd">
+<td><img src="images/00003.gif" class="calibre5" /></td>
+<td><strong><em>Composer Dependency Manager</em></strong></td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td>The easy way to keep libraries consistent and up-to-date on a per-project basis.</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><strong><em>Main website</em></strong> : <a href="http://getcomposer.org/">http://getcomposer.org/</a></td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><strong><em>Package Repository</em></strong> : <a href="https://packagist.org/">https://packagist.org/</a></td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><strong><em>Installation info</em></strong> : <a href="http://getcomposer.org/doc/00-intro.md#installation-nix">http://getcomposer.org/doc/00-intro.md#installation-nix</a></td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><strong><em>Main documentation</em></strong> : <a href="http://getcomposer.org/doc/">http://getcomposer.org/doc/</a></td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td><strong><em>Tutorial</em></strong> : <a href="http://code.tutsplus.com/tutorials/easy-package-management-with-composer--net-25530">http://code.tutsplus.com/tutorials/easy-package-management-with-composer--net-25530</a></td>
+</tr>
+</tbody>
+</table>
+</aside>
+<h3 id="part0009.html#leanpub-auto-symfony2-bundles" class="calibre2">Symfony2 bundles</h3>
+<p>If you’re using the Symfony2 framework, you can choose from and download over a thousand useful code bundles from knpbundles. These can be installed manually, or often using the Composer dependency system (see the section above). Visit <a href="http://knpbundles.com/">http://knpbundles.com/</a> for more information and to browse the available code.</p>
+</div>
+<p><span id="part0010.html"></span></p>
+<div class="calibre6">
+<h2 id="part0010.html#leanpub-auto-appendix-b--sources-of-help" class="calibre1">Appendix B : Sources of help</h2>
+<p>Even with excellent books like this on on the market, you will sometimes need a little additional help when you come across a tricky problem with PHP. Below are some potential sources of help.</p>
+<h3 id="part0010.html#leanpub-auto-the-php-manual" class="calibre2">The PHP manual</h3>
+<p>The official PHP manual can be found online at <a href="http://php.net/docs.php">http://php.net/docs.php</a>. The manual provides fairly comprehensive documentation in the main on PHP installation, syntax, functions and many extensions. Of particular note are the user comments at the bottom of each page. These are generally helpful and offer real-world advice related to the function or topic of the page. Occasionally some duff advice is given in the comments, however this is usually corrected or mentioned in a subsequent comment, so it’s worth reading through all of the comments on a given page.</p>
+<p>A handy function of the online manual is that you can do a quick look up of a function or topic by typing it as the first part of a URL. For instance, if you can’t remember what the parameters of <code class="calibre25">strripos()</code> are, you can simply type <a href="http://php.net/strripos">http://php.net/strripos</a> into your browser and you will be sent straight to the relevant page. Likewise, if you want a quick refresher on how PHP handles arrays, visit <a href="http://php.net/array">http://php.net/array</a> and you’ll go straight to the array page in the language/types section of the manual.</p>
+<p>If you don’t always have an internet connection, you can also download a copy of the manual from <a href="http://www.php.net/download-docs.php">http://www.php.net/download-docs.php</a>. It is available as HTML, Unix style man pages, and Microsoft Compiled HTML Manual (CHM) format.</p>
+<h3 id="part0010.html#leanpub-auto-official-mailing-lists" class="calibre2">Official mailing lists</h3>
+<p>There are a number of official mailing lists at <a href="http://php.net/mailing-lists.php">http://php.net/mailing-lists.php</a> covering a wide variety of topics. Of note for getting help are the “General user list” for general queries, and the “Windows PHP users list” for Windows specific questions. Beware if subscribing that some of the lists area quite busy and you will get a large number of emails each day. The archives are available online if you just want to browse or get a feel for the volume generated on each list.</p>
+<h3 id="part0010.html#leanpub-auto-stack-overflow" class="calibre2">Stack Overflow</h3>
+<p>If you’re not familiar with it, Stack Overflow (<a href="http://stackoverflow.com">http://stackoverflow.com</a>) is a prolific “Question and Answer” site aimed at programmers. Unlike some Q&amp;A sites, you don’t need to join or pay to view the answers to questions, adverts are limited and there are literally millions of answered questions on the board. This includes a good chunk of PHP related questions.</p>
+<p>All questions and answers are “tagged” with their topics so that you can find the ones relevant to you. To browse questions tagged with PHP, visit <a href="http://stackoverflow.com/questions/tagged/php">http://stackoverflow.com/questions/tagged/php</a>. You can also use the sites search facility, and to narrow you search to only PHP related answers add “[tag]” to your search. For example, if you want to search for questions about the <code class="calibre25">date</code> function, which is a common word in English and a common function name in many programming languages, search for “[php] date” to only get PHP specific information.</p>
+<p>At the time of writing, there were 864,182 questions tagged with “php”, 1,087 tagged with “php” AND “command-line”, and 1,094 tagged with “php” AND “cli”. The moderators are usually very quick at shutting down duplicate questions, so you can see from these numbers that there is a lot of relevant information available.</p>
+<h3 id="part0010.html#leanpub-auto-other-books" class="calibre2">Other books</h3>
+<p>While you may think that this is the only book on PHP you will ever need, I have been told that there may be other PHP books available out there. While I can’t recommend any specifically (other than those I have already noted in the relevant chapters), if you browse any big name bookseller you will find a plethora of PHP related titles. If do want to purchase another book, and would like to help support the PHP.net project, follow the links from the books section at <a href="http://php.net/support.php">http://php.net/support.php</a> to a well known book store, and PHP.net will receive a commission for anything that you buy after following their link.</p>
+<h3 id="part0010.html#leanpub-auto-newsgroups" class="calibre2">Newsgroups</h3>
+<p>PHP has a set of official newsgroups listed and archived at <a href="http://news.php.net/">http://news.php.net/</a> which cover a wide range of PHP topic areas. These may be worth a browse, and sometimes can elicit a response to queries (although some of the internals lists are definitely not for the faint-hearted).</p>
+<h3 id="part0010.html#leanpub-auto-php-subredit" class="calibre2">PHP Subredit</h3>
+<p>The PHP “Subredit” on reddit.com at <a href="http://www.reddit.com/r/PHP/">http://www.reddit.com/r/PHP/</a> is a mixture of PHP news, opinions, useful links and requests for help. Although usually genuinely interesting with helpful responses to questions, an occasional assortment of trolls and unhelpful/rude people can be found here as well.</p>
+<h3 id="part0010.html#leanpub-auto-php-on-github" class="calibre2">PHP on Github</h3>
+<p>Sometimes the best way to solve a problem is to look at similar code other people have written. Github, the popular source repository website, has tons of the stuff to plough through. You can search all of the code repositories at <a href="https://github.com/search">https://github.com/search</a>, and use the modifier “language:php” in your search terms to narrow your results to projects using our favourite language. If you just want to keep an eye on what PHP projects are popular these days, you can check out the PHP trending list at <a href="https://github.com/trending?l=php">https://github.com/trending?l=php</a>.</p>
+<h3 id="part0010.html#leanpub-auto-php-news-sites" class="calibre2">PHP news sites</h3>
+<p>Although not usually good for direct help, PHP news sites and mailing lists can keep you up to date with essentials like security alerts, useful and interesting articles, and announcements of new projects, libraries and tutorials that you may not even know you needed yet! Some of the more popular ones are listed below.</p>
+<aside class="information">
+<p><strong><em>PHP News Sources</em></strong></p>
+<p><strong>PHPDeveloper</strong> <a href="http://phpdeveloper.org/">http://phpdeveloper.org/</a></p>
+<p><strong>Planet PHP</strong> <a href="http://www.planet-php.net/">http://www.planet-php.net/</a></p>
+<p><strong>TechPortal</strong> <a href="http://techportal.inviqa.com/">http://techportal.inviqa.com/</a></p>
+<p><strong>PHP Weekly News</strong> <a href="http://www.phpweekly.com/">http://www.phpweekly.com/</a></p>
+<p><strong>PHP Weekly</strong> <a href="http://phpweekly.info/">http://phpweekly.info/</a></p>
+</aside>
+</div>
