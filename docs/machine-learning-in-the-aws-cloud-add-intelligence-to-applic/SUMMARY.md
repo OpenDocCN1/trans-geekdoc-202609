@@ -1,0 +1,2 @@
++   [AWS 云中的机器学习：使用 Amazon SageMaker 和 Amazon Rekognition 为应用添加智能](README.md)
++   [AWS 云中的机器学习：使用 Amazon SageMaker 和 Amazon Rekognition 为应用添加智能](machine-learning-in-the-aws-cloud-add-intelligence-to-applic_0.md)

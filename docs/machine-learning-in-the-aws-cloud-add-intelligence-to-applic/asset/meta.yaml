@@ -1,0 +1,1046 @@
+name: Machine Learning in the AWS Cloud ： Add Intelligence to Applications with Amazon
+  SageMaker and Amazon Rekognition
+slug: machine-learning-in-the-aws-cloud-add-intelligence-to-applic
+name_cn: AWS 云中的机器学习：使用 Amazon SageMaker 和 Amazon Rekognition 为应用添加智能
+toc:
+- - '#'
+  - AWS 云中的机器学习：使用 Amazon SageMaker 和 Amazon Rekognition 为应用添加智能
+- - '#'
+  - 关于作者
+- - '#'
+  - 关于技术编辑
+- - '#'
+  - 引言
+- - '##'
+  - 本书适合读者
+- - '##'
+  - 本书涵盖的内容
+- - '##'
+  - 本书的结构
+- - '##'
+  - 使用本书的必备条件
+- - '##'
+  - 约定
+- - '##'
+  - 源代码
+- - '##'
+  - 错误列表
+- - '#'
+  - 第一部分：机器学习基础
+- - '#'
+  - 第 1 章：机器学习简介
+- - '###'
+  - 本章内容
+- - '###'
+  - 数据科学家常用的工具
+- - '###'
+  - 常见术语
+- - '##'
+  - 机器学习的现实世界应用
+- - '##'
+  - 机器学习的类型
+- - '###'
+  - 监督学习
+- - '###'
+  - 无监督学习
+- - '###'
+  - 半监督学习
+- - '###'
+  - 强化学习
+- - '###'
+  - 批量学习（Batch Learning）
+- - '###'
+  - 增量学习（Incremental Learning）
+- - '###'
+  - 基于实例的学习（Instance-based Learning）
+- - '##'
+  - 基于模型的学习
+- - '##'
+  - 传统方法与机器学习方法
+- - '##'
+  - 基于规则的决策系统
+- - '###'
+  - 基于机器学习的系统
+- - '####'
+  - '表 1.2: 将分类特征转换为数值特征'
+- - '####'
+  - '表 1.3: 修改后的输入特征'
+- - '###'
+  - 选择机器学习算法
+- - '###'
+  - 评估模型性能
+- - '##'
+  - 机器学习数据集
+- - '##'
+  - Scikit-learn 数据集
+- - '##'
+  - AWS 机器学习数据集
+- - '##'
+  - Kaggle.com 数据集
+- - '###'
+  - UCI 机器学习库
+- - '##'
+  - 数据预处理技术
+- - '###'
+  - 获取数据概述
+- - '###'
+  - 处理缺失值
+- - '###'
+  - 创建新特征
+- - '###'
+  - 转换数值特征
+- - '###'
+  - 分类特征的热热编码
+- - '##'
+  - 总结
+- - '#'
+  - 第 3 章：使用 Python 进行数据可视化
+- - '###'
+  - 本章内容
+- - '##'
+  - 介绍 Matplotlib
+- - '##'
+  - 图形的组件
+- - '###'
+  - Figure (图形)
+- - '###'
+  - Axes (坐标轴区域)
+- - '##'
+  - 创建一个具有 2 x 2 对象网格的 figure
+- - '##'
+  - figure 对象的标题
+- - '##'
+  - 每个轴的标题
+- - '###'
+  - Axis (坐标轴)
+- - '###'
+  - Axis Labels (轴标签)
+- - '###'
+  - Grids (网格)
+- - '###'
+  - Title (标题)
+- - '##'
+  - 创建一个包含一个 axes 的 figure
+- - '##'
+  - 在 figure 实例上调用 suptitle 方法
+- - '##'
+  - 创建一个新的包含一个 axes 的 figure
+- - '##'
+  - 使用 pyplot suptitle 函数
+- - '##'
+  - 创建一个包含一个 axes 对象的图形。
+- - '##'
+  - 在 axes 实例上调用 set_title() 方法。
+- - '##'
+  - 创建一个包含一个 axes 对象的新图形
+- - '##'
+  - 使用 pyplot suptitle() 函数
+- - '###'
+  - 直方图
+- - '##'
+  - 将文件内容加载到 pandas Dataframe
+- - '##'
+  - 设置索引
+- - '##'
+  - 使用 pyplot 函数绘制 'Age' 属性的直方图
+- - '##'
+  - 使用 pyplot 函数绘制绘制 'Embarked' 属性的柱状图
+- - '##'
+  - 使用 Pandas dataframe 函数绘制 'Embarked' 属性的柱状图
+- - '###'
+  - 分组柱状图
+- - '##'
+  - 为 Embarked 属性创建一个分组柱状图，
+- - '##'
+  - 每组有两个条形。
+- - '##'
+  - 为 Embarked 属性创建一个分组柱状图，
+- - '##'
+  - 每组有两个条形。
+- - '###'
+  - 堆叠柱图
+- - '##'
+  - 为 Embarked 属性创建一个堆叠图
+- - '##'
+  - 显示每个类别的幸存人数
+- - '###'
+  - 堆叠百分比柱图
+- - '##'
+  - a stacked percentage bar chart for the Embarked attribute
+- - '##'
+  - showing the number of survivors in each category
+- - '##'
+  - a stacked percentage bar chart for the Embarked attribute
+- - '##'
+  - showing the number of survivors in each category
+- - '###'
+  - 饼图
+- - '##'
+  - use pyplot functions to plot a pie chart of the 'Embarked' attribute
+- - '##'
+  - use Pandas functions to plot a pie chart of the 'Embarked' attribute
+- - '##'
+  - three pie charts, showing the proportion
+- - '##'
+  - of survivors for each embarkation point
+- - '##'
+  - S = Southampton
+- - '##'
+  - C = Cherbourg
+- - '##'
+  - Q = Queenstown
+- - '##'
+  - use pyplot functions to create a box plot of the 'Embarked' attribute
+- - '##'
+  - compare box plots of the Age attribute for those who survived
+- - '##'
+  - against those that did not.
+- - '###'
+  - 散点图 (Scatter Plots)
+- - '##'
+  - 'impute missing values:'
+- - '##'
+  - Age with the median age
+- - '##'
+  - Fare with the mean fare
+- - '##'
+  - use pyplot functions to create a scatter plot of the 'Age' and 'Fare' attribute
+- - '##'
+  - 'Generates a M X M scatterplot matrix of subplots. '
+- - '##'
+  - 'scatter plots can also be used to visualize '
+- - '##'
+  - groups within data. This is illustrated below
+- - '##'
+  - using a synthetic dataset
+- - '##'
+  - 总结
+- - '#'
+  - 第 4 章：使用 Scikit-learn 创建机器学习模型
+- - '###'
+  - 本章内容
+- - '##'
+  - 介绍 Scikit-learn
+- - '##'
+  - 创建训练集和测试数据集
+- - '##'
+  - 加载鸢尾花数据集
+- - '##'
+  - 划分鸢尾花数据集
+- - '##'
+  - 鸢尾花数据集，使用分层采样
+- - '##'
+  - 可视化原始数据集和
+- - '##'
+  - train_test_split 函数创建的训练集中目标值的分布，
+- - '##'
+  - 有和无分层的情况下
+- - '##'
+  - 使用 Pandas 函数绘制 'class' 属性的柱状图
+- - '##'
+  - 加载 UCI ML 葡萄酒数据集
+- - '##'
+  - 葡萄酒数据集，使用分层采样
+- - '##'
+  - 可视化原始葡萄酒数据集以及由 train_test_split
+- - '##'
+  - 函数创建的训练集的目标值分布
+- - '##'
+  - 包含与不包含分层
+- - '##'
+  - 使用 Pandas dataframe 函数绘制 'Embarked' 属性的柱状图
+- - '###'
+  - K 折交叉验证
+- - '##'
+  - 对 Iris 数据集进行 10 折拆分
+- - '##'
+  - 创建机器学习模型
+- - '###'
+  - 线性回归
+- - '##'
+  - 使用 75/25 划分创建训练数据集和测试数据集。
+- - '##'
+  - create a synthetic regression dataset of X, Y.
+- - '##'
+  - demonstrate effect of fit_intercept parameter on a simple dataset.
+- - '##'
+  - use pyplot module to create a scatter plot of synthetic dataset
+- - '##'
+  - overlay the regression line from the two models.
+- - '###'
+  - 支持向量机
+- - '##'
+  - load Pima Indians dataset
+- - '##'
+  - normalize attribute values
+- - '##'
+  - create a training dataset and a test dataset using 75/25 split.
+- - '##'
+  - 使用线性核为糖尿病数据集创建一个分类器
+- - '##'
+  - 使用 模型在测试集上创建。
+- - '##'
+  - 创建具有两个特征的合成数据集
+- - '##'
+  - 将合成数据集缩放到 -3, 3
+- - '##'
+  - 创建多个 SVM 分器
+- - '##'
+  - portions of this code are
+- - '##'
+  - 'source: https://scikit-learn.org/stable/auto_examples/model_selection/plot_confusion_matrix.html'
+- - '##'
+  - 选择 2 个特征 X 和 X1
+- - '##'
+  - 绘制线性内核
+- - '##'
+  - 绘制二次项式内核
+- - '##'
+  - 绘制 RBF 内核
+- - '###'
+  - 逻辑回归
+- - '##'
+  - load Pima Indians dataset
+- - '##'
+  - normalize attribute values
+- - '##'
+  - create a training dataset and a test dataset using 75/25 split.
+- - '##'
+  - 'implement multi-class classification using '
+- - '##'
+  - OVA (a. OVR) and LogisticRegression
+- - '##'
+  - use the model to create predictions on the test set, with threshold of 0.5
+- - '###'
+  - 决策树
+- - '##'
+  - DecisionTreeClassifier 决策树分类器
+- - '##'
+  - 在波士顿房价上创建一个决策树回归器。
+- - '##'
+  - 使用模型在测试集上创建
+- - '##'
+  - 评估回归模型
+- - '##'
+  - 加载波士顿房价
+- - '##'
+  - 使用 75/25 划分创建训练和测试数据集
+- - '##'
+  - 在波士顿房价上训练线性模型
+- - '##'
+  - 在波士顿房价上创建一个决策树
+- - '##'
+  - 创建预测与实际值的散点图
+- - '###'
+  - RMSE
+- - '##'
+  - Scikit-learn 计算 MSE
+- - '###'
+  - R² Metric
+- - '##'
+  - 评估分类模型
+- - '###'
+  - 二分类模型
+- - '##'
+  - load Pima Indians dataset
+- - '##'
+  - 归化属性值
+- - '##'
+  - 使用 75/25 划分创建训练和测试数据集
+- - '##'
+  - 使用 RBF 核为数据集的特征训练 SVM 分类器
+- - '##'
+  - 在糖尿病数据集上训练逻辑模型
+- - '##'
+  - 使用模型对测试集创建预测
+- - '##'
+  - 简单指标 - 正确预测的百分比
+- - '##'
+  - 计算混淆矩阵
+- - '##'
+  - 提取真负性、假性、假阴性、真正性。
+- - '##'
+  - sklearn confusion_matrix() 函数如下
+- - '##'
+  - TN FP
+- - '##'
+  - FN TP
+- - '##'
+  - 计算准确率、精确率和召回率
+- - '###'
+  - 多分类模型
+- - '##'
+  - 加载鸢尾花数据集
+- - '##'
+  - 归一化属性值
+- - '##'
+  - 使用 75/25 划分创建训练和测试集
+- - '##'
+  - softmax（又名多项回归）分类器
+- - '##'
+  - 创建基于决策树的多分类分类器
+- - '##'
+  - 使用模型在测试集上创建
+- - '##'
+  - 计算混淆矩阵
+- - '##'
+  - 将混淆矩阵绘制为热力图
+- - '##'
+  - 使用 Matplotlib 函数将混淆矩阵绘制为热力图。
+- - '##'
+  - 此代码改编自
+- - '##'
+  - https://scikit-learn.org/stable/auto_examples/model_selection/plot_confusion_matrix.html
+- - '##'
+  - use grid search to find the hyperparameters that result
+- - '##'
+  - in the best accuracy score for a decision tree based classifier on the Iris Flowers
+    dataset
+- - '##'
+  - 总结
+- - '##'
+  - 第 2 部分
+- - '#'
+  - 第 6 章
+- - '###'
+  - 本章内容
+- - '##'
+  - 什么是云计算？
+- - '##'
+  - 云服务模型
+- - '##'
+  - 云部署模型
+- - '##'
+  - AWS 生态系统
+- - '###'
+  - 机器学习应用服务
+- - '##'
+  - 机器学习平台服务
+- - '##'
+  - 支持服务
+- - '##'
+  - 注册 AWS 免费层级账户
+- - '###'
+  - 步骤 1：联系信息
+- - '###'
+  - 步骤 2：支付信息
+- - '###'
+  - 步骤 3：身份验证
+- - '###'
+  - 步骤 4：选择支持计划
+- - '###'
+  - 步骤 5：确认
+- - '##'
+  - 总结
+- - '###'
+  - Note
+- - '#'
+  - 第 7 章：AWS 全球基础设施
+- - '###'
+  - 本章内容
+- - '##'
+  - 区域与可用区
+- - '###'
+  - AWS 管理控制台
+- - '####'
+  - 首页菜单 (HOME MENU)
+- - '####'
+  - 服务菜单 (SERVICES MENU)
+- - '####'
+  - 资源组菜单 (RESOURCE GROUPS MENU)
+- - '##'
+  - 核心概念
+- - '###'
+  - 根账户 (Root Account)
+- - '###'
+  - 用户 (User)
+- - '###'
+  - 身份联合 (Identity Federation)
+- - '####'
+  - 企业身份联合
+- - '####'
+  - Web 身份联合
+- - '###'
+  - 组 (Group)
+- - '###'
+  - 策略 (Policy)
+- - '###'
+  - 角色 (Role)
+- - '##'
+  - 常见任务
+- - '###'
+  - 创建用户
+- - '###'
+  - 修改与现有组关联的权限
+- - '###'
+  - 创建角色
+- - '###'
+  - 使用 MFA 保护根账户
+- - '###'
+  - 设置 MFA
+- - '##'
+  - 总结
+- - '#'
+  - 第 9 章：Amazon S3
+- - '####'
+  - 本章内容
+- - '##'
+  - 核心概念
+- - '###'
+  - 桶 (Bucket)
+- - '###'
+  - 对象键 (Object Key)
+- - '###'
+  - 对象值 (Object Value)
+- - '###'
+  - 版本 ID (Version ID)
+- - '###'
+  - 存储类 (Storage Class)
+- - '###'
+  - 费用 (Costs)
+- - '###'
+  - 子资源 (Subresources)
+- - '###'
+  - 对象元数据 (Object Metadata)
+- - '####'
+  - 系统定义的元数据
+- - '##'
+  - 更改存储类型
+- - '##'
+  - 删除对象
+- - '##'
+  - Amazon S3 桶版本
+- - '##'
+  - 9.27 版本选择器
+- - '##'
+  - 使用 AWS CLI 访问 S3
+- - '##'
+  - 总结
+- - '#'
+  - 第 10 章：Amazon Cognito
+- - '###'
+  - 本章内容
+- - '##'
+  - 核心概念
+- - '###'
+  - 身份验证 (Authentication)
+- - '###'
+  - 身份授权 (Authorization)
+- - '###'
+  - 身份提供者 (Identity Provider)
+- - '###'
+  - 客户端 (Client)
+- - '###'
+  - OAuth 2.0
+- - '###'
+  - OpenID Connect
+- - '##'
+  - Amazon Cognito 用户池
+- - '##'
+  - 联邦身份
+- - '##'
+  - 常见任务
+- - '##'
+  - 创建用户
+- - '##'
+  - 定义界面 (Customizations)
+- - '##'
+  - 8. 标签界面 (Tags)
+- - '##'
+  - 9. 设备界面 (Devices)
+- - '##'
+  - 10. 应用界面 (App Clients)
+- - '##'
+  - 触发器界面 (Triggers)
+- - '##'
+  - 哪一个？
+- - '##'
+  - 总结
+- - '#'
+  - 第 11 章：Amazon DynamoDB
+- - '###'
+  - 本章内容
+- - '##'
+  - 核心概念
+- - '###'
+  - 表（Tables）
+- - '###'
+  - 全局表（Global Tables）
+- - '###'
+  - 项目（Items）
+- - '###'
+  - 属性（Attributes）
+- - '###'
+  - 主键（Primary Keys）
+- - '###'
+  - 二级索引（Secondary Indexes）
+- - '##'
+  - 查询 (Queries)
+- - '##'
+  - 扫描 (Scans)
+- - '##'
+  - 读取一致性 (Read Consistency)
+- - '##'
+  - 读/写容量模式 (Read/Write Capacity Modes)
+- - '##'
+  - 向表中添加项目
+- - '##'
+  - 创建索引
+- - '##'
+  - 扫描
+- - '#'
+  - 第 12 章：AWS Lambda
+- - '###'
+  - 本章内容
+- - '##'
+  - Lambda 的常见用例
+- - '##'
+  - 核心概念
+- - '###'
+  - 支持语言
+- - '##'
+  - Lambda 函数
+- - '###'
+  - HANDERS
+- - '###'
+  - CONTEXT
+- - '###'
+  - LOGGING
+- - '##'
+  - 异常
+- - '##'
+  - 执行环境
+- - '##'
+  - 服务限制
+- - '##'
+  - 常见任务
+- - '##'
+  - 创建简单的函数
+- - '##'
+  - 使用管理控制台测试 Lambda
+- - '##'
+  - 使用 AWS 控制台删除 Lambda 函数
+- - '##'
+  - 摘要
+- - '#'
+  - 第 13 章：Amazon Comprehend
+- - '###'
+  - 本章内容
+- - '##'
+  - 核心概念
+- - '###'
+  - 自然语言处理
+- - '###'
+  - 实体
+- - '###'
+  - 关键短语
+- - '###'
+  - 语法
+- - '###'
+  - 主题建模
+- - '###'
+  - 语言支持
+- - '##'
+  - 使用 Amazon Comprehend 管理文本分析
+- - '##'
+  - 使用 AWS CLI 进行交互式文本分析
+- - '##'
+  - 使用 AWS CLI 检测实体
+- - '##'
+  - 使用 AWS CLI 检测关键短语
+- - '##'
+  - 使用 AWS CLI 进行情感
+- - '##'
+  - 在 AWS Lambda 中使用 Comprehend
+- - '##'
+  - Summary
+- - '#'
+  - 第 14 章
+- - '####'
+  - 本章内容
+- - '##'
+  - 核心概念
+- - '###'
+  - 机器人 (Bot)
+- - '###'
+  - 客户端应用程序 (Client Application)
+- - '###'
+  - 意图 (Intent)
+- - '###'
+  - 槽位 (Slot)
+- - '###'
+  - 述语 (Utterance)
+- - '##'
+  - 编程模型 (Programming Model)
+- - '##'
+  - 定价与可用性
+- - '##'
+  - 创建 Amazon Lex 机器人
+- - '###'
+  - 创建 Amazon DynamoDB 表
+- - '###'
+  - 表 14.1：ACMEBankAccount 表
+- - '###'
+  - 表 14.11 包含项目的 ACMEBankAccount 表
+- - '###'
+  - 表 14.2：ACMEAccountTransaction 表
+- - '###'
+  - 创建 AWS Lambda 函数
+- - '###'
+  - 创建 ACMEBotAccountOverview AWS 函数
+- - '###'
+  - 图 14.12 从头开始函数
+- - '###'
+  - 图 14.13 函数命名和运行时
+- - '###'
+  - 图 14.14 查看 IAM 角色关联的默认策略
+- - '###'
+  - 图 14.15 更新与 IAM 角色关联的默认策略
+- - '##'
+  - 获取机器人名称
+- - '##'
+  - 初始化和验证
+- - '##'
+  - 验证 CustomerIdentifier 插槽
+- - '##'
+  - 如果指定的 customer_identifier 存在于 ACMECustomer 表中，则此函数返回 True。
+- - '##'
+  - 从 DynamoDB 表 ACMEBankAccounts 读取该客户的账户列表
+- - '##'
+  - 返回一个包含账户详情的 JSON 对象。
+- - '##'
+  - 创建 ACMEBotTransactionList 函数
+- - '##'
+  - 创建聊天机器人
+- - '###'
+  - 自定义 AccountOverview 意图
+- - '###'
+  - 自定义 ViewTransactionList 意图
+- - '##'
+  - 测试聊天机器人
+- - '##'
+  - 总结
+- - '#'
+  - 第 15 章机器学习
+- - '####'
+  - 本章内容
+- - '##'
+  - 核心概念
+- - '###'
+  - 数据源
+- - '##'
+  - 概述
+- - '##'
+  - ML 模型
+- - '##'
+  - 正则化
+- - '##'
+  - 训练参数
+- - '##'
+  - 描述性统计
+- - '##'
+  - 统计与可用性
+- - '##'
+  - 数据统计
+- - '##'
+  - 创建数据源
+- - '##'
+  - 查看洞察
+- - '##'
+  - 创建 ML 模型
+- - '##'
+  - 批量预测
+- - '##'
+  - 为您的机器学习模型创建实时端点
+- - '##'
+  - 使用 AWS CLI 进行预测
+- - '##'
+  - 应用程序使用实时端点
+- - '##'
+  - 总结
+- - '#'
+  - 第 16 章 Amazon SageMaker
+- - '###'
+  - 本章内容
+- - '##'
+  - 概念
+- - '###'
+  - 编程模型
+- - '###'
+  - Amazon SageMaker Notebook Instances
+- - '###'
+  - 训练作业
+- - '###'
+  - 预测实例
+- - '###'
+  - 预测端点和终端配置
+- - '###'
+  - Amazon SageMaker 批量转换
+- - '##'
+  - 价格与可用性
+- - '##'
+  - 创建 Amazon SageMaker 笔记本实例
+- - '##'
+  - 在 Amazon SageMaker Notebook 实例上训练 Scikit-Learn 模型
+- - '###'
+  - 实现细节
+- - '##'
+  - 打印期望类别
+- - '##'
+  - 如果 Iris-setosa = 0, Iris-versicolor = 1, Iris-virginica = 2
+- - '##'
+  - 将目标变量 'species' 从字符串转换为整数。
+- - '##'
+  - 在专用训练实例上训练 Scikit-Learn 模型
+- - '##'
+  - 期望一个名为 n_clusters 的参数，如果缺少参数则应用默认值。
+- - '##'
+  - 解析参数
+- - '##'
+  - 现在你可以使用 args.n_clusters
+- - '##'
+  - n_clusters 命令行参数
+- - '##'
+  - 读取 Amazon SageMaker 特有的运行时信息
+- - '##'
+  - 此处省略具体代码
+- - '##'
+  - 获取 SageMaker 兼容角色。
+- - '##'
+  - 获取 SageMaker 会话对象
+- - '##'
+  - 在专用实例上训练 Scikit-learn 分器
+- - '##'
+  - 设置参数 n_clusters = 3。
+- - '##'
+  - load iris_test.csv from Amazon S3
+- - '##'
+  - target variables into separate dataframes
+- - '##'
+  - target variables 'species' from strings into integers.
+- - '##'
+  - use the prediction instance to create predictions.
+- - '##'
+  - 在专用实例上使用内置算法
+- - '##'
+  - 获取 SageMaker 兼容角色。
+- - '##'
+  - 获取 SageMaker 会话对象。
+- - '##'
+  - 将模型部署到预测端点。
+- - '##'
+  - terminate the prediction instance and associated.
+- - '##'
+  - 总结
+- - '#'
+  - 第 17 章：在 Amazon SageMaker 中使用 TensorFlow
+- - '###'
+  - 本章内容
+- - '##'
+  - TensorFlow 简介
+- - '###'
+  - 17.1 人工神经网络 (ANN) 的结构
+- - '###'
+  - 17.2 简单的神经网络
+- - '###'
+  - 17.3 TensorFlow 架构
+- - '###'
+  - 17.4 访问训练和验证文件
+- - '###'
+  - 17.5 将预划分的训练数据上传到 Amazon S3 桶
+- - '###'
+  - 17.6 SageMaker 管理显示新的 notebook
+- - '##'
+  - 评估
+- - '###'
+  - 随机下降
+- - '##'
+  - 实现
+- - '##'
+  - 在单个特征上训练线性模型
+- - '##'
+  - 线性回归的通用方程：
+- - '##'
+  - y = w1x1 + w2x2 … wnxn + c
+- - '##'
+  - 在单个特征的情况下，方程简化为：
+- - '##'
+  - y = w1x1 + c
+- - '##'
+  - 定义 TensorFlow 图
+- - '##'
+  - x1 = 特征的一维数组
+- - '##'
+  - y_actual = 期望值/标签的一维数组
+- - '##'
+  - w1, c 权重和偏置项（截距）
+- - '##'
+  - y_predicted = w1x1 + c
+- - '##'
+  - 计算代价函数
+- - '##'
+  - 预测值与实际值之间的 MSE
+- - '##'
+  - 创建根节点 - 一个梯度下降优化器，设定为优化 mse_cost 函数。
+- - '##'
+  - 将 特征和目标变量提取到数组中，以便这些值通过之前创建的占位符馈入计算图。
+- - '##'
+  - 执行图
+- - '##'
+  - 使用 best_w1 and best_c 对测试集中所有观测值进行预测
+- - '##'
+  - 在测试集上计算 MSE
+- - '##'
+  - 在单个特征上训练线性模型
+- - '##'
+  - 线性回归的通用方程：
+- - '##'
+  - y = w1x1 + w2x2 … wnxn + c
+- - '##'
+  - 在单个特征的情况下，方程简化为：
+- - '##'
+  - y = w1x1 + c
+- - '##'
+  - 定义 TensorFlow 图
+- - '##'
+  - x1 = 特征的一维数组
+- - '##'
+  - y_actual = 期望值/标签的一维数组
+- - '##'
+  - w1, c 权重和偏置项（截距）
+- - '##'
+  - y_predicted = w1x1 + c
+- - '##'
+  - 计算代价函数
+- - '##'
+  - 预测值与实际值之间的 MSE
+- - '##'
+  - 创建根节点 - 一个梯度下降优化器，设定为优化 mse_cost 函数。
+- - '##'
+  - 执行图
+- - '##'
+  - 使用 best_w1 and best_c 对测试集中的所有观测值进行预测
+- - '##'
+  - 获取此 Notebook 实例使用的 SageMaker 兼容角色。
+- - '##'
+  - 获取 SageMaker 会话对象，该对象用于与 SageMaker API 的交互。
+- - '##'
+  - 在专用实例上训练基于 TensorFlow Estimator 的模型
+- - '##'
+  - 图 17.17 使用 notebook 实例创建训练作业
+- - '##'
+  - 图 17.18 已训练模型列表
+- - '##'
+  - create a prediction instance
+- - '##'
+  - use the prediction endpoint to get a single prediction
+- - '##'
+  - 总结
+- - '#'
+  - 第 18 章
+- - '##'
+  - Amazon Rekognition
+- - '###'
+  - 本章内容
+- - '##'
+  - 从 AWS Lambda 调用 Amazon Rekognition API
+- - '##'
+  - 核心概念
+- - '###'
+  - 目标检测 (Object Detection)
+- - '###'
+  - 目标定位 (Object Location)
+- - '###'
+  - 场景检测 (Scene Detection)
+- - '###'
+  - 活动检测 (Activity Detection)
+- - '###'
+  - 人脸识别 (Facial Recognition)
+- - '###'
+  - 人脸集合 (Face Collection)
+- - '###'
+  - API set 集 (API Sets)
+- - '###'
+  - 非存储型和基于存储的操作 (Non-Storage and Storage-Based Operations)
+- - '###'
+  - 模型版本 (Model Versioning)
+- - '###'
+  - 定价与可用性 (Pricing and Availability)
+- - '##'
+  - 使用 Amazon Rekognition 管理控制台分析图像
+- - '##'
+  - 使用 AWS CLI 进行交互式图像分析
+- - '##'
+  - 使用 AWS 使用 Rekognition
+- - '###'
+  - 创建 Amazon DynamoDB 表
+- - '###'
+  - 创建 AWS Lambda 函数
+- - '##'
+  - 安装 Python 包
+- - '##'
+  - 安装 Jupyter Notebook
+- - '##'
+  - 'conda environments:'
+- - '##'
+  - 'Plan ## '
+- - '#'
+  - 总结
+- - '#'
+  - 附录 B：使用本书所需的 AWS 资源
+- - '##'
+  - 为开发创建 IAM 用户
+- - '##'
+  - 创建 S3 桶
+- - '#'
+  - 附录 C
+- - '##'
+  - 安装和配置 AWS CLI
+- - '##'
+  - Mac OS 用户
+- - '###'
+  - 在 Mac 上安装 AWS CLI
+- - '###'
+  - 在 Mac 上配置 AWS CLI
+- - '##'
+  - Windows 用户
+- - '###'
+  - 在 Windows 上配置 AWS CLI
+- - '#'
+  - 附录 D：NumPy 和 Pandas 简介
+- - '##'
+  - NumPy
+- - '###'
+  - 创建 NumPy 数组
+- - '####'
+  - 常用数组属性
+- - '###'
+  - 修改数组
+- - '####'
+  - 算术运算
+- - '##'
+  - 比较操作
+- - '##'
+  - 矩阵操作
+- - '##'
+  - 索引与切片
+- - '##'
+  - Pandas
+- - '###'
+  - 创建 Series 和 Dataframes
+- - '###'
+  - 获取 Dataframe 信息
+- - '###'
+  - 选择数据
+- - '##'
+  - AWS 管理控制台
+- - '##'
+  - B
+- - '##'
+  - C
+- - '###'
+  - G
+- - '###'
+  - H
+- - '###'
+  - I
