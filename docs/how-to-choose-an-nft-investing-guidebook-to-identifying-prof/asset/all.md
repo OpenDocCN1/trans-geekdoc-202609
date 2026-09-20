@@ -1,0 +1,1587 @@
+Copyright © 2021
+
+All rights reserved.
+
+No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without written permission from the author, except for the use of brief quotations in a book review.
+
+# INTRODUCTION
+
+> I am very excited about the prospect of using cryptocurrency, not just as a money equivalent, but using it as a way to earn something as a result of doing some type of work.
+> 
+> WILLIAM MOUGAYAR
+
+The concept of trustless, digital scarcity was developed in the creation of Bitcoin. The fact that digital copies were too expensive before the technology's birth was a barrier to widespread use. It is now possible to create programmable digital scarcity because of the arrival of blockchain technology. This technology is now being used to connect the digital and physical worlds. The first sort of digital asset that is playable is non-fungible tokens (NFTs). This could act as a catalyst to increase the scarcity of digital products.
+
+Because ERC-721 tokens are not easily interchangeable, they can only be used to represent unique assets and proposals. In other words, this technique can accurately depict actual things like real estate, art, and antiques. The collectibles market is now worth $450 billion and has remained mostly unchanged since the internet's inception. Current authentication issues, fraud, and monetary constraints are all too typical in the business. The market is ripe for a transition at this time because blockchain technology can take trustless transactions to a whole new level. Real-world assets can be tokenized using NFTs, which provide a secure and trustless method of doing so.
+
+The majority of the NFT market is based on Ethereum. People are becoming more interested in EOS as a result of the increased activities. As a result of investment fueling development, it's no surprise that NFTs (non-fungible tokens) are appearing on new blockchains. Non-fungible tokens (NFTs) are digital assets with unique properties. A specific asset may contain any number of separate NFTs (e.g., one piece of art or one piece of real estate).
+
+The object's digital representation can be generated using these distinguishing characteristics. NFTs can be used to represent real-world assets. In a trustless environment, a distributed, community-owned ledger can store and exchange representations without the need for centralized authority.
+
+NFTs are one of the major pillars of the developing digital asset class - assets that have been digitized and are connected with their cryptocurrency token. The primary focus of this book will be how to choose an NFT. It also looks at the basics of NFT, the difference between fungible and non-fungible tokens, how to buy and sell NFT, the various marketplaces to sell your NFT, etc. You will also find a relevant guide to investing in NFTs and how to choose wallets to get started with NFT investing.
+
+1 ![](Images/svgimg0003.svg)
+
+# THE BASICS OF NON-FUNGIBLE TOKENS (NFTS)
+
+NFT is an abbreviation for non-fungible tokens, also known as non-replaceable tokens in German. NFT are certificates for one-of-a-kind digital artifacts. You certify that you are the owner of a specific file. The term "fungible" refers to the ability of an item to be replaced by something equivalent. It makes no difference if you have 20 dollars in your wallet as a single note, four 5-dollar bills, or twenty 1-dollar bills.
+
+Objects that are distinguishable by particular characteristics, on the other hand, are not fungible. Such items can exist in both physical and digital forms. It is simple to assign monetary worth to physical objects such as a painting or an automobile. The work's distinctiveness determines this, and the amount of money people are ready to pay for it.
+
+This is more difficult with digital objects. After all, regardless of copyright and usage rights, any image, song, or movie can be duplicated and redistributed with the click of a mouse. It is difficult to determine a file's exact value or owner. This is where the concept of NFT originates: The digital tokens include unique and verifiable information about a certain file. The blockchain technology is utilized to validate the files' authenticity.
+
+## BLOCKCHAIN AND NFTS
+
+Blockchain is essentially a database in which digital goods transactions, such as cryptocurrency, are saved in blocks and dispersed among multiple computers worldwide. Bitcoin, for example, is stored on a blockchain. Its architecture prevents tampering with the blockchain. In contrast to cryptocurrencies, NFT in a blockchain represents a physical asset – such as a one-of-a-kind digital work of art with an owner and a monetary value – rather than an interchangeable asset. Simply explained, by placing the NFT in the blockchain, digital products become items that you truly own.
+
+The open Ethereum blockchain is currently the most important for NFT trading. Purchases of virtual products are thus typically made in Ether, the second most common cryptocurrency after Bitcoin.
+
+## THE DIFFERENCE BETWEEN FUNGIBLE AND NON-FUNGIBLE TOKENS
+
+The following will clarify the controversy between fungible and non-fungible tokens and help you understand the differences between the two. Cryptocurrencies have always been connected to blockchain technology. If you're new to the world of blockchain, you're probably under the impression that it's just great for developing crypto assets. The real potential of blockchain technology, on the other hand, goes far beyond cryptocurrencies.
+
+Governments, businesses, and individuals can now place real estate data, IDs, and certificates, and other critical information about real-world assets on blockchain. Students could easily have their certificates issued as digital documents on the blockchain, which authorities will accept worldwide. So, what has helped people accomplish such a remarkable feat?
+
+This is where the controversy about fungible and non-fungible tokens has found recognition in recent years. Non-fungible tokens are being heralded as the future of the blockchain economy. However, fungible tokens or current cryptocurrencies are often pitted against them. Let's clear up any confusion by examining the distinction between fungible and non-fungible tokens.
+
+**What Are Tokens?**
+
+The definition of tokens is the first thing you should consider when determining the differences between fungible and non-fungible tokens. Tokens are a tangible or visible representation of a fact, feeling, or quality in the real world. People come across a variety of tokens in real life.
+
+A hotel key card, for example, is evidence of payment to the hotel for a room. The office ID card serves as evidence of your employment in a company. On the other hand, a driving license certifies that a person has undergone the necessary training to drive in their country. As a result, a token also represents a particular entity in the crypto world.
+
+The token can hold value, stakes, voting rights, or anything. Surprisingly, a token is not limited to a single role and can be used to address various roles in its native ecosystem. A token may be used to reflect a company's utility or asset. In a public sale, the corporation can distribute the tokens to investors.
+
+**The Importance of Tokens**
+
+Is there a specific use for a token? The response to this question is crucial to fully comprehend the fungible vs. non-fungible token debate. A token isn't limited to a particular role and can be used for various things in its native ecosystem. The following are examples of possible functions:
+
+1.  Tokens may be used as entry points into blockchain applications, and users must have tokens to use the decentralized app.
+2.  Tokens may also represent an individual's eligibility to retain special voting rights. EOS blockchain tokens, for example, can be used to vote for block creators.
+3.  Tokens may also be useful entities for improving holders' user experiences. Enhancement tokens for user experience can help improve the user experience within the confines of a particular environment. For example, in the case of BAT users, the Brave web browser or other Brave-related tokens can enhance their consumer experience by using their tokens to add adverts or other attention-based services related to the Brave platform.
+4.  Most importantly, the use of tokens as currency aids in identifying fungible and non-fungible tokens. Tokens are unique monetary structures that comprise digital assets that can be used to store value for internal and external transactions in a certain ecosystem.
+5.  Another vital application of tokens refers to value exchange. In fact, in the blockchain ecosystem, tokens have historically been used for value exchange. As a result, tokens can be useful in developing an internal economic system in an application.
+6.  It's also important to consider the application of tokens as a means of identifying who owns a specific entity. Tokens may signify ownership of something unique to a single person, and this application lays the groundwork for the debate over fungible vs. non-fungible tokens.
+
+**Foundation for Comparing Fungible and Non-Fungible Tokens**
+
+Blockchain is the best technology for managing different forms of digital assets. Its security and immutability features make it suitable for handling digital assets. It is difficult to write any unique information to fungible tokens, which are the most widely used ones in blockchain.
+
+Cryptographic tokens, on the other hand, which are unique and can hold data rather than value, could be the best option. Non-fungible tokens are those that are defined on the Ethereum platform using ERC standards like the ERC-721 standard.
+
+The distinction between fungible and non-fungible tokens emerges from the reliance on data storage. Let's establish the basis for comparing fungible and non-fungible tokens by reflecting on their definitions.
+
+In economic terms, any fungible entity refers to an asset's or good's capacity to be interchanged with another asset or good of equal value. Currency and money are the most popular examples of fungible assets. For example, a $5 bill in one person's possession has the same value as a $5 bill in another person's possession. Similarly, two $5 bills of one person are worth the same as a single $10 bill of another.
+
+Gold is another fungible asset since one ounce of gold in one country has the same value as another. The debate about fungible vs. non-fungible tokens stems from fungibility being written into Bitcoin and other cryptocurrency codes. The most important feature of a fungible good is that it is standardized, and its units are not unique.
+
+NFTs, on the other hand, acts as a special token variant with no interchangeability with other tokens, as discussed in the debate between fungible and non-fungible tokens. NFT has distinct characteristics that indicate that it cannot be replaced or exchanged for another token of the same kind.
+
+Non-fungible tokens vary from cryptocurrencies in that they have no inherent value. Non-fungible tokens derive their value from the goods or assets represented by them. NFTs use a variety of token standards and deploy several types of smart contracts. Non-fungible tokens are seen as new-age tools for developing a blockchain-based virtual economic ecosystem.
+
+## EXPLICIT DIFFERENCES BETWEEN FUNGIBLE AND NON-FUNGIBLE TOKENS
+
+Now that we have a good understanding of what fungible and non-fungible tokens are, it's time to focus on comparing fungible and non-fungible tokens. Let us consider the qualities that differentiate fungible and non-fungible tokens.
+
+**Interchangeability**
+
+Fungible tokens, as you must have understood, are completely interchangeable with each other. Fiat currencies are the most well-known example of fungible assets. To pay for such products, you can transfer fungible assets from one owner to another. Fungible assets, on the other hand, have no meaning because their values are the same. Fungible tokens are generally used for tracking balances and making payments.
+
+One of the most popular examples of practical blockchain use cases of fungible tokens is binding fungible tokens to an organization's account balance in a specific payment account. As a result, token transfers could be used to fulfill payments. Users may also query the resulting token balances to perform periodic netting and settlement.
+
+**Value Transfer**
+
+Another important aspect is the distinction between fungible and non-fungible tokens. Each account maintains a balance based on the tokens owned by the account. It is quite easy to transfer tokens to other Ethereum accounts Using swap techniques or direct transactions. The money transferred is debited from the source account when using token transfers, just like when using bank transfers. Simultaneously, the beneficiary account receives a credit in the same amount.
+
+The comparison of fungible vs. non-fungible tokens indicates that non-fungible tokens, or NFTs, offer a separate value proposition. NFTs are unique tokens, and each one has its unique ID for distinguishing it from other tokens in the same smart contract. The non-fungible token always has a unique owner. As a result, their values can vary Because each token is treated differently.
+
+Certain NFTs will represent unique tributes with a proven scarcity. As a result, NFTs are in high demand, with more buyers and higher value than those representing common attributes. Furthermore, NFTs can be used to facilitate both ownership transfer and trading. For example, John might exchange tokens representing a batch of Scottish whiskey for tokens representing a batch of Bordeaux wine.
+
+One of the most notable use cases is assigning a non-fungible token to a real estate property. After paying off the mortgage, users can transfer NFTs from the bank's Ethereum account to the house owner's Ethereum account. Therefore, it introduces a new form of use-case for blockchain in the real estate sector.
+
+**Ethereum Token Standards**
+
+The next significant factor to consider when choosing between fungible and non-fungible tokens refers to token standards. If you want to build a healthy ecosystem, you can build decentralized apps on top of Ethereum that seamlessly interact with one another. However, if you have two different tokens, such as Token Alpha and Token Beta, can you find different smart contract structures in them?
+
+**Developers must study both contracts for the interaction between the two tokens.**
+
+Furthermore, developers must map out the precise methods by which tokens will interact with one another. This factor, however, does not help with scalability. If there are 100 different tokens with 100 different smart contracts, it would be difficult to narrow down all qualifications and conditions for ensuring that transfers will go through all tokens.
+
+As a result, you can encounter a large number of complex calculations for token transactions can be encountered. Thus, token standards evolved as a viable option for distinguishing between fungible and non-fungible tokens. So, the decision to standardize the rules governing the underlying architecture of tokens is unquestionably a yardstick for distinguishing fungible from non-fungible tokens.
+
+**Fungible Tokens Use ERC-20**
+
+The precise collection of rules is known as ERC-20, and ERC stands for 'Ethereum Request for Comment.' The foundations of ERC-20 depend on elements such as approval, allowance, totalSupply, transfer, transferFrom, and balanceOf.
+
+These elements are the mandatory functions and rules for ERC-20 tokens. Tokens, on the other hand, may have the three optional characteristics mentioned below. A token name, a symbol, and a decimal up to 18 are among the features. These features distinguish the ERC-20 as a fungible standard. As a result of the standards, fungible tokens must have the following properties, which determine their position in the fungible vs. non-fungible token debate.
+
+1.  Fungible tokens of the same type can replace one token.
+2.  Similar underlying rules serve governance of fungible tokens.
+3.  Fungible tokens are easily divisible, and people can use smaller fractions to pay back a larger amount.
+
+**Non-Fungible Tokens Use ERC-721**
+
+However, ERC-20's limitations result in significant inconsistencies, prompting the creation of the ERC-721 token standard. The ERC-721 token standard may be useful in the creation of non-fungible tokens. Surprisingly, the ERC-721 token standard is very similar to the ERC-20 token standard in terms of functionality. The similarities between ERC-20 and ERC-721 are mainly due to the following factors:
+
+1.  Developers could quickly transition without having to learn a new set of skills.
+2.  Users may have a better experience storing tokens in general wallets and trading them on exchanges.
+
+The ERC-721 interface has two different methods, such as ownerOf and tranferFrom, which have distinct functions. The ownerOf feature is used to find out who owns a token. The transferFrom function can be used to transfer token ownership.
+
+## NFTS PROPERTIES
+
+Several properties distinguish NFTs. Among them are:
+
+**NFTs are not interoperable**
+
+This means that one NFT cannot be substituted for another. As a result, each NFT is unique, with its own set of characteristics and data to be gathered. The game CryptoKitties is an example of this. A user cannot use a gaming asset in another game.
+
+**Verifiable**
+
+The blockchain stores all data on NFTs, allowing it to be easily traced back to the original owner. This simplifies the authentication of NFTs. Non-fungible tokens can limit and present things in digital space in a unique way. Many other cryptocurrencies and tokens, such as Bitcoin and Ether, are fungible. You wouldn't notice a difference if you sent someone ether and received Ether in return. The same is true for tokens, with most tokens so far based on Ethereum's ERC-20 standard. For the sake of simplicity, consider each of these tokens to be a ten-dollar bill. If you deliver this token to someone and receive another one a week later, they are identical. With non-fungible tokens, all of this changes. Currently, the majority of NFT on the Ethereum blockchain adheres to the ERC-721 standard. This standard's tokens can be compared to Pokémon or Yu-Gi-Oh collectible cards. Each token is unique and has a varying level of rarity.
+
+**Indestructible**
+
+As a result of their usage of blockchain technology and smart contracts, NFTs are virtually impenetrable. The blockchain's intrinsic openness and immutability mean that NFTs cannot be deleted or replicated.
+
+**Indivisible**
+
+Fungible tokens are divisible, which means that a fraction of a Bitcoin or another ERC-20 token can be sent or owned. Similar to cash, you can pay with a ten-dollar bill and get change. Tokens that are not fungible cannot be shared and must be purchased or sold in their full. As with collecting cards, no one would consider purchasing half a card.
+
+## THE EMERGENCE OF NFTS
+
+What began as a niche topic among crypto and gaming enthusiasts has since sparked widespread attention beyond the industry. NFTs are especially popular in the art sector. Grimes, a Canadian artist, and musician auctioned off digital art on the Nifty Gateway platform, raising approximately $6 million in 20 minutes.
+
+Christie's, the famed British auction house, has recently joined the NFT bandwagon. Christie's is auctioning the first all-digital NFT-werk by artist Mike Winkelmann, nicknamed Beeple, in collaboration with Marketspace, a crypto art sales platform, till March 11th. The top offer for "Everydays: The First 5,000 Days" is 9.75 million US dollars, one day before the auction finishes.
+
+A growing number of musicians and influencers are also taking advantage of the possibility in NFT. Kings of Leon, a band from the United States, stated that their new album would be released as a limited NFT-Edition. Fynn Kliemann, a German artist, auctioned 100 NFT-produced jingels on the blockchain, raising approximately $250,000.
+
+Collectors and gamers alike enjoy NFT. NFT sites like Open Sea, in addition to crypto art, trade collectibles like memes and cards, which are generally known as computer game material. An unnamed user, for example, recently spent 300 ethers (about 600,000 US dollars at the time of purchase) for an updated version of the animated gif of "Nyan Cat," which has been ghosting the Internet for more than a decade and is one of the most renowned gifs.
+
+Another example is Sorare, a fantasy football site that functions similarly to a digital Panini album. Football fans can purchase limited-edition collector cards of their favorite players. So far, the most expensive card sold was for $57,000 US dollars. On the NFT marketplaces, players can purchase virtual characters, resources, or commodities. The current record holder is a virtual plot of land in the blockchain-based collectable monster game Axie, for which someone paid approximately 1.5 million dollars.
+
+**Is it safe to say that NFTs are the next big thing?**
+
+There are some people who are unsure of what the rise of NFT means. Material value often takes precedence over an object's 'ideal' worth in the arts. The digital certificate, which ensures authenticity while limiting reproductions, elevates virtual things to the rank of status symbols.
+
+NFTs, on the other hand, are investment and speculative objects that are subject to supply and demand. This is because crypto items can be purchased and potentially resold for profit as classical art. However, as with any investment in crypto assets, there is a strong danger that NFT prices and those of cryptocurrencies may vary dramatically.
+
+## NFT CRITICISM
+
+But there are also headwinds – and not only because of the large crypto price fluctuations. One of the criticisms concerns possible copyright violations. It becomes problematic, for example, if it is not verified whether a seller on the blockchain really owns the rights. In addition, the owner owns the crypto object only on the blockchain on which it was purchased. The Ethereum blockchain is used in most circumstances. In theory, however, any object on other blockchains that support NFT could be reoffered.
+
+NFT are also energy-consuming. Since a single transaction of the Ethereum blockchain requires the computing power of many computers, the power consumption is very high. NFT consists of a transaction and various them, depending on the number of bids at an auction. As a result, the energy demand increases.
+
+## RISKS ASSOCIATED WITH NFTS
+
+Even though NFTs are gaining popularity and a surge in price, these collectibles do have some risks. For starters, these are no sure thing investments. Instead, they appear to be more of a speculative asset.
+
+The contrast with sports cards seems apt, though one can contemplate them like other speculative assets, for example, handbags, sneakers, or art. They generate no cash flow, and traditional investors like Warren Buffett will not even come near them (for now).
+
+Collectors are willing to pay a significant amount of money for the chance to own the "official" edition of the art or video clip, even though you may view or download it online for free. But there is a lot of space for misunderstanding in this industry. NFTs do not provide you any royalties, and there are no assurances as to how many one-of-a-kinds are out there.
+
+Given that NFTs cannot generate cash flow, the only method to make money is if somebody else is willing to pay a higher price. This is known as the "greater fool" approach to investing. Right now, there is a lot of greater fool theory speculation directed in the market.
+
+Another risk that NFTs suffer is liquidity: If no one is willing to purchase your NFT, you will not be able to re-trade it quickly or ever. This is the main dissimilarity when compared to the stock market, which offers ready liquidity. Thirdly, there is a counterparty risk, where the original creator of the NFT might not have had privileges to the piece of art or sports clip. Still, the majority of traders are turning to NFTs as a means of quickly receiving a significant profit. That sort of market typically turns out of sorts for those who misjudge when to enter and exit.
+
+Just like other speculative investments, people should be careful with this one as well. You must only invest the amount you can afford to lose. This is because these assets will also undergo highs and lows.
+
+If you are purchasing an NFT because you love it or just genuinely want to own it, there are not many risks involved as you can possess it forever. On the other hand, if you are buying an NFT simply to speculate and sell, then that is another story. In other ways, nevertheless, NFTs are comparatively secure, even if they do not make a great asset. NFTs really have a plus over physical art. While a painting can be robbed from a gallery in a heist, thieving an NFT would typically include hacking a person's private key. This is not an easy task, especially when the owner has secured it offline like most individuals do or should. Moreover, NFTs are instantly and verifiably transferable, and your ownership does not have border restrictions.
+
+## IMPORTANCE OF NFTS
+
+Non-fungible tokens are a progression over the comparatively simple notion of cryptocurrencies. Contemporary finance systems comprise refined trading and loan schemes for diverse asset categories, oscillating from real estate to lending agreements to artwork. By allowing digital depictions of physical assets, Non-fungible tokens are a step presumptuous in the recreation of this infrastructure.
+
+Specifically, the idea of digital illustrations of physical assets is not new, nor is the utilization of unique identification. Nevertheless, when these models are combined with the advantages of a tamper-resistant blockchain of smart contracts, they convert into a powerful force for transformation.
+
+Possibly, the most noticeable advantage of NFTs is market proficiency. The adaptation of a physical asset into a digital one restructures procedures and eliminates intermediaries. NFTs signifying digital or physical creation on a blockchain eradicate the requirement for agents and permit artists to bond directly with their audiences. They can also develop business procedures. For instance, an NFT for a wine bottle will make it easier for different people in a supply chain to intermingle with it and help track its origin, generation, and sale via the whole process.
+
+NFTs are also exceptional for identity management. Contemplate the case of physical passports that need to be generated at every exit and entry point. By altering individual passports into NFTs, all of these have their own unique categorizing features; it is conceivable to reorganize jurisdictions' entry and exit procedures. Escalating this use case, NFTs can be utilized for identity management within the digital world as well.
+
+NFTs can also democratize financing by segmenting physical assets such as real estate. It is much easier to split a digital real estate asset amongst several owners compared to a physical one. That tokenization code does not have to be restricted to real estate; it can be stretched to other assets, like artwork. Consequently, a painting does not always have to have a sole owner. Its digital equal can have numerous owners, each accountable for a portion of the painting. Such measures can increase its value and proceeds.
+
+The most exciting possibility for NFTs lies in the conception of new marketplaces and methods of investment. Contemplate that a piece of real estate is divided into several portions, each of which comprises diverse features and property types.
+
+One of the divisions may be next to a beach, whereas another is an entertainment complex, and an alternative is a housing district. Contingent upon its features, each piece of land is distinctive, priced differently, and characterized with an NFT. Real estate trading, an administrative and challenging affair, can be streamlined by integrating pertinent metadata into each distinctive NFT.
+
+Decentraland, a virtual reality platform on Ethereum's blockchain, has previously executed such a model. As NFTs develop more sophisticated and are assimilated within the financial substructure, it might become conceivable to implement a similar concept of tokenized portions of land, opposing value and location, in the physical world.
+
+2 ![](Images/svgimg0003.svg)
+
+# HISTORY OF NON-FUNGIBLE TOKENS AND DEFI
+
+Just as Defi (Decentralized Finance) protocols mimic banks' financial products, NFTs mimic the world of art galleries, shops, and museums. But without expensive and risky intermediaries. This is possible with Smart Contracts (dApps) that were originally born on Ethereum. This type of programmable blockchain can serve a variety of decentralized applications. In other words, NFT marketplaces are dApps that enable the entire NFT economy by connecting an NFT creator directly to a buyer. This greatly facilitates the entry of both parties and thus removes the usual barriers to entry.
+
+NFTs themselves are a type of token - ERC-721 - that is non-divisible or not fungible, hence the name. Its value is based on the assurance of blockchain technology that no NFT can be falsified. In addition, the entire transaction history is traceable and verifiable as a fully digital asset, be it as graphics, music, video, animation, gaming asset, etc.
+
+As we can see from Google Trends, global interest in NFT has increased enormously since February. With more and more people appreciating digital assets over physical ones, this NFT trend was almost predictable. We're immersing ourselves in this new world with the following top 11 of the most expensive NFTs. Now that we have explained what NFT is, we can dive into the extensive history of these assets.
+
+**2012–2013: Coloured Coins**
+
+It can be argued that Colour coins are the first NFT's to exist. Colored Coins consist of the small values of a BTC, often as small as 1 Satoshi. Colour Coins can be used to represent a large number of assets and can have multiple use cases, including:
+
+*   Estate
+*   Coupons
+*   Ability to extract your own cryptocurrency
+*   Issuing shares of a company
+*   Subscriptions
+*   Access tokens
+*   Digital collections
+
+Colored Coins were an example of a big leap in Bitcoin's capabilities. The downside was that it could only represent certain values if everyone agreed on their own value. Bitcoin's coding language was never designed to enable this type of behavior within its network, so Colour Currencies were only as powerful as its weakest participants. For example, three people agree that 100 Color Coins represent 100 company shares. The entire system will crash if a user decides to stop syncing Colored Coins to represent shares in a company.
+
+The first mention of Coloured Coins appears to come from a blog post by Yoni Assia in early 2012 titled "bitcoin 2.X (aka Colour Bitcoin) – first features". In his post, he discusses Coloured Coins but does not refer to the various assets or their use cases. Instead, he claims that Coloured coins are unique and identifiable from normal bitcoin transactions since they are bitcoins that are part of the "Genesis process." The potential of these new assets was apparently not explored until December 4, 2012, when Meni Rosenfeld published an article titled "Overview of Coloured Coins." A few months later, in 2013, another article titled "Coloured Coins – BitcoinX" was published.
+
+The flaws of Coloured Coins were obvious; the system worked best in a permissible environment, which means that in some cases, it is better to simply use a database. However, Colour coins opened the door for more experiments and laid most of the foundations for NFT's. The enormous potential of putting real-world assets in distributed ledgers was clear, but implementation required a more flexible blockchain.
+
+**2014 – Opposite Side**
+
+The creation of Coloured Coins has led many people to realize the enormous potential to export their assets to blockchains. However, people also understood that Bitcoin itself does not mean enabling these additional features in its current iteration. The other side had a decentralized exchange where asset creation was allowed and even crypto tokens with XCP. Trading card games and breast trading were only two of the many projects and assets it possessed at the time of its demise.
+
+**April 2015 – Creation Magic on the Other Side**
+
+Spells of Genesis game creators were pioneers and among the first to launch an ICO to release in-game assets to a blockchain through Counterparty. So early, in fact, ICOs were later called crowdfunding. Spells of Genesis financed the development by launching a token called BitCrystals, which is used as an in-game currency.
+
+**August 2016 – More Trading Cards on the Other Side**
+
+In August 2016, Counterparty teamed up with Will's popular trading card game to launch its cards on the Counterparty platform. Force of Will was the 4th card game by sales in North America, only behind Pokemon, Yu-Gi-Oh, and Magic. Their entry into the ecosystem pointed to the value of putting such assets in a blockchain.
+
+**October 2016 – Rare Pepe on the Other Side**
+
+In October 2016, people began to extract "rare peppers" as a presence on the Counterparty platform. Rare Pepe is a type of udder that contains this frog character. These have a huge fan base. There's even a kind of breast replacement called the Rare Pepe Breast Index.
+
+As if being on a Bitcoin blockchain wasn't enough, the Rare Pepe Breast Index has "experts" who confirm that Pepe memes are rare. Oddity aside, this example shows the point at which people want unique digital elements. Today, Counterparty has many projects built on its platform, many of which include NFT-like assets.
+
+**March 2017 – Rare Pepes on Ethereum**
+
+With Ethereum coming to the fore in early 2017, memes began trading there. In March 2017, it was announced that a project called Peperium was "a decentralized meme market and trading card game (TCG)" that allows everyone to create memes that live forever in IPFS and Ethereum. Like Counterparty, Peperium also had a token associated with rare's ticker symbol, which is used to pay breast creation and listing fees.
+
+**June 2017 – Cryptopunks**
+
+It wasn't until the Ethereum Blockchain that NFTs picked up speed. The first Ethereum NFTs appeared as Crypto Punks in summer 2017. Crypto Punks are 10,000 unique digital characters created by Larvalabs. Your digital property records are stored in the form of unique tokens on the Ethereum blockchain. Each Crypto Punk has individual optical properties so that no one is the same. Crypto punks inspired the digital art market and were the forerunners for later standards. Due to the limited offer and the cult status of early users, they are already considered digital antiques. They are still tradable and interoperable with most NFT applications on Ethereum.
+
+As the trade of rare peps in Ethereum increased rapidly, two "creative technologists" decided to create their NFT projects with a slight twist. John Watkin-son and Matt Hall realized that they could create unique characters created on the Ethereum blockchain. Characters will be limited to 10,000, and the two characters will not be the same. In reference to the Cypherpunks who experimented with bitcoin's pioneers in the 1990s, they named their project Cryptopunks.
+
+Surprisingly, Watkinson and Hall chose to allow anyone with an Ethereum wallet to request Cryptopunk for free. All 10,000 Cryptopunks were quickly requested, launching a thriving secondary market where people bought and sold them. Interestingly enough, Cryptopunks does not follow the ERC721 standard as it has not yet been invented, but due to its limitations, they were not entirely ERC20. Therefore, Cryptopunks can best be described as ERC721 and ERC20 hybrid.
+
+**October 2017 – Birth of CryptoKitties**
+
+With CryptoKitties, NFT's have reached the mainstream. Virtual kittens can be adopted, grown, and traded in CryptoKitties, a blockchain-based game. Cryptographic cats!
+
+Although Crypto Punks were officially the first NFTs on the Ethereum blockchain, most of the CryptoKitties are still in the memory. At the end of 2017, they became the first mainstream application of NFTs.
+
+2017 was already a year of hype around cryptocurrencies, driven by the ICO bubble on the Ethereum platform. In a short time, countless new ICO projects started, and each of them had new and supposedly scarce tokens on offer. This triggered a veritable gold-digger mood. More and more new cryptocurrencies on the Ethereum blockchain saw the light of the digital world. It wasn't long before the network became increasingly congested, with significantly increased transaction fees as a result. However, one of the reasons for the high utilization was, among other things, the creation and trading with CryptoKitties.
+
+CryptoKitties are digital images of comic cats created by Dapper Labs for a blockchain computer game. Each cat is unique and therefore only present once on the blockchain. The special thing about them is that new unique CryptoKitties can be bred by clubs of different cats in the on-chain computer game. These new cats could then be auctioned or sold on the open market.
+
+**The CryptoKitties Bubble**
+
+Breeding has attracted many speculators. The idea was simple: you buy some rare CryptoKitties, breed some new, even rarer cats with them, sell them at high prices, and then the whole thing again from the front. At peak times in 2017, the trading volume was approximately 5000 ETH, and sales of CryptoKitties achieved prices of more than 100,000 US dollars.
+
+It was almost absurd to pay such high prices for digital cats. But the incredible story behind it, combined with the great hype around cryptocurrencies, brought many new buyers into the market in a short time. Ethereum's network capacity at the time was not up to the rush, resulting in horrendous fees and hours of waiting for the trading and breeding of CryptoKitties.
+
+This mixture of hype, speculation, and viral story eventually ended up in a bubble that also attracted attention in the press. But, as might be expected, the bubble burst soon after. In mid-December 2017, demand for CryptoKitties fell at once, and prices plummeted. The entire crypto bubble began to burst shortly after, and a multi-year bear market was launched.
+
+CryptoKitties are great examples of NFT collectibles. CryptoKitties are digital cats on the Ethereum blockchain. The idea behind this NFT is to enable buyers to nurture these kitties and reproduce, just as they would in real life. Within a few weeks of launching in 2017, about $20 million was spent on them. But the collectibles market is not limited in any way, as it extends in different directions. Another excellent example of the usefulness of NFTs involves art collecting. Experts can verify and authenticate paintings and sculptures before creating a non-fungible token for each piece of art.
+
+This incredible project was apparently featured on every news station, from Coin-Desk to CNN. Perhaps this was because the game blocked and slowed down the Ethereum blockchain, or people made crazy profits in trading. Some virtual cats even sold for over $100,000.
+
+**2018–2019 – NFT Cambrian Explosion**
+
+2018 and 2019 saw tremendous growth in the NFT ecosystem. There are now more than 100 projects within the venue and more in the works. The NFT markets, led by OpenSea and SuperRare, are growing. Trading volumes are small compared to other crypto markets, but they are growing rapidly and have come a long way. As Web3 wallets like Metamask continue to evolve, getting involved in the NFT ecosystem becomes easier. Dapper Labs recently launched a Dapper wallet that doesn't require gas payments. In addition, there are now websites such as nonfungible.com and nftcryptonews.com (shameless plugin) that enter NFT market criteria, game guides and provide general information about the area.
+
+CryptoKitties tracked the NFT, but they could not have done so without previous projects that laid the groundwork by creating unique digital assets. This interesting graphic published by Nonfungible.com shows how important CryptoKitties are to the existing NFT ecosystem.
+
+This table shows that people who have CryptoKitties tend to play other NFT games, while people who play other NFT games often do not expand to play others. CryptoKitties serve as the perfect gateway to the NFT world.
+
+CryptoKitties may also have experienced great growth due to the functionality of breeding different cats that make up an entirely new cat or ERC721 token. There are now endless functions for NFT's, including character names (similar to domain names), virtual land plans, virtual clothing, event entry tickets, asteroid mining resources, and more.
+
+**December – 2020: Record $223,000 pay out to virtual F1 track**
+
+The NFT craze has reached a new point. Only one section of a virtual racetrack was paid $223,000. Only part of a blockchain-based game's racetrack has been auctioned off for 9 million REVV tokens. The track in the F1 Delta Time game developed by Animoca Brands is a Monaco circuit that is especially well known to Formula One fans. The company confirmed that part of the track was sold in NFT form.
+
+The winner of the auction paid for part of the Monaco track with REVV, the token of the Company Animoca. 9,081,752 REVV tokens equates to approximately 375.56 Ethereum. That's about $223,000.
+
+Unlike many cryptocurrencies, NFT's have credentials stored in smart contracts. This information proves that each NFT is different and unique. That makes them "unique token-NFT." NFT's can represent anything that can be digitized. From a work of art to in-game products, many NFT can be created. Therefore, prices can reach high amounts due to these products' unique, unchangeable, and non-copyable prices.
+
+3 ![](Images/svgimg0003.svg)
+
+# HOW NFT’S WORKS
+
+To comprehend how creative works are tied with NFTs, a person must recognize how an NFT functions. Non-fungible tokens are unique crypto tokens that are handled using a Blockchain. This blockchain performs as a decentralized record book that tracks transaction history and ownership for every NFT.
+
+These are coded to have a unique ID and other metadata that no other token will have or duplicate. This procedure offers NFTs the characteristics of scarcity and originality that make them so striking when joined with digital media. NFTs are coded with software code (known as smart contracts) that administers features such as authenticating the ownership and supervising the transferability of the NFTs. Like any software application, non-fungible tokens can be programmed further than the basics of transferability and ownership to integrate various other functionalities and applications, comprising those connecting the NFT to some other digital asset.
+
+For instance, a smart contract can be transcribed to inevitably assign a portion of the amounts remunerated for any subsequent sale of the NFT back to the main owner, therefore giving the owner the capability to appreciate the assistance of the secondary marketplace.
+
+Consequently, when somebody makes (or "mints") an NFT, they are lettering the core smart contract code that administers the NFT's characteristics, which are placed in the relevant blockchain where the NFT is handled. Numerous blockchains can be utilized to manage non-fungible tokens, counting Ethereum.
+
+It is imperative to note that not all blockchains support NFTs. They vary from basic cryptocurrencies in that they are undividable, rare, or exclusive, which implies that a blockchain requires permitting its users to generate unique tokens to offer them. Moreover, most of the blockchains that back NFTs are also driven by a cryptocurrency that is generated to function as the medium of exchange for the buying of NFTs within that network.
+
+**NFTs on Ethereum**
+
+The first and most prevalent interface for developing NFTs is the ERC-721 standard that permits the trading and issuance of tokens on the Ethereum blockchain. Ethereum is a cryptocurrency, such as Bitcoin or Dogecoin; however, its blockchain also supports these NFTs. It is good to recognize that other blockchains can execute their own forms of NFTs.
+
+Ethereum lets designers' program smart contracts for their non-fungible tokens, which can be produced to enclose particulars regarding the new assets they design. When users exchange an NFT, they are networking with this contract, which trails it on Ethereum.
+
+This implies that the designer of the NFT can make decisions that can sway the value of his design, like stipulating how rare an article will be. In this system, an NFT signifying a trading card can be created to have a number of the special and distinctive features that you get with a physical card, facilitating in setting up the market price for it.
+
+**NFTs on Other Blockchains**
+
+Ethereum is not the only choice developers have for developing and releasing NFTs. Chief amongst its competitors might be Flow, a different and recent blockchain created especially for NFTs, and whose objective is to promote the application of these tokens. Likewise, several other blockchains permit the formation of NFTs, incorporating Tezos, Cosmos, and Polkadot.
+
+The strength of NFTs is that they immutably verify digital ownership, which has become a significant progression for a progressively digital world. Blockchain's promise of trustless security can be seen when applied to nearly any asset's exchange or ownership. As is the challenge of NFTs, blockchain, their protocols, and smart contract tech is still being established. Generating decentralized platforms and applications for the management and formation of non-fungible tokens is still fairly complex. There is also the issue of forming a standard. Blockchain improvement is disjointed; many designers are working on their developments. To be effective, there may be a need for unified protocols and interoperability.
+
+**Are NFTs Just a Fad?**
+
+This is quite possible. So the short answer is maybe. However, the market that non-fungible tokens are helping is both real and interested, at least to some degree, by good intents. Yes, there are opportunists driving the luxurious art market; nevertheless, Linkin Park's Mike Shinoda invented a new single mainly to fans and donated the profits to charity. It is observed that regular individuals indeed are collecting these items, apart from the involvement of just a couple of billionaires. Fundraisers can deliver exclusive content.
+
+Other artists wish to provide NFTs in the same manner they might offer Cameo presences, OnlyFans content, or even special Patreon prizes. It is a method of trading a feeling of access for an amount that fans can feel is serving to support the artists they adore. Grimes might blow the market up to the public; however, not-so-famous artists might become the virtual means of supporting non-fungible tokens.
+
+One other key benefit of the right sort of NFT is that artists can effortlessly, strongly view where and for how much their art is retailing. That implies they can receive a percentage of every sale in perpetuity, so if their art collects a lot of worth as speculators believe it will, the artists will remain benefiting from that wealth.
+
+4 ![](Images/svgimg0003.svg)
+
+# VARIOUS USES OF NFT’S
+
+NFTs deliver on the promise of increasing the range of accessible crypto assets. Irrespective of whether you are a collector seeing to tokenize your current assets (like stamps or cards), or a gamer desiring the opportunity to transfer items (skins, weapons, etc.) from game to game, you might find an interest in this evolving market.
+
+Digital artists might discover the medium stimulating as NFTs deliver a method of protecting digital possession on the Internet. Devising art pieces documented on a blockchain might help artists display their work in a virtual world and tempt purchasers to buy an original work deprived of fearing fraudulent activity.
+
+Similarly, even more determined use cases can be the future of NFTs. Some followers of the notion speculate that NFTs can even come to substitute important paper documents specifying the ownership of all things from real estate to official records. Here are some methods NFTs have established their presence and significance:
+
+**Art**
+
+The most common sort of NFT art accessible is digital art, a mixture of tech and imagination. Many exclusive edition moving artwork bits can be programmed to alter upon different conditions being met. The legacy arts sector is also introducing the acceptance of blockchain technology by tokenizing real-world assets and creations. This comes as a blend of blockchain and IoT that delivers people the capability to scan a code on a sticker located on the back of an art piece and recorded it as the proprietor of the piece on the blockchain. The consumer can then view the artwork's complete history comprising all the preceding ownerships and prices it was traded for.
+
+NFTs offer numerous advantages for digital collectors and artists. Before NFTs, the incompetence to authenticate the legitimacy of digital art made it perplexing to monetize. Today, distinctive digital art in the layout of NFTs can be trailed through blockchain technology. For the first time in history, the origin and worth of digital art that comes with the confidence of genuineness and scarceness can be confirmed.
+
+Some of the most famous NFT art marketplaces are SuperRare, Known Origin, OpenSea, Nifty Gateway, and MakersPlace. The prevalent art world has also taken notice. Respected art auction house Christie's New York recently held an action for Mike Winkelmann, aka the digital artist Beeple, and his Everydays: The First 5000 Days, unique work in digital art history. It was the first purely digital artwork (NFT) ever offered at Christie’s, and it sold online for close to 70 million dollars.
+
+**Collectibles**
+
+One of the easiest and primary ways individuals learn how to utilize NFTs is generally via online collectibles, for example, the much-loved CryptoKitties, whose admiration clogged the Ethereum system at its peak in 2017. CryptoKitties are exceptional digital kittens that can be raised to make more inimitable kitties, with specific features believed to be more promising compared to others (like eye color or fur pattern).
+
+**Fashion**
+
+Blockchain has merged seamlessly with the fashion arena and delivered benefits to all contributors in the supply chain. Customers can now digitally authenticate ownership of all their items and accessories, therefore eliminating the prospect of forging. This can be done as easily as scanning a QR code devoted to the sale tag or internal tag as an NFT. The customers can also know particulars like a place of formation of the asset, who all claimed possession of it while it reached the consumer, and so on.
+
+As an 18-year-old crypto-artist known as FEWOCiOUS, the virtual sneaker brand RTFKT Studios teamed with the crypto-artist on a series of virtual sneakers and digital merchandise in the form of a "Drip" and "Charm."
+
+Three styles of sneakers were made available, and over 600 pairs were sold, reaching a total of over $3.1 million. This is just the most recent example of how the fashion industry is embracing NFTs.
+
+**Music**
+
+Music files can also be associated with NFTs. That way, only the individual who claims proprietorship of the file will be capable of accessing it. Nifty gateway is currently the most popular platform for artists to mint their songs into NFTs.
+
+Viewing this from a music listener's viewpoint implies that only a restricted number of these records will be accessible – they cannot be distributed and duplicated. It transports a sense of exclusiveness to the listener, offering the music a collectible-quality comparable to that of vinyl, however with the modern tech backing the awesomeness.
+
+A record collection was the most common kind of collectibles in pre-digital prevalent culture; however, this was upturned by the introduction of the music and internet streaming sites. Music plagiarizing is rife in the industry and costs artists millions. This method essentially benefits the artists as they get a prospect to remove the middlemen and unswervingly reach out to their fans.
+
+**Other Applications**
+
+Possessing the ideal domain name can lead to increased traffic for your website and, in turn, augmented profits. Domains are rare, and buying the right one is generally expensive and time-consuming. Connecting a domain to an NFT generates an indisputable history of its voyage for tracking resolves.
+
+It also makes it effortless to purchase, sell, and trade a domain — without any distributers. Moreover, NFT domains can effortlessly plug into other NFT networks. Ethereum Name Service (ENS) and Unstoppable Domains are two providers of domains linked to NFTs.
+
+Forging is an issue typically faced by the creators of consumer goods. The worldwide impact of counterfeit items is predicted to reach $4.2 trillion by 2022. Consumers wish to know that the high-class purse, hoodie, or rare diamond they have bought is dependable. Real-world items associated with NFTs deliver a way to track the lifespan and journey of the goods and verify their legitimacy. Louis Vuitton is testing with NFTs to solve this issue and other brands in the LVMH corporation and diamond expert De Beers.
+
+As the NFT business cultivates, developers are searching to make developments on the ERC-721 token standard and give entrepreneurs more tractability. ERC-1155, for example, is a standard that permits for a sole smart contract to handle multiple token categories — comprising of fungible tokens, non-fungible tokens, and tokens that fall in the middle of the two.
+
+NFTs have extended blockchain use cases in commercial subdivisions far beyond finance while similarly tempting a varied audience of artists, gamers, luxury consumers, and digital cat fanatics.
+
+5 ![](Images/svgimg0003.svg)
+
+# BLOCKCHAIN-BASED NON-FUNGIBLE TOKENS
+
+Even though fungibility has been explained before, we're going to dig deeper in this following chapter. Fungibility is defined as "able to substitute or be swapped by another duplicate item." To better understand what can comprise a non-fungible asset, simply think about the things you own. The chair you are sitting on, your laptop, your phone, anything that can be sold on Amazon or eBay. All of these items fall under the classification of non-fungible possessions.
+
+Fungible assets are considered the odd ones out. A currency is a common illustration of a fungible asset. Ten dollars is always ten dollars, irrespective of the serial number on the precise ten-dollar bill or whether it's ten dollars saved in your bank account. The capability of replacing a ten-dollar bill with another ten-dollar note (or ten ones, for that matter) is what makes currency fungible.
+
+In short, fungibility is relative. It can only be applied when contrasting numerous things. For example, let's consider first-class, business-class, and economy-class flight tickets. Each ticket is approximately fungible inside its class; however, you cannot impartially trade a first-class ticket for a business class ticket. The same circumstances can be applied to the chair example except if you have developed a distinct affection for your specific chair.
+
+Fascinatingly, fungibility can also be biased. If we go back to the flight ticket case, you will see that an individual who prefers a window seat might not contemplate two economy class tickets in exchange. Likewise, a rare penny may be worth 1 cent to a person but might have way more value for a collector. These distinctions are becoming more important when displayed on blockchains.
+
+**Blockchain-Based Non-Fungible Tokens**
+
+Similar to the existence of digital currencies before the emergence of cryptocurrencies, we have had non-fungible digital assets ever since the beginning of the Internet. Event tickets, domain names, in-game items, even handles on social networks like Facebook or Twitter are all non-fungible digital assets. They simply differ in their liquidity, traceability, and interoperability. Most of these are exceedingly valuable: Epic Games generated $2.4 billion in proceeds selling costumes in Fortnite (their free-to-play game) in 2018. The market for event tickets is estimated to spread $68 billion in 2025, and the market for domain names endures to realize solid growth.
+
+There are loads of digital items accessible. However, to what extent does a person own these items? If digital ownership just implies that you and not somebody else own an item, then you possess it in some way. Whereas digital ownership is more like proprietorship in the physical realm (the liberty to hold and transfer minutely), this doesn't seem to be the circumstance with digital assets. Instead, you possess these assets in particular contexts that may or may not make trading them easy.
+
+This is where blockchains emerge and facilitate. Blockchains offer a coordination layer for digital assets, providing users the ownership and organization permission. Blockchains add numerous unique characteristics to non-fungible assets that modify the user and creator interactions with these assets.
+
+When blockchain tech and NFTs come together, they create something potent, distinctive, and fascinating for developers and users that use them. Even though we have previously discoursed that non-fungible assets are all around us, the actual issue is the part where ownership comes up. Here are some noticeable features of blockchain-based NFTs:
+
+**Standardization**
+
+Standardization is a radical characteristic of NFTs because digital assets, from airplane tickets to domain names, have no unified sign in the digital realm. On the other hand, when NFTs are symbolized on public blockchains, they permit designers to construct common, transferrable, and reusable standards applicable to all non-fungible tokens.
+
+This standardization functions as building blocks for digital assets from rudimentary ownership, transference, and regulation of advanced features like additional standards for exhibiting the NFTs. These standards can be coated on top for rich demonstration inside of applications.
+
+These are equivalent to other foundations of the digital world, such as the PNG or JPEG file design for pictures, HTTP for demands amid computers, and HTML / CSS for presenting content on the websites. Blockchains add a coating on top that provides creators with a new set of tasteful basics to construct applications.
+
+**Traceability**
+
+The interoperability of non-fungible tokens overlays the way for one of the most convincing aspects of NFTs, called traceability. It empowers free trade in open markets. This implies that users can trade items out of their original surroundings and transmit them to a place where they can influence refined trading technologies and systems. These consist of bundling, bidding, eBay-style auctions, retailing and selling any currency, and much more.
+
+This traceability signifies a move from a closed economy to a free and open-market economy, particularly for game developers. These developers no longer have to handle each piece of their economy: from the supply of raw materials to pricing to capital regulations. Rather, they can let free markets do the heavy lifting!
+
+**Interoperability**
+
+NFT standards permit non-fungible tokens to shift effortlessly across numerous ecosystems. When a creator releases a new NFT venture, these non-fungible tokens are instantaneously on display inside heaps of different wallet providers, tradeable on diverse markets, and, lately, displayable in virtual worlds. This is conceivable given that the open standards offer a clear, dependable, consistent, and permission API for reading and writing data.
+
+**Liquidity**
+
+Instant traceability of NFTs will result in higher liquidity. Non-Fungible Token marketplaces can provide to a diversity of audiences—from new players to hardcore traders—permitting higher levels of exposure to the assets for a broader pool of purchasers. Similarly, the ICO boom of 2017 conceived a new asset class driven by instantaneously liquid tokens; NFTs inflate the market for distinctive digital assets.
+
+**Immutability and provable scarcity**
+
+Smart contracts let developers place hard caps on the stock of non-fungible tokens and impose consistent properties that cannot be altered after the non-fungible tokens are dispensed.
+
+For instance, a developer can implement programmatically that only a particular number of a certain rare thing can be generated while keeping the supply of widespread items unlimited. Creators can also implement that particular properties do not modify over time by encoding them on-chain. This is predominantly stimulating for art, which depends profoundly on the verifiable scarcity of a novel piece.
+
+**Programmability**
+
+Lastly, another thought-provoking characteristic of blockchain-based NFT is the reality that they are extremely programmable. A protruding example is that of CyptoKitties, who sweltered in a breeding mechanic into an authentic contract directly, which characterized digital cats. Furthermore, numerous non-fungible tokens nowadays have more complex and intricate mechanics that incorporate restorative, random generation, forging, crafting, and a lot more, verifying that this space is filled with immeasurable great possibilities.
+
+6 ![](Images/svgimg0003.svg)
+
+# THE NON-FUNGIBLE TOKEN MARKET
+
+Like any other market, NFT also has experienced stages. The following information talks about the current size of the market, its sales technique, and the growth it is looking at.
+
+**Current Market Size**
+
+The market for NFTs is still rather hard to measure compared with the cryptocurrency market owing to the lack of spot value for assets. Let's focus on secondary trading volume (i.e., peer-to-peer sales of NFTs) as a pointer of market size. By means of this metric, we can evaluate the current secondary market to be approximately $90 million in capacity per month in February 2021.
+
+**Market Growth**
+
+After the CryptoKitties bubble in 2018, the amount of distinctive accounts intermingling with NFTs has developed slowly, however steadily, from ~8,500 accounts in February of 2018 to over 20,000 accounts in December of 2019. The market appears to be motivated by a central group of power consumers.
+
+On OpenSea, the median vendor has sold $71.96 value of items, while the average seller has sold $1,178 worth of stuff, demonstrating a large number of power sellers. It is essential to understand that large accounts such as official game accounts do escalate the average. The average OpenSea purchaser has bought a $943.81 value of items, and the median consumer has purchased $42.72 worth.
+
+**Sale Mechanisms**
+
+NFTs are presently sold largely for ETH on decentralized exchanges. Astonishingly little trading occurs in stable coins such as USDC or DAI, possibly owing to the friction of obtaining stable coins. Dutch auctions and fixed-price sales are normally utilized for retailing lower-ticket items, whereas English (eBay-style) auctions are a recurrent selection for larger-ticket things, such as legendary game items or ultra-valuable Gods Unchained cards. Bundles are also a prevalent sale mechanism, with the proportion of bundle sales increasingly mounting to 20% in December 2020.
+
+## NFT TRADING MARKETPLACES
+
+The tokenized assets in the fashion industry are primarily available through direct retailers. On the contrary, NFTs for other industries have several online marketplaces. Any willing consumer can browse and search to find digital items they are looking for. NFT marketplaces are rising quickly. When it comes to the crypto space, NFTs are becoming the new asset class to care about. Simply put, these markets offer a place for purchasing, selling, and trading NFTs.
+
+With the increasing popularity of non-fungible tokens, there is a surge in the emergence of NFT marketplaces. Moreover, you can find thousands of non-fungible tokens (NFTs) accessible via a variety of marketplaces. All of these marketplaces do not enable the same NFTs owing to the various token standards. However, you must conduct detailed research before trying a platform. The safest method of entering an NFT marketplace is through the certified site of CoinMarketCap or CoinGecko to evade getting tricked.
+
+**OpenSea**
+
+OpenSea is one of the biggest and leading NFT marketplaces. They are equivalent to eBay when it comes to the NFT world and permit you to purchase and acquire just about any item comprising Cryptokitties, ENS Names, Axis, and much more. It is the first peer-to-peer NFT market for crypto goods. Items accessible incorporate game items, collectibles, and other virtual goods safeguarded by a blockchain. On OpenSea, you can purchase, sell, and trade any of these goods with anybody in the world. OpenSea is presently the biggest general marketplace for user-owned digital items, with a comprehensive set of classifications, and at present has more than 4 million items.
+
+**Rarible**
+
+Rarible is a similar NFT marketplace that is prevalent. It emerged after the launch of OpenSea, providing diverse forms of NFTs. The platform is driven by its built-in token $RARI and is totally decentralized. It permits holders to propose and take polls to make modifications and expansions on the platform. Users on the Rarible system are qualified to accept $RARI tokens when buying NFTs or making any sale.
+
+You can also create NFTs on this platform. Users can go to Rarible with content they own, like a digital picture or motion graphic, and generate an NFT. Sellers can generate numerous NFTs for one single work and sell it multiple times. Or, rather, dispense just a single item which is then considered rarer. Moreover, artists can fix a percentage to obtain lifetime re-sales. Purchasers can buy NFTs and construct a portfolio. Some construct personal collections of what they individually like, whereas others build a portfolio of art they see forthcoming value in.
+
+**The Nifty Gateway**
+
+The Nifty Gateway was established in 2018 by Duncan and Griffin Cockfoster. One year after its commencement, it was proclaimed that Gemini purchased Nifty Gateway from parent company Gemini Trust Company, LLC. On this platform, the digital collectibles economy is driven by NFTs called Nifties. The acquirement by Gemini endorses that NFT tokens will certainly prove to be one of the fieriest trends in cryptocurrency.
+
+**Somnium Space**
+
+Somnium Space is crafting a virtual social world utilizing Ethereum Blockchain. Users on the platform can buy and sell land, create virtual assets, and monetize the assets on the open market — in the cryptocurrency of their choice. Somnium Space is accessible for free on Steam and is attuned with the majority of VR headsets.
+
+**JuicyNFTs.com**
+
+On JuicyNFTs.com, you can easily view a list of all the NFTs business deal volumes for the past seven days.
+
+**SuperRare**
+
+SuperRare is a social platform that inspires the development and collection of crypto art. Established by Chief Executive of Pixura, John Crain, and Jonathan Perkins, Chief Product Officer of Pixura, this marketplace has worked with artists from the time of its conception. It makes a point of listening to the collectors and artist requirements. This platform is considered a high-end comparable to Rarible. Entry hurdles are complex, and artists need to submit their works for authorization before being are listed. However, on exchanges such as OpenSea and Rarible, anybody can get involved.
+
+**Atomic Assets**
+
+Atomic Asset is a sub-segment of the Atomic Hub, a marketplace, particularly for listings of the NFTs, hosted on WAX. Non-fungible tokens like Cogs, Street Fighter, and Blockchain Heroes. The marketplace has a familiar design, and users have to sign up for a WAX cloud wallet or otherwise sign in with Scatter or Anchor. The WAX blockchain set a major claim in the NFT space, having already completed multiple sold-out campaigns in cooperation with brands like Street Fighter, Topps, and Blockchain Heroes, in 2020.
+
+**KnownOrigin**
+
+KnownOrigin enables designers and artists to develop and own unique digital artwork, all protected by the Ethereum blockchain. Artists such as musicians can give in digital artwork as a jpg or gif to the KnownOrigin gallery. All records are detained decentrally on IPFS. All assets are provided with inimitable identifiers that can be traced.
+
+KnownOrigin concentrates on digital art, so there is no point going here to search for Avatars or CryptoPunks, for instance. Think of the things on sale here as you would look at those in an art gallery.
+
+**Axie Marketplace**
+
+The Pokemon digital pet universe inspired axie Infinity. It is where players utilize their cute characters known as Axis in a variety of games. The Axie Infinity Universe emphasizes the aids of blockchain tech via a "Play to Earn" gameplay model and a player-owned economy. In this platform, the players can bring along their Axis and trade them in an auction.
+
+Meanwhile, the price can go down or up compared to the beginning price to the end price, contingent upon the seller's objective. Other players have to be well-intended to take the gamble of purchasing the anticipated Axis from retailers.
+
+**Decentraland Marketplace**
+
+Driven by the Ethereum blockchain, Decentraland is a decentralized virtual reality platform. Within the Decentraland realm, users can develop, experience, and get money for what they design and construct. Moreover, they can also monetize the items they own.
+
+In the virtual public domain, users can purchase land called "parcels" that are logged on a blockchain-backed record. The land itself and the virtual possessions built on top of it are referred to as LAND, a type of utility token or non-fungible digital asset. It is deposited in an Ethereum smart contract.
+
+LAND owners regulate the content issued on their land that is coded into a smart contract. This content can be everything ranging from images and scenes to applications and games. Users can discover, travel, and stopover at venues in a comparable method to the same way in the real world. The marketplace is also a peer-to-peer system for users to intermingle.
+
+**VIV3**
+
+VIV3 is the broad primary marketplace on the Flow blockchain instituted on the idea that the world is at the start of a move from physical to digital proprietorship. VIV3 has a visualization to sanction a billion individuals to generate, trade, and own the world's most appreciated creations by constructing on Flow. An extremely scalable, composable smart contract marketplace that provides the performance necessary for typical applications.
+
+Brands, artists, and game studios utilize VIV3 to mint exclusive tokens, each signifying their digital formations on the Flow blockchain as Non Fungible Tokens. These NFTs are bought by collectors, fans, gamers, and digital asset traders.
+
+**TreasureLand**
+
+TreasureLand is the Binance Smart Chain's first and largest NFT marketplace, allowing users to purchase and trade BSC NFT tokens. It is an offshoot from the devs after DEGO, a hybrid platform collaborating with the world of Defi and non-fungible tokens. It has a comprehensive NFT system counting NFT Casting, Mining, Auction, Crafting, Trading, and much more.
+
+Getting a hold of NFTs is simple on the Treasureland platform. It permits for auctions and listings owed in a few diverse cryptos. You can also shift to DEGO to get tangled in mining non-fungible tokens as well, which is fairly rare in the collectibles domain.
+
+**NFT Showroom**
+
+Built on Hive, NFT Showroom is a digital art marketplace. It is a free and fast blockchain. Artists can list their digital constructions and issue exceptional tokens, “evidence of art” to be sold on the marketplace. The NFT Showroom has been gaining power within the Hive community and is one to see and appreciate for its speediness and price benefits.
+
+**Arkane Market**
+
+This is a digital collectibles marketplace planned for general collectors and gamers where users do not have to recompense with cryptocurrency. It is also the first NFT market to function on Polygon (Previously Matic). Still, the platform lately released a Battle Racers campaign to spike instant interest in its initial stages. Battle Racers is full of action blockchain racing games where you plan, form, and race NFT cars on arcade tracks as part of the "inaugurate a special new car" known as the Arkane Hyperion.
+
+**Ghost Market**
+
+Ghost Market is the primary cross-chain NFT Marketplace. It permits you to discover, purchase and sell NFTs from both the Phantasma Blockchains and NEO. Phantasma is a quick, protected, and scalable blockchain developed with NFTs in mind, and so it has NFT functionality (minting, sending, batch minting, etc.) integrated by default.
+
+**Zora**
+
+Zora is a marketplace assembled determinedly around the notion that content creators must take control of their work from key platforms. Zora permits creators to mint videos, images, audio files, and even text documents. This platform lately opened up and is now available to all designers and developers. Zora is placing itself as one of the chic and trendy platforms for NFTs and is at present teaming up with chief music artists such as Mura Masa, Toro y Moi, and Yaeji.
+
+**The Sandbox**
+
+The Sandbox is one of the most famous decentralized virtual reality platforms within the crypto realm. Consumers can buy ERC-1155 and ERC-721 LAND tokens with Ethereum and SAND tokens as well. LAND can be acquired as individual ESTATES (multiple LANDS), LANDS, or DISTRICTS (numerous ESTATES). Further than LAND, The Sandbox gives everything and anything required within a decentralized metaverse.
+
+The Sandbox can provide the opportunity to make a passive income with cryptocurrency for those who know how to exploit the system effectively. Buying and possessing LAND implies entrepreneurial users can produce significant experiences on their LAND and charge an activity or entrance fee. The Sandbox NFT marketplace is accessible for anybody to upload their formations from The Sandbox's own 3D virtual modeling software, VoxEdit. Consumers can easily utilize the NFT marketplace in The Sandbox to trade their own developments or buy NFTs for their own metaverse.
+
+**BakerySwap**
+
+One of the most ground-breaking features of the BakerySwap procedure is how the venture formed the initial NFT supermarket on Binance Smart Chain. BakerySwap’s NFT superstore welcomes digital art that can be remunerated using the native BAKE tokens. Diverse classifications incorporate Binance, Bitcoin, and in recent times, Banana & BAKE.
+
+NFTs can be utilized in 'combo meals' to receive extra BAKE tokens. Furthermore, selling and minting your art cannot be easier. When on the BakerySwap NFT superstore landing page, press on 'Mint Artwork.' After this, upload your unique creation and fill in a few particulars regarding the artwork and yourself as the illustrator.
+
+Lastly, click 'Mint.' This will then be placed on the NFT market on BakerySwap. To utilize these protocols, you will initially have to pick up how to make use of MetaMask.
+
+**PancakeSwap**
+
+With an identical interface and consumer experience to Uniswap and BakerySwap, PancakeSwap is an all-in-one Defi suite. It characterizes a variety of services along with an NFT bazaar. Nonetheless, PancakeSwap NFTs are at present restricted to somewhat ‘sweet’ bunny characters, suitably termed after delightful sugary treats. When attaching your wallet with PancakeSwap, you can choose a character to symbolize you on the platform.
+
+Even though these cute characters' drive is yet to be figured out, PancakeSwap is a multi-utility network with its popularity on the rise. Soon, we will possibly see additional usefulness transported to the NFT portion of the platform. PancakeSwap has been growing gamification with the institution of 'teams.' In the upcoming years, users will be able to take sides in vigorous competition utilizing the platform. This component of the scheme can also advantage from the introduction of NFTs.
+
+The first 8,888 users to make profiles on PancakeSwap got an exclusive edition 3D "Bullish" Lunar New Year dynamic NFT. Moreover, the first 1,900 profile initiators got the “Hiccup” NFT.
+
+**Soluble**
+
+Soluble is the latest NFT marketplace developed on the Solana blockchain. Even though this development has not yet seen a lot of volumes, this is undoubtedly one to watch. Solana is presently the fastest blockchain. Solana's decentralized exchange 'Serum' has also gotten enormous growth since its introduction. Today, we see the launch of Solana's NFT market for exchangeable NFTs, Soluble.
+
+Objects purchased on Soluble are done so by means of USDC, FRONT, or SRM tokens. It does not have as many items for sale equated with other famous NFT markets. Though, the platform incorporates NFT objects attached with real items. These comprise cold storage wallets, exclusive socks, t-shirts, and even a Dogecoin painting. Soluble is awarding a new take on the prevalent NFT market model by concentrating on exchangeable NFTs. Users can buy digital tokens then steadily redeem them for unique edition items or experiences.
+
+As non-fungible tokens (NFTs) endure to hit the conventional media, we can presume that there will be an increase in growth and trading volume within the field. Moreover, this will also escalate the demand for amenities and simple cross-chain consumer experiences while transacting NFTs.
+
+There are indeed lots of budding NFT marketplaces out there. Nonetheless, the tech has yet to be established to enable a completely interoperable marketplace, permitting even cross-chain NFT trades amongst multiple blockchains. On the other hand, the industry is thriving and hospitable to state-of-the-art novel projects.
+
+As this field is still in its infancy, the prospects accessible are abundant. If you desire NFTs, gaming, collectibles, and blockchain, then maybe you ought to contemplate having a career in blockchain.
+
+**Reasons Why the NFT Market Is Bound to Rise**
+
+With the world converting into more of a digital realm, the solution to the query of ownership is already accessible in the form of NFTs. In the initial period of July 2020, the total transactions of NFT hit $100 million. And that is only the beginning. As the Defi market touched $4 billion in sealed value and primary cryptocurrencies commenced their demonstration to annual highs, we will soon observe a straight growth arrangement in the NFT universe. The NFT space has been enormously profiting from all of the technical inventions while aiding as a perfect entry for new users on the crypto block.
+
+It is considered that 40% of new users will soon be coming to crypto via non-fungible tokens. They will then learn themselves and progressively transmit to other sections. Even though it may sound bold, it is a relatively innate concept for tech: Games have continuously been a device for onboarding. Recall the first thing you did on the computer. Microsoft developed Minesweeper to show individuals the use of a mouse and click into tiny objects. On the other hand, Solitaire was created to rehearse the drag and drop.
+
+So why will the NFT market rise?
+
+**Reason #1: Simplicity and fun**
+
+The procedure of collecting in-game assets (swords, garments), digital art, kitties, and cards is a very informal and amusing notion to grip, and it does not necessitate any financial education. Users understand and observe their complete contact with the interface as an entertaining game and are incentivized by the emotive reward of inimitable object possession.
+
+Fabian Vogelsteller, the first inventor of ERC-20 and ERC-725, has stated in his public interviews that these standards were originally developed for fun public tokens — fashion, art, and entertainment. This was created contrary to financial applications that have lately been fruitful with the Defi movement.
+
+Satisfying the unique idea of Ethereum designers, NFTs address the same design that makes individuals collect vases and paintings. Visual demonstration of a thing with an indisputable record of possession is emotionally appealing to users.
+
+**Reason # 2: Gamification**
+
+Let's agree on one thing: money is boring. Surely, some of the extravagances and experiences money can purchase are usually exciting. However, gazing at numbers in an account is not precisely a definition of a great time. NFTs, on the contrary, often ascribe themselves to artwork and gameplay. Also, their collectability and scarcity are both fast-tracking NFT consciousness. Collectors, artists, gamers — and mixtures of all three—can all see NFTs as striking for countless reasons.
+
+Blockchain gaming and NFTs are the best companions. Since video games are on an outwardly never-ending escalation in fame, NFTs are riding the popularity wave.
+
+**Reason #3: Scarcity and Investment Attractiveness**
+
+Pricing of rare things is a zero-sum game; individuals select the objects they trust will be in demand by other people and, therefore, will be an expansion in price. As physicist and network scientist Albert-Lázló Barabási wrote in The Formula, the network pushes success when performance cannot be computed. In the art society, renowned inventors, who are rising in popularity and have respectable contacts, create a restricted number of works that are highly searched for by several collectors. This endorses price growth.
+
+Whenever you consider an industry without scarcity, for instance, more windows will enter the market if windows get more costly. This is unmanageable in the NFT market, where the worth of an object is attached to the psychological lure, so the monetary cycles are way distinctive.
+
+**Reason #4: Adoption from Asia**
+
+The element that a lot of crypto developments target Asian markets to be prosperous is not new. In the situation of NFTs, this interest is higher given that the concept of funny collectible games and items have strong social roots in countries such as Japan and South Korea.
+
+Asians tend to have a strong interest in visual illustrations of items, cute characters, and pictures. For example, mascots — cute animals demonstrating a particular company or town and world-renowned emojis are generally born in Japan.
+
+The worth of an unbacked asset that is only market-driven also appears to be an innate idea for Asians. Games with internal currencies that can be withdrawn occurred in South Korea way before the emergence of crypto.
+
+**Reason #5: Deeper Foundation**
+
+Cryptocurrencies have existed for nearly a decade. However, when bitcoin's price upsurged past the U.S. $20k per coin, the whole world appeared to notice. Now, you might be an account holder yourself; nonetheless, Coinbase is one of the realm's most fluid, fiat-enabled connections. Similar to the users of OpenSea, individuals at Coinbase are also rising.
+
+The massive increase of crypto wallets facilitated the NFT industry. Since blockchain games and NFTs generally connect with crypto wallets, 30 million users generate an excellent spur. This number only accounts for a single trade. There are now several global wallet apps and exchanges that offer current and future homes for NFTs.
+
+Instead of building the whole lot from scratch, NFTs have a strong structure on which to augment layers. The birth of bitcoin and ethereum are accountable for the climbing growth pattern of NFTs.
+
+Catering to the demand, more gaming organizations and other players have been coming into the NFT space, enticing the attention of depositors, who are looking for the best assets to invest in. That is why it did not take long for the NFT market to reach $100 million in overall sales — and it will only grow drastically, given the variables stated above.
+
+Contrasting from Defi, where user demand and preference are driven by the practical applications and the promise of returns, deep psychological arrangements determine the NFT market. With the world becoming more digital, objects are emerging as digital-native only. NFTs are offering a perfect solution for ownership.
+
+Numerous concerns are yet to be resolved to facilitate adoption: interoperability and gas prices, amongst others. An integrated Layer 2 solution is necessary to have all NFTs visually denoted on all wallets and platforms, as it is a critical psychological factor regarding ownership.
+
+Ethereum has not been keeping up with the anticipations to release Ethereum 2.0 because of postponed congestion and sharding, so it is projected that gas prices will only worsen.
+
+7 ![](Images/svgimg0003.svg)
+
+# CHOOSING WALLETS TO GET STARTED WITH NFT INVESTING
+
+**What is Defi?**
+
+Simply put, Decentralized Finance (Defi) is an ecosystem of various financial applications built on blockchain networks. Among these, the Ethereum blockchain has been the most popular one for its smart contract capabilities.
+
+Defi's primary purpose is to create a transparent and open-source financial service ecosystem. It operates without any kind of central authority and is available to everyone. So far, the Defi services and products include decentralized marketplaces, banking services, custodial services, decentralized exchanges, investment services, borrowing, lending, etc.
+
+**What is Defi Wallet?**
+
+Defi wallet's primary purpose is to allow users to store their funds without reliance on a third party holding their assets. You have the complete freedom to do with your funds as you please, and you are the only person in charge of your assets, which is a revolutionary concept as you think banks usually control your money.
+
+With the decentralized wallet, users don't need to provide any background information to verify their identity as with centralized ones. This anonymity feature is appealing to many users since it means that your identity is never at risk. You may doubt if this is safe. In fact, Defi wallets are the safest options available on the market. The main drawback is that if you lose your wallet's login information, there's usually no way to get it back since you're the only one in control of it.
+
+So far, most Defi wallets are Ethereum-native, and the majority of Defi tokens are supportive because they are built on the Ethereum blockchain. Web3 wallets are now the most common ones.
+
+The core components of Defi wallets:
+
+**1\. Key-based**
+
+Wallets have a unique key pair. It is the responsibility of the users to safeguard their own private keys. The private keys are usually in the form of a 12 to 24-word seed phrase.
+
+**2\. Non-custodial**
+
+Users can transfer and send assets with the understanding that they are the only ones with access to these funds Accessibility
+
+These wallets can hold extensive types of virtual assets. The Ehtereum-specific wallets not only allow users to deposit ETH but other Defi tokens and stable coins.
+
+**3\. Compatibility**
+
+Virtually all Defi wallets are accessible by connecting to a web3 wallet. You can connect to Defi applications without leaving the app.
+
+## HOW TO PICK YOUR DEFI WALLET
+
+In choosing your Defi wallet, there are several aspects to keep in mind.
+
+**1\. Look at which assets the platform supports.**
+
+Different wallets support different assets, so it's critical for you to check if the wallet is compatible with whatever you want to store. If you're going to invest in NFT, do choose the ones that allow Ethereum.
+
+**2\. Check the social presence of the Defi wallets**
+
+Any reputable ones will be active on social media and are engaging with their community. So by checking out engagement and how active they are on their social media accounts is desired.
+
+**3\. Check if they allow you to lend your money and borrow capitals**
+
+With the lending feature, you can start collecting interest with the convenience of your Defi wallet. Besides, you should be capable of using your current funds as leverage to borrow money like USDC, DAI, or other types of money.
+
+## TOP DEFI WALLETS TO GET STARTED INVESTING NFTS
+
+**1\. Coinbase Wallet**
+
+Coinbase is one of the best cryptocurrencies’ exchanges, and the Coinbase Wallet is their Defi application. It's very user-friendly, especially for first-time users. It's easy to buy and store tokens, transfer funds, and interact with other decentralized apps.
+
+You will also be able to connect your Coinbase wallet to your Coinbase account and transfer the money to your wallet. Although it's non-custodial, your private keys are kept directly on your device, which makes it easy to recover your wallet if needed.
+
+**2\. Metamask Wallet**
+
+Metamask wallet is majorly used as a browser extension that acts as the gateway to access Ethereum dApps through the internet browser. It's one of the most widely supported ones in this ecosystem. It supports all the ERC20 tokens. Your wallet can be protected by using a hardware wallet, including Ledger as the login of Metamask.
+
+Besides, Metamask now also has the mobile version on Android and iOs, which means you will be capable of managing your virtual assets from anywhere. Because Metamaks is built on the Ethereum blockchain and has over one million registered users, it is one of the best non-custodial wallets out there. Metamask is most popular for easy and small transactions. It might be for those who store the significant value of Defi funds.
+
+**3\. Trust Wallet**
+
+Trust wallet has a variety of interconnected Defi items. You can use BinanceDex's advanced exchange function or swap assets in your App with BinanceDex or KeyberSwap. The Android version of Trust wallet has built-in Dapp browsers allowing you full access to the Defi environment. You can visit Defi websites and connect with your wallet balance without exiting the App.
+
+WaterConnect is used as an open protocol to link Dapps to mobile wallets by checking the QR code. Use WaterConnect, and you can connect your Trust wallet to Dapps and make safe transactions without the need to share any confidential information.
+
+**4\. Enjin Wallet**
+
+Enjin wallet is compatible with crypto assets, especially the in-game ones. It encompasses some of the most innovative security methods by using unique characteristics, including intuitive UI, address management, and log-in with fingerprints. It's compatible with both iOS and Android devices. This wallet allows you to store ERC1155 and ERC721 blockchain-based game collectibles.
+
+While it’s not open-source, so the code is not visible and editable for its users. There's no multi-signature feature, which means transactions won't need more people to sign them.
+
+8 ![](Images/svgimg0003.svg)
+
+# INVESTING BY CREATING NFTS
+
+You're probably thinking that NFTs are excellent investments and that you'd like to purchase them. The previous chapters explained how NFTs work and several popular projects that use them. It is now time to make a Non-Fungible Token. But, before we start making NFTs, let's talk about the expense of making an NFT.
+
+## THE COST OF CREATING AN NFT
+
+Some platforms require a fee to create NFTs on OpenSea. This charge is known as "gas" in Ethereum-based systems. The amount of ether necessary to accomplish a specific blockchain function is referred to as ether gas. This will be the introduction of a new NFT to the market. The price of gas varies due to network congestion. As more individuals move value through the network, the cost of gas grows. Here's a helpful hint: When transaction volume drops during the weekend, the cost of using Ethereum falls slightly. If you sell a lot of NFTs, this can help you save money.
+
+## HOW TO CREATE AND SELL NFT OF DIGITAL ART
+
+The configuration process differs DEPENDING ON THE NFT TYPE. You can use Opensea, a popular online seizure, to configure Digital NFTs Art. Make a digital wallet to store your Crypto and NFT. OpenSea recommends a Chrome meta mask wallet addon.
+
+Go to OpenSEA and then click on my profile in the upper right corner. Enter your username and password, then follow the screen prompts to finish setting your account. Then, at the top right, navigate to your account and select My Collections. Then, create a new collection, click Create, and fill out the form.
+
+Now, select Add new item, and you'll be invited to give your NFT a name and update the information. Finally, click Create to complete the process.
+
+Sellers must first pay a gas charge, which is the Ethereum Blockchain transaction cost, before listing anything on OpenSEA.
+
+Today, OpenSea is one of the most popular NTF marketplaces, although Rarable and SuperRare are also excellent options. Artists can utilize them to profit from the cryptocurrency market while also reaching new audiences.
+
+## IN-DEPTH STEPS TO CREATE NFT ART
+
+**Step 1: Create an Artwork**
+
+The most important thing you can do to sell NFT workmanship is to make it your expertise. This can include almost any sort of media, such as GIFs, visualizations, recordings, 3D models, and so on. A brief stroll around Rarible or Foundation will provide you with a general sense of crypto art preferences.
+
+At the time, it appears that either very avant-garde, experimental abstract art or meme-rich internet culture references are preferred. Not that this should dictate your work - we're not going to go into an argument about "creating for the market" here. You can proceed to the following stage once you've picked what work to post.
+
+**Step 2: Create an Ethereum wallet**
+
+Several wallets to choose from will serve your public location and store your private key; nevertheless, it is generally advised to rely on an equipment wallet. If you're unfamiliar with cryptocurrencies, here's a basic primer on how cryptocurrency wallets work: They are essentially software or hardware that assist you in managing the public address on your cryptocurrency blockchain.
+
+This public address is where the bitcoin is stored and may be seen by anybody, despite its owner being anonymous (unless you make it otherwise). Each public address is associated with a private key used to deposit, withdraw, or send funds to and from that address. Consider it as a mailbox: everyone can see it, know where it is, and send mail to it. Only those who have the mailbox key can open it and collect the letters it contains.
+
+There are two sorts of wallets: online wallets, which provide greater convenience at the expense of less security, and cold wallets, which store information offline and are less convenient for frequent usage but provide a considerably better level of protection.
+
+The commonly used MyEtherWallet is an example of a hot wallet, whereas the greatest examples of cold wallets are the hardware wallets from Trezor or Ledger mentioned above, as well as pen and paper. Yes, pen and paper can be used as a cold wallet, but you will have to construct your public addresses, which can be tedious.
+
+**Step 3: Purchase Ether**
+
+Amid all the publicity and increased interest in the NFT, it may come as a surprise to you that selling the NFT will cost you money. Unlike Bitcoin, where miners are compensated in Bitcoin for contributing the computer power required to verify transactions and add entries to the blockchain, Ethereum miners are compensated with a different blockchain currency known as gas.
+
+A transaction fee is paid each time a transaction is requested to be confirmed and added to the blockchain (presumably to cover the gas and platform fee) - Ethereum miners can choose which contracts they want to allocate computing power to, so the more gas you pay for your transaction, the faster your contract will be executed and added to the blockchain. This includes transferring your NFT.
+
+**Step 4: Choose a marketplace**
+
+Once you have your piece, wallet, and some ether burning a hole in your pocket, you are ready to sell your NFT. You should go to ethereum.org and go through their collection of "Apps" - short for decentralized apps. Rarible, Nifty Gateway, and Foundation are fantastic starting sites for getting acquainted with the Ethereum market and seeing your NFT.
+
+Each caters to slightly different tastes, so make sure to check out all three, as well as many more marketplaces, before making a decision. Nifty Gateway appears to be most suited to 3D models, whereas Rarible appears to be a chaotic combination of the aforementioned avant-garde and internet meme culture.
+
+**Step 5: Upload your artwork**
+
+While each concept differs in terms of where you hit the button, they all begin with connecting your cryptocurrency wallet. Each of the major sites will immediately create an account linked to your wallet and walk you through a pretty basic upload procedure in which you will be asked to select how many "copies" of the NFT you want to mint and what percentage of royalties you want to get after the product is resold.
+
+The latter aspect is a revolutionary step forward for digital artists, who, unlike their traditional counterparts, have never been able to completely limit the availability of any one piece once it has been circulated, and so create a real "original."
+
+The NFT essentially has a certificate of authenticity printed on the blockchain that verifies it is an original work, so the original artist can get a portion of every subsequent trade/sale - a feature that even traditional artists cannot use. After you've chosen your work, made your copies, and determined your royalties, you can go to the next step.
+
+**Step 6: Pay the transaction fee**
+
+After you've locked and uploaded your NFT artwork, all you have to do is pull the trigger and sit back and rest till your artwork is transferred to the blockchain and becomes a remarkable substance on the organization, unchangeable and impervious to any worker crash. The exchange fee ensures that your NFT is mined by any Ethereum miner that accepts the arrangement and reimburses you for their labor.
+
+After that, it should only be a matter of minutes before your newly mined NFT hits the market, ready to surprise the keen-eyed patron who sees it first.
+
+**Can Anyone Make An NFT?**
+
+Everyone is free to create an NFT and participate in the market, and there are no restrictions on who can do so. It's open to everybody. An account is all that is needed to buy or sell NFTs. Buying is a lot easier than selling because you already know how much the token is worth. It's not the same when you're building your own NFTs.
+
+Not everybody can go out and create an NFT and expect a decent return on their investment. It's a little like how real-life artists work. If you're not well-known, it's more difficult to sell your product. However, the different hidden fees on various websites might be a bit of a hassle. In many cases, hidden fees will cost you more tokens than you receive in your sales, even if you are able to sell a token. When it comes to this situation, you'll have to sell your tokens at a loss. We recommend doing extensive research on the platforms and building a fanbase before you start minting your NFTs.
+
+9 ![](Images/svgimg0003.svg)
+
+# HOW TO BUY AND SELL
+
+The following discussion will focus on the significance of NFTs and include an overview of how to buy and sell them. A new wave of non-fungible tokens has recently swept the digital art and collectible art markets. Suddenly, every digital artist is finding new opportunities to promote their work and make a decent livelihood doing so. Not only digital artists but also celebrities and other multinational corporations are vying for a piece of the digital asset pie. The sudden increase in popularity of non-fungible tokens (NFTs) is due to a record-breaking sale of a non-fungible token or NFT art for $69 million Ethereum.
+
+NFTs are now being used by digital artists such as Beeple to release their work, and Blockchain will verify if the price is genuine or not. However, NFTs aren't just for digital art. NFTs may be used in several ways, such as ownership of rare and unique items or as another type of asset. NFTs aren't merely digital; they can also take the form of a physical thing.
+
+Cryptocurrency investing varies from investing in non-fungible tokens. Each NFT is unique and will have its own valuations and price structure. To raise the value of NFTs, media must be linked to them before they can be purchased or sold. Many people have become perplexed about buying and selling NFTs due to all the publicity they've received. As a result, the emphasis of this chapter will be on the process of using NFTs as a form of investment and how to buy and sell NFTs to take advantage of this new opportunity.
+
+**Where to Buy NFTs**
+
+You can buy and sell NFTs on several different online marketplaces. However, not all marketplaces sell the same collectibles or works of art. As a result, you can buy a specific type of collectible depending on the marketplace you choose. Most of these marketplaces have a large selection of NFTs to choose from, but each operates differently.
+
+If you're confused about where to purchase NFTs, refer back to chapter six, where we have a list of non-fungible markets to buy and sell NFTs.
+
+**How to Buy NFT**
+
+Once you've completed this process, you're ready to buy NFT. The purchasing process is simple once you've funded your wallet and account. Most NFT marketplaces have an auction mode, in which you can place a bid and wait a given period to see if you got the piece. An auction can last for days, and you'll have to outbid the highest bidder if you want to buy a piece.
+
+Buying an NFT from the primary marketplace, on the other hand, is a good idea because the resale value is very high when you sell it on another website. However, there are some disadvantages to it. In any case, it's difficult to predict how the NFT will be evaluated because demand can fluctuate at any time.
+
+**How Much Does It Cost?**
+
+Some platforms will usually charge you a small fee for creating NFTs. In Opensea, however, there are no costs associated with creating an NFT. There is just a one-time gas fee for making the first NFT, and everything else is free. If the marketplace uses Ethereum NFTs, you'll need "gas" to create the tokens. Ethereum gas cost can vary depending on the network. As the price of gasoline rises, so does the number of people using the network. On weekends, there are fewer people on the network, so we recommend giving it a whirl.
+
+## THE PROCESS OF SELLING NFTS
+
+To cash in on your NFTs, you need to know how to do so. Register for an NFT account and search your collections for the item you wish to sell. Once you've found them, all you have to do is click on the "sell" button to activate it. To configure the auction's pricing and terms, click on this option once it has been located.
+
+The process is slightly different in all marketplaces. Ether, also known as ERC-20, is one of the most popular tokens you may obtain in exchange for your NFT. Platforms such as Opensea offers a royalty fee in exchange for a commission each time the original work is sold. You're free to start your business whenever you like now that you know how to make and sell NFTs.
+
+10 ![](Images/svgimg0003.svg)
+
+# HOW TO CHOOSE AN NFT
+
+The NFT market is expanding at an incredible speed, with early NFT collections fetching exorbitant prices. Choosing an NFT can be difficult for newbies who do not grasp what gives an NFT worth. In this chapter, we'll try to lay down the fundamentals.
+
+## CHOOSING AN NFT
+
+Once you've decided to purchase an NFT, the key question is how to choose from the vast diversity of NFTs on the market. Because the vast number of categories and styles available can be bewildering, here are some pointers.
+
+**Scarcity**
+
+Consider scarcity - scarcity is a significant contributor to value, but it will not make an NFT valuable on its own.
+
+**Originality**
+
+You'll observe that many of the NFTs on offer are copies of valuable existing collections, which misses the point. Look for NFTs that are doing something unique, creative, or simply amusing. You'll come across many NFTs that are essentially blockchain versions of Clip Art Images, if not worse. These are low-value attempts to jump on the bandwagon, as seen by their sale history.
+
+**Aesthetics**
+
+Painters and trends come and go in classic art, sending prices up and down. Even if NFT art is still in its infancy, the same trends apply; therefore, they strive to anticipate future trends rather than just jumping on the Ape bandwagon.
+
+**Traits**
+
+NFTs are frequently constructed as part of collections based on a theme represented through specific qualities. Each NFT will have a unique combination of these characteristics. This is how Pokemon characters, MGTM, baseball cards, and Top Trumps function.
+
+**Buy what you like**
+
+For the greatest advice, go with your gut and buy things that make you happy. As a beginner, you are just as likely to purchase a potentially valuable NFT as you are to purchase a winning lottery ticket, so choose something that will at the very least provide you with entertainment and allow you to grasp the process.
+
+**Make a budget.**
+
+It is critical to establish a clear budget in advance; otherwise, you may find yourself gradually drifting towards the more expensive ranges of NFTs simply because you haven't set any limitations for yourself.
+
+**Understand speculation**
+
+The fact that an NFT has a selling history indicates that someone else believed it was valuable, but it does not imply that you may acquire it for somewhat more and then sell it for a profit. That is the definition of the 'greater fool' concept, which caused the Tulip Bubble in 1637. Try to buy for pleasure rather than speculation, as NFT valuations may fall, leaving you with a large loss.
+
+## HOW TO CHOOSE WHICH NFT PROJECTS TO INVEST IN
+
+There are numerous projects that allow their users to purchase NFTs, but not all of them are worthwhile. In fact, I'd argue that the vast majority of them are bad investments. Many NFT initiatives follow the same pattern: there is a lot of anticipation surrounding the debut, and people rush to buy NFTs. Then the euphoria fades, prices fall, and there comes a period of the substantially lower trading volume. Some projects regain momentum after a while due to good game development and community creation, whereas the majority silently die out.
+
+**Trading Volume**
+
+A good place to start is by looking at which projects have the most trading volume on platforms such as Opensea or Cryptoslam.
+
+This provides you an excellent notion of what projects are hot right now and should be looked into, but be warned: volume can drop quickly when the enthusiasm wears off.
+
+**Activity Trend**
+
+When you have a project to review, how activity changes over time is one thing to look at. Is the number of users and trade volume increasing or decreasing? If you're searching for a short-term trade, you should only look at projects that are on their way up.
+
+**Community**
+
+It's critical to determine how engaged and involved community people are in the project. Join the Discord and Telegram channels, follow the project on Twitter, and participate in some of the discussions. Is the project being discussed by a large number of people? Are they participating in (and enjoying) the game, or are they simply watching from the sidelines? Because these are subjective and relative factors, evaluating them will become easier after seeing numerous projects.
+
+**Project Stage**
+
+Is this a brand-new project, or has it been in the works for a while? Is there a finished game or some kind of progress indicator? If a project is young and there is no game or other mechanism to provide utility to the NFTs, establishing a community will be far more difficult. Purchasing NFTs in a pre-sale or early, in general, is far riskier than investing in a project that has actually produced something and amassed a committed following. On the other hand, buying early can still be a sensible strategy, as I demonstrate in this guide to getting the best price.
+
+## FINDING GOOD NFT PROJECTS
+
+There has been a worldwide uproar about the NFT (Non-Fungible Token). People are willing to spend a lot of money on these graphical art pieces, memes, and collectibles. Take a peek at the most costly NFT ever sold in history, Beeple's "Everydays The First 5000 Days." This specific work of art sold for a whopping $69 million, shattering all previous records and setting a new benchmark for NFTs.
+
+Similarly, several new tech and crypto startups, like Larva Labs and Dapper Labs, have emerged. They are the ones that have produced projects such as Crypto Punks and CryptoKitties, which are currently among the most popular NFT ventures.
+
+A typical CryptoPunk character nowadays will set you back at least $200,000. Getting the rare ones, on the other hand, will set you back millions of dollars. This is to imply that the NFT market has skyrocketed to unprecedented heights. As a result, there are several chances in the NFT realm, and you may quickly make a lot of money purchasing and selling NFTs. The issue is that you must invest in the correct NFTs; you cannot simply buy any random NFT and expect to make a lot of money. This is known as the "Aftermarket NFT Works" or the "Thrash Art Movement." This is also why most people lose money on NFTs because they do not invest in the correct NFTs.
+
+The key to making money in NFTs is investing in the art's purpose and story rather than in the art itself. Allow me to explain. Because the NFT market is not as liquid as the crypto market, most people end up losing money by investing in NFTs that they don't know anything about. This suggests that they will have a difficult time selling their NFTs.
+
+Because you can quickly sell Cryptocurrencies instantly, that is not the case with NFTs or Non-Fungible Tokens. So, to truly profit from NFT investments, you must first ensure that your investments are liquid enough, which means that you may easily sell your NFTs in the future if you so desire.
+
+Second, you must invest in the brand and the company/creator who is creating these NFTs. This is because investing in random NFTs provides you with no future. Investing in a brand or firm, on the other hand, provides you with a far more grounded product or NFT. Because these Brands and Creators can not only be trusted but their NFTs and Collectibles have the potential to increase in value in the future.
+
+But, before we go into how to discover a suitable NFT project, let me tell you about Crypto Wallet security. Hackers are currently targeting Crypto Users and taking their cash. It's become popular, and it's simple to implement. Hackers only need to find a means to get those 12 Word Secret Recovery Seed Phrase that you got while building a Crypto Wallet, and that's all it takes to steal funds from users.
+
+As a result, the 12 Word Secret Recovery is recommended. The Seed Phrase should only be used to import your wallet or recover your wallet if you have lost access to it. The Seed Phrase is only utilized in these two instances.
+
+Fortunately, there are ways to safeguard yourself, the finest of which is to keep it in your physical wallet. Here's how to make an offline backup of your Secret Recovery Phrase. You can physically embed your 12 Words Recovery Seed Phrase in a Steel Unit using the Billfodl Physical Security Device. You can then put it inside your wallet. This product is a lifesaver for anyone who owns Millions of Dollars in Cryptocurrencies; therefore, you should check it out if you are one of them.
+
+Let's have a look at how to find a suitable NFT project or the attributes/properties of NFT now. Finding good NFT projects is rather simple. Because the rarity factor determines the price of NFTs, the rarer an NFT is, the higher the price of the NFT. As a result, its worth will rise. So, when looking for NFTs or NFT projects, you want to comprehend and figure out how the NFT's developer makes his NFTs unusual.
+
+Take, for instance, Raging Rhinos. Raging Rhinos is a collection of 5000 randomly produced NFTs, each with its distinct appearance, style, and personality.
+
+If you look for Raging Rhinos on the OpenSea website, you'll notice that Raging Rhinos' "Pricing Floor" is roughly 14.2 ETH. The average or lowest viable price for any of these Rhinos is 14.2 ETH.
+
+If you open and click on any of the Rhinos, you'll notice that they have distinct characteristics, such as backdrop color, body color, outfit, eyewear, head, etc. These are the properties or traits of the Raging Rhino NFT.
+
+Some of the features are uncommon, and these characteristics determine the rarity rating of the Raging Rhinos NFT.
+
+Similarly, most NFT initiatives, such as CryptoPunks and CryptoKitties, have certain traits or attributes. You may now utilize tools like Rarity Tools to determine the rarity of any NFT collectible.
+
+## USING RARITY TOOLS TO DETERMINE THE RARITY LEVEL OF AN NFT
+
+Rarity tools, for example, allow us to examine the rarity score or level of any NFT. This rarity rating is determined by various elements, including qualities, type, editions, and much more. You can also utilize Rarity tools to locate new future NFT projects that will be published very soon.
+
+You'll find several NFT projects in the following area; however, the question is, how can you know whether NFT project is a good investment?
+
+I discovered how to detect whether an NFT project is good or not by identifying whether the NFT project has a community or not.
+
+Examples include:
+
+*   Do they have a sense of community?
+*   How many pieces are there in total?
+*   How much do they sell for?
+
+Because, as previously stated, NFTs are incredibly risky investments, and the reason they are risky is that they are not liquid assets, as opposed to Cryptocurrencies such as Bitcoin, which can be traded quickly.
+
+Once purchased, there is no certainty that the NFT will be sold. This is precisely why NFT Projects with a community would be an excellent investment, even if their art isn't particularly fantastic. The NFT Project only requires a strong story, a nice character, and solid branding, and you can bet on it as long as people are following the Project.
+
+Because having a community reduces the risk of liquidity, which means it will be easier to sell your NFT. Consider this: if you buy an NFT for $400 in January and sell it for $500 in December after eight months, you have made a profit of $400. The project may not be a good investment in terms of profitability, but in terms of liquidity, it saves you from losing the entire $400! That is the strength of having a community in NFT's.
+
+## HOW TO DETERMINE THE NFTS COMMUNITY STRENGTH
+
+If you open the future area of Rarity tools, you'll see a plethora of NFT Projects. You want to know how vast their community is when you read through the NFT Projects.
+
+Take, for example, Neo's Bizarre Adventure, an NFT Project. It has 6093 Twitter followers and a total of 10,000 NFTs. Another has a total of 5555 NFTs and 2093 followers.
+
+When evaluating the size of the project's NFT community, you should look at three factors.
+
+*   The number of Twitter followers
+*   Followers on Social Media
+*   The NFT Project's Future Goals and Plans
+
+NFT Projects with many Twitter followers and other social media followers are more likely to have a large community and valuable NFTs. This suggests that there are people eager to invest in their projects and purchase their NFTs. Meanwhile, the value and price of these NFTs are expected to rise in the future.
+
+As a result, you will not only be able to sell your NFTs immediately if you so desire, but you will also be able to make big gains in the future.
+
+## HOW TO CHECK THE PRICE AND RELEASE DATES
+
+So, while looking through the NFT projects, you'll come across "Sale Date and Time" under the future area of the Rarity Tools. This is the date on which the NFT Project will be made public. You can simply determine whether the NFT Project is worth your investment by looking at the quantity of NFTs released and the number of people following the NFT project.
+
+Most NFT projects will be priced between 0.1 ETH and 0.01 ETH, equating to $300 to $30.
+
+Now, as long as the NFT project's community is large when the NFT project has a large number of followers on Twitter and other Social Media accounts, you will be safe if you invest in that project.
+
+Because, remember, you're not concerned with whether or not the artwork meets the highest standards of art and originality. That is important, but community is even more important.
+
+Your major goal is to determine whether you’ll be able to sell your NFT quickly in the future.
+
+And the fact that you're in early means you'll have a strong chance of profiting later. However, you must also ascertain why and what types of NFTs are scarce and important in that project. Look for rare qualities and properties and see if you can get them for a low cost.
+
+This is how you can invest in NFTs in a risk-free manner. Because most individuals pursue art and creativity, which is not a negative thing. However, the problem is that people purchase random artworks, and to be honest, 90 percent of the NFTs on the market appear wonderful in terms of art and inventiveness.
+
+It's difficult to predict what NFT will sell and what type of art will appreciate in the future. In conclusion, the NFT sector is a hybrid of the collectibles and art industries. As a result, when you purchase any NFT, you are either purchasing a Beautiful Looking Artwork or an NFT Collectible.
+
+## ADDITIONAL TIPS FOR FINDING GOOD NFT PROJECTS
+
+The next approach I discovered that has greatly helped me uncover good NFT projects is to always watch the main media sites such as:
+
+*   Mashable
+*   The Verge
+*   Coin Telegraph
+*   Tech Crunch
+
+Remember that NFT sites with a large community are good NFT investments. And, most of the time, NFT Projects that are highlighted on these large Media Sites immediately develop in size and value. Crypto Punks is the best example I can give you.
+
+Who would ever want to gamble on an artwork that consists of only 2424 pixelated Punk characters? They appear to be the work of a 5-year-old who can create and draw Punk characters and market them as an NFT. However, when CryptoPunks was first launched, only 20 to 30 users claimed some of their punk personalities. However, when Mashable featured a story about Cryptopunks as this fascinating new NFT Project, the entire collection of 10,000 Punk Characters was sold out within a few hours.
+
+Of course, this does not imply that Crypto Punks relied solely on the Featured Tale to go viral, and to be honest, Crypto Punk had a distinct story and concept. However, the Press Media Feature was extremely beneficial to Cryptopunks.
+
+This suggests that these Media Sites are really powerful, and searching for NFT Initiatives on these sites can lead you to extremely successful NFT projects.
+
+I usually just go to their site's search box and search for the keyword "NFT." Normally, you'll see a slew of news stories about NFTs, but I'm confident you'll come across some interesting initiatives.
+
+**Finding NFT projects on Twitter**
+
+Believe it or not, Twitter is where NFT lives, communicates, and where the majority of NFT communities can be found. Forget Instagram, Facebook, and other social media platforms; the area where NFTs and NFT art are most discussed is on Twitter.
+
+Twitter is the finest site to locate a plethora of NFT Projects and advertise your NFT art and collectibles. If you go straight to Twitter and search for the hashtags #NFT, #nftart, or #NFTCommunity, you'll find a plethora of NFT-related art, posts, and tweets.
+
+The NFT community is incredibly active on Twitter, but surprisingly, they are not as active on Instagram. This suggests that in the NFT community, details count a lot, and Twitter allows users to present the specifics of their art in a much better way than other social media sites.
+
+**Finding NFT projects on YouTube**
+
+YouTube is also an excellent place to look for good NFT projects that have the potential to make you a lot of money. You should subscribe to YouTubers like Gary Vee, who often posts videos on NFT and NFT artworks and collectibles. The following are some of the greatest YouTube channels for NFTs and locating NFT projects:
+
+*   The Bitcoin Express
+*   CryptoJack
+*   Draw with Artma
+*   Gary Vaynerchuk
+*   Zuelin Gaming
+*   NFT Times
+*   Jonny Harries
+
+So, this is how you conduct Due Diligence on NFTs. Finding good NFT projects isn't difficult once you understand how the NFT market operates and what to look for.
+
+11 ![](Images/svgimg0003.svg)
+
+# FACTORS TO CONSIDER WHEN COLLECTING NFT COLLECTIBLES
+
+NFT Art Collectors, who are avid admirers of both crypto and art, are the driving force behind top NFT Artists' success. It's not uncommon for NFT Art Collectors, who place a high value on e-art, to rotate their collections regularly. Since the crypto industry is flooded with art, can you blame them for not sticking to a particular style? This is why marketing your NFT would necessitate a thorough examination of what NFT Art Collectors are looking for.
+
+It has been a fascinating journey for NFT Art Collectors, NFT Artists, NFT Marketplaces, and even the entire world as tokens have transferred from one person to the next. Generally, NFT Art Collectors, for whatever purpose they collect, seek tokens that will hold their value and be respected over time.
+
+Some NFT Art Collectors are so engrossed in their love of art that they don't consider the finer points. Artworks that they appreciate are the only ones they purchase. A crypto art coin's most significant component is undoubtedly the artist responsible for most of the mechanics. However, when it comes to investing, the majority of us conduct significant studies first.
+
+Below are factors to consider when collecting NFT collectibles.
+
+**The Minting Cadence of the NFT Artists**
+
+NFTs are not interchangeable, as you may have guessed. Trading one Beeple for another is less silly than exchanging it with any other artist's work, but it's still ridiculous.
+
+Blockchain technology has had a significant impact on the NFT Art business. It has also made it easier than ever to develop and incorporate new artwork into the current supply by making it easy to distribute and authenticate its legitimacy. Each NFT artist is essentially in charge of both the supply of their work and the rate at which it rises.
+
+It's a well-known fact that artists' styles evolve throughout time. We've all heard of Van Gogh, who painted several paintings a day, and Picasso, who produced more than 13,000 works of art throughout his lifetime. All of that time and effort went into this.
+
+Artists have access to a wide range of resources. Trying your hand at art or honing your craft is not a tough endeavor. The bare necessities are currently present in the majority of households.
+
+NFT Art Collectors applaud artists who put in the time and effort to produce stunning tokens. But there is a lot more to the story than meets the eye. NFT Art Collectors also recognize the artists who are aware of the uniqueness of their works and have a consistent minting cadence.
+
+**The NFT Artist's Works Listed For Sale**
+
+When none of an artist's works are for sale by the artist, it is the highest level of admiration for their work. NFT Art Drops should be priced correctly so that the pieces sell out quickly and no auction goes too long without receiving bids.
+
+When an NFT artist's work is for sale, it may be considered better if NFT Art Collectors (asking for higher prices than they paid) list the artwork rather than the artist. NFT Art Collectors frequently seek out works that appear to be out of reach. They may be unwilling to pay a premium price if multiple people offer the same job for sale.
+
+The NFT Artist's Fanbase Blockchain technology has made it easy for artists to sell their works directly to NFT Art Collectors without the need for doorkeepers or other third parties. Because of this, artists and NFT Art Collectors are responsible for attracting and retaining the public's attention.
+
+In NFT art, Twitter, the social media juggernaut, plays a key part. NFT Art Collectors opt for an artist with a high level of follower engagement. "Can the artist excite their impending drop well?" is a frequently requested question.
+
+Some artists are fortunate enough to have such committed fans and NFT Art Collectors that they don't have to do anything to market their next NFT art release since their fanbase does it all for them, motivated entirely by love and excitement.
+
+**The Blockchain on which the Token is stored**
+
+In the realm of NFT cryptocurrency, the Ethereum blockchain reigns supreme. While Bitcoin is the most trustworthy blockchain due to its processing power, Ethereum is the most popular blockchain for smart contract execution.
+
+If an evil character controls more than 51% of the computing power on a blockchain, it can create tokens and alter transactions. However, compared to other blockchains on which you can mint NFTs, the possibilities of this happening are smaller in the case of Ethereum.
+
+While the future of decentralization, security, and so on in the NFT realm remains uncertain, Ethereum today reigns supreme. This explains why ETH-minted tokens are traded at significantly greater values than other blockchain tokens.
+
+**Other NFT Art Collectors of the NFT Artist**
+
+Do you not like it when you can see who else has bought the same item before you go shopping? In the same way, potential NFT Art Collectors look into the history of prior NFT Art Collectors of the token of interest to understand its worth.
+
+Some NFT crypto collectors go out of their way to find a token that was once possessed by someone they admire.
+
+NFT Art Collectors have the same level of control over their token supply as an artist. We're trying to convey that the value of an artist's tokens would collapse if an NFT Art collector sold all of their tokens. Even though this is an extreme scenario, most artists eventually sell their tokens because each work sold reduces the rarity of the artist's remaining tokens.
+
+**The Content of the Token**
+
+Finally, we talk about the token's appearance, sound, and feel. Some tokens are so moving that fans and NFT Art Collectors have significant emotional reactions to them. A mere glance at a smattering of tokens can bring you to tears. The token content is essential for attracting NFT Art Collectors, who continually collect based on their tastes.
+
+Technology improvements have made the formulation process more controllable and cost-effective than ever before, as NFT Art Collectors are well aware. Though NFT artists can spend months creating and outfitting a single token, building something amazing today is more spontaneous than it was decades or thousands of years before. It's the most straightforward way to promote your NFTs.
+
+A stunning token encourages NFT Art Collectors to cross the finish line and put a bid. This is only one of the numerous criteria that NFT crypto Collectors consider when determining the worth of a token and then taking their shot. Keep these points in mind if you want to promote your NFT.
+
+12 ![](Images/svgimg0003.svg)
+
+# HOW TO FIND VALUABLE NFT
+
+Some NFTs were selling for hundreds of thousands of dollars, and you might be wondering how I can get my hands on one of these valuable NFTs. This can be tricky, and the following are three methods on how you can find valuable NFTs.
+
+**1\. Studying the Popular Platforms**
+
+If we look at some of the most expensive NFTs sold, we can see they happen to sell within the same platforms. When you check the most expensive game NFTs as shown below, you can notice that Axie Infinity, F1 Delta Time, and Sorare repeatedly appear on the rank list.
+
+However, you can't just create any NFTs within these platforms and expect to sell them for a high price. But you can follow the method of gaining traction. Let’s look at the example of NBA Top Shot. A lot of NFTs on this platform are costly at the moment. You may see the Lebron James’ NFTs are selling for more than $250,000. Of course, we're too late. However, we can use this method for newer NFTs that are not at a high price yet. If we go back into the history of the NFT, let's say we were early in the space. We can see the first sale price was $1,200, and then shortly after it was sold for $1,600, it was sold for $2,000 later.
+
+So we can see that it would be around this time that this thing is gaining traction. We weren’t the first person to buy, but after a few of these sales, we can see that people are actually buying it, and it is gaining traction. That’s where we want to enter. Of course, some of these prices might be too high for some people, but this is the truth about NFTs. It's a game where you pay to play. There's a misconception that NFT is just you jump in and create, and boom, you become rich.
+
+However, that's not how it works. The only time that works is if you are the person of influence and have a platform to market. Unfortunately, if you are not that person, you will have to pay to play if you want to get your hands on one of these valuable NFTs.
+
+If we check other NBA NFTs, we can also find some NFTs currently at lower prices, like $2 or even $1. If you see they’re getting higher bids, like $4 or $6, we know they’re getting tractions, and people are willing to buy it, which is the time we want to go into one of these NFTs.
+
+This also can be applied on any platform like OpenSea and Rarible. Every time you're looking at an NFT, it will show the history, what people were bidding, and what people were paying for. If you're getting in early enough and paying attention, and you see that one NFT was sold for $50 and $100, then $200, which means it’s gaining attention and traction, and that would be your entry point.
+
+**2\. Either creating NFTs being an influencer or buying NFTs from a person of influence**
+
+Let’s take an NFT created by Trevor Jones and Alotta Money (Trevor Jones, Alotta Money/Async Art) as an example. The NFT was sold for 260 ETH, approximately $141,704 at that time. Because of the high price, you may be asking why someone would buy this digital artwork. The artist Trevor Jones has built up a reputation in the NFT artworks, so people are pretty much buying the reputation when he creates a painting. Also, when you have influence, your platform is excellent for instant marketing.
+
+Another example is Justin Roiland, his Rick and Morty has been sold for over $1 Million in Ether. As soon as he creates a piece of art, people know about it and trust his reputation. This is something that we see in the regular art world.
+
+People aren't necessarily paying for what's on the paper, and people are paying for the artist. The same thing is happening here in the NFT art world, but not all of you listening are a person of influence or have a platform.
+
+As introduced before, Nifty Gateway is best for exclusive drops. On Nifty, you can find Justin Roiland’s collection and his coming releasing plans. When you check, you may find that most of the old ones have been sold out, which brings an important concept of NFTs. They are non-fungible tokens, and they are rare.
+
+Sometimes there's only one piece available, and sometimes there are only five or ten available prints. You need to understand that investing in NFTs is much different than investing in regular cryptocurrency. If someone does all the research for a cryptocurrency project, and they say go ahead and buy it. You can go ahead and copy their trades but remember these NFTs are limited. If there's only one of one, or ten of ten, someone can't do all the research, and then say all right, go ahead copy my trade and buy it because they just have to buy it from you. So for you, instead of learning what to buy, it’s much more important to know how to buy with these methods.
+
+If you are the person of influence or don't have a platform, the method for you will gain traction from a person of influence. For example, if Logan Paul was going to release a limited edition of his NFT artwork, and you are aware of him and follow his social media, you will know earlier than others that he will release an NFT. One of the biggest risks of buying an NFT is that you may purchase an NFT that no one else wants. You might get it for a low price, but you may not be able to resell it after. Now, gaining traction from influencers can help you reduce your risks.
+
+Let's say Logan Paul released an NFT. Someone buys it for $100, and then right after someone buys it for $150, and then right after $200. You can see that it's gaining traction, and this may be a good entry point to get in and buy it. You can tell that there is a trend that people are willing to pay more for it. But if you go in too early, you might just buy something that no one else wants.
+
+So If we aren't the people of influence ourselves, we can follow those people of influence and gain traction. Sometimes you could become the person of influence in the crypto art world. Christie's auction house sells NFT artworks from famous digital artist Beeple, a man named Mike Winkelmann from Wisconsin. He is a regular person who has created his own influence and reputation within this digital world. So it is possible you can create random arts on Rarible, and maybe one day you will become this person, and your works will sell. But the likelihood is very low. It is a higher probability that you will be able to sell NFT artwork of value if you purchase it from someone who already has built that reputation.
+
+**3\. Try to buy the first**
+
+This means that the first NFT from the specific creator or its first kind in the industry has the best value. That’s why the CryptoKitties are so valuable now since they were the first ones ever created. They will always have some significant values because people love that. The first NFT from the creator is historical. The first ones always create buzz, excitement, and hype. So if you can buy into something that is first, chances are it will be valued by fans of that artist, brand, or genre.
+
+**4\. Tangible ones can have more values**
+
+This means that NFT should have some tangible elements, like physical assets behind it or experience. For example, for Logan Paul’s NFT, you will have a chance to meet him if you have his NFTs.
+
+**5\. Domain names**
+
+If we go on to OpenSea, we can see that some of these domain names have already sold for a high price. Something to notice here is that they're all very short names, like “wallet.eth”, “google.eth”, and “amazon.eth”, etc. We learned from the previous domain bubble that people are willing to pay a lot of money for a valuable domain. The short “.com” ones have been sold for millions of dollars: business.com is worth 345 million dollars,carinsurance.com is worth 49 million dollars.
+
+For the domain name NFTs, it’s best to buy something with one word, sometimes you can get by with two words, but three-word domain names likely won't be valuable in the future. You also need to pay attention to the ending of the domain names, including “.eth,” “.crypto,” etc. In the traditional domain name world, the ones ending with “.com” are more valuable than others, ending with“.net.”
+
+So the gamble that you're making here is guessing which one of these domain names will be the winner in 20 years, whether the winner will be “.eth,” “.crypto,” or something else. Suppose you want a very valuable domain that is one word, something like “wallet.eth”, unfortunately, you will have to go to the open marketplace and pay a premium for it. Or you can start from scratch. You can go to Ens domains to buy “.eth,” or you can go to unstoppable domains to buy “.crypto” or others. The downside here is that you're going to have a tough time getting your hands on very simple domain names that are the more premium ones and have already been bought, and you will have to get them on an open marketplace.
+
+**6\. Scarcity is key**
+
+This one is easy to understand. If something is scarce, it will be more valued.
+
+13 ![](Images/svgimg0003.svg)
+
+# WHAT BRANDS NEED TO KNOW ABOUT NFT
+
+Entering the world of NFT is new and poses a lot of challenges. Different brands are opting to hop on this trend. For this reason, brands must be aware of the several things that are mentioned below.
+
+**Brands Are Already Going in the Space & Nostalgia Controls Supreme**
+
+NBA Top Shot hits the right cords by creating a nostalgic feeling for sports card collectors. Apart from these, digital cards are live instants taken from games. Owner of the NBA Dallas Mavericks, Mark Cuban, realizes a future for digital goods in the NBA. Cuban emphasizes that everything digital can be an NFT. Though, the experiment is to create a market. NBA Top Shot demonstrated that there is a market full of individuals who wish to own "the best moments from NBA history."
+
+Cuban stated in an interview with Coindesk, "We can sell virtual Mavs stuff, footwear, art, images, videos, experiences, and everything else our minds can think up." We're thinking of putting our virtual jewelry, accessories, and clothes into real-life photos on social media. So you can dress up your posts with stylish Mavs virtual sneakers that look just like the ones on your feet."
+
+Famous actor William Shatner developed NFTs of pictures of his film career and personal life, which were released on the WAX blockchain. These digital collectibles can be merchandized, see complete ownership of the collectible, and display their inventory on social media. Therefore, another technique NFTs develop using nostalgia.
+
+**Virtual Real Estate Is Thriving**
+
+"Let's go to Decentraland" is a phrase you may hear in the not-so-distant future. Virtual real estate signifies a real perspective for investors. Similar to URL domain grabs in the early Dot Com age, digital land grabs are also selling for millions. Since its introduction to broader audiences in February 2020, Decentraland has traded $1 million in virtual land. In Axie Infinity, a crypto-Tamagotchi virtual ecology, a public member bought nine digital land plots as one piece for 888.25 Ether. At the time, 888.25 Ether was valued at $1.5 million.
+
+Establishments such as The Sandbox are sighting their virtual land sales to sell out under hours of release and are recording hyper-growth. Arthur Madrid, the CEO of the company, just spoke at the GamesBea. He talked about the significance of the blockchain when it comes to the creation of metaverse.
+
+Gary Vaynerchuk stated on CNBC's Fast Money, "You can see how advanced the Internet is. People are really naive about how early we are in all of this, in my opinion." It is seen that the latest Internet is being designed while we type. In Axie Infinity, Lunancia areas 90,601 plots of land in whole, of which 19% are now player-owned.
+
+Additional virtual worlds such as Upland.me are upgrading the world by tokenizing it on the blockchain. Updates are being worked upon, which will permit users to import NFTs from different blockchains. Moreover, drivable cars, housing, commercial property development, and the launch of businesses are also part of the growth.
+
+**Fashion, Art & Entertainment Are NFTs Holy Grail**
+
+Individuals are purchasing trading cards, celebrity art, and digital lands from an investment perspective for the future. However, entertainment and fashion will be the main focus of the blockchain. Presently, you can trade or resell your digital products, but soon you will be capable of outfitting your avatar and digital house on the blockchain.
+
+For instance, Argentinian style icon Andrés Reisinger traded ten pieces of virtual furniture on Nifty Gateway. The most costly non-existent furniture piece was sold for roughly $70,000. The furniture can be positioned in any 3D space or open worlds such as Somnium Space, Decentraland, or Minecraft.
+
+Co-founder of THE DEMATERIALISED, Karinna Nobbs, suggested that brands should be aware of numerous things when trading fashion through NFTs. Nobbs stated that "As there are so few fashion brand NFTs in the industry right now, there is a first-mover advantage, so the first advise is to experiment, jump in early to this embryonic market, and it will gain you higher media/social exposure and bring you new followers."
+
+Another piece of advice given by her is to select to launch a limited-edition top-of-the-line piece with a design signature that a brand is recognized and recognized for to enjoy scarcity and drive demand.
+
+Moreover, it would help if you collaborated with a marketplace and blockchain provider with an easy-to-utilize UX and UI. This is especially true if you're aiming to change the average fashion consumer because this will be their first fashion NFT adventure for the vast majority of people.
+
+"Few fashionistas have a crypto wallet," she continued. To make NFTs more accessible to the general public and move the movement from a niche to a mass market, organizations like THE DEMATERIALISED process both fiat and crypto payments.
+
+Finally, she recommends that brands must think about the usefulness of the fashion NFT post-purchase. She endorses that one must ask questions such as; where do you want your customer to wear a fashion asset? Do you want them to utilize it in an AR filter experience, in a game, or display it online? Responding to these queries can aid in adding diversity to a fashion NFT drop.
+
+Co-founder of RTKFT Studios, Benoit Pagotto, states that virtual fashion is an exhilarating part of the NFT journey. The company's latest release of their META Jacket, which was the company's first non-sneaker product, was a triumph. The jacket was created to look amazing in real life, however also designed to be worn by the gaming avatar. It was produced for the impending fashion and gaming on-lookers.
+
+**Celebrities Are Monetizing NFTs**
+
+Superstars are rapidly monetizing NFTs. Performers such as Linkin Park’s Mike Shinoda stated, “I would never get even close to $10k, after fees by DSPs, label, marketing, etc.” In February, Shinoda launched a music clip from an upcoming song on Rarible. Other artists and entertainers have hopped into NFTs, for instance, YouTuber Logan Paul, Lindsay Lohan, and rapper Post Malone. Celebrities are utilizing NFTs to interrelate with fans in novel ways. Post Malone collaborated with NFT artist Fvckrender and social money platform, Fyooz to deliver new tokens with those who have sufficient FYZ NFTs to play beer pong in Malone's Celebrity World Pong League.
+
+**Blockchain Organizations Are Searching For Sustainable Tactics**
+
+Energy depletion is a point of debate, and blockchain organizations are already searching for techniques to reduce or counterbalance energy utilization and become more sustainable. For instance, Mercado Bitcoin has collaborated with MOSS to become the primary cryptocurrency exchange around the globe to balance its entire carbon footprint.
+
+Furthermore, the Ethereum blockchain is in the progression of moving to a proof of stake mechanism (Layer 2), which utilizes less energy compared to the proof of work mechanism (Layer 1). Organizations such as SuperRare are giving money to ETH 2.0 exploration to quicken the expansion of a more energy-efficient system.
+
+Investors are also fascinated to find more maintainable methodologies, for example, in the case of Shark Tank's Kevin O'Leary, who shared in a latest Facebook post that he was contemplating investing in businesses and miners that can generate coins under a directive of zero-carbon. From carbon balances to executions of Layer 2 protocols, many people and establishments in the cryptocurrency industry are searching for a way out to have a positive effect.
+
+14 ![](Images/svgimg0003.svg)
+
+# THE TOP-SELLING NFT ARTISTS TO COLLECT RIGHT NOW
+
+Hold on to your hats, ladies and gents, for NFTs are the hottest art commodity in town.
+
+Non-fungible tokens are blockchain-based artworks with unique encryption codes that allow for ownership and authenticity verification. An NFT might range from a single piece of digital art to an entire song or album. Fashion designers have also taken notice of the NFT trend.
+
+From Fewocious, 18, to José Delbo, 87, a wide range of artists from all over the world are embracing crypto art. More than $85 million worth of NFT artworks were auctioned in March 2021. It's a significant event.
+
+Do you wish to purchase some NFT art but are unsure where to start? Cryptoart.io publishes a running list of artists rated by the total amount of money they've made. The data is pulled from various digital galleries, including SuperRare, Foundation, Nifty Gateway, MakersPlace, Async Art, and KnownOrigin. While the data is constantly changing, here is a list of the current top NFT.
+
+## BEEPLE
+
+**Total Artwork Value: $113,100,017.88**
+
+After a historic auction with Christie's auction house, Mike Winkelmann, who goes by the artist name Beeple, is the best-selling NFT artist. The sculpture "Everydays: The First 5000 Days," which sold for $69,346,250.00, was credited for bringing NFT sales to the general public's attention. An established auction house accepted bitcoin for the first time to purchase crypto art.
+
+Each of Beeple's artwork has sold for an average of $133,849.86. He also continues his "Everydays" series on Instagram, where he posts everyday digital masterpieces. His pieces are highly realistic, depicting from digital shapes and scenery to grotesque political illustrations.
+
+## TREVOR JONES
+
+**Total Artwork Value: $18,083,354.42**
+
+Trevor Jones, a Canadian-born Scottish artist, is "absolutely fascinated" by the art-tech connection. The visual artist worked on canvas before moving on to QR codes and augmented reality. After purchasing his first Bitcoin, Jones was captivated by the power of crypto technology and its intersection with art. Jones has collaborated with some of NFT's most well-known figures, selling a total of 5,284 artworks at an average price of $3,409.65 each.
+
+His best-selling work, "Genesis," was a collaboration with Argentine comic book artist José Delbo, in which he painted and animated Delbo's Batman image. His best-selling solo composition is "The Bitcoin Angel." The oil on canvas painting features two marble sculptures in front of gold Bitcoin. This sold for $188,888.00.
+
+Jones is now working on a six-month project that will culminate in the publication of large-scale paintings and NFTs in August and September. Thus he is not currently producing anything. His earlier collection, "Bitcoin Angel," is available on the secondary market.
+
+## FEWOCIOUS
+
+**Total Artwork Value: $18,037,594.08**
+
+A teen artist named Fewocious is leading an NFT Renaissance. NFT and crypto have been taken over by the 18-year-old pop surrealist digital artist. The juvenile artist has sold a total of 3,103 NFT artworks worth an average of $5,812.16 apiece, thanks to her over 50,000 Instagram and Twitter followers.
+
+A piece titled "The Everlasting Beautiful," which features a woman's face with a hand on her cheek, is his highest-recorded sale. Each feature is unique, with both monochromatic segments and pops of colors. The background, which is loaded with beauty and love-related statements, replicates a 20-second video which, at one point, says to the viewer, "just tell me I'm pretty." As the woman's mouth moves, her eyes scintillate. The piece comes along with a 30x30 canvas, gloss varnish, and oil paint. Fewocious is currently working on a clothing drop as well as a few other things.
+
+## PAK
+
+**Total Artwork Value: $16,023,212.5**
+
+The anonymous Pak is one of the most enigmatic characters in the NFT universe. Pak has been creating digital work for two decades, whether as an individual or collective. With 1,691 artworks sold, averaging $9,354.99 each, the artist is known by some of the biggest tech personalities in the world, including Elon Musk.
+
+Pak's work is predominantly monochromatic with geometric shapes. With a price tag of $900,072.96, Pak's "Metarift" portrays a six-sphere structure surrounded by what appears to be a four-ridged band. The two structures turn opposite to one other throughout the 12-second video, with a metallic tinge highlighting the materials' different undertones. Pak will collaborate with leading auction house Sotheby's for a global NFT sale in April.
+
+## MAD DOG JONES
+
+**Total Artwork Value: $14,344,607.33**
+
+Mad Dog Jones is a Canadian artist who is dynamic, adaptable, and strange. Mad Dog Jones, a musician who also paints, has sold 1,567 NFT artworks for an average of $9,063.52.
+
+Jones' best-selling artwork, "Boardwalk," is a 43-second video of a drawn city landscape. Small raindrops fall onto the scene as a cab is parked in an alley with a building looming overhead. Raindrops fall in rhythm with an accompanying beat. The art was sold for $388,888.00 on n February 21, 2021.
+
+## SLIMESUNDAY
+
+**Total Artwork Value: $11,624,226.24**
+
+Mike Parisella, better known as SlimeSunday, is a Boston-based digital collage artist. SlimeSunday's relentless pushing of the boundaries of what is allowed in mainstream media has earned him over 500,000 Instagram followers for his investigation of erotic and weird topics. To date, he has sold 6,508 NFT artworks for a total of $1,784.64 for each piece. "SlimeSunday has also built a name for himself alongside electronic music producer and NFT artist 3lau, creating the ssx3lau duo.
+
+His highest-selling artwork is Gunky's Uprising," a duet with 3lau for which he provided visuals. SlimeSunday's animation skills shine through the ssx3lau collaborations, even though the world mostly sees his two-dimensional digital designs. "The Process," SlimeSunday's best-selling solo item, showcases his digital collage-making process while being accompanied by music from 3lau.
+
+## HACKATAO
+
+**Total Artwork Value: $11,113,676.85**
+
+With a total of 1,504 pieces sold at an average of $7,310.61 per piece, OG cryptoartists Hackatao makes the top-selling chart. Named "hack" after the delight of going under the skin and discovering what's inside, and "Tao," for Ying and Yang,
+
+Hackatao explores issues of humanity, environment, society, and crypto. The Italian duo's best-selling piece, "Kim Jong Un - 'Dead and Alive' Edition," is an animation depicting North Korea's infamous leader sliding between flesh and skeleton. The work fetched $276,136.88 at auction. Described as "Like Schrödinger's cat, until we open the dictatorship box he is both dead and alive," the artists play with state of being and color in signature Hackatao fashion.
+
+## XCOPY
+
+**Total Artwork Value: $10,133,787.62**
+
+Xcopy, a London-based digital artist and cryptocurrency enthusiast, has sold 1,907 NFT artworks. XCopy's artworks often incorporate warped visual loops and flashing imagery warnings since his work almost always involves some form of flashing light pattern.
+
+"Death Dip" sold for $1,812,660.00, average $5,240.90 per piece, according to XCopy. A black screen with a white skull that changes angles fast makes up the piece. Surrounding blue and green squares shift position quickly, giving the impression of a full-body skeleton moving in circles around the screen.
+
+## 3LAU
+
+**Total Artwork Value: $9,161,894.41**
+
+As 3LAU, DJ and fintech enthusiast Justin Blau has been releasing electronic music since 2011 and has performed at festivals including EDC Vegas, Lollapalooza, and Electric Zoo, among many others. 3lAU was one of the first to embrace cryptocurrency and blockchain and is now one of the most important personalities in the NFT movement. After selling 6,090 artworks for an average of $1,505.54 per, 3LAU has almost exclusively distributed his music as NFTs.
+
+His most expensive sculpture, "Gunky's Uprising," a collaboration with artistic director SlimeSunday, sold for $1,333,333.33. SlimeSunday's graphics accompanied a three-minute song released under the moniker SSX3LAU. 3LAU also staged the world's first blockchain-powered music event in 2018.
+
+## GRIMES
+
+**Total Artwork Value: $8,923,250.78**
+
+Long before joining the NFT realm, Canadian singer Grimes was a critically-acclaimed alt-pop artist. With 1,122 artworks sold for an average of $7,983.33 each, Grimes' fans immediately migrated to the NFT space.
+
+Her highest-grossing NFT, "Death of the Old," was sold for $388,938.00. Above what appears to be a wrecked castle, pink and white cupids soar. In the background, a sword stuck in the mountains holds the center of the screen as we rotate through the picture. The synth-pop demo "Anhedonia" plays throughout the video as Grimes' cupids fly closer to the viewer.
+
+## WHISBE
+
+**Total Artwork Value: $8,433,625.45**
+
+WhIsBe, an anonymous street and fine artist, created NFTs based on his popular Vandal Gummy Bear series. The beloved sugary treats are juxtaposed with a prison mugshot background. WhIsBe's installations include a red gummy bear and his NFTs experiment with the texture and color of the bear and the mugshot background. WhIsBe has sold 1,650 NFTs for an average of $4,507.38 per unit.
+
+The artist's moniker, "What is Beauty," encourages viewers to think about their critiques on problematic institutions. "Exhibit," his highest-grossing piece, sold for $250,000.00. The thirty-second video features the skeleton of a gummy bear, still holding the prison picture plaque while roped off in what looks strangely like a natural history museum exhibit.
+
+## SSX3LAU
+
+**Total Artwork Value: $8,191,686.80**
+
+SSX3LAU, a DJ and art director duo, debuts on the top-selling NFT charts as an independent creator. The long-running collaboration between 3LAU and Slime-Sunday has resulted in 5,740 artworks worth an average of $1,428.48 each.
+
+"Gunky's Uprising," the duo's highest-grossing piece, is part of their new "Iridescent" release. It was sold for $1,333,333.33. The three-minute movie begins with black-and-white images of what appears to be a mountainous landscape. As the beat fades, pops of neon color appear on the screen in every color of the rainbow, contrasting against the black background. The mirrored landscape morphs into geometric shapes, transforming the mountains into triangles, squares, and circles before a neon hand takes over the page,
+
+## JOSE DELBO
+
+**Total Artwork Value: $8,042,605.61**
+
+In July 2020, Argentinian artist José Delbo, who is most known for his work on Wonder Woman, Little Lulu, and Captain Planet, released his first NFT. A 43-page original comic book titled "Death" sold for $642.14. During this time, he has sold 2,781 artworks for an average price of $2,884.53.
+
+"Genesis," Delbo's highest-grossing NFT at $553,169.65, was co-written with TrevorJones. Delbo designed Batman, and Jones animated the picture. Batman emerges, looking directly at the viewer as the art progresses from pencil sketch to oil on canvas.
+
+## RTFKT STUDIOS
+
+**Total Artwork Value: $5,689,100.45**
+
+RTFKT Studios began as an undefined collective and has now grown into a leading manufacturer of sneakers and digital artifacts. Sneakers are digital Skins that digital characters in the metaverse may wear, and they are the studio's major focus.
+
+"Fewo Charm," the studio's best-selling NFT and collaboration with Fewocious, grants the wearer "otherworldly luck and deep creative powers." It went for $88,888.88 at the auction. With 916 NFTs sold for an average of $6,215.79 apiece, RTFKT's products range from metajackets and cybersneakers to denim and even a "Super Toilet."
+
+## BOSSLOGIC
+
+**Total Artwork Value: $5,022,817.04**
+
+Bosslogic, also known as Kode Adobo, is an Australian graphic designer and digital concept artist. His unique fan art mashup and mix fusion has sold 1,148 NFTs for an average price of $4,087.08 per piece of art. The artist's most popular piece, "The Arrival," unlocks an ultra-rare Mesut zil Next Chapter Golden Kit bodysuit, as well as a Genies Wearable for the buyer's own Genie. Users can purchase pieces for their Genies to wear in the metaverse.
+
+His most recent release features a collaboration with Francis Ngannou, a Cameroonian-French mixed martial artist published on the same day as the UFC 260 match. The piece seeks to close the gap between martial arts and NFTs.
+
+## ANTONI TUDISCO
+
+**Total Artwork Value: $4,643,181.90**
+
+Antoni Tudisco is an art director and 3D illustrator based in Hamburg, Germany. The artist has previously collaborated with Nike, Versace, Apple, Puma, and other brands and has now entered the NFT space. Tudisco's pieces frequently incorporate fashion design elements, with 1,229 sales averaging $3,783.70.
+
+Tudisco's best-selling NFT is "hairy," a collaboration with Steve Aoki. Tudisco has worked with Steve Aoki on several occasions. The $888,888.88 NFT, which created the graphics to complement Aoki's audio, was purchased by former T-Mobile CEO John Legere. Tudisco just started his fashion label, Tudisco Studio, with distinctive headgear as its first product.
+
+## STEVE AOKI
+
+**Total Artwork Value: $4,481,822.19**
+
+As a DJ and producer, Steve Aoki is best known for the song "Dream Catcher," a collaboration with Antoni Tudisco. Having sold 1,216 NFTs averaging $3,695.52 each, Aoki's collaborations are full of bright colors and electro beats.
+
+Aoki's best-selling NFT "hairy" is a thirty-six-second video of a purple, pink, and blue hairy face swaying to electronic sounds. Former T-Mobile CEO John Legere paid $888,888.88 for the sculpture, which included an acrylic screen for physical display.
+
+## DEADMAU5
+
+**Total Artwork Value: $4,314,653.48**
+
+Deadmau5 is a well-known DJ and producer from Canada who has sold 752 items for an average of $5,605.18. His signature mau5head is at the heart of each NFT, which is accompanied by his tracks. "In Titan's Light," an audiovisual collaboration between Sutu and deadmau5, was his highest reported sale, at $138,647.34. The piece takes place at a space station on Titan's moon and is inspired by Deadmau5's track "SATRN."
+
+## GREG MIKE
+
+**Total Artwork Value: $4,301,198.68**
+
+In February 2021, surrealist pop artist and muralist Greg Mike began selling blockchain-minted copies of never-before-seen content. The Atlanta-based artist's signature "antique cartoons" seek to adorn your virtual and real walls, with 2,221 total pieces sold. His biggest known sale, the "Mad Cans Master Set (50 Cans)," fetched $80,000.00, a huge increase over his average NFT of $1,976.68.
+
+## MICAH JOHNSON
+
+**Total Artwork Value: $3,645,017.98**
+
+This Baseball player-turned-artist entered the NFT space with Aku: The Moon God, a collection of sculptures and digital art featuring a little black boy wearing an astronaut's hat. With 1,534 total sales Johnson immediately became one of the most well-known names in the field. While his pieces averaging $2,376.15, his highest sale was $400,762.50.
+
+Unlike most of his NFT peers, Johnson's NFTs all come with a physical sculpture. Aku is depicted in "The Vault," his highest-recorded sale. The NFT owner can resell visitors to the temperature-controlled vault at Art Angels gallery in Miami.
+
+15 ![](Images/svgimg0003.svg)
+
+# NFTS AND CRYPTO-COLLECTIBLES PROJECTS
+
+NFT crypto ventures are all the high in the digital world right now, and for a plausible reason. Though, given that it is a relatively new concept to the majority, a common query – "what is NFT crypto?" has been bursting around. A smart contract platform such as Ethereum has become conceivable to tokenize digital media, including music, art, gaming assets, and other digital collectibles.
+
+Numerous diverse projects already utilize NFTs as tradeable and collectible items. Let’s skim through a selection of some of the prevalent ones:
+
+**NFT Games**
+
+NFTs have empowered blockchain and gaming to partner with one another. Non-fungible tokens are totally distinctive, which is the big news in the gaming realm. It is because inimitable means something that is rare, making it necessary to other gamers. The competitive notion of games implies that users wish to construct either a better character, world or get superior perks.
+
+**Sorare**
+
+Sorare is an imaginary football trading card game in which users can sell the cards of real players and handle their team to win enormous prizes each week. The fantasy football game presently has 126 official clubs comprising clubs from famous leagues like Bundesliga, the Premier League, Serie A, and European competitions, such as the Champions League.
+
+Every week Sorare hosts an extensive assortment of tournaments (S05) in which players can register their teams (consisting of five players) and contest for prizes. Rewards begin from 0.01 ETH to tradable cards that can be valued at thousands.
+
+The cards are all non-fungible tokens and are deposited on the Ethereum Blockchain. This implies the possession of the cards can be proved as all the data is stockpiled in the meta-description of the asset. You can easily view the trading history as all the items and data are stored on a public ledger.
+
+**Decentraland**
+
+Decentraland (MANA) is a decentralized VR platform where players can exchange and own pieces of virtual land. Moreover, other in-game items can also be purchased. It functions on Ethereum, which permits users to generate, experience, and monetize applications and content. Users can buy land that they can steer, construct and monetize as they desire.
+
+As of January 2021, a new area is launched called the Aetheria. It is a Cyber-punk-themed region and the biggest district containing 8,008 LAND (each LAND is correspondent to 100 Square Metres). Cryptovoxels is a parallel game where players can build, advance, and exchange virtual property.
+
+**Gods Unchained**
+
+This is a digital collectible card game in which cards are minted as NFTs on the blockchain. Given that every digital card is distinctive, players can trade and own them with a similar extent of ownership as if they were physical cards.
+
+**Open Beta**
+
+Blank Block Party is an upbeat open-world numerous player game styled such as a giant block party, with a concentration on custom design and art, constructing and examination and curating your collection of exclusive and rare Blanks.
+
+**My Crypto Heroes**
+
+Numerous players can play on My Crypto Heroes. It is a role-playing game (RPG) where people can level up old heroes via battles and quests. The conquerors and in-game things are registered as tokens on the Ethereum blockchain.
+
+**Crypto Kitties**
+
+Crypto Kitties is a game that permits users to trade virtual cats known as "Crypto Kitties," empowering users to purchase and trade cats, play games, and generate collections to earn prizes. The game claims that “Each cat is one-of-kind and 100% possessed by you; it cannot be replicated, taken away, or wrecked”. This is made conceivable owing to the nature of the NFTs and Blockchain. The tough nature of the blockchain implies that blocks/elements cannot just be damaged as they are linked to other blocks in a chain.
+
+As the Virtual Cats are NFT’s, they comprise data entrenched in their meta description that states particulars like the proprietor of the asset and what makes it exceptional.
+
+In 2017 the game was so widespread that it resulted in transactions delay on the Ethereum system, leading to a six-fold upsurge in impending transactions. This emphasized some of the scalability concerns with Ethereum, which is one of the motives that Etheruem is now considering switching to Proof of Stake.
+
+**Axie Infinity**
+
+Axie Infinity is a battling and trading game that is partly owned and controlled by the players operating on a blockchain. It was stirred by Pokémon that permits users to accumulate, breed, battle, and trade tokenized combat creatures known as Axis. These Axis can take diverse forms, with over 500 body parts for modifications, with different drop and rarity rates. You can breed these creatures to generate more Axis (upper limit set to 7), which can then be sold on this marketplace. Axie Infinity utilizes the Axie Infinite Shards (AXS) ERC-20 token to contribute to governance votes.
+
+## DECENTRALIZED ART AND COLLECTIONS
+
+Given that the value of art is contingent upon various factors comprising of the validity, age, and number of owners, it makes perfect sense to collect it on the blockchain as an NFT. Artists generally have issues verifying the authenticity of their work, particularly with digital art. Nevertheless, the utilization of the Blockchain and NFT's can facilitate in solving this concern. Presently an artist might post their artwork on social media, their site, or a blogging site, but this does not corroborate ownership. The majority of such platforms generally do not even offer a dependable date stamp.
+
+Conversely, with the utilization of Blockchain and NFT's artists can publish their art to a site that adds these particulars to the blockchain. This implies that the author's information and validity of the art can be gathered on the secure and tamperproof blockchain. With everything being recorded on a public ledger, it becomes conceivable to locate the art owner and trace the first date of publication.
+
+**KnownOrigin**
+
+KnownOrigin is a platform that permits artists to display and vend their exclusive digital artwork and collectibles. Formerly, purchasing art had very high entry obstacles for average individuals, as verifying authenticity without an art expert is exceedingly difficult. Though, with the use of KnownOrigin, individuals can easily recognize the authentic owner and have confidence in their acquisition.
+
+The platform utilizes the Ethereum system, permitting artists to tokenize their work and then put it on the KnownOrigin site as an exclusive NFT. When a piece of art is purchased using ETH, the address of the purchaser is taken. This permits them to identify the new writer to be recorded on the blockchain.
+
+This art platform invites and hosts more than 1000 artists, with more than 17,000 pieces of art being traded since its initiation in 2018. The website was designed by the BlockRocket team.
+
+**Bitcoin Origins**
+
+Bitcoin Origins is an extremely rare series of digital collectible cards commemorating the most noteworthy moments in Bitcoin’s past. The cards are all designed by talented artists and are launched on the Bitcoin Origins website. These items are generally sold out within seconds on the WAX Blockchain. Sequence aligned with Bitcoin Origins to deliver an interactive communal website, aiding the project to scale and grow to one of the largest NFT projects in the Blockchain space.
+
+**Cryptograph**
+
+The majority of the individuals in the Blockchain world have heard that Paris Hilton has vended her digital painting of a cat for 40 ETH, paralleling to a gigantic $17,000 at the time of sale. This was achieved via the charity digital art site Cryptograph. Cryptograph permits users to trade collectibles; this is frequently in the arrangement of famed diagrams, drawings, or paintings. These collectibles are generally designed by popular individuals like Paris Hilton, Ashley Greene, and Seth Green. All of these superstars have posted their work on the site to auction off utilizing ETH.
+
+The platform was precisely created to get money for charitable reasons and has raised thousands ever since its commencement. You can take a look at the recent auctions accessible.
+
+## POPULAR MARKETPLACES
+
+**Binance Collectibles**
+
+Binance Collectibles are non-fungible tokens that are minted in partnership by Binance and Enjin on special occurrences. If you would like to get one, ensure that you follow Binance on Twitter and search for the upcoming giveaways! If you would want to participate in an NFT reward, follow these simple and short steps:
+
+*   Download a wallet that backs Ethereum, like Trust Wallet.
+*   Copy your Ethereum ID or address and give it according to the giveaway rules. You may have to submit it via a form or maybe in the form of a Twitter comment. Just remember to check the rules to know what you are required to do to enter.
+*   If you do win an NFT and it has been distributed, you will see it under the Collectibles tab in Trust Wallet. After that, you can opt to either sell at different marketplaces like OpenSea or HODL.
+
+**Crypto Stamps**
+
+Crypto Stamps are dispensed by the Austrian Postal Service and attach the digital world to the real world. Such stamps are utilized to convey mail, similar to how regular stamps function. However, they are also held as digital pictures on the Ethereum blockchain, making them a tradable digital collectible.
+
+**Domain Naming Services**
+
+There is presently a gigantic amount of centralization in the area of domains and the Internet as a whole. We remunerate the companies that own .com and .net for permission to rent their domains. Huge websites like TikTok are also being blocked around the world owing to centralization. These systems and domains are generally susceptible to hacking owing to their centralized architecture; the data concerning the ownership of the domain is all kept on such centralized servers. When this data is accumulated on the blockchain, it makes the network much more vigorous and secure as there is no centralized point to attack.
+
+**Handshake Domains**
+
+Handshake is a decentralized certificate and naming authority. It offers proof of ownership for domains deprived of the requirement for central authorities having power over them. This implies that your website domain will not get blocked ever.
+
+The domains that are bought on NameBase.io are then stocked on the Hand-Shake Blockchain. It implies that the purchaser’s details can be accumulated on the blockchain, deprived of the requirement for a centralized party to hold this data.
+
+This particular project got over $10 million in contributions from excited depositors who see the value in a decentralized world.
+
+16 ![](Images/svgimg0003.svg)
+
+# GUIDE TO BECOMING SUCCESSFUL IN THE NFT MARKET
+
+Making digital art is not a new concept; it has been around since the early 1980s when computer developers created an art program utilized by the digital artist Harold Cohen. Nowadays, producing digital art is as simple as opening your paint program or taking a picture with your phone, adding a filter, and then uploading it for everyone to see.
+
+You may already be a digital artist and be unaware of it. If you shoot images on your phone or draw on your paperwork, you simply need to polish your skills.
+
+If you wish to become an NFT artist, you will need to follow some fundamental steps. That being said, being an NFT artist is simpler than you think; but, building a following and being consistent may be difficult.
+
+**1\. Choose the Kind of Art Work To Create**
+
+Before you begin your long and thrilling path of becoming an NFT artist, you need to pick out what type of artwork you will make. Having a constant specialization while making your digital art may help you develop your skills and enable your audience to realize what artwork you generate.
+
+Suppose you are a digital artist who appreciates generating digital images of prominent sports figures, for example. In that case, your audience will recognize that you enjoy sports and generate work related to sports. However, if you decide to create a digital artwork of a unicorn one day, you risk confusing your viewers. This could be good or bad, but it's important to maintain consistency in your style so that people can learn to love or hate your work.
+
+Choosing your art specialty should be very straightforward. Maybe you already have a specialty you create for fun? It might be nature photos, cats, doodles - the sky is the limit when picking your specialization. My major advice for developing your niche is to select a subject you like creating. If you instead select something that’s hot or trendy, you may not experience the success you’re searching for.
+
+The amazing thing about NFT art is that you can genuinely make anything into a one-of-a-kind masterpiece. You may produce music, videos, paintings, drawings, images, basically anything! So, be true to who you are and what your interests are, then let your audience determine what they enjoy and what they don’t like.
+
+**2\. Choose How You Will Create Your Art**
+
+After determining your art niche, you must select how you will create that art. For example, if you are a nature photographer, you may not need to purchase a picture editing application. However, if you are beginning from scratch or need to make changes to your artwork, you will need to utilize editing software.
+
+*   Image editing software: There are a few common solutions among NFT artists if you need to generate or modify digital photos. Adobe Illustrator, Lightroom, and Photoshop are all strong options for picture editing.
+*   GIF and Pixel Image Creation Software: Adobe Photoshop (GIFs) and Piskel (animated sprites and pixel art)
+
+There is, of course, other software available. But, finally, the sort of software you need is determined by your art style and personal goals for your art pieces.
+
+**3\. Choose a Digital Art File Type**
+
+Once you've decided what kind of NFT art you're going to make, you'll need to determine what file format you're going to use to create it. There are several file formats for each style of art.
+
+Here is a list of possible digital art file formats for creating NFT art:
+
+![](Images/image00107.jpeg)
+
+Basically, all you have to do is decide what kind of art you want to create and then proceed from there, making sure to choose the optimal file format for your purposes. Furthermore, you can always add unlocked content to your NFT art, which means they will have access to the best quality format you supply when someone buys it. That way, you won't have to produce the token as a big file, which may cause problems loading on certain markets.
+
+**4\. Make Your Own Digital Artwork**
+
+Now that you've determined your art niche, how you will create your art, and the file format in which you'll save your art, it is time to create your first piece of NFT art!
+
+Keep in mind that your non-fungible artwork does not have to be perfect. Every day, the most important thing you can do is create art. Just because you create new art every day does not imply that you must post new art every day. Instead, you should make new art every day for practice and to get your creative juices flowing. Take, for example, the well-known NFT artist Beeple, who just sold a $69 million artwork featuring 5000 pieces of his art that he created every day for over 13 years!
+
+Creating NFT art should be something you enjoy and are passionate about because becoming a successful NFT artist takes time and a lot of patience.
+
+**5\. Market Your NFT Art**
+
+Things are starting to heat up now! When you're ready to sell your first piece of NFT art, you'll need to decide which marketplace is best for your collection. There are several markets to select from, each with its own set of advantages and disadvantages. Furthermore, as the world of NFTs and NFT art evolves, new markets will emerge.
+
+You can sell your NFT art in the following marketplace: SuperRare.co, NiftyGateway.com, Rarible.com, and OpenSea.io.
+
+When initially selling your NFT, I recommend making an account on all of the sites and publishing your work to simpler sites like OpenSea and Rarible. You would then apply to be an artist for the other sites needing application evaluation after some workup and a few pieces (SuperRare and NiftGateway).
+
+Remember: When building your marketplace accounts, be sure to include all of your social media connections and personal websites in your profile. This enables individuals who find you to follow you on social media, so increasing your following.
+
+**6\. Build Your Following**
+
+Okay, this is the most important step. You must amass a following or an audience. There are several methods to establish a following to aid in the promotion of your NFT art; but, what are the greatest methods to build a following?
+
+To gain a following for your NFT artwork, you must create a brand around it or establish your own brand while using your NFT artwork at every step of the way. In addition, participating in the NFT community via forums, podcasts, and blogs can help you create credibility and trust with your audience. Using social media is also a wonderful idea.
+
+This phase is vital since your brand's reputation is critical to your art's worth. The more people who know about you, the more they understand you and what you stand for. This makes purchasing a piece of your artwork easier for both sides. Consider this: would you rather purchase something from someone you know and trust or from a random stranger you know nothing about? The answer is straightforward.
+
+You may use many approaches to establish a loyal following; let's go through some of the best ones.
+
+***Social Media***
+
+In my view, one of the simplest methods to begin building a following for your NFT art projects is via social media. To make the most of social media, be sure to join as many as you can and make a lot of noise. Once you're up and going, try to publish 1-2 times a day. You should be submitting your artwork and soliciting feedback, as well as providing input to other artists and assisting them whenever possible.
+
+For six months, upload one piece of artwork every day across all of your social media platforms and watch what happens. Using appropriate hashtags to help your social media postings reach the right people can help you attract more followers who interact with your posts, which is precisely what you want.
+
+Here are some trendy hashtags I've spotted on social media that are expected to acquire popularity in the next years. #NONFUNGIBLETOKENS, #DIGITALARTIST, #DIGITALART, #ETH, #ETHEREUM, #CRYPTOCURRENCY, #NFTCOLLECTOR, #NFTCOMMUNITY, #NFTARTIST, #NFTART, #NFTs, #NFT.
+
+When creating your social media account, decide whether you want to use your personal account or create a separate account for your artwork. This is the scenario I mentioned earlier about personal branding vs. product branding. Whatever you choose, make sure to fill out your bios effectively, including details that describe you as an NFT artist, the type of art you create, and links to any other social media accounts or personal websites you may have.
+
+Essentially, you want to build a webbed network so that you can reach people across all platforms. As a result, try to keep your social media names consistent across all platforms; this aids in brand recognition.
+
+Maintaining social media can be time-consuming. That is why it is best to start slowly and not get too caught up in how many followers you have or how many likes your post receives. Instead, just be yourself and focus on providing content. Remember, we all started from scratch. Growing your following takes time, patience, and consistency, but I know you can do it!
+
+***Websites***
+
+Aside from social media, you might take a more technical approach and build your own website. However, even if you opt to build your own website, it's still a good idea to be active on social media and utilize it to supplement traffic to your website, so people can see what you're giving.
+
+If used correctly, a website may benefit your NFT art. For example, you may showcase your NFT art collection on your website by providing links to your art's marketplace, establishing a blog that attracts organic visitors, or even offering a service like making bespoke artwork for customers or teaching others how to produce their art. The possibilities are limitless.
+
+Finally, if you are competent with computer technology, developing your website is viable for expanding your audience. You may also hire someone to develop a website for you.
+
+**7\. Engage in the NFT Community**
+
+It's time to tie everything together. It's time to get active now that you've set up your social media accounts and your website (if you have one). Spend time in your community answering questions, asking questions, and taking polls. For example, if you're a Rarible.com or OpenSea.io artist, go to their forums and start reading through the posts. Answer any questions you feel comfortable answering, and if more information is needed, direct them to your blog or a YouTube video you created on the subject. Help others, and they will help you.
+
+Never be afraid to seek clarification. If you're stuck, try to find an answer on your own or ask a member of the community for assistance. Surely, if you're asking the question, it's very likely that someone else is as well.
+
+Overall, gaining a following requires passion, patience, consistency, and selflessness. First, you must be passionate, patient while remaining consistent and selfless to assist others in solving their problems.
+
+**8\. Maintain Consistency**
+
+The importance of consistency cannot be overstated. It makes no difference what you do in life; consistency is important. If you intend to become a successful NFT artist overnight, I wish you the best of luck — you'll need it. Without consistency, you have little trust, and no one cares.
+
+You must demonstrate to others that you are serious about what you do and the NFT art you make. Beeple is a prime example. It took him almost 13 years to achieve significant success, but it was well worth the wait.
+
+You are not giving yourself a fair opportunity if you are not consistent with your work. I suggest sticking with it for as long as you can, but at the very least for six months. If you haven't seen a good trend after six months, it's time to reassess your strategy and go back to the drawing board.
+
+**9\. Be Honest and True to Yourself and Your Art**
+
+As if being consistent wasn't difficult enough, you must also ensure that you are always genuine to yourself and the art you create. I bring this up because many individuals get caught up in trends and forget why they began doing NFT art in the first place. Trends aren't inherently bad, but make sure that you still bring your unique spin to your creation, whatever trend you're following.
+
+Being genuine to yourself and your work influences how people see you as an artist and as a person. For example, if you are always jumping on the newest hot artworks, you may be seen as a money-hungry NFT art slanging fiend, and as a consequence, a lack of trust develops.
+
+Furthermore, creating art that you like can help you remain motivated and creative, preferably constantly.
+
+**10\. Never Give Up**
+
+Obviously, the finest was reserved for last. But, when it comes to your career as an NFT artist, these three simple phrases may make or break you. One of the most popular fallacies among individuals embarking on a new adventure is that success occurs overnight. Sure, some individuals have found rapid success; but, as NFTs progress and become more popular over the globe, your chances of success tend to dwindle.
+
+Don't give up for your own sake. It may take years to build a following that is devoted enough to buy your NFTs regularly, but bear in mind that all it takes is one piece of art to transform your life.
+
+If I could only give you one bit of advice, it would be to enjoy your journey. Your journey serves as the basis for your whole artistic career. In my perspective, it's incredible that every choice you make and every piece of art you create serves as the foundation for your tale. So, if you're feeling down because your work isn't selling, or if someone has said anything negative about it, just keep pushing ahead and keeping your eyes on the goal, and you'll be able to make your goals come true.
+
+Being an NFT artist is a thrilling adventure. Understand that becoming a successful artist, in general, involves time, consistency, and effort. Create your work, get a following, and assist others along the way, and you'll be well on your way to being a successful NFT artist.
+
+# CONCLUSION
+
+The popularity of non-fungible tokens is rapidly growing. It's a new way for people to sell their digital assets online while maintaining their authenticity. Although it's a brand-new front in the blockchain ecosystem, we can believe it's here to stay based on its huge success. Many companies are now implementing blockchain technologies using this new type of token.
+
+NFTs are great for creating memorable experiences for your customers. They're also a fantastic way to connect with and engage your target audience. Brands must pay careful attention to the technology as it is still in its infancy. More precisely, you need to research ways you can use NFTs in your marketing campaigns. For instance, you can mint luxury product designs, produce memorable marketing campaigns, or partner with NFT creators.
+
+In the end, NFT technology is here to stay, and it will certainly play a role in digital marketing.
+
+# REFERENCES
+
+Collins, C. (2021). NFT Art and Collectables for Beginners The Must Have Guide for Understanding Non Fungible Tokens (NFTs). Publishing Forte.
+
+Dianin, A. (2021). NFT For Physical Art: Non Fungible Token for Painters, Sculptors, Artist, and Craftsmen.
+
+Lloyd, A. (2021). NFT Blueprint - Cryptocurrency Investing For Beginners: Non Fungible Tokens Explained, The Blockchain Technology Behind Them &amp; How NFTs Work With Bitcoin, Ethereum &amp; Altcoins. Freedom Economics Publications.
+
+Rhodes, K. (2021). Ultimate Money Guide to NFT Investing Non-Fungible Token (NFT) for Beginners and Beyond: Easy Step By Step Guide Using Cryptocurrency in Blockchain to Make, Buy, Sell, Trade, and Invest in NFT Crypto. InvestingWizard Press.
+
+Stock, B. (2021). NFT: the Ultimate Guide to Invest in Non-Fungible Tokens and Create Your Digital Assets with Crypto Collectibles Art + NFT Virtual Real Estate.
