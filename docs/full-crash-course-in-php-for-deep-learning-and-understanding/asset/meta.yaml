@@ -1,0 +1,64 @@
+name: Full crash course in PHP for deep learning and understanding
+slug: full-crash-course-in-php-for-deep-learning-and-understanding
+name_cn: PHP 深度学习与理解完全教程
+toc:
+- - '##'
+  - 总结
+- - '###'
+  - 条件语句
+- - '###'
+  - If 语句
+- - '###'
+  - If…else 语句
+- - '###'
+  - If…elseif…else 语句
+- - '###'
+  - Switch 语句
+- - '##'
+  - 总结
+- - '###'
+  - Do Loop
+- - '##'
+  - For Loop
+- - '##'
+  - For each Loop
+- - '##'
+  - Functions
+- - '###'
+  - 创建函数
+- - '###'
+  - 函数参数
+- - '###'
+  - 返回值的函数
+- - '##'
+  - Arrays
+- - '###'
+  - Arrays
+- - '###'
+  - 数字数组
+- - '###'
+  - 关联数组
+- - '###'
+  - 总结
+- - '##'
+  - 第 4 章 - 第 4 节：PHP 与 MySQL：黄金搭档
+- - '###'
+  - 创建家庭数据库
+- - '###'
+  - 创建数据库
+- - '###'
+  - 创建并向 Family Members 表插入值
+- - '###'
+  - 为网站创建 PHP 文件
+- - '###'
+  - 创建索引页
+- - '###'
+  - index 页的 CSS
+- - '###'
+  - 创建数据的表单
+- - '###'
+  - 表单页的 CSS
+- - '###'
+  - 创建添加成员页面
+- - '##'
+  - 总结
