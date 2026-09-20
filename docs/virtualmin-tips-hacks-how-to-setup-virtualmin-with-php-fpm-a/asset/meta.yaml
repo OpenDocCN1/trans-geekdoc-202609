@@ -1,0 +1,17 @@
+name: Virtualmin Tips & Hacks： How to Setup Virtualmin with PHP-FPM and Nginx Reverse
+  Proxy
+slug: virtualmin-tips-hacks-how-to-setup-virtualmin-with-php-fpm-a
+name_cn: Virtualmin 技巧与技巧：如何使用 PHP-FPM 和 Nginx 反向代理设置 Virtualmin
+toc:
+- - '#'
+  - 第 1 章：安装软件
+- - '##'
+  - 下载并安装 RepoForge
+- - '###'
+  - wget http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el6.rf.i686.rpm
+- - '##'
+  - 现在是更新软件仓库（EPEL & REMI）的时间
+- - '##'
+  - 这本书对你有益处吗？
+- - '##'
+  - “实用指南”系列中的其他书籍

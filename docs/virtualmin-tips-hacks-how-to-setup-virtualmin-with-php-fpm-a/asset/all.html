@@ -1,0 +1,1002 @@
+<p><span id="titlepage.xhtml"></span></p>
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewbox="0 0 743 1186" preserveaspectratio="none">
+<image width="743" height="1186" href="images/calibre_cover.jpg"></image>
+</svg>
+</div>
+<p><span id="index_split_000.html"></span></p>
+<p><span class="calibre1"><span class="bold">Table of Contents</span></span></p>
+<p><a href="#index_split_006.html#filepos15798">Chapter 1: Installing the Software</a></p>
+<p><a href="#index_split_007.html#filepos27200">Chapter 2: Virtualmin Configuration</a></p>
+<p><a href="#index_split_008.html#filepos30541">Chapter 3: Virtualmin “Server Template”</a></p>
+<p><a href="#index_split_009.html#filepos34368">Chapter 4: Automation: Custom Scripts</a></p>
+<p><a href="#index_split_010.html#filepos41904">Chapter 5: Setup PHP-FPM on existing Websites.</a></p>
+<p><a href="#index_split_011.html#filepos50294">Chapter 6: Apache Handlers 101 / PHP-FPM</a></p>
+<p><a href="#index_split_012.html#filepos56393">Chapter 7:  Setting up Nginx Reverse-Proxy</a></p>
+<p><a href="#index_split_014.html#filepos66911">Chapter 8: Securing your Server (Bonus)</a></p>
+<p><a href="#index_split_015.html#filepos81151">Chapter 9: Where to go from here?</a></p>
+<div id="index_split_000.html#calibre_pb_0" class="mbp_pagebreak">
+
+</div>
+<p><span id="index_split_001.html"></span></p>
+<p><span class="calibre2"> </span></p>
+<p><span class="calibre2"><span class="bold">Virtualmin Tips &amp; Hacks</span></span></p>
+<p><span class="calibre1"> </span></p>
+<p><span class="calibre2"> </span></p>
+<p><span class="calibre2">How to Setup and Integrate PHP-FPM  &amp;</span></p>
+<p><span class="calibre2">Nginx Reverse Proxy into Virtualmin</span></p>
+<p> </p>
+<p><span class="calibre1"> </span></p>
+<p><span class="calibre1"> </span></p>
+<p> </p>
+<p>Adrian Ling Kong Heng</p>
+<p>Copyright © 2014</p>
+<p><a href="http://www.ilovevirtualmin.com/">www.ilovevirtualmin.com</a>  </p>
+<p> </p>
+<p> </p>
+<p>Copyright 2014  © Adrian Ling. All rights reserved.  </p>
+<p><span class="calibre4"> </span></p>
+<p><span class="calibre4">No part of this work may be reproduced or transmitted in any form or by any means, electronic or mechanical, including photocopying, recording or by any information storage or retrieval system without prior written permission from the copyright owner and the publisher.</span></p>
+<div id="index_split_001.html#calibre_pb_1" class="mbp_pagebreak">
+
+</div>
+<p><span id="index_split_002.html"></span></p>
+<p><span class="calibre5"><span class="bold">Acknowledgements</span></span><span></span></p>
+<p>I am grateful to God who enabled me to write this book, and to whom I owe my very existence.</p>
+<p> </p>
+<p>Special thanks to my beautiful wife and my 2 wonderful kids for supporting me and  giving me the time and space to write.</p>
+<p> </p>
+<p>And of course, this book would not have been possible without these two great men who created it -  Jamie Cameron &amp; Joe Cooper in the late 2005 – and who are still actively involved in maintaining and enhancing it.</p>
+<p> </p>
+<p>Today, Webmin/Virtualmin is one of the world's most popular web-based Unix/Linux server administration tool, with more than 3 million downloads every year!</p>
+<div id="index_split_002.html#calibre_pb_2" class="mbp_pagebreak">
+
+</div>
+<p><span id="index_split_003.html"></span></p>
+<p><span class="calibre5"><span class="bold">Bonuses</span></span><span></span></p>
+<p>All the source code listings are available for download in the “Customers” section on the accompanying website – <a href="http://www.ilovevirtualmin.com/">www.ilovevirtualmin.com</a>. The “Access Code” to download these files are in the last chapter of this book. In addition to the source code listings and scripts required in this book, I've also created 2 standalone shell scripts to help you create the configuration files for Nginx Reverse-Proxy and PHP-FPM pools quickly from the command line.</p>
+<p> </p>
+<p>My colleagues suggested that I should sell these scripts separately at $5 per script, but I  want to provide a <span class="italic">complete solution</span> for you. Everything you need to <span class="italic"><span class="underline">install</span></span>, <span class="italic"><span class="underline">configure, </span></span> <span class="italic"><span class="underline">integrate</span></span> and <span class="italic"><span class="underline">automate</span></span> PHP-FPM and Nginx in Virtualmin <span class="bold">IS</span> in this book. Nothing is left out.</p>
+<div class="calibre_8">
+ 
+</div>
+<ul>
+<li><blockquote>
+<span class="italic"><span class="bold">createvhost.sh</span></span> – shell script to to create the Nginx reverse-proxy “vhosts” - you just need to provide the 'userID', 'domain-name' and 'IP address', and the script will create the correct vhost configuration settings for you. 
+</blockquote>
+<p><br />
+</p></li>
+<li><blockquote>
+<span class="italic"><span class="bold">createpool.sh</span></span> – this shell script  will create individual “php-fpm” user-pools for each of your existing Virtual Servers. You just need to provide the 'userID' and it will take care of the rest. 
+</blockquote></li>
+</ul>
+<p> </p>
+<p>You will find these 2 scripts really useful if you have many existing websites (virtual servers) in your current Virtualmin setup and you want to migrate them to PHP-FPM and/or Nginx Reverse Proxy.</p>
+<p>My goal with this book (as with all my other books in the “Practial Guide Series”) is to empower you to be productive as quickly as possible!  </p>
+<p> </p>
+<p>Ok, one last note before we begin –  my lawyer said it should be “framed correctly” in the format below (“Disclaimer and Terms of Use Agreement”) - but if I have my way, the “short and sweet version” version of the TOS is this - “<span class="italic">If you mess up your server, it's your own fault, so proceed with caution and always test on a development server/VPS first</span>”.  Cool? Let's proceed!</p>
+<div id="index_split_003.html#calibre_pb_3" class="mbp_pagebreak">
+
+</div>
+<p><span id="index_split_004.html"></span></p>
+<p><span class="calibre5"><span class="bold">Disclaimer and Terms of Use Agreement</span></span><span></span></p>
+<p>The author and publisher of this eBook and the accompanying materials have used their best efforts in preparing this eBook. The author and publisher makes no representation or warranties with respect to the accuracy, applicability, fitness, or completeness of the contents of this eBook. The information provided in this book is provided on an “As Is” basis, without warranty and is strictly for educational purposes. Therefore, if you wish to apply the ideas contained in this EBook, you take full responsibility for your actions.  </p>
+<p>The author and publisher disclaim any warranties (expressed or implied), merchantability, or fitness for any particular purpose. The author and publisher  shall in no event be held liable to any party for any direct, indirect, punitive, special, incidental or other consequential damages arising direclty or indirectly from any use of this material, which is provided “as is”, and without warranties.</p>
+<p>The author and publisher do not warrant the performance, effectiveness or applicability of any sites listed or linked to in this eBook.  All links are for information purposes only and are not warranted for content, accuracy or any other implied or explicit purpose.</p>
+<div id="index_split_004.html#calibre_pb_4" class="mbp_pagebreak">
+
+</div>
+<p><span id="index_split_005.html"></span></p>
+<p><span class="calibre5"><span class="bold">Introduction</span></span><span></span></p>
+<p>This is a practical, hands-on guide to help you setup, configure, integrate and automate both PHP-FPM and Nginx reverse-proxy into the Virtualmin web-panel.  There are many tutorials online that shows you how you can do this, but the process is manual and very tedious (you're required to edit multiple configuration files each time).</p>
+<p> </p>
+<p>The method I'm about to show you is fully automated. Once you have set it up, you can use the familiar Virtualmin interface to create your Virtual Servers (websites) with PHP-FPM running under its own Virtual-Server ID.  </p>
+<p>No more messing with multiple configuration files!</p>
+<p> </p>
+<p><span class="bold">NOTE:</span>  Although this book is targetted at the more seasoned Linux users/System Administrators to setup PHP-FPM and Nginx reverse-proxy,  I've included as much introductory text as possible to provide a quick overview of each step. If you're a seasoned System Admin, you can just skip the the 'intro' text and dive into the meaty stuff.</p>
+<p> </p>
+<p>Please note that familiarity with Virtualmin is required because this book does not cover the various settings and menus in Virtualmin.  For example,  if the instruction says, go to: “Virtualmin &gt; System Settings &gt; Server Template”  - the reader is assumed to know what that means and knows how to navigate to the appropriate page in Virtualmin.</p>
+<p> </p>
+<p>If you've no idea what that means, but you want work with Virtualmin, then you may want to check out my other book – “<span class="bold">Webmin &amp; Virtualmin – </span><span class="italic">the Open Source Alternative  to Cpanel</span>” - a newbie friendly book with multiple screenshots to help you get up to speed quickly with Virtualmin.</p>
+<p><span class="calibre1"><span class="bold"> </span></span></p>
+<p><span class="calibre1"><span class="bold">Why PHP-FPM? </span></span></p>
+<p>I won't into the details of what is PHP-FPM or what are its pros and cons – but in a nutshell, PHP-FPM offers greater stability and better performance for busy, high-traffic websites while utilizing lower resources.</p>
+<p> </p>
+<p>Because of these benefits, many webmasters are turning to PHP-FPM implementation instead of the typical “mod_php” or “FastCGI” implementation in stock Apache setup.  In Virtualmin, the default setup is to run PHP under the “fcgid” mode – which is great for providing the necessary security and account isolation.</p>
+<p> </p>
+<p>However, the main issue with this setup is that fcgid is not as efficient as PHP-FPM.  On a server with limited RAM/memory, a sustained burst of heavy traffic can quickly eat up all the available memory and cause instability to the server.</p>
+<p> </p>
+<p>Note: If you want to know more about how PHP-FPM stack up against the other PHP SAPIs,  please visit:  <a href="http://php-fpm.org/about/">http://php-fpm.org/about/</a>  You will find a comparison chart between vanilla PHP (php out of the box),  PHP-FastCGI and PHP-FPM. </p>
+<p> </p>
+<p> </p>
+<p><span class="calibre1"><span class="bold">Why Nginx?</span></span></p>
+<p>Nginx is a rising star where web-servers are concerned. Nearly 40% of the world's busiest website runs a highly tuned Nginx to serve thousands of visitors daily. It is fast, stable and it does not use as much resources as the Apache server.  Virtualmin has built-in support to run the Nginx webserver insteadl of Apache – but the support and functionality for Nginx is rather limited compared to Apache. Furthermore, if you want to run the Nginx webserver, you have to disable Apache.</p>
+<p> </p>
+<p>We want to run both – Apache as the main webserver, and Nginx as the “reverse-proxy” to handle all the static pages and files. This is not supported inVirtualmin. The information in this book will enable you to have the best of both worlds – the power and flexiblity of the Apache webserver, and the speed and agility of Nginx server as the “reverse proxy” running on the same Virtualmin powered server.</p>
+<p> </p>
+<p><span class="calibre1"><span class="bold">Why this book? </span></span></p>
+<p>There are many tutorials on the internet that shows one how to do this, but unfortunately, many of them are outdated and contains errors. Furthermore, the process is “Manual” - i.e. each time the webmaster create a new virtual server (hosting account), the webmaster has to manually edit multiple configuration files – the php-fpm pools, the Apache /etc/httpd/conf/httpd.conf file, etc.</p>
+<p> </p>
+<p>I wrote this book because I'm a great fan of automation. I want Virtualmin to automate the entire process – i.e. when I create a new virtual server (hosting account), I want everything to be automatically setup – the php-fpm pools running under its own UserID (virtual server ID) and the appropriate Apache directives automatically appended to the /etc/httpd/conf/httpd.conf file.</p>
+<p> </p>
+<p>This book is birthed after many days of searching the Internet for relevant information – from various developer forums, tech blogs and the official Virtualmin documentation, and putting all these bits and pieces together in this cohesive book. The custom config files provided and custom shell scripts are the results of many man-hours.</p>
+<p><span class="calibre1"><span class="bold"> </span></span></p>
+<p><span class="calibre1"><span class="bold">Assumption about the Reader</span></span></p>
+<p>The reader is expected to be familiar with the Virtualmin interface and the various menus and settings. The following skills are expected from the reader as well:</p>
+<div class="calibre_14">
+ 
+</div>
+<ul>
+<li><blockquote>
+Ability to use one of the built-in Unix/Linux editors such as 'vi' , 'joe' or 'nano'.
+</blockquote></li>
+<li><blockquote>
+Ability to run commands from the command line/shell.
+</blockquote></li>
+</ul>
+<p><span class="calibre1"><span class="bold"> </span></span></p>
+<p><span class="calibre1"><span class="bold">Overview</span></span></p>
+<p>Before we start, please take note that steps outlined in Chapter 1 – 5 are meant for a brand new server or VPS.  In other words, there are no existing websites or Virtual Servers configured in Virtualmin. This is important because we need to do some preparatory work to configure Virtualmin before creating our first Virtual Server (website).</p>
+<p> </p>
+<p><span class="italic"><span class="bold">NOTE: </span></span> If you have existing websites (virtual servers), you can still follow along but do NOT create any new virtual server until you've read Chapter 5.</p>
+<p>Otherwise, your existing sites will 'stop working' because it could not find the correct Apache handler to process the php files.  </p>
+<p><span class="bold"> </span></p>
+<p><span class="calibre5"><span class="bold">FAIR WARNING:</span></span><span class="bold">  </span>There is always a possibility that your existing sites may break if you decide to implement the steps outlined in this guide on your production server. This is because every server environment and setup is different. There are no identical setup – unless you have set them up exactly the same way from scratch at the same time. <span class="bold"> </span></p>
+<p> </p>
+<p>Murphy's Law tends to strike when one least expect it. Because of this, I would strongly recommend that you try this on a development server (you can easily get cheap VPS for $5 - $10/mth to test).</p>
+<p> </p>
+<p>Once you're confident that it will work in your environment, then you can apply it to your production server.  Let's dive in!</p>
+<div id="index_split_005.html#calibre_pb_5" class="mbp_pagebreak">
+
+</div>
+<p><span id="index_split_006.html"></span></p>
+<p><span class="calibre5"><span class="bold">Chapter 1: Installing the Software</span></span><span></span></p>
+<p>If you have just installed Virtualmin on a stock server or VPS, you're probably running CentOS 6  at the time of this writing (October 2014). CentOS 7 has just been released recently, and Virtualmin support for it is not as matured or stable compared to CentOS 6</p>
+<p> </p>
+<p>CentOS 6.5 (and 6.6)  ships with the following default software:</p>
+<div class="calibre_14">
+ 
+</div>
+<ul>
+<li><blockquote>
+PHP 5.3.3  (this version of PHP has reached its end of life and is no longer supported by the PHP team)
+</blockquote></li>
+<li><blockquote>
+MySQL 5.1.73  (a very old version of MySQL server. Current stable version is MySQL 5.5)
+</blockquote></li>
+<li><blockquote>
+Apache 2.2.15  (although aged, it is considered one of the most stable version of Apache ever released. The RedHat/CentOS team is still actively maintaining it)
+</blockquote></li>
+</ul>
+<p> </p>
+<p>For the purpose of this book, we will be updating PHP to the latest stable 5.4 and upgrading the aged MySQL server to the current 5.5 from the “EPEL” and “REMI” repositories. We will also install “mod_fastcgi” which is required for Apache to “communicate” with PHP-FPM from the “RepoForge” repository.</p>
+<p> </p>
+<p>A quick note about Software repositories – some 3rd party software repositories may use the same package name as the base CentOS packages – enabling and using these software repositories may cause you to accidentally over-write the standard base packages with those from these 3rd party repositories. Hence, use these 3rd party repositories with care.</p>
+<p> </p>
+<p><span class="bold">TIP:</span>  When you run the “yum install ...” command (without the '-y' flag), it will display the package name PLUS the name of the repository it is located. You need to manually enter “y” to confirm the install if want to go ahead and install the software.   </p>
+<p> </p>
+<p><span class="bold"><span class="underline">EPEL (Extra Packages for Enterprise Linux)</span></span></p>
+<p>Ref:  <a href="https://fedoraproject.org/wiki/EPEL">https://fedoraproject.org/wiki/EPEL</a> </p>
+<p>EPEL is a Fedora Special Interest Group that creates, maintains, and manages a high quality set of additional packages for Enterprise Linux such as RHEL (RedHat's commercial OS), CentOS (Same as RHEL, but community supported), Scientific Linux (SL) and Oracle Enterprise Linux (OEL).</p>
+<p> </p>
+<p>EPEL packages are usually based on their Fedora counterparts and does not conflict with or replace packages in the base Enterprise Linux distributions. EPEL uses much of the same infrastructure as Fedora, including buildsystem, bugzilla instance, updates manager, mirror manager, etc.</p>
+<p> </p>
+<p>Download and Install the EPEL repository:</p>
+<p><code class="calibre6"># wget </code><a href="http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm"><code class="calibre6">http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm</code></a> </p>
+<p><code class="calibre6"># rpm -ivh epel-release-6.8.noarch.rpm</code></p>
+<p>(Note: If you're using a different CentOS distro, e.g. 64-bit instead of 32-bit, please visit the EPEL page and download the appropriate rpm package for your machine.</p>
+<p>To check for the latest news/updates or software versions, please visit:</p>
+<p> </p>
+<p><span class="bold"><span class="underline">REMI:</span></span> </p>
+<p>Ref: <a href="http://blog.famillecollet.com/pages/Config-en">http://blog.famillecollet.com/pages/Config-en</a> </p>
+<p>The REMI software repository a yum repo maintained by a French programmer -  Remi Collet. It usually has the latest version of the software in found in the core CentOS and Red Hat repositories, and it uses the same package names as in the official repositories.</p>
+<p> </p>
+<p>For example, the official CentOS repository uses the name “php-cli” (the command line version of PHP and is based on PHP 5.3.3).   IF you install “php-cli” from the REMI  repository,  it will automatically upgrade the “php-cli” to the latest PHP 5.4.34</p>
+<p> </p>
+<p>Because of this (packages using the same naming convention as the official repos), the REMI repository is “disabled” by default so that you don't accidently “upgrade” a system software without realizing it.</p>
+<p> </p>
+<p>You'll have to explicity 'enable' this repo if you want to install a particular software from this repo.  The Remi repository also depends on the EPEL repository which is why we have to install the EPEL repo first.</p>
+<p> </p>
+<p>Download and Install the REMI repository:</p>
+<p><code class="calibre6"># wget </code><a href="http://rpms.famillecollet.com/enterprise/remi-release-6.rpm"><code class="calibre6">http://rpms.famillecollet.com/enterprise/remi-release-6.rpm</code></a><code class="calibre6"></code> </p>
+<p><code class="calibre6"># rpm -ivh remi-release-6.rpm</code></p>
+<p> </p>
+<p> </p>
+<p><span class="bold"><span class="underline">RPMFORGE: </span></span><span class="calibre_16">   </span><a href="http://repoforge.org/use/">http://repoforge.org/use/</a> </p>
+<p><span class="calibre_16">RPMFORGE is another popular softwaare repository trusted by many open-source enthusiast. It is now known as “RepoForge”, a project that maintains various RPM packages for Red Hat Enterprise Linux (RHEL), CentOS and Scientific Linux. It provides a set of repositories compatible with various RHEL-derived distributions. </span> </p>
+<p><span class="calibre_16"><span class="underline"> </span></span></p>
+<p><span class="calibre_16"><span class="underline">Download &amp; Install RepoForge:</span></span></p>
+<p><code class="calibre6"># wget </code><a href="http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el6.rf.i686.rpm"><code class="calibre6">http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el6.rf.i686.rpm</code></a><code class="calibre6"> </code></p>
+<p><span class="calibre_16"> </span></p>
+<p><span class="calibre_16">If you're using a different CentOS distro, please visit </span><a href="http://repoforge.org/use">http://repoforge.org/use</a><span class="calibre_16"> and select the appropriate version for your server. </span> </p>
+<p><span class="calibre_16"> </span></p>
+<p><span class="calibre_16">NOTE:  Do not install it  YET – because later, when we run the 'yum update' command to update the installed repositories, the default “AWStats” package will be replaced by the package in RepoForge repository which will cause the AWStats reporting to break. We'll address this issue later. </span></p>
+<p><code class="calibre6"> </code></p>
+<p>Now it's time to update the software repositories (EPEL &amp; REMI)</p>
+<p><span class="italic"><span class="bold"><span class="underline">Update the EPEL repository.</span></span></span></p>
+<p>The command below will update the latest packages from the EPEL repository</p>
+<p><code class="calibre6"># yum update</code></p>
+<p><img src="images/00017.jpg" class="calibre_17" /> Type “y” and hit the enter key.</p>
+<p><span class="italic"><span class="bold"><span class="underline"> </span></span></span></p>
+<p><span class="italic"><span class="bold"><span class="underline">Install/Upgrade MySQL 5.5 and PHP 5.4</span></span></span></p>
+<p>The command below (with the flag <code class="calibre6">--enablerepo=remi</code>) will activate the REMI repo and tells the yum package manager to install/upgrade the software from REMI:</p>
+<div class="calibre_14">
+ 
+</div>
+<ol>
+</ol>
+<p><code class="calibre6"># yum --enablerepo=remi upgrade mysql</code></p>
+<p> </p>
+<p>*Note: the command above will also upgrade PHP 5.3 to PHP 5.4 because the yum utility will ensure all the interlinked software dependencies are met (e.g. one of which was the php-mysql which was linked to MySQL 5.1 – so when we upgrade MySQL to 5.5, the yum utility will also upgrade the corresponding “php-mysql” packages to PHP 5.40).</p>
+<p><img src="images/00006.jpg" class="calibre_19" /> When prompted, type  'y' and press the enter key.</p>
+<p> </p>
+<p>Note:  The 4th column tells you which software repository the software package is being installed from.  Once the software upgrade has been completed, run this command to update some of the essential tables in MySQL:<br />
+ </p>
+<p><code class="calibre6"># mysql_upgrade </code></p>
+<p><code class="calibre6"> </code></p>
+<p><span class="italic"><span class="bold"><span class="underline">Install PHP-FPM </span></span></span></p>
+<p>Now that all the system software is up to date, let's install PHP-FPM from the REMI repo</p>
+<p><code class="calibre6"># yum --enablerepo=remi install php-fpm</code></p>
+<p> </p>
+<p>This will create the directory:  /etc/php-fpm.d/ with the default “www.conf” pool file. We will need to create a new 'pool template' called “www.bare” in this directory later.</p>
+<p><img src="images/00022.jpg" class="calibre_20" /><code class="calibre6">   </code></p>
+<div class="calibre_14">
+ 
+</div>
+<ol>
+</ol>
+<p>Ok, now we will install the “RepoForge” repository so that we can install the “mod_fastcgi” package.  This “mod_fastcgi” required for Apache to communicate with the PHP-FPM server.</p>
+<p><code class="calibre6"># rpm -ivh rpmforge-release-0.5.3-1.el6.rf.i686.rpm</code></p>
+<p><code class="calibre6"># yum install mod_fastcgi</code></p>
+<p><code class="calibre6"> </code></p>
+<p><img src="images/00039.jpg" class="calibre_21" />  </p>
+<p>The the command above will install a file called “fastcgi.conf” in the <span class="bold">/etc/httpd/conf.d/</span> directory.  Edit that file with your favorite editor and <span class="italic"><span class="bold">replace ALL</span></span> the content in that file with just these 3 lines of code:</p>
+<div class="calibre_14">
+ 
+</div>
+<ol>
+</ol>
+<p> </p>
+<p>(note: the source code for the 3 lines above is found in the “fastcgi.conf” file)</p>
+<div id="index_split_006.html#calibre_pb_6" class="mbp_pagebreak">
+
+</div>
+<p><span id="index_split_007.html"></span></p>
+<p><span class="calibre5"><span class="bold">Chapter 2: Virtualmin Configuration</span></span><span></span></p>
+<p>Ok, now that all the necessary software has been updated and installed, let's login to Virtualmin now.  </p>
+<p> </p>
+<p>Note: if this is the first time you are logging into Virtualmin, it will prompt you to go through  series of “Post Installation Steps” where it will fine-tune some of the server settings (e.g. optimizing the MySQL /etc/my.cnf for you based on the memory setting you choose and assigning a root password for MySQL).</p>
+<p> </p>
+<p>Once the post-installation steps have been completed, proceed to Virtualmin's Configuration page.  Click on the the Virtualmin menu, and click:  “System Settings” &gt; Virtualmin Configurations”</p>
+<p><img src="images/00023.jpg" class="calibre_23" /> You will then see the following page.</p>
+<p> </p>
+<p><img src="images/00041.jpg" class="calibre_24" />  </p>
+<p>Select “<span class="italic"><span class="bold">Actions upon server and user creation</span></span>” from the drop-down list:</p>
+<p>You will see the following:</p>
+<p><img src="images/00037.jpg" class="calibre_26" /></p>
+<p> </p>
+<p>The 2 important fields to note are the:</p>
+<div class="calibre_14">
+ 
+</div>
+<ul>
+<li><blockquote>
+Command to run before making changes to a server. <code class="calibre6">/root/updatehandler.sh</code> 
+</blockquote></li>
+<li><blockquote>
+Command to run after making changes to a server.  <code class="calibre6">/root/phpfpm.sh</code> 
+</blockquote></li>
+</ul>
+<p> </p>
+<p>This is the “key” to making all the PHP-FPM automation work.  Basically, this feature allows you to run custom scripts prior to making changes to a server (e.g. before a Virtual Server is created), as well as run another custom script AFTER making changes to a server (after Virtualmin has completed setting up a new virtual server).  </p>
+<p> </p>
+<p>This applies to “deleting” a virtual server as well.  In the screenshot above, we have entered 2 scripts:</p>
+<p> </p>
+<div class="calibre_14">
+ 
+</div>
+<ul>
+<li><blockquote>
+“<span class="italic"><span class="bold">updatehandler.sh</span></span>” is a simple shell script to check if the default “php.conf' file exist in /etc/httpd/conf.d/ - and if it does, to rename it to 'php.conf.orig'. This is to prevent Apache from loading the “mod_php” module which takes priority over the “mod_fastcgi” - in other words, Apache will run PHP as “Apache 2.0 Handler” instead of talking to PHP-FPM.
+</blockquote></li>
+<li><blockquote>
+“<span class="italic"><span class="bold">phpfpm.sh</span></span>” is the main script that creates new PHP-FPM pool under the Virtual Server's ID and restart the PHP-FPM service in the background. It is also remove this PHP-FPM pool if the Virtual server is destroyed.
+</blockquote></li>
+</ul>
+<div id="index_split_007.html#calibre_pb_7" class="mbp_pagebreak">
+
+</div>
+<p><span id="index_split_008.html"></span></p>
+<p><span class="calibre5"><span class="bold">Chapter 3: Virtualmin “Server Template”</span></span><span></span></p>
+<p>Now, let's create a new Server Template that includes the required Apache directives to communicate with the PHP-FPM service via the “mod_fastcgi” module.</p>
+<p> </p>
+<p>In Virtualmin, click on the “System Settings” &gt; Server Templates”</p>
+<p><img src="images/00036.jpg" class="calibre_28" /> If you haven't created a Server Template yet, click on the “Create a Template from Default Settings”.  </p>
+<p><img src="images/00046.jpg" class="calibre_29" />  </p>
+<p>Give it a name, e.g. “Server-X1” or “PHP-FPM” and click the “<span class="italic"><span class="bold">Create and Next</span></span>” button</p>
+<p>If you already have an existing custom  Server Template, you can click on that template and then click on the “Clone it” button.</p>
+<p><img src="images/00007.jpg" class="calibre_30" />  </p>
+<p>For example, I have an existing template called “Server-X1” - I clicked on it and then  click on the “Clone Template” button.</p>
+<p><img src="images/00047.jpg" class="calibre_31" /> Give it the cloned template a new name, say  “PHP-FPM”.</p>
+<p> </p>
+<p>There are many options and settings that you can set in the Server Template, in our case, we are only interested in the “Apache Website” section.  </p>
+<p> </p>
+<p>Click the drop-down list  (at the “Edit template section”) and  select “<span class="italic"><span class="bold">Apache Website</span></span>” </p>
+<p><img src="images/00024.jpg" class="calibre_32" />  </p>
+<p>You will then see a page with a box with the description: “Directives and settings for new websites”.  Select the “Apache Directives Below” from the radio-button </p>
+<p><img src="images/00018.jpg" class="calibre_33" />  </p>
+<p> Then, paste the following code at the very bottom, after the existing codes in the box.</p>
+<p><img src="images/00043.jpg" class="calibre_34" />  </p>
+<p>(<span class="italic">the sourcecode for the above is found in the “ifmodule_modfastcgi.txt</span>” )</p>
+<p> </p>
+<p><span class="bold">NOTE:</span>  The “FastCgiExternalServer ...”  line should be just one long line, there is NO  carriage return or the script will fail.  You can download the custom script package that is provided with this book - The download link is  at Chapter 10.</p>
+<p> </p>
+<p>Further down on this  same page,  you will see this section:</p>
+<p><img src="images/00040.jpg" class="calibre_35" /></p>
+<p> </p>
+<p>The default setting in Virtualmin is to execute PHP as 'FCGId'.</p>
+<p> </p>
+<p>Change it to “Apache mod_php (run as Apache's user)”  (see the screenshot above)</p>
+<p> </p>
+<p>This option does not add any additional FCGID directives to the “httpd.conf” file which may cause problem.</p>
+<p> </p>
+<p>The shell script (“updatehandler.sh”) that we had set in the Virtualmin Configuration page earlier will ensure that the 'mod_php' module is not loaded.</p>
+<div id="index_split_008.html#calibre_pb_8" class="mbp_pagebreak">
+
+</div>
+<p><span id="index_split_009.html"></span></p>
+<p><span class="calibre5"><span class="bold">Chapter 4: Automation: Custom Scripts</span></span><span></span></p>
+<p>In Chapter 2, we've setup Virtualmin to run 2 custom scripts – “updatehandler.sh” before creating the virtual server, and “phpfpm.sh” after the virtual server has been created. In this chapter, we'll take a closer look at these 2 shell scripts, plus a few other “helper” scripts.</p>
+<p>You can download the scripts here: <a href="http://ilovevirtualmin.com/books-scripts/php-fpm">http://ilovevirtualmin.com/books-scripts/php-fpm</a></p>
+<p>Download the “vserver.tgz” file and extract it in the /root directory.  You will see the following files and directory:</p>
+<div class="calibre_14">
+ 
+</div>
+<ul>
+<li><blockquote>
+<code class="calibre6">updatehandler.sh</code>
+</blockquote></li>
+<li><blockquote>
+<code class="calibre6">phpfpm.sh</code>
+</blockquote></li>
+<li><blockquote>
+<code class="calibre6">createpool.sh</code>
+</blockquote></li>
+<li><blockquote>
+<code class="calibre6">www.bare</code>
+</blockquote></li>
+<li><blockquote>
+<code class="calibre6">fastcgi.conf</code>
+</blockquote></li>
+<li><blockquote>
+<code class="calibre6">nginx/  ← this is a folder.</code>
+</blockquote>
+<div class="calibre_38">
+ 
+</div>
+<ul>
+<li><blockquote>
+<blockquote>
+<code class="calibre6">nginx.conf</code>
+</blockquote>
+</blockquote></li>
+<li><blockquote>
+<blockquote>
+<code class="calibre6">proxy.inc</code>
+</blockquote>
+</blockquote></li>
+<li><blockquote>
+<blockquote>
+<code class="calibre6">microcache.inc</code>
+</blockquote>
+</blockquote></li>
+<li><blockquote>
+<blockquote>
+<code class="calibre6">virtualserver.com</code>
+</blockquote>
+</blockquote></li>
+<li><blockquote>
+<blockquote>
+<code class="calibre6">nginx-proxy</code>
+</blockquote>
+</blockquote></li>
+<li><blockquote>
+<blockquote>
+<code class="calibre6">createvhost.sh</code>
+</blockquote>
+</blockquote></li>
+</ul></li>
+</ul>
+<p><code class="calibre6"> </code></p>
+<p>Let's look at each of these custom scripts:</p>
+<p><span class="bold"> </span></p>
+<p><span class="bold">1. “updatehandler.sh”</span></p>
+<p>Basically, this script checks if the /etc/httpd/conf.d/php.conf exist. If it does, then  will rename it to “php.conf.orig” to prevent Apache from loading this module and running the PHP interpreter as 'mod_php'.  This will enable 'mod_fastcgi' module to run and communicate with the PHP-FPM server.</p>
+<p> </p>
+<p>It will also make a backup copy of all the files in the /etc/httpd/conf/ and /etc/httpd/conf.d/ to the “/root/config-bak/” for safe-keeping.</p>
+<p><img src="images/00027.jpg" class="calibre_42" /><span class="bold">  </span></p>
+<p><span class="bold">2. “phpfpm.sh”</span></p>
+<p>This script makes use of the conditional statement “If the $VIRTUALSERVER_ACTION“ provided by Virtualmin.  This is a cool feature in Virtualmin that allows one to create some really funky scripts by using the various conditional statements provided by Virtualmin.   Here's the  code listing:</p>
+<p><img src="images/00005.jpg" class="calibre_43" />  </p>
+<p>This script (phpfpm.sh) uses the 'sed' command to create a new PHP-FPM pool under the Virtual Server's userID (account owner) in the /etc/php-fpm.d/ directory.</p>
+<p> </p>
+<p>It uses the base pool template file (“www.bare”) and replaces ALL occurences of “www” with the “userID”.   </p>
+<p> </p>
+<p>You can also tweak the settings in the “www.bare” file to suit your server environment.   </p>
+<p> </p>
+<p>If If the $VIRTUALSERVER_ACTION test returns 'DELETE_DOMAIN' (i.e. the virtual server was deleted from Virtualmin, then this script will remove the PHP-FPM pool file and restart the PHP-FPM service to remove that user's process.</p>
+<p> </p>
+<p>*NOTE:  The additional “if” statement, i.e.</p>
+<p><span class="calibre4"><code class="calibre6">if [ -f /root/nginx-proxy ]; then </code></span></p>
+<p><span class="calibre4"><code class="calibre6">  …CODE to create/delete Nginx vhosts…</code></span></p>
+<p><span class="calibre4"><code class="calibre6">fi</code></span></p>
+<p><span class="bold"> </span></p>
+<p>The conditional statement above checks if the file “nginx-proxy” (it's a blank/empty file) exist in the “/root” folder.  By default, it doesn't, but resides in the “ngnix” folder instead. So, if you want to the script to automatically create the Nginx reverse-proxy vhost files, you need to copy the “nginx-proxy” file to /root  </p>
+<p>(OR you can just issue this command:  <code class="calibre6"># touch /root/nginx-proxy </code>)</p>
+<p><span class="bold"> </span></p>
+<p><span class="bold">3. “www.bare” </span></p>
+<p>This is the php-fpm pool template file that will be used by the '/root/phpfpm.sh' script. All occurences of 'www' will be replaced with the Virtual-server's userID.</p>
+<p><img src="images/00026.jpg" class="calibre_44" /> You can tweak the variables, e.g. the “pm._*” to suit your server environment/resources.</p>
+<p> </p>
+<p><span class="bold">4. “fastcgi.conf” </span></p>
+<p>This is the custom (and much simpler) 3 liner which tells Apache to load the 'mod_fastcgi' module and create a new PHP handler (called “php-fpm”) to process all .php files.  We wil use this file to replace the default “fastcgi.conf” that came with the 'mod_fastcgi' module.</p>
+<p><img src="images/00015.jpg" class="calibre_45" /><span class="bold">  </span></p>
+<p>Once all these custom scripts are in place, you're good to go.  Create your Virtual Servers  as you normally would, and Virtualmin will automatically setup the new virtual-server to run PHP-FPM under its own userID.</p>
+<p> </p>
+<p>If you want to do more fancy stuff with automating the Virtual Server creattion, refer to this documentation: <a href="http://www.virtualmin.com/documentation/developer/prepost">http://www.virtualmin.com/documentation/developer/prepost</a> </p>
+<p>It has a few sample scripts to get you started, and below are the list of variables which are useful:</p>
+<p><span class="bold"> </span></p>
+<p><span class="bold">List of Virtualmin's Environment Variables</span></p>
+<p><img src="images/00049.jpg" class="calibre_46" /><code class="calibre6">   </code></p>
+<p><span class="calibre1"><span class="bold">Congratulations! You now have a fully automated PHP-FPM powered Virtualmin server.</span></span></p>
+<div id="index_split_009.html#calibre_pb_9" class="mbp_pagebreak">
+
+</div>
+<p><span id="index_split_010.html"></span></p>
+<p><span class="calibre5"><span class="bold">Chapter 5: Setup PHP-FPM on existing Websites.</span></span><span></span></p>
+<p>The earlier chapters assumes a brand new Virtualmin server that does not have any existing Virtual Servers (websites). This allowed us to configure Virtualmin to  discard the other PHP Sapi and uses PHP-FPM only.  If you have existing websites (Virtual Servers) in Virtualmin, we need to reconfigure the existing sites first – otherwise, those sites will stop working after PHP-FPM has been installed.</p>
+<p> </p>
+<p>This chapter will guide you through the necessary steps to achieve this.  I do strongly recommend that you do <span class="bold">NOT</span> do this on a Production server because the chances of breaking something is quite high, e.g. a small typo error can cause havoc.  Test it out on a development server (VPS) first, and once you've the steps down pat, only then you can implement it on your live server.</p>
+<p> </p>
+<p>Ok, with that out of the way, let's proceed!</p>
+<p><span class="bold"> </span></p>
+<p><span class="bold">Backup! </span></p>
+<p>Needless to say, the first step is to backup ALL the existing Apache's configuration so that in case anything goes awry, you can restore them.</p>
+<p><code class="calibre6"># cd /etc/httpd/</code></p>
+<p><code class="calibre6"># mkdir -p /root/apache-config/</code></p>
+<p><code class="calibre6"># cp -R conf/ conf.d/  /root/apache-config</code></p>
+<p> </p>
+<p>The 3 commands above will copy all the existing configuration to the /root/ directory.</p>
+<p>Once you've backed-up the configuration files, you can follow the steps outlined from Chapter 1 – 4 to setup PHP-FPM to work with Virtualmin.  </p>
+<p> </p>
+<p><span class="calibre5"><span class="bold">BUT</span></span>, do NOT create/modify/delete any virtual servers yet!  </p>
+<p> </p>
+<p>This is to prevent Virtualmin from triggering our custom scripts.  </p>
+<p>We need to make the following changes first:</p>
+<p><span class="italic"><span class="bold"> </span></span></p>
+<p><span class="italic"><span class="bold">Step 1. Modify /etc/httpd/conf/httpd.conf</span></span></p>
+<p>After installing PHP-FPM , mod_php will no longer be loaded in Apache, and neither will “FCGId”  - so we need to modify all the existing Virtualhost configured in the /etc/httpd/conf/httpd.conf to work with PHP-FPM instead.</p>
+<p> </p>
+<p>Open the file with your favorite editor – find and delete ALL the following lines of code that beings with:</p>
+<p>AddHandler fcgid-script .php</p>
+<p>AddType application/x-httpd-php .php</p>
+<p>AddHandler fcgid-script .php</p>
+<p>AddHandler fcgid-script .php5</p>
+<p>FCGIWrapper /home/pixms/fcgi-bin/php5.fcgi .php</p>
+<p>FCGIWrapper /home/pixms/fcgi-bin/php5.fcgi .php5</p>
+<p>RemoveHandler .php</p>
+<p>RemoveHandler .php5</p>
+<p>IPCCommTimeout</p>
+<p>FcgidMaxRequestLen</p>
+<p> </p>
+<p>And ALL occurences of that starts with “php_”</p>
+<p>For example,  “<code class="calibre6">php_admin_value engine Off</code>”</p>
+<p> </p>
+<p>After that, you need to append the following lines of code for <span class="bold">EACH virtual host,</span> e.g.</p>
+<p><code class="calibre6">&lt;IfModule mod_fastcgi.c&gt; </code></p>
+<p><code class="calibre6">   Alias /php-fpm /home/</code><code class="calibre6">USER</code><code class="calibre6">/cgi-bin/php-fpm </code></p>
+<p><code class="calibre6">   FastCgiExternalServer /home/</code><code class="calibre6">USER</code><code class="calibre6">/cgi-bin/php-fpm -socket /home/</code><code class="calibre6">USER</code><code class="calibre6">/cgi-bin/</code><code class="calibre6">USER</code><code class="calibre6">.sock -pass-header Authorization -idle-timeout 100 </code></p>
+<p><code class="calibre6">&lt;/IfModule&gt; </code></p>
+<p><code class="calibre6"> </code></p>
+<p>Replace “USER” with the actual UserID of that Virtual Server.   You can find the 'USER' for each virtualhost by looking for the “DocumentRoot” line.</p>
+<p> </p>
+<p>For example:</p>
+<p><code class="calibre6">DocumentRoot /home/</code><code class="calibre6">pixms</code><code class="calibre6">/public_html</code></p>
+<p>This tells you that the 'USER' in this case is 'pixms'</p>
+<p> </p>
+<p><span class="italic"><span class="bold">Step 2. Rename /etc/httpd/conf.d/php.conf</span></span></p>
+<p>Rename 'php.conf' to php.conf.orig. This is to prevent Apache from loading the mod_php module.</p>
+<p><code class="calibre6"># cd /etc/httpd/conf.d/</code></p>
+<p><code class="calibre6"># mv php.conf php.conf.orig</code></p>
+<p> </p>
+<p><span class="italic"><span class="bold">Step 3. Create the individual PHP-FPM pools </span></span></p>
+<p>Make sure the template pool file (www.bare)  exist in /etc/php-fpm.d/</p>
+<p>If not, then either create it (from the source code listing in Chapter 4 or copy it from the downloaded custom script package.</p>
+<p> </p>
+<p># cd /etc/php-fpm.d/</p>
+<p>We are going to use the powerful 'sed' utility to do the heavy lifting for us.</p>
+<p>The syntax is:  </p>
+<p><span class="calibre4"><code class="calibre6">sed 's/www/USER/g' www.bare &gt; USER.conf</code></span></p>
+<p>where 'USER' is the virtual server account-owner ID.</p>
+<p>For example, assuming the UserID for our virtual server is “pixms”, we would issue the following commmand:</p>
+<p><span class="calibre4"><code class="calibre6"> </code></span></p>
+<p># sed 's/www/pixms/g' www.bare &gt; pixms.conf</p>
+<p><img src="images/00019.jpg" class="calibre_50" />  </p>
+<p>OR, you can use provided script, “createpool.sh”  to automatically create them.</p>
+<p><img src="images/00045.jpg" class="calibre_51" />  </p>
+<p>Source code for:  <span class="bold">createpool.sh</span> </p>
+<p>(note: this scripts needs the template file, “www.bare”  in the /etc/php-fpm.d directory)</p>
+<p><img src="images/00031.jpg" class="calibre_52" /><span class="bold">  </span></p>
+<p><span class="bold"> </span></p>
+<p><span class="italic"><span class="bold">Step 4: Final Check</span></span></p>
+<div class="calibre_14">
+ 
+</div>
+<ul>
+<li><blockquote>
+Have you edited all the &lt;VirtualHost&gt; containers in the /etc/httpd/httpd.conf file?
+</blockquote></li>
+<li><blockquote>
+Have you created a dedicated php-fpm pool file for each VirtualHost (VirtualServer)?  
+</blockquote></li>
+<li><blockquote>
+Once everything has been checked, you can start the PHP-FPM service:
+</blockquote>
+<blockquote>
+<code class="calibre6"># service php-fpm start</code>
+</blockquote></li>
+<li><blockquote>
+Before restarting the Apache server, issue this command to check that there are no errors in the /etc/httpd/conf/httpd.conf file:
+</blockquote>
+<blockquote>
+<code class="calibre6"># httpd -M</code>  
+</blockquote></li>
+</ul>
+<p>If there are errors in the config file (/etc/httpd/conf/httpd.conf), it will be displayed on the screen, e.g.  if I missed removing one of the 'php_admin_' directive.</p>
+<p><img src="images/00009.jpg" class="calibre_54" />  </p>
+<p>If there are no errors, you can safely  restart Apache:</p>
+<p><code class="calibre6"># service httpd restart</code></p>
+<div id="index_split_010.html#calibre_pb_10" class="mbp_pagebreak">
+
+</div>
+<p><span id="index_split_011.html"></span></p>
+<p><span class="calibre5"><span class="bold">Chapter 6: Apache Handlers 101 / PHP-FPM</span></span><span></span></p>
+<p>This is an “informational” chapter – to give you some theory and background about Apache Handlers and PHP-FPM.  It is not required reading, but recommended so that you'll have a better understand of what is an Apache Handler and what is PHP-FPM?”</p>
+<p> </p>
+<p>In the early (or was it late) 90s, a web-server can only process and display HTML and images. It cannot access databases, and it can do any of those fancy 'dynamic' stuff that we see today.</p>
+<p> </p>
+<p>To overcome the problem, the programmers came up with “CGI” protocol – a way for web-servers to communicate with other 'programs' (or applications) written in some other programming language such as Perl, C/C++,</p>
+<p> </p>
+<p>The developers of the Apache webserver then came up with the concept of “Handlers” - basically a module/method that tells Apache how to communicate with external programs (e.g. Perl script, PHP scripts, etc) when it encounters a specific file type.</p>
+<p> </p>
+<p>For example, if a web-visitor requested for a *.cgi file, then an appropriate handler will instruc Apache to invoke the CGI script/parser to process that file. If the requested file is a *.php file, then the appropriate PHP handler will instruct Apache how to process the *.php file.</p>
+<p> </p>
+<p>So, in a nutshell, that is what an Apache “Handler” is (in layman's terms) – it instructs Apache how to handle/process different file types.</p>
+<p> </p>
+<p>For PHP files, there are essentially 3 different type of “Handlers”</p>
+<div class="calibre_14">
+ 
+</div>
+<ul>
+<li><blockquote>
+Load and run the entire PHP engine (interpreter) within Apache itself. This is known as “mod_php” or “Apache 2.0 Handler”. This is the default method.
+</blockquote>
+<p><br />
+</p></li>
+<li><blockquote>
+The “CGI” handler –  Apache will invoke the /usr/bin/php-cgi script to process the PHP file and passes all the environment variables to the cgi program.  The cgi program will process the requests and then pass the results back to Apache. Once that is done, the cgi process is killed.
+</blockquote>
+<p><br />
+</p></li>
+<li><blockquote>
+The “Fast-CGI” handler  – this is an enhancement to the CGI protocol where the “fast-cgi” process is not killed after it has completed its job. It can potentially “live forever” and is usually run as a daemon process alongside Apache. Also, the communication between Apache and the FastCGI application is via the IPC (Inter Process Communications) such as the Unix socket or TCP socket.
+</blockquote></li>
+</ul>
+<p> </p>
+<p>In the first case, i.e.  “mod_php” - each instance of the child apache process has the entire PHP stack/engine within itself. This cause un-necessary bloat to the Apache processes because not every web requests are going to PHP scripts, some web requests are just requesting for images, css, javascripts.  Hence, running “mod_php” causes in-efficient memory usage – and can be an issue if a heavy traffic website has lots of graphics.</p>
+<p> </p>
+<p>Usually, 'mod_suexec' and 'mod_suPHP' will be used together with 'mod_php' to enable Apache to run the PHP scripts under the same userID as the Virtual Server to provide extra security and account isolation, i.e. the scripts in one virtual server cannot access the files on another virtual server.</p>
+<p> </p>
+<p>The CGI handler is no longer used in modern applications because the action of spawning/killing CGI processes is very CPU intensive and inefficient.  </p>
+<p> </p>
+<p>The FastCGI handler is preferred. It allows PHP scripts to be executed by the PHP engine/parser outside of the Apache web server, i.e.  each request is passed from the Apache web server to the FastCGI process via a communication socket (IPC).</p>
+<p> </p>
+<p>The advantages of FastCGI is that the processes are 'persistent' - Multiple persistent processes can configured to run in the background to handle incoming PHP requests.  This avoids the costly CPU intensive operation of spawning/terminating processes in the 'CGI' method.  </p>
+<p> </p>
+<p>So, where does PHP-FPM comes into the picture?  PHP-FPM is actually “FastCGI” with its own built-in “Process Manager” (PM).</p>
+<p> </p>
+<p>One thing to take note of is that most FastCGI applications/processes run in parallel in daemon (server) mode alongside Apache. These FastCGI applications are managed by a “PM” (Process Manager).</p>
+<p> </p>
+<p>In Apache, when we used the “fastcgid” module (the default setting in Virtualmin), Apache uses its own built-in “PM” to manage the FastCGI processes.</p>
+<p> </p>
+<p>But when we use the 'mod_fastcgi' module (installed from the RepoForge repository),  Apache hands over the control of the “Process Manager” to the PHP-FPM engine which has its own “PM” - which is far more efficient.</p>
+<p> </p>
+<p>By the way, the “FPM” stands for “FastCGI (<span class="bold"><span class="calibre_49">F</span></span>) Process (<span class="bold"><span class="calibre_49">P</span></span>) Manager(<span class="bold"><span class="calibre_49">M</span></span>)”</p>
+<p>For more information about PHP-FPM, visit:  <a href="http://php-fpm.org/about/">http://php-fpm.org/about/</a> </p>
+<p> </p>
+<p>It has been noted that PHP-FPM can serve up millions of PHP requests without any issues. Of course, this would also depend on the hardware specifications.</p>
+<div id="index_split_011.html#calibre_pb_11" class="mbp_pagebreak">
+
+</div>
+<p><span id="index_split_012.html"></span></p>
+<p><span class="calibre5"><span class="bold">Chapter 7:  Setting up Nginx Reverse-Proxy</span></span><span></span></p>
+<p>Virtualmin has built-in support for running “Nginx” as the primary Web-server instead of Apache. If you opt to run Nginx, then you will need to disable the Apache webserver in Virtualmin, as well as a number of other packages such as the Awstats package. At the time of this writing (Nov 2014), the Nginx support (as the primary web-server) in Virtualmin is not as robust or full-featured compared to the Apache web-server</p>
+<p> </p>
+<p>The goal of this chapter is to run Nginx as the “reverse-proxy” to our Apache web-server, i.e. Nginx will serve all the static files &amp; pages (all the image, css, and html files), while the PHP files will be served by Apache+PHP-FPM.</p>
+<p> </p>
+<p><span class="italic"><span class="bold">A Word about Performance before we begin.</span></span></p>
+<p>Nginx's role as a reverse-proxy is to boost website performance by offloading some of the load from the Apache web-server.  Personally, I've not been able to detect significant performance boost from using Nginx as a reverse-proxy – but most probably it is  because my website doesn't have thousands of visitors a day.  </p>
+<p> </p>
+<p>Running Apache with PHP-FPM is sufficient for most people, but anyway, it is always good to be prepared … who knows, perhaps one day your website will be 'slashdotted' and you'll be glad that you have Nginx on your side.</p>
+<p> </p>
+<p>The first step is to download and install the Nginx repository:</p>
+<p>Go to <a href="http://nginx.org/en/linux_packages.html#stable">http://nginx.org/en/linux_packages.html#stable</a>  </p>
+<p> </p>
+<p><code class="calibre6"># wget </code><a href="http://nginx.org/packages/centos/6/noarch/RPMS/nginx-release-centos-6-0.el6.ngx.noarch.rpm"><code class="calibre6">http://nginx.org/packages/centos/6/noarch/RPMS/nginx-release-centos-6-0.el6.ngx.noarch.rpm</code></a> </p>
+<p><code class="calibre6"># rpm -ivh nginx-release* </code></p>
+<p><code class="calibre6"># yum install nginx</code></p>
+<p><img src="images/00034.jpg" class="calibre_55" />  </p>
+<p>Type “y” and press the 'enter' key.</p>
+<p> </p>
+<p>This will install the latest Stable version of Nginx on your server.  But take note that the default Nginx install above assumes that it will act as the “main webserver” and not as a “Reverse Proxy”.</p>
+<p> </p>
+<p>In order to set it up to act as a reverse proxy, I've prepared the necessary configuration files. In Chapter 4,  the extracted the custom script package (vserver.tgz) has a folder called “nginx” with the following files:</p>
+<div class="calibre_14">
+ 
+</div>
+<ul>
+<li><blockquote>
+<code class="calibre6">nginx.conf</code>
+</blockquote></li>
+<li><blockquote>
+<code class="calibre6">proxy.inc</code>
+</blockquote></li>
+<li><blockquote>
+<code class="calibre6">microcache.inc</code>
+</blockquote></li>
+<li><blockquote>
+<code class="calibre6">virtualserver.com</code>
+</blockquote></li>
+<li><blockquote>
+<code class="calibre6">createvhost.sh</code>
+</blockquote></li>
+<li><blockquote>
+<code class="calibre6">nginx-proxy  ← this is a blank/empty file</code>
+</blockquote></li>
+</ul>
+<p> </p>
+<p>Copy all these files to the  /etc/nginx/  </p>
+<p><code class="calibre6"># cd /root/nginx</code></p>
+<p><code class="calibre6"># cp * /etc/nginx/</code></p>
+<p><code class="calibre6"># mkdir -p /etc/nginx/vhosts</code></p>
+<p> </p>
+<p>Note:  You will need to overwrite  the existing “nginx.conf”.</p>
+<p>Copy the “nginx-proxy” (this is a blank/empty file) to the /root directory.</p>
+<p>The script “phpfpm.sh” checks if this file (nginx-proxy) exist in /root – if yes, then it will proceed to create the necessary Nginx reverse proxy configuration (vhosts) files when you create a new Virtual Server from Virtualmin. Without this file (nginx-proxy), the “phpfpm.sh” script will NOT create the nginx vhost configuration file.</p>
+<p><code class="calibre6"> </code></p>
+<p><code class="calibre6"># cp nginx-proxy /root/ </code></p>
+<p><code class="calibre6"> </code></p>
+<p>Now let's login to Virtualmin and make some adjustment the following settings:</p>
+<p><span class="bold">Webmin &gt; Servers &gt; Apache Webserver</span></p>
+<p>and click on the “Global Configuration” tab:</p>
+<p> </p>
+<p><img src="images/00002.jpg" class="calibre_57" />  </p>
+<p>Then click on the “Networking and Addresses” icon</p>
+<p> </p>
+<p><img src="images/00044.jpg" class="calibre_58" />  </p>
+<div id="index_split_012.html#calibre_pb_12" class="mbp_pagebreak">
+
+</div>
+<p><span id="index_split_013.html"></span></p>
+<p>Change the default port “80”  to  “8080”, like so:<span></span></p>
+<p><img src="images/00021.jpg" class="calibre_59" />  </p>
+<p>Now, as before, we need to create a new Server Template in Virtualmin to use port “8080” instead of port 80.</p>
+<p> </p>
+<p><span class="bold">Virtualmin &gt; System Settings &gt; Server Templates</span></p>
+<p>You can clone one of the existing templates (e.g. the one we had created earlier for creating PHP-FPM).</p>
+<p>Select the “Apache website” from the “Edit template section” drop-down list as before.</p>
+<p><img src="images/00025.jpg" class="calibre_60" /> Scroll down the page, and look for “Port Number for Virtual Hosts” and change it to “8080” as shown below:</p>
+<p><img src="images/00012.jpg" class="calibre_61" /><span class="bold"> </span><span class="calibre5"><span class="bold">  </span></span></p>
+<p><span class="calibre5"><span class="bold">VERY Important Final Step!</span></span></p>
+<p>We need to modify the “Default Settings” template and change the port to 8080 too!</p>
+<p>Click on the “Virtualmin &gt; System Settings &gt; Server Templates” again.</p>
+<p>And click on the “Default Settings” template.</p>
+<p><img src="images/00016.jpg" class="calibre_62" />  </p>
+<p>As before, select the “Apache Website” section from the drop-down list. Scroll down the page to the Port section and change the default port 80 to “8080”</p>
+<p> </p>
+<p><img src="images/00012.jpg" class="calibre_61" />  </p>
+<p>Even though we won't be using this “Default Template” when creating our Nginx-reverse-Proxy powered site, we still have to do this, otherwise, the default port 80 will be enforced in the “httpd.conf” file and Nginx will fail to start.</p>
+<p> </p>
+<p>Once you've done this, we're ready to create our first Nginx-Reverse-Proxy powered site.</p>
+<p><span class="bold"> </span></p>
+<p><span class="bold">VERY IMPORTANT NOTE:  </span>If you have existing websites (virtual servers) running on port 80 via Apache, do NOT restart Apache or Nginx OR create a new virtual server. If you do, then all your existing websites will fail to load.<span class="bold"> </span></p>
+<p> </p>
+<p>You need to modify/update the Apache config file /etc/httpd/conf/httpd.conf and replace port 80 with “8080”, for example:</p>
+<p><code class="calibre6"> </code></p>
+<p>Original:  &lt;VirtualHost X.X.X.X:<span class="bold">80</span>&gt;</p>
+<p>Change to:  &lt;VirtualHost X.X.X.X:<span class="bold"><span class="calibre_63">8080</span></span>&gt;</p>
+<p>where X.X.X.X is the IP address of your own server.</p>
+<p> </p>
+<p>Then, you need to create EACH of the nginx vhosts files for every existing website you have.  In the /root/nginx/ directory, there is standard template vhost file - “virtualserver.com” which you can use a reference for the syntax.</p>
+<p> </p>
+<p>We will use the provided script - “createvhost.sh” to create the required vhosts, i.e. you just need to run the script, enter the “userID” (account owner ID of this virtual server) and the domain name (e.g. pixms.com). It will prompt you for the server IP address if you did not define it in the script (replace “X.X.X.X” with your server IP and uncomment it)</p>
+<p><img src="images/00032.jpg" class="calibre_65" />  </p>
+<p>The script takes the default vhost template ('virtualserver.com') and replace the appropriate tokens with the input that you provide for the new Nginx vhosts.</p>
+<p> </p>
+<p>Here's the source code of the “createvhost.sh” script:</p>
+<p><img src="images/00010.jpg" class="calibre_67" /> <span class="calibre4">  </span></p>
+<p>You can also manually edit the file if you want to see how it works. Below is the snippet of the file. You need to change the following for EACH virtualhost:</p>
+<p> </p>
+<p><span class="bold"><span class="calibre_49">IP_ADDRESS</span></span>:   The actual IP address of your server<span class="bold"> </span></p>
+<p><span class="bold"><span class="calibre_49">NGINX</span></span>:   The domain-name (without the 'www'). E.g.:  “ilovevirtualmin.com”<span class="bold"> </span></p>
+<p><span class="bold"><span class="calibre_49">XUSER</span></span>:   The userID of for this virtual server (account-owner)<br />
+<span class="bold"> </span></p>
+<p><img src="images/00014.jpg" class="calibre_68" />  </p>
+<div id="index_split_013.html#calibre_pb_13" class="mbp_pagebreak">
+
+</div>
+<p><span id="index_split_014.html"></span></p>
+<p><span class="calibre5"><span class="bold">Chapter 8: Securing your Server (Bonus)</span></span><span></span></p>
+<p>Server Security is huge topic, and it is simply not possible to cover everything in a chapter or even one whole book.  In this chapter, we will just cover the 4 essential steps which I believe every server administrator should take to “lock down” the server -  regardless of whether the server is running Virtualmin or any other control-panel.</p>
+<p> </p>
+<p>These 4 steps are:</p>
+<div class="calibre_14">
+ 
+</div>
+<ul>
+<li><blockquote>
+Run only the services required, stop all the other services
+</blockquote></li>
+<li><blockquote>
+Secure /tmp
+</blockquote></li>
+<li><blockquote>
+Install a Firewall
+</blockquote></li>
+<li><blockquote>
+Install LMD (Linux Malware Detect)
+</blockquote>
+<p><br />
+</p></li>
+</ul>
+<p><span class="italic"><span class="bold">Essential Services Only</span></span></p>
+<p>Every service that we run on our server listens to a “port” - for example, the Apache webserver listens to port 80,  SSH server listens at port 22,   Mailserver at port 25, etc.</p>
+<p> </p>
+<p>Think of these 'ports' as “doors” on a fortress wall – the more doors you have on the fortress wall, the more targets the 'hackers' would have to practise on.</p>
+<p> </p>
+<p>To minimize this, we should shut down any services that we intend to use on our server. For example, if we don't intend to provide the mailing list service or the DAV login service to our users, then we should turn them off.</p>
+<p> </p>
+<p>We can do this from the command line by using the 'chkconfig' command or from the Webmin's Bootup and Shutdown interface, i.e.  </p>
+<p><span class="italic"><span class="bold"> </span></span></p>
+<p><span class="italic"><span class="bold">“Webmin &gt; System &gt; Bootup and Shutdown” </span></span></p>
+<p><img src="images/00013.jpg" class="calibre_69" /></p>
+<p>The default setup in Virtualmin is quite sane, but the following services can be safely  turned-off as well:</p>
+<div class="calibre_14">
+ 
+</div>
+<ul>
+<li><blockquote>
+xinetd
+</blockquote></li>
+<li><blockquote>
+splash-manager
+</blockquote></li>
+<li><blockquote>
+mailman (if you don't intend to provide mailing list service)
+</blockquote>
+<p><br />
+</p></li>
+</ul>
+<p> </p>
+<p><span class="italic"><span class="bold">Securing /tmp</span></span></p>
+<p>In most cases, the /tmp directory in a freshly installed/commissioned Linux server is NOT secured, i.e. it allows anyone (or script) to upload files to the /tmp directory and execute them.</p>
+<p> </p>
+<p>Run this simple test to find out whether your /tmp/ directory has the executable bit set:</p>
+<p>Create a simple 'hello world' Shell script in the /tmp directory:</p>
+<p> </p>
+<p><code class="calibre6">#!/bin/bash</code></p>
+<p><code class="calibre6">echo “hello world”</code></p>
+<p><code class="calibre6"> </code></p>
+<p>Then,chmod +x the script and try to run it.</p>
+<p><code class="calibre6"># chmod 755 hello.sh</code></p>
+<p><code class="calibre6"># ./hello.sh </code></p>
+<p><code class="calibre6"> </code></p>
+<p>If you see:  <code class="calibre6">“hello world”</code>  printed on the screen, then we need to fix it.</p>
+<p>Repeat this for the /var/tmp directory as well.</p>
+<p> </p>
+<p>To do this, we just need to edit the <code class="calibre6">/etc/fstab</code> file and add these 2 lines:</p>
+<p> </p>
+<p><img src="images/00033.jpg" class="calibre_70" /><code class="calibre6"></code><span class="calibre4"><code class="calibre6">  </code></span></p>
+<p><span class="italic"><span class="bold">NOTE:  </span></span><span class="italic">The entries in your /etc/fstab may be different – depending on your Operating System and if your server is a VPS,  your hosting company may provide a different “fstab” layout. If in doubt, please check with your hosting provider. </span><span class="italic"><span class="bold"> </span></span></p>
+<p> </p>
+<p>Once you've done with editing the /etc/fstab,  you can either reboot your server or issue this command to remount all your partitions for this to take effect.</p>
+<p> </p>
+<p><code class="calibre6"># mount -a</code> </p>
+<p> </p>
+<p>Note: The command above *should* causes all filesystems mentioned in /etc/fstab to be remounted, except the partitions with noauto option, but on certain VPSes, it may not work. Try running the 'hello.sh' file again to see if it runs. If yes, then best option is to reboot your VPS.</p>
+<p> </p>
+<p><span class="italic"><span class="bold">Installing Firewall</span></span></p>
+<p>Although Virtualmin comes with its own interface to help you manage the “iptables” rules and chains, it can be quite cryptic and daunting, especially if you are new to it.</p>
+<p>(The Virtualmin Firewall Interface can be found at:  Webmin &gt; Networking &gt; Firewall)</p>
+<p> </p>
+<p>An easier and more intuitive alternative is the CSF firewall from <a href="http://www.configserver.com/">www.configserver.com</a></p>
+<p>Login to your server via SSH and install csf firewall from the command line:</p>
+<p><img src="images/00042.jpg" class="calibre_72" /><code class="calibre6"></code></p>
+<p>Edit the csf config file, e.g.     <code class="calibre6"># vi etc/csf/csf.conf </code></p>
+<p>Look for this line (near the top of the file)</p>
+<p><span class="calibre4"><code class="calibre6"># lfd will not start while this is enabled </code></span></p>
+<p><span class="calibre4"><code class="calibre6">TESTING = "0" </code></span>← the default is “1”. Change it to “0” to enable CSF firewall. <span class="calibre4"><code class="calibre6"> </code></span></p>
+<p> </p>
+<p>Then, look for this section:  “IPv4 Port Settings” and add port “10000” and “20000”  to the “TCP_IN” and “TCP_OUT” line. See the underlined (in red) below.</p>
+<p><img src="images/00020.jpg" class="calibre_73" /><span class="italic"><span class="bold">  </span></span></p>
+<p><span class="italic"><span class="bold">NOTE: </span></span> If you've changed the Webmin/Virtualmin port to “11000”, then you need to update the ports here as well.</p>
+<p><code class="calibre6"># service csf start </code></p>
+<p>Now, let's install the CSF plugin for Webmin:</p>
+<p>Point your browser to:     <span class="bold">Webmin &gt;  Webmin Configuration &gt;  Webmin Modules </span> </p>
+<p>Select Install “From local file”  - and enter this path into the field:  <code class="calibre6">/usr/local/csf/csfwebmin.tgz</code> </p>
+<p><img src="images/00008.jpg" class="calibre_74" />  </p>
+<p>Then, click “Install Module ” button.   Once installed, you can access the CSF firewall interface from:    <span class="italic"><span class="bold">Webmin &gt; System &gt; ConfigServer Security and Firewall  </span></span> </p>
+<p>The first time you click on the link, you'll be prompted to update a symlink, i.e.</p>
+<p><img src="images/00011.jpg" class="calibre_75" /> Click on the link provided and you will then see the CSF web-interface.</p>
+<p><img src="images/00035.jpg" class="calibre_76" /></p>
+<p>The first thing you should do is click on the “Check Server Security”  button.</p>
+<p>This will cause the CSF firewalll tu run a scan/security audit on your server setup. It will give you a summary of what needs to be “fixed” or changed to beef up the security of your VPS/server.</p>
+<p> </p>
+<p>Then, follow the recommendation to further secure your server.</p>
+<p>NOTE: You'd probably see CSF complained that both “portreserve” and “rpcbind” being enabled even t hough you have already issued the command:</p>
+<p> </p>
+<p><code class="calibre6"># chkconfig  rpcbind off  &amp;&amp; chkconfig  portreserve off</code></p>
+<p> </p>
+<p>And the Webmin &gt; Bootup &amp; Shutdown menu showed that they are not running either. The reason why CSF showed them as 'enabled' is because they are still enabled on run levels 2, 4, 5.  To completely turn them off at ALL runlevels,  run this  command:</p>
+<p><code class="calibre6"> </code></p>
+<p># chkconfig --level 2345 portreserve off</p>
+<p># chkconfig --level 2345 rpcbind off<br />
+ </p>
+<p>Consider shutting down the following services as well:</p>
+<p># service xinetd stop &amp;&amp; chkconfig --level 2345 off</p>
+<p># service saslauthd stop &amp;&amp; chkconfig --level 2345 saslauthd off</p>
+<p> </p>
+<p><span class="italic"><span class="bold">Installing LMD</span></span></p>
+<p>Linux Malware Detect (LMD) is a malware scanner for Linux. It is designed around the threats faced in shared hosted environments and released under the GNU GPLv2 license.</p>
+<p>(LMD is also popularly known as “Maldet” - Malware Detect).</p>
+<p> </p>
+<p>It uses threat data from network edge intrusion detection systems to extract malware that is actively being used in attacks and generates signatures for detection. In addition, threat data is also derived from user submissions with the LMD checkout feature and from malware community resources.</p>
+<p> </p>
+<p>The signatures that LMD uses are MD5 file hashes and HEX pattern matches, they are also easily exported to any number of detection tools such as ClamAV.</p>
+<p>To download and install the latest version of LMD:</p>
+<p><img src="images/00030.jpg" class="calibre_77" />  </p>
+<p>This will install the “maldet” scripts at  /usr/local/maldetect  and create a symbolic  executable. The Installation Summary:</p>
+<p><img src="images/00038.jpg" class="calibre_78" />  </p>
+<p> </p>
+<p>To update the script to the latest version:</p>
+<p><code class="calibre6"># maldet --update-ver </code></p>
+<p> </p>
+<p>To update the latest malware database:</p>
+<p><code class="calibre6"># maldet --update </code></p>
+<p>Maldet Configuration File is located at:  <code class="calibre6">/usr/local/maldetect/conf.maldet </code> </p>
+<p>Edit this file and make the following changes:</p>
+<p><img src="images/00029.jpg" class="calibre_79" />  </p>
+<p>You can leave the rest of the configuration at its default values.  Sample Usage :  </p>
+<p>To scan a directory:  the syntax is:  <code class="calibre6">maldet -a &lt;path_to_directory&gt; </code> </p>
+<p>For example:   </p>
+<p><code class="calibre6"># maldet -a /home/USERID/public_html </code></p>
+<p> </p>
+<p>It will report the number of files it had scanned, as well as the number of 'hits' (if malware is found) and the number of malware cleaned (if any)</p>
+<p><img src="images/00028.jpg" class="calibre_81" />  </p>
+<p>To view the report of the scan generated, type:</p>
+<p><code class="calibre6"># maldet --report &lt;SCAN_ID&gt; </code></p>
+<p> </p>
+<p> To restore a file that has been quarantined:  </p>
+<p><code class="calibre6"># maldet --restore /usr/local/maldetect/quarantine/&lt;FILENAME&gt; </code></p>
+<p> </p>
+<p><span class="italic">Creating a daily cronjob to scan your files: </span></p>
+<p>When you first installed LMD, the installation script will create a daily cronjob at <code class="calibre6">/etc/cron.daily/maldet </code> </p>
+<p> </p>
+<p>The file paths for the following control-panels are supported/built-in:</p>
+<div class="calibre_14">
+ 
+</div>
+<ul>
+<li><blockquote>
+Cpanel
+</blockquote></li>
+<li><blockquote>
+Plesk (PSA)
+</blockquote></li>
+<li><blockquote>
+Ensim
+</blockquote></li>
+<li><blockquote>
+DirectAdmin
+</blockquote></li>
+<li><blockquote>
+Default Apache DocRoot (/var/www/html)
+</blockquote></li>
+</ul>
+<p> </p>
+<p>The file paths setup in Virtualmin is similar to Cpanel – so you don't have to make any changes to the script.</p>
+<p> </p>
+<p>NOTE: You may have noticed that maldet uses the question mark (?) instead of the usual asterix (*) to denote wildcard. For example, if you want to scan all the user-accounts under the /home/ directory, you would use:</p>
+<p> </p>
+<p><code class="calibre6"># maldet -a /home/?/public_html</code> </p>
+<p> </p>
+<p>note: The “?” denotes the wildcard characteristics  instead of the typical *   </p>
+<p> </p>
+<div id="index_split_014.html#calibre_pb_14" class="mbp_pagebreak">
+
+</div>
+<p><span id="index_split_015.html"></span></p>
+<p><span class="calibre5"><span class="bold">Chapter 9: Where to go from here?</span></span><span></span></p>
+<p>We have covered a lot of ground in this short book. The various code snippets that you see here are the results of many man-hours of research, testing and debugging.</p>
+<p> </p>
+<p>While there are many ways to achieve a certain goal, I've done my best follow the age-old UNIX principle of “K.I.S.S” (Keep It Super Simple) and give you the simplest and easiest way to achieve the goal of setting up an automated PHP-FPM server in Virtualmin.</p>
+<p> </p>
+<p>But having said that, remember that technology is always changing, and by the time you're reading this, some things may have already changed.</p>
+<p> </p>
+<p>To keep abreast with the latest changes and updates in Virtualmin – check out the official website from time to time – <a href="http://virtualmin.com/">http://virtualmin.com</a>.</p>
+<p> </p>
+<div id="index_split_015.html#calibre_pb_15" class="mbp_pagebreak">
+
+</div>
+<p><span id="index_split_016.html"></span></p>
+<p><span class="calibre5"><span class="bold">Script/Software Download.</span></span><span></span></p>
+<p> </p>
+<p>You can download the source code and scripts here: <a href="http://ilovevirtualmin.com/book-2">http://ilovevirtualmin.com/book-2</a> </p>
+<p> </p>
+<p>You will need to enter this “Access Code”:   VMPHP2014</p>
+<p> </p>
+<p>to access the download files.</p>
+<p> </p>
+<p>This page will also contain all the relevant updates and book errata found.</p>
+<div id="index_split_016.html#calibre_pb_16" class="mbp_pagebreak">
+
+</div>
+<p><span id="index_split_017.html"></span></p>
+<p><span class="calibre5"><span class="bold">Did you benefit from this book? </span></span><span></span></p>
+<p> </p>
+<p>If you have benefited from this book, please consider leaving a review at Amazon so that it will help others who are looking for a similar PHP-FPM solution in Virtualmin. You can click on the link below to go directly to the book:</p>
+<p> </p>
+<p><a href="http://ilovevirtualmin.com/book-comments/book-2.php">http://ilovevirtualmin.com/book-comments/book2.php</a> </p>
+<p> </p>
+<p>If there is anything lacking in this book, or if you think I should cover more grounds, do let me know as it will help me improve this book in the next edition.  </p>
+<p><img src="images/00050.jpg" class="calibre_83" />  </p>
+<p>You contact me at: <a href="mailto:adrian.ling@gmail.com"><code class="calibre6">adrian.ling@gmail.com</code></a><code class="calibre6"></code> </p>
+<p> </p>
+<div id="index_split_017.html#calibre_pb_17" class="mbp_pagebreak">
+
+</div>
+<p><span id="index_split_018.html"></span></p>
+<p><span class="calibre5"><span class="bold">Other Books in the “Practical Guide Series”</span></span><span></span></p>
+<p><span class="bold">1. “</span><span class="italic"><span class="bold">Webmin &amp; Virtualmin:  </span></span><span class="italic">The Best Open-Source Alternative to Cpanel</span><span class="italic"><span class="bold">” </span></span> - this is a newbie friendly book for those who are not familiar with Webmin &amp; Virtualmin's interface.</p>
+<p><img src="images/00001.jpg" class="calibre_84" />  </p>
+<p>For example, in Cpanel, the term “addon domain” is known as a “Sub-server” in Virtualmin.  This book will help you get up to speed quickly.</p>
+<p> </p>
+<p>This is the book that I wished I had when I moved from Cpanel/WHM to Virtualmin. If you're wondering why I decided to move away from Cpanel, well, the main reason is that Webmin/Virtualmin is a lot more powerful and flexible compared to Cpanel/WHM.</p>
+<p> </p>
+<p>You've seen this for yourself in this book – where we can easily add automated PHP-FPM support into Virtualmin even though it's not officially supported.</p>
+<p> </p>
+<p>We can also create “extra admins” - for certain roles – for example, if we need to hire a DBA to tweak our MySQL server, we can create an “Extra Admin” with access to the MySQL server only and nothing else.  We cannot do this in Cpanel/WHM.  </p>
+<p> </p>
+<p>And of course, not having to pay a monthly license fee to use Virtualmin is a big added bonus :-)</p>
+<p> </p>
+<p>If you want to know more about this powerful Control Panel, check it out here: <a href="http://ilovevirtualmin.com/go/book1.php">http://ilovevirtualmin.com/go/book1.php</a> </p>
+<p> </p>
+<p><span class="bold">2. “</span><span class="italic"><span class="bold">Apache, PHP-FPM &amp; Nginx: </span></span><span class="italic">How to Build A Secure, Fast and Powerful Web-Server</span><span class="italic"><span class="bold">”</span></span> </p>
+<p>This is my 3rd book in the “Practical Guide” series – which is scheduled to be published on 30th November 2014.  This book will guide you through the setting up of PHP-FPM on a stock CentOS server – how to upgrade from the default PHP 5.3.3 to the current stable PHP 5.4.x, how to setup automated PHP-FPM pools for each individual virtual-servers and more importantly, how to secure PHP-FPM on your server so that your users cannot use it to “snoop” and view sensitive system files such as the /etc/passwd!</p>
+<p> </p>
+<p>Not many people know this, but nearly all web-hosting servers come with the default PHP settings which is NOT secure!  </p>
+<p> </p>
+<p>Anyone with a little  php coding skills can quickly cobble a script to view sensitive system files – such as the /etc/passwd file.  </p>
+<p> </p>
+<p>Let me show you the  screenshot of the content of the /etc/passwd file:</p>
+<p><img src="images/00048.jpg" class="calibre_85" />  </p>
+<p>The PHP code to do this is only 3 lines!  </p>
+<p>If I'm a malicious hacker, I will target the user 'pony' because he has 'shell' access whereas the user 'donkey' does not.</p>
+<p> </p>
+<p>This book will show you the above was done, and how you as the system administrator can prevent it from happening to your own server.</p>
+<p>There will be a chapter on performance turning with 2 mini-case studies on the “ideal” settings in the PHP-FPM pool file.</p>
+<p> </p>
+<p>You can pre-order this book now: <a href="http://ilovevirtualmin.com/go/book3.php">http://ilovevirtualmin.com/go/book3.php</a></p>
+<div id="index_split_018.html#calibre_pb_18" class="mbp_pagebreak">
+
+</div>
