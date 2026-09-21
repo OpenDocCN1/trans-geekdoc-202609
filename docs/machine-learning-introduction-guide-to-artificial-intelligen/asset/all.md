@@ -1,0 +1,2377 @@
+![](Image00000.jpg)
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Machine Learning For Absolute Beginners:
+
+Introduction Guide to Artificial Intelligence.  Machine Learning Tools and Techniques.
+
+CONTENTS
+
+[Introduction](#text00003.html#_nc3lz9cmbaae)
+
+[What is machine learning?](#text00003.html#_ezkk21mbym34)
+
+[Machine learning in the cloud](#text00003.html#_fjutn04d0ymv)
+
+[How do machine learning and containers mix?](#text00003.html#_3dep6xxhbmjq)
+
+[Other tools for ML](#text00003.html#_lfd3sbxfcc1m)
+
+[How will enterprise ML change the way we work?](#text00003.html#_jergc969nly)
+
+[What is an algorithm?](#text00003.html#_c4gm6ee4bcbp)
+
+[Why do Python and data science mix well?](#text00003.html#_1uqw1nfd42z)
+
+[Python is a general-purpose programming language](#text00003.html#_lwflrsbs4xmc)
+
+[Python is the perfect programming language for data science](#text00003.html#_2s98vti6t2uj)
+
+[Chapter 1 Machine learning](#text00004.html#_d765z7w2nf7y)
+
+[What is the definition of machine learning?](#text00004.html#_jqojf35pfe0f)
+
+[How does machine learning differ from statistical techniques?](#text00004.html#_d8gq5utj0wf5)
+
+[What’s the difference between supervised and unsupervised machine learning?](#text00004.html#_fc5iuddrpcu1)
+
+[How does machine learning differ from artificial intelligence?](#text00004.html#_lhfoxqxngx1d)
+
+[Can you teach a computer to learn?](#text00004.html#_b96dhvqog5ni)
+
+[How do you train a machine to learn?](#text00004.html#_5b9cejqxg364)
+
+[What's the benefit of machine learning?](#text00004.html#_to074ww62hdy)
+
+[Application of machine learning.](#text00004.html#_pxnnugu4n1lv)
+
+[Chapter 2 What is the future of machine learning?](#text00005.html#_a725bjd9tdt2)
+
+[Examples of adaptive learning](#text00005.html#_yatmx6fjwm1z)
+
+[Back to the Future](#text00005.html#_q1lm3hsqimsc)
+
+[Frontier Development](#text00005.html#_vb2rvoeay2v1)
+
+[Predictive monitoring also incorporates machine learning.](#text00005.html#_axrlys81zxm8)
+
+[What is PaaS (platform as a service) and why should I care about it?](#text00005.html#_1ejjsbw3d1me)
+
+[What are continuous integration (CI) and continuous delivery (CD) and why should I care about them?](#text00005.html#_2do7401a0lne)
+
+[What is API management and why do I need it?](#text00005.html#_un7zje9p552v)
+
+[What is API testing?](#text00005.html#_pw6afe9ky7q)
+
+[How is API testing best suited for an API manager?](#text00005.html#_c9i783zb6qdh)
+
+[What kind of testing do you think needs to be done?](#text00005.html#_2v760i2kpqf1)
+
+[What is a platform?](#text00005.html#_a5liqeoahvmd)
+
+[How can developers benefit from an API testing system?](#text00005.html#_y07cazhgmz40)
+
+[How can API testing help a developer implement and test new applications?](#text00005.html#_w9volubklp4u)
+
+[Сhapter 3 How to use machine learning?](#text00006.html#_ikw2wzzey8nc)
+
+[Building machine learning applications](#text00006.html#_8hf0q4ynvz84)
+
+[Building a machine learning service](#text00006.html#_16udqe95n9lt)
+
+[Making predictions, or making predictions?](#text00006.html#_7hz2z9wg6330)
+
+[What are artificial neural networks?](#text00006.html#_9dbahsbke45b)
+
+[Mapping photos with AI](#text00006.html#_r9h7vcmp5y02)
+
+[Data structures in machine learning.](#text00006.html#_x5m2sb6vmco8)
+
+[Examples of supervised learning.](#text00006.html#_rsxde07hqaz1)
+
+[Chapter 4 Machine learning methods.](#text00007.html#_a3le6hdhwizn)
+
+[Supervised machine learning method.](#text00007.html#_kq7qnl2oougt)
+
+[What is an unsupervised machine learning method?](#text00007.html#_1z58xu77nz70)
+
+[How is supervised and unsupervised learning different?](#text00007.html#_um7yvtevplz)
+
+[How can machine learning improve a company’s products or services?](#text00007.html#_qbte2uxmiv9v)
+
+[What is a semi-supervised machine learning method?](#text00007.html#_ehnncbq9zvtr)
+
+[What is the reinforcement machine learning method?](#text00007.html#_llh31ldj5ycw)
+
+[How does the reinforcement learning method work?](#text00007.html#_720e4830x483)
+
+[How does this happen on an event-based deep learning network?](#text00007.html#_iqoc1oe9k9ol)
+
+[Chapter 5 Big Data](#text00008.html#_50qowrg0f1u0)
+
+[What is big data?](#text00008.html#_dstt95zi7ox4)
+
+[Getting ready](#text00008.html#_n5rk4hhuldve)
+
+[Training data](#text00008.html#_kp1ymk6pa2qs)
+
+[Chapter 6 Why is big data important?](#text00009.html#_plvy79n7faot)
+
+[What are the big data trends?](#text00009.html#_oa0f2euv339q)
+
+[The emergence of big data platforms](#text00009.html#_rq65dw1kwd1)
+
+[Trends in big data](#text00009.html#_np45ewi0vi9i)
+
+[Trends in big data platforms](#text00009.html#_bjmrvo3ez54t)
+
+[Trends in enterprise applications](#text00009.html#_xw90egyt88wa)
+
+[Trends in big data analytics](#text00009.html#_ekqn4xj92pqp)
+
+[Trends in data integration](#text00009.html#_oeocmsn2tasu)
+
+[Trends in cloud deployments](#text00009.html#_ldrlywylagqs)
+
+[Analytics and data access challenges](#text00009.html#_h61s80iq9ob2)
+
+[Chapter 7 What is Data science statistical learning?](#text00010.html#_98e8i0e5op0u)
+
+[What is graphical linear algebra (GLAM)?](#text00010.html#_9jg879vuczfn)
+
+[What is abstract learning?](#text00010.html#_vxq6fs1oegch)
+
+[What are neural networks?](#text00010.html#_67hrchaeh6u3)
+
+[What is numeric learning?](#text00010.html#_3fktu5f92xc)
+
+[What is logistic regression?](#text00010.html#_ayu8u6ze67zg)
+
+[The Logistic Regression Lagrange Multiplier In Training](#text00010.html#_j4bqheuhrt2b)
+
+[Automated Inference](#text00010.html#_c80v3a8qmcuy)
+
+[Deep Learning](#text00010.html#_nwuswz7z4mcp)
+
+[Conclusion](#text00011.html#_8mix4pc8ftb8)
+
+[Think of the future](#text00011.html#_xinap565fois)
+
+[Benefits of machine learning.](#text00011.html#_omijjytw5u9u)
+
+[Deep learning.](#text00011.html#_ucnk4mds8qux)
+
+[Neural networks.](#text00011.html#_ivcq6tqoro73)
+
+[Sparse neural networks.](#text00011.html#_k8auskdim0j1)
+
+[Matrices](#text00011.html#_vooa79yxc0mx)
+
+[What the machine learning methods?](#text00011.html#_mx1y53dc1kjt)
+
+[Classification](#text00011.html#_vrq7s27d4k5o)
+
+[Distributional Features](#text00011.html#_famo7y7v8izo)
+
+[Regularization](#text00011.html#_g4ygnjqg8qjh)
+
+[Feature Selection](#text00011.html#_xts8hmc872q4)
+
+[Modeling](#text00011.html#_q1oawrsp6i9i)
+
+[Big data analysis tools.](#text00011.html#_lktpj3hpgxhr)
+
+ 
+
+##  DESCRIPTION
+
+ 
+
+Why should you study big data and machine learning?
+
+Machine learning allows you to automate the mental and physical work of a person. Therefore, ML is used by search engines, banks and insurance companies, retail, cellular operators, industrial enterprises, advertising, and marketing agencies.
+
+A machine learning model can make predictions and recognize patterns more accurately and faster than a living expert. For example, banks use ML models to calculate the probability of a good-faith loan repayment for each specific borrower. Moreover, if an expert analyzes one client for several minutes, the model makes a forecast for millions of clients in a matter of seconds.
+
+Machine learning is a data analysis technique that automates the construction of analytical models. It is a branch of artificial intelligence based on the idea that systems can learn from data, identify patterns, and make decisions with minimal human intervention.
+
+Thanks to new computing technologies, machine learning today is unlike machine learning of the past. It was born out of pattern recognition and the theory that computers can learn without being programmed to perform specific tasks; researchers interested in artificial intelligence wanted to know if computers can learn from data. The iterative aspect of machine learning is important because when models are exposed to new data, they can adapt independently. They learn from previous calculations for reliable, repeatable solutions and results. This is a science that is not new but has gained new momentum.
+
+But if you know machine learning, you can become an AI operator or even a creator. All it takes to get started is imagination.
+
+This book is designed to explain this and help you get started with machine learning.
+
+ 
+
+This book created that to explain it and help to start in machine learning.
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+## 
+
+#  Introduction
+
+#   
+
+ 
+
+##  What is machine learning?
+
+ 
+
+ 
+
+If you're like most people, you're familiar with the phrase "big data."
+
+ 
+
+Big data is the analytics buzzword used in various contexts in the tech world. In an enterprise context, this means analyzing data to uncover patterns and trends and improve outcomes.
+
+ 
+
+While it might not be very intuitive, machine learning (ML) is a type of ML that is most appropriate for the context of an enterprise's IT environment. Machine learning (ML) is a type of ML that can learn from experience, rather than simply gathering data.
+
+ 
+
+"Learning" means that the machine receives experiences from human (or other) users and internal business data. The computer system may use this data to improve its algorithm and accuracy and improve its ability to process data in the future.
+
+ 
+
+The Cloud Native Computing Foundation defines ML as:
+
+ 
+
+"Machine learning is a subfield of artificial intelligence that uses machine algorithms to learn for itself. ML is a key component of a self-operating system or a system that learns and is self-improving. ML is a strategy for designing computer systems that can constantly adapt to change and new tasks."
+
+ 
+
+ 
+
+##  Machine learning in the cloud
+
+ 
+
+ 
+
+On-premises computing architectures can be an expensive business. Unless a company has a sophisticated cloud management environment in place, on-premises computing systems typically perform their tasks in a solitary manner. When ML models are used to make predictions, they're usually large and complex – and can't be run in isolation. The ability to create and run multiple ML models concurrently is more easily achieved in a public cloud environment, where scale-out is a factor.
+
+ 
+
+ML in the cloud can help improve ML by facilitating communications with external data sources. By creating an ML model that can communicate with external data sources, your company can collect more data about your business and use that data to make better decisions. It will also be easier to scale the model in response to changes in your business needs. The model will also become more reliable and accurate as you learn from data, rather than guess what will happen.
+
+ 
+
+ 
+
+##  How do machine learning and containers mix?
+
+ 
+
+ 
+
+All enterprise data and computation are typically managed on-premises by IT staff. This makes it difficult for the business to integrate new applications with the rest of the business in a seamless manner. If you want the ability to integrate third-party applications with your machine learning (ML) stack, you'll have to standardize your applications.
+
+ 
+
+You can do that through the use of containers. The popular containerization technology, Docker, is used to create isolated virtual machine instances.
+
+ 
+
+Docker has native support for ML technologies including TensorFlow and Jupyter Notebook, along with various frameworks that make data collection and processing straightforward.
+
+ 
+
+With the increased popularity of Docker, a proliferation of solutions that make machine learning easier to implement is expected.
+
+ 
+
+Redis Labs, for example, provides a dedicated ML project that provides data access and standardization from within the Redis community. The company also offers a free service for businesses that want to train a custom ML model on public and private data.
+
+ 
+
+ 
+
+##  Other tools for ML
+
+ 
+
+ 
+
+There are several other options out there for implementing ML. Here are a few, to give you a quick glance at a few of the options:
+
+ 
+
+Big Data Lake (CDL) – Containerised, event-based data pipeline for Hadoop, Spark, and Spark SQL.
+
+ 
+
+– Containerised, event-based data pipeline for Hadoop, Spark, and Spark SQL. IBM’s Global Data Unit (GDU) – Enterprise big data project that delivers enterprise-class ML services.
+
+ 
+
+– Enterprise big data project that delivers enterprise-class ML services. SAS’s Data Science Experience – In addition to a research-ready environment for machine learning, SAS also provides data science training, mentoring, and tools, such as SAS Inside Data Science – an interactive environment that allows users to learn a statistical approach to data science.
+
+ 
+
+– In addition to a research-ready environment for machine learning, SAS also provides data science training, mentoring, and tools, such as SAS Inside Data Science – an interactive environment that allows users to learn a statistical approach to data science. Google's Cloud Machine Learning Engine – An open-source platform for data scientists, trainers, and data engineers.
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+##  How will enterprise ML change the way we work?
+
+ 
+
+ 
+
+ML is already being used across a variety of applications, ranging from sales analytics to mining data for market trends.
+
+ 
+
+Examples include the image recognition technology that can help us identify objects, such as logos or cars, on a website; tracking people’s physical activity and routes around our cities; and responding to account fraud by looking for suspicious activity in the feed of our social media apps.
+
+ 
+
+ 
+
+##  What is an algorithm?
+
+ 
+
+ 
+
+An algorithm is simply a set of instructions for the computer to follow. Each step in a computation is called an algorithm step. If there are many steps, then the computer makes a number of algorithmic steps.
+
+ 
+
+Because every decision we make is made by relying on a computer, every decision we make relies on an algorithm. So everything is an algorithm.
+
+ 
+
+What is an algorithm for? An algorithm is a set of instructions for the computer to follow. This set of instructions describes all the rules for how the computer will behave. For example, in captcha, the algorithm tells the computer to "click on the word if it's a word, and otherwise not."
+
+ 
+
+How do we decide what is an algorithm? We decide what an algorithm is by looking at its output, the answer it gives to a problem. Let's look at a function that solves a problem.
+
+ 
+
+If a function solves a problem, then it has an answer. But just because a function has an answer does not mean that it is an algorithm.
+
+ 
+
+Here is an example: If we have a function called "squares", then "squares(x) = sqrt(x)". There is no algorithm for squares, and so it does not matter what "squares" does. So we can write an algorithm for squares that will not use "squares".
+
+ 
+
+ 
+
+##  Why do Python and data science mix well?
+
+ 
+
+ 
+
+Python has a rich and mature ecosystem. You don't need to know every function, and are usually familiar with the community. You can start a project, play with the functions, and see what you like. All the tools in the ecosystem are tested and well understood, and support working with data. You don't need to learn a data language like R or Excel if you don't need to, so you can focus on coding your data analysis. You can then transfer the knowledge you learn to other languages or environments that suit you, or to your own language.
+
+ 
+
+ 
+
+##  Python is a general-purpose programming language
+
+ 
+
+ 
+
+Python is not a data science language, and it's not meant to be. However, as a language that is focused on server-side programming, it's flexible enough to be very useful for data analysis. Plus, there are a ton of libraries (such as pandas, and numpy) that are optimized for handling your data analysis, and these libraries work well in Python.
+
+ 
+
+ 
+
+##  Python is the perfect programming language for data science
+
+ 
+
+ 
+
+There are so many reasons to use Python as your data science language, you might not know where to begin. After reading this blog post, you should be eager to take action. The answer is to read more and learn more, but that's not necessary.
+
+#  Chapter 1 Machine learning
+
+ 
+
+ 
+
+##  What is the definition of machine learning?
+
+ 
+
+ 
+
+Machine learning is a technology for automatically recognizing patterns and organizing data. You can think of it as a way of using mathematical modeling to match data to predictive models, then using optimization techniques to get the most out of the data that you have.
+
+ 
+
+ 
+
+##  How does machine learning differ from statistical techniques?
+
+ 
+
+ 
+
+The main differences between machine learning and traditional statistical methods are as follows:
+
+ 
+
+A machine learning algorithm (or a tool that you use to fit machine learning algorithms) has multiple ‘deep’ layers. For instance, the average YouTube video is roughly 12 seconds, so if you want to match images to videos you need to look at the height and width of each frame of the video, and the speed at which it is viewed.
+
+ 
+
+Even though you may have thousands of matches of that video, you need to know whether that is the same video. This is where matching models come in. A matching model is a mathematical model that describes your data; it’s a recipe for using the image in the video against other data in order to select a match that you can then work with. It’s like finding the right ingredients for the recipe, but you don’t know what the final product will be.
+
+ 
+
+You might have hundreds of thousands of matches, but you can only find 1 that’s a good fit; finding the good match is like trying to use the recipe that you have at home to bake a cake, and finding out that it doesn’t turn out as you expected. That’s why the matchmaking is done over many repetitions.
+
+##  What’s the difference between supervised and unsupervised machine learning?
+
+ 
+
+ 
+
+Supervised machine learning (also called ‘ supervised learning’ or ‘narrow’ class classification) is where a human has programmed the software to learn the patterns from the data. In unsupervised machine learning (also called ‘unsupervised learning’ or ‘narrow’ classification), the data are not labeled.
+
+ 
+
+When you use supervised machine learning, the algorithm is told what the correct classification of the data should be. In contrast, in unsupervised learning, the algorithm is left to use its own intelligence and reasoning, based on the information that it has itself learned. In theory, the algorithm learns to do what we want it to do, but in practice, the algorithm may learn to identify the features of the data that matter to it and avoid what it perceives to be irrelevant data.
+
+ 
+
+ 
+
+##  How does machine learning differ from artificial intelligence?
+
+ 
+
+ 
+
+While artificial intelligence is also known as AI, it’s important to understand that there is no one type of AI. There are many different types of AI that have distinct strengths and weaknesses.
+
+ 
+
+The difference between machine learning and artificial intelligence is that machine learning is a technology, whereas AI is an approach that has been used for many years. But it’s not necessary for artificial intelligence that a machine has to perform like a human being in order to be considered AI.
+
+ 
+
+Machine learning is more focused on using computer algorithms to transform data. In contrast, AI uses computational powers to solve a problem that it’s learned how to solve from the data. AI also uses algorithms to help it learn to perform specific tasks and to create experiences and/or products.
+
+ 
+
+However, artificial intelligence is often associated with robots, and it’s often used to perform tasks that are more abstract than those that a machine can perform naturally, such as recognizing different human emotions.
+
+ 
+
+ 
+
+##  Can you teach a computer to learn?
+
+ 
+
+ 
+
+Machine learning does not depend on programming, and in many cases, it can be learned through experience. For example, if the data set that you are working with contains pictures of cats, and the purpose of the classifier is to identify pictures of cats, the computer would have to be trained to learn how to identify the cats. Once it has learned this task, it would be able to identify cats automatically by recognizing the features that the computer program has been taught to look for in a photo.
+
+ 
+
+ 
+
+##  How do you train a machine to learn?
+
+ 
+
+ 
+
+Like any skill, you have to practice to learn it. In machine learning, you might use several different types of data to train the machine, and use these data sets to predict the outcome of new data that is then added to the training set.
+
+ 
+
+Inputs from the internet, including the number of hits for a certain keyword, the ranking of a certain link, and the comments that a certain webpage has received
+
+ 
+
+ 
+
+##  What's the benefit of machine learning?
+
+ 
+
+ 
+
+Machine learning is making rapid progress, and as an open-source practice, it's easy to try it out for yourself. As a result, many organizations have already implemented some form of machine learning, and others are rapidly implementing it.
+
+ 
+
+One of the key benefits of machine learning is the ability to use data to automate tasks that would normally require human intervention, such as collecting and analyzing data or deciding what action to take based on a certain result. These tasks would normally require human intervention, but machine learning enables the automation of these processes, freeing up human labor.
+
+ 
+
+Machine learning provides a number of benefits in an organization, such as reducing the risk of human error, improving data quality, improving organizational efficiency, reducing error rates, increasing the speed of decision making, and increasing revenue.
+
+ 
+
+For example, automating the collection and analysis of email data enables companies to improve the quality of customer service. Previously, employees had to spend time manually reading every single email that was sent by a customer. It is estimated that approximately 50% of all customer emails go unanswered, and this costs organizations billions of dollars per year.
+
+ 
+
+In a report commissioned by email API provider Cloudmark, it was estimated that companies lose around $15,000 for every unwanted customer complaint that is reported. In the same report, it was also estimated that it would cost the average organization $15,000 in annualized cost savings by automating the collection and processing of email data.
+
+ 
+
+Customer service is one area where machine learning could help companies cut costs, by allowing staff to work on more valuable tasks. With the data that is collected and the analytics provided by the machine learning algorithm, the staff member might be able to respond to a customer more quickly, based on what is most relevant to the customer. For example, in a call center environment, the staff member might be able to check the application status of the customer's account and send him/her an email, instead of making the call. The staff member can also choose whether or not to automate the call, based on the outcome of that conversation.
+
+ 
+
+So, Machine learning can deliver a number of benefits, and it is continuing to make rapid progress in the technology industry. A number of organizations are already using machine learning to reduce the cost and complexity of data collection, reducing the risk of human error and improving data quality.
+
+ 
+
+The next step for organizations is to ensure that the data they are using is of the highest quality and consistency, and then apply machine learning to analyze it. As the number of data sources that organizations need to analyze continues to grow, this challenge becomes more complex.
+
+ 
+
+The two most significant challenges for organizations implementing machine learning include the quantity and quality of their data. The more data that a company uses, the larger the risk of missing out on new insights and missing out on efficiency improvements.
+
+ 
+
+The solution to this problem is to establish the data culture of an organization, which will ensure that the company uses data from only sources that it deems to be of the highest quality.
+
+ 
+
+Machine learning will continue to be a crucial part of any organization’s data strategy, helping to automate processes that are traditionally conducted by humans.
+
+ 
+
+ 
+
+##  Application of machine learning.
+
+ 
+
+ 
+
+Machine learning allows for robust analysis of large volumes of data and it is a valuable tool in detecting "hidden" features (e.g. statistical significance for using algorithms for statistical correlation between samples, errors in automated test results, etc.).
+
+ 
+
+Analyzing, mining, and mining data. Â Machine learning systems analyze information to identify trends and "hidden" patterns, such as correlations between a set of variables. These approaches can assist analysts in gaining a deeper understanding of the data. An effective machine learning system will take data, parse the data, and then provide recommendations based on the analysis and recommendations.
+
+ 
+
+Analyzing the data to learn, make predictions and algorithms. Â Learning is the process by which computers gain improved performance on new and more complex tasks.
+
+ 
+
+Algorithms are the set of steps that define the functions a machine (e.g. computer) will perform. Machine learning algorithms are designed to work on the data that has been collected by an analyst (a scientist or data miner) and they are self-learning. Machine learning algorithms have to be continually optimized and updated so that they provide the best result to the researcher or scientist using them.
+
+#  Chapter 2 What is the future of machine learning?
+
+ 
+
+ 
+
+A powerful brand of machine learning (ML) that’s beginning to show up in the wild is adaptive learning, an ML technique that uses models that adapt to their inputs.
+
+ 
+
+A classic example of adaptive learning is when the same data set is used multiple times to produce vastly different outputs. For instance, a consumer might listen to the same song over and over again, or look at the same faces, but the same faces will yield different, but relatively similar, interpretations.
+
+ 
+
+Adaptive learning requires neural networks—systems that use inputs to produce outputs. When applied to situations where the input and output don’t have a significant previous relationship, adaptive learning is much more powerful and can work much better than other models.
+
+ 
+
+ 
+
+##  Examples of adaptive learning
+
+ 
+
+ 
+
+Back in 2010, writer Douglas Adams wrote the “Back to the Future” novels, but he never actually tried to write a machine learning algorithm. That’s because machine learning at the time did not exist, and it took over a decade for the technology to catch up. This led to the usual length of time it takes to go from idea to technology: 16 years!
+
+ 
+
+In 2016, scientists published a paper titled “On Towards Adaptive Image Classification,” where they described how they adapted image-recognition algorithms to account for large amounts of data, the effects of object shape on visual perception, and an adaptive algorithm that could, in this case, compensate for the effects of aging.
+
+ 
+
+We see similar adaptability with adaptive learning in today’s domain of product management.
+
+ 
+
+ 
+
+##  Back to the Future
+
+ 
+
+ 
+
+Perhaps the most famous example of adaptive learning in production is the movie Back to the Future, where Marty McFly’s life (and memories) are projected back to 1955 and then to 2015.
+
+ 
+
+Like predictive inference (the technique used by many adaptive learning systems), the predictive inference is based on the premise that machine learning models can learn to predict outcomes. But instead of predicting the probability that Marty will win a bet with Doc Brown, predictive inference calculates the probability that Marty will avoid the gravitational field of a black hole.
+
+ 
+
+The assumption of predictive inference is that predictive models that account for large amounts of data can give better and more accurate predictions. In 2015, scientists published a paper titled “Augmenting Predictions using Fluid Localization,” where they proposed a new approach for training predictive inference models that improves prediction accuracy while also significantly reducing the amount of data required to train and run the model.
+
+ 
+
+Based on the concept of fluid localization, the authors determined that increasing the length of the local training data improves prediction accuracy for all predictions made by the model, even if it means significantly increasing the number of predictions needed to train the model.
+
+ 
+
+Similar to other ML techniques, adaptive learning can be used to eliminate the need to continuously tweak the training data. Adaptive learning has a relatively short history but has already shown to produce better and more accurate models than other ML techniques.
+
+ 
+
+The DeLorean DMC-12, on display at the 2015 Los Angeles Auto Show.
+
+ 
+
+ 
+
+##  Frontier Development
+
+ 
+
+ 
+
+A clever approach to managing failure
+
+ 
+
+It’s clear that in a world where information is abundant, data is cheap, and connectivity is ever more important, organizations need to adopt systems that can leverage both the data and connectivity to avoid failure.
+
+ 
+
+Today, enterprises depend on data streaming to build applications, so predictive monitoring is the next logical step in system and application monitoring. But even predictive monitoring is far from perfect, and early and accurate detection of failure is the first step in preventing costly data loss and taking remedial actions before there is irreparable damage.
+
+ 
+
+Managing predictive failures
+
+ 
+
+A new breed of predictive monitoring software has emerged in recent years, leveraging data streaming, network diagnostics, and user behavior to detect and mitigate system and application failures before they occur. Today’s predictive monitoring software captures insights and can provide specific inputs to anomaly detection, anomaly remediation, and proactively bring issues to IT’s attention before they can cause an outage.
+
+ 
+
+Some of today’s predictive monitoring software vendors offer APIs and the ability to integrate directly with existing monitoring, configuration management, and fault management tools.
+
+ 
+
+Early detection of failure
+
+ 
+
+For any type of software to operate effectively, it needs to adapt to the characteristics of its environment. No matter how many engineering changes are made to ensure that a system can perform well in a specific location or use case, there will always be a chance that it fails.
+
+ 
+
+In predictive monitoring, a failure is identified as soon as it is detected. As such, the system is designed to record and measure every input that comes into the system, including user-defined exceptions. When certain outputs from an operation appear inconsistent, the system is able to adjust itself in real-time, and then alert the user or other system users. Predictive monitoring tools can provide a complete timeline of events that occur.
+
+ 
+
+For example, if an input that has previously generated an error consistently occurs, it would indicate a failure, even though it might be a transient error that is easily remediated. The system can also be programmed to detect errors in a discrete set of operations and collect data before an individual operation is completed and trigger alerts when an irregular operation occurs.
+
+ 
+
+ 
+
+##  Predictive monitoring also incorporates machine learning.
+
+ 
+
+ 
+
+Modern predictive monitoring software can detect when a set of metrics might have changed without actually activating any alarms or dropping down an alert level. In order for a device to provide a warning in this situation, a human has to identify the anomaly and raise an alarm for a specific set of metrics.
+
+ 
+
+Thus, one thing that can happen is that a person is alerted by an alert, and the action that needs to be taken is referred to another tool that does not require someone to know the specific set of metrics or the specific series of events.
+
+ 
+
+The second approach can be more proactive, where an alert is raised and the system is configured to send an email to the responsible engineer or administrator.
+
+ 
+
+Finally, the third approach is predictive monitoring at its best. It has no human involvement; a system records all of the data, and a program interprets it and issues an alert to the appropriate person. Predictive monitoring comes into play when something anomalous is detected at a location that should not be anomalous. In these scenarios, a system is performing perfectly, but an anomaly has occurred that alerts the human that something is amiss. The human can then take action to make sure that the system is operating correctly.
+
+ 
+
+Predictive monitoring tools can also be used to analyze the performance of application connections and traffic flows. For example, in the data center, it can be used to identify specific servers that are experiencing slow response time to remote IP address ranges, as well as identify where some of the anomalies occur.
+
+ 
+
+After identifying the anomalies, the system can determine what service is causing the errors, isolate the problem, and correct the problem before it adversely affects another site. This also helps to prevent latency problems and inter-site network congestion, which are some of the most common issues that cause performance degradation.
+
+ 
+
+ 
+
+##  What is PaaS (platform as a service) and why should I care about it?
+
+ 
+
+ 
+
+The term PaaS describes a set of services that are delivered via a centralized infrastructure. These services provide developers with infrastructure that they can develop, test, and deploy their applications on. Some examples of these services are application services, object stores, database services, and load balancers.
+
+ 
+
+PaaS services typically have well-defined policies for how they handle security, redundancy, and disaster recovery (DR). They provide dedicated resources, typically CPUs and RAM, to the developers, so that they can develop and test without slowing down the servers that the servers are running on.
+
+ 
+
+PaaS services have well-defined tools, which reduce the amount of time and effort developers must invest in setting up their applications. These tools automate much of the effort that the developers would otherwise spend maintaining, building, and testing their applications.
+
+ 
+
+PaaS is often called a foundational service because it enables developers to access the necessary infrastructure and tools they need to build and deploy their applications. It also offers visibility into the operating environment that developers need to build their applications.
+
+ 
+
+ 
+
+##  What are continuous integration (CI) and continuous delivery (CD) and why should I care about them?
+
+ 
+
+ 
+
+Continuous integration and continuous delivery are often synonymous, but not all the time. While CI does refer to a continuous flow of code, but it does not always mean continuous deployment.
+
+ 
+
+Generally, continuous integration can be performed at all phases of the development process. It works by merging builds into an immutable repository. The developers can then commit the resulting code and testing can be performed immediately. These results are integrated into the version control system, or version control system, and can be promoted to a production release.
+
+ 
+
+CI is typically used when a developer creates a branch on the repository where she or he plans to test the latest version of the code. Once this code has been tested, it can be merged back to the master branch, which the developers use for committing changes to the overall source code. This is called continuous integration and it acts as a catch-all to allow developers to integrate testable code into the repository and helps to ensure that bugs are not introduced while development is still in progress.
+
+ 
+
+Continuous delivery is essentially a pipeline that is used to streamline the delivery of new code. Typically, a new application is released at least a few times each day, sometimes multiple times per day, to a server. It is this continuous delivery that is most often used to implement continuous delivery.
+
+ 
+
+ 
+
+##  What is API management and why do I need it?
+
+ 
+
+ 
+
+API management is a branch of application management. It’s the practice of managing the APIs that clients need to consume, both externally to clients and internally to the enterprise. API management typically involves a mix of centralized/mobile apps, and on-premises apps. While API management is not a new practice, it has gained more attention as it relates to building digital services in the cloud.
+
+ 
+
+A centralized, mobile-friendly approach to managing applications and services via APIs allows companies to provision and manage APIs through a single vendor, saving a significant amount of development time. The centralized approach also makes it easy to integrate the API into existing applications or automate new use cases through automated code execution.
+
+ 
+
+ 
+
+##  What is API testing?
+
+ 
+
+ 
+
+API testing refers to an approach in which the end-to-end user experience (EUX) of an application or service can be tested. This UX test involves simulating the use of an API to assess its user experience. API testing is a key element of digital transformation. It also enables organizations to scale and integrate APIs.
+
+ 
+
+Let’s have a look at some of the advantages that API testing offers:
+
+ 
+
+●     It helps developers in integrating APIs and tests the application’s performance with a single code base.
+
+●     It allows developers to prepare for end-to-end test scenarios and test end-to-end apps without affecting the production code.
+
+●     It helps organizations ensure the performance of applications during deployment to a cloud.
+
+●     It helps developers understand how an API can be integrated into an application, or how the API can interact with external systems.
+
+●     It helps developers understand how to prepare an app for production, or how to resolve certain issues that arise during development.
+
+●     It provides the ability to test the APIs of multiple languages and frameworks, by providing the ability to execute integration tests in one package.
+
+ 
+
+ 
+
+##  How is API testing best suited for an API manager?
+
+ 
+
+ 
+
+API management can be used to deploy an API, or as a hybrid approach that includes both deployment and API testing. An API Manager is a vendor-neutral third-party organization that can bring together API management with APIs and tests automation technologies. They do this by providing a platform that can be used by developers for testing API integration, handling API licenses and license renewal, and also automatically creating releases. The platform can be used as an agile system to manage cloud integrations and build and release on a continuous basis.
+
+ 
+
+ 
+
+##  What kind of testing do you think needs to be done?
+
+ 
+
+ 
+
+Digital transformation requires digital services. We call these services "apps". What makes a service "truly" a digital service is that it also has some form of API built-in to it. These APIs are usually very complex and fragile but are critical to delivering a smooth end-to-end experience.
+
+ 
+
+The problem with digital services is that many of them are just test apps that don't use their APIs effectively, and don't even test how they interact with one another. What's needed is a more intelligent test, but to do this you need to understand how the different parts of the service interact, and how to test how these interactions are exposed to a client.
+
+ 
+
+If the testing is only done manually, then you will have a manual test plan that must be reviewed and the app and dependencies tested separately. This results in a big volume of manual effort. A test plan that covers all the combinations of dependency mapping and integration testing is called an integration test plan. This is a hard task to achieve and, with a very high time cost.
+
+ 
+
+With an automated API testing system, you can instead test the entire application pipeline in one suite, thereby reducing the time and resources needed for testing. This makes it easier to integrate more applications and develop new ones. In addition, API tests provide better insight into how the whole application works. This enables you to find bugs that may have been missed manually. The integration tests also prevent bugs that may have not been found because of the manual effort.
+
+ 
+
+With application architecture being a key issue in today’s digitally enabled world, any organization that wants to stay ahead must realize that digital transformation is not an end in itself. Instead, it is a way of bringing together all the other components of the organization to provide an incredible user experience. This means being able to connect the system layer, the business layer, and the technical layer. Only through this level of engagement can you reach all the people, systems, and processes involved.
+
+ 
+
+ 
+
+##  What is a platform?
+
+ 
+
+ 
+
+Platforms are an enabler for digital services. They help organizations to connect all the layers of an application. This includes the network layer, the business layer, and the technical layer. This enables developers to build on the back of them. Once the platform is set up, API testing can be easily automated and thereby help in the development of new products and services.
+
+ 
+
+The benefits of a platform are many: it helps with the development of new applications, it helps to develop new revenue streams, it helps to maintain existing products and services, and most importantly, it helps in the ability to do continuous delivery of quality products and services to the customers.
+
+ 
+
+ 
+
+##  How can developers benefit from an API testing system?
+
+ 
+
+ 
+
+An API is a digital interface with the outside world. It can be used to exchange data or control access to the software or the API. In the case of an API system, there can be many services. An API can be a front-end service that supports accessing a back-end service, or it can be a back-end service and a front-end service. With an API, a developer can create a "layer of services" that can be accessed from different layers of an application.
+
+ 
+
+API testing helps developers develop applications by exposing how an API, along with its components, interacts with one another and exposes the data on which they are dependent.
+
+ 
+
+ 
+
+##  How can API testing help a developer implement and test new applications?
+
+ 
+
+ 
+
+An application developer has a number of digital services that can be combined to build new products and services. A comprehensive testing scenario helps developers ensure that the software layer on which their products and services depend is functioning properly.
+
+ 
+
+API testing helps developers write test cases to expose how an API, along with its components, interacts with one another and exposes the data on which they are dependent.
+
+ 
+
+A testing scenario helps developers to specify the kind of problem they want to address and to specify the system, data, and technical components that have to be tested and reported on. Tests help to ensure that the API is compatible with the system, that the data and the required commands are available in the interface, and that the commands are correctly executed. API testing also helps to ensure that the requests to the API conform to the specifications given in the API. The testing scenario helps to identify possible changes or faults and how to remedy them.
+
+ 
+
+As the number of services that can be served from an API increases, the ability to test them has to increase along with it. API testing allows the testing of multiple services and ensures that the use of service is safe.
+
+ 
+
+An API provides a platform for many business processes and value-added features such as alerts, notifications, notifications to incoming calls, messaging, and so on. Through an API, developers can create apps that act as gateways for accessing multiple applications.
+
+ 
+
+In a nutshell, API testing has an impact on an organization's ability to develop new products and services, innovate by allowing them to reach out to the world with new and improved products and services, or to ensure that existing products and services are robust enough to cater to changing market needs.
+
+#  Сhapter 3 How to use machine learning?
+
+ 
+
+ 
+
+The technology behind machine learning has been around for years now, but it has only recently become more accessible to many developers thanks to great improvements in computing, and the creation of open-source software like Apache Spark. The MLLib library from Jupyter allows you to build algorithms in Python and deploy them into your code.
+
+ 
+
+Training, for instance, involves training a machine learning model by feeding it lots of data, and assessing how well it works with it. Once a model is trained and ready for deployment, you can then implement it in your code by integrating it into your application or connecting it with your backend. The MLLib library does all of the hard work for you by making all of the pieces of the model visible and available within the Jupyter environment. You can see and adjust the data models through the data interpretation module, and run the model through any of the evaluation functions. For the model evaluation function, you can choose to evaluate either the error, average accuracy, precision, or predictability, and you can do all of that in the interactive viewer from within your Jupyter notebook. For code to deploy a model to your codebase you need to tell the computer to ‘run’ the model, and also install and configure some pieces of code. The library has a number of examples that you can use to get started, and those are both well documented and easy to follow, so this should not be too daunting of a task for any budding developer.
+
+ 
+
+Once you have your model running, you can easily visualize it and monitor it, and also extend it in a variety of different ways. For instance, you can add new features, add more layers of analysis, change the data types, or even make the model more performant by refactoring the code to use parallelization techniques. The whole point of machine learning is that the better the model performs, the more valuable it becomes, and so if you make your model perform better you stand a much better chance of getting good data, a good model, and a positive return on your investment.
+
+ 
+
+ 
+
+##  Building machine learning applications
+
+ 
+
+ 
+
+If you are going to build an application that incorporates machine learning, then you need to decide whether you want to build it in-house or buy it. Although the terms are often used interchangeably, in this case, I am talking about owning the underlying machine learning software, rather than the standalone products that are in the cloud. If you choose to buy the actual machine learning tools, then the typical options for machine learning are Apache Spark, TensorFlow, or Caffe.
+
+ 
+
+Apache Spark is, of course, an open-source library. It is licensed under the Apache License, which means that developers can freely redistribute it and modify it. You can find out more about the advantages of being an open-source contributor here, and a good overview of Apache Spark’s basic use cases here.
+
+ 
+
+Caffe is a standalone product. It’s released under the same terms as Apache Spark, and available as a Python package, and so you don’t need to have Apache Spark installed on your machine in order to run it. It comes with a variety of pre-trained models, as well as many more models that you can build yourself by combining Spark and Caffe. The commercial version of Caffe also has the benefit of having a large community behind it, so it’s definitely a more mature and polished product than Spark.
+
+ 
+
+TensorFlow is a general-purpose machine learning library, with applications in many different areas of computer science, such as computer vision and natural language processing. It was released under the Apache License 2.0, which means that developers can freely redistribute the code, and modify and redistribute it. It has been primarily designed to be easy to work with and use in the development of web applications.
+
+ 
+
+There are other options, including fast.ai, which offers a business-level product with the monthly subscription fee, and it also offers versions of the software that you can download and use in your own environment. One of the big selling points for fast.ai is that it provides training models to use in your application, and it can also support both Python and R, so there are a variety of options available for getting started with machine learning for free.
+
+ 
+
+ 
+
+##  Building a machine learning service
+
+ 
+
+ 
+
+For building an end-to-end service that can deploy machine learning models to multiple users, it’s usually a good idea to use the services offered by one of the big cloud providers. The two main cloud providers that provide this service are Amazon Machine Learning and Google Cloud.
+
+ 
+
+Amazon Machine Learning is aimed at developers who want to do simple things such as building a simple natural language processing system that can be deployed and configured in minutes, and Amazon has partnered with a range of organizations to help it provide users with other machine learning services as well. The good news is that it’s available to developers as a toolkit. Once you’ve installed it, you can download the source code from Github, and you can run it locally on your own machine, and from the command line, and also from Amazon’s cloud.
+
+ 
+
+The Amazon Machine Learning Service, or AML, is a compute service that can be launched from an AWS console, and it can be used to create a cluster of AWS EC2 instances, for training and running machine learning models, as well as doing other machine learning workloads. AML is aimed at developers who are building simple solutions to specific problems, but Amazon is also experimenting with other use cases, including how they can use AML to provide specialized services to users.
+
+ 
+
+Amazon has introduced a developer preview for the upcoming AWS Advanced Machine Learning service, which will be launched in Q2 2018. You can find out more about the AWS Advanced Machine Learning preview here. AWS has also been experimenting with the API for Amazon Machine Learning, which you can use to create machine learning models, or you can use the API to get other AWS services to work with machine learning models, as well as to generate analytics on the models themselves. This API is still in preview, but you can request access by signing up for the beta here.
+
+ 
+
+Google Cloud Machine Learning, or GCR, is a free service, with many different pre-configured machine learning models that can be deployed in the cloud. The pre-configured models, created by Google’s developers, come in three categories: reinforcement learning, deep learning, and training. The Google Cloud Platform’s ML API is available on GitHub, and you can download the source code from the repository, and then run it in a virtual machine on Google’s cloud. You can find the code on GitHub here.
+
+ 
+
+The Google Cloud Machine Learning service is part of Google’s commitment to making it easy for developers to create applications that run on the Google Cloud Platform, whether it’s using machine learning models or other kinds of machine learning systems. If you’re interested in using Google Cloud Machine Learning, you can sign up for the free tier here, and you’ll be able to download the code from the Google Cloud Platform and install it locally on your own machine.
+
+ 
+
+ 
+
+##  Making predictions, or making predictions?
+
+ 
+
+ 
+
+There’s more than one way to make predictions, and it’s possible to do this with either one of these tools, or with many other methods too. In most of these cases, a prediction is simply a prediction about the future. In fact, what you’re actually doing is making predictions about the present.
+
+ 
+
+The earliest human endeavors at making predictions were probably about how many eggs a chicken would lay, or when the weather would change. These predictions were probably based on observing the behavior of the animal. When the weather changed, and the chicken didn’t lay as many eggs as the day before, humans might have tried to predict if that was a temporary fluctuation in the behavior, or if it would be a continuing trend.
+
+ 
+
+This is probably how many early scientists got interested in the behavior of humans. Were we going to do anything on the weather? Would the weather affect our behavior? Would the behavior affect the weather? Some of the more dominant animals might have been able to give us some predictions. Were they going to lay fewer eggs? Were they going to have a lot of eggs? So it was natural to try to observe people see what their behavior was like, to see if these prediction models were valid.
+
+ 
+
+Predictions are actually simple in the way that they can be represented: they are made of either numbers or words. A number can be something like 1, 2, or 3. A word can be an adjective, noun, or verb.
+
+ 
+
+Sometimes there’s a question of how to represent a number or a word. Does it have to be an integer? Can it be a floating-point number? Can it be a symbol? Can it be a bit? How do you represent words if you don’t know how to write them down? As a result, we can model numbers with binary bits and words with Unicode characters.
+
+ 
+
+It turns out, we can’t model words using only numbers or symbols. Sometimes you can’t write the words down, or you can only write them in certain shapes, and if you want to say what it means, you’re going to have to do a bit of math. What if you want to say that it means “people''? Well, it’s only one symbol, and it’s got two parts: it has an upper and lower case letter “e” in it, so it can mean “people” or “at” or it can also mean “in”. You need a little bit of math to figure out the binary values of the letter.
+
+ 
+
+This is where machine learning comes in: you’re going to say, “I’m going to have to use a machine-learning algorithm to model the word ‘people because it has both upper and lower case letters, and it has a ‘b’, so it means a thing that’s ‘in’, and it has an ‘a’, so it means ‘people’.” In many cases, the number of variables you have, and the complexity of the problems that you’re tackling, you’re not going to be able to model this all by hand. You’re going to need a computer. This is where machine learning comes in.
+
+ 
+
+In machine learning, we use software programs to process data and make predictions. You input a set of data, say the sounds produced by speakers who are reading a passage in a book, and the program tries to predict the next sound to be made. You input another set of data, maybe the responses of people who are watching a movie trailer, and the program makes a prediction about whether you should rent or buy the movie. These programs, you could call them algorithms, can take information that’s supplied by humans and make predictions that humans can’t make.
+
+ 
+
+What you want is a program that can predict correctly, given the data that you’re inputting, the sequence of steps that you’re taking. You have a bunch of data that’s not already fitted, and you want a program that can make predictions based on new information, based on the future, based on the future of other things that are going to occur.
+
+ 
+
+In the early days, we used just the standard strategies of regression, classification, clustering, and so on. We used these strategies for image recognition, speech recognition, and so on. The ideas behind these algorithms had been around for a long time. They’ve been around since at least the 1950s, maybe earlier.
+
+ 
+
+Now, a lot of these algorithms were using fairly basic math. How could we do better? Well, one way to do it was to use neural networks. These are networks that take information that’s received by the sensors and gives it to some other part of the brain, which is actually a computer, and that part of the brain does all of the hard math, decides what the best predictions are, and then feeds it to the network. It’s sort of a parallel processing approach that makes it possible to do these things in ways that are much more complicated than traditional algorithms.
+
+ 
+
+At the same time, in the 1980s and 1990s, researchers started using neural networks for pattern recognition in speech and vision and text processing. In 1992, there was a demonstration of a technique called deep learning: training a network to recognize patterns in the data and then using the network to recognize patterns in new data. It was capable of processing a lot more data than traditional algorithms, but it still had a couple of problems.
+
+ 
+
+One problem was that the accuracy tended to vary a lot depending on what part of the network was trying to make the prediction. If part of the network was trying to make predictions based on the input data, it would get a very different output if it was trying to make predictions based on the predictions from the other part of the network.
+
+ 
+
+The other problem was that training new networks took a long time, but it was very hard to find good ways to train them because the network didn’t know much about itself. You didn’t know what the correct sequence of connections between layers was. You didn’t know what the correct weights were. It wasn’t as if you could just add weights or visualize the connections or predict what the connections should be. It was hard to figure out what was going on in the network, even if it was just trained with good data.
+
+ 
+
+What was interesting about these two problems is that they solved each other. You got a simple prediction algorithm that was relatively good at making predictions based on its own data, but it didn’t know what it was trying to do. That allowed you to have a network that learned to make predictions, but it didn’t know how to do it. You had this architecture of several layers that you could connect, but you couldn’t have a detailed understanding of how those connections were built.
+
+ 
+
+Today, neural networks are used for pattern recognition all the time, and they’re used for pattern recognition for a number of different tasks. They’re very successful at that, but what’s less successful is the class of prediction tasks that they’re not particularly good at. We like to predict the future. We want to know what’s going to happen in the next five minutes, or we want to know what happens next week. We don’t really care about the previous five minutes or the last week or the next year.
+
+ 
+
+We need a way to predict what’s going to happen in the next ten seconds. Maybe we want to know if there’s a car coming at us in the next ten seconds, or we want to know if there’s going to be a missile launch in the next ten minutes. If we can predict things like that, it would be tremendously useful.
+
+ 
+
+We have one good way of predicting things: we use Bayesian estimation. There are a number of algorithms that we know about. One of them is called multivariate regression, where you take a matrix of predictions, like a matrix of two variables. If you take two variables, like moving right or moving left, it has two entries, a forward term, and a backward term, and if you calculate the forward and backward terms separately, you get an equation. Then you want to calculate the slope of the slope. If the slope of the equation is zero, you calculate the slope and you have the prediction.
+
+ 
+
+The problem is that there are really many more equations than there are variables, so you need to know which equation to calculate and how to calculate it. You can’t just calculate each equation separately. That’s really hard to do.
+
+ 
+
+Another good technique is autoencoder, which is a form of the neural network, where you don’t have all the equations. Instead, the algorithm basically uses some kind of pre-existing knowledge of the inputs to find which equation will give you the best prediction. Then, you can train this network on the inputs and then find the predictions that are best. You can train this network on the previous 10 or 20 guesses and figure out which equations were best and iterate over them.
+
+ 
+
+There are a number of different ways of doing that. The way we did it in the lab is we used many different networks that learned to associate different patterns, like moving right or moving left, with different equation relationships. We then tried to train them together and generate predictions that worked, and if they didn’t work, we discarded the last few guesses.
+
+ 
+
+The thing we liked the most was that we could have multiple networks in parallel, and they had very different statistics. There was not one correct answer. There were a lot of different answers, and some of them worked in certain types of situations.
+
+ 
+
+For example, in an automobile situation, a neural network will try to classify whether or not a car is going to hit us, and if it doesn’t work, we will try another network to do it better, or we will try a network with more variance in its predictions. The way you train a neural network is that the more data you put in, the better the predictions. You learn to distinguish different classes of cars.
+
+ 
+
+What we found is that there was almost no correlation between the accuracy of a neural network and the number of neural networks that you used. Even for a task where the cars would move rapidly, where there were lots of movements in all different directions, the same networks seemed to work best.
+
+ 
+
+ 
+
+##  What are artificial neural networks?
+
+ 
+
+ 
+
+Artificial neural networks (ANNs) have become more of a household name in the world of machine learning over the last few years, thanks to a number of breakthroughs in deep learning. Google's AlphaGo is the classic example of this: the game-playing program developed in the early days of deep learning, and the system used a neural network to teach itself the game of Go.
+
+ 
+
+ANNs are basically built from layers, much like in the human brain. Each layer processes a different function - processing the input from the previous layer and then passing it onto the next layer, which processes the data. An ANN's output layer gives back the output of the entire network, and the bottom layer determines whether the input to the network was correct or incorrect.
+
+ 
+
+For example, the input layer might be used to process visual images. The output layer would decide whether a particular image was a cat or a dog. The input layer might also decide what a cat or dog might look like, in terms of shape, colour, and other features.
+
+ 
+
+In research, ANNs are often compared to the human brain, but that's just because they try to learn like a human brain. ANNs are able to collect information in much the same way as our brains do, with the input layer being where our perception takes place.
+
+ 
+
+According to DeepMind, an ANN is actually the simplest form of learning algorithms, but its speed of learning is far beyond anything that is currently possible for a human brain. In tests using a neural network, the system learned to play the Atari game of Space Invaders with an accuracy of 80 per cent, and can learn a task within just 30 minutes.
+
+ 
+
+"Google taught AlphaGo in a matter of weeks - by carefully tweaking the training set, tweaking the architecture, and tweaking the experiment that trained it," the blog post said.
+
+ 
+
+"Of course, this was just a tiny slice of AlphaGo. There are some tens of millions of new games for AlphaGo to learn, and we expect our system will be able to play every possible game eventually. So far, AlphaGo has played against the best computers in the world - all grandmasters - and won every match."
+
+ 
+
+ 
+
+##  Mapping photos with AI
+
+ 
+
+ 
+
+Scientists at Microsoft used the technology behind Google's DeepMind to create what they are calling a "graphical format" for the human brain to represent images.
+
+ 
+
+By scanning the entire world, with Microsoft providing the data set and Sony providing the AI, the software was able to learn the underlying structure of an image and then draw the object in its place.
+
+ 
+
+What's more, the software could move the object around in the photo, even to more complex angles.
+
+ 
+
+Google DeepMind's groundbreaking work with Atari was also used to help protect Wikipedia from cyberattacks. Researchers in 2015 were able to remove the text on Wikipedia pages and replace it with background images, with the new images changing in real-time as people view the page.
+
+ 
+
+ 
+
+##  Data structures in machine learning.
+
+ 
+
+ 
+
+Mislabelling as fast as possible is key to achieving good training quality. It is used for clustering on data points which are assigned to a label A or B. In practice we assign labels for various purposes, either to classify data or for cross-validation. Training of most models can be greatly improved by applying a technique called transfer learning.
+
+ 
+
+Instead of computing the function we are really trying to learn, we attempt to obtain a function from a given function that is somewhat different. For instance, if we are trying to compute the gradient of a function we simply modify the gradient by an exponentially increasing function, which is just a list of the parameters. The function gets trained this way by choosing the best of three candidate functions, where each candidate is a parameter of the model we are trying to learn. We adjust the parameters for each candidate and repeat until the parameters get trained to converge. This process can be shown to converge when the distance between the best learning function and a trained one is minimized.
+
+ 
+
+A classic example of this concept is the learning of clusters for image processing, see “Clustering Learning from Deep Belief Networks”.
+
+ 
+
+The standard approach for training a neural network is to draw features onto the training data. For the first stages of training, the training data is depicted as a simple line. If the training data is quite sparse, training the network requires a lot of computing time. However, on the other hand, if the training data is large the computations become more expensive, especially if the network gets stuck on the training. To reduce the cost, we define a regularization term to a function that takes into account the amount of training data. In the standard approach the regularization takes into account a fixed cost, that is the cost of the gradient descent function, because it is pretty easy to compute in practice. We will see the effect of the regularization term in the next sections.
+
+ 
+
+ 
+
+##  Examples of supervised learning.
+
+ 
+
+ 
+
+In supervised learning, we can also define a measure that tells us whether the observed difference between the predicted label and the observed label is large or small. For instance, imagine we have a model A that predicts whether a given real number is positive or negative, and another model B that predicts whether the given real number is positive or negative.
+
+ 
+
+Let’s assume that we want to predict whether the number is above or below a certain threshold. In general, the higher the number is above the threshold, the more likely the number is to be above the threshold, and the lower the number is below the threshold, the more likely the number is to be below the threshold.
+
+ 
+
+We would like to train a model to predict whether the number is above the threshold (or to predict whether the number is below the threshold). We would also like to know how to choose a number above or below the threshold. We will call this parameter as the parameter of the model.
+
+ 
+
+For a training stage, we take a sample from the training data and feed it to the model. If the prediction of the model is above the threshold, then we subtract the average of the mean and the variance of the sample. This gives us a predicted number below the threshold, and a predicted number above the threshold. If the predicted number is above the threshold, then we take a sample from the training data and feed it to the model. If the prediction of the model is below the threshold, then we take a sample from the training data and feed it to the model. As we can see, in the above equation, the mean and the variance are the single, respectively, normalized values of the predicted number. We also need to take the derivative of the function and turn it into a scalar, so that the estimated parameters of the model are unique. This is called autoencoders and is a subcategory of deep learning.
+
+#  Chapter 4 Machine learning methods.
+
+ 
+
+ 
+
+##  Supervised machine learning method.
+
+ 
+
+ 
+
+Let’s solve this problem from the same point of view, starting with a Machine Learning algorithm for a classification problem (here, we just need to find the strongest classification: “Germany” or “Iran”). Let’s start by taking the generalization size as the output of our model, and note that it may depend on the labels:
+
+ 
+
+For every input layer, just extract the log loss of the loss function (1 or -1). That’s enough to predict the classification at every layer of our model, by simply following the classifier output.
+
+ 
+
+More simply: take the log-loss of the input, and add 1 to it for each level of the neural network.
+
+ 
+
+The smallest input-output difference is our output label, and the larger this difference is, the stronger the prediction (input) for that layer.
+
+ 
+
+This is the method we can use to scale up our algorithm for more complex data.
+
+ 
+
+We can get a direct idea of the parameters of our learning algorithm (such as the number of hidden layers, the number of hidden nodes, the activation function, etc) by looking at the hyperparameters for the learning algorithm’s train/test splits. We also have the total number of parameters to work with (e.g. size of the desired region). Let’s look at a quick way to work with them:
+
+ 
+
+Simple-minded, but with some advanced features. Simple-minded, but with some advanced features.
+
+ 
+
+Here are the outputs of our scaling function:
+
+ 
+
+For every level, simply take the logloss of the loss function (1 or -1).
+
+ 
+
+and add 1 to it for every layer of our model.
+
+ 
+
+After scaling, the maximum values (which would require additional testing) increase linearly with the number of layers. We can rewrite the scaling function as a matrix:
+
+ 
+
+The neural network can now learn with only a few parameters. The steps for a slightly more complex example are as follows:
+
+ 
+
+Add a weighted prior to minimize the standard deviation at every single step (the matrix where X and Y are the input, the output, and the logloss for every weight-indexed hidden layer). The result of the weightings will be a distribution of overweights.
+
+ 
+
+and for every weight-indexed hidden layer). The result of the weightings will be a distribution of overweights. We need to train/test splits for each layer with a certain number of iterations. We can see from the matrix that the columns (whose X and Y coordinates are input, output, and logloss) have a different number of iterations for each of the 3 weight-indexed layers.
+
+ 
+
+After training/test splitting is done, we’ll take the logloss and scale it with the number of hidden layers. In this way, we’ll be able to go from our input to our output, to the logloss.
+
+ 
+
+Although we don’t need to explicitly visualize these components to build our model, in this case, we can get more flexible visualizations (e.g. histograms) by running our scaling function twice: once for the dimension (e.g. 10 × 10) and once for the size (e.g. 3 × 3). Here’s an image of the units of the features we want for each weight-indexed layer:
+
+ 
+
+So how can we scale up our approach? Well, as it turns out, it’s very easy to do. All we need to do is take the maximum value in a weight-indexed layer and scale it with the number of hidden layers in each level. This will result in an output distribution that includes all the features in every layer.
+
+ 
+
+ 
+
+##  What is an unsupervised machine learning method?
+
+ 
+
+ 
+
+Unsupervised machine learning is one of the important application areas where machine learning works best, especially when there is no prior knowledge about the data in question. The fact is, there is a lot of variation in a data structure, the process of data generation, and how data is processed.
+
+ 
+
+A machine learning program will not be able to make sense of such data unless it has a starting point from which to learn what they are looking for.
+
+ 
+
+Unsupervised learning has the advantage of starting from a clean slate, as it can give the computer a chance to see patterns in the data that would be masked by existing knowledge.
+
+ 
+
+An unsupervised machine learning tool is developed by feeding data to a collection of algorithms that get to work on processing the data.
+
+ 
+
+It is a very laborious and time-consuming process but can offer benefits for those companies who work on large, unstructured data sets. An unsupervised algorithm is an algorithm that does not require any training but instead learns as it goes.
+
+ 
+
+This means that it can be applied to a new dataset and receive further training for a new task or a new task without human interaction.
+
+ 
+
+Research has been showing that unsupervised learning can have a significant impact on the accuracy of a machine learning program.
+
+ 
+
+The supervised machine learning method is a machine learning program that is designed with a predefined task or set of tasks in mind.
+
+ 
+
+It will be familiar to anyone who has taken an introductory course on machine learning in school or has used a standard computer program.
+
+ 
+
+This method requires the use of pre-trained data sets, from which the machine learning program can learn to perform a task on new data, provided that the data in the training set is not biased by information that cannot be used to create the program.
+
+ 
+
+Programs that are trained with data sets that contain both correct and incorrect answers may not perform as well as they would with a model trained on data sets that only contain correct answers.
+
+ 
+
+The second type of machine learning is called deep learning. It is also a form of machine learning in which the machine learns to perform tasks in a visual environment.
+
+ 
+
+It is commonly used in fields that deal with image recognition or even computer vision.
+
+ 
+
+Deep learning is an approach that was developed by Google to improve the quality of the results from Google image search, where it learned to recognize cats from images and to improve the quality of the results.
+
+ 
+
+ 
+
+##  How is supervised and unsupervised learning different?
+
+ 
+
+ 
+
+Supervised learning gives the computer a goal or direction to follow, while unsupervised learning tells the computer to simply observe and learn.
+
+ 
+
+In supervised learning, the computer is given a mathematical formula to follow and the instructions to find a particular mathematical function in the data set, and based on its outcomes, it decides what is to be done next, such as adding or subtracting or how to store the data.
+
+ 
+
+In supervised learning, the computer is guided through the task by the algorithm, and it is programmed to provide it with a set of functions or rules that will lead it to the endpoint of the goal, in this case, to find the target function.
+
+ 
+
+In unsupervised learning, the computer follows its own instincts, based on the experience that it gained through acquiring data and can produce a value or an answer or an action, on its own accord.
+
+ 
+
+ 
+
+##  How can machine learning improve a company’s products or services?
+
+ 
+
+ 
+
+Machine learning will significantly increase the quality and depth of analysis and other actions that can be performed by a machine.
+
+ 
+
+It will also increase the speed and accuracy of any kind of machine learning program.
+
+ 
+
+Deep learning is extremely important to organizations.
+
+ 
+
+A machine learning program needs to learn how to interact with the data and learn to make decisions.
+
+ 
+
+In the case of big data, the kind of data that is found in a vast range of data sets will be different.
+
+ 
+
+So, a machine learning program that deals with a wide range of data sets will have to learn to connect the data and learn to make decisions based on the data.
+
+ 
+
+The production of an effective machine learning program will need the participation of many people in production of machine learning programs.
+
+ 
+
+They need to know how to use the data to make machine learning programs and learn how to program the m .
+
+ 
+
+ 
+
+##  What is a semi-supervised machine learning method?
+
+ 
+
+ 
+
+We can use a semi-supervised learning model to help us predict the complete color space of our data without specifying all of the parameters. Consider the problem of estimating the complete color space for a particular data set:
+
+ 
+
+We’ll take as input a set of images with known spatial frequencies (i.e. the RGB color model), and we’ll have some data to predict. For example, let’s assume the data set has been prepared so that images with x = 75% have the color-space color 1 for pixels in a specific region (bottom left). Then, we’ll take as input two vectors, one that specifies the color for those pixels and one that specifies the location of the pixel. Since we know the coordinates of that location, we can estimate the color-space color of the region.
+
+ 
+
+If we were to use fully supervised machine learning to describe the problem, we would specify all of the parameters for the blue and green channels, and we would add and remove points based on how close we think they are to 0% and 100% respectively.
+
+ 
+
+We’ll use the confidence-enhanced training algorithm to learn what we need to learn about the colors in our data, using the visual domain of the RGB space (top-right). The first graph (top right) shows the predicted color for each region. The blue region is around 50% confidence, the green region is around 75% confidence, and the red region is around 95% confidence. These predictions are usually much better than the ones we obtain with a fully supervised model, as we can see from the second graph (bottom-right).
+
+ 
+
+At the time of writing, we have not found a free data set with a region that suits this model perfectly. We can use some example pictures to train our model, but this is more a toy than anything else. However, we found one image (shown below) that we could train using a semi-supervised model and see how well the model worked. Our model made a pretty good guess, even though there was a slight difference between the color of the region above and the region below.
+
+ 
+
+The reason for the slight difference is that we’re using the region for data that has a different intensity of green, but the region that is around 100% confidence is green, and the region that is around 50% confidence is very light green. This is similar to what happens in our fully supervised model.
+
+ 
+
+ 
+
+##  What is the reinforcement machine learning method?
+
+ 
+
+ 
+
+The reinforcement learning method is a machine learning approach for self-training models. It's a quite simple method to understand because it relies on the usage of dynamic optimization in training data as well as some parameter fitting. When training a model, you first define the number of copies of every variable in the model as well as the required accuracy for every possible data set, then, you run the model through the optimization step in a way that has the highest possible value of that parameter value. If you want to train a model with a very large number of parameters, for example, it might take two weeks, but with a large parameter value, for example, you might take a few hours.
+
+ 
+
+Here, every possible parameter value is adjusted according to the model performance (or, lack thereof). In our case, for any given training data, the number of the CUBE units needed is used as the baseline to determine how many samples the model needs to obtain an appropriate score for that data set. Once the model is trained, it is then fine-tuned to achieve the maximum accuracy, that is, the score for a given dataset. Thus, we use the model's performance as a continuous variable and we can evaluate how the model performs after we've fine-tuned it.
+
+ 
+
+Moreover, by fine-tuning a model, we are applying a lot of processing to each sample and, hence, it is not possible to use both continuous and categorical variables in the same model. Categorical variables are typically good predictors of a continuous variable, but a continuous variable is usually a better predictor of a categorical variable. With a continuous model, the predicted value of the outcome is the whole data set. However, with a categorical model, the predicted value of the outcome is a subset of the whole data set. In the reinforcement learning method, the categorization happens right in the model. Therefore, we have to run the model three times (one iteration) to obtain the prediction of the data set. Then, we take the prediction and transform it into a categorical form.
+
+ 
+
+In practice, this requires the execution of two transformations. We need to transform the outcome into the categorical form and then we need to transform the predicted value of the outcome into the categorical form. Then, we can compare the prediction of the outcome against the categorical predictor and correct the model if necessary.
+
+ 
+
+ 
+
+##  How does the reinforcement learning method work?
+
+ 
+
+ 
+
+In reinforcement learning, we use a virtual model of the environment and we run the model until it reaches a threshold score. Then, we apply the performance score as a feature to the input layer. However, that information is not available in the base layer. That's why we need to transform it.
+
+ 
+
+We define a particular system state, such as whether the CUBE has a right angle or left angle, and we run the model against the virtual environment until the model reaches the specified threshold. That's why we run it three times (a series of iterations) in order to get the final score. Then, we transform the score into the categorical form and we can use it for predictions.
+
+ 
+
+ 
+
+##  How does this happen on an event-based deep learning network?
+
+ 
+
+ 
+
+This happens on a two-layer neural network where the first layer is the probabilistic vector space. That is, it keeps track of how likely the outcome is based on the current input. The output of the network is another probabilistic vector space that represents the final output.
+
+ 
+
+However, in the reinforcement learning method, we need to be able to translate the current input into the corresponding output, without running the model repeatedly. Thus, we need a second-level classifier to transform the inputs into the corresponding outputs. If the input is likely to be a specific output, we run the model again. However, if the input is not likely to be a specific output, we run it again. That's why we use a second-level classifier.
+
+ 
+
+There are two big challenges here: to convert the probabilities into the outputs, and to transform the outputs into the input vectors. The probabilistic vector space (aka fuzzy logic) might look something like this:
+
+ 
+
+However, from the logical point of view, this is quite cumbersome and not so easy to convert into a language that can be used for neural networks. However, we still can translate the probabilistic vector space into a probability density function, which can then be encoded as a kernel (or a smoothed version of it) inside the neural network.
+
+ 
+
+Moreover, we can add some transformations. We can change the probability weight that we keep for each of the outputs so that the output of a neuron would be the sum of the output of all the neurons in the input. We can also add a stride or loss function between input and output.
+
+#  Chapter 5 Big Data
+
+ 
+
+ 
+
+##  What is big data?
+
+ 
+
+ 
+
+Big data refers to an enormous amount of information held in digital form. Theoretically, there should be no end to what data can be crunched and where this data can be accessed. The large volumes of information shared across applications, and the access and storage requirements in the cloud, create a vast treasure trove of data that is unprocessed. At least half of the global information created every day is never used, leading to the global surveillance gap.
+
+ 
+
+Not only is the amount of data growing exponentially, but the ability to analyze these data points has not kept pace. As there are no limits on the number of cores and graphics cards available in computing systems, the processing power needed to analyze data has increased exponentially.
+
+ 
+
+While current tools allow the cost of analyzing large amounts of data to be amortized over large volumes of data, new techniques, such as those developed by academia, have managed to combine the relatively expensive computing power with an inexpensive data processing infrastructure.
+
+ 
+
+Big data will change the way we interact with data. It will provide individuals with better access to information than ever before. It will allow businesses to create accurate predictive models and to find new market opportunities. New business models and services will be created by the ability to access and utilize a vast amount of information.
+
+ 
+
+ 
+
+##   
+
+##   
+
+##   
+
+##  Getting ready
+
+ 
+
+ 
+
+Big data has the potential to transform the industry, and as such, it is imperative that our governments, educational institutions, and civil society become informed about big data's potential benefits and understand the threats it may pose to our democracies, economies, and individual rights.
+
+ 
+
+Being ready for the impact of big data means being aware of the opportunities it presents and understanding the potential challenges it will pose. It also requires companies to understand that in order to take full advantage of the opportunities, they will need to take a hands-on approach. Some of this work is already happening. For example, in 2015, IBM and the National Cyber Security Centre developed the UK's first National Big Data Strategy, which was released in February 2016, and a day after the UK's data protection law came into force.
+
+ 
+
+However, as there is no regulator in place for big data, the concept of "big data" has yet to be fully defined in the UK, and policymakers and industry are not yet sure how big data will affect business and society. This uncertainty has given rise to the phrase "data desert".
+
+ 
+
+A day after the data protection law came into force in the UK, the government still did not have a definition for big data and had not developed an overarching policy for dealing with the complex legal and regulatory environment it poses. Nor were there guidelines for how businesses should respond to the ongoing changes to the law.
+
+ 
+
+Not enough time has passed since the UK's data protection law came into force for organizations to have a clear picture of how their data processing systems will change to address the legal requirements in the legislation.
+
+ 
+
+There is a need for clarity on how companies can continue to acquire and process data when the European Union General Data Protection Regulation comes into force in 2018. Given the wide scope of the regulation, it is unclear whether businesses will still be able to acquire and process data as they do currently, and how they will identify the right customers for their big data systems in the future.
+
+ 
+
+Not surprisingly, many organizations and individuals are looking to the US, a country that already has robust laws in place, for guidance. But data privacy is very much still a topic of discussion, and confusion reigns.
+
+ 
+
+One issue is that different laws apply to a business, and only some of them require companies to report data breaches. And there is a lack of clarity on the kind of information that companies need to report and the way they should share it.
+
+ 
+
+Small companies in particular are finding it difficult to comply with the new rules. This is because they may not have the resources and expertise to conduct a thorough assessment of their own data processing systems to identify and rectify their data management gaps.
+
+ 
+
+ 
+
+##  Training data
+
+ 
+
+ 
+
+The lack of clear guidelines is further compounded by the fact that only a fraction of companies have access to all the data that they need to perform their analysis. In fact, under the old data protection law, companies were required to publish information about data breaches within a specified timeframe after they took place.
+
+ 
+
+In its first year, the data protection law has had to grapple with the long-standing problem of how to deal with the increased volume of data available to organisations as a result of the growth of social media platforms and the way the Internet is evolving.
+
+ 
+
+As there is no regulator in place for big data in the UK, it is also unclear whether companies will still be able to acquire and process data as they do currently. This may affect the US' big data sector as much as it will the UK's.
+
+ 
+
+Given that there is little consensus in the industry, and no one has yet defined the concept of big data, the lack of clarity is likely to remain a major concern for businesses for the foreseeable future.
+
+ 
+
+In order to address the challenges, this poses, the UK government should take a step back and come up with a holistic approach to regulating big data and social media platforms. This would help businesses and organizations to understand what data is available to them, as well as how to mitigate the risks associated with their use.
+
+ 
+
+In addition, the government should be aware that, just like in the financial industry, organizations in the big data sector may seek to avoid reporting breaches in the first instance if they have the means to keep their data processing methods under wraps.
+
+ 
+
+Both groups of organizations should therefore be afforded the opportunity to report any data breaches that occur in the UK.
+
+ 
+
+Ultimately, however, there is no easy solution to the problem of the reporting of big data breaches. To give companies greater confidence that they will be treated fairly in the event that they suffer a breach, the government must come up with a consistent and comprehensive data protection regime and simplify the reporting regime for big data incidents.
+
+#  Chapter 6 Why is big data important?
+
+ 
+
+ 
+
+It is important to understand the purpose and value of big data. This section will explain some of the benefits of big data, and help you understand why it is important for businesses.
+
+ 
+
+Before moving on, it is important to note that big data is fundamentally a collection of unique data sources that can be combined to produce significant volumes of aggregated, spatially distributed, real-time or historical data. It enables businesses to gain actionable insights about their business and customers that they would otherwise not have had the opportunity to gather.
+
+ 
+
+Big data allows businesses to expand on the traditional data set that they used to run their business. It can facilitate business models, allowing companies to reach out to their potential customers in a new way, based on their specific needs. This could include the use of predictive analytics or it could mean personalized search based on customer search and browsing habits. This would enable businesses to make decisions based on deeper insights and provide customers with products and services that are actually relevant to them.
+
+ 
+
+The data can also improve decision-making, allowing for more efficient deployment of the workforce, and enabling the company to understand its customers better, identify areas for improvement, and understand how their potential customers interact with them. For example, if an employee has to make a decision that affects the business in a serious way, then a big data platform can help him make the right decision in a timely manner.
+
+ 
+
+Further, big data is being increasingly adopted as it helps businesses save money, as it can detect frauds and scams in advance and avoid loss of revenue. Businesses can also utilize big data to improve their customer experience and provide a great customer experience.
+
+ 
+
+ 
+
+ 
+
+##  What are the big data trends?
+
+ 
+
+ 
+
+As mentioned earlier, the concept of big data is still relatively new to businesses, and the advancements in technology over the past several years have resulted in several waves of new technologies that have helped businesses unlock the potential of big data. In this section, we will take a look at some of the key trends that will have an impact on big data over the coming years.
+
+ 
+
+ 
+
+##  The emergence of big data platforms
+
+ 
+
+ 
+
+There are two types of big data platforms:
+
+ 
+
+●     Data warehouses: Data warehouses provide a central hub for storing and processing the data.
+
+●     Data lakes: Data lakes are analogous to data warehouses, but they are typically open-source.
+
+ 
+
+The data lakes provide enterprises with the flexibility of adding new data sources such as sensors or video streams. Enterprises can integrate different sources and create an ecosystem around them for performing analytics. It is flexible enough to accommodate a variety of business applications and integrations.
+
+ 
+
+To provide users with a complete, end-to-end solution, big data platforms provide a collection of tools that can help users perform the right analysis to improve the business. These platforms provide businesses with ready access to the information, on-demand, which helps them rapidly identify areas for improvement.
+
+ 
+
+In addition, big data platforms offer the ability to share the resulting insights across the enterprise for further insight and future improvement.
+
+ 
+
+Big data platforms can integrate with various applications and services for business benefits such as the ability to create dashboards, documents, data visualization tools, and fraud detection systems.
+
+ 
+
+ 
+
+##  Trends in big data
+
+ 
+
+ 
+
+Big data can be broken down into four broad categories:
+
+ 
+
+Strategic Analytics: It is a process of measuring business outcomes and finding out the patterns to find out how an individual or organization behaves. It is a process of measuring business outcomes and finding out the patterns to find out how an individual or organization behaves.
+
+ 
+
+Operational analytics: It is a process of gathering information from systems and gathering insight from it to improve operational performance. It is a process of gathering information from systems and gathering insight from them to improve operational performance.
+
+ 
+
+Business intelligence: It is a process of generating actionable reports on the information collected from systems to help the organization make an informed decision. It is a process of generating actionable reports on the information collected from systems to help the organization make an informed decision.
+
+ 
+
+Application programming interface (API): It is a set of plug-and-play API (application programming interface) tools that simplify programming in enterprise applications.
+
+ 
+
+ 
+
+##  Trends in big data platforms
+
+ 
+
+ 
+
+The big data platform will become the central nervous system of all the big data solutions and services. As a result, there will be an increasing need to find ways to make the platform more flexible and modular to accommodate a variety of uses.
+
+ 
+
+To create a big data platform that can meet the varied needs of the enterprise, the platform will be modular and open-source. This will enable the platform to be used by different enterprises, which will provide flexibility and help enterprises to integrate the platform with their existing systems and tools.
+
+ 
+
+To meet the growing need for more customization of the big data platform, the big data platform vendors will be focused on building more modular big data platforms that can be customized to meet the specific needs of the enterprise.
+
+ 
+
+ 
+
+##  Trends in enterprise applications
+
+ 
+
+ 
+
+The big data platform market is expected to grow at a CAGR of 30% over the next few years. As a result, the number of enterprises adopting big data platforms and services is expected to grow.
+
+ 
+
+However, enterprises need to choose a big data platform that meets their needs. Most of the enterprise big data platform vendors offer a solution-focused product that contains a pre built database, analytics, business intelligence, integration, and other features for enterprises.
+
+ 
+
+Business intelligence tools and platforms are likely to be the next big trend in big data. Business intelligence tools and platforms will enable organizations to connect various data sources. As a result, businesses will be able to derive actionable insights from the data they collect.
+
+ 
+
+The business intelligence tools and platforms will provide them with the ability to visualize and analyze the data. As a result, businesses will be able to formulate better business decisions and will be able to gain actionable insights from the data they collect.
+
+ 
+
+ 
+
+##  Trends in big data analytics
+
+ 
+
+ 
+
+While big data is gaining a lot of momentum in the market, there is a need to provide analytics capabilities to the data. To provide the analytics capability, the vendors will focus on enhancing the capabilities of the data warehouse and data lake tools to provide a variety of advanced analytics capabilities such as predictive modeling, classification, regression, and time series.
+
+ 
+
+To provide advanced analytics capabilities, the big data tools and platforms will need to be interoperable and flexible. Big data platforms will be built with a variety of analytic techniques that will allow the platform to integrate with the enterprise systems and data lakes.
+
+ 
+
+The capabilities of the big data tools and platforms will depend on the advanced analytics that will be embedded into them. The software will need to be flexible enough to adapt to the needs of enterprises and will be built with open APIs that can be consumed by different applications and devices.
+
+ 
+
+ 
+
+##  Trends in data integration
+
+ 
+
+ 
+
+The integration of big data technologies and platforms with the existing enterprise systems and data lakes will become critical for success. To meet the need for integration, the vendors will be focusing on providing seamless integration of different platforms and tools in their big data platforms.
+
+ 
+
+This will ensure that different platforms and tools can be easily integrated and can be used by different teams within an enterprise, which will help them collaborate effectively and speed up the process of big data analytics and other business applications.
+
+ 
+
+To meet the demand for integration, the big data platforms will need to be flexible and can be integrated with their business applications. This will help the businesses to gain efficiency in big data analytics and other business applications.
+
+ 
+
+ 
+
+##  Trends in cloud deployments
+
+ 
+
+ 
+
+Cloud deployment is expected to be the key factor for big data tools and platforms. The demand for big data tools and platforms that can be accessed through the cloud is expected to be a major factor in the market growth.
+
+ 
+
+The cloud deployment of the big data tools and platforms will allow businesses to migrate their data from on-premises to the cloud, and then execute a variety of business analytics and data lakes without the need to hire IT, experts.
+
+ 
+
+ 
+
+##  Analytics and data access challenges
+
+ 
+
+ 
+
+To overcome the challenges faced while accessing and analyzing data, the big data tools and platforms are likely to be extensively integrated with the enterprise systems and data lakes. This will ensure that the data stored in the data lake can be accessed through the big data tools and platforms.
+
+ 
+
+Integration of the big data tools and platforms with the enterprise systems and data lakes will be essential for enterprises to gain access to all the data that is stored in the data lake. This will enable businesses to have better access to the data that is stored within the data lake.
+
+ 
+
+To improve the efficiency of big data analytics and other business applications, the tools and platforms will need to have better analytics capabilities. This will enable them to improve the accuracy and speed of data analytics and various business processes. This will enable them to provide a better analysis of the data that is stored within the data lake.
+
+ 
+
+The deployment of big data tools and platforms with enterprises is expected to continue in the coming years. The big data tools and platforms will be providing a variety of benefits to the businesses, such as greater flexibility, efficiency, and increased agility.
+
+#  Chapter 7 What is Data science statistical learning?
+
+ 
+
+ 
+
+Data science statistical learning, or DSLe, is a tool for gaining insight into the reasoning behind data scientists. Statistical learning is a form of supervised machine learning and is meant to be used for those parts of machine learning that require human insight. Data scientists have a range of different tasks, some of which involve collecting data, others involving making predictions and others involving interpreting the results. In many cases, machine learning algorithms do not explain their reasoning well enough to be used in an untrained role. DSLe’s goal is to provide that human insight. This tutorial on statistical learning introduces DSLe for the analysis of quantitative metrics, creating and training inference engines, and uses DSLe to create a learning program for internet traffic predictions.
+
+ 
+
+ 
+
+##  What is graphical linear algebra (GLAM)?
+
+ 
+
+ 
+
+GLAM is a technique that converts information about data into expressions that can be manipulated with vector fields. GLAM is used primarily in image processing and to interpret feature engineering algorithms that determine how well features contribute to a feature space’s definition of similarity between the two. However, it is also frequently used in statistical machine learning to transform data into features or features into data and to perform feature engineering. As a tool for producing linear transformations of data, GLAM is useful in creating data visualization applications such as plot-sense plots and scatter plots. It also enables the reuse of algorithms to be applied multiple times.
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+##  What is abstract learning?
+
+ 
+
+ 
+
+Abstract learning is a machine learning technique for approximate inference. In the traditional statistics framework, an equation is represented as an infinitely large vector, e.g. the correlation of the X and Y variables; in contrast, in abstract learning, a formula is represented as an array, e.g. the ratio of the X variable to the Y variable. The output of an approximation of an equation for a set of data may not always be as exact as an exact formula would provide. The aim is to find a metric that is as good as possible but that is still a reasonable approximation of the desired solution. Abstract learning is especially useful in scientific applications such as data mining.
+
+ 
+
+ 
+
+##  What are neural networks?
+
+ 
+
+ 
+
+Neural networks are a type of learning algorithm that has been around for over 50 years. Originally inspired by the connections between neurons in the brain, neural networks are commonly used to make predictions about small collections of data in discrete categories. In machine learning, neural networks are useful for statistics because they can predict the probability of an event given a large number of data points, thus overcoming the limitations of statistical learning. They are also used in machine vision and natural language processing to assist with vision and language tasks. For further information, see the Machine Learning Pipelines Tutorial on neural networks.
+
+ 
+
+ 
+
+##  What is numeric learning?
+
+ 
+
+ 
+
+Numerical learning is a statistical technique for estimating the sample size needed to find an optimal solution. A quantitative measure that evaluates the quality of a numerical solution is called the numerical approximation ratio (ANR). This ANR (pronounced “anno”) is the ratio between the likelihood function that the algorithm must solve and the sample size. Because it is the ANR that is being evaluated, a numerical solution is called a “calibrated approximate solution.” In order to create a calibration, an algorithm must know the ANR.
+
+ 
+
+In the case of statistical learning, the ANR provides information about the quality of a single sample. For instance, if the ANR is 3/5 and one considers three examples, one can conclude that there is a good chance that the ANR will be 3/5. However, if the ANR is 10, this information is not very useful; instead, one would like to know how the ANR performs as more samples are considered. In the numerical case, this is straightforward: the ANR is simply the ratio of a finite number of samples, e.g. n, to the sample size (e.g. n \* 3), or the number of instances of the optimization problem that must be solved in order to find a solution to the problem.
+
+ 
+
+ 
+
+##  What is logistic regression?
+
+ 
+
+ 
+
+Logistic regression is a statistical model that is widely used in machine learning. Like many machine learning algorithms, logistic regression is based on a Bayesian model. In this model, the objective function is described by a function, “logistic”, that estimates the probability of a hypothesis given a set of data. In the simplest form, the likelihood function for logistic regression can be written as:
+
+ 
+
+This function describes the proportion of cases which match the hypothesis given a set of data. The case or criterion is “is this the best hypothesis?” The three ways in which this function can be written are:
+
+ 
+
+There are two types of hyperparameters that affect the likelihood function:
+
+ 
+
+●     hyperparameters which modify the likelihood function
+
+●     hyperparameters that modify the other parameters.
+
+ 
+
+Typically, logistic regression will use the logistic function that it finds on the basis of model selection. Model selection is a branch of statistics which describes how one selects the best hypothesis or model in order to construct an optimal estimate of the parameters. In a simple model where the parameters are independent, this might involve selecting the likelihood function from a large number of feasible functions and calculating . The choice of likelihood function is constrained by a cost function which specifies how much one is willing to increase the likelihood of the data (this will affect ). This cost function can be described by a duality equation:
+
+ 
+
+ 
+
+##  The Logistic Regression Lagrange Multiplier In Training
+
+ 
+
+ 
+
+For regression problems, one of the most important hyperparameters is the number of data points. At a training time, it is natural to want to find the best parameters using only this number of data points. However, this often leads to poor-quality estimates; it can be better to use larger training data in order to reduce the likelihood of overfitting.
+
+ 
+
+This formulation is known as the Logistic Regression Lagrange Multiplier In Training (LR-LMIT).
+
+ 
+
+At the training time, the LR-LMIT is often set to be equal to the number of data points. If the number of data points is sufficiently large, the LR-LMIT has a quadratic or higher error on the training data, whereas setting it smaller can lead to large drops in accuracy. The LR-LMIT also plays an important role in optimizing the parameters and . In many cases, the LR-LMIT is an “optimal” fit to the data, and the cost function is defined using the LR-LMIT. However, this general form is ambiguous, because it is often not clear whether it corresponds to the optimal fit to the data.
+
+ 
+
+While most methods for optimization in machine learning use the general formulation , there are three specific formulations which have been developed for optimization. These are generally referred to as the Cross-Validated (CVC), Standard Model (SM), and CVC/SM Hybrid (CVC-SM). CVC-SM has the advantage of being numerically rigorous and being flexible for wide-range of different scenarios. As an alternative formulation, we also use the Simplified Version of CVC (SVC), which provides a version of CVC-SM which is better suited to settings with very large size.
+
+ 
+
+The advantages of the SVC formulation over the CVC-SM formulation is that SVC preserves the case where the parameters are strictly positive. CVC-SM is nonlinear in this case and is not adapted to complex models.
+
+ 
+
+In practice, the CVC-SM formulation is often preferred. For example, the CVC-SM formulation is known to produce significantly better results than the CVC formulation for simpler and lower-dimensional models with only a few parameters. In addition, SVC-SM may be expressed as the integral of a Gamma function, and this Gamma function has a nice representation in terms of the logistic function as . Thus, the fit of the SVC-SM formulation provides a more intuitive representation of the parameter setting. However, the SVC formulation does not have the flexibility in minimizing the cost function, and the set of available sets of functions cannot be numerically tuned for a particular problem. Therefore, SVC-SM is often used in simulations to reproduce the desired model behavior.
+
+ 
+
+ 
+
+##  Automated Inference
+
+ 
+
+ 
+
+In the past, automated inference has been made significantly easier by the invention of the Backpropagation algorithm. The idea behind this algorithm is to adjust the error to the given weights and back propagates this error back into the cost function. This algorithm is straightforward to implement and is one of the most fundamental of all machine learning algorithms. Although relatively easy to implement, the algorithm has been shown to produce great gains in learning in very large datasets. In addition, it has led to great advances in deep learning, as well as general automated learning.
+
+ 
+
+In the modern machine learning world, it has been shown that the backpropagation method leads to strong errors that can dramatically increase the accuracy of the solution, even with very large data sets. However, the backpropagation algorithm cannot be applied to arbitrary problems. One of the major limitations of the backpropagation algorithm is the need to provide the model with an updated weight at each iteration. This process introduces overhead into the running of the algorithm and therefore creates some expensive iterations for the implementation. In addition, this layer of overhead is usually ignored and performance is often measured by comparing the results of the algorithm against the learning rate. In large-scale machine learning applications, the error can be very sensitive to this gradient computation and this can significantly degrade the accuracy of the resulting solution.
+
+ 
+
+Many computer algorithms allow a training set to be generated automatically for the optimization algorithm. The most well-known algorithm that allows for this, is the Neural Network algorithm. The Neural Network algorithm makes use of a large number of simple or unique “neurons'' in the form of machine learning models. A neuron in a neural network is nothing but a configuration of a gradient descent equation, which depends only on the training data. Although this model is very complicated, it works on a single training data for a long period of time to approximate the appropriate function. The neural network computes the error to the gradient and back propagates this error into the cost function to correct the error. The results of this algorithm are often very accurate, and are especially useful for well-defined problems.
+
+ 
+
+The backpropagation algorithm has a few shortcomings, and it is no longer the solution of choice for many large-scale machine learning problems. However, it is still used widely in research for very large-scale problems. Many popular research neural network libraries will call for backpropagation, such as scikit-learn, cnn-learn, MXNet, and PyTorch. These libraries provide a framework for the building of large-scale machine learning models in a very efficient and scalable manner.
+
+ 
+
+As a final note, we also would like to mention the great work done by Ben Goldacre on improving the backpropagation algorithm. His work greatly improved the algorithmic efficiency of the algorithm and is responsible for the substantial performance increases in deep learning and traditional machine learning problems. If you are interested in learning more about the backpropagation algorithm, check out his publication: “Deep Convolutional Nets: Error Stabilization Using Partial State Entropy”.
+
+ 
+
+ 
+
+##  Deep Learning
+
+ 
+
+ 
+
+The most famous of these neural network algorithms is also the most complex. The idea behind the deep learning algorithm, is that we take data and reduce it to smaller, simpler and more specific parts, such as the input dimension or the class dimension. The deep learning algorithm then calculates the output of these smaller pieces and combines them together to create a more complex output.
+
+ 
+
+The algorithm involves applying a large number of small operations, called training sets, to a large amount of training data. The first step in the training phase, is to choose a learning rate. This determines how fast we will advance through the input layer to the output layer, and how quickly the output layer can be computed. This step is often overlooked in the implementation of the algorithm and is often left to the users to configure.
+
+ 
+
+Once a training set is chosen, we can train the network to solve the specific problem at hand. For example, our network is in the class dimension 3, and it should be able to output the class label 3 as well as the sign of the corresponding parameter. We can train the network to calculate the sign of the parameter to ensure that the output corresponds to the expected value. Once the network is trained, we need to determine how to represent and process the training data. It is often advised to abstract the data into multiple layers, and create higher level representations for the same training dataset. This is an incredibly useful technique, as it allows us to compress a lot of the data into a much smaller space while still maintaining accuracy. In the field of deep learning, this is commonly referred to as forward data motion, and is often found in the design of convolutional neural networks.
+
+ 
+
+Once the training phase is complete, we want to make sure that the algorithm can process the training data and that the cost function is solvable. To do this, we need to find a tradeoff between the cost function and the learning rate and tweak them until we reach a correct solution. We can do this with training or testing phases. We can train the network on different sets of data until we find the optimum set of parameters, or we can conduct regular testing to see if the parameters can be adjusted further to reduce the overall learning curve.
+
+ 
+
+Deep learning provides a number of advantages over more traditional machine learning methods. The effectiveness of deep learning algorithms in large-scale applications is partially due to the enormous amount of available training data, as well as the efficiency of the backpropagation algorithm and computer hardware. However, the AI field is still in the early stages of development, and deep learning algorithms have struggled to achieve practical real world applications due to their high complexity and processing requirements.
+
+ 
+
+#  Conclusion
+
+ 
+
+ 
+
+##  Think of the future
+
+ 
+
+ 
+
+Here’s how the technology will change the future of work:
+
+ 
+
+Predicting market behavior – A doctor uses machine learning to develop a picture of your medical history and predict if a disease is likely to be recurring. This could help predict which treatments will work best, allowing doctors to tailor treatments to your symptoms.
+
+ 
+
+– A doctor uses machine learning to develop a picture of your medical history and predict if a disease is likely to be recurring. This could help predict which treatments will work best, allowing doctors to tailor treatments to your symptoms. Smarter data management – A machine learning application can determine the best way to use your data, which will help improve data security.
+
+ 
+
+– A machine learning application can determine the best way to use your data, which will help improve data security. More streamlined security – Learning how to spot suspicious activity from a data leak can make things safer for all.
+
+ 
+
+– Learning how to spot suspicious activity from a data leak can make things safer for all. More proactive marketing – Data scientists will be able to use machine learning to find new audiences and drive conversions.
+
+ 
+
+– Data scientists will be able to use machine learning to find new audiences and drive conversions. More personalized and targeted advertising – Using data from sources like your Facebook profile and search history, marketers can tailor ads to you better than ever before.
+
+ 
+
+ 
+
+ 
+
+ 
+
+##  Benefits of machine learning.
+
+ 
+
+ 
+
+Different algorithms for machine learning can be categorized based on how the machine learns. This classification is based on their training set, typically consisting of labeled data and usually of high-dimensional data, often with a large number of features. A few of these are commonly called supervised learning algorithms.
+
+ 
+
+ 
+
+##  Deep learning.
+
+ 
+
+ 
+
+Deep learning involves neural networks composed of many hidden layers that are continuously adjusted, one by one, to reflect real-world sensory data, as if adjusting a simple feature detector. The learning process allows the training data to be taken from many high-dimensional vectors to decrease computational complexity and perform the task more efficiently.
+
+ 
+
+ 
+
+##  Neural networks.
+
+ 
+
+ 
+
+Typically, a neural network consists of a number of layers in which each layer can be called a neuron, and a linear controller that allows neurons to send and receive messages to one another called an input and an output layer. Neural networks are typically fed training data for which the weights of the network are learned such that each layer then can generate an output which is a vector of values. The outputs are fed to the next layer, which will modify them based on the previous weights and the current training data. The next layer will feed the outputs to the next layer, and so on. The layers of the network can overlap. The layers are typically added up into a multi-layered network.
+
+ 
+
+ 
+
+ 
+
+##  Sparse neural networks.
+
+ 
+
+ 
+
+For some problems, the general approach of deep learning will not be sufficient, and another way is required to solve it. This approach involves training the network with different numbers of hidden layers with an approximation of the inputs and output to come up with a network that is more appropriate. Typically, the input and output values for a layer are multiple. The sparse network has some features, called features, distributed over the parameters of a layer. These features are small and are often multiple of the features in the layer being trained.
+
+ 
+
+ 
+
+##  Matrices
+
+ 
+
+ 
+
+A matrix is an array of numbers that looks like a column and row. This column and row give the shape of the row-column axis in which each element is called a vector. Matrices are of two types: global and local. The global matrix contains all the elements in a training data set and the local matrix contains only those elements that are in the training data set. This way, each element in a matrix is treated as a node in a directed graph.
+
+ 
+
+ 
+
+##  What are the machine learning methods?
+
+ 
+
+ 
+
+When it comes to training the models that kickstart Machine Learning, there are various steps and algorithms used. We will be talking about a few of them in this post.
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+##  Classification
+
+ 
+
+ 
+
+Classification is the process of identifying the characteristics of objects based on individual objects. It is a relatively simple process as most of the objects are well-defined and can be classified. The easiest way to classify objects is to try to identify each object using a predefined set of attributes or characteristics.
+
+ 
+
+For example, you may use a set of nouns to classify your photos by a beach or a sunset in a particular area. Similarly, if we wish to classify objects in an image, we may classify them as red or yellow by using colors. All objects are assigned a color and labeled. In other words, each object is viewed in isolation and classified accordingly.
+
+ 
+
+Classification has several advantages including:
+
+ 
+
+●     It helps in determining the separation of objects in a given scene
+
+●     It can be used to determine if two objects belong to the same category
+
+●     It helps in determining how an object in an image is related to other objects in the image
+
+●     Each image may be given a score to classify it according to the above-mentioned factors
+
+ 
+
+ 
+
+##  Distributional Features
+
+ 
+
+ 
+
+In most cases, the classification is based on a set of characteristics. This approach is called classifying the image by a given set of features. It is a widely used machine learning technique, however, it is not the most accurate as the image does not need to be labeled properly. For example, a 10-year-old boy can be easily classified as a boy, but it is inaccurate as to how to label other children at the same age.
+
+ 
+
+Distributional features are used in object classification and often involved in regression. For example, if a picture is classified as an office, based on the presence of a desk, and then a comparison with other office pictures, the classification is useful. It helps in showing the extent of specific attributes. A classification by feature is then a regression which is a form of classification by hypothesis.
+
+ 
+
+ 
+
+##  Regularization
+
+ 
+
+ 
+
+When building Machine Learning models, we need to know how to build our models in a regularised way. Regularisation refers to lowering the degrees of freedom to improve the classification quality. As all models are based on the assumption that the classifier will fail if given examples of an undesired class. In this model, the classifier can be adjusted to never fail even if the data is really noisy.
+
+ 
+
+Many sources like Stanford Learnings list the various regularization techniques. The amount of regularization required depends on the class you are trying to predict. It also depends on the accuracy of the classifier and the signal-to-noise ratio. The goal here is to define a model that works well on small data, thus, you should try to design and set the regularisation factors that are appropriate for your application.
+
+ 
+
+ 
+
+##  Feature Selection
+
+ 
+
+ 
+
+A model based on classification with some other functions can also be called an AI system. Usually, the model will contain additional features which are used in the evaluation of the model. The features which are considered for feature selection are the ones that affect the results of the classification. The features are typically classified as:
+
+ 
+
+Probabilistic - It includes the features which can change from one class to another
+
+ 
+
+Decisional - These are relatively stable, hence, they are expected to have a small change in class even if the data is noisy
+
+ 
+
+ 
+
+##  Modeling
+
+ 
+
+ 
+
+Once a model is built, the next step would be to test it in the training data. The training data is made up of one or more problems that have to be solved in the model. For example, our classifier for selling bus tickets will require the features of an image that shows a bus ticket. Once we have the training data, we can evaluate the performance of the model based on the standard deviation of the predictions.
+
+ 
+
+There are four steps that need to be followed to build a model.
+
+ 
+
+Step 1: Generate a set of data, both from within and outside the class.
+
+ 
+
+Step 2: Define the model, which can perform the task by creating a value, which is a label for each sample.
+
+ 
+
+Step 3: Train the model using the data and evaluate its performance.
+
+ 
+
+Step 4: After the training, you can find the class labels in the observations.
+
+ 
+
+This process can be done by using a statistical technique called Singular Value Decomposition (SVD). However, if you are working on a very large dataset, then you can divide the data into smaller sets of data and repeat the process.
+
+ 
+
+Machine Learning models are used in many domains of science. Learning of classifications with different types of algorithms and data is always the goal of these models.
+
+ 
+
+Till now, you must have been able to classify some data correctly. The ability to classify a new set of data is called Assignment.
+
+ 
+
+There are many problems that machine learning models are used for, but below are some of the most used in our daily life.
+
+ 
+
+Marketing - Predict the probability of a customer purchasing a product.
+
+ 
+
+Sales - Sell a product by predicting what your customers would be buying.
+
+ 
+
+Customer Relationship Management - Use machine learning to predict how a customer would make a purchase.
+
+ 
+
+Product Performance - Determine the performance of an API (application programming interface).
+
+ 
+
+Applications of Machine Learning are wide-ranging. You can apply it for prediction, classification, regression, clustering, anomaly detection, etc. For instance, you can use ML to predict terrorist activities by using known terrorists' websites or profiles and predict the weather by using historical weather data.
+
+ 
+
+ 
+
+##  Big data analysis tools.
+
+ 
+
+ 
+
+By using automated and sometimes even manual processing, companies can use a range of tools, including artificial intelligence, to sift through volumes of data and eventually turn that information into information that can be actioned by human resources professionals. These tools allow companies to quickly identify employees who are performing below their level or whose performance is stagnating.
+
+ 
+
+Analytics-based talent management solutions. With an analytical background, you can use these tools to identify the characteristics that make for effective employees and then use those to determine whether a candidate would be a good fit for the company.
+
+ 
+
+Workforce analytics. While not necessarily using analytics, a true workforce analytics solution goes beyond just looking at employee performance. It can include scanning social media and other forms of public or private information for potential signs of employee distress. The result can be a decision on whether to fire an employee or, more likely, take measures to retain or improve the employee's performance.
+
+ 
+
+After talking to dozens of employers and considering these solutions, I have come to the conclusion that most organizations don't want a mere simulation of reality. While that's fine for a game, real-world industries require that the simulation includes some degree of accuracy. For instance, an automated maintenance system shouldn't only be able to spot minor problems that need fixing. If a system is seeing anomalies indicating that the problem is more significant, the system must be able to quickly and efficiently alert the right people to take action.
+
+ 
+
+Similarly, while the AI simulations of various industries can succeed at only pinpointing specific employees to put on a training plan, a true system should be able to actually analyze each employee's true behavior and recommend what training needs to be undertaken to correct it. That's not an easy task, so many companies may prefer to stick with simpler, manual systems that don't require a lot of training to learn.
+
+ 
+
+Many organizations are still exploring ways to use predictive analytics in employee performance. But there are limits to what it can accomplish. The most obvious limitation is that it can't know what an employee is thinking. There are exceptions to that, but most people can't accurately speak about their own behavior. Human intuition is imperfect, to say the least.
+
+ 
+
+Finally, predictive analytics won't replace human talent management in most industries. The key to success with talent management requires both understanding the potential of the system and being willing to learn what it can and can't do. Many organizations still prefer an actual human being to make the best decisions.
