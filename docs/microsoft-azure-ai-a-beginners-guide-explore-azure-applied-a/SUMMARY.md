@@ -1,0 +1,2 @@
++   [Microsoft Azure AI：初学者指南：通过实用演示探索 Azure 应用 AI 服务、Azure 认知服务和 Azure 机器学习（英文版）](README.md)
++   [Microsoft Azure AI：初学者指南：通过实用演示探索 Azure 应用 AI 服务、Azure 认知服务和 Azure 机器学习（英文版）](microsoft-azure-ai-a-beginners-guide-explore-azure-applied-a_0.md)
