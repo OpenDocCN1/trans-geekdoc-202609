@@ -1,0 +1,588 @@
+name: Deep Learning with Scikit-learn and PyTorch： Master the Two Giants： Deep Learning
+  with Scikit-learn andPyTorch (Even if You're New).YourStep-by-StepGuide to Deep
+  Learningwith Scikit-learn and PyTorch
+slug: deep-learning-with-scikit-learn-and-pytorch-master-the-two-g
+name_cn: Scikit-learn 和 PyTorch 深度学习：精通两大巨头：Scikit-learn 和 PyTorch 深度学习（即使你是新手）。你的
+  Scikit-learn 和 PyTorch 深度学习分步指南
+toc:
+- - '#'
+  - Scikit-learn 和 PyTorch 深度学习：精通两大巨头：Scikit-learn 和 PyTorch 深度学习（即使你是新手）。你的 Scikit-learn
+    和 PyTorch 深度学习分步指南
+- - '#'
+  - 引言
+- - '##'
+  - 深入探索：使用 Scikit-learn 和 PyTorch 精通深度学习
+- - '###'
+  - 为什么选择这本书？
+- - '###'
+  - 在书中，你将读到：
+- - '#'
+  - 第 1 章：揭秘深度学习的力量：理解其能力与应用
+- - '##'
+  - 什么是深度学习？
+- - '###'
+  - 使用 Scikit-learn 进行深度学习
+- - '##'
+  - 创建一个多层感知器分类器
+- - '###'
+  - 训练分类器
+- - '###'
+  - 进行预测
+- - '###'
+  - 使用 PyTorch 进行深度学习
+- - '##'
+  - 定义一个简单的神经网络架构
+- - '###'
+  - 实例化神经网络
+- - '###'
+  - 定义损失函数和优化器
+- - '###'
+  - 训练分类器
+- - '###'
+  - 进行预测
+- - '##'
+  - 深度学习与传统机器学习方法的对比
+- - '##'
+  - 传统机器学习
+- - '###'
+  - 示例：逻辑回归
+- - '###'
+  - 示例：决策树
+- - '###'
+  - 示例：支持向量机
+- - '###'
+  - 示例：K-近邻
+- - '##'
+  - 深度学习
+- - '###'
+  - 示例：使用 PyTorch 进行深度学习
+- - '###'
+  - 定义一个简单的神经网络架构
+- - '###'
+  - 实例化神经网络
+- - '###'
+  - 定义损失函数和优化器
+- - '###'
+  - 训练模型
+- - '###'
+  - 进行预测
+- - '##'
+  - 对比
+- - '##'
+  - 卷积神经网络 (CNNs)
+- - '###'
+  - 'Example: 使用 PyTorch 实现一个简单的 CNN 架构'
+- - '###'
+  - 创建 CNN 模型实例
+- - '###'
+  - 定义损失函数和优化器
+- - '##'
+  - 循环神经网络 (RNNs)
+- - '###'
+  - 'Example: 使用 PyTorch 实现一个简单的 RNN 架构'
+- - '###'
+  - 实例化 RNN 模型
+- - '##'
+  - Creating NumPy arrays
+- - '###'
+  - Array operations
+- - '###'
+  - Element-wise operations
+- - '###'
+  - Matrix multiplication
+- - '###'
+  - 'Pandas:'
+- - '###'
+  - Creating a DataFrame
+- - '###'
+  - Displaying the DataFrame
+- - '###'
+  - Accessing columns
+- - '###'
+  - Filtering rows
+- - '##'
+  - 使用 Scikit-learn 和 PyTorch 的代码示例：
+- - '####'
+  - '1. Scikit-learn:'
+- - '###'
+  - 'Example: Loading and preprocessing data with NumPy and Pandas'
+- - '###'
+  - Load the Iris dataset
+- - '###'
+  - Convert the features and target to NumPy arrays
+- - '###'
+  - Convert NumPy arrays to Pandas DataFrame
+- - '###'
+  - Display the DataFrame
+- - '####'
+  - '2. PyTorch:'
+- - '###'
+  - 'Example: Loading and preprocessing data with NumPy and PyTorch'
+- - '###'
+  - Load the Iris dataset
+- - '###'
+  - Convert the features and target to NumPy arrays
+- - '###'
+  - Convert NumPy arrays to PyTorch tensors
+- - '###'
+  - Display shapes of tensors
+- - '#'
+  - 第 3 章
+- - '##'
+  - 揭秘 Scikit-learn：其在深度学习中的角色概述
+- - '###'
+  - Scikit-learn 的核心功能：
+- - '####'
+  - 1. 数据预处理：Scikit-learn 提供了预处理数据的工具，包括缩放、归一化、类别变量编码以及处理缺失值。这些预处理步骤对于在数据输入深度学习模型之前准备准备至关重要。
+- - '###'
+  - 'Example: Scaling and encoding data with Scikit-learn'
+- - '####'
+  - 2. 模型选择与评估：Scikit-learn 提供了模型选择和评估的功能，包括交叉验证、超参数调优和性能指标。这些工具帮助深度学习从业者评估模型性能并优化模型参数。
+- - '###'
+  - 'Example: Train-test split and cross-validation with Scikit-learn'
+- - '####'
+  - 3. 特征工程：Scikit-learn 提供了特征工程实用程序，包括降维技术如主成分分析 (`PCA`)和特征选择方法如递归特征消除 (`RFE`)）。这些技术有助于降低数据维度并选择相关特征，从而提高模型的性能和效率。
+- - '###'
+  - 'Example: Dimensionality reduction and feature selection with Scikit-learn'
+- - '##'
+  - 使用 Scikit-learn 和 PyTorch 的代码示例：
+- - '####'
+  - '1. Scikit-learn:'
+- - '###'
+  - 'Example: Loading and preprocessing data with Scikit-learn'
+- - '###'
+  - Load the Iris dataset
+- - '###'
+  - 'Preprocessing: Scaling data'
+- - '###'
+  - Performing a train-test split on the scaled data
+- - '###'
+  - Model training and evaluation
+- - '####'
+  - '2. PyTorch:'
+- - '###'
+  - 'Example: Building a simple neural network with PyTorch'
+- - '###'
+  - Specify a straightforward architecture for a neural network.
+- - '###'
+  - Instantiate the neural network model
+- - '###'
+  - Define loss function and optimizer
+- - '##'
+  - 利用 Scikit-learn 进行数据预处理、特征工程和模型评估
+- - '##'
+  - 使用 Scikit-learn 进行数据预处理
+- - '###'
+  - ：使用 Scikit-learn 进行数据预处理
+- - '###'
+  - 缩放数据
+- - '###'
+  - 编码类别变量
+- - '###'
+  - 对缩放后的数据进行训练/测试划分，使用 X_train, X_test, y_train 和 y_test 作为结果变量，测试大小为 0.2，随机状态为 42。
+- - '##'
+  - 使用 Scikit-learn 进行特征工程
+- - '###'
+  - ：使用 Scikit-learn 进行特征工程
+- - '###'
+  - 使用 PCA 进行降维
+- - '###'
+  - 使用 SelectKBest 进行特征选择
+- - '##'
+  - 使用 Scikit-learn 进行模型评估
+- - '###'
+  - ：使用 Scikit-learn 进行模型评估
+- - '###'
+  - 交叉验证
+- - '###'
+  - 模型预测和性能指标
+- - '##'
+  - 使用 PyTorch 代码示例
+- - '###'
+  - 实例化神经网络
+- - '###'
+  - 定义损失函数和优化器
+- - '##'
+  - 理解 Scikit-learn 在深度学习中的局限
+- - '###'
+  - 缺乏神经网络支持
+- - '###'
+  - ：Scikit-learn 缺乏神经网络支持
+- - '###'
+  - Scikit-learn 确实提供了 MLPClassifier，但它缺乏神经网络支持
+- - '###'
+  - 自定义有限
+- - '###'
+  - ：使用 PyTorch 自定义架构
+- - '###'
+  - 扩展性问题
+- - '###'
+  - ：使用 PyTorch 处理大型数据集
+- - '###'
+  - 将数据转换为 PyTorch DataLoader 以高效处理数据集
+- - '###'
+  - GPU 加速
+- - '###'
+  - 'Example: Utilizing GPU acceleration with PyTorch'
+- - '###'
+  - Move model and data to GPU for accelerated training
+- - '#'
+  - 第 4 章
+- - '##'
+  - Scikit-learn 深度学习技术：实战方法
+- - '##'
+  - 使用 Scikit-learn 构建简单的神经网络
+- - '###'
+  - 加载数据集
+- - '###'
+  - 预处理：缩放数据并分为训练集和测试集
+- - '###'
+  - 对缩放后的数据进行训练-测试划分，结果变量为 X_train, X_test, y_train 和 y_test，测试大小为 0.2，随机状态为 42。
+- - '###'
+  - 构建简单的分类器
+- - '###'
+  - 评估
+- - '##'
+  - 与 PyTorch 比较
+- - '###'
+  - 使用 PyTorch 定义一个简单的架构
+- - '###'
+  - 将数据转换为 PyTorch 张量
+- - '###'
+  - 实例化神经网络
+- - '###'
+  - 定义损失函数和优化器
+- - '###'
+  - 训练模型
+- - '###'
+  - 评估
+- - '###'
+  - 加载数据集
+- - '###'
+  - 预处理：缩放数据并分为训练集和测试集
+- - '###'
+  - 对缩放后的数据进行训练-测试划分，结果变量为 X_train, X_test, y_train 和 y_test，测试大小为 0.2，随机状态为 42。
+- - '###'
+  - 使用 PyTorch 为回归定义一个简单的架构
+- - '###'
+  - 创建 MLP 实例
+- - '###'
+  - 定义损失函数和优化器
+- - '###'
+  - 训练模型
+- - '###'
+  - 评估
+- - '###'
+  - 使用 Scikit-learn 对各种任务微调
+- - '###'
+  - 加载数据集
+- - '###'
+  - 预处理：缩放数据并分为训练集和测试集
+- - '###'
+  - 对缩放后的数据进行训练-测试划分，结果变量为 X_train, X_test, y_train 和 y_test，测试大小为 0.2，随机状态为 42。
+- - '###'
+  - 加载预训练的 VGG16 模型
+- - '###'
+  - 使用分类器微调
+- - '###'
+  - 定义分类器参数
+- - '###'
+  - 评估
+- - '###'
+  - 加载预训练的 Word2Vec 嵌入
+- - '###'
+  - 加载数据集
+- - '###'
+  - 将文本转换为特征
+- - '###'
+  - 使用随机森林分类器微调
+- - '###'
+  - 定义分类器参数
+- - '###'
+  - 评估
+- - '#'
+  - 第 5 章
+- - '##'
+  - PyTorch 简介：一个赋能深度学习的框架
+- - '##'
+  - 安装与环境搭建
+- - '##'
+  - 基础语法与张量操作
+- - '###'
+  - 创建一个张量
+- - '###'
+  - 打印张量
+- - '###'
+  - 获取张量的形状
+- - '###'
+  - 执行张量操作
+- - '##'
+  - 创建与训练神经网络
+- - '###'
+  - 定义一个简单的架构
+- - '###'
+  - 实例化神经网络对象
+- - '###'
+  - 定义损失函数和优化器
+- - '###'
+  - 生成示例数据集
+- - '###'
+  - 训练模型
+- - '###'
+  - 打印训练后的预测
+- - '###'
+  - 逐元素乘法
+- - '###'
+  - 矩阵乘法
+- - '##'
+  - 使用 PyTorch 从零开始构建和训练神经网络
+- - '###'
+  - 定义神经网络架构
+- - '##'
+  - 训练神经网络
+- - '###'
+  - 加载 MNIST 数据集
+- - '###'
+  - 实例化神经网络模型
+- - '###'
+  - 定义损失函数和优化器
+- - '###'
+  - 训练神经网络
+- - '##'
+  - 利用 PyTorch 内置模块和函数进行高效构建
+- - '##'
+  - 'nn.Module: 神经网络模块的基类'
+- - '##'
+  - 高效的参数更新策略
+- - '###'
+  - 实例化神经网络模型
+- - '###'
+  - 定义损失函数和优化器
+- - '###'
+  - 在训练循环内部：
+- - '###'
+  - 'optimizer.zero_grad()  # 清空梯度'
+- - '###'
+  - 'outputs = model(inputs)  # 正向传播'
+- - '###'
+  - loss = criterion(outputs, labels)# 计算损失
+- - '###'
+  - 'loss.backward()           # 反向传播'
+- - '###'
+  - 'optimizer.step()           # 更新模型参数'
+- - '##'
+  - 'DataLoader: 高效的数据加载和分批'
+- - '###'
+  - 定义数据变换
+- - '###'
+  - 加载 MNIST 数据集
+- - '###'
+  - 在训练循环内部：
+- - '###'
+  - 'for inputs, labels in trainloader:'
+- - '##'
+  - 训练迭代
+- - '###'
+  - 理解 PyTorch 中激活函数、优化器和损失函数的作用
+- - '##'
+  - 激活函数：
+- - '###'
+  - 定义带有 ReLU 激活的神经网络模块
+- - '##'
+  - 优化器：
+- - '###'
+  - 实例化一个神经网络模型
+- - '###'
+  - 定义损失函数和优化器
+- - '##'
+  - 损失函数
+- - '###'
+  - 在训练循环内部：
+- - '#'
+  - 第 7 章
+- - '##'
+  - 使用 PyTorch 训练和优化深度学习模型
+- - '###'
+  - 前向传播
+- - '###'
+  - 定义一个简单的神经网络
+- - '###'
+  - 实例化神经网络模型
+- - '###'
+  - 前向传播
+- - '###'
+  - 反向传播和梯度下降
+- - '###'
+  - 定义损失函数和优化器
+- - '###'
+  - 在训练循环内部：
+- - '##'
+  - 利用不同的优化算法进行高效训练（例如 Adam, SGD）
+- - '###'
+  - 随机梯度下降 (SGD)
+- - '###'
+  - 实例化神经网络模型
+- - '###'
+  - 定义损失函数和优化器
+- - '###'
+  - Adam
+- - '###'
+  - 定义损失函数和优化器
+- - '###'
+  - 选择合适的优化器
+- - '##'
+  - 正则化
+- - '###'
+  - 定义一个带有 L2 正则化的神经网络
+- - '##'
+  - 早停
+- - '###'
+  - 在训练循环内部：
+- - '#'
+  - 第 8 章
+- - '##'
+  - 使用预训练模型的迁移学习：利用现有知识
+- - '###'
+  - 迁移学习简介
+- - '###'
+  - 迁移学习的优势
+- - '###'
+  - PyTorch 中使用预训练模型的迁移学习
+- - '###'
+  - 加载预训练的 ResNet 模型
+- - '###'
+  - 为新任务修改最后一个全连接层
+- - '###'
+  - 冻结预训练层的参数
+- - '###'
+  - 解冻最后一个全连接层的参数
+- - '###'
+  - 定义损失函数和优化器
+- - '###'
+  - 加载并预处理输入图像
+- - '###'
+  - 执行推理
+- - '###'
+  - 获取预测类别
+- - '###'
+  - 使用预训练的 BERT 模型进行自然语言处理
+- - '###'
+  - 加载预训练的 BERT 模型和分词器
+- - '###'
+  - 对输入文本分词
+- - '###'
+  - 执行推理
+- - '###'
+  - 获取预测类别概率
+- - '###'
+  - 针对特定应用在自己的数据集
+- - '###'
+  - 使用预训练的 BERT 模型微调
+- - '###'
+  - 加载预训练的 VGG16 模型
+- - '###'
+  - 使用分类器微调
+- - '###'
+  - 定义分类器参数
+- - '###'
+  - 评估
+- - '###'
+  - 加载预训练的 Word2Vec 嵌入
+- - '###'
+  - 加载数据集
+- - '###'
+  - 将文本转换为特征
+- - '###'
+  - 使用随机森林分类器微调
+- - '###'
+  - 定义分类器参数
+- - '###'
+  - 评估
+- - '#'
+  - 第 9 章
+- - '##'
+  - 理解 Scikit-learn 在深度学习中的局限
+- - '###'
+  - 缺乏神经网络支持
+- - '###'
+  - ：Scikit-learn 缺乏神经网络支持
+- - '###'
+  - Scikit-learn 确实提供了 MLPClassifier，但它缺乏神经网络支持
+- - '###'
+  - 自定义有限
+- - '###'
+  - ：使用 PyTorch 自定义架构
+- - '###'
+  - 扩展性问题
+- - '###'
+  - ：使用 PyTorch 处理大型数据集
+- - '###'
+  - 将数据转换为 PyTorch DataLoader 以高效处理数据集
+- - '###'
+  - GPU 加速
+- - '###'
+  - 'Example: Utilizing GPU acceleration with PyTorch'
+- - '###'
+  - Move model and data to GPU for accelerated training
+- - '##'
+  - 利用 Scikit-learn 进行数据预处理、特征工程和模型评估
+- - '##'
+  - 使用 Scikit-learn 进行数据预处理
+- - '###'
+  - ：使用 Scikit-learn 进行数据预处理
+- - '###'
+  - 缩放数据
+- - '###'
+  - 编码类别变量
+- - '###'
+  - 对缩放后的数据进行训练/测试划分，使用 X_train, X_test, y_train 和 y_test 作为结果变量，测试大小为 0.2，随机状态为 42。
+- - '##'
+  - 使用 Scikit-learn 进行特征工程
+- - '###'
+  - ：使用 Scikit-learn 进行特征工程
+- - '###'
+  - 使用 PCA 进行降维
+- - '###'
+  - 使用 SelectKBest 进行特征选择
+- - '##'
+  - 使用 Scikit-learn 进行模型评估
+- - '###'
+  - ：使用 Scikit-learn 进行模型评估
+- - '###'
+  - 交叉验证
+- - '###'
+  - 模型预测和性能指标
+- - '##'
+  - 使用 PyTorch 代码示例
+- - '###'
+  - 实例化神经网络
+- - '###'
+  - 定义损失函数和优化器
+- - '##'
+  - 深度学习技术：实战方法
+- - '##'
+  - 使用 Scikit-learn 构建简单的神经网络
+- - '###'
+  - 加载数据集
+- - '###'
+  - 预处理：缩放数据并分为训练集和测试集
+- - '###'
+  - 对缩放后的数据进行训练-测试划分，结果变量为 X_train, X_test, y_train 和 y_test，测试大小为 0.2，随机状态为 42。
+- - '###'
+  - 构建简单的分类器
+- - '###'
+  - 评估
+- - '##'
+  - 与 PyTorch 比较
+- - '###'
+  - 使用 PyTorch 定义一个简单的架构
+- - '###'
+  - 将数据转换为 PyTorch 张量
+- - '###'
+  - 实例化神经网络
+- - '###'
+  - 定义损失函数和优化器
+- - '###'
+  - 训练模型
+- - '###'
+  - 评估

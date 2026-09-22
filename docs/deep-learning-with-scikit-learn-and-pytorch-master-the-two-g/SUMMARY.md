@@ -1,0 +1,2 @@
++   [Scikit-learn 和 PyTorch 深度学习：精通两大巨头：Scikit-learn 和 PyTorch 深度学习（即使你是新手）。你的 Scikit-learn 和 PyTorch 深度学习分步指南](README.md)
++   [Scikit-learn 和 PyTorch 深度学习：精通两大巨头：Scikit-learn 和 PyTorch 深度学习（即使你是新手）。你的 Scikit-learn 和 PyTorch 深度学习分步指南](deep-learning-with-scikit-learn-and-pytorch-master-the-two-g_0.md)
