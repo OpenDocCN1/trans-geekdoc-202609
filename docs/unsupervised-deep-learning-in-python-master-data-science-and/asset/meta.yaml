@@ -1,0 +1,43 @@
+name: Unsupervised Deep Learning in Python： Master Data Science and Machine Learning
+  with Modern Neural Networks written in Python and Theano
+slug: unsupervised-deep-learning-in-python-master-data-science-and
+name_cn: Python 无监督深度学习：使用 Python 和 Theano 编写的现代神经网络精通数据科学与机器学习
+toc:
+- - '#'
+  - Python 无监督深度学习：使用 Python 和 Theano 编写的现代神经网络精通数据科学与机器学习
+- - '##'
+  - 引言
+- - '##'
+  - 格式
+- - '##'
+  - 第 1 章：主成分分析
+- - '###'
+  - 旋转
+- - '###'
+  - 降维
+- - '###'
+  - 去相关性
+- - '###'
+  - 可视化
+- - '###'
+  - 预处理与过拟合
+- - '###'
+  - 隐变量
+- - '###'
+  - PCA 背后的数学原理
+- - '###'
+  - 特征值与特征向量
+- - '###'
+  - PCA 目标
+- - '###'
+  - 练习
+- - '###'
+  - 为什么要学习 t-SNE？
+- - '##'
+  - 降噪自动编码器 (Denoising Autoencoders)
+- - '##'
+  - 堆叠自动编码器 (Stacked Autoencoders)
+- - '###'
+  - 贪心逐预训练 (Greedy-wise pretraining)
+- - '###'
+  - 练习
