@@ -1,0 +1,2 @@
++   [计算机编程：Python - 3合1：深入人工智能的快速上手指南。使用机器学习和数据科学实现神经网络的工具、技巧与窍门](README.md)
++   [计算机编程：Python - 3合1：深入人工智能的快速上手指南。使用机器学习和数据科学实现神经网络的工具、技巧与窍门](computer-programming-python---3-books-in-1-a-crash-course-to_0.md)
