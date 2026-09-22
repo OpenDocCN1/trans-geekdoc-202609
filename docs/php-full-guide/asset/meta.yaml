@@ -1,0 +1,76 @@
+name: PHP Full Guide -
+slug: php-full-guide
+name_cn: PHP 全栈指南
+toc:
+- - '#'
+  - PHP 全栈指南
+- - '##'
+  - I. 什么是 Web 编程。主要技术
+- - '###'
+  - I-1. 客户端-服务器
+- - '###'
+  - I-2. HTML 表单。发送数据的方法
+- - '###'
+  - I-3. CGI 技术
+- - '##'
+  - PHP：超文本预处理器
+- - '##'
+  - 2. 安装与 Apache+PHP 配置
+- - '###'
+  - Apache 安装
+- - '###'
+  - 简单脚本
+- - '###'
+  - FreeBSD
+- - '###'
+  - Red Hat Linux 和其他基于 RPM 的发行包（ASP, Mandrake...）
+- - '###'
+  - Gentoo Linux
+- - '###'
+  - 其他 Linux 发行包
+- - '#'
+  - III. PHP 安装
+- - '###'
+  - III-1 Windows 系列操作系统的安装
+- - '###'
+  - III-2 Unix 系列操作系统的 PHP 安装
+- - '###'
+  - FreeBSD
+- - '###'
+  - Red Hat Linux 和其他基于 RPM 的发行包（ASP, Mandrake...）
+- - '###'
+  - Gentoo Linux
+- - '#'
+  - IV. Apache+PHP 配置
+- - '###'
+  - 扩展连接
+- - '##'
+  - php.ini 设置
+- - '##'
+  - Apache 启动
+- - '##'
+  - V. PHP5 安装
+- - '##'
+  - 头部目录
+- - '##'
+  - PHP 程序的结构
+- - '##'
+  - 变量与数据类型
+- - '###'
+  - Switch
+- - '###'
+  - Cycles
+- - '####'
+  - while
+- - '#'
+  - 数组
+- - '##'
+  - 4. 表单
+- - '###'
+  - 头部保留
+- - '###'
+  - HTML 表单。`$_GET` 和 `$_POST` 数组
+- - '###'
+  - '`htmlspecialchars()`'
+- - '###'
+  - '`phpinfo()`'
