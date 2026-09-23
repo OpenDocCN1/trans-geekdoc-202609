@@ -1,0 +1,193 @@
+name: Build your own Blockchain： Make your own blockchain and trading bot on your
+  pc
+slug: build-your-own-blockchain-make-your-own-blockchain-and-tradi
+name_cn: 区块链构建指南：在你的电脑上制作属于自己的区块链和交易机器人
+toc:
+- - '#'
+  - 区块链构建指南：在你的电脑上制作属于自己的区块链和交易机器人
+- - '##'
+  - 以太坊智能合约
+- - '##'
+  - 区块链
+- - '###'
+  - 1. 切换到你所在的工作目录（例如 `\MyWorkspace`）
+- - '###'
+  - 2. 安装 solc (Solidity 编译器)
+- - '###'
+  - 4. 安装 geth (Go Ethereum)
+- - '###'
+  - 6. 元区块
+- - '###'
+  - 8. 启动自己的以太坊区块链（目前不挖矿）：执行（一行）：
+- - '###'
+  - 9. 分别查看 `web3.eth` 命令的文档：[web3.eth](https://web3js.readthedocs.io/en/1.0/web3-eth.html)。Web3
+    0.20.x JavaScript API。
+- - '###'
+  - 11. 创建账户
+- - '###'
+  - 13. 查询账户余额
+- - '###'
+  - 15. 手动开始挖矿：
+- - '###'
+  - 16. 退出测试以太坊区块链：exit
+- - '###'
+  - 17. 启动脚本：
+- - '###'
+  - 18. 启动我们包含挖矿的测试以太坊区块链：执行：
+- - '###'
+  - 19. 在 Geth JavaScript 控制台中运行：
+- - '###'
+  - eth
+- - '###'
+  - web3
+- - '###'
+  - 21. 退出测试以太坊区块链
+- - '###'
+  - 22. 检查密钥文件和测试以太坊区块链：执行：
+- - '###'
+  - 23. 我们的测试以太坊区块链结构现在如下（Windows 和 Linux 下）：
+- - '###'
+  - 第一个智能合约：hello world
+- - '###'
+  - 5. 在 EthereumDemo 项目目录中，创建批文件：`build-MeinToken.bat`
+- - '###'
+  - 第 7 步 项目结构现在看起来如下（如果你也使用了[上方](https://www.torsten-horn.de/techdocs/Ethereum-Smart-Contracts.html#Hallo-Welt-Demo)
+    的[第一个智能合约：Hello World](https://www.torsten-horn.de/techdocs/Ethereum-Smart-Contracts.html#Hallo-Welt-Demo)
+    演示，你会几个额外的文件，它们不会影响你）：
+- - '###'
+  - 8. 启动区块链：
+- - '###'
+  - )
+- - '###'
+  - 作为图形化开发环境的 Remix Solidity Compiler
+- - '###'
+  - 9. 测试连接：
+- - '###'
+  - 10. 将你的 MeinToken 智能合约部署到本地区块链：
+- - '###'
+  - 11. 查询通过 `web3.eth.accounts` 确定的第一个账户地址的代币余额：
+- - '###'
+  - 12. 使用 MeinToken 智能合约转账代币：
+- - '###'
+  - 使用 GUI 工具 Mist 进行 MeinToken 转账
+- - '###'
+  - 1. 以上所有内容
+- - '###'
+  - 2. 切换到您的工作目录（例如 `\MeinWorkspace`）并与 `EthereumDemo` 项目目录并行创建一个新的项目目录：
+- - '###'
+  - 3. 您需要最新版本的 `Git`。如果您还没有安装 `Git`，或者您的 `Git` 版本不够新，请从 `https://git-scm.com/download/`
+    下载适用于您操作系统的[安装]文件，例如 Windows 的 `Git-2.16.1-64-bit.exe`，并使用它安装 Git。通过以下命令检查安装：
+- - '###'
+  - 4. [您需要当前版本的 Node.js。](https://nodejs.org/) 请从 `https://nodejs.org/` 下载适用于您操作系统的[安装]文件，例如
+    Windows 的 `node-v9.6.1-x64.msi`，并使用它安装 Node.js。通过以下命令检查安装：
+- - '###'
+  - 5. 切换到您的新的 `EthNodejsDApp` 项目目录并初始化 Node.js 项目：
+- - '###'
+  - 6. 在 `EthNodejsDApp` 目录中创建 DApp HTML 文件：`MeinTokenDApp.html`
+- - '###'
+  - 7. 现在的项目结构看起来如下：
+- - '###'
+  - 8. 如果您还没有启动，请启动测试以太坊区块链：
+- - '###'
+  - 9. 打开 DApp 网站：
+- - '##'
+  - 使用 Web3j 和 Java 传输 Ether
+- - '##'
+  - 本此演示展示了：
+- - '###'
+  - 使用了以下版本：
+- - '##'
+  - '`EtherTransfer.java`'
+- - '###'
+  - 8. 以上所有内容
+- - '###'
+  - 10. 现在有三种选择：
+- - '###'
+  - 11. 运行 EtherTransfer 程序。
+- - '##'
+  - 使用 Web3j 和 Java 传输自己的智能合约令牌
+- - '##'
+  - 10 我的 MeinTokens 已成功从一个账户转移到另一个账户。
+- - '##'
+  - 9. 如果你收到以下错误消息：
+- - '##'
+  - 使用 Java 智能合约的 DApp 网站
+- - '###'
+  - 此演示展示了：
+- - '##'
+  - 按照下面列出的步骤操作。
+- - '###'
+  - 6. 项目结构现在看起来如下：
+- - '##'
+  - 10. 检查 keystore 文件了目录结构：
+- - '###'
+  - 1. 项目结构现在看起来如下（取决于你执行了哪些示例，文件可能会多或少）：
+- - '##'
+  - 12. 向账户转账 ether：
+- - '###'
+  - 13. 由于 Rinkeby-Ethereum-Blockchain 是公有链，
+- - '##'
+  - inkink. --------          eth地址：
+- - '###'
+  - 15. eth etheth
+- - '###'
+  - 6.  必须必须。
+- - '###'
+  - 7.  区块链同步。
+- - '###'
+  - 8. 检查 `rinkeby-geth.log` 日志文件中的赋值。类似于：
+- - '###'
+  - 1. 获取部署的合约：`MeinToken.address`
+- - '###'
+  - 2. 使用部署的智能合约进行转账。如果没有第二个账户，请创建一个。检查至少账户是否有 ether。读取转账前的 MeinToken账户余额。
+- - '##'
+  - Rinkeby 区链上智能合约的 DApp 网站
+- - '##'
+  - tree
+- - '##'
+  - 转移 11 个 MeinToken，然后：
+- - '##'
+  - 13. 为手动测试部署合约：
+- - '##'
+  - 14. 打开 truffle控制台 [:](http://truffleframework.com/docs/getting_started/console)
+- - '##'
+  - 在下方查看如何使用 Node.js 或 Embark 通过 DApp 在 truffle 区链中调用智能合约，以便快速开发和快速测试
+- - '###'
+  - 1. 结果项目结构：树
+- - '###'
+  - 9. 智能合约的自动化测试
+- - '###'
+  - 1. 使用 JavaScript 命令对智能合约进行手动测试
+- - '###'
+  - 11. 实时区块链
+- - '###'
+  - 12. DApp 网站
+- - '####'
+  - 1. Node.js DApp 网站
+- - '####'
+  - 2. Java DApp 网站
+- - '###'
+  - 使用 Oraclize 服务进行外部信息查询
+- - '###'
+  - 1. 使用 Oraclize 服务
+- - '###'
+  - 2. 设置环境
+- - '###'
+  - 3. 汇率查询
+- - '###'
+  - 4. 使用 Oraclize 演示程序
+- - '###'
+  - 5. 项目开发
+- - '###'
+  - 6. 测试与部署
+- - '#'
+  - 文件 | 设置 ... | 插件 | 浏览仓库 ... | Solidity | IntelliJ-Solidity | 右键 | 下载并安装
+- - '##'
+  - 4. 重启 IntelliJ IDEA 后，你可以通过以下方式创建 Solidity 文件：
+- - '##'
+  - 6. 然而，这还提供了 [Remix 在线 Solidity 编译器](http://remix.ethereum.org/)，它还提供了许多其他功能，例如显示语法错误、编译、创建用于部署的
+    Web3 JavaScript 代码（在 `Details | WEB3DEPLOY` 下），甚至可以部署、执行和调试 Solidity 代码。
+- - '##'
+  - 文档
+- - '##'
+  - 其他主题：
