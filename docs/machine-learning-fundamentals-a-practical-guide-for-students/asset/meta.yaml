@@ -1,0 +1,30 @@
+name: MACHINE LEARNING FUNDAMENTALS ： A PRACTICAL GUIDE FOR STUDENTS AND PROFESSIONALS
+slug: machine-learning-fundamentals-a-practical-guide-for-students
+name_cn: 机器学习基础：学生与专业人士实用指南
+toc:
+- - '##'
+  - 第 6 章
+- - '###'
+  - 回归问题的评估指标
+- - '###'
+  - 分类问题的评估指标
+- - '###'
+  - 交叉验证
+- - '###'
+  - 学习曲线与 ROC 曲线
+- - '##'
+  - 第 9 章
+- - '###'
+  - 特征工程
+- - '####'
+  - 特征选择：在数据中寻找金刚
+- - '####'
+  - 特征创建：将数据转化为知识
+- - '####'
+  - 特征转换：为模型塑造数据
+- - '####'
+  - 特征重要性：识别模型的引擎
+- - '##'
+  - 第 12 章
+- - '###'
+  - 机器学习中的伦理与社会考量
