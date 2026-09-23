@@ -1,0 +1,3421 @@
+<p><img src="images/title_page.jpg" /></p>
+<p><span id="title_page.xhtml"></span></p>
+<div id="title_page.xhtml#cover-image">
+<img src="images/title_page.jpg" alt="Hands-On Machine Learning from Scratch" />
+</div>
+<p><span id="verso_page.xhtml"></span></p>
+<h2>Hands-On Machine Learning from Scratch</h2>
+<h3>Develop a Deeper Understanding of Machine Learning Models by Implementing Them from Scratch in Python</h3>
+<p> </p>
+<h4>Venelin Valkov</h4>
+<p> </p>
+<p>This book is for sale at <a href="http://leanpub.com/hmls">http://leanpub.com/hmls</a></p>
+<p>This version was published on 2019-06-29</p>
+<p><img src="images/leanpub-logo.png" alt="publisher&#39;s logo" id="publisher-logo" /></p>
+<p>*   *   *   *   *</p>
+<p>This is a <a href="http://leanpub.com">Leanpub</a> book. Leanpub empowers authors and publishers with the Lean Publishing process. <a href="http://leanpub.com/manifesto">Lean Publishing</a> is the act of publishing an in-progress ebook using lightweight tools and many iterations to get reader feedback, pivot until you have the right book and build traction once you do.</p>
+<p>*   *   *   *   *</p>
+<div>
+© 2019 Venelin Valkov
+</div>
+<p><span id="toc.xhtml"></span></p>
+<section class="frontmatter TableOfContents" type="frontmatter toc">
+<h2 id="toc.xhtml#toc">Table of Contents</h2>
+<nav epub="http://www.idpf.org/2007/ops" type="toc">
+<ol>
+<li><a href="#chap00.xhtml#leanpub-auto-machine-learning-fundamentals">Machine Learning fundamentals</a>
+<ol>
+<li><a href="#chap00.xhtml#leanpub-auto-sick-of-being-a-lamer">Sick of being a lamer?</a></li>
+<li><a href="#chap00.xhtml#leanpub-auto-what-is-machine-learning">What is Machine Learning?</a></li>
+<li><a href="#chap00.xhtml#leanpub-auto-what-learning-algorithms-are-made-of">What Learning Algorithms are made of?</a></li>
+<li><a href="#chap00.xhtml#leanpub-auto-making-predictions">Making predictions</a></li>
+<li><a href="#chap00.xhtml#leanpub-auto-tools-of-the-trade">Tools of the trade</a></li>
+<li><a href="#chap00.xhtml#leanpub-auto-ready-to-start">Ready to start?</a></li>
+</ol></li>
+<li><a href="#chap01.xhtml#leanpub-auto-smart-discounts-with-logistic-regression">Smart Discounts with Logistic Regression</a>
+<ol>
+<li><a href="#chap01.xhtml#leanpub-auto-the-data">The Data</a></li>
+<li><a href="#chap01.xhtml#leanpub-auto-making-decisions-with-logistic-regression">Making decisions with Logistic regression</a></li>
+<li><a href="#chap01.xhtml#leanpub-auto-the-logistic-regression-model">The Logistic Regression model</a></li>
+<li><a href="#chap01.xhtml#leanpub-auto-how-can-we-find-the-parameters-for-our-model">How can we find the parameters for our model?</a></li>
+<li><a href="#chap01.xhtml#leanpub-auto-bonus--building-your-own-logisticregressor">Bonus — building your own LogisticRegressor</a></li>
+<li><a href="#chap01.xhtml#leanpub-auto-conclusion">Conclusion</a></li>
+</ol></li>
+<li><a href="#chap02.xhtml#leanpub-auto-predicting-house-prices-with-linear-regression">Predicting House Prices with Linear Regression</a>
+<ol>
+<li><a href="#chap02.xhtml#leanpub-auto-the-data-1">The Data</a></li>
+<li><a href="#chap02.xhtml#leanpub-auto-load-the-data">Load the data</a></li>
+<li><a href="#chap02.xhtml#leanpub-auto-exploration--getting-a-feel-for-our-data">Exploration — getting a feel for our data</a></li>
+<li><a href="#chap02.xhtml#leanpub-auto-predicting-the-sale-price">Predicting the sale price</a></li>
+<li><a href="#chap02.xhtml#leanpub-auto-loss-function-1">Loss function</a></li>
+<li><a href="#chap02.xhtml#leanpub-auto-multivariable-linear-regression">Multivariable Linear Regression</a></li>
+<li><a href="#chap02.xhtml#leanpub-auto-conclusion-1">Conclusion</a></li>
+</ol></li>
+<li><a href="#chap03.xhtml#leanpub-auto-building-a-decision-tree">Building a Decision Tree</a>
+<ol>
+<li><a href="#chap03.xhtml#leanpub-auto-the-data-2">The Data</a></li>
+<li><a href="#chap03.xhtml#leanpub-auto-decision-trees">Decision Trees</a></li>
+<li><a href="#chap03.xhtml#leanpub-auto-data-preprocessing-1">Data Preprocessing</a></li>
+<li><a href="#chap03.xhtml#leanpub-auto-cost-function">Cost function</a></li>
+<li><a href="#chap03.xhtml#leanpub-auto-using-a-prebuild-decision-tree-model">Using a prebuild Decision Tree model</a></li>
+<li><a href="#chap03.xhtml#leanpub-auto-building-your-own-decision-tree">Building your own Decision Tree</a></li>
+<li><a href="#chap03.xhtml#leanpub-auto-evaluation">Evaluation</a></li>
+<li><a href="#chap03.xhtml#leanpub-auto-sending-your-predictions-to-kaggle">Sending your predictions to Kaggle</a></li>
+<li><a href="#chap03.xhtml#leanpub-auto-conclusion-2">Conclusion</a></li>
+<li><a href="#chap03.xhtml#leanpub-auto-acknowledgments">Acknowledgments</a></li>
+</ol></li>
+<li><a href="#chap04.xhtml#leanpub-auto-color-palette-extraction-with-k-means-clustering">Color palette extraction with K-means clustering</a>
+<ol>
+<li><a href="#chap04.xhtml#leanpub-auto-unsupervised-learning-1">Unsupervised Learning</a></li>
+<li><a href="#chap04.xhtml#leanpub-auto-the-data-3">The Data</a></li>
+<li><a href="#chap04.xhtml#leanpub-auto-what-is-k-means-clustering">What is K-Means Clustering?</a></li>
+<li><a href="#chap04.xhtml#leanpub-auto-data-preprocessing-2">Data Preprocessing</a></li>
+<li><a href="#chap04.xhtml#leanpub-auto-implementing-k-means-clustering">Implementing K-Means clustering</a></li>
+<li><a href="#chap04.xhtml#leanpub-auto-evaluation-1">Evaluation</a></li>
+<li><a href="#chap04.xhtml#leanpub-auto-conclusion-3">Conclusion</a></li>
+</ol></li>
+<li><a href="#chap05.xhtml#leanpub-auto-movie-review-sentiment-analysis-with-naive-bayes">Movie review sentiment analysis with Naive Bayes</a>
+<ol>
+<li><a href="#chap05.xhtml#leanpub-auto-dealing-with-text">Dealing with Text</a></li>
+<li><a href="#chap05.xhtml#leanpub-auto-naive-bayes">Naive Bayes</a></li>
+<li><a href="#chap05.xhtml#leanpub-auto-implementing-multinomial-naive-bayes">Implementing Multinomial Naive Bayes</a></li>
+<li><a href="#chap05.xhtml#leanpub-auto-predicting-sentiment">Predicting sentiment</a></li>
+<li><a href="#chap05.xhtml#leanpub-auto-conclusion-4">Conclusion</a></li>
+</ol></li>
+<li><a href="#chap06.xhtml#leanpub-auto-music-artist-recommender-system-using-stochastic-gradient-descent">Music artist Recommender System using Stochastic Gradient Descent</a>
+<ol>
+<li><a href="#chap06.xhtml#leanpub-auto-user-ratings">User Ratings</a></li>
+<li><a href="#chap06.xhtml#leanpub-auto-recommender-systems">Recommender Systems</a></li>
+<li><a href="#chap06.xhtml#leanpub-auto-recommending-music-artists">Recommending music artists</a></li>
+<li><a href="#chap06.xhtml#leanpub-auto-conclusion-5">Conclusion</a></li>
+</ol></li>
+<li><a href="#chap07.xhtml#leanpub-auto-fashion-product-image-classification-using-neural-networks">Fashion product image classification using Neural Networks</a>
+<ol>
+<li><a href="#chap07.xhtml#leanpub-auto-image-data">Image Data</a></li>
+<li><a href="#chap07.xhtml#leanpub-auto-neural-networks">Neural Networks</a></li>
+<li><a href="#chap07.xhtml#leanpub-auto-classifying-images">Classifying Images</a></li>
+<li><a href="#chap07.xhtml#leanpub-auto-improving-the-accuracy">Improving the accuracy</a></li>
+<li><a href="#chap07.xhtml#leanpub-auto-conclusion-6">Conclusion</a></li>
+</ol></li>
+<li><a href="#chap08.xhtml#leanpub-auto-build-a-taxi-driving-agent-in-a-post-apocalyptic-world-using-reinforcement-learning">Build a taxi driving agent in a post-apocalyptic world using Reinforcement Learning</a>
+<ol>
+<li><a href="#chap08.xhtml#leanpub-auto-reinforcement-learning-1">Reinforcement Learning</a></li>
+<li><a href="#chap08.xhtml#leanpub-auto-driving-in-a-post-apocalyptic-world">Driving in a post-apocalyptic world</a></li>
+<li><a href="#chap08.xhtml#leanpub-auto-evaluation-5">Evaluation</a></li>
+<li><a href="#chap08.xhtml#leanpub-auto-conclusion-7">Conclusion</a></li>
+</ol></li>
+</ol>
+</nav> <nav epub="http://www.idpf.org/2007/ops" type="landmarks" id="guide">
+<h2>Guide</h2>
+<ol>
+<li><a href="#chap00.xhtml">Begin Reading</a></li>
+</ol>
+</nav>
+</section>
+<p><span id="chap00.xhtml"></span></p>
+<div>
+<h2 id="chap00.xhtml#leanpub-auto-machine-learning-fundamentals">Machine Learning fundamentals</h2>
+<blockquote>
+<p>TL;DR Learn about the basics of Machine Learning - what types of learning exist, why implement algorithms from scratch and can you really trust your models?</p>
+</blockquote>
+<h3 id="chap00.xhtml#leanpub-auto-sick-of-being-a-lamer">Sick of being a lamer?</h3>
+<p>Here’s a definition for “lamer” from urban dictionary:</p>
+<blockquote>
+<p><strong>Lamer</strong> is someone who thinks they are smart, yet are really a loser. E.g. <strong>that hacker wannabe is really just a lamer</strong>.</p>
+</blockquote>
+<p>You might’ve noticed that reading through Deep Learning and TensorFlow/PyTorch tutorials might give you an idea of how to do a specific task, but fall short if you want to apply it to your own problems. Importing a library and calling 4-5 methods might get the job done but leave you clueless about why it works. Can you solve this problem?</p>
+<blockquote>
+<p>“What I cannot create, I do not understand” - Richard Feynman</p>
+</blockquote>
+<p>Different people learn in different styles, but all hackers learn the same way - we build stuff!</p>
+<h4 id="chap00.xhtml#leanpub-auto-how-this-book-helps">How this book helps?</h4>
+<ul>
+<li>Provide a clear path to learning (reduce choice overload and paralysis by analysis) increasingly complex Machine Learning models</li>
+<li>Succinct implementations of Machine Learning algorithms solving real-world problems you can tinker with</li>
+<li>Just enough theory + math that helps you understand why things work after you understand what problem you have to solve</li>
+</ul>
+<h3 id="chap00.xhtml#leanpub-auto-what-is-machine-learning">What is Machine Learning?</h3>
+<p>Machine Learning (ML) is the art and science of teaching machines to do complex tasks without explicitly programming them. Your job, as a hacker, is to:</p>
+<ul>
+<li>Define the problem in a way that a computer can understand it</li>
+<li>Choose a set of possible models that could solve it</li>
+<li>Feed the data</li>
+<li>Evaluate the performance and improve</li>
+</ul>
+<p>There are 3 main types of learning: supervised, unsupervised and reinforcement</p>
+<h4 id="chap00.xhtml#leanpub-auto-supervised-learning">Supervised Learning</h4>
+<p>In <em>Supervised Learning</em> setting, you have a dataset, which is a collection of <img src="images/leanpub_equation_0.png" alt="N" class="inline-equation" width="15" /> labeled examples. Each example has a vector of features <img src="images/leanpub_equation_1.png" alt="x_i" class="inline-equation" width="14" /> and a label <img src="images/leanpub_equation_2.png" alt="y_i" class="inline-equation" width="12" />. The label <img src="images/leanpub_equation_3.png" alt="y_i" class="inline-equation" width="12" /> can belong to a finite set of classes <img src="images/leanpub_equation_4.png" alt="\{1, \ldots, C\}" class="inline-equation" width="80" />, real number or something more complex.</p>
+<p>The goal of supervised learning algorithms is to build a model that receives a feature vector <img src="images/leanpub_equation_5.png" alt="x" class="inline-equation" width="9" /> as input and infer the correct label for it.</p>
+<h4 id="chap00.xhtml#leanpub-auto-unsupervised-learning">Unsupervised Learning</h4>
+<p>In <em>Unsupervised Learning</em> setting, you have a dataset of <img src="images/leanpub_equation_6.png" alt="N" class="inline-equation" width="15" /> <strong>unlabeled examples</strong>. Again, you have a feature vector <img src="images/leanpub_equation_7.png" alt="x" class="inline-equation" width="9" />, and the goal is to build a model that takes it and transforms it into another. Some practical examples include <strong>clustering</strong>, <strong>reducing the number of dimensions</strong> and <strong>anomaly detection</strong>.</p>
+<h4 id="chap00.xhtml#leanpub-auto-reinforcement-learning">Reinforcement Learning</h4>
+<p><em>Reinforcement Learning</em> is concerned with building agents that interact with an environment by getting its state and executing an action. Actions provide rewards and change the state of the environment. The goal is to learn a set of actions that maximize the total reward.</p>
+<h3 id="chap00.xhtml#leanpub-auto-what-learning-algorithms-are-made-of">What Learning Algorithms are made of?</h3>
+<p>Each learning algorithm we’re going to have a look at consists of three parts</p>
+<ul>
+<li>loss function - a measure of how wrong your model currently is</li>
+<li>optimization criteria based on the loss function</li>
+<li>optimization routine that uses data to find “good” solutions according to the optimization criteria</li>
+</ul>
+<p>These are the main components of all the algorithms we’re going to implement. While there are many optimization routines, <a href="https://en.wikipedia.org/wiki/Stochastic_gradient_descent">Stochastic Gradient Descent</a> is the most used in practice. It is used to find optimal parameters for logistic regression, neural networks, and many other models.</p>
+<h3 id="chap00.xhtml#leanpub-auto-making-predictions">Making predictions</h3>
+<p>How can you guarantee that your model will make correct predictions when deployed in production? Well, only suckers think that this is possible.</p>
+<blockquote>
+<p>“All models are wrong, but some are useful.” - George Box</p>
+</blockquote>
+<p>That said, there are ways to increase the prediction accuracy of your models. If the data used for training were selected randomly, independently of one another and following the same procedure for generating it, then, it is more likely your model to learn better. Still, for situations that are less likely to happen, your model will probably make errors.</p>
+<p>Generally, the larger the data set, the better the predictions you can expect.</p>
+<h3 id="chap00.xhtml#leanpub-auto-tools-of-the-trade">Tools of the trade</h3>
+<p>We’re going to use a lot of libraries provided by different kind people, but the main ones are NumPy, Pandas and Matplotlib.</p>
+<h4 id="chap00.xhtml#leanpub-auto-numpy">NumPy</h4>
+<p><a href="http://www.numpy.org/">NumPy</a> is the fundamental package for scientific computing with Python. It contains among other things:</p>
+<ul>
+<li>a powerful N-dimensional array object</li>
+<li>sophisticated (broadcasting) functions</li>
+<li>tools for integrating C/C++ and Fortran code</li>
+<li>useful linear algebra, Fourier transform, and random number capabilities</li>
+</ul>
+<p>Besides its obvious scientific uses, NumPy can also be used as an efficient multi-dimensional container of generic data. Arbitrary data-types can be defined. This allows NumPy to seamlessly and speedily integrate with a wide variety of databases.</p>
+<p>Here’s a super simple walkthrough:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 import numpy as np
+2 
+3 a = np.array([1, 2, 3]) # 1D array
+4 type(a)</code></pre>
+</div>
+</figure>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 numpy.ndarray</code></pre>
+</div>
+</figure>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 a.shape</code></pre>
+</div>
+</figure>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 (3,)</code></pre>
+</div>
+</figure>
+<p>We’ve created a 1-dimensional array with 3 elements. You can get the first element of the array:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 a[0]</code></pre>
+</div>
+</figure>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 1</code></pre>
+</div>
+</figure>
+<p>and change it:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 a[0] = 5
+2 
+3 a</code></pre>
+</div>
+</figure>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 array([5, 2, 3])</code></pre>
+</div>
+</figure>
+<p>Let’s create a 2D array</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 b = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]) # 2D array
+2 
+3 b.shape</code></pre>
+</div>
+</figure>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 (3, 3)</code></pre>
+</div>
+</figure>
+<p>We have a 3x3 matrix. Let’s select only the first 2 rows:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 b[0:2]</code></pre>
+</div>
+</figure>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 array([[1, 2, 3],
+2        [4, 5, 6]])</code></pre>
+</div>
+</figure>
+<h4 id="chap00.xhtml#leanpub-auto-pandas">Pandas</h4>
+<p><a href="https://pandas.pydata.org/">pandas</a> is an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language.</p>
+<p>We’re going to use pandas as a holder for our datasets. The primary entity we’ll be working with is the <code>DataFrame</code>. We’ll also do some transformations/preprocessing and visualizations.</p>
+<p>Let’s start by creating a <code>DataFrame</code>:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 import pandas as pd
+2 
+3 df =  pd.DataFrame(dict(
+4   customers=[&quot;Jill&quot;, &quot;Jane&quot;, &quot;Hanna&quot;],
+5   payments=[120, 180, 90]
+6 ))
+7 
+8 df</code></pre>
+</div>
+</figure>
+<table>
+<thead>
+<tr class="header">
+<th>customers</th>
+<th>payments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Jill</td>
+<td>120</td>
+</tr>
+<tr class="even">
+<td>Jane</td>
+<td>180</td>
+</tr>
+<tr class="odd">
+<td>Hanna</td>
+<td>90</td>
+</tr>
+</tbody>
+</table>
+<p>You can check the size of the data frame:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 df.shape</code></pre>
+</div>
+</figure>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 (3, 2)</code></pre>
+</div>
+</figure>
+<p>We have 3 rows and 2 columns. You can use <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.head.html">head()</a> to render a preview of the first five rows:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 df.head()</code></pre>
+</div>
+</figure>
+<table>
+<thead>
+<tr class="header">
+<th>customers</th>
+<th>payments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Jill</td>
+<td>120</td>
+</tr>
+<tr class="even">
+<td>Jane</td>
+<td>180</td>
+</tr>
+<tr class="odd">
+<td>Hanna</td>
+<td>90</td>
+</tr>
+</tbody>
+</table>
+<p>Let’s check for missing values:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 df.isnull()</code></pre>
+</div>
+</figure>
+<table>
+<thead>
+<tr class="header">
+<th>customers</th>
+<th>payments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>False</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>False</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td>False</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+<p>You can apply functions such as <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.sum.html">sum()</a> to columns like <code>payments</code>:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 df.payments.sum()</code></pre>
+</div>
+</figure>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 390</code></pre>
+</div>
+</figure>
+<p>You can even show some charts using <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.html">plot()</a>:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 df.plot(
+2     kind=&#39;bar&#39;,
+3     x=&#39;customers&#39;,
+4     y=&#39;payments&#39;,
+5     title=&#39;Payments done by customer&#39;
+6 );</code></pre>
+</div>
+</figure>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/ml-scratch-0----pandas-chart.png" />
+</figure>
+</div>
+<h4 id="chap00.xhtml#leanpub-auto-matplotlib">Matplotlib</h4>
+<blockquote>
+<p><a href="https://matplotlib.org/">Matplotlib</a> is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms.</p>
+</blockquote>
+<p>Here is a quick sample of it:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 import matplotlib.pyplot as plt
+2 
+3 x = np.arange(0, 3 * np.pi, 0.1)
+4 y = np.sin(x)
+5 
+6 plt.plot(x, y);</code></pre>
+</div>
+</figure>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/ml-scratch-0----matplotlib-example.png" />
+</figure>
+</div>
+<h3 id="chap00.xhtml#leanpub-auto-ready-to-start">Ready to start?</h3>
+<p>Welcome to the amazing world of Machine Learning. Let’s get this party started!</p>
+</div>
+<p><span id="chap01.xhtml"></span></p>
+<div>
+<h2 id="chap01.xhtml#leanpub-auto-smart-discounts-with-logistic-regression">Smart Discounts with Logistic Regression</h2>
+<p><a href="https://colab.research.google.com/drive/1kmtjoULbyRtAtDPKYlhWSwATLpF7PQd8">Complete source code in Google Colaboratory Notebook</a></p>
+<h3 id="chap01.xhtml#leanpub-auto-the-data">The Data</h3>
+<p>You collected some data from your database(s), analytics packages, etc. Here’s what you might’ve come up with:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/1_data.png" />
+</figure>
+</div>
+<p>Let’s load the data into a Pandas data frame:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 data = OrderedDict(
+2         amount_spent =  [50,  10, 20, 5,  95,  70,  100,  200, 0],
+3         send_discount = [0,   1,  1,  1,  0,   0,   0,    0,   1]
+4     )</code></pre>
+</div>
+</figure>
+<p>And have a look at it:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 df = pd.DataFrame.from_dict(data)</code></pre>
+</div>
+</figure>
+<table>
+<thead>
+<tr class="header">
+<th> </th>
+<th>amount_spent</th>
+<th>send_discount</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>50</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>10</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>20</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>5</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>95</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>70</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>100</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>200</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Note — the presented data is a simplification of a real dataset you might have. If your data is really simple, you might try simpler methods.</p>
+</blockquote>
+<h3 id="chap01.xhtml#leanpub-auto-making-decisions-with-logistic-regression">Making decisions with Logistic regression</h3>
+<p>Logistic regression is used for classification problems when the dependant/target variable is binary. That is, its values are true or false. <em>Logistic regression</em> is one of the most popular and widely used algorithms in practice (<a href="https://www.kaggle.com/surveys/2017">see this</a>).</p>
+<p>Some problems that can be solved with Logistic regression include:</p>
+<ul>
+<li><strong>Email</strong> — deciding if it is spam or not</li>
+<li><strong>Online transactions</strong> — fraudulent or not</li>
+<li><strong>Tumor classification</strong> — malignant or benign</li>
+<li><strong>Customer upgrade</strong> — will the customer buy the premium upgrade or not</li>
+</ul>
+<p>We want to predict the outcome of a variable <em>y</em>, such that:</p>
+<img src="images/leanpub_equation_8.png" alt="y \in \{0, 1\}" class="block-equation" width="75" />
+<p>and set <em>0</em>: negative class (e.g. email is not spam) or <em>1</em>: positive class (e.g. email is spam).</p>
+<h4 id="chap01.xhtml#leanpub-auto-cant-we-just-use-linear-regression">Can‘t we just use Linear regression?</h4>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/1_linear-vs-logistic-regression.jpg" />
+</figure>
+</div>
+<p><em>Image credit: <a href="https://machinelearningplus.com/">machinelearningplus.com</a></em></p>
+<p>Linear regression is another very popular model. It works under the assumption that the observed phenomena (your data) are explainable by a straight line.</p>
+<p>The response variable <em>y</em> of the Linear regression is <em>not restricted</em> within the [0, 1] interval. That makes it pretty hard to take binary decisions based on its output. Thus, not suitable for our needs.</p>
+<h3 id="chap01.xhtml#leanpub-auto-the-logistic-regression-model">The Logistic Regression model</h3>
+<p>Given our problem, we want a model that uses 1 variable (predictor) (<img src="images/leanpub_equation_9.png" alt="x_1" class="inline-equation" width="15" /> -amount_spent) to predict whether or not we should send a discount to the customer.</p>
+<img src="images/leanpub_equation_10.png" alt="h_w(x) = w_1x_1 + w_0" class="block-equation" width="149" />
+<p>where the coefficients <img src="images/leanpub_equation_11.png" alt="w_i" class="inline-equation" width="16" /> are parameters of the model. Let the coefficient vector <img src="images/leanpub_equation_12.png" alt="W" class="inline-equation" width="18" /> be:</p>
+<img src="images/leanpub_equation_13.png" alt="W = \begin{pmatrix} w_1 \\ w_0 \\ \end{pmatrix}" class="block-equation" width="87" />
+<p>Then we can represent <img src="images/leanpub_equation_14.png" alt="h_w(x)" class="inline-equation" width="43" /> in a more compact form:</p>
+<img src="images/leanpub_equation_15.png" alt="h_w(x) = w^Tx" class="block-equation" width="103" />
+<p>That is the <em>Linear Regression</em> model.</p>
+<p>We want to build a model that outputs values that are between 0 and 1, so we want to come up with a hypothesis that satisfies:</p>
+<img src="images/leanpub_equation_16.png" alt="0 \leq h_w(x) \leq 1" class="block-equation" width="111" />
+<p>For <strong><em>Logistic Regression</em></strong> we want to modify this and introduce another function <em>g</em>:</p>
+<img src="images/leanpub_equation_17.png" alt="h_w(x) = g(w^Tx)" class="block-equation" width="125" />
+<p>We’re going to define <strong><em>g</em></strong> as:</p>
+<img src="images/leanpub_equation_18.png" alt="g(z) = \frac{1}{1 + e ^{-z}}" class="block-equation" width="117" />
+<p>where</p>
+<img src="images/leanpub_equation_19.png" alt="z \in \mathbb{R}" class="block-equation" width="45" />
+<p><em>g</em> is also known as the <em>sigmoid function</em> or the <em>logistic function</em>. After substitution, we end up with:</p>
+<img src="images/leanpub_equation_20.png" alt="h_w(x) = \frac{1}{1 + e ^{-(w^Tx)}}" class="block-equation" width="159" />
+<p>for our hypothesis.</p>
+<h4 id="chap01.xhtml#leanpub-auto-a-closer-look-at-the-sigmoid-function">A closer look at the sigmoid function</h4>
+<p>Intuitively, we’re going to use the sigmoid function “over the” Linear regression model to bound it within [0;+1].</p>
+<p>Recall that the sigmoid function is defined as:</p>
+<img src="images/leanpub_equation_21.png" alt="g(z) = \frac{1}{1 + e ^{-z}}" class="block-equation" width="117" />
+<p>Let’s translate it to a Python function:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 def sigmoid(z):
+2     return 1 / (1 + np.exp(-z))</code></pre>
+</div>
+</figure>
+<p>A graphical representation of the sigmoid function:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/1_sigmoid.png" />
+</figure>
+</div>
+<p>It looks familiar, right? Notice how fast it converges to -1 or +1.</p>
+<h3 id="chap01.xhtml#leanpub-auto-how-can-we-find-the-parameters-for-our-model">How can we find the parameters for our model?</h3>
+<p>Let’s examine some approaches to find good parameters for our model. But what does good mean in this context?</p>
+<h4 id="chap01.xhtml#leanpub-auto-loss-function">Loss function</h4>
+<p>We have a model that we can use to make decisions, but we still have to find the parameters <strong>W</strong>. To do that, we need an objective measurement of how good a given set of parameters are. For that purpose, we will use a loss (cost) function:</p>
+<img src="images/leanpub_equation_22.png" alt="J(W) = \frac{1}{m}\sum^m_{i = 1}Cost(h_w(x^{(i)}), y^{(i)})" class="block-equation" width="267" /> <img src="images/leanpub_equation_23.png" alt="Cost(h_w(x), y) = \begin{cases} -log(h_w(x)) &amp;\text{if} y = 1\\ -log(1 - h_w(x)) &amp;\text{if} y = 0 \end{cases}" class="block-equation" width="357" />
+<p>Which is also known as the <a href="https://ml-cheatsheet.readthedocs.io/en/latest/loss_functions.html">Log loss or Cross-entropy loss</a> function</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/1_cost.png" />
+</figure>
+</div>
+<p><em>Image credit: <a href="https://ml-cheatsheet.readthedocs.io">ml-cheatsheet</a></em></p>
+<p>We can compress the above function into one:</p>
+<img src="images/leanpub_equation_24.png" alt="J(W) = \frac{1}{m}(-y \log{(h_w)} - (1 - y) \log{(1 - h_w)})" class="block-equation" width="366" />
+<p>where</p>
+<img src="images/leanpub_equation_25.png" alt="h_w(x) = g(w^Tx)" class="block-equation" width="125" />
+<p>Let’s implement it in Python:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 def loss(h, y):
+2   return (-y * np.log(h) - (1 - y) * np.log(1 - h)).mean()</code></pre>
+</div>
+</figure>
+<h4 id="chap01.xhtml#leanpub-auto-approach-1--tryout-a-number">Approach #1 — tryout a number</h4>
+<p>Let’s think of 3 numbers that represent the coefficients <img src="images/leanpub_equation_26.png" alt="w_0, w_1, w_2" class="inline-equation" width="76" />.</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 X = df[&#39;amount_spent&#39;].astype(&#39;float&#39;).values
+ 2 y = df[&#39;send_discount&#39;].astype(&#39;float&#39;).values
+ 3 
+ 4 def predict(x, w):
+ 5   return sigmoid(x * w)
+ 6 
+ 7 def print_result(y_hat, y):
+ 8   print(f&#39;loss: {np.round(loss(y_hat, y), 5)} predicted: {y_hat} actual: {y}&#39;)
+ 9 
+10 y_hat = predict(x=X[0], w=.5)
+11 print_result(y_hat, y[0])</code></pre>
+</div>
+</figure>
+<p><code>loss: 25.0 predicted: 0.999999999986112 actual: 0.0</code></p>
+<p>Unfortunately, I am pretty lazy, and this approach seems like a bit too much work for me. Let’s go to the next one:</p>
+<h4 id="chap01.xhtml#leanpub-auto-approach-2--tryout-a-lot-of-numbers">Approach #2 — tryout a lot of numbers</h4>
+<p>Alright, these days computers are pretty fast, 6+ core laptops are everywhere. Smartphones can be pretty performant, too! Let’s use that power for good™ and try to find those pesky parameters by just trying out a lot of numbers:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 for w in np.arange(-1, 1, 0.1):
+2   y_hat = predict(x=X[0], w=w)
+3   print(loss(y_hat, y[0]))</code></pre>
+</div>
+</figure>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 0.0
+ 2 0.0
+ 3 0.0
+ 4 6.661338147750941e-16
+ 5 9.359180097590508e-14
+ 6 1.3887890837434982e-11
+ 7 2.0611535832696244e-09
+ 8 3.059022736706331e-07
+ 9 4.539889921682063e-05
+10 0.006715348489118056
+11 0.6931471805599397
+12 5.006715348489103
+13 10.000045398900186
+14 15.000000305680194
+15 19.999999966169824
+16 24.99999582410784
+17 30.001020555434774
+18 34.945041100449046
+19 inf
+20 inf</code></pre>
+</div>
+</figure>
+<p>Amazing, the first parameter value we tried got us a loss of 0. Is it your lucky day or this will always be the case, though? The answer is left as an exercise for the reader :)</p>
+<h4 id="chap01.xhtml#leanpub-auto-approach-3--gradient-descent">Approach #3 — Gradient descent</h4>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/1_gd.jpg" />
+</figure>
+</div>
+<p><em>Image credit: <a href="https://github.com/hunkim/PyTorchZeroToAll">PyTorchZeroToAll</a></em></p>
+<p>Gradient descent algorithms (yes, there are a lot of them) provide us with a way to find a minimum of some function <strong><em>f</em></strong>. They work by iteratively going in the direction of the descent as defined by the gradient.</p>
+<p>In Machine Learning, we use gradient descent algorithms to find “good” parameters for our models (Logistic Regression, Linear Regression, Neural Networks, etc…).</p>
+<p>How does it work? Starting somewhere, we take our first step downhill in the direction specified by the negative gradient. Next, we recalculate the negative gradient and take another step in the direction it specifies. This process continues until we get to a point where we can no longer move downhill — a local minimum.</p>
+<p>Ok, but how can we find that gradient thing? We have to find the derivate of our cost function since our example is rather simple.</p>
+<h4 id="chap01.xhtml#leanpub-auto-the-first-derivative-of-the-sigmoid-function">The first derivative of the sigmoid function</h4>
+<p>The first derivative of the sigmoid function is given by the following equation:</p>
+<img src="images/leanpub_equation_27.png" alt="g&#39;(z) = g(z)(1 - g(z))" class="block-equation" width="172" />
+<p>Complete derivation can be found <a href="https://math.stackexchange.com/a/1225116/499458">here</a>.</p>
+<h4 id="chap01.xhtml#leanpub-auto-the-first-derivative-of-the-cost-function">The first derivative of the cost function</h4>
+<p>Recall that the cost function was given by the following equation:</p>
+<img src="images/leanpub_equation_28.png" alt="J(W) = \frac{1}{m}(-y \log{(h_w)} - (1 - y) \log{(1 - h_w)})" class="block-equation" width="366" />
+<p>Given</p>
+<img src="images/leanpub_equation_29.png" alt="g&#39;(z) = g(z)(1 - g(z))" class="block-equation" width="172" />
+<p>We obtain the first derivative of the cost function:</p>
+<img src="images/leanpub_equation_30.png" alt="\frac{\partial{J(W)}}{\partial{W}} =\frac{1}{m}(y(1 - h_w) - (1 - y)h_w)x = \frac{1}{m}(y - h_w)x" class="block-equation" width="425" />
+<h4 id="chap01.xhtml#leanpub-auto-updating-our-parameters-w">Updating our parameters W</h4>
+<p>Now that we have the derivate, we can go back to our updating rule and use it there:</p>
+<img src="images/leanpub_equation_31.png" alt="W := W - \alpha (\frac{1}{m}(y - h_w)x)" class="block-equation" width="213" />
+<p>The parameter a is known as <em>learning rate</em>. High learning rate can converge quickly, but risks overshooting the lowest point. Low learning rate allows for confident moves in the direction of the negative gradient. However, it time-consuming so it will take us a lot of time to get to converge.</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/1_big-small-lr.png" />
+</figure>
+</div>
+<p><em>Image credit: <a href="https://towardsdatascience.com/">Towards Data Science</a></em></p>
+<h4 id="chap01.xhtml#leanpub-auto-the-gradient-descent-algorithm">The Gradient descent algorithm</h4>
+<p>The algorithm we’re going to use works as follows:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 Repeat until convergence {
+2   1. Calculate gradient average
+3   2. Multiply by learning rate
+4   3. Subtract from weights
+5 }</code></pre>
+</div>
+</figure>
+<p>Let’s do this in Python:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 def predict(X, W):
+ 2   return sigmoid(np.dot(X, W))
+ 3 
+ 4 def fit(X, y, n_iter=100000, lr=0.01):
+ 5 
+ 6   W = np.zeros(X.shape[1])
+ 7 
+ 8   for i in range(n_iter):
+ 9       z = np.dot(X, W)
+10       h = sigmoid(z)
+11       gradient = np.dot(X.T, (h - y)) / y.size
+12       W -= lr * gradient
+13   return W</code></pre>
+</div>
+</figure>
+<p>About that until convergence part. You might notice that we kinda brute-force our way around it. That is, we will run the algorithm for a preset amount of iterations. Another interesting point is the initialization of our weights W — initially set at zero.</p>
+<p>Let’s put our implementation to the test, literally. But first, we need a function that helps us predict y given some data X (predict whether or not we should send a discount to a customer based on its spending):</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 def predict(X, W):
+2   return sigmoid(np.dot(X, W))</code></pre>
+</div>
+</figure>
+<p>Now for our simple test:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 class TestGradientDescent(unittest.TestCase):
+ 2 
+ 3     def test_correct_prediction(self):
+ 4       global X
+ 5       global y
+ 6       if len(X.shape) != 2:
+ 7         X = X.reshape(X.shape[0], 1)
+ 8       w = fit(X, y)
+ 9       y_hat = predict(X, w).round()
+10       self.assertTrue((y_hat == y).all())</code></pre>
+</div>
+</figure>
+<p>Note that we use reshape to add a dummy dimension to X. Further, after our call to predict, we round the results. Recall that the sigmoid function spits out (kinda like a dragon with an upset stomach) numbers in the [0; 1] range. We’re just going to round the result in order to obtain our 0 or 1 (yes or no) answers.</p>
+<p>run_tests()</p>
+<p>Here is the result of running our test case:</p>
+<p>F</p>
+<p>Well, that’s not good, after all that hustling we’re nowhere near achieving our goal of finding good parameters for our model. But, what went wrong?</p>
+<p>Welcome to your first model debugging session! Let’s start by finding whether our algorithm improves over time. We can use our loss metric for that:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 def fit(X, y, n_iter=100000, lr=0.01):
+ 2 
+ 3   W = np.zeros(X.shape[1])
+ 4 
+ 5   for i in range(n_iter):
+ 6       z = np.dot(X, W)
+ 7       h = sigmoid(z)
+ 8       gradient = np.dot(X.T, (h - y)) / y.size
+ 9       W -= lr * gradient
+10 
+11       if(i % 10000 == 0):
+12           e = loss(h, y)
+13           print(f&#39;loss: {e} \t&#39;)
+14 
+15   return W</code></pre>
+</div>
+</figure>
+<p>run_tests()</p>
+<p>We pretty much copy &amp; pasted our training code except that we’re printing the training loss every <em>10,000</em> iterations. Let’s have a look:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1     loss: 0.6931471805599453
+ 2     loss: 0.41899283818630056
+ 3     loss: 0.41899283818630056
+ 4     loss: 0.41899283818630056
+ 5     loss: 0.41899283818630056
+ 6     loss: 0.41899283818630056
+ 7     loss: 0.41899283818630056
+ 8     loss: 0.41899283818630056
+ 9     loss: 0.41899283818630056
+10     loss: 0.41899283818630056</code></pre>
+</div>
+</figure>
+<p>F……..</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/1_gd.png" />
+</figure>
+</div>
+<p>Suspiciously enough, we found a possible cause for our problem on the first try! Our loss doesn’t get low enough, in other words, our algorithm gets stuck at some point that is not a good enough minimum for us. How can we fix this? Perhaps, try out different learning rate or initializing our parameter with a different value?</p>
+<p>First, a smaller learning rate a :</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 def fit(X, y, n_iter=100000, lr=0.001):
+ 2 
+ 3   W = np.zeros(X.shape[1])
+ 4 
+ 5   for i in range(n_iter):
+ 6       z = np.dot(X, W)
+ 7       h = sigmoid(z)
+ 8       gradient = np.dot(X.T, (h - y)) / y.size
+ 9       W -= lr * gradient
+10 
+11       if(i % 10000 == 0):
+12         e = loss(h, y)
+13         print(f&#39;loss: {e} \t&#39;)
+14 
+15   return W</code></pre>
+</div>
+</figure>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 run_tests()</code></pre>
+</div>
+</figure>
+<p>With a=0.001 we obtain this:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 loss: 0.42351356323845546
+ 2 loss: 0.41899283818630056
+ 3 loss: 0.41899283818630056
+ 4 loss: 0.41899283818630056
+ 5 loss: 0.41899283818630056
+ 6 loss: 0.41899283818630056
+ 7 loss: 0.41899283818630056
+ 8 loss: 0.41899283818630056
+ 9 loss: 0.41899283818630056
+10 loss: 0.41899283818630056
+11 
+12 F.......</code></pre>
+</div>
+</figure>
+<p>Not so successful, are we? How about adding one more parameter for our model to find/learn?</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 def add_intercept(X):
+ 2   intercept = np.ones((X.shape[0], 1))
+ 3   return np.concatenate((intercept, X), axis=1)
+ 4 
+ 5 def predict(X, W):
+ 6   X = add_intercept(X)
+ 7   return sigmoid(np.dot(X, W))
+ 8 
+ 9 def fit(X, y, n_iter=100000, lr=0.01):
+10 
+11   X = add_intercept(X)
+12   W = np.zeros(X.shape[1])
+13 
+14   for i in range(n_iter):
+15       z = np.dot(X, W)
+16       h = sigmoid(z)
+17       gradient = np.dot(X.T, (h - y)) / y.size
+18       W -= lr * gradient
+19   return W</code></pre>
+</div>
+</figure>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 run_tests()</code></pre>
+</div>
+</figure>
+<p>And for the results:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 ........
+2 ---------------------------------------------------------
+3 Ran 8 tests in 0.686s
+4 
+5 OK</code></pre>
+</div>
+</figure>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/1_gd-params.png" />
+</figure>
+</div>
+<p>What we did here? We added a new element to our parameter vector W and set it’s initial value to 1. Seems like this turn things into our favor!</p>
+<h3 id="chap01.xhtml#leanpub-auto-bonus--building-your-own-logisticregressor">Bonus — building your own LogisticRegressor</h3>
+<p>Knowing all of the details of the inner workings of the Gradient descent is good, but when solving problems in the wild, we might be hard pressed for time. In those situations, a simple &amp; easy to use interface for fitting a Logistic Regression model might save us a lot of time. So, let’s build one!</p>
+<p>But first, let’s write some tests:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 class TestLogisticRegressor(unittest.TestCase):
+2 
+3     def test_correct_prediction(self):
+4       global X
+5       global y
+6       X = X.reshape(X.shape[0], 1)
+7       clf = LogisticRegressor()
+8       y_hat = clf.fit(X, y).predict(X)
+9       self.assertTrue((y_hat == y).all())</code></pre>
+</div>
+</figure>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 class LogisticRegressor:
+ 2 
+ 3   def _add_intercept(self, X):
+ 4     intercept = np.ones((X.shape[0], 1))
+ 5     return np.concatenate((intercept, X), axis=1)
+ 6 
+ 7   def predict_probs(self, X):
+ 8     X = self._add_intercept(X)
+ 9     return sigmoid(np.dot(X, self.W))
+10 
+11   def predict(self, X):
+12     return self.predict_probs(X).round()
+13 
+14   def fit(self, X, y, n_iter=100000, lr=0.01):
+15 
+16     X = self._add_intercept(X)
+17     self.W = np.zeros(X.shape[1])
+18 
+19     for i in range(n_iter):
+20         z = np.dot(X, self.W)
+21         h = sigmoid(z)
+22         gradient = np.dot(X.T, (h - y)) / y.size
+23         self.W -= lr * gradient
+24     return self</code></pre>
+</div>
+</figure>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 run_tests()</code></pre>
+</div>
+</figure>
+<p>We just packed all previously written functions into a tiny class. One huge advantage of this approach is the fact that we hide the complexity of the Gradient descent algorithm and the use of the parameters <strong><em>W</em></strong>.</p>
+<h4 id="chap01.xhtml#leanpub-auto-using-our-regressor-to-decide-who-should-receive-discount-codes">Using our Regressor to decide who should receive discount codes</h4>
+<p>Now that you’re done with the “hard” part let’s use the model to predict whether or not we should send discount codes.</p>
+<p>Let’s recall our initial data:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/1_data.png" />
+</figure>
+</div>
+<p>Now let’s try our model on data obtained from 2 new customers:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 Customer 1 - $10
+2 Customer 2 - $250</code></pre>
+</div>
+</figure>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 X_test = np.array([10, 250])
+2 X_test = X_test.reshape(X_test.shape[0], 1)
+3 y_test = LogisticRegressor().fit(X, y).predict(X_test)</code></pre>
+</div>
+</figure>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 y_test</code></pre>
+</div>
+</figure>
+<p>Recall that 1 means send code and 0 means do not send:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 array([1., 0.])</code></pre>
+</div>
+</figure>
+<p>Looks reasonable enough. Care to try out more cases?</p>
+<h3 id="chap01.xhtml#leanpub-auto-conclusion">Conclusion</h3>
+<p>Well done! You have a complete (albeit simple) LogisticRegressor implementation that you can play with. Go on, have some fun with it!</p>
+<p><a href="https://colab.research.google.com/drive/1kmtjoULbyRtAtDPKYlhWSwATLpF7PQd8">Complete source code in Google Colaboratory Notebook</a></p>
+<p>Coming up next, you will implement a Linear regression model from scratch :)</p>
+</div>
+<p><span id="chap02.xhtml"></span></p>
+<div>
+<h2 id="chap02.xhtml#leanpub-auto-predicting-house-prices-with-linear-regression">Predicting House Prices with Linear Regression</h2>
+<blockquote>
+<p>TL;DR Use a test-driven approach to build a Linear Regression model using Python from scratch. You will use your trained model to predict house sale prices and extend it to a multivariate Linear Regression.</p>
+</blockquote>
+<p>I know that you’ve always dreamed of dominating the housing market. Until now, that was impossible. But with this limited offer you can… got a bit sidetracked there.</p>
+<p>Let’s start building our model with Python, but this time we will use it on a more realistic dataset.</p>
+<p><strong><em><a href="https://colab.research.google.com/drive/1DXkpo9PmH9_HiCSz9NQlZ9vGQtMIYqmF">Complete source code notebook</a></em></strong></p>
+<h3 id="chap02.xhtml#leanpub-auto-the-data-1">The Data</h3>
+<p>Our data comes from a Kaggle competition named “<a href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques">House Prices: Advanced Regression Techniques</a>”. It contains <em>1460</em> training data points and 80 features that might help us predict the selling price of a house.</p>
+<h3 id="chap02.xhtml#leanpub-auto-load-the-data">Load the data</h3>
+<p>Let’s load the Kaggle dataset into a Pandas data frame:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 df_train = pd.read_csv(&#39;house_prices_train.csv&#39;)</code></pre>
+</div>
+</figure>
+<h3 id="chap02.xhtml#leanpub-auto-exploration--getting-a-feel-for-our-data">Exploration — getting a feel for our data</h3>
+<p>We’re going to predict the SalePrice column ($ USD), let’s start with it:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 count      1460.000000
+2 mean     180921.195890
+3 std       79442.502883
+4 min       34900.000000
+5 25%      129975.000000
+6 50%      163000.000000
+7 75%      214000.000000
+8 max      755000.000000
+9 Name: SalePrice, dtype: float64</code></pre>
+</div>
+</figure>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/2_sale-price.png" />
+</figure>
+</div>
+<p>Most of the density lies between 100k and 250k, but there appears to be a lot of outliers on the pricier side.</p>
+<p>Next, let’s have a look at the greater living area (square feet) against the sale price:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/2_sale-living.png" />
+</figure>
+</div>
+<p>You might’ve expected that larger living area should mean a higher price. This chart shows you’re generally correct. But what are those 2–3 “cheap” houses offering huge living area?</p>
+<p>One column you might not think about exploring is the “TotalBsmtSF” — Total square feet of the basement area, but let’s do it anyway:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/2_sale-base.png" />
+</figure>
+</div>
+<p>Intriguing, isn’t it? The basement area seems like it might have a lot of predictive power for our model.</p>
+<p>Ok, last one. Let’s look at “OverallQual” — overall material and finish quality. Of course, this one seems like a much more subjective feature, so it might provide a bit different perspective on the sale price.</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/2_sale-qual.png" />
+</figure>
+</div>
+<p>Everything seems fine for this one, except that when you look to the right things start getting much more nuanced. Will that “confuse” our model?</p>
+<p>Let’s have a more general view on the <em>top 8</em> correlated features with the sale price:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/2_sale-cor.png" />
+</figure>
+</div>
+<p>Surprised? All the features we discussed so far appear to be present. Its almost like we knew them from the start…</p>
+<h4 id="chap02.xhtml#leanpub-auto-do-we-have-missing-data">Do we have missing data?</h4>
+<p>We still haven’t discussed ways to “handle” missing data, so we’ll handle them like a boss — just not use those features:</p>
+<table>
+<thead>
+<tr class="header">
+<th> </th>
+<th>Row count</th>
+<th>Percentage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>PoolQC</td>
+<td>1453</td>
+<td>0.995205</td>
+</tr>
+<tr class="even">
+<td>MiscFeature</td>
+<td>1406</td>
+<td>0.963014</td>
+</tr>
+<tr class="odd">
+<td>Alley</td>
+<td>1369</td>
+<td>0.937671</td>
+</tr>
+<tr class="even">
+<td>Fence</td>
+<td>1179</td>
+<td>0.807534</td>
+</tr>
+<tr class="odd">
+<td>FireplaceQu</td>
+<td>690</td>
+<td>0.472603</td>
+</tr>
+<tr class="even">
+<td>LotFrontage</td>
+<td>259</td>
+<td>0.177397</td>
+</tr>
+<tr class="odd">
+<td>GarageCond</td>
+<td>81</td>
+<td>0.055479</td>
+</tr>
+<tr class="even">
+<td>GarageType</td>
+<td>81</td>
+<td>0.055479</td>
+</tr>
+<tr class="odd">
+<td>GarageYrBlt</td>
+<td>81</td>
+<td>0.055479</td>
+</tr>
+<tr class="even">
+<td>GarageFinish</td>
+<td>81</td>
+<td>0.055479</td>
+</tr>
+<tr class="odd">
+<td>GarageQual</td>
+<td>81</td>
+<td>0.055479</td>
+</tr>
+<tr class="even">
+<td>BsmtExposure</td>
+<td>38</td>
+<td>0.026027</td>
+</tr>
+<tr class="odd">
+<td>BsmtFinType2</td>
+<td>38</td>
+<td>0.026027</td>
+</tr>
+<tr class="even">
+<td>BsmtFinType1</td>
+<td>37</td>
+<td>0.025342</td>
+</tr>
+<tr class="odd">
+<td>BsmtCond</td>
+<td>37</td>
+<td>0.025342</td>
+</tr>
+</tbody>
+</table>
+<p>Yes, we’re not going to use any of those.</p>
+<h3 id="chap02.xhtml#leanpub-auto-predicting-the-sale-price">Predicting the sale price</h3>
+<p>Now that we have some feel of the data we’re playing with we can start our plan of attack — how to predict the sale price for a given house?</p>
+<h4 id="chap02.xhtml#leanpub-auto-using-linear-regression">Using Linear Regression</h4>
+<p>Linear regression models assume that the relationship between a dependent continuous variable Y and one or more explanatory (independent) variables X is linear (that is, a straight line). It’s used to predict values within a continuous range (e.g. sales, price) rather than trying to classify them into categories (e.g. cat, dog). Linear regression models can be divided into two main types:</p>
+<h4 id="chap02.xhtml#leanpub-auto-simple-linear-regression">Simple Linear Regression</h4>
+<p>Simple linear regression uses a traditional slope-intercept form, where <em>a</em> and <em>b</em> are the coefficients that we try to “learn” and produce the most accurate predictions. <em>X</em> represents our input data and <em>Y</em> is our prediction.</p>
+<img src="images/leanpub_equation_32.png" alt="Y = bX + a" class="block-equation" width="94" />
+<h4 id="chap02.xhtml#leanpub-auto-multivariable-regression">Multivariable Regression</h4>
+<p>A more complex, multi-variable linear equation might look like this, where <em>w</em> represents the coefficients or weights, our model will try to learn.</p>
+<img src="images/leanpub_equation_33.png" alt="Y(x_1,x_2,x_3) = w_1 x_1 + w_2 x_2 + w_3 x_3 + w_0" class="block-equation" width="324" />
+<p>The variables <img src="images/leanpub_equation_34.png" alt="x_1, x_2, x_3" class="inline-equation" width="68" /> represent the attributes or distinct pieces of information, we have about each observation.</p>
+<h3 id="chap02.xhtml#leanpub-auto-loss-function-1">Loss function</h3>
+<p>Given our Simple Linear Regression equation:</p>
+<img src="images/leanpub_equation_35.png" alt="Y = bX + a" class="block-equation" width="94" />
+<p>We can use the following cost function to find the coefficients/parameters for our model:</p>
+<h4 id="chap02.xhtml#leanpub-auto-mean-squared-error-mse-cost-function">Mean Squared Error (MSE) Cost Function</h4>
+<p>The MSE is defined as:</p>
+<img src="images/leanpub_equation_36.png" alt="MSE = J(W) = \frac{1}{m} \sum_{i=1}^{m} (y^{(i)} - h_w(x^{(i)}))^2" class="block-equation" width="320" />
+<p>where</p>
+<img src="images/leanpub_equation_37.png" alt="h_w(x) = g(w^Tx)" class="block-equation" width="125" />
+<p>The MSE measures how much the average model predictions vary from the correct values. The number is higher when the model is performing “bad” on our training data.</p>
+<p>The first derivative of MSE is given by:</p>
+<img src="images/leanpub_equation_38.png" alt="MSE&#39; = J&#39;(W) = \frac{2}{m} \sum_{i=1}^{m} (h_w(x^{(i)}) - y^{(i)})" class="block-equation" width="321" />
+<h4 id="chap02.xhtml#leanpub-auto-one-half-mean-squared-error-ohmse">One Half Mean Squared Error (OHMSE)</h4>
+<p>We will apply a small modification to the MSE — multiply by <em>1/2</em> so when we take the derivative, the <em>2s</em> cancel out:</p>
+<img src="images/leanpub_equation_39.png" alt="OHMSE = J(W) = \frac{1}{2m} \sum_{i=1}^{m} (y^{(i)} - h_w(x^{(i)}))^2" class="block-equation" width="360" />
+<p>The first derivative of OHMSE is given by:</p>
+<img src="images/leanpub_equation_40.png" alt="OHMSE&#39; = J&#39;(W) = \frac{1}{m} \sum_{i=1}^{m} (h_w(x^{(i)}) - y^{(i)})" class="block-equation" width="352" />
+<p>Let’s implement it in Python (yes, we’re going TDD style!)</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 class TestLoss(unittest.TestCase):
+ 2 
+ 3   def test_zero_h_zero_y(self):
+ 4     self.assertAlmostEqual(loss(h=np.array([0]), y=np.array([0])), 0)
+ 5 
+ 6   def test_one_h_zero_y(self):
+ 7     self.assertAlmostEqual(loss(h=np.array([1]), y=np.array([0])), 0.5)
+ 8 
+ 9   def test_two_h_zero_y(self):
+10     self.assertAlmostEqual(loss(h=np.array([2]), y=np.array([0])), 2)
+11 
+12   def test_zero_h_one_y(self):
+13     self.assertAlmostEqual(loss(h=np.array([0]), y=np.array([1])), 0.5)
+14 
+15   def test_zero_h_two_y(self):
+16     self.assertAlmostEqual(loss(h=np.array([0]), y=np.array([2])), 2)</code></pre>
+</div>
+</figure>
+<p>Now that we have the tests ready, we can implement the loss function:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 def loss(h, y):
+2   sq_error = (h - y)**2
+3   n = len(y)
+4   return 1.0 / (2*n) * sq_error.sum()</code></pre>
+</div>
+</figure>
+<p><code>run_tests()</code></p>
+<p>time for the results:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 .....
+2 --------------------------------------------------------------
+3 Ran 5 tests in 0.007s
+4 
+5 OK</code></pre>
+</div>
+</figure>
+<h4 id="chap02.xhtml#leanpub-auto-data-preprocessing">Data preprocessing</h4>
+<p>We will do a little preprocessing to our data using the following formula (standardization):</p>
+<img src="images/leanpub_equation_41.png" alt="x&#39;= \frac{x - \mu}{\sigma}" class="block-equation" width="85" />
+<p>where <img src="images/leanpub_equation_42.png" alt="\mu" class="inline-equation" width="10" /> is the population mean and <img src="images/leanpub_equation_43.png" alt="\sigma" class="inline-equation" width="9" /> is the standard deviation.</p>
+<p>But why? Why would we want to do that? The following chart might help you out:</p>
+<p>What the doodle shows us that our old friend — the gradient descent algorithm, might converge (find good parameters) faster when our training data is scaled. Shall we?</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 x = df_train[&#39;GrLivArea&#39;]
+2 y = df_train[&#39;SalePrice&#39;]
+3 
+4 x = (x - x.mean()) / x.std()
+5 x = np.c_[np.ones(x.shape[0]), x]</code></pre>
+</div>
+</figure>
+<p>We will only use the greater living area feature for our first model.</p>
+<h4 id="chap02.xhtml#leanpub-auto-implementing-linear-regression">Implementing Linear Regression</h4>
+<p>First, our tests:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 class TestLinearRegression(unittest.TestCase):
+2 
+3     def test_find_coefficients(self):
+4       clf = LinearRegression()
+5       clf.fit(x, y, n_iter=2000, lr=0.01)
+6       np.testing.assert_array_almost_equal(
+7         clf._W,
+8         np.array([180921.19555322,  56294.90199925])
+9       )</code></pre>
+</div>
+</figure>
+<p>Without further ado, the simple linear regression implementation:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 class LinearRegression:
+ 2 
+ 3   def predict(self, X):
+ 4     return np.dot(X, self._W)
+ 5 
+ 6   def _gradient_descent_step(self, X, targets, lr):
+ 7 
+ 8     predictions = self.predict(X)
+ 9 
+10     error = predictions - targets
+11     gradient = np.dot(X.T,  error) / len(X)
+12 
+13     self._W -= lr * gradient
+14 
+15   def fit(self, X, y, n_iter=100000, lr=0.01):
+16 
+17     self._W = np.zeros(X.shape[1])
+18 
+19     for i in range(n_iter):
+20         self._gradient_descent_step(x, y, lr)
+21 
+22     return self</code></pre>
+</div>
+</figure>
+<p>You might find our Linear Regression implementation simpler compared to the one presented for the Logistic Regression. Note that the use of the Gradient Descent algorithm is pretty much the same. Interesting, isn’t it? A single algorithm can build two different types of models. Would we be able to use it for more?</p>
+<p><code>run_tests()</code></p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 ......
+2 -----------------------------------------------------------------
+3 Ran 6 tests in 1.094s
+4 
+5 OK</code></pre>
+</div>
+</figure>
+<h4 id="chap02.xhtml#leanpub-auto-predicting-the-sale-price-with-our-first-model">Predicting the sale price with our first model</h4>
+<p>Let’s use our freshly created model to begin our housing market domination:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 clf = LinearRegression()
+2 clf.fit(x, y, n_iter=2000, lr=0.01)</code></pre>
+</div>
+</figure>
+<p>So how did the training go?</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/2_loss.png" />
+</figure>
+</div>
+<p>Our cost, at the last iteration, has a value of:</p>
+<p><code>1569921604.8332634</code></p>
+<p>Can we do better?</p>
+<h3 id="chap02.xhtml#leanpub-auto-multivariable-linear-regression">Multivariable Linear Regression</h3>
+<p>Let’s use more of the available data to build a <em>Multivariable Linear Regression</em> model and see whether or not that will improve our OHMSE error. Let’s not forget that scaling too:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 x = df_train[[&#39;OverallQual&#39;, &#39;GrLivArea&#39;, &#39;GarageCars&#39;]]
+2 
+3 x = (x - x.mean()) / x.std()
+4 x = np.c_[np.ones(x.shape[0]), x]</code></pre>
+</div>
+</figure>
+<h4 id="chap02.xhtml#leanpub-auto-implementing-multivariable-linear-regression">Implementing <em>Multivariable Linear Regression</em></h4>
+<blockquote>
+<p>This space is intentionally left (kinda) blank</p>
+</blockquote>
+<h4 id="chap02.xhtml#leanpub-auto-using-multivariable-linear-regression">Using Multivariable Linear Regression</h4>
+<p>Now that the implementation of our new model is done, we can use it. Done!?</p>
+<p>You see, young padawan, the magical world of software development has those mythical creates called <strong>abstractions</strong>. While it might be extraordinarily hard to get them right, they might reduce the complexity of the code you write by (pretty much) a ton.</p>
+<p>You just used one such abstraction — called <a href="https://www.oreilly.com/library/view/python-for-data/9781449323592/ch04.html"><strong>vectorization</strong></a>. Essentially, that allowed us to build a <em>Multivariable Linear Regression</em> model without the need to loop over all features in our dataset. Neat, right?</p>
+<p>Our client interface stays the same, too:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 clf = LinearRegression()
+2 clf.fit(x, y, n_iter=2000, lr=0.01)</code></pre>
+</div>
+</figure>
+<p>And the results:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/2_mv-loss.png" />
+</figure>
+</div>
+<p><code>822817042.8437098</code></p>
+<p>The loss at the last iteration is nearly 2 times smaller. Does this mean that our model is better now?</p>
+<p><a href="https://colab.research.google.com/drive/1DXkpo9PmH9_HiCSz9NQlZ9vGQtMIYqmF">You can find complete source code and run the code in your browser</a></p>
+<h3 id="chap02.xhtml#leanpub-auto-conclusion-1">Conclusion</h3>
+<p>Nice! You just implemented a Linear Regression model and not the simple/crappy kind.</p>
+<p>One thing you might want to try is to predict house sale prices on the testing dataset from Kaggle. Is this model any good on it?</p>
+<p>In the next part, you’re going to implement a Decision Tree model from scratch!</p>
+</div>
+<p><span id="chap03.xhtml"></span></p>
+<div>
+<h2 id="chap03.xhtml#leanpub-auto-building-a-decision-tree">Building a Decision Tree</h2>
+<h4 id="chap03.xhtml#leanpub-auto-build-a-better-house-price-prediction-model-using-a-decision-tree">Build a better house price prediction model using a Decision Tree</h4>
+<blockquote>
+<p>TL;DR Build a Decision Tree regression model using Python from scratch. Compare the performance of your model with that of a Scikit-learn model. The Decision Tree is used to predict house sale prices and send the results to Kaggle.</p>
+</blockquote>
+<p>I am sorry, you might be losing sleep. Deep down you know your Linear Regression model ain’t gonna cut it. That housing market domination is still further down the road.</p>
+<p>Can we improve that, can we have a model that makes better predictions?</p>
+<p><a href="https://colab.research.google.com/drive/11T18ZELpOWuP7UtM7EKOut5juhJa9cHb"><strong>Complete source code notebook</strong></a></p>
+<h3 id="chap03.xhtml#leanpub-auto-the-data-2">The Data</h3>
+<p>Once again, we’re going to use the Kaggle data: “<a href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques">House Prices: Advanced Regression Techniques</a>”. It contains <em>1460</em> training data points and 80 features that might help us predict the selling price of a house.</p>
+<h3 id="chap03.xhtml#leanpub-auto-decision-trees">Decision Trees</h3>
+<p>Decision tree models build structures like this:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/3_tree-structure.png" />
+</figure>
+</div>
+<p><em>Image credit: <a href="https://www.xoriant.com/">xoriant.com</a></em></p>
+<p>The algorithms for building trees breaks down a data set into smaller and smaller subsets while an associated decision tree is incrementally developed. The final result is a tree with decision nodes and leaf nodes. A decision node has two or more branches. Leaf node represents a classification or decision (used for regression). The topmost decision node in a tree which corresponds to the best predictor (most important feature) is called a root node.</p>
+<p>Decision trees can handle both categorical and numerical data. They are used for classification and regression problems. They can handle missing data pretty well, too!</p>
+<h3 id="chap03.xhtml#leanpub-auto-data-preprocessing-1">Data Preprocessing</h3>
+<p>We’re going to use the same data we used with the Linear Regression model. However, we’re not going to do any scaling, just because we’re lazy (or it is not needed):</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 X = df_train[[&#39;OverallQual&#39;, &#39;GrLivArea&#39;, &#39;GarageCars&#39;]]
+2 y = df_train[&#39;SalePrice&#39;]</code></pre>
+</div>
+</figure>
+<h3 id="chap03.xhtml#leanpub-auto-cost-function">Cost function</h3>
+<p>We’re going to use a new cost function — Root Mean Square Error (RMSE). It is the standard deviation of how far from the regression line data points are. In other words, it tells you how concentrated the data is around the line of best fit.</p>
+<p>RMSE is given by the formula:</p>
+<img src="images/leanpub_equation_44.png" alt="RMSE = \sqrt{\frac{1}{m} \sum_{i=1}^{m} (y^{(i)} - h(x^{(i)}))^2}" class="block-equation" width="274" />
+<p>We’ve already implemented MSE in previous parts, so we’re going to import an implementation here, in the name of readability (or holy laziness?):</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 from sklearn.metrics import mean_squared_error
+2 from math import sqrt
+3 
+4 def rmse(h, y):
+5   return sqrt(mean_squared_error(h, y))</code></pre>
+</div>
+</figure>
+<h3 id="chap03.xhtml#leanpub-auto-using-a-prebuild-decision-tree-model">Using a prebuild Decision Tree model</h3>
+<p>Let use Decision Tree regressor from the <a href="https://scikit-learn.org/stable/">scikit-learn</a> library to get a quick feel of the model:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 from sklearn.ensemble import RandomForestRegressor
+2 
+3 reg = RandomForestRegressor(
+4   n_estimators=1,
+5   max_depth=2,
+6   bootstrap=False,
+7   random_state=RANDOM_SEED
+8 )
+9 reg.fit(X, y)</code></pre>
+</div>
+</figure>
+<p>We are using RandomForestRegressor with 1 estimator, which basically means we’re using a Decision Tree model. Here is the tree structure of our model:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/3_tree.png" />
+</figure>
+</div>
+<p>You should receive the exact same model (if you’re running the code) since we are setting the random state. How many features did the model use?</p>
+<p>Now that this model is ready to be used let’s evaluate its <img src="images/leanpub_equation_45.png" alt="R^2" class="inline-equation" width="19" /> score:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 preds = reg.predict(X)
+2 metrics.r2_score(y, preds)</code></pre>
+</div>
+</figure>
+<p><code>0.6336246655552089</code></p>
+<p>The <img src="images/leanpub_equation_46.png" alt="R^2" class="inline-equation" width="19" /> statistic gives us information about the goodness of fit of the model. A score of 1 indicates perfect fit. Let’s have a look at the RMSE:</p>
+<p><code>48069.23940764968</code></p>
+<h3 id="chap03.xhtml#leanpub-auto-building-your-own-decision-tree">Building your own Decision Tree</h3>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 class DecisionTreeRegressor:
+2 
+3   def fit(self, X, y, min_leaf = 5):
+4     self.dtree = Node(X, y, np.array(np.arange(len(y))), min_leaf)
+5     return self
+6 
+7   def predict(self, X):
+8     return self.dtree.predict(X.values)</code></pre>
+</div>
+</figure>
+<p>Let’s start implementing our Node helper class:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 class Node:
+ 2 
+ 3     def __init__(self, x, y, idxs, min_leaf=5):
+ 4         self.x = x
+ 5         self.y = y
+ 6         self.idxs = idxs
+ 7         self.min_leaf = min_leaf
+ 8         self.row_count = len(idxs)
+ 9         self.col_count = x.shape[1]
+10         self.val = np.mean(y[idxs])
+11         self.score = float(&#39;inf&#39;)
+12         self.find_varsplit()</code></pre>
+</div>
+</figure>
+<p>Trees are recursive data structures and we’re going to take full advantage of that. Our Node class represents one decision point in our model. Each division within the model has 2 possible outcomes for finding a solution — go to the left or go to the right. That decision point also divides our data into two sets.</p>
+<p>The property idxs stores indexes of the subset of the data that this Node is working with.</p>
+<p>The decision (prediction) is based on the value that Node holds. To make that prediction we’re just going to take the average of the data of the dependent variable for this Node.</p>
+<p>The method <code>find_varsplit</code> finds where should we split the data. Let’s have a look at it:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 def find_varsplit(self):
+2     for c in range(self.col_count): self.find_better_split(c)
+3     if self.is_leaf: return
+4     x = self.split_col
+5     lhs = np.nonzero(x &lt;= self.split)[0]
+6     rhs = np.nonzero(x &gt; self.split)[0]
+7     self.lhs = Node(self.x, self.y, self.idxs[lhs], self.min_leaf)
+8     self.rhs = Node(self.x, self.y, self.idxs[rhs], self.min_leaf)</code></pre>
+</div>
+</figure>
+<p>First, we try to find a better feature to split on. If no such feature is found (we’re at a leaf node) we do nothing. Then we use the split value found by find_better_split, create the data for the left and right nodes and create each one using a subset of the data.</p>
+<p>Here are the <code>split_col</code> and <code>is_leaf</code> implementations:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 @property
+2 def split_col(self): return self.x.values[self.idxs,self.var_idx]
+3 
+4 @property
+5 def is_leaf(self): return self.score == float(&#39;inf&#39;)</code></pre>
+</div>
+</figure>
+<p>It is time to implement the workhorse of our algorithm <code>find_better_split</code> method:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 def find_better_split(self, var_idx):
+ 2     x = self.x.values[self.idxs, var_idx]
+ 3 
+ 4     for r in range(self.row_count):
+ 5         lhs = x &lt;= x[r]
+ 6         rhs = x &gt; x[r]
+ 7         if rhs.sum() &lt; self.min_leaf or lhs.sum() &lt; self.min_leaf: continue
+ 8 
+ 9         curr_score = self.find_score(lhs, rhs)
+10         if curr_score &lt; self.score:
+11             self.var_idx = var_idx
+12             self.score = curr_score
+13             self.split = x[r]
+14 
+15 def find_score(self, lhs, rhs):
+16     y = self.y[self.idxs]
+17     lhs_std = y[lhs].std()
+18     rhs_std = y[rhs].std()
+19     return lhs_std * lhs.sum() + rhs_std * rhs.sum()</code></pre>
+</div>
+</figure>
+<p>We are trying to split on each data point and let the best split wins.</p>
+<p>We’re going to create our split such that it has as low standard deviation as possible. We find the split that minimizes the weighted averages of the standard deviations which is equivalent to minimizing RMSE.</p>
+<p>If we find a better split we store the following information: index of the variable, split score and value of the split.</p>
+<p>The score is a metric that tells us how effective the split was (note that leaf nodes do not have scores, so it will be infinity). The method find_score calculates a weighted average of the data. If the score is lower than the previous we have a better split. Note that the score is initially set to infinity -&gt; only leaf nodes and really shallow trees (and Thanos) have a score of infinity.</p>
+<p>Finally, let’s look at how we use all this to make predictions:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 def predict(self, x):
+2     return np.array([self.predict_row(xi) for xi in x])
+3 
+4 def predict_row(self, xi):
+5     if self.is_leaf: return self.val
+6     node = self.lhs if xi[self.var_idx] &lt;= self.split else self.rhs
+7     return node.predict_row(xi)</code></pre>
+</div>
+</figure>
+<p>Once again, we’re exploiting the recursive nature of life. Starting at the tree root, predict_row checks if we need to go left or right node based on the split value we found. The recursion ends once we hit a leaf node. At that point, the answer/prediction is stored in the val property.</p>
+<p>Here is the complete source of our Node class:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 class Node:
+ 2 
+ 3     def __init__(self, x, y, idxs, min_leaf=5):
+ 4         self.x = x
+ 5         self.y = y
+ 6         self.idxs = idxs
+ 7         self.min_leaf = min_leaf
+ 8         self.row_count = len(idxs)
+ 9         self.col_count = x.shape[1]
+10         self.val = np.mean(y[idxs])
+11         self.score = float(&#39;inf&#39;)
+12         self.find_varsplit()
+13 
+14     def find_varsplit(self):
+15         for c in range(self.col_count): self.find_better_split(c)
+16         if self.is_leaf: return
+17         x = self.split_col
+18         lhs = np.nonzero(x &lt;= self.split)[0]
+19         rhs = np.nonzero(x &gt; self.split)[0]
+20         self.lhs = Node(self.x, self.y, self.idxs[lhs], self.min_leaf)
+21         self.rhs = Node(self.x, self.y, self.idxs[rhs], self.min_leaf)
+22 
+23     def find_better_split(self, var_idx):
+24 
+25         x = self.x.values[self.idxs, var_idx]
+26 
+27         for r in range(self.row_count):
+28             lhs = x &lt;= x[r]
+29             rhs = x &gt; x[r]
+30             if rhs.sum() &lt; self.min_leaf or lhs.sum() &lt; self.min_leaf: continue
+31 
+32             curr_score = self.find_score(lhs, rhs)
+33             if curr_score &lt; self.score:
+34                 self.var_idx = var_idx
+35                 self.score = curr_score
+36                 self.split = x[r]
+37 
+38     def find_score(self, lhs, rhs):
+39         y = self.y[self.idxs]
+40         lhs_std = y[lhs].std()
+41         rhs_std = y[rhs].std()
+42         return lhs_std * lhs.sum() + rhs_std * rhs.sum()
+43 
+44     @property
+45     def split_col(self): return self.x.values[self.idxs,self.var_idx]
+46 
+47     @property
+48     def is_leaf(self): return self.score == float(&#39;inf&#39;)
+49 
+50     def predict(self, x):
+51         return np.array([self.predict_row(xi) for xi in x])
+52 
+53     def predict_row(self, xi):
+54         if self.is_leaf: return self.val
+55         node = self.lhs if xi[self.var_idx] &lt;= self.split else self.rhs
+56         return node.predict_row(xi)</code></pre>
+</div>
+</figure>
+<h3 id="chap03.xhtml#leanpub-auto-evaluation">Evaluation</h3>
+<p>Let’s check how your Decision Tree regressor does on the training data:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 regressor = DecisionTreeRegressor().fit(X, y)
+2 preds = regressor.predict(X)</code></pre>
+</div>
+</figure>
+<p>Here is the <img src="images/leanpub_equation_47.png" alt="R^2" class="inline-equation" width="19" /> score:</p>
+<p><code>0.8504381072711565</code></p>
+<p>Our <em>scikit-learn</em> model gave us a score of <code>0.6336246655552089</code></p>
+<p>The <em>RMSE</em> score is:</p>
+<p><code>30712.460628635836</code></p>
+<p>The <em>scikit-learn</em> regressor gave us <code>48069.23940764968</code></p>
+<p>Looks like your model is doing pretty good, eh? Let’s make a prediction on the test data and send it to Kaggle.</p>
+<h3 id="chap03.xhtml#leanpub-auto-sending-your-predictions-to-kaggle">Sending your predictions to Kaggle</h3>
+<p>Let make our predictions and format the data as requested on <a href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques#evaluation">Kaggle</a>:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 X_test = df_test[[&#39;OverallQual&#39;, &#39;GrLivArea&#39;, &#39;GarageCars&#39;]]
+2 pred_test = regressor.predict(X_test)
+3 
+4 submission = pd.DataFrame({&#39;Id&#39;: df_test.Id, &#39;SalePrice&#39;: pred_test})
+5 submission.to_csv(&#39;submission.csv&#39;, index=False)</code></pre>
+</div>
+</figure>
+<p>Feel free to submit your csv file to Kaggle. Also, how can you improve?</p>
+<h3 id="chap03.xhtml#leanpub-auto-conclusion-2">Conclusion</h3>
+<p>Give yourself a treat, you just implemented a Decision Tree regressor!</p>
+<p>Would it be possible to implement Random Forest regressor on top of your model? How that affects your Kaggle scores?</p>
+<p>In the next part, you’re gonna do some unsupervised learning with k means!</p>
+<h3 id="chap03.xhtml#leanpub-auto-acknowledgments">Acknowledgments</h3>
+<p>The source code presented in this part is heavily inspired by the excellent course of <a href="https://www.fast.ai/">fast.ai</a> — <a href="http://course18.fast.ai/ml">Introduction to Machine Learning for Coders</a></p>
+</div>
+<p><span id="chap04.xhtml"></span></p>
+<div>
+<h2 id="chap04.xhtml#leanpub-auto-color-palette-extraction-with-k-means-clustering">Color palette extraction with K-means clustering</h2>
+<p>Choosing a color palette for your next big mobile app (re)design can be a daunting task, especially when you don’t know what the heck you’re doing. How can you make it easier (asking for a friend)?</p>
+<p>One approach is to head over to a place where the <em>PROs</em> share their work. Pages like <a href="https://dribbble.com/">Dribbble</a>, <a href="https://www.uplabs.com/">uplabs</a> and <a href="https://www.behance.net/">Behance</a> have the goods.</p>
+<p>After finding mockups you like, you might want to extract colors from them and use those. This might require opening specialized software, manually picking color with some tool(s) and other over-the-counter hacks. Let’s use Machine Learning to make your life easier.</p>
+<p><a href="https://colab.research.google.com/drive/1_p1nptDfvJhcSvprmi1WtoIugsCI40Xa"><strong>Complete source code notebook</strong></a></p>
+<h3 id="chap04.xhtml#leanpub-auto-unsupervised-learning-1">Unsupervised Learning</h3>
+<p>Up until now we only looked at models that require training data in the form of features and labels. In other words, for each example, we need to have the correct answer, too.</p>
+<p>Usually, such training data is hard to obtain and requires many hours of manual work done by humans (yes, we’re already serving “The Terminators”). Can we skip all that?</p>
+<p>Yes, at least for some problems we can use example data without knowing the correct answer for it. One such problem is <em>clustering</em>.</p>
+<h4 id="chap04.xhtml#leanpub-auto-what-is-clustering">What is clustering?</h4>
+<p>Given some vector of data points <img src="images/leanpub_equation_48.png" alt="X" class="inline-equation" width="15" />, clustering methods allow you to put each point in a group. In other words, you can categorize a set of entities, based on their properties, automatically.</p>
+<p>Yes, that is very useful in practice. Usually, you run the algorithm on a bunch of data points and specify how much groups you want. For example, your inbox contains two main groups of e-mail: spam and not-spam (were you waiting for something else?). You can let the clustering algorithm create two groups from your emails and use your beautiful brain to classify which is which.</p>
+<p>More applications of clustering algorithms:</p>
+<ul>
+<li><em>Customer segmentation</em> - find groups of users that spend/behave the same way</li>
+<li><em>Fraudulent transactions</em> - find bank transactions that belong to different clusters and identify them as fraudulent</li>
+<li><em>Document analysis</em> - group similar documents</li>
+</ul>
+<h3 id="chap04.xhtml#leanpub-auto-the-data-3">The Data</h3>
+<p><img src="images/4_data-preview.png" /> <em>source: various authors on https://www.uplabs.com/</em></p>
+<p>This time, our data doesn’t come from some predefined or well-known dataset. Since Unsupervised learning does not require labeled data, the Internet can be your oyster.</p>
+<p>Here, we’ll use 3 mobile UI designs from various authors. Our model will run on each shot and try to extract the color palette for each.</p>
+<h3 id="chap04.xhtml#leanpub-auto-what-is-k-means-clustering">What is K-Means Clustering?</h3>
+<p>K-Means Clustering is defined by <a href="https://en.wikipedia.org/wiki/K-means_clustering">Wikipedia</a> as:</p>
+<blockquote>
+<p>k-means clustering is a method of vector quantization, originally from signal processing, that is popular for cluster analysis in data mining. k-means clustering aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean, serving as a prototype of the cluster. This results in a partitioning of the data space into Voronoi cells.</p>
+</blockquote>
+<p>Wikipedia also tells us that solving K-Means clustering is difficult (in fact, <a href="https://en.wikipedia.org/wiki/NP-hardness">NP-hard</a>) but we can find local optimum solutions using some heuristics.</p>
+<p>But how do <em>K-Means Clustering</em> works?</p>
+<p>Let’s say you have some vector <img src="images/leanpub_equation_49.png" alt="X" class="inline-equation" width="15" /> that contains <img src="images/leanpub_equation_50.png" alt="n" class="inline-equation" width="10" /> data points. Running our algorithm consists of the following steps:</p>
+<ol>
+<li>Take random <img src="images/leanpub_equation_51.png" alt="k" class="inline-equation" width="8" /> points (called <em>centroids</em>) from <img src="images/leanpub_equation_52.png" alt="X" class="inline-equation" width="15" /></li>
+<li>Assign every point to the closest centroid. The newly formed bunch of points is called <em>cluster</em>.</li>
+<li>For each cluster, find new centroid by calculating a new center from the points</li>
+<li>Repeat steps 2-3 until centroids stop changing</li>
+</ol>
+<p>Let’s see how can we use it to extract color palettes from mobile UI screenshots.</p>
+<h3 id="chap04.xhtml#leanpub-auto-data-preprocessing-2">Data Preprocessing</h3>
+<p>Given our data is stored in raw pixels (called images), we need a way to convert it to points that our clustering algorithm can use.</p>
+<p>Let’s first define two classes that represent a point and cluster:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 class Point:
+2 
+3   def __init__(self, coordinates):
+4     self.coordinates = coordinates</code></pre>
+</div>
+</figure>
+<p>Our <code>Point</code> is just a holder to the coordinates for each dimension in our space.</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 class Cluster:
+2 
+3   def __init__(self, center, points):
+4     self.center = center
+5     self.points = points</code></pre>
+</div>
+</figure>
+<p>The <code>Cluster</code> is defined by its center and all other points it contains.</p>
+<p>Given a path to image file we can create the points as follows:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 def get_points(image_path):
+ 2   img = Image.open(image_path)
+ 3   img.thumbnail((200, 400))
+ 4   img = img.convert(&quot;RGB&quot;)
+ 5   w, h = img.size
+ 6 
+ 7   points = []
+ 8   for count, color in img.getcolors(w * h):
+ 9     for _ in range(count):
+10       points.append(Point(color))
+11 
+12   return points</code></pre>
+</div>
+</figure>
+<p>A couple of things are happening here:</p>
+<ul>
+<li>load the image into memory</li>
+<li>resize it to smaller image (mobile UX requires big elements on the screen, so we aren’t losing much color information)</li>
+<li>drop the alpha (transparency) information</li>
+</ul>
+<p>Note that we’re creating a <code>Point</code> for each pixel in our image.</p>
+<p>Alright! You can now extract points from an image. But how can we calculate the distance between points in our clusters?</p>
+<h4 id="chap04.xhtml#leanpub-auto-distance-function">Distance function</h4>
+<p>Similar to the cost function in our supervised algorithm examples, we need a function that tells us how well we’re doing. The objective of our algorithm is to minimize the distance between the points in each centroid.</p>
+<p>One of the simplest distance functions we can use is the Euclidean distance, defined by:</p>
+<img src="images/leanpub_equation_53.png" alt="d(p, q) = \sqrt{\sum_{i=1}^n{(q_i - p_i)^2}}" class="block-equation" width="196" />
+<p>where <img src="images/leanpub_equation_54.png" alt="p" class="inline-equation" width="9" /> and <img src="images/leanpub_equation_55.png" alt="q" class="inline-equation" width="7" /> are two points from our space.</p>
+<p>Note that while Euclidean distance is simple to implement it might not be the best way to calculate the <a href="https://en.wikipedia.org/wiki/Color_difference">color difference</a>.</p>
+<p>Here is the Python implementation:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 def euclidean(p, q):
+2   n_dim = len(p.coordinates)
+3   return sqrt(sum([
+4       (p.coordinates[i] - q.coordinates[i]) ** 2 for i in range(n_dim)
+5   ]))</code></pre>
+</div>
+</figure>
+<h3 id="chap04.xhtml#leanpub-auto-implementing-k-means-clustering">Implementing K-Means clustering</h3>
+<p>Now that you have all pieces of the puzzle you can implement the K-Means clustering algorithm. Let’s start with the method that finds the center for a set of points:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 def calculate_center(self, points):
+2   n_dim = len(points[0].coordinates)
+3   vals = [0.0 for i in range(n_dim)]
+4   for p in points:
+5     for i in range(n_dim):
+6       vals[i] += p.coordinates[i]
+7   coords = [(v / len(points)) for v in vals]
+8   return Point(coords)</code></pre>
+</div>
+</figure>
+<p>To find the center of a set of points, we add the values for each dimension and divide by the number of points.</p>
+<p>Now for finding the actual clusters:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 def assign_points(self, clusters, points):
+ 2   plists = [[] for i in range(self.n_clusters)]
+ 3 
+ 4   for p in points:
+ 5     smallest_distance = float(&#39;inf&#39;)
+ 6 
+ 7     for i in range(self.n_clusters):
+ 8       distance = euclidean(p, clusters[i].center)
+ 9       if distance &lt; smallest_distance:
+10         smallest_distance = distance
+11         idx = i
+12 
+13     plists[idx].append(p)
+14 
+15   return plists
+16 
+17 def fit(self, points):
+18   clusters = [Cluster(center=p, points=[p]) for p in random.sample(points, self.n_cl\
+19 usters)]
+20 
+21   while True:
+22 
+23     plists = self.assign_points(clusters, points)
+24 
+25     diff = 0
+26 
+27     for i in range(self.n_clusters):
+28       if not plists[i]:
+29         continue
+30       old = clusters[i]
+31       center = self.calculate_center(plists[i])
+32       new = Cluster(center, plists[i])
+33       clusters[i] = new
+34       diff = max(diff, euclidean(old.center, new.center))
+35 
+36     if diff &lt; self.min_diff:
+37       break
+38 
+39   return clusters</code></pre>
+</div>
+</figure>
+<p>The implementation follows the description of the algorithm given above. Note that we exit the training loop when the color difference is lower than the one set by us.</p>
+<h3 id="chap04.xhtml#leanpub-auto-evaluation-1">Evaluation</h3>
+<p>Now that you have an implementation of K-Means clustering you can use it on the UI screenshots. We need a little more glue code to make it easier to extract color palettes:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 def rgb_to_hex(rgb):
+2   return &#39;#%s&#39; % &#39;&#39;.join((&#39;%02x&#39; % p for p in rgb))
+3 
+4 def get_colors(filename, n_colors=3):
+5   points = get_points(filename)
+6   clusters = KMeans(n_clusters=n_colors).fit(points)
+7   clusters.sort(key=lambda c: len(c.points), reverse = True)
+8   rgbs = [map(int, c.center.coordinates) for c in clusters]
+9   return list(map(rgb_to_hex, rgbs))</code></pre>
+</div>
+</figure>
+<p>The <code>get_colors</code> function takes a path to an image file and the number of colors you want to extract from the image. We sort the clusters obtained from our algorithm based on the points in each (in descending order). Finally, we convert the RGB colors to hexadecimal values.</p>
+<p>Let’s extract the palette for the first UI screenshot from our data:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 colors = get_colors(&#39;ui1.png&#39;, n_colors=5)
+2 &quot;, &quot;.join(colors)</code></pre>
+</div>
+</figure>
+<p>and here are the hexadecimal color values:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 #f9f8fa, #4252a6, #fc6693, #bdbcd0, #374698</code></pre>
+</div>
+</figure>
+<p>And for a visual representation of our results:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/4_palette-1.png" />
+</figure>
+</div>
+<p>Running the clustering on the next two images, we obtain the following:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/4_palette-2.png" />
+</figure>
+</div>
+<p>The last screenshot:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/4_palette-3.png" />
+</figure>
+</div>
+<p>Well, that looks cool, right? Go on try it on your own images!</p>
+<p><a href="https://colab.research.google.com/drive/1_p1nptDfvJhcSvprmi1WtoIugsCI40Xa"><strong>Complete source code notebook on Google Colaboratory</strong></a></p>
+<h3 id="chap04.xhtml#leanpub-auto-conclusion-3">Conclusion</h3>
+<p>Congratulations, you just implemented your first unsupervised algorithm from scratch! It also appears that it obtains good results when trying to extract a color palette from images.</p>
+<p>Next up, we’re going to do sentiment analysis on short phrases and learn a bit more how we can handle text data.</p>
+</div>
+<p><span id="chap05.xhtml"></span></p>
+<div>
+<h2 id="chap05.xhtml#leanpub-auto-movie-review-sentiment-analysis-with-naive-bayes">Movie review sentiment analysis with Naive Bayes</h2>
+<blockquote>
+<p>TL;DR Build Naive Bayes text classification model using Python from Scratch. Use the model to classify IMDB movie reviews as positive or negative.</p>
+</blockquote>
+<p>Textual data dominates our world from the tweets you read to the timeless writings of Seneca. And while we’re consuming images (looking at you Instagram) and videos at increasing rates, you still read Google search results multiple times per daily.</p>
+<p>One frequently recurring problem with text data is <a href="https://en.wikipedia.org/wiki/Sentiment_analysis">Sentiment analysis</a> (classification). Imagine you’re a big sugar + water beverage company. You want to know what people think of your products. You’ll search for texts with some tags, logos or names. You can then use Sentiment analysis to figure out if the opinions are positive or negative. Of course, you’ll send the negative ones to your highly underpaid support center in India to sort things out.</p>
+<p>Here, we’ll build a generic text classifier that puts movie review texts into one of two categories - negative or positive sentiment. We’re going to have a brief look at the Bayes theorem and relax its requirements using the Naive assumption.</p>
+<p><a href="https://colab.research.google.com/drive/1OPQDDJTKy0b40pziZWSsoBCmQV6HyXsm">Complete source code in Google Colaboratory Notebook</a></p>
+<h3 id="chap05.xhtml#leanpub-auto-dealing-with-text">Dealing with Text</h3>
+<p>Computers don’t understand text data, though they do well with numbers. <a href="https://en.wikipedia.org/wiki/Natural_language_processing">Natural Language Processing (NLP)</a> offers a set of approaches to solve text-related problems and represent text as numbers. While NLP is a vast field, we’ll use some simple preprocessing techniques and <a href="https://en.wikipedia.org/wiki/Bag-of-words_model">Bag of Words</a> model.</p>
+<h4 id="chap05.xhtml#leanpub-auto-the-data-4">The Data</h4>
+<p>Our data comes from a Kaggle challenge - <a href="https://www.kaggle.com/c/word2vec-nlp-tutorial">“Bag of Words Meets Bags of Popcorn”</a>.</p>
+<p>We have 25,000 movie reviews from IMDB labeled as positive or negative. You might know that IMDB ratings are in the 0-10 range. An additional preprocessing step, done by the dataset authors, converts the rating to binary sentiment (&lt;5 - negative ). Of course, a single movie can have multiple reviews, but no more than 30.</p>
+<h4 id="chap05.xhtml#leanpub-auto-reading-the-reviews">Reading the reviews</h4>
+<p>Let’s load the training and test data in Pandas data frames:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 train = pd.read_csv(&quot;imdb_review_train.tsv&quot;, delimiter=&quot;\t&quot;)
+2 test = pd.read_csv(&quot;imdb_review_test.tsv&quot;, delimiter=&quot;\t&quot;)</code></pre>
+</div>
+</figure>
+<h4 id="chap05.xhtml#leanpub-auto-exploration">Exploration</h4>
+<p>Let’s get a feel for our data. Here are the first 5 rows of the training data:</p>
+<table>
+<thead>
+<tr class="header">
+<th>id</th>
+<th>sentiment</th>
+<th>review</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>5814_8</td>
+<td>1</td>
+<td>With all this stuff going down at the moment w…</td>
+</tr>
+<tr class="even">
+<td>2381_9</td>
+<td>1</td>
+<td>The Classic War of the Worlds" by Timothy Hi…</td>
+</tr>
+<tr class="odd">
+<td>7759_3</td>
+<td>0</td>
+<td>The film starts with a manager (Nicholas Bell)…</td>
+</tr>
+<tr class="even">
+<td>3630_4</td>
+<td>0</td>
+<td>It must be assumed that those who praised this…</td>
+</tr>
+<tr class="odd">
+<td>9495_8</td>
+<td>1</td>
+<td>Superbly trashy and wondrously unpretentious 8…</td>
+</tr>
+</tbody>
+</table>
+<p>We’re going to focus on the sentiment and review columns. The id column is combining the movie id with a unique number of a review. This might be a piece of important information in real-world scenarios, but we’re going to keep it simple.</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/5_sentiment-dist.png" />
+</figure>
+</div>
+<p>Both positive and negative sentiments have an equal presence. No need for additional gimmicks to fix that!</p>
+<p>Here are the most common words in the training dataset reviews:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/5_word-cloud.png" />
+</figure>
+</div>
+<p>Hmm, that <strong>br</strong> looks weird, right?</p>
+<h4 id="chap05.xhtml#leanpub-auto-cleaning">Cleaning</h4>
+<p>Real-world text data is really messy. It can contain excessive punctuation, HTML tags (including that br), multiple spaces, etc. We’ll try to remove/normalize most of it.</p>
+<p>Most of the cleaning we’ll do using <a href="https://en.wikipedia.org/wiki/Regular_expression">Regular Expressions</a>, but we’ll use two libraries to handle HTML tags (surprisingly hard to remove) and removing common (stop) words:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 def clean(self, text):
+2     no_html = BeautifulSoup(text).get_text()
+3     clean = re.sub(&quot;[^a-z\s]+&quot;, &quot; &quot;, no_html, flags=re.IGNORECASE)
+4     return re.sub(&quot;(\s+)&quot;, &quot; &quot;, clean)</code></pre>
+</div>
+</figure>
+<p>First, we use <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a> to remove HTML tags from our text. Second, we remove anything that is not a letter or space (note the ignoring of uppercase characters). Finally, we replace excessive spacing with a single one.</p>
+<h4 id="chap05.xhtml#leanpub-auto-tokenization">Tokenization</h4>
+<p>Now that our reviews are “clean”, we can further prepare them for our Bag of Words model. Let’s them to lowercase letters and split them into individual words. This process is known as <a href="https://en.wikipedia.org/wiki/Lexical_analysis#Tokenization">tokenization</a>:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 def tokenize(self, text):
+2     clean = self.clean(text).lower()
+3     stopwords_en = stopwords.words(&quot;english&quot;)
+4     return [w for w in re.split(&quot;\W+&quot;, clean) if not w in stopwords_en]</code></pre>
+</div>
+</figure>
+<p>The last step of our pre-processing is to remove <a href="https://en.wikipedia.org/wiki/Stop_words">stop words</a> using those defined in the <a href="https://www.nltk.org/">NLTK</a> library. Stop words are usually frequently occurring words that might not significantly affect the meaning of the text. Some examples in English are: “is”, “the”, “and”.</p>
+<p>An additional benefit of removing stop words is speeding up our models since we’re removing the amount of train/test data. However, in real-world scenarios, you should think about whether removing stop words can be justified.</p>
+<p>We’ll place our clean and tokenize function in a class called <em>Tokenizer</em>.</p>
+<h3 id="chap05.xhtml#leanpub-auto-naive-bayes">Naive Bayes</h3>
+<p><em>Naive Bayes</em> models are probabilistic classifiers that use the <a href="https://en.wikipedia.org/wiki/Bayes%27_theorem">Bayes theorem</a> and make a strong assumption that the features of the data are independent. For our case, this means that each word is independent of others.</p>
+<p>Intuitively, this might sound like a dumb idea. You know that (even from reading) the prev word(s) influence the current and next ones. However, the assumption simplifies the math and <a href="https://www.cc.gatech.edu/~isbell/reading/papers/Rish.pdf">works really well in practice</a>!</p>
+<p>The Bayes theorem is defined as:</p>
+<img src="images/leanpub_equation_56.png" alt="P(A|B) = \frac{P(B|A)P(A)}{P(B)}" class="block-equation" width="192" />
+<p>where <img src="images/leanpub_equation_57.png" alt="A" class="inline-equation" width="12" /> and <img src="images/leanpub_equation_58.png" alt="B" class="inline-equation" width="13" /> are some events and <img src="images/leanpub_equation_59.png" alt="P(.)" class="inline-equation" width="31" /> is probability.</p>
+<p>This equation gives us the conditional probability of event <img src="images/leanpub_equation_60.png" alt="A" class="inline-equation" width="12" /> occurring given <img src="images/leanpub_equation_61.png" alt="B" class="inline-equation" width="13" /> has happened. In order to find this, we need to calculate the probability of <img src="images/leanpub_equation_62.png" alt="B" class="inline-equation" width="13" /> happening given <img src="images/leanpub_equation_63.png" alt="A" class="inline-equation" width="12" /> has happened and multiply that by the probability of <img src="images/leanpub_equation_64.png" alt="A" class="inline-equation" width="12" /> (known as <em>Prior</em>) happening. All of this is divided by the probability of <img src="images/leanpub_equation_65.png" alt="B" class="inline-equation" width="13" /> happening on its own.</p>
+<p>The naive assumption allows us to reformulate the Bayes theorem for our example as:</p>
+<img src="images/leanpub_equation_66.png" alt="P(Sentiment|w_1,\dots,w_n)=\frac{P(Sentiment) \displaystyle \prod_{i=1}^{n}{P(w_i|Sentiment)}}{P(w_1,\dots,w_n)}" class="block-equation" width="513" />
+<p>We don’t really care about probabilities. We only want to know whether a given text has a positive or negative sentiment. We can skip the denominator entirely since it just scales the numerator:</p>
+<img src="images/leanpub_equation_67.png" alt="P(Sentiment|w_1,\dots,w_n) \propto P(Sentiment) \prod_{i=1}^{n}{P(w_i|Sentiment)}" class="block-equation" width="509" />
+<p>To choose the sentiment, we’ll compare the scores for each sentiment and pick the one with a higher score.</p>
+<h3 id="chap05.xhtml#leanpub-auto-implementing-multinomial-naive-bayes">Implementing Multinomial Naive Bayes</h3>
+<p>As you might’ve guessed by now, we’re classifying text into one of two groups/categories - positive and negative sentiment.</p>
+<p>Multinomial Naive Bayes allows us to represent the features of the model as frequencies of their occurrences (how often some word is present in our review). In other words, it tells us that the probability distributions we’re using are <a href="https://en.wikipedia.org/wiki/Multinomial_distribution">multinomial</a>.</p>
+<h4 id="chap05.xhtml#leanpub-auto-note-on-numerical-stability">Note on numerical stability</h4>
+<p>Our model relies on multiplying many probabilities. Those might become increasingly small and our computer might round them down to zero. To combat this, we’re going to use log probability by taking log of each side in our equation:</p>
+<img src="images/leanpub_equation_68.png" alt="\log{P(Sentiment|w_1,\dots,w_n)} = \log{P(Sentiment)} + \log{\prod_{i=1}^{n}{P(w_i|Sentiment)}}" class="block-equation" width="609" />
+<p>Note that we can still use the highest score of our model to predict the sentiment since log is <a href="https://en.wikipedia.org/wiki/Monotonic_function">monotonic</a>.</p>
+<h4 id="chap05.xhtml#leanpub-auto-building-our-model">Building our model</h4>
+<p>Finally, time to implement our model in Python. Let’s start by defining some variables and group the data by class, so our training code is a bit tidier:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 def fit(self, X, y):
+2     self.n_class_items = {}
+3     self.log_class_priors = {}
+4     self.word_counts = {}
+5     self.vocab = set()
+6 
+7     n = len(X)
+8     grouped_data = self.group_by_class(X, y)
+9     ...</code></pre>
+</div>
+</figure>
+<p>We’re going to implement a generic text classifier that doesn’t assume the number of classes. You can use it for news category prediction, sentiment analysis, email spam detection, etc.</p>
+<p>For each class, we’ll find the number of examples in it and the log probability (prior). We’ll also record the number of occurrences of each word and create a vocabulary - set of all words we’ve seen in the training data:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1     for c, data in grouped_data.items():
+ 2       self.n_class_items[c] = len(data)
+ 3       self.log_class_priors[c] = math.log(self.n_class_items[c] / n)
+ 4       self.word_counts[c] = defaultdict(lambda: 0)
+ 5 
+ 6       for text in data:
+ 7         counts = Counter(self.tokenizer.tokenize(text))
+ 8         for word, count in counts.items():
+ 9             if word not in self.vocab:
+10                 self.vocab.add(word)
+11 
+12             self.word_counts[c][word] += count</code></pre>
+</div>
+</figure>
+<p>Note that we use our <em>Tokenizer</em> and the built-in class <a href="https://docs.python.org/3/library/collections.html#collections.Counter">Counter</a> to convert a review to a bag of words.</p>
+<p>In case you’re interested, here’s how <code>group_by_class</code> works:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 def group_by_class(self, X, y):
+2   data = dict()
+3   for c in self.classes:
+4     data[c] = X[np.where(y == c)]
+5   return data</code></pre>
+</div>
+</figure>
+<h4 id="chap05.xhtml#leanpub-auto-making-predictions-1">Making predictions</h4>
+<p>In order to predict sentiment from text data, we’ll use our class priors and vocabulary:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 def predict(self, X):
+ 2     result = []
+ 3     for text in X:
+ 4 
+ 5       class_scores = {c: self.log_class_priors[c] for c in self.classes}
+ 6       words = set(self.tokenizer.tokenize(text))
+ 7 
+ 8       for word in words:
+ 9           if word not in self.vocab: continue
+10 
+11           for c in self.classes:
+12 
+13             log_w_given_c = self.laplace_smoothing(word, c)
+14             class_scores[c] += log_w_given_c
+15 
+16       result.append(max(class_scores, key=class_scores.get))
+17 
+18     return result</code></pre>
+</div>
+</figure>
+<p>For each review, we use the log priors for positive and negative sentiment and tokenize the text. For each word, we check if it is in the vocabulary and skip it if it is not. Then we calculate the log probability of this word for each class. We add the class scores and pick the class with a max score as our prediction.</p>
+<h5 id="chap05.xhtml#leanpub-auto-laplace-smoothing">Laplace smoothing</h5>
+<p>Note that <img src="images/leanpub_equation_69.png" alt="log(0)" class="inline-equation" width="45" /> is <em>undefined</em> (and no, we’re not using JavaScript here). It is entirely possible for a word in our vocabulary to be present in one class but not another - the probability of finding this word in that class will be 0! We can use <a href="https://en.wikipedia.org/wiki/Additive_smoothing">Laplace smoothing</a> to fix this problem. We’ll simply add 1 to the numerator but also add the size of our vocabulary to the denominator:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 def laplace_smoothing(self, word, text_class):
+2   num = self.word_counts[text_class][word] + 1
+3   denom = self.n_class_items[text_class] + len(self.vocab)
+4   return math.log(num / denom)</code></pre>
+</div>
+</figure>
+<h3 id="chap05.xhtml#leanpub-auto-predicting-sentiment">Predicting sentiment</h3>
+<p>Now that your model can be trained and make predictions, let’s use it to predict sentiment from movie reviews.</p>
+<h4 id="chap05.xhtml#leanpub-auto-data-preparation">Data preparation</h4>
+<p>As discussed previously, we’ll use only the review and sentiment columns from the training data. Let split it for training and testing:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 X = train[&#39;review&#39;].values
+2 y = train[&#39;sentiment&#39;].values
+3 
+4 X_train, X_test, y_train, y_test = train_test_split(
+5   X, y,
+6   test_size=0.2,
+7   random_state=RANDOM_SEED
+8 )</code></pre>
+</div>
+</figure>
+<h4 id="chap05.xhtml#leanpub-auto-evaluation-2">Evaluation</h4>
+<p>We’ll pack our <code>fit</code> and <code>predict</code> functions into a class called <code>MultinomialNaiveBayes</code>. Let’s use it:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 MNB = MultinomialNaiveBayes(
+2     classes=np.unique(y),
+3     tokenizer=Tokenizer()
+4 ).fit(X_train, y_train)</code></pre>
+</div>
+</figure>
+<p>Our classifier takes a list of possible classes and a Tokenizer as parameters. Also, the API is quite nice (thanks scikit-learn!)</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 y_hat = MNB.predict(X_test)
+2 accuracy_score(y_test, y_hat)</code></pre>
+</div>
+</figure>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 0.8556</code></pre>
+</div>
+</figure>
+<p>This looks nice we got an accuracy of ~86% on the test set.</p>
+<p>Here is the classification report:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1               precision    recall  f1-score   support
+2 
+3            0       0.89      0.81      0.85      2481
+4            1       0.83      0.90      0.86      2519
+5 
+6     accuracy                           0.86      5000
+7    macro avg       0.86      0.86      0.86      5000
+8 weighted avg       0.86      0.86      0.86      5000</code></pre>
+</div>
+</figure>
+<p>And the confusion matrix:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/5_confusion-matrix.png" />
+</figure>
+</div>
+<p>Overall, our classifier does pretty well for himself. Submit the predictions to Kaggle and find out what place you’ll get on the leaderboard.</p>
+<h3 id="chap05.xhtml#leanpub-auto-conclusion-4">Conclusion</h3>
+<p>Well done! You just built a Multinomial Naive Bayes classifier that does pretty well on sentiment prediction. You also learned about Bayes theorem, text processing, and Laplace smoothing! Will another flavor of the Naive Bayes classifier perform better?</p>
+<p><a href="https://colab.research.google.com/drive/1OPQDDJTKy0b40pziZWSsoBCmQV6HyXsm">Complete source code in Google Colaboratory Notebook</a></p>
+<p>Next up, you’ll build a recommender system from scratch!</p>
+</div>
+<p><span id="chap06.xhtml"></span></p>
+<div>
+<h2 id="chap06.xhtml#leanpub-auto-music-artist-recommender-system-using-stochastic-gradient-descent">Music artist Recommender System using Stochastic Gradient Descent</h2>
+<blockquote>
+<p>TL;DR Build a Recommender System in Python from scratch. Create a <em>ratings</em> matrix from last.fm dataset and preprocess the data. Train the model using Stochastic Gradient Descent (SGD) and use it to recommend music artists.</p>
+</blockquote>
+<p>Recommender Systems are becoming more and more relevant as the amount of information on “The Internets” is exponentially increasing:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/ml-scratch-7----internet-data.png" />
+</figure>
+</div>
+<p>Finding what you might enjoy from books, movies, games to who to follow on Instagram becomes increasingly difficult. Moreover, we (the users) require faster interactions with the products we use on a daily basis, so we don’t feel like we waste time (even though we do it more than ever before in human history). As the amounts of data increase, your computational resources might have a hard time to produce fast enough results.</p>
+<p>Here, we’ll have a look at a succinct implementation of a Recommender System that is both the basis of many real-world implementations and is easy to understand. I can highly recommend you to read this through :)</p>
+<p><a href="https://colab.research.google.com/drive/1_WxDPLGkJY3qJ-PK0J1YjATaZz35efmk">Complete source code in Google Colaboratory Notebook</a></p>
+<h3 id="chap06.xhtml#leanpub-auto-user-ratings">User Ratings</h3>
+<p>Traditionally, recommender systems are built around user ratings given for a set of items, e.g. movie ratings on IMDB. Here, we’ll have a look at using another metric for making recommendations.</p>
+<p>Our data comes from <a href="https://www.last.fm/">last.fm</a>, hosted by GroupLens (download from <a href="https://grouplens.org/datasets/hetrec-2011/">here</a>). It contains the following:</p>
+<ul>
+<li><strong>user_artists.dat</strong> - userID, artistID, weight - plays of artist by user.</li>
+<li><strong>artists.dat</strong> - id, name, url, pictureURL</li>
+<li><strong>tags.dat</strong> - tagID, tagValue</li>
+<li><strong>user_taggedartists.dat</strong> - userID, artistID, tagID, day, month, year</li>
+<li><strong>user_taggedartists-timestamps.dat</strong> - userID, artistID, tagID, timestamp</li>
+<li><strong>user_friends.dat</strong> - userID, friendID. User/friend relationships.</li>
+</ul>
+<p>We’ll focus on <strong>user_artists.dat</strong> and <strong>artists.dat</strong> as they contain all data required to make recommendations for new music artists to a user. Instead of ratings, we’re going to use the play count by a user for each artist.</p>
+<h4 id="chap06.xhtml#leanpub-auto-loading-the-data">Loading the data</h4>
+<p>Let’s load the data into Pandas data frames:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 plays = pd.read_csv(&#39;user_artists.dat&#39;, sep=&#39;\t&#39;)
+2 artists = pd.read_csv(
+3   &#39;artists.dat&#39;,
+4   sep=&#39;\t&#39;,
+5   usecols=[&#39;id&#39;,&#39;name&#39;]
+6 )</code></pre>
+</div>
+</figure>
+<h4 id="chap06.xhtml#leanpub-auto-data-wrangling">Data wrangling</h4>
+<p>You need to do a bit of wrangling before working with the data:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 ap = pd.merge(
+2   artists, plays,
+3   how=&quot;inner&quot;,
+4   left_on=&quot;id&quot;,
+5   right_on=&quot;artistID&quot;
+6 )
+7 ap = ap.rename(columns={&quot;weight&quot;: &quot;playCount&quot;})</code></pre>
+</div>
+</figure>
+<p>We merge the artists and user plays and rename the weight column to <em>playCount</em>. Let’s rank the artists based on how much they were played by the users:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 artist_rank = ap.groupby([&#39;name&#39;]) \
+2   .agg({&#39;userID&#39; : &#39;count&#39;, &#39;playCount&#39; : &#39;sum&#39;}) \
+3   .rename(columns={&quot;userID&quot; : &#39;totalUniqueUsers&#39;, &quot;playCount&quot; : &quot;totalArtistPlays&quot;})\
+4  \
+5   .sort_values([&#39;totalArtistPlays&#39;], ascending=False)
+6 
+7 artist_rank[&#39;avgUserPlays&#39;] = artist_rank[&#39;totalArtistPlays&#39;] / artist_rank[&#39;totalUn\
+8 iqueUsers&#39;]</code></pre>
+</div>
+</figure>
+<p>And merge the results with the previous data frame:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 ap = ap.join(artist_rank, on=&quot;name&quot;, how=&quot;inner&quot;) \
+2   .sort_values([&#39;playCount&#39;], ascending=False)</code></pre>
+</div>
+</figure>
+<p>Here is a subset of the data:</p>
+<table>
+<thead>
+<tr class="header">
+<th>name</th>
+<th>userID</th>
+<th>artistID</th>
+<th>playCount</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Depeche Mode</td>
+<td>1642</td>
+<td>72</td>
+<td>352698</td>
+</tr>
+<tr class="even">
+<td>Thalía</td>
+<td>2071</td>
+<td>792</td>
+<td>324663</td>
+</tr>
+<tr class="odd">
+<td>U2</td>
+<td>1094</td>
+<td>511</td>
+<td>320725</td>
+</tr>
+<tr class="even">
+<td>Blur</td>
+<td>1905</td>
+<td>203</td>
+<td>257978</td>
+</tr>
+<tr class="odd">
+<td>Paramore</td>
+<td>1664</td>
+<td>498</td>
+<td>227829</td>
+</tr>
+</tbody>
+</table>
+<h4 id="chap06.xhtml#leanpub-auto-exploration-1">Exploration</h4>
+<p>Let’s look at how much each artist is played by users:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/ml-scratch-7----artist-played-count.png" />
+</figure>
+</div>
+<p>and the names of the artists that were played most:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/ml-scratch-7----plays-by-artist.png" />
+</figure>
+</div>
+<p>how much of the users play the artist:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/ml-scratch-7----users-by-artist.png" />
+</figure>
+</div>
+<p>here’s another look at artist popularity:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/ml-scratch-7----artist-popularity.png" />
+</figure>
+</div>
+<p>No surprises here, popular artists are taking the majority of the plays. Good thing that “The Beatles” still hold strong, though :)</p>
+<h3 id="chap06.xhtml#leanpub-auto-recommender-systems">Recommender Systems</h3>
+<p>Recommender systems (RS) are used pretty much everywhere where you have an array of items to choose from. They work by making suggestions that might help you make better/faster choices.</p>
+<p>You might think that you’re a special snowflake, but RS exploit behavior patterns that are shared between users (you and other people). For example, you and your friends might have similar tastes for some stuff. RS try to find “friends” within other users and recommend things you haven’t tried that.</p>
+<p>The two most used types of RS are Content-Based and Collaborative Filtering (CF). Collaborative filtering produces recommendations based on the knowledge of users’ preference to items, that is it uses the “wisdom of the crowd” to recommend items. In contrast, content-based recommender systems focus on the properties of the items and give you recommendations based on the similarity between them.</p>
+<h4 id="chap06.xhtml#leanpub-auto-collaborative-filtering-cf">Collaborative Filtering (CF)</h4>
+<p>Collaborative filtering (CF) is the workhorse of recommender engines. What is good about the algorithm is its property of being able to do feature learning, which allows it to start to learn which features to use. CF can be divided into <em>Memory-Based Collaborative Filtering</em> and <em>Model-Based Collaborative Filtering</em>.</p>
+<h5 id="chap06.xhtml#leanpub-auto-memory-based-collaborative-filtering">Memory-Based Collaborative Filtering</h5>
+<p>Memory-Based CF methods can be divided into two sections: user-item filtering and item-item filtering. Here is the difference:</p>
+<ul>
+<li>Item-Item Collaborative Filtering: “Users who liked this item also liked …”</li>
+<li>User-Item Collaborative Filtering: “Users who are similar to you (kinda like the twin you never knew you had) also liked …”</li>
+</ul>
+<p>Both methods require user-item matrix that contain the ratings for user <img src="images/leanpub_equation_70.png" alt="u" class="inline-equation" width="9" /> for item <img src="images/leanpub_equation_71.png" alt="i" class="inline-equation" width="5" />. From that, you can calculate the similarity matrix.</p>
+<p>The similarity values in Item-Item Collaborative Filtering are calculated by taking into account all users who have rated a pair of items.</p>
+<p>For User-Item Collaborative Filtering, the similarity values are calculated by observing all items that are rated by a pair of users.</p>
+<h5 id="chap06.xhtml#leanpub-auto-model-based-collaborative-filtering">Model-Based Collaborative Filtering</h5>
+<p>Model-based CF methods are based on <a href="https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems)">matrix factorization (MF)</a>. MF methods are used as an unsupervised learning method for latent variable decomposition and dimensionality reduction. They can handle scalability and sparsity problems better than Memory-based CF.</p>
+<p>The goal of MF is to learn latent user preferences and item attributes from known ratings. Then use those variable to predict unknown ratings through the dot product of the latent features of users and items.</p>
+<p>Matrix factorization restructures the user-item matrix into a low-rank matrix. You can represent it by the multiplication of two low-rank matrices, where the rows contain a vector of latent variables. You want this matrix to approximate the original matrix, as closely as possible, by multiplying the low-rank matrices together. That way, you predict the missing entries in the original matrix.</p>
+<h6 id="chap06.xhtml#leanpub-auto-singular-value-decomposition">Singular Value Decomposition</h6>
+<p>Collaborative Filtering can be formulated by approximating a matrix <img src="images/leanpub_equation_72.png" alt="X" class="inline-equation" width="15" /> by using Singular Value Decomposition (SVD). The winning team at the <a href="https://medium.com/netflix-techblog/netflix-recommendations-beyond-the-5-stars-part-1-55838468f429">Netflix Prize competition</a> used SVD matrix factorization models to win the prize. SVD can be expressed as:</p>
+<img src="images/leanpub_equation_73.png" alt="X = USV^T" class="block-equation" width="91" />
+<p>Given <img src="images/leanpub_equation_74.png" alt="m \times n" class="inline-equation" width="48" /> matrix <img src="images/leanpub_equation_75.png" alt="X" class="inline-equation" width="15" />:</p>
+<ul>
+<li><img src="images/leanpub_equation_76.png" alt="U" class="inline-equation" width="12" /> is <img src="images/leanpub_equation_77.png" alt="(m \times r)" class="inline-equation" width="58" /> orthogonal matrix</li>
+<li><img src="images/leanpub_equation_78.png" alt="S" class="inline-equation" width="11" /> is <img src="images/leanpub_equation_79.png" alt="(r \times r)" class="inline-equation" width="51" /> diagonal matrix with non-negative real numbers on the diagonal</li>
+<li><img src="images/leanpub_equation_80.png" alt="V^T" class="inline-equation" width="23" /> is <img src="images/leanpub_equation_81.png" alt="(r \times n)" class="inline-equation" width="53" /> orthogonal matrix</li>
+</ul>
+<p>where <img src="images/leanpub_equation_82.png" alt="U" class="inline-equation" width="12" /> represents feature vectors of the users, <img src="images/leanpub_equation_83.png" alt="V" class="inline-equation" width="13" /> represents feature vectors of the items and the elements on the diagonal of <img src="images/leanpub_equation_84.png" alt="S" class="inline-equation" width="11" /> are known as <em>singular values</em>.</p>
+<p>You can make a prediction by taking the dot product of <img src="images/leanpub_equation_85.png" alt="U" class="inline-equation" width="12" />, <img src="images/leanpub_equation_86.png" alt="S" class="inline-equation" width="11" /> and <img src="images/leanpub_equation_87.png" alt="V^T" class="inline-equation" width="23" />. Here is a quick example of how you can implement SVD in Python:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 import scipy.sparse as sp
+2 from scipy.sparse.linalg import svds
+3 
+4 U, S, VT = svds(user_item_ratings, k = 20)
+5 S_diagonal = np.diag(S)
+6 Y_hat = np.dot(np.dot(U, S_diagonal), VT)</code></pre>
+</div>
+</figure>
+<h3 id="chap06.xhtml#leanpub-auto-recommending-music-artists">Recommending music artists</h3>
+<p>While most tutorials on “the Internets” focus on memory-based approaches, they don’t seem to be used in practice. Although they produce good results, they do not scale well and suffer from the <a href="https://en.wikipedia.org/wiki/Cold_start_(computing)">“cold-start”</a> problem.</p>
+<p>On the other hand, applying <strong>SVD</strong> requires factorization of the user-item matrix which can be expensive when the matrix is very sparse (lots of user-item ratings are missing). Also, imputing missing values is often used, since <strong>SVD</strong> doesn’t work when data is missing. This can significantly increase the amount of data and runtime performance of the algorithm.</p>
+<p>More recent approaches have focused on predicting ratings by minimizing the regularized squared error with respect to a latent user feature matrix $P$ and a latent item feature matrix $Q$:</p>
+<img src="images/leanpub_equation_88.png" alt="\displaystyle \min_{Q*, P*} \sum_{(u, i) \in K}(r_{ui} - P_{u}^{T}Q_i)^2 + \lambda(||Q_i||^2 + ||P_u||^2)" class="block-equation" width="361" />
+<p>Where <img src="images/leanpub_equation_89.png" alt="K" class="inline-equation" width="15" /> is a set of <img src="images/leanpub_equation_90.png" alt="(u, i)" class="inline-equation" width="35" /> pairs, <img src="images/leanpub_equation_91.png" alt="r(u, i)" class="inline-equation" width="45" /> is the rating for item <img src="images/leanpub_equation_92.png" alt="i" class="inline-equation" width="5" /> by user <img src="images/leanpub_equation_93.png" alt="u" class="inline-equation" width="9" /> and <img src="images/leanpub_equation_94.png" alt="\lambda" class="inline-equation" width="9" /> is a regularization term (used to avoid overfitting). The training of our model consists of minimizing the regularized squared error. After an estimate of <img src="images/leanpub_equation_95.png" alt="P" class="inline-equation" width="13" /> and <img src="images/leanpub_equation_96.png" alt="Q" class="inline-equation" width="12" /> is obtained, you can predict unknown ratings by taking the dot product of the latent features for users and items.</p>
+<p>We can apply <a href="https://en.wikipedia.org/wiki/Stochastic_gradient_descent">Stochastic Gradient Descent (SGD)</a> or <a href="https://www.quora.com/What-is-the-Alternating-Least-Squares-method-in-recommendation-systems-And-why-does-this-algorithm-work-intuition-behind-this">Alternating Least Squares (ALS)</a> in order to minimize the loss function. Both methods can be used to incrementally update our model (online learning), as new rating comes in.</p>
+<p>Here, we’ll implement <strong>SGD</strong> as it seems to be <a href="http://cs229.stanford.edu/proj2014/Christopher%20Aberger,%20Recommender.pdf">generally faster and more accurate</a> than ALS (except in situations of highly sparse and implicit data). As an added bonus, <strong>SGD</strong> is widely used for training Deep Neural Networks (which we’ll discuss later). Thus, many high-quality implementations exist for this algorithm.</p>
+<h4 id="chap06.xhtml#leanpub-auto-preprocessing">Preprocessing</h4>
+<p>In order to apply the CF algorithm, we need to transform our dataset into a user-artist play count matrix. Let’s do that after doing data scaling first:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 pc = ap.playCount
+2 play_count_scaled = (pc - pc.min()) / (pc.max() - pc.min())
+3 
+4 ap = ap.assign(playCountScaled=play_count_scaled)</code></pre>
+</div>
+</figure>
+<p>This squishes the play counts in the [0 - 1] range and adds a new column to our data frame. Let’s build our “ratings” data frame:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 ratings_df = ap.pivot(
+2     index=&#39;userID&#39;,
+3     columns=&#39;artistID&#39;,
+4     values=&#39;playCountScaled&#39;
+5 )
+6 
+7 ratings = ratings_df.fillna(0).values</code></pre>
+</div>
+</figure>
+<p>We use Pandas <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.pivot.html">pivot</a> method to create index/column data frame and fill the missing play counts with <em>0</em>.</p>
+<p>Let’s have a look at how sparse our data frame is:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 sparsity = float(len(ratings.nonzero()[0]))
+2 sparsity /= (ratings.shape[0] * ratings.shape[1])
+3 sparsity *= 100
+4 print(&#39;{:.2f}%&#39;.format(sparsity))</code></pre>
+</div>
+</figure>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 0.28%</code></pre>
+</div>
+</figure>
+<p>Our dataset seems really sparse. Next, let’s split our data into training and validation data sets:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 train, val = train_test_split(ratings)</code></pre>
+</div>
+</figure>
+<p>Here, we define the <code>train_test_split</code> function a bit differently:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 MIN_USER_RATINGS = 35
+ 2 DELETE_RATING_COUNT = 15
+ 3 
+ 4 def train_test_split(ratings):
+ 5 
+ 6     validation = np.zeros(ratings.shape)
+ 7     train = ratings.copy()
+ 8 
+ 9     for user in np.arange(ratings.shape[0]):
+10         if len(ratings[user,:].nonzero()[0]) &gt;= MIN_USER_RATINGS:
+11             val_ratings = np.random.choice(
+12               ratings[user, :].nonzero()[0],
+13               size=DELETE_RATING_COUNT,
+14               replace=False
+15             )
+16             train[user, val_ratings] = 0
+17             validation[user, val_ratings] = ratings[user, val_ratings]
+18     return train, validation</code></pre>
+</div>
+</figure>
+<p>Okay, that is a lot different than you might’ve expected. We remove some existing play counts from users by replacing them with zeros.</p>
+<h4 id="chap06.xhtml#leanpub-auto-measuring-the-error">Measuring the error</h4>
+<p>One of the most popular metrics used to evaluate the accuracy of Recommender Systems is Root Mean Squared Error (RMSE), defined as:</p>
+<img src="images/leanpub_equation_97.png" alt="\text{RMSE} = \sqrt{\frac{1}{N}\sum(y_i - \hat{y_i})^2}" class="block-equation" width="218" />
+<p>where <img src="images/leanpub_equation_98.png" alt="y_i" class="inline-equation" width="12" /> is the real value for item <img src="images/leanpub_equation_99.png" alt="i" class="inline-equation" width="5" />, <img src="images/leanpub_equation_100.png" alt="\hat{y_i}" class="inline-equation" width="12" /> is the predicted one and $N$ is the size of the training set.</p>
+<p><a href="https://www.microsoft.com/en-us/research/publication/evaluating-recommender-systems/">A discussion on more evaluation metrics can be found here</a></p>
+<p>Here is the <em>RMSE</em> in Python:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 def rmse(prediction, ground_truth):
+2     prediction = prediction[ground_truth.nonzero()].flatten()
+3     ground_truth = ground_truth[ground_truth.nonzero()].flatten()
+4     return sqrt(mean_squared_error(prediction, ground_truth))</code></pre>
+</div>
+</figure>
+<h4 id="chap06.xhtml#leanpub-auto-training">Training</h4>
+<p>Let’s use SGD to train our recommender:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 def fit(self, X_train, X_val):
+ 2   m, n = X_train.shape
+ 3 
+ 4   self.P = 3 * np.random.rand(self.n_latent_features, m)
+ 5   self.Q = 3 * np.random.rand(self.n_latent_features, n)
+ 6 
+ 7   self.train_error = []
+ 8   self.val_error = []
+ 9 
+10   users, items = X_train.nonzero()
+11 
+12   for epoch in range(self.n_epochs):
+13       for u, i in zip(users, items):
+14           error = X_train[u, i] - self.predictions(self.P[:,u], self.Q[:,i])
+15           self.P[:, u] += self.learning_rate * \
+16            (error * self.Q[:, i] - self.lmbda * self.P[:, u])
+17           self.Q[:, i] += self.learning_rate * \
+18            (error * self.P[:, u] - self.lmbda * self.Q[:, i])
+19 
+20       train_rmse = rmse(self.predictions(self.P, self.Q), X_train)
+21       val_rmse = rmse(self.predictions(self.P, self.Q), X_val)
+22       self.train_error.append(train_rmse)
+23       self.val_error.append(val_rmse)</code></pre>
+</div>
+</figure>
+<p>We start by creating 2 matrices for the latent features of the users and ratings. For each user, item pair, we calculate the error (note we use a simple difference of the existing and predicted ratings). We then update <img src="images/leanpub_equation_101.png" alt="P" class="inline-equation" width="13" /> and <img src="images/leanpub_equation_102.png" alt="Q" class="inline-equation" width="12" /> using Gradient Descent.</p>
+<p>After each training epoch, we calculate the training and validation errors and store their values to analyze later. Here is the <code>predictions</code> method implementation:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 def predictions(self, P, Q):
+2   return np.dot(P.T, Q)</code></pre>
+</div>
+</figure>
+<p>As we discussed earlier, we obtain predictions by taking the dot product of the transposed <img src="images/leanpub_equation_103.png" alt="P" class="inline-equation" width="13" /> matrix with <img src="images/leanpub_equation_104.png" alt="Q" class="inline-equation" width="12" />.</p>
+<h4 id="chap06.xhtml#leanpub-auto-evaluation-3">Evaluation</h4>
+<p>Let’s have a quick look at how the training process went by looking at the training and validation RMSE:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/ml-scratch-7----train-error.png" />
+</figure>
+</div>
+<p>Our model seems to train gradually, and both errors decrease as the number of epochs increase. Note that you might want to spend even more time to train your model, as it might get even better.</p>
+<h4 id="chap06.xhtml#leanpub-auto-making-recommendations">Making recommendations</h4>
+<p>Finally, we are ready to make some recommendations for a user. Here is the implementation of the <code>predict</code> method:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 def predict(self, X_train, user_index):
+2   y_hat = self.predictions(self.P, self.Q)
+3   predictions_index = np.where(X_train[user_index, :] == 0)[0]
+4   return y_hat[user_index, predictions_index].flatten()</code></pre>
+</div>
+</figure>
+<p>First, we obtain the matrix with all predicted play counts. Second, we take the indices of all unknown play counts and return only these as predictions. Let’s make some recommendations for a specific user:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 user_id = 1236
+2 user_index = ratings_df.index.get_loc(user_id)
+3 predictions_index = np.where(train[user_index, :] == 0)[0]
+4 
+5 rating_predictions = recommender.predict(train, user_index)</code></pre>
+</div>
+</figure>
+<p>Before looking at the recommendation list, let’s have a look at what this user preferences currently are:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 existing_ratings_index = np.where(train[user_index, :] &gt; 0)[0]
+2 existing_ratings = train[user_index, existing_ratings_index]
+3 
+4 create_artist_ratings(
+5   artists,
+6   existing_ratings_index,
+7   existing_ratings
+8 )</code></pre>
+</div>
+</figure>
+<table>
+<thead>
+<tr class="header">
+<th>name</th>
+<th>rating</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Marilyn Manson</td>
+<td>0.196486</td>
+</tr>
+<tr class="even">
+<td>3 Doors Down</td>
+<td>0.043204</td>
+</tr>
+<tr class="odd">
+<td>Pearl Jam</td>
+<td>0.042016</td>
+</tr>
+<tr class="even">
+<td>Children of Bodom</td>
+<td>0.025657</td>
+</tr>
+<tr class="odd">
+<td>Disturbed</td>
+<td>0.021690</td>
+</tr>
+<tr class="even">
+<td>Rammstein</td>
+<td>0.021562</td>
+</tr>
+<tr class="odd">
+<td>A Perfect Circle</td>
+<td>0.020879</td>
+</tr>
+<tr class="even">
+<td>Gojira</td>
+<td>0.017051</td>
+</tr>
+<tr class="odd">
+<td>Rob Zombie</td>
+<td>0.016280</td>
+</tr>
+<tr class="even">
+<td>D12</td>
+<td>0.010990</td>
+</tr>
+</tbody>
+</table>
+<p>And here are the recommendations from our model:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 create_artist_ratings(
+2   artists,
+3   predictions_index,
+4   rating_predictions
+5 )</code></pre>
+</div>
+</figure>
+<table>
+<thead>
+<tr class="header">
+<th>name</th>
+<th>rating</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sander van Doorn</td>
+<td>0.559202</td>
+</tr>
+<tr class="even">
+<td>Jacob Miller</td>
+<td>0.552893</td>
+</tr>
+<tr class="odd">
+<td>Celtas Cortos</td>
+<td>0.552142</td>
+</tr>
+<tr class="even">
+<td>Camisa de Vênus</td>
+<td>0.546361</td>
+</tr>
+<tr class="odd">
+<td>Ella Fitzgerald &amp; Louis Armstrong</td>
+<td>0.541477</td>
+</tr>
+<tr class="even">
+<td>The Answer</td>
+<td>0.537367</td>
+</tr>
+<tr class="odd">
+<td>Anjelika Akbar</td>
+<td>0.536756</td>
+</tr>
+<tr class="even">
+<td>Medications</td>
+<td>0.536486</td>
+</tr>
+<tr class="odd">
+<td>Lützenkirchen</td>
+<td>0.535515</td>
+</tr>
+<tr class="even">
+<td>Archie Star</td>
+<td>0.535147</td>
+</tr>
+</tbody>
+</table>
+<p>Now might be a good time to go on YouTube or Spotify and try out some of those artists!</p>
+<h3 id="chap06.xhtml#leanpub-auto-conclusion-5">Conclusion</h3>
+<p>Congratulations on building a highly performant Recommender System from scratch! You’ve learned how to:</p>
+<ul>
+<li>Prepare raw data for making recommendations</li>
+<li>Implemented a simple Stochastic Gradient Descent from scratch</li>
+<li>Used the model to make predictions for new artists you might actually enjoy!</li>
+</ul>
+<p><a href="https://colab.research.google.com/drive/1_WxDPLGkJY3qJ-PK0J1YjATaZz35efmk">Complete source code in Google Colaboratory Notebook</a></p>
+<p>Can you apply this same model on your dataset? Tell me how it went in the comments below!</p>
+</div>
+<p><span id="chap07.xhtml"></span></p>
+<div>
+<h2 id="chap07.xhtml#leanpub-auto-fashion-product-image-classification-using-neural-networks">Fashion product image classification using Neural Networks</h2>
+<blockquote>
+<p>TL;DR Build Neural Network in Python from scratch. Use the model to classify images of fashion products into 1 of 10 classes.</p>
+</blockquote>
+<p>We live in the age of Instagram, YouTube, and Twitter. Images and video (a sequence of images) dominate the way millennials and other weirdos consume information.</p>
+<p>Having models that understand what images show can be crucial for understanding your emotional state (yes, you might get a personalized Coke ad right after you post your breakup selfie on Instagram), location, interests and social group.</p>
+<p>Predominantly, models that understand image data used in practice are (Deep) Neural Networks. Here, we’ll implement a Neural Network image classifier from scratch in Python.</p>
+<p><a href="https://drive.google.com/file/d/1S59KWV8KmZTI-A6OpXge3yG87HXyIcUz/view?usp=sharing">Complete source code in Google Colaboratory Notebook</a></p>
+<h3 id="chap07.xhtml#leanpub-auto-image-data">Image Data</h3>
+<p>Hopefully, it’s not a complete surprise to you that computers can’t actually see images as we do. Each image on your device is represented/stored as a matrix, where each pixel is one or more numbers.</p>
+<h4 id="chap07.xhtml#leanpub-auto-reading-the-fashion-products-data">Reading the fashion products data</h4>
+<blockquote>
+<p><a href="https://github.com/zalandoresearch/fashion-mnist">Fashion-MNIST</a> is a dataset of Zalando’s article images—consisting of a training set of <em>60,000</em> examples and a test set of <em>10,000</em> examples. Each example is a <em>28x28</em> grayscale image, associated with a label from <em>10</em> classes. We intend Fashion-MNIST to serve as a direct drop-in replacement for the original MNIST dataset for benchmarking machine learning algorithms. It shares the same image size and structure of training and testing splits.</p>
+</blockquote>
+<p>Here is a sample of the images:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/ml-scratch-6----fashion-mnist-sprite.png" />
+</figure>
+</div>
+<p>You might be familiar with the original handwritten digits <a href="http://yann.lecun.com/exdb/mnist/">MNIST</a> dataset and wondering why we’re not using it? <a href="http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/">Well, it might be too easy to make predictions on</a>. And of course, fashion is cooler, right?</p>
+<h4 id="chap07.xhtml#leanpub-auto-exploration-2">Exploration</h4>
+<p>The product images are grayscale, 28x28 pixels and look something like this:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/ml-scratch-6----product-example.png" />
+</figure>
+</div>
+<p>Here are the first 3 rows from the pixel matrix of the image:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 [[  0,   0,   0,   0,   0,   1,   0,   0,   0,   0,  41, 188, 103,
+ 2     54,  48,  43,  87, 168, 133,  16,   0,   0,   0,   0,   0,   0,
+ 3     0,   0],
+ 4   [  0,   0,   0,   1,   0,   0,   0,  49, 136, 219, 216, 228, 236,
+ 5   255, 255, 255, 255, 217, 215, 254, 231, 160,  45,   0,   0,   0,
+ 6     0,   0],
+ 7   [  0,   0,   0,   0,   0,  14, 176, 222, 224, 212, 203, 198, 196,
+ 8   200, 215, 204, 202, 201, 201, 201, 209, 218, 224, 164,   0,   0,
+ 9     0,   0],
+10   ...
+11 ]</code></pre>
+</div>
+</figure>
+<p>Note that the values are in the 0-255 range (grayscale).</p>
+<p>We have 10 classes of possible fashion products:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 [&#39;T-shirt/top&#39;, &#39;Trouser&#39;, &#39;Pullover&#39;, &#39;Dress&#39;, &#39;Coat&#39;,
+2  &#39;Sandal&#39;,      &#39;Shirt&#39;,   &#39;Sneaker&#39;,  &#39;Bag&#39;,   &#39;Ankle boot&#39;]</code></pre>
+</div>
+</figure>
+<p>Let’s have a look at a lower dimensional representation of some of the products using <a href="https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding">t-SNE</a>. We’ll transform the data into 2-dimensional using the implementation from <a href="https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html">scikit-learn</a>:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/ml-scratch-6----product-tsne.png" />
+</figure>
+</div>
+<p>You can observe a clear separation between some classes and significant overlap between others. Let’s build a Neural Network that can try to separate between different fashion products!</p>
+<h3 id="chap07.xhtml#leanpub-auto-neural-networks">Neural Networks</h3>
+<p>Neural Networks (NNs), Deep Neural Networks in particular, are all the rage in the last couple of years in the Machine Learning realm. That’s hardly a surprise since most <a href="https://github.com/RedditSota/state-of-the-art-result-for-machine-learning-problems">state-of-the-art results (SOTA)</a> on various Machine Learning problems are obtained via Neural Nets.</p>
+<blockquote>
+<p><a href="https://paperswithcode.com/sota">Browse papers with source code achieving SOTA</a></p>
+</blockquote>
+<h4 id="chap07.xhtml#leanpub-auto-the-artificial-neuron">The Artificial Neuron</h4>
+<p>The goal of modeling our biological neuron has led to the invention of the artificial neuron. Here is how a single neuron in your brain looks like:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/ml-scratch-6----neuron.png" />
+</figure>
+</div>
+<p><em>Image credit: <a href="https://cs231n.github.io/">CS231n</a></em></p>
+<p>On the other side, we have a vastly simplified mathematical model that turns out to be extremely useful in practice (as evident by the success of Neural Nets):</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/ml-scratch-6----artificial-neuron.jpeg" />
+</figure>
+</div>
+<p><em>Image credit: <a href="https://cs231n.github.io/">CS231n</a></em></p>
+<p>The idea of the artificial neuron is simple - you have data vector <img src="images/leanpub_equation_105.png" alt="X" class="inline-equation" width="15" /> coming from somewhere, a vector of parameters <img src="images/leanpub_equation_106.png" alt="W" class="inline-equation" width="18" /> and a bias vector <img src="images/leanpub_equation_107.png" alt="b" class="inline-equation" width="7" />. The output of a neuron is given by:</p>
+<img src="images/leanpub_equation_108.png" alt="Y = f\bigg(\sum_{i}w_ix_i + b\bigg)" class="block-equation" width="171" />
+<p>where <img src="images/leanpub_equation_109.png" alt="f" class="inline-equation" width="9" /> is an activation function that controls how strong the output signal of the neuron is.</p>
+<h4 id="chap07.xhtml#leanpub-auto-architecting-neural-networks">Architecting Neural Networks</h4>
+<p>You can use a single neuron as a classifier, but the fun part begins when you group them into layers. Concretely, the neurons are connected into an acyclic graph with the data flowing between layers:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/ml-scratch-6----neural-net.jpeg" />
+</figure>
+</div>
+<p><em>Image credit: <a href="https://cs231n.github.io/">CS231n</a></em></p>
+<p>This simple Neural Network contains:</p>
+<ul>
+<li>Input layer - 3 neurons that should match the size of your input data</li>
+<li>Hidden layer - 4 neurons with weights W that your model should learn during training</li>
+<li>Output layer - 2 neurons that provide the predictions of your model</li>
+</ul>
+<p>Want to build a Deep Neural Network? Just add at least one more hidden layer:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/ml-scratch-6----deep-neural-net.jpeg" />
+</figure>
+</div>
+<p><em>Image credit: <a href="https://cs231n.github.io/">CS231n</a></em></p>
+<h5 id="chap07.xhtml#leanpub-auto-sigmoid">Sigmoid</h5>
+<p><a href="https://en.wikipedia.org/wiki/Sigmoid_function">The sigmoid function</a> is quite commonly used activation function, at least it was until recently. It has distinct <strong>S</strong> shape, it is a differentiable real function for any real input value and output values between <img src="images/leanpub_equation_110.png" alt="0" class="inline-equation" width="7" /> and <img src="images/leanpub_equation_111.png" alt="1" class="inline-equation" width="6" />. Additionally, it has a positive derivative at each point. More importantly, we will use it as an activation function for the hidden layer of our model.</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/ml-scratch-6----sigmoid.png" />
+</figure>
+</div>
+<p>Here’s how it is defined:</p>
+<img src="images/leanpub_equation_112.png" alt="\sigma (x) = \frac{1}{1+e^{-x}}" class="block-equation" width="120" />
+<p>Here is how we can implement it:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 def sigmoid(z):
+2     return 1.0 / (1.0 + np.exp(-z))</code></pre>
+</div>
+</figure>
+<p>It’s first derivative (which we will use during the backpropagation step of our training algorithm) has the following formula:</p>
+<img src="images/leanpub_equation_113.png" alt="\frac{d\sigma (x)}{d(x)} = \sigma (x)\cdot (1-\sigma(x))" class="block-equation" width="201" />
+<p>Our implementation reuses the sigmoid implementation itself:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 def sigmoid_prime(z):
+2     sg = sigmoid(z)
+3     return sg * (1 - sg)</code></pre>
+</div>
+</figure>
+<h5 id="chap07.xhtml#leanpub-auto-softmax">Softmax</h5>
+<p>The softmax function can be easily differentiated, it is pure (output depends only on input) and the elements of the resulting vector sum to 1. Here it is:</p>
+<img src="images/leanpub_equation_114.png" alt="\sigma(z)_j = \frac{e^{z_j}}{\sum_{K}^{k=1}e^{z_k}} \text{for}\,j = 1,...,k" class="block-equation" width="247" />
+<p>Here is the Python implementation:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 def softmax(z):
+2     return (np.exp(z.T) / np.sum(np.exp(z), axis=1)).T</code></pre>
+</div>
+</figure>
+<p>In probability theory, the output of the softmax function is sometimes used as a representation of a categorical distribution. Let’s see an example result:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 softmax(np.array([[2, 4, 6, 8]]))</code></pre>
+</div>
+</figure>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 array([[ 0.00214401,  0.0158422 ,  0.11705891,  0.86495488]])</code></pre>
+</div>
+</figure>
+<p>The output has most of its weight corresponding to the input 8. The softmax function highlights the largest value(s) and suppresses the smaller ones.</p>
+<h5 id="chap07.xhtml#leanpub-auto-backpropagation">Backpropagation</h5>
+<p>Backpropagation is the backbone of almost anything we do when using Neural Networks. The algorithm consists of 3 subtasks:</p>
+<ol>
+<li>Make a forward pass</li>
+<li>Calculate the error</li>
+<li>Make backward pass (backpropagation)</li>
+</ol>
+<p>In the first step, backprop uses the data and the weights of the network to compute a prediction. Next, the error is computed based on the prediction and the provided labels. The final step propagates the error through the network, starting from the final layer. Thus, the weights get updated based on the error, little by little.</p>
+<p>Let’s build more intuition about what the algorithm is actually doing:</p>
+<h6 id="chap07.xhtml#leanpub-auto-solving-xor">Solving XOR</h6>
+<p>We will try to create a Neural Network that can properly predict values from the XOR function. Here is its truth table:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Input 1</th>
+<th>Input 2</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Here is a visual representation:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/ml-scratch-6----xor.png" />
+</figure>
+</div>
+<p>Let start by defining some parameters:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 epochs = 50000
+2 input_size, hidden_size, output_size = 2, 3, 1
+3 LR = .1 # learning rate</code></pre>
+</div>
+</figure>
+<p>The epochs parameter controls how many times our algorithm will “see” the data during training. Then we set the number of neurons in the input, hidden and output layers - we have 2 numbers as input and 1 number as output size. The learning rate parameter controls how quickly our Neural Network will learn from new data and forget what already knows.</p>
+<p>Our training data (from the table) looks like this:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 X = np.array([[0,0], [0,1], [1,0], [1,1]])
+2 y = np.array([ [0],   [1],   [1],   [0]])</code></pre>
+</div>
+</figure>
+<p>The <img src="images/leanpub_equation_115.png" alt="W" class="inline-equation" width="18" /> vectors in our NN need to have some initial values. We’ll sample a uniform distribution, initialized with proper size:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 w_hidden = np.random.uniform(size=(input_size, hidden_size))
+2 w_output = np.random.uniform(size=(hidden_size, output_size))</code></pre>
+</div>
+</figure>
+<p>Finally, implementation of the Backprop algorithm:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 for epoch in range(epochs):
+ 2 
+ 3     # Forward
+ 4     act_hidden = sigmoid(np.dot(X, w_hidden))
+ 5     output = np.dot(act_hidden, w_output)
+ 6 
+ 7     # Calculate error
+ 8     error = y - output
+ 9 
+10     if epoch % 5000 == 0:
+11         print(f&#39;error sum {sum(error)}&#39;)
+12 
+13     # Backward
+14     dZ = error * LR
+15     w_output += act_hidden.T.dot(dZ)
+16     dH = dZ.dot(w_output.T) * sigmoid_prime(act_hidden)
+17     w_hidden += X.T.dot(dH)</code></pre>
+</div>
+</figure>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 error sum [-1.77496016]
+ 2 error sum [ 0.00586565]
+ 3 error sum [ 0.00525699]
+ 4 error sum [ 0.0003625]
+ 5 error sum [-0.00064657]
+ 6 error sum [ 0.00189532]
+ 7 error sum [  3.79101898e-08]
+ 8 error sum [  7.47615376e-13]
+ 9 error sum [  1.40960742e-14]
+10 error sum [  1.49842526e-14]</code></pre>
+</div>
+</figure>
+<p>That error seems to be decreasing! YaY! And the implementation is not that scary, isn’t it?</p>
+<p>During the <code>forward</code> step, we take the dot product of the data <img src="images/leanpub_equation_116.png" alt="X" class="inline-equation" width="15" /> and <img src="images/leanpub_equation_117.png" alt="W_{\text{hidden}}" class="inline-equation" width="55" /> and apply our activation function to obtain the output of our hidden layer. We obtain the predictions by taking the dot product of the hidden layer output and <img src="images/leanpub_equation_118.png" alt="W_{\text{output}}" class="inline-equation" width="54" />.</p>
+<p>To obtain the <code>error</code>, we calculate the difference between the true values and the predicted ones. Note that this is a very crude metric, but it works fine for our example.</p>
+<p>Finally, we use the calculated error to adjust the weights. Note that we need the results from the forward pass <code>act_hidden</code> to calculate <img src="images/leanpub_equation_119.png" alt="W_{\text{output}}" class="inline-equation" width="54" /> and calculate the first derivative using <code>sigmoid_prime</code> to update <img src="images/leanpub_equation_120.png" alt="W_{\text{hidden}}" class="inline-equation" width="55" />.</p>
+<p>In order to make an inference (predictions) we’ll do just the forward step (since we won’t adjust <img src="images/leanpub_equation_121.png" alt="W" class="inline-equation" width="18" /> based on the result):</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 test_data = X[1] # [0, 1]
+2 
+3 act_hidden = sigmoid(np.dot(test_data, w_hidden))
+4 np.dot(act_hidden, w_output)</code></pre>
+</div>
+</figure>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 array([ 1.])</code></pre>
+</div>
+</figure>
+<p>Our sorcery seems to be working! The prediction is correct!</p>
+<h3 id="chap07.xhtml#leanpub-auto-classifying-images">Classifying Images</h3>
+<h4 id="chap07.xhtml#leanpub-auto-building-a-neural-network">Building a Neural Network</h4>
+<p>Our Neural Network will have only 1 hidden layer. We will implement a somewhat more sophisticated version of our training algorithm shown above along with some handy methods.</p>
+<h5 id="chap07.xhtml#leanpub-auto-initializing-the-weights">Initializing the weights</h5>
+<p>We’ll sample a uniform distribution with values between -1 and 1 for our initial weights. Here is the implementation:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 def _init_weights(self):
+2     w1 = np.random.uniform(-1.0, 1.0,
+3                             size=(self.n_hidden_units, self.n_features))
+4     w2 = np.random.uniform(-1.0, 1.0,
+5                             size=(self.n_classes, self.n_hidden_units))
+6     return w1, w2</code></pre>
+</div>
+</figure>
+<h5 id="chap07.xhtml#leanpub-auto-training-1">Training</h5>
+<p>Let’s have a look at the training method:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 def fit(self, X, y):
+ 2     self.error_ = []
+ 3     X_data, y_data = X.copy(), y.copy()
+ 4     y_data_enc = one_hot(y_data, self.n_classes)
+ 5 
+ 6     X_mbs = np.array_split(X_data, self.n_batches)
+ 7     y_mbs = np.array_split(y_data_enc, self.n_batches)
+ 8 
+ 9     for i in range(self.epochs):
+10 
+11         epoch_errors = []
+12 
+13         for Xi, yi in zip(X_mbs, y_mbs):
+14 
+15             # update weights
+16             error, grad1, grad2 = self._backprop_step(Xi, yi)
+17             epoch_errors.append(error)
+18             self.w1 -= self.learning_rate * grad1
+19             self.w2 -= self.learning_rate * grad2
+20         self.error_.append(np.mean(epoch_errors))
+21     return self</code></pre>
+</div>
+</figure>
+<p>For each epoch, we apply the backprop algorithm, evaluate the error and the gradient with respect to the weights. We then use the learning rate and gradients to update the weights.</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 def _backprop_step(self, X, y):
+ 2     net_input, net_hidden, act_hidden, net_out, act_out = self._forward(X)
+ 3     y = y.T
+ 4 
+ 5     grad1, grad2 = self._backward(net_input, net_hidden, act_hidden, act_out, y)
+ 6 
+ 7     # regularize
+ 8     grad1 += self.w1 * (self.l1 + self.l2)
+ 9     grad2 += self.w2 * (self.l1 + self.l2)
+10 
+11     error = self._error(y, act_out)
+12 
+13     return error, grad1, grad2</code></pre>
+</div>
+</figure>
+<p>Doing a backprop step is a bit more complicated than our XOR example. We do an additional step before returning the gradients - apply <a href="http://www.chioka.in/differences-between-l1-and-l2-as-loss-function-and-regularization/">L1 and L2 Regularization</a>. Regularization is used to guide our training towards simpler methods by penalizing large values for our parameters <img src="images/leanpub_equation_122.png" alt="W" class="inline-equation" width="18" />.</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 def _forward(self, X):
+ 2     net_input = X.copy()
+ 3     net_hidden = self.w1.dot(net_input.T)
+ 4     act_hidden = sigmoid(net_hidden)
+ 5     net_out = self.w2.dot(act_hidden)
+ 6     act_out = sigmoid(net_out)
+ 7     return net_input, net_hidden, act_hidden, net_out, act_out
+ 8 
+ 9 def _backward(self, net_input, net_hidden, act_hidden, act_out, y):
+10     sigma3 = act_out - y
+11     sigma2 = self.w2.T.dot(sigma3) * sigmoid_prime(net_hidden)
+12     grad1 = sigma2.dot(net_input)
+13     grad2 = sigma3.dot(act_hidden.T)
+14     return grad1, grad2</code></pre>
+</div>
+</figure>
+<p>Our <code>forward</code> and <code>backward</code> steps are very similar to the one in our previous example, how about the error?</p>
+<h6 id="chap07.xhtml#leanpub-auto-measuring-the-error-1">Measuring the error</h6>
+<p>We’re going to use <a href="https://en.wikipedia.org/wiki/Cross_entropy">Cross-Entropy loss</a> (known as log loss) function to evaluate the error. This function measures the performance of a classification model whose output is a probability. It penalizes (harshly) predictions that are wrong and confident. Here is the definition:</p>
+<img src="images/leanpub_equation_123.png" alt="\text{Cross-Entropy}=-\sum_{c=1}^Cy_{o,c}\log(p_{o,c})" class="block-equation" width="276" />
+<p>where <img src="images/leanpub_equation_124.png" alt="C" class="inline-equation" width="13" /> is the number of classes, <img src="images/leanpub_equation_125.png" alt="y" class="inline-equation" width="8" /> is a binary indicator if class label is the correct classification for the observation and <img src="images/leanpub_equation_126.png" alt="p" class="inline-equation" width="9" /> is the predicted probability that <img src="images/leanpub_equation_127.png" alt="o" class="inline-equation" width="8" /> is of class <img src="images/leanpub_equation_128.png" alt="c" class="inline-equation" width="7" />.</p>
+<p>The implementation in Python looks like this:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 def cross_entropy(outputs, y_target):
+2     return -np.sum(np.log(outputs) * y_target, axis=1)</code></pre>
+</div>
+</figure>
+<p>Now that we have our loss function, we can finally define the error for our model:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 def _error(self, y, output):
+2     L1_term = L1_reg(self.l1, self.w1, self.w2)
+3     L2_term = L2_reg(self.l2, self.w1, self.w2)
+4     error = cross_entropy(output, y) + L1_term + L2_term
+5     return 0.5 * np.mean(error)</code></pre>
+</div>
+</figure>
+<p>After computing the Cross-Entropy loss, we add the regularization terms and calculate the mean error. Here is the implementation for L1 and L2 regularizations:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 def L2_reg(lambda_, w1, w2):
+2     return (lambda_ / 2.0) * (np.sum(w1 ** 2) + np.sum(w2 ** 2))
+3 
+4 def L1_reg(lambda_, w1, w2):
+5     return (lambda_ / 2.0) * (np.abs(w1).sum() + np.abs(w2).sum())</code></pre>
+</div>
+</figure>
+<h5 id="chap07.xhtml#leanpub-auto-making-predictions-2">Making predictions</h5>
+<p>Now that our model can learn from data, it is time to make predictions on data it hasn’t seen before. We’re going to implement two methods for prediction - <code>predict</code> and <code>predict_proba</code>:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 def predict(self, X):
+2     Xt = X.copy()
+3     _, _, _, net_out, _ = self._forward(Xt)
+4     return mle(net_out.T)</code></pre>
+</div>
+</figure>
+<p>Recall that predictions in NN (generally) includes applying a forward step on the data. But the result of it is a vector of values representing how strong the belief for each class is for the data. We’ll use <a href="https://en.wikipedia.org/wiki/Maximum_likelihood_estimation">Maximum likelihood estimation (MLE)</a> to obtain our final predictions:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 def mle(y, axis=1):
+2     return np.argmax(y, axis)</code></pre>
+</div>
+</figure>
+<p>MLE works by picking the highest value and return it as a predicted class for the input.</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 def predict_proba(self, X):
+2     Xt = X.copy()
+3     _, _, _, _, act_out = self._forward(Xt)
+4     return softmax(act_out.T)</code></pre>
+</div>
+</figure>
+<p>The method <code>predict_proba</code> returns a probability distribution over all classes, representing how likely each class is to be correct. Note that we obtain it by applying the <code>softmax</code> function to the result of the <code>forward</code> step.</p>
+<h4 id="chap07.xhtml#leanpub-auto-evaluation-4">Evaluation</h4>
+<p>Time to put our NN model to the test. Here’s how we can train it:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 N_FEATURES = 28 * 28 # 28x28 pixels for the images
+ 2 N_CLASSES = 10
+ 3 
+ 4 nn = NNClassifier(
+ 5     n_classes=N_CLASSES,
+ 6     n_features=N_FEATURES,
+ 7     n_hidden_units=50,
+ 8     l2=0.5,
+ 9     l1=0.0,
+10     epochs=300,
+11     learning_rate=0.001,
+12     n_batches=25,
+13     random_seed=RANDOM_SEED
+14 ).fit(X_train, y_train);</code></pre>
+</div>
+</figure>
+<p>The training might take some time, so please be patient. Let’s get the predictions:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 y_hat = nn.predict_proba(X_test)</code></pre>
+</div>
+</figure>
+<p>First, let’s have a look at the training error:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/ml-scratch-6----nn-error.png" />
+</figure>
+</div>
+<p>Something looks fishy here, seems like our model can’t continue to reduce the error 150 epochs or so. Let’s have a look at a single prediction:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/ml-scratch-6----nn-prediction.png" />
+</figure>
+</div>
+<p>That one seems correct! Let’s have a look at few more:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/ml-scratch-6----nn-predictions.png" />
+</figure>
+</div>
+<p>Not too good. How about the training &amp; testing accuracy:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 print(&#39;Train Accuracy: %.2f%%&#39; % (nn.score(X_train, y_train) * 100))
+2 print(&#39;Test Accuracy: %.2f%%&#39; % (nn.score(X_test, y_test) * 100))</code></pre>
+</div>
+</figure>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 Train Accuracy: 50.13%
+2 Test Accuracy: 49.83%</code></pre>
+</div>
+</figure>
+<p>Well, those don’t look that good. While a random classifier will return ~10% accuracy, ~50% accuracy on the test dataset will not make a practical classifier either.</p>
+<h3 id="chap07.xhtml#leanpub-auto-improving-the-accuracy">Improving the accuracy</h3>
+<p>That “jagged” line on the training error chart shows the inability of our model to converge. Recall that we use the Backpropagation algorithm to train our model. <a href="https://arxiv.org/abs/1502.03167">Training Neural Nets converge much faster when data is normalized</a>.</p>
+<p>We’ll use scikit-learn`s <a href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.scale.html">scale</a> to normalize our data. The documentation states that:</p>
+<blockquote>
+<p>Center to the mean and component wise scale to unit variance.</p>
+</blockquote>
+<p>Here is the new training method:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 from sklearn.preprocessing import scale
+ 2 
+ 3 X_train_scaled = scale(X_train.astype(np.float64))
+ 4 X_test_scaled = scale(X_test.astype(np.float64))
+ 5 
+ 6 nn = NNClassifier(
+ 7     n_classes=N_CLASSES,
+ 8     n_features=N_FEATURES,
+ 9     n_hidden_units=50,
+10     l2=0.5,
+11     l1=0.0,
+12     epochs=300,
+13     learning_rate=0.001,
+14     n_batches=25,
+15     random_seed=RANDOM_SEED
+16 ).fit(X_train_scaled, y_train);</code></pre>
+</div>
+</figure>
+<p>Let’s have a look at the error:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/ml-scratch-6----nn-error-improved.png" />
+</figure>
+</div>
+<p>The error seems a lot more stable and settles at lower point - ~200 vs ~400. Let’s have a look at some predictions:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/ml-scratch-6----nn-predictions-improved.png" />
+</figure>
+</div>
+<p>Those look much better, too! Finally, the accuracy:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 print(&#39;Train Accuracy: %.2f%%&#39; % (nn.score(X_train_scaled, y_train) * 100))
+2 print(&#39;Test Accuracy: %.2f%%&#39; % (nn.score(X_test_scaled, y_test) * 100))</code></pre>
+</div>
+</figure>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 Train Accuracy: 92.13%
+2 Test Accuracy: 87.03%</code></pre>
+</div>
+</figure>
+<p>~87% (vs ~50%) on the training set is a vast improvement over the unscaled method. Finally, your hard work paid off!</p>
+<h3 id="chap07.xhtml#leanpub-auto-conclusion-6">Conclusion</h3>
+<p>What a ride! I hope you got a blast working on your first Neural Network from scratch, too!</p>
+<p>You learned how to process image data, transform it, and use it to train your Neural Network. We used some handy tricks (scaling) to vastly improve the performance of the classifier.</p>
+<p><a href="https://drive.google.com/file/d/1S59KWV8KmZTI-A6OpXge3yG87HXyIcUz/view?usp=sharing">Complete source code in Google Colaboratory Notebook</a></p>
+</div>
+<p><span id="chap08.xhtml"></span></p>
+<div>
+<h2 id="chap08.xhtml#leanpub-auto-build-a-taxi-driving-agent-in-a-post-apocalyptic-world-using-reinforcement-learning">Build a taxi driving agent in a post-apocalyptic world using Reinforcement Learning</h2>
+<blockquote>
+<p>TL;DR Build a simple MDP for self-driving taxi problem. Pick up passengers, avoid danger and drop them off at specified location. Build an agent and solve the problem using Q-learning.</p>
+</blockquote>
+<p>You wake up. It is a sunny day. Your partner is still asleep next to you. You take a minute to admire the beauty and even crack a smile.</p>
+<p>Your stomach is rumbling, so you jump on your feet and look around. Jackpot! You’re looking at the leftovers of the anniversary dinner you two had last night. You take a minute to scratch some private spot of yours. Yep, what an amazing morning! You have 1/3 of a bean can, expired only 6 months ago. It is delicious!</p>
+<p>Although you feel bad about not leaving any food for the one sleeping in your bed, you dress up and prepare for work. “What are you going to do? Not eat and work!?” - those thoughts don’t seem to help anymore. Time to hop in the car!</p>
+<p>You try to reach Johny via the radio but no luck. Oh well, Jimmy is missing since last week, his twin brother might be too. Strange, you can’t remember the last time your eyes were feeling wet.</p>
+<p>A lot has changed since <em>the event</em>. The streets are getting more dangerous every week, but people still need transportation. You receive a pickup request and have a look at the anomaly map. You accept hesitantly. Your map was updated 2 months ago.</p>
+<p>You got the job done and got credit for a half can. That couple was really generous! That leaves time for tinkering with the idea of making self-driving taxis. You even got a name - <em>SafeCab</em>. You read a lot of about this crazy guy called Elon Nusk that was trying to build those fully autonomous vehicles right before <em>the event</em> occured.</p>
+<p>You start scratching your head. Is this possible or just a fantasy? After all, if you get this done, you might afford to eat every other day. Enter Reinforcement Learning.</p>
+<p><a href="https://colab.research.google.com/drive/1FMo6Lpf1UtO1blfMyA4yznzDN7tlgIWm">Complete source code in Google Colaboratory Notebook</a></p>
+<h3 id="chap08.xhtml#leanpub-auto-reinforcement-learning-1">Reinforcement Learning</h3>
+<p>Reinforcement Learning (RL) is concerned with producing algorithms (agents) that try to achieve some predefined goal. The achievement of this objective is dependent on choosing a set of actions - receiving rewards for the good ones and punishment for the bad ones - the reinforcement bit comes from this. The agent act, in environments that have a state, gives rewards, and a set of actions.</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/ml-scratch-8----reinforcement-learning.png" />
+</figure>
+</div>
+<p><em>Image credit: <a href="https://phrasee.co/">https://phrasee.co/</a></em></p>
+<p>Deep Reinforcement Learning (using Deep Neural Networks for choosing actions) achieved some great things lately:</p>
+<ul>
+<li><a href="https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf">Play Atari games</a></li>
+<li><a href="https://www.youtube.com/watch?v=oo0TraGu6QY">Play Doom</a></li>
+<li><a href="https://deepmind.com/blog/alphago-zero-learning-scratch/">Dominate the game of Go</a></li>
+</ul>
+<h4 id="chap08.xhtml#leanpub-auto-markov-decision-processes">Markov Decision Processes</h4>
+<p>Markov Decision Process (MDP) is a mathematical formulation of the RL problem. MDPs satisfy the Markov property:</p>
+<p><strong>Markov property</strong> - the current state completely represents the state of the environment (world). That is, the future depends only on the present.</p>
+<p>An MDP can be defined by <img src="images/leanpub_equation_129.png" alt="(S, A, R, P, \gamma)" class="inline-equation" width="105" /> where:</p>
+<ul>
+<li><img src="images/leanpub_equation_130.png" alt="S" class="inline-equation" width="11" /> - set of possible states</li>
+<li><img src="images/leanpub_equation_131.png" alt="A" class="inline-equation" width="12" /> - set of possible actions</li>
+<li><img src="images/leanpub_equation_132.png" alt="R" class="inline-equation" width="13" /> - probability distribution of reward given (state, action) pair</li>
+<li><img src="images/leanpub_equation_133.png" alt="P" class="inline-equation" width="13" /> - probability distribution over how likely any of the states is to be the new states, given (state, action) pair. Also known as transition probability.</li>
+<li><img src="images/leanpub_equation_134.png" alt="\gamma" class="inline-equation" width="9" /> - reward discount factor</li>
+</ul>
+<p>The discount factor <img src="images/leanpub_equation_135.png" alt="\gamma" class="inline-equation" width="9" /> allows us to inject the heuristic that 100 bucks now are more valuable than 100 bucks in 30 days. A discount factor of 1 would make future rewards worth just as much as immediate rewards.</p>
+<p>Another reason to discount future rewards:</p>
+<blockquote>
+<p>In the long run we are all dead - J. M. Keynes</p>
+</blockquote>
+<h4 id="chap08.xhtml#leanpub-auto-learning">Learning</h4>
+<p>Here is how learning happens in RL context:</p>
+<p>for time step <img src="images/leanpub_equation_136.png" alt="t=0" class="inline-equation" width="39" /> until done:</p>
+<ol>
+<li>The environment gives your agent a state</li>
+<li>Your agent chooses an action (from a set of possible ones)</li>
+<li>The environment gives a reward along with a new state</li>
+<li>Continue until the goal or other condition is met</li>
+</ol>
+<p>What is the objective of all this? Find a function <img src="images/leanpub_equation_137.png" alt="\pi^*" class="inline-equation" width="16" />, known as optimal policy, that maximizes the cumulative discounted reward:</p>
+<img src="images/leanpub_equation_138.png" alt="\sum_{t \geq 0}\gamma^t r_t" class="block-equation" width="57" />
+<p>where <img src="images/leanpub_equation_139.png" alt="r_t" class="inline-equation" width="12" /> is the reward received at step <img src="images/leanpub_equation_140.png" alt="t" class="inline-equation" width="5" /> and <img src="images/leanpub_equation_141.png" alt="\gamma^t" class="inline-equation" width="14" /> is the discount factor at step <img src="images/leanpub_equation_142.png" alt="t" class="inline-equation" width="5" />.</p>
+<p>A policy <img src="images/leanpub_equation_143.png" alt="\pi" class="inline-equation" width="10" /> is a function that maps state <img src="images/leanpub_equation_144.png" alt="s" class="inline-equation" width="7" /> to action <img src="images/leanpub_equation_145.png" alt="a" class="inline-equation" width="8" />, that our agent believes is the best given that state.</p>
+<h4 id="chap08.xhtml#leanpub-auto-value-function">Value function</h4>
+<p>The value function gives you the maximum expected future reward the agent will get, starting from some state <img src="images/leanpub_equation_146.png" alt="s" class="inline-equation" width="7" /> and following some policy <img src="images/leanpub_equation_147.png" alt="\pi" class="inline-equation" width="10" />.</p>
+<img src="images/leanpub_equation_148.png" alt="V_{\pi}(s) = \mathop{\mathbb{E}}_{\pi}[\sum_{k=0}^{\infty} \gamma^k R_{t + k + 1} | S_t = s]" class="block-equation" width="246" />
+<p>There exists an <strong>optimal value function</strong> that has the highest value for all states. Defined as:</p>
+<img src="images/leanpub_equation_149.png" alt="V^*(s) = \max_{\pi}V^{\pi}(s) \quad \forall s \in \mathbb{S}" class="block-equation" width="224" />
+<h4 id="chap08.xhtml#leanpub-auto-q-function"><img src="images/leanpub_equation_150.png" alt="Q" class="inline-equation" width="12" />-function</h4>
+<p>Similarly, let’s define another function known as <img src="images/leanpub_equation_151.png" alt="Q" class="inline-equation" width="12" />-function (state-action value function) that gives the expected return starting from state <img src="images/leanpub_equation_152.png" alt="s" class="inline-equation" width="7" />, taking action <img src="images/leanpub_equation_153.png" alt="a" class="inline-equation" width="8" />, and following policy <img src="images/leanpub_equation_154.png" alt="\pi" class="inline-equation" width="10" />.</p>
+<img src="images/leanpub_equation_155.png" alt="Q_{\pi}(s, a) = \mathop{\mathbb{E}}_{\pi}[\sum_{k=0}^{\infty} \gamma^k R_{t + k + 1} | S_t = s, A_t = a]" class="block-equation" width="329" />
+<p>You can think of the <img src="images/leanpub_equation_156.png" alt="Q" class="inline-equation" width="12" />-function as the “quality” of a certain action given a state. We can define the optimal <img src="images/leanpub_equation_157.png" alt="Q" class="inline-equation" width="12" />-function as:</p>
+<img src="images/leanpub_equation_158.png" alt="Q^*(s, a) = \max_{\pi}Q^{\pi}(s, a) \quad \forall s \in \mathbb{S}" class="block-equation" width="259" />
+<p>There is a relationship between the two optimal functions <img src="images/leanpub_equation_159.png" alt="V^*" class="inline-equation" width="19" /> and <img src="images/leanpub_equation_160.png" alt="Q^*" class="inline-equation" width="19" />. It is given by:</p>
+<img src="images/leanpub_equation_161.png" alt="V^*(s) = \max_aQ^*(s, a) \quad \forall s \in \mathbb{S}" class="block-equation" width="240" />
+<p>That is, the maximum expected total reward when starting at <img src="images/leanpub_equation_162.png" alt="s" class="inline-equation" width="7" /> is the maximum of <img src="images/leanpub_equation_163.png" alt="Q^*(s, a)" class="inline-equation" width="60" /> over all possible actions.</p>
+<p>We can find the optimal policy <img src="images/leanpub_equation_164.png" alt="\pi^*" class="inline-equation" width="16" /> by choosing the action <img src="images/leanpub_equation_165.png" alt="a" class="inline-equation" width="8" /> that gives maximum reward <img src="images/leanpub_equation_166.png" alt="Q^*(s, a)" class="inline-equation" width="60" /> for state <img src="images/leanpub_equation_167.png" alt="s" class="inline-equation" width="7" />:</p>
+<img src="images/leanpub_equation_168.png" alt="\pi^*(s) = \text{arg}\max_{a} Q^* (s, a) \quad \forall s \in \mathbb{S}" class="block-equation" width="265" />
+<p>There seems to be a synergy between all functions we defined so far. More importantly, we can now build an optimal agent for a given environment. Can we do it in practice?</p>
+<h4 id="chap08.xhtml#leanpub-auto-q-learning"><img src="images/leanpub_equation_169.png" alt="Q" class="inline-equation" width="12" />-learning</h4>
+<p>Q-Learning is an off-policy algorithm for <a href="https://en.wikipedia.org/wiki/Temporal_difference_learning">Temporal Difference (TD) learning</a>. It is proven that with enough training, it converges with probability 1 to a close approximation of the action-value function for an arbitrary target policy. It learns the optimal policy even when actions are selected using exploratory (some randomness) policy (off-policy).</p>
+<p>Given a state <img src="images/leanpub_equation_170.png" alt="s" class="inline-equation" width="7" /> and action <img src="images/leanpub_equation_171.png" alt="a" class="inline-equation" width="8" />, we can express <img src="images/leanpub_equation_172.png" alt="Q(s, a)" class="inline-equation" width="52" /> in terms of itself (recursively):</p>
+<img src="images/leanpub_equation_173.png" alt="Q(s, a) = r + \gamma \max_{a&#39;}Q(s&#39;, a&#39;)" class="block-equation" width="223" />
+<p>This is the <strong>Bellman equation</strong>. It defines the maximum future reward as the reward <img src="images/leanpub_equation_174.png" alt="r" class="inline-equation" width="7" /> the agent received, for being at state <img src="images/leanpub_equation_175.png" alt="s" class="inline-equation" width="7" />, plus the maximum future reward for state <img src="images/leanpub_equation_176.png" alt="s&#39;" class="inline-equation" width="11" /> for every possible action.</p>
+<p>We can define <img src="images/leanpub_equation_177.png" alt="Q" class="inline-equation" width="12" />-learning as an iterative approximation of <img src="images/leanpub_equation_178.png" alt="Q^*" class="inline-equation" width="19" /> using the Bellman equation:</p>
+<img src="images/leanpub_equation_179.png" alt="Q_{t+1}(s_t, a_t) = Q_t(s_t, a_t) + \alpha(r_{t+1} + \gamma \max_{a}Q_t(s_{t + 1}, a) - Q_t(s_t, a_t))" class="block-equation" width="512" />
+<p>where <img src="images/leanpub_equation_180.png" alt="\alpha" class="inline-equation" width="10" /> is the learning rate that controls how much the difference between previous and new Q value is considered.</p>
+<p>Here’s the general algorithm we’re going to implement:</p>
+<ol>
+<li>Initialize a <img src="images/leanpub_equation_181.png" alt="Q" class="inline-equation" width="12" />-values table</li>
+<li>Observe initial state <img src="images/leanpub_equation_182.png" alt="s" class="inline-equation" width="7" /></li>
+<li>Choose action <img src="images/leanpub_equation_183.png" alt="a" class="inline-equation" width="8" /> and act</li>
+<li>Observe reward <img src="images/leanpub_equation_184.png" alt="r" class="inline-equation" width="7" /> and a new state <img src="images/leanpub_equation_185.png" alt="s&#39;" class="inline-equation" width="11" /></li>
+<li>Update the <img src="images/leanpub_equation_186.png" alt="Q" class="inline-equation" width="12" /> table using <img src="images/leanpub_equation_187.png" alt="r" class="inline-equation" width="7" /> and the maximum possible reward from <img src="images/leanpub_equation_188.png" alt="s&#39;" class="inline-equation" width="11" /></li>
+<li>Set the current state to the new state and repeat from <em>step 2</em> until a terminal state</li>
+</ol>
+<p>Note that <img src="images/leanpub_equation_189.png" alt="Q" class="inline-equation" width="12" />-learning is just one possible algorithm to solve the RL problem. <a href="https://en.wikipedia.org/wiki/Reinforcement_learning#Comparison_of_reinforcement_learning_algorithms">Here is a comparison between some more of them</a>.</p>
+<h4 id="chap08.xhtml#leanpub-auto-exploration-vs-exploitation">Exploration vs exploitation</h4>
+<p>You might’ve noticed that we glanced over the strategy on choosing an action. Any strategy you implement will have to choose how often to try something new or use something it already knows. This is known as the exploration/exploitation tradeoff.</p>
+<ul>
+<li>Exploration - finding new information about the environment</li>
+<li>Exploitation - using existing information to maximize the reward</li>
+</ul>
+<p>Remember, the goal of our RL agent is to maximize the expected cumulative reward. What does this mean for our self-driving taxi?</p>
+<p>Initially, our driving agent knows pretty much nothing about the best set of driving directions for picking up and dropping off passengers. It should learn to avoid anomalies too since they are bad for business (passengers tend to disappear or worse in those)! During this time, we expect to make a lot of exploration.</p>
+<p>After obtaining some experience, the agent can use it to choose an action more and more often. Eventually, all choices will be based on what is learned.</p>
+<h3 id="chap08.xhtml#leanpub-auto-driving-in-a-post-apocalyptic-world">Driving in a post-apocalyptic world</h3>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/ml-scratch-8----environment.png" />
+</figure>
+</div>
+<p>Your partner sketched this map. Each block represents a small region of the city. Anomalies are marked in bright circles. The four letters are “safe zones”, where pickups and drop-offs happen.</p>
+<p>Let’s assume your car is the only vehicle in the city (not much of a stretch). We can break it up into a 5x5 grid, which gives us 25 possible taxi locations.</p>
+<p>The current taxi location is <code>(3, 1)</code> in (row, col) coordinates. The pickup and drop off locations are: <code>[(0,0), (0,4), (4,0), (4,3)]</code>. Anomalies are at <code>[(0, 2), (2, 1), (2, 2), (4, 2)]</code>.</p>
+<h4 id="chap08.xhtml#leanpub-auto-environment">Environment</h4>
+<p>We’re going to encode our city map into an environment for the self-driving agent using <a href="https://gym.openai.com/">OpenAI’s Gym</a>. What is this Gym thing anyways?</p>
+<blockquote>
+<p>Gym is a toolkit for developing and comparing reinforcement learning algorithms. It supports teaching agents everything from <a href="https://gym.openai.com/envs/Humanoid-v2/">walking</a> to playing games like <a href="https://gym.openai.com/envs/Pong-ram-v0/">Pong</a> or <a href="https://gym.openai.com/envs/VideoPinball-ram-v0/">Pinball</a>.</p>
+</blockquote>
+<p>The most important entity in Gym is the Environment. It provides a unified and easy to use interface. Here are the most important methods:</p>
+<ul>
+<li><code>reset</code> - resets the environment and returns a random initial state</li>
+<li><p><code>step(action)</code> - take action and advance one timestep. It returns:</p>
+<p><strong>observation</strong> - the new state of the environment</p>
+<p><strong>reward</strong> - reward received from taking the action</p>
+<p><strong>done</strong> - most environments are divided into well-defined episodes and if <code>done</code> is <code>True</code> it indicates the episode has been completed</p>
+<p><strong>info</strong> - additional information about the environment (might be useful for debugging)</p></li>
+<li><code>render</code> - renders one frame of the environment (useful for visualization)</li>
+</ul>
+<p>The complete source code of the environment is in the notebook. Here, we’ll take a look at the registration to Gym:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 register(
+2     id=&#39;SafeCab-v0&#39;,
+3     entry_point=f&quot;{__name__}:SafeCab&quot;,
+4     timestep_limit=100,
+5 )</code></pre>
+</div>
+</figure>
+<p>Note that we set a <code>timestep_limit</code> which limits the number of steps in an episode.</p>
+<h5 id="chap08.xhtml#leanpub-auto-action-space">Action Space</h5>
+<p>Our agent encounters one of the 500 states (5 rows x 5 columns x 5 passenger locations x 4 destinations) and it chooses an action. Here are the possible actions:</p>
+<ul>
+<li>south</li>
+<li>north</li>
+<li>east</li>
+<li>west</li>
+<li>pickup</li>
+<li>dropoff</li>
+</ul>
+<p>You might notice that in the illustration above, the taxi cannot perform certain actions when near the boundaries of the city. We will penalize this with -1 and won’t move the taxi if such situation occurs.</p>
+<h5 id="chap08.xhtml#leanpub-auto-getting-a-taste-of-the-environment">Getting a taste of the environment</h5>
+<p>Let’s have a look at our encoded environment:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 env.reset()
+2 env.render()
+3 
+4 print(&quot;Action Space {}&quot;.format(env.action_space))
+5 print(&quot;State Space {}&quot;.format(env.observation_space))</code></pre>
+</div>
+</figure>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/ml-scratch-8----encoded-environment.png" />
+</figure>
+</div>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 Action Space Discrete(6)
+2 State Space Discrete(500)</code></pre>
+</div>
+</figure>
+<p>Here is the action to number mapping:</p>
+<ul>
+<li>0 = south</li>
+<li>1 = north</li>
+<li>2 = east</li>
+<li>3 = west</li>
+<li>4 = pickup</li>
+<li>5 = dropoff</li>
+</ul>
+<h4 id="chap08.xhtml#leanpub-auto-building-an-agent">Building an agent</h4>
+<p>Our agent has a simple interface for interacting with the environment. Here it is:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 class Agent:
+ 2 
+ 3   def __init__(
+ 4     self,
+ 5     n_states,
+ 6     n_actions,
+ 7     decay_rate=0.0001,
+ 8     learning_rate=0.7,
+ 9     gamma=0.618
+10   ):
+11     pass
+12 
+13   def choose_action(self, explore=True):
+14     pass
+15 
+16   def learn(
+17     self,
+18     state,
+19     action,
+20     reward,
+21     next_state,
+22     done,
+23     episode
+24   ):
+25     pass</code></pre>
+</div>
+</figure>
+<p>We’re going to use the <code>choose_action</code> method when we want our agent to make a decision and act. Then, after the reward and new state from the environment are observed, our agent will learn from its actions using the <code>learn</code> method.</p>
+<p>Let’s take a look at the implementations:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 def __init__(
+ 2   self,
+ 3   n_states,
+ 4   n_actions,
+ 5   decay_rate=0.0001,
+ 6   learning_rate=0.7,
+ 7   gamma=0.618
+ 8 ):
+ 9   self.n_actions = n_actions
+10   self.q_table = np.zeros((n_states, n_actions))
+11   self.max_epsilon = 1.0
+12   self.min_epsilon = 0.01
+13   self.epsilon = self.max_epsilon
+14   self.decay_rate = decay_rate
+15   self.learning_rate = learning_rate
+16   self.gamma = gamma # discount rate
+17   self.epsilons_ = []</code></pre>
+</div>
+</figure>
+<p>The interesting part of the <code>__init__</code> is the initialization of our <img src="images/leanpub_equation_190.png" alt="Q" class="inline-equation" width="12" />-table. Initially, it is all zeros. Can we initialize it in some other way?</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 def choose_action(self, explore=True):
+2   exploration_tradeoff = np.random.uniform(0, 1)
+3 
+4   if explore and exploration_tradeoff &lt; self.epsilon:
+5     # exploration
+6     return np.random.randint(self.n_actions)
+7   else:
+8     # exploitation (taking the biggest Q value for this state)
+9     return np.argmax(self.q_table[state, :])</code></pre>
+</div>
+</figure>
+<p>Our strategy is rather simple. We draw a random number from a uniform distribution between <img src="images/leanpub_equation_191.png" alt="0" class="inline-equation" width="7" /> and <img src="images/leanpub_equation_192.png" alt="1" class="inline-equation" width="6" />. If this number is smaller than epsilon and we want to explore, we take a random action. Otherwise, we take the best action based on our current knowledge.</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 def learn(
+ 2   self,
+ 3   state,
+ 4   action,
+ 5   reward,
+ 6   next_state,
+ 7   done,
+ 8   episode
+ 9 ):
+10   # Update Q(s,a):= Q(s,a) + lr [R(s,a) + gamma * max Q(s&#39;,a&#39;) - Q(s,a)]
+11   self.q_table[state, action] = self.q_table[state, action] + \
+12     self.learning_rate * (reward + self.gamma * \
+13       np.max(self.q_table[new_state, :]) - self.q_table[state, action])
+14 
+15   if done:
+16     # Reduce epsilon to decrease the exploration over time
+17     self.epsilon = self.min_epsilon + (self.max_epsilon - self.min_epsilon) * \
+18       np.exp(-self.decay_rate * episode)
+19     self.epsilons_.append(self.epsilon)</code></pre>
+</div>
+</figure>
+<p>Learning involves the update of the <img src="images/leanpub_equation_193.png" alt="Q" class="inline-equation" width="12" />-table using the <img src="images/leanpub_equation_194.png" alt="Q" class="inline-equation" width="12" />-learning equation and reducing the exploration rate <img src="images/leanpub_equation_195.png" alt="\epsilon" class="inline-equation" width="6" /> if the episode is complete.</p>
+<h4 id="chap08.xhtml#leanpub-auto-training-2">Training</h4>
+<p>Now that our agent is ready for action, we can train it on the environment we’ve created. Let’s train our agent for 50k episodes and record episode rewards over time:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 total_episodes = 60000
+2 total_test_episodes = 10
+3 
+4 agent = Agent(env.observation_space.n, env.action_space.n)</code></pre>
+</div>
+</figure>
+<p>Let’s have a look at our agent driving <strong>before learning anything about the environment</strong>:</p>
+<p><a href="https://www.youtube.com/watch?v=CHayUf_IoUc">See YouTube video</a></p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 rewards = []
+ 2 
+ 3 for episode in range(total_episodes):
+ 4     state = env.reset()
+ 5     episode_rewards = []
+ 6 
+ 7     while True:
+ 8 
+ 9         action = agent.choose_action()
+10 
+11         # Take the action (a) and observe the outcome state(s&#39;) and reward (r)
+12         new_state, reward, done, info = env.step(action)
+13 
+14         agent.learn(
+15           state,
+16           action,
+17           reward,
+18           new_state,
+19           done,
+20           episode
+21         )
+22 
+23         state = new_state
+24 
+25         episode_rewards.append(reward)
+26 
+27         if done == True:
+28           break
+29 
+30     rewards.append(np.mean(episode_rewards))</code></pre>
+</div>
+</figure>
+<p>Recall that we set <code>timestep_limit</code> when we registered the environment so our agent won’t stay in an episode infinitely.</p>
+<h3 id="chap08.xhtml#leanpub-auto-evaluation-5">Evaluation</h3>
+<p>Let’s have a look at reward changes as the training progresses:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/ml-scratch-8----reward-train.png" />
+</figure>
+</div>
+<p>Note that the learning curve is smoothened using <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.savgol_filter.html">savgol_filter</a> <code>savgol_filter(rewards, window_length=1001, polyorder=2)</code></p>
+<p>Recall that our exploration rate should decrease as our agent is learning. Have a look:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/ml-scratch-8----epsilon-train.png" />
+</figure>
+</div>
+<p>Here’s how we’re going to test our agent and record the progress:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 frames = []
+ 2 
+ 3 rewards = []
+ 4 
+ 5 for episode in range(total_test_episodes):
+ 6     state = env.reset()
+ 7     episode_rewards = []
+ 8 
+ 9     step = 1
+10 
+11     while True:
+12         action = agent.choose_action(explore=False)
+13 
+14         new_state, reward, done, info = env.step(action)
+15 
+16         frames.append({
+17           &#39;frame&#39;: env.render(mode=&#39;ansi&#39;),
+18           &#39;state&#39;: state,
+19           &#39;episode&#39;: episode + 1,
+20           &#39;step&#39;: step,
+21           &#39;reward&#39;: reward
+22         })
+23 
+24         episode_rewards.append(reward)
+25 
+26         if done:
+27             step = 0
+28             break
+29         state = new_state
+30         step += 1
+31 
+32     rewards.append(np.mean(episode_rewards))
+33 
+34 env.close()</code></pre>
+</div>
+</figure>
+<p>Note that we want our agent to use only the experience it has so we set <code>explore=False</code>. Here’s what the total reward for each episode looks like:</p>
+<div class="figure-wrapper center">
+<figure>
+<img src="images/ml-scratch-8----reward-test.png" />
+</figure>
+</div>
+<p>I know that this chart might not give you a good idea of what the agent is capable of. Here is a video of it driving in the city:</p>
+<p><a href="https://www.youtube.com/watch?v=HHIuVNZNMNg">See YouTube video</a></p>
+<p>Pretty good, right? It looks like that it learned to avoid the anomalies, pick up and drop off passengers.</p>
+<h3 id="chap08.xhtml#leanpub-auto-conclusion-7">Conclusion</h3>
+<p>Congratulations on building a self-driving taxi agent. You’ve learned how to</p>
+<ul>
+<li>Build your own environment based on one provided by OpenAI’s Gym</li>
+<li>Implement and apply <img src="images/leanpub_equation_196.png" alt="Q" class="inline-equation" width="12" />-learning</li>
+<li>Build an agent that learns to pick up, drop off passengers and avoid danger areas</li>
+</ul>
+<p><a href="https://colab.research.google.com/drive/1FMo6Lpf1UtO1blfMyA4yznzDN7tlgIWm">Complete source code in Google Colaboratory Notebook</a></p>
+<p>Can you increase the size of the city? Does the agent still learn well? Tell me how it went in the comments below!</p>
+</div>
