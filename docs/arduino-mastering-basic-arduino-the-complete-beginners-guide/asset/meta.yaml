@@ -1,0 +1,253 @@
+name: Arduino： Mastering Basic Arduino： The Complete Beginner’s Guide To Arduino (Arduino
+  101, Arduino sketches, Complete beginners guide, Programming, Raspberry Pi 3, xml,
+  c++, Ruby, html, php, Robots)
+slug: arduino-mastering-basic-arduino-the-complete-beginners-guide
+name_cn: Arduino：精通 Arduino 基础：Arduino 初学者指南 (Arduino 101，Arduino 图形，初学者指南，编程，树莓派
+  3，xml，c++，Ruby，html，php，机器人)
+toc:
+- - '#'
+  - Arduino：精通 Arduino 基础：Arduino 初学者指南 (Arduino 101，Arduino 图形，初学者指南，编程，树莓派 3，xml，c++，Ruby，html，php，机器人)
+- - '##'
+  - Steve Gold
+- - '##'
+  - 第一本书从这里开始
+- - '###'
+  - Steve Gold
+- - '###'
+  - 序言
+- - '##'
+  - 第一章：了解 Arduino
+- - '##'
+  - Arduino 能为你做什么？
+- - '##'
+  - 在继续之前...
+- - '###'
+  - 领取你的专属免费礼物！
+- - '##'
+  - 第 2 章：开始使用 Arduino
+- - '###'
+  - Arduino 板的结构
+- - '####'
+  - USB 和圆孔接口
+- - '####'
+  - 引脚
+- - '####'
+  - 重置按钮
+- - '####'
+  - 电源 LED 指示灯
+- - '####'
+  - 传输 (TX) 和 接收 (RX) LED
+- - '###'
+  - 7. 电压调节器 – 顾其名，该组件控制进入 `Arduino` 板的电压量。它通过排除进入电路板的额外电压来发挥作用。但它也有局限性；它无法处理超过 20
+    伏的电压。因此，特别提醒：不要使用大于 20 伏的电源！它会过载并损坏你的 `Arduino`。大多数型号的建议电压为 6 到 12 伏。
+- - '##'
+  - 全家人桶
+- - '##'
+  - Genuino 是什么？！
+- - '##'
+  - 你可以使用的其他东西
+- - '###'
+  - 安装软件
+- - '##'
+  - 第 3 章 迈出第一步！
+- - '###'
+  - 插入板子
+- - '##'
+  - 安装驱动程序
+- - '##'
+  - 启动与 Sketch
+- - '##'
+  - 上传并让它闪烁！
+- - '##'
+  - 但它不起作用！
+- - '##'
+  - 第一个任务：点亮 LED！
+- - '#'
+  - Arduino 概念
+- - '###'
+  - 驱动程序 (Driver)
+- - '###'
+  - 环境 (Environment)
+- - '###'
+  - 地线 (Ground)
+- - '###'
+  - I/O
+- - '###'
+  - LED
+- - '###'
+  - 微控制器 (Micro-controller)
+- - '###'
+  - 开源 (Open-source)
+- - '###'
+  - 传感器 (Sensor)
+- - '###'
+  - 串口 (Serial port)
+- - '###'
+  - Sketch (程序)
+- - '###'
+  - 扩展板 (Shield)
+- - '###'
+  - IDE (集成开发环境)
+- - '###'
+  - 脉冲宽度调制 (PWM)
+- - '###'
+  - 电压 (Voltage)
+- - '#'
+  - 资源
+- - '###'
+  - 核心资源与进阶阅读
+- - '###'
+  - 绝对初学者
+- - '####'
+  - 'Arduino 入门：开源电子 (Getting Started with Arduino: The Open Source Electronics)'
+- - '####'
+  - 'Arduino C 入门第二版：学习 C 语言编程 (Beginning C for Arduino, Second Edition: Learn C Programming)'
+- - '###'
+  - 将你的技能提升到新水平
+- - '####'
+  - 'Arduino 编程进阶：深入学习 Sketch (Programming Arduino Next Steps: Going Further with
+    Sketches)'
+- - '####'
+  - '从零开始学电子：通过破解、设计和发明进行学习 (Electronics from the Ground Up: Learn by Hacking, Designing,
+    and Inventing)'
+- - '####'
+  - 恶魔天才的 30 个 Arduino 项目 (30 Arduino Projects for the Evil Genius)
+- - '###'
+  - 趣味项目创意
+- - '#'
+  - 'Arduino 工作坊：65 个项目的上手入门 (Arduino Workshop: A Hands-On Introduction with 65 Projects)'
+- - '##'
+  - 结论
+- - '#'
+  - 缝纫电子完美 (Sew Electric Perfect)
+- - '#'
+  - '纺织信息：来自电子织物与教育世界的派遣 (Textile Messages: Dispatches From the World of E-Textiles
+    and Education)'
+- - '##'
+  - 结论
+- - '#'
+  - 第二部分开始
+- - '###'
+  - 引言
+- - '###'
+  - 第一章：使用 Arduino IDE
+- - '###'
+  - 第二章：创建与保存 Sketch
+- - '###'
+  - 第三章：信号与系统
+- - '###'
+  - 第四章：整合传感器
+- - '###'
+  - 第五章：输出输出
+- - '###'
+  - 第六章：面包板
+- - '###'
+  - 第七章：制作自己的简单机器人
+- - '###'
+  - 结论
+- - '###'
+  - 来自作者的消息
+- - '##'
+  - 第 1 章：使用 Arduino IDE
+- - '##'
+  - 命令区域
+- - '###'
+  - 菜单项
+- - '###'
+  - 图标
+- - '##'
+  - 文本区域
+- - '##'
+  - 消息窗口区域
+- - '##'
+  - 第 2 章：创建和保存你的 sketch
+- - '##'
+  - 项目规划阶段
+- - '##'
+  - 如何编写你自己的 sketch
+- - '###'
+  - '注释 (Comments) '
+- - '###'
+  - Arduino 使用的语言
+- - '###'
+  - 变量 (Variables)
+- - '###'
+  - Setup 函数 (Setup Function)
+- - '###'
+  - Loop 函数 (Loop Function)
+- - '###'
+  - 控制硬件 (Controlling Hardware)
+- - '##'
+  - 将你的程序上传到开发板并运行
+- - '##'
+  - 修改程序
+- - '##'
+  - 第 3 章：信号与系统
+- - '###'
+  - 开发板上的模拟引脚和数字引脚
+- - '##'
+  - 第 4 章：整合传感器
+- - '#'
+  - 工作空间组织
+- - '##'
+  - 值得考虑的工具
+- - '##'
+  - 传感器与你的 Arduino 板板
+- - '##'
+  - 感应运动
+- - '##'
+  - 追光
+- - '##'
+  - 如何检测运动
+- - '##'
+  - 测量距离
+- - '##'
+  - 第 5 章：不同类型的输出
+- - '###'
+  - 数字输出
+- - '###'
+  - 模拟输出
+- - '##'
+  - 改变水平
+- - '###'
+  - 了解你的 LED
+- - '###'
+  - 最大引脚电流
+- - '###'
+  - LED 的实际应用
+- - '####'
+  - 串联电阻
+- - '####'
+  - 音频输出
+- - '##'
+  - 第 6 章
+- - '##'
+  - 实验板
+- - '##'
+  - 安装 Arduino 和面包板
+- - '##'
+  - 你的机器人的战车已就绪
+- - '##'
+  - 连接你的舵器
+- - '##'
+  - 放置传感器
+- - '##'
+  - 电源已
+- - '##'
+  - 停止你的机器人
+- - '#'
+  - 引言
+- - '#'
+  - 第一章：伟大的起点
+- - '#'
+  - '[埃隆·马斯克 - 现代文艺巨人的商业与人生启训](http://amzn.to/1jpCQl7)'
+- - '#'
+  - '[沃·巴菲 - 投资天才、大亨与慈善家的商业与人生启训](http://amzn.to/1LPu6kp)'
+- - '#'
+  - 史蒂夫·乔布斯 - Apple 背后的大脑传记与启训
+- - '#'
+  - 管理 - 通过 7 个简单步骤实现卓越管理与世界级领导力技能](http://amzn.to/1hFnU09)
+- - '#'
+  - 销售 - 通过 7 个简单步骤向任何人售卖任何产品并实现卓越销售
+- - '#'
+  - Arduino - Arduino 入门：终极新手指南
