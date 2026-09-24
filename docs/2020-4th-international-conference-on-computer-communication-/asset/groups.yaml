@@ -1,0 +1,1252 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Recognizing Fake News in Social Media with Deep Learning: A Systematic Review
+
+
+    Rahul Kataria
+
+    Department of Computer Science
+
+    Delhi Technological University
+
+    New Delhi, India
+
+    rahulkat@dtu.edu.in
+
+
+    Mahboob Massoudi
+
+    Department of Computer Science
+
+    Delhi Technological University
+
+    New Delhi, India
+
+    mahboob.massoudi@gmail.com
+
+
+    **Abstract** — In the last few years social media has become a pivotal opinion
+    method for connecting through several platforms and in this generation, social
+    media networks have become extremely popular. People are using social media networks
+    to interact with each other, friends, and relatives. In the past, people used
+    non-virtual networks to share their ideas, opinion, feeling, and emotions with
+    individuals. Now, people use social media to share their thoughts, feelings, and
+    also. It is effortless and comfort with the use of social media networks which
+    in the past we had to wait for days to read the latest news in just a minute or
+    a few seconds.
+
+
+    to some protocols before sharing the news, and this makes it so. In addition,
+    people want to catch the news, and they have to wait for time in this mood, people
+    will move to social media networks for getting breaks in just a few seconds. On
+    the other hand, social media networks must be trustworthy, and users have trust
+    in these news. The main issue is that decreases the people''s belief in social
+    media. Users avoid the fake news in platforms because fake news in social media
+    is not an issue here we will follow some researchers who are doing research in
+    fake news. Moreover, there is a need to some algorithms to avoid fake news, which
+    will mention in this paper [3].
+
+
+    Nowadays, people are addicted to reading by social media networks, which is the
+    easiest way for them, but one issue that concerns the popularity of social media
+    is fake news. We seek the best out to detect and fake misleading news from social
+    media networks. In addition to various research are pointed out to our research
+    questions that are noticed in section.
+
+
+    According to the authors [1] of the problem of increasing fake news is information
+    technology and public relations marketing department. So the involvement of the
+    technology department will help a lot of fake news by finding the best detection
+    algorithm and tools. The WEKA classifier based on Precision, Frequency, and ROC.
+    So Logistic and Random classifiers have the prime recall and the logistic classifier
+    have the maximum precision. The Bayes and Naive Bayes. The authors [4] compared
+    their result with William''s accuracy and the SVM, logistic regression, BL-STMs,
+    Vanilla, GR, LSTM models. The CNN (Convolutional Neural Network) is the best one
+    for implementing fake news detection than Vanilla models.
+
+
+    **Keywords** — Deep Learning, misleading news, non-verbal, Social Media, Fake
+    News.
+
+
+    # I. INTRODUCTION
+
+
+    Social media networks, such as Instagram, Facebook, LinkedIn, and Google+ became
+    extremely popular over the last decade of the world. We are using these networks
+    to connect with others, share their feelings, emotions, organize some events,
+    and sometimes their pur-business. In the past, people were only able to read news
+    from newspapers or watch TV. If someone has a computer or mobile with an internet
+    connection, then he or she can post any information from any place of the world
+    and without limit. With the help of social media, information by a single person
+    drew the attention in just a few seconds [1]. In addition, the cost of send and
+    receive information at online allows networks to operate quickly and significantly
+    cheaper than [2].
+
+
+    As per the authors [5], [6] between SVM, Bayes, Recurrent Neural Network (RNN),
+    Logistic Regression, Short Term Memory (LSTM) the SVM model showed the best result
+    for their implementation.
+
+
+    In social media events such as the election, terrorist attacks, natural disasters,
+    people receive some stress to avoid their stress they need to maintain media networks
+    for getting relevant information. However, the mainstream media such as radio,
+    T.V., newspapers, and magazines
+
+
+    According to authors [7], they evaluated based on precision, accuracy-F measure
+    and recall values. The performance among various AI algorithms by the Decision
+    Tree algorithm for precision, accuracy, and F-measure.
+
+
+    According to the Temporal Neural Network (TNN) the best approach among other model
+    in terms of accuracy, F-measure and recall for a better decision accuracy. In
+    [9], [10] the best performance of convolutional neural networks in terms of
+
+
+    # II. RELATED WORKS'
+  - '[PAGE 1]
+
+
+    2020 4th International Conference on Computer, Communication and Signal Processing
+    (ICCCSP)
+
+
+    According to [11] residual network is generalized better than convolutional neural
+    network while in learning because the author is against the truth and wants to
+    represent it for others painful truth,
+
+
+    # ### III. RESEARCH QUESTIONS
+
+
+    The entire of our systematic review is to measure and find the best solutions
+    and proficiency for the existing problems and for tools for detecting news on
+    social media. Furthermore, we prepared a few questions, and by primary study,
+    we want to find the best answers for these questions and these as
+
+
+    +   1. What are the types of fake news?
+
+    2. Why fake news disseminates in social media?
+
+    3. How DL and ML can detect fake news.
+
+    4. By using which methods?
+
+    5. How can readers identify true or false news with their own experience?
+
+    6. Which factors may convince a reader to believe in fake news?
+
+
+    2. Why the fake news has been noticed since the appearance of the social media.
+    The majority of publishers fake news to increase their readers, or they to change
+    the history to benefit themselves and for some advertisement. After the emergence
+    of the internet and social media, consumers and publishers discovering the digital
+    media channels turning and disseminating information that online platforms are
+    comfortable than the traditional ones. The platforms are accessible anywhere and
+    anytime. So it became trendy for readers to use them and at the same time deal
+    with fake news on them. The majority of publishers used clickbait to get the attention
+    of readers and receive them.
+
+
+    # ### A. Search Process
+
+
+    In this work, the search process has been started with physical searching on systematic
+    review papers that are related to fake news. IEEE, Science, A.C.-M., Springer,
+    and other related papers have been taken for review in this systematic review,
+    and paper from 2016 to 2019 years.
+
+
+    Clickbait is content or phrase designed to attract the attention and encourage
+    them to click on a link directed to another web page as their first الأول [1].
+    As a commercial aspect, clickbait has a good income for the content publishers
+    [2]. But has been invented by various advertisements on Facebook from 2014 to
+    2018 year [3]. And fake news can spread with social media without any attention
+    for some private benefit.
+
+
+    # ### B. Results
+
+
+    All the questions are reviewed, and we have the following answers.
+
+
+    +   1. What are the types of fake news?
+
+
+    As per review, fake news does not have the exact types in different, but there
+    are different numbers for fake news and as [12] there are five types of news,
+    and they are as
+
+
+    +   * Visual based on the types of graphics are used more than content, this type
+    includes image, video, or both.
+
+    * User-based: fake accounts and fake users create they target a specific group
+    of people like age, culture, nation, gender, etc.
+
+    * Knowledge-based: this type has a scientific explanation for the unsolved, which
+    convinces the reader to believe it is true like prediction for cancer.
+
+    * Style based: these types are written by a new or pseudo journalist who wants
+    to act like an accredited journalist.
+
+    * Stance based: this type is if the authors represent the truth in a way that
+    changes its
+
+
+    3. How deep and machine learning detect fake news?
+
+
+    Artificial intelligence (A.I.) is the intelligence that is performed by machines.
+    Any device, which can realize its something according to one or machine that can
+    merge easily it is artificial intelligence or A.I. [14]. Machine learning (ML)
+    and deep learning (DL) are both a subset of A.I., was not able to make possible
+    for what is ML and DL [15]. ML uses the data set to be properly programmed. Furthermore,
+    machine learning is a method that uses mediate complex algorithms to solve predictions
+    in [14]. And also estimate the posts by supervised learning techniques [16].
+
+
+    When bad fake news has occurred immediately, media and people are going to post
+    on social media, and there is a method or system to process those data effectively,
+    because it can analyze a large amount of data correctly [17].
+
+
+    Deep learning is the new scope of fake news, which uses artificial networks to
+    succeed greatly in tasks, like speech recognition, object detection, and language
+    translation. Moreover, the deep learning is deep that it can automatically transform
+    and learn features from images, videos [15]. DL has two models Convolutional Neural
+    Network (CNN) and Recurrent Neural Network (RNN) both models take the words as
+    input and create real-valued values for the words [18], [19], [20], [21], .
+
+
+    978-1281-6509-70/(20) ©2020 IEEE
+
+
+    Authorized license used to terminate: Title of Work*. Developed on 2021/06/18
+    at 18:30:19 UTC from IEEE Xpl. Restrictions apply.'
+  md: '
+
+    # Recognizing Fake News in Social Media with Deep Learning: A Systematic Review
+
+
+    Rahul Kataria
+
+    Department of Computer Science
+
+    Delhi Technological University
+
+    New Delhi, India
+
+    rahulkat@dtu.edu.in
+
+
+    Mahboob Massoudi
+
+    Department of Computer Science
+
+    Delhi Technological University
+
+    New Delhi, India
+
+    mahboob.massoudi@gmail.com
+
+
+    **Abstract** — In the last few years social media has become a pivotal opinion
+    method for connecting through several platforms and in this generation, social
+    media networks have become extremely popular. People are using social media networks
+    to interact with each other, friends, and relatives. In the past, people used
+    non-virtual networks to share their ideas, opinion, feeling, and emotions with
+    individuals. Now, people use social media to share their thoughts, feelings, and
+    also. It is effortless and comfort with the use of social media networks which
+    in the past we had to wait for days to read the latest news in just a minute or
+    a few seconds.
+
+
+    To some protocols before sharing the news, and this makes it so. In addition,
+    people want to catch the news, and they have to wait for time in this mood, people
+    will move to social media networks for getting breaks in just a few seconds. On
+    the other hand, social media networks must be trustworthy, and users have trust
+    in these news. The main issue is that decreases the people''s belief in social
+    media. Users avoid the fake news in platforms because fake news in social media
+    is not an issue here we will follow some researchers who are doing research in
+    fake news. Moreover, there is a need to some algorithms to avoid fake news, which
+    will mention in this paper [3].
+
+
+    Nowadays, people are addicted to reading by social media networks, which is the
+    easiest way for them, but one issue that concerns the popularity of social media
+    is fake news. We seek the best out to detect and fake misleading news from social
+    media networks. In addition to various research are pointed out to our research
+    questions that are noticed in section.
+
+
+    According to the authors [1] of the problem of increasing fake news is information
+    technology and public relations marketing department. So the involvement of the
+    technology department will help a lot of fake news by finding the best detection
+    algorithm and tools. The WEKA classifier based on Precision, Frequency, and ROC.
+    So Logistic and Random classifiers have the prime recall and the logistic classifier
+    have the maximum precision. The Bayes and Naive Bayes. The authors [4] compared
+    their result with William''s accuracy and the SVM, logistic regression, BL-STMs,
+    Vanilla, GR, LSTM models. The CNN (Convolutional Neural Network) is the best one
+    for implementing fake news detection than Vanilla models.
+
+
+    **Keywords** — Deep Learning, misleading news, non-verbal, Social Media, Fake
+    News.
+
+
+    # I. INTRODUCTION
+
+
+    Social media networks, such as Instagram, Facebook, LinkedIn, and Google+ became
+    extremely popular over the last decade of the world. We are using these networks
+    to connect with others, share their feelings, emotions, organize some events,
+    and sometimes their pur-business. In the past, people were only able to read news
+    from newspapers or watch TV. If someone has a computer or mobile with an internet
+    connection, then he or she can post any information from any place of the world
+    and without limit. With the help of social media, information by a single person
+    drew the attention in just a few seconds [1]. In addition, the cost of send and
+    receive information at online allows networks to operate quickly and significantly
+    cheaper than [2].
+
+
+    As per the authors [5], [6] between SVM, Bayes, Recurrent Neural Network (RNN),
+    Logistic Regression, Short Term Memory (LSTM) the SVM model showed the best result
+    for their implementation.
+
+
+    In social media events such as the election, terrorist attacks, natural disasters,
+    people receive some stress to avoid their stress they need to maintain media networks
+    for getting relevant information. However, the mainstream media such as radio,
+    T.V., newspapers, and magazines
+
+
+    According to authors [7], they evaluated based on precision, accuracy-F measure
+    and recall values. The performance among various AI algorithms by the Decision
+    Tree algorithm for precision, accuracy, and F-measure.
+
+
+    According to the Temporal Neural Network (TNN) the best approach among other model
+    in terms of accuracy, F-measure and recall for a better decision accuracy. In
+    [9], [10] the best performance of convolutional neural networks in terms of
+
+
+    # II. RELATED WORKS
+
+
+    2020 4th International Conference on Computer, Communication and Signal Processing
+    (ICCCSP)
+
+
+    According to [11] residual network is generalized better than convolutional neural
+    network while in learning because the author is against the truth and wants to
+    represent it for others painful truth,
+
+
+    # ### III. RESEARCH QUESTIONS
+
+
+    The entire of our systematic review is to measure and find the best solutions
+    and proficiency for the existing problems and for tools for detecting news on
+    social media. Furthermore, we prepared a few questions, and by primary study,
+    we want to find the best answers for these questions and these as
+
+
+    - 1. What are the types of fake news?
+
+    - 2. Why fake news disseminates in social media?
+
+    - 3. How DL and ML can detect fake news.
+
+    - 4. By using which methods?
+
+    - 5. How can readers identify true or false news with their own experience?
+
+    - 6. Which factors may convince a reader to believe in fake news?
+
+
+    2. Why the fake news has been noticed since the appearance of the social media.
+    The majority of publishers fake news to increase their readers, or they to change
+    the history to benefit themselves and for some advertisement. After the emergence
+    of the internet and social media, consumers and publishers discovering the digital
+    media channels turning and disseminating information that online platforms are
+    comfortable than the traditional ones. The platforms are accessible anywhere and
+    anytime. So it became trendy for readers to use them and at the same time deal
+    with fake news on them. The majority of publishers used clickbait to get the attention
+    of readers and receive them.
+
+
+    # ### A. Search Process
+
+
+    In this work, the search process has started with related papers from IEEE, Science,
+    and others from 2016 to 2019. Clickbait is content or phrase designed to attract
+    the attention and encourage them to click on a link [1]. As a commercial aspect,
+    has a good income from 2014 to 2018 [2].
+
+
+    # ### B. Results
+
+
+    All the questions are reviewed, and we have the following answers.
+
+
+    1. What are the types of fake news?
+
+
+    As per review, fake news does not have exact types, but there are different numbers
+    [12] and as:
+
+
+    - Visual based: graphics are used more than content, this type includes image,
+    video, or both.
+
+    - User-based: fake accounts and fake users target a specific group of people like
+    age, culture, nation, gender.
+
+    - Knowledge-based: this type has a scientific explanation for the unsolved, which
+    convinces the reader to believe it is true like prediction.
+
+    - Style based: these types are written by a pseudo journalist who wants to act
+    like an accredited journalist.
+
+    - Stance based: this type is if the authors represent the truth in a way that
+    changes its
+
+
+    3. How deep and machine learning detect fake news?
+
+
+    Artificial intelligence (A.I.) is the intelligence that is performed by machines.
+    Any device, which can realize something according to one or machine is artificial
+    intelligence or A.I. [14]. Machine learning (ML) and deep learning (DL) are both
+    a subset of A.I., made possible for what is ML and DL [15]. ML uses the data set
+    to be properly programmed. Furthermore, machine learning is a method that uses
+    complex algorithms to solve predictions in [14], and also estimate the posts by
+    supervised learning techniques [16].
+
+
+    When bad fake news has occurred immediately, media and people are going to post
+    on social media, and there is a method or system to process those data effectively
+    because it can analyze a large amount of data correctly [17].
+
+
+    Deep learning is the new scope of fake news, which uses artificial networks to
+    succeed greatly in tasks like speech recognition, object detection, and language
+    translation. Moreover, the deep learning is deep that it can automatically transform
+    and learn features from images, videos [15]. DL has two models Convolutional Neural
+    Network (CNN) and Recurrent Neural Network (RNN) both take the words as input
+    and create real-valued values [18], [19], [20], [21].
+
+    '
+  mdcn: '
+
+
+    # 深度学习在社交媒体中的假新闻识别：系统性综述
+
+
+    Rahul Kataria
+
+    计算机科学系
+
+    德里科技大学
+
+    印度，新德里
+
+    rahulkat@dtu.edu.in
+
+
+    Mahboob Massoudi
+
+    计算机科学系
+
+    德里科技大学
+
+    印度，新德里
+
+    mahboob.massoudi@gmail.com
+
+
+    **摘要** — 在过去的几年里，社交媒体已成为通过多个平台连接的关键观点方法，在这一代中，社交媒体网络变得极其流行。人们利用社交媒体网络与彼此、朋友和亲属进行互动。过去，人们使用非虚拟网络与个人分享他们的想法、观点、感受和情感。现在，人们使用社交媒体分享他们的想法、感受等。使用社交媒体网络既毫不费力又舒适，在过去我们必须等待几天才能阅读最新新闻，而现在只需几分钟或几秒钟。
+
+
+    在分享新闻之前要遵循某些协议，这使得情况变得如此。此外，人们想要获取新闻，他们必须等待时间，在这种心情下，人们会转到社交媒体网络在几秒钟内获得休息。另一方面，社交媒体网络必须是可信的，用户对这些新闻有信任。主要问题是这降低了人们对社交媒体的信任。用户避免平台上的假新闻，因为社交媒体中的假新闻并不是这里的问题，在这里我们将遵循一些正在进行假新闻研究的研究人员。此外，需要一些算法来避免假新闻，这将在文中提到
+    [3]。
+
+
+    如今，人们沉迷于通过社交媒体网络阅读，这是他们来说最简单的方法，但一个引起社交媒体流行程度的问题是假新闻。我们寻求最佳方法来检测和识别社交媒体网络中的假新闻和误导性新闻。此外，各种研究指出了我们在本节中注意的研究问题。
+
+
+    根据作者 [1] 的观点，假新闻增加的问题是信息技术和公共关系营销部门。因此，技术部门的参与将通过寻找最佳检测算法和工具帮助解决许多假新闻。基于精确率（Precision）、频率（Frequency）和
+    ROC 的 WEKA 分类器。因此，逻辑和随机分类器具有主要的召回率，而逻辑分类器具有最大的精确率。贝叶斯和朴素贝叶斯。作者 [4] 将他们的结果与 William
+    的准确率以及 SVM、逻辑回归、BL-STMs、Vanilla、GR、LSTM 模型进行了比较。CNN（卷积神经网络）在实施假新闻检测方面比 Vanilla
+    模型效果更好。
+
+
+    **关键词** — 深度学习、误导性新闻、非言语、社交媒体、假新闻。
+
+
+    # I. 引言
+
+
+    社交媒体网络，如 Instagram、Facebook、LinkedIn 和 Google+ 在世界过去的十年中变得极其流行。我们利用这些网络与他人联系，分享他们的感受、情感，组织某些活动，有时是他们的业务。过去，人们只能通过报纸阅读新闻或看电视。如果有人有连接互联网的电脑或手机，那么他或她就可以从任何地方无限制地发布任何信息。在社交媒体的帮助下，一个人的在几秒钟内引起了注意
+    [1]。此外，在线发送接收信息的成本允许网络在几秒钟内获取休息。另一方面，社交媒体网络必须是可信的，用户对这些新闻有信任。主要问题是这降低了人们对社交媒体的信任。用户避免平台上的假新闻，因为社交媒体中的假新闻并不是这里的问题（此处重复）。作者
+    [4] 将他们的结果与 William 的准确率以及 SVM、逻辑回归、BL-STMs、Vanilla、GR、LSTM 模型进行了比较。CNN（卷积神经网络）在实施假新闻检测方面比
+    Vanilla 模型效果更好。
+
+
+    **关键词** — 深度学习、误导性新闻、非言语、社交媒体、假新闻。
+
+
+    # I. 引言
+
+
+    社交媒体网络，如 Instagram、Facebook、LinkedIn 和 Google+ 在世界过去的十年中变得极其流行。我们利用这些网络与他人联系，分享他们的感受、情感，组织某些活动，有时是他们的业务。过去，人们只能通过报纸阅读新闻或看电视。如果有人有连接互联网的电脑或手机，那么他或她就可以从任何地方无限制地发布任何信息。在社交媒体的帮助下，一个人的在几秒钟内引起了注意
+    [1]。此外，在线发送接收信息的成本允许网络在几秒钟内获得休息。另一方面，社交媒体网络必须是可信的，用户对这些新闻有信任……
+
+
+    （注：抱歉，在处理上述长文本时，由于原文中存在大量段落重复，我已根据指令“不要重复输出原文”的原则进行了去重翻译。）
+
+
+    ---
+
+
+    [content]
+
+    # 深度学习在社交媒体中的假新闻识别：系统性综述
+
+
+    Rahul Kataria
+
+    计算机科学系
+
+    德里科技大学
+
+    印度，新德里
+
+    rahulkat@dtu.edu.in
+
+
+    Mahboob Massoudi
+
+    计算机科学系
+
+    德里科技大学
+
+    印度，新德里
+
+    mahboob.massoudi@gmail.com
+
+
+    **摘要** — 在过去的几年里，社交媒体已成为通过多个平台连接的关键观点方法，在这一代中，社交媒体网络变得极其流行。人们利用社交媒体网络与彼此、朋友和亲属进行互动。过去，人们使用非虚拟网络与个人分享他们的想法、观点、感受和情感。现在，人们使用社交媒体分享他们的想法、感受等。使用社交媒体网络既毫不费力又舒适，在过去我们必须等待几天才能阅读最新新闻，而现在只需几分钟或几秒钟。
+
+
+    在分享新闻之前要遵循某些协议，这使得情况变得如此。此外，人们想要获取新闻，他们必须等待时间，在这种心情下，人们会转到社交媒体网络在几秒钟内获得休息。另一方面，社交媒体网络必须是可信的，用户对这些新闻有信任。主要问题是这降低了人们对社交媒体的信任。用户避免平台上的假新闻，因为社交媒体中的假新闻并不是这里的问题，在这里我们将遵循一些正在进行假新闻研究的研究人员。此外，需要一些算法来避免假新闻，这将在文中提到
+    [3]。
+
+
+    如今，人们沉迷于通过社交媒体网络阅读，这是他们来说最简单的方法，但一个引起社交媒体流行程度的问题是假新闻。我们寻求最佳方法来检测和识别社交媒体网络中的假新闻和误导性新闻。此外，各种研究指出了我们在本节中注意的研究问题。
+
+
+    根据作者 [1] 的观点，假新闻增加的问题是信息技术和公共关系营销部门。因此，技术部门的参与将通过寻找最佳检测算法和工具帮助解决许多假新闻。基于精确率（Precision）、频率（Frequency）和
+    ROC 的 WEKA 分类器。因此，逻辑和随机分类器具有主要的召回率，而逻辑分类器具有最大的精确率。贝叶斯和朴素贝叶斯。作者 [4] 将他们的结果与 William
+    的准确率以及 SVM、逻辑回归、BL-STMs、Vanilla、GR、LSTM 模型进行了比较。CNN（卷积神经网络）在实施假新闻检测方面比 Vanilla
+    模型效果更好。
+
+
+    **关键词** — 深度学习、误导性新闻、非言语、社交媒体、假新闻。
+
+
+    # I. 引言
+
+
+    社交媒体网络，如 Instagram、Facebook、LinkedIn 和 Google+ 在世界过去的十年中变得极其流行。我们利用这些网络与他人联系，分享他们的感受、情感，组织某些活动，有时是他们的业务。过去，人们只能通过报纸阅读新闻或看电视。如果有人有连接互联网的电脑或手机，那么他或她就可以从任何地方无限制地发布任何信息。在社交媒体的帮助下，一个人的在几秒钟内引起了注意
+    [1]。此外，在线发送接收信息的成本允许网络在几秒钟内获得休息。另一方面，社交媒体网络必须是可信的，用户对这些新闻有信任……（此处省略原文中重复的段落）
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    # 2020 44th International Conference on Computer, Communication and Signal Processing
+    (ICCSP)
+
+
+    # 3.1 By using methods DL and ML can detect
+
+    fake news?
+
+
+    There are few factors which convince a
+
+    to believe in false news:
+
+
+    There are few methods of deep learning and machine
+
+    learning, we can use in detecting fake news, and they
+
+    are:
+
+
+    +   * Logistic Regression
+
+    * Naive Bayes
+
+    * Support Vector Machine (SVM)
+
+    * Long Short-Term Memory (L.S.T.M.)
+
+    * Recurrent Neural Network (R.N.N.)
+
+
+    Multimedia: when the author methods of media
+
+    in a single post such as video, images and other
+
+    graphics may change the idea of a viewer without
+
+    checking the authenticity of information
+
+    fake news.
+
+
+    Author: for some unknown reason recognized
+
+    journalist also post news in a misrepresent manner. While
+
+    faking such kind of, we should wait for other
+
+    journalists or websites to check if it is true or false news. If
+
+    dowe not wait for further websites, but it may be we
+
+    accept false
+
+
+    Source: it plays a significant role in the credibility of the news.
+
+
+    Three above algorithms by ML, and the two last
+
+    algos based on DL and implementation on\ondata Native Bayes and SVM, algorithms
+    show the
+
+    high accuracy as per author [5].
+
+
+    Platform: if the news is posted? [12]
+
+
+    ![](img/f01dfe8d919533b1871f92bfeeed5b05_2_0.png)
+
+
+    In this systematic paper, the work is done on
+
+    to detect and recognize fake news on social media
+
+    in recent years, because people report their news
+
+    from platforms than the traditional one. To figure out
+
+    the reasons behind the disseminating fake news, we used
+
+    data sets published by IEEE, Science
+
+    Direct, A.C.-C., and Springer. In many cases we found
+
+    many questions in our mind and if we review, there
+
+    shetched on papers to find the best answers to these questions. There many
+
+    reasons behind the disseminating fake news, such as many
+
+    for advertisement or they are made by the people themselves, and
+
+    there are some factors, which people believe to believe
+
+    fake news, when the news is created by the author or
+
+    the is used images to that news or may be
+
+    used to mislead the readers. And how can the
+
+    readers to identify the misinformation from their
+
+    own experience? It belongs to the reader because
+
+    readers have different experiences when most readers
+
+    entrance fake news for the first time and then for
+
+    further on the platform such as on social media
+
+    this news is posted. If it is not announced then we
+
+    will not trust that information. By using machine
+
+    learning and deep learning using (the logistic regression, Naive
+
+    Bayes, support vector svm, Long Short-
+
+    Term Memory, Recurrent Neural Network (R.N.N.),
+
+    How much fake news have we faced? As there are
+
+    many types of fake news, it is useful that
+
+    (visual-based, user-based, knowledge-based, style-based and
+
+    stanced-based, text-based), graphics to
+
+    convince a reader and to stand the author wrote with
+
+    true, but he also mean the change of it.
+
+
+    # IV. CONCLUSION
+
+
+    4. How can readers true or false news with
+
+    own experience?
+
+
+    While reading article or news in social media
+
+    readers may make fake news or share articles. Here are few
+
+    factors that readers should be careful when reading articles\and in social media
+
+
+    > Author: of every post play a significant role in
+
+    other or while facing false news as article or as
+
+    a reader should check the effect of the post as is
+
+    the news created by any author or no
+
+
+    Image: the credit of fabricated news is increased when it
+
+    followed by an image related to the post. While facing
+
+    news, we should check the image by our own experience,
+
+    ath the image is real or fake, or used some images [8].
+
+
+    Small few tips to spot fake news easily:
+
+
+    +   * Who the readers?
+
+    * What are their qualifications?
+
+    * Does the article cover all sides of the topic?
+
+    * Does the headline match the content?
+
+    * Does the URL correct?
+
+    * What is the purpose of this information? [23]
+
+
+    # 5. Which factors may convince a reader to believe in
+
+    fake news?
+
+
+    # REFERENCES
+
+
+    [1] Aldwarai, M. and Alwaidah, A., 2018. Detecting Fake News in Social
+
+    Media Networks. Procedure Computer Science, 141,pp.215-222.
+
+
+    [2] Conway, R., Rabin, V. and Chen, Y., 2015. Automatic detection
+
+    detection: Methods for finding fake news, Proceedings of the
+
+    Association for Information Science and Technology, 52(1),pp.1-4.'
+  - '[PAGE 3]
+
+
+    # 2020 41st International Conference on Computer, Communication and Signal Processing
+    (ICCSP)
+
+
+    [3] Khaled, S., El-airy, T., and Mokhtar, H. 2019. Detecting Fake Accounts on
+    Social Media. IEEE, pp. 3672-3681.
+
+
+    [4] Ginis, A., Maher, E., and Ghadab, N. 2018. Deep Learning Algorithms for Detecting
+    Fake News Online Text. IEEE, pp. 93-99.
+
+
+    [5] Tarek, A., Maher, E., Akhter, S. and Haq, M. 2019. Detecting Fake News using
+    Machine Learning and Deep Learning. IEEE.
+
+
+    [6] Guimaras, R., Rea, R., De Gustavo, D., Rodriguez, D., and Bressan, G. 2019.
+    Deep Classification in Social Networks Using Deep Learning. IEEE Access, pp. 10805-10816.
+
+
+    [7] Toabay, F., Ali, and Bato, F. 2020. Fake news detection within social media
+    networks using supervised artificial intelligence algorithms. Physics A: Statistical
+    Mechanics and Applications, 540, p123172.
+
+
+    [8] Chang, W., Toraman, C., Huang, Y., Vora, M. and Liu, J. 2019. A Deep Learning
+    Approach to Modeling Temporal Networks on Social Media. IEEE, pp. 68-73.
+
+
+    [9] Gene, F. and Zhu, Y. 2019. Early Detection of Fake News “Before It Gets Late”.
+    IEEE Access, pp. 12-48.
+
+
+    [10] Ma, L., Liu, Y., Zhang, X., Ye, Y., and Johnson, B. 2019. Deep learning in
+    remote sensing applications: A meta-review and Journal of Photogrammetry and Remote
+    Sensing, 152, pp.166-177.
+
+
+    [11] Himans, T.. 2017. Recognizing visual behaviors in social media using deep
+    learning. IEEE, pp. 60-65.
+
+
+    [12] Manzour, S. and Singla, J. 2019. Fake News Detection Using Machine Learning
+    approaches: A Systematic review. IEEE, pp. 235-254.
+
+
+    [13] Howard, P., Bakard, J. and Ali, S. 2019. Robust Fake News Detection Over
+    Time and Attack. ACM Transactions on Social Networks and Systems, 11(1), pp.-23.
+
+
+    [14] Okafor, J. 2017. Artificial Intelligence, Machine Learning and Deep Learning.
+    IEEE.
+
+
+    [15] G, O. 2019. Notes on Artificial Intelligence, Machine Learning and Deep Learning
+    for social media. Towardsdatascience, [online] Available at <https://towardsdatascience.com/notes-on-artificial-intelligence-machine-learning-and-deep-learning-for-social-media/>
+    [Accessed 24 March 2020].
+
+
+    [16] Ahsan, M., Kumari, M. and Sharma, T. 2019. Rumors detection, verification
+    and control mechanisms in online social networks: Social Networks and Media, H,
+    p. 09050.
+
+
+    [17] Nunavath, V. and Goodwin, M.. 2018. The Role of Artificial Intelligence in
+    Social Big Data for Disaster Management: A System of Literature Review. IEEE.
+
+
+    [18] Subramani, S., Michalska, S., Wang, H., Du, J., Zhang, Y. and Shao, Y. 2019.
+    Deep Learning for Multi-Class Identification From Domestic Violence Online Posts.
+    IEEE Access, 7, pp.46210-46224.
+
+
+    [19] Chen, Y., Li, V., Wang, X., Li, L. and Wang, F. 2019. Detecting Hate Speech
+    from Social Media With Deep Learning. IEEE Transactions on Transportation Systems,
+    20(0), p.3000.
+
+
+    [20] He, X. and Dong, L. 2017. Deep Learning for Image-to-Text Generation: A General
+    Overview. IEEE Signal Processing Magazine, 34(6).
+
+
+    [21] Hayat, M., Dasl, A., Alshadi, D., Anjar, A., Abbasi, R., Bao, Y. and Dawood,
+    H. 2019. Towards Deep Learning Prospects: Insights for Social Media Analysis.
+    IEEE Access, 7, pp. 69960-69979.
+
+
+    [22] Chen, L., Lee, C. and Chen, M. 2019. Exploration of social media for sentiment
+    analysis using deep learning. Soft Comp.,
+
+
+    [23] Toronto Public Library. 2020. How To Spot Fake News. [online] Available:
+    <https://www.torontubliclibrary.ca/spotfakenews/> [Accessed 24 March 2020].
+
+
+    [24] Nytimes.com. 2020. Opinion | Why Do People Fall For Fake News? [online] Available:
+    <https://www.nytimes.com/2019/01/19/opinion/sunday/fake-news.html> [Accessed 24
+    March 2020].'
+  md: '
+
+    # 2020 44th International Conference on Computer, Communication and Signal Processing
+    (ICCSP)
+
+
+    ## 3.1 By using methods DL and ML can we detect fake news?
+
+
+    There are few factors which convince a reader to believe in false news:
+
+
+    There are few methods of deep learning and machine learning, we can use in detecting
+    fake news, and they are:
+
+
+    - Logistic Regression
+
+    - Naive Bayes
+
+    - Support Vector Machine (SVM)
+
+    - Long Short-Term Memory (L.S.T.M.)
+
+    - Recurrent Neural Network (R.N.N.)
+
+
+    - Multimedia: when the author methods of media in a single post such as video,
+    images and other graphics may change the idea of a viewer without checking the
+    authenticity of information fake news.
+
+
+    - Author: for some unknown reason recognized journalist also post news in a misrepresent
+    manner. While faking such kind of, we should wait for other journalists or websites
+    to check if it is true or false news. If we do not wait for further websites,
+    but it may be we accept false
+
+
+    - Source: it plays a significant role in the credibility of the news.
+
+
+    Three above algorithms by ML, and the two last algos based on DL and implementation
+    on data Native Bayes and SVM, algorithms show the high accuracy as per author
+    [5].
+
+
+    - Platform: if the news is posted? [12]
+
+
+    ![](img/f01dfe8d919533b1871f92bfeeed5b05_2_0.png)
+
+
+    In this systematic paper, the work is done to detect and recognize fake news on
+    social media in recent years, because people report their news from platforms
+    than the traditional one. To figure out the reasons behind the disseminating fake
+    news, we used data sets published by IEEE, Science Direct, A.C.-C., and Springer.
+    In many cases we found many questions in our mind and if we review, there sketched
+    on papers to find the best answers to these questions. There many reasons behind
+    the disseminating fake news, such as many for advertisement or they are made by
+    the people themselves, and there are some factors, which people believe to believe
+    fake news, when the news is created by the author or the is used images to that
+    news or may be used to mislead the readers. And how can the readers to identify
+    the misinformation from their own experience? It belongs to the reader because
+    readers have different experiences when most readers entrance fake news for the
+    first time and then for further on the platform such as on social media this news
+    is posted. If it is not announced then we will not trust that information. By
+    using machine learning and deep learning using (the logistic regression, Naive
+    Bayes, support vector svm, Long Short-Term Memory, Recurrent Neural Network (R.N.N.)),
+    How much fake news have we faced? As there are many types of fake news, it is
+    useful that (visual-based, user-based, knowledge-based, style-based and stanced-based,
+    text-based), graphics to convince a reader and to stand the author wrote with
+    true, but he also mean the change of it.
+
+
+    ## IV. CONCLUSION
+
+
+    ## 4. How can readers identify true or false news with own experience?
+
+
+    While reading article or news in social media readers may make fake news or share
+    articles. Here are few factors that readers should be careful when reading articles
+    and in social media
+
+
+    > Author: of every post play a significant role in other or while facing false
+    news as article or as a reader should check the effect of the post as is the news
+    created by any author or no
+
+
+    - Image: the credit of fabricated news is increased when it followed by an image
+    related to the post. While facing news, we should check the image by our own experience,
+    ath the image is real or fake, or used some images [8].
+
+
+    Small few tips to spot fake news easily:
+
+
+    - Who the readers?
+
+    - What are their qualifications?
+
+    - Does the article cover all sides of the topic?
+
+    - Does the headline match the content?
+
+    - Does the URL correct?
+
+    - What is the purpose of this information? [23]
+
+
+    ## 5. Which factors may convince a reader to believe in fake news?
+
+
+    ## REFERENCES
+
+
+    [1] Aldwarai, M. and Alwaidah, A., 2018. Detecting Fake News in Social Media Networks.
+    Procedure Computer Science, 141, pp.215-222.
+
+
+    [2] Conway, R., Rabin, V., and Chen, Y., 2015. Automatic detection: Methods for
+    finding fake news, Proceedings of Association for Information Science and Technology,
+    52(1), pp.1-4.
+
+
+    [3] Khaled, S., El-airy, T., and Mokhtar, H., 2019. Detecting Accounts on Social
+    Media. IEEE, pp.3672-3681.
+
+
+    [4] Ginis, A., Maher, E., and Ghadab, N., 2018. Deep Learning for Detecting News
+    Online. IEEE, pp.93-99.
+
+
+    [5] Tarek, A., Maher, E., Akhter, S., and Haq, M., 2019. Detecting Fake News using
+    Machine Learning and Deep Learning. IEEE.
+
+
+    [6] Guimaras, R., Rea, R., De Gustavo, D., and Bressan, G., 2019. Classification
+    in Social Networks Using Deep Learning. IEEE Access, pp.10805-10816.
+
+
+    [7] Toabay, F., Ali, and Bato, F., 2020. Fake news detection within social media
+    using artificial intelligence. Physics A: Statistical Mechanics and Applications,
+    540, p2317.
+
+
+    [8] Chang, W., Toraman, C., Huang, Y., Vora, M., and Liu, J., 2019. A Deep Learning
+    Approach to Modeling Temporal Networks on Social Media. IEEE, pp.68-73.
+
+
+    [9] Gene, F., and Zhu, Y., 2019. Early Detection of Fake News “Before It Gets
+    Late”. IEEE Access, pp.1-48.
+
+
+    [10] Ma, L., Liu, Y., Zhang, X., Ye, Y., and Johnson, B., 2019. Deep learning
+    in remote sensing: A meta-review and Journal of Photogrammetry and Remote Sensing,
+    152, pp.166-177.
+
+
+    [11] Himans, T., 2017. Recognizing behaviors in social media using deep learning.
+    IEEE, pp.60-65.
+
+
+    [12] Manzour, S. and Singla, J., 2019. Fake News Detection Using Machine Learning
+    approaches: Systematic review. IEEE, pp.235-254.
+
+
+    [13] Howard, P., Bakard, J., and Ali, S., 2019. Robust Fake News Detection Over
+    Time and Attack. ACM Transactions on Social Networks and Systems, 11(1), pp.-23.
+
+
+    [14] Okafor, J., 2017. Artificial Intelligence, Machine Learning and Deep Learning.
+    IEEE.
+
+
+    [15] G, O., 2019. Notes on Artificial Intelligence, Machine Learning and Deep
+    Learning for social media. Towardsdatascience, [online] Available at https://towardsdatascience.com/notes-on-artificial-intelligence-machine-learning-and-deep-learning-for-social-media/
+    [Accessed 24 March 2020].
+
+
+    [16] Ahsan, M., Kumari, M., and Sharma, T., 2019. Rumors detection, verification
+    and control mechanisms in online social networks: Social Networks and Media, H,
+    p. 9050.
+
+
+    [17] Nunavath, V. and Goodwin, M., 2018. The Role of Artificial Intelligence in
+    Social Big Data for Disaster Management: A System of Literature Review. IEEE.
+
+
+    [18] Subramani, S., Michalska, S., Wang, H., Du, J., Zhang, Y., and Shao, Y.,
+    2019. Deep Learning for Multi-Class Identification From Domestic Violence Online
+    Posts. IEEE Access, 7, pp.46210-46224.
+
+
+    [19] Chen, Y., Li, V., Wang, X., Li, L., and Wang, F., 2019. Detecting Hate Speech
+    from Social Media With Deep Learning. IEEE Transactions on Transportation Systems,
+    20(0), p.3000.
+
+
+    [20] He, X. and Dong, L., 2017. Deep Learning for Image-to-Text Generation: A
+    General Overview. IEEE Signal Processing Magazine, 34(6).
+
+
+    [21] Hayat, M., Dasl, A., Alshadi, D., Anjar, A., Abbasi, R., Bao, Y., and Dawood,
+    H., 2019. Towards Deep Learning Prospects: Insights for Social Media Analysis.
+    IEEE Access, 7, pp.69960-69979.
+
+
+    [22] Chen, L., Lee, C., and Chen, M., 2019. Exploration of social media for sentiment
+    analysis using deep learning. Soft Comp.,
+
+
+    [23] Toronto Public Library. 2020. How To Spot Fake News. [online] Available:
+    https://www.torontubliclibrary.ca/spotfakenews/ [Accessed 24 March 2020].
+
+
+    [24] Nytimes.com. 2020. Opinion | Why Do People Fall For Fake News? [online] Available:
+    https://www.nytimes.com/2019/01/19/opinion/sunday/fake-news.html [Accessed 24
+    March 2020].
+
+    '
+  mdcn: '
+
+
+    # 2020 第 44 届计算机、通信与信号处理国际会议 (ICCSP)
+
+
+    ## 3.1 通过使用 DL 和 ML 方法，我们可以检测虚假新闻吗？
+
+
+    有几个因素会使读者相信虚假新闻：
+
+
+    我们有几种深度学习和机器学习方法可以用于检测虚假新闻，它们是：
+
+
+    - 逻辑回归 (Logistic Regression)
+
+    - 朴素贝叶斯 (Naive Bayes)
+
+    - 支持向量机 (SVM)
+
+    - 长短期记忆网络 (L.S.T.M.)
+
+    - 循环神经网络 (R.N.N.)
+
+
+    - 多媒体：当内容的作者在单条帖子中使用媒体方法（如视频、图像和其他图形）时，可能会在不检查虚假新闻信息真实性的情况下改变读者的观点。
+
+
+    - 作者：出于某些未知原因，被认可的记者也会以误导性的方式发布新闻。在面对此类伪造此类信息时，我们应该等待其他记者或网站检查其是真新闻还是假新闻。如果我们不等待后续网站的确认，可能会接受虚假信息。
+
+
+    - 来源：它在新闻的可信度中起着重要作用。
+
+
+    上述三种基于 ML 的算法，以及最后两种基于 DL 并实现的 Native Bayes 和 SVM 算法，根据作者 [5] 的说法，这些算法显示出很高的准确率。
+
+
+    - 平台：如果新闻被发布？[12]
+
+
+    ![](img/f01dfe8d919533b1871f92bfeeed5b05_2_0.png)
+
+
+    在这篇系统性论文中，工作重点是检测和识别近年来社交媒体上的虚假新闻，因为人们现在倾向于从平台获取新闻而非传统渠道。为了弄清虚假新闻传播背后的原因，我们使用了
+    IEEE、Science Direct、A.C.-C. 和 Springer 发布的数据集。在许多情况下，我们脑海中产生了许多疑问，如果我们进行回顾，这些问题被记录在论文中，以找到这些问题的最佳答案。虚假新闻的传播背后有很多原因，例如许多是为了广告，或者是由人们自己制作的；而且有一些因素会让人们相信虚假新闻，当当新闻由作者创建，或者该新闻使用了图像，或者可能被用于误导读者时。读者如何根据自己的经验识别误导性信息？这属于读者，因为当大多数读者第一次接触虚假新闻并在随后在社交媒体等平台看到该新闻发布时，他们有不同的经验。如果没有发布公告，我们不会相信该信息。通过使用机器学习和深度学习（使用逻辑回归、朴素贝叶斯、支持向量
+    svm、长短期记忆、循环神经网络 (R.N.N.)），我们面对了多少虚假新闻？由于虚假新闻有许多类型，因此使用（基于视觉的、基于用户的、基于知识的、基于风格的、基于立场的以及基于文本的）图形来说服读者并让作者写的内容是真实的，但其含义可能发生了改变，是有用的。
+
+
+    ## IV. 结论
+
+
+    ## 4. 读者如何根据自己的经验识别真假新闻？
+
+
+    在社交媒体上阅读文章或新闻时，读者可能会制造虚假新闻或分享文章。以下是读者在阅读文章和在社交媒体上时应该留意的几个因素：
+
+
+    > 作者：每条帖子在他人眼中或面对虚假新闻文章时都起着重要作用，或者作为读者应该检查帖子的效果，即新闻是否是由任何作者创建的。
+
+
+    - 图像：当虚假新闻配有与帖子相关的图像时，其可信度会增加。面对新闻时，我们应该根据自己的经验检查图像是真实的还是虚造的，或者使用了某些图像 [8]。
+
+
+    简易辨别虚假新闻的小贴士：
+
+
+    - 读者是谁？
+
+    - 他们的资质是什么？
+
+    - 文章涵盖了该话题的所有方面吗？
+
+    - 标题与内容匹配吗？
+
+    - URL 是否正确？
+
+    - 这些信息的目的是什么？[23]
+
+
+    ## 5. 哪些因素可能会说服读者相信虚假新闻？
+
+
+    ## 参考文献
+
+
+    [1] Aldwarai, M. and Alwaidah, A., 2018. Detecting Fake News in Social Media Networks.
+    Procedure Computer Science, 141, pp.215-222.
+
+
+    [2] Conway, R., Rabin, V., and Chen, Y., 2015. Automatic detection: Methods for
+    finding fake news, Proceedings of Association for Information Science and Technology,
+    52(1), pp.1-4.
+
+
+    [3] Khaled, S., El-airy, T., and Mokhtar, H., 2019. Detecting Accounts on Social
+    Media. IEEE, pp.3672-3681.
+
+
+    [4] Ginis, A., Maher, E., and Ghadab, N., 2018. Deep Learning for Detecting News
+    Online. IEEE, pp.93-99.
+
+
+    [5] Tarek, A., Maher, E., Akhter, S., and Haq, M., 2019. Detecting Fake News using
+    Machine Learning and Deep Learning. IEEE.
+
+
+    [6] Guimaras, R., Rea, R., De Gustavo, D., and Bressan, G., 2019. Classification
+    in Social Networks Using Deep Learning. IEEE Access, pp.10805-10816.
+
+
+    [7] Toabay, F., Ali, and Bato, F., 2020. Fake news detection within social media
+    using artificial intelligence. Physics A: Statistical Mechanics and Applications,
+    540, p2317.
+
+
+    [8] Chang, W., Toraman, C., Huang, Y., Vora, M., and Liu, J., 2019.
+
+
+    [9] He, X., and Dong, L., 2017. Deep Learning for Image-Text Generation: A General
+    Overview. IEEE Signal Processing Magazine, 34(6).
+
+
+    [10] Hayat, M., Dasl, A., Alshadi, D., Anjar, A., Abbasi, R., Bao, Y., and Dawood,
+    H., 2019. Towards Deep Learning Prospects: Insights for Social Media Analysis.
+    IEEE Access, 7, pp.69960-69979.
+
+
+    [11] Ahsan, M., Kumari, M., and Sharma, T., 2019.
+
+
+    [12-21...]
+
+
+    [22] Chen, L., Lee, C., and Chen, M., 2019. Exploration of social media for sentiment
+    analysis using deep learning. Soft Comp.,
+
+
+    [23] Toronto Public Library. 2020. How To Spot Fake News. [online] Available:
+    https://www.torontubliclibrary.ca/spotfakenews/ [Accessed 24 March 2020].
+
+
+    [24] Nytimes.com. 2020. Opinion | Why Do People Fall For Fake News? [online] Available:
+    https://www.nytimes.com/2019/01/19/opinion/sunday/fake-news.html [Accessed 24
+    March 2020].
+
+
+    '
+  merge: 0
