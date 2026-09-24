@@ -1,0 +1,647 @@
+- pgno: 0
+  md: '# # Phony News Detection using Machine Learning and Deep-Learning Techniques
+
+
+    Sonal Garg¹ and Dilip Kumar Sharma²¹GL University Mathura, India
+
+    E-mail: sonal.garg@gl.ac.in, dilip.sharma@gl.ac.in.
+
+
+    **Abstract—** The proliferation of misleading news stories on social media has
+    brought a big challenge due to its potential to create an adverse impact on human-being.
+    Existing lexical-variant features are unable to detect counterfeit news. Most
+    of the state use small datasets containing a limited number of training data.
+    In this paper, we evaluate machine learning and deep learning techniques. LIAR
+    is a predominant dataset of 12836 short notes from different sources, including
+    social media. The proposed framework shows significant improvement in terms of
+    accuracy in comparison to the existing state of the art algorithm.
+
+
+    **Keywords—** Fake news, Machine-learning, Natural language processing, LSTM.
+
+
+    # ## I. INTRODUCTION
+
+
+    Today is a era. There are a massive amount of data generated every day on social
+    media. So, there is a possibility that generated content may be misinformation
+    or a rumor. It can be intentionally or unintentionally. To detect the fake news
+    in real-life is a very challenging task. In general, we can define fake news as
+    "an article that is intentionally and verifiably false[19]. There are various
+    forms of fake news like misinformation, hoaxes, satires, and biased news. People
+    share the news based on their beliefs on the digital platform. It is difficult
+    to detect fake news because it is written with the motive of deceiving people.
+
+
+    There is the varied definition of Fake news. Authors in paper [8] define fake
+    news as "an article that is intentionally and verifiably false. Of several types
+    fake news like satire, clickbait, biased content, fabricated news, propaganda,
+    and hoaxes, and more. Fake news can be identified as of different kinds like fake
+    news, false video, faked images, etc. Moreover, these false stories need to be
+    handled. This problem residing in the deep web and acts as a volcano which needs
+    to be tended. This is not easy as it would need a lot amount of research and development.
+    By the end of 2020, more than 2180 Iranians consumed methanol to prevent this
+
+
+    coma caused by consuming alcohol. As a result, 900 were admitted to the Intensive
+    Care Unit (I.C.U.), and 296 died [9]. The enormous amount of data that exists
+    on the internet may work as a refuge for such fake news from its detection and
+    being quarantined.
+
+
+    In this work, the proposed model extracted features using Bag of words and tf-idf
+    from LIAR dataset. We use news content as the main feature, but we also consider
+    profile information for state and affinity affiliation. We proposed a label for
+    importance: True, Monthly and half-true to False, barely-true, to make false dataset.
+    We also add POS and Globe embedding to ensure the existing results use our various
+    classes, including Deep Learning (DL) models: LSTM, CNN and Naive Bayes, Machine
+    learning models. We improve the accuracy by 3% by using the LIAR[10] dataset.
+
+
+    # ## II. Motivation
+
+
+    There are much work to do in this area:
+
+
+    +   - Knowingly and Unknowing the truth of information, people on social-media
+    share it.
+
+    - No specific definition is available for fake or real news. So, no one can understand
+    understand the reality of the text.
+
+    - Challenging task of research with techniques like method and deep learning technique,
+    there are some gaps.
+
+    - It is difficult to develop an automatic fake detection system to be able to
+    differentiate between real news and fake news.
+
+
+    This paper is divided into several sections, Section 2 is a Literature review,
+    Section 3 is deals with the proposed framework, Section 4 is connected with Experiments
+    and Results, and Section 5 represents a Conclusion and also possible future.
+
+
+    # ## III. LITERATURE REVIEW
+
+
+    Many researchers work on the challenge of fake news detection using a multi-label
+    dataset. A past study indicates that it is not easy to make a fake news classifier'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: "# 9th International Conference on System Modeling & Analytics in Research,\
+    \ 4th–5th December 2020\nFaculty of Engineering & Computing Sciences, Teerankhar\
+    \ Mahaveer University, Moradabad, India\n\nAuthors in [1], proposed a method for\
+    \ multi-label\nclassification of fake news. They were performing\nmanually, then\
+    \ feature extraction by them to\nremove irrelevant features. Reliability is also\
+    \ used\nassign the label to multiple class labels, which has\nsimilar properties.\
+    \ The multi-class problem is reduced to\nthe two-class problem. We used the LIAR\
+    \ dataset.\nAnd decision trees are used for model training\nwhich acquires the\
+    \ accuracy of 39.5% and 39.7. Other\n[2] discussed machine classifier learning\
+    \ and NLP\napproaches for multi-label fake news classification. The\nauthors reduced\
+    \ the number of labels by using\nTrue, mostly-true, and half-true is considered\n\
+    True, and Barely-True, pants-free, and False false.\nExtracted features by the\
+    \ N-gram approach are fed\nin異なる machine learning classifiers. SVM\nieved the\
+    \ highest performance by obtaining 0.62\n0.6 result. In [3] propose BI-LSTM and\
+    \ CNN hybrid\narchitecture that contains many features and speaker\nprofiles for\
+    \ information detection. We used\na pre-trained word model on 100 billion words\n\
+    from Google [4] for text embedding. This method\nhas obtained-of-the-art results\
+    \ on the LIAR dataset by\nusing LSTM, which improved the accuracy\nlearning long\
+    \ news events. Recently, the RNN\nLSTM model also achieved similar results to\
+    \ CNN\nand SVM. Attention-based LSTM model in [5], used\nspe profile information\
+    \ for fake identification.\n also as an additional input. This addition of\nspeaker\
+    \ information helps to enhance the accuracy\nof the proposed method. The proposed\
+    \ method achieved\n96% accuracy. We used a deep learning model that\ncombining\
+    \ LSTM, depth LSTM, LIWC, CNN\nand N-gram CNN for misidentification. These\ndeep\
+    \ learning-based models achieved 99.4% accuracy.\nThe authors used Self-Adaptive\
+    \ Harmony for search\ncomputation. We used three datasets for computation\nFake\
+    \ or Real news, Snopes,FakeNews, and\nthird is News dataset. Other information\n\
+    im used using profile features in future\na kinds of research using multiple platforms\
+    \ and\nlanguages for news detection. In paper [7], authors\ncarried out experiments\
+    \ using five datasets of consist\ntext and social media posts and three languages,\n\
+    Latin, and Slavic. For feature extraction, authors used\n2 algorithm. SVM and\
+    \ random forest\nclassifier well in comparison to other classifiers.\nAuthors\
+    \ in the paper [8] proposed Traditional ML\nand deep-learning classifier for counterfeit\
+    \ news detection.\nThey conducted the experiments on three datasets named\n\n\
+    LIAR, Fake or Real News, and combined corpus. Authors in\n[1], worked on lately\
+    \ set of six labels of the\nLIAR dataset. They used news statements and labels.\n\
+    They conducted experiments by applying SVM, Random\nand CNN classifier. The proposed\
+    \ method achieved\n60% by using the BOW and CNN connection.\nAuthors in the paper\
+    \ [7] applied machines and\ndeep learning techniques on three datasets. They used\n\
+    LIAR, fake or real news dataset, and combined corpus\ndends on the size of the\
+    \ dataset.\n\n# III. Proposed Method\n\nThis section discusses our approach to\
+    \ fake\nnews detection. We used the LIAR dataset.\ntraining size of LIAR is 10,269\
+    \ records, Validation\nsize is 1284, and the dataset size is 1283. LIAR\ndataset\
+    \ consists of profile information like,\nfamily, history accounts, count, but\
+    \ we\nconsider only the labels and statement of the dataset.\nWe convert the multi-label\
+    \ dataset into two labels for\nexperiments. We represent the architectures we\
+    \ used\n\n# LIAR DATASET\n\n+   - Who: Local political groups support third--imborderaders\
+    \ on.\n- When did the false claim start or when natural news to begin in it\n\
+    - Why was the false claim made? For the benefit of the doubt\n- How: How did the\
+    \ false claim spread in?\n- Where: The Chicago have made false statements starting\
+    \ in the 10 years that the total number\n- What: However, it is just in the past,\
+    \ along with which\n- For the first time, the history of the popular nation is\
+    \ smaller than the last\n- When: When it was posted on social media, it did not\
+    \ know the rate of effect of\n\n# B. Machine Learning Model\n\nThe machine learning\
+    \ model is used to identify fake\nnews and also provides useful results. Authors\
+    \ in\n[12] and machine learning techniques used in the\nfake news classification\
+    \ task. In work, for feature extraction,\nwe use TF-Idf and consider unigram,\
+    \ bigram,\nand relationships between them. TF-Idf is used to\npredict the significance\
+    \ of a word. It is calculated by using:\n\n```\ntf_{ij} = \\frac{f_{ij}}{\\sum\
+    \ f_{ik}}\n```\n\nWhere tf, is how many times i appears in j.\ntf(w)=(Number of\
+    \ times w appears in a document/\ntotal number of words in the document)\n\nWhere\
+    \ N is the total number of documents and, df is\nnumber of documents with term\
+    \ t.\n\n```\nidf(t) = \\log \\frac{N}{df}\n```\n\n(1)\n\nC. Scene of LIAR dataset\n\
+    \n(2)\n\n28\n\nAuthorized license used to: Tencent. Downloaded on 2023-09-21 at\
+    \ 01:34:39 IEEE Xplore. Terms of use"
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# C. Naive Bayes Algorithm
+
+
+    It is a probabilistic classifier based on the assumption of feature independence.
+    It applied the Bayes theorem. In the paper [13] also adopted a machine learning
+    approach for covert detection. They applied the Bayes classifier, which considers
+    each statement of news as an independent feature.
+
+
+    We apply the Bayes theorem in the following
+
+
+    ```
+
+    P(c|x) = \frac{P(x|c)P(c)}{P(x)}$
+
+    ```
+
+
+    Where c is a class and x is a descriptor vector.
+
+
+    P(c|x) is a posteriori probability of event x, P(c) is the prior of c.
+
+
+    # D. Linear SVM Classifier
+
+
+    Support vector classifier uses lines or hyperplane to divide the data into classes
+    to solve the classification or regression problem. It is described mathematically
+    as
+
+
+    ```
+
+    $y = f(x) = \sum(w_ix_i)$
+
+    ```
+
+
+    Here, x is coordinates, and w is what determines the slope of a straight line.
+
+
+    # E. Logistic Regression
+
+
+    We applied Logistic Regression for next events. It is a classification algorithm.
+    Logistic regression is used when the dependent variable categorical.
+
+
+    ```
+
+    $P = \frac{1}{1+e^{-(w^Tx+b)}}$
+
+    ```
+
+
+    Here, P is the probability of i, and e is the base of the natural logarithm, b,
+    and m are model parameters.
+
+
+    By using ratio
+
+
+    ```
+
+    $\frac{P}{1-P} = \exp(w^Tx+b)$
+
+    ```
+
+
+    (P) value always lies in 0 to 1, in the case of odd, odd can take the range from
+    0 to infinity. Odd is defined as the ratio of an event that will occur to the
+    probability of an event that will not occur.
+
+
+    # F. Random Forest
+
+
+    Random forest is a supervised algorithm that uses ensemble learning to create
+    a forest. This algorithm could be applied in classification, regression, and others.
+    This algorithm works well on large datasets.
+
+
+    ```
+
+    $ft_i = \frac{1}{n} \sum_{j=1}^{n} f_{ij}$
+
+    ```
+
+
+    ```
+
+    $norm_i = \frac{1}{n} \sum_{j=1}^{n} f_{ij}$
+
+    ```
+
+
+    ```
+
+    $RFT_i = \sqrt{\sum (ft_i - norm_i)^2}$
+
+    ```
+
+
+    # G. Decision Tree Classifier
+
+
+    A decision tree can be used to perform the task of classification or regression.
+    It works well for both
+
+
+    Phony News Detection using Machine Learning and Deep-Learning Techniques
+
+
+    categorical and numerical data. In our experiments, we used Gini impurity resulted
+    in 94% accuracy.
+
+
+    Gini is used to compute the probability of inaccurate classification of an observation.
+    Gini can be represented by a mathematical notation as follows
+
+
+    ```
+
+    $G(z) = P(i) \log P(i) + (1-P(i)) \log(1-P(i))$
+
+    ```
+
+
+    Where P(i) represents the probability of classification as the training data.
+
+
+    # H. Deep Learning Model
+
+
+    The Deep learning is used to automatically extract significant features for extraction.
+    In the paper [14] adopted deep learning techniques for stance detection. They
+    have adopted the RNN model for features. Bi-LSTM achieved the best results. In
+    the future, sentiment analysis can lead to enhance performance. In the paper [15]
+    also applied deep learning techniques to differentiate between synthetic and semantic
+    relationship between words. They concluded that the deep-learning model performed
+    well on large datasets. A new model was proposed by authors in paper [16] CNN
+    for fake news detection. They used explicit and latent features, and in the future,
+    more features can be adopted to enhance the performance of the model.Authors [18]
+    used CNN and LSTM to compute the reliability of news. Visual features with embedded
+    text and headings are used for experiments.
+
+
+    # I. LSTM
+
+
+    It is a type of neural network which is used when the context becomes reliable
+    to predict the future outcome. RNN used output as a next layer having several
+    layers. Here, Output depends on context such as under any story, and there is
+    a need to know about events, etc. There are several domains RNN plays a significant
+    role like next word prediction, video captioning, stock market prediction, Time-series
+    prediction, sentiment analysis, and classification can process a sequence of data
+    that has memory.
+
+
+    In the case of RNN, during backpropagation, the gradient vanishes or explodes.
+    In the case of exploding gradients, weight can be reduced, but using gradient,
+    there is no way to update the weights and biases. To overcome these limitations,
+    LSTM is used. LSTM does not read all input. LSTM uses the context of selective
+    reader, selective and selective forget. GRU is a special class of LSTM that has
+    no forget.
+
+
+    Fig. 2 represents the LSTM architecture using GRU. Here x is the input layer,
+    and y is the output layer.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# 9th International Conference on System Modeling & Advancement in Research
+    Trends, 4th–5th December, 2020
+
+    Faculty of Engineering & Computing Sciences, Teerhanker Mahaveer University, Moradabad,
+    India
+
+
+    ![](img/a91a3aadf9ebfcab11621bf60a064f4a_3_0.png)
+
+
+    # K. CNN
+
+
+    CNN is a derivative of a feedforward neural network. This can be applied to face
+    recognition and image classification. CNN worked well for sentiment analysis research.
+    A convolutional neural network is applied to extract important features from the
+    text or images by a series of the convolutional layer.
+
+
+    # IV. PROPOSED FRAMEWORK
+
+
+    For preposing, we use the NLTK library to manage stop words and to stemming. We
+    applied snowball stemmer to convert the word of a sentence into its root form.
+    We also remove punctuation, symbols, and keep only alphabets. Dataset is converted
+    to lower case for processing. We remove the duplicate names using the duplicate()
+    function removes rows from the data and to root name, null() function is used
+    in the implementation. The proposed dataset is divided into 80:20 training and
+    testing ratios based on the experimental results.
+
+
+    We merged the training and validation dataset for experiments, and the testing
+    dataset is used for computing accuracy.
+
+
+    Fig. 3 represents our proposed framework. In this work, the NLTK POS tagger is
+    applied to assign a tag to each word of the content of the statement. After pos
+    tagging, each word is assigned with one tag. Then we apply word embedding. The
+    word of remaining POS tags that do not appear in POS tags of the news content
+    are made zero vector.
+
+
+    300-dimensional Global embedding for our work. The embeddings are sorted in alphabetical
+    order before passing to the LSTM, bi-directional LSTM, and CNN.
+
+
+    ![](img/a91a3aadf9ebfcab11621bf60a064f4a_3_1.png)
+
+
+    Fig. 2: LSTM with GRU Architecture
+
+
+    Fig. 3: Proposed Framework
+
+
+    +   - Bag of words
+
+    - Tfid
+
+    - Word embedding
+
+    - Tfid
+
+    - Glove-Embedding
+
+
+    +   - ''aarp''
+
+    - ''abbott''
+
+    - ''abel''
+
+    - ''abid''
+
+    - ''abit''
+
+    - ''ajbl''
+
+    - ''abolish''
+
+    - ''abort''
+
+    - ''abclonic''
+
+    - ''abort even''
+
+    - ''abort even case''
+
+    - ''abort ileleg''
+
+    - ''abort right''
+
+    - ''abraham''
+
+    - ''abrahamincoln''
+
+    - ''absolute''
+
+    - ''abus''
+
+    - ''academ''
+
+    - ''academi''
+
+    - ''accept''
+
+
+    Fig. 4: Representation of TF-IDF Features Extracted from the Dataset
+
+    Fig.4 represents the top 20 features that we are using tf-idf.
+
+
+    Copyright © IEEE-2020 ISBN: 978-1-2221-8028-6'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Phony News Detection using Machine Learning and Deep-Learning Techniques
+
+
+    # V. EXPERIMENTS AND RESULTS
+
+
+    Google Collaboratory, which is an open-source notebook with a Tesla K80 GPU backend,
+    is used for training various machine learning and deep learning models.
+
+
+    For experiments, both LSTM and BI-LSTM classifiers used the Sigmoid activation
+    function, Adam optimizer,0.3 dropout value. We applied glove embedding with 300
+    dimension and pre-embedding to make sentence length. We have chosen 40 embedding
+    vector features. Binary cross-entropy loss is used in the experiment settings.
+    We trying different combinations to get results.
+
+
+    LSTM achieved maximum accuracy of 63% while in the machine classifier, the Multinave-Bayes
+    classifier achieved 60%.
+
+
+    Table 1 represents the comparison of our proposed method with the state of the
+    art.
+
+
+    # TABLE 1: COMPARISON OF METHODS
+
+
+    | Method | SVM | CNN | LSTM |
+
+    |---|---|---||}{
+
+    | [17] | 0.56 | 0.58 | 0.54 |
+
+    | [11] Proposed method | 0.57 | 0.60 | 0.63 |
+
+
+    ![](img/a91a3aadf9ebfcab11621bf60a064f4a_4_0.png)
+
+
+    Fig. 6: Results of Deep-learning Classifier
+
+    Fig. 6 represents the performance of the deep-learning classifier.
+
+
+    # VI. CONCLUSION AND FUTURE
+
+
+    In this paper, we have applied machine learning and deep-learning approaches on
+    the LIAR dataset. To perform better than the state of the art methods, we applied
+    POS tagging and Glove embedding in the deep learning model. We achieved the highest
+    of 63% accuracy by using the LSTM model. In future, we can apply transforms by
+    six-layers to enhance the performance of the model. There is a scope to add other
+    user profile features to also increase accuracy.
+
+
+    # ACKNOWLEDGMENT
+
+
+    +   [1] Rassol, T., Butt, W. H., Shaikat, A., &Akram, M. U. (2019). Multi-fake
+    news detection using multi-supervised learning. In 2019 11th International Conference
+    on Computer and Communication Engineering (ICCE), pp. 1-6. IEEE.
+
+    [2] Kiazad, S., Parsi, M., Mohammadi, S., & Wang, A. (2019). Analysis of Classifiers
+    for Fake News Detection. Prediction Computer Science, 102, 11-20.
+
+    [3] Minh, M. K. (2019). Bidirectional LSTM on POS tags and CNN Architecture for
+    Fake News Detection. In 2019 11th International Conference on Computer and Communication
+    Engineering (ICCE), pp. 1-6. IEEE.
+
+    [4] Mikolov, T., Kohá, G., & Dean, J. E. (2013). Efficient representation of word
+    in continuous vector space. arXiv preprint arXiv arXiv:1301.03481.
+
+    [5] Long, Y. et al. (2017). Fake news detection using multi-perspective social
+    networks. In AAAI Conference on Web Web Discovery and Data Mining.
+
+    [6] Huang, Y.F., & Chen, P. H. (2020). Fake News Detection using an Ensemble Model
+    based on Self-adaptive Harmony Search with Applications in Natural Language Processing
+    and Experiments, 15(15), 1-18.
+
+    [7] Faustini, P. H. A., &Ccoves, T. F. (2020). Fake news detection in multiple
+    social platforms and languages. Expert Systems with Applications, 113503.
+
+
+    ![](img/a91a3aadf9ebfcab11621bf60a064f4a_4_1.png)
+
+
+    | Classifier | Accuracy | Precision | Recall | F-score |
+
+    |---|---|---|---||}{
+
+    Multinomial NB | 0.56 | 0.50 | 0.50 | 0.56 |
+
+    SVM | 0.59 | 0.59 | 0.59 | 0.59 |
+
+    Logistic Regression | 0.57 | 0.58 | 0.58 | 0.57 |
+
+    Random Forest decision tree | 0.57 | 0.57 | 0.57 | 0.57 |
+
+    Gassian Naive | 0.56 | 0.55 | 0.56 | 0.56 |
+
+    K-neighbors | 0.50 | 0.50 | 0.50 | 0.50 |
+
+
+    Fig. 5: Representation of Accuracy of Various ML Classifier
+
+    Table 2 shows the evaluation measures results from applying machine learning classifiers.
+
+
+    Copyright ©-IEEE- 2020 ISBN: 978-1-7231-8908-6
+
+
+    31'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '9th International Conference on System Modeling & Advancement in Research Trends,
+    4th–5th December, 2020
+
+    Engineering & Computer Sciences, Mahaveer University, Moradabad, India.
+
+
+    +   [8] Bumiao, S. C., & Grafcek, J. (2017). Networks Automatically
+
+    identifying fake news in Twitter Threads. In 2017
+
+    International Conference on Smart Cloud (SmartCloud) (pp. 28-35)
+
+    IEEE.
+
+
+    +   [9] Infofemia, C. T., Oliveira, A., Seixas, F. L., & Paes, A. (2020).
+
+    Infodemia, Fake News and Medicine: Science and The Quest for
+
+    Truth. International Journal of Cardiology and Sciences (AHEADJ)
+
+    9(1) (2020), 7-15.
+
+
+    +   [10] RachanaKunaraprapatdy & SriRohithaMadala, Fake Content
+
+    Detection Using Deep Learning Techniques (IJEAJ) ISSN: 2249-
+
+    8858, Volume-8 Issue-5, June 2019.
+
+
+    +   [11] Pallavi, V. Petkar, S. S. Sontane “Fake News Detection: Survey
+
+    of Technology”. International Journal of Computer Technology
+
+    and Exploring Engineering (IJTEE) ISSN: 2278-3075, Volume-9
+
+    Issue-9, July 2020.
+
+
+    +   [12] MyhaoloGranik & VolodymyrMesyan “ Fake News Detection
+
+    Using Naive Bayes Classifier ”, UKRON 2017 IEEE.
+
+
+    +   [13] GaurabGangani & Bhadradachutturi, “Sience-In-Depth
+
+    Deep neural approach for stage classification”, elasiver, elsevier 2018.
+
+
+    +   [14] Sherry Giri & Elslammer, “Deep Learning Algorithms for
+
+    Fake News Detection in Online”, ICENSP (2019).
+
+
+    +   [15] Wang, Y., & Tang, J. (2019). “ Convolutional Neural
+
+    Networks for Fake News Detection”, arXiv:1800.00749 [cs.CL]
+
+    3 June 2019.
+
+
+    +   [16] Wang, Y., Thodakar, M., Islam, T., Isgal, A., & Karaf, S. (2019).
+
+    A benchmark study on machine learning methods for fake news
+
+    detection, arxiv:1906.09605.
+
+
+    +   [17] Sharma
+
+
+    +   [18] Sharma, S. & Sharma, D. K. (2019). November) Fake News
+
+    Detection: A long way to go. In 2019 4th International Conference
+
+    on Information Systems and Computer Networks (ISCON) (pp. 816-
+
+    821). IEEE.'
+  merge: -1
+  img_proc: true

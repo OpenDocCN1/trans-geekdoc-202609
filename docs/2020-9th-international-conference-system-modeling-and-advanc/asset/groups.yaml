@@ -1,0 +1,1919 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # Phony News Detection using Machine Learning and Deep-Learning Techniques
+
+
+    Sonal Garg¹ and Dilip Kumar Sharma²¹GL University Mathura, India
+
+    E-mail: sonal.garg@gl.ac.in, dilip.sharma@gl.ac.in.
+
+
+    **Abstract—** The proliferation of misleading news stories on social media has
+    brought a big challenge due to its potential to create an adverse impact on human-being.
+    Existing lexical-variant features are unable to detect counterfeit news. Most
+    of the state use small datasets containing a limited number of training data.
+    In this paper, we evaluate machine learning and deep learning techniques. LIAR
+    is a predominant dataset of 12836 short notes from different sources, including
+    social media. The proposed framework shows significant improvement in terms of
+    accuracy in comparison to the existing state of the art algorithm.
+
+
+    **Keywords—** Fake news, Machine-learning, Natural language processing, LSTM.
+
+
+    # ## I. INTRODUCTION
+
+
+    Today is a era. There are a massive amount of data generated every day on social
+    media. So, there is a possibility that generated content may be misinformation
+    or a rumor. It can be intentionally or unintentionally. To detect the fake news
+    in real-life is a very challenging task. In general, we can define fake news as
+    "an article that is intentionally and verifiably false[19]. There are various
+    forms of fake news like misinformation, hoaxes, satires, and biased news. People
+    share the news based on their beliefs on the digital platform. It is difficult
+    to detect fake news because it is written with the motive of deceiving people.
+
+
+    There is the varied definition of Fake news. Authors in paper [8] define fake
+    news as "an article that is intentionally and verifiably false. Of several types
+    fake news like satire, clickbait, biased content, fabricated news, propaganda,
+    and hoaxes, and more. Fake news can be identified as of different kinds like fake
+    news, false video, faked images, etc. Moreover, these false stories need to be
+    handled. This problem residing in the deep web and acts as a volcano which needs
+    to be tended. This is not easy as it would need a lot amount of research and development.
+    By the end of 2020, more than 2180 Iranians consumed methanol to prevent this
+
+
+    coma caused by consuming alcohol. As a result, 900 were admitted to the Intensive
+    Care Unit (I.C.U.), and 296 died [9]. The enormous amount of data that exists
+    on the internet may work as a refuge for such fake news from its detection and
+    being quarantined.
+
+
+    In this work, the proposed model extracted features using Bag of words and tf-idf
+    from LIAR dataset. We use news content as the main feature, but we also consider
+    profile information for state and affinity affiliation. We proposed a label for
+    importance: True, Monthly and half-true to False, barely-true, to make false dataset.
+    We also add POS and Globe embedding to ensure the existing results use our various
+    classes, including Deep Learning (DL) models: LSTM, CNN and Naive Bayes, Machine
+    learning models. We improve the accuracy by 3% by using the LIAR[10] dataset.
+
+
+    # ## II. Motivation
+
+
+    There are much work to do in this area:
+
+
+    +   - Knowingly and Unknowing the truth of information, people on social-media
+    share it.
+
+    - No specific definition is available for fake or real news. So, no one can understand
+    understand the reality of the text.
+
+    - Challenging task of research with techniques like method and deep learning technique,
+    there are some gaps.
+
+    - It is difficult to develop an automatic fake detection system to be able to
+    differentiate between real news and fake news.
+
+
+    This paper is divided into several sections, Section 2 is a Literature review,
+    Section 3 is deals with the proposed framework, Section 4 is connected with Experiments
+    and Results, and Section 5 represents a Conclusion and also possible future.
+
+
+    # ## III. LITERATURE REVIEW
+
+
+    Many researchers work on the challenge of fake news detection using a multi-label
+    dataset. A past study indicates that it is not easy to make a fake news classifier'
+  - "[PAGE 1]\n\n# 9th International Conference on System Modeling & Analytics in\
+    \ Research, 4th–5th December 2020\nFaculty of Engineering & Computing Sciences,\
+    \ Teerankhar Mahaveer University, Moradabad, India\n\nAuthors in [1], proposed\
+    \ a method for multi-label\nclassification of fake news. They were performing\n\
+    manually, then feature extraction by them to\nremove irrelevant features. Reliability\
+    \ is also used\nassign the label to multiple class labels, which has\nsimilar\
+    \ properties. The multi-class problem is reduced to\nthe two-class problem. We\
+    \ used the LIAR dataset.\nAnd decision trees are used for model training\nwhich\
+    \ acquires the accuracy of 39.5% and 39.7. Other\n[2] discussed machine classifier\
+    \ learning and NLP\napproaches for multi-label fake news classification. The\n\
+    authors reduced the number of labels by using\nTrue, mostly-true, and half-true\
+    \ is considered\nTrue, and Barely-True, pants-free, and False false.\nExtracted\
+    \ features by the N-gram approach are fed\nin異なる machine learning classifiers.\
+    \ SVM\nieved the highest performance by obtaining 0.62\n0.6 result. In [3] propose\
+    \ BI-LSTM and CNN hybrid\narchitecture that contains many features and speaker\n\
+    profiles for information detection. We used\na pre-trained word model on 100 billion\
+    \ words\nfrom Google [4] for text embedding. This method\nhas obtained-of-the-art\
+    \ results on the LIAR dataset by\nusing LSTM, which improved the accuracy\nlearning\
+    \ long news events. Recently, the RNN\nLSTM model also achieved similar results\
+    \ to CNN\nand SVM. Attention-based LSTM model in [5], used\nspe profile information\
+    \ for fake identification.\n also as an additional input. This addition of\nspeaker\
+    \ information helps to enhance the accuracy\nof the proposed method. The proposed\
+    \ method achieved\n96% accuracy. We used a deep learning model that\ncombining\
+    \ LSTM, depth LSTM, LIWC, CNN\nand N-gram CNN for misidentification. These\ndeep\
+    \ learning-based models achieved 99.4% accuracy.\nThe authors used Self-Adaptive\
+    \ Harmony for search\ncomputation. We used three datasets for computation\nFake\
+    \ or Real news, Snopes,FakeNews, and\nthird is News dataset. Other information\n\
+    im used using profile features in future\na kinds of research using multiple platforms\
+    \ and\nlanguages for news detection. In paper [7], authors\ncarried out experiments\
+    \ using five datasets of consist\ntext and social media posts and three languages,\n\
+    Latin, and Slavic. For feature extraction, authors used\n2 algorithm. SVM and\
+    \ random forest\nclassifier well in comparison to other classifiers.\nAuthors\
+    \ in the paper [8] proposed Traditional ML\nand deep-learning classifier for counterfeit\
+    \ news detection.\nThey conducted the experiments on three datasets named\n\n\
+    LIAR, Fake or Real News, and combined corpus. Authors in\n[1], worked on lately\
+    \ set of six labels of the\nLIAR dataset. They used news statements and labels.\n\
+    They conducted experiments by applying SVM, Random\nand CNN classifier. The proposed\
+    \ method achieved\n60% by using the BOW and CNN connection.\nAuthors in the paper\
+    \ [7] applied machines and\ndeep learning techniques on three datasets. They used\n\
+    LIAR, fake or real news dataset, and combined corpus\ndends on the size of the\
+    \ dataset.\n\n# III. Proposed Method\n\nThis section discusses our approach to\
+    \ fake\nnews detection. We used the LIAR dataset.\ntraining size of LIAR is 10,269\
+    \ records, Validation\nsize is 1284, and the dataset size is 1283. LIAR\ndataset\
+    \ consists of profile information like,\nfamily, history accounts, count, but\
+    \ we\nconsider only the labels and statement of the dataset.\nWe convert the multi-label\
+    \ dataset into two labels for\nexperiments. We represent the architectures we\
+    \ used\n\n# LIAR DATASET\n\n+   - Who: Local political groups support third--imborderaders\
+    \ on.\n- When did the false claim start or when natural news to begin in it\n\
+    - Why was the false claim made? For the benefit of the doubt\n- How: How did the\
+    \ false claim spread in?\n- Where: The Chicago have made false statements starting\
+    \ in the 10 years that the total number\n- What: However, it is just in the past,\
+    \ along with which\n- For the first time, the history of the popular nation is\
+    \ smaller than the last\n- When: When it was posted on social media, it did not\
+    \ know the rate of effect of\n\n# B. Machine Learning Model\n\nThe machine learning\
+    \ model is used to identify fake\nnews and also provides useful results. Authors\
+    \ in\n[12] and machine learning techniques used in the\nfake news classification\
+    \ task. In work, for feature extraction,\nwe use TF-Idf and consider unigram,\
+    \ bigram,\nand relationships between them. TF-Idf is used to\npredict the significance\
+    \ of a word. It is calculated by using:\n\n```\ntf_{ij} = \\frac{f_{ij}}{\\sum\
+    \ f_{ik}}\n```\n\nWhere tf, is how many times i appears in j.\ntf(w)=(Number of\
+    \ times w appears in a document/\ntotal number of words in the document)\n\nWhere\
+    \ N is the total number of documents and, df is\nnumber of documents with term\
+    \ t.\n\n```\nidf(t) = \\log \\frac{N}{df}\n```\n\n(1)\n\nC. Scene of LIAR dataset\n\
+    \n(2)\n\n28\n\nAuthorized license used to: Tencent. Downloaded on 2023-09-21 at\
+    \ 01:34:39 IEEE Xplore. Terms of use"
+  md: '
+
+    # Phony News Detection using Machine Learning and Deep-Learning Techniques
+
+
+    Sonal Garg¹ and Dilip Kumar Sharma²¹GL University Mathura, India
+
+    E-mail: sonal.garg@gl.ac.in, dilip.sharma@gl.ac.in.
+
+
+    **Abstract—** The proliferation of misleading news stories on social media has
+    brought a big challenge due to its potential to create an adverse impact on human-being.
+    Existing lexical-variant features are unable to detect counterfeit news. Most
+    of the state use small datasets containing a limited number of training data.
+    In this paper, we evaluate machine learning and deep learning techniques. LIAR
+    is a predominant dataset of 12836 short notes from different sources, including
+    social media. The proposed framework shows significant improvement in terms of
+    accuracy in comparison to the existing state of the art algorithm.
+
+
+    **Keywords—** Fake news, Machine-learning, Natural language processing, LSTM.
+
+
+    ## I. INTRODUCTION
+
+
+    Today is a era. There are a massive amount of data generated every day on social
+    media. So, there is a possibility that generated content may be misinformation
+    or a rumor. It can be intentionally or unintentionally. To detect the fake news
+    in real-life is a very challenging task. In general, we can define fake news as
+    "an article that is intentionally and verifiably false[19]. There are various
+    forms of fake news like misinformation, hoaxes, satires, and biased news. People
+    share the news based on their beliefs on the digital platform. It is difficult
+    to detect fake news because it is written with the motive of deceiving people.
+
+
+    There is the varied definition of Fake news. Authors in paper [8] define fake
+    news as "an article that is intentionally and verifiably false. Of several types
+    fake news like satire, clickbait, biased content, fabricated news, propaganda,
+    and hoaxes, and more. Fake news can be identified as of different kinds like fake
+    news, false video, faked images, etc. Moreover, these false stories need to be
+    handled. This problem residing in the deep web and acts as a volcano which needs
+    to be tended. This is not easy as it would need a lot amount of research and development.
+    By the end of 2020, more than 2180 Iranians consumed methanol to prevent this
+    coma caused by consuming alcohol. As a result, 900 were admitted to the Intensive
+    Care Unit (I.C.U.), and 296 died [9]. The enormous amount of data that exists
+    on the internet may work as a refuge for such fake news from its detection and
+    being quarantined.
+
+
+    In this work, the proposed model extracted features using Bag of words and tf-idf
+    from LIAR dataset. We use news content as the main feature, but we also consider
+    profile information for state and affinity affiliation. We proposed a label for
+    importance: True, Monthly and half-true to False, barely-true, to make false dataset.
+    We also add POS and Globe embedding to ensure the existing results use our various
+    classes, including Deep Learning (DL) models: LSTM, CNN and Naive Bayes, Machine
+    learning models. We improve the accuracy by 3% by using the LIAR[10] dataset.
+
+
+    ## II. Motivation
+
+
+    There are much work to do in this area:
+
+
+    - Knowingly and Unknowing the truth of information, people on social-media share
+    it.
+
+    - No specific definition is available for fake or real news. So, no one can understand
+    the the reality of the text.
+
+    - Challenging task of research with techniques like method and deep learning technique,
+    there are some gaps.
+
+    - It is difficult to develop an automatic fake detection system to be able to
+    differentiate between real news and fake news.
+
+
+    This paper is divided into several sections, Section 2 is a Literature review,
+    Section 3 is deals with the proposed framework, Section 4 is connected with Experiments
+    and Results, and Section 5 represents a Conclusion and also possible future.
+
+
+    ## III. LITERATURE REVIEW
+
+
+    Many researchers work on the challenge of fake news detection using a multi-label
+    dataset. A past study indicates that it is not easy to make a fake news classifier.
+
+
+    Authors in [1], proposed a method for multi-label classification of fake news.
+    They were performing manually, then feature extraction by them to remove irrelevant
+    features. Reliability is also used to assign the label to multiple class labels,
+    which has similar properties. The multi-class problem is reduced to the two-class
+    problem. We used the LIAR dataset.
+
+
+    Of several types fake news like satire, clickbait, biased content, fabricated
+    news, propaganda, and hoaxes, and more. Fake news can be identified as of different
+    kinds like fake news, false video, faked images, etc. Moreover, these false stories
+    need to be handled. This problem residing in the deep web and acts as a volcano
+    which needs to be tended. This is not easy as it would need a lot amount of research
+    and development. By the end of 2020, more than 2180 Iranians consumed methanol
+    to prevent this coma caused by consuming alcohol. As a result, 900 were admitted
+    to the Intensive Care Unit (I.C.U.), and 296 died [9]. The enormous amount of
+    data that exists on the internet may work as a refuge for such fake news from
+    its detection and being quarantined.
+
+
+    In this work, the proposed model extracted features using Bag of words and tf-idf
+    from LIAR dataset. We use news content as the main feature, but we also consider
+    profile information for state and affinity affiliation. We proposed a label for
+    importance: True, Monthly and half-true to False, barely-true, to make false dataset.
+    We also add POS and Globe embedding to ensure the existing results use our various
+    classes, including Deep Learning (DL) models: LSTM, CNN and Naive Bayes, Machine
+    learning models. We improve the accuracy by 3% by using the LIAR[10] dataset.
+
+
+    The multi-class problem is reduced to the two-class problem. We used the LIAR
+    dataset.
+
+
+    Of several types fake news like satire, clickbait, biased content, fabricated
+    news, propaganda, and hoaxes, and more. Fake news can be identified as of different
+    kinds like fake news, false video, faked images, etc. Moreover, these false stories
+    need to be handled. This problem residing in the deep web and acts as a volcano
+    which needs to be tended. This is not easy as it would need a lot amount of research
+    and development.
+
+
+    The multi-class problem is reduced to the two-class problem. We used the LIAR
+    dataset.
+
+
+    the coma caused by consuming alcohol. As a result, 900 were admitted to the Intensive
+    Care Unit (I.C.U.), and 296 died [9]. The enormous amount of data that exists
+    on the internet may work as a refuge for such fake news from its detection and
+    being quarantined.
+
+
+    total number of words in the document)
+
+
+    tf(w)=(Number of times w appears in a document/
+
+    total number of words in the document)
+
+
+    Where N is the total number of documents and, df is
+
+    number of documents with term t.
+
+
+    ```
+
+    idf(t) = \log \frac{N}{df}
+
+    ```
+
+
+
+
+    Of several types fake news like satire, clickbait, biased content, fabricated
+    news, propaganda, and hoaxes, and more. Fake news can be identified as of different
+    kinds like fake news, false video, faked images, etc. Moreover, these false stories
+    need to be handled. This problem residing in the deep web and acts as a volcano
+    which needs to be tended. This is not easy as it would need a lot amount of research
+    and development.
+
+
+    The multi-class problem is reduced to the two-class problem. We used the LIAR
+    dataset.
+
+
+    the coma caused by consuming alcohol. As a result, 900 were admitted to the Intensive
+    Care Unit (I.C.U.), and 296
+
+
+    9th International Conference on System Modeling & Analytics in Research, 4th–5th
+    December 2020
+
+    Faculty of Engineering & Computing Sciences, Teerankhar Mahaveer University, Moradabad,
+    India
+
+
+    Authors in [1], proposed a method for multi-label classification of fake news.
+    They were performing manually, then feature extraction by them to remove irrelevant
+    features. Reliability is also used to assign the label to multiple class labels,
+    which has similar properties. The multi-class problem is reduced to the two-class
+    problem. We used the LIAR dataset.
+
+
+    Of several types fake news like satire, clickbait, biased content, fabricated
+    news, propaganda, and hoaxes, and more. Fake news can be identified as of different
+    kinds like fake news, false video, faked images, etc. Moreover, these false stories
+    need to be handled. This problem residing in the deep web and acts as a volcano
+    which needs to be tended. This is not easy as it would need a lot amount of research
+    and development.
+
+
+    The multi-class problem is reduced to the two-class problem. We used the LIAR
+    dataset.
+
+
+    the coma caused by consuming alcohol. As a result, 900 were admitted to the Intensive
+    Care Unit (I.C.U.), and 296 died [9]. The enormous amount of data that exists
+    on the internet may work as a refuge for such fake news from its detection and
+    being quarantined.
+
+
+    total number of words in the document
+
+
+    tf(w)=(Number of times w appears in a document/
+
+    total number of words in the document)
+
+
+    Where N is the total number of documents and, df is
+
+    number of documents with term t.
+
+
+    ```
+
+    idf(t) = \log \frac{N}{df}
+
+    ```
+
+
+    Of several types fake news like satire, clickbait, biased content, fabricated
+    news, propaganda, and hoaxes, and more. Fake news can be identified as of different
+    kinds like fake news, false video, faked images, etc. Moreover, these false stories
+    need to be handled. This problem residing in the deep web and acts as a volcano
+    which needs to be tended. This is not easy as it would need a lot amount of research
+    and development.
+
+
+    The multi-class problem is reduced to the two-class problem. We used the LIAR
+    dataset.
+
+
+    the coma caused by consuming alcohol. As a result, 900 were admitted to the Intensive
+    Care Unit (I.C.U.), and 296 died.
+
+
+    ## III. Proposed Method
+
+
+    ## B. Machine Learning Model
+
+
+    The machine learning model is used to identify fake news and also provides useful
+    results. Authors in [12] and machine learning techniques used in the fake news
+    classification task. In work, for feature extraction, we use TF-Idf and consider
+    unigram, bigram, and relationships between them. TF-Idf is used to predict the
+    significance of a word. It is calculated by using:
+
+
+    ```
+
+    tf_{ij} = \frac{f_{ij}}{\sum f_{ik}}
+
+    ```
+
+
+    Where tf, is how many times i appears in j.
+
+    tf(w)=(Number of times w appears in a document/
+
+    total number of words in the document)
+
+
+    Where N is the total number of documents and, df is
+
+    number of documents with term t.
+
+
+    ```
+
+    idf(t) = \log \frac{N}{df}
+
+    ```
+
+
+    ## LIAR DATASET
+
+
+    - Who: Local political groups support third on.
+
+    - When did the false claim start or when natural to begin in it
+
+    - Why was the false claim made? For the benefit of the doubt
+
+    - How: How did the false claim spread in?
+
+    - Where: The Chicago have made false statements starting in the 10 years that
+    total number
+
+    - What: However, it is just in the past, along with which
+
+    - For the first time, the history of the popular nation is smaller than the last
+
+    - When: When it was posted on social media, it did not know the rate of effect
+    of
+
+
+    C. Scene of LIAR dataset
+
+
+    (1)
+
+    (2)
+
+    '
+  mdcn: '
+
+
+    # 基于机器学习和深度学习技术的虚假新闻检测
+
+
+    Sonal Garg¹ 和 Dilip Kumar Sharma²¹GL University, Mathura, 印度
+
+    电子邮箱: sonal.garg@gl.ac.in, dilip.sharma@gl.ac.in.
+
+
+    **摘要—** 社交媒体上误导性新闻报道的泛滥对人类可能产生负面影响，这带来了巨大的挑战。现有的词汇变体特征无法检测伪造新闻。大多数研究使用包含有限训练数据的小型数据集。在本文中，我们评估了机器学习和深度学习技术。LIAR
+    是一个主要的数据集，包含来自不同来源（包括社交媒体）的 12836 条短笔记。与现有的先进算法相比，提出的框架在准确率方面有了显著提高。
+
+
+    **关键词—** 虚假新闻、机器学习、自然语言处理、LSTM。
+
+
+    ## I. 引言
+
+
+    如今是一个数据时代。社交媒体每天产生海量数据。因此，生成的内容可能是虚假信息或谣言。这可能是故意的也可能是无意的。在现实生活中检测虚假新闻是一项极具挑战性的任务。通常，我们可以将虚假新闻定义为“一种故意且可证实的虚假文章[19]”。虚假新闻有多种形式，如误导信息、骗局、讽刺和偏见新闻。人们在数字平台上根据自己的信仰分享新闻。检测虚假新闻很困难，因为它们的编写初衷是为了欺骗人们。
+
+
+    虚假新闻有多种定义。文献[8]的作者将虚假新闻定义为“一种故意且可证实的虚假文章”。虚假新闻有多种类型，如讽刺、点击诱、偏见内容、虚构新闻、宣传和骗局等。虚假新闻可以被分为不同的种类，如虚假新闻、虚假视频、伪造图像等。此外，这些虚假故事需要被处理。这个问题存在深网上，像一个需要维护的火山。这并不容易，因为需要大量的研发。2020年底，有超过2180伊朗人饮用甲醇，结果导致900人进入重症监护室（ICU），296人死亡[9]。互联网上存在的巨大数据可能成为此类虚假新闻逃避检测和隔离的避风港。
+
+
+    在这工作中，提出的模型使用词袋模型（Bag of words）和tf-idf从LIAR数据集中提取特征。我们使用新闻内容作为主要特征，但也考虑了用于状态和亲和关系的个人信息。我们提出了一个重要性标签：从“真实的”、“月度的”、“半真的”到“虚假的”、“几乎真实的”，以构建虚假数据集。我们还添加了POS和全局嵌入（Globe
+    embedding），以确保现有结果使用我们的各种类别，包括深度学习（DL）模型：LSTM、CNN和朴素贝叶斯，以及机器学习模型。通过使用LIAR[10]数据集，我们将准确率提高了3%。
+
+
+    ## II. 动机
+
+
+    该领域仍有许多工作要做：
+
+
+    - 人们在社交媒体上分享信息时，无论是知情还是不知情的虚真假。
+
+    - 对于虚假新闻或真实新闻没有特定的定义。因此，没有人能理解文本的真相。
+
+    - 使用方法和深度学习技术等手段进行研究具有挑战性，目前存在一些空白。
+
+    - 开发一个自动的虚假检测系统来区分真实新闻和虚假新闻是困难的。
+
+
+    本文分为几个部分：第2节是文献综述，第3节介绍所提出的框架，第4节涉及实验与结果，第5节代表结论以及未来的展望。
+
+
+    ## III. 文献综述
+
+
+    许多研究人员正在利用多标签数据集解决虚假新闻检测的挑战。过去的研究表明，制作一个虚假新闻分类器并不容易。
+
+
+    文献[1]的作者提出了一种虚假新闻多标签分类的方法。他们通过人工提取特征来消除无关特征。可靠性也被用于分配具有相似属性的多个类别标签。多分类问题被简化为二分类问题。我们使用了LIAR数据集。
+
+
+    多种类型的虚假新闻，如讽刺、点击诱、偏见内容、虚构新闻、宣传和骗局等。虚假新闻可以被分为不同的种类，如虚假新闻、虚假视频、伪造图像等。此外，这些虚假故事需要被处理。这个问题存在深网上，像一个需要维护的火山。这并不容易，因为需要大量的研发。2020年底，有超过2180伊朗人饮用甲醇以防止饮酒导致的昏迷。结果900人进入重症监护室（ICU），296人死亡[9]。互联网上存在的巨大数据可能成为此类虚假新闻逃避检测和隔离的避风港。
+
+
+    在这工作中，提出的模型使用词袋模型和tf-idf从LIAR数据集中提取特征。我们使用新闻内容作为主要特征，但也考虑了用于状态和亲和关系的个人信息。我们提出了一个重要性标签：从“真实的”、“月度的”、“半真的”到“虚假的”、“几乎真实的”，以构建虚假数据集。我们还添加了POS和全局嵌入，以确保现有结果使用我们的各种类别，包括深度学习（DL）模型：LSTM、CNN和朴素贝叶斯，以及机器学习模型。通过使用LIAR[10]数据集，我们将准确率提高了3%。多分类问题被简化为二分类问题。我们使用了LIAR数据集。
+
+
+    多种类型的虚假新闻，如讽刺、点击诱、偏见内容、虚构新闻、宣传和骗局等。虚假新闻可以被分为不同的种类，如虚假新闻、虚假视频、伪造图像等。此外，这些虚假故事需要被处理。这个问题存在深网上，像一个需要维护的火山。这并不容易，因为需要大量的研发。多分类问题被简化为二分类问题。我们使用了LIAR数据集。
+
+
+    饮酒导致的昏迷。结果900人进入重症监护室（ICU），296人死亡。
+
+
+    第9届系统建模与分析国际会议，2020年12月4日-5日
+
+    Teerankhar Mahaveer University, 印度abad
+
+
+    工程与计算科学学院
+
+
+    文献[1]的作者提出了一种虚假新闻多标签分类的方法。他们通过人工提取特征来消除无关特征。可靠性也被用于分配具有相似属性的多个类别标签。多分类问题被简化为二分类问题。我们使用了LIAR数据集。
+
+
+    多种类型的虚假新闻，如讽刺、点击诱、偏见内容、虚构新闻、宣传和骗局等。虚假新闻可以被分为不同的种类，如虚假新闻、虚假视频、伪造图像等。此外，这些虚假故事需要被处理。这个问题存在深网上，像一个需要维护的火山。这并不容易，因为需要大量的研发。多分类问题被简化为二分类问题。我们使用了LIAR数据集。
+
+
+    饮酒导致的昏迷。结果900人进入重症监护室（ICU），296人死亡[9]。互联网上存在的巨大数据可能成为此类虚假新闻逃避检测和隔离的避风港。
+
+
+    文档中的单词总数
+
+
+    tf(w)=(Number of times w appears in a document/
+
+    total number of words in the document)
+
+
+    其中 N 是文档总数，df 是包含术语 t 的文档数。
+
+
+    ```
+
+    idf(t) = \log \frac{N}{df}
+
+    ```
+
+
+    多种类型的虚假新闻，如讽刺、点击诱、偏见内容、虚构新闻、宣传和骗局等。虚假新闻可以被分为不同的种类，如虚假新闻、虚假视频、伪造图像等。此外，这些虚假故事需要被处理。这个问题存在深网上，像一个需要维护的火山。这并不容易，因为需要大量的研发。多分类问题被简化为二分类问题。我们使用了LIAR数据集。
+
+
+    饮酒导致的昏迷。结果900人进入重症监护室（ICU），296人。
+
+
+    ## III. 提出的方法
+
+
+    ## B. 机器学习模型
+
+
+    机器学习模型用于识别虚假新闻并提供有用的结果。文献[12]将机器学习技术用于虚假新闻分类任务。在工作中，对于特征提取，我们使用TF-idf并考虑单字（unigram）、双字词（bigram）以及它们之间的关系。TF-idf用于预测单词的重要性。它通过以下公式计算：
+
+
+    ```
+
+    tf_{ij} = \frac{f_{ij}}{\sum f_{ik}}
+
+    ```
+
+
+    其中 tf 是 i 在 j 中出现的次数。
+
+    tf(w)=(Number of times w appears in a document/
+
+    total number of words in the document)
+
+
+    其中 N 是文档总数，df 是包含术语 t 的文档数。
+
+
+    ```
+
+    idf(t) = \log \frac{N}{df}
+
+    ```
+
+
+    ## LIAR 数据集
+
+
+    - 谁：地方政治团体支持第三。
+
+    - 虚假陈述何时开始或自然在何时开始。
+
+    - 为什么产生虚假陈述？为了考虑到考虑。
+
+    - 如何：虚假陈述是如何的？
+
+    - 哪里：芝加哥在过去的10年中开始发表虚假陈述。
+
+    - 什么：然而，这只是过去的事，以及哪些。
+
+    - 第一次：热门国家的历史较小。
+
+    - 当：当它发布在社交媒体上时，它不知道影响率。
+
+
+    C. LIAR 数据集的场景
+
+
+    (1)
+
+    (2)
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    # C. Naive Bayes Algorithm
+
+
+    It is a probabilistic classifier based on the assumption of feature independence.
+    It applied the Bayes theorem. In the paper [13] also adopted a machine learning
+    approach for covert detection. They applied the Bayes classifier, which considers
+    each statement of news as an independent feature.
+
+
+    We apply the Bayes theorem in the following
+
+
+    ```
+
+    P(c|x) = \frac{P(x|c)P(c)}{P(x)}$
+
+    ```
+
+
+    Where c is a class and x is a descriptor vector.
+
+
+    P(c|x) is a posteriori probability of event x, P(c) is the prior of c.
+
+
+    # D. Linear SVM Classifier
+
+
+    Support vector classifier uses lines or hyperplane to divide the data into classes
+    to solve the classification or regression problem. It is described mathematically
+    as
+
+
+    ```
+
+    $y = f(x) = \sum(w_ix_i)$
+
+    ```
+
+
+    Here, x is coordinates, and w is what determines the slope of a straight line.
+
+
+    # E. Logistic Regression
+
+
+    We applied Logistic Regression for next events. It is a classification algorithm.
+    Logistic regression is used when the dependent variable categorical.
+
+
+    ```
+
+    $P = \frac{1}{1+e^{-(w^Tx+b)}}$
+
+    ```
+
+
+    Here, P is the probability of i, and e is the base of the natural logarithm, b,
+    and m are model parameters.
+
+
+    By using ratio
+
+
+    ```
+
+    $\frac{P}{1-P} = \exp(w^Tx+b)$
+
+    ```
+
+
+    (P) value always lies in 0 to 1, in the case of odd, odd can take the range from
+    0 to infinity. Odd is defined as the ratio of an event that will occur to the
+    probability of an event that will not occur.
+
+
+    # F. Random Forest
+
+
+    Random forest is a supervised algorithm that uses ensemble learning to create
+    a forest. This algorithm could be applied in classification, regression, and others.
+    This algorithm works well on large datasets.
+
+
+    ```
+
+    $ft_i = \frac{1}{n} \sum_{j=1}^{n} f_{ij}$
+
+    ```
+
+
+    ```
+
+    $norm_i = \frac{1}{n} \sum_{j=1}^{n} f_{ij}$
+
+    ```
+
+
+    ```
+
+    $RFT_i = \sqrt{\sum (ft_i - norm_i)^2}$
+
+    ```
+
+
+    # G. Decision Tree Classifier
+
+
+    A decision tree can be used to perform the task of classification or regression.
+    It works well for both
+
+
+    Phony News Detection using Machine Learning and Deep-Learning Techniques
+
+
+    categorical and numerical data. In our experiments, we used Gini impurity resulted
+    in 94% accuracy.
+
+
+    Gini is used to compute the probability of inaccurate classification of an observation.
+    Gini can be represented by a mathematical notation as follows
+
+
+    ```
+
+    $G(z) = P(i) \log P(i) + (1-P(i)) \log(1-P(i))$
+
+    ```
+
+
+    Where P(i) represents the probability of classification as the training data.
+
+
+    # H. Deep Learning Model
+
+
+    The Deep learning is used to automatically extract significant features for extraction.
+    In the paper [14] adopted deep learning techniques for stance detection. They
+    have adopted the RNN model for features. Bi-LSTM achieved the best results. In
+    the future, sentiment analysis can lead to enhance performance. In the paper [15]
+    also applied deep learning techniques to differentiate between synthetic and semantic
+    relationship between words. They concluded that the deep-learning model performed
+    well on large datasets. A new model was proposed by authors in paper [16] CNN
+    for fake news detection. They used explicit and latent features, and in the future,
+    more features can be adopted to enhance the performance of the model.Authors [18]
+    used CNN and LSTM to compute the reliability of news. Visual features with embedded
+    text and headings are used for experiments.
+
+
+    # I. LSTM
+
+
+    It is a type of neural network which is used when the context becomes reliable
+    to predict the future outcome. RNN used output as a next layer having several
+    layers. Here, Output depends on context such as under any story, and there is
+    a need to know about events, etc. There are several domains RNN plays a significant
+    role like next word prediction, video captioning, stock market prediction, Time-series
+    prediction, sentiment analysis, and classification can process a sequence of data
+    that has memory.
+
+
+    In the case of RNN, during backpropagation, the gradient vanishes or explodes.
+    In the case of exploding gradients, weight can be reduced, but using gradient,
+    there is no way to update the weights and biases. To overcome these limitations,
+    LSTM is used. LSTM does not read all input. LSTM uses the context of selective
+    reader, selective and selective forget. GRU is a special class of LSTM that has
+    no forget.
+
+
+    Fig. 2 represents the LSTM architecture using GRU. Here x is the input layer,
+    and y is the output layer.'
+  - '[PAGE 3]
+
+
+    # 9th International Conference on System Modeling & Advancement in Research Trends,
+    4th–5th December, 2020
+
+    Faculty of Engineering & Computing Sciences, Teerhanker Mahaveer University, Moradabad,
+    India
+
+
+    ![](img/a91a3aadf9ebfcab11621bf60a064f4a_3_0.png)
+
+
+    # K. CNN
+
+
+    CNN is a derivative of a feedforward neural network. This can be applied to face
+    recognition and image classification. CNN worked well for sentiment analysis research.
+    A convolutional neural network is applied to extract important features from the
+    text or images by a series of the convolutional layer.
+
+
+    # IV. PROPOSED FRAMEWORK
+
+
+    For preposing, we use the NLTK library to manage stop words and to stemming. We
+    applied snowball stemmer to convert the word of a sentence into its root form.
+    We also remove punctuation, symbols, and keep only alphabets. Dataset is converted
+    to lower case for processing. We remove the duplicate names using the duplicate()
+    function removes rows from the data and to root name, null() function is used
+    in the implementation. The proposed dataset is divided into 80:20 training and
+    testing ratios based on the experimental results.
+
+
+    We merged the training and validation dataset for experiments, and the testing
+    dataset is used for computing accuracy.
+
+
+    Fig. 3 represents our proposed framework. In this work, the NLTK POS tagger is
+    applied to assign a tag to each word of the content of the statement. After pos
+    tagging, each word is assigned with one tag. Then we apply word embedding. The
+    word of remaining POS tags that do not appear in POS tags of the news content
+    are made zero vector.
+
+
+    300-dimensional Global embedding for our work. The embeddings are sorted in alphabetical
+    order before passing to the LSTM, bi-directional LSTM, and CNN.
+
+
+    ![](img/a91a3aadf9ebfcab11621bf60a064f4a_3_1.png)
+
+
+    Fig. 2: LSTM with GRU Architecture
+
+
+    Fig. 3: Proposed Framework
+
+
+    +   - Bag of words
+
+    - Tfid
+
+    - Word embedding
+
+    - Tfid
+
+    - Glove-Embedding
+
+
+    +   - ''aarp''
+
+    - ''abbott''
+
+    - ''abel''
+
+    - ''abid''
+
+    - ''abit''
+
+    - ''ajbl''
+
+    - ''abolish''
+
+    - ''abort''
+
+    - ''abclonic''
+
+    - ''abort even''
+
+    - ''abort even case''
+
+    - ''abort ileleg''
+
+    - ''abort right''
+
+    - ''abraham''
+
+    - ''abrahamincoln''
+
+    - ''absolute''
+
+    - ''abus''
+
+    - ''academ''
+
+    - ''academi''
+
+    - ''accept''
+
+
+    Fig. 4: Representation of TF-IDF Features Extracted from the Dataset
+
+    Fig.4 represents the top 20 features that we are using tf-idf.
+
+
+    Copyright © IEEE-2020 ISBN: 978-1-2221-8028-6'
+  - '[PAGE 4]
+
+
+    # Phony News Detection using Machine Learning and Deep-Learning Techniques
+
+
+    # V. EXPERIMENTS AND RESULTS
+
+
+    Google Collaboratory, which is an open-source notebook with a Tesla K80 GPU backend,
+    is used for training various machine learning and deep learning models.
+
+
+    For experiments, both LSTM and BI-LSTM classifiers used the Sigmoid activation
+    function, Adam optimizer,0.3 dropout value. We applied glove embedding with 300
+    dimension and pre-embedding to make sentence length. We have chosen 40 embedding
+    vector features. Binary cross-entropy loss is used in the experiment settings.
+    We trying different combinations to get results.
+
+
+    LSTM achieved maximum accuracy of 63% while in the machine classifier, the Multinave-Bayes
+    classifier achieved 60%.
+
+
+    Table 1 represents the comparison of our proposed method with the state of the
+    art.
+
+
+    # TABLE 1: COMPARISON OF METHODS
+
+
+    | Method | SVM | CNN | LSTM |
+
+    |---|---|---||}{
+
+    | [17] | 0.56 | 0.58 | 0.54 |
+
+    | [11] Proposed method | 0.57 | 0.60 | 0.63 |
+
+
+    ![](img/a91a3aadf9ebfcab11621bf60a064f4a_4_0.png)
+
+
+    Fig. 6: Results of Deep-learning Classifier
+
+    Fig. 6 represents the performance of the deep-learning classifier.
+
+
+    # VI. CONCLUSION AND FUTURE
+
+
+    In this paper, we have applied machine learning and deep-learning approaches on
+    the LIAR dataset. To perform better than the state of the art methods, we applied
+    POS tagging and Glove embedding in the deep learning model. We achieved the highest
+    of 63% accuracy by using the LSTM model. In future, we can apply transforms by
+    six-layers to enhance the performance of the model. There is a scope to add other
+    user profile features to also increase accuracy.
+
+
+    # ACKNOWLEDGMENT
+
+
+    +   [1] Rassol, T., Butt, W. H., Shaikat, A., &Akram, M. U. (2019). Multi-fake
+    news detection using multi-supervised learning. In 2019 11th International Conference
+    on Computer and Communication Engineering (ICCE), pp. 1-6. IEEE.
+
+    [2] Kiazad, S., Parsi, M., Mohammadi, S., & Wang, A. (2019). Analysis of Classifiers
+    for Fake News Detection. Prediction Computer Science, 102, 11-20.
+
+    [3] Minh, M. K. (2019). Bidirectional LSTM on POS tags and CNN Architecture for
+    Fake News Detection. In 2019 11th International Conference on Computer and Communication
+    Engineering (ICCE), pp. 1-6. IEEE.
+
+    [4] Mikolov, T., Kohá, G., & Dean, J. E. (2013). Efficient representation of word
+    in continuous vector space. arXiv preprint arXiv arXiv:1301.03481.
+
+    [5] Long, Y. et al. (2017). Fake news detection using multi-perspective social
+    networks. In AAAI Conference on Web Web Discovery and Data Mining.
+
+    [6] Huang, Y.F., & Chen, P. H. (2020). Fake News Detection using an Ensemble Model
+    based on Self-adaptive Harmony Search with Applications in Natural Language Processing
+    and Experiments, 15(15), 1-18.
+
+    [7] Faustini, P. H. A., &Ccoves, T. F. (2020). Fake news detection in multiple
+    social platforms and languages. Expert Systems with Applications, 113503.
+
+
+    ![](img/a91a3aadf9ebfcab11621bf60a064f4a_4_1.png)
+
+
+    | Classifier | Accuracy | Precision | Recall | F-score |
+
+    |---|---|---|---||}{
+
+    Multinomial NB | 0.56 | 0.50 | 0.50 | 0.56 |
+
+    SVM | 0.59 | 0.59 | 0.59 | 0.59 |
+
+    Logistic Regression | 0.57 | 0.58 | 0.58 | 0.57 |
+
+    Random Forest decision tree | 0.57 | 0.57 | 0.57 | 0.57 |
+
+    Gassian Naive | 0.56 | 0.55 | 0.56 | 0.56 |
+
+    K-neighbors | 0.50 | 0.50 | 0.50 | 0.50 |
+
+
+    Fig. 5: Representation of Accuracy of Various ML Classifier
+
+    Table 2 shows the evaluation measures results from applying machine learning classifiers.
+
+
+    Copyright ©-IEEE- 2020 ISBN: 978-1-7231-8908-6
+
+
+    31'
+  md: '
+
+    # C. Naive Bayes Algorithm
+
+
+    It is a probabilistic classifier based on the assumption of feature independence.
+    It applied the Bayes theorem. In the paper [13] also adopted a machine learning
+    approach for covert detection. They applied the Bayes classifier, which considers
+    each statement of news as an independent feature.
+
+
+    We apply the Bayes theorem in the following:
+
+
+    ```
+
+    P(c|x) = \frac{P(x|c)P(c)}{P(x)}
+
+    ```
+
+
+    Where c is a class and x is a descriptor vector.
+
+
+    P(c|x) is a posteriori probability of event x, P(c) is the prior of c.
+
+
+    # D. Linear SVM Classifier
+
+
+    Support vector classifier uses lines or hyperplane to divide the data into classes
+    to solve the classification or regression problem. It is described mathematically
+    as
+
+
+    ```
+
+    $y = f(x) = \sum(w_ix_i)$
+
+    ```
+
+
+    Here, x is coordinates, and w is what determines the slope of a straight line.
+
+
+    # E. Logistic Regression
+
+
+    We applied Logistic Regression for next events. It is a classification algorithm.
+    Logistic regression is used when the dependent variable categorical.
+
+
+    ```
+
+    $P = \frac{1}{1+e^{-(w^Tx+b)}}$
+
+    ```
+
+
+    Here, P is the probability of i, and e is the base of the natural logarithm, b,
+    and m are model parameters.
+
+
+    By using ratio
+
+
+    ```
+
+    $\frac{P}{1-P} = \exp(w^Tx+b)$
+
+    ```
+
+
+    (P) value always lies in 0 to 1, in the case of odd, odd can take the range from
+    0 to infinity. Odd is defined as the ratio of an event that will occur to the
+    probability of an event that will not occur.
+
+
+    # F. Random Forest
+
+
+    Random forest is a supervised algorithm that uses ensemble learning to create
+    a forest. This algorithm could be applied in classification, regression, and others.
+    This algorithm works well on large datasets.
+
+
+    ```
+
+    $ft_i = \frac{1}{n} \sum_{j=1}^{n} f_{ij}$
+
+    ```
+
+
+    ```
+
+    $norm_i = \frac{1}{n} \sum_{j=1}^{n} f_{ij}$
+
+    ```
+
+
+    ```
+
+    $RFT_i = \sqrt{\sum (ft_i - norm_i)^2}$
+
+    ```
+
+
+    # G. Decision Tree Classifier
+
+
+    A decision tree can be used to perform the task of classification or regression.
+    It works well for both Phony News Detection using Machine Learning and Deep-Learning
+    Techniques categorical and numerical data. In our experiments, we used Gini impurity
+    resulted in 94% accuracy.
+
+
+    Gini is used to compute the probability of inaccurate classification of an observation.
+    Gini can be represented by a mathematical notation as follows
+
+
+    ```
+
+    $G(z) = P(i) \log P(i) + (1-P(i)) \log(1-P(i))$
+
+    ```
+
+
+    Where P(i) represents the probability of classification as the training data.
+
+
+    # H. Deep Learning Model
+
+
+    The Deep learning is used to automatically extract significant features for extraction.
+    In the paper [14] adopted deep learning techniques for stance detection. They
+    have adopted the RNN model for features. Bi-LSTM achieved the best results. In
+    the future, sentiment analysis can lead to enhance performance. In the paper [15]
+    also applied deep learning techniques to differentiate between synthetic and semantic
+    relationship between words. They concluded that the deep-learning model performed
+    well on large datasets. A new model was proposed by authors in paper [16] CNN
+    for fake news detection. They used explicit and latent features, and in the future,
+    more features can be adopted to enhance the performance of the model. Authors
+    [18] used CNN and LSTM to compute the reliability of news. Visual features with
+    embedded text and headings are used for experiments.
+
+
+    # I. LSTM
+
+
+    It is a type of neural network which is used when the context becomes reliable
+    to predict the future outcome. RNN used output as a next layer having several
+    layers. Here, Output depends on context such as under any story, and there is
+    a need to know about events, etc. There are several domains RNN plays a significant
+    role like next word prediction, video captioning, stock market prediction, Time-series
+    prediction, sentiment analysis, and classification can process a sequence of data
+    that has memory.
+
+
+    In the case of RNN, during backpropagation, the gradient vanishes or explodes.
+    In the case of exploding gradients, weight can be reduced, but using gradient,
+    there is no way to update the weights and biases. To overcome these limitations,
+    LSTM is used. LSTM does not read all input. LSTM uses the context of selective
+    reader, selective and selective forget. GRU is a special class of LSTM that has
+    no forget.
+
+
+    Fig. 2 represents the LSTM architecture using GRU. Here x is the input layer,
+    and y is the output layer.
+
+
+    # 9th International Conference on System Modeling & Advancement in Research Trends,
+    4th–5th December, 2020
+
+    # Faculty of Engineering & Computing Sciences, Teerhanker Mahaveer University,
+    Moradabad, India
+
+
+    ![](img/a91a3aadf9ebfcab11621bf60a064f4a_3_0.png)
+
+
+    # K. CNN
+
+
+    CNN is a derivative of a feedforward neural network. This can be applied to face
+    recognition and image classification. CNN worked well for sentiment analysis research.
+    A convolutional neural network is applied to extract important features from the
+    text or images by a series of the convolutional layer.
+
+
+    # IV. PROPOSED FRAMEWORK
+
+
+    For preposing, we use the NLTK library to manage stop words and to stemming. We
+    applied snowball stemmer to convert the word of a sentence into its root form.
+    We also remove punctuation, symbols, and keep only alphabets. Dataset is converted
+    to lower case for processing. We remove the duplicate using duplicate() function
+    removes rows from the data and to root name, null() function is used in implementation.
+    The proposed dataset is divided into 80:20 training and testing ratios based on
+    experimental results.
+
+
+    We merged the training and validation dataset for experiments, and the testing
+    dataset is used for computing accuracy. Fig. 3 represents our framework. In this
+    work, the NLTK POS tagger is applied to assign a tag to each word of the content.
+    After pos tagging, each word is assigned with one tag. The word of remaining POS
+    tags that do not appear in POS tags of the news content are made zero vector.
+    300-dimensional Global embedding for our work. The embeddings are sorted in alphabetical
+    order before passing to bi-directional LSTM, and CNN.
+
+
+    ![](img/a91a3aadf9ebfcab11621bf60a064f4a_3_1.png)
+
+
+    Fig. 2: LSTM with GRU Architecture
+
+    Fig. 3: Proposed Framework
+
+    - Bag of words TF-IDF
+
+    - Word embedding
+
+    - ''aarp''
+
+    - ''abbott''
+
+    - ''abel''
+
+    - ''abit''
+
+    - ''abolish''
+
+    - ''abort''
+
+    - ''abclonic''
+
+    - ''abort''
+
+    - ''abort even''
+
+    - ''abort case''
+
+    - ''abort right''
+
+    - ''abraham''
+
+    - ''abrahamcoln''
+
+    - ''absolute''
+
+    - ''abus''
+
+    - ''academ''
+
+    - ''academi''
+
+    Fig. 4: Representation of TF-IDF Features Extracted from Dataset
+
+
+    # Phony News Detection using Machine Learning and Deep-Learning Techniques
+
+
+    Copyright ©-IEEE- 2020 ISBN: 978-1-7231-8908-6
+
+
+    20 features that we are using tf-idf.
+
+
+    # V. EXPERIMENTS AND RESULTS
+
+
+    Googleatory, which is an open-source notebook, is used for various machine learning
+    and deep learning models. For experiments, both LSTM and BI-LSTM classifiers used
+    Sigmoid activation function, Adam optimizer, dropout value. We applied glove embedding
+    with 300 dimension and pre-embedding to make sentence length. Binary cross-entropy
+    loss is used in experiment settings. Trying different combinations to get results.
+    LSTM achieved maximum accuracy of 63% while machine classifier, the Naive Bayes
+    classifier achieved 60%. Table 1 represents comparison of our proposed method
+    with the state of the art.
+
+
+    # TABLE 1: COMPARISON OF METHODS
+
+
+    | Method | SVM | CNN | LSTM |
+
+    |---|---|---|---|
+
+    | [17] | 0.56 | 0.58 | 0.54 |
+
+    | [11] Proposed method | 0.57 | 0.60 | 0.63 |
+
+
+    ![](img/a91a3aadf9ebfcab11621bf60a064f4a_4_0.png)
+
+
+    Fig. 6: Results of Deep-learning Classifier
+
+    Fig. 6 represents performance of deep-learning classifier.
+
+
+    # VI. CONCLUSION AND FUTURE
+
+
+    In this paper, we have applied machine learning and deep-learning approaches on
+    the LIAR dataset. To perform better than the state of art methods, we applied
+    POS tagging and Glove embedding in the deep learning model. We achieved highest
+    of 63% accuracy using LSTM model. In future, we can apply transforms by six-layers
+    to enhance the performance of the model. There is scope to add other user profile
+    features to increase accuracy.
+
+
+    # ACKNOWLEDGMENT
+
+
+    [1] Rassol, T., Butt, W. H., Shaikat, A., & Akram, M. U. (2019). Multi-fake news
+    detection using multi-supervised learning. In 2019 11th International Conference
+    on Computer and Communication Engineering (ICCE), pp. 1-6. IEEE.
+
+    [2] Kiazad, S., Parsi, M., Mohammadi, S., & Wang, A. (2019). Analysis of Classifiers
+    for Fake News Detection. Computer Science, 102, 11-20.
+
+    [3] Minh, M. K. (2019). Bidirectional LSTM on POS tags and CNN Architecture for
+    Fake News Detection. In 2019 11th International Conference on Computer and Communication
+    Engineering (ICCE), pp. 1-6, IEEE.
+
+    [4] Mikolov, T., Koh, G., & Dean, J. E. (2013). Efficient representation of word
+    in continuous vector space. arXiv preprint arXiv:1301.03481.
+
+    [5] Long, Y. et al. (2017). Fake news detection using multi-perspective social
+    networks. In AAAI Conference on Web Discovery and Data Mining.
+
+    [6] Huang, Y.F., & Chen, P. H. (2020). Fake News Detection using an Ensemble Model
+    based on Self-adaptive Harmony Search with Applications in Natural Language Processing
+    and Experiments, 15(15), 1-18.
+
+    [7] Faustini, P. H. A., & Ccoves, T. F. (2020). Fake news detection in multiple
+    social platforms and languages. Expert Systems with Applications, 113503.
+
+
+    ![](img/a91a3aadf9ebfcab11621bf60a064f4a_4_1.png)
+
+
+    | Classifier | Accuracy | Precision | Recall | F-score |
+
+    |---|---|---|---|---|
+
+    Multinomial NB | 0.56 | 0.50 | 0.50 | 0.56 |
+
+    SVM | 0.59 | 0.59 | 0.59 | 0.59 |
+
+    Logistic Regression | 0.57 | 0.58 | 0.58 | 0.57 |
+
+    Random Forest decision tree | 0.57 | 0.57 | 0.57 | 0.57 |
+
+    Gassian Naive | 0.56 | 0.55 | 0.56 | 0.56 |
+
+    K-neighbors | 0.50 | 0.50 | 0.50 | 0.50 |
+
+
+    Fig. 5: Representation of Accuracy of Various ML Classifier
+
+    Table 2 shows the evaluation measures results from applying machine learning classifiers.
+
+    '
+  mdcn: '
+
+
+    # C. 朴贝叶斯算法
+
+
+    这是一种基于特征独立假设的概率分类器。它应用了贝叶斯定理。论文 [13] 也采用了机器学习方法进行隐蔽检测。他们应用了贝叶斯分类器，将新闻的每条声明视为一个独立的特征。
+
+
+    我们在下文中应用了贝叶斯定理：
+
+
+    ```
+
+    P(c|x) = \frac{P(x|c)P(c)}{P(x)}
+
+    ```
+
+
+    其中 c 是类别，x 是描述向量。
+
+
+    P(c|x) 是事件 x 的后验概率，P(c) 是 c 的先验概率。
+
+
+    # D. 线性 SVM 分类器
+
+
+    支持向量分类器使用直线或超平面将数据划分为类别，以解决分类或回归问题。其数学描述为：
+
+
+    ```
+
+    $y = f(x) = \sum(w_ix_i)$
+
+    ```
+
+
+    在这里，x 是坐标，w 是决定直线斜率的参数。
+
+
+    # E. 逻辑回归
+
+
+    我们将逻辑回归用于预测后续事件。它是一种分类算法。当因变量为分类变量时，使用逻辑回归。
+
+
+    ```
+
+    $P = \frac{1}{1+e^{-(w^Tx+b)}}$
+
+    ```
+
+
+    在这里，P 是 i 的发生概率，e 是自然对数的底，b 和 m 是模型参数。
+
+
+    通过使用比率
+
+
+    ```
+
+    $\frac{P}{1-P} = \exp(w^Tx+b)$
+
+    ```
+
+
+    (P) 值始终处于 0 到 1 之间；在某些情况下，几率范围可以从 0 到无穷大。几率定义为发生事件概率与不发生事件概率的比值。
+
+
+    # F. 随机森林
+
+
+    随机森林是一种使用集成学习创建森林的监督算法。该算法可以应用于分类、回归等领域。该算法在大数据集上表现良好。
+
+
+    ```
+
+    $ft_i = \frac{1}{n} \sum_{j=1}^{n} f_{ij}$
+
+    ```
+
+
+    ```
+
+    $norm_i = \frac{1}{n} \sum_{j=1}^{n} f_{ij}$
+
+    ```
+
+
+    ```
+
+    $RFT_i = \sqrt{\sum (ft_i - norm_i)^2}$
+
+    ```
+
+
+    # G. 决策树分类器
+
+
+    决策树可用于执行分类或回归任务。它在利用机器学习和深度学习技术的虚假新闻检测的分类和数值数据方面表现良好。在我们的实验中，我们使用的 Gini 纯度达到了
+    94% 的准确率。
+
+
+    Gini 用于计算观察值分类不准确的概率。Gini 用以下数学符号表示：
+
+
+    ```
+
+    $G(z) = P(i) \log P(i) + (1-P(i)) \log(1-P(i))$
+
+    ```
+
+
+    其中 P(i) 代表训练数据中分类的概率。
+
+
+    # H. 深度学习模型
+
+
+    深度学习被用于自动提取显著特征。论文 [14] 采用了深度学习技术进行立场检测。他们采用 RNN 模型提取特征。Bi-LSTM 取得了最佳结果。未来，情感分析可以进一步提升性能。论文
+    [15] 也应用了深度学习技术来区分词汇之间的合成关系和语义关系。他们得出深度学习模型在大数据集上表现良好。作者在论文 [16] 中提出了一种用于虚假新闻检测的新模型
+    CNN。他们使用了显式特征和潜在特征，未来可以采用更多特征来增强模型性能。作者 [18] 使用 CNN 和 LSTM 计算新闻的可靠性。实验使用了带有嵌入文本和标题的视觉特征。
+
+
+    # I. LSTM
+
+
+    这是一种神经网络，当上下文变得可靠以预测未来结果时使用。RNN 将输出作为具有若干层的下一层。在这里，输出取决于上下文（例如在任何故事下），并且需要了解这些。RNN
+    在多个领域发挥作用，如预测词、视频字幕、股市预测、序列预测、情感分析和分类。
+
+
+    在 RNN 的情况下，反向传播过程中梯度可能会消失或爆炸。在梯度爆炸的情况下，权重可能会减小。为了克服这些限制，使用了 LSTM。LSTM 不读取所有输入，LSTM
+    使用上下文进行记忆。GRU 是 LSTM 的一种特殊类型，没有记忆功能。图 2 展示了使用 GRU 的 LSTM 架构。这里 x 是输入层，y 是输出层。第9届系统建模与研究趋势国际会议，2020年12月4日，工程科学学院，Mahaveer
+    University, Moradabad, India
+
+
+    ![](img/a91a3aadf9ebfcab11621bf60a04f4a_3_0)
+
+
+    # K. CNN
+
+
+    CNN 是馈神经网络的变体。它可以应用于人脸识别和图像分类。CNN 在情感分析方面表现良好。卷积神经网络用于从文本或图像中提取重要特征。
+
+
+    # IV. 提出的框架
+
+
+    对于预处理，我们使用 NLTK 库来管理停用词和词干提取。我们应用 snowball stemmer 将句子转换为词根形式。我们还去除了标点、符号，只保留字母。将数据集转换为小写。使用
+    `duplicate()` 函数删除数据中的重复行。根据实验结果，提出的数据集被分为 80:20 的训练和测试比例。
+
+
+    我们合并了训练和验证数据集进行实验。在工作中，使用 NLTK POS 标记器对内容的每个词分配标签。POS 标记后，每个词被分配了一个标签。未出现在新闻内容的
+    POS 标记被变为零向量。我们的工作使用了 300 维全局嵌入。在传递双向 LSTM 和 CNN 之前，嵌入按字母顺序排序。
+
+
+    图 4：从数据提取的 TF-IDF 特征
+
+
+    # 使用机器学习和深度学习技术的虚假新闻检测
+
+
+    Copyright ©-IEEE- 2020 ISBN: 978-1-7231-8908-6
+
+
+    我们使用了 tf-idf 特征。
+
+
+    # V. 实验与结果
+
+
+    Googleatory 是一个开源笔记本，用于各种机器学习和深度学习模型。实验中，LSTM 和 BI-LSTM 分类器都使用了 Sigmoid 激活函数、Adam
+    优化器和 dropout 值。我们应用了 300 维的 glove 嵌入来处理句子长度。实验设置中使用交叉熵损失。尝试不同的组合以获得结果。LSTM 达到了
+    63% 的最高准确率，而机器学习分类器朴贝叶斯分类器达到了 60%。表 1 表示我们提出的方法与先进方法的比较。
+
+
+    # 表 1：方法比较
+
+
+    | 方法 | SVM | CNN | LSTM |
+
+    |---|---|---|---|
+
+    | [17] | 0.56 | 0.58 | 0.54 |
+
+    | [11] 提出的方法 | 0.57 | 0.60 | 0.63 |
+
+
+    ![](img/a91a3aadf9ebfcab11621bf60a4f4a_4_0.png)
+
+
+    图 6：深度学习分类器的结果
+
+    图 6 表示了深度学习分类器的性能。
+
+
+    # VI. 结论与展望
+
+
+    在本文中，我们在 LIAR 数据集上应用了机器学习和深度学习方法。为了优于先进方法，我们在深度学习模型中应用了 POS 标记和 Glove 嵌入。使用 LSTM
+    模型实现了 63% 的最高准确率。未来，我们可以应用六层变换来增强模型性能。还有添加其他用户特征以提高准确率的空间。
+
+
+    # 致谢
+
+
+    [1] Rassol, T., Butt, W. H., Shaikat, A., & Akram, M. U. (2019). 使用多监督学习进行多虚假新闻检测。2019
+    年第11 届计算机与通信工程国际会议 (ICCE)，pp. 1-6. IEEE.
+
+    [2] Kiazad, S., Parsi, M., Mohammadi, S., & Wang, A. (2019). 虚假新闻检测分类器分析。Computer
+    Science, 102, 11-20.
+
+    [3] Minh, M. K. (2019). 用于虚假新闻检测的双向 LSTM 和 POS 标记。2019 年第11 届计算机与通信工程国际会议 (ICCE)，pp.
+    1-6. IEEE.
+
+    [4] Mikolov, T., Koh, G., & Dean, J. (2013). 连续空间中的词高效表示。arXiv 预打印 arXiv:1301.0348.
+
+    [5] Long, Y. et al. (2017). 基于多视角社交网络的虚假新闻检测。AAAI 网络发现与挖掘会议。
+
+    [6] Huang, Y.F., & Chen, P. H. (2020). 基于自适应和谐搜索的集成模型虚假新闻检测。自然语言处理与应用，15(15),
+    1-18.
+
+    [7] Faustini, P. H. A., & Ccoves, T. F. (2020). 多平台和多语言虚假新闻检测。Expert Systems with
+    Applications, 113503.
+
+
+    ![](img/a91a3aadf9ebfcab11621bf60a4f4a_3_1.png)
+
+
+    图 2：带有 GRU 的 LSTM
+
+    图 3：提出的框架
+
+    - 词袋 TF-IDF
+
+    - 词嵌入
+
+    - ''aarp''
+
+    - ''abbott''
+
+    - ''abel''
+
+    - ''abit''
+
+    - ''abolish''
+
+    - ''abort''
+
+    - ''abclonic''
+
+    - ''abort''
+
+    - ''abort even''
+
+    - ''abort case''
+
+    - ''abort right''
+
+    - ''abraham''
+
+    - ''abrahamcoln''
+
+    - ''absolute''
+
+    - ''abus''
+
+    - ''academ''
+
+    - ''academi''
+
+    图 4：从数据集提取的 TF-IDF 特征
+
+
+    [/content]
+
+
+    ```
+
+
+    [content]
+
+
+    | 分类器 | 准确率 | 精率 | 召回率 | F 分数 |
+
+    |---|---|---|---|
+
+    多项式 NB | 0.56 | 0.50 | 0.50 | 0.56 |
+
+    SVM | 0.59 | 0.59 | 0.59 | 0.59 |
+
+    逻辑回归 | 0.57 | 0.58 | 0.58 | 0.57 |
+
+    随机森林决策树 | 0.57 | 0.57 | 0.57 | 0.57 |
+
+    高斯朴贝叶斯 | 0.56 | 0.55 | 0.56 | 0.56 |
+
+    K-最近邻 | 0.50 | 0.50 | 0.50 | 0.50 |
+
+
+    图 5：各种机器学习分类器的准确率表示
+
+    表 2 显示了应用机器学习分类器的评估指标结果。
+
+
+    [/content]
+
+    ```助助。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​​​​​。​。​​​。​​​​​。​。​。​。​。​。​​​​​​​​​。​​​​​。​​​。​​​​​​​​​​​​​。​​​。​。​​​​​​​​​​​​​​​​​。​。​​​​​。​​​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​​​​​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​。​​​。​。​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​：​​​​​​​​​​​：​​。
+
+
+    ![](img/a91a3aadf9ebfcab11621bf60a4f4a_3_1.png)
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 5]
+
+
+    9th International Conference on System Modeling & Advancement in Research Trends,
+    4th–5th December, 2020
+
+    Engineering & Computer Sciences, Mahaveer University, Moradabad, India.
+
+
+    +   [8] Bumiao, S. C., & Grafcek, J. (2017). Networks Automatically
+
+    identifying fake news in Twitter Threads. In 2017
+
+    International Conference on Smart Cloud (SmartCloud) (pp. 28-35)
+
+    IEEE.
+
+
+    +   [9] Infofemia, C. T., Oliveira, A., Seixas, F. L., & Paes, A. (2020).
+
+    Infodemia, Fake News and Medicine: Science and The Quest for
+
+    Truth. International Journal of Cardiology and Sciences (AHEADJ)
+
+    9(1) (2020), 7-15.
+
+
+    +   [10] RachanaKunaraprapatdy & SriRohithaMadala, Fake Content
+
+    Detection Using Deep Learning Techniques (IJEAJ) ISSN: 2249-
+
+    8858, Volume-8 Issue-5, June 2019.
+
+
+    +   [11] Pallavi, V. Petkar, S. S. Sontane “Fake News Detection: Survey
+
+    of Technology”. International Journal of Computer Technology
+
+    and Exploring Engineering (IJTEE) ISSN: 2278-3075, Volume-9
+
+    Issue-9, July 2020.
+
+
+    +   [12] MyhaoloGranik & VolodymyrMesyan “ Fake News Detection
+
+    Using Naive Bayes Classifier ”, UKRON 2017 IEEE.
+
+
+    +   [13] GaurabGangani & Bhadradachutturi, “Sience-In-Depth
+
+    Deep neural approach for stage classification”, elasiver, elsevier 2018.
+
+
+    +   [14] Sherry Giri & Elslammer, “Deep Learning Algorithms for
+
+    Fake News Detection in Online”, ICENSP (2019).
+
+
+    +   [15] Wang, Y., & Tang, J. (2019). “ Convolutional Neural
+
+    Networks for Fake News Detection”, arXiv:1800.00749 [cs.CL]
+
+    3 June 2019.
+
+
+    +   [16] Wang, Y., Thodakar, M., Islam, T., Isgal, A., & Karaf, S. (2019).
+
+    A benchmark study on machine learning methods for fake news
+
+    detection, arxiv:1906.09605.
+
+
+    +   [17] Sharma
+
+
+    +   [18] Sharma, S. & Sharma, D. K. (2019). November) Fake News
+
+    Detection: A long way to go. In 2019 4th International Conference
+
+    on Information Systems and Computer Networks (ISCON) (pp. 816-
+
+    821). IEEE.'
+  md: '
+
+    9th International Conference on System Modeling & Advancement in Research Trends,
+    4th–5th December, 2020
+
+    Engineering & Computer Sciences, Mahaveer University, Moradabad, India.
+
+
+    - [8] Bumiao, S. C., & Grafcek, J. (2017). Networks Automatically identifying
+    fake news in Twitter Threads. In 2017 International Conference on Smart Cloud
+    (SmartCloud) (pp. 28-35) IEEE.
+
+
+    - [9] Infofemia, C. T., Oliveira, A., Seixas, F. L., & Paes, A. (2020). Infodemia,
+    Fake News and Medicine: Science and The Quest for Truth. International Journal
+    of Cardiology and Sciences (AHEADJ) 9(1) (2020), 7-15.
+
+
+    - [10] RachanaKunaraprapatdy & SriRohithaMadala, Fake Content Detection Using
+    Deep Learning Techniques (IJEAJ) ISSN: 2249-8858, Volume-8 Issue-5, June 2019.
+
+
+    - [11] Pallavi, V. Petkar, S. S. Sontane “Fake News Detection: Survey of Technology”.
+    International Journal of Computer Technology and Exploring Engineering (IJTEE)
+    ISSN: 2278-3075, Volume-9 Issue-9, July 2020.
+
+
+    - [12] MyhaoloGranik & VolodymyrMesyan “ Fake News Detection Using Naive Bayes
+    Classifier ”, UKRON 2017 IEEE.
+
+
+    - [13] GaurabGangani & Bhadradachutturi, “Science-In-Depth Deep neural approach
+    for stage classification”, elsevier, elsevier 2018.
+
+
+    - [14] Sherry Giri & Elslammer, “Deep Learning Algorithms for Fake News Detection
+    in Online”, ICENSP (2019).
+
+
+    - [15] Wang, Y., & Tang, J. (2019). “ Convolutional Neural Networks for Fake News
+    Detection”, arXiv:1800.00749 [cs.CL] 3 June 2019.
+
+
+    - [16] Wang, Y., Thodakar, M., Islam, T., Isgal, A., & Karaf, S. (2019). A benchmark
+    study on machine learning methods for fake news detection, arxiv:1906.09605.
+
+
+    - [17] Sharma
+
+
+    - [18] Sharma, S. & Sharma, D. K. (2019). November) Fake News Detection: A long
+    way to go. In 2019 4th International Conference on Information Systems and Computer
+    Networks (ISCON) (pp. 816-821). IEEE.
+
+    '
+  mdcn: '
+
+    第9届系统建模与研究趋势进展国际会议，2020年12月4日–5日
+
+    工程与计算机科学，马哈维尔大学（Mahaveer University），印度莫拉达巴德
+
+
+    - [8] Bumiao, S. C., & Grafcek, J. (2017). 自动识别推特线程中虚假新闻的网络。见 2017 年智能云国际会议 (SmartCloud)
+    (pp. 28-35) IEEE。
+
+
+    - [9] Infofemia, C. T., Oliveira, A., Seixas, F. L., & Paes, A. (2020). 信息疫情、虚假新闻与医学：科学与真理的追求。《国际心脏病与科学杂志》(AHEADJ)
+    9(1) (2020), 7-15。
+
+
+    - [10] RachanaKunaraprapatdy & SriRohithaMadala, 基于深度学习技术的虚内容检测 (IJEAJ) ISSN:
+    2249-8858, 第8卷第5期，2019年6月。
+
+
+    - [11] Pallavi, V. Petkar, S. S. S.ontane “虚假新闻检测：技术综述。《国际计算机技术与探索工程杂志》(IJTEE)
+    ISSN: 2278-3075, 第9卷第9期，2020年7月。
+
+
+    - [12] MyhaoloGranik & VolodymyrMesyan “基于朴素贝叶斯分类器的虚假新闻检测”,UKRON 2017 IEEE。
+
+
+    - [13] GaurabGangani & Bhadradachutturi, “用于阶段分类的深度层科学深度神经网络方法”，elsevier, elsevier
+    2018。
+
+
+    - [14] Sherry Giri & Elslammer, “在线虚假新闻检测的深度学习算法”，ICENSP (2019)。
+
+
+    - [15] Wang, Y., & Tang, J. (2019). “用于虚假新闻检测的卷积神经网络”,arXiv:1800.00749 [cs.CL]
+    2019年6月3日。
+
+
+    - [16] Wang, Y., Thodakar, M., Islam, T., Isgal, A., & Karaf, S. (2019). 一项关于虚假新闻检测机器学习方法的基准研究，arxiv:1906.09605。
+
+
+    - [17] Sharma
+
+
+    - [18] Sharma, S. & Sharma, D. K. (2019年11月) 虚假新闻检测：任道道长。2019年第4届信息系统与计算机网络国际会议
+    (ISCON) (pp. 816-821)。 IEEE。
+
+    '
+  merge: 0

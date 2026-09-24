@@ -1,0 +1,2 @@
++   [2020年第九届系统建模与研究趋势国际会议 (SMART) (印度，莫拉达巴德，2020.12.4-2020.12.5) 论文集](README.md)
++   [2020年第九届系统建模与研究趋势国际会议 (SMART) (印度，莫拉达巴德，2020.12.4-2020.12.5) 论文集](2020-9th-international-conference-system-modeling-and-advanc.md)
