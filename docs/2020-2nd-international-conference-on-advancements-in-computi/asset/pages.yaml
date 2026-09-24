@@ -1,0 +1,827 @@
+- pgno: 0
+  md: '# # EasyTalk: a Translator for Sri Lankan Sign Language using Machine Learning
+    and Artificial Intelligence
+
+
+    D. Manoj Kumar
+
+    Department of Software Engineering
+
+    Sri Lanka Institute of Information
+
+    Technology
+
+    Colombo, Sri Lanka
+
+    it17050272@my.slit
+
+
+    K. Basavanaja
+
+    Department of Software Engineering
+
+    Sri Lanka Institute of Information
+
+    Technology
+
+    Colombo, Sri Lanka
+
+    it17032766@my.slit
+
+
+    S. Thavananthan
+
+    Department of Software Engineering
+
+    Sri Lanka Institute of Information
+
+    Technology
+
+    Colombo, Sri Lanka
+
+    it17068192@my.slit
+
+
+    G.M.A.S. Bastiansz
+
+    Department of Software Engineering
+
+    Sri Lanka Institute of Information
+
+    Technology
+
+    Colombo, Sri Lanka
+
+    it17143959@my.slit
+
+
+    S.M.B. Harshanantha
+
+    Department of Software Engineering
+
+    Sri Lanka Institute of Information
+
+    Technology
+
+    Colombo, Sri Lanka
+
+    harshanantha.s@slit.lk
+
+
+    J. Aloius
+
+    Department of Information Technology
+
+    Sri Lanka Institute of Information
+
+    Technology
+
+    Colombo, Sri Lanka
+
+    jesuthasan.a@slit.lk
+
+
+    **Abstract—** EasyTalk is designed to help hearing-paired and inarticulate people
+    communicate with others. But not all are aware of sign language and a translation
+    is needed. The Sri Lankan Sign Language is tightly bound to the hearing-paired
+    and inarticulate. The project provides EasyTalk, a sign language translator which
+    into text and audio forms as well as verbal language translation Sri Lankan Sign
+    Language would benefit those who have difficulty in communicating. In the first
+    component, Gesture Detector captures hand gestures using pre-trained models. Image
+    classifier classifies the detected hands. The Text and Voice generator produces
+    the output for detected signs. Finally, Text to Sign language converter works
+    on converting an English text into sign language. It can then translate and produce
+    results with superior accuracy. This can result in efficient and effective communication
+    between the differently-abled people in the country.
+
+
+    hearing-paired and inarticulate community can''t express their feelings with ordinary
+    people. This special community needs sign language for communication purposes.
+    Unfortunately, ordinary people are unaware of sign language as same as this special
+    community unaware of verbal language. building a communication bridge between
+    the ordinary and the people who have difficulty or to speak cannot be ignored.
+
+    More than 250 to 300 million people around the world are with hearing and speaking
+    disabilities. As mentioned in the above paragraph, sign language has introduced
+    to people to communicate with others. Sign language is not universal and each
+    country has its own sign language. Because of this, hand signs, gestures and movements
+    of the hand, facial expressions, and movements can be used instead of oral communication.
+    Sign language is not universal and varies with each country, there are also similar
+    sign languages. All the countries have their own sign language such as Sri Lankan
+    Sign Language[]. American Sign Language, British Sign Language. Most of the time
+    these sign languages are not familiar to hearing and speaking disabilities cannot
+    communicate with ordinary people.
+
+
+    **Keywords—** machine learning, image processing, resolution independent recognition,
+    convolutional networks, natural language processing, real-time translation, semantic
+    analysis, text speech.
+
+
+    # I. INTRODUCTION
+
+
+    Communication is the most important aspect of the day-to-day life of all human
+    beings. Marconi once said that "communication is a very meaningful interaction
+    among human beings. Specifically, it is by which meanings are perceived and understood
+    among human beings." Every creature on this planet follows their unique ways to
+    communicate with each other. Man communication goes through various types of groups,
+    closer to each other and as a bridge between individuals and groups through the
+    flow of information and understanding between them. Humans beings always uses
+    words to convey information to one person to another. But the best example is
+    the people who cannot communicate verbally, who are commonly known as
+
+
+    the hearing-paired and inarticulate community, Sri Lanka also has a unique sign
+    language. Problems arise when there is no proper understanding of the Sri Lankan
+    Sign Language (SSL) among the ordinary people. There, both parties are refusing
+    to be friendly'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'communicate with each other they could not
+
+    what each other tries to say. To overcome this problem
+
+    and build a communication bridge between ordinary
+
+    people and people with speaking and hearing
+
+    a few translators have been invented in Sri Lanka,
+
+    especially for activities in hearing-and-verbal systems.
+
+    most of the recent inventions have shown that
+
+    ordinary people able to get the maximum
+
+    advantage of them. From apart, they can also use
+
+    transating Sri Language into natural vocal
+
+    language or Sign Language, which helps to find out such a
+
+    both translation modes using a single engine.
+
+
+    learn language through Nidhida. The system\aconsists of three main components
+    namely 3D
+
+    Monitoring, Motion Tracking and Voice Recognition.
+
+    Using Nidhida, a hearing-impaired child can get
+
+    prot 2D avatar animation for a clip input.
+
+    The system uses the method of identifying
+
+    sign language and features through image videos.
+
+    Since different models are used throughout the
+
+    system, the hearing-impaired children can self-motivate
+
+    to share their abilities in learning.
+
+
+    This research focuses on a real-time translator based
+
+    on Sri Lankan sign which can convert Sri Sign Language into text or other formats
+    as English text Sri Lankan Language.
+
+    The objective of the research has been to build a
+
+    communication bond between ordinary people and hearing-
+
+    verbal-impaired people in Sri Lanka while giving
+
+    them a self-learn language guide.
+
+
+    # II. BACKGROUND AND LITERATURE SURVEY
+
+
+    Searches related to sign language are ongoing\around the world. Chinese language,
+    American Sign,
+
+    Sinh language [1] are some of them.
+
+    Sign language detections have two types. One is
+
+    image or vision-based and the other is device-based-
+
+    [2]. The identification of features, extraction
+
+    features, processing, and classification in a
+
+    single pre-processing is due to the elimination of
+
+    unwanted element from the text. The region of
+
+    Interest (ROI), image feature will be extracted, and it will be
+
+    classified using deep learning method.
+
+
+    Considering device-based sign recognition, a system
+
+    by Gibson and Perez for Sri language using
+
+    Kinect sensor [5]. The system uses the colour
+
+    depth and motion tracking techniques in real-time
+
+    D camera. Dynamic Time Warping (DTW) algorithm has
+
+    been used in this system to interpret gestures. They
+
+    have used the K-Fold validation approach. This check
+
+    demonstrated 90% mean accuracy in test-time
+
+    Simulation. Ahmed and the team has used such a
+
+    program that will use Microsoft Kinect [6]. As they
+
+    tused the Support Vector Machine (SVM) algorithm and
+
+    compared their results with their working efforts. Their
+
+    method used SVM with Radial Basis Function (RBF)
+
+    kernel can give more accuracy than the linear
+
+    kernel. Deep''s team has proposed a system using
+
+    motion tracking which can get moving 99% accuracy with
+
+    a dataset of 520 samples [7].
+
+
+    A classifier has shown 98% accuracy.\NNidhida Ridma [9] is a Sri Lankan translator
+    who
+
+    implemented the Sri Lankan children with hearing-
+
+    impaired devices. Since it is a game-based learning
+
+    system, the hearing-impaired children are much easier to
+
+
+    Sandabha is a mobile-based application based on Sri
+
+    Language [11]. The main intention of this is
+
+    Buddhism through Sri Lankan hearing-impaired
+
+    application provides many tasks and
+
+    actives and new thoughts to help the
+
+    knowledge and education of Sri Lankan hearing-impaired
+
+    users who are using to learn the system, Aloha.
+
+
+    # III. METHODOLOGY
+
+
+    # A. Hand Gesture Detector,
+
+
+    The component will be implemented on top of
+
+    Tensorflow model trainer and using RNN (Reg-
+
+    ner Convolutional Neural Network).
+
+    for the training, three images per the Sri Lankan
+
+    Language Alphabet ([1]) total of 247 images. First, a
+
+    map is created for the classes. The interested
+
+    system is only one class: none.
+
+
+    The project consists of four major components namely:
+
+    “Hand Gesture Detector”, “Image Classifier”, “Text and
+
+    Audio” and “Text to Sign” with the main
+
+    ention of effective translation tool for all the
+
+    s. Since all the translators are in Sri Language
+
+    using EasyTalk, the system will be more
+
+    useful for all the Sri Lankan as for the respect.
+
+
+    For a successful model detection, the trained images are
+
+    split into train and test datasets and the labels using labelling
+
+    t in Pascal VOC format to get an xtensible Markup'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'Language (XML) record for each image. Individual images are converted into
+    Comma Separated Value (CSV) for train and test datasets. Using the CSV files,
+    the model trainer and Faster RNN configuration. This configuration is based on
+    RCNN model which is widely used to a human palm in terms of colour and complexion.
+    A training process would be simple and should be checked using loss in the terminal
+    or if the loss reaches below 0.25
+
+
+    get one with a probability. This can be done by mathematical equations as (1):
+
+
+    ```
+
+    $best = argmax_c \in P(c)$
+
+    ```
+
+
+    Or you can use Python in code that identifies the use of the following (2):
+
+
+    ```
+
+    $best = max(candidates, key=P)$
+
+    ```
+
+
+    The probabilistic model is the probability that involves consideration of a sequence
+    of words. It is widely emphasized on the probability of each of the words that
+    are analyzed in the context of the word in all predicting.
+
+
+    After a successful model, the webcam opens and detects images using the pre-trained
+    model. Once detection of the image is, with average of more than 95%, the image
+    will be sent to API of the Image Classifier for classifications.
+
+
+    # B. Image Classifier
+
+
+    ```
+
+    $P(w|c) = \pi(w|c)/n(w_k;w_{k-1})$
+
+    ```
+
+
+    The image classifier is worked under an API where it gets abstract image and predicts
+    the English alphabet letter. The API is a machine learning model which is built
+    using convolutional neural network. Our classifier used the concept of neuron
+    network pattern in animals and it is widely used in visual analysis. CNN classifier
+    can process image and classify under different categories. Since python is used
+    in the system''s implementation library is used to build a CNN. When training
+    model needs data to help predict more accurately. In this, the detection of English
+    alphabet letters was used. Every letter of alphabet is defined as a class. However,
+    the dataset has 26 classes, with 250 hand signs, which are taken by a camera.
+
+
+    Equation(3) can be applied in the segmentation, in which can be defined as a sequence
+    or function that acts as the input of a string of words that has no leaves in
+    the best segmentation.
+
+
+    > >> ''chooserniklika''\n[''Chrosinka'']
+
+
+    An image classifier will go through several steps. As the first step, the image
+    travels through a sequence of convolution layers. Dimensionality reduction is
+    applied to highlight features. This is known as pooling. After that, many convolutional
+    layers are added, and pooling repeatedly until the filtration is satisfied. Then
+    the output is flattened passed through a fully connected layer. Finally, the class
+    is identified by an activation function. The predicted sign is sent through the
+    API to the Text and Audio Generator.
+
+
+    In spelling check with an input word, the segmentation method can be used to determine
+    the intent behind the word. The use of Bayes'' theorem (which is shown (4)) effective
+    such stands in which there is the determination of right correct:
+
+
+    ```
+
+    $P(w|c) = argmax P(w|c) P(c)$
+
+    ```
+
+
+    Where P(c), the model language represents by the probability of c being the intended
+    word, while P(w|c), represents the probability that the error in the author intended
+    to write c but. In Table 1 below is an indication of the words w and c the various
+    products.
+
+
+    # C. Text and Audio Generator
+
+
+    To identify the words and sequence of text into words, the Linguistic Data Corpus
+    was used in this context. The data is used as a corpus which is a sequence of
+    words and pronunciation as tokens. In this regard, it is aimed to solve a method
+    of involving various datasets and tokens.
+
+
+    TABLE 1 PRODUCT OF PRODUCTS
+
+
+    | w | w|c | P(w|c) | P(c) | 10^P(w|c) |
+
+    |---|---|---|---||
+
+    | the | we | .000007 | 0 | 144 |
+
+    | the | we | .0000009 | 0 | 90 |
+
+    | the | ea | .000001 | 0 | 7 |
+
+    | the | hr | .0000004 | 0 | 3 |
+
+    | the | ew | .0000003 | 0 | 0.0001 |
+
+
+    Define a probabilistic model: This is the incorporation of random variables with
+    a probability distribution of the model of an event and the collected data are
+    used to calculate the determinant of the probability. This is an analysis of the
+    candidates in the here by listing them and showing their performance in the field.
+
+
+    Choose the most probable candidate: This is the selection of the best candidate
+    using the language model to
+
+
+    This stage involves the substitution of the words that have been found and matching
+    in the English corpus. The impact is in regard that there is also a loss of speech
+    and words of submitted. The process involves two sections: Natural Language Processing
+    (NLP) and digital processing. NLP is the interface between humans and computers
+    using natural languages. This is done using the prosodic feature in the system
+    that involves three components in text analysis, prosodic phrasing, and'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'phonetic conversion. Text analysis, for instance, the segmentation of the initial
+    input into tokens where each of the words is analyzed as part of the speech (POS).
+    The phonetic dictionary is used as an approach for transcription of phonetic in
+    the initial input words. For the input text it must be included in the dictionary.
+    Finally, the proceeds proceeds classification of the functions and the content
+    accompanied with some modifications.
+
+
+    Finally, synthetic speech is the production of speech in most possible with intelligible
+    sounds. Concatenative is the most natural approach compared to the rest of the
+    methods. The method involves the selection of optimum units from the speech database
+    to match with the phoneme stream and the targeted prosody. Natural synthesis provides
+    information of the word domain-specific units of concatenated phonemes in completing
+    the required utterances.
+
+
+    # D. Text to Sign Converter
+
+
+    Text to Sign Converter is used as a Sri Lankan Learning material for ordinary
+    people. Through this component, users can get the relevant hand in real-time to
+    convert text into sign language for verbs. Converting text with the support of
+    various libraries in NLP[12] and semantic analysis [13]. More importantly, NLP
+    is used to analyze, manipulate, and generate human language and Semantic Analysis
+    is used to create a Graphical Interface Format (GIF) images using selected hands.
+    The system design for this component is shown in Fig. 1.
+
+
+    If there is any similar word, the system will get the relevant hand from the system
+    database and refer back to the backend. Otherwise, the word will split into an
+    array of characters and pass that to the system database. Once selects the relevant
+    characters for the characters, system will consider them to order the characters
+    back to the backend. After fully, using Semantic Analysis the system will generate
+    GIF images for each word in the input and displays them to the user.
+
+
+    # IV. RESULTS AND DISCUSSION
+
+
+    This section details the experiment results conducted on building and making better
+    communication between the ordinary people and hearing-impaired or visually impaired
+    by introducing a translator for Sri Lankan Language in Lanka is the main objective
+    of this research. High accuracy of the results to enable the users to understand
+    the translation while dealing the loopholes in which a simple system was organized
+    to recognize the knowledge level among Sri Lankan Language users to collect their
+    suggestions and ideas about the sign language translators. The results of the
+    survey indicate many aspects. The first aspect is that having a very unclear picture
+    of the results in Fig. 2.
+
+
+    Also, many suggest that it is better to have a translator for language translation
+    purposes. Most of them suggest a web-based application for the Sri Lankan language
+    translator according to the below Fig. 3. Many survey results indicate for people
+    had difficulty to detect high and low-resolution images of hand signs, to detect
+    hands through live images. By considering all the survey results, it was decided
+    to create a web-based sign language translator, which will be able to convert
+    language into text/audio formats and verbal language into sign too.
+
+
+    Are you familiar with Sign Language Translators in Sri Lanka?
+
+
+    23 responses
+
+
+    ![](img/a307ac1d43b84fbb9357717d2a312dde_3_0.png)
+
+
+    ![](img/a307ac1d43b84fbb9357717d2a312dde_3_1.png)
+
+
+    Fig. 2.User-Survey Set I
+
+
+    If you have to have a Sign Language Translator, which type of application would
+    you prefer?
+
+
+    10 responses
+
+
+    ![](img/a307ac1d43b84fbb9357717d2a312dde_3_2.png)
+
+
+    +   - Web application
+
+    - Desktop application
+
+    - Mobile app
+
+    - Mobile application
+
+
+    Fig. 3. User-Survey Set II
+
+
+    The user will go through several steps before the system displays a GIF of the
+    sign as the final output. Once the user inserts the input, it will convert into
+    the system backend. Then the system will split the input into multiple words using
+    the Natural Language Toolkit (nltk) library in NLP. After, the split words will
+    compare with a set of pre-defined dictionary words to identify whether there is
+    any similarity between user-input and pre-defined words.
+
+
+    Fig. 1. Diagram for Text to Sign Converter'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'As mentioned in the above paragraph, there are two main features of this system.
+    The first is ''Convert Sri Lanka sign language into text/speech''. This main feature
+    consists of three sub-features namely ''hand detection'', ''text-audio generation''
+    and gesture detection trained using Faster RCNN on TensorFlow models. After successful
+    training, the model was put to test various scenarios. A stream of input from
+    the web camera guides the model to detect a hand against any complex background.
+
+
+    displaying the best results. The main feature of Faster RCNN is not only classifying
+    the images but also detecting more than one object (classes) in a live feed. This
+    can be identified as the most important factor of detecting the hand even with
+    low resolution as well. Also, the model was tested using the live video through
+    a web camera. Faster RCNN was able to detect the hand in mentioned scenarios with
+    a high accuracy level.
+
+
+    ![](img/a307ac1d43b84fbb9357717d2a312dde_4_0.png)
+
+
+    Fig.4. Recognizing Hand Sign in Complex Background
+
+
+    Below Table II represents the accuracy rates of detecting hand images in Data
+    Acquisition component under different scenarios.
+
+
+    The second component of EasyTalk is image classification. For, the CNN model was
+    trained with 26 classes where each class has 250 images. From the dataset, 85%
+    of the samples were used for training and 15% of the samples were used for testing
+    purposes. The epochs were set to 50 for better training and testing done using
+    38 samples from each class.
+
+
+    # ACCURACY PER CLASS
+
+
+    # TABLE II HAND GESTURE DETECTION ACCURACY RATES
+
+
+    | Class | Accuracy (%) | Class | Accuracy (%) |
+
+    |---|---|---|--|
+
+    | A | 100 | N | 97 |
+
+    | B | 100 | O | 97 |
+
+    | C | 97 | P | 95 |
+
+    | D | 100 | Q | 100 |
+
+    | E | 100 | R | 92 |
+
+    | F | 97 | S | 95 |
+
+    | G | 100 | T | 97 |
+
+    | H | 100 | U | 95 |
+
+    | J | 95 | W | 100 |
+
+    | K | 100 | X | 95 |
+
+    | L | 100 | Y | 97 |
+
+    | M | 95 | Z | 100 |
+
+
+    | Test Scenario | Number of test runs | Mean Detection Accuracy (%) |
+
+    |---|---|--|
+
+    | hand detection complex background | 20 | 93 |
+
+    | hand detection - a bright environment | 20 | 92 |
+
+    | hand detection dark environment | 20 | 89 |
+
+    | hand gesture from a bigger palm | 20 | 95 |
+
+    | hand detection flipping the hand | 20 | 87 |
+
+
+    The model has an accuracy rate of 97% in the testing phase. Even with gesture
+    gesture there are some minor signs, which cause problems in realtime. As an example,
+    the ''I'' and ''J'' have similar signs which are difficult to detect by a front-facing
+    camera. The major issue regarding recognition is in text and audio generation
+    is the 3rd sub-feature for the conversion of Sri Lanka sign language into text/audio.
+
+
+    According to Table II, the model detects at an accuracy rate of 91% for all test
+    scenarios. This is well above the 80% accuracy limit and considered as an optimal
+    for this component. Component identified will be sent to the next component as
+    an image frame to match the text for classification and translation. Compared
+    to Sri Lanka sign translation, it is proved that EasyTalk can work with the hands
+    with high accuracy. Rather than capturing the whole image through a web camera,
+    EasyTalk only focuses on framing the image of the hand with respective scenarios.
+
+
+    Here, the application identifies the word segments of alphabets, depth checking
+    for each portion correctly in the text. Their Theorem is used to identify the
+    word segments with the collection of alphabets. Again, the process of checking
+    the spelling mistakes executes and finally generates the text in the form that
+    the user preferred. Table IV represents the accuracy rates of the output in Text
+    and Audio generator. The component has more than 80% accuracy rate for almost
+    all the scenarios. This is well above 75% accuracy limit and considered as optimal
+    for this component.
+
+
+    Previous Mask RCNN was considered to train and detect hands from live web camera''s
+    feed. This was trained using a dataset of 500 images. The main drawback of this
+    was Mask RCNN poor performance while detecting live feeds of image. To avoid this,
+    Faster RCNN was decided to use after considering the speed of'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# TABLE IV ACCURACY PER INPUT
+
+
+    | Input | Word Segment | Spell Checking | Accuracy (%) |
+
+    |---|---|---||}{
+
+    | welcome | welcome back | welcome back | 80 |
+
+    | howaeroy | how are you | How are you | 78 |
+
+    | Thisthisym | This is him | This is mine | 85 |
+
+    | goodmorning | Good morning | Good morning | 80 |
+
+
+    The second main feature is "converting English into sign language" (SL kan GIF).
+    This is also one of sub-features—"named sentence recognition" and "displaying
+    the signs as GIF". This method is based on NLP. By using NLP, it is easy to translate
+    text into smaller units that can be either words/sub words. Hence EasyTalk excels
+    in translating both sentences like "How are you?" and specific words like "Peter",
+    it is more affordable to convert to sign language, translate the text easily and
+    quickly.
+
+
+    Previously, the application used to parse the user-text, but it became complicated
+    and complicated when handling long sentences to translate. Hence, it takes a long
+    time for translation, the tokenization was used and sometimes the application
+    be stuck too. To avoid this, we developed, "displaying relevant GIFs for separated
+    words" based on Semantic Analysis. By creating one GIF for one word, combining
+    them, it is easy to display a clear output to the user satisfying all the system
+    requirements and generating to the speed of generation and response to the responses.
+
+
+    # TABLE V RESPONDING SPEED FOR TEXT INPUT
+
+
+    | Text-Input | Responding Speed (milliseconds) |
+
+    |---||}{
+
+    | Good Morning | 206 |
+
+    | hAKU mnatata | 319 |
+
+    | how are you | 176 |
+
+
+    # V. CONCLUSION AND FUTURE WORKS
+
+
+    In Sri Lanka, there is a lack of sign language tools compared to the users who
+    need them and support of them during day-to-day communicating. This research paper
+    describes how EasyTalk can be used in communication purposes translating Sri Lankan
+    Sign Languages to text/audio formats as well as translating English to sign language.
+
+
+    First, to detect the hands, Faster RCNN model based is trained and translates
+    to show identified hands in a verbal language. This API can be used in future
+    developments which are related to the sign languages. Developers do not have to
+    build
+
+
+    classification model from building. They can use this API with a valid data set.
+    The Text and Voice Generator assists to identify the words segment from alphabets
+    of then convert word to speak them. The applied NLP API and sign language. Also
+    the implementation of a reverse engine can be used by the ordinary people to translate
+    verbs into Sri Lankan language. This translator does convert the sign by user
+    input GIFs of images using Semantic Analysis.
+
+
+    For the moment, the system is proposed to be a web application and soon be made
+    into a mobile application with faster responses and processing time. With the
+    start of it, the responses will be
+
+
+    # REFERENCES
+
+
+    [1] Rohani Silva, "An Introduction to Sri Sign Language, 2007", http://www.rohanischool.org/content-uploads/2018/10/IntroductionToSignLanguage.pdf
+    (accessed Jan.13, 2020).
+
+
+    [2] J. S. Sanksara, N. B. Chodpe, R. Ser, and S. L. Take, "A review on sign language
+    recognition techniques, 2019 International IEEE Conference on Computing (ICC),
+    2019, 10.1109/ICC.2019.90931158.
+
+
+    [3] U. Patel and A. G. Hegde, "Mobile Sign Language Recognition System using Deep
+    Learning, 2017. Int. Conf. Control. Automation. IEEE ICC 2017, p. 1–16, 2018.
+
+
+    [4] K. Dutta, S. R. Kumar, A. G. Kumar, and S. S. B. Avta, "Double Indian Sign
+    Language to speech and translation, 2019 IEEE 2019 4th International Conference
+    on Computing (ICIC), 10.1109/ICIC.2019.8979319.
+
+
+    [5] G. Garcia-Bustia, F. Trujillo-Romero, and O. Barbosa-Morales, "Mexican sign
+    language recognition using recognition and data analysis, 2017 IEEE International
+    Conference on Electronics and Computer. CONIELECIT 2017, 2017.
+
+
+    [6] A. Agrawwal and K. Takhar, "Real-time sign language recognition using Microsoft
+    Kinect, 2016.16th Int. Conf. Comput. Autom. IEEE ICC 2016, p. 1–5, 2016, 10.1109/ICC.2016.8.
+
+
+    [7] D. Naglik and M. Kumari, "Real-time sign language recognition using convolutional
+    neural networks, 2016. International Conf. Comput. Technol. ICT 2016, 2016, 10.1109/INVENTIVE.2016.7836378.
+
+
+    [8] S. Das and S. Bhatt, "Machine learning for sign language interpretation using
+    webcam, 2014. 14th Int. Conf. Comput. Syst. Curr. Int. IEEE, 10.1109/ICCI.2014.699327.
+
+
+    [9] J. Vayas, N. Ganaswanathan, S. Williams, M.C. Perez, "The Sign Language of
+    ''Silence''—Gesture-Based Information Feedback for Hearing-Impaired People Nirmanda
+    (2014). [Online]. Available: https://www.researchgate.net/publication/272333332_The_Sign_Language_of_Silence_Gesture_Based_Information_Feedback_for_Hearing-Impaired_People
+
+
+    [10] Y. Yasada, N. Dhakal, S. Sen, and R. Kumar, "Sign Language Recognition App.\,
+    https://project.slikt.in/code/sign-language-recognition-app-projected.pdf
+
+
+    [12] NLTK.org,"Natural Language Toolkit. https://www.nltk.org/ (accessed Jul.
+    01, 2020).
+
+
+    [13] Tutorials, "Natural Language Processing Analysis. https://www.tutorialspoint.com/natural_language/natural_language_processing_analysis.html
+    (accessed Feb. 02, 2020).
+
+
+    511'
+  merge: -1
+  img_proc: true

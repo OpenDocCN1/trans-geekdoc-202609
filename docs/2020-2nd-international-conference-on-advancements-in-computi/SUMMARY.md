@@ -1,0 +1,2 @@
++   [2020 第二届国际计算进展会议 (ICAC)(斯里兰卡，马拉贝 2020.12.10-2020.12.11) 2020 第二届国际计算进展会议 (ICAC) ｜｜ EasyTalk：一种](README.md)
++   [2020 第二届国际计算进展会议 (ICAC)(斯里兰卡，马拉贝 2020.12.10-2020.12.11) 2020 第二届国际计算进展会议 (ICAC) ｜｜ EasyTalk：一种](2020-2nd-international-conference-on-advancements-in-computi.md)
