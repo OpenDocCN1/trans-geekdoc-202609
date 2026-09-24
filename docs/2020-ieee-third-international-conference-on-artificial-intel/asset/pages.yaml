@@ -1,0 +1,478 @@
+- pgno: 0
+  md: "# Convolution-based Machine Learning To Attenuate Covid-19's Infections in\
+    \ Large Cities\n\nAbstract—In this paper a nonlinear mathematical model based\
+    \ on convolution theory and translated in terms of Machine Learning is presented.\
+    \ Specifically, peaks are assumed as the rate of infections at large cities. In\
+    \ manner, once the free parameters are identified then we can predict the spread\
+    \ of the virus in order to construct the algorithm that would yield the best estimates\
+    \ as to carry out health services as well as predict dates of infection. The distributions\
+    \ are modeled by the Dirac-Delta function spike is used to make the numerical\
+    \ convolutions. The approach is illustrated with a case of outbreak depending\
+    \ on free parameters simulating the implementation of new rules to detect the\
+    \ infections.\n\n# I. INTRODUCTION\n\nRecently, the appearance of Corona Virus\
+    \ Disease (Covid-19) in sharp [1] has alerted the global health operations to\
+    \ the need of robust schemes of recovery and survival. Furthermore, the rate of\
+    \ pandemic in many countries is reaching its end, it is rather to know about what\
+    \ we have learned from world-wide datasets [2]. In fact, as all surveillance systems\
+    \ in all affected countries, the understanding of data would reveal inherent differences\
+    \ among them because the multifaceted nature of difficulties as to the arrival\
+    \ of the virus, as well as the level of their recovery as soon as the conditions\
+    \ have been applied. These restrictions imply the constraint against the fast\
+    \ spread of strain in all cities either middle or large [3]. In this paper, attention\
+    \ is paid on theoretical and computational study of Covid-19 pandemic. As seen\
+    \ from the figure, the relationship between cases and deaths shows strong fluctuations,\
+    \ reinforces the hypothesis that in more cases (countries) the dynamics of spread\
+    \ and subsequent infections by Covid-19 is proved to be strongly [4] to randomness,\
+    \ that would follow a random pattern as stated does become a fundamental argument\
+    \ as consequence of the convolution of various variables [5]. This paper suggests\
+    \ the identification of- parameters in a mathematical model of convolution that\
+    \ involves the Dirac-Delta function. The fact for using this function\n\nis because\
+    \ spike property that makes them a candidate to model the intervention to reduce\
+    \ the increasing of infections in a certain period [6]. In commonly in epidemics\
+    \ one expects a set of roles coming from the epidemiology as: Role of the Epidemic\n\
+    \n+   * Identify the strain and its main properties.\n* Estimate possible impact\
+    \ on people\n* Identify the strength of the public health services [7][8]\n* Take\
+    \ decisions to opt the correct pharmacology.\n\nUnder the assumption that the\
+    \ behavior of outbreak is out detected by mainly rates, a quasi-realistic-mathematical\
+    \ model went has the following properties:\n\n+   * Estimate Probabilities of\
+    \ the velocity for virus spreading\n* Adjudicate for all possible scenarios before\
+    \ decision\n* Determine with high precision the resources to be used in the first\
+    \ weeks\n* Estimate the effect and after the implementation of the algorithm.\n\
+    \nIn this manner one expects that any algorithm based on Machine Learning [9]\
+    \ is able to yield results that follow the Tom Mill' [10] criteria given by [1],\
+    \ Task,(2) and Experiments [3]. We establish a support for the dynamics of infection\
+    \ in particular, once the parameters have been extracted, all of them are related\
+    \ to relatively to definition of epidemiology [11]. Special attention is paid\
+    \ on the impact of such parameters on the accumulation of infections for short\
+    \ and long periods.\n\nIn concrete, this paper employs the convolution together\
+    \ to a nonlinear Dirac-Delta function $\\delta(a,\tau)\\delta(a,\tau)$, whose\
+    \ integration can be:\n\n```\n$N(t) = \\sum_{l=1}^{k} \\int_{0}^{t} B(\\beta)\\\
+    delta(a,\\tau)d\\tau \\quad (1)$\n```\n\nwith $B(\\beta)$ a detected beta and\
+    \ $\\alpha$, the parameters. This paper is structured as follows: In second section,\
+    \ the machinery is presented within and in third section the Mitchell's criteria\
+    \ are implemented. From then realistic from official data. Finally the conclusion\
+    \ of paper is drawn."
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: "# II. THE MATHEMATICAL APPROACH\n\nConsider the beginning of an outbreak by\
+    \ a time-dependent distribution from Eq.(1) given by B($\tau, u$), then one can\
+    \ argue that there exists an operation of convolution given by:\n\ndistribution\
+    \ displays peaked morphologies as consequence of the random accumulation of strain\
+    \ in the shortest times [13]. In this way one requires the implementation of a\
+    \ set of functions that models the effect of rapid interventions [14]. Therefore\
+    \ it is possible to use the Wiener-Dirac data in a convolution operation\n\n```\n\
+    $B($\tau$) = \\int dB($\tau, u$)H($u$). \\quad (2)\n```\n\nWhen B($\tau, u$) as\
+    \ with H($u$) depends on parameters, then Eq.(2) agrees such as\n\n```\n$B($\\\
+    alpha, \\beta$) = \\int dB($\tau, u$)H($u, \\beta$). \\quad (3)\n```\n\nOf course\
+    \ the function H($\beta$) is unique and contains a infinite sum of weight function\
+    \ in the form as:\n\n```\n$H($\beta$) = \\sum_{Q} \\beta_q h_q($\beta$). \\quad\
+    \ (4)\n```\n\nby which it is inserted in Eq.(3) agrees such that\n\n```\n$B($\\\
+    alpha, \\beta$) = \\sum_{Q} \\beta_q dB($\tau, u$)h_q($\\alpha$). \\quad (5)\n\
+    ```\n\nwhile if dB($\tau, u$)h_q($\\alpha$)=b_q($\\alpha$) then Eq.(5) is reduced\
+    \ to:\n\n```\n$B($\\alpha, \\beta$) = \\sum_{Q} \\beta_q b_q($\\alpha$). \\quad\
+    \ (6)\n```\n\nIn this manner one can have a naive interpretation of Eq.(6) the\
+    \ beginning might be actually the succession of various “Beginnings”. In practice\
+    \ experience us that when Q=2, denoted a truncated system. In terms of Epidemiology,\
+    \ the epidemics are restricted to two windows of pandemics, and infections. One\
+    \ effect then is that the entire process of outbreak previous to the outbreak\
+    \ event, the strain has moved randomly and see a much time multiplier in a large\
+    \ city. This can be mathematically translated as:\n\n```\n$B($\\alpha, \\beta$)\
+    \ = \\beta_1 b_1($\\alpha$) + \\beta_2 b_2($\\alpha$), \\quad (7)\\nFirstwave\\\
+    nSecondwave,\n```\n\nthat states that any parameter can be perceived as a chain\
+    \ of events by the one one calls [12]. In this manner one reaches period as:\n\
+    \n```\n$B($\\alpha, \\beta$) = \\beta_1 b_1($\\alpha$) - \\beta_2 b_2($\\alpha$).\n\
+    ```\n\nwith the playing role the amount of strain that is seen from the epidemiological\
+    \ angle as the peaks of number of infections. Further the definition of “Pseudo”\
+    \ refers to the time where the strain has moved to a large city without any cryptic\
+    \ variable, the infections are done randomly. One potential scenario is that if\
+    \ $\beta_1 > \\beta_2$, denoting that the first one has more than the second one.\
+    \ One, expects that the rate of infections\n\n```\n$b($\tau, \\alpha$) = \\delta($s-\\\
+    \tau$)b($\\alpha,s$). \\quad (8)\n```\n\nthat by the following of Eq.(6) then\
+    \ one arrives to:\n\n```\n$B($\\alpha, \\beta$) = \\sum_{Q} \\beta_q \\delta($s-\\\
+    \tau$)b_q($\\alpha$). \\quad (9)\n```\n\nHowever, no more cases intend that such\
+    \ linear formulation of Dirac-Delta function is an quite universal agreement given\
+    \ by: $s-\\to \\tau$ $D(s,\\tau)$ that Eq.(9) can be agrees as:\n\n```\n$B($\\\
+    alpha, \\beta$) = \\sum_{Q} \\beta_q \\delta($s-\\\tau$)b_q($\\alpha$). \\quad\
+    \ (10)\n```\n\nClearly the question is: what mechanism to solve the Dirac-Delta\
+    \ equation written in Eq.(8) when an universal function or polynomial is involved?\
+    \ As in [15] there is possible to evaluate infection of this type. Neither inpraess\
+    \ in can agree in the adhoc manner a polynomial that relates to real data and\
+    \ to make an approximation that agrees the morphology of the infections\n\nA.\
+    \ The Spike of Dirac-Delta function exhibits notable applications in various disciplines\
+    \ and fields to that property is connected to Eq.(8) $f(t) = f(\tau)\\delta(t-\\\
+    tau)$. As explained in Eq.(10) the logic extension demand another interpretation\
+    \ of that Eq.(8) can be written as: $f($\tau$) = \\delta($\\tau-\\\\alpha$) =\
+    \ \\sum_{i=1}^{n} a_i \\delta($\\tau-\\\\alpha_i$) where one can formate the general\
+    \ definition of $f($\tau$) = $f($\tau)\\delta($\\tau-\\\\alpha$) = \\sum_{i=1}^{n}\
+    \ a_i \\delta($\\tau-\\\\alpha_i$) for which in the case of the that $\\delta($t-\\\
+    tau$) - the resolving convolution gives out the form $f(t)t^{-1/2}$ which makes\
+    \ up to the results, demonstrating the strain of the infection depends on $1/t$.\
+    \ It is also possible to express $f($\tau$) to suggest to rewrite in (1) in a\
+    \ general case\n\n```\n$f($\tau$) = \\begin{cases} \\delta($\\tau-\\\\alpha$)\
+    \ & \\text{simple} \\ \\sum_{i=1}^{n} a_i \\delta($\\tau-\\\\alpha_i$) & \\text{multi-parameter}\
+    \ \\end{cases} \\quad (11)\n```\n\nwhere the terminology “multi-parameter” express\
+    \ that the argument contains $a_j,\\rho_j$ and free parameters in contrast to\
+    \ the “simple” case that only one sees $a_j$ turns out to be the unique set of\
+    \ parameters."
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# III. THE MACHINE LEARNING MODELING
+
+
+    # A. The Tom Mitchell''s Criteria
+
+
+    The science of Machine Learning gives offers multiple paths to solve complex problems.
+    In this paper, the interest of using this technology is essentially the requirement
+    of implement intelligent systems that can enhance the human decisions with a minimal
+    and minimal risk. Clearly this is in accordance with view of Epidemiological that
+    epidemics may help us recover a solid resilience as fast as recovering due to
+    the consequences that appear and after the strain has entered to. In this book,
+    Tom Mitchell defines that any system can be perceived as one that satisfies the
+    following characteristics:
+
+
+    +   * All system has a task that reflects that the system justifies its existence.
+    This translated in terms of epidemic process one that has initialized and the
+    strain is identified, the system or public health operator has master to minimize
+    the spread of viruses in people as well as recover
+
+
+    +   * All system has a performance to tackle the task Once the task is defined
+    then the system requires to design a strategy to successfully surpass the phases
+    that the task will. This performance will employ computational methodologies in
+    both the quantitative results and the interpretation of them. In the territory
+    of Epidemiology one can see that the performance targets are to assess the capabilities
+    of the health centers in order to provide medical assistance to the confirmed
+    infections. In reality, local official might also suggest social regulation such
+    as quarantine, curfew and promote rules of distancing among people.
+
+
+    +   * All system acquires Once the performance has been applied and the system
+    is able to evaluate whether this application was success or failure then there
+    is chance to recognize the mechanisms that have lead to solve the task. Here are
+    the manifestations of success or fail. In this, epidemics, it is that the proposed
+    rules should exhibit notable differences with respect to before and after. For
+    example, given a number of N along a period, then after the social rules would
+    expect that a fraction M with M < N for a subsequent period.
+
+
+    In manner one can associate a mathematical model that encompasses these criteria
+    whose either is of reducing the number of infections in the shortest periods without
+    affecting the ordinary mechanisms that sustain the societies. Therefore one can
+    construct a formalism targeting the minimization of infections through concrete
+    strategies that involve each with a minimal objective.
+
+
+    # B. The Machine Learning Formalism
+
+
+    Eq(10) appears as a candidate for modeling the Mitchell''s criteria. In this manner
+    one can tentatively to provide a mean to enhance each of Eq(10). To accomplish
+    this one can formulate the Mitchell''s criteria as a convolution such:
+
+
+    ```
+
+    $E(t) = \int T(s)P(s,t)ds \quad (12)$
+
+    ```
+
+
+    by which the function P(s,t) recognized as performance on the free parameters
+    a and b respectively. Furthermore, more more than a limited problem, one might
+    expect to match a multi-parameter problem in the system as:
+
+
+    ```
+
+    $E(t,a,b) = \int T(s,a)P(s,t,b)ds \quad (13)$
+
+    ```
+
+
+    ```
+
+    $EMN(t,a,b) = \sum_{m=1}^{N} T(s,a_m)P(s,t,b_m)ds \quad (14)$
+
+    ```
+
+
+    Clearly one can also consider those scenarios that are strongly restricted to
+    the value of M and N, who are not have a duplicate sum. From it the definition
+    of Machine Learning method calculated from the design of number of free parameters
+    it can be written as:
+
+
+    ```
+
+    $E = E_{(M+1)(N+1)}(a_{1,1},b_{1,1}), \dots, E_{(M+1)(N+1)}(a_{M,N},b_{M,N}) \quad
+    (15)$
+
+    ```
+
+
+    In Fig. 1 the product of task and performance function of time for a short period.
+    For this exercise the random distributions through Gaussian processes were employed.
+    It is plotted as bivariate. As stated that the usage of the product of task and
+    performance is in essence proportional to the number of infection under the theory
+    of Tom Mitchell, the areas would denote the peaks of the
+
+
+    infections distributions.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/0cd2d1e203f61c64539309ea94a7df5c_3_0.png)
+
+
+    Fig.0 Illustration in the bariate distribution of random behavior of the given
+    task and function of time. For up to three of bariate 0.22 (left), 0.51 (middle)
+    and 0.30 (right).
+
+
+    # IV. APPLICATIONS AND SIMULATIONS
+
+
+    Consider Eq.(14). This can be projected onto a territory entirely dictated by
+    epidemiological rules such as the behavior and prevalence of any unexpected arrival
+    of any manner this one we associate with Eq.(14) means in the Ordering Covid-19
+    for example. By knowing the "spike" property of Dirac-Delta function, it is feasible
+    to determine the zeros of these function in the case when these functions contain
+    it in their argument, the polynomials of zeros rise the dips to the Dirac-Delta
+    distributions. Therefore one has that
+
+
+    ```
+
+    $N(t) = \int P_t(t,u)D[f(u,\beta_m)]du \quad (16)$
+
+    ```
+
+
+    With $D(t,u,\beta_m)$ the Dirac-Delta function. Thus it is assumed that the free
+    parameters $\beta_m$ are perceived as those which define the phases of pandemic.
+    These phases can be explained in terms of risk''s probabilities.
+
+
+    # A. Experience as Probability of Risk
+
+
+    As seen in [20] this is a solid theoretical backbone that defines a probability
+    distribution through the Dirac-Delta function. Thus one can also adaptate to the
+    operation of convolution of the probability. Of course details are specified by
+    the scope of novelty. Unless one cannot consider the unconditional probability
+    given by:
+
+
+    ```
+
+    $N(t) = \int J_n(t,u)D[f(u,\beta_m)]du \quad (17)$
+
+    ```
+
+
+    With $J_n(t,u)$ the integer-order Bessel function. Of these polynomials are based
+    on their oscillatory property that to some extent applies to the evolution of
+    a pandemic that exhibits ups and downs.
+
+
+    In Fig.1 are plotted the probability distributions from the convolution given
+    by:
+
+
+    ```
+
+    $P(t) = \int_{-\infty}^{\infty} |J_n(x)|^2\delta(tx-x+\beta_1t-\beta_2)dx \quad
+    (18)$
+
+    ```
+
+
+    where the zeros of Dirac-delta are transformed to the square of Dirac-Delta function.
+    As seen points, there are lines that
+
+
+    ![](img/0cd2d1e203f61c64539309ea94a7df5c_3_1.png)
+
+
+    Fig. 1. Probability of infection normalized to 1, as function of months.
+
+
+    q ranging between 1 and four. One can see the effect of the convolution with the
+    Dirac-Delta functions as we shifting the zeros of the Bessel functions. While
+    the infection probability function of months, one can see that $q=1$ the probability
+    acquires its maximum value at 2.1 months. In this pandemic dictated by the order,
+    the probability falls down in subsequent months. For $q=2$ exhibits a dip in 1.8
+    months. It is actually the dip that appears at this range of $q=4$ only exhibits
+    a fast reaching until the 2.5 months after
+
+
+    # B. The End and Beginning of Waves
+
+
+    In contrast to (18) by which the argument of Dirac-Delta function does not depend
+    on the order $q$. It is argued that the zeros of argument are dictated by the
+    polynomial form, then the implementation of the argument q inside would yield
+    a morphology that is entirely dictated by these integers. Thus under the scenario
+    the following convolution with a Dirac-Delta function depending on three variables,
+    $x$ and $q$ through the following operations are presented:
+
+
+    ```
+
+    $P(u) = \int_{-\infty}^{\infty} |J_n(x)|^2\delta(ux+3q-10uq)dx \quad (19)$
+
+    ```
+
+
+    ```
+
+    $P(u) = \int_{-\infty}^{\infty} |J_n(x)|^2\delta(ux+3q-10uq)dx \quad (20)$
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'whose distributions are plotted at Fig. 2 (Up) and (Down).
+
+
+    can see in Up panel of the case for $q=4$ that it is interpreted as the first
+    and second wave. In contrast to the case for $q=1, 2$ and $4$ which do not display
+    dips in this range, one can argue that the Bessel function $J_q(x)$ encompasses
+    the entire scenario of pandemic. The appearance of a dip in $q=6.5$ month is associated
+    to the modification of learning in order to effect changes on the infections of
+    number. In Fig. 3(the simulation of Eq.(20) is
+
+
+    and second wave. The Dirac-Delta formulation appears to be encompassed by the
+    behavior of pandemic that presents a first wave as well as a second wave. The
+    implementation of nonlinear rules as in the argument of Eq.(20) is in accordance
+    to a nonlinear or random behavior. Nonlinear also reflects the complex fact of
+    changes to be taken in order to minimize the number of infections and to end the
+    first wave.
+
+
+    ![](img/0cd2d1e203f61c64539309ea94a7df5c_4_0.png)
+
+
+    Fig. 2. Simulation of Eq.(20) showing the distributions of exception of $q=4$
+    with a dip is defining the end of the first wave as well as the beginning of second
+    wave.
+
+
+    displayed. One can see that the Dirac-Delta element appears nonlinear in the case
+    $q=3 \rightarrow 3q$. The resulting distributions show lack of dips for the cases
+    of $q=1, 2$ and $q=3$ are not aligned to match the morphology of infections. In
+    this plot the number of infections is as function of years, the dip appears at
+    0.2 years or equivalent 6 months that it is not in agreement to Up. This indicates
+    that the implementation of Machine Learning is that of a fully nonlinear task
+    that should be adjusted as a nonlinear behavior of infections.
+
+
+    ![](img/0cd2d1e203f61c64539309ea94a7df5c_4_1.png)
+
+
+    Fig. 3. Simulation of Eq.(20) with a fully nonlinear dip at showing the feature
+    of the orders $q=1, 2$ and $4$. The system is forced to converge at a certain
+    time through the implementation of nonlinear actor
+
+
+    # V. CONCLUSION
+
+
+    In this paper, the criteria of Tom Mitchell indicates the concept of Machine Learning
+    is that we use pandemic models like the ongoing Covid-19 that appears to exhibit
+    a first
+
+
+    # REFERENCES
+
+
+    +   [1] Wang Wu, et al., association coronavirus with respiratory disease in China.
+    Nature. 579, 368 (2020).
+
+
+    +   [2] Keeling Zhou, Joshua T Li, Di Lu Gabriel and Han Liu. First-wave COVID-19
+    transmissibility and severity in China under control measures, and second-wave
+    scenario: a modeling impact assessment. Lancet Infectious Diseases Volume 20,
+    Issue 5 Pages 182-183.
+
+
+    +   [3] Emad Rashid AA, et al. Clinical, medical, and epidemiological characterization
+    of the SARS-CoV-2 virus and the 2019 COVID-2019, a comprehensive review. Diagnostic
+    Microbiology and Infectious Diseases Volume 98, September 2020 115094.
+
+
+    +   [4] Ni Qian Wu, et al. Serological rapid diagnosis of COVID-19 and SARS-CoV-2
+    using methods and antibodies. Nature, 2020, 9 -2
+
+
+    +   [5] Sergio Grillo and Nicolas Taib, Tracking of coronavirus cases. International
+    Journal of Public Health 67, 160613.
+
+
+    +   [6] Stephen S. Morris. The dynamics of viral diseases. Journal of Infectious
+    Diseases and Public Health Volume 9, 1991 - 1-2.
+
+
+    +   [7] Huaijun Tang and Bin Xu, Transmission and spread of influenza A (H1N1)
+    virus, risk factors and potential pandemic, Annals of Biomedical Engineering and
+    Information and Communication Technologies (BICILEON).
+
+
+    +   [8] Hebert-Tuys, Feynman-Bayesian, Analysis of an Efficient Detection of Outbreak
+    in Wuhan, January 2019 using Machine Learning and deep learning.
+
+
+    +   [9] Xuxian Yan et al. Artificial intelligence based rapid diagnosis of COVID-19.
+    Medical Science, May 15, 2020.
+
+
+    +   [10] Tom Mitchell, Machine Learning, Chapter-1, Pearson (1997).
+
+
+    +   [11] Rahul Singh, Rahul Taher, and Singh Gill. Predicting the growth and trend
+    of COVID-19 pandemic using machine learning and cloud computing. Internet of Things
+    Volume 11 (2021).
+
+
+    +   [12] Milad Yurdakul, Mukesh Patel and M Srinivas. Analysis of novel coronavirus
+    using machine learning. Chaos, Social Science and Medicine, 250 (October 2020)
+    10
+
+
+    +   [13] Patrick Bachinger, Peter S Simons and LF Washlek. Machine Learning-asking
+    the right questions: opportunities and challenges in Digital Health, 10 July 2020.
+
+
+    +   [14] Katherine Baecke, Considerations for evaluating the effectiveness of
+    nonpharmaceutical interventions. Management Technology Review, 13 (2020).
+
+
+    +   [15] Hebert-Huipers, The use of Dirac-Delta functions with nonlinear argument
+    in order 1/n, International Journal of Management Technology Control, 11 (2020).
+
+
+    +   [16] Minas Caseras: Coronavirus por COVID-19 detectado en 123 970 en el Perú
+    (Spanish). Comunicado N 117 (Spanish). Plataforma digital de la Secretaría de
+    Salud Pública, 25 Mayo 2020. 22 July 2020. Health reports on coronavirus.
+
+
+    +   [17] E. Cenna and A. Calmetta, Analysis of a biological process, Phys. Rev.
+    E, 50(4) (1994) - 2944-.
+
+
+    +   [18] Daniel Perez. The impact of machine learning on politics and the pandemic,
+    Nature Reports, 11 (2021).
+
+
+    +   [19] Huber-Tuyslein, A closed-form expression for the received power through
+    the use of Dirac-Delta functions with nonlinear argument.
+
+
+    +   [20] Wolfram, WolframAlpha (2021).'
+  merge: -1
+  img_proc: true
