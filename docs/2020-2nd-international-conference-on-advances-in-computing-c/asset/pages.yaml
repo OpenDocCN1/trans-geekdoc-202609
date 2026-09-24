@@ -1,0 +1,230 @@
+- pgno: 0
+  md: '# Campus Placement Predictive Analysis using Machine Learning
+
+
+    Nikhil Kumar
+
+    Department of Computer Science and Engineering
+
+    Galgotias University
+
+    Greater Noida, India
+
+    26mikhilkumar01@gmail.com
+
+
+    Ajay Shankar Singh
+
+    Department of Computer Science and Engineering
+
+    Galgotias University
+
+    Greater Noida, India
+
+    drajay.cse@gmail.com
+
+
+    Thirunavakkasu K.
+
+    Department of Computer Science and Engineering
+
+    Galgotias University
+
+    Greater Noida, India
+
+    thiruk.k@galgotiasuniversity.edu.in
+
+
+    E. Rajesh
+
+    Department of Computer Science and Engineering
+
+    Galgotias University
+
+    Greater Noida, India
+
+    rajrajesh16@gmail.com
+
+
+    Abstract—Each student dream of having a work offer in hands before leaving college.
+    A placement indicator helps students get an sense of where they are and what to
+    do to ensure a decent selection. A placement predictor is a device that can forecast
+    the probability or performance of a student that is in the placement process.
+    The use of such a program could help in the academic preparation for future years.
+    With the emergence of data mining and machine learning, various models were applied
+    this paper introduces a literature survey for pre-final year engineering graduate
+    students on different statistical selection models.
+
+
+    prediction so the placement cell of the organization could set up a placement
+    anticounded for the present students.
+
+
+    Along these lines it important to direct on different placement prediction frameworks.
+    This paper shows overview on various placement framework and its application for
+    the students.
+
+
+    Keywords—Data mining, Logistic Regression, Decision tree, Random Forest.
+
+
+    # II. LITERATURE SURVEY
+
+
+    # A. Prediction using Logistic Regression
+
+
+    This paper[1] describes the creation of a indicator for placement utilizing the
+    concept of predictive modeling, called Logistic Regression. This model is one
+    of the widely used mathematical model in the field of machine learning and is
+    used as a classifier. The method developed here forecasts the probability of placing
+    a student, and the categories dataset based on the perspective of being or not
+    being hired into a corporation.
+
+
+    The tool is designed by:
+
+
+    +   - regression is a numerical methodology used to prepare a dataset that incorporates
+    one or more independent factors shown by X(b-0) to b-1, for N index variables
+    constructed as an example case. The outcome is estimated by method for a dichotomous
+    variable (in which there are just two potential outcomes). The variable in logistic
+    regression is twofold or dichotomous, for example it contains just information
+    coded as either 1 (TRUE, achievement and so) or 0 (FALSE).
+
+
+    # I. INTRODUCTION
+
+
+    According to statistics 6 million students pass CS department every year The demand
+    for skilled and qualified students is day by day. The immense amount of recruit
+    in students from in-campus and off-campus number of skilled and qualified students
+    are very low. Colleges and Industry needs to focus on practical application of
+    real knowledge what could bring students Placements are the best opportunity in
+    the life of student to be fully prepared while the
+
+
+    Placement predictor helps whether a student will get placement or not. This system
+    can also help for identifying the areas where students need to go on placement.
+    This system uses students'' details like academic marks, coding skills, etc. This
+    system uses previous year placement statistics and data for the placement'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: "# 2020 2nd International Conference on Computing, Communication Control and\
+    \ Networking (ICACCEN)\n\ndisappointment and so on.\nWith the help of fuzzy logic,\
+    \ this approach\nessentially predicts and disintegrates student data\ndefined\
+    \ classes which is a great\nadvantage for company to analyze data from vast\n\
+    student data datasets.\n\n```\nLogit(p) = \\beta 0 + \\beta X1 + \\beta X2 + \\\
+    beta X3\n```\n\nWhere the chance of accomplishment is \"p.\"\nThe methodology\
+    \ in this paper[3] is elaborated\nusing the methods of data mining. The equations\
+    \ to\ncreate the model \"Fuzzy logic and neural\nneighbor\" is an appropriate\
+    \ alternative to than that\nlogical framework for reasoning.\" The \"K Nearest\n\
+    Neighbor (KNN) is a typical approximation of\nclassification tasks, and also gives\
+    \ the created\nnew cases based on the separation steps. Increasing\nefficiency\
+    \ & accuracy is visualized and checked,\nand each model is addressed before the\
+    \ show\nexam.\n\nThe logit process is known as\nopportunity:\n\n```\nLogit(p)\
+    \ = \\log(p/p-1)\n```\n\n+   - General fit-\nnThe likelihood of invalid model\
+    \ - 2\nWhere LO is the class of causing estimates\nwhen autonomous factors have\
+    \ little impact on\nthe results.\n- Parameters of Regression\nEach factor is correlated\
+    \ with the $\\beta$\ncoefficient. This coefficient measures the input in\nt Logistic\
+    \ System for increasing factor or\nindependent variables. The further logistic\
+    \ model\nparameters add, the smoother curve can\nproduce. The scale is between\
+    \ 0 and 1.\n- Final Processing-\nAt last, the data is on Logistic Model which\n\
+    \ gathered from Online Test of students.\n\nAlgorithms are used to collect the\
+    \ collection of\ndata and the characteristics required for\nmanufacturing. The\
+    \ consistency gained after KNN analysis is\n97.33 percent and 92.67 percent for\
+    \ Fuzzy logic,\nsequently, it would be easier from the preceding\nanalysis and\
+    \ if the KNN were used to forecast\nthe outcome of the placement.\n\n# B. Prediction\
+    \ using Fuzzy Approach\n\nFuzzy reasoning is a philosophy that\noffers the direct\
+    \ understanding of reality and false values\nof these attributes take with the\
+    \ same guidelines\nwith the fuzzy logic, which advice may be expressed of\ntegrity\
+    \ and false estates.\n\nCompare to or result (1 or 0) or Boolean\nlogic, the principle\
+    \ of fuzzy thinking is a way to deal\nwith truth seeking. Fuzzy logic is an extension\
+    \ of\nestimated proportional value logic to an enrollment\narray that maps features\
+    \ into fuzzy sets\nor selection of fuzzy sets as fuzzy\nknown as fuzzy logic.\n\
+    \nThe central aim of this paper[2] is to order\nselection of student data using\
+    \ fuzzy reasoning and\nto estimate position of students whether or not\nthe applicant\
+    \ is qualified for the placement. The\nclasses for a single undergraduate year,\
+    \ leaves for\nplacement non-placement period. These students\nwill obtain better\
+    \ experiences or good (GPA) in measurement\npreparation training and the returning\
+    \ student will go for\nadditional lessons to improve their results. Both\ncan\
+    \ hardly be foreseen by this technique at any moment.\n\n# C. Prediction using\
+    \ Random Forest Algorithm\n\nThis paper[4] uses the Random Forest Method to estimate\n\
+    employment status for the student. A regression based\nanalysis of the data is\
+    \ collected from the\ncandidates. Random Forest is a statistical technique for\
+    \ the\nensemble by summing the results of decision tree\ntrees. Each tree is generated\
+    \ using Random Forest,\nwhich may increase the possibility of using\nniversity\
+    \ in an organization. The system will reveal the\nnames of entities in the prepared\
+    \ model where an\nherarchy is to be placed based on methods\nthey have received.\
+    \ The program handles having a\nsummary of the basic skills teaching that would\
+    \ be\nactivated by the students who go through the situation\nprocess. We inferred\
+    \ from the research in this\nreview using unique formulas (e.g. SVM, KNN,\nDecision\
+    \ tree, C4Ada) that the accuracy given by\nRandom Forest is the most costly for\
+    \ collection.\n\n# D. Prediction using Decision Tree Algorithm\n\nIn[6], others\
+    \ process to make a distinction\naspect of the subjective and quantitative parts\n\
+    of student's profile, such as CGPA, academic achievement,\nhigh skilled and relations,\
+    \ and to structure a model\ncan predict a student's performance. It is for purpose\n\
+    that ID3 classification methodology was used based the\ntree of choosing.\n\n\
+    With these attributes, a trie using Weka\ntool is acquired. The J48 classification\
+    \ calculation which is"
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "# 2020 International Conference on Advances in Computing, Communication Control\
+    \ and Networking (IACCCEN)\n\nan augmentation of ID3 classification is utilized\
+    \ to produce the\nchoice tree.\n\nThe calculation gives a pruned choice tree with\n\
+    leaves as it chooses or not set. The essential\ntree potential qualities of programming\
+    \ which can use\ngreat, Average and Poor. On the off\nmut, the programming skills\
+    \ are for, the student isn't.\nstudent might be based on the scholastic qualification\n\
+    which is CGPA. On the off that the CGPA of the\nstudent is not ideally, the student\
+    \ has normal\nperformance, but the programming skills may be\ngreat, if the student\
+    \ is dependent on\ndifferent attributes like entry level positions,\n examinations,\
+    \ relative abilities, and so.\n\nApparently positioning on the grounds that it\n\
+    various characteristics are not so straightforward to\nforfellow, although the\
+    \ four attributes are regarded.\nThe student selected the perfect mix of attributes.\
+    \ For\nspecified dataset, this blend works admirably. As\nfrom this given dataset\
+    \ to determine the student's\nplacement there Therefore the model's performance\
+    \ is\nconsiderable.\n\n# II. CONCLUSION\n\nA point-by-point analysis was performed\
+    \ based on specific\nstatistical frameworks for the placement. The student dataset\n\
+    including academic and selection attributes could provide\nhopest for for forecasting\
+    \ future selection\npossibilities. Future forecast will empower students to understand\n\
+    the skills and develop to their needs. This\nmethodology may help prepare procedures\
+    \ and\nstrengthen the recruitment structure for years in the\nscholastic arrangement\
+    \ of an establishment.\n\n# E. Prediction using classification and clustering\
+    \ techniques\n\nThis paper[8] suggests a hybrid solution using\n\"2 K Clustering\
+    \ and Supporting Vector Clustering\"\nustering algorithms, and one \"Naïve Bayes\
+    \ classification\nalon the very same dataset.\n\nThe calculations were performed,\
+    \ and the\ntool's front was created using PHP and MySQL as\ndabase.\n\nAmong all\
+    \ these calculations, K-Means ends up\nthe best predictive classification speaking\
+    \ to bunch\nmodel, for taking placement choices using.\nThe results were resulted\
+    \ without the calculation viz.\n-Means (83 percent) and results were obtained\
+    \ with\nthe help of Rapid Miner [83]. With the data generated\nof innovation,\
+    \ students will now have the choice of\nchoosing the correct selection with the\
+    \ best chances of\ngetting set.\n\n# REFERENCES\n\n+   [1] Manoj S Sharma, Prajakta\
+    \ Rai Jayashankar, Rakesh Prabhu, Prof.\nDeep Gupta, Student Placement Prediction\
+    \ Using Logistic\nRegression\", International Journal Of Engineering Research\
+    \ &\nTechnology (IJERT), 2018.\n\n+   [2] Kumar and J Jayanth, \"Student Prediction\
+    \ for Campus\nPlacement Training Using Fuzzy Inference System\", ICTACT\nOn Soft\
+    \ Computing, 2017.\n\n+   [3] Manoj Kumar, Prof. Savita Bakare, \"Prediction of\
+    \ Campus\nPlacement Data Using Algorithm-Fuzzy Logic and k nearest\nneighbor using\
+    \ Advanced Research in Computer and\nCommunication\n\n+   [4] Bharharge, \"Assessing\
+    \ effectiveness of students using\ndata mining algorithms in Communication and\n\
+    International (IACCCEN), 2021.\n\n+   [5] S Kumar and S Ramakrishna, \"Random\
+    \ Forest for Salary Prediction\nSystem to Improve Motions\", Signal Image-Technology\
+    \ &\nInternet-Based Systems (SIITS), 2019.\n\n+   [6] Mohammad Azim, Lynette R.\
+    \ du Melo, \"Use of ID3\nDecision Tree Algorithm for Placement\", (UCSIT)\nInternational\
+    \ Journal of Computer Science and Information\n\n+   [7] Dammarajaja Ram Kethiraj,\
+    \ S Suryanarayanan, Priya Muthu,\nPlacement Analysis in University Using Importance\
+    \ Classification\nTree Algorithm\", International Journal of Computer andn Technology\n\
+    \n+   [8] Sayed Mohammad Ramanahalla, \"A Clustering and Classification\nApproach\
+    \ for Placement Chance\", International Journal of\nEngineering and Technology\
+    \ (IEEE X), 2018.\n\n+   [9] Ramanahalla,L. Swamatha P. Ganesh Gopal, \"Mining\
+    \ educational\ndata for students' placement prediction sum of difference\nmethod\"\
+    , International Journal of computer application, 2014.\n\n# F. Prediction using\
+    \ Sum of Difference method\n\nSum of Differential Strategy has been used in the\n\
+    paper[9] to achieve the prediction goal from the\ndaset. The paper is proposed\
+    \ using a proposed model use\nSum of Difference Strategy to find most basic properties\
+    \ in\na given dataset between\n\n216"
+  merge: -1
+  img_proc: true
