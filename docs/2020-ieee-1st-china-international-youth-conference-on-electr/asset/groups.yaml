@@ -1,0 +1,1613 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Fault Diagnosis for IGBTs Open-Circuit Faults in Photovoltaic Grid-Connected
+    Inverters Based on Statistical Analysis and Machine Learning
+
+
+    *Hongyu Lu, Mingyao Ma, Weisheng Guo, Fei Li, Xing Chang
+
+
+    Abstract — A new diagnosis method for IGBTs open-circuit faults based on statistical
+    analysis is proposed to improve the reliability of photovoltaic generation system.
+    First, empirical mode decomposition (EMD) is used to reduce the reality effect
+    of noise in the signal. Second, statistical analysis and genetic moment analysis
+    are used to extract feature and dimension reduction. Then, a neural network is
+    used for fault recognition. Finally, the effectiveness of the proposed method
+    is verified by simulation experiments. At the same time, the proposed method is
+    compared with the traditional feature extraction and component analysis (PCA)-based
+    reduction method. The results show that the proposed method has high recognition
+    accuracy and simple neural network topology.
+
+
+    Index Terms—BP neural network, EMD noise reduction, GDA, open-circuit fault diagnosis
+
+
+    # I. INTRODUCTION
+
+
+    With the rapid development of photovoltaic industry, the fault system will not
+    only cause economic losses, but also have huge impact on the power grid. Therefore,
+    the safety and reliability of photovoltaic power generation system are essential.
+    Insulated gate bipolar transistors (IGBTs) are used in various inverters to control
+    high current. However, IGBT is very prone to failure due to the harsh environment
+    and electrical and thermal stress of internal equipment. Research shows that semiconductor
+    devices are sensitive to various of faults [1]. When IGBTs short-circuit faults
+    occur, the electrical and thermal stress caused by current will lead to terminal
+    breakdown of IGBTs. Therefore, short-circuit faults are usually removed by hardware
+    circuits [2], and secondary protection can prevent overcurrent or overvoltage
+    in a short time, but last for a long period without protection of the system.
+    If IGBT open-circuit faults were not detected for a long time, the remaining current
+    may flow through a circuit and cause damage. It is very important to identify
+    IGBT open-circuit faults quickly and
+
+
+    There are three methods of IGBTs open-circuit fault diagnosis: mathematical model
+    methods, signal processing and artificial intelligence methods. The mathematical
+    model method estimates the relationship between the input and output of the system
+    by constructing an observer. When the result of the output of the state observer
+    is greater than the threshold, the fault is considered to have occurred. However,
+    it is sensitive to noise several times occurring, which is inconvenient for non-professional
+    operation and personnel [3]. Signal processing can be subdivided into time-domain
+    analysis, frequency analysis and time-frequency analysis. Each method is used
+    in these phase, but fault analysis is sensitive to noise [5]. In example, empirical
+    mode decomposition (EMD) is used to decompose-axis current to get features. However,
+    this method is sensitive to handle changes. The current value is transformed by
+    machine learning algorithm to realize fault identification. However, there is
+    a problem that the dimension of features is too high [7], [8]. Moreover, fast
+    Fourier transform (FFT) is widely used in inverter to detect output current of
+    the inverter to extract characteristic values for fault diagnosis [9], [10]. In
+    addition, the method is able to handle noise changes in the field of fault detection
+    [11], [12]. The output is converted into two-dimensional images by numerical transformation,
+    and the excellent image recognition of convolutional neural network is used for
+    fault classification. For example, reference [14] uses the convolutional neural
+    network to sense the reality representation of fault signals, and the effect is
+    also very
+
+
+    In this paper, the proposed method shown in Fig. 1 describes the main fault types
+    in photovoltaic grid-connected inverter and analyzes the output of the inverter
+    when open-circuit faults occur. Section III introduces the principles of the proposed
+    method and simulation analysis is carried out in Section V gives the conclusions.
+
+
+    This work was supported by National Natural Science Foundation of China (NSFC)
+    under No. 21775107 and with National and Joint Laboratory Engineering for Renewable
+    Energy Technology, Hebei University, China. (2537990102@qq.com, myyama@hdt.edu.cn,
+    23009, 60858401@qq, 415990803@qq.com; hgyi@jsut.edu.cn)'
+  - '[PAGE 1]
+
+
+    > FOR CIYEE 2020 PAPER <
+
+
+    2
+
+
+    in production. Therefore we only collect the current of the fundamental wave after
+    the fault occurs. Switching frequency is 5kHz. 100 points are collected at equal
+    intervals within a fundamental wave, and the inverter is disconnected from the
+    grid at 0.02s after the drive signal is closed.
+
+
+    TABLE I
+
+    IGBT OPEN-CIRCUIT FAULT TYPES
+
+
+    | Fault Types | Fault Code | Fault Types | Fault Code |
+
+    |---|---|---|--|
+
+    | NORMAL | 1 | VT1&VT6 | 12 |
+
+    | VT1 | 2 | VT2&VT3 | 13 |
+
+    | VT2 | 3 | VT2&VT4 | 14 |
+
+    | VT3 | 4 | VT2&VT5 | 15 |
+
+    | VT4 | 5 | VT2&VT6 | 16 |
+
+    | VT5 | 6 | VT3&VT5 | 17 |
+
+    | VT6 | 7 | VT3&VT5 | 18 |
+
+    | VT1&VT2 | 8 | VT3&VT6 | 19 |
+
+    | VT1&VT3 | 9 | VT4&VT5 | 20 |
+
+    | VT1&VT5 | 11 | VT4&VT6 | 22 |
+
+
+    ![](img/cd71556ea4ab4b100c6a39f16e5e93cf_1_0.png)
+
+
+    Fig. 1. Flow chart of fault diagnosis based on statistical analysis and machine
+    learning
+
+
+    # II. IGBT OPEN-CIRCUIT FAULT ANALYSIS
+
+
+    Three-phase half-bridge inverter has been widely used in various applications
+    because its structure and flexible control mode [15]. Therefore, the research
+    object of this paper is the three-phase half-bridge grid-connected inverter. The
+    circuit topology of photovoltaic inverter is shown in Fig. 2.
+
+
+    ![](img/cd71556ea4ab4b100c6a39f16e5e93cf_1_1.png)
+
+
+    Fig. 2. Main current of grid-connected inverter.
+
+
+    There are six IGBTs in the three-phase half-bridge inverter. Open-circuit faults
+    in different positions will lead to different degrees of distortion of the grid-connected
+    circuit. In general, there are three or more IGBTs fault simultaneously. Therefore
+    this paper studies only IGBT open-circuit. A total of 21 open-circuit faults and
+    normal condition are shown
+
+
+    When IGBT open circuit faults occur, the current of the inverter will be distorted.
+    This paper shows the three-phase current waveform with open-circuit fault of VT1
+    at 0.06s. The fault affects upper half, and the B and C phases are phased out.
+    It should also be noted that the open-circuit fault may occur at any time of a
+    fundamental wave. Therefore, in this paper, a fundamental wave is presented by
+    20 and IGBT faults at 20 moments turning off the IGBT driver signal. The system
+    would stop very quickly if it had a serious failure
+
+
+    ![](img/cd71556ea4ab4b100c6a39f16e5e93cf_1_2.png)
+
+
+    Fig. 3. Three-phase current when open circuit fault occurs in VT1
+
+
+    A total of 440 samples under 22 faults will be used as the original input. The
+    three-phase current data can be presented in (1). N is equal to 100.
+
+
+    ```
+
+    ($i_{a} = (i_{a1}, i_{a2}, ..., i_{an}))
+
+    ($i_{b} = (i_{b1}, i_{b2}, ..., i_{bn}))
+
+    ($i_{c} = (i_{c1}, i_{c2}, ..., i_{cn})) $
+
+    ```
+
+
+    # III. PROPOSED METHOD FOR IGBT OPEN-CIRCUIT FAULTS
+
+
+    # A. Noise Reduction
+
+
+    The feature extraction method based on digital signal analysis is particularly
+    sensitive to noise. To ensure the accuracy of the final fault diagnosis, it is
+    necessary to reduce the noise of the collected current data. The traditional methods
+    include BP neural network,
+
+
+    Authorized license limited to: Carleton University. Downloaded on June 03, 2021
+    at 06:17:07 UTC from IEEE Xplore. Restrictions apply.'
+  - '[PAGE 2]
+
+
+    # FOR CIIEEE 2020 PAPER <
+
+
+    # 3
+
+
+    wavelet packet, FFT harmonic analysis and so on. The use of BP neural network
+    for noise reduction has a good effect but increases the complexity of fault diagnosis
+    system. Wavelet method and FFT harmonic components are not adaptive, as the wavelet
+    and harmonic components must be defined manually. In this paper, EMD is used for
+    adaptive decomposition from the local extreme of the signal, EMD decomposes the
+    signal into intrinsic mode functions (IMFs) and a residual by solving the upper
+    and lower envelope and the average signal of the IMF (2), where N is the number
+    of components. EMD IMFs need to meet the following characteristics:
+
+
+    +   - The extreme points and zero crossings should be the same, or more.
+
+    - At any moment, the average value of the upper envelope formed by the maximum
+    point and the lower envelope formed by the local minimum point is zero, that the
+    upper and lower envelope are locally symmetric with respect to the time axis.
+
+
+    # B Statistical Analysis Feature Extraction
+
+
+    After removing the noise in the grid-connected current, the three-phase grid-connected
+    current is processed according to the twelve-domain signal statistical features
+    listed in Table II as [5]. A 440 by 30 open-circuit fault data will be obtained.
+
+
+    ```
+
+    $i_i = \sum_{j=1}^n IMF_j(x,a,b,c)$ (2)
+
+    ```
+
+
+    ```
+
+    $i\_n = Residual$ (3)
+
+    ```
+
+
+    As the number of decomposition layers increases, the frequency of IMF decreases
+    gradually, and the residual is pulsation with low frequency. The basic frequency
+    of the inverter current is 50Hz, and the noise is usually high-frequency signal.
+    Therefore, if the three-phase current is carried out, and the adaptive filtering
+    is realized by removing the two IMFs and residuals of the 3-layer. Fig. 4 shows
+    the IMFs and residuals of 2-layer EMD for A phase current when the open-circuit
+    circuit fault occurs in VT1. Obviously, the residual is much smoother than the
+    original signal. EMD completely eliminates noise from the original signal.
+
+
+    # TABLE II
+
+
+    TIME-DOMAIN STATISTICAL FEATURES
+
+
+    | Statistical Features | Calculation Formula |
+
+    |---||
+
+    | mean | $mean = \frac{1}{N} \sum x_i$ |
+
+    | minimum | $min = \min(x_i)_{i=1,N}$ |
+
+    | maximum | $max = \max(x_i)_{i=1,N}$ |
+
+    | P-value | $PP-max$ |
+
+    | Variance | $\sigma^2 = \frac{1}{N-1} \sum (x_i-mean)^2$ |
+
+    | Standard deviation | $\sigma = \sqrt{\frac{1}{N-1} \sum (x_i-mean)^2}$ |
+
+    | Peak | $P = max \frac{\frac{1}{N}}{x_i}$ |
+
+    | Pulse | $P_u = max \frac{\frac{1}{N}}{x_i}$ |
+
+    | Margin | $M = max \frac{\frac{1}{N}}{x_i}$ |
+
+    | Waveform | $W = \sqrt{\frac{\frac{1}{N}}{\sum x_i^2}}$ |
+
+    | Kurtosis | $K = \frac{\frac{1}{N} \sum (x_i-mean)^4}{(\frac{1}{N} \sum (x_i-mean)^2)^{3/2}}$
+    |
+
+    | Skewness | $S = \frac{\frac{1}{N} \sum (x_i-mean)^3}{(\frac{1}{N} \sum (x_i-mean)^2)^{3/2}}
+    |
+
+
+    ![](img/cd71556ea4ab4b100c6a39f16e5e93cf_2_0.png)
+
+
+    ![](img/cd71556ea4ab4b100c6a39f16e5e93cf_2_1.png)
+
+
+    ![](img/cd71556ea4ab4b100c6a39f16e5e93cf_2_2.png)
+
+
+    ![](img/cd71556ea4ab4b100c6a39f16e5e93cf_2_3.png)
+
+
+    The index of each value
+
+
+    Fig. 4. EMD for A phase current when open circuit circ occurs in VT1
+
+
+    # C. Generalized Discriminant Analysis (ADA)
+
+
+    The research shows that there is the following relationship in (4) between the
+    training sample size $O$, the testing error $\epsilon$ and sample size $n$ when
+    using machine learning. The number of training samples obtained $O$ is limited
+    by a limited frequency. Therefore, it is necessary to reduce the dimension of
+    features to'
+  md: '
+
+    # Fault Diagnosis for IGBTs Open-Circuit Faults in Photovoltaic Grid-Connected
+    Inverters Based on Statistical Analysis and Machine Learning
+
+
+    Hongyu Lu, Mingyao Ma, Weisheng Guo, Fei Li, Xing Chang
+
+
+    Abstract — A new diagnosis method for IGBTs open-circuit faults based on statistical
+    analysis is proposed to improve the reliability of photovoltaic generation system.
+    First, empirical mode decomposition (EMD) is used to reduce the reality effect
+    of noise in the signal. Second, statistical analysis and genetic moment analysis
+    are used to extract feature and dimension reduction. Then, a neural network is
+    used for fault recognition. Finally, the effectiveness of the proposed method
+    is verified by simulation experiments. At the same time, the proposed method is
+    compared with the traditional feature extraction and component analysis (PCA)-based
+    reduction method. The results show that the proposed method has high recognition
+    accuracy and simple neural network topology.
+
+
+    Index Terms—BP neural network, EMD noise reduction, GDA, open-circuit fault diagnosis
+
+
+    # I. INTRODUCTION
+
+
+    With the rapid development of photovoltaic industry, the fault system will not
+    only cause economic losses, but also have huge impact on the power grid. Therefore,
+    the safety and reliability of photovoltaic power generation system are essential.
+    Insulated gate bipolar transistors (IGBTs) are used in various inverters to control
+    high current. However, IGBT is very prone to failure due to the harsh environment
+    and electrical and thermal stress of internal equipment. Research shows that semiconductor
+    devices are sensitive to various of faults [1]. When IGBTs short-circuit faults
+    occur, the electrical and thermal stress caused by current will lead to terminal
+    breakdown of IGBTs. Therefore, short-circuit faults are usually removed by hardware
+    circuits [2], and secondary protection can prevent overcurrent or overvoltage
+    in a short time, but last for a long period without protection of the system.
+    If IGBT open-circuit faults were not detected for a long time, the remaining current
+    may flow through a circuit and cause damage. It is very important to identify
+    IGBT open-circuit faults quickly and in production.
+
+
+    There are three methods of IGBTs open-circuit fault diagnosis: mathematical model
+    methods, signal processing and artificial intelligence methods. The mathematical
+    model method estimates the relationship between the input and output of the system
+    by constructing an observer. When the result of the output of the state observer
+    is greater than the threshold, the fault is considered to have occurred. However,
+    it is sensitive to noise several times occurring, which is inconvenient for non-professional
+    operation and personnel [3]. Signal processing can be subdivided into time-domain
+    analysis, frequency analysis and time-frequency analysis. Each method is used
+    in these phase, but fault analysis is sensitive to noise [5]. In example, empirical
+    mode decomposition (EMD) is used to decompose-axis current to get features. However,
+    this method is sensitive to handle changes. The current value is transformed by
+    machine learning algorithm to realize fault identification. However, there is
+    a problem that the dimension of features is too high [7], [8]. Moreover, fast
+    Fourier transform (FFT) is widely used in inverter to detect output current of
+    the inverter to extract characteristic values for fault diagnosis [9], [10]. In
+    addition, the method is able to handle noise changes in the field of fault detection
+    [11], [12]. The output is converted into two-dimensional images by numerical transformation,
+    and the excellent image recognition of convolutional neural network is used for
+    fault classification. For example, reference [14] uses the convolutional neural
+    network to sense the reality representation of fault signals, and the effect is
+    also very de-identifying faults quickly.
+
+
+    In this paper, the proposed method shown in Fig. 1 describes the main fault types
+    in photovoltaic grid-connected inverter and analyzes the output of the inverter
+    when open-circuit faults occur. Section III introduces the principles of the proposed
+    method and simulation analysis is carried out in Section V gives the conclusions.
+
+
+    This work was supported by National Natural Science Foundation of China (NSFC)
+    under No. 21775107 and with National and Joint Laboratory Engineering for Renewable
+    Energy Technology, Hebei University, China. (2537990102@qq.com, myyama@hdt.edu.cn,
+    23009, 60858401@qq, 415990803@qq.com; hgyi@jsut.edu.cn)
+
+
+    Therefore we only collect the current of the fundamental wave after the fault
+    occurs. Switching frequency is 5kHz. 100 points are collected at equal intervals
+    within a fundamental wave, and the inverter is disconnected from the grid at 0.02s
+    after the drive signal is closed.
+
+
+    TABLE I: IGBT OPEN-CIRCUIT FAULT TYPES
+
+
+    | Fault Types | Fault Code | Fault Types | Fault Code |
+
+    |---|---|---|---|
+
+    | NORMAL | 1 | VT1&VT6 | 12 |
+
+    | VT1 | 2 | VT2&VT3 | 13 |
+
+    | VT2 | 3 | VT2&VT4 | 14 |
+
+    | VT3 | 4 | VT2&VT5 | 15 |
+
+    | VT4 | 5 | VT2&VT6 | 16 |
+
+    | VT5 | 6 | VT3&VT5 | 17 |
+
+    | VT6 | 7 | VT3&VT5 | 18 |
+
+    | VT1&VT2 | 8 | VT3&VT6 | 19 |
+
+    | VT1&VT3 | 9 | VT4&VT5 | 20 |
+
+    | VT1&VT5 | 11 | VT4&VT6 | 22 |
+
+
+    ![](img/cd71556ea4ab4b100c6a39f16e5e93cf_1_0.png)
+
+
+    Fig. 1. Flow chart of fault diagnosis based on statistical analysis and machine
+    learning
+
+
+    # II. IGBT OPEN-CIRCUIT FAULT ANALYSIS
+
+
+    Three-phase half-bridge inverter has been widely used in various applications
+    because its structure and flexible control mode [15]. Therefore, the research
+    object of this paper is the three-phase half-bridge grid-connected inverter. The
+    circuit topology of photovoltaic inverter is shown in Fig. 2.
+
+
+    ![](img/cd71556ea4ab4b100c6a39f16e5e93cf_1_1.png)
+
+
+    Fig. 2. Main current of grid-connected inverter.
+
+
+    There are six IGBTs in the three-phase half-bridge inverter. Open-circuit faults
+    in different positions will lead to different degrees of distortion of the grid-connected
+    circuit. In general, there are three or more IGBTs fault simultaneously. Therefore
+    this paper studies only IGBT open-circuit. A total of 21 open-circuit faults and
+    normal condition are shown below.
+
+
+    When IGBT open circuit faults occur, the current of the inverter will be distorted.
+    This paper shows the three-phase current waveform with open-circuit fault of VT1
+    at 0.06s. The fault affects upper half, and the B and C phases are phased out.
+    It should also be noted that the open-circuit fault may occur at any time. In
+    this paper, the current value is transformed by machine learning algorithm to
+    realize fault identification. However, there is a problem that the dimension of
+    features is too high [7], [8].
+
+
+    ![](img/cd71556ea4ab4b100c6a39f16e5e93cf_1_2.png)
+
+
+    Fig. 3. Three-phase current with open-circuit fault.
+
+
+    When IGBT open circuit faults occur, the current of the inverter will be distorted.
+    This paper shows the three-phase current waveform with open-circuit fault of VT1
+    at 0.06s. The fault affects upper half, and the B and C phases are phased out.
+    It should also be noted that the open-circuit fault may occur at any time. In
+    this paper, the current value is transformed by machine learning algorithm to
+    realize fault identification. However, there is a problem that the dimension of
+    features is too high [7], [8].
+
+
+    # III. PROPOSED METHOD FOR IGBT OPEN-CIRCUIT FAULTS
+
+
+    ### A. Noise Reduction
+
+
+    Empirical mode decomposition (EMD) is used to reduce the reality effect of noise
+    in the signal. To ensure the accuracy of the final method, EMD is used to decompose
+    the signal into several intrinsic mode functions (IMFs). As the number of IMFs
+    increases, the residual decreases gradually.
+
+
+    TABLE II: TIME-DOMAIN FEATURES
+
+
+    | Statistical Features | Calculation Formula |
+
+    |---|---|
+
+    | mean | $\frac{1}{N} \sum x_i$ |
+
+    | minimum | $\min(x_i)$ |
+
+    | maximum | $\max(x_i)$ |
+
+    | Variance | $\sigma^2 = \frac{1}{N-1} \sum (x_i-\mu)^2$ |
+
+    | Standard deviation | $\sigma = \sqrt{\frac{1}{N-1} \sum (x_i-\mu)^2}$ |
+
+    | Peak | $P \frac{1}{N}$ |
+
+    | Pulse | $P_u$ |
+
+    | Margin | $M$ |
+
+    | Waveform | $W = \sqrt{\frac{1}{N} \sum x_i^2} $ |
+
+    | Kurtosis | $K = \frac{\frac{1}{N} \sum (x_i-\mu)^4}{(\frac{1}{N} \sum (x_i-\mu)^2)^2}$
+    |
+
+    | Skewness | $S = \frac{\frac{1}{N} \sum (x_i-\mu)^3}{(\frac{1}{N} \sum (x_i-\mu)^2)^{3/2}}$
+    |
+
+
+    ### B. Feature Extraction
+
+
+    The statistical analysis and genetic moment analysis are used to extract feature
+    and dimension reduction. The output is converted into two-dimensional images by
+    numerical transformation, and the excellent image recognition of convolutional
+    neural network is used for fault classification.
+
+
+    ### C. Fault Recognition
+
+
+    A neural network is used for fault recognition. For example, reference [14] uses
+    the convolutional neural network to sense the reality representation of fault
+    signals, and the effect is also very good.
+
+    '
+  mdcn: '
+
+
+    # 基于统计分析与机器学习的光伏并网逆变器IGBT开路故障诊断
+
+
+    Hongyu Lu, Mingyao Ma, Weisheng Guo, Fei Li, Xing Chang
+
+
+    摘要 — 提出了一种基于统计分析的IGBT开路故障新型诊断方法，以提高光伏发电系统的可靠性。首先，利用经验模态分解（EMD）减少信号中噪声的真实影响。其次，利用统计分析和遗传矩分析进行特征提取和降维。然后使用神经网络进行故障识别。最后，通过仿真实验验证了该方法的有效性。同时，将该方法与传统的基于特征提取和主成分分析（PCA）的降维方法进行了比较。结果表明，该方法具有较高的识别精度和简单的神经网络拓扑结构。
+
+
+    索引词—BP神经网络、EMD降噪、GDA、开路故障诊断
+
+
+    # I. 引言
+
+
+    随着光伏产业的快速发展，故障系统不仅会导致经济损失，还会对电网产生巨大影响。因此，光伏发电系统的安全性和可靠性至关重要。绝缘栅极双极晶体管（IGBT）被用于各种逆变器中控制大电流。然而，由于内部设备所处的恶劣环境以及电热应力，IGBT非常容易失效。研究表明，半导体器件对各种故障敏感
+    [1]。当发生IGBT短路故障时，电流引起的电热应力会导致IGBT的末端击穿。因此，短路故障通常由硬件电路消除 [2]，二次保护可以在短时间内防止过流或过电压，但在没有系统保护的情况下会持续很长时间。如果长时间未检测到IGBT开路故障，剩余电流可能会流经电路导致损坏。在生产中快速识别IGBT开路故障具有重要意义。
+
+
+    IGBT开路故障诊断有三种方法：数学模型法、信号处理法和人工智能方法。数学模型法通过构建观测器来估计系统输入与输出之间的关系。当状态观测器的输出结果大于阈值时，认为发生了故障。然而，它对多次发生的噪声非常敏感，不利于非专业人员操作
+    [3]。信号处理可以细分为时域分析、频率分析和时频分析。这些方法分别应用于这些阶段，但故障分析对噪声敏感 [5]。例如，利用经验模态分解（EMD）分解轴电流以获取特征。然而，这种方法对处理变化较为敏感。通过机器学习算法对电流值进行变换以故障识别。但存在特征维度过高的问题
+    [7], [8]。此外，快速傅叶变换（FFT）广泛应用于逆变器中检测逆变器的输出电流，以提取故障诊断的特征值 [9], [10]。此外，该方法能够处理故障检测领域的噪声变化
+    [11], [12]。通过数值变换将输出转换为二维图像，利用卷积神经网络卓越的图像识别能力进行故障分类。例如，参考文献 [14] 使用卷积神经网络感知故障信号的真实表示，其效果对于快速识别故障也非常有效。
+
+
+    在本文中，图1所示的方法描述了光伏并网逆变器的主要故障类型，并分析了发生开路故障时逆变器的输出。第三节介绍了所提方法的原理，第五节进行了仿真分析并给出结论。
+
+
+    这项工作受国家自然科学基金（NSFC）资助，编号为21775107，以及河北大学可再生能源技术国家联合实验室的支持。（2537990102@qq.com,
+    myyama@hdt.edu.cn, 23009, 60858401@qq, 415990803@qq.com; hgyi@jsut.edu.cn）
+
+
+    因此，我们只采集故障发生后的基波电流。开关频率为5kHz。在一个基波内等等间隔采集100个点，在驱动信号闭合0.02s后逆变器与电网断开。
+
+
+    表 I：IGBT开路故障类型
+
+
+    | 故障类型 | 故障代码 | 故障类型 | 故障代码 |
+
+    |---|---|---|---|
+
+    | 正常 | 1 | VT1&VT6 | 12 |
+
+    | VT1 | 2 | VT2&VT3 | 13 |
+
+    | VT2 | 3 | VT2&VT4 | 14 |
+
+    | VT3 | 4 | VT2&VT5 | 15 |
+
+    | VT4 | 5 | VT2&VT6 | 16 |
+
+    | VT5 | 6 | VT3&VT5 | 17 |
+
+    | VT6 | 7 | VT3&VT5 | 18 |
+
+    | VT1&VT2 | 8 | VT3&VT6 | 19 |
+
+    | VT1&VT3 | 9 | VT4&VT5 | 20 |
+
+    | VT1&VT5 | 11 | VT4&VT6 | 22 |
+
+
+    ![](img/cd71556ea4ab4b100c6a39f16e5e93cf_1_0.png)
+
+
+    图1. 基于统计分析与机器学习的故障诊断流程图
+
+
+    # II. IGBT开路故障分析
+
+
+    三相半桥逆变器因其结构和灵活的控制模式被广泛应用于各种 [15]。因此，本文的研究对象是三相半桥并网逆变器。光伏逆变器的电路拓扑如图2所示。
+
+
+    ![](img/cd71556ea4ab4b100c6a39f16e5e93cf_1_1.png)
+
+
+    图2. 并网逆变器主电流。
+
+
+    三相半桥逆变器中有六个IGBT。不同位置的开路故障会导致并网电路产生不同程度的失真。通常情况下，三个或多个IGBT同时发生故障。因此，本文仅研究IGBT开路。下方列了共21种开路故障和正常状态。
+
+
+    当IGBT开路故障发生时，逆变器的电流会发生失真。本文展示了0.06s时VT1开路故障的三相电流波形。故障影响上半部分，B相和C相相位消失。还应注意的是，开路故障可能在任何时间发生。通过机器学习算法对电流值进行变换以实现故障识别。但存在特征维度过高的问题
+    [7], [8]。
+
+
+    ![](img/cd71556ea4ab4b100c6a39f16e5e93cf_1_2.png)
+
+
+    图3. 开路故障的三相电流。
+
+
+    当IGBT开路故障发生时，逆变器的电流会发生失真。本文展示了0.06s时VT1开路故障的三相电流波形。故障影响上半部分，B相和C相相位消失。还应注意的是，开路故障可能在任何时间发生。通过机器学习算法对电流值进行变换以实现故障识别。但存在特征维度过高的问题
+    [7], [8]。
+
+
+    # III. 针对IGBT开路故障的方法
+
+
+    ### A. 降噪
+
+
+    经验模态分解（EMD）用于减少信号中噪声的真实影响。为了确保最终方法的准确性，利用EMD将信号分解为若干固有模态函数（IMF）。随着IMF数量增加，残差逐渐减少。
+
+
+    表 II：时域特征
+
+
+    | 统计特征 | 计算公式 |
+
+    |---|---|
+
+    | 平均值 | $\frac{1}{N} \sum x_i$ |
+
+    | 最小值 | $\min(x_i)$ |
+
+    | 最大值 | $\max(x_i)$ |
+
+    | 方差 | $\sigma^2 = \frac{1}{N-1} \sum (x_i-\mu)^2$ |
+
+    | 标准差 | $\sigma = \sqrt{\frac{1}{N-1} \sum (x_i-\mu)^2}$ |
+
+    | 峰值 | $P \frac{1}{N}$ |
+
+    | 脉冲 | $P_u$ |
+
+    | 裕度 | $M$ |
+
+    | 波形 | $W = \sqrt{\frac{1}{N} \sum x_i^2} $ |
+
+    | 峭度 | $K = \frac{\frac{1}{N} \sum (x_i-\mu)^4}{(\frac{1}{N} \sum (x_i-\mu)^2)^2}$
+    |
+
+    | 偏度 | $S = \frac{\frac{1}{N} \sum (x_i-\mu)^3}{(\frac{1}{N} \sum (x_i-\mu)^2)^{3/2}}$
+    |
+
+
+    ### B. 特征提取
+
+
+    统计分析和遗传矩分析用于特征提取和降维。通过数值变换将输出转换为二维图像，利用卷积神经网络卓越的图像识别能力进行故障分类。
+
+
+    ### C. 故障识别
+
+
+    使用神经网络进行故障识别。例如，参考文献 [14] 使用卷积神经网络感知故障信号的真实表示，其效果对于快速识别故障也非常有效。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 3]
+
+
+    > FOR CIIEEE 2020 PAPER <
+
+
+    obtain a smaller trainer.
+
+
+    ```
+
+    $O = \frac{n_c}{e}$ (4)
+
+    ```
+
+
+    GDA is also called Kernel-based linear dimensionalityanalysis(LDA). Different
+    from PCA, GDA and LDA use supervised dimensionality reduction techniques. GDA
+    and LDA sample categories to achieve supervised dimension reduction. This category-based
+    supervised dimensionality reduction is widely used in face recognition, fault
+    diagnosis, handwriting processing and other fields. GDA uses a kernel to map data
+    from low- to high-dimensional. The input of the kernel functions is in the original
+    space X, and the output is the inner product of the feature space H. Through this
+    kernel, we need to obtain the product of high dimensional space in low dimensional
+    space, which will greatly reduce the complexity and computation speed. In particular,
+    kernel methods meet the requirements of finite positive semi-definite. Linear
+    kernel, polynomials kernel and RBF kernel are commonly used in kernel functions.
+    The formulas are as follows:
+
+
+    $I_{n,n}$ is a $n$ by $n$ diagonal matrix with all 1 on the diagonal.
+
+
+    GDA''s transformation matrix $P$ can be obtained by maximizing (13) using the
+    Lagrange method. We take the derivative of $r(e)$ and set it to 0. Then, we get
+    (14). Finding $e$ is equivalent to solving the generalized eigenvalue problem.
+    Each column of $P$ is ordered according to the magnitude of the generalized eigenvalue
+    $e$. The lower dimensional $P$ is calculated by (16). We use the matrix $Y$ as
+    input to the BP neural network.
+
+
+    ```
+
+    $e = \max \frac{e^{S_X^{GDA}}}{e} = \max r(e)$ (13)
+
+    ```
+
+
+    ```
+
+    $S_X^{GDA} = r(e)S_X^{GDA}$ (14)
+
+    ```
+
+
+    ```
+
+    $S_Y^{GDA} = e^{e}S_Y^{GDA}$ (15)
+
+    ```
+
+
+    ```
+
+    $Y = XP$ (16)
+
+    ```
+
+
+    GDA is used to reduce the original 36-dimensional features to 2 categories. Kernel
+    function of GDA uses Gaussian kernel and $\sigma$ is set to 1.4. The 36-bit features
+    are cut into a 2-dimensional data by GDA after de-dimensionality reduction. Fig.
+    5 shows that each fault-class feature differs significantly between the two axes
+    in GDA. The higher the feature difference, the higher the classification accuracy
+    of neural network.
+
+
+    # Linear Kernel
+
+
+    ```
+
+    $k(x,y) = \langle x,y\rangle+1, r \in \mathbb{R}^*$ (5)
+
+    ```
+
+
+    # Polynomial Kernel
+
+
+    # RBF(Gaussian) Kernel
+
+
+    ```
+
+    $k(x,y) = \exp(-\frac{\|x-y\|^2}{2\sigma^2})$ (7)
+
+    ```
+
+
+    GDA hopes to find a transformation matrix P, which maximizes the maximum between
+    between-class distance and the within-class distance when the original data X
+    is projected through P. Between-class distance is defined as $S_X^{GDA}$ and within-class
+    distance is defined as $S_Y^{GDA}$.
+
+
+    ![](img/cd71556ea4ab4b100c6a39f16e5e93cf_3_0.png)
+
+
+    ```
+
+    $P = \{e_1, e_2, ..., e_c\}$ (8)
+
+    ```
+
+
+    and is the projection direction of GDA.
+
+
+    ```
+
+    $S_X^{GDA} = X^T BX$ (9)
+
+    ```
+
+
+    ```
+
+    $W = \frac{1}{diag}(\log(\frac{n_1}{I_{1,n_1}}, ..., \frac{n_c}{I_{c,n_c}})) -
+    diag(\log(\frac{I_1}{n_{1,n_1}}, ..., \frac{I_c}{n_{c,n_c}}))$ (10)
+
+    ```
+
+
+    ```
+
+    $S_Y^{GDA} = X^T W$ (11)
+
+    ```
+
+
+    $W = diag(\log(\frac{n_1}{I_{1,n_1}}, ..., \frac{n_c}{I_{c,n_c}})) - diag(\log(\frac{I_1}{n_{1,n_1}},
+    ..., \frac{I_c}{n_{c,n_c}}))$ (12)
+
+
+    $L$ is the number of classes of the original data X. $n_l$ is the number of samples
+    in the class $l$. $n$ is the total number of samples of X. $I_{n_l,n_l}$ is a
+    $n_l$ by $n_l$ matrix of all ones.
+
+
+    Fig. 5. Histogram of features after dimensionality reduction in GDA
+
+
+    # D. BP neural network
+
+
+    BP neural network is a multi-layer feedforward network trained by error propagation
+    algorithm. It is one of the most widely used network models. BP network uses various
+    learning rules to adjust the weights and thresholds through back propagation.
+    The parameters to be specified for BP neural network include the number of input,
+    hidden and output layer, the transfer function of each layer and the learning
+    rules. In order to avoid BP neural network falling into the local minimum value
+    in the training process, we need to randomly initialize a weight and threshold
+    value. The neural network training algorithm in [16] is used to train the neural
+    network. The number of hidden neurons will be adjusted according to the performance
+    and fault recognition accuracy. Some parameters of BP neural network are shown
+    in the Table III.'
+  - '[PAGE 4]
+
+
+    FOR CIYCEE 2020 PAPER
+
+
+    # TABLE III
+
+    BP NEURAL NETWORK PARAMETERS
+
+
+    results of different diagnostic methods. The fault identification accuracy of
+    the proposed method is 100%.
+
+
+    | Parameters | Parameters |
+
+    | --- | --- |
+
+    | number of neurons in input layer | 2 |
+
+    | number of neurons in output layer | 22 |
+
+    | hidden layer transfer function | logsig |
+
+    | output layer transfer function | softmax |
+
+    | performance function | cross-entropy |
+
+    | training function | scaled conjugate gradient back-propagation(trainscg) |
+
+
+    # TABLE V
+
+    ACCURACY OF DIFFERENT FAULT DIAGNOS METHODS
+
+
+    | Fault Diagnosis Method | Recognition Accuracy |
+
+    | --- | --- |
+
+    | FFT+BP | 85.23% |
+
+    | FFT+LDA+BP | 59.27% |
+
+    | FFT+PCA+BP | 38.37% |
+
+    | FFT+GDA+BP | 98.50% |
+
+    | EMD+BP | 37.50% |
+
+    | EMD+PCA+BP | 21.59% |
+
+    | EMD+LDA+BP | 24.42% |
+
+    | EMD+GDA+BP | 97.66% |
+
+    | Proposed Method | 100% |
+
+
+    # IV. SIMULATION ANALYSIS
+
+
+    In order to verify the effectiveness of the proposed method, the inverter control
+    system is modeled on the MATLAB / Simulink platform in this paper. The topology
+    of the inverter is a three-half-bridge inverter, as shown in Fig. 1. The main
+    simulation results of the inverter are shown in the Table.
+
+
+    # TABLE IV
+
+    BP NEURAL NETWORK PARAMETERS
+
+
+    | DC Voltage | Filter (Line-Line) | Filter Inductor | Filter Capacitor | Rated
+    |
+
+    | --- | --- | --- | --- | --- |
+
+    | 650V | 0.5mH | 400uF | 100kA |
+
+
+    In MATLAB/Simulink, 23 kinds were failed in turn to obtain the three-phase current,
+    and then the proposed method was implemented in accordance with the process. 80%
+    of the fault data set is selected as the training set and 20% as the test set.
+    After several trials of different number of neurons, the accuracy of BP neural
+    network was determined as 4. The comparison of almost identical performance curves
+    in Fig. 6 shows that the network had a good generalization ability.
+
+
+    # V. CONCLUSION
+
+
+    This paper presents an open-circuit fault diagnosis for photovoltaic-connected
+    inverter based on statistical learning and machine learning. MATLAB/Simulink simulation
+    shows that this method network topology is simple and the features are different.
+    The application of machine learning and statistical learning to recover inverter
+    faults is a good approach, which is useful in line with the trend development
+    of internet of things in grid.
+
+
+    # VI. ACKNOWLEDGEMENT
+
+
+    The authors would like to appreciate the financial support by the National Science
+    Foundation of China (No. 5197054)
+
+
+    # VII. REFERENCES
+
+
+    ![](img/cd71556ea4ab4b100c6a39f16e5e93cf_4_0.png)
+
+
+    The other four kinds of FFT-BP, FFT-PCA, FFT-LDA-BP, EMD-GDA-BP, EMD-PCA-BP, EMD-LDA-BP
+    and are also analyzed in MATLAB/Simulink. Table V shows the diagnosis
+
+
+    +   [1] S. Yang, D. Zhang, A. Bryant, L. Ran and P. Tan, “Condition-based Monitoring
+    Device Reliability in Power Electronic Converters: A Review,” IEEE Trans. Power
+    Electron., vol. 115, pp. 2732-2752, 2020.
+
+    [2] B. La and S. Kim, “A Review of IGBT Fault Diagnosis and Detection Methods
+    for Inverters,” IEEE Trans. Ind. Appl., vol. 45, pp. 1770-1777, Sept. 2009.
+
+    [3] S. Lee, J. Kim, E. Lee, and A. J. Cardoso, “Robust EMD-Based Method for IGBT
+    and Converters Fault Diagnosis in Voltage-Source Inverters of PWM Rectifiers,”
+    IEEE Trans. Ind. Appl., vol. 56, June 2019.
+
+    [4] H. Li, B. Wang, G. Wang, and W. Du, and “Fault Diagnosis and Control of Single
+    IGBT Open-Circuit Failure in Modular Level Converters,” IEEE Trans. Power Electron.,
+    vol. 31, no. 6, pp. 7755-7766, Mar./Apr. 2016.
+
+    [5] X. Hu, J. Huang, Y. Peng, and S. Lu, “Research on Open Circuit Fault Diagnosis
+    of Inverter Switching Tube Based on Machine Learning Algorithm,” at IOP Conf.
+    Series Materials Science
+
+
+    Authorized licensed use to: Carleton University. Downloaded on 03.06/2023 at 16:07
+    UTC by IEEE Xeptore. All rights reserved.'
+  - '[PAGE 5]
+
+
+    # VIII. BIOGRAPHIES
+
+
+    Hongyu Lu was born in China. She is pursuing her M.S. degree at Hefei
+
+
+    University of Technology, Hefei, China. Her research interest is fault diagnosis
+    of photovolic grid-connected inverter.
+
+
+    Mingyao Ma was born in China. She received the B.S. and Ph.D. degree from Zhejiang
+    University, Hangzhou, China, from 2006 to 2010, and respectively. He worked as
+    a visiting scholar at the University of Strathclyde, Glasgow, UK. In 2011, he
+    worked for the University of Central Florida, Orlando, USA, and joined Newcastle
+    University, Newcastle, UK, as an Associate. Since 2015 he works in IEEE. His research
+    interests include on line-state monitoring technology and fault diagnosis method
+    for new energy generation systems, power transformation and energy storage, power
+    electronics conversion devices, operation control, and electric vehicle-intelligent
+    control and maintenance of power vehicle systems.
+
+
+    Weibing Gao was born in China. He is pursuing his Ph.D. degree at University of
+    Technology, Hefei, China. His research interest is temperature estimation of power
+    modules and health monitoring of IGBT
+
+
+    Fei Li was born in China. He received his Ph.D. degree from University of Technology,
+    Hefei, China, in 2015. From 2010 to 2011, he studied at Aalborg University and
+    participated in academic exchanges. He is currently a doctoral student with the
+    School of Electrical Engineering and Automation, University of Technology, Hefei,
+    China. His research interests include multi-level power converters and parameter
+    design of grid-connected inverter high-order filters and FIL simulation of new
+    energy generation systems.
+
+
+    Xing Chang was born in China. He received his B.S., M.S., and Ph.D. from University
+    of Technology, Hefei, China, in 1984, 1990, and 2003, respectively. Since then
+    he was a Faculty Member at the School of Electrical Engineering and Automation,
+    University of Technology, where he is currently a professor. From 2008 to 2016,
+    he served as deputy Director of the School of Electrical Engineering and Automation.
+    He is also with the Photovoltaic Research Center, Ministry of Education, Beijing.
+    His research interests include photovoltaic power ination and its inverter control
+    technology, distributed generation and its electronic stability control technology
+    and new energy vehicle electric drive technology.'
+  md: '
+
+    > FOR CIIEEE 2020 PAPER <
+
+
+    obtain a smaller trainer.
+
+
+    ```
+
+    $O = \frac{n_c}{e}$ (4)
+
+    ```
+
+
+    GDA is also called Kernel-based linear dimensionality analysis (LDA). Different
+    from PCA, GDA and LDA use supervised dimensionality reduction techniques. GDA
+    and LDA sample categories to achieve supervised dimension reduction. This category-based
+    supervised dimensionality reduction is widely used in face recognition, fault
+    diagnosis, handwriting processing and other fields. GDA uses a kernel to map data
+    from low- to high-dimensional. The input of the kernel functions is in the original
+    space X, and the output is the inner product of the feature space H. Through this
+    kernel, we need to obtain the product of high dimensional space in low dimensional
+    space, which will greatly reduce the complexity and computation speed. In particular,
+    kernel methods meet the requirements of finite positive semi-definite. Linear
+    kernel, polynomials kernel and RBF kernel are commonly used in kernel functions.
+    The formulas are as follows:
+
+
+    $I_{n,n}$ is a $n$ by $n$ diagonal matrix with all 1 on the diagonal.
+
+
+    GDA''s transformation matrix $P$ can be obtained by maximizing (13) using the
+    Lagrange method. We take the derivative of $r(e)$ and set it to 0. Then, we get
+    (14). Finding $e$ is equivalent to solving the generalized eigenvalue problem.
+    Each column of $P$ is ordered according to the magnitude of the generalized eigenvalue
+    $e$. The lower dimensional $P$ is calculated by (16). We use the matrix $Y$ as
+    input to the BP neural network.
+
+
+    ```
+
+    $e = \max \frac{e^{S_X^{GDA}}}{e} = \max r(e)$ (13)
+
+    ```
+
+
+    ```
+
+    $S_X^{GDA} = r(e)S_X^{GDA}$ (14)
+
+    ```
+
+
+    ```
+
+    $S_Y^{GDA} = e^{e}S_Y^{GDA}$ (15)
+
+    ```
+
+
+    ```
+
+    $Y = XP$ (16)
+
+    ```
+
+
+    GDA is used to reduce the original 36-dimensional features to 2 categories. Kernel
+    function of GDA uses Gaussian kernel and $\sigma$ is set to 1.4. The 36-bit features
+    are cut into a 2-dimensional data by GDA after de-dimensionality reduction. Fig.
+    5 shows that each fault-class feature differs significantly between the two axes
+    in GDA. The higher the feature difference, the higher the classification accuracy
+    of neural network.
+
+
+    ## Linear Kernel
+
+
+    ```
+
+    $k(x,y) = \langle x,y\rangle+1, r \in \mathbb{R}^*$ (5)
+
+    ```
+
+
+    ## Polynomial Kernel
+
+
+    ## RBF(Gaussian) Kernel
+
+
+    ```
+
+    $k(x,y) = \exp(-\frac{\|x-y\|^2}{2\sigma^2})$ (7)
+
+    ```
+
+
+    GDA hopes to find a transformation matrix P, which maximizes the maximum between
+    between-class distance and the within-class distance when the original data X
+    is projected through P. Between-class distance is defined as $S_X^{GDA}$ and within-class
+    distance is defined as $S_Y^{GDA}$.
+
+
+    ![](img/cd71556ea4ab4b100c6a39f16e5e93cf_3_0.png)
+
+
+    ```
+
+    $P = \{e_1, e_2, ..., e_c\}$ (8)
+
+    ```
+
+
+    and is the projection direction of GDA.
+
+
+    ```
+
+    $S_X^{GDA} = X^T BX$ (9)
+
+    ```
+
+
+    ```
+
+    $W = \frac{1}{diag}(\log(\frac{n_1}{I_{1,n_1}}, ..., \frac{n_c}{I_{c,n_c}})) -
+    diag(\log(\frac{I_1}{n_{1,n_1}}, ..., \frac{I_c}{n_{c,n_c}}))$ (10)
+
+    ```
+
+
+    ```
+
+    $S_Y^{GDA} = X^T W$ (11)
+
+    ```
+
+
+    $W = diag(\log(\frac{n_1}{I_{1,n_1}}, ..., \frac{n_c}{I_{c,n_c}})) - diag(\log(\frac{I_1}{n_{1,n_1}},
+    ..., \frac{I_c}{n_{c,n_c}}))$ (12)
+
+
+    $L$ is the number of classes of the original data X. $n_l$ is the number of samples
+    in the class $l$. $n$ is the total number of samples of X. $I_{n_l,n_l}$ is a
+    $n_l$ by $n_l$ matrix of all ones.
+
+
+    Fig. 5. Histogram of features after dimensionality reduction in GDA
+
+
+    ## D. BP neural network
+
+
+    BP neural network is a multi-layer feedforward network trained by error propagation
+    algorithm. It is one of the most widely used network models. BP network uses various
+    learning rules to adjust the weights and thresholds through back propagation.
+    The parameters to be specified for BP neural network include the number of input,
+    hidden and output layer, the transfer function of each layer and the learning
+    rules. In order to avoid BP neural network falling into the local minimum value
+    in the training process, we need to randomly initialize a weight and threshold
+    value. The neural network training algorithm in [16] is used to train the neural
+    network. The number of hidden neurons will be adjusted according to the performance
+    and fault recognition accuracy. Some parameters of BP neural network are shown
+    in the Table III.
+
+
+    ## TABLE III
+
+    BP NEURAL NETWORK PARAMETERS
+
+
+    | Parameters | Parameters |
+
+    | --- | --- |
+
+    | number of neurons in input layer | 2 |
+
+    | number of neurons in output layer | 22 |
+
+    | hidden layer transfer function | logsig |
+
+    | output layer transfer function | softmax |
+
+    | performance function | cross-entropy |
+
+    | training function | scaled conjugate gradient back-propagation(trainscg) |
+
+
+    results of different diagnostic methods. The fault identification accuracy of
+    the proposed method is 100%.
+
+
+    ## TABLE V
+
+    ACCURACY OF DIFFERENT FAULT DIAGNOS METHODS
+
+
+    | Fault Diagnosis Method | Recognition Accuracy |
+
+    | --- | --- |
+
+    | FFT+BP | 85.23% |
+
+    | FFT+LDA+BP | 59.27% |
+
+    | FFT+PCA+BP | 38.37% |
+
+    | FFT+GDA+BP | 98.50% |
+
+    | EMD+BP | 37.50% |
+
+    | EMD+PCA+BP | 21.59% |
+
+    | EMD+LDA+BP | 24.42% |
+
+    | EMD+GDA+BP | 97.66% |
+
+    | Proposed Method | 100% |
+
+
+    ## IV. SIMULATION ANALYSIS
+
+
+    In order to verify the effectiveness of the proposed method, the inverter control
+    system is modeled on the MATLAB / Simulink platform in this paper. The topology
+    of the inverter is a three-half-bridge inverter, as shown in Fig. 1. The main
+    simulation results of the inverter are shown in the Table.
+
+
+    ## TABLE IV
+
+    BP NEURAL NETWORK PARAMETERS
+
+
+    | DC Voltage | Filter (Line-Line) | Filter Inductor | Filter Capacitor | Rated
+    |
+
+    | --- | --- | --- | --- | --- |
+
+    | 650V | 0.5mH | 400uF | 100kA |
+
+
+    In MATLAB/Simulink, 23 kinds were failed in turn to obtain the three-phase current,
+    and then the proposed method was implemented in accordance with the process. 80%
+    of the fault data set is selected as the training set and 20% as the test set.
+    After several trials of different number of neurons, the accuracy of BP neural
+    network was determined as 4. The comparison of almost all, Fig. 6 shows that the
+    network had good.
+
+
+    ## V. CONCLUSION
+
+
+    This paper presents an open-circuit fault diagnosis for photovoltaic-connected
+    inverter based on machine learning and MATLAB/Simulink shows that this method
+    is simple.
+
+
+    ## VI. ACKNOWLEDG
+
+
+    The authors would like to appreciate the financial support by the National Science
+    Foundation of China
+
+
+    ## VII. BIOGRAPHIES
+
+
+    Hongyu Lu was born in China. She is pursuing her M.S. degree at Hefei University
+    of Technology, Hefei. Her research interest is fault diagnosis of photovoltaic-connected
+    inverter.
+
+
+    Mingyao Ma was born in China. He received the B.S. and Ph.D. degree from Zhejiang
+    University, Hangzhou, China, from 2006 to 2010, and respectively. He worked as
+    a visiting scholar at the University of Strathlyde, Glasgow, UK. In 2011, he worked
+    for the University of Central Florida, Orlando, USA, and joined Newcastle University,
+    Newcastle, UK, as an Associate. Since 2015 he works in IEEE. His research interests
+    include state monitoring technology and fault diagnosis method for new energy
+    generation systems, power transformation and energy storage, power electronics
+    devices, operation control, and electric vehicle-intelligent control and maintenance
+    of power systems.
+
+
+    Weibing Gao was born in China. He is pursuing his Ph.D. degree at University of
+    Technology, Hefei, China. His research interest is temperature estimation of power
+    modules and health monitoring of IGBT.
+
+
+    Fei Li was born in China. He received his Ph.D. degree from University of Technology,
+    Hefei, China, in 2015. From 2010 to 2011, he studied at Aalborg University and
+    participated in academic exchanges. He is currently a doctoral student with the
+    School of Electrical Engineering and Automation, University of Technology, Hefei.
+    His research interests include multi-level power converters and parameter design
+    of grid-connected inverter high-order filters and FIL simulation.
+
+
+    Xing Chang was born in China. He received his B.S., M.S., and Ph.D. from University
+    of Technology, Hefei, China, in 1984, 1990, and 2003, respectively. Since then
+    he was a Faculty Member at the School of Electrical Engineering and Automation,
+    University of Technology, where he is currently a professor. From 2008 to 2016,
+    he served as deputy Director of the School of Electrical Engineering and Automation.
+    He is also with the Photovoltaic Research Center, Ministry of Education, Beijing.
+
+
+    His research interests include photovoltaic power in and its inverter control
+    technology, distributed generation and its electronic stability control technology
+    and new energy vehicle electric drive technology.
+
+    '
+  mdcn: '
+
+
+    > 用于 CIIEEE 2020 论文 <
+
+
+    获取一个更小的训练器。
+
+
+    ```
+
+    $O = \frac{n_c}{e}$ (4)
+
+    ```
+
+
+    GDA 也称为基于核的线性判别分析 (LDA)。与 PCA 不同，GDA 和 LDA 使用有监督的降维技术。GDA 和 LDA 通过样本分类来实现监督降维。这种基于类别的监督降维被广泛应用于人脸识别、故障诊断、手写处理等领域。GDA
+    使用核函数将数据从低维映射到高维。核函数的输入是原始空间 $X$，输出是特征空间 $H$ 的内积。通过这个核，我们可以在低维空间中获得高维空间的乘积，这将极大地降低复杂性和提高计算速度。特别是，核方法满足有限正半定定的要求。线性核、多项式核和
+    RBF 核常用于核函数中。其公式如下：
+
+
+    $I_{n,n}$ 是一个 $n \times n$ 的对角矩阵，对角线元素全为 1。
+
+
+    GDA 的变换矩阵 $P$ 可以通过拉格朗日法极大化 (13) 得到。我们对 $r(e)$ 求导并使其置于 0。然后得到 (14)。寻找 $e$ 等价于求解广义特征值问题。$P$
+    的每一列根据广义特征值 $e$ 的大小进行排序。低维 $P$ 通过 (16) 计算。我们使用矩阵 $Y$ 作为 BP 神经网络的输入。
+
+
+    ```
+
+    $e = \max \frac{e^{S_X^{GDA}}}{e} = \max r(e)$ (13)
+
+    ```
+
+
+    ```
+
+    $S_X^{GDA} = r(e)S_X^{GDA}$ (14)
+
+    ```
+
+
+    ```
+
+    $S_Y^{GDA} = e^{e}S_Y^{GDA}$ (15)
+
+    ```
+
+
+    ```
+
+    $Y = XP$ (16)
+
+    ```
+
+
+    GDA 用于将原始的 36 维特征减少到 2 类。GDA 的核函数使用高斯核，且 $\sigma$ 设置为 1.4。降维后，GDA 将 36 位特征切割为
+    2 维数据。图 5 显示，在 GDA 中，每个故障类特征在两个轴之间显著不同。特征差异越大，神经网络的分类准确率越高。
+
+
+    ## 线性核
+
+
+    ```
+
+    $k(x,y) = \langle x,y\rangle+1, r \in \mathbb{R}^*$ (5)
+
+    ```
+
+
+    ## 多项式核
+
+
+    ## RBF(高斯)核
+
+
+    ```
+
+    $k(x,y) = \exp(-\frac{\|x-y\|^2}{2\sigma^2})$ (7)
+
+    ```
+
+
+    GDA 希望找到一个变换矩阵 $P$，使得原始数据 $X$ 投影通过 $P$ 时，类间距离与类内距离之比最大化。类间距离定义为 $S_X^{GDA}$，类内距离定义为
+    $S_Y^{GDA}$。
+
+
+    ![](img/cd71556ea4ab4b100c6a39f16e5e93cf_3_0.png)
+
+
+    ```
+
+    $P = \{e_1, e_2, ..., e_c\}$ (8)
+
+    ```
+
+
+    并且是 GDA 的投影方向。
+
+
+    ```
+
+    $S_X^{GDA} = X^T BX$ (9)
+
+    ```
+
+
+    ```
+
+    $W = \frac{1}{diag}(\log(\frac{n_1}{I_{1,n_1}}, ..., \frac{n_c}{I_{c,n_c}})) -
+    diag(\log(\frac{I_1}{n_{1,n_1}}, ..., \frac{I_c}{n_{c,n_c}}))$ (10)
+
+    ```
+
+
+    ```
+
+    $S_Y^{GDA} = X^T W$ (11)
+
+    ```
+
+
+    $W = diag(\log(\frac{n_1}{I_{1,n_1}}, ..., \frac{n_c}{I_{c,n_c}})) - diag(\log(\frac{I_1}{n_{1,n_1}},
+    ..., \frac{I_c}{n_{c,n_c}}))$ (12)
+
+
+    $L$ 是原始数据 $X$ 的类别数。$n_l$ 是第 $l$ 类中的样本数。$n$ 是 $X$ 的样本总数。$I_{n_l,n_l}$ 是一个 $n_l
+    \times n_l$ 的全1 矩阵。
+
+
+    图 5. GDA 降维后的特征直方图
+
+
+    ## D. BP 神经网络
+
+
+    BP 神经网络是一种通过误差传播算法训练的多层前馈网络。它是使用最广泛的网络模型之一。BP  网络使用各种学习规则通过反向传播来调整权重和阈值。BP 神经网络需要指定的参数包括输入层、隐藏层和输出层的神经元数量、每层的传递函数以及学习规则。为了避免
+    BP 神经网络在训练过程中陷入局部最小值，我们需要随机初始化权重和阈值值。使用 [16] 中的神经网络训练算法来训练该网络。隐藏神经元的数量将根据性能和故障识别准确率进行调整。BP
+    神经网络的一些参数如表 III 所示。
+
+
+    ## TABLE III
+
+    BP 神经网络参数
+
+
+    | 参数 | 参数 |
+
+    | --- | --- |
+
+    | 输入层神经元数量 | |
+
+    | 输出层神经元数量 | |
+
+    | 隐藏层传递函数 | |
+
+    | 输出层传递函数 | |
+
+    | 学习规则 | |
+
+    | 激活函数 | |
+
+
+    ## TABLE V
+
+    不同方法的准确率
+
+
+    | 诊断方法 | 准确率 |
+
+    | --- | --- |
+
+    | FFT+BP | 85.23% |
+
+    | FFT+LDA+BP | 59.27% |
+
+    | FFT+PCA+BP | 38.37% |
+
+    | FFT+GDA+BP | 98.50% |
+
+    | EMD+BP | 37.50% |
+
+    | EMD+PCA+BP | 21.59% |
+
+    | EMD+GDA+BP | 97.66% |
+
+    | 所提方法 | 100% |
+
+
+    ## IV. 仿真分析
+
+
+    为了验证所方法的有效性，在 MATLAB/Simink 平台上对逆变器系统进行了建模。逆变器的拓扑结构如图所示。
+
+
+    ## TABLE IV
+
+    BP 网络参数
+
+
+    | 直流电压 | 滤波器（线路） | 电感 | 电容 |
+
+    | --- | --- | --- | --- |
+
+    | 650V | 0.5mH | 400uF | |
+
+
+    在 MATLAB/Simink 中，逆变器的结果如所示。图 6 显示了该网络效果良好。
+
+
+    ## V. 结论
+
+
+    本文提出了一种基于机器学习的光伏连接逆变器开路诊断方法，该方法是简单的。
+
+
+    ## 六. 致谢
+
+
+    作者感谢中国国家科学基金的支持
+
+
+    ## VII. 个人简介
+
+
+    陆宇出生于中国，目前在合肥理工大学攻读硕士学位。她的研究方向是光伏连接逆变器的诊断。
+
+
+    马明耀出生于中国，2006 年至 2010 年在浙江大学获得学士和博士学位。他曾在格拉斯哥的斯特莱德大学担任访问学者。2011 年，他在美国佛罗里达中央大学工作，随后加入英国纽卡斯尔大学担任副教授。自
+    2015 年以来他在 IEEE 工作。他的研究兴趣包括新能源发电系统的状态监测技术和诊断方法、分布式发电及其电子稳定控制技术、电力电子设备、运行控制以及电动汽车动力系统的维护。
+
+
+    高维兵出生于中国，目前在合肥理工大学攻读博士学位。他的研究方向是功率模块的温度估计和 IGBT 的健康监测。
+
+
+    李飞出生于中国，2015 年在合肥理工大学获得博士学位。2010 年至 2011 年，他在奥尔堡大学学习并参加学术交流。他目前是合肥理工大学电气与自动化学院的博士生。他的研究兴趣包括多电级功率变换器和并网逆变器的高阶滤波器和滤波。
+
+
+    常星出生于中国，1984 年、1990 年和 2003 年分别在合肥理工大学获得学士、硕士和博士学位。从那时起他在合肥理工大学电气与自动化学院任教。2008
+    年至 2016 年，他担任该院副院长。他兼任教育部光伏研究中心主任。
+
+
+    他的研究兴趣包括光伏发电及其逆变器控制技术、分布式发电及其电子稳定控制技术以及新能源汽车电动驱动技术。
+
+
+    '
+  merge: 0
