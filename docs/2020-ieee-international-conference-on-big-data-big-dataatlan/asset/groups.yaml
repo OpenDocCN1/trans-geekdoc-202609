@@ -1,0 +1,2165 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # Segmentation for Data Detection Using
+
+    Supervised Machine Learning
+
+
+    Manzhu Yu
+
+    Department of Geography
+
+    Pennsylvania State University
+
+    University Park, PA, USA
+
+    mq5198@psu.edu
+
+
+    Julie Bessac
+
+    Mathematics and Computer Science Division
+
+    Argone National Laboratory
+
+    Lemont, IL, USA
+
+    bessac@an.gov
+
+
+    Ling Xu
+
+    Department of Mathematics
+
+    North Carolina A&T State University
+
+    Greensboro, NC, USA
+
+    lxu@ncat.edu
+
+
+    Aryya Gangopadhayay
+
+    Department of Information Systems
+
+    University of Maryland,
+
+    Baltimore, MD, USA
+
+    ngangop@umbc.edu
+
+
+    Yingxi Shi
+
+    Joint Center for Earth Systems Technology
+
+    University of Maryland,
+
+    Baltimore, MD, USA
+
+    ysh22@umbc.edu
+
+
+    Jianwu Wang
+
+    Department of Information Systems
+
+    University of Maryland,
+
+    Baltimore, MD, USA
+
+    jianwu2@umbc.edu
+
+
+    **Abstract**—Dust plumes originate from the arid and semi-arid areas can significantly
+    affect the climate system and human health. Many methods have been developed to
+    identify dust pixels from satellite imagery, but these methods are limited by
+    spectral rules and therefore make difficult to detect dust above or below the
+    detectable thresholds. Supervised machine learning methods have also been applied
+    to detect dust but fail outside the training data due to inadequate of ground
+    truth data. In this work, we propose an automatic segmentation framework based
+    on spectral features learned from alocated dataset using Visible Infrared Radiometer
+    Suite (VIIRS) and Cloud-Aerosol L Pathfinder Satellite Observation (CALIPSO).
+    We propose the segmentation of VIIRS imagery, and provide the guidance from the
+    dust labels using the dust product of CALIPSO to detect the dust clusters as primary
+    and secondary dust clusters. Experimental results show that the accuracy of the
+    proposed framework outperforms the literature, and the method performs well across
+    three different areas, the North Atlantic Ocean, East Asia, and Northern Africa.
+
+
+    weather variables, such as precipitation and wind speed [1]. Frequencies of local
+    dust storms are observed to be increasing, higher impacts on wind, human society,
+    and community [2]. Satellite sensing can capture spatially continuous information
+    of atmospheric components, but it is difficult to differentiate dust from other
+    atmospheric components over bright surfaces. On the temporal, spatial, and spectral
+    characteristics, satellite sensors have variations. For example Visible Infrared
+    Radiometer Suite (VIIRS) on the Su Polar-orbiting Partnership (S NPP) satellite
+    has a relatively broad coverage (~3400km in the cross-track), making it possible
+    to capture more dust storm events. Meanwhile, the depolarization from cloud to
+    Orthogonal Polarization (CALIPSO) on the Cloud-Aerosol Lidar and range Observations
+    (CALIPSO) enhances the sensor''s ability to detect non-spectral particles (e.g.
+    dust). However, the lidar beam only a narrow swath (~330km in the cross-track
+    direction). To detect dust events and extract spectral information it is beneficial
+    to combine both types of satellite observations in a synthetic approach.
+
+
+    **Index Terms**—dust detection, semi-supervised machine learning, multi-sensor
+    remote sensing, image segmentation
+
+
+    # I. INTRODUCTION
+
+
+    Dust events are common phenomena in the arid and semi-arid regions, often rising
+    when winds uplift fine-grained particles from the surface of the Earth. Atmospheric
+    dust has impacts on air quality, water formation, radiation balance, biogeochemical
+    cycles and climate. On the other hand, dust storms are usually damaging. Due to
+    the climate, changes of dust storms at a local scale have changed drastically
+    with climate and and'
+  - '[PAGE 1]
+
+
+    To address this, researchers have been using supervised learning methods to learn
+    the relationship between the dust occurrences and the spectral radiance from satellite
+    imagery pixel-wise [8]. The trained models are then used to determine whether
+    an observed pixel is dust or not. However, supervised learning methods suffer
+    from several drawbacks. Frankly, they require a set of training examples where
+    dust pixels are labeled, labeling the image pixel-wise is labor-intensive. CALIPSO
+    vertical feature and aerosol profile products are consumed to categorize aerosols,
+    but the CALIPOP are labeled spatially and may not cover the entire geometries
+    [11]. Existing supervised learning methods for dust detection [8], utilized CALIPSO
+    dust as ground truth, using the trained model of CALIPSO off-track. Even if the
+    off-track test is accurate, the off-track detection performance can be low, because
+    the model process is limited by the amount of off-track dust slabs. Secondly,
+    dust is difficult to detect from satellite imagery because separating dust from
+    other challenges can be challenging. Labeling dust imagery is also difficult.
+    Thirdly, existing supervised learning methods were trained using data from the
+    CALIPSO and do not take the variance of dust into account. It is known that dust
+    storms appear in a single pixel - rather than evolve over time; thus it is more
+    useful to track the satellite content of dust storms.
+
+
+    learning method; and then it determines one or multiple dust clusters identified
+    in one step. The dust clustering is based on the similarity between cluster and
+    the samples from the same spatotemporal location.
+
+
+    # **2. To the best of our knowledge, this is the first time that the semi-supervised
+    learning method is used for dust detection from satellite imagery.
+
+
+    The semi-supervised learning method is suitable for this task, as it will leverage
+    the limited dust slabs from CALIPSO and produce segmentation with a certain level
+    of precision. However, this semi-supervised learning method is novel and different
+    from existing methods for image segmentation (discussed in Section II.C) and it
+    uses limited number of dust slabs.
+
+
+    # **3. Validation of dust detection results used in the proposed method is a combination
+    of accuracy metrics from both supervised and unsupervised learning methods. Traditional
+    accuracy from only one type of learning methods is not enough to evaluate the
+    quality of results. This research utilizes classification, precision, and recall
+    to evaluate results when the pixels are on-track CALIPSO and then utilizes silhouettes
+    to evaluate the quality of clustering. The results are both on-track and off-track.
+
+
+    Unsupervised learning, on the other hand, can be used to extract patterns without
+    pre-labeling, making it suitable for dust detection from satellite imagery where
+    labels are rare. Unsupervised learning will not be able to use dust slabs from
+    CALIPSO, as the results from unsupervised learning methods are difficult to relate
+    to physical meanings.
+
+
+    This paper aims to develop an automatic framework using semi-supervised learning
+    to detect dust from VIIRS imagery integrating unsupervised learning and CALIPSO
+    dust. The K clustering is first applied to generate VIIRS imagery into clusters,
+    and then one or clusters are selected as dust clusters based on their similarity
+    to the dust signatures from CALIPSO. The dust signature demonstrates the dense
+    spectral values of dust observations in different bands. This approach addresses
+    the limitations of the fixed thresholds and parameters and ensures reproducibility.
+
+
+    The novelty of this research comes from three areas:
+
+
+    +   **1) Methodology.** As discussed above, both supervised and unsupervised learning
+    methods have limitations for the dust detection. This research proposes a new
+    semi-supervised learning method that will address these limitations. The method
+    first clusters the satellite imagery with an unsupervised learning method
+
+
+    # II. RELATED WORKS
+
+
+    # A. Traditional Dust Detection Methods
+
+
+    Existing methods of dust detection from plumes satellite remote sensing are using
+    the brightness temperature difference (BDT) between Thermal Infrared (TIR) at
+    around 1 μm and 12 μm wavelengths to detect dust [12]. This method assigns pixels
+    with dust BDT values, lower than what is observed that the dust exists when the
+    BDT values generally decrease to below zero [14]. Later, a set of BDTs with corresponding
+    heuristics was used to detect dust from meteorological clouds. Ackerman [13] using
+    two sensors, i.e., BT11-BT12 and BT08-BT11 (analyzing the signal at 8.5 μm and
+    11 μm wavelengths) to detect aerosol and dust layers. Wald [15] used two BDTs
+    to identify dust over desert regions, Miller [16] enhanced the investigation of
+    daytime aerosol dust over water and land. However, BDT
+
+
+    1746'
+  md: '
+
+    # Segmentation for Data Detection Using Supervised Machine Learning
+
+
+    Manzhu Yu
+
+    Department of Geography
+
+    Pennsylvania State University
+
+    University Park, PA, USA
+
+    mq5198@psu.edu
+
+
+    Julie Bessac
+
+    Mathematics and Computer Science Division
+
+    Argone National Laboratory
+
+    Lemont, IL, USA
+
+    bessac@an.gov
+
+
+    Ling Xu
+
+    Department of Mathematics
+
+    North Carolina A&T State University
+
+    Greensboro, NC, USA
+
+    lxu@ncat.edu
+
+
+    Aryya Gangopadhaya
+
+    Department of Information Systems
+
+    University of Maryland,
+
+    Baltimore, MD, USA
+
+    ngangop@umbc.edu
+
+
+    Yingxi Shi
+
+    Joint Center for Earth Systems Technology
+
+    University of Maryland,
+
+    Baltimore, MD, USA
+
+    ysh22@umbc.edu
+
+
+    Jianwu Wang
+
+    Department of Information Systems
+
+    University of Maryland,
+
+    Baltimore, MD, USA
+
+    jianwu2@umbc.edu
+
+
+    **Abstract**—Dust plumes originating from the arid and semi-arid areas can significantly
+    affect the climate system and human health. Many methods have been developed to
+    identify dust pixels from satellite imagery, but these methods are limited by
+    spectral rules and therefore make difficult to detect dust above or below the
+    detectable thresholds. Supervised machine learning methods have also been applied
+    to detect dust but fail outside the training data due to inadequate of ground
+    truth data. In this work, we propose an automatic segmentation framework based
+    on spectral features learned from an allocated dataset using Visible Infrared
+    Radiometer Suite (VIIRS) and Cloud-Aerosol Lidar Pathfinder Observation (CALIPSO).
+    We propose the segmentation of VIIRS imagery, and provide the guidance from the
+    dust labels using the dust product of CALIPSO to detect the dust clusters as primary
+    and secondary dust clusters. Experimental results show that the accuracy of the
+    proposed framework outperforms the literature, and the method performs well across
+    three different areas, the North Atlantic Ocean, East Asia, and Northern Africa.
+
+
+    Dust storms are influenced by various factors, including weather variables, such
+    as precipitation and wind speed [1]. Frequencies of local dust storms are observed
+    to be increasing, higher impacts on wind, human society, and community [2]. Satellite
+    sensing can capture spatially continuous information of atmospheric components,
+    but it is difficult to differentiate dust from other atmospheric components over
+    bright surfaces. On the temporal, spatial, and spectral characteristics, satellite
+    sensors have variations. For example, Visible Infrared Radiometer Suite (VIIRS)
+    on the Su Polar-orbiting Partnership (S NPP) satellite has a relatively broad
+    coverage (~3400km in the cross-track), making it possible to capture more dust
+    storm events. Meanwhile, the depolarization from cloud to Orthogonal Polarization
+    (CALIPSO) on the Cloud-Aerosol Lidar and range Observations (CALIPSO) enhances
+    the sensor''s ability to detect non-spectral particles (e.g. dust). However, the
+    lidar beam only a narrow swath (~330km in the cross-track direction). To detect
+    dust events and extract spectral information, it is beneficial to combine both
+    types of satellite observations in a synthetic approach.
+
+
+    **Index Terms**—dust detection, semi-supervised machine learning, multi-sensor
+    remote sensing, image segmentation
+
+
+    # I. INTRODUCTION
+
+
+    Dust events are common phenomena in the arid and semi-arid regions, often rising
+    when winds uplift fine-grained particles from the surface of the Earth. Atmospheric
+    dust has impacts on air quality, water formation, radiation balance, biogeochemical
+    cycles and climate. On the other hand, dust storms are usually damaging. Due to
+    the climate, changes of dust storms at a local scale have changed drastically
+    with climate and...
+
+
+    To address this, researchers have been using supervised learning methods to learn
+    the relationship between the dust occurrences and the spectral radiance from satellite
+    imagery pixel-wise [8]. The trained models are then used to determine whether
+    an observed pixel is dust or not. However, supervised learning methods suffer
+    from several drawbacks. Frankly, they require a set of training examples where
+    dust pixels are labeled, labeling the image pixel-wise is labor-intensive. CALIPSO
+    vertical feature and aerosol profile products are consumed to categorize aerosols,
+    but the CALIPSO are labeled spatially and may not cover the entire geometries
+    [11]. Existing supervised learning methods for dust detection [8], utilized CALIPSO
+    dust as ground truth, using the trained model of CALIPSO off-track. Even if the
+    off-track test is accurate, the off-track detection performance can be low, because
+    the model process is limited by the amount of off-track dust slabs. Secondly,
+    dust is difficult to detect from satellite imagery because separating dust from
+    other challenges can be challenging. Labeling dust imagery is also difficult.
+    Thirdly, existing supervised learning methods were trained using data from the
+    CALIPSO and do not take the variance of dust into account. It is known that dust
+    storms appear in a single pixel - rather than evolve over time; thus it is more
+    useful to track the satellite content of dust storms.
+
+
+    To address this, ... learning method; and then it determines one or multiple dust
+    clusters identified in one step. The dust clustering is based on the similarity
+    between cluster and the samples from the same spatotemporal location.
+
+
+    ## 2. To the best of our knowledge, this is the first time that the semi-supervised
+    learning method is used for dust detection from satellite imagery.
+
+
+    The semi-supervised learning method is suitable for this task, as it will leverage
+    the limited dust slabs from CALIPSO and produce segmentation with a certain level
+    of precision. However, this semi-supervised learning method is novel and different
+    from existing methods for image segmentation (discussed in Section II.C) and it
+    uses limited number of dust slabs.
+
+
+    ## 3. Validation of dust detection results used in the proposed method is a combination
+    of accuracy metrics from both supervised and unsupervised learning methods. Traditional
+    accuracy from only one type of learning methods is not enough to evaluate the
+    quality of results. This research utilizes classification, precision, and recall
+    to evaluate results when the pixels are on-track CALIPSO and then utilizes silhouettes
+    to evaluate the quality of clustering. The results are both on-track and off-track.
+
+
+    Unsupervised learning, on the other hand, can be used to extract patterns without
+    pre-labeling, making it suitable for dust detection from satellite imagery where
+    labels are rare. Unsupervised learning will not be able to use dust slabs from
+    CALIPSO, as the results from unsupervised methods are difficult to relate to physical
+    meanings.
+
+
+    This paper aims to develop an automatic framework using semi-supervised learning
+    to detect dust from VIIRS imagery integrating unsupervised learning and CALIPSO.
+    The K clustering is first applied to generate VIIRS imagery into clusters, and
+    then one or clusters are selected as dust clusters based on their similarity to
+    the dust signatures from CALIPSO. The dust signature demonstrates the dense spectral
+    values of dust observations in different bands. This approach addresses the limitations
+    of the fixed thresholds and parameters and ensures reproducibility.
+
+
+    The novelty of this research comes from three areas:
+
+
+    - 1) Methodology. As discussed above, both supervised and unsupervised learning
+    methods have limitations. This research proposes a new semi-supervised learning
+    method that will address these limitations. The method first clusters the satellite
+    imagery with an unsupervised learning method
+
+
+    # II. RELATED WORKS
+
+
+    ### A. Traditional Dust Detection Methods
+
+
+    Existing methods of dust detection from plumes satellite remote sensing are using
+    the brightness temperature difference (BDT) between Thermal Infrared (TIR) at
+    around 1 μm and 12 μm wavelengths to detect dust [12]. This method assigns pixels
+    with dust BDT values, lower than what is observed that the dust exists when the
+    BDT values generally decrease to below zero [14]. Later, a set of BDTs with corresponding
+    heuristics was used to detect dust from meteorological clouds. Ackerman [13] using
+    two sensors, i.e., BT11-BT12 and BT08-BT11 (analyzing the signal at 8.5 μm and
+    11 μm wavelengths) to detect aerosol and dust layers. Wald [15] used two BDTs
+    to identify dust over desert regions, Miller [16] enhanced the investigation of
+    daytime aerosol dust over water and land. However, BDT
+
+    '
+  mdcn: '
+
+
+    # 基于监督机器学习的数据检测分割
+
+
+    Manzhu Yu
+
+    地理系
+
+    宾夕法尼亚州立大学
+
+    大学公园市，宾夕法尼亚州，美国
+
+    mq5198@psu.edu
+
+
+    Julie Bessac
+
+    数学与计算机科学学部
+
+    阿格贡国家实验室
+
+    莱蒙特，伊利诺伊州，美国
+
+    bessac@an.gov
+
+
+    Ling Xu
+
+    数学系
+
+    北卡罗来纳州科技州立大学
+
+    格林斯堡，北卡罗来纳州，美国
+
+    lxu@ncat.edu
+
+
+    Aryya Gangopadhaya
+
+    信息系统系
+
+    马里兰大学
+
+    巴尔摩，马里兰州，美国
+
+    ngangop@umbc.edu
+
+
+    Yxi Shi
+
+    地球系统技术联合中心
+
+    马里兰大学
+
+    巴尔摩，马里兰州，美国
+
+    ysh22@umbc.edu
+
+
+    Jianwu Wang
+
+    信息系统系
+
+    马里兰大学
+
+    巴尔摩，马里兰州，美国
+
+    jianwu2@umbc.edu
+
+
+    **摘要**——源自干旱和半干旱地区的沙尘云会显著影响气候系统和人类健康。目前已开发出许多从卫星图像中识别沙尘像素的方法，但这些方法受限于光谱规则，因此难以检测探测阈值之上或以下的沙尘。监督机器学习方法也被应用于检测沙尘，但由于缺乏地面真值数据，它们在训练数据之外会失效。在这项工作中，我们提出了一种自动分割框架，该框架基于利用可见红外辐射计套件（VIIRS）和云气溶胶激光路径器观测（CALIPSO）从分配的数据集中学习的光谱特征。我们对
+    VIIRS 图像进行分割，并利用 CALIPSO 沙尘产品提供的沙尘标签引导，将沙尘簇检测为主要和次要沙尘簇。实验结果表明，该框架的精度优于现有文献，该方法在北大西洋、东亚和北非三个不同区域均表现良好。
+
+
+    沙尘暴受多种因素影响，包括天气变量，如降水和风速 [1]。观测到局部沙尘暴的频率正在增加，对风力、人类社会和社区的影响日益增大 [2]。卫星遥感可以获取大气成分的空间连续信息，但在亮表面上很难将沙尘与其他大气成分区分开来。在时间、空间和光谱特征上，卫星传感器存在差异。例如，位于太阳极地轨道伙伴（S
+    NPP）卫星上的可见红外辐射计套件（VIIRS）具有较宽的覆盖范围（跨径约3400km），使其能够捕捉更多的沙尘暴事件。同时，云气溶胶激光和距离观测（CALIPSO）上的云到正交极化的去极化增强了传感器检测非光谱颗粒（如沙尘）的能力。然而，激光束仅有很窄幅幅（跨径方向约330km）。为了检测沙尘事件并提取光谱信息，通过合成方法结合这两种卫星观测是有益的。
+
+
+    **索引术**——沙尘检测，半监督机器学习，多传感器遥感，图像分割
+
+
+    # I. 引言
+
+
+    沙尘事件是干旱和半干旱地区的常见现象，通常在强风吹起来自地球表面的细颗粒时发生。大气沙尘对空气质量、水形成、辐射平衡、生物地球化学循环和气候有影响。另一方面，沙尘暴通常具有破坏性。由于气候的影响，局部尺度的沙尘暴随着气候的变化发生了剧烈变化……
+
+
+    为了解决这个问题，研究人员一直在使用监督学习方法来学习沙尘发生情况与卫星图像像素级光谱辐射之间的关系 [8]。训练后的模型随后被用于确定观测到的像素是否为沙尘。然而，监督学习方法存在若干缺点。坦率地说，它们需要一组标记了沙尘像素的训练示例，对图像进行像素级标记是极其耗时的人力。CALIPSO
+    垂直特征和气溶胶剖面产品被用于分类气溶胶，但 CALIPSO 是空间标记的，且可能无法覆盖整个几何区域 [11]。现有的沙尘检测监督学习方法 [8] 利用
+    CALIPSO 沙尘作为地面真值，使用训练好的 CALIPSO 离轨模型。即使离轨测试是准确的，离轨检测性能也可能较低，因为模型处理受到离轨沙尘带的数量。其次，很难从卫星图像中检测沙尘，因为将沙尘与其他挑战区分开来具有挑战性。标记沙尘图像也很困难。第三，现有的监督学习方法使用来自
+    CALIPSO 的数据训练，没有考虑到沙尘的变率。众周知沙尘暴出现在单个像素中——而不是随时间演变；因此，跟踪沙尘暴的卫星内容更有用。
+
+
+    为了解决这个问题，……学习方法；然后它一步到位确定识别出的一个或多个沙尘簇。沙尘聚类基于簇与来自相同时空位置样本之间的相似性。
+
+
+    ## 2. 据我们所知，这是首次将半监督学习方法用于从卫星图像检测沙尘。
+
+
+    半监督学习方法适用于这项任务，因为它将利用来自 CALIPSO 的有限沙尘带，并产生具有一定精度的分割。然而，这种半监督学习方法是新颖，与现有的图像分割方法（见
+    II.C 节）不同，且使用了有限的沙尘带。
+
+
+    ## 3. 所提方法的沙尘检测验证结合了监督和无监督学习方法的精度指标。仅通过一种学习方法的传统精度不足以评估结果。本研究利用分类、精确率和召回率在像素位于轨道内
+    CALIPSO 时评估结果，然后利用轮廓系数评估聚类质量。结果涵盖轨道内和离轨。
+
+
+    另一方面，无监督学习可以在没有预标记的情况下提取模式，适用于标签稀缺卫星图像沙尘检测。无监督学习无法利用 CALIPSO 的沙尘带，因为无监督方法的结果很难与物理意义联系起来。
+
+
+    本文旨在开发一种利用半监督学习的自动框架，结合无监督学习和 CALIPSO 从 VIIRS 图像检测沙尘。首先应用 K 聚类生成 VIIRS 图像簇，然后根据与
+    CALIPSO 沙尘特征的相似性选择一个或多个簇作为沙尘簇。沙尘特征展示了不同波段观测值的密集值。这种方法解决了固定阈值和参数的局限性并确保了可重复性。
+
+
+    本研究的创新性来自三个领域：
+
+
+    - 1) 方法论。如上述，监督和无监督学习方法都有局限性。本研究提出了一种新的半监督学习方法来解决这些局限性。该方法首先使用无监督方法对卫星图像进行聚类
+
+
+    # II. 相关工作
+
+
+    ### A. 传统沙尘检测方法
+
+
+    现有的云团遥感沙尘检测方法使用热红外在 1 微米和 12 微米波附近的亮度温度差（BDT）检测沙尘 [12]。该方法分配具有沙尘 BDT 值的像素，当观测到
+    BDT 值通常下降到零以下时存在沙尘 [14]。后来，一组带有相应启发式规则的 BDT 被用于从气象云中检测沙尘。Ackerman [13] 使用两个传感器，即
+    BT11-BT12 和 BT08-BT11（分析 8.5 微米和 11 微米波长的信号）检测气溶胶和沙尘层。Wald [15] 使用两个 BDT 识别沙漠地区的沙尘，Miller
+    [16] 增强了对水陆地上白天气溶胶沙尘的调查。然而，BDT
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    has corrected with various land and dust properties, as the particle size distribution,
+    chemical composition, and dust layer [17], [19]. These threshold-based methods
+    are sensitive to difference between dust events, study areas, or different seasons
+    [19], [20]. Deep Blue has been used to calculate aerosol optical depth over the
+    412 nm band, where the contrast between aerosols and the bright surfaces as deserts
+    is making it easier to detect dust from dust [6]. The Deep Blue algorithm can
+    also be used. Recent dust detection methods have relied on cloud BED for each
+    pixel [24]. Moreover, these methods have employed multiple bands to eliminate
+    cloud effects [21], among to imply fixed thresholds on calculated indices [5],
+    [22]. However, these improvements did not adequately handle some dust identification
+    over bright surfaces (e.g., desert regions), the sensitivity of BDT to variability
+    in surface features (e.g., plume height), and the impact of cirrus on cloud masks
+    [1], [24].
+
+
+    AOD values during dust outbreaks in the Mediterranean region. These existing methods
+    use supervised machine learning, which is prone to the drawbacks mentioned in
+    the Introduction section. After some, unsupervised and supervised machine learning
+    has not been investigated in dust detection from remote sensing imagery.
+
+
+    # C. Semi-supervised Machine Learning for Image Segmentation
+
+
+    While supervised machine learning methods have not been explored for dust detection,
+    recent research using supervised machine learning for various kinds of semantic
+    segmentation tasks has
+
+
+    Semantic image segmentation is commonly used using supervised machine learning.
+    One of the performing methods is Deep Convolutional Neural Network (DCNN), which
+    can perform semantic segmentation using pixel-level labels [26]. Acquiring pixel-level
+    annotation is time-consuming, so researchers are exploring ways to train models
+    using weak annotations, such as bounding boxes or image-labels. Papadrou et al.
+    [27] used either bounding boxes or a mixture of weak labels for semantic image
+    segmentation using Expectation-Maximization (EM) methods. For dust detection,
+    the CALIOP labels are pixel-based, but the pixels are on CALIPOP tracks. These
+    labels are not sufficient to form a bounding box nor enough to be one per image.
+
+
+    Another direction is to use unsupervised learning for semantic segmentation [28].
+    This type of semantic segmentation uses fully labeled and unlabeled images to
+    perform segmentation. For example, Huang et al. [29] proposed an adversarial learning
+    for semi-supervised semantic segmentation, and used images to enhance the results.
+    A full-convolutional network is trained to map the input image to a segmentation
+    map. For dust detection, the CALIOP labels on-track are not able to form fully
+    labeled labels, thus the semi-supervised machine learning methods for the task
+    of dust detection are to be explored.
+
+
+    # B. Supervised Machine Learning for Dust Detection
+
+
+    To address the limitations of fixed thresholds or parameters, machine learning,
+    including deep learning, can be used to learn the complex relationships between
+    satellite imagery, making it possible to perform the derived statistics from statistical
+    analysis. Some researchers have demonstrated the effectiveness of machine learning
+    (and deep learning) in dust detection. Many studies have explored the common classification
+    methods, including Support Vector Machines, Random Forests, Neural Networks, and
+    Convolutional Networks [9]. It is found that machine learning algorithms outperform
+    the derived from statistical analysis [10]. For example, Smith et al. [25] used
+    an Artificial Neural Network (ANN) to study the characteristics of clouds and
+    aerosols on both SEVI and CALIOP. Shi et al. [8] performed supervised machine
+    learning methods, including SVM, Random Forest, Logistic Regression, on classifying
+    dust or dust-free pixels along CALIPOP tracks using the spectral information from
+    Resolution Spectometer (MODIS). They also developed a hybrid model combining the
+    physical input with machine learning methods. Can et al. [9] Logistic Regression,
+    K-Nearest, Random Forest, Feed Neural Network, and Convolutional Network on the
+    capacity of classifying dust or dust-free pixels along CALIPOP tracks using the
+    spectral information from VIIRS satellite. Kolos and Hassan [10] used an ANN to
+    model the relationship between the aerosol optical depth (AOD) values, obtained
+    at the stations of AERONET, and the brightness of temperatures of SEVI. The existing
+
+
+    # III. AREA AND DATA PREPARATION
+
+
+    # A. Study Area
+
+
+    In this study, we have selected three areas of North Atlantic atmospheric regions,
+    see Fig. 1). The first one (74W-20W, 13N-43N) of the year 2014, and (119.5E-91.5E,
+    28.26N-44.3N) in spring season (March, April, and May) in 2014, and (3N) North
+    Africa, and the Mediterranean (30E-60N) in summer season (June, July, and August)
+    in 2014. These three areas have different characteristics related to satellite
+    imagery. The North Atlantic area also receives dust uplift from Sahara in Africa''s
+    west coast and the major task of dust detection in this area is different from
+    dust pixels'
+  - '[PAGE 3]
+
+
+    from the [30]. The Asian spring study receives dust from the Gobi desert and contains
+    dust from industrial sources, and the major challenge in this area is the difficulty
+    of extracting dust from complex particle types [31]. Africa has the most dust
+    during the summer season, usually from the Sahara desert, and the challenge is
+    to differentiate atmospheric dust from desert ground [32]. These three areas are
+    chosen to explore the capability and robustness of the proposed method.
+
+
+    and cloud products include information on the aerosol and cloud backscatter coefficient
+    at 532 nm and 1064 nm, and the particle depolarization ratio at 532 nm. CALIOP
+    emits 2 laser pulses per second and measures of backscatter profiles along the
+    satellite track with a resolution of up to 30 m [33]. CALIOP also provides a vertical
+    mask product identifying aerosol sub-types and cloud over polluted regions, along
+    with other information in the data. The aerosols are marine, dust, polluted clean
+    continental, polluted dust, and smoky dust.
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_3_0.png)
+
+
+    # B. VIIRS
+
+
+    The Visible Infrared Radiometer Suite (VIIRS) instruments and collects global
+    satellite observations that span the visible and infrared (IR) wavelengths across
+    cloud, ocean, and atmosphere (https://tesac.iis.nasa.gov/VIIRS/) VIIRS uses passive
+    sensors. It has twelve channels ranging from 0.41 µm to 12.1 µm. Five of these
+    channels are high-resolution image bands and I-bands, with moderate-resolution
+    bands and M-bands. In this study we use the 16 M-bands with 75 m spatial resolution
+    which visible/reflective, near IR, medium-wave IR, and longwave M-bands provide
+    ocean aerosol color information, M8 provides clear atmospheric information, M9
+    provides cloud cover information, M10 provides snow cover information, M11 provides
+    cloud information, M12-M13 and M16 provide surface water temperature and fires,
+    and M14 provides all cloud types.
+
+
+    # C. CALIPSO
+
+
+    The Cloud-Aerosol Lidar and Infrared Pathfinder (CALIPSO) provides range-resolved
+    information on the vertical distribution of aerosols and cloud boards (https://calipso.larc.nasa.gov/).
+    The Cloud-Aerosol Lidar (CALIPOP) uses a two-wavelength elastic backscatter laser
+    that transmits linearly polarized light at 532 nm and 1064 nm, each with a receiver
+    that measures the parallel and orthogonal components of the attenuated backscatter
+    at 532 nm and the total attenuated backscatter at 1064 nm. The CALIOP Level 2
+    (L2) aerosol
+
+
+    # D. VIIRS Data Download and Processing
+
+
+    This research builds on a colocated VIIRS dataset from Cal et al. [99]. The data
+    tracks VIIRS observations only on the CALIOP to reduce the error size. However,
+    theIRS are also near (333km in the cross-track direction). To detect the extent
+    of dust, we use VIIRS products (VNPM002 and VNPM003) which are downloaded from
+    the NASA Earthdata hosted by the University of Colorado. VNPM002 is for VIIRS/App
+    Moderate Resolution 6-Min L SW 750 m, and VNPM003 is for VIIRS/App Moderate Resolution
+    Terrain-Corrected 6-Min L SW 750m.
+
+
+    We use the VIIRS data to the rectangular region (Fig. 2). To estimate the dust
+    extent related to the CALIPOP track, we categorized the pixels into two categories
+    based on aerosol sub-types by the CALIPOP Level 2 product: 1) dust pixels containing
+    dust or polluted dust; 2) non-dust pixels containing dust or polluted dust. Both
+    categories are
+
+
+    # IV. METHODS
+
+
+    The automated framework of dust event detection is utilized in the workflow. Step
+    1 pixels on CALIPOP tracks are categorized into dust and non-dust. Step 2 prepared
+    VIIRS subset is generated using K-means. Step 3, the segmentation result is generated.
+    Each cluster occupies a portion of the VIIRS granule set. Step 4, signature of
+    the study area is generated from all dust pixels on CALIPOP tracks, and the corresponding
+    VIIRS spectral band values stored in a column. Step 5, of the spectral band values
+    between each cluster in the segmentation result and dust, are examined to determine
+    if the cluster is more likely to be dust, Cluster(1) with high similarity values
+    to dust. The dust event is generated. Step 7, pixels on track of CALIPOP are used
+    to validate the dust detection result. Silhouette areas are also calculated to
+    evaluate the quality of clustering.'
+  md: '
+
+    has corrected with various land and dust properties, as the particle size distribution,
+    chemical composition, and dust layer [17], [19]. These threshold-based methods
+    are sensitive to difference between dust events, study areas, or different seasons
+    [19], [20]. Deep Blue has been used to calculate aerosol optical depth over the
+    412 nm band, where the contrast between aerosols and the bright surfaces as deserts
+    is making it easier to detect dust from dust [6]. The Deep Blue algorithm can
+    also be used. Recent dust detection methods have relied on cloud BED for each
+    pixel [24]. Moreover, these methods have employed multiple bands to eliminate
+    cloud effects [21], among to imply fixed thresholds on calculated indices [5],
+    [22]. However, these improvements did not adequately handle some dust identification
+    over bright surfaces (e.g., desert regions), the sensitivity of BDT to variability
+    in surface features (e.g., plume height), and the impact of cirrus on cloud masks
+    [1], [24].
+
+
+    AOD values during dust outbreaks in the Mediterranean region. These existing methods
+    use supervised machine learning, which is prone to the drawbacks mentioned in
+    the Introduction section. After some, unsupervised and supervised machine learning
+    has not been investigated in dust detection from remote sensing imagery.
+
+
+    ## C. Semi-supervised Machine Learning for Image Segmentation
+
+
+    While supervised machine learning methods have not been explored for dust detection,
+    recent research using supervised machine learning for various kinds of semantic
+    segmentation tasks has.
+
+
+    Semantic image segmentation is commonly used using supervised machine learning.
+    One of the performing methods is Deep Convolutional Neural Network (DCNN), which
+    can perform semantic segmentation using pixel-level labels [26]. Acquiring pixel-level
+    annotation is time-consuming, so researchers are exploring ways to train models
+    using weak annotations, such as bounding boxes or image-labels. Papadrou et al.
+    [27] used either bounding boxes or a mixture of weak labels for semantic image
+    segmentation using Expectation-Maximization (EM) methods. For dust detection,
+    the CALIOP labels are pixel-based, but the pixels are on CALIPOP tracks. These
+    labels are not sufficient to form a bounding box nor enough to be one per image.
+
+
+    Another direction is to use unsupervised learning for semantic segmentation [28].
+    This type of semantic segmentation uses fully labeled and unlabeled images to
+    perform segmentation. For example, Huang et al. [29] proposed an adversarial learning
+    for semi-supervised semantic segmentation, and used images to enhance the results.
+    A full-convolutional network is trained to map the input image to a segmentation
+    map. For dust detection, the CALIOP labels on-track are not able to form fully
+    labeled labels, thus the semi-supervised machine learning methods for the task
+    of dust detection are to be explored.
+
+
+    ## B. Supervised Machine Learning for Dust Detection
+
+
+    To address the limitations of fixed thresholds or parameters, machine learning,
+    including deep learning, can be used to learn the complex relationships between
+    satellite imagery, making it possible to perform the derived statistics from statistical
+    analysis. Some researchers have demonstrated the effectiveness of machine learning
+    (and deep learning) in dust detection. Many studies have explored the common classification
+    methods, including Support Vector Machines, Random Forests, Neural Networks, and
+    Convolutional Networks [9]. It is found that machine learning algorithms outperform
+    the derived from statistical analysis [10]. For example, Smith et al. [25] used
+    an Artificial Neural Network (ANN) to study the characteristics of clouds and
+    aerosols on both SEVI and CALIOP. Shi et al. [8] performed supervised machine
+    learning methods, including SVM, Random Forest, Logistic Regression, on classifying
+    dust or dust-free pixels along CALIPOP tracks using the spectral information from
+    Resolution Spectometer (MODIS). They also developed a hybrid model combining the
+    physical input with machine learning methods. Can et al. [9] Logistic Regression,
+    K-Nearest, Random Forest, Feed Neural Network, and Convolutional Network on the
+    capacity of classifying dust or dust-free pixels along CALIPOP tracks using the
+    spectral information from VIIRS. Kolos and Hassan [10] used an ANN to model the
+    relationship between the aerosol optical depth (AOD) values, obtained at the stations
+    of AERONET, and the brightness of SEVI. The
+
+
+    ## III. AREA AND DATA PREPARATION
+
+
+    ### A. Study Area
+
+
+    In this study, we have selected three areas of North Atlantic regions, see Fig.
+    1). The first one (74W-20W, 13N-43N) of the year 2014, and (119.5E-91.5E, 28N-44N)
+    in spring season (March, April, and May) in 2014, and (30E-60N) North Africa in
+    summer season (June, July, and August) in 2014. These three areas have different
+    characteristics related to satellite imagery. The North Atlantic area also receives
+    dust uplift from Africa''s west coast and the major task of dust detection in
+    this area is different from the [30]. The Asian study receives dust from the Gobi
+    desert and contains dust from industrial sources, and the major challenge in this
+    area is the difficulty of extracting dust from complex particle types [31]. Africa
+    has the most dust during the summer season, usually from the Sahara desert. These
+    three areas are chosen to explore the capability and robustness of the proposed
+    method. Cloud products include information on the aerosol and cloud backscatter
+    coefficient at 532 nm and particle depolarization ratio at 532 nm [33]. CALIOP
+    also provides a vertical mask identifying aerosol sub-types over polluted regions,
+    along with other information in the data. The aerosols are marine, continental,
+    polluted dust, and smoky dust.
+
+
+    ### B. VIIRS
+
+
+    The Visible Infrared Radiometer Suite (VIIRS) instruments collect global satellite
+    observations that span the visible and infrared (IR) wavelengths across cloud,
+    ocean, and atmosphere. In this study we use VIIRS passive sensors. It has twelve
+    channels ranging from 0.41 µm to 12.1 µm. Five of these channels are high-resolution
+    bands and moderate-resolution bands, with 75 m spatial resolution: visible/reflective,
+    near IR, medium-wave IR, and longwave M-bands provide ocean aerosol color information,
+    M8 provides clear atmospheric information, M9 provides cloud cover information,
+    M10 provides snow cover information, M11 provides cloud information, M12-M13 and
+    M16 provide surface water temperature and fires, and M14 provides all cloud types.
+
+
+    ### C. CALIPSO
+
+
+    The Cloud-Aerosol Lidar and Infrared Pathfinder (CALIPSO) provides range-resolved
+    information on the vertical distribution of aerosols and cloud de backscatter
+    profiles. The Cloud-Aerosol Lidar (CALIPOP) uses a two-wavelength elastic backscatter
+    laser that transmits linearly polarized light at 532 nm and 1064 nm, each with
+    a receiver that measures the parallel and orthogonal components of the attenuated
+    backscatter at 532 nm and the total attenuated backscatter at 1064 nm. The CALIOP
+    Level 2 (L2) aerosol
+
+
+    ### D. VIIRS Data Download and Processing
+
+
+    This research builds on a colocated VIIRS dataset from Cal et al. [99]. The data
+    tracks VIIRS observations only on the CALIOP to reduce the error size. However,
+    the IRS are also near (333km in the cross-track direction). To detect the extent
+    of dust, we use VIIRS products (VNPM002 and VNPM003) which are downloaded from
+    the NASA Earthdata hosted by the University of Colorado. VNPM002 is for VIIRS/App
+    Moderate Resolution 6-Min SW 750 m, and VNPM003 is for VIIRS/App Moderate Resolution
+    Terrain-Corrected 6-Min SW 750m.
+
+
+    We use the VIIRS data for the rectangular region (Fig. 2). To estimate the dust
+    extent related to the CALIPOP track, we categorized the pixels into two categories
+    based on aerosol sub-types by the CALIPOP Level 2 product: 1) dust pixels containing
+    dust or polluted dust; 2) non-dust pixels containing dust or polluted dust. Both
+    categories are
+
+
+    ## IV. METHODS
+
+
+    The automated framework of dust event detection is utilized in the workflow. Step
+    1 pixels on CALIPOP tracks are categorized into dust and non-dust. Step 2 prepared
+    VIIRS subset is generated using K-means. Step 3, the segmentation result is generated.
+    Each cluster occupies a portion of the VIIRS granule set. Step 4, signature of
+    the study area is generated from all dust pixels on CALIPOP tracks, and the corresponding
+    VIIRS spectral band values stored in a column. Step 5, of the spectral band values
+    between each cluster in the segmentation result and dust are examined to determine
+    if the cluster is more likely to be dust, Cluster(1) with high similarity values
+    to dust. The dust event is generated. Step 7, pixels on track of CALIPOP are used
+    to validate the dust detection result. Silhouette areas are also calculated to
+    evaluate the quality of clustering.
+
+
+    ![](img/edf0e112d39cffea23cd10c48daec_0.png)
+
+    '
+  mdcn: '
+
+    已根据各种土地和尘埃属性进行修正，如粒径分布、化学成分和尘埃层 [17], [19]。这些基于阈值的方法对沙尘事件、研究区域或不同季节之间的差异非常敏感 [19],
+    [20]。深蓝（Deep Blue）已被用于计算 412 nm 波段的气胶光学深度（AOD），其中气胶与沙漠等明亮表面之间的对比使其更容易从尘埃中检测出沙尘
+    [6]。也可以使用深蓝算法。最近的沙尘检测方法依赖于每个像素的云边界（BED）[24]。此外，这些方法采用了多个波段来消除云影响 [21]，其中包括在计算出的索引上应用固定阈值
+    [5], [22]。然而，这些改进未能充分处理明亮表面（例如沙漠地区）上的某些沙尘识别问题、BDT 对表面特征变异（例如烟团高度）的敏感性，以及卷云对云层掩码的影响
+    [1], [24]。
+
+
+    地中海地区沙尘暴发期间的 AOD 值。这些现有方法使用监督机器学习，容易产生引言部分提到的缺点。在某些研究之后，无监督和监督机器学习尚未在遥感图像的沙尘检测中得到研究。
+
+
+    ## C. 用于图像分割的半监督机器学习
+
+
+    虽然尚未探索用于沙尘检测的监督机器学习，但近期使用监督机器学习进行各种类型语义分割任务的研究已经存在。
+
+
+    语义图像分割通常使用监督机器学习。其中一种有效的方法是深度卷积神经网络（DCNN），它可以使用像素级标签来执行语义分割 [26]。获取像素级标注非常耗时，因此研究人员正在探索使用弱标注（如边界框或图像标签）来训练模型的方法。Papadrou
+    等人 [27] 使用期望最大化（EM）方法，利用边界框或弱标签的混合进行语义图像分割。对于沙尘检测，CALIOP 标签是基于像素的，但这些像素位于 CALIPOP
+    轨道上。这些标签不足以形成边界框，也不足以为每幅图像生成一个。
+
+
+    另一个方向是使用无监督学习进行语义分割 [28]。这种类型的语义分割使用完全标记和未标记的图像来执行分割。例如，Huang 等人 [29] 提出了一种用于半监督语义分割的对抗学习，并使用图像来增强结果。训练一个全卷积网络将输入图像映射到分割图。对于沙尘检测，轨道上的
+    CALIOP 标签无法形成完全标记的标签，因此需要探索用于沙尘检测任务的半监督机器学习方法。
+
+
+    ## B. 用于沙尘检测的监督机器学习
+
+
+    为了解决固定阈值或参数的局限性可以使用机器学习（包括深度学习）来学习卫星图像之间的复杂关系，从而能够执行统计分析派生结果。一些研究人员已经证明了机器学习（以及深度学习）在沙尘检测中的有效性。许多研究探索了常见的分类方法，包括支持向量机、随机森林、神经网络和卷积网络
+    [9]。发现机器学习算法优于从统计分析得出的算法 [10]。例如，Smith 等人 [25] 使用人工神经网络（ANN）研究了 SEVI 和 CALIOP
+    上的云和气胶特征。Shi 等人 [8] 执行了监督机器学习方法（包括 SVM、随机森林、逻辑回归），利用中分辨率成像仪（MODIS）的光谱信息对 CALIPOP
+    轨道上的沙尘或无沙尘像素进行分类。他们还开发了一种结合物理输入与机器学习方法的混合模型。Can 等人 [9] 利用 VIIRS 的光谱信息，对 CALIPOP
+    轨道上的沙尘或无沙尘像素分类能力使用了逻辑回归、K 近邻、随机森林、前馈神经网络和卷积网络。Kolos 和 Hassan [10] 使用 ANN 对在 AERONET
+    站获取的气胶光学深度（AOD）值与 SEVI 亮度之间的关系进行建模。
+
+
+    ## III. 区域与数据准备
+
+
+    ### A. 区域
+
+
+    在本研究中，我们选择了三个区域（见图 1）：大西洋（74W-30W, 13N-20N），春季（119E-91E, 28N-43N），夏季（30E-60E,
+    14N-44N），秋季（21E-28E, 30N-60N），冬季（12E-15E, 15N-75N）。这些区域具有不同的 SEVI 特性。研究区域包括中比沙漠，该区域覆盖了撒哈拉沙漠的某些沙尘类型
+    [30]。CALIPOP 提供了 532 nm 处的反散射系数以及该区域的沙尘。
+
+
+    ### B. VIIRS
+
+
+    可见红外成像仪套件（VIIRS）收集跨越 0.41 µm 到 12.1 µm 的观测。其十二通道包括可见光、近红外、中波红外和长波红外，提供了海洋、大气信息。本研究使用了这些这些波段（M1、M2、M3、M4、M5、M6、M7、M8、M9、M10、M11、M12、M13、M14、M15、M16）。
+
+
+    ### C. CALIPSO
+
+
+    云气胶激光雷达红外路径大气（CALIPSO）使用发射极化光在 532 nm 和 1064 nm 处进行弹性散射，配备接收器测量 532 nm 处的平行和正交分量。CALIPSO
+    二级数据（L2）提供了气胶的垂直分布和反散射
+
+
+    ### D. VIIRS 数据下载与处理
+
+
+    本研究基于 Cal 等人 [99] 的协同 VIIRS 数据集。VIIRS 仅跟踪 CALIPOP 观测以减小误差。然而，数据也位于（跨轨道方向 333 km）。为了检测沙尘，我们使用了从
+    NASA Earthdata 下载的 VIIRS 产品（VNPM002 和 VNPM003）。VNPM002 是 VIIRS/App 中等分辨率 750 m，VNPM003
+    是 VIIRS/App 地形校正 750 m。
+
+    '
+  merge: 1
+- raw:
+  - '[PAGE 4]
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_4_0.png)
+
+
+    into $K (k \le n)$ sub-groups clusters ($C_1, \dots, C_K$). Each cluster $C_k$
+    is identified by its $m_k$ value and generally an arbitrary label $k$. Observations
+    from the dataset are assigned to the cluster with the nearest $m_k$, the Euclidean
+    distance used to measure the cluster center. The underlying principle of the K-means
+    clustering is to create a partition $(C_1, \dots, C_K)$ that minimizes the sum
+    over the within-cluster variance. Within-cluster sum of squares (WSS) also called
+    inertia Clusters and their means are derived from a random guess of clusters $m_1,
+    \dots, m_K$, and by alternating through the two steps until reaching a stopping
+    criterion. The first step is assigned to the cluster with the nearest $m_k$ in
+    Euclidean distance. The second step is an update which calculates the $m_k$ of
+    the observations in each cluster during the process. Several stopping criteria
+    are used, such as no change in the means at a tolerance, the number of iterations,
+    and no improvement in the cluster variance.
+
+
+    Fig. 2. Illustration of data sets a selected area in North Africa and the Mediterranean,
+    (a) VIIRS true-composite, (b) VIIRS dust composite, (c) the category on CALIPSO
+    track.
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_4_1.png)
+
+
+    Many variants of K-means clustering proposed in the literature based on initialization
+    methods, distances, or different cluster representations. For example, the K-medians
+    use the median of each cluster instead of the mean. Nevertheless, these methods
+    are similar to the current K-means, and their results are not included in this
+    paper.
+
+
+    # ### B. Dust Cluster Determination
+
+
+    After clustering the clusters based on the K-means, it is essential to determine
+    which cluster (or potentially multiple clusters) represents. We performed an initial
+    data analysis of the spectral bands. The probabilistic distribution of each band
+    on the CALIPSO track given their dust or non-dust category is shown in Fig. 4,
+    using the North Atlantic region. In figure, the x-axis labels the bands and the
+    y-axis shows value of the spectral bands. It is observed for bands M1-M11 (two
+    subsets), dust and non-dust display mean values (orange line); however, dust cluster
+    spreads out with wide variety. Similar features are seen in bands M12-M16 (two
+    subplots). The two study areas show different distributions, the difference between
+    dust and non-dust categories significant. The significant difference between dust
+    and non-dust categories inspired us to find the most similar clusters to the dust
+    category in spectrum and consider them as dust clusters.
+
+
+    Fig. 3. Workflow of the methods.
+
+
+
+
+    # ### A. K-Means Clustering
+
+
+    K-means clustering is used to segment the VIIRS imagery into different clusters.
+    K-means clustering [34] is a method that partitions a dataset of observations
+    $(x_1, \dots, x_n)$
+
+
+    1749'
+  - '[PAGE 5]
+
+
+    # Bands M1-M11 - Dust free
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_5_0.png)
+
+
+    The similarity function utilized here is the Euclidean distance. The cluster that
+    has the highest similarity to the dust signature is considered as the dust cluster.
+    Additionally, k-means clusters may contain information, especially since several
+    types of dust (pure, polluted, etc.). If the similarity values of other clusters
+    to the dust signature are within a wide range, the similarity values are also
+    high enough, then these clusters are considered potential dust clusters. Potential
+    dust clusters can complete the small dust region when the number of clusters (K)
+    is large.
+
+
+    # Bands M1-M11 - Dust
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_5_1.png)
+
+
+    # V. EXPERIMENTS AND RESULTS
+
+
+    In this section, we demonstrate the dust extent resulted from the proposed method,
+    with the accuracy metrics comparing to the collocated CALIPSO tracks and the silhouette
+    scores evaluating the quality of the dust result. We compared the performances
+    of the proposed method in different areas. We also calculated the accuracy values
+    produced by the proposed method and the physical inferred method. In the experiment,
+    the number of clusters is set to be K=10 by observing the cluster quality using
+    a significant number of datasets.
+
+
+    # Bands M12-M16 - Dust
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_5_2.png)
+
+
+    Experiments were conducted on the taki server of UMBC High Performance Computing
+    Facility (HPCF). Our proposed method is implemented in Python with several libraries,
+    such as Satpy (for satellite imagery), scikit-learn (for K-means clustering),
+    and matplotlib (for graphics).
+
+
+    # A. Dust Extent Using the Proposed Method
+
+
+    Results from the three different areas are presented in following. To quantify
+    the accuracy of dust detection, the pixels along the CALIPSO track are used to
+    verify the result. This can be considered as verifying a classification of dust
+    vs. non-dust along the CALIPSO track. If a detection is successful for the dust
+    category on CALIPSO track, then the detected non-dust pixel is not in the dust
+    category on the CALIPSO track, then the detection is also successful for this
+    particular object. Other cases are considered as unsuccessful detection.
+
+
+    Fig. 4. (North Atlantic region) Boxplot shows the probability distributions of
+    all the bands on the CALIPSO track in dust and non-dust clusters. Right column
+    will be revealed as part of the dust signature.
+
+
+    For the North Africa region in the summer season, Fig shows the VIIRS true color
+    images, the (b) VIIRS dust composite, (c) the segment extent using K=10, and (d)
+    the extracted dust extent of the VIIRS imagery. The overall accuracy is 0.78,
+    with the dust category having a precision of 0.69 and a recall of 0.33, and the
+    non-dust category having a precision of 0.79 and a recall of 0.95. For the dust
+    category, the percentage of dust extent produced by the proposed method is CALIPSO
+    observed is 0.69 and the recall is 0.33, the mean of CALIPSO observed dust that
+    is correctly detected by the proposed method
+
+
+    bands(M1-M16). For each area, using VIIRS imagery, as K-means clustering, the
+    similarities between each cluster and the dust signature matrix is calculated
+    in a pairwise way. For each cluster, the number of pixels within the cluster.
+    The dust signature matrix can be extensive using the N number. To reduce the calculation,
+    we use 10,000 samples randomly from the signature matrix.
+
+
+    For the North Arctic area, Fig. 6 shows the composite images and the dust extent
+    generated from the'
+  - '[PAGE 6]
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_6_0.png)
+
+
+    **Fig. 5.** (North Africa/Summer) Composite images of the VIRS granule subset
+    at 2014184t1254 and dust extent.
+
+
+    proposed method. The overall accuracy is 0.72, with the dust category having a
+    precision of 0.66 and a recall of 0.99, and the non-dust category having a precision
+    of 0.91 and a recall of 0.44.
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_6_1.png)
+
+
+    **Fig. 7.** (Asia/Spring) Composite images of the VIRS granule subset at 2014060518
+    and dust extent.
+
+
+    value around and below 0.5 indicates that data-point should belong to neighboring
+    clusters; negative values indicate that data-points poorly belong to the assigned
+    cluster.
+
+
+    Fig. 8 shows the average silhouette from all datapoints, and the silhouette for
+    each data-point is shown. Three examples from different studies show the clustering
+    quality around 0.4, which indicates that clustering can be merged further. The
+    low silhouette clusters are due to the high number of clusters. We found in this
+    that decreasing the number of clusters can improve the silhouette score. However,
+    since the goal of the clustering task is to extract dust, we intentionally set
+    the number of clusters to enhance the similarity calculation to potential dust
+    clusters. As can be seen in Fig. 8c, two clusters (2 and 8) are selected and dust
+    clusters are merged to be the final dust extent. Therefore, the proposed method
+    complements relatively low silhouette values.
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_6_2.png)
+
+
+    **Fig. 6.** (North Atlantic) Composite images of the VIRS granule subset at 2014224t1712
+    and dust extent.
+
+
+    For the Asian dust subset in Spring, Fig. 7 shows the images and the dust extent
+    generated from the proposed method. The overall accuracy is 0.79, with the dust
+    category having a precision of 0.61 and a recall of 0.77, and the non-dust category
+    having a precision of 0.9 and a recall of 0.8.
+
+
+    # B. Comparison of Average Accuracy with the In In Method
+
+
+    Table 1 illustrates the mean accuracy value and the standard deviation from all
+    sample image using the proposed method, the overall accuracy of 0.62 and the standard
+    deviation of 0.11. The mean values and standard deviations of precision and recall
+    for both the dust and non-dust categories are also listed. Overall, the proposed
+    method achieved a high precision for the non-dust category (0.82) and a high recall
+    for the dust category (0.68).
+
+
+    Additionally, we computed the coefficients of measuring quality. The silhouette
+    coefficient takes values between -1 and 1, and it measures how well each datapoint
+    belongs to each cluster. The silhouette coefficient is interpreted as follows:
+    the closer to 1, the better it is;
+
+
+    There are potential ways to on-track accuracy of the proposed method. The first
+    dust signature for spatotemporal region is not refined. A random sample from space-spotemporal
+    region is selected to form the dust profile. However, the selected samples may
+    not represent every possibility of dust pixels. Second, the signature from CALIOB
+    labels is'
+  md: '
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_4_0.png)
+
+
+    into $K$ $(k \le n)$ sub-groups clusters ($C_1, \dots, C_K$). Each cluster $C_k$
+    is identified by its $m_k$ value and generally an arbitrary label $k$. Observations
+    from the dataset are assigned to the cluster with the nearest $m_k$, the Euclidean
+    distance used to measure the cluster center. The underlying principle of the K-means
+    clustering is to create a partition $(C_1, \dots, C_K)$ that minimizes the sum
+    over the within-cluster variance. Within-cluster sum of squares (WSS) also called
+    inertia and their means are derived from a random guess of clusters $m_1, \dots,
+    m_K$, and by alternating through the two steps until reaching a stopping criterion.
+    The first step is assigned to the cluster with the nearest $m_k$ in Euclidean
+    distance. The second step is an update which calculates the $m_k$ of the observations
+    in each cluster during the process. Several stopping criteria are used, such as
+    no change in the means at a tolerance, the number of iterations, and no improvement
+    in the cluster variance.
+
+
+    Fig. 2. Illustration of data sets a selected area in North Africa and the Mediterranean,
+    (a) VIIRS true-composite, (b) VIIRS dust composite, (c) the category on CALIPSO
+    track.
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_4_1.png)
+
+
+    Many variants of K-means clustering proposed in the literature based on initialization
+    methods, distances, or different cluster representations. For example, the K-medians
+    use the median of each cluster instead of the mean. Nevertheless, these methods
+    are similar to the current K-means, and their results are not included in this
+    paper.
+
+
+    ### B. Dust Cluster Determination
+
+
+    After clustering the clusters based on the K-means, it is essential to determine
+    which cluster (or potentially multiple clusters) represents. We performed an initial
+    data analysis of the spectral bands. The probabilistic distribution of each band
+    on the CALIPSO track given their dust or non-dust category is shown in Fig. 4,
+    using the North Atlantic region. In figure, the x-axis labels the bands and the
+    y-axis shows value of the spectral bands. It is observed for bands M1-M11 (two
+    subsets), dust and non-dust display mean values (orange line); however, dust cluster
+    spreads out with wide variety. Similar features are seen in bands M12-M16 (two
+    subplots). The two study areas show different distributions, the difference between
+    dust and non-dust categories significant. The significant difference between dust
+    and non-dust categories inspired us to find the most similar clusters to the dust
+    category in spectrum and consider them as dust clusters.
+
+
+    Fig. 3. Workflow of the methods.
+
+
+    ### A. K-Means Clustering
+
+
+    K-means clustering is used to segment the VIIRS imagery into different clusters.
+    K-means clustering [34] is a method that partitions a dataset of observations
+    $(x_1, \dots, x_n)$.
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_5_0.png)
+
+
+    The similarity function utilized here is the Euclidean distance. The cluster that
+    has the highest similarity to the dust signature is considered as the dust cluster.
+    Additionally, k-means clusters may contain information, especially since several
+    types of dust (pure, polluted, etc.). If the similarity values of other clusters
+    to the dust signature are within a wide range, the similarity values are also
+    high enough, then these clusters are considered potential dust clusters. Potential
+    dust clusters can complete the small dust region when the number of clusters (K)
+    is large.
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_5_1.png)
+
+
+    # V. EXPERIMENTS AND RESULTS
+
+
+    In this section, we demonstrate the dust extent resulted from the proposed method,
+    with the accuracy metrics comparing to the collocated CALIPSO tracks and the silhouette
+    scores evaluating the quality of the dust result. We compared the performances
+    of the proposed method in different areas. We also calculated the accuracy values
+    produced by the proposed method and the physical inferred method. In the experiment,
+    the number of clusters is set to be K=10 by observing the cluster quality using
+    a significant number of datasets.
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_5_2.png)
+
+
+    Experiments were conducted on the server of UMBC Performance Computing Facility
+    (HPCF). Our proposed method is implemented in Python with several libraries, such
+    as Satpy (for satellite imagery), scikit-learn (for K-means clustering), and matplotlib
+    (for graphics).
+
+
+    ### A. Dust Extent Using the Proposed Method
+
+
+    Results from the three different areas are presented. To quantify the accuracy
+    of dust detection, the pixels along the CALIPSO track are used to verify the result.
+    This can be considered as verifying a classification of dust vs. non-dust along
+    CALIPSO track. If a detection is successful for the dust category on CALIPSO track,
+    then the detected non-dust pixel is not in the dust category on CALIPSO track,
+    then the detection is also successful for this particular object. Other cases
+    are considered as unsuccessful.
+
+
+    Fig. 4. (North Atlantic region) Boxplot shows the probability distributions of
+    all the bands on CALIPSO track in dust and non-dust clusters. Right column will
+    be revealed as part of the dust signature. For the North Africa region in the
+    summer season, Fig shows the VIIRS true color images, (b) VIIRS dust composite,
+    (c) segment using K=10, and (d) the extracted dust extent of VIIRS imagery. The
+    overall accuracy is 0.78, with the dust category having a precision of 0.69 and
+    a recall of 0.33, and the non-dust category having a precision of 0.79 and a recall
+    of 0.95. For the dust category, the percentage of dust extent produced by the
+    proposed method is CALIPSO observed is 0.69 and the recall is 0.33, the mean of
+    CALIPSO observed dust is correctly detected by the proposed method (M1-M16). For
+    each area, using VIIRS imagery, as K-means clustering, the similarities between
+    each cluster and the dust signature matrix is calculated in pairwise way. For
+    each cluster, the number of pixels within the cluster. To reduce the calculation,
+    we use 10,000 samples randomly from the signature matrix. For the North Arctic
+    area, Fig 6 shows the composite images and the dust extent generated from the
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_6_0.png)
+
+
+    Fig. 5. (North Africa/Summer) Composite images of the VIIRS granule subset at
+    201418t1254 and dust extent. proposed method. The overall accuracy is 0.72, with
+    the dust category having a precision of 0.66 and a recall of 0.99, and the non-dust
+    category having a precision of 0.91 and a recall of 0.44.
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_6_1.png)
+
+
+    Fig. 7. (Asia/Spring) Composite images of the VIIRS granule subset at 2014060518
+    and dust extent value around and below 0.5 indicates that data-point should belong
+    to neighboring clusters; negative values indicate that data-points poorly belong
+    to the assigned cluster.
+
+
+    Fig 8 shows the average silhouette from all datapoints, and the silhouette for
+    each data-point is shown. Three examples from different studies show the clustering
+    quality around 0.4, which indicates that clustering can be merged further. The
+    low silhouette clusters are due to the high number of clusters. We found in this
+    that decreasing the number of clusters can improve the silhouette score. However,
+    since the goal of the clustering task is to extract dust, we intentionally set
+    the number of clusters to enhance the similarity calculation to potential dust
+    clusters. As can be seen in Fig. 8c, two clusters (2 and 8) are selected and dust
+    clusters are merged to be the final dust extent. Therefore, the proposed method
+    complements relatively low silhouette values.
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_6_2.png)
+
+
+    Fig. 6. (North Atlantic) Composite images of the VIIRS granule subset at 2014224t1712
+    and dust extent. For the Asian dust subset in Spring, Fig 7 shows the images and
+    the dust extent generated from the proposed method. The overall accuracy is 0.79,
+    with the dust category having a precision of 0.61 and a recall of 0.77, and the
+    non-dust category having a precision of 0.9 and a recall of 0.8.
+
+
+    ### B. Comparison of Average Accuracy with the In Method
+
+
+    Table 1 illustrates the mean accuracy value and the standard deviation from all
+    sample image using the proposed method, the overall accuracy of 0.62 and the standard
+    deviation of 0.11. The mean values and standard deviations of precision and recall
+    for both the dust and non-dust categories are also listed. Overall, the proposed
+    method achieved a high precision for the non-dust category (0.82) and a high recall
+    for the dust category (0.68).
+
+
+    Additionally, we computed the coefficients of measuring quality. The silhouette
+    coefficient takes values between -1 and 1, and it measures how well each datapoint
+    belongs to each cluster. The silhouette coefficient is interpreted as follows:
+    the closer to 1, the better it is;
+
+
+    There are potential ways to on-track accuracy of the proposed method. The first
+    dust signature for spatotemporal region is not refined. A random sample from space-spotemporal
+    region is selected to form the dust profile. However, the selected samples may
+    not represent every possibility of dust pixels. Second, the signature from CALIOB
+    labels is
+
+    '
+  mdcn: '
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_4_0.png)
+
+
+    划分为 $K$ 个 $(k \le n)$ 子组类 ($C_1, \dots, C_K$)。每个聚类 $C_k$ 由其 $m_k$ 值和通常的任意标签 $k$
+    标识。数据集中的观测值被分配给距离其 $m_k$ 最近的聚类，其中欧几里距离被用于衡量聚类中心。K-means 聚类的底层原理是创建一个划分 $(C_1,
+    \dots, C_K)$，使得类内方差之和最小。类内平方和（WSS，也称为惯性）以及它们的均值是根据随机猜测聚类中心 $m_1, \dots, m_K$ 推导出的，并通过交替执行这两个步骤直到达到停止准则。第一步是将观测值分配到欧几里距离最近的
+    $m_k$ 所在的类。第二步是更新，在过程中计算每个聚类中观测值的 $m_k$。使用了多种停止准则，例如均值在容差范围内没有变化、迭代次数以及聚类方差没有改进。
+
+
+    图 2. 数据集说明，北非洲和地中海选定区域，(a) VIIRS 真实复合图，(b) VIIRS 尘复合图，(c) CALIPSO 轨道上的分类。
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_4_1.png)
+
+
+    文献中提出了许多 K-means 聚类的变体，这些基于基于初始化方法、距离或不同的聚类表示。例如，K-medians 使用每个聚类的位数代替平均值。然而，这些方法与当前的
+    K-means 相似，且其结果未包含在本文中。
+
+
+    ### B. 尘埃类的确定
+
+
+    在基于 K-means 对聚类进行聚类后，确定哪个类（或可能的多个类）代表什么是至关重要的。我们对光谱波段进行了初步数据分析。图 4 显示了在北大西洋地区
+    CALIPSO 轨道上每个波段在尘或非尘类别下的概率分布。在图中，x 轴标记波段，y 轴显示光谱段的值。观察到波段 M1-M11（两个子集），尘和非尘显示出均值（橙色线）；然而，尘埃类的分布具有广泛多样性。在波段
+    M12-M16（两个子图）中也看到了类似的特征。两个研究区域显示出不同的分布，尘与非尘类别之间的差异显著。尘与非尘类别之间的显著差异启发了我们在光谱上寻找与尘类别最相似的类，并将它们考虑为尘埃类。
+
+
+    图 3. 方法工作流。
+
+
+    ### A. K-Means 聚类
+
+
+    使用 K-means 聚类将 VIIRS 图像分割成不同的类。K-means 聚类 [34] 是一种划分观测值数据集 $(x_1, \dots, x_n)$
+    的方法。
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_5_0.png)
+
+
+    此处使用的相似性函数是欧几里距离。与尘埃特征相似性最高的类被认为是尘埃类。此外，k-means 聚类可能包含信息，特别是由于几种类型的尘埃（纯净、污染的等）。如果其他类与尘埃特征的相似值在一个很大范围内，且相似值也足够高，那么这些类被视为潜在尘埃类。当聚类数
+    (K) 较大时，潜在尘埃类可以完成较小的尘埃区域。
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_5_1.png)
+
+
+    # V. 实验与结果
+
+
+    在本节中，我们展示了所提方法生成的尘范围，并与同位的 CALIPSO 轨道进行精度指标比较，同时使用轮廓系数评估尘结果的质量。我们比较了所提方法在不同区域的性能。我们还计算了所提方法和物理推断方法产生的准确率值。在实验中，通过观察大量数据集的聚类质量，将聚类数设置为
+    K=10。
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_5_2.png)
+
+
+    实验在 UMBC 性能计算设施 (HPCF) 的服务器上进行。我们提出的方法用 Python 实现，并使用了多个库，如 Satpy（用于卫星图像）、scikit-learn（用于
+    K-means 聚类）和 matplotlib（用于绘图）。
+
+
+    ### A. 使用所提方法的尘范围
+
+
+    展示了三个不同区域的结果。为了量化尘检测的准确性，使用了沿 CALIPSO 轨道的像素来验证结果。这可以被视为沿 CALIPSO 轨道验证尘与非尘的分类。如果
+    CALIPSO 轨道上的尘类别检测成功，则检测到的非尘像素不在 CALIPSO 轨道的尘类别中，那么该特定对象的检测也是成功的。其他情况被视为失败的。
+
+
+    图 4. （北大西洋地区）箱线图显示了 CALIPSO 轨道上尘类和非尘类中所有波段的概率分布。右列将揭示为尘埃特征的一部分。对于夏季的北非洲地区，图显示了
+    VIIRS 真彩色图像，(b) VIIRS 尘复合图，(c) 使用 K=10 的分割。对于夏季的北非洲地区，由于尘与非尘类别之间的显著差异，启发了我们在光谱上寻找与尘类别最相似的类，并将它们考虑为尘埃类。（注：此处原文文本存在逻辑重复或错乱，已按字面意思翻译）。
+
+
+    由于原文中部分段落存在重复或表述序乱，翻译已尽可能遵循原文结构。
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 7]
+
+
+    # (a) Northern Africa example: July 3, 2014 12:54 UTC
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_7_0.png)
+
+
+    # (b) North Arctic region example: Aug 12, 2014 17:12 UTC
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_7_1.png)
+
+
+    # (c) Asian spring dust example: May 5, 2014 06:18 UTC
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_7_2.png)
+
+
+    limited by CALIPSO''s narrow range. Integrating multiple dust pixels, CALIPSO
+    data may improve the representativeness of dust pixels. The proposed method is
+    sensitive to the number of clusters (K). Each separate imagery might reveal a
+    different initial K number, whereas we specify the number of clusters as K = 10
+    in the experiments.
+
+
+    Comparing with the infrared method [3], the proposed method achieves a higher
+    mean overall (0.64 vs. 0.52). For the dust category, the proposed method results
+    in a higher mean precision (0.52 vs. 0.68 vs.0.99). This indicates that the proposed
+    method has a higher percentage of detected dust that is CALIPSO observed dust
+    but a lower category, the proposed method results in a lower mean precision (0.82
+    vs. 0.88), but a higher recall (0.60 vs. 0.23). This indicates that the proposed
+    method has a lower percentage of dust that are CALIPSO observed non-dust, but
+    a higher percentage of CALIPSO observed non-dust that are truly detected.
+
+
+    Fig. 9 shows the dust extracted from the physical infrared, where the dust extracts
+    are more than the ones generated from the proposed method. Comparing with the
+    true-color and dust components, it can be observed that the physical infrared
+    method generates more extracted dust in the Sahara region. For the case of May
+    5, 2014, the physical infrared method treats the entire southern part of the imagery
+    as dust, whereas the true-color imagery shows a thick cloud. The physical infrared
+    method likely detects the cloud (white regions in Fig. 9), but sometimes it fails
+    to detect the cloud.
+
+
+    # C. Comparison of Accuracy Using The Proposed Method Among Three Study Areas
+
+
+    Table II measures the mean and standard deviation of accuracy metrics using the
+    proposed method over the three different areas. The proposed method performs best
+    detecting the Asian spring dust area with an accuracy of 0.71 but performs worst
+    (0.060) detecting dust in the North Arctic region.
+
+
+    For the dust category, the mean precision ranges 0.55 to 0.63 for three study
+    areas, 50% of detected dust is CALIPSO observed; but the mean recall shows significant
+    differences among the three areas. The mean recall for the North Arctic is high
+    (0.99), which is the lowest (0.42), indicating that less than half of the CALIPSO
+    observed dust pixels are detected. The assumptions for the high recall values
+    in the North Arctic region are valid since the region is mainly ocean or ice.
+    It is relatively easier than detecting dust in the other two study areas. The
+    North African spring area contains arid areas or deserts, which makes it difficult
+    to
+
+
+    Fig. 8. Dust coefficients of the three examples in Figs.5-7.(a) North Africa region,
+    average: 0.40; (b) North Arctic region, average: 0.42; (c) Asian spring dust region,
+    average: 0.36.
+
+
+    # TABLE I
+
+    COMPARING THE ON-TRACK ACCURACY BETWEEN THE PROPOSED METHOD AND THE INFRARED METHOD.
+
+
+    | | Proposed Method | Ackerman (1997) |
+
+    |---|---|---||
+
+    | Overall accuracy | Mean | Mean |
+
+    | Precision (dust) | 0.64 | 0.52 | 0.13 |
+
+    | Recall (dust) | 0.68 | 0.32 | 0.03 |
+
+    | Precision (non-dust) | 0.83 | 0.88 | 0.27 |
+
+    | Recall (non-dust) | 0.60 | 0.24 | 0.17 |'
+  - '[PAGE 8]
+
+
+    # (I) July 3, 2014 12:54 UTC
+
+
+    # (II) Aug 12, 2014 17:12 UTC
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_8_0.png)
+
+
+    complex mixture of surface types, including shrubs, forests, and deserts.
+
+
+    For the non-dust category, the mean precision ranges 0.68–0.96, with the highest
+    precision over the North Atlantic area, and the lowest over the North Africa area.
+    This indicates that in the North Atlantic area, almost all of the detected CALIPSO
+    observed non-dust, but in the North Africa area, less than 70% of the detected
+    non-dust. The mean values for the North Atlantic and Asia study are 0.78 and 0.70,
+    whereas the mean for the North Atlantic study is relatively low (0.33). This indicates
+    that in the North Atlantic area, only 33% of the CALIPSO observed non-dust pixels
+    are detected. This is due to the fact that the CALIPSO observed non-dust pixels
+    include cloud pixels and pixels of other aerosol types, such as marine aerosols,
+    continental, or smoke. The North Atlantic study contains significantly more pixels
+    than the other areas, so the mean value is the lowest.
+
+
+    # (III) May 5, 2014 05:18 UTC
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_8_1.png)
+
+
+    # VI. CONCLUSIONS AND FUTURE DIRECTIONS
+
+
+    In this paper, we are using a semi-supervised learning method to identify dust
+    extracts from satellite imagery. We designed a workflow to extract dust signature
+    spatiotemporal ranges from CALIPOD identified pixels and used these data to select
+    from the K-means clusters as final results. We examined the efficiency of our
+    method in different experiments, including 1) testing the capability in detecting
+    dust in different areas, 2) comparing the average accuracy among different methods,
+    3) comparing our validated results using the common classification accuracy for
+    all the pixels along the CALIPSO tracks, and 4) using silhouette coefficients
+    to evaluate the clustering performance.
+
+
+    Fig. 9. Dust resulted from the physical method for the true example of Figs. 5-7.
+    Sub-images (a true colors, (b) dust composites), and (c) results generated from
+    the proposed method are replicates of images in Figs. 5-7. Submatrices of dust
+    results generated by Ackerman [3].
+
+
+    For the future work, we will improve this study in the following directions. First,
+    we will validate the dust results by comparing it with existing aerosol and dust
+    products. One of the products we will use is the Visible Imaging Radiometer Suite
+    Environmental Data (VIIRS Aerosol EDD) product [35], but the product did not detect
+    it in dust and failed to identify dust in all time periods. We will search for
+    alternative products. In addition, we will use the CALIPSO data to guide the clustering,
+    but the CALIPSO data is only available along the track; thus it cannot be used
+    in a fully supervised method for spatial clustering. Third, we will explore semi-supervised
+    methods as an alternative to segment dust from using a small number of CALIPOD-derived
+    layers.
+
+
+    | TABLE II |
+
+    | COMPARING THE ON-TRACK ACCURACY USING THE PROPOSED METHOD AMONG THREE DUST AREAS
+    |
+
+    | | North Africa | North Atlantic | Asia |
+
+    | | Mean | Std | Mean | Std | Mean | Std |
+
+    | Overall accuracy | 0.56 | 0.15 | 0.51 | 0.60 | 0.72 | 0.07 |
+
+    | Precision (dust) | | | | | | |
+
+    | Recall (dust) | 0.42 | 0.19 | 0.99 | 0.01 | 0.67 | 0.33 |
+
+    | Recall (non-dust) | 0.78 | 0.12 | 0.33 | 0.13 | 0.70 | 0.15 |
+
+
+    The Asia area contains more dust as
+
+
+    The semi-supervised learning method for dust detection can be easily adopted for
+    other satellite products, such as the Level 1 products of MODIS, Geostationary
+    Satellite Server (GOES), and Enhanced Visible and Infrared Sensor (SEVIRI). In
+    addition,'
+  - '[PAGE 9]
+
+
+    the procedure of a signature matrix using an amount of available-ground-truth
+    labels can be added to the detection of other types of events, such as wildfires,
+    tropical climates, dust storms.
+
+
+    This work is supported by the grant "CyberTraining: Cross-Training of Researchers
+    in Computing, Applied Mathematics and Atmospheric Sciences using Augmented Cyberinfrastructure
+    Resources" from the National Science Foundation (grant no. OAC-1703250). The hardware
+    used in computation is UH High Performance Computing (HPC) facility. The National
+    Science Foundation funded this work through grant (no. NSF-1233334, NSF-1293116)
+    and the SCMS program (no. DMS-082131), with additional support from the University
+    of Maryland, Baltimore County (UMBC). See hpc.umd.edu for more information on
+    HPC and the projects it uses. Julie Bass was supported by the U.S. Department
+    of Energy, Office of Science, and Atmospheric Research Program under grant No.
+    DE-AC02-06CH1157.
+
+
+    # ACKNOWLEDGEMENT
+
+
+    # REFERENCES
+
+
+    [13] McLean, P. E., 1998. Global surface temperature and cloud coverage for aerial
+    optical estimates. International Journal of Remote Sensing, 19(6), 960–966.
+
+
+    [14] Pratt, A. J., 1989. Infrared transfer calculations for volcanic clouds. Geophysical
+    research, 16(11), 1293–1296.
+
+
+    [15] Wilde, A. E., Kaufmann, J., Taube, D., and Gao, Y. 2000. Retrieval of mineral
+    aerosol dust over Europe using infrared spectral contrast. Journal of Geophysical
+    Research: Atmospheres, 105(D24), 32207–32218.
+
+
+    [16] Minakov, S., 2003. A consolidated enhancement for dust events with mineral
+    dust aerosols. Journal of Geophysical Research, 108(D3025.
+
+
+    [17] Sokolov, I. N., Tong, O. G., and Bergström, R. 2006. Retrieval of mineral
+    dust aerosols from multiple infrared wavelengths. Journal of Geophysical Research:
+    Atmospheres, 111(D8), 8891–8898.
+
+
+    [18] Potoutin, C., Chedid, A., Jacquet-neau, H., and Amart, R. 2004. Dust level
+    and optical depth from AIRIS. Journal of Atmospheric Sciences, 61(12), 2599–2610.
+
+
+    [19] Midden, N., 2010. Variability and trends in dust frequency for climatic timescales:
+    Climatology and Geochemistry, 47(1), 1–12.
+
+
+    [20] Taylor, C. M., Behler, D., Guschiker, F., Pratt, D. J., Vickley, T., Bock,
+    O. H., Hancik, J., Schenken, K., and Parsons, G. 2007. Detection of extreme dust
+    storms using 1982 satellite data. Nature, 447(7145), 544–548.
+
+
+    [21] Akeson, Y., and Washington, R. 1992. Sensing aerosols using satellite observations.
+    Journal of Geophysical Research: Atmospheres, 102(D71), 17099–17105.
+
+
+    [22] Malassini, F., Fanzagoni, A., Filizola, C., Peralta, and Tranovati, V. 2017.
+    An satellite-based algorithm for detecting and tracking dust storms using SEVI
+    data. Remote Sensing of Environment, 189, 215–226.
+
+
+    [23] Liu, S., Xie, Y., Zhang, J., J, Y., Li, F., Fan, C., Xie, Y., and Xie, J.
+    2019. Dust storm detection and intensity estimation using MODIS-AHR. Remote Sensing
+    of Environment, 244, 49–50.
+
+
+    [24] Chahoura, J. T., Pott, K., and Hunt, M. 2007. Detection and classification
+    of global dust events from satellite data and a regional forest model. Journal
+    of geophysical research, 112(D3), D300–D311.
+
+
+    [25] Simmerkus, J., Bogliano, G., Lehrhardt, S., and Schroder, L. 2017. Atmospheric
+    retrieval using MODIS/VIIRS with aerosol data. Measurements of Earth''s Atmosphere,
+    11(9), A09015.
+
+
+    [26] Chen, Y., Zhang, P., Gao, K., Liu, J., Yang, L., Yuan, L., and Wu, L. 2015.
+    Semantic image segmentation for dust coverage and fully connected nets. arXiv
+    preprint:1412.08211.
+
+
+    [27] Wang
+
+
+    [28] Molkar, A. D., and Dozer, J. 2018. Few-shot multi-class dust storm detection
+    using generative adversarial networks. arXiv preprint:1812.02410.
+
+
+    [29] Wang, H., Hu, Y., Liu, T., Yi, Y., and Wang, M. H. 2018. An attention-based
+    residual network for dust storm detection. arXiv preprint:1802.07934
+
+
+    [30] Van Der Yes, K., Hunt, M., and Morley, J. 2001. Satellite-based monitoring
+    of Saharan dust transport and deposition across the North Atlantic Ocean. Atmospheric
+    Chemistry & Physics, 161.
+
+
+    [31] Li, J., Yang, J., and Wang, C. 2009. Natural history and analysis of dust
+    storms. Journal of Earth Science, 73(3), 277–280.
+
+
+    [32] Shenk, W. E. and Curran, R. J. 1974. The detection of dust storms over land
+    and water with satellite infrared and visible sensors. Monthly Weather Review,
+    102(12), 836–837.
+
+
+    [33] Lloyd, S. 1982. Least squares projection in PCCC. IEEE Transactions on information
+    theory, 28(2), 199–213.
+
+
+    [34] Terra True Visible and Infrared Radiometer Environmental Data Record (VIIRS_EDR).
+    URL: https://www.nasa.gov/gov/embd/viirs/environmental_records_product.html
+
+
+    1754'
+  md: '
+
+    # (a) Northern Africa example: July 3, 2014 12:54 UTC
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_7_0.png)
+
+
+    # (b) North Arctic region example: Aug 12, 2014 17:12 UTC
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_7_1.png)
+
+
+    # (c) Asian spring dust example: May 5, 2014 06:18 UTC
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_7_2.png)
+
+
+    limited by CALIPSO''s narrow range. Integrating multiple dust pixels, CALIPSO
+    data may improve the representativeness of dust pixels. The proposed method is
+    sensitive to the number of clusters (K). Each separate imagery might reveal a
+    different initial K number, whereas we specify the number of clusters as K = 10
+    in the experiments.
+
+
+    Comparing with the infrared method [3], the proposed method achieves a higher
+    mean overall (0.64 vs. 0.52). For the dust category, the proposed method results
+    in a higher mean precision (0.52 vs. 0.68 vs. 0.99). This indicates that the proposed
+    method has a higher percentage of detected dust that is CALIPSO observed dust
+    but a lower category, the proposed method results in a lower mean precision (0.82
+    vs. 0.88), but a higher recall (0.60 vs. 0.23). This indicates that the proposed
+    method has a lower percentage of dust that are CALIPSO observed non-dust, but
+    a higher percentage of CALIPSO observed non-dust that are truly detected.
+
+
+    Fig. 9 shows the dust extracted from the physical infrared, where the dust extracts
+    are more than the ones generated from the proposed method. Comparing with the
+    true-color and dust components, it can be observed that the physical infrared
+    method generates more extracted dust in the Sahara region. For the case of May
+    5, 2014, the physical infrared method treats the entire southern part of the imagery
+    as dust, whereas the true-color imagery shows a thick cloud. The physical infrared
+    method likely detects the cloud (white regions in Fig. 9), but sometimes it fails
+    to detect the cloud.
+
+
+    ## C. Comparison of Accuracy Using The Proposed Method Among Three Study Areas
+
+
+    Table II measures the mean and standard deviation of accuracy metrics using the
+    proposed method over the three different areas. The proposed method performs best
+    detecting the Asian spring dust area with an accuracy of 0.71 but performs worst
+    (0.060) detecting dust in the North Arctic region.
+
+
+    For the dust category, the mean precision ranges 0.55 to 0.63 for three study
+    areas, 50% of detected dust is CALIPSO observed; but the mean recall shows significant
+    differences among the three areas. The mean recall for the North Arctic is high
+    (0.99), which is the lowest (0.42), indicating that less than half of the CALIPSO
+    observed dust pixels are detected. The assumptions for the high recall values
+    in the North Arctic region are valid since the region is mainly ocean or ice.
+    It is relatively easier than detecting dust in the other two study areas. The
+    North African spring area contains arid areas or deserts, which makes it difficult
+    to
+
+
+    Fig. 8. Dust coefficients of the three examples in Figs.5-7.(a) North Africa region,
+    average: 0.40; (b) North Arctic region, average: 0.42; (c) Asian spring dust region,
+    average: 0.36.
+
+
+    # TABLE I
+
+    COMPARING THE ON-TRACK ACCURACY BETWEEN THE PROPOSED METHOD AND THE INFRARED METHOD.
+
+
+    | | Proposed Method | Ackerman (1997) | |
+
+    |---|---|---|---|
+
+    | Overall accuracy | Mean | Mean | |
+
+    | Precision (dust) | 0.64 | 0.52 | 0.13 |
+
+    | Recall (dust) | 0.68 | 0.32 | 0.03 |
+
+    | Precision (non-dust) | 0.83 | 0.88 | 0.27 |
+
+    | Recall (non-dust) | 0.60 | 0.24 | 0.17 |
+
+
+    # (I) July 3, 2014 12:54 UTC
+
+
+    # (II) Aug 12, 2014 17:12 UTC
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_8_0.png)
+
+
+    complex mixture of surface types, including shrubs, forests, and deserts.
+
+
+    For the non-dust category, the mean precision ranges 0.68–0.96, with the highest
+    precision over the North Atlantic area, and the lowest over the North Africa area.
+    This indicates that in the North Atlantic area, almost all of the detected CALIPSO
+    observed non-dust, but in the North Africa area, less than 70% of the detected
+    non-dust. The mean values for the North Atlantic and Asia study are 0.78 and 0.70,
+    whereas the mean for the North Atlantic study is relatively low (0.33). This indicates
+    that in the North Atlantic area, only 33% of CALIPSO observed non-dust pixels
+    are detected. This is due to the fact that CALIPSO observed non-dust pixels include
+    cloud and pixels of other types, such as marine aerosols, continental, or smoke.
+    The North Atlantic study contains significantly more pixels than the other areas,
+    so the mean value is the lowest.
+
+
+    # (III) May 5, 2014 06:18 UTC
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_8_1.png)
+
+
+    ## VI. CONCLUSIONS AND FUTURE DIRECTIONS
+
+
+    In this paper, we are using a semi-supervised learning method to identify dust
+    from satellite imagery. We designed a workflow to extract spatiotemporal ranges
+    from CALIPSO identified pixels and used these data to select K-means clusters
+    as final results. We examined the efficiency of our method in different experiments
+    including:
+
+    - testing the capability in detecting dust in different areas
+
+    - comparing the average accuracy among different methods
+
+    - comparing our validated results using common classification for all the pixels
+    along CALIPSO tracks
+
+    - using silhouette coefficients to evaluate the clustering performance
+
+
+    Fig. 9. Dust resulted from the physical method for the true example of Figs. 5-7.
+    Sub-images (a true colors, (b) dust composites), and (c) results generated from
+    the proposed method are replicates of images in Figs. 5-7. Submatrices of dust
+    results generated by Ackerman [3].
+
+
+    For the future work, we will improve this study in the following directions. First,
+    we will validate the dust results by comparing it with existing aerosol and dust
+    products. One of the products we will use is the Visible Imaging Radiometer Suite
+    Environmental Data (VIIRS Aerosol EDD) product [35], but the product did not detect
+    it and failed to identify dust in all periods. We will search for alternative
+    products. In addition, we will use the CALIPSO data to guide the clustering, but
+    CALIPSO data is only available along the track; thus it cannot be used in a fully
+    supervised method for spatial clustering. Third, we will explore semi-supervised
+    methods as an alternative to segment dust using a small number of CALIPSO-derived
+    layers.
+
+
+    | TABLE II |
+
+    COMPARING THE ON-TRACK ACCURACY USING THE PROPOSED METHOD AMONG THREE DUST AREAS
+    | | | |
+
+    | | North Africa | North Atlantic | Asia | | | |
+
+    | | Mean | Std | Mean | Std | Mean | Std |
+
+    | Overall accuracy | 0.56 | 0.15 | 0.51 | 0.60 | 0.72 | 0.07 |
+
+    | Precision (dust) | | | | | | |
+
+    | Recall (dust) | 0.42 | 0.19 | 0.99 | 0.01 | 0.67 | 0.33 |
+
+    | Recall (non-dust) | 0.78 | 0.12 | 0.33 | 0.13 | 0.70 | 0.15 |
+
+
+    The Asia area contains more dust as the semi-supervised learning method for dust
+    detection can be easily adopted for other satellite products, such as the Level
+    1 products of MODIS, Geostationary Satellite Server (GOES), and Enhanced Visible
+    and Infrared Sensor (SEVIRI). In addition, the procedure of a signature matrix
+    using an amount of available ground-truth labels can be added to the detection
+    of other types of events, such as wildfires, tropical climates, dust storms.
+
+
+    This work is supported by the grant "CyberTraining: Cross-Training of Researchers
+    in Computing, Applied Mathematics and Atmospheric Sciences using Augmented Cyberinfrastructure
+    Resources" from the National Science Foundation (grant no. OAC-1703250). The hardware
+    used in computation is UH High Performance Computing (HPC) facility. The National
+    Science Foundation funded this work through grant (no. NSF-1233334, NSF-1293116)
+    and the SCMS program (no. DMS-082131), with additional support from the University
+    of Maryland, Baltimore County (UMBC). See hpc.umd.edu for more information on
+    HPC and the projects it uses. Julie Bass was supported by the U.S. Department
+    of Energy, Office of Science, and Atmospheric Research Program under grant No.
+    DE-AC02-06CH1157.
+
+
+    # ACKNOWLEDGEMENT
+
+
+    # REFERENCES
+
+
+    [13] McLean, P. E., 1998. Global surface temperature and cloud coverage for aerial
+    optical estimates. International Journal of Remote Sensing, 19(6), 960–966.
+
+
+    [14] Pratt, A. J., 1989. Infrared transfer calculations for dust research.
+
+
+    [15] Wilde, A., 2003. Detection of dust events using infrared wavelengths. Journal
+    of Geophysical Research, 108(D4), 3205–3218.
+
+
+    [16] Sokolov, S., 2006. Detection of dust events.
+
+
+    [17] Shenk, W. E. and Curran, R. J. 1974. The detection of dust storms over land
+    and water with satellite infrared and visible sensors. Monthly Weather Review,
+    102(12), 836–837.
+
+
+    [18] Lloyd, S., 1982. Least squares projection in PCCC. IEEE Transactions on information
+    theory, 28(2), 199–213.
+
+    '
+  mdcn: '
+
+
+    # (a) 北非洲示例：2014年7月3日 12:54 UTC
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_7_0.png)
+
+
+    # (b) 北北极地区示例：2014年8月12日 17:12 UTC
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_7_1.png)
+
+
+    # (c) 亚洲春尘示例：2014年5月5日 06:18 UTC
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_7_2.png)
+
+
+    受限于 CALIPSO 窄幅的范围。通过整合多个粉埃像素，CALIPSO 数据可能会提高粉埃像素的代表性。所提方法对聚类数量（K）敏感。每幅独立的图像可能会揭示不同的初始
+    K 值，而我们在实验中将聚类数量指定为 K = 10。
+
+
+    与红外方法 [3] 相比，所提方法实现了更高的平均总体精度（0.64 对比 0.52）。对于粉埃类别，所提方法获得了更高的平均精确率（0.52 对比 0.68
+    对比 0.99）。这表明，所提方法检测到的粉埃中，属于 CALIPSO 观测到但类别较低的粉埃比例更高；然而，所提方法的平均精确率较低（0.82 对比 0.88），但召回率较高（0.60
+    对比 0.23）。这表明，所提方法检测到的 CALIPSO 观测到的非粉埃的比例较低，但在 CALIPSO 观测到的非粉埃中，真正被检测到的比例较高。
+
+
+    图 9 显示了从物理红外中提取的粉埃，其中提取的粉埃多于通过所提方法生成的。对比真彩色和粉埃分量，可以观察到物理红外方法在撒哈拉地区提取了更多的粉埃。对于
+    2014 年 5 月 5 日的情况，物理红外方法将图像的整个南部区域视为粉埃，而真彩色图像显示为厚厚的云。物理红外方法可能检测到了云（图 9 中的白色区域），但有时也会未能检测到云。
+
+
+    ## C. 三个研究区域使用所提方法的准确性比较
+
+
+    表 II 测量了使用所提方法在三个不同区域的精度指标平均值和标准差。所提方法在检测亚洲春尘区域表现最好，准确率为0.71，但在检测北北极地区粉埃方面表现最差（0.060）。
+
+
+    对于粉埃类别，三个研究区域的平均精确率范围在 0.55 到 0.63 之间，50% 的粉埃是被 CALIPSO 观测到的；但平均召回率在三个区域之间存在显著差异。北北极地区的平均召回率很高（0.99），最低的（0.42），表明不足一半的
+    CALIPSO 观测粉埃像素被检测到。对北北极地区高召回值的假设是有效的，因为该地区主要是海洋或冰。这比在另外两个研究区域检测粉埃相对容易。北非洲春季地区包含干旱地区或沙漠，这使得很难
+
+
+    图 8. 图 5-7 中三个示例的粉埃系数。(a) 北非洲地区，平均值：0.40；(b) 北北极地区，平均：0.42；(c) 亚洲春尘地区，平均：0.36。
+
+
+    # 表 I
+
+    所提方法与红外方法之间轨道上精度的比较。
+
+
+    | | 所提方法 | Ackerman (1997) | |
+
+    |---|---|---|---|
+
+    | 总体准确率 | 平均值 | 平均值 | |
+
+    | 精确率 (粉埃) | 0.64 | 0.52 | 0.13 |
+
+    | 召回率 (粉埃) | 0.68 | 0.32 | 0.03 |
+
+    | 精确率 (非粉埃) | 0.83 | 0.88 | 0.27 |
+
+    | 召回率 (非粉埃) | 0.60 | 0.24 | 0.17 |
+
+
+    # (I) 2014年7月3日 12:54 UTC
+
+
+    # (II) 2014年8月12日 17:12 UTC
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_8_0.png)复杂的表面类型混合，包括灌木、森林和沙漠。
+
+
+    对于非粉埃类别，平均精确率范围在 0.68–0.96 之间，大西洋地区精度最高，北非洲地区最低。这表明在大西洋地区，几乎所有 CALIPSO 观测到的非粉埃都被检测到，但在北非洲地区，小于
+    70% 的非粉埃被检测。大西洋和亚洲研究的平均值为 0.78 和 0.70，而大西洋研究的平均值较低（0.33）。这表明在大西洋地区只有 33% 的 CALIPSO
+    观测非粉埃像素被检测到。这是由于 CALIPSO 观测到的非粉埃包含了云以及大陆气溶胶或烟雾等类型。大西洋研究包含的像素多于其他区域，因此平均值最低。
+
+
+    # (III) 2014年5月5日 06:18 UTC
+
+
+    ![](img/2edf0e112d39cfbfea23cd10c348daec_8_1.png)
+
+
+    ## VI. 结论与展望
+
+
+    在本文中，我们使用半监督学习方法从卫星图像中识别粉埃。我们设计了一种工作流，从 CALIPSO 识别像素中提取时空范围，并使用这些数据选择 K 均类作为最终结果。我们在不同实验中检查了方法的效率，包括：
+
+    - 在不同区域检测粉埃的能力
+
+    - 比较不同方法的平均准确率
+
+    - 使用常用分类对所有像素验证我们的结果
+
+    - 使用轮廓系数评估聚类性能
+
+
+    图 9. 物理方法得到的图 5-7 真实示例的粉埃结果。(a) 真彩色，(b) 粉埃复合图，(c) 所提方法的生成是 Ackerman [3] 生成的粉埃结果副本。
+
+
+    对于未来的工作，我们将从以下方向改进这项研究。首先，我们将通过与现有气溶胶和粉埃产品对比来验证粉埃结果。我们将使用的产品之一是可见光辐射计数据套环境数据 (VIIRS
+    Aerosol EDD) 产品 [35]，但该产品未检测到它。我们将寻找替代产品。此外，我们将使用 CALIPSO 数据引导聚类，但 CALIPSO 数据仅沿轨道可用；因此无法用于全监督方法的空间聚类。第三，我们将探索半监督方法作为使用少量
+    CALIPSO 派生层分割粉埃的替代方案。
+
+
+    | 表 II |
+
+    三个粉埃区域使用所提方法的轨道上精度比较 | | | |
+
+    | | 北非洲 | 大西洋 | 亚洲 | | | |
+
+    | | 平均值 | 标准差 | 平均值 | 标准差 | 平均值 | 标准差 |
+
+    | 总体准确率 | 0.56 | 0.15 | 0.51 | 0.60 | 0.72 | 0.07 |
+
+    | 精确率 (粉埃) | | | | | | |
+
+    | 召回率 (粉埃) | 0.42 | 0.19 | 0.99 | 0.01 | 0.67 | 0.33 |
+
+    | 召回率 (非粉埃) | 0.78 | 0.12 | 0.33 | 0.13 | 0.70 | 0.15 |
+
+
+    亚洲区域包含更多粉埃，因为用于粉埃检测的半监督学习方法很容易采用其他卫星产品，例如 MODIS 的 Level 1 产品、地止卫星服务器 (GOES) 和增强可见红外传感器
+    (SEVIRI)。此外，可以使用可用地面真值标签的签名矩阵程序添加到其他类型事件的检测中，例如野火、热带气候、沙尘暴。
+
+
+    这项工作由国家科学基金的“网络培训：利用增强计算基础设施对计算、应用数学和大气科学研究人员进行交叉培训”资助（（号 OAC-1703250）。计算使用的硬件是
+    UH 高性能计算 (HPC) 设施。国家科学基金通过资助（号 NSF-1233334, NSF-1293116）和 SCMS 计划（号 DMS-082131）资助这项工作，并得到了马里兰大学巴尔摩分校
+    (UMBC) 的额外支持。有关 HPC 及其使用的项目的更多信息，请参阅 hpc.umd.edu。Julie Bass 受到美国能源部科学办公室大气研究计划的资助，基金号
+    DE-AC02-06CH1157。
+
+
+    # 谢
+
+
+    # 参考文献
+
+
+    [13] McLean, P. E., 1998. Global surface temperature and cloud coverage for aerial
+    optical estimates. International Journal of Remote Sensing, 19(6), 960–966.
+
+
+    [14] Pratt, A. J., 1989. Infrared transfer calculations for dust research.
+
+
+    [15] Wilde, A., 2003. Detection of dust events using infrared wavelengths. Journal
+    of Geophysical Research, 108(D4), 3205–3218.
+
+
+    [16] Sokolov, S., 2006. Detection of dust events.
+
+
+    [17] Shenk, W. E. and Curran, R. J. 1974. The detection of dust storms over land
+    and water with satellite infrared and visible sensors. Monthly Weather Review,
+    102(12), 836–837.
+
+
+    [18] Lloyd, S., 1982. Least squares projection in PCCC. IEEE Transactions on information
+    theory, 28(2), 199–213.
+
+
+    '
+  merge: 0
