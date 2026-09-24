@@ -1,0 +1,849 @@
+- pgno: 0
+  md: '# 2020 International Conference on Data Mining Workshops (ICDMW)
+
+
+    # # Integration of Fuzzy and Deep Learning in Three-Way Decisions
+
+
+    D.L.C.S. Subhashmi¹,,2,3,4, Yuefeng Li¹,,5, Jinglan Zhang¹,6, Ajantha S. Atukorale²,,7
+
+    ¹University of Technology, Australia
+
+    ²University of Colombo, Sri Lanka
+
+    ³University of Sri Jayewardenepura, Sri Lanka
+
+    ⁴subhashmi@sp.ac.edu.au
+
+    ⁵yi.li@qt.edu.au
+
+    ⁶jinglan.zhang@qt.edu.au
+
+    ⁷ajasa@ucsc.cmb.lk
+
+
+    **Abstract—**The problem of uncertainty is a challenging issue to solve in opinion
+    mining. Existing models using machine learning algorithms are unable to identify
+    uncertainty within online customer reviews of bound boundary uncertainties. Many
+    researchers have developed fuzzy models to solve this problem. However, the degree
+    of uncertainty remains uncertain. There is a big uncertainty between positive
+    and negative opinions. Frequently used words may be non-relevant. This paper proposes
+    a three-based framework that integrates fuzzy concepts and deep learning. Many
+    experiments were conducted using movie review and customer datasets. Experimental
+    results show that the proposed method is effective for identifying opinions and
+    can show high F-measure for two benchmark dataset.
+
+
+    **Index Terms—**Opinion Mining, Fuzzy Logic, Three-way Decisions, Classification,
+    Deep Learning
+
+
+    # # I. INTRODUCTION
+
+
+    The decision-making process for analyzing customer reviews using machine learning
+    algorithms has become a challenge [1]. Today, large numbers of opinions and reviews
+    are available on the Internet. However, online customers find it to make decisions
+    based on reliable or unreliable customer reviews before they make decisions. The
+    quality of online reviews varies. At the same time, organizations generate useful
+    information from customer reviews using text mining techniques. This concept is
+    known as sentiment analysis or opinion mining [2]. Many models have been proposed
+    in recent years for opinion mining [3], [4]. However, because of uncertainty and
+    lack of consensus within the wide range of reviews used today, these models may
+    create unexpected results in some cases [5]. Therefore, the ability to handle
+    uncertainty is important in opinion classification models.
+
+
+    The concept of uncertainty refers to unclear and uncertain opinions. The ability
+    to handle uncertainty is important in opinion classification models [5]. When
+    it comes to opinion classification models, the mechanism for managing these uncertainties
+    is a challenging task [6] as a result of user behavior. Uncertain opinions create
+    a challenge to be automatically dealt with these techniques to enhance the performance
+    of machine learning algorithms. For example, a customer''s resolution for a camera
+    “the sound quality does not fix”. These frequent features may be positive or negative
+    opinions. However, machine learning algorithms do not know how to use them properly;
+    it is very difficult to decide the relevant category. In this case, it is hard
+    to decide the category with the uncertainty. For instance, if the review is “ok”
+    or “fine” then the review is “not far” than “fine”. Also, uncertainties are a
+    hard issue in opinion mining since many frequently words are used to be non-relevant.
+    Therefore, when we use patterns or link certain features to show a possible solution
+    for uncertain opinions, with other methods may be used and define a specific method
+    may be used to make a right decision.
+
+
+    Fuzzy logic is used to solve the problem of uncertainties in opinion mining [5],
+    [7], [8]. It represents uncertainties of fuzzy using fuzzy values between zero
+    and one. Fig. 2 shows the process of how to reduce the impact of noisy features
+    by using fuzzy logic. In the figures, opinion “fine” and “ok” were frequently
+    used as positive and negative categories. These are noisy features. They also
+    have large weights, which are not useful for understanding the difference between
+    the positive and negative categories. By using fuzzy composition, we can use the
+    large range of noisy features to “I” if they are greater than 1”. The advantage
+    of fuzzy composition is to reduce impact of noisy features, e.g. OK and fine in
+    Fig. 1 and Fig. 2. Fuzzy composition can reduce their impacts
+
+
+    > *Corresponding Author'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'by adjusting their values (e.g., frequency to one).
+
+    After many experimental results, we found that there is a critical problem for
+    fuzzy logic to make binary decisions when the fuzzy similarity values of two categories
+    are very close. To solve this research issue, in this paper we propose a three-way
+    decision framework to identify the boundary firstly. Then we classify reviews
+    into three regions in the first stage: positive, negative, and uncertain. Then
+    we split the uncertain boundary into positive and negative regions. This three-way
+    decision framework provides an elegant way to integrate fuzzy logic and deep learning
+    in a single umbrella. Many approaches that come with deep learning use feature
+    selection [9], [10]. To find more specific features, we use three feature selection.
+    For deep learning, we use textual features (e.g., using word2vec, word embedding,
+    to generate a vector of words). This process requires a large collection of documents
+    about the given topic; normally the large collection is not designed specifically
+    for this opinion classification task. Therefore, the input to a deep learning
+    algorithm describes more general knowledge for the opinion classification. Also,
+    deep learning cannot deal with uncertainties in features; therefore, it is very
+    hard to produce satisfactory results for this three-way decision framework. Moreover,
+    we also propose a new feature selection method, and then fuzzy formulas (higher-level
+    concepts). The selected concepts are from the discovered patterns. The selected
+    concepts are also used for the three-way decision framework to classify reviews
+    into three regions in the first stage. After that, in the second stage, we integrate
+    word embedding vectors with the selected concepts and identify the difference
+    between vectors and their mean value.
+
+
+    classification with a new feature selection model and a three-way decision framework.
+    It presents a two-stage feature selection model to integrate an uncertainty processing
+    model (e.g., fuzzy composition) and deep learning using a three-way decision framework.
+    This research contributes new feature selection model and a three-way decision
+    framework for opinion classification. To conduct a comprehensive evaluation of
+    the proposed framework, we select state-of-the-art methods for performance comparison.
+    We evaluated on the two datasets and the proposed model achieved improved performance
+    on F-measure (the F-measure value 94.67 and 97.44% in review and ebook review
+    datasets),
+
+
+    # Negative Category
+
+
+    | | | | | | | | | | | | |
+
+    |---|---|---|---|---|---|---|---|---|---|---||
+
+    | 2.5 | | | | | | | | | | |
+
+    | 2 | | | | | | | | | | | |
+
+    | 1.5 | | | | | | | | | | | |
+
+    | 1 | | | | | | | | | | | |
+
+    | 0.5 | | | | | | | | | | | |
+
+    | 0 | | | | | | | | | | | |
+
+    | | terrible | familiar | horrible | bored | alright | right | crazy | relationship
+    | time |
+
+
+    Fig. 2. Feature weights in negative
+
+
+    # II. RELATED WORK
+
+
+    # A. Opinion Mining
+
+
+    Opinion mining (also as sentiment analysis) refers to the use of natural language
+    processing and text analysis to systematically identify, extract, quantify, and
+    analyze subjective features and subjective opinions. Opinion is widely used to
+    collect customer reviews and social media. Opinion mining contains the goal (entity)
+    of opinion, the attributes of the goal that is aimed at, and the sentiment (polarity)
+    of positive or neutral opinion [11], [12].
+
+
+    # B. Feature Selection
+
+
+    In feature selection there are term methods such as TF-IDF, bm25, Uniformity and
+    Inverted Corpus Frequency (IC). The Frequency is a ranking function used to rank
+    matching documents according to the given query. Li and Tasa used TF-IDF for feature
+    selection in their model with Uniformity (Uni) and Inverted Corpus Frequency [5]
+
+    Eq.1 and 2 are the equations for Uni and IC, respectively.
+
+
+    ```
+
+    $Uni(t) = \max_{ij} \begin{bmatrix} d_{ij} \ \sum_{j=1}^k d_{ij} \end{bmatrix},
+    k=2 \quad (1)$
+
+    ```
+
+
+    Where $t_i$ is a term, $d_{ij}$ is the number of documents in which $t_i$ appears
+    in category $j$, $t_{ij}$ indicates the number of times
+
+
+    # Positive Category
+
+
+    | | | | | | | | | | | | |
+
+    |---|---|---|---|---|---|---|---|---|---||
+
+    | 2.5 | | | | | | | | | | |
+
+    | 2 | | | | | | | | | | |
+
+    | 1.5 | | | | | | | | | | |
+
+    | 1 | | | | | | | | | | |
+
+    | 0.5 | | | | | | | | | | |
+
+    | 0 | | | | | | | | | | |
+
+    | | great | beauty | good | like | love | free | friendly | comedy | Well |
+
+
+    Fig. 1. Feature weights in positive reviews
+
+
+    The updated feature vectors are used for a deep learning algorithm to split the
+    boundary region clearly to negative and positive regions. The proposed framework
+    provides valuable insights for dealing with uncertainties in user opinions.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'where i appears in category j. When the value in the Eq.1, it means that there
+    is more deterministic in a specific category, Li and Tsai used Uni > 0.2 as a
+    threshold for value selection [5].
+
+
+    ```
+
+    $ICF(t_i) = \sum_{j=1}^{n} p_{ij} \log p_{ij} = \frac{d_{ij}}{d_j} $$ (2)$
+
+    ```
+
+
+    Where $t_i$ appears and $j$ indicates indices, $d_{ij}$ is the number of documents
+    which contain term $t_i$ in category $j$; $d_j$ is the number of reviews in category
+    $j$. The ICF in Eq.2 indicates that others appears frequently in a specific category
+    instead of others. The smaller the ICF value indicates it appears in a specific
+    category. Li and Tsai used ICF < [5]
+
+
+    semi-supervised learning for social data analysis. At the processing stage, a
+    vector of context features is built for each word based on all occurrences in
+    the polarity corpus and over its vectors in the negative polarity corpus [27],
+    [28]. An ensemble framework for intensity prediction of sentiment and emotion
+    is developed using three deep learning models based on LSTM, CNN and GRU and one
+    feature classical supervised model based on SVM [29]. Convolutional Neural Networks
+    (CNNs) are used for text network models to extract features with high significance
+    [30]. Long Short Term Memory (LSTM) employs a bidirectional variant to variant
+    sentiment for sentiment classification [36]. Recursive Neural Network (RRN) is
+    used to model the dimensions of sentences [37]. Hierarchical Convolutional Attention
+    Networks (HCAN) was developed for text classification [38]. A novel method was
+    recently implemented to incorporate product and user information for sentiment
+    classification [39]. The newest technique applied to attention models has been
+    reinforced by implementing the learning based to best-situations through four
+    datasets [40]. Analysis-based method for sentiment analysis that encodes representation
+    of a term and applies deep learning to handle the challenges by removing noise
+    while text words, syntax, and semantic knowledge into account [41], [42].
+
+
+    # C. Discovery Knowledge
+
+
+    Discovered knowledge can be presented in different forms, such as terms, patterns,
+    phrases, concepts, rules, or ontologies. Some of them are combined with others
+    to increase the accuracy.
+
+
+    For knowledge discovery based methods are used with high method [13]. Pattern
+    mining can discovering sequences that frequently co-occur in a customer review,
+    and what set of terms can represent the discovered knowledge effectively. Frequent
+    and closed patterns are frequently employed and reused in a dataset [13]. Selecting
+    relevant reviews is vital efficiency of generating the features without losing
+    any item [15]. In order to enhance the efficiency of pattern identification several
+    techniques: frequent pattern mining [16], closed pattern mining [17], top closed
+    pattern mining [18]. Closed patterns were used for handling number of frequent
+    patterns. A closed pattern is also a frequent pattern but it is not the exactly
+    same content. Therefore, the computational time of finding closed patterns may
+    be reduced and can also reduce the number of frequent patterns.
+
+
+    Fuzzy Logic can be used to extract knowledge from text data where uncertainties
+    are used to be with. Fuzzy Formal Concept Analysis (FFCA) [7] is a way to combine
+    fuzzy logic and Formal Concept Analysis (FCA) to represent the uncertainties in
+    data. A technique based on lattice theory [20]. Formal concept is used to define
+    the relationships between objects and attributes in a domain.
+
+
+    # D. Classification
+
+
+    Classification can be supervised, unsupervised or semi-supervised learning [21].
+    Semi-supervised learning fails to be between unsupervised learning (with no labeled
+    data) and supervised learning (with only labeled data). Therefore, unsupervised
+    learning is very costly, especially when dealing with large volumes of data. Semi-supervised
+    is one important part of report efforts
+
+
+    # III. Proposed Model
+
+
+    As there are all of uncertainties in user reviews, there is an uncertainty boundary,
+    which includes both positive and negative samples [6]
+
+
+    ![](img/63441b87d51b36163467859a6b69790f_2_0.png)
+
+
+    Fig. 3. Three-way Framework
+
+
+    Therefore, it is hard for a binary classifier to deal with the traditional methods.
+    A three-way classification framework was proposed to address'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "the problem of uncertainty for binary classification [6]\nas in Fig. 3.\n\n\
+    # A. Fuzzy-based concept discovery and three-way decisions\n\nIt introduces transformations:\
+    \ ‘two-to-way to three’(defining the regions: positive, negative\nand uncertainty\
+    \ boundary), and then ‘three-way-to-way'\nclassifying the uncertainty boundary\
+    \ into positive and negative\nregions using a vector space model to find\nand\
+    \ then classify the እንደሚ boundary. The prob-\nblem with using this fuzzy framework\
+    \ for opinion mining\nat that the uncertainty boundary is very big as the vector\n\
+    model is not suitable for representing short concepts,\nas as such reviews.\n\n\
+    In this paper, we extend the three-way decision framework\nfor opinion mining.\
+    \ We propose a fuzzy-based method\nto infer the positive region, negative and\
+    \ uncertainty boundary.\nWe integrate the fuzzy model with a deep learning\nto\
+    \ accurately classify the big boundary into positive\nand negative regions.\n\n\
+    Term-based feature selection suffers from poly-\nsemy [46] when used to deal with\
+    \ uncertain\nreviews. Currently, a popular way for solving\nproblem in text is\
+    \ to extend to low-level spaces\nwith patterns or contexts. In the following sections,\n\
+    we define formal concepts within our reviews.\nWe provide a method to weight aspects\
+    \ of\nconcepts and selected term features. At least, we do\nto use fuzzy composition\
+    \ to make the classification.\n\n1. Formal concept. Let $R$ be a set of reviews\
+    \ (a\ntraining set), $T$ a set of attributes (or terms) to\ndescribe and $I \\\
+    subseteq R \\times T$ be a binary relation between\nR$ and $T$ ($r \\in R, t \\\
+    in T$). A formal concept is\n$K = (R, I)$.\n\nFor a sub-concept $X$ and a term\
+    \ sub-set $Y \\subseteq T$,\nderivation operations are defined as follows [47]:\n\
+    \n```\n$X' = \\{t \\in T | rt \\in X$ for all $r \\in R$\n$Y' = \\{r \\in R |\
+    \ rt \\in Y$ for all $t \\in T\\}$\n```\n\nThe two operations have the following\
+    \ properties:\n\n```\n$Z_1 \\subseteq Z_2 \\implies Z_1' \\subseteq Z_2'\nn$Z_1''\
+    \ \\subseteq Z_2''$, and $Z_1^{'''} = Z_2^{'''}$\n```\n\nis $\\{closure(A)^'\\\
+    }$. Let $A$ be a closed concept if $A = \nclosure(A)$ [48]\n\nBased on the above\
+    \ definition, $(A, closure(A))$ is a\nformal concept if $A$ is closed. We can\
+    \ prove that\n$closure(A)=A$ if $t \\in closure(A)$ for all $t \\in T\ntin A$.\
+    \ Then we have $\\{closure(A)^'\\} = A$.\n\n2. Feature selection for generating\
+    \ formal concepts: For-\nconcepts have formal elements described: For-\nsample,\
+    \ closed patterns only contains terms appear\nand frequently. To solve this, in\
+    \ paper, we use some\nterm features to reduce the time complexity for\nconcepts;\
+    \ using fuzzy composition to find the aspects\nof concepts between concepts.\n\
+    \nReviews are pre-processed and analyzed by\nbm25 and UCF (three feature selection\
+    \ techniques)\nto find the useful terms. This is a very important step we\nneed\
+    \ to conduct many experiments to decide the combination\nstrategy of multiple\
+    \ feature selections. Preprocessing\nof reviews and improving the classification\n\
+    process (NLP) techniques. Natural Language\nstopping, stop words andntokenization\
+    \ for preprocessing were applied as they\nbeen identified by the best techniques\
+    \ after\nThe output is a set of reviews as shown in Table 1.\nFeature have applied\
+    \ feature selection for\nboth categories with the same method.\n\n# TABLE 1\n\
+    REVIEWS AFTER FEATURE SELECTION\n\n| Review | funny | good | pretty | great |\
+    \ awful |\n|---|---|---|---|---|---|\n| r1 | | | | | |\n| r2 | | | | | |\n| r3\
+    \ | | | | | |\n| r4 | | | | | |\n| r5 | | | | | |\n| r6 | | | | | |\n| r7 | |\
+    \ | | | |\n\nIn this model includes of bm25 > 30, Uni > 2\nand UCF < 60 are used.\
+    \ The condition of bm25 > 30\nsuggested based on the results and the other two\n\
+    were based on the list practice and condition did not\nEach term is selected in\
+    \ Table 1 by that set $T =\n{funny, good, pretty, great, awful, awful\\}$ and\
+    \ review\n$R = \\{r1, r2, ...\\}$\n\nThe frequency of many words using user reviews\n\
+    reviews. The normalization values of bm25 weights\ncalculated in Eq. 3 [50] for\
+    \ each category j (for which\nclassification, is either the positive or negative\
+    \ class).\n\n```\n$bm25(t_i) = bm25(t_i) \\log_2(1 + \\frac{avgR}{dfij})$ $ (3)\n\
+    ```\n\nwhere $avgR$ is the average length in the whole collection\nt_i; is the\
+    \ original term review; $dfij$ is the number of\n\nA pair $(A, B)$ is a closed\
+    \ concept of $K$ if $A = \nclosure(A)$, $B \\subseteq R, B = A'$ and $B = A'$.\
+    \ It is a closed concept\n$A$ and $A'$ are closed in it\n\nThe sub-concept (super-concept)\
+    \ relation between\nof formal concepts can be described as follows:\n\n```\n$(A_1,\
+    \ B_1) \\subseteq (A_2, B_2) \\implies A_1 \\subseteq A_2 \\implies B_1 \\supseteq\
+    \ B_2$\n```\n\nLet $B(K)$ be the set of all formal concept of $K$, $B(K)\nisis\
+    \ a complete lattice (the complete lattice of $K$) for the above\n-concept relation.\n\
+    \nLet A be a pattern (sub-set of terms). Its overfacet is\na sub-set of reviews\
+    \ that attend pattern $A$, and its closure"
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: "reviews in $i$ in category $j$ and $c$ is the free parameter of the normalization\
+    \ method with $c=0.25$.\n\nThe next task is to define a threshold to reduce the\
+    \ number of noisy tokens. The significance of the feature selection method is\
+    \ to identify relevant features for mining patterns, and also to define the size\
+    \ of reviews for generating cloned patterns.\n\nCloned patterns are generated\
+    \ using frequent item mining in FPTree by defining a minimum support [5].\n\n\
+    Identified patterns are rarely the same terms. Hence, to effectively deal with\
+    \ large amounts of discovered patterns was the challenge. Cloned pattern mining\
+    \ with a minimum support value greater than 20 was introduced in our experiments.\
+    \ This method is used to control the size of discovered patterns. The discovered\
+    \ patterns are clustered as patterns to determine the final concepts using a suitable\
+    \ support as the threshold.\n\nThe relation of Term-Category ($I_{T-Cat}$) can\
+    \ be obtained using the fuzzy composition over the Term-Review relation ($I_{T-R}$)\
+    \ and Review-Category relation ($I_{R-Cat}$) as shown in Eq. (6). In this paper,\
+    \ we use nbm25($t_j$) to represent the relevant strength between terms and categories,\
+    \ respectively. (See the Eq. (7), $I_{T-Cat}(k,j)$ can be calculated using nbm25\
+    \ with values for a given category $j$).\n\n```\n$I_{T-Cat}=I_{T-R} \\circ I_{R-Cat}$\n\
+    ```\n\n```\n$if nbm25(t_k) < 1$\notherwise\n(7)\n```\n\nAlgorithm 1 illustrates\
+    \ the logic for classifying users into three regions: the positive region (POS),\
+    \ negative region (NEG) and the uncertain boundary (UND).\n\n| Algorithm 1 Two-Classification\
+    \ |\n| Require: $I_{T-Cat}$, $I_{T-R}$, $I_{R-Cat}$, two categories: $j=1$ and\
+    \ $j=0$ and an efficient threshold $\\epsilon$ |\n| Ensure: Category and three\
+    \ regions: POS, NEG, UND |\n| 1: for each $j$ |\n| 2: for $c \\in C$ |\n| 3: $I_{T-Cat}(k,j)\
+    \ =$\n| 4: $max[min(I_{T-R}(t,k), I_{R-Cat}(k,j))$\n| 5: |\n| 6: end |\n| 7: for\
+    \ each $r \\in U$ |\n| 8: $C_r = \\{c \\in C_{int} | c \\leq r\\}$$\n| 9: for\
+    \ each $j$ |\n| 10: $f(j) = max_{c \\in C_r} I_{T-Cat}(c,j)$$\n| 11: end |\n|\
+    \ 12: end |\n| 13: for each $r \\in U$ |\n| 14: POS: $r \\in R, f_1(r) - f_0(r)\
+    \ > \\epsilon$$\n| 15: NEG: $r \\in R, f_1(r) - f_0(r) \\leq -\\epsilon$$\n| 16:\
+    \ UND: $r \\in R, |f_1(r) - f_0(r)| \\leq \\epsilon$$\n| 17: end |\n\n| TABLE\
+    \ II\n| FORMAL CONCEPTS |\n| Concept | Intent | Original | Pattern |\n| --- ---\
+    \ --- --- |\n| c1 | funny, pretty | p1 | p1 |\n| c2 | funny, good | p2 | p2 |\n\
+    \n3) Fuzzy-based three decisions: According to the above analysis, we can find\
+    \ a set of concepts for a given set of reviews $R$, where $R$ is either a set\
+    \ of positive reviews or a set of negative reviews, and we have\n\n$C = \\{c \\\
+    | cover(r) | p \\in C, sup(p,r) \\geq 0\\}$\n\nwhere $\theta$ is the number of\
+    \ terms. $Sets(p)$, the size of terms used in $p$, is the intent of $c$ and $cover(r)$\
+    \ is the concept of $c$.\n\nIn this solution, we discuss the relation between\
+    \ concepts and categories (e.g., the positive and negative class for classification\
+    \ using fuzzy composition [5]) in order to classify into three regions: the positive,\
+    \ negative and uncertain boundary.\n\nThe relation between concepts and categories\
+    \ is denoted as $I_{T-Cat}$ which can be evaluated by using the fuzzy composition\
+    \ to integrate relation ($I_{T-R}$) between concepts and categories as described\
+    \ in Eq. 4.\n\n```\n$I_{T-Cat} = I_{T-R} \\circ I_{R-Cat}$\n```\n\nwhere $I_{T-R}$\
+    \ is used to describe the uncertain factor of terms in a concept. In this paper,\
+    \ we use the normalized nbm25($t_j$) as the uncertain factor for term $k$ in concept\
+    \ $i$ (see Eq. 5).\n\n```\n$I_{T-R}[i,k] = nbm25(t_k)$\n```\n\nIt it processes\
+    \ the first pass (for loop) of calculating the $I_{T-Cat}$ (a concept-category\
+    \ map) by using fuzzy composition. It then calculates a value for each new review\
+    \ to a category $j$ (see the second-loop). At last, it determines the three regions\
+    \ (POS, NEG and UND) based on these fuzzy values for a given review set $U$. The\
+    \ time complexity for the first loop is $O(|C| \times |T|)$ as we have two categories\
+    \ for binary classification. For the second loop, the time complexity is $O(|U|)$.\
+    \ For the last loop the time complexity is $O(|C| \times (|U| + |T|).\n\nB. Boundary\
+    \ Classification\n\nAlgorithm 2 uses a parameter $\\delta$ (manual value) to classify\
+    \ which is very difficult to define the class of a review when the two classes\
+    \ are very close."
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Algorithm 2 Deciding $\delta$
+
+
+    ```
+
+    Require: $I_{C-T}$ categories: $j=1$ and $j=0$
+
+    Ensures: $\delta$
+
+    1: for $r \in R$ do
+
+    2:   for each $j$ do
+
+    3:     $f(r)_j = \sum_{t \in S_r} \text{intent}(t)_j \zeta_r I_{C-T}(i,k)
+
+    4:   end
+
+    5:   $f(r) = \int f(r)dt$
+
+    6: end for
+
+    7: for $r \in R$ do
+
+    8:   $\mu = \frac{\sum f(r)}{\|R|-1}$
+
+    9: end for
+
+    10: if $\delta = \frac{\sum f(r)}{\|R|-1}$ then
+
+    ```
+
+
+    It clearly shows that region boundary is a big problem for classification. In
+    this subsection, we present a method to decide $\delta$. Different from other
+    methods we use a probability-based function to decide $\delta$ [6], in this paper
+    we use a standard deviation to decide $\delta$ as it is a robust value. Algorithm
+    2 describes the process of calculating the value for $\delta$ based on a training
+    set $S$ and the connection limits. The complexity of Algorithm 2 is $O(|T| + |R|)$
+    and the concepts are not very basic, but the decision for $\delta$ is effective.
+
+
+    It is noted that this uncertainty boundary (B) contains a lot of uncertain items.
+    Table III and Table IV show the percentage of the uncertainty in both movie review
+    and ebook datasets.
+
+
+    In this paper, we also developed a method to classify the uncertainty boundary
+    (B) as the data is not linearly separable. In this paper, we assume that it is
+    possible to map the data to a higher-dimensional space resulting in a linearly
+    separable set. There are many methods to do this. For instance, we use a transformation
+    function $\phi(x_1, x_2, ..., x_n) = (x_1^2, x_2^2, ..., x_n^2)$, which is likely
+    to fixit the dependency between features. In this paper we use word embedding
+    to describe the feature. It can find a high dimensional space. We use word embedding
+    models which map each vocabulary to a vector of real numbers. In this work we
+    use word2vec model [52] in which each word was encoded by 88 dimension, that is,
+
+
+    ```
+
+    $\phi(x_1, x_2, ..., x_n) = (x_1^2, x_2^2, ..., x_n^2)$
+
+    ```
+
+
+    for all $w \in \Omega$, $x$ are real numbers.
+
+    To solve the issue, in this paper, we integrate word embedding and the terms that
+    we selected (with fuzzy values) from the forments of the items content; and then
+    use a CNN classifier to classify the uncertainty boundary.
+
+    CNN consists of input layer, two convolution layers, max-pooling layers, and a
+    fully connected layer with softmax as the activation function, which is a typical
+    CNN architecture compared to standard CNN architecture [31]. This architecture
+    has achieved high accuracy through CNN
+
+
+    architecture of Kim. The outputs of new word embedding are fed to the CNN for
+    the input layer. The first convolution layer consists of 100 features with filter
+    size 4. The second convolution layer has 50 features with filter size 7. The stride
+    in each convolution layer is 1 as we are using lag. A max-pooling layer followed
+    each convolution layer. The pool size used in the max-pooling layers was 3. We
+    used regularization with dropout constraint on the weights, with 50 epochs. The
+    output of each convolution layer was computed using a non-linear function; in
+    our case we used the hyperbolic function.
+
+
+    | Category | Percentage |
+
+    |---|---||
+
+    | Positive | 115 | 53.0% |
+
+    | Negative | 102 | 47.0% |
+
+    | Total | 217 | 100% |
+
+
+    | Category | Percentage |
+
+    |---|---||
+
+    | Positive | 104 | 50.7% |
+
+    | Negative | 101 | 49.3% |
+
+    | Total | 205 | 100%% |
+
+
+    # IV. EXPERIMENT RESULTS
+
+
+    Many experiments were conducted to evaluate the effectiveness of the proposed
+    model. The purpose of these experiments is to evaluate our model and compare it
+    with other-of-the-art models. The performance of the model is measured by F measure.
+    In addition, we pair-test to verify the significance.
+
+
+    # A. Datasets
+
+
+    The movie review dataset and ebook dataset were used for evaluation. The two sets
+    are standard datasets in opinion research [35]. The movie review dataset consists
+    of 2000 movies, with 1000 reviews for each category (positive and negative) for
+    both training and testing.
+
+
+    # B. Baseline Models
+
+
+    In this research, we propose a comprehensive evaluation of the proposed model,
+    we the state-of-the-art and closely related models, are used as baseline to evaluate
+    the performance of the proposed
+
+
+    +   * Li and Tasi [5] fuzzy model was developed and evaluated on movie review
+    and ebook datasets.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'results. It has shown accuracy of 76.74% for the movie reviewer dataset.
+
+
+    +   - Attention Network [56] used Multi-sentiment Enhanced Attention Network (MEAN)
+    to alleviate the problem by integrating three kinds of sentiment knowledge(e.g.,
+    sentiment lexicon, negative words, intent) into the deep neural network via attention
+    mechanisms.
+
+
+    # C. Results
+
+
+    In order to evaluate the effects of the proposed model, we compare results with
+    existing classification methods in Table V and VI. It indicates that the proposed
+    model has the best performance in the two datasets compared with: FFCM [55], CNN
+    [31], SVM [54], SCN [61] and Attention Network [56]. In Table VI we have not included
+    CNN [31] and SCN [61] because these models were not evaluated with ebook reviewer
+    dataset. The results in Table VI and Table VII show that the proposed model is
+    better than the baseline models. It has shown from Table VII model is more significant
+    than CNN and Attention Network which is greater > 0.5.
+
+
+    can significantly improve the performance of binary classification in terms of
+    F-measure. The results indicate that the proposed three-way framework performs
+    binary classification of user reviews with high accuracy.
+
+
+    The contributions made by the proposed framework are as follows:
+
+
+    +   - An innovative statistical feature selection method (combination of three
+    feature selection methods bmx2, ICF and Uni) is proposed to retrieve fuzzy concepts.
+
+    - An effective classifier is introduced using fuzzy concepts to classify into
+    three regions: positive, negative, and neutral.
+
+
+    One future direction is to explore the effects of semantic text data on the same
+    architecture. Semantic structure might help exploit the additional representation
+    of fuzzy concepts and investigate the impact of semantic patterns in fuzzy concepts
+    in opinion mining.
+
+
+    # ACKNOWLEDGMENT
+
+
+    This research was supported by the University of Technology (UGC), Australia,
+    University Grant Commission (UC), Sri Lanka and University of Computing (USC),
+    Sri Lanka.
+
+
+    # REFERENCES
+
+
+    # TABLE V
+
+    F-MEASURE-OF-THE-ART-MOVIE REVIEW
+
+
+    | Model | Precision | Recall | F-measure |
+
+    |---|---|---||
+
+    | Proposed Model | 0.9404 | 0.9509 | 0.9456 |
+
+    | FFCM | 0.8790 | 0.8630 | 0.8715 |
+
+    | CNN | Not Given | Not Given | 0.8150 |
+
+    | SVM | 0.8370 | 0.8369 | 0.8369 |
+
+    | SCN | Not mention | Not mention | 0.8213 |
+
+    | Attention | Not mention | Not mention | 0.8450 |
+
+
+    # TABLE VI
+
+    F-MEASURE-OF-THE-ART-EBOOK REVIEW
+
+
+    | Model | Precision | Recall | F-measure |
+
+    |---|---|---||
+
+    | Proposed Model | 0.9710 | 0.9777 | 0.9744 |
+
+    | FFCM | 0.9598 | 0.9569 | 0.9583 |
+
+    | SVM | 0.9382 | 0.9381 | 0.9382 |
+
+
+    # TABLE VII
+
+    P-MEASURES-REVIEW-TWO
+
+
+    | Model | P-movie | P-ebook |
+
+    |---|---|--|
+
+    | Proposed Model | 0.0025 | 0.0013 |
+
+    | FFCM | 0.0176 | 0.0137 |
+
+    | SVM | 0.0119 | 0.0123 |
+
+    | SCN | - | 0.0087 |
+
+    | Attention | - | 0.005 |
+
+
+    # V. CONCLUSION
+
+
+    This study proposes a three-way framework for binary classification by integrating
+    fuzzy concepts and deep learning. This framework addresses the problem of uncertainty
+    in classification. This framework provides a promising way to construct an opinion
+    classifier by identifying boundary region. This method uses statistical features
+    for-opinion'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '[C-H. Cho, J. Jaidar, I. Aziz, M. H. Hasan, and W. Yeh, "Algorithms for frequent
+    item mining: a review," Artificial Intelligence Review, vol. 52, no. 4, pp. 2603–2621,
+    2019].
+
+
+    [R. J. Bayou, "Frequently finding missing patterns from databases," ACM Transactions
+    on Data Mining, vol. 7, no. 2, pp. 1–22, 2003].
+
+
+    [N. Pasaquier, Y. Bastide, R. Tanul, and L. Lakhal, "Disclosing frequent items
+    for association rules," Proceedings of the International Conference on Data Mining,
+    Springer, pp. 199–206, 2009].
+
+
+    [J. H. Wang, Y. Lu, and P. Petkov, "Mining top-k frequent items without minimum
+    support," in 2003 IEEE 2nd Int. Conf. on Data Mining (ICDD). IEEE, pp. 212–218,
+    2003].
+
+
+    [I. J. "Ladeh, "Fuzzy sets, Fuzzy Logic, Fuzzy Logic, and Fuzzy Sets," Computer
+    Systems with Led Fuzzy Systems. Soft Electron., 1996].
+
+
+    [T. Quan, S. Hu, and T. Cao, "Fuzzy-based approach clustering for anomaly detection,"
+    in Cybernetics and Intelligent Systems, 2014, vol. 28, pp. 145–154].
+
+
+    [Z. Miao, Y. Li, X. Wang, and C. Wan, "Snanip: Super frequent item mining with
+    aggregated data," in Proceedings of the IEEE International Conference on Computer
+    Vision (ICCV), 2021].
+
+
+    [I. P. Masuda, G. Goni, R. Rossi, M. Marcoci, and S. Rezeni, "An evolutionary
+    approach for frequent pattern mining in bipartite heterogeneous networks," Journal
+    of Information and Data Management, vol. 7, no. 1, pp. 14–27, 2011].
+
+
+    [B. J. Lee, Y. K. J. Liu, "Semi-supervised frequent item mining with knowledge
+    mining," in Proceedings of the 2022 IEEE International Conference on Computer
+    and Communications Processing, 2022].
+
+
+    [Y. Lu and C. Chai, "Opinion mining through semi-supervised multiple item mining,"
+    in Proceedings of the 2018 IEEE International Conference on World Wide Web, 2018,
+    pp. 121–130].
+
+
+    [F. H. Khan, Q. Umar, and S. Bakht, "A semi-supervised approach to sentiment mining
+    using reinforcement based sentiment analysis," Knowledge and Information Systems,
+    vol. 115, no. 5, pp. 851–862, 2021].
+
+
+    [H. Zhou, Y. Xia, R. Yu, and Y. Liu, "Word sentiment mining using association
+    rules and deep learning," in 2012 IEEE International Conference on Machine Learning
+    and Analytics, 2012, pp. 2007–2012].
+
+
+    [Y. M. Abbas, A. Hassouna, and H. Zhou, "Word sentiment mining using bayesian
+    method and opinion-based features," Computer Science, 76, no. 4, pp. 227–238,
+    2015].
+
+
+    [M. S. Akhtar, A. Ekbal, and E. Hamza, "Free it: detecting emotions of entities
+    and sentiments using stacked ensemble," arXiv preprint:1812.05368, 2018].
+
+
+    [M. Huang, L. S. Thomas, and S. Usmani, "Text classification using convolutional
+    neural networks," Journal of Health Informatics, vol. 235, p. 104, 2020].
+
+
+    [X. Xu, Y. Ge, and H. Wu, "Convolutional neural networks for text classification:
+    Advances in Neural Information Processing Systems, vol. 30, pp. 581–594, 2017].
+
+
+    [Z. Wang, Y. Zhang, J. Chen, and E. Chang, "Ensemble approach of convolutional
+    and recurrent neural networks for multi-label text classification," in 2017 IEEE
+    International Conference on Neural Networks (IJCANN)].
+
+
+    [N. Majumder, S. Porta, A. Gebrul, and E. Cambea, "Deep learning based modeling
+    for text mining from IEEE," IEEE Intelligent Systems, vol. 32, no. 2, pp. 74–79,
+    2017].
+
+
+    [K. S. Ahmed, M. Barbosa, Y. Bengio, F. Bangoor, H. Schenk, and Y. Bengio, "Language
+    phrase representations using recurrent encoder-decoder for sequence translation,"
+    arXiv preprint:1409.1053, 2014].
+
+
+    [R. Socher, A. Perelygin, Y. Yu, J. Chang, D. M. Manning, and A. G. Potts, "Recurrent
+    neural network models for deep semantic analysis for a
+
+
+    sentiment tree," in Proceedings of the 2013 international conference on natural
+    language processing, 2013, pp. 1631–1642].
+
+
+    [Z. Yang, Y. Chang, C. D. Xie, and E. Hovy, "Attention networks for document classification,"
+    in Proceedings of the 2016 Conference of the North American Association for Computational
+    Linguistics: Human Language Technologies, 2016, pp. 1480–1486].
+
+
+    [Z. Yang, Y. C. Sun, and J. Chen, "Improving review mining with user representation
+    and attention mechanism for sentiment classification,” in-AAAI Conference on Artificial
+    Intelligence, 2017].
+
+
+    [Y. L. Tay, A. T. Sun, and C. Hu, "Ducky memory networks for aspect mining," in
+    Proceedings of the 2017 IEEE International Conference on Information and Machine
+    Management, ACM, 2017].
+
+
+    [A. Aliparthi and M. Mishra, "Birectional encoder representations for sentiment
+    analysis: An attention approach," arXiv preprint:1409.3939, 2014].
+
+
+    [Z. S. Kim, K. Kananathan, J. Pearson, and S. Pavlik, "Attention-based sentiment
+    mining: Using energy over words transformer-based model," arXiv preprint:1912.05555,
+    2019].
+
+
+    [L. Subhasini, Y. Li, and J. Athukara, "Attention-based classification for aspect
+    mining using fuzzy sets," in Proceedings of the 5th IEEE International Conference
+    on Electronics and Informatics Meeting (ICEM), 2019].
+
+
+    [M. Sun, Y. Ma, X. F. Zhang, S. Gong, and Y. Zhu, "Fuzzy based aspect classification
+    for sentiment mining reviews," in 2018, pp. 1–6].
+
+
+    [L. Bing and K. Cha, "A fuzzy logic approach for opinion mining in large scale
+    data," in 2014 IEEEACMH...
+
+
+    [A. Liang and Y. Lu, "Zoning mining and negative patterns for review discovery,"
+    in Proceedings of the 16th ACM International Conference on Knowledge Discovery
+    and Data Mining, 2010, pp. 725–732].
+
+
+    [J. Poelman, C. S. Udersnik, D. Ivan, and G. Gendel, "Formal concept-based knowledge
+    extraction in technology," Journal of Expert Applications, vol. 40, pp. 16–23,
+    2013].
+
+
+    [B. He and I. Urman, "Free term normalization for b25 and dtf," in Information
+    Retrieval, 1998].'
+  merge: -1
+  img_proc: true
