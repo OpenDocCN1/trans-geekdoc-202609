@@ -1,0 +1,10 @@
+name: Data Science (The MIT Press Essential Knowledge series)
+slug: data-science-the-mit-press-essential-knowledge-series
+name_cn: 数据科学（麻省理工学院必备知识系列）
+toc:
+- - '#'
+  - 3 CRISP-DM 流程
+- - '#'
+  - 5. 你要加薯条吗？（关联规则挖掘）
+- - '##'
+  - 流失还是不流失，这是一个问题（分类）
