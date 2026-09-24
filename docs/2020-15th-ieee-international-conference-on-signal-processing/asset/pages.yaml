@@ -1,0 +1,397 @@
+- pgno: 0
+  md: '# # Proceedings of ICSP2020
+
+    CASPER: Conventional CT data augmentation using deep learned SPCT images
+
+
+    Pierre-Jean Lartaud¹, Aymeric Rouchaud¹, Hamid Dessousky², Anna Vlakhmitrou³,
+    Jean-Michel Rouet², Olivier Nemment³, Loïc
+
+    ¹ CREATIS UM5820 INSERM, Université de Lyon, France
+
+    ² Philips Research, Sures, France
+
+    ³ Hospices de Lyon, Lyon, France
+
+
+    Email: pierre-jean.lartaud@creats-insa.fr, aymeric.rouchaud@chu-lyon.fr, hamid.dessousky@creats-insa-lyon.fr,
+    anna.vlakhmitrou@gmail.com, jean-michael.rouet@philips.com, olivier.nemment@philips.com,
+    loic.bussel@chu-lyon.fr, philippic.douc@chu-lyon.fr.
+
+
+    **Abstract—**SPCT scanner is an emerging technology in the clinical field, which
+    allows to generate from a single scan conventional images, virtual non-contrast
+    scans (VNC) to enhance conventional CT images. It has been argued that non-contrast
+    at different k may help (at high k) to (at low k) iodine-contrast enhanced studies.
+    It could be used as data augmentation for cardiovascular structures improving
+    dice scores on contrasted images, and segmenting non-contrast (TNC) scans. However,
+    it has not been demonstrated, making this data process not widely available.
+
+
+    pulmonary arteries, and thus are fully enhanced after injection, chest-abdominal-pelvis
+    (CAS) scans for oncology-upon focal need enhancement, and image acquisition is
+    started after injection. This makes it difficult to create a representative training
+    dataset for the segmentation of a given organ, and thus, most studies focus on
+    [1]
+
+
+    Segmenting grounds truths for these images is still quite without an adequate
+    semi-software. On the contrary, even experts often fail to catch structures on
+    non-contrast CT scans. Creating grounds truths for these images requires a slice-by-slice
+    segmentation, which may be tedious to decide a deacent training dataset. Thus,
+    for automatic calcium calculation, only a handful of papers for cardiovascular
+    structures segmentation on images
+
+
+    To overcome this limitation, we propose a data augmentation workflow to provide
+    conventional CT training with CT augmentation capabilities. We trained on an unbalanced
+    dataset of 2500 scans using an image translation network (USetNet) to map contrast
+    enhanced and VNC human images. Conventional CT scans can then be translated to
+    SPCT images.
+
+
+    SPCT data augmentation approaches have reached many difficulties [4–6]. Dual energy
+    scanners, a newly available medical procedure, allows - from a single - not only
+    the generation of conventional HU images similar to any other CT scanner, but
+    also enhanced, virtual non-contrast and true non-contrast (VNC) images, which
+    monogenics low (at high k) to high (at low k) concentration of contrast agent.
+    The target can be segmented on the following enhanced and virtual images. Using
+    these images as data augmentation, a network can be trained to segment TNC and
+    TNC protocols not present in the training dataset.
+
+
+    We evaluated our methodology by training a 3D U-Net to segment the aorta, with
+    and without data augmentation on 143 annotated conventional scans. The network
+    performances were compared on a testing dataset of 70 patients. The results show
+    that the network trained with enhancement scans outperformed the network trained
+    without scans, and especially on
+
+
+    **Keywords—**data augmentation, SPCT, dual energy, deep learning, image translation,
+    vascular segmentation, classification, non-contrast CT
+
+
+    # I. INTRODUCTION
+
+
+    In the last decade, deep learning has become a viable method for automated organ
+    segmentation, as proposed network architecture has achieved state-of-the-art performance
+    in segmentation of vascular structures though challenging [1, 2], due to the variation
+    of induced contrast agent concentration within the circle. Indeed, injection protocols
+    are used in clinical practice, according to the image''s indication and the structures
+    of interest. The amount of contrast agent and the timing of injection and imagery
+    greatly. Common cases are diagnoses of pulmonary embolism (PE), which requires
+    highlighting
+
+
+    Therefore in this study we fully a data augmentation workflow to provide any conventional
+    CT training dataset with CT augmentation capabilities, using paired images translation
+    network (USetNet) to map enhanced scans and VNC from human images. To illustrate
+    our purpose, we trained a 3D U-Net to segment the aorta, from a conventional HU
+    images dataset, and evaluated the benefits of our proposed augmentation workflow
+    on the network performances.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '![](img/48d50055dd4767983291bb704afd7575_1_0.png)
+
+
+    energy photons are absorbed by the inner detectors, while the high-energy ones
+    travel through it to be captured by the outer layer. Using projection-based decomposition,
+    the attenuation of low energies is expressed as the attenuation contribution of
+    materials, according to their attenuation characteristics [8], an image where
+    the intensity of a pixel corresponds to the material content in the subject, iodine
+    and water maps, monoE images where the intensity can be generated as follows:
+
+
+    ```
+
+    $monoE_{keV} = \alpha\mu_{I}^{keV} + \beta\mu_{W}^{keV}$
+
+    ```
+
+
+    where $\alpha$ and $\beta$ are the iodine and water concentration maps, in $cm^{-1}$,
+    $\mu_{I}^{keV}$ and $\mu_{W}^{keV}$ are the attenuation coefficients at $keV$
+    [9]. Therefore, from two mono images or two material maps, equation (1) can be
+    inverted to reconstruct any spectral images. High-energy photons are less absorbed
+    by the patient than low energy mono images will have a lower contrast, as illustrated
+    in Fig. 2. Finally, VNC are water maps scaled to the Hounsfield unit.
+
+
+    A - monoE 54 keV
+
+    B - HU
+
+
+    C - monoE 100 keV
+
+    D - VNC
+
+
+    Fig. 1. Examples of images reconstructed from spectral CT. A [600-1600] window
+    is applied.
+
+
+    This paper is organized as follows: Section 2 provides a detailed description
+    of spectral image generation. In Section 3, we present our data augmentation workflow,
+    and Section 4 describes results of our application on aorta segment.
+
+
+    # II. SPECTRAL IMAGE RECONSTRUCTION
+
+
+    Dual energy CT, also known as spectral CT, is a recent clinically-available computed
+    tomography technology that allows simultaneous acquisition of two X-ray spectra,
+    enabling innovative imaging procedures. To get two spectra, different techniques
+    have been used (dual sources, dual layer, fast kV switching). In this study, we
+    are using the dual layer IQon Spectral CT. During imaging, the low
+
+
+    # III. SPECTRAL AUGMENTATION METHOD
+
+
+    As illustrated in Fig. 2, the global workflow consists of two steps. First, we
+    train any image translation network HusNet that converts HU images to mono 54
+    keV and mono 100 keV. Then, a conventional HU dataset is fed to the HusNet, in
+    order to generate the aforementioned mono images. Using equation (1), these monoEs
+    are reconstructed for data augmentation into any
+
+
+    ![](img/48d50055dd4767983291bb704afd7575_1_1.png)
+
+
+    Step 1 – HusNetNet training
+
+
+    Step 2 – Data augmentation and network training
+
+
+    Fig. 2. CASPER workflow. HusNet is trained using a 2500 spectral datasets aras.
+    For different training purposes. Through HusNet, mono: 54 keV and 100 keV are
+    generated, and through use equation (1) to reconstruct spectral images to train
+    a network. In the final section, the first and second rounds are: from 40 to 180
+    keV with a step increasing 20 keV each time (from left to right). The third row
+    are monoBlended together as explained in Section 3.2. The last row displays an
+    iodine map, VNC and corresponding GT'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'spectral images described in Section 2, and further reconstructed images.
+
+
+    # A. HuSpecNet
+
+
+    Mapping every conventional CT to dual energy images is not possible due to the
+    unknown material information. This missing information can be approximated from
+    inferred images (e.g. bones or vessels are recognizable). Random of of missing
+    information - for instance, using a GAN [10] - therefore not required. Furthermore,
+    spectral images are acquired from a single scan. Paired Hu and mono images are
+    allowing for simpler approaches in unpaired settings [11].
+
+
+    We have reported for a deterministic transformation using a 2D-UN [12] convolutional
+    network as it can efficiently capture large-scale context (allowing for accurate
+    material reconstruction). HuSpecNet took as input HU image in native resolution
+    and generated mono54 and 100 keV images. We used a L2 loss on dataset from patients,
+    with various physical conditions. Table 1 shows our validation results on 143
+    CT scans. HuSpecNet generated mono and VNC, with mean absolute error inferior
+    to 14 HU. Due to its nature, VNC accumulates both mono54 and 100 keV errors. As
+    illustrated in Fig. 3, generated images are noisier than true images near the
+    aortic wall.
+
+
+    ![](img/48d50055dd4767983291bb704afd7575_2_0.png)
+
+
+    # TABLE I HUSPECNET STATISTICS
+
+
+    | Type | Range | Mean ± std | Min - Max |
+
+    | --- | --- | --- | --- | --- |
+
+    | Mono-54 | 307 | RMSE | 16.893 ± 5.096 | 11.378 - 50.223 |
+
+    | Mono-100 | 307 | Abs | 14.690 ± 1.676 | 7.453 - 18.926 |
+
+    | Mono-100 | 307 | RMSE | 11.796 ± 2.349 | 8.807 - 23.653 |
+
+    | VNC | 307 | RMSE | 22.066 ± 3.316 | 14.182 - 51.358 |
+
+    | VNC | 307 | Abs | 13.469 ± 2.295 | 8.517 - 21.637 |
+
+
+    Fig. 3. Example of spectral images compared to generated scans. A 600-1600 window
+    is applied to each image.
+
+
+    Our conventional training dataset consists of 143 patients, with generated spectral
+    images generated by using a semi-automated tool (Philips ISP) from the true image
+    to the bifurcation. These conventional scans were generated using ISpec CT, for
+    comparison purposes with true images.
+
+
+    # B. Spectral data augmentation
+
+
+    Once mono 54 and 100 keV are created from a conventional dataset using HuSpecNet,
+    spectral data augmentation can be performed for different data augmentations.
+    Using equation (1). As illustrated in Fig. 4, a blend of contrast agent from high
+    to low may be simulated with mono of different energies and VNC images. mono can
+    be blended together according to the GT generated contrast agent against the target
+    organ and organs, acting as a different injection protocol was performed (Fig.
+    4D). With a much versatile result - less sensitive to a given injection protocol
+    - with a limited number of annotated data, this can be trained for segmentation
+    or classification.
+
+
+    To assess the benefits of method, and compare it to true spectral augmentation,
+    our segmentation network was trained. HuOnly was only trained on true images.
+    True spectral images and generated images were trained on through HuSpecNet. Since
+    each strategy is trained from the same 143 patients, the presence or absence of
+    spectral augmentation differs from one another.
+
+
+    The network consists of a 3D-Net [12] with five resolution layers activated by
+    a residual linear layer (ReLU), and a max pooling, doubling the number of feature
+    channels for each layer from 16 to 26. Volumes
+
+
+    Authorized licensed limit to use: Central Michigan University. Published on May
+    14,2021 at 03:44:29 UTC from IEEE Xplore. Restrictions apply.
+
+
+    539'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/48d50055dd4767983291bb704afd7575_3_0.png)
+
+
+    Fig. 4. Example of data augmentation from a single HU patient. A through D are
+    different images reconstructed using original conventional HU images from different
+    patients with various injection protocols. A [600-1680] window is applied.
+
+
+    were resampled to a constant [2, 2, 21] mm spacing, using a nearest neighbor interpolation.
+    Randomly chosen patches were then fed to the network for training.
+
+
+    During the inference process, volumes were then resampled to their original size
+    and post-processed using a guided image filter as [13].
+
+
+    Sorensen-Dice coefficient was calculated on every prediction and GT. Repeated
+    measures of variance (ANOVA), performed t-tests with Bonferroni correction, were
+    used to compare Dice coefficients among the three training methods for the whole
+    testing dataset and PE, CAP, non-contrast subdatasets. We concluded significant
+    difference when Bonferroni-corrected p-values were inferred to 0.05.
+
+
+    Concerning the segmentation network approaches, a significant difference was found
+    between HUonly and both GenSpectral and TrueSpectral for the whole dataset and
+    PE and TNC sub-datasets (p <0.05) but not for the CAP sub-dataset. This is explained
+    by the presence of CAP protocol scans in the training dataset, where TNC and PE
+    are absent. When VNC was added to the trained dataset, using random method: helped
+    to segment contrasts on CT protocols not used, as PE images results out of Dice,
+    however spectral-enhanced approaches outperformed HUonly with improving the learning
+    datasets. Moreover, no significant difference was found (p>0.05) in Dice coefficient
+    between GenSpectral and TrueSpectral for the whole dataset and the PE, CAP and
+    TNC sub-datasets, confirming that our proposed conventional dataset augmentation
+    workflow provide
+
+
+    ![](img/48d50055dd4767983291bb704afd7575_3_1.png)
+
+
+    Fig. 5. Dice results of prediction for each training over GT for CAP, PE and TNC.
+    The boxes display the 25th and 75th percentiles, with mean values shown as solid
+    and dotted lines.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '![](img/48d50055dd4767983291bb704afd7575_4_0.png)
+
+
+    Fig. 6. Examples of HUonly and GenSpectral predictions on PE, CAP and TNC scans,
+    with GT. Masks are presented as 3D rendering with background context. The pulmonary
+    arteries (orange arrow), aorta (white arrow) and superior vena cava (blue arrow)
+
+
+    equivalent results to a true spectral dataset.ed as in Fig. 5, GenSpectral and
+    TrueSpectral get very close results, with median and mean values for each sub-dataset.
+    Moreover, one should note that GenSpectral does not obtain dice under 0.9, unlike
+    TrueSpectral, where two PE scans show lower results.
+
+
+    # ## V. CONCLUSION
+
+
+    Our proposed Casper method successfully manages to bring spectral data to a conventional
+    training dataset, allowing for the training of a more versatile and effective
+    network for conventional CT applications. However, this method considers the creation
+    of a non-contrast dataset, VNC generated from HU, on which GT is easily obtained
+    using certain automated segmentation tools. Future developments will include applications
+    on other datasets for organ segmentation, improvement of generated VNC images,
+    and possible translation to other spectral modalities, such as electron density,
+    or Z-effective measures.
+
+
+    # ## REFERENCES
+
+
+    +   [1] S. Senquarta et al., "A review of deep learning applications on medical
+    architectures, patterns and recent trends," Knowledge-Based Systems 199, 2020.
+
+
+    +   [2] A. Maier, C. Tyler, T. Lasker and C. Ries, "A gentle introduction to deep
+    learning in medical image processing," Zeitschrift für Medical Physics, vol. 64,
+    no. 2, 81–103, 2019.
+
+
+    +   [3] G. Singh, et al., Machine learning in cardiac CT: Basic concepts and contemporary
+    data, 12, 2020.
+
+
+    +   [4] S. Schneider, M. Wolteren, R. W. van Hamersfelt, M. Treik, T. Liner and
+    I. Igum, "Improving MyocardialSegmentation in Cardiac CT Angography using Segmentation
+    Information," 2018.
+
+
+    +   [5] P. Lamont, J. M. Roset, O. Nempont, and L. Boussel, "Spectral CT Training
+    Dataset Generation and Augmentation for Conventional CT Segmentation," in Medical
+    Imaging and Computer Assisted Intervention – MICCAI 2019, Cham, 2019, pp. 768–775.
+
+
+    +   [6] S. Chen et al., "Automatic multi-organ segmentation in dual-energy CT
+    (DECT) with 3D fully convolutional tomography," Medical Physics, vol. 47, no.
+    5, 552–562, 2020.
+
+
+    +   [7] C. H. Mcclough, S. Long, L. Yu, and J. G. Fischer, "Dial-and-Multi-Energy
+    CT: Technical Approaches, and Clinical Applications," Medical Physics, vol. 47,
+    no. 6, 786–795, 2020.
+
+
+    +   [8] R. E. Alvareaz and A. Macovicki, "Energy-selective reconstructions in
+    X-ray computed tomography," Medical Phys Biol, vol. 21, no. 5, 97.
+
+
+    +   [9] NIST XCOM: Compound/Mixture, https://nist.gov/PubData/Datas/xcom/index.html
+
+
+    +   [10] P. Hola, J. Zhou, T. Zhao, and A. Efos, "Generative Adversarial Networks,"
+    in 2017 IEEE Conference on Vision and Pattern Recognition (CVPR), 2017, pp. 5994–5976.
+
+
+    +   [11] J. Tran, T. Zhou, and A. Efos, "Unpaired Image-to-Image Translation Using
+    Cycle-Consistent Adversarial Networks," in 2017 IEEE International Conference
+    on Computer Vision, pp. 2241–2249.
+
+
+    +   [12] X. Sun and J. Tang, "Guided Learning for Image Segmentation," Pattern
+    Analysis and Machine Intelligence, vol. 35, no. 6, 1499–1509, 2023.'
+  merge: -1
+  img_proc: true
