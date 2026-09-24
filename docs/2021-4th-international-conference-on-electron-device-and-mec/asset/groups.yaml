@@ -1,0 +1,1018 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # A Location-based Blockchain Preservation Wireless Communication Scheme for v
+    TongdaoYiMei v Tongdao Development Case
+
+
+    Bin Chen
+
+    Suzhou Customs District P. R. China
+
+
+    Xin Huang
+
+    College of Data Science, Tianjin University of Technology.
+
+    Taiyuan, China
+
+
+    Fan Liu
+
+    Suzhou Information Technology Ltd.
+
+    Suzhou, China
+
+
+    Haotian Yin
+
+    College of Data Science, Tianjin University of Technology.
+
+    Taiyuan, China
+
+
+    **Abstract**-HuaTaiMei v Tongdao Development case was handled by Hangzhou Internet
+    Court on March 15th, 2018. The court ruled in favor of HuaTai and awarded monetary
+    damages of 4,000 RMB. This is seen one of the vanguard cases for the use of Blockchain
+    as a form of digital evidence. The case was certified with verified wireless secret
+    communication scheme to meet legal requirement, ensure that digital evidence is
+    securely stored on the blockchain and the device is activated by relevant department
+    lead.
+
+
+    The court ruled in favor of HuaTai and awarded monetary damages of 4,000 RMB.
+
+
+    This is seen one of the vanguard cases for the use of Blockchain as a form of
+    digital evidence.
+
+
+    The Civil Procedure Law in China allows for use of digital evidence. as any evidence
+    used should be factual, related to the case and acquired in a lawful manner. many
+    were reluctant to accept digital evidence, as could be difficult to prove that
+    the digital evidence is factual.
+
+
+    **Keywords-blockchain; electronic evidence; judicial forensics; out-of-band chatbot**
+
+
+    # I. INTRODUCTION
+
+
+    Daishobao (Kuaibo) is a regional newspaper in Hangzhou, Zhejiang Province. HuaTaiMei
+    is a company registered in Hangzhou. On July 24th, 2013, Kuaibo signed a contract
+    with sole license to HuaTai. This contract granted it the right to publish the
+    post articles on the internet by Kuaibo and the right to sue for damages in cases.
+
+
+    In 2019, the People''s Court issued a guidance on digital evidence. The guidance
+    explicitly lists forms of digital evidence and rules for how to check whether
+    the digital evidence is factual.
+
+
+    HuaTaiMei v Tongdao Development case before the new guidance. However, the decision
+    in the case continues to shed light on how Blockchain could be used as evidence
+    even now. It is worth noting how the court handled the case.
+
+
+    In 2017, jurists also wrote an article, and the court ruling was also published
+    on July 24th. On the same day, the article was re-posted on the internet. Tongdao
+    Development (TDD), a company with headquarters in Shenzhen, Guangdong Province,
+    is the registered owner of the website.
+
+
+    The court considered three factors: the credentials of the evidence storage platform,
+    the reliability of the tools, and the trustworthiness of the blockchain-based
+    evidence. The reasoning is similar to what people say when giving an answer. Can
+    the person be trusted? Does they have adequate tools? Will the person deliver
+    the product?
+
+
+    The re-posting was without HuaTai''s permission. HuaTai claimed that TDD had infringed
+    on its intellectual property rights and sued for damages. The case was handled
+    by Hangzhou Internet Court on March 15th, 2018.
+
+
+    The first court looked at what company operated the evidence storage platform.
+    Its shareholders were different from HuaTai, and its operations independent of
+    HuaTai''s and Kuaibo''s as a third-party digital evidence storage platform [2]'
+  - '[PAGE 1]
+
+
+    # Client
+
+
+    # Server
+
+
+    Generate $R_c$
+
+
+    ```
+
+    $M_1 = (ID_C, R_C, ED, LOC)$
+
+    ```
+
+
+    Generate: $R_s$
+
+    First: $(ID_s, C_s, R_{sf})$
+
+
+    Generate
+
+    $D_C = Trunc(Hash(K_C || R_C))
+
+    $R_C = ID_C || ID_D || ED || LOC)$
+
+
+    ```
+
+    $M_2 = (ID_s, R_s)$
+
+    ```
+
+
+    Compute
+
+    $R = Hash(K_C || R_C || ID_C)$
+
+    $ID_D || ED || LOC)
+
+    Verify:
+
+    $Trans_C(ID) = D_C$
+
+    Generate: EM
+
+    Compute
+
+    $ET = TS + VP$
+
+
+    ```
+
+    $M_3 = (ID_C, D_C)$
+
+    ```
+
+
+    Store on blockchain:
+
+    $[EM, ID_C, ID_s, TS, ET, LOC, R_C, R_s, H]$
+
+
+    ```
+
+    $M_4 = EM$
+
+    ```
+
+
+    Figure 1. Preservation Protocol
+
+
+    # Entity
+
+
+    # Verifier
+
+
+    # Server
+
+
+    ```
+
+    $M_1 = (ED'', EM'')$
+
+    ```
+
+
+    ```
+
+    $M_2 = (ED'', EM'')$
+
+    ```
+
+
+    +   - Find on blockchain:
+
+    $[EM, ID_C, ID_s, TS, ET, LOC, R_C, R_s]$
+
+    - Verify $ET = TS$
+
+    - Verify TS:
+
+    - Find $(ID_c, K_c)$
+
+    - Hash $Hash(K_C || R_C || ID_C || ID_D || ED || LOC) = H$
+
+
+    ```
+
+    $VR = "Verified." or other error messages.
+
+    ```
+
+
+    Figure 2. Verification Protocol
+
+
+    The court moved to examine the related tools. The evidence storage platform used
+    cloud services from Alibaba, which were believed to be reliable. Open-source software
+    from Google, and Curl, a command-line tool for transferring files, were used to
+    capture snapshots of the concerned web pages respectively. The tools used to work
+    automatically, and it was unlikely for the processes to have been tampered with.
+
+
+    are and common both in practical systems [4] and tethering systems [5]. Therefore,
+    the court decided to check whether the digital evidence had been put on the Blockchain,
+    and the stored evidence was what Huatai submitted to the court.
+
+
+    We need locked key for authentication between the client and the server in the
+    Preservation Protocol with an SSL (socket layer type) key [6][7]. Rather than
+    using ID-authentication with Key Generator Center (KGC) [8], because scalar multiplication
+    is computationally expensive. Further, we exploit NSB channel to involve client-server
+    interaction, which has great advantages in protecting
+
+
+    39'
+  - "[PAGE 2]\n\nreliable and convenient authentication function for equipment\n9].\n\
+    \nThe key here is the hash value of the digital evidence.\nAfter the snapshots\
+    \ and source code of the concerned web\npages were acquired, they were put together,\
+    \ and a computer\nalgorithm SHA256 was used to create a hash value.\nThe snapshots,\
+    \ the source code and the hash value were\nconsequently on the blockchain.\n\n\
+    The SHA256 algorithm ensures that the change in\nwould lead to a different hash\
+    \ value [10][11].\nThe SHA256 algorithm and HMAC-SHA256 (hash-based)\nmessage\
+    \ authentication code (SHA256) are widely used in\nInternet of Things (IoT) to\
+    \ provide high-strength\nsecurity [12][13]. The hash values from two blockchain\n\
+    systems and hash values from evidence submitted matched. This proved the\nevidence\
+    \ was trustworthy.\n\nTABLE I. INFORMATION USED IN LITIGATION\n\n| Litigation\
+    \ type | Attributes |\n|---|---|\n| Case overview | CaseName, CourtName, Claimant-Defendant,\
+    \ typeProcedure, Verdict, Date of Service, Date of Acceptance, Date of Verdict.\
+    \ |\n| Case grounds | CaseName. |\n| Legal information | Claimant-Defendant, Residence,\
+    \ Lawyer |\n| Blockchain | Bitcoin, Bitcoin Transaction Hash, Blockchain URL,\
+    \ Chain ID, Block Chain Content, SHA256, Transaction Time, Block Time, KEYMR,\
+    \ Bitcoin Time |\n\n+   * Client holds the evidence data (ED) to be preserved\
+    \ in\nt blockchain.\n\n+   * Client and Server share a secret: $K_c$.\n\n+   *\
+    \ Client (C) generates a random value $R_c$ and sends $M_c$\nto Server (S) via\
+    \ HTTPS channel:\n\n```\n$C \rightarrow M_c = (ID_c, R_c, ED, LC_c).$\n```\n\n\
+    +   * S generates a random value $R_s$ and sends $M_s$ to C via no proof and\n\
+    locking (nsb) channel:\n\n```\n$S \rightarrow M_s = (ID_s, R_s)$.\n```\n\n+  \
+    \ * C computes $D_c$ and sends $M_j$ to S via no proof and\nlocking (nsb) channel:\n\
+    \n```\n$Trunc([0,1]^{32}), D_c = Trunc(Hash(K_c \\parallel R_s \\parallel ID_s\
+    \ \\parallel ID_c) \\parallel ED \\ \\parallel LC_c)),\nM_s = (ID_s, D_c)$.\n\
+    ```\n\ncan be delivered by short message service (SMS)\nconverted from Dc.\n\n\
+    +   * Upon receiving $M_s$, C shares $K_c'$ shared with\nidentified $ID_s$ and\
+    \ verifies $D_c$:\n\n```\n$H = Hash(K_c' \\parallel R_c \\parallel ID_c \\parallel\
+    \ ID_s \\parallel ED \\parallel LC_c)$.\n```\n\n+   * Preservation Stage\nIf verified,\
+    \ the timestamp (TS) from the\nNational Time Service Center (NTSC):\n\n+   * NTSC\
+    \ $\rightarrow$ TS.\nS computes evidence verification (ET):\n\n+   * ET = TS +\
+    \ VP.\n\n+   * S generates evidence mark (EM), which can be\neidence verification\
+    \ counter.\n\n+   * S stores the evidence on blockchain:\n\n```\n$S \rightarrow\
+    \ Blockchain: \\{EM, ID_c, ID_s, TS, ET, LC, R_c, R_s\\}$.\n```\n\n+   * S sends\
+    \ $M_s$ to C via HTTPS channel:\n\n```\n$S \rightarrow C_m = EM$.\n```\n\nII.\
+    \ PROTOCOL\n\nA. Preservation Protocol\nPreservation protocol serves hash evidence\
+    \ function\ncode generated by evidence submitted by the Client. The\nEvidence\
+    \ Protocol is described below and illustrated in\nFigure 1.\n\n+   1) Initialization\n\
+    Client and Server can generate different ID to\nthemselves, to comply with legal\
+    \ requirements, the Client\nneeds to fetch its current location (LOC) by a legal\
+    \ server,\npre-shared secret with a legal server. Formally, the\ninitialization\
+    \ proceeds as follows:\n\n+   * Client holds evidence identification $ID_c$ and\
+    \ $LC$.\n\n+   * Server holds identification $ID_s$ and pre-set\nevidence validity\
+    \ period (VP).\n\nB. Verification Protocol\nVerification protocol enables to confirm\
+    \ whether\nthe evidence is legally recorded on blockchain. The\nVerification Protocol\
+    \ is described below and illustrated in\nFigure 2\n\n+   1) Initialization\nIn\
+    \ general, some entity (legal or illegal) wants to prove that\nhe/she is holding\
+    \ legal evidence data (ED') to verify (V),\nFormally, the initialization proceeds\
+    \ as follows:\n\n40"
+  md: '
+
+    # A Location-based Blockchain Preservation Wireless Communication Scheme for TongdaoYiMei
+    v Tongdao Development Case
+
+
+    Bin Chen
+
+    Suzhou Customs District P. R. China
+
+
+    Xin Huang
+
+    College of Data Science, Tianjin University of Technology.
+
+    Taiyuan, China
+
+
+    Fan Liu
+
+    Suzhou Information Technology Ltd.
+
+    Suzhou, China
+
+
+    Haotian Yin
+
+    College of Data Science, Tianjin University of Technology.
+
+    Taiyuan, China
+
+
+    **Abstract**-HuaTaiMei v Tongdao Development case was handled by Hangzhou Internet
+    Court on March 15th, 2018. The court ruled in favor of HuaTai and awarded monetary
+    damages of 4,000 RMB. This is seen one of the vanguard cases for the use of Blockchain
+    as a form of digital evidence. The case was certified with verified wireless secret
+    communication scheme to meet legal requirement, ensure that digital evidence is
+    securely stored on the blockchain and the device is activated by relevant department
+    lead.
+
+
+    The court ruled in favor of HuaTai and awarded monetary damages of 4,000 RMB.
+
+
+    This is seen one of the vanguard cases for the use of Blockchain as a form of
+    digital evidence.
+
+
+    The Civil Procedure Law in China allows for use of digital evidence. as any evidence
+    used should be factual, related to the case and acquired in a lawful manner. many
+    were reluctant to accept digital evidence, as could be difficult to prove that
+    the digital evidence is factual.
+
+
+    **Keywords--blockchain; electronic evidence; judicial forensics; out-of-band chatbot**
+
+
+    # I. INTRODUCTION
+
+
+    Daishobao (Kuaibo) is a regional newspaper in Hangzhou, Zhejiang Province. HuaTaiMei
+    is a company registered in Hangzhou. On July 24th, 2013, Kuaibo signed a contract
+    with sole license to HuaTai. This contract granted it the right to publish the
+    post articles on the internet by Kuaibo and the right to sue for damages in cases.
+
+
+    In 2019, the People''s Court issued a guidance on digital evidence. The guidance
+    explicitly lists forms of digital evidence and rules for how to check whether
+    the digital evidence is factual.
+
+
+    HuaTaiMei v Tongdao Development case before the new guidance. However, the decision
+    in the case continues to shed light on how Blockchain could be used as evidence
+    even now. It is worth noting how the court handled the case.
+
+
+    In 2017, jurists also wrote an article, and the court ruling was also published
+    on July 24th. On the same day, the article was re-posted on the internet. Tongdao
+    Development (TDD), a company with headquarters in Shenzhen, Guangdong Province,
+    is the registered owner of the website.
+
+
+    The court considered three factors: the credentials of the evidence storage platform,
+    the reliability of the tools, and the trustworthiness of the blockchain-based
+    evidence. The reasoning is similar to what people say when giving an answer. Can
+    the person be trusted? Does they have adequate tools? Will the person deliver
+    the product?
+
+
+    The re-posting was without HuaTai''s permission. HuaTai claimed that TDD had infringed
+    on its intellectual property rights and sued for damages. The case was handled
+    by Hangzhou Internet Court on March 15th, 2018.
+
+
+    The first court looked at what company operated the evidence storage platform.
+    Its shareholders were different from HuaTai, and its operations independent of
+    HuaTai''s and Kuaibo''s as a third-party digital evidence storage platform [2]
+
+
+    ## II. PROTOCOL
+
+
+    ### A. Preservation Protocol
+
+    Preservation protocol serves hash evidence function code generated by evidence
+    submitted by the Client. The Evidence Protocol is described below and illustrated
+    in Figure 1.
+
+
+    1) Initialization
+
+    Client and Server can generate different ID to themselves, to comply with legal
+    requirements, the Client needs to fetch its current location (LOC) by a legal
+    server, pre-shared secret with a legal server. Formally, the initialization proceeds
+    as follows:
+
+
+    - Client holds evidence identification $ID_c$ and $LC$.
+
+    - Server holds identification $ID_s$ and pre-set evidence validity period (VP).
+
+    - Client holds the evidence data (ED) to be preserved in blockchain.
+
+    - Client and Server share a secret: $K_c$.
+
+    - Client (C) generates a random value $R_c$ and sends $M_c$ to Server (S) via
+    HTTPS channel:
+
+    ```
+
+    $M_1 = (ID_C, R_C, ED, LOC)$
+
+    ```
+
+    - S generates a random value $R_s$ and sends $M_s$ to C via no proof and locking
+    (nsb) channel:
+
+    ```
+
+    $M_2 = (ID_s, R_s)$
+
+    ```
+
+    - C computes $D_c$ and sends $M_s$ to S via no proof and locking (nsb) channel:
+
+    ```
+
+    $D_C = Trunc(Hash(K_C || R_C))$
+
+    $R_C = ID_C || ID_D || ED || LOC$
+
+    ```
+
+    - Upon receiving $M_s$, C shares $K_c''$ shared with identified $ID_s$ and verifies
+    $D_c$:
+
+    ```
+
+    $H = Hash(K_c'' \parallel R_c \parallel ID_c \parallel ID_s \parallel ED \parallel
+    LC_c)$
+
+    ```
+
+    - Preservation Stage
+
+    If verified, the timestamp (TS) from the National Time Service Center (NTSC):
+
+    - $NTSC \rightarrow TS$
+
+    - S computes evidence verification (ET):
+
+    - $ET = TS + VP$
+
+    - S generates evidence mark (EM), which can be evidence verification counter.
+
+    - S stores the evidence on blockchain:
+
+    ```
+
+    $S \rightarrow Blockchain: \{EM, ID_C, ID_s, TS, ET, LC, R_C, R_s\}$
+
+    ```
+
+    - S sends $M_s$ to C via HTTPS channel:
+
+    ```
+
+    $S \rightarrow C_m = EM$
+
+    ```
+
+
+    Figure 1. Preservation Protocol
+
+
+    ### B. Verification Protocol
+
+    Verification protocol enables to confirm whether the evidence is legally recorded
+    on blockchain. The Verification Protocol is described below and illustrated in
+    Figure 2.
+
+
+    1) Initialization
+
+    In general, some entity (legal or illegal) wants to prove that he/she is holding
+    legal evidence data (ED'') to verify (V),
+
+
+    The court moved to examine the related tools. The evidence storage platform used
+    cloud services from Alibaba, which were believed to be reliable. Open-source software
+    from Google, and Curl, a command-line tool for transferring files, were used to
+    capture snapshots of concerned web pages. The tools used work automatically, and
+    it was unlikely for processes to have tampered with are common in practical systems
+    [4] and tethering systems [5]. Therefore, the court decided to check whether the
+    digital evidence had been put on Blockchain, and the stored evidence was what
+    HuaTai submitted to the court.
+
+
+    We need authentication between the client and the server with SSL (socket layer)
+    key [6][7]. Rather than using Key Generator (KGC) [8], because scalar multiplication
+    is computationally expensive. Further, we exploit NSB channel to involve client-server
+    interaction, which has great advantages in reliable and convenient authentication
+    function [9]. The key here is the hash value of the digital evidence. After the
+    snapshots and source code of concerned web pages were acquired, they were put
+    together, and consequently on blockchain. The SHA256 algorithm ensures that change
+    would lead to a different hash value [10][11]. The SHA256 algorithm and HMAC-SHA256
+    (hash-based message authentication code) are widely used in Internet of Things
+    (IoT) to provide high-strength security [12][13]. The hash values from two systems
+    and hash values from evidence matched. This proved the evidence was trustworthy.
+
+
+    TABLE I. INFORMATION USED IN LITIGATION
+
+
+    | Litigation type | Attributes |
+
+    | :--- | :--- |
+
+    | Case overview | CaseName, Claimant-Defendant, Procedure, Date of Acceptance,
+    Date of Verdict. |
+
+    | Case grounds | CaseName. |
+
+    | Legal information | Claimant-Defendant, Residence, Lawyer |
+
+    | Blockchain | Bitcoin, Bitcoin Transaction Hash, Blockchain URL, Chain ID, Block
+    Content, SHA256, Transaction Time, Block Time, KEYMR, Bitcoin Time |
+
+
+    Figure 2. Verification Protocol
+
+
+    ```
+
+    $M_1 = (ED'', EM'')$
+
+    ```
+
+    ```
+
+    $M_2 = (ED'', EM'')$
+
+    ```
+
+    - Find on blockchain:
+
+    $[EM, ID_C, ID_s, TS, ET, LOC, R_C, R_s, H]$
+
+    - Verify $ET = TS$
+
+    - Verify TS:
+
+    - Find $(ID_c, K_c)$
+
+    - Hash $Hash(K_C \parallel R_C \parallel ID_C || ID_D || ED || LOC) = H$
+
+    - $VR = "Verified."$
+
+
+    ```
+
+    $M_4 = EM$
+
+    ```
+
+    '
+  mdcn: '
+
+
+    # 通泰美诉同道开发案中基于位置的区块链保护无线通信方案
+
+
+    陈滨 (Bin Chen)
+
+    中国苏州海关区
+
+
+    黄鑫 (Xin Huang)
+
+    天津理工大学数据科学学院
+
+    中国太原
+
+
+    刘凡 (Fan Liu)
+
+    苏州信息技术有限公司
+
+    中国苏州
+
+
+    尹浩天 (Haotian Yin)
+
+    天津理工大学数据科学学院
+
+    中国太原
+
+
+    **摘要**-“华泰美诉同道开发”案由杭州互联网法院于2018年3月15日审理。法院判决华泰胜诉，并判处4,000元金赔偿。此案被视为区块链作为数字证据形式使用的先驱案例之一。该案通过经验证的无线秘密通信方案进行认证，以满足法律要求，确保数字证据安全地存储在区块链上，并由相关部门负责人激活设备。
+
+
+    法院判决华泰胜诉，并判处4,000元金赔偿。
+
+
+    此案被视为区块链作为数字证据形式使用的先驱案例之一。
+
+
+    《民事诉讼法》允许使用数字证据，因为任何使用的证据都应当是真实的、与案件相关的且通过合法途径获得的。许多人不愿接受数字证据，因为很难证明数字证据的真实性。
+
+
+    **关键词--区块链；电子证据；司法鉴定；带外链聊天机器人**
+
+
+    # I. 引言
+
+
+    大视宝（快报）是浙江省杭州的一份区域性报纸。华泰美是一家在杭州注册的公司。2013年7月24日，快报与华泰美签署了一份独家许可合同。该合同授予了快报在互联网上发布帖文文章的权利，以及在案件中起诉损害赔偿的权利。
+
+
+    2019年，人民法院发布了关于数字证据的指导意见。该意见明确列出了数字证据的形式以及检查数字证据是否真实的规则。
+
+
+    “华泰美诉同道开发”案发生在新指导意见发布之前。然而，该案的裁决直到现在仍为区块链如何作为证据提供启示。值得注意的是法院是如何处理此案的。
+
+
+    2017年，法学家们也写了一篇文章，法院判决也于7月24日发布。同一天，该文章在互联网上被转贴。总部位于广东省深圳的同道开发（TDD）是该网站的注册所有者。
+
+
+    法院考虑了三个因素：证据存储平台的资质、工具的可靠性以及基于区块链的证据的可信度。其推理与人们回答问题时的逻辑相似：人可以信任吗？他们有足够的工具吗？会交付产品吗？
+
+
+    转贴是在没有华泰美许可的情况下进行的。华泰美声称同道开发侵犯了其知识产权并起诉索赔。该案由杭州互联网法院于2018年3月15日审理。
+
+
+    法院首先查看是哪家公司运营证据存储平台。其股东与华泰美不同，其运营独立于华泰美和快报，作为一个第三方数字证据存储平台 [2]
+
+
+    ## II. 协议
+
+
+    ### A. 保护协议
+
+    保护协议为客户提交的证据生成的哈希证据函数代码提供服务。证据协议下文描述并如图1所示。
+
+
+    1) 初始化
+
+    客户端和服务器可以为自己生成不同的ID，为了符合法律要求，客户端需要通过合法服务器、合法服务器的预共享密钥获取其当前位置（LOC）。形式上，初始化过程如下：
+
+
+    - 客户端持有证据标识 $ID_c$ 和 $LC$。
+
+    - 服务器持有标识 $ID_s$ 和预设的证据有效期（VP）。
+
+    - 客户端持有要在区块链中保护的证据数据（ED）。
+
+    - 客户端和服务器共享 $K_c$。
+
+    - 客户端（C）生成随机值 $R_c$ 并通过 HTTPS 发送给服务器（S）：
+
+    ```
+
+    $M_1 = (LOC, R_c)$
+
+    ```
+
+    - 服务器（S）生成 $EM$ 并通过带外链通道发送给客户端（C）：
+
+    ```
+
+    $M_2 = (ID_s, VP)$
+
+    ```
+
+    - 客户端（C）生成证据标记 $EM$ 并通过 HTTPS 发送给服务器（S）：
+
+    ```
+
+    $M_3 = (ID_c, ED)$
+
+    ```
+
+    - 服务器（S）生成随机值 $R_s$ 并发送给客户端（C）：
+
+    ```
+
+    $M_4 = (EM, R_s)$
+
+    ```
+
+    - 客户端（C）计算哈希值 $H$ 并通过 HTTPS 发送给服务器（S）：
+
+    ```
+
+    $M_5 = (H, R_c, ED)$
+
+    ```
+
+    - 服务器（S）验证哈希值并存储证据：
+
+    ```
+
+    $H = H$
+
+    ```
+
+
+    图1. 保护协议
+
+
+    ### B. 验证协议
+
+    验证协议用于确认证据是否合法记录在区块链上。验证协议下文描述并如图2所示。
+
+
+    1) 初始化
+
+    通常，某些实体（合法或非法）想要证明其持有证据数据（ED''）以验证（V），
+
+
+    ```
+
+    $M_1 = (ED'', EM'')$
+
+    ```
+
+
+    '
+  merge: -1
+- raw:
+  - "[PAGE 3]\n\nThe entity holds information verified: (ED, EM).\n\n2) Verification\
+    \ Stage\n\n+   * The entity ($E$) sends $M_1$ to $V$ via HTTPS channel:\n* $E\
+    \ \rightarrow V; M_1 = (ED', EM')$.n* $V$ sends $M_2$ to $S$ via HTTPS channel:\n\
+    * $V \rightarrow S; M_s = (ED', EM')$.\n* Upon receiving $M_2$, $S$ uses $EM$\
+    \ to find information on blockchain. If ($EM'$, $ID$, $IDs$, $TS$, $ET$, $NC$,\
+    \ $C_c$, $H$), $S$ obtains the timestamp ($TS$) from NTSC:\n* blockchain: $S \r\
+    ightarrow (EM'$, $ID$, $IDs$, $TS$, $ET$, $LC$, $R_c$, $H_s)$;\n* $NTSC \rightarrow\
+    \ S; TS$.\n\n$S \rightarrow V; VR = \"Incorrect mark.\\$.\n\n$S$ verifies whether\
+    \ $ET < TS$; $S$ returns $VR$ to $V$ via HTTPS channel and abort the protocol:\n\
+    * $S \rightarrow V; VR = \"Expired mark.\\$.\n\n$S$ verifies whether $ID$ is valid\
+    \ using NTSC. If invalid, $S$ returns $VR$ to $V$ via HTTPS channel and aborts\
+    \ the protocol:\n* $S \rightarrow V; VR = \"Timestamp.\\$.\n\nUpon receiving $ID$\
+    \ and $H$, $S$ finds ($ID_c$, $C_c$) and verifies $ED$:nHash($C_c$) || $R_c$ ||\
+    \ $IDs$ || $ID$ || $ED = ED$.\nIf the equation fails, $S$ returns $VR$ to $V$\
+    \ via HTTPS channel and aborts the protocol:\n* $S \rightarrow V; VR = \"Verified.\\\
+    $.\n\nOtherwise, $S$ returns $VR$ to $V$ via HTTPS channel and aborts the protocol:\n\
+    * $S \rightarrow V; VR = \"Verification failed.\\$.\n\n# III. CONCLUSION\n\nHuaTaiYmei\
+    \ vs Tengao Development case was heard by Hangzhou Internet Center on March 15th,\
+    \ 2018. The court ruled in favor of HuaTai and awarded damages of 4000 RMB. This\
+    \ is seen as one of the cases for Blockchain as a form of digital.. In this case,\
+    \ a location-based blockchain preservation scheme is proposed to securely store\
+    \ the digital evidence.\n\n# REFERENCES\n\n+   [1] M. Pourabjad et al., \"Digital\
+    \ Forensics Architecture for Evidence Collection Preservation in IoT Environment\
+    \ Using Blockchain and Blockchain,\" in IEEE Access, 2019, pp. 15339–15349.\n\
+    [2] P. Rudy, \"Internetropol review of digital evidence 2016 - 2019,\" in International\
+    \ Conference and Security Symposium, vol. 28, pp. 49980–49992.\n[3] R. Zhang,\
+    \ X. Xu, and J. Li, \"Security and Privacy of Blockchain,\" in ACM Comput. Serv.,\
+    \ vol. 53, no. 3, 1–34, 2020.\n[4] A et al., \"Blockchain-based bitcoin payment\
+    \ system for digital evidence,\" IEEE Access, vol. 7, pp. 49906–49915, 2021.\n\
+    [5] M. Li, A. Xu, N. Wang, X. Huang, and J. Sheng, \"Efficient Bitcoin Transaction\
+    \ in Public Transport System: A First Implementation Based on Blockchain,\" in\
+    \ 12th IEEE International Conference on Computer and Security, Suzhou, China,\
+    \ 2018.\n[6] N. Liu, L. Xing, J. Huang, and J. Poster, \"A Framework for Identity\
+    \ Representation on Blockchain,\" in 12th IEEE International Conference on Security\
+    \ and Communications (Guangzhou), Guangzhou, Oct 10-12, pp. 751–754, 2016.\n[7]\
+    \ J. Cai and Y. Huang, \"Unlinking Privacy-Preserving Identity Authentication\
+    \ Without Cost,\" in IEEE Access, vol. 6, pp. 18570–18581, 2018.\n[8] J. Zhang,\
+    \ X. Wang, and W. Yi, \"Unlinking Privacy-Preserving Identity Authentication and\
+    \ Key Management for Disaster Scenarios,\" in IEEE International Journal of Things,\
+    \ vol. no. 1, pp. 878–890, 2020.\n[9] J. Zhang, N. Wang, and X. Xu, \"A secure\
+    \ privacy system for network-based blockchain,\" IEEE Access, vol. 4, pp. 9259–9260,\
+    \ 2016.\n[10] D. Rachmaniev, J. Targaran, and A. B. Chen, \"Comparative analysis\
+    \ of Blockchain and Smart Contract based applications,\" International Journal\
+    \ of Physics: Conference Series. Vol. 978. No. 1. IOP Publishing, 2018.\n[11]\
+    \ A. Khu, H. Al-Ahmed, and F. Taher, \"Medical image protection and sharing using\
+    \ Blockchain and Smart Contracts,\" 2017, 26th IEEE International Conference on\
+    \ Electronics, Circuits and Systems (ICCS), Batumi, Georgia, pp. 397–400, 2017.\n\
+    [12] N. Liu and Y. Liu, “Access System for Intelligent Buildings,” in Proc. 9th\
+    \ IEEE International Conference on Mobile Communications Applications, Xi’an,\
+    \ China, pp. 11–17, 2016.\n[13] N. Xu, C. Jiang, X. Huang and D. Lu, \"Role-Based\
+    \ Access Control System for Intelligent Buildings,\" 11th International Conference\
+    \ on Network and Security Science, Helsinki, 710–712, 2017."
+  md: '
+
+    The entity holds information verified: (ED, EM).
+
+
+    2) Verification Stage
+
+
+    - * The entity ($E$) sends $M_1$ to $V$ via HTTPS channel:
+
+    - $E \rightarrow V; M_1 = (ED'', EM'')$.
+
+    - $V$ sends $M_2$ to $S$ via HTTPS channel:
+
+    - $V \rightarrow S; M_s = (ED'', EM'')$.
+
+    - Upon receiving $M_2$, $S$ uses $EM$ to find information on blockchain. If ($EM''$,
+    $ID$, $IDs$, $TS$, $ET$, $NC$, $C_c$, $H$), $S$ obtains the timestamp ($TS$) from
+    NTSC:
+
+    - blockchain: $S \rightarrow (EM''$, $ID$, $IDs$, $TS$, $ET$, $LC$, $R_c$, $H_s)$;
+
+    - $NTSC \rightarrow S; TS$.
+
+
+    $S \rightarrow V; VR = "Incorrect mark."$
+
+
+    $S$ verifies whether $ET < TS$; $S$ returns $VR$ to $V$ via HTTPS channel and
+    abort the protocol:
+
+    - $S \rightarrow V; VR = "Expired mark."$
+
+
+    $S$ verifies whether $ID$ is valid using NTSC. If invalid, $S$ returns $VR$ to
+    $V$ via HTTPS channel and aborts the protocol:
+
+    - $S \rightarrow V; VR = "Timestamp."$
+
+
+    Upon receiving $ID$ and $H$, $S$ finds ($ID_c$, $C_c$) and verifies $ED$: Hash($C_c$)
+    || $R_c$ || $IDs$ || $ID$ || $ED = ED$.
+
+    If the equation fails, $S$ returns $VR$ to $V$ via HTTPS channel and aborts the
+    protocol:
+
+    - $S \rightarrow V; VR = "Verified."$
+
+
+    Otherwise, $S$ returns $VR$ to $V$ via HTTPS channel and aborts the protocol:
+
+    - $S \rightarrow V; VR = "Verification failed."$
+
+
+    # III. CONCLUSION
+
+
+    HuaTaiYmei vs Tengao Development case was heard by Hangzhou Internet Center on
+    March 15th, 2018. The court ruled in favor of HuaTai and awarded damages of 4000
+    RMB. This is seen as one of the cases for Blockchain as a form of digital.. In
+    this case, a location-based blockchain preservation scheme is proposed to securely
+    store the digital evidence.
+
+
+    # REFERENCES
+
+
+    - [1] M. Pourabjad et al., "Digital Forensics Architecture for Evidence Collection
+    Preservation in IoT Environment Using Blockchain and Blockchain," in IEEE Access,
+    2019, pp. 15339–15349.
+
+    - [2] P. Rudy, "Internetropol review of digital evidence 2016 - 2019," in International
+    Conference and Security Symposium, vol. 28, pp. 49980–49992.
+
+    - [3] R. Zhang, X. Xu, and J. Li, "Security and Privacy of Blockchain," in ACM
+    Comput. Serv., vol. 53, no. 3, 1–34, 2020.
+
+    - [4] A et al., "Blockchain-based bitcoin payment system for digital evidence,"
+    IEEE Access, vol. 7, pp. 49906–49915, 2021.
+
+    - [5] M. Li, A. Xu, N. Wang, X. Huang, and J. Sheng, "Efficient Bitcoin Transaction
+    in Public Transport System: A First Implementation Based on Blockchain," in 12th
+    IEEE International Conference on Computer and Security, Suzhou, China, 2018.
+
+    - [6] N. Liu, L. Xing, J. Huang, and J. Poster, "A Framework for Identity Representation
+    on Blockchain," in 12th IEEE International Conference on Security and Communications
+    (Guangzhou), Guangzhou, Oct 10-12, pp. 751–754, 2016.
+
+    - [7] J. Cai and Y. Huang, "Unlinking Privacy-Preserving Identity Authentication
+    Without Cost," in IEEE Access, vol. 6, pp. 18570–18581, 2018.
+
+    - [8] J. Zhang, X. Wang, and W. Yi, "Unlinking Privacy-Preserving Identity Authentication
+    and Key Management for Disaster Scenarios," in IEEE International Journal of Things,
+    vol. no. 1, pp. 878–890, 2020.
+
+    - [9] J. Zhang, N. Wang, and X. Xu, "A secure privacy system for network-based
+    blockchain," IEEE Access, vol. 4, pp. 9259–9260, 2016.
+
+    - [10] D. Rachmaniev, J. Targaran, and A. B. Chen, "Comparative analysis of Blockchain
+    and Smart Contract based applications," International Journal of Physics: Conference
+    Series. Vol. 978. No. 1. IOP Publishing, 2018.
+
+    - [11] A. Khu, H. Al-Ahmed, and F. Taher, "Medical image protection and sharing
+    using Blockchain and Smart Contracts," 2017, 26th IEEE International Conference
+    on Electronics, Circuits and Systems (ICCS), Batumi, Georgia, pp. 397–400, 2017.
+
+    - [12] N. Liu and Y. Liu, “Access System for Intelligent Buildings,” in Proc.
+    9th IEEE International Conference on Mobile Communications Applications, Xi’an,
+    China, pp. 11–17, 2016.
+
+    - [13] N. Xu, C. Jiang, X. Huang and D. Lu, "Role-Based Access Control System
+    for Intelligent Buildings," 11th International Conference on Network and Security
+    Science, Helsinki, 710–712, 2017.
+
+    '
+  mdcn: '
+
+
+    该实体持有经过验证的信息：(ED, EM)。
+
+
+    2) 验证阶段
+
+
+    - * 实体 ($E$) 通过 HTTPS 通道向 $V$ 发送 $M_1$：
+
+    - $E \rightarrow V; M_1 = (ED'', EM'')$。
+
+    - $V$ 通过 HTTPS 通道向 $S$ 发送 $M_2$：
+
+    - $V \rightarrow S; M_s = (ED'', EM'')$。
+
+    - 接收 $M_2$ 后，$S$ 使用 $EM$ 在区块链上查找信息。如果 ($EM''$, $ID$, $IDs$， $TS$, $ET$, $NC$，
+    $C_c$, $H$)，$S$ 从 NTSC 获取时间戳 ($TS$)：
+
+    - 区块链:$S \rightarrow (EM''$, $ID$, $IDs$, $TS$, $ET$, $LC$, $R_c$, $H_s)$；
+
+    - $NTSC \rightarrow S; TS$。
+
+
+    $S \rightarrow V; VR = "错误的标记."$
+
+
+    $S$ 验证 $ET < TS$；$S$ 通过 HTTPS 通道向 $V$ 返回 $VR$ 并终止协议：
+
+    - $S \rightarrow V; VR = "标记已过期."$
+
+
+    $S$ 使用 NTSC 验证 $ID$ 是否有效。如果无效，$S$ 通过 HTTPS 通道向 $V$ 返回 $VR$ 并终止协议：
+
+    - $S \rightarrow V; VR = "时间戳."$
+
+
+    接收到 $ID$ 和 $H$ 后，$S$ 找到 ($ID_c$, $C_c$) 并验证 $ED$：Hash($C_c$) || $R_c$ || $IDs$
+    || $ID$ || $ED = ED$。
+
+    如果等式失败，$S$ 通过 HTTPS 通道向 $V$ 返回 $VR$ 并终止协议：
+
+    - $S \rightarrow V; VR = "已验证."$
+
+
+    否则，$S$ 通过 HTTPS 通道向 $V$ 返回 $VR$ 并终止协议：
+
+    - $S \rightarrow V; VR = "验证失败."$
+
+
+    # III. 结论
+
+
+    杭州互联网法院于 2018 年 3 月 15 日审理了华泰悦美诉腾高开发案。法院判决华泰胜诉，并判赔 金4000 元。这被视为区块链作为数字……形式的案例之一。在本案中，提出了一种基于位置的区块链保护方案，以安全地存储数字证据。
+
+
+    # 参考文献
+
+
+    - [1] M. Pourabjad et al., "Digital Forensics Architecture for Evidence Collection
+    Preservation in IoT Environment Using Blockchain and Blockchain," in IEEE Access,
+    2019, pp. 15339–15349.
+
+    - [2] P. Rudy, "Internetropol review of digital evidence 2016 - 2019," in International
+    Conference and Security Symposium, vol. 28, pp. 49980–49992.
+
+    - [3] R. Zhang, X. Xu, and J. Li, "Security and Privacy of Blockchain," in ACM
+    Comput. Serv., vol. 53, no. 3, 1–34, 2020.
+
+    - [4] A et al., "Blockchain-based bitcoin payment system for digital evidence,"
+    IEEE Access, vol. 7, pp. 49906–49915, 2021.
+
+    - [5] M. Li, A. Xu, N. Wang, X. Huang, and J. Sheng, "Efficient Bitcoin Transaction
+    in Public Transport System: A First Implementation Based on Blockchain," in 12th
+    IEEE International Conference on Computer and Security, Suzhou, China, 2018.
+
+    - [6] N. Liu, L. Xing, J. Huang, and J. Poster, "A Framework for Identity Representation
+    on Blockchain," in 12th IEEE International Conference on Security and Communications
+    (Guangzhou), Guangzhou, Oct 10-12, pp. 751–754, 2016.
+
+    - [7] J. Cai and Y. Huang, "Unlinking Privacy-Preserving Identity Authentication
+    Without Cost," in IEEE Access, vol. 6, pp. 18570–18581, 2018.
+
+    - [8] J. Zhang, X. Wang, and W. Yi, "Unlinking Privacy-Preserving Identity Authentication
+    and Key Management for Disaster Scenarios," in IEEE International Journal of Things,
+    vol. no. 1, pp. 878–890, 2020.
+
+    - [9] J. Zhang, N. Wang, and X. Xu, "A secure privacy system for network-based
+    blockchain," IEEE Access, vol. 4, pp. 9259–9260, 2016.
+
+    - [10] D. Rachmaniev, J. Targaran, and A. B. Chen, "Comparative analysis of Blockchain
+    and Smart Contract based applications," International Journal of Physics: Conference
+    Series. Vol. 978. No. 1. IOP Publishing, 2018.
+
+    - [11] A. Khu, H. Al-Ahmed, and F. Taher, "Medical image protection and sharing
+    using Blockchain and Smart Contracts," 2017, 26th IEEE International Conference
+    on Electronics, Circuits and Systems (ICCS), Batumi, Georgia, pp. 397–400, 2017.
+
+    - [12] N. Liu and Y. Liu, “Access System for Intelligent Buildings,” in Proc.
+    9th IEEE International Conference on Mobile Communications Applications, Xi’an,
+    China, pp. 11–17, 2016.
+
+    - [13] N. Xu, C. Jiang, X. Huang and D. Lu, "Role-Based Access Control System
+    for Intelligent Buildings," 11th International Conference on Network and Security
+    Science, Helsinki, 710–712, 2017.
+
+
+    '
+  merge: 0
