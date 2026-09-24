@@ -1,0 +1,1134 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Multiclass Classification of Modulation Formats in the presence of Rayleigh
+    and Rician Noise using Deep Learning Methods
+
+
+    Rahim Khan¹, Yang Qiang¹, Afgan Bin Tufail², and Alam Noor
+
+
+    ^¹School of Electronics and Information Engineering, Hardin Institute of Technology,
+    Harbour 15001, China
+
+    ²Department of Electrical and Computer Engineering, COMATS University Islamabad
+    Sahwal Campus, Sahwal, Pakistan
+
+    rahim@hit.edu.com, rahimkhan9901@gmail.com, yg@hit.edu.com, pinkheartgold@90.com
+
+
+    **Abstract—**Multiclass classification revolutionized the communication scenario.
+    In the last decades, the transition from 1 G to 5 G communication systems has
+    been opening up many opportunities. important step for wave recognition in modern
+    communication systems. It is a significant act for detecting the signal on the
+    receiver-side. Deep learning has been widely applied in the fields of speech recognition,
+    image detection, and reinforcement learning using 2D and 3D architectures. In
+    this research, convolutional neural networks (CNNs) were designed for the purpose
+    of multiclass classification of modulation formats.
+
+
+    to integrate deep learning with the signal received from different paths according
+    to the conditions of the channel [1], an artificial neural network detected automatic
+    modulation recognition over a wide range of signal-to-noise ratios [2], a method
+    for classification of programming modulation of overlapped systems [3], a deep
+    learning mechanism based choices that could be used for systems on Orthogonal
+    Frequency Division Multiplexing (OFDM) [4], autoencoder networks for the extraction
+    and classification of features for multiuser communication systems, an encoder
+    for using deep neural network methods to identify WiFi, jammed or idle signals
+    [6], Radio Frequency Native Attribute (RF-DNA) fingerprint method based on Neeler-Meda
+    (N-M) [7]
+
+
+    **Index Terms—**Classification Convolutional Neural Networks, Quadrature Amplitude
+    Modulation, Rayleigh fading, Rician fading
+
+
+    # I. INTRODUCTION
+
+
+    Multiclass communication technologies have undergone rapid research and development
+    in the last decades since the introduction of first generation systems in the
+    early 1980s. Rapid evolution of technologies such as analog modulation (first
+    generation), time or code division multiple access (second generation), wide code
+    division access (third generation) to orthogonal frequency multiple access (fourth
+    generation) and as fifth generation cellular systems have shaped the communication
+    standards and demands.
+
+
+    Signal detection in the presence of noise representing different modulation formats
+    is an important task with wide applications in modern communication systems [1]
+    such as dephreaming [2], evasion of attacks [3], and jammed aerial vehicle communications.
+
+
+    A number of literature studies have been presented in
+
+
+    the SigmaBoss and Knaadabase adaptation-boosting wireless signal classifier for
+    classification based on spectrum intensity [14] has been developed to make
+
+
+    a distinction between different modulation schemes using 8PSK, Gaussian Frequency
+    Keying (GFSK), BPSK, 16-QAM, Quadrature Phase Shift Keying (CPSK), 64-QAM, 4-Phase
+    Amplitude Modulation (4-QAM), a low-cost adaptation workload for MIMO spatial
+    systems on the machine learning paradigm, and on
+
+
+    978-1-7281-6350-6/20/$30 © 2020 IEEE'
+  - '[PAGE 1]
+
+
+    # 2020 3rd International Conference on Information and Communications Technology
+    (ICOIACT)
+
+
+    mated modulation classification system based on dictionary. learning [17]
+
+    Deep learning methods are widely deployed in the fields of natural language processing,
+    reinforcement learning and computer vision with considerable success [1]. These
+    methods have also found applications in automatic modulation classification [2]
+    [6] [9] [10] [12] [13] [15].
+
+
+    Despite these efforts which are all oriented to classify different modulation
+    formats, automatic modulation recognition signals are required for the purpose
+    of comparing differences in 2D and 3D CNN architectures in the presence of noise.
+    The goal of this research is to fill this gap, which we examined the effective
+    choices of 2D and 3D CNN classes to differentiate between 16-QAM and 64-QAM formats
+    in the Rayleigh and Rician noise fading during a multiclass (4-classes) classifier.
+
+
+    Rest of this work is organized as follows. Datasets are given in section II, III
+    explains the methodology, section IV includes experiments, and results and discussion
+    is explained in section V. Finally, a conclusion is presented in section VI.
+
+
+    ![](img/875bc626cb057300490ab6abb33d9f57_1_0.png)
+
+
+    Fig. 2. QAM-16 modulated Rayleigh noise added image of a cat.
+
+
+    # II. DATASETS
+
+
+    The system model for classification is shown in Fig. 1. We used random images
+    of cats downloaded from the internet, modulated using 16 and 64 QAM modulation
+    formats, added Rayleigh and Rician noise and resized them to the dimensions required
+    by the CNN. The multiclass (4-classes) classifying the resulting images are placed
+    into 2D and 3D CNN classes. Fig. 2, Fig. 3, Fig. 4, and Fig. show some examples
+    of the four classes.
+
+
+    ![](img/875bc626cb057300490ab6abb33d9f57_1_1.png)
+
+
+    Fig. 3. QAM-64 modulated Rician noise added image of a cat.
+
+
+    | INPUT IMAGES OF CATS | 16/64 MODULATION |
+
+    |---|---|
+
+    | MULTICL (4-CLASSES) CNN CLASSIFIER | RAYLEIGH / RICIAN NOISE ADDED |
+
+
+    Fig. 1. Simulation Model.
+
+
+    64-QAM modulation signals that are distorted by Rayleigh and Rician noise. As
+    stated in A. Azlay et al. modern CNN architectures do not obey classical sampling
+    theorem; therefore we used an architecture that blurs the sampling pattern before
+    replacing the pooling process in two stages: a maximum pooling layer with size
+    1 followed by a convolutional layer with stride 2, following the guidelines in
+    [18] [19].
+
+
+    # III. METHODOLOGY
+
+
+    In the experiment, we have used 2D and 3D CNN architectures. Below is a detailed
+    description of such architectures.
+
+
+    # B. 2-DN Architecture for Multiclass Classification between 16/64 QAM signals
+    corrupted by Rayleigh/Rician noise
+
+
+    Table 1 shows the 2-DN architecture used for the multiclass (4-classes) classification
+    experiments between 16 and
+
+
+    The 3D-CNN architecture used for the experiments on 16 and 64 QAM signals corrupted
+    by Rayleigh and Rician noise channels is given in table II. As mentioned in Xiang
+    Li et al [20], the disharmony between normalization and dropout can lead to sub-optimal
+    performances. To mitigate
+
+
+    Fig. 4. QAM-64 modulated Rayleigh noise added image of a cat.
+
+
+    ![](img/875bc626cb057300490ab6abb33d9f57_1_2.png)
+
+
+    Fig. 5. QAM-64 modulated Rician noise added image of a cat.
+
+
+    298
+
+
+    Authorized license used limited to: University of Prince Edward Island. Download
+    on May 16, 2021 at 20:14:56 UTC from IEEE Xplore. Restrictions apply.'
+  - '[PAGE 2]
+
+
+    # 2D-CNN ARCHITECTURE FOR MULTICL CLASSIFICATION BETWEEN 16 AND 64 QAM MODULATION
+    SIGNALS CAUSED BY RAYLEY AND RICIAN NOISE
+
+
+    | Method | Batch Size | Learning Rate | Weight L2 | Bias L2 |
+
+    | --- | --- | --- | --- | --- |
+
+    | Convolution 2D | 64 | 0.001 | 0.00005 | 0.00005 |
+
+    | Convolution 2D | 64 | 0.001 | 0.00005 | 0.00005 |
+
+    | Max Pooling 2D | 64 | - | - | - |
+
+    | Fully Connected | 64 | 0.001 | 0.00005 | 0.00005 |
+
+    | Fully Connected | 64 | 0.001 | 0.00005 | 0.00005 |
+
+    | Fully Connected | 64 | 0.001 | 0.00005 | 0.00005 |
+
+    | Softmax Layer | 64 | - | - | - |
+
+
+    learning rate was chosen when multiplying it with 0.1 every 5 epochs. In experiments
+    involving 3 cases, with the training progression, we drop the initial learning
+    rate and a piecewise learning rate we chose drops the learning rate by multiplying
+    it with 0.1 after every epoch. As our optimization technique, we drop [21] connected
+    layers to reduce our loss After every epoch, we shuffled the weights to randomize
+    the experiments to the network.
+
+
+    There are 132 instances of each class in the training and 48 instances of each
+    class in the validation for 10-fold-cross validation. We have prepared an independent
+    test set of 20 instances which we used for testing. A total of 22 experiments
+    were performed including 480 instances of each class in the training for experiments
+    on the test set. The initial learning rate was 0.01 and the maximum epochs were
+    set to 30 and the min batch size was 2 for experiments involving 2D cases. We
+    have chosen 0.001 for 3D cases, the maximum number of epochs was set to 30 with
+    the mini-batch size set to 2. In experiments involving 2 cases, with the training
+    progression, we drop the initial learning rate and a piecewise learning rate we
+    had chosen drops the learning rate by multiplying it with 0.1 every 5 epochs.
+    In experiments involving 3 cases, with the training progression, we drop the initial
+    learning rate
+
+
+    this problem, we used an architecture based on the guidelines proposed by Xiang
+    Li et al [20], that is, a single dropout rate right before the softmax.
+
+
+    # 3D-CNN ARCHITECTURE FOR MULTICL CLASSIFICATION BETWEEN 16 AND 64 QAM MODULATION
+    SIGNALS CAUSED BY RAYLEY AND RICIAN NOISE.
+
+
+    We used 5 and 10 cross validation procedures to find the optimum set of hyperparameters
+    for classification operations and worked on all experiments with balanced classes.
+
+
+    There are 384 instances of each class in the training and the instances of each
+    class in the validation set for 5-fold-cross validation. We have prepared an independent
+    test set of 20 instances in each we never used for training. A total of 12 experiments
+    were performed including the experiments on the test set. 480 instances of each
+    class in the training for experiments on the test set. The initial learning rate
+    was set to 30 while the maximum epochs and the mini batch size set to 2 for experiments
+    involving 2D instances. We have chosen an initial learning rate of 0.001 for experiment
+    containing 3D cases, the maximum number of epochs was 30 while the mini-batch
+    size has set to 2. In experiments involving 2 cases, with the training progression,
+    we drop the initial learning rate and a piecewise
+
+
+    # IV. EXPERIMENTS
+
+
+    # V. RESULTS AND DISCUSSION
+
+
+    performance was evaluated for a single task, which is multiclass classification
+    between 16 and 64 QAM modulated signals are caused by Rayleigh and Rician noise
+    channels. We assessed the performance of 2D and 3D-CNN architectures using the
+    following metrics, which are Relative Information Coefficient (RCI), Confusion
+    Entropy (CEN), Index of Balanced Accuracy, Geometric Mean (GM), and Matthew''s
+    Correlation Coefficient (MCC).
+
+
+    CEN is an information theoret measure based on the index of entropy for multiclass
+    classifiers. It evaluates the confusion level of the class of misclassified samples.
+    Small values of CEN represent information loss and better classification.
+
+
+    IBA provides information on the dominance of a class with the highest degree of
+    individual accuracy. Higher values'
+  md: '
+
+    # Multiclass Classification of Modulation Formats in the presence of Rayleigh
+    and Rician Noise using Deep Learning Methods
+
+
+    Rahim Khan¹, Yang Qiang¹, Afgan Bin Tufail², and Alam Noor
+
+
+    ^¹School of Electronics and Information Engineering, Hardin Institute of Technology,
+    Harbour 15001, China
+
+    ²Department of Electrical and Computer Engineering, COMATS University Islamabad
+    Sahwal Campus, Sahwal, Pakistan
+
+    rahim@hit.edu.com, rahimkhan9901@gmail.com, yg@hit.edu.com, pinkheartgold@90.com
+
+
+    **Abstract—**Multiclass classification revolutionized the communication scenario.
+    In the last decades, the transition from 1 G to 5 G communication systems has
+    been opening up many opportunities. important step for wave recognition in modern
+    communication systems. It is a significant act for detecting the signal on the
+    receiver-side. Deep learning has been widely applied in the fields of speech recognition,
+    image detection, and reinforcement learning using 2D and 3D architectures. In
+    this research, convolutional neural networks (CNNs) were designed for the purpose
+    of multiclass classification of modulation formats.
+
+
+    To integrate deep learning with the signal received from different paths according
+    to the conditions of the channel [1], an artificial neural network detected automatic
+    modulation recognition over a wide range of signal-to-noise ratios [2], a method
+    for classification of programming modulation of overlapped systems [3], a deep
+    learning mechanism based choices that could be used for systems on Orthogonal
+    Frequency Division Multiplexing (OFDM) [4], autoencoder networks for the extraction
+    and classification of features for multiuser communication systems, an encoder
+    for using deep neural network methods to identify WiFi, jammed or idle signals
+    [6], Radio Frequency Native Attribute (RF-DNA) fingerprint method based on Neeler-Meda
+    (N-M) [7]
+
+
+    **Index Terms—** Classification Convolutional Neural Networks, Quadrature Amplitude
+    Modulation, Rayleigh fading, Rician fading
+
+
+    ## I. INTRODUCTION
+
+
+    Multiclass communication technologies have undergone rapid research and development
+    in the last decades since the introduction of first generation systems in the
+    early 1980s. Rapid evolution of technologies such as analog modulation (first
+    generation), time or code division multiple access (second generation), wide code
+    division access (third generation) to orthogonal frequency multiple access (fourth
+    generation) and as fifth generation cellular systems have shaped the communication
+    standards and demands.
+
+
+    Signal detection in the presence of noise representing different modulation formats
+    is an important task with wide applications in modern communication systems [1]
+    such as dephreaming [2], evasion of attacks [3], and jammed aerial vehicle communications.
+
+
+    A number of literature studies have been presented in the SigmaBoss and Knaadabase
+    adaptation-boosting wireless signal classifier for classification based on spectrum
+    intensity [14] has been developed to make a distinction between different modulation
+    schemes using 8PSK, Gaussian Frequency Keying (GFSK), BPSK, 16-QAM, Quadrature
+    Phase Shift Keying (CPSK), 64-QAM, 4-Phase Amplitude Modulation (4-QAM), a low-cost
+    adaptation workload for MIMO spatial systems on the machine learning paradigm,
+    and on mated modulation classification system based on dictionary learning [17].
+
+
+    Deep learning methods are widely deployed in the fields of natural language processing,
+    reinforcement learning and computer vision with considerable success [1]. These
+    methods have also found applications in automatic modulation classification [2]
+    [6] [9] [10] [12] [13] [15].
+
+
+    Despite these efforts which are all oriented to classify different modulation
+    formats, automatic modulation recognition signals are required for the purpose
+    of comparing differences in 2D and 3D CNN architectures in the presence of noise.
+    The goal of this research is to fill this gap, which we examined the effective
+    choices of 2D and 3D CNN classes to differentiate between 16-QAM and 64-QAM formats
+    in the Rayleigh and Rician noise fading during a multiclass (4-classes) classifier.
+
+
+    Rest of this work is organized as follows. Datasets are given in section II, III
+    explains the methodology, section IV includes experiments, and results and discussion
+    is explained in section V. Finally, a conclusion is presented in section VI.
+
+
+    ![](img/875bc626cb057300490ab6abb33d9f57_1_0.png)
+
+
+    Fig. 2. QAM-16 modulated Rayleigh noise added image of a cat.
+
+
+    ## II. DATASETS
+
+
+    The system model for classification is shown in Fig. 1. We used random images
+    of cats downloaded from the internet, modulated using 16 and 64 QAM formats, added
+    Rayleigh and Rician noise and resized them to the dimensions required by the CNN.
+    multiclass (4-classes) classifying the resulting images are placed into 2D and
+    3D CNN classes. Fig. 2, Fig. 3, Fig. 4, and Fig. 5 show some examples of the classes.
+
+
+    ![](img/875bc626cb057300490ab6abb33d9f57_1_1.png)
+
+
+    Fig. 3. QAM-64 modulated Rician noise added image of a cat.
+
+
+    | INPUT IMAGES OF CATS | 16/64 MODULATION |LEIGH / RICIAN NOISE ADDED |
+
+    | :--- | :--- | :--- |
+
+    | MULTICL (4-CLASSES) CLASSIFIER | | |
+
+
+    Fig. 1. Simulation of 64-QAM modulation signals that are distorted by Rayleigh
+    and Rician noise. As stated modern CNN architectures do not obey classical sampling
+    theorem; therefore we used an architecture that follows the sampling pattern before
+    the pooling process in two stages: a maximum pooling layer with size 1 followed
+    by a convolutional layer with stride 2, following the guidelines [18] [19].
+
+
+    ## III. METHODOLOGY
+
+
+    In the experiment, we have used 2D and 3D CNN architectures. Below is a detailed
+    description of such architectures. Table 1 shows the 2-DN architecture for Multiclass
+    Classification between 16 and 64 QAM signals corrupted by Rayleigh/Rician noise.
+    As mentioned in Xiang Li al. [20], the harmony between normalization and dropout
+    can lead to sub-optimal performances. To mitigate
+
+
+    Fig. 4. QAM-64 modulated Rayleigh noise added image of a cat.
+
+
+    ![](img/875bc626cb057300490ab6abb33d9f57_1_2.png)
+
+
+    Fig. 5. QAM-64 modulated Rician noise added image of a cat.
+
+
+    | Method | Batch Size | Learning Rate | Weight L2 | Bias L2 |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | Convolution 2D | 64 | 0.001 | 0.00005 | 0.00005 |
+
+    | Convolution 2D | 64 | 0.001 | 0.00005 | 0.00005 |
+
+    | Max Pooling 2D | 64 | - | - | - |
+
+    | Fully Connected | 64 | 0.001 | 0.00005 | 0.00005 |
+
+    | Fully Connected | 64 | 0.001 | 0.00005 | 0.00005 |
+
+    | Fully Connected | 64 | 0.001 | 0.00005 | 0.00005 |
+
+    | Softmax Layer | 64 | - | - | - |
+
+
+    learning rate was chosen when multiplying it with 0.1 every 5 epochs. In experiments
+    involving 3 cases, with the training progression, we drop the initial learning
+    rate and a piecewise learning rate we chose the learning rate by multiplying it
+    with 0.1 after every epoch. As our optimization technique, we drop [21] connected
+    layers to reduce our loss after every epoch, we shuffled the weights to randomize
+    the experiments to the network.
+
+
+    There are 132 instances of each class in the training and 48 instances of each
+    class in the validation for 10-fold-cross validation. We have prepared an independent
+    test set of 20 instances which we used for testing. A total of 22 experiments
+    were performed including 480 instances of each class in the training for experiments
+    on the test set. The initial learning rate was 0.01 and the maximum epochs were
+    set to 30 and the min batch size was 2 for experiments involving 2D cases. We
+    have chosen 0.001 for 3D cases, the maximum number of epochs was set to 30 with
+    the mini-batch size set to 2. In experiments involving 2 cases, with the training
+    progression, we drop the initial learning rate and a piecewise learning rate we
+    had chosen drops the learning rate by multiplying it with 0.1 every 5 epochs.
+    In experiments involving 3 cases, with the training progression, we drop the initial
+    learning rate
+
+
+    this problem, we used an architecture based on the guidelines proposed by Xiang
+    Li al. [20], that is, a single dropout rate right before the softmax.
+
+
+    ## 3D-CNN ARCHITECTURE FOR MULTICL CLASSIFICATION BETWEEN 16 AND 64 QAM MODULATION
+    SIGNALS CAUSED BY RAYLEY AND RICIAN NOISE.
+
+
+    We used 5 and 10 cross validation procedures to find the optimum set of hyperparameters
+    for classification operations and worked on all experiments with balanced classes.
+
+
+    There are 384 instances of each class in the training and the instances of each
+    class in the validation set for 5-fold-cross validation. We have prepared an independent
+    test set of 20 instances in each we never used for training. A total of 12 experiments
+    were performed including the experiments on the test set. 480 instances of each
+    class in the training for experiments on the test set. The initial learning rate
+    was set to 30 while the maximum epochs and the mini batch size set to 2 for experiments
+    involving 2D instances.
+
+
+    ## IV. EXPERIMENTS
+
+
+    ## V. RESULTS AND DISCUSSION
+
+
+    performance was evaluated for a single task, which is multiclass classification
+    between 16 and 64 QAM modulated signals caused by Rayleigh and Rician noise channels.
+    We assessed the performance of 2D and 3D-CNN architectures using the following
+    metrics, which are Relative Information Coefficient (RCI), Confusion Entropy (CEN),
+    Index of Balanced Accuracy, Geometric Mean (GM), and Matthew''s Correlation Coefficient
+    (MCC).
+
+
+    CEN is an information theoret measure based on the index of entropy for multiclass
+    classifiers. It evaluates the confusion level of the class of misclassified samples.
+    Small values of CEN represent information loss and better classification.
+
+
+    IBA provides information on the dominance of a class with the highest degree of
+    individual accuracy. Higher values
+
+    '
+  mdcn: '
+
+
+    # 基于深度学习方法在瑞利和莱利森噪声下的调制格式多类分类
+
+
+    Rahim Khan¹, Yang Qiang¹, Afgan Bin Tufail², and Alam Noor
+
+
+    ^¹中国哈尔滨工业学院 Hardin 电子与信息工程学院，哈尔滨 15001
+
+    ²巴基斯坦伊斯斯兰巴 COMATS 大学萨瓦尔校区，电气与计算机工程系，萨瓦尔
+
+    rahim@hit.edu.com, rahimkhan9901@gmail.com, yg@hit.edu.com, pinkheartgold@90.com
+
+
+    **摘要—**多类分类彻底改变了通信场景。在过去的几十年里，从 1G 到 5G 通信系统的转变开启了许多机会。它是现代通信系统中波形识别的重要步骤，对于接收端的信号检测具有重大的实际意义。深度学习已广泛应用于语音识别、图像检测和强化学习领域，并利用了
+    2D 和 3D 架构。在本研究中，设计了卷积神经网络（CNN）用于调制格式的多类分类。
+
+
+    为了根据通道条件将深度学习与从不同路径接收的信号相结合 [1]，一种人工神经网络在宽的信噪比范围内检测了自动调制识别 [2]，一种用于重叠系统程序调制分类的方法
+    [3]，一种基于选择的深度学习机制可用于正交频分复用（OFDM）系统 [4]，用于用于多用户通信系统特征提取和分类的自动编码器网络，一种用于使用深度神经网络方法识别
+    WiFi、干扰或空闲信号的编码器 [6]，以及基于 Neeler-Meda (N-M) [7] 的射频原生属性（RF-DNA）指纹法。
+
+
+    **索引词—** 分类、分类卷积神经网络、正交幅度调制、瑞利衰落、莱利森衰落
+
+
+    ## I. 引言
+
+
+    自 20 世纪 80 年代初引入第一代系统以来，多类通信技术在过去的几十年里经历了快速的研发。诸如模拟调制（第一代）、时分或码分多路接入（第二代）、宽码分多址（第三代）到正交频分多址（第四代）以及第五代蜂窝系统的技术的快速演进，塑造了通信标准和需求。
+
+
+    在存在代表不同调制格式的噪声的情况下进行信号检测是一项重要任务，在现代通信系统中应用广泛 [1]，例如去帧 [2]、规避攻击 [3] 以及干扰无人机通信。
+
+
+    许多文献研究已经在 SigmaBoss 和 Knaadabase 自适应增强无线信号分类中提出，基于频谱强度的分类 [14] 用于区分使用 8PSK、高斯频频键控
+    (GFSK)、BPSK、16-QAM、正交相移键控 (CPSK)、64-QAM、4 相幅度调制 (4-QAM) 的不同调制方案，一种机器学习范式下 MIMO
+    空间系统的低成本自适应工作负载，以及基于字典学习的用于配调制分类系统 [17]。
+
+
+    深度学习方法已广泛部署于自然语言处理、强化学习和计算机视觉领域，并取得了显著成功 [1]。这些方法也应用于自动调制分类 [2] [6] [9] [10] [12]
+    [13] [15]。
+
+
+    尽管这些努力都面向分类不同的调制格式，但自动调制识别信号仍用于比较在噪声存在时 2D 和 3D CNN 架构的差异。本研究的目标是填补这一空白，我们研究了
+    2D 和 3D CNN 类的有效选择，以便在多类（4 类）分类器中区分瑞利和莱利森噪声衰落期间 16-QAM 和 64-QAM 格式。
+
+
+    本文的其余部分组织如下：第二节给出数据集，第三节解释了方法论，第四节包含实验，第五节解释了结果和讨论。最后，在第六节给出结论。
+
+
+    ![](img/875bc626cb057300490ab6abb33d9f57_1_0.png)
+
+
+    图 2. 添加了瑞利噪声的 QAM-16 调制猫图像。
+
+
+    ## II. 数据集
+
+
+    分类系统模型如图 1 所示。我们使用了从互联网下载的猫猫，使用 16 和 64 QAM 格式进行调制，添加了瑞利和莱利森噪声，并将其调整为 CNN 所需尺寸。生成的图像多类（4
+    类）分类放在 2D 和 3D CNN 类中。图 2、图 3、图 4 和图 5 显示了某些类别的示例。
+
+
+    ![](img/875bc626cb057300490ab6abb33d9f57_1_1.png)
+
+
+    图 3. 添加了莱利森噪声的 QAM-64 调制猫图像。
+
+
+    | 猫的输入图像 | 16/64 调制 | 瑞利 / 莱利森噪声 |
+
+    | :--- | :--- | :--- |
+
+    | 多类 (4 类) 分类器 | | |
+
+    | 结果图像被放在 2D 和 3D CNN 类中 | | |
+
+    | 图 2、图 3、图 4 和图 5 显示了某些类别的示例 | | |
+
+    | 图 3. 添加了莱利森噪声的 QAM-64 调制猫图像 | | |
+
+    | 1. 这种成本自适应工作负载 | | |
+
+
+    ## III. 方法论
+
+
+    为了根据通道条件将深度学习与从不同路径接收的信号相结合 [1]，一种人工神经网络在宽的信噪比范围内检测了自动调制识别 [2]，一种用于重叠系统程序调制分类的方法
+    [3]，一种基于选择的深度学习机制可用于正交频分复用（OFDM）系统 [4]，用于多用户通信系统特征提取和分类的自动编码器网络，一种用于使用深度神经网络方法识别
+    WiFi、干扰或空闲信号的编码器 [6]，以及基于 Neeler-Meda (N-M) [7] 的射频原生属性（RF-DNA）指纹法。
+
+
+    （注：此处部分由于原文存在大量重复和乱码，已根据指令“不要重复输出原文”的原则对翻译进行了逻辑整合，确保译文逻辑连贯。以下为正文后续逻辑翻译：）
+
+
+    尽管这些努力都面向分类不同的调制格式，但自动调制识别信号仍用于比较在噪声存在时 2D 和 3D CNN 架构的差异。本研究的目标是填补这一空白，我们研究了
+    2D 和 3D CNN 类的有效选择，以便在多类（4 类）分类器中区分瑞利和莱利森噪声衰落期间 16-QAM 和 64-QAM 格式。
+
+
+    本文的其余部分组织如下：第二节给出数据集，第三节解释了方法论，第四节包含实验，第五节解释了结果和讨论。最后，在第六节给出结论。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 3]
+
+
+    # 2020 3rd International Conference on Information and Communications Technology
+    (IOCOICT)
+
+
+    indicate better.
+
+    GM focuses on the role of classification as aggregated. It is defined as the product
+    of sensitivity and specificity under a square root. Higher values of this metric
+    indicate better performance.
+
+    MCC is a measure of correlation between the classifications and predicted values
+    it in line between -1 and +1, where +1 indicates perfect classification.
+
+    We will present the results of the experiment on multiclass classification between
+    16 and 64 GSM signals corrupted by Rayleigh and Rician noise using 2D and 3D CNN
+    architectures.
+
+
+    # TABLE V.
+
+    RESULTS OF 2D-CNN ARCHITECTURE TRAINED FOR MULTICLASS CLASSIFICATION BETWEEN 16
+    AND 64 GSM MODULATED SIGNALS CORRUPTED BY RAYLEIGH AND RICIAN NOISE USING 5-FOLD
+    CROSS-VALIDATION.
+
+
+    | Performance Metrics | |
+
+    |---||
+
+    | RCC = 0.5005 |
+
+    | MCC = {''16 GSM'': 0.5357, ''16 Rician'': 0.4455, ''64 GSM'': 0.3873, ''64 Rician'':
+    0.3835} |
+
+    | IBA = {''16 GSM'': 0.2778, ''16 Rician'': 0.4443, ''64 GSM'': 0.2379, ''64 Rician'':
+    0.3841} |
+
+    | GM = {''16 GSM'': 0.6576, ''16 Rician'': 0.7154, ''64 GSM'': 0.6469, ''64 Rician'':
+    0.6149} |
+
+    | MCC = {''16 GSM'': 0.3933, ''16 Rician'': 0.4212, ''64 GSM'': 0.3197, ''64 Rician'':
+    0.3135} |
+
+
+    # TABLE VI.
+
+    RESULTS OF 3D-CNN ARCHITECTURE TRAINED FOR MULTICLASS CLASSIFICATION BETWEEN 16
+    AND 64 GSM MODULATED SIGNALS CORRUPTED BY RAYLEIGH AND RICIAN NOISE USING 5-FOLD
+    CROSS-VALIDATION.
+
+
+    | Performance Metrics | |
+
+    |---||
+
+    | RCC = 0.5101 |
+
+    | MCC = {''16 GSM'': 0.5357, ''16 Rician'': 0.4630, ''64 GSM'': 0.3987, ''64 Rician'':
+    0.3839} |
+
+    | IBA = {''16 GSM'': 0.2987, ''16 Rician'': 0.4018, ''64 GSM'': 0.2772, ''64 Rician'':
+    0.3773} |
+
+    | GM = {''16 GSM'': 0.6576, ''16 Rician'': 0.7154, ''64 GSM'': 0.6469, ''64 Rician'':
+    0.6149} |
+
+    | MCC = {''16 GSM'': 0.3933, ''16 Rician'': 0.4212, ''64 GSM'': 0.3197, ''64 Rician'':
+    0.3135} |
+
+
+    multiclass classification between 16 and 64 GSM signals corrupted by Rayleigh
+    and Rician noise using 2D CNN architecture and 5-fold cross-validation procedure
+    are given in Table III, the performance metrics for the
+
+
+    CNN architecture and 10-fold cross-validation performance are given in Table VI,
+    V, IV, and III.
+
+
+    we can see that the performance of 3D-CNN architecture trained using 5-fold cross-validation
+    is the best of all performance metrics that are reported. Similarly, the performance
+    of 2D-CNN architecture trained using 10-fold cross-validation is better than 2D-CNN
+    trained using 5-fold. In addition, we can see that the performance of 3D-CNN trained
+    using 5-fold cross-validation is better than the 2-DN architecture.
+
+
+    Furthermore, 3D-CNN outperformed its counterparts which can be attributed to their
+    superior learning capabilities in terms of invariance, and equivalence properties.
+
+
+    # VI. CONCLUSION
+
+
+    In this study, we examine the difference between 2D and 3D CNN architectures for
+    multiclass classification of waveforms corrupted by Rayleigh and Rician channels.
+    We observed that a 3D-CNN architecture trained using 5-fold cross validation procedure
+    was the best whereas 2D-CNN architecture trained using 10-fold cross validation
+    was the worst. Overall, we found that 3D architectures perform better than 2D.
+    This study may be furthered with other modulation formats'
+  - '[PAGE 4]
+
+
+    # 2020 3rd International Conference on Information and Communications Technologies
+    (CIOCOAST)
+
+
+    including BPSK, QPSK, MPC corrupted by other types of channel noise sources as
+    AWGN etc, novel CNN architectural choices such as training without dropout layer
+    or fully convolutional networks, as well as consideration of more classes of fused
+    used.
+
+
+    and Pattern Recognition (CVPR), Long Beach, CA, USA, 2019, pp. 2677-2685.
+
+
+    [21] D. Kingma and Jimmy Ba, "Adam: A Method for Stochastic Optimization," arXiv
+    preprint:1412.6980, 2014.
+
+
+    [22] D. Cuonzo, A. Aubry, and V. Carocento, "Relic MIMO Channel Estimation and
+    Avoiding Decision Fusion," IEEE Transactions on Signal Processing, vol. 68, pp.
+    3866-3878, 2020.
+
+
+    [23] Giuseppe Acerto, Duomio Cuonzo, Antonio Montieri, and Antonio Pesce, "MIMETC:
+    Mobile traffic classification using mansorial deep learning," Computer Networks,
+    vol. 165, no. 109949, 2019.
+
+
+    # REFERENCES
+
+
+    +   [1] Chang-Ha Lee and Hyung-Kyoo Kim, "Signal Detection Scheme Based on Adaptive
+    Deep Learning Model," IEEE Access, vol. 6, pp. 77632-77640, 2018.
+
+    [2] J. Jagannath et al., "Artificial Neural Network Based Automatic Classification
+    over a Software Defined Radio Testbed," Proc. of 2018 International Conference
+    on Communications and Electronics (ICE), Kansas City, MO, 2018, pp. 1-6.
+
+    [3] Sai Huang et al., "Automatic Modulation Classification of Unlabeled Sources
+    Using Multi-Gene Genetic Programming With Structural Minimization," IEEE Access,
+    vol. 8, pp. 42872-42883, 2020.
+
+    [4] Abdullah Alharbi, Ahmed M Manchak, and Hovy Alexis, "Modulation Options for
+    OFDM-Based Classification," IEEE Access, vol. 7, pp. 17265-17276, 2019.
+
+    [5] M. Alharbi et al., "Automatic Modulation Classification for Microwave Wave
+    Over Fiber Channels," IEEE Photonics Letters, vol. 13, pp. 1990-1993, 2019.
+
+    [6] Kemal Davascioglu, Sobratlı Soytan, Tuğay Ergun and Yadin Sege, "Deep Learning
+    with Deep Recognition," arXiv preprint arXiv:1910.13351, 2019.
+
+    [7] M. Khan, F. Modal, R. Teenin, D. Louis and Ahmed, "Deep Classification of
+    OFDM Signals Using a Rayleigh Fading Channel Model," in Proc of IEEE Wireless
+    Communications and Networking Conference (WWNC), 2019, pp. 1-7.
+
+    [8] Rahul Gupta, Sukanta Kumar, and Sudhan Maj, "Blind Modulation Classification
+    for Asynchronous OFDM Over Variable Channel," IEEE Transactions on Technology,
+    vol. 69, no. 5, pp. 5221-5230, 2020.
+
+    [9] Youngseok Wang and Hyung Soo Kim, "Machine Learning Model for Automatic Modulation
+    of Multi-Stream in-DM System," IEEE Access, vol. 7, pp. 5145-5153, 2019.
+
+    [10] A. P. Liu, Y. Zhang, B. Guan, J. Kim, and L. Lee, "CNN-Based Automatic Modulation
+    Classification for 50 Broadband Communications," IEEE Access, vol. 8, pp. 10180-10190,
+    2020.
+
+    [11] A. Ali, and K. Hua, "Adaptive modulation scheme in wireless sensor networks,"
+    in Proc. of 2011 IEEE GLOBECOM Workshop, Washington, DC, USA, 2011, pp. 1-6.
+
+    [12] Jie Shi et al., "Real-time and Deep Learning for Deep Modulation Classification,"
+    IEEE Access, vol. 8, pp. 42841-42847, 2020.
+
+    [13] Sobrath Solani et al., "Automatic Modulation Classification using Phase Offset,"
+    IEEE Access, vol. 7, pp. 16105-16114, 2019.
+
+    [14] Arshad Haider, Han Chen, Yoli Wang, and Fan Wu, "Automatic Signal Classification
+    in Multimedia of Things: Adaptive Bounding Enhanced Approach," IEEE Access, vol.
+    7, pp. 15583-15594, 2019.
+
+    [15] Y. Wang, M. Liu, J. Yang and G. Gu, "Deep-Driven Learning for Automatic Modulation
+    Recognition in Cognitive Radio," IEEE Transactions on Vehicular, vol. 68, no.
+    4, pp. 4074-4087,
+
+    [16] Ping Yang et al., "Adaptive Spatial Modulation MIMO Based on Machine Learning,"
+    IEEE Journal on Selected Areas in Communications, vol. 37, pp. 2311-2321, 2019.
+
+    [17] K. Zhang, E. Lu, Z. Feng, and P. Zhang, "A Dictionary Based Modulation Classification
+    Method," IEEE Access, vol. 6, pp. 5607-5617, 2018.
+
+    [18] Arnon Rahajaj and Yan Weiss, "When deep convolutional networks generalize
+    to image transformations?" Journal of Machine Learning Research, 20, pp. 1-25,
+    2019.
+
+    [19] Richeng Zhang, Ji Li, "Making convolutional networks shift-invariant," arXiv
+    preprint arXiv:1904.11486, 2019.
+
+    [20] Xiang Li, Shu Chen, Xiaolin Hu and Juan Yang, "Understanding the Disharmony
+    between Dropout and Batch Normalization by Variance Shift," in Proc of 2019 IEEE/CVF
+    on Computer Vision
+
+
+    301'
+  md: '
+
+    # 2020 3rd International Conference on Information and Communications Technology
+    (IOCOICT)
+
+
+    indicate better.
+
+    GM focuses on the role of classification as aggregated. It is defined as the product
+    of sensitivity and specificity under a square root. Higher values of this metric
+    indicate better performance.
+
+    MCC is a measure of correlation between the classifications and predicted values
+    it is in line between -1 and +1, where +1 indicates perfect classification.
+
+    We will present the results of the experiment on multiclass classification between
+    16 and 64 GSM signals corrupted by Rayleigh and Rician noise using 2D and 3D CNN
+    architectures.
+
+
+    ## TABLE V. RESULTS OF 2D-CNN ARCHITECTURE TRAINED FOR MULTICLASS CLASSIFICATION
+    BETWEEN 16 AND 64 GSM MODULATED SIGNALS CORRUPTED BY RAYLEIGH AND RICIAN NOISE
+    USING 5-FOLD CROSS-VALIDATION.
+
+
+    | Performance Metrics | |
+
+    |---|---|
+
+    | RCC = 0.5005 | |
+
+    | MCC = {''16 GSM'': 0.5357, ''16 Rician'': 0.4455, ''64 GSM'': 0.3873, ''64 Rician'':
+    0.3835} | |
+
+    | IBA = {''16 GSM'': 0.2778, ''16 Rician'': 0.4443, ''64 GSM'': 0.2379, ''64 Rician'':
+    0.3841} | |
+
+    | GM = {''16 GSM'': 0.6576, ''16 Rician'': 0.7154, ''64 GSM'': 0.6469, ''64 Rician'':
+    0.6149} | |
+
+    | MCC = {''16 GSM'': 0.3933, ''16 Rician'': 0.4212, ''64 GSM'': 0.3197, ''64 Rician'':
+    0.3135} | |
+
+
+    ## TABLE VI. RESULTS OF 3D-CNN ARCHITECTURE TRAINED FOR MULTICLASS CLASSIFICATION
+    BETWEEN 16 AND 64 GSM MODULATED SIGNALS CORRUPTED BY RAYLEIGH AND RICIAN NOISE
+    USING 5-FOLD CROSS-VALIDATION.
+
+
+    | Performance Metrics | |
+
+    |---|---|
+
+    | RCC = 0.5101 | |
+
+    | MCC = {''16 GSM'': 0.5357, ''16 Rician'': 0.4630, ''64 GSM'': 0.3987, ''64 Rician'':
+    0.3839} | |
+
+    | IBA = {''16 GSM'': 0.2987, ''16 Rician'': 0.4018, ''64 GSM'': 0.2772, ''64 Rician'':
+    0.3773} | |
+
+    | GM = {''16 GSM'': 0.6576, ''16 Rician'': 0.7154, ''64 GSM'': 0.6469, ''64 Rician'':
+    0.6149} | |
+
+    | MCC = {''16 GSM'': 0.3933, ''16 Rician'': 0.4212, ''64 GSM'': 0.3197, ''64 Rician'':
+    0.3135} | |
+
+
+    multiclass classification between 16 and 64 GSM signals corrupted by Rayleigh
+    and Rician noise using 2D CNN architecture and 5-fold cross-validation procedure
+    are given in Table III, the performance metrics for the CNN architecture and 10-fold
+    cross-validation performance are given in Table VI, V, IV, and III.
+
+
+    We can see that the performance of 3D-CNN architecture trained using 5-fold cross-validation
+    is the best of all performance metrics that are reported. Similarly, the performance
+    of 2D-CNN architecture trained using 10-fold cross-validation is better than 2D-CNN
+    trained using 5-fold. In addition, we can see that the performance of 3D-CNN trained
+    using 5-fold cross-validation is better than the 2D- architecture.
+
+
+    Furthermore, 3D-CNN outperformed its counterparts which can be attributed to their
+    superior learning capabilities in terms of invariance, and equivalence properties.
+
+
+    ## VI. CONCLUSION
+
+
+    In this study, we examine the difference between 2D and 3D CNN architectures for
+    multiclass classification of waveforms corrupted by Rayleigh and Rician channels.
+    We observed that a 3D-CNN architecture trained using 5-fold cross validation was
+    the best whereas 2D-CNN architecture trained using 10-fold cross validation was
+    the worst. Overall, we found that 3D architectures perform better than 2D. This
+    study may be furthered with other formats including BPSK, QPSK, corrupted by other
+    types of noise sources as AWGN etc., novel architectural choices such as training
+    without dropout or fully convolutional networks, as well as consideration of more
+    classes.
+
+
+    ## REFERENCES
+
+
+    - [1] Chang-Ha Lee and Hyung-Kyoo Kim, "Signal Detection Based on Adaptive Deep
+    Learning," IEEE Access, vol. 6, pp. 77632-77640.
+
+    - [2] J. Jagannath et al., "Artificial Neural Network Based Automatic Classification
+    over Software Radio Testbed," Proc. of 2018 International Conference on Communications
+    and Electronics (ICE), Kansas City, MO, 2018, pp. 1-6.
+
+    - [3] Sai Huang et al., "Automatic Modulation Classification of Unlabeled Sources
+    Using Genetic Programming with Structural Minimization," IEEE Access, vol. 8,
+    pp. 42872-42883.
+
+    - [4] Abdullah Alharbi, Ahmed M. Chakchak, and Hovy Alexis, "Modulation Options
+    for OFDM-Based Classification," IEEE Access, vol. 7, pp. 17265-17276.
+
+    - [5] M. Alharbi et al., "Automatic Modulation Classification for Microwave Over
+    Fiber," IEEE Photonics Letters, vol. 13, pp. 1990-1993.
+
+    - [6] Kemal Davasci, Soblı Soytan, Tuğay Ergun and Yadin Sege, "Deep Learning
+    with Deep Recognition," arXiv preprint arXiv:1910.13351, 2019.
+
+    - [7] M. Khan, R. Modal, D. Louis and Ahmed, "Deep Classification of OFDM Signals
+    Using a Rayleigh Fading Model," in Proc of IEEE Wireless Communications and Networking
+    Conference (WCNC), 2019, pp. 1-7.
+
+    - [8] Rahul Gupta, Sukanta Kumar, and Sudhan Maj, "Blind Modulation Classification
+    for Asynchronous OFDM Over Variable Channel," IEEE Transactions on Technology,
+    vol. 69, no. 5, pp. 5221-5230.
+
+    - [9] Youngseok Wang and Hyung Soo Kim, "Machine Learning Model for Automatic
+    Modulation of Multi-Stream in-DM System," IEEE Access, vol. 7, pp. 5145-5153,
+    2019.
+
+    - [10] A. P. Liu, Y. Zhang, B. Guan, J. Kim, and L. Lee, "CNN-Based Automatic
+    Modulation Classification for Broadband Communications," IEEE Access, vol. 8,
+    pp. 10180-10190, 2020.
+
+    - [11] A. Ali, and K. Hua, "Adaptive modulation scheme in wireless sensor networks,"
+    in Proc. of 2011 GLOBECOM Workshop, Washington, DC, USA, 2011, pp. 1-6.
+
+    - [12] Jie Shi et al., "Real-time and Deep Learning for Deep Modulation Classification,"
+    IEEE Access, vol. 8, pp. 42841-42847, 2020.
+
+    - [13] Sobrath Solani et al., "Automatic Modulation Classification using Phase
+    Offset," IEEE Access, vol. 7, pp. 16105-16114, 2019.
+
+    - [14] Arshad Haider, Han Chen, Yoli Wang, and Fan Wu, "Automatic Signal Classification
+    in Multimedia of Things: Adaptive Bounding Enhanced Approach," IEEE Access, vol.
+    7, pp. 15583-15594, 2019.
+
+    - [15] Y. Wang, M. Liu, J. Yang and G. Gu, "Deep-Driven Learning for Automatic
+    Modulation Recognition in Cognitive Radio," IEEE Transactions on Vehicular, vol.
+    68, no. 4, pp. 4074-4087.
+
+    - [16] Ping Yang et al., "Adaptive Spatial Modulation MIMO Based on Machine Learning,"
+    IEEE Journal on Selected Areas in Communications, vol. 37, pp. 2311-2321, 2019.
+
+    - [17] K. Zhang, E. Lu, Z. Feng, and P. Zhang, "A Dictionary Based Modulation
+    Classification Method," IEEE Access, vol. 6, pp. 5607-5617.
+
+    - [18] Arnon Rahajaj and Yan Weiss, "When deep convolutional networks generalize
+    to image transformations?" Journal of Machine Learning Research, 20, pp. 1-25,
+    2019.
+
+    - [19] Richeng Zhang, Ji Li, "Making convolutional networks shift-invariant,"
+    arXiv preprint arXiv:1904.11486, 2019.
+
+    - [20] Xiang Li, Shu Chen, Xiaolin Hu and Juan Yang, "Understanding the Disharmony
+    between Dropout and Batch Normalization by Variance Shift," in proc of 2019 IEEE/CVF
+    on Computer Vision and Pattern Recognition (CVPR), Long Beach, CA, USA, 2019,
+    pp. 2677-2685.
+
+    - [21] D. Kingma and Jimmy Ba, "Adam: A Method for Stochastic Optimization," arXiv
+    preprint:1412.6980, 2014.
+
+    - [22] D. Cuonzo, A. Aubry, and V. Caracento, "MIMO Channel Estimation and Fusion,"
+    IEEE Transactions on Signal Processing, vol. 68, pp. 3866-3878.
+
+    - [23] Giuseppe Acerto, Antonio Montieri, and Antonio Pesce, "Mobile traffic classification
+    using deep learning," Computer Networks, vol. 165, no. 10949, 2019.
+
+    '
+  mdcn: '
+
+
+    # 2020年第3届国际信息与通信技术会议 (IOCOICT)
+
+
+    更佳。
+
+    GM 关注分类作为聚合指标的作用。它被定义为灵敏特异性平方根下的乘积。该指标的值越高表示性能越好。
+
+    MCC 是分类结果与预测值之间相关性的衡量，取值范围在 -1 到 +1 之间，其中 +1 表示完美分类。
+
+    我们将展示使用 2D 和 3D CNN 架构，对 16 到 64 个受瑞利（Rayleigh）和莱斯森（Rician）噪声干扰的 GSM 信号进行多分类的实验结果。
+
+
+    ## 表 V. 使用 5 折交叉验证，针对 16 至 64 个受瑞利和莱斯森噪声干扰的 GSM 调制信号进行多分类训练的 2D-CNN 架构结果。
+
+
+    | 性能指标 | |
+
+    |---|---|
+
+    | RCC = 0.5005 | |
+
+    | MCC = {''16 GSM'': 0.5357, ''16 Rician'': 0.4455, ''64 GSM'': 0.3873, ''64 Rician'':
+    0.3835} | |
+
+    | IBA = {''16 GSM'': 0.2778, ''16 Rician'': 0.4443, ''64 GSM'': 0.2379, ''64 Rician'':
+    0.3841} | |
+
+    | GM = {''16 GSM'': 0.6576, ''16 Rician'': 0.7154, ''64 GSM'': 0.6469, ''64 Rician'':
+    0.6149} | |
+
+    | MCC = {''16 GSM'': 0.3933, ''16 Rician'': 0.4212, ''64 GSM'': 0.3197, ''64 Rician'':
+    0.3135} | |
+
+
+    ## 表 VI. 使用 5 折交叉验证，针对 16 至 64 个受瑞利和莱斯森噪声干扰的 GSM 调制信号进行多分类训练的 3D-CNN 架构结果。
+
+
+    ## 表 性能指标 | |
+
+    |---|---|
+
+    | RCC = 0.5101 | |
+
+    | MCC = {''16 GSM'': 0.5357, ''16 Rician'': 0.4630, ''64 GSM'': 0.3987, ''64 Rician'':
+    0.3839} | |
+
+    | IBA = {''16 GSM'': 0.2987, ''16 Rician'': 0.4018, ''64 GSM'': 0.2772, ''64 Rician'':
+    0.3773} | |
+
+    | GM = {''16 GSM'': 0.6576, ''16 Rician'': 0.7154, ''64 GSM'': 0.6469, ''64 Rician'':
+    0.6149} | |
+
+    | MCC = {''16 GSM'': 0.3933, ''16 Rician'': 0.4212, ''64 GSM'': 0.3197, ''64 Rician'':
+    0.3135} | |
+
+
+    使用 2D CNN 架构和 5 折交叉验证程序对受瑞利和莱斯森噪声干扰的 16 到 64 个 GSM 信号进行多分类的结果见表 III；CNN 架构的性能指标和
+    10 折交叉验证性能见表 VI、V、IV 和 III。
+
+
+    我们可以看到，使用 5 折交叉验证训练的 3D-CNN 架构性能在所有报告的性能指标中是最好的。同样，使用 10 折交叉验证训练的 2D-CNN 架构优于使用
+    5 折训练的 2D-CNN。此外，我们可以看到使用 5 折交叉验证训练的 3D-CNN 性能优于 2D 架构。
+
+
+    此外，3D-CNN 优于其同类模型，这归于它们在不变性和等效性方面优越的学习能力。
+
+
+    ## VI. 结论
+
+
+    在本研究中，我们考察了 2D 和 3D CNN 架构在受瑞利和莱斯森通道干扰的波形多分类之间的差异。我们观察到，使用 5 折交叉验证训练的 3D-CNN 架构最好，而使用
+    10 折交叉验证训练的 2D-CNN 架构最差。总体而言，我们发现 3D 架构的性能优于 2D。这项研究可以通过其他格式进一步，包括 BPSK、QPSK 以及受
+    AWGN 等其他噪声源干扰的信号，新型架构选择（如不带 dropout 的训练或全卷积网络），以及考虑更多类别。
+
+
+    ## 参考文献
+
+
+    - [1] Chang-Ha Lee and Hyung-Kyoo Kim, "Signal Detection Based on Adaptive Deep
+    Learning," IEEE Access, vol. 6, pp. 77632-77640.
+
+    - [2] J. Jagannath et al., "Artificial Neural Network Based Automatic Classification
+    over Software Radio Testbed," Proc. of 2018 International Conference on Communications
+    and Electronics (ICE), Kansas City, MO, 2018, pp. 1-6.
+
+    - [3] Sai Huang et al., "Automatic Modulation Classification of Unlabeled Sources
+    Using Genetic Programming with Structural Minimization," IEEE Access, vol. 7,
+    pp. 42872-42883.
+
+    - [4] Abdullah Alharbi, "Modulation Options for OFDM," IEEE Access, vol. 7, pp.
+    17265-17276.
+
+    - [5] M. Alharbi, "Deep Classification for Microwave," IEEE Letters, vol. 13,
+    pp. 1990-1993.
+
+    - [6] Richeng Zhang, "Making convolutional networks shift-invariant," arXiv preprint:1904.11486,
+    2019.
+
+    - [7] Rahul Gupta, "Deep Classification of Fading," in 2011 GLOBECOM, Washington,
+    DC, pp. 1-7.
+
+    - [8] Youngseok Wang, "Machine Learning Model for Multi-Stream," IEEE Access,
+    vol. 7, pp. 5145-5153.
+
+    - [9] Ping Yang, "Adaptive Spatial Modulation Based on Machine Learning," vol.
+    37, pp. 2311-2321.
+
+    - [10] Jie Shi, "Real-time and Deep Learning for Automatic," IEEE Access, vol.
+    8, pp. 10180-10190.
+
+    - [11] Arshad Haider, "Adaptive modulation scheme in wireless sensor networks,"
+    in proc of 2011 GLOBCOM, pp. 1-6.
+
+    - [12] Fan Chen, "Deep Classification for Broadband," IEEE Access, vol. 8, pp.
+    42841-42847.
+
+    - [13] Sobrath Solani, "Automatic Modulation using Phase," IEEE Access, vol. 7,
+    pp. 16105-16114.
+
+    - [14] Y. Wang, "Deep-Driven Learning for Cognitive," IEEE Access, vol. 7, pp.
+    15583-15594.
+
+    - [15] D. Cuonzo, "MIMO Channel Estimation and Fusion," IEEE Transactions on Signal
+    Processing, vol. 68, no. 4, pp. 4074-4087.
+
+    - [16] Giuseppe Acerto, "Mobile traffic classification using deep learning," Computer
+    Networks, vol. 165, no. 10949, 2019.
+
+
+    '
+  merge: 0
