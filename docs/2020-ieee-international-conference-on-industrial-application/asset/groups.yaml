@@ -1,0 +1,1199 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Research on Fatigue Crack Detection Method of Asphalt Pavement Based on Machine
+    Learning
+
+
+    GUI Xuanlan
+
+    School of Road Bridge And Architecture
+
+    Chongqing Vocational College of Transportation
+
+    Chongqing, China
+
+    hxjjndi@163.com
+
+
+    ZHAN Wewei
+
+    School of Road Bridge And Architecture
+
+    Chongqing Vocational College of Transportation
+
+    Chongqing, China
+
+    xing20052@126.com
+
+
+    LONG Xinghang
+
+    School of Road Bridge And Architecture
+
+    Chongqing Vocational College of Transportation
+
+    Chongqing, China
+
+    xingiumumm@163.com
+
+
+    **Abstract—Based on the research results**, this paper proposes a method for fatigue
+    crack detection of asphalt pavement based on machine learning. Obtaining the crack
+    data from public sets and manually collected data, the cracks are classified into
+    three types: horizontal, longitudinal cracks and lateral cracks. The crack image
+    is processed using histogram equalization operation, noise processing, and crack
+    correction. After processing, the extraction and positioning of the image are
+    performed. Since there are fractures in the extracted image, it is merged into
+    a complete fracture region. On this basis, the crack detection network model of
+    asphalt pavement based on the collected data is input to train the model, and
+    the fatigue crack detection of asphalt pavement is realized. The experiment shows
+    that the method is effective for all kinds of fractures, and the detection effect
+    is ideal when the detection iteration reaches 10000 times.
+
+
+    **Keywords—**Asphalt pavement, Fatigue crack, Fatigue crack detection, Deep learning.
+
+
+    detection of cracks on asphalt pavement is is of great significance for reducing
+    the probability of traffic accidents. The technology based on image analysis and
+    processing is the basis for fatigue crack detection of asphalt pavement which
+    has been developed since the early 1990s. In present, researchers at home and
+    abroad have proposed various methods to detect cracks, such as the fatigue crack
+    detection method of Asphalt Pavement based on strength threshold and morphology.
+
+
+    Based on the above research results, this paper designs a machine learning-based
+    crack detection method for asphalt pavement.
+
+
+    # II METHOD DESIGN
+
+
+    # **Data acquisition**
+
+
+    In first, we collect the asphalt pavement fatigue crack data is composed of public
+    data and manually collected data. The types of cracks are divided into three types:
+    horizontal cracks, longitudinal cracks and mesh cracks.
+
+
+    # **Enhance and fracture part**
+
+
+    To perform a degree of enhancement on the manually collected data, the method
+    is as:
+
+
+    +   (1)It is a data enhancement method to fix the fracture image, that is to enhance
+    the image surface smoothness.
+
+
+    +   (2)It rotates the crack by rotating the original image clockwise or counterclockwise
+    by an angle, generally the degree of rotation is 90° and 180°.
+
+
+    +   (3)The random part of crack image is cropped and adjusted to the same size
+    as the original image.
+
+
+    +   (4)Perform translation on the crack image. When the crack is translated, it
+    is necessary to assume that the background is image, which means that only the
+    position of crack is preserved and the size does not change. The enhancement method
+    of translation is very useful.
+
+
+    +   (5)The random noise is added to the fracture image, to prevent the effect
+    of over-smoothing while increasing the set data;
+
+
+    # **Mark crack data**
+
+
+    For a common dataset, the data is already marked, it is not necessary to mark
+    it again. For the manually collected data, the labeling tool is needed to mark
+    the fracture image. After the marked image is used, an XML
+
+
+    In recent years, the development of economy and the progresses of science, technology,
+    and construction of roads is getting better and [1,2]. According to statistics
+    from the Central Intelligence Agency, the length of the world''s roads has 62
+    million kilometers in 2017, China''s highway network has reached 47.335 million
+    kilometers, and the highway mileage has reached 136,000 kilometers, ranking first
+    in the world [3]. In recent years, the mileage of highway in China has reached
+    140,000 kilometers has been increased year by year. On the one hand, good road
+    construction has brought convenience to people''s travel, but with the adverse
+    effects such as the increase of vehicles, on the other hand, the roads have been
+    affected by various degrees [4,5]. The damage and deformation of asphalt pavement
+    face cracks are caused by environmental factors and traffic diseases. The common
+    pavement diseases include fatigue cracks, pits, roots, subsidence, subsurface
+    and damage. Among them, fatigue cracks of asphalt pavement will not only reduce
+    road performance but also threaten road safety. According to the survey and statistics,
+    16% of traffic accidents are caused by fatigue cracks.
+
+
+    Fatigue cracks increase the severity of multi-vehicle collisions on various roads,
+    also increase the severity of bicycle collisions on highways, effective,'
+  - '[PAGE 1]
+
+
+    file processing the image will be generated, records the coordinate of the marker
+    box and whether there are cracks, which are used for the subsequent data [8,9];
+
+
+    # B. Pre-processing of crack image
+
+
+    The pre-processing of fracture image is as follows: grayscale, histogram equalization
+    operation processing noise, gamma correction processing. The specific processing
+    steps are:
+
+
+    Step 1: First, the original crack image is generated to the original image from
+    three channels into a single channel image, which is convenient for subsequent
+    processing [10];
+
+
+    Step 2: On this basis, histogram equalization operation is performed. The histogram
+    is the embodiment of distribution of gray values in an image. The image background
+    has low contrast, single image brightness is generated in a narrow range. The
+    high contrast with high contrast is needed to detect the characteristics of crack
+    image, and the distribution is relatively narrow and uniformly distributed. Due
+    to the characteristics of crack, the gap between crack and background is small,
+    so equalization of gray pixel value is needed to make the crack distribution more
+    obvious;
+
+
+    Step 3: And the original crack image contains lot of random noise and soft noise
+    processing, whereas the median filter is used for processing [11];
+
+
+    Step 4: Gamma correction is performed on the image after equalization and to obtain
+    the correct image. The formula is as follows:
+
+
+    > $y = x^\gamma$$
+
+
+    When $\gamma > 1$, the gray level of the left region is bright and the dark region
+    of image is darker. When $\gamma < 1$, the gray level of the left region of brightness
+    is stretched to brighter, and the right region is lighted. The overall brightness
+    of the crack image is dark. Therefore, the parameter $\gamma < 1$ is used to increase
+    the brightness contrast.
+
+
+    # C. Segmentation and recognition of cracks image
+
+
+    After processing, the fracture image is segmented and the iterated threshold selection
+    is an improvement of bethod. The idea of the algorithm is as follows: first select
+    an approximate threshold $T$, divide the image into two parts $R1$ and $R2$, calculate
+    the mean $u1$ and $u2$ of $R1$ and $R2$,
+
+
+    ```
+
+    $T = u1+u2$$
+
+    ```
+
+
+    and then select a threshold to iterate repeatedly until the threshold $T$ no longer
+    changes. The specific algorithm is follows:
+
+
+    Input: grayscale image after preprocessing
+
+
+    Output: binary image after iterative threshold segmentation.
+
+
+    Step
+
+
+    ```
+
+    T0 = (double(max(I)) + double(min(I)))/2 // obtain maximum and minimum pixels
+    of the grayscale image, and calculate the average value of the two points as the
+    initial threshold;
+
+    ```
+
+
+    Step 2: flag = 1;
+
+
+    Step 3: while
+
+
+    Step 4: R1 = T0 // Divide the original image into two areas: foreground and background
+    according to the threshold;
+
+
+    Step 5: R2~R1,
+
+
+    Step
+
+
+    ```
+
+    T1 = mean(double(R1)) + mean(double(R2)))/2 // calculate the new threshold by
+    the average value of the two areas/min;
+
+    ```
+
+
+    Step 7: abs(T1-T0) > 0 // whether the threshold is within a certain range;
+
+
+    Step 8: B0 = T1,
+
+
+    Step 9: end;
+
+
+    Step 10: bw = R1;
+
+
+    Step 11: th = T1
+
+
+    On this basis, the binary image is filtered to remove the noise interference.
+
+
+    The filtered image contains multiple domains containing the crack. It is used
+    to judge and filter the segments of the crack. The algorithm uses, the following
+    two keys in MATLAB:
+
+
+    +   [L, name] = bwlabel(bw); The corresponding function returns two values. The
+    first value is L, and the second is the same as the input matrix BW, which is
+    the ideal identification connecting the cracks in BW to distinguish different
+    domains; the second used is:
+
+
+    regionprops(''Area'',''MaxAxisLength'',''MinSize''). It is used to calculate the
+    size of each attribute value of the connected domain in the image. The first parameter
+    L of the regionprops(region) is the number of connected components, and the parameter
+    Area of the region is a scalar, and the cumulative sum of pixels to each connected
+    region is the length. The two parameters to the parameters after detecting each
+    connected region in the image using the standard second-order connected method
+    value. The parameter Area is used to measure the length of the crack along the
+    axis pixel, and the parameter minaxisLength is a scalar to measure the length
+    of the ellipse at the pixel level [12];
+
+
+    The algorithm idea of judging and recognizing the connected domains of cracks
+    is to obtain the domain label matrix; corresponding to the original image matrix
+    by the bwlabel() function, and then pass'
+  md: '
+
+    # Research on Fatigue Crack Detection Method of Asphalt Pavement Based on Machine
+    Learning
+
+
+    GUI Xuanlan
+
+    School of Road Bridge And Architecture
+
+    Chongqing Vocational College of Transportation
+
+    Chongqing, China
+
+    hxjjndi@163.com
+
+
+    ZHAN Weiwei
+
+    School of Road Bridge And Architecture
+
+    Chongqing Vocational College of Transportation
+
+    Chongqing, China
+
+    xing20052@126.com
+
+
+    LONG Xinghang
+
+    School of Road Bridge And Architecture
+
+    Chongqing Vocational College of Transportation
+
+    Chongqing, China
+
+    xingiumumm@163.com
+
+
+    **Abstract—**Based on the research results, this paper proposes a method for fatigue
+    crack detection of asphalt pavement based on machine learning. Obtaining the crack
+    data from public sets and manually collected data, the cracks are classified into
+    three types: horizontal, longitudinal cracks and lateral cracks. The crack image
+    is processed using histogram equalization operation, noise processing, and crack
+    correction. After processing, the extraction and positioning of the image are
+    performed. Since there are fractures in the extracted image, it is merged into
+    a complete fracture region. On this basis, the crack detection network model of
+    asphalt pavement based on the collected data is input to train the model, and
+    the fatigue crack detection of asphalt pavement is realized. The experiment shows
+    that the method is effective for all kinds of fractures, and the detection effect
+    is ideal when the detection iteration reaches 10000 times.
+
+
+    **Keywords—**Asphalt pavement, Fatigue crack, Fatigue crack detection, Deep learning.
+
+
+    The detection of cracks on asphalt pavement is of great significance for reducing
+    the probability of traffic accidents. The technology based on image analysis and
+    processing is the basis for fatigue crack detection of asphalt pavement which
+    has been developed since the early 1990s. In present, researchers at home and
+    abroad have proposed various methods to detect cracks, such as the fatigue crack
+    detection method of Asphalt Pavement based on strength threshold and morphology.
+
+
+    Based on the above research results, this paper designs a machine learning-based
+    crack detection method for asphalt pavement.
+
+
+    ## II METHOD DESIGN
+
+
+    ### Data acquisition
+
+
+    In first, we collect the asphalt pavement fatigue crack data which is composed
+    of public data and manually collected data. The types of cracks are divided into
+    three types: horizontal cracks, longitudinal cracks and mesh cracks.
+
+
+    ### Enhance and fracture part
+
+
+    To perform a degree of enhancement on the manually collected data, the method
+    is as:
+
+
+    - (1) It is a data enhancement method to fix the fracture image, that is to enhance
+    the image surface smoothness.
+
+    - (2) It rotates the crack by rotating the original image clockwise or counterclockwise
+    by an angle, generally the degree of rotation is 90° and 180°.
+
+    - (3) The random part of crack image is cropped and adjusted to the same size
+    as the original image.
+
+    - (4) Perform translation on the crack image. When the crack is translated, it
+    is necessary to assume that the background is image, which means that only the
+    position of crack is preserved and the size does not change. The enhancement method
+    of translation is very useful.
+
+    - (5) The random noise is added to the fracture image, to prevent the effect of
+    over-smoothing while increasing the set data;
+
+
+    ### Mark crack data
+
+
+    For a common dataset, the data is already marked, it is not necessary to mark
+    it again. For the manually collected data, the labeling tool is needed to mark
+    the fracture image. After the marked image is used, an XML...
+
+
+    In recent years, the development of economy and the progresses of science, technology,
+    and construction of roads is getting better [1,2]. According to statistics from
+    the Central Intelligence Agency, the length of the world''s roads has 62 million
+    kilometers in 2017, China''s highway network has reached 47.335 million kilometers,
+    and the highway mileage has reached 136,000 kilometers, ranking first in the world
+    [3]. In recent years, the mileage of highway in China has reached 140,000 kilometers
+    and has been increased year by year. On the one hand, good road construction has
+    brought convenience to people''s travel, but with the adverse effects such as
+    the increase of vehicles, on the other hand, the roads have been affected by various
+    degrees [4,5]. The damage and deformation of asphalt pavement cracks are caused
+    by environmental factors and traffic diseases. The common pavement diseases include
+    fatigue cracks, pits, roots, subsidence, subsurface and damage. Among them, fatigue
+    cracks of asphalt pavement will not only reduce road performance but also threaten
+    road safety. According to the survey and statistics, 16% of traffic accidents
+    are caused by fatigue cracks.
+
+
+    Fatigue cracks increase the severity of multi-vehicle collisions on various roads.
+
+
+    ## B. Mark crack data
+
+
+    In recent years, the development of economy and the progresses of science, technology,
+    and construction of roads is getting better [1,2]. According to statistics from
+    the Central Intelligence Agency, the length of the world''s roads has 62 million
+    kilometers in 2017, China''s highway network has reached 47.335 million kilometers,
+    and the highway mileage has reached 136,000 kilometers, ranking first in the world
+    [3]. In recent years, the mileage of highway in China has reached 140,000 kilometers
+    and has been increased year by year. On the one hand, good road construction has
+    brought convenience to people''s travel, but with the adverse effects such as
+    the increase of vehicles, on the other hand, the roads have been affected by various
+    degrees [4,5]. The damage and deformation of asphalt pavement cracks are caused
+    by environmental factors and traffic diseases. The common pavement diseases include
+    fatigue cracks, pits, roots, subsidence, subsurface and damage. Among them, fatigue
+    cracks of asphalt pavement will not only reduce road performance but also threaten
+    road safety. According to the survey and statistics, 16% of traffic accidents
+    are caused by fatigue cracks.
+
+
+    Fatigue cracks increase the severity of multi-vehicle collisions on various roads.
+
+
+    ### Pre-processing of crack image
+
+
+    The detection of cracks on asphalt pavement is of great significance for reducing
+    the probability of traffic accidents. The technology based on image analysis and
+    processing is the basis for fatigue crack detection of asphalt pavement which
+    has been developed since the early 1990s. In present, researchers at home and
+    abroad have proposed various methods to detect cracks, such as the fatigue crack
+    detection method of Asphalt Pavement based on strength threshold and morphology.
+
+
+    Based on the above research results, this paper designs a machine learning-based
+    crack detection method for asphalt pavement.
+
+
+    ### Segmentation and recognition of cracks
+
+
+    The crack detection network model of asphalt pavement based on the collected data
+    is input to train the model, and the fatigue crack detection of asphalt pavement
+    is realized. The experiment shows that the method is effective for all kinds of
+    fractures, and the detection effect is ideal when the detection iteration reaches
+    10000 times.
+
+    '
+  mdcn: '
+
+
+    # 基于机器学习的沥青路面疲劳裂检测方法研究
+
+
+    GUI轩岚
+
+    路桥工程学院
+
+    重庆交通职业学院
+
+    中国，重庆
+
+    hxjjndi@163.com
+
+
+    ZHAN伟伟
+
+    路桥工程学院
+
+    重庆交通职业学院
+
+    中国，重庆
+
+    xing20052@126.com
+
+
+    LONG兴航
+
+    路桥工程学院
+
+    重庆交通职业学院
+
+    中国，重庆
+
+    xingiumumm@163.com
+
+
+    **摘要—**根据研究结果，本文提出了一种基于机器学习的沥青路面疲劳裂检测方法。通过公开数据集和手动采集获取裂缝数据，将裂缝分为三类：横向裂、纵向裂和网裂。利用直方图均衡化操作、噪声处理和裂缝修正对图像进行处理。处理后进行图像的提取和定位。由于提取的图像存在断，将其合并为完整的裂缝区域。在此基础上，将基于采集数据的沥青路面裂缝检测网络模型输入进行训练，实现了沥青路面的疲劳裂检测。实验表明，该方法对各种裂缝均有效，当检测迭代次数达到10000次时，检测效果理想。
+
+
+    **关键词—**沥青路面，疲劳裂，疲劳裂检测，深度学习。
+
+
+    沥青路面裂缝检测对于减少交通事故发生概率具有重要意义。基于图像分析和处理的技术是自20世纪90年代初发展以来沥青路面疲劳裂检测的基础。目前，国内外研究人员提出了各种裂缝检测方法，例如基于强度阈值和形态的沥青路面疲劳裂检测方法。
+
+
+    基于上述研究结果，本文设计了一种基于机器学习的沥青路面裂缝检测方法。
+
+
+    ## II 方法设计
+
+
+    ### 数据采集
+
+
+    首先，我们收集了由公共数据手动采集数据组成的沥青路面疲劳裂数据。裂缝类型分为三种：横向裂、纵向裂和网裂。
+
+
+    ### 增强与断处理
+
+
+    为了对手动采集的数据进行某种程度的增强，方法如下：
+
+
+    - (1) 一种修复断图像的数据增强方法，即增强图像面的平滑度。
+
+    - (2) 通过将原始图像顺时针或逆时针旋转角度来旋转裂缝，通常旋转角度为90°和180°。
+
+    - (3) 对裂缝图像的随机部分进行裁剪并调整到与原始图像相同。
+
+    - (4) 对裂缝图像进行平移。当裂缝平移时，假设背景为图像，这意味着只保留裂缝的位置而不改变大小。平移增强方法非常有用。
+
+    - (5) 在断图像中添加随机噪声，在增加数据集的同时防止过度平滑的影响；
+
+
+    ### 标记裂缝数据
+
+
+    对于常用数据集，数据已经过标记，无需再次标记。对于手动采集的数据，需要标记工具来标记断图像。标记后的图像在使用后，XML...
+
+
+    ## B. 标记裂缝数据
+
+
+    近年来，经济的发展和科学技术以及道路建设的进步不断不断好 [1,2]。根据中央情报局的统计，2017年世界道路长度为6200万公里，中国公路网络达到4733.5万公里，公路里程达到136000公里，位居世界第一
+    [3]。近年来，中国公路里程已达到140000公里并逐年增加。一方面，良好的道路建设为人们的出行带来了便利，但随着车辆增加等负面影响，另一方面，道路受到了不同程度的影响
+    [4,5]。沥青路面裂缝的损坏和变形是由环境因素和交通病引起的。常见的路病包括疲劳裂、坑、车根、沉降、底空和损坏。其中，沥青路面的疲劳裂不仅会降低道路性能，还会威胁道路安全。根据调查统计，16%的交通事故是由疲劳裂引起的。
+
+
+    疲劳裂增加了各种道路上多车碰撞的严重性。
+
+
+    ### 裂缝图像预处理
+
+
+    沥青路面裂缝检测对于减少交通事故发生概率具有重要意义。基于图像分析和处理的技术是自20世纪90年代初发展以来沥青路面疲劳裂检测的基础。目前，国内外研究人员提出了各种裂缝检测方法，例如基于强度阈值和形态的沥青路面疲劳裂检测方法。
+
+
+    基于上述研究结果，本文设计了一种基于机器学习的沥青路面裂缝检测方法。
+
+
+    ### 裂缝分割与识别
+
+
+    将基于采集数据的沥青路面裂缝检测网络模型输入进行训练，实现了沥青路面的疲劳裂检测。实验表明，该方法对各种裂缝均有效，当检测迭代次数达到10000次时，检测效果理想。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    L, as an input to regionprops() function to obtain the area of each connected
+    domain The matrix is A, as well as the major AxisLength,the matrix of minor axis
+    matrix, and calculate the ratio of major and minor axes, iteratively detect the
+    connected domain area and major axis ratio, if the area is less than a threshold,
+    or the minor axis will be removed from the original image, and the chart will
+    be created by searching:
+
+
+    # L(i) < MinRate
+
+
+    Step 15:if // The connected regions whose axis ratio is less than the threshold
+    are eliminated;
+
+
+    Step 16: bw(L == i) = 0;
+
+
+    Step 17;end;
+
+
+    Step 18: bw = bw.
+
+
+    The specific algorithm of judging and screening fracture connected domain is as
+    follows:
+
+
+    # D. Joint of pavement cracks
+
+
+    Input: image filtered by binary graph, bw;
+
+
+    Since there are extracted fracture image, it is necessary to specify multiple
+    connected domain targets in a complete fracture image. The algorithm is: to use
+    the filtered connected domain binary image, using the ConvexHull function, the
+    hull of each connected domain in the binary graph and the total number of convex
+    hulls, then calculate the number of endpoints of each hull, and then loop it if
+    the number of endpoints is greater than two, calculate the Euclidean distance
+    and compare it with the set distance, if it is less than the threshold, draw a
+    line to connect, or until the next group of endpoints is reached. // The connected
+    region of fracture splicing is:
+
+
+    MinRate: The minimum ellipse''s axis and axis ratio threshold;
+
+
+    MinArea: Minimum threshold of connected domain area:
+
+
+    Input: image bw with fracture image binary mapping:
+
+
+    After output judging and screening, there is only one binary graph of fracture
+    connected domain bw;
+
+
+    len: The total number of convex hulls corresponding to each connected domain in
+    the binary
+
+
+    +   Step 1: [L, num] = bwlabel(bw); // Obtaining digital identification of fracture
+    connected domain L;
+
+
+    +   Step 2:
+
+
+    +   stats = regionprops(L, ''Area'', ''MajorAxisLength'');
+
+
+    +   m1 m2: The number of convex hulls corresponding to each domain of fracture;
+
+
+    +   Step 3: MinorAxisLength); // Obtaining the area of each connected domain of
+    the fracture, // the major axis of the ellipse and the minor axis of the ellipse
+    is
+
+
+    Output: After splicing, there is only one binary image of the complete connected
+    domain bw;
+
+
+    +   Step 4: Ap = cat(1, stats.Area);
+
+
+    +   Step 1: s = regionprops(BW, ''ConvexHull''); // Obtaining the convex hulls
+    of fracture connected domains;
+
+
+    +   Step 5: Lp1 = cat(1, stats.MajorAxisLength);
+
+
+    +   Step 2: imshow(BW, ''Border'',''title''); // Draw the binary map before subsequent
+    original image splicing;
+
+
+    +   Step 6: Lp2 = cat(1, stats.MinorAxisLength);
+
+
+    +   len = len(s); // The total number of connected domain is calculated:
+
+
+    +   Step 7: Lp = Lp1 / Lp2; // The ratio of length and short axes of each connected
+    region is calculated //
+
+
+    +   Step 4: for i=1:len-1 // The convex hull to any connected domains is iteratively
+    iterated;
+
+
+    +   Step 8: i = num;
+
+
+    +   Step 9: if Ap(i) < MinRate // Eliminate connected domains whose area less
+    than the threshold;
+
+
+    +   Step 5: for i=i+1;
+
+
+    +   bw(L == i) = 0;
+
+
+    +   [m1,~] = size(s).ConvexHull); //
+
+
+    +   Step 10:end;
+
+
+    +   Step 11:end;
+
+
+    +   Step 12:end;
+
+
+    +   MinRate = max(Lp)*0.4
+
+
+    +   Step 6: Calculate the number of endpoints of the first convex hull;
+
+
+    +   Step 13:
+
+
+    +   Step 7: [m2,~] = size(j).ConvexHull); // The terminal points of the second
+    pavement crack is calculated
+
+
+    +   Step 14: i = 1 : num;'
+  - "[PAGE 3]\n\nStep 8: h = 1m;\n\nStep 9: k = 2m;\n\n```\nif\ndist(i.ConvexHull(k_i),j.ConvexHull(k_j),\
+    \ euclidean) < len\n// Euclidean distance between two\npoints on the convex hull\
+    \ corresponding to the\ndomain of the iteration, if it is within the range. If\
+    \ so, follow-up\nsplicing shall be carried out;\n```\n\nStep 11: Hold\n\nStep\
+    \ 12:\n\n```\nplot(i.ConvexHull(h,1),j.ConvexHull(k,1),{i}\nConvexHull(h,2),j.ConvexHull(k,2),{w}');\
+    \ Draw a line\non the binary graph to show the convex decomposition of\nfractures;\n\
+    ```\n\nStep 13: end;\n\nStep 14:\n\n```\nF = getcf(frame);\n```\n\n```\nbwin =\
+    \ im2bw(F.data);\n```\n\n# E. Fracture detection of asphalt concrete pavement\n\
+    \nThe network model of asphalt concrete pavement\nrack detection is built on machine\
+    \ learning. We use the input data to train the model and detect the fracture of\
+    \ asphalt concrete pavement. The specific steps are as:\n\n+   Step (1): Download\
+    \ the model that has pre-trained, load the public data set and initialize the\n\
+    parameters, modify the Makefile configuration, and\nnetwork use GPU for training\
+    \ to speed up the model\ntraining;\n\n+   Step (2): to unify the data set, the\
+    \ size of the\ninput image is converted into 600 × 600 pixels\nand saved in the\
+    \ jagged images. The XML file generated by\nlabeling is converted to a TXT file;\n\
+    \n+   Step (3): modify voc_lab.py to convert the\nfracture data and shape. After\
+    \ running, it is used to read the information of the\nnetwork model;\n\n+   Step\
+    \ (4): modify the pascal configuration file\nvoc.data and the darker configuration\
+    \ file YOLOv3-voc.cfg.\nTrain 1000 epochs on Pascal VOC 2007 and crack datasets,\n\
+    set the batch size to 64 and subdivisions to 16 training;\n\n+   Step (5): Use\
+    \ the logistics activation function to\nnormalize all prediction results so that\
+    \ the confidence\nlevel is between 0 and 1;\n\n+   Step (6): Download the pretrained\
+    \ weight file and start\ntraining. At the same time, compare the position and\n\
+    classification losses during training, and adjust the weights\reasonably;\n\n\
+    +   Step (7): Use the trained model in the set to evaluate\nthe training quality\
+    \ of the model.\n\nThe main parameters of the model are as follows:\n\nthe width\
+    \ and height of the input crack is 608 pixels,\nbut the images of the training\
+    \ set are 600 × 600 pixels,\ntannel channel of the input image is 3, and the batch\
+    \ size of\ntraining sample is 64. If the memory is not enough,\ncrack images will\
+    \ be subdivided. In order to make the\nmomentum element 0.009, and the size of\
+    \ the weight regularization\nterm reasonable, the learning rate is set\nas learning\
+    \ rate = 0.001. 10000 for learning rate.\n\nIn order to prevent overfitting in\
+    \ the training\network, BN is used to avoid overfitting. The ideas of\nBN is to\
+    \ make the input value of each layer de\nnetwork meet the standard normal distribution\
+    \ by\nadopting standardized methods, even if it is\ntherough the activation function.\
+    \ After the activation\nunction functions in an area that is more\nsensitive to\
+    \ input, and at the same time, the gradient\nseds up the network and improves\
+    \ generalization\nability of the network. Use the trained model to detect\nfacks\
+    \ on asphalt pavement.\n\n# III EXPERIMENTAL METHOD\n\nIn order to verify the\
+    \ practical application of\nthe fatigue detection method of Asphalt Concrete\n\
+    Pavement Based on machine learning, the learning\nsimulations experiments\n\n\
+    The experiment is carried on the cloud server,\nand the environment configuration\
+    \ is following the\noperating system Ubuntu.16.04, and the processor CPU is\n\
+    vidia GeForce GTX 1080Ti. The GPU graphics card is\nNvidia GeForce GTX Ti. The\
+    \ machine learning\nframework is TensorFlow.\n\nThe original data are divided\
+    \ into training setntnto to a certain proportion. The training set\nincludes 5600\
+    \ fracture pictures and 1000 other kinds of\nacks. Finally, the test set is used\
+    \ to detect\nthe\n\nUse the trained model to detect the test set,\nwhich contains\
+    \ public data and collected crack data.\nThe detection effect of the test set\
+    \ is shown in\nFigure 1."
+  - '[PAGE 4]
+
+
+    # TABLE I THREE TYPES OF CRACK DETECTION ACCURACY TABLE
+
+
+    | number | Fracture type | Average accuracy |
+
+    |---|---||
+
+    | 1 | Transverse cracks | 87% |
+
+    | 2 | Longitudinal cracks | 94% |
+
+    | 3 | Reticular cracks | 88% |
+
+
+    It can be seen from Table 1 that the average confidence of the three types of
+    cracks on the test set of the network reached 90.8%. Among them, the detection
+    accuracy of transverse cracks is relatively low. It can be found by observing
+    the statistical table of crack types that the set number of transverse cracks
+    is the least, only 926, and network cracks are relatively large, with 4196 and
+    3273 respectively. Therefore, the network is not sufficient for the other types
+    of feature characteristics. The detection accuracy of reticular cracks is high.
+    Even so the crack recognition effect of the model is relatively ideal and achieved
+    with great effect.
+
+
+    ![](img/401d6fbb30dafd3e197666e82ac74d41_4_0.png)
+
+
+    The number of model iterations is 10000. In order to understand the training details
+    clearly, in yol3 the average loss (AVG loss) and average IOU during the training
+    process were recorded by the contents of the first few epochs. They were also
+    recorded when the number of iterations was 2500, 5000, 7500, 10000. The results
+    are shown in Table 2 (keep four digits after the decimal).
+
+
+    Fig. 1. Detection effect
+
+
+    Figure (a) to Figure (e) shows the fracture image data collected by method. It
+    can be seen from Figure (1) that longitudinal cracks and transverse cracks are
+    detected, and their confidence is 0.99 and 0.87 respectively. That is to say,
+    the model believes there is a 99% probability that the purple box is longitudinal
+    crack, and 87% probability that the red box is a reticular crack. In Figure (b)
+    and Figure (c), there are only three fractures with confidence of 0.78 and 0.89
+    respectively.
+
+
+    # TABLE II AVERAGE LOSS AND AVERAGE IOU RESULT TABLE
+
+
+    | iterations | Average loss | Average IOU |
+
+    |---|---||
+
+    | 2500 | 0.24054 | 0.5762 |
+
+    | 5000 | 0.3709 | 0.7512 |
+
+    | 7500 | 0.2500 | 0.8516 |
+
+    | 10000 | 0.1620 | 0.9012 |
+
+
+    As can be seen from Table 2, as the number of iterations increases, the average
+    IOU gradually increases. When the first stage, the average loss was high, and
+    the average IOU also low. Na, which means that the crack has not been detected.
+    When the model is for 10000 iterations, the loss is close to 0, and the average
+    IOU also close to 1, indicating that the application effect at this time is relatively
+    ideal.
+
+
+    The three images from Figure (1) to Figure (d) show the common image data. As
+    can be seen from Figure (2), the crack is detected to be a reticular. In Figure
+    (e), two fractures and two reticular fractures were detected with confidence of
+    0.99 and 0.82 respectively. In Figure (1), transverse and reticular fractures
+    were detected with confidence of 0.99 and 0.97 respectively. Moreover, from Figure
+    (c) and Figure (d), the cracks are found to be transverse or reticular cracks,
+    the model can still be identified, which shows the detection effect of the model
+    is relatively ideal.
+
+
+    Comparing the three with the last three cracks, the confidence of the crack identification
+    in the first picture is much higher than that of the first three, the crack detection
+    method is much different. So the reason is because there are fewer crack images
+    collected. Even if data enhancement is to increase the data set, it is still insufficient
+    to compare the public data, resulting in limited learning features.
+
+
+    After statistical analysis of all fracture confidence levels in the test, each
+    type of crack type
+
+
+    # IV CONCLUSION
+
+
+    In this paper, a learning-based fatigue detection method for asphalt pavement
+    is developed. The experimental results show that this method has high accuracy
+    in detecting various types of cracks and is of significance for the timely of
+    fatigue cracks on asphalt pavement.
+
+
+    # REFERENCE
+
+
+    +   [1] Sifong L, Wang J, and Wang K, “Early detection of EVA-modified Polypropylene
+    Fiber-reinforced Concrete. Thermal-cooling Cycling Journal; Journal of Wuhan University
+    of Technology-Mater. Sol. Vol. 35(2019):1099-1118.
+
+
+    +   [2] G Wang, et al., “Traffic Crack Monitoring System based on Hybrid Method”;
+    Electric Machines & Control, 2011, 15(6):9-16.
+
+
+    +   [3] Xancheng S, Wang Y, and Fang C, “Early detection of Crack Element on Lastructure
+    and Hot Crack Resistance of ADC12 Alloy;'
+  md: "\nL, as an input to regionprops() function to obtain the area of each connected\
+    \ domain. The matrix is A, as well as the major AxisLength, the matrix of minor\
+    \ axis, and calculate the ratio of major and minor axes, iteratively detect the\
+    \ connected domain area and major axis ratio, if the area is less than a threshold,\
+    \ or the minor axis will be removed from the original image, and the chart will\
+    \ be created by searching:\n\n# L(i) < MinRate\n\nStep 15: if // The connected\
+    \ regions whose axis ratio is less than the threshold are eliminated;\n\nStep\
+    \ 16: bw(L == i) = 0;\n\nStep 17: end;\n\nStep 18: bw = bw.\n\nThe specific algorithm\
+    \ of judging and screening fracture connected domain is as follows:\n\n## D. Joint\
+    \ of pavement cracks\n\nInput: image filtered by binary graph, bw;\n\nSince there\
+    \ are extracted fracture image, it is necessary to specify multiple connected\
+    \ domain targets in a complete fracture image. The algorithm is: to use the filtered\
+    \ connected domain binary image, using the ConvexHull function, the hull of each\
+    \ connected domain in the binary graph and the total number of convex hulls, then\
+    \ calculate the number of endpoints of each hull, and then loop it if the number\
+    \ of endpoints is greater than two, calculate the Euclidean distance and compare\
+    \ it with the set distance, if it is less than the threshold, draw a line to connect,\
+    \ or until the next group of endpoints is reached. // The connected region of\
+    \ fracture splicing is:\n\nMinRate: The minimum ellipse's axis and axis ratio\
+    \ threshold;\n\nMinArea: Minimum threshold of connected domain area:\n\nInput:\
+    \ image bw with fracture image binary mapping:\n\nAfter output judging and screening,\
+    \ there is only one binary graph of fracture connected domain bw;\n\nlen: The\
+    \ total number of convex hulls corresponding to each connected domain in the binary\n\
+    \n- Step 1: [L, num] = bwlabel(bw); // Obtaining digital identification of fracture\
+    \ connected domain L;\n- Step 2:\n  stats = regionprops(L, 'Area', 'MajorAxisLength',\
+    \ 'MinorAxisLength); // Obtaining the area of each connected domain of the fracture,\
+    \ the major axis of the ellipse and the minor axis of the ellipse\n- m1, m2: The\
+    \ number of convex hulls corresponding to each domain of fracture;\n- Step 1:\
+    \ s = regionprops(BW, 'ConvexHull'); // Obtaining the convex hulls of fracture\
+    \ connected domains;\n- Step 5: Lp1 = cat(1, stats.MajorAxisLength);\n- Step 2:\
+    \ imshow(BW, 'Border','title'); // Draw the binary map before subsequent original\
+    \ image splicing;\n- Step 6: Lp2 = cat(1, stats.MinorAxisLength);\n- len = len(s);\
+    \ // The total number of connected domain is calculated:\n- Step 7: Lp = Lp1 /\
+    \ Lp2; // The ratio of length and short axes of each connected region is calculated\n\
+    - Step 4: for i=1:len-1 // The convex hull to any connected domains is iteratively\
+    \ iterated;\n- Step 8: i = num;\n- Step 9: if Ap(i) < MinRate // Eliminate connected\
+    \ domains whose area less than the threshold;\n- Step 5: for i=i+1;\n  bw(L ==\
+    \ i) = 0;\n  [m1, ~] = size(s.ConvexHull); // \n- Step 10: end;\n- Step 11: end;\n\
+    - Step 12: end;\n- MinRate = max(Lp)*0.4\n- Step 6: Calculate the number of endpoints\
+    \ of the first convex hull;\n- Step 13:\n- Step 7: [m2, ~] = size(j.ConvexHull);\
+    \ // The terminal points of the second pavement crack is calculated\n- Step 14:\
+    \ i = 1 : num;\n\nStep 8: h = 1m;\n\nStep 9: k = 2m;\n\n```\nif\ndist(i.ConvexHull(k_i),j.ConvexHull(k_j),\
+    \ euclidean) < len\n// Euclidean distance between two points on the convex hull\
+    \ corresponding to the\ndomain of the iteration, if it is within the range. If\
+    \ so, follow-up\nsplicing shall be carried out;\n```\n\nStep 11: Hold\nStep 12:\n\
+    ```\nplot(i.ConvexHull(h,1),j.ConvexHull(k,1),i.ConvexHull(h,2),j.ConvexHull(k,2));\
+    \ Draw a line on the binary graph to show convex decomposition of fractures;\n\
+    ```\nStep 13: end;\nStep 14:\n```\nF = getcf(frame);\nbw = im2bw(F.data);\n```\n\
+    \n## E. Fracture detection of asphalt concrete\n\nThe network model of asphalt\
+    \ pavement crack detection is built on machine learning. We use the input data\
+    \ to train the model and detect fracture of asphalt pavement. The specific steps\
+    \ are:\n\n- Step (1): Download the model that has pre-trained, load the public\
+    \ data set and initialize parameters, modify Makefile configuration, and use GPU\
+    \ for training to speed up model training;\n- Step (2): to unify the data set,\
+    \ the size of input image is converted into 600 × 600 pixels and saved. The XML\
+    \ file generated by labeling is converted to TXT file;\n- Step (3): modify label.py\
+    \ to convert fracture data and shape. After running, it is used to read the information\
+    \ of network model;\n- Step (4): modify pascal configuration file voc.data and\
+    \ darker file YOLOv3-voc.cfg. Train 1000 epochs on Pascal 2007 and datasets, set\
+    \ batch size to 64 and subdivisions to 16;\n- Step (5): Use logistics activation\
+    \ function to normalize all prediction results so that confidence level is between\
+    \ 0 and 1;\n- Step (6): Download the weight file and start training. At the same\
+    \ time, compare position and classification losses during training, and adjust\
+    \ weights reasonably;\n- Step (7): Use the trained model in set to evaluate the\
+    \ training quality of the model.\n\nThe main parameters of the model are follows:\
+    \ the width and height of input is 608 pixels, but the images of training set\
+    \ are 600 × 600 pixels, and channel of input image is 3, and batch size of training\
+    \ is 64. If memory is not enough, crack images will be subdivided. In order to\
+    \ make momentum element 0.009, and the size of weight regularization term reasonable,\
+    \ learning rate is set as learning rate = 0.001. 10000 for learning rate.\n\n\
+    In order to prevent overfitting in the training network, BN is used to avoid overfitting.\
+    \ The ideas of BN is to make the input value of each layer network meet the standard\
+    \ normal distribution by adopting standardized methods, even though activation\
+    \ function. After activation functions in an area that is more sensitive to input,\
+    \ and at the same time, gradient speeds up the network and improves generalization\
+    \ of the network. Use the trained model to detect cracks on asphalt pavement.\n\
+    \n## III EXPERIMENTAL METHOD\n\nIn order to verify the practical application of\
+    \ the fatigue detection method of Asphalt Concrete Pavement Based on machine learning,\
+    \ the learning simulations experiments are carried on the cloud server, and environment\
+    \ configuration is following operating system Ubuntu.16.04, and the processor\
+    \ CPU is Nvidia GTX 1080Ti. The GPU graphics card is Nvidia GTX Ti. The machine\
+    \ learning framework is TensorFlow.\n\nThe original data are divided into training\
+    \ set to a certain proportion. The training set includes 5600 fracture pictures\
+    \ and 1000 other kinds of cracks. Finally, the test set is used to detect the\
+    \ contains public data and collected crack data. The detection effect of the test\
+    \ set is shown in Figure 1.\n\n# TABLE I THREE TYPES OF CRACK DETECTION ACCURACY\
+    \ TABLE\n\n| number | Fracture type | Average accuracy |\n|---|---|---|\n| 1 |\
+    \ Transverse cracks | 87% |\n| 2 | Longitudinal cracks | 94% |\n| 3 | Reticular\
+    \ cracks | 88% |\n\nIt can be seen from Table 1 that the average confidence of\
+    \ the three types of cracks on the test set of the network reached 90.8%. Among\
+    \ them, the detection accuracy of transverse cracks is relatively low. It can\
+    \ be found by observing the statistical table of crack types that the set number\
+    \ of transverse cracks is the least, only 926, and network cracks are relatively\
+    \ large, with 4196 and 3273 respectively. Therefore, the network is not sufficient\
+    \ for the other types of feature characteristics. The detection accuracy of reticular\
+    \ cracks is high. Even so the crack recognition effect of the model is relatively\
+    \ ideal and achieved with great effect.\n\n![](img/401d6fbb30dafd3e197666e82ac74d41_4_0.png)\n\
+    \nThe number of model iterations is 10000. In order to understand the training\
+    \ details clearly, in yol3 the average loss (AVG loss) and average IOU during\
+    \ the training process were recorded by the contents of the first few epochs.\
+    \ They were also recorded when the number of iterations was 2500, 5000, 7500,\
+    \ 10000. The results are shown in Table II.\n\n# TABLE II AVERAGE LOSS AND AVERAGE\
+    \ IOU RESULT\n\n| iterations | Average loss | Average IOU |\n|---|---|---|\n|\
+    \ 2500 | 0.2405 | 0.5762 |\n| 5000 | 0.3709 | 0.7512 |\n| 7500 | 0.2500 | 0.8516\
+    \ |\n| 10000 | 0.1620 | 0.9012 |\n\nAs can be seen from Table 2, as the number\
+    \ of iterations increases, the average IOU increases. When the first stage, the\
+    \ average loss was high, and average IOU also low. Na, which means that the crack\
+    \ has not been detected. When the model is for 10000 iterations, the loss is close\
+    \ to 0, and average IOU also close to 1, indicating that the application effect\
+    \ at this time is relatively ideal.\n\nThe three images from Figure (1) to Figure\
+    \ (e) show common data. As can be seen from Figure (2), the crack is detected\
+    \ to be reticular. In Figure (e), two fractures and two reticular fractures were\
+    \ detected with confidence of 0.99 and 0.82 respectively. In Figure (1), transverse\
+    \ and reticular fractures were detected with confidence of 0.99 and 0.97 respectively.\
+    \ Moreover, from Figure (c) and Figure (d), the cracks are found to be transverse\
+    \ or reticular cracks, the model can still be identified, which shows the detection\
+    \ effect of the model is relatively ideal.\n"
+  mdcn: "\nL 作为 `regionprops()` 函数的输入，用于获取每个连通区域的面积。矩阵为 A，以及主轴长度（MajorAxisLength）矩阵、短轴（MinorAxisLength）矩阵，并计算主短轴之比，迭代检测连通区域的面积和主轴比例，如果面积小于阈值，或者短轴将则从原始图像中移除，并将通过搜索创建图表：\n\
+    \n# L(i) < MinRate\n\nStep 15: if // 轴横比小于阈值的连通区域被消除；\n\nStep 16: bw(L == i) =\
+    \ 0;\n\nStep 17: end;\n\nStep 18: bw = bw.\n\n判断和筛选裂缝连通区域的具体算法如下：\n\n## D. 路面裂缝接缝\n\
+    \n输入：经过二值化过滤的图像，bw；\n\n由于提取了裂缝图像，有必要在完整的裂缝图像中指定多个连通区域目标。该算法是：使用过滤后的连通区域二值图像，使用\
+    \ `ConvexHull` 函数获取二值图中每个连通区域的凸包以及凸包的总数，然后计算每个凸包的端点数量，如果端点数量大于两个，则循环计算欧几里距离并与设定距离进行比较，如果小于阈值，则画线连接，直到到达下一组端点。//\
+    \ 裂缝拼接的连通区域是：\n\nMinRate: 最小椭形的轴和轴比阈值；\n\nMinArea: 连通区域面积的最小阈值：\n\n输入：带有裂缝图像二值映射的图像\
+    \ bw：\n\n输出判断和筛选后，只有一个裂缝连通区域的二值图 bw；\n\nlen: 二值图中对应每个连通区域的凸包总数\n\n- Step 1: [L,\
+    \ num] = bwlabel(bw); // 获取裂缝连通区域的数字标识 L；\n- Step 2:\n  stats = regionprops(L,\
+    \ 'Area', 'MajorAxisLength', 'MinorAxisLength); // 获取裂缝的每个连通区域的面积、椭圆的主轴和椭圆的短轴\n\
+    - m1, m2: 对应于裂缝每个区域的凸包数量；\n- Step 1: s = regionprops(BW, 'ConvexHull'); // 获取裂缝连通区域的凸包；\n\
+    - Step 5: Lp1 = cat(1, stats.MajorAxisLength);\n- Step 2: imshow(BW, 'Border','title');\
+    \ // 在后续原始图像拼接前绘制二值图；\n- Step 6: Lp2 = cat(1, stats.MinorAxisLength);\n- len =\
+    \ len(s); // 计算连通区域的总数：\n- Step 7: Lp = Lp1 / Lp2; // 计算每个连通区域的长短轴之比\n- Step 4:\
+    \ for i=1:len-1 // 对任何任何连通区域的凸包进行迭代处理；\n- Step 8: i = num;\n- Step 9: if Ap(i)\
+    \ < MinRate // 消除面积小于阈值的连通区域；\n- Step 5: for i=i+1;\n  bw(L == i) = 0;\n  [m1,\
+    \ ~] = size(s.ConvexHull); // \n- Step 10: end;\n- Step 11: end;\n- Step 12: end;\n\
+    - MinRate = max(Lp)*0.4\n- Step 6: 计算第一个凸包的端点数量；\n- Step 13:\n- Step 7: [m2, ~]\
+    \ = size(j.ConvexHull); // 计算第二条路面裂缝的端点\n- Step 14: i = 1 : num;\n\nStep 8: h\
+    \ = 1m;\n\nStep 9: k = 2m;\n\n```\nif\ndist(i.ConvexHull(k_i),j.ConvexHull(k_j),\
+    \ euclidean) < len\n// 对应迭代区域的凸包上两点之间的欧几里得距离，如果在范围内。如果是，则进行后续的拼接；\n```\n\nStep\
+    \ 11: Hold\nStep 12:\n```\nplot(i.ConvexHull(h,1),j.ConvexHull(k,1),i.ConvexHull(h,2),j.ConvexHull(k,2));\
+    \ // 在二值图上画线以显示裂缝的凸分解；\n```\nStep 13: end;\nStep 14:\n```\nF = getcf(frame);\n\
+    bw = im2bw(F.data);\n```\n\n## E. 沥青混凝土裂缝检测\n\n沥青路面裂缝检测的网络模型建立在机器学习之上。我们使用输入数据来训练模型并检测沥青路面的裂缝。具体步骤如下：\n\
+    \n- Step (1): 下载已训练的模型，加载公共数据集并初始化参数，修改 Makefile 配置，并使用 GPU 进行训练以加速模型训练；\n- Step\
+    \ (2): 统一数据集，将输入图像的大小转换为 600 × 600 像素并保存。将标注生成的 XML 文件转换为 TXT 文件；\n- Step (3):\
+    \ 修改 label.py 以转换裂缝数据和形状。运行后，它用于读取网络模型的信息；\n- Step (4): 修改 pascal 配置文件 `voc.data`\
+    \ 和 darker 文件 `YOLOv3-voc.cfg`。在 Pascal 2007 和数据集上训练 1000 个 epoch，将 batch size\
+    \ 设置为 64 并将 subdivisions 设置为 subdivisions；\n- Step (5): 输出判断和筛选后，只有一个裂缝连通区域的二值图\
+    \ bw；\n- Step (6): 二值图中对应每个连通区域的凸包总数\n- Step (7): MinRate = max(Lp)*0.4\n"
+  merge: 0
+- raw:
+  - '[PAGE 5]
+
+
+    Journal of Wuhan University of Technology-Mater. Sci. Ed. 2018, 33(1):193–197.
+
+
+    [4] Weibuh, Bryan P, Hua J, et al. Fabrication and Structural Characteristics
+    of Ultra-high Temperature Ceramic Struts in Ceramics[J]; Journal of Wuhan University
+    of Technology-Mater. Sci. Ed. 2018, 33(2):375–380.
+
+
+    [5] Liu J, Silavska, G, et al. Overview and methods of correlation filters in
+    object tracking[J]. Complex & Intelligent Systems, 2020, 3:707–718.
+
+
+    [6] Rahman, Teddy TC, Saha, et al. Self-Healing Concrete with Crystalline Atmosphere
+    – A Review[J]. Journal of Wuhan University of Technology-Mater. Sci. Ed. 2019,
+    36(4):1143–1158.
+
+
+    [7] Huang, Shenbing W, et al. Influence of Pulse Parameters on Deposition in Concrete
+    Crack using Pulse Current Electro-deposition[J]. Journal of Wuhan University of
+    Technology-Mater. Sci. Ed. 2018, 35(4):964–970.
+
+
+    [8] Bakis A, Isik E, Alev Akilli EL, et al. Mechanical Properties of Reactive
+    Powders Produced Using Pumice[J].
+
+
+    Journal of Wuhan University of Technology-Mater. Sci. Ed. 2019, 34(2):353–360.
+
+
+    [9] Shua, Veiling B, Nianyin Z, et al. A fast fractal based compression for MRI
+    images[J]. IEEE Access, 2019, 7:62412–62420.
+
+
+    [10] De Castro M, Anello, Moraes, Carli F, et al. Offactory Group Brasileiro De
+    Neurocirurgia Case Report and Literature Review[J]. Brazilian Neurosurgery, 2018,
+    7(3):223–235.
+
+
+    [11] Ali Y, Ling X, Dong Z, et al. Evaluation of Mixture Performance Recycled
+    Pavement Materials as Base Layer with or without Rejuvenator into the Asphalt[J].
+    2020, 12:5–20.
+
+
+    [12] Liu GC, Liu S, Muhammad K, et al. Object tracking in varying light conditions
+    for fog based intelligent surveillance of public spaces. IEEE Access, 2019, 7:2518–2526.
+
+
+    [13] Jiang J, Zhou W, Chu H, et al. Design of Eco-friendly ultra-high Performance
+    Concrete with Supplementary Cementious Materials and Course Aggregate[J]. 2019,
+    34(6):1350–1359.'
+  md: '
+
+    Journal of Wuhan University of Technology-Mater. Sci. Ed. 2018, 33(1):193–197.
+
+
+    [4] Weibuh, Bryan P, Hua J, et al. Fabrication and Structural Characteristics
+    of Ultra-high Temperature Ceramic Struts in Ceramics[J]. Journal of Wuhan University
+    of Technology-Mater. Sci. Ed. 2018, 33(2):375–380.
+
+
+    [5] Liu J, Silavska, G, et al. Overview and methods of correlation filters in
+    object tracking[J]. Complex & Intelligent Systems, 2020, 3:707–718.
+
+
+    [6] Rahman, Teddy TC, Saha, et al. Self-Healing Concrete with Crystalline Atmosphere
+    – A Review[J]. Journal of Wuhan University of Technology-Mater. Sci. Ed. 2019,
+    36(4):1143–1158.
+
+
+    [7] Huang, Shenbing W, et al. Influence of Pulse Parameters on Deposition in Concrete
+    Crack using Pulse Current Electro-deposition[J]. Journal of Wuhan University of
+    Technology-Mater. Sci. Ed. 2018, 35(4):964–970.
+
+
+    [8] Bakis A, Isik E, Alev Akilli EL, et al. Mechanical Properties of Reactive
+    Powders Produced Using Pumice[J]. Journal of Wuhan University of Technology-Mater.
+    Sci. Ed. 2019, 34(2):353–360.
+
+
+    [9] Shua, Veiling B, Nianyin Z, et al. A fast fractal based compression for MRI
+    images[J]. IEEE Access, 2019, 7:62412–62420.
+
+
+    [10] De Castro M, Anello, Moraes, Carli F, et al. Offactory Group Brasileiro De
+    Neurocirurgia Case Report and Literature Review[J]. Brazilian Neurosurgery, 2018,
+    7(3):223–235.
+
+
+    [11] Ali Y, Ling X, Dong Z, et al. Evaluation of Mixture Performance Recycled
+    Pavement Materials as Base Layer with or without Rejuvenator into the Asphalt[J].
+    2020, 12:5–20.
+
+
+    [12] Liu GC, Liu S, Muhammad K, et al. Object tracking in varying light conditions
+    for fog based intelligent surveillance of public spaces. IEEE Access, 2019, 7:2518–2526.
+
+
+    [13] Jiang J, Zhou W, Chu H, et al. Design of Eco-friendly ultra-high Performance
+    Concrete with Supplementary Cementious Materials and Course Aggregate[J]. 2019,
+    34(6):1350–1359.
+
+    '
+  mdcn: '
+
+    武汉科技大学报（材料科学版）2018, 33(1):193–197.
+
+
+    [4] Weibuh, Bryan P, Hua J, et al. 陶瓷中超高温度陶瓷支撑的制备与结构特性[J].武汉科技大学报（材料科学版）2018,
+    33(2):375–380.
+
+
+    [5] Liu J, Silavska, G, et al. 目标跟踪中相关滤波器的概述与方法[J].复杂与智能系统，2020, 3:707–718.
+
+
+    [6] Rahman, Teddy TC, Saha, et al. 晶体环境下的自愈混凝土——综述[J].武汉科技大学报（材料科学版）2019, 36(4):1143–1158.
+
+
+    [7] Huang, Shenbing W, et al. 脉冲参数对脉冲电沉积在混凝土裂缝中沉积的影响[J].武汉科技大学报（材料科学版）2018, 35(4):964–970.
+
+
+    [8] Bakis A, Isik E, Alev Akilli EL, et al. 利用浮石生产活性粉末的机械性能[J].武汉科技大学报（材料科学版）2019,
+    34(2):353–360.
+
+
+    [9] Shua, Veiling B, Nianyin Z, et al. 一种基于快速分形的 MRI 图像压缩方法[J].IEEE Access，2019,
+    7:62412–62420.
+
+
+    [10] De Castro M, Anello, Moraes, Carli F, et al. 巴西神经外科工作小组病例报告与文献综述[J].巴西神经外科，2018,
+    7(3):223–235.
+
+
+    [11] Ali Y, Ling X, Dong Z, et al. 含有或不含再生剂的再生路面材料作为沥青基层的混合性能评价[J].2020, 12:5–20.
+
+
+    [12] Liu GC, Liu S, Muhammad K, et al. 基于雾天的公共场所智能监控变光条件下的目标跟踪[J].IEEE Access，2019,
+    7:2518–2526.
+
+
+    [13] Jiang J, Zhou W, Chu H, et al. 辅助胶胶材料和粗料的环保超高性能混凝土设计[J].2019, 34(6):1350–1359.
+
+    '
+  merge: 0

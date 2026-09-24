@@ -1,0 +1,2 @@
++   [2020 IEEE 工业智能人工智能国际会议 (中国哈滨 2020.12.25-2020.12.27) 2020 IEEE 工业智能人工智能国际会议](README.md)
++   [2020 IEEE 工业智能人工智能国际会议 (中国哈滨 2020.12.25-2020.12.27) 2020 IEEE 工业智能人工智能国际会议](2020-ieee-international-conference-on-industrial-application.md)
