@@ -1,0 +1,1228 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Predicting Employees under Stress for Pre-emptive
+
+    Remediation using Machine Learning Algorithm
+
+
+    Anusha Garlapapati
+
+    Dept of Electronics and
+
+    Communication Engineering,
+
+    Amrita Vishwa
+
+    Vidyyapeatham, Amritpur,
+
+    amrita.edu
+
+
+    Dorella Radha Krishna
+
+    Dept of Electronics and
+
+    Communication Engineering,
+
+    Amrita Vishwa Vidyyapeatham,
+
+    Amritpur,
+
+    dradhakrishna@am.students.edu
+
+
+    Kavi Garlapapati
+
+    Dept of Electronics and
+
+    Communication Engineering,
+
+    Amrita Vishwa Vidyyapeatham,
+
+    Amritpur,
+
+    garglapapati@am.students.edu
+
+
+    Gayathri Narayanan
+
+    Dept of Electronics and
+
+    Communication Engineering,
+
+    Amrita Vishwa,
+
+    Vidyyapeatham, Amritpur,
+
+    gayathri@am.students.a.cedu
+
+
+    In the wake of the ongoing COVID-19 pandemic, businesses and organizations have
+    acclimated to unforeseen and different working ways, such as working from home,
+    with limited employees at office. With the new normal, employees have also been
+    adapted to different working environments and conditions, which has also resulted
+    in psychological stress and lethargy for many. In this work, data visualization
+    techniques and machine learning algorithms have been used to predict employees
+    stress levels. Based on data, we can develop a model to predict if an employee
+    is under stress or not. The XGB classifier is used for the prediction and the
+    results are presented showing that the method is highly effective. We also found
+    that working hours, age, and role ambiguity have a significant significance and
+    influence on employee performance. It is concluded that increasing working hours
+    would not diminish employee representation in all cases.
+
+
+    employees are subjected to a phenomenon like the present pandemic. Hence, machine
+    learning algorithms are used to predict whether employees undergoing stress or
+    not.
+
+
+    # II. LITERATURE SURVEY
+
+
+    Workplace stress is a having concern for employees like resource managers and
+    so on. Although scholarly and practical work has been dedicated to stress management
+    over the years, the time comes for different perspectives. Extracting from the
+    emerging field of organizational performance, this research analysis includes
+    implications for occupational stress.
+
+
+    Specifically, from a large sample of working employees beyond a variety of industries
+    and organizations that have positive resources of efficacy, and resilience may
+    be maintained by building coping strategies against manifestations of stress.
+    Numerous investigations and experimentation have been done in the last few years,
+    of the studies have been conducted in countries that endeavor to prevent and manage
+    workplace stress. However stress is one of the most widespread ‘occupational disorders,’
+    the past affect of workplace and it is affecting their overall job performance
+    on regular basis.
+
+
+    # I. INTRODUCTION
+
+
+    Keywords—Data Visualization, Machine Learning Algorithms employees, Analytics
+    Stress
+
+
+    On March 11, 2020, the World Health Organization (WHO) declared coronavirus (COVID-19)
+    a pandemic that signifies a global, epidemic threat threatening the entire universe.
+    ‘Coronaviruses’ is a highly family of disease affected by viruses that cause ailments
+    ranging from flu like to other respiratory symptoms. According to WHO, the virus
+    had reached over 200 cases. Due to this stock, market and industries have seen
+    a severe downturn in growth. In this, it affects employees too, who feel stressed
+    when working from home to cope with the pressure. The application of machine learning
+    and intelligence to the field is seen as a lot of promising. The pattern of employee
+    behavior is analyzed in [11].
+
+
+    Vis-à-vis, they do not have any satisfaction due to long working hours in addition
+    to however headache. Furthermore, the consequence of this is stress on employee
+    performance. Moreover, this influences physical ailments and a lack of commitment
+    to work. In the current situation, COVID-19 has put the world in an unprecedented
+    position. Through this work, we intend to analyze the stress level that
+
+
+    # III. DATA SET
+
+
+    Each row in the data set belongs to an individual and in detail. Here data has
+    parameters like Employee ID, Age, Average Hours and so on. The data is in format
+    of CSV (Comma-Separated Values). The data set is divided into two parts: the training
+    data set is fed into our machine learning algorithm to test our model and, the
+    second test data set is used to test our model performance. The structure of data
+    including sample rows is as follows:
+
+
+    TABLE1: Data set
+
+
+    | Employee ID | Age | Avg Daily Hours |
+
+    | 100001 | 0 | 36.0 | 6.45 |
+
+    | 100002 | 24 | 8.8 |'
+  - '[PAGE 1]
+
+
+    # TABLE 2: Data set
+
+
+    | Department | Education | Gender | Job Role |
+
+    | --- | --- | --- | --- |
+
+    | Sales | Technical Degree | Male | Manufacturing Director |
+
+    | Sales | Technical Degree | Male | Sales Representative |
+
+
+    # TABLE 3: Data set
+
+
+    | Working Hours | Flexible Timings | Workload level |
+
+    | --- | --- | --- |
+
+    | 8.0 | No | Low |
+
+    | 1.0 | No | High |
+
+
+    # TABLE 4: Data set
+
+
+    | Work satisfaction | Years at company | Monthly Income |
+
+    | --- | --- | --- |
+
+    | Medium | 8.0 | 175000 |
+
+    | Very High | 0.0 | 16667 |
+
+
+    # TABLE 5: Data set
+
+
+    | Performance Rating | Percent salary hike | companies worked |
+
+    | --- | --- | --- |
+
+    | 3 | 21 | 4 |
+
+    | | 1 | 1 |
+
+
+    # TABLE 6: Data set
+
+
+    | Worklife balance | Training Times last year | Micromanaged at work |
+
+    | --- | --- | --- |
+
+    | 2 | 2 | 3.0 |
+
+    | 2 | 5 | 4.0 |
+
+
+    # TABLE 7: Data set
+
+
+    | Is Individual Contributor | Years with Current manager | Marital status |
+
+    | --- | --- | --- |
+
+    | Yes | 8.0 | Divorced |
+
+    | Yes | 0.0 | Married |
+
+
+    # TABLE 8: Data set
+
+
+    | Education Field | Years since the last promotion | Self-Motivation level |
+
+    | --- | --- | --- |
+
+    | 5 | 1.0 | 3 |
+
+    | 5 | 0.0 | 2 |
+
+
+    ![](img/3bb045ffb03996efac8cac67372648e0_1_0.png)
+
+
+    The X-axis is Age and the Y-axis is for Count. The numbers are coded as: 0- Sales
+    Department, 1- Research and development, and 2- Human Resources. The obtained
+    result shows that Human Resources employees record maximum with salary value -
+    18, ending value – 60 and step-size: 1
+
+
+    ![](img/3bb045ffb03996efac8cac67372648e0_1_1.png)
+
+
+    The above figure (Figure2) represents the correlation plot for the overall data.
+    It shows the relationship among all variables wherever individual is identified
+    among the remaining variables. It will examine which are the most significant
+    variables in our data and can progress for this steps. Variables in the X and
+    Y axis are column names in the dataset and those column names are at quotes at
+    the inception.
+
+
+    This is some sample data. Before implementing any model or on any dataset we need
+    to interpret the data by using exploratory data analysis using Python or R. Here,
+    obtained results can conjecture the variance between variables. It can be examined
+    by diverse representations of plots like pair plot, box plot, violinia plot, heat
+    map, scatter plot, histogram, pie charts, and so on.'
+  - '[PAGE 2]
+
+
+    # IV. METHODOLOGY
+
+
+    One of the best steps when dealing with data is cleaning the data. Without doing
+    that, if we go for model execution, we cannot obtain better performance in model
+    execution. Therefore, it ought to deal with null values, zero NAN values.
+
+
+    Here, data has 3895 null values. The categorical null values are fixed by using
+    mean, and numeric data is fixed by using mean, median, floor techniques. Here,
+    altogether can drop null values, but also by doing that, it may dissipate some
+    data. So that itself is preferred for good model execution.
+
+
+    TABLE9: Target symmetry
+
+
+    | Class | Count |
+
+    |---|-|
+
+    | Class 0 | 13180 |
+
+    | Class 1 | 2820 |
+
+
+    This is the target variable count. By this, it shows that data is imbalanced and
+    it can be balanced by various techniques.
+
+
+    It is also possible to implement resampling, oversampling, under-sampling, or
+    either it be done by using ''smote'', hyperparameter techniques. It can also be
+    improved by using algorithms that can give the most reliable performance model
+    or can be done by using bagging and boosting algorithms like XGBoost (Boost),
+    PCA (Principal Component Analysis), right evaluation metrics, changing performance
+    metrics, ROC curve.
+
+
+    ![](img/3bb045ffb03996efac8cac67372648e0_2_0.png)
+
+
+    Figure3— Histogram plot of employees under stress
+
+
+    The Figure 3 is an indication of the age group of employees who are undergoing
+    greater stress. Therefore, the obtains results that the age group 35-38 is subject
+    to more stress than others.
+
+
+    ![](img/3bb045ffb03996efac8cac67372648e0_2_1.png)
+
+
+    XG Boost is this optimized distributed gradient boosting library. XGB is an accurate
+    learning method. And Provides more deployable examples than other machine learning
+    algorithms. XGB Boost is more than other ensemble classifiers and confers more
+    high-grade performance on variety of datasets. Internally it has cross-validation,
+    regularization, user-defined objective functions, and missing values.
+
+
+    The proportion of the target variable is symmetry of 4.67:1. There are some techniques
+    to balance this data. We can standardize the data before applying algorithms as
+    the data consists of categorical values. Numeric data is done by using Standardization
+    Whereas categorical data is done by using label encoder. It ought to only standardize
+    the data and should not standardize the categorical data
+
+
+    PCA: In exploratory data analysis and for predicting models. It is utilized for
+    dimensionality reduction by reducing each data point onto the first few principal
+    components to capture lower-dimensional data while oversampling in the data models.
+    It is simply the like Eigen vector multivariate analysis and closely related to
+    factor analysis.
+
+
+    Figure4— Department distribution of employee under stress
+
+
+    In the X, the X-axis is Age, the count and the hue is ''Department''. The acquired
+    results which department are undergoing more stress, we see that employees who
+    are in the sales department are undergoing more stress when compared to others.
+
+
+    These are some used to analyze the data. Prior to analysis, cleaning techniques
+    were implemented with regulations like handling null values and retailing them.
+    This will help to get more performance and accuracy of the model that is going
+    to assess the stress levels of employees.
+
+
+    317'
+  md: '
+
+    # Predicting Employees under Stress for Pre-emptive Remediation using Machine
+    Learning Algorithm
+
+
+    Anusha Garlapapati
+
+    Dept of Electronics and Communication Engineering,
+
+    Amrita Vishwa Vidyyapeatham, Amritpur,
+
+    amrita.edu
+
+
+    Dorella Radha Krishna
+
+    Dept of Electronics and Communication Engineering,
+
+    Amrita Vishwa Vidyyapeatham, Amritpur,
+
+    dradhakrishna@am.students.edu
+
+
+    Kavi Garlapapati
+
+    Dept of Electronics and Communication Engineering,
+
+    Amrita Vishwa Vidyyapeatham, Amritpur,
+
+    garglapapati@am.students.edu
+
+
+    Gayathri Narayanan
+
+    Dept of Electronics and Communication Engineering,
+
+    Amrita Vishwa, Vidyyapeatham, Amritpur,
+
+    gayathri@am.students.a.cedu
+
+
+    In the wake of the ongoing COVID-19 pandemic, businesses and organizations have
+    acclimated to unforeseen and different working ways, such as working from home,
+    with limited employees at office. With the new normal, employees have also been
+    adapted to different working environments and conditions, which has also resulted
+    in psychological stress and lethargy for many. In this work, data visualization
+    techniques and machine learning algorithms have been used to predict employees
+    stress levels. Based on data, we can develop a model to predict if an employee
+    is under stress or not. The XGB classifier is used for the prediction and the
+    results are presented showing that the method is highly effective. We also found
+    that working hours, age, and role ambiguity have a significant significance and
+    influence on employee performance. It is concluded that increasing working hours
+    would not diminish employee representation in all cases.
+
+
+    Employees are subjected to a phenomenon like the present pandemic. Hence, machine
+    learning algorithms are used to predict whether employees are undergoing stress
+    or not.
+
+
+    ## II. LITERATURE SURVEY
+
+
+    Workplace stress is a having concern for employees like resource managers and
+    so on. Although scholarly and practical work has been dedicated to stress management
+    over the years, the time comes for different perspectives. Extracting from the
+    emerging field of organizational performance, this research analysis includes
+    implications for occupational stress.
+
+
+    Specifically, from a large sample of working employees beyond a variety of industries
+    and organizations that have positive resources of efficacy, and resilience may
+    be maintained by building coping strategies against manifestations of stress.
+    Numerous investigations and experimentation have been done in the last few years,
+    of the studies have been conducted in countries that endeavor to prevent and manage
+    workplace stress. However, stress is one of the most widespread ‘occupational
+    disorders,’ the past affect of workplace and it is affecting their overall job
+    performance on regular basis.
+
+
+    ## I. INTRODUCTION
+
+
+    Keywords—Data Visualization, Machine Learning Algorithms, employees, Analytics,
+    Stress
+
+
+    On March 11, 2020, the World Health Organization (WHO) declared coronavirus (COVID-19)
+    a pandemic that signifies a global, epidemic threat threatening the entire universe.
+    ‘Coronaviruses’ is a highly family of disease affected by viruses that cause ailments
+    ranging from flu-like to other respiratory symptoms. According to WHO, the virus
+    had reached over 200 cases. Due to this stock, market and industries have seen
+    a severe downturn in growth. In this, it affects employees too, who feel stressed
+    when working from home to cope with the pressure. The application of machine learning
+    and intelligence to the field is seen as a lot of promising. The pattern of employee
+    behavior is analyzed in [11].
+
+
+    Vis-à-vis, they do not have any satisfaction due to long working hours in addition
+    to however headache. Furthermore, the consequence of this is stress on employee
+    performance. Moreover, this influences physical ailments and a lack of commitment
+    to work. In the current situation, COVID-19 has put the world in an unprecedented
+    position. Through this work, we intend to analyze the stress level that-
+
+
+    ## III. DATA SET
+
+
+    Each row in the data set belongs to an individual and in detail. Here data has
+    parameters like Employee ID, Age, Average Hours and so on. The data is in format
+    of CSV (Comma-Separated Values). The data set is divided into two parts: the training
+    data set is fed into our machine learning algorithm to test our model and, the
+    second test data set is used to test our model performance. The structure of data
+    including sample rows is as follows:
+
+
+    TABLE 1: Data set
+
+
+    | Employee ID | Age | Avg Daily Hours |
+
+    | :--- | :--- | :--- |
+
+    | 100001 | 0 | 36.0 |
+
+    | 100002 | 24 | 8.8 | 6.45 |
+
+
+    TABLE 2: Data set
+
+
+    | Department | Education | Gender | Job Role |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Sales | Technical Degree | Male | Manufacturing Director |
+
+    | Sales | Technical Degree | Male | Sales Representative |
+
+
+    TABLE 3: Data set
+
+
+    | Working Hours | Flexible Timings | Workload level |
+
+    | :--- | :--- | :--- |
+
+    | 8.0 | No | Low |
+
+    | 1.0 | No | High |
+
+
+    TABLE 4: Data set
+
+
+    | Work satisfaction | Years at company | Monthly Income |
+
+    | :--- | :--- | :--- |
+
+    | Medium | 8.0 | 175000 |
+
+    | Very High | 0.0 | 16667 |
+
+
+    TABLE 5: Data set
+
+
+    | Performance Rating | Percent salary hike | companies worked |
+
+    | :--- | :--- | :--- |
+
+    | 3 | 21 | 4 |
+
+    | | 1 | 1 |
+
+
+    TABLE 6: Data set
+
+
+    | Worklife balance | Training Times last year | Micromanaged at work |
+
+    | :--- | :--- | :--- |
+
+    | 2 | 2 | 3.0 |
+
+    | 2 | 5 | 4.0 |
+
+
+    TABLE 7: Data set
+
+
+    | Is Individual Contributor | Years with Current manager | Marital status |
+
+    | :--- | :--- | :--- |
+
+    | Yes | 8.0 | Divorced |
+
+    | Yes | 0.0 | Married |
+
+
+    TABLE 8: Data set
+
+
+    | Education | Years since last promotion | Motivation |
+
+    | :--- | :--- | :--- |
+
+    | 5 | 1.0 | 3 |
+
+    | 5 | 0.0 | 2 |
+
+
+    TABLE 9: Data set
+
+
+    | Class | Count |
+
+    | :--- | :--- |
+
+    | Class 0 | 13180 |
+
+    | Class 1 | 2820 |
+
+    '
+  mdcn: '
+
+
+    # 使用机器学习算法预测压力下的员工以进行先验干预
+
+
+    Anusha Garlapapati
+
+    电子与通信工程系，
+
+    Amrita Vishwa Vidyyapeatham, Amritpur,
+
+    amrita.edu
+
+
+    Dorella Radha Krishna
+
+    电子与通信工程系，
+
+    Amrita Vishwa Vidyyapeatham, Amritpur,
+
+    dradhakrishna@am.students.edu
+
+
+    Kavi Garlapapati
+
+    电子与通信工程系，
+
+    Amrita Vishwa Vidyyapeatham, Amritpur,
+
+    garglapapati@am.students.edu
+
+
+    Gayathri Narayanan
+
+    电子与通信工程系，
+
+    Amrita Vishwa, Vidyyapeatham, Amritpur,
+
+    gayathri@am.students.a.cedu
+
+
+    在持续的 COVID-19 疫情背景下，企业和机构已经适应了不可见且不同的工作方式，例如居家办公以及办公室员工人数减少。在新常态下，员工也适应了不同的工作环境和条件，这导致了许多人的心理压力和疲倦。在这项工作中，我们使用了数据可视化技术和机器学习算法来预测员工的压力水平。根据数据，我们可以开发一个模型来预测员工是否承受压力。使用
+    XGB 分类器进行预测，结果显示该方法非常有效。我们还发现工作时间、年龄和角色模糊性对员工表现具有显著意义和影响。结论认为，在所有情况下，增加工作时间并不会减少员工的代表性。
+
+
+    员工正受到如目前疫情等现象的影响。因此，使用机器学习算法来预测员工是否承受压力。
+
+
+    ## II. 文献综述
+
+
+    职场压力是资源经理等员工关注的问题。尽管多年来学术界和实务工作一直致力于压力管理，但现在是需要不同视角了。从新兴的组织绩效领域提取，这项研究分析包含了对职业压力的影响。
+
+
+    具体而言，从来自多种行业和组织的大量工作员工样本中，通过建立针对压力表现的应对策略，可以维持积极的效能资源和韧性。过去几年里，已经进行了大量的调查和实验，在努力预防和管理职场压力的国家进行了研究。然而，压力是最广泛的“职业病”之一，过去影响着职场，并定期影响着他们的整体工作表现。
+
+
+    ## I. 引言
+
+
+    关键词—数据可视化、机器学习算法、员工、分析、压力
+
+
+    2020年3月11日，世界卫生组织（WHO）宣布冠状病毒（COVID-19）为大流行，标志着一场威胁整个世界的全球性流行威胁。“冠状病毒”是一类受病毒影响的疾病家族，引起从流感到其他呼吸道症状的疾病。根据世卫组织的数据，病毒病例已超过200例。由于这一冲击，股市、市场和行业增长出现严重下滑。在此期间，也影响了员工，他们在居家办公以应对压力时感到压力。将机器学习和智能应用于该领域被认为非常有前景。[11]
+    中分析了员工的行为模式。
+
+
+    相应，除了头痛外，他们由于长时间工作而感到不满意。此外，其后果是对员工表现产生压力。此外，这会影响生理疾病和对工作的投入。在目前的情况下，COVID-19
+    让世界处于前所未有的地位。通过这项工作，我们打算分析压力水平——
+
+
+    ## III. 数据集
+
+
+    数据集中的每行详细属于一个个体。这里的数据包含如员工 ID、年龄、平均小时等参数。数据为 CSV（逗号分隔值）格式。数据集分为两个部分：训练数据集输入到我们的机器学习算法中以测试模型，第二个测试数据集用于测试我们的模型性能。包括样本行的数据结构如下：
+
+
+    表 1：数据集
+
+
+    | 员工 ID | 年龄 | 日均平均小时 |
+
+    | :--- | :--- | :--- |
+
+    | 100001 | 0 | 36.0 |
+
+    | 100002 | 24 | 8.8 | 6.45 |
+
+
+    表 2：数据集
+
+
+    | 部门 | 教育程度 | 性别 | 职位角色 |
+
+    | :--- | :--- | :--- | :--- |
+
+    | 销售部 | 技术学位 | 男性 | 制造总监 |
+
+    | 销售部 | 技术学位 | 男性 | 销售代表 |
+
+
+    表 3：数据集
+
+
+    | 工作时间 | 灵活时间 | 工作负载水平 |
+
+    | :--- | :--- | :--- |
+
+    | 8.0 | 否 | 低 |
+
+    | 1.0 | 否 | 高 |
+
+
+    表 4：数据集
+
+
+    | 工作满意度 | 在公司年限 | 月收入 |
+
+    | :--- | :--- | :--- |
+
+    | 中等 | 8.0 | 175000 |
+
+    | 非常高 | 0.0 | 16667 |
+
+
+    表 5：数据集
+
+
+    | 绩效评分 | 加薪涨幅百分比 | 过的公司数量 |
+
+    | :--- | :--- | :--- |
+
+    | 3 | 21 | 4 |
+
+    | | 1 | 1 |
+
+
+    表 6：数据集
+
+
+    | 工作生活平衡 | 去年培训次数 | 工作中的微管理程度 |
+
+    | :--- | :--- | :--- |
+
+    | 2 | 2 | 3.0 |
+
+    | 2 | 5 | 4.0 |
+
+
+    表 7：数据集
+
+
+    | 是否为个人贡献者 | 现任经理年限 | 婚姻状况 |
+
+    | :--- | :--- | :--- |
+
+    | 是 | 8.0 | 离婚 |
+
+    | 是 | 0.0 | 已婚 |
+
+
+    表 8：数据集
+
+
+    | 教育程度 | 上次晋升年限 | 动力 |
+
+    | :--- | :--- | :--- |
+
+    | 5 | 1.0 | 3 |
+
+    | 5 | 0.0 | 2 |
+
+
+    表 9：数据集
+
+
+    | 类别 | 计数 |
+
+    | :--- | :--- |
+
+    | 类别 0 | 13180 |
+
+    | 类别 1 | 2820 |
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 3]
+
+
+    ![](img/3bb045ffb03996efac8cac67372648e0_3_0.png)
+
+
+    when dealing with categorical data, the prerequisite to apply label encoder or
+    one-hot encoding that depends on the data. The set is formed by random aspect.
+
+
+    ```
+
+    array[[-1.73194526,-0.24459007,-0.72815323,0.593154,-0.468274,2.4760241],[-1.73172065,-1.2402768,0.3892227,-0.7853377,-1.0642219,0.83526561],[-1.73150955,0.49744813,-0.4591369,2.143959,1.31952005,0.3407145]]
+
+    ```
+
+
+    This is a sample of data frames. Consolidated standardized numeric data and label
+    encoded data using the merging technique and then clean data to train and test.
+    There is one more technique than OLS which is called Ordinary least square method
+    It will give us sum of squared error between observed and predict data. This is
+    a statistical approach of analysis that estimates the relation of one or more
+    independent variables. So, by using various techniques the above data was obtained.
+
+
+    After applying algorithm to the model obtained results:
+
+
+    # XGBClassifier
+
+
+    # XGBClassifier Test Score:
+
+
+    81.68
+
+
+    Confusion matrix:
+
+
+    | | | |
+
+    |---|---|---|
+
+    | 0 | 6524 | |
+
+    | 1 | 1406 | 1410 |
+
+
+    # TABLE10: Classification Report
+
+
+    | Precision | Recall | F1-Score | Support |
+
+    |---|---|---|---||
+
+    | 0 | 0.82 | 0.99 | 0.90 | 6584 |
+
+    | 1 | 0.14 | 0.01 | 0.01 | 1416 |
+
+    | Accuracy | | | 0.82 | 8000 |
+
+    | Macro Avg | 0.48 | 0.50 | 0.46 | 8000 |
+
+    | Weighted avg | 0.70 | 0.82 | 0.74 | 8000 |
+
+
+    The below mentioned OLS Results in TABLE11 and TABLE12.
+
+
+    In OLS we have R² which is referred as R-Squared which is a statistical measure
+    that represents the goodness of the model.
+
+
+    R-Squared=(RSS-RSS)/TSS, TSS=Total sum of squares\RSS=Residual sum of squares.
+
+
+    P-Value it to determine how likely it is to a particular result when the null
+    hypothesis is assumed to be true. It is probability of getting a sample example
+    other than if null hypothesis is correct.
+
+
+    # TABLE11: OLS Results
+
+
+    | Dep. | Target | R-Squared |
+
+    |---|---|---|
+
+    | Model | OLS | 0.002 |
+
+    | Method | Adj. R squared | |
+
+    | Least square | F-Statistic 15.511 |
+
+    | Date | 29 Aug | Prob(Statistic) 2.78e-07 |
+
+    | Time | 19:51:44 | Log-Likelihood -8801.9 |
+
+    | observations | 1600 | AIC 1.761e+04 |
+
+    | DF.Results | 15998 | BIC 1.762e+04 |
+
+    | DModel | 2 | |
+
+    | Covariance type | Nonrobust | |
+
+    | Omnibus | 4141.356 | Durbin-waston 1.672 |
+
+    | Prob(Omnibus) | 0.000 | Jarque-bera(JB) 8169.219 |
+
+    | Skew | 1.694 | Prob(JB) 0.00 |
+
+    | Kurtosis | 3.884 | Cond.No 491e+04
+
+
+    # TABLE12: OLS Results
+
+
+    | | Coef | Std err | P>|t | |
+
+    |---|---|---|---||
+
+    | X1 | 1.51e-08 | 4.92e-05 | 0.219 | 2.12e-09 |
+
+    | X2 | 0.0012 | 0.00 | -4.96 | -0.002
+
+
+    RSS: Difference between actual and predicted value by the model.
+
+    Log-Likelihood: Used maximum likelihood estimator of parameters.
+
+    F-Statistic: Ratio of quantities which are expected to be roughly equal under
+    the null hypothesis.
+
+    The confusion matrix:
+
+
+    318'
+  - '[PAGE 4]
+
+
+    6524 60
+
+    1406 10
+
+
+    This a confusion matrix that shows diagonal values about predictions. The algorithms
+    predict 6534 counts and 1466 predictions. The report obtained from XGB Classifier
+    can generate classification reports, precision, and recall.
+
+
+    Merits research study focuses on stress management levels of employees using various
+    types of techniques and when compared to the data set considered in this is related
+    to present panic and has lot of parameters over employees stress levels.
+
+
+    # V. CONCLUSION
+
+
+    To evaluate our model to achieve a better performance which is done by XGB classifier.
+    This is one of the best algorithm and this is a decision based gradient boosting
+    framework work for analysis and confusion matrix tells us how correct values are
+    predicted. XGB Boost has predictive power and is about 10 times more durable than
+    other boosting techniques. It holds a regularization which diminishes overfitting
+    and enhances overall performance. It is further recognized as the "regularized
+    boosting" technique. Like it has true positive, true negative, false positive,
+    false negative values. Used to evaluate the performance of the classification
+    model.
+
+
+    # REFERENCES:
+
+
+    +   [1] Shikhari Pandey, Supriya Shrivastava. The International Journal on Intelligent
+    Systems Technologies (2020), doi: 10.1007/978-3-316-68835-0.
+
+
+    +   [2] Ramachander R., Rajjeev, D.C. Krishna, S.G. Subabha, P., International
+    Journal of Applied Engineering Research (2015), Research India Publications, Volume
+    (10), p. 25433-25448.
+
+
+    +   [3] Ramin Zibereserat; How to Respond to the Pandemic Outbreak of the Coronavirus
+    (COVID-19). World Health Organization (2020), ISBN 2345-6789.
+
+
+    +   [4] Chen, Junqi, Guestrin, Carlos; XGB: A Scalable Tree Boosting System. Proceedings
+    of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data
+    Mining (Austin, USA, 2016), ACM, p. 782-794.
+
+
+    +   [5] Joltife J.fit Comprehensive Method Analysis. Springer: Series in Statistics;
+    27., 2nd ed., Springer, NY, 2002,XXIX,p.28 edit. ISBN 978-0-387-48854-4.
+
+
+    +   [6] Manuela Garcia and Carlos J. Fita. "Data Visualization". Communication
+    Design Quarterly (2014). DOI: 10.1147/CDQ.2014.05220785
+
+
+    +   [7] Ali,M., Alghafani,A., Muthaman,S.X. "Clustering and classification for
+    Time Data in Surveys: A Survey IEEE Surveys (2018), p. 18414-18418.
+
+
+    +   [8] Mousbhavayd, A. Ijad, M. Nassif, Lutfiyya, H. Mohamed, E-Learning: Challenges
+    and Opportunities Using Machine Learning Analytics in publications (2018). IEEE,
+    6471-6478, pp. 39117-39118.
+
+
+    +   [9] Kim, Sora, Tehagh, R.F. Towards Aware Ai Smart Classroom: Current Issues
+    and Directions for Education (2018) IEEE pp.5308-5331.
+
+
+    +   [10] Priyonomi,S.Madeh; El-Drihi, Tanner E. "Role of Data Analysis in Asset
+    Management: Overcoming Data Size and Quality Problems". Pavements (2020). DOI:
+    10.1061/JPEEDOC.0000175
+
+
+    7668, pp. 15-23.
+
+    [12] Jake Samson, Karina Neilen, Vihelem Berg, Jaime Gazman. An International
+    Journal of Health, Organizations and Universities, 2010:Issue.
+
+    [13] K. Santosh and S. H. Bharathi, "Non-negative matrix factorization for bound
+    speech recognition". 2nd IEEE International Conference on Trends in Electronics,
+    Information & Communication Technology (RTECT), Bangalore, 2017, pp. 2242-2246;
+    doi: 10.1109/RTECT.2017.8025699.
+
+
+    319'
+  md: '
+
+    ![](img/3bb045ffb03996efac8cac67372648e0_3_0.png)
+
+
+    when dealing with categorical data, the prerequisite to apply label encoder or
+    one-hot encoding that depends on the data. The set is formed by random aspect.
+
+
+    ```
+
+    array[[-1.73194526,-0.24459007,-0.72815323,0.593154,-0.468274,2.4760241],[-1.73172065,-1.2402768,0.3892227,-0.7853377,-1.0642219,0.83526561],[-1.73150955,0.49744813,-0.4591369,2.143959,1.31952005,0.3407145]]
+
+    ```
+
+
+    This is a sample of data frames. Consolidated standardized numeric data and label
+    encoded data using the merging technique and then clean data to train and test.
+    There is one more technique than OLS which is called Ordinary least square method
+    It will give us sum of squared error between observed and predict data. This is
+    a statistical approach of analysis that estimates the relation of one or more
+    independent variables. So, by using various techniques the above data was obtained.
+
+
+    After applying algorithm to the model obtained results:
+
+
+    ## XGBClassifier
+
+
+    ## XGBClassifier Test Score:
+
+
+    81.68
+
+
+    Confusion matrix:
+
+
+    | | | |
+
+    |---|---|---|
+
+    | 0 | 6524 | |
+
+    | 1 | 1406 | 1410 |
+
+
+    ## TABLE10: Classification Report
+
+
+    | Precision | Recall | F1-Score | Support |
+
+    |---|---|---|---|---|
+
+    | 0 | 0.82 | 0.99 | 0.90 | 6584 |
+
+    | 1 | 0.14 | 0.01 | 0.01 | 1416 |
+
+    | Accuracy | | | 0.82 | 8000 |
+
+    | Macro Avg | 0.48 | 0.50 | 0.46 | 8000 |
+
+    | Weighted avg | 0.70 | 0.82 | 0.74 | 8000 |
+
+
+    The below mentioned OLS Results in TABLE11 and TABLE12.
+
+
+    In OLS we have R² which is referred as R-Squared which is a statistical measure
+    that represents the goodness of the model.
+
+
+    R-Squared=(RSS-RSS)/TSS, TSS=Total sum of squares, RSS=Residual sum of squares.
+
+
+    P-Value it to determine how likely it is to a particular result when the null
+    hypothesis is assumed to be true. It is probability of getting a sample example
+    other than if null hypothesis is correct.
+
+
+    ## TABLE11: OLS Results
+
+
+    | Dep. | Target | R-Squared |
+
+    |---|---|---|
+
+    | Model | OLS | 0.002 |
+
+    | Method | Adj. R squared | |
+
+    | Least square | F-Statistic 15.511 | |
+
+    | Date | 29 Aug | Prob(Statistic) 2.78e-07 |
+
+    | Time | 19:51:44 | Log-Likelihood -8801.9 |
+
+    | observations | 1600 | AIC 1.761e+04 |
+
+    | DF.Results | 15998 | BIC 1.762e+04 |
+
+    | DModel | 2 | |
+
+    | Covariance type | Nonrobust | |
+
+    | Omnibus | 4141.356 | Durbin-waston 1.672 |
+
+    | Prob(Omnibus) | 0.000 | Jarque-bera(JB) 8169.219 |
+
+    | Skew | 1.694 | Prob(JB) 0.00 |
+
+    | Kurtosis | 3.884 | Cond.No 491e+04 |
+
+
+    ## TABLE12: OLS Results
+
+
+    | | Coef | Std err | P>|t | |
+
+    |---|---|---|---|---|
+
+    | X1 | 1.51e-08 | 4.92e-05 | 0.219 | 2.12e-09 |
+
+    | X2 | 0.0012 | 0.00 | -4.96 | -0.002
+
+
+    RSS: Difference between actual and predicted value by the model.
+
+    Log-Likelihood: Used maximum likelihood estimator of parameters.
+
+    F-Statistic: Ratio of quantities which are expected to be roughly equal under
+    the null hypothesis.
+
+    The confusion matrix:
+
+
+    318
+
+
+    6524 60
+
+    1406 10
+
+
+    This a confusion matrix that shows diagonal values about predictions. The algorithms
+    predict 6534 counts and 1466 predictions. The report obtained from XGB Classifier
+    can generate classification reports, precision, and recall.
+
+
+    Merits research study focuses on stress management levels of employees using various
+    types of techniques and when compared to the data set considered in this is related
+    to present panic and has lot of parameters over employees stress levels.
+
+
+    ## V. CONCLUSION
+
+
+    To evaluate our model to achieve a better performance which is done by XGB classifier.
+    This is one of the best algorithm and this is a decision based gradient boosting
+    framework work for analysis and confusion matrix tells us how correct values are
+    predicted. XGB Boost has predictive power and is about 10 times more durable than
+    other boosting techniques. It holds a regularization which diminishes overfitting
+    and enhances overall performance. It is further recognized as the "regularized
+    boosting" technique. Like it has true positive, true negative, false positive,
+    false negative values. Used to evaluate the performance of the classification
+    model.
+
+
+    ## REFERENCES:
+
+
+    - [1] Shikhari Pandey, Supriya Shrivastava. The International Journal on Intelligent
+    Systems Technologies (2020), doi: 10.1007/978-3-316-68835-0.
+
+    - [2] Ramachander R., Rajjeev, D.C. Krishna, S.G. Subabha, P., International Journal
+    of Applied Engineering Research (2015), Research India Publications, Volume (10),
+    p. 25433-25448.
+
+    - [3] Ramin Zibereserat; How to Respond to the Pandemic Outbreak of the Coronavirus
+    (COVID-19). World Health Organization (2020).
+
+    - [4] Chen, Junqi, Guestrin, Carlos; XGB: A Scalable Tree Boosting System. Proceedings
+    of the 22nd ACM SIGDD International Conference on Knowledge Discovery and Data
+    (Austin, 2016), ACM, p. 782-794.
+
+    - [5] Jolt J. Comprehensive Method Analysis. Springer: Series in Statistics; 27.,
+    2nd ed., Springer, NY, 2002, XXIX, p. 28. ISBN 978-0-387-48854-4.
+
+    - [6] Manuela Garcia and Carlos J. Fita. "Data Visualization". Communication Design
+    Quarterly (2014). DOI: 10.1147/CDQ.2014.05220
+
+    - [7] Ali,M., Alghafani,A., Muthaman,S. "Clustering and classification for Time
+    Data in Surveys: A Survey IEEE Surveys (2018), p. 18414-18418.
+
+    - [8] Moushavayd, A. Ijad, M. Nassif, Lutfiyya, H. Mohamed, E-Learning: Challenges
+    and Opportunities Using Machine Learning Analytics in publications (2018). IEEE,
+    6471-6478, pp. 39117-39118.
+
+    - [9] Kim, Sora, Teh, R.F. Towards Aware Ai Smart Classroom: Current Issues and
+    Directions for Education (2018) IEEE pp.5308-5331.
+
+    - [10] Priyonomi,S.Madeh; El-Drihi, Tanner E. "Role of Data Analysis in Asset
+    Management: Overcoming Data Size and Quality Problems". Pavements (2020). DOI:
+    10.1061/JPEEDOC.00001757668, pp. 15-23.
+
+    - [12] Jake Samson, Karina Neilen, Vihelem Berg, Jaime Gazman. An International
+    Journal of Health, Organizations and Universities, 2010.
+
+    - [13] K. Santosh and S. H. Bharathi, "Non-negative matrix factorization for bound
+    speech recognition". 2nd IEEE International Conference on Trends in Electronics,
+    Information & Communication Technology (RTECT), Bangalore, 2017, pp. 2242-2246;
+    doi: 10.1109/RTECT.2017.8025699.
+
+    '
+  mdcn: "\n\n![](img/3bb045ffb03996efac8cac67372648e0_3_0.png)\n\n在处理分类数据时，应用标签编码（label\
+    \ encoder）或独热编码（one-hot encoding）的前决取决于数据。该集合由随机维度形成。\n\n```\narray[[-1.73194526,-0.24459007,-0.72815323,0.593154,-0.468274,2.4760241],[-1.73172065,-1.2402768,0.3892227,-0.7853377,-1.0642219,0.83526561],[-1.73150955,0.49744813,-0.4591369,2.143959,1.31952005,0.3407145]]\n\
+    ```\n\n这是一个数据帧示例。使用合并技术对标准化的数值数据和标签编码数据进行整合，然后清洗数据以进行训练和测试。除了 OLS 还有一种技术称为普通最小二乘法（Ordinary\
+    \ least square method），它将给出观测数据与预测数据之间的误差平方和。这是一种统计分析方法，用于估计一个或多个独立变量之间的关系。因此，通过使用各种技术获得了上述数据。\n\
+    \n将算法应用于模型后得到的结果如下：\n\n## XGBClassifier\n\n## XGBClassifier 测试得分:\n\n81.68\n\n\
+    混淆矩阵:\n\n| | | |\n|---|---|---|\n| 0 | 6524 | |\n| 1 | 1406 | 1410 |\n\n## TABLE10:\
+    \ 分类报告\n\n| 精确率 (Precision) | 召回率 (Recall) | F1-分数 | 支持数 (Support) |\n|---|---|---|---|---|\n\
+    | 0 | 0.82 | 0.99 | 0.90 | 6584 |\n| 1 | 0.14 | 0.01 | 0.01 | 1416 |\n| 准确率 (Accuracy)\
+    \ | | | 0.82 | 8000 |\n| 宏平均 (Macro Avg) | 0.48 | 0.50 | 0.46 | 8000 |\n| 加权平均\
+    \ (Weighted avg) | 0.70 | 0.82 | 0.74 | 8000 |\n\n下述 TABLE11 和 TABLE12 中提到的 OLS\
+    \ 结果。\n\n在 OLS 中我们有 R²，称为 R-Squared，这是一个表示模型优优度的统计度量。\n\nR-Squared=(RSS-RSS)/TSS,\
+    \ TSS=总平方和, RSS=残差平方和。\n\nP 值（P-Value）用于确定在假设零假设真的情况下，出现特定结果的概率。它是当零假设正确时获得其他样本示例的概率。\n\
+    \n## TABLE11: OLS 结果\n\n| 因变量 (Dep.) | 目标 (Target) | R-Squared |\n|---|---|---|\n\
+    | 模型 (Model) | OLS | 0.002 |\n| 方法 (Method) | 调整后 R 平 | |\n| 最小二乘法 (Least square)\
+    \ | F-统计量 15.511 | |\n| 日期 (Date) | 8月29日 | 统计量概率 2.78e-07 |\n| 时间 (Time) | 19:51:44\
+    \ | 对数似然估计值 (Log-Likelihood) -8801.9 |\n| 观测值 (observations) | 1600 | AIC 1.761e+04\
+    \ |\n| 自由度结果 (DF.Results) | 15998 | BIC 1.762e+04 |\n| 模型 (DModel) | 2 | |\n|\
+    \ 协方差类型 (Covariance type) | 非稳健 (Nonrobust) | |\n| 联合 (Omnibus) | | Durbin-Watson\
+    \ 4.14 |\n| 联合概率 (Prob(Omnibus)) | | Jarque-Bera 统计量 Prob(JB) |\n| 偏度 (Skew) |\
+    \ | Prob(JB) 0.00 |\n| 峰度 (Kurtosis) | | 3.84 |\n\n## TABLE12: OLS 结果 \n\n| 系数\
+    \ (Coef) | 标准误 (Std err) | t 值 |\n|---|---|---|\n| X1 | | |\n| X2 | | |\n\n"
+  merge: 0
