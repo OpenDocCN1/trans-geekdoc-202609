@@ -1,0 +1,836 @@
+- pgno: 0
+  md: '# Machine Learning in the IoT:
+
+    Trustworthiness-Trade-offs for Edge Intelligence
+
+
+    Wiebe Toussaint
+
+    Engineering Systems and Services
+
+    Delft University of Technology
+
+    Delft, Netherlands
+
+    w.toussaint@tudel.nl
+
+
+    Aaron Yi Di
+
+    Engineering Systems and Services
+
+    Delft University of Technology
+
+    Delft, Netherlands
+
+    aaron.di@tudel.nl
+
+
+    **Abstract—**machine learning (MLSys) are emerging in the IoT to provide edge
+    intelligence, giving our way towards the vision of ubiquitous intelligence. However,
+    the complexity of heterogeneous systems and the IoT means we are facing challenges
+    when MLSys operate in practical context. Many learning systems have been developed
+    for large-scale deployment (e.g., smart cities). To light on the complexity of
+    IoT, we offer the trade-offs by covering the latest developments (up to 2020)
+    on sensing and distribution cloud, edge, and IoT devices. We position multi-layer
+    systems and edge intelligence as a socio-technical challenge. On the challenges
+    of designing edge intelligence, we advocate a holistic design approach to balance
+    machine learning requirements and trade-offs, and identifying the future research
+    opportunities in edge intelligence.
+
+
+    The Internet of Things (IoT) [4] has matured from a vision of digitally connected
+    devices to one of smart services [5] and ubiquitous intelligence. For example,
+    a security camera that streams video to a server is no longer sufficient. Instead,
+    the camera is expected to provide a smart service, such as counting people, or
+    detecting an intruder, thus becoming an edge-enabled device. The intelligent IoT
+    distinguishes itself by having data processing capabilities [6], meaning that
+    sensor data can be transformed to information and knowledge. This kind of abstraction
+    allows humans to infer insights about the system, which can be used to create
+    services beyond their imagination [7].
+
+
+    **Index Terms**—edge intelligence, machine learning, IoT, trade-offs, trustworthiness,
+    smart systems
+
+
+    Historically, human cognition has been needed to abstract information and knowledge
+    from data. However, with the success of machine learning algorithms, new types
+    of technology-driven systems can deliver smart services through human interaction.
+    Machine learning systems widely predict and manage operation in the IoT [8] can
+    be viewed from two perspectives: machine learning systems for the IoT support
+    system management and organization. These systems are designed in service of the
+    IoT to improve human interaction through system aspects like security, network
+    profiling and IoT device identification [10].
+
+
+    # 1 INTRODUCTION
+
+
+    Machine learning systems are omnipresent and silent helpers that bring order to
+    our modern life: guide us through traffic classification and detect pests in plants,
+    and are our ears and eyes in environments where we cannot see and hear. Here we
+    understand why machine learning algorithms that fix over data to find patterns
+    and correlations which can be exploited to discover trends and relationships,
+    and for machine [11]. Many learning algorithms can work with small datasets and
+    with more data. This has made them extremely successful in analysing the large
+    volumes of data produced by digital, online services and applications. Deep neural
+    networks in particular have produced the state of the art for many perception-based
+    tasks but are now widely used for computer vision, speech, audio, and more [12].
+    Machine learning is a process when a system or process is too complex, or difficult
+    to model explicitly, but data that can surface insights about what it has become
+    [13]. Equally, if applications are dynamic and over time, machine learning systems
+    can use new data to update patterns and predictions, thus adapting with the application.
+
+
+    This paper motivates an interdisciplinary research for multi-stakeholder concerns,
+    design requirements and efforts to develop trustworthy edge intelligence for smart
+    services. While machine learning is not considered reliable, as reliable, abundant,
+    scalable and almost-free networks and computing power under control and ownership
+    of a single entity is assumed. In Section 2 we present an overview of machine
+    learning systems and current concerns regarding data, training, inference and
+    operations. Section 3 highlights additional challenges that the IoT faces on machine
+    learning systems. In Section 4 we consider'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'edge intelligence trade-offs from a socio-technical multistakeholder perspective.
+    Section 5 presents an outlook for trustworthy edge intelligence, where we take
+    the concerns arising in both machine learning systems and the IoT into consideration.
+    We highlight opportunities for trustworthy edge intelligence and finale in Section
+    6.
+
+
+    When this is not possible, unsupervised learning requires no truth labels, weak
+    supervision over labeled generation [13], and approaches that reduce the amount
+    of labels required [14] can be considered. Generally these trade-offs affect predictive
+    performance. Due to the requirements and cost of model training and data labeling,
+    applications may download pre-trained models from repositories, which can be used
+    off-the-shelf, or adapt to new domains or datasets through transfer machine learning
+    [15]. While pre-trained models present significant security risks;
+
+
+    # II. OVERVIEW OF MACHINE LEARNING SYSTEMS
+
+
+    Machine learning algorithms learn from data by utilizing functions that transform
+    input variables, or to output. This is often called machine training. A trained
+    model is used to calculate an input value for a new output, which is called inference
+    [1]. When ground truth, labels, or output values are produced by supervised learning.
+    A typical machine learning workflow involves data collection, model training,
+    and inference steps. Data processing serves two purposes. Firstly, input data
+    is collected by removing outliers, noise and errors. Secondly, data is transformed,
+    by filtering the features that are at used in the machine learning process. This
+    process facilitates the deployment of machine learning workflows, which they take
+    operational aspects into consideration. This section highlights data, training,
+    inference and operational concerns that currently challenge machine learning systems.
+    Rather than being exhaustive, we raise important considerations that are bound
+    to supervised machine learning systems used in the IoT to provide services,
+
+
+    Classical machine learning algorithms are used under static, benign, closed-world
+    assumptions; they assume that the data does not change, and the environment is
+    good-understood [17], all categories are recognized and contained in the data
+    [18]. This does not correspond with reality. For example, in medical image classification,
+    the labels may contain categories that are not seen as outcomes [19]. While machine
+    learning can be used to improve the robustness of models under the malicious attack
+    of an adversary, and lifelong learning [21] provides methods for continuous learning
+    by acknowledging and maintaining knowledge which can be used to improve future
+    learning, the challenges under different patterns may result in no result at all.
+    What while machine learning algorithms, which may result in, or. Despite the success
+    of machine learning remains to train models that generalize and have good predictive
+    accuracy while also being resource-efficient, and robust in new, real-world environments.
+
+
+    # A. Model Training
+
+
+    Supervised learning is an iterative optimization process that aims to find general
+    parameters in data. Statistics goal of model learning is to find the candidate
+    model from limited data, which has the best performance on new data [11]. The
+    training process estimates these parameters to minimize the error between a predicted
+    value and its corresponding real truth value. In order to collect parameters,
+    a model can also have hyperparameters that control complexity. To find the best
+    model, a range of different parameters and hyperparameters should be explored.
+    However the best model can be selected. Each of these choices requires computational
+    power, time and energy, resulting in trade-offs between predictive performance
+    and resource consumption. State-of-the-art machine learning models, in particular
+    neural networks, have millions of parameters and the computing resources required
+    are substantial. Two approaches for improving the performance of machine learning
+    systems are designing them with specialized hardware and distributing model training
+    for massive, parallel deployment across cloud servers [12].
+
+
+    In addition to the resources consumed during training, supervised machine learning
+    requires labeled data, which is expensive and time consuming to collect [13].
+
+
+    # B. Data Provenance
+
+
+    The quality of machine learning model is strongly influenced by the quality and
+    distribution of the data used [22]. Due to this central role of data in machine
+    learning, features of observational data, like missing data, data noise and outliers,
+    significantly impact the performance of the data that is trained. For example,
+    the data sample can result from random or systematic errors in the observations,
+    or data that is biased. Performance can be improved by further propagating data
+    provenance that were generated during data processing through the entire machine
+    learning workflow. To develop a software method, such data errors are to make
+    machine learning what gets used [23]. Once deployed, a dataset is part of management,
+    so dependencies grow over datasets. As the training data becomes increasingly
+    complex to track [24]. Data dependencies and feedback loops are often hidden and
+    have unexpected effects that make machine learning systems brittle and error diagnosis
+    expensive [25]. Machine learning systems are also vulnerable to attacks that exploit
+    their dependency on data by polluting training data
+
+
+    178'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '(poisoning) or modifying input data before inference (evasion) [16].
+
+
+    # C. Inference Concerns
+
+
+    Trained models use values for new inputs to perform decisions or actions on an
+    ongoing basis. A model is a reliable asset that will make thousands or millions
+    of predictions before it is retired. Retrained inference happens in the background
+    of an application. Inference usually serves users directly and consequently needs
+    to be reliable, accurate and efficient. Even though the resource requirements
+    for a single prediction might be in comparison to those of training a model, the
+    scale at which inference happens requires efficient and optimized processes with
+    high throughput, low latency and guaranteed performance [26]. Traditionally, more
+    attention has been paid to optimizing rather than inference. Recent- popular machine
+    learning platforms like TensorFlow and MXNet offer methods for model optimization,
+    but alone is not enough. When machine learning systems make decisions and actions
+    on our behalf, they must also be reliable. Different machine learning systems
+    offer different quality and accuracy. Methods that guarantee output and reliability
+    estimates are needed to provide inference with quality assurance [28]. Additionally,
+    interpretable inference, which is linked to the limits of understanding of how
+    a model works, is necessary for trust, fair and ethical decision-based predictions
+    [29].
+
+
+    computing devices must deliver dynamic and contextaware functionality over multi-layered,
+    heterogeneous architectures [7]. For machine learning systems this is both an
+    opportunity and a challenge. Learning from data, they are well suited to offer
+    IoT applications that function at specific locations, environmental or social
+    situations and even with time over. It could be argued that machine learning systems
+    are a prerequisite for delivering smart devices at scale, as explicitly as programming
+    for the IoT and its interactions with the physical world and social systems is
+    possible. However, without machine learning systems assume homogeneous and context-independent
+    cloud computing with scalable data storage and unstructured on-device supply,
+    high latency and bandwidth bottlenecks. And consistent environment does not exist
+    for the billions of connected devices in the IoT, where data offloading to wireless
+    networks, heterogeneous computing infrastructure and resource-connected devices
+    with physical hardware presents trade-offs against each other and the performance
+    of algorithms. To achieve scale, consensus must also be reliable.
+
+
+    # D. Machine Learning Operations (ML, Ops)
+
+
+    The code responsible for training a model is only a small component of the greater
+    system, which includes components for configuration, data collection, verification,
+    feature extraction, resource management, analysis, process management, serving
+    infrastructure and monitoring. Even though machine learning systems are constructed
+    from these different components, models are not in the way that software is [25].
+    Model parameters are learned and are dependent on the features and the hyperparameters.
+    By the features used for training, individual models are not extensible and multiple
+    models in non-obvious ways. How model evolves as data changes, methods improve
+    or software changes [30]. Ongoing deployment, customization, and retraining are
+    continuous. Machine learning systems require end-to-end software that facilitates
+    the development, testing, configuration, deployment, management and maintenance
+    of all components that affect data provenance, model training and inference [31].
+
+
+    # III. Challenges FOR MACHINE LEARNING SYSTEMS
+
+
+    Machine learning systems in smart services are constrained by the nature and requirements
+    of the IoT: distributed, physically-bounded and resource-limited, wireless-connected
+
+
+    # A. Offloading to Wireless Communication
+
+
+    Wireless communication networks like Bluetooth and WiFi connect devices either
+    as a local network, or connect individual devices and locals to the Internet network
+    [39]. IoT applications rely on wireless communication to offload data collected
+    by the device, where it can be cleaned and fused with other data, which enables
+    machine learning models for future use. Offloading gives access to computing power
+    and storage, but poses privacy and performance concerns. Wireless communication
+    links have a fixed capacity and range [32], may be noisy and especially when wireless
+    networks are congested can affect IoT applications. Moreover, machine learning
+    systems must consider the consistency of local computing during inference, making
+    fault tolerance a necessary consideration [28]. Additionally, wireless connections
+    introduce latency, uncertainty and costs to machine learning systems that have
+    abstraction layers and communication requirements. Offloading thus weighs against
+    gain and real-time inference requirements, and the frequency, size and distribution
+    of training updates of machine learning systems. While the data path, training
+    and transfer volumes can be optimized through routing schemes, selection and compression
+    to minimize bottlenecks and communication costs [35], and may limit reduce accuracy
+    and be limited by the power supply and computing capabilities of devices.
+
+
+    # B. Distribution Across Heterogeneous Devices
+
+
+    IoT endpoints (e.g. servers, sensors or mobile phones) that are at the periphery
+    of the network are called the edge.
+
+
+    Authorized licensed limited to: American University of Beirut. Downloaded on May
+    17, 2021 at 19:41:32 UTC from IEEE Xplore. Restrictions apply.
+
+
+    179'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'Edge computing the computing power of the cloud to the endpoints [31], thus
+    creating a geographically distributed network of processors for model training
+    and inference. The edge varies in computing capabilities and connectivity from
+    sensor and actuator devices that observe and control the environment at the lowest
+    level, to gateways and cloud servers. Data processing, model training and inference
+    on the edge can be device, gateway or cloud-centric [32]. Device-centric approaches
+    reduce offloading, but are limited by computing capabilities. Gateway-centric
+    approaches require network communication, and associated variability and uncertainty.
+    Cloud-centric approaches offer unlimited storage and data processing capabilities,
+    but with copious communication. Edge servers present an intermediate solution
+    for stable performance.
+
+
+    energy. to reduce the model size, quantization and pruning are used for model
+    compression [42]. Quantization, which reduces the floating point precision of
+    parameters and gradients, can be rule-based [43] or automated with bitwise and
+    oriented signed weights [45]. On the extreme end, binary neural networks are quantized
+    to 1, 2 or 3 bits [46] and provide superior efficiency, but at the cost of predictive
+    accuracy. Mapping of binary neural networks to look-up tables on Field Programmable
+    Gateway Arrays can reduce the energy consumption even more. This eliminates significant
+    parameters from neural networks to reduce their size. Despite its popularity,
+    advances in and the impact of model pruning are desirable, especially if the layers
+    lack standardized performance benchmarks [48]. A rising need for on-device learning
+    is the co-design of model and edge architectures [49], and the exploration of
+    large search space of architectures with Neural Architecture Search.
+
+
+    # C. Resource Limited
+
+
+    Battery-powered IoT devices have limited memory, power and supply resources that
+    are available or shared between data, data processing capabilities (e.g. error
+    detection, decryption and encryption) and communication tasks [35]. These limitations,
+    on-device machine learning tasks aim to do inference, partial model training and
+    retraining locally on the device to remove the constraints associated with limited
+    resources. To make this possible, such constrained settings are feasible, energy
+    efficiency is of the essence [37]. The key methods that are used to reduce the
+    model size, the energy consumption and the processing requirements of model training
+    and inference, while providing comparable accuracy to what can be achieved in
+    the cloud [38]. For instance, federated learning [39] has become standard for
+    distributed model training. This approach reduces privacy concerns and transfer
+    volumes by device centric updates and only performing global parameter aggregation
+    in the cloud.
+
+
+    Extended federated learning [40] to provide privacy guarantees. In federated learning
+    for resource-constrained IoT networks, transfer volumes, model training time and
+    the temperature of devices present trade-offs [41].
+
+
+    Classical deep learning models can be gigabytes size. Small models are necessary
+    for on-device inference for two reasons: on-device size is low, and with larger
+    models requires more computations, which consume more
+
+
+    Reliability is an important design consideration in the IoT and for deploying
+    smart services at massive scale [7]. This means IoT components must be durable
+    and usable to deploy to new services. Components that handle inference are desirable,
+    and because of varying environments, raw data, sensing and processing devices
+    must be shared. Similarly, for the sensors and processors, and observed and transformed
+    stream data, models must be shared. Shared devices reduce the cost of hardware
+    acquisition and the life-cost (e.g. maintenance updates) which is an advantage.
+    However, sharing devices brings their own challenges. Shared hardware and models
+    challenge machine learning systems to consider hardware heterogeneity and utilization,
+    workload allocation and prioritization, process scheduling and isolation, resource
+    management and security. In close proximity, data access can be taken, leading
+    to increased energy consumption of devices, reduced service quality and communication
+    delays. Shared data operations provide for anonymity, control and governance:
+    for example, what grants you access to your phone''s geolocation data? Which cities
+    do you see your trip through? And where do you want to go?
+
+
+    Sensing devices can be mapped in one-to-one, one-to-many, many-to-one and many-to-many
+    devices to inference engines in a similar fashion. Collaborative learning with
+    data inputs from multiple sensing devices, and multi-tenant processing learning
+    which allocates and schedules multiple learning workloads over one or more resources,
+    are the logical extensions of pervasive sense and edge intelligence to although
+    intelligent. Deep machine learning for edge intelligence bound to be complex and
+    complicated. The heterogeneous and geographically dispersed intelligence will'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'the operational challenges already observed in the cloud. Moreover, sharing
+    the involvement of multiple socio-holders, which inherently implies ownership,
+    governance, accountability and trust master.
+
+
+    TABLE I
+
+    ASPECTS AND CONCERNS OF IOT/CPS [51]
+
+    | Aspects | Concerns |
+
+    | --- | --- |
+
+    | functional | actuation, communication, controllability, functionality, manageability,
+    monitorability, performance, physical context, sensing, states, uncertainty |
+
+    | business | enterprise, cost, environment, policy, quality, regulatory, time
+    to market |
+
+    | human | human factors, trustworthiness, reliability, safety, security, logical
+    time, synchronization, awareness, time-interval and latency |
+
+    | data | data semantics, identities, operations on data, relationship between
+    data, data volume |
+
+    | boundaries | behavioural, responsibility, composition, adaptability, complexity,
+    discoverability |
+
+    | lifecycle | deployability, designability, maintainability, operability, producibility
+    |
+
+
+    # IV. MULTI-STAKEHOLDER TRADE-OFFS
+
+
+    The IoT is not only a complex collection of technologies, but a socio-technical
+    system in a multi-stakeholder environment [51] with numerous actors connecting
+    interests of users, data generators, network providers, data processors, players
+    involved and device use, management and ownership are heterogeneous and can change.
+    This multi-stakeholder environment gives rise to conflicting requirements and
+    priorities that must be considered when designing edge intelligence for smart
+    devices.
+
+
+    # A. Design Aspects and Stakeholders Concerns in the IoT
+
+
+    Engineered systems are designed to deliver, reliable and robust performance within
+    acceptable bounds of confidence, in an unpredictable world. For example, designing
+    a plane when the weather is brewing; we have confidence that your decision based
+    on a justified belief that the plane was carefully designed, and that the traffic
+    control system is operated by a trained pilot and that the traffic control internationally
+    regulated systems of excellence. In vision of many services and industries, the
+    IoT serves as a larger infrastructure system. Its physical-digital nature means
+    that actors in the cyber realm carry real consequences in the environment and
+    can change our experience of the world, like getting cold when a system is deactivated.
+    This imposes much more requirements than would be the case for purely physical
+    or cyber systems.
+
+
+    Specifications for the IoT are caught in standards (e.g. references in [51]).
+    A useful approach for defining requirements is through concerns that are of one
+    or more stakeholders [51]. Table I lists concerns, grouped by category, has been
+    developed to provide a comprehensive framework for the design of hybrid cyber
+    and physical systems, like. Concerns related and comparable. For example, in considering
+    the uncertainty, the latency induced by network communication is uncertain. Typically
+    concerns face trade-offs and stakeholders likely to prioritize them differently.
+    Requirements can be used to express system properties that address relevant concerns.
+
+
+    # B. Implications for the Design of Edge Intelligence
+
+
+    Edge intelligence learning machine systems into the cyber system of the IoT. Unlike
+    the low risk potential
+
+
+    settings in which statistical machine learning has developed, can have real-world
+    impact, potentially harmful or even life-threatening repercussions if the machine
+    system fails. As a consequence of the IoT, it is necessary that machine learning
+    systems for edge intelligence confirm the requirements of the IoT. And with other
+    software systems, selecting the target system behaviour during requirements becomes
+    challenging. Machine learning in wearables already also require explicit analysis
+    processes to specify system requirements upfront [51]. This is not the norm in
+    other domains, and it exists to develop approaches for navigating conflicting
+    concerns and requirements trade-offs. We will need to consider complex concerns
+    individually and collectively, and the design choices that satisfy the prioritized
+    requirements of stakeholders.
+
+
+    Opportunity: Frameworks and resources are needed to elicit challenges, navigating
+    conflicting concerns and prioritize trade-offs to make informed design choices
+    for edge intelligence.
+
+
+    Due to its nature, the (implicit) design of machine learning systems in the IoT
+    focuses on feature engineering, algorithm selection, parameter optimization, architecture
+    design, with the goal of optimizing predictive performance. As an IoT perspective,
+    this addresses the performance concerns of the functional aspect, but fails on
+    short measuring and optimizing for other concerns. Device machine learning (Section
+    III-C) addresses concerns about potential contexts with resource limitations,
+    security, privacy, latency, data volume and volume concerns, where distribution
+    and heterogeneity introduces
+
+
+    > ¹¹The definitions of IoT and cyber physical systems (CPS) have been converging
+    over time [52]. We use a unified perspective of the two fields and refer to them
+    as IoT, to retain focus on machine learning systems.
+
+
+    181'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'trollability and synchronization concerns. Within a service paradigm, quality
+    plays an important role, as it is viewed as a discriminating factor for which
+    users choose services [7]. Providing ways for estimating uncertainty and measuring,
+    controlling and guaranteeing quality of service will carry particular significance
+    for smart systems.
+
+
+    **Opportunity:** Metrics and benchmarks for predictive performance are needed
+    so machine learning systems for edge intelligence can be specified, designed and
+    evaluated. Issues such as accountability and transparency are inherent to machine
+    learning systems [54], where data and integrity are integral to the model. Models
+    learned from the unfortunate drawback that biases the data collection process.
+    Moreover, some learning algorithms, like deep neural networks, are considered
+    ''black boxes'' whose inner workings of the algorithm are made poorly understood
+    and not controllable by humans.
+
+
+    **Opportunity:** To be relevant to edge intelligence, concerns and aspects of
+    the IoT need to be expanded to incorporate known challenges due the data-centric
+    nature of machine learning systems.
+
+
+    # V. OUTLOOK-TRUSTWORTHY EDGE INTELLIGENCE
+
+
+    Trust-technology research extends beyond trust systems to non-human, artificial
+    entities. Technologies in their perceived ''humaneness'', use trust technologies
+    differently than this [55]. If the perceived level of a technology is high, then
+    human-like trust constructs such as benevolence, integrity and ability, are good
+    measures of trust. If the perceived level is low, then trustworthiness is appropriate.
+    While trust and trustworthiness represent different concepts [6]. Trust is a psychological
+    state that whether a user is willing to take a risk in the absence of monitoring
+    or external control. Trustworthiness is necessary for consistency and fairness
+    on the characteristics of a system. Trustworthy concerns are essential in both
+    AI and the IoT, but they are approached from different perspectives in the two
+    fields.
+
+
+    # A. Trustworthiness in AI
+
+
+    Technologies that create the perception of social presence of others, facilitate
+    social behaviour (e.g. in dialogue or receiving affection), and that enable interactions
+    with other people are perceived to be human-like [55]. Artificial intelligence
+    technologies, which encompass machine learning systems, are thus human-like by
+    definition and design. Heightening public trust must lead governments and organisations
+    to rapidly develop AI frameworks to specify
+
+
+    principles for trustworthy. The core themes that emerge from prominent frameworks
+    are privacy, accountability, safety and security, transparency and explainability,
+    fairness and nondiscrimination, control of technology, professional responsibility,
+    and promotion of human values [75]. These trust constructs resonate with the AI
+    technologies perceived to be human-like. While the frameworks lay the theoretical
+    work, to be trustworthy AI needs to develop measurable trustworthiness that can
+    lead to clear specifications.
+
+
+    **Opportunity:** Trustworthiness concerns of machine learning systems need to
+    be standardized and operationalized so they can be incorporated in specifications
+    and evaluated objectively in applications.
+
+
+    # B. Trustworthiness in IoT
+
+
+    In contrast, trustworthiness concerns in the IoT are gathered across the industry,
+    constructed, and formally deined as safety, security, privacy, reliability and
+    resilience [51]. The concerns serve to ensure that systems behave appropriately
+    under varying conditions. They require that the IoT be perceived as less human-like,
+    and more like machine. Other properties such as controllability, manageability,
+    functionality, and uncertainty are considered functional concerns rather than
+    trustworthiness concerns.
+
+
+    # C. Opportunities for Trustworthy Edge Intelligence
+
+
+    Neither AI nor trustworthiness concerns in the IoT address the full spectrum of
+    trustworthiness concerns in edge intelligence. For example, a machine learning
+    system in edge intelligence operates under open world assumptions, which can create
+    new categories, unseen examples, black swan events and event attack models. To
+    be able in such scenarios, explainability is a necessary requirement. Or a smart
+    device installed in a new context where the environment does not resemble the
+    training data may fail to function. This may require a trustworthy model.
+
+
+    +   - analyze the trustworthiness concerns that arise in machine learning systems
+    for edge intelligence and smart services
+
+    - explore the trade-offs of trustworthiness concerns between machine learning
+    and IoT systems'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '+   • the interactions and trade-offs between trust-worthiness and other social
+    concerns
+
+
+    +   • expand research into trustworthy machine learning to address the diverse
+    spectrum of challenges and trade-offs that arise in eld
+
+
+    # ## VI. CONCLUSIONS
+
+
+    Ever-growing, densely populated urban centers need to maintain, care for, and
+    nurture their social, natural systems. Smart services, informed by intelligence,
+    are viewed as a way of doing this. Machine learning systems enable smart services
+    by providing the IoT with edge intelligence. This paper presents challenges and
+    trade-offs when designing trustworthy machine learning systems for the IoT, combining
+    the two technologies presents new challenges and opportunities. One of
+
+
+    We position machine learning systems as a component of the IoT, and intelligence
+    as a socio-technical system. We argue that multi-stake concerns, design requirements
+    and trade-offs should be taken into consideration when developing edge intelligence,
+    and highlight opportunities arise in this field. With an interdisciplinary approach
+    is essential, as trust is considered differently in machine learning systems and
+    the IoT. By combining perspectives, taking multi-stake considerations, design
+    requirements and trade-offs into account, it is possible to perceive of a future
+    where trustworthy intelligence and edge services are smart meets
+
+
+    # ## REFERENCES
+
+
+    +   [1] T. Hastie, R. Tibshirani, and F. Freedman. *Elements of Statistical Learning*,
+    2nd ed. Springer: (2009). [Online]. https://web.stanford.edu/hastie/ElemStat.pdf
+
+
+    +   [2] Y. Lecun, Y. Bengio, and G. Hinton. “Deep learning.” Nature, vol. 521,
+    no. 7553, pp. 436–444, 2015.
+
+
+    +   [3] T. M. Mitchell. *The design of machine learning*. Carleton Mellon University,
+    School of Computer Science, Machine Learning ——, 2006.
+
+
+    +   [4] R. Minerva, A. Du, and R. Tomotani. “The trade-offs of Internet of Things
+    (IoT).” IEEE International Int., pp. 1–8, 2016. [Online]. Available: https://doi.org/10.1109/INTII.2016.0065110
+
+
+    +   [5] D. Gremb and P. Rosner. “The Internet of things: from internet scale to
+    smart services.” Computing, vol. 98, pp. 1041–1058, 2016. [Online]. Available:
+    https://doi.org/10.1016/j.future.2016.06.015
+
+
+    +   [6] J. E. Buarque-Escuer, F. G. Gutiérrez-Navarro, L. B. Lopes, R. Butt, and
+    M. A. Astorga, “Tracking the evolution of internet things concept across different
+    applications,” Sensors (Switzerland), vol. 17, no. 2, pp. 28–40, 2017.
+
+
+    +   [7] Y. Wang, J. Mehdi, O. Courant, F. Casati, X. Liu, H. Wang, Y. Bang, B.
+    Blake, D. Softour, F. Flelay, M. Papagopoulos, H. Huang, D. Georagopoulos, L.
+    Chen, S. Nepal, J. Malik, A. Eradi, M. Singh, “Service computing for the next
+    10 years,” Communications, vol. 45, pp. 62–72, 2017. [Online]. Available: https://doi.org/10.1145/29838
+
+
+    +   [8] F. Santie, J. Hansen, and L. Robert, “From cloud to edge: an overview
+    of machine learning architectures.” IEEE Access, vol. 6, no. 2, pp. 4921–4934,
+    2018.
+
+
+    +   [9] X. Zhang, J. Wang, J. Chen, J. Li, I. Li, and M. Guizai, “Smart edge and
+    Deep Learning for Internet of Things,” IEEE Conference on Computer Communications
+    (ICC), pp. 1055–1060, 2018. [Online]. Available: https://doi.org/10.1109/ICC.2018.8662701
+
+
+    +   [10] L. Liu, S. Chen, F. Feng, J. Nie, J. Lu, and J. Qi, “A survey on edge
+    learning for IoT applications.” International Journal of Machine Learning and
+    Computing, vol. 8, no. 3, pp. 81–99, 2018. [Online]. Available: https://doi.org/10.1007/s10532-018-0184-3
+
+
+    +   [11] C. M. Bismuth, Pattern Recognition, and N. Robert, “Machine learning
+    for feasible mobile devices.” IEEE Communications, vol. 53, no. 2, pp. 77–80,
+    2015.
+
+
+    +   [12] J. Verbanken, M. Wolff, J. Katzy, K. Toppelburg, V. Terellen, and R.
+    Sallvay, “A survey on edge learning for mobile computing.” IEEE Access, vol. 8,
+    pp. 74543–74555, 2020. [Online]. Available: https://doi.org/10.1109/ACCESS.2020.299443
+
+
+    +   [13] Y. Yang, J. Xu, D. Oldham, and C. Rea, “Data mining: Creating large data
+    sets, quickly.” Advances in Neural Neural Information Processing Systems, no.
+    15, pp. 993–999, 2002.
+
+
+    +   [14] Y. Chen, J. Wang, F. Liu, J. Li, K. Schawicki, W. Wu, C. Zhang, and S.
+    Gutierrez, “Integration of Machine Learning and Edge Computing.” In Proceedings
+    of the 2nd SymML Conference, IEEE International, pp. 1–12. US, 2019. [Online].
+    Available: https://doi.org/10.1109/ICCIT.2019.2903027
+
+
+    +   [15] H. Li, F. Bengio, and B. Wall, “Learning to come closer to the data and
+    statistics.” In Proceedings of the ACM Conference on Intelligent Systems, vol.
+    22, no. 10, pp. 1345–1359, 2010. [Online]. Available: https://doi.org/10.1145/1831183.1831233
+
+
+    +   [16] Y. Ji, J. Zhang, X. Li, and Y. Wang, “Trade-off analysis in machine learning
+    for edge intelligence.” In IEEE International Conference on Computer Science and
+    Intelligent Systems, pp. 349–363, 2018.
+
+
+    +   [17] I. Geoffrey, M. Pbent, and N. Papert, “Machine learning for resource-constrained
+    mobile devices.” ACM Communications, vol. 61, no. 7, pp. 56–66, 2018. [Online].
+    Available: https://doi.org/10.1145/3214394.3214401
+
+
+    +   [18] H. Li, F. Bengio, and B. Wall, “Learning to come closer to the data and
+    statistics.” In Proceedings of the ACM Conference on Intelligent Systems, vol.
+    22, no. 10, pp. 1345–1359, 2010. [Online]. Available: https://doi.org/10.1145/1831183.1831233
+
+
+    +   [19] S. Amerahi, A. Bengel, C. Bird, R. DeLine, H. Gall, E. Kumar, N. Nagapurani,
+    B. Nash, and T. Zimmermann, “Software Engineering for Machine
+
+
+    183'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'Learning a Case Study. Proceedings 2019 IEEE/ACM 41st International Conference
+    on Software Engineering: Engineering in Practice, ICSE-2019, 299–300, Dublin
+
+
+    ence on Intelligence and Analytics, AISATS 2017, 54.
+
+
+    25. D. Sculey, H. Holt, G. Dolgov, E. Davydov, T. Phillips, D. Hickey, C. Sellars,
+    J. Young, and D. Henderson. “Technical Debt in Machine Learning Systems,” Proceedings
+    of the 26th International Conference on Neural Information Processing Systems,
+    NeurIPS 2013, 3542–3550.
+
+
+    40. H. Beckham, G. Andrew, U. Erlingason, S. Chen, I. Miro, N. Pope, and J. Kato,
+    “General Approach to Applying Differential Privacy to Robust Training.” Available:
+    https://arxiv.org/abs/1812.06210
+
+
+    26. L. S. Lee, A. S. Polichenico, D. Milano, B.-G. Chin, M. Domingos. “Opening
+    the Black Box of Machine Learning Systems.” Proceedings of the 35th IEEE Symposium
+    on Software Engineering and Implementation, ASEI 2020, 215–224. Available: https://www.ieee.org/document/9155111
+
+
+    41. A. Ferada, V. Yazdan, S. Salveoni, D. Poques, R. Mortier, S. Polichenico,
+    D. Milano, and M. G.. “Co-FedLab: Enabling Federated Learning in ML-codift with
+    Edge Nodes,” Proceedings of the 2020 IEEE Conference on Computer Communications
+    and Networking (CoNet), vol. 20, 2020. Available: https://doi.org/10.1109/COMNET.2020.2994328
+
+
+    27. I. Stica, G. R. Sa, R. Popa, D. Patterson, M. Mahoney, R. Kate, J. J. Batra,
+    and K. Suknetzer. “Scale-Net.” In K. Goldberg, A. Deller, and A. P. Berkeley.
+    “A Review of Challenges for AI.” (2017). Available: https://arxiv.org/abs/1711.05885
+
+
+    42. J. Sun, Y. Li, M. W. Wenker, K. Ashford, J. Daly, and K. Kato. “S44: Scaling
+    Language Models with Parameter and Data Size.” In 2021 International Conference
+    on Machine Learning (ICML).
+
+
+    28. T. Abadeader, J. Hay, Y. Karaman, A. Miera, P. R. Saka, and S. Vaswani. “Deep
+    NLP Techniques, Datasets and Challenges in Natural Language Processing and AI
+    Control,” International Journal on Information Technology, vol. 20, no. 1, 1–19,
+    2020.
+
+
+    43. M. Racupi, A. Cappoli, and L. Benardi. “Memory-Driven Deep Learning on Resource
+    Constrained Microcontrollers,” in Proceedings of the 3rd MLSys Conference, Austin,
+    2020.
+
+
+    29. C. Cunningham. “The Model of Technical Debt.” Interpretation: 2, 1–8, 1998.
+
+
+    30. S. Bissels, F. Tammmann, J. Damanikas, S. Selfer, and G. Szavros. “Challenges
+    in Machine Learning Model Management: Proceedings of the 13th International Conference
+    on Data Science and Engineering, 2018, 5–11.
+
+
+    44. T.-W. Chin, F.-I. Chiang, V. Chang, and D. Marcellisco. “Fed-Net: Fast End-to-End
+    Optimized Neural Networks,” in Proceedings of the 2023 31st IEEE Conference on
+    Computer Applications, Seoul, 2023.
+
+
+    31. N. Rister
+
+
+    32. F. Sane and J. Hukee. “IoT Technologies for Embedded Computing: a Survey,”
+    in CODECEPTS 2016, IPSITS, 1–16.
+
+
+    33. A. Al-Qaifi, M. Guzman, M. Mohammadi, A. Aly, and M. Rahaman. “Security and
+    Privacy in Internet of Things: Threats, Protocols, and Applications.” IEEE COMMUNICATION
+    SITES, NETWORKS AND VECTORS, vol. 12, no. 4, 2020.
+
+
+    46. D. Stamolis, R. Dang, D. W. Lyubdemov, P. Primita, J. Liu, and D. Marcellisco,
+    “Single-Path NAS: Designing for Heterogeneous Machine Learning Databases.” Machine
+    Learning Learning and Databases, vol. 3, 2021, 1000012. Available: https://doi.org/10.1016/j.mlcb.2021-100001-2.
+
+
+    34. S. Jen, Koo, and J. Baghi. “Trustworthiness, security, and communication capacity
+    for iot devices,” IEEE Internet Journal, vol. 17, no. 4, 2455–2463, 2020.
+
+
+    47. B. Zheng and Q. V. Lee. “Neural Architecture Search with Reinforcement Learning.”
+    in the 2017 International Conference on Machine Learning, ICML 2017.
+
+
+    35. H. Luo, Y. Liu, and S. K. “Correlating Data with Data Fusion in Wireless Sensor
+    Networks.” IEEE Transactions on Machine Learning, vol. 11, 1110–1125, 2020.
+
+
+    48. G. Zheng, F. J. Brown, and E. Ellman, “Cyber-Physical Systems and Security,”
+    National Institute of Standards and Privacy-Preserving Systems and Information
+    Intelligence, NIST National Institute of Standards and Technology, 2010.
+
+
+    36. E. Marella, R. Buncilovic, and A. L. Murphy, “Security for a trust-centric
+    internet of things.” Proceedings of the 2017 IEEE International Conference on
+    Computer and Security (ICCS 2017), 77–78, 2017.
+
+
+    49. G. Zheng, P. Krishna, K. Rynarski, and A. Rafier. “Effective ensemble learning
+    and management of faulty benefit in healthcare applications.” IEEE Journal, vol.
+    26, 2021.
+
+
+    37. C. S. Jen, R. K. Santoso, and M. J. Corodiguez-Geraldo, de Castro-Casado.
+    “Cloud-computing architectures and a new global feature,” Future Computer Systems,
+    vol. 99, no. 2, 278–299, 2019. Available: https://arxiv.org/abs/1902.04821
+
+
+    38. C. S. Jen, R. Baghi, and A. Jell, J. Holmann, X. Huang, R. Dartouge, D. Kanter,
+    A. J. Seymour, U. Thakker, M. Verbel, and P. Yadav. “Methodology for Neural Network
+    Optimization and Direction,” 2020.
+
+
+    39. H. Brendan McMathuis, E. Moore, D. Rampage, S. Hamilton, and B. Agueras. “Communication-efficient
+    learning of deep networks from decentralized data.” Proceedings of the 2019 International
+    Conf-
+
+
+    184'
+  merge: -1
+  img_proc: true

@@ -1,0 +1,2 @@
++   [2020 IEEE 第二届认知机器智能国际会议 (CogMI) (美国亚特兰大州 2020.10.28-2020.10.31) 2020 IEEE 第二届认知机器智能国际会议](README.md)
++   [2020 IEEE 第二届认知机器智能国际会议 (CogMI) (美国亚特兰大州 2020.10.28-2020.10.31) 2020 IEEE 第二届认知机器智能国际会议](2020-ieee-second-international-conference-on-cognitive-machi.md)
