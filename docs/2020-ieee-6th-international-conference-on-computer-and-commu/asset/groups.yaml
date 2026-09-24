@@ -1,0 +1,1159 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Security Levels Oriented Deployment Algorithm for Mimic SaaS Cloud
+
+
+    Si Yixuan*, Hu Hongchao², Liu Yan², Liang Hao
+
+    ¹(Zhongyuan Network Security Research Institute)
+
+    ²(National Digital System Engineering & Technological R&D Center)
+
+    Zhengzhou, China
+
+    e-mail: nsy999@163.com
+
+
+    Abstract—Static cloud computing environment is likely to become the target of
+    attacks, causing data to be stolen or leaked, posing a greater security threat
+    to users. In order to improve the security of the cloud computing environment,
+    a heterogeneous resource allocation algorithm for SaaS with different security
+    levels is proposed based on the idea of mimic defense and adopts the dynamic heterogeneous
+    redundancy strategy. Experimental results show that under different security levels,
+    the success rate and defense are different. As the security increases, the success
+    rate of virtual machine attacks is gradually reduced, while the deployment overhead
+    is gradually.
+
+
+    **Keywords—**cloud computing; security level; resource allocation
+
+
+    # I. INTRODUCTION
+
+
+    Cloud computing provides access to resources on a pay-as-you-go basis. Many costs
+    are calculated based on the duration of use. The National Institute of Standard
+    and Technology defines the basic models of cloud computing: Software as a Service
+    (SaaS), Platform as a Service (PaaS) and Infrastructure as a Service (IaaS), [1].
+    Moreover, SaaS is easy to use and is currently the most popular form of cloud
+    delivery. In order to provide users with high quality of service, SaaS services
+    are often leased from private or public cloud providers. With the rapid expansion
+    of SaaS services, it is essential to optimize resource allocation in the SaaS
+    cloud [3].
+
+
+    protection methods in the electronic health include cryptographic methods and
+    non-cryptographic methods.
+
+    However, different users have different security requirements for virtual machines.
+    For example, ordinary users only need virtual machines to provide services and
+    are not worried about privacy breach. But there are also users who pay more to
+    the security of virtual machines, such as financial, medical and military fields.
+    To address this problem, this paper mimic defense technology [11], to propose
+    a heterogeneous resource allocation algorithm for SaaS with different security
+    levels. Service providers can provide different security services to meet the
+    needs of users. The deployment of heterogeneous resource of virtual machines under
+    different security levels is different, resulting in different costs for deploying
+    virtual machines. This is more effective than traditional virtual machine deployment
+    and improves the availability of cloud computing environment.
+
+
+    # II. RELATED WORK
+
+
+    The static and homogeneous cloud computing environment is widely used due to its
+    easy management and low cost. However, due to the heterogeneity of systems, it
+    is easier to detect information and steal data, which leads to security threats
+    to the cloud environment [13]. The isolation of virtualization makes it difficult
+    to detect attacks [14] and improve the security of the cloud computing environment.
+    On this basis, the security of the virtual machine can be further enhanced by
+    dynamically rotating the target. By constantly changing the location of the virtual
+    machine and the operating system of the virtual machine, virtual machines are
+    prevented from side channel attacks [15] and detection attacks [16]. Has received
+    extensive experience and research. Attackers use various methods to attack the
+    security issues in cloud computing. Network defense strategies include passive
+    defense and active defense. Passive defense technologies are mainly represented
+    by firewalls and intrusion detection systems. Passive defenses are based on known
+    prior knowledge to detect and block threat'
+  - '[PAGE 1]
+
+
+    characteristics and attack behaviors. The disadvantages of
+
+    traditional passive defense strategies are that they cannot
+
+    accurately obtain prior knowledge and are difficult to resist
+
+    unknown attacks. Active defense technologies, represented
+
+    by Moving Target (MTD) and mimic defense
+
+    ologies [17], have changed the rules of the game for
+
+    network defense, fundamentally changed the cycle of
+
+    computing environment, increasing the difficulty of detection
+
+    by attackers and enhancing the security of the network
+
+    to extent. However, MTD has limitations. When an attacker successfully enters
+
+    the target host, MTD cannot, identify, and defend.
+
+
+    exploitable vulnerability information. (1) Install the
+
+    backdoor. The attacker uses the operating system
+
+    vulnerability information discovered from the user to install
+
+    backdoor on the user''s host. (4) The attacker
+
+    stablishes a connection with the user''s host and remotely
+
+    access the backdoor on the user''s host, without the user''s knowledge. (5)
+
+    steal data. The attacker establishes a connection with
+
+    the user''s host, which uses built-in operating system
+
+    commands to spy on the user''s internal network, and then steal
+
+
+    The mimic defense technology is based on a dynamic
+
+    mechanism that makes the environment more
+
+    dynamic and uncertain. At the same time, an attack
+
+    mechanism is introduced to create and rotate virtual hosts
+
+    of offensive behaviors, which further improves the
+
+    security of the computing environment [18].
+
+
+    In the chain, vulnerability mining is a critical
+
+    step for the attacker. The attacker can successfully dig
+
+    out the operating system vulnerabilities of the target host,
+
+    attacker can attack the target host with the system
+
+    base on the vulnerabilities. A static and single
+
+    environment will lead to failure. The attacker can launch large-scale attack on
+    the
+
+    network based on the vulnerabilities discovered,
+
+    training the intuition of multiple machines with
+
+    overhead.
+
+
+    Virtual defense is designed to be
+
+    heterogeneous and redundant. A group of mimic virtual
+
+    machines is composed of multiple heterogeneous virtual
+
+    The heterogeneous virtual machines perform the
+
+    same service and output results to the agent, and
+
+    outputs are judged by the agent. Heterogeneous
+
+    redundancy strategy can improve the system''s fault
+
+    and data reliability.
+
+
+    # III. THREATS IN CHAIN
+
+
+    # IV. ALGORITHM DESCRIPTION
+
+
+    # A. Virtual Machine Security Level Classification
+
+
+    When a virtual machine loses confidentiality, integrity, or
+
+    itit is a security violation. The definition of
+
+    "Federal and Information System
+
+    Security Classification" (FIPS PUB 199) [20], the security
+
+    levels of virtual machines are divided into the following
+
+    three levels:
+
+
+    | Detect | Vulnerability mining | Control | Steal data |
+
+    | --- | --- | --- | --- |
+
+    | Delivery email with malicious URL/attachment | Exploit operating system vulnerability
+    | Installs a backdoor on the target host | Establish connection from being | Access
+    other computers to total data |
+
+
+    Figure 1 Attack chain.
+
+
+    The first level, the virtual security level is
+
+    1, which means that the content of this virtual
+
+    machine can be opened and transparent, there is no privacy
+
+    or security concern. The disclosure mechanism cannot
+
+    protect the value of this type of virtual machine. At the
+
+    time, the user did not require the supplier to protect this type
+
+    of machine. Even if this virtual machine is
+
+    attacked by an attacker, it will not cause loss of.
+
+
+    The second level, the virtual security level is
+
+    2, which means that this type of virtual machine involves
+
+    sensitive information, and the supplier needs to spend
+
+    resources to protect this type of virtual machine from
+
+    attack, because once this type of machine is
+
+    insecure, the attacker can cause serious
+
+    adverse effects and bring losses. The security of this type
+
+    virtual machine is between level 1 and 3, there is
+
+    a degree of security, but if the cost of this
+
+    virtual machine is greater than the value of the
+
+    machine, the user can choose to
+
+    give up this type of virtual machine.
+
+
+    As described in [19], Fig. shows the
+
+    network chain. The circle represents the state of the
+
+    attack chain, and the corresponding describes the
+
+    toperations taken in each.
+
+
+    The process of an attack launch as follows:
+
+    (1) Detection phase. The attacker sends
+
+    malicious URLs or attachments to users to collect
+
+    formation of aim virtual machine. (2)
+
+    vulnerability mining, the attacker uses the user''s
+
+    system based on the collected information and
+
+
+    Type three, the virtual security level is
+
+    which means that the content contained in this type
+
+    of virtual machine is very sensitive and can be Provided to
+
+    authorized users to provide services. And it requires
+
+    sliers to spend a lot of money to protect virtual
+
+    machines as much. Once this type of virtual'
+  md: '
+
+    # Security Levels Oriented Deployment Algorithm for Mimic SaaS Cloud
+
+
+    Si Yixuan*, Hu Hongchao², Liu Yan², Liang Hao
+
+    ¹(Zhongyuan Network Security Research Institute)
+
+    ²(National Digital System Engineering & Technological R&D Center)
+
+    Zhengzhou, China
+
+    e-mail: nsy999@163.com
+
+
+    Abstract—Static cloud computing environment is likely to become the target of
+    attacks, causing data to be stolen or leaked, posing a greater security threat
+    to users. In order to improve the security of the cloud computing environment,
+    a heterogeneous resource allocation algorithm for SaaS with different security
+    levels is proposed based on the idea of mimic defense and adopts the dynamic heterogeneous
+    redundancy strategy. Experimental results show that under different security levels,
+    the success rate and defense are different. As the security increases, the success
+    rate of virtual machine attacks is gradually reduced, while the deployment overhead
+    is gradually.
+
+
+    **Keywords—**cloud computing; security level; resource allocation
+
+
+    # I. INTRODUCTION
+
+
+    Cloud computing provides access to resources on a pay-as-you-go basis. Many costs
+    are calculated based on the duration of use. The National Institute of Standard
+    and Technology defines the basic models of cloud computing: Software as a Service
+    (SaaS), Platform as a Service (PaaS) and Infrastructure as a Service (IaaS), [1].
+    Moreover, SaaS is easy to use and is currently the most popular form of cloud
+    delivery. In order to provide users with high quality of service, SaaS services
+    are often leased from private or public cloud providers. With the rapid expansion
+    of SaaS services, it is essential to optimize resource allocation in the SaaS
+    cloud [3].
+
+
+    protection methods in the electronic health include cryptographic methods and
+    non-cryptographic methods.
+
+    However, different users have different security requirements for virtual machines.
+    For example, ordinary users only need virtual machines to provide services and
+    are not worried about privacy breach. But there are also users who pay more to
+    the security of virtual machines, such as financial, medical and military fields.
+    To address this problem, this paper mimic defense technology [11], to propose
+    a heterogeneous resource allocation algorithm for SaaS with different security
+    levels. Service providers can provide different security services to meet the
+    needs of users. The deployment of heterogeneous resource of virtual machines under
+    different security levels is different, resulting in different costs for deploying
+    virtual machines. This is more effective than traditional virtual machine deployment
+    and improves the availability of cloud computing environment.
+
+
+    # II. RELATED WORK
+
+
+    The static and homogeneous cloud computing environment is widely used due to its
+    easy management and low cost. However, due to the heterogeneity of systems, it
+    is easier to detect information and steal data, which leads to security threats
+    to the cloud environment [13]. The isolation of virtualization makes it difficult
+    to detect attacks [14] and improve the security of the cloud computing environment.
+    On this basis, the security of the virtual machine can be further enhanced by
+    dynamically rotating the target. By constantly changing the location of the virtual
+    machine and the operating system of the virtual machine, virtual machines are
+    prevented from side channel attacks [15] and detection attacks [16]. Has received
+    extensive experience and research. Attackers use various methods to attack the
+    security issues in cloud computing. Network defense strategies include passive
+    defense and active defense. Passive defense technologies are mainly represented
+    by firewalls and intrusion detection systems. Passive defenses are based on known
+    prior knowledge to detect and block threat characteristics and attack behaviors.
+    The disadvantages of traditional passive defense strategies are that they cannot
+    accurately obtain prior knowledge and are difficult to resist unknown attacks.
+    Active defense technologies, represented by Moving Target (MTD) and mimic defenseologies
+    [17], have changed the rules of the game for network defense, fundamentally changed
+    the cycle of computing environment, increasing the difficulty of detection by
+    attackers and enhancing the security of the network to extent. However, MTD has
+    limitations. When an attacker successfully enters the target host, MTD cannot,
+    identify, and defend. exploitable vulnerability information. (1) Install the backdoor.
+    The attacker uses the operating system vulnerability information discovered from
+    the user to install backdoor on the user''s host. (4) The attacker establishes
+    a connection with the user''s host and remotely access the backdoor on the user''s
+    host, without the user''s knowledge. (5) steal data. The attacker establishes
+    a connection with the user''s host, which uses built-in operating system commands
+    to spy on the user''s internal network, and then steal.
+
+
+    The mimic defense technology is based on a dynamic mechanism that makes the environment
+    more dynamic and uncertain. At the same time, an attack mechanism is introduced
+    to create and rotate virtual hosts of offensive behaviors, which further improves
+    the security of the computing environment [18].
+
+
+    In the chain, vulnerability mining is a critical step for the attacker. The attacker
+    can successfully dig out the operating system vulnerabilities of the target host,
+    attacker can attack the target host with the system base on the vulnerabilities.
+    A static and single environment will lead to failure. The attacker can launch
+    large-scale attack on the network based on the vulnerabilities discovered, training
+    the intuition of multiple machines with overhead.
+
+
+    Virtual defense is designed to be heterogeneous and redundant. A group of mimic
+    virtual machines is composed of multiple heterogeneous virtual The heterogeneous
+    virtual machines perform the same service and output results to the agent, and
+    outputs are judged by the agent. Heterogeneous redundancy strategy can improve
+    the system''s fault and data reliability.
+
+
+    # III. THREATS IN CHAIN
+
+
+    # IV. ALGORITHM DESCRIPTION
+
+
+    # A. Virtual Machine Security Level Classification
+
+
+    When a virtual machine loses confidentiality, integrity, or itit is a security
+    violation. The definition of "Federal and Information System Security Classification"
+    (FIPS PUB 199) [20], the security levels of virtual machines are divided into
+    the following three levels:
+
+
+    | Detect | Vulnerability mining | Control | Steal data |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Delivery email with malicious URL/attachment | Exploit operating system vulnerability
+    | Installs a backdoor on the target host | Establish connection from being | Access
+    other computers to total data |
+
+
+    Figure 1 Attack chain.
+
+
+    The first level, the security level is 1, which means that the content of this
+    virtual machine can be opened and transparent, there is no privacy or security
+    concern. The disclosure mechanism cannot protect the value of this type of virtual
+    machine. At the time, the user did not require the supplier to protect this type
+    of machine. Even if this virtual machine is attacked by an attacker, it will not
+    cause loss of.
+
+
+    The second level, the security level is 2, which means that this type of virtual
+    machine involves sensitive information, and the supplier needs to spend resources
+    to protect this type of virtual machine from attack, because once this type of
+    machine is insecure, the attacker can cause serious adverse effects and bring
+    losses. The security of this type virtual machine is between level 1 and 3, there
+    is a degree of security, but if the cost of this virtual machine is greater than
+    the value of the machine, the user can choose to give up this type of virtual
+    machine.
+
+
+    As described in [19], Fig. shows the network chain. The circle represents the
+    state of the attack chain, and the corresponding describes the operations taken
+    in each.
+
+
+    The process of an attack launch as follows: (1) Detection phase. The attacker
+    sends malicious URLs or attachments to users to collect formation of aim virtual
+    machine. (2) vulnerability mining, the attacker uses the user''s system based
+    on the collected information and
+
+
+    Type three, the virtual security level is which means that the content contained
+    in this type of virtual machine is very sensitive and can be Provided to authorized
+    users to provide services. And it requires sliers to spend a lot of money to protect
+    virtual machines as much. Once this type of virtual
+
+    '
+  mdcn: '
+
+
+    # 面向拟态 SaaS 云的安全等级导型部署算法
+
+
+    司宜轩*，胡洪潮²,刘岩²，梁浩
+
+    ¹（中原网络安全研究院）
+
+    ²（国家数字系统工程与技术研发中心）
+
+    中国，郑州
+
+    e-mail: nsy999@163.com
+
+
+    摘要—静态云计算环境极易成为攻击目标，导致数据被窃取或泄露，给用户带来更大的安全威胁。为了提高云计算环境的安全性，本文基于拟态防御的思想提出了一种针对不同安全等级
+    SaaS 的异构资源分配算法，并采用了动态异构冗余策略。实验结果表明，在不同的安全等级下，成功率和防御能力存在差异。随着安全性的提升，虚拟机攻击的成功率逐渐降低，而部署开销逐渐增加。
+
+
+    **关键词—**云计算；安全等级；资源分配
+
+
+    # I. 引言
+
+
+    云计算提供了按需付费的资源访问。许多成本是根据使用时长计算的。美国国家标准与技术研究院（NIST）定义了云计算的基本模型：软件即服务（SaaS）、平台即服务（PaaS）和基础设施即服务（IaaS）[1]。此外，SaaS
+    易于使用，是目前最流行的云交付形式。为了给用户提供高质量的服务，SaaS 服务通常从私有云或公共云供应商处租赁。随着 SaaS 服务的快速扩展，优化 SaaS
+    云中的资源分配至关重要 [3]。
+
+
+    电子健康中的保护方法包括加密方法和非加密方法。
+
+    然而，不同用户对虚拟机的安全性有不同的需求。例如，普通用户只需要虚拟机提供服务，而不担心隐私泄露。但也有用户对虚拟机的安全性支付更高的费用，例如金融、医疗和军事领域。为了解决这一问题，本文引入拟态防御技术
+    [11]，提出了一种针对不同安全等级 SaaS 的异构资源分配算法。服务提供者可以提供不同的安全服务以满足用户需求。不同安全等级下异构虚拟机的部署方式不同，导致了虚拟机部署成本的差异。这比传统的虚拟机部署更有效，提高了云计算环境的可用性。
+
+
+    # II. 相关工作
+
+
+    静态同质的云计算环境因其管理简单、成本低而被广泛使用。然而，由于系统的异构性，更容易检测信息和窃取数据，从而对云环境带来安全威胁 [13]。虚拟化的隔离使得攻击难以被检测
+    [14] 且难以提高云计算环境的安全性。在此基础上，通过动态切换目标可以进一步增强虚拟机的安全性。通过不断改变虚拟机及其虚拟机操作系统的位置，防止虚拟机遭受侧信道攻击
+    [15] 和检测攻击 [16]。已有大量的经验和研究。攻击者利用各种方法攻击云计算的安全问题。网络防御策略包括被动防御和主动防御。被动防御技术主要由防火墙和入侵检测系统代表。被动防御基于已知知识来检测并拦截威胁特征和攻击行为。传统被动防御策略的缺点是无法准确获取先知识，且难以抵抗未知攻击。以移动目标（MTD）和拟态防御技术为代表的主动防御技术改变了网络防御的规则，从根本上改变了计算环境的周期，增加了攻击者的检测难度，并在程度上增强了网络安全。然而，MTD
+    具有局限性。当攻击者成功进入目标主机时，MTD 无法识别并防御可利用的漏洞信息。(1) 安装后门。攻击者利用从用户处发现的操作系统漏洞信息在用户主机上安装后门。(4)
+    攻击者与用户主机建立连接，并在用户不知情的情况下远程访问用户主机上的后门。(5) 窃取数据。攻击者与用户主机建立连接，利用内置操作系统命令监视用户内部网络并进行窃取。
+
+
+    拟态防御技术基于动态机制，使环境更加动态化和不确定。同时，引入了攻击机制来创建和轮换攻击行为的虚拟主机，进一步提高了计算环境的安全性 [18]。
+
+
+    在攻击链中，漏洞挖掘是攻击者的关键步骤。攻击者可以成功挖掘出目标主机的操作系统漏洞，根据漏洞对目标主机进行攻击。静态单一的环境将导致失败。攻击者可以根据发现的漏洞在网络上发起大规模攻击，通过开销训练多台机器的直觉。
+
+
+    虚拟防御被设计为异构且冗余。一组拟态虚拟机由多个异构虚拟机组成。异构虚拟机执行相同的服务并将结果输出给代理，由代理对输出进行判断。异构冗余策略可以提高系统的故障能力和数据可靠性。
+
+
+    # III. 攻击链中的威胁
+
+
+    # IV. 算法描述
+
+
+    # A. 虚拟机安全等级分类
+
+
+    当虚拟机丢失机密性、完整性或发生安全违规时即视为违反。根据《联邦和信息系统安全分类》（FIPS PUB 199）[20]，虚拟机的安全等级分为以下三个等级：
+
+
+    | 检测 | 漏洞挖掘 | 控制 | 窃取数据 |
+
+    | :--- | :--- | :--- | :--- |
+
+    | 发送带有恶意 URL/附件的邮件 | 利用操作系统操作系统漏洞 | 在目标主机上安装后门 | 从...建立连接 | 访问其他计算机获取全部数据 |
+
+
+    图 1 攻击链。
+
+
+    第一级，安全等级为 1，这意味着该虚拟机的内容是开放且透明的，没有隐私或安全担忧。泄露机制无法保护此类虚拟机的价值。此时，用户不要求供应商保护此类机器。即使该虚拟机被攻击者攻击，也不会造成损失的。
+
+
+    第二级，安全等级为 2，这意味着此类虚拟机涉及敏感信息，供应商需要投入资源保护此类虚拟机免受攻击，因为一旦这类机器不安全，攻击者会产生严重的负面影响并带来损失。此类虚拟机的安全性处于
+    1 级和 3 级之间，具有安全性，但如果这种虚拟机的成本大于机器的价值，用户可以选择放弃这种虚拟机。
+
+
+    如 [19] 所示，图展示了网络链。圆圈表示攻击链的状态，相应的描述说明了每个阶段采取的操作。
+
+
+    攻击发起的过程如下：(1) 检测阶段。攻击者向用户发送恶意 URL 或附件以收集目标虚拟机的信息。(2) 漏洞挖掘，攻击者根据收集的信息利用用户系统并
+
+
+    第三级，虚拟安全等级为三，这意味着此类虚拟机包含的内容非常敏感，可以提供给授权用户以提供服务。这要求供应商花费大量资金来保护虚拟机。一旦这种类型的虚拟
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    machine is successfully attacked, it will have a bad influence
+
+    on users and cause serious losses.
+
+
+    # B. Virtual Machine Deployment Algorithm Based on
+
+    Security Level
+
+
+    As shown in Fig. 2, the supplier provides a custom
+
+    interface to the user through the web interface, and signs an
+
+    agreement with the user to provide different security levels
+
+    un user can select the security level to create a virtual machine through
+
+    the interface. When a request arrives, the scheduler
+
+    schechedules the number of virtual machines to be
+
+    deployed, the type of operation, deployment
+
+    location, and the residence time of the virtual machines
+
+    according to the security level of the task. When the security
+
+    level is considered, security requirements for the virtual machine, and randomly
+    selects
+
+    an operating system from the operating system library to
+
+    create a virtual machine. The current load selection selects
+
+    the server to be deployed, and the virtual machine is
+
+    deployed to the server. When the security level is 2, select
+
+    tthree heterogeneous operating systems from the
+
+    minor library to create virtual machines, and deploy on
+
+    three different physical servers, and set the residence time for
+
+    these virtual machines. When the security level is 3,
+
+    five heterogeneous operating systems are selected from
+
+    or library to create virtual machines and
+
+    deployed on five different physical servers, and the time is for five virtual
+    machines.
+
+
+    Once the attacker successfully attacks the virtual machine,
+
+    the attacker can affect the normal operation of the target
+
+    virtual machine, steal or tamper with the data of the target
+
+    virtual machine; and then it is very important to
+
+    backup key virtual machines. To ensure the confidentiality, integrity\and reliability
+    of the system. It performs virtual
+
+    machine backup according to the security level, and
+
+    number of virtual machines for different security level is
+
+    dndifferent. As shown in Fig. 3, three redundant and heterogeneous
+
+    as an example.
+
+
+    virtual machines send the output results to the agent, and
+
+    the makes a ruling based on the majority ruling. If vm1 is
+
+    attacked and the virtual is tampered with, but the output of
+
+    v2 and vm3 is normal, the proxy can still output the
+
+    result after the deployment. The proxy has only
+
+    forwarding and adjudication functions, and cannot provide
+
+    services to users to use a virtual machine. The redundancy
+
+    strategy can improve the fault tolerance of the cloud
+
+    computing environment.
+
+
+    ![](img/7a652f61eb6b0f775001a6a7dda3cf8d_2_0.png)
+
+
+    Figure 2. Virtual machine deployment strategy based on security.
+
+
+    ![](img/7a652f61eb6b0f775001a6a7dda3cf8d_2_1.png)
+
+
+    Figure 3. Heterogeneous redundant architecture (DHR).
+
+
+    TABLE NUMBER OF COMMON VULNERABILITIES IN OPERATING SYSTEMS
+
+    | OS | OB | NB | FB | W03 | W12 | D | R | Osol | Sol |
+
+    |---|---|---|---|---|---|---|---|---|-|
+
+    | OS | | 149 | 45 | 52 | 2 | 1 | 0 | 3 | 10 | 1 |
+
+    | NB | | | 139 | 56 | 1 | 1 | 0 | 4 | 8 | 16 | 0 |
+
+    | FB | | | 58 | 284 | 3 |  | 0 | 6 | 9 | 22 | 0 |
+
+    | W02 | | | | | 3 | 412 | 345 | 85 | 0 | 1 | 7 | 0 |
+
+    | W01 | | | | | 2 | 344 | 385 | 0 | 0 | 0 | 0 |
+
+    | W12 | | | | | 0 | 85 | 446 | | | |  | |  | |
+
+    | U | | | | 6 | 0 | 0 | 0 | 840 | 179 | 86 | |
+
+    | D | | | | 4 | 9 | 0 | 0 | 303 | 925 | 220 | |
+
+    | R | | | | 8 | 22 | 1 | 0 | 86 | 170 | 158 | 69 | 1 |
+
+    | Osol | | | | 16 | 22 | 7 | 0 | | 86 | 73 | 69 | 27 |
+
+    | Sol | | | | 1 | 0 | 0 | 0 | 0 | 0 | 1 | 27 | 100 |
+
+
+    Authorized license used to limit: University of Prince Edward. Downloaded on May
+    29,2021 at 22:32:12 from IEEE Xplore. Restrictions apply.'
+  - '[PAGE 3]
+
+
+    # V. EXPERIMENT
+
+
+    In this paper, the data published by Common Vulnerability Enumeration (CVE) [21],
+    disclosed in 11 operating systems from 2004 to 2017 were obtained. The operating
+    systems are (OSBSD), NB (NetBSD), FB (FreeBSD), W03 (Windows 2003), W08 (Windows
+    2008), W12 (Windows 2012), Ubuntu, D (Debian), OS (Solaris). In Table 1, the number
+    of vulnerabilities in the above systems and the number of common vulnerabilities
+    between different operating systems are shown.
+
+
+    Assume that the hacker has knowledge $I_t$, the number of vulnerabilities in the
+    user''s machine is $V(I_t)$. The number of vulnerabilities in the user''s operating
+    system is $V(I_j)$. The common vulnerabilities and the operating system of the
+    known machine is: $V(I,j)$. The probability that the virtual machine is successfully
+    attacked
+
+
+    ```
+
+    $P=\frac{V(I,j)}{V(I_j)}$ (1)
+
+    ```
+
+
+    Simulation experiment 1: Security of virtual machines with different security
+    levels
+
+
+    ![](img/7a652f61eb6b0f775001a6a7dda3cf8d_3_0.png)
+
+
+    Figure 4. Comparison of security performance between virtual machines of different
+    security levels.
+
+
+    As shown in Fig 4, we deploy virtual machines with different security levels to
+    the virtual machine deployment strategy in attack. In order to show the experimental
+    results more intuitively, the attack rate is logarithmic. We simulate 1000 attacks
+    and the average. When the security level is 1, the probability that the virtual
+    machine is successfully attacked is about 0.1814; when the security level is 2,
+
+
+    the probability of successfully attacked is about 0.16. when the security level
+    is 3, the probability of successfully attacked is about 0.13. Experimental results
+    show that machines under different security levels have different probability
+    of being attacked. The higher the security level, the lower the success rate of
+    the virtual machine being attacked, indicating that the heterogeneous virtual
+    machine deployment strategy adopted by
+
+
+    the algorithm can effectively improve Security of the virtual machine.
+
+
+    Simulation Experiment 2: Virtual machine deployment cost under different security
+    levels
+
+    We use 6 servers to deploy an openstack environment, including 1 server to provide
+    control services, and 5 servers to provide computing services. Keystone (basic
+    authentication service), Glance (image service), Nova (computing service), Neutron
+    (network service) and Dashboard (virtual dashboard) are deployed on the control
+    node. Nova (computing service, network service) are deployed on the computing
+    node. Nova to provide computing services. The operating system and virtualization
+    layer of the control node are Ubuntu and Kvm. The operating system and virtualization
+    of node 2 are Ubuntu. The operating system and virtualization layer of node 3
+    are Centos and Kvm. The server operating and virtualization layer of node 4 are
+    Windows and Kvm.
+
+
+    Create by virtual machines using Openstack. The different operating systems used
+    to create the virtual machine. In advance, we deploy these images to different
+    operating systems, and deploy heterogeneous redundant virtual machines through
+    them. In this article, 11 operating systems are used to illustrate the impact
+    of heterogeneity on the security of virtual machines. It is sufficient to use
+    only 5 operating systems for experiments.
+
+
+    ![](img/7a652f61eb6b0f775001a6a7dda3cf8d_3_1.png)
+
+
+    Figure 5. Total time of virtual deployment.
+
+
+    We us deploy virtual machines with different security levels in the cloud resource
+    pool. In Fig 5, we see the time it takes to deploy a virtual machine, the deployment
+    time fluctuates, and the average time is about 3.05 minutes. When the security
+    level is 2, the average time to deploy 3 heterogeneous virtual machines is 3.69
+    minutes. When the security level is 3, the average time to deploy 5 heterogeneous
+    virtual machines is 4.62 minutes. Cloud service providers charge based on the
+    time and space rented by. Therefore, as the security level of virtual machines
+    increases, the number of'
+  - '[PAGE 4]
+
+
+    heterogeneous virtual machines increases, and the time and overhead to deploy
+    virtual machines also increases. Therefore, the time and cost required to deploy
+    virtual machines with different security levels are different. The algorithm can
+    flexibly deploy virtual machines according to user needs, which improves the quality
+    of cloud computing.
+
+
+    # Simulation 3: Comparison experiment with or without the machine attached under
+    the rotation strategy
+
+
+    As shown in Table 1, this experiment selects an operating system and randomly
+    selects from the physical resource pool to deploy the virtual machine. The operating
+    system is uniformly distributed [0,11]. The attacker launches a detection attack
+    on the user''s virtual machine and adjusts the attack strategy to the next attack
+    based on the detected information. This experiment performed 100 Monte Carlo simulations
+    to ensure that the error is within reasonable range.
+
+
+    deployment algorithm on minority defense based on the characteristics of cloud
+    computing. The first sets the time for the virtual machines and periodically rotates
+    the virtual machines which can increase the difficulty of attackers'' detection
+    and the security of the cloud computing environment. According to different user
+    needs, provides services of different security levels, and realize the vision
+    of security by constructing virtual machines with different degrees of heterogeneity.
+    On the premise of ensuring user safety, providing differentiated services to user
+    needs,
+
+
+    ![](img/7a652f61eb6b0f775001a6a7dda3cf8d_4_0.png)
+
+
+    # ACKNOWLEDGEMENTS
+
+
+    improving the agility and availability of cloud computing.
+
+
+    # REFERENCES
+
+
+    +   1 Zamani F. A., Kamrock A. Software defined network-based edge cloud resource
+    allocation framework[1]. IEEE Access, 2019, 7: 99634-99645.
+
+    2 Myschai C. C. It is time to use the MNIST detection[7]. IEEE Cloud Computing,
+    2018, (3): 6-9.
+
+    3 Li C, Liu Y, Yan C. S. Attention-based resource allocation for software and
+    applications in cloud computing. Journal of Sensors, 2017; 17: 2011-2025.
+
+    4 Wang J, Wu J, Gu Y, et al. Scientific workflow execution system based on minority
+    defense in the cloud environment[9]. Frontiers of Information Technology & Engineering,
+    2018, 1522-1536.
+
+    5 Ali M, Sukh S, and Asitov V. Security in cloud computing: Opportunities and
+    challenges[6]. Information sciences, 2015, 305: 357-383.
+
+    6 Tabassam S. Security and privacy issues in cloud computing[10]. Journal of Information
+    Technology & Software, 2018, 1: 45-55.
+
+    7 Chenhertha S, Alim K, Wang H, et al. Security and privacy-preserving challenges
+    of cloud computing[8]. IEEE Access, 2018, 6: 74382-74398.
+
+    8 Aviga B, Ansari R, Bijoy M. B. Security in assisted virtualization for cloud
+    computing: State of the art issues and concerns. Journal of Computer Based Systems,
+    2015.
+
+    9 Islam T, Moustapha D, Zakaily S. Fog computing and cloud security: A review[10]/7/2018th
+    IEEE International Conference on Computer Communications and Networking (IEEE).
+    IEEE, 2018: 237-239.
+
+    10 Wang Y, Wu J, et al. Scientific workflow execution system based on minority
+    defense in the cloud environment. Journal of Information Technology & Engineering,
+    2018, 19(12): 1527-1536.
+
+    11 Hu H, Wang Z, Cheng G, et al. A mobile network system for software defined
+    networks[4]. IET Information Science, 2017, 11: 345-355.
+
+    12 Malik M. L, Wan S H, Rahid A. Cloud computing-technologies[11]. Journal of
+    Advanced Research in Computer Science, 2012, 3: 27-35.
+
+
+    We compared and analyzed the probability of the user operating system successfully
+    attacked with without a rotation strategy. This experiment is aimed at detection
+    attacks. In the attack, the attacker first detects the user''s virtual machine,
+    judges the operating system based on the information detected, and then launches
+    attacks. As shown in Figure 6, for non-rotating strategies. When an attacker launches
+    an attack after the rotation, the attacker''s detected information becomes invalid.
+    For the rotating strategy, the user rotates the virtual machine before the attack
+    launches. At this time, the attacker can no longer determine the operating system
+    based on vulnerability. The experimental results show that rotation strategy can
+    effectively improve the security of the operating system.
+
+
+    # VI. CONCLUSION
+
+
+    This paper analyzes the security defenses in cloud computing, and proposes a virtual
+    machine'
+  md: "\nmachine is successfully attacked, it will have a bad influence on users and\
+    \ cause serious losses.\n\n## B. Virtual Machine Deployment Algorithm Based on\
+    \ Security Level\n\nAs shown in Fig. 2, the supplier provides a custom interface\
+    \ to the user through the web interface, and signs an agreement with the user\
+    \ to provide different security levels un user can select the security level to\
+    \ create a virtual machine through the interface. When a request arrives, the\
+    \ scheduler schedules the number of virtual machines to be deployed, the type\
+    \ of operation, deployment location, and the residence time of the virtual machines\
+    \ according to the security level of the task. When the security level is considered,\
+    \ security requirements for the virtual machine, and randomly selects an operating\
+    \ system from the operating system library to create a virtual machine. The current\
+    \ load selection selects the server to be deployed, and the virtual machine is\
+    \ deployed to the server. When the security level is 2, select three heterogeneous\
+    \ operating systems from the library to create virtual machines, and deploy on\
+    \ three different physical servers, and set the residence time for these virtual\
+    \ machines. When the security level is 3, five heterogeneous operating systems\
+    \ are selected from the library to create virtual machines and deployed on five\
+    \ different physical servers, and the time is for five virtual machines.\n\nOnce\
+    \ the attacker successfully attacks the virtual machine, the attacker can affect\
+    \ the normal operation of the target virtual machine, steal or tamper with the\
+    \ data of the target virtual machine; and then it is very important to backup\
+    \ key virtual machines. To ensure the confidentiality, integrity and reliability\
+    \ of the system. It performs virtual machine backup according to the security\
+    \ level, and number of virtual machines for different security level is different.\
+    \ As shown in Fig. 3, three redundant and heterogeneous as an example. \n\nvirtual\
+    \ machines send the output results to the agent, and the makes a ruling based\
+    \ on the majority ruling. If vm1 is attacked and the virtual is tampered with,\
+    \ but the output of v2 and vm3 is normal, the proxy can still output the result\
+    \ after the deployment. The proxy has only forwarding and adjudication functions,\
+    \ and cannot provide services to users to use a virtual machine. The redundancy\
+    \ strategy can improve the fault tolerance of the cloud computing environment.\n\
+    \n![](img/7a652f61eb6b0f775001a6a7dda3cf8d_2_0.png)\n\nFigure 2. Virtual machine\
+    \ deployment strategy based on security.\n\n![](img/7a652f61eb6b0f775001a6a7dda3cf8d_2_1.png)\n\
+    \nFigure 3. Heterogeneous redundant architecture (DHR).\n\n| TABLE NUMBER OF COMMON\
+    \ VULNERABILITIES IN OPERATING SYSTEMS |\n| OS | OB | NB | FB | W03 | W12 | D\
+    \ | R | Osol | Sol |\n|---|---|---|---|---|---|---|---|---|---|---|\n| OS | |\
+    \ 149 | 45 | 52 | 2 | 1 | 0 | 3 | 10 | 1 |\n| NB | | | 139 | 56 | 1 | 1 | 0 |\
+    \ 4 | 8 | 16 | 0 |\n| FB | | | 58 | 284 | 3 | | 0 | 6 | 9 | 22 | 0 |\n| W02 |\
+    \ | | | | 3 | 412 | 345 | 85 | 0 | 1 | 7 | 0 |\n| W01 | | | | | 2 | 344 | 385\
+    \ | 0 | 0 | 0 | 0 |\n| W12 | | | | | 0 | 85 | 446 | | | | | |\n| U | | | | 6 |\
+    \ 0 | 0 | 0 | 840 | 179 | 86 | |\n| D | | | | 4 | 9 | 0 | 0 | 303 | 925 | 220\
+    \ | |\n| R | | | | 8 | 22 | 1 | 0 | 86 | 170 | 158 | 69 | 1 |\n| Osol | | | |\
+    \ 16 | 22 | 7 | 0 | | 86 | 73 | 69 | 27 |\n| Sol | | | | 1 | 0 | 0 | 0 | 0 | 0\
+    \ | 1 | 27 | 100 |\n\nAuthorized license used to limit: University of Prince Edward.\
+    \ Downloaded on May 29,2021 at 22:32:12 from IEEE Xplore. Restrictions apply.\n\
+    \n## V. EXPERIMENT\n\nIn this paper, the data published by Common Vulnerability\
+    \ Enumeration (CVE) [21], disclosed in 11 operating systems from 2004 to 2017\
+    \ were obtained. The operating systems are (OSBSD), NB (NetBSD), FB (FreeBSD),\
+    \ W03 (Windows 2003), W08 (Windows 2008), W12 (Windows 2012), Ubuntu, D (Debian),\
+    \ OS (Solaris). In Table 1, the number of vulnerabilities in the above systems\
+    \ and the number of common vulnerabilities between different operating systems\
+    \ are shown.\n\nAssume that the hacker has knowledge $I_t$, the number of vulnerabilities\
+    \ in the user's machine is $V(I_t)$. The number of vulnerabilities in the user's\
+    \ operating system is $V(I_j)$. The common vulnerabilities and operating system\
+    \ of known machine is: $V(I,j)$. The probability that the virtual machine is successfully\
+    \ attacked \n$P=\\frac{V(I,j)}{V(I_j)}$\n\nSimulation 1: Security of virtual machines\
+    \ with different security levels\n\n![](img/7a652f61eb6b0f775001a6a7dda3cf8d_3_0.png)\n\
+    \nFigure 4. Comparison of security performance between virtual machines of different\
+    \ security levels. As shown in Fig 4, we deploy virtual machines with different\
+    \ security levels to the virtual machine deployment strategy in attack. In order\
+    \ to show the experimental results more intuitively, the attack rate is logarithmic.\
+    \ We simulate 1000 attacks and the average. When security level is 1, the probability\
+    \ that the virtual machine is successfully attacked is about 0.1814; when security\
+    \ level is 2, the probability of successfully attacked is about 0.16. when security\
+    \ level is 3, the probability of successfully attacked is about 0.13. Experimental\
+    \ results show that machines under different security levels have different probability\
+    \ of being attacked. The higher the security level, the lower the success rate\
+    \ of virtual machine being attacked, indicating that heterogeneous machine deployment\
+    \ strategy adopted can effectively improve Security of virtual machine.\n\nSimulation\
+    \ 2: Virtual machine deployment cost under different security levels. We use 6\
+    \ servers to deploy an openstack environment, including 1 server to provide control\
+    \ services, and 5 servers to provide computing services Keystone (basic authentication),\
+    \ Glance (image service), Nova (computing service), Neutron (network service)\
+    \ and Dashboard (virtual dashboard) are deployed on control node. Nova (computing\
+    \ service, network service) are deployed on computing node. Nova to provide computing\
+    \ services. The operating system and virtualization layer of node 1 are Ubuntu\
+    \ and Kvm. The operating system and virtualization of node 2 are Ubuntu. The operating\
+    \ system and virtualization layer of node 3 are Centos and Kvm. The operating\
+    \ system and virtualization layer of node 4 are Windows and Kvm. Create virtual\
+    \ machines using Openstack. In advance, we deploy these images to different operating\
+    \ systems, and deploy redundant virtual machines through them. In this article,\
+    \ 11 operating systems are used to illustrate the impact of heterogeneity on security\
+    \ virtual machines.\n\n![](img/7a652f61eb6b0f775001a6a7dda3cf8d_3_1.png)\n\nFigure\
+    \ 5. Total time of deployment. We deploy virtual machines with different security\
+    \ levels in cloud resource pool. In Fig 5, we see the time it takes to deploy\
+    \ a virtual machine, the deployment time fluctuates, and average time is about\
+    \ 3.05 minutes. When security level is 2, the average time to deploy 3 heterogeneous\
+    \ machines is 3.69 minutes. When security level is 3, the average time to deploy\
+    \ 5 heterogeneous machines is 4.62 minutes. Cloud service providers charge based\
+    \ on time and space rented. Therefore, as security level of virtual machines increases,\
+    \ the number of heterogeneous virtual machines increases, and the time to deploy\
+    \ virtual machines also increases. Therefore, the time and cost required to deploy\
+    \ virtual machines with different security levels are different. The algorithm\
+    \ can flexibly deploy virtual machines according to user needs, which improves\
+    \ the quality of cloud computing.\n\nSimulation 3: Comparison experiment or without\
+    \ rotation strategy. As shown in Table 1, this experiment selects an operating\
+    \ system and randomly selects from physical resource pool to deploy the virtual\
+    \ machine. The operating system is uniformly distributed [0,1]. The attacker launches\
+    \ detection attack on user's virtual machine and adjusts attack strategy to the\
+    \ next attack based on detected information. This experiment performed 100 Monte\
+    \ Carlo simulations to ensure that error is within reasonable range deployment\
+    \ algorithm on minority defense based on the characteristics of cloud computing.\
+    \ The first sets the time for the virtual machines and periodically rotates the\
+    \ virtual machines which can increase the difficulty of attackers' detection and\
+    \ the security of the computing environment. According to different user needs,\
+    \ provides services of different security levels, and realize the vision of security\
+    \ by constructing virtual machines with different degrees of heterogeneity. On\
+    \ the premise of ensuring user safety, providing differentiated services to user\
+    \ needs, improving agility and availability of cloud computing.\n\n![](img/7a652f61eb6b0f775001a6a7dda3cf8d_4_0.png)\n\
+    \n# ACKNOWLEDGEMENTS\n\n# REFERENCES\n\n1 Zamani F. A., Kamrock A. Software defined\
+    \ network-based edge cloud allocation framework[1]. IEEE Access, 2019, 7: 99634-99645.\n\
+    2 Myschai C. C. It is time to use detection[7]. IEEE Cloud Computing, 2018, (3):\
+    \ 6-9.\n3 Li C, Liu Y, Yan C. S. Attention-based resource allocation for software\
+    \ and applications in cloud computing. Journal of Sensors, 2017; 17: 2011-2025.\n\
+    4 Wang J, Wu J, Gu Y, et al. Scientific workflow execution system based on minority\
+    \ defense in the cloud environment[9]. Frontiers of Information Technology & Engineering,\
+    \ 2018, 1522-1536.\n5 Ali M, Sukh S, and Asitov V. Security in cloud computing:\
+    \ Opportunities and challenges[6]. Information sciences, 2015, 305: 357-383.\n\
+    6 Tabassam S. Security and privacy issues in cloud computing[10]. Journal of Information\
+    \ Technology & Software, 2018, 1: 45-55.\n7 Chenhertha S, Alim K, Wang H, et al.\
+    \ Security and privacy-preserving challenges of cloud computing[8]. IEEE Access,\
+    \ 2018, 6: 74382-74398.\n8 Aviga B, Ansari R, Bijoy M. B. Security in assisted\
+    \ virtualization for cloud computing: State of the art issues and concerns. Journal\
+    \ of Computer Based Systems, 2015.\n9 Islam T, Moustapha D, Zakaily S. Fog computing\
+    \ and cloud security: A review[10]/7/2018th IEEE International Conference on Computer\
+    \ Communications and Networking (IEEE). IEEE, 2018: 237-239.\n10 Wang Y, Wu J,\
+    \ et al. Scientific workflow execution system based on minority defense in the\
+    \ cloud environment. Journal of Information Technology & Engineering, 2018, 19(12):\
+    \ 1527-1536.\n11 Hu H, Wang Z, Cheng G, et al. A mobile network system for software\
+    \ defined networks[4]. IET Information Science, 2017, 11: 345-355.\n12 Malik M.\
+    \ L, Wan S H, Rahid A. Cloud computing-technologies[11]. Journal of Advanced Research\
+    \ in Computer Science, 2012, 3: 27-35.\n\n## VI. CONCLUSION\n\nThis paper analyzes\
+    \ the security defenses in cloud computing, and proposes a virtual machine\n"
+  mdcn: "\n机器被成功攻击后，将对用户产生不利影响并造成严重损失。\n\n## B. 基于安全密级的虚拟机部署算法\n\n如图2所示，供应商通过Web界面向用户提供定制化接口，并与用户签署协议以提供不同的安全级别，用户可以通过该接口选择安全级别来创建虚拟机。当请求到达时，调度器根据任务的安全级别调度要部署的虚拟机数量、操作类型、部署位置以及虚拟机的驻留时间。在考虑安全级别时，根据虚拟机的安全需求，从操作系统库中随机选择一个操作系统来创建虚拟机。根据当前负载选择要部署的服务器，并将虚拟机部署到该服务器上。当安全级别为2时，从库中选择三个异构操作系统创建虚拟机并部署在三台不同的物理服务器上，并为这些虚拟机设置驻留时间。当安全级别为3时，从库中选择五个异构操作系统创建虚拟机并部署在五台不同的物理服务器上，并为五台虚拟机设置时间。\n\
+    \n一旦攻击者成功攻击虚拟机，攻击者就可以影响目标虚拟机的正常运行，窃取或篡改目标虚拟机的数据；因此，备份关键虚拟机非常重要。为了确保系统的机密性、完整性和可靠性，系统根据安全级别进行虚拟机备份，不同安全密别的虚拟机数量不同。如图3所示，以三冗余异构为例。\n\
+    \n虚拟机将输出结果发送给代理（agent），由代理根据多数通过原则进行裁决。如果vm1受到攻击且虚拟机被篡改，但vm2和vm3的输出是正常的，代理仍然可以在部署后输出结果。代理仅具有转发和裁决功能，不能为用户提供使用虚拟机的服务。冗余策略可以提高云计算环境的容错能力。\n\
+    \n![](img/7a652f61eb6b0f775001a6a7dda3cf8d_2_0.png)\n\n图2. 基于安全性的虚拟机部署策略。\n\n\
+    ![](img/7a652f61eb6b0f775001a6a7dda3cf8d_2_1.png)\n\n图3. 异构冗余架构 (DHR)。\n\n| 操作系统常见漏洞数量\
+    \ |\n| OS | OB | NB | FB | W03 | W12 | D | R | Osol | Sol |\n|---|---|---|---|---|---|---|---|---|---|---|\n\
+    | OS | | 149 | 45 | 52 | 2 | 1 | 0 | 3 | 10 | 1 |\n| NB | | | 139 | 56 | 1 | 1\
+    \ | 0 | 4 | 8 | 16 | 0 |\n| FB | | | 58 | 284 | 3 | | 0 | 6 | 9 | 22 | 0 |\n|\
+    \ W02 | | | | | 3 | 412 | 345 | 85 | 0 | 1 | 7 | 0 |\n| W01 | | | | | 2 | 344\
+    \ | 385 | 0 | 0 | 0 | 0 |\n| W12 | | | | | 0 | 85 | 446 | | | | | |\n| U | | |\
+    \ | 6 | 0 | 0 | 0 | 840 | 179 | 86 | |\n| D | | | | 4 | 9 | 0 | 0 | 303 | 925\
+    \ | 220 | |\n| R | | | | 8 | 22 | 1 | 0 | 86 | 170 | 158 | 69 | 1 |\n| Osol |\
+    \ | | | 16 | 22 | 7 | 0 | | 86 | 73 | 69 | 27 |\n| Sol | | | | 1 | 0 | 0 | 0 |\
+    \ 0 | 0 | 1 | 27 | 100 |\n\n授权许可使用限制：爱德华王子岛大学。于2021年5月29日 22:32:12 备自 IEEE Xplore。受相关限制。\n\
+    \n## V. 实验\n\n在本文中，获取了通用漏洞枚举 (CVE) [21] 发表的2004年至2017年间11个操作系统披露的漏洞数据。这些操作系统分别是：OS\
+    \ (OSBSD)、NB (NetBSD)、FB (FreeBSD)、W03 (Windows 2003)、W08 (Windows 2008)、W12 (Windows\
+    \ 2012)、Ubuntu、D (Debian)、OS (Solaris)。表1显示了上述系统的漏洞数量以及不同操作系统之间的共同漏洞数量。\n\n假设黑客掌握信息\
+    \ $I_t$，用户机器中的漏洞数量为 $V(I_t)$。用户操作系统的漏洞数量为 $V(I_j)$。已知机器的共同漏洞和操作系统为：$V(I,j)$。虚拟机被成功攻击的概率为\n\
+    $P=\\frac{V(I,j)}{V(I_j)}$\n\n仿真 1：不同安全级别虚拟机的安全性\n\n![](img/7a652f61eb6b0f775001a6a7dda3cf8d_3_0.png)\n\
+    \n图4. 不同安全级别虚拟机之间的安全性能对比。如图4所示，我们在攻击中根据虚拟机部署策略部署了具有不同安全密级的虚拟机。为了更直观地展示实验结果，攻击率采用了对数显示。我们模拟了1000次攻击，当安全级别为1时，虚拟机被成功攻击的概率为0.18；当安全级别为2时，概率为0.16；当安全级别为3时，概率为0.13。实验结果表明，安全性越高，虚拟机被攻击的概率越低。\n\
+    \n不同安全密级的虚拟机。。如图4所示，我们在攻击中虚拟机部署策略中部署了不同安全密级的虚拟机。(OSBSD)、NB (NetBSD)、FB (FreeBSD)、W03\
+    \ (Windows 2003)、W08 (Windows 2008)、W12 (Windows 2012)、Ubuntu、D (Debian)、OS (Solaris)。表1中显示了上述系统的漏洞数量以及不同操作系统之间的共同漏洞数量。\n\
+    \n假设黑客掌握信息 $I_t$，用户机器中的漏洞数量为 $V(I_。。。漏洞漏洞为 $V(I_j)$。已知机器的共同漏洞和操作系统为：$V(I_j)$。\n\
+    虚拟机。成功攻击的概率为\n。。.。。。。\n\n\n\n VI. 结论\n\n本文分析了云计算中的安全防御，并提出了一种基于虚拟机的\n"
+  merge: 1
+- raw:
+  - '[PAGE 5]
+
+
+    [14] Dayaratna M, Wen Y, Fan R. Data center energy consumption modeling: A survey(J).
+    IEEE Communications Surveys & Tutorials, 2015, 18(1): 732–794.
+
+
+    [15] Carlet C, Li C , Mesnager S. Two constructions of optimal pairs of linear
+    codes for resisting side channel and fault injection attacks[J]. 2010; 205–210.
+
+
+    [16] Phan T V, Park M. Efficient distributed denial-of-service attack defense
+    in SDN-based cloud[J]. IEEE Access, 2019, 7: 18701–18714.
+
+
+    [17] Nguyen Q L, Sood A. Scalability of Cloud Based SCIT-MTD[J]//2017 IEEE International
+    Conference on Software Analysis, Reliability and Security Companion (QRS-C). 2017:
+    581–582.
+
+
+    [18] Wang Y W , Jiang-Xing W U , Guo F , et al. Scientific workflow execution
+    system based on mimic defense in the cloud
+
+
+    environment[J]. Frontiers of Information and Electronic Engineering, 2018, 018(012):P
+    1522–1536.
+
+
+    [19] Sexton J, Storlie C, Neil J. Attack chain detection[J]. Statistical Analysis
+    and Data Mining: The ASA Data Journal, 2015, 8(5-6): 353–364.
+
+
+    [20] Li X , AlSowayikh M, Li Z. Security Risk Management Approach for Improving
+    Information Security Return of Investment[M]/Recent Developments in Data Science
+    and Business Analytics. Springer, Cham, 2018: 209–216.
+
+
+    [21] Common Vulnerability Enumeration. http://www.evidetetails.com/.'
+  md: '
+
+    [14] Dayaratna M, Wen Y, Fan R. Data center energy consumption modeling: A survey(J).
+    IEEE Communications Surveys & Tutorials, 2015, 18(1): 732–794.
+
+
+    [15] Carlet C, Li C , Mesnager S. Two constructions of optimal pairs of linear
+    codes for resisting side channel and fault injection attacks[J]. 2010; 205–210.
+
+
+    [16] Phan T V, Park M. Efficient distributed denial-of-service attack defense
+    in SDN-based cloud[J]. IEEE Access, 2019, 7: 18701–18714.
+
+
+    [17] Nguyen Q L, Sood A. Scalability of Cloud Based SCIT-MTD[J]//2017 IEEE International
+    Conference on Software Analysis, Reliability and Security Companion (QRS-C). 2017:
+    581–582.
+
+
+    [18] Wang Y W , Jiang-Xing W U , Guo F , et al. Scientific workflow execution
+    system based on mimic defense in the cloud environment[J]. Frontiers of Information
+    and Electronic Engineering, 2018, 018(012):P 1522–1536.
+
+
+    [19] Sexton J, Storlie C, Neil J. Attack chain detection[J]. Statistical Analysis
+    and Data Mining: The ASA Data Journal, 2015, 8(5-6): 353–364.
+
+
+    [20] Li X , AlSowayikh M, Li Z. Security Risk Management Approach for Improving
+    Information Security Return of Investment[M]/Recent Developments in Data Science
+    and Business Analytics. Springer, Cham, 2018: 209–216.
+
+
+    [21] Common Vulnerability Enumeration. http://www.evidetetails.com/.
+
+    '
+  mdcn: '
+
+
+    [14] Dayaratna M, Wen Y, Fan R. 数据中心能量消耗建模：综述(J). IEEE Communications Surveys
+    & Tutorials, 2015, 18(1): 732–794.
+
+
+    [15] Carlet C, Li C , Mesnager S. 用于抵抗侧信道攻击和故障注入攻击的最优线性码对的两种构造[J]. 2010; 205–210.
+
+
+    [16] Phan T V, Park M. 基于 SDN 的云环境中高效分布式拒绝服务攻击防御[J]. IEEE Access, 2019, 7: 18701–18714.
+
+
+    [17] Nguyen Q L, Sood A. 基于云的 SCIT-MTD 的扩展性[J]//2017 IEEE International Conference
+    on Software Analysis, Reliability and Security Companion (QRS-C). 2017: 581–582.
+
+
+    [18] Wang Y W , Jiang-Xing W U , Guo F , et al. 云环境下基于模拟防御的科学工作流执行系统[J]. Frontiers
+    of Information and Electronic Engineering, 2018, 018(012):P 1522–1536.
+
+
+    [19] Sexton J, Storlie C, Neil J. 攻击链检测[J]. Statistical Analysis and Data Mining:
+    The ASA Data Journal, 2015, 8(5-6): 353–364.
+
+
+    [20] Li X , AlSowayikh M, Li Z. 提高信息安全投资回报率的安全风险管理方法[M]/数据科学与商业分析最新进展. Springer,
+    Cham, 2018: 209–216.
+
+
+    [21] 常见漏洞枚举。http://www.evidetetails.com/.
+
+    '
+  merge: 0
