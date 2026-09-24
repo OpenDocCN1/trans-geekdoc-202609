@@ -1,0 +1,820 @@
+- pgno: 0
+  md: '# Deep Learning Benchmarks and Datasets for Social Media Online Classification
+    for Disaster Response
+
+
+    Ferojam Alam¹, Ferda Ofli¹, Muhammad Imran¹, Tanvirul Alam², Umair Qazi¹
+
+    ¹Qatar Computing Institute, HBKU, Doha, Qatar
+
+    ²JIT Limited, Dhaka, Bangladesh
+
+    †{fiamlam, ofli, imranuq}@hbku.edu.qa,tanvir2.alam@gmail.com
+
+
+    **Abstract—**A disaster event, shared on social media helps managers gain situational
+    awareness and assess injured damages, among other response tasks. Recent advances
+    in computer vision and natural language processing have made datasets for disaster
+    response tasks, including detecting crises, filtering irrelevant images, classifying
+    images and assessing the severity of damage. Disaster event datasets are often
+    incomplete and partially (labeled) available to train more robust deep learning
+    models. In this study, we propose new datasets for disaster type classification
+    and severity assessment. We relive previously available datasets for new tasks.
+    By using non-overlapping datasets we finally benchmark state-of-the-art deep learning
+    models and achieve promising results. We release our datasets and models, providing
+    to power better baselines as well as to further research.
+
+
+    **Index Terms—**Deep learning, Disaster Image Classification, Natural disasters,
+    Social media, Benchmarking
+
+
+    content (see [1], [2] for a comprehensive survey). Though many research works
+    have demonstrated that images shared on social media during a disaster event can
+    help humanitarian organizations in a number of ways. For example, images used
+    to assess the severity of the infrastructure and damage [4] focuses on identifying
+    damages in infrastructure as well as various environmental elements.
+
+
+    Currently available datasets for developing classification for disaster response
+    tasks such as damage assessment [5], CrisisMD [6], and multimodal damage identification
+    tasks [7]. The annotated labels in these datasets include different classification
+    tasks such as (i) disaster types, (ii) humanitarian impact, and (iii) damage severity
+    assessment. Upon studying these datasets, we have several limitations:
+
+
+    • when considered independently, these datasets are fairly small in contrast to
+    the massive volume of data generated on social media platforms (e.g., Twitter
+    and MS COCO [7]), which enables development of robust datasets for real-world
+    applications, (ii) they contain exact and near-duplicates, thus providing misleading
+    performance scores due to the random train and test splits (iii) inconsistent
+    train-test splits have been used in different studies, which make it difficult
+    to compare the results across different works. There has also been significant
+    progress in new network architecture for image processing in the past few years;
+    however, they have not been widely explored in the context of informatics¹ for
+    disaster response tasks.
+
+
+    To address limitations, our contributions in this study are as follows:
+
+
+    +   • We developed disaster types and effectiveness datasets, which are completely
+    new for the research community.
+
+    • We released existing datasets for the new tasks so that it significantly reduces
+    the data collection, cleaning, and annotation efforts. We confirm the largest
+    datasets available for different tasks.
+
+    • We divided each dataset into train, dev and test and created a non-overlapping
+    test set by eliminating exact and near-duplicate images within the test and train
+    splits.
+
+
+    # I. INTRODUCTION
+
+
+    There has a surge of research in this domain in the past couple of years. The
+    focus has been to analyze the usefulness of social media data and develop computational
+    models using different modalities to extract actionable information. Among different
+    modalities (e.g., text and image), more have been given to textual content analysis
+    compared to
+
+
+    Social media is widely used during natural or human disasters as a source to quickly
+    disseminate information and learn useful insights. People post about events (through
+    different methods such as text, image, and video) on social media to help and
+    support, identify needs, or share their personal feelings. Information is useful
+    if the quality of content is high; if we have real-time systems to automatically
+    process social media content to facilitate rapid
+
+
+    > https://en.wikipedia.org/wiki/Disaster_informatics'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: "We used all task-specific datasets from different\nsources into a single set\
+    \ for different tasks.\n\n+   - We provide benchmark results for four tasks, separate\n\
+    as as combined datasets, using various state-of-the-\n network architectures.\
+    \ These results set new\nbelines for the crisis informatics for\nimage classification\
+    \ tasks. Finally, we will make\nthe datasets with splits publicly available.\n\
+    \nThe rest of the paper is organized as follows. Section II\nprovides a brief\
+    \ overview of the existing work. Section III\nintroduces the datasets used in\
+    \ our study. Section IV describes the\ndatas prepared for this study. Section\
+    \ V explains the\nand Section VI presents the results and discussion.\nWe conclude\
+    \ the paper in Section VII.\n\n# II. RELATED WORK\n\nThe studies on image processing\
+    \ in the crisis informatics are rarely few compared to the studies on analyzing\n\
+    textual content for humanitarian aid. With recent successes\nof deep learning\
+    \ for image classification, research has\nto use social media images for humanitarian\
+    \ aid. The\nimport of image content on social media for disaster\nh been studied\
+    \ in many studies [3], [8]–[13].\nFor instance, analysis of floods has been studied\
+    \ in\n[8], in which the authors reported the existence of images\nwith social\
+    \ media content during floods and earthquakes.\nshow that images with geotagged\
+    \ information are useful\nto locate the affected areas.\n\nThe analysis of content\
+    \ shared on social media\nh been recently explored using deep learning techniques\n\
+    for disaster management purposes. Most of these studies categorize\nthe severity\
+    \ of damage during crisis sets [3], [11],\nheres others quantify the severity\
+    \ as a continuous-\nvalued index [14], [15]. Recently presented an image\nprocessing\
+    \ pipeline to extract meaningful information from\nsocial media images during\
+    \ a crisis, which has been\ndeveloped using deep learning-based techniques. Their\n\
+    approach includes filtering images, and finally classifying\nthem with severity.\
+    \ The work studied by Mouznar et al. [4]\nproved a multimodal dataset, which has\
+    \ been used for\ntraining a damage detection model. Similarly, [16]\\plores using\
+    \ different multimodal approaches for modeling\nbase a collection of social media\
+    \ datasets.\n\nCurrently, available datasets for damage sever-\nity assessment\
+    \ include [3], CrisisMD [5], and identification dataset. The first one is not\n\
+    anannot for images, whereas the latter two are annotated\nfor text and images.\
+    \ Other relevant datasets are Disaster\nImage Retrieval from Social Media (DISIRM)\
+    \ and Mer-\neval 2018. For the image classification task, transfer\n\nlearning\
+    \ has been a popular approach, where a pre-trained\neural network is used to train\
+    \ a new model for a\ntask [19]–[22]. For this study, we follow the same approach\n\
+    deep deep learning architectures.\n\nOur studies differ from prior works in numbers\
+    \ of years.\nWe propose datasets for different tasks, annotate associate\ndatas\
+    \ for tasks, create non-overlapping train/test\nsinali dataset for different tasks.\
+    \ Lastly, we use the\nto provide benchmarks using state-of-the-art deep learning\n\
+    models.\n\n# III. TASKS\n\nFor this study, we addressed different disaster-related\n\
+    tasks for humanitarian aid.\n\n# A. Disaster type detection\n\nWhen integrating\
+    \ images from unfollow social media\nstreams, it is important to automatically\
+    \ detect different\ndaster types they show. For instance, an image can\ndict flood,\
+    \ earthquake, hurricane, and other\ntypes disaster. The disaster types have been\n\
+    def in different historical categories such as natural,\natural [23]. Our study\
+    \ classifies them as\nnatural (e.g., fire, earthquake).\nMade-made disasters are\
+    \ events that result from human\n(e.g., terrorist, attacks, war, and conflicts).\
+    \ Hybrid\nevasters result from human events, when\nel phenomenon (e.g., deforestation\
+    \ results in social\ners and climate change). In this study, we focused on\nfrequently\
+    \ occurring events in the disaster types\nas as earthquake (ii), flood (iii),\
+    \ hurricane (iv), and\nv) landside. In addition, we also included two classes\n\
+    labels as us (vi) – to cover all other disaster\ntypes (e.g., plane, crash) and\
+    \ (vii) – disaster for that\nnot show identifiable disasters. The datasets result\
+    \ in\nset of categories for the disaster type classification. In\nFigure 1, we\
+    \ provide example images for different disaster\ntypes\n\n# B. Informativeness\n\
+    \nImages posted on social media disasters do\nalways contain information. due\
+    \ to flood, or any other disaster\nuseful content for humanitarian aid. It is\
+    \ necessary\nto remove or irrelevant redundant content to create filters\nrs'\
+    \ efforts more effective. The challenge\nfor this classification task is for all\
+    \ task (i) informative and (ii) not informative.\n\n# C. Humanitarian\n\nAn important\
+    \ aspect of crisis is to address people-\nple by their needs, which requires information\
+    \ to be\nlassified into more fine-grained categories to take specific\nactions.\
+    \ The humanitarian categories often include\naffected individuals; injured or\
+    \ dead people; infrastructure in\n\n> 2https://crisis.qdri.org/crisis-datasets-asonam20\n\
+    3https://wikipedia.org/wiki/Humanitarian_aid\n\nAuthorized licensed to use material\
+    \ - San Francisco State Univ.ed on June 15,2021 at 22:05:24 UTC via IEEE Xplore.\
+    \ Restrictions apply."
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/e85732435c057d7a97129af2641aa95f_2_0.png)
+
+
+    ![](img/e85732435c057d7a97129af2641aa95f_2_1.png)
+
+
+    ![](img/e85732435c057d7a97129af2641aa95f_2_2.png)
+
+
+    ![](img/e85732435c057d7a97129af2641aa95f_2_3.png)
+
+
+    ![](img/e85732435c057d7a97129af2641aa95f_2_4.png)
+
+
+    ![](img/e85732435c057d7a97129af2641aa95f_2_5.png)
+
+
+    Fig. 1: Example images for different disaster types.
+
+
+    Fig. 2: An image annotated as (i) fire event, (ii) intensive, (iii) infrastructure
+    and utility damage, and (iv) severe damage.
+
+
+    utility damage; missing or found people; rescue, volunteering, or donation effort;
+    and vehicle damage [5]. In this study, we focus on four categories that are deemed
+    to be the most prominent and important for responders such as (i) affected, injured,
+    or dead people, (ii) infrastructure and utility damage, (iii) severe volunteering
+    or donation effort, and (iv) not humanitarian.
+
+
+    # D. Damage severity
+
+
+    Assessing the severity of the damage is important to help the affected community
+    during disaster events. The severity of damage can be assessed based on the physical
+    destruction to a built-structure in (e.g., destruction of bridges, roads, buildings,
+    and forests). Following the work reported in [3], we use the categories for classification
+    as (i) severe damage, (ii) mild damage, and (iii) little or none.
+
+
+    Figure 2 shows an example image that illustrates annotations for all four tasks.
+
+
+    # IV. DATA PREPARATION
+
+
+    # A. Datasets
+
+
+    For this study, we used public and in-house labeled datasets. Below, we provide
+    the details of each dataset.
+
+
+    +   1) Damage Assessment Dataset (DAD): The assessment dataset data with labeled
+    image data severity levels as severe, mild, and little-to-damage damage [3]. The
+    images have been collected from two sources: AIDR [24] and Flickr. Craw used the
+    following keywords: building damage, bridge, and damage road. The images from
+    AIDR were collected from Twitter during different disaster events such as Typhoon
+    Ruby, Nepal Earthquake, Ukraine Earthquake. The dataset is annotated by paid-workers
+    as volunteers. We use this for informativeness and damage tasks. For the informativeness
+    task, we map and severe images into informative class and manually sift through
+    the little-to-damage images to separate them into informative and not categories.
+    For the severe damage, we use label little-to-damage to to align with other tasks.
+
+    2) CrisisMD: This is a multiple-(image, text) and multi-task dataset, which consists
+    of 18,082 images collected from diverse events dealt by the AIDR system. The data
+    is annotated by working the Figure-Earth platform for different tasks: (i) informativeness
+    with binary labels (informative vs. not), with seven class labels (ii. infrastructure
+    and utility damage, rescue, volunteering, or donation effort, or found people,
+    affected individuals, missing or relevant information and not relevant), (iii)
+    damage assessment with these labels (iv, severe, mild or no damage).
+
+    3) AIDR Dataset: For disaster type classification task, we annotated images with
+    categories mentioned in Section III-A. We obtained tweets from 17 disaster events
+    and 3 collections, all of which have been collected by the AIDR system. The 17
+    disaster events include flood, earthquake, fire, hurricane, terrorist-attack,
+    and armed-conflict. The tweets in general collections contains
+
+
+    > 4Currently acquired by https://apps.com/'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "keywords related to natural disasters, human-induced disasters, and security\
+    \ incidents. We created images for these collections. Collecting the images we\
+    \ first remove duplicates based on tweet ids. Then, we remove near-duplicates\
+    \ images using a duplicate filtering approach discussed in [13]. From a large\
+    \ number of images of these, we collected ~3K images for annotation.\n\nThe labeling\
+    \ of these images was performed in two steps. First, a set of images were labeled\
+    \ as earthquake, fire, hurricane. Then we collected a sample of ~2200 images,\
+    \ which were labeled as none of these categories in the previous step for annotating\
+    \ not and other disasters. The rationale for choosing such a number of images\
+    \ was due to limited resources.\n\nFor the landslide category, we crawled images\
+    \ from Google, Bing, and Flick using keywords landslide, possible slide landslide,\
+    \ rock falls, rockslide, and land collapse. As we collected images from different\
+    \ sources, it resulted in having duplicates. To take this into account, we used\
+    \ the same duplicate filtering as before to remove exact- and near-duplicates.\
+    \ The remaining images were manually labeled as landslide and not.\n\n![](img/e85732435c057d7a97129af2641aa95f_3_0.png)\n\
+    \n(1) Earthquake: showing damaged or destroyed buildings, fractured houses, ground\
+    \ ruptures as railway lines, airports, airways, highways, and fires;\n(2) Fire:\
+    \ showing man-made fires or wildfires (forest, grasslands, brush, and destroyed),\
+    \ destroyed forests, houses, or infrastructures.\n(3) Flood: showing flooded areas,\
+    \ roads, houses, and other infrastructures.\n(4) Hurricane: showing high winds,\
+    \ a storm surge, heavy rains, collapsed electricity poles, grids, and trees;\n\
+    (5) Landslide: showing landslide, mudslide, rockslide, earth slip, and land collapse\n\
+    (6) Other disasters: showing any other disaster type such as plane crash, car,\
+    \ or train accident, explosion, war, and conflicts.\n(7) Not disaster: showing\
+    \ cartoon, advertisement, or anything that cannot be linked to any disaster type.\n\
+    \nFor the dataset task, we used the definitions for the disaster types:\n\n![](img/e85732435c057d7a97129af2641aa95f_3_1.png)\n\
+    \nFig. 3: Number of disaster types labeled in different disaster events and collections\
+    \ in AIDR-D dataset.\n\n![](img/e85732435c057d7a97129af2641aa95f_3_2.png)\n\n\
+    In Figure 4, we report the distribution of images labeled as 'informative' and\
+    \ 'not informative' in general and collections.\n\n+   A) AIDR Informativeness\
+    \ Dataset (AIDR-Info): For this dataset, we collected images and used the AIDR\
+    \ system. We used the same duplicate filtering approach to remove duplicates.\
+    \ Then, we labeled 9,930 images with two class labels, informative vs. not-informative.\n\
+    \n![](img/e85732435c057d7a97129af2641aa95f_3_3.png)\n\nFig. 4: Number of labeled\
+    \ informative vs. not informative images from different disaster events and collections\
+    \ in AIDR-\n\ninfo dataset.\ndifferent collections of not-informative images are\
+    \ higher than informative images,\n\n+   5 Damage Multimodal Dataset (DMD): The\
+    \ multimodal disaster dataset consists of 5,887 images collected from Google and\
+    \ Instagram [4]. We showed the images using more than 100 hashtags, which are\
+    \ produced in crisis lexicon [21]. The labeled dataset consists of six class labels\
+    \ such as: fire, floods, natural landscape, infrastructure, and non-disaster.\
+    \ The non-damage image covers cartoons, advertisements, and images that are not\
+    \ relevant or useful for humanitarian tasks. For this, we labeled them for all\
+    \ tasks, using the same classes discussed in the previous section. We followed\
+    \ the annotation instructions requested in [5] and as discussed in section III-A.\n\
+    \nIf it is used for humanitarian task and we labeled it as 'informative' or as\
+    \ 'not informative'. The distribution of images labeled for different events.\
+    \ \n\n> *If it is used for humanitarian task and we labeled it as 'informative'\
+    \ or as 'not informative'."
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# B. Annotation
+
+
+    The annotation has been done by domain experts and ensured the quality of the
+    annotation for new datasets and relabeling datasets for new tasks. For the disaster
+    type labeling, the annotators followed the definition discussed in IV-A and for
+    other tasks, definitions and restrictions are adapted from [5].
+
+
+    # C. Data Split
+
+
+    Before collating the datasets we split each of them into train, dev and test sets
+    with 70:10:20 ratio, respectively. The purpose was threefold: (i) train and evaluate
+    individual datasets on each task, (ii) have a close-to distribution from each
+    dataset into the consolidated dataset, and (iii) provide the research community
+    an opportunity to use the splits independently. After data split, we identify
+    duplicate images (see Section IV-D) and move them to the training set to create
+    a non-overlapping set.
+
+
+    # D. Duplicate Identification
+
+
+    To develop a machine learning model, it is important to develop non-overlapping
+    train and test sets. A common practice is to randomly split the dataset into train
+    and test sets. This approach creates an overlapping train-test split with social
+    media. For de exact- or near-duplicate images in train and test sets [13], we
+    identify duplicates. Since they have already been labeled, we did not want to
+    remove any image from dataset. We attempted to create a non-overlapping train,
+    dev and test set motivation is that having exact and near-duplicate images in
+    the training creates a natural confusion in the training set.
+
+
+    To identify duplicate images, we train the model set to find the nearest images
+    of the test set. We first extract features using a pre-trained duplicate learning
+    model. Then, we use the Nearest Neighbor [7] to train the model with the training
+    set of each respective dataset. For the informative dataset of CrisisMMD, we use
+    the training set to train the model and then it is used to identify images for
+    each image in the test set.
+
+
+    Next, we identify duplicates by investigating each image from a given test set
+    and the identified images from the corresponding set for four tasks and twelve
+    different datasets. We identified 5593 exact and near-duplicate images in test
+    sets. We then move the identified images to the training set to create clean test
+    sets using an approximate threshold to automatically identify-duplicate images.
+    In Figure 5, we present a histogram of Euclidean distance measures of the exact-
+    and near-duplicate images. It shows the number of images in different bins. With
+    our analysis, we realized a threshold of less than
+
+
+    ![](img/e85732435c057d7a97129af2641aa95f_4_0.png)
+
+
+    Fig. 5: Number of duplicates in different distance bins.
+
+
+    equal 2.6 is a reasonable choice for automatic duplicate detection. From detection
+    there are also duplicate images with higher thresholds; however, there is a very
+    small number compared. Also noting that a higher number will lead to an increase
+    in false positives. Using the threshold value of ≤ 2.6 we automatically identify
+    duplicate images in the test set and move them to the training set.
+
+
+    E. Data Consolidation:
+
+
+    One of the reasons is to perform data consolidation to develop deep learning models
+    with large amounts of data. For this purpose, we merge all train, dev and test
+    sets into the consolidated dataset. By combining multiple datasets can result
+    in duplicate images in train and test set, after merging we repeat the duplicate
+    identification process to create non-overlapping sets for different tasks.
+
+
+    # F. Data Statistics
+
+
+    Tables I, II, III, IV and V show the label distribution of all duplicates for
+    test sets. We report the number of images for each dataset in the tables. Some
+    classes are labeled as duplicate sets. For example, in disaster tasks (Table I),
+    the distribution of "other disaster" is low in AIDR-dataset, whereas the distribution
+    of "landslide" is low in DMD dataset. For the informativeness task, low distribution
+    is observed for the "informative" label. For the humanitarian task, we have low
+    distribution for rescue volunteering or donation for the damage severity task
+    "mild" in CrisisMMD and DMD dataset. However, the consolidated dataset creates
+    a fair balance across classes for different tasks as shown in Table V.
+
+
+    > *Note the pre-trained model is trained using ResNet18 architecture [26] on the
+    damage assessment dataset [3].'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# TABLE I: Data for the disaster types. Number in parentheses shows total images.
+
+
+    | Dataset | Class | Train | Dev | Test |
+
+    |---|---|---|---|--|
+
+    | Earth | Earthquake | 1910 | 201 | 2487 |
+
+    | | Fire | 990 | 155 | 1105 |
+
+    | | Flood | 2059 | 241 | 533 |
+
+    | ADSR-Hot (11752) | Hurricane | 1188 | 272 | 1469 |
+
+    | | Not disaster | 1507 | 415 | 2120 |
+
+    | | Other | 658 | 68 | 753 |
+
+    | DMD (5388) | Earthquake | 130 | 17 | 385 |
+
+    | | Fire | 255 | 71 | 362 |
+
+    | | Flood | 263 | 50 | 378 |
+
+    | | Hurricane | 238 | 73 | 366 |
+
+    | | Not disaster | 2108 | 278 | 597 |
+
+    | | Other | 1057 | 245 | 1489 |
+
+
+    # TABLE III: Data for the humanitarian.
+
+
+    | Dataset | Class | Train | Dev | Test |
+
+    |---|---|---|---|--|
+
+    | CrisisMD (11241) | Injured, or dead people | 521 | 51 | 672 |
+
+    | | Infrastructure and utility damage | 3307 | 206 | 3952 |
+
+    | | Rescuer or other function | 1682 | 174 | 375 |
+
+    | DMD (5528) | Injured, or dead people | 935 | 125 | 1340 |
+
+    | | Infrastructure and utility damage | 276 | 74 | 347 |
+
+    | | Rescuer or other function | 74 | 9 | 101 |
+
+
+    # TABLE IV: Data for the severity task.
+
+
+    | Dataset | Class | Train | Dev | Test |
+
+    |---|---|---|---|--|
+
+    | DMD (25820) | Little or none | 7811 | 1056 | 5468 |
+
+    | | Medium | 2828 | 548 | 3462 |
+
+    | | Severe | 9457 | 673 | 1380 |
+
+    | CrisisMD (3198) | Little or none | 317 | 54 | 526 |
+
+    | | Severe | 1624 | 149 | 2751 |
+
+    | DMD (5878) | Little or none | 508 | 60 | 132 |
+
+    | | Severe | 857 | 110 | 2195 |
+
+
+    # TABLE II: Data for the informativeness task.
+
+
+    | Dataset | Class | Train | Dev | Test |
+
+    |---|---|---|---|--|
+
+    | CrisisMD (25820) | Informative | 1529 | 590 | 2296 |
+
+    | | Not informative | 4950 | 1269 | 7365 |
+
+    | DMD (5878) | Informative | 2006 | 551 | 1621 |
+
+    | | Not informative | 2152 | 280 | 2972 |
+
+    | ADSR-Info (9936) | Informative | 627 | 162 | 865 |
+
+    | | Not informative | 667 | 598 | 1970 |
+
+
+    # A. Experimental Setup
+
+
+    We employ the transfer learning to perform experiments, which has shown results
+    for visual recognition tasks [19]–22]. The goal of transfer learning is to use
+    weights of a pre-trained model. For this study, we used several neural networks
+    using the PyTorch library. The architectures include ResNet18, ResNet50, ResNet101,
+    AlexNet [28], VGG16 [29], DenseNet[30], SqueezingNet[31], Inception[33], MobileNet[32],
+    MobileNet[34].
+
+
+    We use the weights of the training networks using ImageNet [64]. We adapt the
+    last layer of the network according to the classification task (i.e., softmax
+    layer) instead of the original 1000-way classification. The transfer learning
+    allows us to transfer the features and parameters of the network from a domain
+    with large-scale specifications to the target domain, in four different classification
+    tasks.
+
+
+    We designed the binary classifier for informativeness task and multiclass classifiers
+    for other tasks.
+
+
+    To measure the performance of each classifier, we use the precision (P), recall
+    (R), and F1-measure (F1). We only report F1-measure due to limited sample.
+
+
+    # B. Datasets Comparison
+
+
+    To determine whether collected data achieves better performance, we train the
+    models using sets from
+
+
+    > https://pytorch.org/
+
+
+    # C. Network Architectures
+
+
+    Currently available networks have different computational complexity. One of our
+    goals is to deploy the models in real-time applications, we exploit them to understand
+    their performance differences. Another motivation is that current literature is
+    limited in focus to reports using one or two network architectures (e.g., VGG16
+    [16], Inception[4]), which we want to extend in this study.
+
+
+    # VI. RESULTS AND DISCUSSION
+
+
+    # A. Results
+
+
+    1) Dataset Comparison: Results for different tasks and datasets using ResNet18
+    architecture. The performance of different tasks is not equal as they have different
+    levels of complexity (varying number of class labels, class difficulty).
+
+
+    For example, the informativeness task is simpler than a classification task with
+    more labels (e.g., disaster types). See Table V with the damage task. The distribution
+    of class is small, which reflects its importance and overall performance. The
+    mild class label is also less important than other class labels, and we believe
+    that classifiers often confuse this class label with the other. Similar findings
+    have also been reported in [3]. For the disaster tasks, the performance of the
+    AID-DRT'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# TABLE V: Splits for the consolidated dataset for all tasks.
+
+
+    | Class | Train | Dev | Total |
+
+    | --- | --- | --- | --- |
+
+    | Earthquake | 208 | 40 | 248 |
+
+    | Fire | 1279 | 221 | 1500 |
+
+    | Flood | 2366 | 259 | 2625 |
+
+    | Hurricane | 940 | 128 | 1068 |
+
+    | Natural disaster | 1195 | 142 | 1337 |
+
+
+    # TABLE VII: Results using neural network models for different tasks. On the consolidated
+    dataset. Comparable result is shown in bold and best result is underlined. #(P)
+    - number of layers (parameters in millions). Mem. (memory in MB). Inception(Inception,
+    MobileNet)(MobileNet(b), EfficientNet(b))
+
+
+    | | (P) | Mean | Info. | Hum. | Dam. |
+
+    | --- | --- | --- | --- | --- | --- |
+
+    | ResNet18 (11.2) | 0.716 | 0.854 | 0.849 | 0.758 | 0.726 |
+
+    | ResNet50 (25.5) | 0.235 | 0.808 | 0.852 | 0.751 | 0.793 |
+
+    | MobileNetV2 (5.3) | 0.220 | 0.822 | 0.828 | 0.716 | 0.759 |
+
+    | VGG16 (13.4) | 0.679 | 0.798 | 0.858 | 0.753 | 0.769 |
+
+    | VGG19 (143.4) | 0.126 | 0.818 | 0.816 | 0.736 | 0.737 |
+
+    | Inception (8.7) | 0.470 | 0.885 | 0.829 | 0.719 | 0.708 |
+
+    | EfficientNet (12.1) | 0.086 | 0.836 | 0.812 | 0.768 | 0.771 |
+
+    | MobileNet(b) (20.2) | 0.835 | 0.782 | 0.849 | 0.740 | 0.777 |
+
+    | EfficientNet(b) (25.7) | 0.778 | 0.816 | 0.865 | 0.785 | 0.801 |
+
+
+    # TABLE VI: Results of best classification using the ResNet18 models. Trained
+    on and consolidated datasets and tested on consolidated tasks. Disaster types
+    (Dis.), Informativeness (Informat.), Humanitarian (Hum.), Damage (Dam.).
+
+
+    | | Dis. | Info. | Hum. | Dam. |
+
+    | --- | --- | --- | --- | --- |
+
+    | ADRLOT | 0.726 | 0.797 | 0.720 | 0.709 |
+
+    | DAD | | | | |
+
+    | CrossMMD | | | | |
+
+    | DMD | 0.591 | 0.751 | 0.636 | 0.063 |
+
+    | EfficientNet | 0.788 | 0.851 | 0.749 | 0.726 |
+
+
+    model is higher than that the DMD model is small and is not performing well on
+    the consolidated dataset. This characteristic is observed in all tasks as well.
+    Overall, for all tasks, the model with the consolidated datasets outperforms the
+    internal datasets.
+
+
+    2) Network Architecture Comparison: In Table VII, we report results using different
+    network architectures for consolidated datasets (i.e., trained and using a consolidated
+    dataset). Across different tasks, overall EfficientNet is better than other models
+    for humanitarian task, however for VGG16 is outperforming others (ResNet, Inception,
+    and DenseNet). From the results of results, we observe that Inception is the working
+    model.
+
+
+    In Table II we report different neural network models with their number of layers,
+    parameters, and memory consumption. Efficiency can be a trade-off between performance
+    versus computational complexity. In terms of layers, memory and the number of
+    parameters, VGG16 seems expensive than others. On the performance and computational
+    complexity, we can conclude that EfficientNet can be the best to use in real-time
+    applications.
+
+
+    compared for EfficientNet using a batch size of 128 and it can process ~260 images
+    per second on an NVIDIA Tesla GPU. Each model, ResNet18 is significantly less
+    than
+
+
+    # B. Discussions
+
+
+    Achieving a better performance with learning models requires larger dataset sizes.
+    To develop, the dataset sizes for disaster tasks are comparatively small. We address
+    this by combining data from multiple sources and resources for new tasks. The
+    proposed datasets consist of binary and multiple class labels and aggregated in
+    binary and multi-class classification. We show that the model can be turned into
+    multi-task settings, which we aim to address in a future.
+
+
+    A significant challenge with social media is the exhaust and near-duplicate content.
+    We address this issue, and for the proposal we have a mechanism to remove duplicates
+    before the annotation process. Another approach is current duplicate detection
+    is simple using deep learning frameworks. In our analysis, we use a procedure
+    to determine a reasonable threshold for automatic detection. This requires further
+    study, which we aim to do in the future.
+
+
+    Real-time event detection is an important problem for social media content. Our
+    new disaster tasks can help to develop models and deploy in real-time applications.
+    We also explore several different layers, which vary by application. Applications
+    that require high performance should not be prone to a bottleneck. Note that EfficientNet
+    is best for and which we aim to explore other architectures.
+
+
+    A small and low latency is desired to deploy mobile and handheld computer vision
+    applications. The direction of MobileNet [33] sheds light that their direction.
+    comparatively smaller and provides a reasonable accuracy, only 2-3% lower than
+    the best models for different tasks.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'Comparing with previous state-of-the-art is not possible due to differences
+    in data splits and the issue of duplicate images. On informativeness and humanitarian
+    tasks, reported weighted (F1) were 83.2 and 76.3, respectively, using a five-fold
+    cross-validation [16]. In a reported test of accuracy 3.59±1.72 for size tasks
+    using the datasets used with a five-fold validation. Using the CRISM dataset,
+    authors reported weighted F1 of 82.2 and 66.6 for humanitarian tasks, respectively.
+    We used a small subset of the whole CRISM dataset in their study. Due to differences
+    in data splits, our datasets and splits are not to compare. However, we provide
+    a stand framework for future studies to compare.
+
+
+    # ## VII. CONCLUSIONS
+
+
+    Images on social media contain information for humanitarian organizations. There
+    has limited work for disaster response classification tasks compared to the limited
+    research efforts to develop deep learning models. We provide new datasets for
+    disaster classification tasks, and provide a created dataset. This includes duplicates
+    and non-overlapping splits. We addressed four tasks with different types, including
+    damage severity. The datasets have a unique characteristic that can turn into
+    multilabel, and learning tasks which were used to develop new algorithms. We also
+    aim to address this in the future. Furthermore, we developed state-of-the-art
+    deep architectures to provide benchmark results on the datasets.
+
+
+    # ## REFERENCES
+
+
+    +   [1] M. Carreras, F. Dias, and V. Viegas, "Social media messages in emergency
+    management: A survey," ACM Computer Surveys, vol. 47, no. 6, p. 77 (2015).
+
+    [2] N. Said, K. Ahmad, M. Riesier, K. Poegeler, L. Hassan, N. Ahmad, and M. Khan,
+    "Social media for disaster management: a survey," Journal of Public Safety, vol.
+    78, no. 22, p. 31.27–31.32 (2019).
+
+    [3] J. Chen, S. Kim, M. Imran, and M. Mitra, "Assessment from social media data
+    for disaster detection," in Proc. of ISOC, August 2017, p. 1–8.
+
+    [4] H. Lee, J. Kirk, and A. Mead, "Damage Identification in Social Media Posts
+    Using Deep Learning," in Proc. of ISOC, 2019, p. 529–534.
+
+    [5] F. Wang, D. Ge, J. Dong, S. Rock, L. Li, and L. Fei, "Identifying damage in
+    natural disasters," in Proc. IEEE/CVF Conference on Computer Vision and Pattern
+    Recognition (CVPR), 2009, p. 248–255.
+
+    [6] T. Lin, M. Saari, S. Belmehdi, J. Hayes, P. Ramirez, D. Polizzi, and Y. Zhang,
+    "Detecting damage in context," in European Conference on Computer Vision (ECCV),
+    2014, p. 740–755.
+
+    [7] R. Perdomo and J. P. de Alquebasque, "Identifying images as relevant social
+    media messengers in disaster management," in Proc. of ISRAM, 2015.
+
+    [8] S. Daly and J. Thom, "Miniming and classifying images on social media to audio
+    analysis fires," in Proc. of ISRAM, 2016, p. 1–14.
+
+
+    +   [10] F. Chen, L. Liu, M.-Y. Kan, and P. Cui, "Understanding and classify events
+    in tweets," ACM Multimedia, 2013, p. 781–784.
+
+    [11] D. T. Nguyen, F. Alam, F. Olmi, and M. Imran, "Automated image filtering
+    for disaster response using deep learning and perceptual hashing," in Proc. ISRAM,
+    2017.
+
+    [12] F. Alam, M. Imran, and F. Olmi, "Image social media analysis for disaster
+    response," in Proc. ISOC, 2017, p. 1–6.
+
+    [13] F. Alam, F. Olmi and M. Imran, "Processing social media messages for combining
+    human and managing crises," International Journal of Human Interaction, vol. 34,
+    no. 4, p. 311–327 (2020).
+
+    [14] K. Kim and M. Lee, "Building automated damage assessment tool using deep
+    learning and ground-level image classification," IEEE VIP, 2017, p. 95–100.
+
+    [15] X. Li, D. Garcia, H. Zhang, and M. Imran, "Classifying and localizing damage
+    in images," in Proc. IEEE CVPR, 2018, p. 1938–1947.
+
+    [16] F. Olmi, M. Imran, "Analysis of social media data for deep disaster response,"
+    in Proc. ISOC, 2016.
+
+    [17] M. Weber, F. Helzer, C. Schulz, V. Srinivas, A. Dengel, and D. Booth, "Earthquake
+    satellite damage detection," in Duaval, 2017.
+
+    [18] H. White, F. Patrick, J. Zevny, B. J. de, and A. Damian, "The earthquake
+    satellite damage detection method in 2018 earthquake,"n[19] J. Cheng, L. Chen,
+    Y. Beng, and H. Lipson, "What features in deep neural networks," in Advances in
+    Neural Information Processing Systems, 2020, pp3320–3329.
+
+    [20] A. Das, S. Kim, J. Sullivan, and S. Carlsson, "CNN-based features for off-the-shelf
+    assessment of building damage," in Proc. of IEEE CVPR, 2016, p. 2066–2073.
+
+    [21] G. Ozzkay, Y. Ahmad and H. K. Henderal, "Encoder-based transformers for image
+    classification and regression," International Conference on Neural Information
+    Processing, 2021.
+
+    [22] M. Oquah, L. Botin, I. Pavlov, and J. Sivic, "Learning and training multi-dimensional
+    image representations using convolutional neural networks," CVPR, 2007, p. 171–174.
+
+    [23] J. M. Shauf, "Disaster types, and Disaster Management: An International Journal
+    of Disaster Management," 2015.
+
+    [24] A. Medina, F. Castillo, J. Dias, and S. Sivic, "Clexicon: a lexicon for collecting
+    and filtering multilingual communications in crises," in Proc. CVPR, 2016.
+
+    [25] K. He, X. Zhang, and J. Sun, "Deep learning for image recognition," in Proc.
+    CVPR, 2016, p. 7770–7778.
+
+    [26] M. Al, and D. Delany, "Deep neural classifier for multispectral classification,"
+    Computer Applications, vol. 34, no. 8, p. 1–17 (2017).
+
+    [27] A. Atzsksky, S. Sutterback, and E. Hinton, "Image-classification using deep
+    neural networks," in International Conference on Neural Information Processing,
+    2009, pp.1097–1105.
+
+    [28] K. Simonyan and A. Zisserman, "Very deep convolutional networks for scale
+    recognition," in Proc. CVPR, 2014, p. 4755–4753.
+
+    [29] G. Huang, J. Liu, D. Van Der Ma, and K. Weinberger, "Deep connected convolutional
+    networks," in Proc. CVPR, 2017, p. 4700–4709.
+
+    [30] A. G. Howard, M. Zhu, B. Chen, D. Kalnin, W. Tang, and M. Dean, "MobileNets:
+    Depth separable convolutions for efficient mobile vision applications," arXiv:1704.04088,
+    2017.
+
+    [31] M. Tan and Q. Y. Lee, "Efficientnet: Scaling neural networks with compound
+    scaling," arXiv:1905.01116, 2019.
+
+    [32] D. P. Kingma and J. Ba, "Adam: A method for stochastic optimization," in
+    Proc. ICLR, 2015.
+
+    [33] M. Zhou, Y. Xu, H. Fu, J. Tretteaut, and A. Adams, "Multimodal classification
+    of crisis events in social media," in Proc. CVPR, 2020, p. 14679–14689.
+
+
+    158'
+  merge: -1
+  img_proc: true
