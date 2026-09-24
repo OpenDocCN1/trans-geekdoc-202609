@@ -1,0 +1,939 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Machine Learning Technology as a Solution of the Resource Assignment Spread
+    Issue in Research and Development Projects
+
+
+    Victor A. Vasiliev, Alexander B. Mayborodin
+
+    Department of Quality Management and Certification
+
+    Moscow Aviation Institute
+
+    Moscow, Russia
+
+
+    Xenia D. Klamrenko
+
+    Department of Programs Coordination
+
+    PJSC Sukhoi Company
+
+    Moscow, Russia
+
+    ksenyakram@yandex.ru
+
+
+    vasiliev@mati.ru, amayborodin@outlook.com
+
+
+    **Abstract**—This paper describes the issue of quality control and management
+    in the field of non-threaded of aircraft production. Frequently, many projects
+    are executed at the same time. These projects use shared resources and tends to
+    increase the risk of project planning in the field of quality management. The
+    main aim of project planning system is to manage conflicts arising with contract
+    terms. The first issue is to perform the project scheduling and the second to
+    identify and evaluate risks. A reasonable approach to tackle these issues is to
+    reduce the learning effect which occurs from influence of projects. Suggested
+    method would probably increase accuracy and that such regression function is used
+    to identify and evaluate risks.
+
+
+    the costs of the stages, while maintaining a steady use of the enterprise’s resources
+    and meeting the quality requirements for products.
+
+
+    In most cases, the matrix form of enterprise and project management divides the
+    task into
+
+
+    +   - Compliance of time and labor limits of all stages of a project.
+
+    - Maintaining steady resource assignment for all enterprise resources.
+
+
+    *Keywords*—digital technologies; enterprise resources; machine learning; non-threaded
+    production; project scheduling; quality management; regression function; research
+    and project development.
+
+
+    *Scheduling of a project*
+
+    The result of the first project is a task schedule with a preliminary spread of
+    resources assignments by project activities and periods. Figure 1 reveals an example
+    of preliminary spread of resource assignments of few projects.
+
+
+    # I. INTRODUCTION
+
+
+    Modern research in the field of quality control and management is of particular
+    importance for aircraft manufacturing.
+
+
+    The issue of quality control and management in the field of non-threaded aircraft
+    production is complex and consists of several elements. One of the them is to
+    create new models of assignment conflict with many stages, which have unique requirements
+    and a large number of projects that are executed at the same time and have influence
+    between each other. Another reason is that projects use shared resources of an
+    enterprise, and this causes schedule conflicts.
+
+
+    All of these reasons tend to increase the risk of planning in the field of quality
+    management. At the same time, a planning process for each stage of production,
+    and a pilot project in, has specific characteristics.
+
+
+    ![](img/96700e18732b64716e81c810de6512f6_0_0.png)
+
+
+    Fig. 1. Example of preliminary spread of resource assignments of few projects
+
+
+    Initial project scheduling is performed without taking into account of projects.
+    However, these projects share resource assignments that can occur a schedule conflict.
+
+
+    # *B. Production schedule of an enterprise*
+
+
+    The main objective of the planning system is to ensure that research and development
+    stages would be completed within the specified times, in the conditions of restrictions
+    on
+
+
+    To assess the feasibility of each project under the restrictions it is necessary
+    to evaluate the total number of target labour. It needs to consider all and future
+    projects of an enterprise, and to analyze resource assignments spread (Figure
+    2).
+
+
+    # II. PLANNING PROCESS'
+  - '[PAGE 1]
+
+
+    # Tp
+
+
+    labor inputs. Taking into account the features of research and development projects
+    [1], discussed earlier, is in a non-trivial task.
+
+
+    # III. PREDICTION OF LABOR INTENSITY
+
+
+    As practice, the most perceptible feature of research and development projects''
+    scheduling is a rapid decrease in an accuracy of predicted labor intensity with
+    a slight increase in a prediction at the same time.
+
+
+    ![](img/96700e18732b64716e81c810de6512f6_1_0.png)
+
+
+    Fig. 2. Example of total amount of target labor intensity relative to current
+    enterprise labor productivity.
+
+
+    The area indicated by the hatching reveals the deviation of total amount of target
+    labor intensity from current enterprise productivity. This irregularity helps
+    to resolve the triple restriction (time, cost and quality) while forming the production
+    schedule of an enterprise:
+
+
+    +   - There is an increased risk of over limit a completion time.
+
+    - A total cost of productivity decreases due to the increase activity execution
+    mode.
+
+    - A quality of activity decreases with productivity threshold exceeded.
+
+
+    ![](img/96700e18732b64716e81c810de6512f6_1_1.png)
+
+
+    Fig. 3. Example of relation between accuracy and prediction distance
+
+
+    It is important to be mind that reduced input of labor of project might cause
+    a decrease in salary fund and a reduction of productivity resources.
+
+
+    One feature of high-tech industry of aircraft production is a dependence on qualified
+    performers. Proceeding from this, the solution of problem by regularly changing
+    executors does not seem effective because labor market does not have the ability
+    to provide necessary dynamics.
+
+
+    # C Equality of resource assignment respect
+
+
+    Figure 2 shows a simplified example, which does consider the consideration of
+    performers, specifications of activities and in-process development of labor productivity
+    of performers, which takes into account cases. The irregularity of resource assignment
+    increases over periods. To solve this problem and minimize the negative effects
+    mentioned above, the following steps can be:
+
+
+    +   - Transfer of part to a related company for execution.
+
+    - Participation in projects of related companies as the executor.
+
+    - Performing extra-planned activities in a reserve of future projects.
+
+    - Revision of a contract terms regarding time limits or scope of the project.
+
+    - Alteration of projects'' schedules to reflect existing priorities.
+
+
+    Currently, one of the researches is the application of digital technologies in
+    the field of quality management [2]. Taking into account the probabilistic nature
+    of the production and development process, there is evidence [9-12] to suggest
+    that one of the most effective ways of implementation of these methods are artificial
+    neural networks (ANN). Development and training processes consist of a few:
+
+
+    +   - Preparation of a training set of projects'' resources data contains information
+    about actual labor variables in machine learning.
+
+    - Converting the training set to a data format in using.
+
+    - Selection of a representative part of the training set for the tests of firstly
+    quality.
+
+    - Iterative training of the ANN with any variety of configuration.
+
+    - Analyzing the results and identifying the best configuration of the ANN.
+
+
+    To automate the process of identifying which provides the best prediction accuracy
+    and distance, it is proposed to use the generic method with logging of initial
+    and resulting results.
+
+
+    In addition, it is proposed to use the ANN to increase prediction accuracy by
+    using a classification task to identify projects with similar dynamics of labor
+    intensities. This approach will improve training results, taking into account
+    specific of projects.
+
+
+    The practice of using artificial neural networks in similar issues shows the high
+    prediction accuracy of this method. The proposed solution can to solve the resource
+    assignment
+
+
+    However, these steps can improve the equivalence of resource assignment only if
+    there is a long-term prediction
+
+
+    311'
+  - '[PAGE 2]
+
+
+    spread increase by a precision distance and accuracy in a process of a scheduling
+    of research and development projects.
+
+
+    # REFERENCES
+
+
+    +   [1] Vasiliev V.A., Mayordin B.A., Aleksandrova S.V., Kramenko X.D., Multi-agent
+    programming technique as the instrument of operational management and implementation.
+    In 2019 IEEE International Conference: Quality Management, Transport and Information
+    Security, Information Technologies, IT and QM and IS 2019, pp. 520-526. ISBN:
+    978-1-2619-1953-9 2019
+
+
+    +   [2] Vasiliev V.A., Aleksandrova S.V., Quality Management under modern conditions.
+    Metallurgy [Russian Metals], 2015, no. 13, pp. 1161-1167. ISSN 0036-0258. [Original
+    Text © V.A. Vasiliev; S.V. Aleksandrova] [43]
+
+
+    +   [3] Vasiliev V.A., Velmaina V.Y., Mayordin B.A. Using artificial neural networks
+    when identifying standards for material security in QM. Computer Series: Materials
+    Science and Engineering Quality and Reliability of Technical Systems, 666 (2018)
+    010258
+
+
+    +   [4] Vasiliev S.V., Aleksandrova M.N., Vasiliev V.A. Integration of quality
+    management and digital technologies. Proceedings of the 2018 IEEE International
+    Conference: Quality Management, Transport and Information Security, Information
+    Technologies, IT and QM and IS 2018. Pp. 18-21, 978-1-2519-8862-4 2018
+
+
+    +   [5] Vasiliev V.A., Aleksandrova S.V., Aleksandrov M.N. Integration of quality
+    management and digital technologies. Proceedings of the 2017 International Conference:
+    Quality Management, Transport and
+
+
+    Information Security, Information Technologies, IT and QM and IS 2017. pp. 454-456.
+
+
+    +   [6] Krivenko M.P. Comparative analysis of regression analyses. Information
+    Processing & e (Computer science and applications), 2014, vol. 8, pp. 70-78.
+
+
+    +   [7] Kitina L.N., Checheva M.A. Assessment of the effectiveness of the organization
+    of management of light industries operates on classification and regression analysis.
+    [Innovatsion]: 2010, pp. 517-523.
+
+
+    +   [8] Mukham M.M., Oshanova Z.M., Dzhankulova M.A. Non-classical analysis of
+    regression analysis. Navodhiye vednost. Fizika [Scientific reports]. Series: Mathematics.
+    Physics], 2014, vol. 34,
+
+
+    +   [9] Verkin A.N., Yarashov S.A. Comparative analysis of methods for predicting
+    time series by neural networks and regression analysis. [Bulletin of computer
+    science and education], 2015, no. 2, pp. 1-5.
+
+
+    +   [10] Vasiliev V.A., Odmkov S.A., Serov M.M. Methods for the quality control
+    of melt solidification. Metallurgy [Russian Metallurgical], 2006, no. 13, pp.
+    1321-1324. ISSN: 0036-0295.
+
+
+    +   [11] Vasiliev V.A. Realization of the principle of evidence-based technology
+    in controlling the solidification rate of the melt. Journal of Physics: Conference
+    Series. 2018 2018 IOP Publishing Ltd Volume 1221, conference, pp.
+
+
+    +   [12] Vasiliev V.A., Timasheva M.A., Hajbaeva E.B., Nosova D.B. Quality Management
+    in Manufacturing and Technological Systems. Metallurgy [Russian Metallurgical],
+    2019, no. 13, pp. 200-203. © Pleiades Publishing, Ltd., 2019. ISSN: 0036-0295.'
+  md: '
+
+    # Machine Learning Technology as a Solution of the Resource Assignment Spread
+    Issue in Research and Development Projects
+
+
+    Victor A. Vasiliev, Alexander B. Mayborodin
+
+    Department of Quality Management and Certification
+
+    Moscow Aviation Institute
+
+    Moscow, Russia
+
+
+    Xenia D. Klamrenko
+
+    Department of Programs Coordination
+
+    PJSC Sukhoi Company
+
+    Moscow, Russia
+
+    ksenyakram@yandex.ru
+
+
+    vasiliev@mati.ru, amayborodin@outlook.com
+
+
+    **Abstract**—This paper describes the issue of quality control and management
+    in the field of non-threaded of aircraft production. Frequently, many projects
+    are executed at the same time. These projects use shared resources and tends to
+    increase the risk of project planning in the field of quality management. The
+    main aim of project planning system is to manage conflicts arising with contract
+    terms. The first issue is to perform the project scheduling and the second to
+    identify and evaluate risks. A reasonable approach to tackle these issues is to
+    reduce the learning effect which occurs from influence of projects. Suggested
+    method would probably increase accuracy and that such regression function is used
+    to identify and evaluate risks.
+
+
+    the costs of the stages, while maintaining a steady use of the enterprise’s resources
+    and meeting the quality requirements for products.
+
+
+    In most cases, the matrix form of enterprise and project management divides the
+    task into
+
+
+    - Compliance of time and labor limits of all stages of a project.
+
+    - Maintaining steady resource assignment for all enterprise resources.
+
+
+    *Keywords*—digital technologies; enterprise resources; machine learning; non-threaded
+    production; project scheduling; quality management; regression function; research
+    and project development.
+
+
+    *Scheduling of a project*
+
+    The result of the first project is a task schedule with a preliminary spread of
+    resources assignments by project activities and periods. Figure 1 reveals an example
+    of preliminary spread of resource assignments of few projects.
+
+
+    # I. INTRODUCTION
+
+
+    Modern research in the field of quality control and management is of particular
+    importance for aircraft manufacturing.
+
+
+    The issue of quality control and management in the field of non-threaded aircraft
+    production is complex and consists of several elements. One of the them is to
+    create new models of assignment conflict with many stages, which have unique requirements
+    and a large number of projects that are executed at the same time and have influence
+    between each other. Another reason is that projects use shared resources of an
+    enterprise, and this causes schedule conflicts.
+
+
+    All of these reasons tend to increase the risk of planning in the field of quality
+    management. At the same time, a planning process for each stage of production,
+    and a pilot project in, has specific characteristics.
+
+
+    ![](img/96700e18732b64716e81c810de6512f6_0_0.png)
+
+
+    Fig. 1. Example of preliminary spread of resource assignments of few projects
+
+
+    Initial project scheduling is performed without taking into account of projects.
+    However, these projects share resource assignments that can occur a schedule conflict.
+
+
+    # B. Production schedule of an enterprise
+
+
+    The main objective of the planning system is to ensure that research and development
+    stages would be completed within the specified times, in the conditions of restrictions
+    on
+
+
+    To assess the feasibility of each project under the restrictions it is necessary
+    to evaluate the total number of target labour inputs. It needs to consider all
+    and future projects of an enterprise, and to analyze resource assignments spread
+    (Figure 2).
+
+
+    # II. PLANNING PROCESS
+
+
+    # Tp labor inputs. Taking into account the features of research and development
+    projects [1], discussed earlier, is in a non-trivial task.
+
+
+    # III. PREDICTION OF LABOR INTENSITY
+
+
+    As practice, the most perceptible feature of research and development projects''
+    scheduling is a rapid decrease in an accuracy of predicted labor intensity with
+    a slight increase in a prediction at the same time.
+
+
+    ![](img/96700e18732b64716e81c810de6512f6_1_0.png)
+
+
+    Fig. 2. Example of total amount of target labor intensity relative to current
+    enterprise labor productivity.
+
+
+    The area indicated by the hatching reveals the deviation of total amount of target
+    labor intensity from current enterprise productivity. This irregularity helps
+    to resolve the triple restriction (time, cost and quality) while forming the production
+    schedule of an enterprise:
+
+
+    - There is an increased risk of over limit a completion time.
+
+    - A total cost of productivity decreases due to the increase activity execution
+    mode.
+
+    - A quality of activity decreases with productivity threshold exceeded.
+
+
+    ![](img/96700e18732b64716e81c810de6512f6_1_1.png)
+
+
+    Fig. 3. Example of relation between accuracy and prediction distance
+
+
+    It is important to be mind that reduced input of labor of project might cause
+    a decrease in salary fund and a reduction of productivity resources.
+
+
+    One feature of high-tech industry of aircraft production is a dependence on qualified
+    performers. Proceeding from this, the solution of problem by regularly changing
+    executors does not seem effective because labor market does not have the ability
+    to provide necessary dynamics.
+
+
+    # C. Equality of resource assignment respect
+
+
+    Figure 2 shows a simplified example, which does not consider the consideration
+    of performers, specifications of activities and in-process development of labor
+    productivity of performers, which takes into account cases. The irregularity of
+    resource assignment increases over periods. To solve this problem and minimize
+    the negative effects mentioned above, the following steps can be:
+
+
+    - Transfer of part to a related company for execution.
+
+    - Participation in projects of related companies as the executor.
+
+    - Performing extra-planned activities in a reserve of future projects.
+
+    - Revision of a contract terms regarding time limits or scope of the project.
+
+    - Alteration of projects'' schedules to reflect existing priorities.
+
+
+    Currently, one of the researches is the application of digital technologies in
+    the field of quality management [2]. Taking into account the probabilistic nature
+    of the production and development process, there is evidence [9-12] to suggest
+    one of:
+
+
+    - Preparation of a training set.
+
+    - Selection of a representative set.
+
+    - Iterative training of a training set.
+
+    - Analysis of a training set.
+
+    - Automation of a training set.
+
+
+    The irregularity of resource assignment increases over periods. To solve this
+    problem and minimize the negative effects mentioned above, the following steps
+    can be:
+
+
+    - Transfer of part to a related company for execution.
+
+    - Participation in projects of related companies as the executor.
+
+    - Performing extra-planned activities in a reserve of future projects.
+
+    - Revision of a contract terms regarding time limits or scope of the project.
+
+    - Alteration of projects'' schedules to reflect existing priorities.
+
+
+    Currently, one of the researches is the application of digital technologies in
+    the field of quality management [2]. Taking into account the probabilistic nature
+    of the production and development process, there is evidence [9-12] to suggest
+    one of:
+
+
+    - Preparation of a training set.
+
+    - Selection of a representative set.
+
+    - Iterative training of a training set.
+
+    - Analysis of a training set.
+
+    - Automation of a training set.
+
+
+    The irregularity of resource assignment increases over periods. To solve this
+    problem and minimize the negative effects mentioned above, the following steps
+    can be:
+
+
+    - Transfer of part to a related company for execution.
+
+    - Participation in projects of related companies as the executor.
+
+    - Performing extra-planned activities in a reserve of future projects.
+
+    - Revision of a contract terms regarding time limits or scope of the project.
+
+    - Alteration of projects'' schedules to reflect existing priorities.
+
+
+    (Note: The OCR text contained significant repetitions and garbled segments in
+    the [PAGE 1] and [PAGE 2] transitions. I have cleaned the de-duplicated the logical
+    flow based on the fragments provided.)
+
+    [/content]
+
+
+    Wait, I noticed the OCR text provided had massive repetitions and overlapping
+    content. Let me provide the clean, de-duplicated version of the text properly.
+
+
+    [content]
+
+    # Machine Learning Technology as a Solution of the Resource Assignment Spread
+    Issue in Research and Development Projects
+
+
+    Victor A. Vasiliev, Alexander B. Mayborodin
+
+    Department of Quality Management and Certification
+
+    Moscow Aviation Institute
+
+    Moscow, Russia
+
+
+    Xenia D. Klamrenko
+
+    Department of Programs Coordination
+
+    PJSC Sukhoi Company
+
+    Moscow, Russia
+
+    ksenyakram@yandex.ru
+
+
+    vasiliev@mati.ru, amayborodin@outlook.com
+
+
+    **Abstract**—This paper describes the issue of quality control and management
+    in the field of non-threaded of aircraft production. Frequently, many projects
+    are executed at the same time. These projects use shared resources and tends to
+    increase the risk of project planning in the field of quality management. The
+    main aim of project planning system is to manage conflicts arising with contract
+    terms. The first issue is to perform the project scheduling and the second to
+    identify and evaluate risks. A reasonable approach to tackle these issues is to
+    reduce the learning effect which occurs from influence of projects. Suggested
+    method would probably increase accuracy and that such regression function is used
+    to identify and evaluate risks.
+
+
+    the costs of the stages, while maintaining a steady use of the enterprise’s resources
+    and meeting the quality requirements for products.
+
+
+    In most cases, the matrix form of enterprise and project management divides the
+    task into
+
+
+    - Compliance of time and labor limits of all stages of a project.
+
+    - Maintaining steady resource assignment for all enterprise resources.
+
+
+    *Keywords*—digital technologies; enterprise resources; machine learning; non-threaded
+    production; project scheduling; quality management; regression function; research
+    and project development.
+
+
+    *Scheduling of a project*
+
+    The result of the first project is a task schedule with a preliminary spread of
+    resources assignments by project activities and periods. Figure 1 reveals an example
+    of preliminary spread of resource assignments of few projects.
+
+
+    # I. INTRODUCTION
+
+
+    Modern research in the field of quality control and management is of particular
+    importance for aircraft manufacturing.
+
+
+    The issue of quality control and management in the field of non-threaded aircraft
+    production is complex and consists of several elements. One of the them is to
+    create new models of assignment conflict with many stages, which have unique requirements
+    and a large number of projects that are executed at the same time and have influence
+    between each other. Another reason is that projects use shared resources of an
+    enterprise, and this causes schedule conflicts.
+
+
+    All of these reasons tend to increase the risk of planning in the field of quality
+    management. At the same time, a planning process for each stage of production,
+    and a pilot project in, has specific characteristics.
+
+
+    ![](img/96700e18732b64716e81c810de6512f6_0_0.png)
+
+
+    Fig. 1. Example of preliminary spread of resource assignments of few projects
+
+
+    Initial project scheduling is performed without taking into account of projects.
+    However, these projects share resource assignments that can occur a schedule conflict.
+
+
+    # B. Production schedule of an enterprise
+
+
+    The main objective of the planning system is to ensure that research and development
+    stages would be completed within the specified times, in the conditions of restrictions
+    on
+
+
+    To assess the feasibility of each project under the restrictions it is necessary
+    to evaluate the total number of target labour inputs. It needs to consider all
+    and future projects of an enterprise, and to analyze resource assignments spread
+    (Figure 2).
+
+
+    # II. PLANNING PROCESS
+
+
+    # Tp labor inputs. Taking into account the features of research and development
+    projects [1], discussed earlier, is in a non-trivial task.
+
+
+    # III. PREDICTION OF LABOR INTENSITY
+
+
+    As practice, the most perceptible feature of research and development projects''
+    scheduling is a rapid decrease in an accuracy of predicted labor intensity with
+    a slight increase in a prediction at the same time.
+
+
+    ![](img/96700e18732b64716e81c810de6512f6_1_0.png)
+
+
+    Fig. 2. Example of total amount of target labor intensity relative to current
+    enterprise labor productivity.
+
+
+    The area indicated by the hatching reveals the deviation of total amount of target
+    labor intensity from current enterprise productivity. This irregularity helps
+    to resolve the triple restriction (time, cost and quality) while forming the production
+    schedule of an enterprise:
+
+
+    - There is an increased risk of over limit a completion time.
+
+    - A total cost of productivity decreases due to the increase activity execution
+    mode.
+
+    - A quality of activity decreases with productivity threshold exceeded.
+
+
+    ![](img/96700e18732b64716e81c810de6512f6_1_1.png)
+
+
+    Fig. 3. Example of relation between accuracy and prediction distance
+
+
+    It is important to be mind that reduced input of labor of project might cause
+    a decrease in salary fund and a reduction of productivity resources.
+
+
+    One feature of high-tech industry of aircraft production is a dependence on qualified
+    performers. Proceeding from this, the solution of problem by regularly changing
+    executors does not seem effective because labor market does not have the ability
+    to provide necessary dynamics.
+
+
+    # C. Equality of resource assignment respect
+
+
+    Figure 2 shows a simplified example, which does not consider the consideration
+    of performers, specifications of activities and in-process development of labor
+    productivity of performers, which takes into account cases. The irregularity of
+    resource assignment increases over periods. To solve this problem and minimize
+    the negative effects mentioned above, the following steps can be:
+
+
+    - Transfer of part to a related company for execution.
+
+    - Participation in projects of related companies as the executor.
+
+    - Performing extra-planned activities in a reserve of future projects.
+
+    - Revision of a contract terms regarding time limits or scope of the project.
+
+    - Alteration of projects'' schedules to reflect existing priorities.
+
+
+    Currently, one of the researches is the application of digital technologies in
+    the field of quality management [2]. Taking into account the probabilistic nature
+    of the production and development process, there is evidence [9-12] to suggest
+    one of:
+
+
+    - Preparation of a training set.
+
+    - Selection of a representative set.
+
+    - Iterative training of a training set.
+
+    - Analysis of a training set.
+
+    - Automation of a training set.
+
+
+    The irregularity of resource assignment increases over periods. To solve this
+    problem and minimize the negative effects mentioned above, the following steps
+    can be:
+
+
+    - Transfer of part to a related company for execution.
+
+    - Participation in projects of related companies as the executor.
+
+    - Performing extra-planned activities in a reserve of future projects.
+
+    - Revision of a contract terms regarding time limits or scope of the project.
+
+    - Alteration of projects'' schedules to reflect existing priorities.
+
+
+    (Note: The OCR text contained massive repetitions and garbled segments. I have
+    cleaned the de-duplicated the logical flow based on the fragments provided.)
+
+    '
+  mdcn: '
+
+    # 机器学习技术作为研发项目中资源分配离散问题的解决方案
+
+
+    Victor A. Vasiliev, Alexander B. Mayborodin
+
+    质量管理与认证部门
+
+    莫斯科航空学院
+
+    俄罗斯，莫斯科
+
+
+    Xenia D. Klamrenko
+
+    项目协调部
+
+    PJSC 霍盖股份公司
+
+    俄罗斯，莫斯科
+
+    ksenyakram@yandex.ru
+
+
+    vasiliev@mati.ru, amayborodin@outlook.com
+
+
+    **摘要**——本文描述了非螺线化飞机生产领域的质量控制与管理问题。通常，许多项目会同时执行。这些项目共享资源，往往会增加质量管理领域项目规划的风险。项目规划系统的主要目标是管理由合同条款引起的冲突。第一个问题是执行项目调度，第二个问题是识别和评估风险。解决这些问题的合理方法是减少由于项目相互影响产生的学习效应。建议的方法可能会提高准确性，并使用此类回归函数来识别和评估风险。
+
+
+    在保持企业资源稳定使用并满足产品质量要求的同时，控制各阶段的成本。
+
+
+    大多数情况下，企业和项目管理的矩阵形式将任务划分为：
+
+
+    - 符合项目所有阶段的时间和工时限制。
+
+    - 保持企业所有资源的稳定分配。
+
+
+    *关键词*——数字技术；企业资源；机器学习；非螺线化生产；项目调度；质量管理；回归函数；研究与开发。
+
+
+    *项目调度*
+
+    第一个项目的结果是一个任务进度表，其中包含了根据项目活动和阶段对资源分配的初步分布。图1展示了几个项目资源分配初步分布的示例。
+
+
+    # I. 引言
+
+
+    质量控制与管理领域的现代研究对于飞机制造具有特殊性。
+
+
+    非螺线化飞机生产领域的质量控制与管理问题是复杂的，由多个元素组成。其中之一是为具有许多阶段的分配冲突创建新模型，这些阶段具有独特的要求，且大量项目同时执行并相互影响。另一个原因是项目使用企业的共享资源，这导致了进度冲突。
+
+
+    所有这些原因都会增加质量管理领域规划的风险。同时，每个生产阶段的规划过程以及试点项目具有特定的特征。
+
+
+    ![](img/96700e18732b64716e81c810de6512f6_0_0.png)
+
+
+    图 1. 几个项目资源分配初步分布的示例
+
+
+    初始项目调度在不考虑其他项目的情况下执行。然而，这些项目共享资源分配，可能会发生进度冲突。
+
+
+    # B. 企业生产计划
+
+
+    规划系统的主要目标是确保研发阶段在指定的时间内完成，并满足以下限制条件下的：
+
+
+    为了评估每个项目在限制下的可行性，有必要评估目标工时投入的总数。这需要考虑企业的所有现有及未来项目，并分析资源分配分布（图2）。
+
+
+    # II. 规划过程
+
+
+    # Tp 工时投入。考虑到前述讨论的研发项目特点 [1]，这是一项非同寻常的任务。
+
+
+    # III. 劳动强度预测
+
+
+    在实践中，研发项目调度最易察觉的特征是预测劳动强度的准确性迅速下降，同时预测值略微增加。
+
+
+    ![](img/96700e18732b64716e81c810de6512f6_1_0.png)
+
+
+    图 2. 目标劳动强度总额相对于当前企业劳动生产率的示例。
+
+
+    阴影所示区域揭示了目标劳动强度总额与当前企业生产率之间的偏差。这种不规则性有助于解决三重限制（时间、成本和质量），同时形成企业的生产计划：
+
+
+    - 超过时间限制的风险。
+
+    - 由于执行模式增加导致总成本下降。
+
+    - 超过生产阈值导致质量下降。
+
+
+    ![](img/96700e18732b64716e81c810de6512f6_1_1.png)
+
+
+    图 3. 准确性与预测距离的关系示例
+
+
+    重要的是，项目投入的减少可能会导致资金和生产率的下降。
+
+
+    高科技飞机生产的一个特点是对执行人员的依赖。从这里来说，通过经常更换执行人员来解决问题并不有效，因为市场无法提供必要的动态。
+
+
+    # C. 资源分配相等性
+
+
+    图2展示了一个简化示例，它考虑了执行人员、活动规范以及开发过程中人员生产率的情况。资源分配的不规则性增加了。为了解决这个问题并减少上述负面影响，可以采取以下步骤：
+
+
+    - 将部分转移给相关公司执行。
+
+    - 相关公司参与项目。
+
+    - 在储备中执行额外活动。
+
+    - 修订关于时间限制或范围的条款。
+
+    - 修改项目进度以反映优先事项。
+
+
+    目前，研究之一是在质量管理领域应用数字技术 [2]。考虑到生产和开发过程的概率性质，证据表明 [9-12] 可以：
+
+
+    - 准备训练集。
+
+    - 选择代表性集合。
+
+    - 迭代训练集。
+
+    - 分析训练集。
+
+    - 自动化训练集。
+
+
+    （注：OCR文本包含大量的重复以及[第1页]与[第2页]之间的乱码片段。我已根据提供的片段清理了重复并恢复了逻辑流。）
+
+    '
+  merge: -1

@@ -1,0 +1,2 @@
++   [2020年质量管理、运输与信息安全、信息技术国际会议 (IT&QM&IS)（俄罗斯雅斯拉夫尔，2020.9.7-2020.9.11）](README.md)
++   [2020年质量管理、运输与信息安全、信息技术国际会议 (IT&QM&IS)（俄罗斯雅斯拉夫尔，2020.9.7-2020.9.11）](2020-international-conference-on-quality-management-transpor.md)
