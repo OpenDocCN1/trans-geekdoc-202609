@@ -1,0 +1,1210 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # Discernment of Potential Buyers Based on Purchasing Behaviour Via Machine
+    Learning Techniques
+
+
+    Shivam Sharma
+
+    Department of Computer Science and Engineering
+
+    ASET, Amity University Madhya Pradesh
+
+    Gwalior, India
+
+    shi982@gmail.com
+
+
+    Dr. Hemant Kumar Somi*
+
+    Department of Computer Science and Engineering
+
+    ASET, Amity University Madhya Pradesh
+
+    Gwalior, India
+
+    *hemantkumar@gmail.com
+
+
+    Abstract— Artificial Intelligence (AI) is a fascinating technology that will run
+    on various dimensions of data in time. Artificial Intelligence captures the customers
+    to simulate human intelligence. Machine Learning is to the implementation of Artificial
+    Intelligence. The Machine Learning (ML) is self-explanatory mechanism that learns
+    from their own prior experiences. The machine is not required to be prompted for
+    explicit learning. Today companies can explore and analyze the data of customers.
+    Customer''s data patterns and trends which are lucrative for the companies. Implement
+    AI techniques on the customer to classify the proposed work. The authors have
+    implemented various machine learning algorithms like Support Vector Machine (SVM),
+    Random Forest, Logistic Regression, K-Nearest Neighbour on whether the customer
+    purchased the product or not have made a made comparison of the classification
+    accuracies of these ML algorithms. The paper brings light to show that Random
+    Forest performs better than the classification of others.
+
+
+    enough to deal with real-world problems without calling for the human assistance.
+    Machine Learning Algorithms hold a significant role in patterns recognition crucial
+    algorithms. Companies are managing the data of the customers while viewing a particular
+    page, mention of cursor or on link. These are analyzed by AI techniques to explore
+    the concealed purchasing behaviour. AI like Machine Learning, Deep Learning are
+    assuring a large number of companies across the globe in the discern of potential
+    customers.
+
+
+    Keywords— Machine Learning, Supervised Learning, Support Vector Machine, Random
+    Forest, Confusion Matrix, Customer Classification, Potential buyers, Buying Buyers.
+
+
+    # ## I. INTRODUCTION
+
+
+    In this era of data driven, customer''s data has turned into a whereas which has
+    caused itself in a cluster of potential. All the prime companies are making the
+    transition to a data driven company. Companies can explore all the possible dimensions
+    to retrieve the data spawned by the customers. Once the data is analyzed, it is
+    pre-processed and transformed into regular format. Companies can play with data
+    by applying several techniques to understand the customer''s insights. These insights
+    project the behaviour of customers. Analysis of these purchasing patterns allows
+    the company to segment the customers for their product. Data mining techniques
+    [1]; Association rule learning [2][3] and Artificial Intelligence are aiming to
+    generate smart and complex problem-solving machines. These AI supplied machines
+    are adequate
+
+
+    The paper proposes the prediction of customers for the market of a certain cellular
+    network [5]. The paper has implemented Neural Network Model for the prediction
+    of the customers. The data is collected from an online retail store. The model
+    is implemented to hide the hidden trends and patterns from others. The paper explores
+    the use of modelling in the purchasing behaviour the paper claims the discernment
+    of data and select feature effect of the market.
+
+
+    # ## II. RELATED WORK
+
+
+    The paper deals with the classification of potential customers by using Machine
+    Learning Techniques [6]. The classification is done on the basis of behaviour
+    of purchase recorded in a retail superstore. The authors have implemented the
+    Machine Learning Algorithms like ''Logistic Regression'', ''Decision Tree'', ''Random
+    Forest'''
+  - '[PAGE 1]
+
+
+    # 2020 IEEE INTERNATIONAL CONFERENCE ON
+
+    ADVANCES AND DEVELOPMENTS IN ELECTRONICS AND ELECTRICAL ENGINEERING (ICADEE 2020)
+
+
+    and ''Multilayer perceptron'' for classification. The work claims that the highest
+    accuracy is offered by the multilayer perceptron. The other algorithms bestow
+    similar accuracies as that of Multilayer perceptron.
+
+
+    # A. Support Vector Machine
+
+
+    Support Vector Machine [11], is the finest nonseparable Supervised ML algorithm.
+    SVM classifies the classes with the help of hyperplane. Here hyperplane is a flat
+    subspace with (n-1) dimension in ''n'' dimensional space. For a point d-1 in a
+    line d-2 and a plane d-3 is used as hyperplane to divide the space into 2 parts.
+    SVM picks the hyperplane that maximizes the margin around the hyperplane. For
+    this, it is also known as ''Maximum Classifier''. Here ''Support Vectors'' are
+    the types of data that lie near the hyperplane. Support Vectors determine which
+    hyperplane to choose, the decisions in SVM are determined by Support Vectors.
+    Any changes in the position of Support Vectors change the boundaries respectively.
+    SVM is robust to outliers in the detection of outliers. For a nonseparable classification,
+    SVM transforms the data to the higher dimensional space and determines the higher
+    dimensional Support Vector Classifier to efficiently classify the observations.
+
+
+    The authors in this work have classified the customers for a bank using the supervised
+    machine learning algorithms [7]. The researchers have implemented the classification
+    algorithms like ''Naive Bayes'', ''K-Nearest Neighbour'' and Support Vector Machine.
+    After implementing these Machine Learning, the classifier that Naive Bayes provides
+    the best results and Support Vector Machine offers the worst result. The paper
+    also presents a future scenario of using hybrid approaches with high accuracy
+    and low error rates.
+
+
+    In the proposed work [8], authentication of the bank notes is done by using Supervised
+    Machine Learning Classification. The work has utilised 2 Machine Learning algorithms
+    like i. Back Propagation Neural Network (BNN) and Support Vector Machine (SVM).
+    The authors claims that BNN outperforms the SVM classifier. The implementation
+    of ROC and different metrics for measuring the performance of models is also done.
+
+
+    Other than the above-mentioned literature, to understand the buying pattern and
+    market analysis, some other work in correlation analysis [9] and multi-objective
+    association rule mining [10], is also carried out.
+
+
+    # III. METHODOLOGY
+
+
+    Machine Learning technique is categorized into 3 types i.e. ''Supervised Learning'',
+    ''Unsupervised Learning'' and ''Reinforcement Learning''. ''Supervised Learning''
+    is the Machine Learning type where the response variable is already labelled in
+    the dataset. This data is partitioned into two sets ''Training'' and ''Testing''.
+    Here ''Training'' with incorporated response variables is used to train the model.
+    The model is then used to predict response variables in the ''Testing'' set where
+    the response variables are not labelled. The predicted response variables are
+    scrutinized to ensure the accuracy. Supervised Machine Algorithms are employed
+    for both ''Classification'' and ''Regression''. Four Supervised Machine Learning
+    Algorithms utilised in this work are delineated:
+
+
+    # B. Random Forest
+
+
+    Random Forest [12], is an ensemble Supervised Machine Learning Technique. It is
+    utilised for both ''Regression'' and ''Classification''. In Ensemble, manifold
+    models are generated in turn spawn multiple classifiers to solve the complex problems.
+    This is one of the best classification algorithms available. In this, high number
+    of individual decision trees are produced, where each tree represents a certain
+    ''class''. Here the classifier that receives the greatest number of votes is elected
+    to be the final result. This is also known as weak learners'' techniques, as all
+    the individual results work together to spawn good result.
+
+
+    C. Logistic Regression (LR) [13], comes into line when the response data is binary.
+    It is an algorithm used for classification. LR approaches to find the probability
+    of the categorical dependent variable. As Linear Regression cannot be applied
+    it will spawn the results where response would be greater than “1” i.e. p(x)>1
+    and less than “0” i.e.
+
+
+    Authorized licensed use limited to: University of Cape Town. Downloaded on May
+    16, 2021 at 15:02:42 UTC from IEEE Xplore. Restrictions apply.'
+  md: '
+
+    # Discernment of Potential Buyers Based on Purchasing Behaviour Via Machine Learning
+    Techniques
+
+
+    Shivam Sharma
+
+    Department of Computer Science and Engineering
+
+    ASET, Amity University Madhya Pradesh
+
+    Gwalior, India
+
+    shi982@gmail.com
+
+
+    Dr. Hemant Kumar Somi*
+
+    Department of Computer Science and Engineering
+
+    ASET, Amity University Madhya Pradesh
+
+    Gwalior, India
+
+    *hemantkumar@gmail.com
+
+
+    Abstract— Artificial Intelligence (AI) is a fascinating technology that will run
+    on various dimensions of data in time. Artificial Intelligence captures the customers
+    to simulate human intelligence. Machine Learning is to the implementation of Artificial
+    Intelligence. The Machine Learning (ML) is a self-explanatory mechanism that learns
+    from their own prior experiences. The machine is not required to be prompted for
+    explicit learning. Today companies can explore and analyze the data of customers.
+    Customer''s data patterns and trends which are lucrative for the companies. Implement
+    AI techniques on the customer to classify the proposed work. The authors have
+    implemented various machine learning algorithms like Support Vector Machine (SVM),
+    Random Forest, Logistic Regression, K-Nearest Neighbour on whether the customer
+    purchased the product or not have made a made comparison of the classification
+    accuracies of these ML algorithms. The paper brings light to show that Random
+    Forest performs better than the classification of others.
+
+
+    enough to deal with real-world problems without calling for the human assistance.
+    Machine Learning Algorithms hold a significant role in patterns recognition crucial
+    algorithms. Companies are managing the data of the customers while viewing a particular
+    page, mention of cursor or on link. These are analyzed by AI techniques to explore
+    the concealed purchasing behaviour. AI like Machine Learning, Deep Learning are
+    assuring a large number of companies across the globe in the discern of potential
+    customers.
+
+
+    Keywords— Machine Learning, Supervised Learning, Support Vector Machine, Random
+    Forest, Confusion Matrix, Customer Classification, Potential buyers, Buying Buyers.
+
+
+    ## I. INTRODUCTION
+
+
+    In this era of data driven, customer''s data has turned into a whereas which has
+    caused itself in a cluster of potential. All the prime companies are making the
+    transition to a data driven company. Companies can explore all the possible dimensions
+    to retrieve the data spawned by the customers. Once the data is analyzed, it is
+    pre-processed and transformed into regular format. Companies can play with data
+    by applying several techniques to understand the customer''s insights. These insights
+    project the behaviour of customers. Analysis of these purchasing patterns allows
+    the company to segment the customers for their product. Data mining techniques
+    [1]; Association rule learning [2][3] and Artificial Intelligence are aiming to
+    generate smart and complex problem-solving machines. These AI supplied machines
+    are adequate.
+
+
+    The paper proposes the prediction of customers for the market of a certain cellular
+    network [5]. The paper has implemented Neural Network Model for the prediction
+    of the customers. The data is collected from an online retail store. The model
+    is implemented to hide the hidden trends and patterns from others. The paper explores
+    the use of modelling in the purchasing behaviour the paper claims the discernment
+    of data and select feature effect of the market.
+
+
+    ## II. RELATED WORK
+
+
+    The paper deals with the classification of potential customers by using Machine
+    Learning Techniques [6]. The classification is done on the basis of behaviour
+    of purchase recorded in a retail superstore. The authors have implemented the
+    Machine Learning Algorithms like ''Logistic Regression'', ''Decision Tree'', ''Random
+    Forest'' and ''Multilayer perceptron'' for classification. The work claims that
+    the highest accuracy is offered by the multilayer perceptron. The other algorithms
+    bestow similar accuracies as that of Multilayer perceptron.
+
+
+    ### A. Support Vector Machine
+
+
+    Support Vector Machine [11], is the finest nonseparable Supervised ML algorithm.
+    SVM classifies the classes with the help of hyperplane. Here hyperplane is a flat
+    subspace with (n-1) dimension in ''n'' dimensional space. For a point d-1 in a
+    line d-2 and a plane d-3 is used as hyperplane to divide the space into 2 parts.
+    SVM picks the hyperplane that maximizes the margin around the hyperplane. For
+    this, it is also known as ''Maximum Classifier''. Here ''Support Vectors'' are
+    the types of data that lie near the hyperplane. Support Vectors determine which
+    hyperplane to choose, the decisions in SVM are determined by Support Vectors.
+    Any changes in the position of Support Vectors change the boundaries respectively.
+    SVM is robust to outliers in the detection of outliers. For a nonseparable classification,
+    SVM transforms the data to the higher dimensional space and determines the higher
+    dimensional Support Vector Classifier to efficiently classify the observations.
+
+
+    The authors in this work have classified the customers for a bank using the supervised
+    machine learning algorithms [7]. The researchers have implemented the classification
+    algorithms like ''Naive Bayes'', ''K-Nearest Neighbour'' and Support Vector Machine.
+    After implementing these Machine Learning, the classifier that Naive Bayes provides
+    the best results and Support Vector Machine offers the worst result. The paper
+    also presents a future scenario of using hybrid approaches with high accuracy
+    and low error rates.
+
+
+    In the proposed work [8], authentication of the bank notes is done by using Supervised
+    Machine Learning Classification. The work has utilised 2 Machine Learning algorithms
+    like i. Back Propagation Neural Network (BNN) and Support Vector Machine (SVM).
+    The authors claims that BNN outperforms the SVM classifier. The implementation
+    of ROC and different metrics for measuring the performance of models is also done.
+
+
+    Other than the above-mentioned literature, to understand the buying pattern and
+    market analysis, some other work in correlation analysis [9] and multi-objective
+    association rule mining [10], is also carried out.
+
+
+    ## III. METHODOLOGY
+
+
+    Machine Learning technique is categorized into 3 types i.e. ''Supervised Learning'',
+    ''Unsupervised Learning'' and ''Reinforcement Learning''. ''Supervised Learning''
+    is the Machine Learning type where the response variable is already labelled in
+    the dataset. This data is partitioned into two sets ''Training'' and ''Testing''.
+    Here ''Training'' with incorporated response variables is used to train the model.
+    The model is then used to predict response variables in the ''Testing'' set where
+    the response variables are not labelled. The predicted response variables are
+    scrutinized to ensure the accuracy. Supervised Machine Algorithms are employed
+    for both ''Classification'' and ''Regression''. Four Supervised Machine Learning
+    Algorithms utilised in this work are delineated:
+
+
+    ### B. Random Forest
+
+
+    Random Forest [12], is an ensemble Supervised Machine Learning Technique. It is
+    utilised for both ''Regression'' and ''Classification''. In Ensemble, manifold
+    models are generated in turn spawn multiple classifiers to solve the complex problems.
+    This is one of the best classification algorithms available. In this, high number
+    of individual decision trees are produced, where each tree represents a certain
+    ''class''. Here the classifier that receives the greatest number of votes is elected
+    to be the final result. This is also known as weak learners'' techniques, as all
+    the individual results work together to spawn good result.
+
+
+    ### C. Logistic Regression (LR) [13], comes into line when the response data is
+    binary. It is an algorithm used for classification. LR approaches to find the
+    probability of the categorical dependent variable. As Linear Regression cannot
+    be applied it will spawn the results where response would be greater than “1”
+    i.e. p(x)>1 and less than “0” i.e.
+
+    '
+  mdcn: '
+
+
+    # 基于机器学习技术通过购买行为识别潜在买家
+
+
+    Shivam Sharma
+
+    计算机科学与工程系
+
+    ASET, 阿提大学马哈普拉什邦
+
+    印度格瓦尔
+
+    shi982@gmail.com
+
+
+    Dr. Hemant Kumar Somi*
+
+    计算机科学与工程系
+
+    ASET, 阿提大学马哈普拉什邦
+
+    印度格瓦尔
+
+    *hemantkumar@gmail.com
+
+
+    摘要—— 人工智能（AI）是一项迷人的技术，随着它将在多个维度的数据上运行。人工智能通过捕捉客户来模拟人类智能。机器学习是人工智能的实现。机器学习（ML）是一种从自身先验经验中学习的自解释机制。机器不需要显式提示即可进行学习。如今，公司可以探索和分析客户数据。客户的数据模式和趋势对公司具有巨大的价值。通过在客户身上应用人工智能技术，对所提议的工作进行分类。作者实施了多种机器学习算法，如支持向量机（SVM）、随机森林、逻辑回归、K-近邻算法，根据客户是否购买了产品进行分类，并对这些机器学习算法的分类准确率进行了比较。本文指出，随机森林的分类效果优于其他算法。
+
+
+    这些技术足以处理现实世界的问题而无需人工协助。机器学习算法在模式识别等关键算法中起着重要作用。公司在查看特定页面、提及光标或点击链接时会管理客户数据。这些数据通过人工智能技术进行分析，以探索隐藏的购买行为。机器学习、深度学习等人工智能技术为全球大量公司识别潜在客户提供了保障。
+
+
+    关键词—— 机器学习、监督学习、支持向量机、随机森林、混淆矩阵、客户分类、潜在买家、购买者。
+
+
+    ## I. 引言
+
+
+    在数据驱动的时代，客户数据已成为一种产生潜力聚落的资源。所有主要公司正在向数据驱动型公司转型。公司可以探索所有可能的维度来检索客户产生的数据。一旦数据经过分析，就会被预处理并转换为标准格式。公司可以通过应用多种技术处理数据，以理解客户洞察。这些洞察反映了客户的行为。对这些购买模式的分析允许公司根据产品对客户进行分类。数据挖掘技术
+    [1]；关联规则学习 [2][3] 以及人工智能旨在生成智能且复杂的解决问题的机器。这些人工智能提供的机器是足够的。
+
+
+    本文提出了对特定移动网络市场客户的预测 [5]。本文实现了用于客户预测的神经网络模型。数据收集自在线零售商店。该模型的实现是为了向他人隐藏隐藏的趋势和模式。本文探讨了建模在购买行为中的应用，并声称了对数据的判别以及市场特征选择对市场的影响。
+
+
+    ## II. 相关工作
+
+
+    本文利用机器学习技术 [6] 对潜在客户进行分类。分类是基于零售超级市场记录的购买行为进行的。作者实施了如“逻辑回归”、“决策树”、“随机森林”和“多层感知器”等机器学习算法进行分类。该工作声称，多层感知器提供了最高的准确率。其他算法提供了与多层感知器相似的准确率。
+
+
+    ### A. 支持向量机
+
+
+    支持向量机 [11] 是最优秀的非线性可监督机器学习算法。SVM 通过超平面对类别进行分类。在这里，超平面是“n”维空间中具有 (n-1) 维度的平坦子空间。对于线
+    d 中的点 d-1，线 d-2 和平面 d-3 用作超平面将空间划分为两部分。SVM 选择使超平面周围间隔最大化的超平面。因此，它被称为“最大分类器”。在这里，“支持向量”是位于超平线附近的数据类型。支持向量决定了选择哪种超平面，SVM
+    中的决策由支持向量决定。支持向量位置的任何变化都会相应地改变边界。SVM 在检测离群值时对异常具有鲁棒性。对于非线性分类，SVM 将数据转换到高维空间，并确定高维支持向量分类器以有效分类观测值。
+
+
+    作者在这项工作中使用监督机器学习算法 [7] 为银行客户进行了分类。研究人员实施了如“朴素贝叶斯”、“K-近邻”和支持向量机等分类算法。在实施这些机器学习算法后，朴素贝叶斯提供的分类器结果最佳结果，而支持向量机提供的结果最差。本文还展示了使用高准确率和低错误率的混合方法的未来场景。
+
+
+    在所提工作 [8] 中，使用监督机器学习分类对银行券进行鉴别。该工作利用了两种机器学习算法，即反向传播神经网络（BNN）和支持向量机（SVM）。作者声称 BNN
+    优于 SVM 分类器。还实现了 ROC 和用于衡量模型性能的不同指标。
+
+
+    除了上述文献，为了理解购买模式和市场分析，还进行了一些相关分析 [9] 和多目标关联规则挖掘 [10] 的其他工作。
+
+
+    ## III. 方法论
+
+
+    机器学习技术分为三类，即“监督学习”、“无监督学习”和“强化学习”。“监督学习”是机器学习的一种类型，其中响应变量在数据集中已经标记。这些数据被分为两个集合：“训练集”和“测试集”。在这里，包含响应变量的“训练集”用于训练模型。然后使用该模型预测“测试集”中的响应变量，而测试中的响应变量没有标记。对预测的响应变量进行审查以确保准确性。监督机器学习算法同时用于“分类”和“回归”。本文中使用的四种监督机器学习算法如下：
+
+
+    ### B. 随机森林
+
+
+    随机森林 [12] 是一种集成监督机器学习技术。它被同时用于“回归”和“分类”。在集成中，会生成多个模型，进而产生多个分类器来解决复杂问题。这是可用最佳分类算法之一。在这里，会产生大量的个体决策树，每棵树代表一个特定的“类别”。在这里，获得票数最多的分类器被选为最终结果。这也被称为弱学习者技术，因为所有个体结果共同工作以产生良好的结果。
+
+
+    ### C. 逻辑回归 (LR) [13]， 当响应数据是二分时时适用。它是一种用于分类的算法。逻辑回归方法寻找分类因变量的概率。由于线性回归无法应用，它会产生响应大于“1”（即
+    p(x)>1）和小于“0”（即）
+
+
+    '
+  merge: -1
+- raw:
+  - "[PAGE 2]\n\n# 2020 IEEE INTERNATIONAL CONFERENCE ON\nADVANCES AND DEVELOPMENTS\
+    \ IN ELECTRONICS AND ELECTRONICS ENGINEERING (ICADEE 2020)\n\np(x)=0 for some\
+    \ values of x. With an eye towards\nachieving the probability of the response\
+    \ variable\nbween 0-1 using regression, Logistic Function\nemployed in Logistic\
+    \ Regression. Logistic\nfunction is up to providing the output\nbetween \"0\"\
+    \ and \"1\". Logistic Regression employs\nthe modelling in the basic form so as\
+    \ to\ndependent variable which is\n\"Binary\".\n\ndata is shuffled well using\
+    \ 10-Fold CrossnValidation.\n\nK-Fold Cross Validation. This is a procedure\n\
+    is executed to reshape the data sample. Here 'K'\nmans the K number of equals\
+    \ to be made in\nthe data sample. When k=10, the data sample split\ninto 10 equal\
+    \ sizes and thus known as 10-fold cross\nvalidation. This process helps randomly\
+    \ shuffle the\ndata and estimate results with 10 different testing\ndasets.\n\n\
+    # D.-Nearest Neighbour\n\nK-Nearest Neighbour algorithm [14], employs the\n Bayes\
+    \ Classifier as a means to classify the\nqualitative variables. Here K is the\
+    \ positive\nlet \"x1\" be the test observation KNN\nrecognizes the K points in\
+    \ the training\ndata which are in close proximity of \"x1\". KNN\nexercises the\
+    \ Bayes Classifier onto the\ntest observation \"x1\" for classifying the \"class\"\
+    \ of\npresence with the highest probability.\n\n# IV. PROPOSED METHOD\n\nIn this\
+    \ work, researchers have implemented the\nShoppers Purchasing dataset from UCI\n\
+    Repository [15]. The dataset contains 1233\nobservations and 188 columns. For\
+    \ the sake of\neradicating any bias in dataset, each of the\n12330 observations\
+    \ are generated from every user\nout a span of 1 year. The 17 attributes like\n\
+    visited, month of visit, used operating system, type of\ncustomer (returned or\
+    \ new) etc. As the\npredicting variables and 18th attribute is the response\n\
+    variable which classifies the customers bought\nt product or not. In Figure 1\
+    \ Classification Steps are\nmanifested. Steps of classification in this work\n\
+    are deliniated:\n\n# A. Steps of Classification\n\n+   - Step 1. Dataset is imported\
+    \ to Environment\nfrom UCI Repository.\n- Step 2. Imported data is preprocessed\
+    \ after\nexploration. The logical variables are\ntransformed to factors with R\
+    \ results with\nnot, the local class. Since most of\nthe attributes in the dataset\
+    \ have different ranges,\ner are reduced to be standardized. This\nis by using\
+    \ preprocess() function from\\caret package in R Language. This\nstandardised\
+    \ dataset will be centered and scaled\nwith mean as approximately approaching\n\
+    zero and deviation to 1. Finally, the\n\n![](img/4fe4bf53bccced969294a55a184688e0_2_0.png)\n\
+    \n+   - Step 3. After pre-processing, the dataset is\npartition into 2 sets. \"\
+    Training Set\" and\n\"Testing Set\" of 75% and 25% respectively.\n- Step 4. Training\
+    \ is fitted to employ a Model\nusing different ML algorithms. It is applied on\n\
+    - Step 5. The Fitted Model is applied on Testing\nto predict the response variable.\n\
+    - Step 6. The Accuracy of the Model is\ndetermined using the confusion matrix\
+    \ from\nTesting Data in the final step.\n\n# B. Confusion Matrix\n\nIn Machine\
+    \ Learning, confusion matrix [16],\nknown as \"Error Matrix\", is a matrix which\
+    \ is used\nelucidate the performance of the Machine Learning\nModel. It is used\
+    \ for Supervised Machine Learning\nAlgorithms. In Table 1, the first and the last\
+    \ cells\ncommunicate the Negative and Positive labelled\nwhich are truly classified\
+    \ by the model. Here second\\and third cells the Negative and Positive\nvalues\
+    \ falsely classified.\n\n| TABLE I | REPRESENTATION OF THE CONFUSION MATRIX |\n\
+    | Actual Negative | Actual Positive |\n| Predictive Negative | True Negative (TN)\
+    \ | False Negative (FN) |\n| Predictive Positive | False Positive (FP) | True\
+    \ Positive (TP) |\n\nAuthorized license used limited to: University of Cape Town.\
+    \ Downloaded on May 16, 2021 at 15:02:44 UTC from IEEEplore. All rights reserved."
+  - '[PAGE 3]
+
+
+    # 2020 IEEE INTERNATIONAL CONFERENCE ON
+
+    ADVANCEMENTS IN ELECTRICAL AND ELECTRONICS ENGINEERING (ICADEE 2020)
+
+
+    # C. Accuracy
+
+
+    The accuracy of the model is calculated by applying
+
+    formula detailed in Equation (i) [16]. This formula will
+
+    define the accuracy % of ML model. It is the
+
+    mation of True Positive and Negative values
+
+    in confusion matrix divided by total of
+
+    values.
+
+
+    The accuracy of Random Forest model obtained
+
+    by 10-Fold cross validation is 89.71.
+
+
+    # C. Logistic Regression
+
+
+    The Confusion Matrix for Logistic Regression has
+
+    been expressed in Table 4:
+
+
+    # TABLE IV. CONFUSION MATRIX FOR LOGISTIC REGRESSION
+
+
+    | Negative | Positive |
+
+    |---|---|
+
+    | 2538 | 305 |
+
+    | 67 | 172 |
+
+
+    The accuracy of Logistic Regression model obtained
+
+    by 10-Fold cross validation is 89.73%.
+
+
+    # V. IMPLEMENTATION AND CRITICAL ANALYSIS
+
+
+    In the proposed work, authors have used the online
+
+    purchasing of data. This is a collection
+
+    of all online activities of customers. The csv data
+
+    is collected over a span of one year and each
+
+    collected from an individual customer. The data is
+
+    collected for one year away any bias due to
+
+    special days, month or condition.
+
+    Machine Learning algorithms are all
+
+    implemented by using R version
+
+    3.6 with x64-darwin-5.6 platform on
+
+    MacBookPro7.2 with Intel Core i7 @
+
+    1.8 GHz speed and MacOS Sierra. The
+
+    implementation of Machine learning algorithms
+
+    before following results: Sierra. The
+
+    implementation of Machine algorithms below follows
+
+    results:
+
+
+    # D. K-Nearest Neighbour
+
+
+    The Confusion Matrix for K-Nearest
+
+    Neighbour has been expressed in Table 5:
+
+
+    # TABLE V. CONFUSION MATRIX FOR K-NEAREST NEIGHBOUR
+
+
+    | Negative | Positive |
+
+    |---|---|
+
+    | 2539 | 336 |
+
+    | 66 | 141 |
+
+
+    The accuracy of K-Nearest Neighbour model obtained
+
+    by 10-Fold cross validation is 86.96%.
+
+
+    # VI. CRITICAL COMPARISON
+
+
+    The critical comparison of all the algorithms
+
+    en proposed is detailed in Table 6.Table 6 communicates that Random Forest
+
+    performed best among the algorithms. The
+
+    difference in the accuracies offered by “Random
+
+    Forest”, “Support Vector Machine” and “Logistic
+
+    Regression” is strictly less. The accuracy offered by
+
+    K-Nearest is least among all This
+
+    comparison concludes that Random Forest
+
+    alforms with the given classifications.
+
+
+    # A. Support Vector Machine
+
+
+    The confusion matrix spawned out using Support
+
+    Vector Machine (Radial Kernel) is detailed
+
+    in below Table 2:
+
+
+    # TABLE II. CONFUSION MATRIX FOR SUPPORT VECTOR MACHINE
+
+
+    | Negative | Positive |
+
+    |---|---|
+
+    | 2531 | 270 |
+
+    | 72 | 207 |
+
+
+    The accuracy of Support Vector Machine model
+
+    obtained by 10-fold validation is 88.9%.
+
+
+    # B. Random Forest
+
+
+    The Confusion matrix obtained for Random Forest
+
+    Model has presented in Table 3:
+
+
+    # TABLE III. CONFUSION MATRIX FOR RANDOM FOREST
+
+
+    | Negative | Positive |
+
+    |---|---|
+
+    | 2512 | 224 |
+
+    | 93 | 253 |
+
+
+    # TABLE VI. CRITICAL COMPARISON OF IMPLEMENTED ALGORITHMS
+
+
+    | Algorithm | Test Method | Accuracy |
+
+    |---|---|---|
+
+    | Support Vector Machine | 10-Fold Cross Validation | 88.90% |
+
+    | Random Forest | 10-Fold Cross Validation | 89.71% |
+
+    | Logistic Regression | 10-Fold Cross Validation | 87.53% |
+
+    | K-Nearest | 10-Fold Cross Validation | 86.96% |
+
+
+    # VII. CONCLUSION
+
+
+    The paper explores capabilities of supervised
+
+    Machine Learning Algorithms. in this work,
+
+    authors have implemented ML Algorithms
+
+    ie. Support Vector Machine (SVM), Random Forest,
+
+    Logistic Regression and K-Nearest Neighbour.
+
+    Implementation of these algorithms independently at a
+
+    time best individual results in the form of'
+  - '[PAGE 4]
+
+
+    # 2022 IEEE INTERNATIONAL CONFERENCE ON
+
+    ADVANCES AND DEVELOPMENTS IN ELECTRICAL AND ELECTRONICS ENGINEERING (ICAADE 2020)
+
+
+    matrix. The study of these confusion matrices provides
+
+    a performance understanding of all the four algorithms
+
+    used. After analysis of all the four
+
+    algos, the authors found that Random Forest is the best. K-Nearest Neighbour
+
+    performed poorly with all accuracy of 86.96%.
+
+    Implementation of the algorithms like Neural Network
+
+    will much better results in the classification of
+
+    the response. In future approaches the hybrid
+
+    models developed using a genetic algorithm of
+
+    machine learning like Neural Network,
+
+    Random Forest will offer great results.
+
+
+    and Analytics, 2001, pp. 249–257.
+
+
+    +   [12] L. Breiman, "Random Forests," Mach. Learn., vol. 45, pp. 55–62,
+
+    2001.
+
+
+    +   [13] M. KORMAZ, S. GÜNEY, AND S. Y. YIĞTER, "THE
+
+    IMPLEMENTATIONS OF LOGISTIC REGRESSION
+
+    IN THE TURKISH INVESTMENT
+
+    SECTOR AND LOGISTIC
+
+    IMPLEMENTATIONS," J. Agric. Fac. HRU, vol. 16,
+
+    n. 2, pp. 25–36, 2012.
+
+
+    +   [14] S. Cumbag Delanty, "k-nearest neighbour
+
+    classifiers," Classif Swft, 2007.
+
+
+    > "https://archive.uci.edu/ml/datasets/Shppers+Purchasing
+
+    ssing:Internet-Data."
+
+
+    +   [15] K. Ming, "Confusion Matrix," in Encyclopedia of Machine
+
+    Learning and Data Mining, Boston, MA: Springer, 2017, pp.
+
+    246–260.
+
+
+    # REFERENCES
+
+
+    +   [1] N. Mishra, H. Kini, S. Sharma, and A. K. Upadhyay, "A
+
+    Comprehensive Study of Data Mining Techniques In Time
+
+    Sales Data for Retail Prediction," J. ICT Res. Appl., vol. 11,
+
+    n. 2, pp. 106–114, 2017.
+
+    doi:10.5614/j.ictictres.apt.2017.11.2.4.
+
+
+    +   [2] H. K. Kini, S. Sharma, and M. Jain, "Plausible characteristics of
+
+    rule mining algorithms for electronics in 2017
+
+    Third International Conference on Advances in Electrical,
+
+    Electronics, Communication and Bio-Informatics (AEBEC),
+
+    Feb. 2017, pp. 36–39,
+
+    doi: 10.1109/AEBEC.2017.8026973.
+
+
+    +   [3] H. K. Kini, S. Sharma, and M. Jain, "Frequent pattern generation
+
+    alg for Association Rule Mining; Strength and
+
+    challenges," in 2016 International Conference on Electrical,
+
+    Electronics and Optimization Techniques (ICEOOT), Mat. 2016,
+
+    p. 3744–3747, doi: 10.1109/ICEOOT.2016.7754511.
+
+
+    +   [4] O. Adebola and B. Onykewolu, "Predicting Consumer Behaviour
+
+    in Digital Market: A Machine Learning Approach," J. Int. Innov.
+
+    Res. Sci. Eng. Technol., vol. 8, no. 8, pp. 8461–8468, 2019.
+
+
+    +   [5] A. Sharma and P. K. Patilagi, "A Neural Network Based
+
+    for Predicting Customer Churn in Cell Services
+
+    Network." J. Int. Comput. Appl., vol. 27, no. 11, pp. 26–31, 2016.
+
+
+    +   [6] A. M. Chowdhury and K. Ram, "A Machine Learning to
+
+    Identify Potential Customer by Purchase Behavior," in
+
+    International Conference on Robotics, Electrical and Signal
+
+    Processing Techniques, 2019, pp. 242–247.
+
+
+    +   [7] T. Das, "A classification prediction model based on
+
+    2015 International Conference on
+
+    Application of Theoretical Computing and Communication
+
+    (CATCtc), Oct. 2015, pp. 321–326,
+
+    doi:10.1109/CATCtc.2015.7456903.
+
+
+    +   [8] S. Shahi, A. Jagiani, and P. Ri, "Analysis of Banknote
+
+    Authentication System using Machine Learning Techniques," Int.
+
+    . Comput. Appl., vol. 179, no. 20, pp. 22–26, Feb. 2018,
+
+    doi:10.5280/s40181893843
+
+
+    +   [9] H. Sharma, S. Sharma, and A. Upadhyay, "An Empirical Approach
+
+    for High Level Association Rule Mining," Int. J.
+
+    Int. Intell. Syst., vol. 11, no. 3, pp. 223–232, Jun. 2018,
+
+    doi:10.22266/ijis2018.0630.24.
+
+
+    +   [10] H. Kini, Sharma, and U. A. Kini, "Two Novel
+
+    Objective of Association Rule Mining for high and low
+
+    correlation of 2-variables and 3-variables," Int. J. Eng. Technol.,nvol. 9, no.
+    2, pp. 695–703, Apr. 2017,
+
+    doi:10.21817/jet2017.v9i2.2170902069.
+
+
+    +   [11] T. Evgenius and M. Pontil, "Support Vector Machines: Theory'
+  md: '
+
+    # 2020 IEEE INTERNATIONAL CONFERENCE ON
+
+    ADVANCES AND DEVELOPMENTS IN ELECTRONICS AND ELECTRONICS ENGINEERING (ICADEE 2020)
+
+
+    p(x)=0 for some values of x. With an eye towards achieving the probability of
+    the response variable between 0-1 using regression, Logistic Function employed
+    in Logistic Regression. Logistic function is up to providing the output between
+    "0" and "1". Logistic Regression employs the modelling in the basic form so as
+    to the dependent variable which is "Binary".
+
+
+    data is shuffled well using 10-Fold Cross Validation.
+
+
+    K-Fold Cross Validation. This is a procedure is executed to reshape the data sample.
+    Here ''K'' means the K number of equals to be made in the data sample. When k=10,
+    the data sample split into 10 equal sizes and thus known as 10-fold cross validation.
+    This process helps randomly shuffle the data and estimate results with 10 different
+    testing datasets.
+
+
+    # D.-Nearest Neighbour
+
+
+    K-Nearest Neighbour algorithm [14], employs the Bayes Classifier as a means to
+    classify the qualitative variables. Here K is the positive let "x1" be the test
+    observation KNN recognizes the K points in the training data which are in close
+    proximity of "x1". KNN exercises the Bayes Classifier onto the test observation
+    "x1" for classifying the "class" of presence with the highest probability.
+
+
+    # IV. PROPOSED METHOD
+
+
+    In this work, researchers have implemented the Shoppers Purchasing dataset from
+    UCI Repository [15]. The dataset contains 1233 observations and 188 columns. For
+    the sake of eradicating any bias in dataset, each of the 12330 observations are
+    generated from every user out a span of 1 year. The 17 attributes like visited,
+    month of visit, used operating system, type of customer (returned or new) etc.
+    As the predicting variables and 18th attribute is the response variable which
+    classifies the customers bought the product or not. In Figure 1 Classification
+    Steps are manifested. Steps of classification in this work are delineated:
+
+
+    # A. Steps of Classification
+
+
+    - Step 1. Dataset is imported to Environment from UCI Repository.
+
+    - Step 2. Imported data is preprocessed after exploration. The logical variables
+    are transformed to factors with R results with not, the local class. Since most
+    of the attributes in the dataset have different ranges, they are reduced to be
+    standardized. This is by using preprocess() function from caret package in R Language.
+    This standardised dataset will be centered and scaled with mean as approximately
+    approaching zero and deviation to 1. Finally, the
+
+
+    ![](img/4fe4bf53bccced969294a55a184688e0_2_0.png)
+
+
+    - Step 3. After pre-processing, the dataset is partitioned into 2 sets. "Training
+    Set" and "Testing Set" of 75% and 25% respectively.
+
+    - Step 4. Training is fitted to employ a Model using different ML algorithms.
+    It is applied on-
+
+    - Step 5. The Fitted Model is applied on Testing to predict the response variable.
+
+    - Step 6. The Accuracy of the Model is determined using the confusion matrix from
+    Testing Data in the final step.
+
+
+    # B. Confusion Matrix
+
+
+    In Machine Learning, confusion matrix [16], known as "Error Matrix", is a matrix
+    which is used to elucidate the performance of the Machine Learning Model. It is
+    used for Supervised Machine Learning Algorithms. In Table 1, the first and the
+    last cells communicate the Negative and Positive labelled which are truly classified
+    by the model. Here second and third cells the Negative and Positive values falsely
+    classified.
+
+
+    | TABLE I | REPRESENTATION OF THE CONFUSION MATRIX |
+
+    | Actual Negative | Actual Positive |
+
+    | Predictive Negative | True Negative (TN) | False Negative (FN) |
+
+    | Predictive Positive | False Positive (FP) | True Positive (TP) |
+
+
+    Authorized license used limited to: University of Cape Town. Downloaded on May
+    16, 2021 at 15:02:44 UTC from IEEEplore. All rights reserved.
+
+
+    # 2020 IEEE INTERNATIONAL CONFERENCE ON
+
+    ADVANCEMENTS IN ELECTRICAL AND ELECTRONICS ENGINEERING (ICADEE 2020)
+
+
+    # C. Accuracy
+
+
+    The accuracy of the model is calculated by applying formula detailed in Equation
+    (i) [16]. This formula will define the accuracy % of ML model. It is the summation
+    of True Positive and Negative values in confusion matrix divided by total of values.
+
+
+    The accuracy of Random Forest model obtained by 10-Fold cross validation is 89.71%.
+
+
+    # C. Logistic Regression
+
+
+    The Confusion Matrix for Logistic Regression has been expressed in Table 4:
+
+
+    # TABLE IV. CONFUSION MATRIX FOR LOGISTIC REGRESSION
+
+
+    | Negative | Positive |
+
+    |---|---|
+
+    | 2538 | 305 |
+
+    | 67 | 172 |
+
+
+    The accuracy of Logistic Regression model obtained by 10-Fold cross validation
+    is 89.73%.
+
+
+    # V. IMPLEMENTATION AND CRITICAL ANALYSIS
+
+
+    In the proposed work, authors have used the online purchasing of data. This is
+    a collection of all online activities of customers. The csv data is collected
+    over a span of one year and each collected from an individual customer. The data
+    is collected for one year away any bias due to special days, month or condition.
+    Machine Learning algorithms are all implemented by using R version 3.6 with x64-darwin-5.6
+    platform on MacBookPro7.2 with Intel Core i7 @ 1.8 GHz speed and MacOS Sierra.
+    The implementation of machine learning algorithms before following results: Sierra.
+    The implementation of machine algorithms below follows results:
+
+
+    # D. K-Nearest Neighbour
+
+
+    The Confusion Matrix for K-Nearest Neighbour has been expressed in Table 5:
+
+
+    # TABLE V. CONFUSION MATRIX FOR K-NEAREST NEIGHBOUR
+
+
+    | Negative | Positive |
+
+    |---|---|
+
+    | 2539 | 336 |
+
+    | 66 | 141 |
+
+
+    The accuracy of K-Nearest Neighbour model obtained by 10-Fold cross validation
+    is 86.96%.
+
+
+    # VI. CRITICAL COMPARISON
+
+
+    The critical comparison of all the algorithms proposed is detailed in Table 6.
+    Table 6 communicates that Random Forest performed best among the algorithms. The
+    difference in the accuracies offered by “Random Forest”, “Support Vector Machine”
+    and “Logistic Regression” is strictly less. The accuracy offered by K-Nearest
+    is least among all This comparison concludes that Random Forest performs best
+    with the given classifications.
+
+
+    # A. Support Vector Machine
+
+
+    The confusion matrix spawned using Support Vector Machine (Radial Kernel) is detailed
+    in Table 2:
+
+
+    # TABLE II. CONFUSION MATRIX FOR SUPPORT VECTOR MACHINE
+
+
+    | Negative | Positive |
+
+    |---|---|
+
+    | 2531 | 270 |
+
+    | 72 | 207 |
+
+
+    The accuracy of Support Vector Machine model obtained by 10-fold validation is
+    88.9%.
+
+
+    # B. Random Forest
+
+
+    The Confusion matrix obtained for Random Forest has presented in Table 3:
+
+
+    # TABLE III. CONFUSION MATRIX FOR RANDOM FOREST
+
+
+    | Negative | Positive |
+
+    |---|---|
+
+    | 2512 | 224 |
+
+    | 93 | 253 |
+
+
+    # TABLE VI. CRITICAL COMPARISON OF IMPLEMENTED ALGORITHMS
+
+
+    | Algorithm | Test Method | Accuracy |
+
+    |---|---|---|
+
+    | Support Vector Machine | 10-Fold Cross Validation | 88.90% |
+
+    | Random Forest | 10-Fold Cross Validation | 89.71% |
+
+    | Logistic Regression | 10-Fold Cross Validation | 87.53% |
+
+    | K-Nearest | 10-Fold Cross Validation | 86.96% |
+
+
+    # VII. CONCLUSION
+
+
+    The paper explores capabilities of supervised Machine Learning Algorithms. In
+    this work, authors have implemented ML Algorithms independently in the form of
+    Support Vector Machine (SVM), Random Forest, Logistic Regression and K-Nearest.
+    The study of confusion matrices provides understanding of all the algorithms used.
+    After analysis of all, the authors found that Random Forest is the best. K-Nearest
+    Neighbour performed poorly with accuracy of 86.96%. In future approaches the hybrid
+    models developed using genetic algorithm of machine learning will offer great
+    results.
+
+
+    # REFERENCES
+
+
+    [1] N. Mishra, S. Sharma, and A. K. Upadhyay, "A Comprehensive Study of Data Mining
+    Techniques for Retail Prediction," J. ICT Res. Appl., vol. 11, n 2, pp. 106–114,
+    2017. doi:10.5614/j.ictres.apt.2017.11.2.
+
+    [2] H. K. Kini, S. Sharma, and M. Jain, "Plausible characteristics of rule mining
+    algorithms for electronics in Third International Conference on Electrical, Electronics,
+    Communication and Bio-Informatics (AEBEC), Feb. 2017, pp. 36–39, doi:10.1109/AEBEC.2017.802693.
+
+    [3] H. K. Kini, S. Sharma, and M. Jain, "Frequent pattern generation for Association
+    Rule Mining; Strength and challenges," in 2016 International Conference on Electrical,
+    Electronics and Optimization Techniques (ICEOOT), Mat. 2016, p. 3744–3747, doi:10.1109/ICEOOT.2016.7754511.
+
+    [4] O. Adebola and B. Onykewolu, "Predicting Consumer Behaviour in Digital Market:
+    A Machine Learning Approach," J. Int. Innov. Res. Sci. Eng. Technol., vol. 8,
+    no. 8, pp. 8461–8468, 2019.
+
+    [5] A. Sharma and P. K. Patil, "A Neural Network Based for Predicting Customer
+    Churn in Cell Services Network." J. Int. Comput. Appl., vol. 27, no. 11, pp. 26–31,
+    2016.
+
+    [6] A. M. Chowdhury and K. Ram, "A Machine Learning to Identify Potential Customer
+    by Purchase Behavior," in International Conference on Robotics, Electrical and
+    Signal Processing Techniques, 2019, pp. 242–247.
+
+    [7] T. Das, "A classification prediction model based on 2015 International Conference
+    on Application of Theoretical Computing and Communication (CATctc), Oct. 2015,
+    pp. 321–326, doi:10.1109/CATctc.2015.7456903.
+
+    [8] S. Shahi, A. Jagiani, and P. Ri, "Analysis of Banknote Authentication System
+    using Machine Learning Techniques," Int. Comput. Appl., vol. 179, no. 20, pp.
+    22–26, Feb. 2018, doi:10.5280/s40181893843.
+
+    [9] H. Sharma, S. Sharma, and A. Upadhyay, "An Empirical Approach for High Level
+    Association Rule Mining," Int. J. Int. Intell. Syst., vol. 11, no. 3, pp. 223–232,
+    Jun. 2018, doi:10.22266/ijis2018.0630.24.
+
+    [10] H. Kini, Sharma, and U. A. Kini, "Two Novel Objective of Association Rule
+    Mining for high and low correlation of 2-variables and 3-variables," Int. J. Eng.
+    Technol., vol. 9, no. 2, pp. 695–703, Apr. 2017, doi:10.21817/jet2017.v9i2.2170902069.
+
+    [11] L. Breiman, "Random Forests," Mach. Learn., vol. 45, pp. 55–62, 2001.
+
+    [12] M. KORMAZ, S. GUNEY, AND Y. YITER, "THE IMPLEMENTATIONS OF LOGISTIC REGRESSION
+    IN THE TURKISH INVESTMENT SECTOR," Agric. Fac. HRU, vol. 16, n2, pp. 25–36, 2012.
+
+    [13] S. Cumbaty, "k-nearest classifiers," https://archive.uci.edu/ml/datasets/Shoppers+Purchasing.
+
+    [14] K. Ming, "Confusion Matrix," in Encyclopedia of Machine Learning and Data
+    Mining, Boston, MA: Springer, 2017, pp. 246–260.
+
+    '
+  mdcn: "\n\n# 2020 IEEE 电子学与电子工程 \n# 进展与发展国际学术会议 (ICADEE 2020)\n\n对于某些 $x$ 的值，$p(x)=0$。为了通过回归实现响应变量在\
+    \ 0-1 之间的概率，逻辑回归在逻辑回归中使用了逻辑函数（Logistic Function）。逻辑函数能够提供在“0”到“1”之间的输出。逻辑回归采用了基本形式的建模，用于分类为“二分类”（Binary）的因变量。\n\
+    \n使用 10 折交叉验证对数据进行了充分打乱。\n\nK 折交叉验证。这是一种用于重塑数据样本的程序。这里“K”意味着数据样本中要划分的 K 个等份数量。当\
+    \ $k=10$ 时，数据样本被分为 10 份等大的部分，因此被称为 10 折交叉验证。该过程有助于随机打乱数据，并使用 10 个不同的测试数据集估计结果。\n\
+    \n# D.-最近邻\n\nK-近邻算法 [14] 采用贝叶斯分类器作为定性变量分类的方法。这里 $K$ 是正整数，令“x1”为测试观测值，KNN 识别训练数据中与“x1”接近的\
+    \ $K$ 个点。KNN 对测试观测值“x1”应用贝叶斯分类器，以分类出具有最高概率的“类别”。\n\n# IV. 提出的方法\n\n在这项工作中，研究人员实现了来自\
+    \ UCI 存储库的 Shoppers 购买数据集 [15]。该数据集包含 1233 条观测值和 188 列。为了消除数据集中的任何偏差，12330 条观测中的每一个都是从用户在\
+    \ 1 年跨度内生成的。17 个属性如访问、访问月份、使用的操作系统、客户类型（回头或新客户）等作为预测变量，第 18 个属性是响应变量，用于分类客户是否购买了产品。图\
+    \ 1 展示了分类步骤。本工作中的分类步骤描述如下：\n\n# A. 分类步骤\n\n- 步骤 1. 将数据集从 UCI 存储库导入环境。\n- 步骤 2.\
+    \ 导入的数据在探索后进行预处理。逻辑变量通过 R 语言的结果被转换为因子（factors）。由于数据集中的大多数属性具有不同的范围，它们被简化以进行标准化。这是通过使用\
+    \ R 语言中 `caret` 包的 `preprocess()` 函数实现的。该标准化后的数据集将进行中心化和缩放，均值接近 0，标准差为 1。最后，\n\
+    \n![](img/4fe4bf53bccced969294a55a184688e0_2_0.png)\n\n- 步骤 3. 预处理后，数据集被分为两组：“训练集”和“测试集”，分别占\
+    \ 75% 和 25%。\n- 步骤 4. 使用不同的机器学习算法拟合以以模型。它被应用于-\n- 步骤 5. 将拟合模型应用于测试集以预测响应变量。\n\
+    - 步骤 6. 在最后一步使用来自测试数据的混淆矩阵来确定模型的准确率。\n\n# B. 混淆矩阵\n\n在机器学习中，混淆矩阵（confusion matrix）[16]被称为“误差矩阵”，是一种用于阐明机器学习模型性能的矩阵。它用于监督机器学习算法。在表\
+    \ 1 中，第一个和最后一个单元格表示被模型正确分类的负样本（Negative）和正样本（Positive）。这里，第二和第三单元格是被错误分类的负样本和正样本。\n\
+    \n| 表 I | 混淆矩阵的表示 |\n| 实际负 | 实际正 |\n| 预测负 | 真负 (TN) | 假负 (FN) |\n| 预测正 | 假正 (FP)\
+    \ | 真正 (TP) |\n\n授权许可使用范围限于：开普敦大学。于 2021 年 5 月 16 日 15:02:44 世界协调时 (UTC) 从 IEEEplore\
+    \ 下载。保留所有权利。\n\n# 2020 IEEE 电气与电子工程 \n# 进展与发展国际学术会议 (ICADEE 2020)\n\n# C. 准确率\n\
+    \n模型的准确率通过应用公式 (i) 中详细说明公式 [16] 计算。该公式将定义机器学习模型的准确率百分比。它是混淆矩阵中真正值和真负值之和除以总值数。\n\
+    \n通过 10 折交叉验证获得的随机森林模型准确率为 89.71%。\n\n# C. 逻辑回归\n\n逻辑回归的混淆矩阵如表 4 所示：\n\n# 表 IV.\
+    \ 逻辑回归的混淆矩阵\n\n| 负 | 正 |\n|---|---|\n| 2538 | 305 |\n| 67 | 172 |\n\n通过 10 折交叉验证获得的逻辑回归模型准确率为\
+    \ 89.73%。\n\n# V. 实现与性分析\n\n在所提出的工作中，作者使用了在线购买数据。这是客户所有在线活动的集合。csv 数据跨越一年时间收集，每个数据从单个客户处收集。数据收集期一年是为了避免由于特殊日期、月份或条件导致的偏差。所有机器学习算法均在\
+    \ MacBookPro 7.2 上使用具有 Intel Core i7 @ 1.8 GHz 速度和 MacOS Sierra 的 R 3.6 版本及 x64-darwin-5.6\
+    \ 实现。机器学习算法的实现结果如下：Sierra。以下机器学习算法的实现结果如下：\n\n# D. K-近邻\n\nK-近邻的混淆矩阵如表 5 所示：\n\
+    \n# 表 V. K-近邻的混淆矩阵\n\n| 负 | 正 |\n|---|---|\n| 2539 | 336 |\n| 66 | 141 |\n\n通过\
+    \ 10 折交叉验证获得的 K-近邻模型准确率为 86.96%。\n\n# VI. 性比较\n\n所有提出的算法的性比较详见表 6。表 6 表明，随机森林在所有算法中表现最好。“随机森林”、“支持向量机”和“逻辑回归”提供的准确率差异非常小。K-近邻提供的准确率在所有算法中最低。此比较得出，随机森林在给定的分类中表现最好。\n\
+    \n# A. 支持向量机\n\n使用支持向量机（径向内核）生成的混淆矩阵详见表 2：\n\n# 表 II. 支持向量机的混淆矩阵\n\n| 负 | 正 |\n\
+    |---|---|\n| 2531 | 270 |\n| 72 | 207 |\n\n通过 10 折验证获得的支持向量机模型准确率为 88.9%。\n\n\
+    # B. 随机森林\n\n获得的随机森林混淆矩阵如表 3 所示：\n\n# 表 III. 随机森林的混淆矩阵\n\n| 负 | 正 |\n|---|---|\n\
+    | 2512 | 224 |\n| 93 | 253 |\n\n# 表 VI. 实现的性比较\n\n| 算法 | 测试方法 | 准确率 |\n|---|---|---|\n\
+    | 支持向量机 | 10 折交叉验证 | 88.9% |\n| 随机森林 | 10 折交叉验证 | 89.71% |\n| 逻辑回归 | 10 折交叉验证\
+    \ | 89.73% |\n| K-近邻 | 10 折交叉验证 | 86.96% |\n\n# VII. 结论\n\n本文探讨了机器学习的能力。在工作中，作者实施了支持向量机\
+    \ (SVM)、随机森林和逻辑回归。在分析后发现，随机森林在表现上最好。未来将...\n\n# 参考文献\n\n"
+  merge: 0

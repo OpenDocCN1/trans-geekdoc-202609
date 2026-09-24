@@ -1,0 +1,53 @@
+- pgno: 0
+  md: '# Message from the Workshop Chairs
+
+
+    Interest in the fusion of deep learning (DL) and high performance computing (HPC)
+    is growing rapidly, as DL practitioners train neural networks on HPC-like systems
+    to leverage their massive computing power, exceptional memory architectures, and
+    high speed interconnects, and scientists and engineers apply DL methods to problems
+    such as classification, interpolation, and inverse modeling. However, DL poses
+    new challenges to the scientific research and HPC communities, as the need for
+    efficient handling of large and complex training data, new communication patterns,
+    and the need for reduced-precision arithmetic. For example, image classification
+    tasks that are conventionally studied in deep learning involve two dimensional,
+    three-channel images; in contrast, scientific data tend to have more channels
+    and/or extend to three, four, or more dimensions. Many real-life problems involve
+    large datasets, sometimes in the multi-terabyte range. Efficiently handling such
+    large and complex data usually requires sealing neural network training across
+    nodes while alleviating I/O bottlenecks. Another important challenge is maintaining
+    final solution accuracy when networks are trained at scale. Naively scaling DL
+    algorithms by simply increasing batch size is likely to result in lower utilization
+    or accuracy degradation. It is important to design a good network architecture
+    and to perform hyper-parameter tuning, a task that introduces additional challenges
+    due to the computational requirements of individual training runs. Yet other challenges
+    arise when evaluating the performance of various combinations of frameworks, DL
+    algorithms, and hardware platforms: the rapid rate of technology development by
+    both the DL and HPC communities makes it difficult to reproduce.
+
+
+    The objective of this workshop is to provide a venue in which scientists and engineers
+    can exchange the latest developments and results in this field. We expect the
+    workshop to enable insightful discussions of challenges such as those listed here
+    and to incubate collaborations across institutions. The ultimate goal is to unite
+    people in the HPC and scientific computing communities in the pursuit of new methods
+    that will expedite the use of supercomputers for scientific discoveries.
+
+
+    We accepted seven-reviewed papers in the 5th Deep Learning on Supercomputing Workshop
+    (DL2020). These papers cover topics in scalable algorithms, DL performance modeling
+    and benchmarking, and scalable DL infrastructure design. Other papers describe
+    DL-enabled mathematical solutions in physics and material science and novel applications
+    in astronomy and the Q&A on COVID-19 research literature with topic modeling.
+    We thank both the authors and reviewers for their contributions to the workshop.
+
+
+    Valeriu Codreu, Surfsara, Netherlands
+
+    Ian Foster, University of Chicago & Argonne National Laboratory, USA
+
+    Zhao Zhang, Texas Advanced Computing Center, USA
+
+    DL2 2020'
+  merge: -1
+  img_proc: true
