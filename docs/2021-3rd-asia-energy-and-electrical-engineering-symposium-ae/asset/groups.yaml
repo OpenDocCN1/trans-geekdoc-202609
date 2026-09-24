@@ -1,0 +1,1200 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # 2021 The 3rd Asia Energy and Electrical Engineering Symposium
+
+
+    # # Real-time Estimation of Distributed 380V/220V Photovoltaics
+
+    Based on Deep Learning
+
+
+    Lei Guo
+
+    North China Dispatching Center
+
+    NorthChina Branch of State Grid Corporation of China
+
+    Beijing, China
+
+    guo.lei@sgcc.com.cn
+
+
+    Jun Guo
+
+    North China Dispatching Center
+
+    NorthChina Branch of State Grid Corporation of China
+
+    Beijing, China
+
+    guo.jun@sgcc.com.cn
+
+
+    Yong Zhang
+
+    North China Dispatching Center
+
+    NorthChina Branch of State Grid Corporation of China
+
+    Beijing, China
+
+    zhang.y@sgcc.com.cn
+
+
+    Le Yu
+
+    North China Dispatching Center
+
+    NorthChina Branch of State Grid Corporation of China
+
+    Beijing, China
+
+    nyu.le@sgcc.com.cn
+
+
+    Zhitong Guo
+
+    The Steinhardt School of Culture,
+
+    Education and Human Development
+
+    New York University
+
+    New York, United States
+
+    zg978@nyu.edu
+
+
+    Zhuoping Liu
+
+    International campus
+
+    Zhejiang University
+
+    Jiaxing, China
+
+    zhuping.18@intl.zju.edu.cn
+
+
+    Ben Feng
+
+    College of Electrical Engineering
+
+    Zhejiang University
+
+    Hangzhou, China
+
+    11910028@zju.edu.cn
+
+
+    Chuangxin Guo
+
+    College of Electrical Engineering
+
+    Zhejiang University
+
+    Hangzhou, China
+
+    guochuangxin@zju.edu.cn
+
+
+    **Abstract**—The massive access of distributed photovoltaics (DPV) puts higher
+    requirements for the current grid''s safe and stable operation. Ining that the
+    automatic dispatch control system does not directly collect operating data the
+    most PV generation estimation compared with meteorological and historical PV data,
+    based on short term memory neural networks (LSTM) is predicted. Taking the DPV
+    in the area of China as an object, the estimation accuracy of the LSTM model based
+    on DPV can reach up to 92.6%, with the accuracy of the model. The proposed method
+    is of great significance for the dispatching department to monitor and manage
+    the operation of DPV and to dispatch electricity resources, and storage.
+
+    **Keywords**-distributed photovoltaics; power estimation;
+
+    LSTM
+
+
+    2 billion kW, of which 200 million kW is the PV generation and 60 million kW is
+    the DPV power generation. contradictions of renewable energy consumption have
+    become increasingly prominent. The impacts of DPV generation on regional power
+    balance, load forecasting, start-up and shutdown arrangements, are increasing
+    [1]. To meet the development needs of DPV power generation, it is urgent to propose
+    a practical and feasible estimation method for the DPV power that is directly
+    collected to improve the capacity of DPV generation and ensure the safety and
+    stability of grid operation.
+
+
+    Generally, the market acquisition and usage systems only have time-sharing power
+    data; however, the real reliability, stability of these data often cannot meet
+    regulation and operation scales. Also, the automatic dispatch control system fails
+    to achieve leverage of DPV data access, which only collects part of the distributed
+    data. To the Nation Electric Power Dispatching Center requires all
+
+
+    # I. INTRODUCTION
+
+
+    In recent years, the new power of the DPV grid capacity of power generation has
+    developed rapidly. By of 2019, the total capacity has reached'
+  - '[PAGE 1]
+
+
+    DPV can be connected to the automatic dispatch control system. For data that is
+    not collected, a specific algorithm is required to estimate the DPV power.
+
+
+    Domestic researchers have conducted studies on this issue. A station method was
+    raised by researchers[2]. By fitting the power generation of the market with the
+    installed capacity ratio of the station area, the DPV power of the station area
+    could be obtained. However, this method can only get the DPV power of the previous
+    day, and instance accuracy still need to be improved. In addition, some researchers
+    select models through autocorrelation analysis and weight matrix testing. They
+    also calculated the global DPV power based on installed capacity and coefficients[3].
+
+
+    The relation method of DPV has some similarities with the prediction method. There
+    are two main types of PV forecasting methods [4]: One is the physical method,
+    which analyzes the solar radiation transfer and the conversion efficiency of PV
+    models, then analyze, predict and estimate the PV power by considering the local
+    cloud image information and geographic locations. The other method, which is big
+    data on the basis of a large amount of historical data combined with statistical
+    analysis and machine learning techniques. The physical method is used in actual
+    scenarios as it involves various disciplines such as meteorology and optoelectronics,
+    and its modeling process is complex
+
+
+    There were many studies on statistical methods, considering physical properties.
+    In 2015, some considered that the changes of brightness and cloud based cloud
+    image using the radial basis function (RBF) neural network forecasting[5]. In
+    2017, research showed that a two-layer neural network could be obtained by combining
+    the physical power of PV generation to control the influencing factors[6]. When
+    it comes to 2019, graph machine learning was used to make modeling for PV stations
+    in the weighting area. What is more, data extracted through temporal features,
+    and the principle of graph convolution was used to extract spatial features. As
+    result, the prediction network had showed effects[7]. Recently, a new idea stated
+    that the ultra-short-term PV prediction method combining variational mode decomposition
+    (VMD), deep state neural network (DESNN), and a mixture of Gaussian process experiments
+    could improve the accuracy of ultra-short-term PV power series prediction[8].
+
+
+    Considering existing DPV estimation and technology, this paper combines historical
+    weather data and DPV data to provide a real-time distributed
+
+
+    ![](img/0074bd0888a307be373e4bd01e0a4ef8_1_0.png)
+
+
+    model on the long term short memory network (LSTM). For actual engineering data,
+    feasible solutions are provided according to different types.
+
+
+    # II. LONG SHORT MEMORY NEURAL NETWORK MODEL
+
+
+    Long term short memory neural network (LSTM) is a kind of recurrent neural network
+    (RNN). It is also believed that LSTM is an improved RNN. While maintaining the
+    characteristics of RNN can handle variable-length sequences, LSTM solves the problem
+    of gradient vanishing or explosion. More, although LSTM has a structure, its repeating
+    methods are different. The repeating method of RNN has only one neural layer,
+    while LSTM has four neural layers, which interact in a particular form.
+
+
+    The core of LSTM is to use a new state and output information from the hidden
+    state while loop cyclic operation. As shown in Figure 1, the horizontal line represents
+    the entire state. In the figure, $\sigma$ and tanh represent the sigmoid and tanh
+    activation functions, respectively. $x_t$ is the input, and $h_{t-1}$ are the
+    states of the current and previous times respectively.
+
+
+    LSTM selects to retain or forget through information through three control units
+    (input gate, output gate, gate). Equation[1] forms the state at the current moment.
+    Input gate equation[3] controls how hidden information is retained. Gate equation[4]
+    controls how much information is discarded in the previous moment. The output
+    gate[5] controls how much information needs to be output to the hidden state $h_t$
+    at the current moment.'
+  - '[PAGE 2]
+
+
+    state update formulas for every step of the LSTM are as:
+
+
+    ```
+
+    $C_t = f_tC_{t-1} + i_t \tanh(W_C \cdot [h_{t-1}, x_t] + b_C)$
+
+    ```
+
+
+    ```
+
+    $h_t = o_t \tanh(C_t)$
+
+    ```
+
+
+    ```
+
+    $i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i)$
+
+    ```
+
+
+    ```
+
+    $f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f)$
+
+    ```
+
+
+    ```
+
+    $o_t = \sigma(W_o \cdot [h_{t-1}, x_t] + b_o)$
+
+    ```
+
+
+    In the formula: $W$ is the weight matrix, $b$ is the bias, the constants $c, i,
+    f,$ and $o$ represent the state, input, gate and output gate, respectively. LSTM
+    can decode or add information in the neural state. This mechanism is carefully
+    managed by a structure called the gate. The gate is a feedback neural network
+    with sigmoid function as the activation function, which is essentially a way to
+    allow information to pass through selectively and is signed by sigmoid neural
+    layers and point-by-point multipliers. The reason for using sigmoid is its output
+    in [0,1], which is equivalent to a set of weights. When the output value is 0,
+    the gate will forget information; when the output value is 1, the gate will retain
+    all information. The power of LSTM to solve the vanishing or exploding gradient
+    problems faced by standard recurrent neural networks when the sequence information
+    is too long, is beneficial to sequence modeling.
+
+
+    ![](img/0074bd0888a307be373e4bd01e0a4ef8_2_0.png)
+
+
+    Figure 2. A multi-source data-driven photovoltaic estimation method
+
+
+    # III. REAL-TIME ESTIMATION MODEL OF PHOTOVOLTAICS
+
+
+    This section will first propose the method of the installed capacity ratio and
+    estimation model using LSTM. By considering typical weather scenarios, generalized
+    model for varying conditions is proposed to estimate regional DPV power generation
+    efficiency, a DPV generation algorithm for the local level is proposed.
+
+
+    # A. Calculation of the Installed Capacity Ratio
+
+
+    In discussing photovoltaics, the most common and easiest method is to calculate
+    based on the installed capacity (generation efficiency). This method will first
+    calculate the power generation efficiency, which can be obtained by driving ''DPV
+    power generation at time T ''installed capacity at time T''. In other words, the
+    result equals to the real-time output of PV station by ''installed capacity''.
+
+
+    Next, considering the performance of difference modules and the difference in
+    weather and geographic location in the neighboring area, the power generation
+    efficiency is approximately equivalent to the efficiency curve of all DPV generation
+    in the region.
+
+
+    Finally, might the installed capacity of DPV power generation in the region be
+    the DPV generation efficiency curve to adapt the DPV power generation efficiency
+    curve in the region.
+
+
+    # B. Short Term Memory Neural Network Estimation Model
+
+
+    The calculation of installed capacity ratio in the previous section extends a
+    single PV power generation to regional power generation efficiency. This rough
+    estimation might cause a specific error. To obtain PV power generation, the source
+    of the error must be analyzed first. The means include local weather conditions
+    and geographical differences. Meteorological conditions may relate to the relative
+    ground temperature, ground humidity, and solar radiation. The relative weather
+    will affect the photovoltaic efficiency of PV panels.
+
+
+    Combining meteorological data and historical power generation efficiency, a multi-source
+    data-driven estimation method, as shown in Figure 2. This method uses historical
+    weather data and LSTM models to learn the changing trend of DPV power generation
+    series.
+
+
+    The measurement point of PV power generation efficiency can be selected as a DPV
+    power generation panel'
+  md: '
+
+    # 2021 The 3rd Asia Energy and Electrical Engineering Symposium
+
+
+    ## Real-time Estimation of Distributed 380V/220V Photovoltaics Based on Deep Learning
+
+
+    Lei Guo
+
+    North China Dispatching Center
+
+    NorthChina Branch of State Grid Corporation of China
+
+    Beijing, China
+
+    guo.lei@sgcc.com.cn
+
+
+    Jun Guo
+
+    North China Dispatching Center
+
+    NorthChina Branch of State Grid Corporation of China
+
+    Beijing, China
+
+    guo.jun@sgcc.com.cn
+
+
+    Yong Zhang
+
+    North China Dispatching Center
+
+    NorthChina Branch of State Grid Corporation of China
+
+    Beijing, China
+
+    zhang.y@sgcc.com.cn
+
+
+    Le Yu
+
+    North China Dispatching Center
+
+    NorthChina Branch of State Grid Corporation of China
+
+    Beijing, China
+
+    nyu.le@sgcc.com.cn
+
+
+    Zhitong Guo
+
+    The Steinhardt School of Culture,
+
+    Education and Human Development
+
+    New York University
+
+    New York, United States
+
+    zg978@nyu.edu
+
+
+    Zhuoping Liu
+
+    International campus
+
+    Zhejiang University
+
+    Jiaxing, China
+
+    zhuping.18@intl.zju.edu.cn
+
+
+    Ben Feng
+
+    College of Electrical Engineering
+
+    Zhejiang University
+
+    Hangzhou, China
+
+    11910028@zju.edu.cn
+
+
+    Chuangxin Guo
+
+    College of Electrical Engineering
+
+    Zhejiang University
+
+    Hangzhou, China
+
+    guochuangxin@zju.edu.cn
+
+
+    **Abstract**—The massive access of distributed photovoltaics (DPV) puts higher
+    requirements for the current grid''s safe and stable operation. In view that the
+    automatic dispatch control system does not directly collect operating data, the
+    most PV generation estimation compared with meteorological and historical PV data,
+    based on short-term memory neural networks (LSTM) is predicted. Taking the DPV
+    in the area of China as an object, the estimation accuracy of the LSTM model based
+    on DPV can reach up to 92.6%, with the accuracy of the model. The proposed method
+    is of great significance for the dispatching department to monitor and manage
+    the operation of DPV and to dispatch electricity resources, and storage.
+
+
+    **Keywords**-distributed photovoltaics; power estimation; LSTM
+
+
+    In recent years, the new power of the DPV grid capacity of power generation has
+    developed rapidly. By the end of 2019, the total capacity has reached 2 billion
+    kW, of which 200 million kW is the PV generation and 60 million kW is the DPV
+    power generation. The contradictions of renewable energy consumption have become
+    increasingly prominent. The impacts of DPV generation on regional power balance,
+    load forecasting, start-up and shutdown arrangements, are increasing [1]. To meet
+    the development needs of DPV power generation, it is urgent to propose a practical
+    and feasible estimation method for the DPV power that is directly collected to
+    improve the capacity of DPV generation and ensure the safety and stability of
+    grid operation.
+
+
+    Generally, the market acquisition and usage systems only have time-sharing power
+    data; however, the real reliability, stability of these data often cannot meet
+    regulation and operation scales. Also, the automatic dispatch control system fails
+    to achieve leverage of DPV data access, which only collects part of the distributed
+    data. To the National Electric Power Dispatching Center requires all DPV can be
+    connected to the automatic dispatch control system. For data that is not collected,
+    a specific algorithm is required to estimate the DPV power.
+
+
+    ## I. INTRODUCTION
+
+
+    Domestic researchers have conducted studies on this issue. A station method was
+    raised by researchers [2]. By fitting the power generation of the market with
+    the installed capacity ratio of the station area, the DPV power of the station
+    area could be obtained. However, this method can only get the DPV power of the
+    previous day, and instance accuracy still need to be improved. In addition, some
+    researchers select models through autocorrelation analysis and weight matrix testing.
+    They also calculated the global DPV power based on installed capacity and coefficients
+    [3].
+
+
+    The relation method of DPV has some similarities with the prediction method. There
+    are two main types of PV forecasting methods [4]: One is the physical method,
+    which analyzes the solar radiation transfer and the conversion efficiency of PV
+    models, then analyze, predict and estimate the PV power by considering the local
+    cloud image information and geographic locations. The other method, which is big
+    data on the basis of a large amount of historical data combined with statistical
+    analysis and machine learning techniques. The physical method is used in actual
+    scenarios as it involves various disciplines such as meteorology and optoelectronics,
+    and its modeling process is complex.
+
+
+    There were many studies on statistical methods, considering physical properties.
+    In 2015, some considered that the changes of brightness and cloud based on cloud
+    image using radial basis function (RBF) neural network forecasting [5]. In 2017,
+    research showed that a two-layer neural network could be obtained by combining
+    the physical power of PV generation to control the influencing factors [6]. When
+    it comes to 2019, machine learning was used to make modeling for PV stations in
+    the weighting area. What is more, data extracted through temporal features, and
+    the principle of graph convolution was used to extract spatial features. As result,
+    the prediction network showed effects [7]. Recently, a new idea stated that the
+    short-term PV prediction method combining variational mode decomposition (VMD),
+    deep state network (DNN), and mixture of Gaussian process experiments could improve
+    the accuracy of short-term PV power series [8]. Considering existing DPV estimation
+    technology, this paper combines historical weather data and DPV data to provide
+    a real-time distributed long-term memory network (LSTM). For actual engineering
+    data, feasible solutions are provided according to different types.
+
+
+    ## II. LONG SHORT MEMORY NEURAL NETWORK
+
+
+    Long short memory neural network (LSTM) is a kind of recurrent neural network
+    (RNN). It is also believed that LSTM is an improved RNN. While maintaining characteristics
+    of RNN can handle variable-length sequences, LSTM solves the problem of gradient
+    vanishing or explosion. More, although LSTM has structure, its repeating methods
+    are different. The repeating method of RNN has only one neural layer, while LSTM
+    has four neural layers, which interact in a particular form.
+
+
+    The core of LSTM is to use a new state and output information from the hidden
+    state while cyclic operation. As shown in Figure 1, the horizontal line represents
+    the entire state. In the figure, $\sigma$ and tanh represent the sigmoid and tanh
+    activation functions, respectively. $x_t$ is the input, and $h_{t-1}$ are the
+    states of the current and previous times respectively. LSTM selects to retain
+    or forget information through three control units (input gate, output gate, gate).
+    Equation [1] forms the state at the current moment. Input gate controls how hidden
+    information is retained. Forget gate [3] controls how much information is discarded
+    in the previous moment. Output gate controls how much information needs to be
+    output to the hidden state $h_t$ at the current moment.
+
+
+    State update formulas for every step of LSTM are:
+
+
+    $C_t = f_t \odot C_{t-1} + i_t \odot \tanh(W_C \cdot [h_{t-1}, x_t] + b_C)$
+
+
+    $h_t = o_t \odot \tanh(C_t)$
+
+
+    $i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i)$
+
+
+    $f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f)$
+
+
+    $o_t = \sigma(W_o \cdot [h_{t-1}, x_t] + b_o)$
+
+
+    In the formula: $W$ is the weight matrix, $b$ is the bias, $c, i, f,$ and $o$
+    represent the state, input, gate and output gate, respectively. LSTM can decode
+    or add information in the neural state. This mechanism is carefully managed by
+    a structure called the gate. The gate is a feedback neural network with sigmoid
+    function as the activation function, which is essentially a way to allow information
+    to pass through selectively and is signed by sigmoid layers and point-by-point
+    multipliers. The reason for using sigmoid is its output in $[0,1], which is equivalent
+    to a set of weights. When the output value is 0, the gate will forget information;
+    when the output value is 1, the gate will retain all information. The power of
+    LSTM to solve the vanishing or exploding gradient problems faced by standard recurrent
+    neural networks when the sequence information is too long, is beneficial to sequence
+    modeling.
+
+
+    ![0074bd0888a307be37e4bd01e0a4ef8_2.png] Figure 2. A multi-source data-driven
+    photovoltaic estimation method
+
+
+    ## III. REAL-TIME ESTIMATION MODEL OF PHOTOVOLTAICS
+
+
+    This section will first propose the method of the installed capacity ratio and
+    estimation model using LSTM. By considering typical weather scenarios, generalized
+    model for varying conditions is proposed to estimate regional DPV power generation
+    efficiency, a DPV generation algorithm for the local level is proposed.
+
+
+    ### A. Calculation of the Installed Capacity Ratio
+
+
+    In discussing photovoltaics, the most common and easiest method is to calculate
+    based on the installed capacity (generation efficiency). This method will first
+    calculate the power generation efficiency, which can be obtained by dividing ''DPV
+    power generation at time T'' by ''installed capacity at time T''. In other words,
+    the result equals the real-time output of PV station by installed capacity.
+
+
+    Next, considering the performance of different modules and the difference in weather
+    and geographic location in the neighboring area, the power generation efficiency
+    is approximately equivalent to the efficiency curve of all DPV generation in the
+    region.
+
+
+    Finally, the installed capacity of DPV power generation in the region is the DPV
+    generation efficiency curve to adapt the DPV power generation efficiency curve
+    in the region.
+
+
+    ### B. Short Term Memory Neural Network Estimation Model
+
+
+    The calculation of installed capacity ratio in the previous section extends a
+    single PV power generation to regional power generation efficiency. This rough
+    estimation might cause a specific error. To obtain PV power generation, the source
+    of the error must be analyzed first. The means include local weather conditions
+    and geographical differences. Meteorological conditions may relate to the relative
+    ground temperature, ground humidity, and solar radiation. The relative weather
+    will affect the photovoltaic efficiency of PV panels.
+
+
+    Combining meteorological data and historical power generation efficiency, a multi-source
+    data-driven estimation method, as shown in Figure 2. This method uses historical
+    weather data and LSTM models to learn the changing trend of DPV power generation
+    series.
+
+
+    The measurement point of PV power generation efficiency can be selected as a DPV
+    power generation panel.
+
+    '
+  mdcn: '
+
+
+    # 2021年第三届亚洲能源与电气工程学术会议
+
+
+    ## 基于深度学习的分布式380V/220V光伏发电实时估计
+
+
+    郭磊 (Lei Guo)
+
+    华北调度中心
+
+    国家电网华北分公司
+
+    北京，中国
+
+    guo.lei@sgcc.com.cn
+
+
+    郭军 (Jun Guo)
+
+    华北调度中心
+
+    国家电网华北分公司
+
+    北京，中国
+
+    guo.jun@sgcc.com.cn
+
+
+    张勇 (Yong Zhang)
+
+    华北调度中心
+
+    国家电网华北分公司
+
+    北京，中国
+
+    zhang.y@sgcc.com.cn
+
+
+    乐乐 (Le Yu)
+
+    华北调度中心
+
+    国家电网华北分公司
+
+    北京，中国
+
+    nyu.le@sgcc.com.cn
+
+
+    郭志通 (Zhitong Guo)
+
+    纽约大学文化与人类发展学院
+
+    纽约，美国
+
+    zg978@nyu.edu
+
+
+    刘卓平 (Zhuoping Liu)
+
+    浙江大学国际校区
+
+    中国嘉兴
+
+    zhuping.18@intl.zju.edu.cn
+
+
+    冯本 (Ben Feng)
+
+    浙江大学电气工程学院
+
+    中国，杭州
+
+    11910028@zju.edu.cn
+
+
+    郭创鑫 (Chuangxin Guo)
+
+    浙江大学电气工程学院
+
+    中国，杭州
+
+    guochuangxin@zju.edu.cn
+
+
+    **摘要**——分布式光伏（DPV）的大规模接入对当前电网的安全稳定运行提出了更高要求。鉴于自动调度控制系统未能直接采集运行数据，本文与气象数据和历史光伏数据相比，基于短期记忆神经网络（LSTM）对光伏发电量进行预测。以中国地区的分布式光伏为对象，基于LSTM模型的估计准确率可达92.6%。该方法对于调度部门监测和管理分布式光伏运行，以及电力资源调度和储能具有重要意义。
+
+
+    **关键词**-分布式光伏；发电估计；LSTM
+
+
+    近年来，分布式光伏电网的新能源发电容量发展迅速。截至2019年底，总装机容量已20亿千，其中2000万千为光伏发电，600万千为分布式光伏发电。可再生能源消耗的矛盾日益突出。分布式光伏发电对区域电力平衡、负荷预测、启动停机安排的影响日益增加[1]。为了满足分布式光伏发电的发展需求，迫切需要一种实用可行的直接采集型分布式光伏发电量估计方法，以提高分布式光伏发电能力并确保电网运行的安全稳定。
+
+
+    通常情况下，市场采集和使用系统仅有时段电力数据；然而，这些数据的真实可靠性和稳定性往往无法满足调度和运行规模的要求。此外，自动调度控制系统未能利用分布式光伏数据接入，仅采集了部分分布式数据。国家电力调度中心要求所有分布式光伏都能接入自动调度控制系统。对于未采集的数据，需要特定的算法来估计分布式光伏发电量。
+
+
+    ## I. 引言
+
+
+    国内研究人员已对此问题进行了研究。研究人员提出站点法[2]。通过市场发电量与站区装机容量比例拟合，可以获得站区的分布式光伏发电量。然而，这种方法只能获得前日的分布式光伏发电量，实时性需提高。此外，一些研究人员通过自相关分析和权重矩阵测试选择模型。他们还根据装机容量和系数计算了全球分布式光伏发电量[3]。
+
+
+    分布式光伏的关系方法与预测方法有一定的相似之处。光伏预测方法主要分为两种[4]：一种是物理法，通过分析太阳辐射传输和光伏模型转换效率，结合局部云图信息和地理位置来预测和估计光伏功率；另一种方法是在大量历史数据的基础上结合统计分析和机器学习技术。物理法在实际场景中涉及气象、光电等多个学科，其建模过程较为复杂。
+
+
+    考虑到物理特性，对统计方法有许多研究。2015年，一些研究考虑了基于云图的径基函数（RBF）神经网络来预测亮度变化[5]。2017年，研究表明通过结合光伏物理发电的双层神经网络可以控制影响因素[6]。2019年，使用机器学习对光伏站进行建模，通过时间特征提取数据，并利用图卷积提取空间特征，显示出效果[7]。近期，有观点认为结合变分模式分解（VMD）、深度神经网络（DNN）和高斯过程混合可以提高短期光伏序列的预测精度[8]。考虑到分布式光伏估计技术，本文结合历史天气数据和分布式光伏数据提供了长记忆网络（LSTM），为实际工程数据提供了可行的方案。
+
+
+    ## II. 长记忆神经网络
+
+
+    长记忆网络（LSTM）是一种循环神经网络（RNN）。被认为是RNN的改进版本，在处理变长序列的同时解决了梯度消失或爆炸问题。尽管LSTM具有结构，但其重复方法不同。RNN的重复方法只有一个层，而LSTM具有四层。
+
+
+    LSTM的核心是在循环操作中使用新状态和输出信息。如图1所示，水平线代表整个状态。在图中，$\sigma$和tanh分别代表sigmoid和tanh激活函数，$x_t$是输入，LSTM通过三个控制单元（输入门、输出门、门）选择保留或遗忘信息。公式[1]形成了当前时刻的状态。输入门控制隐藏信息的保留；遗忘门[3]控制上一时刻丢失多少信息；输出门控制需要输出多少信息到隐藏状态$h_t$。
+
+
+    每步的状态更新公式为：
+
+
+    $C_t = f_t \odot C_{t-1} + i_t \odot \tanh(W_C \cdot [h_{t-1}, x_t] + b_C)$
+
+
+    $h_t = o_t \odot \tanh(C_t)$
+
+
+    $i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i)$
+
+
+    $f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f)$
+
+
+    $o_t = \sigma(W_o \cdot [h_{t-1}, x_t] + b_o)$
+
+
+    在公式中：$W$是权重矩阵，$b$是偏置，$c, i, f, o$分别代表状态、输入、输出门。LSTM可以在神经状态中解码或添加信息。这种机制通过称为“门”的结构进行仔细管理。门是以sigmoid函数作为激活函数的反馈神经网络，本质上允许信息选择性通过的方法，由sigmoid层和逐点乘法签名。使用sigmoid的原因是其输出在$[0,1]$之间相当于一组权重。当输出值为0时，门遗忘信息；当输出值为1时，门保留所有信息。LSTM解决了序列信息过长时标准循环神经网络面临的梯度消失或爆炸问题，有利于序列建模。
+
+
+    ![0074bd0888a307be37e4bd01e0a4ef8_2.png] 图2. 多源数据驱动的光伏估计方法
+
+
+    ## III. 光伏实时估计模型
+
+
+    本节将首先提出装机容量比例法和基于LSTM的估计模型。通过典型天气场景，提出了变工况的通用模型来估计区域分布式光伏发电效率，并提出了局部级的分布式发电算法。
+
+
+    ### A. 装机容量比例的计算
+
+
+    在讨论光伏时，最常用且简单的方法是基于装机容量（发电效率）进行计算。这种方法首先计算发电效率，可以通过“T时刻的分布式光伏发电量”除以“T时刻的装机容量”获得。换句话之，结果等于光伏站单位装机的实时输出。
+
+
+    接下来，考虑到不同组件的性能以及相邻区域天气和地理位置的差异，发电效率约等于区域内所有分布式光伏发电的效率曲线。
+
+
+    最后，区域分布式光伏发电装机容量是通过分布式发电效率曲线来适应区域发电效率曲线的。
+
+
+    ### B. 短期记忆神经网络估计模型
+
+
+    上一节的装机容量比例计算将单个光伏发电扩展到了区域发电效率。这种粗略估计可能会导致特定误差。为了获取光伏发电量，必须首先分析误差源。其包括当地天气条件和地理差异。天气条件可能与相对地面温度、湿度和太阳辐射有关。相对天气会影响光伏组件的光伏效率。
+
+
+    结合天气数据和历史发电效率，如图2所示的多源数据驱动光伏估计方法。该方法利用历史天气数据和LSTM模型学习分布式光伏发电序列的变化趋势。
+
+
+    光伏效率的测量点可以选择分布式光伏组件。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 3]
+
+
+    # All Load Data
+
+
+    | P1 | P2 | P3 | P4 | P5 | P6 | P7 | P8 | Pn-1 | Pn |
+
+    |---|---|---|---|---|---|---|---|---|---|n| S1 | S2 | S3 | S4 | S5 | S6 | S7 |
+    S8 | Sn-1 | Sn |
+
+    | All Meteorological Data | | | | | | | | | |
+
+    | P1 | P2 | P3 | P4 | | | | | | |
+
+    | S1 | S2 | S3 | S4 | | | | | | |
+
+    | | | | | | | | | | |
+
+    | P2 | P3 | P4 | P5 | | | | | | |
+
+    | S2 | S3 | S4 | S5 | | | | | | |
+
+    | | | | | | | | | | |
+
+    | P3 | P4 | P5 | P6 | P7 | | | | | |
+
+    | S3 | S4 | S5 | S6 | | | | | | |
+
+
+    Figure 2. Input and output of the LSTM model design
+
+
+    at a specific site or an adjacent photovoltaic power station. Historical meteorological
+    data and historical power generation curves as input of model training, we use
+    historical power generation curves as label values to train the LSTM model. The
+    well-trained LSTM model inputs real-time power generation and data in real-time
+    estimation state, and outputs the estimated DPV power values.
+
+
+    The LSTM estimation uses an iterative method. Figure[3] shows how time-series
+    data is introduced into supervised learning. The depth needs to be determined
+    iteratively, generally 2-5. Taking the input time series of length 4 as example,
+    the LSTM model''s inputs are the photovoltaic power generation and historical
+    data at four time points. The historical meteorological data include total solar
+    radiation, temperature, and humidity. The output is the DPV power at the next
+    point. In generalization ability of the model, the input and output of the model
+    need to be normalized to 0-1. In the training stage, both the input and output
+    need to be provided to the model. In the testing stage, the real-time estimation
+    state, the model will estimate the PV power at the next time point as feeding
+    in real time time points historical data.
+
+
+    # IV. EXAMPLE ANALYSIS
+
+
+    # A. Example Description
+
+
+    +   1) Data Description: includes the 28-day data of total solar radiation, temperature,
+    and humidity in the Tangshan area of Northern Beijing, the 350KV centralized installed
+    and active power of Henan District of Tangshan, and the photovoltaic of three
+    districts situated in Luquan, Tangshan. We use the test and training set to 0.75:0.25,
+    i.e., 21 days are used as the
+
+
+    training data, and seven days are used as the test set to compare the results.
+
+
+    +   2) Scenario Description: According to the methods in Section 2.1 and 2.2,
+    this article sets three scenarios for analysis. The regional DPV power generation
+    mentioned in the scenario refers to the sum of the three distributed sites PV
+    power in the data.
+
+
+    Scenario one: Use a centralized PV generation efficiency curve and DPV installed
+    capacity to estimate regional DPV power generation.
+
+
+    Scenario two: The historical PV power generation efficiency curve and meteorological
+    data as input. The regional DPV power generation is used as input to train the
+    neural network. The real-time centralized PV generation efficiency and output
+    the estimated DPV power value during the test.
+
+
+    Scenario three: The historical single DPV generation efficiency curve and meteorological
+    data as input. The regional DPV power generation is used as input to train the
+    neural network. Real-time single DPV power generation efficiency curve and output
+    the estimated DPV power value during the test.
+
+
+    # B. Evaluation Criteria
+
+
+    The evaluation indicators are selected as the mean square error (RMSE), mean absolute
+    error (MAE), and equation. The calculation formulas are [6] and [7], The former
+    can measure the degree of errors, while the latter is the deviation from the average
+    forecast of results. The closer the RMSE and MAE values are to zero, the smaller
+    the estimation error and better the model effect.
+
+
+    ```
+
+    $RMSE = \frac{1}{n} \sum_{i=1}^{n} (\frac{y_i - \hat{y}_i}{Cap})^2 \(6)$
+
+    ```
+
+
+    ```
+
+    $MAE = \frac{1}{n} \sum_{i=1}^{n} |\frac{y_i - \hat{y}_i}{Cap}| \(7)$
+
+    ```
+
+
+    where $y_i$ is the real value. The accuracy is defined as $1 - RMSE$.
+
+
+    # C. Analysis of Example Results
+
+
+    Utilize GPU and high-performance servers to accelerate the calculation speed of
+    the network. To facilitate comparative analysis, the actual values of regional
+    DPV, the estimated values of scenarios one and three are plotted in one figure.
+    The result of the first day is shown in Figure 4 and Figure 5.
+
+
+    From the comparison of Figure 4 and 5, it can be seen intuitively that scenario
+    three accuracy will be significantly higher than that of scenarios one and'
+  - "[PAGE 4]\n\n# Table I\nESTIMATED SCENARIO COMPARISON OF DPV OUTPUT\n\n| Scenario\
+    \ number | RMSE | MAE | acc(%) |\n| Scenario one | 0.118 | 0.069 | 88.2 |\n| Scenario\
+    \ two | 0.101 | 0.073 | 89.9 |\n| Scenario three | 0.074 | 0.047 | 92.6 |\n\n\
+    ![](img/0074bd0888a307be373e4bd01e0a4ef8_4_0.png)\n\nFigure 4. Scenario 1 vs Scenario\
+    \ 2 vs value\n\n![](img/0074bd0888a307be373e4bd01e0a4ef8_4_1.png)\n\nFigure 5.\
+    \ Scenario 1 vs Scenario 3 vs value\n\nimproved. This method has a specific value\
+    \ to the actual project. It can effectively estimate the real-time power of low-voltage\
+    \ DPV that is not measured and up the equipment to the dispatching automation\
+    \ system to guarantee the safe and stable operation of the power grid.\n\n# REFERENCES\n\
+    \n+   [1] D. Ming, W. Wei, X. Xuili, S. Yunting, C. Dezhi, and S. Ming, “A Review\
+    \ on the Effect of Large-scale DPV Generation on Power Systems,” Proceedings of\
+    \ the Science of Electrical Engineering, vol. 34, no. 1, pp. 1–14, 2014.\n\n+\
+    \   [2] D. Ma, X. Xiao, Z. Na, W. Shen, and F. Meng, “Dispatch automation system\
+    \ using low voltage distributed power station connection equipment,” Telecommunications\
+    \ Science, vol. 36, no. 02, pp. 90–94, 2020.\n\n+   [3] Z. Pei, Z. Liang, U. Lu,\
+    \ X. Li, and Z. Wang, “Wide-area distributed photovoltaic power generation monitoring\
+    \ and estimation,” Electric Power, vol. 36, no. 06, pp. 87–96, 2020.\n\n+   [4]\
+    \ H. Wang, L. Ge, H. Li, and F. Chi, “A review on characteristic analysis and\
+    \ prediction of distributed dpv,” Electric Power Construction, vol. 38, no. 07,\
+    \ pp. 1–9, 2017.\n\n+   [5] Z. Chen, J. Huang, H. Zhou, X. Cheng, and X. Xu, “A\
+    \ model of real-time photovoltaic power forecasting based on ground-based images\
+    \ and neural network,” IEEE Access, vol. 8, no. 03, pp. 1551–15523, 2020.\n\n\
+    +   [6] C. Zhang, Y. Tang, L. Yi, Q. Gao, and J. Qi, “Photovoltaic power forecasting\
+    \ based on neural network with a scale of methods,” Electric Power Equipment Automation,\
+    \ vol. 37, no. 01, pp. 101–104–111, 2017.\n\n+   [7] B. Kan, G. Liu, M. Khodar,\
+    \ J. Yuan, J. Lei, J. Wei, J. Tan, and Y. Yang, “Distributed photovoltaic power\
+    \ generation prediction based on graph machine learning,” Distribution Utilization,\
+    \ vol. 36, no. 11, pp. 20–27, 2019.\n\n+   [8] S. Wang, X. Jiang, L. Zeng, and\
+    \ Y. Chang, “Ultra-short term power generation prediction based on vdn-deep-model,”\
+    \ Smart Power System Technology, vol. 44, no. 03, pp. 917–926, 2020.\n\n+   [9]\
+    \ S. Hochreiter and J. Schmiduber, “Long Short-Term Memory,” Neural Computation,\
+    \ vol. 9, no. 8, pp. 1735–1780, 1997.\n\ntwo. Especially in the morning, the comparison\
+    \ of the two calculated values is the most obvious. \n\nThe numerical comparison\
+    \ results are shown in Table[1]. Scenario 2 is based on the method neural network,\
+    \ which significantly improves the accuracy rate compared with Scenario 1. Scenario\
+    \ 3 has the most noticeable improvement, with an accuracy of 92.6%. It can be\
+    \ seen that predicting DPV power scenarios in adjacent areas a single distributed\
+    \ site has the best effect.\n\n# V. CONCLUSION\n\nThis paper proposes a real-time\
+    \ estimation of DPV power based on LSTM. The calculation example shows that by\
+    \ combining historical weather data and historical DPV power data, the LSTM model\
+    \ accuracy can"
+  md: "\n# All Load Data\n\n| P1 | P2 | P3 | P4 | P5 | P6 | P7 | P8 | Pn-1 | Pn |\n\
+    |---|---|---|---|---|---|---|---|---|---|\n| S1 | S2 | S3 | S4 | S5 | S6 | S7\
+    \ | S8 | Sn-1 | Sn |\n| All Meteorological Data | | | | | | | | | | |\n| P1 |\
+    \ P2 | P3 | P4 | | | | | | | |\n| S1 | S2 | S3 | S4 | | | | | | | |\n| | | | |\
+    \ | | | | | | |\n| P2 | P3 | P4 | P5 | | | | | | | |\n| S2 | S3 | S4 | S5 | |\
+    \ | | | | | |\n| | | | | | | | | | | |\n| P3 | P4 | P5 | P6 | P7 | | | | | | |\n\
+    | S3 | S4 | S5 | S6 | | | | | | | |\n\nFigure 2. Input and output of the LSTM\
+    \ model design\n\nat a specific site or an adjacent photovoltaic power station.\
+    \ Historical meteorological data and historical power generation curves as input\
+    \ of model training, we use historical power generation curves as label values\
+    \ to train the LSTM model. The well-trained LSTM model inputs real-time power\
+    \ generation and data in real-time estimation state, and outputs the estimated\
+    \ DPV power values.\n\nThe LSTM estimation uses an iterative method. Figure [3]\
+    \ shows how time-series data is introduced into supervised learning. The depth\
+    \ needs to be determined iteratively, generally 2-5. Taking the input time series\
+    \ of length 4 as example, the LSTM model's inputs are the photovoltaic power generation\
+    \ and historical data at four time points. The historical meteorological data\
+    \ include total solar radiation, temperature, and humidity. The output is the\
+    \ DPV power at the next point. In generalization ability of the model, the input\
+    \ and output of the model need to be normalized to 0-1. In the training stage,\
+    \ both the input and output need to be provided to the model. In the testing stage,\
+    \ the real-time estimation state, the model will estimate the PV power at the\
+    \ next time point as feeding in real time time points historical data.\n\n# IV.\
+    \ EXAMPLE ANALYSIS\n\n## A. Example Description\n\n- 1) Data Description: includes\
+    \ the 28-day data of total solar radiation, temperature, and humidity in the Tangshan\
+    \ area of Northern Beijing, the 350KV centralized installed and active power of\
+    \ Henan District of Tangshan, and the photovoltaic of three districts situated\
+    \ in Luquan, Tangshan. We use the test and training set to 0.75:0.25, i.e., 21\
+    \ days are used as the training data, and seven days are used as the test set\
+    \ to compare the results.\n\n- 2) Scenario Description: According to the methods\
+    \ in Section 2.1 and 2.2, this article sets three scenarios for analysis. The\
+    \ regional DPV power generation mentioned in the scenario refers to the sum of\
+    \ the three distributed sites PV power in the data.\n\nScenario one: Use a centralized\
+    \ PV generation efficiency curve and DPV installed capacity to estimate regional\
+    \ DPV power generation.\n\nScenario two: The historical PV power generation efficiency\
+    \ curve and meteorological data as input. The regional DPV power generation is\
+    \ used as input to train the neural network. The real-time centralized PV generation\
+    \ efficiency and output the estimated DPV power value during the test.\n\nScenario\
+    \ three: The historical single DPV generation efficiency curve and meteorological\
+    \ data as input. The regional DPV power generation is used as input to train the\
+    \ neural network. Real-time single DPV power generation efficiency curve and output\
+    \ the estimated DPV power value during the test.\n\n## B. Evaluation Criteria\n\
+    \nThe evaluation indicators are selected as the mean square error (RMSE), mean\
+    \ absolute error (MAE), and equation. The calculation formulas are [6] and [7],\
+    \ The former can measure the degree of errors, while the latter is the deviation\
+    \ from the average forecast of results. The closer the RMSE and MAE values are\
+    \ to zero, the smaller the estimation error and better the model effect.\n\n```\n\
+    $RMSE = \\frac{1}{n} \\sum_{i=1}^{n} (\\frac{y_i - \\hat{y}_i}{Cap})^2 (6)$\n\
+    ```\n\n```\n$MAE = \\frac{1}{n} \\sum_{i=1}^{n} |\\frac{y_i - \\hat{y}_i}{Cap}|\
+    \ (7)$\n```\n\nwhere $y_i$ is the real value. The accuracy is defined as $1 -\
+    \ RMSE$.\n\n## C. Analysis of Example Results\n\nUtilize GPU and high-performance\
+    \ servers to accelerate the calculation speed of the network. To facilitate comparative\
+    \ analysis, the actual values of regional DPV, the estimated values of scenarios\
+    \ one and three are plotted in one figure. The result of the first day is shown\
+    \ in Figure 4 and Figure 5.\n\nFrom the comparison of Figure 4 and 5, it can be\
+    \ seen intuitively that scenario three accuracy will be significantly higher than\
+    \ that of scenarios one and \n\n# Table I\nESTIMATED SCENARIO COMPARISON OF DPV\
+    \ OUTPUT\n\n| Scenario number | RMSE | MAE | acc(%) |\n|---|---|---|---|\n| Scenario\
+    \ one | 0.118 | 0.069 | 88.2 |\n| Scenario two | 0.101 | 0.073 | 89.9 |\n| Scenario\
+    \ three | 0.074 | 0.047 | 92.6 |\n\n![](img/0074bd0888a307be373e4bd01e0a4ef8_4)\
+    \ Figure 4. Scenario 1 vs 2\n\n![](img/0074bd0888a307be373e4bd01e0a4ef8_4) Figure\
+    \ 5. Scenario 1 vs 3\n\ntwo. Especially in the morning, the comparison of the\
+    \ two calculated values is the most obvious.\n\nThe numerical comparison results\
+    \ are shown in Table [1]. Scenario 2 is based on the method neural network, which\
+    \ significantly improves the accuracy rate compared with Scenario 1. Scenario\
+    \ 3 has the most noticeable improvement, with an accuracy of 92.6%. It can be\
+    \ seen that predicting DPV power scenarios in adjacent areas a single distributed\
+    \ site has the best effect.\n\n# REFERENCES\n\n- [1] Z. Pei, Z. Liang, H. Li,\
+    \ and Z. Wang, “A review of distributed power,” Proceedings of Electrical Engineering,\
+    \ vol. 34, no. 1, pp. 10–14, 2017.\n- [2] S. Wang, X. Jiang, L. Zheng, and Y.\
+    \ Chang, “Dispatching system,” Distribution Utilization, vol. 36, no. 11, pp.\
+    \ 20–27, 2019.\n- [3] Z. Chen, U. Lu, X. Li, and F. Wang, “Distributed power generation\
+    \ prediction,” Electric Power, vol. 36, no. 6, pp. 87–96, 2020.\n- [4] H. Wang,\
+    \ L. Ge, H. Li, and F. Chi, “Characteristic analysis of dpv,” Electric Power Construction,\
+    \ vol. 38, no. 7, pp. 1–9, 2020.\n- [5] C. Chen, J. Huang, H. Zhou, X. Cheng,\
+    \ and X. Xu, “Photovoltaic power forecasting,” IEEE Access, vol. 8, no. 3, pp.\
+    \ 1551–15523, 2020.\n- [6] C. Zhang, Y. Tang, L. Yi, Q. Gao, and J. Qi, “Photovoltaic\
+    \ power forecasting,” Power Equipment Automation, vol. 37, no. 1, pp. 101–104–111,\
+    \ 2017.\n- [7] B. Kan, G. Liu, M. Khodar, J. Yuan, J. Lei, J. Wei, J. Tan, and\
+    \ Y. Yang, “Distributed photovoltaic power generation,” Telecommunications Science,\
+    \ vol. 36, no. 5, 2020.\n- [8] S. Wang, X. Jiang, L. Zeng, and Y. Chang, “Ultra-short\
+    \ term power generation,” Smart Power System Technology, vol. 44, no. 3, pp. 917–926,\
+    \ 2020.\n- [9] S. Hochreiter and J. Schmiduber, “Long Short-Term Memory,” Neural\
+    \ Computation, vol. 9, no. 8, pp. 1735–1780, 1997.\n\n# V. CONCLUSION\n\nThis\
+    \ paper proposes a real-time estimation of DPV power based on LSTM. The calculation\
+    \ example shows that by combining historical weather data and historical DPV power\
+    \ data, the LSTM model accuracy can\n"
+  mdcn: '
+
+
+    # 所有加载数据
+
+
+    | P1 | P2 | P3 | P4 | P5 | P6 | P7 | P8 | Pn-1 | Pn |
+
+    |---|---|---|---|---|---|---|---|---|---|---|
+
+    | S1 | S2 | S3 | S4 | S5 | S6 | S7 | S8 | Sn-1 | Sn |
+
+    | 所有气象数据 | | | | | | | | | | |
+
+    | P1 | P2 | P3 | P4 | | | | | | | |
+
+    | S1 | S2 | S3 | S4 | | | | | | | |
+
+    | | | | | | | | | | | |
+
+    | P2 | P3 | P4 | P5 | | | | | | | |
+
+    | S2 | S3 | S4 | S5 | | | | | | | |
+
+    | | | | | | | | | | | |
+
+    | P3 | P4 | P5 | P6 | P7 | | | | | | |
+
+    | S3 | S4 | S5 | S6 | | | | | | | |
+
+
+    图 2. LSTM 模型设计的输入和输出
+
+
+    在特定站点或相邻的光伏电站。将历史气象数据和历史发电曲线作为模型训练的输入，我们使用历史发电曲线作为标签值来训练 LSTM 模型。经过训练的 LSTM 模型在实时估计状态下输入实时发电数据和实时估计数据，并输出估计的
+    DPV 功率值。
+
+
+    LSTM 估计采用迭代方法。图 [3] 显示了时间序列数据如何引入监督学习。深度需要通过迭代来确定，通常为 2-5 层。以长度为 4 的输入时间序列为例，LSTM
+    模型的输入是四个时间点的光伏发电量和历史数据。历史气象数据包括总太阳辐射、温度和湿度。输出是下一个点的 DPV 功率。在模型的泛化能力方面，模型的输入和输出需要归一化到
+    0-1 之间。在训练阶段，输入和输出都需要提供给模型。在测试阶段，在实时估计状态下，模型将通过输入实时时间点的历史数据，来估计下一个时间点的光伏功率。
+
+
+    # IV. 示例分析
+
+
+    ## A. 示例描述
+
+
+    - 1) 数据描述：包括北方北京唐山地区 28 天的总太阳辐射、温度和湿度数据，唐山河南县 350KV 集中装机和运行功率，以及位于唐山鹿泉三个区域的光伏电。我们将测试集和训练集的比例设为
+    0.75:0.25，即使用 21 天作为训练数据，7 天作为测试集比较结果。
+
+
+    - 2) 场景描述：根据第 2.1 节和 2.2 节的方法，本文设置了三个分析场景。场景中提到的区域 DPV 发电是指数据中三个分布式站点光伏功率之和。
+
+
+    场景一：使用集中式光伏发电效率曲线和 DPV 装机容量估计区域 DPV 发电。
+
+
+    场景二：以历史光伏发电效率曲线和气象数据为输入。将区域 DPV 发电作为输入训练神经网络。测试期间使用实时集中式光伏发电效率，并输出估计的 DPV 功率值。
+
+
+    场景三：以历史单 DPV 发电效率曲线和气象数据为输入。将区域 DPV 发电作为输入训练神经网络。测试期间使用实时单 DPV 发电效率曲线，并输出估计的 DPV
+    功率值。
+
+
+    ## B. 评价标准
+
+
+    评价指标选取为均方根误差 (RMSE)、平均绝对误差 (MAE) 和方程。计算公式见 [6] 和 [7]，前者可以衡量误差程度，后者是结果与平均预测值之间的偏离。RMSE
+    和 MAE 值越接近 0，说明估计误差越小，模型效果越好。
+
+
+    ```
+
+    $RMSE = \frac{1}{n} \sum_{i=1}^{n} (\frac{y_i - \hat{y}_i}{Cap})^2 (6)$
+
+    ```
+
+
+    ```
+
+    $MAE = \frac{1}{n} \sum_{i=1}^{n} |\frac{y_i - \hat{y}_i}{Cap}| (7)$
+
+    ```
+
+
+    其中 $y_i$ 为真实值。准确率定义为 $1 - RMSE$。
+
+
+    ## C. 示例结果分析
+
+
+    利用 GPU 和高性能服务器加速网络的计算速度。为了方便对比分析，区域 DPV 的实际值和估计值进行了对比。区域 DPV 的实际值和估计值在图 4 中所示。从图
+    4 和图 5 的对比中可以看出，场景三的精度显著优于场景一。
+
+
+    表 I DPV 输出的场景对比
+
+
+    | 场景编号 | RMSE | MAE | 准确率(%) |
+
+    |---|---|---|
+
+    | 场景一 | 0.118 | 0.069 | 88.2 |
+
+    | 场景二 | 0.101 | 0.073 | 89.9 |
+
+    | 场景三 | 0.074 | 0.047 | 92.6 |
+
+
+    特别是在早晨，基于数值的对比显示，场景三对于分布式站点的功率预测效果最好。
+
+
+    # 参考文献
+
+
+    - [1] Z. Pei, Z. Liang, H. Li, and Z. Wang, “分布式发电,”电力工程, vol. 34, no. 1, pp.
+    10–14, 2017.
+
+    - [2] S. Wang, X. Jiang, L. Zheng, and Y. Chang, “调度系统，”电力利用, vol. 36, no. 11,
+    pp. 20–27, 2019.
+
+    - [3] Z. Chen, U. Lu, X. Li, and F. Wang, “分布式发电，”电力, vol. 36, no. 6, pp. 87–96,
+    2020.
+
+    - [4] H. Wang, L. Ge, H. Li, and F. Chi, “DPV特性分析，”电力建设, vol. 38, no. 7, pp. 1–9,
+    2020.
+
+    - [5] C. Chen, J. Huang, H. Zhou, X. Cheng, and X. Xu, “光伏功率预测，”IEEE Access, vol.
+    8, no. 3, pp. 1551–15523, 2020.
+
+    - [6] C. Zhang, Y. Tang, L. Yi, Q. Gao, and J. Qi, “光伏功率预测，”电力设备自动化, vol. 37,
+    no. 1, pp. 101–111, 2017.
+
+    - [7] B. Kan, G. Liu, M. Khodar, J. Yuan, J. Lei, J. Tan, and Y. Yang, “分布式光伏发电，”电信科学,
+    vol. 36, no. 5, 2020.
+
+    - [8] S. Wang, X. Jiang, L. Zeng, and Y. Chang, “超短期发电，”智能电网技术, vol. 44, no. 3,
+    pp. 917–926, 2020.
+
+    - [9] S. Hochreiter and J. Schmiduber, “长短期记忆网络，”神经计算, vol. 9, no. 8, pp. 1735–1780,
+    1997.
+
+
+    # V. 结论
+
+
+    本文提出了一种基于 LSTM 的 DPV 功率实时估计方法。计算示例表明，通过结合历史天气数据和历史 DPV 发电数据，LSTM 模型的准确率可以
+
+
+    '
+  merge: 0
