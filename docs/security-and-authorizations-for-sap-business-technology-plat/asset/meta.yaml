@@ -1,0 +1,214 @@
+name: Security and Authorizations for SAP Business Technology Platform (SAP PRESS)
+slug: security-and-authorizations-for-sap-business-technology-plat
+name_cn: SAP Business Technology Platform 安全与授权 (SAP PRESS)
+toc:
+- - '#'
+  - SAP Business Technology Platform 安全与授权 (SAP PRESS)
+- - '#'
+  - 亲爱的读者：
+- - '#'
+  - 使用说明
+- - '#'
+  - 关于说明的说明
+- - '#'
+  - 5 安全的 Cloud Connector 配置
+- - '##'
+  - 5.1 架构
+- - '##'
+  - 5.2 安装和配置 Cloud Connector
+- - '###'
+  - 5.2.1 下载与安装
+- - '###'
+  - 5.2.2 初始配置
+- - '###'
+  - 5.2.3 连接到 SAP BTP
+- - '###'
+  - 5.2.4 安全配置的进一步建议
+- - '###'
+  - 5.2.5 监控
+- - '##'
+  - 5.3 认证方法
+- - '##'
+  - 5.4 云到本地的连接
+- - '###'
+  - 5.4.1 安全注意事项
+- - '###'
+  - 5.4.2 建立连接
+- - '###'
+  - 5.4.3 配置访问控制
+- - '###'
+  - 5.4.4 启用 SAP Connectivity 服务
+- - '##'
+  - 5.5 设置 SAP Destination 服务
+- - '###'
+  - 5.5.1 在 SAP BTP Neo 环境中创建 Destination
+- - '###'
+  - 5.5.2 在 SAP BTP Cloud Foundry 环境中创建 Destination
+- - '##'
+  - 5.6 Cloud Connector 配置检查清单
+- - '##'
+  - 5.7 安全 Cloud Connector 配置的真实案例
+- - '###'
+  - 5.7.1 将本地 Git 服务器连接到 SAP BTP Neo 环境
+- - '###'
+  - 5.7.2 将 SAP BTP Cloud Foundry 环境连接到 SAP S/4HANA 系统
+- - '###'
+  - 5.7.3 LDAP 认证配置
+- - '##'
+  - 5.8 总结
+- - '#'
+  - 6 管理工具
+- - '##'
+  - 6.1 通过命令行管理 SAP BTP Neo 环境
+- - '##'
+  - 6.2 通过命令行管理全局账户
+- - '##'
+  - 6.3 通过 API 进行管理
+- - '###'
+  - 6.3.2 审计日志
+- - '###'
+  - 6.3.3 用户管理
+- - '###'
+  - 6.3.4 权限管理
+- - '###'
+  - 6.3.5 SAP Cloud Management 服务
+- - '##'
+  - 6.4 使用命令行和 API 的检查清单
+- - '##'
+  - 6.5 安全使用命令行的真实案例
+- - '###'
+  - 6.5.1 使用命令行在 SAP BTP Neo 环境中配置自定义域名
+- - '###'
+  - 6.5.2 使用命令行管理 SAP BTP
+- - '##'
+  - 6.6 总结
+- - '#'
+  - 7 关键服务的安全性
+- - '##'
+  - 7.1 SAP Web IDE 和 Business Application Studio
+- - '###'
+  - 7.1.1 SAP Web IDE
+- - '###'
+  - 7.1.2 SAP Business Application Studio
+- - '##'
+  - 7.2 云集成 (Cloud Integration)
+- - '###'
+  - 7.2.1 SAP BTP Neo 环境中的 Cloud Integration
+- - '###'
+  - 7.2.2 SAP BTP Cloud Foundry 环境中的 Cloud Integration
+- - '###'
+  - 7.2.3 角色与授权
+- - '###'
+  - 7.2.4 安全建议
+- - '##'
+  - 7.3 SAP BTP Cloud Foundry 环境中的 SAP Integration Suite
+- - '###'
+  - 7.3.1 SAP API Management
+- - '###'
+  - 7.3.2 角色与授权
+- - '###'
+  - 7.3.3 保护提供的 API 和端点
+- - '##'
+  - 7.4 SAP Cloud Portal 服务和 SAP Launchpad 服务
+- - '###'
+  - 7.4.1 SAP BTP Neo 环境中的 SAP Cloud Portal 服务
+- - '###'
+  - 7.4.2 SAP BTP Cloud Foundry 环境中的 SAP Launchpad 服务
+- - '##'
+  - 7.5 SAP BTP, ABAP 环境
+- - '###'
+  - 7.5.1 用户管理
+- - '###'
+  - 7.5.2 访问外部系统
+- - '##'
+  - 7.6 企业用户存储
+- - '##'
+  - 7.7 云服务安全检查清单
+- - '##'
+  - 7.8 总结
+- - '#'
+  - A 作者
+- - '#'
+  - 前言
+- - '#'
+  - 本书的结构
+- - '##'
+  - 1 业务技术平台概览
+- - '###'
+  - 1.1.1 SAP Extension Suite：开发与扩展云解决方案
+- - '###'
+  - 1.1.2 SAP Integration Suite：云解决方案与本地系统
+- - '##'
+  - 1.2 环境
+- - '###'
+  - 1.2.1 SAP BTP, Neo 环境
+- - '###'
+  - 1.2.2 SAP BTP, Cloud Foundry 环境
+- - '##'
+  - 1.3 架构
+- - '###'
+  - 1.3.1 全局账户
+- - '###'
+  - 1.3.2 子账户
+- - '###'
+  - 1.3.3 组织
+- - '###'
+  - 1.3.4 空间
+- - '##'
+  - 1.4 总结
+- - '#'
+  - 2 业务技术平台安全概览
+- - '##'
+  - 2.1 安全通信
+- - '###'
+  - 2.1.1 安全通信基础
+- - '###'
+  - 2.1.2 SAP 目标服务
+- - '###'
+  - 2.1.3 目标中的证书处理
+- - '##'
+  - 2.2 身份验证
+- - '###'
+  - 2.2.1 SAP BTP 的身份提供者
+- - '###'
+  - 2.2.2 轻量级目录访问协议 (LDAP)
+- - '##'
+  - 2.3 授权
+- - '##'
+  - 2.4 SAP Cloud Identity Services
+- - '##'
+  - 2.5 SAP Cloud Governance
+- - '##'
+  - 2.6 通安全清单
+- - '##'
+  - 2.7 总结
+- - '#'
+  - 3 在 Neo 环境中配置安全与授权
+- - '##'
+  - 3.1 为 SAP BTP Neo 环境设置
+- - '##'
+  - 3.2 用户管理
+- - '##'
+  - 3.3 信任配置
+- - '##'
+  - 3.4 权限
+- - '##'
+  - 3.5 SAP BTP, Neo 环境下的安全和权限
+- - '##'
+  - 3.6 用户和授权真实示例
+- - '##'
+  - 3.7 总结
+- - '#'
+  - 4 在 Cloud Foundry 环境中配置安全和授权
+- - '##'
+  - 4.1 为 SAP BTP 设置命令行
+- - '##'
+  - 4.3 信任配置
+- - '##'
+  - 4.4 授权管理
+- - '##'
+  - 4.5 SAP BTP Cloud Foundry 环境中的安全与权限
+- - '##'
+  - 4.6 通过 Microsoft Azure AD 对用户进行双重身份
+- - '#'
+  - 5 安全的 Cloud Connector 配置
