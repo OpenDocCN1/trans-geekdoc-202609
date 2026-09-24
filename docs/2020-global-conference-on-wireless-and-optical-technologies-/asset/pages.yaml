@@ -1,0 +1,501 @@
+- pgno: 0
+  md: "# 2020 Global Conference on Wireless and Optical Technologies (GCWOT)\n\n#\
+    \ # Automatic Detection of Nephrops norvegicus Burrows in Underwater Images Using\
+    \ Deep Learning\n\nAtif Naseer\nEnrique Navo Barro\nSultan Daud Khan\nYolanda\
+    \ Vila Gordillo\nETSI Telecomunicaciones\nETSI Telecomunicaciones\nDepartment\
+    \ of Computer Science\n Español de Oceanografía\nUniversidad de Málaga\nUniversidad\
+    \ de Madrid\nNational University of Technology\nCentro Oceanográfico de Cádiz\n\
+    Malaga, Spain\nMalaga, Spain\nIslamabad, Pakistan\nCádiz, Spain\natif@uma.es\n\
+    en@um.es\nsultandaud@nutech.edu\nyolanda.vila@leo.es\n\n**Abstract—** Underwater\
+    \ Operated Vehicles with HD cameras are used by the scientist to capture the underwater\
+    \ footages efficiently and accurately. The abundance of Nephrops burrows in the\
+    \ Gulf of Cayfish is based on the counting of the burrows where they live underwater.\
+    \ The Instituto de Oceanografía (IEO) conducts an annual underwater text survey\
+    \ survey to estimate the density of Nephrops in depth with a standard error of\
+    \ less than 20%. Currently, the identification and counting of Nephrops burrows\
+    \ are carried out manually, which is quite tedious and time consuming. Computer\
+    \ Vision and Deep Learning can help save days in detection and classification\
+    \ of objects.\n\nThe turbidity or movement of species make it a challenge [2].\
+    \ Two main factors make it difficult the unrestricted natural environment and\
+    \ variations of the content which may arise from illumination, scales, and non-rigid\
+    \ deformations [3].\n\nThe Norway lobster, *Nephrops norvegicus* is one of the\
+    \ main marine crustaceans exploited Europe [4]. Annual catches of Nephrops in\
+    \ the Gulf of Cayfish are small compared with Atlantic Nephrops stocks (≈100 t\
+    \ in 2008) but have valuable revenues for the fleet [5]. Fig. 1 shows an individual\
+    \ of *Nephrops*. This species occupies sandy-bottoms from 200 m to 700 m of depth\
+    \ [6], where sediment is suitable to construct their burrows.\n\nThe proposed\
+    \ system introduces a deep learning based method to classify Nephrops burrows.\
+    \ The proposed work is using the Faster RCNN models Inception2 and MobileNet v2\
+    \ for objects detection and classification. Testing is used to evaluate the proposed\
+    \ performance with different numbers of training images. The average mean precision\
+    \ of In is more than 75% compared to MobileNet which is 64%. The results show\
+    \ that Faster and MobileNet detections, as well as the classification of True\
+    \ and False Positive detections with undetected burrows.\n\n**Keywords—**Faster\
+    \ RCNN, Computer Vision, *Nephrops norvegicus* stock assessment, Underwater Videos\
+    \ Classification.\n\n# I. INTRODUCTION\n\nResearch in underwater analysis is vast\
+    \ and has a worth to its enormous applications in different disciplines, for instance,\
+    \ underwater biodiversity and bottom morphology, pipelines and cables networks,\
+    \ minerals mining, and for fauna and flora recognition, detection of corals and\
+    \ reef classification problems are the most popular tasks of underwater image\
+    \ analysis . However, the environment features such as de-bath color variations\
+    \ and\n\n![](img/acedced6c476f64daa3e1d6423072c81_0_0.png)\n\n*Nephrops* burrows\
+    \ typically have multiple openings to different tunnels communicated with each\
+    \ other are named as *Nephrops* burrow systems. An individual assessed occupies\
+    \ a burrow system [7]. Burrows show different features that are as similar to\
+    \ *Nephrops* as shown in Fig. 2 and they can be summarized in:\n\nFig. 1. Nephrops\
+    \ norvegicus"
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '1) At least one burrow is particularly half-moon shape.
+
+    2) There is other proof of expelled sediment, typically in a wide-like ''fan''
+    at the tunnel opening, and tracks are frequently clear.
+
+    3) The center of all the opening burrows has an raised structure.
+
+    4) Nephrows may be present (either or out of burrow).
+
+
+    The advancement of Artificial Intelligence (AI) and Computer Vision (CV) helps
+    in the classification and detection of marine species. To detect and classify
+    Nephrows burrow, CV and AI play a vital role as it improves classification and
+    detection. We investigate these using state of the art RCNN deep learning algorithms
+    to identify the Nephrows in seafloor footage of the Gulf of Cadiz. The objective
+    of this work is to use a deep learning model to detect, count and classify the
+    Nephrows burrow which is using state of the art Faster RCNN models for object
+    detection and classification.
+
+
+    ![](img/acedced6c476f64daa3e1d6423072c81_1_0.png)
+
+
+    The rest of the paper is as follows. Data description is discussed in Section
+    2. The Research methodology is explained throughout in Section 3. The details
+    of the experiments and results are discussed in Section 4. Finally, the conclusion
+    is in Section 6.
+
+
+    Fig. 2. Nephrows burrows features
+
+
+    # II. DATA DESCRIPTION
+
+
+    Underwater Telemetry (UTW) systems to monitor the abundance of Nephrows populations
+    were pioneered in Scotland in the early 90s. The development of Norway lobster
+    using UUTW systems allows identification and quantification of burrow density
+    over the area of Nephrows which can be used as an index of the stock [5]. Then,
+    the number of stocks with Norway UUTW systems has increased since 2016 and more
+    than 18 Nephrows are expected to have surveys.
+
+
+    # A. Underwater Environment
+
+
+    The underwater data has many challenges compared to other data. As light and water
+    are not a good friend when light passes through the water, it cannot absorb or
+    reflect the sea surface which makes the images or a blurring effect. The image
+    devices are designed with low resolution because of the huge amount of data collection.
+    Also, there is scattering and non-uniform light which make the environment more
+    challenges for data collection because the ultimate is as close as reach to collect
+    the burrow. The visibility is a concern in underwater environment. The current
+    ocean is another factor which can cause turbidity intensity.
+
+
+    El Instituto Geográfico de España carries out UTW surveys since 2014. These surveys
+    are focused on suitable habitats for Nephrows in the Gulf of Cadiz (Spain). A
+    sledge equipped with high quality cameras was travelled on the boat with video
+    footage of 10 minutes. Currently, Nephrows burrows are counted from underwater
+    videos. Each footage is manually reviewed by experts in underwater mission and
+    concludes that this exercise is time consuming and cost of lots of human resources.
+    There is no system available that can help in solving the problem of manual detection
+    and counting of Nephrows burrows.
+
+
+    # B. Study Area and Data Collection
+
+
+    Study area is located in the Gulf of Cadiz to the south of Spain. This work was
+    obtained during ISUNPECA_0618 UTW survey conducted between 2nd and 14th June of
+    2018. The design of the survey followed a randomized isometric grid with 4 n sampling.
+    The spots were placed ranged from 0 to 650 m depth and covered an area of 300
+    km. Fig. 3 shows the map of Gulf of Cadiz with station located in 2018 in ISUNPECA_0618
+    Nephrows burrow density using the counting method.
+
+
+    Durden et al. [2008] proved that even for highly benthic objects do not obtain
+    100% accuracy. The number of Nephrows burrows varies as it depends on certain
+    factors like tiredness, stress and other changes. These changes result in wrong
+    classification and detections which is one of the bottlenecks in marine ecological
+    sampling [9]. Object detection is very new for the research community challenges
+    make the tasks different from other object detection and classification. The analysis
+    of underwater images is given names, for instance, underwater object recognition
+    [10], seafloor recognition [11] and underwater image processing or visual content
+    recognition [12].
+
+
+    Videos were recorded with a 4k Full HD (UHD) camera (SONY HandyCam HDR-XR33AX)
+    using lenses of Zeiss®/Var-Smart with 2.8mm and optical zoom 10x. Camera is mounted
+    on the top of the side with an angle of 45 degrees to the seafloor. The video
+    with good light quality four spots with independent intensity control is used.
+    The equipment has also two laser separated by 7 cm fixed to the field of view
+    with battery of 3 V & 2400 mAh(480 Watt) to support the power of the whole. HiPAM
+    transporter has been used to track the sledge position for each track.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/acedced6c476f64daa3e1d6423072c81_2_0.png)
+
+
+    # C. Data Characteristics
+
+
+    Each image has resolution of 3840 x 2160 pixels. Some of the frames are very low
+    quality and poor visibility, those frames are discarded. The data are in jpeg
+    format.
+
+
+    # III. RESEARCH METHODOLOGY
+
+
+    # A. Data Preparation
+
+
+    +   1) Data Collection: The videos are recorded at 25 frames per second in good
+    lighting condition. Video footage of 10-12 minutes each has been recorded by stations.
+    Of these, only seven stations were selected which have optimal lighting condition,
+    less noise, contrast and high density of Nephrops burrows. The data from seven
+    stations are considered for annotations. Each video is 25 frames per second and
+    10-12 minutes in length. A total of 105,000 frames were recorded from different
+    stations of 2018 data survey.
+
+    2) Preprocessing: The data collected from Cadiz is converted into rotated frames.
+    Frames with low lightening and poor quality are discarded, while the frames with
+    the same information is not included in dataset. Most of the images do not contain
+    any Nephrops information during annotation phase.
+
+    3) Image Annotation: In this phase the data is annotated to record the ground
+    truth annotations. Initially, the experts from Nephrops burrows de IEO manually
+    record the burrows. Then, the images are labeled manually in Microsoft VOTT image
+    annotation tool [19]. The saved XML file names contain class name (Nephrops),
+    and bounding boxes of each image. Fig.4 shows an example from ISUNEPCA_0618 UWWT
+    survey which is manually annotated using Microsoft VOTT. The annotated images
+    are used by the experts from IEO to record the ground truth annotated images of
+    each station from ISUNEPCA_0618 UWWT survey which is that used in the model
+
+
+    ![](img/acedced6c476f64daa3e1d6423072c81_2_1.png)
+
+
+    training and testing. A total of seven stations are annotated and recorded 266
+    annotated images. Table I shows the ground truth images of each station from Cadiz
+    that will is used in the model training and testing. A total of seven stations
+    are used from Cadiz dataset and 266 annotated images which contain one or more
+    burrows extracted from video files and used in this work.
+
+
+    # TABLE I
+
+    ANNOTATIONS FOR SELECTED STATIONS FROM ISUNEPCA_0618
+
+
+    | Station | Cadiz Dataset |
+
+    |---|---|
+
+    | RF01 | 42 |
+
+    | RF03 | 75 |
+
+    | RF04 | 34 |
+
+    | RF05 | 31 |
+
+    | RF07 | 13 |
+
+    | RF09 | 36 |
+
+    | Total | 266 |
+
+
+    +   4) Preparation of Training Dataset: To use a deep model, the data should be
+    divided into three subsets: train, validate and test. Table II shows the distribution
+    of Cadiz dataset. The original image size has been reduced to 717x403 pixels to
+    reduce the computational cost of model training.
+
+
+    # TABLE II
+
+    DISTRIBUTION OF CADIZ DATASET
+
+
+    | Cadiz Dataset |
+
+    |---|---|---|
+
+    | Training Images | Validation Images | Testing Images |
+
+    | 200 | 50 | 16 |
+
+    | (75%) | (19%) | (6%) |
+
+    | Total Images = 266 | | |
+
+
+    # B. Model Training
+
+
+    To train a model we used Convolutional Neural Network (CNN). Instead of train
+    our own network, used transfer learning [13] to retain the Faster R-CNN Inception
+    V2 model [14] and MobileNet V2 [15] model in TensorFlow. We used the model training,
+    validation'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "and on a Linux machine with an NVIDIA\nTitanX GPU. From Cadet dataset were\
+    \ used for\ntraining. The image annotations are in XML format to\nTensorflow (TF),\
+    \ records which were in the model for\ntraining. Parameters used for the configuration:\
+    \ a Incep-\nodel: classes2(for Nephrops and\nasack), MobileNet: number of classes\
+    \ = 2 (for Nephrops\nas background) and L.2 regularization:\nmodel trained with\
+    \ 80k steps.\n\nThe utility of a method depends on how accurately the\ndetected\
+    \ Nephrows. For this purpose, we precis-\n(P), called positive predictive value,\
+    \ and recall (R),\nalso known as sensitivity or true positive rate, indicators\n\
+    in Receiver Receiver Operating Characteristics (ROC) methodology,\nwhich were\
+    \ calculated using the Equations 1 and 2:\n\n```\n$P = \\frac{TP}{TP + FP}$\n\
+    ```\n\n```\n$R = \\frac{TP}{TP + FN}$\n```\n\nwhere TP, FP and FN means number\
+    \ of true,\nfalses positives and false negatives. A true positive\n that a Nephrows\
+    \ was correctly detected by the\nmodel, whereas a false positive means that detected\n\
+    Nephrow was not annotated by marine biologist\nands a false negative means that\
+    \ an annotated Nephrows\nwas not detected by the model. The true negative (TN)\n\
+    case is not considered here as it would make bounding\nbounds which are not necessarily\
+    \ overlapping.\n\nPrecision can be as rigorous as the model is to\nidentify the\
+    \ presence of Nephrows, and recall is\nthe rate of TP over total positives detected\
+    \ by the\nmodel. [17]. When recall increases, precision\ndeases and variance,\
+    \ so precision recall curves\n(PR) are useful tools to understand model behaviour.\
+    \ To\nquantify the accuracy of the model with a single,\nmean average precision\
+    \ (mAP), defined in Equation 3:\n\n```\n$mAP = \\int P(R)dR.$\n```\n\nIn our problem,\
+    \ ground truth annotation and model\narect rectangles which usually don't fit\
+    \ perfectly. In\nthis paper, it's considered TP detection if both areas overlap\n\
+    more than 50%. This is calculated by Jaccard index, defined\nin Equation 4\n\n\
+    ```\n$J(A, B) = \\frac{|A \\cap B|}{|A \\cup B|}$\n```\n\nwhere A and B are the\
+    \ set of pixels in the truth annotation\nand model finding rectangles, respectively,\
+    \ and |-\nmeans the number of pixels in the set. If $J \\geq 0.5$, a TP\nis detected,\
+    \ but if detection fails with a FN. Using\nthis methodology, P and R values are\
+    \ evaluated and mAP\nis used as a single measure of the goodness of the\nmodel.\
+    \ This parameter is named as $mAP50$, but we\nused $mAP$ for simplicity in our\
+    \ policy.\n\n# C. Model Validation\n\nModels trained using a 75% sample of the\n\
+    annotated dataset. The remaining 25% is used for validation\nand testing [18].\
+    \ We measured the performance by\nmonitoring the overfitting of the model. We\
+    \ record the\ncheckpoints after 2k iterations and calculated the mAP50\nin the\
+    \ validation dataset.\n\n# D. Model Performance\n\nThe test validation is a well\
+    \ known method which\nlearn assess the performance of the model. We further\n\
+    tested model against false images from the Gulf\nCadiz dataset and evaluate the\
+    \ performance of the model.\n\n# IV. RESULTS\n\nTP\n\nWe apply MobileNet v2 and\
+    \ Inception v2 based on\nCNN to detect Nephrows not from Gulf of\nCadiz. Our aim\
+    \ is to detect the Nephrows using\nmodel over 20k iterations, and they achieved\
+    \ a good\nprecision on the Cadet dataset.\n\n# A. Mean Average Precision (mAP)\n\
+    \nMean Average Precision (mAP) values were computed on\nt new dataset of Nephrows\
+    \ over 20k iterations\nand Fig. 5 shows the results obtained by both. The\nbest\
+    \ achieved in Inception is 77.18% over 10k\\iterations. While the precision is\
+    \ 65.43%\nincreases with the number of iterations until 10k,\napproximately, and\
+    \ the performance of the models\nwhen models started to stop overfitting. It is\n\
+    shown in the figure that Inception shows a more stable\nbehaviour with iteration.\
+    \ In summary, results\nclearly shows that the mAP of Inception is better than\n\
+    tNephrows for our problem.\n\n![](img/acedced6c476f64daa3e1d6423072c81_3_0.png)\n\
+    \nFig. 5. mean Average Precision of Inception versus Mobile"
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# B. Precision and Recall
+
+
+    Another way to evaluate both models on our dataset with more detail is to analyze
+    the precision, recall curves. To evaluate both models the True Positive (TP),
+    False Positive (FP), and False Negative (TN) annotations. The True Negative (TN)
+    case is not considered here because poor definition, as would be all possible
+    bounding boxes that were correctly detected. Table III shows the comparison of
+    these metrics for both models.
+
+
+    # TABLE III
+
+    DETECTION MATRIX OF TRAINING MODELS
+
+
+    | True Positive | MobileNet | Inception |
+
+    |---|---|--|
+
+    | False Positive | 31 | 53 |
+
+    | False Negative | 7 | 13 |
+
+    | Total Groundtruth | 79 | 79 |
+
+
+    Table III clearly shows that MobileNet detected a bigger number of FN whereas
+    Inception model is more sensitive to FP errors. Figures 6 and 7 the precision
+    and recall of MobileNet and Inception models are presented for 10k iterations.
+    the mAP values could be seen as the typical examples. under these curves, but
+    the behaviour is different. With the Inception model, precision is in values near
+    to 0.5 of recall, when precision starts to decrease, whereas within the MobileNet
+    model, curve is more.
+
+
+    ![](img/acedced6c476f64daa3e1d6423072c81_4_0.png)
+
+
+    Fig. 7. Precision and Recall Curve of Inception
+
+
+    model presents a slower learning. Recorded minimum values are 0.006 for the Inception
+    model and 0.704 for MobileNet.
+
+
+    ![](img/acedced6c476f64daa3e1d6423072c81_4_1.png)
+
+
+    # Total Loss vs Mobilenet
+
+
+    ![](img/acedced6c476f64daa3e1d6423072c81_4_2.png)
+
+
+    Fig. 6. Precision and Recall Curve of MobileNet
+
+
+    # C. Total Loss
+
+
+    Loss function is a method to evaluate the learning model. If the predictions deviate
+    too much from the ground truth, loss is a large number. We calculated the total
+    loss of both models during training, which is shown in Fig. 8. The graph indicates
+    that the loss tend to decrease as number of iterations increases but the loss
+    of MobileNet is much greater than the Inception in each iteration. For 10k iterations,
+    the loss function tend to stabilize, but MobileNet
+
+
+    # D. Visualization
+
+
+    In this section, we will visualize some results of Nephrops burrows detections
+    from Cadet dataset with typical examples. Fig. 9 shows that MobileNet model (left
+    image) is unable to detect any, whereas Inception model (right image) detects
+    correctly one burrow (blue and red rectangles, are model finding and true annotation,
+    respectively) with it shows that Inception model also detected two false positives
+    (red rectangles on the left and right side of the TP). Other example, Fig. 10
+    also shows that MobileNet model'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/acedced6c476f64daa3e1d6423072c81_5_0.png)
+
+
+    Fig. 9. Nephrous deructions MobileNet vs Inception. Example 1
+
+
+    unable to detect any of a burrow system as compared to Inception model where all
+    three positives are detected with 99% confidence. In a final exam, this
+
+
+    more training data from Cadiz and also use the data from datasets of other countries,
+    with differences in image quality, video acquisition procedures and background
+    textures. Also, we will use more object detection methods to improve the accuracy
+    of detections.
+
+
+    We thank Instituto Español de Oceanografía, Cádiz, Spain to provide us with the
+    data for this research.
+
+
+    # ACKNOWLEDGMENT
+
+
+    [1] K. Srividhya and M. Ramanya, "Accurate object recognition in the underwater
+    environment using learning algorithms and texture features," Multimedia Tools
+    and Applications, vol. 76, no. 24, pp. 25679-25695, 2019.
+
+
+    [2] T. Rimavicius and A. Gelinis, "A Comparison of the Deep Learning Methods for
+    Solving Seabed Image Classification Tasks," Computer and Information Sciences,
+    12(3), 283, 2017.
+
+
+    [3] H. Qin, X. L. Zhixiang and M. Shang, "When analysis detects burrow: a vision
+    at the beg of Cadiz," OCEANS - 2021.
+
+
+    [4] C. Bell, F. Richards and I. Tuck, "Lobsters: Biology, Management, Aquaculture
+    and Fisheries," pp. 412-462, 2006.
+
+
+    [5] ICES, Report of the Working Group for the Bay of Cadiz and the Iberian Western
+    Ocean (WGBIE), ICES Oceanogr., 3-10 May 2018.
+
+
+    [6] J. Jordan, F. Bonello, and R. Roberts, "Objective methods for detecting multi-species
+    fish in trawls waters of the Gulf of Cadiz," Fisheries Research, vol. 67, pp.
+    195-208, 2019.
+
+
+    [7] T. Wang and Y. Wei, "Introduction to deep learning course on Nephrous burrow
+    identification (WGBIE), 2021.
+
+
+    [8] J. Durarden, B. Bett, T. Schonberg, K. Muller, N. Natkemmerich and H. Ruh,
+    "Comparing image annotation data generated by multiple investigators for benthic
+    ecology," Marine Ecology Progress Series, vol. 935, pp. 601-617, 2020.
+
+
+    [9] J. Durdens, I. Perez, A. Albu, B. Purser, B. De Smit, C. Dominguez-Carriello,
+    C. Yeson, D. de Jorge and L. Lindsay, "Report on the Marine Imaging Journal, 2017.
+
+
+    [10] M. Montimniaz, S. Islam, M. Benammous and P. Lacey, "Deep Learning on Object
+    Detection Method: A Survey," Advanced Computer Vision and Image Systems, 2020.
+
+
+    [11] A. Ahmoud, M. Benammous, A. Senij, S. Febel, S. Fhouassi, K. Renaev, G. Kennedy
+    and R. Fisher, "Automatic annotation of coral reef using deep learning," OCEANS
+    2016.
+
+
+    ![](img/acedced6c476f64daa3e1d6423072c81_5_1.png)
+
+
+    Fig. 10. Nephrous burials MobileNet vs Inception. Example 2
+
+
+    shows that MobileNet model is able to detect any Nephrous burrow (from a total
+    of three) with a confidence of 98% compared to Inception model where all three
+    positives are detected with 99% confidence:
+
+
+    ![](img/acedced6c476f64daa3e1d6423072c81_5_2.png)
+
+
+    Fig. 11. Nephrous burials MobileNet vs Inception. Example 3
+
+
+    The visualization results clearly that Inception v2 is much better in precision
+    and accuracy. The model trained by Inception detects more True Positives as MobileNet.
+    Visualization of results also to help to understand the nature of the errors and
+    to improve them in future work.
+
+
+    # V. CONCLUSION AND FUTURE WORK
+
+
+    The Instituto de Oceanografía has a great research working on Nephrouswegian (known
+    as Norway Lobster) identification and counting. In this work, we train, validate
+    and test the current state of the art Faster RCNN v2 and MobileNet v2 for Nephrous
+    burrow detection and classification. We presented the qualitative results of our
+    methods. We concluded that the Inception model is much better than detecting the
+    Nephrous burrow compared to MobileNet. In future, we will plan to use
+
+
+    Authorized user licensed to use: Carlos L. Carleton on 01/03/2023 at 05:34:43
+    by IEEE Xplore.'
+  merge: -1
+  img_proc: true
