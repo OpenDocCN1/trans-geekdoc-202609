@@ -1,0 +1,734 @@
+- pgno: 0
+  md: '# IoT - blockchain-enabled credible scheduling in
+
+    cloud manufacturing: a systemic framework
+
+
+    Yongkui Liu
+
+    School of Mechano-Electronic
+
+    Engineering
+
+    Xidian University
+
+    Xi''an, China
+
+    yongkliu@163.com
+
+
+    Jingxin Zhang
+
+    School of Electronics and Control
+
+    Chang''an University
+
+    Xi''an, China
+
+    1556753630@qq.com
+
+
+    Lin Zhang
+
+    School of Automation Science
+
+    and Electrical Engineering
+
+    Beijian University
+
+    Beijing, China
+
+    jlin9999@163.com
+
+
+    Huang Liang
+
+    School of Electronics and Control
+
+    Chang''an University
+
+    Xi''an, China
+
+    hliang@cctd.edu
+
+
+    **Abstract**—Cloud manufacturing is a service-oriented
+
+    manufacturing model to provide consumers with
+
+    demand manufacturing services over the Internet. Scheduling is a
+
+    technology for cloud manufacturing to achieve its
+
+    halls. However, scheduling in cloud manufacturing faces series of
+
+    challenges. To ensure the credibility of scheduling
+
+    solutions (i.e. being able to function as expected) is one of the challenges.
+
+    IoT and blockchain provide key technologies for addressing
+
+    t challenges. We propose a framework for
+
+    credible scheduling in cloud manufacturing based on
+
+    the aforementioned technologies. A framework for credible
+
+    scheduling in cloud manufacturing based on IoT and blockchain
+
+    scheduling services are developed. Finally, a case study
+
+    the car industry is given to validate the effectiveness and
+
+    of feasibility of the proposed framework.
+
+
+    **Keywords**—Cloud manufacturing, Credible scheduling, IoT
+
+
+    blockchain provides an effective means to solve the credible
+
+    problem of scheduling in cloud manufacturing. The combination of
+
+    of IoT and edge computing facilitates real-time monitoring and
+
+    credible perception of manufacturing resources and
+
+    manufacturing capability, thereby solving the problem
+
+    machine-to-human trust in
+
+    manufacturing processes, blockchain technology with its
+
+    decentralized feature provides effective means for ensuring the
+
+    of physical manufacturing resources and manufacturing
+
+    cabilities and the credibility of transaction information during
+
+    the manufacturing process. To solve the problem ofncomplexity of scheduling in
+    cloud
+
+    manufacturing, this paper focuses on credibility of data and
+
+    information in the scheduling process without considering
+
+    credibility.
+
+
+    The rest of this paper is structured as follows. Section II
+
+    related work on cloud manufacturing, and scheduling,
+
+    IoT, and edge computing. Section III presents a
+
+    framework for IoT-blockchain-based credible scheduling
+
+    this cloud manufacturing. Section IV concludes this paper
+
+    of some discussions on future work.
+
+
+    I. INTRODUCTION
+
+    In 2010, mimicking the concept of cloud computing, and
+
+    integrating with technologies like IoT, service-oriented
+
+    a new manufacturing model was proposed [1]. The aim of cloud
+
+    manufacturing is to provide consumers with on-demand
+
+    manufacturing services over the Internet. More
+
+    tenologies such as big data, artificial intelligence,
+
+    blockchain, are rapid upon development. The
+
+    integration of these technologies into cloud manufacturing
+
+    makes it a key technology for cloud manufacturing
+
+    to achieve its aim.
+
+    However, scheduling in cloud manufacturing faces series of
+
+    challenges [2]. To ensure the credibility of scheduling
+
+    solutions (being able to function as expected) is one of
+
+    the challenges. A scheduling solution depends on
+
+    the credibility of data and algorithms. IoT and blockchain provide key
+
+    chnologies for ensuring the credibility of data and information.
+
+    As shown in Figure 1, technologies of IoT, edge computing, and
+
+
+    ![](img/3b0db0de942e3f1d134343b9abb2b23a_0_0.png)
+
+
+    Fig. 1. Problems with cloud manufacturing scheduling.
+
+
+    Problem 1: The cloud scheduling
+
+    trans is easily establish, and
+
+    the credit of parties to transaction
+
+    be guaranteed, ensuring transparency
+
+    trans risks.
+
+
+    Problem 2: There are many participating
+
+    companies with uneven qualifications, and
+
+    the ability to provide physical resources
+
+    reliable data, and developing a better algorithm
+
+    al
+
+
+    This work was supported by the National Science Foundation of
+
+    NSFC (under Grant No. 61973243 and 61873014.
+
+
+    978-1-7281-4964-6/$51.00 © 2020 IEEE
+
+
+    488
+
+
+    Authorized license used for use: National University of Singapore. Downloaded
+    on July 05, 2021 at 04:16:26 UTC from IEEE Xplore. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# II. RELAXED WORK
+
+
+    This section introduces some of the major technologies of cloud manufacturing,
+    scheduling, blockchain, IoT, and computing.
+
+
+    # A. Scheduling in cloud manufacturing
+
+
+    Cloud manufacturing is a manufacturing model that supports the aggregation of
+    distributed manufacturing resources in the form of configurable manufacturing
+    services and on-demand use of cloud services. Scheduling is one of the core problems
+    in cloud manufacturing system [4]. Li et al. [5] proposed a multi-task-based model.
+    Dynamic resources were taken into account, logistics across enterprises, and enterprises.
+    They further investigated the issue-oriented cloud manufacturing service composition
+    of work-based manufacturing scheduling. Li et al. [6] proposed a multi-agent architecture
+    that includes scheduling and optimizing resources in platform-based smart manufacturing
+    systems. Li et al. [7] proposed a framework for cloud manufacturing with DRL.
+    A DRL model for online task scheduling in cloud manufacturing improves the effectiveness
+    of the framework. Li et al. [9] proposes a resource cloud scheduling strategy
+    based on Deep Q network to minimize the average complexity and average speed.
+
+
+    # B. Blockchain
+
+
+    Blockchain is a chain where data is maintained by multiple blocks that are connected
+    in order [10]. It typically includes a header and a block body. The header contains
+    the index, the hash value of the previous block, the timestamp, and the hash value
+    of each transaction merged over time. The block body contains the data of each
+    transaction connected in order. Figure 2 shows the structure of a blockchain.
+
+
+    +   Types of blockchains: To accommodate different degrees of openness and transparency
+    with some application scenarios, blockchains can be divided into three types:
+    public, consortium chains, and private chains.
+
+
+    +   Public chains: A public chain is the most decentralized blockchain. Anyone
+    can participate in the maintenance and reading of data on the blockchain, and
+    can freely join and exit the blockchain.
+
+
+    +   Consortium chains: A consortium chain is the most closed and only members
+    within the organization can participating. Other nodes not on the chain can query
+    the content of the alliance, but cannot participate in the consensus process in
+    the chain.
+
+
+    +   Private chains: A private chain is different it has the lowest degree of decentralization.
+    It is limited to within the enterprise or individual members. The query
+
+
+    ![](img/3b0db0de942e3f1d134343b9abb2b23a_1_0.png)
+
+
+    Figure 2. Structure of blockchain
+
+
+    and reading permissions of the chain can be publicly opened to the public.
+
+
+    2) Smart contract: Smart contracts are decentralized, and share code deployed
+    on the blockchain [11]. Digital interact with the present conditions and executing
+    smart contract terms are
+
+
+    Currently, many different research areas have focused on Li et al. [12] proposed
+    a blockchain-based distributed manufacturing platform, a cross-enterprise network
+    and service framework based on blockchain and edge computing. Li et al. [14] proposed
+    a blockchain-based composition architecture in cloud manufacturing. After adding,
+    blockchain technology can directly see the result of services and can directly
+    execute contracts without a third-party platform.
+
+
+    # C. IoT and Edge computing
+
+
+    The idea of IoT was proposed in 1982 [12]. Connectivity refers to connect devices
+    through sensors, RFID and other techniques to the Internet to achieve intelligent
+    identification and management. With the rapid development of network, RFID and
+    sensor technology, the Internet of Things is widely used in our lives. Yang et
+    al. [15] proposed a service-oriented architecture for multi-manufacturing methods.
+    Li et al. [16] developed an IoT-based tracking platform for the packaged food
+    chain.
+
+
+    Edge computing is one implementing the technology needed for cloud manufacturing.
+    It is a decentralized computing architecture that moves data and services from
+    central nodes to edge nodes. Field devices can be embedded in the computing function
+    to achieve autonomy of distributed information processing [17]. With the rapid
+    development of the Internet, Georgopoulos et al. [18] proposed a roadmap for the
+    combination of edge computing and IoT-based manufacturing to improve product quality
+    and the ability to respond to changing contexts. Sugana al. [19] proposed a edge
+    computing architecture based on multi-agents, which is suitable for large-scale
+    IoT systems.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# User layer
+
+
+    ![](img/3b0db0de942e3f1d134343b9abb2b23a_2_0.png)
+
+
+    # Core functional layer
+
+
+    ![](img/3b0db0de942e3f1d134343b9abb2b23a_2_1.png)
+
+
+    # Infrastructure layer
+
+
+    ![](img/3b0db0de942e3f1d134343b9abb2b23a_2_2.png)
+
+
+    # Perception layer
+
+
+    ![](img/3b0db0de942e3f1d134343b9abb2b23a_2_3.png)
+
+
+    # Resource layer
+
+
+    ![](img/3b0db0de942e3f1d134343b9abb2b23a_2_4.png)
+
+
+    > Fig. 3. A proposed framework for IoT- and blockchain-based credible scheduling
+
+
+    # III. A FRAMEWORK FOR IOT AND BLOCKCHAIN-BASED CREDIBLE SCHEDULING
+
+
+    IoT, edge computing, and blockchain-based credible scheduling in manufacturing
+    are ensure credibility of three aspects: physical resources, cloud-edge collaboration,
+    and solutions generated in the cloud. Credibility of physical resources can be
+    ensured through IoT, edge computing, monitoring, scheduling, and credibility of
+    cloud-edge collaboration can be ensured by blockchain, and credibility of IoT,
+    edge computing, and blockchain. We proposed a framework, which consists of 5 layers,
+    namely user layer, core functional layer, infrastructure layer, perception layer,
+    and resource layer. The functions of each layer are as follows.
+
+
+    +   1) User layer: Users in the user layer including the platform operator, service
+    providers, and service consumers. Each
+
+
+    +   2) Core functional layer: The core functional layer is responsible for performing
+    various core functions of a cloud manufacturing system. In this paper, the most
+    important function is which performs the decomposition of tasks into subtasks,
+    service search and matching, composition and scheduling, etc. With the help of
+    IoT, edge computing, and blockchain, scheduling in this paper is enhanced with
+    two characteristics: cloud-edge collaboration and credibility. The former means
+    that scheduling'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Cloud
+
+
+    # Scheduling algorithm
+
+
+    ![](img/3b0db0de942e3f1d134343b9abb2b23a_3_0.png)
+
+
+    Data analysis
+
+
+    Training
+
+
+    Blockchain
+
+
+    Applications
+
+
+    # Edge
+
+
+    ![](img/3b0db0de942e3f1d134343b9abb2b23a_3_1.png)
+
+
+    Edge cloud
+
+
+    Data processing
+
+
+    Data analysis
+
+
+    Data collection
+
+
+    Data storage
+
+
+    Distributed intelligence
+
+
+    Applications
+
+
+    # Physical resources
+
+
+    # Real-time data
+
+
+    ![](img/3b0db0de942e3f1d134343b9abb2b23a_3_2.png)
+
+
+    Equipment
+
+
+    RFID
+
+
+    Perception
+
+
+    Monitor
+
+
+    Fig. 4. Credible physical resources
+
+
+    is performed to account into real-time states of manufacturing resources and capabilities
+    at the edge of the cloud, and there is real-time collaboration between the cloud
+    and the edge, and the leader matters that scheduling solutions generated wherein
+    they function as consumers need in the help of edge computing and IoT, we can
+    ensure real-time interaction of data and information, and make products with confidence;
+    with blockchain, scheduling and sensors can be executed with the help of smart
+    contracts to ensure user transactions are safe and credible, which can ensure
+    that the manufacturing process is credible from bottle to bottle.
+
+
+    3) Infrastructure layer. Infrastructure refers to the infrastructure of the cloud
+    platform, edge computing, storage, IoT, etc., with sensors, actuators, and others.
+    This layer playing a supporting role in realizing the high-level functions of
+    the entire system, ensuring that information is collected and interacted with
+    integrity.
+
+
+    4) Perception layer. The perception layer is for perceiving states of manufacturing
+    resources and manufacturing capabilities through RFIDs and sensors to ensure that
+    the services and manufacturing data provided by the manufacturing resources provided
+    by enterprises are credible. IoT and edge computing play important roles in perceiving
+    resource states and connecting them to the cloud.
+
+
+    5) Resource layer. The resource layer consists of various manufacturing resources
+    and manufacturing capabilities.
+
+
+    Manufacturing resources are divided into hardware resources and software manufacturing
+    resources. Manufacturing capabilities include capabilities of experimentation,
+    design, and simulation, etc.
+
+
+    # A. Trustworthy manufacturing resources
+
+
+    Credibility of manufacturing resources is ensured through the combined use of
+    IoT and edge computing, with real-time data. Physical resources and cloud-edge
+    connection can be achieved by part of the scheduling strategy, which determines
+    the process and quality of manufacturing resources. Only by the real-time processing
+    of the information of manufacturing resources can global scheduling optimization
+    be achieved to ensure the efficiency and credibility of scheduling. After a scheduling
+    solution is generated, the corresponding instructions are transmitted from the
+    cloud to the edge for execution. By equipping physical resources with RFID and
+    other sensor devices, the device sends real-time data generated in time based
+    on the real-time data to reduce idle manufacturing resources. The later, data
+    is processed by the edge and transmitted to the cloud for further analysis and
+    processing. The cloud sends operating instructions to the edge again, forming
+    a real-time communication process. By combining with IoT technology, the efficiency
+    of collecting real-time production of massive physical resources has improved.
+    The interaction between the cloud and the edge'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Cloud Manufacturing Platform
+
+
+    ![](img/3b0db0de942e3f1d134343b9abb2b23a_4_0.png)
+
+
+    Fig. 5. Operation process
+
+
+    improves the real-time performance of data calculation and processing at the edge
+    ensures the credibility of physical resources. Figure 4 shows the credibility
+    structure of physical resources.
+
+
+    # B. Service Trust
+
+
+    Service trust includes scheduling trust and transaction trust agreeing that the
+    cloud is credible, first of all a user enters the system, he or she needs to provide
+    the platform with his information. After the platform is verified, he enters the
+    system with his wallet. Only authenticated users can enter the network. Each user
+    of the system acts as a node, and the management of the system contributes to
+    the stability and security of the system. In the cloud, users request tasks and
+    service providers publish their information. The cloud platform performs reasonable
+    scheduling according to the task requirements and stores the information, in the
+    block, and broadcasts it to the entire system. After other nodes pass the block
+    verification, the scheduling information is stored in the blockchain. The user
+    signs a smart contract based on the scheduling information. When the task is completed
+    and submitted, the user sends the transaction block to the service provider on
+    wallet in time to create a transaction block about the success of the transaction.
+    Broadcast in the verification of other nodes, the block to the blockchain correctly.
+    If the transaction fails, this block will also be added to the blockchain. The
+    design is equivalent to user-service offerings. If a problem occurs at a later
+    stage, the retrospective query can be performed faster. Since the entire scheduling
+    information and transaction information are stored in the blockchain, it cannot
+    be modified, ensuring the credibility of the scheduling process. Figure 5 shows
+    the operation process.
+
+
+    # C. Case Study
+
+
+    We will explain an example of a vehicle to better illustrate the mentioned architecture.
+    First, the user logs into the system to register wallet name and then publishes
+    relevant information (such as production date, color, and model) to the cloud
+    platform, and the cloud generates a scheduling strategy for the task to form a
+    transaction. After that, the user uses the transaction parties to form a smart
+    contract and the corresponding rules are embedded in the block for use. Each manufacturer
+    loads the data generated by the equipment in the production process into the block
+    and finally joins the blockchain after verification.
+
+
+    ![](img/3b0db0de942e3f1d134343b9abb2b23a_4_1.png)
+
+
+    | "color" | "purple" | "make" | "peugeot" |
+
+    |---|---|---|---|
+
+
+    | Wallet |
+
+    |---|
+
+
+    | Token | query hash all |
+
+    |---|---|
+
+
+    | Trading network | Transfer |
+
+    |---|---|
+
+
+    | Smart contract | Scheduling, information storage |
+
+    |---|---|
+
+
+    | Task 1 |
+
+    |---|
+
+
+    | Log 1 |
+
+    |---|
+
+
+    Fig. 6. Case study process'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'and the corporate logistics network continuously interacts to ensure the smooth
+    completion of transaction. In this process, information is consumed and updated
+    in real-time in the delivery, when blocks are transferred or created freely; users
+    in the blockchain network can use it as websource for vehicle information. Figure
+    6 shows the case study.
+
+
+    In this paper, a credible scheduling framework is proposed, but some content is
+    still missing in this article. Future work includes: (1) Building a blockchain
+    network to implement the proposed system; (2) Focus on packaging manufacturing
+    resources and data into blocks; (3) Considering the scalability of the blockchain-based
+    characteristics of the cloud.
+
+
+    # IV. CONCLUSION AND FUTURE WORK
+
+
+    In this paper, we have introduced the concept of ''credible scheduling'' in cloud
+    manufacturing and proposed a framework for the achievement of credible scheduling.
+    We achieved credible scheduling based on various technologies like IoT, edge computing,
+    and blockchain. These technologies play different roles in enhancing the credibility
+    of scheduling. In the context of scheduling in cloud manufacturing, credible scheduling
+    faces many challenges, including credibility of manufacturing industries, data
+    acquisition process, credibility of the entire cloud-blockchain process, credibility
+    of cloud services, and service operation. For example, real-time data exchange
+    through IoT. Blockchain technology enables credible scheduling process and transactions
+    in cloud manufacturing. Future work can be conducted in the following directions:
+
+
+    # REFERENCES
+
+
+    +   [1] B. H. Li, Zhang, and X. Chai, "Introduction to Cloud Manufacturing." IEEE
+    Transactions on Industrial Informatics, 14(4): 5-12, 2018.
+
+
+    +   [2] J. Liu, Y. Wang, X. Xu, and X. Zhang, "Credible scheduling in cloud manufacturing:
+    state-of-the-art and challenges." International Journal of Production Research
+    (2021): 4854-4869.
+
+
+    +   [3] Y. Liu, L. Wang, X. Xu, and X. Li, "A Revit to Cloud Manufacturing Scheduling
+    Problem based on deep learning and reinforcement learning." IEEE Access, 2019:22816-22828.
+
+
+    +   [4] L. F. Zhou, L. Zhang, and Y. Li, "Review of Resource Scheduling in Cloud
+    Manufacturing." International Journal of Computer Applications, 180(24): 45-52,
+    2019.
+
+
+    +   [5] Y. Liu, X. Xu, and Y. Wang, "Work-based multi-task scheduling in cloud
+    computing with robotics and manufacturing." IEEE Access, 2020: 95435-95443.
+
+
+    +   [6] Y. Liu, X. Zhang, F. Luo, Y. Wang, "A multi-agent architecture for scheduling
+    in smart-based manufacturing systems." Frontiers of Information Technology, 16(11):
+    1492-1502.
+
+
+    +   [7] W. C., L. Zhou, Y. Liu, S. Shu, E. K. Huang, Y. Ma, "Blockchain-based
+    Distributed Scheduling for Cloud Manufacturing." IEEE International Conference
+    on Distributed Systems (2011): 9140-9145.
+
+
+    +   [8] Y. Liu, L. Zhang, Y. Wang, X. Xu, M. Ma, "A framework for scheduling in
+    cloud manufacturing with deep reinforcement learning." 2019 IEEE International
+    Conference on Industrial Informatics (IIII), 1002-1007.
+
+
+    +   [9] Y. Liu, L. Wang, Y. Xu, X. Xu, M. Wang, "A framework for scheduling in
+    cloud manufacturing with deep reinforcement learning." 2021 IEEE International
+    Conference on Industrial Informatics (IIII), 1-6.
+
+
+    +   [10] Y. Lang, "Blockchain: State-of-the-art and research challenges." Journal
+    of Computer Applications, 2016: 13-20.
+
+
+    +   [11] Y. Yuan, et. al., "Development and Prospects of Blockchain Technology."
+    (2016)
+
+
+    +   [12] Z. Li, W. M, G. Wang, L. Li, and J. He, "Online scheduling in cloud computing
+    with 50 reinforcement learning." International Journal of Management & Data Management,
+    9(4): 1338-1344.
+
+
+    +   [13] C. Yu, Y. Zhou, Z. Zhang, and X. Wang, "A blockchain-based service architecture
+    in cloud manufacturing." International Journal of Computer Science, 15(6): 1050-1065.
+
+
+    +   [14] C. Wang, Y. Chen, T. Lin, and X. Wang, "IoT-enabled dynamic service selection
+    across multiple cloud platforms." Manufacturing Letters 7 (2019): 28.
+
+
+    +   [15] G. Qi, L. Liu, L. Li, X. Liu, and G. Xu, "IoT-based tracking and tracing
+    for prepacked food supply chain." Industrial Management & Data Management, 32:
+    100555.
+
+
+    +   [16] B. Chen, J. Wang, A. Celisi, D. Li, and H. Zhang, "Edge computing in
+    IoTbased manufacturing." IEEE Communications Magazine, 56(6): 103-109.
+
+
+    +   [17] D. Georgakopoulos, P. J. Fayaraman, M. Marina, V. Ricci, and R. Regan,
+    "Internet of Things and edge cloud computing roadmap for manufacturing." IEEE
+    International Conference on Computer Communications (2018): 112-117.
+
+
+    +   [18] T. Saganuma, T. Onde, S. Kitagata, K. Sugawara, and N. Shitarai, "Multifagent-based
+    edge computing architecture for IoT.\" IEEE Network 32.1 (2018): 16-23."
+
+
+    +   1) Innovative data storage and sharing modes: During the scheduling process,
+    huge amounts of data regarding research state and transactions will be generated
+    and collected. When the size of blocks is limited, innovative data storage and
+    sharing methods are needed, so that important information can be stored and shared
+    during the scheduling process.
+
+
+    +   2) Scientific consensus protocols: In the scheduling process of cloud manufacturing,
+    transactional throughput, accounting frequency, and requirement for consistency
+    are much higher than those of traditional methods. As a result, it is necessary
+    to develop consensus mechanism that can support high throughput.
+
+
+    +   3) Development of new scheduling algorithm: Algorithms are an important part
+    to ensure credibility of scheduling in cloud manufacturing. The current scheduling
+    algorithms are focused more on optimizing instead of making scheduling efficient.
+    In fact, different algorithms have different degrees of credibility. A credible
+    scheduling algorithm can guarantee scheduling with high reliability and efficiency.
+
+
+    +   4) Efficient retrieval mechanism: Blockchain provides a mechanism for credibility
+    of scheduling, but its structure is insufficient in retrieving information from
+    the blocks. As the number of blocks in a blockchain grows, efficiency may become
+    a bottleneck for scheduling because the scheduling process needs many information
+    about and their transactions needs to be obtained in real-time to accelerate the
+    scheduling process. Therefore, the efficiency of the retrieval mechanism needs
+    to be improved to enhance the efficiency of scheduling.'
+  merge: -1
+  img_proc: true
