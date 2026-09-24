@@ -1,0 +1,2318 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # An overview of Cooperative Spectrum Sensing based on Machine Learning Techniques
+
+
+    Chaymae GATTAUA
+
+    New Technology Trends(NTT)
+
+    National School of Applied Sciences-
+
+    Tuan
+
+
+    Otman CHAKKOR
+
+    New Technology Trends (NTT)
+
+    National School of Applied Sciences-
+
+    Tuan
+
+
+    Foudad AYTOUNA
+
+    Remote Sensing & Geographic
+
+    Information System (RS-GIS)
+
+    National School of Applied Sciences-
+
+    Tuan
+
+
+    Tetuan,Morocco
+
+    chaymae.gattua@uae.ac.com
+
+
+    Tetuan,Morocco
+
+    otman.chakkor@uae.ac.com
+
+
+    Tetuan,Morocco
+
+    fayoutna@uae.ac.com
+
+
+    **Abstract—** Cognitive is an intelligent communication system learning from environment.
+    It allows to reuse radio resources available by users Secondary Users without
+    causing harmful interference with licensed users. Spectrum Sensing is important
+    in Cognitive Radio technology. The application of Machine Learning for Spectrum
+    Sensing is well documented in the literature. In this paper, we present an overview
+    of Machine Learning techniques for Cooperative Spectrum Sensing using three (Naive
+    Bayes, SVM and Multilayer Perceptron) with cooperative Sensing techniques (Maximum
+    Ratio Combining and AWGN) on Rayleigh fading fading channel. The performance evaluated
+    using ROC curve, demonstrates that MRC is the optimum technique for Machine Learning
+    technique on Rayleigh.
+
+
+    attractive in communication networks [1]. To reach the reaches of CR, it must
+    go through three stages: the first consists of Spectrum Sensing (SS) that is the
+    most important step in initiating CR. It consists of detecting the unused spectrum
+    (or white spaces) to share without any interference with PUs. Spectrum Management
+    is the function that allows US to decide, which frequency band meets its requirements
+    through analysis, and Spectrum Mobility is a CR user changes its operating frequency
+    by using the spectrum dynamically [9].
+
+
+    **Keywords—** Learning, SVM, K-means, Naive Bayes, Cooperative Spectrum Sensing.
+
+
+    Recently the CR has drawn wide attention in various applications such as Wireless
+    Network and Internet of Things (IoT), as it can provide wideband services and
+    stable operation in dynamic spectrum scenarios. The next generation of communication
+    systems requires high data rates and low latency. From this perspective, CR need
+    to find wide frequency bands of the spectrum to find the best available channels.
+
+
+    # I. INTRODUCTION
+
+
+    With the advent of Fifth Generation of Wireless Communications (5G), data transmission
+    and communication devices are increasingly growing with number of mobile users.
+    Frequency Communications (FC) face is the scarcity of spectral spectrum [1]. In
+    addition, there are frequency bands underutilized. Cognitive Radio (CR) technology
+    allows important role in meeting the increasing demand for wireless communication
+    services. By utilizing the radio resources, CR radio systems can dynamically exploit
+    the available channel and change the transmission parameters. The central idea
+    of Cognitive Radio is to sense spectrum by unlicensed users (Secondary Users,
+    US) to use the spectrum of licensed users (Primary User, PU) without advent to
+    the deployment, but if they cannot interfere with PU communication and without
+    degrading Quality of Service (QoS) [2]. The concept of Cognitive Radio was introduced
+    in 1999 by Joseph Milda [3]. Milda works proposed to use the reconfiguration possibilities
+    provided, by the software to transform static radio equipment into dynamic radio
+    equipment capable of adapting its parameters such as modulation, transmission
+    power and frequency of the bands [4]. Cognitive Radio technology draws the attention
+    of the communications community and continues to be fruitful
+
+
+    In this paper, we focus on CR and the many techniques used for SS in literature.
+    The novel senses detects a status of PU, or free. It is called matching Feature
+    detection [6], Energy Detection [7] and Cyclostationary Feature Detection [8].
+    Energy Detection is a simple method as it does not require prior knowledge of
+    the PU signal. The basic idea is to calculate the received signal, then compare
+    it with a threshold. However, it is not robust to various factors coming from
+    the signal and some noise [9]. Cyclostationary Feature Detection based on cyclestationary
+    characteristics due to the periodicity of the signal and statistical measurement
+    such as the average of the received signal over time and the autocorrelation function
+    to distinguish between the signal and the noise signal [10]. Matching filters
+    require perfect knowledge of the PU signal; bandwidth, order of pulse, carrier
+    frequency, and phase shift to identify the identity of the PU signal [11]. The
+    next generation of communication systems requires high data rates and In this
+    regard CR SU must detect wide frequency bands of the radio spectrum to find the
+    best available channels. SS is one of the challenges that face in designing next
+    generation communication scenarios. Several techniques exists in the literature
+    to perform wide spectrum sensing.'
+  - '[PAGE 1]
+
+
+    In [], the authors classify the wideband sensing techniques into two types, Nyquist
+    wideband sensing and Sub-Ubiquitous sensing, and compared the advantages and disadvantages
+    of each type.
+
+
+    Machine Learning (ML) has increased interest and is applied in many fields due
+    to its ability to apply complex mathematical calculations to analyze, interpret
+    models and data structures, in learning and decision making. In CR networks, research
+    related to machine learning for SR has been published. Detection of the availability
+    of frequencies by formulating the process as a classifier that supervised or supervised,
+    must choose between two states of each frequency free or busy. Then extract data,
+    such as energy statistics vector or the probability vector, to construct inputs
+    to train the classifiers and determine the availability of CR.
+
+
+    The rest of this paper is organized as follows. In II, the system model and structure
+    for Cooperative Sensing are described. The Machine Learning techniques for SR
+    are discussed in section III and IV is for the simulation and results section
+    V concludes the.
+
+
+    # II. COOPERATIVE SPECTRUM SENSING
+
+
+    CR is a communication system in which multiple channels are used simultaneously,
+    and can not come from one channel at a time, due to its ability to perform SU
+    using different detection techniques, which guarantee an acceptable probability
+    of interference with PU, due to SU. Cooperative Sensing (CSS) is proposed in the
+    literature to solve the problem of hidden terminals in CR networks to reduce uncertainty,
+    fading, and shadowing [13][13][14]. The detection by a single user can be merged
+    with all CSS results to achieve one objective [15] by utilizing the spatial diversity
+    of secondary users [16][17]CSS observations from several SUs to determine the
+    presence or absence of frequency bands with minimized detection, and can give
+    better performance than that by a single CR user.
+
+
+    decision schemes. The Hard Decision Fusion (HDF) schemes such as AND, OR rule
+    or linear quadratic rule allow each to take a local decision and send a binary
+    decision to the FC. In Soft Decision (DFS), the SU senses and forward energy on
+    the PU channel to the FC, where the detection is carried out. The soft methods
+    may include likelihood ratio detection-based soft fusion and linear fusion.
+
+
+    In the other hand, in the distributed approach, no FC receives the detections
+    from the neighboring SUs and combines with its own to make the final decision
+    [20].
+
+
+    # B. System model and structure
+
+
+    The local model for primary signal at the mth SU can be described as a statistical
+    model:
+
+
+    ```
+
+    H_0 : Y_{m}(n) = h_{m}(n) + n_{m}(n) \quad PU is not (1)
+
+    ```
+
+
+    ```
+
+    H_1 : Y_{m}(n) = h_{m}(n) + n_{m}(n) \quad PU is present (2)
+
+    ```
+
+
+    H_0, H_1 denote the absence and presence of the PU. With Y_{m}(m=1,2), n_{m}(n)
+    : Gaussian white noise with a mean of 0 and a variance \sigma^2 (n) denotes the
+    SU PU, h representing the sensing gain, and denotes the detection time.
+
+
+    ```
+
+    P_{fa} = p(H_d|H_0) : Probability of false alarm. (3)
+
+    ```
+
+
+    ```
+
+    P_{d} = p(H_d|H_1) : Probability of detection (4)
+
+    ```
+
+
+    # C. Cooperative spectrum sensing techniques
+
+
+    +   Maximum Ratio Combining
+
+
+    We assume a centralized CR network and one PU. The SU generate a local sensing
+    energy x_{q,m}, in sensing time slot q, with received samples:
+
+
+    ```
+
+    x_{q,m} = \sum_{m=1}^M w_{m}|Y_{m}(n)|^2 (5)
+
+    ```
+
+
+    The Maximum Ratio technique estimates the channel by combining the weighted energy
+    levels obtained at each SU and communicated with the FC.
+
+
+    ```
+
+    \hat{H} = \begin{cases} 1, & \sum_{m=1}^M w_{m}x_{q,m} \geq \lambda \ 0, & \text{otherwise}
+    \end{cases} (6)
+
+    ```
+
+
+    Where w_{m} = \frac{\gamma_{m}}{\sum \gamma_{m}} is the SNR on the mth SU and
+    \lambda is a constant used to reflect the desired false alarm probability of the
+    estimator.
+
+
+    +   AND rule
+
+
+    ![](img/047efcf749577c595cbb945f3d5fdd9f_1_0.png)
+
+
+    # A. Cooperative Spectrum Sensing architecture
+
+
+    Cooperative Sensing architecture can be classified into two approaches: a centralized
+    approach and a distributed approach.
+
+
+    +   centralized approach
+
+
+    Each SU performs its own detection and sends it to the central entity or the Fusion
+    Center (FC), which includes all the detections of all SUs. The combination of
+    local sensing reports at the FC is categorized as soft [48] and hard [19]'
+  md: '
+
+    # An overview of Cooperative Spectrum Sensing based on Machine Learning Techniques
+
+
+    Chaymae GATTAUA
+
+    New Technology Trends (NTT)
+
+    National School of Applied Sciences-
+
+    Tuan
+
+
+    Otman CHAKKOR
+
+    New Technology Trends (NTT)
+
+    National School of Applied Sciences-
+
+    Tuan
+
+
+    Foudad AYTOUNA
+
+    Remote Sensing & Geographic
+
+    Information System (RS-GIS)
+
+    National School of Applied Sciences-
+
+    Tuan
+
+
+    Tetuan, Morocco
+
+    chaymae.gattua@uae.ac.com
+
+
+    Tetuan, Morocco
+
+    otman.chakkor@uae.ac.com
+
+
+    Tetuan, Morocco
+
+    fayoutna@uae.ac.com
+
+
+    **Abstract—** Cognitive Radio is an intelligent communication system learning
+    from environment. It allows to reuse radio resources available by Secondary Users
+    without causing harmful interference with licensed users. Spectrum Sensing is
+    important in Cognitive Radio technology. The application of Machine Learning for
+    Spectrum Sensing is well documented in the literature. In this paper, we present
+    an overview of Machine Learning techniques for Cooperative Spectrum Sensing using
+    three (Naive Bayes, SVM and Multilayer Perceptron) with cooperative Sensing techniques
+    (Maximum Ratio Combining and AWGN) on Rayleigh fading channel. The performance
+    evaluated using ROC curve, demonstrates that MRC is the optimum technique for
+    Machine Learning technique on Rayleigh.
+
+
+    Cognitive Radio is attractive in communication networks [1]. To reach the reaches
+    of CR, it must go through three stages: the first consists of Spectrum Sensing
+    (SS) that is the most important step in initiating CR. It consists of detecting
+    the unused spectrum (or white spaces) to share without any interference with PUs.
+    Spectrum Management is the function that allows US to decide which frequency band
+    meets its requirements through analysis, and Spectrum Mobility is a CR user changes
+    its operating frequency by using the spectrum dynamically [9].
+
+
+    **Keywords—** Learning, SVM, K-means, Naive Bayes, Cooperative Spectrum Sensing.
+
+
+    Recently the CR has drawn wide attention in various applications such as Wireless
+    Network and Internet of Things (IoT), as it can provide wideband services and
+    stable operation in dynamic spectrum scenarios. The next generation of communication
+    systems requires high data rates and low latency. From this perspective, CR need
+    to find wide frequency bands of the spectrum to find the best available channels.
+
+
+    # I. INTRODUCTION
+
+
+    With the advent of Fifth Generation of Wireless Communications (5G), data transmission
+    and communication devices are increasingly growing with number of mobile users.
+    Frequency Communications (FC) face the scarcity of spectral spectrum [1]. In addition,
+    there are frequency bands underutilized. Cognitive Radio (CR) technology allows
+    important role in meeting the increasing demand for wireless communication services.
+    By utilizing the radio resources, CR radio systems can dynamically exploit the
+    available channel and change the transmission parameters. The central idea of
+    Cognitive Radio is to sense spectrum by unlicensed users (Secondary Users, US)
+    to use the spectrum of licensed users (Primary User, PU) without advent to the
+    deployment, but if they cannot interfere with PU communication and without degrading
+    Quality of Service (QoS) [2]. The concept of Cognitive Radio was introduced in
+    1999 by Joseph Mitola [3]. Mitilden works proposed to use the reconfiguration
+    possibilities provided by the software to transform static radio equipment into
+    dynamic radio equipment capable of adapting its parameters such as modulation,
+    transmission power and frequency of the bands [4]. Cognitive Radio technology
+    draws the attention of the communications community and continues to be fruitful.
+
+
+    In this paper, we focus on CR and the many techniques used for SS in literature.
+    The novel senses detects a status of PU, or free. It is called matching Feature
+    detection [6], Energy Detection [7] and Cyclostationary Feature Detection [8].
+    Energy Detection is a simple method as it does not require prior knowledge of
+    the PU signal. The basic idea is to calculate the received signal, then compare
+    it with a threshold. However, it is not robust to various factors coming from
+    the signal and some noise [9]. Cyclostationary Feature Detection based on cyclostationary
+    characteristics due to the periodicity of the signal and statistical measurement
+    such as the average of the received signal over time and the autocorrelation function
+    to distinguish between the signal and the noise signal [10]. Matching filters
+    require perfect knowledge of the PU signal; bandwidth, order of pulse, carrier
+    frequency, and phase shift to identify the identity of the PU signal [11]. The
+    next generation of communication systems requires high data rates and In this
+    regard CR SU must detect wide frequency bands of the radio spectrum to find the
+    best available channels. SS is one of the challenges that face in designing next
+    generation communication scenarios. Several techniques exists in the literature
+    to perform wide spectrum sensing.
+
+
+    In [], the authors classify the wideband sensing techniques into two types, Nyquist
+    wideband sensing and Sub-Ubiquitous sensing, and compared the advantages and disadvantages
+    of each type.
+
+
+    Machine Learning (ML) has increased interest and is applied in many fields due
+    to its ability to apply complex mathematical calculations to analyze, interpret
+    models and data structures, in learning and decision making. In CR networks, research
+    related to machine learning for SR has been published. Detection of the availability
+    of frequencies by formulating the process as a classifier that supervised or supervised,
+    must choose between two states of each frequency free or busy. Then extract data,
+    such as energy statistics vector or the probability vector, to construct inputs
+    to train the classifiers and determine the availability of CR.
+
+
+    The rest of this paper is organized as follows. In II, the system model and structure
+    for Cooperative Sensing are described. The Machine Learning techniques for SR
+    are discussed in section III and IV is for the simulation and results section
+    V concludes the.
+
+
+    # II. COOPERATIVE SPECTRUM SENSING
+
+
+    CR is a communication system in which multiple channels are used simultaneously,
+    and can not come from one channel at a time, due to its ability to perform SU
+    using different detection techniques, which guarantee an acceptable probability
+    of interference with PU, due to SU. Cooperative Sensing (CSS) is proposed in the
+    literature to solve the problem of hidden terminals in CR networks to reduce uncertainty,
+    fading, and shadowing [13][13].
+
+
+    ## B. System model and structure
+
+
+    The local model for primary signal at the mth SU can be described as a statistical
+    model:
+
+
+    $H_0 : Y_{m}(n) = h_{m}(n) + n_{m}(n) \quad$ (PU is not)
+
+
+    $H_1 : Y_{m}(n) = h_{m}(n) + n_{m}(n) \quad$ (PU is present)
+
+
+    $H_0, H_1$ denote the absence and presence of the PU. With $Y_{m}(m=1,2)$, $n_{m}(n)$
+    is Gaussian white noise with a mean of 0 and a variance $\sigma^2$ denotes the
+    SU, $h$ representing the sensing gain, and denotes the detection time.
+
+
+    $P_{fa} = p(H_d|H_0) \quad$ (Probability of false alarm) (3)
+
+
+    $P_d = p(H_d|H_1) \quad$ (Probability of detection) (4)
+
+
+    ## C. Cooperative sensing techniques
+
+
+    ### Maximum Ratio Combining
+
+
+    We assume a centralized CR network and one PU. The SU generate a local sensing
+    energy $x_{q,m}$, in sensing time slot q, with received samples:
+
+
+    $x_{q,m} = \sum_{m=1}^M w_{m}|Y_{m}(n)|^2 \quad (5)$
+
+
+    The Maximum Ratio technique estimates the channel by combining the weighted energy
+    levels obtained at each SU and communicated with the FC.
+
+
+    $\hat{H} = \begin{cases} 1, & \sum_{m=1}^M w_{m}x_{q,m} \geq \lambda \\ 0, & \text{otherwise}
+    \end{cases} \quad (6)$
+
+
+    Where $w_{m} = \frac{\gamma_{m}}{\sum \gamma_{m}}$ is the SNR on the mth SU and
+    $\lambda$ is a constant used to reflect the desired false alarm probability of
+    the estimator.
+
+
+    ### AND rule
+
+
+    ![](img/047efcf749577c595cbb945f3d5fdd9f_1_0.png)
+
+
+    ## A. Cooperative Sensing architecture
+
+
+    Cooperative Sensing architecture can be classified into two approaches: a centralized
+    approach and a distributed approach.
+
+
+    - centralized approach: Each SU performs its own detection and sends it to the
+    central entity or the Fusion Center (FC), which includes all the detections of
+    all SUs. The combination of local sensing reports at the FC is categorized as
+    soft [48] and hard [19].
+
+    '
+  mdcn: '
+
+
+    # 基于机器学习技术的协作频谱感感知概述
+
+
+    Chaymae GATTAUA
+
+    新技术趋势 (NTT)
+
+    国立应用科学学院-
+
+    Tetuan
+
+
+    Otman CHAKKOR
+
+    新技术趋势 (NTT)
+
+    国立应用科学学院-
+
+    Tetuan
+
+
+    Foudad AYTOUNA
+
+    遥感与地理信息系统 (RS-GIS)
+
+    国立应用科学学院-
+
+    Tetuan
+
+
+    摩洛哥，捷捷
+
+    chaymae.gattua@uae.ac.com
+
+
+    摩洛哥，捷捷
+
+    otman.chakkor@uae.ac.com
+
+
+    摩洛哥，捷捷
+
+    fayoutna@uae.ac.com
+
+
+    **摘要—** 认知无线电是一种从环境中学习的智能通信系统。它允许辅助用户（Secondary Users）复用可用无线资源，而不会对授权用户（Licensed
+    Users）造成有害干扰。频谱感知在认知无线电技术中至关重要。机器学习应用于频谱感知的文献已有大量记载。在本文中，我们介绍了三种机器学习技术（朴素贝叶斯、SVM
+    和多层感知器）结合协作感知技术（最大比合并和加加斯白噪声）在瑞利衰落道上协作频谱感知的概述。使用 ROC 曲线评估的性能表明，MRC 是瑞利衰落道上机器学习的最优技术。
+
+
+    认知无线电在通信网络中极具吸引力 [1]。要实现认知无线电的功能，必须经过三个阶段：第一阶段是频谱感知（SS），这是启动认知无线电最重要的步骤。它包括检测未使用的频谱（或白空间）以便在不与主用户（PU）产生干扰的情况下进行共享。频谱管理允许辅助用户通过分析决定哪些频段满足其需求，频谱移动允许认知无线电用户通过动态使用频谱来其工作频率
+    [9]。
+
+
+    **关键词—** 学习、SVM、K-means、朴素贝叶斯、协作频谱感知。
+
+
+    最近，认知无线电在无线网络和物联网（IoT）等各种应用中受到了广泛关注，因为它能够在动态频谱场景中提供宽带服务和稳定运行。下一代通信系统需要高数据速率和低延迟。从这个角度来看，认知无线电需要寻找宽频频谱以找到最佳可用通道。
+
+
+    # I. 引言
+
+
+    随着第五代无线通信（5G）的到来，随着移动用户的数量增加，数据传输和通信设备正日益增长。频率通信（FC）面临频谱资源的稀缺问题 [1]。此外，还有一些频段未被充分利用。认知无线电（CR）技术在满足无线通信服务日益增长的需求方面发挥着重要作用。通过利用无线资源，认知无线电系统可以动态利用可用通道并改变传输参数。认知无线电的核心思想是由无授权用户（辅助用户，US）感知频谱，以使用授权用户（主用户，PU）的频谱，而不对部署产生不利影响，前提是它们不能干扰
+    PU 通信且不降低服务质量（QoS）[2]。认知无线电的概念由 Joseph Mitola 在 1999 年提出 [3]。Mitilden 提出的工作建议使用软件提供的重构可能性，将静态无线电设备转换为动态无线电设备，该设备能够自适应其参数（如调制、传输功率和频段频率）[4]。认知无线电技术引起了通信界的关注，并持续取得丰硕成果。
+
+
+    在本文中，我们关注认知无线电以及文献中用于频谱感知的许多技术。新型感知检测 PU 的状态（是否存在空闲）。这被称为匹配特征检测 [6]、能量检测 [7] 和循环平稳性特征检测
+    [8]。能量检测是一种简单的方法，因为它不需要 PU 信号的先验知识。基本思想是计算接收信号，然后将其与阈值进行比较。然而，它对来自信号和噪声的各种因素并不鲁棒
+    [9]。基于循环平稳性的特征检测利用信号周期性的循环平稳特性以及统计测量（如接收信号的时间平均值和自相关函数）来区分信号和噪声信号 [10]。匹配滤波器需要完美了解
+    PU 信号；带宽、脉冲顺序、载波频率和相位偏移，以识别 PU 信号的身份 [11]。下一代通信系统需要高数据速率，在这方面，CR SU 必须检测宽频频谱以找到最佳可用通道。频谱感知是设计下一代通信场景面临的挑战之一。文献中存在多种执行宽谱感知的技术。
+
+
+    在 [], 作者将宽带感知技术分为两类：奈奎斯特宽带感知和亚感知，并比较了每类的优缺点。
+
+
+    机器学习（ML）由于能够应用复杂的数学计算来在学习和决策中分析、解释模型和数据结构，其兴趣日益增加并应用于许多领域。在认知无线电网络中，已经发表了关于用于频谱感知的机器学习的相关研究。通过将过程公式化为监督或无监督分类器来检测频率可用性，必须在每个频率的两种状态（空闲或繁忙）之间选择。然后提取数据（如能量统计向量或概率向量），以构建输入以训练分类器并确定认知无线电的可用性。
+
+
+    本文的其余部分组织如下：第二节描述了协作感知的系统模型和结构。第三节讨论了用于频谱感知的机器学习技术，第四节为仿真和结果，第五节总结全文。
+
+
+    # II. 协作频谱感知
+
+
+    认知无线电是一种同时使用多个通道的通信系统，不能一次来自单一通道，因为它能够使用不同的检测技术执行 SU，这保证了与 PU 干扰的概率在接受范围内。协作感知（CSS）被用于解决认知无线电网络中的隐藏终端问题，减少不确定性、衰落和阴影
+    [13][13]。
+
+
+    ## B. 系统模型和结构
+
+
+    第 m 个 SU 的主信号本地模型可以描述为统计模型：
+
+
+    $H_0 : Y_{m}(n) = h_{m}(n) + n_{m}(n) \quad$ (PU 不存在)
+
+
+    $H_1 : Y_{m}(n) = h_{m}(n) + n_{m}(n) \quad$ (PU 存在)
+
+
+    $H_0, H_1$ 表示 PU 的不存在和存在。对于 $Y_{m}(m=1,2)$，$n_{m}(n)$ 是均值为 0、方差为 $\sigma^2$ 的高斯白噪声，表示
+    SU，$h$ 代表感知增益，表示检测时间。
+
+
+    $P_{fa} = p(H_d|H_0) \quad$ (虚报概率) (3)
+
+
+    $P_d = p(H_d|H_1) \quad$ (检测概率) (4)
+
+
+    ## C. 协作感知技术
+
+
+    ### 最大比合并
+
+
+    我们假设一个中心化的认知无线电网络和一个 PU。SU 在感知时隙 q 中产生本地感知能量 $x_{q,m}$，接收样本为：
+
+
+    $x_{q,m} = \sum_{m=1}^M w_{m}|Y_{m}(n)|^2 \quad (5)$
+
+
+    最大比技术通过合并在每个 SU 获取并与融合中心（FC）通信的加权能量级来估计通道。
+
+
+    $\hat{H} = \begin{cases} 1, & \sum_{m=1}^M w_{m}x_{q,m} \geq \lambda \\ 0, & \text{否则}
+    \end{cases} \quad (6)$
+
+
+    其中 $w_{m} = \frac{\gamma_{m}}{\sum \gamma_{m}}$ 是第 m 个 SU 的 SNR，$\lambda$ 是反映估计器期望虚报概率的常数。
+
+
+    ### 与门规则
+
+
+    ![](img/047efcf749577c595cbb945f3d5fdd9f_1_0.png)
+
+
+    ## A. 协作感知架构
+
+
+    协作感知架构分为两种方法：中心化方法和分布式方法。
+
+
+    - 中心化方法：每个 SU 自行检测并发送到中心实体或融合中心（FC），FC 所有 SU 的检测结果。FC 本地感知报告分为软软 [48] 和硬合并 [19]。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    In AND rule, the FC decides the occupancy state of the channel by sharing the
+    sensed energy of each SU through the threshold $\lambda$ and then applying the
+    AND operation on the result.
+
+
+    ```
+
+    $\theta = \begin{cases} 1 & if AND.AND_m \ 0 & otherwise \end{cases}$
+
+    ```
+
+
+    +   - OR rule
+
+
+    The OR rule is similar to the AND rule, in which it compares the energy level
+    from each SU to and then applies the logical operation on result.
+
+
+    # III. MACHINE LEARNING FOR SS
+
+
+    # A. Motivation of ML techniques for SS
+
+
+    SS provides knowledge of spectrum capacity, and by this knowledge, the CR should
+    make intelligent decisions about actions relating to transmission and reception,
+    and constantly improve these decisions by taking advantage of past experiences.
+    Here, ML methods can be used for SS.
+
+
+    $X^q = (X_{q,1}, X_{q,2}, \dots, X_{q,M})$ (9)
+
+    After Q time slots, training data in case of supervised ML in CSS is as $\{(X^1,
+    Y^1), \dots, (X^Q, Y^Q)\}$, where $Y$ is label of energy vector $X^q$, representing
+    channel availability.
+
+
+    +   - Probability vector
+
+
+    If the number of SUs is small, the distribution of $X_{q,m}$ can be approximated
+    by a Gaussian distribution with mean $E(X_{q,m})$ and variance $\sigma^2_{q,m}$,
+    then $X^q$ follows a Gaussian distribution with mean $\mu_q$ and covariance $\Sigma_q$
+    [22]:
+
+
+    ```
+
+    $\mu_q = (E[X_{q,1}], E[X_{q,2}], \dots, E[X_{q,M}])$, $\Sigma_q = \text{diag}(\sigma^2_{q,1},
+    \sigma^2_{q,2}, \dots, \sigma^2_{q,M})$ (11)
+
+    ```
+
+
+    Each $X^q$ are considered to be independent of each other and $Y$ is diagonal.
+    The probability density function (PDF) of the energy vector $X^q$:
+
+
+    ```
+
+    $f(Y^q|X^q, \Sigma_q) = \frac{1}{\sqrt{(2\pi)^M|\Sigma_q|}} \exp(-\frac{1}{2}(Y^q-\mu_q)^T\Sigma_q^{-1}(Y^q-\mu_q))$
+
+    ```
+
+
+    ![](img/047efcf749577c595cbb945f3d5fdd9f_2_0.png)
+
+
+    Fig. 2. Relation between learning and cognition[21].
+
+
+    The values of $\mu_q$ and $\Sigma_q$ are different in $H_0$ and $H_1$.
+
+
+    ```
+
+    $P(H_i) = \frac{f(Y^q|X^q, \mu_{q,i}, \Sigma_{q,i})P(H_i)}{f(Y^q|X^q, \mu_{q,0},
+    \Sigma_{q,0})P(H_0) + f(Y^q|X^q, \mu_{q,1}, \Sigma_{q,1})P(H_1)}$ (13)
+
+    ```
+
+
+    are the probabilities in two cases $H_0$, $H_1$.
+
+
+    # C. Machine Learning techniques
+
+
+    ML is a field of artificial intelligence that builds models from data to predict
+    future states. ML techniques have been used in tasks such as classification, regression,
+    and clustering.
+
+
+    Supervised learning works in two phases: the training phase and the test phase.
+    The manner are mainly divided into types: Supervised learning, Unsupervised learning,
+    and reinforcement learning.
+
+
+    The objective is to build a model learning to a set of output values: (e.g., Support
+    Vector SVM). Unsupervised learning indicates the ML location where the data is
+    not labeled.
+
+
+    +   - Support Vector SVM
+
+
+    The Support Vector Machine (SVM) or ridge-margin is a supervised classification
+    method based on early theoretical work by Vapnik and Cheronenkis in 1995. In order
+    to classify data that already classified into two categories
+
+
+    # B. Extraction features
+
+
+    One of the most important steps in building an effective learning model is feature
+    extraction. In this set, the number of features used to build a model is SS context.
+
+
+    In Support ML, the approach indicates whether the feature vectors are available
+    or unavailable to the channel availability.
+
+
+    +   - Energy vector
+
+
+    If the features are always kept up, new data replaces old data so that the learning
+    model adapts to changes in the environment.
+
+
+    Once the model is trained, the test phase is performed with new vectors to predict
+    the state of channel of interest.
+
+
+    We assume the cases of a centralized network and one PU. In sensing time slot,
+    with received samples:
+
+
+    ```
+
+    $X_{q,m} = \sum_{n=1}^{L} |y(n)|^2$ (8)
+
+    ```
+
+
+    The energy vector of time slot q [22]:'
+  - '[PAGE 3]
+
+
+    ![](img/047efcf749577c595cbb945f3d5fdd9f_3_0.png)
+
+
+    Fig. 3. SVM classification [23].
+
+
+    The objective of the SVM is to find the hyperplane defined by w · x + b = 0 to
+    make data separable linearly, where w and b are respectively the normal vector
+    and the ordinate of the origin. If the decision is overlapping, the classification
+    function is follows:
+
+
+    ```
+
+    $f(x) = \text{sgn}(w \cdot x + b) \quad (14)$
+
+    ```
+
+
+    Generally, SVM is used to solve a linear classification problem, but it can also
+    be used as nonlinear classifier by introducing different kernel functions. The
+    hyperplane can be learned by solving the following convex programming problem:
+
+
+    A training group is supported as $(x_i, y_i)$ et $y_i \in \{-1, +1\}$ for $i=1..N$,
+
+
+    ```
+
+    $$\|w||^2 + C \sum_{i=1}^{N} \xi_i \quad (15.1)$
+
+    ```
+
+
+    ```
+
+    $y_i(w \cdot x_i + b) \geq 1 - \xi_i \quad i=1..N \quad (15.2)$
+
+    ```
+
+
+    ```
+
+    $\xi_i \geq 0, \quad i=1..N \quad (15.3)$
+
+    ```
+
+
+    Where C is a parameter and $\xi_i$ is slack variables for $i$-th data.
+
+
+    Because of the weakness of SNR, the detection of false automatic bandwidth sensing
+    in real time is difficult. In [25], the authors use the SVM algorithm for a binary
+    detection and detection at low SNR, by introducing two new feature extraction
+    methods as; Smoothed Correlation of Received Spectrum (SCRSS) and Variance of
+    Multiple Wavelet Average (MVWA) based on Gaussian basis function used. The overall
+    detection performance in terms of probability of detection $P_d$ and false alarm
+    $P_{fa}$ is less than 10.
+
+
+    Spatio-temporal joint detection of ML has been taken into account in [26], a new
+    realization strategy assisted by improving the capacity of SVM for both single
+    and multiple primary users in multi-antenna networks. In [27], the analysis of
+    three statistical characteristics extracted from the data will form the SVM classifier.
+
+
+    In [28], the authors use the SVM technique to solve the problem of SS data falsification
+    (SSDF) attacks. An optimal asymptotic property of the SVM scheme can achieve excellent
+    performance in regions with massive SU, low signal to noise ratio (SNR) and various
+    SSDF attack methods.
+
+
+    In [29] a collaborative SS based on SVM in cognitive IoT 5G network to reduce
+    energy consumption and spectrum usage.
+
+
+    +   - K-means
+
+
+    K-means is the most common algorithm used in unsupervised ML to partition data
+    into groups, which represents the clusters defined by the center. The first step
+    in the k-means algorithm is to define K. The algorithm begins by selecting k clusters
+    from the data set to set as the initial centers for the clusters. The clusters
+    are also called centers. Then, the remaining objects are assigned to its current
+    center, which is defined by the Euclidean distance between the object and center.
+    After the allocation, the algorithm calculates the new value for each cluster.
+    Now that the centers have been recalculated, the process is repeated until convergence.
+    All objects are assigned with updated cluster means. For cluster assignment and
+    clustering update are repeated until the groups are formed or as shown in the
+    previous method.
+
+
+    The clustering algorithm aims to minimize the squared distance of all the points
+    from their centroids over all the clusters:
+
+
+    ```
+
+    Training group is supported as $(x_i, y_i)$ $i=1..N$,$
+
+    $$\min \sum_{i=1}^{N} ||x_i - \mu_{y_i}\|^2 \quad (16)$
+
+    ```
+
+
+    Where $\mu_j$ is the center of $C_j$.
+
+
+    In [30],have used empirical Mode Decomposition and the wavelet transform to remove
+    noise components and then KMeans clustering algorithm is used to judge the primary
+    users. In [31], the K-means algorithm is used to detect the functioning of communication
+    samples by analysis of sample matrix and wavelet decomposition. Multiple detection
+    is formulated as a problem in which the clusters are used to divide occupied subband
+    and inactive band, the KMeans is used in [32], to evaluate the performance of
+    CSS in general- fading channels.
+
+
+    +   - Artificial Neural Networks (ANN) are the artificial processing structures
+    that are separated into strongly connected called artificial neurons whose structure
+    is inspired by functioning of biological neurons. Each neuron receives a number
+    of inputs from data streams. Each input neuron is associated with a weight which
+    represents the strength of the relationship between two neurons. Each neuron has
+    a single output which represents the inputs to next neurons. Layers in the input
+    and output are referred to as hidden layers. The learning process the weights
+    are modified in an ordered manner until they reach the desired [24].'
+  md: '
+
+    In AND rule, the FC decides the occupancy state of the channel by sharing the
+    sensed energy of each SU through the threshold $\lambda$ and then applying the
+    AND operation on the result.
+
+
+    ```
+
+    $\theta = \begin{cases} 1 & \text{if AND.AND}_m > 0 \\ 0 & \text{otherwise} \end{cases}$
+
+    ```
+
+
+    - OR rule
+
+
+    The OR rule is similar to the AND rule, in which it compares the energy level
+    from each SU to and then applies the logical operation on result.
+
+
+    # III. MACHINE LEARNING FOR SS
+
+
+    ### A. Motivation of ML techniques for SS
+
+
+    SS provides knowledge of spectrum capacity, and by this knowledge, the CR should
+    make intelligent decisions about actions relating to transmission and reception,
+    and constantly improve these decisions by taking advantage of past experiences.
+    Here, ML methods can be used for SS.
+
+
+    $X^q = (X_{q,1}, X_{q,2}, \dots, X_{q,M})$ (9)
+
+    After Q time slots, training data in case of supervised ML in CSS is as $\{(X^1,
+    Y^1), \dots, (X^Q, Y^Q)\}$, where $Y$ is label of energy vector $X^q$, representing
+    channel availability.
+
+
+    - Probability vector
+
+
+    If the number of SUs is small, the distribution of $X_{q,m}$ can be approximated
+    by a Gaussian distribution with mean $E(X_{q,m})$ and variance $\sigma^2_{q,m}$,
+    then $X^q$ follows a Gaussian distribution with mean $\mu_q$ and covariance $\Sigma_q$
+    [22]:
+
+
+    ```
+
+    $\mu_q = (E[X_{q,1}], E[X_{q,2}], \dots, E[X_{q,M}])$, $\Sigma_q = \text{diag}(\sigma^2_{q,1},
+    \sigma^2_{q,2}, \dots, \sigma^2_{q,M})$ (11)
+
+    ```
+
+
+    Each $X^q$ are considered to be independent of each other $Y$ is diagonal. The
+    probability density function (PDF) of energy vector $X^q$:
+
+
+    ```
+
+    $f(Y^q|X^q, \Sigma_q) = \frac{1}{\sqrt{(2\pi)^M|\Sigma_q|}} \exp(-\frac{1}{2}(Y^q-\mu_q)^T\Sigma_q^{-1}(Y^q-\mu_q))$
+
+    ```
+
+    ![](img/047efcf749577c5bb945f3d5fdd_0.png)
+
+    Fig. 2. Relation between learning and cognition.
+
+
+    The values of $\mu_q$ and $\Sigma_q$ are different in $H_0$ and $H_1$.
+
+
+    ```
+
+    $P(H_i) = \frac{f(Y^q|X^q, \mu_{q,i}, \Sigma_{q,i})P(H_i)}{f(Y^q|X^q, \mu_{q,0},
+    \Sigma_{q,0})P(H_0) + f(Y^q|X^q, \mu_{q,1}, \Sigma_{q,1})P(H_1)}$ (13)
+
+    ```
+
+    are the probabilities in two cases $H_0, H_1$.
+
+
+    ### C. Machine Learning techniques
+
+
+    ML is field of artificial intelligence that builds models from data to predict
+    future states. ML techniques have been used in tasks such as classification, regression,
+    and clustering. Supervised learning works in two phases: the training phase and
+    the test phase. The manner are mainly divided into types: Supervised learning,
+    Unsupervised learning, and reinforcement learning. The objective is to build model
+    learning to a set of output values (e.g., Support Vector SVM). Unsupervised learning
+    indicates where data is not labeled.
+
+
+    - Support Vector SVM
+
+
+    The Support Vector Machine (SVM) or ridge-margin is a supervised classification
+    method based on early work by Vapnik and Chervonenkis in 1995. In order to classify
+    data already classified into two categories
+
+
+    ### B. Extraction features
+
+
+    One of most important steps in building an effective learning model is feature
+    extraction. In this set, the number of features used to build model in SS context
+    indicates whether feature vectors are available or unavailable to channel availability.
+
+
+    If the features are always kept up, new data replaces old data so that learning
+    model adapts to changes in environment. Once the model is trained, the test phase
+    is performed with new vectors to predict the state of channel of interest. We
+    assume cases of centralized network and one PU. In sensing time slot, with received
+    samples:
+
+
+    ```
+
+    $X_{q,m} = \sum_{n=1}^{L} |y(n)|^2$ (8)
+
+    ```
+
+    The energy vector of time slot q [22]:
+
+
+    ![](img/047efcf749577c5bb945f3d5fdd_3.png)
+
+    Fig. 3. SVM classification [23].
+
+
+    The objective of the SVM is to find the hyperplane defined by $w \cdot x + b =
+    0$ to make data separable linearly, where $w$ and $b$ are respectively the normal
+    vector and the ordinate of the origin. If decision is overlapping, the classification
+    function follows:
+
+
+    ```
+
+    $f(x) = \text{sgn}(w \cdot x + b)$ (14)
+
+    ```
+
+    Generally, SVM is used to solve a linear classification problem, but it can also
+    be used as nonlinear classifier by introducing different kernel functions. The
+    hyperplane can be learned by solving the following convex programming problem:
+    A training group supported as $(x_i, y_i)$ et $y_i \in \{-1, +1\}$ for $i=1..N$,
+
+
+    ```
+
+    $$\|w\|^2 + C \sum_{i=1}^{N} \xi_i \quad (15.1)
+
+    ```
+
+    ```
+
+    $y_i(w \cdot x_i + b) \geq 1 - \xi_i \quad i=1..N \quad (15.2)
+
+    ```
+
+    ```
+
+    $\xi_i \geq 0, \quad i=1..N \quad (15.3)
+
+    ```
+
+    Where $C$ is a parameter and $\xi_i$ is slack variables for $i$-th data.
+
+
+    Because of weakness of SNR, the detection of automatic bandwidth sensing in real
+    time is difficult. In [25], the authors use the SVM algorithm for binary detection
+    and detection at low SNR by introducing two new feature extraction methods as:
+    Smoothed Correlation of Received Spectrum (SCRSS) and Variance of Multiple Wavelet
+    Average (MVWA) based on Gaussian basis function. The overall detection performance
+    in terms of probability of detection $P_d$ and false alarm $P_{fa}$ is less than
+    10.
+
+
+    Spatio-temporal joint detection of ML has been taken into account in [26], a new
+    realization strategy assisted by improving the capacity of SVM for both single
+    and multiple primary users in multi-antenna networks. In [27], the analysis of
+    three statistical characteristics extracted from the data will form the SVM classifier.
+
+
+    In [28], the authors use the SVM technique to solve the problem of SS data falsification
+    (SSDF) attacks. An optimal asymptotic property of the SVM scheme can achieve excellent
+    performance in regions with massive SU, low signal to noise ratio (SNR) and various
+    SSDF attack methods.
+
+
+    In [29] a collaborative SS based on SVM in cognitive IoT 5G network to reduce
+    energy consumption and spectrum usage.
+
+
+    - K-means
+
+
+    K-means is the most common algorithm used in unsupervised ML to partition data
+    into groups, which represents the center. The first step in k-means algorithm
+    is to define K. The algorithm begins by selecting k clusters from the data to
+    set as initial centers for the clusters. The clusters are also called centers.
+    Then, the remaining objects are assigned to its current center, which is defined
+    by the Euclidean distance between object and center. After allocation, the algorithm
+    calculates new value for each cluster. Now that centers have been recalculated,
+    the process is repeated until convergence. All objects are assigned with updated
+    cluster means. The clustering algorithm aims to minimize squared distance of all
+    the points from their centroids over all clusters:
+
+
+    ```
+
+    $$\min \sum_{i=1}^{N} \|x_i - \mu_{y_i}\|^2 \quad (16)$$
+
+    ```
+
+    Where $\mu_j$ is the center of $C_j$.
+
+
+    In [30], use artificial processing structures that are separated into strongly
+    connected called artificial neurons whose structure is inspired by functioning
+    of biological neurons. Each neuron receives a number of inputs from data streams.
+    Each input neuron is associated with a weight which represents the strength of
+    the relationship between two neurons. Each neuron has a single output which represents
+    the inputs to next neurons. Layers in input and output are referred to as hidden
+    layers. The learning process the weights are modified in an ordered manner until
+    they reach the desired [24].
+
+
+    - Artificial Neural Networks (ANN)
+
+    '
+  mdcn: '
+
+    在 AND 规则中，融合中心（FC）通过共享每个辅助用户（SU）的感知能量并通过阈值 $\lambda$ ，然后对结果应用 AND 操作，来决定信道的占用状态。
+
+
+    ```
+
+    $\theta = \begin{cases} 1 & \text{if AND.AND}_m > 0 \\ 0 & \text{otherwise} \end{cases}$
+
+    ```
+
+
+    - OR 规则
+
+
+    OR 规则与 AND 规则类似，它比较来自每个 SU 的能量级，然后对结果应用逻辑操作。
+
+
+    # III. 用于频谱感知的机器学习
+
+
+    ### A. 机器学习技术用于 SS 的动机
+
+
+    频谱感知（SS）提供了频谱容量的知识，通过这些知识，认知无线电（CR）应该对传输接收传输做出智能决策，并利用过去的经验不断改进这些决策。在这里，机器学习方法可以用于
+    SS。
+
+
+    $X^q = (X_{q,1}, X_{q,2}, \dots, X_{q,M})$ (9)
+
+    在 Q 个时隙后，CSS 中监督学习情况的训练数据为 $\{(X^1, Y^1), \dots, (X^Q, Y^Q)\}$，其中 $Y$ 是能量向量 $X^q$
+    的标签，代表信道可用性。
+
+
+    - 概率向量
+
+
+    如果 SU 的数量较少，$X_{q,m}$ 的分布可以用均值为 $E(X_{q,m})$、方差为 $\sigma^2_{q,m}$ 的高斯分布近似，那么 $X^q$
+    服从均值为 $\mu_q$ 协方差为 $\Sigma_q$ 的高斯分布 [22]：
+
+
+    ```
+
+    $\mu_q = (E[X_{q,1}], E[X_{q,2}], \dots, E[X_{q,M}])$, $\Sigma_q = \text{diag}(\sigma^2_{q,1},
+    \sigma^2_{q,2}, \dots, \sigma^2_{q,M})$ (11)
+
+    ```
+
+
+    每个 $X^q$ 被视为相互独立，$Y$ 是对角的。能量向量 $X^q$ 的概率密度函数 (PDF)：
+
+
+    ```
+
+    $f(Y^q|X^q, \Sigma_q) = \frac{1}{\sqrt{(2\pi)^M|\Sigma_q|}} \exp(-\frac{1}{2}(Y^q-\mu_q)^T\Sigma_q^{-1}(Y^q-\mu_q))$
+
+    ```
+
+    ![](img/047efcf749577c5bb945f3d5fdd_0.png)
+
+    图 2. 学习与认知的关系。
+
+
+    $\mu_q$ 和 $\Sigma_q$ 的值在 $H_0$ 和 $H_1$ 中不同。
+
+
+    ```
+
+    $P(H_i) = \frac{f(Y^q|X^q, \mu_{q,i}, \Sigma_{q,i})P(H_i)}{f(Y^q|X^q, \mu_{q,0},
+    \Sigma_{q,0})P(H_0) + f(Y^q|X^q, \mu_{q,1}, \Sigma_{q,1})P(H_1)}$ (13)
+
+    ```
+
+    是两种情况 $H_0, H_1$ 的概率。
+
+
+    ### C. 机器学习技术
+
+
+    机器学习是人工智能的一个领域，通过从数据中构建模型来预测未来状态。机器学习技术已用于分类、回归和聚类等任务。监督学习分为两个阶段：训练阶段和测试阶段。方法主要分为几类：监督学习、无监督学习和强化学习。其目标是构建一个学习一组输出值的模型（例如，支持向量机
+    SVM）。无监督学习指的是数据未标记的情况。
+
+
+    - 支持向量机 SVM
+
+
+    支持向量机（SVM）或岭边界（margin）是基于 Vapnik 和 Chervonenkis 在 1995 年早期工作的一种有监督分类方法。为了对已经分类为两类的数据进行分类
+
+
+    ### B. 特征提取
+
+
+    构建有效学习模型最重要的步骤之一是特征提取。在这一组中，SS 语境下用于构建模型的特征数量表示了用于信道可用性的特征向量是否可用或不可用。
+
+
+    如果特征始终保持更新，新数据将替换旧数据，以便学习模型适应环境的变化。一旦模型训练完成，将使用新向量进行测试阶段，以预测感兴趣的信道状态。我们假设了中心化网络和单主用户（PU）的情况。在感知时隙中，带有接收到的样本：
+
+
+    ```
+
+    $X_{q,m} = \sum_{n=1}^{L} |y(n)|^2$ (8)
+
+    ```
+
+    时隙 q 的能量向量 [22]：
+
+
+    ![](img/047efcf749577c5bb945f3d5fdd_3.png)
+
+    图 3. SVM 分类 [23]。
+
+
+    SVM 的目标是找到由 $w \cdot x + b = 0$ 定义的超平面，使数据线性可分。$w$ 和 $b$ 分别是超平面的定义。通常，SVM 用于解决线性分类问题，通过引入不同的核函数可以用于非线性：
+
+
+    ```
+
+    $f(x) = \text{sgn}(w \cdot x + b)$ (14)
+
+    ```
+
+    其中 $y_i \in \{-1, +1\}$ 对于 $i=1..N$，
+
+
+    ```
+
+    $$\|w\|^2 + C \sum_{i=1}^{N} \xi_i \quad (15.1)
+
+    ```
+
+    其中 $C$ 是一个参数，xi_i$ 是数据的松弛变量。
+
+
+    ```
+
+    $\xi_i \ge 0 \quad (15.2)
+
+    ```
+
+    ```
+
+    $\xi_i \ge 0 \quad (15.3)
+
+    ```
+
+    对于 $i=1..N$。
+
+
+    由于信噪比（SNR）的脆弱性，实时的自动检测是困难的。在 [25] 中，作者在低信噪比检测中引入了两种新的特征提取方法：接收频谱平滑相关 (CRSS) 和多波差平均
+    (MVWA)，基于高斯基函数。
+
+
+    时空联合检测在 [26] 中被考虑，这种策略改进了天线网络中单多主用户的 SVM 容量。[27] 中，从数据中提取的三个统计特征将形成 SVM 分类器。
+
+
+    [28] 中，作者使用 SVM 技术解决 SS 数据伪造（SSDF）攻击问题。
+
+
+    [29] 中，基于 SVM 的认知物联网 5G 网络协作 SS 以减少能量消耗和频谱使用。
+
+
+    - K-means
+
+
+    K-means 是无监督机器学习中最常用的算法，用于将数据划分为组，代表中心。k-means 算法的第一步是定义 K。算法开始从数据中选择 k 个类作为这些类的初始中心。这些类也被称为中心。然后，将剩余的对象分配给其当前中心，中心由对象与中心之间的欧式距离定义。分配完成后，算法计算每个类的新值。现在中心已经重新计算，重复该过程直到收敛。所有对象都分配到更新后的类均。聚类算法旨在最小化所有点到其质心的平方距离：
+
+
+    [30] 使用强连接的人处理结构称为人工神经元，其结构受到生物神经元功能的启发。每个神经元接收来自数据流的多个输入。每个输入神经元与权重相关，权重表示两个神经元之间关系的强度。每个神经元都有一个输出，代表后续神经元的输入。输入层和输出层被称为隐藏层。学习过程按顺序修改权重，直到达到预期
+    [24]。
+
+
+    - 人工神经网络 (ANN)
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 4]
+
+
+    +   * P(B|A) is called likelihood.
+
+
+    Bayesian learning can convert the conditional probability and prior probability
+    to a posterior probability and perform the decision classification of the channel
+    occupancy based on such a posterior probability [36].
+
+
+    In [37], on cooperative spectrum detection for the large-scale heterogeneous network,
+    Bayesian ML and exploiting the cooperation of several SUs to collect data SS.
+    They developed a non parametric Bayesian learning model, as referred to process
+    this specific hidden Markov model (BP-SHMM), to capture the temporal correlation
+    in the collected data, SHMM models the latent statistic correlation within each
+    mobile SU''s time series data, while BP represents the cooperation among multiple
+    SUs. Bayesian inference is then carried out automatically on the heterogeneous
+    spectrum states. [33] Clustering is done on the basis of Bayesian learning. Clustering
+    is performed by the intra-cluster CSS and the inter-cluster CSS. An optimal sensing
+    threshold for the intra-cluster CSS is achieved by minimizing the total cost K-means
+    is used to identify CR nodes and select the cluster heads.
+
+
+    +   * Naive Bayes
+
+
+    ![](img/047efcf749577c595cbb945f3d5fdd9f_4_0.png)
+
+
+    # $y = \sum(j) w_j x_j + b$
+
+
+    $[x_1, ..., x_n]: The input of some neuron comes from neurons of the preceding
+    layer, or from the environment.
+
+
+    $w_j$ : The weight between a neuron of one layer and the other neuron of the next
+    layer.
+
+
+    $f$: The activation function defines of the value of the state of the neuron.
+
+
+    ![](img/047efcf749577c595cbb945f3d5fdd9f_4_1.png)
+
+
+    the authors of [33] proposed to use the energy value from energy detection and
+    the Statistic from the likelihood ratio statistic data to train the ANN algorithm
+    for spectrum detection. Neural networks, feed forward NN and elman NN. This shows
+    that the perceptron neural network is more effective than the others NN.in [35],
+    the authors addressed the problem of computing the time required for Cooperative
+    Sensing the ANN technique for decision support. The Gradient Based Spectrum Sensing
+    (GBSS) model is used in SU under noise floor conditions, and then the local decisions
+    of CR users are merged by the FC using algorithm and the result is validated on
+    a test scenario. The results show that the proposed model is better than traditional
+    decision fusion in terms of detection performance and time computation.
+
+
+    Naive Bayes(NB) is a classifier based on the application of Bayes ''theorem with
+    a simplifying assumption regarding the energy level on SU by considering that
+    there is a q value, and $x_m$, for m=1 to M, are independent.
+
+
+    ```
+
+    $f(X^H|H_1) = \prod f(x_m|H_1)j=0-1$
+
+    ```
+
+
+    probability density function
+
+
+    ```
+
+    $P(H_1|X^H) = \frac{f(X^H|H_1)P(H_1)}{f(X^H|H_1)P(H_1) + f(X^H|H_0)P(H_0)}$
+
+    ```
+
+
+    ```
+
+    $U_{NB} = P(H_1|X^H) - 1 - P^*(H_0)$
+
+    ```
+
+
+    otherwise
+
+
+    * target false alarm probability.
+
+
+    $P(H_1), P(H_0)$ are the prior probabilities of hypothesis.
+
+
+    +   * Bayesian Learning
+
+
+    Bayesian learning uses Bayes'' theorem to determine the conditional probability
+    of a hypothesis given evidence or observations.
+
+
+    +   * Given two events A and B:
+
+
+    ```
+
+    Bayes'' theorem : $p(A|B) = \frac{p(B|A)p(A)}{p(B)}$
+
+    ```
+
+
+    +   * P(A) is the prior probability A
+
+
+    +   * P(B) is the probability of evidence B.
+
+
+    +   * P(A|B) is the posterior probability.
+
+
+    Other methods may have fuzzy c-means technique is applied for SS in [39], for
+    energy detection. In [40], the proposed Genetic Algorithm (GA) for decision support
+    in CSS for Internet of Things applications. In [41], an efficient Cooperative
+    Wideband spectrum technique uses Regression techniques as well as compressive
+    sensing to improve performance.'
+  - '[PAGE 5]
+
+
+    +   • Deep Learning
+
+
+    Deep Learning (DL) is a subset of ML and a hierarchical level of Artificial Neural
+    Networks to carry out the learning process.
+
+
+    +   • Convolutional Neural Network (CNN) is a DL approach, consisting of an input
+    layer and an output layer, as several hidden layers. The hidden layers of the
+    CNN generally consist of convolutional layers, activation functions, pooling layers
+    and normalization layers.
+
+
+    +   • Convolutional layer: A layer composed of a filters, each applied to the
+    entire input vector. Each filter consists of k weights (or values) ; each weight
+    is a parameter of the model to be learned.
+
+
+    +   • Pooling layer: The pooling operation is a form of reducing the spatial size
+    of the input data, while retaining its important features. After several layers
+    of convolution and pooling, high-level features in the neural network are done
+    via fully connected layers. Neurons in a fully connected layer have connections
+    to all of the outputs in the previous layer.
+
+
+    +   Correction layer: if it is possible to improve the efficiency of the processing
+    by inserting between the processing layers a layer, which will increase the function
+    on the output signals.
+
+
+    simulations with 5*10 realisations based on three supervised ML models (Multilayer
+    Perceptron (MLP)) as a class of featured ANN with one hidden layer size equal
+    to the number of inputs and using linear and Gaussian kernels and NB.
+
+
+    | Parameters | Value |
+
+    | --- | --- |
+
+    | Bandwidth | 5 MHz |
+
+    | PU number | |
+
+    | SU number | 3 |
+
+    | PU active probability | P(Hu)=0.5 |
+
+    | PU performance | |
+
+    | Spectrum sensing | 5us |
+
+    | Noise Psd | -153dB/Hz |
+
+    | Training samples | 1000 |
+
+    | SU_PU probability | |
+
+    | ST_PU distance | 750m |
+
+    | SU_PU distance | |
+
+
+    ML techniques are compared with traditional methods ANDRule, ORkrule, and MRC,
+    based on energy level with the system parameters defined in Table I. We show the
+    results of channel status inference using ROC.
+
+
+    # A. CSS performance in AWGN channel
+
+
+    Fig.7 shows the receiver Operating Characteristic (ROC) curve for measured techniques
+    for AWGN channel, MRC shows good performance and we can notice the upper bound
+    on performance of ML techniques by the Linear SVM followed by the Gaussian SVM.
+
+
+    ![](img/047efcf749577c595cbb945f3d5fdd9f_5_0.png)
+
+
+    Fig. 6 CNN architecture [4].
+
+
+    ![](img/047efcf749577c595cbb945f3d5fdd9f_5_1.png)
+
+
+    In [44] CNN-based collaborative sensing was proposed, which improves the sensing
+    performance and reduces the complexity. The authors found that with this method,
+    detection is accurate when the number of training samples is small. [44] CNN is
+    used for the PU sensing at low-signal mode.The model is trained by cyclostationary
+    features.
+
+
+    +   • Recurrent Neural Networks. Recurrent Neural Network (RNN) is a type of ANN
+    commonly used in signal recognition and natural language processing. RNNs are
+    designed to recognize the characteristics of data and to predict the next item
+    in sequence. Long Short Term Memory (LSTM) blocks are part of a RNN structure.
+    RNNs are designed to use certain types of artificial memory processes that can
+    help artificial intelligence mimic human thought. In [47], Recurrent CNN is applied
+    to improve the classification performance of the CSS. CNN approach is used to
+    reduce the amount of data entering the LSTM LSTM layer.
+
+
+    ![](img/047efcf749577c595cbb945f3d5fdd9f_5_2.png)
+
+
+    (a).ROC curve
+
+
+    # IV. RESULTS AND DISCUSSION
+
+
+    The application focuses on centralized CSS under AWGN and Rayleigh fading channels
+    with Monte-Carlo
+
+
+    (b).Zoom into the ROC'
+  - '[PAGE 6]
+
+
+    # B. CSS performance in case of Rayleigh channel
+
+
+    On the other hand, when considering a Rayleigh fading function, ML techniques
+    were able to achieve better performance than MRC, as can be seen in Fig.8,
+
+
+    Fig. 9 shows the variance in the probability of detection depending on the size
+    of the training data for each ML technique mentioned above, we clearly see that
+    the probability of detection starts after the 500.
+
+
+    # V. CONCLUSION
+
+
+    In this paper, we presented an overview of Machine Learning techniques for Cooperative
+    Spectrum Sensing, and some studies that applied in this context. In addition,
+    we compared ML techniques, SYM with Linear and Gaussian kernels, a feed-forward
+    Neural Network with traditional techniques. AND rule and MRC for case of AWGN
+    channel and for Rayleigh channel, channel status ensured revealed on ROC curve.
+    We concluded that all ML models performed closely to the MRC under AWGN channels.
+    Under Rayleigh fading channel, all ML techniques, outperformed the variation in
+    SNR levels of secondary users during their sensing period and SYM with Gaussian
+    kernel is the optimum ML technique.
+
+
+    ![](img/047efcf749577c595cbb945f3d5fdd9f_6_0.png)
+
+
+    (a)ROC curve
+
+
+    ![](img/047efcf749577c595cbb945f3d5fdd9f_6_1.png)
+
+
+    (b)Zoom into the ROC
+
+
+    # REFERENCES
+
+
+    +   [1] Shekhar Gupta M., Kumar K., Progression on spectrum sensing for cognitive
+    radio networks: A survey,classification and fusion issues. Journal of Network
+    and Computer Applications 143 (2017) 47-76.
+
+
+    +   [2] D. T, A. Benjamin, Darley W., Survey on sensing sharing/allocation for
+    cognitive radio network interests. Internet of Electronic Informatics, 2019;doi:10.1016/j.futureie.2019.02.00223
+
+
+    +   [3] M. Morin, A. G. Q., Classification of software tools more popular than
+    Personal Computer, 64 (2016), 13-18.
+
+
+    +   [4] Wikipedia, Intelligent, https://en.wikipedia.org/wiki/Intelligent_agent
+    (accessed 25 May 2020)
+
+
+    +   [5] L. Wahab, A. Massallah, A Classification of the Spectrum Sensing Techniques
+    for Cognitive Radio (Volume 8-Issue 4, 2012).
+
+
+    +   [6] El Ghazi H., Kaabouch N., Matched filter detection for dynamic spectrum
+    for cognitive radio networks; IEEE Wireless Network and Mobile Communications
+    Communications, 17 (2020) 23-30.
+
+
+    +   [7] Arrouze J., Elrabat Z., El Ghazi H., Tamashti A. Spectrum Sensing: Enhanced
+    energy detection technique for noise measurement; Performance and evaluation results.
+    In Conference and Las Vegas, USA, Nov. 8-10 (2018): 828.
+
+
+    +   [8] Reyes H., Hammoud S., Kaabouch N. Spectrum sensing technique based on
+    autocorrelation and Euclidean distance and its comparison with energy detection
+    for cognitive radio networks. J. Comput. Soft. Eng. 102 (2015) 5-63. doi:10.1016/j.jcse.2015.05.015.
+
+
+    MRC considers an SNR level over each sensing period, under which a Rayleigh fading
+    channel varies for each sensing period. We can notice that the SYM with Gaussian
+    kernel performs well MLP and NB not have high detection probability. In order
+    to assess the effects of training samples on the probability of detection for
+    ML techniques, we used training data from 25 to 1000
+
+
+    ![](img/047efcf749577c595cbb945f3d5fdd9f_6_2.png)
+
+
+    Fig. 9. Variation of the probability for detection for different training sizes
+    under Rayleigh channels.
+
+
+    +   [9] Gardner, W. A. Exploration of spectral detection in cognitive signal processing.
+    IEEE Signal Process. Mag. 20 (2003) 54-63.
+
+
+    +   [10] Edwards, A.F., Caballer, R.G., 2015. Experimental evaluation of performance
+    for spectrum sensing: matched filter v/s energy detector. In: IEEE Conference
+    on Communications and Computing (ICC), 2015, 1-6.
+
+
+    +   [12] Sun, H., Hananathan, A., Wang, C.; Chen, Y. Wideband spectrum sensing
+    for cognitive radio networks: A survey. IEEE Rural. Commun. 2013, 29, 73-84.'
+  md: '
+
+    - * P(B|A) is called likelihood.
+
+
+    Bayesian learning can convert the conditional probability and prior probability
+    to a posterior probability and perform the decision classification of the channel
+    occupancy based on such a posterior probability [36].
+
+
+    In [37], on cooperative spectrum detection for the large-scale heterogeneous network,
+    Bayesian ML and exploiting the cooperation of several SUs to collect data SS.
+    They developed a non parametric Bayesian learning model, as referred to process
+    this specific hidden Markov model (BP-SHMM), to capture the temporal correlation
+    in the collected data, SHMM models the latent statistic correlation within each
+    mobile SU''s time series data, while BP represents the cooperation among multiple
+    SUs. Bayesian inference is then carried out automatically on the heterogeneous
+    spectrum states. [33] Clustering is done on the basis of Bayesian learning. Clustering
+    is performed by the intra-cluster CSS and the inter-cluster CSS. An optimal sensing
+    threshold for the intra-cluster CSS is achieved by minimizing the total cost K.
+    K-means is used to identify CR nodes and select the cluster heads.
+
+
+    - * Naive Bayes
+
+
+    ![](img/047efcf749577c595cbb945f3d5fdd9f_4_0.png)
+
+
+    # $y = \sum(j) w_j x_j + b$
+
+
+    $[x_1, ..., x_n]$: The input of some neuron comes from neurons of the preceding
+    layer, or from the environment.
+
+
+    $w_j$ : the weight between a neuron of one layer and the other neuron of the next
+    layer.
+
+
+    $f$: the activation function defines the value of the state of the neuron.
+
+
+    ![](img/047efcf749577c595cbb945f3d5fdd9f_4_1.png)
+
+
+    the authors of [33] proposed to use the energy value from energy detection and
+    the Statistic from the likelihood ratio statistic data to train the ANN algorithm
+    for spectrum detection. Neural networks, feed forward NN and elman NN. This shows
+    that the perceptron neural network is more effective than the others NN. in [35],
+    the authors addressed the problem of computing the time required for Cooperative
+    Sensing the ANN technique for decision support. The Gradient Based Spectrum Sensing
+    (GBSS) model is used in SU under noise floor conditions, and then the local decisions
+    of CR users are merged by the FC using algorithm and the result is validated on
+    a test scenario. The results show that the proposed model is better than traditional
+    decision fusion in terms of detection performance and time computation.
+
+
+    Naive Bayes(NB) is a classifier based on the application of Bayes'' theorem with
+    a simplifying assumption regarding the energy level on SU by considering that
+    there is a q value, and $x_m$, for m=1 to M, are independent.
+
+
+    ```
+
+    $f(X^H|H_1) = \prod f(x_m|H_1)j=0-1$
+
+    ```
+
+    probability density function
+
+
+    ```
+
+    $P(H_1|X^H) = \frac{f(X^H|H_1)P(H_1)}{f(X^H|H_1)P(H_1) + f(X^H|H_0)P(H_0)}$
+
+    ```
+
+
+    ```
+
+    $U_{NB} = P(H_1|X^H) - 1 - P^*(H_0)$
+
+    ```
+
+    otherwise
+
+
+    - target false alarm probability.
+
+
+    $P(H_1), P(H_0)$ are the prior probabilities of hypothesis.
+
+
+    - * Bayesian Learning
+
+
+    Bayesian learning uses Bayes'' theorem to determine the conditional probability
+    of a hypothesis given evidence or observations.
+
+
+    - * Given two events A and B:
+
+
+    ```
+
+    Bayes'' theorem : $p(A|B) = \frac{p(B|A)p(A)}{p(B)}$
+
+    ```
+
+
+    - * P(A) is the prior probability A
+
+
+    - * P(B) is the probability of evidence B.
+
+
+    - * P(A|B) is the posterior probability.
+
+
+    Other methods may have fuzzy c-means technique is applied for SS in [39], for
+    energy detection. In [40], the proposed Genetic Algorithm (GA) for decision support
+    in CSS for Internet of Things applications. In [41], an efficient Cooperative
+    Wideband spectrum technique uses Regression techniques as well as compressive
+    sensing to improve performance.
+
+
+    - • Deep Learning
+
+
+    Deep Learning (DL) is a subset of ML and a hierarchical level of Artificial Neural
+    Networks to carry out the learning process.
+
+
+    - • Convolutional Neural Network (CNN) is a DL approach, consisting of an input
+    layer and an output layer, as several hidden layers. The hidden layers of the
+    CNN generally consist of convolutional layers, activation functions, pooling layers
+    and normalization layers.
+
+
+    - • Convolutional layer: a layer composed of a filters, each applied to the entire
+    input vector. Each filter consists of k weights (or values) ; each weight is a
+    parameter of the model to be learned.
+
+
+    - • Pooling layer: the pooling operation is a form of reducing the spatial size
+    of the input data, while retaining its important features. After several layers
+    of convolution and pooling, high-level features in the neural network are done
+    via fully connected layers. Neurons in a fully connected layer have connections
+    to all of the outputs in the previous layer.
+
+
+    - • Correction layer: if it is possible to improve the efficiency of the processing
+    by inserting between the processing layers a layer, which will increase the function
+    on the output signals.
+
+
+    simulations with 5*10 realisations based on three supervised ML models (Multilayer
+    Perceptron (MLP)) as a class of featured ANN with one hidden layer size equal
+    to the number of inputs and using linear and Gaussian kernels and NB.
+
+
+    | Parameters | Value |
+
+    | --- | --- |
+
+    | Bandwidth | 5 MHz |
+
+    | PU number | 3 |
+
+    | PU active probability | P(Hu)=0.5 |
+
+    | PU performance | 5us |
+
+    | Spectrum sensing | -53dB/Hz |
+
+    | Training samples | 1000 |
+
+    | SU_PU probability | 750m |
+
+    | SU_PU distance | |
+
+
+    ML techniques are compared with traditional methods AND, ORrule, and MRC, based
+    on energy level with the system defined in Table I. We show the results of channel
+    status using ROC.
+
+
+    # A. CSS performance in AWGN channel
+
+
+    Fig.7 shows the receiver Operating (ROC) curve for measured techniques for AWGN
+    channel, MRC shows good performance and we can notice the upper bound on performance
+    of ML techniques by the Linear SVM.
+
+
+    ![](img/047efcf749577c595cbb945f3d5fdd9f_5_0.png)
+
+
+    Fig. 6 CNN architecture [4].
+
+
+    ![](img/047efcf749577c595cbb945f3d5fdd9f_5_1.png)
+
+
+    In [44] CNN-based collaborative sensing was proposed, which improves the sensing
+    performance and reduces the complexity. The authors found that with this method,
+    detection is accurate when the number of samples is small. [44] CNN is used for
+    PU sensing at low-signal mode. model is trained by cyclostationary features.
+
+
+    - Recurrent Neural Networks. Recurrent Neural Network (RNN) is a type of ANN commonly
+    used in signal recognition and natural language processing. RNNs are designed
+    to recognize the characteristics of data and predict the next item in sequence.
+    Long Short Term Memory (LSTM) blocks are part of RNN structure. RNNs are designed
+    to use certain types of artificial memory that can help artificial intelligence.
+    In [47], Recurrent CNN is applied to improve the classification performance of
+    CSS. approach is used to reduce the amount of data entering LSTM layer.
+
+
+    ![](img/047efcf749577c595cbb945f3d5fdd9f_5_2.png)
+
+    (a).
+
+
+    # IV. RESULTS AND DISCUSSION
+
+
+    The application focuses on centralized CSS under AWGN and Rayleigh fading channels
+    with Monte-Carlo (b).
+
+
+    # B. CSS performance in case of Rayleigh channel
+
+
+    On the other hand, when considering a Rayleigh fading, ML techniques were able
+    to achieve better performance than MRC, can be seen in Fig.8. Fig.9 shows the
+    variance in the probability of detection depending on the size of training data
+    for each ML technique mentioned above, we clearly see that the probability of
+    detection starts after 500.
+
+
+    # V. CONCLUSION
+
+
+    In this paper, we presented an overview of Machine Learning techniques for Cooperative
+    Spectrum Sensing, and some studies applied in this context. In addition, we compared
+    ML techniques, SYM with Linear and Gaussian kernels, a feed-forward Neural Network
+    with traditional techniques for AWGN channel and Rayleigh channel, channel status
+    revealed on ROC curve. We concluded that all ML models performed closely to MRC
+    under AWGN channels. Under Rayleigh fading channel, all ML techniques outperformed
+    the variation in SNR levels of secondary users during their sensing period and
+    SYM with Gaussian kernel is the optimum ML technique.
+
+
+    ![](img/047efcf749577c595cbb945f3d5fdd9f_6_0.png)
+
+    (a)
+
+
+    ![](img/047efcf749577c595cbb945f3d5fdd9f_6_1.png)
+
+    (b)
+
+
+    # REFERENCES
+
+
+    - [1] Shekhar Gupta M., Kumar K., Progression on spectrum sensing for cognitive
+    radio networks: A survey, classification and fusion issues. Journal of Network
+    and Computer Applications 143 (2017) 47-76.
+
+    - [2] D. T, A. Benjamin, Darley W., Survey on sensing sharing/allocation for cognitive
+    radio network interests. Internet of Electronic Informatics, 2019; doi:10.1016/j.futureie.2019.02223
+
+    - [3] M. Morin, A. G. Q., Classification of software tools more popular than Personal
+    Computer, 64 (2016), 13-18.
+
+    - [4] Wikipedia, Intelligent, https://en.wikipedia.org/wiki/Intelligent_agent
+    (accessed 25 May 2020)
+
+    - [5] L. Wahab, A. Massallah, A Classification of the Spectrum Sensing Techniques
+    for Cognitive Radio (Volume 8-Issue 4), 2012).
+
+    - [6] El Ghazi H., Kaabouch N., Matched filter detection for dynamic spectrum
+    for cognitive radio networks; IEEE Wireless Network and Mobile Communications,
+    17 (2020) 23-30.
+
+    - [7] Arrouze J., Elrabat Z., El Ghazi H., Tamashti A. Spectrum Sensing: Enhanced
+    energy detection technique for noise measurement; Performance and evaluation results.
+    In Conference and Las Vegas, USA, Nov. 8-10 (2018): 828.
+
+    - [8] Reyes H., Hammoud S., Kaabouch N. Spectrum sensing technique based on autocorrelation
+    and Euclidean distance and its comparison with energy detection for cognitive
+    radio networks. J. Comput. Soft. Eng. 102 (2015) 5-63. doi:10.1016/j.jcse.2015.05.015.
+
+    - [9] Gardner, W. A. Exploration of spectral detection in cognitive signal processing.
+    IEEE Signal Process. Mag. 20 (2003) 54-63.
+
+    - [10] Edwards, A.F., Caballer, R.G., 2015. Experimental evaluation of performance
+    for spectrum sensing: matched filter v/s energy detector. In: IEEE Conference
+    on Communications and Computing (ICC), 2015, 1-6.
+
+    - [12] Sun, H., Hananathan, A, Wang, C.; Chen, Y. Wideband spectrum sensing for
+    cognitive radio networks: A survey. IEEE Rural. Commun. 2013, 29, 73-84.
+
+    '
+  mdcn: "\n\n- * P(B|A) 被称为似然（likelihood）。\n\n贝叶斯学习可以将条件概率和先验概率转换为后验概率，并基于此类后验概率对信道占用进行决策分类\
+    \ [36]。\n\n在文献 [37] 中，针对大规模异构网络的协作频谱检测，利用了贝叶斯机器学习（ML）并利用多个辅助用户（SU）的协作来收集数据流（SS）。他们开发了一种非参数贝叶斯学习模型，称为处理这种特定的隐藏马尔可可夫模型（BP-SHMM），以捕获所收集数据中的时间相关性；SHMM\
+    \ 模型对每个移动 SU 的时间序列数据建模潜在统计相关性，而 BP 则代表多个 SU 之间的协作。随后，在异构频谱状态上自动进行贝叶斯推理。[33] 聚类是基于贝叶斯学习的。聚类通过类内\
+    \ CSS 和类间 CSS 完成。通过最小化总代价 $K$ 实现了类内 CSS 的优化的感知阈值。使用 K-means 算法来识别认知无线电（CR）节点并选择簇头。\n\
+    \n- * 朴素贝叶斯（Naive Bayes）\n\n![](img/047efcf749577c595cbb945f3d5fdd9f_4_0.png)\n\
+    \n# $y = \\sum(j) w_j x_j + b$\n\n$[x_1, ..., x_n]$：某些神经元的输入来自前一层神经元，或来自环境。\n\n\
+    $w_j$ ：某一层神经元与下一层神经元之间的权重。\n\n$f$：激活函数定义了神经元状态的值。\n\n![](img/047efcf749577c595cbb945f3d5fdd9f_4_1.png)\n\
+    \n文献 [33] 的作者提出使用来自能量检测的能量值和来自似然比统计数据的统计量来训练用于频谱检测的人工神经网络（ANN）算法。包括前馈神经网络和 Elman\
+    \ 神经网络。这表明感知器神经网络比其他神经网络更有效。在文献 [35] 中，作者解决了决策支持 ANN 技术计算协作感知所需时间的问题。在噪声底电条件下，SU\
+    \ 使用基于梯度的频谱感知（GBSS）模型，然后通过融合中心（FC）使用算法合并 CR 用户的局部决策，并在测试场景上验证了结果。结果表明，所提模型在检测性能和时间计算方面优于传统的决策融合。\n\
+    \n朴素贝叶斯（NB）是一种基于贝叶斯定理应用的分类器，它对 SU 能量电平进行了简化假设，考虑到存在 $q$ 值，且 $x_m$（对于 $m=1$ 到 $M$）是独立的。\n\
+    \n```\n$f(X^H|H_1) = \\prod f(x_m|H_1)j=0-1$\n```\n概率密度函数\n\n```\n$P(H_1|X^H)\
+    \ = \\frac{f(X^H|H_1)P(H_1)}{f(X^H|H_1)P(H_1) + f(X^H|H_0)P(H_0)}$\n```\n\n```\n\
+    $U_{NB} = P(H_1|X^H) - 1 - P^*(H_0)$\n```\n否则\n\n- 目标虚警概率。\n\n$P(H_1), P(H_0)$\
+    \ 是假设的先验概率。\n\n- * 贝叶斯学习\n\n贝叶斯学习使用贝叶斯定理来确定给定证据或观测值时假设的条件概率。\n\n- * 给定两个事件 A 和\
+    \ B：\n\n```\n贝叶斯定理：$p(A|B) = \\frac{p(B|A)p(A)}{p(B)}$\n```\n\n- * P(A) 是假设 A\
+    \ 的先验概率。\n\n- * P(B) 是证据 B 的概率。\n\n- * P(A|B) 是后验概率。\n\n其他方法可能将模糊均值（fuzzy c-means）技术应用于文献\
+    \ [39] 中的频谱感知（SS）。在文献 [40] 中，提出的遗传算法（GA）用于物联网的决策支持。在文献 [41] 中，高效的宽带频谱技术使用了压缩感知来提高性能。\n\
+    \n- 深度学习\n\n深度学习（DL）是机器学习（ML）的一个子集，利用分层的人工神经网络执行学习过程。\n\n- • 卷积神经网络（CNN）是一种深度学习方法，由输入层、输出层以及若干隐藏层组成。CNN\
+    \ 的隐藏层通常由卷积层、激活函数、池化层和标准化层组成。\n\n- • 卷积层：由滤波器组成，应用于整个输入向量。每个滤波器由 $k$ 个权重（或值）；每个权重都是待学习模型的参数。\n\
+    \n- • 池化层：池化操作是缩小输入数据尺寸的形式，同时保留其重要特征。经过若干层卷积和池化层后，神经网络中的高层特征通过全连接层完成。全连接层中的神经元与上一层的所有输出连接。\n\
+    \n- • 修正层：如果在处理层之间插入一个层，可以提高处理效率。基于三个具有一个隐藏层的有监督机器学习模型（多层感知器 MLP）的仿真，使用线性和高斯核的\
+    \ NB（朴素贝叶斯）对比。\n\n| 参数 | 数值 |\n| --- | --- |\n| 带宽 | 5 MHz |\n| PU 数量 | 3 |\n\
+    | PU 激活概率 | P(Hu)=0.5 |\n| PU 性能 | -53dB/Hz |\n| 训练样本 | 1000 |\n| SU_PU 概率 | 750m\
+    \ |\n| SU_PU 距离 | |\n\n机器学习技术与传统的 AND、OR 规则以及基于能量电的 MRC 方法进行了比较。我们展示了使用 ROC 的通道状态结果。\n\
+    \n# A. AWGN 信道中的 CSS 性能\n\n图7 显示了用于 AWGN 信道的接收机工作（ROC）曲线，MRC 显示出良好的性能，我们可以通过线性\
+    \ SVM 注意到机器学习技术的性能上界。\n\n![](img/047efcf749577c595cbb945f3d5fdd9f_5_0.png)\n\n\
+    图 6 CNN 架构 [4]。\n\n![](img/047efcf749577c595cbb945f3d5fdd9f_5_1.png)\n\n在文献 [44]\
+    \ 中提出了基于 CNN 的协作感知，它提高了感知性能并降低了复杂度。作者发现，当样本数较少时，该方法的检测是准确的。文献 [44] CNN 用于低信号模式下的\
+    \ PU 感知，模型通过平稳特征进行训练。\n\n- 循环神经网络。循环神经网络（RNN）是一种常用于信号识别和自然语言处理的人工神经网络。RNN 设计用于识别数据特征并预测序列中的下一项。长短期记忆（LSTM）块是\
+    \ RNN 结构的一部分。RNN 设计用于某些类型的人工记忆，可以帮助人工智能。在文献 [47] 中，循环 CNN 用于提高 CSS 的分类性能。该方法用于减少进入\
+    \ LSTM 层的数据。\n\n![](img/047efcf749577c595cbb945f3d5fdd9f_5_2.png)\n(a)。\n\n# IV.\
+    \ 结果与讨论\n\n该应用关注在蒙特卡洛方法下 AWGN 和瑞利衰落信道下的集中化 CSS。\n\n# B. 瑞利信道下的 CSS 性能\n\n另一方面，考虑到瑞利衰落，机器学习技术能够获得比\
+    \ MRC 更好的性能，如图8所示。图9显示了上述每种机器学习技术取决于训练数据大小的检测概率变化，我们清楚地看到检测概率在500之后开始提高。\n\n#\
+    \ V. 结论\n\n在本文中，我们介绍了协作频谱感知的机器学习技术概述以及在该背景下应用的一些研究。此外，我们对比了 AWGN 信道和瑞利信道下具有线性和高斯核的\
+    \ SYM 与传统技术的前馈神经网络，通道状态在 ROC 曲线上显示。我们得出结论：在 AWGN 信道下，所有机器学习模型的性能与 MRC 接近。在瑞利衰落信道下，所有机器学习技术都优于辅助用户在感知期间的\
+    \ SNR 水平变化，高斯核 SYM 是优的机器学习技术。\n\n![](img/047efcf749577c595cbb945f3d5fdd9f_6_0.png)\n\
+    (a)\n\n![](img/047efcf749577c595cbb945f3d5fdd9f_6_1.png)\n(b)\n\n# \n\n- [1] Shekhar\
+    \ Gupta M., Kumar K., Cognitive无线网络频谱感知进展：调查、分类和融合问题。Journal of Network and Computer\
+    \ Applications 143 (2017) 47-76.\n- [2] D. T, A. Benjamin, Darley W., 认知无线网络兴趣感知共享/分配综述。Internet\
+    \ of Electronic Informatics, 2019; doi:10.1016/j.futureie.2019.02223\n"
+  merge: 0
+- raw:
+  - "[PAGE 7]\n\n[Ghashemi, A Sousa S E (2005) Collaborative spectrum sharing for\
+    \ opportunistic access in environment. In: IEEE International Symposium on Networking\
+    \ and Dynamic Spectrum Access, Baltimore, Nov 2005, pp. 131-136.\n\n[144] Ian\
+    \ Fayland Brandon F Ravikumar Balakrishnan, Cooperative spectrum sharing in cognitive\
+    \ networks: A survey. Computer Surveys, Volume 43, 4, March 2011.\n\n[155] Badmar\
+    \ Bennasserian. Performance of the cognitive radio. 2013, 3 cycle. doi:10.1109/fcc.203.\n\
+    \n[166] Ghosh S E (2007) Optimization of spectrum using for opportunistic access\
+    \ in cognitive radio networks. In: IEEE Consumer Communications and Networking\
+    \ Conference, Las Vegas, NV, USA, 7.\n\n[172] Aftakiz L, F Ef Balakrishnan R (2001)\
+    \ Cooperative spectrum sensing in cognitive radio networks: a survey. Phys Commun\
+    \ (Computer Engineering) 12(4), 345-360.\n\n[185] E. Vustikay, S. Perkins, \"\
+    On Collaborative Detection of TV Transmissions in quantum Spectrum Sharing\",\
+    \ In: IEEE International Conference on Communications, 2009.\n\n[199] G. Ganesan,\
+    \ T. Lim, \"Cooperative Spectrum Sensing in Cognitive Radio networks\", In: IEEE\
+    \ Access Network Symposium (ANS), 2008.\n\n[208] H. Arslan, \"Cognitive Radio,\
+    \ Software Defined Radio, and Adaptive Wireless Systems\", 2008.\n\n[219] wu L,\
+    \ Li S, Ma S., Ji Ja, \"Performance improvement for cooperative spectrum sensing\
+    \ using feature selection\", In: IEEE International Conference on Cognitive Radio,\
+    \ Radio, January 2012.\n\n[224] Y.-C. Liang, Intelligent Detection for Dynamic\
+    \ Spectrum and Wideband Spectrum Sensing, In: International Conference on Communication\
+    \ Technology, 2020, doi:10.1109/ICCT.2020.9198115.\n\n[235] Kumar Varma, A. M.,\
+    \ Feature based Wideband Spectrum Sensing in Cognitive Radio Networks, In: IEEE\
+    \ International Conference on Signal Processing, 2010.\n\n[246] AWE P. O., DELIGIANNIS,\
+    \ A., LAMBOTHARAN S., Spatio-Temporal Sensing in Cognitive Radio Networks Using\
+    \ Machine Learning Algorithms, In: IEEE International Conference on Computer Networks,\
+    \ 2018, doi:10.1109/ACCESS.2018.2825603, Vol. 6, 2018.\n\n[257] Jan S. U., Yu\
+    \ H. K., Performance Analysis of Spectrum Sensing Based on Support Vector Machine\
+    \ in Cognitive Radio Networks, 2018 IEEE International Conference on Cyber-Enabled\
+    \ Distributed Computing and Knowledge Discovery.. \n\n[268] Jithraj, S., Balu,\
+    \ S., Wu J., Cooperative spectrum sensing based on support vector machine with\
+    \ ssdd attack., In: IEEE Int. Conf. Communications, Kansas County, USA, May 2011.\n\
+    \n[279] Wang Y., Zhang Y., Pan S., Jiang Y., Wang J., A Spectrum Sensing Method\
+    \ Based on Machine Learning, Decomposition and K-Means Clustering Algorithms,\
+    \ In: Hindi, 2018, doi:10.1109/5645518.6840522\n\n[290] Le-jun, TAN-huang, YAN\
+    \ XI, Wang Han-rui. A k-means clustering based on blind multiuser spectrum sensing\
+    \ for the\n\ncognitive radio, J. of Central South University, 2018, 25(10):\n\n\
+    [232] Kumar K., Chen C., Jain J., Gangapathy R., Debbath S., Cooperative Sensing\
+    \ in Generalized-k Frequency Hopping, Second National Conference on Communication\
+    \ (NCC), 2016.\n\n[233] Y. R. Patel, D. C., López-Benz-Bernal, M., Artificial\
+    \ Neural Network Based Hybrid Spectrum Sensing for Cognitive Radio, 2018 IEEE\
+    \ 23rd International Conference on Radio Communications, 2018, doi:10.1109/IRC.2018.8297249\n\
+    \n[234] Singh R., R, A., ARTIFICIAL NEURAL NETWORK BASED SENSING For Cognitive\
+    \ Radio, In: IEEE Electronics and Computer Society Conference, 2017.\n\n[235]\
+    \ V. K., Mitra D.A, Neural Network Approach to Decision Spectrum Fusion for Wideband\
+    \ Spectrum, 2018 Conference on Information and Communication Technology.\n\n[236]\
+    \ Li X., Chen J., Yang L., Zhan Q., Wise detection for efficient spectrum sensing\
+    \ using Bayesian learning, IEEE Access 5 (2017) 20089-20100.\n\n[237] Xu Y., Cheng\
+    \ P., Chen J., Yi Y., Vietic B., Mobile Spectrum Sensing for Heterogeneous Networks:\
+    \ IEEE Transactions on Signal Processing, Vol. 66, 2018, doi:10.1109/TSPSP.2018.2789017.\n\
+    \n[238] Lu X., Zhang J., Zhang H., P., Intelligent cooperative spectrum sensing\
+    \ with Malicious Users, Hindawi, 2020, 10 pages.\n\n[239] J. P., Feng Y., Research\
+    \ on energy detection based on cooperative spectrum sensing. Digital Communications\
+    \ and Networks, 2 (2016) 196–202.\n\n[240] Khalli B., Zaid A., Mahmoud B., When\
+    \ Machine Learning Meets Cooperative Sampling for Wideband Spectrum. Available\
+    \ in <www.memore.com>\n\nmemore.com, 2020.\n\n[241] Md Zahandar Alam, Mark M.,\
+    \ Taha A., A State-of-the-Art Survey on Spectrum Sensing Using Deep Learning Architectures,\
+    \ IEEE, 2021.\n\n[242] Wang J., Chen J., Guo Y., and Robb S.: Deep cognitive spectrum\
+    \ sensing on convolutional neural networks, IEEE Corr., 2022.\n\n[243] Sarikhan\
+    \ R., Keynia F., Deep Cognitive Spectrum Utilizing Recurrent Recurrent Neural\
+    \ Networks, SquareMay, 2022, doi:10.2139/S0022-23-34441"
+  md: '
+
+    Ghashemi, A Sousa S E (2005) Collaborative spectrum sharing for opportunistic
+    access in environment. In: IEEE International Symposium on Networking and Dynamic
+    Spectrum Access, Baltimore, Nov 2005, pp. 131-136.
+
+
+    [144] Ian Fayland Brandon F Ravikumar Balakrishnan, Cooperative spectrum sharing
+    in cognitive networks: A survey. Computer Surveys, Volume 43, 4, March 2011.
+
+
+    [155] Badmar Bennasserian. Performance of the cognitive radio. 2013, 3 cycle.
+    doi: 10.1109/fcc.203.
+
+
+    [166] Ghosh S E (2007) Optimization of spectrum using for opportunistic access
+    in cognitive radio networks. In: IEEE Consumer Communications and Networking Conference,
+    Las Vegas, NV, USA, 7.
+
+
+    [172] Aftakiz L, F Ef Balakrishnan R (2001) Cooperative spectrum sensing in cognitive
+    radio networks: a survey. Phys Commun (Computer Engineering) 12(4), 345-360.
+
+
+    [185] E. Vustikay, S. Perkins, "On Collaborative Detection of TV Transmissions
+    in quantum Spectrum Sharing", In: IEEE International Conference on Communications,
+    2009.
+
+
+    [199] G. Ganesan, T. Lim, "Cooperative Spectrum Sensing in Cognitive Radio networks",
+    In: IEEE Access Network Symposium (ANS), 2008.
+
+
+    [208] H. Arslan, "Cognitive Radio, Software Defined Radio, and Adaptive Wireless
+    Systems", 2008.
+
+
+    [219] wu L, Li S, Ma S., Ji Ja, "Performance improvement for cooperative spectrum
+    sensing using feature selection", In: IEEE International Conference on Cognitive
+    Radio, Radio, January 2012.
+
+
+    [224] Y.-C. Liang, Intelligent Detection for Dynamic Spectrum and Wideband Spectrum
+    Sensing, In: International Conference on Communication Technology, 2020, doi:
+    10.1109/ICCT.2020.9198115.
+
+
+    [235] Kumar Varma, A. M., Feature based Wideband Spectrum Sensing in Cognitive
+    Radio Networks, In: IEEE International Conference on Signal Processing, 2010.
+
+
+    [246] AWE P. O., DELIGIANNIS, A., LAMBOTHARAN S., Spatio-Temporal Sensing in Cognitive
+    Radio Networks Using Machine Learning Algorithms, In: IEEE International Conference
+    on Computer Networks, 2018, doi: 10.1109/ACCESS.2018.2825603, Vol. 6, 2018.
+
+
+    [257] Jan S. U., Yu H. K., Performance Analysis of Spectrum Sensing Based on Support
+    Vector Machine in Cognitive Radio Networks, 2018 IEEE International Conference
+    on Cyber-Enabled Distributed Computing and Knowledge Discovery..
+
+
+    [268] Jithraj, S., Balu, S., Wu J., Cooperative spectrum sensing based on support
+    vector machine with ssdd attack., In: IEEE Int. Conf. Communications, Kansas County,
+    USA, May 2011.
+
+
+    [279] Wang Y., Zhang Y., Pan S., Jiang Y., Wang J., A Spectrum Sensing Method
+    Based on Machine Learning, Decomposition and K-Means Clustering Algorithms, In:
+    Hindi, 2018, doi: 10.1109/5645518.6840522
+
+
+    [290] Le-jun, TAN-huang, YAN XI, Wang Han-rui. A k-means clustering based on blind
+    multiuser spectrum sensing for the cognitive radio, J. of Central South University,
+    2018, 25(10):
+
+
+    [232] Kumar K., Chen C., Jain J., Gangapathy R., Debbath S., Cooperative Sensing
+    in Generalized-k Frequency Hopping, Second National Conference on Communication
+    (NCC), 2016.
+
+
+    [233] Y. R. Patel, D. C., López-Benz-Bernal, M., Artificial Neural Network Based
+    Hybrid Spectrum Sensing for Cognitive Radio, 2018 IEEE 23rd International Conference
+    on Radio Communications, 2018, doi: 10.1109/IRC.2018.8297249
+
+
+    [234] Singh R., R, A., ARTIFICIAL NEURAL NETWORK BASED SENSING For Cognitive Radio,
+    In: IEEE Electronics and Computer Society Conference, 2017.
+
+
+    [235] V. K., Mitra D.A, Neural Network Approach to Decision Spectrum Fusion for
+    Wideband Spectrum, 2018 Conference on Information and Communication Technology.
+
+
+    [236] Li X., Chen J., Yang L., Zhan Q., Wise detection for efficient spectrum
+    sensing using Bayesian learning, IEEE Access 5 (2017) 20089-20100.
+
+
+    [237] Xu Y., Cheng P., Chen J., Yi Y., Vietic B., Mobile Spectrum Sensing for
+    Heterogeneous Networks: IEEE Transactions on Signal Processing, Vol. 66, 2018,
+    doi: 10.1109/TSPSP.2018.2789017.
+
+
+    [238] Lu X., Zhang J., Zhang H., P., Intelligent cooperative spectrum sensing
+    with Malicious Users, Hindawi, 2020, 10 pages.
+
+
+    [239] J. P., Feng Y., Research on energy detection based on cooperative spectrum
+    sensing. Digital Communications and Networks, 2 (2016) 196–202.
+
+
+    [240] Khalli B., Zaid A., Mahmoud B., When Machine Learning Meets Cooperative
+    Sampling for Wideband Spectrum. Available in <www.memore.com>
+
+
+    memore.com, 2020.
+
+
+    [241] Md Zahandar Alam, Mark M., Taha A., A State-of-the-Art Survey on Spectrum
+    Sensing Using Deep Learning Architectures, IEEE, 2021.
+
+
+    [242] Wang J., Chen J., Guo Y., and Robb S.: Deep cognitive spectrum sensing on
+    convolutional neural networks, IEEE Corr., 2022.
+
+
+    [243] Sarikhan R., Keynia F., Deep Cognitive Spectrum Utilizing Recurrent Recurrent
+    Neural Networks, SquareMay, 2022, doi: 10.2139/S0022-23-34441
+
+    '
+  mdcn: '
+
+
+    Ghashemi, A Sousa S E (2005) 环境中机会性接入的协作频谱共享。在：IEEE网络与动态频谱接入国际研讨会，巴的摩，2005年11月，页码
+    131-136。
+
+
+    [144] Ian Fayland Brandon F Ravikumar Balakrishnan, 认知网络中的协作频谱共享：综述。Computer Surveys,
+    第43卷，第4期，2011年3月。
+
+
+    [155] Badmar Bennasserian. 认知无线电的性能。2013, 3个周期。doi: 10.1109/fcc.203。
+
+
+    [166] Ghosh S E (2007) 用于认知无线电网络中机会性接入的频谱优化。在：IEEE消费者通信与网络会议，美国内华达州拉斯维加斯，7月。
+
+
+    [172] Aftakiz L, F Ef Balakrishnan R (2001) 认知无线电网络中的协作频谱感知：综述。Phys Commun (Computer
+    Engineering) 12(4), 345-360。
+
+
+    [185] E. Vustikay, S. Perkins, "量子频谱共享中电视传输的协作检测",在：IEEE国际通信会议，2009年。
+
+
+    [199] G. Ganesan, T. Lim, "认知无线电网络中的协作频谱感知",在：IEEE 接入网络研讨会 (ANS)，2008年。
+
+
+    [208] H. Arslan, "认知无线电、软件定义无线电与自适应无线系统",2008。
+
+
+    [219] wu L, Li S, Ma S., Ji Ja, "基于特征选择的协作频谱感知性能提升",在：IEEE认知无线电、无线国际会议，2012年1月。
+
+
+    [224] Y.-C. Liang, 动态频谱与宽带频谱感知的智能检测，在：国际通信技术会议，2020年，doi: 10.1109/ICCT.2020.9198115。
+
+
+    [235] Kumar Varma, A. M., 认知无线电网络中基于特征宽带频谱感知，在：IEEE信号处理国际会议，2010年。
+
+
+    [246] AWE P. O., DELIGIANNIS, A., LAMBOTHARAN S., 使用机器学习算法的认知无线电网络时空感知，在：IEEE计算机网络国际会议，2018年，doi:
+    10.1109/ACCESS.2018.2825603，第6卷，2018年。
+
+
+    [257] Jan S. U., Yu H. K., 认知无线电网络中基于支持向量机的频谱感知性能分析，2018 IEEE增强分布式计算与知识发现国际会议。
+
+
+    [268] Jithraj, S., Balu, S., Wu J., 基于支持向量机的带ssdd攻击的协作频谱感知。在：IEEE国际通信会议，美国堪萨斯县，2011年5月。
+
+
+    [279] Wang Y., Zhang Y., Pan S., Jiang Y., Wang J., 基于机器学习、分解和K-Means聚类算法的频谱感知方法，在：Hindi，2018年，doi:
+    10.1109/5645518.6840522
+
+
+    [290] Le-jun, TAN-huang, YAN XI, Wang Han-rui. 基于认知无线电盲多用户频谱感知的k-means聚类，中南方大学报，2018，25(10):
+
+
+    [232] Kumar K., Chen C., Jain J., Gangapathy R., Debbath S., 广义-k频率跳频中的协作感知，第二次全国通信会议。
+
+
+    [233] Y. R. Patel, D. C., López-Bernal, M., 基于神经网络的认知无线电感知，2018 IEEE第23届国际通信会议，doi:
+    10.1109/IRC.2018.829724
+
+
+    [234] Singh R., R., A., 基于神经网络的认知无线电，IEEE电子计算机协会会议。
+
+
+    [235] V. K., Mitra D.A, 宽带频谱决策的神经网络方法，2018信息技术会议。
+
+
+    [236] Li X., Chen J., Yang L., Zhan Q., 使用贝叶斯学习的高效频谱感知，IEEE Access 5 (2017) 20089-20100。
+
+
+    [237] Xu Y., Cheng P., Chen J., Yi Y., Viet B., 异构网络移动频谱感知：IEEE信号处理汇，第66卷，2018年，doi:
+    10.1109/TSPSP.2018.2789017。
+
+
+    [238] Lu X., Zhang J., Zhang H., P., 恶意用户的智能频谱感知，Hindawi，2020，10页。
+
+
+    [239] J. P., Feng Y., 基于协作频谱感知的能量检测研究。数字通信与网络，2 (2016) 196–202。
+
+
+    [240] Khalli B., Zaid A., Mahmoud B., 当机器学习遇到协作宽带频谱采样。可用<memore.com>
+
+
+    memore.com，2020。
+
+
+    [241] Md Zahandar Alam, Mark M., Taha A., 基于深度学习架构的频谱感知现状综述，IEEE，2021。
+
+
+    [242] Wang J., Chen J., Guo Y., and Robb S.: 基于卷积神经网络的深度认知频谱感知，IEEE Corr.,2022。
+
+
+    [243] Sarikhan R., Keynia F., 利用循环循环神经网络的深度认知频谱，SquareMay，2022，doi: 10.2139/S0022-23-34441
+
+
+    '
+  merge: 0
