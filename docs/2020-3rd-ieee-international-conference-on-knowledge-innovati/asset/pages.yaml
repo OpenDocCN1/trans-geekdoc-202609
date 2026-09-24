@@ -1,0 +1,383 @@
+- pgno: 0
+  md: '# # Short Survey on Physical Layer Authentication by Machine-Learning
+
+    for 5G-based Internet of Things
+
+
+    John-Ruy Iang
+
+    Department of Computer Science and Information Engineering
+
+    National Central University
+
+    toyuan City, Taiwan
+
+
+    *Corresponding Author: jrjiang@csie.ntu.tw
+
+
+    # Abstract
+
+
+    5G-based Internet of Things (IoT) comprises numerous devices with 10 Gb/s peak
+    data rate and 1 ms latency. It is challenging to secure the 5G-based IoT. Physical
+    layer security (PLS) depends on physical layer characteristics, which are unconditional,
+    thus suitable for the 5G-based IoT. This paper reviews recent research on using
+    machine learning for the 5G-based IoT. The schemes are detailed and their properties
+    are compared. Research directions of applying machine learning techniques to secure
+    the 5G-based IoT devices are also pointed out in this paper.
+
+
+    **Keywords:** 5G IoT, Machine learning, physical layer authentication
+
+
+    # Introduction
+
+
+    5G mobile communications attract much attention. The 3GPP (3rd Generation Partnership
+    Project) organized 5G Release 15 (or 3G Release 15-1]) in March 2019, and Phase
+    5 (or 3G Release 16) is currently under the standardization [2]. It focuses on
+    six use cases: enhanced broadband (eMBB), ultra-reliable and low latency communication
+    (URLLC), massive machine communications (mMTC) [3]. (1) To meet the requirements
+    of the 5G, cases utilizes some novel technologies such as multiple-input multiple-output
+    (MIMO), millimeter-wave (mmWave), heterogeneous network (HetNet), and small cell
+    technologies to achieve performance, by 10 Gb/s peak data rate, 1 ms latency,
+    and devices/km² of density.
+
+
+    The 5G-based Internet of Things (IoT) comprises numerous devices with 10 Gb/s
+    peak data rate and 1 ms latency. Traditional cryptography can be used to secure
+    the 5G-based IoT. However, as they rely on complexity, they may not satisfy 5G
+    performance requirements for 5G resource-constrained users. Physical layer security
+    is based on computational infeasibility with the assumption that an adversary
+    has limited computational power. Traditional cryptography is not secure in the
+    sense that a quantum computer could potentially break it down easily.
+
+
+    Physical layer security (PLS) is based on physical layer characteristics which
+    inherit receive signal strength (RSS) and wireless state information (CSI) to
+    provide security services. Unlike traditional cryptography cryptography, PLS relies
+    on theoretical proofs of
+
+
+    perfect. It achieves the unconditional communication security. There are services
+    using physical layer security such as availability, data integrity, confidentiality,
+    and data authentication. Authentication verifies entities. Data integrity verifies
+    that transmitted data are not modified or altered. Data confidentiality guarantees
+    unauthorized entities. Data availability prevents adversaries from jamming data.
+
+
+    This paper focuses on physical layer authentication (PLA) and reviews PLA schemes
+    [7-10] using popular and machine learning (ML) techniques for wireless networks
+    or the 5G-based IoT. In some of 5G-based applications, a malicious device is connected
+    to the network and be authenticated to avoid impersonation and falsification.
+    The 5G-based IoT comprising numerous devices is usually resource-constrained.
+
+
+    A schemes the following: they have low complexity, they do not make any assumption
+    on the pre-shared credentials for the authentication, or on communication channel
+    features for the authentication. Machine learning is used for the authentication
+    of the 5G-based IoT. The details of these schemes are described and their properties
+    compared. Recently, research directions of applying machine learning techniques
+    to secure the 5G-based IoT are also pointed out in this paper.
+
+
+    ![](img/6e5ed0bbd6fccc31c4b1cb2030946f5f_0_0.png)
+
+
+    ISBN: 978-1-721-9833-5'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# 3rd IEEE International Conference on Knowledge Innovation and Invention 2020
+
+
+    # Background
+
+
+    A. 5G Mobile Communication System
+
+    Key performance indicators (KPIs) for 5G are specified in IM-2020 [3], which is,
+    Global 5G specifications. Fig. 2 shows them and comparisons with KPIs of 4G specifications
+    (IM-advanced). The first KPIs are,
+
+
+    +   1. Peak rate (for emBB): It is the maximum data rate, which is 10 Gbit/s under
+    ideal conditions, whereas it can reach 20 Gbit/s under certain conditions.
+
+    2. Latency (for URLLC): The delay between the source device and destination receiving
+    is less than 1 ms.
+
+    3. Connection density (for mMTC): The overall number of nodes and connected devices
+    per unit is 1,000,000 devices/km².
+
+    4. User experienced data rate: The achievable rate by mobile device whose coverage
+    is 100 Mbps.
+
+    5. Mobility: The maximum speed at which a QoS and seamless transfer between two
+    devices (or nodes) may belong to different layers and/or capacities is 500 km/h.
+
+    6. Area capacity: The total traffic transported per user is
+
+
+    7. Energy efficiency: The energy efficiency has two aspects. On the one hand,
+    it is the number of bits transmitted per unit of energy consumption of the radio
+    access network (RAN). On the other hand, it is the number of bits received/from
+    RAN per unit of energy consumption of the device communication module. The energy
+    efficiency of IM-2020 is expected to be 10 times better than IM-advanced.
+
+    8. Spectrum efficiency: The average data throughput per unit resource and cell
+    is in bits/Hz. The spectrum efficiency of IM-2020 is expected to be 30 bits/Hz.
+
+
+    Multiple access is the core technology of mobile communications as it allows multiple
+    mobile users (UEs) to share the allocated spectrum at the same time in effective
+    and efficient way. The multiple access are implemented by 1G frequency division
+    multiple access, 2G time-division multiple access (TDMA), 3G code-division multiple
+    access (CDMA), 4G orthogonal frequency-division multiple access (OFDMA) of 5G
+    frequency-division multiple access (OFDMA) and spatial multiple access (SDMA),
+    which is, massive-input-multiple-output (MIMO). The concept of multiple access
+    is becoming more complex.
+
+    A base station (BS) of a massive MIMO system has many antennas (usually tens or
+    thousands of antennas) to receive or transmit signals simultaneously over the
+    same radio channel. Based on the state of the received signal (CSI) to the BS,
+    the UE de-links channel state information, the uplink and downlink have same channel
+    reciprocity in the time-division duplex (TDD) mode,
+
+
+    ![](img/6e5ed0bbd6fccc31c4b1cb2030946f5f_1_0.png)
+
+
+    Fig. 2 The KPIs of IM-2020 and IM-advanced [2020]
+
+
+    B. Alice-Bob-Eve Model
+
+    The 5G-based IoT is vulnerable to a variety of attacks as intercepting and spoofing
+    over the open based radio communication protocol. Fig. 3 shows the "Alice-Bob-Eve"
+    model in the 5G MIMO system. Alice and Bob are legitimate users, whereas Eve is
+    an attacker or a spoofer. When Alice and Bob communicate with each other, Eve
+    impersonates Alice or Bob to gain illegal benefits.
+
+
+    To resist the attacks, Bob performs the authentication process to accurately recognize
+    Alice''s messages as legitimate and detect and reject Eve''s. Bob also aims to
+    authenticate Alice and detect spoofing messages.
+
+
+    Many authentication techniques exist for legitimate message authentication or
+    spoofing message detection, exemplified by public key infrastructure (PKI) authentication.
+    The PKI requires a pre-installed management for each participating party. This
+    method may not apply to a 5G-based IoT, as the PKI need to perform complex computation.
+    Temporarily, the physical layer allows an authentication (PLA) to track the characteristics
+    of radio responses to differentiate signals of messages from spoofing devices.
+    PLA is a lightweight scheme that does not need much time for running complex computation.
+
+
+    It is suitable for the 5G-based IoT.
+
+
+    42
+
+
+    ISBN: 978-1-7281-9333-5
+
+    Authorized licensed use to: Central Michigan University. Published on May 14,
+    2021 at 14:26:29 UTC from IEEE Xplore. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# 3rd International Conference on Knowledge Innovation and Invention 2020
+
+
+    ![](img/6e5ed0bbd6fccc31c4b1cb2030946f5f_2_0.png)
+
+
+    equilibrium can be derived. Two reinforcement learning mechanisms, q-learning
+    and Dyna-Q, were used to obtain the best test results for spoofing detection tests.
+    Measurements and universal software radio frequency (SDR) platform were used to
+    implement the prototype of the proposed scheme for performance evaluation. The
+    efficiency of the scheme was validated by simulation and prototype experiments.
+
+
+    [9] proposed AdaBoost-based PLA scheme based on physical layer characteristics,
+    the difference of subcarrier amplitude and phase, and the statistics based on
+    subcarrier. AdaBoost (adaptive boosting) algorithm is the most well-known with
+    base classifiers alternative. The algorithm is based on a self-adaptive and iterative
+    method. The samples of the classifier in the current iteration are used to train
+    the classifier in the next iteration. This method is not prone to overfitting
+    and has very good performance when compared with other algorithms. Thus, the proposed
+    scheme has good performance.
+
+
+    Fig. 3 The Alice-Bob-Eve model in 5G MIMO system
+
+
+    # Existing Machine-Learning PLA Schemes
+
+
+    Previous [7-10] proposed machine-learning PLA schemes that aim at 5G or are used
+    in 5G networks. Network machine learning paradigms for PLA are reviewed in [12].
+
+
+    [7] proposed a scheme using the time-varying frequency offset (CFO) between each
+    pair of wireless communications devices as a radiometric characteristic for radiometric
+    fading. Generally, a transmitter and a receiver always have developed devices
+    besides oscillating frequency. The time-varying CFO characterized by these biases
+    also by the Doppler shift induced by mobility. An autoregressive process is based
+    on the method of historical CFO values, and Kalman filtering is used to predict
+    the current CFO. The current CFO is compared with the predicted CFO and follows
+    homogeneous patterns. An adaptive CFO scheme for spoofing detection is determined
+    by the Kalman filtering prediction error and noise ratio. The scheme was validated
+    by implementing its prototype on software-defined radio (SDR) platform. Its effectiveness
+    in multipath fading is confirmed.
+
+
+    [8] proposed a scheme using the received signal strength (RSS) for spoofing attack
+    in wireless networks. The proposed scheme uses a user-static game to model the
+    interactions between a legitimate receiver and spoofers. The legitimate receiver
+    tries to maximize the probability of spoofing detection by choosing a proper test
+    threshold. On the other hand, the spoofers try to minimize the receiver utility
+    by properly determining their attacks. The state game Nash
+
+
+    [9] Bob used pilot signals from Alice to collect the channel state information
+    to be used as a training data. When Eve presents to Alice and sends messages to
+    Bob, there is no way to know who is Eve and who is Eve. However, Eve''s message
+    can be collected and passed as a training data, which may be a too-strong association.
+    By the sets of Alice and Eve, Bob trains AdaBoost-based classifier to distinguish
+    messages from Alice and Eve. The proposed scheme was implemented based on SDR-based
+    USRP platform.
+
+
+    Fang et al. [10] proposed a PLA scheme designing-dynamically changing channel
+    conditions based on frequency and interference states. The scheme relies on a
+    kernel method-based physical layer model which utilizes the statistical properties
+    of the attributes. It reduces the multi-dimensional physical layer space into
+    (e.g., a scale space), in dramatic reduction of authentication complexity. Simulations
+    conducted but the prototype of the proposed method was not implemented. Simulation
+    results showed that the proposed scheme achieves authentication performance in
+    time-varying environments.
+
+
+    Table 1 shows all of the machine-learning PLA schemes reviewed in [3]. Three of
+    the schemes have been implemented on the SDR platform; however, scheme [7] has
+    been implemented on PLA physical layer attributes except for scheme-3. Furthermore,
+    scheme-3 needs to acquire channel information for the purpose of machine learning
+    training [9].
+
+
+    # COMPARISON OF MACHINE-LEARNING PHYSICAL LAYER ATTACK (PLA) SCHEMES
+
+
+    | Scheme | ML | PHY characteristics | Attacker channel | Prototype |
+
+    | --- | --- | --- | --- | --- |
+
+    | Scheme-1 [7] | Autoregressive process, Kalman filtering | Time-varying frequency
+    offset (CFO) | Not needed | SDR platform |
+
+    | Scheme-2 | Reinforcement learning | Time-varying received signal strength (RSS)
+    | Not needed | SDR platform |
+
+
+    ISBN-978-1-7281-9333-5
+
+
+    43'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# 3rd IEEE International Conference on Knowledge Innovation and Invention 2020
+
+
+    | | | | |
+
+    |---|---|---|---||
+
+    | [8] | Q-learning and Dyna-Q | other attributes | | |
+
+    | Scheme-3 | AdaBoost Classifier | Difference of subcarrier amplitude and the
+    static based on the amplitude and phase | MIMO-OFDR platform |
+
+    | Scheme-4 | Kernel machine | Time-varying multi-dimensional physical layer attributes
+    | Not needed | No implementation
+
+
+    # Remarks and Research Discussion
+
+
+    This paper surveys state-of-the-art PLA schemes using machine learning technologies
+    for the 5G-based IoT. The utilized machine learning techniques are based on autoregressive
+    models filtering processing, reinforcement learning (specifically Q-learning and
+    Dyna-Q), AdaBoost Classifier, and kernel machine. All schemes rely on multiple
+    physical layer characteristics for authentication performance.
+
+
+    Physical layer authentication (PLA), machine learning techniques may be used for
+    other services in the 5G-based IoT, such as intrusion detection, anomaly detection,
+    and access control. Furthermore, we plan to consider taking deep learning, a specific
+    type of very powerful machine learning techniques using deep networks, to improve
+    the security service.
+
+
+    # References
+
+
+    +   [1] 3GPP, "Release 15", http://www.3gpp.org/release-15, accessed on Feb. 2020.
+
+    [2] A. Ghosh, M. Baker, and D. Chandramouli, "5G evolution: a view on 5G cellular
+    technology beyond the 12th 3G release 15," IEEE Access, 7:12769-127651, 2019.
+
+    [3] International Telecommunication Sector (ITU-R), IMT Vision-Framework and Overall
+    Objectives of the Future Development of 2020 and Beyond, Recommendation ITU-M
+    R.2101, 2015.
+
+    [4] T. C. Chaney, R. W. McGwier, and L. Chen, "Post-quantum encryption and security
+    theory," in Proc. of the 12th IEEE Conference on Security and Mobile Networks,
+    223-228, 2019.
+
+    [5] N. Wang, P. Alipour-Fall, L. Liao, and J. Zeng, "Physical-layer security of
+    5G wireless networks for IoT: challenges and opportunities," IEEE Internet of
+    Things Journal, 6(5):8169-8181, 2019.
+
+    [6] R. Melki, H. N. Noura, M. Mansour, and A. Chehab, "Physical layer security
+    schemes for MIMO systems: wireless networks," 26(3):2089-2111, 2020.
+
+    [7] W. Hou, X. Wang, J. Y. Bouchouinard, and A. Rafzey, "PHY-layer authentication
+    for mobile systems with time-varying carrier offset," IEEE Communications, 62(5):1658-1667,
+    2014.
+
+    [8] L. Xiao, Y. Li, G. Han, G. Liu, and Y. Zhang, "PHY spoofing detection with
+    reinforcement learning in wireless networks," IEEE Transactions on Vehicular Technology,
+    65(12):10037-10047, 2016.
+
+    [9] S. Chen, H. Wen, J. Ju, W. Liu, L. Hu, and Y. Chen,
+
+
+    "Physical-layer authentication for 5G via machine learning," IEEE Communications
+    and Mobile Computing, 2018.
+
+
+    +   [10] H. Fang, L. Hanzo, "Learning-aided physical authentication as an intelligent
+    process," IEEE Transactions on Communications, 63(3):2260-2273, 2015.
+
+    [11] A. Shilah, and M. J. Kur, "Comprehensive survey of massive MIMO for communications,"
+    in Proc. of 2019 IEEE International Conference on Applications and Engineering
+    (ICAE 2019), 1-5, 2019.
+
+    [12] H. Fang, X. Wang, and S. Tomasin, "Machine learning for intelligent authentication
+    in 5G and beyond wireless networks," IEEE Communications, 26(5):55-61, 2019.
+
+
+    ISBN: 978-1-7281-9333-5
+
+
+    Authorized licensed use limited to: Central Michigan University. Downloaded on
+    May 14, 2021 at 16:42:29 UTC from IEEE Xplore. Restrictions apply.
+
+
+    44'
+  merge: -1
+  img_proc: true
