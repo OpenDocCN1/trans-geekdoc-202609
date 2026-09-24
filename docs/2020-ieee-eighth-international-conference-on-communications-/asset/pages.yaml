@@ -1,0 +1,559 @@
+- pgno: 0
+  md: '# # Native SDN Intrusion Detection using Machine Learning
+
+
+    Mohd Ma Isa, Lotfi Mhamdi
+
+    School of Electrical andget Engineering
+
+    University of Leeds
+
+    Yorkshire, United Kingdom
+
+    elismm6@leeds.ac.uk, L.Mhamdi@leeds.ac.uk
+
+
+    **Abstract**—Security is still a major challenge for communication networks. Recent
+    advances in networking, notably the advent of Software Defined Networks (SDN)
+    has brought major potential in providing highly secure communication networks.
+    SDN decouples the data and control planes, maintaining a centralised and global
+    view of the whole network. This has resulted in enabling proactive, robust and
+    secure networks. In particular, mapping SDN capabilities to deep learning methods
+    has recently attracted much research interest. Most efforts have been just a simple
+    mapping of earlier solutions to SDN security based on deep learning in a purely
+    native SDN environment, where a Deep Learning intrusion detection module is tailored
+    to SDN with the least overhead. We propose a novel deep learning-based approach
+    for intrusion detection in SDNs. The experimental results show that the proposed
+    model can achieve high accuracy with a minimum number of selected features, low
+    latency and a minimum overhead on the SDN controller performance, while yielding
+    satisfactory detection.
+
+
+    can oversee and falsify network management information, implementation attack,
+    becoming a perpetrator in in-the-middle attacks and so on. Therefore, it is important
+    to adopt a defense mechanism for securing SDN by vulnerability analysis and improving
+    trust in traffic handling.
+
+
+    One of the proposed solutions for detecting such intrusion is the use of intrusion
+    detection systems (IDS). There are two types of IDS which are signature-based
+    and anomaly detection based. The first type of IDS depends on the pre-identified
+    signature of an intrusion that has been detected before the second type of IDS
+    observed the traffic that deviates from normal and detects anomalous behavior.
+    Abnormal detection providing a high level of security in areas such as control,
+    authentication, malicious outbreak detection and has resulted by adapting deep
+    learning capabilities for traffic classification either normal or via the use
+    of the Naive Bayes classifier, Support Vector Machine, K-nearest Neighbor, Recurrent
+    Network, Recurrent Neural Network, Deep Neural Network and others [3] [4]. Reinforcement
+    learning particularly also being embedded in the case of unlabeled data. With
+    rapid advancement and additional capabilities provided by SDN architecture, research
+    of machine learning has become to improve network intrusion detection.
+
+
+    I. INTRODUCTION
+
+
+    In recent years, SDN has become widely popular and also to practice in network
+    management especially with regards to newly evolved network security challenges.
+    SDN decouples the control and data planes, maintaining a generalised and global
+    view of the whole network. However, the separation of control and data planes
+    makes SDN vulnerable to security attacks. Several main challenges directly based
+    on unauthorized access, data leakage, data modification, compromised application,
+    denial of services (DoS), configuration and system-level SDN security. One example
+    of the concerning issue is related to Distributed-of-service (DDoS) DDoS attacks
+    have become a real threat for network, digital and cyber infrastructure. The magnitude
+    of disruptions can be driven by the variety of attack methods, and the main objective
+    of DDoS attacks is to paralyze network by bombarding illegitimate traffic to targeted
+    servers, network links or devices [1]. Another example is that
+
+
+    Researchers have also embraced autoencoder approach as an alternative in network
+    intrusion detection environments such the works of [5] [6]. Autoencoders are unsupervised
+    learning that make the use of neural network for representation learning. A bottleneck
+    in the network is imposed to force a compressed knowledge from the original input.
+    An autoencoder model can be achieved by balancing the sensitivity of the input
+    for accurate reconstruction build up and to avoid content overfitting. For most
+    cases, a loss function well being constructed with the term encouraging for input
+    sensitivity and by discouraging memorization of input data, for example adding
+    regularization'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'the works has outset promising solution in intrusion detection. In the accuracy
+    level, reducing and execution time need still be improved especially to be embedded
+    in a fast speed of SDN. This further improvement motivates in outlining our research.
+    In summary, the contributions of this paper are the following:
+
+
+    learning in the SDN environment. The proposed solution will
+
+
+    +   * We introduce a hybrid combination of an autoencoder (AE) and random forest
+    (RF) algorithm in the SDN environment.
+
+    * Our AEF yields a detection rate of 98.4% using a minimum number of features.
+
+    * We also evaluate the network performance of the proposed approach in the SDN.
+    The test results show that our approach is a significant potential for real-time
+    detection with minimum impact on the controller and novelty processing time.
+
+
+    ![](img/623a4dd23f7cdf61607faab1933bf4d3_1_0.png)
+
+
+    Fig. 1. SDN-based Intrigation Architecture
+
+
+    The rest of this paper is organized as follows. Section II discusses the related
+    work. In Section III, we present the methodology used. The network performance
+    is described in Section IV. Finally, Section V concludes the results and present
+    future.
+
+
+    # II. RELATED WORK
+
+
+    Author of [4] proposed a deep learning for flow anomaly detection in the SDN environment.
+    A Deep Neural Network was introduced with 3 layers to perform binary classification
+    with basic feature selection from the NS-KOD dataset. The accuracy was 75.75%.
+    In [5] proposed a non-symmetric deep autoencoder (NSDAE) model for intrusion detection
+    and 5-class classification of 85.42% with NS-KOD while [7] adopted big data visualization
+    and statistical analysis method with the combination of autoencoder for threat
+    detection. The accuracy reported from the approach achieved up to 87% accuracy.
+
+
+    focus on the attack with enrichment of machine learning benefits. The functionality
+    of the main components are presented as:
+
+
+    +   * a) Assembly Module: Collecting traffic information of the SDN network. Data
+    will be assembled as input for the controller to take packet actions. Utilizing
+    Openflow protocol which periodically sends an Openflow request message to all
+    Open connected switches. Managed switches will return back to the message that
+    contains traffic statistics.
+
+
+    +   * b) Adaptive Module: Proposed intrusion detection using AEF will be deployed
+    and attack traffic will be detected by the controller using learning functionality
+    in the adaptive ML module.
+
+
+    Increased accuracy of detection in a similar approach of deep learning has shown
+    a good achievement and yet is still for improvement. High congestion times, multi-layered
+    complex processing, inconsistent performance are examples of deficiencies that
+    can be improved. Improving with model optimization which related to the process
+    of training, controlling loss and controlling activation of functions are still
+    needed and can be improved especially in intrusion detection mechanisms. The work
+    presented in this paper is focusing on further analyzing the optimization process
+    and which it can contribute to the current knowledge of intrusion detection in
+    the SDN environment.
+
+
+    ![](img/623a4dd23f7cdf61607faab1933bf4d3_1_1.png)
+
+
+    Fig. 2. Intrusion Mitigation Architecture
+
+
+    The functionality of the proposed module are show in the current statistics and
+    collection from all OpenFlow switches. The gathered data will then be processed
+    with the required format for the controller to protect with detection and prevention
+    in the Adaptive ML module. The training and testing process of the detection will
+    be fast and high yield accuracy, as it will deal with the high speed data flow.
+    When classifying normal traffic will proceed as usual whilst abnormal will be
+    penalized.
+
+
+    # III. SDN-based Intrusion Architecture
+
+
+    The proposed architecture is as shown in Fig.1. Two main functionalities are Assembly
+    Module for statistics and Adaptive ML module which will adopt deep learning for
+    traffic received for intrusion detection and enforcing policies capabilities of
+    machine'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "# B. Dataset\n\nMost of the approaches in machine learning required a training\
+    \ dataset to classify the algorithm before testing, dataset of classifying attack\
+    \ has been seen in [5] and a total of 63% of the reported research used the KDD-dataset\
+    \ for training and testing. In this work, a new version of KDD+ is an NS-KDD dataset\
+    \ used. The dataset has been corrected from duplication of data and facts that\
+    \ cause bias in evaluation. NS-KDD dataset has 41 features and two of these features\
+    \ are symmetric while others are. Our model is trained with the KDD+ dataset and\
+    \ tested with the KDDTest dataset. In addition, KDDTest contains 17 types of attacks\
+    \ of up to 22 types of KDD+. Thus, the KDDTest is a reliable indicator of the\
+    \ performance of the model on zero-day attacks and all types. Distribution of\
+    \ both dataset according to traffic classes are shown in TABLE 1\n\nKDDtrain contains\
+    \ 125,973 records and KDDTest dataset contains 23,554 records. The data processing\
+    \ was used to prepare the dataset for training and testing purposes. We used autoencoder\
+    \ with overfitting filters applied to the NS-KDD training and testing and only\
+    \ selected 6 features from Section III. The selected features are frac, src_bytes,\
+    \ dst_bytes, logged and server rate.\n\n| Dataset | Normal | Dos | Probe | R2L\
+    \ | U2R | SUM |\n|--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| Train | 67,343\
+    \ | 45,927 | 11,656 | 995 | 21 | 125,973 |\n| Test | 9,711 | 7,558 | 2,457 | 22\
+    \ | 5 | 23,554 |\n\nTABLE 1\nKDDTRAIN AND KDDTEST ATTACK DISTRIBUTION OF TRAFFIC\
+    \ CLASSES\n\n# C. AERF Model\n\nDeep learning approaches have potential to achieve\
+    \ effective representation for improved solution. For the approach to be adopted\
+    \ in the real environment, it has to be composed with a fast simplest approach\
+    \ for performance. Therefore, in this proposal, an autoencoder with fine-tuning\
+    \ the features avoids overfitting but put. A hybrid combination using the random\
+    \ forest for further classification from the preliminary autoencoder calculation\
+    \ process. A preliminary test with the NS-KDD dataset was used to order the approach\
+    \ by targeting accuracy detection but with the minimum processing time.\n\nThe\
+    \ AE has two stages are encoding and decoding. For the encoding process, input\
+    \ data is compressed into a low-dimensional representation and then the decoder\
+    \ reconstructs the input from the low-dimensional representation.\n\n```\n$h =\
+    \ f(Wx + b)$\nny = f(W'h + b')$\n```\n\nwhere f is a non-linear activation function,\
+    \ and W and W' are weight matrices, b are biases and y is output. Minimizing the\
+    \ differences between the input and the output y is the main goal during the training\
+    \ process. An average squared difference between the values is used as follows:\n\
+    \n```\n$L(x, y) = ||x - y||^2$\n```\n\nDuring the training process, no normal\
+    \ traffic is used from the training dataset. Attack datasets not used because\
+    \ of unbalanced and unclear attack types are not well represented. In this approach,\
+    \ autoencoder with the dropout is proposed which consists of an input layer of\
+    \ 85 neurons for the number of features each is 85. The input layer of 85 neurons\
+    \ after the selection of 6 features is used for the training and testing process.\
+    \ Our 85 neurons are composed of 70 (hidden), 11 (input), src_bytes (1), dbytes\
+    \ (1), dst_bytes (1), logged and server rate.\n\nA layer of 125,973 in the input\
+    \ layer and 23,554 in the output layer for training and testing. With a dropout\
+    \ layer, a layer of 8 neurons is proposed with the hidden representation of the\
+    \ autoencoder calculation with ratio of 8/10 to learn interesting patterns and\
+    \ relations between the features. An output layer of 85 neurons using the most\
+    \ popular rectified linear unit (ReLU) activation function as output if x is positive\
+    \ or zero otherwise.\n\n```\n$x_i = \frac{x_i - Min}{Max - Min}$\n```\n\nFeatures\
+    \ that are discrete such as frac and flag are being processed using a one-hot\
+    \ encoding. The process of processing is using a one-hot implementation typically\
+    \ allows a layer to run at a faster rate than any other encoder of that state\
+    \ machine. Both of these values will be used as input to the model for training\
+    \ and testing.\n\n```\n$A(x) = max(0, x)$\n```\n\nDuring the reconstruction process\
+    \ of, the autoencoder was trained using only the samples labeled “Normal” in the"
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/623a4dd23f7cdf61607faab1933bf4d3_3_0.png)
+
+
+    our proposed model, the encoded representations learned by the autoencoder is
+    being used as the input for the RF classifier to classify either normal or abnormal
+    of the traffic.
+
+
+    # ## IV. PERFORMANCE ANALYSIS
+
+
+    # ### Evaluation Metrics
+
+
+    For evaluation purpose, Precision (P), Recall (R), F-measure (F) and Accuracy
+    (AC) metrics are used.
+
+
+    | Precision | TP / (TP + FP) | (6) |
+
+    | Recall | TP / (TP + FN) | (7) |
+
+    | F - measure | 2 * (Precision * Recall) / (Precision + Recall) | (8) |
+
+    | Accuracy | TP / (TP + FP + FN) | (9) |
+
+
+    training dataset. This is for the purpose of allowing it to capture the nature
+    of normal traffic and to minimize the squared error between input and output.
+    Preventing the autoencoder from simply copying the input to the output and overfitting
+    the data regularization constraints are enforced. Model architecture details are
+    as shown in Fig. 4 and the parameter used for the model depicted in TABLE II.
+
+
+    ![](img/623a4dd23f7cdf61607faab1933bf4d3_3_1.png)
+
+
+    These metrics are calculated using different formulas, true positive (TP), true
+    negative (TN), false positive (FP) and false negative (FN):
+
+
+    +   * TP: the number of anomaly records correctly classified.
+
+    * TN: the number of normal records correctly classified.
+
+    * FP: the number of normal records incorrectly classified.
+
+    * FN: the number of anomaly records incorrectly classified
+
+
+    # ### Experimental Results
+
+
+    The model is trained for 10 epochs using an Adam optimizer with a batch size of
+    100 as shown in Fig. 5. A total of 60,608 samples are used for training and 10%
+    of the normal traffic which is 6735 samples used as validation. Tensorflow backend
+    is used to run and implement the proposed model.
+
+
+    Reconstructed Normal
+
+
+    ![](img/623a4dd23f7cdf61607faab1933bf4d3_3_2.png)
+
+
+    # ## TABLE II
+
+    AERF ARCHITECTURE
+
+
+    | Input layer | Dropout | Hidden layer | Act regulate | Output layer | Activation
+    Function |
+
+    | --- | --- | --- | --- | --- | --- |
+
+    | S5 | 0.5 | Dense | ReLU | S5 | ReLU |
+
+
+    The hidden layer of the model is being used in for the second layer classification
+    random algorithm. Random forest follows the principle of ensemble learning method
+    on various sub-samples of the dataset and using averages to improve the predictive
+    accuracy and control over-fitting. Results of research works that employ RF for
+    intrusion detection is as [8] and [9]. Comparative studies with regards RF as
+    one of the best selected for a similar area being concluded by the works of [10]
+    and [11].
+
+
+    Repetition of training and test has been performed with stabilized outcome. Results
+    that have been collected from the test with the mean accuracy of 90.19%; achieved
+    as shown in TABLE III from the autoencoder process model.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# TABLE III
+
+    AUTOENCODER PERFORMANCE OVER TEST DATASET
+
+
+    | Method | Accuracy | Precision | Recall | F1 |
+
+    | Autoencoder | 90.19 | 88.78 | 94.70 | 91.64 |
+
+
+    RF classification has been adopted an accuracy of 98.4% for the input into the
+    autoencoder, from previous works that have also used the same NSL-KDD dataset
+    and intrusion detection are shown in TABLE IV. An increase in accuracy is achieved
+    with the proposed model and enables further improvement to be carried out.
+
+
+    # TABLE IV
+
+    PERFORMANCE COMPARISON IN BINARY CLASSIFICATION USING KDDTRA+KDDT+ dataset
+
+
+    ![](img/623a4dd23f7cdf61607faab1933bf4d3_4_0.png)
+
+
+    | Method | Accuracy Rate |
+
+    | Naive Bayes [12] | 75.59% |
+
+    | MLP [12] | 77.41% |
+
+    | Random Forest [12] | 80.67% |
+
+    | RNN [13] | 83.28% |
+
+    | Fuzzy approach [14] | 84.12% |
+
+    | AE + Gauss [15] | 84.35% |
+
+    | STI-IDS [14] | 85.42% |
+
+    | S-NDAE [15] | 86.96% |
+
+    | SAE-SMR [6] | 88.39% |
+
+    | GRU-LSTM [17] | 89.00% |
+
+    | AERF | 98.40% |
+
+
+    Fig. 6. Autoencoder confusion matrix
+
+
+    Example confusion from the autoencoder process for the test dataset is shown in
+    Fig. 6.
+
+
+    The threshold for autoencoder is based on the calculated loss from the training
+    process for the separation of normal and anomaly traffic. Detection from the autoencoder
+    is shown in Fig. 7. It is noted that the error rate for normal and abnormal traffic
+    is highly distinctive from the calculated threshold. An average amount of 10%
+    of the calculated error is in the very demanding area. For the next process, the
+    encoded representation of the autoencoder is inputted into RF for further breakdown
+    of the traffic.
+
+
+    # V. SDN Controller Performance
+
+
+    In this section, we evaluate the effect of the AERF on the SDN network performance.
+    The evaluation test is described in the first part and then the network performance
+    evaluation is presented.
+
+
+    # A. Experimental Setup
+
+
+    The AERF is implemented as an application in Python language a Ryu controller.
+    Bbench is a standard tool used for evaluating SDN controller performance under
+    two running nodes, throughput and latency. The throughput mode computes the maximum
+    number of packets handled by the controller and latency mode the time need to
+    process a single flow by the controller. We run experiments on a virtual machine
+    having an Intel(R) Xeon(R) E3-1235.v3 with 5 cores and 8GB of RAM. The operation
+    performance is tested with a different number of OpenFlow switches computed by
+    Bbench. The controller stand-alone Ryu controller is considered as a baseline
+    for our evaluation.
+
+
+    ![](img/623a4dd23f7cdf61607faab1933bf4d3_4_1.png)
+
+
+    The response rate of the controller for both the baseline and AERF evaluation
+    is as in Fig. 7. The autoencoder achieved a slight decrease when the number of
+    switches increases. Although the decreased, comparison with the baseline-alone
+    Ryu controller is not much different and still acceptable.
+
+
+    An interesting observation about the Ryu controller has a negligible impact on
+    its latency performance as shown in Fig. 9. When we increase the number of connected
+    switches, the latency achieved are between 3 to 4 ms and not much so
+
+
+    Fig. 7. Distribution of detection over test dataset'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# VI. CONCLUSION AND FUTURE WORK
+
+
+    with the very minimum processing time is a good sign of failure applicability
+    in real SDN environment.
+
+
+    In this paper, we present a hybrid of an autoencoder and random forest for intrusion
+    detection in a native SDN environment. We show that the proposed AERF performs
+    over previous works with an accuracy of 98.4% in a decreased amount of time needed
+    for training and execution. From the results, it proves that the model is optimistic
+    efficient for intrusion detection. In addition, the throughput and latency experimentally
+    showed that our proposed approach does not significantly affect the SDN controller
+    performance. It is potential for implementation and will be adopted in the SDN-based
+    intrusion mitigation architecture for further process improvement.
+
+
+    ![](img/623a4dd23f7cdf61607faab1933bf4d3_5_0.png)
+
+
+    Fig. 8. SDN environment throughput evaluation
+
+
+    overhead introduced. This is a similar comment that has been done by [16] the
+    latency of the controller performance achieved. A comparison of time taken for
+    training and testing NSL-KDD dataset are shown in TABLE V below.
+
+
+    ![](img/623a4dd23f7cdf61607faab1933bf4d3_5_1.png)
+
+
+    Fig. 9. SDN environment latency evaluation
+
+
+    # TABLE V
+
+    PERFORMANCE IN BINARY CLASSIFICATION USING KDTRAIN AND TESTSET
+
+
+    | Method | Training Time | Testing Time |
+
+    |---|---|---|
+
+    | STD-IDS | 673.31 | 4.468 |
+
+    | S-NDE | 644.84 | - |
+
+    | AERF | 18.32 | 2.63 |
+
+
+    Simplicity of the focus is this approach. The single hidden layer of reason neurons
+    has made the training and testing process very fast which are suitable for the
+    SDN environment. We achieved high detection capacity and real-time implementation.
+    Adaptation of threshold within the model has bypassed the needs of human intervention
+    to manage set. The value of the threshold could also be manually adjusted in order
+    to suit the needs between sensitivity and specificity. The accuracy achieved
+
+
+    # REFERENCES
+
+
+    +   [1] N. Z. Bousary, A. Jahanvi, and K. Shahab, "DDoS Attack Detection and Management
+    Using SDN Methods, Techniques, and Solutions," Journal of Computer Science and
+    Engineering, vol. 7, pp. 425–441, 2017.
+
+    [2] S. Das, Y. Liu, and M. Chambandar, "Machine learning based online attack detection:
+    Towards real-time protection against malware," IEEE International Conference on
+    Information Security and Privacy, vol. 11, no. 2, pp. 289–302, 2016.
+
+    [3] L. Barki, A. Shibli, N. Meti, D. G. Naryan and F. M. Milla, "Detection of
+    distributed denial of service attack networks," 2016 IEEE International Conference
+    on Advances in Communications and Informatics, ICCAU 2016, pp. 2576–2581, 2016.
+
+    [4] T. A. Tran, R. Khosravi, M. Lee, "Deep Recurrent Neural Network for Intrusion
+    Detection in SDN-based Networks," 2018 IEEE International Conference on Network
+    Science and Security, pp. 143–148, 2018.
+
+    [5] S. Tone, T. N Ng, V. D. Choi, and Y. Shah, "Deep Learning Approach to Network
+    Intrusion Detection," IEEE Transactions on Emerging Technologies in Artificial
+    Intelligence, 2019.
+
+    [6] Q. Nizam, S. W. Y. A. Javad, and M. Alam, "A deep learning approach for network
+    intrusion detection in International Conference on Computer Science and Security,
+    2018.
+
+    [7] C. Graciano, A. Adel, M. Mohamed, K. Eshtab, F. C. Martorato, H. Larjati,
+    A. Rasha, and A. Sun, "Statistical Analysis of Optimized Deep Learning System
+    for Intrusion Detection,"ing Notes in Computer Science including security and
+    applications in biometrics, vol. 10891, pp. 759–768, 2020.
+
+    [8] Y. Wang, Y. Ge, and Y. Zhang, "Network intrusion detection based on random
+    forest and support vector machine," Proceedings - 2017 IEEE International Conference
+    on Computer Science and Engineering (ICSE) and 2017 IEEE International Conference
+    on Big Data, CSE and EUT, vol. 1, pp. 635–638, 2017.
+
+    [9] Y. Y. Y. and M. M. Ali, "An analysis of random forest algorithm for network
+    intrusion detection in SDN," 2013 IEEE/IACS International Conference on Information
+    Security, Privacy and Parallel/Distributed Computing, pp. 127–132, 2013.
+
+    [10] M. Ansar, R. Abdullah, H. Hussain, Y. Chow, and O. E. El-Qader, "Deep Learning
+    Based Approach with SVM for Network Intrusion Detection," 2016 14th International
+    Conference on Computer Security and Trust, FIST, pp. 282–288, 2016.
+
+    [12] M. Al-Qaf, Y. Lasher, M. Al-Habbi, and K. Al-Subahi, "Deep Learning Using
+    Approach with SVM for Network Intrusion Detection," IEEE Access, vol. 6, pp. 52245–52258,
+    2018.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'C. Yin, Y. Zhou, J. J. Fei, and X. He, “A Deep Learning Approach for Intrusion
+    Detection Using Recurrent Neural Networks,” IEEE Access, vol. 5, pp. 25204–25219,
+    2017.
+
+
+    R. Li, S. Amini, X. Wang, J. Z. Huang, H. Abbas, and Y. L. He, “Fuzziness based
+    semi-supervised learning approach for intrusion detection systems,” Information
+    Sciences, vol. 57, pp. 486–497, 2017. [Online]. Available: http://doi.org/10.1016/j.infsof.2016.04.019
+
+
+    M. Yousef-Azar, V. Varadarajan, L. Hamey, and U. Tupakala, “Autoencoder-based
+    feature learning for cyber security applications,” Proceedings of the International
+    Joint Conference on Neural Networks, vol. 2017-May, pp. 3854–3861, 2017.
+
+
+    L. Zhu, M. M. Karim, K. Sharif, F. Li, X. Du, and M. Guizani, “SDN Controllers:
+    Benchmarking & Performance Evaluation,” pp. 1–14, 2019. [Online]. Available: http://arxiv.org/abs/1902.04491'
+  merge: -1
+  img_proc: true
