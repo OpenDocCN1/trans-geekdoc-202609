@@ -1,0 +1,1903 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Deep Learning Techniques Advancement of Plant Leaf Diseases Detection
+
+
+    Jamal M. Al-Tuwajari
+
+    Department of Computer Science,
+
+    College of Science, University of Diyala,
+
+    Diyala, Iraq
+
+    dru.altuwajari@sciences.diyala.edu
+
+
+    Marwan A. Jasim
+
+    Department of Computer Science,
+
+    College of Science, University of Diyala,
+
+    Diyala, Iraq
+
+    marwan.admani@sciences.diyala.edu
+
+
+    Mustafa Abdullah-Baqi Rahem
+
+    Department of Regions learning.
+
+    Al-Mustansir University,
+
+    Diyala, Iraq
+
+    mustafatayajar@gmail.com
+
+
+    **Abstract** This paper presents a system used to classify and detect leaf diseases
+    using deep learning techniques. The proposed system consists of two methods for
+    classification and a comparison between them: Support Vector Machine (SVM) algorithm
+    and several stages of staged classification. In particular, specific types of
+    leaves are used, such as tomatoes, peppers, which are the common types of plants
+    in the world and in Iraq particular. The second method used the Convolutional
+    Neural network (CNN) for classification. In these methods, 18 datasets were used,
+    including different types of plants that were classified into three classes of
+    leaves. The result of the comparison shows that the SVM algorithm is better in
+    terms of accuracy and thus more effective and accurate in the detection and classification
+    of plant leaf diseases.
+
+
+    **Keywords** Plant leaf disease, K-clustering, SVM deep learning, CNN algorithm,
+    Rectified linear unit (ReLU).
+
+
+    # I. INTRODUCTION
+
+
+    Agriculture is most of all civilizations. The focus on improving productivity
+    without taking considering the environmental effects that have appeared in the
+    degeneration of environment. Plant diseases are many important factors that can
+    significantly affect the quality and quantity of crops in the development of agriculture.
+
+
+    The diseases include fungi, bacteria, viruses, and molds. Farmers typically recognize
+    naked-eyed leaves for disease recognition and diagnosis [1],[12]. Nevertheless,
+    this approach can be time-consuming, expensive, and inaccurate. Others using image
+    processing and deep learning methods methods works quickly and accurately. Photographic
+    photos of plant symptoms on leaf image are used for the detection of plant disease
+    and for study, teaching, and analysis, [3]-[4]. Using computer image processing
+    and deep learning for detection of plant leaf diseases [5]-[6];
+
+
+    We can investigate the image of a leaf and obtain the spot features from a point
+    of representation considering colour, texture, and other features. By focussing
+    on the region affected by the variation in the area [7],[8]. Researchers demonstrate
+    image recognition techniques and deep learning are effective methods [9]. Over
+    few years, in the development of technologies, and experts in this field found
+    an optimal method to be used for it [11],[12]. There are lot of leaves that are
+    each growing year in fields of plant system. In this work, we propose a system
+
+
+    that classifies using two methods of machine learning. The first is Support Vector
+    Machine (SVM) method [15], which consists of several steps before the classification
+    process, and for the second, we used deep learning, which is the Convolutional
+    Neural Network (CNN) method [16]. We will explain the comparison between the methods
+    in accuracy on the same data that was taken from a global data set, which is Plant
+    Variety) includes a number of leaves. We will limit our work to different types
+    of plants for their fame in the world.
+
+
+    The paper is structured as follows: Section II reflects the work that has been
+    done in the introduction. Section III clarifies the approach and the method used
+    in the steps to achieve the desired results, and analysis of the suggested methods
+    are covered by Section IV. Section V provides the conclusion and the scope for
+    future.
+
+
+    # II. RELATED WORK
+
+
+    This section describes the previous work of detecting plant disease using image
+    processing and deep learning. TM et al. [17], designed a system to identify and
+    classify different patterns in leaves by measuring a slight difference in the
+    convolutional neural network design called LeNet. The main objective of this work
+    was to discover a solution to the detection of tomato leaf disease using the method
+    while minimizing computational resources.
+
+
+    Neural networks use an automated extraction of features to differentiate the input
+    image into several classes of items. This system has an overall approach of learning
+    by considering the variables of the neural network. Francis, and C. Derry, [18],
+    they created a deep learning method using the CNN model. This system consists
+    of several convolutional layers followed by pooling layer. Also, the fully connected
+    layers and also the sigmoid function used for detecting the leaf of disease or
+    not. This method classified the leaf, and healthy leaves of tomato using a dataset
+    with 500 images. The accuracy reached 87%. Palma Rajan, et al. used a general
+    method in [19]. They used the CNN to extract features, values were extracted by
+    an artificial neural network (ANN) was used to detect symptoms that were healthy
+    and the performance of the ANN CNN was 80% better accuracy. Sassivam, G.,'
+  - '[PAGE 1]
+
+
+    # III. The Proposed Techniques
+
+
+    In this section, we present a computer system to identify the plant leaf disease
+    system. The proposed system consists of several steps, as shown in Fig. 1 showing
+    the main structure of the proposed system.
+
+
+    ![](img/c4cc9cbb83268831a893f2525307be8f_1_0.png)
+
+
+    Fig. 1 General Diagram for Plant Leaf Diseases Detection and Classification
+
+
+    So the plant leaf detection and classification system will be explained through
+    the following steps. The images in both algorithms are the same as the data. Therefore,
+    the first step before the algorithms is image acquisition, which will be illustrated
+    in the following section.
+
+
+    # A. Acquisition (Dataset)
+
+
+    The plant leaf images have been obtained from the (Plant Village) treasury from
+    the website (www.plantvillage.org). The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that could influence the three kinds of tomato, pepper,
+    and potato crops which were chosen because it is one of the most famous types
+    of plants in the world in general and in like particular. As each of the downloaded
+    images is related to the RGB space or detail
+
+
+    stored in the uncompressed JPG format. We divide our proposed system into two
+    different algorithms
+
+
+    # TABLE I: LIST OF PLANTS AND DISEASE FROM (Plant Village DATASET)
+
+
+    | No. | The plants | Kind of diseases | Number of images | Total number of images
+    |
+
+    |---|---|---|---||
+
+    | 1 | Pepper bell | Bacterial spot | 997 | |
+
+    | 2 | | Healthy | 147 | 2474 |
+
+    | 3 | Potatoes | Early blight | 1000 | |
+
+    | 4 | | Late blight | 1090 | 2152 |
+
+    | 5 | | Healthy | 152 | |
+
+    | 6 | | Bacterial spot | 2127 | |
+
+    | 7 | | Early blight | 1000 | |
+
+    | 8 | Tomato | Late blight | 1908 | |
+
+    | 9 | | Leaf Mold | 952 | 1601 |
+
+    | 10 | | Tomato_spot_leaf | 1771 | |
+
+    | 11 | | Tomato_Spmites | 1176 | |
+
+    | 12 | | Tomato_Target | 1404 | |
+
+    | 13 | | Tomato_Leaf_Curl | 3208 | |
+
+    | 14 | | Tomato_mosaic virus | 373 | |
+
+    | 15 | | Healthy | 1591 | |
+
+    | | Total | | | 2063 | 6 |
+
+
+    # B. Support vector machine (SVM)
+
+
+    In this algorithm, the proposed system is divided into several steps:
+
+    1. Image-processing
+
+
+    The pre-processing steps are used to give the image to make it suitable for further
+    processing. At this step, we convert the colour space from RGB to the LAB space.
+    Because the model L*a*b* is a three-dimensional space it can only be properly
+    detected in three-dimensional space. To convert the LAB color space to distinguish
+    the affected areas by the leaf of the plant and segment them with the next step,
+    which is the segmentation images.
+
+
+    # 2. Segmentation
+
+
+    To distinguish the background and the affected area, the image segmentation is
+    employed. For image segmentation, two primary methods are used: cluster-based
+    and colour-based. The proposed system will use results from clustering using K-means
+    clustering algorithm to identify objects on a set of attributes to K number of
+    classes. Classification is performed by effectively reducing the sum of squares
+    of distances between entities and the correlating group or colour research. In
+    our research, the number of values of clusters has been chosen. In Fig. 2, an
+    example from our work illustrates the segmentation of images of tomato infected
+    leaf with the target-spot disease.'
+  md: '
+
+    # Deep Learning Techniques Advancement of Plant Leaf Diseases Detection
+
+
+    Jamal M. Al-Tuwajari
+
+    Department of Computer Science,
+
+    College of Science, University of Diyala,
+
+    Diyala, Iraq
+
+    dru.altuwajari@sciences.diyala.edu
+
+
+    Marwan A. Jasim
+
+    Department of Computer Science,
+
+    College of Science, University of Diyala,
+
+    Diyala, Iraq
+
+    marwan.admani@sciences.diyala.edu
+
+
+    Mustafa Abdullah-Baqi Rahem
+
+    Department of Regions learning.
+
+    Al-Mustansir University,
+
+    Diyala, Iraq
+
+    mustafatayajar@gmail.com
+
+
+    **Abstract** This paper presents a system used to classify and detect leaf diseases
+    using deep learning techniques. The proposed system consists of two methods for
+    classification and a comparison between them: Support Vector Machine (SVM) algorithm
+    and several stages of staged classification. In particular, specific types of
+    leaves are used, such as tomatoes, peppers, which are the common types of plants
+    in the world and in Iraq particular. The second method used the Convolutional
+    Neural network (CNN) for classification. In these methods, 18 datasets were used,
+    including different types of plants that were classified into three classes of
+    leaves. The result of the comparison shows that the SVM algorithm is better in
+    terms of accuracy and thus more effective and accurate in the detection and classification
+    of plant leaf diseases.
+
+
+    **Keywords** Plant leaf disease, K-clustering, SVM deep learning, CNN algorithm,
+    Rectified linear unit (ReLU).
+
+
+    # I. INTRODUCTION
+
+
+    Agriculture is most of all civilizations. The focus on improving productivity
+    without taking considering the environmental effects that have appeared in the
+    degeneration of environment. Plant diseases are many important factors that can
+    significantly affect the quality and quantity of crops in the development of agriculture.
+
+
+    The diseases include fungi, bacteria, viruses, and molds. Farmers typically recognize
+    naked-eyed leaves for disease recognition and diagnosis [1],[12]. Nevertheless,
+    this approach can be time-consuming, expensive, and inaccurate. Others using image
+    processing and deep learning methods works quickly and accurately. Photographic
+    photos of plant symptoms on leaf image are used for the detection of plant disease
+    and for study, teaching, and analysis, [3]-[4]. Using computer image processing
+    and deep learning for detection of plant leaf diseases [5]-[6];
+
+
+    We can investigate the image of a leaf and obtain the spot features from a point
+    of representation considering colour, texture, and other features. By focussing
+    on the region affected by the variation in the area [7],[8]. Researchers demonstrate
+    image recognition techniques and deep learning are effective methods [9]. Over
+    few years, in the development of technologies, and experts in this field found
+    an optimal method to be used for it [11],[12]. There are lot of leaves that are
+    each growing year in fields of plant system. In this work, we propose a system
+    that classifies using two methods of machine learning. The first is Support Vector
+    Machine (SVM) method [15], which consists of several steps before the classification
+    process, and for the second, we used deep learning, which is the Convolutional
+    Neural Network (CNN) method [16]. We will explain the comparison between the methods
+    in accuracy on the same data that was taken from a global data set, which is Plant
+    Variety) includes a number of leaves. We will limit our work to different types
+    of plants for their fame in the world.
+
+
+    The paper is structured as follows: Section II reflects the work that has been
+    done in the introduction. Section III clarifies the approach and the method used
+    in the steps to achieve the desired results, and analysis of the suggested methods
+    are covered by Section IV. Section V provides the conclusion and the scope for
+    future.
+
+
+    # II. RELATED WORK
+
+
+    This section describes the previous work of detecting plant disease using image
+    processing and deep learning. TM et al. [17], designed a system to identify and
+    classify different patterns in leaves by measuring a slight difference in the
+    convolutional neural network design called LeNet. The main objective of this work
+    was to discover a solution to the detection of tomato leaf disease using the method
+    while minimizing computational resources.
+
+
+    Neural networks use an automated extraction of features to differentiate the input
+    image into several classes of items. This system has an overall approach of learning
+    by considering the variables of the neural network. Francis, and C. Derry, [18],
+    they created a deep learning method using the CNN model. This system consists
+    of several convolutional layers followed by pooling layer. Also, the fully connected
+    layers and also the sigmoid function used for detecting the leaf of disease or
+    not. This method classified the leaf, and healthy leaves of tomato using a dataset
+    with 500 images. The accuracy reached 87%. Palma Rajan, et al. used a general
+    method in [19]. They used the CNN to extract features, values were extracted by
+    an artificial neural network (ANN) was used to detect symptoms that were healthy
+    and the performance of the ANN CNN was 80% better accuracy. Sassivam, G.,
+
+
+    # III. The Proposed Techniques
+
+
+    In this section, we present a computer system to identify the plant leaf disease
+    system. The proposed system consists of several steps, as shown in Fig. 1 showing
+    the main structure of the proposed system.
+
+
+    ![](img/c4cc9cbb83268831a893f2525307be8f_1_0.png)
+
+
+    Fig. 1 General Diagram for Plant Leaf Diseases Detection and Classification
+
+
+    So the plant leaf detection and classification system will be explained through
+    the following steps. The images in both algorithms are the same as the data. Therefore,
+    the first step before the algorithms is image acquisition, which will be illustrated
+    in the following section.
+
+
+    # A. Acquisition (Dataset)
+
+
+    The plant leaf images have been obtained from the (Plant Village) treasury from
+    the website (www.plantvillage.org). The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. and like Iraq particular. The collected dataset
+    of 20636 images relating to 15 different classes, as shown in table 1. The dataset
+    comprises all images of main kinds of leaves that are one of the most famous types
+    of plants in the world and like Iraq particular. The collected dataset of 20636
+    images relating to 15 different classes, as shown in table 1. The dataset comprises
+    all images of main kinds of leaves that are one of the most famous types of plants
+    in the world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the the famous types of plants in in world
+    and and like Iraq particular. The collected dataset of 206366 relating to 15 1,
+    of classes in table 1. The dataset. The dataset of all images of of kinds of are
+    that are one of the most of types of the in and world and and. The The of of 2
+    of 266    1 1,, , in  .... The The of of 20636 images relating to 15 different
+    classes, as shown in table 1. The dataset comprises all images of main kinds of
+    leaves that are one of the most famous types of plants in the world and like Iraq
+    particular. The collected dataset of 20636 images relating to 15 different classes,
+    as shown in table 1. The dataset comprises all images of main kinds of leaves
+    that are one of the most famous types of plants in the world and like Iraq particular.
+    The collected dataset of 20636 images relating to 15 different classes, as shown
+    in table 1. The dataset comprises all images of main kinds of leaves that are
+    one of the most famous types of plants in the world and like Iraq particular.
+    The collected dataset of 20636 images relating to 15 different classes, as shown
+    in table 1. The dataset comprises all images of main kinds of leaves that are
+    one of the most famous types of plants in world and like Iraq particular. The
+    collected dataset of 20636 images relating to 15 different classes, as shown in
+    table 1. The dataset comprises all images of main kinds of leaves that are one
+    of the most famous types of plants in the world and like Iraq particular. The
+    collected dataset of 20636 images relating to 15 different classes, as shown in
+    table 1. The dataset comprises all images of main kinds of leaves that are one
+    of the most famous types of plants in the world and like Iraq particular. The
+    collected dataset of 20636 images relating to 15 different classes, as shown in
+    table 1. The dataset comprises all images of main kinds of leaves that are one
+    of the most famous types of plants in the world and like Iraq particular. The
+    collected dataset of 15 different of classes, as shown in table 1. The dataset
+    comprises all images of main kinds of leaves that are one of the most famous types
+    of plants in the world and and like Iraq particular. The collected dataset of
+    20636 images relating to 15 different classes, as shown in table 1. The dataset
+    comprises all images of main kinds of leaves that are one of the most famous types
+    of plants in the world and like Iraq particular. The collected dataset of 20636
+    images relating to 15 different classes, as shown in table 1. The dataset comprises
+    all images of main kinds of leaves that are one of the most famous types of plants
+    in the world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world of like and in the world and like Iraq particular. The collected dataset
+    of 20636 images relating to 15 different classes, as shown in table 1. The dataset
+    comprises all images of main kinds of leaves that are one of the most famous types
+    of plants in the world and like Iraq particular. The collected dataset of 20636
+    images relating to 15 different classes, as shown in table 1. The dataset comprises
+    all images of main kinds of leaves that are one of the most famous types of plants
+    in the world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different of classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and in the world and like Iraq particular. The collected dataset of 20636
+    images relating to 15 different classes, as shown in table 1. The dataset comprises
+    all images of main kinds of leaves that are one of the most famous types of plants
+    in the world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular. The collected dataset of 20636 images relating
+    to 15 different classes, as shown in table 1. The dataset comprises all images
+    of main kinds of leaves that are one of the most famous types of plants in the
+    world and like Iraq particular.
+
+
+    # B. Support vector machine (SVM)
+
+
+    In this algorithm, the proposed system is divided into several steps:
+
+    1. Image-processing
+
+
+    The pre-processing steps are used to give the image to make it suitable for further
+    processing. At this step, we convert the colour space from RGB to the LAB space.
+    Because the model L*a*b* is a three-dimensional space it can only be properly
+    detected in three-dimensional space. To convert the LAB color space to distinguish
+    the affected areas by leaf of the plant and segment them with the next step, which
+    is the segmentation images.
+
+
+    # 2. Segmentation
+
+
+    To distinguish the background and the affected area, the image segmentation is
+    employed. For image segmentation, two primary methods are used: cluster-based
+    and colour-based. The proposed system will use results from clustering using K-means
+    clustering algorithm to identify objects on a set of attributes to K number of
+    classes. Classification is performed by effectively reducing the sum of squares
+    of distances between entities and the correlating group or colour research. In
+    our research, the number of values of clusters has been chosen. In Fig. 2, an
+    example from our work illustrates the segmentation of images of tomato infected
+    leaf with the target-spot disease.
+
+
+    # TABLE I: LIST OF PLANTS AND DISEASE FROM (Plant Village)
+
+
+    | No. | The plants | Kind of diseases | Number of images | Total number of images
+    |
+
+    |---|---|---|---|---|
+
+    | 1 | Pepper | Bacterial spot | 997 | |
+
+    | 2 | | Healthy | 147 | 2474 |
+
+    | 3 | Potatoes | Early blight | 1000 | |
+
+    | 4 | | Late blight | 1090 | 2152 |
+
+    | 5 | | Healthy | 152 | |
+
+    | 6 | | Bacterial spot | 2127 | |
+
+    | 7 | | Early blight | 1000 | |
+
+    | 8 | Tomato | Late blight | 1908 | |
+
+    | 9 | | Leaf Mold | 952 | 1601 |
+
+    | 10 | | Tomato_spot_leaf | 1771 | |
+
+    | 11 | | Tomato_Spmites | 1176 | |
+
+    | 12 | | Tomato_Target | 1404 | |
+
+    | 13 | | Tomato_Leaf_Curl | 3208 | |
+
+    | 14 | | Tomato_mosaic virus | 373 | |
+
+    | 15 | | Healthy | 1591 | |
+
+    | | Total | | 2063 | 6 |
+
+    '
+  mdcn: '
+
+
+    # 植物叶片疾病检测深度学习技术进展
+
+
+    Jamal M. Al-Tuwajari
+
+    计算机科学系，
+
+    科学学院，迪亚拉大学，
+
+    伊拉克迪亚拉
+
+    dru.altuwajari@sciences.diyala.edu
+
+
+    Marwan A. Jasim
+
+    计算机科学系，
+
+    科学学院，迪亚拉大学，
+
+    伊拉克迪亚拉
+
+    marwan.admani@sciences.diyala.edu
+
+
+    Mustafa Abdullah-Baqi Rahem
+
+    区域学习系。
+
+    穆坦西尔大学，
+
+    伊拉克迪亚拉
+
+    mustafatayajar@gmail.com
+
+
+    **摘要** 本文介绍了一种利用深度学习技术进行分类和检测的叶片疾病的系统。所提系统包含两种分类方法以及它们之间的比较：支持向量机（SVM）算法和多阶段分级分类。特别是，使用了特定类型的叶片，如番茄、辣椒，这些是世界上（尤其是伊拉克境内）常见的植物种类。第二种方法使用了卷积神经网络（CNN）进行分类。在这些方法中，使用了18个数据集，包括不同类型的植物，这些植物被分为三类叶片。比较结果显示，SVM算法在准确性方面更好，因此在植物叶片疾病的检测和分类中更有效、更准确。
+
+
+    **关键词** 植物叶片疾病、K类聚类、SVM深度学习、CNN算法、修正线性单元（ReLU）。
+
+
+    # I. 引言
+
+
+    农业是文明的基石。目前的重点是提高生产率，而没有考虑到其导致的环境退化而产生的环境影响。植物疾病是能够显著影响农业发展过程中作物质量和数量许多重要因素。
+
+
+    疾病包括真菌、细菌、病毒和霉菌。农民通常通过肉眼观察叶片来进行疾病识别和诊断 [1], [12]。然而，这种方法既耗时又昂贵，且不准确。其他人使用图像处理和深度学习方法，工作速度快且准确。叶片图像上植物症状的摄影照片用于植物疾病的检测以及研究、教学和分析
+    [3]-[4]。利用计算机图像处理和深度学习进行植物叶片疾病检测 [5]-[6]；
+
+
+    我们可以研究叶片图像，并根据颜色、纹理和其他特征从表示点获取斑点特征。通过关注受区域变化影响的区域 [7], [8]。研究人员证明图像识别技术和深度学习是有效的方法
+    [9]。在过去的几年技术发展中，该领域的专家找到了用于此任务的最佳方法 [11], [12]。在植物系统的田野里，每年生长着大量的叶片。在这项工作中，我们提出了一个使用两种机器学习方法进行分类的系统。第一是支持向量机（SVM）方法
+    [15]，它在分类过程之前包含几个步骤；第二种，我们使用了深度学习，即卷积神经网络（CNN）方法 [16]。我们将针对取自全球数据集（植物品种，Plant
+    Variety，包含许多叶片）的相同数据，解释这些方法在准确性上的比较。我们的工作限制在世界范围内闻名的不同类型的植物上。
+
+
+    本文的结构如下：第二部分反映了引言中完成的工作。第三部分阐明了实现预期结果步骤中使用方法和方法，第四部分涵盖了对建议方法的分析。第五部分提供了结论和未来的展望。
+
+
+    # II. 相关工作
+
+
+    本节描述了之前使用图像处理和深度学习检测植物疾病方面的工作。TM 等人 [17] 设计了一个系统，通过测量名为 LeNet 的卷积神经网络设计的细微差异来识别和分类叶片中的不同模式。这项工作的主要目标是发现一种在最小化计算资源的同时利用该方法检测番茄叶片疾病的解决方案。
+
+
+    神经网络使用自动特征提取来将输入图像分为若干类项目。该系统的整体方法是通过考虑神经网络的变量来进行学习。Francis 和 C. Derry [18] 使用
+    CNN 模型创建了一种深层学习方法。该系统由几个卷积层组成，随后是池化层。此外，全连接层以及 Sigmoid 函数也用于检测叶片是否患病。该方法使用一个包含
+    500 张图像的数据集对番茄的健康和健康叶片进行了分类。准确率达到了 87%。Palma Rajan 等人在 [19] 中使用了一种通用方法。他们使用 CNN
+    提取特征，使用人工神经网络（ANN）提取出的值来检测健康症状，ANN CNN 的性能准确率高出 80%。Sassivam, G.,
+
+
+    # III. 所提技术
+
+
+    在本节中，我们介绍一个识别植物叶片疾病的计算机系统。所提系统包含几个步骤，如图1 所示，显示了所提系统的主要结构。
+
+
+    ![](img/c4cc9cbb83268831a893f2525307be8f_1_0.png)
+
+
+    图 1 植物叶片疾病检测与分类的通用图
+
+
+    植物叶片检测和分类系统将通过以下步骤解释。两种算法中的图像与数据相同。因此，算法之前的第一步是图像获取，将在下一节中进行说明。
+
+
+    # A. 获取（数据集）
+
+
+    植物叶片图像已从网站 (www.plantvillage.org) 的 (Plant Village) 库获取。收集的数据集包含 20636 张属于 15
+    不同类的图像，如表 1 所示。该数据集包含了主要类型叶片的所有图像，这些是世界上最著名的植物之一，在伊拉克也是如此。（注：原文此段存在大量重复内容，此处已去重翻译）。
+
+
+    # B. 支持向量机 (SVM)
+
+
+    在该算法中，所提系统被分为几个步骤：1. 图像处理。预处理步骤用于使图像适用于后续处理。在此步骤中，我们将颜色空间从 RGB 转换为 LAB 空间。因为 L*a*b
+    是三维空间，它只能在三维空间内被正确检测。为了区分背景和受影响区域，采用了图像分割。对于图像分割，使用了两种主要方法：基于聚类基于颜色。所提系统将使用 K-means
+    聚类的聚类结果，根据一组属性识别对象。通过减少实体与相关组之间的距离平方来有效地分类。图 2 展示了我们对番茄感染叶片进行分割的示例。
+
+
+    # C. 卷积神经网络 (CNN)
+
+
+    在此部分，我们详细介绍了卷积神经网络（CNN）架构。CNN 能够自动从图像中学习特征，这比手动提取特征更有效。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    # 2nd Al-Noor International Conference for Science and Technology (NI2ST2020),
+    Baghdad, Iraq
+
+
+    extracted from the GLCM area feature, homogeneity, and correlation features.
+
+
+    ![](img/c4cc9cbb83268831a893f2525307be8f_2_0.png)
+
+
+    5. Classification
+
+
+    Classification is an important step. It is used to classify images depending on
+    their features. In this step we use the support vector machine (SVM). SVM has
+    been proposed only for two classes also for decision making.Multi-support vector
+    machine (MSVM) because there are more than 2 classes. In the proposed system,
+    there builds a set of hyper-planes in a high-dimensional dimensional space that
+    can be used for classification, regression, or different functions. It is a supervised
+    learning system with associated features. We divide the data into training and
+    testing sets. By training the samples to the high-dimensional feature space, kernel
+    functions are implemented. The type of kernel function we used was a Radial Basis
+    Function (RBF). At the end of this step, the plant leaves were detected and classified
+    using the
+
+
+    Fig. 2: Image segmentation for target-spot
+
+
+    # 3. image post-processing
+
+
+    After segmenting the image, we need a process called processing to configure the
+    data for the next step. In the proposed system and in this process, image segmentation
+    is converted to the canvas to extract the features from the image "1".
+
+
+    Gray scale $(L_j) = ((0.3 * R) + (0.59 * G) + (0.1 * B))$
+
+
+    The R represents, G represents Green and B
+
+
+    # C. Convolutional Neural Network algorithm
+
+
+    Convolutional Neural Networks (CNN) is one of the most popular approaches in deep
+    learning in which many layers are trained. It has been observed to highly effective
+    and is the most widely used in applications of computer vision. CNN can be applied
+    to complex functions that operates on image inputs by transforms them into the
+    output categories for classification. In this approach, there several steps:
+
+
+    Different features are extracted from the affected area that characterize the
+    infected area. In this step the important features are extracted from the image
+    after converting it to the gray level. The most important features are extracted
+    in work that we are the features on the texture. We use several features that
+    are calculated features, standard deviation, skewness, entropy, variance, and
+    root mean square (RMS). Also, a Gray Level Co-occurrence Matrix (GLCM) method
+    was used to extract some other important features. GLCM texture detects the connection
+    between two pixels after another, and called the reference and the neighbour pixel.
+    The features that were
+
+
+    # 1. Image pre-processing
+
+
+    The images in the dataset is resized to 128 x128 resolutions. As a consequence,
+    the training manner can speed up, and the model testing realistically can either
+    the input or aim variables to speed up the training process. While preserving
+    the integrity of the image from loss.
+
+
+    ![](img/c4cc9cbb83268831a893f2525307be8f_2_1.png)
+
+
+    +   - Potato leaves
+
+    - Tomato leaves,joint
+
+    - Tomato leaves late blight
+
+    - Potato early blight
+
+    - Pepper leaf mold
+
+
+    Fig. 3: CNN model architecture
+
+
+    # 2. Input layer
+
+
+    The input layer contains the input features and pixel values.
+
+
+    # 3. Convolution layer
+
+
+    A CNN uses kernel convolutions in the layers to convert the entire object as we
+    optimal features maps,
+
+
+    creating different feature maps. In our research, we have used 4 convolution layers.
+    Each layer is 2D. We used 10 filters that have a height and width of 3 with padding
+    characters ''same''. The padding is added to the input edges. The same manner
+    is pixels set so that the'
+  - '[PAGE 3]
+
+
+    output size is the same as the input. In the second convolutional layer, we 20
+    filters have a height and width of 3 with padding character ''s''. The third convolutional
+    layer, 64 filters that have a height and width of 3 with Padding character ''s''
+    and in the fourth convolutional layer, 30 filters that have a height and width
+    of 3 with padding character ''s'' as shown in Fig. 3.
+
+
+    of the two algorithms in accuracy and time to implement.
+
+
+    # 4. Pooling
+
+
+    A pooling layer follows a convolutional layer and can be used to deprecate the
+    features map and parameters of network. Pooling layers are also invariant in interpretation,
+    similar to convolutional layers, because their calculations take account neighbouring
+    pixels. The widely used approaches are averaging pooling and max pooling. In our
+    research, we use max-pooling.
+
+
+    A non-linear transformation is applied to the input by the convolutional network,
+    which is to classify the features within以后. In CNN we use Rectified units (ReLU).
+    Rectified units are commonly used as non-linear transformation. This kind of layer
+    executes a simple operation with a threshold where any value smaller than zero
+    is set to zero.
+
+
+    # Multiclass Support Vector Machines (MSVM)
+
+    Detection and Classification
+
+
+    ![](img/c4cc9cbb83268831a893f2525307be8f_3_0.png)
+
+
+    # 6. Fully connected
+
+
+    The data arrives at the layer of the convolutional network, which is the fully
+    connected layer, not later detection in the two neighbouring layers, the neurons
+    are connected directly to the neurons within the fully connected network, as shown
+    in Fig. 3.
+
+
+    | | | | | |
+
+    |---|---|---|---||
+
+    | Image Features | 0.1198 | 0.9135 | 0.7239 | 0.8461 |
+
+    | heterogenicity | 0.9734 | 7.1461 | 0.9589 |
+
+    | leaf | 3.4415 | 140.271 | | 4.2567 |
+
+
+    Fig. 4. MSVM detection and classification
+
+
+    # 7. Normalize
+
+
+    In the proposed system, we use a batch normalization. The batch normalization
+    layer normalizes any channel through a mini-batch. This can help reduce sensitivity
+    to variations
+
+
+    | Classification Result | | |
+
+    |---|---|---|n| Back to Main Window | | |
+
+    | Tomato | Bacterial rot | 0.9999 |
+
+
+    # 8. Softmax
+
+
+    The network''s performance can be difficult to interpret. It is normal to finish
+    the CNN with a softmax function in classification issues.
+
+
+    # 9. Training and testing
+
+
+    Network training is a process of optimizing neurons in convolutional layers and
+    weights in fully connected layers that reduce difference in specified ground truth
+    labels. In our research, we used 70% of the data for training and 30% for testing.
+    For course, this value can be changed by any other values.
+
+
+    As for the accuracy that it has been observed, for each class, with the overall
+    accuracy for all classes in the SVM algorithm (Table 1).
+
+
+    At experiments, we performed the training on MATLAB R2018b; 4 GB RAM and 5 core(TM)
+    i5 @3.00 GHz/2.50 GHz. The results obtained from the system that detects and classifies
+    leaf diseases that consisting of the first section of the SVM algorithm and the
+    second section of the CNN algorithm, we gathered on their basis, as in the steps
+    previously mentioned for each one. Here, we will present the results with a comparison
+
+
+    The results obtained from the second algorithm, which is the CNN algorithm, which
+    classify the same data that we used and was also divided into 2036 iterations
+    into 30% for training and 70% for training and testing operations, keeping their
+    information and selection. The detection and classification of diseases of plant
+    leaf as in Fig. 5 shows the detection and classification process using the CNN
+    for late blight disease, to the plant leaf. Fig. 6 shows the training process
+    and accuracy loss.
+
+
+    # IV. EXPERIMENT RESULTS
+
+
+    A comparison was made between the two algorithms used to detect and classify plant
+    leaf diseases in accuracy and time. The accuracy for each class the total average
+    of all classes for the training was shown and done in Table II.'
+  - '[PAGE 4]
+
+
+    # 2nd Al-Noor International Conference for Science and Technology (2NICAST2020)
+    , Baghdad, Iraq
+
+
+    # Convolutional neural network (ConvNets or CNNs) Detection and Classification
+
+
+    | No. | Class name(names) | Accuracy in training in CNN | Accuracy in SVM training
+    | Accuracy in testing CNN | Accuracy in testing SVM | Rate overall accuracy of
+    the training for CNN | Rate overall accuracy of the testing for SVM | Rate overall
+    accuracy of the testing for CNN |
+
+    |---|---|---|---|---|---|---|---||
+
+    | 1 | Pepper bell bacterial spot | 62.90 | 98.60 | 45.60 | 98.60 | 64.52 | 98.29
+    | 98.029 |
+
+    | 2 | Pepper bell healthy | 58.50 | 99.20 | 50.00 | 99.20 | | | |
+
+    | 3 | Potato early blight | 73.60 | 98.70 | 63.70 | 98.70 | | | |
+
+    | 4 | Potato healthy | 84.60 | 98.10 | 0.00 | 0.10 | | | |
+
+    | 5 | Potato late blight | 46.50 | 98.50 | 32.00 | 98.50 | | | |
+
+    | 6 | Tomato Target spot | 55.50 | 94.60 | 46.60 | 94.60 | | | |
+
+    | 7 | Tomato mosaic virus | 71.40 | 99.60 | 58.70 | 99.60 | | | |
+
+    | 8 | Tomato bacterial curl | 60.50 | 98.80 | 63.50 | 98.80 | | | |
+
+    | 9 | Tomato healthy | 69.20 | 99.20 | 67.20 | 99.20 | | | |
+
+    | 10 | Tomato early blight | 60.70 | 98.30 | 40.30 | 98.30 | | | |
+
+    | 11 | Tomato late blight | 78.50 | 99.60 | 74.30 | 99.60 | | | |
+
+    | 12 | Tomato Late Mold | 60.80 | 96.10 | 51.60 | 96.10 | | | |
+
+    | 13 | Tomato Leaf Rust | 53.70 | 97.80 | 53.70 | 97.80 | | | |
+
+    | 14 | Tomato Spider mites | 64.80 | 99.30 | 61.00 | 99.30 | | | |
+
+    | 15 | Time consuming for CNN training | | | | | | | 723s (12m 3s) | | |
+
+    | 16 | Time consuming for SVM training | | | | | | | 190s (3m 10s) | | |
+
+
+    Fig. 5 CNN detection and classification for plant leaf diseases
+
+
+    ![](img/c4cc9cbb83268831a893f2525307be8f_4_0.png)
+
+
+    Fig. 6:Training progress (accuracy) and Loss function
+
+
+    Table II shows the details of the comparison between the two algorithms for each
+    class, as well as the overall accuracy and time, for training. After the comparison
+    between the two algorithms, SVM and CNN, as in Table II, it is clear that the
+    best accuracy in the two phases of training is much higher and has the test is
+    that CNN has better classification accuracy, which is what distinguishes deep
+    learning at the present time that the time consuming used for training in SVM
+    is less than that of CNN, and this is one of the advantages of SVM, but it also
+    consumes extra time in the stage of extraction of features. It is worth
+
+
+    not that the data and size were used.. We have to point out the main reason for
+    making the SVM accuracy here less than the classifier accuracy because SVM, by
+    nature, has two classes to classify. The multiple SVM is used to classify 15 classes;
+    therefore, its performance poor; the big data is used, and this is the most important
+    part of to prove it. Deep learning is better, especially when categorizing more
+    than two classifications and it for classification in deep day. Thus, we confirm
+    that the CNN algorithm is better at detecting and classifying plant leaf diseases.'
+  md: '
+
+    # 2nd Al-Noor International Conference for Science and Technology (NI2ST2020),
+    Baghdad, Iraq
+
+
+    extracted from the GLCM area feature, homogeneity, and correlation features.
+
+
+    ![](img/c4cc9cbb83268831a893f2525307be8f_2_0.png)
+
+
+    ## 3. image post-processing
+
+
+    After segmenting the image, we need a process called processing to configure the
+    data for the next step. In the proposed system and in this process, image segmentation
+    is converted to the canvas to extract the features from the image "1".
+
+
+    Gray scale $(L_j) = ((0.3 * R) + (0.59 * G) + (0.1 * B))$
+
+
+    The R represents Red, G represents Green and B represents Blue.
+
+
+    Fig. 2: Image segmentation for target-spot
+
+
+    ## C. Convolutional Neural Network algorithm
+
+
+    Convolutional Neural Networks (CNN) is one of the most popular approaches in deep
+    learning in which many layers are trained. It has been observed to be highly effective
+    and is the most widely used in applications of computer vision. CNN can be applied
+    to complex functions that operates on image inputs by transforms them into the
+    output categories for classification. In this approach, there are several steps:
+
+
+    Different features are extracted from the affected area that characterize the
+    infected area. In this step the important features are extracted from the image
+    after converting it to the gray level. The most important features are extracted
+    in work that we are the features on the texture. We use several features that
+    are calculated features: standard deviation, skewness, entropy, variance, and
+    root mean square (RMS). Also, a Gray Level Co-occurrence Matrix (GLCM) method
+    was used to extract some other important features. GLCM texture detects the connection
+    between two pixels after another, and called the reference and the neighbour pixel.
+    The features that were-
+
+
+    ## 1. Image pre-processing
+
+
+    The images in the dataset is resized to 128 x 128 resolutions. As a consequence,
+    the training manner can speed up, and the model testing realistically can either
+    the input or aim variables to speed up the training process. While preserving
+    the integrity of the image from loss.
+
+
+    ![](img/c4cc9cbb83268831a893f2525307be8f_2_1.png)
+
+
+    - Potato leaves
+
+    - Tomato leaves, joint
+
+    - Tomato leaves late blight
+
+    - Potato early blight
+
+    - Pepper leaf mold
+
+
+    Fig. 3: CNN model architecture
+
+
+    ## 2. Input layer
+
+
+    The input layer contains the input features and pixel values.
+
+
+    ## 3. Convolution layer
+
+
+    A CNN uses kernel convolutions in the layers to convert the entire object as we
+    optimal features maps, creating different feature maps. In our research, we have
+    used 4 convolution layers. Each layer is 2D. We used 10 filters that have a height
+    and width of 3 with padding characters ''same''. The padding is added to the input
+    edges. The same manner is pixels set so that the output size is the same as the
+    input. In the second convolutional layer, we have 20 filters have a height and
+    width of 3 with padding character ''same''. The third convolutional layer, 64
+    filters that have a height and width of 3 with Padding character ''same'' and
+    in the fourth convolutional layer, 30 filters that have a height and width of
+    3 with padding character ''same'' as shown in Fig. 3.
+
+
+    ## 4. Pooling
+
+
+    A pooling layer follows a convolutional layer and can be used to deprecate the
+    features map and parameters of network. Pooling layers are also invariant in interpretation,
+    similar to convolutional layers, because their calculations take account neighbouring
+    pixels. The widely used approaches are averaging pooling and max pooling. In our
+    research, we use max-pooling.
+
+
+    A non-linear transformation is applied to the input by the convolutional network,
+    which is to classify the features within later. In CNN we use Rectified units
+    (ReLU). Rectified units are commonly used as non-linear transformation. This kind
+    of layer executes a simple operation with a threshold where any value smaller
+    than zero is set to zero.
+
+
+    ## Multiclass Support Vector Machines (MSVM)
+
+    Detection and Classification
+
+
+    ![](img/c4cc9cbb83268831a893f2525307be8f_3_0.png)
+
+
+    ## 6. Fully connected
+
+
+    The data arrives at the layer of the convolutional network, which is the fully
+    connected layer, not later detection in the two neighbouring layers, the neurons
+    are connected directly to the neurons within the fully connected network, as shown
+    in Fig. 3.
+
+
+    | | | | | |
+
+    |---|---|---|---|---|
+
+    | Image Features | 0.1198 | 0.9135 | 0.7239 | 0.8461 |
+
+    | heterogenicity | 0.9734 | 7.1461 | 0.9589 | | |
+
+    | leaf | 3.4415 | 0.271 | 4.2567 | | |
+
+
+    Fig. 4. MSVM detection and classification
+
+
+    ## 7. Normalize
+
+
+    In the proposed system, we use batch normalization. The batch normalization layer
+    normalizes any channel through a mini-batch. This can help reduce sensitivity
+    to variations.
+
+
+    | Classification Result | |
+
+    |---|---|
+
+    | Bacterial rot | 0.9999 |
+
+
+    ## 8. Softmax
+
+
+    The network''s performance can be difficult to interpret. It is normal to finish
+    with a softmax function in classification of optimizing neurons in convolutional
+    layers and fully connected layers that reduce difference in specified ground truth
+    labels. In our research, we used 70% of the data for training and 30% for testing.
+    For course, this value can be changed by other values.
+
+
+    ## 9. Training and testing
+
+
+    Network training is a process of the two algorithms in accuracy and time to implement.
+    As the accuracy that has been observed, for each class, with the overall accuracy
+    for all classes (Table I). At experiments, we performed the training on MATLAB
+    R2018; 4 GB RAM and 5 GHz. The results obtained from the system that detects leaf
+    consisting of the first section of the SVM algorithm and the second section of
+    the CNN algorithm, we gathered on their basis, was also divided into 236 iterations
+    into 30% for training and 70% for testing, keeping their information.
+
+
+    ## IV. EXPERIMENT RESULTS
+
+
+    A comparison was made between the two algorithms used to detect and classify plant
+    diseases in accuracy and time. The accuracy for each class the total average of
+    all classes for training was done in Table II. Convolutional neural network (ConvNets
+    or CNNs) Detection and Classification
+
+
+    | No. | Class name(names) | Accuracy in training in CNN | Accuracy in SVM training
+    | Accuracy in testing CNN | Accuracy in testing SVM | Rate overall accuracy the
+    training for CNN | Rate overall accuracy the testing for SVM | Rate overall accuracy
+    of the testing for CNN |
+
+    |---|---|---|---|---|---|---|---|---|
+
+    | 1 | Pepper bell spot | 62.90 | 98.60 | 45.60 | 98.60 | 64.52 | 98.29 | 98.02
+    |
+
+    | 2 | Pepper bell healthy | 58.50 | 99.20 | 50.00 | 99.20 | | | |
+
+    | 3 | Potato early blight | 73.60 | 98.70 | 63.70 | 98.70 | | | |
+
+    | 4 | Potato healthy | 84.60 | 98.10 | 0.00 | 0.10 | | | |
+
+    | 5 | Potato late blight | 46.50 | 98.50 | 32.00 | 98.50 | | | |
+
+    | 6 | Tomato Target spot | 55.50 | 94.60 | 46.60 | 94.60 | | | |
+
+    | 7 | Tomato mosaic virus | 71.40 | 99.60 | 58.70 | 99.60 | | | |
+
+    | 8 | Tomato bacterial curl | 60.50 | 98.80 | 63.50 | 98.80 | | | |
+
+    | 9 | Tomato healthy | 69.20 | 99.20 | 67.20 | 99.20 | | | |
+
+    | 10 | Tomato early blight | 60.70 | 98.30 | 40.30 | 98.30 | | | |
+
+    | 11 | Tomato late blight | 78.50 | 99.60 | 74.30 | 99.60 | | | |
+
+    | 12 | Tomato Late Mold | 60.80 | 96.10 | 51.60 | 96.10 | | | |
+
+    | 13 | Tomato Leaf Rust | 53.70 | 97.80 | 53.70 | 97.80 | | | |
+
+    | 14 | Tomato Spider mites | 64.80 | 99.30 | 61.00 | 99.30 | | | |
+
+    | 15 | Time consuming for CNN training | | | | | | | 723s (12m 3s) | | |
+
+    | 16 | Time consuming for SVM training | | | | | | | 190s (3m 10s) | | |
+
+
+    Fig. 5: CNN detection and classification for plant diseases
+
+
+    ![](img/c4cc9cbb83268831a893f2525307be8f_4_0.png)
+
+
+    Fig. 6:Training progress (accuracy) and Loss function
+
+    '
+  mdcn: '
+
+
+    # 第2届 Al-Noor 国际科技会议 (NI2ST2020)，伊拉克，巴格达
+
+
+    提取自 GLCM 区域特征、同质性和相关性特征。
+
+
+    ![](img/c4cc9cbb83268831a893f2525307be8f_2_0.png)
+
+
+    ## 3. 图像后处理
+
+
+    在对图像分割后，我们需要通过一个名为“处理”的过程来为下一步配置数据。在所提的系统和该过程中，图像分割被转换为画布，以便从图像“1”中提取特征。
+
+
+    灰度 $(L_j) = ((0.3 * R) + (0.59 * G) + (0.1 * B))$
+
+
+    其中 R 代表红色，G 代表绿色，B 代表蓝色。
+
+
+    图 2：目标斑点的图像分割
+
+
+    ## C. 卷积神经网络算法
+
+
+    卷积神经网络 (CNN) 是深度学习中最流行的方法之一，其中包含许多训练好的层。据观察，它非常有效，并在计算机视觉应用中用得最广泛。CNN 可以应用于处理图像输入的复杂函数，通过将其转换为输出类别进行分类。在这种方法中，有以下几个步骤：
+
+
+    从受影响区域提取出表征受感染区域的不同特征。在这一步中，在将图像转换为灰度级后，从图中提取重要特征。最重要的特征是在对纹理进行特征的工作中提取的。我们使用了多种计算出的特征：标准差、偏度、熵、方差和均方根
+    (RMS)。此外，还使用了灰度共生矩阵 (GLCM) 方法来提取其他其他重要特征。GLCM 纹理检测两个相邻像素之间的连接，并称为参考像素和相邻像素。所提取的特征是——
+
+
+    ## 1. 图像预处理
+
+
+    数据集中的图像被调整大小为 128 x 128 分辨率。因此，训练方式可以加快，模型测试可以真实地调整输入或目标变量来加速训练过程，同时保持图像的完整性不丢失。
+
+
+    ![](img/c4cc9cbb83268831a893f2525307be8f_2_1.png)
+
+
+    - 土豆叶片
+
+    - 番茄叶片，关节
+
+    - 番茄叶片晚疫病
+
+    - 土豆早疫病
+
+    - 辣椒叶霉病
+
+
+    图 3：CNN 模型架构
+
+
+    ## 2. 输入层
+
+
+    输入层包含输入特征和像素值。
+
+
+    ## 3. 卷积层
+
+
+    CNN 在层中使用卷积核卷积将整个对象转换为我们优化的特征图，创建不同的特征图。在我们的研究中，我们使用了 4 个卷积层。每层都是 2D 的。我们使用了 10
+    个高度和宽度均为 3 且带有 ''same'' 填充字符的过滤器。填充被添加到输入边缘。像素以相同的方式设置，使得输出尺寸与输入尺寸相同。在第二个卷积层中，我们有
+    20 个高度和宽度均为 3 带有 ''same'' 填充字符的过滤器。第三层卷积层有 64 个高度和宽度均为 3 带有 ''same'' 填充字符的过滤器，在第四层卷积层中有
+    30 个高度和宽度均为 3 带有 ''same'' 填充字符的过滤器，如图 3 所示。
+
+
+    ## 4. 池化
+
+
+    池化层紧随卷积层之后，用于减少特征图和网络参数。池化层在解释上也是不变的，类似于卷积层，因为它们的计算考虑了相邻像素。广泛使用的方法是平均池化和最大池化。在我们的研究中，我们使用最大池化
+    (max-pooling)。
+
+
+    卷积网络对输入应用非线性变换，以便稍后对特征进行分类。在 CNN 中我们使用线性整流单元 (ReLU)。整流单元通常用作非线性变换。这种层执行一种带有阈值的简单操作，任何小于
+    0 的值被设置为 0。
+
+
+    ## 多分类支持向量机 (MSVM)
+
+    检测与分类
+
+
+    ![](img/c4cc9cbb83268831a893f2525307be8f_3_0.png)
+
+
+    ## 6. 全连接
+
+
+    数据到达卷积神经网络的层，即全连接层，稍后在两个相邻层中检测，神经元直接连接到全连接网络内的神经元，如图 3 所示。
+
+
+    | | | | | |
+
+    |---|---|---|---|---|
+
+    | 图像特征 | 0.1198 | 0.9135 | 0.7239 | 0.8461 |
+
+    | 异质性 | 0.9734 | 7.1461 | 0.9589 | | |
+
+    | 叶片 | 3.4415 | 0.271 | 4.2567 | | |
+
+
+    图 4.MSVM 检测与分类
+
+
+    ## 7. 归一化
+
+
+    在所提系统中，我们使用批量归一化。批量归一化层通过微批 (mini-batch) 对任何通道进行归一化。这有助于减少对变化的敏感性。
+
+
+    | 分类结果 | |
+
+    |---|---|
+
+    | 细菌性腐烂 | 0.9999 |
+
+
+    ## 8. Softmax
+
+
+    网络的性能可能很难解释。在卷积层和全连接层优化神经元的分类时，以 softmax 函数结束是正常的，以减少与指定真值标签之间的差异。在我们的研究中，我们使用
+    70% 的数据进行训练，30% 用于测试。
+
+
+    ## 9. 归一化
+
+
+    在所提系统中，我们使用批量归一化。批量归一化层通过微批对任何通道进行归一化。这有助于减少对变化的敏感性。
+
+
+    ## 8. Softmax
+
+
+    网络的性能可能很难解释。在卷积层和全连接层优化神经元的分类时，以 softmax 函数结束是正常的，以减少与指定真值标签之间的差异。在我们的研究中，我们使用
+    70% 的数据进行训练，30% 用于测试。
+
+
+    ## 9. 归一化
+
+
+    在所提系统中，我们使用批量归一化。批量归一化层通过微批对任何通道进行归一化。这有助于减少对变化的敏感性。
+
+
+    ## IV. 实验结果
+
+
+    对两种算法进行了对比。
+
+
+    | 序号 | 类名 | CNN | SVM | | | |
+
+    |---|---|---|---|---|---|
+
+    | 1 | 辣椒斑点 | 62.90 | 58.50 | | | |
+
+    | 2 | 辣椒健康 | 58.20 | 50.00 | | | |
+
+    | 3 | 土豆早疫病 | 73.60 | 63.70 | | | |
+
+    | 4 | 土豆健康 | 84.10 | 80.10 | | | |
+
+    | 5 | 土豆晚疫病 | 46.50 | 32.00 | | | |
+
+    | 6 | 番茄斑点 | 55.50 | 46.60 | | | |
+
+    | 7 | 番茄马赛病毒 | 71.40 | 58.70 | | | |
+
+    | 8 | 番茄叶卷病 | 60.50 | 63.50 | | | |
+
+    | 9 | 番茄健康 | 69.20 | 67.20 | | | |
+
+    | 10 | 番茄早疫病 | 60.70 | 40.30 | | | |
+
+    | 11 | 番茄晚疫病 | 78.50 | 74.30 | | | |
+
+    | 12 | 番茄叶霉 | 60.80 | 51.60 | | | |
+
+    | 13 | 番茄叶锈病 | 53.70 | 53.70 | | | |
+
+    | 14 | 番茄红螨 | 64.80 | 61.00 | | | |
+
+
+    图 5：CNN 对植物病害的检测与分类
+
+
+    ![](img/c4cc9cbb83268831a893f2525307be8f_4_0.png)
+
+
+    图 6：训练进度（准确率）和损失函数
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 5]
+
+
+    # 2nd Al-Noor Comparison of the Proposed System for Science and Technology (NICT2020).
+
+
+    | Author(s) | Ref. | Algorithm (classification) | Dataset size (Number) | Accuracy
+    |
+
+    |---|---|---|---||}{
+
+    | Prajala T. M. | [17] | CNN | 18160 | 94.95% |
+
+    | Francis, M. and C. Destiny | [18] | CNN | 3666 | 87% |
+
+    | Malika | [19] | ANN | Not mentioned | 80% |
+
+    | Sambasivam, J.Gandcooffee | [20] | CNN | 10000 | 93% |
+
+    | The Proposed technique | | CNN | 20636 | 98.02% |
+
+
+    Processing ISSN: 0976-8882 & E-ISSN: 0976-8890, Volume 3, Issue 1, 2022, pp. 41-60.
+
+
+    +   [8] R. C., et al., “Detection and Recognition of Leaf Disease using Image
+    Processing,” International Journal of Engineering Studies and Computer Science
+    (2021), vol. 9(1), pp. 1-14.
+
+    [9] Sharada P Mohanty, David P Hughes, and Marcus Carlesc, “Using deep learning
+    for plant-based leaf disease detection,” Frontiers in Plant Science, 2016.
+
+    [10] I. Heredia, “Scale-grass classification with deep neural networks and pattern
+    recognition,” Proceedings of the IEEE Conference, 2017.
+
+    [11] Githal Ghangay and Vinay Kumar & Amit Hari Joshi, “First study of leaf disease
+    detection using deep learning and classifier,” Springer Science-Business Media,
+    LLC, part 2017 Springer https://doi.org/10.1007/978-3-030-41445-8.
+
+    [12] H. Ahmed et al., “Identification of plant diseases using deep neural networks,”
+    Proceedings of the IEEE conference on computer vision pattern recognition (2017).
+
+    [13] J. M. Al-Tawaji, S. Yachen, C. Zhanling, and H. Wonga, “Detection of Leaf
+    Disease Based on Machine Learning Approach,” International Journal of Computer
+    Science and Information Security (2017), vol 15(11), pp. 547-553.
+
+    [14] S. Wahid, “Automated Detection of Plant Diseases Using Graph Detection Based
+    Machine Learning Approach,” International Journal of Computer Science and Engineering
+    - Volume 06 (December 12, 2018), CSE. IEEE Computer Society, Washington, DC, USA.
+    491-498.
+
+    [15] J. M. Al-Tawaji, S. Yachen, “Performance Evaluation of Leaf Classification
+    Based Neural Vision with SVM,” Journal of Agricultural Research and Technology
+    (2018).
+
+    [16] G. L. Lubrical, C. I. Uz, M. Lage, and P. M. Grantin, “Detection and classification
+    of leaf disease using artificial neural networks,” International Journal of Agricultural
+    Research, 11(4), pp. 415-419.
+
+    [17] P. T. Pramani, R. Kailaj, A. Sahir, N. Bithari, Shashikhar, K. Gulkarni,
+    “Detection of Plant Diseases Using Artificial Neural Networks,” 28th International
+    Network-Cented Conference on Computing and Technology (ICCNC), 2-3, August 2018.
+
+    [18] Francis, Merlin, and C. Destiny, “Detection and classification of leaf disease
+    using artificial neural networks – A Vision Study.” International Conference on
+    Signal Processing and Neural Networks (ISSPN), PP. 48-55.
+
+    [19] M. Ranjan, R. Majgir Weber, A. Nehbhoshi, “Detection and classification of
+    leaf disease using convolutional neural networks,” Conference on Applications:
+    E-IEEE-2015-, Volume 3, Issue 1 (June-May) 2015.
+
+    [20] G. Sambasivam, and G. Chandan Aquino, “Effective machine learning application
+    in agriculture: Cassava disease detection and classification using convolutional
+    networks,” Electronic Informatics Journal (2020).
+
+    [21] S. B. Sadhan, “Enhanced Performance of Leaf Disease Detection using Convolutional
+    Neural Networks,” International Journal of Computer Sciences (IJCS), 2019, pp.
+    81-88.
+
+    [22] S. B. Sadhan, A. I. Mahdi, R. Mohamad, “Recent Audio Seismography Trails
+    and Visual Quality Measures,” International Journal of Computer Science and Applications
+    (2015), pp. 238-243.
+
+    [23] S. B. Sadhan, A. J. Alusa, A. N Mahmud, “Performance Enhancement of Blind
+    Source Separation Algorithms Based on Neural Networks,” 5th International Conference
+    on Communication Systems, Networks, and Data Science (CNSDS), 2019.
+
+    [25] Dh. M. Reza, B. B. Sadhan, “Security Evaluation of Non-linear Transmission
+    Ciphertext Based on Information Theory,” Journal of University of Babylon, 2014,
+    Vol. 22, No. 7, pp. 1862–1870.
+
+
+    In Table III, we showed a comparison of the method proposed with some research
+    work to support our work. It shows the high accuracy of our system with the number
+    of datasets.
+
+
+    # V. CONCLUSIONS
+
+
+    The most harmful thing to agriculture and agricultural production is. This is
+    the motivation that we have encouraged to use a strong focus and system based
+    on computer facilities and technologies. This system identifies and detect leaf
+    diseases using two different approaches and matches them between. These are accurate
+    and provide a solution using SVM and Convolutional Neural Network (CNN). The results
+    of comparison of our CNN in terms of performance and accuracy, we got a score
+    of 98.02%. The lack of accuracy was evident. Fifteen different classes of plants,
+    internationally famous, and essential in our country Iraq, include tomatoes, potatoes,
+    and peppers. We Various learning rates and optimizers could be used as part of
+    the proposed system with the proposed system. We also need to increase a larger
+    number of classes of plants with different types of networks.
+
+
+    +   [1] P. Nasek and S. Patil, “Novel algorithm for leaf disease detection using
+    CNN,” International Journal of Engineering Research and Science Volume 3, Issue
+    1, pp. 1220–1244, 2015.
+
+    [2] S. V. D., Singh, A. Ghangani, C. Kapoor, K. Gupta, P. Singh, “Leaf disease
+    imaging techniques for agronomy. In the 2011 2nd International Conference on Computer
+    Science and Information Technology (ICCIT), pp. 1-6. India, 3-5, November 2011.
+
+    [3] R. K Rai, et al., “An Automated Model to Classify Plant Diseases Using CNN
+    Neural Network of Image Identification and Classification (IJRDIC),” 2018.
+
+    [4] V. M. Abhirami and S. S. Bharathi, “A Survey on Plant Disease Identification”
+    (International Journal of Computer Science and Technology (ICST) – Volume 3, Issue
+    6, Nov-Dec 2015.
+
+    [5] K. P. Kumar, “Deep learning for leaf disease detection and classifiers,” Computers
+    and Electronics in Agriculture, 2020.
+
+    [6] J. Hossain, M.A. Amin, “Leaf shape identification based on Biometrics. In
+    Proceedings of the 2010 13th International Conference on Computer and Information
+    Technology (ICCIT), Dhaka, Bangladesh, 23-25 December 2010; pp. 458-463
+
+    [7] P. J.K and R. Kumaraj2, “FEATURE EXTRACTION OF DISEASED LEAF IMAGES” of Signal
+    and Image Processing'
+  md: '
+
+    ## 2nd Al-Noor Comparison of the Proposed System for Science and Technology (NICT2020).
+
+
+    | Author(s) | Ref. | Algorithm (classification) | Dataset size (Number) | Accuracy
+    |
+
+    |---|---|---|---|---|
+
+    | Prajala T. M. | [17] | CNN | 18160 | 94.95% |
+
+    | Francis, M. and C. Destiny | [18] | CNN | 3666 | 87% |
+
+    | Malika | [19] | ANN | Not mentioned | 80% |
+
+    | Sambasivam, J.Gandcooffee | [20] | CNN | 10000 | 93% |
+
+    | The Proposed technique | | CNN | 20636 | 98.02% |
+
+
+    Processing ISSN: 0976-8882 & E-ISSN: 0976-8890, Volume 3, Issue 1, 2022, pp. 41-60.
+
+
+    - [8] R. C., et al., “Detection and Recognition of Leaf Disease using Image Processing,”
+    International Journal of Engineering Studies and Computer Science (2021), vol.
+    9(1), pp. 1-14.
+
+    - [9] Sharada P Mohanty, David P Hughes, and Marcus Carlesc, “Using deep learning
+    for plant-based leaf disease detection,” Frontiers in Plant Science, 2016.
+
+    - [10] I. Heredia, “Scale-grass classification with deep neural networks and pattern
+    recognition,” Proceedings of the IEEE Conference, 2017.
+
+    - [11] Githal Ghangay and Vinay Kumar & Amit Hari Joshi, “First study of leaf
+    disease detection using deep learning and classifier,” Springer Science-Business
+    Media, LLC, part 2017 Springer https://doi.org/10.1007/978-3-030-41445-8.
+
+    - [12] H. Ahmed et al., “Identification of plant diseases using deep neural networks,”
+    Proceedings of the IEEE conference on computer vision pattern recognition (2017).
+
+    - [13] J. M. Al-Tawaji, S. Yachen, C. Zhanling, and H. Wonga, “Detection of Leaf
+    Disease Based on Machine Learning Approach,” International Journal of Computer
+    Science and Information Security (2017), vol 15(11), pp. 547-553.
+
+    - [14] S. Wahid, “Automated Detection of Plant Diseases Using Graph Detection
+    Based Machine Learning Approach,” International Journal of Computer Science and
+    Engineering - Volume 06 (December 12, 2018), CSE. IEEE Computer Society, Washington,
+    DC, USA. 491-498.
+
+    - [15] J. M. Al-Tawaji, S. Yachen, “Performance Evaluation of Leaf Classification
+    Based Neural Vision with SVM,” Journal of Agricultural Research and Technology
+    (2018).
+
+    - [16] G. L. Lubrical, C. I. Uz, M. Lage, and P. M. Grantin, “Detection and classification
+    of leaf disease using artificial neural networks,” International Journal of Agricultural
+    Research, 11(4), pp. 415-419.
+
+    - [17] P. T. Pramani, R. Kailaj, A. Sahir, N. Bithari, Shashikhar, K. Gulkarni,
+    “Detection of Plant Diseases Using Artificial Neural Networks,” 28th International
+    Network-Cented Conference on Computing and Technology (ICCNC), 2-3, August 2018.
+
+    - [18] Francis, Merlin, and C. Destiny, “Detection and classification of leaf
+    disease using artificial neural networks – A Vision Study.” International Conference
+    on Signal Processing and Neural Networks (ISSPN), PP. 48-55.
+
+    - [19] M. Ranjan, R. Majgir Weber, A. Nehbhoshi, “Detection and classification
+    of leaf disease using convolutional neural networks,” Conference on Applications:
+    E-IEEE-2015-, Volume 3, Issue 1 (June-May) 2015.
+
+    - [20] G. Sambasivam, and G. Chandan Aquino, “Effective machine learning application
+    in agriculture: Cassava disease detection and classification using convolutional
+    networks,” Electronic Informatics Journal (2020).
+
+    - [21] S. B. Sadhan, “Enhanced Performance of Leaf Disease Detection using Convolutional
+    Neural Networks,” International Journal of Computer Sciences (IJCS), 2019, pp.
+    81-88.
+
+    - [22] S. B. Sadhan, A. I. Mahdi, R. Mohamad, “Recent Audio Seismography Trails
+    and Visual Quality Measures,” International Journal of Computer Science and Applications
+    (2015), pp. 238-243.
+
+    - [23] S. B. Sadhan, A. J. Alusa, A. N Mahmud, “Performance Enhancement of Blind
+    Source Separation Algorithms Based on Neural Networks,” 5th International Conference
+    on Communication Systems, Networks, and Data Science (CNSDS), 2019.
+
+    - [25] Dh. M. Reza, B. B. Sadhan, “Security Evaluation of Non-linear Transmission
+    Ciphertext Based on Information Theory,” Journal of University of Babylon, 2014,
+    Vol. 22, No. 7, pp. 1862–1870.
+
+
+    In Table III, we showed a comparison of the method proposed with some research
+    work to support our work. It shows the high accuracy of our system with the number
+    of datasets.
+
+
+    ## V. CONCLUSIONS
+
+
+    The most harmful thing to agriculture and agricultural production is. This is
+    the motivation that we have encouraged to use a strong focus and system based
+    on computer facilities and technologies. This system identifies and detects leaf
+    diseases using two different approaches: SVM and Convolutional Neural Network
+    (CNN). From the results of comparison of our CNN in terms of performance and accuracy,
+    we got a score of 98.02%. The lack of accuracy was evident in Fifteen classes
+    of plants, internationally famous and essential in our country, include tomatoes,
+    potatoes, and peppers. Various learning rates and optimizers could be used as
+    part of the proposed system. We also need to increase the number of classes of
+    plants with different types of networks.
+
+
+    - [1] P. Nasek and S. Patil, “Novel algorithm for leaf detection using CNN,” International
+    Journal of Engineering Research and Science Volume 3, Issue 1, pp. 1220–1244,
+    2015.
+
+    - [2] S. V. D., Singh, A. Ghangani, C. Kapoor, K. Gupta, P. Singh, “Leaf disease
+    imaging techniques for agronomy. In the 2011 2nd International Conference on Computer
+    Science and Information Technology (ICCIT), pp. 1-6. India, 3-5, November 2011.
+
+    - [3] R. K Rai, et al., “An Automated Model to Classify Plant Diseases Using CNN
+    Neural Network of Image Identification and Classification (IJRDIC),” 2018.
+
+    - [4] V. M. Abhirami and S. S. Bharathi, “A Survey on Plant Disease Identification”
+    (International Journal of Computer Science and Technology (ICST) – Volume 3, Issue
+    6, Nov-Dec 2015.
+
+    - [5] K. P. Kumar, “Deep learning for leaf disease detection and classifiers,”
+    Computers and Electronics in Agriculture, 2020.
+
+    - [6] J. Hossain, M.A. Amin, “Leaf shape identification based on Biometrics. In
+    Proceedings of the 2010 13th International Conference on Computer and Information
+    Technology (ICCIT), Dhaka, Bangladesh, 23-25 December 2010; pp. 458-463
+
+    - [7] P. J.K and R. Kumaraj2, “FEATURE EXTRACTION OF DISEASED LEAF IMAGES” of
+    Signal and Image Processing
+
+    '
+  mdcn: '
+
+
+    ## 2nd Al-Noor 针对科学与所提系统对比 (NICT2020)。
+
+
+    | 作者 | 参考文献 | 算法（分类） | 数据集规模（数量） | 准确率 |
+
+    |---|---|---|---|---|
+
+    | Prajala T. M. | [17] | CNN | 18160 | 94.95% |
+
+    | Francis, M. and C. Destiny | [18] | CNN | 3666 | 87% |
+
+    | Malika | [19] | ANN | 未提及 | 80% |
+
+    | Sambasivam, J.Gandcooffee | [20] | CNN | 10000 | 93% |
+
+    | 所提技术 | | CNN | 20636 | 98.02% |
+
+
+    印刷 ISSN: 0976-8882 & E-ISSN: 0976-8890, 第 3 卷，第 1 期，2022年，第 41-60 页。
+
+
+    - [8] R. C., 等人，“使用图像处理进行叶片疾病检测与识别，”国际工程研究与计算机科学杂志 (2021)，第 9(1) ，第 1-14 页。
+
+    - [9] Sharada P Mohanty, David P Hughes, and Marcus Carlesc，“利用深度学习进行植物叶片疾病检测，”植物科学前沿
+    (Frontiers in Plant Science)，2016年。
+
+    - [10] I. Heredia，“基于深度神经网络和模式识别的草分类，”IEEE会议论文集，2017年。
+
+    - [11] Githal Ghangay and Vinay Kumar & Amit Hari Joshi，“使用深度学习和分类器的叶片疾病检测首次研究，”Springer
+    Science-Business Media, LLC, part 2017 Springer https://doi.org/10.1007/978-3-030-41445-8。
+
+    - [12] H. Ahmed 等人，“使用深度神经网络识别植物病害，”IEEE 计算机视觉模式识别会议论文集 (2017)。
+
+    - [13] J. M. Al-Tawaji, S. Yachen, C. Zhanling, and H. Wonga，“基于机器学习方法的叶片疾病检测，”国际计算机科学与信息安全杂志
+    (2017)，第 15(11) ，第 547-553 页。
+
+    - [14] S. Wahid，“基于图检测的机器学习方法的植物病害自动检测，”国际计算机科学与工程杂志 - 第 06 卷 (2018年12月12日)，CSE.
+    IEEE 学会，美国华盛顿特区。491-498 页。
+
+    - [15] J. M. Al-Tawaji, S. Yachen，“基于 SVM 的神经视觉叶片分类的性能评估，”农业研究与技术杂志 (2018)。
+
+    - [16] G. L. Lubrical, C. I. Uz, M. Lage, and P. M. Grantin，“使用人工神经网络进行叶片疾病的检测与分类，”国际农业研究杂志，11(4)，第
+    415-419 页。
+
+    - [17] P. T. Pramani, R. Kailaj, A. Sahir, N. Bithari, Shashikhar, K. Gulkarni，“使用人工神经网络检测植物病害，”第288届国际以网络为中心的计算与技术会议
+    (ICCNC)，2018年8月2-3日。
+
+    - [18] Francis, Merlin, and C. Destiny，“使用人工神经网络进行叶片疾病的检测与分类 —— 一项视觉研究，”信号处理与神经网络国际会议
+    (ISSPN)，第 48-55 页。
+
+    - [19] M. Ranjan, R. Majgir Weber, A. Nehbhoshi，“使用卷积神经网络进行叶片疾病的检测与分类，”应用会议：E-IEEE-2015-，第
+    3 卷，第 1 期 (2015年6月-5月)。
+
+    - [20] G. Sambasivam, and G. Chandan Aqu-nino，“农业中有效的机器学习应用：使用卷积网络进行木薯疾病检测与分类，”电子信息杂志
+    (2020)。
+
+    - [21] S. B. Sadhan，“使用卷积神经网络增强叶片疾病检测性能，”国际计算机科学杂志 (IJCS)，2019年，第 81-88 页。
+
+    - [22] S. B. Sadhan, A. I. Mahdi, R. Mohamad，“近期声地震轨迹与视觉质量测量，”国际计算机科学与应用杂志 (2015)，第
+    238-243 页。
+
+    - [23] S. B. Sadhan, A. J. Alusa, A. N Mahmud，“基于神经网络的盲源分离算法性能增强，”第5届通信系统、网络与数据科学国际会议
+    (CNSDS)，2019年。
+
+    - [25] Dh. M. Reza, B. B. Sadhan，“基于信息理论的线性传输密文安全性评估，”巴比伦大学杂志，2014年，第 22 卷，第 7
+    期，第 1862–1870 页。
+
+
+    在表 III 中，我们展示了所提方法与一些研究工作的对比，以支持我们的工作。
+
+
+    ## V. 结论
+
+
+    对农业和生产危害最大的是。这激励我们使用基于计算机设施和技术的强大系统。该系统通过两种方法识别并检测叶片疾病：SVM 和卷积神经网络 (CNN)。从我们的
+    CNN 在性能和准确率方面的比较结果来看，获得了 98.02% 的得分。在国际知名且重要的植物类别上准确率尚不足，包括番茄、土豆和辣椒。不同的学习率和优化器可以作为系统的一部分使用。
+
+
+    - [1] P. Nasek and S. Patil，“使用 CNN 的新型叶片检测，”国际工程研究与科学杂志第 3 卷，第 1 期，1220-1244，2015。
+
+    - [2] S. V. D., Singh, A. Ghangani, C. Kapoor, K. Gupta, P. Singh，“农业叶片疾病成像技术，”2011年第2届国际计算机科学与技术会议
+    (ICCIT)，第 1-6 页。印度，2011年11月3-5日。
+
+    - [3] R. K Rai, 等人，“使用 CNN 神经网络图像识别与分类植物病害的自动模型”(IJRDIC)，2018。
+
+    - [4] V. M. Abhirami and S. S. Bharathi，“植物病识别综述，”国际计算机科学与技术杂志 (ICST) – 第 3 卷，第
+    6 期，2015年11-12月。
+
+    - [5] K. P. Kumar，“用于叶片疾病检测和分类器的深度学习，”计算机与农业，2020。
+
+    - [6] J. Hossain, M.A. Amin，“基于生物识别的叶片形状识别，”2010年第13届国际计算机与信息技术会议 (ICCIT) 论文集，孟加拉国，2010年12月23-25日；第
+    458-463 页。
+
+    - [7] P. J.K and R. Kumaraj2，“病叶片图像特征提取，”信号与图像处理
+
+
+    '
+  merge: 0

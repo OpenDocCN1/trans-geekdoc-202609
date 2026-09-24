@@ -1,0 +1,2 @@
++   [2020 第二届 Al-Noor 国际科学技术会议 (NICST) (阿塞拜疆巴库 2020.8.28-2020.8.30) 2020 第二届 Al-Noor 国际科学技术会议 (NICST)](README.md)
++   [2020 第二届 Al-Noor 国际科学技术会议 (NICST) (阿塞拜疆巴库 2020.8.28-2020.8.30) 2020 第二届 Al-Noor 国际科学技术会议 (NICST)](2020-2nd-al-noor-international-conference-for-science-and-te.md)
