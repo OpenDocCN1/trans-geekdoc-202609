@@ -1,0 +1,475 @@
+- pgno: 0
+  md: '# # An-to-end Intelligent Network Resource Allocation in IoV: A Machine Learning
+    Approach
+
+
+    Afaq Muhammad, Tahla Ahmed Khan, Khizar Abbass, and Wang-Cheol Song *
+
+    Department of Computer Engineering, Jeju National University, Jeju, South Korea
+
+    phloio@jejunu.ac.kr *Corresponding Author
+
+
+    **Abstract—** The increasing number of communicating vehicles every year brings
+    changes for efficient resource allocation in IoV (Internet of Vehicles). With
+    additions, many new services have been added to the vehicles, each requiring a
+    unique set of resources. These services include live video streaming, navigation,
+    and safety critical services for driving. Thus, vehicle technology is rapidly
+    shifting towards the electric and green energy. Furthermore, due to the complexity
+    of the service requirements in IoV, an efficient and intelligent resource allocation
+    system is essential. To this end, this paper proposes a solution based on deep
+    learning for resource orchestration while considering edge-computing infrastructure.
+    Machine Learning (ML) has been used to manage network traffic at the edge, and
+    IoV resource allocation is a core challenge.
+
+
+    +   **Keywords—** Network Resource Allocation, Machine Learning, Orchestration,
+    Edge, Core.
+
+
+    # ## I. INTRODUCTION
+
+
+    In recent years, many advancements in the field of IoV under the umbrella of 5G
+    have been seen. It is not only limited to providing Quality of Service (QoS),
+    but also includes providing service for a variety of services including vehicle
+    communications. Shortly due to an increase in the number of vehicles and IoV devices,
+    the amount of traffic is growing significantly. Furthermore, the traffic, device,
+    and service is highly dependent on time and location [1]–3. Similarly, networking
+    applications also follow a pattern of usage, so it must design networks that ensure
+    optimized and efficient orchestration. However, we have to deal with each service
+    efficiently and provide prioritized demands on location. Network slicing was introduced
+    to meet such dynamic environment requirements and provides optimized resource
+    allocation for every type of service [1].
+
+
+    SDN (Software Defined Network) and NFV (Network Function Virtualization) were
+    served to implement network orchestration. Firstly, virtualization was introduced
+    and after cloud computing emerged, which resulted in NFV. SDN enabled programming
+    for network and NFV allowed deployment of network services by running VNF (virtual
+    function) technology. Hence, using such advancements can be orchestrated using
+    software platforms to control and manage network resources [8].
+
+
+    Section II of the paper covers related work in the field of networking and application
+    of Machine Learning. Section III describes system design. Section IV presents
+    components and Section V concludes the proposed work.
+
+
+    # ## II. LITERATURE REVIEW
+
+
+    This work covers aspects of the network framework to the physical layer. In the
+    era of next-generation network new caused by demand for orchestration engine design
+    and various approaches. Network automation is a hot topic and many methods have
+    been proposed to it. This section elaborates related work on SDN, NFV for automated
+    and optimized resource orchestration in next generations. This will also discuss
+    researches on how ML can be effectively used to optimize resource allocation in
+    networking using SDN and NFV. Besides Network slicing for serving services is
+    the most prominent approach to manage multiple virtual resources over a single/generic
+    physical infrastructure. Also, with advancements in networking technology, energy
+    efficiency and optimization of resources is possible [12]'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'Many standards including ETSI, ONF, 3GPP have been proposing architectures
+    and platforms that optimize network service architecture. ETSI-MANO has proposed
+    an architecture which provides a basic approach to NFV-Network Orchestration a
+    solution to that OSM orchestrator provides an opens solution. Similarly, ONF developed
+    Core Orchestrator - as presented in ETSI GS NFV 012 v1.1.1 - has been developed
+    in partnership with many companies. Both platforms leverage advantage from SDN
+    and NFV and provide the solutions to network orchestration. ONF is one other type
+    that includes End-to-End Network Automation and orchestration[1]. So such NFV
+    orchestrators are used as Edge or Core orchestrators the purpose of all
+
+
+    as data. It is clear that data is critical and NFV network cannot provide datasets
+    for application Machine Learning. So, a few interests have overcome this problem
+    and are following. For the resource optimized and efficient resource provisioning,
+    it is a requirement of certain aspects. Firstly, a resource utilization matrix
+    in which we can decide how much resources will be needed at a time. Secondly,
+    the user utilization patterns vary. So that when and where is the resource requirements
+    and it can be automatically scaled. The manuscript referenced [18] with costly
+    records production is used through deep learning to explain about the multiple
+    of ML (Machine Learning) and Statistics for predicting traffic and the deciding
+    resource provisioning proactively. Secondly, the network-based approach [16] uses
+    the use of ML for resource provisioning of the services of VM resource orchestration
+    and explains how the scaling of resources be performed proactively.
+
+
+    upcoming is the platform to enable configuration of network resources. Network
+    providers provide configuration for the orchestrator and the orchestrators in
+    the above-mentioned platforms that to operate the physical system. Furthermore,
+    the orchestrator controls the life cycle of the providers'' Edge SDN and controllers
+    e.g. ONS (Network Operating System). For having a network slice orchestrator is
+    used for INSTantiation (virtual) network resources and service chains[15]. Hence,
+    such platforms enables the Operator to control the service process by using the
+    programmable configuration[21]
+
+
+    IBN (Intent-Based Networking) considered an important of network operation. As
+    previously discussed, platforms and orchestrators require to provide policy configuration
+    for controlling the networks. IBN eliminates the requirement of configuring the
+    network and resources. IBN system is a close loop system and it considers resource
+    management and automatic update of system configuration. IBN guarantees service
+    provisioning and scalability. Through collaboration with many universities, ASTRA,
+    Cisco and others have developed defined standards for IBN platform infrastructure
+    design. However on IBN (End-to-End Driven network) is so used in certain scenarios,
+    which operating network orchestration using intelligence and AI. Our work also
+    did this credit well in field of [1].
+
+
+    In addition to, that ETSI ZSM (Zero Touch Management) is initiated and at designing
+    a platform that is completely automated and does not require any kind of operation
+    assistance when operation. ZSM considers applying Machine Learning to the network
+    from many aspects. It includes NFV autoscaling, RAN resource control [32], use
+    resource translation and allocation [11].
+
+
+    Many research articles related to the application of ML for network automation
+    have been published [14]. It is hard to apply ML in the field because it requires
+    either
+
+
+    Network slice selection and management of slice is a hot topic. We have proposed
+    network slice selection and orchestration using NSMF (Network Slice Management
+    Function) and NSSMF (Network Slice Selection Management Function). Generally,
+    other research works for customer-specific network slices. Also, many research
+    works have used NSSF (Network Slice Selection Function) [23]. In all, while 3GPP
+    the approaches of managing network slice configuration are not at the top. But
+    in this paper, we will extend the apply to Machine Learning for enabling Slice
+    Orchestration and Management. Also, we will explore how Machine Learning can manage
+    slicing and orchestration with optimization and energy-efficient way. Also, the
+    Machine Learning will automatically update its state on runtime [20]. So, the
+    manuscript aims to provide Machine Learning Based on resource management system
+    based user traffic driven and the VM workload at core. The system is enabled to
+    proactively manage and utilize slice resource configuration for services, creation,
+    and deletion of slices by the services requirements from IoVT.
+
+
+    # III. SYSTEM ARCHITECTURE AND WORKING
+
+
+    The development of SDN and NFV based platforms enables configuration of networks.
+    The proposed system takes full leverage of SDN and NFV platform and enables the
+    resource orchestration. The system shown in figure 1 illustrates the ML-based
+    architecture and resource allocation for both the edge and core networks in IoV
+    traffic. Where Automated Slice Control and resource management system (AS-CURMS)
+    from the top layer controls End-to-end resource provisioning through the template
+    generation [25].'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Automated Slice Resource Control and Update Management System
+
+
+    ![](img/61852a644a5d8f129e30aa26b234d145_2_0.png)
+
+
+    The system considers management and update section for one-edge resource prediction
+    and second for core network resource prediction and update. It is three-layered
+    architecture where the top layer AS-CUMS manages the cross-domain resource orchestration.
+    As it integrates ML, it has many benefits including proactive resource allocation,
+    automatic scale-out, and dynamic update management.
+
+
+    The second layer consists of orchestration mechanisms between edge orchestrator
+    and core orchestrator. The third layer is the physical layer that contains hardware
+    resources VNFs (Virtual Network Functions), and PNFs (Physical Network Functions)
+
+
+    The working of the system is as follows, AS-CUMS is a central management system
+    where End-to-end resource prediction can be automatically generated. The system
+    uses three ML models, the first model is used for future prediction at edges based
+    on the user stream traffic. At a central edge, the second model decides the resources
+    that should be initiated at any physical resource location. Also, the third model
+    is used to predict resource demand on time factor.
+
+
+    The ML Model is based on resource utilization of the VMF and it predicts future
+    demand to decide the scaling of specific types of VNF and answer service availability[25].
+
+
+    The VM workload-prediction data set is used for this purpose. The configuration
+    of resources is provided to both models and they deify future after the AS-CUMS
+    updates
+
+
+    resource templates for both the edge and core orchestrators. The new slices can
+    be created, removed, or updated using the prediction results.
+
+
+    The proposed system enhances the existing infrastructures by proposing the use
+    of Machine Learning. By applying the system, the dynamic fluctuating requirements
+    of resources can be catered more effectively. Also, resources are installed only
+    when they are needed which avoids a lot of over-provisioning, thereby enabling
+    energy efficiency. Besides, the ML model segment tracks the traffic and detects
+    the types of applications used. The network slices in the case of NFV environment
+    especially require a mechanism that can orchestrate network service template with
+    the dynamic optimization. This mechanism means dynamic orchestration and scaling
+    of network services with automation[25][28][33].
+
+
+    # IV. SYSTEM COMPONENTS
+
+
+    # A. AS-CUMS
+
+
+    Figure 1 illustrates the architecture of AS-CUMS as it has three major components
+    the Machine Learning Models for edge and core, the architecture and resource
+
+
+    Figure 1: The architecture in an abstract view.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'template. As different NFV orchestrators are available where each requires
+    its template for providing and updating resource definitions. In our system, we
+    have to create and update resource templates that are responsible for the requirements.
+    Figure 2 shows the internal mechanism of the template generator, a template database
+    that stores template design and resources which requires templates [25]. Secondly,
+    we have two modules for core and one for the edge based on the predictions which
+    request the template generator to update the system.
+
+
+    Firstly, Data we preprocessed we applied averaging window to minimize redundancy
+    with a window size of 30.
+
+
+    # V. RESULTS AND DISCUSSION
+
+
+    Many Machine learning works the VM workload prediction and each has its merits
+    and demands. ARIMA is the most famous models, but in this case, we found review
+    of ML approaches and their effectiveness for VM prediction is given in [16:17].
+    In this case, comparison of RNN (recursive neural network) and ARIMA are as follows:
+
+
+    ![](img/61852a644a5d8f129e30aa26b234d145_3_0.png)
+
+
+    Figure 2: It illustrates the design of the Template Generator.
+
+
+    | Model | Train Accuracy | Test Accuracy |
+
+    |---|---|---|n| RNN | 0.891 | 0.876 |
+
+    | ARIMA | 0.71 | 0.60 |
+
+
+    # VI. CONCLUSION AND FUTURE WORK
+
+
+    The ASR-CUMS contains two ML models, the first model is for the edge based on
+    user traffic traffic prediction and it can identify if any type of traffic can
+    be cached in the future and hence enhancing the service quality. The second model
+    is for the cloud which shows the design of this model and it working. This model
+    taking traffic as input and predicts future traffic utilization. It also uses
+    the input of traffic-traffic samples from each edge to predict the future traffic
+    to be enabled at the edge network due to unreliability of services at an edge
+    location [18]–20].
+
+
+    The second model for core based on the RNN works which predicts workload prediction
+    and future utilization. Since data is available we use open cloud data our goal
+    is to predict VM resource utilization and it. Table 1 describes the dataset used
+    collected from an operation environment named Materna 3. This Data-set belongs
+    to a core located from a German cloud provider and it has three traces that were
+    collected over three months and each trace has data of VM values on [25].
+
+
+    This paper proposes an automated resource management mechanism for an edge and
+    cloud-based IoT. The goal is to optimize the resource allocation using the ML
+    approach, which the model retrieves current resource utilization and updates systems
+    for the future. The results of ML models are used by ASR-CUMS to decide the placement
+    of architecture and predict future resources. Hence, due to the architecture and
+    nature of traffic inherits many features to the system, including energy-efficient
+    resource allocation, better service providing out of edge services that have challenges,
+    especially in case of IoT scaling. Future work includes the creation of a dataset
+    from a real-time test-bed for the ML model, and demonstration of the optimization
+    achieved through the proposed implementation.
+
+
+    # ACKNOWLEDGMENT
+
+
+    This research was supported by the MSIT (Ministry of Science and ICT), Korea,
+    and the ITR (Information Technology Research Center) project (ITP-2019-0163) supported
+    by the IITP (Institute for Information and Communications Technology Planning
+    and Evaluation). This research was supported by the Korea Research Foundation
+    funded by the Ministry of Science and ICT through National Research Foundation
+    of Korea (2019R1A220109280).
+
+
+    | Index | Name | Value |
+
+    |---|---|---|n| 0 Timestamp | Number of Minutes |
+
+    | 1 CPU | Of Cores/cores produced |
+
+    | 2 CPU Capacity | Number of cores per scale |
+
+    | 3 cpu usage | In MHz |
+
+    | 4 CPU usage | In percentage (%) |
+
+    | 5 Memory produced | Total memory of in VM |
+
+    | 6 Memory Usage | Actively used memory (KB) |
+
+    | 7 User Usage | In bits |
+
+    | 8 Disk | In GB |
+
+    | 9 Disk Size | In GB |
+
+    | 10 Network in throughput | In KB/s |
+
+    | 11 Network out throughput | In KB/s |
+
+
+    Table 1: Materna dataset
+
+
+    # REFERENCES
+
+
+    +   [1] B. Blanco et al., “Technology patterns in the architecture of 5G mobile
+    networks, MEC, SDN, and Cloud,” IEEE Int. Conf. Interfaces, 2018, pp. 216–228.
+
+    [2] M. A. Hussain, R. N. Khan, A. Y, S. Azarhi, M. R. Zah and J. Ahmed, “Comprehensive
+    Survey of Machine Learning Applications in Cognitive Radio-Based Vehicular Networks,”
+    IEEE Access, 2020, doi: 10.1109/ACCESS.2020.2994698.
+
+    [3] “Refined requirements and constraints, using qualitative and technical feasibility
+    assessment” METIS-D 1.1 v1.0, no.2, 2020.
+
+    [4] White Paper, “Off Office Re-architect as a Datacenter (CORD)”, March 14, 2016.
+
+    [5] “Impact of SDN and NFV on OSS/BSS,” ON Solution Brief, March 2016.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '(OSM), https://download.osm.org/source/documentation/osm-scope-whitepaper/02-osm-scope.pdf
+    (accessed: 6/12/2020)
+
+
+    (7) Clemmens, E., et al., Lavaglia, G. and Janssen, T. "Internet-Based Networks
+    and Connectivity - Concepts and deraft-mgn-dist-inet-02" IEEE IoT 2019.
+
+
+    (8) ZebraCloudFast, Agile Business Require Internet Networks; Huawei White Paper.
+    May 2018
+
+
+    (9) "Internet-Based: The New Vision for the Next-to-Generation Application", IEEE
+    2018
+
+
+    (10) "Internet-Based Building the bridge between IT and CISCO Cisco white paper.
+    2018
+
+
+    (11) ETSI GS 102 875 v3.0.1 (2016), "Zero touch service and Network Management
+    (ZSM) Proof of Concept". Networking
+
+
+    (12) Kentis, M. A., Alvira, Zaballa, E., & Song, J. (2018), "Policy Framework
+    for the Next Generation Application", Proceedings of 27th International Conference
+    on Communications (pp. 125-129). IEEE. DOI: 10.1109/ICC.2018.8443260
+
+
+    (13) White Paper, "View on 5G Architecture" 5GPP Architecture Group (2016)
+
+
+    (14) "THE EUROPEAN 5G ANNUAL JOURNAL/2018", 5GPP, Grant Agreement No. 76039
+
+
+    (15) "Introduction to a SDN network architecture for Service Instantiation", ONF,
+    White paper. March 2017
+
+
+    (16) Aneen Alaskhei, Hongwei Liu, Dengchun Zhou and Basheer "Cloud Computing Constants
+    of Real-Time Monitoring for Big Data Analysis Using Spark", IotC. Journal of Services:
+    Cloud Computing, 923 (2018)
+
+
+    (17) Gulzar S., "Efficient Dynamic Virtual Machine Allocation with CPU Usage Prediction
+    In Cloud Data Centers", thesis submitted to the graduate school of engineering
+    and science, 2018
+
+
+    (18) Ahmed A., "Towards Prediction for Proactive Resource Management: Learning-Poured
+    Approaches" arXiv:1906.00991 (2019)
+
+
+    (19) Rashid R., "Towards Optimal Management of the 5G Cloud-RAN through a Spatio-Temporal
+    Prediction of Users Dynamics",
+
+
+    (20) 2016.12.3GPP.TS23.579.Version 14.0.0 Architecture for Next Generation Services
+    and Systems. June 2016
+
+
+    (21) 3GPP TS 28.530 v3.0.0 (2017-11), "Technical Specification Group Management
+    of network slicing in mobile networks, Use cases and requirements", Release 15,
+    Nov. 20
+
+
+    (22) Plamen Semenov, Hashemut Al-Asari, Krasimir Tenechev, Vladimir Popovich "Machine
+    Learning for Autonomous Capabilities of Self-Organizing Heterogeneous Networks"
+    Wireless Communications Conference (WCC), 2016.
+
+
+    (23) Ha''tina, S., Sanshock, H., & Song, C. (2012). LTE-slicing for Mobile Networks.
+    New York.
+
+
+    (24) Public license v1.1 [online]. https://opensarchive.org/openlicense/page_id=6698
+    (Accessed: 5)
+
+
+    (25) OpenArchive Emulation[online]. https://github.com/openarchive/emulation/wiki
+    (Accessed: 5 Jan, 2019)
+
+
+    (26) OpenArchiveDeleter usage [online]. (Accessed: 9) "Network Slice Selection
+    Function on M-KNOM",
+
+
+    (27) Project [online]. Available: https://github.com/openarchive/free5/wiki/home
+
+
+    (28) Diaz Rajver, T. Ahmed Khan, A. Mehmood & W. Song-Cheed, S. (2018), "Network
+    Slice Selection and orchestration system for 5G networks"
+
+
+    (29) Rafiq, A. Mehmood, T. Khan, J. J. Rivera, W. C. Song, "An efficient end-to-end
+    based-life spectrum aggregation system for 5G networks", IEEE Access, vol. 8,
+    2020.
+
+
+    (30) T. A. Khan, A. Mehmood, J. J. Rivera, and W. C. Song, "Machine learning approach
+    for configuration and management of 5G network slicing", IEEE Access, vol. 8,
+    2020.
+
+
+    (31) K. Abbas, K. Ahmed, A. Rafiq, W. C. Song, and J. S. Seif, "Heuristic based
+    load prediction for 5G networks", in 2020 International Conference on Information
+    Networking (IICON), IEEE, 2020.
+
+
+    (32) K. Abbas, M. Mehmood, T. Ahmed Khan, A. Rafiq, J. Iqbal, I. Ul, and W. C.
+    Song, "An efficient sdn-based life-wide spectrum aggregation system for heterogeneous
+    networks", International Journal on Telecommunications technologies, p.3943, 2020.
+
+
+    (33) Rashid Mujdani, Steven Day, David Alan, and Brandon Jensen, "Cloud Infrastructure
+    Service Development: A Comprehensive Approach to Dynamic Resource Management for
+    Virtualised Networks", in Proceedings of the 12th International Conference on
+    Network and Service Management (CNSM 2016). International Forum for Information
+    Processing. Luxembourg, AUT, 1–9'
+  merge: -1
+  img_proc: true
