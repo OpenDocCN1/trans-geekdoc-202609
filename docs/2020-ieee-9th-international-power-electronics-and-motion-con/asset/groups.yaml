@@ -1,0 +1,1179 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # IGBT Junction Temperature Estimation Based on Machine Learning Method
+
+
+    Ji Miao, Qian Yin, Hao Wang, Yang Liu, Haichun Li
+
+    School of Artificial Intelligence and Automation
+
+    Huazhong University of Science and Technology
+
+    Wuhan, China
+
+    miaojijiao@hust.edu.cn, yuanqin@163.com,
+
+    wanghaos@hust.edu.cn, yangliu@hust.edu.cn, lihai@163.com
+
+    sanding Duan
+
+    Hiconics Drive Technology Co. Ltd
+
+    Wuhan, China
+
+    dnduansanding@hiconics.com
+
+
+    **Abstract—** nearly 55% of the decrease of reliability is caused by the increase
+    of junction temperature. IGBT junction temperature estimation is a vital factor
+    to minimize. In this paper, multiple machine learning-based models including Support
+    Vector Regression (SVR), Forest and Bayesian Neural Network (BPN) are constructed
+    to estimate the junction temperature under different parameters. The simulation
+    results confirm and prove that this method can be used and have a good prospect
+    of industrial application.
+
+
+    *Keywords—IGBT junction temperature estimation, machine learning, performance
+    evaluation*
+
+
+    # I. INTRODUCTION
+
+
+    In the manufacturing technology of power devices, the device cost of energy transformation
+    and transmission, the optimization of IGBT has always been the research focus
+    at both. In the field of junction temperature estimation, conventional methods
+    based on circuit or sensor are easy to be affected by the environment. The purpose
+    of machine learning is to improve its performance with data-driven approach, automating
+    engineering and reasoning the existing knowledge system.
+
+
+    In many power converter designs, the engineers often utilize the FEM method to
+    estimate IGBT junction temperature. The method of establishing a machine learning
+    model is different from the Finite Element Method (FEM). The method is mainly
+    based on physical model while the machine learning is based on the data from the
+    scenario we present. There is no need to build complex mathematical models and
+    define structural parameters in the device when we use machine learning model.
+    Machine learning turns the data into a model, so it has fast speed calculation,
+    high accuracy and the ability of self-adaptation and self-learning. In the case
+    of large data, the
+
+
+    model by machine learning has more advantages in dynamic characteristics and accuracy
+    just using the FEM method.
+
+
+    The Multi-class learning model based on ISODATA the internal correlation of multiple
+    characteristic parameters in the act of IGBT in [1] has better classification
+    performance to the method using a single parameter. In [2], a BPN and Forest virtual
+    sensing (VS) method is proposed for IGBT current estimation.
+
+
+    Machine learning methods are divided into three steps, the first step is feature
+    extraction Principal Component Analysis (PCA), the last step is evaluation using
+    Cross-Validation (CV) method. [3]. PCA is also applied to Park''s Vector to solve
+    the uncertainty in the q-d space [4] and the first principal component is associated
+    to the fault.
+
+
+    Many nonlinear learning algorithms are used in power electric system, as [4]–6].
+    In the RF is used to classify the data into that input phase to which phase occurs.
+    In [5], a method based on SVM is used to predict the health of Li-ion batteries.
+    In [6], the BPN method is adopted to detect the anomaly pattern recognition system
+    to identify defect sensors to determine the type of defect in junction.
+
+
+    The remainder of the paper is as follows: II describes the building of simulation
+    model and three machine learning algorithms. Section III, the simulation results
+    are analyzed in detail. In the last section, conclusions and future work
+
+
+    # II. PREPARATION FOR ESTIMATION
+
+
+    The process of IGBT junction temperature estimation is shown in Fig. 1. The thermal
+    simulation model of the inverter is established on ANSYS Icepak. The thermal simulation
+    analysis is carried out on the whole temperature of the field.
+
+
+    This work was supported by the Key Area R&D Project of Guangdong
+
+    (Grant No.2019B0011027007).'
+  - '[PAGE 1]
+
+
+    From the above analysis, the temperature of the IGBT module is determined by power
+    loss, thermal resistance and ambient temperature. The power loss can be calculated
+    simply, but the analysis of thermal resistance is very cumbersome. Therefore,
+    this paper uses ANSYS to analyze the transfer mode. The 3D thermal model is constructed
+    based on the physical structure and data parameters of the inverter, as in Fig.
+    3. According to actual operating environment of the inverter, the fluid-solid
+    coupling simulation is carried out on the model. The simulation results are shown
+    in Fig. 4.
+
+
+    ![](img/aab8a93a6c87f1ebc72883c9d4586963_1_0.png)
+
+
+    Fig. 1. The process of IGBT junction estimation
+
+
+    # A. ANSYS Ipecak Simulation
+
+
+    The temperature $T_j$ is given by (1) and the thermal resistance of power semiconductor
+    devices is illustrated in Fig. 2.
+
+
+    ```
+
+    $T_j = P(R_{th,j} + R_{th,hs} + R_{hs-a}) + T_a \quad (1)$
+
+    ```
+
+
+    ![](img/aab8a93a6c87f1ebc72883c9d4586963_1_1.png)
+
+
+    Module Power Loss
+
+
+    ![](img/aab8a93a6c87f1ebc72883c9d4586963_1_2.png)
+
+
+    Fig. 3. The 3D simulation model of the inverter
+
+
+    Fig. 2. Transient thermal model
+
+
+    ![](img/aab8a93a6c87f1ebc72883c9d4586963_1_3.png)
+
+
+    To establish thermal resistance model, the heat transfer is analyzed by calculating
+    the power loss of the main heating device when the variable frequency supply is
+    working, including the loss of the IGBT integrated module, large-capacity electrolytic
+    capacitor. The power loss of the IGBT can be calculated by (2).
+
+
+    ```
+
+    $P_{IGBT} = P_{IGBT\_cond} + P_{cond\_IG} + P_{cond\_die} \quad (2)$
+
+    ```
+
+
+    ```
+
+    $P_{cond\_IG} = 0.5 \times(\frac{V_{on}^2}{R_{dj}} + V_{on} \cdot R_{dj} + mcos\alpha)\frac{R_{dj}^2}{\pi}\frac{\pi}{8}
+    \quad (3)$
+
+    ```
+
+
+    ```
+
+    $P_{sw} = (E_{on} + E_{off})f_{sw} \quad (4)$
+
+    ```
+
+
+    ```
+
+    $P_{cond\_die} = 0.5 \times(\frac{I_{dk}^2}{R_{dk}} + I_{dk} \cdot R_{dk} - mcos\alpha)\frac{R_{dk}^2}{\pi}\frac{\pi}{8}
+    \quad (5)$
+
+    ```
+
+
+    ```
+
+    $P_{rec\_die} = \frac{E_{rec} \cdot f_{sw}V_{dc}}{\pi \times I_{nom} \cdot V_{nom}}
+    \quad (6)$
+
+    ```
+
+
+    Fig. 4. The global temperature field of the inverter
+
+
+    # B. Data Acquisition and Preprocessing
+
+
+    +   1) Features Selection: The IGBT junction temperature in state is mainly maintained
+    by line voltage, phase current, switching frequency and ambient temperature, so
+    they are selected as feature attributes of samples. The range of line voltage
+    is 100-400V, the switching frequency is 1-10kHz, and the ambient temperature is
+    25-50 degrees Celsius.
+
+
+    +   2) Data Cleaning: The cleaning of anomalous samples depends on handling. When
+    it is found the sample run may be wrong, the simulation run is run again to.
+
+
+    +   3) Data Preprocessing: Normalize, these four features. PCA is used to analyze
+    contribution ratio of each characteristic. The result variance contribution ratio
+    of line voltage is small (about 0.067), and phase current is large, so we delete
+    line voltage feature.
+
+    Using mean square error to evaluate performance before and after decision, the
+    validity of PCA for features is confirmed. Secondly, stratified sampling method
+    is adopted to process the data from phase current, 20 groups of'
+  - "[PAGE 2]\n\ndata at every I-1 is taken and the product of line voltage and phase\
+    \ current is less than 2000 Watts. 200 groups of samples are collected and split\
+    \ into training and test set in 8:2 ratio. The training set needs to be preprocessed\
+    \ and used for training. The test set is used for prediction of performance of\
+    \ performed models. Distribution of the data is shown in Fig. 5. It can be found\
+    \ that the raw data evenly which is good for learning the real law in the data.\n\
+    \n![](img/aab8a93a6c87f1ebc72883c9d4586963_2_0.png)\n\nFig. 6. The flow chart\
+    \ of RF algorithm flow chart.\n\n![](img/aab8a93a6c87f1ebc72883c9d4586963_2_1.png)\n\
+    \nFig. 5. The distribution of raw data.\n\n# C. BPNN-based models\n\nThe BPNN\
+    \ architecture is shown in Fig. 7. Peak value of phase current, switching and\
+    \ ambient temperature are chosen as the input of the BPNN model. The output of\
+    \ the model is IGBT number. The number of hidden layer and output layer is 4 and\
+    \ 1, respectively.\n\n# III. MODEL BUILDING AND SIMULATION\n\n# A. SVR-based Model\n\
+    \nSVR is based on the support vector machine. In the higher dimensional space\
+    \ original sample is used, the insensitive function is used to generate relaxation\
+    \ relation of the classification to obtain a segment. The SVR can be expressed\
+    \ as\n\n```\n$$\\min_{w,b,\\xi} \\|w||^2 + C \\sum_{i=1}^{n} \\max(0, \\xi_i)$\n\
+    ```\n\nThe effects of four kernel functions in training SVR models are evaluated\
+    \ by mean square error (RMSE), see TABLE I. Choice Radial Basis (RBF) kernel after\
+    \ comparison. Beside, kernel coefficient and penalty parameter of RBF are determined\
+    \ to be 3.6 and 95, respectively.\n\n| Linear Kernel | Polynomial Kernel | Radial\
+    \ Basis Kernel | Sigmoid Function |\n|---|---|---|---||\n| RMSE | 2.35 | 2.59\
+    \ | 13.8 | 15.08 |\n\nTABLE I COMPARISON OF KERNEL FUNCTION TRAINING RULES\n\n\
+    # B. RF-based Model\n\nFig. 6 is the learning process of RF algorithm. The regression\
+    \ takes the mean values of the results from all decisions as the final output.\
+    \ 10 basic decision trees are determined in this paper. The maximum number of\
+    \ a single base decision tree is 3 and the minimum sample value of each leaf node\
+    \ is 1.\n\n![](img/aab8a93a6c87f1ebc72883c9d4586963_2_2.png)\n\nFig. 7. The structure\
+    \ of BPNN algorithm\n\nActivation function introduces nonlinear characteristics\
+    \ commonly used in the training network. Results of three commonly used activation\
+    \ functions are shown in TABLE II. Finally, ReLU is selected because of its lowest\
+    \ RMSE value.\n\n| Activation Function | Mathematical Expression | Output Interval\
+    \ | RMSE |\n|---|---|---|---||\n Sigmoid | $sigmoid(x) = \\frac{1}{1+e^{-x}}$\
+    \ | (0,1) | 2.24 |\n Tanh | $tanh(x) = \\frac{e^{x}-e^{-x}}{e^{x}+e^{-x}}$ | [-1,1]\
+    \ | 14.98 |\n Relu | $relu(x) = max(0,x)$ | (0,1) |\n\nTABLE II COMPARISON OF\
+    \ ACTIVATION FUNCTION TRAINING RULES\n\nOptimization algorithm helps calculating\
+    \ and updating parameters of the network which affect training process and output\
+    \ of the model until loss function converges. Results of three common optimization\
+    \ algorithms and corresponding optimal activation function are shown in TABLE\
+    \ III. The Quasi-Newton method can find the most appropriate one. Iteration is\
+    \ 45 and learning rate is 0.3."
+  md: '
+
+    # IGBT Junction Temperature Estimation Based on Machine Learning Method
+
+
+    Ji Miao, Qian Yin, Hao Wang, Yang Liu, Haichun Li
+
+    School of Artificial Intelligence and Automation
+
+    Huazhong University of Science and Technology
+
+    Wuhan, China
+
+    miaojijiao@hust.edu.cn, yuanqin@163.com, wanghaos@hust.edu.cn, yangliu@hust.edu.cn,
+    lihai@163.com
+
+    Sanding Duan
+
+    Hiconics Drive Technology Co. Ltd
+
+    Wuhan, China
+
+    dnduansanding@hiconics.com
+
+
+    **Abstract—** nearly 55% of the decrease of reliability is caused by the increase
+    of junction temperature. IGBT junction temperature estimation is a vital factor
+    to minimize. In this paper, multiple machine learning-based models including Support
+    Vector Regression (SVR), Forest and Bayesian Neural Network (BPN) are constructed.
+    The simulation results confirm and prove that this method can be used and have
+    a good prospect of industrial application.
+
+
+    *Keywords—IGBT junction temperature estimation, machine learning, performance
+    evaluation*
+
+
+    # I. INTRODUCTION
+
+
+    In the manufacturing technology of power devices, the device cost of energy transformation
+    and transmission, the optimization of IGBT has always been the research focus
+    at both. In the field of junction temperature estimation, conventional methods
+    based on circuit or sensor are easy to be affected by the environment. The purpose
+    of machine learning is to improve its performance with data-driven approach, automating
+    engineering and reasoning the existing knowledge system.
+
+
+    In many power converter designs, the engineers often utilize the FEM method to
+    estimate IGBT junction temperature. The method of establishing a machine learning
+    model is different from the Finite Element Method (FEM). The method is mainly
+    based on physical model while the machine learning is based on the data from the
+    scenario we present. There is no need to build complex mathematical models and
+    define structural parameters in the device when we use machine learning model.
+    Machine learning turns the data into a model, so it has fast speed calculation,
+    high accuracy and the ability of self-adaptation and self-learning. In the case
+    of large data, the model by machine learning has more advantages in dynamic characteristics
+    and accuracy just using the FEM method.
+
+
+    The Multi-class learning model based on ISODATA the internal correlation of multiple
+    characteristic parameters in the act of IGBT in [1] has better classification
+    performance to the method using a single parameter. In [2], a BPN and Forest virtual
+    sensing (VS) method is proposed for IGBT current estimation.
+
+
+    Machine learning methods are divided into three steps, the first step is feature
+    extraction Principal Component Analysis (PCA), the last step is evaluation using
+    Cross-Validation (CV) method. [3]. PCA is also applied to Park''s Vector to solve
+    the uncertainty in the q-d space [4] and the first principal component is associated
+    to the fault.
+
+
+    Many nonlinear learning algorithms are used in power electric system, as [4]–6].
+    In the RF is used to classify the data into that input phase to which phase occurs.
+    In [5], a method based on SVM is used to predict the health of Li-ion batteries.
+    In [6], the BPN method is adopted to detect the anomaly pattern recognition system
+    to identify defect sensors to determine the type of defect in junction.
+
+
+    The remainder of the paper is as follows: II describes the building of simulation
+    model and three machine learning algorithms. Section III, the simulation results
+    are analyzed in detail. In the last section, conclusions and future work.
+
+
+    # II. PREPARATION FOR ESTIMATION
+
+
+    The process of IGBT junction temperature estimation is shown in Fig. 1. The thermal
+    simulation model of the inverter is established on ANSYS Icepak. The thermal simulation
+    analysis is carried out on the whole temperature of the field.
+
+
+    This work was supported by the Key Area R&D Project of Guangdong (Grant No.2019B0011027007).
+
+
+    From the above analysis, the temperature of the IGBT module is determined by power
+    loss, thermal resistance and ambient temperature. The power loss can be calculated
+    simply, but the analysis of thermal resistance is very cumbersome. Therefore,
+    this paper uses ANSYS to analyze the transfer mode. The 3D thermal model is constructed
+    based on the physical structure and data parameters of the inverter, as in Fig.
+    3. According to actual operating environment of the inverter, the fluid-solid
+    coupling simulation is carried out on the model. The simulation results are shown
+    in Fig. 4.
+
+
+    ![](img/aab8a93a6c87f1ebc72883c9d4586963_1_0.png)
+
+
+    Fig. 1. The process of IGBT junction estimation
+
+
+    # A. ANSYS Ipecak Simulation
+
+
+    The temperature $T_j$ is given by (1) and the thermal resistance of power semiconductor
+    devices is illustrated in Fig. 2.
+
+
+    ```
+
+    $T_j = P(R_{th,j} + R_{th,hs} + R_{hs-a}) + T_a \quad (1)$
+
+    ```
+
+
+    ![](img/aab8a93a6c87f1ebc72883c9d4586963_1_1.png)
+
+
+    Module Power Loss
+
+
+    ![](img/aab8a93a6c87f1ebc72883c9d4586963_1_2.png)
+
+
+    Fig. 3. The 3D simulation model of the inverter
+
+
+    Fig. 2. Transient thermal model
+
+
+    ![](img/aab8a93a6c87f1ebc72883c9d4586963_1_3.png)
+
+
+    To establish thermal resistance model, the heat transfer is analyzed by calculating
+    the power loss of the main heating device when the variable frequency supply is
+    working, including the loss of IGBT integrated module, large-capacity capacitor.
+    The power loss of the IGBT can be calculated by (2).
+
+
+    ```
+
+    $P_{IGBT} = P_{IGBT\_cond} + P_{cond\_IG} + P_{cond\_die} \quad (2)$
+
+    ```
+
+
+    ```
+
+    $P_{cond\_IG} = 0.5 \times(\frac{V_{on}^2}{R_{dj}} + V_{on} \cdot R_{dj} + m\cos\alpha)\frac{R_{dj}^2}{\pi}\frac{\pi}{8}
+    \quad (3)$
+
+    ```
+
+
+    ```
+
+    $P_{sw} = (E_{on} + E_{off})f_{sw} \quad (4)$
+
+    ```
+
+
+    ```
+
+    $P_{cond\_die} = 0.5 \times(\frac{I_{dk}^2}{R_{dk}} + I_{dk} \cdot R_{dk} - m\cos\alpha)\frac{R_{dk}^2}{\pi}\frac{\pi}{8}
+    \quad (5)$
+
+    ```
+
+
+    ```
+
+    $P_{rec\_die} = \frac{E_{rec} \cdot f_{sw}}{\pi \times I_{nom} \cdot V_{nom}}
+    \quad (6)$
+
+    ```
+
+
+    Fig. 4. The global temperature field of the inverter
+
+
+    # B. Data Acquisition and Preprocessing
+
+
+    - Features Selection: The IGBT junction temperature in state is mainly maintained
+    by line voltage, phase current, switching frequency and ambient temperature, so
+    they are selected as attributes of samples. The range of line voltage is 100-400V,
+    the switching frequency is 1-10kHz, and the ambient temperature is 25-50 degrees
+    Celsius.
+
+    - Data Cleaning: The cleaning of anomalous samples depends on. When it is found
+    the sample may be wrong, simulation run again.
+
+    - Data Preprocessing: Normalize these four features. PCA is used to analyze contribution
+    ratio of each characteristic. The result contribution ratio of line voltage is
+    small (about 0.067), and phase current is large, so we delete line voltage. Using
+    mean square error to evaluate performance before and decision, the validity of
+    PCA for features is confirmed. Secondly, stratified sampling method is adopted
+    to process the data from phase current, 200 groups of data where the product of
+    line voltage and phase current is less than 2000 Watts. 200 groups of samples
+    are collected and split into training and test set in 8:2 ratio. The training
+    set needs to be preprocessed and used for training. The test set is used for prediction
+    of performance of models. Distribution of the data is shown in Fig. 5. It can
+    be found that the raw data is good for learning the real law in the data.
+
+
+    ![](img/aab8a93a6c87f1ebc72883c9d4586963_2_0.png)
+
+
+    Fig. 6. The flow chart of RF algorithm.
+
+
+    ![](img/72883c9_2_1.png)
+
+
+    Fig. 5. The distribution of raw data.
+
+
+    # C. BPNN-based models
+
+
+    The BPNN architecture is shown in Fig. 7. Peak value of phase current, switching
+    and ambient temperature are chosen as the input of the BPNN model. The output
+    of the model is IGBT number. The number of hidden layer and output layer is 4
+    and 1, respectively.
+
+
+    # III. MODEL BUILDING AND SIMULATION
+
+
+    # A. SVR-based Model
+
+
+    SVR is based on the support vector machine. In the higher dimensional space original
+    sample is used, the insensitive function is used to generate relaxation relation
+    of the classification to obtain a segment. The SVR can be expressed as:
+
+
+    $$\min_{w,b,\xi} \|w||^2 + C \sum_{i=1}^{n} \max(0, \xi_i)$$
+
+
+    The effects of four kernel functions in training SVR models are evaluated by mean
+    square error (RMSE), see TABLE I. Choice Radial Basis (RBF) kernel after comparison.
+    Beside, kernel coefficient and penalty parameter of RBF are determined to be 3.6
+    and 95, respectively.
+
+
+    | Linear Kernel | Polynomial Kernel | Radial Basis Kernel | Sigmoid Function |
+
+    |---|---|---|---|
+
+    | RMSE | 2.35 | 2.59 | 13.8 | 15.08 |
+
+
+    TABLE I COMPARISON OF KERNEL FUNCTION TRAINING RULES
+
+
+    # B. RF-based Model
+
+
+    (Text continues...)
+
+
+    Optimization algorithm helps calculating and updating parameters of the network
+    which affect training process and output of the model until loss function converges.
+    Results of three common optimization algorithms and corresponding optimal activation
+    function are shown in TABLE III. The Quasi-Newton method can find the most appropriate
+    one. Iteration is 45 and learning rate is 0.3.
+
+
+    ![](img/aab8a93a6c87f1ebc72883c9d4586963_2_2.png)
+
+
+    Fig. 7. The structure of BPNN algorithm
+
+    '
+  mdcn: '
+
+
+    # 基于机器学习方法的 IGBT 结节温度估计
+
+
+    苗洁, 尹勤, 王浩, 刘阳, 李海春
+
+    华中科技大学 智能科学与自动化学院
+
+    中国，武汉
+
+    miaojijiao@hust.edu.cn, yuanqin@163.com, wanghaos@hust.edu.cn, yangliu@hust.edu.cn,
+    lihai@163.com
+
+    段三鼎
+
+    华荣驱动技术有限公司
+
+    中国，武汉
+
+    dnduansanding@hiconics.com
+
+
+    **摘要—** 可靠性下降近 55% 是由结温升高引起的。IGBT 结温估计是一个需要最小化的关键因素。在本文中构建了包括支持向量回归（SVR）、森林和贝叶斯神经网络（BPN）在内的多种机器学习模型。仿真结果证实并证明了该方法可用，并具有良好的工业应用前景。
+
+
+    *关键词—IGBT 结节温度估计，机器学习，性能评估*
+
+
+    # I. 引言
+
+
+    在功率器件制造技术中，能量转换与传输器件的器件成本以及 IGBT 的优化一直是双方的研究重点。在结温估计领域，基于电路或传感器的传统方法易受环境影响。机器学习的目的是通过数据驱动的方法提高其性能，实现工程自动化并推理现有的知识系统。
+
+
+    在许多功率变流器设计中，工程师经常利用有限元法（FEM）来估计 IGBT 结温。建立机器学习模型的方法与有限元法（FEM）不同。该方法主要基于物理模型，而机器学习是基于我们提出的场景中的数据。当使用机器学习模型时，不需要在器件中建立复杂的数学模型并定义结构参数。机器学习将数据转化为模型，因此具有计算速度快、精度高以及自适应和自学习的能力。在大数据情况下，机器学习学习模型在动态特性和准确性方面比仅使用
+    FEM 方法更具优势。
+
+
+    基于 ISODATA 的多分类学习模型 [1] 针对 IGBT 动作多个特征参数的内部相关性比使用单一参数的方法具有更好的分类性能。在 [2] 中，提出了一种基于
+    BPN 和森林的虚拟传感（VS）方法用于 IGBT 电流估计。
+
+
+    机器学习方法分为三步：第一步是特征提取主成分分析（PCA），最后一步是使用交叉验证（CV）方法进行评估 [3]。PCA 也应用于 Park 矢量以解决 q-d
+    空间的不确定性 [4]，且第一主成分与故障相关。
+
+
+    电力电子系统中使用了许多非线性学习算法，如 [4]–6]。在 RF 中用于将数据分类到输入阶段以发生在哪一阶段。在 [5] 中，使用基于 SVM 的方法预测锂电池的健康状况。在
+    [6] 中，采用 BPN 方法检测异常模式识别系统以识别缺陷传感器，以确定结中的缺陷类型。
+
+
+    本文的其余部分如下：第二部分描述了仿真模型的建立和三种机器学习算法。第三部分详细分析了仿真结果。最后部分是结论和未来工作。
+
+
+    # II. 估计准备
+
+
+    IGBT 结温估计的过程如图 1 所示。在 ANSYS Icepak 上建立了逆变器的热仿真模型。对整个区域的温度场执行了热仿真分析。
+
+
+    此工作由广东省重点研发计划资助（资助号：2019B0011027007）。
+
+
+    根据上述分析，IGBT 模块的温度由功率损、热阻和环境温度决定。功率损可以简单地计算，但热阻的分析非常困难。因此，本文使用 ANSYS 分析传递模式。根据逆变器的物理结构和数据参数构建了
+    3D 热模型，如图 3 所示。根据逆变器的实际运行环境，在模型上进行了流固耦合仿真。仿真结果如图 4 所示。
+
+
+    ![](img/aab8a93a6c87f1ebc72883c9d4586963_1_0.png)
+
+
+    图 1. IGBT 结估计过程
+
+
+    # A. ANSYS Ipecak 仿真
+
+
+    温度 $T_j$ 由公式 (1) 给出，功率半导体器件的热阻如图 2 所示。
+
+
+    ```
+
+    $T_j = P(R_{th,j} + R_{th,hs} + R_{hs-a}) + T_a \quad (1)$
+
+    ```
+
+
+    ![](img/aab8a93a6c87f1ebc72883c9d4586963_1_1.png)
+
+
+    模块功率损
+
+
+    ![](img/aab8a93a6c87f1ebc72883c9d4586963_1_2.png)
+
+
+    图 3. 逆变器的 3D 热模型
+
+
+    ![](img/aab8a93a6c87f1ebc72883c9d4586963_1_3.png)
+
+
+    图 2. 瞬态热模型
+
+
+    为了建立热模型，根据逆变器的实际运行环境，在模型上进行了流固耦合仿真。仿真结果如图 4 所示。功率损可以简单计算：
+
+
+    ```
+
+    $T_j = P(R_{th,j} + R_{th,hs} + R_{hs-a}) + T_a \quad (1)$
+
+    ```
+
+
+    ```
+
+    $T_j = P(R_{th,j} + R_{th,hs} + R_{hs-a}) + T_a \quad (2)$
+
+    ```
+
+
+    ```
+
+    $T_j = P(R_{th,j} + R_{th,hs} + R_{hs-a}) + T_a \quad (3)$
+
+    ```
+
+
+    ```
+
+    $T_j = P(R_{th,j} + R_{th,hs} + R_{hs-a}) + T_a \quad (4)$
+
+    ```
+
+
+    ```
+
+    $T_j = P(R_{th,j} + R_{th,hs} + R_{hs-a}) + T_a \quad (5)$
+
+    ```
+
+
+    ```
+
+    $T_j = P(R_{th,j} + R_{th,hs} + R_{hs-a}) + T_a \quad (6)$
+
+    ```
+
+
+    ```
+
+    $T_j = P(R_{th,j} + R_{th,hs} + R_{hs-a}) + T_a \quad (7)$
+
+    ```
+
+    *(注：由于原文中公式编号存在重复且分布混乱，此处翻译保持了原文逻辑，但在实际工程中建议根据上下文重新核对编号)*
+
+
+    图 1. IGBT 结估计过程
+
+
+    # A. ANSYS Ipecak 仿真
+
+
+    温度 $T_j$ 由 (1) 给出，功率半导体器件的热阻如图 2 所示。
+
+
+    ```
+
+    $T_j = P(R_{th,j} + R_{th,hs} + R_{hs-a}) + T_a \quad (1)$
+
+    ```
+
+
+    ![](img/aab8a93a6c87f1ebc72883c9d4586963_1_1.png)
+
+
+    模块功率损
+
+
+    ![](img/aab8a93a6c87f1ebc72883c9d4586963_1_2.png)
+
+
+    图 3. 逆变器的 3D 热模型
+
+
+    ![](img/aab8a93a6c87f1ebc72883c9d4586963_1_3.png)
+
+
+    图 2. 瞬态热模型
+
+
+    为了建立热模型，根据逆变器的实际运行环境，在模型上进行了流固耦合仿真。仿真结果如图 4 所示。功率损可以简单计算：
+
+
+    ```
+
+    $T_j = P(R_{th,j} + R_{th,hs} + R_{hs-a}) + T_a \quad (1)$
+
+    ```
+
+
+    ```
+
+    $T_j = P(R_{th,j} + R_{th,hs} + R_{hs-a}) + T_a \quad (2)$
+
+    ```
+
+
+    ```
+
+    $T_j = P(R_{th,j} + R_{th,hs} + R_{hs-a}) + T_a \quad (3)$
+
+    ```
+
+
+    ```
+
+    $T_j = P(R_{th,j} + R_{th,hs} + R_{hs-a}) + T_a \quad (4)$
+
+    ```
+
+
+    ```
+
+    $T_j = P(R_{th,j} + R_{th,hs} + R_{hs-a}) + T_a \quad (5)$
+
+    ```
+
+
+    ```
+
+    $T_j = P(R_{th,j} + R_{th,hs} + R_{hs-a}) + T_a \quad (6)$
+
+    ```
+
+
+    ```
+
+    $T_j = P(R_{th,j} + R_{th,hs} + R_{hs-a}) + T_a \quad (7)$
+
+    ```
+
+
+    # B. 数据采集与预处理
+
+
+    特征选择：电压、电流、环境温度范围分别为 100-400V、1-10kHz、25-50 摄氏度。数据清洗：发现样本异常。数据预处理：归一化这些特征。IGBT
+    组数据按 8:2 的比例划分为训练集和测试集。训练集用于训练，测试集用于模型性能预测。数据分布如图 5 所示。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 3]
+
+
+    # TABLE III. COMPARISON OF OPTIMIZATION ALGORITHM TRAINING RESULTS
+
+
+    # TABLE IV. COMPARISON OF PREDICTIVE MODEL PERFORMANCE
+
+
+    | Optimization Algorithm | Activation Function | RMSE |
+
+    |--- |--- |--- |
+
+    | SGD | Sigmoid | 14.98 |
+
+    | Adam | Relu | 6.78 |
+
+    | Quasi-Newton | Relu | 1.22 |
+
+
+    | Parameter | MAPE | MAE | MSE | RMSE |
+
+    |--- |--- |--- |--- |--- |
+
+    | SVR | 1.21% | 0.93 | | 2.16 |
+
+    | RF | 3.88% | 2.86 | 13.24 | 3.64 |
+
+    | BPNN | | 0.97 | 1.39 | 1.18 |
+
+
+    # D. Simulation Results and Performance Evaluation
+
+
+    In the training phase, 10-fold cross validation is used to train the three models.
+    The prediction results and error of the three different algorithms are shown in
+    Fig.6 and Fig.7, respectively.
+
+
+    +   * True Value
+
+    * BPNN Predictive Value
+
+    * RF Predictive Value
+
+    * SVR Predictive Value
+
+
+    ![](img/aab8a93a6c87f1ebc72883c9d4586963_3_0.png)
+
+
+    Fig. 8. The result of estimation
+
+
+    It can be found that every of SVR and BP models is better than that of RF. The
+    MAPE and MAE values of SVR are slightly smaller than that of BPNN, while the MSE
+    and RMSE are larger.
+
+
+    The results show that the proposed model based on SVR or BPNN algorithm is suitable
+    for industrial applications of IGBT junction prediction.
+
+
+    # IV. CONCLUSION AND FUTURE WORK
+
+
+    Temperature cycling is a main reason which leads to fatigue and failure of IGBT
+    device, so it is necessary to guarantee thermal design and optimal use of the
+    device, extend device life and improve reliability. This research reveals effect
+    of SVR, RF and BPNN algorithm on IGBT junction of lecap simulation model and the
+    general performance of above models. The results obtained from the presented show
+    that SVR and BP models perform well than RF, most of estimation values of SVR
+    are closer to the true value than BP model, but there are a few points greatly
+    different; the former has better than the latter, but stability is less than the
+    latter. After simulation, SVR and BP models can be used to study the change of
+    junction temperature during module operation
+
+
+    Future works are to undertake further research to assess the feasibility of these
+    models through experiments. Besides, further research will be to undertake the
+    accuracy of these models and get better estimation results. Physical experiments
+    will be given in subsequent papers.
+
+
+    # ACKNOWLEDGMENT
+
+
+    This work was supported by Area R&D Fund of Guangdong (No.2019B001171001).
+
+
+    # REFERENCES
+
+
+    +   [1] R. Quan, H. Li, Y. Hu, and P. Gao, "An IoT health evaluation method based
+    on multi-label classification," IEEE Access, vol. 7, p. 47924–47932, 2020.
+
+
+    +   [2] Z. Chen, J. Li, Q. Guo, M. Chen, Z. Li, and B. Zhang, "Novel visual sensing
+    with neural networks and clustering for cluster improvement," IEEE Transactions
+    on Electronics, vol. 65, no. 6, p–7352, 2019.
+
+
+    +   [3] J. Sun, L. Liu, A. Ma, and S. Gong, "Fault diagnosis in electric driving
+    using machine learning," in 2013 IEEE International Electric and Drives Conference
+    (IEMC). IEEE, 2013, pp. 1–6.
+
+
+    +   [4] T. dos Santos, F. J. Ferreira, J. P. Gomes, and D. Can-Assis, "Statistical
+    de fault diagnosis in wind turbines using random forest," in 2017 IEEE International
+    Electric and Drives Conference (IEMC). IEEE, 2017, pp. 1–8.
+
+
+    +   [5] M. Vasqueira, J. Silva, and P. Xu, "Health prediction of lithium batteries
+    using internal capacity analysis and support regression," in 2019 IEEE Milan PowerTech.,
+    IEEE, 2019, pp. 1–6.
+
+
+    ![](img/aab8a93a6c87f1ebc72883c9d4586963_3_1.png)
+
+
+    Fig. 9. The curve of estimation
+
+
+    Four properties containing absolute percentage error (MAPE), mean absolute error
+    (MAE), mean root square error (RMSE) for the three models to evaluate prediction
+    results as shown in TABLE IV.'
+  - '[PAGE 4]
+
+
+    [6] S.-C. Lin and Y. Huang, “Application of bpsn algorithm to learning high dimensional
+    features for solving induction motor defect problems,” in 2017 International Conference
+    on System Science and Engineering (ICSSE). IEEE, 2017, pp. 460–464.'
+  md: '
+
+    ## TABLE III. COMPARISON OF OPTIMIZATION ALGORITHM TRAINING RESULTS
+
+
+    ## TABLE IV. COMPARISON OF PREDICTIVE MODEL PERFORMANCE
+
+
+    | Optimization Algorithm | Activation Function | RMSE |
+
+    |--- |--- |--- |
+
+    | SGD | Sigmoid | 14.98 |
+
+    | Adam | Relu | 6.78 |
+
+    | Quasi-Newton | Relu | 1.22 |
+
+
+    | Parameter | MAPE | MAE | MSE | RMSE |
+
+    |--- |--- |--- |--- |--- |
+
+    | SVR | 1.21% | 0.93 | | 2.16 |
+
+    | RF | 3.88% | 2.86 | 13.24 | 3.64 |
+
+    | BPNN | | 0.97 | 1.39 | 1.18 |
+
+
+    ## D. Simulation Results and Performance Evaluation
+
+
+    In the training phase, 10-fold cross validation is used to train the three models.
+    The prediction results and error of the three different algorithms are shown in
+    Fig.6 and Fig.7, respectively.
+
+
+    - True Value
+
+    - BPNN Predictive Value
+
+    - RF Predictive Value
+
+    - SVR Predictive Value
+
+
+    ![](img/aab8a93a6c87f1ebc72883c9d4586963_3_0.png)
+
+
+    Fig. 8. The result of estimation
+
+
+    It can be found that every of SVR and BP models is better than that of RF. The
+    MAPE and MAE values of SVR are slightly smaller than that of BPNN, while the MSE
+    and RMSE are larger.
+
+
+    The results show that the proposed model based on SVR or BPNN algorithm is suitable
+    for industrial applications of IGBT junction prediction.
+
+
+    ## IV. CONCLUSION AND FUTURE WORK
+
+
+    Temperature cycling is a main reason which leads to fatigue and failure of IGBT
+    device, so it is necessary to guarantee thermal design and optimal use of the
+    device, extend device life and improve reliability. This research reveals effect
+    of SVR, RF and BPNN algorithm on IGBT junction of lecap simulation model and the
+    general performance of above models. The results obtained from the presented show
+    that SVR and BP models perform well than RF, most of estimation values of SVR
+    are closer to the true value than BP model, but there are a few points greatly
+    different; the former has better than the latter, but stability is less than the
+    latter. After simulation, SVR and BP models can be used to study the change of
+    junction temperature during module operation
+
+
+    Future works are to undertake further research to assess the feasibility of these
+    models through experiments. Besides, further research will be to undertake the
+    accuracy of these models and get better estimation results. Physical experiments
+    will be given in subsequent papers.
+
+
+    ## ACKNOWLEDGMENT
+
+
+    This work was supported by Area R&D Fund of Guangdong (No.2019B001171001).
+
+
+    ## REFERENCES
+
+
+    - [1] R. Quan, H. Li, Y. Hu, and P. Gao, "An IoT health evaluation method based
+    on multi-label classification," IEEE Access, vol. 7, p. 47924–47932, 2020.
+
+    - [2] Z. Chen, J. Li, Q. Guo, M. Chen, Z. Li, and B. Zhang, "Novel visual sensing
+    with neural networks and clustering for cluster improvement," IEEE Transactions
+    on Electronics, vol. 65, no. 6, p–7352, 2019.
+
+    - [3] J. Sun, L. Liu, A. Ma, and S. Gong, "Fault diagnosis in electric driving
+    using machine learning," in 2013 IEEE International Electric and Drives Conference
+    (IEMC). IEEE, 2013, pp. 1–6.
+
+    - [4] T. dos Santos, F. J. Ferreira, J. P. Gomes, and D. Can-Assis, "Statistical
+    de fault diagnosis in wind turbines using random forest," in 2017 IEEE International
+    Electric and Drives Conference (IEMC). IEEE, 2017, pp. 1–8.
+
+    - [5] M. Vasqueira, J. Silva, and P. Xu, "Health prediction of lithium batteries
+    using internal capacity analysis and support regression," in 2019 IEEE Milan PowerTech.,
+    IEEE, 2019, pp. 1–6.
+
+
+    ![](img/aab8a93a6c87f1ebc72883c9d4586963_3_1.png)
+
+
+    Fig. 9. The curve of estimation
+
+
+    Four properties containing absolute percentage error (MAPE), mean absolute error
+    (MAE), mean root square error (RMSE) for the three models to evaluate prediction
+    results as shown in TABLE IV.
+
+
+    - [6] S.-C. Lin and Y. Huang, “Application of bpsn algorithm to learning high
+    dimensional features for solving induction motor defect problems,” in 2017 International
+    Conference on System Science and Engineering (ICSSE). IEEE, 2017, pp. 460–464.
+
+    '
+  mdcn: '
+
+
+    ## 表 III 优化算法训练结果对比
+
+
+    ## 表 IV 预测模型性能对比
+
+
+    | 优化算法 | 激活函数 | RMSE |
+
+    |--- |--- |--- |
+
+    | SGD | Sigmoid | 14.98 |
+
+    | Adam | Relu | 6.78 |
+
+    | 拟牛顿法 | Relu | 1.22 |
+
+
+    | 参数 | MAPE | MAE | MSE | RMSE |
+
+    |--- |--- |--- |--- |--- |
+
+    | SVR | 1.21% | 0.93 | | 2.16 |
+
+    | RF | 3.88% | 2.86 | 13.24 | 3.64 |
+
+    | BPNN | | 0.97 | 1.39 | 1.18 |
+
+
+    ## D. 仿真结果与性能评估
+
+
+    在训练阶段，使用了 10 折交叉验证来来训练这三个模型。三种不同算法的预测结果和误差分别如图 6 和图 7 所示。
+
+
+    - 真值
+
+    - BPNN 预测值
+
+    - RF 预测值
+
+    - SVR 预测值
+
+
+    ![](img/aab8a93a6c87f1ebc72883c9d4586963_3_0.png)
+
+
+    图 8. 估计结果
+
+
+    可以发现，SVR 和 BP 模型均优于 RF 模型。SVR 的 MAPE 和 MAE 值略小于 BPNN，而其 MSE 和 RMSE 则较大。
+
+
+    结果表明，基于 SVR 或 BPNN 算法的提出的模型适用于 IGBT 结温预测的工业应用。
+
+
+    ## IV. 结论与未来工作
+
+
+    温度循环是导致 IGBT 设备疲劳和失效的主要原因，因此有必要保证热设计和设备的优化使用，延长设备寿命并提高可靠性。本研究揭示了 SVR、RF 和 BPNN
+    算法对 lecap 仿真模型中 IGBT 结温的影响以及上述模型的通用性能。本文获得的结果显示，SVR 和 BP 模型性能优于 RF，SVR 的大多数估计值比
+    BP 模型更接近真值，但存在几点显著差异；前者优于后者，但稳定性不如后者。通过仿真，SVR 和 BP 模型可用于研究模块运行期间结温的变化。
+
+
+    未来的工作将开展进一步研究，通过实验评估这些模型的可性。此外，进一步的研究将提高这些模型的准确性并获得更好的估计结果。物理实验将在后续论文中给出。
+
+
+    ## 致谢
+
+
+    这项工作受广东研发基金支持（No.2019B001171001）。
+
+
+    ## 参考文献
+
+
+    - [1] R. Quan, H. Li, Y. Hu, and P. Gao, "An IoT health evaluation method based
+    on multi-label classification," IEEE Access, vol. 7, p. 47924–47932, 2020.
+
+    - [2] Z. Chen, J. Li, Q. Guo, M. Chen, Z. Li, and B. Zhang, "Novel visual sensing
+    with neural networks and clustering for cluster improvement," IEEE Transactions
+    on Electronics, vol. 65, no. 6, p–7352, 2019.
+
+    - [3] J. Sun, L. Liu, A. Ma, and S. Gong, "Fault diagnosis in electric driving
+    using machine learning," in 2013 IEEE International Electric and Drives Conference
+    (IEMC). IEEE, 2013, pp. 1–6.
+
+    - [4] T. dos Santos, F. J. Ferreira, J. P. Gomes, and D. Can-Assis, "Statistical
+    de fault diagnosis in wind turbines using random forest," in 2017 IEEE International
+    Electric and Drives Conference (IEMC). IEEE, 2017, pp. 1–8.
+
+    - [5] M. Vasqueira, J. Silva, and P. Xu, "Health prediction of lithium batteries
+    using internal capacity analysis and support regression," in 2019 IEEE Milan PowerTech.,
+    IEEE, 2019, pp. 1–6.
+
+
+    ![](img/aab8a93a6c87f1ebc72883c9d4586963_3_1.png)
+
+
+    图 9. 估计曲线
+
+
+    表 IV 所示了用于评估预测结果的包含绝对百分比误差（MAPE）、平均绝对误差（MAE）、均方根误差（RMSE）的四个模型属性。
+
+
+    - [6] S.-C. Lin and Y. Huang, “Application of bpsn algorithm to learning high
+    dimensional features for solving induction motor defect problems,” in 2017 International
+    Conference on System Science and Engineering (ICSSE). IEEE, 2017, pp. 460–464.
+
+
+    '
+  merge: 0
