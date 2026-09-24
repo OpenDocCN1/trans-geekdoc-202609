@@ -1,0 +1,514 @@
+- pgno: 0
+  md: '# # Hybrid Machine Learning Model for Forecasting Solar Power Generation
+
+
+    Anchit Nayak
+
+    Department of Electrical Engineering
+
+    Pandit Deendayal Petroleum University (DPDU)
+
+    Gandhinagar, India
+
+    anchit.neet17@iot.pdpu.ac.in
+
+
+    Leena Christine
+
+    Department of Electrical Engineering
+
+    Pandit Deendayal Petroleum University (DPDU)
+
+    Gandhinagar, India
+
+    leena.santos@iot.pdpu.ac.in
+
+
+    **Abstract—** Solar power generation through photovoltaic technology is one of
+    the most renewable energy sources. Solar power is growing rapidly due to its clean
+    nature. From the system operation point of views, in this novel machine learning
+    approach is proposed using an ensemble of models: Hybrid Ensemble Regression which
+    exploits the advantages of different machine learning algorithms and incorporates
+    them into a single model. Missing values in dataset have been dealt with using
+    regression. The ensemble averaging is a verified method with many individual models,
+    namely a non-linear autoregressive neural network, autoregressive neural network
+    with exogenous signals (NAR), a least squares decision tree, support vector regression
+    with RF and tested on a dataset of one MW solar power plant in Gujarat, India
+    (23°15''11"N, 72°40''00"E). Proposed models are then used to forecast solar power
+    generation.
+
+
+    **Index Terms—** Technical Intelligence, Artificial Intelligence, Solar Power
+    Forecasting, Ensemble Learning, Support Vector Machine, Neural Networks
+
+
+    data problem has been dealt with a linear regression model that misses the missing
+    data.
+
+
+    The outline of the rest of the paper is as follows. Introduction in section I
+    is followed by a literature review in section II. The proposed methodology is
+    elaborate explained in section III with each algorithm discussed in its respective
+    subsection. Section IV discusses the numerical results obtained using the proposed
+    model followed by a conclusion in section V that summarizes the work presented
+    in this paper.
+
+
+    # II. LITERATURE REVIEW
+
+
+    A literature review of many papers has been conducted to identify a research gap.
+    Many papers have been written to forecast both, solar irradiation and solar power
+    generation. As will be established in section III-A, the techniques used in various
+    papers focus on forecasting solar power generation. In the survey, three classes
+    of works have been observed- first models with non-hybrid techniques, second models
+    with NN-only hybrids and the third techniques that use a mixture of models used.
+    The hybrid term refers to using more than one technique in conjunction with each
+    other, as is presented in this paper.
+
+
+    References [1], [2], and [4] are used when non-hybrid models based on computational
+    intelligence. Piazza et al., in have used an artificial neural network (ANN) based
+    architecture to forecast solar power based on temperature and irradiation. Along
+    similar lines, Do [2] have used different models and have improved their performances.
+    They have used a scaled performance, an ANN base and a multi-variate regression.
+    Power [4] has used machine learning techniques to forecast forests and has forecasted
+    solar power generation (SPG). Person et al., in, have used boosted decision trees
+    of solar power generation and geographical conditions to forecast using weather
+    prediction data (NWP), on a short term.
+
+
+    References [51]
+
+
+    # I. INTRODUCTION
+
+
+    In order to policy level to increase renewable energy in power systems due to
+    environmental impact, the use of solar energy has risen considerably in the post-decade.
+    Many countries are now aiming for large-scale solar power implementation for energy.
+    However, for this clean energy is solar power, which is depending on solar irradiation
+    and is inherently stochastic. The uncertainty of solar power can be dealt with
+    using appropriate techniques in order to do planning and scheduling for solar
+    power to ensure maximum utility.
+
+
+    In this paper, different learning algorithms are stitched together, forming a
+    hybrid forecasting model based on a machine learning approach. The historical
+    dataset used for building such prediction models is susceptible to missing data
+    and outliers due to loss of data during grid failure events and faulty measuring
+    instruments. In this work, the missing'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'the proposed in here. Gandelli, in [5], used a basic physical model and ANN
+    approach to forecast SPG. Water geographical coordinates and data details were
+    used to forecast region. Fillipe et al., in [6], used an auto-regressive model
+    with an electrical model to predictions for very short horizons. Dolara, in [7],
+    used a physical model with ANN. Gradit, in [8], used ANNs with a real-time data
+    acquisition system. The models used include Multi-layer perception (MLP) ANN.
+    Wolter et al. used ANN fuzzy inference system (ANNFS) and a physical model.
+
+
+    References, [9], [10], [11] and [12] were used to forecast an ensemble (or hybrid)
+    of neural networks. Zhang et al., in [9], used a neural network model with an
+    ensemble intelligence algorithm and particle swarm optimization model. Wang et
+    al. in [10], used a hybrid model with optimization and search algorithm. Ram used
+    an ensemble of neural networks to forecast in [11], while Cicero et al used ANNs
+    using an analog technique
+
+
+    Next are models that used, both statistical and empirical approaches. For instance,
+    Bourzadoum et al in [13] used a hybrid model with Autoregressive Moving Averaging
+    model. SVR and Yang. ANN used SVM approach to forecast short term horizons [14].
+    Haque et used a wavelet transform method (ARTMAP) with a filter bank to forecast
+    short term. [15] Dong et al., in [16], used several optimization maps, forecast
+    solar irradiance via regression and particle swarm optimization (PSO) for very
+    short forecast horizon. Reference [17] used a hybrid of ARMA (Autoregressive Moving
+    Average System) ANN, ANFS (Autoregressive Non-linear Forecasting System) to optimize
+    for very short-term forecasts. In [18], a transformation based on K-means algorithm
+    was used in conjunction with MLP Neural. Reference [19] has presented a hybrid
+    model with SVR and an ANN have been deployed for a very short and a short term
+    forecast. [20] has presented a hybrid model of SVR, DNN (Deep Neural Network),
+    gradient boosting and random forests.
+
+
+    The survey reveals that the following forecasts have not been used in a hybrid
+    (e.g., using Ensemble Average):
+
+
+    +   * Least Squared Decision Tree
+
+    * KNN-based Support Vector Regression
+
+    * Extreme Learning
+
+    * NAR and NAR Networks
+
+
+    An Ensemble Average model is proposed in the next section, where all the above-mentioned
+    techniques are used in forming a hybrid machine learning-based model.
+
+
+    # III. METHODOLOGY
+
+
+    # A. Pre-Processing
+
+
+    Most time-series based forecasting models rely heavily on the accuracy and completeness
+    of the historical data available for training. Two categories of historical data
+    are considered in this paper include the total power general. Solar intensity
+    is measured through various instruments and and memory recorder. These measurements
+    are susceptible to measured accuracy owing to the edge and event intensity factors.
+    In Our, data loss is observed in electricity meters measuring solar power generation
+    in the event of grid solar clearances, generally which is prone to missing data
+    and outliers.
+
+
+    Raw data is measured for all training and testing purposes. This data is used
+    to a univariate regressor to estimate the missing data through interpolation.
+    A mathematical model is as shown in:
+
+
+    ```
+
+    $P_t = \beta_0 + \beta_1 P_t$$
+
+    ```
+
+
+    Here $P_t$ represents solar radiation (intensity) while $P_t$ represents generated
+    power. This model is used to fill the missing data and filter the outliers.
+
+
+    The data, after after pre-processing stage, is referred to as the dataset.
+
+
+    As discussed, the first step of the proposed methodology is to clean the historical
+    data through pre-processing. The subsequent stages (which are further discussed
+    in III-B, III-C, III-D, III-E, III-F of this current section) are as:
+
+
+    +   (i) Dataset is used to train the machine learning algorithms individually
+
+    (ii) Forecasting errors are obtained for each individual algorithms
+
+    (iii) an ensemble average (EA) model is used to handle the ends which forecasting
+    error derived in [system]
+
+    (iv) The EA acts as feature of the proposed methodology, the output of the EA
+    will reflect the final predicted output.
+
+
+    # B. Non-Linear Autoregressive Neural Network (NAR-NN)
+
+
+    An autoregressive (NAR) model is one where the value of output k is dependent
+    on its past values, i $k-1, k-2, ..., k-l$. Autoregressive models are used for
+    forecasting applications. In this section, an autoregressive is used in a non-linear
+    scenario.
+
+    A neural network (NN) is a non-linear mapping between inputs and outputs. The
+    NAR-NN has been used to fill a non-linear mapping between outputs and its past
+    values. If $P_c[k]$ is the power generated at instant $k$ and if $f$ is a function
+    representing a NN, then
+
+
+    ```
+
+    $P_c[k] = f(P_c[k-1], P_c[k-2], P_c[k-3], ..., P_c[k-l])$
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "The NN is constructed of multiple neurons which are the basic units complex\
+    \ architectures. A neuron consists of a linear combination which is fed into a\
+    \ non-linear function. In the NAR (and specifically the NARX and ELM cases), a\
+    \ activation function has been used for the nonlinearity. If x is a vector of\
+    \ input to a neuron and if w are the weights of each element of that, then a neuron\
+    \ is essentially the function, $g(x)$\n\nH is the output of the SLFN when T is\
+    \ the target network. The goal is to find $\beta$, the vector of output weights.\
+    \ The optimization problem is given by\n\n```\n$arg\\min_{\\beta}||\\beta||^2\
+    \ + C||H-T\\beta||^2 (6)\n```\n\nBased on the values of $p_1, p_2, \\sigma$ and\
+    \ many cases. In this paper, a hidden layer ELM with 20 neurons and the ReLu activation\
+    \ function has been used to solve a regression problem. The ReLu function is given\n\
+    \n```\n$g(x) = \\max(0, x) (7)\n```\n\nThe output of $y$ is fed to head of another\
+    \ layer. The number of layers and neurons per layer in NN decide the architecture\
+    \ of the NN. All not falling into the input and output are hidden neurons. Every\
+    \ connection in an NN is weighted (using the weights, w) and the central element\
+    \ is to feed these weights using a learning algorithm. In this paper, the Levenberg-Marquardt\
+    \ algorithm has been used to train\n\n# E. Least Squares Boosting Decision Tree\
+    \ (LSBDT)\n\nAppropriate delays for NAR-NAR and (NARX-NN) have been found by training\
+    \ the model with various configurations and looking for a model that gave least\
+    \ error. A delay of $l=10$ has been used with a total of 10 hidden neurons. This\
+    \ structure was found for NARX-NN cases.\n\nA decision tree is built which was\
+    \ originally used for classification. It can be transformed into a regression\
+    \ problem and then used for applications. In this case, we use an ensemble technique\
+    \ Boosting with multiple weak (or weak learner) decision trees. For various methods\
+    \ of boosting available, least boosting is used for regression and forecasting\
+    \ in this paper. A least squares loss function\n\n# C. Non-linear Autoregressive\
+    \ Neural Network with External Input (NARX-NN)\n\n```\n$L(y, F) = \\frac{(y-F)^2}{2}\
+    \ (8)\n```\n\nTo the previous model, the NARX network is a non-linear mapping\
+    \ of the output to its input. However, unlike the previous case, this model has\
+    \ an activation function, namely the input. It is similar to, that we use\n\n\
+    F is a function for a vector x. which is built recursively until an F is achieved\
+    \ that matches instances of $\\{x_1, ..., x_t\\}$. This is achieved with squared\
+    \ loss\n\n```\n$P_C[k] = f(P_C[k-1], ..., P_C[k-l], P_O[k-1], ..., P_O[k-l]) (4)\n\
+    ```\n\nWith $P_C$ and past values, appropriate delays have been used to train\
+    \ an LSBDT model.\n\nHere delays and hidden layers have been evaluated using a\
+    \ trial-error method by testing architectures. The weights are also learned by\
+    \ the Levenberg-Marquardt algorithm.\n\n# F. Support Vector Regression with Radial\
+    \ Function Base\n\nVector Machines are a very general class of supervised learning\
+    \ algorithms. As a classification algorithm, in the context of this paper the\
+    \ Support Vector Regression has been used to handle non linear time series. The\
+    \ main idea is to use an SVM to minimize the misclassification error\n\n# D. Extreme\
+    \ Learning Machine (ELM)\n\nExtreme Learning Machines are feed-forward neural\
+    \ networks where weights are not tuned. These are treated as random values or\
+    \ if inherited from their architectures. Essentially, they are regularized neural\
+    \ networks where the output hidden layers are not. This allows for the inversion\
+    \ to treat the hidden layers as\n\n```\n$argmin_{\\beta}||\\beta||^2 + C\\sum(\\\
+    xi_i + \\xi_i)^2 (9)\n```\n\nThese prove to be beneficial in our applications\
+    \ and if they are helpful (making relatively) results\n\nsubject to\n\n```\n$$\\\
+    begin{cases} w_i^T x_i - b \\le \\xi_i \\ -w_i^T x_i - b \\le \\xi_i \\ \\xi_i\
+    \ \\ge 0 \\end{cases}$ (10)\n```\n\nThe mathematical formulation of an ELM is\
+    \ similar to that of a neural network part of the regression that it undergoes.\
+    \ In their work, Huang et al [21] have written the output of a single layer feed-forword\
+    \ NN (SLFN) as\n\nThe above, however is valid for linear systems. In order to\
+    \ inculcate the non-linearity, a kernel basis transformation or the Gaussian kernel\
+    \ has been used there.\n\n```\n$H\\beta = T (5)\n```\n\n```\n$k(x, x') = e^{-\\\
+    frac{||x-x'||^2}{2\\sigma^2}} (11)\n```"
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/5b9f38a2da8b9ccf6581f5305ca25234_3_0.png)
+
+
+    The RBF kernel has been used because it achieves error among other kernels. For
+    the purpose of this paper, proposed has been used in an auto-regressive sense
+    to learn the function $f(x) = w^Tx + b$ with an RBF kernel.
+
+
+    # G. Ensemble Averager (EA)
+
+
+    Having trained models, an Ensemble Averager is defined which is the weighted average
+    of the output of all algorithms. The weights of all have been learned using a
+    linear model, as shown in Fig 1. If $Y_i$ is the output of the $i^{th}$ model
+    and $c_i$ is the cost of the $i^{th}$ model, the ensemble output is given:
+
+
+    ```
+
+    $Y_{net} = \sum_{i=1}^{n}\alpha_i Y_i$
+
+    ```
+
+
+    Equation (12) gives the final prediction. To learn $\alpha_i$''s a multiple linear
+    regression technique has been
+
+
+    # IV. NUMERICAL RESULTS
+
+
+    The proposed model is validated on a real-life dataset belonging to 1 MW solar
+    plant, which is installed in the care of an educational institution, Panjrol Deendayal
+    Patel University, Gujarat (23°09''15"N, 72°40''08"E). The historical dataset used
+    to train, test and validate the model includes three-yearly data points pertaining
+    to solar inception and solar power generator. This dataset has patches of missing
+    data which are discussed in section III. All forecasting algorithms the proposed
+    model has been trained and deployed on a system with Intel® i5-CPU with 8GB RAM
+    using tools on MATLAB.
+
+
+    As discussed in III, the first step of the proposed model is to train the dataset.
+    The dataset is used to model different support algorithms like NARX-NAR, NAR-NN,
+    ELM and RBF SVR. Each of these models has been trained and their degree of fit
+    has been observed to decide on the order of the model and its performance acceptability.
+    Forecasts of these models in comparison with historical dataset are shown in Fig.
+    2, Fig 3 (forecasts of NAR-NN) and Fig 4 (forecast of ELM). These figures are
+    observed more
+
+
+    ![](img/5b9f38a2da8b9ccf6581f5305ca25234_3_1.png)
+
+
+    ![](img/5b9f38a2da8b9ccf6581f5305ca25234_3_2.png)
+
+
+    minutely in Fig. 5 where predicted outputs of NAR-NN and ELM are plotted actual
+    data. Observing is evident that although individual algorithms are limited by
+    their inherent features, an appropriate combination of them could counteract the
+    inaccuracies of each model making the being forecast true. The forecast done by
+    Ensemble Averager is shown in Fig 4.
+
+
+    In order to display the correctness of the accuracy and the validity of the proposed
+    model, mean square error (RMSE) and mean absolute error (MAE) of each of these
+    algorithms individually are compared with the respective error of the proposed
+    model.
+
+
+    # TABLE I nERROR ANALYSIS
+
+
+    | Algorithm | RMSE | MAE |
+
+    |---|---|---|n| NAR-N | 0.5087 | 0.6823 |
+
+    | NAR-NN | 0.5105 | 0.6907 |
+
+    | ELM | 0.4139 | 0.6424 |
+
+    | RBF SVR | 0.4578 | 0.6449 |
+
+    | ELX | 0.3100 | 0.1936 |
+
+
+    # V. CONCLUSION
+
+
+    In this paper, an extensive analysis of multiple models and a hybrid model (that
+    outperforms these models) has been shown. The results are more satisfactory and
+    help establish the'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Fig. 4. Output of ELM
+
+
+    ![](img/5b9f38a2da8b9ccf6581f5305ca25234_4_0.png)
+
+
+    # Fig. 5. Forecasts for first Ten Days
+
+
+    ![](img/5b9f38a2da8b9ccf6581f5305ca25234_4_1.png)
+
+
+    other models can be argued to seek potentially results.
+
+
+    The authors would like to thank Dr Mukmukadhyay and Dr Abjit Rai from the Solar
+    Research and Development Center (SRDC) at Panditee Petroleum University (DPDU)
+    for providing us with the dataset of three years for academic research. We owe
+    them sincere gratitude.
+
+
+    # REFERENCES
+
+
+    +   1. A. D. Piazza, M. C. Diaz, and G. Viola, “Solar and wind forecasting by
+    NARX networks,” Energy and Environmental Sustainability, vol. 1, p. 39 (2016).
+    [Online]. Available: https://doi.org/10.1016/j.esenv.2016.03.001
+
+    2. M.-T. Du and B. Roberts, “A study on the importance of training duration to
+    provide a high accuracy forecast for solar power,” Solar Energy, vol. 85, p. 959–964,
+    Jun.(2016). [Online]. Available: https://doi.org/10.1016/j.solener.2015.07.055
+
+    3. C. Petersen, F. Bauer, and H. Madsen, “Multi-site solar power forecasting using
+    gated regression trees,” Solar Energy, vol. 122, p. 46–53, 2017. [Online]. Available:
+    https://doi.org/10.1016/j.solener.2017.10.046
+
+    4. L. Oneto, F. Lauer, M. Rocha, F. Robello, and J. Arroyo, “Solar-wind power
+    prediction using neural networks with polycentric connections,” IEEE Systems Journal,
+    vol. 6, p.2842–2853, 2018.
+
+    5. A. Gallizzi, G. Serena, S. M. Mesa, and E. Ejiano, “Hybrid model analysis and
+    validation for energy production forecasting,” in 2014 5th International Joint
+    Conference on Neural Networks (IJNN), p. 1957–1962.
+
+    6. M. J. Filho, R. S. Saia, J. Romato, and T. J. Nosa, “A hybrid approach-based
+    short-term solar power forecasting using artificial neural networks and ensemble
+    learning,” Solar Energy, vol. 108, p. 274–286, Aug.(2017). [Online]. Available:
+    https://doi.org/10.1016/j.solener.2017.05.017
+
+    7. A. Dolara, F. Girmac, S. Serena, S. M. Mesa, and E. Ejiano, “A artificial neural
+    network for short-term forecasting of solar power,” Solar Energy, vol. 153, p.
+    1142–1153, 2018. [Online]. Available: https://doi.org/10.1016/j.solener.2018.02.011
+
+    8. G. Gradin, F. Ferrari, G. Gintina, M. Ta, and C. Ventura, “Short-term solar
+    power forecasting using physical approach and artificial neural networks,” Solar
+    Energy, vol. 122, p. 22–31, Jan.(2016). [Online]. Available: https://doi.org/10.1016/j.solener.2016.06.022
+
+    9. N. Zhang, P. K. Behera, and C. Williams, “Solar power forecasting based on
+    deconstructed ensemble learning using recurrent neural networks,” in 2013 IEEE
+    International Systems Conference (ISSC), 2013, p. 142–147.
+
+    10. J. Wang, H. Jung, and Y. Wu, “Solar direction forecasting using an optimized
+    cloud search algorithm,” Solar Energy, vol. 89, p. 200–205, Mar.(2015). [Online].
+    Available: https://doi.org/10.1016/j.solener.2015.01.010
+
+    11. M. Rana, I. Kopitnaka, and G. Yagis, “Solar power forecasting using deep learning
+    and ensemble methods,” in 2016 International Joint Conference on Neural Networks
+    (IJCNN), 2016.
+
+    12. C. Gervotte, L.-H. Bernard, S. Alexandri, and D. L. Moschitte, “A hybrid model
+    (SARIMA-WNN) for short-term power forecasting of a small-scale grid-connected
+    photovoltaic system,” Solar Energy, vol. 76, p. 217–223, Dec.(2013). [Online].
+    Available: https://doi.org/10.1016/j.solener.2013.10.002
+
+    13. M. Beaumont, H. Huang, and Y. Wang, “A weather-based hybrid method for day-1
+    ahead forecasting of pv power output,” IEEE Transactions on Sustainable Energy,
+    vol. 5, no. 3, p. 917–924, 2014.
+
+
+    strength of Ensemble Average Algorithms like RF, LSBDT and LSTM hold immense potential
+    for forecasting short-term horizon, as shown in table I. The methodology averaging
+    allows to capture errors made by one of the models which provide better in the
+    same interval (see Fig. 5).
+
+
+    There is a scope of improvement in the method and its features. For instance,
+    ARIMA models can be used to estimate the lags and the significance of those lags
+    in the used ensemble average to increase flexibility. The ensemble average has
+    static weights for the output average mechanism (a, in dynamic, with each stage
+    h). Better relations (and possibly non-linear) relations between days can be detected
+    through several permutations and combinations of
+
+
+    ![](img/5b9f38a2da8b9ccf6581f5305ca25234_4_2.png)
+
+
+    # Fig. 6. Output of Ensemble Average'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '[15] U. Haque, M. H. Nezir, and P. Mandal, "Solar py generation forecast using
+    a hybrid intelligent approaches," in 2013 IEEE Power Energy Society General Meeting,
+    2013, p. 1.
+
+
+    [16] Z. Dong, T. Remi, and W. M. Wah, "A novel hybrid approach based on self-organizing
+    maps, support vector regression and swarm optimization to forecast solar irradiance,"
+    IEEE Energy, vol. 82, pp. 530–577, May. 2015. [Online]. Available: https://doi.org/10.1016/j.energy.2015.01.006
+
+
+    [17] Y.-K. Wu, C.-R. Chen, and A. Rahman, "A novel hybrid model for short term
+    forecasting in PV generation," International Journal of Photovoltaics, vol. 2014,
+    pp. 1–9, 2014. [Online]. Available: https://doi.org/10.1155/2014/8659249
+
+
+    [18] R. Sharifi, and M. Ghofrani, "A hybrid method based on a new clustering technique
+    and multipilayer neural networks for solar irradiation forecasting," Energy Conversion
+    and Management, vol. 118, pp. 331–344, Jun. 2016. [Online]. Available: https://doi.org/10.1016/j.energycon.2016.06.009
+
+
+    [19] Z.-L. Li, X.-Y. Wu, J.-J. Liu, and L. P. Peng, "Adoption of sandstone source
+    rock for shale oil extraction, and a case study," Organic Geosciences, vol. 22,
+    pp. 55–62, 2015. [Online]. Available: https://doi.org/10.1016/j.orggea.2015.12.009
+
+
+    [20] J. Antonaarz, R. Utraca, A. Peña-Espinoza, A. Aldama, F. Fernandez, and J.
+    M. de Pinto, "Neural and backed models for day-ahead photovoltaic forecasting,"
+    in Notes in Computer Science. Springer International Publishing, 2017, pp. 427–436.
+    [Online]. Available: https://doi.org/10.1007/978-3-319-59963-3
+
+
+    [21] G.-B. Huang, Q.-Y. Zhu, and C.-K. Siew, "Extreme learning machines and applications,"
+    Softcomputing, vol. 70, no. 1–3, pp. 489–501, Dec. 2006. [Online]. Available:
+    https://doi.org/10.1016/j.neusocom.2005.12.026'
+  merge: -1
+  img_proc: true
