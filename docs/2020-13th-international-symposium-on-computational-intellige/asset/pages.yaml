@@ -1,0 +1,600 @@
+- pgno: 0
+  md: '# Noise Reduction using Raman spectrum using Deep Learning
+
+
+    Liangjun Pan
+
+    Department of Electrical Engineering,
+
+    Faculty of Engineering
+
+    Prince of Songkla University
+
+    Thailand
+
+    lip141772@gmail.com
+
+
+    Pronehep Phipsuwanthan
+
+    Department of Electrical Engineering,
+
+    Faculty of Engineering
+
+    Prince of Songkla University
+
+    Thailand
+
+    pronehep@gmail.com
+
+
+    Peng Zhang
+
+    Department of Electrical Engineering,
+
+    Faculty of Engineering
+
+    Prince of Songkla University
+
+    Thailand
+
+    131953773@ig63.com
+
+
+    Chalong Daengaeng
+
+    Division of Physical Science
+
+    Faculty of Science
+
+    Prince of Songkla University
+
+    chalong@psu.ac.th
+
+
+    Apidach Boaratuwan
+
+    Department of Electrical Engineering,
+
+    Faculty of Engineering
+
+    Prince of Songkla University
+
+    gpidad@booo.gmail.com
+
+
+    Michai Chongechawechanan
+
+    Department of Electrical Engineering,
+
+    Faculty of Engineering
+
+    Prince of Songkla University
+
+    michai@psu.ac.th
+
+
+    **Abstract**—In a normal environment, Raman spectrum often suffers from cosmic
+    noise. This paper proposes using deep learning (DL) for noise reduction in Raman
+    spectrum. The DL network is developed and trained using Raman spectrum. The proposed
+    technique is applied to reduce noise methods. We compare the performance with
+    different noise reduction methods. Output-to-signal ratio (SNR), root mean square
+    error (RMSE), and mean absolute error (MAPE) are the performance index. It is
+    shown that SNR of the proposed noise reduction method is greater than that of
+    other noise reduction method while the RMSE and MAPE are 292.63 and 10.99, which
+    are much better than the proposed technique.
+
+
+    number of neural layers has maximum of known structures, hundreds or thousands
+    of overall layers [1], [2].
+
+
+    DNN uses convolutional layers or LSTM units. Convolutional Neural Networks (CNN)
+    and Recurrent Neural Networks (RNN) are two types of DNN architectures, which
+    are widely used in signal processing tasks. CNN [3] is characterized by extracting
+    spatial-features, while RNN is characterized by good modeling sequence units.
+    Under normal conditions, CNN is a layered architecture with a spatial structure.
+    In RNN, the neuron can directly activate itself in the next time, which is the
+    input of the $l+1$ layer of neurons at that time, it is the output of the layer
+    at that time. Therefore the use of DNNs to reduce noise in Raman spectrum has
+    been shown by
+
+
+    *Keywords*—Deep learning, wavelet, noise reduction, CNN.
+
+
+    # I. INTRODUCTION
+
+
+    Raman spectroscopy is a method widely used to describe the characteristics of
+    materials, including industrial process, planetary exploration, environmental
+    safety, life sciences, geological investigations, and material science. In all
+    cases the Raman spectrum will be mixed with various noises during the process.
+    Raman is a powerful tool for analysis of detecting substances, but it is necessary
+    to reduce the noise in process of signal acquisition. From the perspective of
+    noise reduction, various noise reduction method, such as wavelet method, empirical
+    decomposition method, are used to reduce the noise in the signal. With its unique
+    characteristics, Raman spectrum has many overlapping peaks and signals. Different
+    peaks have gap between peaks and valleys, representing various properties of substances.
+
+
+    In the past decade, deep learning neural networks (DNNs) have been achieved for
+    signal processing. It has found that the performance of a deep neural network
+    can be improved with the depth and structure of the neural network.
+
+
+    Wavlet based method used for Raman spectroscopy and the performance is better
+    than other methods. However, there are also other factors such as process, different
+    wavelet and frequency and time will lead to the performance of signal processing.
+    Empirical mode decomposition does not need to analyze and use several mode component(s);
+    However, the method has two components: the whole data, the number of extreme
+    points and the number of zero-mean points is calculated by more than one. The
+    average value of the envelope over the local minimum point is formed by the maximum
+    point and the lower envelope. That is, the upper and lower envelope components
+    correspond to the time scale.
+
+
+    To avoid the constraints of these methods, this paper proposes the deep learning
+    (DL) network for noise reduction in Raman spectroscopy. Because the neural network
+    is a noise regression, it can not only reduce the noise of Raman spectrum but
+    also detect the signal structures. The structure of this paper is as follows:
+    the second section will introduce the collection and distribution of datasets.
+    The third section will introduce DL model and evaluation. The fourth'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'discussions the performance of the methods based on
+
+    DL, CNN and wavelet. The final section is conclusion.
+
+
+    # DATA COLLECTION AND PROCESSING
+
+
+    The preparation of Raman spectrum dataset will make
+
+    t implementation of all subsequent steps easier. For example,
+
+    oiseeless Raman spectrum of about 190 hazardous chemicals,
+
+    it consists of one-dimensional signals with a length of 2,051
+
+    data points. The Raman spectrum is mainly
+
+    cused by fluorescence and Raman noise. The
+
+    oise will directly affect the quality of Raman
+
+    spectroscopy. Since the requirements of the DL network, we need
+
+    to collect more noiseless datasets. Baseline with
+
+    different noise levels were added to the Raman spectrum.
+
+    Then additive Gaussian noise were added to
+
+    the baseline noise statistics. White noise
+
+    added that about 80 hazardous chemicals were
+
+    obtained. In Table 1, 1,390 and 500 noisy Raman
+
+    dasets were used for training, and testing.
+
+
+    # 1. Summary of training and testing results
+
+
+    | Name | Value |
+
+    |---|---|
+
+    | Hazardous material | 190 |
+
+    | SNR | 0-80 dB |
+
+    | Training data | 15,390 |
+
+    | Testing data | 500 |
+
+
+    ![](img/5e61639b711e33985bc7cf48b7ef1f0f_1_0.png)
+
+
+    Fig. 2 Noeless and noisy Raman spectrum signals (3 and 6 db noise environment)
+
+
+    # II. METHOD AND EVALUATION
+
+
+    # A. DL network
+
+
+    The DL model is implemented in MATLAB™ based
+
+    on parallel convolutional neural networks (CNNs). CNN
+
+    neural network has been used to classify Raman
+
+    spectra. The CNN model is obtained through
+
+    experiments. It consists of 7 two-dimensional convolutional
+
+    layers, each with 10 filters and the activation
+
+    filter is 100. The first layer is a 1x1+1 input layer,
+
+    samples from Raman spectrum sequence M is
+
+    2,051. Each convolution layer has a receptive
+
+    part of the input or to the output of the previous
+
+    layer. The step (size of the kernel is 1) and
+
+    padding to equal the original and input kernel
+
+    size. After each convolution layer, there is
+
+    batch processing layer, linear unit (ReLU) as
+
+    the largest pooling layer with a stride of 2 and
+
+    output of these layers matches the
+
+    dimension of the Raman spectrum sequence. The
+
+    final output layer, which is generated by
+
+    the fully connected layer. DL model includes
+
+    14 convolutional layers, 7 pooling layers, 14 ReLU
+
+    layers, 10 layer and 1 FC layer.
+
+
+    ![](img/5e61639b711e33985bc7cf48b7ef1f0f_1_1.png)
+
+
+    Fig. 1 Raman spectrum baseline correction.
+
+
+    Baseline processing is used to ensure that most of
+
+    fluorescence noise has been removed before applying
+
+    denoising methods. In this paper, the most
+
+    airPLS algorithm is chosen as the baseline
+
+    correction method [7]. Fig. 1 shows the
+
+    output spectrum after the correction.
+
+
+    Subfigures are shown in the left and right of Fig. 2.
+
+    Show the Raman spectrum of two noiseless (3 and
+
+    db) and noisy Raman spectrum in 6 db noise
+
+    envivironment. With the noiseless Raman spectrum
+
+    signal, most of the peak information is submerged by
+
+    the secondary peak. In the main peak information,
+
+    the noise increases the intensity of Raman spectrum, which
+
+    makes the spectrum mistaking in some cases.
+
+
+    Fig. 3 describes the structure of the DL model. It is assumed that the DL model
+    will be able to learn the
+
+    appropriate filter for noise reduction to recover the original
+
+    Raman spectrum. The epoch-based training
+
+    dataset, while iteration is the mini-batch data for computing
+
+    gradient and parameters. Each epoch goes
+
+    the entire dataset while iteration is calculation of the
+
+    gradient and parameters for the mini-batch data.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/5e61639b711e33985bc7cf48b7ef1f0f_2_0.png)
+
+
+    Fig. 3 Proposed structure of DL network.
+
+
+    Since convolution layer and pooling layer are the key of this experiment, we only
+    need to introduce convolution layer and pooling layer. As shown in Fig. 4, all
+    the signals are arranged in form of a matrix, which is 2,051 and 190. The matrix
+    is processed on the principle of first-in/first-out. When convolution starts,
+    it will do matrix operation along the width direction. Because the width of the
+    convolution kernel is 1, only one signal can be read for processing at this time.
+    This means each neuron is only connected with the corresponding signals, which
+    greatly reduces the number of weights. In the convolution process, the weight
+    of the convolution kernel will not change, which means that the features at different
+    positions of the signal are basically the same[9]. Each convolution layer of DL
+    model has 50 convolutions. Each convolution layer learns features to extract Raman
+    signal features. Each convolution 100 channels transfers the feature matrix to
+    the pooling layer.
+
+
+    step, the signal features will gradually reduce the dimension in the neural network.
+    To avoid these features disappear with the deepening of the DNN, we add 0 to the
+    downsampling layer to keep the same size as the convoluted matrix.
+
+
+    ![](img/5e61639b711e33985bc7cf48b7ef1f0f_2_1.png)
+
+
+    Fig. 5 Working principle diagram of pooling layer.
+
+
+    After the mini-CNN, the Raman characteristic matrix will be expanded in the fully
+    connected layer and output the regression layer. We use the mean square error
+    as loss. It can be seen as the most direct regression method compared to the signal
+    methods and its core idea is the sum of squared errors of the true value ($y_i$)
+    and the predicted value ($\hat{y}_i$). The calculation formula is defined as:
+
+
+    $E = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$
+
+
+    (1)
+
+
+    ![](img/5e61639b711e33985bc7cf48b7ef1f0f_2_2.png)
+
+
+    Fig. 4 Working principle diagram of the convolution layer.
+
+
+    To the two-dimensional (2D) DL model, Adam optimization algorithm is selected
+    as the global optimizer. During the training process, the initial learning rate
+    is set to $10^{-4}$. The 2D DL model is trained on NVIDIA RTX 2080. A total of
+    600 epochs, and each epoch processes 50 signals. Using our limited resources,
+    the training time of the model is about 120 minutes and average test time is less
+    than one millisecond.
+
+
+    The function of pooling layer is similar to that of the convolution layer, but
+    the signal characteristic matrix will be processed in the downsampling process[10].
+    As shown in Fig. 5, the size of the filter determines the size of each processing
+    data. Its main function is downsampling, which makes some error values filtered
+    leaving only excellent signal characteristics. The feature matrix will become
+    smaller and smaller in the
+
+
+    Another noise suppression method is wavelet decomposition. A high-performance
+    signal processing'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'tool, the wavelet transform is widely used in signal processing. With forward
+    transform and inverse wavelet transform is a local transform of space (time) and
+    frequency. It can analyze functions and signals in multi-scale or multi-resolution
+    through stretching and translation, so it can extract information from signals
+    more effectively. In contrast, the wavelet transform of input signal x(t) is:
+
+
+    ```
+
+    $W_{a,b} = \int_{-\infty}^{\infty} x(t)\psi\left(\frac{t-b}{a}\right)dt, \quad
+    (2)$
+
+    ```
+
+
+    Where $W_{a,b}$ is the wavelet transform of $x(t)$, $a$ is the scale factor, $b$
+    is the location parameter, and $\psi^*(t)$ is the complex conjugate of the wavelet
+    transform.
+
+
+    We method is based on ensemble methods, Black James Stein false discovery, minimax
+    estimation, Stein risk unbiased universal threshold method to denoise signal.
+    It is implemented in DL network for denoising. Here where 4 is the number of moments.
+    The other choices of selection of wavelet, rule and method of denoising noise
+    are many based on wavelet density, and experiment also tries to choose various
+    parameters. Therefore, there are many improved methods for denoising compared
+    with the DL denoising method, and we can use different methods for denoising process.
+
+
+    MAPE measures the percentage of the predicted result to the true result which
+    defined by:
+
+
+    ```
+
+    $MAPE = \frac{1}{N}\sum\left|\frac{original-forecast}{original}\right|\times100\%,
+    \quad (5)$
+
+    ```
+
+
+    where original is the noiseless and forecast represents the Raman signal.
+
+
+    # III. RESULTS AND DISCUSSION
+
+
+    In this section we visualize the features learned by DL model, and the feature
+    map shows the effect of DL denoising reduction. Secondly, in the case of same
+    noise signal power the DL network and wavelet based methods comparison and evaluation
+    index is used. The Raman signal and the noise are put together to intuitively
+    compare the similarity between denoised signal and the original, and a DL network
+    denoising result.
+
+
+    # A. Experimental Results
+
+
+    Due to the magnitude and size of kernels in convolution, the method of pooling
+    layer will affect the effect of regression. After the Raman signal is fed to the
+    pooling layer, the DL network will extract feature of the noise, and then return
+    the denoised signal. Because different effect have different effect of noise,
+    the feature map after pooling of Raman signal is different, so we can find that
+    the pooling layer from the convolution layer. In some channels of the pooling
+    layer, the noise spectra have displayed the spectral characteristics.
+
+
+    # B. Evaluation Index
+
+
+    In this paper, input noise ratio (SNR), mean square error (RMSE) and absolute
+    percentage error are selected as evaluation index of denoised Raman signal. These
+    index have the following characteristics: the noise is inversely proportional
+    to the SNR, the output SNR is higher than the noise of Raman signal. The RMSE
+    and the MAPE are proportional to the signal quality. When the RMSE and the MAPE
+    are large, in the Raman signal is quality, and the similarity between the original
+    signal and noise signal is lower.
+
+
+    # 1.SNR
+
+
+    The experiment uses input and output SNR to evaluate the magnitude of input noise
+    $P_s$ is the signal power and $P_n$ is the noise power. SNR is defined as:
+
+
+    ```
+
+    $SNR = 10\log_{10}(\frac{P_s}{P_n}), \quad (3)$
+
+    ```
+
+
+    # 2.RMSE
+
+
+    RMSE calculates the square root of the ratio of the square between the predicted
+    value and the true value and number of sample samples. RMSE is defined by,
+
+
+    ```
+
+    $RMSE = \sqrt{\frac{1}{n}\sum(original-forecast)^2}, \quad (4)$
+
+    ```
+
+
+    where original is the noiseless signal and forecast represents the denoised signal.
+
+
+    # 3.MAPE
+
+
+    ![](img/5e61639b711e33985bc7cf48b7ef1f0f_3_0.png)
+
+
+    Fig. 6 Raman signal feature map after processing by the pooling layer.
+
+
+    For the Raman signal denoised by DL network, we use the output SNR, RMSE, MAPE
+    to measure. Table 2, the indices for evaluating the reduction effect of different
+    methods are summarized. The input SNR of noise signal is 9.5 dB. The SNR is increased
+    by 26.5 dB by the DL network, which is much better than the original SNR. From
+    the analysis of RMSE and MAPE, the difference between the denoised Raman spectrum
+    signal'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# IV. CONCLUSION
+
+
+    In this paper, we propose a DL model for noise reduction of Raman spectra. Since
+    the absolute noise cannot be avoided in the process of Raman spectrum reconstruction,
+    denoising method can effectively reduce the noise of Raman signal. In analyzing,
+    the three evaluation indicators of noise performance, SNR, RMSE, and MAPE, show
+    that our noise reduction is 10.2 dB larger than that of wavelet noise signal.
+    RMSE is smaller than wavelet noise denoising method 29.5, and MAPE is 10.9. Our
+    DL denoising method has successfully surpassed the wavelet denoising method in
+    noise reduction. Although the two methods are similar, the peak values of the
+    signal processed by the wavelet denoising method are better than the original
+    Raman spectrum.
+
+
+    # B. Discussion
+
+
+    The performance of our denoising method is compared with DL based. Because wavelet
+    denoising method has a high position in the process of noise signal, and because
+    of the better ability of DL to learn the noise and the signal simultaneously.
+    Wavelet denoising method is better than DL method in terms of output. In Fig.
+    7, of the original Raman spectrum, the DL denoising method is compared with signal
+    with the best denoising effect of wavelet. However, we find that DL has better
+    noise reduction than other methods. Different sizes of noise are almost entirely
+    removed. We find that the signal processed by wavelet denoising still has some
+    noise, some noise peaks near those of signal-value peak.
+
+
+    # ACKNOWLEDGMENT
+
+
+    | | SNR (dB) | RMSE | MAPE |
+
+    |---|---|---|--|
+
+    | Noisy signal | 9.5 | 107.0 | 114.90 |
+
+    | CNN | 26.0 | 129.96 | 9.5 |
+
+    | Empirical Bayes | 16.25 | 452.59 | 27.07 |
+
+    | Block-James | 14.98 | 469.30 | 27.57 |
+
+    | Filter Discovery Rate | 15.0 | - | - |
+
+    | Minimum Estimation | 14.5 | 517.98 | 28.1 |
+
+    | Wavelet noise reduction | 16.38 | 416.64 | 34.60 |
+
+    | Universal Threshold | 12.64 | 671.92 | 42.98 |
+
+
+    TABLE I. Statistics of noise reduction of DL, CNN and wavelet-based methods.
+
+
+    ![](img/5e61639b711e33985bc7cf48b7ef1f0f_4_0.png)
+
+
+    +   1. G. Huang, J. Van Der Maaten, and K. Q. Weiner, “Deep Convolutional Networks,”
+    in IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2017, pp.
+    329–337, doi: 10.1109/CVPR.2017.32.
+
+    2. S. Deshp and P. Ma, “Brain tumor classification using deep convolutional neural
+    networks,” in Machine Learning: Computing and Medicine, vol. 111, pp. 103–115,
+    2019, doi: 10.1016/j.incom.2019.10.035.
+
+    3. A. Karpathy, G. Souhend, T. R. Shikhkar, and L. Fei-Fei, “Scene-Level Classification
+    with Convolutional Neural Networks,” in IEEE International Conference on Computer
+    Vision and Pattern Recognition (CVPR), 2014, pp. 2214–2223, doi: 10.1109/CVPR.2014.223.
+
+    4. L. Pan, P. Pithitharan, and M. Chengeavaram, “Characterization of Hemorrhagic
+    Brain Injuries in Computed Tomography,” in IEEE International Conference on Human
+    Interaction System (HHI), Tokyo, Japan, 2020, pp. 1–6, doi: 10.1109/HHI47733.2020.9297033.
+
+    5. N. E. Lee, “The empirical mode decomposition and the Hilbert filter for non-stationary
+    and time series analysis,” Proc. R. Soc. Lond. A, 453(1987),1997, pp. 903–911,
+    doi: 10.1098/S0370-2592(97)00141-X.
+
+    6. Z.-M. Zhang, S. Chen, and Y. Liu, “Deep Learning for Denoising of ECG Signals,”
+    in 20st International Conference on Signal Processing (ICASSP), Athens, Spain,
+    2019, pp. 1–5, doi: 10.1109/ICASSP.2019.8741938.
+
+    7. C. T. Arce, R. Hankin, and H. Yin, “Deep Learning for Denoising ECG Signals,”
+    in 20th International Conference on Signal Processing (ICASSP), Liverpool, UK,
+    2018, pp. 1–5, doi: 10.1109/ICASSP.2018.8626092.
+
+    8. L. C. Chen, G. Papadimitrou, F. Schick, and H. Adam, “Attention Mechanism for
+    Semantic Segmentation,” arXiv:1706.05847 [cs], Dec. 2017; accessed Aug. 20, 2020.
+    [Online]. Available at: http://arxiv.org/abs/1706.05847.'
+  merge: -1
+  img_proc: true

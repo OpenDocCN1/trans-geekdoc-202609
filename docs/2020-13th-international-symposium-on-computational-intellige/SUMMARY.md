@@ -1,0 +1,2 @@
++   [2020 第13届计算智能与设计国际研讨会 (ISCID)(中国杭州 2020.12.12-2020.12.13)](README.md)
++   [2020 第13届计算智能与设计国际研讨会 (ISCID)(中国杭州 2020.12.12-2020.12.13)](2020-13th-international-symposium-on-computational-intellige.md)
