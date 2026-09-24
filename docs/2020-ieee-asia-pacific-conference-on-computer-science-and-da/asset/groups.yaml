@@ -1,0 +1,1126 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # COVID-19 PANDEMIC: A NEW ERA OF CYBER
+
+    SECURITY THREAT AND HOLISTIC
+
+    APPROACH TO OVERCOME
+
+
+    Jabmer Ahmed
+
+
+    Quddus Tushar
+
+    School of Engineering, RMIT University,
+
+    PO Box 2476, Melbourne VIC 3001, Australia
+
+    Email: quddus.tushar@rmit.edu
+
+
+    Major, Signal Base Workshop, Bangladesh Army
+
+    Dhaka Cantonment, Dhaka, Bangladesh
+
+    Email: jas7040@gmail.com
+
+
+    **Abstract—** In this paper, we present cyber security
+
+    threat globally has been discussed during the current
+
+    COVID-19 situation. To stop the spread of Coronavirus, almost
+
+    all the countries around world declared lockdown. People work
+
+    from offices, schools and businesses remotely. For that
+
+    use of computers and the internet has increased a lot
+
+    made cyber criminals more active. Recently the number of
+
+    cattacks and everyone has become a
+
+    target the cyber criminals. Lack of personal precautions in
+
+    using the internet is causing significant to everyone.
+
+    COVID-19 has made it easy for cyber criminals to have
+
+    hacked banking sectors and government
+
+    non-government organizations have faced several cyber-
+
+    attacks during this time. This paper focuses on some safety
+
+    precautions to safeguard the personal and organizational data
+
+    from cyber attacks.
+
+
+    **Index Terms—** COVID-19, Cyber-attacking, Phishing, Malware,
+
+    DDoS Attack, Ransomware.
+
+
+    # ### I. INTRODUCTION
+
+
+    COVID-19 has literally defined the year 2020 with its,
+
+    and the world is suffering from its spread. Almost all
+
+    the countries are under lockdown and governments ordered
+
+    natives to continue their day-to-day working at home. A
+
+    maximum of airports and borders were closed to the stop.
+
+    This COVID-19 pandemic has forced people to work from
+
+    implement a New Normal for people to work from
+
+    home from all the sectors, including business, and attending
+
+    doing office, classes remotely. In this situation, information and
+
+    communication technology is playing a vital role in fulfilling
+
+    the requirements of [1]. This online business model
+
+    delivery and day-today items they demand the internet
+
+    and mobile applications got priority to everyone, making them
+
+    vulnerable to cyber attackers. Almost all the countries are
+
+    facing cyber threats in recent times. Research on the
+
+    Cyber-attacks in 2020 due to this pandemic is shown in Figure
+
+    1
+
+
+    Comparison of Cyber Attacks Faced by Various Continents
+
+
+    ![](img/c20ab6723558c019dfa0ca18f0a6c48b_0_0.png)
+
+
+    Figure 1 Cyber Attacks Faced by Various Continents
+
+
+    Cyber criminals are utilizing this situation to capitalize
+
+    the evil motives, and cyber threats are increasing by day. By
+
+    suth, cyber security is developing and becoming a
+
+    ssignificant concern for the world community [2],
+
+    while have been visited by the people world
+
+    various cyber threats. Plausible threats are shown in
+
+    2
+
+
+    ![](img/c20ab6723558c019dfa0ca18f0a6c48b_0_1.png)
+
+
+    Figure 2 Plausible Cyber Threats during COVID-19 Pandemic'
+  - '[PAGE 1]
+
+
+    The study organized the rest of the paper follows. Past related works described
+    in Section II, where the pandemic sectors were carried out in the past on cyber
+    threats that may face cyber-attacks and credible cyber threats that may be encountered
+    during this pandemic. are are briefly explained in Section III. A holistic approach
+    to overcome the cyber security threat is shown in Section IV. Conclusion is drawn
+    by the authors and may be detected in Section V.
+
+
+    accounts are on hackers for the dark web. Likewise, Google Duo, Microsoft Team
+    are all vulnerable to cyber-attacks during the pandemic. The security sectors
+    are most affected by cyber-attacks / cyber threats during this COVID-19 pandemic.
+
+
+    # II. RELATED WORKS
+
+
+    Khan et al. proposed deny cyber threats through encryption and phishing, and also
+    discovered the privacy concerns [1]. It also recognized few sectors that seem
+    to be affected by the cyber-attacks during pandemic. Krály et al. identified that
+    information and communication technology (ICT) helped manage reduce psychological
+    stress during this pandemic. The paper focused on using ICT to communicate with
+    families and termed ICT as “Savior”. On the other hand, addition to ICT, gaming
+    helped persons to use a cyber threat to target the user. Lillie et al. presented
+    the cyber-attacks during the COVID-19 outbreak with a case study where they described
+    how cyber designed their scheme. Williams et al. demonstrated that the cyber security
+    cost will increase threefold by the year 2021 after the COVID-19 pandemic. [5].
+    It emphasized the healthcare sector, where cyber threats had a tremendous long-term
+    effect. Akbari et al. proposed some security protocols for working home to ensure
+    proper cyber security [6]. These protocols may help the users to keep safe from
+    cyber-attacks during this pandemic.
+
+
+    # A. Affected Sectors
+
+
+    Almost the sectors are under continuous cyber security threats during this COVID-19
+    pandemic. In this part, the most affected sectors are described.
+
+
+    +   1. Healthcare and Medical Sectors. Hackers and intruders know that the healthcare
+    system of the world is a mess during this pandemic. As many people use remote
+    care, for some financial gain, hackers became active in access to the healthcare
+    system around the world. The UK''s National Cyber Security Centre (NSC) and the
+    Cybersecurity and Infrastructure Security Agency (CISA), are likely to get attacked
+    for personal data of the patients and are sending phishing emails [4]. World Health
+    Organization (WHO) who declared the cyber-attack during COVID-19 was first-found,
+    which is a consequence of the rapid increase of remote work and active email demands
+    with WHO password breached [8]. Telemedicine has become the only way to get treatment
+    during this pandemic. The threat has made more accessible healthcare sectors which
+    contain sensitive personal information. In the UK, only daily 95 people used to
+    take the help of telemedicine during the pandemic. Now the number of patients
+    has been increased by 4330%, and on average, 4209 people suffered from ransomware
+    attacks. Increasing numbers have caused ransomware attacks [9].
+
+
+    +   2. Financial Sectors. Financial sectors have suffered many challenges during
+    the COVID-19 situation. It has forced the financial sectors to provide online
+    support to their clients. Again many employees did their work from home using
+    the unsecured network. When the employees do in home, they are forced to adopt
+    digital policies, which was noted as the ‘New Normal’. The unsecured network made
+    the employees more vulnerable to cyber threats [10]. Nowadays, clients are also
+    dependent on internet banking, which makes them vulnerable to hacker attacks such
+    as phishing and malware. Malware are common attacks made by hackers on the financial
+    sectors.
+
+
+    # III. AFFECTED SECTORS AND SECURITY THREATS
+
+
+    Present COVID-19 pandemic has changed the world. The use of internet on laptop
+    and mobile devices has increased with the abundance of various mobile applications,
+    which helped raise cyber threats vulnerability. Various government and organizations
+    face risks of losing organizational data, including personal data theft. When
+    using online to buy multiple tickets, orders and food use their credit/de cards.
+    Cyber attacks are targeting these platforms to collect credentials for their monetary
+    benefit [7].
+
+
+    This pandemic has forced people to work from home. Zoom is one of the very famous
+    applications for attending online conferences and meetings. Zoom has become a
+    new target for criminals. The ‘Zoom bombing’ to collect users'' data and eavesdrop
+    to listen to any conversation of meetings in Zoom. One cyber security is for also
+    found that 50,000 Zoom
+
+
+    +   3) Educational Sectors. Educational facilities suffered lot to the sudden
+    change caused by the COVID-19 pandemic. All students from levels are now dependent
+    on e-learning, which makes them vulnerable to cyber crimes. For the e-learning
+    process, most of the educational institutions are dependent on applications like
+    Zoom Some schools in California were forced to shut down their activities for
+    a few weeks for malware attack [1].'
+  - '[PAGE 2]
+
+
+    # B. Plausible Threats
+
+
+    Threats can be of various types. But the threats faced during this COVID-19 are
+    addressed. The DDoS attack is one kind of attack that makes an online service
+    unavailable for users by increasing the number of traffic. The DDoS attack has
+    increased in the last three months than that the previous. In the first quarter
+    of the year 2020, the total number of reported DDoS attacks was 242, and in the
+    second quarter this number increased threefold.
+
+
+    +   1) Phishing. Hackers try to exploit users by sending phishing emails. These
+    emails contain fake webpages and can capture the details of an identity. As most
+    people are nowadays on online platforms during the pandemic, they are vulnerable
+    to these phishing attacks. During March 2020, 46,825 phishing emails were linked
+    to COVID-19, which are almost 02% of the total phishing emails [14]. There are
+    various types of Phishing attacks such as email, and over the phone (also known
+    as phishing). Types of phishing attack that was conducted during this pandemic,
+    including their percentage, are shown in Figure 3.
+
+
+    ever and until this stressed situation to achieve their financial goals. The reliance
+    on the Cyber security allows for cyber criminals to gain access to the users.
+    Cyber-attacks are creating the situation more and becoming a concern for all.
+
+
+    To prevent cyber-attacks, we first need to detect and identify them. By connecting
+    to any network, the following steps can be to keep the device safe from the intruders
+    to control over it.
+
+
+    # A. Initial Steps to Prevent Cyber-Attacks.
+
+
+    +   1) Step1 Devices must have updated anti-virus software.
+
+    2) Step2 Keep the firewall on your device.
+
+    3) Step3 Do not use any pirated software.
+
+    4) Step4 Avoid using unknown websites that may contain phishing.
+
+    5) Step5 Keep your username and password saved in the browser.
+
+    6) Step6 Do not open any email links to your browser.
+
+    7) Step7 Try to site those security certified (Websites starting with https://)
+    are safe.
+
+    8) Step8 Never save your credit/card number to your browser.
+
+    9) Step9 go through the address and be sure before complete payment using the
+    credit/card to.
+
+    10) Step11 Passwords must be strong and should not match special dates or numbers
+    (Like your birthday, passwords).
+
+    11) Step12 Use a paying operating system (OS).
+
+    12) Step13- Keep your OS updated.
+
+
+    ![](img/c20ab6723558c019dfa0ca18f0a6c48b_2_0.png)
+
+
+    Figure 3 Various Types of Phishing Attacks
+
+
+    +   3) Malware. During this pandemic, the cybercriminals are spreading malware
+    in the devices of the users. We can create backdoor in user''s devices and by
+    cyber criminals who can steal all personal credentials , password. Online phishing
+    attacks are spreading this malware [15].
+
+
+    +   4) Ransomware. Ransomware attacks increased during the pandemic as remote
+    working has increased. The cyber criminals have chosen this attack for their financial
+    gain. Especially financials are the main target for ransomware attack. The ransomware
+    attack has a 148% spike during the first half of the pandemic [16].
+
+
+    # IV. HOLISTIC APPROACH TO OVERCOME CYBER-THREATS
+
+
+    Our life is now at a stake due to the COVID-19 pandemic. People are mental stressed
+    to stay at the home rule and are trying to reduce their stress through online
+    activities. On the other hand, the cyber criminals are also more than
+
+
+    # B. Prevention of Cyber Attacks.
+
+
+    +   1) Prevention from DDoS Attack. To prevent DDoS attacks, the organization
+    must keep the firewall. Ingress/Egress filter to help detect the IP address range
+    to control the outflow [17].
+
+
+    +   2) Prevention from Phishing. Phishing attack has a new threat to internet
+    users. Cyber criminals send email with fake website to capture the personal data
+    and uses it to be benefited. Phishing is provided by the following means
+
+    - Adequate knowledge of Phishing emails,
+
+    - Do not click on links.
+
+    - Do not provide your credentials to unsecured websites.
+
+
+    +   3) Prevention from Malware. The use of updated anti-virus devices can reduce
+    the chance of malware attacks. The firmware must be updated according'
+  md: '
+
+    ## COVID-19 PANDEMIC: A NEW ERA OF CYBER SECURITY THREAT AND HOLISTIC APPROACH
+    TO OVERCOME
+
+
+    Jabmer Ahmed
+
+
+    Quddus Tushar
+
+    School of Engineering, RMIT University,
+
+    PO Box 2476, Melbourne VIC 3001, Australia
+
+    Email: quddus.tushar@rmit.edu
+
+
+    Major, Signal Base Workshop, Bangladesh Army
+
+    Dhaka Cantonment, Dhaka, Bangladesh
+
+    Email: jas7040@gmail.com
+
+
+    **Abstract—** In this paper, we present cyber security threat globally has been
+    discussed during the current COVID-19 situation. To stop the spread of Coronavirus,
+    almost all the countries around the world declared lockdown. People work from
+    offices, schools and businesses remotely. For that use of computers and the internet
+    has increased a lot, making cyber criminals more active. Recently the number of
+    attacks increased and everyone has become a target of the cyber criminals. Lack
+    of personal precautions in using the internet is causing significant threats to
+    everyone. COVID-19 has made it easy for cyber criminals to have hacked banking
+    sectors and government non-government organizations have faced several cyber-attacks
+    during this time. This paper focuses on some safety precautions to safeguard the
+    personal and organizational data from cyber attacks.
+
+
+    **Index Terms—** COVID-19, Cyber-attacking, Phishing, Malware, DDoS Attack, Ransomware.
+
+
+    ### I. INTRODUCTION
+
+
+    COVID-19 has literally defined the year 2020 with its spread, and the world is
+    suffering from its spread. Almost all the countries are under lockdown and governments
+    ordered natives to continue their day-to-day working at home. A maximum of airports
+    and borders were closed to stop the spread. This COVID-19 pandemic has forced
+    people to implement a New Normal for people to work from home from all the sectors,
+    including business, and attending office classes remotely. In this situation,
+    information and communication technology is playing a vital role in fulfilling
+    the requirements of [1]. This online business model delivery and day-to-day items
+    they demand the internet and mobile applications got priority to everyone, making
+    them vulnerable to cyber attackers. Almost all the countries are facing cyber
+    threats in recent times. Research on the Cyber-attacks in 2020 due to this pandemic
+    is shown in Figure 1.
+
+
+    ![](img/c20ab6723558c019dfa0ca18f0a6c48b_0_0.png)
+
+
+    Figure 1 Cyber Attacks Faced by Various Continents
+
+
+    Cyber criminals are utilizing this situation to capitalize the evil motives, and
+    cyber threats are increasing by day. By such, cyber security is developing and
+    becoming a significant concern for the world community [2], while people world
+    have been visited by various cyber threats. Plausible threats are shown in Figure
+    2.
+
+
+    ![](img/c20ab6723558c019dfa0ca18f0a6c48b_0_1.png)
+
+
+    Figure 2 Plausible Cyber Threats during COVID-19 Pandemic
+
+
+    The study organized the rest of the paper follows. Past related works are described
+    in Section II, where the pandemic sectors were carried out in the past on cyber
+    threats that may face cyber-attacks and credible cyber threats that may be encountered
+    during this pandemic are briefly explained in Section III. A holistic approach
+    to overcome the cyber security threat is shown in Section IV. Conclusion is drawn
+    by the authors and may be detected in Section V.
+
+
+    Accounts are on hackers for the dark web. Likewise, Google Duo, Microsoft Team
+    are all vulnerable to cyber-attacks during the pandemic. The security sectors
+    are most affected by cyber-attacks / cyber threats during this COVID-19 pandemic.
+
+
+    ### II. RELATED WORKS
+
+
+    Khan et al. proposed deny cyber threats through encryption and phishing, and also
+    discovered the privacy concerns [1]. It also recognized few sectors that seem
+    to be affected by the cyber-attacks during pandemic. Krály et al. identified that
+    information and communication technology (ICT) helped reduce psychological stress
+    during this pandemic. The paper focused on using ICT to communicate with families
+    and termed ICT as “Savior”. On the other hand, addition to ICT, gaming helped
+    persons to use a cyber threat to target the user. Lillie et al. presented the
+    cyber-attacks during the COVID-19 outbreak with a case study where they described
+    how cyber criminals designed their scheme. Williams et al. demonstrated that the
+    cyber security cost will increase threefold by the year 2021 after the COVID-19
+    pandemic [5]. It emphasized the healthcare sector, where cyber threats had a tremendous
+    long-term effect. Akbari et al. proposed some security protocols for working home
+    to ensure proper cyber security [6]. These protocols may help the users to keep
+    safe from cyber-attacks during this pandemic.
+
+
+    ### A. Affected Sectors
+
+
+    Almost all sectors are under continuous cyber security threats during this COVID-19
+    pandemic. In this part, the most affected sectors are described.
+
+
+    - 1. Healthcare and Medical Sectors. Hackers and intruders know that the healthcare
+    system of the world is a mess during this pandemic. As many people use remote
+    care, for some financial gain, hackers became active in access to the healthcare
+    system around the world. The UK''s National Cyber Security Centre (NSC) and the
+    Cybersecurity and Infrastructure Security Agency (CISA), are likely to get attacked
+    for personal data of the patients and are sending phishing emails [4]. World Health
+    Organization (WHO) who declared the cyber-attack during COVID-19 was first-found,
+    which is a consequence of the rapid increase of remote work and active email demands
+    with WHO password breached [8]. Telemedicine has become the only way to get treatment
+    during this pandemic. The threat has made more accessible healthcare sectors which
+    contain sensitive information. In the UK, only daily 95 people used to take the
+    help of telemedicine during the pandemic. Now the number of patients has increased
+    by 43%, and on average, 20 people suffered from ransomware attacks. Increasing
+    numbers have caused ransomware attacks [9].
+
+    - 2. Financial Sectors. Financial sectors have suffered many challenges during
+    this COVID-19 situation. This forced the financial sectors to provide online support
+    to their clients. Again many employees did their work from home using the unsecured
+    network, they are forced to adopt digital policies, which was noted as ‘New Normal’.
+    Nowadays, clients are also dependent on internet, which makes them vulnerable
+    to cyber threats such as phishing and malware. Malware are common attacks made
+    by hackers.
+
+
+    ### III. AFFECTED SECTORS AND SECURITY THREAT
+
+
+    Present COVID-19 pandemic has changed the world. The use of internet on laptop
+    and mobile devices has increased with the abundance of mobile applications, which
+    helped raise cyber threats. Various government and organizations face risks of
+    losing organizational data. When using online to buy tickets and food, Cyber attacks
+    are targeting these platforms to collect credentials for their monetary benefit
+    [7]. This pandemic has forced people to work from home. Zoom is one of the very
+    famous applications for attending online conferences and meetings. Zoom has become
+    a new target for criminals to collect users'' data and eavesdrop on any conversation.
+    Over 50,000 Zoom accounts suffered from the sudden change caused by the COVID-19
+    pandemic. Educational facilities suffered a lot. All students from levels are
+    now dependent on e-learning process, which makes them vulnerable to cyber crimes
+    [1].
+
+
+    ### B. Plausible Threats
+
+
+    Threats can be of various types. But the threats faced during COVID-19 are addressed.
+    The DDoS attack is one kind of attack that makes online service unavailable for
+    users by increasing the number of traffic. The DDoS attack has increased in the
+    last three months than the previous. In the first quarter of 2020, the total number
+    of reported DDoS attacks was 24, and in the second quarter this number increased
+    threefold.
+
+
+    - 1) Phishing. Hackers try to exploit users by sending phishing emails. These
+    emails contain fake webpages and can capture the identity details. As most people
+    nowadays on online platforms during the pandemic, they are vulnerable to these
+    phishing attacks. During March 2020, 4,825 phishing emails were linked to COVID-19,
+    which are almost 2% of the total phishing emails [14]. There are various types
+    of Phishing attacks such as email, and over the phone (also known as phishing).
+    Types of phishing attack that was conducted during this pandemic, including their
+    percentage, are shown in Figure 3 and until this stressed situation to achieve
+    their financial goals. The reliance on Cyber security allows for cyber criminals
+    to gain access to the users. Cyber-attacks are creating the situation more and
+    becoming a concern for all. To prevent cyber-attacks, we first need to detect
+    and identify them. By connecting to any network, the following steps can to keep
+    the device safe from intruders to control over it.
+
+
+    ### A. Initial Steps to Prevent Cyber-Attacks
+
+
+    - 1) Step1 Devices must have updated antivivirus software.
+
+    - 2) Step2 Keep the firewall on your device.
+
+    - 3) Step3 Do not use any pirated software.
+
+    - 4) Step4 Avoid using unknown websites that may contain phishing.
+
+    - 5) Step5 Keep your username and password saved in the browser.
+
+    - 6) Step6 Do not open any email links to your browser.
+
+    - 7) Step7 Try to site those security certified (Websites starting with https://)
+    are safe.
+
+    - 8) Step8 Never save your credit/card number to your browser.
+
+    - 9) Step9 go through the address and be sure before complete payment using the
+    credit/card.
+
+    - 10) Step11 Passwords must be strong and should not match special dates or numbers
+    (Like your birthday, passwords).
+
+    - 11) Step12 Use a paying operating system (OS).
+
+    - 12) Step13 Keep your OS updated.
+
+
+    ![](img/c20ab6723558c019dfa0ca18f0a6c48b_2_0.png)
+
+
+    Figure 3 Various Types of Phishing Attacks
+
+
+    - 3) Malware. During this pandemic, the cybercriminals are spreading malware in
+    the devices of the users. We can create backdoor in user''s devices by cyber criminals
+    who can steal all personal credentials, password. Online phishing attacks are
+    spreading this malware [15].
+
+    - 4) Ransomware. Ransomware attacks increased during the pandemic as remote working
+    has increased. The cyber criminals have chosen this attack for their financial
+    gain. Especially financials are the main target for ransomware attack. The ransomware
+    attack has a 148% spike during the first half of the pandemic [16].
+
+
+    ### IV. HOLISTIC APPROACH TO OVERCOME CYBER-THREATS
+
+
+    Our life is now at a stake due to the COVID-19 pandemic. People are mental stressed
+    to stay at the home rule and are trying to reduce their stress through online
+    activities. On the other hand, the cyber criminals are also more than...
+
+
+    ### B. Prevention of Cyber Attacks.
+
+
+    - 1) Prevention from DDoS Attack. To prevent DDoS attacks, the organization must
+    keep the firewall. Ingress/Egress filter to help detect the IP address range to
+    control the outflow [17].
+
+    - 2) Prevention from Phishing. Phishing attack has a new threat to internet users.
+    Cyber criminals send email with fake website to capture the personal data and
+    uses it to be benefited. Phishing is provided by the following means:
+
+    - Adequate knowledge of Phishing emails,
+
+    - Do not click on links.
+
+    - Do not provide your credentials to unsecured websites.
+
+    - 3) Prevention from Malware. The use of updated anti-virus devices can reduce
+    the chance of malware attacks. The firmware must be updated according
+
+    '
+  mdcn: "\n\n## COVID-19 大流行：网络安全威胁的新时代与克服的全面方法\n\nJabmer Ahmed\n\nQuddus Tushar\n\
+    墨尔本理工大学（RMIT University）工程学院\nPO Box 2476, Melbourne VIC 3001, Australia\n电子邮箱：quddus.tushar@rmit.edu\n\
+    \n孟加拉陆军，信号基地工作坊\n达卡军营, 达卡, 孟加拉\n电子邮箱：jas7040@gmail.com\n\n**摘要—** 在本文中，我们讨论了当前\
+    \ COVID-19 疫情下全球面临的网络安全威胁。为了阻止冠状病毒的传播，全球几乎所有国家都宣布了封锁。人们远程在办公室、学校和公司工作。因此，计算机和互联网的使用量大幅增加，使网络犯罪分子变得更加活跃。近期，攻击数量有所增加，每个人都成了网络犯罪分子的目标。在访问互联网时缺乏个人预防措施，对每个人都造成了重大威胁。COVID-19\
+    \ 让网络犯罪分子能够入侵银行部门，政府非政府组织在此期间面临了多次网络攻击。本文重点关注某些安全防护措施，以保护个人和组织数据免受网络攻击。\n\n**索引术—**\
+    \ COVID-19、网络攻击、网络钓鱼、恶意软件、DDoS 攻击、勒索软件。\n\n### I. 引言\n\nCOVID-19 的传播实际上定义了 2020\
+    \ 年，世界正遭受其扩散之苦。几乎所有国家都处于封锁状态，政府要求国民在家里继续日常工作。为了阻止传播，大多数机场和边境已经关闭。这场 COVID-19 大流行迫使人们包括业务在内的所有部门实施“新常态”，以便在家办公并远程参加办公室课程。在这种情况下，信息和通信技术在满足需求\
+    \ [1] 方发挥着至关重要的作用。这种在线业务模式交付和他们所需的日常物品互联网和移动应用程序成为每个人的首选，使他们容易受到网络攻击者的侵害。近期几乎所有国家都面临着网络威胁。图\
+    \ 1 显示了 2020 年因大疫情引起的网络攻击研究。\n\n![](img/c20ab6723558c019dfa0ca18f0a6c48b_0_0.png)\n\
+    \n图 1 各大洲面临的网络攻击\n\n网络犯罪分子正利用这一局面来利用其恶意动机，网络威胁日益增加。如此，网络安全正在发展，并成为全球社区关注的重要关注点\
+    \ [2]，而世界各地的人们受到了各种网络威胁。图 2 显示了大流行期间可能的网络威胁。\n\n![](img/c20ab6723558c019dfa0ca18f0a6c48b_0_1.png)\n\
+    \n图 2 COVID-19 大流行期间可能的网络威胁\n\n本研究论文的其余部分结构安排如下：第二 节描述了过去的相关工作，其中概述了过去对疫情部门可能面临的网络攻击的研究；第三节简要解释了可能面临网络攻击的疫情网络威胁，以及在大流行期间可能遇到的可信网络威胁。第四\
+    \ 节展示了克服网络安全威胁的全面方法。作者得出的结论可在第五节中发现。\n\n暗网上的账户正受黑客控制。同样，Google Duo、Microsoft Team\
+    \ 在流行期间也容易受到网络攻击。在这次 COVID-19 大流行期间，安全部门受网络攻击/网络威胁的影响最为严重。\n\n### II. 相关工作\n\n\
+    Khan 等人提出通过加密和钓鱼来拒绝网络威胁，并发现了隐私关注问题 [1]。它还识别出少数在流行期间似乎受到网络攻击影响的部门。Krály 等人发现，信息和通信技术（ICT）有助于减轻大流行期间的心理压力。该论文侧重于使用\
+    \ ICT 与家人交流，并将 ICT 称为“救救星”。另一方面，除 ICT 之外，游戏也帮助人员利用网络威胁以用户为目标。Lillie 等人通过案例研究展示了\
+    \ COVID-19 爆发期间的网络攻击，并在其中描述了网络犯罪分子是如何设计其计划的。Williams 等人证明，在 COVID-19 大流行之后，网络安全成本将在\
+    \ 2021 年前增加三倍 [5]。它强调了医疗保健部门，该部门的网络威胁产生了巨大的长远影响。Akbari 等人为居家办公提议了一些安全协议，以确保恰妥的网络安全\
+    \ [6]。这些协议可能帮助用户在流行期间免受网络攻击的侵扰。\n\n### A. 受影响的部门\n\n在这次 COVID-19 大流行期间，几乎所有部门都面临着持续的网络安全威胁。本部分描述了受影响最严重的部门。\n\
+    \n- 1. 医疗与卫生部门。黑客和入侵者知道，在大流行期间，世界的医疗系统是一团乱麻。由于许多人为了财务利益而使用远程护理，黑客在访问全球医疗系统方面变得活跃。英国国家网络安全中心（NSC）和美国安全和基础设施安全局（CISA）可能会因患者个人数据而受到攻击，并发送了钓鱼邮件。在大流行期间，医疗系统更容易受到网络攻击者的侵扰。世界卫生组织（WHO）在这一期间面临了多次网络攻击。COVID-19\
+    \ 大流行期间医疗系统受到严重影响，以确保恰妥的网络安全。这些协议可能帮助用户在流行期间免受网络攻击的侵害。\n- 2. 金融部门。在这次 COVID-19\
+    \ 大流行期间，几乎所有部门都面临着持续的网络安全威胁。本部分描述了受影响最严重的部门。这种在线业务模式交付和他们所需的日常物品互联网和移动应用程序成为每个人的首选，使他们容易受到网络攻击者的侵害。\n\
+    \n### III. 受影响的部门与威胁\n\n在这次 COVID-19 大流行期间，几乎所有部门都面临着持续的网络安全威胁。本部分描述了受影响最严重的部门。\n\
+    \n- 1. 医疗与卫生部门。黑客和入侵者知道，在大流行期间，世界的医疗系统是一团乱麻。由于许多人为了财务利益而使用远程护理，黑客在访问全球医疗系统方面变得活跃。英国国家网络安全中心（NSC）和美国安全和基础设施安全局（CISA）可能会因患者个人数据而受到攻击，并发送了钓鱼邮件。在大流行期间，医疗系统更容易受到网络攻击者的侵扰。世界卫生组织（WHO）在这一期间面临了多次网络攻击。COVID-19\
+    \ 大流行期间医疗系统受到严重影响，以确保恰妥的网络安全。这些协议可能帮助用户在流行期间免受网络攻击的侵害。\n- 2. 金融部门。在这次 COVID-19\
+    \ 大流行期间，几乎所有部门都面临着持续的网络安全威胁。本部分描述了受影响最严重的部门。这种在线业务模式交付和他们所需的日常物品互联网和移动应用程序成为每个人的首选，使他们容易受到网络攻击者的侵害。\n\
+    \n### IV. 受影响的部门与威胁\n\n在这次 COVID-19 大流行期间，几乎所有部门都面临着持续的网络安全威胁。本部分描述了受影响最严重的部门。这种在线业务模式交付和他们所需的日常物品互联网和移动应用程序成为每个人的首选，使他们容易受到网络攻击者的侵害。\n\
+    \n### V. 克服网络威胁的全面方法\n\n我们的生活现在因为 COVID-19 大流行而处于危险之中。人们由于待在家里而感到心理压力，并试图通过在线活动减轻压力。另一方面，网络犯罪分子也更多……\n\
+    \n### B. 预防网络攻击\n\n- 1) 预防 DDoS 攻击。为了防止 DDoS 攻击，组织必须维护防火墙。入站/出站过滤有助于检测 IP 地址范围以控制流量。\n\
+    \n 恶意软件。在大流行期间，网络犯罪分子正向设备中传播恶意软件。这种 导致导致了勒索软件。网络犯罪分子通过这种方式获取个人数据。\n\n### A. 预防网络攻击的初始步骤\n\
+    \n- 1) Step1 设备必须安装最新的防病毒软件。\n- 2) Step2 维护防火墙。\n- 3) Step3 不要使用盗版软件。\n- 4) Step4\
+    \ 避免使用未知的网站。\n- 5) Step5 在浏览器中维护你的用户名和密码。\n- 6) Step6 不要点击邮件链接。\n- 7) Step7 使用以\
+    \ https:// 开头的网站是安全的。\n- 8) Step8 永远不要在浏览器中保存信用卡。\n- 9) Step9 在完成支付前检查地址。\n- 10)\
+    \ Step11 密码必须足够强大，不应匹配日期或数字（如你的生日）。\n- 11) Step12 使用操作系统（OS）。\n- 12) Step13 更新你的操作系统。\n\
+    \n![](img/c20ab6723558c019dfa0ca18f0a6c48b_2_0.png)\n\n图 3 各种类型的网络钓鱼\n\n"
+  merge: -1
+- raw:
+  - '[PAGE 3]
+
+
+    to the new path, and the firewall should remain switched
+
+    on [18]
+
+
+    staying at home. Cyber criminals have this chance to
+
+    exploit this extensive use of internet by the people to
+
+    capitalize on their benefit. Cyber security threats increased
+
+    ant this pandemic due to the ignorance of cyber
+
+    security knowledge.
+
+
+    +   4) Prevention from Ransomware. Ransomware is
+
+    on kind of malware which is hijacking the data from
+
+    device only for financial benefit Updated Updated-virus
+
+    software is for the end-users. You can
+
+    provide an updated patch file for the
+
+    ransomware.
+
+
+    We must have minimum knowledge of cyber
+
+    threats and plausible cyber-attacks. Different
+
+    government and organizations are affected by
+
+    cyber-attacks. Therefore, it has become a foremost
+
+    requirement to impart minimum knowledge on cyber security
+
+    for every employee to safeguard from lasting
+
+    intersequences.
+
+
+    +   5) Prevention from Hacking. To prevent
+
+    hacking following measures can be taken
+
+    - Do not use your username and password to
+
+    one.
+
+    - Passwords should be strong enough so that it
+
+    cannot guessed easily.
+
+    - Account details are not to be shared.
+
+
+    COVID-19 is just the beginning. The world may face
+
+    more viruses like this in the future. So, it is time to start
+
+    anning for the future. We should take lessons from the
+
+    COVID-19 pandemic and may prepare ourselves for
+
+    the future. Cyber Security might not bring any more
+
+    for the world.
+
+
+    C. Imparting Adequate knowledge on Cyber Threat.
+
+    in present scenario, everyone must adequate
+
+    knowledge on cyber security. But unfortunately,
+
+    maximum people are unaware of this topic and many
+
+    ner even with the plausible cyber threats. This is
+
+    creating a vacuum preventing the cyber-attacks and
+
+    criming as this way to fully fulfill their
+
+    motive. A survey was carried out to judge the knowledge
+
+    mass people on cyber threats a hundred people. The
+
+    result shown in Table 1.
+
+
+    # REFERENCES
+
+
+    +   [1] N.A. Khan, S. Rohni, N. Zaman, Ten Deadly Cyber
+
+    Threats Amid COVID-19 Pandemic (2020).
+
+
+    +   [2] C.I. Lian, L. Yang, M.Y.X, L.Y. Hi, Z. Fatima, Cyber
+
+    Attacks in the Era of COVID-19 and Possible Solutions,
+
+    Donkvin (2020).
+
+
+    +   [3] O. Karaly, N.M. Potenza, D.J. Stein, L.C. Ding, D.D. Hopkins,
+
+    J.A.B. Sanders, G. Pribmatic, J. Billeaux, M. Brand
+
+    nimparting adequate internet security using the COVID-
+
+    19 pandemic Guidance Comprehensive Psychiatry
+
+    (2020) 152180.
+
+
+    +   [4] H.S. Sallie, L.A. Sheppard, J.R. Arula, E. Gola,
+
+    iphanian, C. Maple, K. Belkek, Cyber security in the age of
+
+    COVID-19: a timeline and analysis of cyber and cyber-crime
+
+    attacks during the pandemic, arxiv:2020.11929
+
+    (2020).
+
+
+    +   [5] C.M. Kumar, R. Raturvee, K. Chakravarthy, Cybersecurity
+
+    Risks in a Pandemic, Journal of Medical Internet Research 22(9)
+
+    (2020).
+
+
+    +   [6] A.M. Abukari, E.K. Banks, Some cyber security
+
+    protocols for workers in COVID-19 pandemic and
+
+    berational, International Journal of Scientific & Engineering
+
+    Research 18(4) (2020) 1401-1407.
+
+
+    +   [7] W. Zakaria, Worst policies for security issues and
+
+    brames fixes, [Online] Available at: https://www.
+
+    com/news/technology-52133349- [Accessed May 2020].
+
+
+    +   [8] H. II, WHO who reports fever outbreak in cyber
+
+    attacks, surges virus, people. (2020).
+
+
+    +   [9] J. Malali, A. Landon, W. Gordon, Telemedicine, privacy, and
+
+    innformation security in the age of COVID-19, Available at SSRN
+
+    3653230 (2020).
+
+
+    +   [10] F. Baker, A. Harris, J. Hyat, K.K. Seek, J.S. Ju, COVID-19 & Cyber
+
+    Security Challenges, USA, & Korea.
+
+
+    +   [11] A. Wu, Y. Chen, M. Li, X. Luo, Z. Liu, L. Liu, Survive and
+
+
+    | Table 1 Survey Report Based on Few Questionaries |
+
+    | Question | Incorrect Answer | Correct Answer |
+
+    |---|---|---|
+
+    | What is Phishing? | 27% | 73% |
+
+    | What is Dos and DDoS attack? | 21% | 79% |
+
+    | What is Malware? | 18% | 82% |
+
+    | What is Ransomware? | 22% | 78% |
+
+    | What is Hacking? | 36% | 64% |
+
+
+    # V. CONCLUSION
+
+
+    The study has tried to focus on the cyber threat
+
+    amid the COVID-19 pandemic. This pandemic has seen
+
+    maximum use of the internet. From all people of the
+
+    world who continued communication, jobs, and education
+
+    through this internet. This pandemic has also tested the stress
+
+    level of everyone. The Internet has helped helped to
+
+    minimize their security threats. This pandemic has provided
+
+    people to work from, continue classes and all other activities'
+  - '[PAGE 4]
+
+
+    Thrive: A Stochastic Game for DDoS Attacks in Bitcoin Mining Pools, IEEE/ACM Transactions
+    on Networking 28(2) (2020) 874-887.
+
+
+    [13] S. Mansfield-Devine, The growth and evolution of DDoS, Network Security 2015(10)
+    (2015) 13-20.
+
+
+    [14] R. Naidooo, A multi-level influence model of COVID-19 themed cybercrime,
+    European Journal of Information Systems (2020) 1-16.
+
+
+    [15] S. Hakak, Z. Khan, M. Imran, K.-K.R. Choo, M. Shoaib, Have you been a victim
+    of COVID-19-related cyber incidents? Survey taxonomy, and mitigation strategies,
+    IEEE Access 8 (2020) 124134-124144.
+
+
+    [16] J.P. UPATHAM, J. Treinen, Amid covid-19, global orgs see a 148% spike in
+    ransomware attacks; finance industry heavily targeted, 2020.
+
+
+    [17] V.E. Bakas, R. Kumar, R. Srivastava, Recent Trends and Advances in Artificial
+    Intelligence and Internet of Things, Springer2020.
+
+
+    [18] M.P. Grounder, M. Farik, New Ways To Fight Malware.'
+  md: '
+
+    to the new path, and the firewall should remain switched on [18] staying at home.
+    Cyber criminals have this chance to exploit this extensive use of internet by
+    the people to capitalize on their benefit. Cyber security threats increased and
+    this pandemic due to the ignorance of cyber security knowledge.
+
+
+    - 4) Prevention from Ransomware. Ransomware is on kind of malware which is hijacking
+    the data from device only for financial benefit. Updated-virus software is for
+    the end-users. You can provide an updated patch file for the ransomware.
+
+
+    We must have minimum knowledge of cyber threats and plausible cyber-attacks. Different
+    government and organizations are affected by cyber-attacks. Therefore, it has
+    become a foremost requirement to impart minimum knowledge on cyber security for
+    every employee to safeguard from lasting intersequences.
+
+
+    - 5) Prevention from Hacking. To prevent hacking following measures can be taken:
+
+    - Do not use your username and password to one.
+
+    - Passwords should be strong enough so that it cannot be guessed easily.
+
+    - Account details are not to be shared.
+
+
+    COVID-19 is just the beginning. The world may face more viruses like this in the
+    future. So, it is time to start planning for the future. We should take lessons
+    from the COVID-19 pandemic and may prepare ourselves for the future. Cyber Security
+    might not bring any more for the world.
+
+
+    ## C. Imparting Adequate knowledge on Cyber Threat.
+
+
+    In present scenario, everyone must have adequate knowledge on cyber security.
+    But unfortunately, maximum people are unaware of this topic and many even with
+    the plausible cyber threats. This is creating a vacuum preventing the cyber-attacks
+    and crime as this way to fully fulfill their motive. A survey was carried out
+    to judge the knowledge of mass people on cyber threats a hundred people. The result
+    shown in Table 1.
+
+
+    ## REFERENCES
+
+
+    - [1] N.A. Khan, S. Rohni, N. Zaman, Ten Deadly Cyber Threats Amid COVID-19 Pandemic
+    (2020).
+
+    - [2] C.I. Lian, L. Yang, M.Y.X, L.Y. Hi, Z. Fatima, Cyber Attacks in the Era
+    of COVID-19 and Possible Solutions, Donkvin (2020).
+
+    - [3] O. Karaly, N.M. Potenza, D.J. Stein, L.C. Ding, D.D. Hopkins, J.A.B. Sanders,
+    G. Pribmatic, J. Billeaux, M. Brand, imparting adequate internet security using
+    the COVID-19 pandemic Guidance Comprehensive Psychiatry (2020) 152180.
+
+    - [4] H.S. Sallie, L.A. Sheppard, J.R. Arula, E. Gola, iphan, C. Maple, K. Belkek,
+    Cyber security in the age of COVID-19: a timeline and analysis of cyber and cyber-crime
+    attacks during the pandemic, arxiv:2020.11929 (2020).
+
+    - [5] C.M. Kumar, R. Raturvee, K. Chakravarthy, Cybersecurity Risks in a Pandemic,
+    Journal of Medical Internet Research 22(9) (2020).
+
+    - [6] A.M. Abukari, E.K. Banks, Some cyber security protocols for workers in COVID-19
+    pandemic and operational, International Journal of Scientific & Engineering Research
+    18(4) (2020) 1401-1407.
+
+    - [7] W. Zakaria, Worst policies for security issues and frames fixes, [Online]
+    Available at: https://www.com/news/technology-52133349- [Accessed May 2020].
+
+    - [8] H. II, WHO who reports fever outbreak in cyber attacks, surges virus, people.
+    (2020).
+
+    - [9] J. Malali, A. Landon, W. Gordon, Telemedicine, privacy, and information
+    security in the age of COVID-19, Available at SSRN 3653230 (2020).
+
+    - [10] F. Baker, A. Harris, J. Hyat, K.K. Seek, J.S. Ju, COVID-19 & Cyber Security
+    Challenges, USA, & Korea.
+
+    - [11] A. Wu, Y. Chen, M. Li, X. Luo, Z. Liu, L. Liu, Survive and
+
+
+    | Table 1 Survey Report Based on Few Questionaries | |
+
+    | Question | Incorrect Answer | Correct Answer |
+
+    |---|---|---|
+
+    | What is Phishing? | 27% | 73% |
+
+    | What is Dos and DDoS attack? | 21% | 79% |
+
+    | What is Malware? | 18% | 82% |
+
+    | What is Ransomware? | 22% | 78% |
+
+    | What is Hacking? | 36% | 64% |
+
+
+    ## V. CONCLUSION
+
+
+    The study has tried to focus on the cyber threat amid the COVID-19 pandemic. This
+    pandemic has seen maximum use of the internet. From all people of the world who
+    continued communication, jobs, and education through this internet. This pandemic
+    has also tested the stress level of everyone. The Internet has helped to minimize
+    their security threats. This pandemic has provided people to work from, continue
+    classes and all other activities
+
+
+    - [12] Thrive: A Stochastic Game for DDoS Attacks in Bitcoin Mining Pools, IEEE/ACM
+    Transactions on Networking 28(2) (2020) 874-887.
+
+    - [13] S. Mansfield-Devine, The growth and evolution of DDoS, Network Security
+    2015(10) (2015) 13-20.
+
+    - [14] R. Naidooo, A multi-level influence model of COVID-19 themed cybercrime,
+    European Journal of Information Systems (2020) 1-16.
+
+    - [15] S. Hakak, Z. Khan, M. Imran, K.-K.R. Choo, M. Shoaib, Have you been a victim
+    of COVID-19-related cyber incidents? Survey taxonomy, and mitigation strategies,
+    IEEE Access 8 (2020) 124134-124144.
+
+    - [16] J.P. UPATHAM, J. Treinen, Amid covid-19, global orgs see a 148% spike in
+    ransomware attacks; finance industry heavily targeted, 2020.
+
+    - [17] V.E. Bakas, R. Kumar, R. Srivastava, Recent Trends and Advances in Artificial
+    Intelligence and Internet of Things, Springer2020.
+
+    - [18] M.P. Grounder, M. Farik, New Ways To Fight Malware.
+
+    '
+  mdcn: '
+
+    转向新路径，且防火墙应保持开启 [18] 待在家里。网络犯罪分子有机会利用人们对互联网的大量使用来从中获利。由于对网络安全知识的匮乏，这场疫情导致网络威胁的增加。
+
+
+    - 4) 预防勒索软件。勒索软件是一种恶意软件，仅为了财务利益而劫持设备中的数据。更新的病毒杀毒软件是面向终端用户的。你可以为勒索软件提供更新的补丁文件。
+
+
+    我们必须对网络威胁和可能的网络攻击有最基本的了解。不同的政府和组织都受到了网络攻击的影响。因此，为每位员工教授基本的网络安全知识已成为首要要求，以防止持久性的后果。
+
+
+    - 5) 预防黑客攻击。为了防止黑客攻击，可以采取以下措施：
+
+    - 不要向任何人透露你的用户名和密码。
+
+    - 密码应该足够强，无法被轻易破解。
+
+    - 不要共享账户详情。
+
+
+    COVID-19 仅仅是一个开始。未来世界可能会面临更多病毒。因此，现在是时候为未来规划了。我们应该从 COVID-19 大疫情中吸取教训，并为未来做好准备。网络安全可能不会为世界带来更多东西。
+
+
+    ## C. 传授足够的网络威胁的知识
+
+
+    在当前的情况下，每个人都必须具备足够的网络安全知识。遗憾的是，大多数人对这一主题一无所知，许多即使面临明显的网络威胁也是如此。这造成了一个真空，使得网络攻击和犯罪能够通过这种方式完全实现其动机。进行了一项调查，以评估百名大众对网络威胁的了解程度。结果如表所示。
+
+
+    ## 参考文献
+
+
+    - [1] N.A. Khan, S. Rohni, N. Zaman, Ten Deadly Cyber Threats Amid COVID-19 Pandemic
+    (2020).
+
+    - [2] C.I. Lian, L. Yang, M.Y.X, L.Y. Hi, Z. Fatima, Cyber Attacks in the Era
+    of COVID-19 and Possible Solutions, Donkvin (2020).
+
+    - [3] O. Karaly, N.M. Potenza, D.J. Stein, L.C. Ding, D.D. Hopkins, J.A.B. Sanders,
+    G. Pribmatic, J. Billeaux, M. Brand, imparting adequate internet security using
+    the COVID-19 pandemic Guidance Comprehensive Psychiatry (2020) 152180.
+
+    - [4] H.S. Sallie, L.A. Sheppard, J.R. Arula, E. Gola, iphan, C. Maple, K. Belkek,
+    Cyber security in the age of COVID-19: a timeline and analysis of cyber and cyber-crime
+    attacks during the pandemic, arxiv:2020.11929 (2020).
+
+    - [5] C.M. Kumar, R. Raturvee, K. Chakravarthy, Cybersecurity Risks in a Pandemic,
+    Journal of Medical Internet Research 22(9) (2020).
+
+    - [6] A.M. Abukari, E.K. Banks, Some cyber security protocols for workers in COVID-19
+    pandemic and operational, International Journal of Scientific & Engineering Research
+    18(4) (2020) 1401-1407.
+
+    - [7] W. Zakaria, Worst policies for security issues and frames fixes, [Online]
+    Available at: https://www.com/news/technology-52133349- [Accessed May 2020].
+
+    - [8] H. II, WHO who reports fever outbreak in cyber attacks, surges virus, people.
+    (2020).
+
+    - [9] J. Malali, A. Landon, W. Gordon, Telemedicine, privacy, and information
+    security in the age of COVID-19, Available at SSRN 3653230 (2020).
+
+    - [10] F. Baker, A. Harris, J. Hyat, K.K. Seek, J.S. Ju, COVID-19 & Cyber Security
+    Challenges, USA, & Korea.
+
+    - [11] A. Wu, Y. Chen, M. Li, X. Luo, Z. Liu, L. Liu, Survive and
+
+
+    | 表 1 基于少量问卷的调查报告 | | |
+
+    | 问题 | 错误答案 | 正确答案 |
+
+    |---|---|---|
+
+    | 什么是网络钓鱼？ | 27% | 73% |
+
+    | 什么是 Dos 和 DDoS 攻击？ | 21% | 79% |
+
+    | 什么是恶意软件？ | 18% | 82% |
+
+    | 什么是勒索软件？ | 22% | 78% |
+
+    | 什么是黑客攻击？ | 36% | 64% |
+
+
+    ## V. 结论
+
+
+    本研究试图关注 COVID-19 疫情期间的网络威胁。这场疫情期间互联网的使用率达到了最高峰。全球范围内所有人通过互联网继续交流、工作和教育。这场疫情也测试了每个人的压力水平。互联网帮助减少了他们的安全威胁。这场疫情让人们能够居家办公、继续课程以及进行所有其他活动
+
+
+    - [12] Thrive: A Stochastic Game for DDoS Attacks in Bitcoin Mining Pools, IEEE/ACM
+    Transactions on Networking 28(2) (2020) 874-887.
+
+    - [13] S. Mansfield-Devine, The growth and evolution of DDoS, Network Security
+    2015(10) (2015) 13-20.
+
+    - [14] R. Naidooo, A multi-level influence model of COVID-19 themed cybercrime,
+    European Journal of Information Systems (2020) 1-16.
+
+    - [15] S. Hakak, Z. Khan, M. Imran, K.-K.R. Choo, M. Shoaib, Have you been a victim
+    of COVID-19-related cyber incidents? Survey taxonomy, and mitigation strategies,
+    IEEE Access 8 (2020) 124134-124144.
+
+    - [16] J.P. UPATHAM, J. Treinen, Amid covid-19, global orgs see a 148% spike in
+    ransomware attacks; finance industry heavily targeted, 2020.
+
+    - [17] V.E. Bakas, R. Kumar, R. Srivastava, Recent Trends and Advances in Artificial
+    Intelligence and Internet of Things, Springer2020.
+
+    - [18] M.P. Grounder, M. Farik, New Ways To Fight Malware.
+
+
+    '
+  merge: 0
