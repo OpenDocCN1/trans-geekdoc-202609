@@ -1,0 +1,949 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Predicting Congestive Heart Failure Risk Factors in King Abdulaziz Medical Center
+    A Machine Learning Approach
+
+
+    AYIDH ALQAHTANI
+
+    The College of Public Health & Health Informatics
+
+    King Saud Abdulaziz University for Health Sciences
+
+    Riyadh, Saudi Arabia
+
+    Engaydh@gmail.com
+
+
+    RIYAD ALSHMARI
+
+    Department of Research Labs
+
+    National Center for Artificial Intelligence (NCAI)
+
+    Riyadh 11153, Saudi Arabia
+
+    Riyadalshmari@gmail.com
+
+
+    MUHAMMED ALZUNTAN
+
+    Department of Infection Prevention
+
+    Control
+
+    King Abdulaziz Medical Center, National
+
+    Guard-Health Affairs
+
+    Riyadh, Saudi Arabia
+
+    Alzuntann@mnhsa.com
+
+
+    AMMAD AHMED
+
+    Department of Preventive Sciences
+
+    King Abdulaziz Medical City, National
+
+    Guard-Health Affairs, Riyadh
+
+    Riyadh, Saudi Arabia
+
+    Ahimmed@mnhsa.com
+
+
+    ABDELMAJD MUKHTAR
+
+    Department of Cardiac Sciences
+
+    King Abdulaziz Medical City, National
+
+    Guard-Health Affairs, Riyadh
+
+    Riyadh, Saudi Arabia
+
+    Mukhtar@mnhsa.com
+
+
+    NASSER ALQAHTANI
+
+    Clinical Pharmacist
+
+    Riyadh, Saudi Arabia
+
+    Lnasserm@gmail.com
+
+
+    **Abstract**—Congestive heart failure (CHF) is one of the diseases with high burden
+    on the healthcare systems. Patients visits and follow-up at the patient-clinic
+    are associated with direct and indirect costs and affect treatment outcomes. This
+    study aims to use machine learning models to predict the risk level and class
+    of CHF patients to confidently extend the time for the next-outpatient visit.
+    The data were statistically analyzed using Waikato Enrichment Knowledge Analysis
+    Version 3.4 using each different learning model. Among the best models tested,
+    the Random Forest and Logistic Regression showed the best performance. Overall
+    performance of the models with these excellent measures (Precision, Recall, F-measure,
+    and ROC) for the dataset achieved an accuracy around 0.89. Future work with more
+    balanced datasets and records are needed to test such models which could help
+    the healthcare systems avoid direct and indirect costs and improve patients''
+    outcomes.
+
+
+    **Keywords:** Congestive heart failure (CHF); Random Forest; Machine Learning;
+    Predictive Model
+
+
+    # I. INTRODUCTION
+
+
+    Cardiovascular diseases (CVD) are a leading cause of death. In 2017, 17.8 million
+    people died due to CVD. This is expected to jump to more than 22.2 million deaths
+    annually by 2030. The direct and indirect costs associated with CVD and stroke
+    between 2014 and 2015 were reported to be $35.1 billion in the United States.
+    Heart failure (CHF) is one of the most common CVD and can be described as a clinical
+    syndrome characterized by the reduced ability of the heart to pump and fill blood.
+    Physiologically, it is an inadequate cardiac output to meet the metabolic demands
+    of the body. Its prevalence is 1-2% and up to 10% in the elderly population. A
+    recent study showed that the 60-day mortality for discharged HF patients was around
+    8.6% and the combined mortality/hospitalization rate to 36.2% [5]. Locally, a
+    Saudi multicenter study showed that the 12 months all-cause mortality to around
+    9% and rehospitalization rate 39 [%].
+
+
+    rehospitalization rate 39 [%]. Reports show that the 30-day admission rates for
+    HF need need improvement [7]. Early follow-up after hospitalization is associated
+    with lower 30-day admission rates for HF patients [8]. Thus, guidelines recommend
+    a close follow-up (7-14 days) after discharge [9]. Recent advances in machine
+    learning and deep learning led to their utilization in various medical conditions;
+    therefore different machine learning techniques have been used to improve HF outcomes.
+    In this study, we are aiming to use machine learning to classify CHF patients.
+    This classification will help in predicting we will be able to extend the time
+    to the next visit for CHF patients post-hospital discharge. The main research
+    question-How can we extend the time of the next visit for CHF patients?
+
+
+    # II. LITERATURE REVIEW
+
+
+    We have available machine learning techniques currently studied by different researchers
+    to diagnose or identify heart failure. Moloud et al. (2015) confirmed that the
+    DFT has the greatest accuracy of 93.0%, compared to ANN 80.3% [23]. Decision trees
+    showed the other approaches which achieved accuracy 92.03%, 63.64% and 39% [15,
+    4]. Al-Fais (2019). DT showed the highest accuracy between 90-95%; whereas Naive
+    Bayes and Logistic Regression showed the lowest accuracy between 87-92% [12].
+
+
+    # III. METHODS
+
+
+    Our research is a cohort study. The data in this study were extracted from our
+    cardiac clinic department for patients diagnosed with CHF, and applying different
+    machine learning models to predict the risk of the patient''s condition on CHF
+    stages, to give an adequate time frame for the next visit. Adult patients (18
+    years and'
+  - '[PAGE 1]
+
+
+    # A. Data Management and Statistical Analysis
+
+
+    The data were collected from the cardiac output. Before applying learning techniques,
+    we checked the inconsistency/integrity of patient data and handling missing fields
+    in the dataset. Microsoft Excel was used for data preprocessing. The time frame
+    for the data was between January 2010 and October 2020 and our inclusion criteria
+    were 1,822 patients. After the data cleaning, we excluded 700 records.
+
+
+    In this study, we investigated and analyzed the data using multiple appropriate
+    learning algorithms for CHF patients. We compared the different learning models''
+    results to find the best out for our dataset. For analysis, we used the Auto-encoder
+    to identify the high weighted attribute; Graystep attribute selection [16]. We
+    were able to reduce the number of attributes from 220 to 176, which helped CHF
+    stage attribute.
+
+
+    For CHF patients with class-a, the patient is mostly healthy individual, rarely
+    seek medical help or the cardiac clinic which just the few numbers of patients
+    we have in our sample (only one patient or 0.4% of total sample). Others are mostly
+    in severe stage where patients have difficulties are rarely seen in our patient
+    set. We have made class-b with class-(Stage-A: 115 patient record) and class-c
+    with class-(Stage-B: 585 patient record)[17].
+
+
+    Among those 700 patients, we had around 472 (67.4%) male patients and 228 (32.5%)
+    female patients and distributed as in Fig. 1.
+
+
+    ![](img/341e7e90ff563543bf02a6b015cb4470_1_0.png)
+
+
+    Fig. 2. Heart failure stages distributed by gender
+
+
+    # B. Model Validation
+
+
+    We have 100-fold cross-validation with Waikato Knowledge Analysis Engine (Weka
+    version 3.4) for testing the dataset since it''s a relatively small dataset [18].
+    Every portion of the data had the chance to be in training and testing. Precision,
+    Recall, F-measure, and Area Under Curve (ROC) were used to predict the probability
+    of CHF. We used Multiple algorithms to statistically analyze the Zero(majority
+    classifier), Naive Bayes, Instance Based Learner (IBK), Logistic Regression, MultilayerPerceptron
+    (ANN), Decision Tree J4, Random Forest (Predictive Value), Recall (Completeness),
+    F-, and Receiver Curve (ROC) are used to find out the probability of CHF.
+
+
+    # IV. RESULTS
+
+
+    We found that the best model predict class and risk level between the tested models
+    was the Random Forest and logistic regression classifier; almost the same results.
+    It has a precision of 0.89, a recall of 0.90, an F-measure of 0.89 and overall
+    weighted receiver curve (ROC) is 0.88. For AdaBoost comes in place, with precision,
+    recall, and F-measure, and (ROC) was 0.84. Other algorithms are under this list
+    ZeroR which comes at the bottom of the model list with (ROC) of 0.48 shown in
+    table 1.
+
+
+    TABLE I: PRECISION, RECALL, F-MEASURE, AND ROC AREA
+
+
+    | Model | Precision | Recall | F-measure | ROC Area |
+
+    |---|---|---|---||
+
+    | Logistic Regression | 0.898 | 0.904 | 0.894 | 0.888 |
+
+    | RandomForest | 0.895 | 0.900 | 0.898 | 0.885 |
+
+    | Naive Bayes | 0.864 | 0.761 | 0.789 | 0.860 |
+
+    | AdaBoost | 0.870 | 0.877 | 0.873 | 0.848 |
+
+    | MultilayerPerceptron | 0.858 | 0.866 | 0.862 | 0.817 |
+
+    | Decision Tree J48 | 0.789 | 0.733 | 0.754 | 0.723 |
+
+    | IBK | 0.849 | 0.851 | 0.850 | 0.722 |
+
+    | ZeroR | * | 0.836 | * | 0.487 |
+
+
+    ![](img/341e7e90ff563543bf02a6b015cb4470_1_1.png)
+
+
+    Fig. 1. Age Distribution by Gender
+
+
+    HF stage of the data was greatly unbalanced-Fig. 2"."
+
+
+    After using Balancer technique in our data, the same class of the data was distributed
+    into 50 patients in each stage; results shown in table 2.'
+  md: '
+
+    # Predicting Congestive Heart Failure Risk Factors in King Abdulaziz Medical Center
+    A Machine Learning Approach
+
+
+    AYIDH ALQAHTANI
+
+    The College of Public Health & Health Informatics
+
+    King Saud Abdulaziz University for Health Sciences
+
+    Riyadh, Saudi Arabia
+
+    Engaydh@gmail.com
+
+
+    RIYAD ALSHMARI
+
+    Department of Research Labs
+
+    National Center for Artificial Intelligence (NCAI)
+
+    Riyadh 11153, Saudi Arabia
+
+    Riyadalshmari@gmail.com
+
+
+    MUHAMMED ALZUNTAN
+
+    Department of Infection Prevention Control
+
+    King Abdulaziz Medical Center, National Guard-Health Affairs
+
+    Riyadh, Saudi Arabia
+
+    Alzuntann@mnhsa.com
+
+
+    AMMAD AHMED
+
+    Department of Preventive Sciences
+
+    King Abdulaziz Medical City, National Guard-Health Affairs, Riyadh
+
+    Riyadh, Saudi Arabia
+
+    Ahimmed@mnhsa.com
+
+
+    ABDELMAJD MUKHTAR
+
+    Department of Cardiac Sciences
+
+    King Abdulaziz Medical City, National Guard-Health Affairs, Riyadh
+
+    Riyadh, Saudi Arabia
+
+    Mukhtar@mnhsa.com
+
+
+    NASSER ALQAHTANI
+
+    Clinical Pharmacist
+
+    Riyadh, Saudi Arabia
+
+    Lnasserm@gmail.com
+
+
+    **Abstract**—Congestive heart failure (CHF) is one of the diseases with high burden
+    on the healthcare systems. Patients visits and follow-up at the patient-clinic
+    are associated with direct and indirect costs and affect treatment outcomes. This
+    study aims to use machine learning models to predict the risk level and class
+    of CHF patients to confidently extend the time for the next-outpatient visit.
+    The data were statistically analyzed using Waikato Enrichment Knowledge Analysis
+    Version 3.4 using each different learning model. Among the best models tested,
+    the Random Forest and Logistic Regression showed the best performance. Overall
+    performance of the models with these excellent measures (Precision, Recall, F-measure,
+    and ROC) for the dataset achieved an accuracy around 0.89. Future work with more
+    balanced datasets and records are needed to test such models which could help
+    the healthcare systems avoid direct and indirect costs and improve patients''
+    outcomes.
+
+
+    **Keywords:** Congestive heart failure (CHF); Random Forest; Machine Learning;
+    Predictive Model
+
+
+    # I. INTRODUCTION
+
+
+    Cardiovascular diseases (CVD) are a leading cause of death. In 2017, 17.8 million
+    people died due to CVD. This is expected to jump to more than 22.2 million deaths
+    annually by 2030. The direct and indirect costs associated with CVD and stroke
+    between 2014 and 2015 were reported to be $35.1 billion in the United States.
+    Heart failure (CHF) is one of the most common CVD and can be described as a clinical
+    syndrome characterized by the reduced ability of the heart to pump and fill blood.
+    Physiologically, it is an inadequate cardiac output to meet the metabolic demands
+    of the body. Its prevalence is 1-2% and up to 10% in the elderly population. A
+    recent study showed that the 60-day mortality for discharged HF patients was around
+    8.6% and the combined mortality/hospitalization rate to 36.2% [5]. Locally, a
+    Saudi multicenter study showed that the 12 months all-cause mortality to around
+    9% and rehospitalization rate 39%. Reports show that the 30-day admission rates
+    for HF need improvement [7]. Early follow-up after hospitalization is associated
+    with lower 30-day admission rates for HF patients [8]. Thus, guidelines recommend
+    a close follow-up (7-14 days) after discharge [9]. Recent advances in machine
+    learning and deep learning led to their utilization in various medical conditions;
+    therefore different machine learning techniques have been used to improve HF outcomes.
+    In this study, we are aiming to use machine learning to classify CHF patients.
+    This classification will help in predicting we will be able to extend the time
+    to the next visit for CHF patients post-hospital discharge. The main research
+    question—How can we extend the time of the next visit for CHF patients?
+
+
+    # II. LITERATURE REVIEW
+
+
+    We have available machine learning techniques currently studied by different researchers
+    to diagnose or identify heart failure. Moloud et al. (2015) confirmed that the
+    DFT has the greatest accuracy of 93.0%, compared to ANN 80.3% [23]. Decision trees
+    showed the other approaches which achieved accuracy 92.03%, 63.64% and 39% [15,
+    4]. Al-Fais (2019). DT showed the highest accuracy between 90-95%; whereas Naive
+    Bayes and Logistic Regression showed the lowest accuracy between 87-92% [12].
+
+
+    # III. METHODS
+
+
+    Our research is a cohort study. The data in this study were extracted from our
+    cardiac clinic department for patients diagnosed with CHF, and applying different
+    machine learning models to predict the risk of the patient''s condition on CHF
+    stages, to give an adequate time frame for the next visit. Adult patients (18
+    years and)
+
+
+    ### A. Data Management and Statistical Analysis
+
+
+    The data were collected from the cardiac output. Before applying learning techniques,
+    we checked the inconsistency/integrity of patient data and handling missing fields
+    in the dataset. Microsoft Excel was used for data preprocessing. The time frame
+    for the data was between January 2010 and October 2020 and our inclusion criteria
+    were 1,822 patients. After the data cleaning, we excluded 700 records.
+
+
+    In this study, we investigated and analyzed the data using multiple appropriate
+    learning algorithms for CHF patients. We compared the different learning models''
+    results to find the best out for our dataset. For analysis, we used the Auto-encoder
+    to identify the high weighted attribute; Graystep attribute selection [16]. We
+    were able to reduce the number of attributes from 220 to 176, which helped CHF
+    stage attribute.
+
+
+    For CHF patients with class-A, the patient is mostly healthy individual, rarely
+    seek medical help or the cardiac clinic which just the few numbers of patients
+    we have in our sample (only one patient or 0.4% of total sample). Others are mostly
+    in severe stage where patients have difficulties and are rarely seen in our patient
+    set. We have made class-B with class-(Stage-A: 115 patient record) and class-C
+    with class-(Stage-B: 585 patient record)[17].
+
+
+    Among those 700 patients, we had around 472 (67.4%) male patients and 228 (32.5%)
+    female patients and distributed as in Fig. 1.
+
+
+    ![](img/341e7e90ff563543bf02a6b015cb4470_1_0.png)
+
+
+    Fig. 2. Heart failure stages distributed by gender
+
+
+    ### B. Model Validation
+
+
+    We have 100-fold cross-validation with Waikato Knowledge Analysis Engine (Weka)
+    version 3.4 for testing the dataset [18]. Every portion of the data had the chance
+    to be in and testing. Precision, Recall, F-measure, and Area Under Curve (ROC)
+    were used to find the probability of CHF.
+
+
+    # IV. RESULTS
+
+
+    We found that the best model predict class and risk level between the tested models
+    was Random Forest and logistic regression; it has a precision of 0.89, a recall
+    of 0.90, an F-measure of 0.89 and overall receiver curve (ROC) is 0.88. For AdaBoost
+    comes in place, with precision, recall, and (ROC) 0.84. Other algorithms are under
+    this list ZeroR which comes at the bottom of the list with (ROC) of 0.48 shown
+    in table I.
+
+
+    TABLE I: PRECISION, RECALL, F-MEASURE, AND ROC AREA
+
+
+    | Model | Precision | Recall | F-measure | ROC Area |
+
+    |---|---|---|---|---|
+
+    | Logistic Regression | 0.898 | 0.904 | 0.894 | 0.888 |
+
+    | RandomForest | 0.895 | 0.900 | 0.898 | 0.885 |
+
+    | Naive Bayes | 0.864 | 0.761 | 0.789 | 0.860 |
+
+    | AdaBoost | 0.870 | 0.877 | 0.873 | 0.848 |
+
+    | MultilayerPerceptron | 0.858 | 0.866 | 0.862 | 0.817 |
+
+    | Decision Tree J48 | 0.789 | 0.733 | 0.754 | 0.723 |
+
+    | IBK | 0.849 | 0.851 | 0.850 | 0.722 |
+
+    | ZeroR | * | 0.836 | * | 0.487 |
+
+
+    ![](img/341e7e90ff563543bf02a6b015cb4470_1_1.png)
+
+
+    Fig. 1. Age Distribution by Gender
+
+
+    HF stage of the data was greatly unbalanced—Fig. 2.
+
+
+    After using Balancer technique in our data, the same class of the data was distributed
+    into 50 patients in each stage; results shown in table 2.
+
+    '
+  mdcn: '
+
+
+    # 阿卜杜勒·阿齐兹医学中心心力衰竭风险因素的预测：一种机器学习方法
+
+
+    AYIDH ALQAHTANI
+
+    公共卫生与健康信息学院
+
+    沙特阿卜杜勒·阿齐兹健康科学大学
+
+    利雅得，沙特阿拉伯
+
+    Engaydh@gmail.com
+
+
+    RIYAD ALSHMARI
+
+    研究实验室部门
+
+    国家人工智能中心 (NCAI)
+
+    利雅得 11153，沙特阿拉伯
+
+    Riyadalshmari@gmail.com
+
+
+    MUHAMMED ALZUNTAN
+
+    感染预防控制部门
+
+    阿卜杜勒·阿齐兹医学中心，国民卫队健康事务
+
+    利雅得，沙特阿拉伯
+
+    Alzuntann@mnhsa.com
+
+
+    AMMAD AHMED
+
+    预防科学部门
+
+    阿卜杜勒·阿齐兹医学城，国民卫队健康事务，利雅得
+
+    利雅得，沙特阿拉伯
+
+    Ahimmed@mnhsa.com
+
+
+    ABDELMAJD MUKHTAR
+
+    心脏科学部门
+
+    阿卜杜勒·阿齐兹医学城，国民卫队健康事务，利雅得
+
+    利雅得，沙特阿拉伯
+
+    Mukhtar@mnhsa.com
+
+
+    NASSER ALQAHTANI
+
+    临床药剂师
+
+    利雅得，沙特阿拉伯
+
+    Lnasserm@gmail.com
+
+
+    **摘要**—心力衰竭（CHF）是医疗保健系统负担沉重的疾病之一。患者在诊所的就诊和随访与直接间接成本有关并影响治疗结果。本研究旨在使用机器学习模型预测心力衰竭患者的风险水平和分类，以有信心地延长患者下次门诊的时间。使用
+    Waikato Enrichment Knowledge Analysis Version 3.4（Weka）通过不同的学习模型对数据进行统计分析。在测试的最佳模型中，随机森林（Random
+    Forest）和逻辑回归（Logistic Regression）表现出最佳性能。模型在这些优秀指标（精确率、召回率、F 值和 ROC）上的整体准确率达到了
+    0.89 左右。未来需要更多平衡的数据集和记录来测试此类模型，这将有助于医疗保健系统避免直接和间接成本并改善患者的预后。
+
+
+    **关键词：** 心力衰竭（CHF）；随机森林；机器学习；预测模型
+
+
+    # I. 引言
+
+
+    心血管疾病（CVD）是首要死因。2017 年，有 1780 万人死于 CVD。预计到 2030 年，每年死亡人数将跃至 2220 万以上。据报道，2014
+    年至2015 年间与 CVD 和中风相关的直接和间接成本在美国为 351 亿美元。心力衰竭（CHF）是最常见的 CVD 之一，可以描述为一种以心脏泵血和充血能力下降为特征的临床综合征。生理上，它是心脏输出量不足以满足身体代谢需求。其患病率为
+    1-2%，在老年人群中高达 10%。最近的一项研究显示，出院心衰竭患者的 60 天死亡率约为 8.6%，死亡/住院合并率为 36.2% [5]。在当地，一项沙特多中心研究显示，12
+    个月内全因死亡率约为 9%，再住院率为 39%。报告显示，心力衰竭的 30 天入院率仍需改进 [7]。住院后的早期随访与心力衰竭患者较低的 30 天入院率有关
+    [8]。因此，指南建议出院后进行密切随访（7-14 天）[9]。机器学习和深度学习的最新进展使其被应用于各种医疗状况；因此，不同的机器学习技术已被用于改善心力衰竭的预后。在本研究中，我们旨在使用机器学习对心力衰竭患者进行分类。这种分类有助于预测我们能够延长心力衰竭患者出院后下次就诊的时间。主要研究问题是——我们如何延长心力衰竭患者下次就诊的时间？
+
+
+    # II. 文献综述
+
+
+    我们目前有不同人员研究的可用机器学习技术。Moloud 等（2015）通过使用不同的模型识别心力衰竭，证实了 CHF 的准确率达到了 93%。在这些数据集上，具有这些优秀指标（精确率、召回率、F
+    值和 ROC）的模型整体准确率达到了 0.89。Fais（2019）显示，决策树（DT）的准确率达到了 92% [23]。相比之下，朴叶贝叶斯（Naive
+    Bayes）准确率为 90%。
+
+
+    # III. 方法
+
+
+    我们的研究使用了多种可用的机器学习技术。
+
+
+    ### A. 数据管理
+
+
+    数据使用 Waikato Enrichment Knowledge Analysis Version 3.4（Weka）进行统计分析。在应用模型之前，对数据进行了清理和处理。
+
+
+    ### B. 模型验证
+
+
+    我们使用了 10 折交叉验证来测试模型 [18]。未来需要更多平衡的数据集和记录来测试此类模型，这将有助于医疗保健系统避免直接和间接成本并改善患者的预后。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    # TABLE 2: PRECISION, F-MEASURE, AND ROC (CLASSBASED)
+
+
+    | Model | Precision | F-Measure | ROC |
+
+    |---|---|---|---||
+
+    | Logistic Regression | 0.807 | 0.805 | 0.805 | 0.885 |
+
+    | RandomForest | 0.811 | 0.800 | 0.799 | 0.877 |
+
+    | AdaBoost | 0.710 | 0.738 | 0.726 | 0.865 |
+
+    | NaiveBayes | 0.747 | 0.709 | 0.698 | 0.860 |
+
+    | Multilayerceptron | 0.763 | 0.747 | 0.743 | 0.820 |
+
+    | Decision Tree | 0.775 | 0.767 | 0.766 | 0.792 |
+
+    | IBK | 0.726 | 0.722 | 0.712 | 0.772 |
+
+    | ZeroR | 0.487 | 0.487 | 0.487 | 0.451 |
+
+
+    > [2] Corason, R. F., de Groot, and J. J. van Linuis, ‘Heart failure.’ Cardiovascular,
+    vol. 50, no. 3, pp. 419–422 (2001).
+
+
+    > [3] L.-H. Tan, S. G. Williams, D. K. Han, and A. Cole-Sloan, ‘Definitions of
+    heart failure: are they universally agreed? A critical appraisal.’ Exp. Rev. Cardiology,
+    vol. 8, pp. 212–217 (2008).
+
+
+    > [4] P. Ponikowski et al., ‘2006 ESC Guidelines for the diagnosis and treatment
+    of acute heart failure. The Task Force for the diagnosis and treatment of acute
+    heart failure of the European Society of Cardiology (ESC). Developed with the
+    support of the European Heart Association (HFA). Eur. Heart Fail., vol. 18, no.
+    8, pp. 891–975, 2006).
+
+
+    > [5] G. C. Foster et al., ‘Association between performance and clinical outcomes
+    in patients with heart failure.’ JAMA, vol. 298, no. 1, pp. 61–70, 2007).
+
+
+    None of the models we have eliminated the bias from the unbalanced dataset. By
+    using the Stratified Folds to test the same dataset (unbalanced), we tested the
+    models and the results shown in table 3.
+
+
+    # TABLE 3: PRECISION, F-MEASURE AND ROC (STRATIFIED FOLDS MODELS)
+
+
+    | Model | Precision | F-Measure | ROC |
+
+    |---|---|---|---||
+
+    | NaiveBayes | 0.855 | 0.829 | 0.839 | 0.861 |
+
+    | Multilayerceptron | 0.803 | 0.771 | 0.785 | 0.723 |
+
+    | RandomForest | 0.899 | 0.886 | 0.857 | 0.713 |
+
+    | IBK | 0.829 | 0.829 | 0.826 | 0.676 |
+
+    | Logistic Regression | 0.815 | 0.809 | 0.807 | 0.667 |
+
+    | Decision Tree | 0.878 | 0.866 | 0.867 | 0.526 |
+
+    | ZeroR | * | * | * | 0.451 |
+
+
+    > [6] R. P. Cook and E. Y. Adash, ‘Clinical characteristics and outcomes of patients
+    with heart failure.’ J. Cardiology, vol. 306, no. 16, pp. 1794–1795 (2001).
+
+
+    > [7] A. M. Hernandez et al., ‘Relationship between physician-patient relationship
+    and outcomes in heart failure.’ JAMA, vol. 303, no. 17, pp. 1716–1722 (2010).
+
+
+    > [8] S. J. Williams et al., ‘Management of chronic heart failure: a summary report
+    of the American Heart Association/American Heart Association task force on practice:
+    guidelines.’ Circulation, vol. 128, no. 16, pp. 1812–1853 (2013).
+
+
+    > [9] Y. Chen et al., ‘Evaluation of artificial intelligence systems for the diagnosis
+    of diabetic disease.’ J. Int. Med Appl., vol. 99, no. 01, pp. 1–16, 2021).
+
+
+    Machine learning models have been used as a tool to assist in heart failure decision
+    making. We used the model to predict in different classes and levels of risk to
+    help clinicians decide the next best visit. The machine learning models: ZeroR,
+    NaiveBayes, IBK, Logistic Regression, Decision Tree, AdaBoost, and RandomForest;
+    were tested by Weka. Overall performance of the models with these excellent measures,
+    like Random Forest and Logistic regression, could be enhanced by data balancing
+    techniques.
+
+
+    # V. DISCUSSION
+
+
+    In our study, we tried to test and use machine learning to extensively predict
+    the risk level and class of CHF patients in clinical data. We observed that the
+    RandomForest and Logistic regression models were the best with confidence to predict
+    the best timing for the next visit with high accuracy of around 89%. We future
+    work with more datasets and more patient records are needed to test such models
+    which could save the healthcare system a significant lot of direct and indirect
+    costs and improve patients'' outcomes.
+
+
+    # VI. CONCLUSIONS
+
+
+    # REFERENCES
+
+
+    > [1] E. J. Benjamin et al., ‘Heart failure and stroke statistics–2019 update:
+    A report from the American heart association,’ Circulation, vol. 139, no. 10,
+    2019.'
+  md: '
+
+    # TABLE 2: PRECISION, F-MEASURE, AND ROC (CLASSBASED)
+
+
+    | Model | Precision | F-Measure | ROC | |
+
+    |---|---|---|---|---|
+
+    | Logistic Regression | 0.807 | 0.805 | 0.805 | 0.885 |
+
+    | RandomForest | 0.811 | 0.800 | 0.799 | 0.877 |
+
+    | AdaBoost | 0.710 | 0.738 | 0.726 | 0.865 |
+
+    | NaiveBayes | 0.747 | 0.709 | 0.698 | 0.860 |
+
+    | Multilayerceptron | 0.763 | 0.747 | 0.743 | 0.820 |
+
+    | Decision Tree | 0.775 | 0.767 | 0.766 | 0.792 |
+
+    | IBK | 0.726 | 0.722 | 0.712 | 0.772 |
+
+    | ZeroR | 0.487 | 0.487 | 0.487 | 0.451 |
+
+
+    > [2] Corason, R. F., de Groot, and J. J. van Linuis, ‘Heart failure.’ Cardiovascular,
+    vol. 50, no. 3, pp. 419–422 (2001).
+
+
+    > [3] L.-H. Tan, S. G. Williams, D. K. Han, and A. Cole-Sloan, ‘Definitions of
+    heart failure: are they universally agreed? A critical appraisal.’ Exp. Rev. Cardiology,
+    vol. 8, pp. 212–217 (2008).
+
+
+    > [4] P. Ponikowski et al., ‘2006 ESC Guidelines for the diagnosis and treatment
+    of acute heart failure. The Task Force for the diagnosis and treatment of acute
+    heart failure of the European Society of Cardiology (ESC). Developed with the
+    support of the European Heart Association (HFA). Eur. Heart Fail., vol. 18, no.
+    8, pp. 891–975, 2006).
+
+
+    > [5] G. C. Foster et al., ‘Association between performance and clinical outcomes
+    in patients with heart failure.’ JAMA, vol. 298, no. 1, pp. 61–70, 2007).
+
+
+    None of the models we have eliminated the bias from the unbalanced dataset. By
+    using the Stratified Folds to test the same dataset (unbalanced), we tested the
+    models and the results shown in table 3.
+
+
+    # TABLE 3: PRECISION, F-MEASURE AND ROC (STRATIFIED FOLDS MODELS)
+
+
+    | Model | Precision | F-Measure | ROC | |
+
+    |---|---|---|---|---|
+
+    | NaiveBayes | 0.855 | 0.829 | 0.839 | 0.861 |
+
+    | Multilayerceptron | 0.803 | 0.771 | 0.785 | 0.723 |
+
+    | RandomForest | 0.899 | 0.886 | 0.857 | 0.713 |
+
+    | IBK | 0.829 | 0.829 | 0.826 | 0.676 |
+
+    | Logistic Regression | 0.815 | 0.809 | 0.807 | 0.667 |
+
+    | Decision Tree | 0.878 | 0.866 | 0.867 | 0.526 |
+
+    | ZeroR | * | * | * | 0.451 |
+
+
+    > [6] R. P. Cook and E. Y. Adash, ‘Clinical characteristics and outcomes of patients
+    with heart failure.’ J. Cardiology, vol. 306, no. 16, pp. 1794–1795 (2001).
+
+
+    > [7] A. M. Hernandez et al., ‘Relationship between physician-patient relationship
+    and outcomes in heart failure.’ JAMA, vol. 303, no. 17, pp. 1716–1722 (2010).
+
+
+    > [8] S. J. Williams et al., ‘Management of chronic heart failure: a summary report
+    of the American Heart Association/American Heart Association task force on practice:
+    guidelines.’ Circulation, vol. 128, no. 16, pp. 1812–1853 (2013).
+
+
+    > [9] Y. Chen et al., ‘Evaluation of artificial intelligence systems for the diagnosis
+    of diabetic disease.’ J. Int. Med Appl., vol. 99, no. 01, pp. 1–16, 2021).
+
+
+    Machine learning models have been used as a tool to assist in heart failure decision
+    making. We used the model to predict in different classes and levels of risk to
+    help clinicians decide the next best visit. The machine learning models: ZeroR,
+    NaiveBayes, IBK, Logistic Regression, Decision Tree, AdaBoost, and RandomForest;
+    were tested by Weka. Overall performance of the models with these excellent measures,
+    like Random Forest and Logistic regression, could be enhanced by data balancing
+    techniques.
+
+
+    ## V. DISCUSSION
+
+
+    In our study, we tried to test and use machine learning to extensively predict
+    the risk level and class of CHF patients in clinical data. We observed that the
+    RandomForest and Logistic regression models were the best with confidence to predict
+    the best timing for the next visit with high accuracy of around 89%. We future
+    work with more datasets and more patient records are needed to test such models
+    which could save the healthcare system a significant lot of direct and indirect
+    costs and improve patients'' outcomes.
+
+
+    ## VI. CONCLUSIONS
+
+
+    ## REFERENCES
+
+
+    > [1] E. J. Benjamin et al., ‘Heart failure and stroke statistics–2019 update:
+    A report from the American heart association,’ Circulation, vol. 139, no. 10,
+    2019.
+
+    '
+  mdcn: '
+
+
+    # 表 2：精确率、F 值和 ROC（基于类别）
+
+
+    | 模型 | 精确率 | F 值 | ROC | |
+
+    |---|---|---|---|---|
+
+    | 逻辑回归 | 0.807 | 0.805 | 0.805 | 0.885 |
+
+    | 随机森林 | 0.811 | 0.800 | 0.799 | 0.877 |
+
+    | AdaBoost | 0.710 | 0.738 | 0.726 | 0.865 |
+
+    | 朴素贝斯 | 0.747 | 0.709 | 0.698 | 0.860 |
+
+    | 多层感知器 | 0.763 | 0.747 | 0.743 | 0.820 |
+
+    | 决策树 | 0.775 | 0.767 | 0.766 | 0.792 |
+
+    | IBK | 0.726 | 0.722 | 0.712 | 0.772 |
+
+    | ZeroR | 0.487 | 0.487 | 0.487 | 0.451 |
+
+
+    > [2] Corason, R. F., de Groot, and J. J. van Linuis, ‘Heart failure.’ Cardiovascular,
+    vol. 50, no. 3, pp. 419–422 (2001).
+
+
+    > [3] L.-H. Tan, S. G. Williams, D. K. Han, and A. Cole-Sloan, ‘Definitions of
+    heart failure: are they universally agreed? A critical appraisal.’ Exp. Rev. Cardiology,
+    vol. 8, pp. 212–217 (2008).
+
+
+    > [4] P. Ponikowski et al., ‘2006 ESC Guidelines for the diagnosis and treatment
+    of acute heart failure. The Task Force for the diagnosis and treatment of acute
+    heart failure of the European Society of Cardiology (ESC). Developed with the
+    support of the European Heart Association (HFA). Eur. Heart Fail., vol. 18, no.
+    8, pp. 891–975, 2006).
+
+
+    > [5] G. C. Foster et al., ‘Association between performance and clinical outcomes
+    in patients with heart failure.’ JAMA, vol. 298, no. 1, pp. 61–70, 2007).
+
+
+    我们所采用的模型均未消除不平衡数据集带来的偏差。通过使用分层折叠（Stratified Folds）对同一数据集（不平衡的），我们对模型进行了测试，结果如表3所示。
+
+
+    # 表 3：精确率、F 值和 ROC（分层折叠模型）
+
+
+    | 模型 | 精确率 | F 值 | ROC | |
+
+    |---|---|---|---|---|
+
+    | 朴素贝斯 | 0.855 | 0.829 | 0.839 | 0.861 |
+
+    | 多层感知器 | 0.803 | 0.771 | 0.785 | 0.723 |
+
+    | 随机森林 | 0.899 | 0.886 | 0.857 | 0.713 |
+
+    | IBK | 0.829 | 0.829 | 0.826 | 0.676 |
+
+    | 逻辑回归 | 0.815 | 0.809 | 0.807 | 0.667 |
+
+    | 决策树 | 0.878 | 0.866 | 0.867 | 0.526 |
+
+    | ZeroR | * | * | * | 0.451 |
+
+
+    > [6] R. P. Cook and E. Y. Adash, ‘Clinical characteristics and outcomes of patients
+    with heart failure.’ J. Cardiology, vol. 306, no. 16, pp. 1794–1795 (2001).
+
+
+    > [7] A. M. Hernandez et al., ‘Relationship between physician-patient relationship
+    and outcomes in heart failure.’ JAMA, vol. 303, no. 17, pp. 1716–1722 (2010).
+
+
+    > [8] S. J. Williams et al., ‘Management of chronic heart failure: a summary report
+    of the American Heart Association/American Heart Association task force on practice:
+    guidelines.’ Circulation, vol. 128, no. 16, pp. 1812–1853 (2013).
+
+
+    > [9] Y. Chen et al., ‘Evaluation of artificial intelligence systems for the diagnosis
+    of diabetic disease.’ J. Int. Med Appl., vol. 99, no. 01, pp. 1–16, 2021).
+
+
+    机器学习模型已被用于辅助心脏力竭决策的工具。我们使用模型来预测不同的类别和风险水平，以帮助临床医生决定最佳就诊时间。机器学习模型：ZeroR、朴素贝斯、IBK、逻辑回归、决策树、AdaBoost
+    和随机森林；已通过 Weka 进行测试。具有这些优秀指标的模型（如随机森林和逻辑回归）的整体性能可以通过数据平衡技术进一步提升。
+
+
+    ## 五、 讨论
+
+
+    在我们的研究中，我们尝试测试并使用机器学习对临床数据中的充心性心衰竭（CHF）患者的风险水平和类别进行广泛预测。我们观察到随机森林和逻辑回归模型在预测下次就诊时间方面最具可靠性，准确率约为
+    89%。未来需要更多的数据集和患者记录来测试此类模型，这些模型可以为医疗系统节省大量的直接和间接成本并改善患者预后。
+
+
+    ## 六、 结论
+
+
+    ## 参考文献
+
+
+    > [1] E. J. Benjamin et al., ‘Heart failure and stroke statistics–2019 update:
+    A report from the American heart association,’ Circulation, vol. 139, no. 10,
+    2019.
+
+
+    '
+  merge: 0

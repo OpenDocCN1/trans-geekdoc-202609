@@ -1,0 +1,265 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # Machine Learning for Exotic Metasurfaces
+
+
+    Deng Deng, Simao Ren, Kebin Fan, Jordan M. Malof, and Willie J. Padilla
+
+    Duke University, Durham, NC, 27708 USA
+
+
+    **Abstract—We introduce one deep neural network and an inverse neural method to
+    solve dimensional metasurface inverse design problem. We find that, even when
+    the solution is outside the geometry space, the neural method is still able to
+    find a metasurface design with low error.
+
+
+    through the NN using gradient descent. The inverse method uses a trained forward
+    model with high accuracy, along with a boundary loss, and gradient descent [3]
+
+
+    # II. RESULTS
+
+
+    In Fig 2 we show the results of the forward model (top) and the inverse model
+    (bottom). The NN result is shown as blue color, which is nearly underneath the
+    truth curve (gold) from simulation result. We use our inverse model to predict
+    a design, which is re-sampled to verify match (green curve).
+
+
+    We nest a different desired spectrum, such as the red curve in the bottom of Fig.
+    2, to test our inverse model. The inverse neural method returns our estimate and
+    a resulting spectrum (blue curve) which is the best possible given our parameter
+    space. It is also
+
+
+    HE machine learning (ML) and deep learning (DL) have had considerable impact on
+    the industry. [1] Companies use ML to optimize operations, marketing and advertising,
+    and improve customer service. There are numerous other examples of how ML/DL have
+    improved social media, retail, manufacturing, energy, and finance. Deep learning
+    has also been applied to solving problems in materials, urban planning and has
+    made substantial progress.
+
+
+    We use DL model to effectively solve intractable problems in materials science,
+    to obtain optimal solutions for a given goal – Figure 1 (a). Further, we design
+    an inverse method – termed neural – where desired frequency scattering is input,
+    and a neural network gives specific metasurface geometry to produce such a response,
+    as described in Fig. 1 (b).
+
+
+    Our forward model consists of a neural network (NN) where the geometry of the
+    metasurface unit-cell (1 1 a) is input, and fed through fully connected layers
+    of widths of 1000 neurons. The output of the NN consists of the absorptive spectrum
+    – predicted spectrum.
+
+
+    Predicted spectra are compared to ground truth spectra obtained from simulation,
+    and results are back propagate
+
+
+    ![](img/5403cd4c02750db7b69e98d744b393aa_0_0.png)
+
+
+    ![](img/5403cd4c02750db7b69e98d744b393aa_0_1.png)
+
+
+    Important to note that, our neural algorithm has only been used to match spectrum
+    between 100 and 250 Hz.
+
+
+    # III. SUMMARY
+
+
+    We have shown results of deep learning both for an accurate forward model, and
+    for an inverse model. We have used our approach to obtain an optimal geometry
+    necessary to achieve design
+
+
+    # REFERENCES
+
+
+    [1] Goodfellow, Y. Bengio, and A. Courville. Deep Learning, MIT Press, 2016.
+
+
+    [2] C. Nathaniel, Bohua Huang, Jordan M. Malof, and Willie J. Padilla, ''Deep
+    learning for all-dielectric metasurface design,'' Optics Express 27(29), 35553,
+    2019.
+
+
+    [3] Simao Ren, Willie J. Padilla, and Jordan Malof, ''Benchmarking Deep Inverse
+    Models over time, and the Neural-Adjustment method,'' 2019.
+
+
+    Fig. I. Schematic depicting the neural network architecture. In (a) geometry is
+    fed into a neural network model and an, (absorptivity), spectrum is predicted.
+    In (b), an accurate neural network forward model is used to solve the problem,
+    where a desired spectrum is input, and the model outputs the best metasurface
+    geometry to obtain the result.'
+  md: '# Machine Learning for Exotic Metasurfaces
+
+
+    Deng Deng, Simao Ren, Kebin Fan, Jordan M. Malof, and Willie J. Padilla
+
+    Duke University, Durham, NC, 27708 USA
+
+
+    Abstract—We introduce one deep neural network and an inverse neural method to
+    solve dimensional metasurface inverse design problem. We find that, even when
+    the solution is outside the geometry space, the neural method is still able to
+    find a metasurface design with low error.
+
+
+    HE machine learning (ML) and deep learning (DL) have had considerable impact on
+    the industry. [1] Companies use ML to optimize operations, marketing and advertising,
+    and improve customer service. There are numerous other examples of how ML/DL have
+    improved social media, retail, manufacturing, energy, and finance. Deep learning
+    has also been applied to solving problems in materials, urban planning and has
+    made substantial progress.
+
+
+    We use DL model to effectively solve intractable problems in materials science,
+    to obtain optimal solutions for a given goal – Figure 1 (a). Further, we design
+    an inverse method – termed neural – where desired frequency scattering is input,
+    and a neural network gives specific metasurface geometry to produce such a response,
+    as described in Fig. 1 (b).
+
+
+    Our forward model consists of a neural network (NN) where the geometry of the
+    metasurface unit-cell (1 1 a) is input, and fed through fully connected layers
+    of widths of 1000 neurons. The output of the NN consists of the absorptive spectrum
+    – predicted spectrum.
+
+
+    Predicted spectra are compared to ground truth spectra obtained from simulation,
+    and results are back propagate through the NN using gradient descent. The inverse
+    method uses a trained forward model with high accuracy, along with a boundary
+    loss, and gradient descent [3]
+
+
+    ![](img/5403cd4c02750db7b69e98d744b393aa_0_0.png)
+
+
+    ![](img/5403cd4c02750db7b69e98d744b393aa_0_1.png)
+
+
+    Important to note that, our neural algorithm has only been used to match spectrum
+    between 100 and 250 Hz.
+
+
+    ## II. RESULTS
+
+
+    In Fig 2 we show the results of the forward model (top) and the inverse model
+    (bottom). The NN result is shown as blue color, which is nearly underneath the
+    truth curve (gold) from simulation result. We use our inverse model to predict
+    a design, which is re-sampled to verify match (green curve).
+
+
+    We nest a different desired spectrum, such as the red curve in the bottom of Fig.
+    2, to test our inverse model. The inverse neural method returns our estimate and
+    a resulting spectrum (blue curve) which is the best possible given our parameter
+    space. It is also
+
+
+    ## III. SUMMARY
+
+
+    We have shown results of deep learning both for an accurate forward model, and
+    for an inverse model. We have used our approach to obtain an optimal geometry
+    necessary to achieve design
+
+
+    ## REFERENCES
+
+
+    [1] Goodfellow, Y. Bengio, and A. Courville. Deep Learning, MIT Press, 2016.
+
+
+    [2] C. Nathaniel, Bohua Huang, Jordan M. Malof, and Willie J. Padilla, ''Deep
+    learning for all-dielectric metasurface design,'' Optics Express 27(29), 35553,
+    2019.
+
+
+    [3] Simao Ren, Willie J. Padilla, and Jordan Malof, ''Benchmarking Deep Inverse
+    Models over time, and the Neural-Adjustment method,'' 2019.
+
+
+    Fig. I. Schematic depicting the neural network architecture. In (a) geometry is
+    fed into a neural network model and an, (absorptivity), spectrum is predicted.
+    In (b), an accurate neural network forward model is used to solve the problem,
+    where a desired spectrum is input, and the model outputs the best metasurface
+    geometry to obtain the result.
+
+    '
+  mdcn: '
+
+    # 针对奇异超表面的机器学习
+
+
+    Deng Deng, Simao Ren, Kebin Fan, Jordan M. Malof, and Willie J. Padilla
+
+    杜克大学，Durham, NC, 27708 USA
+
+
+    摘要—我们引入了一种深层神经网络和一种逆向神经网络方法来解决多维度超表面的逆向设计问题。我们发现，即使解决方案位于几何空间之外，神经方法仍然能够找到低误差的超表面设计。
+
+
+    机器学习（ML）和深度学习（DL）对工业产生了巨大影响。[1] 公司使用机器学习来优化运营、营销和广告，并改进客户服务。ML/DL 在改进社交媒体、零售、制造业、能源和金融的方面还有许多其他示例。深度学习也被应用于解决材料科学、城市规划方面的问题，并取得了实质性进展。
+
+
+    我们使用 DL 模型来有效解决材料科学中的棘手问题，为给定目标获取最优解决方案——图 1 (a)。此外，我们设计了一种名为“神经”的逆向方法——输入所需的频率散射，由神经网络给出特定的超表面几何形状以产生此类响应，如图
+    1 (b) 所示。
+
+
+    我们的正向模型由一个神经网络（NN）组成，其中超表面单元格的几何形状（1 1 a）作为输入，并通过宽度为 1000 个神经元的全连接层。神经网络的输出包含吸收光谱——预测光谱。
+
+
+    将预测光谱与从仿真中获得的真值光谱进行比较，结果通过梯度下降在神经网络中反向传播。逆向方法使用具有高精度的已训练正向模型，结合边界损失和梯度下降 [3]。
+
+
+    ![](img/5403cd4c02750db7b69e98d744b393aa_0_0.png)
+
+
+    ![](img/5403cd4c02750db7b69e98d744b393aa_0_1.png)
+
+
+    需要注意的是的是，我们的神经算法仅被用于匹配 100 到 250 Hz 之间的光谱。
+
+
+    ## II. 结果
+
+
+    在图 2 中，我们展示了正向模型（上）和逆向模型（下）的结果。神经网络的结果以蓝色显示，它几乎位于仿真结果的真实曲线（金色）下方。我们使用我们的逆向模型来预测设计，并重新采样以验证匹配（绿色曲线）。
+
+
+    我们嵌套了一个不同的所需光谱，例如图 2 底部的红色曲线，以测试我们的逆向模型。逆向神经方法返回我们的估计和生成的光谱（蓝色曲线），这在我们的参数空间内是最好的。它也是
+
+
+    ## III. 总结
+
+
+    我们展示了深度学习在精确正向模型和逆向模型方面的结果。我们使用我们的方法获取实现设计所需的最优几何
+
+
+    ## 参考文献
+
+
+    [1] Goodfellow, Y. Bengio, and A. Courville. Deep Learning, MIT Press, 2016.
+
+
+    [2] C. Nathaniel, Bohua Huang, Jordan M. Malof, and Willie J. Padilla, ''Deep
+    learning for all-dielectric metasurface design,'' Optics Express 27(29), 35553,
+    2019.
+
+
+    [3] Simao Ren, Willie J. Padilla, and Jordan Malof, ''Benchmarking Deep Inverse
+    Models over time, and the Neural-Adjustment method,'' 2019.
+
+
+    图 I. 神经网络架构示意图。在 (a) 中，几何形状被输入神经网络模型并输出，（吸收率），光谱。在 (b) 中，使用精确的神经网络正向模型来解决问题，其中输入所需的光谱，模型输出最佳超表面几何以获得结果。
+
+    '
+  merge: -1
