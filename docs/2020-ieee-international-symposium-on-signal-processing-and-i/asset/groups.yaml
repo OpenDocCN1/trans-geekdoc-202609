@@ -1,0 +1,1640 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # Machine learning applied to diabetes dataset
+
+    Quantum Classical classification
+
+
+    Danyal Maheshwari
+
+    eVida Research Group
+
+    University of Derby
+
+    Bilbao, Spain
+
+    danyal.maheshwari@uod.edu
+
+    Begona Garcia-Zapirin
+
+    eVida Research Group
+
+    University of Derby
+
+    Bilbao, Spain
+
+    mbgarciapi@uod.edu
+
+    Daniel Sierra-Soso
+
+    Computer science department
+
+    University of Louisville
+
+    Louisville,KY, USA
+
+    danielsiersoso@louville.edu
+
+
+    ***Abstract—** This paper presents a quantum version of machine learning (ML)
+    algorithm applied to a diabetes dataset. Diabetes is a sixth disease in the world
+    and unfortunately to millions are affected every year. Using various quantum (QC)
+    with Quantum Machine Learning (QML) techniques in the healthcare system to improve
+    and accelerate the accuracy of existing ML models. This quantum system tackles
+    a binary classification problem of patients with two different classes: patients
+    with diabetes and without diabetes. We compare classical and quantum algorithms
+    using Random Forest, Gradient Boosting, AdaBoost, XGBoost, Qboost.
+
+
+    ***Index Terms—** Binary classification, Type 2 Diabetes Mellitus, Qboost, Quantum
+    vs Classical computing.
+
+
+    Diabetes is the sixth cause of death in the world, but Type 2 diabetes mellitus
+    is a leading public health issue that presents a considerable risk involving [1–2].
+    46 million people are living with diabetes, 232 million people are living with
+    undiagnosed diabetes, 4.2 million mortalities happen annually [3]. This disease
+    can affect all the vital organs of the human body, which may cause some of the
+    major diseases such as blindness, renal failure, hypertension, and stroke. The
+    increasing risk factors of diabetes patients may rise to 700 million by 2045 worldwide,
+    374 million are growing at risk of Type 2 diabetes. 11 million children are living
+    with diabetes and 22 million newborns are affected during pregnancy [4]. In addition
+    to the intricacy and prevalence of T2DM may cause to increase the healthcare cost.
+    Some research shows that the controlling of the glycemic level is the
+
+
+    significant aspects to impede the demon order and intricacies of T2DM. The decrease
+    of glycaemia in patients with diabetes reduces the admission and fatality rate
+    of [5]. Several studies have worked on analyzing ML, and DL to predict acute outcomes
+    on the patient with T2DM [11][6][7–8]. All of these classical approaches which
+    use traditional computers. This paper uses quantum processing unit (QPU) and compares
+    it with the classical approach. QC which is exponentially and many have achieved
+    the extreme velocity. QC techniques are ready to attain the point where real-world
+    applications must be implemented in the outlook [7]. Can QC with QML techniques
+    in the healthcare system to improve and accelerate the accuracy of the existing
+    ML model allow the different approaches to understand complexity? The QML, such
+    as Qboost classifier applied to the diabetes datasets, to compare performance
+    with classical classifiers. This aims to provide useful information for research
+    in the application of real-world datasets to QML techniques [9]. This paper compares
+    the Classical and Quantum algorithms in terms of accuracy, specificity, and
+
+
+    # I. INTRODUCTION
+
+
+    This paper is structured in 5 sections. Section I is about the introduction of
+    QC, ML, and diabetes. Section II is about the classical and quantum algorithms.
+    Section IV covers the experiment design and evaluation of results whereas the
+    conclusion is in the last section.
+
+
+    # II. MATERIALS
+
+
+    A. Patient and Data
+
+    This research is based on the electronic health records (EHRs) of Oskaziteta (Baseline
+    Health Service). For this research, the analytical and clinical parameters information
+    were acquired from the PEST Database. In this DB, analysis was performed according
+    to the International Classification of Diseases Modified (ICD-CM), and scheduling
+    applied for stages system. It is the analytical, therapeutic and chemical category.
+    For, in 2010, the PEST (the DB of the Stratification Program) was launched with
+    the aim of'
+  - '[PAGE 1]
+
+
+    categorizing the Basque citizens with the John Hopkins Adjusted Clinical Groups-max
+    system [10]. A more comprehensive illustration is acquired from the preceding
+    bibliography [11]. Does the fact that type 2 diabetics arise at age but more often
+    at age 40 years or later, the patients are at age of 35 was eliminated. This was
+    established and accomplished for three periods (year: 2001-09-01 to 2008-08-31;
+    year: 2008-09-01 to 2010-08-31; year: 2010-09-01 to 2011-08-31). Throughout the
+    time, a patient was defined as T2DM if the sickness was set on a date before the
+    defined point (i.e., 2001-09-07, or 2019-09-08 and so on), furthermore, public
+    insurance was expected to be paid by the patient at the start of the year but
+    it was not necessary to hire for the whole year cycle. There were 116 295 patients
+    in 2001; 123 991 in 2002; 130 554 in 2003; and 134 421 in 2004. The intensity
+    of T2DM overall results were 149 015 [1].
+
+
+    +   1) Variables and Analysis: At this research variables are considered Like
+    Gene, Body Mass Index, Hemoglobin, LDL Cholesterol, Systolic and Diastolic blood
+    pressure. It was noted that the relationship of these parameters with T2DM was
+    not reflected. Therefore the prevalence of intric (minimum dataset) and the hospital
+    records were used. Hospital admission for acute myocardial infarction (MI), major
+    adjustment or avoidable hospitalizations as known as avoidable sensitive conditions
+    (ACSC) was determined for each patient period. In order to review the absence,
+    a list of 52 health problems was developed and specific criteria were defined
+    to be active during the date period from 2009/01/10 to 2018/01/31 by a methodology
+    previously reported by others [14].
+
+
+    From such 52 health problems, diabetes mellitus was predicted. Further, this set
+    of data was divided into two parts: (a) related, according to other studies, encompasses
+    seven diseases such as ischemic heart disease, stroke, heart failure, peripheral
+    neuropathy, feet, and diabetic retinopathy, and (b) unrelated acute cases that
+    to follow the other 44 health problems. The raw DB was formed by 321 patients.
+
+
+    # III. QUANTUM COMPUTING AND ARTIFICIAL INTELLIGENCE
+
+
+    # A. Quantum Computing
+
+
+    Quantum computing (QC) is a function of Quantum Mechanics and Quantum Information
+    [12]. The Quantum Information that contains the state of QC. QC has the properties
+    of Quantum Mechanics like Superposition and Tunneling [12]. Quantum Information
+    algorithms are used within the realm of Artificial Intelligence in Quantum system.
+    QML [13] is a field that aims to copy quantum algorithms to perform ML tasks [14],
+    QML makes a revolution in speed and performance [15].
+
+
+    # B. Artificial Intelligence
+
+
+    The binary classification (Duda 2001) is the classifier which distinguishes entity
+    into two categories as classification rule [16]. Dwave quantum engine has been
+    steered by a discrete optimization engine, which tasks formed as a unconstrained
+    binary optimization (QBO) [17][18].
+
+
+    Training a binary with the quantum adiabatic algorithm (Naveen et al., 2008),
+    which explained binary classification using ensemble method is measurable to the
+    QC. The tasks were designed in such a way that rapid linear classification of
+    group of weak learners and QC to modify the weights and process of learning that
+    attempts to reduce the error and number of weak learners [17][19].
+
+
+    # C. Artificial Intelligence Models
+
+
+    +   1) Decision Tree: A decision tree uses a structure to sort the data [14].
+    It uses non-leaf design to a variety of rules and leaves to identify identities
+    (+/-) for every data [20]. It is necessary to format a decision tree by alerting
+    with the entropy. Controlling the depth of a decision tree determines the subsets
+    of the datasets. Here $c_n$ is the feature detector, $w_n$ are the weights and
+    b is to be optimized.
+
+
+    +   2) Forest Classifier : Random forest (RF) is an ensemble method, it merges
+    various weak classifiers as one strong classifier. RF is use of decision tree
+    to create a weak classifier which strengthens the learners in the results of an
+    ensemble method [22][23].
+
+
+    +   3) Gradient Boosting Classifier : Gradient Boosting (XGB) is an ensemble method,
+    which combines learners to form one strong classifier. It constructs in a stage-wise
+    manner using any other boosting approach and generalizes by optimization of an
+    arbitrary differentiable loss function [24][25].
+
+
+    +   4) AdaBoost Classifier : AdaBoost is an ensemble method which is classifier
+    in an iterative fashion [26][27]. In each iteration, it chooses the one weak classifier
+    and re-learns to the weighted error function.
+
+
+    ```
+
+    $L = \sum_{n=1}^{N} \exp(-y_n \sum_{n=1}^{n} w_n c_n(x_n))
+
+    ```
+
+
+    ```
+
+    $R(w) = ||w||_o = \lambda \sum_{n=1}^{n} w_n^2$
+
+    ```
+
+
+    ```
+
+    $w^* = \arg \min_{w} (L(w) + R(w))$
+
+    ```'
+  md: '
+
+    ## Machine learning applied to diabetes dataset
+
+    Quantum Classical classification
+
+
+    Danyal Maheshwari
+
+    eVida Research Group
+
+    University of Derby
+
+    Bilbao, Spain
+
+    danyal.maheshwari@uod.edu
+
+
+    Begona Garcia-Zapirin
+
+    eVida Research Group
+
+    University of Derby
+
+    Bilbao, Spain
+
+    mbgarciapi@uod.edu
+
+
+    Daniel Sierra-Soso
+
+    Computer science department
+
+    University of Louisville
+
+    Louisville, KY, USA
+
+    danielsiersoso@louville.edu
+
+
+    ***Abstract—** This paper presents a quantum version of machine learning (ML)
+    algorithm applied to a diabetes dataset. Diabetes is a sixth disease in the world
+    and unfortunately to millions are affected every year. Using various quantum (QC)
+    with Quantum Machine Learning (QML) techniques in the healthcare system to improve
+    and accelerate the accuracy of existing ML models. This quantum system tackles
+    a binary classification problem of patients with two different classes: patients
+    with diabetes and without diabetes. We compare classical and quantum algorithms
+    using Random Forest, Gradient Boosting, AdaBoost, XGBoost, Qboost.
+
+
+    ***Index Terms—** Binary classification, Type 2 Diabetes Mellitus, Qboost, Quantum
+    vs Classical computing.
+
+
+    Diabetes is the sixth cause of death in the world, but Type 2 diabetes mellitus
+    is a leading public health issue that presents a considerable risk involving [1–2].
+    46 million people are living with diabetes, 232 million people are living with
+    undiagnosed diabetes, 4.2 million mortalities happen annually [3]. This disease
+    can affect all the vital organs of the human body, which may cause some of the
+    major diseases such as blindness, renal failure, hypertension, and stroke. The
+    increasing risk factors of diabetes patients may rise to 700 million by 2045 worldwide,
+    374 million are growing at risk of Type 2 diabetes. 11 million children are living
+    with diabetes and 22 million newborns are affected during pregnancy [4]. In addition
+    to the intricacy and prevalence of T2DM may cause to increase the healthcare cost.
+    Some research shows that the controlling of the glycemic level is the significant
+    aspects to impede the demon order and intricacies of T2DM. The decrease of glycaemia
+    in patients with diabetes reduces the admission and fatality rate of [5]. Several
+    studies have worked on analyzing ML, and DL to predict acute outcomes on the patient
+    with T2DM [11][6][7–8]. All of these classical approaches which use traditional
+    computers. This paper uses quantum processing unit (QPU) and compares it with
+    the classical approach. QC which is exponentially and many have achieved the extreme
+    velocity. QC techniques are ready to attain the point where real-world applications
+    must be implemented in the outlook [7]. Can QC with QML techniques in the healthcare
+    system to improve and accelerate the accuracy of the existing ML model allow the
+    different approaches to understand complexity? The QML, such as Qboost classifier
+    applied to the diabetes datasets, to compare performance with classical classifiers.
+    This aims to provide useful information for research in the application of real-world
+    datasets to QML techniques [9]. This paper compares the Classical and Quantum
+    algorithms in terms of accuracy, specificity, and.
+
+
+    ## I. INTRODUCTION
+
+
+    This paper is structured in 5 sections. Section I is about the introduction of
+    QC, ML, and diabetes. Section II is about the classical and quantum algorithms.
+    Section IV covers the experiment design and evaluation of results whereas the
+    conclusion is in the last section.
+
+
+    ## II. MATERIALS
+
+
+    ### A. Patient and Data
+
+    This research is based on the electronic health records (EHRs) of Oskaziteta (Baseline
+    Health Service). For this research, the analytical and clinical parameters information
+    were acquired from the PEST Database. In this DB, analysis was performed according
+    to the International Classification of Diseases Modified (ICD-CM), and scheduling
+    applied for stages system. It is the analytical, therapeutic and chemical category.
+    For, in 2010, the PEST (the DB of the Stratification Program) was launched with
+    the aim of categorizing the Basque citizens with the John Hopkins Adjusted Clinical
+    Groups-max system [10]. A more comprehensive illustration is acquired from the
+    preceding bibliography [11]. Does the fact that type 2 diabetics arise at age
+    but more often at age 40 years or later, the patients are at age of 35 was eliminated.
+    This was established and accomplished for three periods (year: 2001-09-01 to 2008-08-31;
+    year: 2008-09-01 to 2010-08-31; year: 2010-09-01 to 2011-08-31). Throughout the
+    time.
+
+
+    ## III. QUANTUM COMPUTING AND ARTIFICIAL INTELLIGENCE
+
+
+    ### A. Quantum Computing
+
+    Quantum computing (QC) is a function of Quantum Mechanics [12]. QC techniques
+    are ready to attain the point where real-world applications must be implemented
+    in the outlook [7]. Can QC with QML techniques in the healthcare system to improve
+    and accelerate the accuracy of the existing ML model allow the different approaches
+    to understand complexity? The QML, such as Qboost classifier applied to the diabetes
+    datasets, to compare performance with classical classifiers.
+
+
+    ### B. Artificial Intelligence
+
+    The research in application of real-world datasets to QML techniques [9]. This
+    paper compares the Classical and Quantum algorithms in terms of accuracy, specificity,
+    and.
+
+    '
+  mdcn: '
+
+
+    ## 机器学习应用于糖尿病数据集
+
+    量子与经典分类
+
+
+    Danyal Maheshwari
+
+    eVida 研究小组
+
+    德比大学
+
+    西班牙比尔巴鄂
+
+    danyal.maheshwari@uod.edu
+
+
+    Begona Garcia-Zapirin
+
+    eVida 研究小组
+
+    德比大学
+
+    西班牙比尔巴鄂
+
+    mbgarciapi@uod.edu
+
+
+    Daniel Sierra-Soso
+
+    计算机科学系
+
+    路易斯维尔大学
+
+    美国肯塔基州路易斯维尔
+
+    danielsiersoso@louville.edu
+
+
+    ***摘要—** 本介绍了一种应用于糖尿病数据集的机器学习（ML）算法的量子版本。糖尿病是世界第六大疾病，遗憾的是，每年有数百万人受影响。在医疗保健系统中使用各种量子（QC）结合量子机器学习（QML）技术，以提高和加速现有机器学习模型的准确性。该量子系统解决了两个不同类患者的二分类分类问题：糖尿病患者和非糖尿病患者。我们比较了使用随机森林、梯度提升、AdaBoost、XGBoost
+    和 Qboost 的经典算法与量子算法。
+
+
+    ***索引术—** 二分类分类、2 型糖尿病、Qboost、量子与经典计算。
+
+
+    糖尿病是全球第六大死因，但 2 型糖尿病是一个重大的公共健康问题，构成了巨大的风险 [1–2]。有 4600 万糖尿病患者，2.32 亿人患有未诊断的糖尿病，每年有
+    420 万人死亡 [3]。这种疾病会影响人体的所有重要器官，可能导致盲目、肾衰竭、高血压和中风等某些主要疾病。全球糖尿病患者的风险因素到 2045 年可能会增加到
+    7 亿，其中 3.74 亿面临 2 型糖尿病的风险。1100 万儿童患有糖尿病，2200 万新生在怀孕期间受到影响 [4]。此外，T2DM 的复杂性和流行性可能会导致医疗成本增加。一些研究表明，控制血糖水平是阻止
+    T2DM 进展和复杂化的重要方面。糖尿病患者血糖的降低减少了入院率和死亡率 [5]。已有若干研究致力于分析机器学习和深度学习来预测 T2DM 患者的急性结果
+    [11][6][7–8]。所有这些经典方法都使用传统计算机。本文使用了量子处理单元（QPU）并将其与经典方法进行比较。QC 是指数级的，且许多技术已经实现了极高的速度。QC
+    技术已准备好达到在未来必须实现现实世界应用的水平 [7]。在医疗保健系统中使用 QML 技术的 QC 来提高和加速现有机器学习模型的准确性，是否能允许不同的方法理解复杂性？量子机器学习，例如应用于糖尿病数据集的
+    Qboost 分类器，将其与经典分类器进行性能比较。这为将真实世界数据集应用于 QML 技术的研究提供了有用信息 [9]。本文从准确性、特异性等方面比较了经典算法和量子算法。
+
+
+    ## I. 引言
+
+
+    本文由 5 部分组成。第一部分介绍量子计算、机器学习和糖尿病。第二部分介绍经典算法和量子算法。第四部分涵盖了实验设计和结果评估，而结论在最后部分。
+
+
+    ## II. 材料
+
+
+    ### A. 患者与数据
+
+    本研究基于 Oskaziteta（基础健康服务）的电子健康记录（EHRs）。在本研究中，分析和临床参数信息是从 PEST 数据库获取的。在该数据库中，分析是根据国际疾病分类修订版（ICD-CM）进行的，并应用了分期系统调度。它属于分析、治疗和化学类别。2010
+    年，PEST（分层计划数据库）启动，旨在根据约翰·霍普金斯调整临床组-max 系统对巴斯克公民进行分类 [10]。从之前的文献中可以获得更详细的说明 [11]。关于
+    2 型糖尿病出现在特定年龄（但更多发生在 40 岁或以后），患者在 35 岁的情况已被排除。这是在三个时期内建立并完成的（年份：2001-09-01 至 2008-08-31；年份：2008-09-01
+    至 2010-08-31；年份：2010-09-01 至 2011-08-31）。贯穿期间。
+
+
+    ## III. 量子计算与人工智能
+
+
+    ### A. 量子计算
+
+    量子计算（QC）是量子力学的功能 [12]。QC 技术已准备好达到在未来必须实现现实世界应用的水平 [7]。在医疗保健系统中使用 QML 技术的 QC 来提高和加速现有机器学习模型的准确性，是否能允许不同的方法理解复杂性？量子机器学习，例如应用于糖尿病数据集的
+    Qboost 分类器，将其与经典分类器进行性能比较。
+
+
+    ### B. 人工智能
+
+    将真实世界数据集应用于 QML 技术的研究 [9]。本文从准确性、特异性等方面比较了经典算法和量子算法。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    Whereas, $L(\omega)$ is the loss function, and $R(\omega)$ is the regularization
+    and칙 to be simple. The complex selection of the labels are not based on the 0-norm,
+    $\|\omega\|_0$, which gives the number of non-zero weights. $\lambda$ controls
+    the relative importance of the regularization[18][19].
+
+
+    # D. Quantum Computing Model
+
+
+    +   1) QClassifier : Qboost is the ensemble learning method using Quantum Annealing
+    (QA). In order to utilize the maximum power of DWA, the preparation of the objective
+    function with QUBO is [15]. To perform, we altered Adaboost by substituting weighted
+    error function with QUBO [19].
+
+
+    ```
+
+    $w^* = \arg\min_{w} \left(\sum_{n=1}^{N} w_n C_n(x_n, y_n) \right) + \lambda|\w|_0$
+
+    ```
+
+
+    Where, $C(x)$ is the strong classifier assembly in each iteration, it chooses
+    one weak classifier and learns to reduce a weighted error function. The weights
+    are modified and normalized to ensure that the sum of weights is equal to 1.
+
+
+    The first part illustrates the within the weak classifier and the correct label.
+    The second part illustrates the degree of weak classifiers to be used in the final
+    classifier. $\lambda$ is a regularization variable that adapts the number of weak
+    classifiers which concern the total Hamiltonian [19].
+
+
+    Over there is a requirement to maximize this Hamiltonian by acknowledging the
+    first part of the objective function and the second part as a constraint. Although
+    using QA allows us to create an amalgamation of weak classifiers the first part
+    is for training data.
+
+
+    # IV. EXPERIMENT DESIGN AND RESULTS
+
+
+    # A. Experiment Design
+
+
+    The training of the models is implemented using Python 3 and ML scikit library.
+    The help of the API (Application Programming Interface) to prepare and acquire
+    the DWA system Quantum Processing Unit (QPU). Whereas the DWA system allows Qboost
+    to run on a dedicated QPU. The training data is used to build each classifier,
+    and the test data is compared with classifiers with given known labels. The labels
+    +1 and -1 are representing diabetes with acute and diabetes without acute respect,
+    respectively, we split the data into 80% for training and 20% for testing, keeping
+    the same ratio of classes in the subset (50% of +1 and 50% of -1).
+
+
+    Ensemble methods [25] construct a strong classifier to enhance the predictive
+    model by gathering all weak classifiers: like bagging, boosting and voting to
+    improve prediction.
+
+
+    The ensemble methods to train the classifiers with training data sets of the dataset
+    as shown in fig. 1. In the bagging, data factors have a similar probability to
+    emerge in the dataset before they are
+
+
+    ![](img/fce06e244a7612f97c419554abb5ecf6_2_0.png)
+
+
+    collected in the dataset. An additional difference that bagging is parallelizable,
+    but boosting is essential to be run one after another.
+
+
+    The Decision Tree, Random Forest, XGB, and Qboost are used as a weak and strong
+    classifier. In order to use the maximum power of DWA, the preparation of the objective
+    function with QUBO is required. Therefore, by replacing the exponential function
+    as Adaboost with the following quadratic loss where the regularization is added
+    to enable control of weight sparsity. Qboost uses Quantum Annealing to optimize
+    the best combination of classifiers
+
+
+    In the ensemble members, all classifiers iterate repeatedly. it chooses the weak
+    classifier and re-reduces to a weighted error function. The voting model has two
+    types of requirements for its collection of classifiers: that are several classifiers,
+    and to be diverse [22]. The voting model 1 (Decision Tree, Random Forest, XGB
+    and Adaboost), Model 2 (Random Forest and XGB) can create an individual voting
+    system based on estimates, to get improved prediction from the quantum classifier.
+
+
+    The QC classifiers like Qboost post, Model 1 and 2 all classifiers. Qboost puts
+    on (Decision Tree, Random Forest, XGB and Adaboost), Model 1 consists on the quantum
+    classifier, Model 2 puts on (voting model 2 and Qboost) which build new classifier
+    for lasts on the quantum system [19]. Selecting the parameters to train the classifiers
+    to achieve better results. Ensemble learning involves preparing several weak classifiers
+    and combining the results of all these predictors to obtain the final prediction
+    from quantum state.
+
+
+    The number of nodes is the number of nodes along the longest path from the root
+    down to the farthest leaf node, tuning the weights, of estimators and the hyperparameters
+    of weak and strong classifiers along'
+  - '[PAGE 3]
+
+
+    # 2020 IEEE International Symposium on Signal Processing and Information Technology
+    (ISSPIT)
+
+
+    with regularization of lambda ($\lambda$) for Qboot, in terms of constructing
+    the QBO[18]
+
+
+    In order to analyze the behavior of the classifiers the metrics used are: accuracy,
+    precision, recall and specificity. Specificity is vital in medical disease classification,
+    which gives additional information about the classifier of the data. The obtained
+    accuracies of each classifier are depicted in tables 1 to 1.
+
+
+    To analyze the implemented model of our system by fetching the wellknown stands
+    of the confusion matrix [29], precision, recall, accuracy, f-score, and specificity
+    [30][31]. The formulas for each entity are given:
+
+
+    TABLE II
+
+    RANDOM CLASSIFIER
+
+    | Classes | Precision | Recall | F1-Score | Specificity |
+
+    |---|---|---||
+
+    | Diabetes with Acute Diabetes | 0.65 | 0.69 | 0.67 | 0.69 |
+
+    | Diabetes without Acute Diabetes | 0.67 | 0.64 | 0.66 | 0.64 |
+
+    | Weighted Avg | 0.67 | 0.67 | 0.67 | |
+
+    | Accuracy | 0.6725 | | | |
+
+    | Time | 0.729s | | | |
+
+
+    ```
+
+    $Precision = \frac{TP}{TP + FP}$ (7)
+
+    ```
+
+
+    ```
+
+    $Accuracy = \frac{TP + TN}{TP + FP + FN}$ (8)
+
+    ```
+
+
+    ```
+
+    $F1 - Score = 2 \frac{Precision \times Recall}{Precision + Recall}$ (9)
+
+    ```
+
+
+    ```
+
+    $Recall = \frac{TP}{TP + FN}$ (10)
+
+    ```
+
+
+    TABLE III
+
+    XGBoost CLASSIFI
+
+    | Classes | Precision | Recall | F1-Score | Specificity |
+
+    |---|---|---|---||
+
+    | Diabetes with Acute Diabetes | 0.67 | 0.72 | 0.69 | 0.72 |
+
+    | Diabetes without Acute Diabetes | 0.7 | 0.64 | 0.64 |
+
+    | Weighted Avg | 0.68 | 0.68 | 0.68 | 0.68 |
+
+    | Accuracy | 0.6820 | | | |
+
+    | Time | 0.809s | | | |
+
+
+    ```
+
+    $Specificity = \frac{TN}{TN + FP}$
+
+    ```
+
+
+    Where TP stands for true positive, FP represents false positive, TN means true
+    negative, and FN represents false negative.
+
+
+    # B. Results
+
+
+    TABLE IV
+
+    AdaBoost CLASSIFI
+
+    | Classes | Precision | Recall | F1-Score | Specificity |
+
+    |---|---|---|---||
+
+    | Diabetes with Acute Diabetes | 0.66 | 0.64 | 0.67 | 0.68 |
+
+    | Diabetes without Acute Diabetes | 0.67 | 0.68 | 0.66 | 0.64 |
+
+    | Weighted Avg | 0.69 | 0.68 | 0.67 | 0.68 |
+
+    | Accuracy | 0.6607 | | | |
+
+    | Time | 3.367s | | | |
+
+
+    In this study, CPU-based algorithms (Decision Trees, Random Forest, XGB, Voting
+    Model 1 and Voting Model 2) and QPU-based classifiers (Qboot, QbootPlus, New Model
+    1 and New Model 2) are used to solve a binary classification problem
+
+
+    Table 1 to 10 are reported using the validation metrics presented above. The classifiers
+    on which we have focused: Voting Model 1, Voting Model 2, Qboot plus, New Model
+    1 and New Model 2. Precis our classifiers perform better on datasets with an accuracy
+    of 69.99%, 68.38%, 68.10%, 69.09% and 68.38%.
+
+
+    TABLE I
+
+    DECISION CLASSIFI
+
+    | Classes | Precision | Recall | F1-Score | Specificity |
+
+    |---|---|---|---||
+
+    | Diabetes with Acute Diabetes | 0.66 | 0.68 | 0.6 | 0.6 |
+
+    | Diabetes without Acute Diabetes | 0.63 | 0.63 | 0.68 |
+
+    | Weighted Avg | 0.64 | 0.64 | 0.63 | 0.64 |
+
+    | Accuracy | 0.6412 | | | |
+
+    | Time | 0.0425 | | |
+
+
+    TABLE V
+
+    VOTING MODEL 1
+
+    | Classes | Precision | Recall | F1-Score | Specificity |
+
+    |---|---|---|---||
+
+    | Diabetes with Acute Diabetes | 0.69 | 0.69 | 0.69 | 0.69 |
+
+    | Diabetes without Acute Diabetes | 0.68 | 0.68 | 0.68 | 0.68 |
+
+    | Weighted Avg | 0.69 | 0.69 | 0.69 | 0.69 |
+
+    | Accuracy | 0.6909 | | | |
+
+    | Time | 19.202s | | |
+
+
+    TABLE VI
+
+    VOTING MODEL 2
+
+    | Classes | Precision | Recall | F1-Score | Specificity |
+
+    |---|---|---|---||
+
+    | Diabetes with Acute Diabetes | 0.62 | 0.72 | 0.70 | 0.72 |
+
+    | Diabetes without Acute Diabetes | 0.74 | 0.64 | 0.68 |
+
+    | Weighted Avg | 0.68 | 0.68 | 0.68 | 0.68 |
+
+    | Accuracy | 0.6838 | | | |
+
+    | Time | 3.632s | | |
+
+
+    Our proposed models have better accuracies, specificity''s, and computational
+    time in comparison with classical Model 1 and Voting Model 2. The Quantum algorithms
+    perform better than the classical algorithms in terms of time of training and
+    testing of classical models, like Voting Model 1, Voting Model 2 are 19s, and
+    3.632s.
+
+
+    whereas the QPU running time of Qboot, Qboot plus, and New Model 2 classifiers
+    are 0.346s, 0.347s, and 0.347s respectively, the quantum system is ~55 times faster
+    than the classical system on diabetes datasets, as shown in table 11 and fig 2
+    which compares the results of all the classifiers. To ensure the authenticity
+    and reliability of the'
+  md: '
+
+    Whereas, $L(\omega)$ is the loss function, and $R(\omega)$ is the regularization
+    and term to be simple. The complex selection of the labels are not based on the
+    0-norm, $\|\omega\|_0$, which gives the number of non-zero weights. $\lambda$
+    controls the relative importance of the regularization[18][19].
+
+
+    ## D. Quantum Computing Model
+
+
+    - 1) QClassifier : Qboost is the ensemble learning method using Quantum Annealing
+    (QA). In order to utilize the maximum power of DWA, the preparation of the objective
+    function with QUBO is [15]. To perform, we altered Adaboost by substituting weighted
+    error function with QUBO [19].
+
+
+    ```
+
+    $w^* = \arg\min_{w} \left(\sum_{n=1}^{N} w_n C_n(x_n, y_n) \right) + \lambda|\w|_0$
+
+    ```
+
+
+    Where, $C(x)$ is the strong classifier assembly in each iteration, it chooses
+    one weak classifier and learns to reduce a weighted error function. The weights
+    are modified and normalized to ensure that the sum of weights is equal to 1.
+
+
+    The first part illustrates the within the weak classifier and the correct label.
+    The second part illustrates the degree of weak classifiers to be used in the final
+    classifier. $\lambda$ is a regularization variable that adapts the number of weak
+    classifiers which concern the total Hamiltonian [19].
+
+
+    Over there is a requirement to maximize this Hamiltonian by acknowledging the
+    first part of the objective function and the second part as a constraint. Although
+    using QA allows us to create an amalgamation of weak classifiers the first part
+    is for training data.
+
+
+    ## IV. EXPERIMENT DESIGN AND RESULTS
+
+
+    ### A. Experiment Design
+
+
+    The training of the models is implemented using Python 3 and ML scikit library.
+    The help of the API (Application Programming Interface) to prepare and acquire
+    the DWA system Quantum Processing Unit (QPU). Whereas the DWA system allows Qboost
+    to run on a dedicated QPU. The training data is used to build each classifier,
+    and the test data is compared with classifiers with given known labels. The labels
+    +1 and -1 are representing diabetes with acute and diabetes without acute respect
+    respectively, we split the data into 80% for training and 20% for testing, keeping
+    the same ratio of classes in the subset (50% of +1 and 50% of -1).
+
+
+    Ensemble methods [25] construct a strong classifier to enhance the predictive
+    model by gathering all weak classifiers: like bagging, boosting and voting to
+    improve prediction.
+
+
+    The ensemble methods to train the classifiers with training data sets of the dataset
+    as shown in fig. 1. In the bagging, data factors have a similar probability to
+    emerge in the dataset before they are
+
+
+    ![](img/fce06e244a7612f97c419554abb5ecf6_2_0.png)
+
+
+    collected in the dataset. An additional difference that bagging is parallelizable,
+    but boosting is essential to be run one after another.
+
+
+    The Decision Tree, Random Forest, XGB, and Qboost are used as a weak and strong
+    classifier. In order to use the maximum power of DWA, the preparation of the objective
+    function with QUBO is required. Therefore, by replacing the exponential function
+    as Adaboost with the following quadratic loss where the regularization is added
+    to enable control of weight sparsity. Qboost uses Quantum Annealing to optimize
+    the best combination of classifiers
+
+
+    In the ensemble members, all classifiers iterate repeatedly. it chooses the weak
+    classifier and re-reduces to a weighted error function. The voting model has two
+    types of requirements for its collection of classifiers: that are several classifiers,
+    and to be diverse [22]. The voting model 1 (Decision Tree, Random Forest, XGB
+    and Adaboost), Model 2 (Random Forest and XGB) can create an individual voting
+    system based on estimates, to get improved prediction from the quantum classifier.
+
+
+    The QC classifiers like Qboost post, Model 1 and 2 all classifiers. Qboost puts
+    on (Decision Tree, Random Forest, XGB and Adaboost), Model 1 consists on the quantum
+    classifier, Model 2 puts on (voting model 2 and Qboost) which build new classifier
+    for lasts on the quantum system [19]. Selecting the parameters to train the classifiers
+    to achieve better results. Ensemble learning involves preparing several weak classifiers
+    and combining the results of all these predictors to obtain the final prediction
+    from quantum state.
+
+
+    The number of nodes is the number of nodes along the longest path from the root
+    down to the farthest leaf node, tuning the weights, of estimators and the hyperparameters
+    of weak and strong classifiers along 2020 IEEE International Symposium on Signal
+    Processing and Information Technology (ISSP) with regularization of ($\lambda$)
+    for Qboot, in terms of constructing the QBO[18]. In order to analyze the behavior
+    of the classifiers the metrics used are: accuracy, precision, recall and specificity.
+    Specificity is vital in medical classification, which gives additional information
+    about the classifier of the data. The obtained accuracies of each classifier are
+    depicted in tables 1 to 1. To analyze the implemented model of our system by fetching
+    the confusion matrix [29], precision, recall, accuracy, f-score, and specificity
+    [30]. The formulas for each entity are given:
+
+
+    | TABLE II RANDOM CLASSIFIER | Precision | Recall | F1-Score | Specificity |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | Diabetes with Acute Diabetes | 0.65 | 0.69 | 0.67 | 0.69 |
+
+    | Diabetes without Acute Diabetes | 0.67 | 0.64 | 0.66 | 0.64 |
+
+    | Weighted Avg | 0.67 | 0.67 | 0.67 | |
+
+    | Accuracy | 0.6725 | | | |
+
+    | Time | 0.729s | | | |
+
+
+    $Precision = \frac{TP}{TP + FP}$ (7)
+
+    $Accuracy = \frac{TP + TN}{TP + FN}$ (8)
+
+    $F1 - Score = 2 \frac{Precision \times Recall}{Precision + Recall}$ (9)
+
+    $Recall = \frac{TP}{TP + FN}$ (10)
+
+
+    | TABLE III XGBoost CLASSIFI | Precision | Recall | F1-Score | Specificity |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | Diabetes with Acute Diabetes | 0.67 | 0.72 | 0.69 | 0.72 |
+
+    | Diabetes without Acute Diabetes | 0.7 | 0.64 | 0.64 | |
+
+    | Weighted Avg | 0.68 | 0.68 | 0.68 | 0.68 |
+
+    | Accuracy | 0.6820 | | | |
+
+    | Time | 0.809s | | | |
+
+
+    $Specificity = \frac{TN}{TN + FP}$ Where TP stands for true positive, FP represents
+    false positive, TN means true negative, and FN represents false negative.
+
+
+    | TABLE IV AdaBoost CLASSIFI | Precision | Recall | F1-Score | Specificity |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | Diabetes with Acute Diabetes | 0.66 | 0.64 | 0.67 | 0.68 |
+
+    | Diabetes without Acute Diabetes | 0.67 | 0.68 | 0.66 | 0.64 |
+
+    | Weighted Avg | 0.69 | 0.68 | 0.67 | 0.68 |
+
+    | Accuracy | 0.6607 | | | |
+
+    | Time | 3.367s | | | |
+
+
+    ### B. Results
+
+
+    In this study, CPU-based algorithms (Decision Trees, Random Forest, XGB, Voting
+    Model 1 and Voting Model 2) and QPU-based classifiers (Qboot, QbootPlus, New Model
+    1 and New Model 2) are used to solve a binary classification problem. Table 1
+    to 10 are reported using the validation metrics presented above. The classifiers
+    on which we have focused: Voting Model 1, Voting Model 2, Qboot plus, New Model
+    1 and New Model 2. Our classifiers perform better on datasets with an accuracy
+    of 69.99%, 68.38%, 68.10%, 69.09% and 68.38%.
+
+
+    | TABLE I DECISION CLASSIFI | Precision | Recall | F1-Score | Specificity |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | Diabetes with Acute Diabetes | 0.66 | 0.68 | 0.6 | 0.6 |
+
+    | Diabetes without Acute Diabetes | 0.63 | 0.63 | 0.68 | |
+
+    | Weighted Avg | 0.64 | 0.64 | 0.63 | 0.64 |
+
+    | Accuracy | 0.6412 | | | |
+
+    | Time | 0.0425 | | | |
+
+
+    | TABLE V VOTING MODEL 1 | Precision | Recall | F1-Score | Specificity |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | Diabetes with Acute Diabetes | 0.69 | 0.69 | 0.69 | 0.69 |
+
+    | Diabetes without Acute Diabetes | 0.68 | 0.68 | 0.68 | 0.68 |
+
+    | Weighted Avg | 0.69 | 0.69 | 0.69 | 0.69 |
+
+    | Accuracy | 0.6909 | | | |
+
+    | Time | 19.202s | | | |
+
+
+    | TABLE VI VOTING MODEL 2 | Precision | Recall | F1-Score | Specificity |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | Diabetes with Acute Diabetes | 0.62 | 0.72 | 0.70 | 0.72 |
+
+    | Diabetes without Acute Diabetes | 0.74 | 0.64 | 0.68 | |
+
+    | Weighted Avg | 0.68 | 0.68 | 0.68 | 0.68 |
+
+    | Accuracy | 0.6838 | | | |
+
+    | Time | 3.632s | | | |
+
+
+    Our proposed models have better accuracies, specificity''s, and computational
+    time in comparison with classical Model 1 and Voting Model 2. The Quantum algorithms
+    perform better than the classical algorithms in terms of time of training and
+    testing of classical models, like Voting Model 1, Voting Model 2 are 19s, and
+    3.632s.
+
+
+    whereas the QPU running time of Qboot, Qboot plus, and New Model 2 classifiers
+    are 0.346s, 0.347s, and 0.347s respectively, the quantum system is ~55 times faster
+    than the classical system on diabetes datasets, as shown in table 11 and fig 2
+    which compares the results of all the classifiers. To ensure the authenticity
+    and reliability of the
+
+    '
+  mdcn: '
+
+    其中，$L(\omega)$ 是损失函数，$R(\omega)$ 是为了使模型简洁的正则化项。标签的复杂选择并非基于 0 范数 $\|\omega\|_0$，该范数表示非零权重的数量。$\lambda$
+    控制着正则化的相对重要性 [18][19]。
+
+
+    ## D. 量子计算模型
+
+
+    - 1) QClassifier（量子分类器）：Qboost 是一种使用量子退火（QA）的集成学习方法。为了充分利用 DWA 的最大能力，需要使用 QUBO
+    准备目标函数 [15]。为了实现这一点，我们通过用 QUBO 替换加权误差函数改进了 Adaboost [19]。
+
+
+    ```
+
+    $w^* = \arg\min_{w} \left(\sum_{n=1}^{N} w_n C_n(x_n, y_n) \right) + \lambda|\w|_0$
+
+    ```
+
+
+    其中，$C(x)$ 是每次迭代中的强分类器组合，它选择一个弱分类器并学习减少加权误差函数。权重会经过修改和归一化，以确保权重之和等于 1。
+
+
+    第一部分说明了弱分类器内部与正确标签的关系。第二部分说明了用于最终分类器的弱分类器程度。$\lambda$ 是一个正则化变量，根据总哈密顿量自适应弱分类器的数量
+    [19]。
+
+
+    这里要求通过将目标函数的第一部分视为已知、第二部分视为约束来最大化该哈密顿量。虽然使用 QA 允许我们创建弱分类器的混合，但第一部分是用于训练数据的。
+
+
+    ## IV. 实验设计与结果
+
+
+    ### A. 实验设计
+
+
+    模型的训练使用 Python 3 和 ML scikit 库实现。借助 API（应用程序编程接口）来准备和获取 DWA 系统的量子处理单元（QPU）。而 DWA
+    系统允许 Qboost 运行在专用的 QPU 上。训练数据用于构建每个分类器，测试数据则与给定已知标签的分类器进行比较。标签 +1 和 -1 分别代表有急性糖尿病和无急性急性糖尿病，我们将数据分为
+    80% 的训练集和 20% 的测试集，并保持子集中类的比例相同（50% 的 +1 和 50% 的 -1）。
+
+
+    集成方法 [25] 通过汇集所有弱分类器来构建强分类器，以增强预测模型：如通过 bagging、boosting 和 voting 来改进预测。
+
+
+    使用数据集的训练数据集来训练分类器的集成方法如图 1 所示。在 bagging 中，数据因子在被收集到数据集中之前具有相似的出现概率。
+
+
+    ![](img/fce06e244a7612f97c419554abb5ecf6_2_0.png)
+
+
+    额外的区别是 bagging 是并行的，而 boosting 必须逐个连续运行。
+
+
+    决策树、随机森林、XGB 和 Qboost 被用作弱分类器和强分类器。为了充分利用 DWA 的最大能力，需要使用 QUBO 准备目标函数。因此，通过将 Adaboost
+    中的指数函数替换为以下二次损失，并添加正则化以能够控制权重的稀疏性。Qboost 使用量子退火来优化分类器的最佳组合。
+
+
+    在集成成员中，所有分类器反复迭代。它选择弱分类器并重新减少加权误差函数。投票模型对其分类器集合有两类要求：即要有若干个分类器，且具有多样性 [22]。投票模型
+    1（决策树、随机森林、XGB 和 Adaboost）、模型 2（随机森林和 XGB）可以基于估计创建独立的投票系统，从量子分类器中获得改进的预测。
+
+
+    QC 分类器如 Qboost 后文、模型 1 和 2 的所有分类器。Qboost 包含（决策树、随机森林、XGB 和 Adaboost），模型 1 由量子分类器组成，模型
+    2 包含（投票模型 2 和 Qboost），它们构建了在量子系统上持续的新分类器 [19]。通过选择参数来训练分类器以获得更好的结果。集成学习涉及准备多个弱分类器并结合所有这些预测器的结果，从量子状态获得最终预测。
+
+
+    节点数是指从根到最远叶节点的最长路径上的节点数，在 2020 IEEE 国际信号处理与信息技术学术会议（ISSP）上，针对 Qboot 的正则化 ($\lambda$)
+    调整了估计器的权重以及弱强分类器的超参数，这是在构建 QBO 方面的考虑 [18]。为了分析分类器的行为，使用的指标是：准确率、精确率、召回率和特异性。特异性在医学分类中至关重要，它提供了关于数据分类器的额外信息。每个分类器的准确率如表
+    1 至 1 所示。通过获取混淆矩阵 [29]、精确率、召回率、准确率、f-score 和特异性 [30] 来分析我们系统的实现模型。每个实体的公式如下：
+
+
+    | 表 II 随机分类器 | 精确率 (Precision) | 召回率 (Recall) | F1-Score | 特异性 (Specificity) |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | 有急性糖尿病 | 0.65 | 0.69 | 0.67 | 0.69 |
+
+    | 无急性糖尿病 | 0.67 | 0.64 | 0.66 | 0.64 |
+
+    | 加权平均 | 0.67 | 0.67 | 0.67 | |
+
+    | 准确率 | 0.6725 | | | |
+
+    | 准确率 | 0.67 | 0.67 | | |
+
+
+    | 表 III XGB分类器 | 精确率 (Precision) | 召回率 (Recall) | F1-Score | 特异性 (Specificity)
+    |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | 有急性糖尿病 | 0.69 | 0.72 | 0.70 | 0.72 |
+
+    | 无急性糖尿病 | 0.64 | 0.67 | 0.66 | 0.67 |
+
+    | 加权平均 | 0.68 | 0.68 | 0.68 | 0.68 |
+
+    | 准确率 | 0.68 | | | |
+
+    | 准确率 | 0.70 | | | |
+
+
+    | 表 IV AdaBoost分类器 | 精确率 (Precision) | 召回率 (Recall) | F1-Score | 特异性 (Specificity)
+    |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | 有急性糖尿病 | 0.66 | 0.68 | 0.67 | 0.68 |
+
+    | 无急性糖尿病 | 0.69 | 0.67 | 0.68 | 0.69 |
+
+    | 加权平均 | 0.67 | 0.67 | 0.67 | 0.67 |
+
+    | 准确率 | 0.68 | | | |
+
+    | 准确率 | 0.69 | | | |
+
+
+    | 表 I 决策树分类器 | 精确率 (Precision) | 召回率 (Recall) | F1-Score | 特异性 (Specificity) |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | 有急性糖尿病 | 0.63 | 0.66 | 0.64 | 0.66 |
+
+    | 无急性糖尿病 | 0.67 | 0.63 | 0.65 | 0.63 |
+
+    | 加权平均 | 0.64 | 0.64 | 0.64 | 0.64 |
+
+    | 准确率 | 0.64 | | | |
+
+    | 准确率 | 0.6412 | | |
+
+
+    | 表 V 投票模型 1 | 精确率 (Precision) | 召回率 (Recall) | F1-Score | 特异性 (Specificity) |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | 有急性糖尿病 | 0.69 | 0.69 | 0.69 | 0.69 |
+
+    | 无急性糖尿病 | 0.67 | 0.67 | 0.67 | 0.67 |
+
+    | 加权平均 | 0.69 | 0.69 | 0.69 | 0.69 |
+
+    | 准确率 | 0.69 | | | |
+
+    | 准确率 | 0.6909 | | |
+
+
+    | 表 VI 投票模型 2 | 精确率 (Precision) | 召回率 (Recall) | F1-Score | 特异性 (Specificity)
+    |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | 有急性糖尿病 | 0.72 | 0.62 | 0.70 | 0.72 |
+
+    | 无急性糖尿病 | 0.64 | 0.74 | 0.68 | 0.64 |
+
+    | 加权平均 | 0.68 | 0.68 | 0.68 | 0.68 |
+
+    | 准确率 | 0.6838 | | | |
+
+    | 时间 | 3.632s | | |
+
+
+    ### B. 结果在本研究中，与经典的模型 1 和模型 2 相比，我们提出的模型在准确率、特异性和计算时间方面表现更好。量子算法在训练和测试时间上优于经典算法，例如投票模型
+    1 和模型 2 分别为 19s 和 3.632s。
+
+
+    由于 Qboot、Qboot plus 和 New Model 2 分类器的 QPU 运行时间分别为 0.346s、0.347s 和 0.347s，量子系统在糖尿病数据集上比经典系统快了
+    55 倍，如表 11 和图 2 所示，这些图对比了所有分类器的结果。为了确保真实性和可靠性
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 4]
+
+
+    # 2020 IEEE International Symposium on Signal Processing and Information Technology
+    (ISSPIT)
+
+
+    # TABLE VII
+
+    QBOOST Classifier
+
+
+    # TABLE XI
+
+    COMPARISON OF CLASSICAL AND QUANTUM CLASSIERS
+
+
+    | Classes | Precision | Recall | F1-Score | Specificity |
+
+    | --- | --- | --- | --- | --- |
+
+    | Diabetes with Acute Disases | 0.66 | 0.61 | 0.63 | |
+
+    | Diabetes without Acute Disases | 0.64 | 0.69 | | 0.7 |
+
+    | Weighted Avg | 0.65 | 0.65 | 0.65 | |
+
+    | Accuracy | 0.6505 | | | 0.833s |
+
+
+    | Classifier | Accuracy | Precision | Recall | F1 | Specificity | Time |
+
+    | --- | --- | --- | --- | --- | --- | --- |
+
+    | Decision Tree | 0.6412 | 0.65 | 0.65 | 0.64 | 0.042s |
+
+    | Random Forest | 0.675 | 0.67 | 0.66 | 0.67 | 0.729s |
+
+    | XGB Adabo | 0.6820 | 0.68 | 0.68 | 0.68 | 3.367s |
+
+    | Voting Model 1 | 0.6607 | 0.66 | 0.66 | 0.66 | |
+
+    | Voting Model 2 | 0.6838 | 0.68 | 0.68 | 0.68 | 3.652s |
+
+    | Qboost | 0.6500 | 0.65 | 0.65 | 0.83 | 0.346s |
+
+    | Qboost Plus | 0.6810 | 0.68 | 0.68 | 0.68 | 3.376s |
+
+    | New Model 1 | 0.6900 | 0.69 | 0.69 | 0.69 | 19.202s |
+
+    | New Model 2 | 0.6838 | 0.68 | 0.68 | 0.68 | 3.682s |
+
+
+    # TABLE VIII
+
+    QBOOST Plus Classifier
+
+
+    | Classes | Precision | Recall | F1 | Specificity |
+
+    | --- | --- | --- | --- | --- |
+
+    | Diabetes with Acute Disases | 0.67 | 0.64 | 0.65 | |
+
+    | Diabetes without Acute Disases | 0.69 | 0.71 | 0.76 | |
+
+    | Weighted Avg | 0.68 | 0.68 | 0.68 | |
+
+    | Accuracy | 0.6810 | | | 0.346s |
+
+
+    # TABLE IX
+
+    NEW MODEL 1 Classifier
+
+
+    | Classes | Precision | Recall | F1 | Specificity |
+
+    | --- | --- | --- | --- | --- |
+
+    | Diabetes with Acute Disases | 0.69 | 0.69 | 0.68 | |
+
+    | Diabetes without Acute Disases | 0.69 | 0.68 | 0.69 | |
+
+    | Weighted Avg | 0.69 | 0.69 | 0.69 | |
+
+    | Accuracy | 0.6090 | | | 0.347s |
+
+
+    # TABLE X
+
+    NEW MODEL 2 Classifier
+
+
+    | Classes | Precision | Recall | F1 | Specificity |
+
+    | --- | --- | --- | --- | --- |
+
+    | Diabetes with Acute Disases | 0.67 | 0.72 | 0.70 | |
+
+    | Diabetes without Acute Disases | 0.74 | 0.64 | 0.67 | |
+
+    | Weighted Avg | 0.68 | 0.68 | 0.68 | |
+
+    | Accuracy | 0.6838 | | | 0.342s |
+
+
+    ![](img/fce06e244a7612f97c419554abb5ecf6_4_0.png)
+
+
+    Fig. 2. Validation metrics for tested models
+
+
+    aforementioned classifiers in the medical field, high specificity is required.
+
+
+    # V. CONCLUSION
+
+
+    In this study, we proved that our approach towards the binary classification of
+    datasets using the new models are feasible and fast, when run on a quantum system.
+    The new models are based on the ensemble learning by combining classical and quantum
+    classifiers to get a result. The obtained results are satisfactory with accuracies
+    of 69% and 68.38%, a Recall and F1-score are 69% and 68.38% for the binary classification
+    in the Classical and Quantum system. The testing system is important for better
+    accuracy, but the classical system takes longer than the quantum system to classify
+    our datasets. We conclude that including more and more algorithms in the
+
+
+    Voting system remains the same. The Voting Model 1 and Voting Model 2 takes less
+    classification time in comparison to voting time 1, we choose the voting model
+    2 have better performance than the voting Model 1. Quantum algorithms like New
+    Model 1 and New Model 2 produces the similar accuracy, recall, F1 scores and reduces
+    the computational time. QC will be a useful and faster system in real-time application.
+    The future direction is to train with different datasets like qSVM and multi-label
+    classification of our improved system.
+
+
+    # ACKNOWLEDGMENT
+
+
+    This research has been funded by the Basque government IT-905-16 to eVIDA group
+    and supported by Osakidetta'
+  - '[PAGE 5]
+
+
+    # 2020 IEEE International Symposium on Signal Processing and Information Technology
+    (ISSPIT)
+
+
+    dispense. The research codes were approved by the Clinical Research Ethics Committee
+    of Kigali (PK2104074). Informed consent was not obtained because health records
+    were made de-identified and defined after
+
+
+    # REFERENCES
+
+
+    [22] “sklearn.ensemble.RandomForestClassifier. [Online]. Available: https://scikit-learn.org/stable/modules/sklearn.ensemble.RandomForestClassifier
+
+
+    [23] M. Pal, “Random forest classifier for remote sensing classification,” J.
+    Sens. Res., vol. 26, no. 1, pp. 217–222 (2004). [Online]. Available: https://scikit-learn.org/stable/modules/sklearn.ensemble.RandomForestClassifier.
+
+
+    [24] “Ensemble methods – scikit-learn 0.2.3 documentation. [Online]. Available:
+    https://scikit-learn.org/stable/modules/ensemble.html
+
+
+    [25] Z. Saha, B. Garcia-Zaparain, J. Agirreco, and F. Fernandez-Randa, “Diabetes
+    prediction using artificial neural networks,” Computer Methods, vol. 165, pp.
+    107193 (2019).
+
+
+    [26] Z. Saha, B. Garcia-Zaparain, J. Agirreco, I. Gutierrez, and A. M. Vasquez,
+    “Cancer breast histopathology image using deep learning methods,” Sensors, vol.
+    20, no. 16, pp. 1–17 (2020).'
+  md: '
+
+    # 2020 IEEE International Symposium on Signal Processing and Information Technology
+    (ISSPIT)
+
+
+    ## TABLE VII
+
+    QBOOST Classifier
+
+
+    ## TABLE XI
+
+    COMPARISON OF CLASSICAL AND QUANTUM CLASSIFIERS
+
+
+    | Classes | Precision | Recall | F1-Score | Specificity |
+
+    | --- | --- | --- | --- | --- |
+
+    | Diabetes with Acute Diseases | 0.66 | 0.61 | 0.63 | |
+
+    | Diabetes without Acute Diseases | 0.64 | 0.69 | | 0.7 |
+
+    | Weighted Avg | 0.65 | 0.65 | 0.65 | |
+
+    | Accuracy | 0.6505 | | | 0.833s |
+
+
+    | Classifier | Accuracy | Precision | Recall | F1 | Specificity | Time |
+
+    | --- | --- | --- | --- | --- | --- | --- |
+
+    | Decision Tree | 0.6412 | 0.65 | 0.65 | 0.64 | 0.042s |
+
+    | Random Forest | 0.675 | 0.67 | 0.66 | 0.67 | 0.729s |
+
+    | XGB Adabo | 0.6820 | 0.68 | 0.68 | 0.68 | 3.367s |
+
+    | Voting Model 1 | 0.6607 | 0.66 | 0.66 | 0.66 | |
+
+    | Voting Model 2 | 0.6838 | 0.68 | 0.68 | 0.68 | 3.652s |
+
+    | Qboost | 0.6500 | 0.65 | 0.65 | 0.83 | 0.346s |
+
+    | Qboost Plus | 0.6810 | 0.68 | 0.68 | 0.68 | 3.376s |
+
+    | New Model 1 | 0.6900 | 0.69 | 0.69 | 0.69 | 19.202s |
+
+    | New Model 2 | 0.6838 | 0.68 | 0.68 | 0.68 | 3.682s |
+
+
+    ## TABLE VIII
+
+    QBOOST Plus Classifier
+
+
+    | Classes | Precision | Recall | F1 | Specificity |
+
+    | --- | --- | --- | --- | --- |
+
+    | Diabetes with Acute Diseases | 0.67 | 0.64 | 0.65 | |
+
+    | Diabetes without Acute Diseases | 0.69 | 0.71 | 0.76 | |
+
+    | Weighted Avg | 0.68 | 0.68 | 0.68 | |
+
+    | Accuracy | 0.6810 | | | 0.346s |
+
+
+    ## TABLE IX
+
+    NEW MODEL 1 Classifier
+
+
+    | Classes | Precision | Recall | F1 | Specificity |
+
+    | --- | --- | --- | --- | --- |
+
+    | Diabetes with Acute Diseases | 0.69 | 0.69 | 0.68 | |
+
+    | Diabetes without Acute Diseases | 0.69 | 0.68 | 0.69 | |
+
+    | Weighted Avg | 0.69 | 0.69 | 0.69 | |
+
+    | Accuracy | 0.6090 | | | 0.347s |
+
+
+    ## TABLE X
+
+    NEW MODEL 2 Classifier
+
+
+    | Classes | Precision | Recall | F1 | Specificity |
+
+    | --- | --- | --- | --- | --- |
+
+    | Diabetes with Acute Diseases | 0.67 | 0.72 | 0.70 | |
+
+    | Diabetes without Acute Diseases | 0.74 | 0.64 | 0.67 | |
+
+    | Weighted Avg | 0.68 | 0.68 | 0.68 | |
+
+    | Accuracy | 0.6838 | | | 0.342s |
+
+
+    ![](img/fce06e244a7612f97c419554abb5ecf6_4_)
+
+    Fig. 2. Validation metrics for tested models
+
+
+    ## V. CONCLUSION
+
+
+    In this study, we proved that our approach towards the binary classification of
+    datasets using the new models are feasible and fast, when run on quantum system.
+    The obtained results are satisfactory with accuracies of 69% and 68.38% for. The
+    testing system is important for better accuracy, but the classical system takes
+    longer than the quantum system. In the medical field, high specificity is required.
+    We choose voting model 2 have better performance than voting 1. Quantum algorithms
+    like New Model 1 and New Model 2 produce similar accuracy, recall, F1 scores and
+    reduce computational time. QC will be a useful and faster system in real-time
+    application. The future direction is to train with different datasets like qSVM
+    and multi-label classification of our improved system.
+
+
+    ## ACKNOWLEDGMENT
+
+
+    This research has been funded by the Basque government IT-905-16 to eVIDA group
+    and supported by Osakidetta The research codes were approved by the Clinical Research
+    Ethics Committee of Kigali (PK210474). Informed consent was not obtained because
+    health records were made de-identified and defined
+
+
+    ## REFERENCES
+
+
+    [22] “sklearn.ensemble.RandomForestClassifier. [Online]. Available: https://scikit-learn.org/stable/modules/sklearn.ensemble.RandomForestClassifier.
+
+
+    [23] M. Pal, “Random forest classifier for remote sensing classification,” J.
+    Sens. Res., vol. 26, no. 1, pp. 217–222 (2004). [Online]. Available: https://scikit-learn.org/stable/modules/sklearn.ensemble.RandomForestClassifier.
+
+
+    [24] “Ensemble methods – scikit-learn 0.2.3 documentation. [Online]. Available:
+    https://scikit-learn.org/stable/modules/ensemble.html
+
+
+    [25] Z. Saha, B. Garcia-Zaparain, J. Agirreco, and F. Fernandez-Randa, “Diabetes
+    prediction using artificial neural networks,” Computer Methods, vol. 165, pp.
+    107193 (2019).
+
+
+    [26] Z. Saha, B. Garcia-Zaparain, J. Agirreco, I. Gutierrez, and A. M. Vasquez,
+    “Cancer breast histopathology image using deep learning methods,” Sensors, vol.
+    20, no. 16, pp. 1–17 (2020).
+
+    '
+  mdcn: '
+
+
+    # 2020 IEEE 信号处理与信息技术国际会议 (ISSPIT)
+
+
+    ## 表 VII
+
+    QBOOST 分类器
+
+
+    ## 表 XI
+
+    经典分类器与量子分类器的对比
+
+
+    | 类别 | 精确率 | 召回率 | F1 分数 | 特异性 |
+
+    | --- | --- | --- | --- | --- |
+
+    | 有急性疾病的糖尿病 | 0.66 | 0.61 | 0.63 | |
+
+    | 不含急性疾病的糖尿病 | 0.64 | 0.69 | | 0.7 |
+
+    | 加权平均 | 0.65 | 0.65 | 0.65 | |
+
+    | 准确率 | 0.6505 | | | 0.833s |
+
+
+    | 分类器 | 准确率 | 精确率 | 召回率 | F1 | 特异性 | 时间 |
+
+    | --- | --- | --- | --- | --- | --- | --- |
+
+    | 决策树 | 0.6412 | 0.65 | 0.65 | 0.64 | 0.042s |
+
+    | 随机森林 | 0.675 | 0.67 | 0.66 | 0.67 | 0.729s |
+
+    | XGB Adabo | 0.6820 | 0.68 | 0.68 | 0.68 | 3.367s |
+
+    | 投票模型 1 | 0.6607 | 0.66 | 0.66 | 0.66 | |
+
+    | 投票模型 2 | 0.6838 | 0.68 | 0.68 | 0.68 | 3.652s |
+
+    | Qboost | 0.6500 | 0.65 | 0.65 | 0.83 | 0.346s |
+
+    | Qboost Plus | 0.6810 | 0.68 | 0.68 | 0.68 | 3.376s |
+
+    | 新模型 1 | 0.6900 | 0.69 | 0.69 | 0.69 | 19.202s |
+
+    | 新模型 2 | 0.6838 | 0.68 | 0.68 | 0.68 | 3.682s |
+
+
+    ## 表 VIII
+
+    QBOOST Plus 分类器
+
+
+    | 类别 | 精确率 | 召回率 | F1 | 特异性 |
+
+    | --- | --- | --- | --- | --- |
+
+    | 有急性疾病的糖尿病 | 0.67 | 0.64 | 0.65 | |
+
+    | 不含急性疾病的糖尿病 | 0.69 | 0.71 | 0.76 | |
+
+    | 加权平均 | 0.68 | 0.68 | 0.68 | |
+
+    | 准确率 | 0.6810 | | | 0.346s |
+
+
+    ## 表 IX
+
+    新模型 1 分类器
+
+
+    | 类别 | 精确率 | 召回率 | F1 | 特异性 |
+
+    | --- | --- | --- | --- | --- |
+
+    | 有急性疾病的糖尿病 | 0.69 | 0.69 | 0.68 | |
+
+    | 不含急性疾病的糖尿病 | 0.69 | 0.68 | 0.69 | |
+
+    | 加权平均 | 0.69 | 0.69 | 0.69 | |
+
+    | 准确率 | 0.6090 | | | 0.347s |
+
+
+    ## 表 X
+
+    新模型 2 分类器
+
+
+    | 类别 | 精确率 | 召回率 | F1 | 特异性 |
+
+    | --- | --- | --- | --- | --- |
+
+    | 有急性疾病的糖尿病 | 0.67 | 0.72 | 0.70 | |
+
+    | 不含急性疾病的糖尿病 | 0.74 | 0.64 | 0.67 | |
+
+    | 加权平均 | 0.68 | 0.68 | 0.68 | |
+
+    | 准确率 | 0.6838 | | | 0.342s |
+
+
+    ![](img/fce06e244a7612f97c419554abb5ecf6_4_)
+
+    图 2. 测试模型的验证指标
+
+
+    ## V. 结论
+
+
+    在这项研究中，我们证明了使用新模型对数据集进行二分类的方法在量子系统上运行时是可行且快速的。所获得的结果令人满意，准确率达到 69% 和 68.38%。测试系统对于提高准确性至关重要，但经典系统所需的时间比量子系统长。在医学领域，需要高特异性。我们选择投票模型
+    2 是因为它优于模型 1。新模型 1 和新模型 2 等量子算法产生了相似的准确率、召回率、F1 分数并减少了计算时间。量子计算在实时应用中将是一个有用且快速的系统。未来的方向是使用不同的数据集进行
+    qSVM 和多标签分类。
+
+
+    ## 致谢
+
+
+    本研究由巴斯政府 IT-905-16 资助，并获得 Osakidetta 支持。研究代码已获得卢旺达临床研究伦理委员会批准（PK210474）。未获得知情同意是因为健康记录已经过去匿名化处理和定义
+
+
+    ## 参考文献
+
+
+    [22] “sklearn.ensemble.RandomForestClassifier。” [在线]. Available: https://scikit-learn.org/stable/modules/sklearn.ensemble.RandomForestClassifier.
+
+
+    [23] “集成学习方法 – scikit-learn 0.2.3 文档。[在线]. Available: https://scikit-learn.org/stable/modules/ensemble.html
+
+
+    [24] M. Pal, “用于遥感分类的随机森林分类器，”J. Sens. Res., vol. 26, no. 1, pp. 217–222 (2004).
+    [在线]. Available: https://scikit-learn.org/stable/modules/sklearn.ensemble.RandomForestClassifier.
+
+
+    [25] Z. Saha, B. Garcia-Zaparain, J. Agirreco, 和 F. Fernandez-Randa，“使用人工神经网络预测糖尿病，”Computer
+    Methods, vol. 165, pp. 107193 (2019).
+
+
+    [26] Z. Saha, B. Garcia-Zaparain, J. Agirreco, I. Gutierrez, 和 A. M. Vasquez，“使用深度学习方法进行乳腺癌病理图像分析，”Sensors,
+    vol. 20, no. 16, pp. 1–17 (2020).
+
+
+    '
+  merge: 0
