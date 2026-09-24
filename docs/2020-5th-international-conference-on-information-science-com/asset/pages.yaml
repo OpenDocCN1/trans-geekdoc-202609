@@ -1,0 +1,501 @@
+- pgno: 0
+  md: '# Survey of the Image Recognition Based on Deep Learning for Autonomous Driving
+
+
+    Jinqiao Liu
+
+    Department of Mechanical Engineering
+
+    Sichuan Pittsburg Institute, Sichuan University
+
+    Chengdu, China
+
+    Corresponding author: 15106980@qq.com
+
+
+    # II. DEEP LEARNING
+
+
+    Abstract—Recently, autonomous driving is a hot of research and image recognition
+    technology is one of the keys technologies for autonomous driving to solve the
+    road. The development of artificial intelligence and deep learning has been widely
+    applied to image recognition technology, and it plays an important role in this
+    field. In this paper, the development of image recognition in autonomous driving
+    and deep learning are introduced. Different types of deep learning networks like
+    Recurrent Neural Network (RNN), Deep Neural Network (DNN), Convolutional Neural
+    Network (CNN) are also analyzed. In addition, the theoretical basis of deep learning
+    in image recognition is carried out. Finally, the paper will look into the future
+    of autonomous vehicles and the future of image recognition technology. It is concluded
+    that image recognition has been widely used in autonomous driving cars, and it
+    has a prospective future for further development.
+
+
+    Keywords—autonomous driving; deep learning; image recognition; deep neural network;
+    recurrent convolutional neural network
+
+
+    # INTRODUCTION
+
+
+    The development of autonomous driving is becoming more and more popular. At present,
+    the research on self-driving cars includes many aspects, which are perception,
+    decision making and control. The most basic requirement for autonomous driving
+    car safety is that it can recognize different objects or environment during the
+    driving. To achieve this, the computer of autonomous driving cars needs to be
+    able to recognize the image. The development of image recognition technology has
+    witnessed several challenges, such as object detection and object recognition.
+    Researchers introduced artificial intelligence''s neural network into image recognition
+    technology. The neural network method can be used to learn pattern and complex
+    information, under background knowledge and unclear resolutions, also allow the
+    sample to handle large data and distorted image [1]. This paper proposes a variety
+    of neural network models like RNN, DNN, and CNN. These models have greatly promoted
+    the image recognition technology. This paper will conduct a survey on the current
+    research in the field of image recognition and explore the development of image
+    recognition technology in autonomous driving cars.
+
+
+    Deep learning is a heated topic in the field of artificial intelligence research,
+    and the purpose of deep learning is to learn the internal rules of data, and the
+    information obtained in the process is of great help interpret text, image data.
+    The ultimate goal of deep learning is to make machine or computer as learning
+    capable to be able to recognize data as text, images and sounds.
+
+
+    Deep neural network consists of an input layer, more hidden layers and an output
+    layer. The architecture of artificial networks was first proposed in 1943 by McCulloch
+    Walter Pitts and W. McCulloch. For the time they used mathematical models to theoretically
+    the models in artificial neural networks, which initiated the research of artificial
+    neural networks [2]. In 1955, a famous artificial intelligence expert F. Rosenblatt
+    proposed artificial neural network model, and Hebb learning rule or least square
+    method is proposed to train parameters.
+
+
+    ![](img/065e6ca5f3c06bda14dfa320bcc44def_0_0.png)
+
+
+    In 1960, based on the traditional percept, Jeffrey Hinton (University of Toronto,
+    Canada), the founder of deep learning, adopted the depth of multiple hidden layers
+    to replace the single-layer structure of percept [3]. Since then, a multi-layer
+    neural network structure has become the most classical neural network structure
+    in deep learning.
+
+
+    Figure 1 A simple model of perceptron'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# B. DNN, CNN&BNN
+
+
+    Deep Neural Networks (DNN) is the fundamental of deep learning, and it can be
+    thought of a part consisting of an infinite number of perception. At the same
+    time, there is a linear relationship between the input and output layers of each
+    perception. It can be expressed as:
+
+
+    The internal layers of the DNN are fully connected with each other, that any neuron
+    in one layer is connected with any neuron in the i+1 layer[4]. With the help of
+    linear relationship and activation function, we can calculate the output of layer
+    2 for figure.
+
+
+    ```
+
+    $z = \sum w_i x_i + b$
+
+    ```
+
+
+    ```
+
+    $a_i^1 = \sigma(w_i^1 x_i^1 + w_i^2 x_i^2 + w_i^3 x_i^3 + b^1)
+
+    a_i^2 = \sigma(w_i^1 x_i^1 + w_i^2 x_i^2 + w_i^3 x_i^3 + b^2)
+
+    a_i^3 = \sigma(w_i^1 x_i^1 + w_i^2 x_i^2 + w_i^3 x_i^3 + b^3)$
+
+    ```
+
+
+    In this equation weight is w and bias is b, and for each neuron, there is an active
+    function which matrix. Researchers typically used the Sigmoid function in regression
+    logic, which
+
+
+    ```
+
+    $f(x) = \frac{1}{1+e^{-x}}$
+
+    ```
+
+
+    According to the definition of DNN layers, the neural network CNN can be divided
+    into three types: input layer, hidden layer and output layer. Generally, the first
+    layer in DNN is the input layer. The last layer in CNN is the output layer, the
+    middle layer in DNN is the hidden layer.
+
+
+    In practical relationship, the output of each layer of neurons is generated by
+    a matrix, the weight(w) and bias(b) of the formulas are changed into matrix, which
+    greatly simplifies the complexity of the formula.
+
+
+    ```
+
+    $d = \sigma(w^4 x^4 + b^4)$
+
+    ```
+
+
+    CNN, convolutional neural network, is one kind of deep learning network. It is
+    a feed-forward neural network with deep structure including convolution computation[5].
+    Meanwhile, CNN is widely used in image recognition and object recognition which
+    can conduct supervised and unsupervised learning. The origin of the CNN can be
+    traced back to 1979, when a Japanese scholar design a network modeled on a visual
+    cortex of a living organism. But in 2006 that the properties of the convolutional
+    neural network received widespread attention[6].
+
+
+    ![](img/065e6ca5f3c06bda14dfa320bcc44def_1_0.png)
+
+
+    # Convolutional layers
+
+
+    # Classification
+
+
+    ![](img/065e6ca5f3c06bda14dfa320bcc44def_1_1.png)
+
+
+    RNN, recurrent neural network, is a type of recurrent neural network that processes
+    sequential data, the evolutionary direction of a sequence, and connects all nodes
+    (Recurrent units) under a chain[7]. It gets a recurrent layer for hidden layer.
+    The layer is a weight matrix, and this weight layer would use the value of hidden
+    to be the input weight matrix for hidden
+
+
+    Next layer. A very basic approach of RNN is to understand what is happening in
+    an image to make a reasonable description. This is the result of combining CNN
+    and RNN. CNN did image segmentation, and RNN reconstructed the description with
+    the segmented data[8].'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/065e6ca5f3c06bda14dfa320bcc44def_2_0.png)
+
+
+    Figure 4 A simple diagram of a recurrent neural network
+
+
+    # ### III. DEEP LEARNING IN IMAGE RECOGNITION
+
+
+    A. Theoretical Basis
+
+
+    The image recognition task is not suitable for traditional artificial neural network
+    because there is a large amount of data we need to be processed. For example the
+    image we need is with 300*300*3 wide, 300 high, 3 colors), which means we need
+    300*300*270 neurons to process this image. Otherwise, if we process this image
+    with 270 neurons fully connected, we will encounter error
+
+
+    be considerable And it is going to increase the workload tremendously. Therefore,
+    researchers usually have a convolutional neural network for image processing and
+    recognition tasks.
+
+
+    A complete neural network consists of convolution layer, pooling layer and fully
+    connected layer. Meanwhile, the pooling layer and convolution layer can greatly
+    simplify the number of neurons involved in image processing and recognition.
+
+
+    | Input Image | 3 Feature Maps | 3 Feature Maps | 5 Feature Maps | 5 Feature Maps
+    | Output Layer |
+
+    |---|---|---|---|---||
+
+    | | Convolution | Pooling | Convolution | Pooling | Fully Connected Network |
+
+
+    ![](img/065e6ca5f3c06bda14dfa320bcc44def_2_1.png)
+
+
+    Figure 5 Schematic diagram of image processing using a convolutional neural network
+
+
+    Therefore it can be known that the convolution layer in CNN plays an important
+    role in image processing and recognition. The feature extraction process of image
+    is mainly completed by convolution layer. At the same time, the convolution layer
+    contains a number of convolutions which generally have weights and biases. As
+    such, these convolutions operate on the input and they can transmit, process and
+    store all kinds of information. When the convolution kernel is working, it will
+    also do multiplication and supervision biases on the input values, just like neurons
+    in a deep neural network. The formula for this process is given:
+
+
+    the convolutional neural network needs to express the features of the data through
+    the activation function. The basic of activation function is:
+
+
+    ```
+
+    $Z^{(i)}_j = W^{(i)}_j \cdot x^{(i)} + b^{(i)} = \sum_{k} W^{(i)}_{jk} \cdot x^{(i)}_k
+    + b^{(i)}_j$
+
+    ```
+
+
+    ```
+
+    $A^{(i)}_j = f(Z^{(i)}_j)$
+
+    ```
+
+
+    The activation function applied to deep learning neural networks generally have
+    the following characteristics: nonlinearity, differentiability. The most common
+    activation function is the sigmoid function. But the sigmoid function has a large
+    range, the output is basically a straight line. In process of backpropagation,
+    the gradient is obtained by multiplying the intermediate gradients. Therefore,
+    if the local gradient result in the value is very small, it will directly bring
+    the final gradient result closer to 0, which means the gradient tends
+
+
+    In the formula above, b is the deviation quantity. $Z''$ and $A''$ represents
+    the convolution input and the output of the second layer, as feature map. Like
+    the deep neural network,'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/065e6ca5f3c06bda14dfa320bcc44def_3_0.png)
+
+
+    Layer does feature extraction, there will still be a lot of data. At this time,
+    the pooling layer is needed to filter the feature data extracted from the convolutional
+    layer, thus simplifying the amount of computation and data that needs to be processed.
+    There are many ways for pooling, and the first and most common way is Lp pooling.
+    Lp is a kind of pooling model inspired by the hierarchical structure in visual
+    cortex, the formula for this kind of pooling is:
+
+
+    ```
+
+    $A(i, j) = \left( \sum_{(m,n) \in \mathcal{N}(i,j)} X(x_i+m, x_j+n) \right)^{p}$
+
+    ```
+
+
+    For this formula, p is a prescribed parameter. When p approaches infinity, Lp
+    is called max pooling. The image recognition process can be completed by importing
+    the data into the connection layer for processing.
+
+
+    # IV. RECOGNITION IN AUTONOMOUS DRIVING CARS
+
+
+    ReLU, Rectified Linear Unit, is usually used in convolutional neural networks.
+    This activation function has advantages such as no gradient disappearance, fast
+    convergence rate, and backpropagation calculation rate. Similarly, activation
+    function also has a disadvantage, which is easy to fail during the training[11].
+
+
+    ![](img/065e6ca5f3c06bda14dfa320bcc44def_3_1.png)
+
+
+    If a car wants to run normally on the road, it must have the ability of imaging
+    recognition. Currently, this technology is still under development. It is divided
+    into active image and passive image recognition. Active image recognition is based
+    on conventional radar, the latter is similar with camera stereo images, but it
+    is invalid for planar images. Radar technology has technical defects. Simultaneously,
+    this system is complex and expensive. Passive image recognition is widely and
+    gradually establishing 3D recognition capability, which is equivalent to the bipolar
+    recognition effect of human eyes. More deep learning network serves for the latter
+    passive recognition network[1].
+
+
+    Figure 7 the schematic of ReLU function
+
+
+    The formula of Sigmoid function and ReLU function is shown below:
+
+
+    ```
+
+    $A(x) = \frac{1}{1+e^{-x}}$
+
+    ```
+
+
+    ```
+
+    $B(x) = \ln(1+e^x)$
+
+    ```
+
+
+    A(x) is for Sigmoid and B(x) is for ReLU. When the image data is large even, if
+    the convolutional
+
+
+    One of the convolutional neural network in autonomous driving cars is. Currently,
+    the FlowNet framework can use CNN to achieve a relatively perfect 3D effect of
+    bicycle recognition. FlowNet divides into two parts, including contraction and
+    expansion and it also proposed two different models, FlowNetSimple and FlowNetCorr.
+    These two models have their own characteristics. The former is to overlap two
+    pictures and put it into CNN. The latter is one to identify the two pictures separately
+    and then put into CNN.
+
+
+    ![](img/065e6ca5f3c06bda14dfa320bcc44def_3_2.png)
+
+
+    Figure 8 The simple structure of FlowNetSimple model'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '![](img/065e6ca5f3c06bda14dfa320bcc44def_4_0.png)
+
+
+    Figue 9 The simple structure of FlowNetCorr model
+
+
+    # V. FUTURE DEVELOPMENT OF IMAGE RECOGNITION TECHNOLOGY FOR AUTONOMOUS DRIVING
+    CARS
+
+
+    The auto industry is growing so fast, researchers could not imagined ten years
+    ago that electric cars could be widespread today. So the same way, there are not
+    many autonomous driving cars, autonomous driving technology, could not imagine,
+    maybe in ten years or even five years from now, what will happen to auto industry.
+
+
+    can efficiently and stably identify pedestrians and vehicles on the road, and
+    give car early warning in time, increasing driving safety. In this way, the future
+    of autonomous driving technology will be more mature, safer and more flexible,
+
+
+    # VI CONCLUSION
+
+
+    In the future, autonomous driving cars will inevitably become the mainstream of
+    society and bring more convenience for people''s life. Computer, vision and image
+    recognition technology are research fields. For now autonomous driving technology
+    is very far from image recognition. Image recognition also has many technical
+    difficulties, which could not be solved right now, such as extremely large and
+    small amount of data processing. Memory network is the most promising tool for
+    image recognition. Specifically, convolutional neural network and recurrent neural
+    network, researchers should study the status of these two neural networks and
+    how to combine them in environment. This will significantly improve the current
+    image recognition effect. Meanwhile, researchers should focus on unsupervised
+    learning, too. At present, supervised learning is the mainstream of image recognition,
+    but autonomous driving cars need a lot of manpower and time, however, there is
+    still a long way to go in image recognition.
+
+
+    The field of image recognition has developed rapidly in recent years, but there
+    are still many problems need to be solved. A major problem is how to get the computer
+    to understand the whole scene. Gaining a broader understanding of the scene will
+    help the computer interact with the environment, as these applications require
+    function from other information than object detection
+
+
+    ![](img/065e6ca5f3c06bda14dfa320bcc44def_4_1.png)
+
+
+    (a) image  (b) semantic segmentation
+
+
+    (c) instance segmentation (d) panoptic segmentation
+
+
+    Figure 10 An example of panoptic segmentation
+
+
+    Future image recognition technology still needs to be improved in several aspects,
+    such as how to deal with the image with large amount of data and how to generate
+    memory for motion. Rapid development of vehicle image recognition technology could
+    help recognize objects without focus. In the dark night, with hazy light and complex
+    road environment, autonomous driving cars need. In this case, MMW radar will be
+    weak in obstacle recognition. However, infrared thermal has the characteristics
+    of long distance and non-contact, and can display the temperature distribution
+    of the measured target in real time. When autonomous driving cars are driving
+    at night, the identification system with an infrared thermal sensor
+
+
+    # ACKNOWLEDGMENT
+
+
+    I am very grateful to Professor Lin who helped me in my thesis. I also want to
+    thank Jimmy who helped me solve some problems in theoretical basis. Through the
+    writing of this paper, I have a comprehensive understanding of the knowledge of
+    image recognition technology based on deep learning network. Meanwhile, the benefit
+    is limited, I will accept any point of view, comments and experts correct
+
+
+    # REFERENCES
+
+
+    +   [1] J. W., "The development and application of image recognition technology
+    in artificial intelligence", Computer & Communication, pp. 137-145,
+
+
+    +   [2] S. Smith, "Self-healing aerial aerial sensors from edge memory ranging",
+    Learning Science and Technology, pp. 065107, 2020.
+
+
+    +   [3] K. Kovacs, S. Almann, V. Gorgidis, "Deep learning: the shifting paradigm
+    of medicine", Molecular & Cellular Oncology, 2020.
+
+
+    +   [4] E. Taylor, "Using Deep Neural Network Based Cancer Detection and Classification",
+    International Journal of Computational Intelligence and Applications, 2020.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '[5] W. Shin, B. Sook-Jun, C. Sung-Base, "3D-Convolutional Neural Network with
+    Generative Adversarial Network and Autoencoder for Robust Anomaly Detection in
+    Video Surveillance," Journal of Neural Systems, 2018.
+
+
+    [6] S. Maeda, A., "A Lung Cancer Detection Method using Wavelet Decomposition
+    and Convolutional Neural Network," Journal of Biomedical Science and Engineering,
+    pp. 81-92, 2020.
+
+
+    [7] G. Zhou, L. Xiao, Y. Long, et al., "Identification of hepatitis B using Raman
+    spectroscopy combined with gated recurrent unit and multiscale fusion neural network,"
+    Spectroscopy Letters, pp. 277-288, 2020.
+
+
+    [8] J. Mahendra, S. Karan, "HARGRURNN: Human activity recognition using inertial
+    body sensor with gated recurrent neural network," Journal of Mathematical Sciences
+    and Cryptography, pp. 1577-1587, 2019.
+
+
+    [9] A. Myers, S. Hanes, Z. Abderrazek, et al., "A deep convolutional neural network
+    based vascular classifier using VGG analysis," Computer Methods in Biomechanics
+    and Biomedical Engineering: Imaging & Visualization, pp.334-342, 2020.
+
+
+    [10] W. Wang, S. Sophia, Z. Zhang, et al., "Backpropagation Artificial Neural
+    Network for Early Diabetic Retinopathy Detection Based On A Priori Knowledge,"
+    Journal of Physics: Series, 012029, 2020.
+
+
+    [11] Hanin, Boris, "Universal Function Approximation by Deep Neural Nets with
+    Bounded Width and ReLU Activations," Mathematics, pp. 992, 2019.
+
+
+    [12] Lin, Chin-Wei, "Moving cast shadow detection using scale-relation multi-layer
+    features," Journal of visual communication & image representation, pp. 504-517,
+    2018.
+
+
+    [13] Lin, Yu-Hien, Chen, et al., "Development of an Image Processing Module for
+    Autonomous Underwater Vehicles through Integration of Visual Recognition with
+    Stereoscopic Image Reconstruction," Journal of Marine Science and Engineering,
+    pp. 107, 2019.'
+  merge: -1
+  img_proc: true
