@@ -1,0 +1,1294 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # Review of Image Classification Method Based on Deep Transfer Learning
+
+
+    Chuanzi Li
+
+    Hebei Normal University
+
+    Shijiazhuang, China
+
+    41996246@qq.com
+
+
+    JiningFeng,HuJunhong Li*, Haiban Ma*
+
+    Hebei Normal University
+
+    Shijiazhuang, China
+
+    1241069595@qq.com
+
+
+    Abstract—With the continuous development of deep learning technology, neural networks
+    as convolutional neural network (CNN) have shown good performance in many fields,
+    such as image processing. The relevant algorithm shows that the deeper the network,
+    the more features that need to be learned in neural network, and the more computing
+    resources will be consumed to reconstruct and train the network. Parameters often
+    need to be trained in dataset. But in many practical applications, the effective
+    sample dataset that can be collected is limited, and models often suffer from
+    overfitting when applied to small datasets. Transfer learning can transfer knowledge
+    between domains/tasks novel. Combining deep convolutional neural network with
+    transfer learning can make deep models of high value and solve problems in new
+    fields, which has considered an advantage. This paper focuses on the review of
+    CNN and transfer learning, their characteristics, methods, and applications, so
+    as to promote their effective use.
+
+
+    **Keywords:** CNN ; Deep learning ; Transfer learning ; Image recognition
+
+
+    nonlinear function to extract data features. The low-level features and high-level
+    abstract features are combined to complete the task of data classification and
+    recognition[3]. No one participates in the process of feature extraction, which
+    avoids the subjectivity and arbitrariness of artificial selection, and makes the
+    extracted features more
+
+
+    In recent years, Deep Convolutional Neural Network (DCNN) rapidly develops and
+    makes great progress by network models and training methods such as GoLeNet and
+    other networks with accuracy over 97%, which can achieve efficient automatic learning
+    and classification of images and excellent performance[4]. The self-built and
+    trained DCNN models require more computing resources and resources.
+
+
+    Transfer learning is the application of pre-training neural network. And sample
+    transfer, transferring parameter and other methods, it can fulfill the tasks with
+    a small number of new training image data set. Transfer learning can achieve better
+    learning performance with small amount of data.
+
+
+    This paper studied and the methods of image classification based on deep transfer
+    learning. The methods of deep convolutional network and transfer learning are
+    discussed in detail.
+
+
+    #  I INTRODUCTION
+
+
+    Convolutional neural network (CNN) is an deep learning model to solve the problem
+    of image processing, computer vision (CV), natural language processing(NLP), speech
+    recognition, etc. The feature extraction and selection through convolution and
+    pooling operations can solve the problem of image recognition caused by image,
+    rotation, or scaling[1]. Therefore, CNN shows great robustness to the diversity
+    of two-dimensional images. The input of CNN can be an original image where the
+    receptive field can be defined by the weight of convolutional kernel, so to collect
+    data and effectively extract the precise features of the input-data and improve
+    the learning performance.
+
+
+    Comparing with shallow, which contains only one hidden layer, deeper greatly increases
+    the number of layers in the network. When data is input into a multilayer network,
+    it is necessary to construct a complex
+
+
+    #  II. DEEP CONVOLUTIONAL NEURAL NETWORK (DCNN)
+
+
+    #  A. Convolutional neural network
+
+
+    As forward, neural network uses convolutional layer to extract features and performs
+    data mapping through nonlinear activation function. It is a deep learning framework
+    with strong feature extraction capacity. The input of CNN is two-dimensional image,
+    the corresponding sample features are extracted by multiple convolution and pooling.
+    Then, the extracted features are expanded into a one-dimensional array and then
+    fed into different layers, which are selected according to tasks requirements.
+    The classification and recognition by images of convolutional neural network includes
+    two processes, the forward process and the reverse process. In, the forward process
+    fulfills the tasks, feature extraction and classifying tasks and'
+  - '[PAGE 1]
+
+
+    reverse process is to cut the back propagating of classification error and weight
+    updating. The back propagating of loss between the predicted value and the real
+    value is used to update the parameters, and it is trained by the process of forward
+    propagation and back propagation.
+
+
+    LeC[5] proposed the convolutional neural network LeNet for handwriting recognition
+    in 1998. This network lays the foundation of CNN and defines the structure of
+    CNN, which includes three layers: convolutional, pooling layer and fusion layer.
+    In 2012, the AlexNet structure proposed by Krizhevsky[6] became much deeper with
+    stimulated neurons and more them to develop themselves to the application of CNN
+    in the field of image recognition. Based on AlexNet, Simonyan[7] proposed the
+    VGG-Net structure in 2014, which is a convolutional network structure with increased
+    layers and more than 10 layers. The increase of depth in CNN can provide good
+    effect. But with the increase of depth, there would be more problems such as gradient
+    vanishing, gradient explosion and other problems, meanwhile. Szegedy[8] et al
+    proposed the InceptionNet structure, which is completely different from VGG-Net.
+    GoogleNet increases information while deepening network. Rich features can be
+    extracted with the same size, which can be reduced by deep convolution. Convolution
+    aggregation is carried out to extract multi-scale features and accelerate convergence.
+    In 2015, He[9] et al proposed a ResNet with residual learning connection which
+    introduces a new network idea, and it effectively solves many problems, such as
+    information loss, network degradation. DenseNet won the ILSVRC competition, and
+    the top5 was 95%, surpassing all previous networks. In 2017, Huang[10] et al proposed
+    DenseNet, which adopts a dense connection mechanism. This method effectively solves
+    the problem of gradient disappearance and reduces the number of network parameters
+    while strengthening the feature power. These works provide strong foundation for
+    fine-tuning.
+
+
+    # Deep convolutional neural network
+
+
+    Deep convolutional neural network (DCNN) is a multi-layer network that mimics
+    biological neural network, and has input layer, convolutional layer, pooling layer,
+    fusion layer and output layer. Its structure is alternating. Fig1 is the structure
+    of DCNN. There is no explicit definition about-- four layers of network can be
+    considered ''deep'' in speech recognition, with more than 20 layers of network
+    are common in recognition[11]. In order to solve the problem of gradient disappearance,
+    activation functions are used as ReLU, LReLU, and Maxout
+
+
+    are used to replace sigmoid, thus forms the structure of DCNN nowadays.
+
+
+    ![](img/92d7539c0c43fb30c4d7f6d50f19fc96_1_0.png)
+
+
+    Fig. 1. DCNN structure
+
+
+    # III. TRANSFER LEARNING
+
+
+    The essence of transfer learning is to initiate the way of human thinking to draw
+    inferences from others can one by making itself helpful to transfer knowledge
+    to another similar domain A. The machine learning algorithm based on transfer
+    can transfer the knowledge of source to the target task, even with little training
+    tasks data, and can improve the transfer effect.
+
+
+    All machine learning algorithms are with the problem of how to construct high-performance
+    without overfitting when the data is insufficient or small sample. Deep neural
+    network needs more training tasks and is more dependent on the sample data to
+    reach the number of layers.
+
+
+    There are four types of transfer learning, transfer learning on sample, transfer
+    learning based on model, transfer learning based on feature, and transfer learning
+    on relationship of domain. Researchers have investigated the structure of the
+    neural network data in distribution, interdisciplinary, such as network structure
+    for transfer and improvement of feature representation. For example, the work
+    by Eric[12] et al in 2011 is helpful to clarify the representation of domain similarity.
+    Long M[13] et al. successfully realized the transfer from source to target domain
+    by domain adaptation and attention mechanism.
+
+
+    In 2017, Jeremy[14] et al combined the deep learning model and three training
+    techniques of discriminative fine-tuning, tuning learning rate and general workflow,
+    which can save the learned information to a prominent extent.
+
+
+    The current results about transfer learning show that such method can solve sample
+    data and insufficient neural network training problem,'
+  md: '
+
+    # Review of Image Classification Method Based on Deep Transfer Learning
+
+
+    Chuanzi Li
+
+    Hebei Normal University
+
+    Shijiazhuang, China
+
+    41996246@qq.com
+
+
+    Jining Feng, Hu Junhong Li*, Haiban Ma*
+
+    Hebei Normal University
+
+    Shijiazhuang, China
+
+    1241069595@qq.com
+
+
+    Abstract—With the continuous development of deep learning technology, neural networks
+    as convolutional neural network (CNN) have shown good performance in many fields,
+    such as image processing. The relevant algorithm shows that the deeper the network,
+    the more features that need to be learned in neural network, and the more computing
+    resources will be consumed to reconstruct and train the network. Parameters often
+    need to be trained in dataset. But in many practical applications, the effective
+    sample dataset that can be collected is limited, and models often suffer from
+    overfitting when applied to small datasets. Transfer learning can transfer knowledge
+    between domains/tasks novel. Combining deep convolutional neural network with
+    transfer learning can make deep models of high value and solve problems in new
+    fields, which has considered an advantage. This paper focuses on the review of
+    CNN and transfer learning, their characteristics, methods, and applications, so
+    as to promote their effective use.
+
+
+    **Keywords:** CNN ; Deep learning ; Transfer learning ; Image recognition
+
+
+    nonlinear function to extract data features. The low-level features and high-level
+    abstract features are combined to complete the task of data classification and
+    recognition[3]. No one participates in the process of feature extraction, which
+    avoids the subjectivity and arbitrariness of artificial selection, and makes the
+    extracted features more
+
+
+    In recent years, Deep Convolutional Neural Network (DCNN) rapidly develops and
+    makes great progress by network models and training methods such as GoLeNet and
+    other networks with accuracy over 97%, which can achieve efficient automatic learning
+    and classification of images and excellent performance[4]. The self-built and
+    trained DCNN models require more computing resources and resources.
+
+
+    Transfer learning is the application of pre-training neural network. And sample
+    transfer, transferring parameter and other methods, it can fulfill the tasks with
+    a small number of new training image data set. Transfer learning can achieve better
+    learning performance with small amount of data.
+
+
+    This paper studied and the methods of image classification based on deep transfer
+    learning. The methods of deep convolutional network and transfer learning are
+    discussed in detail.
+
+
+    ## I. INTRODUCTION
+
+
+    Convolutional neural network (CNN) is an deep learning model to solve the problem
+    of image processing, computer vision (CV), natural language processing(NLP), speech
+    recognition, etc. The feature extraction and selection through convolution and
+    pooling operations can solve the problem of image recognition caused by image,
+    rotation, or scaling[1]. Therefore, CNN shows great robustness to the diversity
+    of two-dimensional images. The input of CNN can be an original image where the
+    receptive field can be defined by the weight of convolutional kernel, so to collect
+    data and effectively extract the precise features of the input-data and improve
+    the learning performance.
+
+
+    Comparing with shallow, which contains only one hidden layer, deeper greatly increases
+    the number of layers in the network. When data is input into a multilayer network,
+    it is necessary to construct a complex
+
+
+    ## II. DEEP CONVOLUTIONAL NEURAL NETWORK (DCNN)
+
+
+    ### A. Convolutional neural network
+
+
+    As forward, neural network uses convolutional layer to extract features and performs
+    data mapping through nonlinear activation function. It is a deep learning framework
+    with strong feature extraction capacity. The input of CNN is two-dimensional image,
+    the corresponding sample features are extracted by multiple convolution and pooling.
+    Then, the extracted features are expanded into a one-dimensional array and then
+    fed into different layers, which are selected according to tasks requirements.
+    The classification and recognition by images of convolutional neural network includes
+    two processes, the forward process and the reverse process. In, the forward process
+    fulfills the tasks, feature extraction and classifying tasks and reverse process
+    is to cut the back propagating of classification error and weight updating. The
+    back propagating of loss between the predicted value and the real value is used
+    to update the parameters, and it is trained by the process of forward propagation
+    and back propagation.
+
+
+    LeC[5] proposed the convolutional neural network LeNet for handwriting recognition
+    in 1998. This network lays the foundation of CNN and defines the structure of
+    CNN, which includes three layers: convolutional, pooling layer and fusion layer.
+    In 2012, the AlexNet structure proposed by Krizhevsky[6] became much deeper with
+    stimulated neurons and more them to develop themselves to the application of CNN
+    in the field of image recognition. Based on AlexNet, Simonyan[7] proposed the
+    VGG-Net structure in 2014, which is a convolutional network structure with increased
+    layers and more than 10 layers. The increase of depth in CNN can provide good
+    effect. But with the increase of depth, there would be more problems such as gradient
+    vanishing, gradient explosion and other problems, meanwhile. Szegedy[8] et al
+    proposed the InceptionNet structure, which is completely different from VGG-Net.
+    GoogleNet increases information while deepening network. Rich features can be
+    extracted with the same size, which can be reduced by deep convolution. Convolution
+    aggregation is carried out to extract multi-scale features and accelerate convergence.
+    In 2015, He[9] et al proposed a ResNet with residual learning connection which
+    introduces a new network idea, and it effectively solves many problems, such as
+    information loss, network degradation. DenseNet won the ILSVRC competition, and
+    the top5 was 95%, surpassing all previous networks. In 2017, Huang[10] et al proposed
+    DenseNet, which adopts a dense connection mechanism. This method effectively solves
+    the problem of gradient disappearance and reduces the number of network parameters
+    while strengthening the feature power. These works provide strong foundation for
+    fine-tuning.
+
+
+    ### Deep convolutional neural network
+
+
+    Deep convolutional neural network (DCNN) is a multi-layer network that mimics
+    biological neural network, and has input layer, convolutional layer, pooling layer,
+    fusion layer and output layer. Its structure is alternating. Fig1 is the structure
+    of DCNN. There is no explicit definition about-- four layers of network can be
+    considered ''deep'' in speech recognition, with more than 20 layers of network
+    are common in recognition[11]. In order to solve the problem of gradient disappearance,
+    activation functions are used as ReLU, LReLU, and Maxout are used to replace sigmoid,
+    thus forms the structure of DCNN nowadays.
+
+
+    ![](img/92d7539c0c43fb30c4d7f6d50f19fc6_1_0.png)
+
+
+    Fig. 1. DCNN structure
+
+
+    ## III. TRANSFER LEAR
+
+
+    The essence of transfer learning is to initiate the way of human thinking to draw
+    inferences from others can by making itself helpful to transfer knowledge to another
+    similar domain A. The machine learning algorithm based on transfer can transfer
+    the knowledge of source to the target task, even with little training tasks data,
+    and can improve the transfer effect. All machine learning algorithms are with
+    the problem of how to construct high-performance without overfitting when the
+    data is insufficient or small sample. Deep neural network needs more training
+    tasks and is more dependent on the sample data to reach the number of layers.
+
+
+    There are four types of transfer learning, transfer learning on sample, transfer
+    learning based on model, transfer learning based on feature, and transfer learning
+    on relationship of domain. Researchers have investigated the structure of the
+    neural network data in distribution, interdisciplinary, such as network structure
+    for transfer and improvement of feature representation. For example, the work
+    by Eric[12] et al in 2011 is helpful to clarify the representation of domain similarity.
+    Long M[13] et al. successfully realized the transfer from source to target domain
+    by domain adaptation and attention mechanism.
+
+
+    In 2017, Jeremy[14] et al combined the deep learning model and three training
+    techniques of discriminative fine-tuning, tuning learning rate and general workflow,
+    which can save the learned information to a prominent extent.
+
+
+    The current results about transfer learning show that such method can solve sample
+    data and insufficient neural network training problem,
+
+    '
+  mdcn: '
+
+
+    # 基于深度迁移学习的图像分类方法综述
+
+
+    李传子（Chuanzi Li）
+
+    河北大学
+
+    中国石家庄
+
+    41996246@qq.com
+
+
+    冯锦宁（Jining Feng），李军洪李*，马海帆*
+
+    河北大学
+
+    中国石家庄
+
+    1241069595@qq.com
+
+
+    摘要—随着深度学习技术的不断发展，作为卷积神经网络（CNN）的神经网络在图像处理等许多领域展现了良好的性能。相关算法表明，网络越深，神经网络需要学习的特征就越多，重建和训练网络消耗的计算资源也越多。通常需要在数据集训练参数。但在许多实际应用中，可以收集的有效样本是有限的，模型在应用于小数据集时往往会遭受过拟合。迁移学习可以在领域/任务之间新颖地迁移知识。将深度卷积神经网络与迁移学习结合可以使深度模型具有高价值并解决新领域的问题，这被认为是优势。本文重点对CNN和迁移学习及其特点、方法和应用进行综述，促进它们的有效利用。
+
+
+    **关键词：** CNN； 深度学习； 迁移学习； 图像识别
+
+
+    提取数据特征的非线性函数。低层特征和高层抽象特征相结合以完成数据分类和识别任务[3]。没有人工参与特征提取过程，这避免了人工选择的主观性和任意性，使得提取的特征更具
+
+
+    近年来，深度卷积神经网络（DCNN）快速发展，通过GoLeNet等网络模型和训练方法在准确率超过97%的网络上取得了巨大进展，可以实现图像的高效自动学习和分类以及卓越性能[4]。自建和训练的DCNN模型需要更多的计算资源和资源。
+
+
+    迁移学习是预训练神经网络的应用。通过样本迁移、参数迁移等方法，它可以用少量的的新训练图像数据集完成任务。迁移学习可以用少量数据获得更好的学习性能。
+
+
+    本文研究并探讨了基于深度迁移学习的图像分类方法。详细讨论了深度卷积网络和迁移学习的方法。
+
+
+    ## I. 引言
+
+
+    卷积神经网络（CNN）是一种用于解决图像处理、计算机视觉（CV）、自然语言处理（NLP）、语音识别等问题的深度学习模型。通过卷积和池化操作进行特征提取和选择，可以解决由图像、旋转或缩放引起的图像识别问题[1]。因此，CNN对二维图像的多样性表现出强大的鲁棒性。CNN的输入可以是原始图像，其感受场可以通过卷积核的权重定义，以便收集数据并有效提取输入数据的精确特征，提高学习性能。
+
+
+    与仅包含一个隐藏层的浅层网络相比，深层网络大大增加了网络的层数。当数据输入到多层网络时，有必要构建复杂的
+
+
+    ## II. 深度卷积神经网络（DCNN）
+
+
+    ### A. 卷积神经网络
+
+
+    如前所述，神经网络利用卷积层提取特征，并通过非线性激活函数执行数据映射。它是一个具有强大特征提取能力的深度学习框架。CNN的输入是二维图像，相应的样本特征通过多次卷积和池化提取。然后，将提取的特征扩展为一维数组，然后输入到根据任务要求的不同层。卷积神经网络对图像的分类和识别包括两个过程：正向过程和反向过程。在正向过程中，完成任务、特征提取和分类任务，而反向过程则是进行分类误差的反向传播和权重更新。预测值与真实值之间的损失反向传播用于更新参数，并通过正向传播和反向传播的过程进行训练。
+
+
+    LeC[5]在1998年提出了用于手写识别的卷积神经网络LeNet。该网络为CNN奠定了基础并定义了CNN的结构，包括三层：卷积层、池化层和融合层。2012年，Krizhevsky[6]提出的AlexNet结构变得深得多，具有更多刺激神经元，并由于其自我发展，促进了CNN在图像识别领域的应用。基于AlexNet，Simonyan[7]在2014年提出了VGG-Net结构，这是一种层数增加且超过10层的卷积网络结构。CNN深度的增加可以产生良好的。但随着深度的增加，会产生梯度消失、梯度爆炸等更多问题。同时，Szegedy[8]等人提出了InceptionNet结构，它与VGG-Net完全不同。GoogleNet在加深网络的同时增加了信息。在相同尺寸下可以提取丰富的特征，这可以通过深度卷积来减少冗余。进行卷积聚合以提取多尺度特征并加速收敛。2015年，何[9]等人提出了具有残差学习连接的ResNet，引入了新的网络思想，并有效地解决了许多问题，如信息丢失、网络退化。DenseNet赢得了ILSVRC竞赛，前5准确率为95%，超过了以往所有的网络。2017年，Huang[10]等人提出了DenseNet，它采用了稠密连接机制。这种方法在增强特征能力的同时解决了梯度消失问题并减少了网络参数的数量。这些工作为微调提供了强有的基础。
+
+
+    ### 深度卷积神经网络
+
+
+    深度卷积神经网络（DCNN）是一种模拟生物神经网络的多层网络，具有输入层、卷积层、池化层、融合层和输出层。其结构是交替的。图1是DCNN的结构。对于“深度”目前还没有明确的定义——在语音识别中，超过20层的网络是常见的[11]。为了解决梯度消失问题，使用了ReLU、LReLU和Maxout等激活函数代替sigmoid，形成了现在的DCNN结构。
+
+
+    ![](img/92d7539c0c43fb30c4d7f6d50f19fc6_1_0.png)
+
+
+    图1 DCNN结构
+
+
+    ## III. 迁移学习
+
+
+    迁移学习的本质是启动人类思维的方式，从他人处进行推理，从而有助于将知识迁移到另一个相似领域A。基于迁移的机器学习算法可以用少量的训练任务数据将源域知识迁移到目标任务，并提高迁移效果。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    greatly reducing the training cost of the network. Applying it to other areas
+    is regarded as one of the important development in the future.
+
+
+    # IV. THE METHOD OF DEEP TRANSFER LEARNING
+
+
+    On one hand, learning has strong ability in fitting, and better generalization
+    performance in learning feature representation[16]. On the other hand, transfer
+    learning domain-dependent features can help us to use the knowledge of deep neural
+    network, and then make full use of the existing knowledge to learn the common
+    characteristic representation of other fields, mainly introducing transfer learning
+    (DTL), which has been developed from deep transfer since 2014. And there are many
+    related works. The methods of DTL are divided into three categories: method based
+    on relation, adversarial and method based on reconstruction. The following mainly
+    introduces the first two
+
+
+    # A. Deep Domain Confusion
+
+
+    Deep Confusion(DDC) is a new architecture which introduces an adaptation layer
+    and an additional domain loss, to learn a representation that is semantically
+    meaningful and invariant. The structure of DDC is shown in Fig.2. In which, the
+    left is a CNN for classification, and the loss is calculated through various convolutions
+    and full connectivity with labeled images. Traditional picture classification
+    is fitting but this would lead to a problem. In the view of the source domain,
+    network without target domain data would be difficult to achieve good results
+    in target areas (unlabeled images on the right of the picture). Therefore, the
+    parameter domain loss needs to be added in the network to make the distance between
+    domains smaller.
+
+
+    The commonly used loss is MMD loss, just as equation (1):
+
+
+    ```
+
+    $mmd^2(x_s, x_t) = ||\frac{1}{\sqrt{N_s}}\sum_{i=1}^{N_s}\Phi(x_s^i) - \frac{1}{\sqrt{N_t}}\sum_{j=1}^{N_t}\Phi(x_t^j)||^2$
+
+    ```
+
+
+    Maximum Mean Deviation (MMD) is often used for two sample sets, is to determine
+    whether the two samples are equally distributed. The optimization goal of DDC
+    is described as equation (2):
+
+
+    ```
+
+    $loss = L(g(x_s), y) + \lambda \cdot mmd^2(g(x_s), g(x_t))$
+
+    ```
+
+
+    # B. Deep Adaptation Networks
+
+
+    Deep Adaptation Networks(DAN) is an improved framework of DDC. There are two main
+    improvements. The first one is to adding MMD losses in multiple layers of the
+    network. The second one is to use multiple cores in MMD, show in equation (3):
+
+
+    ```
+
+    $loss = L(f(g_s), y) + \lambda \sum mmd^2(g_k(x_s), g_k(x_t))$
+
+    ```
+
+
+    Where $g_k$ represents the output of the layer. As shown in Fig.3:
+
+
+    ![](img/92d7539c0c43fb30c4d7f6d50f19fc96_2_0.png)
+
+
+    Fig. 2. The DDC architecture
+
+
+    ![](img/92d7539c0c43fb30c4d7f6d50f19fc96_2_1.png)
+
+
+    The MK-MMD[17] is added to the middle output of the connection in the layers.
+    The MMD formula is $||\cdot||_H$, which represents the difference in Hilbert space,
+    or adds a representing kernel function, such as Gaussian kernel function, as shown
+    in equation (4):
+
+
+    ```
+
+    $\mathcal{K}(x_1, x_2) = \exp(-\frac{||x_1-x_2||^2}{\sigma^2})$
+
+    ```
+
+
+    The choice of $\sigma$ is very important. MK-MMD uses the accumulation of multiple
+    kernel functions, show in equation (5):'
+  - '[PAGE 3]
+
+
+    $$\mathcal{K} = \sum_{k=1}^{K} \beta_k R_k + \sum_{k=1}^{K} \gamma_k S_k \quad
+    (5)$
+
+
+    According to DCC, with the two improvements, DAN achieves better performance.
+
+
+    # C. Domain Adversarial Neural Network
+
+
+    The main idea of DANN is to use H-divergence to measure the distance between two
+    domains and biased GANs. The architecture of DANN contains three parts, such as
+    Feature Extractor, Label Predictor and Domain Classifier. In this, the feature
+    extractor and classifier share the architecture of the network. The final goal
+    is to maximize the classification performance. In this framework, a domain classifier
+    module is added to distinguish the source/target main features which are extracted
+    by the extractor. The objectives are equivalent to
+
+
+    $E(\theta_f, \theta_y, \theta_d) = \sum L_y(\theta_f, \theta_y) - \lambda \sum
+    L_d(\theta_f, \theta_d) \quad (6)$
+
+
+    Where $l$ represents the source domain, $L_y$ represents the classification loss,
+    and $L_d$ represents the classification loss of domain classifier. The optimization
+    process is shown in equation (7) and (8)
+
+
+    $$\theta_f, \theta_y, \theta_d = \arg \max E(\theta_f, \theta_y, \theta_d) \quad
+    (7)$
+
+
+    $$\theta_d = \arg \max E(\theta_f, \theta_y, \theta_d) \quad (8)$
+
+
+    In order to avoid iteration, we introduces a Generator layer, which may add a
+    reverse operation in the General process of domain classifier, so that the optimization
+    process does not need iteration.
+
+
+    # D. Domain Separation Network
+
+
+    The existing transfer method relies on the learning algorithm to eliminate the
+    characteristics of distribution between different domains. Bousmalis [19] and
+    others search for a way to deal with the transfer problem. They divide into two
+    categories, characteristics of public (shared) and characteristics of private.
+    The migration of private characteristics of each domain will lead to negative
+    transfer. Domain Separation Network (DSN) solves this problem.
+
+
+    The work of DSN consists of two parts (1) extracting features from different domains;
+    (2) using features to migrate. Based on this, the author proposes the following
+    neural network, which can not only ensure the extraction of public and private
+    features, but also ensure the integrity and effectiveness of them. As shown in
+    Fig. 4
+
+
+    For DSN to benefit, the public part must be the common feature of source domain
+    and target domain.
+
+
+    characters of both parts must be separated to effectively avoid the negative transfer.
+    Then put forward the following loss function to restrict target encoder, source
+    encoder, and the first is "difference loss", as shown in (9)
+
+
+    $$\mathcal{L} = ||H(f_s) - H(f_t)|| + ||H(f_s) || H(f_t)||| \quad (9)$
+
+
+    Second, in order to carry out the transfer, the following function should be adopted,
+    which is intuitively recognized by improving their similarity. Then, "similar
+    loss" is proposed, which contains two parts. The first part is the loss function
+    as in DAN, show in equation (10), and the second is the MMD loss, as shown in
+    (11)
+
+
+    ![](img/92d7539c0c43fb30c4d7f6d50f19fc96_3_0.png)
+
+
+    $$\mathcal{L}^{DANN} = \sum |log(d_i) + (1-d_i) \log(1-d_{i})| \quad (10)$
+
+
+    $$\mathcal{L}^{MMD} = \sum_{i=1}^{N_s} \sum_{j=1}^{N_s} \K(h(x_{si}), h(x_{sj}))
+    + \sum_{i=1}^{N_t} \sum_{j=1}^{N_t} \K(h(x_{ti}), h(x_{tj})) - 2 \sum_{i=1}^{N_s}
+    \sum_{j=1}^{N_t} \K(h(x_{si}), h(x_{tj})) \quad (11)$
+
+
+    # E. Active Transfer
+
+
+    Traditional methods handle the problem of transfer, while Active Transfer [ATL20]
+    effectively solves the problem of negative transfer in transfer. ATL extends methods
+    using projection matrix and weight coefficient vector. The objective function
+    of ATL is shown in equation (12).
+
+
+    $$\min_{p,a} L(p,a) = \sum_{i=1}^{s} p^{ti} \alpha_i - \sum_{j=1}^{t} p^{tj} \alpha_j
+    + \lambda_1 \sum_{i,j}^{s} a_{ij} k_{ij} + \lambda_2 \sum_{i,j}^{s} a_{ij} a_{lj}
+    \omega_{ij}$'
+  - '[PAGE 4]
+
+
+    $s.t. \quad p^T p=1 \sum_{i=1}^a \alpha_i, \alpha_i\ge 0 \quad (12)$
+
+
+    Where $p$ is the projection matrix, which is used to project the data points of
+    source and target domain into the common subspace, and $a$ is the dimension of
+    the common subspace, and $\alpha$ is the weight coefficient of source domain $x_s$.
+    To avoid trivial solution, the orthogonal constraint is imposed on projection
+    matrix $p$, so that the data points represented by $a$ are informative and the
+    discriminative subsets are selected.
+
+
+    # V. CONCLUSION
+
+
+    DCN, DAN, and DNNT are all representative methods of data transfer. They make
+    full use of the dANN-domain mapping, the statistics MK-MD distance, and constructing
+    methods of each. These methods achieve better and better performance on public
+    datasets. The performance of the various methods in different datasets is illustrated
+    in Table 1.
+
+
+    # TABLE I. CLASSIFICATION OF METHODS ON DIFFERENT TARGET DATASETS
+
+
+    | Data Set | Deep Domain Adaptation Methods | | | |
+
+    | --- | --- | --- | --- | --- |
+
+    | | | DCN | DAN | DNNT |
+
+    | Office-3 | 70.6 | 72.9 | 74.3 |
+
+    | MNIST | | | | 77.8 |
+
+    | SVIN | | | 70.7 | 82.7 |
+
+    | MNIST | | | | 47.6 |
+
+    | VOC2007 | | | | ≤44.7 |
+
+    | USPS | | | | 50.1 |
+
+
+    Transfer learning of neural networks has developed rapidly in recent years. To
+    construct deep networks with limited available data is one of the research hottest
+    topics. This paper explores domain classification based on transfer learning,
+    tends to solve the problems in practical applications by multiple techniques to
+    achieve better performance. Negative transfer and stability are important measurements
+    in transfer learning, and the worth of learning further while using deep transfer
+    learning. The development of deep neural network, transfer learning has been utilized
+    to solve many challenging problems.
+
+
+    # ACKNOWLEDGMENT
+
+
+    Thank The Laboratory of Network & Information Security, Hebei Normal University,
+    Shijiazhuang, China 050024, and the Provincial Engineering Research Center for
+    Supply Big Data Analytics & Data Security, Hebei Normal University, Shijiazhuang,
+    China 050024, which provided support for this paper.
+
+
+    +   [1] R. Girshick, Fast R-CNN. In ICCV, 2015.
+
+    [2] Sen, H., K. Cheng, Girshick, J., Faster R-CNN: Towards-real object detection
+    with region proposal networks. In NIPS, 2015.
+
+    [3] Jordan, Y., He, K., Girshick, J.: YOLO only once: Unified, real-time object
+    detection. In CVPR, 2016.
+
+    [4] L. W., Dancovec, D., Ekhan, C., and S. E. Reed: Domain Adversarial Training
+    of Neural Networks. In ICML, 2017.
+
+    [5] Lecun, Y., Bourtol, J. and L., et al.: Domain adaptation by transferring continuous
+    code. Journal of Neural Computation, 11, 1998.
+
+    [6] Kryžhevsky, A., Sutskever, I., ImageNet Classification with Deep Convolutional
+    Neural Networks (CNN). NIPS, 2012.
+
+    [7] Simonyan, K., Zizerman, A. Very deep convolutional networks for scale recognition.
+    In arXiv:1409.1566, 2014.
+
+    [8] Sun, J., and Yang, Q.: Deep Learning with Convolutional Neural Networks, CVPR
+    2014.
+
+    [9] Hu, X., Zhang, X. S., et al.: Deep Residual Learning for Image Classification.
+    In arXiv:1512.03385, 2015.
+
+    [10] Huang, G., Luo, Y., Zhang, M., and Sun, J.: Deep transfer learning for cross-scene
+    adaptation. In arXiv:1609.06999, 2016.
+
+    [11] Wang, M., Deng, D.: Deep Domain Adaptation: A Survey. In Neural Computing,
+    2018,30(2):133-153.
+
+    [12] Zhang, Y., and Wang, K.: Maximizing for domain invariance via region attention.
+    In arXiv:1412.3474, 2014.
+
+    [13] Long, W., Wang, J., et al.: Learnable features with deep domain adaptation/CNN
+    classification. In Conference on Machine Learning, 2016.
+
+    [14] Abu-Heli, A., Beyzan, Peri, Al-Russo, and Alexei Alemi: Watch your step:
+    Learning graph embeddings through attention. In arXiv:1909.06990, 2019.
+
+    [15] Howard, J., Ruder, S.: Universal Language Model Fine-tuning for Task Classification/Proceedings
+    of the 57th Annual Meeting of the Association for Computational Linguistics, Volume
+    1: Long Paper:417-425.
+
+    [16] Wang, N., Shi, J., et al.: Batch Normalization for Practical Domain Adaptation.
+    Pattern Recognition, 2016.
+
+    [17] Ahmet, G., Bogwardt, K. M., Rasch, M. J., et al.: A kernel-based attention
+    model for sequence modeling. Machine Learning Research, 2013,14(mar):772-773.
+
+    [18] Hinton, G., Weiss, W., and Zhao, M.: Domain adaptive networks for object
+    recognition/Pattern Recognition. In International Conference on Artificial Intelligence.
+    Springer, China, 2014: 898-904.
+
+    [19] Konstantinidis, B.: Domain Separation Networks/IEEE Journal on Machine Learning,
+    2019.
+
+    [20] Peng, Z., Zhang, W., Han, N., et al.: Adaptive Transfer Learning. IEEE Transactions
+    on Networks and Systems, 2020,30(4):2020-2034.
+
+    [21] Carlucci, F. M., Porzi, L., Caputo, B., et al.: AutoDAAL: Domain Adaptation
+    via Adaptation Layers/International Conference on Computer Vision, 2017.
+
+    [22] Yousini, J., Clune, J., Bengio, Y., et al.: How transfer features are useful
+    for transfer learning?/IEEE Journal of Machine Learning, 2019.
+
+    [23] Pan, S., Yang, Q.: A Survey on Transfer of Knowledge and Data Engineering,
+    2010, 20(12):1345-1359.'
+  md: '
+
+    greatly reducing the training cost of the network. Applying it to other areas
+    is regarded as one of the important development in the future.
+
+
+    ## IV. THE METHOD OF DEEP TRANSFER LEARNING
+
+
+    On one hand, learning has strong ability in fitting, and better generalization
+    performance in learning feature representation [16]. On the other hand, transfer
+    learning domain-dependent features can help us to use the knowledge of deep neural
+    network, and then make full use of the existing knowledge to learn the common
+    characteristic representation of other fields, mainly introducing transfer learning
+    (DTL), which has been developed from deep transfer since 2014. And there are many
+    related works. The methods of DTL are divided into three categories: method based
+    on relation, adversarial and method based on reconstruction. The following mainly
+    introduces the first two.
+
+
+    ## A. Deep Domain Confusion
+
+
+    Deep Confusion (DDC) is a new architecture which introduces an adaptation layer
+    and an additional domain loss, to learn a representation that is semantically
+    meaningful and invariant. The structure of DDC is shown in Fig.2. In which, the
+    left is a CNN for classification, and the loss is calculated through various convolutions
+    and full connectivity with labeled images. Traditional picture classification
+    is fitting but this would lead to a problem. In the view of the source domain,
+    network without target domain data would be difficult to achieve good results
+    in target areas (unlabeled images on the right of the picture). Therefore, the
+    parameter domain loss needs to be added in the network to make the distance between
+    domains smaller.
+
+
+    The commonly used loss is MMD loss, just as equation (1):
+
+
+    ```
+
+    mmd^2(x_s, x_t) = ||\frac{1}{\sqrt{N_s}}\sum_{i=1}^{N_s}\Phi(x_s^i) - \frac{1}{\sqrt{N_t}}\sum_{j=1}^{N_t}\Phi(x_t^j)||^2$
+
+    ```
+
+
+    Maximum Mean Deviation (MMD) is often used for two sample sets, is to determine
+    whether the two samples are equally distributed. The optimization goal of DDC
+    is described as equation (2):
+
+
+    ```
+
+    loss = L(g(s), y) + \lambda \cdot mmd^2(g(s), g(t))
+
+    ```
+
+
+    ## B. Deep Adaptation Networks
+
+
+    Deep Adaptation Networks (DAN) is an improved framework of DDC. There are two
+    main improvements. The first one is to adding MMD losses in multiple layers of
+    the network. The second one is to use multiple cores in MMD, show in equation
+    (3):
+
+
+    ```
+
+    loss = L(f(s), y) + \lambda \sum mmd^2(g_k(s), g_k(t))
+
+    ```
+
+
+    Where $g_k$ represents the output of layer. As shown in Fig.3:
+
+
+    ![](img/92d7539c0c4fb30c4d7f6d50f19fc96_2_0.png)
+
+
+    Fig. 2. The DDC architecture
+
+
+    ![](img/92d7539c0c4fb30c4d7f6d50f19fc96_2_1.png)
+
+
+    The output of connection in layers. The MMD formula is $||\cdot||_H$, which represents
+    the difference in Hilbert space, or adds representing kernel function, such as
+    Gaussian kernel, as shown in equation (4):
+
+
+    ```
+
+    \mathcal{K}(x_1, x_2) = \exp(-\frac{||x_1-x_2||^2}{\sigma^2})
+
+    ```
+
+
+    The choice of $\sigma$ is very important. MK-MMD uses the accumulation of kernel
+    functions, show in equation (5):
+
+
+    $$
+
+    \mathcal{K} = \sum_{k=1}^{K} \beta_k + \sum_{k=1}^{K} \gamma_k
+
+    $$
+
+
+    According to DCC, with the two improvements, DAN achieves better performance.
+
+
+    ## C. Domain Adversarial Neural Network
+
+
+    The main idea of DANN is to use H-divergence to measure the distance between two
+    domains. The architecture of DANN contains three parts, such as Feature Extractor,
+    Label Predictor and Domain Classifier. In this, the feature extractor and classifier
+    share the architecture of the network. The final goal is to maximize the classification
+    performance. In this framework, a domain classifier is added to distinguish source/target
+    features which are extracted by extractor. The objectives are equivalent to
+
+
+    $E(\theta_f, \theta_y, \theta_d) = \sum L_y(\theta_f, \theta_y) - \lambda \sum
+    L_d(\theta_f, \theta_d) \quad (6)$
+
+
+    Where $l$ represents the source domain, $L_y$ represents the classification loss,
+    and $L_d$ represents the classification loss of domain classifier. The optimization
+    process is shown in equation (7) and (8):
+
+
+    $$
+
+    \theta_f, \theta_y, \theta_d = \arg \max E(\theta_f, \theta_y, \theta_d) \quad
+    (7)
+
+    $$
+
+
+    $$
+
+    \theta_d = \arg \max E(\theta_f, \theta_y, \theta_d) \quad (8)
+
+    $$
+
+
+    In order to avoid iteration, we introduces Generator layer, which may add a reverse
+    operation in the process of domain classifier, so that the optimization process
+    does not need iteration.
+
+
+    ## D. Domain Separation Network
+
+
+    The existing transfer method relies on the learning algorithm to eliminate the
+    characteristics of distribution between different domains. Bousmalis [19] and
+    others search for a way to deal with the transfer problem. They divide into two
+    categories, characteristics of public (shared) and characteristics of private.
+    The migration of private characteristics of each domain will lead to negative
+    transfer. Domain Separation Network (DSN) solves this problem.
+
+
+    The work of DSN consists of two parts:
+
+    (1) extracting features from different domains;
+
+    (2) using features to migrate. Based on this, the author proposes the following
+    neural network, which can not only ensure the extraction of public and private
+    features, but also ensure the integrity and effectiveness of them. As shown in
+    Fig. 4.
+
+
+    For DSN to benefit, the public part must be the common feature of source domain
+    and target domain. characters of both parts must be separated to effectively avoid
+    the negative transfer. Then put forward the following loss function to restrict
+    target encoder, source encoder, and the first is "difference loss", as shown in
+    (9):
+
+
+    $$
+
+    \mathcal{L} = ||H(f_s) - H(f_t)|| + ||H(f_s) || H(f_t)|| \quad (9)
+
+    $$
+
+
+    Second, in order to carry out the transfer, the following function should be adopted,
+    which is intuitively recognized by improving their similarity. Then, "similar
+    loss" is proposed, which contains two parts. The first part is the loss function
+    as in DAN, show in equation (10), and the second is the MMD loss, as shown in
+    (11)
+
+
+    ![](img/92d7539c0c4fb30c4d7f6d50f19fc96_3_0.png)
+
+
+    $$
+
+    \mathcal{L}^{DANN} = \sum |log(d_i) + (1-d_i) \log(1-d_{i})| \quad (10)
+
+    $$
+
+
+    $$
+
+    \mathcal{L}^{MMD} = \sum_{i=1}^{N_s} \sum_{j=1}^{N_s} \mathcal{K}(h(x_{si}), h(x_{sj}))
+    + \sum_{i=1}^{N_t} \sum_{j=1}^{N_t} \mathcal{K}(h(x_{ti}), h(x_{tj})) - 2 \sum_{i=1}^{N_s}
+    \sum_{j=1}^{N_t} \mathcal{K}(h(x_{si}), h(x_{tj})) \quad (11)
+
+    $$
+
+
+    ## E. Active Transfer
+
+
+    Traditional methods handle the problem of transfer, while Active Transfer [ATL]
+    effectively solves the problem of negative transfer in transfer. ATL extends methods
+    using projection matrix and weight vector. The objective function of ATL is shown
+    in equation (12):
+
+
+    $$
+
+    \min_{p,a} L(p,a) = \sum_{i=1}^{s} p^{ti} \alpha_i - \sum_{j=1}^{t} p^{tj} \alpha_j
+    + \lambda_1 \sum_{i,j}^{s} a_{ij} k_{ij} + \lambda_2 \sum_{i,j}^{s} a_{ij} \omega_{ij}
+
+    $$
+
+
+    $$
+
+    s.t. \quad p^T p=\sum_{i=1}^a \alpha_i, \alpha_i\ge 0 \quad (12)
+
+    $$
+
+
+    Where $p$ is the projection matrix, which is used to project the data points of
+    source and target domain into the common subspace, $a$ is the dimension of common
+    subspace, and $\alpha$ is the weight coefficient of source domain. To avoid trivial
+    solution, the orthogonal constraint is imposed on projection matrix $p$, so that
+    the data points represented by $a$ are discriminative.
+
+
+    ## V. CONCLUSION
+
+
+    DDC, DAN, and DNNT are all representative methods of data transfer. They make
+    full use of DANN-domain mapping, MK-MD distance, and constructing methods. These
+    methods achieve better and better performance on different datasets illustrated
+    in Table 1.
+
+
+    ## TABLE I. CLASSIFICATION OF METHODS ON DIFFERENT DATASETS
+
+
+    | Data Set | DCN | DAN | DNNT |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Office-3 | 70.6 | 72.9 | 74.3 |
+
+    | MNIST | | | 77.8 |
+
+    | SVIN | | 70.7 | 82.7 |
+
+    | MNIST | | | 47.6 |
+
+    | VOC2007 | | | ≤44.7 |
+
+    | USPS | | | 50.1 |
+
+
+    Transfer learning of neural networks has developed rapidly in recent years. To
+    construct deep networks with limited available data is one of the research topics.
+    This paper explores domain classification based on transfer learning, tends to
+    solve the problems in practical applications by multiple techniques to achieve
+    better performance. Negative transfer and stability are important measurements
+    in transfer learning, and the worth of learning further while using deep transfer
+    learning. The development of deep neural network, transfer learning has been utilized
+    to solve many challenging problems.
+
+
+    ## ACKNOWLEDGMENT
+
+
+    Thank The Laboratory of Network & Information Security, Hebei Normal University,
+    Shijiazhuang, China 05024, and the Provincial Engineering Center for Supply Big
+    Data Analytics & Data Security, Hebei Normal University, Shijiazhuang, China 05024
+    which provided support for this paper.
+
+
+    [1] R. Girshick, Fast R-CNN. In ICCV, 2015.
+
+    [2] Sen, H., K. Cheng, Girshick, J. Faster R-CNN: Towards object detection with
+    region proposal networks. In NIPS, 2015.
+
+    [3] Jordan, Y., He. K., Girshick, J. YOLO only once: Unified, real-time object
+    detection. In CVPR, 2016.
+
+    [4] L. W., Dancovec, D., Ekhan, C., and S. E. Reed: Domain Adversarial Training
+    of Neural Networks. In ICML, 2017.
+
+    [5] Lecun, Y., Bourtol, J. and L., et al.: Domain adaptation by transferring continuous
+    code. Journal of Neural Computation, 11, 1998.
+
+    [6] Kryžhevsky, A., Sutskever, I. ImageNet Classification with Deep Convolutional
+    Neural Networks (CNN). NIPS, 2012.
+
+    [7] Simonyan, K., Zerman, A. Very deep convolutional networks for scale recognition.
+    In arXiv:1409.1566, 2014.
+
+    [8] Sun, J., and Yang, Q. Deep Learning with Convolutional Neural Networks, CVPR
+    2014.
+
+    [9] Hu, X., Zhang, X. S., et al.: Deep Residual Learning for Image Classification.
+    In arXiv:1512.03385, 2015.
+
+    [10] Huang, G., Luo, Y., Zhang, M., and Sun, J. Deep transfer learning for cross-scene
+    adaptation. In arXiv:1609.06999, 2016.
+
+    [11] Wang, M., Deng, D. Deep Domain Adaptation: A Survey. In Neural Computing,
+    2018,30(2):133-153.
+
+    [12] Zhang, Y., and Wang, K. Maximizing for domain invariance via region attention.
+    In arXiv:1412.3474, 2014.
+
+    [13] Long, W., Wang, J., et al. Learnable features with deep domain adaptation/CNN
+    classification. In Conference on Machine Learning, 2016.
+
+    '
+  mdcn: '
+
+    极大地降低了网络的训练成本。将其应用于其他领域被认为是未来重要的发展方向之一。
+
+
+    ## IV. 深度迁移学习方法
+
+
+    一方面，学习具有很强的拟合能力，并且在特征表示的学习中具有更好的泛化性能 [16]。另一方面，迁移学习的领域相关性特征可以帮助我们利用深度神经网络的知识，然后充分利用现有知识来学习其他领域的共同特征表示，主要引入了深度迁移学习（DTL），它是自2014年以来从深度学习发展而来的。目前已有许多相关工作。DTL方法分为三类：基于关系的方法、对抗的方法和基于重构的方法。以下主要介绍前两种。
+
+
+    ## A. 深度领域混淆
+
+
+    深度混淆（DDC）是一种新架构，它引入了自适应层和额外的领域损失，以学习具有语义意义且不变的表示。DDC的结构如图2所示。其中，左侧是用于分类的CNN，损失函数通过与带标记图像的各种卷积和全连接计算得出。传统的图像分类是拟合的，但这会导致一个问题：从源域来看，没有目标域数据的网络在目标区域（图片右侧的未标记图像）很难获得良好的结果。因此，网络中需要添加参数领域损失以减小领域之间的距离。
+
+
+    常用的损失是MMD损失，如方程(1)所示：
+
+
+    ```
+
+    mmd^2(x_s, x_t) = ||\frac{1}{\sqrt{N_s}}\sum_{i=1}^{N_s}\Phi(x_s^i) - \frac{1}{\sqrt{N_t}}\sum_{j=1}^{N_t}\Phi(x_t^j)||^2$
+
+    ```
+
+
+    最大均值差异（MMD）通常用于两个样本集，以判断两个样本是否同分布。DDC的优化目标描述如方程(2)：
+
+
+    ```
+
+    loss = L(g(s), y) + \lambda \cdot mmd^2(g(s), g(t))
+
+    ```
+
+
+    ## B. 深度适应网络
+
+
+    深度适应网络（DAN）是DDC的改进框架。主要有两个改进：第一个是在网络的多个层中添加MMD损失；第二个是在MMD中使用多个核心，如方程(3）所示：
+
+
+    ```
+
+    loss = L(f(s), y) + \lambda \sum mmd^2(g_k(s), g_k(t))
+
+    ```
+
+
+    其中 $g_k$代表层的输出。如图3所示：
+
+
+    ![](img/92d7539c0c4fb30c4d7f6d50f19fc96_2_0.png)
+
+
+    图 2. DDC架构
+
+
+    ![](img/92d7539c0c4fb30c4d7f6d50f19fc96_2_1.png)
+
+
+    层间连接的输出。MMD公式为 $||\cdot||_H$，代表希尔伯特空间中的差异，或者添加表示不变的核函数，例如高斯核），如方程(4）所示：
+
+
+    ```
+
+    \mathcal{K}(x_1, x_2) = \exp(-\frac{||x_1-x_2||^2}{\sigma^2})
+
+    ```
+
+
+    $\sigma$的选取非常重要。MK-MMD使用核函数的累积，如方程(5）所示：
+
+
+    $$
+
+    \mathcal{K} = \sum_{k=1}^{K} \beta_k + \sum_{k=1}^{K} \gamma_k
+
+    $$
+
+
+    根据DCC，通过这两项改进，DAN实现了更好的性能。
+
+
+    ## C. 领域对抗神经网络
+
+
+    DANN的核心思想是使用H-散度来衡量两个领域之间的距离。DANN的架构包含三个部分：特征提取器、标签预测器和领域分类器。在此其中，特征提取器和分类器共享网络架构。最终目标是最大化分类性能。在这个框架下，添加了一个领域分类器来区分由提取器提取的源/目标特征。其目标等价于
+
+
+    $E(\theta_f, \theta_y, \theta_d) = \sum L_y(\theta_f, \theta_y) - \lambda \sum
+    L_d(\theta_f, \theta_d) \quad (6)$
+
+
+    其中$l$代表源域，$L_y$代表分类损失，$L_d$代表领域分类器的分类损失。优化过程如方程(7)和(8)所示：
+
+
+    $$
+
+    \theta_f, \theta_y, \theta_d = \arg \max E(\theta_f, \theta_y, \theta_d) \quad
+    (7)
+
+    $$
+
+
+    $$
+
+    \theta_d = \arg \max E(\theta_f, \theta_y, \theta_d) \quad (8)
+
+    $$
+
+
+    为了避免迭代，我们引入了生成器层，它可以在领域分类器的处理过程中添加一个反向操作，使得优化过程不需要迭代。
+
+
+    ## D. 领域分离网络
+
+
+    现有的迁移方法依赖学习算法来消除不同领域之间的分布特性。Bousmalis [19]等人寻找了一种处理迁移问题的方法。他们将特征分为两类：公共（共享）特征和私有特征。每个领域私有特征的迁移将导致负迁移。领域分离网络（DSN）解决了这个问题。
+
+
+    DSN的工作由两部分组成：
+
+    (1) 从不同领域提取特征；
+
+    (2) 使用特征进行迁移。基于此，作者提出了以下神经网络，它不仅能确保公共特征和私有特征的提取，还能确保它们的完整性和有效性。如图4所示。
+
+
+    为了让DSN获益，公共部分必须是源域和目标域的共同特征。两部分的特征必须被分离，以有效避免负迁移。然后提出了以下损失函数来限制目标编码器和源编码器，第一个是“差异损失”，如方程(9）所示：
+
+
+    $$
+
+    \mathcal{L} = ||H(f_s) - H(f_t)|| + ||H(f_s) || H(f_t)|| \quad (9)
+
+    $$
+
+
+    其次，为了进行迁移，应该采用以下函数，这直观上通过提高它们的相似性来识别。然后提出了“相似损失”，它包含两个部分。第一部分是与DAN相同的损失函数，如方程(10）所示，第二部分是MMD损失，如img/92d7539c0c4fb30c4d7f6d50f19fc96_2_1.png所示（注：此处原文公式编号可能有重叠，对应文中的10和11）：
+
+
+    $$
+
+    \mathcal{L} = ||H(f_s) - H(f_t)|| + ||H(f_s) - H(f_t)|| + ||H(f_s) || H(f_t)||
+    \quad (10)
+
+    $$
+
+
+    （注：原文此处公式显示较为杂乱，翻译遵循逻辑结构）
+
+
+    ## E. 活跃迁移
+
+
+    传统的迁移方法依赖学习算法来消除不同领域间的分布特性。ATL通过改进相似性来直观地识别迁移。然后提出了“相似损失”，它包含两个部分。第一部分是DAN相同的损失函数，如方程(11）所示，第二部分是MMD损失。
+
+
+    为了避免迭代，我们引入了生成器层，它可以在领域分类器的过程中添加一个反向操作，使得优化过程不需要迭代。
+
+
+    $\sigma$的选择非常重要。ATL方法解决解决迁移问题。ATL的目标函数如方程(12）所示：
+
+
+    ```
+
+    loss = L(g(s), y) + \lambda \cdot mmd^2(g(s), g(t))
+
+    ```
+
+    '
+  merge: 0
