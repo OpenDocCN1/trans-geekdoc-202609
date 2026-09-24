@@ -1,0 +1,443 @@
+- pgno: 0
+  md: '# # Residual Error modelling based Hybrid Wavelet-ConvLSTM Deep Learning model
+    to Estimate SOC of EV Batteries
+
+
+    Utkarsh Kumar | Sukumar Mishra | Sreedhar Madichette
+
+
+    Dept of Electrical Engineering | Dept of Electrical and Electronics Engineering
+    | Ecole Centrale College of Engineering
+
+
+    Indian Institute of Technology | Indian Institute of Technology | Hyderabad, India
+
+
+    Haus Khas, New Delhi, India | Haus Khas, New Delhi, India | sreedhar803@gmail.com
+
+
+    mitushkumar@gmail.com | sukhamidarmitra@gmail.com
+
+
+    *Abstract—State of charge (SOC) estimation has been an essential requirement for
+    battery management system as it is recent especially for Electric Vehicles (EVs).
+    The SOC statures the amount of charge left to indicate how long more can be used
+    by EV. Hence, accurate and unmonitored monitoring of lithium-ion batteries (LIBs)
+    is essential for usage and battery life cycle. Although there has been long research
+    on estimating SOC, there are no easy electronic equipments that can measure the
+    SOC directly due to its inability to process large amount of data with noisy conditions.
+    This article proposes an efficient estimation method by incorporating residual
+    feature-based convolutional LSTM (ConvLSTM) deep learning model. Publish lithium
+    dataset was used for this experimentation and validation. Level wavelet decomposition
+    has improved the accuracy of estimation. The proposed method works well in terms
+    of accuracy and generalization capabilities.
+
+
+    LIBs, most appropriate problem is the monitoring and measurement of the amount
+    of charge remaining as their fuel powertrains do not face such issues since the
+    electronic instrument directly. Measurement of the state of charge is essential
+    for the energy management of EVs. The SOC is the level of charge of any battery
+    to its capacity. It authorizes a vehicle to accelerate with electric motors by
+    using energy. At the same time, the engine works as a generator to recharge the
+    battery to the minimum level needed for such.
+
+
+    State of batteries needs rigorous research for operational management, life cycle
+    cost, extension of reliability and safe operation. It is seen that due to time-dependent
+    and non-linear characteristics of the vehicle and current signals, the SOC is
+    affected by various parameters such as operating conditions, temperature, and
+    driving loads. There has been a lot of research on SOC estimation from past years.
+    The literature category focuses on three methods: ampere-based, lookup table-based
+    method, and filter-based estimation methods. Each method is well suited for laboratory
+    environment estimation. It works when the maximum capacity of the battery is known,
+    and can be measured. The lookup is a function of the SOC that calculates the battery''s
+    block value. To estimate the SOC, charging and discharging are measured with respect
+    to time. Model-based methods incorporate complex mathematical equations of the
+    battery by building history. Model-free is the data-driven method that is used
+    when the mathematical model of battery is unknown. This method estimates the battery''s
+    internal states directly from the data of battery, voltage, and temperature. To
+    model various characteristics of battery cell, recurrent neural network was proposed
+    in [2] using voltage, current, and temperature. It used data from the tests conducted
+    using dynamic stress test, federal urban
+
+
+    # I. INTRODUCTION
+
+
+    Electric vehicles are expanding globally, and there is a high probability that
+    they will help reduce greenhouse emissions resulting from fossil fuel combustion.
+    EVs are green electric alternatives, as they are powered by electric batteries
+    (LIBs). They do not emit hazardous gases in the environment, contributing to a
+    healthy and green environment. High efficiency, low carbon footprint, high energy
+    density, and low cost of batteries EVs have made them as an alternative to fuel
+    combustion in electric cities. Lithium-ion batteries (LIBs) are the most common
+    sources of power in EVs. LIBs are available with different specifications and
+    types concerning high energy density, cycle life, and safety. Effects, and long
+    life cycle, allowing them to be smaller and lighter in dimensions than other rechargeable
+    vehicles as lead-acid batteries. There are many advantages of using lithium
+
+
+    978-1-6654-2536-0/21/$30.00 ©2021 IEEE'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '![](img/e970ca6a11457c5c768ab151829d3475_1_0.png)
+
+
+    Fig. 1. SOC estimation was evaluated in terms of computational time, tracking
+    accuracy and stiffness against various initial conditions. The reliability of
+    a battery pack depends on the management system. A cell model, taken as three
+    electric diodes, entirely based on voltage measurement and current profile, was
+    developed by authors in [3]. A multi-cell extended Kalman filter based approach
+    was proposed to estimate the SOC accurately.
+
+
+    Reducing anxiety and improved performance of EVs are crucial factors that can
+    be achieved by precise SOC estimation. To handle non-linearity and complex battery
+    characteristics, a mistaken model (MEM), where the before approach was proposed.
+    To solve the problem of rate change limitations, MEM with partial adaptive filtering
+    recursive square algorithm and battery power based method [4]. SOC of the battery,
+    authors in [5] proposed an efficient deep neural network (NN) method with dynamic
+    range of hidden layers and neurons on different cycles. It was observed that 4
+    layer Deep NN trained on diverse cycle data de-performs the standard SOC estimation
+    with attention to the history technique under varying-parameter conditions were
+    proposed to improve the accuracy. The hybrid approach was then compared with conventional
+    elements to evaluate the performance [6].
+
+
+    Measurement noise with SOC estimation error was improved by implementing a design
+    setoff between the stiffness and convergence rate in adaptive observers on the
+    nonlinear properties of the battery cells. The advantage of the method is to minimize
+    the error and enhance the stability of the deduced deduction errors of the parameter
+    and estimation [7]. The authors in [8] explained the pros and cons of proposed
+    methods and compared with them
+
+
+    different model-based estimators with respect to the accuracy, computational burden,
+    and robustness. Recent nonlinear functions from different literature sources were
+    used as reference for improved accuracy and execution time. Authors in [9] proposed
+    a DNN-based SOC estimation for feature representation and vector representation
+    parameters battery data more accurately, the authors inspired recursive neural
+    networks (RNN)- DNN based algorithm. To fully extract feature accuracy by estimating
+    the SOC, a extended convolutional neural networks (CNN) based multi-channel algorithm
+    filter with the properly trained vector delection, was discussed.
+
+
+    Authors in [10] proposed an enhanced machine learning based approach to estimate
+    SOC. To find the optimal number of hidden layers concerned with DCNN, Filter-based
+    algorithm was implemented. The DNN based algorithm for SOC estimation used only
+    the battery test to measure voltage and current, and the method of battery chemistry,
+    electrochemical model, and added filters for the needed and reliability of EVs.
+    State of health (SOH) estimation is different from the cells SOC. To solve this,
+    a deep free approach based on wavelet networks was proposed in [11] to relate
+    state of health (SOH) estimation. Frequency response characteristics of the battery
+    impose limited by battery parameter identification. Battery parameter model was
+    proposed to identify slow and fast battery dynamics using a time scaled method.
+    The approach led to the model with frequency response much clearer detail features.
+    Using laboratory battery cell data [12]. For the purpose of online estimation
+    and analysis of EVs battery, authors in [13] proposed a dynamically driven'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: In this article, we used available Panasonic 1860 LiBs dataset prepared at the
+    University of Wisconsin. The test cells contain the chemistry of Lithium Nickel
+    Cobalt (LiNiCo). The battery was prepared based on tests conducted at different
+    ambient temperatures from -20°C to 25°C. A power cycle profile was measured for
+    the test benches when the battery cycle was completely charged. Urban Dynamometer
+    Driving Schedule (SDS), Federal Test Driving Schedule (HWFET), Highway Fuel Economy
+    Driving Schedule and Los Angeles 92 (L92) were the four standards under which
+    battery was part under testing. In addition to details of, the few drive cycles
+    were manually created. Mixed cycles of UDDS, HWFET, and L92 along Cycle 1, Cycle
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "$h_t^l(i+1) = \\sum_{k} x_{t-k+1}(i)h_k \\quad (6)$\n\n$x_t^l(i)$ is the $t^{th}$\
+    \ value of the lower frequency sub-signals at $i^{th}$ level. Signals are generated\
+    \ from half downsampling of the intermediate sequence represented as $(t)$ and\n\
+    \n$a_t^l(i) = a_t^l(i), a_t^l(i), \\dots \\quad (7)$\n\n$h_t^l(i) = a_t^l(i),\
+    \ a_t^l(i), \\dots \\quad (8)$\n\nThe $i^{th}$ level decomposed of $x$ is given\
+    \ by (9):\n\n$X(i) = x^1(i), x^2(i), \\dots, x^i(i)$\n\nA three-level decomposed\
+    \ with an approximate and detailed coefficients of Cycle 1 SOC at the ambient\
+    \ temperature of $0^{\\circ}C$ is shown in Figure 3. $x$ can be reconstructed\
+    \ completely by inverting $W$ to $X(i)$.\n\n![](img/e970ca6a11457c5c768ab151829d3475_3_0.png)\n\
+    \nFig. 4. Architecture of ConvLSTM DNN model.\n\nuses sharing the repetitive network\
+    \ to treat inputs as sequential data of and thus enables it to perform series\
+    \ analysis.\n\nFor estimation of SOC, voltage (V), current (I) and temperature\
+    \ (T) were taken as input to the proposed model and SOC was predicted. The data\
+    \ from battery were measured at time $t$ until the final time $t_{end}$. Hence,\
+    \ the function of $SOC$ from $\\{T, I, V\\}$ can be formulated as:\n\n$SOC_t =\
+    \ f(T_t, I_t, V_t, S_{t-1}) \\dots \\quad (16)$\n\n![](img/e970ca6a11457c5c768ab151829d3475_3_1.png)\n\
+    \nFig. 3. A three-level decomposed SOC at $0^{\\circ}C$.\n\n# C. ConvLSTM Model\n\
+    \nConvolutional Long short memory (ConvLSTM) DNN is an deep learning technique\
+    \ that was introduced to facilitate a space-time sequence estimation problem with\
+    \ both input and output are of space-time nature. It is shown that the ConvLSTM\
+    \ has high capacity to capture space-time patterns in the data which Figure 4\
+    \ shows the overall overview of ConvLSTM architecture.\n\nEquations (15) formulate\
+    \ ConvLSTM architecture mathematically for time analysis;\n\nTABLE I\nPARAMETERS\
+    \ SPECIFICATIONS\n\n| Parameters | Best performing values |\n|---|---|\n| Number\
+    \ of hidden layers | 50 |\n| Shape of filters | 16 |\n| Max pooling layers | |\n\
+    | Loss function | Mean squared error (MSE) |\n| Activation function | |\n| Batch\
+    \ size | 128 |\n| Epochs | 40 |\n| Optimizer | adam |\n\nbest results in terms\
+    \ of loss error. The last term of restrictions is\n\n$\rho$ is a sigmoid function,\
+    \ $*$ denotes the convolution operation, $\\odot$ denotes element wise product\
+    \ convolution, $i_t, f_t, o_t$ are the input, forget and output gates respectively,\
+    \ $C_t$ is the memory cell, $H$ is the hidden state, $W$ are the weights and $b$\
+    \ is the bias. ConvLSTM is basically a repetitive layer where internal matrix\
+    \ multiplications are replaced with convolutional operations. The layer learns\
+    \ three dimensional of one dimensional so that the layer\n\nAuthorized use limited\
+    \ for: BOURNMOUTH UNIVERSITY. Download on July 01/2021 at 04:10:12 UTC from IEEE\
+    \ Xplore. Restrictions apply"
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'found more sufficient than training and due to this, it was observed that the
+    training was much reduced.
+
+
+    effectiveness of the algorithm as explained in the Section II-A.
+
+
+    # D. Pseudo Code
+
+
+    The pseudo code implemented to achieve the results can be found here:
+
+
+    Prepare dataset: $X_i = 1, 2, ..., n$,
+
+
+    Output: $y_1, y_2, ..., y_n$
+
+
+    train, validation and testing dataset
+
+
+    return (segmented_data)
+
+
+    Decompose that into different sub-levels for denoising
+
+
+    set (Approximate and defined coefficients)
+
+
+    set (each approximate and defined coefficients to exactly
+
+
+    ConvLSTM architecture layer
+
+
+    set hidden layer neurons, epochs, activation functions
+
+
+    if values or number of outliers is times-shifted
+
+
+    set decompose at different level
+
+
+    else (from inverse wavelet decomposition)
+
+
+    return (estimated SOC)
+
+
+    set (actual SOC-estimated SOC)
+
+
+    set (residual error to ConvLSTM layer)
+
+
+    return (final SOC)
+
+
+    ```
+
+    RMSE = \frac{1}{n} \sum_{i=1}^{n}(SOC_i - SOC_i)^2
+
+    ```
+
+
+    ```
+
+    MAE = \frac{1}{n} \sum_{i=1}^{n}|SOC_i - SOC_i|$
+
+    ```
+
+
+    ```
+
+    MAPE = \frac{1}{n} \sum_{i=1}^{n}\frac{|SOC_i - SOC_i|}{SOC_i}
+
+    ```
+
+
+    Table II shows the comparative result of benchmark models without decomposition
+    THROUGH. The naive method is one which assumes the same value as one step before
+    considering some timeframe, voltage and current conditions.
+
+
+    ![](img/e970ca6a11457c5c768ab151829d3475_4_0.png)
+
+
+    Fig. 6. Train and test loss with respect to number of epochs.
+
+
+    The performance evaluation of the proposed method, residual error by wavelet-convolution
+    (RE-ConvLSTM) was evaluated on three metrics, root mean squared error (RMSE),
+    mean absolute error (MAE) and mean absolute percentage error (MAPE). Equations
+    (17)-(19) formulate the metrics. Here, SOC is the actual SOC, it is the estimated
+    SOC and n is the total samples. db6 was chosen as the mother wavelet based on
+    experimental basis, it is this wavelet which gave the best results and multilevel
+    decomposition. Windows OS with 32GB of RAM and 3.19 GHz Intel Core i7 CPU was
+    used to implement the algorithms. To code the algorithms, Python 3.2 was used
+    for the programming language. The dataset was kept and
+
+
+    Training and test drive cycle was kept same through the experiment. Figure 5 shows
+    the plot of actual using naive method. Table III shows the comparative
+
+
+    ![](img/e970ca6a11457c5c768ab151829d3475_4_1.png)
+
+
+    Fig. 5. Actual vs Estimated SOC using naive method.
+
+
+    Fig. 7. Actual vs Estimated SOC for RE-ConvLSTM at 6th decomposition.
+
+
+    results of algorithm different with machine learning algorithms with six-wavelet
+    decomposition. it can be seen that the proposed algorithm outperforms all methods
+    and proves to be. Figure 6 shows the plot of
+
+
+    two different drive cycle was used to validate the'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# TABLE II
+
+    COMPARATIVE RESULTS WITHOUT WAVELET DECOMPOSITION
+
+
+    | Model | RMSE | MAE | MAPE |
+
+    |---|---|---|---|n| Naive | 7.619 | 8.667 | 4.447 |
+
+    | LSTM | 22.664 | 16.747 | 10.500 |
+
+    | ConvLSTM | 5.571 | 5.087 | 2.289 |
+
+
+    variations with mixed dry cycles by incorporating the two different LIBs. The
+    proposed method can be built with various optimization methods such as swarm particle-optimization,
+    ant-colony optimization, gray wolf optimization technique, etc., to get better
+    results.
+
+
+    # REFERENCES
+
+
+    +   [1] R. Xiong, J. Cao, Y. He, and F. Sun, "Critical Review on the Battery State
+    Charging Methods for Electric Vehicles," in IEEE Transactions on Power Electronics,
+    vol. 67, pp. 4852-4863, 2022.
+
+    [2] Y. Fan, X. Song, Y. Xu and K. Tsai, "State-of-Charge Estimation of Lithium-Ion
+    Batteries with Short-Term Memory Network," in IEEE Access, vol. 7, pp. 52798-52809,
+    2020.
+
+    [3] N. Wang, J. Zhang, F. Ruiz, M. F. Macci and G. Ricci, "Numerical Analysis-Based
+    Model for SOC Estimation Using a Hybrid Method," in IEEE Transactions on Industrial
+    Electronics, vol. 65, pp. 7185-7194, Oct. 2018.
+
+    [4] K. Sarrafan, K. Muttaqi and D. Stoian, "Real-Time Estimation of State of Charge
+    for Electric Vehicle Vehicles Using a New Neural Architecture," in IEEE Transactions
+    on Industrial Applications, vol. 56, pp. 5417-5428, Sept. 2020.
+
+    [5] Z. Zhang, Y. Wang, M. J. Li, H. J. Li, J. Liu, J. Ker and K. Muttaqi, "State-of-Charge
+    Estimation of Lithium-Ion Battery in IEEE Transactions on Industrial Applications,
+    vol. 57, pp. 5560-5574, 2021.
+
+    [6] G. S. M. Miskinlis, D. Dourkas, T. Apostopoulos, D. P. Libradis and V. Karaman,
+    "A More Accurate Hybrid Method for SOC Estimation," in IEEE Transactions on Energy
+    Conversion, vol. 34, no. 1, pp. 109-119, 2019.
+
+    [7] Y. Wang, J. Wang, J. Liu, and Y. S. Hara, "Adaptive Estimation of the State
+    of Charge for Lithium-Ion Batteries: Non-linear Convolutional Neural Network Approach,"
+    in IEEE Journal of Power Energy, vol. 13, no. 3, pp. 3902-3912, Mar 2020.
+
+    [8] J. Meng, et al., U. V. Wang, X. Liang, and T. Liu, "Lithium-Ion Batteries
+    State of Charge Prediction of Electric Vehicles using RNN-CNN Neural Network,"
+    in IEEE Access, vol. 7, pp. 15831-15893, March 2021.
+
+    [9] M. Li, Y. L., X. Wang, T. Liu, M. A. Hussain, M. I. S. Saad, A. Yong and K.
+    Muttaqi, "Lithium-Ion Battery State of Charge Estimation Using Deep Recurrent
+    Neural Network with Attention and Control," IEEE Transactions on Industrial Electronics,
+    vol. 67, pp. 8980-8990, 2020.
+
+
+    train and test MSE with respect to the number of epochs for dec-ConvLSTM method.
+    Figure 7 shows that actual SOC using wavelet decomposition implementing Re-ConvLSTM
+    performs well
+
+
+    the tables III and IV and figure 5, it can be seen that the proposed method performs
+    accurately with error less than 1% compared to other method. From Table II, we
+
+
+    # TABLE III
+
+    COMPARATIVE RESULTS WITH MULTILEVEL WAVELET DECOMPOSITION
+
+
+    | MODEL | Decomposition Level | RMSE | MAE | MAPE |
+
+    |---|---|---|---|---|n| LSTM [5] | 1 | 13.211 | 10.138 | 7.379 |
+
+    | | 2 | 5.657 | 8.133 | 7.189 |
+
+    | | 3 | 5.008 | 5.898 | 6.239 |
+
+    | | 4 | 4.395 | 5.224 | 4.360 |
+
+    | | 5 | 4.749 | 5.577 | 4.280 |
+
+    | | 6 | 5.092 | 5.268 | 4.035 |
+
+    | ConvLSTM [16] | 1 | 21.482 | 10.469 | 7.189 |
+
+    | | 2 | 6.555 | 4.748 | 0.270 |
+
+    | | 3 | 8.103 | 6.946 | 0.620 |
+
+    | | 4 | 6.586 | 5.026 | 0.570 |
+
+    | | 5 | 0.211 | 0.197 | 0.450 |
+
+    | | 6 | 0.221 | 0.149 | 0.360 |
+
+
+    can be seen that the proposed method has less than 1% in all decomposition level
+    compared to other methods. Re-ConvLSTM also performs better with level 4 and 2
+    level decomposition.
+
+
+    however it is noted that the decomposition level for different algorithms results
+    in different values depending on the nature of the dataset.
+
+
+    # IV. CONCLUSION
+
+
+    This article proposed a residual based six-level wavelet decomposition model for
+    SOC estimation by analyzing ConvLSTM considering temperature, voltage and current
+    input features along with the measured actual SOC through experiments in laboratory.
+    To validate the accuracy of the proposed method, metrics, MAPE, MAE and RMSE were
+    used with publicly available datasets during real time battery experiments. Comparing
+    with other methods shows that the proposed method is better in terms of estimation
+    accuracy. Also, it shows that at sub-level, the number of epochs was significantly
+    reduced compared to other of the art methods. The authors have planned to extend
+    the work by incorporating the influence of different ambient temperature'
+  merge: -1
+  img_proc: true
