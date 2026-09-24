@@ -1,0 +1,608 @@
+- pgno: 0
+  md: '# # Classification of Durian Fruits based on Ripening with Machine Learning
+    Techniques
+
+
+    Muluthalakshmi , A
+
+    Research Scholar,
+
+    Hindustan Institute of Technology and Science,Chennai,
+
+    Tamnadu, India
+
+    muluthalakshmi.samy091@gmail.com
+
+
+    Dr.P N Renjith
+
+    Associate Professor,
+
+    Hindustan Institute of Technology and Science,Chennai,
+
+    Tamnadu, India
+
+    nprenjith@hindustannuniv.ac.in
+
+
+    Abstract—Eating fruits is good for health and an excellent source of vitamins
+    and minerals. But fruits are unripe if not fully ripened. Ripening of durian is
+    an important phase in Pomology development. The various machine learning techniques
+    were proposed to detect the classification of fruits. This paper provides a special
+    approach to identify the features of different classes of durian fruits. Durian
+    is known as the most unique and sweetest fruits in South Asia.
+
+
+    to help with high production and minimal loss. ML techniques give an analysis
+    of the high-quality fruits of data. It greatly gives the fastest output with better
+    accuracy.
+
+
+    For the necessary determination of the fruits, the process is divided into two
+    phases of Pre-Processing and Classification which the fruit data set is demonstrated.
+    In the first phase, the data are preprocessed on its features like size, texture,
+    and color. All the above features are identified the fruit can be identified separately
+    from other features of the plants such as leaves, flowers, branches, etc. The
+    second phase is the classification of the fruit. If the Destructive technique
+    is applied to the fruits in the future they become waste and only help in the
+    future.
+
+
+    Destructive Machine learning techniques were used to SVM, Random Forest. The results
+    obtained are accuracy of 89.3% using SVM and 84.3% using Random Forest.
+
+
+    Keywords—Classification, Machine Learning, SVM, Decision Tree, KNN, Random Forest.
+
+
+    This study goes for Non-Destructive method in predicting the classification of
+    durian based on performance level, accuracy, and speed using machine learning
+    techniques. Generally, the results are classified as Unripe, Ripe, and Pulpy.
+
+
+    # ## INTRODUCTION
+
+
+    Durian is one of the sweetest fruits. It is popularly known as “king of fruits”,
+    due to its sweet creamy taste and very strong odor; however are area in India
+    has has high demand. Growing, as it is one of the most profitable fruits for farmers
+    and exporters. The farmers only harvest those that have fallen from the durian
+    tree %100% harvest before they are fully ripened which compromises the quality
+    and the Brix level does not reach its maximum. As a result, the Musang king variety
+    is sweeter and better than the Monthong durian Malaysia, farmers do not pick the
+    fruit from the tree, but wait for it to fall naturally. Hence, the farmers experience
+    huge loss without exporting.
+
+
+    The images usually undergo pre-processing before the training and testing process
+    in techniques. In this phase, a filter is applied to remove the noise and to soften
+    the captured image. The three pre-processing steps applied in this work are Filtering
+    the Image, Color Enhancement, and using Contrast enhancement. Filtering is a technique
+    used for smoothing and Color enhancements are used to improve the enhancement
+    of image. On the other hand, the contrast helps in the manipulation of pixels
+    to increase the contrast. Linear and Non-Linear transformation of the images are
+    done in this process.
+
+
+    The main objective of this durian classification is to detect, identify and classify
+    the features of an image. After the non-destructive identification of fruits,
+    the performance is measured using machine learning
+
+
+    Ripening of durian fruits is not an easy task which is high time consumes, inaccurate
+    in prediction, and also needs skills. This work explains how different types of
+    algorithms for the early detection of ripening durian are applied for the determination
+    of the classification of durian fruit.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Proceedings of The Third International Conference on Intelligent Sustainable
+    Systems [ICISS 2020]
+
+    IEEE Xplore Part No: CF200F919-4; ISBN: 978-1-7281-7089-3
+
+
+    performance accuracy is measured by applying the algorithm in Durian. The effective
+    use of the Machine learning algorithm is to improve the classification rate and
+    minimize execution time. Techniques using Support Vector Machine, K-Nearest Neighbor,
+    Decision Tree, and Neural Network are applied to the extracted datasets of fruits.
+    These techniques help in the identification of the performance using graph.
+
+
+    In this paper, the author used the digital imaging technique with an effective
+    random forest algorithm for the successful classification of papaya fruit based
+    on its ripeness. The color features were computed using RGB, HSV, and Lab* methods.
+    By combining the image features with the machine learning algorithm which has
+    a higher accuracy than the other two methods, the classification on-datasets was
+    performed, in which the accuracy of 94.3% and 97.4% were obtained respectively.
+    This method gave a satisfying result based on the firmness of the papaya fruit
+    and achieved the performance of 78.1% with the machine learning techniques.
+
+
+    The organization of this research paper is as follows: Section I introduces the
+    problem. Section II discusses literature review and the problem statement. Section
+    III the details of the proposed method, based on feature extraction and classification
+    methods. IV presents the experimental results. The concluding remarks are presented
+    in Section V.
+
+
+    For detecting ripeness of Gooseberry fruit a combination of 4 machine learning
+    techniques with 3 color spaces was proposed and evaluated in this paper [4]. Here
+    author used a first pre-processing method of samples, image acquisition, image
+    enhancement, and segmentation process of converting it to the mean value of the
+    RGB color space was converted to HSV and Lab. Finally, the performance of ANN,
+    DT, SVM, and KNN were combined to classify the fruit based on its ripeness. After
+    performing the classification using SVM with the RGB color space yielded the performance
+    accuracy and f-measure. The performance over the three color spaces showed 89.339%
+    of variance and performance of.
+
+
+    # II LITERATURE REVIEW
+
+
+    This Literature work explains in detail the methods used for the classification
+    of different types of fruits based on its size, shape, color, and texture ripening
+    of fruits. There are a couple of image classification methods discussed heretofore.
+    In this review the comparison is made with all the machine learning techniques
+    used along with the performance obtained.
+
+
+    Using of Hyper-spectral approach was presented in [1] for the performance improvement
+    in Strawberry fruit classification. HI spectral imaging technique was used to
+    evaluate the quality, ripeness, and fruit features that were affected by the strawberry.
+    The spectral data, wavelength, and texture features were extracted from HI. The
+    Texture features like color, roughness, intensity, firmness extracted using the
+    technique. The author used the SVM for classification, by using the fruit datasets
+    from hyperspectral images at over 71.67%.
+
+
+    In this paper [8] the author explains the evaluation of the non-destructive internal
+    quality of the fruit pear. The types of fruit peers Conference and Cupeña were
+    used. To detect the indoors, the supervised vector machine alone with X-ray tomography
+    was proposed. Classifier trained on data achieved high results when compared with
+    ‘Compera’. The classifier SVM improved an accuracy above 85% depending on the
+    cultivator and value of features used. This method needed to increase inspection
+    speed and reduce the cost of equipment.
+
+
+    In this study presented [2], the author used automatic image processing for the
+    identification of bananas fruit ripeness. The ripeness ripening is done under
+    nine in which (Un-ripe, Semi-ripe, Mid-ripe, and Full-ripe) of the fruit were
+    prepared and an artificial neural network framework was applied. This approach
+    helped in the classification of fruit based on color, identified spots on the
+    fruit, and the Tiuana statistical features performed compared with the Supervised
+    techniques of SVM, KNN, DT, and Naive Bayes. Results reveal that the proposed
+    ANN system has the highest overall recognition rate, which is 87.25%,
+
+
+    | author-citation | Fruits Used | Performance | Methodology |
+
+    | Chuzhang | Strawberry | | SVM |
+
+    | Fatma M. A. | Banana | | SVM, KNN, ANN |
+
+    | Luis Fernando | Papaya | 78.1% | Random Forest |
+
+    | Wilson Carlos | Gooseberry | | SVM |
+
+    | Tim Van Leeroverbeek | Pear | | |
+
+
+    ![](img/03c63fd43437e92a269506f88dfa78b4_1_0.png)
+
+
+    To overcome the problems faced by the farmers, a solution has been introduced
+    towards the introduction and advances of innovative imaging technologies for fast,
+
+
+    # III PROPOSED METHOD
+
+
+    978-1-7281-7089-3/20/03/31.00 2022 IEEE
+
+
+    Authorized license used to identify: Robert Gordon University. Download on May
+    29, 2021 at 12:15:04 UTC from IEEE Xplore. Restrictions apply.
+
+
+    543'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "# Proceedings of The Third International Conference on Sustainable Systems\
+    \ [ICISS 2020]\nIEEE Xplore Part: CCF2019-ART; ISBN: 978-1-7281-7089-3\n\nnon-invasive,\
+    \ and non-destructive monitoring of ripening and\nmaturity of fresh fruits. The\
+    \ proposed methods include\nDataset collection of Durian Images, Pre-processing,\
+    \ and\nClassification.\n\nmonitoring and is created to describe and interpret\
+    \ the\ncolors. [9] HSV express the color more clearer than RGB and\nthe calculation\
+    \ of determination of HSV is very simple and\nease. These values help in stability\
+    \ of the dataset to give us the\ninput for classification. The images are resized\
+    \ and\nt HSV color analysis method is used to divide the\nbackground and dur area.\n\
+    \nThe novelty of this work is to compare all\nclassifying algorithms and to determine\
+    \ the best method of\nclassification based on Accuracy, Precision call and F1\
+    \ Score.\n\n# Formula for HSV :\n\nHue calculation:\n\n```\n$H = (60 * \\frac{(c'-r')}{\\\
+    Delta}) \\bmod 6, C_{max} = R'$\\n$(160 + \\frac{(b'-r')}{\\Delta} + 2), C_{max}\
+    \ = G'$\\n$(160 + \\frac{(r'-g')}{\\Delta} + 4), C_{max} = B'$\n```\n\nSaturation\
+    \ calculation:\n\n```\n$S = \\frac{C_{max}}{(\\Delta)}, C_{max} \\neq 0$.\n```\n\
+    \nValue calculation: $V = C_{max}$ (2)\n\n![](img/03c63fd43437e92a269506f88dfa78b4_2_0.png)\n\
+    \nFig. 2. System Design Model\n\nImage Collection :\n\nFor developing and testing\
+    \ the proposed algorithms\nd durian images were taken from the Kaggle website.\n\
+    From these available datasets of different fruits, 300\nimages of durian were\
+    \ taken from 180 images were taken\nfor training and validation set, and 120 images\
+    \ for the test set.\nWith the above set of durian images, the two processes of\n\
+    ext extraction and classification process done [6]\n\n![](img/03c63fd43437e92a269506f88dfa78b4_2_1.png)\n\
+    \n![](img/03c63fd43437e92a269506f88dfa78b4_2_2.png)\n\n![](img/03c63fd43437e92a269506f88dfa78b4_2_3.png)\n\
+    \nFig. 3. Durian Images\n\nPre-processing based on color spaces:\n\nThis process\
+    \ is applied to perform smoothing of the\ndurian image by resizing the image to\
+    \ 100*100 pixels.\nimage generally consists of RGB color components which\nrepresent\
+    \ themselves. This RGB is used to determine the mean and median deviation.\nFirst,\
+    \ the RGB is converted to Gray and then to HSV.\nHSV color space determines the\
+    \ color in terms of Hue,\nSaturation, and Value. In Which the Hue represents the\n\
+    col Saturations represent the vibrancy and Vibrant fruits\nbrightened with the\
+    \ following: [8]\n\nThe use of color image processing depends on\nmain factors\
+    \ of color and scales. In which color identifies\nt object and extract the object\
+    \ from the image. The shades\nof object are compared with the gray scale. The\
+    \ RGB\nchannel is widely used in image processing for color\n\nFig. 4. Color Detection\
+    \ of Durian Images\n\nFeature Extraction based on edge detection :\n\nThe purpose\
+    \ of this method is to significantly\ndetermine the edge of durian fruit with\
+    \ that of\nbackground images. The Canny Edge Detector is a technique\n utilizes\
+    \ algorithms to determine the edges of\nimages. The steps implemented:\n\n+  \
+    \ (a) Smoothing of the durian image by Applying Gaussian\nextension and to reduce\
+    \ the noise with the following:\n\n+   (b) Canary filter is used for edge detection.\
+    \ This process of\n detection is identified by calculating the\ngradient of image\
+    \ intensity at every pixel of an image.\n\n978-1-7281-7089-3/20/$30.2020 © IEEE\n\
+    \n544"
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Proceedings of The Third International Conference on Intelligent Sustainable
+    Systems [ICISS 2020]
+
+    IEEE Xplore Part: CCF200F19-ART; ISBN: 978-1-7281-7089-3
+
+
+    (c) Finally double threshold is applied to determine the potential edges and the
+    final edges are tracked by hysteresis [17]
+
+
+    Where the value of f(x) determines the classification of data samples, if f(x)=0
+    then the data is on the hyper plane and if f(x)<0 then the data is on the negative
+    plane and if the value is greater than 0 then the data is in the hyper plane.
+    These are illustrated in the figure (5)
+
+
+    The Gradient is calculated to determine the edge intensity and direction of the
+    image. To detect the easiest way is to apply filters in two direction of horizontal
+    (X) and for vertical (Y). When the gradient is smoothed, $I_xI_y$ are calculated
+    as in:
+
+
+    ```
+
+    Gradient (G) = $\sqrt{I_x^2 + I_y^2}$
+
+    $\theta(x,y) = \arctan(\frac{I_y}{I_x})$ (1)
+
+    ```
+
+
+    ![](img/03c63fd43437e92a269506f88dfa78b4_3_0.png)
+
+
+    Fig. 5. Canary Detection of Durian Images
+
+
+    Fig.6. Support Vector Machine Model
+
+
+    # D. Methodology :
+
+
+    After preprocessing, the durian images are trained and validated using the Non-Destructive
+    Techniques. The Machine learning algorithms namely SVM, Bayes, and Random Forest
+    are used to compare the classification accuracy of the ripening Durian Fruit.
+
+
+    The performance measure with SVM shows that the classification of the fruits.
+    The Durian images are classified on maturity level. With the training sample of
+    75% and testing of 25% the classification showed a better result.
+
+
+    These supervised algorithms analyze the training dataset. Algorithms namely Bayes,
+    Logistic Regression, and Simple Neural Networks are more simple to understand,
+    very fast to learn from the data. While these are more constrained and have limited
+    complexity of working with simpler models with a minimum number of dataset. On
+    the other hand, K-Nearest Neighbour decision with CART and SVM are more robust
+    and give better accuracy for prediction. These algorithms are of risk in overfitting
+    the training data.
+
+
+    From the literature, it is found that 80-83% classification is obtained using
+    a logistic support vector machine. In fact, the classification model for the SVM
+    model is based on sample data with 89.33%. The prediction of data using SVM with
+    above above is is considered feasible and efficient.
+
+
+    +   1) Support Vector Machine
+
+
+    SVM is a supervised learning that can be used to analyze the data, identify the
+    pattern, and can be for classification and prediction. This helps in multiclass
+    classification. SVM helps to determine the decision based on hyperplane, classified
+    linear and Non-linear[10] It helps to determine the optimal hyperplane that can
+    classify in 2-dimensional space as by the formula:
+
+
+    ```
+
+    $g(x) = w^Tx + b$ (3)
+
+    ```
+
+
+    The classification decision formula is:
+
+
+    ```
+
+    $f(x) = sign(w^Tx + b)$ (4)
+
+    ```
+
+
+    ```
+
+    from sklearn.svm import SVC
+
+    from sklearn.pipeline import make_pipeline
+
+    from sklearn.preprocessing import StandardScaler
+
+
+    clf = make_pipeline(StandardScaler(), SVC(gamma=''auto''))
+
+    clf.fit(X_train, y_train)
+
+
+    out = clf.predict(X_test) * 100
+
+    ```
+
+
+    Fig.7 : Classification Accuracy of SVM
+
+
+    # 2) Gaussian Na Bayes Algorithms
+
+
+    GNB algorithm is based on Bayes theorem which has a common principle of every
+    features is independent
+
+
+    978-1-7281-7089-3/20/$31.00 ©2020 IEEE 545'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Proceedings of The Third International Conference on Intelligent Systems
+    [ICTISS 2020]
+
+    IEEE Xplore Part Number: CFP20019-ART; ISBN: 978-1-728-7089-3
+
+
+    of the other features are being classified. GNB stores all the available data
+    and classifies a new data point based on the similarity and it easy to build.
+    This can be used for both the Classification and Regression process. GNB is easy
+    to implement, robust to noisy data also for a large volume of data. The Naive
+    Bayes model is used for various algorithms with highly sophisticated classification
+    methods.[11] By applying it to the extracted features of Durian fruit, it has
+    determined a minimum accuracy of 63.5% illustrated in the (7).
+
+
+    The results of Non-Destructive Machine Learning techniques are evaluated based
+    on the accuracy obtained. The ripening classification of the durian fruit is determined.
+    The algorithms of SVM give an accuracy of 89.3%, the GNB gives an accuracy of
+    63.5% and Random forest yields about 84.3%. This highest of support vector machine
+    gives a better classification of the durian fruit under Unripe, semi ripen, and
+    Fully ripen based on color. The henceforth diagrams explain about graphical representation
+    of the classification results.
+
+
+    # IV ANALYSIS
+
+
+    ```
+
+    p(A/B) = \frac{p(B|A)p(A)}{p(B)} ---------- (5)
+
+    ```
+
+
+    ![](img/03c63fd43437e92a269506f88dfa78b4_4_0.png)
+
+
+    ```
+
+    from sklearn.naive_bayes import GaussianNB
+
+    gnb = GaussianNB()
+
+    y_pred = gnb.fit(train_x, train_y)
+
+    y_pred_ = gnb.predict(test_x)
+
+    print(accuracy_score(test_y, y_pred) * 100)
+
+    ```
+
+
+    ```
+
+    c:\users\appdata\local\programs\python36\site-packages\sklearn\naive
+
+    y_column = col_id(id,y_name=True)
+
+    65.3333333333333
+
+    ```
+
+
+    ![](img/03c63fd43437e92a269506f88dfa78b4_4_1.png)
+
+
+    Fig.8 : Classification Accuracy of GNB
+
+
+    # 3) Random Forest Algorithm
+
+
+    A random forest is a supervised method that helps to classify the unlabeled data
+    with a trained label set of data. This fits for both classification and regression
+    tree to the dataset and then combines the prediction from all datasets.. This
+    algorithm prevents overfitting of the data and it helps to create more accurate
+    results. This algorithm also helps by selection of bootstrap samples from the
+    dataset,[12]
+
+
+    Fig.10.Accuracy Graph of Algorithm
+
+
+    ```
+
+    from sklearn.ensemble import RandomForestClassifier
+
+    rf = RandomForestClassifier(max_depth=5, random_state=0)
+
+    rf.fit(train_x, train_y)
+
+    print(accuracy_score(test_y, y_pred) * 100)
+
+    ```
+
+
+    ```
+
+    c:\users\appdata\local\programs\python36\site-packages\ipykernel_la
+
+    after removing the code from sys.path.
+
+    ```
+
+
+    ![](img/03c63fd43437e92a269506f88dfa78b4_4_2.png)
+
+
+    Fig. 9. Classification Accuracy of Random Forest Algorithm
+
+
+    When the datasets are trained with this algorithm, it gives an accuracy of 84.3%
+    is obtained with the durian dataset of classification based on ripeness indicator
+    in fruit(8);
+
+
+    Fig.11. Graphical Representation of Algorithm
+
+
+    ![](img/03c63fd43437e92a269506f88dfa78b4_4_3.png)
+
+
+    rieness of Durian fruit to measure the color space on the classification based
+    on machine learning techniques. They are determination of Accuracy, Precision,
+    Recall and F Measure was applied on the three algorithms of SVM, GNB and Random
+    forest the results are tabulated. The above parameters are calculated using the
+    following:
+
+
+    978-1-7288-7089-3/20/50 © 2020 IEEE
+
+
+    546'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# # REFERENCES
+
+
+    Accuracy = True Positive + True Negative * 100% --(6)
+
+
+    Precision = True Positive / True Positive + False Positive * 100% --(7)
+
+
+    Recall = True Positive / True Positive + False Negative * 100% --(8)
+
+
+    | Algorithm | Accuracy | Precision | Recall |
+
+    | --- | --- | --- | --- |
+
+    | SVM | 89.3% | 95% | 79.33% |
+
+    | GNB | 65.3% | 75% | 83.6% |
+
+    | RF | 84.3% | 70.67% | 90% |
+
+
+    ![](img/03c63fd43437e92a269506f88dfa78b4_5_0.png)
+
+
+    +   [1] Chu Zhang, Chengiao Qiao.(2016) “Hyperspectral imaging analysis for ripeness
+    of strawberry with support vector machine"
+
+    [2] Fatma M. A. Mazen, Ahmed A.Nasant (2018) “Ripeness Classification of Bananas
+    Using Artificial Neural Networks"
+
+    [3] Luiz Fernando Santos Pereira, Sylvia Barbon (2018) “Predicting the ripeness
+    of papaya fruit with digital imaging and random forests"
+
+    [4] Wilson Castro, Jimmy Oblitas (2019) “Classification of Cape Blueberry to Its
+    Level of Ripeness Using Machine Learning Techniques and Different Colors”
+
+    [5] Sant K Khera, Ajay Kumar Rai (2020) “Maturity status classification of papaya
+    fruits by machine learning and transfer learning approach"
+
+    [6] Fruits, Dataset of images from https://www.kaggle.com/datasets
+
+    [7] https://datascience.canvas.com/edge-detection-step-by-step-in-python-computer-vision-b8ca93b208123
+
+    [8] Bhani Priya, Naveen Ahmed(2014) “Development of ANN Based Efficient Fruit
+    Recognition Technique"
+
+    [9] https://github.com/image-processing-color-spaces-hsv-and-cmy
+
+    [10] Hongjun Peng, Yuanqian Shao, (2018), “Research on Multi-Class Fruit Recognition
+    Based on Machine Vision and SVM"
+
+    [11] Dayakar L.Naik, Rao Kitan,(2018), “Naive Bayes classifier, multiple linear
+    regression and experimental testis for classification.”
+
+    [12] Shinji Fukuda, Eri Yasunaga (2014),,Modelling the relationship between peel
+    colour and the quality of mango fruit using RandomForest
+
+    [13] Li Jun, Lei Dani (2019), Banana detection based on color and texture features
+    in the natural environment
+
+    [14] Nidhi Goel, Prit Segha(2015), “Fuzzy classification of pre-harvest tomatoes
+    for ripeness estimation — An approach based automatic rule learning decision tree.”
+
+
+    # V CONCLUSION
+
+
+    From the results obtained using state of art techniques of machine learning can
+    be finalized that the fruits can be classified efficiently by size, shape, color,
+    and texture. From this work, SVM was applied to evaluate the ripeness of durian
+    fruit. SVM model of the spectral analysis data showed acceptable results. Color
+    features and edge detection were used to determine the gray scale images at optimal
+    wavelength. SVM model using the 300 combined dataset of ripe fruits showed the
+    best results of 89.3% of classification. Unlike the ripe and random fruits were
+    rarely misclassified with each method
+
+
+    In future, more than 500 samples with wider variation and internal quality of
+    durian fruits at different ripeness stage will be needed for better identification
+    of ripeness roughness. Further enhancement in this work would be classification
+    based on ANN. ANN is also a highly successful tool for dataset classification
+    with more number of sample images. The dataset are the combination of training,
+    learning and testing which yields in better accuracy.'
+  merge: -1
+  img_proc: true
