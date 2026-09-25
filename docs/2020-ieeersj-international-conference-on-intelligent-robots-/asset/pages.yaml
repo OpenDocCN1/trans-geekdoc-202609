@@ -1,0 +1,558 @@
+- pgno: 0
+  md: '# Exploration Strategy based on Validity of Actions
+
+    in Deep Reinforcement Learning
+
+
+    Hyung-Sook Yoon, Sang-Hyun Lee, Seung-Woo Seo
+
+
+    Abstract—How to explore environments is one of the most critical factors for the
+    agent in reinforcement learning. Conventional exploration strategies like e-greedy
+    algorithm and Gaussian noise depend on random. It is crucial for an agent to consider
+    its progress and long-term usefulness to efficiently explore environments, which
+    remains a major challenge in reinforcement learning. To address this we propose
+    a novel exploration method that selects actions based on their validity. The key
+    idea behind our method is to estimate the validity of actions by leveraging redundant
+    divergence to comprehensively evaluate actions in both exploration and exploitation.
+    We also introduce a framework that allows an agent to explore efficiently in environments
+    where reward is sparse or delayed. The framework uses expert demonstrations to
+    guide the agent to visit relevant-state space by combining exploration strategy
+    with attention learning on autonomous driving scenarios at roundabout. We show
+    that our exploration strategy encourages an agent to visit relevant-state space
+    with higher validity of actions, outperforming previous methods.
+
+
+    ![](img/81d27dbb84ef9a9ac54f10ffacad9e8d_0_0.png)
+
+
+    Fig. 1: Overview of our method. There are exploration (blue) and exploitation
+    (red) policy. At bottom right, usage ratio between exploration and exploitation
+    with respect to the training step is described.
+
+
+    # I. INTRODUCTION
+
+
+    Reinforcement Learning (RL) is a framework for learning what to do as to maximize
+    cumulative reward through interaction with environments. While RL is widely applied
+    and shown success in various areas like games [1], robotics [2], and navigation
+    [3], we struggle with applying RL to solve real-world problems. One of the main
+    problems is the trade-off between exploration and exploitation: in RL, agent should
+    explore to discover new actions in order to figure out the optimal action and
+    reduce uncertainty over the environments, and the agent also has to exploit the
+    gathered information to get high rewards significantly. Unfortunately, this still
+    remains a significant challenge in RL.
+
+
+    New exploration strategies like e-greedy algorithm and Gaussian noise just depend
+    on random exploration. While these strategies are used in a lot of RL methods,
+    directed and global exploration is required for efficient exploration in complex
+    or high-dimensional environments. Directed and global exploration is to explore
+    environments based on knowledge of the learning process and long-term usefulness
+    of exploration.
+
+
+    exploration strategies introduced in recent years. Bellemare et al. [4] proposed
+    the concept of a pseudo-count approach by a density model. This method uses count-based
+    exploration to be generalized to non-tabular settings. Tab et al. [5] introduced
+    the exploration strategy based on curiosity formulated with a prediction error
+    of a forward dynamics model. These algorithms show significantly improved exploration
+    results, yet not all of them satisfy all the requirements for directed and global
+    exploration. Furthermore, they only focused on one exploration strategy, not the
+    trade-off between exploration and exploitation.
+
+
+    In this paper, we propose a method that can perform directed and global exploration.
+    The key idea behind our work is to choose actions based on their validity. To
+    formulate we define individual policies for exploration and exploitation, and
+    introduce a Kullback-Leibler (KL) selector based on property of KL divergence
+    to comprehensively evaluate validity of actions. While validity is used to define
+    loss function for minimizing difference between ground truth and predicted distribution
+    in machine learning, we use it to maximize difference between exploration and
+    exploitation.
+
+
+    As an example, our method is described in Figure 1. It shows the condition when
+    training is completed. Candidates A and C in the top right row have high validity
+    although an agent has been trained with high rewards.
+
+
+    > *Equal authors are with the Department of Electrical and Computer Engineering,
+    Seoul National University, Korea, hyoon01234@snu.ac.kr, sseo@snu.ac.kr.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'candidate act B has validity which it promises him after enough training. Therefore,
+    an agent is likely to exploit in the action space B. In case of D, it could be
+    selected from exploration policy; however action is highly likely to return reward,
+    so exploration policy is not likely to be updated to that. Addition, in the training,
+    the ratio of exploration decreases while the ratio of exploitation increases,
+    which means the agent conducts exploration and then starts exploitation. With
+    this example, we can see that both exploration and exploitation are important.
+    Our method suggests exploration strategy in this process.
+
+
+    Our work introduces a framework that allows the agent to explore and exploit in
+    environments where reward is sparse or cannot defined. We use experiment methods
+    to guide the agent to task relevant state by combining exploration strategy with
+    imitation. We evaluate our method in both classic and autonomous driving tasks
+    in CARLA[6]. In contrast to classical tasks, autonomous driving have large state
+    space including task-reward space. Results show that the proposed method allows
+    an agent to explore in direct and global manner handling exploration and exploitation
+    trade-off. The primary contributions of our work are summarized as follows: 1
+    we propose the learning strategy that addresses the trade-off between exploration
+    and exploitation, 2 we introduce the learning framework applicable in complex
+    and sparse reward environments, 3 we verify the performance of our method compared
+    to several baselines on RL streets and autonomous driving.
+
+
+    exploration strategy that can directly consider value of actions for each time-step.
+
+    Recently, many researches are trying to solve autonomous driving with deep learning.
+    Boarski et al. [11] proposed autonomous driving with CNN end-to-end supervised
+    learning with image and actions outputs. Palisal [12] proposed reinforcement learning
+    algorithm for complex multi agents in CARLA with the classifications of multi
+    agents. Codevilla et al., [13] also introduced autonomous driving with the off-policy
+    reinforcement learning world model. However, strictly to succeed, these is because
+    they employed additional techniques like discretization of action. Our work is
+    demonstrated in urban autonomous driving using simulator CARLA with realistic
+    settings
+
+
+    # III. PRELIMINARIES
+
+
+    # A. Learning from Demonstrations(LfD)
+
+
+    As to explain why reward significantly affects the performance of an agent, it
+    is hard to handle the agent''s exploration in sparse reward environments. Expert
+    demonstrations can be used to tackle the challenges in sparse reward environments.
+    There are several methods such as reinforcement learning from imitation. Behavior
+    Cloning (BC) trains the agent with supervised learning from expert demonstrations.
+    It is the basic method in LfD, BC requires much larger amount of data than other
+    methods as it is based on supervised learning. Inverse Reinforcement Learning
+    (IRL) tries to search an optimal reward function from the expert demonstrations,
+    then the reward can be used to train the agent through reinforcement learning
+    by minimizing the difference between the agent policy and the ground truth expert
+    demonstrations. Our method employs framework of IL, which employs Generative Adversarial
+    Imitation Learning (GAIL)[4] which as adversarial concept of Generative Adversarial
+    Neural Network (GAN)[15] is shown to be effective in complex environments with
+    large state space or high-dimensional domain.
+
+
+    # II. RELATED WORKS
+
+
+    The problem of trade-off between exploration and exploitation has been widely
+    researched for decades. There are several previous methods [7], [8] that can guarantee
+    the quality of exploration. However, every agent in finite space depend on visitation
+    counts of each state-action pair, which is not feasible in high-dimensional or
+    continuous space. Deep RL has led to remarkable achievements in diverse domains,
+    a lot of methods still fail on simple tasks like e-greedy order. In order to solve
+    complex and high
+
+
+    Several recent works have proposed exploration methods in large domains. Belle
+    et al. [4] and Wang [7] introduced efficient ways to develop conventional exploration
+    strategies for large domains. Ha et al [10] introduced exploration strategy that
+    allows agent to explore as diverse as possible by considering the difference of
+    current policy and recent policies. To our knowledge, our method is the first
+
+
+    Intrinsically-motivated Reinforcement Learning
+
+    Intrinsic reward is the which is qualitatively guide for an agent and it is generated
+    from an agent itself. There are several ways to generate intrinsic reward state
+    novelty and information. In our work, Intrinsic Curiosity Module (ICM) [5] which
+    gets reward based on prediction error. It is the state transition(forward dynamics)
+    model which predicts the next state of the agent when the current state and action
+    pair. The prediction error from ground and predicted next state is used to minimize
+    reward. When the prediction error is high, it means that the state is less visited
+    and the agent has to conduct exploration to that state, which guides agent to'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/81d27dbb84ef9a9ac54f10ffacad9e8d_2_0.png)
+
+
+    Fig. 2: It shows how an agent is selected from two distributions with Policy Selector.
+
+
+    the state of state transition and model error for next state $s_{t-1}$ is
+
+
+    ```
+
+    $$e = \frac{1}{2}\|\phi(s_{t-1}) - \phi(s_{t+1})\|^2$$
+
+    ```
+
+
+    where $\phi$ indicates the predicted value of latent space and $\eta$ indicates
+    the ground of latent space, and $\eta$ is weight parameter. Specific procedure
+    will be introduced in the next section.
+
+
+    # ## IV. METHODS
+
+
+    # ### A. Problem Definition and Overview
+
+
+    When being unaware of what brings higher expected returns, an agent should explore
+    environments without bias to get sufficient results. At the same time, the agent
+    has to gather information to discover the optimal action. One of the challenges
+    in RL, is the trade-off between exploration and exploitation. To address this
+    issue, exploration strategy should encourage an agent to explore in directed and
+    global domains. Directed exploration is focused on related knowledge of training,
+    such as trajectories of an agent, and global exploration is to explore based on
+    long-term usefulness rather than immediate usefullness.
+
+
+    Most of prior RL methods depend on naive exploration, such as Gaussian noise or
+    $\epsilon$-greedy algorithm. These strategies only depend on randomness or cannot
+    consider long-term usefulness, which makes it difficult to scale RL to real-world
+    scenarios. Unlike prior exploration strategies, we propose an effective and efficient
+    strategy to encourage exploration in directed and global manner. The key idea
+    of exploration strategy is to inspire an agent to increase the value of actions
+    it takes. We also introduce a framework that allows our exploration method to
+    be applied to environments where reward is sparse or cannot be defined properly.
+    Further details about our method and the introduced framework are described in
+    the following sections.
+
+
+    # ### B. Exploration Strategy based on Value of Actions
+
+
+    Our method defines individual policies for exploration and exploitation. While
+    the exploration policy
+
+
+    encourages an agent to explore unknown environments, with the highest exploitation
+    yield an agent to take action with. Unlike other methods which use only one policy,
+    our method uses individual exploration and exploitation policies that an agent
+    can explore more efficiently. Exploration is trained to take action with the highest
+    intrinsic reward, and we extract this intrinsic reward to train a single policy,
+    which we use to balance the independence of exploration and exploitation. In the
+    settings mentioned above,
+
+
+    we propose a KL-divergence Policy Selector to select a single action from two
+    distributions. First of all, we hypothesize that actions are favorable from the
+    point of view of exploration unfavorable from the point of view of exploitation.
+    It is inspired from the idea that action if successful exploration leads to higher
+    expected returns. To formulate the choice of actions, our exploration strategy
+    chooses using zero property of KL divergence, which prevents the penalty that
+    KL divergence $KL(\pi|\pi'')$ might incur. Our methods use the KL divergence $KL(\pi|\pi'')$
+    in which exploitation yield is weighted to balance exploration and exploitation.
+    Our KL-divergence policy selector selects the action with the following
+
+
+    ```
+
+    $$(\pi(s)(x) \times (1-KL(\pi|\pi'') - \lambda))$$
+
+    ```
+
+
+    ```
+
+    $$(\pi(s)(x) \times f(KL(\pi|\pi'') - \lambda))$$
+
+    ```
+
+
+    where $f(x)$ is reward and $\lambda$ is threshold. According to this equation
+    (1), an agent explores to gather information when KL divergence between policies
+    is smaller than $\lambda$, otherwise explore the information and consider the
+    action with the highest expected reward.
+
+
+    Figure 2 shows how our exploration strategy handles tradeoff between exploration
+    and exploitation in a single episode. In snapshot-1, Policy Selector selects the
+    environment with high validity while in snapshot-4, agent explores environments
+    where there is no validation at all. This shows that our proposed method allows
+    an agent to explore environments in directed and global manner with following
+    reasons: 1) Exploration is considered with considering the value of actions, it
+    retains the knowledge of the agent which it conducts exploration in the directed
+    manner, 2) It also conducts exploration in that it takes the long-term usefulness
+    of exploration by considering how the agent might be
+
+
+    # ### C. Learning Framework for Sparse Reward Environments
+
+
+    Reinforcement learning algorithms basically assume that reward is pre-defined
+    before training. However, it is difficult to define the reward function in world
+    tasks such as autonomous driving scenarios. In this subsection, we introduce a
+    learning framework that can make our exploration strategy applicable'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "# Discriminator\n\n# Expert Demonstrations ($s_D, a_D$)\n\n# Policy Selector\n\
+    \nExtrinsic rewards\n\nRewards\n\nstate\n\nPolicy Selector\n\naction\n\nEnvironment\n\
+    \n$s'$\n\nForward Dynamics Model\n\nIntrinsic rewards\n\n$s'$\n\n![](img/81d27dbb84ef9a9ac54f10ffacad9e8d_3_0.png)\n\
+    \nstate\n\nFig. 3: Overall framework of our method. At left side, overall flow\
+    \ of the method is introduced. It starts right, specific design for Policy Selector\
+    \ is discussed. It gets an action input. The state then passes through exploration\
+    \ and exploitation policy with their distribution's $KL$ divergence, and only\
+    \ a single action is selected at last. $s$ indicates the next state of ground\
+    \ and $s'$ predicts next state.\n\n# Algorithm 1: Our Proposed Method\n\n+   1:\
+    \ Given: Threshold $\\lambda$, Expert Demonstration $D$\n2: Initialize Selector,\
+    \ Discriminator and Forward Dynamics Model\n3: While $D_\\phi(s_t, a_t)$ does\
+    \ not converge\n4: Generic Trajectory by Selector\n5: Calculate Extrinsic Rewards\
+    \ and Intrinsic Reward\n6: Update Forward Dynamics model and\n7: Discriminator\
+    \ using Expert Demonstration\n8: Update Policy with Generated Reward\n9: end\n\
+    10: return Exploitation Policy\n\nwhere reward can be defined inductively. As\
+    \ shown in Figure 3, our framework utilizes the concept of Generative Adversarial\
+    \ Learning (GAIN) [141], one of state-of-the-art imitation learning methods, to\
+    \ guide an agent to explore task-relevant state space based on expert demonstrations.\
+    \ Discriminator in our framework generates extrinsic rewards and is trained with\
+    \ the aims of distinguishing behavior of expert and agent. The extrinsic reward\
+    \ is proportional to similarity of both reward and is used to optimize the exploration\
+    \ policy. A loss $L_\\phi$ of discriminator can be formulated as:\n\n```\n$L_\\\
+    phi = \\mathbb{E}[\\log D_\\phi(s_t, a_t)] + \tau \\mathbb{E}[\\log[1 - D_\\phi(s_t,\
+    \ a_t)]$\n```\n\nwhere $s$ are states, $a$ are actions, $\tau$ are trajectories\
+    \ of $t$, and $\tau$ are expert demonstrations. We use the output from the discriminator\
+    \ as a part of extrinsic rewards. Here we train the forward dynamics model, which\
+    \ predicts the next state and action while representing them in latent space.\
+    \ As discussed in section III, we train our framework with forward and reward\
+    \ models jointly, of which is defined as\n\n```\n$\\hat{s}_{t+1} = f(s_t, a_t),\
+    \ \\hat{a}_t = g(s_t; \tau)$\n```\n\nwhere $f$ is a forward model, $g$ is an inverse\
+    \ model, $\theta_f$ is a neural network for forward model and $\theta_g$ for inverse\
+    \ model, $\\psi$ is a latent vector for ground truth and $\\phi$ for predicted\
+    \ state. Several previous works demonstrate that inverse model uses forward model\
+    \ to get features for agent's actions [16, 17]. With previous work, both models\
+    \ share some parameters for feature extraction and can minimize discrepancy between\
+    \ actual and predicted output with the loss function\n\n```\n$(1-\beta)L_{acc}(a_t,\
+    \ \\hat{a}_t) + \beta L_{phi}(s_{t+1}, \\hat{s}_{t+1})$\n```\n\nwhere $\beta \\\
+    le 1$. Note that intrinsic reward is defined as prediction error of a forward\
+    \ dynamics model and can be formulated as $r = \\frac{1}{2}||s_{t+1} - \\hat{s}_{t+1}||$.\n\
+    \nAlthough it seems that in this framework, discriminator and forward dynamics\
+    \ models are trained with their own loss functions separately, they influence\
+    \ each other's learning processes. Training state transition model and discriminator\
+    \ helps agents learn which action is relevant or useful for achieving goals. Under\
+    \ the hand, the controller is trained, state transition model and discriminator\
+    \ can perform control tasks. Algorithm 1 provides details of our overall training\
+    \ procedure. The training repeats until the $KL$ divergence between policy for\
+    \ exploration and becomes becomes stays greater\n\n(4)\n\n6137"
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '![](img/81d27dbb84ef9a9ac54f10ffacad9e8d_4_0.png)
+
+
+    ![](img/81d27dbb84ef9a9ac54f10ffacad9e8d_4_1.png)
+
+
+    ![](img/81d27dbb84ef9a9ac54f10ffacad9e8d_4_2.png)
+
+
+    (a) Hopper-v2 (b) Halfetah-v2 (c) Walker-v2
+
+
+    Fig. 4: Evaluation results for MuCo. Blue line indicates $M_1$ and orange line
+    indicates $M_2$. Darker-colored lines indicate average reward and shaded area
+    standard deviations.
+
+
+    ![](img/81d27dbb84ef9a9ac54f10ffacad9e8d_4_3.png)
+
+
+    | | M1 | M2 | M3 |
+
+    |---|---|---||}{
+
+    | ROUNDABOUTONECAR | 0% | 62% | 100% |
+
+    | ROUNDABOUTTWOCARS | 0% | 28% | 72% |
+
+
+    TABLE I: Success rate of autonomous driving scenarios for 50 trials. It shows
+    that any $P_1$, or $P_2$ helps an agent to explore medium tasks efficiently in
+    CARLA.
+
+
+    # C. MuJo
+
+
+    Our method is also demonstrated with MuJo[19], especially with Hopper, Halfetah,
+    Walker. The results shown in Figure 4. We see that $M_3$ achieves higher reward
+    than $M_1$, in the end of every task. In particular, operation of our method could
+    be well described with how the variance along training procedure. It shows high
+    variance at initial and medium training steps, and low value at last step. With
+    our method, the agent explores and exploits is presented with high variance at
+    initial and medium steps. Then, when the agent has conducted enough exploration
+    and starts to mostly operate with exploitation action with high quality, it identifies
+    low variance of episode reward. Briefly, we feel that $P_1$ leads agent to explore
+    in more efficient and effective manner.
+
+
+    # V. EXPERIMENTS
+
+
+    # A. Experimental Setup
+
+
+    We demonstrate our method with various tasks from classical tasks to high-dimensional
+    urban driving tasks. We employed PPO[18] for a baseline algorithm. We obtained
+    demonstrations from expert policies trained with RL algorithms. We tried to figure
+    out how our method actually executes in an efficient way. As follows: $P_1$ indicates
+    our proposed method uses policy Selector to select between exploration and exploitation,
+    $P_2$ indicates our second method uses expert demonstration to guide an agent,
+    $M_1$ indicates the baseline, $M_3$ indicates $M_1$ and $P_1$, $M_4$ indicates
+    $M_1 + P_2$.
+
+
+    # B. MountainCar
+
+
+    For classical tasks, our method is demonstrated with MountainCarContinuous (MCC).
+    The distribution of exploration and exploitation policy is shown in Figure 5.
+    The x-axis indicates the range of action space, and y-axis indicates the probability
+    of action space. We can gather that as the training process proceeds, the distribution
+    of two policies are moving and converges with high KL divergence at last. Our
+    method agent mainly explores at the initial training step while mainly exploits
+    at the final step. In addition, average reward rewards, $M_2$ was 93.27 while
+    $M_1$ was 87.13.
+
+
+    # D. Autonomous Driving Tasks
+
+
+    For autonomous driving tasks, we use CARLA and the other cars without any accidents.
+    Unlike just simple driving tasks, it requires an agent to consider and understand
+    the intention of other cars and interact with them in roads. We evaluated with
+    two scenarios with one car (RoundaboutOne) and two cars (RoundaboutTwo) around
+    training agent. We obtained experiment demonstrations about 1000 episodes with
+    the autopilot function from CARLA. We evaluated these tasks with a success rate
+    of 50 trials, not the result. Figure 1 shows the success rate of two scenarios
+    for
+
+
+    6138'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'As expected, $M_1$ shows the best performance and $M_2$ follows, $M_3$ is demonstrated
+    with 0% success rate; it is verified that with random exploration, it is very
+    hard to find task-relevant states with continuous action. Otherwise, $M_4$ shows
+    high performance means that our method successfully and efficiently explores in
+    a complex space with $P_i$.
+
+
+    # VI. CONCLUSIONS
+
+
+    In this paper, we introduce a novel exploration strategy that can conduct directed
+    and global exploration. The main idea behind our work is to consider the validity
+    of the actions by using zeroed KL divergence. Our method is evaluated with various
+    tasks ranging from high-dimensional autonomous driving tasks with continuous action
+    and sparse reward. The results show that our method is capable of handling trade-off
+    between exploration and exploitation. Future interest is to apply our method to
+    off-policy RL. We also plan to demonstrate our method in more complex and various
+    autonomous driving tasks or with real-world navigation tasks.
+
+
+    # VII. ACKNOWLEDGEMENTS
+
+
+    This work was supported by the Basic Science Research Program through the National
+    Research Foundation of Korea (NRF) funded by the Ministry of Science and ICT(No2017RE1A1A0107151).
+
+
+    # REFERENCES
+
+
+    +   [1] M. Vahnik, K. Kavcukoglu, D. Silver, A. Graves, I. Antonoglou, D. Wierner,
+    and R. Riedmill, "Mastering Atari with deep reinforcement learning," arXiv:1312.5063,
+    2014.
+
+
+    +   [2] S. Levine, C. From, T. Darrell, and P. Abbeel, "End-to-end learning of
+    visuomotor skills, 2015. arxiv:1504.05072,"
+
+
+    +   [3] H. L. Chiang, A. Faust, M. Fisher, and A. Francis, "Learning navigation
+    behaviors end to end," arXiv:1809.01124, arXiv:1809.01124.
+
+
+    +   [4] M. G. Bellemare, S. Pratikner, G. Ostrovski, T. Schaul, D. Schoen, and
+    R. Minos, "Unifying count-based exploration and motivation in deep reinforcement
+    learning," arXiv:1606.01868, arXiv:1606.01868.
+
+
+    +   [5] D. Pathak, A. Abbeel, and E. Finn, "Curiosity-driven exploration by self-supervised
+    prediction, 2017 IEEE Conference on Computer Vision and Pattern Recognition Workshops
+    (CVPR), 2017. doi: 10.1109/CVPR.2017.399.2
+
+
+    +   [6] A. Dosovovskiy, G. Ros, F. Codevella, A. Lopez, and V. Koltun, "CARLA:
+    An autonomous driving simulator," in Proceedings of the 1st International Conference
+    on Robotics, 2017, p. 1–16.
+
+
+    +   [7] M. Kars and S. Singh, "Near-optimal reinforcement learning in policy iteration,
+    Machine learning, vol. 49, no. 2–3, 2002–232,
+
+
+    +   [8] R. I. Braffman and M. Tenenholz, "Max-general reinforcement policy algorithm
+    for near-optimal reinforcement learning," Journal of Machine Learning Research,
+    vol. 3, no. 10, 231–253, 2002.
+
+
+    +   [9] T. Hang, R. Hooftman, D. Foote, A. Stone, X. Chen, J. Du, J. Sharma, P.
+    Appel, "Exploration: A study of count-based exploration for deep reinforcement
+    learning," Advances in Neural Information Processing Systems 30, I. Gay, U. Luxburg,
+    S. Beng, H. Wallach, R. Fergus Elwandi, and G. Guenter, Curran Associates, Inc.,
+    2017, 2753–2765.
+
+
+    +   [10] Z-W. Wong, T-H. Song, S.-Y, Y.-Yu, and H.-C. Lee, Diversity-driven exploration
+    strategy for deep reinforcement learning, 2018. arXiv:1812.04566 [cs.AI].
+
+
+    +   [11] M. Bohjard, R. Finn, T. D, Dowrajski, B. Finner, F. Bellemare, G. Goyal,
+    L. Jack, M. Monfort, U. Muller, L. Zhang, X. Zhang, J. Zhao, and K. Zieb, End
+    to end learning for driving tasks, 2016, arXiv:1604.07316 [cs.code].
+
+
+    +   [12] P. Palanny, Multi-agent autonomous driving using deep reinforcement learning,
+    2019. arXiv:1911.01155 [cs
+
+
+    +   [13] J. Ha, M. Müller, A. Lopez, V. Koltun, and A. Dosovsky, "End-to-end driving
+    via conditional imitation learning," in International Conference on Robotics and
+    Automation (ICRA), 2018.
+
+
+    +   [14] J. Ho and S. Erm, "Generative adversarial imitation learning," in Neural
+    Information Processing Systems 29, D. D. Lee, M. Sugiyama, V. Luxburg, Y. Odagiri,
+    and P. Eds, Curran Associates, 2016, 4565–4575.
+
+
+    +   [15] I. Goodfellow, J. Pouget-Ward, A. Mirza, B. Xu, D. Ward-Farley, S. Courville,
+    and J. Beng, "Generative adversarial nets," in Advances in Neural Information
+    Processing Systems 27, Z. Ghahmani, M. Weiss, C. Cortes, N. David, and K. Kingma,
+    Edgers, Curran Associates, Inc., 2014, 2602–2609.
+
+
+    +   [16] P. Agrawal, J. Cwera, and J. Malik, "Learning to see by moving," in the
+    IEEE International Conference on Computer Vision, 2015, 35–47.
+
+
+    +   [17] P. Agrawal, A. V. Nair, P. Abbeel, J. Malik, and S. Levine, "Learning
+    to poke by peering: Experimental learning of inverse physics," in Advances in
+    Neural Information Processing Systems 2016, 5074–5082.
+
+
+    +   [18] J. Schulman, F. Wolelski, P. Abard, A. Radford, and O. Klimov, "Policy
+    optimization algorithms," CoRR, abs/1707.06347, 2017.
+
+
+    +   [19] E. Todorov, R. E, and Y. Tassa, "Mujoco: A physics engine for model-based
+    control," in IROS, 2012. ISBN: 978-14673-1737-5.'
+  merge: -1
+  img_proc: true
