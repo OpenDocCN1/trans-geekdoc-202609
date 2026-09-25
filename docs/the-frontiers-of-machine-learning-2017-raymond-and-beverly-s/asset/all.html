@@ -1,0 +1,920 @@
+<p><img src="Images/cover.jpg" /></p>
+<p><span id="cover.xhtml"></span></p>
+<section class="cover" type="cover">
+<img src="Images/cover.jpg" alt="Image" id="coverimage" />
+</section>
+<p><span id="titlepage.xhtml"></span></p>
+<p><span id="titlepage.xhtml#page_1" type="pagebreak" title="1"></span>The Frontiers of</p>
+<p>MACHINE LEARNING</p>
+<p>2017 Raymond and Beverly Sackler U.S.-U.K. Scientific Forum</p>
+<table>
+<colgroup>
+<col style="width: 75%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><img src="Images/img-1-1.jpg" alt="images" class="inline" /> <strong>NATIONAL ACADEMY OF SCIENCE</strong></th>
+<th><img src="Images/img-1-2.jpg" alt="images" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p><span id="frontmatter01.xhtml"></span></p>
+<section type="frontmatter">
+<h1 class="h1a"><span id="frontmatter01.xhtml#page_2" type="pagebreak" title="2"></span>Foreword</h1>
+<p>Rapid advances in machine learning—the form of artificial intelligence that allows computer systems to learn from data—are capturing scientific, economic, and public interest. Recent years have seen machine learning systems enter everyday usage, while further applications across healthcare, transportation, finance, and more appear set to shape the development of these fields over the coming decades. The societal and economic opportunities that follow these advances are significant, and nations are grappling with how artificial intelligence might affect society.</p>
+<p>There are emerging policy debates in the United States and the United Kingdom about how and where society can make best use of machine learning. As the capabilities of machine learning systems and the range of their applications continue to grow, it is therefore particularly timely for the National Academy of Sciences and the Royal Society to bring together leading figures in these fields.</p>
+<p>Since 2008, the Raymond and Beverly Sackler U.S.-U.K. Scientific Forum has brought together thought leaders from a variety of scientific fields to exchange ideas on topics of international scientific concern and to help forge an enduring partnership between scientists in the United States and the United Kingdom.</p>
+<p>The forum on “The Frontiers of Machine Learning” took place in the United States on January 31 and February 1, 2017, at the National Academy of Sciences in Washington, D.C. This event brought together leading researchers and policy experts to explore the cutting edges of machine learning research and the implications of technological advances in this field. This report summarizes the high-level discussions at the event focusing on some of the exciting areas of progress in machine learning and the societal debates that follow.</p>
+<p>The National Academy of Sciences and the Royal Society share a mission to promote the use of science to benefit society and to inform important policy debates. As Presidents of the National Academy of Sciences and the Royal Society, we are pleased to introduce the latest piece of work supported through the inspired generosity of the Raymond and Beverly Sackler Foundation.</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Marcia McNutt</strong></td>
+<td><strong>Venki Ramakrishnan</strong></td>
+</tr>
+<tr class="even">
+<td><em>President, National Academy of Sciences</em></td>
+<td><em>President, Royal Society</em></td>
+</tr>
+</tbody>
+</table>
+</section>
+<p><span id="content-toc.xhtml"></span></p>
+<p><span id="frontmatter02.xhtml"></span></p>
+<section type="acknowledgments">
+<h1 class="h1a"><span id="frontmatter02.xhtml#page_4" type="pagebreak" title="4"></span>Acknowledgments</h1>
+<p>The following distinguished scholars served on the planning committee:</p>
+<div class="bkt">
+<p>Peter Donnelly, FMedSci<sup><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></sup></p>
+<p>Michael Kearns, University of Pennsylvania, <em>Co-Chair</em>,</p>
+<p>Tom Dietterich, Oregon State University,</p>
+<p>Cynthia Dwork, NAS<sup><a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></sup></p>
+<p>Zoubin Ghahramani, FRS, University of Cambridge,</p>
+<p>Nathan Griffiths, University of Warwick,</p>
+<p>Sofia Olhede, University College London,</p>
+<p>David Vladeck, Georgetown University, and</p>
+<p>Bin Yu, NAS, University of California, Berkeley.</p>
+</div>
+<p>This summary of the forum is drawn from the presentations and discussions of participants at the meeting. It was prepared by rapporteur Linda Casola with assistance from Michelle Schwalbe, Jessica Montgomery, Jon Eisenberg, Catherine Pollack, Kim DeRose, and Ben Wender, and it was reviewed in draft form by members of the planning committee. The reviewers provided comments and suggestions but were not asked to endorse the views in the document. Oversight of the review process was provided by the National Academy of Sciences’ Council Committee on Scientific Programs. Sincere thanks to the Raymond and Beverly Sackler U.S.-U.K. Scientific Forum for support of this activity.</p>
+<table style="width:90%;">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 70%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><img src="Images/img-4-1.jpg" alt="images" /></td>
+<td>The National Academy of Sciences was established in 1863 by an Act of Congress, signed by President Lincoln, as a private, nongovernmental institution to advise the nation on issues related to science and technology. Members are elected by their peers for outstanding contributions to research. Dr. Marcia McNutt is president.</td>
+</tr>
+<tr class="even">
+<td><img src="Images/img-4-2.jpg" alt="images" /></td>
+<td>The Royal Society is a self-governing Fellowship of many of the world’s most distinguished scientists. Its members are drawn from all areas of science, engineering, and medicine. It is the national academy of science in the U.K. The Society’s fundamental purpose, reflected in its founding Charters of the 1660s, is to recognize, promote, and support excellence in science and to encourage the development and use of science for the benefit of humanity.</td>
+</tr>
+</tbody>
+</table>
+<p>__________________</p>
+<div class="footnote" type="rearnotes">
+
+</div>
+</section>
+<p><span id="frontmatter03.xhtml"></span></p>
+<h1 id="frontmatter03.xhtml#pz3-2_1" class="h1b"><span id="frontmatter03.xhtml#page_5" type="pagebreak" title="5"></span><a href="../Text/content-toc.xhtml#pz3-2">Summary</a></h1>
+<hr />
+<p>The Raymond and Beverly Sackler U.S.-U.K. Scientific Forum “The Frontiers of Machine Learning” took place on January 31 and February 1, 2017, at the Washington, D.C., headquarters of the National Academies of Sciences, Engineering, and Medicine. A planning committee of distinguished scholars from the United States and the United Kingdom organized the forum.</p>
+<p>The forum drew over 60 in-person attendees and over 500 webcast participants from academia, government, industry, and philanthropy. Participants included industry leaders, machine learning researchers, and experts in privacy and the law, and this report summarizes their high-level interdisciplinary discussions.</p>
+<p>The field of machine learning continues to advance at a rapid pace owing to increased computing power, better algorithms and tools, and greater availability of data. Machine learning is now being used in a range of applications, including transportation and developing automated vehicles, healthcare and understanding the genetic basis of disease, and criminal justice and predicting recidivism. As the technology advances, it promises additional applications that can contribute to individual and societal well-being.</p>
+<p>Novel technical and societal challenges are arising as machine learning advances. These relate to the ethics of using certain types of data (because of privacy or biased data collection), of managing data in different ways, and of automating certain processes (e.g., life and death decision making). They are also rooted in questions about how humans and machine learning systems interact as well as the societal challenges of adapting to a world in which these systems are increasingly ubiquitous.</p>
+<p>Alongside these challenges come exciting opportunities across a range of industries and areas of research, with stimulating cross-disciplinary research taking place in academia and business. A supportive environment for this research—based on open standards and tools, effective education, public confidence through effective engagement, and an understanding of varied users—can help secure the social and economic benefits of machine learning.</p>
+<p>This report is a summary of contributions to the forum. It does not reflect the views of the National Academy of Sciences or the Royal Society.</p>
+<p><span id="chapter01.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><h1 id="chapter01.xhtml#pz3-3_1"><span id="chapter01.xhtml#page_6" type="pagebreak" title="6"></span><a href="../Text/content-toc.xhtml#pz3-3">1</a></h1></td>
+<td><h1><span class="small"><span class="small"><span class="small"><a href="../Text/content-toc.xhtml#pz3-3">Introduction</a></span></span></span></h1></td>
+</tr>
+</tbody>
+</table>
+<h2 id="chapter01.xhtml#pz6-2"><a href="../Text/content-toc.xhtml#pz3-4">OVERVIEW OF THE SACKLER FORUM</a></h2>
+<p>Machine learning is changing everyday activities through improvements in functions such as voice recognition, object detection, and image perception. The spheres of medicine, transportation, finance, government, and education could be transformed by such innovative technology, as could the way individuals and communities live and work. For example, some tasks typically performed by humans are already being performed by computer systems, and the range and complexity of tasks these systems can perform is growing. This creates novel tensions arising from the legal, social, and ethical implications of machine learning for humans now and in future generations.</p>
+<p>To explore these issues in greater depth, the Raymond and Beverly Sackler U.S.-U.K. Scientific Forum “The Frontiers of Machine Learning” was held on January 31 and February 1, 2017, at the Washington, D.C., headquarters of the National Academies of Sciences, Engineering, and Medicine. A planning committee of distinguished scholars from the United States and the United Kingdom organized the forum.</p>
+<p>The forum drew over 60 in-person attendees and over 500 webcast participants from academia, government, industry, and philanthropy. Participants included industry leaders, machine learning researchers, and experts in privacy and the law. They represented strong proponents of widespread adoption of machine learning as well as those with concern for the societal tensions that arise with expanding the use of machine learning. This 2-day meeting included presentations and discussions on the current state of the art in machine learning, its relationship <span id="chapter01.xhtml#page_7" type="pagebreak" title="7"></span>to other fields, challenges in the field, and key considerations for its future development.</p>
+<p>This publication provides a summary of the observations shared by forum participants. It does not reflect a consensus of the participants or the views of the sponsoring organizations. Instead, it is intended to provide perspectives and suggestions from a selection of individuals working at the frontier of machine learning and studying its implications. It examines the evolution of the field and its applications, some of the social and ethical tensions to which advances in machine learning have contributed, and considerations for the future development of the field.</p>
+<h2 id="chapter01.xhtml#pz7-3"><a href="../Text/content-toc.xhtml#pz3-5">UNDERSTANDING ARTIFICIAL INTELLIGENCE, MACHINE LEARNING, AND ROBOTICS</a></h2>
+<p>The terms “artificial intelligence,” “machine learning,” and “robotics” are often used interchangeably, but important distinctions exist.</p>
+<p>While specific definitions vary, artificial intelligence is, generally speaking, any method for programming computers to enable them to carry out tasks or behaviors that would require intelligence if performed by humans. Early work in this field focused on automated reasoning; using these approaches, programs were written as sets of logical statements against which queries were processed by theorem proving and search. For example, computers could be programmed with the rules for board games and then tasked with finding sequences of moves that could defeat an opponent. To obtain the logical rules (or inferences) for such systems, researchers in the field first turned to interviewing experts in the relevant domains (e.g., medical diagnosis, fault diagnosis). When the need to reason under uncertainty became increasingly evident, especially in medicine and in engineering applications, the field embraced probabilistic models as a replacement for systems of logical rules. This in turn required developing methods for probabilistic reasoning. However, in many applications, it was very difficult to build probabilistic models manually and determine their parameters. The field then turned to machine learning and related methods in statistics and pattern recognition to help address this challenge. Instead of interviewing human experts and seeking to codify the steps they take to solve a problem, these systems examine data—that is, examples of how to solve the problem at hand—to find patterns and rules that can drive decision making, such as clustering and classification.</p>
+<p>Machine learning draws from a variety of fields, including computer science, statistics, engineering, cognitive science, and neuroscience. Researchers in machine learning develop both the mathematical foundations and the practical applications of systems that learn from data.</p>
+<aside class="box-1" type="sidebar">
+<p><em>Machine learning draws from a variety of fields, including computer science, statistics, engineering, cognitive science, and neuroscience</em></p>
+</aside>
+<p>Broadly speaking, machine learning can be divided into three <span id="chapter01.xhtml#page_8" type="pagebreak" title="8"></span>branches: supervised, unsupervised, and reinforcement learning. “Supervised learning” is based on a program that learns from previous examples: a model with specified parameters receives input and makes a prediction based on function estimation. This prediction is then compared to the actual outcome, and the similarity or difference between the two then informs the updates to the model parameters. For example, a supervised learning model can use photos with information about what is shown in those photos to then recognize and identify features in new photos. “Unsupervised learning” can be used where there is a dearth of labeled data on which to train algorithms. An unsupervised machine learning system processes a large amount of data, finding patterns in the data and learning the characteristics that make data points more or less similar to each other. “Reinforcement learning” emphasizes learning by trial and error, using rewards or punishments for success or failure at a task as a means to discover successful ways of behaving in complex environments.</p>
+<aside class="box-1" type="sidebar">
+<p><em>There are countless applications of machine learning in society that help people become more organized and make processes more efficient</em></p>
+</aside>
+<p>The field of machine learning continues to advance at a rapid pace as a result of improved computational resources, better algorithms and tools, increased availability of data to train systems, and the ingenuity of those developing machine learning systems. There are countless applications of machine learning in society that help people become more organized and make processes more efficient—for example, in organizing digital photo collections, managing spam in email platforms, and supporting navigation devices. Machine learning can solve problems related to classification, regression, clustering, dimensionality reduction, semi-supervised learning, and reinforcement learning. These are often referred to as the “canonical” problems in machine learning and are described in <a href="#chapter01.xhtml#pAos">Box 1</a>.</p>
+<p>The term “artificial intelligence” can often evoke ideas of human-like intelligence in machines, known as “artificial general intelligence.” The goal of artificial general intelligence research is to create artificial intelligence systems that have the ability to adapt to a range of tasks and could develop a breadth of capabilities that would match or exceed those of humans. Such systems are different from current artificial intelligence systems that are designed to solve specific target tasks but lack any knowledge or capability beyond those tasks. Some scholars have argued that once systems achieve human-level breadth and capability, they could start improving themselves and therefore rapidly exceed human capabilities. Most researchers maintain, <span id="chapter01.xhtml#page_10" type="pagebreak" title="10"></span>however, that there is no technical basis for such concerns and that matching human capabilities is not a critical threshold in the development of artificial intelligence. These researchers worry that a focus on developing systems with human-level intelligence detracts from the need to address near-term questions about how to create artificial intelligence systems that behave correctly, safely, and reliably.</p>
+<aside class="box" type="sidebar">
+<p><span id="chapter01.xhtml#page_9" type="pagebreak" title="9"></span></p>
+<h5 id="chapter01.xhtml#pAos"><strong>BOX 1<br />
+Canonical Problems in Machine Learning<sup><a href="#chapter01.xhtml#pANe" id="chapter01.xhtml#pANe_1">a</a></sup></strong></h5>
+<h6>1. Classification</h6>
+<p>Classification involves collecting data and assigning them to one of several categories. The task at hand is to predict discrete class labels from input data after a model has been trained on labeled data. Applications of classification include face recognition, image recognition, and medical diagnosis. Typical methods for such tasks include logistic regression, support vector machines, neural networks, random forests, and Gaussian process classifiers.</p>
+<h6>2. Regression</h6>
+<p>Regression analyses try to predict continuous quantities from input data. Their applications include financial forecasting and click rate prediction, which impacts a range of applications in Internet advertising. Typical methods to address this task include linear regression, neural networks, and Gaussian processes.</p>
+<h6>3. Clustering</h6>
+<p>Clustering is used for analysis in which there are a lot of data that need to be organized in a way to create clusters where similar points are grouped together. This is used in bioinformatics and studies of gene expression, astronomy, document modeling, and network modeling. Typical methods include k-means, Gaussian mixtures, and Dirichlet process mixtures.</p>
+<h6>4. Dimensionality reduction</h6>
+<p>Dimensionality reduction is used in applications where the raw data have a high number of dimensions. These approaches map high-dimensional data onto low dimensions, while preserving relevant information, and have a range of applications—for example, in data mining, scientific analysis, and image recognition. Typical methods include principal components analysis, factor analysis, multidimensional scaling, IsoMAP, and Gaussian process latent variable models.</p>
+<h6>5. Semi-supervised learning</h6>
+<p>Semi-supervised learning is used in analyses where a large quantity of unlabeled data is available alongside a few data points that have been labeled—for example, semi-supervised learning can be used to combine and learn from each of a small number of annotated images. This approach is particularly useful in applications where labeling data is expensive, such as in drug trials or other studies involving complex experiments. Methods include probabilistic models, graph-based semi-supervised learning, and transductive support vector machines.</p>
+<h6>6. Reinforcement learning</h6>
+<p>Reinforcement learning addresses tasks where an agent or a computer program needs to learn to interact with its environment, receiving inputs and making sequential decisions so as to maximize future rewards. It therefore relates to adaptive control and sequential decision making under uncertainty. Agents using reinforcement learning might be physical or virtual, and applications are found in robotics, games, trading, and dialogue systems. Methods in this field include Q-learning, direct-policy methods, and PILCO.</p>
+<p>__________________</p>
+<p><sup><a href="#chapter01.xhtml#pANe_1">a</a></sup> The Royal Society, 2017, <em>Machine Learning: The Power and Promise of Computers That Learn by Example</em>, <a href="https://royalsociety.org/~/media/policy/projects/machine-learning/publications/machine-learning-report.pdf" class="word-break">https://royalsociety.org/~/media/policy/projects/machine-learning/publications/machine-learning-report.pdf</a>.</p>
+</aside>
+<h2 id="chapter01.xhtml#pz10-2"><a href="../Text/content-toc.xhtml#pz3-6">THE EVOLUTION OF MACHINE LEARNING APPLICATIONS</a></h2>
+<p>Machine learning is a quickly evolving field with numerous application areas. One of the earliest applications of the technology, “information retrieval” involves “finding material (usually documents) of an unstructured nature (usually text) that satisfies an information need from within large collections (usually stored on computers).”<sup><a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></sup></p>
+<p>“Speech recognition” is the process by which a computer system recognizes spoken words and phrases and translates them into machine-readable format. Though the first speech recognition system was developed in the 1950s, these computer systems could translate only a small number of speech signals into words and phrases. Newer software in modern speech recognition has advanced to the point of understanding and using natural speech patterns (e.g., speed, tone, word choice) that are characteristic of normal conversation. Using layers of neural networks,<sup><a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></sup></p>
+<p>“Targeted advertising,” which became popular in the 1990s, seeks to present advertisements to consumers that increase the likelihood that the consumer will make a certain purchase or perform a certain action. To do this, the companies collect data on their consumers’ behaviors or purchase histories and apply machine learning methods to develop predictive models of future customer behavior.</p>
+<aside class="box-1" type="sidebar">
+<p><span id="chapter01.xhtml#page_11" type="pagebreak" title="11"></span></p>
+<p><em>Automated vehicles have the potential to reduce vehicle fatalities, increase mobility, and decrease pollution</em></p>
+</aside>
+<p>In finance, machine learning is used for assessing risk and managing assets. Machine learning has also found applications in bioinformatics where complex biological data (e.g., genetic code) are analyzed using either supervised or unsupervised learning to better understand the ways in which cells function.</p>
+<p>Automated vehicles can independently navigate some public roadways by sensing their environment and responding appropriately. Such vehicles learn where to steer and how to locate other vehicles, people, and objects based on a range of machine learning techniques, including using deep neural networks to analyze image and video data. Advances in (1) data handling and communications bandwidth, (2) computing power, (3) learning algorithms, and (4) efficient inference algorithms help make automated vehicles more reliable, and advances in machine learning theory could improve the technology even further. Important challenges remain, such as identifying better metrics to evaluate the severity of driving errors (e.g., causing a head-on collision versus running a red light), improving three-dimensional perception, and functioning under poor weather or lighting conditions.</p>
+<p>Automated vehicles have the potential to reduce vehicle fatalities, increase mobility for the elderly and those with disabilities, decrease environmental pollution, and support new models of public transportation. However, questions remain about the likelihood of these <span id="chapter01.xhtml#page_12" type="pagebreak" title="12"></span>benefits being fully realized. For example, could this technology result in more cars on the road, lengthen commutes, or lead to urban sprawl? Alternatively, might fewer people choose to own cars, leading to increased carpooling and a reduced number of cars on the road? If this is the case, fewer parking lots would be needed across communities, and cities could find new ways to use the space. Any significant change in car ownership also has potential economic impacts; the automotive sector is a large component of many developed economies, and the effects of such disruption are difficult to predict.</p>
+<p>Automated vehicle deployment could also affect pedestrians and cyclists, as it changes the commonly accepted—if unwritten—rules of the road. For example, how can a pedestrian make eye contact with a driver before crossing a street when there is no driver in an automated vehicle? Much of the communication among road users and many of the predictions humans make about the behavior of other road users when navigating a vehicle-populated environment is not explicit. Rather, it relies on reading subtle observational cues combined with past experience and knowledge of the environmental norms (e.g., driving behavior in the United States is different from that in India). These questions open interesting avenues of investigation, and researchers are developing models to better understand how humans interact with intelligent devices in potentially dangerous situations. This raises one facet of a broader question about vehicle safety standards: should new standards be developed, or do current road safety standards translate for automated vehicles?</p>
+<aside class="box-1" type="sidebar">
+<p><em>Researchers are developing models to better understand how humans interact with intelligent devices in potentially dangerous situations</em></p>
+</aside>
+<p>Machine learning is also finding new applications in data science itself. There are not yet enough data scientists, statisticians, and machine learning experts to dedicate adequate time to understanding the data, building models, and making predictions. One possible solution to this shortage of experts is the Automatic Statistician project, which is creating systems that are able to automate data analysis.<sup><a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></sup></p>
+<p>__________________</p>
+<div class="footnote" type="rearnotes">
+
+</div>
+<p><span id="chapter02.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><h1 id="chapter02.xhtml#pz3-7_1"><span id="chapter02.xhtml#page_13" type="pagebreak" title="13"></span><a href="../Text/content-toc.xhtml#pz3-7">2</a></h1></td>
+<td style="text-align: center;"><h1><span class="small"><span class="small"><span class="small"><a href="../Text/content-toc.xhtml#pz3-7">Machine Learning Challenges</a></span></span></span></h1></td>
+</tr>
+</tbody>
+</table>
+<h2 id="chapter02.xhtml#pz13-2"><a href="../Text/content-toc.xhtml#pz3-8">TECHNOLOGICAL CONSIDERATIONS</a></h2>
+<h3>Different Needs for Different Applications</h3>
+<p>Much of the excitement generated by machine learning arises from its broad applicability across different subjects or domains. This also presents a challenge for the field: while many approaches can cut across applications, each use case involves different considerations and the construction of different types of systems. The following examples describe how several research areas in biomedicine require customized machine learning techniques. Similar customization is needed in many other fields.</p>
+<p>Medical researchers, for example, have begun to use genetics data, medical records, patient registries, activity logs, environmental data, and medical imaging to better understand all aspects of human health. In the field of genomics, modifications in gene regulation and gene function resulting from mutated segments of DNA allow researchers to identify which regions of the genome influence a particular trait associated with a particular disease. Statistical methods related to machine learning are being developed to enable researchers to design medical interventions that would improve the lives of people with particular health issues in the future.</p>
+<p>Mobile health interventions that employ a smart phone application or wearable technology to encourage specific behavior, such as increased exercise, are another potential applica<span id="chapter02.xhtml#page_14" type="pagebreak" title="14"></span>tion area for machine learning techniques. Two possible schemes for generating notifications to patients are “pull” interventions, which rely on individuals’ requests for interventions, and “push” interventions, which employ sensors, self-reports, and computer algorithms to decide when an intervention is needed as well as what intervention might be most appropriate. The shared goal of both types of notifications is to promote healthy behavior and aid in the development of longer-term treatment policies. This is similar to the action-reward structure of reinforcement learning, with the long-term benefit of improved health serving as the reward for the action of responding to the health notifications.</p>
+<p>In the study of neuroscience, the ability of machine learning to spot patterns and make predictions makes it a key tool in analyzing the vast quantities of neuroimaging data available today. Functional magnetic resonance imaging (fMRI) is used to track blood flow within the brain to deduce functional or physiological properties. When a patient or research subject examined using an fMRI machine is presented with an external stimulus, the responding brain area will have an increase in blood flow, which will be displayed clearly on an fMRI monitor. Classification can then be applied to a set of fMRI images to determine if patterns exist among participants within brain regions of interest. Neuroimaging applications range from diagnostic tools for neurological disorders to enhanced understanding of neural connectivity between brain regions. There are analogous opportunities for machine learning to help in many other areas of medical imaging.</p>
+<p>While genomics, mobile health sciences, and neuroscience are typically categorized within the health domain, the challenges posed by each are domain-specific, and the machine learning techniques required for each are highly specialized. For example, the classification tools most appropriate for understanding neuroscience may not be as effective in genomics research because of substantial differences in the nature of the data, its structure and properties, and the relationships between data and outcome or decision. A similar trend can be seen in other disciplines when the machine learning applications in one subcategory may not work for a tangentially related area. For many applications, combining domain knowledge with machine learning expertise will be essential to create effective outputs.</p>
+<h3>Collaboration</h3>
+<p>The domain-specificity of the challenges at hand makes collaboration in machine learning particularly important. Furthermore, the key components of machine learning—expertise, computing power, data, and algorithms—are not concentrated in any one domain, and industry, academia, and government all play significant roles.</p>
+<p>In the case of automated vehicles, for example, industry has resources and data that could help academics conduct better research. Government plays an important role as well through research funding and through its involvement in deploying infrastructure technology, such as traffic light sensors, that will affect the behaviors of automated vehicles.</p>
+<p>While technical solutions can address the broader social and ethical implications of this technology, collaborations also contribute to addressing these challenges. Opportunities in the <span id="chapter02.xhtml#page_15" type="pagebreak" title="15"></span>spirit of collaboration include the following:</p>
+<ul>
+<li>Adding narratives to technical writing to help professionals in other disciplines better understand machine learning concepts,</li>
+<li>Committing to producing research that can be understood across disciplines,</li>
+<li>Raising awareness via public debate about potentially controversial machine learning issues, and</li>
+<li>Convening debates among diverse stakeholders.</li>
+</ul>
+<h2 id="chapter02.xhtml#pz15-8"><a href="../Text/content-toc.xhtml#pz3-9">EDUCATIONAL BARRIERS</a></h2>
+<h3>Curriculum</h3>
+<p>Companies are aggressively hiring new talent in machine learning. Although course offerings for the next generation of machine learners are expanding, building a stronger skills pipeline remains key to the health of the field:</p>
+<ul>
+<li>If one hopes to be prepared for the future workforce and the real challenges associated with this level of innovation, data literacy is essential. As early as the elementary school level, students could benefit from greater encouragement to develop a science, technology, engineering, and mathematics skill set.</li>
+<li>In many postsecondary curricula, only traditional mathematics is strongly emphasized, whereas students may benefit from a program that includes mathematics alongside computing and communication skills. Students should also gain an understanding of the ethical challenges associated with the use of data.</li>
+</ul>
+<p>Curricular changes will not happen overnight, but conversations among interested stakeholders should begin and plans should be made to fund programs that could improve students’ chances of securing relevant work in the future.</p>
+<h3>Infrastructure</h3>
+<p>In addition to curriculum changes, modifications to university course materials and course content can help prepare both machine learning experts and those likely to work with machine learning systems in the future:</p>
+<ul>
+<li>Technical programs will need to update the skills and knowledge with which they equip students to work in specific fields.</li>
+<li>For those studying machine learning, an understanding of the methods of social sciences and liberal arts will become important for addressing the legal and societal challenges that the technology presents.</li>
+<li><span id="chapter02.xhtml#page_16" type="pagebreak" title="16"></span> For researchers and scholars in academia, journal and tenure guidelines often focus too narrowly on recognition and attribution in only the traditional form of published papers; it is important that innovative and applied work in machine learning is also both rewarded and shared.</li>
+</ul>
+<h2 id="chapter02.xhtml#pz16-2"><a href="../Text/content-toc.xhtml#pz3-10">SOCIETAL ISSUES</a></h2>
+<h3>Fairness, Privacy, Consent, and Cybersecurity</h3>
+<p>Algorithmic decision-making systems may place a strain on some democratic values as machine learning enables new uses of data that challenge existing notions of fairness, privacy, and consent.</p>
+<p>The advanced analytical capabilities offered by machine learning pose new challenges to managing privacy: in some applications, machine learning will use data containing sensitive information, while in other cases machine learning might create sensitive insights from seemingly mundane data. New privacy-preserving technologies (e.g., de-identification of data, differential privacy, homomorphic encryption) are being explored that can help lessen the risks of privacy breaches while enhancing the benefits of data sharing to society.<sup><a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a></sup></p>
+<aside class="box-1" type="sidebar">
+<p><em>The advanced analytical capabilities offered by machine learning pose new challenges to managing privacy</em></p>
+</aside>
+<p>New economic models based on data collection also have the potential to raise privacy concerns. Consumers frequently share their personal data when carrying out everyday tasks online—for example, when online shopping—and may not be aware how much data companies can collect about them based on these transactions. Such cases create trade-offs between privacy and convenience or the desire for certain services. Some researchers suggest that there should be an opt-out feature, which would be a relatively straightforward technical fix, in which the user can select that the site erases all information collected and thus will treat the customer as a new user every time that customer visits. Others propose that individuals should be able to control their personal data and “decide for themselves how to weigh the costs and benefits of the collection, use, or disclosure of their information.”<sup><a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a></sup></p>
+<p>Legislative structures that seek to ensure fairness in the provision of some products and services—and balance data protection with innovation—already exist, and these current “fairness structures,” set up primarily for financial security, demonstrate points of tension. For example, the U.S. Equal Credit Opportunity Act protects applicants from discrimination (e.g., race, color, religion, national origin, sex, marital status, age) in a credit transaction. Modern credit scoring systems use machine learning to evaluate creditworthiness, and so a question arises about which factors a model can and should use to make a decision. The U.S. Fair Credit Reporting Act supports the accuracy, fairness, and privacy of consumer information included in consumer reporting agency files. Thus, individuals are granted access to the credit score, as well as to all of the factors that may have adversely affected the score. Because of this, the Fair Credit Reporting Act ensures transparency of factors that led to deriving the credit score. The EU General Data Protection Regulation, which is expected to go into effect in May 2018, protects data that expose racial or ethnic origin; political or religious beliefs; and genetic, biometric, and health data.<sup><a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a></sup></p>
+<p>This is not the case for all existing regulatory instruments: unlike the previously mentioned regulated scores, the unregulated Alternative Credit Score in the United States can use factors that would normally be prohibited under the Fair Credit Reporting Act because it uses those factors for marketing financial products instead of for determining creditworthiness.<sup><a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a></sup></p>
+<p>In seeking to ensure that fairness and privacy are maintained in such analyses, researchers can apply statistical approaches to identify people for whom privacy or fair information practice principles may be violated, such as when an individual’s data are represented in long tails (i.e., a distribution with a large number of occurrences far from the central part of the distribution) or as outliers (i.e., data points that differ from most others) and are therefore easy to identify within a data set. Other approaches to managing issues relating to fairness include the following:</p>
+<ul>
+<li>Fair information practice principles (i.e., best practices),</li>
+<li>New approaches to remediation for those negatively affected, and</li>
+<li><span id="chapter02.xhtml#page_18" type="pagebreak" title="18"></span> Use-based rules for data (i.e., new approaches to auditing outputs).</li>
+</ul>
+<p>Cybersecurity issues also arise in many areas. For example, even though medical data subject to HIPAA are required to be encrypted when stored and protected in other ways, there is still a risk that sensitive information could end up in the wrong hands. Such cyberattacks and data thefts are also a concern for technology developers. All companies need to be vigilant in preparing for or preventing these situations, perhaps by drawing on the expertise of hackers.<sup><a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a></sup></p>
+<h3>Trust, Transparency, and Interpretability</h3>
+<p>“Artificial Intelligence and Life in 2030” suggests that “well-deployed artificial intelligence prediction tools have the potential to provide new kinds of transparency about data and inferences, and may be applied to detect, remove, or reduce human bias, rather than reinforcing it.”<sup><a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a></sup></p>
+<p>A key barrier to achieving transparency in artificial intelligence tools is the lack of a common language, as varying definitions of “transparency,” “explainability,” and “interpretability” exist across disciplines. Additionally, there are various lenses through which these concepts can be considered. For example, some view “explainability” as a technical issue, while others may view it as a legal or social issue.</p>
+<aside class="box-1" type="sidebar">
+<p><em>A key barrier to achieving transparency in artificial intelligence tools is the lack of a common language</em></p>
+</aside>
+<p>Another important aspect to bear in mind when considering transparency is that it is not synonymous with trust: trust can be attained without transparency. Conversely, just because an algorithm is transparent does not mean that it is trusted or trustworthy. A user might trust an algorithm without questioning or understanding how the result was attained—just as travelers trust that it is safe to board airplanes every day, despite not knowing precisely how airplanes function. Individuals are also likely to trust certain types of medical treatment, without knowing how or why they work.</p>
+<p>Humans and computer systems alike can be trained to provide explanations, but these explanations may be too complex to grasp without specialist knowledge or may, in some cases, be biased or untrue. For example, when a medical patient enters an examination room with a complicated set of symptoms, a medical professional may offer either a simplified explanation <span id="chapter02.xhtml#page_19" type="pagebreak" title="19"></span>intended to put the patient at ease or one that would require a medical degree to understand fully. The patient may feel relief having an explanation, yet the patient may not actually have the most accurate or most clear explanation. Who performs an action or supplies a service can also play a role in the extent to which individuals trust a system.</p>
+<p>The possibility of providing biased results or unfair outcomes—intentionally or unintentionally—presents two relevant questions: (1) To what extent is the level of interpretability influenced by the type of machine learning deployed and how can advances in research address this? (2) What type of interpretability is required in different contexts?</p>
+<p>The human desire to provide accounts of how decisions are made prompts another important series of questions: When a computer system makes a mistake, who or what should be held accountable? Because computer systems can keep complete logs of their processing, they are in principle capable of producing much more complete and correct explanations. Should computer systems therefore be held to higher standards of explanation than humans?</p>
+<p>An additional key factor is the level of explanation required. An explanation provided to an engineer who will debug software in an automated vehicle would be far more technical in nature than an explanation about a vehicle malfunction provided to a user. Related to this is the purpose for which an explanation is being provided. Explanation of failure cases and biases that will be used to improve the computational model is likely to require a different level of accuracy and detail than the explanations needed for legal purposes.</p>
+<p>Another component of transparency is consistency—an understanding that similar cases will be treated similarly. Consistency is critical to enabling the users of a learning system to anticipate the future decisions of the system based on explanations of past decisions. Without consistency, it may be more difficult for users to gain trust in the system.</p>
+<h3>Ethical Challenges in Specific Applications</h3>
+<p>Ethical and legal concerns stemming from issues of fairness and bias relate to issues of trust and transparency.</p>
+<p>One application area in which these questions are most palpable is in the criminal justice system. Scoring systems applied to predict the likelihood of repeat offending are increasingly data-driven, and some make use of machine learning.</p>
+<p>These systems offer the hope of reducing bias in criminal sentencing, if the algorithm being used can be designed in a way that supports advanced analysis free of societal assumptions about factors such as race, gender, or socioeconomic status. However, the outputs of these systems reflect the data on which they are trained. If these data embody current societal biases or inequality, then—unless it is explicitly programmed otherwise—a machine learning system will replicate these biases.</p>
+<p>There are different approaches to monitoring the biases of such systems, many of which are based on the interpretability or transparency of the system:</p>
+<ul>
+<li>If the data used to create such models are publicly available, then the results can be tested or reproduced;</li>
+<li><span id="chapter02.xhtml#page_20" type="pagebreak" title="20"></span> Rule-based systems or other types of models may be more interpretable; and</li>
+<li>Fairness adjustments or constraints can be built into models.</li>
+</ul>
+<p>Identifying, controlling, and being transparent about bias in the system may be more manageable than seeking to eliminate it. In this sense, although interpretable models may not be as accurate as alternative approaches, being able to understand how a model functions and why it may be imperfect is likely to be helpful. Questions about how best to negotiate a tradeoff among interpretability, accuracy, and fairness are likely to endure.</p>
+<p>The use of machine learning systems in recidivism scoring also offers a new lens through which to view questions about the concept of unique treatment versus legal precedent. The law says that people need to be treated as individuals with dignity and thus have a right to defend themselves in an effort to shape the decision being made about them. However, the legal system also relies on precedent, which encourages the law to be applied to new cases in a similar way to its application in previous cases.</p>
+<p>Scoring via machine learning systems is also used in medicine. For example, there is a scoring system to predict mortality for patients with some illnesses and to recommend medical interventions accordingly.<sup><a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a></sup></p>
+<h3>Living Alongside Machine Learning</h3>
+<p>In addition to specific challenges arising from the governance of data used in machine learning or the capabilities of current machine learning systems, and the benefits to be gained from such systems, there is a broader suite of questions raised by the increasing pervasiveness of machine learning systems. At a fundamental level, these questions ask how society will change as people live and work with automated systems, as well as with the new forms of human–computer interaction that could follow.</p>
+<aside class="box-1" type="sidebar">
+<p><em>How will society change as people live and work with automated systems?</em></p>
+</aside>
+<p>Concerns about automation and the workforce are already present in debates about machine learning, rooted in fears about humans being replaced by or becoming de<span id="chapter02.xhtml#page_21" type="pagebreak" title="21"></span>pendent upon machines. In some cases, fears arise about how machine learning could hurt individuals or restrict human experiences by limiting the choices of products, services, and activities available or by reducing interactions between human beings.<sup><a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a></sup></p>
+<aside class="box-1" type="sidebar">
+<p><em>Results from public dialogues on machine learning in the U.K. indicate that there is a general preference to have a “human in the loop” for decisions that affect people in a personal or sensitive way—for example, in healthcare</em></p>
+</aside>
+<p>Most people are happy to have processes automated that are dirty, dull, or dangerous, but what about other tasks that fall outside these categories? Warfare is an example in which there are continuing ethical debates about the use of algorithms that may make a decision about taking human lives. Results from public dialogues on machine learning in the United Kingdom indicate that there is a general preference to have a “human in the loop” for decisions that affect people in a personal or sensitive way—for example, in healthcare.</p>
+<p>There are also broader questions about how the benefits of machine learning can be shared across society and how society can capitalize on the opportunities these technologies present, whether in healthcare, transportation, or education. In seeking to address these questions, there may be lessons from previous technological advances that have transformed the ways people live and work through automation. During the Industrial Revolution, individuals had to adapt to new ways of communicating, traveling, and working. Will humans today be able to adapt similarly to the changes to work and other aspects of life resulting from advances in machine learning? Questions about how people live alongside machine learning will persist, and continuing dialogue will be important in negotiating them.</p>
+<p>__________________</p>
+<div class="footnote" type="rearnotes">
+
+</div>
+<p><span id="chapter03.xhtml"></span></p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><h1 id="chapter03.xhtml#pz3-11_1"><span id="chapter03.xhtml#page_22" type="pagebreak" title="22"></span><a href="../Text/content-toc.xhtml#pz3-11">3</a></h1></td>
+<td><h1><span class="small"><span class="small"><span class="small"><a href="../Text/content-toc.xhtml#pz3-11">The Future of Machine Learning</a></span></span></span></h1></td>
+</tr>
+</tbody>
+</table>
+<h2 id="chapter03.xhtml#pz22-2"><a href="../Text/content-toc.xhtml#pz3-12">UNDERSTANDING THE NEEDS OF DIFFERENT USERS AND USE CASES</a></h2>
+<p>As previously discussed, different domains and applications require machine learning systems with different characteristics. For example, the justice system is associated with different pressures than the transportation system. Understanding these different needs and use cases will be important in ensuring the field is able to realize its full potential.</p>
+<h2 id="chapter03.xhtml#pz22-5"><a href="../Text/content-toc.xhtml#pz3-13">ENGAGEMENT FOR STAKEHOLDERS</a></h2>
+<p>As the technical abilities of machine learning systems increase and their societal implications become more pronounced, it will be important for a diverse community of users and developers to help shape both technology development and policy discussions. To push forward the boundaries of machine learning, engineers, data scientists, and computer scientists can benefit from the following perspectives:</p>
+<ul>
+<li>Sociologists could play important roles, including discussing the ethical and societal issues of the technology;</li>
+<li>Psychologists and human factors experts could offer insight on the ways in which humans interact with technology;</li>
+<li><span id="chapter03.xhtml#page_23" type="pagebreak" title="23"></span> Unions and industrial psychologists could represent the voices of workforce changes that may result from continued development in artificial intelligence;</li>
+<li>Policy makers and regulators could contribute to a dialogue about autonomy and fair information principles; and</li>
+<li>Historians could contribute knowledge about past eras of rapid technological change and inform today’s debate.</li>
+</ul>
+<p>This interdisciplinary approach should also be reflected in professional training for artificial intelligence and in policy making for the field.</p>
+<h2 id="chapter03.xhtml#pz23-5"><a href="../Text/content-toc.xhtml#pz3-14">ALGORITHM DEVELOPMENT AND MODEL CONSTRUCTION</a></h2>
+<p>Advances in the technical abilities of machine learning algorithms have contributed to the recent success of the field. Algorithms are “encoded procedures for solving a problem by transforming input data into a desired output, based on specified calculations and procedures.”<sup><a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a></sup></p>
+<p>Many applications in public policy highlight these trade-offs. For example, when seeking fairness in a model being used in criminal justice and determining acceptable rates of false positives or false negatives, is it worse to incarcerate a low-risk individual (false positive) than to release from prison a high-risk individual (false negative)? If the algorithms are kept “fair” by reducing false negatives and excluding certain predictive criteria based on legally protected personal characteristics, more high-risk individuals may be released or more low-risk individuals may be incarcerated.</p>
+<p>In some cases, such as criminal justice, fairness may become even more important than accuracy. It is important that algorithms are developed and conveyed such that the trade-offs are transparent. This will help increase confidence not just in the algorithm but also in the decision-making process. Context is also important in developing the algorithm, if such data can be collected. It may be useful to encode social norms into the machine learning and optimization processes so as to focus more on fairness.</p>
+<p>The broader social consequences of the ubiquitous use of algorithms and increasing personalization are also important to consider. This personalization could lead to “algorithmic bubbles” that classify people based on their usual behaviors, beliefs, and actions and preferentially provide them with information consistent with these. This could insulate currently held beliefs from challenge and could divide societies into segments that cease to communicate.</p>
+<h2 id="chapter03.xhtml#pz24-1"><span id="chapter03.xhtml#page_24" type="pagebreak" title="24"></span><a href="../Text/content-toc.xhtml#pz3-15">GOVERNANCE AND PUBLIC CONFIDENCE</a></h2>
+<p>Given the wide range of approaches to machine learning and possible application areas, public confidence in these systems will be key to their continued success.</p>
+<p>The term “governance” in this context refers to a diverse set of instruments and behaviors that shape how machine learning is used: it encompasses codes of practice, institutional norms, and individual behaviors, as well as specific policies and direct regulation by the government.</p>
+<p>There are already efforts in place for the government to better understand, offer support, and set standards related to artificial intelligence. For example, algorithms for certain tasks already have to follow existing laws, such as being nondiscriminatory. It is important to note that governance is not synonymous with constraint; instead, it can give the confidence and public acceptance that enables new applications to be developed.</p>
+<p>While some have called for further governance of machine learning, both the feasibility and desirability of governance approaches based on targeted regulation of machine learning algorithms have been questioned in different settings. “Artificial Intelligence and Life in 2030” suggests, “Attempts to regulate artificial intelligence in general would be misguided since there is no clear definition of artificial intelligence (it is not any one thing), and the risks and considerations are very different in different domains. Instead, policy makers should recognize that to varying degrees and over time, various industries will need distinct, appropriate, regulations that touch on software built using artificial intelligence or incorporating artificial intelligence in some way.”<sup><a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a></sup></p>
+<p>This leads to questions about the governance of the technology itself—and those working on its applications. For example, should data collection be self-regulated for devices such as digital assistants? Because these data are considered unregulated, there are no fair reporting laws that currently apply in the United States. In the European Union, the General Data Protection Regulation, which is expected to take effect in May 2018, will address “automated individual decision making, including profiling” and notes that a person “shall have the right not to be subject to a decision based solely on automated processing, including profiling, which produces legal effects concerning him or her or similarly significantly affects him or her,” and that, if such processing is necessary, the person will have “at least the right to obtain human intervention [...] to express his or her point of view and to contest the decision.”<sup><a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a></sup></p>
+<aside class="box-1" type="sidebar">
+<p><span id="chapter03.xhtml#page_25" type="pagebreak" title="25"></span></p>
+<p><em>It is important to ensure that engineers, designers, business leaders, and inventors have the appropriate knowledge and skills required to make the most out of new technologies</em></p>
+</aside>
+<h2 id="chapter03.xhtml#pz25-3"><a href="../Text/content-toc.xhtml#pz3-16">OPEN DISTRIBUTION OF TOOLS AND KNOWLEDGE</a></h2>
+<p>It is important to ensure that engineers, designers, business leaders, and inventors have the appropriate knowledge and skills required to make the most out of new technologies. Sharing knowledge—for example, through educational materials and tools—is essential, as is improving communication across industry, academia, and government. Research from different sectors is often complementary, and providing access to data and real examples is crucial to ensure that learning and best practices spread quickly. Continued funding to support academic research and education in the field of machine learning and related areas can also help move the field forward.</p>
+<p>Innovation requires access to data, codes, and other resources. Open sourcing of tools and online learning and encouraging researchers to share their findings publicly can spur increased innovation.</p>
+<h2 id="chapter03.xhtml#pz25-5"><a href="../Text/content-toc.xhtml#pz3-17">MACHINE LEARNING IN THE FUTURE</a></h2>
+<p>As machine learning transforms the world in which we live and improves many aspects of our lives, the legal, social, and ethical implications must be considered. The diverse applications of this technology will likely continue to expand and mature. As they do, collaboration, education, awareness of possible adverse implications of this technology, and creativity in addressing problems are crucial to ensure that the pressing challenges of today are mitigated to allow continued growth in the future.</p>
+<p>__________________</p>
+<div class="footnote" type="rearnotes">
+
+</div>
+<p><span id="backmatter01.xhtml"></span></p>
+<section type="appendix">
+<h1 id="backmatter01.xhtml#pz3-18_1" class="h1b"><span id="backmatter01.xhtml#page_26" type="pagebreak" title="26"></span><a href="../Text/content-toc.xhtml#pz3-18">Appendix</a></h1>
+<hr />
+<h2 id="backmatter01.xhtml#pAAR"><a href="../Text/content-toc.xhtml#pz3-19">SACKLER FORUM ON MACHINE LEARNING PROGRAM</a></h2>
+<p>Machine learning is at the core of many applications that have become part of daily life, from voice recognition to image perception. These technologies, which a few years ago were performing at noticeably below-human levels, can now outperform people at some tasks. As the field continues to evolve, machine learning has the potential to play a transformative role across a diverse range of sectors including transportation, medicine, public services, and finance. This forum brought together scientists from the United Kingdom and the United States to explore potential applications for machine learning and discuss the legal and ethical questions that arise as humans and machine learning algorithms interact.</p>
+<p><strong>TUESDAY - JANUARY 31, 2017</strong></p>
+<table style="width: 100%;">
+<colgroup>
+<col style="width: 25%;">
+</col>
+<col style="width: 75%;">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td rowspan="6">
+9:00 AM
+</section>
+</td>
+<td>
+<p>Welcome from the National Academy of Sciences and Royal Society</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Diane Griffin, Vice President, National Academy of Sciences</em></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Richard Catlow, Foreign Secretary, Royal Society</em></p>
+</td>
+</tr>
+<tr>
+<td class="tdt">
+<p>Welcome from the Co-Chairs</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Peter Donnelly, University of Oxford</em></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Michael Kearns, University of Pennsylvania</em></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Session 1: The Frontiers of Machine Learning</strong></p>
+<p>The ubiquity of data, accessibility of computing power, and algorithmic advances have driven rapid progress in machine learning over the past five years. Not only does machine learning now underpin many applications that have become part of daily life, the field continues to evolve quickly and has the potential to play a transformative role across a diverse range of sectors. This session explored the frontiers of machine learning, in terms of both cutting-edge technology and near-term applications, and discussed the state of the art of machine learning.</p>
+<table style="width: 100%;">
+<colgroup>
+<col style="width: 25%;">
+</col>
+<col style="width: 75%;">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td rowspan="2">
+<p>9:15 AM</p>
+</td>
+<td>
+<p>I Know it’s an Idiot but it’s MY Artificial Idiot!</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Vint Cerf, Google</em></p>
+</td>
+</tr>
+<tr>
+<td class="tdt" rowspan="2">
+<p>9:50 AM</p>
+</td>
+<td class="tdt">
+<p>Towards Affordable Self-Driving Cars</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Raquel Urtasun, University of Toronto</em></p>
+</td>
+</tr>
+<tr>
+<td class="tdt" rowspan="2">
+<p>10:25 AM</p>
+</td>
+<td class="tdt">
+<p>Probabilistic Machine Learning: Foundations and Frontiers</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Zoubin Ghahramani, University of Cambridge</em></p>
+</td>
+</tr>
+<tr>
+<td class="tdt">
+<p><span id="backmatter01.xhtml#page_27" type="pagebreak" title="27"></span>11:00 AM</p>
+</td>
+<td class="tdt">
+<p>Break</p>
+</td>
+</tr>
+<tr>
+<td class="tdt" rowspan="2">
+<p>11:30 AM</p>
+</td>
+<td class="tdt">
+<p>Words, Pictures, and Common Sense</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Devi Parikh, Georgia Institute of Technology</em></p>
+</td>
+</tr>
+<tr>
+<td class="tdt" rowspan="2">
+<p>12:05 PM</p>
+</td>
+<td class="tdt">
+<p>Applied Machine Learning at Google</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Greg Corrado, Google</em></p>
+</td>
+</tr>
+<tr>
+<td class="tdt">
+<p>12:40 PM</p>
+</td>
+<td class="tdt">
+<p>Lunch</p>
+</td>
+</tr>
+<tr>
+<td class="tdt" rowspan="6">
+<p>1:40 PM</p>
+</td>
+<td class="tdt">
+<p>Panel Discussion</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Vint Cerf, Google</em></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Raquel Urtasun, University of Toronto</em></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Zoubin Ghahramani, University of Cambridge</em></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Devi Parikh, Georgia Institute of Technology</em></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Greg Corrado, Google</em></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Session 2: Machine Learning and Society</strong></p>
+<p>People and machine learning increasingly interact in a range of contexts. This expansion of machine learning raises legal and ethical questions, re-frames discussions about uses of data, and poses new challenges for the governance of this technology. The social acceptability of different machine learning applications, desirability of automated decision-making processes, adequacy of processes to manage concerns about statistical stereotyping or privacy, and more, will all influence how and where society has confidence in the deployment of machine learning systems. This session explored the societal implications of machine learning and the opportunities and challenges associated with advances in the field.</p>
+<table style="width: 100%;">
+<colgroup>
+<col style="width: 25%;">
+</col>
+<col style="width: 75%;">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td rowspan="2">
+<p>2:25 PM</p>
+</td>
+<td>
+<p>Artificial Intelligence and Life in 2030</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Peter Stone, University of Texas at Austin</em></p>
+</td>
+</tr>
+<tr>
+<td class="tdt" rowspan="2">
+<p>3:00 PM</p>
+</td>
+<td class="tdt">
+<p>Interpretable Machine Learning for Recidivism Prediction</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Cynthia Rudin, Duke University</em></p>
+</td>
+</tr>
+<tr>
+<td class="tdt">
+<p>3:35 PM</p>
+</td>
+<td class="tdt">
+<p>Break</p>
+</td>
+</tr>
+<tr>
+<td class="tdt" rowspan="2">
+<p>4:10 PM</p>
+</td>
+<td class="tdt">
+<p>Protecting and Enhancing Our Humanity in an Age of Machine Learning</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Charis Thompson, University of California, Berkeley</em></p>
+</td>
+</tr>
+<tr>
+<td class="tdt" rowspan="2">
+<p><span id="backmatter01.xhtml#page_28" type="pagebreak" title="28"></span>4:45 PM</p>
+</td>
+<td class="tdt">
+<p>Using Machine Learning in Criminal Justice Risk Assessments</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Richard Berk, University of Pennsylvania</em></p>
+</td>
+</tr>
+<tr>
+<td class="tdt">
+<p>5:20 PM</p>
+</td>
+<td class="tdt">
+<p>Adjourn for the day</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>WEDNESDAY - FEBRUARY 1, 2017</strong></p>
+<table style="width: 100%;">
+<colgroup>
+<col style="width: 25%;">
+</col>
+<col style="width: 75%;">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td rowspan="3">
+<p>9:00 AM</p>
+</td>
+<td>
+<p>Welcome from the Co-Chairs</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Peter Donnelly, University of Oxford</em></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Michael Kearns, University of Pennsylvania</em></p>
+</td>
+</tr>
+<tr>
+<td class="tdt" rowspan="2">
+<p>9:05 AM</p>
+</td>
+<td class="tdt">
+<p>Privacy and Machine Learning: Promise, Peril, and the Path Forward</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Pam Dixon, World Privacy Forum</em></p>
+</td>
+</tr>
+<tr>
+<td class="tdt" rowspan="2">
+<p>9:40 AM</p>
+</td>
+<td class="tdt">
+<p>Algorithmic Regulation: A Critical Interrogation</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Karen Yeung, King’s College London</em></p>
+</td>
+</tr>
+<tr>
+<td class="tdt">
+<p>10:15 AM</p>
+</td>
+<td class="tdt">
+<p>Break</p>
+</td>
+</tr>
+<tr>
+<td class="tdt" rowspan="7">
+<p>10:45 AM</p>
+</td>
+<td class="tdt">
+<p>Panel Discussion</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Peter Stone, University of Texas at Austin</em></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Cynthia Rudin, Duke University</em></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Charis Thompson, University of California, Berkeley</em></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Richard Berk, University of Pennsylvania</em></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Pam Dixon, World Privacy Forum</em></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Karen Yeung, King’s College London</em></p>
+</td>
+</tr>
+<tr>
+<td class="tdt">
+<p>11:45 AM</p>
+</td>
+<td class="tdt">
+<p>Lunch</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Session 3: Machine Learning in Research and Commercial Communities</strong></p>
+<p>There are enormous opportunities in machine learning in academia, research labs, and industry. While much of the research and development of machine learning to date has been done in the commercial world, each of these communities will continue advancing this field. Establishing key research challenges and areas of commercial opportunity will therefore be important in moving the frontiers of machine learning forward. This session explored key areas of interest in machine learning in the research and commercial communities.</p>
+<table style="width: 100%;">
+<colgroup>
+<col style="width: 25%;">
+</col>
+<col style="width: 75%;">
+</col>
+</colgroup>
+<tbody>
+<tr>
+<td rowspan="2">
+<p>1:00 PM</p>
+</td>
+<td>
+<p>Building the Human Wiring Diagram from Linked Genomic and Healthcare Data</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Gil McVean, University of Oxford</em></p>
+</td>
+</tr>
+<tr>
+<td class="tdt" rowspan="2">
+<p>1:35 PM</p>
+</td>
+<td class="tdt">
+<p>Active Optimization and Self-Driving Cars</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Jeff Schneider, Carnegie Mellon University and Uber Advanced Technology Center</em></p>
+</td>
+</tr>
+<tr>
+<td class="tdt" rowspan="2">
+<p><span id="backmatter01.xhtml#page_29" type="pagebreak" title="29"></span>2:10 PM</p>
+</td>
+<td class="tdt">
+<p>Three Principles for Data Science: Predictability, Stability, and Computability</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Bin Yu, University of California, Berkeley</em></p>
+</td>
+</tr>
+<tr>
+<td class="tdt" rowspan="2">
+<p>2:45 PM</p>
+</td>
+<td class="tdt">
+<p>Experimental Design and Machine Learning Opportunities in Mobile Health</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Susan Murphy, University of Michigan</em></p>
+</td>
+</tr>
+<tr>
+<td class="tdt">
+<p>3:20 PM</p>
+</td>
+<td class="tdt">
+<p>Break</p>
+</td>
+</tr>
+<tr>
+<td class="tdt" rowspan="2">
+<p>3:40 PM</p>
+</td>
+<td class="tdt">
+<p>A Deployable Decision Service</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>John Langford, Microsoft Research</em></p>
+</td>
+</tr>
+<tr>
+<td class="tdt" rowspan="6">
+<p>4:15 PM</p>
+</td>
+<td class="tdt">
+<p>Panel Discussion</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Jeff Schneider, Carnegie Mellon University</em></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Bin Yu, University of California, Berkeley</em></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Susan Murphy, University of Michigan</em></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>Gil McVean, University of Oxford</em></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><em>John Langford, Microsoft Research</em></p>
+</td>
+</tr>
+<tr>
+<td class="tdt">
+<p>4:55 PM</p>
+</td>
+<td class="tdt">
+<p>Adjourn Meeting</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<p><span id="backmatter02.xhtml"></span></p>
+<section type="appendix">
+<h1 id="backmatter02.xhtml#pz3-20_1" class="h1b"><span id="backmatter02.xhtml#page_30" type="pagebreak" title="30"></span><a href="../Text/content-toc.xhtml#pz3-20">Participants</a></h1>
+<p>Richard Berk, University of Pennsylvania</p>
+<p>Joanna Bryson, University of Bath</p>
+<p>Joaquin Candela, Facebook</p>
+<p>Linda Casola, National Academies</p>
+<p>Richard Catlow, Royal Society</p>
+<p>Vint Cerf, Google</p>
+<p>Greg Corrado, Google</p>
+<p>Claire Craig, Royal Society</p>
+<p>Nello Cristianini, University of Bristol</p>
+<p>Kim Dai, U.S. Department of Defense</p>
+<p>Thomas Dietterich, Oregon State University</p>
+<p>Pam Dixon, World Privacy Forum</p>
+<p>Peter Donnelly, University of Oxford</p>
+<p>Jon Eisenberg, National Academies</p>
+<p>Avi Feller, University of California, Berkeley</p>
+<p>Edward Felten, Princeton University</p>
+<p>Kay Firth-Butterfield, AI-Austin</p>
+<p>Zoubin Ghahramani, University of Cambridge</p>
+<p>Fernand Gouveia, British Embassy, Washington, D.C.</p>
+<p>Arthur Gretton, University College London</p>
+<p>Diane Griffin, Johns Hopkins University</p>
+<p>Brian Hall, U.S. Department of Defense</p>
+<p>Sabine Hauert, University of Bristol</p>
+<p>Kenneth Heafield, University of Edinburgh</p>
+<p>Rodney Howard, National Academies</p>
+<p>Luke Huan, National Science Foundation</p>
+<p>Nick Jennings, Imperial College London</p>
+<p>Subbarao Kambhampati, Arizona State University</p>
+<p>Behzad Kamgar-Parsi, Office of Naval Research</p>
+<p>Michael Kearns, University of Pennsylvania</p>
+<p>John Langford, Microsoft Research</p>
+<p>Po-Ling Loh, University of Wisconsin, Madison</p>
+<p>Gil McVean, University of Oxford</p>
+<p>Mitch Mellen, Office of the Director of National Intelligence</p>
+<p>Lynette Millett, National Academies</p>
+<p>Parsa Mirhaji, Yeshiva University</p>
+<p>Tom Mitchell, Carnegie Mellon University</p>
+<p>Jessica Montgomery, Royal Society</p>
+<p>Miranda Mowbray, Mowbray Ventures</p>
+<p>Susan Murphy, University of Michigan</p>
+<p>Predrag Neskovic, Office of Naval Research</p>
+<p>Regina Nuzzo, Gallaudet University</p>
+<p>Susannah Odell, Royal Society</p>
+<p>Sofia Olhede, University College London</p>
+<p>Devi Parikh, Georgia Institute of Technology</p>
+<p>Jerome Pesenti, BenevolentAI</p>
+<p>Kate Piblett, British Defence Service</p>
+<p>Cynthia Rudin, Duke University</p>
+<p>Jeff Schneider, Carnegie Mellon University</p>
+<p>Michelle Schwalbe, National Academies</p>
+<p>Peter Stone, University of Texas, Austin</p>
+<p>Charis Thompson, University of California, Berkeley</p>
+<p>Raquel Urtasun, University of Toronto</p>
+<p>Andrew H. Van Scyoc, Department of the Navy</p>
+<p>Suresh Venkatasubramanian, University of Utah</p>
+<p>David Vladek, Georgetown University</p>
+<p>Scott Weidman, National Academies</p>
+<p>Adrian Weller, University of Cambridge</p>
+<p>Patrick Wolfe, University College London</p>
+<p>Karen Yeung, King’s College London</p>
+<p>Catharine Young, British Embassy, Washington, D.C.</p>
+<p>Bin Yu, University of California, Berkeley</p>
+<p>Rapela Zaman, Royal Society</p>
+<p>Jerry Zhu, University of Wisconsin, Madison</p>
+</section>
+<p><span id="backmatter03.xhtml"></span></p>
+<section type="appendix">
+<h1 id="backmatter03.xhtml#pz3-21_1" class="h1c"><span id="backmatter03.xhtml#page_31" type="pagebreak" title="31"></span><a href="../Text/content-toc.xhtml#pz3-21">FOR FURTHER READING</a></h1>
+<p>For more detailed discussion of many of the topics addressed in this document, see the following publications:</p>
+<p><em>The Fourth Industrial Revolution: Proceedings of a Workshop–in Brief</em>, National Academies of Sciences, Engineering, and Medicine, 2017</p>
+<p><em>Information Technology and the U.S. Workforce: Where Are We and Where Do We Go from Here?</em> National Academies of Sciences, Engineering, and Medicine, 2017</p>
+<p><em>Machine Learning: The Power and Promise of Computers That Learn by Example</em>, Royal Society, 2017</p>
+<p><em>Public Views of Machine Learning</em>, Royal Society and Ipsos MORI, 2017</p>
+<p><em>Refining the Concept of Scientific Inference When Working with Big Data: Proceedings of a Workshop</em>, National Academies of Sciences, Engineering, and Medicine, 2017</p>
+<p><em>Continuing Innovation in Information Technology: Workshop Report</em>, National Academies of Sciences, Engineering, and Medicine, 2016</p>
+<p><em>How Modeling Can Inform Strategies to Improve Population Health: Workshop Summary</em>, National Academies of Sciences, Engineering, and Medicine, 2016</p>
+<p><em>Privacy Research and Best Practices: Summary of a Workshop for the Intelligence Community</em>, National Academies of Sciences, Engineering, and Medicine, 2016</p>
+<p><em>Progress and Research in Cybersecurity</em>, Royal Society, 2016</p>
+<p><em>A 21st Century Cyber-Physical Systems Education</em>, National Academies of Sciences, Engineering, and Medicine, 2016</p>
+<p><em>A Look at the Legal Environment for Driverless Vehicles</em>, National Academies of Sciences, Engineering, and Medicine, 2015</p>
+<p><em>Preparing the Workforce for Digital Curation</em>, National Research Council, 2015</p>
+<p><em>Complex Operational Decision Making in Networked Systems of Humans and Machines: A Multidisciplinary Approach</em>, National Research Council, 2014</p>
+<p><em>Emerging and Readily Available Technologies and National Security: A Framework for Addressing Ethical, Legal, and Societal Issues</em>, National Research Council and National Academy of Engineering, 2014</p>
+<p><strong>For further information, please contact:</strong></p>
+<p>Michelle Schwalbe, National Academies, mschwalbe@nas.edu</p>
+<p>Jessica Montgomery, Royal Society, jessica.montgomery@royalsociety.org</p>
+</section>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><sup><a href="#frontmatter02.xhtml#AYO">1</a></sup> FMedSci, Fellow of the Academy of Medical Sciences.<a href="#fnref1" class="footnote-back">↩</a></li>
+<li id="fn2"><sup><a href="#frontmatter02.xhtml#A5I">3</a></sup> NAS, National Academy of Sciences.<a href="#fnref2" class="footnote-back">↩</a></li>
+<li id="fn3"><sup><a href="#chapter01.xhtml#AYq">1</a></sup> C.D. Manning, P. Raghavan, and H. Schütze, 2008, <em>Introduction to Information Retrieval</em>, Cambridge University Press, Cambridge, U.K.<a href="#fnref3" class="footnote-back">↩</a></li>
+<li id="fn4"><sup><a href="#chapter01.xhtml#Ac1">2</a></sup> Neural networks are “computing system[s] made up of a number of simple, highly interconnected processing elements, which process information by their dynamic state response to external inputs.” (M. Caudill, 1989, Neural networks primer: Part I, <em>AI Expert</em> 2(12): 46-52.) The outputs are equivalent to the sum of the inputs multiplied by their weights. More specifically, the inputs are applied, the actual versus desired output is calculated, the error is propagated backward into the network, and weights are adjusted to minimize the error. Neural networks are trained repeatedly, with inputs adjusted each time, to get closer to a desired output. It remains difficult to predict what will happen with these networks, especially with unknown or untrained input, so they must continually be trained with new samples—simply changing the code is insufficient. Over time the development of more complex, large-scale, multilayered neural networks has allowed researchers to work on problems at scale.<a href="#fnref4" class="footnote-back">↩</a></li>
+<li id="fn5"><sup><a href="#chapter01.xhtml#Aiv">4</a></sup> The Automatic Statistician, <a href="https://www.automaticstatistician.com/index/" class="word-break">https://www.automaticstatistician.com/index/</a>, accessed June 15, 2017.<a href="#fnref5" class="footnote-back">↩</a></li>
+<li id="fn6"><sup><a href="#chapter02.xhtml#AcW">5</a></sup> The Royal Society, 2017, <em>Machine Learning: The Power and Promise of Computers That Learn by Example</em>, <a href="https://royalsociety.org/~/media/policy/projects/machine-learning/publications/machine-learning-report.pdf" class="word-break">https://royalsociety.org/~/media/policy/projects/machine-learning/publications/machine-learning-report.pdf</a>.<a href="#fnref6" class="footnote-back">↩</a></li>
+<li id="fn7"><sup><a href="#chapter02.xhtml#AEp">6</a></sup> D.J. Solove, 2013, Introduction: Privacy self-management and the consent dilemma, <em>Harvard Law Review</em> 126(7): 1880-1903.<a href="#fnref7" class="footnote-back">↩</a></li>
+<li id="fn8"><sup><a href="#chapter02.xhtml#A2c">7</a></sup> Information Commissioner’s Office, “Overview of the GDPR,” <a href="https://ico.org.uk/for-organisations/data-protection-reform/overview-of-the-gdpr/introduction/" class="word-break">https://ico.org.uk/for-organisations/data-protection-reform/overview-of-the-gdpr/introduction/</a>, accessed June 15, 2017.<a href="#fnref8" class="footnote-back">↩</a></li>
+<li id="fn9"><sup><a href="#chapter02.xhtml#AAp">8</a></sup> Consumer Financial Protection Bureau, “CFPB Explores Impact of Alternative Data on Credit Access for Consumers Who Are Credit Invisible,” last update February 16, 2017, <a href="https://www.consumerfinance.gov/about-us/newsroom/cfpb-explores-impact-alternative-data-credit-access-consumers-who-are-credit-invisible/" class="word-break">https://www.consumerfinance.gov/about-us/newsroom/cfpb-explores-impact-alternative-data-credit-access-consumers-who-are-credit-invisible/</a>.<a href="#fnref9" class="footnote-back">↩</a></li>
+<li id="fn10"><sup><a href="#chapter02.xhtml#AIG">10</a></sup> National Academy of Sciences and the Royal Society, 2015, <em>Cybersecurity Dilemmas: Technology, Policy, and Incentives: Summary of Discussions at the 2014 Raymond and Beverly Sackler U.S.-U.K. Scientific Forum</em>, <a href="https://www.nap.edu/catalog/21833/" class="word-break">https://www.nap.edu/catalog/21833/</a>.<a href="#fnref10" class="footnote-back">↩</a></li>
+<li id="fn11"><sup><a href="#chapter02.xhtml#Ask">11</a></sup> Panel on the One Hundred Year Study on Artificial Intelligence, “Artificial Intelligence and Life in 2030,” Report of the 2015-2016 Study Panel, Stanford University, Stanford, Calif., September 2016, <a href="http://ai100.stanford.edu/2016-report" class="word-break">http://ai100.stanford.edu/2016-report</a>.<a href="#fnref11" class="footnote-back">↩</a></li>
+<li id="fn12"><sup><a href="#chapter02.xhtml#Anfd">12</a></sup> One such example is the use of machine learning to predict outcomes for patients with pneumonia.<a href="#fnref12" class="footnote-back">↩</a></li>
+<li id="fn13"><sup><a href="#chapter02.xhtml#AxE">14</a></sup> The Royal Society, 2017, <em>Machine Learning: The Power and Promise of Computers That Learn by Example</em>.<a href="#fnref13" class="footnote-back">↩</a></li>
+<li id="fn14"><sup><a href="#chapter03.xhtml#AKD">15</a></sup> T. Gillespie, 2014, “The Relevance of Algorithms,” pp. 167-193 in <em>Media Technologies: Essays on Communication, Materiality, and Society</em>, eds. T. Gillespie, P.J. Boczkowski, and K.A. Foot, MIT Press, Cambridge, Mass.<a href="#fnref14" class="footnote-back">↩</a></li>
+<li id="fn15"><sup><a href="#chapter03.xhtml#AsU">16</a></sup> Panel on the One Hundred Year Study on Artificial Intelligence, “Artificial Intelligence and Life in 2030.”<a href="#fnref15" class="footnote-back">↩</a></li>
+<li id="fn16"><sup><a href="#chapter03.xhtml#ALm">17</a></sup> DSB-MIT-SYSTEM, “Article 22 EU GDPR: Automated Individual Decision-making, Including Profiling,” <a href="http://www.privacy-regulation.eu/en/22.htm" class="word-break">http://www.privacy-regulation.eu/en/22.htm</a>, accessed June 16, 2017.<a href="#fnref16" class="footnote-back">↩</a></li>
+</ol>
+</section>
