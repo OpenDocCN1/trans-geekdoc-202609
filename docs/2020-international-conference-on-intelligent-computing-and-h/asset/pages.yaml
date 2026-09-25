@@ -1,0 +1,266 @@
+- pgno: 0
+  md: '# Research on the Application of Data Encryption Technology in Computer Network
+    Communication Security
+
+
+    Kuihiang Xia, Xiaoming Song
+
+    Heihe University, Heihe, Hongjiang 164300
+
+    skx@hhhybxb.edu
+
+
+    Abstract: In the process of rapid development of technology, the development of
+    computer communication technology is getting faster and faster. At the present,
+    the number of people applying to network communication is increasing. In order
+    to ensure computer communication serves people''s production and life, we must
+    pay attention to the security application of computer network communication technology
+    there will be confidential information leakage and so on. Therefore, the security
+    and stability of information are very important for the application and development
+    of network communication technology in the future. It is necessary to study network
+    communication security to improve the protection level of current network communication
+    to ensure the security of information.
+
+
+    Keywords: Data Encryption Technology; Network Communication; Security Management
+
+
+    communication system. In the process of protecting the computer network communication,
+    it is necessary to apply the data encryption technology, improve the confidentiality
+    of data, and help to improve the security of network communication system.
+
+
+    B. factors affecting the security of computer network communication
+
+
+    I. Overview of computer network security
+
+
+    A. Features of computer network communication security
+
+
+    Computer network security refers to the use of effective network management and
+    technology control to ensure the efficiency and safety of network resources. The
+    main characteristic of computer network communication security is that the line
+    of communication of computer network has unsafe faces. In the process of communicating
+    information it is easy to ensure that information is intercepted and leaked. This
+    will lead to a threat to the security of computer network communication. The network
+    threat itself is omnipresent, which increases the difficulty of network communication
+    protection technology. The network communication security is is complex; the more
+    users in the network, the more difficult it will be to manage the users in the
+    whole network system. In the rapid development of internet technology and resource
+    sharing, there are more and more means to attack the network in present. With
+    the anonymity of the network itself, the crime will increase the network communication
+    security environment danger. In addition, network security itself is relative,
+    it cannot establish an absolute network security, nor can we use network technology
+    and technical measures to ensure the balance of computer network communication
+    system. In order to ensure the security of information in
+
+
+    Under the background of big data, the main factors affecting the security of computer
+    network communication are as follows: first, the influence of external disasters.
+    As more data external hardware devices are used in data storage although the equipment
+    has a certain ability to resist external attacks and other environmental changes,
+    the equipment is easy to be damaged, resulting in safety problems. In the case
+    of natural disasters, data may lose its property, resulting in the loss of important
+    data. Second, the reasons for the network itself. The Internet is open and diverse,
+    anyone can use certain way to connect. Information on the Internet is easily obtained
+    by other users, each user''s computer has certain ability to resist external attacks.
+    But because the network is open, anyone can use the Internet and various tools
+    to perform computer intrusion. On one hand, the open characteristics of the Internet
+    can promote and improve the efficiency of information transmission. On the other
+    hand, computer network security systems are also placed at the forefront. In the
+    future development of computer network communication security, we must pay attention
+    to the application of data encryption technology in order to protect information
+    security. Third, malicious attacks. In the process of Internet application, hackers
+    will attack all people'' computers and use viruses to invade other people computers.
+    These hackers are malicious and purposeful, stealing secrets or obtaining information.
+    Malicious attacks mainly includes the purposeful action of hackers, while the
+    passive victim is the victim''s computer to obtain themselves although. Such attacks
+    can cause the victim to suffer economic losses. In addition, hackers may use some
+    network viruses to hinder the normal operation of other computers, which will
+    have a great impact on the stability of computer network systems¹³).'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# II. Application Value of Data Encryption Technology in Computer Network Communication
+
+
+    In the era of big data, with the continuous development of computer network technology,
+    the development level of big data technology is getting higher and higher, especially
+    the amount of data produced in the process of computer network is very large.
+    To a certain extent, the formation and development of network technology is getting
+    faster and faster, and the concept of big data has been paid more and more attention.
+    Under the background of big data effectively, the information value in the network
+    will become more valuable, and with the increasing amount of data in the network
+    will become more prominent. Under the background of the interconnection of all
+    things, big data technology has attracted more useful information from the network
+    which contain many aspects of human society. In this context, there are many big
+    data related applications. The feature of computer network technology is that
+    the amount of information is relatively large, and the content of information
+    is mostly diverse, especially including language, pictures, video, sound, and
+    so on. This information involves a lot of content. In addition, the information
+    itself is complicated, it is difficult to process the information especially,
+    and it will be mixed with a large number of useless information. Therefore, the
+    need to mine the real application value of information is the main role that big
+    data technology must play in the application process. In the era of big data
+
+
+    data, the problem of information security in computer network communication is
+    important and lately that information is illegally stolen and leaked. The technical
+    requirements for information protection are getting higher and higher. In the
+    background of big data, we must pay attention to the full application of data
+    encryption technology and improve the security protection of computer network
+    communication as possible in order to ensure the security of information1
+
+
+    # III. Application Value of Data Encryption Technology in Computer Network Communication
+
+
+    Digital encryption technology can effectively solve the problem of information
+    leakage and the timely transmission of data. In the process of information transmission,
+    computer network communication is the main way that people exchange information,
+    its efficiency is relatively high, and it is widely used in the civil and military
+    fields. In order to to ensure the security of data application, data encryption
+    is necessary. The encryption technology is to use ciphertext mode setting to encrypt
+    important information. After the information is encrypted, the receiver performs
+    the information encryption decoding operation according to the decoding rules.
+    To obtain real data information, the security of information can be greatly improved.
+    If the information is leaked, there is no need to worry that the information content
+    is obtained by others, because the decoding rules limit, so that others cannot
+    crack the information content. Therefore, it can effectively improve the security
+    of computer network system.
+
+
+    ![](img/872042793bed939764c0a9f73204550c_1_0.png)
+
+
+    Figure 1 Basic Principles of Data Encryption
+
+
+    In the process of computer network communication security application, data encryption
+    technology needs to use certain algorithms. these algorithms mainly include the
+    following: first, DES algorithms. During the application of'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'data technology. DES operation method can generate 16 keys. In the cipher,
+    two digits 0 and 1 represent different meanings, and combinations will correspond
+    to the respective information, which is helpful to improve the effectiveness of
+    data encryption. In the application of DES, the iterative operation will be repeated,
+    which helps to prevent cracking of information and ensure the security of information.
+    RSA algorithm. During the application of RSA algorithm, some mathematical knowledge
+    is needed as the application of encryption is very good. In general, the quality
+    of coding and decoding process will be longer as the composite number is larger,
+    which leads to a strong security. In addition, the RSA algorithm needs to complete
+    the prime number selection in the application of data encryption which is generated
+    randomly, and then budget. This is the limited principle of RSA algorithm in the
+    process of application. If it cannot, the information cannot be transmitted. This
+    method can improve the security of data encryption¹
+
+
+    encryption technology used in most large network communication systems, which
+    can effectively protect the information transmission process. Because encryption
+    and cracking difficulty is high, can ensure the security of information. This
+    technology is mainly used in encryption method in practical application, these
+    have secure environment, even if the systems encounter some problems Encryption
+    modules that are not applied these problems can still properly ensure the integrity
+    and security of data. The application of end-to-end encryption, its coverage is
+    relatively small, and the overall ability to identify
+
+
+    # IV. Application of data encryption in network communication system
+
+
+    # A. Applied technology analysis
+
+
+    In the application of data encryption technology, different encryption can improve
+    the security of network communication. It is necessary to choose different encryption
+    methods according to security.
+
+
+    First, in the process of computer network communication, the application of data
+    encryption technology has led a large application and a wide range of applications.
+    In the application of link encryption, the network communication still needs to
+    be transmitted, and then the information. When the information is transmitted
+    at different nodes, the encrypted information still needs to be decrypted to improve
+    the effectiveness of information acquisition, link encryption mode will also encrypt
+    the information in the process of information transmission, and the query of information
+    is possible.
+
+
+    In computer network security, the application of data encryption technology is
+    shown in the field of computer application. In the process of rapid development
+    of computer technology, there are more and more types of communication software,
+    which greatly affect people''s daily life. However, some systems will use the
+    method of cracking to steal information from the software, which will pose a threat
+    to the security of the public and the network environment. In the current application
+    of data encryption technology, it is necessary to apply it to each of software
+    communication of the same type under specific conditions of software, to ensure
+    that there are differences in data encryption technology. Only then can we effectively
+    improve the security of network software users. In the application of LAN, LAN
+    is a type of computer network environment, where link encryption can effectively
+    protect the company''s information security and avoid the loss of the company''s
+    economic interests.
+
+
+    Second, in the process of practical application, there is a certain similarity
+    between node encryption and link encryption. Based on its operation process, the
+    information is encrypted once in the process of the application and at the same
+    time, the data information is encrypted twice. However, node encryption is more
+    practical. In addition, the display form is in plaintext, and the data information
+    is obtained by each module. Therefore, the difficulty of cracking is relatively
+    low than that of link encryption mode, and the security of encrypted files is
+    not high.
+
+
+    Third, the end-to-end encryption mode is the type of
+
+
+    # B. Conclusion
+
+
+    In a word, in the process of development of computer network communication technology,
+    the use of secure and effective encryption technology can ensure the security
+    of computer network communication to a great extent. With the development of information
+    technology, the field of computer communication is more and more, the security
+    requirement of information transmission is higher and higher. Therefore, we should
+    pay attention to the effective application of data encryption technology in computer
+    network communication security. And it is necessary to increase the research and
+    innovation of data encryption technology, according to the existing data'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'encryption technology, consider the specific application requirements of computer
+    network communication security and its reasonable and fast encryption scheme according
+    to the application object. It is beneficial to improve the positive role of data
+    encryption technology in the security of computer network communication. In addition,
+    we should strengthen the optimization of data encryption technology performance,
+    solve all kinds of information leakage problems, so as to create a good and safe
+    traffic environment[1].
+
+
+    # References:
+
+
+    [1] Gao Changhong. Application of Data Encryption in Computer Network: Communication
+    Security [J]. Research World of Communication,2018,05(02): 23-25.
+
+
+    [2] Xu Li. Application of Data Encryption in Computer Network Communication Security
+    [J]. Research Digital Communications World,2019,No.7(11): 22-25.
+
+
+    [3] Zhe Yong. Application of Data Encryption Technology in Computer Network Communication
+    Security [J]. Electronic Technology and Software Engineering,No.128(02): 236-2019.
+
+
+    [4] Wang Jun. Application of Data Encryption Technology in Computer Network Communication
+    Security [J]. China''s Strategic Emerging Information,2018(07):8-7.
+
+
+    [5] Ye Jinrong. Application of Data Encryption Technology in Computer Network
+    Communication Security [J]. Information and Communications,2018(06):70-71.'
+  merge: -1
+  img_proc: true
