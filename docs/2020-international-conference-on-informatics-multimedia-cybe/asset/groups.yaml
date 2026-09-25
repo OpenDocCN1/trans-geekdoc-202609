@@ -1,0 +1,1665 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Implementation and evaluation of blockchain based e-voting system with Ethereum
+    and Metaskam
+
+
+    Deni Pramulia
+
+    Faculty of Computer Science
+
+    Universitas Indonesia
+
+    Depok, Indonesia
+
+    Email deni.pramulia@ui.ac.id
+
+
+    Bayu Anggorojati
+
+    Faculty of Computer Science
+
+    Universitas Indonesia
+
+    Depok, Indonesia
+
+    Email bayu.anggorojati@cs.ui.ac.id
+
+
+    **Abstract—**The implementation of electronic voting (e-voting system) has been
+    widely applied in traditional electoral systems, still has a major problem in
+    the level of trust results. E-voting systems are very vulnerable to manipulation
+    attacks, such as changes in election results due to backdoors and hacking. In
+    a network result where data comes from one party having the right to store and
+    manage data stores, the issue of trust can be overcome by spreading data in a
+    system network. Blockchain is a distributed ledger, where every party in the network
+    has known anonymity which is very suitable for e-voting. This research proposed
+    a blockchain based e-voting system with Ethereum and smart contracts to ensure
+    the transparency of the election process.
+
+    of eligible voters counted and published by the commission of general election.
+    Similar approach may also be used in other traditional election. There are many
+    potential frauds in traditional methods such as fake national ID card, invalid
+    list of voters, ballot papers that are allowed to use by every candidate, and
+    the election of reputation.
+
+    E-voting system is implemented to improve many drawbacks in traditional voting
+    method. It refers to the adoption of technology that replaces the ballot system
+    to record the election results by counting online, offline or digital TV. The
+    internet e-voting clearly requires internet connection, non-internet voting may
+    use other electronic devices such as mobile phone, laptop or computer. The major
+    advantage of e-voting to traditional voting system is that it brings faster count,
+    process less load, and can prevent secret ballot papers, but there are still issues
+    to resolve the e-voting system.
+
+
+    *Index Terms—*Electronic voting, blockchain, smart contract, e-voting
+
+
+    # I. INTRODUCTION
+
+
+    According to ordinary definition, election is defined as the process of choosing
+    a person or group of people for a position, especially political position, by
+    voting. In general, public election system is used as a parameter of successful
+    democracy in nation scale, and even in a scale such as institution. A democratic
+    election has been widely implemented in many countries, including Indonesia, USA,
+    and Canada. In a smaller scale, an election has also been implemented in the election
+    of leader, or head of student in schools or universities.
+
+    The voting process in the election system may adopt many various methods, such
+    as the traditional one as well as the electronic voting (e-voting). A traditional
+    voting method is based on ballot paper and voting to collect all ballot papers.
+    In Indonesian general election, the voters are authenticated by their national
+    ID card and
+
+
+    > https://www.oxforddictionaries.com/definition/english/election
+
+
+    According to Cory [3], there are basic principles of an election system, secret
+    ballot, one man one voter, voting, votes accurately recorded and counted. In the
+    other hand, a secret ballot prevents vote buying and direct (indirect), or general,
+    free, confidential and fair, can also be applied to e-voting principles. Following
+    these principles, a correctly implemented e-voting system can improve ballot security,
+    speed up the counting of election results (it is more efficient and gain trust
+    in the process process [4].
+
+
+    Blockchain, as a technology that provides transparency in a transaction without
+    losing security, is to be the solution for existing issues in e-voting. Blockchain
+    is a distributed ledger, managed by nodes without centralized authority through
+    a distributed cryptographic graph. This shows that blockchain removes the need
+    of centralized third party to validate a transaction, just like removing bank
+    in money transfer. By eliminating a third party to validate a transaction, blockchain
+    provides key characteristics to maintain trust in a transaction, namely immutable
+    ledger, secure, shared and distributed [7]. With blockchain is a good solution
+    in e-voting'
+  - '[PAGE 1]
+
+
+    # 2020 International Conference on Informatics, Multimedia, and Information System
+    (ICIMCIS)
+
+
+    system due several advantages, such as high availability, integrity, correctness,
+    and verifiability [8]
+
+
+    In this paper, an Ethereum blockchain based e-voting system is proposed. Ethereum
+    is chosen because it is written in a Turing-complete language, unlike Bitcoin,
+    and supports smart contract [9]. Furthermore, it is supported by many communities,
+    including Ethereum test network that are freely available for experimental purpose.
+    However, with respect to the Ethereum blockchain, a Distributed Application (DApp)
+    for Ethereum is still challenging because it requires users to be able to manage
+    her own keys, which can be a burden for a novice user who only wants to vote.
+    To this end, a meta-transaction is needed. Meta-transaction is a middle layer
+    that relays a transaction between a user and the blockchain network. Metamask,
+    as for web browser, is used in the proposed e-voting system.
+
+
+    # II. PROPOSED SOLUTION
+
+
+    According to Cetkin [11], e-voting system involves three actors, namely voter,
+    registry authority (roa), and tallying authority (toa). Voter is someone who is
+    eligible to vote in an election. Registry authority is someone or organization
+    who is responsible to make sure that the registered voters give only one vote
+    in an election. Tallying Authority is someone or organization who collects the
+    ballots after the election. In our proposed e-voting system, both voter and registry
+    authority are represented by Ballot Manager and Voter sub-systems, respectively
+    tallying is performed automatically by the smart contract.
+
+
+    The proposed e-voting system uses smart contract and the availability of various
+    development tools. Our architecture consists of two systems, namely Ballot Manager
+    and Voter. Both communicate to the Ethereum network through Metamask, an Ethereum
+    meta-transaction implementation, in a form of browser add-on. Fig. 1 illustrates
+    the high level of the system architecture and its main draw flow.
+
+
+    # A. Ballot manager
+
+
+    Ballot manager plays the most important role in the proposed e-voting system.
+    It is responsible to deploy the smart contract into blockchain network, creating
+    voter proposal, adding voters, and starting the vote. The ballot manager needs
+    to perform all the tasks in the blockchain, as an Ethereum account in this case.
+    Despite its name, it does not store information about ballot to satisfy secret
+    ballot voter and voter address are stored in voting [3]. Only name works through
+    smart contract, while further information is implemented as private modifiers.
+    More discussion about this issue is carried out in section IV-C. Details of all
+    functionalities on ballot manager will be explained in the next sub-sections.
+
+
+    ![](img/a05e37a4c89afcf770c87ff41b49ac58_1_0.png)
+
+
+    +   1) Deploy smart contract: Deploying smart contract into the blockchain network
+    is necessary before any other actions. The smart contract involves all necessary
+    variables, data structures and functions, conditions that define how the e-voting
+    mechanism is to be. Brief implementation details of smart contract will be further
+    explained in section III.
+
+
+    +   2) Create voter proposal: Creating voter proposal activates the e-voting system
+    by the smart contract that has been deployed earlier. It is important to note
+    that the voter proposal can only be created by the ballot manager, the one who
+    deployed it by address. Hence, the identity is tied to address. A specific rule
+    is included in the smart contract: when the voter proposal is created, it will
+    be bound with the smart contract''s address.
+
+
+    +   3) Add voter: When the voter proposal is created, ballot manager can start
+    adding or registering voters to the system, which blockchain is similar to the
+    method used in every election voters are registered before they can give their
+    voting right. This process can be done by by adding voter one by one or all in
+    batch. The first option requires extra work for the ballot manager but it is easier
+    to estimate the gas fee to execute this transaction, which opposite applies for
+    voters. Adding voters is better for the ballot manager especially when there are
+    many numbers of voters, but it is difficult to estimate gas fee to execute transaction
+    involving loop.'
+  md: '
+
+    # Implementation and evaluation of blockchain based e-voting system with Ethereum
+    and Metaskam
+
+
+    Deni Pramulia
+
+    Faculty of Computer Science
+
+    Universitas Indonesia
+
+    Depok, Indonesia
+
+    Email deni.pramulia@ui.ac.id
+
+
+    Bayu Anggorojati
+
+    Faculty of Computer Science
+
+    Universitas Indonesia
+
+    Depok, Indonesia
+
+    Email bayu.anggorojati@cs.ui.ac.id
+
+
+    **Abstract—**The implementation of electronic voting (e-voting system) has been
+    widely applied in traditional electoral systems, still has a major problem in
+    the level of trust results. E-voting systems are very vulnerable to manipulation
+    attacks, such as changes in election results due to backdoors and hacking. In
+    a network result where data comes from one party having the right to store and
+    manage data stores, the issue of trust can be overcome by spreading data in a
+    system network. Blockchain is a distributed ledger, where every party in the network
+    has known anonymity which is very suitable for e-voting. This research proposed
+    a blockchain based e-voting system with Ethereum and smart contracts to ensure
+    the transparency of the election process.
+
+
+    of eligible voters counted and published by the commission of general election.
+    Similar approach may also be used in other traditional election. There are many
+    potential frauds in traditional methods such as fake national ID card, invalid
+    list of voters, ballot papers that are allowed to use by every candidate, and
+    the election of reputation.
+
+
+    E-voting system is implemented to improve many drawbacks in traditional voting
+    method. It refers to the adoption of technology that replaces the ballot system
+    to record the election results by counting online, offline or digital TV. The
+    internet e-voting clearly requires internet connection, non-internet voting may
+    use other electronic devices such as mobile phone, laptop or computer. The major
+    advantage of e-voting to traditional voting system is that it brings faster count,
+    process less load, and can prevent secret ballot papers, but there are still issues
+    to resolve the e-voting system.
+
+
+    *Index Terms—*Electronic voting, blockchain, smart contract, e-voting
+
+
+    # I. INTRODUCTION
+
+
+    According to ordinary definition, election is defined as the process of choosing
+    a person or group of people for a position, especially political position, by
+    voting. In general, public election system is used as a parameter of successful
+    democracy in nation scale, and even in a scale such as institution. A democratic
+    election has been widely implemented in many countries, including Indonesia, USA,
+    and Canada. In a smaller scale, an election has also been implemented in the election
+    of leader, or head of student in schools or universities.
+
+
+    The voting process in the election system may adopt many various methods, such
+    as the traditional one as well as the electronic voting (e-voting). A traditional
+    voting method is based on ballot paper and voting to collect all ballot papers.
+    In Indonesian general election, the voters are authenticated by their national
+    ID card and
+
+
+    > https://www.oxforddictionaries.com/definition/english/election
+
+
+    According to Cory [3], there are basic principles of an election system, secret
+    ballot, one man one voter, voting, votes accurately recorded and counted. In the
+    other hand, a secret ballot prevents vote buying and direct (indirect), or general,
+    free, confidential and fair, can also be applied to e-voting principles. Following
+    these principles, a correctly implemented e-voting system can improve ballot security,
+    speed up the counting of election results (it is more efficient and gain trust
+    in the process process [4].
+
+
+    Blockchain, as a technology that provides transparency in a transaction without
+    losing security, is to be the solution for existing issues in e-voting. Blockchain
+    is a distributed ledger, managed by nodes without centralized authority through
+    a distributed cryptographic graph. This shows that blockchain removes the need
+    of centralized third party to validate a transaction, just like removing bank
+    in money transfer. By eliminating a third party to validate a transaction, blockchain
+    provides key characteristics to maintain trust in a transaction, namely immutable
+    ledger, secure, shared and distributed [7]. With blockchain is a good solution
+    in e-voting
+
+
+    # 2020 International Conference on Informatics, Multimedia, and Information System
+    (ICIMCIS)
+
+
+    system due several advantages, such as high availability, integrity, correctness,
+    and verifiability [8]
+
+
+    In this paper, an Ethereum blockchain based e-voting system is proposed. Ethereum
+    is chosen because it is written in a Turing-complete language, unlike Bitcoin,
+    and supports smart contract [9]. Furthermore, it is supported by many communities,
+    including Ethereum test network that are freely available for experimental purpose.
+    However, with respect to the Ethereum blockchain, a Distributed Application (DApp)
+    for Ethereum is still challenging because it requires users to be able to manage
+    her own keys, which can be a burden for a novice user who only wants to vote.
+    To this end, a meta-transaction is needed. Meta-transaction is a middle layer
+    that relays a transaction between a user and the blockchain. Metamask, as for
+    browser, is used in the proposed e-voting system.
+
+
+    # II. PROPOSED SOLUTION
+
+
+    According to Cet [11], e-voting system involves three actors, namely voter, registry
+    authority (roa), and tallying authority (toa). Voter is someone who is eligible
+    to vote. Registry authority is someone or organization who make sure that the
+    registered voters give only one vote. Tallying Authority is someone or organization
+    who collects the ballots after the election. In our proposed e-voting system,
+    both voter and registry authority are represented by Ballot Manager and Voter,
+    respectively tallying is performed automatically by the smart contract. The proposed
+    e-voting system uses smart contract and the availability of various development
+    tools. Our architecture consists of two systems, namely Ballot Manager and Voter.
+    Both communicate to the Ethereum network through Metamask, an Ethereum meta-transaction,
+    in a form of browser. Fig. 1 illustrates the high level of the system architecture
+    and its main draw flow.
+
+
+    ## A. Ballot manager
+
+
+    Ballot manager plays the most important role in the proposed e-voting system.
+    It is responsible to deploy the smart contract into network, creating voter proposal,
+    adding voters, and starting the vote. The ballot manager needs to perform all
+    the tasks in the blockchain, as an Ethereum account in this case. Despite its
+    name, it does not store information about ballot to satisfy secret ballot voter
+    and voter address are stored in voting [3]. Only name works through smart contract,
+    while further information is implemented as private modifiers. More discussion
+    about this issue is carried out in section IV-C. Details of all functionalities
+    on ballot manager will be explained in the next sub-sections.
+
+
+    img/a05e37a4c89afcf770c87ff41b49ac58_1_0.png)
+
+
+    - **Deploy smart contract:**
+
+    Deploying smart contract into the blockchain network is necessary before any other
+    actions. The smart contract involves all necessary variables, data structures
+    and functions, conditions that define how the e-voting mechanism is to be. Brief
+    implementation details of smart contract will be further explained in section
+    III.
+
+
+    - **Create voter proposal:**
+
+    Creating voter proposal activates the e-voting system by the smart contract that
+    has been deployed earlier. It is important to note that the voter proposal can
+    only be created by the ballot manager, the one who deployed it by address. Hence,
+    the identity is tied to address. A specific rule is included in the smart contract:
+    when the voter proposal is created, it will be bound with the smart contract''s
+    address.
+
+
+    - **Add voter:**
+
+    When the voter proposal is created, ballot manager can start adding or registering
+    voters to the system, which blockchain is similar to the method used in every
+    election voters are registered before they can give their voting right. This process
+    can be done by by adding voter one by one or all in batch. The first option requires
+    extra work for the ballot manager but it is easier to estimate the gas fee to
+    execute this transaction, which opposite applies for voters. Adding voters is
+    better for the ballot manager especially when there are many numbers of voters,
+    but it is difficult to estimate gas fee to execute transaction involving loop.
+
+    '
+  mdcn: '
+
+
+    # 基于 Ethereum 和 Metamask 的电子投票系统实现与评估
+
+
+    Deni Pramulia
+
+    计算机科学系
+
+    印度尼西亚大学
+
+    Depok，印度尼西亚
+
+    Email deni.pramulia@ui.ac.id
+
+
+    Bayu Anggorojati
+
+    计算机科学系
+
+    印度尼西亚大学
+
+    Depok，印度尼西亚
+
+    Email bayu.anggorojati@cs.ui.ac.id
+
+
+    **摘要—**电子投票（e-voting系统）的实施已广泛应用于传统选举系统中，但在结果的可信度方面存在存在问题。电子投票系统非常容易受到操纵攻击，例如由于后门和黑客攻击导致的选举结果更改。在数据来自一方有权存储和管理数据存储的网络中，信任问题可以通过在系统网络中传播数据来克服。区块链是一种分布式账本，网络中的每个方都具有已知的匿名性，非常适合电子投票。本研究提出了一种基于以太坊和智能合约的电子投票系统，以确保选举过程的透明度。
+
+
+    由选举委员会统计并公布的合格选民人数。类似的方法也可用于其他传统选举。传统方法存在许多潜在的欺诈行为，例如伪造身份证、无效选民名单、允许每位候选人使用的选票以及选举声誉。
+
+
+    电子投票系统的实施是为了改进传统投票方法的许多缺点。它指的是采用技术来取代选票系统，通过在线、离线或数字电视计数来记录选举结果。互联网电子投票显然需要连接互联网，非互联网投票可以使用其他电子设备，如手机、笔记本电脑或电脑。电子投票相比于传统投票系统的主要优势是计票更快、处理负载更小，并且可以防止秘密投票纸，但电子投票系统仍有待解决的问题。
+
+
+    *术语—*电子投票，区块链，智能合约，电子投票
+
+
+    # I. 引言
+
+
+    根据普通定义，选举是指通过投票为某个人或一组人选择某个职位（特别是政治职位）的过程。通常，公共选举系统被视为国家规模民主成功的标准，甚至适用于机构等规模。民主选举已在许多国家实施，包括印度尼西亚、美国和加拿大。在较小的规模上，选举也出现在学校或大学领袖或学生领选举中。
+
+
+    选举系统中的投票过程可以采用许多不同的方法，例如传统方法以及电子投票（e-voting）。传统投票方法基于选票纸并通过投票收集所有选票。在印度尼西亚大选中，选民通过其身份证进行身份验证并
+
+
+    > https://www.oxforddictionaries.com/definition/english/election
+
+
+    根据 Cory [3] 的观点，选举系统具有基本原则：秘密投票、一人一票、投票、投票准确记录和计数。另一方面，秘密投票可以防止买票，而直接（间接）、或通用的、自由、保密和公平的原则也可以适用于电子投票原则。遵循这些原则，实施良好的电子投票系统可以提高选票安全性，加快选举结果的统计（它更高效并能赢得过程中的信任
+    [4]）。
+
+
+    区块链作为一种在不丢失安全性的情况下提供交易透明度的技术，是解决电子投票现有问题的解决方案。区块链是一种分布式账本，通过分布式加密图由没有中心化权威的节点管理。这表明区块链消除了对中心化第三方验证交易的需求，就像消除了货币转账中的银行一样。通过消除第三方验证交易，区块链提供了维护交易信任的关键特性，即不可篡改的账本、安全、共享和分布式
+    [7]。由于以下若干优势，区块链是电子投票的良好解决方案，例如高可用性、完整性、正确性和可验证性 [8]。
+
+
+    在本文中提出了一种基于以太坊区块链的电子投票系统。选择以太坊是因为它是用图灵完语言编写的（与比特币不同），并支持智能合约 [9]。此外，它受到许多社区的支持，包括供实验目的免费使用的以太坊测试网络。然而，对于以太坊区块链而言，以太坊的分布式应用程序（DApp）仍然具有挑战性，因为它要求用户能够管理自己的密钥，这对于只想投票的新手用户来说可能是一种负担。为此，需要元交易（meta-transaction）。元交易是用户和区块链之间中继交易的中间层。Metamask
+    作为浏览器被用在所提的电子投票系统中。
+
+
+    # II. 提出的解决方案
+
+
+    根据 Cet [11] 的观点，电子投票系统涉及三个参与者，即选民、注册机构（roa）和计票机构（toa）。选民是有权投票的人。注册机构是确保注册选民只投一票的人或组织。计票机构是选举后收集选票的人或组织。在我们提的电子投票系统中，选民和注册机构都分别由选票管理器（Ballot
+    Manager）和选民（Voter）代表，计票由智能合约自动执行。所提出的电子投票系统使用了智能合约和各种开发工具的可用性。我们的架构由两个系统组成，即选票管理器和选民。两者都通过浏览器形式的
+    Metamask 以太坊元交易以太坊网络通信。图1说明了系统架构的高层及其主要数据流。
+
+
+    ## A. 选票管理器 (Ballot manager)
+
+
+    选票管理器在提出的电子投票系统中起着最重要的作用。它负责将智能合约部署到网络中、创建选民提议、添加选民并开始投票。选票管理器需要以以太坊账户的形式在区块链中执行所有任务。尽管名称如此，但它并不存储有关选票的信息，以满足秘密投票，且选民地址被存储在投票过程中
+    [3]。只有名称通过智能合约运行，而进一步的信息作为私有修饰符实现。关于此问题的更多讨论将在 IV-C 节进行。选票管理器上所有功能的细节将在后续子节中解释。
+
+
+    img/a05e37a4c89afcf770c87ff41b49ac58_1_0.png)
+
+
+    - **部署智能合约：**
+
+    在进行任何其他操作之前，必须将智能合约部署到区块链网络中。智能合约涉及所有必要的变量、数据结构、函数以及定义了电子投票机制如何工作的条件。智能合约的简要实现细节将在
+    III 节进一步解释。
+
+
+    - **创建选民提议：**
+
+    通过早先部署的智能合约激活电子投票系统。需要注意的是，选民提议只能由选票管理器（即通过地址部署合约的人）创建。因此，身份与地址绑定。智能合约中包含一条特定规则：当创建选民提议时，它将与智能合约地址绑定。
+
+
+    - **添加选民：**
+
+    当选民提议创建后，选票管理器可以开始向系统添加或注册选民，这类似于每次选举中使用的方法，选民在行使投票权之前必须注册。此过程可以通过逐个添加选民或批量添加完成。第一种方案需要选票管理器承担额外工作，但更容易估计执行此交易的燃气费用（gas
+    fee），对于选民来说则相反。添加选民对选票管理器更好，特别是当选民人数很多时，但很难估计涉及循环的交易燃气费用。
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    # 2020 International Conference on Informatics, Multimedia, Cyber and Information
+    System (ICIMCIS)
+
+
+    4) Start voting and ending: The voting period is between the time when start voting
+    and ending transactions are stored in the blockchain sequential order. During
+    this period, the voter can use their voting right by sending their vote to the
+    blockchain. The smart contract includes a voting status indicator to allow a voter
+    in giving her.
+
+
+    The smart contract consists of two data structures that are used to store the
+    voter''s name and a voter''s choice respectively. It also includes a enum structure
+    to indicate voting status, created, voted and ended. Furthermore, the proposal
+    is created (see II-A). Finally, it lists the functions implemented in it, including
+    the rules that governs all transactions in the e-voting system, only allows voters
+    to vote between the start and end of voting period. Due to space limitation, the
+    detail of smart contract can be retrieved from the Router Ethereum address as
+    shown in Fig. 2 or 3.
+
+
+    # B. Voter
+
+
+    In general a any anyone who has used an Ethereum account. However, a voter must
+    be registered by the ballot manager to be able to vote using her right in the
+    e-voting system, as explained previously. Registering a voter means that her address
+    is registered to the proposal defined in the smart contract.
+
+
+    During the voting period, a voter can give her vote means sending a transaction
+    to the smart contract address as well as her choice or to the blockchain network.
+
+
+    Both ballot and voter DApps are implemented as simple web applications in Javascript.
+    A Javascript library is employed to simplify the interaction of both DApps with
+    Ethereum. The between web3 powered DApp and smart contract is possible through
+    API which is in JSON format. The execution of smart contract is done by Ethereum
+    Virtual Machine (EVM).
+
+
+    During the voting period, a voter can give her vote means sending a transaction
+    to the smart contract address as well as her choice or to the blockchain network.
+
+
+    Any voter who already voted is not able to vote once, to satisfy the man one vote
+    proposal. Therefore specific identifier is required to indicate whether a registered
+    address has voted or not. Furthermore, votes from all registered voters during
+    this period are accumulated and to get the final result.
+
+
+    # B. Ballot manager and Voter DApps
+
+
+    # C. Metamask
+
+
+    The proposed solution also includes a meta-transaction component as Metamask².
+    As metamask meta-transaction implementation, provides convenience for both users
+    and developers. However, it hides the complexity of interacting with Ethereum,
+    such as creating an account, manage key and wallet. Likewise, the developer only
+    needs to interact with the globally available Ethereum Application Programming
+    Interface (API). On top of that, a DApp can start the connection to Ethereum network
+    without synchronizing a full node, as through Ethereum node, such as Infura¹
+
+
+    # III. PROTOTYPE IMPLEMENTATION
+
+
+    # A. Smart contract
+
+
+    The smart contract is written in Solidity language⁴ and then the code is compiled
+    into bytecode and Application Binary Interface (ABI) using Remix Integrated Development
+    Environment (IDE)⁵. The bytecode version is then deployed into the Ethereum blockchain
+    network, while ABI is used by the DApp to interact with the smart contract. The
+    Rosten Ethereum test network⁶ is used to deploy the smart contract as well as
+    to execute all the transactions done by our e-voting prototype system.
+
+
+    For testing purpose, a simple example of yes or no proposal is implemented in
+    the smart contract of the e-voting prototype.
+
+
+    > ¹https://metamask.org/
+
+    ²https://infura.org/
+
+    ³https://github.com/ethereum/solidity
+
+    ⁴https://remix.ethereum.org/
+
+    ⁵https://ropsten.etherscan.io/
+
+
+    ![](img/a05e37a4c89afcf770c87ff41b49ac58_2_0.png)
+
+
+    Fig. 2. Ballot manager user interface
+
+
+    ![](img/a05e37a4c89afcf770c87ff41b49ac58_2_1.png)
+
+
+    Fig. 3. Voter user interface
+
+
+    > ⁶https://github.com/ethereum/web3.js
+
+
+    Authorized licensed use limited to: University of California Santa Barbara. Download
+    on 16 June 2021 at 04:41:03 UTC by IEEE X. Restrictions apply.'
+  - '[PAGE 3]
+
+
+    # 2020 International Conference on Informatics, Multimedia, and Information System
+    (ICIMCIS)
+
+
+    The graphical interface (GUI) of manager and voter Dappers are shown in Fig. 2
+    and 3 respectively. Note that the GUI, presented in the figures show the complete
+    User Interface (UI) components, e.g., panels, buttons, list, etc. After the login,
+    both manager and voter Dappers show the upper menu, while the others are hidden.
+    As a prototype, the Dappers are implemented as HTML pages with HTTPS and user
+    account access to the web interface, as the account is directly connected to the
+    blockchain. Finally, both Dapper are deployed via the URL, which is http://voting.azurewebsites.net/dapper/index.html
+    and http://voting.azurewebsites.net/dapper/vote.html).
+
+
+    eligibility and votes accurately, recorded and counted princes in voting are satisfied
+    which are indicated by the 4th and 6th test cases, respectively. Note that in
+    the sixth test case, the results are observed in the manager Dapper.
+
+
+    # TABLE II
+
+    LIST OF TEST CASES FOR VOTER DAPP
+
+
+    | No. | Test case | Expected result | Result |
+
+    |---|---|---|---|
+
+    | 1 | Start voting process | Voting''s status appears in the Contract details
+    that the voters give voting options are produced | Pass |
+
+    | 2 | Unregistered voter | Option to vote given, thus not available | Pass |
+
+    | 3 | Registered voter vote | Voted status appears and No option to vote anymore
+    to vote | Pass |
+
+    | 4 | Voting process | "Ended" status appears in the Contract details | Pass |
+
+
+    # IV. EVALUATION AND ANALYSIS
+
+
+    # A. Functional test
+
+
+    The functional test is conducted to verify the blockchain based e voting system
+    as intended. It consists of two portions to which two actors are involved in the
+    system, by the manager and voter.
+
+
+    # TABLE I
+
+    LIST OF TEST CASES FOR MANAGER DAPP
+
+
+    | No. | Test case | Expected result | Result |
+
+    |---|---|---|---|
+
+    | 1 | Deploy smart contract | Remix''s error checks confirms there is no error
+    in smart contract MetaMask confirmation to send | Pass |
+
+    | 2 | Dapper connects to Ethereum network | Metamask permission to allow Damask
+    account connected to Ethereum | Pass |
+
+    | 3 | Create voting proposal | DApp is connected to Metamask and the address corresponds
+    to the deployed smart contract | Pass |
+
+    | 4 | Add to the eligible voter list | The address is added to the voter list
+    along with other details | Pass |
+
+    | 5 | Start voting | The status of proposal is changed to voting. The Start Voting
+    is changed to End Voting | Pass |
+
+    | 6 | Voter give vote | Votes in voting pool are counted. Voter''s status is changed
+    to voted | Pass |
+
+    | 7 | End voting | End voting disappears. Vote count does not change anymore |
+    Pass |
+
+
+    At the Voter Dapper, the actual functions can be executed by voters, and thus
+    then the voting is performed by the ballot manager. The test cases shown in Table
+    II are based on assumption. Before the voting is started by manager, a voter can
+    only go to the voting test address in Ethereum. Table II lists all functional
+    test cases with the functionalities related to voting system. It can be concluded
+    that the blockchain functions successfully, the test case when an unregistered
+    user makes an attempt to vote then one voter can obtain the voting status''s proposal.
+    Moreover, one manager may see "no option to vote" result in the 3rd test case.
+
+
+    As a final note, history of the smart contract used in this research can be traced
+    through blockchain by searching the contract''s address. The transaction history
+    involves manager and voter, which is used to increase the transparency of the
+    voting process, and serve as monitoring and audit trail, in case of any user attempting
+    to abuse the system.
+
+
+    # B. Performance evaluation
+
+
+    Performance evaluation is focused on the execution time for the e-voting system
+    until the unit is confirmed or verified in the blockchain network. On top of that,
+    gas price options are provided in Metamask, i.e. fast, medium and slow. The fast
+    gas price demands the most expensive gas price than the other options, but it
+    is faster. "Executed" means enough, although the estimated time is not always.
+    It is important to note that proposed e-voting smart contract is deployed in a
+    public Ethereum Rsten test network, the performance
+
+
+    First part of the functional test includes all functionalities related to the
+    manager, and it is not strictly bounded to the manager Dapper App. For instance,
+    smart contract is deployed through Remix IDE. Complete list of test cases related
+    to manager along with the results displayed in Table I. The test results show
+    that all functions are related to ballot manager. Moreover, the voter'
+  md: '
+
+    # 2020 International Conference on Informatics, Multimedia, Cyber and Information
+    System (ICIMCIS)
+
+
+    4) Start voting and ending: The voting period is between the time when start voting
+    and ending transactions are stored in the blockchain sequential order. During
+    this period, the voter can use their voting right by sending their vote to the
+    blockchain. The smart contract includes a voting status indicator to allow a voter
+    in giving her.
+
+
+    The smart contract consists of two data structures that are used to store the
+    voter''s name and a voter''s choice respectively. It also includes a enum structure
+    to indicate voting status, created, voted and ended. Furthermore, the proposal
+    is created (see II-A). Finally, it lists the functions implemented in it, including
+    the rules that governs all transactions in the e-voting system, only allows voters
+    to vote between the start and end of voting period. Due to space limitation, the
+    detail of smart contract can be retrieved from the Router Ethereum address as
+    shown in Fig. 2 or 3.
+
+
+    ## B. Voter
+
+
+    In general any anyone who has used an Ethereum account. However, a voter must
+    be registered by the ballot manager to be able to vote using her right in the
+    e-voting system, as explained previously. Registering a voter means that her address
+    is registered to the proposal defined in the smart contract.
+
+
+    During the voting period, a voter can give her vote means sending a transaction
+    to the smart contract address as well as her choice or to the blockchain network.
+
+
+    Both ballot and voter DApps are implemented as simple web applications in Javascript.
+    A Javascript library is employed to simplify the interaction of both DApps with
+    Ethereum. The between web3 powered DApp and smart contract is possible through
+    API which is in JSON format. The execution of smart contract is done by Ethereum
+    Virtual Machine (EVM).
+
+
+    Any voter who already voted is not able to vote once, to satisfy the man one vote
+    proposal. Therefore specific identifier is required to indicate whether a registered
+    address has voted or not. Furthermore, votes from all registered voters during
+    this period are accumulated and to get the final result.
+
+
+    ## B. Ballot manager and Voter DApps
+
+
+    ## C. Metamask
+
+
+    The proposed solution also includes a meta-transaction component as Metamask².
+    As metamask meta-transaction implementation, provides convenience for both users
+    and developers. However, it hides the complexity of interacting with Ethereum,
+    such as creating an account, manage key and wallet. Likewise, the developer only
+    needs to interact with the globally available Ethereum Application Programming
+    Interface (API). On top of that, a DApp can start the connection to Ethereum network
+    without synchronizing a full node, as through Ethereum node, such as Infura¹
+
+
+    ## III. PROTOTYPE IMPLEMENTATION
+
+
+    ## A. Smart contract
+
+
+    The smart contract is written in Solidity language⁴ and then the code is compiled
+    into bytecode and Application Binary Interface (ABI) using Remix Integrated Development
+    Environment (IDE)⁵. The bytecode version is then deployed into the Ethereum blockchain
+    network, while ABI is used by the DApp to interact with the smart contract. The
+    Rosten Ethereum test network⁶ is used to deploy the smart contract as well as
+    to execute all the transactions done by our e-voting prototype system.
+
+
+    For testing purpose, a simple example of yes or no proposal is implemented in
+    the smart contract of the e-voting prototype.
+
+
+    > ¹https://metamask.org/
+
+    ²https://infura.org/
+
+    ³https://github.com/ethereum/solidity
+
+    ⁴https://remix.ethereum.org/
+
+    ⁵https://ropsten.etherscan.io/
+
+
+    ![](img/a05e37a4c89afcf770c87ff41b49ac58_2_0.png)
+
+
+    Fig. 2. Ballot manager user interface
+
+
+    ![](img/a05e37a4c89afcf770c87ff41b49ac58_2_1.png)
+
+
+    Fig. 3. Voter user interface
+
+
+    > ⁶https://github.com/ethereum/web3.js
+
+
+    The graphical interface (GUI) of manager and voter Dappers are shown in Fig. 2
+    and 3 respectively. Note that the GUI, presented in the figures show the complete
+    User Interface (UI) components, e.g., panels, buttons, list, etc. After the login,
+    both manager and voter Dappers show the upper menu, while the others are hidden.
+    As a prototype, the Dappers are implemented as HTML pages with HTTPS and user
+    account access to the web interface, as the account is directly connected to the
+    blockchain. Finally, both Dapper are deployed via the URL, which is http://voting.azurewebsites.net/dapper/index.html
+    and http://voting.azurewebsites.net/dapper/vote.html).
+
+
+    eligibility and votes accurately, recorded and counted princes in voting are satisfied
+    which are indicated by the 4th and 6th test cases, respectively. Note that in
+    the sixth test case, the results are observed in the manager Dapper.
+
+
+    ## TABLE II
+
+    LIST OF TEST CASES FOR VOTER DAPP
+
+
+    | No. | Test case | Expected result | Result |
+
+    |---|---|---|---|
+
+    | 1 | Start voting process | Voting''s status appears in the Contract details
+    that the voters give voting options are produced | Pass |
+
+    | 2 | Unregistered voter | Option to vote given, thus not available | Pass |
+
+    | 3 | Registered voter vote | Voted status appears and No option to vote | Pass
+    |
+
+    | 4 | Voting process | "Ended" status appears in the Contract details | Pass |
+
+
+    ## IV. EVALUATION AND ANALYSIS
+
+
+    ### A. Functional test
+
+
+    The functional test is conducted to verify the blockchain based voting system
+    as intended. It consists of two actors which are involved in the system, the manager
+    and voter. At the Dapper, the actual functions can be executed by voters, and
+    thus the voting is performed by the ballot manager. The test cases shown in Table
+    II are based on assumption. It can be concluded that the blockchain functions
+    successfully, the test case when an unregistered user makes an attempt to vote
+    then one voter can obtain the voting status''s proposal. Moreover, one
+
+
+    ## TABLE I
+
+    LIST OF TEST CASES FOR MANAGER
+
+
+    | No. | Test case | Expected result | Result |
+
+    |---|---|---|---|
+
+    | 1 | Deploy smart contract | Metamask confirms there is no error | Pass |
+
+    | 2 | DApp connects to Ethereum network | Metamask account connected to Ethereum
+    | Pass |
+
+    | 3 | Create voting proposal | The address corresponds to smart contract | Pass
+    |
+
+    | 4 | Add to eligible list | The address is added to voter list | Pass |
+
+    | 5 | Start voting | The status of proposal is changed to voting | Pass |
+
+    | 6 | Voter give vote | Votes in voting pool are counted. Voter''s status is changed
+    to voted | Pass |
+
+    | 7 | End voting | End voting disappears. Vote count does not change | Pass |
+
+
+    ### B. Performance evaluation
+
+
+    Performance evaluation is focused on the execution time for the e-voting system
+    until the unit is confirmed or verified in the blockchain network. On top of that,
+    gas price options are provided in Metamask, i.e. fast, medium and slow. The fast
+    gas price demands the most expensive gas price than the other options, but it
+    is faster. "Executed" means enough, although the estimated time is not always.
+
+    '
+  mdcn: '
+
+
+    # 2020年信息、多媒体、网络与信息系统国际会议 (ICIMCIS)
+
+
+    4) 开始投票与结束：投票期介于开始投票和结束交易存储在区块链顺序中的时间点之间。在此期间，选民可以通过向区块链发送选票来行使他们的投票权。智能合约包含一个投票状态指示器，允许选民进行投票。
+
+
+    该智能合约由两个数据结构组成，分别用于存储选民名称和选民选择。它还包含一个枚举（enum）结构，用于指示投票状态：已创建（created）、已投票（voted）和已结束（ended）。此外，提案已创建（参见
+    II-A）。最后，它列出了其中实现的函数，包括管理电子投票系统中所有交易的规则，即仅允许选民在投票期的开始和结束之间投票。由于空间限制，智能合约的细节可以通过
+    Router Ethereum 地址获取，如图 2 或图 3 所示。
+
+
+    ## B. 选民
+
+
+    通常情况下，任何使用过以太账户的人都可以成为选民。然而，如前所述，选民必须由选票管理器（ballot manager）注册，才能在电子投票系统中行使投票权。注册选民意味着其地址被注册到智能合约定义的提案中。
+
+
+    在投票期间，选民行使投票权意味着向智能合约地址发送交易以及将其选择发送到区块链网络。
+
+
+    选票（ballot）和选民 DApps 均使用 Javascript 实现为简单的 Web 应用。采用了一种 Javascript 库来简化两个 DApp
+    与以太坊的交互。基于 web3 驱动的 DApp 与智能合约之间的交互可以通过 JSON 格式的 API 实现。智能合约的执行由以太坊虚拟机（EVM）完成。
+
+
+    任何已经投过票的选民无法再次投票，以满足“一人一票”的提案。因此，需要特定的标识符来指示注册地址是否已经投票。此外，在此期间所有已注册选民的投票会被累加，以获得最终结果。
+
+
+    ## B. 选票管理器与选民 DApps
+
+
+    ## C. Metamask
+
+
+    所提出的解决方案还包含一个作为 Metamask² 的元交易（meta-transaction）组件。作为 metamask 的元交易实现，它为用户和开发者提供了便利。然而，它隐藏了与以太坊交互的复杂性，例如创建账户、管理密钥和钱包。同样，开发者仅需与全局可用的以太坊应用程序接口（API）交互。此外，DApp
+    可以在不同步全节点的情况下启动与以太坊网络的连接，例如通过 Infura¹ 。
+
+
+    ## III. 原型实现
+
+
+    ## A. 智能合约
+
+
+    智能合约用 Solidity 语言⁴编写，然后使用 Remix 集成开发环境（IDE）⁵ 将代码编译为字节码和应用程序二进制接口（ABI）。字节码版本随后部署到以太坊区块链网络，而
+    ABI 用于 DApp 与智能合约交互。使用 Rosten 以太坊测试网络⁶ 来部署智能合约，并执行我们电子投票原型系统完成的所有交易。
+
+
+    为了测试目的，电子投票原型系统的智能合约中实现了一个简单的“是否”提案示例。
+
+
+    > ¹https://metamask.org/
+
+    ²https://infura.org/
+
+    ³https://github.com/ethereum/solidity
+
+    ⁴https://remix.ethereum.org/
+
+    ⁵https://ropsten.etherscan.io/
+
+
+    ![](img/a05e37a4c89afcf770c87ff41b49ac58_2_0.png)
+
+
+    图 2. 选票管理器用户界面
+
+
+    ![](img/a05e37a4c89afcf770c87ff41b49ac58_2_1.png)
+
+
+    图 3. 选民用户界面
+
+
+    > ⁶https://github.com/ethereum/web3.js
+
+
+    管理器和选民 Dapper 的图形界面（GUI）分别如图 2 和 3 所示。注意，图中显示的 GUI 展示了完整的用户界面（UI）组件，例如面板、按钮、列表等。登录后，管理器和选民
+    Dapper 都会显示顶部菜单，而其他部分会被隐藏。作为一个原型，Dapper 实现为 HTML 页面，并带有 HTTPS 和用户账户访问 Web 界面，因为账户直接连接到区块链。最后，两个
+    Dapper 都通过 URL 部署（即 http://voting.azurewebsites.net/dapper/index.html 和 http://voting.azurewebsites.net/dapper/vote.html）。
+
+
+    确保了资格和投票的准确性、记录和计数，投票中的原则得到了满足，这些分别由第 4 个和第 6 个测试用例指示。注意，在第 6 个测试用例中，结果在管理器 Dapper
+    中观察到。
+
+
+    ## 表 II
+
+    选民 DAPP 测试用例列表
+
+
+    | 编号 | 测试用例 | 预期结果 | 结果 |
+
+    |---|---|---|---|
+
+    | 1 | 开始投票过程 | 合约详情中出现投票状态，并产生选民提供的投票选项 | 通过 | |
+
+    | 2 | 未注册的选民 | 给出了投票选项，因此不可用 | 通过 | |
+
+    | 3 | 已注册选民投票 | 显示“已投票”状态且没有投票选项 | 通过 | |
+
+    | 4 | 投票过程 | 合约详情中出现“已结束”状态 | 通过 | |
+
+
+    ## IV. 评估与分析
+
+
+    ### A. 功能测试
+
+
+    进行功能测试是为了验证基于区块链的投票系统按预期运行。它包含参与系统的两个角色：管理器和选民。在 Dapper 上，选民可以执行实际函数，因此投票由选票管理器执行。表
+    II 所示的测试用例基于假设。可以得出区块链功能运行成功，当未注册用户尝试投票时（测试用例），选民可以获得投票状态提案。此外，一个
+
+
+    ## 表 I
+
+    管理器测试用例列表
+
+
+    | 编号 | 测试用例 | 预期结果 | 结果 |
+
+    |---|---|---|---|
+
+    | 1 | 部署智能合约 | Metamask 确认无错误 | 通过 |
+
+    | 2 | DApp 连接到以太坊网络 | Metamask 账户已连接到以太坊 | 通过 |
+
+    | 3 | 创建投票提案 | 地址与智能合约对应 | 通过 |
+
+    | 4 | 添加到合格列表 | 地址已添加到选民列表 | 通过 |
+
+    | 5 | 开始投票 | 提案状态变为“投票中” | 通过 |
+
+    | 6 | 选民投票 | 投票池中的选票已计数。选民状态变为“已投票” | 通过 |
+
+    | 7 | 结束投票 | 结束投票消失。票数不变 | 通过 |
+
+
+    ### B. 性能评估
+
+
+    性能评估侧重于电子投票系统直到单元在区块链网络中确认或验证所需的执行时间。此外，Metamask 提供了 Gas 费用选项，即：快速、中等和慢速。快速 Gas
+    费用比其他选项更昂贵，但速度更快。“已执行”意味着足够，尽管预估时间并不总是准确。
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 4]
+
+
+    # 2020 International Conference on Multimedia, Cybersecurity and Cyber Engineering
+    (ICIMCIS)
+
+
+    # TABLE III
+
+    TRANSACTIONS COST AND E-VOTING SYSTEM FOR DIFFERENT GAS PRICES IN METAMASK
+
+
+    | User | Transaction | Gas price | Est | Actual time | Gas price | Medium | Actual
+    time | Gas price | Slow Ext | Actual time |
+
+    |---|---|---|---|---|---|---|---|---|---||}{
+
+    | Create ballot | Ballot | 0.000832 | 20 | 30 sec | 0.004416 | 168 | 18 sec |
+    0.008833 | 312 | 35 sec |
+
+    | Add voter | Add voter | 0.010387 | 24 | 47 sec | 0.000625 | 126 | 43 sec | 0.001309
+    | 558 | 59 sec |
+
+    | Add manager | Add manager | 0.000817 | 24 | 47 sec | 0.002049 | 222 | 52 sec
+    | 0.000872 | 648 | 49 sec |
+
+    | Delete voter | Delete voter | 0.000168 | 24 | 47 sec | 0.000195 | 216 | 23 sec
+    | 0.001638 | 600 | 53 sec |
+
+    | Start voting | Start voting | 0.000627 | 24 | 41 sec | 0.000402 | 120 | 80 sec
+    | 0.000627 | 660 | 53 sec |
+
+    | Vote 1 | Vote 1 | 0.001095 | 36 | 35 sec | 0.000218 | 193 | 26 sec | 0.001638
+    | 690 | 52 sec |
+
+    | Vote 2 | Vote 2 | 0.001114 | 36 | 37 sec | 0.000516 | 258 | 29 sec | 0.001213
+    | 706 | 52 sec |
+
+    | Vote 3 | Vote 3 | 0.001114 | 24 | 21 sec | 0.000664 | 234 | 20 sec | 0.000123
+    | 516 | 47 sec |
+
+    | Ballot manager | Ballot ending | 0.000175 | 27 | 34 sec | 0.000326 | 198 | 42
+    sec | 0.000078 | 642 | 23 sec |
+
+    | Total | | 0.003015 | 172 | 315 sec | 0.001864 | 1866 | 308 sec | 0.005301 |
+    5274 | 395 sec |
+
+
+    evaluation results do not include any resourceful from our side.
+
+    The overall performance evaluation of the election system is listed in Table III.
+    According to the results, the actual time always go the estimated time, especially
+    in the medium and low gas prices when the actual time is faster than the estimated
+    time. Interestingly, as opposed to the medium and low gas prices, the actual time
+    is slower than the estimated time in the high gas price scenario. The difference
+    in the total sum of time does not differ significantly with the difference in
+    total sum of gas price for each gas price is quite significant. In all, evaluation
+    results show that all transactions are successfully executed no matter how much
+    they take. It shows that the reliability in voting is satisfied [3].
+
+
+    it may go when the volume in the network is
+
+    out of three security aspects as CIA (confidentiality, integrity, and availability),
+    blockchain voting system ensures the integrity and legality.
+
+    The integrity lies in the immutable characteristic of blockchain, record recorded
+    in the blockchain cannot be changed. Meanwhile, the availability can be ensured
+    through the distributed and public Ethereum network voting. For the confidentiality
+    of the information recorded in the blockchain, it heavily depends on the smart
+    contract.
+
+    One way to prevent the vote of being from being exposed
+
+
+    # TABLE IV
+
+    GAS PRICE PER TRANSACTION FOR ALL TRANSACTIONS IN DIFFERENT
+
+    GAS PRICE OPTIONS
+
+
+    | Transaction | Gas price per second |
+
+    |---|---||
+
+    | Deploy contract | 0.000252433 | 9.23266e-05 |
+
+    | Create ballot | 0.000321715 | 6.00004e-05 |
+
+    | Add voter | 0.002170482 | 1.62721e-04 |
+
+    | Add manager | 0.003917903 | 5.44606e-05 |
+
+    | Delete voter | 0.00135333 | 1.13611e-05 |
+
+    | Start voting | 0.00062744 | 4.94411e-05 |
+
+    | Vote 1 | 0.001009538 | 2.80011e-05 |
+
+    | Vote 2 | 0.000140009 | 9.9999e-06 |
+
+    | Vote 3 | 0.00111411 | 1.11111e-05 |
+
+    | Ballot manager | 0.020949526 | 3.19999e-05 |
+
+
+    Taking the gas price per transaction for each gas price scenario, it can be seen
+    in Table IV that the gas price per second in the slow gas price scenario is the
+    lowest among the three. From finding this, it can be concluded that low gas price
+    gives the best tradeoff between the gas price and transaction time. Nevertheless,
+    the experiment results, highly dependent on the Ethereum network being used, in
+    which gas price may go high when the volume in the network is high, while
+
+
+    by using access price type for that carries information. However, having access
+    price type does not fully prevent other party from filtering the user''s vote
+    information. The following steps are taken to control the transaction content
+    of the voting system:
+
+    1. Trace the voting in Ethereum network: every vote can trace any transaction
+    in any public Ethereum network through Etherscan. As mentioned, voting system
+    is deployed in robust test network, and thus, one transaction can be traced by
+    any voter by the voter''s address.
+
+    2. Analyze the vote function by smart contract voter votes during the voting period,
+    there is an interaction between the DApp and the smart contract which has been
+    implemented in an ABI form and the blockchain network. One is thing to capture
+    the transaction sent by a voter and its content, another thing is to know what
+    smart contract is executed in that transaction. Those two information is important
+    in figuring out the voter''s in a transaction because every transaction is sent
+    in a hashed record. In principle, since every transaction is visible to all nodes,
+    one could provide relative results if the transaction is known.'
+  - '[PAGE 5]
+
+
+    To get the exact function used by a voter,
+
+    one needs to get the ABI by decompile the smart contract
+
+    bytecode from Ethereum, assuming that one has no
+
+    source code. By using decompilation methods
+
+    extract the information in the bytecode and transform
+
+    nit into a human-readable format by the EVM.
+
+    As a result of ABI decompilation has high similarity
+
+    with the ABI obtained. The most important thing
+
+    is that one knows how to give a vote (i.
+
+    davoote(bool)). On a side note, bytecode decompilation
+
+    isnot easily deployed and published. In such a case, a smart
+
+    source code could be publicly available for any Ethereum user.
+
+
+    Read the transaction data sent by a voter: One
+
+    have access to it by looking at the transaction by
+
+    transaction hash. The transaction contains information
+
+    hash, transaction status, sender and receiver''s
+
+    addresses data. In this case, there is the transaction
+
+    data. An example of data from our experiment is
+
+    0x87caaa7800000000000000000000000000000000
+
+    000000000000000000000000000000000000000
+
+    We will come back to obtain this transaction data.
+
+
+    Get the value of a voter''s davo(bool) function. The function
+
+    nto encode or get the value of the davo(bool). The function
+
+    hash encoded by Ethereum using SHA-256 which
+
+
+    Obtain the voter''s vote: Based on the results
+
+    in point 3) and 4, one can see that the first four bytes
+
+    of the transaction data and hash of davo(bool) is
+
+    isidentical, it is 0x87caaa78. The first
+
+    four bytes of transaction data refers to the signature
+
+    s (i. davoote(bool)). By calling the function,
+
+
+    in the transaction data refers to the method,
+
+    represented by hexadecimal value padded to 32 bytes. Since
+
+    only two values are expected from the transaction, i.e.
+
+    True or False which are represented as 0x1 or 0x0 in
+
+    respectively (32 bytes). Looking back at the
+
+    transaction data in point 3, one can conclude that
+
+    the particular voter votes yes. This finding shows that the
+
+    secret voting process is not fully satisfied. We can
+
+    by applying additional cryptographic technique, such as
+
+    zero knowledge proof which is available in public Ethereum
+
+    blockchain network.
+
+
+    ledger, shared and distributed. The pro-
+
+    bocked blockchain e-voting system also satisfies basic
+
+    principles of an election system by Equal Justice
+
+    one-man-one-vote, voter identity,
+
+    accuracy, accuracy, counted and
+
+    reditability. Our evaluation shows that the
+
+    time required to handle a transaction, especially Voter,
+
+    range from 10 to 47 seconds, which is considering
+
+    that this is a non-reactive transaction. Additionally, so
+
+    price option gives the best trade-off between the generated
+
+    gas and the last but of the decentralized
+
+    blockchain e-voting system provides transparency, but
+
+    the data in transaction can be revealed through
+
+    reverse engineering technique.
+
+
+    This e-voting can be improved in many ways. First
+
+    it can be modified so that it can add
+
+    voters in batch, which is convenient if there are
+
+    elible voters to be registered. Second, or
+
+    other technique, such as zero-knowledge proof, need to
+
+    incorporated to the confidentiality of user''s trust.
+
+    to prevent voter''s right to be stolen, an additional
+
+    to access to voter''s Ethereum account, such as
+
+    biometric authentication, also can be incorporated.
+
+
+    # ACKNOWLEDGMENT
+
+
+    This research is supported by Universitas Indonesia
+
+    “Publikasi Teknik Indonesia (PUTI) Research proposal
+
+    grant KKK-84/UI-2.RIST/05.00/2020.
+
+
+    # REFERENCES
+
+
+    +   [1] M. Kumar and A. Wali, “Analysis of electronic voting systems in
+
+    various contexts,” Journal of Computer Science and Engineering,
+
+    vol. 7, no. 3, pp. 1825–1830, 2016.
+
+    [2] N. Kersers and H. Bailheld, “Electronic voting and democratic
+
+    issues: an introduction,” in Electronic Voting and Democracy: A Com-
+
+    pendium, edited by J. Fuchs and H. Heine-Dussler,
+
+    Palgrave Macmillan UK, 2004, pp. 3–30.
+
+    [4] F. Wolf, R. Nacker, and D. Tuccelli, “Introduction to electro-
+
+    evoting,” International Journal of Political Science
+
+    for Development and Democracy (IDEA), 2021.
+
+    [5] C. Cixin and A. Wang, “Blockchain in voting: a secure peer-to-peer cash system,”\https://arxiv.org/abs/1707.01713
+
+    [6] T. Daga, P. Yelli, M. Rob, and K. Scarfone, “Blockchain
+
+    technology for voting,” National Institute of Technology and Standards
+
+    (NIST), Report 8202, October 2018. Available:
+
+    h://nvlpubs.nist.gov/nistsp/nists.publication.8202.pdf
+
+    [7] V. Buterin, “Ethereum: a next-generation smart contract
+
+    and decentralised platform,” White Paper, 2014. [Online]. Available:
+
+    ://ethereum.org/en/whitepaper
+
+    [10] G. Wood, “Ethereum: a secure decentralised generalised
+
+    transaction platform,” Yellow Paper. [Online]. Available:
+
+    ://github.com/ethereum/yellow/paper.pdf
+
+    [11] O. Cetinkaya and D. Cetinkaya, “Verification and validation in
+
+    electronic voting,” vol. 5, no. 2, pp. 117–127, 2006.
+
+
+    The design and implementation of the proposed blockchain
+
+    e-voting system with Ethereum and Metamask
+
+    can serve as a solution to trust and ensure the user''s
+
+    intent, to the blockchain''s characteristics: immutable
+
+
+    # 2020 International Conference on Informatics, Multimedia, Cyber and Information
+    System (ICIMCIS)'
+  md: '
+
+    # 2020 International Conference on Multimedia, Cybersecurity and Cyber Engineering
+    (ICIMCIS)
+
+
+    ## TABLE III
+
+    ## TRANSACTIONS COST AND E-VOTING SYSTEM FOR DIFFERENT GAS PRICES IN METAMASK
+
+
+    | User | Transaction | Gas price | Est | Actual time | Gas price | Medium | Actual
+    time | Gas price | Slow Ext | Actual time |
+
+    |---|---|---|---|---|---|---|---|---|---|---|
+
+    | Create ballot | Ballot | 0.000832 | 20 | 30 sec | 0.004416 | 168 | 18 sec |
+    0.008833 | 312 | 35 sec |
+
+    | Add voter | Add voter | 0.010387 | 24 | 47 sec | 0.000625 | 126 | 43 sec | 0.001309
+    | 558 | 59 sec |
+
+    | Add manager | Add manager | 0.000817 | 24 | 47 sec | 0.002049 | 222 | 52 sec
+    | 0.000872 | 648 | 49 sec |
+
+    | Delete voter | Delete voter | 0.000168 | 24 | 47 sec | 0.000195 | 216 | 23 sec
+    | 0.001638 | 600 | 53 sec |
+
+    | Start voting | Start voting | 0.000627 | 24 | 41 sec | 0.000402 | 120 | 80 sec
+    | 0.000627 | 660 | 53 sec |
+
+    | Vote 1 | Vote 1 | 0.001095 | 36 | 35 sec | 0.000218 | 193 | 26 sec | 0.001638
+    | 690 | 52 sec |
+
+    | Vote 2 | Vote 2 | 0.001114 | 36 | 37 sec | 0.000516 | 258 | 29 sec | 0.001213
+    | 706 | 52 sec |
+
+    | Vote 3 | Vote 3 | 0.001114 | 24 | 21 sec | 0.000664 | 234 | 20 sec | 0.000123
+    | 516 | 47 sec |
+
+    | Ballot manager | Ballot ending | 0.000175 | 27 | 34 sec | 0.000326 | 198 | 42
+    sec | 0.000078 | 642 | 23 sec |
+
+    | Total | | 0.003015 | 172 | 315 sec | 0.001864 | 1866 | 308 sec | 0.005301 |
+    5274 | 395 sec |
+
+
+    evaluation results do not include any resourceful from our side.
+
+
+    The overall performance evaluation of the election system is listed in Table III.
+    According to the results, the actual time always goes the estimated time, especially
+    in the medium and low gas prices when the actual time is faster than the estimated
+    time. Interestingly, as opposed to the medium and low gas prices, the actual time
+    is slower than the estimated time in the high gas price scenario. The difference
+    in the total sum of time does not differ significantly with the difference in
+    total sum of gas price for each gas price is quite significant. In all, evaluation
+    results show that all transactions are successfully executed no matter how much
+    they take. It shows that the reliability in voting is satisfied [3].
+
+
+    it may go when the volume in the network is out of three security aspects as CIA
+    (confidentiality, integrity, and availability), blockchain voting system ensures
+    the integrity and legality.
+
+
+    The integrity lies in the immutable characteristic of blockchain, record recorded
+    in the blockchain cannot be changed. Meanwhile, the availability can be ensured
+    through the distributed and public Ethereum network voting. For the confidentiality
+    of the information recorded in the blockchain, it heavily depends on the smart
+    contract. One way to prevent the vote from being exposed is:
+
+
+    ## TABLE IV
+
+    ## GAS PRICE PER TRANSACTION FOR ALL TRANSACTIONS IN GAS PRICE OPTIONS
+
+
+    | Transaction | Gas price per second |
+
+    |---|---|
+
+    | Deploy contract | 0.000252433 | 9.2326e-05 |
+
+    | Create ballot | 0.000321715 | 6.0004e-05 |
+
+    | Add voter | 0.002170482 | 1.6272e-04 |
+
+    | Add manager | 0.003917903 | 5.4406e-05 |
+
+    | Delete voter | 0.00135333 | 1.3611e-05 |
+
+    | Start voting | 0.00062744 | 4.9441e-05 |
+
+    | Vote 1 | 0.001009538 | 2.8001e-05 |
+
+    | Vote 2 | 0.000140009 | 9.9999e-06 |
+
+    | Vote 3 | 0.00111411 | 1.1111e-05 |
+
+    | Ballot manager | 0.020949526 | 3.1999e-05 |
+
+
+    Taking the gas price per transaction for each gas price scenario, it can be seen
+    in Table IV that the gas price per second in slow gas price scenario is the lowest
+    among the three. From finding this, it can be concluded that low gas price gives
+    the best tradeoff between gas price and transaction time. Nevertheless, experiment
+    results highly dependent on Ethereum network being used, in which gas price may
+    go high when the volume in the network is high, while using price type for that
+    carries information. However, having price type does not fully prevent other party
+    from filtering user''s vote information. The following steps are taken to control
+    the transaction content of the voting system:
+
+
+    1. Trace the voting in Ethereum network: every vote can trace any transaction
+    in any public network through Etherscan. As mentioned, voting system is deployed
+    in robust network, and thus, one transaction can be traced by any voter by the
+    voter''s address.
+
+    2. Analyze the vote function by smart contract: during the voting period, there
+    is an interaction between DApp and smart contract which has been implemented in
+    ABI form and the blockchain network. One thing is to capture the transaction sent
+    by a voter and its content, another thing is to know what smart contract is executed
+    in that transaction. Those two information is important in figuring out the voter''s
+    because every transaction is sent in hashed record. In principle, since every
+    transaction is visible to all nodes, one could provide relative results if the
+    transaction is known.
+
+    - To get the exact function used by a voter, one needs to get the ABI by decompile
+    the smart contract bytecode from Ethereum, assuming that one has no source code.
+    By using decompilation methods extract the information in the bytecode and transform
+    it into a human-readable format by the EVM. As a result of ABI decompilation has
+    high similarity with the ABI obtained. The most important thing is that one knows
+    how to give a vote (bool). On a side note, bytecode decompilation is not easily
+    deployed and published. In such a case, a smart source code could be publicly
+    available for any Ethereum user.
+
+    - Read the transaction data sent by a voter: One have access to it by looking
+    at the transaction by transaction hash. The transaction contains information hash,
+    transaction status, sender and receiver''s addresses data. In this case, there
+    is the transaction data. An example of data from our experiment is 0x87caaa7800000000000000000000000000000000000000000000000000000000000000000000.
+    We will come back to obtain this transaction data.
+
+    - Get the value of a voter''s (bool) function. The function to encode or get the
+    value of (bool). The function hash encoded by Ethereum using SHA-256 which
+
+    - Obtain the voter''s vote: Based on the results in point 3) and 4, one can see
+    that the first four bytes of the transaction data and hash of (bool) is identical,
+    it is 0x87caaa78. The first four bytes of transaction data refers to the signature
+    (bool). By calling the function, in the transaction data refers to the method,
+    represented by hexadecimal value padded to 32 bytes. Since only two values are
+    expected from the transaction, i.e. True or False which are represented as 0x1
+    or 0x0 respectively (32 bytes). Looking back at the transaction data in point
+    3, one can conclude that the particular voter votes yes. This finding shows that
+    the secret voting process is not fully satisfied. We can by applying additional
+    cryptographic technique, such as zero knowledge proof which is available in public
+    Ethereum blockchain network, ledger, shared and distributed. The pro-bock blockchain
+    e-voting system also satisfies basic principles of an election system by Equal
+    Justice one-man-one-vote, voter, accuracy.
+
+    '
+  mdcn: '
+
+
+    # 2020 年多媒体、网络安全与网络工程国际会议 (ICIMCIS)
+
+
+    ## 表 III
+
+    ## METAMASK 中不同 Gas 价格下的交易成本与电子投票系统
+
+
+    | 用户 | 交易 | Gas 价格 | 预估 | 实际时间 | Gas 价格 | 中等 | 实际时间 | Gas 价格 | 慢速预估 | 实际时间 |
+
+    |---|---|---|---|---|---|---|---|---|---|---|
+
+    | 创建选票 | 选票 | 0.000832 | 20 | 30 sec | 0.004416 | 168 | 18 sec | 0.008833 | 312
+    | 35 sec |
+
+    | 添加选民 | 添加选民 | 0.010387 | 24 | 47 sec | 0.000625 | 126 | 43 sec | 0.001309 |
+    558 | 59 sec |
+
+    | 添加管理员 | 添加管理员 | 0.000817 | 24 | 47 sec | 0.002049 | 222 | 52 sec | 0.000872
+    | 648 | 49 sec |
+
+    | 删除选民 | 删除选民 | 0.000168 | 24 | 47 sec | 0.000195 | 216 | 23 sec | 0.001638 |
+    600 | 53 sec |
+
+    | 开始投票 | 开始投票 | 0.000627 | 24 | 41 sec | 0.000402 | 120 | 80 sec | 0.000627 |
+    660 | 53 sec |
+
+    | 投票 1 | 投票 1 | 0.001095 | 36 | 35 sec | 0.000218 | 193 | 26 sec | 0.001638 |
+    690 | 52 sec |
+
+    | 投票 2 | 投票 2 | 0.001114 | 36 | 37 sec | 0.000516 | 258 | 29 sec | 0.001213 |
+    706 | 52 sec |
+
+    | 投票 3 | 投票 3 | 0.001114 | 24 | 21 sec | 0.000664 | 234 | 20 sec | 0.000123 |
+    516 | 47 sec |
+
+    | 选票管理员 | 选票结束 | 0.000175 | 27 | 34 sec | 0.000326 | 198 | 42 sec | 0.000078 |
+    642 | 23 sec |
+
+    | 总计 | | 0.003015 | 172 | 315 sec | 0.001864 | 1866 | 308 sec | 0.005301 | 5274
+    | 395 sec |
+
+
+    评估结果不包含我们方提供的任何资源。
+
+
+    选举系统的整体性能评估如表 III 所示。根据结果，实际时间总是低于预估时间，特别是在中等和低 Gas 价格下，实际时间比预估时间快。有趣的是与中等和低 Gas
+    价格相反，在高 Gas 价格场景下，实际时间比预估时间慢。时间总和的差异与每个 Gas 价格总和的差异并不显著，后者的差异非常显著。总之，评估结果显示，无论花费多长时间，所有交易都成功执行。这表明投票的可靠性得到了满足
+    [3]。
+
+
+    当网络流量超出 CIA（机密性、完整性和可用性）三个安全层面的范畴时，区块链投票系统确保了完整性和合法性。
+
+
+    完整性取决于区块链的不可篡改性，记录在区块链中的记录无法更改。同时，可用性可以通过分布式和公共的以太坊网络投票来确保。对于记录在区块链中的信息的机密性，很大程度上取决于智能合约。防止投票被暴露的一种方法是：
+
+
+    ## 表 IV
+
+    ## 所有 Gas 价格选项下所有交易的 Gas 价格
+
+
+    | 交易 | 每秒 Gas 价格 |
+
+    |---|---|
+
+    | 部署合约 | 0.000252433 | 9.2326e-05 |
+
+    | 创建选票 | 0.000321715 | 6.0004e-05 |
+
+    | 添加选民 | 0.002170482 | 1.6272e-04 |
+
+    | 添加管理员 | 0.003917903 | 5.4406e-05 |
+
+    | 删除选民 | 0.00135333 | 1.3611e-05 |
+
+    | 开始投票 | 0.00062744 | 4.9441e-05 |
+
+    | 投票 1 | 0.001009538 | 2.8001e-05 |
+
+    | 投票 2 | 0.000140009 | 9.9999e-06 |
+
+    | 投票 3 | 0.00111411 | 1.1111e-05 |
+
+    | 选票管理员 | 0.020949526 | 3.1999e-05 |
+
+
+    选取每个 Gas 价格场景下每笔交易的 Gas 价格，从表 IV 可以看出，慢速 Gas 价格场景下的每秒 Gas 价格是三者最低的。通过这一发现可以得出，低
+    Gas 价格在 Gas 价格和交易时间之间提供了最佳平衡。尽管如此，实验结果高度取决于所使用的以太坊网络，当网络流量较高时，Gas 价格可能会升高，而使用价格类型会带有相关信息。然而，拥有价格类型并不能完全防止第三方过滤选民的投票信息。采取了以下步骤来控制投票系统的交易内容：
+
+
+    1. 在以太坊网络中追踪投票：通过 Etherscan，每一票投票都可以追踪任何公共网络中的任何笔交易。如所述，投票系统部署在健壮的网络中，因此任何选民都可以通过其选民地址追踪任何笔交易。
+
+    2. 通过智能合约分析投票函数：在投票期间，DApp 与以 ABI 形式实现在区块链上的智能合约之间存在交互。一是捕获选民发送的交易及其内容，另一个是了解在该交易中执行了哪个智能合约。这两条信息对于确定选民身份至关重要，因为每笔交易都是以哈希记录的形式发送的。原则上，由于每笔交易对所有节点可见，如果已知交易，就可以提供相应的结果。
+
+    - 要获取选民使用的精确函数，需要通过反编译以太坊上的智能合约字节码来获取 ABI，假设没有源代码。通过反编译方法提取字节码中的信息，并通过 EVM 将其转换为人类可读的格式。ABI
+    反编译的结果与获得的 ABI 具有高度相似性。最重要的一点是知道如何进行投票（bool）。顺带提，字节码反编译并不容易部署和发布。在这种情况下，源代码可以供任何以太坊用户公开。
+
+    - 读取选民发送的交易数据：可以通过查看交易哈希访问交易数据。交易包含哈希、交易状态、发送者和接收者的地址数据。在这种情况下，存在交易数据。我们实验的一个示例数据为
+    0x87caaa78000000000000000000000000000000000000000000000000000000000000。我们将后回来获取此交易数据。
+
+    - 获取选民的 (bool) 函数的值：这是以太坊使用 SHA-256 编码的获取 (bool) 值的函数。
+
+    - 获取投票结果：根据第 3 点和第 4 点的结果，可以看到交易数据的前四个字节与 (bool) 的哈希相同，即 0x87caaa78。交易数据的前四个字节指的是签名
+    (bool)。在调用函数时，交易数据指的是方法，用填充为 32 字节的十六进制值表示。由于交易预期只有两个值，即真或假，分别表示为 0x1 或 0x0（32
+    字节）。
+
+
+    '
+  merge: 0
