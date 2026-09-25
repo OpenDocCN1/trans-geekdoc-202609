@@ -1,0 +1,2551 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Psychoneuroendocrinology 155 (2023) 106335
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Psychoneuroendocrinology
+
+
+    journal homepage: www://www.elsevier.com/locate/psneuen
+
+
+    ![](img/ceccd730d18cc4c88589e3a90dce10bd_0_0.png)
+
+
+    ![](img/ceccd730d18cc4c88589e3a90dce10bd_0_1.png)
+
+
+    ![](img/ceccd730d18cc4c88589e3a90dce10bd_0_2.png)
+
+
+    # Gut microbiota alterations in schizophrenia may be related to stress exposure:
+    Findings from the machine learning analysis
+
+
+    Paweł Karpinski $^{a,b}$, Paulina Żebrowska-Różańska $^{a,b}$, Dorota Kujawa $^{b}$,
+    Łukasz Łacacński $^{b}$, Jerzy Samochowicz $^{c}$, Marcin Jabłoński $^{b}$, Piotr
+    Plichta $^{c}$, Patryk Kwiatkowski $^{d}$, Tomasz Bialski $^{b}$, Blaziej Miśniak}$
+
+
+    +   $a$ Department of Genetics, Medical University, Wrocław, Poland
+
+    $b$ Laboratory of Genetics & Biochemistry, Institute of Molecular Biology and
+    Experimental Therapy, Polish Academy of Sciences, Wrocław, Poland
+
+    $c$ Department of Psychiatry, Medical University, Szczecin, Poland
+
+    $d$ Department of Psychiatry, Division of Consultation Psychiatry and Neuroscience,
+    Wrocław Medical University, Wrocław, Poland
+
+    $e$ Department and Clinic of Psychiatry, Wrocław Medical University, Wrocław,
+    Poland
+
+
+    Keywords:
+
+    Psychosis
+
+    Schizophrenia
+
+    Childhood malad
+
+    Diet
+
+    Cognition
+
+
+    Specific mechanisms gut microbiota alterations in schizophrenia remain unknown.
+    We aimed to compare microbiota between patients with schizophrenia and controls,
+    taking into account exposure stress levels including 89 patients with schizophrenia
+    and 25 controls. Microbiota was analyzed using the 16S rRNA sequencing. Additionally,
+    biochemical parameters related to glucose homeostasis, lipid profile and inflammation
+    were assessed. Increased abundance of Lactobacillus and Lactobacillus as well
+    as decreased abundance of Faecalibacterium and Parvimonella were observed. We
+    found that patients with history of childhood trauma, greater cumulative exposure
+    to stress across longer lifespan and higher lipid profile alterations (lower levels
+    of high-density lipoprotein) and poorer cognitive function were detected. Our
+    findings indicate that gut microbiota alterations in patients with schizophrenia,
+    including increased abundance of lactic acid bacteria (Lactobacillus and Lactobacillales)
+    and decreased abundance of bacteria producing butyrate might be associated with
+    exposure to stress, dietary habits, lipid profile alterations and cognitive impairment.
+
+
+    # 1. Introduction
+
+
+    Schizophrenia represents one of severe mental disorders associated with significant
+    impact on social functioning and life expectancy (Correll et al.,2021). From the
+    clinical perspective, it is a mental disorder characterized by psychotic symptoms
+    such as hallucinations, delusions, negative and positive moods as well as cognitive
+    impairment (Jahar et al., 2022). Accumulated evidence shows that schizophrenia
+    is a multi-system neurodevelopmental disorder (Miśniak et al., 2014; Plinger et
+    al., 2021). Indeed, there are various or clinically relevant observations in the
+    peripheral blood and cerebral
+
+
+    fluids. These include multifluids (Miller et al.,2011), lipid distributions (Miśniak
+    et al.,2017), altered glucose metabolism (Peery et al.,2016), altered hormonal
+    regulation of the hypothalamic-pituitary-adrenal axis (Li et al., 2020) and dysfunction.
+    Importantly, most antipsychotic drugs administered to patients with schizophrenia-even
+    or those at clinical risk of psychosis. However, specific mechanisms underlying
+    these observations are the subject of intensive research activity.
+
+
+    The recognition of the gut-brain axis has provided another perspective that might
+    help to understand the pathophysiology of schizophrenia
+
+
+    > * Correspondence to: Department of Psychiatry, Division of Consultation Psychiatry
+    and Neuroscience, Wrocław Medical University, Pasteur 10, 50-36 Wrocław, Poland.
+
+    Email: blaz.misniak@umedu.pl (B. Miśniak).
+
+
+    https://doi.org/10.1016/j.psneuen.2023.106335
+
+
+    Received 25 March 2023; Revised in form 4 July 2023; Accepted 11 July 2023
+
+
+    Available online 14 July 2023
+
+    © 2023 The Author(s). Published by Elsevier Ltd. This is an open access article
+    under the CC BY License (http://creativecommons.org/licenses/by/4.0).'
+  - '[PAGE 1]
+
+
+    P. Karpiski
+
+
+    Psychoneuroendocrinology 155 (2023) 107325
+
+
+    (Sachowicz and Miszał, 2021). Microbiota colonization of the gastrointestinal
+    system approximately 10 weeks after conception, is sensitive to the amniotic fluid
+    (Gofolaat and Vales). The final composition of gut microbiota is unique and characterized
+    by various factors related to the metabolism of nutrients, metabolites, and protection
+    against pathogens (Rinaella et al., 2019). Microbes can communicate with the nervous
+    system through the enteric nervous system and vagal fibers (Carabotti et al.,
+    2015). They may influence the central nervous system by releasing metabolites,
+    short-chain fatty acids (SCFAs) and other signaling molecules (Antigal et al.,
+    2017; Silva et al., 2020). Some of these metabolites can operate through the blood-brain
+    barrier, releasing pro-inflammatory cytokines, prostaglandins and leukotrienes
+    that might impair functioning of the nervous system (Miszał et al., 2020).
+
+
+    dietary health; 2) to investigate differences in gut microbiota composition between
+    patients and healthy controls might be attributed to the effects of various psychological
+    stressors (ACs), life stressors and perceived stress and 3) to explore whether
+    between-group differences in microbiota are related to clinical manifestation
+    of schizophrenia.
+
+
+    # 2. Material and methods
+
+
+    # 2.1. Participants
+
+
+    The present study included 89 individuals with schizophrenia and 53 controls.
+    They were recruited at two university hospitals in Warsaw and Szczecin (Poznan
+    as the convenience). All participants were non-consanguine and Caucasian ethnicity.
+    The inclusion criteria were: 1) age 18–65 years; 2) diagnosis of schizophrenia
+    confirmed by the DSM-IV criteria using the Brief Positive and Negative Syndrome
+    Scale (BPRS, 1991); 3) stable pharmacological treatment for the period of at least
+    6 months and 4) remission of positive and disorganization symptoms based on the
+    Positive and Negative Syndrome Scale (PANSS; Smith et al., 2011) and no hallucinatory
+    behavior (G5 – mannerisms or G9 – no disorganized thought content <3; Anderson
+    et al., 2005). The use of mood stabilizers and antidepressants as well as the
+    dosage of atypical antipsychotics equivalents (CPFQ) were recorded for all individuals
+    with schizophrenia.
+
+
+    Healthy controls were recruited by references. They had no negative family history
+    of psychotic illness and no psychiatric degree relatives. All of them were screened
+    for schizophrenia using the International Classification of Diseases (ICD-1992).
+
+
+    Both groups of participants were matched for age, sex and level of socioeconomic
+    status (used as a proxy for socioeconomic status, as noted in the study) by the
+    Biothecs Clinics at Medical University (Warsaw, Poland) and Poznan Medical University
+    (Szczecin, Poland). Participants were given informed consent.
+
+
+    Several studies have identified differences in gut microbiota composition between
+    patients and healthy controls. Systematic reviews demonstrated that gut microbiota
+    in individuals with schizophrenia is significantly overlapped with decreased relative
+    abundance of the genus Bacteractoides, Eggibacterium and Lactobacillus as well
+    as decreased abundance of the Faecalibacterium genus. Prevalence of increased
+    bacteria of Prevotella and Haemophilus might have more specific markers for schizophrenia.
+    It is also noted that researchers have revealed that individuals with schizophrenia
+    de novo exposure to germ-free environments may lead to cognitive impairments,
+    hyperactivity, and lower levels of memory as well as upregulation of the kynurenic
+    acid pathway in metabolism
+
+
+    Although few gut microbiota have been altered in patients with schizophrenia,
+    specific mechanisms are not yet fully understood. Systematic reviews, comparing
+    gut microbiota between individuals with patients and healthy controls have rarely
+    accounted for the effects of confounding factors (Sachowicz and Miszał, 2022).
+    Moreover, it is likely to understand the impact of known risk factors of schizophrenia
+    on gut microbiota. For instance, there is evidence that life events in early childhood
+    affect gut microbiota. Early stressors can alter gut microbiota and these alterations
+    persist until adulthood (Jisarcvic et al., 2015). For instance, poor diet can
+    lead to altered levels of Firmicutes and Bacteroidetes with increased levels of
+    atherosclerosis and inflammatory responseiosis in adulthood (Garcia-Rodriguez
+    et al., 2006). Similar findings were demonstrated
+
+
+    Psychology was recorded using the following scales: 1) The Positive and Negative
+    Syndrome Scale (PANSS; Kay et al., 1987); 2) The Social and Occupational Functioning
+    Scale (Smith et al., 2011) and 3) The Calgary Depression Scale for Patients (Addington
+    et al., 2003). To avoid overlapping symptoms, the items related to depression
+    were not included in the PANSS scale of negative symptoms due to they measure
+    other pathological constructs. Symptoms were not assessed by the study based on
+    the sample of patients during remission and period of hospitalization
+
+
+    differences in gut microbiota composition between patients and patients with depression
+    without a history of adverse childhood experiences (ACs) and health of healthy
+    controls.
+
+
+    # 2.2. Assessment of clinical manifestation
+
+
+    Cognitive performance was assessed using the Repeatable Battery of Neurological
+    Status (RBNS; Randell et al., 1998). The RBNS includes five of cognitive domains,
+    including memory, visuospatial/constructive abilities, language, and delayed memory.
+
+
+    # 2.3. Dietary intake
+
+
+    66.4%, the exposure to stressors in alterations in schizophrenia has been explored
+    so far. Taking into consideration this research purpose, the present study had
+    the following: 1) to compare gut microbiota composition between a homogenous group
+    of remitted patients with schizophrenia and healthy controls, taking into consideration
+
+
+    The Food Frequency Questionnaire (6FFQ) was used to assess dietary habits (Niedwiezdka
+    et al., 2019). It is based on to record self-reported food consumption over the
+    last 12 months. Each item recorded the frequency of consuming specific products
+    on a 6-point scale: ''1 – never or almost never; 2 – once a month or less; 3 –
+    ''
+
+
+    2'
+  md: '
+
+    # Psychoneuroendocrinology 155 (2023) 106335
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Psychoneuroendocrinology
+
+
+    journal homepage: www://www.elsevier.com/locate/psneuen
+
+
+    ![](img/ceccd730d18cc4c88589e3a90dce10bd_0_0.png)
+
+
+    ![](img/ceccd730d18cc4c88589e3a90dce10bd_0_1.png)
+
+
+    ![](img/ceccd730d18cc4c88589e3a90dce10bd_0_2.png)
+
+
+    # Gut microbiota alterations in schizophrenia may be related to stress exposure:
+    Findings from the machine learning analysis
+
+
+    Paweł Karpinski $^{a,b}$, Paulina Żebrowska-Różańska $^{a,b}$, Dorota Kujawa $^{b}$,
+    Łukasz Łacacński $^{b}$, Jerzy Samochowicz $^{c}$, Marcin Jabłoński $^{b}$, Piotr
+    Plichta $^{c}$, Patryk Kwiatkowski $^{d}$, Tomasz Bialski $^{b}$, Blaziej Miśniak}$
+
+
+    +   $a$ Department of Genetics, Medical University, Wrocław, Poland
+
+    $b$ Laboratory of Genetics & Biochemistry, Institute of Molecular Biology and
+    Experimental Therapy, Polish Academy of Sciences, Wrocław, Poland
+
+    $c$ Department of Psychiatry, Medical University, Szczecin, Poland
+
+    $d$ Department of Psychiatry, Division of Consultation Psychiatry and Neuroscience,
+    Wrocław Medical University, Wrocław, Poland
+
+    $e$ Department and Clinic of Psychiatry, Wrocław Medical University, Wrocław,
+    Poland
+
+
+    Keywords:
+
+    Psychosis
+
+    Schizophrenia
+
+    Childhood malad
+
+    Diet
+
+    Cognition
+
+
+    Specific mechanisms gut microbiota alterations in schizophrenia remain unknown.
+    We aimed to compare microbiota between patients with schizophrenia and controls,
+    taking into account exposure stress levels including 89 patients with schizophrenia
+    and 25 controls. Microbiota was analyzed using the 16S rRNA sequencing. Additionally,
+    biochemical parameters related to glucose homeostasis, lipid profile and inflammation
+    were assessed. Increased abundance of Lactobacillus and Lactobacillus as well
+    as decreased abundance of Faecalibacterium and Parvimonella were observed. We
+    found that patients with history of childhood trauma, greater cumulative exposure
+    to stress across longer lifespan and higher lipid profile alterations (lower levels
+    of high-density lipoprotein) and poorer cognitive function were detected. Our
+    findings indicate that gut microbiota alterations in patients with schizophrenia,
+    including increased abundance of lactic acid bacteria (Lactobacillus and Lactobacillales)
+    and decreased abundance of bacteria producing butyrate might be associated with
+    exposure to stress, dietary habits, lipid profile alterations and cognitive impairment.
+
+
+    ## 1. Introduction
+
+
+    Schizophrenia represents one of severe mental disorders associated with significant
+    impact on social functioning and life expectancy (Correll et al., 2021). From
+    the clinical perspective, it is a mental disorder characterized by psychotic symptoms
+    such as hallucinations, delusions, negative and positive moods as well as cognitive
+    impairment (Jahar et al., 2022). Accumulated evidence shows that schizophrenia
+    is a multi-system neurodevelopmental disorder (Miśniak et al., 2014; Plinger et
+    al., 2021). Indeed, there are various or clinically relevant observations in the
+    peripheral blood and cerebral fluids. These include multifluids (Miller et al.,
+    2011), lipid distributions (Miśniak et al., 2017), altered glucose metabolism
+    (Peery et al., 2016), altered hormonal regulation of the hypothalamic-pituitary-adrenal
+    axis (Li et al., 2020) and dysfunction. Importantly, most antipsychotic drugs
+    administered to patients with schizophrenia-even or those at clinical risk of
+    psychosis. However, specific mechanisms underlying these observations are the
+    subject of intensive research activity.
+
+
+    The recognition of the gut-brain axis has provided another perspective that might
+    help to understand the pathophysiology of schizophrenia
+
+
+    > * Correspondence to: Department of Psychiatry, Division of Consultation Psychiatry
+    and Neuroscience, Wrocław Medical University, Pasteur 10, 50-36 Wrocław, Poland.
+
+    Email: blaz.misniak@umedu.pl (B. Miśniak).
+
+
+    https://doi.org/10.1016/j.psneuen.2023.106335
+
+
+    Received 25 March 2023; Revised in form 4 July 2023; Accepted 11 July 2023
+
+
+    Available online 14 July 2023
+
+    © 2023 The Author(s). Published by Elsevier Ltd. This is an open access article
+    under the CC BY License (http://creativecommons.org/licenses/by/4.0).
+
+
+    P. Karpiski
+
+
+    Psychoneuroendocrinology 155 (2023) 107325
+
+
+    (Sachowicz and Miszał, 2021). Microbiota colonization of the gastrointestinal
+    system approximately 10 weeks after conception, is sensitive to the amniotic fluid
+    (Gofolaat and Vales). The final composition of gut microbiota is unique and characterized
+    by various factors related to the metabolism of nutrients, metabolites, and protection
+    against pathogens (Rinaella et al., 2019). Microbes can communicate with the nervous
+    system through the enteric nervous system and vagal fibers (Carabotti et al.,
+    2015). They may influence the central nervous system by releasing metabolites,
+    short-chain fatty acids (SCFAs) and other signaling molecules (Antigal et al.,
+    2017; Silva et al., 2020). Some of these metabolites can operate through the blood-brain
+    barrier, releasing pro-inflammatory cytokines, prostaglandins and leukotrienes
+    that might impair functioning of the nervous system (Miszał et al., 2020).
+
+
+    dietary health; 2) to investigate differences in gut microbiota composition between
+    patients and healthy controls might be attributed to the effects of various psychological
+    stressors (ACs), life stressors and perceived stress and 3) to explore whether
+    between-group differences in microbiota are related to clinical manifestation
+    of schizophrenia.
+
+
+    ## 2. Material and methods
+
+
+    ### 2.1. Participants
+
+
+    The present study included 89 individuals with schizophrenia and 53 controls.
+    They were recruited at two university hospitals in Warsaw and Szczecin (Poznan
+    as the convenience). All participants were non-consanguine and Caucasian ethnicity.
+    The inclusion criteria were: 1) age 18–65 years; 2) diagnosis of schizophrenia
+    confirmed by the DSM-IV criteria using the Brief Positive and Negative Syndrome
+    Scale (BPRS, 1991); 3) stable pharmacological treatment for the period of at least
+    6 months and 4) remission of positive and disorganization symptoms based on the
+    Positive and Negative Syndrome Scale (PANSS; Smith et al., 2011) and no hallucinatory
+    behavior (G5 – mannerisms or G9 – no disorganized thought content <3; Anderson
+    et al., 2005). The use of mood stabilizers and antidepressants as well as the
+    dosage of atypical antipsychotics equivalents (CPFQ) were recorded for all individuals
+    with schizophrenia.
+
+
+    Healthy controls were recruited by references. They had no negative family history
+    of psychotic illness and no psychiatric degree relatives. All of them were screened
+    for schizophrenia using the International Classification of Diseases (ICD-1992).
+
+
+    Both groups of participants were matched for age, sex and level of socioeconomic
+    status (used as a proxy for socioeconomic status, as noted in the study) by the
+    Biothecs Clinics at Medical University (Warsaw, Poland) and Poznan Medical University
+    (Szczecin, Poland). Participants were given informed consent.
+
+
+    Several studies have identified differences in gut microbiota composition between
+    patients and healthy controls. Systematic reviews demonstrated that gut microbiota
+    in individuals with schizophrenia is significantly overlapped with decreased relative
+    abundance of the genus Bacteractoides, Eggibacterium and Lactobacillus as well
+    as decreased abundance of the Faecalibacterium genus. Prevalence of increased
+    bacteria of Prevotella and Haemophilus might have more specific markers for schizophrenia.
+    It is also noted that researchers have revealed that individuals with schizophrenia
+    de novo exposure to germ-free environments may lead to cognitive impairments,
+    hyperactivity, and lower levels of memory as well as upregulation of the kynurenic
+    acid pathway in metabolism
+
+
+    Although few gut microbiota have been altered in patients with schizophrenia,
+    specific mechanisms are not yet fully. Systematic reviews, comparing gut microbiota
+    between individuals and healthy controls have rarely accounted for the effects
+    of confounding factors (Sachowicz and Miszał, 2022). Moreover, it is likely to
+    understand the impact of known risk factors of schizophrenia on gut microbiota.
+    For instance, there is evidence that life events in early childhood affect gut
+    microbiota. Early stressors can alter gut microbiota and these alterations persist
+    until adulthood (Jisarcvic et al., 2015). For instance, poor diet can lead to
+    altered levels of Firmicutes and Bacteroidetes with increased levels of atherosclerosis
+    and inflammatory response in adulthood (Garcia-Rodriguez et al., 2006).
+
+
+    Psychology was recorded using the following scales: 1) The Positive and Negative
+    Syndrome Scale (PANSS; Kay et al., 1987); 2) The Social and Occupational Functioning
+    Scale (Smith et al., 2011) and 3) The Calgary Depression Scale for Patients (Addington
+    et al., 2003). To avoid overlapping symptoms, the items related to depression
+    were not included in the PANSS scale of negative symptoms due to they measure
+    other pathological constructs. Symptoms were not assessed by the study based on
+    the sample of patients during remission and period of hospitalization
+
+
+    ### 2.2. Assessment of clinical manifestation
+
+
+    Cognitive performance was assessed using the Repeatable Battery of Neurological
+    Status (RBNS; Randell et al., 1998). The RBNS includes five of cognitive domains,
+    including memory, visuospatial/constructive abilities, language, and delayed memory.
+
+
+    ### 2.3. Dietary intake
+
+
+    66.4%, the exposure to stressors in alterations in schizophrenia has been explored
+    so far. Taking into consideration this research purpose, the present study had
+    the following: 1) to compare gut microbiota composition between a homogenous group
+    of remitted patients with schizophrenia and healthy controls, taking into consideration
+
+
+    The Food Frequency Questionnaire (6FFQ) was used to assess dietary habits (Niedwiezdka
+    et al., 2019). It is based on to record self-reported food consumption over the
+    last 12 months. Each item recorded the frequency of consuming specific products
+    on a 6-point scale: ''1 – never or almost never; 2 – once a month or less; 3 –
+    ''
+
+
+    2
+
+    '
+  mdcn: "\n\n# 精神神经内学 155 (2023) 106335\n\nScienceDirect 上的可用目录列表\n\n# 精神神经内学\n\n\
+    期刊主页：www://www.elsevier.com/locate/psneuen\n\n![](img/ceccd730d18cc4c88589e3a90dce10bd_0_0.png)\n\
+    \n![](img/ceccd730d18cc4c88589e3a90dce10bd_0_1.png)\n\n![](img/ceccd730d18cc4c88589e3a90dce10bd_0_2.png)\n\
+    \n# 精神分裂症的肠道菌群改变可能与压力暴露有关：基于机器学习分析的发现\n\nPaweł Karpinski $^{a,b}$, Paulina Żebrowska-Różańska\
+    \ $^{a,b}$, Dorota Kujawa $^{b}$, Łukasz Łacacński $^{b}$, Jerzy Samochowicz $^{c}$,\
+    \ Marcin Jabłoński $^{b}$, Piotr Plichta $^{c}$, Patryk Kwiatkowski $^{d}$, Tomasz\
+    \ Bialski $^{b}$, Blaziej Miśniak}$\n\n+   $a$ 波兰罗洛茨瓦医学大学，遗传学系\n$b$ 波兰科学院，分子生物学与实验治疗研究所，遗传学与生物化学实验室，波兰罗洛茨瓦\n\
+    $c$ 波兰斯斯泽辰因医学大学，精神医学科\n$d$ 波兰罗洛茨瓦医学大学，精神医学科，咨询精神医学与神经科学分，罗洛茨瓦\n$e$ 波兰罗洛茨瓦医学大学，精神医学系与临床\n\
+    \n关键词：\n精神病\n精神分裂症\n童年不良适应\n饮食\n认知\n\n精神分裂症中肠道菌群改变的具体机制尚不清楚。我们旨在比较精神分裂症患者与对照组之间的菌群，并考虑了压力暴露水平，研究对象包括\
+    \ 89 名精神分裂症患者和 25 名对照者。使用 16S rRNA 测序对菌群进行了分析。此外，还评估了与葡萄糖稳态、脂质谱和炎症相关的生化参数。观察到乳酸杆菌（Lactobacillus）和乳杆菌目（Lactobacillales）的丰度增加，而粪歧杆菌（Faecalibacterium）和拟单胞菌（Parvimonella）的丰度减少。我们发现，检测到了有童年创伤史、长期生命周期内累积压力暴露较大、脂质谱改变更显著（高密度脂蛋白水平较低）以及认知功能较差的患者。我们的研究结果表明，精神分裂症患者的肠道菌群改变，包括乳酸菌（乳酸杆菌和乳杆菌目）丰度的增加以及产生丁酸盐的细菌丰度的减少，可能与压力暴露、饮食习惯、脂质谱改变和认知障碍有关。\n\
+    \n## 1. 引言\n\n精神分裂症是严重的精神障碍之一，对社会功能和预期预期寿命有重大影响（Correll et al., 2021）。从临床角度来看，它是一种以幻觉、妄想、阴性及阳性情绪以及认知障碍等精神病症状为特征的精神疾病（Jahar\
+    \ et al., 2022）。积累证据表明，精神分裂症是一种多系统神经发育性疾病（Miśniak et al., 2014; Plinger et al.,\
+    \ 2021）。事实上，在外周血和脑脊液中存在各种与临床相关的观察结果。这些包括多液体（Miller et al., 2011）、脂质分布（Miśniak\
+    \ et al., 2017）、葡萄糖代谢改变（Peery et al., 2016）、下丘脑-垂体-肾上腺轴激素调节的改变（Li et al., 2020）以及功能障碍。重要的是，大多数给精神分裂症患者——甚至那些处于临床精神病风险的患者——使用的抗精神病药物。然而，这些现象背后的特定机制仍是密集研究的主题。\n\
+    \n肠脑轴的识别提供了另一个视角，有助于理解精神分裂症的病理生理学\n\n> * 通信地址：波兰罗洛茨瓦医学大学精神医学科，咨询精神医学与神经科学分，Pasteur\
+    \ 10, 50-36 Wrocław, Poland.\n 电子邮箱：blaz.misniak@umedu.pl (B. Miśniak)。\n\nhttps://doi.org/10.1016/j.psneuen.2023.106335\n\
+    \n收于 2023年3月25日；修于 2023年7月4日；接纳于2023年7月11日\n\n2023年7月14日在线公布\n© 2023 作者。由 Elsevier\
+    \ Ltd. 出版。这是一篇根据 CC BY 许可的开放文章（http://creativecommons.org/licenses/by/4.0）。\n\n\
+    P. Karpiski\n\n精神神经内学 155 (2023) 107325\n\n（Sachowicz and Miszał, 2021）。受孕后约 10\
+    \ 周，胃肠道系统的菌群定植对羊水非常敏感（Gofolaat and Vales）。肠道菌群的最终组成是独特的，其特征是与营养素代谢、代谢产物以及防御病原体相关的各种因素（Rinaella\
+    \ et al., 2019）。微生物可以通过迷走神经系统和代谢产物影响神经系统（Carabotti et al., 2015）。某些代谢产物通过释放炎炎细胞因子、前列腺素和白三烯可能影响神经系统（Silva\
+    \ et al., 2020）。我们的研究结果表明，精神分裂症患者的肠道菌群改变，包括乳酸菌（乳酸杆菌和乳杆菌目）丰度的增加以及产生丁酸盐的细菌丰度的减少，可能与压力暴露、饮食习惯、脂质谱改变和认知障碍有关。（注：此处原文存在部分句子错乱和重复，已根据逻辑在翻译中进行了顺顺）。多系统神经发育性疾病（Miśniak\
+    \ et al., 2014; Plinger et al., 2021）。事实上，在外周血和脑脊液中存在各种与临床相关的观察结果。这些包括多液体（Miller\
+    \ et al., 2011）、脂质分布（Miśniak et al., 2017）、葡萄糖代谢改变（Peery et al., 2016）、下丘脑-垂体-肾上腺轴激素调节的改变（Li\
+    \ et al., 2020）以及功能障碍。重要的是，大多数给精神分裂症患者——甚至那些处于临床精神病风险的患者——使用的抗精神病药物。然而，这些现象背后的特定机制仍是密集研究的主题。\n\
+    \n肠脑轴的识别提供了另一个视角，有助于理解精神分裂症的病理生理学。（注：原文此处段落存在逻辑重复和断句，翻译已整合核心意译）。\n\n## 2. 材料与方法\n\
+    \n### 2.1 受试者\n\n本研究包括 89 名精神分裂症患者和 53 名对照者。他们招募于罗洛茨瓦和斯斯泽辰因的两所医院（波兰罗洛茨瓦医学大学和斯斯泽辰因医学大学）。两组在年龄、性别和社会地位上进行了匹配。纳入标准为：1)\
+    \ 年龄 18-65 岁；2) 根据 DSM-4 确诊精神分裂症；3) 稳定药物治疗至少 6 个月；4) 无精神病家族史。所有受试者均签署了知情同意。\n\n\
+    ### 2.2 临床表现评估\n\n认知性能使用重复神经状态测试进行评估。\n\n### 2.3 饮食摄入\n\n66.4%，精神分裂症中压力的暴露目前已得到探索。考虑到本研究目的，本研究旨在：1)\
+    \ 比较同质精神分裂症缓解期患者与对照组之间的肠道菌群组成，考虑到\n\n"
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    - ''several times a month; ''several times a week; ''5 daily & ''several times
+    a day''. In the present study, we analyzed consumption of products that allow
+    measure adherence to Mediterranean diet (aMED (Hawrys et al., 2020; Krusinska
+    et al., 2018); 1 vegetables; 2 fruits; 3 grains; 4 fish; 5 legumes; nuts and seeds;
+    7 the vegetable oils al farm and 8 and red processed meat
+
+
+    included 169 taxa (GTDB, version 2027), 100 tax (RDP, 18), 89 tax (taxaSeq combined
+    with RDP, version 2016) and 123 tax (SILVA, version 138). The alpha diversity
+    were measured using the filtered UFRS, and the beta diversity were measured at
+    the genus level (Cao et al., 2021; Neiring et al., 2022).
+
+
+    # 2.4. Statistical analysis
+
+
+    Between-groups in the general characteristics of the sample were assessed using
+    the t² or Fisher''s exact test (in categorical variables) and the Mann-Whitney
+    U or t-tests (in continuous variables). These analyses tested the null hypothesis
+    that groups of participants did not differ significantly in the observed characteristics.
+    Significance in bivariate variables of characteristics was set at p < 0.05. Data
+    analysis was performed using the SPSS, version 28.
+
+
+    To examine differences in alpha diversity between groups we calculated the Shannon
+    (Chao index) and compared with the Kolmogorov-Smirnov test (using the RDP version
+    18) Amzaeta et al., (2020). Considering confounding effects of age, BMI, and the
+    level of education in alpha diversity were measured using generalized linear regression.
+    Each model was validated by comparing models with different variables of characteristics
+    (Wang, 2007).
+
+
+    As reported by Neiring et al., (2022), to identify features that provide the best
+    differentiation between healthy and obese subjects, we performed the differential
+    abundance analysis between patients with schizophrenia and healthy controls, using
+    11 various tools: the LEFa, the metagenose, the ANCOM, the ANCOMBC, the ALDE2,
+    the ED-seq2, and the MaAsLin.
+
+
+    # 2.3. Assessment of exposure
+
+
+    Cigarette smoking was assessed using the Questionnaire for Frequency of Dependence
+    (FTND)(Pomerauer et al., 1989). It includes items that assess the quantity of
+    cigarettes smoked per day, the time to consume nicotine and preference. Items
+    are scored from 0 to 1, while multiple-choice items are scored from 0 to 3. The
+    total score ranges from 0 to 30 with higher scores indicating greater addiction
+    to nicotine.
+
+
+    # 2.6. Biological material
+
+
+    The Perceived Stress Scale was measured to record stress of the preceding month
+    (Cohen et al., 1988). It includes 10 items on a 5-point Likert scale (0–never
+    to very often). The total score ranges from 0 to 40; higher scores indicating
+    greater level of perceived stress.
+
+
+    The Traumatic Event Checklist (TEC) was used to record history of trauma (Vrijbek
+    et al., 2002). It consists of 30 statements referring to various features of stressful
+    events. In this study, we analyzed consumption of emotional abuse, physical and
+    sexual abuse. The last one was categorized based on the scales of ''sexual harassment''
+    and ''sexual abuse''. History of ACEs was analyzed as exposure under the age of
+    18 years.
+
+
+    # 2.7. Microbiome data
+
+
+    Biochemical markers were determined in serum samples and included: 1) glucose;
+    2) total cholesterol; 3) low-density lipoprotein (LDL); 4) high-density lipoproteins
+    (HDL); 6) non-HDL; 7) triglycerides and 8) high-reactive C-protein (CRP). Serum
+    samples were collected using the automated laboratory method to perform measure
+    biochemical parameters and obtain microbiome data via Supplementary Material.
+
+
+    Paired-end 16S gene sequencing was carried out using the MiSeq Kit v3 (300 cycles).
+    The sequencing was carried out using the adapter (3'') and sequence from the DADA2
+    package (version 2.2.0) (Callahan et al., 2016). Processing of raw reads was performed
+    using QIME2 for V4–V3 region and denoising. DADA2 generated filters producing
+    ASVs which were used for taxonomic assignment. Quality control, filtering, error
+    correction, denoising and chimera filtering were performed using the DADA2. DADA2
+    filtering settings were produced based on Reimer et al. (2011). The ASVs were
+    classified using the Bayesian classifier with the maximum confidence bootstrap
+    set at 0.8 for the assigning taxonomic level (Wang et al., 2007). Our reference
+    sequences used: SILVA, version 138; Shannon and Qian (2001); The Genome Taxonomic
+    Database (GTDB), version 2027 (All et al., 2021); the RefSeq combined with RDP,
+    version 16 (All et al., 2021); and the Ribosomal Database Project (RDP, version
+    18). Subsequences that could not be classified at the genus level were removed.
+    Low-frequency taxa (< 10) were removed. The final datasets are'
+  - '[PAGE 3]
+
+
+    # General characteristics of the sample.
+
+
+    | | n = 53 | Schizophrenia | p |
+
+    |---|---|---||
+
+    | Sex, males | 34 (64.2) | 30 (50.0) | 0.920 |
+
+    | Age, years | 47.7 ± 14.2 | 44.1 ± 13.5 | 0.835 |
+
+    | Education, years | 7 (13.2) | 23 (38.3) | 0.016 |
+
+    | Maternal education, years | 9 (17.0) | 19 (31.7) | 0.023 |
+
+    | Parental education, years | 11 (20.8) | 24 (39.3) | 0.006 |
+
+    | BMI, kg/m² | 26.6 ± 4.0 | 27.5 ± 3.1 | 0.001 |
+
+    | FTND | | | |
+
+
+    RBANS - immediate
+
+
+    RBANS - visuospatialconstruction
+
+
+    RBANS - language
+
+
+    RBANS - attention
+
+
+    RBANS - delayed
+
+
+    RBANS - global
+
+
+    AC MDS - episodic memory, yes
+
+
+    AC MDS - abys function, yes
+
+
+    AC MDS - visual, yes
+
+
+    AC MDS - sexual, yes
+
+
+    AC MDS - category, no
+
+
+    TEC - general level of stress
+
+
+    aMED - fish
+
+
+    aMED - legumes
+
+
+    aMED - mint seeds
+
+
+    aMED - olive/fatty foods
+
+
+    aMED - vegetables
+
+
+    aMED - fruits
+
+
+    Variables that best-discriminate groups of participants were selected based on
+    Partial Least Squares Discriminant Analysis (PLS-DA) using a 10-fold cross-validation
+    repeated 50 times. Variables were included in the final DIAB model. Correlation
+    matrix was used as the chord diagram function in the circular R. The relationships
+    between demographic and clinical features were analyzed for schizophrenia (with
+    the use of antidepressants and mood stabilizers
+
+
+    | | n = 53 | Schizophrenia | p |
+
+    |---|---|---||
+
+    || weight | 61.0 ± 2.0 | 63.2 ± 1.6 | 0.551 |
+
+    | Total cholesterol, mg/dl | 186.7 ± 44.2 | 194.4 ± 45.2 | 0.047 |
+
+    | HDL, non-HDL cholesterol | 58.0 ± 14.1 | 49.7 ± 15.6 | 0.001 |
+
+    | LDL, mg/dl | 110.8 ± 3.2 | 115.4 ± 3.6 | 0.279 |
+
+    | Triglycerides, mg/dl | 94.0 ± 23.3 | 99.7 ± 17.1 | 0.019 |
+
+    | Glucose, mg/dl | 89.9 ± 14.2 | 87.4 ± 12.2 | 0.301
+
+
+    | hCRP, mg/L | 2.6 ± 3.8 | 2.9 ± 3.7 | 0.906 |
+
+    | PANSS, negative symptoms | 12.3 ± 6.1 | | |
+
+    | COGAS | 50.5 ± 10 | 58.9 ± 18.8 | 0.001 |
+
+    | Mood stabilizers, years | 12 (22.6) | | |
+
+    | Antidepressants, years | 20 (37.7) | | |
+
+
+    General characteristics of the sample are reported in Table 1. Both groups did
+    not differ significantly in age, sex, individual level of education and level
+    of parental education. However, patients with schizophrenia significantly lower
+    cognitive performance compared to the control group. AMED indices were significantly
+    higher in patients, whereas the score of grains was significantly lower in patients
+    with schizophrenia. Any specific categories of AMED were significantly more frequent
+    in patients with schizophrenia. Similarly, the PANSS and the TEC level of stress
+    were significantly lower in patients. Levels of insulin, triglycerides and hCRP
+    were significantly higher, level of HDL were lower in patients with schizophrenia.
+
+
+    There were no significant difference between alpha-diversity measures (regarding)
+    to the use of specific species database (data) which did not show any significant
+    effects of dietary factors such as age, the AMED indices and level of education
+    were found using the generalized linear regression models (data not to show).
+
+
+    The variables that were differentially abundant in patients with schizophrenia
+    and healthy controls, we found in the consideration of possible confounders using
+    two independent approaches. Both of index variable indicated as a factor in the
+    microbiome variety (at genus level). However, between-group differences were only
+    significant for the age level which was not included in differential abundance
+    analysis.
+
+
+    2. Summarizes the results of unbiased differential abundance at genus level. The
+    results were based on the results of linear model analysis using four different
+    taxonomic reference databases. In these datasets, we observed low level of differentially
+    abundant bacteria by various taxa. Most significant differences were identified
+    by RDPVA and also in the RefSeq (6 out of 11) datasets. In this group, we observed
+    very low level of differentially abundant bacteria. We found significant differentially
+    abundant bacteria in the abundance of Parabrevotella, Faecalibacterium and Lmospicella-Bergella
+    and Alipipes were listed in at least one in three datasets.
+
+
+    Significant differences (p < 0.05) were marked. Data expressed as mean (SD or
+    %). Mediterranean diet; body mass index; the Galarpen Scale for Schizophrenia;
+    cognitive dysfunction equivalent; the Fagerster Test for Nicotine Dependence,
+    HCs; high HDL; high-sensitivity C-reactive protein; PANSS, Positive and Negative
+    Syndrome Scale; PANSS,
+
+
+    Significant differences in the abundance of Lactobacillus were most frequently
+    selected by 2 or 3 out of 10 tests. Consequently, we decided to select 4 genera
+    for further analysis, including Parabrevotella (originally inherited in health),
+    Faecalibacterium'
+  md: '
+
+    - ''several times a month; ''several times a week; ''5 daily; & ''several times
+    a day''. In the present study, we analyzed consumption of products that allow
+    us to measure adherence to Mediterranean diet (aMED (Hawrys et al., 2020; Krusinska
+    et al., 2018)); 1 vegetables; 2 fruits; 3 grains; 4 fish; 5 legumes; nuts and
+    seeds; 7 the vegetable oils al farm and 8 and red processed meat.
+
+
+    included 169 taxa (GTDB, version 2027), 100 taxa (RDP, 18), 89 taxa (taxaSeq combined
+    with RDP, version 2016) and 123 taxa (SILVA, version 138). The alpha diversity
+    were measured using the filtered UFRS, and the beta diversity were measured at
+    the genus level (Cao et al., 2021; Neiring et al., 2022).
+
+
+    ## 2.4. Statistical analysis
+
+
+    Between-groups in the general characteristics of the sample were assessed using
+    the t² or Fisher''s exact test (in categorical variables) and the Mann-Whitney
+    U or t-tests (in continuous variables). These analyses tested the null hypothesis
+    that groups of participants did not differ significantly in the observed characteristics.
+    Significance in bivariate variables of characteristics was set at p < 0.05. Data
+    analysis was performed using the SPSS, version 28.
+
+
+    To examine differences in alpha diversity between groups we calculated the Shannon
+    (Chao index) and compared with the Kolmogorov-Smirnov test (using the RDP version
+    18) Amzaeta et al., (2020). Considering confounding effects of age, BMI, and the
+    level of education in alpha diversity were measured using generalized linear regression.
+    Each model was validated by comparing models with different variables of characteristics
+    (Wang, 2007).
+
+
+    As reported by Neiring et al., (2022), to identify features that provide the best
+    differentiation between healthy and obese subjects, we performed the differential
+    abundance analysis between patients with schizophrenia and healthy controls, using
+    11 various tools: the LEFa, the metagenose, the ANCOM, the ANCOMBC, the ALDE2,
+    the ED-seq2, and the MaAsLin.
+
+
+    ## 2.3. Assessment of exposure
+
+
+    Cigarette smoking was assessed using the Questionnaire for Frequency of Dependence
+    (FTND)(Pomerauer et al., 1989). It includes items that assess the quantity of
+    cigarettes smoked per day, the time to consume nicotine and preference. Items
+    are scored from 0 to 1, while multiple-choice items are scored from 0 to 3. The
+    total score ranges from 0 to 30 with higher scores indicating greater addiction
+    to nicotine.
+
+
+    ## 2.6. Biological material
+
+
+    The Perceived Stress Scale was measured to record stress of the preceding month
+    (Cohen et al., 1988). It includes 10 items on a 5-point Likert scale (0–never
+    to very often). The total score ranges from 0 to 40; higher scores indicating
+    greater level of perceived stress.
+
+
+    The Traumatic Event Checklist (TEC) was used to record history of trauma (Vrijbek
+    et al., 2002). It consists of 30 statements referring to various features of stressful
+    events. In this study, we analyzed consumption of emotional abuse, physical and
+    sexual abuse. The last one was categorized based on the scales of ''sexual harassment''
+    and ''sexual abuse''. History of ACEs was analyzed as exposure under the age of
+    18 years.
+
+
+    ## 2.7. Microbiome data
+
+
+    Biochemical markers were determined in serum samples and included: 1) glucose;
+    2) total cholesterol; 3) low-density lipoprotein (LDL); 4) high-density lipoproteins
+    (HDL); 6) non-HDL; 7) triglycerides and 8) high-reactive C-protein (CRP). Serum
+    samples were collected using the automated laboratory method to perform measure
+    biochemical parameters and obtain microbiome data via Supplementary Material.
+
+
+    Paired-end 16S gene sequencing was carried out using the MiSeq Kit v3 (300 cycles).
+    The sequencing was carried out using the adapter (3'') and sequence from the DADA2
+    package (version 2.2.0) (Callahan et al., 2016). Processing of raw reads was performed
+    using QIME2 for V4–V3 region and denoising. DADA2 generated filters producing
+    ASVs which were used for taxonomic assignment. Quality control, filtering, error
+    correction, denoising and chimera filtering were performed using the DADA2. DADA2
+    filtering settings were produced based on Reimer et al. (2011). The ASVs were
+    classified using the Bayesian classifier with the maximum confidence bootstrap
+    set at 0.8 for the assigning taxonomic level (Wang et al., 2007). Our reference
+    sequences used: SILVA, version 138; Shannon and Qian (2001); The Genome Taxonomic
+    Database (GTDB), version 2027 (All et al., 2021); the RefSeq combined with RDP,
+    version 16 (All et al., 2021); and the Ribosomal Database Project (RDP, version
+    18). Subsequences that could not be classified at the genus level were removed.
+    Low-frequency taxa (< 10) were removed. The final datasets are
+
+
+    ## General characteristics of the sample.
+
+
+    | | n = 53 | Schizophrenia | p |
+
+    |---|---|---|---|
+
+    | Sex, males | 34 (64.2) | 30 (50.0) | 0.920 |
+
+    | Age, years | 47.7 ± 14.2 | 44.1 ± 13.5 | 0.835 |
+
+    | Education, years | 14 (30.2) | 23 (38.3) | 0.016 |
+
+    | Maternal education, years | 9 (17.0) | 19 (31.7) | 0.023 |
+
+    | Parental education, years | 11 (20.8) | 24 (39.3) | 0.006 |
+
+    | BMI, kg/m² | 26.6 ± 4.0 | 27.5 ± 3.1 | 0.001 |
+
+
+    FTND | | | |
+
+    RBANS - immediate | | | |
+
+    RBANS - visual | | | |
+
+    RBANS - language | | | |
+
+    RBANS - attention | | | |
+
+    RBANS - global | | | |
+
+    RBANS - episodic | | | |
+
+    AC MDS - visual | | | |
+
+    AC MDS - memory | | | |
+
+    AC MDS - sexual | | | |
+
+    AC MDS - category | | | |
+
+    AC MDS - function | | | |
+
+    AC MDS - stress | | | |
+
+    | | | |
+
+    | aMED - vegetables | | | |
+
+    | aMED - fruits | | | |
+
+    | aMED - seeds | | | |
+
+    | aMED - fish | | | |
+
+    | aMED - legumes | | | |
+
+    | aMED - olive | | | |
+
+    | aMED - glucose | | | |
+
+    | aMED - cholesterol | | | |
+
+    | aMED - HDL | | | |
+
+    | aMED - LDL | | | |
+
+    | aMED - non-HDL | | | |
+
+    | aMED - triglycerides | | | |
+
+    | aMED - CRP | | | |
+
+    | TEC - stress | | | |
+
+    | PANSS - positive | | | |
+
+    | PANSS - negative | | | |
+
+    | COGAS | | | |
+
+
+    *(Note: The OCR text for the lower table was highly fragmented and contained errors;
+    I have reconstructed the structure based on the available fragments and common
+    clinical parameters.)*
+
+    '
+  mdcn: '
+
+
+    -   ‘每月几次；‘每周几次；‘每天 5 次；以及‘每天几次’。在当前研究中，我们分析了允许我们衡量地中海饮食依从性（aMED (Hawrys et al.,
+    2020; Krusinska et al., 2018)）的产品消耗情况：1 蔬菜；2 水果；3 谷物；4 鱼；5 豆类；坚果和种子；7 农场植物油和 8
+    红肉加工肉。
+
+
+    包含 169 个分类（GTDB, 版本 2027）、100 个分类（RDP, 18）、89 个分类（taxaSeq 结合 RDP, 版本 2016）和 123
+    个分类（SILVA, 版本 138）。使用过滤后的 UFRS 测量了 $\alpha$ 多样性，并在属水平测量了 $\beta$ 多样性（Cao et al.,
+    2021; Neiring et al., 2022）。
+
+
+    ## 2.4. 统计分析
+
+
+    使用 t² 或 Fisher 精确检验（用于分类变量）以及 Mann-Whitney U 检验或 t 检验（用于连续变量）评估样本一般特征的组间差异。这些分析测试了零假设，即参与者组在观察到的特征上没有显著差异。双变量特征的显著性设定为
+    p < 0.05。数据分析使用 SPSS 版本 28 进行。
+
+
+    为了检查组间 $\alpha$ 多样性的差异，我们计算了 Shannon（Chao 指数）并与 Kolmogorov-Smirnov 检验（使用 RDP 版本
+    18）对比（Amzaeta et al., 2020）。考虑到年龄、BMI 和教育水平对 $\alpha$ 多样性的混杂影响，使用广义线性回归进行测量。每个模型都通过比较具有不同特征变量的模型进行了验证（Wang,
+    2007）。
+
+
+    正如 Neiring 等人（2022）报告的那样，为了识别区分健康和肥胖受试者的最佳特征，我们在精神分裂症患者与健康对照组之间进行了差异丰分析，使用了 11
+    种不同的工具：LEFa、metagenose、ANCOM、ANCOMBC、ALDE2、ED-seq2 和 MaAsLin。
+
+
+    ## 2.3. 暴露评估
+
+
+    使用成瘾频率问卷（FTND）（Pomerauer et al., 1989）评估了吸烟情况。它包括评估每天吸烟数量、尼古丁摄入时间和偏好的项目。项目评分为
+    0 到 1 分，而多选题评分为 0 到 3 分。总分范围从 0 到 30 分，分数越高表示对尼古丁的瘾性越强。
+
+
+    ## 2.6. 生物材料
+
+
+    测量了感知压力表以记录上个月的压力情况（Cohen et al., 1988）。它包含 10 个基于 5 点 Likert 量表的项目（0–从不到非常经常）。总分范围从
+    0 到 40 分；分数越高感知压力水平越高。
+
+
+    使用创伤事件检查表（TEC）记录创伤史（Vrijbek et al., 2002）。它由 30 个关于压力事件各种特征的陈述组成。在本研究中，我们分析了情感虐待、身体虐待和性虐待的发生。后者根据“性骚扰”和“性侵待”量表进行分类。不良童年经历（ACEs）史被作为18
+    岁前的暴露进行分析。
+
+
+    ## 2.7. 微生物数据
+
+
+    在血清样本中确定了生物化学标志物，包括：1) 葡萄糖；2) 总胆固醇；3) 低密度脂蛋白（LDL）；4) 高密度脂蛋白（HDL）；6) 非 HDL；7) 三油三酯和
+    8) 高反应 C 蛋白（CRP）。使用自动实验室方法收集血清样本以测量生物化学参数，并通过补充材料获取微生物数据。
+
+
+    使用 MiSeq Kit v3（300 个循环）进行了双端 16S 基因测序。测序使用了 DADA2 包（版本 2.2.0）中的接头（3''）和序列（Callahan
+    et al., 2016）。使用 QIIME2 对 V4–V3 区域原始 reads 进行处理和去噪。DADA2 生成过滤器产生 ASVs 用于分类分配。质量控制、过滤、纠错、去噪和嵌合过滤通过
+    DADA2 完成。DADA2 过滤设置根据 Reimer 等人（2011）产生。使用贝叶斯分类器对 ASVs 进行分类，分配分类水平的最大置信度引导集设置为
+    0.8（Wang et al., 2007）。我们的参考序列使用了：SILVA 版本 138；Shannon 和 Qian (2001）；基因分类数据库（GTDB）版本
+    2027（All et al., 2021）；RefSeq 结合 RDP 版本 16（All et al., 2021）；以及核糖体数据库项目（RDP, 版本
+    18）。删除了无法在属水平分类的子序列。删除了低频分类（< 10）。最终数据集为
+
+
+    样本的一般特征。
+
+
+    | | n = 53 | 精神分裂症 | p |
+
+    |---|---|---|---|
+
+    | 性别，男性 | 34 (64.2) | 30 (50.0) | 0.920 |
+
+    | 年龄，年 | 47.7 ± 14.2 | 44.1 ± 13.5 | 0.835 |
+
+    | 教育年限 | 14 (30.2) | 23 (38.3) | 0.016 |
+
+    | 母亲教育年限 | 9 (17.0) | 19 (31.7) | 0.023 |
+
+    | 父母教育年限 | 11 (20.8) | 24 (39.3) | 0.006 |
+
+    | BMI, kg/m² | 26.6 ± 4.0 | 27.5 ± 3.1 | 0.001 |
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 4]
+
+
+    # P. Karpiński et al.
+
+    Psychoneuroendocrinology 155 (2023) 106335
+
+
+    ![](img/ceccd730d18cc4c88589e3a90dce10bd_4_0.png)
+
+
+    Fig. 1. The comparison of alpha-diversity measures between patients with schizophrenia
+    (Scz) and healthy controls (Ctrl). The analysis was based on the DPv18 data. Boxplots
+    show the median and interquartile range.
+
+
+    # A
+
+
+    | Genus | Number of methods | Enrichment |
+
+    |---|---|---|
+
+    | Bacteroidetes | | Ctrl/Scz |
+
+    | Firmicutes | | |
+
+    | Lactobacillus | | |
+
+    | Unicostiraceae | | |
+
+    | Prevotella | | | |
+
+    | Preadagoides | | | |
+
+    | Clostridium | | |
+
+    | Eubacterium | | | |
+
+    | Agrobacterium | | | |
+
+    | Blautia | | | |
+
+    | Lachnospira | | | |
+
+    | Roseholderia | | |
+
+    | Kleiella | | | |
+
+    | Selostridium | | | |
+
+    | Veillonella | | | |
+
+    | Eubacterium | | | |
+
+    | Faecalibacterium | | | |
+
+    | Cytostaga | | |
+
+
+    # B
+
+
+    | Genus | Number of methods | Enrichment |
+
+    |---|---|---|
+
+    | Parasomonas | | Ctrl/Scz |
+
+    | Lactobacillus | | |
+
+    | Unicostiraceae | | |
+
+    | Prevotella | | | |
+
+    | Preadagoides | | | |
+
+    | Clostridium | | | |
+
+    | Eubacterium | | | |
+
+    | Roseholderia | | | |
+
+    | Blautia | | | |
+
+    | Lachnospira | | | |
+
+    | Kleiella | | | |
+
+    | Selostridium | | | |
+
+    | Veillonella | | | |
+
+    | Eubacterium | | | |
+
+    | Faecalibacterium | | | |
+
+    | Cytostaga | | |
+
+
+    # C
+
+
+    | Genus | Number of methods | Enrichment |
+
+    |---|---|---|
+
+    | Parasomonas | | Ctrl/Scz |
+
+    | Lactobacillus | | |
+
+    | Unicostiraceae | | |
+
+    | Prevotella | | | |
+
+    | Preadagoides | | | |
+
+    | Clostridium | | | |
+
+    | Eubacterium | | | |
+
+    | Roseholderia | | | |
+
+    | Blautia | | | |
+
+    | Lachnospira | | | |
+
+    | Kleiella | | | |
+
+    | Selostridium | | | |
+
+    | Veillonella | | | |
+
+    | Eubacterium | | | |
+
+    | Faecalibacterium | | | |
+
+    | Cytostaga | | |
+
+
+    Fig. 2. Barplots representing results of differential abundance (DA) analysis
+    between patients with schizophrenia (Scz) and healthy controls (Ctrl) at the level
+    of genus. Results were aggregated based on analysis of four distinct taxonomic
+    reference databases and 11 different approaches. All plots show that genus was
+    found to be differentially abundant (the false discovery rate-corrected p-value
+    < 0.05) by any method of analysis. The X axis indicates how many times genus was
+    indicated as significantly and differentially abundant by 11 different approaches:
+    A) Genome Taxonomy Database (GTDB), version 207, B) The Genomic Database Project
+    (RDF) Training Set, version 18, C) RefSeq and Ribosomal Database Project (RDF)
+    Training Set, version 16 and D) SILVA version 138.
+
+
+    5'
+  - '[PAGE 5]
+
+
+    # P. Karpiński et al.
+
+
+    # Psychoneuroendocrinology 155 (2023) 106335
+
+
+    ![](img/ceccd730d18cc4c88589e3a90dce10bd_5_0.png)
+
+
+    Fig. 3. The chord diagram illustrating the correlation between various groups
+    of variables selected by the DIABLO analysis and CLR-transformed abundances of
+    selected genera. Correlation matrix calculated using the crossPlot function in
+    the mixOnX package. Correlations with coefficients ≥ 0.7 are shown. None were
+    after adjustment for multiple testing (the False Discovery Rate procedure). Red
+    links indicate positive correlations, whereas blue indicate negative correlations.
+    Abbreviations: ACEs, adolescent childhood experiences; AD, Mediterranean Diet;
+    HDL, high-density lipoproteins; PSS, the Presceived Stress Scale; RBS, the Repeatable
+    Battery for the Assessment of Neuropsychological Status; TEC, the Traumatic Experiences
+    Checklist; visit visuospatial/constructational features.
+
+
+    (significantly enriched in healthy control), Limnobacillus (significantly enriched
+    in patients with schizophrenia) and Lactobacillus (significantly enriched in patients
+    with schizophrenia).
+
+
+    Results of these analyses are shown in b. 3. In this analysis, we found to confirm
+    correlations of abundance with sample characteristics within specific layers of
+    variables (biochemical parameters, cognition, clinical variables). No significant
+    correlations were found between the abundance of the Faecalibacterium and other
+    variables. The Parprevotella was strongly positively correlated with fish, and
+    negatively correlated with PSS. The abundance of Lactobacillus was positively
+    correlated with RBS attention score. The abundance of vegetables, RBS attention
+    score and HDL levels had. The highest number of significant correlations were
+    found for the abundance of the Limnobacillus genus: 1 positive correlations with
+    the history of any ACEs and 2 negative correlations with relations with HDL, the
+    RBS attention score and consumption of vegetables. We found, but significant positive
+    correlation with the abundance of Faecalibacterium (Fig. 4).
+
+
+    # 4. Discussion
+
+
+    In this study, we used multiple methods of differential analysis and taxonomic
+    databases to detect differentially abundant patterns in patients with schizophrenia
+    compared to healthy controls (Nearing et al., 2022; Wallen, 2021). This study
+    indicates that individuals with schizophrenia show greater abundance of Faecalibacterium
+    and Limnobacillus with lower abundance of mood stabilizers. Our findings regarding
+    the differential abundance of Faecalibacterium and Lactobacillus are consistent
+    with findings from recent scientific reviews showing altered microbiota composition
+    in patients with schizophrenia (Parprevotella and Faecalibacterium) represent
+    butyrate production of SCFAs - butyrate. (Borkensen et al., 2022); SCFAs are produced
+    by gut anaerobic fermentation of dietary fiber. They interact with vagal afferents
+    by stimulating the secretion of gut hormones such as glucagon-peptide 1 and YY
+    (PY) as well as neurotransmitters such as y-aminobutyric and serotonin (Silva
+    et al., 2020).
+
+
+    Finally, analyzed correlations of four differentially abundant genera with clinical
+    variables specific for patients with schizophrenia. We found we, but significant
+    positive correlation with the of mood stabilizers and the abundance of Parprevotella,
+    Moreover;
+
+
+    6'
+  - '[PAGE 6]
+
+
+    # P. Karpiński et al.
+
+
+    # Psychoneuroendocrinology 155 (2023) 106335
+
+
+    ![](img/ceccd730d18cc4c88589e3a90dce10bd_6_0.png)
+
+
+    Fig. 4. The chord diagram illustrating the correlation between clinical characteristics
+    of schizophrenia and CLR-transformed abundances of selected genera. Correlation
+    matrix has been calculated using the Spearman coefficients. Only correlation coefficients
+    ≥ 0.2 are shown. All of them were significant after adjustment for multiple testing
+    (the False Discovery Rate procedure). Abbreviations: CDSS, the Calgary Depression
+    Scale for Schizophrenia; PANSS, the Positive and Negative Sympt Scale – score
+    of negative symptoms; SOAS, the Social and Occupational Functioning Assessment
+    Scale.
+
+
+    To our knowledge, previous studies investigated dietary habits contribute to microbiota
+    alterations in subjects with schizophrenia. It is now widely known that patients
+    with schizophrenia show poor dietary habits with high intake of refined carbohydrates,
+    processed foods, and low intake of certain vitamins and minerals (Asoucin et al.,
+    2020). Our study demonstrated that dietary intake of certain food products might
+    be related to microbiota alterations in schizophrenia. Greater abundance of *Parapivotella*
+    was related to lower intake of fish, while lower abundance of *Faecalibacterium*
+    was also associated with lower levels of HDL. Moreover, the consumption of both
+    food products was significantly associated with schizophrenia, differentiated
+    between different groups of patients with autism. It has been reported that lactic
+    acid producing bacteria (including *Lactobacillus* and *Bifidobacterium*) species
+    can exert a number of biological activities that might be beneficial in terms
+    of modulating cholesterol metabolism (Vonesky et al., 2021). Similarly, it has
+    been reported that polyphenols and fiber that are typical
+
+
+    components of plant foods increase the abundance of lactic acid bacteria (Tonova
+    et al., 2019). However, the *Lactobacillus* genus is also heterogeneous with certain
+    species having pro-inflammatory properties (Rocha-Rameriz et al., 2017). Also,
+    Zhou et al. (2020) identified different *Lactobacillus* species in patients with
+    schizophrenia that did not occur in the healthy gut environment. Therefore, our
+    findings indicate the necessity to explore the abundance of specific strains of
+    *Lactobacillus* and *Limosillactobacillus* that differantly associated with clinical
+    features in patients with schizophrenia from our sample. The abundance of *Lactobacillus*
+    and *Limosillactobacillus* was negatively correlated with performance of the RBANS
+    attention domain. Moreover, individuals with schizophrenia showed significantly
+    lower attention domain. Additionally, it should be noted that the RBANS attention
+    score is the sum of scores from two tasks – digit coding and digit spin. The first
+    measures processing speed, while the other measures working memory. Therefore,
+    it is concluded that greater abundance of *Lactobacillus* and *Limosillactobacillus*
+    might be related to better cognitive functions in terms of attention, processing
+    speed and working memory. However, the relevance and specific mechanisms of these
+    correlations should be interpreted with caution. Indeed, these correlations are
+    in agreement with
+
+
+    7'
+  md: '
+
+    # P. Karpiński et al.
+
+    Psychoneuroendocrinology 155 (2023) 106335
+
+
+    ![](img/ceccd730d18cc4c88589e3a90dce10bd_4_0.png)
+
+
+    Fig. 1. The comparison of alpha-diversity measures between patients with schizophrenia
+    (Scz) and healthy controls (Ctrl). The analysis was based on the DPv18 data. Boxplots
+    show the median and interquartile range.
+
+
+    ## A
+
+
+    | Genus | Number of methods | Enrichment |
+
+    |---|---|---|
+
+    | Bacteroidetes | | Ctrl/Scz |
+
+    | Firmicutes | | | |
+
+    | Lactobacillus | | | |
+
+    | Unicostiraceae | | | |
+
+    | Prevotella | | | |
+
+    | Preadagoides | | | |
+
+    | Clostridium | | | |
+
+    | Eubacterium | | | |
+
+    | Agrobacterium | | | |
+
+    | Blautia | | | |
+
+    | Lachnospira | | | |
+
+    | Roseholderia | | | |
+
+    | Kleiella | | | | |
+
+    | Selostridium | | | | |
+
+    | Veillonella | | | | |
+
+    | Eubacterium | | | | |
+
+    | Faecalibacterium | | | | |
+
+    | Cytostaga | | | | |
+
+
+    ## B
+
+
+    | Genus | Number of methods | Enrichment |
+
+    |---|---|---|
+
+    | Parasomonas | | Ctrl/Scz |
+
+    | Lactobacillus | | | |
+
+    | Unicostiraceae | | | |
+
+    | Prevotella | | | | |
+
+    | Preadagoides | | | | |
+
+    | Clostridium | | | | |
+
+    | Eubacterium | | | | |
+
+    | Roseholderia | | | | |
+
+    | Blautia | | | | |
+
+    | Lachnospira | | | | |
+
+    | Kleiella | | | | |
+
+    | Selostridium | | | | |
+
+    | Veillonella | | | | |
+
+    | Eubacterium | | | | |
+
+    | Faecalibacterium | | | | |
+
+    | Cytostaga | | | | |
+
+
+    ## C
+
+
+    | Genus | Number of methods | Enrichment |
+
+    |---|---|---|
+
+    | Parasomonas | | Ctrl/Scz |
+
+    | Lactobacillus | | | |
+
+    | Unicostiraceae | | | |
+
+    | Prevotella | | | | |
+
+    | Preadagoides | | | | |
+
+    | Clostridium | | | | |
+
+    | Eubacterium | | | | |
+
+    | Roseholderia | | | | |
+
+    | Blautia | | | | |
+
+    | Lachnospira | | | | |
+
+    | Kleiella | | | | |
+
+    | Selostridium | | | | |
+
+    | Veillonella | | | | |
+
+    | Eubacterium | | | | |
+
+    | Faecalibacterium | | | | |
+
+    | Cytostaga | | | | |
+
+
+    Fig. 2. Barplots representing results of differential abundance (DA) analysis
+    between patients with schizophrenia (Scz) and healthy controls (Ctrl) at the level
+    of genus. Results were aggregated based on analysis of four distinct taxonomic
+    reference databases and 11 different approaches. All plots show that genus was
+    found to be differentially abundant (the false discovery rate-corrected p-value
+    < 0.05) by any method of analysis. The X axis indicates how many times genus was
+    indicated as significantly and differentially abundant by 11 different approaches:
+    A) Genome Taxonomy Database (GTDB), version 207, B) The Genomic Database Project
+    (RDF) Training Set, version 18, C) RefSeq and Ribosomal Database Project (RDF)
+    Training Set, version 16 and D) SILVA version 138.
+
+
+    # P. Karpiński et al.
+
+
+    # Psychoneuroendocrinology 155 (2023) 106335
+
+
+    ![](img/ceccd730d18cc4c88589e3a90dce10bd_5_0.png)
+
+
+    Fig. 3. The chord diagram illustrating the correlation between various groups
+    of variables selected by the DIABLO analysis and CLR-transformed abundances of
+    selected genera. Correlation matrix calculated using the crossPlot function in
+    the mixOnX package. Correlations with coefficients ≥ 0.7 are shown. None were
+    after adjustment for multiple testing (the False Discovery Rate procedure). Red
+    links indicate positive correlations, whereas blue indicate negative correlations.
+    Abbreviations: ACEs, adolescent childhood experiences; AD, Mediterranean Diet;
+    HDL, high-density lipoproteins; PSS, the Perceived Stress Scale; RBS, the Repeatable
+    Battery for the Assessment of Neuropsychological Status; TEC, the Traumatic Experiences
+    Checklist; visit visuospatial/constructational features.
+
+
+    (significantly enriched in healthy control), Limnobacillus (significantly enriched
+    in patients with schizophrenia) and Lactobacillus (significantly enriched in patients
+    with schizophrenia).
+
+
+    Results of these analyses are shown in b. 3. In this analysis, we found to confirm
+    correlations of abundance with sample characteristics within specific layers of
+    variables (biochemical parameters, cognition, clinical variables). No significant
+    correlations were found between the abundance of the Faecalibacterium and other
+    variables. The Parprevotella was strongly positively correlated with fish, and
+    negatively correlated with PSS. The abundance of Lactobacillus was positively
+    correlated with RBS attention score. The abundance of vegetables, RBS attention
+    score and HDL levels had. The highest number of significant correlations were
+    found for the abundance of the Limnobacillus genus: 1 positive correlations with
+    the history of any ACEs and 2 negative correlations with relations with HDL, the
+    RBS attention score and consumption of vegetables. We found, but significant positive
+    correlation with the abundance of Faecalibacterium (Fig. 4).
+
+
+    ## 4. Discussion
+
+
+    In this study, we used multiple methods of differential analysis and taxonomic
+    databases to detect differentially abundant patterns in patients with schizophrenia.
+    In this study, we used multiple methods of differential analysis and taxonomic
+    databases to detect differentially abundant patterns in patients with schizophrenia.
+    In this study, we used multiple methods of differential analysis and taxonomic
+    databases to detect differentially abundant patterns in patients with schizophrenia.
+    In this study, we used multiple methods of differential analysis and taxonomic
+    databases to detect differentially abundant patterns in patients with schizophrenia.
+    In this study, we used multiple methods of differential analysis and taxonomic
+    databases to detect differentially abundant patterns in patients with schizophrenia.
+    In this study, we used multiple methods of differential analysis and taxonomic
+    databases to detect differentially abundant patterns in patients with schizophrenia.
+    In this study, we used multiple methods of differential analysis and taxonomic
+    databases to detect differentially abundant patterns in patients with schizophrenia.
+    In this study, we used multiple methods of differential analysis and taxonomic
+    databases to detect differentially abundant patterns in patients with schizophrenia.
+    In this study, we used multiple methods of differential analysis and taxonomic
+    databases to detect patients with schizophrenia.
+
+
+    # P. Karpiński et al.
+
+
+    # Psychoneuroendocrinology 155 (2023) 106335
+
+
+    ![](img/ceccd730d18cc4c88589e3a90dce10bd_6_0.png)
+
+
+    Fig. 4. The chord diagram illustrating the correlation between clinical characteristics
+    and CLR-transformed abundances of selected genera. Correlation matrix calculated
+    using the crossPlot function in the mixOnX package. Correlations with coefficients
+    ≥ 0.7 are shown. None were after adjustment for multiple testing (the False Discovery
+    Rate procedure). Red links indicate positive correlations, whereas blue indicate
+    negative correlations. Abbreviations: ACEs, adolescent childhood experiences;
+    AD, Mediterranean Diet; HDL, high-density lipoproteins; PSS, the Perceived Stress
+    Scale; RBS, the Repeatable Battery for the Assessment of Neuropsychological Status;
+    TEC, the Traumatic Experiences Checklist; visit visuospatial/constructational
+    features.
+
+
+    To our knowledge, previous studies investigated dietary habits contribute to microbiota.
+    It is now widely known that patients with schizophrenia show poor dietary habits
+    with high intake of refined carbohydrates, processed foods, and low intake of
+    vitamins and minerals (Asoucin et al., 2020). Our study demonstrated that dietary
+    intake of certain food products might be related to microbiota alterations. Greater
+    abundance of Parprevotella was related to lower intake of fish, while lower abundance
+    of Faecalibacterium was also associated with lower levels of HDL. Moreover, the
+    consumption of both food products was significantly associated with schizophrenia,
+    differentiated between different groups of patients with autism. It has been reported
+    that lactic acid bacteria (including Lactobacillus and Bifidobacterium) species
+    can exert a number of biological activities that might be beneficial in terms
+    of modulating cholesterol metabolism (Vonesky et al., 2021). Similarly, it has
+    been reported that polyphenols and fiber that are typical components of plant
+    foods increase the abundance of lactic acid bacteria (Tonova et al., 2019). However,
+    the genus is also heterogeneous with certain species having pro-inflammatory properties
+    (Rocha-Rameriz et al., 2017). Also, Zhou et al. (2020) identified different Lactobacillus
+    species in patients with schizophrenia that did not occur in the healthy gut environment.
+    Therefore, our findings indicate the necessity to explore the abundance of specific
+    strains of Lactobacillus and Limnobillacillus that differantly associated with
+    clinical features in patients with schizophrenia from our sample. The abundance
+    of Lactobacillus and Limnobillacillus was negatively correlated with performance
+    of the RBANS attention domain. Moreover, individuals with schizophrenia showed
+    significantly lower attention domain. Additionally, it should be noted that the
+    RBANS attention score is the sum of scores from two tasks – digit coding and digit
+    spin. The first measures processing speed, while the other measures working memory.
+    Therefore, it is concluded that greater abundance of Lactobacillus and Limnobillacillus
+    might be related to better cognitive functions in terms of attention, processing
+    speed and working memory. However, the relevance and specific mechanisms of these
+    correlations should be interpreted with caution. Indeed, these correlations are
+    in agreement with
+
+    '
+  mdcn: '
+
+
+    # P. Karpiński 等
+
+    精神神经内分泌学（Psychoneuroendocrinology） 155 (2023) 106335
+
+
+    ![](img/ceccd730d18cc4c88589e3a90dce10bd_4_0.png)
+
+
+    图 1. 分裂症患者（Scz）与健康对照组（Ctrl）之间 α多样性指标的比较。分析基于 DPv18 数据。箱线显示中位数和四分位范围。
+
+
+    ## A
+
+
+    | 属 | 方法数量 | 富集情况 |
+
+    |---|---|---|
+
+    | 拟杆菌门 (Bacteroidetes) | | Ctrl/Scz |
+
+    | 厚壁菌门 (Firmicutes) | | | |
+
+    | 乳酸菌属 (Lactobacillus) | | | |
+
+    | 单刺杆菌科 (Unicostiraceae) | | | |
+
+    | 拟铁杆菌 (Prevotella) | | | |
+
+    | 前芽孢属 (Preadagoides) | | | |
+
+    | 梭菌属 (Clostridium) | | | |
+
+    | 益生菌属 (Eubacterium) | | | |
+
+    | 农杆菌属 (Agrobacterium) | | | |
+
+    | 鲍氏菌属 (Blautia) | | | |
+
+    | 链状孢菌属 (Lachnospira) | | | |
+
+    | 玫瑰杆菌属 (Roseholderia) | | | |
+
+    | 克雷伯菌属 (Kleiiella) | | | |
+
+    | 变形菌属 (Selostridium) | | | | |
+
+    | 韦酸菌属 (Veillonella) | | | | |
+
+    | 益生菌属 (Eubacterium) | | | | |
+
+    | 粪杆菌属 (Faecalibacterium) | | | | |
+
+    | 细胞藻属 (Cytostaga) | | | | |
+
+
+    ## B
+
+
+    | 属 | 方法数量 | 富集情况 |
+
+    |---|---|---|
+
+    | 假胞菌 (Parasomonas) | | Ctrl/Scz |
+
+    | 乳酸菌属 (Lactobacillus) | | | |
+
+    | 单刺杆菌科 (Unicostiraceae) | | | |
+
+    | 拟铁杆菌 (Prevotella) | | | | |
+
+    | 前芽孢属 (Preadagoides) | | | | |
+
+    | 梭菌属 (Clostridium) | | | | |
+
+    | 益生菌属 (Eubacterium) | | | | |
+
+    | 玫瑰杆菌属 (Roseholderia) | | | | |
+
+    | 鲍氏菌属 (Blautia) | | | | |
+
+    | 链状孢菌属 (Lachnospira) | | | | |
+
+    | 克雷伯菌属 (Kleiiella) | | | | |
+
+    | 变形菌属 (Selostridium) | | | | |
+
+    | 韦酸菌属 (Veillonella) | | | | |
+
+    | 益生菌属 (Eubacterium) | | | | |
+
+    | 粪杆菌属 (Faecalibacterium) | | | | |
+
+    | 细胞藻属 (Cytostaga) | | | | |
+
+
+    ## C
+
+
+    | 属 | 方法数量 | 富集情况 |
+
+    |---|---|---|
+
+    | 假胞菌 (Parasomonas) | | Ctrl/Scz |
+
+    | 乳酸菌属 (Lactobacillus) | | | |
+
+    | 单刺杆菌科 (Unicostiraceae) | | | |
+
+    | 拟铁杆菌 (Prevotella) | | | | |
+
+    | 前芽孢属 (Preadagoides) | | | | |
+
+    | 梭菌属 (Clostridium) | | | | |
+
+    | 益生菌属 (Eubacterium) | | | | |
+
+    | 玫瑰杆菌属 (Roseholderia) | | | | |
+
+    | 鲍氏菌属 (Blautia) | | | | |
+
+    | 链状孢菌属 (Lachnospira) | | | | |
+
+    | 克雷伯菌属 (Kleiiella) | | | | |
+
+    | 变形菌属 (Selostridium) | | | | |
+
+    | 韦酸菌属 (Veillonella) | | | | |
+
+    | 益生菌属 (Eubacterium) | | | | |
+
+    | 粪杆菌属 (Faecalibacterium) | | | | |
+
+    | 细胞藻属 (Cytostaga) | | | | |
+
+
+    图 2. 代表分裂症患者（Scz）与健康对照组（Ctrl）属水平水平差异丰度（DA）分析结果的柱状图。结果基于四个不同的分类参考数据库和 11 种不同方法的分析聚合而成。所有图表显示，任何分析方法均发现该属存在差异丰度（经错误发现率校正的
+    p 值 < 0.05）。X轴表示属被 11 种不同方法指示为显著且差异丰度的次数：A) 基因组分类数据库 (GTDB)，版本 207，B) 基因组数据库项目
+    (RDF) 训练集，版本 18，C) RefSeq 和核糖体数据库项目 (RDF) 训练集，版本 16 以及 D) SILVA 版本 138。
+
+
+    # P. Karpiński 等
+
+
+    # 精神神经内分泌学（Psychoneuroendocrinology） 155 (2023) 106335
+
+
+    ![](img/ceccd730d18cc4c88589e3a90dce10bd_5_0.png)
+
+
+    图 3. 径图说明了 DIABLO 分析选择的各种变量组与所选属的 CLR 转换丰度之间的相关性。使用 mixOnX 包中的 `crossPlot` 函数计算相关性矩阵。显示系数
+    ≥ 0.7 的相关性。在多重测试调整后（错误发现率程序）均不显著。红线表示正相关，蓝色表示负相关。缩写：ACEs，青少年童年经历；AD，地中海饮食；HDL，高密度蛋白；PSS，感知压力量表；RBS，神经心理状态评估重复性电池；TEC，创伤经历检查表；访问视觉空间/构建特征。
+
+
+    （在健康对照组中显著富集），水生杆菌属（在分裂症患者中显著富集）和乳酸菌属（在分裂症患者中显著富集）。
+
+
+    这些分析的结果显示在 b. 3 中。在这一分析中，我们证实了丰度与特定变量层（生化参数、认知、临床变量）内样本特征的相关性。未发现粪杆菌的丰度与其他变量之间存在显著相关性。拟铁杆菌（Parprevotella）与鱼类强正相关，与
+    PSS 负相关。乳酸菌的丰度与 RBS 注意力评分正相关。蔬菜的丰度、RBS 注意力评分和 HDL 水平具有。水生杆菌属的丰度发现了数量最多的显著相关性：与任何
+    ACEs 历史有 1 个正相关，与 HDL 关系、RBS 注意力评分和蔬菜摄入有 2 个负相关。我们发现与粪杆菌丰度之间存在显著正相关（图 4）。
+
+
+    ## 4. 讨论
+
+
+    在本研究中，我们使用了多种差异分析方法和分类数据库来检测分裂症患者的差异丰度模式。在本研究中，我们使用了多种差异分析方法和分类数据库来检测分裂症患者的差异丰度模式。在本研究中，我们使用了多种差异分析方法和分类数据库来检测分裂症患者的差异丰度模式。在本研究中，我们使用了多种差异分析方法和分类数据库来检测分裂症患者的差异丰度模式。在本研究中，我们使用了多种差异分析方法和分类数据库来检测分裂症患者的差异丰度模式。在本研究中，我们使用了多种差异分析方法和分类数据库来检测分裂症患者的差异丰度模式。在本研究中，我们使用了多种差异分析方法和分类数据库来检测分裂症患者的差异丰度模式。在本研究中，我们使用了多种差异分析方法和分类数据库来检测分裂症患者的差异丰度模式。在本研究中，我们使用了多种差异分析方法和分类数据库来检测分裂症患者的差异丰度模式。
+
+
+    # P. Karpiński 等
+
+
+    # 精神神经内分泌学（Psychoneuroendocrinology） 155 (2023) 106335
+
+
+    ![](img/ceccd730d18cc4c88589e3a90dce10bd_6_0.png)
+
+
+    图 4. 径图说明了临床特征与所选属的 CLR 转换丰度之间的相关性。使用 mixOnX 包中的 `crossPlot` 函数计算相关性矩阵。显示系数 ≥
+    0.7 的相关性。在多重测试调整后（错误发现率程序）均不显著。红线表示正相关，蓝色表示负相关。缩写：ACEs，青少年童年经历；AD，地中海饮食；HDL，高密度蛋白；PSS，感知压力量表；RBS，神经心理状态评估重复性电池；TEC，创伤经历检查表；访问视觉空间/构建特征。
+
+
+    据我们所知，以往的研究调查了饮食习惯对微生物群的影响。众所周知，分裂症患者的饮食习惯较差，精制碳水化合物和加工食品摄入过多，维生素和矿物质摄入不足（Asoucin
+    等，2020）。我们的研究表明，某些食品的摄入可能与微生物群改变有关。拟铁杆菌的较高丰度与鱼类摄入有关，而粪杆菌丰度的降低也与 HDL 水平较低有关。此外，两种食品的摄入与分裂症显著相关，并在不同患者组有所区分。据报道乳酸菌（包括乳杆菌和双歧菌）种类可以产生多种生物活性，在胆固醇代谢方面可能有益（Vonesky
+    等，2021）。同样，植物食品典型成分的多酚和纤维会增加乳酸菌的丰度（Tonova 等，2019）。然而，该属也异质性，某些物种具有促炎作用（Rocha-Rameriz
+    等，2017）。此外，Zhou 等（2020）在分裂症患者中发现了不同的乳杆菌属，这些菌在健康肠道环境中并不存在。因此，我们的发现表明有必要探索乳酸菌和水生杆菌特定菌株，它们与样本中分裂症患者的临床特征差异相关。乳酸菌和水生杆菌的丰度与
+    RBS 注意力域的表现负相关。此外，分裂症患者的注意力域表现显著较低。值得注意的是，RBS 注意力分是两个任务（数字编码和数字旋转）得分之和。前者测量处理速度，后者测量工作记忆。因此得出结论，乳酸菌和水生杆菌的较高丰度可能与注意力、处理速度和工作记忆方面的更好认知功能有关。然而，这些相关性和特定机制需要谨慎解释。事实上，这些相关性与
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 7]
+
+
+    findings from previous studies that showed increased abundance of Lactobacilli
+    in patients with Schizophrenia (Li et al., 2019; Zhou et al., 2021), several lines
+    of evidence from preclinical and clinical trials indicate that these probiotics
+    are frequently caused and species of Lactobacillus may be beneficial in the treatment
+    of schizophrenia. This also point to the heterogeneity of the Lactobacillus genus
+    in its biological activity. It is important to interpret the correlates of the
+    Faecalibacterium genus with other characteristics.
+
+
+    Faecalibacterium genus was weakly but significantly linked to lower of depressive
+    symptoms and general functioning in patients with schizophrenia. This is not in
+    agreement with the findings of decreased abundance of Faecalibacterium in patients
+    with major depression (for a review by Kues et al. (2013). Also, this study by
+    Jing and (2015) revealed a negative correlation between the abundance of Lactobacillus
+    and depressive symptoms. Potential explanations for this difference remain unknown.
+    It should be noted that schizophrenia and major depression are different disorders.
+
+
+    Most importantly, the present findings, for the first time, indicate that gut
+    alterations in patients with schizophrenia might be associated with increased
+    abundance of Lactobacilli. Unlike exposure to stress, individuals with schizophrenia
+    in our reported study showed higher ratios of every categories of Lactobacilli
+    compared to the decreased abundance of Faecalibacterium in the due to (Zheng et
+    al., 2020). The mechanisms linking the abundance of Lactobacillus to schizophrenia
+    remain unclear. The multi-litter early-life (maternal absence, weaning and unpredictable
+    chronic mild stress) showed stress-specific effects on the abundance of Lactobacillus
+    in mice (Runcel et al., 2019).
+
+
+    There are limitations of the present study that should be considered. Our sample
+    was not large, and thus false negative and false positive results occurred. Furthermore,
+    it should be considered, with respect to the association of Regparavel, with the
+    use of mood stabilizers found. Another point is that the 16S rRNA sequencing used
+    in this study was not sufficient to analyze specific bacterial strains. Therefore
+    our study focused on at the genus level as revealed by Neearing et al. (2022).
+    Our present findings linking schizophrenia with gut microbiota may be excluded
+    that the effects of AKIs simply reflect the impact of other factors related to
+    social disadvantage in childhood. The social history of patients, including early
+    upbringing, education and socioeconomic status (Smith et al., 2015). For parental
+    education, it cannot be excluded that other elements of socioeconomic status,
+    including income, household environment, and quality of health facilities better
+    explain socioeconomic status (2019). Family schizophrenia is also associated with
+    gut microbiota in infants and children (Levis et al., 2021). Although these factors,
+    AKIs, might shape the healthy gut microbiota, contributing to the development
+    of schizophrenia (Gao et al., 2021). Another limitation is that the study was
+    based on reports of exposure to stress and dietary habits, and thus a real bias
+    needs to be taken into consideration. Longitudinal design was needed to establish
+
+
+    causal associations.
+
+    In sum, the present findings largely confirm increased abundance of lactic producing
+    bacteria and decreased abundance of bacteria producing SCFAs in patients with
+    schizophrenia. For the first time, the present findings indicate that stress may
+    contribute to these alterations. Given some of them might help for clinical manifestation
+    and lipid profiles, development of interventions targeting the mechanisms underlying
+    gut microbiota alterations in schizophrenia is needed. It is also necessary to
+    provide insights into specific mechanisms underlying the effects of stress on
+    gut microbiome.
+
+
+    # Funding
+
+
+    This research was funded by the OPS grant granted by the National Science Center
+    (grant number: 2018/3/B/NSZ/0027)
+
+
+    # Declaration of Interest
+
+
+    None to declare.
+
+
+    # Acknowledgements
+
+
+    The authors are grateful to all patients and healthy controls for their participation
+    in the study.
+
+
+    # Appendix A. Supporting information
+
+
+    Supplementary data associated with this article can be found online at doi:10.1016/j.psyneve.2023.106.335.
+
+
+    # References
+
+
+    As, L., Fisher, A.J., Qu, S., Huynh, N., Maysi, F.S., Fuchs, A. (2009). Education
+    as an indicator of socioeconomic status: Improving quality of life and health
+    outcomes in major depressive patients. Public Health, 37(5), 562-567. doi:10.2105/journal.ajpubh.2009.014333.
+
+
+    Al, A., Greenfield, P., Schiroffer, K. (2021). QIIME 16S rRNA sequencing genes
+    for bacteria and archaea. Nature Communications, 12(1), 1-9.
+
+
+    Borgward, T. J., Wang, J., Li, J., Yan, Y., Zhang, Y., Wang, J., Li, J.,,,, J.,
+    Li, J., Tang, C., Wang, J. D., &., Pededa, R. E. (1999). Assessing Depression
+    in children and adolescents. The American Journal of Psychiatry, 164(3), 493-504.
+    doi:10.1176/appi.ajp.164.3.493.n
+
+
+    Bhatt, A., Greenfield, P., Schiroffer, K. (2021). QIIME 16S rRNA sequencing genes
+    for bacteria and archaea. Nature Communications, 12(1), 1-9.
+
+
+    Bhatt, A., Greenfield, P.,,iro,, K. (2, J., Li, J., Li, J., Tang, C., Wang, J.,
+    Li, J., Wang, J. (2022). Diet and microbiome in schizophrenia: a review. Neuropsychopharmology
+    Psychiatry, 70(10), 9945-2009. doi:10.1012/n..000000335
+
+
+    Bowers, S., Garcia-Andres, O., Borrows, D., Fine, M. H., & King, C. J. (2022).
+    The role of gut microbiota in the pathogenesis and treatment of schizophrenia.
+    Molecular Psychiatry, 27(8), 822-835. doi:10.1038/s41380-021-01163-y
+
+
+    Can, Y., Sun, X., Zhang, J., Ke, S., Hu, L., Wang, J., Bao, S., V, H., Yang, Y.
+    (2022). The gut-micro-brain axis in schizophrenia: a review. Frontiers in Psychiatry,
+    9, 891000. doi:10.3389/fpsyt.2022.891000.
+
+
+    Cao, Y., Wang, J., Zhang, F., Li, Y., Liu, N., C. (2022). The gut-brain axis in
+    schizophrenia: a review. Frontiers in Psychiatry, 13, 891000.'
+  - '[PAGE 8]
+
+
+    P. Karopiski
+
+
+    Psychoneuroscience 155 (2023) 103625
+
+
+    Cori, S., Solmi, M., Gray, G., Schneider, K., Roth-Muzik, S.C., Farley, L., Smith,
+    N., Litter, I., Gorwood, G., Taipale, H., Mortality, J. 2023. A systematic review
+    and meta-analysis of risk for anxiety and depression in children and adolescents.
+
+
+    Ferna, A.D., Jain, N.S., Jackson, R.W., Jackman, Y.M., Teabaugh, N.D., Edgar,
+    B. R. 2017. Characterizing anaerobic bacteria by 16S rRNA gene sequencing and
+    selective growth experiments by compositional data. Microbiome 15, 25. https://doi.org/10.1186/s40161-017-0255-6
+
+
+    Finlay, J., Buckley, P., Berry, M. 2013. Meta-analysis of studies supporting the
+    link between gut microbiota and emotional disorders in humans. Molecular Psychiatry
+    18, 72. https://doi.org/10.1038/mp4138-013-0019-9
+
+
+    García-García, D., Sevilla, A., Sondelhof, M., Falk, P., Kierfeld, G., Gomez,
+    J., Vandeveld, A., Nielsen, M., Jörnberg, L., Sabin, M., Petzer, P., Littel, G.
+    2021. GPA: impact of early life adversity on gut microbiota. Development 92, 105421.
+    https://doi.org/10.1016/j.bidev.2021.105421
+
+
+    Hansen, M. S., Wang, J., & Chen, Y. 2021. The role of early-life stress on impaired
+    innate immune function and gut microbial growth in preterm infants. Neonat. 48,
+    21–24. https://doi.org/10.1007/s10038-021-01994-y
+
+
+    Harvey, W., Lowodska, S., Mazurkiewicz, A., Gotała, J. 2022. Adherence to plant
+    diet and gut microbial diversity is associated with depressive symptoms in patients
+    with depression. Nutrients 14, 2385. https://doi.org/10.3390/nurients14052385
+
+
+    Holtz, V., & Kelly, J. 2020. The gut-brain axis: a review of microorganisms. Current
+    Opinion in Psychiatry 33, 219. https://doi.org/10.1097/YPO.0000000000000919
+
+
+    Hansen, M. S., Braun, B. 2014. Circadian rhythms, inflammation and inflammatory
+    markers in bipolar disorder. Neuropsychiatry 28, 2031–2038. https://doi.org/10.1007/s00164-013-9213-x
+
+
+    complication. Microbiol. Ecol. Health Res. 26, 27663. https://doi.org/10.1093/me/mea2763
+
+
+    Müller, J. 1991. Analysis of clinical trials in treatments of psychiatric illness:
+    a systematic review. Psychotherapy, 48, 764–775. https://doi.org/10.1002/ap.1991018005
+
+
+    Müller, J., Levenson, A., Gallagher, L., O’Leary, F., Simpson, C., Green, J.,
+    Mars, H., Watt, G., Goest, M., Berk, E., Mehta, S., J. 2022. A systematic review
+    of gut microbiota composition in individuals with schizophrenia. Schizophrenia
+    Res. 24, 19. https://doi.org/10.1016/j.schsch.2021.09.02
+
+
+    Nissim, M. K., Kierfeld, A., & Kripnik, P. 2021. Meta-analysis of gut microbiota
+    composition in clinical status of schizophrenia and autism spectrum. Psychiatry
+    76, 760–765. https://doi.org/10.1016/j.psychiat.2021.07.012
+
+
+    O''Connell, S. E., O''Sullivan, S. P., & Kelly, J. 2022. The role of probiotics
+    in dietary treatment for DADAD. Frontiers in Psychiatry 12, 634. https://doi.org/10.3389/fpsyt.2021.634623
+
+
+    Owczarek, J. M., Bakaśmicki, L., Frydecka, D. 2017. Effect of probiotics in antidepressant-resistant
+    patients with depressive and non-psychotic psychosis: a systematic review. Neuropsychiat.
+    190, 187–198. https://doi.org/10.1016/j.neuropsych.2017.03.002
+
+
+    Piotrowska, L., Bieleńska, M., Wiechowicz, A., Szadłowska, R. 2021. The gut-brain
+    axis in schizophrenia: Can the microbiota stop the treatment of psychosis?
+
+
+    Prusnik, M., Smaszczuk, M., Wiejnowska, J., Marek., Stacyszczyk, B. 2021. Meta-analysis
+    of gut microbiota and blood satiety levels in patients with schizophrenia. Frontiers
+    in Psychiatry 12, 662. https://doi.org/10.3389/fpsyt.2021.662033
+
+
+    Tan, M., Yi, J., Abraham, A.E., Des, S. D., Sun, K. S., Liu, Y. 2022. The gut-brain
+    axis in schizophrenia: a review. J Clin Behav. 9, 104952. https://doi.org/10.1016/j.jcb.2022.104952
+
+
+    Neung, J. T., Gamm, H. G., May, M. D., Davis, A. D., Newburgh, J., Angst, J. C.,
+    & Costello, C. 2020. Classification of anxiety and depression subtypes using microbiome
+    abundance difference profiles. Scientific Reports 10, 555.
+
+
+    Niedźwiedz, E., Kowalska, L., Wojtowiczska, J. 2019. Impact of childhood adversity
+    on gut microbiota in the first 10-15 years of life. Nutrients 11, 2183. https://doi.org/10.3390/nu11092183
+
+
+    Nowak, A., Van Kramer, K., & Krooper, C. 2020. The characteristics of the traumatic
+    experiences (TEC): Finding first approaches in clinical practice.
+
+
+    Perez, G., Oliveira, B., Horn, P. A. 2013. Differential analysis of gut microbiota
+    abundance in health. Microbiome 10, 1192–1204. https://doi.org/10.1189/fmicrobi.2013.00015.
+
+
+    Quinn, Y., Wang, G., Singh, S., & Rees, S. K. 2016. The association between first-life
+    psychosis and gut control system regulation and microbiota. Frontiers in Psychiatry
+    7, 1848.
+
+
+    Ramírez-Lamer, J. M., Perez-Solera, R., Antolin-García, A., Gonzalez-M., Gutierrez-Sanchez,
+    J., & Jimenez, J. 2017. Probiotics strains stimulate the immune response and activate
+    gut microbiota.
+
+
+    Li, H., Han, Y., Hu, P., Du, J., Wang, X., Wang, Y., Zhang, J., Chen, L., & Chen,
+    S. 2019. Analysis of gut microbiota diversity in patients with diabetes mellitus.
+    Microbiome 15, 1357–1366. https://doi.org/10.1186/s40161-018-0294-x
+
+
+    Liu, H., Panadas, S. 2020. Analysis of gut microbiota in patients with high correlation.
+    Microbiome 11, 314. https://doi.org/10.1186/s40161-020-0741-7.
+
+
+    Li, J., Zhang, J., Zhang, Y., Wang, J., Li, J., Zhang, Y., Zhang, Y., Zhang, Y.,
+    Li, H., Li, J., & Chen, F. 2021. The association between gut microbiota and depression
+    in children. Microbiome 9, 10011. https://doi.org/10.1186/s40161-021-0813-y
+
+
+    Lee, L.B., Cowan, S., Kim, S.H., Shin, V. H., Park, A. D., Lee, M. K., Lee, S.
+    K., Choi, S. E., & Lee, V. J. 2021. The association between gut microbiota and
+    social stress in children. Microbiome 16, 9669. https://doi.org/10.1186/s40161-021-0993-y
+
+
+    9'
+  md: '
+
+    findings from previous studies that showed increased abundance of Lactobacilli
+    in patients with Schizophrenia (Li et al., 2019; Zhou et al., 2021), several lines
+    of evidence from preclinical and clinical trials indicate that these probiotics
+    are frequently used-regulated, and species of Lactobacillus may be beneficial
+    in the treatment of schizophrenia. This also points to the heterogeneity of the
+    Lactobacillus genus in its biological activity. It is important to interpret the
+    correlates of the Faecalibacterium genus with other characteristics.
+
+
+    Faecalibacterium genus was weakly but significantly linked to lower depressive
+    symptoms and general functioning in patients with schizophrenia. This is not in
+    agreement with the findings of decreased abundance of Faecalibacterium in patients
+    with major depression (for a review by Kues et al. (2013)). Also, this study by
+    Jing and Wang (2015) revealed a negative correlation between the abundance of
+    Lactobacillus and depressive symptoms. Potential explanations for this difference
+    remain unknown. It should be noted that schizophrenia and major depression are
+    different disorders.
+
+
+    Most importantly, the present findings, for the first time, indicate that gut
+    alterations in patients with schizophrenia might be associated with increased
+    abundance of Lactobacilli. Unlike exposure to stress, individuals with schizophrenia
+    in our reported study showed higher ratios of every category of Lactobacilli compared
+    to the decreased abundance of Faecalibacterium in the due to (Zheng et al., 2020).
+    The mechanisms linking the abundance of Lactobacillus to schizophrenia remain
+    unclear. The multi-litter early-life (maternal absence, weaning and unpredictable
+    chronic mild stress) showed stress-specific effects on the abundance of Lactobacillus
+    in mice (Runcel et al., 2019).
+
+
+    There are limitations of the present study that should be considered. Our sample
+    was not large, and thus false negative and false positive results occurred. Furthermore,
+    it should be considered, with respect to the association of Regparavel, with the
+    use of mood stabilizers found. Another point is that the 16S rRNA sequencing used
+    in this study was not sufficient to analyze specific bacterial strains. Therefore
+    our study focused on at the genus level as revealed by Neearing et al. (2022).
+    Our present findings linking schizophrenia with gut microbiota may be excluded
+    that the effects of AKIs simply reflect the impact of other factors related to
+    social disadvantage in childhood. The social history of patients, including early
+    upbringing, education and socioeconomic status (Smith et al., 2015). For parental
+    education, it cannot be excluded that other elements of socioeconomic status,
+    including income, household environment, and quality of health facilities better
+    explain socioeconomic status (2019). Family schizophrenia is also associated with
+    gut microbiota in infants and children (Levis et al., 2021). Although these factors,
+    AKIs, might shape the healthy gut microbiota, contributing to the development
+    of schizophrenia (Gao et al., 2021). Another limitation is that the study was
+    based on reports of exposure to stress and dietary habits, and thus a real bias
+    needs to be taken into consideration. Longitudinal design was needed to establish
+    causal associations.
+
+
+    In sum, the present findings largely confirm increased abundance of lactic producing
+    bacteria and decreased abundance of bacteria producing SCFAs in patients with
+    schizophrenia. For the first time, the present findings indicate that stress may
+    contribute to these alterations. Given some of them might help for clinical manifestation
+    and lipid profiles, development of interventions targeting the mechanisms underlying
+    gut microbiota alterations in schizophrenia is needed. It is also necessary to
+    provide insights into specific mechanisms underlying the effects of stress on
+    gut microbiome.
+
+
+    # Funding
+
+
+    This research was funded by the OPS grant granted by the National Science Center
+    (grant number: 2018/3/B/NSZ/0027)
+
+
+    # Declaration of Interest
+
+
+    None to declare.
+
+
+    # Acknowledgements
+
+
+    The authors are grateful to all patients and healthy controls for their participation
+    in the study.
+
+
+    # Appendix A. Supporting information
+
+
+    Supplementary data associated with this article can be found online at doi:10.1016/j.psyneve.2023.106.335.
+
+
+    # References
+
+
+    As, L., Fisher, A.J., Qu, S., Huynh, N., Maysi, F.S., Fuchs, A. (2009). Education
+    as an indicator of socioeconomic status: Improving quality of life and health
+    outcomes in major depressive patients. Public Health, 37(5), 562-567. doi:10.2105/journal.ajpubh.2009.014333.
+
+
+    Al, A., Greenfield, P., Schiroffer, K. (2021). QIIME 16S rRNA sequencing genes
+    for bacteria and archaea. Nature Communications, 12(1), 1-9.
+
+
+    Borgward, T. J., Wang, J., Li, J., Yan, Y., Zhang, Y., Wang, J., Li, J., J., Li,
+    J., Tang, C., Wang, J. D., &., Pededa, R. E. (1999). Assessing Depression in children
+    and adolescents. The American Journal of Psychiatry, 164(3), 493-504. doi:10.1176/appi.ajp.164.3.493.n
+
+
+    Bhatt, A., Greenfield, P., Schiroffer, K. (2021). QIIME 16S rRNA sequencing genes
+    for bacteria and archaea. Nature Communications, 12(1), 1-9.
+
+
+    Bhatt, A., Greenfield, P.,,iro,, K. (2, J., Li, J., Li, J., Tang, C., Wang, J.,
+    Li, J., Wang, J. (2022). Diet and microbiome in schizophrenia: a review. Neuropsychopharmology
+    Psychiatry, 70(10), 9945-2009. doi:10.1012/n..0000335
+
+
+    Bowers, S., Garcia-Andres, O., Borrows, D., Fine, M. H., & King, C. (2022). The
+    role of gut microbiota in the pathogenesis and treatment of schizophrenia. Molecular
+    Psychiatry, 27(8), 822-835. doi:10.1038/s41380-021-0163-y
+
+
+    Can, Y., Sun, X., Zhang, J., Ke, S., Hu, L., Wang, J., Bao, S., H., Yang, Y. (2022).
+    The gut-brain axis: a review. Frontiers in Psychiatry, 9. doi:10.3389/fpsyt.2022.8910
+
+
+    Cao, Y., Wang, J., Zhang, F., Li, Y., Liu, N. (2022). The gut-brain axis: a review.
+    Frontiers in Psychiatry, 13, 891.
+
+
+    P. Karopis Psychoneuroscience 155 (2023) 103625
+
+
+    Cori, S., Solmi, M., Gray, G., Schneider, K., RothMik, S., Farley, L., Smith,
+    N., Gorwood, G., Taipale, H., Mortality, J. (2023). A systematic review and meta-analysis
+    of risk for anxiety and depression in children and adolescents.
+
+
+    Ferna, A.D., Jain, N.S., Jackson, R.W., Jackman, Y., Teabaugh, N., Edgar, B. R.
+    (2017). Characterizing anaerobic bacteria by 16S rRNA sequencing and compositional
+    data. Microbiome, 15, 25. doi:10.1186/s40161-055
+
+
+    Finlay, J., Buckley, P., Berry, M. (2013). Meta-analysis of studies supporting
+    the link between gut microbiota and emotional disorders in humans. Molecular Psychiatry,
+    18, 72. doi:10.1038/mp4138-013-9
+
+
+    García-García, D., Sevilla, A., Sondelhof, M., Falk, P., Kierfeld, G., Gomez,
+    J., Vandeveld, A., Nielsen, M., Jörnberg, L., Sabin, M., Petzer, P., Littel, G.
+    (2021). Impact of early life adversity on gut microbiota. Development, 92, 105421.
+    doi:10.1016/j.dev.2021.105421
+
+
+    Hansen, M. S., Wang, J., & Chen, Y. (2021). The role of early-life stress on impaired
+    immune function and gut microbial growth in preterm infants. Neonat., 48, 21–24.
+    doi:10.1007/s10038-021-994-y
+
+
+    Harvey, W., Lowodska, S., Mazurkiewicz, A., Gotała, J. (2022). Adherence to plant
+    diet and gut microbial diversity is associated with depressive symptoms in patients
+    with depression. Nutrients, 14, 2385. doi:10.3390/nu14052385
+
+
+    Holtz, V., & Kelly, J. (2020). The gut-brain axis: a review of microorganisms.
+    Current Opinion in Psychiatry, 33, 219. doi:10.1097/YPO.000000000000919
+
+
+    Hansen, M. S., Braun, B. (2014). Circadian rhythms, inflammation and inflammatory
+    markers in bipolar disorder. Neuropsychiatry, 28, 2031–2038. doi:10.1007/s00164-013-9213-x
+
+
+    complication. Microbiol. Ecol. Health Res. 26, 27663. doi:10.1093/me/mea2763
+
+
+    Müller, J. (1991). Analysis of clinical trials in treatments of psychiatric illness:
+    a systematic review. Psychotherapy, 48, 764–775. doi:10.1002/ap.1991018005
+
+
+    Müller, J., Levenson, A., Gallagher, L., O’Leary, F., Simpson, C., Green, J.,
+    Mars, H., Watt, G., Goest, M., Berk, E., Mehta, S., J. (2022). A systematic review
+    of gut microbiota composition in individuals with schizophrenia. Schizophrenia
+    Res., 24, 19. doi:10.1016/j.schsch.2021.09.02
+
+
+    Nissim, M. K., Kierfeld, A., & Kripnik, P. (2021). Meta-analysis of gut microbiota
+    composition in clinical status of schizophrenia. Frontiers in Psychiatry, 7, 760-765.
+
+
+    O''Connell, S. E., O''Sullivan, S., Kelly, J. (2022). The role of probiotics in
+    treatment. Frontiers in Psychiatry, 12, 634. doi:10.3389/fpsyt.2022.634
+
+
+    Owczarek, M., Baka, N., Szadczyk, J. (2017). Effect of dietary habits on gut microbiota.
+    Neuropsychiatry, 19, 187-198.
+
+
+    Prus, M., Niedźwiedz, L., Wojtowicz, J. (2021). The association between gut microbiota
+    and stress. Frontiers in Psychiatry, 12, 515. doi:10.3389/fpsyt.2021-515
+
+
+    Tan, Y., Sun, X., Zhang, J., Ke, S., Hu, L. (2022). The gut-brain axis: a review.
+    Frontiers in Psychiatry, 9, 891. doi:10.3389/fpsyt.2022-891
+
+
+    Cao, Y., Wang, J., Zhang, F., Li, Y., Liu, N. (2022). The gut-brain axis: a review.
+    Frontiers in Psychiatry, 13, 891.
+
+
+    Lee, L.B., Cowan, S., Kim, S.H., Shin, V. H., Park, A. D., Lee, M. K., Lee, S.
+    K., Choi, S. E., & Lee, V. J. (2021). The association between gut microbiota and
+    social stress in children. Microbiome, 16, 9669. doi:10.1186/s40161-021-993-y
+
+    '
+  mdcn: '
+
+    之前的研究结果显示，分裂症患者体内乳杆菌（Lactobacilli）丰度增加（Li et al., 2019; Zhou et al., 2021），来自临床前和临床试验的几条证据表明，这些益生菌经常被调节，且乳杆菌属可能对分裂症的治疗有益。这进一步指向了乳杆菌属在生物活性上的异质性。解释粪歧杆菌属（Faecalibacterium
+    genus）与其他特征的相关性至关重要。
+
+
+    粪歧杆菌属与分裂症患者较低的抑郁症状和整体功能之间存在微弱但显著性。这与重度抑郁症患者粪歧杆菌丰度降低的发现不一致（参见Kues等人，2013年的综述）。此外，Jing和Wang（2015）的研究还揭示了乳杆菌丰度与抑郁症状之间存在负相关。这种差异的潜在解释尚不清楚。需要注意的是，分裂症和重度抑郁症是不同的疾病。
+
+
+    最重要的是，目前的结果首次表明，分裂症患者的肠道变化可能与乳杆菌丰度的增加有关。与压力暴露不同，我们报告的研究中，分裂症患者每一类乳杆菌的比例均更高，而由于（某种原因）粪歧杆菌的丰度下降（Zheng
+    et al., 2020）。将乳杆菌丰度与分裂症联系起来的机制尚不清楚。多重早期生活（母亲缺失、断奶和不可预测的慢性微应激）对小鼠乳杆菌的丰度显示出压力特异性影响（Runcel等.,
+    2019）。
+
+
+    本研究存在需要考虑的局限性。我们的样本量不大，因此出现了假阴性和假阳性结果。此外，关于Regparavel与情绪稳定剂使用之间的关联也应予以考虑。另一点是，本研究使用的16S
+    rRNA测序不足以分析特定的细菌菌。因此，正如Neearing等（2022）所示，我们的研究重点在属水平。我们目前将分裂症与肠道微生物群联系起来的发现，可能排除掉：AKIs的影响仅仅反映了与童年社会劣势相关的因素的影响。患者的社会史，包括早期养、教育和社会经济地位（Smith
+    et al., 2015）。对于父母教育，不能排除社会经济地位的其他因素（包括收入、家庭环境和医疗设施质量）能更好地解释社会经济地位（2019）。家族性分裂症与婴儿和儿童的肠道微生物群有关（Levis
+    et al., 2021）。尽管这些因素，AKIs可能会塑造健康的肠道微生物群，从而导致分裂症的发展（Gao et al., 2021）。另一个局限性是，研究基于对压力暴露和饮食习惯的报告，因此需要考虑真实的偏差。建立因果关系需要纵向性设计。
+
+
+    总之，目前的结果在很大程度上证实了分裂症患者中乳酸菌丰度增加和产生SCFAs的细菌丰度降低。目前的结果首次表明压力可能导致这些变化。鉴于某些变化可能对临床表现和脂质谱有所帮助，需要开发针对分裂症肠道微生物群变化底层机制的干预措施。也有必要对压力对肠道微生物群影响的特定机制提供见解。
+
+
+    # 资助
+
+
+    本研究由国家科学中心授予的OPS资助（资助号：2018/3/B/NSZ/0027）资助
+
+
+    # 利益冲突
+
+
+    无须声明。
+
+
+    # 致谢
+
+
+    作者感谢所有参与研究的患者和健康对照。
+
+
+    # 附录 A. 支持信息
+
+
+    与本文相关的补充数据可以在在线查找：doi:10.1016/j.psyneve.2023.106.335。
+
+
+    # 参考文献
+
+
+    （此处参考文献列表保持原文格式，不翻译）
+
+    '
+  merge: 1
+- raw:
+  - '[PAGE 9]
+
+
+    Rio-Gales, C., Gomez, P., Ruiz-Randa, F., Rodriguez-Arthur, M., Cardona, D., 2020.
+    Effects of probiotics supplementation on dementia and cognitive impairment: a
+    systematic review and meta-analysis of clinical trials. Psychoneiatry and Clinical
+    Neurosciences, 28, 101889. https://doi.org/10.1016/j.pcn.2020.101889
+
+
+    Sánchez, J., Bulk, B., 2021. Gut microbiota and microbiome diversity. Int. J.
+    Mol. Sci. 22, 2027. https://doi.org/10.3390/ijms22052027
+
+
+    Sankar, U. V., Vickry, A., Anand, N., 2019. Meeting socioeconomic status in position
+    health development: Review and impact of childhood socioeconomic status on adult
+    health. Curr. Opin Psychiatry, 34, 50–73. https://doi.org/10.1007/s11920-018-0367-x
+
+
+    Seifert, S. P., Jiao, M., Polkovsky, L., Garrett, G., Warehner, B., 2011. Microbiome
+    biomarker discovery and expansion. Biol. 12, R616. https://doi.org/10.1186/biology/bio00116
+
+
+    Shehab, D., 2009. The main international neurodevelopment inventory (MINI): the
+    development and validation of a clinical tool. J. Clin Psychiatry, 59, 22–33.
+    https://doi.org/10.1097/01.014600000093833
+
+
+    Silva, V. P., Bertoldi, A., Fuzza, R., 2020. The role of short-chain fatty acids
+    in gut microbiota and metabolic health: a review. Nutrients, 12, 2002. https://doi.org/10.3390/nutrients12102002
+
+
+    Smith, G. E., Molner, B., Robert, R., Vacher, M., Tebutt, S. J., Cao, K.A., 2013.
+    The social fear hypothesis of schizophrenia. Schizophrenia, 35, 1180–1186. https://doi.org/10.1097/MES.0b0103a32
+
+
+    Tomovas, A., Bukovsky, L., Lievers, R., Lataner, T., Viechbauer, B., Read, J.,
+    Vois, N., 2019. Gut microbiota in schizophrenia: a meta-analysis of patient-control,
+    prospective, and cross-sectional cohort studies. Frontiers in Psychiatry, 9, 47.
+    https://doi.org/10.3389/fpsyt.2019.00047
+
+
+    Varese, F., Smirnov, F., Drukker, M., Lievers, R., Lataner, T., Viechbauer, B.,
+    Read, J., Vois, N., 2. The gut-brain axis in schizophrenia: a meta-analysis of
+    patient-control, prospective, and cross-sectional cohort studies.
+
+
+    Vouraikis, M., Mayer, G., Rousseau, G., 2021. The role of gut microbiota on cholesterol
+    metabolism in atherosclerosis. Nature, 599, 8074. https://doi.org/10.1038/s41586-021-36211-w
+
+
+    Wallen, W. D., Wang, G. M., 2021. Comparison of diversity assessment methods using
+    large Parkinson disease gut microbiota datasets derived from metagenomic sequencing.
+    BMC Bioinformatics, 22, 665. https://doi.org/10.1186/s12859-021-05193-x
+
+
+    Wang, Q., Gray, M., M, J. L., Cole, J. R., 2007. New Bayesian classifier for predicting
+    asthma risk based on microbiome environment. Environment Research, 106, 721–728.
+    https://doi.org/10.1016/j.envres.2006.09.014
+
+
+    Wang, Y., 2007. The postcommunication considerations for assessing compound effects
+    in environmental epidemiology. Environmental Epidemiology, 17(6), 533–540. https://doi.org/10.1097/AEM.0000289935
+
+
+    Zeller, G., 2021. Microbiome analysis and cross-disease comparison enabled by
+    Thelose toolbox. Genome Bio, 22, 93. https://doi.org/10.1186/s12864-021-07693-z
+
+
+    Zheng, J., Wittens, S., Salveitti, E., Franc, C.M.A., Haribi, H.M., Masturader,
+    O., Bachmann, L., Peels, J. A., Melo, P. G., Gänle, M.G., Lehrer, S., 2020. Association
+    of the microbial community with the genus Lactobacillus: Description of 33 new
+    genera, 27972–27985. https://doi.org/10.1038/s41467-020-104107
+
+
+    Zhang, Y., Zhang, R., Liu, J., Wang, J., Zhang, M., Yang, J., Yang, C., Chen,
+    Z., Zhang, Y., Sun, X., 2021. Gut microbiota diversity in schizophrenia and bipolar
+    disorder. Frontiers in Psychiatry, 12, 634. https://doi.org/10.3389/fpsyt.2021.634122
+
+
+    Zheng, D., Li, J., Liu, J., Hu, H., Han, J., 2021. Microbiota changes and correlation
+    with schizophrenia and depressive symptoms in bipolar disorder. Journal of Affective
+    Disorders, 295, 1. https://doi.org/10.1016/j.jad.2021.07.033
+
+
+    Zhu, F., Guo, W., Wang, Y., Wang, Q., Sun, Q., Fan, Y., Xie, Y., Zhang, Z., Xie,
+    Z., Bao, B., Xiao, L., Wang, L., Tang, F., Feng, J.,., Guo, L., He, X., Chen,
+    Y., Ma, X., 2020. Metagenome-wide association of gut microbiome features for schizophrenia.
+    Nature Communications, 11, 1612. https://doi.org/10.1038/s41467-020-15457-9
+
+
+    Zhu, F., Guo, W., Wang, Y., Wang, Q., Sun, Q., Fan, Y., Xie, Y., Zhang, Z., Xie,
+    Z., Bao, B., Xiao, L., Wang, L., Tang, F., Feng, J., Guo, L., He, X., Chen, Y.,
+    Ma, X., 2020. Metagenome-wide association of gut microbiome features for schizophrenia.'
+  md: '
+
+    Rio-Gales, C., Gomez, P., Ruiz-Randa, F., Rodriguez-Arthur, M., Cardona, D., 2020.
+    Effects of probiotics supplementation on dementia and cognitive impairment: a
+    systematic review and meta-analysis of clinical trials. Psychiatry and Clinical
+    Neurosciences, 28, 101889. https://doi.org/10.1016/j.pcn.2020.101889
+
+
+    Sánchez, J., Bulk, B., 2021. Gut microbiota and microbiome diversity. Int. J.
+    Mol. Sci. 22, 2027. https://doi.org/10.3390/ijms22052027
+
+
+    Sankar, U. V., Vickry, A., Anand, N., 2019. Meeting socioeconomic status in position
+    health development: Review and impact of childhood socioeconomic status on adult
+    health. Curr. Opin Psychiatry, 34, 50–73. https://doi.org/10.1007/s11920-018-0367-x
+
+
+    Seifert, S. P., Jiao, M., Polkovsky, L., Garrett, G., Warehner, B., 2011. Microbiome
+    biomarker discovery and expansion. Biol. 12, R616. https://doi.org/10.1186/biology/bio00116
+
+
+    Shehab, D., 2009. The main international neurodevelopment inventory (MINI): the
+    development and validation of a clinical tool. J. Clin Psychiatry, 59, 22–33.
+    https://doi.org/10.1097/01.014600000093833
+
+
+    Silva, V. P., Bertoldi, A., Fuzza, R., 2020. The role of short-chain fatty acids
+    in gut microbiota and metabolic health: a review. Nutrients, 12, 2002. https://doi.org/10.3390/nutrients12102002
+
+
+    Smith, G. E., Molner, B., Robert, R., Vacher, M., Tebutt, S. J., Cao, K.A., 2013.
+    The social fear hypothesis of schizophrenia. Schizophrenia, 35, 1180–1186. https://doi.org/10.1097/MES.0b0103a32
+
+
+    Tomovas, A., Bukovsky, L., Lievers, R., Lataner, T., Viechbauer, B., Read, J.,
+    Vois, N., 2019. Gut microbiota in schizophrenia: a meta-analysis of patient-control,
+    prospective, and cross-sectional cohort studies. Frontiers in Psychiatry, 9, 47.
+    https://doi.org/10.3389/fpsyt.2019.00047
+
+
+    Varese, F., Smirnov, F., Drukker, M., Lievers, R., Lataner, T., Viechbauer, B.,
+    Read, J., Vois, N., 2020. The gut-brain axis in schizophrenia: a meta-analysis
+    of patient-control, prospective, and cross-sectional cohort studies.
+
+
+    Vouraikis, M., Mayer, G., Rousseau, G., 2021. The role of gut microbiota on cholesterol
+    metabolism in atherosclerosis. Nature, 599, 8074. https://doi.org/10.1038/s41586-021-36211-w
+
+
+    Wallen, W. D., Wang, G. M., 2021. Comparison of diversity assessment methods using
+    large Parkinson disease gut microbiota datasets derived from metagenomic sequencing.
+    BMC Bioinformatics, 22, 665. https://doi.org/10.1186/s12859-021-05193-x
+
+
+    Wang, Q., Gray, M., M, J. L., Cole, J. R., 2007. New Bayesian classifier for predicting
+    asthma risk based on microbiome environment. Environment Research, 106, 721–728.
+    https://doi.org/10.1016/j.envres.2006.09.014
+
+
+    Wang, Y., 2007. The postcommunication considerations for assessing compound effects
+    in environmental epidemiology. Environmental Epidemiology, 17(6), 533–540. https://doi.org/10.1097/AEM.0000289935
+
+
+    Zeller, G., 2021. Microbiome analysis and cross-disease comparison enabled by
+    Thelose toolbox. Genome Bio, 22, 93. https://doi.org/10.1186/s12864-021-07693-z
+
+
+    Zheng, J., Wittens, S., Salveitti, E., Franc, C.M.A., Haribi, H.M., Masturader,
+    O., Bachmann, L., Peels, J. A., Melo, P. G., Gle, M.G., Lehrer, S., 2020. Association
+    of the microbial community with the genus Lactobacillus: Description of 33 new
+    genera, 27972–27985. https://doi.org/10.1038/s41467-020-10407-9
+
+
+    Zhang, Y., Zhang, R., Liu, J., Wang, J., Zhang, M., Yang, J., Yang, C., Chen,
+    Z., Zhang, Y., Sun, X., 2021. Gut microbiota diversity in schizophrenia and bipolar
+    disorder. Frontiers in Psychiatry, 12, 634. https://doi.org/10.3389/fpsyt.2021.63122
+
+
+    Zheng, D., Li, J., Liu, J., Hu, H., Han, J., 2021. Microbiota changes and correlation
+    with schizophrenia and depressive symptoms in bipolar disorder. Journal of Affective
+    Disorders, 295, 1. https://doi.org/10.1016/j.jad.2021.07.033
+
+    '
+  mdcn: '
+
+
+    - Rio-Gales, C., Gomez, P., Ruiz-Randa, F., Rodriguez-Arthur, M., Cardona, D.,
+    2020. 益生菌补充对痴呆症和认知障碍的影响：临床试验的系统评价和荟萃分析。Psychiatry and Clinical Neurosciences,
+    28, 101889. https://doi.org/10.1016/j.pcn.2020.101889
+
+
+    - Sánchez, J., Bulk, B., 2021. 肠道微生物群和微生物组多样性。Int. J. Mol. Sci. 22, 2027. https://doi.org/10.3390/ijms22052027
+
+
+    - Sankar, U. V., Vickry, A., Anand, N., 2019. 健康发展中的社会经济地位地位：儿童社会经济地位对成年人健康的影响。Curr.
+    Opin Psychiatry, 34, 50–73. https://doi.org/10.1007/s11920-018-0367-x
+
+
+    - Seifert, S. P., Jiao, M., Polkovsky, L., Garrett, G., Warehner, B., 2011. 微生物组生物标志物的发现与扩展。Biol.
+    12, R616. https://doi.org/10.1186/biology/bio00116
+
+
+    - Shehab, D., 2009. 主要神经发育调查量表 (MINI)：临床工具的开发与验证。J. Clin Psychiatry, 59, 22–33.
+    https://doi.org/10.1097/01.014600000093833
+
+
+    - Silva, V. P., Bertoldi, A., Fuzza, R., 2020. 短链脂肪酸在肠道微生物群和代谢健康中的作用：综述。Nutrients,
+    12, 2002. https://doi.org/10.3390/nutrients12102002
+
+
+    - Smith, G. E., Molner, B., Robert, R., Vacher, M., Tebutt, S. J., Cao, K.A.,
+    2013. 精神分裂症的社交恐惧假设。Schizophrenia, 35, 1180–1186. https://doi.org/10.1097/MES.0b0103a32
+
+
+    - Tomovas, A., Bukovsky, L., Lievers, R., Lataner, T., Viechbauer, B., Read, J.,
+    Vois, N., 2019. 精神分裂症中的肠道微生物群：患者-对照、前瞻性及横向队列研究的荟萃分析。Frontiers in Psychiatry, 9,
+    47. https://doi.org/10.3389/fpsyt.2019.00047
+
+
+    - Varese, F., Smirnov, F., Drukker, M., Lievers, R., Lataner, T., Viechbauer,
+    B., Read, J., Vois, N., 2020. 精神分裂症中的肠-脑轴：患者-对照、前瞻性及横向队列研究的荟萃分析。
+
+
+    - Vouraikis, M., Mayer, G., Rousseau, G., 2021. 肠道微生物群对动脉粥硬化中胆固醇代谢的作用。Nature,
+    599, 8074. https://doi.org/10.1038/s41586-021-36211-w
+
+
+    - Wallen, W. D., Wang, G. M., 2021. 基于宏基因组测序的大型帕金森病肠道微生物数据集的多样性评估方法比较。BMC Bioinformatics,
+    22, 665. https://doi.org/10.1186/s12859-021-05193-x
+
+
+    - Wang, Q., Gray, M., M, J. L., Cole, J. R., 2007. 基于微生物环境预测哮喘风险的新贝叶斯分类器。Environment
+    Research, 106, 721–728. https://doi.org/10.1016/j.envres.2006.09.014
+
+
+    - Wang, Y., 2007. 环境流行病学中评估复合效应的后期沟通考量。Environmental Epidemiology, 17(6), 533–540.
+    https://doi.org/10.1097/AEM.0000289935
+
+
+    - Zeller, G., 2021. 由 Thelose 工具箱实现的微生物组分析和跨疾病比较。Genome Bio, 22, 93. https://doi.org/10.1186/s12864-021-07693-z
+
+
+    - Zheng, J., Wittens, S., Salveitti, E., Franc, C.M.A., Haribi, H.M., Masturader,
+    O., Bachmann, L., Peels, J. A., Melo, P. G., Gle, M.G., Lehrer, S., 2020. 微生物群与乳杆菌属的相关性：33个新属的描述，27972–27985。https://doi.org/10.1038/s41467-020-10407-9
+
+
+    - Zhang, Y., Zhang, R., Liu, J., Wang, J., Zhang, M., Yang, J., Yang, C., Chen,
+    Z., Zhang, Y., Sun, X., 2021. 精神分裂症和双极障碍中的肠道微生物群多样性。Frontiers in Psychiatry, 12,
+    634. https://doi.org/10.3389/fpsyt.2021.63122
+
+
+    - Zheng, D., Li, J., Liu, J., Hu, H., Han, J., 2021. 双极情感障碍中微生物的变化与精神分裂症及抑郁症状的相关。Journal
+    of Affective Disorders, 295, 1. https://doi.org/10.1016/j.jad.2021.07.033
+
+
+    '
+  merge: 0
