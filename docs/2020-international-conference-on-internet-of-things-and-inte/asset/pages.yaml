@@ -1,0 +1,721 @@
+- pgno: 0
+  md: '# # Sentiment analysis of agricultural product commerce review data on deep
+    learning
+
+
+    He Zhikai
+
+    Agricultural Information Research
+
+    Institute
+
+
+    Yang Yong
+
+    Agricultural Information Research
+
+    Institute
+
+
+    Yang Guofeng
+
+    Agricultural Information Research
+
+    Institute
+
+
+    Chinese Academy of Agricultural
+
+    Sciences
+
+    Beijing, China
+
+    5164177068@qq.com
+
+
+    Chinese Academy of Agricultural
+
+    Sciences
+
+    Beijing, China
+
+    wheatblue163.com
+
+
+    Chinese Academy of Agricultural
+
+    Sciences
+
+    Beijing, China
+
+    tectal@qq.com
+
+
+    Zhang Xinyi
+
+    Agricultural Information Research
+
+    Institute
+
+    Chinese Academy of Agricultural
+
+    Sciences
+
+    Beijing, China
+
+    66472318@qq.com
+
+
+    **Abstract.** The relevant comment texts of agricultural products on the e-commerce
+    platform contain various and complex emotions of consumers, and reflect customer
+    experience and views on those products. The analysis of sentiment in a complex
+    context has benefits in deep learning. This article explores the issue of sentiment
+    analysis of agricultural products by constructing CNN, BI-LSTM and BERT for fine-tuning
+    deep learning models. The research objective is to analyze the review data of
+    agricultural products on e-commerce platform. Results show that the trend of consumer
+    sentiment has shifted from positive to negative, and the classification method
+    generated achieves a eight percent difference among the three models. The accuracy
+    of the Text-CNN convolutional neural network reached 99.2%. The results confirm
+    that Text-CNN has high accuracy and good performance for polarity classification
+    in processing agricultural product e-commerce comment data, and the sentiment
+    review data provides an important reference for manufacturers to accurately distinguish
+    user feedback and enhance market competitiveness.
+
+
+    accurate and comprehensive evaluation from various amounts of data.
+
+
+    In the field of agricultural product e-commerce sites, the focus has always been
+    on the emotional expression of consumers. For example, "the packaging box has
+    several damages, it is very good, juicy and sweet" reflects different aspects
+    of sentiment analysis. As shown in Figure 1, "very good" refers to the product
+    quality. Aspect-based sentiment analysis can help users understand emotional expressions
+    based on contextual and emotional information.
+
+
+    **Keywords:** Sentiment analysis; deep learning; Text-CNN; BERT; BI-LSTM
+
+
+    # I. INTRODUCTION
+
+
+    With the gradual acceleration and development of China agricultural e-commerce
+    network a large number of agricultural enterprises have begun to settle in the
+    e-commerce platform or build their own e-commerce. The trend of online sentiment
+    has resulted in a large amount of consumer review data on e-commerce platforms.
+    There is a need to analyze the trend of online sentiment for agricultural products.
+    Feedback from users is an important consideration for agricultural production
+    and operations to increase market competitiveness. However, the sentiment is sensitive
+    to product strategy, so to improve the product''s sales strategy, market competitiveness,
+    and optimize in the agricultural consumer market environment, is inaccurate to
+    rely on traditional rating methods as the overall product evaluation results.
+    It is particularly necessary to obtain
+
+
+    | The first aspect box: | The other aspect: |
+
+    | Sentiment: Negative | Sentiment: Positive |
+
+
+    | The sentiment for the whole
+
+    sentiment : Positive
+
+
+    包装有几个破损，包装非常好，甜美、多汁。
+
+    Although the box has a few breaks, it is very good, juicy and sweet,
+
+
+    Fig. 1. The example of aspect-based sentiment analysis
+
+
+    # II. RELATION WORK
+
+
+    Sentiment analysis is an application of natural language processing (NLP). Its
+    main purpose is to analyze the sentiment polarity of the text proper from a large
+    number of texts, to judge whether the sentiment is positive or negative. In recent
+    years, sentiment analysis systems have been applied to many different types of
+    texts, including comment data [1–6], [7] and tweets on Twitter and Weibo posts
+    [8]. The research methods of sentiment analysis are mostly divided into the following
+    categories:'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# A. A method based on a sentiment dictionary
+
+
+    S. Zhang [11] proposed the extraction and construction of related dictionaries
+    based on degree adversary, negative dictionary and other related dictionaries
+    to expand the sentiment dictionary and improve weighting value-based sentiment
+    dictionary analysis. Tan, Chang Feng [12] built a Weibo sentiment dictionary based
+    on the NKI dictionary, which was used to improve Weibo sentiment and Sina API
+    access data, and analyzed Chinese Weibo sentiment information. Wanghan[13] used
+    many data sources to create an emotion analysis framework to extend the domain
+    by 23% to 24%. Finally, a sentiment analysis method based on the sentiment dictionary
+    of Dalian University of Technology, the sentiment dictionary of National Taiwan
+    University and the HotNet dictionary are produced.
+
+
+    # B. Algorithms based on traditional machine learning
+
+
+    Si Liu & Ičaj Lee [14] proposed a hybrid framework for data sentiment analysis
+    using negative word frequency word document model for feature extraction and classifier.
+    Vani Amin Fitiri [15] uses the Bayes algorithm in the RapidiMiner tool to obtain
+    an accuracy of 86.43 from the Twitter test case, which is higher than 82.7%. Xu[16]
+    proposed other algorithms (decision tree and forest) and the maximum entropy of
+    the training corpus for sentiment analysis.
+
+
+    # C. Deep learning-based methods
+
+
+    To obtain higher accuracy in Chinese sentiment analysis, Wei[17] proposed the
+    MLAE-model in the research, which combines BI LSTM [18] and CNN, and introduced
+    a multi-head attention mechanism. Experiments show that the model not only solves
+    the problem but also improves the polarity classification. Cheng[19] proposed
+    a public opinion analysis framework based on sentiment analysis, which expressed
+    the opinion and the target correctly without ambiguity between the two. The sentiment
+    of Weibo is reduced to a sequencing labeling problem, and RNN recurrent neural
+    networks are used to train the deep learning-based sentiment analysis model. The
+    model built with the integrated two-channel CNN-LSTM model, which uses CNN[21]
+    and BI-LSTM branches in parallel has achieved good results on challenging data
+    sets as the Stanford text benchmark.
+
+
+    Compared with traditional machine learning methods and sentiment analysis methods,
+    deep learning [22,23] has high classification accuracy, strong learning ability,
+    ability to learn complex features, strong and excellent effects in processing
+    nonlinear complex data analysis. Numerous scholars have confirmed that abstract
+    features of deep learning can easily adjust the words, and better simulate the
+    relationship between words, which can make it more effective than traditional
+    methods in emotion classification rate[24,25]. It is
+
+
+    of significance to select machine learning models and traditional sentiment dictionary
+    methods for research, this paper builds a mainstream framework in the field of
+    deep learning sentiment analysis, starting from the perspective of agricultural
+    review classification and constructs a review model based on agricultural product
+    composition, where Pos for positive and neg negative. Deep learning BERT model,
+    Text-CNN model and the Text-CNN model are used to obtain the optimal sentiment
+    analysis for classification of agricultural product review data sets. Experimental
+    proves that the Text-CNN model is the best for the sentiment classification of
+    the agricultural product review and we use the Text-CNN model to get a good sentiment
+    analysis result.
+
+
+    # D. Data acquisition
+
+
+    This article uses the R to build a framework to crawl the agricultural product
+    review of the e-commerce platform, collect the review text with words for processing,
+    and process the data to build an sentiment analysis model. The results of sentiment
+    polarity determination and comment data segmentation are shown in Table 1:
+
+
+    # TABLE 1
+
+
+    # THE PARTIAL DATA SET
+
+
+    | Sentiment | Comment data |
+
+    | --- | --- |
+
+    | Pos | 满意时 / Tasty / 好吃 长时间好 购买 推荐 / Tasty / Taste / Good / Long term / Buy Recommendation
+    |
+
+    | 很少吃 味道不好 好吃 / / / / Tasty / Time / Not good / Head Head |
+
+    | 饺包子很便宜 没泡油 肠面还有没有小饺 / Very delicious / Packaging / Not food / Each / Eater /
+    Sample / About / Small / Very / Sweet |
+
+    | 不真实体会 会坏 / Very poor / Experience / No / / |
+
+    | 水分不错 几次几次 / Good and sweet / Times |
+
+    | Neg | Express / About / No / Hope / Help / Delivery / Last night not / Today
+    / Recommended / Not to say like / Fresh / Taste / Good |
+
+    | Disappointed / Said / Putter / Not good / Slightly rough / not / Sweet / Breakfast
+    / Eat / Inside / Hotel |
+
+    | 餐厅超市 好不好 / Tasty / Packaging / Not good / 味道很好 购买 Recommended / Delicious /
+    Cooked / Out / Color / Blue / Recommended |
+
+
+    To able to verify that the model used is comprehensively for agricultural products,
+    this article selects'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'agricultural products as bananas, peaches, dragon fruit, tomatoes, potatoes,
+    cucumbers, green vegetables and other agricultural products to construct a set
+    of 23,418 classification and test sets, 14,888 positive emotion, 8,530 negative,
+    85% of all are selected for test data, and 20% of all are selected for test data.
+    The data structure is shown in Table 2:
+
+
+    The agricultural product review data in this article is processed into a text
+    with a length of 35 after a cut and short supplement. The text is processed into
+    35 tokens plus [cls] tokens through BERT''s word segmentation function. Tokenization.
+    Vectorization embeds each token randomly orders or replaces 15% of the tokens
+    (characters) that are randomly erased in the data. The recovered text allows the
+    model to be based on the contextual semantics. Take out the vector to [cls], then
+    map it to a value and encode it with the sigmoid function. Function training of
+    the random map prediction and sentence detection, the task takes the feature vector
+    through the BERT model.
+
+
+    # TABLE II
+
+    COMPOSITION OF AGRICULTURAL PRODUCT REVIEW DATA
+
+
+    | Dataset | Pos | Neg |
+
+    |---|---|--|
+
+    | Train | 11910(80%) | 2978(20%) |
+
+    | Test | 2978(80%) | 1706(20%) |
+
+    | Total | 14888(68%) | 8530(36%) |
+
+
+    # B. BERT fine-tuning classification model based on pre training.
+
+
+    BERT Bidirectional Encoder Representations from Transformers is a pre-trained
+    language model developed by Devlin J [226], BERT is a Transformer that implements
+    multiple deep bidirectional models based on Transformer. Unlike other language
+    representation models, BERT aims to pre-train deep bidirectional representations
+    and then adjust for specific tasks. The pre-trained BERT means that it can be
+    fine-tuned with an output layer, and is suitable for the construction of the most
+    advanced model for a wide range of tasks, without the need to design a new architecture
+    from scratch. BERT uses 11 natural language processing tasks as it is proposed.
+    In the field of sentiment analysis, many foreign scholars have applied it to English
+    sentiment classification and [27] proposed using BERT''s hierarchical attention
+    network for document classification and achieved results. Xie Q [28] used the
+    pretrained BERT for latent Dirichlet allocation (LDA) topic model, which allows
+    the topic evolution of monolingual and multilingual topic similarity settings.
+    BERT is very effective in the field of natural language processing and can be
+    used as a model for Chinese sentiment analysis and testing.
+
+
+    ```
+
+    sigmoid(x) = e^x / (1 + e^x)
+
+    ```
+
+
+    In the model of this, the initial learning rate is 1e-5, and the transformer fully
+    connected layer is added to the output of the BERT model for fine-tuning. The
+    result of the model is Output-Loss (test loss - test loss)=0.1629, Test Acc (test
+    accuracy)=0.9539.
+
+
+    # C. Convolutional Neural Network-CNN Model
+
+
+    As one of the most important in the field of learning, a convolutional neural
+    network is a type of feedforward neural network that includes convolution layers
+    by pooling layers. Convolutional Neural Networks (CNN) is an algorithm that uses
+    convolutional networks to extract visual features. The CNN is mainly used for
+    image classification, object detection and image recognition. Here we use CNN
+    for text classification. The proposed CNN model consists of an input layer, a
+    convolutional layer (feature extraction), a pooling layer (down-sampling), a fully
+    connected layer and the word vector is converted to solve related applications
+    of NLP to sentiment analysis tasks. The core idea of CNN is to use different convolutional
+    layers to extract the local features of the text. The so-called local feature
+    in the text is a sliding window of various kernel sizes. The advantage of a convolutional
+    neural network is that it can automatically filter and combine the sliding window
+    to obtain semantic information of different levels.
+
+
+    ![](img/6c7c6de0926aa37fb422b317b45221c2_2_0.png)
+
+
+    Fig. 3. CNN-convolution neural network
+
+
+    Fig. 2. BERT-fine-tuning classification model
+
+
+    The word segmentation tool Jieba''s word accuracy can reach nearly 97%, in the
+    text-CNN data'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'preprocessing stage of this article, word segmentation is used, and meaningless
+    content is deleted through stop operations. The Text-CNN model constructed in
+    this paper uses three convolutional layers and dropout (negative log-likelihood
+    loss function) to enhance the return capacity of the network. The preprocessed
+    text features are passed through a convolutional layer to form a splitting output.
+    The pooling layers of different lengths to obtain a fixed-length representation
+    output, and finally use the softmax activation function to output the category
+    as a two-digit number, and the values represent positive and negative probabilities
+    respectively. The final model output is Test-Loss=0040 and Acc=99.2.
+
+
+    obtained by the forward LSTM, and the backward vector is obtained by inputting
+    the data into the backward LSTM. The output layer of the model at time t represents
+    the vector representation of the t-th element of the sequence. The number of neurons
+    in the output layer is the number of hidden neurons of the recurrent layer. The
+    forward and backward vectors are spliced into, the final model output of the result
+    : Test-Loss=0.216, Acc=99.36.
+
+
+    # D. Bi-LSTM neural network based on deep learning
+
+
+    # IV. ENVIRONMENT
+
+
+    Recurrent Neural Network (Recurrent Neural Network) is a neural network used to
+    process sequence data. The gradient disappearance of RNN is because it has a short-term
+    memory, which has hidden layer modification to solve the problem of gradient disappearance
+    of RNN, so that the recurrent network has long-term memory capabilities. This
+    type of recurrent network is called Long-term Memory LSTM (Long Short Term Memory).
+    Bi-LSTM (Bidirectional Long-Term Memory) is a kind of LSTM, which is composed
+    of two-way recurrent neural networks and short-term memory. At each time t, the
+    output is provided to these two networks in opposite directions as the context
+    is output by the two unidirectional recurrent networks. In the field of sentiment
+    analysis, due to the advantages that LSTM can learn to better capture the long-distance
+    dependencies. And LSTM modeling cannot encode back-to-front problems, but LSTM
+    can better capture the two-way sentence dependence.
+
+
+    In this paper, the experimental environment is shown in Table 3:
+
+
+    # TABLE III
+
+
+    | Operating system | Parameters |
+
+    |---|-|
+
+    | CPU | Intel i7 9700 |
+
+    | Memory | 500G |
+
+    | GPU | RTX 2070 |
+
+    | Keras | 2.2.4 |
+
+    | Python | 3.7 |
+
+    | TensorFlow | 2.0 |
+
+    | RAM | 24G |
+
+
+    THE EXPERIMENTAL ENVIRONMENT OF SERVER
+
+
+    # B. Experimental Design
+
+
+    ![](img/6c7c6de0926aa37fb422b317b45221c2_3_0.png)
+
+
+    The model to classify data needs to include the following processes: The first
+    process is to convert these texts into machine-readable codes in the data processing
+    stage. The main process is to construct a dictionary and create mapping from words
+    to codes. The second process is to convert the input text based on the dictionary
+    mapping table and convert it into a machine-readable code.
+
+
+    The Bi-LSTM-Text-CNN model is included in three processes: data processing, training,
+    and testing. Data processing includes cleaning, segment, and filtering the text
+    of Neg and Pos from the crawler, and obtaining the text with good words without
+    text segmentation, and the category features (emotion pos or Neg). Make a dictionary
+    is to read the text of the data in file, sort by word, and encode the sequence
+    of data to form in the word-encoding format. For training and testing is to get
+    the comments and categories respectively. In the experiment, we take 80% of the
+    data as the training set and 20% as the test set, put the input into the data
+    for model training, and then directly get training and testing results.
+
+
+    Constructing Bi-LSTM to realize sentiment analysis requires a two-way LSTM network,
+    we need to declare the logic of LSTM-Cells. Inside the neural network, the forward
+    and backward calculations are performed on the output layer of each layer, and
+    then the next layer is input for calculation. After the data is preprocessed,
+    three vectors j are,
+
+
+    Different from the previous two models, BERT is a learning model based on pre-training.
+    The experiment of this model is divided in two processes: data processing and
+    training testing. Data processing is to configure the hyperparameters of the model
+    to start constructing training'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'data, and the preprocessed data itself with emotion. The Tokenizer is taken
+    into BasicTokenizer and WordpieceTokenizer. First, perform BasicTokenizer tokenization
+    to obtain with a naturally coarse tokenization effect, and then use the WordpieceTokenizer
+    to process each token to obtain the final token result. The data is used in 80%
+    training set and 20% test set. Performance and testing is using pytorch (a pre-trained
+    model based on deep learning framework) to segment and encode the text, and then
+    the BERT output results in the fully connected layer to output the prediction.
+
+
+    of the correct classified by the classifier. The recall (Recall reports the proportion
+    of number of correctly classified by the classifier in the original data. Accuracy
+    refers to the ratio of correct (whether it is Pos or Neg) and Harmonic mean of
+    precision and recall. The calculation of these two indicators is as follows: Here
+    the value of the index is, the better the classification is. FP, TP and FN represent
+    false positive case, false negative case, real case and true case respectively.
+
+
+    ```
+
+    Accuracy = (2)
+
+    ```
+
+
+    ```
+
+    TP = FP + FN + TN
+
+    TP
+
+    ```
+
+
+    ```
+
+    Precision = TP + FP
+
+    ```
+
+
+    ```
+
+    Recall = TP
+
+    ```
+
+
+    ```
+
+    (4)
+
+    ```
+
+
+    ```
+
+    F1 = 2 * Precision * Recall / (Precision + Recall)
+
+    ```
+
+
+    From the results in table, the accuracy of the Text-CNN convolutional neural network
+    reached 99.2%, which is significantly higher than the accuracy of 95.39% of the
+    BERT-tuned fine-classification model and the accuracy of 93.60 of the Bi-LSTM
+    bidirectional long-short-term memory network. In the results of the data set,
+    the accuracy of the Bi-LSTM (two-layer bidirectional long-short-term memory network)
+    is 93.6%, but it is also better compared to the other models. In terms of accuracy,
+    precision, recall, and F1 value. it can be seen that the Text-CNN classification
+    model is about 3 percentage points higher than the other two. The classification
+    difference between the three models is gradient. The Text-CNN model is significantly
+    better than the BERT fine-tuned classification model and the Bi-LSTM classification
+    model. In summary, the sentiment classification of the agricultural e-commerce
+    review data based on the Text-CNN convolutional neural network is better. Although
+    CNN does not have the structure of LSTM model that can capture long dependencies,
+    nor does it have the word embedding feature based on the BERT fine-tuned model,
+    its convolutional layer''s ability to capture local information and the pooling
+    layer''s extraction of local information just proves that the Text-CNN convolutional
+    neural network model has a good sentiment classification for the 35-word agricultural
+    product review text set.
+
+
+    ![](img/6c7c6de0926aa37fb422b317b45221c2_4_0.png)
+
+
+    # V. RESULT ANALYSIS
+
+
+    The Bi-LSTM two-way and short-term memory network, the BERT-based fine-tuning
+    classification model and the Text-CNN convolutional neural network used the preprocessed
+    data and Neg set to perform classification experiments. Table 5 shows the experimental
+    results of each classifier. Precision is indicate of accuracy, which means the
+    number of correctly classified by the classifier accounts for the
+
+
+    TABLE IV
+
+
+    | Metrics(%) | Type | Accuracy/% | Precision / | Recall / | F1-score % |
+
+    |---|---|---|---|---||
+
+    | BERT | positive | 95.39 | 94.02 | 96.77 | 95.38 |
+
+
+    Authorized license used by: Rutgers University. Downloaded on May 20,2021 at 16:54:21
+    UTC from IEEE Xplore. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '| | | 96.79 | 94.05 | 95.40 |
+
+    |---|---|---|---|---|n| Text-CNN | 99.92 | 99.90 | 99.95 | 99.92 |
+
+    | negative | | 99.95 | 99.99 | 99.93 |
+
+    | Bi-LSTM | | 91.70 | 95.62 | 93.62 |
+
+    | negative | | 93.60 | 95.59 | 91.65 | 93.58 |
+
+
+    # VI. CONCLUSION
+
+
+    Compared with traditional analysis methods, this article uses three mainstream
+    models of deep learning to explore agricultural e-commerce platform data for sentiment
+    classification. To obtain scientific and reliable results, this article uses R
+    language to build a web crawler and gathers 23418 data on agricultural reviews
+    on the e-commerce platform. The text-CNN convolutional neural network got unexpected
+    results: the accuracy of emotion classification reached 99.2% and outperformed
+    the Bi-LSTM model on longer sentiment reviews, which is because of sentence feature
+    higher. The BERT classification model is about 4% higher, which proves the excellent
+    sentiment classification performance of Transformer product data. The results
+    of this article provide a valuable and practical reference in the field of emotional
+    analysis of agricultural review. Research and management enterprises can easily
+    obtain the benefit of feedback consumer opinion, improve product service capabilities,
+    improve market competitiveness, and optimize agricultural products online stores.
+
+
+    # REFERENCES
+
+
+    +   [1] Zhao H, Wu Q, “Research on Sentiment Analysis of Chinese E-Commerce Based
+    on Deep Learning,” Journal of Physics Conference, 2012, 127(011).
+
+    [2] Xiao Jun, Wang Yan, Wang Kai, Donghuang, and Wang, “Building, A Short Text-Based
+    Sentiment Model for Product Reviews,” Neurocomputing, 2009, 278, 93-97.
+
+    [3] Liu Jiao, Ma Xue, Yang Xu, and Jiaonan Ma, Huix, Lu Liu, and Liu Jian, “Sentiment
+    analysis of chinese e-commerce comments based on attention,” Journal of Shanghai
+    Jiao Tong University (Science), 2017, vol.1, no.3, pp. 37-42.
+
+    [4] Li Liu, Li Zhen, and Han Yu, Wang Han, and Han Shi, and Zheng Lei, Zhi Lei,
+    “General-domain specific sentiment analysis for e-commerce reviews,” Journal of
+    Shanghai Jiao Tong University (Science), 2017, vol.1, no.3, pp. 37-42.
+
+    [5] Zheng Hua, Wang Wu, and Li Yan, and Wei Han: “Product feedback from e-commerce
+    reviews using based sentiment analysis,” Expert Systems with Applications, 2019,
+    vol.130, 110439.
+
+    [6] Rintama, Barga, Sayano, Rmayatchev, and Chastaine, “Evaluating the performance
+    of sentence level and feature level features of product based sentiment analysis
+    tasks,” Journal of Big Data, vol. 6, no. 1, pp. 1-19, 2019.
+
+    [7] Mowlaei, Mohammad Erifad, and Mohammad Nasadieh and Keshavard, Mohammad, “Aspect-Based
+    Sentiment Analysis using Adaptive Aspect-Based Lexicons,” Expert Systems with
+    Applications
+
+    [8] Li Qian, Jian Zhou, and Zheng Wang, “Mining opinion summarizations using convolutional
+    networks in chinese,” Expert Systems with Applications, 148, pp. 113234, 2020).
+
+    [9] Wu, Fanghai, Han Yulong, and Sangjia, and Yin Li, “Deep learning method for
+    building a high-quality micro-specific sentiment chinese detection,” Computer
+    Support Systems, vol. 8, no. 1, pp. 289-300, 2016.
+
+    [10] Tian and Li, and Zheng Wang, and Lin Liao, “Sentiment analysis of chinese
+    blog-based text based on attention mechanism,” Generation Computer Systems, 2019,
+    81, pp. APR.
+
+    [11] Tan and Tang Feng, Cheng, “The Chinese Emotional Sentiment Analysis Based
+    on Aspect-Based Lexicons,” Journal Applied Mechanics and Systems, vol.333-335,
+    pp. 1, 795-798, 2016).
+
+    [12] Liu Janda and Vashudita S. Rishand and Rish and Kumar, K. P. Liu and P. Liu,
+    “A novel aspect dictionary-based sentiment analysis for multi-domain sentiment
+    classification,” Computers and Electrical Engineering, vol. 69, pp. 58-69, 2018.
+
+    [13] Liu, Sisi and Si Lee, Ejmail, “Email sentiment analysis through multi-label
+    support vector regression,” Cybersecurity and Cybernetics, vol. 49, no. 4, pp.
+    181-198, 2019.
+
+    [14] Veni Amili and Rahatree and Mohammad Azhar, “Sentiment Analysis of E-commerce
+    Reviews with Case of Attention-LSTM,” Decision Tree and Random Forest, 2019, no.
+    41.
+
+    [15] Xu, Jin, and Chen Ge, and Hu Ling, and Feng Xing and Xie Miao, “An algorithm
+    for sentiment analysis based on attention mechanism,” Soft Computing, 23, pp.5745-5752.
+
+    [16] Su, Yi-Wen, and Hu-Qi and Jian-Han, and Jian-Shi, “A novel LSTM-CNN for chinese
+    sentiment analysis using attention mechanism,” Soft Computing, 23, pp.5757-5766.
+
+    [17] Tianwei and Yi Li, and Jianjun and Xu-Hu and Honglei, and Yong Wang, “Deep
+    Learning for Chinese Sentiment Analysis Using Attention Mechanism Based Embedding,”
+    IEEE Access, 8,pp.23646-23657, 2020.
+
+    [18] Xiao, and, Li, Pei, and Zheng, and Zhang, Daozuyang, and Wang Yi, “Exploring
+    sentiment analysis of product postings using attention mechanism,” IEEE Access,
+    vol.8, pp. 42824-42836, 2020.
+
+    [19] Li, Wei, and Liao, and Yi Shi, and Gao, and Cambria, Erik, “Sentiment analysis
+    using attention mechanism and lstm,” Knowledge-Based Systems, 9, pp. 106435, 2020.
+
+    [20] Zhang, Lei, and Chen, “Sentiment classification with convolutional neural
+    network: an experimental study of agricultural review conference corpus,” 2016,
+    12th International Conference on Computational Intelligence and Security (CIS),
+    2016. (《》)
+
+    [21] Zheng, Lei, and Wang, Shi, Li, and Bing, “Deep learning for sentiment analysis:
+    a survey,” Wiley Interdisciplinary Reviews: Data Mining and Discovery, e12533,
+    2018.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'Li, Da and Rezga, Rafal and Puszynski, Michal and Araki, Kenji, HEMOS: A deep
+    learning-based fine-grained humor detector for sentiment analysis of social media",
+    vol. 57, no. 102290, 2020.
+
+
+    [23] Li, Fang-fang and Wang, Huan-and and Zhao, Rong-chang, "Chinese micro-blog
+    sentiment classification by a novel deep learning model", pp. 2352–2360, 2017.
+
+
+    [24] Xu, Hongyang and Lu, Hui and Guwei, Zhang and Gong, Cong, "Sentiment Analysis
+    of Chinese Version Using SVM & RNN", 2019, pp. 15.
+
+
+    [26] Jacob Devlin and Ming-(Wei) Wei Chang and Kenton Lee and Kristina Toutavsky,
+    "BERT-training of deep bidirectional representations for language understanding",
+    CoRR, abs/1810.04805, 2018.
+
+
+    [27] Satish Kumar Boddy Reddy, Sujeeth and Ihyagar, Raghu Seshu, "Zero-Shot Multilingual
+    Sentiment Analysis using Hierarchical Attentive Network and BERT", 2019 33rd International
+    Conference on Cyber Systems, pp. 40–45.
+
+
+    [28] Xie, Qing and Xinyuan and Ding, Ying and Song, Min, "Monolingual and multilingual
+    topic analysis using LDA and BERT based embedding", Journal of Informometrics,
+    vol. 14, no. 3, pp. 101055, 2020.
+
+
+    [29] Kim, Yoon, "Convolutional neural networks for sentence classification", Arprint
+    arXiv, 2014.
+
+
+    [30] Hochreiter, Sepp and Jürgen A Schmidhuber, "Long short-term memory", Neural
+    Computation, 1997.
+
+
+    [31] Pasquier, Grérien and Makolov, Thomas and Bengio, Yoshua, "On the difficulty
+    of training recurrent neural networks", In International Conference on Machine
+    Learning, 2012.'
+  merge: -1
+  img_proc: true
