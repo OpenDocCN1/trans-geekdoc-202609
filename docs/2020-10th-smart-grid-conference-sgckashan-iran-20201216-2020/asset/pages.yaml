@@ -1,0 +1,691 @@
+- pgno: 0
+  md: '# A Multi-Objective Generation Expansion Planning with Modeling Demand Uncertainty
+    by a Deep Learning-Based Approach
+
+
+    Farzin Ghashemi Olanlari, Saleh Sadegh Gougheri, Amirhossein Nikoofard
+
+
+    Department of Electrical Engineering
+
+    K.N. Toosi University of Technology
+
+    Tehran, Iran
+
+
+    Email: F_ghasemi@email.kntu.ac
+
+
+    In recent years, with population rise and electrification of the transport sector,
+    the need for electricity demand has grown, which increased the importance of generation
+    planning (GP). Most literature investigated GP considering one objective function
+    (minimizing the cost), whereas others have a high priority. In this paper, a multi-objective
+    approach with aims cost minimization, maximizing reliability, and flexibility
+    is presented. Gep study foundation based on the annual peak demand which shows
+    the superiority of considering load uncertainty in GP. We used a deep learning
+    method based on short term memory (LSTM) networks, which have high ability in
+    time series forecasting for modeling load uncertainty. The optimization problem
+    is also considered as mixed-integer linear programming (MILP) to guarantee global
+    solution. The feasible solution for the year 2020 as a test day shows the deep
+    LSTM''s robustness for annual load forecasting (52.33% real error with data).
+
+
+    Index Terms— Generation expansion planning; neural networks; multi-objective model;
+    reliability; flexibility
+
+
+    # NOMENCLATURE
+
+
+    # Indices
+
+
+    | | |
+
+    |---|---|
+
+    | B | number of load blocks |
+
+    | i | Index of units |
+
+    | l | Index of hidden layer |
+
+    | z | Index for time |
+
+    | | Flexibility index |
+
+    | Δt_b | Duration of load block b |
+
+    | Δn_{max} | Maximum buildable number of unit i in year t |
+
+    | C_i | Capacity of unit i |
+
+    | Cap_i | Capacity of unit (MW) |
+
+    | HR_i | Heat rate of unit (i) ($q_{ww}$) |
+
+
+    | | |
+
+    |---|---|
+
+    | N^{new} | Total cost of units in year |
+
+    | L_zi | Normalized values of index z and unit i |
+
+    | Load_b | The amount of load in each block b (per unit) |
+
+    | N_gt | Total number of existing units |
+
+    | N^{open-cycle} | Total number of open-cycle units |
+
+    | N^{RES} | Total number of RES units |
+
+    | OM_{uit} | O&M cost of unit i in year t |
+
+    | P_t | Peak observed from load forecast in year t |
+
+    | P^{max} | Maximum capacity of unit (MW) |
+
+    | P^{min} | Minimum capacity of unit (MW) |
+
+    | PPC_i | peak performance coefficient of unit i (%) |
+
+    | ramp_i | Ramp rate of unit (MW) |
+
+    | RES_i | Reserve margin in year t |
+
+    | W_i | The weight of each indicator |
+
+    | flex_i | Flexibility index parameter |
+
+    | fuel_{uit} | fuel cost of unit i in year t |
+
+    | x_it | The value of flexibility criterion of unit i |
+
+    | nh | Total number of hidden units |
+
+    | r | Dimension of each data sequence |
+
+    | Ir | Interest rate (%) |
+
+    | N | Total number of generation units |
+
+
+    # Variables
+
+
+    bc_bf, bf_i, bo Bias factor for cell block, forget gate, input gate, and bo output
+    gate'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# 2020 Tenth Smart Grid Conference (SGC)
+
+
+    Data of the cell block, forget gate, and input gate at t
+
+
+    Data of the cell block, forget gate, and input gate at t in the hidden layer
+
+
+    Data of output gate at time t
+
+
+    Data of output gate at time t in the hidden layer
+
+
+    Power generation of unit i load block in time t (MW)
+
+
+    The state of the current layer at state t
+
+
+    The state of the hidden layer at state t
+
+
+    The number of new units added of unit t
+
+
+    The value of output gate for state-point, cell gate, and output gate
+
+
+    The value of output gate for state-point, cell gate, and output gate
+
+
+    # INTRODUCTION
+
+
+    Fast population growth, rapid economic development, and industrialization are
+    the factors in rising electricity demands. Also many power plants showed outdated
+    aging by reducing electricity efficiency. So, the heavy interest in fossil fuels
+    will pay a high economic cost and social damages caused by choosing an incorrect
+    type of power plant, and installation time. Grid Expansion Planning (GEP) is a
+    long-term time horizon that optimizes the capacity to meet specific objectives.
+    The main goal of GEP is to minimize costs. Because the emission of fossil fuels
+    has a significant effect on global warming, for attention we must move away from
+    fossil fuels in favor of renewable energy sources (RES).
+
+
+    Some consider GEP as a single problem with the objective of carbon emission minimization
+    [1], reliability [2], cost [3], and energy resources (RES) impact [4], [5], and
+    the feasibility constraints of generating one object in the cost. So, the GEP
+    is solved from one dimension, which leads to the omission of other important factors.
+    For example, GEP is a multi-objective problem. Palacios et al. [7] have implemented
+    GEP to minimize costs and CO2, and NOx pollution. Authors in [8] studied GEP to
+    minimize reliability and cost of power plants. In [9], an approach was used, maximizing
+    reliability, was not considered. In [10], the cost of not served (EENS) was added
+    to the objective function. However, the goal of maximizing grid flexibility has
+    been added to the multi-objective problem of GEP
+
+
+    The main challenge in the GEP problem is uncertainty in the peak load, which has
+    a significant effect on the optimization problem results due to the long-term
+    horizon of GEP. In [11]-[12], load uncertainty is considered using regression
+    analysis, and reliability is not considered. In [13], the load uncertainty is
+    optimized using the point estimate method (PEM) for a 14-year time horizon, and
+    the GEP problem is formulated using mixed-integer nonlinear programming (MINLP)
+    model. The advantage of MINLP is flexibility, but its results are not applicable
+    as [15]. Deep-learning methods which have a high capacity in feature extraction
+    are used in the power system studies such as short-term load forecasting [16].
+    In the previous studies [17], deep-learning-based methods that have high performance
+    in time series forecasting have not been used for load forecasting in the GEP
+    problem.
+
+
+    In this paper, a comprehensive multi-objective GEP is considered with minimizing
+    constraints, minimizing emissions, reliability by maximizing network flexibility.
+    By considering different objectives of GEP, we have a more realistic and useful
+    study. Also, in this paper we used a learning method based on short term memory
+    (LSTM) networks that is a robust tool in time forecasting. The LSTM network forecasts
+    the peak load with a low error that leads to accurate results in the GEP, which
+    can be made economic. The optimization problem is modeled as a mixed-integer programming
+    (MIP), which can provide global solutions. For the multi-objective problem, we
+    used a weighted-LP method. In summary, the main contributions of this article
+    are as follows:
+
+
+    +   * LSTM network for peak load forecast.
+
+
+    +   * Considering GEP as a multi-objective problem to minimize costs, minimize
+    emissions, and maximize network flexibility by maximizing network flexibility.
+
+
+    The structure of the paper is as follows: problem modeling including the load
+    uncertainty, objective and GEP constraints are presented in Section II. Section
+    III describes the results and results. Finally, Conclusions are made in Section
+    IV.
+
+
+    # II. FORMULATION
+
+
+    # A peak load forecast research
+
+
+    For peak load forecasting, we used LSTM networks, which are explained in this
+    section. The LSTM are the new version of recurrent neural networks that benefit
+    from recurrent weights against feedback networks; this superiority of recurrent
+    neural networks can increase their time forecasting accuracy. Compared to conventional
+    recurrent networks, the advantage of the LSTM network is their resistance to'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "# 2020 Tenth Smart Grid (SGC)\n\nvanishing gradients and exploding gradients\
+    \ [15]. The general formulation of an LSTM is described in equations (1). In LSTM\
+    \ model, we have three gates: Input Gate, Output Gate, and Forget gate which helps\
+    \ us consider the whole temporal and long-term dependencies. The configuration\
+    \ of the LSTM is shown in Fig. 1\n\n```\n$i_t = \\sigma(W_i S_{t-1} + Wh_i h_{t-1}\
+    \ + b_i)$\n$f_t = \\sigma(W_f S_{t-1} + Wh_f h_{t-1} + b_f)$\n$o_t = \\sigma(W_o\
+    \ S_{t-1} + Wh_o h_{t-1} + b_o)$\n$c_t = f_t \\odot c_{t-1} + g_t \\odot \\tanh(W_g\
+    \ S_{t-1} + Wh_g h_{t-1} + b_g)$\n```\n\nHere LSTM block clarify the variables\
+    \ (Wi, Wi, Wi, Wi) and $gr^{xh}, gr^{hh}, Whh, Whh$ and $g^{xh}, g^{hn}$ (bi,\
+    \ bf, bc, co) as $w^{[1]}$\n\n![](img/c04454e12085a6d08500d1cee317963b_2_0.png)\n\
+    \n# B. NEP problem formulation\n\n+   1. Objective functions\n\nThe first objective\
+    \ of the NEP problem is minimization. Costs include construction cost (initial\
+    \ investment), fuel, and maintenance costs.\n\n```\n$C_{total} = C_{inv} + C_{fuel}\
+    \ + C_{OM}$\n$C_{fuel} = \\sum_{t=1}^{T} w_{it}^{nw} cost_{it} \\times \\Delta\
+    \ u_{it} \\times Cap_{it}$\n```\n\nIn Equation (7), $U_{it}$ is the number of\
+    \ units of type $i$ in $t$, which can be represented as Equation (8).\n\n```\n\
+    $U_{it} = u_{it} - u_{it-1}$\n$C_{OM} = \\sum_{t=1}^{T} w_{it}^{om} Cap_{it} \\\
+    times \\Delta u_{it}$\n```\n\nThe second objective of the function is to minimize\
+    \ emission (22). Emissions include $CO_2, SO_2$, which can be measured by\n\n\
+    ```\n$E = \\sum_{t=1}^{T} w_{it}^{em} b_{it} \\times Cap_{it} \\times P_{it} \\\
+    frac{kg}{MWh}$\n```\n\nThe third objective is to maximize the system's reliability\
+    \ equation (12). This is by prioritizing plants during peak load hours. By the\
+    \ ramp rate of the units and their capacity, a coefficient called the peak participation\
+    \ coefficient is calculated\n\nI. Assuming the peak load occurs in the afternoon\
+    \ (approximately 12-18 o'clock), we can also assign a participation coefficient\
+    \ for RESs (TABLE III) [8].\n\nThe final objective is to maximize flexibility,\
+    \ explained in equation (13).\n\n```\n$r = \\sum_{t=1}^{T} w_{it}^{rx} Cap_{it}\
+    \ \times P_{it}^{d.t}$\n$r = \\sum_{t=1}^{T} flex_{it} \\times u_{it} + (flex_{it}\
+    \ - u_{it})$\n```\n\nIn this paper to solve the multi-objective, we used a weighted\
+    \ LP-metric which is explained in [18]. The LP-metrics objective function can\
+    \ be defined as the reference value for our objective:\n\n```\n$Min[w_{G} \\frac{G_{cost}}{G_{total}}\
+    \ - w_{R} \\frac{r^{xh}}{r_{total}} - w_{R} \\frac{r^{rr}}{r_{total}} - w_{F}\
+    \ \\frac{f^{fr}}{f_{total}}]$\n```\n\n+   2. Constraints\n\n+   Reserve margin.\
+    \ Each year's capacity of all generation units, existing and new units, should\
+    \ be equal to each year peak load that is expressed in (15).\n\n```\n$\\sum_{t=1}^{T}\
+    \ w_{it}^{res} Cap_{it} \\geq (1 + Res_{lt}) \\times P_{lt}$\n```\n\nEach year,\
+    \ the generation of existing and new power plants should be equal to the amount\
+    \ of load that they can handle.\n\n```\n$\\sum_{t=1}^{T} P_{it} = Load_{lt} \\\
+    times P_{lt}$\n```\n\n+   3. Minimum and maximum capacity limitations. Due to\
+    \ the turbine side's limitations, like low temperature, the power units have minimum\
+    \ capacity limit. Also, each unit has limited capacity [19]. This enforces unit\
+    \ work between the minimum and maximum range limits. Equation (17) relates to\
+    \ the existing units, and (18) is used for new units.\n\n```\n$P_{min}^{it} \\\
+    leq P_{it} \\leq P_{max}^{it}$\n$u_{min}^{it} \\leq u_{it} \\leq u_{max}^{it}$\n\
+    ```\n\n+   4. Tunnel constraint. For economic and technical reasons, the number\
+    \ of units added to the next year is limited by\n\n```\n$0 \\leq \\Delta u_{it}\
+    \ \\leq \\Delta u_{max}$\n```\n\nYears. The construction of nuclear power plants\
+    \ is limited to five years. A nuclear power plant can be built every five.\n\n\
+    +   e. Generation of RES, including wind and solar power plants, depending on\
+    \ weather conditions and capacity they can provide\n\n```\n$P_{gl,it} = Cap_{it}\
+    \ \\times C_{it} \\times u_{it}$\n```\n\n+   f. Constraint of RES Thermal power\
+    \ plants with fossil fuels generate environmental and fuel costs due to their"
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# 2020 Smart Grid Conference (SGC)
+
+
+    dependence on fuels. For this reason, we have defined a limit with which a RES
+    should be built as much as 2% of the total capacity of the power plants annually,
+    and this rate should increase every year with the same. That means 4% in the second
+    year, 6% in the third year, and continuing in the same way.
+
+
+    solver, and the LSTM network for peak load forecasting was implemented in Python
+    using the Keras library. The system used a 24 GHz dual-core processor with 8 GB
+    of memory.
+
+
+    ```
+
+    $\sum_{i=1}^{n} \Delta U_i \times Cap_i \ge 0.02 \times \sum_{i=1}^{n} U_i \times
+    Cap_i$
+
+    ```
+
+
+    Due to the uncertainty of RES, open-cycle power plants have been compensated for
+    the power not provided by these plants. Open-cycle power plants can cover RES''s
+    variety due to high ramp rate and ability to provide power in a wider range. If
+    the RES provide power due to fluctuations, gas plants cannot compensate for their
+    lack.
+
+
+    ![](img/c04454e12085a6d08500d1cee317963b_3_0.png)
+
+
+    Fig. 2. Load curve
+
+
+    For this reason, we have defined a limit in the GEP program. by constructing an
+    open-cycle power plant equal to 5% of new power plants installed during the planning
+    period.
+
+
+    ```
+
+    $\sum_{i=1}^{n} U_i \times Cap_i \ge 0.05 \times \sum_{i=1}^{n} U_i \times Cap_i$
+
+    ```
+
+
+    # C. Load Duration Curve
+
+
+    In this paper, we use a multi-stage approach for the GEP problem. The IEEE-RTS
+    96 standard load information is used for the load curve, and curve is divided
+    into 12 load blocks, as shown in Fig. 2.
+
+
+    The optimization problem is done in the General Algebraic Management System (GAMS),
+    with CPLEX
+
+
+    # TABLE I. Capacity of Existing Units
+
+
+    | Fuel | Technology | Capacity (MW) | Heat Rate (BTU/kWh) | Min. output (MW) |
+    Num. of units | O&M cost (S$/MWh) | peak participation coeff., (%) | Flexibility
+    index |
+
+    |---|---|---|---|---|---|---|---||
+
+    | Nuclear | steam | 1020 | 10450 | 1 | 0 | 85 | 17 | 0.2273 |
+
+    | NG | CC | 480 | 7660 | 7 | 3 | 65 | 40.5 | 0.6334 |
+
+    | NG | CC | 160 | 10935 | 8 | 6 | 85 | 18.1 | 0.6254 |
+
+    | NG | steam | 440 | 9247 | 9 | 0 | 75 | 22.9 | 0.6103 |
+
+    | NG | steam | 320 | 9247 | 6 | 3 | 61 | 22.9 | 0.6030 |
+
+
+    # III CASE STUDY AND NUMERICAL RESULTS
+
+
+    To implement the GEP problem, we test six types of units for construction including
+    steam units with nuclear and coal fuels; open-cycle units with natural fuels;
+    and RES units. The unit information includes the maximum output, number of units,
+    construction and operation costs, including investment, fuel, and operation maintenance
+    costs. Pollutant gases are from references [12], [20].
+
+
+    # TABLE II. Characteristic of Candidate Units
+
+
+    | Fuel | Technology | Capacity (MW) | Heat Rate (BTU/kWh) | Min. output (MW) |
+    Tunnel | Inv. cost (S$) | O&M cost (S$/MWh) | peak participation coeff., (%) |
+    Flexibility index |
+
+    |---|---|---|---|---|---|---|---|---||
+
+    | Nuclear | steam | 2200 | 1076 | 1 | (every 5 years) | 6500 | 08 | 115 | 37.1
+    | 0.4 |
+
+    | Coal | steam | 600 | 9221 | 3 | 5 | 5169 | 14 | 72.12 | 11.4 | 0.6112 |
+
+    | NG | CC | 960 | 6350 | 28 5 | 999 | 5 | 47 | 39.7 | 0.6471 |
+
+    | NG | CC | 480 | 6750 | 288 | 5 | 1200 | 3 | 6 | 39.7 | 0.6441 |
+
+    | NG | OC | 320 | 8550 | 8 | 5 | 800 | 3 | 85 | 17.8 | 0.6252 |
+
+    | NG | OC | 1600 | 9600 | 40 | 5 | 950 | 3 | 85 | 18.1 | 0.6084 |
+
+
+    # TABLE III. Characteristics of RES Units
+
+
+    | Technology | Capacity (MW) | Capacity factor (%) | Inv. cost (S$) | O&M cost
+    (S$/MWh) | peak participation coeff. (%) | Flexibility index |
+
+    |---|---|---|---|---|---||}{
+
+    | WT | 50 | 0.35 | 1300 | 30 | 10 | 0.6 |
+
+    | PV | 10 | 0.25 | 1100 | 10 | 80 | 0.6 |'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# 2020 Summer Peak Grid Conference (SGC)
+
+
+    To forecast the peak load, we considered a case consisting of the peak load of
+    three provinces of Iran (Tehran, Khorasan, and Mazandaran) [21]. The Iran load
+    test case used for our network''s peak load occurs in July, we use data from the
+    months 2011-2020.
+
+
+    To calculate the participation coefficient, we considered each unit''s run rate
+    as a percentage using the data in TABLE A and normalize them.
+
+
+    The complete dataset contains 930 data, and 80%, 10%, and 10% of data for training,
+    validation, and testing, respectively. To forecast every daily load, we used previous
+    30-day peak load. The considered value for July seems to be the actual peak load
+    for forecasting daily load. We show LSTM networks in forecasting tasks, we forecast
+    peak load for the year 2020 as a test study. We test the number of hidden layers
+    up to 100. Also, after avoiding the overfitting problem by using dropout layers,
+    the maximum number of epochs is considered to be 100. The forecasted and real
+    load for the year 2020 are 17141 and 16244, respectively result has only 87 MW
+    error with real data (5.23%). So, it shows the effectiveness of LSTM networks
+    in peak load forecasting. The forecasted peak load for ten years (2021-2030) is
+    presented in TABLE IV.
+
+
+    ```
+
+    $ppc_{ci} = \frac{ramp_{ci}}{\sum ramp}$
+
+    ```
+
+
+    The mentioned multi-objective function is optimized using the weighting method
+    based on the importance of the objective functions. The first objective function
+    is 0.3, the second objective function is 0.25, and the third objective function
+    is 0.2, and the results are given in TABLE VI. The total costs are 3.88447×10^{6},
+    and the production cost is 2.65271×10^{6}.
+
+
+    As shown in TABLE VI, the most of the RES''s capacity is used in this program
+    because they do not produce carbon emissions despite the existence of RES energy.
+    However, since these power plants is low, and they cannot generate electricity
+    at all hours of the day, we need other power to supply the network load demand.
+
+
+    TABLE IV. Predicted Peak Load for A Ten-Year Horizon
+
+
+    | Year | Peak load | Peak load |
+
+    | --- | --- | --- |
+
+    | 2021 | 17279.27 | 20006 |
+
+    | 2022 | 17889.4 | 20445.1 |
+
+    | 2023 | 18461.7 | 20847.1 |
+
+    | 2024 | 19017.24 | 21213.7 |
+
+    | 2025 | 19529.71 | 21345.4 |
+
+
+    TABLE V. Error of the Forecasted Results for Daily Load from July to September.
+
+
+    To show the error of the forecasted results, we calculated absolute error (mean
+    absolute error (MAE), mean percentage error (MAPE), and mean square error (RMSE))
+    [15]. These error are calculated for July to 2020 as a test year which is shown
+    in TABLE V.
+
+
+    | Method | MAE (%) | MAPE (%) | RMSE (%) |
+
+    | --- | --- | --- | --- |
+
+    | LSTM | 2.1 | 1045.7 | 1304.34 |
+
+
+    In conducting the GEP study, all the mentioned equations have been considered,
+    and the interest rate and the reward are considered as 5% and 10%, respectively.
+    The flexibility of the units is normalized by using the data of TABLE III II and
+    equations (23), (24), [13].
+
+
+    ```
+
+    $I_{iz} = \frac{x_i - min(x_i)}{max(x_i) - min(x_i)}$ \nflex = \frac{\sum_{i=1}^{n}
+    I_{iz} \times w_z}$
+
+    ```
+
+
+    The weighting of each normalized flexibility indices is selected based on the
+    importance of each index.
+
+
+    TABLE VI. GEP Simulation Results
+
+
+    | Year | 8 | 9 | 10 | 11 | 12 | 13 |
+
+    | --- | --- | --- | --- | --- | --- | --- |
+
+    | 1 | 5 | 5 | 5 | 10 | 10 |
+
+    | 2 | 3 | 0 | 5 | 10 | 10 |
+
+    | 3 | 0 | 0 | 5 | 10 | 10 |
+
+    | 4 | 0 | 0 | 0 | 10 | 10 |
+
+    | 5 | 0 | 0 | 0 | 10 | 10 |
+
+    | 6 | 0 | 0 | 0 | 10 | 10 |
+
+    | 7 | 0 | 0 | 0 | 10 | 10 |
+
+    | 8 | 0 | 0 | 0 | 10 | 10 |
+
+    | 9 | 0 | 0 | 0 | 10 | 10 |
+
+    | 10 | 0 | 0 | 0 | 10 | 10 |
+
+
+    Due to the cost of construction, operation, and maintenance, and even the high
+    cost of nuclear power plants, it is preferred to use clean RES instead of nuclear
+    power plants. By open cycle gas power plants, plant No. 9 and 11 are used because
+    of their flexibility, they can handle the stochastic behavior of RES, and have
+    the highest participation coefficient in the generation, which increases the system''s
+    reliability. Power plant No. 8 is combined with plant No. 9 to supply the network
+    demand. The reason for choosing this power plant is its cost, high efficiency,
+    and flexibility. For power plant No. 7, it was not used because of the decision
+    that this unit is not suitable for power plant with coal fuel which has a high
+    cost, besides, it provides a lot of air pollution emission generation.
+
+
+    # IV. CONCLUSION
+
+
+    In this paper, the generation planning (GEP) problem is modeled as a multi-objective
+    optimization problem for high-ratio zone. The objectives are'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# 2020 IoT Smart Grid Conference (SGC)
+
+
+    minimizing costs, emission generation, and maximizing system reliability and flexibility.
+    The LP-method which was used to solve the multi-objective problem, and the weights
+    of the functions were determined based on the importance of each objective. Also,
+    in this work for modeling load uncertainty which is an essential parameter in
+    GFP studies, we used a deep long-term memory (LSTM), a robust tool in time series
+    forecasting tasks. This paper tries to present a complete model for the GFP problem
+    by considering different objectives and load uncertainty. Our study shows that
+    when different objective functions behave, plants with a low emission is the final
+    choice, and we prove that LSTM method can forecast actual load with good performance.
+    The capacity capacity mechanism for renewable energy plants and implementing reinforcement
+    learning algorithms is the future direction of our research.
+
+
+    +   [9] T. Al Shaghai, Ioannis, and G. French, "Multi-objective optimization of
+    power system planning integrating sustainability," Energy, vol. 13, no. 9, 2020.
+
+
+    +   [10] E. Noorollahi, D. Fatasi, S. Ghodipour, and M. A. Shiraz, "A developing
+    framework for power generation expansion with the inclusion of renewable energy
+    - A case study in Iran," IEEE Trans. Power Elect., Vol. 156, no. 2, 2011.
+
+
+    +   [11] P. Parven, S. Ray, J. Das, and A. Bakhtiary, "Multi-Objective Power System
+    Planning with Renewable Intermittency and Uncertainty," IEEE Conf. ICCPC 2018,
+    pp. 424-429, 2018.
+
+
+    +   [12] V. Perez, S. Hajkanen, and P. French, "A multi-objective generation expansion
+    planning with renewable energy," Energy Policy, vol. 155, 119938, 2021.
+
+
+    +   [13] P. Surya, S. Subramaniam, S. Ganesan, and M. Maharathi, "Multi-objective
+    power system planning using gas chromatography algorithm," J. Aust. Elect. Con.,
+    vol. 16, no. 3, pp. 136-148, 2019.
+
+
+    +   [14] S. Hajkanen and A. Amminen, "Generation Expansion Planning Considering
+    the Uncertainty of Yearly Loads," IEEE Int. Conf. Elect. Energy 2019, pp. 1-5-1-6,
+    2019.
+
+
+    +   [15] H. Hajkanen, T. Ariyani, S. S. Ghodipour, M. A. Golkar, and A. Ahmadiyan,
+    "Deep Learning-Based Forecasting in Smart Grid: A Multi-Objective Approach with
+    Clustering Features," IEEE Trans. Smart Grid, 2020.
+
+
+    +   [16] M. A. Golkar, H. Vahabzadeh, S. Hajkanen, J. A. Mohar, "Power Location
+    and Profit Profile with Windpower," IEEE Trans. Distribution Network with Uncertainty,
+    pp. 11-12, 2019.
+
+
+    +   [17] S. M. J. Mirzaafar, Al-Haskani, H. Maleki, and M. B. Aryanabad, "Multi-objective
+    robust optimization for multi-objective power system planning with uncertainty,"
+    Int. J. Prod. Econ., vol. 134, no. 1, pp. 28-42, 2019.
+
+
+    +   [18] S. S. Gougarth, J. Hajkanen, M. A. Golkar, and A. Mohari, "Unit Commitment
+    with Price Demand Response Based on Generation Forecasting," 2019 IEEE International
+    Power System Conference (IPPSC), pp. 239-240.
+
+
+    # REFERENCES
+
+
+    +   [19] H. Akhazadeh and T. Amminen, "A Model for Generation Planning of Power
+    System Expansion Costs," Proc. Smart Grid Conf. (SGC), pp. 1-5, 2018.
+
+
+    +   [20] R. F. Suriya, S. Bajaj, and H. Hadi, "The impact of a multi-objective
+    reliability index on multi-objective load planning," IEEE Int. Conf. Elect. Energy
+    (ICEE), 2017, pp. 1-6.
+
+
+    +   [21] S. Raashid, T. Amminen, and M. El-Farsi-M. Farizadeh, "A multi-objective
+    generation expansion model for considering load of flexibility, IEEE Trans. Power,
+    vol. 33, no. 6, pp. 6922-6934, 2018.
+
+
+    +   [22] C. Zhou, J. Ordegard, and G. Wu, "Generation planning considering large-scale
+    wind generation," IEEE Proc. Industrial Elect. Conf., pp. 205-221, 2005.
+
+
+    +   [23] B. Kim, K. Lee, and J. Vaz, "Generation expansion planning with high
+    share of renewable of output," Energy, 190, pp. 1275-1288, 2017.
+
+
+    +   [24] B. Kim and J. Lee, "Expansion planning through two convex relaxation,"
+    IEEE Trans. Power, vol. 53, no. 2, pp. 2221-2228, 2008.
+
+
+    +   [25] E. Zakarian and A. Shiraz, "Multi-objective power generation expansion
+    planning-case study in Iran," In. Smart Grid Green Conf. Energy, vol. 7, no. 2,
+    pp. 90-97, 2016.
+
+
+    +   [26] H. Taghi and A. Shiraz, "Multi-objective power generation expansion planning
+    with high penetration of renewables," Renew. Energy. Rel., vol. 81, no. 1, 2663,
+    2018.
+
+
+    +   [27] E. Sugawara and H. Hajkanen, "establishing best test assets (BTA) under
+    European Directive 2019/944 of the European Parliament and the Council, for large
+    competition participation," Off. J. Eur. Un., vol. 58, no. 2, pp. 212, 2017.
+
+
+    | TABLE A. Specifications of Units |
+
+    | Units | Min (MW) | Ramp (MW/h) | MHT (MW) | MHT (h) | Units | Min (MW) | Ramp
+    (MW/h) | MHT (MW) | MHT (h) |
+
+    |---|---|---|---|---|---|---|---|---||
+
+    | 1 | 1000 | 65 | 108 | 8 | 28 | 20 | 5 | 3 |
+
+    | 2 | 240 | 17 | 5.5 | 3 | 29 | 20 | 5 | 3 |
+
+    | 4 | | 80 | 14 | 1.5 | 1 | 14 | 40 | 7 | 1 |
+
+    | 2 | | 8 | 6.5 | 3 | 11 | | | | |
+
+    | 5 | 160 | 6.4 | 5 | 3 | 12 | | | | |
+
+    | 6 | 1760 | 11.4 | 108 | 8 | | | | | |
+
+    | 7 | 300 | | 6 | 4 | | | | |'
+  merge: -1
+  img_proc: true
