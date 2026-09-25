@@ -1,0 +1,390 @@
+- pgno: 0
+  md: '# The Burn-to-claim cross-blockchain asset transfer protocol
+
+
+    Babu Pillai | Kamanashis Biswas | Zhè Hōu | Vallipuram Muthukumarasamy
+
+    School of ICT | Faculty of Law and Business | School of ICT | School of ICT
+
+    Griffith University | Australian Catholic University | Griffith University
+
+    Gold Coast, Australia | Brisbane, Australia | Gold Coast, Australia
+
+    babu.pillai@griffith.edu | kamanashis.biswas@acu.edu.au | z.how@griffith.edu |
+    v.nuthu@griffith.edu
+
+
+    **Abstract—**the first multi-blockchain architecture depends on the emergence
+    of new protocols to achieve trust between cross-chain participants. However, interoperability
+    between blockchains remains an open problem. Without bridge-based systems, it
+    is harder to gain confidence in security and correctness of the cross-chain transfer
+    to embed trust in the process. We propose a Burn-to-claim cross-chain protocol
+    to safely exchange assets between blockchains. Our system can work anywhere that
+    the asset is burned from the source blockchain and claimed at the destination.
+    We use transaction details like signatures and time lock to operate the protocol
+    in a distributed manner. We provide an analysis that proves cross-chain transfers
+    transfer assets correctly. Index Terms—blockchain, interoperability, asset transfer,
+    cross-blockchain protocol
+
+
+    such as Hyperledger and Coral to leverage the full potential of the decentralized
+    ledger technology.
+
+
+    To address the issues raised, we propose a built-in process that is integrated
+    with the protocol to carry out transactions and facilitate interoperability between
+    systems. We formalise the concept of interoperability from our previous work [13]
+    and the Burn-to-claim cross-blockchain protocol. We define it as a process which
+    consists of two components: an exitTransaction and entryTransaction to verify
+    the validity of the proof in order to re-create the asset. The contribution of
+    this process are threefold:
+
+
+    +   - **Protocol**: We process for cross-blockchain asset transfer where transactions
+    are performed in a decentralised and trustless network.
+
+
+    +   - **Worklow**: We propose a flexible and simple workflow that can be adapted
+    for digital asset transfer between blockchains without needing to understand the
+    key characteristics of the blockchain technology.
+
+
+    +   - **Analysis**: We perform a preliminary analysis to show the correctness,
+    security and fairness of the proposed protocol.
+
+
+    # I. INTRODUCTION
+
+
+    Blockchain technology offers an immutable, decentralized, and transparent mechanism
+    for transaction processing. Beyond its reach, one reason that might assume that
+    a blockchain system would be able to transfer values within a network is that
+    the current architecture of blockchains limits the transfer within the same network.
+    However, the current architecture cannot utilize multiple networks or a composition
+    of their guarantees [1]. A reason for this issue is that cross-blockchain has
+    its own autonomous scalability problem [5], and therefore one network cannot verify
+    the information in a different network. Furthermore, seamless consensus between
+    two blockchains is difficult [12].nThe cross-blockchain integration would enable
+    the interoperability among different, heterogeneous blockchains [8]. With the
+    current protocols of blockchains, it is difficult to have direct interoperability
+    between systems [4]. There is no method in the system to provide a cross-chain
+    value transfer; therefore, external transaction is required. However, the blockchain
+    system cannot recognize and verify any asset burned out by a third-party party.
+    This paper discusses how enterprise blockchain applications reside on private
+    blockchains
+
+
+    # A. Assumptions
+
+
+    The following assumptions are made in the proposed protocol:
+
+
+    +   - The underlying blockchain networks are secure with a consensus of transaction
+    finality within time, all transactions cannot be rolled [2]
+
+
+    +   - The participants in the cross-communication process ''trust'' each to meet
+    the required mechanism and are willing to process the transaction if valid is
+    presented by the other party. The required level of trust depends on the application
+    and is is used by
+
+
+    +   - The network nodes are motivated to take part in the respective proof-mechanism
+    (mining) on both the blockchains.
+
+
+    +   - A transaction carry a single output which responds to a single asset and
+    the networks recognize and form a common understanding of the assets they are
+    transferring.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: "Under these assumptions, once a transaction is broadcast, the block network\
+    \ verifies the transaction and includes it in a block. A blockchain system tends\
+    \ to synchronise through a protocol in which the network constantly to produce\
+    \ new blocks and broadcast their changes to the entire network. In case of cryptocurrencies,\
+    \ this behaviour is motivated by mining rewards. Here we assume there is an incentive\
+    \ mechanism to promote participation by nodes.\n\n# ## II. THE BURN-TO-CLAIM PROTOCOL\n\
+    \nIn this section we formally define the Burn-to-Claim protocol and its properties.\
+    \ A summary of notices used in this paper is available in git repository.\n\n\
+    # ### A. Communication between networks\n\nThe Burn-to-claim protocol consists\
+    \ of two functions for the communication between networks: *exitTransaction* which\
+    \ locks the asset in the source network, and *entryTransaction* which verifies\
+    \ the validity of the transfer-proof in order to re-create it in the destination\
+    \ network.\n\nIn our protocol, the sender who wants to transfer the asset must\
+    \ present a transfer-proof. To achieve this, we use a proof-of-burn protocol [10],\
+    \ which provides a mechanism where the sender transfers the asset to a nonspendable-address\
+    \ and is able to present such a proof for the locked asset.\n\n**Definition 1\
+    \ (Burn-address).** A burn-address given as $\beta$ is an address to which one\
+    \ can send assets but which can never be recovered because there is no private\
+    \ key corresponds to that address.\n\nThe process of sending crypto into an address\
+    \ makes it inaccessible and useless. These addresses are randomly generated, where\
+    \ the owner of those addresses does not have a private key that corresponds to\
+    \ the value. The burn protocol [10] presents proofs such that the underlying cryptographic\
+    \ scheme is the protocol preventing the possibility of finding a private key for\
+    \ the holder and the ability to spend it.\n\nIn our protocol, *exitTransaction*\
+    \ uses a transfer-proof with a time-lock and a secret $\\gamma$, the first defines\
+    \ a time for the transaction, and the latter is used to claim the asset in the\
+    \ destination network.\n\nA time-lock is defined as a function that locks the\
+    \ output of a transaction for a period of time that the asset cannot be spent\
+    \ until the time has elapsed.\n\nOur protocol requires the sender to generate\
+    \ a secret code $\\gamma$ using a random key, $key(\\gamma)$. The secret $\\gamma$\
+    \ is encrypted using the public key of the recipient. The encrypted secret code\
+    \ is denoted by T. We assume the public information is shared among parties.\n\
+    \n# Algorithm 1 exit-transaction-protocol\n\n```\nfunction exitTransaction($K^S_{src},\
+    \ K^D_{dst}, \beta, v, H(\\gamma)$)\n  if exitVerify($K^S_{src}, K^D_{dst}, \\\
+    sigma$) then\n    $\\gamma ←$ timedlock($v$) or $\beta$ in $N$\n    $Tx ← (T,\
+    \ \\gamma)$n  else\n    return invalid transaction\n  end\nreturn transaction\n\
+    ```\n\nThe *exitTransaction* defined in Algorithm 1 takes as inputs a tuple of\
+    \ ($K^S_{src}, K^D_{dst}, \beta, v, \\sigma$). It includes the sender's proof\
+    \ ($K^S_{src}, K^D_{dst}$), the burn-address ($\beta$), and the previous transfer\
+    \ ($Tx$) in which the asset $v$ was spent. $H(\\gamma)$ represents the hash of\
+    \ secret $\\gamma$ and $\\sigma$ is the digital signature of the $Tx$.\n\n**Definition\
+    \ 2 (exitVerifier).** The exitVerifier function consists of two sub-functions\
+    \ *verifyAsset* and *verifyTransaction*, it returns true when both sub-functions\
+    \ return true, and returns false otherwise.\n\n+   - returns true if the given\
+    \ $K^D_{dst}$ from $K^S_{src}$\n  - the function *verifyAsset*($K^S_{src}, K^D_{dst}$,\
+    \ $\\sigma$) returns true\n  - false false\n- returns true if balance($Tx$) and\
+    \ $Tx^l$ are in a valid state;\n  - if exitVerifier returns true then the transaction\
+    \ executes the transfer of the asset to the given-address $\beta$ with conditions\
+    \ such that the asset is time-locked within the source network for a time-lock\
+    \ period and the hashed secret $H(\\gamma)$ is added to the data of the transaction.\n\
+    - 2) **Entry transaction:** The protocol of the entry-transaction. An entry-transaction\
+    \ is defined in the destination network by the recipient. Upon receiving the entryTransaction\
+    \ with the transfer-proof from source chain, the destination network verifies\
+    \ the validity of the transfer-proof and recovers the asset.\n\n> 1https://github.com/b-pillai/burn-to-claim\n\
+    \n> 2https://bicon.io/guides/cltv.html\n\nAuthorized licensed use to: San Francisco\
+    \ State Univ. Published on June 18, 2021 at 18:36:01 UTC by IEEE X. Restrictions\
+    \ apply."
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "# Algorithm 2 entry-transaction-protocol\n\n```\n1: function entryImport($Tx,Tx^i,K^B_{\b\
+    eta},v,Tx,\\Gamma,\\sigma$)\n2: if importVerifier($Tx,Tx^i,\\sigma$) and\n3: \
+    \    ($Tx.time$ is under the limit) and\n4:     decrypt($K^B_{\beta},H(\\gamma)$)\
+    \ is true then\n5:     $\beta \\leftarrow K^B_{\beta}:v$\n6:     $Tx \\leftarrow\
+    \ (Tx,H(\\gamma),\\sigma)$\n7: else\n8:     invalid transaction\n9: end if\n10:\
+    \ return transaction receipt\n11: end function\n```\n\nthese systems are not connected,\
+    \ they have enough credibility which is governed by a protocol and some common\
+    \ agreements. For example they can be different branches of a collaborative interest,\
+    \ different branches of a company or different departments in an organisation.\
+    \ The objective of this paper is to address the cross-chain action problem, we\
+    \ focus on the construction of consensus on how the transactions are verified,\
+    \ and on what conditions the transactions are valid.\n\n+   1) Network assumption.\
+    \ To address the state problem, we make some assumptions about the networks and\
+    \ their ability to mine. We assume the cryptographic primitives of the networks\
+    \ are secure. By making the same assumptions as is presented in [5, 11]. One assumption\
+    \ is that the sender and receiver networks are synchronized with a global clock.\n\
+    \nThe function entryImport in Algorithm 2 defines a tuple $(Tx,K^i,K^B_{\beta},v,Tx,\\\
+    Gamma)$ as input where $Tx$ includes the public key $K^i$, the recipient address\
+    \ $K^B_{\beta}$, the burn-address, the value $v$ and transaction $Tx$; $\\Gamma$\
+    \ represents the encrypted secret code and $\\sigma$ denotes the digital signature.\n\
+    \nIn our model of nodes, we assume each blockchain as an autonomous system, which\
+    \ communicates with each other via a cross-blockchain protocol. To facilitate\
+    \ communication between blockchains rely on decentralized consensus mechanisms\
+    \ that can identify and address cross-chain issues. This decentralised integration\
+    \ mechanism acts as a verification method for the cross-blockchain protocol. The\
+    \ architecture of our model can be seen as a number of networks (based on the\
+    \ topology) connected through a gateway mechanism or network of networks.\n\n\
+    Definition 3 (importVerifier). The importVerifier consists of two functions importVerifier\
+    \ and proofVerifier, it returns true if both sub-functions return true, and false\
+    \ otherwise.\n\n+   * importVerifier: returns true if from the burn-address of\
+    \ $K^B_{\beta}$ returns true and getAddress($Tx$) returns $K^B_{\beta}$ (assuming\
+    \ the network uses a source chain of getAddressFunction); returns false otherwise.\n\
+    * proofVerifier: returns true if $Tx$ is generated from $K^B_{\beta}$, balance($\b\
+    eta$) = $Tx,Tx^i$ is in a valid state; otherwise returns false.\n\nThere will\
+    \ be multiple nodes which function as gateways of the network; they will be competing\
+    \ each other for the reward. We assume that not all the nodes will verify the\
+    \ transaction, but a sufficient number of them will ensure the security of the\
+    \ transaction. Each node will accept the proposed proof based on the credibility\
+    \ of the gateway we trust. We leave the details on a decentralised integration\
+    \ mechanism for future work.\n\nA proofVerifier is the essentially version of\
+    \ assetVerifier. The proof from the source network needs to verify. We assume\
+    \ through the gateway mechanism, the destination nodes are able to verify the\
+    \ proof. Through $Tx$ the gateway nodes can access the public transaction in the\
+    \ source network. When importVerifier returns true, the node needs to check the\
+    \ time-lock and the secret code. We assume that both the time-lock period and\
+    \ the secret code matches with the hash value embedded in the transaction, the\
+    \ asset sent to the recipient $K^B_{\beta}$.\n\nWe set an example where Alice\
+    \ (the sender) in the blockchain network $N_1$ wants to transfer an asset to Bob\
+    \ (the receiver) in the blockchain network $N_2$. Alice submits an entryTransaction\
+    \ to network $N_1$. Network $N_1$ executes the transaction, returns Alice's asset\
+    \ in network $N_2$, notes that the asset has been burned and returns the proof\
+    \ of burn to Bob. Network $N_2$ verifies the proof and if succeeds, assigns the\
+    \ asset to Bob's account. Figure 1 shows a brief overview of the protocol construction.\n\
+    \nB. Workflow of the protocol\nThis section presents the workflow of the burn-to-claim\
+    \ protocol using two blockchains which are self-sufficient and secure. The two\
+    \ networks run different applications but they need to operate them. They may\
+    \ have distinct participants who employ different agreement protocols. It is assumed\
+    \ that the majority of participants in both networks are honest. The assumption\
+    \ is here that even though\n\n3) Preparation stage: In the preparation stage,\
+    \ Alice exchanges her keys via a exchange mechanism. We use the public key of\
+    \ Bob to encrypt the secret code ($\\gamma$) and share the encrypted secret code\
+    \ ($\\Gamma'$) with $i$ entry transaction. Then, they must wait until the time-lock\
+    \ period $t$. After that, Alice ($S$) generates the burn ($\beta$). We describe\
+    \ the steps in detail.\n\nIn order to spend the value in Alice, she needs to prove\
+    \ the ownership of the public key that is used to generate the address. Any value\
+    \ mean yet sent to an address\n\n121"
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "# time\n\n# $t_0$\n\n# $t_1$\n\nexitTransaction()\n($K_{sender} \\to \\beta:v$)\n\
+    \nConfirmation\nperiod\n\nreclaimTransaction()\n($\\beta \\to R_{recdr}:v$)\n\n\
+    Alice (sender) S\nKeygen() $\to$ secret-key\nencrypt($v, K_S^*$) $\to$ $\\gamma$\n\
+    \nasset is buried\nv(timeLock - $t_0$) $\to$ $H(v)$\n\nminer get y\n\nSource\n\
+    \nS reclaim v after $t_1$\nS reveal $\\gamma$\n\nPrepare\n\nnotify\n\nverify\n\
+    \nExecute\n\nCommit\n\nif (R claim v) reveal w in $t_1$,\n\nif (not)\n\nBob (recipient)\
+    \ R\ndecrypt($\\gamma, K_R^*$) $\to$ v\n\nentryTransaction())\n($\\beta \\to R_{recdr}:v$)\n\
+    \nConfirmation\n\nperiod\n\nDestination\n\n![](img/d347811a3daf8f82b85d63b0059dd025_3_0.png)\n\
+    \nno private can be considered. However, how do we know if an address does not\
+    \ have a value? To address this issue and make a more specific proof in our protocol,\
+    \ S uses R's secret to generate the burn which is given as Address($K_R^*$) and\
+    \ returns $\beta$. This will guarantee that the address does not have a value\
+    \ in the source, and $\beta$ is more of recipient R because it is generated from\
+    \ R's address. Therefore, we can use such a transaction to burn as a valid proof.\n\
+    \nNow that we have the need to provide an addition for retrieving the asset of\
+    \ an unsuccessful transaction. For the instance, the asset is on the source chain\
+    \ or not recreated in the recipient network, or the asset is sent to a wrong address.\
+    \ We name this mechanism as reclaim- and explain the process in Algorithm 4. To\
+    \ ensure this property we use a lock-out transaction out in the source network.\
+    \ This will stop the sender from claiming the asset before the recipient claims\
+    \ it. The time-lock period is based on factors such as network latency and consensus\
+    \ timing, which we refer to as-transit.\n\nWe also need to consider the double-spending\
+    \ to prevent double-spending, our protocol uses a secret code and time-lock value.\
+    \ To claim an asset, the recipient must reveal the secret code whereas the sender\
+    \ is unable to reclaim an asset until the time-lock period is expired.\n\n# 4\
+    \ Commit stage: in the commit stage, S creates and broadcasts an exitTransaction\
+    \ to invoke Algorithm 2 in the network N1\n\n# Algorithm 3 exit-transaction-time-lock\
+    \ code\n\n+   1: while (time-lock is true)\n2: if (R claim v) then\n3: reveal\
+    \ secret v to N2\n4: N1,miner gets v from N2\n5: N1,miner claims his-locked v\n\
+    6: end\n7: end (while after the ($t_{lock}$))\n8: if (R failed to claim v) then\n\
+    9: S reveals $\\gamma$ to N1\n10: S re-claim v\n11: N1,miner claims his-locked\
+    \ v\n12: end\n13: reveal $\\gamma$ is known to N2\n14: end\n\nAlgorithm 3 shows\
+    \ the transaction condition. Here is that after claiming the transaction (including\
+    \ the asset and the miner) must reveal the secret code. Therefore, the transaction\
+    \ will be minded by the miners who have access to the transaction network's data\
+    \ because they need to get the secret code to claim the link. If there is no gateway\
+    \ node then this transaction will not go through in the first place.\n\nThe time-lock\
+    \ mechanism clearly allows only one party to claim the asset at a time. For example,\
+    \ while the\n\n122\n\n* Authorized use limited to: San Francisco State University.\
+    \ Downloaded on 18/06/2021 at 18:38:01 UTC IEEE Explorer. Restrictions apply."
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: "Tx output is time-locked in the source network, if R reveals the secret code\
+    \ $\\gamma$ in her network, the miner who mined this transaction in the source\
+    \ will reveal it in source to claim his fees; there $\\gamma$ is known to both\
+    \ networks. After, S will not be able to claim the asset. Likewise, if R fails\
+    \ to claim the asset within the timeframe, and then reveals $\\gamma$ expired\
+    \ in the source network to reclaim the asset. Or if design $\\gamma$ is not known\
+    \ to the network; therefore, the $\\gamma$ newly revealed will be able to claim\
+    \ the asset after the expiry of $t_{lock}$.\n\n# ### Algorithm 4 reclaim-transaction-protocol\n\
+    \n+   1: function reclaimTransaction(Tx($K^S_{adr},K^R_{adr},v,Tx)$, $\\gamma$)\n\
+    2: if reclaimVerifier() is true\n3: ($Tx^{t_{lock}}$ pass the time limit) and\n\
+    4: decrypt($K^S,H(\\\\gamma$)) is true) then\n5: return $K^R_{adr} : v\n6: else\n\
+    7: invalid transaction\n8: end\n9: return transaction receipt\n10: end function\n\
+    \n**5) Execution:** the stage has two possibilities: either R claims the asset\
+    \ within the transit-time period or S claims the asset after the time-period expired.\n\
+    \na) R claims the asset: R constructs an entry-transaction and broadcasts to $N_2$.\
+    \ If R can prove the ownership of $K^R$ the miner will be able to process it.\
+    \ However protocol requires solid evidence that S has burned the asset on the\
+    \ source network. Here R provides a burn $\\beta$ and a previous transaction $Tx'$,\
+    \ which forms the proof of claim in the source chain.\n\nThe function of reclaimVerifier\
+    \ has two subfunctions spendVerifier and proofVerifier. The function verify($Tx,K^S$,$\\\
+    gamma$) returns true and getAddress($K^R_{adr}$) returns true. Then the proofVerifier\
+    \ checks the proof of $Tx'$ verifying the balance($\beta$) = burn true and $B$\
+    \ in $E$ Q return either false. The reclaimTransaction can be included with the\
+    \ entryTransaction for clarity, we present a separate transaction.\n\n# ### III.\
+    \ ANALYSIS\n\nOur protocol requires a process where nodes are able to mine blockchains.\
+    \ With that, $n$ nodes of $m$ gateways propose this transaction and eventually\
+    \ one proposal will get by the network. We then these gateways are able to validate\
+    \ the transaction-with $Tx'$. The nodes verify that the burn occurred on the source\
+    \ chain and the transaction is contained in a block. This can be done by checking\
+    \ the chain validity [7] of the blockchain.\n\nIn this section\n\nIf notVerifier\
+    \ returns the network asset to the recipient $K^R_{adr}$, that means that the\
+    \ secret code $\\gamma$ is known to her, and after, the source network miner will\
+    \ take it to the source chain to claim his fees.\n\nIt should be noted that the\
+    \ burn-in-our protocol is not generated by a regular key, rather an unique key\
+    \ generated each time by combining the recipient address and other parameters.\
+    \ It is not possible to execute it in the current network. However, with the signature\
+    \ of $\\gamma$ and its occurrence, the asset burned in the proposed scheme would\
+    \ remain unspent.\n\nb) S claims the asset: In the case the recipient has no asset\
+    \ within the time-lock period, the sender gets notified by the network or the\
+    \ miner who made the $Tx$, and then sender invoke reclaim, which is part of entryTransaction\
+    \ and is included the asset back. The transaction first checks the signature to\
+    \ verify($Tx,K^S$,$\\gamma$); then checks the time-lock period and secret code\
+    \ hash. As we stated earlier, our protocol requires some miners to mine in both\
+    \ the chains. Then, we assume that miners are able to check with the network $N_2$\
+    \ before this transaction.\n\nLemma 1 (Unspendable). A burn $\\beta$ is unspent\
+    \ with respect to a blockchain protocol [11].\n\nThe functionality of entryTransaction\
+    \ is to reclaim the asset after the asset is burnt on the source chain. In our\
+    \ protocol the asset must be permanently burned in the commit stage. With the\
+    \ burn protocol and its property of unspendability is permanently burned before\
+    \ claiming the source chain.\n\nLemma 2 (Burn claim). An asset $v$ which is transferred\
+    \ from $N_1$ to $N_2$ must be burned in $N_1$ before a user can claim it $N_2$.\n\
+    \nThe sender initiates the exit-transaction must ensure the asset is being burned.\
+    \ In exitTransaction the exportVer"
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: "# REFERENCES\n\nief(s) ensures the transaction validity and owner's ability\
+    \ to spend. This must be carried by each mining node and must reach the consensus\
+    \ of the network. Therefore, as long as the network is secure, the participants\
+    \ can only exchange the asset they own.\n\n+   [1] Rafail Belchor, Andres Vasconcelos,\
+    \ Sergio Guerre, and Miguel Correa. A survey on blockchain interoperability: Past,\
+    \ present, and future trends. arXiv:2005.14282, 2020.\n\n**Lemma 3 (Ownership),**\
+    \ the exitTransaction can be successfully executed if the sender sends the asset.\n\
+    \n+   [2] Mariani Belotto, Stefano Moreti, Maria Potubucano, and Stefano Sessi.\
+    \ Geometric analysis of Atomic Cross-Class Swaps. PhD thesis, Caisse des dépôts-pour\
+    \ la recherche et Banque des techniques, 2019.\n\n**Theorem 1 (Security).** The\
+    \ recipient network can rely on the Burn-to-Claim exit-proof guarantee provided\
+    \ by the source network.\n\n+   * The exitTransaction ensures the asset $v$ to\
+    \ a burn $\beta$ that is derived from the recipient's $K_{\beta}$. To claim $v$,\
+    \ the recipient must prove that the burn $\beta$ is derived from an asset he owns.\
+    \ The user provides a signature $\\sigma$ to verify $K_{\beta}$, and gets the\
+    \ asset derived from the $K_i$ using the gate function. Therefore, only the user\
+    \ who owns a private key with $K_{\beta}$ can make the claim of the asset in the\
+    \ destination network.\n\n+   [3] Michael Berkowski, Daniel McDonald, Christopher\
+    \ Reiter, and Stefan Schulz. Towards atomic cross-chain transactions: State of\
+    \ the art and open questions within. Distributed Systems Group TU Wien (Technical\
+    \ University at Wien), 2018.\n\n**Theorem 2 (Correctness).** The exchange operation\
+    \ only changes an asset to a correct recipient.\n\n+   [4] Michael McDonald, Christopher\
+    \ Reiter, Daniel McDonald, and Stefan Schulz. In claims: first-class transactions\
+    \ for cross-chain asset transfers. International Wiener Symposium, 2018.\n\nWe\
+    \ assume that no adversary can obtain the private key of a secure signature scheme,\
+    \ without which our protocol is dependent on a probabilistic polynomial-time adversary\
+    \ they can control. Let $\\sigma$ be a secure signature scheme then the distribution\
+    \ of entity to the $K_i$ from a $K_j$ or $\beta$ is unpredictable.\n\n+   [5]\
+    \ Itay Elal, Adam Ef Gen, Emin Gin Ser, and Robert Van Rennie: A scalable blockchain\
+    \ protocol for deployment in networked systems design and implementation, 45–59,\
+    \ 2016.\n\n**Theorem 3 (Fairness).** The exchange operation should either execute\
+    \ once, if the exchange succeeds and the asset is delivered to the recipient,\
+    \ or it is failed and the asset returns to the sender.\n\n+   [6] Jianxi Gao,\
+    \ Daniel Liagis, and Shloym Levin. A scalable method to a network of networks.\
+    \ National Science Review, 12(3):336–346, 2018.\n\nFairness in our context means\
+    \ that both parties receive what they expect or not. The fairness relies only\
+    \ on the fact that such hash function is collision resistant. By using hash as\
+    \ secure code of the contract, the payment of the transactions can be guaranteed\
+    \ without the participation of a third party, so as to allow fair cross-chain\
+    \ exchange.\n\n+   [7] Kostis Karantis, Angelos Kiayas, and Diminos Zhou. Proof-of-Burn\
+    \ Blockchain. In International Conference on Cryptography and Data Security, 2019.\n\
+    \n# IV. CONCLUSION\n\nIn this paper, we analyzed the blockchain transaction protocol\
+    \ and to propose new features that solve the problem of interoperability. One\
+    \ of the critical features of our method is that it presents an internal function\
+    \ for value/asset exchange. An internal protocol uses a universal language, and\
+    \ through such a protocol, users can communicate directly and transfer various\
+    \ forms of data using standardised pathways. We briefly showed that Burn-to-Claim\
+    \ protocol is resilient to double-spending by its correctness and fairness properties.\n\
+    \n+   [8] Ghasam O Haramane, Ili Arroumani, and Sardarjan Kapoor. Double-spending\
+    \ payments in bitcoin. In Proceedings of the 2012 ACM conference on Computer Security.\n\
+    \n+   [9] Angelos Kiayas, Alexander Russell, Bernard David, and Roman Oynoyrov:\
+    \ A scalable cross-chain blockchain protocol. In International Cryptographic Conference,\
+    \ 355–388, 2017.\n\n+   [10] Pascal Lasecurade and Leonard-Mirabot. On blockchain\
+    \ interoperability. Information Processing Letters, 105976, 2020.\n\n+   [11]\
+    \ Babu Pili, Kamalishi Biswas, and Vallipururam Mukhamukkaram. Cross-chain interoperability\
+    \ among blockchain-based systems using transactions. Knowledge Engineering, 35,\
+    \ 2020.\n\n+   [14] Lain Stewart. Proof of burn - bitcoin. Available at: https://bitcoin.com/wiki/Proof_of_burn,\
+    \ Dec 2012."
+  merge: -1
+  img_proc: true
