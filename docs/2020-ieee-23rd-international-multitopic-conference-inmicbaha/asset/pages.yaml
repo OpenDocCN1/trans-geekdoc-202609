@@ -1,0 +1,433 @@
+- pgno: 0
+  md: '# ICC T20 Cricket Cup 2020 Winner
+
+    Prediction Using Machine Learning Techniques
+
+
+    Abdul Basit
+
+    Department of Computer Systems
+
+    Engineering
+
+    Islam University of Bahawalpur
+
+    Bahawalpur, Pakistan
+
+    ngrbas8@gmail.com
+
+
+    Muhammad Haider Alvi
+
+    Department of Computer Systems
+
+    Engineering
+
+    Islam University of Bahawalpur
+
+    Bahawalpur, Pakistan
+
+    mubalvi@iub.edu
+
+
+    Fawad Hassan Jaskani
+
+    Department of Computer Systems
+
+    Engineering
+
+    Islam University of Bahawalpur
+
+    Bahawalpur, Pakistan
+
+    fawadhassanjaskani@gmail.com
+
+
+    **Abstract—**future sounds like magic, whether it be detected, the intent of a
+    potential customer to purchase product or figuring out the price of a stake is
+    how involved. If we can reliably predict the future, then we have mastered magic.
+    Machine learning has served to unify this magic and mystery. It has also served
+    in many fields of business. In this paper, we discuss the 7th edition of T20 World
+    Cup 2020 which will be held in Australia. We have used machine learning to predict
+    the outcome of the T20 world cup winner. Using the developed models, Random Forest
+    proved to be the best machine learning algorithm using a custom accuracy metric.
+    Our method was tested on the dataset of Australia, which emerged the winner of
+    the t20 world cup 2020. For this purpose, ESPricinfo dataset has been used.
+
+
+    Our aims is to find the winner of the 7th T20 Cricket Cup. For this purpose, the
+    dataset has been extracted from ESPricInfo; various techniques were used to check
+    its integrity and cleanliness. After applying machine learning algorithms like
+    decision tree and Decision Trees (ID3, C, and Extra), Random Forest Classifier
+    were used to build predictive models. By testing these classifiers on the dataset(s),
+    we found that Random Forest has shown better result with custom accuracy of 86%
+    compared to Classifier. Additionally, it is predicted to predict the winner of
+    t20 world cup 2020 as a result of this work. This dataset comprised of four datasets:
+    ICC World Cup, records of matches, ICC T20 rankings and appearances of T20 World
+    cup. This model can also be applied to predict the winner of other cricket events
+    or even sports with a dataset of similar nature.
+
+
+    **Keywords—** Machine learning, t20 world cup, prediction, decision tree, random
+    forest
+
+
+    # I. INTRODUCTION
+
+
+    Cricket is a popular sport. The popularity of cricket and its viewership has increased
+    tremendously in recent decades. To predict future outcomes, global market research
+    is conducted. The International Cricket Council (ICC) which released cricket that
+    has over one billion fans worldwide, with the potential for significant growth.
+    Among all forms of cricket, the popularity of T-20 Internationals (T20s) is the
+    highest. All of these fans are eager about upcoming cricket events and matches
+    they desire to learn about the results of them.
+
+
+    The 7th edition of ICC Man''s T20 world cup is going to be held in Australia in
+    the near future. The contest will be played by 12 teams. For the tournament, the
+    top-ranked teams in the T20 form of four teams. Each team will be included with
+    a qualifying/round. After the tournament, twelve (12) will be divided into four
+    groups. The top teams will emerge to find their place in the top four teams (semi-finals).
+    Two teams will qualify for the grand finale from semi-finalists. The winner of
+    the final will be the champion of T20 world cup for the next two years.
+
+
+    # II. LITERATURE
+
+
+    In this section, we will discuss the previous researches conducted on prediction
+    to know the most popular technique used by the researcher for similar works.
+
+
+    Neeraj Patel [1] presented Cricket Outcome for prediction of ODI matches. Modern
+    classification techniques like Naive Bayes, Support vector machine, Random Forest
+    were used for the prediction of results, and based on these outcomes a comparative
+    study was conducted. Several factors were involved in the output of ODI matches
+    Including Home ground, first and second toss, batting pitch, and bowling. All
+    these factors and strategies vary from time to time when proceeds. As the accuracy
+    of the model used for the prediction of ODI matches using Naive Bayes classifier
+    was found to be the best then the independent performed best in this case, when
+    the dataset was an imbalance. But after cross-validation and bootstrap sampling
+    average
+
+
+    > espricinfo.com (An internationally website for cricket: a ball to coverage and
+    statistics)'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'accuracy of models like Naive Bayes was 0.6016, Random Forest was 0.6002 and
+    SVM is 0.6017.
+
+
+    charming results. Now a day, Cricket is a popular and uncertain sport, particularly
+    the T20 format in which only a single player or over can change the whole
+
+
+    Styllanis Kanpur [2] considered the results of T20 matches for their author designed
+    to optimize team features and later included more features like statistics. The
+    authorized performance of the model by analyzing results of T20 matches. Accuracy
+    of T20 cricket is lower than compared to other games because cricket has a high
+    level of unpredictability. This unpredictability of T20 cricket is not new for
+    those following game. Different machine learning techniques used for this and
+    Naive Bayes with significant results were found to be the most operating with
+    accuracy of 64.9%. Different statistics features correlation scored more than
+    enough information to confirm this
+
+
+    The observed and describe several aspects that determined the result of T20 matches.
+    To measure the team points a technique, multivariate regression was proposed.
+    The history of every player observed and based on history determined the probability
+    of winning against an opponent. Finally, different factors observed different
+    matches. Machine learning classifiers were found and observed for this, but the
+    decision tree and random forest to be more prominent than others with an accuracy
+    of 89.15%.
+
+
+    the relations between the players and team correlation was used to identify a
+    lower relation. The work was made for team player performance and could be improved
+    using either a classifier or by using new ones.
+
+
+    Gagan S [6] presented for prospective analysis of T20 matches using machine learning
+    techniques. The model predicts the results by a batsman on each ball by learning
+    from past data. He considered this problem as a Classification problem. Different
+    machine learning and data mining algorithms used for this Naive Bayes using 90%
+    train and 10% test observed. Decision tree and Random Forest obtained 90.88%.
+    These results could be improved using Recurrent Neural Network (RNN) and Hidden
+    Markov Model (HMM).
+
+
+    Kalm Pasri [3] presented results based on using machine learning with accuracy,
+    for this author considered the team performance of individual members based on
+    results of each batsman and wickets taken by bowlers. The author performance considered
+    different classes like Naive Bayes, Random forest, Forest Class, and decision
+    tree considered this as a problem. It is very difficult to manage the team selection
+    of players from different based performance and player vital role in the match.
+    This is an interesting feature for this domain to predict based on results performance,
+    weather, condition and individual performance of a batsman and wicket taken by
+    bowlers. Various classifiers used to predict how many runs scored by a batsman,
+    a random forest, observed to be the best one with an accuracy of 90.7% and 92.5%.
+    But on the other hand result of SVM were 51.45% and 68.78%.
+
+
+    Aninum Isak [7] presented a noted study using data of Bangladesh cricket player
+    and player performance using machine learning techniques for upcoming matches.
+    Different machine learning techniques like Logistic Regression (LR), Support Vector
+    Machine (SVM) with the linear, and polynomial kernel used for selection, elimination,
+    and winner prediction. This predicted results by the batsman and the number of
+    wickets taken by each bowler in the upcoming match using machine learning 91.5%
+    and 73.5% respectively is for difficult to manage selection from 11 players to
+    18 players based on their performance to remove this barrier predicted result
+    is very helpful.
+
+
+    Muhammad Zafir [4] predicted the outcome of matches in 20 international. The prediction
+    could be in different ways how were the start of the match and which match was
+    played. The above-described model could be designed based on previous results,
+    the performance of players in matches and venues. The author predicted by using
+    weighted and evaluated the prediction on the historical ball by ball datasets
+    available on different websites. This contains dynamic team properties for win
+    prediction like player''s history, winning performance, and ground history as
+    well obtained and an accuracy of 85% after the match and 89% after match results.
+
+
+    Raiza U Mustafa [8] presented a machine learning model which analyze opinions
+    on social media network predicted the outcome of the match. In this paper the
+    author predicted the winner of a cricket match using observed social media text.
+    Social media is a platform where one can express his/her feelings without anyone
+    and everyone comments of his/her team on social media match
+
+
+    Ch Sai Ahich [5] presented a method for analysis of the winner using machine learning
+    and implemented the above-described model to forecast the
+
+
+    The different techniques were used for the prediction of the winner based on the
+    number of wickets in favor of each team and score for each team. The above said
+    three methods predicted the result of the match before the start of the match
+    and evaluated this using supervised learning techniques and claimed that the Support
+    vector machine (SVM) showed better results as compared to others like Naive Bayes
+    and Logistic Regression.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "these technique author authorized around 75% and that this model applicable\
+    \ to all cricket matches and using this technique in other games like Hockey,\
+    \ Baseball, and Basketball can also be.\n\nXoost 94.23% fine-tuned and shown better\
+    \ results as compared to the other classifiers.\n\nMandal Gopal [9] presented\
+    \ a team-based approach for the outcome of ODI cricket matches. The author presented\
+    \ a model using K-Nearest Neighbor (kNN) and focused on team strength of both,\
+    \ modeling player's batting and bowling performance using statistics. The innovation\
+    \ of this method analyzed the team's performance and predicted the winning team\
+    \ as well as Important Individual performance as achieved 71% accuracy.\n\nAkhil\
+    \ Nimmugadda [13] presented a model using different data mining techniques and\
+    \ machine learning for the score and winning. The author predicted a model using\
+    \ Linear Regression with linear regression and at the end Random forest for the\
+    \ calculation of the winner.\n\nKevin Desai [10] predicted the outcome of ODI\
+    \ cricket matches. Various factors played a vital role in the victory of the teams,\
+    \ each including the ability of a team, venue, weather, and pitch condition. A\
+    \ numerical model and consider these factors based on their importance. In this\
+    \ number of factors were considered for the conclusion depends on importance and\
+    \ weight of each factor predicted the win loss performance of both teams and was\
+    \ responsible for the result of the match. The parameters not not only the team's\
+    \ ability player's statistics, weather, and pitch condition as well. It was difficult\
+    \ to predict the result of the match based on various factors.\n\nVarious classifiers\
+    \ for the prediction of cricket matches using these first innings based on the\
+    \ basis run rate was calculated as the sum of runs divided by total overs. But\
+    \ it did not compare factors how many wickets fallen, venue and efficiency difference\
+    \ which factors used to include in the results of the method are the\n\nShilpi\
+    \ Agrawal [14] presented a model using machine learning. This model predicted\
+    \ results based on team and each player's ability to contribute to the winning\
+    \ team. Three different machine learning techniques used to predict the winning\
+    \ team based on the previous history used Support vector machine, CTree, and Naive\
+    \ Bayes.\n\nData used for prediction then made numeric and divided into three\
+    \ factors: win, loss, and tie. These classifiers achieved an accuracy of 95.96%,\
+    \ 97.98%, 98.98% respectively. The best result achieved using Naive Bayes classifier\
+    \ with an accuracy of 98.98%.\n\n Sonu Kumar [11] presented a model for score\
+    \ prediction and classification using different machine learning techniques. This\
+    \ model predicted the score of the im just in the form of each 5 overs. The player\
+    \ played a vital role in the victory of each team selection depends on several\
+    \ factors like current form, record the opposite and pitch condition, etc. Classifiers\
+    \ for prediction using Linear Regression MLRegressor and for classification SVM,\
+    \ Nave, MLPClassifier have been used. This model classified the player based on\
+    \ their statistics, a predicted record which should play limited over, and which\
+    \ should play other factors and obtained 66% accuracy.\n\nVipul Pungi [16] presented\
+    \ a Survey on team selection using machine learning techniques. The author predicted\
+    \ the performance of a team based on the number of runs scored by each team and\
+    \ the winner taken by both teams. Player selection played a vital role in victory.\
+    \ Factors such as the performance of a team that included previous performance,\
+    \ venue of match, pitch and weather, statistics of the opposite team. Team management,\
+    \ and the coach analyze different factors using 11 players from the squad of 15\
+    \ to 20 players.\n\nDaniel Melo Vistro [12] presented a model based on machine\
+    \ learning and data analytics for the prediction of the winner. The author predicted\
+    \ for ongoing matches this model focused on several factors like player's performance,\
+    \ team performance, and weather conditions.\n\nDifferent machine learning classifier\
+    \ for testing and training purpose these included Random forest, SVM, Nave Bayes,\
+    \ Logistic Regression, and Decision tree. The various classifiers used for this\
+    \ model predicted result with an accuracy of 76.9%, fine-tuned the parameters,\
+    \ and improve performance from 76% to 94%. Similarly, the accuracy of the random\
+    \ forest 71% which is not enough for this model to improve accuracy-tuned the\
+    \ parameter as above and gets results 80%. In the end,"
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "Naïve Bayes classifier used for prediction of individual performance based\
+    \ on wickets by the bowler and how runs scored by batsman of each team. The selection\
+    \ of teams is a very different and time-consuming task for management personally\
+    \ as players' performance depends on the value and outcome. This model should\
+    \ resolve such problem and provide each player analysis and prediction of performance\
+    \ on one click with accuracy.\n\n2005 to date 2 the information about current\
+    \ rankings of teams for T20 cricket format and 3 fixtures of all teams, including\
+    \ the official members and 4 the qualifiers and previous appearances in T20 World\
+    \ cups\n\nThe collected dataset from the ESPN Cricinfo was well-formed and clean.\
+    \ Therefore, there is no need for data wrangling or data management with the collected\
+    \ dataset(s). The collected data is split into training dataset and testing using\
+    \ a hold-out method.\n\n# III. PROPOSED METHODOLOGY\n\nFour data sets have been\
+    \ collected from ESPN Cricinfo for this work: 1) the T20 International results\
+    \ from September\n\nAfterward, four models are developed using four machine learning\
+    \ algorithms (random forest, ID3, C4.5, and ExtraTrees) and training dataset as\
+    \ shown in Fig. 1.\n\n![](img/db066944a74fe324fa914147f1d98e41_3_0.png)\n\nRandom\
+    \ Forest: It is a supervised learning method which is an ensemble of decision\
+    \ trees, using bagging algorithm to train and use the improvements of accuracy\n\
+    \nvalue. Mathematical equations of custom accuracy and R-mean value are given\
+    \ below.\n\nC4.5: It's a type of decision tree algorithm that uses the concept\
+    \ of information to train itself.\n\n# Custom Accuracy = Actual Value – Predicted\
+    \ Value\n\n> $R^2 = \\frac{Unexplained Variance}{Total Variance}$\n\nID3: ID3\
+    \ uses a top-down greedy approach to build a decision tree, it's to train and\
+    \ evaluate the data and get results\n\nThe custom accuracy is the difference between\
+    \ actual and predicted variance R-mean Square calculated using the above formula\
+    \ which explains the probability of accuracy explains variance divisible by total\
+    \ variance.\n\nExtra Trees: Extra Trees works by creating a large number of unpruned\
+    \ trees from the training dataset. Predictions are made by averaging the prediction\
+    \ of the decision trees\n\n# IV. RESULTS\n\nEvaluation Parameters: The custom\
+    \ accuracy showed that random forest showed better results compared to others.\
+    \ As Custom is the difference between the actual value and predicted, and R-mean\
+    \ is the proportion of the variance of a dependent variable is explained by an\
+    \ independent variable or variables in the model. For the best accuracy, the random\
+    \ forest has been selected for the predictive model of the T20 World Cup. \n\n\
+    Fig. 2 shows the comparative performance of four machine learning algorithms (Random\
+    \ Forest, Extra Trees, ID3 and C4.5). Two criteria (Custom Accuracy and R-Mean\
+    \ Square) are used to evaluate the effectiveness of each machine Learning algorithm.\n\
+    \nIn the first step different machine learning techniques applied to the T20 dataset\
+    \ that contains results of previous matches and calculates Custom accuracy and\
+    \ R-mean"
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: "# Comparison\n\nFig. 2 Comparison between ExtraTrees, ID3, C4, and Random Forests.\n\
+    \nRandom forest algorithm proved to be the best among selected machine learning\
+    \ algorithm with both evaluating methods. Random forest algorithm achieved 80.86%\
+    \ and 64.68% with custom accuracy and R-mean square criteria respectively. \n\n\
+    ![](img/db066944a74fe324fa914147f1d98e41_4_0.png)\n\n3 demonstrates the T20 world\
+    \ cup event in visual form to predict the final contesting teams. Random forest\
+    \ algorithm is used to determine the winner of each match during the 2 stages.\
+    \ Top 2 teams from each group are selected semi-final. Our model predict the qualifiers\
+    \ for the semi-final. Then two semi-final winners are predicted to reach the final.\
+    \ As for the analysis, England and Australia are predicted to reach the final\
+    \ of 7th edition T20 world cup 2020. In the final, Australia will win with the\
+    \ context against England.\n\n![](img/db066944a74fe324fa914147f1d98e41_4_1.png)\n\
+    \nFig. 3 Visual representation of ICC ICC Men's T20 World Cup 2020 contests and\
+    \ predicted winners\n\n# V. CONCLUSION AND FUTURE DIRECTIONS\n\nThis work is effort\
+    \ to predict the winner of the 7th edition of ICC (Men's) T20 world cup 2020 using\
+    \ Machine Learning Techniques. Four machine learning algorithms are used for this\
+    \ work (Random Forest, Extra Trees, ID3 and C5). By these techniques, random forest\
+    \ proved to be the most efficient achieving 80.86% and 64.68% performance using\
+    \ custom accuracy and R-mean score respectively, Pakistan, India, Australia, and\
+    \ England as four\n\nT20 teams, Australia and England booked their place in finals\
+    \ whereas Australia was predicted to be the champion of T20 Men's world cup for\
+    \ the two years.\n\nAs future work, we propose to use optimization techniques\
+    \ to harness these results. We also suggest including more parameters in the dataset\
+    \ such as match venue and weather forecast. Humidity and wind which play a role\
+    \ in the performance of players and ultimately the winning teams."
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# REFERENCES
+
+
+    [1] N. Pathak and H. Wadwa, “Applications of Modern Classification Techniques
+    to Predict the Outcome of ODI Cricket,” Procedia Comput., vol. 87, pp. 55–60,
+    2016, doi: 10.1016/j.procs.2016.05.126.
+
+
+    [2] S. Kempas and W. Thomas, “Machine Learning to Predict the Outcome of England
+    Cricket over twenty ODI Matches,” pp. 1–17, 2017.
+
+
+    [3] K. Passi and N. Pandey, “Prediction Accuracy in the Game of Cricket Machine
+    Learning,” Int. J. Data Min. Know., vol. 8, no. 2, pp. 19–36, 2018, doi: 10.5152/ijdmk.2018.8203.
+
+
+    [4] M. Yasir, L. Chen, A. S. Shah, K. Ahar, and M. T. Sarwar, “Cricket Prediction
+    in ODI International,” vol. 17, no. 11, pp. 176–181, 2017.
+
+
+    [5] C. S. Abbasi, K. Khan, V. Pahlvi, U. Mehmood, and M. U. Sultan, “Predictive
+    Analysis of IPL Match Winner Using Machine Learning Techniques,” Int. J. Innov.
+    Technol. Eng., vol. 18, pp. 430–435, 2019, doi: 10.35940/ijnte.2019.8.32419
+
+
+    [6] G. S. K. Paramesh, “A Perspective on Analyzing IPL Matches using Machine Learning,”
+    vol. 7, no. 6, pp. 1476–1479, 2019.
+
+
+    [7] V. Kumar, et al., “Performance Prediction in ODI Cricket Using Machine Learning
+    Algorithms.
+
+
+    [8] P. The, et al., “Predicting The Cricket Match Outcome Using Neural Networks:
+    A Comparative Study Of Machine Learning Methods,” vol. 63–76, no. 3, pp. 63–76,
+    2017.
+
+
+    [9] M. G. Jawar and V. Pauli, “Predicting the outcome of ODI cricket using composition
+    based approach,” CEUR Workshop Proc., vol. 18422, 2018.
+
+
+    [10] K. Desai, and S. Roy, “Predicting Outcome of ODI Cricket Matches,” vol. 3,
+    no. 1, pp. 1–15, 2020.
+
+
+    [11] S. Kumar and S. Roy, “Score Prediction and Classifier Model in the Game of
+    Cricket Using Machine Learning,” vol. 9, no. 8, pp. 72–78, 2018.
+
+
+    [12] D. Miestro, F. Rashed, and L. G. David, “Cricket Winner Prediction With Machine
+    Learning And Data Analysis,” vol. 8, no. 12, pp. 968–975, 2019.
+
+
+    [13] A. Nimmagadda, N. V. Kalyan, M. Venkatesh, N. Saga, S. Teja, and C. G. Rao,
+    “Cricket score and winning prediction using machine learning,” vol. 10, no. 5,
+    pp. 2018–2019, doi: 10.1109/ICCOMM.2018.8882035.
+
+
+    [14] A. Agrawal, S. P. Singh, and J. K. Sharma, “Predicting Results of Indian
+    Premier League T-20 matches using machine learning,” Proc. - 2018 IEEE Conf. Commun.
+    Soft. Net. ICT (2018), pp. 671–678, 2019.
+
+
+    [15] J. Kumar, R. Kumar, and P. Kumar, “Predicting Outcome of ODI Cricket Using
+    Decision Trees and MLP,” ICCC 2018 - 1st Int. Conf. Secur. Comput. Comput., pp.
+    333–347, 2018, doi: 10.1109/ICCCE.2018.8391331.
+
+
+    [16] J. Wang, Y. Li, and M. Su, “On Team Selection in Game of Cricket Machine
+    Learning,” pp. 2442–2446, 2018.
+
+
+    [17] M. B. Alvi, N. A. Mahbo, M. Alvi, M. U. Anwar, and M. A. Shikh, “An Effective
+    Approach for Tweet Sentiment Classification using Recursive Text Pro-Processing
+    Approach,” no June, 2019, doi: 10.14509/ACJC.2019.01697.
+
+
+    [18] M. B. Alvi, N. A. Mahbo, M. Alvi, M. U. Anwar, and M. A. Shikh, “Hybrid Classification
+    for Twitter Data - A Recursive Approach,” no. April, 2018, doi: 10.1109/INTIC.2018.8476221.
+
+
+    [19] G. Hani, U. Alam, T. M. Jasani, F. H. (2019, November). Prediction of Classification
+    Models for Early Detection of Breast Cancer. In 2019 International Conference
+    on Innovative Computing (ICIC) (pp. 1–6). IEEE.'
+  merge: -1
+  img_proc: true
