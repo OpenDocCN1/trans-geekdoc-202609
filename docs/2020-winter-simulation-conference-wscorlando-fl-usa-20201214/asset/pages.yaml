@@ -1,0 +1,1221 @@
+- pgno: 0
+  md: 'Proceedings of the 2020 Winter Simulation Conference
+
+
+    K.-H. Bae, B. Feng, S. Sim, S. Lazarovska-Molnar, Z. Zheng, T. Roeder, and R.
+    Thiesing, eds.
+
+
+    # BLOCKCHAIN: A REVIEW FROM THE PERSPECTIVE OF OPERATIONS RESEARCHERS
+
+
+    Hong Wan
+
+    Kejun Li
+
+
+    Yining Huang
+
+
+    Department of Industrial and Systems Engineering
+
+    North Carolina State University
+
+    111 Lme Drive
+
+    Raleigh, NC 27607, USA
+
+
+    Operations Research Graduate Program
+
+    North Carolina State University
+
+    2500 Stinson Drive
+
+    Raleigh, NC 27607, USA
+
+
+    # ABSTRACT
+
+
+    Blockchain is a distributed, append-only digital ledger (database). The technology
+    has caught much attention since the emergence of cryptocurrency, and there is
+    an increasing number of blockchain applications in a wide variety of businesses.
+    The concept, however, is still novel to many members of the simulation and operations
+    research community. In this tutorial, we introduce the blockchain technology and
+    review its frontier operations-and-data-related research. There are exciting opportunities
+    for researchers in simulation, system analysis and data science.
+
+
+    # 1 INTRODUCTION
+
+
+    Blockchain is the underlying technology of bitcoin and other cryptocurrencies.
+    It has caught public attention since 2017 when the bitcoin, secure record sharing
+    system, blockchain was considered a resolution or the "future of the internet"
+    by its believers; and by skeptics. In reality, blockchain technology has a broad
+    application in a wide variety of domains, but it is not a unique (better) solution
+    for all.
+
+
+    Blockchain is literally, a chain of blocks. The block here is composed of a certain
+    amount of data, and the chains that the data are connected. More specifically,
+    it is a consensus-based, peer-to-peer distributed network with a "growing list
+    (chain) of records, called blocks, which are linked using cryptography." (Wikipedia
+    2020) Each block contains an index that specifies the sequence of blocks; a timestamp
+    that records the approximate time the block was added; the data, and the hashes
+    of the current and previous blocks (Figure 1). The hash is the output of a cryptographic
+    function that converts a meaningful string into a non-meaningful, fixed-length
+    alphanumeric string. The input of the hash for block $k$ includes the blocks mentioned
+    above, the data of block $k$, and the hash of $k-1$. The hash is highly sensitive
+    to the input—any change in input leads to a completely different hash value, which
+    makes the blockchain nonverable. The hash function serves as the backbone of blockchain
+    security and will be discussed in more details in Section 3.
+
+
+    Different from the traditional centralized network. First, the data (in block)
+    is immutable. Specifically, if a block is changed, all blocks after it become
+    invalid since their previous blocks'' hash value will be void. Second, a distributed
+    network with consensus allows users (with authorities) to communicate directly
+    with each other to broadcast new blocks, synchronize the network status, and download
+    the current database. The redundancy of the data and connection channels makes
+    the blockchain more tolerant of node failures. With these properties, the longer
+    the chain the harder to hack the chain and change blocks without detection, making
+    the blockchain more reliable (Nakamoto et al. 2008). To understand the
+
+
+    978-1-7281-9499-8/20/$31.00 ©2020 IEEE
+
+
+    75'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Wan, Huang, and Li
+
+
+    blockchain system better, we encourage the readers to explore an interactive demonstration
+    of a blockchain at Blockchain Demo.
+
+
+    | Block 59 | Block 60 | Block 61 |
+
+    | --- | --- | --- |
+
+    | Index: 59 | Index: 60 | Index: 61 |
+
+    | Timestamp: 12:59 11/09/2019 | Timestamp: 13:10 11/09/2019 | Timestamp: 13:14
+    11/09/2019 |
+
+    | Previous hash: 0b54c17c5b5 | Previous hash: 0b30c--8f2fd | Previous hash: 93274--8d977
+    |
+
+    | Other information: | Other information: | Other information: |
+
+    | Hash: 0b30c--8f2fd | Hash: 93274--8d977 | Hash: 9c65a--964d4 |
+
+
+    Figure 1: Blockchain demonstration.
+
+
+    The history of blockchain technology can be traced back to the year of 1991. Haber
+    and Stornetta (1990) introduced a digital notary service to timestamp documents,
+    and inspired by the blockchain. Later, they brought their idea into effect by
+    creating a timestamping service called Surety. They published their hash in the
+    New York Times once a week since 1995 to make it legitimate and unique. This service
+    is considered to be the first in the world. Stornetta (1999) along with concepts
+    of Berkeley (1980), consensus and fault tolerance (Castro, Liskov, et al., 2009)
+    and Nakamoto et al. (2008) developed the bitcoin project that is the most famous
+    realization of blockchain.
+
+
+    There has numerous research on blockchain architectures, scalability, and consensus
+    algorithms from the computer and electrical scientists, and discussions of blockchain
+    applications from various areas (mostly in finance and emerging in regions). This
+    tutorial has no intention to cover all of the state-of-art progress in this highly-interdisciplinary
+    area. Our goal is to introduce the new technology to the simulation and operations
+    research communities, review the relevant research, and initiate discussions of
+    research opportunities. We first describe different kinds of blockchains with
+    varying degrees of privacy, efficiency, and scalability, that fit for different
+    scenarios in Section 2. Section 3 uses bitcoin and Ethereum to explain the basic
+    concepts of blockchains, including mining, consensus, and smart contracts. In
+    Section 4, we discuss a less famous but more widely used blockchain, the consortium
+    chain, and demonstrate its applications at the enterprise level. Section 5 reviews
+    the current research of blockchain in simulation, game theory, and machine learning,
+    all of which focuses on system design and analysis. We conclude the paper with
+    discussions in Section 6, the limitations of the blockchain and research opportunities
+    for simulation and operations research communities.
+
+
+    # 2 BLOCKCHAIN MECHANISM DESIGN
+
+
+    In this section, we discuss the blockchain mechanism, which is mainly characterized
+    by the following properties:
+
+
+    +   - Who can view the data in the system? If anyone can view and download a copy
+    of the whole ledger, we call it a public chain; otherwise is a private chain.
+
+    - Who can validate the data and/or a block? If anyone can initiate and validate
+    transactions as well as generate and broadcast blocks, then the blockchain is
+    permissionless chain, otherwise permitted.
+
+    - How do the network users agrees or solve conflicts? This mechanism is called
+    consensus. The two most popular categories of consensus are proof of work and
+    proof of stake (Mingxiao et al. 2017).
+
+
+    The two properties categorize different types of blockchains, which we introduced
+    in Section 2.1. Moreover, we also discuss fundamental measurements of a blockchain
+    system in the same section.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Wan, Huang, and Li
+
+
+    third process, the consensus is decided based on the requirement of the specific
+    application. Section 2.2 introduces two of the most popular consensus mechanisms
+    with details.
+
+
+    # 2.1 Blockchain Types and Trade-off among Performance Measures
+
+
+    Note that a blockchain is public or private is independent of whether it is permitted
+    or not. As discussed in Chris Jaikan''s testimony to congress: “Discussing a blockchain
+    as public or private refers to the level of freedom users have to create identities
+    and read data on blockchain. Discussing a blockchain as permitted or permissionless
+    refers to the level of access the user would have on that blockchain.” (Jaikan
+    2017). Table 1 classifies blockchains into four types based on these two independent
+    properties.
+
+
+    Table 1: Comparison of different blockchain categories (+ represents desired properties,
+    ~ represents neutral, – shortcomings). (Parsons 2018)
+
+
+    | Public-Permissioned | Private-Permissioned (Consortium) |
+
+    | --- | --- |
+
+    | + Good scaling | + Good scaling |
+
+    | ~ Private → Public ecosystem | ~ Completely isolated ecosystem |
+
+    | - Centralized | - Centralized |
+
+    | + Independently verifiable | - Not independently verifiable |
+
+    | - Not implemented | + Implemented by Hyperledger, etc. |
+
+    | Public-Permissionless | Private-Permissionless |
+
+    | - Poor scaling | Poor scaling |
+
+    | ~ Completely public ecosystem | ~ Private → Public ecosystem |
+
+    | + Distributed | + Distributed |
+
+    | + Independently verifiable | - Not independently verifiable |
+
+    | + Implemented by bitcoin, Ethereum, etc. | - Not implemented |
+
+
+    Most of the cryptocurrencies use permission and permissionless blockchains (Section
+    3). Private and permissioned (consortium) chains are used by individual enterprise
+    and collaborations of businesses. Customized platforms, such as Hyperledger Fabric
+    by IBM (Linux Foundation 2020), have been developed to facilitate enterprise blockchain
+    implementation (Section 4). Between the two ends of the spectrum, the public and
+    permissionless chain limit who can access data, which fits for internal sharing
+    and auditing data. The public and permissioned only allow a subset of users to
+    validate the transactions and add blocks, which can be used in asset management
+    like real estate and intellectual properties (Martin 2018). The later categories
+    are still in exploring stage.\ There are three major measurements of blockchains:
+    scalability, security, and decentralization. Here scalability refers to the network''s
+    ability to handle growth, security the attack resistance, and decentralization
+    the degree of synchronization, and fairness among all nodes. In Figure 2, the
+    trade-off among these three is called the scalability trilemma, which makes it
+    hard to maximize two without sacrificing the third. For example, in public and
+    permissionless blockchains, all peers maintain replicas of the full ledger, which
+    ensures the system''s security and reliability. However, as the degree of decentralization
+    increases (i.e., more peers involved), it will constrain the network''s throughput.
+    Among the four categories, the public and permissionless chain has the most decentralized
+    structure and assumes no trust. The private and permissioned chain, on the other
+    hand, has the most centralized architecture and the highest level of trust among
+    users and is widely used by individual enterprise and collaborations of business.
+    Table 1 summarizes the pros and cons of the four types of blockchains. The level
+    of trust among users determines the optimal blockchain architecture and the consensus
+    mechanism for each application.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Wan, Huang, and Li
+
+
+    # B
+
+
+    Decentralization
+
+    Accessibility, availability and transparency for all participants; consistent
+    state of ledger across all nodes; censorship resistant
+
+
+    Scalability
+
+    Non-functional requirements related to the ledger''s carrying capacity, throughput,
+    and latency of processing transactions
+
+
+    ![](img/67ff1e627b551345b7c5b3a95cc9fd03_3_0.png)
+
+
+    # A
+
+
+    Security
+
+    Ability to maintain ledger integrity against malicious attacks through inbuilt
+    mechanisms
+
+
+    # C
+
+
+    Figure 2: Blockchain scalability trilemma (ReverseAcid 2018).
+
+
+    # 2.2 Consensus Mechanism
+
+
+    The consensus is an algorithm to reach agreements among different nodes/participants
+    of the distributed system to solve the Byzantine general problem (Lamport et al.
+    2019) to handle malicious behaviors that give false information. There have been
+    many consensuses since the invention of bitcoin. Most of them are either proof-of-work
+    or proof-of-stake-based.
+
+
+    +   - Proof of work (PoW) is the consensus applied by the majority of cryptocurrencies,
+    including bitcoin. In this, the participants (i.e., miners) compete with each
+    other to solve a complex computational puzzle that can be done by brute-force
+    search via a cryptographic hash function. This is probabilistic, and the winning
+    probability of a miner is proportional to her mining power. The winner will earn
+    the right to add the next block and collect the transaction fees, as well as receive
+    a reward (usually a certain amount of cryptocurrencies). Miners safeguard systems
+    with the price of energy waste. Pow is the first consensus developed for blockchain
+    and for its fairness and security. However, it is slow and expensive, and research
+    shows that the mechanism cannot prevent monopoly miners.
+
+    - Proof of stake (PoS) is another widely used consensus that is complimentary
+    to PoW. The next block is selected through a quasi-random process, which depends
+    on the stake held by a participant rather than power. This mechanism was first
+    applied by Peercoin (Hao and Nadal 2012). PoS is much more efficient (both time
+    and energy wise) than PoW. However, the PoS-based system suffers from a nothing-at-stake
+    problem, in a node without any stake may behave maliciously since she has nothing
+    to lose.
+
+
+    Besides these two well-known consensus, there have many other algorithms proposed
+    recently for different trust level and system requirements (MingXiao et al. 2017;
+    Banakan et al. 2020).
+
+
+    # 3 BITCOIN AND ETHEREUM: MINING AND SMART CONTRACT
+
+
+    This section introduces bitcoin and Ethereum systems, two of the most famous public-permissionless
+    blockchain applications (Nakamoto et al. 2008; Wood et al. 2014). These two platforms'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Wan, Huang, and Li
+
+
+    occupy more than 70% of the global mining power (Coinmarketcap 2020) and are suitable
+    as examples to explain blockchain systems and terminologies. In Section 3.1, we
+    elaborate on how bitcoin works and the mining process. Section 3.2 discusses Ethereum,
+    which is a platform for digital currencies and also allows a wide variety of blockchain
+    technology implementations through the smart contract. In fact, Ethereum users
+    have applied smart contracts to create decentralized autonomous organizations
+    (DAOs).
+
+
+    # 3.1 Bitcoin and Mining Process
+
+
+    The most crucial difference bitcoin (and as other cryptocurrencies) and the traditional
+    currency is that the former does not have an “issuer” (government or organizations)
+    to endorse the value of money, validate transactions and regulate the financial
+    system. Therefore the cryptocurrency must have (1) a security algorithm to protect
+    each account so that other people cannot spend your, and (2) a self-regulation
+    mechanism to maintain the system operation and avoid malicious behavior. For security,
+    bitcoin uses public key cryptography (or asymmetric cryptography). See Huh et
+    al. (2017). There is no physical form of bitcoin, but records of transactions
+    and balances for each account (node). Each account is associated with a public
+    key and a private key, whose relationship is similar to that of an email address
+    and password. The public key can be communicated in the network, and the private
+    key allows the owner to access the fund. Mining is a unique mechanism that supports
+    the daily operations of transactions, and most of the other cryptocurrencies require
+    authority who can add a group of transactions, i.e. block to blockchain. When
+    A wants to pay B, transactions need to validate A’s account has sufficient funds,
+    deduct one bitcoin from A’s account, and add one bitcoin to B’s account. The transaction
+    fee is rewarded that A (or B) pays for the transaction recording. To create a
+    valid block, a participant (miner) is required to
+
+
+    +   1. find a lucky number (nonce),
+
+    2. concatenate the previous hash, and the list of transactions as the input string,
+
+    3. and apply the SHA-256 hash function to generate the hash of this output,
+
+
+    such that the 256-bit hash function falls in a space that is quite small in relation
+    to the much larger output space of the hash function. In this case, the nonce
+    will not have to satisfy the following inequality:
+
+
+    > Hash(nonce)|previous block hash|...txn| < target.
+
+
+    All miners compete to solve the PoW hash to achieve the consensus in the blockchain.
+    The problem can only be solved by brute-force search. Each node’s winning probability
+    is proportional to their hashing power. Once a miner finds a reward, he will broadcast
+    it to the whole network for validation. If the new block is validated by a majority
+    of miners, the new block is formally appended to the blockchain and the creator
+    earns the reward (a certain amount of Bitcoin) and transaction fees. See also
+    Narayanan et al. (2016) for the details of the mining process.
+
+
+    The mining process is energy-consuming. Each block takes about 10 minutes to generate
+    (Nakamoto et al. 2008; Subramanian in 2018), and the actual transaction validation
+    can take longer since each block contains only 1 MB of data, and there are competitions
+    among miners. The higher the fee offered, the quicker the transaction is likely
+    to be handled. Moreover, based on 2019 estimate (Vincent), bitcoin consumes more
+    energy than Switzerland, and the solved mathematical problem is not meaningless.
+    However, this process is irreplaceable because the PoW is evident and can be verified
+    by all nodes used. Also, a blockchain system requires significant computational
+    powers. If powers are used in mining, rewards will be higher. Therefore it discourages
+    cheating behaviors.
+
+
+    Compared with traditional currency, bitcoin is borderless, transparent and neutral.
+    Moreover, the users have full control of their transactions. On the other hand,
+    the disadvantage of bitcoin is its transaction speed, volatility, and narrow acceptance.
+    The last one has been significantly improved in recent years.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Wan, Huang, and Li
+
+
+    # 3.2 Ethereum and Smart Contract
+
+
+    Ethereum is a decentralized open-source blockchain platform that features smart
+    contracts. It provides a decentralized virtual machine that allows users to build
+    their applications (i.e., daps). The mined cryptocurrency is called Ether and
+    is the second-largest digital currency by market cap after bitcoin. Ethereum is
+    currently using PoW as its consensus protocol but transitioning to PoS. Validators
+    replace miners, and they vote on which block will be added to the chain. The stakes
+    (the cryptocurrency) a node has, the voting power it will have. The node obtaining
+    a larger number of coins has a significant probability of creating a new block.
+    The elimination of PoW mining significantly improves the efficiency of the blockchain
+    but reduces its decentralization level.
+
+
+    Ethereum transactions include not only coins but also smart contracts. A piece
+    of automatically executed code that implements activities when conditions fulfills.
+    In particular, the smart contract is uploaded to an address, and other nodes can
+    call a function of this smart contract to create a transaction. The transaction
+    is irreversible, traceable, and transparent. Smart contracts are the elements
+    of DAO which are generated by a set of smart contracts without a centralized governance
+    (Shermin 2017). As discussed in Voshnir (2019), "Blockchain and smart contracts
+    are technologies that have the potential to provide higher levels of transparency
+    while reducing bureaucracy through self-enforcing code. They can minimize costs,
+    eliminate middlemen, and subsequent conflicts. Tokens of distributed networks
+    provide incentives to automatically align interests in the benefit of third parties."
+    (On the flip side, the smart contract and DAO can introduce security risks to
+    the blockchain (Shermin 2017). For security analysis and research of the smart
+    contract, Parizi et al. (2018), Watanabe et al. (2015) and Sturm et al. (2019).
+    Smart contracts on the blockchain technology have many possibilities in various
+    industries. For example, one problem in the supply chain is the potential to prevent
+    transparency. By translating the requirements of ontology to smart contracts,
+    Kim and Laskowski (2018) found they can execute a provenance trace on the Ethereum
+    blockchain. See also La and Xu (2017) and Galvez et al. (2018). Dolgui et al.
+    (2020) developed and tested a model for smart contract design in the supply chain
+    with multiple logistics providers and showed be presented as a multi-purpose flexible
+    flow shop scheduling. Gatteschi et al. (2018) discussed the possibility of applying
+    blockchain and smart contracts in the insurance industry. Chang et al. (2019)
+    designed a blockchain-based smart contract technology to facilitate international
+    payment. For more details, see section 4.
+
+
+    # 4 CONSORTIUM BLOCKCHAIN
+
+
+    A consortium blockchain involves multiple entities and stakeholders, each with
+    customized authorizations, such as validators and users (Liu et al. 2019). A consortium
+    chain requires an invitation to join, and each has highly customized authorities,
+    allowing more control of the system by regulatory agencies. As a special case
+    of consortium blockchain, the internal blockchain is a highly customized and cryptography-protected
+    database maintained by a security process. The organization members could take
+    part in the consensus process. The blockchain infrastructure is especially useful
+    for data sharing and document approval during collaborations among organizations.
+    It offers better workflow, data transparency, traceability and visibility, and
+    can prevent nodes'' malicious behaviors (Manupati et al. 2020). Hyperledger is
+    one of the most well-known umbrella projects of open-source consortium blockchains
+    and tools developed by Linux. Its most famous framework is Hyperledger Fabric
+    (IBM de Mao et al. 2018).
+
+
+    A study shows that more than 30% of fish produced from retailers are incorrectly
+    labeled, and illegal fishing reports losses around 10~23 billion dollar daily.
+    The mislabeled and illegally sourced fish could hurt ordinary customers'' health
+    or the reputation of grocery stores. It is essential to achieve traceability and
+    transparency in the seafood industry. However, the complexity of seafood supply
+    chains poses difficulties in interoperability (FishWise 2018). Sawtooth Lake blockchain-based
+    supply chain'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Wan, Huang, and Li
+
+
+    provides an immutable record of the provenance of fish. In combination with Internet
+    of Things (IoT) enabled sensors, Sawtooth Lake can manage the ownership and journey
+    of fish from ocean to table. These sensors can be attached to fish from the moment
+    they are harvested immediately and continuously record data, such as the location,
+    temperature, and humidity of the perishable food. Moreover, the Sawtooth Lake
+    platform could manage the chain of custody, fish ownership to be transferred and
+    traded on the blockchain. Figure 3 illustrates how Hyperledger sawtooth is integrated
+    into the seafood supply.
+
+
+    ![](img/67ff1e627b551345b7c5b3a95cc9fd03_6_0.png)
+
+
+    Figure 3: Flowchart of the seafood supply chain using Hyperledger Sawtooth (Blummer
+    et al. 2018).
+
+
+    Additionally, Tian (2016) proposed an agri-food supply chain traceability using
+    radio-frequency identification (RFID) and blockchain technology. Mao et al. (2018)
+    developed a consortium blockchain to eliminate information asymmetry in the food
+    trade, in order to establish a sustainable and credible trading performance and
+    optimizing both emission levels and operational costs. Manipati et al. (2020)
+    developed a blockchain-based approach for monitoring supply chain in a synchronised
+    fashion, yielding the optimal outcome for the sustainable supply chain.
+
+
+    In pharmaceutical industry, the chain is used to count counterfeit drugs in improving
+    surveillance (Jamil et 2019; Tseng et al. 2018). Financial institutions use consortium
+    chains to improve the efficiency of international trade (Chang et al. 2020). Healthcare
+    organizations are enthusiastic in applying blockchain for healthcare data storage
+    and security (Griggs et al. 2018; Zhang and Lin 2018). See Kang et al. (2017),
+    Li et al. (2019) and Yang et al. (2020) for applications in various areas. We
+    expect to see more applications in the near future.
+
+
+    To summarize, with smart devices like IoT and wearable sensors, consortium chains
+    ensure transparent, traceable, and accountable data storage and sharing among
+    organizations and customers. The consortium chain, with the ability of highly
+    secured and customized data storage, has the potential to become the neural network
+    of the big data.
+
+
+    # 5 SYSTEM DATA ANALYSIS OF BLOCKCHAIN SYSTEMS
+
+
+    In this section, we review the recent blockchain research from system and data
+    points of view. Our discussion focus on three topics: simulation characterization
+    of blockchain systems (Section 5.1), game-theory approach to understand interactions
+    between different nodes (Section 5.2), and machine learning in and for blockchain
+    (Section 5.3).'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Wan, Huang, and Li
+
+
+    # 5.1 Simulation Study of Blockchain Systems
+
+
+    Recently, we see many simulation-related blockchain research appear. The current
+    study mainly focuses on the mining of cryptocurrencies and the scalability of
+    blockchain simulation models. Also, numerous simulators are proposed as platforms
+    to evaluate the performance of blockchains under different conditions/attacks.
+    We reviewed the related literature in this session.
+
+
+    # 5.1.1 Discrete-Event Simulation
+
+
+    Allaby and van Moorsel (2019) proposed an event-driven model with transactions
+    and emphasized on the block creation through Pow. Aoki et al. (2019) invoked events
+    of block generation, block propagation, and message transmission/reception. Menon
+    et al. (2019) built a queuing model to analyze the realistic behaviors of a memory
+    and a memory pool for blockchain simulation. To investigate the large-scale blockchain
+    networks, Wang et al. (2018) collected and defined a number of metrics to quantify
+    the quality of blockchain. Miller and Jansen (2015) enabled the scalable execution
+    of thousands of bitcoin nodes on a single machine in their work and enabled the
+    denial-of-service attack to demonstrate the simulator. Gervais et al. (2016) studied
+    optimal adversarial strategies for bitcoin simulator to analyze the security and
+    performance of different configurations. Göbel et al. (2016) used \u00e9u2001
+    discrete-event simulation to study the self-mining attack on a network with communication
+    delay between miners. Fytik et al. (2020) presented a blockchain simulator that
+    utilizes a generalized representation of consensus protocols, providing insights
+    into the performance of the consensus protocols under various networking conditions.
+
+
+    # 5.1.2 Agent-Based Simulation
+
+
+    Kaligoda and Macac (2018) proposed a generalized framework of modeling blockchain
+    simulation by illustrating the essential aspects and functioning of the system.
+    Coello and Marches (2016) reproduced the economy of the mining process with heterogeneous
+    agents including the bitcoin transactions prices. Rosa et al. (2019) developed
+    a security attack testing framework by exploiting parallel and distributed simulation
+    techniques with extended scalability. Inspired by the design of algorithmic trading
+    and reinforcement learning systems, Chitra et al. (2019) proposed an agent-based
+    simulation to model censorship properties in PoW chains. Their results illustrated
+    how endogenous design choices affect practical performance and how simulations
+    can interact with exogenous data. Brousmiche et al. (2018) built an agent-based
+    framework for simulating local market place integrating consumption/production
+    behavior and interacting with a private blockchain. Bottone et al. (2018) developed
+    an expandable multi-agent simulator for a block-free and fee-less ledger, which
+    they employed NetLogo to provide a 3D visualization of the Tangle (Popov 2016).
+
+
+    # 5.1.3 Others
+
+
+    Goswami (2017) discussed the factors that limit the scalability of blockchains
+    by providing a comparative analysis of several blockchain parameters with real-time
+    data. Alsahan et al. (2020) adopted the lightweight virtualization technique for
+    constructing a simulation model with high speed and large scalability. The impact
+    of affecting difficulty levels was also studied, as well as fork occurrences were
+    evaluated. Yaaserasinghelage et al. (2017) used architectural modeling and simulation
+    to measure the latency in blockchain systems under different configurations. Long
+    et al. (2019) developed a hybrid (discrete-event and agent-based) supply chain
+    simulation model to recreate the supply chain operations, which was integrated
+    by an Ethereum-like blockchain with different visibility levels through the same
+    software connector.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Wan, Huang, and Li
+
+
+    # 5.2 Game Theory
+
+
+    As a powerful tool for strategic decision making, game theory plays a valuable
+    role in the blockchain field. It optimizes the utility of each player while considering
+    the interactions among players. Of the increasing amount of research in studying
+    blockchain with game theory, we categorize them by types of games and discussed
+    the research respectively.
+
+
+    # 5.2.1 Non-Cooperative Game
+
+
+    As the term suggests, a non-cooperative game represents the situation where players
+    compete against each other. The ability of a non-cooperative game depicting the
+    state and dynamic game makes it the most prevalent method in blockchain research.
+    Eyal (2015) modeled it as the miner''s dilemma. The non-cooperative theory was
+    used for chain selection of bitcoin by Carlsten et al. (2016). Teutsch et al.
+    (2016) illustrated that the player controlling at 38.2% of the network''s total
+    computational power can gain reward by deviating from the protocol in any PoW-based
+    cryptocurrency. Liao and Katz (2017) modeled the interaction between attackers
+    and regular miners in a whale, which attackers avoid an off-chain transaction
+    for miners to fix the current. With an extremely large transaction fee in off
+    an incentive to convince regular miners it was investigated by Kroll et al. (2013).
+    To study the computational power allocation in the bitcoin mining community, Dimitri
+    (2017) characterized the mining activity as an all-pay contest. To investigate
+    when gaps (the situation that miners avoid when the available fees are insufficient),
+    Fsbary and Eyal (2018) analyzed the cryptocurrency system via a game. Easley et
+    al. (2019) developed a game-theoretic model to explain the factors leading to
+    the emergence of transaction fees and the strategic behavior of miners and users.
+    The non-cooperative theory can also be used for pool selection regarding the rewards
+    allocation (Schrijvers et al. 2016). Pagnitta, Emiliano and Buracchi, Andrea (2018)
+    showed the equilibrium price is obtained by solving a fixed-point problem.
+
+
+    # 5.2.2 Extensive-Form Game
+
+
+    Extensive-form games are used to describe dynamic games. The players will make
+    decisions according to a preferred order. Aiming to verify the cloud computation
+    at a relatively low cost, Dong et al. (2017) employed game theory with the help
+    of smart contracts. Lowenburg et al. (2015) proposed a game theoretic model of
+    the competition for fees under the new structure with directed acyclic graphs.
+    Cong, Lin William and He, Zhiguo and Lians (2020) applied extensive game to optimize
+    reward allocation of pool. Cong, Lin William and Ye, Wang (2020) studied the utility
+    of adopting blockchain game by comparing a token baseline equilibrium using extensive
+    form game, to an an equilibrium without token.
+
+
+    # 5.2.3 Stackelberg Game
+
+
+    There are two types of players in the Stackelberg game: leaders and followers.
+    The leader moves first and then the followers will make decision on the leader''s
+    movement. Kang et al. (2018) formulated a Stackelberg game to maximize the utility
+    of the blockchain and profit of miners. Xiang et al. (2018) modeled a series of
+    results of the Stackelberg equilibrium in the market game. Li et al. (2017) illustrated
+    a Stackelberg game model of interaction between the service provider and the miner
+    as a Stackelberg game between the users and credit bank.
+
+
+    # 5.2.4 Stochastic Game
+
+
+    In the stochastic game, there could be one or more players decisions repeatedly
+    with probabilistic transitions. Zhen et al. (2017) presented a Zero Determined
+    strategies by modeling a two-miner game. The stochastic game was applied here
+    to analyze the selection between the honest and selfish'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Wan, Huang, and Li
+
+
+    mining. From non-operative game, Kroll et al. (2013) also adopted stochastic game
+    to decide the proper time to release the mining block. Kim (2018) focused on a
+    new hybrid model named Blockchain Governance, which provides the stochastic framework
+    to select the block to the chain. Biais et al. (2018) modeled the PoW blockchain
+    protocol as a stochastic game and analyzed the equilibrium strategies of rational,
+    strategic.
+
+
+    # 5.3 Machine Learning in and for Blockchain
+
+
+    Machine learning refers to the science of teaching the computer system to predict
+    based on data without explicit programming. Its efficiency relies heavily on the
+    quantity and quality of data. Blockchain technology has attracted data scientists''
+    attention since allows highly customized data sharing without relying on a trusted
+    party. On the other hand, machine learning algorithms are powerful tools for analyzing
+    and optimizing blockchains. The combination of the two technologies can be a game-changer.
+
+
+    Data privacy is a critical issue in the current digital society, especially for
+    sensitive data in healthcare and finance. Blockchain framework keeps data safe
+    through cryptography, and allows users, of a third party, to have full control
+    of their shared data. Harris and Wagner (2019) presented a decentralized collaborative
+    learning framework with blockchain. Chen et al. (2018) presented LearningChain,
+    which applies a decentralized algorithmic stochastic gradient descent algorithm
+    with differential privacy mechanism to preserve users'' privacy. To secure the
+    shared data in federated learning, Zhu et al. (2018) proposed a blockchain-based
+    privacy-preserving framework. Li et al. (2018) established a scheme to effectively
+    collect data and securely share by using Ethereum blockchain and reinforcement
+    learning. We expect more blockchain-based data sharing platform to emerge in the
+    future.
+
+
+    Machine learning methods prove to be effective in categorizing bitcoin transactions
+    and predicting their price. Yin and Vatraap (2017) applied supervised learning
+    and Akvera et al. (2019) proposed a data analysis approach to classify entities
+    of transactions that may involve in criminal activities. Jourdain et al. (2019)
+    classified entities of transactions into common categories with a gradient boosted
+    decision algorithm. The classified entities of transactions are used to forecast
+    the value of UTXOs and further predict the Bitcoin price. Akbari et al. (2018)
+    used LSTM to forecast Bitcoin price with the stochastic blockchain. The concept
+    of graph wavelet (Akbari et al. (2019)) introduced a new method by Abay et al.
+    (2019) to a new graph model ChainNet. The topological features from all or multiple
+    transactions are evaluated and the amount of transferred Bitcoin is characterized
+    by ChainNet. McNally et al. (2018) performed comparison of recurrent neural network
+    and short-term memory models in forecasting Bitcoin price. Lahmiri and Bekiros
+    (2019) also implemented deep learning model to predict Bitcoin price, but applied
+    a chaotic time series analysis.
+
+
+    Furthermore, researchers are exploring the possibilities of applying machine learning
+    technique to solve resource optimization problem. Lueng et al. (2018) employed
+    a deep learning-based auction algorithm to optimize the allocation of edge resources
+    to support mobile users among. Nguyen et al. (2020) applied reinforcement learning
+    to determine the optimal offloading decisions for mobile users based on blockchain
+    transactions. They also developed deep reinforcement learning algorithm by using
+    deep Q-network. To find an optimal strategy without knowing much about the blockchain,
+    Wang et al. (2019) adopted deep multi-agent reinforcement learning. In addition
+    to computing resources, capital allocation can also be solved by machine learning
+    to construct portfolios of cryptocurrencies (Alexandretti et al. 2018; Jiang and
+    Liang 2019).
+
+
+    A closer look at the issues of incorporating machine learning with blockchain
+    technology, however, reveals some concerns. First, the current research focuses
+    on financial sector, specifically, bitcoin mining and trading. In combining blockchain
+    with data science, the current research is simply application of one technology
+    to another. The benefit of using the blockchain is unclear. The mainly focus on
+    using blockchain for data sharing, improving its property of safety and higher
+    cost of cheating.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# 6 DISCUSSIONS
+
+
+    In this tutorial, we introduced the concept of blockchain, its categories, applications,
+    and current research in simulation area. In this section, we will discuss the
+    challenges of blockchain application and how, researchers in simulation and operations
+    research society, can continue.
+
+    Up this point, we have focused on the advantages of blockchain systems and their
+    applications. It has many disadvantages compared to the traditional centralized
+    system. However, blockchain is not a universal (better) solution for all scenarios.
+    First, the mining processes for PoW blockchain are slow and energy-intensive.
+    Meanwhile, blockchain''s decentralized architecture requires duplicate of computations
+    and execution efforts for transaction. All of these lead to slow transaction speed
+    (Huberman 2019). Currently, the bitcoin blockchain can guarantee only 4.6 transactions
+    per second (TPS), and Ethereum with an average of 12 TPS. For, on the other hand,
+    the value is around 24000 TPS Strelenko (2018). The slow transaction is the biggest
+    bottleneck of cryptocurrency. Moreover, the blockchain data sharing is slower
+    than a traditional decentralized database. Furthermore, the safety will be compromised
+    if attackers possess the majority (more than 50%) of hashing power in the system,
+    which makes small-size blockchains are not safe. Finally, the blockchain can only
+    identify change, but cannot prevent initial data forgery. In within perishable
+    food supply chain integrated with blockchain, low-quality products have false
+    labels identified, the blockchain cannot screen them.
+
+
+    When should blockchain be applied? For traditional (permissionless) blockchains,
+    the answer is almost no cases except for cryptocurrency. For private and consortium
+    chains, a centralized or decentralized database works and you can rely on a trusted
+    third party, you do not need blockchain. The consortium should be considered when
+    there is no or only partial trust toward a third party and/or each, for data validation,
+    audition, and publishing monitors.
+
+
+    While research by scientists have made significant progress on blockchain consensus,
+    architecture and scalability, characterizing the blockchain as a complex system
+    is still in an early stage. Sophisticated mathematical and simulation models are
+    needed to capture individual behaviors and their interactions, as the system''s
+    rules operate under different environments. Moreover, in current studies, nodes/agents
+    all follow rules with almost no flexibility. Game theory can show light on optimal
+    strategies under various constraints (or lack of them). The current game study
+    is limited and constrained. We expect that the computational game approach that
+    incorporates simulation and other numerical models will be an active research
+    area. Thirdly, blockchain cannot be apart from data. The current data-related
+    research is at the pioneer stage and usually just a direct application of one
+    technology to another. A highly integrated infrastructure that combines data science
+    and blockchain technology has great potential.
+
+
+    # REFERENCES
+
+
+    Akora, A. C., C. G. Akora, Y. R. Gel, M. Kantanciu, U. D. Isambekov, Y. Tian,
+    and Burasing. 2019. "Learning on Blockchain With Topological Features.\ In IEEE
+    International Conference on Data Mining (ICDM), 951–956. New Jersey: Institute
+    of Electronics and Electrical Engineers, Inc.
+
+    Akora, A. C., A. K. Dey, Y. R. Gel, and M. Kantanciu. 2018. "Forecasting Bitcoin
+    Price With Graph Chains". In Asia-Pacific Conference on Data Discovery and Data
+    Mining, 765–776. Springer.
+
+    Akora, A. C., Yi. L., Y. R. Gel, and M. Kantanciu. 2019. "BitcoinHeat: Data Analysis
+    for Ransomware Detection on the Bitcoin Blockchain", arXiv preprint:1906.07852.
+
+    Alessandri, L., A. Elhaizer, M. L. Aiello, and A. Bonarchelli. 2018. "Anticipating
+    Cryptocurrency Prices Using Machine Learning and Complexity.
+
+    Alharby, M., and A. van Mooreal. 2019. "Blockchain: A Simulation Framework for
+    Blockchain Systems". ACM SIGRICS Performance Evaluation Review 46(3):135–138.
+
+    Alsahan, L., N. Nasla, and M. Abdallah. 2020. "Local Bitcoin Network for Performance
+    Evaluation Using Lightweight Virtualization", arXiv preprint:2002.01243.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Wuan, Huang, and Li
+
+
+    Aoki, Y., Otsuki, T., Kaneko, R., Bando, and Shu. 2019. "Sim: A Blockchain Network
+    Simulator." In IEEE INFOCOM2019-IEEE Conference on Computer Communications Workshops
+    (INFOCOM WKSHPS), 325–329. Piscataway, New Jersey: Institute of Electrical and
+    Electronics Engineers, Inc.
+
+
+    Baman, S. M., H. A. Motavali, and A. B. Bonardi. 2020. "A Survey of Blockchain
+    Consensus Algorithms Performance Evaluation Criteria: Expert Survey" arXiv:2011.11385.
+
+
+    Bia, R., Moore, M., and C. Cassason. 2018. "Blockchain Folk Theorem." SSRN Electronic
+    Journal, Castro, L., Blume, M., and C. Cachin. 2018. "An Introduction to Hyperledger."
+    Technical report. July 2018. url: https://hyperledger.org/content-papers/
+
+
+    Buttone, M., Raimondi, and G. Primiro. 2018. "Multi-Agent Simulations of Blockchain-Free
+    Distributed Ledgers." In 2018 23rd International Conference on Computer Networking
+    and Wireless Applications (WIJNA), 585–590. Piscataway, New Jersey: Institute
+    of Electrical and Electronics Engineers, Inc.
+
+
+    Brouskli, K.-A., Anonica, O. D. Tabdelli, and G. Deleuze. 2018. "Blockchain Market
+    Place Evaluation: An Agent-Based Approach." In 2019 IEEE Annual Information, Technology,
+    and Mobile Communication Conference (INFCOM), 321–327. Piscataway, New Jersey:
+    Institute of Electrical and Electronics Engineers, Inc.
+
+
+    Bulzik, M. 2014. "A Next-Generation Smart Contract and Decentralized Application
+    Platform." https://cryptoeuring.com/Ethereum/Ethereum.html
+
+
+    Castro, L., and Lakh et al. 2019. "Scalability in Blockchain." In Odyssey, 99,
+    73–186.
+
+
+    Chang, S. Y.-E. Chen, and M.-F. Lu. 2019. "Smart Re-Engineering Using Blockchain
+    Technology: A Case of Smart Contract Based Tracking Process." Technological Forecasting
+    and Software Engineering 144:1-11.
+
+
+    Cheng, S. H. L. Lu, and Y. Chen. 2020. "Blockchain-Enabled Trade Finance Innovation:
+    A Potential Paradigm Shift Under Use of Credit." 2021:12881.
+
+
+    Chao, X., X. Lu, and J. Sun. 2019. "When Learning Meets Blockchain: A Decentralized,
+    Privacy-Preserving and Secure Design." In 2019 IEEE International Conference on
+    Computer Analytics on Big Data, 1178–1187. Piscataway, New Jersey: Institute of
+    Electrical and Electronics Engineers, Inc.
+
+
+    Chitra, T. M., Anita, S. Haber, and W. Martin. 2019. "Agent-Based Simulations
+    of Blockchain Protocols via Kadena’s Challenge." In 2019 IEEE European Symposium
+    on Security and Privacy Workshops (EoSPW), 386–395. Piscataway, New Jersey: Institute
+    of Electrical and Electronics Engineers, Inc.
+
+
+    Cooche, L., and M. Martini. 2019. "Modeling and Simulation of the Economics of
+    Mining in the Blockchain Market." Plos
+
+
+    Coinmarketcap. 2020. August. "Global Charts of Total Market Capitalization." https://coinmarketcap.com/charts/
+
+
+    Col Lin, Wang, and Jishu Li. 2020. "Decentralized Minting in Contracts." https://academic.com/article/pdf/10.1109/SP37430.2020.317889440.pdf,
+    accessed 04th August 2020.
+
+
+    Lin G, Li W. Wang, and Yi Yan. 2022. "Tokenomics: Dynamic Adaptation and Utility."
+    https://www.nber.org/paper/w27222, accessed 04th August 2020.
+
+
+    Dimitrov, A. D. Ivanov, S. Pytarsky, B. Sokolov, I. Ivanov, and F. Werner. 2020.
+    "Blockchain-enabled dynamic modelling of smart contract design and execution."
+    International Journal of Research 58(7):2184–2199.
+
+
+    Dong, C., Y. Wang, A. Aldridge, P. McCarthy, and A. Mann. 2017. "Retreat, Decentralization
+    and Rationality: Smart Contract Auction for Verifiable Properties." In Proceedings
+    of the 2017 ACM SIGSAC Conference on Computer and Security (CCS 17), 211–227.
+    New York, NY, USA: Association for Computing Machinery.
+
+
+    Dwork, C., and M. Mann. 1993. "Processing Coins or Collecting Junk Mail." In International
+    Annual Cryptography, CRYPTO ’92, 139–147. Berlin: Springer Berlin.
+
+
+    Easley, D. M. Ou, and S. Basi. 2019. "From Mining to Markets: The Evolution of
+    Blockchain Transaction Fees." Journal of Financial Economics 131(1):89–103. Piscataway,
+    New Jersey: Institute of Electrical and Electronics Engineers, Inc
+
+
+    Eal, Y. 2015. "2015 IEEE Symposium on Security and Privacy, 89–103. Piscataway,
+    New Jersey:
+
+
+    Feng, S., W. Wang, X. Zhong, D. Yuan, P. Wang, and S. Wang. 2018. "On Cyber Risk
+    Management in Blockchain Networks: A Game Theoretic Approach." arXiv preprint:1804.10142.
+    https://fishwise.org/traceability/advancing-traceability-in-the-seafood-industry-assessing-challenges-and-opportunities/,
+    accessed 04th August 2020.
+
+
+    # 86'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# Wan, Huang, and Li
+
+
+    Foytik, P., S. Shetty, P. G. Goochatay, E. Herath, D. Tosh, and L. Njilla. 2020.
+    “A Blockchain Simulator for Evaluating Consensus Algorithms in Diverse Networking
+    Environments.” In Proceedings of the 2020 Spring Simulation Conference, 1–12.
+    Piscataway, New Jersey: Institute of Electrical and Electronics Engineers, Inc.
+
+
+    Galvez, J. F., P. Mejuto, and J. Sim-Gandar. 2018. “Future Challenges on the Use
+    of Blockchain for Food Traceability Analysis.” In Analytical Chemistry 127(4):232.
+
+
+    Gatschi, F., L. Lambert, C. Demner, and S. Sitmani. 2018. “Blockchain and Smart
+    Contracts for Insurance: Is the Technology Mature Enough?” Future Technology 10(2):20.
+
+
+    Gervais, O. G. Kamei, K. Wast, Y. Hitzkowitz, and S. Kaplan. 2016. “On the Security
+    and Performance of Proof of Work.” In Proceedings of the 2016 ACM SIG Conference
+    on Computer and Communications SECS, 16: 3–16. New York, NY: USA Association for
+    Computing Machinery.
+
+
+    Gil, J. H., K. E. Andrews, and K. Taylor. 2018. “Blockchain Dynamics: The Self-Mine
+    Strategy in the Propagation of Delay.” Performance Evaluation 104:24–41.
+
+
+    Gowsami, S. 2017. *Analysis of blockchains through blockchain mechanism.* Master
+    of Science in Computer Science, Department of Computer and Engineering, University
+    of Nevada, Las Vegas, Nevada, https: https://scholar.unlv.edu/handle/1021/3336,
+    accessed 28 August
+
+
+    Giggs, K. O., S. Oliveira, P. Kohli, A. N. Bashir, H. Holmes, and T. Tajheran.
+    2018. “Healthcare Using Smart Contracts for Automated Remote Patient Monitoring.”
+    Journal of medical systems 42(7):1130. Haber, and W. S. Stromta. 1998. “How to
+    Time-Stamp a Digital Currency.” In Conference on the Theory of Cryptography, 437–455.
+    Berlin: Heidelberg.
+
+
+    Hariri, J. N. 2018. “Bitcoin-Generative Alternative on Blockchain.” In 2019 IEEE
+    International Conference on Blockchain, 368–375. Piscataway, New Jersey: Institute
+    of Electrical and Electronics Engineers, Inc.
+
+
+    Hubman, G., J. Chen, and C. Moumilli. 2019. “An Analysis of the Bitcoin Payment
+    System,” Colombia Business School Report (17-92).
+
+
+    Hu, S., Cho., and S. Kim. 2017. “Managing IoT Devices Using Blockchain.” In 2017
+    19th international conference on advanced communication technologies (ICACT),
+    464–467. Piscataway, New Jersey: Institute of Electrical and Electronics Engineers.
+
+
+    Jaikran, Chris 2017. From https://www.banksecurity.org/download/jaikran-testimony-10-17-pdf,
+    accessed 04th August 2018.
+
+
+    Jamil, F. L., K. Kim, and D. Kim. 2019. “A New Blockchain Model for Drug Supply
+    Integrity in a Smart Hospital.” IEEE Access 7:85505
+
+
+    Jiang, Z., and J. Liang. 2017. “Cryptocurrency Fraud Detection with Deep Reinforcement
+    Learning.” In 2017 Intelligent Systems Conference (IntelliSys), 905–913. Piscataway,
+    New Jersey: Institute of Electrical and Electronics Engineers, Inc.
+
+
+    Jordan, M., S. Blandin, L. Taylor, and Y. Petersen. 2019. “A Probabilistic Model
+    of the Blockchain.” In 2019 IEEE Conference on Computer Vision and Pattern Recognition
+    (CVPRW), 2784–2792. Piscataway, New Jersey: Institute of Electrical and Electronics
+    Engineers, Inc.
+
+
+    Katz, J. S., D. Nieto, P. Wang, and Y. 2020. “Consensus Propagation in Proof-of-Stake
+    Consortium Blockchains.” IEEE Transactions on International Informatics 8(1):155–160.
+
+
+    Kang, R. J., Y. Hu, S. Maharajan, and Y. Zhang. 2017. “Enhanced Peer-to-Peer Trading
+    Among Hybrid Electric Vehicles Using Consortium Blockchains.” IEEE Transactions
+    on International Informatics 13(6):1144–1155.
+
+
+    Kim, H. M., and M. Lakhwani. 2018. “Toward an Ontology-Driven Blockchain Design
+    for Supply-Chain Protection.” Intelligent Systems in Accounting, Finance and Management
+    25(1):128.
+
+
+    Kim, S.-K. 2018. “The Trailler of Blockchain Governance.” arXiv preprint:1807.05581.
+
+
+    King, S., and S. National. 2012. “Tpoom: Peer-to-Peer-Currency With Proof-of-Stake.”
+    self-published paper, Angle 19:1.
+
+
+    Kroll, J. A., I. C. Davey, and E. F. Wells. 2013. “The Economics of Bitcoin, Mining
+    or Blockchain in the Presence of Adversaries
+
+
+    Lahmiri, S., and S. Sekios. 2019. “Forecasting Cryptocurrency Price Using Deep
+    Learning Neural Networks.” Chaos, Chaots & Fractals 118:35–40.
+
+
+    Lamport, L., R. Shostak, and M. Pease. 2019. “The Byzantine Generals Problem.”
+    In: Works of Lamport 302–9.
+
+
+    Lewenberg, Y., Y. Sompolinsky, and A. Zohar. 2015. “Include Blockchain Block Contracts.”
+    In International Conference on Financial Cryptography and Data Science, 528–547.
+    Berlin, Heidelberg: Springer Berlin Heidelberg.
+
+
+    Li, Z., Kang, R. J., Y. Ye, D. G., and Y. Zhang. 2017. “Consortium Blockchain
+    for Secure Energy Trading in Internet of Things.” IEEE transactions on international
+    informatics 14(8):3690–3700.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: "Liao, K. and J. Katz, 2017, \"Incentivizing Blockchain Fororks via Wholesale\
+    \ Transactions.\" Notes in Computer Science:264:279,\nLinux Foundation 2020, \"\
+    Hyperledger Fabric\". https://www.hyperledger.org/fabric, accessed 04th August.\n\
+    \nLiu, C. H., Q. Lin, and S. Wen. 2018. Blockchain-Enabled Data Collection and\
+    \ Sharing for Industrial IoT With\nDeep Reinforcement Learning. IEEE Transactions\
+    \ on Industrial Informatics 15(6):3516-3526.\n\nLiu, Z. N., C. Liang, W. Wang,\
+    \ D. Naito, Y.-C. Jiang, and D. I. Kim. 2019. \"A Survey on Blockchain: A Game\n\
+    Future Perspective.\" IEEE Access 7:74715-74728.\n\nLongo, F., I. Nicoletti, A.\
+    \ Padova, and D. M. Forte. 2019. \"Blockchain-Enabled Supply Chain: An Example\n\
+    Study.\" Computers & Industrial Engineering 136:57-69.\n\nMcNally, S., and Q.\
+    \ Xu, 2017. \"Blockchain-Based Systems: A Case Study for Productivity.\" IEEE\
+    \ Software 34(6):21-\n27.\n\nLuong, N. C., X. Zhong, P. Wang, and D. Naito. 2018.\
+    \ \"Optimal Choice for Edge Resource Management in\nMobile Blockchain Networks:\
+    \ The 2018 IEEE International Conference on\nBlockchain (ICC), 1-6. Piscataway:\
+    \ Piscascay, New Jersey: Institute of Electrical and Electronics Engineers.\n\n\
+    Mancini, V. T., Schoneberg, M. Ramunkar, S. Wagner, S. Bakba, and R. Raj Singh,\
+    \ 2020. \"A Blockchain-Based\nApproach for a Multi-Blockchain Supply Chain.\"\
+    \ International Journal of Public Research 58(7):2220-2221,\n\nMa, D. J., F. Wang,\
+    \ and H. Li, 2018. \"Immutable Blockchain for Sustainable and Green Economy\n\
+    Future in Trade: A Case Study in Food Sharing Chain.\" Sustainability 10(3):1009-1019\n\
+    \nMartin, York, 2018. \"How Blockchain Will Transform the Asset Management Industry\"\
+    \ Ignite Lite; https\ngithub.com/blockchainsasset/blockchain-asset-management,\
+    \ accessed 04th August.\n\nMcNamara, A., and Reese, S. 2019. \"The Prediction\
+    \ of Price of Bitcoin Using Machine Learning.\" In 2018 IEEE Economic\nInternational\
+    \ Conference on Parallel, Distributed and Network-based Prediction (PDP), 339-343.\
+    \ Piscataway, New Jersey: Institute of Electrical and Electronics Engineers.\n\
+    \nMiller, A. R., P. J. Li, and J. Ahmed. 2019. \"Simulation Model for Blockchain\
+    \ Systems Using Query Theory.\" Electron-\nelectron 82:223-234.\n\nMerkle, R.\
+    \ 1980. \"Protocols for Public Cryptocurrencies.\" In 1980 IEEE Symposium on Security\
+    \ and Privacy, 122–122.\nPiscataway, New Jersey: Institute of Electrical and Electronics\
+    \ Engineers.\n\nMiller, A., and R. James. 2015. \"Blockchain: Scalable Simulation\
+    \ and Evaluation of Multi-Threaded Applications.\" In\n8th Workshop on Software\
+    \ Engineering and Testing (SETest). USENIX Association: Austin.\nMing, D., M.\
+    \ A. Xiao, Z. W., Xijwei, and C. Jiang. 2017. \"A Review on Consensus Algorithm.\"\
+    \ In\n2017 IEEE International Conference on Software (ICSE), 2562-2577. Piscataway,\
+    \ New Jersey: Institute of Electrical and Electronics Engineers.\n\nNakamoto,\
+    \ Satoshi and others, 2008. \"Bitcoin: A Peer-to-Peer Cash System.\"\n\nNarayanan,\
+    \ A., J. Boneh, E. Felten, and S. Goldfeder. 2016. Bitcoin and Cryptocurrencies:\
+    \ A\nComprehensive Review.\" Princeton University Press.\nNguyen, D. C., P. Narayanan,\
+    \ M. Mihindra, and G. Senvirato. 2020. \"Privacy-Preserved Auditing in Mobile\
+    \ Blockchain\n Deep Reinforcement Learning.\" IEEE Transactions on Network and\
+    \ Management Science.\n\nPlatella Garcia and Bianchi Rocha, 2018. \"An Equilibrium\
+    \ Value of Bitcoin and Decentralized Network Assets\"\nhttps://snrn.com/articles/3134222-04,\
+    \ accessed 04th August.\n\nPark, J., and S. Dehraanthakul, K. K. 2018. \"Empirical\
+    \ Vulnerability Analysis of Smart Contract\nContracts Using Blockchain.\" arxiv\
+    \ preprint:1809.02702.\n\nParsons, Jackson. 2018. \"Blockchain Types It's More\
+    \ Than Public vs Uledger.\" https://medium.com/159759.16/blockchain-types-its-more-than-public-vs-private,\
+    \ accessed 04th August.\n\nPopov, Sergey, 2016. \"The Tangle.\" https://www.desriptions.com/iota.pdf,\
+    \ accessed 04th August 2020.\nReilly, \"The Scalability Trilemma\" Ethereum. But\
+    \ Why does it Matter?\n\nRosa, E. G. D. Angelo, and S. Ferretti, 2019. \"Agent-Based\
+    \ Blockchain System.\" In Methods and Application\nof Simulation and Complex Systems,\
+    \ by D. Tan, 115-126. Springer Springer;"
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: 'Teutsch, J., S. Jain, P. and Saxena, X. (2016). "Cryptocurrencies Mine Their
+    Own Business". In International Conference on Financial Cryptography and Data
+    Security, 499–514. Berlin, Heidelberg: Springer Berlin Heidelberg.
+
+
+    Tsabary, I., and I. Eyal. (2018). "The Gap Game". In Proceedings of the 2018 ACM
+    SIGSAC conference on Computer and Communications Security, CCS ''18: 713–728.
+    New York, NY, USA: Association for Computing Machinery.
+
+
+    Tseng, J.-H., Y.-C. Liao, B. and S.-W. Shin (2019). "Governance on the Supply
+    Chain via Blockchain". International journal of internet research and applications,
+    15(5):15055.
+
+
+    Winter, James. (2019). "Bitcoin Consumes More Energy Than Switzerland, according
+    to- The Verge". https://www.theverge.com/2019/7/24/20684209/bitcoin-energy-consumption-comparison-index-vs-switzerland,
+    accessed 04th August 2019.
+
+
+    Wigmay, Tony. (2019). "Blockchain and Smart Contracts Review the Economy". BlockchainHub.
+
+
+    Wang, B., S. Chen, L. Bao, X. Lu, and Zhou Li (2018). "A Solution Approach for
+    Building and Quality of Blockchain Networks". In International Conference on Blockchain,
+    18–31. Springer International Publishing.
+
+
+    Wang, S., L. Liang, Y. Yuan, X. Ni, X. Han, and F.-Y. Wang (2019). "Blockchain-Enabled
+    Smart Contracts: Architecture, Applications, and Future Trends". IEEE Transactions
+    on Systems, Man, and Cybernetics: 49(11):2266–2277.
+
+
+    Watanabe, H., S. Fuji, A. Nakada, Y. Miyazaki, A. Takeuchi, and J. Kishimoto (2015).
+    "Blockchain Contract: A Consensus Mechanism Using Blockchain for consumer electronics
+    (GCCE)". 577–586.
+
+
+    Wikipedia. (2020). "Blockchain - Wikipedia". In https://en.wikipedia.org/wiki/Blockchain,
+    accessed 04th August
+
+
+    Wood, G. and al. (2014). "Ethereum: A Decentralised Ledger Ethereum". Ethereum
+    project yellow paper.
+
+
+    Xiong, Z. F., D. Niyato, P. Wang, and Z. Han (2018). "Optimal Pricing-Based Computing
+    Resource Management in Mobile Blockchain In 2018 IEEE International Conference
+    on Communications (ICC), 1–6. Piscataway, New Jersey: Institute of Electrical
+    and Electronics Engineers, Inc.
+
+
+    Yang, J. R., M. Staples, S. Luo, S. Rajeesan, and F. Han, X. X, Y. Yang, G. Amarghese,
+    and S. Chen (2020). "Public and Private Blockchain in Construction Management
+    Using Blockchain Integration". International Conference 118.03276.
+
+
+    Waserageringringle, R. Staples, and I. Weber (2017). "Predicting Latency of Blockchain
+    Systems Using Architectural Modeling and Simulation". In 2017 IEEE International
+    Conference on Software Architecture (ICSA), 253–256. Piscataway, New Jersey: Institute
+    of Electrical and Electronics Engineers, Inc.
+
+
+    Yin, H. S., and P. Rajkumar (2017). "An Estimation of the Proportion of Credits
+    in the Bitcoin Ecosystem Using Machine Learning". In 2017 IEEE International Conference
+    on Big Data (Big Data), 3600–3609. Piscataway, New Jersey: Institute of Electrical
+    and Electronics Engineers, Inc.
+
+
+    Zhang, A., and X. Lin. (2018). "Secure and Privacy-Preserving Data in E-Health
+    Systems via Consortium Blockchain". Journal of medical system 428(8):140.
+
+
+    Zhen, Y., Y. Chen, J.-Tang, and C. Xin (2017). "Zero-Data-Determinant Strategy
+    for the Algorithm Optimization of Blockchain Consensus In Control Conference (CCC),
+    1441–1446. Piscataway, New Jersey: Institute of Electrical and Electronics Engineers,
+    Inc.
+
+
+    Zhu, X., H. Li, and Y. Yu (2018). "Blockchain-Privacy Preserving Deep Learning".
+    International Conference on Information Security and Cryptography, 370–383. Springer
+    International Publishing.
+
+
+    # AUTHOR BIOGRAPHIES
+
+
+    HONG W is an Associate professor in the Department of Industrial and Electronics
+    Engineering at North State University. His research focuses on the areas of experimental
+    design and data analysis of complex simulation models and blockchain. He is the
+    director of the ICE blockchain lab, as the editor in chief of Journal of Blockchain
+    Research and the associate editor of ACM TOC. His email is hwan4@ncsu.edu and
+    his website is https://www.ncsu.edu/people/hwan4/
+
+
+    YING HUANG is a Ph.D. student in the Operations Research Graduate Program at North
+    State University. His research interests include simulation and blockchain technologies.
+    His e-mail address is yhuang43@ncsu.edu.
+
+
+    KEJUN LI is a Ph.D. student in the Department of Industrial and Systems Engineering
+    at North State University. His research interests include applied probability,
+    simulation, game theory, and blockchain technologies. His e-mail address is kli15@ncsu.edu.
+
+
+    89'
+  merge: -1
+  img_proc: true
