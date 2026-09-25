@@ -1,0 +1,947 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # How to Make 5G Communications “Invisible":
+
+    Adversarial Machine Learning for Wireless Privacy
+
+
+    Brian Kim¹, Yalin E. Sagduyer², Kemal Davlioglu², Tugba Erpek², and Sennur Ulukus¹
+
+
+    *Department of Electrical and Computer Engineering, University College Park, MD
+    20742, USA
+
+    ²Intelligent Automation, Inc., Rockville, MD 20855, USA
+
+
+    **Abstract—**We consider the problem of hiding communications from an eavesdropper
+    that uses a deep learning (DL) classifier to detect whether any transmission is
+    present or not. We show that transmitters can fool error to the receiver of an
+    eavesdropper, while covert jamming can introduce adversarial perturbations to
+    the received signal as noise. We show that this adversarial perturbation causes
+    the eavesdropper to misclassify signals as noise with high probability and we
+    further show that any 5G communications can be effectively hidden from an eavesdropper
+    if it uses a DL classifier to detect transmissions.
+
+
+    this paper covers the covert communications from an adversarial machine learning
+    (AML) point of view. AML studies the problem of machine learning (ML) in the presence
+    of adversaries that may attempt to manipulate or training processes of ML algorithms
+    [7–9]. In computer vision, where the origin of AML has been a growing interest
+    in applying AML to wireless communications, including exploratory (inference),
+    causal (poisoning), evasion, and spoofing attacks [10–16].
+
+
+    # ### I. INTRODUCTION
+
+
+    Information privacy is a fundamental problem in wireless communications due to
+    the open and shared nature of wire medium. A covert communication consists of
+    a transmitter-receiver pair that aims to hide communications from the transmitter
+    to the receiver. The receiver must determine whether there is any transmission
+    or not. Information privacy preventing unauthorized decoding has been extensively
+    studied from both security and information-theoretical studies [1], [2]. In this
+    paper, we consider an eavesdropper that pursues the second objective, namely detecting
+    an ongoing transmission. When a transmission is detected, others such as jamming
+    can be used to block the communication.
+
+
+    Covert communication has been studied in terms of hiding information where the
+    main goal has to reduce the signal-to-noise ratio (SNR) of the adversary [3],
+    [4]. A foundational bound has been established for the total transmit power over
+    a given number of channels while keeping communications covert, known generally
+    as the square-root law [5]; see also for related work.
+
+
+    We consider an eavesdropper with a deep learning (DL) classifier that has inaccuracy
+    in detecting received signals from noise. We introduce a cooperative jammer (CJ)
+    that has been extensively used in physical layer security [17–19]. In this paper,
+    the CJ transmits the error at the same time as the transmitter with the purpose
+    of misclassifying the eavesdropper’s classifier. This is considered covert jamming
+    to prevent an eavesdropper from distinguishing an ongoing transmission from noise.
+
+
+    We use the CJ as the source of adversarial perturbation to fool the eavesdropper’s
+    classifier. A large perturbation added by the CJ can easily fool the classifier,
+    while also increase the interference and the bit error rate (RATE) at the intended
+    receiver to undesirable levels. Under the approach of setting being considered
+    in [27], where the transmitter adds perturbations to its signal to fool a machine
+    classifier while maintaining its performance, our focus is on covert communications
+    assisted by a CJ, who positions the front impact on the eavesdropper to classify
+    received signal as noise while reducing the network performance. It is much more
+    challenging to fool a classifier into misclassifying a signal as noise (as considered
+    in this type) of inserting such jamming attacks (as considered in [27]). For our
+    evaluation, we use various modulation schemes (QPSK and QAM) and show that we
+    could effectively hide these signals from an eavesdropper that and uses a DL classifier
+    to detect transmissions.
+
+
+    This is supported by the U.S. Army Research Office under contract W911NF-C-0090.
+    The content of the information does not necessarily reflect the position or policy
+    of the U.S. Government, and no official endorsement should be intended.
+
+
+    978-3-7816-3126-9/20/$19.00 ©2020 IEEE
+
+    763
+
+    ilaromar 2020'
+  - '[PAGE 1]
+
+
+    ![](img/1c9877e90b513c63096e0d8f3f8eceab_1_0.png)
+
+
+    Fig. 1. System model.
+
+
+    Since the perturbation from the CJ not only creates interference at the eavesdropper,
+    also at the receiver, the CJ determines its $\delta$ to cause misclassification
+    of the eavesdropper using fixed power budget that also limits the BER at the receiver.
+    Finally, the CJ first determines $\delta$ by solving the following optimization
+    problem:
+
+
+    ```
+
+    $$\arg \min_{\delta} ||\delta||_2\n l(r_{te}, \delta) \neq l(r_{te}, \delta^*))
+    \n ||\delta|| \leq P_{max}$
+
+    ```
+
+
+    The perturbation of the CJ is selected to minimize the strength of the perturbation
+    to the condition of successfully fooling the eavesdropper, and an upper bound
+    on the perturbation power that can translate to the BER at the receiver. We show
+    that Gaussian noise is not enough of adversarial attack and we develop an algorithm
+    to optimize perturbations for the CJ to easily cover communications that we demonstrate
+    for different modulation types and 5G communications.
+
+
+    The $\delta^{(4)}$ is solved in the BER, at the receiver that can be caught by
+    setting $P_{max}$ accordingly. Since solving is (4), different methods have been
+    proposed in computation to approximate the adversarial perturbations like the
+    fast gradient method [7]. The FGM is computationally efficient for crafting adversarial
+    examples by linearizing the loss function of a DNN classifier at $x$ where $y$
+    is the label vector. For optimization, we consider a targeted attack, where the
+    perturbation of the CJ aims to decrease the loss of the function class noise and
+    cause a specific misclassification, from signal to noise, at the eavesdropper
+    there on an actual transmission. We perturb the problem from AML and aim to fool
+    a target class in wireless communication environment. Despite the perturbation,
+    we constrain the BER at the receiver to stay below certain level while satisfying
+    the power constraint of the CJ, in the states of the optimization problem (4).
+    We assume that the CJ communicates with the transmitter and knows the transmitted
+    signal from the transmitter.
+
+
+    # II. SYSTEM MODEL
+
+
+    We consider a wireless system consisting of a transmitter, a receiver, and an
+    eavesdropper as shown in Fig. 1. The transmitter sends $x$ complex symbols $x
+    \in \mathcal{C}$, with a binary sequence $m \in \{0,1\}$; $x = g(m)$, where $g:
+    \{0,1\} \to \mathcal{C}$ and $g$ represents the modulation type of the transmitter.
+    The transmitter''s signal received at node $j$ (where $j$ is either the receiver
+    or the eavesdropper) is
+
+
+    ```
+
+    $r_{tj} = h_{tj}x + n_{tj} = h_{tj}x + n_{tj}, \quad j \in \{r,e\}$
+
+    ```
+
+
+    where $h_{tj} = [h_{tj1}, \..., h_{tjp}] \in \mathcal{C}^p$ and $n_{tj}$ is the
+    channel and Gaussian noise from the transmitter to node $j$, respectively. Upon
+    receiving the signal, the receiver dec the message with the BER given
+
+
+    ```
+
+    $P_e(m|r_{tj}) = \frac{1}{q} \sum_{\hat{m} \neq m} p(\\hat{m}|r_{tj}), \quad (2)$
+
+    ```
+
+
+    where $m$ is a decoded value and $\hat{m}$ is an indicator function. The eavesdropper
+    tries to detect the wireless message using a pre-trained DL-based classifier,
+    a deep neural network (DNN), $f(\theta;x): \mathcal{C} \to \mathcal{R}^p$, where
+    $\theta$ is the set of parameters and $l$ is assigned $l = \argmax_k f(\theta;x)$
+    where $f(\theta;x)$ is the output of classifier $f$ to the th class.
+
+
+    To communicate between between the transmitter and its receiver, the CJ perturbs
+    transmitter signal $\delta \in \mathcal{C}$ to cause misclassification at the
+    eavesdropper by changing the label of the received signal from signal to noise.
+    Thus, if the transmitter transmits $x$, the adversarial received at node $j$ is
+
+
+    ```
+
+    $r_{tj}(\delta) = h_{tj}(x+\delta) + n_{tj}, \quad j \in \{r,e\}$
+
+    ```
+
+
+    where $h_{tj} = [h_{tj1}, \..., h_{tjp}] \in \mathcal{C}^p$ is the channel from
+    CJ to node $j$.
+
+
+    # III. ADVERSARIAL PERTURBATION FOR THE CJ
+
+
+    In this section, we describe the white-box for the CJ using trained FGM from (4).
+    For the targeted attack, we optimize $l(r_{te}, \delta^*)$ with respect to $\delta$
+    where $y$ is one-hot decoding class. We fix $y$ as noise since the CJ always tries
+    to add perturbation to fool the eavesdropper as received signal. We use FGM to
+    linearize the loss $l(r_{te}, \delta) = l(r_{te}, 0) + \nabla_{\delta}l(r_{te},
+    0)^T\delta$ and then minimize it by setting $\delta = -\alpha\nabla_{\delta}l(r_{te},
+    0)$, where $\alpha$ is a scaling factor to constrain the adversarial power to
+    $P_{max}$. After that, if misclassification satisfies the power constraint, the
+    CJ will keep the BER at the receiver. The perturbation power can further be adjusted
+    to meet a target BER level. The determining of the CJ''s perturbation signal are
+    presented in Algorithm 1.
+
+
+    # IV. SIMULATION SETUP
+
+
+    We analyze the success of correctness achieved by the CJ and the corresponding
+    effect on the BER at the receiver. We compare this perturbation with
+
+
+    764'
+  md: '
+
+    # How to Make 5G Communications “Invisible”: Adversarial Machine Learning for
+    Wireless Privacy
+
+
+    Brian Kim¹, Yalin E. Sagduyer², Kemal Davlioglu², Tugba Erpek², and Sennur Ulukus¹
+
+
+    *Department of Electrical and Computer Engineering, University College Park, MD
+    20742, USA
+
+    ²Intelligent Automation, Inc., Rockville, MD 20855, USA
+
+
+    **Abstract—**We consider the problem of hiding communications from an eavesdropper
+    that uses a deep learning (DL) classifier to detect whether any transmission is
+    present or not. We show that transmitters can fool the receiver of an eavesdropper,
+    while covert jamming can introduce adversarial perturbations to the received signal
+    as noise. We show that this adversarial perturbation causes the eavesdropper to
+    misclassify signals as noise with high probability and we further show that any
+    5G communications can be effectively hidden from an eavesdropper if it uses a
+    DL classifier to detect transmissions.
+
+
+    This paper covers the covert communications from an adversarial machine learning
+    (AML) point of view. AML studies the problem of machine learning (ML) in the presence
+    of adversaries that may attempt to manipulate or training processes of ML algorithms
+    [7–9]. In computer vision, where the origin of AML has been a growing interest
+    in applying AML to wireless communications, including exploratory (inference),
+    causal (poisoning), evasion, and spoofing attacks [10–16].
+
+
+    ## I. INTRODUCTION
+
+
+    Information privacy is a fundamental problem in wireless communications due to
+    the open and shared nature of wire medium. A covert communication consists of
+    a transmitter-receiver pair that aims to hide communications from the transmitter
+    to the receiver. The receiver must determine whether there is any transmission
+    or not. Information privacy preventing unauthorized decoding has been extensively
+    studied from both security and information-theoretical studies [1], [2]. In this
+    paper, we consider an eavesdropper that pursues the second objective, namely detecting
+    an ongoing transmission. When a transmission is detected, others such as jamming
+    can be used to block the communication.
+
+
+    Covert communication has been studied in terms of hiding information where the
+    main goal has to reduce the signal-to-noise ratio (SNR) of the adversary [3],
+    [4]. A foundational bound has been established for the total transmit power over
+    a given number of channels while keeping communications covert, known generally
+    as the square-root law [5]; see also for related work.
+
+
+    We consider an eavesdropper with a deep learning (DL) classifier that has inaccuracy
+    in detecting received signals from noise. We introduce a cooperative jammer (CJ)
+    that has been extensively used in physical layer security [17–19]. In this paper,
+    the CJ transmits the error at the same time as the transmitter with the purpose
+    of misclassifying the eavesdropper’s classifier. This is considered covert jamming
+    to prevent an eavesdropper from distinguishing an ongoing transmission from noise.
+
+
+    We use the CJ as the source of adversarial perturbation to fool the eavesdropper’s
+    classifier. A large perturbation added by the CJ can easily fool the classifier,
+    while also increase the interference and the bit error rate (RATE) at the intended
+    receiver to undesirable levels. Under the approach of setting being considered
+    in [27], where the transmitter adds perturbations to its signal to fool a machine
+    classifier while maintaining its performance, our focus is on covert communications
+    assisted by a CJ, who positions the front impact on the eavesdropper to classify
+    received signal as noise while reducing the network performance. It is much more
+    challenging to fool a classifier into misclassifying a signal as noise (as considered
+    in this type) of inserting such jamming attacks (as considered in [27]). For our
+    evaluation, we use various modulation schemes (QPSK and QAM) and show that we
+    could effectively hide these signals from an eavesdropper that and uses a DL classifier
+    to detect transmissions.
+
+
+    This is supported by the U.S. Army Research Office under contract W911NF-C-0090.
+    The content of the information does not necessarily reflect the position or policy
+    of the U.S. Government, and no official endorsement should be intended.
+
+
+    ![](img/1c9877e90b513c63096e0d8f3f8eceab_1_0.png)
+
+    Fig. 1. System model.
+
+
+    Since the perturbation from the CJ not only creates interference at the eavesdropper,
+    also at the receiver, the CJ determines its $\delta$ to cause misclassification
+    of the eavesdropper using fixed power budget that also limits the BER at the receiver.
+    Finally, the CJ first determines $\delta$ by solving the following optimization
+    problem:
+
+
+    $$\arg \min_{\delta} ||\delta||_2 \text{ s.t. } l(r_{te}, \delta) \neq l(r_{te},
+    \delta^*), ||\delta|| \leq P_{max}$$
+
+
+    The perturbation of the CJ is selected to minimize the strength of the perturbation
+    to the condition of successfully fooling the eavesdropper, and an upper bound
+    on the perturbation power that can translate to the BER at the receiver. We show
+    that Gaussian noise is not enough of adversarial attack and we develop an algorithm
+    to optimize perturbations for the CJ to easily cover communications that we demonstrate
+    for different modulation types and 5G communications.
+
+
+    The $\delta^{(4)}$ is solved in the BER, at the receiver that can be caught by
+    setting $P_{max}$ accordingly. Since solving is (4), different methods have been
+    proposed in computation to approximate the adversarial perturbations like the
+    fast gradient method [7]. The FGM is computationally efficient for crafting adversarial
+    examples by linearizing the loss function of a DNN classifier at $x$ where $y$
+    is the label vector. For optimization, we consider a targeted attack, where the
+    perturbation of the CJ aims to misclassify received signal as noise while reducing
+    the network performance.
+
+
+    ## II. SYSTEM MODEL
+
+
+    We consider a wireless system consisting of a transmitter, receiver, and an eavesdropper
+    as shown in Fig. 1. The transmitter sends $x \in \mathcal{C}$ with modulation
+    type $g: \{0,1\} \to \mathcal{C}$, where $m$ is the binary message. The eavesdropper
+    receives $r_{te} = h_{te}x + n_{te}$, where $h_{te} = [h_{te1}, ..., h_{tep}]
+    \in \mathcal{C}^p$ is the channel and $n_{te}$ is Gaussian noise. The receiver
+    receives $r_{tr} = h_{tr}x + n_{tr}$, where $h_{tr}$ is the channel and $n_{tr}$
+    is Gaussian noise. The CJ perturbs $\delta \in \mathcal{C}$ to cause misclassification
+    at the eavesdropper, resulting in $r_{te}(\delta) = h_{te}(x+\delta) + n_{te}$.
+
+
+    ## III. ADVERSARIAL PERTURBATION FOR THE CJ
+
+
+    In this section, we describe the white-box for the CJ using FGM from (4). For
+    the targeted attack, we optimize $l(r_{te}, \delta^*)$ with respect to $\delta$
+    where $y$ is one-hot decoding class. We fix $y$ as noise since the CJ always tries
+    to add perturbation to fool the eavesdropper as received signal. We use FGM to
+    linearize the loss $l(r_{te}, \delta) = l(r_{te}, 0) + \nabla_{\delta}l(r_{te},
+    0)^T\delta$ and then minimize it by setting $\delta = -\alpha\nabla_{\delta}l(r_{te},
+    0)$, where $\alpha$ is a scaling factor to constrain the adversarial power to
+    $P_{max}$. After that, if misclassification satisfies the power constraint, the
+    CJ will keep the BER at the receiver. The perturbation power can further be adjusted
+    to meet a target BER level.
+
+
+    ## IV. SIMULATION SETUP
+
+
+    We analyze the success of correctness achieved by the CJ and the corresponding
+    effect on the BER at the receiver. We compare this perturbation with
+
+    '
+  mdcn: '
+
+
+    # 如何让 5G 通信“隐形”：用于无线隐私的对抗机器学习
+
+
+    Brian Kim¹, Yalin E. Sagduyer², Kemal Davlioglu², Tugba Erpek², and Sennur Ulukus¹
+
+
+    *美国马里兰州大学帕克大学分校电气与计算机工程系，MD 20742
+
+    ²美国马里兰州罗克维尔 Intelligent Automation 公司，MD 20855
+
+
+    **摘要—** 我们考虑了从深度学习（DL）分类器检测是否存在传输的窃听者隐藏通信的问题。我们证明了发射机可以欺骗窃听者的接收端，而隐蔽干扰可以将对抗扰动作为噪声引入接收到的信号中。我们展示了这种对抗扰动会导致窃听者以高概率将信号误分类为噪声，并进一步证明了如果窃听者使用
+    DL 分类器检测传输，任何 5G 通信都可以从其视线中有效隐藏。
+
+
+    本文从对抗机器学习（AML）的角度涵盖了隐蔽通信。AML 研究的是存在可能试图操纵或干扰机器学习算法训练过程的攻击者时的机器学习（ML）问题 [7–9]。在计算机视觉领域，AML
+    的起源是对将 AML 应用于无线通信日益增长兴趣，包括探索性（推理）、因果性（投毒）、规避和欺骗攻击 [10–16]。
+
+
+    ## I. 引言
+
+
+    由于无线介质的开放和共享特性，信息隐私是无线通信中的一个基础问题。隐蔽通信由一对发射机-接收机组成，旨在隐藏从发射机到接收机的通信。接收机必须确定是否存在传输。防止未经授权解码的信息隐私已从安全信息理论角度得到了广泛研究
+    [1], [2]。在本文中，我们考虑一个追求第二个目标的窃听者，即检测正在进行的传输。一旦检测到传输，可以使用干扰阻塞通信。
+
+
+    隐蔽通信已在隐藏信息方面得到了研究，其主要目标必须是降低攻击者的信噪比（SNR）[3], [4]。在保持通信隐蔽的同时，针对给定的信道数量总发射功率已建立了一个基础界限，这通常被称为平方根律
+    [5]；另见相关工作。
+
+
+    我们考虑一个具有深度学习（DL）分类器的窃听者，该分类器在检测从噪声中接收的信号时存在不准确性。我们引入了在物理层安全中被广泛使用的协作干扰器（CJ）[17–19]。本文中，CJ
+    与发射机同步传输误差，目的是误分类窃听者的分类器。这被视为隐蔽干扰，旨在防止窃听者将正在进行的传输与噪声区分开来。
+
+
+    我们使用 CJ 作为对抗扰动的源来欺骗窃听者的分类器。CJ 添加的大扰动可以轻易欺骗分类器，但同时会将目标接收处的干扰和比特率（RATE）增加到不可接受的水平。根据
+    [27] 中考虑的方法（即发射机对其信号添加扰动以欺骗机器分类器同时保持其性能），我们的重点是受 CJ 辅助的隐蔽通信，CJ 重点影响窃听者将接收到的信号分类为噪声，同时降低网络性能。欺骗分类器将信号误分类为噪声（如本文考虑的）比插入此类干扰攻击（如
+    [27] 中考虑的）要困难得多。在评估中，我们使用了各种调制方案（QPSK 和 QAM），并证明了我们可以从使用 DL 分类器检测传输的窃听者处有效隐藏这些信号。
+
+
+    本研究由美国陆军研究办公室根据合同 W911NF-C-0090 支持。信息内容并不反映美国政府的立场或政策，不应视为任何官方背书。
+
+
+    ![](img/1c9877e90b513c63096e0d8f3f8eceab_1_0.png)
+
+    图 1. 系统模型。
+
+
+    由于来自 CJ 的扰动不仅在窃听者处产生干扰，在接收处也是如此，因此 CJ 通过使用固定功率预算确定其 $\delta$，以导致窃听者的误分类，同时该预算也限制了接收处的
+    BER。最后，CJ 通过求解以下优化问题首先确定 $\delta$：
+
+
+    $$\arg \min_{\delta} ||\delta||_2 \text{ s.t. } l(r_{te}, \delta) \neq l(r_{te},
+    \delta^*), ||\delta|| \leq P_{max}$$
+
+
+    选择 CJ 的扰动是为了在成功欺骗窃听者的条件条件下，最小化扰动强度，以及一个可以转换为接收处 BER 的扰动功率上限。我们证明了高斯噪声不足以构成对抗攻击，并开发了一种算法来优化
+    CJ 的扰动，以便轻松覆盖我们为不同调制类型和 5G 通信所演示的通信。
+
+
+    $\delta^{(4)}$ 在接收处的 BER 中求解，可以通过相应地设置 $P_{max}$ 来捕获。由于求解方程 (4)，计算领域已经提出了不同的方法来近似对抗扰动，例如快速梯度法
+    [7]。FGM 通过在 $x$ 处线性化 DNN 分类器的损失函数（其中 $y$ 是标签向量）来构建对抗样本，在计算上是高效的。对于优化，我们考虑了有目标攻击，即
+    CJ 的扰动旨在将接收信号误分类为噪声，同时降低网络性能。
+
+
+    ## II. 系统模型
+
+
+    我们考虑一个由发射机、接收机和窃听者组成的无线系统，如图 1 所示。发射机发送 $x \in \mathcal{C}$，调制类型为 $g: \{0,1\}
+    \to \mathcal{C}$，其中 $m$ 是二进制消息。窃听者接收到 $r_{te} = h_{te}x + n_{te}$，其中 $h_{te} =
+    [h_{te1}, ..., h_{tep}] \in \mathcal{C}^p$ 是信道，$n_{te}$ 是高斯噪声。接收机接收到 $r_{tr} =
+    h_{tr}x + n_{tr}$，其中 $h_{tr}$ 是信道，$n_{tr}$ 是高斯噪声。CJ 扰动 $\delta \in \mathcal{C}$
+    以导致窃听者的误分类，产生 $r_{te}(\delta) = h_{te}(x+\delta) + n_{te}$。
+
+
+    ## III. CJ 的对抗扰动
+
+
+    在本节中，我们使用 (4) 中的 FGM 描述 CJ 的白盒。对于目标攻击，我们对 $\delta$ 优化 $l(r_{te}, \delta^*)$，其中
+    $y$ 是 one-hot 解码类。我们将 $y$ 固定为噪声，因为 CJ 总是尝试添加扰动来欺骗窃听者认为是接收信号。我们使用 FGM 线性化损失 $l(r_{te},
+    \delta) = l(r_{te}, 0) + \nabla_{\delta}l(r_{te}, 0)^T\delta$，然后通过设置 $\delta =
+    -\alpha\nabla_{\delta}l(r_{te}, 0)$ 来最小化它，其中 $\alpha$ 是一个将对抗功率限制在 $P_{max}$ 的缩放因子。之后，如果误分类满足功率约束，CJ
+    将保持接收处的 BER。扰动功率可以进一步调整以满足目标 BER 水平。
+
+
+    ## IV. 仿真设置
+
+
+    我们分析了 CJ 实现正确性的成功以及对接收处 BER 的相应影响。我们将此扰动与对比
+
+
+    '
+  merge: -1
+- raw:
+  - "[PAGE 2]\n\n# Algorithm 1: Generating the perturbation of the CJ\n\n```\nInputs:\
+    \ $\\varepsilon_{min}$ desired accuracy $\\varepsilon_{acc}$, courtesy\nconstraint\
+    \ $p_{max}$ and $L(\theta, \\cdot) \\leftarrow 0$\nInitialize: $\theta \\leftarrow\
+    \ 0, p \\leftarrow \\sqrt{p_{max}}$\n$\\delta_{\theta} \\leftarrow \\delta_{\t\
+    heta} - \\eta \nabla_{\theta} L(\theta, y)$\nWhile $\\varepsilon_{avg} > \\varepsilon_{min}$\n\
+    \t$\\varepsilon_{avg} \\leftarrow (\\varepsilon_{max} + \\varepsilon_{min})/2$\n\
+    \t$x_{cd} \\leftarrow x_{cd} - \\varepsilon \\delta_{x}$\n\tif $(|x_{cd}|) \n\
+    eq \text{noise}$ then $\\varepsilon_{min} \\leftarrow \\varepsilon_{avg}$\n\t\
+    $\\varepsilon_{max} \\leftarrow \\varepsilon_{max} - \\varepsilon$\nend\n$\theta\
+    \ \\leftarrow \theta - \\gamma \\delta_{\theta}$\n```\n\n![](img/1c9877e90b513c63096e0d8f3f8eceab_2_0.png)\n\
+    \nFig. 2. Success of the eavesdropper when $d_{ce}=d_{cr} = 1$.\n\nGaussian noise\
+    \ transmitted by the CJ. Furthermore, we change the location of the CJ to investigate\
+    \ the effects of topology and channel. We assume that the binary data is generated\
+    \ uniformly and independently at the receiver. The classifier is a convolutional\
+    \ neural network (CNN). The CNN in two dimensions (2,16) on 16-phase/Q I/O data\
+    \ samples. The CNN consists of a convolutional layer with kernel size (1, 3),\
+    \ with a dropout rate of 0.1. Activation function at hidden layers and softmax\
+    \ activation at the output layer that produces the label of signal. We use backpropagation\
+    \ with Adam optimizer to train the CNN using cross-entropy loss. The CJ is implemented\
+    \ accordingly. We assume that the eavesdropper already knows the signal through\
+    \ the CJ. Thus, the classifier is only trained with two labels, signal and noise.\
+    \ For each signal type, we train a different classifier using datasets, 20000\
+    \ symbols generated and split into 16 blocks of QPSK. The channel between the\
+    \ nodes is modeled such that the channel gain from node $i$ to node $j$ is $d_{ij}$,\
+    \ where $d_{ij}$ is the distance between $i$ and $j$, decay $\\gamma$ and $\\\
+    gamma$ is the path loss. We set $d = 1$ and $\\gamma = 2.8$ through the simulations.\
+    \ We use in [25] to incorporate other channel methods including fading effects\
+    \ such as shadowing and small-scale fading.\n\n![](img/1c9877e90b513c63096e0d8f3f8eceab_2_1.png)\n\
+    \nFig. 3. Success of the eavesdropper when $d_{ce} = 0.5$ and $d_{cr} = 1$.\n\n\
+    We use the perturbation-to-noise ratio (PNR) metric with [24] to capture the relative\
+    \ perturbation at the CJ with respect to noise. The higher the PNR increases the\
+    \ accuracy of the classifier at the eavesdropper. As the PNR increases, the perturbation\
+    \ generated by the CJ is more likely to be detected by the eavesdropper and increases\
+    \ the BER at the receiver.\n\nshow the perturbation signal generated by the CJ\
+    \ as the classifier at the eavesdropper. The x-axis is the PNR (measured in dB)\
+    \ and the y-axis is the success (measured in percentage) that indicates the success\
+    \ of making wireless communication covert, namely the eavesdropper classifiers\
+    \ plus perturbation noise. We observe that as the SNR of the signal increases,\
+    \ the CJ needs more perturbation for misclassification at the eavesdropper. The\
+    \ 16QAM-signal is more susceptible to perturbation than the QPSK-signal, making\
+    \ it more difficult to classify. Also, we observe that the success of covert suddenly\
+    \ decreases after some PNR value for perturbation both. On the contrary, the Gaussian-based\
+    \ perturbation has negligible effect on the classifier for all SNR values. We\
+    \ observe that Gaussian noise with power decreases the SNR of the signal, and\
+    \ when the SNR of the signal is 3 dB, the reason of the Gaussian noise, in fact\
+    \ the gaussian noise-like signal is classified as the eavesdropper.\n\n# V. PERFORMANCE\
+    \ EVALUATION FOR SIGNALS WITH DIFFERENT MODELS\n\n# A. Robustness of Communications\n\
+    \nWe aim to hide signals with a fixed modulation scheme, namely QPSK or 16QAM,\
+    \ using the transmitter. The first topology that we consider is $d_{ce}=d_{cr}=1$.\
+    \ In Fig. 2, we\n\nIn Fig. 3, $d_{ce}=0.5$ and $d_{cr}=1$ (nearly), the distance\
+    \ between the CJ and the receiver is received and the distance between the CJ\
+    \ and the eavesdropper is compared to Fig. 2. As the SNR of the signal increases,\
+    \ the CJ requires more power to cause misclassification at the eavesdropper, we\
+    \ have also observed in Fig. 2. Due to the reduced path loss effect between the\
+    \ CJ and the eavesdropper,"
+  - '[PAGE 3]
+
+
+    ![](img/1c9877e90b513c63096e0d8f3f8eceab_3_0.png)
+
+
+    ![](img/1c9877e90b513c63096e0d8f3f8eceab_3_1.png)
+
+
+    ![](img/1c9877e90b513c63096e0d8f3f8eceab_3_2.png)
+
+
+    The BER performance at the receiver for different types and SNR values are shown
+    in Fig 5 when $d_{ce}=0.5$ and $d_{cr}=1.5$. We observe that the BER performance
+    under Gaussian noise and adversarial perturbation for the same SNR value decreases
+    due to the increased pass effect between the CI and the CJ. Thus, the CI can create
+    a perturbation that causes misclassification without increasing the BER if the
+    CI is closer to the eavesdropper. This motivates the control of CJ positions to
+    foster a target classifier while protecting the performance of the intended receiver.
+
+
+    less power is required to cause misclassification due to CI. This motivates the
+    use of AML instead of conventional jamming, ([28]) to attack an eavesdropper.
+
+
+    # B. Reliability of Communications
+
+
+    The BER performance at the receiver for different modulation and SNR values is
+    shown in Fig 4 when $d_{ce}=d_{cr}=1$. We is more susceptible to the perturbation
+    of 16QAM-modulated signal than that of QPSK-modulated signal. The reason is that
+    the 16QAM transmits more bits than QPSK, the distances between星座 points are smaller,
+    which leads to a larger BER for a given SNR. Moreover, as the SNR increases, the
+    BER decreases as expected. With the observed adversarial perturbation, we observe
+    that the BER saturates after some PNR value because the successful perturbation
+    can be generated using less power than maximum power. The CI can be used to determine
+    the maximum PNR to satisfy the BER at the receiver. For example, to meet the target
+    BER of 0.15 for QPSK-modulated signal, the PNR is selected at 8dB when SNR is
+    3 and the resulting success of convergence is 65%. Furthermore, we observe that
+    the Gaussian noise-based perturbation results lower than adversarial perturbation
+    in the low PNR region, the BER between two CJ schemes decreases when the PNR increases,
+    and the adversarial perturbation results in a smaller BER in the high PNR region.
+
+
+    # VI. PERFORMANCE EVALUATION FOR SG COMMUNICATIONS
+
+
+    As a full-fledged waveform, we consider the 5G physical layer communications where
+    5G User Equipment (UE) transmits an uplink signal to the base station (gNB) in
+    the presence of the jamming from the CJ. MATLAB Lab is used to generate 5G signals
+    that include the transport (shared channel, UL-SCH) and frequency channel. The
+    transport block is generated by cyclic redundancy check (CRC) code and low-density
+    parity-check (LDPC) code is used for forward error correction. The output codewords
+    are generated by OFDM waveform with Cyclic Prefix (CP) prefixes, where the subcarrier
+    is 15 kHz. Target code rate and the I/O samples are shaped after the signal passes
+    through the channel. Eavesdropper attempts to detect the received signals from
+    noise, the receiver attempts to decode the signals by removing the CP and performing
+    FT, channel equalization, QPSK demodulation, LDPC and CRC decoding.
+
+
+    # A. Overview of Communications
+
+
+    The success of convergence for 5G is shown in Fig. 6. As we have seen in the previous
+    figures for QPSK-modulated and 16QAM-modulated signals, proposed jamming outperforms
+    the Gaussian noise interference in high SNR region for 5G communication signals.
+    Also, we observe that more power is needed for CJ to classify the eavesdropper
+    when the distance between the CJ and the eavesdropper increases.'
+  - '[PAGE 4]
+
+
+    ![](img/1c9877e90b513c63096e0d8f3f8eceab_4_0.png)
+
+
+    Fig. 7. Gaussian communications BER performance at the receiver.
+
+
+    # ## Reliability of Communications
+
+
+    The BER for 5G communications is shown in Fig. 7. When $d_{cc} = 1$ dB and $N
+    = 5$, the Gaussian noise-based perturbation has better performance compared to
+    the proposed perturbation and a similar result is also observed for other SNR
+    values. The proposed perturbation by the CJ not only increases the success of
+    correctness, but also has effect on the BER performance of the receiver compared
+    to the Gaussian noise-based perturbation for 5G communications. We further observe
+    that the noise-based perturbation performs better than the proposed adversarial
+    perturbation when $d_{cc}=0.5$ dB, $d_{a}=1.5$ dB.
+
+
+    # ## CONCLUSION
+
+
+    We considered a communication system in which 5G devices use their CJ signature
+    to generate a label for the eavesdropper to classify the ongoing transactions
+    as noise. Following the AML approach, CJ was designed to generate the perturbation
+    with the FGM method to combat channel effects. For both modified signals and spoofed
+    5G, we showed that the CJ can generate a perturbation that causes misclassification
+    by the eavesdropper (from signal to noise) with high success, while the BER at
+    the receiver is only slightly affected. On the other hand, CJ with Gaussian noise
+    is not successful in fooling the classifier. These results demonstrate the feasibility
+    of using CJ as an evasion attack against a DL classifier by an adversary.
+
+
+    # ## References
+
+
+    +   [1] A. Y. Sheng and J. Sukhwani, “Wireless, privacy-based security: Lessons
+    learned from information theory,” Proceedings of the IEEE, vol. 103, no. 10, pp.
+    1814–1825, 2015.
+
+    [2] H. Wang and P. H. Vu, “Communication security under channel uncertainty and
+    adversarial attacks,” Proceedings of the IEEE, vol. 103, no. 10, pp. 1796–1813,
+    2015.
+
+    [3] M. Zhang, Y. Liu, and others, “Robust communication over noisy channels: A
+    reliability perspective,” IEEE Transactions on Information Theory, vol. 62, no.
+    5, pp. 2334–2354, 2016.
+
+    [4] J. Chen, J. Wang, and L. Zheng, “Fundamental limits of communication with
+    low reliability detection,” IEEE Transactions on Information Theory, vol. 62,
+    no. 6, pp. 3493–3503, 2016.
+
+    [5] B. Xu, Y. Zhang, D. Wang, and T. Zhou, “Robust information hiding in noise:
+    fundamental limits of covert wireless communication,” IEEE Communications Magazine,
+    vol. 12, no. 53, pp. 26–31, 2015.
+
+    [6] M. Pokharel and S. Sukhwani, “Covert bit through queries,” in IEEE ICC, 2016,
+    pp. 626–630.
+
+
+    +   [7] A. Kurakin, T. Goodfellow, and S. Beng, “Adversarial examples in the physical
+    world,” in International Conference on Learning Representations (ICLR), 2017.
+
+    [8] Y. Liu, M. Sagaglia, and A. Grushin, “How to steal a machine learning classifier
+    with deep learning,” IEEE Transactions on Security and Host Environments (SSH),
+    2017.
+
+    [9] Y. Liu, M. Sagaglia, and A. Kontagiu, “Adversarial machine learning,” Surveys
+    on Artificial Intelligence and Machine Learning, vol. 2, no. 3, pp. 1–48, 2019.
+
+    [10] M. Sagaglia, Y. Liu, T. Erpek, K. Lu, and J. Li, “Adversarial deep learning
+    for cognitive radio: Jamming attack and defense,” in IEEE/GLOB Conference on Communications
+    and Networking, 2018.
+
+    [11] T. Erpek, Y. Sagaglia, and Y. Lee, “Deep learning based for mitigating wireless
+    jamming attacks,” IEEE Transactions on Communications, vol. 68, no. 9, pp. 5482–5493,
+    2020.
+
+    [12] K. Yodavsky and E. Sagaglia, “Generative adversarial attacks with adversarial
+    machine learning,” in IEEE SPAN on Dynamic Security and Privacy, 2019.
+
+    [13] K. Li, Y. Sagaglia, and E. Y. Lee, “Generative adversarial network for wireless
+    signal jamming,” in ACM Workshop on Wireless Communications, 2019.
+
+    [14] T. Erpek, T. Ohta, Y. Sagaglia, and Y. Lee, “Deep learning communication
+    interference: A survey and open directions of deep learning analytics,” 2020,
+    pp. 223–266.
+
+    [15] S. Liu, Z. Zhang, X. Lu, J. Li, and Y. Sagaglia, “When and where: adversarial
+    attacks on deep communication networks,” 2019, arXiv:1905.04130.
+
+    [16] Y. E. Sagaglia, Y. Liu, T. Harvey, W. Beasley, G. Stanchev, and K. Yodovsky,
+    “Generative adversarial networks for wireless communication: challenges and research
+    directions,” 2020, arXiv:2001.08883.
+
+    [17] E. Y. Sagaglia and Y. Lee, “General covert communication attack and two-way
+    channels: Achievable rates and covert strategy,” IEEE Transactions on Information
+    Theory, vol. 54, no. 6, pp. 2735–2746.
+
+    [18] J. Xiao and S. Sukhwani, “Generative adversarial networks for freedom of
+    privacy: The alignment problem,” Proceedings of the IEEE, vol. 103, no. 10, pp.
+    1867–1875, 2015.
+
+    [19] A. Rahmani, E. Xu, K. Hen, and T. Xie, J. M. Reich, B. Sukhwani, and others,
+    “Adversarial machine learning: A survey of recent advances,” IEEE Transactions
+    Signal Processing Magazine, vol. 30, no. 5, pp. 16–28, 2023.
+
+    [20] Y. Sagaglia, Y. Liu, and J. Li, “Perturbation attack on adversarial deep
+    learning,” in IEEE Military Communications Conference (MILCOM), 2021.
+
+    [21] Y. Sagaglia, Y. Liu, and S. Shao, “Iot network security with deep learning,”
+    in IEEE SECON Workshop on Machine Learning in IoT, 2019.
+
+    [22] J. Sadikh, Y. Sagaglia, and Y. Lee, “Generative adversarial attacks for over-the-spectrum
+    jamming,” IEEE Transactions on Mobile Computing, vol. 19, no. 4, pp. 719–728,
+    2020.
+
+    [23] M. Sagaglia and A. Grushin, “Physical layer adversarial attacks against deep
+    end-to-end autoencoder systems,” IEEE Communications Letters, vol. 24, pp. 1475–1480,
+    2020.
+
+    [24] M. Saghi and E. Gray, “Adversarial attacks on deep learning radio signal
+    classification,” IEEE Communications Letters, vol. 8, no. 1, pp. 1–5, 2021.
+
+    [25] K. Yi, Y. Sagaglia, T. Erpek, and S. Uivas, “Over-the-air adversarial attacks
+    on deep learning based classification and covert communication,” in IEEE International
+    Conference on Security (CISISS), 2020.
+
+    [26] B. Kim, Y. E. Sagaglia, K. Yodavsky, and S. Lu, “Covert communication in
+    wireless networks with imperfect jamming,” 2020.
+
+    [27] Z. M. Hamed, A. Gray, and D. Gandhar, “Covert communication with imperfect
+    modulation,” in IEEE Global Conference on Signal and Information Processing (GlobalSIP),
+    2019.
+
+    [28] Y. E. Sagaglia, R. Berry, and A. Emery, “Jamming games in wireless networks
+    with imperfect jamming,” IEEE Communications Magazine, vol. 49, no. 8, pp. 112–118,
+    2023.
+
+
+    767'
+  md: "\n# Algorithm 1: Generating the perturbation of the CJ\n\n```\nInputs: $\\\
+    varepsilon_{min}$ desired accuracy $\\varepsilon_{acc}$, courtesy constraint $p_{max}$\
+    \ and $L(\\theta, \\cdot) \\leftarrow 0$\nInitialize: $\\theta \\leftarrow 0,\
+    \ p \\leftarrow \\sqrt{p_{max}}$\n$\\delta_{\\theta} \\leftarrow \\delta_{\\theta}\
+    \ - \\eta \\nabla_{\\theta} L(\\theta, y)$\nWhile $\\varepsilon_{avg} > \\varepsilon_{min}$\n\
+    \t$\\varepsilon_{avg} \\leftarrow (\\varepsilon_{max} + \\varepsilon_{min})/2$\n\
+    \t$x_{cd} \\leftarrow x_{cd} - \\varepsilon \\delta_{x}$\n\tif $(|x_{cd}| \\neq\
+    \ \\text{noise})$ then $\\varepsilon_{min} \\leftarrow \\varepsilon_{avg}$\n\t\
+    $\\varepsilon_{max} \\leftarrow \\varepsilon_{max} - \\varepsilon$\nend\n$\\theta\
+    \ \\leftarrow \\theta - \\gamma \\delta_{\\theta}$\n```\n\n![](img/1c9877e90b513c63096e0d8f3f8eceab_2_0.png)\n\
+    \nFig. 2. Success of the eavesdropper when $d_{ce}=d_{cr} = 1$.\n\nGaussian noise\
+    \ transmitted by the CJ. Furthermore, we change the location of the CJ to investigate\
+    \ the effects of topology and channel. We assume that the binary data is generated\
+    \ uniformly and independently at the receiver. The classifier is a convolutional\
+    \ neural network (CNN). The CNN in two dimensions (2,16) on 16-phase/Q I/O data\
+    \ samples. The CNN consists of a convolutional layer with kernel size (1, 3),\
+    \ with a dropout rate of 0.1. Activation function at hidden layers and softmax\
+    \ activation at the output layer that produces the label of signal. We use backpropagation\
+    \ with Adam optimizer to train the CNN using cross-entropy loss. The CJ is implemented\
+    \ accordingly. We assume that the eavesdropper already knows the signal through\
+    \ the CJ. Thus, the classifier is only trained with two labels, signal and noise.\
+    \ For each signal type, we train a different classifier using datasets, 20000\
+    \ symbols generated and split into 16 blocks of QPSK. The channel between the\
+    \ nodes is modeled such that the channel gain from node $i$ to node $j$ is $d_{ij}$,\
+    \ where $d_{ij}$ is the distance between $i$ and $j$, decay $\\gamma$ and $\\\
+    gamma$ is the path loss. We set $d = 1$ and $\\gamma = 2.8$ through the simulations.\
+    \ We use in [25] to incorporate other channel methods including fading effects\
+    \ such as shadowing and small-scale fading.\n\n![](img/1c9877e90b513c63096e0d8f3f8eceab_2_1.png)\n\
+    \nFig. 3. Success of the eavesdropper when $d_{ce} = 0.5$ and $d_{cr} = 1$.\n\n\
+    We use the perturbation-to-noise ratio (PNR) metric with [24] to capture the relative\
+    \ perturbation at the CJ with respect to noise. The higher the PNR increases the\
+    \ accuracy of the classifier at the eavesdropper. As the PNR increases, the perturbation\
+    \ generated by the CJ is more likely to be detected by the eavesdropper and increases\
+    \ the BER at the receiver.\n\nshow the perturbation signal generated by the CJ\
+    \ as the classifier at the eavesdropper. The x-axis is the PNR (measured in dB)\
+    \ and the y-axis is the success (measured in percentage) that indicates the success\
+    \ of making wireless communication covert, namely the eavesdropper classifiers\
+    \ plus perturbation noise. We observe that as the SNR of the signal increases,\
+    \ the CJ needs more perturbation for misclassification at the eavesdropper. The\
+    \ 16QAM-signal is more susceptible to perturbation than the QPSK-signal, making\
+    \ it more difficult to classify. Also, we observe that the success of covert suddenly\
+    \ decreases after some PNR value for perturbation both. On the contrary, the Gaussian-based\
+    \ perturbation has negligible effect on the classifier for all SNR values. We\
+    \ observe that Gaussian noise with power decreases the SNR of the signal, and\
+    \ when the SNR of the signal is 3 dB, the reason of the Gaussian noise, in fact\
+    \ the gaussian noise-like signal is classified as the eavesdropper.\n\n# V. PERFORMANCE\
+    \ EVALUATION FOR SIGNALS WITH DIFFERENT MODELS\n\n## A. Robustness of Communications\n\
+    \nWe aim to hide signals with a fixed modulation scheme, namely QPSK or 16QAM,\
+    \ using the transmitter. The first topology that we consider is $d_{ce}=d_{cr}=1$.\
+    \ In Fig. 2, we-\n\nIn Fig. 3, $d_{ce}=0.5$ and $d_{cr}=1$ (nearly), the distance\
+    \ between the CJ and the receiver is received and the distance between the CJ\
+    \ and the eavesdropper is compared to Fig. 2. As the SNR of the signal increases,\
+    \ the CJ requires more power to cause misclassification at the eavesdropper, we\
+    \ have also observed in Fig. 2. Due to the reduced path loss effect between the\
+    \ CJ and the eavesdropper,\n\n![](img/1c9877e90b513c63096e0d8f3f8eceab_3_0.png)\n\
+    \n![](img/1c9877e90b513c63096e0d8f3f8eceab_3_1.png)\n\n![](img/1c9877e90b513c63096e0d8f3f8eceab_3_2.png)\n\
+    \nThe BER performance at the receiver for different types and SNR values are shown\
+    \ in Fig 5 when $d_{ce}=0.5$ and $d_{cr}=1$. We observe that the BER performance\
+    \ under Gaussian noise and adversarial perturbation for the same SNR value decreases\
+    \ due to the increased effect between the CI and the CJ. Thus, the CJ can create\
+    \ a perturbation that causes misclassification without increasing power if the\
+    \ CI is closer to the eavesdropper. This motivates the control of CJ positions\
+    \ to foster the performance of the intended receiver. This motivates the use of\
+    \ AML instead of conventional jamming ([28]) to attack an eavesdropper.\n\n##\
+    \ B. Reliability of Communications\n\nThe BER performance at the receiver for\
+    \ different modulation and SNR values is shown in Fig 4 when $d_{ce}=d_{cr}=1$.\
+    \ is more susceptible to the perturbation of 16QAM-modulated signal than that\
+    \ of QPSK-modulated signal. The reason is that 16QAM transmits more bits than\
+    \ QPSK, the distances between points are smaller, which leads to a larger BER\
+    \ for a given SNR. Moreover, as the SNR increases, the BER decreases as expected.\
+    \ With the observed adversarial perturbation, we observe that the BER saturates\
+    \ after some PNR value because successful perturbation can be generated using\
+    \ less power than maximum power. For example, to meet the target BER of 0.15 for\
+    \ QPSK-modulated signal, the PNR is selected at 3dB and the resulting success\
+    \ of convergence is 65%. Furthermore, we observe that Gaussian noise-based perturbation\
+    \ results lower than adversarial perturbation in the low PNR region, and the BER\
+    \ decreases when PNR increases.\n\n# VI. PERFORMANCE EVALUATION FOR SG COMMUNICATIONS\n\
+    \nWe consider physical communications where User Equipment (UE) transmits an uplink\
+    \ signal to the base station (gNB) in the presence of jamming from the CJ. MATLAB\
+    \ is used to generate signals that include shared channel, UL-frequency channel.\
+    \ The transport block is generated by cyclic redundancy check (CRC) and low-density\
+    \ parity-check (LDPC) code is used for forward error correction. The output codewords\
+    \ are generated by OFDM waveform with Cyclic Prefix (CP), where the subcarrier\
+    \ is shaped after the signal passes through the channel. Eavesdropper attempts\
+    \ to decode the signals from noise by removing CP and performing equalization,\
+    \ QPSK demodulation, LDPC and CRC decoding.\n\n## A. Overview of Communications\n\
+    \nThe success of convergence is shown in Fig. 6. As we have seen in previous figures\
+    \ for QPSK-modulated and 16QAM-modulated signals, proposed jamming outperforms\
+    \ Gaussian noise in high SNR region for communication. Also, we observe that more\
+    \ power is needed for CJ to classify the eavesdropper when the distance between\
+    \ the CJ and the eavesdropper increases.\n\n![](img/1c9877e90b513c63096e0d8f3f8eceab_4_0.png)\n\
+    \nFig. 7. Gaussian communications BER performance at the receiver.\n\n## Reliability\
+    \ of Communications\n\nThe BER for communications is shown in Fig 7. When $d_{cc}=1$\
+    \ dB and $N=5$, Gaussian noise-based perturbation has better performance compared\
+    \ to proposed perturbation. The proposed perturbation by CJ not only increases\
+    \ the success of correctness, but also has effect on BER performance of receiver\
+    \ compared to Gaussian-based perturbation. We further observe that noise-based\
+    \ perturbation performs better than adversarial perturbation when $d_{cc}=0.5$\
+    \ dB, $d_{a}=1.5$ dB.\n\n## CONCLUSION\n\nWe considered a communication system\
+    \ in which devices use CJ signature to generate a label for the eavesdropper to\
+    \ classify transactions as noise. Following the AML approach, CJ was designed\
+    \ to generate the perturbation with the AML method to combat channel effects.\
+    \ For both modified signals and spoofed signals, we showed that the CJ can generate\
+    \ a perturbation that causes misclassification by the eavesdropper (from signal\
+    \ to noise) with high success, while the BER at the receiver is only slightly\
+    \ affected. On the other hand, CJ with Gaussian noise is not successful in fooling\
+    \ the classifier. These results demonstrate the feasibility of using CJ as evasion\
+    \ attack against a DL classifier by adversary.\n\n## References\n\n[1] A. Y. Sheng\
+    \ and J. Sukhwani, “Wireless, privacy-based security: Lessons learned from information\
+    \ theory,” Proceedings of the IEEE, vol. 103, no. 10, pp. 1814–1825, 2015.\n[2]\
+    \ H. Wang and P. H. Vu, “Communication security under channel uncertainty and\
+    \ adversarial attacks,” Proceedings of the IEEE, vol. 103, no. 10, pp. 1796–1813,\
+    \ 2015.\n[3] M. Zhang, Y. Liu, and others, “Robust communication over noisy channels:\
+    \ A reliability perspective,” IEEE Transactions on Information Theory, vol. 62,\
+    \ no. 5, pp. 2334–2354, 2016.\n[4] J. Chen, J. Wang, and L. Zheng, “Fundamental\
+    \ limits of communication with low reliability detection,” IEEE Transactions on\
+    \ Information Theory, vol. 62, no. 6, pp. 3493–3503, 2016.\n[5] B. Xu, Y. Zhang,\
+    \ D. Wang, and T. Zhou, “Robust information hiding in noise: fundamental limits\
+    \ of covert wireless communication,” IEEE Communications Magazine, vol. 12, no.\
+    \ 53, pp. 26–31, 2015.\n[6] M. Pokharel and S. Sukhwani, “Covert bit through queries,”\
+    \ in IEEE ICC, 2016, pp. 626–630.\n[7] A. Kurakin, T. Goodfellow, and S. Beng,\
+    \ “Adversarial examples in the physical world,” in International Conference on\
+    \ Learning Representations (ICLR), 2017.\n[8] Y. Liu, M. Sagaglia, and A. Grushin,\
+    \ “How to steal a machine learning classifier with deep learning,” IEEE Transactions\
+    \ on Security and Host Environments (SSH), 2017.\n[9] Y. Sag,, T. Liu, and..pek,\
+    \ “Adversarial learning: A A,”,” on Artificial Intelligence, vol. 2, no. 3.\n\
+    [10] M.1,,..,,,,,,,,,.,,,,arialarialarial attacks for radio jamming,” in IEEE\
+    \ Military Conference (MILCOM), 2021.\n[11] Y. Sagaglia, Y. Liu, and S. Shao,\
+    \ “Iot network security with deep learning,” in IEEE SECON Workshop on Machine\
+    \ Learning, 2019.\n[12] J. Sadikh, Y. Sagaglia, and Y. Lee, “Generative adversarial\
+    \ attacks over-the-spectrum jamming,” IEEE Transactions on Mobile Computing, vol.\
+    \ 19, no. 4, pp. 719–728, 2020.\n[13] M. Yh,, Y..,,,,,,,,,,,,,,11.\n111] M. Yh,,\
+    \ Y. 1,,,,,,,,,,,,,,,,,,.\n[14] M. Yh,, Y. 1,,,,,,,,,,,,,,,,,,11.\n[15] M. Yh,,\
+    \ Y. 1,,,,,,,,,,,,,,,,,,,11.\n[16] M. Yh,, Y. 1,,,,,,,,,,,,,,,,,,,11.\n[17] M.\
+    \ Yh,, Y. 1,,,,,,,,,,,,,,,,,,,11.\n[18] M. Yh,, Y. 1,,,,,,,,,,,,,,,,,,,11.\n[19]\
+    \ M. Yh,, Y. 1,,,,,,,,,,,,,,,,,,,11.\n[20] M. Yh,, Y. 1,,,,,,,,,,,,,,,,,,,11.\n\
+    [21] M. Yh,, Y. 1,,,,,,,,,,,,,,,,,,,,11.\n[22] M. Yh,, Y. 1,,,,,,,,,,,,,,,,,,,,11.\n\
+    [23] M. Yh,, Y. 1,,,,,,,,,,,,,,,,,,,,11.\n[24] M. Yh,, Y. 1,,,,,,,,,,,,,,,,,,,,11.\n\
+    [25] M. Yh,, Y. 1,,,,,,,,,,,,,,,,,,,,,11.\n[26]..,,,,,..1,,,,,,,,,,,,,,,,,,,11.\n\
+    [27] M. Yh,, Y. 1,,,,,,,,,,,,,,,,,,,,,11.\n[28] Y. Sagaglia, R. Berry, and A.\
+    \ Emery, “Jamming games in wireless networks with imperfect jamming,” IEEE Communications\
+    \ Magazine, vol. 49, no. 8, pp. 112–118, 2023.\n"
+  mdcn: "\n\n# 算法 1：生成 CJ 的扰动\n\n```\nInputs: $\\varepsilon_{min}$ 期望精度 $\\varepsilon_{acc}$,\
+    \ 功率约束 $p_{max}$ 以及 $L(\\theta, \\cdot) \\leftarrow 0$\nInitialize: $\\theta \\\
+    leftarrow 0, p \\leftarrow \\sqrt{p_{max}}$\n$\\delta_{\\theta} \\leftarrow \\\
+    delta_{\\theta} - \\eta \\nabla_{\\theta} L(\\theta, y)$\nWhile $\\varepsilon_{avg}\
+    \ > \\varepsilon_{min}$\n\t$\\varepsilon_{avg} \\leftarrow (\\varepsilon_{max}\
+    \ + \\varepsilon_{min})/2$\n\t$x_{cd} \\leftarrow x_{cd} - \\varepsilon \\delta_{x}$\n\
+    \tif $(|x_{cd}| \\neq \\text{noise})$ then $\\varepsilon_{min} \\leftarrow \\\
+    varepsilon_{avg}$\n\t$\\varepsilon_{max} \\leftarrow \\varepsilon_{max} - \\varepsilon$\n\
+    end\n$\\theta \\leftarrow \\theta - \\gamma \\delta_{\\theta}$\n```\n\n![](img/1c9877e90b513c63096e0d8f3f8eceab_2_0.png)\n\
+    \n图. 2. 当 $d_{ce}=d_{cr} = 1$ 时窃听者的成功率。\n\nCJ 传输的高斯噪声。此外，我们改变 CJ 的位置以研究拓扑和通道的影响。我们假设二进制数据在接收端均匀且独立地生成。分类器是一个卷积神经网络（CNN）。该\
+    \ CNN 在两个维度 (2,16) 上处理 16 相/Q I/O 数据样本。CNN 包含一个卷积核大小为 (1,3) 的卷积层，丢弃率为 0.1。隐藏层使用激活函数，输出层使用\
+    \ softmax 激活以产生信号标签。我们使用带有 Adam 优化器的反向传播算法通过交叉熵损失训练 CNN。据此实现了 CJ。我们假设窃听者已经通过 CJ\
+    \ 知晓信号。因此，分类器仅用两个标签：信号和噪声进行训练。对于每种信号类型，我们使用数据集训练不同的分类器，该数据集包含 20000 个符号，并分为 16\
+    \ 个 QPSK 块。节点之间的通道建模为：从节点 $i$ 到节点 $j$ 的通道增益为 $d_{ij}$，其中 $d_{ij}$ 是 $i$ 和 $j$\
+    \ 之间的距离，衰减系数 $\\gamma$ 是路 损耗。通过仿真，我们设置 $d = 1$ 且 $\\gamma = 2.8$。我们参考 [25] 引入其他通道方法，包括阴影效应和小尺度衰落等衰落效应。\n\
+    \n![](img/1c9877e90b513c63096e0d8f3f8eceab_2_1.png)\n\n图. 3. 当 $d_{ce} = 0.5$\
+    \ 且 $d_{cr} = 1$ 时窃听者的成功率。\n\n我们使用 [24] 中的扰动噪声指标 (PNR) 来捕捉 CJ 相对于噪声的相对扰动。PNR 越高，窃听者分类器的准确性就越高。随着\
+    \ PNR 的增加，CJ 生成的扰动更容易被窃听者检测，并增加接收端的误码率 (BER)。\n\n显示了窃听者分类器处 CJ 生成的扰动信号。x 轴是 PNR（以\
+    \ dB 为单位），y 轴是成功率（以百分比表示），表示实现无线通信隐蔽性的成功，即窃听者分类器加上扰动噪声。我们观察到，随着信号 SNR 的增加，CJ 需要更多的扰动才能窃听者处引起误分类。16QAM\
+    \ 信号比 QPSK 信号更容易受到扰动的影响，使其分类更困难。此外，我们观察到两种信号的扰动在达到某些 PNR 值后，成功率都会突然下降。相反，基于高斯的扰动对所有\
+    \ SNR 值的分类器影响均忽略不计。我们观察到功率高斯噪声降低了信号的 SNR，当信号 SNR 为 3 dB 时，高斯噪声（实际上的高斯噪声类信号）被分类为窃听者。\n\
+    \n# V. 不同模型信号性能评估\n\n## A. 通信的鲁棒性\n\n我们的目标是通过发射器隐藏固定调制方案（即 QPSK 或 16QAM）的信号。我们考虑的第一种拓扑是\
+    \ $d_{ce}=d_{cr}=1$。在图 2 中，我们——\n\n在图 3 中，$d_{ce}=0.5$ 且 $d_{cr}=1$（接近），CJ 与接收端之间的距离被接收，CJ\
+    \ 与窃听者之间的距离与图 2 相比。随着信号 SNR 的增加，CJ 需要更大的功率才能在窃听者处引起误分类，我们在图 2 中也观察到了这一点。由于 CJ\
+    \ 和窃听者之间路损效应的降低，\n\n![](img/1c9877e90b513c63096e0d8f3f8eceab_3_0.png)\n\n![](img/1c9877e90b513c63096e0d8f3f8eceab_3_1.png)\n\
+    \n![](img/1c9877e90b513c63096e0d8f3f8eceab_3_2.png)\n\n图 5 显示了当 $d_{ce}=0.5$ 且\
+    \ $d_{cr}=1$ 时，不同类型和 SNR 值的接收端 BER 性能。我们观察到，相同 SNR 值下，高斯噪声和对抗扰动下的 BER 性能由于 CI\
+    \ 和 CJ 之间影响的增加而下降。因此，如果 CI 更靠近窃听者，CJ 可以在不增加功率的情况下产生导致误分类的扰动。这促使控制 CJ 位置以提高预期接收端的性能。这促使使用\
+    \ AML 代替传统的干扰 ([28]) 来攻击窃听者。\n\n## B. 通信的可靠性\n\n图 4 显示了当 $d_{ce}=d_{cr}=1$ 时，不同调制和\
+    \ SNR 值的接收端 BER 性能。16QAM 调制信号比 QPSK 调制信号更容易受到扰动的影响。其原因是 16QAM 传输的比特比 QPSK 多，点点之间的距离更小，导致在给定\
+    \ SNR 下产生较大的 BER。此外，随着 SNR 的增加，BER 如预期般下降。通过观察到的对抗扰动，我们发现 BER 在达到某些 PNR 值后趋于饱和，因为可以使用小于最大功率的生成成功的扰动。例如，为了达到\
+    \ QPSK 调制信号 15% 的目标 BER，PNR 选择为 3dB，收敛成功率为 65%。此外，我们观察到在低 PNR 区域，基于噪声的扰动结果优于对抗扰动，且随着\
+    \ PNR 的增加 BER 会下降。\n\n# VI. SG 通信的性能评估\n\n我们考虑物理通信，在 CJ 干扰存在，用户设备 (UE) 向基站 (gNB)\
+    \ 发送上行信号。使用 MATLAB 生成共享信道信号。传输块由循环冗余校验 (CRC) 生成，低稀疏校验码 (LDPC) 用于前向纠错。输出由带有循环前缀\
+    \ (CP) 的 OFDM 波形生成，其中载波在通过信道后进行 QPSK 解调、LDPC 和 CRC 解。\n\n## A. 通信概述\n\n图 6 显示了收敛成功。正如我们在之前的\
+    \ QPSK 调制和 16QAM 调制图中所示，在高 SNR 区域，提出的干扰优于高斯噪声。我们还观察到，当 CJ 和窃听者之间的距离增加时，CJ 需要更大的功率来分类窃听者。\n\
+    \n![](img/1c9877e90b513c63096e0d8f3f8eceab_4_0.png)\n\n图 7. 接收端高斯通信 BER 性能。\n\n\
+    ## 通信的可靠性\n\n图 7 显示了通信 BER。当 $d_{cc}=1$ dB 且 $N=5$ 时，基于噪声的扰动不仅提高了正确性，还对接收端的 BER\
+    \ 性能产生了影响。我们进一步观察到，当 $d_{cc}=0.5$ dB，$d_{a}=1.5$ dB 时，基于噪声的扰动优于对抗扰动。\n\n## 结论\n\
+    \n我们考虑了一种使用 CJ 生成噪声的通信系统。遵循 AML 方法，对于修改后的信号和伪造信号，我们显示 CJ 可以产生导致窃听者误分类的扰动，而接收端的\
+    \ BER 仅受到轻微影响。另一方面，带高斯噪声无法欺骗分类器。这些结果证明了使用 CJ 进行对抗分类器攻击的可行性。\n\n## 参考文献\n\n[1]\
+    \ A. Y. Sheng and J. Sukhwani, “Wireless, privacy-based security: Lessons from\
+    \ information theory,” Proceedings of the IEEE, vol. 103, no. 10, pp. 1814–1825,\
+    \ 2015.\n[2] H. Wang and P. H. Vu, “Communication security under channel uncertainty\
+    \ and adversarial attacks,” Proceedings of the IEEE, vol. 103, no. 10, pp. 1796–1813,\
+    \ 2015.\n[3] M. Zhang, Y. Liu, and others, “Robust communication over noisy channels:\
+    \ A reliability perspective,” IEEE Transactions on Information Theory, vol. 62,\
+    \ no. 5, pp. 2334–2354, 2016.\n[4] J. Chen, J. Wang, and L. Zheng, “Fundamental\
+    \ limits of communication with low reliability,” IEEE Transactions on Information\
+    \ Theory, vol. 62, no. 6, pp. 3493–3503, 2016.\n[5] B. Xu, Y. Zhang, and T. Zhou,\
+    \ “Robust information hiding in noise: fundamental limits of covert communication,”\
+    \ IEEE Communications Magazine, vol. 12, no. 53, pp. 26–31, 2015.\n[6] M. Pokharel\
+    \ and S. Sukhwani, “Covert bit through queries,” in IEEE ICC, 2016, pp. 626–630.\n\
+    [7] A. Kurakin, T. Goodfellow, and S. Beng, “Adversarial examples in the physical\
+    \ world,” in International Conference on Learning Representations (ICLR), 2017.\n\
+    [8] Y. Liu, M. Sagaglia, and A. Grushin, “How to steal a machine learning classifier\
+    \ with deep learning,” IEEE Transactions on Security and Host Environments (SSH),\
+    \ 2017.\n[9] Y. Sagaglia, T. Liu, and., “Adversarial learning: A survey,” on Artificial\
+    \ Intelligence, vol. 2, no. 3.\n[10] M., “Adversarial attacks for radio jamming,”\
+    \ in IEEE Military Conference (MILCOM), 2021.\n[11] Y. Sagaglia, Y. Liu, and S.\
+    \ Shao, “Iot network security with deep learning,” in IEEE SECON Workshop on Machine\
+    \ Learning, 2019.\n[12] J. Sadikh, Y. Sagaglia, and Y. Lee, “Generative adversarial\
+    \ attacks over-the-spectrum jamming,” IEEE Transactions on Mobile Computing, vol.\
+    \ 19, no. 4, pp. 719–728, 2020.\n[13] M. Yh, Y,,,,,,,,,,,,,,11.\n[111] M. Yh,\
+    \ Y. 1,,,,,,,,,,,,,,,,,,.\n[14] M. Yh, Y. 1,,,,,,,,,,,,,,,,,,11.\n[15] M. Yh,\
+    \ Y. 1,,,,,,,,,,,,,,,,,,,,11.\n[16] M. Yh, Y. 1,,,,,,,,,,,,,,,,,,,,11.\n[17] M.\
+    \ Yh, Y. 1,,,,,,,,,,,,,,,,,,,,11.\n[18] M. Yh, Y. 1,,,,,,,,,,,,,,,,,,,,11.\n[19]\
+    \ M. Yh, Y. 1,,,,,,,,,,,,,,,,,,,,11.\n[20] M. Yh, Y. 1,,,,,,,,,,,,,,,,,,,,11.\n\
+    [21] M. Yh, Y. 1,,,,,,,,,,,,,,,,,,,,11.\n[22] M. Yh, Y. 1,,,,,,,,,,,,,,,,,,,,11.\n\
+    [23] M. Yh, Y. 1,,,,,,,,,,,,,,,,,,,,11.\n[24] M. Yh, Y. 1,,,,,,,,,,,,,,,,,,,,11.\n\
+    [25] M. Yh, Y. 1,,,,,,,,,,,,,,,,,,,,,11.\n[26]..,,,,,..1,,,,,,,,,,,,,,,,11.\n\
+    [27] M. Yh, Y. 1,,,,,,,,,,,,,,,,,,,,,11.\n[28] Y. Sagaglia, R. Berry, and A. Emery,\
+    \ “Jamming games in wireless networks with imperfect jamming,” IEEE Communications\
+    \ Magazine, vol. 49, no. 8, pp. 112–118, 2023.\n\n"
+  merge: 0
