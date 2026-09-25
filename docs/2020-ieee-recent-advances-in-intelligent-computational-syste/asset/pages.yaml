@@ -1,0 +1,350 @@
+- pgno: 0
+  md: '# # Detecting Cardiac Abnormalities Using Use-Lead
+
+    ECG and Deep Learning
+
+
+    Roned V. Sharan
+
+    Australian Institute of Health Innovation
+
+    Sydney, Australia
+
+    roned.sharan@mnq.edu.au
+
+
+    **Abstract—** The standard 12-lead electrocardiogram (ECG) is widely used by cardiologists
+    however manual interpretation of ECG can be time and depending on the skills of
+    the clinicians. In this work, an approach for detecting cardiac abnormalities
+    using automatic analysis of 1-lead ECG is presented and validated on a comprehensive
+    dataset where all abnormalities have similar rhythm. The proposed approach uses
+    raw ECG signals as a direct input to a model of convolutional neural networks.
+    The dataset includes multiple cardiac conditions to account for which binary classification
+    strategy is utilized, in particular the one-against-all classifier is used to
+    compensate for the imbalance in the class. While the ECG signals in the dataset
+    are up to 60 seconds long the automatic processing of the signals was used to
+    produce comparable performance with lower computational costs. Our method achieved
+    a Score of 0.8602 and AUC of 0.8624 when using the proposed method.
+
+
+    techniques for studying the heart rate variability on the R-interval, analysis
+    of the P, QRS, and T patterns [6], analyzing the power spectrum of the rhythms
+    [7], and entropy-based measures [8]. However methods have been supervised by deep
+    learning methods. In particular, convolutional neural networks (CNN) have been
+    used to distinguish ECG signals [9], without the need for any signal processing,
+    feature extraction, and feature selection.
+
+
+    In this work, the 1-lead ECG signals are used as a direct input to a one-dimensional
+    convolutional neural network (CNN) for detecting cardiac abnormalities without
+    preprocessing steps. The long short-term memory (LSTM) is an artificial recurrent
+    neural network that is particularly suited to sequence and data series classification.
+    Deep learning the LSTM can learn and predict from past states. In this work, a
+    LSTM is used with a CNN for classification of multi-channel ECG signals, as shown.
+    This allows the network to learn the feature representations together and the
+    temporal relationship between the features.
+
+
+    **Keywords—**bidirectional short-term memory, cardiac abnormalities, convolutional
+    neural networks, entropy
+
+
+    # I. INTRODUCTION
+
+
+    Cardiovascular diseases (CVD) are the leading cause of death globally. It is estimated
+    that 19.9 million people died from CVD in 2016, accounting for 31% of all deaths
+    [1]. In USA, CVD was the cause of death in 7.0 million in 2018 (27% of all deaths)
+    and is considered avoidable cause of death in about 70,000 people.
+
+
+    CVDs are a group of disorders of the heart and circulation. This includes various
+    abnormalities such as cardiac arrhythmias. Early detection of cardiac abnormalities
+    is crucial. Electrocardiogram (ECG) is a non-invasive method of recording the
+    electrical activity of the heart using electrodes on the surface of the body.
+    The standard 12-lead ECG is a widely used tool for diagnosis of various cardiac
+
+
+    Manual interpretation of ECG is, however, time consuming and depending on the
+    skills of the personnel [5]. Automatic analysis of the ECG signal can assist in
+    the diagnosis of cardiac abnormalities, the signal processing and machine learning
+    techniques in the detection of cardiac abnormalities has a lot of interest.
+
+
+    Conventionally, this has been achieved using various signal processing, feature
+    extraction, and feature selection
+
+
+    The rest of the paper is organized as follows. The dataset used in this work is
+    described in Section II with the CNN-LSTM classification method and the performance
+    metrics. The experimental results are presented in Section III and discussion
+    and conclusion in Section IV.
+
+
+    # A. Dataset
+
+
+    The dataset used in this work has 6,877 records of 12-lead ECG signals with a
+    sampling frequency of 500 Hz [1]. The records come from 11 hospitals and the duration
+    of the records varies from 6 to 60 seconds. Moreover, 3,699 records are from male
+    subjects and subjects from female subjects.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# DISTRIBUTION OF THE DIFFERENT CARDIAC ABNORMALITIES AND NORMAL SINUS RHYTHM
+    IN THE DATA.
+
+
+    | Label | Number of with: | | |
+
+    | | One Label | Two Labels | Three Labels | Total Count |
+
+    |---|---|---|---||
+
+    | AF | 976 | 242 | | 1,218 |
+
+    | I-AVB | 686 | 36 | | 722 |
+
+    | LBBB | 179 | 54 | | 236 |
+
+    | Normal | 918 | 0 | | 918 |
+
+    | PAC | 533 | 80 | | 616 |
+
+    | PVC | 607 | 93 | | 700 |
+
+    | RBBB | 1,533 | 321 | | 1,857 |
+
+    | STE | 784 | 32 | | 816 |
+
+    | Total | 6,410 | 940 | 18 | 7,359 |
+
+
+    ![](img/b98fa51b020634bbc1c4faa08d7ec360_1_0.png)
+
+
+    Each record is marked either normal or one or more labels from cardiac abnormalities.
+    The nine labels are:
+
+
+    As summarized in Table 1, of the 6,877 records, 648 records have only one label,
+    470 records have two labels and 236 records have three labels. The total of 7,359
+    labels. The distribution of records is uneven with RBBB having the most number
+    of occurrences at 1,857 and STE having the most number of occurrences at 220.
+
+
+    An illustration of the first 2 seconds of a 12-lead ECG labeled as AF is shown
+    in Fig. 1. More details on the dataset can be found in [1].
+
+
+    # B. Deep Learning Model
+
+
+    In this work, the data input is to a 1-D CNN which is followed by a LSTM layer.
+    The duration of the ECG segments in the dataset varies but the CNN requirements
+    are fixed. Some preliminary experiments showed that fixing the length of the signals
+    to 15 seconds (7,500 sample points) achieved similar performance to fixing it
+    to 60 seconds (30,000), but the length of the duration reduced. A significant
+    advantage of using long signals over 60 long signals is reduced computational
+    costs. Therefore, the length of all the signals were fixed at 15 seconds using
+    zero-padding and cropping.
+
+
+    An overview of the CNN architecture used in this work is provided in Fig. 2. The
+    network has five convolutional layers each followed by a batch normalization layer
+    and rectified linear unit (ReLU). The number of filters in the layers are 15,
+    10, 10, 1, and 4, each with a stride of 1. The output of each convolutional layer
+    is followed by a max pooling layer of size of 1x1, 1x10, 1x1, and 1x3, with a
+    stride of 2. The final pooling layer is followed by a BiLSTM layer, then fully
+    connected, and a softmax layer. The dropout layer has a probability of 0.2 and
+    the number of hidden units in the BiLSTM layer is
+
+
+    The distribution of labels is absent. In this work, this is accounted using cross
+    entropy loss in the final layer
+
+
+    ```
+
+    $L = -\frac{1}{N} \sum_{i=1}^{N} c_i t_i \log(y_i)$
+
+    ```
+
+
+    where $Y$ represents the prediction scores, $T$ the training targets, the number
+    of observations, $K$ the number of classes, and $c$ the class weights.
+
+
+    The CNN model was trained using adaptive estimation (Adam) [19] algorithm. Adam
+    uses the average of the first and second moments of the gradients to adapt the
+    learning rate, for it is given
+
+
+    ```
+
+    $\hat{m}_t = \frac{m_t}{1-\beta_1^t} \quad \ \hat{v}_t = \frac{v_t}{1-\beta_2^t}}$
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "# 2020 IEEE Recent Advances in Intelligent Computational Systems (RAICS) |\
+    \ December 03,05,2020 | Trivandrum\n\n| Conv:128@1,5, Str: 1x3 | Conv:128@1,15,\
+    \ Str: 1x3 | Conv:128@1,10, Str: 1x3 |\n|---|---|---|\n| BN, ReLU | BN, ReLU |\
+    \ BN, ReLU |\n| Pool: 1x10, Str: 2 | Pool: 1x15, Str: 2 | Pool: 1x5, Str: 2 |\n\
+    \n![](img/b98fa51b020634bbc1c4faa08d7ec360_2_0.png)\n\n| Class = i (in K) | Weighted\
+    \ Entropy | Softmax | Fully Connected | BiLSTM Dropout | Flatten | Conv:128@1,5,\
+    \ Str: 1x3 |\n|---|---|---|---|---|---|---|---|\n| Class = i (in K) | | | | |\
+    \ | BN, ReLU\nPool: 1x3, Str: 2 |\n\nFig. 2. An overview of the CNN-BiLSTM-one-against-all\
+    \ architecture used in this.\n\nrespectively, where $\beta_1$ and $\beta_2$ are\
+    \ the algorithm hyperparameters. The weight $w$ of the model is then updated as\n\
+    \n> $w_t = w_{t-1}-\\eta\\frac{m_t}{\\sqrt{v_t+\\epsilon}}$\n\nlayers. The input\
+    \ to both the models is exactly the same, 12-lead ECG signal records of 14 signals.\n\
+    \nWith the CNN model, an average, F-score, and AUC of 95.75%, 0.7836, and 0.9947,\
+    \ respectively, is achieved in detecting normal rhythm and right arrhythmias.\
+    \ Over individual class performances, the highest 99.21% is achieved in detecting\
+    \ DLBBB\n\nThe initial learning rate of the set was 0.003 with a drop factor of\
+    \ 0.1 at a period of 10. The batch size was set to 128 and the training was stopped\
+    \ at 20 epochs.\n\nin detecting DLBBB and the highest F-score of 0.9329 and AUC\
+    \ of 0.9902 in detecting RRBBB. PAC of 91.32%, AUC of 0.9804, and AUC of 0.8388,\
+    \ the results are in detecting PAC.\n\n# C. Performance Metrics\n\nThe classification\
+    \ performance of the proposed method is evaluated in 10-fold cross validation\
+    \ using the accuracy and F-score ($F_1$ score);\n\n> $Accuracy = \\frac{TP}{TP\
+    \ + FP + FN}$\n$F-Score = \\frac{2TP}{2TP + FP + FN}$\n\nSimilarly, with the CNN-BiLSTM\
+    \ model, an average, F-score and AUC of 96.16%, 0.8026, respectively. For the\
+    \ individual classes, the accuracy of 99.11% is achieved in detecting DLBBB and\
+    \ the highest F-score of 0.9390 and AUC of 0.9990 in detecting RRBBB. PAC once\
+    \ of 92.29% and (AUC) of 0.9486 while the F-score is at 0.5876,\n\nwhere $TP$\
+    \ is the number of true positives, $FP$ is the number of false positives, and\
+    \ $FN$ is the number of true negatives. The area under the receiver operating\
+    \ characteristic (ROC) curve is also used as an evaluation measure given\n\n>\
+    \ $AUC = \\int_0^1 f(x)dx$\n\nwhere $f(x)$ is the ROC function. The AUC is computed\
+    \ using the CNN on its test.\n\nWhile the results show that both models show the\
+    \ CNN-BiLSTM model is slightly better than the CNN model. This is a relative improvement\
+    \ of 0.046, 2.42% and 1.55% in the accuracy, F-score, and AUC, respectively, over\
+    \ the CNN model.\n\n# III. EXPERIMENTAL EVALUATION\n\nThe 10-fold cross-validation\
+    \ results in detecting cardiac abnormalities using 12-lead ECG signals are presented\
+    \ in Table II. The results are presented using two models, a CNN model similar\
+    \ to CNN-BiLSTM. The CNN model is similar to the proposed CNN-BiLSTM model illustrated\
+    \ in Fig. 2 without the BiLSTM layer and associated\n\nThe proposed method is\
+    \ compared with the validation results [9], one of the best achieved on this dataset.\
+    \ However, the method presented in this work has some advantages. The input ECG\
+    \ signal consists of 5 seconds in the this work compared to 144 seconds in [9]\
+    \ which is 9.6 seconds longer, and therefore, higher computational costs. A total\
+    \ of\n\n# IV. DISCUSSION AND CONCLUSION\n\nAuthorized license limited to use:\
+    \ Carleton University. Download on June 15, 2021 at 07:34:07 UTC from IEEE Xplore.\
+    \ Restrictions apply.\n\n108"
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# 2020 IEEE Recent Advances in Intelligent Computational Systems (RAICS) |
+    December 03-05,2020 | Trivandrum
+
+
+    TABLE II. 10-FOLD CROSS-VALIDATION RESULTS IN DETECTING CARDIAC ANORMALITIES USING
+    CNN AND CNN-LSTM MODELS.
+
+
+    | Type | Accuracy (%) | F-Score | AUC (%) | CNN-LSTM Accuracy (%) | F-Score AUC
+    |
+
+    |---|---|---|---|---||
+
+    | AF | 96.68 | 0.9087 | 0.9796 | 97.00 | 0.9169 | 0.9852 |
+
+    | I-AVB | 97.24 | 0.8704 | 0.9786 | 97.50 | 0.8812 | 0.9833 |
+
+    | LBBB | 99.21 | 0.8875 | 0.9680 | 99.16 | 0.8807 | 0.9815 |
+
+    | Normal | 93.11 | 0.7664 | 0.9588 | 94.29 | 0.7986 | 0.9699 |
+
+    | PAC | 91.32 | 0.5034 | 0.8388 | 92.92 | 0.5931 | 0.8849 |
+
+    | PVC | 95.77 | 0.7649 | 0.9339 | 96.22 | 0.8119 | 0.9572 |
+
+    | RBBB | 96.31 | 0.9329 | 0.9902 | 96.64 | 0.9390 | 0.9900 |
+
+    | STD | 94.75 | 0.8804 | 0.9959 | 95.25 | 0.8141 | 0.9648 |
+
+    | STE | 97.34 | 0.9603 | 0.9215 | 96.71 | 0.8826 | 0.9445 |
+
+    | Average | 95.75 | 0.7836 | 0.9477 | 94.69 | 0.8026 | 0.9624 |
+
+
+    10 convolutional layers and 5 pooling layers are used to compare with 4 convolutional
+    and pooling layers in this model. This work increases the computational costs
+    of the work, however, utilizes a strategy for the classification problem where
+    we utilize sigmoid activation function of softmax.
+
+
+    # REFERENCES
+
+
+    +   [1] World Health Organization, "Cardiovascular diseases (CVDs), 2019" [Online].
+    Available: www.who.int [Accessed: 24th August, 2020].
+
+    [2] Australian Institute of Health and Welfare, "Cardiovascular disease, 2020"
+    [Online]. Available: www.aihw.gov.au [Accessed: 25th January, 2021].
+
+    [3] W. Amara, C. Montagner, S. Chegger, M. Bourier, G. Curry, B. Barry, et al.,
+    “Detection and classification of heart arrhythmias using ECG”, IEEE Access, vol.
+    50, no. 5, p. 527–536, 2012.
+
+    [4] P. Kilgore, L. S, J. J. Bailey, R. Childs, B. J. Dean, et al., “Recommendations
+    for the diagnosis and management of cardiac arrhythmias”, American College of
+    Cardiology, vol. 49, no. 10, p. 1099–1117, 2007.
+
+    [5] M. Bickenbach and A. Polster, “Misleading ECG electrodes and the need for
+    better training in cardiac signal monitoring”, Journal of Biomedical Engineering,
+    vol. 14, no. 3, p. 123–132, 2019.
+
+    [6] M. G. Smith and S. J. Jackson, “Automated detection of QRS and T patterns
+    in 12 lead ECG based on CVT”, Biomedical Signal Processing and Control, vol. 25,
+    p. 46–52, 2015.
+
+    [7] S. Kara and M. Okan, “Atrial fibrillation classification with neural networks”,
+    Pattern Recognition, vol. 40, no. 11, p. 2990, 2007.
+
+    [8] R. Alancazar and J. Rice, “A review on simple entropy multiclass analysis
+    of fibrillation electrocardiograms”, Biomedical Signal Processing and Control,
+    vol. 5, no. 1, p. 1–14, 2010.
+
+    [9] T.-S. Wang, J. Huang, E. S. C. Shi, Y.-F, and M.-J. Huang, “Detection and
+    classification of cardiac arrhythmias with a deep-learning neural network model”,
+    IEEE Science, vol. 13, p. 10886, 2020.
+
+    [10] S. Hochreiter and J. Schmidhuber, “Long-term memory”, Neural Information
+    Processing, vol. 9, no. 8, p. 1775–1780, 1997.
+
+    [11] E. A. Perez Alday, A. Gu, A. Shah, C. Liu, A. Sharma, S. Seyed, et al., “Classification
+    of 12-lead ECGs: The PhysNet — Computing in Cardiology Challenge”, 2020.
+
+    [12] F. Liu, C. Liu, L. Zhao, X. Wang, W. Xu, Xu, et al., “An access database
+    for evaluation of electrocardiograms of rhythm and abnormality detection”, Journal
+    of Medical Informatics, vol. 37, p. 1368–1373, 2018.
+
+    [13] S. Lee and C. Sogedy, “Batch normalization: Deep learning by reducing internal
+    covariate shift”, arXiv preprint:1502.03117, 2015.
+
+    [14] K. He, X. Zhang, S. Zhang, C. Ren, Y. Sun, and Y. Le, “What is the best architecture
+    for image recognition?”, in 2016 IEEE International Conference on Computer Vision
+    (CVPR), pp. 776–785, 2016.
+
+    [15] M. Schuster and K. K. Paliwal, “Bidirectional recurrent neural networks for
+    sequence classification”, IEEE Transactions on Signal Processing, vol. 45, p.
+    2673–2681, 1997.
+
+    [16] N. Sivastavan, H. Kitonov, A. Kazehevnik, S. Sutdee, and R. Salikh, “Simple
+    methods to prevent overfitting”, Journal of Machine Learning Research, vol. 18,
+    p. 1, 2017.
+
+    [17] C. G. Christopher, “Pattern Recognition and Machine Learning”. Journal of
+    Machine Research, 1998.
+
+    [18] D. P. Kingma and J. Ba, “Adam: A method for stochastic optimization”, arXiv
+    preprint arXiv:1412.6080, 2014.”
+
+
+    109'
+  merge: -1
+  img_proc: true
