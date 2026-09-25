@@ -1,0 +1,33 @@
+name: PHP Security and Session Management Managing Sessions and Ensuring PHP Security
+  (2022 Guide for Beginners)
+slug: php-security-and-session-management-managing-sessions-and-en
+name_cn: PHP 安全与会话管理：管理会话并确保 PHP 安全（2022 初学者指南）
+toc:
+- - '#'
+  - PHP 安全与会话管理：管理会话并确保 PHP 安全（2022 初学者指南）
+- - '##'
+  - PHP 安全概述
+- - '#'
+  - 第 1 章
+- - '##'
+  - XSS 尝试
+- - '###'
+  - 劫持会话 (Hijacking a session)
+- - '####'
+  - 脚本警告 (document.cookie)
+- - '###'
+  - 注入 (Injection)
+- - '####'
+  - 主要挑战：参数化查询-预处理语句 (Parameterized Query-Prepared Remarks)
+- - '####'
+  - PHP 会话管理 (Management of PHP sessions)
+- - '####'
+  - 2. 使用生成的 SQL 语句 (Use the SQL statements that were generated)
+- - '#'
+  - 第 2 章
+- - '##'
+  - 作为入门的 XSS 研究（站点间脚本攻击）
+- - '###'
+  - 如何使用跨站脚本
+- - '###'
+  - 与病毒相关的网站感染
