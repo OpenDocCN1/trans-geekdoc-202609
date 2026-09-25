@@ -1,0 +1,749 @@
+- pgno: 0
+  md: '# FPGA-based Edge Inference for Fall Detection
+
+
+    Kishore Bharathkumar
+
+    Electrical and Computer Engineering
+
+    San State University
+
+    San Diego, USA
+
+    kishorebharath14@gmail.com
+
+
+    Christopher Paolini
+
+    Electrical and Computer Engineering
+
+    San State University
+
+    San Diego, USA
+
+    paolini@engineering.dsdu
+
+
+    Mahasetha Sarkar
+
+    Electrical and Computer Engineering
+
+    San State University
+
+    San Diego, USA
+
+    msarkar2@sdsu.edu
+
+
+    **Abstract—** In the general population, physical injuries sustained by an unintentional
+    fall on a hard surface are the leading cause of avoidable injury mobility and
+    mortality. As much as 65% to 30% of adults aged over 65 fall once a year, and
+    2.9 million falls are reported, resulting in 33,000 deaths. All elderly individuals
+    have bone fractures at some point during their life. The situation leading to
+    bone fracture, concussion, intracranial or traumatic brain injury when medical
+    attention is not offered immediately. Some falls lead to death as well. Recently,
+    many studies have come up with wearable devices. These devices are not commercially
+    available in the market as compact, wireless, and power efficient. This paper
+    discusses the findings that a Fall Detection Sensor on the human body is in front
+    of the Shi bone. This is based on a dataset collected from falls using IMU sensors
+    placed on 16 human bodies and trained-tested using Convolutional Neural Networks
+    (CNN) for recognition. The goal is to develop a wearable, medical device that
+    uses a small Lattice Field Programmable Gate Array (FPGA) integrated with gyro
+    and accelerometer sensors which detects whether the person has fallen or not.
+    This FPGA is capable of running the Neural network locally. This makes it capable
+    of providing real-time classifications without any Transmitter or Receiving capabilities.
+    **Index**—Fall detection, edge inference, machine learning, neural networks, FPGA
+
+
+    In Low or middle income countries like Thailand, Vietnam, Indonesia, Cambodia,
+    Malaysia, and other South-East Asian countries report fall in limited studies.
+    Thus, the fact percentage is in the range of 14-34% leading to limited quality
+    in the research pertaining to fall prevention [6]. In SubSaharan African countries,
+    fall is not considered as a risk
+
+
+    ![](img/5528ef19a07f2ebdb3c21143cb3dc707_0_0.png)
+
+
+    Fig. 1. Fall Deaths in the U.S [33]
+
+
+    # I. INTRODUCTION
+
+
+    The leading cause of fall is invariably proportional to the age and physical fitness
+    of the person. As a consequence of significant trauma, disability, and dizziness
+    is considered [1]. Falls are next to automobile or motorcycle injuries in terms
+    of economic cost [2]. On an average, 36.8 per 100,000 people per year of age 65
+    in the United States, die only due to fall [3] as shown in Fig. 1. Studies reveal
+    that nearly 40% of elderly require medical attention or to restriction of activity
+    or worsening of health conditions. The frequency is higher in the older compared
+    to people living in residential homes [4]. Based on these reports, instant aid
+    needs to be offered to prevent a fall. Under these circumstances, a Fall Detection
+    Sensor (FDS) or an equivalent device is required to alert the care-giver or
+
+
+    These Fall Detection Sensors (FDS) are usually small and worn around the neck
+    as a pendant or around with a watch or as mobile phones equipped with accelerometer
+    to detect and detect falls. The market advises with a disclaimer stating that
+    “they may not sense 100% falls. It is difficult or impossible for the device to
+    work when he/she falls into an unconscious state leading to a fatal fall [5].
+    Many types and variants of these fall detectors are commercially available, it
+    is not clear which is the best or optimal option to use on the human body to a
+    falls.
+
+
+    In this study, sixteen Inertial Measurement Unit (IMU) Sensors are placed at different
+    locations of the human body'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# 2020 IEEE Global Humanitarian Technology Conference (GHTC)
+
+
+    which captures up to 183 features. The values recorded are trained and tested
+    using different Machine Learning models to classify an event as a fall or no-fall.
+    Based on these results, it is evident the Shin bone (the knee is the next) location
+    to place the sensor on, for maximum accuracy in fall detection. A suitable Neural
+    Network in Caffe framework, is implemented on a Lattice Ice40 Ultra Breakout board.
+    The board has a FPGA that provides flexible intellectual property (IP) cores that
+    implement Convolutional Neural Networks (CNNs) which computes fall classification
+    in real time, real data.
+
+
+    lower spine, pelvis, upper arms, forearms and hands as shown in Fig. 3. The locations
+    on the lower body consist of the thighs, shanks and the feet as shown in Fig.
+    4.
+
+
+    ![](img/5528ef19a07f2ebdb3c21143cb3dc707_1_0.png)
+
+
+    # II. APPROACH AND DATA SET
+
+
+    Experiments on humans were carried out in different research tasks to detect falls.
+    In spite of the fact that all these experiments gave details about fall data implementation,
+    the methods followed to record a fall or no fall is not mentioned clearly [5].
+    Although the details of the subjects involved are undisclosed in few research
+    works, the cause for a fall or the measures taken to recover a fall is still a
+    mystery [9]. Some studies have used cameras to record videos of fall and use those
+    as input data to train neural network models. Privacy of the subject was compromised
+    in this case.
+
+
+    Fig. 3. Upper Body IMU placement [11]
+
+
+    In our study, the experiments were performed on the Neuromechanics and Neuroplastic
+    Lab of San Diego University in the Department of Exercise and Nutritional Science
+    (ENS). The lab was setup with Wireless 3D motion capture cameras to record the
+    human movements. As shown in Fig. 2, the Noraxon myMotion Research Inert Measurement
+    Unit (IMU) sensors measure the Orientation,angles,(Joint) and Linear acceleration
+    of the subject''s motion [10].
+
+
+    ![](img/5528ef19a07f2ebdb3c21143cb3dc707_1_1.png)
+
+
+    Fig. 4. Lower Body IMU placement [11]
+
+
+    The human subjects involved in fall collection data process were mostly graduate
+    students or faculty members, since we did not have IRB approval to test on the
+    genetic population in the first phase of our lab experiments. Upon strapping these
+    sixteen IMUs, their information regarding the height, weight, gender and age of
+    the human subject was recorded for calibration purposes. The calibration of the
+    sensors involved stretching arms, legs, moving back and forth to see if the recordings
+    on the Noraxon MR3 Suite Software were accurately captured on screen. Calibration
+    was an important step in this experiment before every trial. Incorrect calibration
+    would impact the measurements of inertial extensively.
+
+
+    ![](img/5528ef19a07f2ebdb3c21143cb3dc707_1_2.png)
+
+
+    Fig. 2. Noraxon myMotion IMU Sensors and Reciever [11]
+
+
+    # A. Fall Experiment
+
+
+    As stated, 183 features were recorded based on the IMU placed at 16 different
+    body locations. The locations on the upper body consist of: upper head, pelvis,
+
+
+    After calibrating the unit, the subject was given a Virtual Reality (VR) headset
+    to ensure that the participant was transported into a virtual world of maybe walk
+    along a beautiful river bank. Thus the subject was “removed from the lab setting
+    and was unaware of whether a fall was “attempted” on her. The participant was
+    made to walk on a straight path (path and back) about 7feet long in the lab. The
+    path was covered with a rug that could be
+
+
+    Authorized license used to: University of Prince Edward Island. Downloaded on
+    June1.2021 at 23:39 UTC from IEEE Xplore. Restrictions apply'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'tugged manually to initiate a fall when the subject was walking on it. The
+    path was surrounded by thick most precautionary measures to avoid injuries in
+    case of a fall event.
+
+
+    When the subject looked comfortable in the virtual environment (brought about
+    by the VR headset) and seemed to enjoy the "stroll along the rug bed", a tug (on
+    which the subject was walking) was initiated (by volunteers) inducing a fall or
+    no stumble. In case of a fall, the subject landed on the soft rug or on the mattress
+    which eliminated any harsh impact due to the fall. After a fall was induced, the
+    subject was checked for any dislocation and re-calibrated before moving on the
+    next trial. The fall was recorded from the point the subject started walking forward
+    to a fall, the subject was back on their feet feeling either a fall or a stumble
+    and Features.
+
+
+    # ## Data and Features
+
+
+    The 183 kinematic features determined by the Noraxon IMU are displayed on NoraxonRESEARCH
+    Software (MR3) which include the orientation, anatomical angles and linear acceleration
+    measured at a rate of 200 Hz. The course, pitch and roll (in degrees) are recorded
+    by the sensors placed on the head, upper thoracic, pelvic, and left arms, hands,
+    thighs, shins, and feet. Also, the acceleration (or 1 cm/s²) and rotation along
+    X-, Y- and Z-axes are recorded. These sensor measures are merged together to calculate
+    flexion, abduction and rotation of the left and right shoulders. While the flexion
+    is calculated for the left and right knees and elbows, the flexion, lateral readings
+    are captured for cervical, lumbar and thoracic regions. The wrist gives measures
+    of extension, radial and proximal forces. These constitute 183 feature set that
+    was collected and read at once. The Noraxon MR3 desktop software shows each feature
+    set for one participant who participated in our "fall-experiment".
+
+
+    These values were stored as Comma-Separated Value (CSV) files which were accessed
+    using the Noraxon MR3 software or exported to the computer which has Microsoft
+    Excel or similar CSV readers. The Noraxon MR3 records and displays the changes
+    in orientation and acceleration. With the replay feature, each subject''s visual
+    records are played back and label that particular recording as a fall or no fall.
+    In each case, the fall is considered a complete topping of individual on the floor/mattress
+    and the event was labeled with a binary value 1. While, merging or using balance
+    by a quick recovery was considered as "non-fall" events and were labeled with
+    0. These CSV files of different human subjects
+
+
+    ![](img/5528ef19a07f2ebdb3c21143cb3dc707_2_0.png)
+
+
+    were used and testing dataset for four Machine Learning models are discussed in
+    the following. The 183 feature datasets were available for download at the San
+    Diego State University of Information Library under the Research section (URL:
+    http://iad.sdsu.edu/).
+
+
+    # ## MACHINE LEARNING MODELS
+
+
+    Machine learning, as it allows computers to learn and act without being explicitly.
+    "Supervised learning" is a widely adopted and the most empirical form of machine
+    learning techniques, which use a set of data and input results as output [12].
+    The model is capable of learning from the observations of this training dataset
+    as a fall or no fall based on its observations and prior training [13]. Various
+    machine learning approaches can be used to solve a variety of problems. In this
+    work, we have used four different machine learning techniques on our to detect
+    the optimal location of a wearable sensor best to detect a fall we wanted to understand
+    more about the results of Machine Learning refer the Deep Learning (Adaptive Computation
+    and Machine Learning series) by Ian Goodfellow, Yoshua Bengio and Aaron Courville
+    are available in HTML for free (URL: https://github.com/janishir/mit-deep-learning-book.pdf).
+
+
+    The input data has time length. The input vectors for machine learning leading
+    to a fall are best chosen in the range of 1.5s to 7s with an average time of 3s.
+    On the other hand, in case of walking non-fall events, the range was chosen to
+    be between 1.5'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# 2020 IEEE Global Humanitarian Technology Conference (GHTC)
+
+
+    13s with an average of 7s. In the general, the overall mean for all types of observed
+    was to be 5s.
+
+
+    # A. Long Short Term Memory-Recurrent Neural Network (LSTM-RNN) Model
+
+
+    The Recurrent Neural Networks have the ability to characterize temporal behavior
+    of a signal as they leave in their architecture. These networks experience gradient
+    problems. LSTM-RNNs, compose of a cell to overcome this issue and Gating functions
+    in their state [14]. A segment of time predicting fail was trained with RNN Keras
+    framework on top of Tensorflow. TensorFlow is created for deep learning and Keras
+    is a higher level API used for RNN networks with faster computations.
+
+
+    The LSTM-RNN model is made of two layers followed by a Dense layer. While the
+    LSTM layers have dimensions of 13x25 and 25x20, the Dense layer has a dimension
+    of 20x1. The Dense layer does the following operation on the data: output = activation(dot(input,kernel)
+    + bias), where kernel represents the weight and data represents the product of
+    all data and its corresponding weights [16]. Sigmoid is used as the Activation
+    function in this model.
+
+
+    As stated before, the model was trained on a non-uniform time segment data when
+    the time segments comprise leading up to, and including. The variable time data
+    fed into the model for training goals, where one iteration consists of one forward
+    pass and one backward pass of each batch size. LSTM RNN model training and testing
+    is plotted as a Receiver Operating Characteristic (ROC) curve for each of the
+    means.
+
+
+    # B. Gradient Boosting Tree (GBT) Model
+
+
+    Gradient Boosting Tree algorithm consists of multiple iterative decision trees
+    and is an additive algorithm [17]. The results of all the trees are added and
+    the final outcome is obtained as the final classification. A collection of GBTs
+    trained with the recorded fail data using xgboost software, scalable tree framework
+    [18]. For example, the final prediction for a given example is the sum of predictions
+    from each tree as represented in the Tree Example shown in 6.
+
+
+    The common notion behind GBT is to split branches, which yields y[i] a group of
+    predictions, and then compute error y[i]-y''[i]; GBT as a binary classifier is
+    considered the cutting edge for classification of non-binary data like scenario
+    means. A logistic function L(x) is used to map the prediction y''[i] to [0,1],
+    for a binary classifier that classifies an input as fail or no fail. A Mean Squared
+    Error (MSE) function J = (y[i]-y''[i])^2 and
+
+
+    ![](img/5528ef19a07f2ebdb3c21143cb3dc707_3_0.png)
+
+
+    Fig. 6. Gradient Boosting Tree - Tree Example Model [18]
+
+
+    a function f[i] = J is desired, to minimize J y''[i] = y[i] - α, for some α. The
+    algorithm is then reiterated for accuracy. The GBT model, “loss” as a function
+    of epoch cycles it repeats [15]. Epoch is defined as the number of times the entire
+    data passes through the model.
+
+
+    An average of the ensemble of trees yields a classification (Fail or No Fail).
+    Area Under Curve (AUC) under the ROC is the evaluation metric for classification.
+    The optimal cutoff is the False Positive Rate (FPR) where the Sensitivity = Sensitivity
+    - J, where I is Youden Statistic:
+
+
+    # C. Random Forest Model
+
+
+    Random Forest Decision, consists of many individual decision trees that operate
+    as a whole (ensemble learning). The individual classification prediction from
+    each of these trees in a forest is collectively collected and based on the maximum
+    number of votes for a class, the final prediction of the model is made as the
+    result of model''s classification [19]. This is an example of how a forest of
+    individual trees outputs a class with the majority value is generalised as the
+    model''s output. In this case, there are 3 i''s and the output is 1.
+
+
+    In this approach, Scikit-Learn''s ensemble.RandomForest was used [15]. The Gradient
+    Boosting Tree model minimizes Mean Squared function J (during each iteration)
+    training the input data in parallel. We apply a method of 10 independent trees
+    (n_estimators=10) where each tree is trained in parallel and a unified classification
+    result is obtained as an outcome of aggregated solution from the ensemble of trees.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# 2020 IEEE Global Humanitarian Technology Conference (GHTC)
+
+
+    # IV. CAFFE MODEL AND IMPLEMENTATION
+
+
+    ![](img/5528ef19a07f2ebdb3c21143cb3dc707_4_0.png)
+
+
+    From above Machine Learning model results, it was observed that the Leaf sensor
+    gave the best Area Curve (AUC) which means that if a sensor is placed at the Shin
+    bone, the accuracy at which a device can predict is a far higher than other locations
+    on the human body. BNN: Gradient Boosted Random Forest gives better point in training
+    while RNN takes into consideration a segment of time, RNN outperforms other models
+    and displays higher accuracy. Although this is true with the results obtained,
+    in implementation of hardware, stated earlier the Binary Neural Network is much
+    faster than a DNN [22]. Convolutional Neural Network (CNN) is one computationally
+    effective structure to that of the BNN that can be implemented on a Lattice FPGA
+    by Lattice Semiconductor
+
+
+    Tally: Six 1s and Three Os
+
+    Prediction: 1
+
+
+    Fig. 7. Visualization of a Random Forest Model making a Prediction [19]
+
+    The ''tree'' is evaluated with Gini impurity in Random Model. The Gini impurity
+    is in every node of tree which gives the probability of an incorrect classification
+    of a randomly selected dataset datum from the selected dataset datum was either
+    labelled as false or non-randomly [20].
+
+
+    # D. Binarized Neural Network Model
+
+
+    Considering these factors, small-factor FPGAAs are now commercially available
+    and such FPGA is found in the Lattice E40 Ultra-Plus Breakout [23]. The FPGA supports
+    implementation of Convolutional Neural Network to perform analysis, simulation
+    and as a result, it is possible to detect an event as no fall in real time. The
+    model was implemented on a local computer, which consists of eight NVIDIA V100
+    (16GB) GeForce SuperSystem was executed on a Supercomputer Super-402-GRTR [24].
+    A Deep Learning framework created by Berkeley AI (BAIR) is similar to other popular
+    deep learning frameworks. Because of properties like speed and extensible code
+    for active development, caffe is suited for research deployment purposes [25].
+
+
+    The fourth model in this is a Binarized Neural Network model with binary weights
+    and activations during run-time. These are designed to evaluate the parameters
+    gradients [21]. During forward process, memory size and speed are reduced abruptly
+    by the Convolutional Neural Network (CNN) model, where the gradients are not binarizing
+    during way. The weights and activations are constrained to +1 or -1 during run-time
+    [22].
+
+
+    BNN uses Multiply-Accumulate (MAC) operations that are low-level linear operations
+    in deep learning where weights are constrained to +1,-1; 32-bit floating point
+    MACs are made by one XNOR-point operation. Each operation is output as the word
+    of a 32-bit integer where the output is the number of set bits. A standard vector
+    dot product is computed by a binarized variant executed by an XNOR-point function
+    causes the BNN method to provide higher power efficiency during a forward pass.
+    It also demands 32 times smaller memory capacity than a 32-bit Deep Neural Network
+    (DNNs). The BNN model is trained using Keras framework running over TensorFlow..
+
+
+    ![](img/5528ef19a07f2ebdb3c21143cb3dc707_4_1.png)
+
+
+    Fig. 8. Convolutional Neural Network model with CBSR layers
+
+
+    # A. The Caffe Model
+
+
+    The Convolutional Neural Network caffe for fall detection and classification purpose
+    was implemented
+
+
+    Authorized licensed use to: University of East Ireland. Downloaded on June 01,
+    2021 at 23:39:10 UTC from IEEE Xplore. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# 2020 IEEE Global Humanitarian Technology Conference (GHTC)
+
+
+    to that the BNN model in Tensorflow is in Fig. 8. While the Caffe model is a coded
+    framework, it needs to be written on a text editor and saved as a Proto (.prototxt)
+    file. Of the existing layers prescribed by BAIR''s Caffe framework, Lattice Semiconductors
+    represent an exclusive set of layers for CaffeModule [26]. For implementation
+    in Caffe, the input data format is HDF5 (Hierarchical Data) format. The HDF5 file
+    uses these data stored in the form of arrays and is equivalent to a Numpy array
+    [27]. For training-purpose purposes using Caffe framework, 3 different architectures
+    compatible with Convolution Neural Network of Lattice FPGA is considered.
+
+
+    detection at very low power of 1mW (milliWatt) range [23].
+
+
+    ![](img/5528ef19a07f2ebdb3c21143cb3dc707_5_0.png)
+
+
+    The first architecture under consideration was the Convolution-BatchNormalScaling-ReLU
+    model shortly called CBSR model. The Dense layers of Keras-Tensorflow are replaced
+    by Inner Product/ fully connected layer. It makes the input connected for a binary
+    network. Similarly, convolutional 2D issue weights and biases are used at the
+    top of the Caffe model. The same parameters used in Keras are retained in the
+    model. The model also contains a Batch Normalization layer, which accelerates
+    the training process of the model and is followed by a scaling layer since drops
+    are not supported in this framework. The Caffe Prototxt file generates a ''caffefile''
+    for every epoch until it reaches the maximum value of iteration. The Solver Protoxt
+    handles the hyperparameters like learning rate, momentum, iteration cycle, and
+    etc. The other architectures that we considered were fully connected with one-dimensional
+    input data is similar to the CBSR model with the binary convolutional layer instead
+    of the standard two-dimensional layer with two-dimensional input data.
+
+
+    ![](img/5528ef19a07f2ebdb3c21143cb3dc707_5_1.png)
+
+
+    # B. Lattice Implementation
+
+
+    It was imperative that we tested our machine learning model on hardware to understand
+    the time that would require to decide a ''fall'' or ''no fall'' based on real
+    input from the sensor that would detect motion This method of assigning the heavy
+    duty to the edge of the device is called ''Edge Inference''. We used an FPGA [28]
+    to test our model. Edge inference also means that the sensor records are captured
+    on the FPGA device without needing to transmit to a server, train-test and evaluate
+    the result back to the device via a wireless connection. As shown in Fig. 9, the
+    Lattice ICE40 Ultraplus board is such a device that supports itself proprietary
+    Convolutional Neural Networks (CNNs) that can perform continuous, fall classification
+    and
+
+
+    # C. Results
+
+
+    In order to implement this on FPGA, a LatticeSense AI Network Compiler. The compiler
+    is capable of converting the Caffe CNN into FPGA format by retaining the bitstream
+    (.bin) file which is flashed onto the FPGA. The Sens compiler in CNN makes the
+    Neural Proto file, and a sample input (two-dimensional array in this) to analyze,
+    simulate and compile to render the final binary file. Using Lattice Diamond software,
+    the file is flashed onto the FPGA to perform real time computations. The Receiver
+    Operating Characteristic (ROC) curve combined with AUC (Area Under Curve), is
+    used to evaluate a learning algorithm for classification problems. The ROC is
+    obtained as a plot of (True Positive Rate) and
+
+
+    Authorized license used only by: University of East Ireland. Download on June
+    01, 2021 at 23:39:10 UTC from IEEE Xplore. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# 2020 IEEE Global Humanitarian Technology Conference (GHTC)
+
+
+    ![](img/5528ef19a07f2ebdb3c21143cb3dc707_6_0.png)
+
+
+    Fig. 11: Loss curve for Shank Sensor as a function of Iterations for Convolutional
+    Neural Network
+
+
+    by the elderly persons who are vulnerable to fall.
+
+
+    Datasets on Activities of Daily Life (ADL) and all events have been published
+    by many European Universities with test subjects wearing sensors or FDS at different
+    parts of the body like the chest and the thighs, as mobile phones in pocket tracers,
+    on the wrist and as along the waist with relatively less accuracy in each case.
+    These devices allow recording of only linear acceleration, though reality, the
+    body has other positions and orientations which are not recorded by these infrastructures.
+    Also, edge computing is tight and uses external memory for computation. From the
+    results, it is evident that all Machine Learning models in this study achieve
+    than 80% classification accuracy for the sensor placed. The final result showed
+    that the Convolutional Neural network achieved of 80% accuracy with Caffe implemented
+    models and an average of 85% accuracy in TensorFlow implemented models. The TensorFlow
+    framework offers higher accuracy with time series input data; however, the Caffe
+    framework with greater ease and simplicity [30]. The most impactful takeaway-from
+    our research is, that whatever fall detection sensors should be designed to be
+    placed on the shin bone. Also, these sensors should be designed to that with edge
+    interfacing capabilities so that computation can be done on-board (like a Lattice
+    FPGA) with minimal data and power requirements.
+
+
+    1-Specificity (False Positive Rate = I - True Negative Rate) is plotted for all
+    four machine learning models discussed in section III. We have used Caffe and
+    the TensorFlow framework. For the LSTM-RNN model, the highest AUC is achieved
+    by the Shank sensor (AUC=0.92) placed on the Shinbone, and left right wrists have
+    AUC value of 0.91 and 0.86 respectively [15]. The Gradient Boosted Tree model
+    exhibited an AUC of 0.90 for False Positive Rate. Yet again, the model on the
+    left Shin bone showed the highest AUC of 0.85 for the Random Forest model built
+    by the Binary Neural Network (BN) model also displays an AUC of 0.82 for the Left
+    Shank sensor.
+
+
+    The Convolutional Neural Network designed for the left shank sensor was trained
+    with 63-two data input. The Caffe model generated a Receiver Operating Characteristic
+    (ROC) curve with Area Under Curve (AUC) value of 0.79 is shown in Fig. 10. Also
+    the loss of 0.18 (training and testing) for the left sensor loss as a function
+    of iterations when it is shown in Fig. 11.
+
+
+    # V. CONCLUSION
+
+
+    Technical advances are now enabling us to make predictions and classifications
+    in real time medical devices using machine learning methods. When a fall occurs,
+    it takes time to receive attention from a caregiver worsen treating traumatic
+    brain injury, fracture, concussion and bleeding [21]. A leading cause of death
+    among old people is because of unfortunate injuries, of which two-are a result
+    of fall. Most of the falls that take place in living lives more than residential
+    communities, a Fall Detection System (FDS) should be
+
+
+    The machine learning models presented in this paper execute the prediction and
+    classification of large amounts of fall data in time (minutes). The FDS used for
+    the implementation consumes very low power to execute classification algorithms
+    on the order of 1 mW. The factor of the FDS is tight enough to be embedded in
+    a wearable device. Edge interfacing elements limits the cost of maintaining a
+    cloud infrastructure while by cutting down the delay in transferring data and
+    to the cloud. The solution that we present in this paper
+
+
+    In the future, FDS devices should have a gyroscope and accelerometer to record
+    data and predict when the fall has fallen. In addition to features, the FDS have
+    a GPS (or inertial navigation system) to inform the caregiver with the exact physical
+    location of where the fall has taken place in all facility. Since RNN has the
+    highest AUC among all the other models it observed a time segment of a single
+    instance of implementation on a real time that supports RNN on a small device
+    with low power requirement needs to be'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# 2020 Global Humanitarian Technology Conference (GHTC)
+
+
+    assessed. We then proceed to build this project using accelerometer and gyroscope
+    equipped with FPGA on a single device with indoor tracking (GPS tracking) and
+    experimenting on more than 100 distinguished human subjects.
+
+
+    # ACKNOWLEDGMENT
+
+
+    This work was supported by the HealthLink Center by 1 Pilot Project and Full Detection
+    at the Edge, supported by the National Ministry of Health and Hospitals, National
+    Institutes of Health, and the University Group (UGC) of State University. The
+    experiments were conducted in the "Neuromechanics and Plasticity" laboratory of
+    Dr. Harisman Bawe in the College of Engineering and Nutritional Sciences (ENS)
+    and SDSU. We are grateful to Dr. Bawe and his student helped for their support.
+
+
+    # REFERENCES
+
+
+    +   [1] C. Wu, W. H., H. Ku, L. Ji, J. Lu, and C. Chen. Machine learning-based
+    fall detection for monitoring strategy for falls in elderly. In 2018 IEEE International
+    Conference on Mobile Applications and Services (MICAS), 2018, pp. 818–821.
+
+
+    +   [2] S. Hainik, K. Ruppus, U. Reimman, C. Becker, and H. H. King. Detection
+    of falls in elderly with age of status: osteopenia, International Geriatrics,
+    2017, 1056.
+
+
+    +   [3] CDC: Home and Recreational Safety.\ [Online]. Available: https://www.cdc.gov/fallinj/prevention/safety.htm
+
+
+    +   [4] J. M-Guiriao, B-Lee, L. Michael, A. Jordan, E. Fisher, E. Coppola, and
+    T. Thomas. Fall prevention in older adults: a systematic review and meta-analysis
+    Evidence Report and Recommendation for the US Public Services Task Force. JAMA,
+    2018, 319, no. 16, pp. 1706–1718, 2018.
+
+
+    +   [5] K. D. Hill, P. Santiao, S. Li, W. Wen, Y. Ash, A. Thomas, H. Kamir, and
+    E. Ruff. What falls apart in fall analysis: a review of methods and current state.
+    BMC Metrics, 8, no. 1, pp. 1–3, Jan. 2018. [Online]. Available: https://doi.org/10.1186/s12878-017-0063-9
+
+
+    +   [6] M. T. Dlamini, C. Akundula, I. Oajayi, M. Baweja, F. Chiwanga, O. Adanda,
+    N. Nyukimana, R. Kayubusa, and D. Gbekella. Risk factors for fall injury in sub-saharan
+    africa: a multicenter study. International Journal of Environmental Research and
+    Public Health, 18(2021)
+
+
+    +   [7] MobileHealth Alert System (MAS). [Online]. Available: https://www.mobilehealth.org/
+
+
+    +   [8] A. Harris, T. Hu, J. Lee, N. Fell, and M. Sartifi. Fall detection using
+    wearable technologies and machine learning algorithms, in 2016 IEEE International
+    Conference on Big Data (2016), pp. 3974–3980.
+
+
+    +   [9] Noraxon U.S. Inc., myMOTION Research IMU (2018). [Online]. Available:
+    https://www.noraxon.com/our-products/research-pro-imu/n
+
+
+    +   [10] Noraxon U.S. Inc., myMOTION Sensor and User Receiver Manual (2018). [Online].
+    Available: https://www.noraxon.com/noraxon-download/mymotion-sensor-user-manual/
+
+
+    +   [11] M. W. Caya, G. V. Magpolvi, D. L. Aquino, R. Juran, and L. K. G. Palomo,
+    “Smartphone machine learning-based fall detection,” in 2018 IEEE International
+    Conference on Humanoid, Nanotechnology, Information Technology and Communication,
+    Control and Environment (HIITCE), 2018, pp. 412–417.
+
+
+    +   [12] H. Ydego, J. Li, S. Morton, M. Audette, C. Paulini, M. Sarkar, and H.
+    Oktauri, “Smartwatch motionlesself-away fall detection,” in 2019 IEEE Spring Conference
+    (SpringSym), 2019, pp. 1–6. 2.
+
+
+    +   [13] S. Hochreiter and J. Schmidhuber, “Short-term memory,” Neural Computation,
+    9(8):1735–1780, 1997. [Online]. Available: https://doi.org/10.1162/neco.1997.9.8.1735
+
+
+    +   [14] C. Paulini, S. Baweja, and M. Sarkar, “Optimal location for fall detection
+    using deep convolutional neural networks,” in 2019 International Conference on
+    Global Robotics and Green (GRC), 2019, pp. 1–6.
+
+
+    +   [15] Keras-datasets. [Online]. Available: https://keras.io/api/datasets_datasets.html
+
+
+    +   [16] Y. Jin, S. Zhang, X. C. Nie, and G. Gao, “Fall detection using algorithm-based
+    gradient detection,” in 2019 IEEE International Conference on Computer Vision,
+    Pattern Recognition and Artificial Intelligence (CVPR), 2019, pp. 1–4.
+
+
+    +   [17] J. Zhou and C. Liu, “A scalable tree forest method,” in Proceedings of
+    the 22nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining, Set. 2006,
+    pp. 41–50.
+
+
+    +   [18] “Understanding Random Forests.” [Online]. Available: https://www.towardsdatascience.com/understanding-random-forests-53349466662
+
+
+    +   [19] L. E. Hastie and R. A. Tibirani, “Regression trees and forests,” Journal
+    of the American Statistical Association, 101, no. 3, pp. 534–555.
+
+
+    +   [20] K. W. Kei, H. Anna, and H. Fama, “Fall detection of driving vehicle using
+    smart networks,” in 2018 International Conference on Flexible-able Computing (FPTC),
+    2018, pp. 425–430.
+
+
+    +   [21] M. Courbany and Y. Bengio, “Binary deep networks with weights and activations
+    constrained to 0 and +1,” CoRR, vol.
+
+
+    +   [22] Lattice Semiconductors, “Accelerating Deep Learning Inference on Low
+    Power Devices,” 16 May 2018 [Online]. Available: https://www.latticesiconductor.com/document/document-json?id=532784
+
+
+    +   [23] NVIDIA Corporation, “NVIDIA Tesla V100 acceleration,” 2018. [Online].
+    Available: https://www.nvidia.com/en-us/data-center/tesla-v/
+
+
+    +   [24] Y. E. Shaifa, H. Elseed, J. Donahue, K. Ray, L. G. Briggs, and S. Sharafuddin,
+    “CFFNet: Fall detection using deep learning-based feature embedding,” arXiv preprint:1409.5053.,
+
+
+    +   [25] Lattice Semiconductors, “New Lightweight CNN Methods,” https://www.latticesiconductor.com/Media/Resources/Seminars/FPGA-2020/In-depth-Network-CNN-Bnns-Apps.pdf.document-json?id=553817
+
+
+    +   [26] Deep Learning for Cafe. [Online]. Available: https://www.deeplearning.cafe/
+
+
+    +   [27] “Comparison of deep learning algorithms for fall detection and feedback
+    systems,” in 2018 IEEE International Conference on Processing and Communications
+    Workshops, 2018, pp. 318–323.
+
+
+    +   [28] N. Neury, A. Flemy, P. Amour, K. A. Bourke, G. G. Laighlin, V. Richard,
+    and J. E. Ella, “Fall detection: precision and methods,” in 2007 9th Annual International
+    Conference on Medical Engineering and Biology, 2007, pp. 1663–1668.
+
+
+    +   [29] S. Sayotava and A. Bagheli, “Implementation of test and control system
+    for assisted healthcare facilities,” in International Conference on Vision Emerging
+    Trends in Communication and Networking (ViTOCCON), 2019, pp. 1–6.
+
+
+    +   [30] C. Paulini, S. Paulini, M. Wang, A. Mihova, and M. Sarkar, “Real-time
+    indoor location tracking for assisted healthcare facilities,” International Journal
+    of Interdisciplinary Telecommunications and Networking, 15(1), no. 1, pp. 1–12.
+
+
+    +   [31] “Neuromechanics and plasticity,” [Online]. Available: https://sens.sdsu.edu/faculty/research-facilities/neuromechanics-and-plasticity-lab/'
+  merge: -1
+  img_proc: true

@@ -1,0 +1,2 @@
++   [2020 IEEE 全球人道主义技术会议 (GHTC)(华盛顿州西雅图 2020.10.29-2020.11.1)｜基于 FPGA 的跌倒检测边缘推理](README.md)
++   [2020 IEEE 全球人道主义技术会议 (GHTC)(华盛顿州西雅图 2020.10.29-2020.11.1)｜基于 FPGA 的跌倒检测边缘推理](2020-ieee-global-humanitarian-technology-conference-ghtcseat.md)
