@@ -1,0 +1,586 @@
+- pgno: 0
+  md: '# Training CNNs in Presence of JPEG Compression:
+
+    Multimedia Forensics vs Computer Vision
+
+
+    Sara Mandelli, Nico Bononetti, Paolo Bagastini, Stefano Tubaro
+
+    Dipartimento di Informatica, Informazione e Biogegneria
+
+    Politecnico di Milano, Leonardo da Vinci 32, 2033 Milano, Italy
+
+
+    Abstract—Convolutional Neural Networks (CNNs) have proven very accurate in computer
+    vision image classification tasks that require visual inspection (e.g., object
+    recognition, face detection, etc.). Motivated by these astonishing results, researchers
+    have started using CNNs to solve image problems (e.g., forgery detection). However,
+    in computer vision, image classification methods typically rely on visual cues
+    easily detectable by humans. Conversely, forensics rely on invisible traces under
+    analysis. For this reason, training a CNN to solve forensics tasks requires some
+    special care (e.g., resampling, compression, etc. can hinder forensics). We compare
+    CNN training between computer vision and forensics image classifications. Specifically,
+    we consider the effects when generating a training dataset in order to prevent
+    losing generalization, whether it is possible to ignore these effects for computer
+    vision tasks.
+
+
+    and defection [10], [11] are just examples of problems where accurate solutions
+    are nowadays based on the use of CNNs. However, despite forensic and computer
+    vision tasks share similarities, they also have differences. On one hand, forensics
+    are often hard to solve through purely-based methods as computer vision tasks.
+    As an example, considering an image tampering detection problem, defining a complete
+    model accommodating for all image forgery operations is far from being practical.
+    The other hand tasks cannot be typically solved by visual humans. As an example,
+    it is impossible to tell how many compression steps an image has gone through
+    for the shooting, even if the image quality is extremely high.
+
+
+    # I. INTRODUCTION
+
+
+    Thanks to the increasing availability of digital data and computational resources,
+    CNNs have greatly outperformed other methods for a wide variety of tasks in different
+    fields [1], [2]. For instance, they have used outstanding results to solve various
+    computer vision problems such as object recognition in the case of object detection
+    [3], image segmentation [4], image retrieval [5] and many others. These tasks
+    are categorized by two properties: (i) they are extremely challenging to solve
+    using a model-based solution (ii) it is hard to define properties that are image
+    hidden in order to give a class); they can be reasonably solved by well humans
+    through visual inspection (i.e. a human can see the object or scene clearly, given
+    the quality of the image analysis is under detect). In other words, we know what
+    we are looking for, but we cannot describe it as easily.
+
+
+    The rise of CNN-based overlaid solutions over classical methods. In the last few
+    years, also the forensics community has started replacing more classical detectors
+    with CNN-based ones. Camera model identification [6], [7], image tampering localization
+    [8], [9]
+
+
+    The impossibility of extracting forensic information by simple visual inspection
+    is due to the fact that forensics are often hidden in the details of the image
+    analysis. For instance, forensic information can be hidden in components, in frequency
+    and noise-like signals which affect a CNN for a forensic task or for a forensic
+    one can be different. As an example, we expect that typical image compression
+    and enhancements do not affect our object detection tasks (used as an adversarial
+    attack) [12]. In the other words, the class of an image that is compressed, cropped,
+    or undergoes remains the same and the operator can still recognize the object.
+    Conversely, it is hard to tell whether processing operations on forensics affect
+    as we do not easily understand which are the important cues that a CNN can capture.
+
+
+    In this paper, we specifically focus on compression introduced by training a CNN
+    for forensic tasks. JPEG is the most used image compression standard and is well-known
+    to forensics. We analyze the effect of using JPEG compression with the consequence
+    of JPEG compression with different quality factors during training and testing
+    of a CNN. We compare two results on for forensic tasks (i.e., camera model identification
+    and detection of synthetically generated images) based on two computer vision
+    tasks (i.e., image classification on ImageNet [13] and Lsun [14] datasets). For
+    each task, we use different CNNs in order to avoid biases due to some specific
+    architectures.
+
+
+    WIFS 2020, December, 6-9, 2020, New York, USA.
+
+    ©2020 IEEE.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'Results of training a CNN for a forensic task needs some care that is not necessary
+    for computer vision tasks.
+
+
+    easing it by pre-computing DCT coefficients. In [28] authors make use of a CNN
+    approach for contrast adjustment in images of JPEG compression. CNNs have successfully
+    outperformed classical detectors for the source device identification. In [29],
+    a CNN-based denoising is proposed instead of classical detectors for boosting
+    attribute performance, while in [30] the CNN is used to learn a way of camera
+    fingerprint and image noise at pixel level. The growth of such techniques like
+    generative adversarial networks (GANs) and DeepFakes [31], which has recently
+    focused on density supervision for the same task. In [32] authors show how GANs
+    can leave different traces in generated images, giving the investigator to detect
+    them. The problem of learning on new kind of GANs is considered in [33]. A DeepFakes
+    detection Residual Neural Network is proposed in [10], while in [11] an ensemble
+    of networks with an attention mechanism is employed for the same task, via a different
+    processing and augmentations techniques (including JPEG compression) when dealing
+    with detection of CNN generated images has proposed in [34].
+
+
+    We hope this approach can be helpful to practitioners and researchers using powerful
+    data-driven approaches in forensic scenarios, as they risk getting tricked in
+    learning something unrelated to the task under. We also hope our experiments will
+    motivate more research in this area.
+
+
+    # II. BACKGROUND
+
+
+    JPEG is one of the most widely used compression scheme it works as follows. Images
+    are partitioned into 8x8 non-overlapping pixel blocks, DCT Discrete Cosine Transform
+    (DCT) is computed for each block coefficients transformed into integer values
+    by the selected quantization and quality factor. The quantization step is causing
+    information loss. A lower quality factor indicates stronger quantization, then
+    lower quality of the final decoded image. Quantized values are then converted
+    into a binary stream by lossless coding. At decoding, the binary stream is decoded,
+    blocks are reconstructed by inverse DCT coefficients and the image is re-built
+    in the pixel domain.
+
+
+    JPEG leaves peculiar traces that have been studied in the forensics for many years.
+    The 8x8 blocks leaving characteristic blocking artifacts that can be exploited
+    to tell whether an image underwent JPEG compression [15]. It is also known that
+    quantization coefficients affect the way sharp edges depend on the properties
+    of an image one has. This can be exploited by aligned and non-aligned JPEG compressions
+    [16], [17], [18]. Alternatively, of [19], [20] propose methods based on the first
+    digits'' logic to detect multiple compressions. The same task is accomplished
+    in [21] by means of nonlocality, which is prone to the negative nature of history.
+    Primary quantization step in double compression is estimated by statistical modeling
+    of DCT in [22]. The JPEG compression pipeline has reveal several degrees of freedom
+    in its definition (the quantization rule, the quantization matrix corresponds
+    to a quality factor, etc.), it is also possible to distinguish between implementations
+    (i.e., different software used for the compression) [23],
+
+
+    In order to investigate the image of JPEG CNN for multimedia and computer vision
+    tasks, we consider two realistic scenarios as case studies: (i) the dataset analysis
+    shows JPEG images with respect to their origin; (ii) the dataset has been compressed
+    with unknown quality factor. An exhaustive description of each scenario.
+
+
+    # A. JPEG Misalignment
+
+
+    While sharing and uploading a photo over social networks, it often happens that
+    images are cropped without their origin. As a matter of fact, this operation is
+    performed by most of users paying attention to the pixel coordinates of the cropped
+    area, as it is more important to prevent the present pictures that JPEG-compressed
+    images are cropped without the 8x8 grid pixel character identified by true. If
+    the image is then further saved as JPEG, the original one is lost.
+
+
+    # B. CNN in Multimedia Forensics
+
+
+    In the last few years, following a common trend in new fields, CNNs have outperformed
+    classical detectors. Camera model identification is detected in [7], [25], where
+    deep features are extracted from images by means of CNNs and then fed to model
+    based algorithms for the classification task. In [26], [27] authors show how it
+    is possible to train a CNN to detect JPEG compression,
+
+
+    When collecting images "in the wild", the fact that images may come from different
+    cameras, may be post-processed or uploaded on social media many times has to
+
+
+    # B. Quality factor of JPEG compression
+
+
+    When a CNN is used to solve the problem, of JPEG misalignment can cause issues
+    depending on the specific task. In Section IV, we perform experiments using both
+    fore images and computer vision tasks.
+
+
+    Authorized licensed use to: San Francisco State Univ. Published on June 18, 2021
+    at 18:05:00 UTC from IEEEpl. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'for granted. Likewise, it is well known that each camera model, image editing
+    or social media compress images using different JPEG implementations and/or parameters
+    (e.g., quantization matrix, quality factors, etc.). As a result, we can state
+    that a variety of differently compressed JPEG images can be found on the internet.
+
+
+    Compressing images with different quality factors leaves peculiar features. For
+    this reason, we are investigating how quality of JPEG compressed images affects
+    CNN, whether the tuning phase can be used to improve results in case different
+    JPEG compressions are used
+
+
+    # IV. EXPERIMENTAL SETUP
+
+
+    # A. Datasets
+
+
+    In order to provide a sufficiently general idea of the impact of JPEG compression
+    on forensics and vision problems, we consider two tasks as per
+
+
+    **Multimedia Forensics.** Regarding forensics, we tackle two problems: (i) camera
+    model identification, i.e., identifying the source quality of an image; (ii) detection
+    of CNN-generated images from original photographs. If the first problem is maturing,
+    the latter taking the lead in recent years due to the widespread distribution
+    of images and videos with fake content produced by CNN-based technologies. To
+    investigate these problems, we use well known datasets available in the literature.
+    For camera model identification, we exploit datasets from the Vision [35], considering
+    the 28 available camera models. For each camera model, we use the natural images
+    (per model), extracting 10 patches per image with a size of 512 x 512 pixels.
+    Considering the case of CNN-generated images, we use pairs of generated/original
+    images for CNN-generated image categories (e.g., AppleOrange, SummerWinter [36]).
+    Specifically, we select images from category, extracting one patch per image and
+    resizing to 224 x 224 pixels.
+
+
+    **Computer Vision.** For every common vision task, we consider image object recognition,
+    i.e., learning to classify objects to the specific subject depicted. We investigate
+    classification performance of CNNs over two datasets. The first dataset is selected
+    from the well known ImageNet database [13]. The second dataset is selected from
+    Lsun dataset [14]. From images from 20 different categories are selected. In both
+    cases, we extract one patch per image, with a common resolution of 224 x 224 pixels.
+    In detail, we pack around 1000 and 2000 images per class for ImageNet and Luns,
+
+
+    # B. Training and evaluation
+
+
+    We investigate four networks. Two networks are selected from the recently proposed
+    EfficientNet of models [37], which exhibit very good results in both vision and
+    forensics tasks. We select EfficientNetB0 and EfficientNetB4 as the models. The
+    other networks are known as ResNet50 [38] and XceptionNet [39
+
+
+    Following a common procedure in CNN training, we initialize the networks using
+    those trained on ImageNet. All CNNs are trained using cross-entropy loss and Adam
+    optimizer with default parameters. The learning rate is initialized to 0.001 and
+    decreased by a factor of 10 when the loss does not decrease for 10 epochs. Training
+    stops if does not decrease for more than 20 epochs, we pick the best model using
+    validation set.
+
+
+    Concerning the dataset split, we keep 80% of the images for training (divided
+    in 85%/15% training and validation sets), leaving the remaining 20% for evaluation.
+    All experiments are performed on the set-closed scenario, i.e., a given query,
+    the correct category index is identified with the accuracy. After the answer is
+    received, the prediction, the highest CNN score is measured with the accuracy.
+    The average accuracy per category as evaluated
+
+
+    All tests are run on a workstation equipped with one Intel® Gold 6224 (8 Cores
+    @ 3.30 GHz, RAM 256 GB), NVIDIA RTX 3090 (CUDA Cores @ 1350, 24 GB), running Ubuntu
+    18.04.2. We use Albumentations [40] as data augmentation for compressing images
+    in JPEG, while we use PyTorch [41] as Deep Learning framework. The code is available
+    at https://github.com/polyphonic/pytorch-forensics-vc-
+
+
+    # C. Experiments
+
+
+    The four tasks and networks have been tested for considering the impact of two
+    JPEG compression aspects.
+
+
+    **JPEG-midalignment.** In this experiment, for training and testing, we consider
+    the two problems as the $8 \times 8$ JPEG grid which starts from the top-left
+    pixel; (ii) images are not aligned with the JPEG grid, which starts from any pixel
+    position. To simulate this, effect, we compress images using a quality factor
+    of 100. This guarantees that images maintain their visual quality in any way.
+    To obtain image patches matching the JPEG level, we select patches by cropping
+    the images in a $8 \times 8$ grid. To obtain patches not aligned with the grid,
+    we extract them in random methods.
+
+
+    # Quality factor of JPEG compression.
+
+
+    In this experiment, we consider that evaluation images may be compressed with
+    different quality factors $QF \in \{50, 60, 70, 80, 90, 95, 99\}$. We perform
+    all combinations'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# V. RESULTS
+
+
+    JPEG-grid misalignment, Fig. 1 reports for the problems of camera model identification
+    (a), CNN-generated image detection (b) and image classification on the extracted
+    subsets of ImageNet (c) and Lsan (d) databases.
+
+
+    Considering multimedia forensics, we notice that being careful of the JPEG grid
+    alignment of the extracted patches is paramount for achieving accuracy. When we
+    train on JPEG-aligned patches and test on JPEG compressed, accuracy drops significantly.
+    This is especially true for model-generated images (Fig. 1a), where all CNNs report
+    accuracy above 0.88, except for the case of training on JPEG-aligned images and
+    testing on random copies.
+
+
+    On the contrary, if we consider the vision tasks (Fig. 1c and 1d), training/or
+    testing on patches with or without the grid does not change the achieved results
+    in a systematic way. Results are almost uniform for all the networks. Because
+    that CNNs are really capturing some information related to visual cues which are
+    not hindered by a simple JPEG-grid misalignment.
+
+
+    Quality factor of JPEG compression. 2, 3, 4 and 5 depict related investigations
+    on the JPEG quality factor for EfficientNetB0, EfficientNetB4, ResNet50 and XceptionNet5.
+
+
+    In these experiments, we notice that multimedia forensics suffers from JPEG quality
+    factor more than common vision tasks. For instance, looking at the camera model
+    identification in training phase can show hinder CNN performances: by training
+    on augmented data with Q = 50, accuracy is from less than 85. Regarding all the
+    multimedia forensics, selecting a lower quality factor for training alignment
+    seems to allow better coverage in testing phase with high quality
+
+
+    ![](img/fec141b66459fe543fa0a6a8edee8320_3_0.png)
+
+
+    Fig. 1 Accuracy as a function of JPEG-grid alignment in training/or testing, for:
+    (a) camera model identification; (b) CNN-generated image detection; (c) image
+    classification on ImageNet; (d) image classification on Lsan.
+
+
+    Factors, indeed, training on augmented data with Q = 99 allows some amount of
+    above alignment and accepts results only when the test factor matches the one.
+    On the contrary, as JPEG factor decreases, results present a flat behavior for
+    all the possible test Q. This phenomenon occurs or is rarely encountered in vision
+    tasks, where the dynamic range of output is much more than the average value in
+    all examples. This proves that vision tasks are not influenced by training/specific
+    JPEG configurations, and results maintain accurate when the image is preserved
+    and objects remain detectable.
+
+
+    # VI. CONCLUSIONS
+
+
+    In this work, we studied the effect of JPEG compression on CNNs applied to multimedia
+    forensics. In particular, we considered the effectiveness of training and testing
+    under different quality factors. We compared the results to those obtained in
+    the same conditions on two vision tasks.
+
+
+    Results show that CNNs are extremely delicate in the multimedia forensics scenario.
+    If we train a CNN on uncompressed images, it fail when applied to compressed ones.
+    If we train a CNN only considering a specific JPEG-grid alignment, vision tasks
+    involving analysis and identification are significantly more robust in JPEG compression,
+    given that image visual quality remains decent.
+
+
+    In the light of these results, we will pay particular attention whenever we train
+    a CNN or other more sophisticated data-driven'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '![](img/fec141b66459fe543fa0a6a8edee8320_4_0.png)
+
+
+    Fig. 2. EfficientNetB0 as a function of training augmentation for the tasks of
+    (a) camera model identification, (b) CNN-generated image detection, (c) image
+    classification on ImageNet and Lsun subsets.
+
+
+    ![](img/fec141b66459fe543fa0a6a8edee8320_4_1.png)
+
+
+    Fig. 3. EfficientNetB4 as a function of training augmentation for the tasks of
+    (a) camera model identification, (b) CNN-generated image detection, (c) image
+    classification on ImageNet and Lsun subsets.
+
+
+    ![](img/fec141b66459fe543fa0a6a8edee8320_4_2.png)
+
+
+    Fig. 4. ResNet50 as a function of training augmentation for the tasks of (a) camera
+    model identification, (b) CNN-generated image detection, (c) image classification
+    on ImageNet and Lsun subsets.
+
+
+    ![](img/fec141b66459fe543fa0a6a8edee8320_4_3.png)
+
+
+    Fig. 5. XceptionNet as a function of training augmentation for the tasks of (a)
+    camera model identification, (b) CNN-generated image detection, (c) image classification
+    on ImageNet and Lsun subsets.
+
+
+    method for forensic purpose, as we want to avoid getting biased by some specific
+    global processes.
+
+
+    # ACKNOWLEDGMENT
+
+
+    This material is based on research sponsored by DARPA and Air Force Research Laboratory
+    (AFRL) under agreement num-'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'for be8750-16-2-2013. The U.S. Government is authorized to reproduce and distribute
+    reprints for Governmental purposes notwithstanding any copyright notion. The views
+    and conclusions herein are those of the authors and should not be interpreted
+    as necessarily expressed or implied of DARPA or Air Force Research Laboratory
+    (ARFL) or the U.S. Government. Hardware was generated by NVIDIA Corporation.
+
+
+    # REFERENCES
+
+
+    +   [1] D. Wang and J. Chen, "Supervised speech separation based on deep learning:
+    An overview," ICASSP-International Conference on Audio, Speech, and Processing,
+    2020, p. 1170–11726.
+
+
+    +   [2] M. Reichstein, G. Pavaskan, B. Stevens, M. Jung, and J. Schlagmayfer,
+    "Deep learning for data-driven earth system monitoring," Science Advances, 2019,
+    p. 556–594.
+
+
+    +   [3] S. Ren, K. He, R. Gribsk, and S. Sun, "Fast fcmnr: Real-time audio source
+    separation using deep learning," information processing systems, 2019, p. 911–920.
+
+
+    +   [4] O. Ronneher, P. Fischer, and J. Brox, "Convolutional networks for semantic
+    segmentation in medical imaging," Medical image and computer-aided surgery. Springer,
+    2017.
+
+
+    +   [5] J. Yue, H. Fang, and L. Su, "Exploiting local features of deep networks
+    for image recovery," Proceedings of IEEE Conference on computer vision and pattern
+    recognition, 2015, p. 53–61.
+
+
+    +   [6] A. Tuama, F. Colby, and M. Stamann, "Character-based image restoration
+    and video quality enhancement," IEEE International Conference on Information Processing
+    and Applications (IWIPA), 2016.
+
+
+    +   [7] L. Bonardi, D. Barifi, J. B Pesta, J. El, and D. Subaru, "Deep video restoration
+    using deep neural networks," IEEE Signal Processing Letters, vol. 24, p. 259–263.
+
+
+    +   [8] L. Bonadi, S. Damerli, J. B Pesta, J. El, and D. Subaru, "Targeting detection
+    and localization of camera-based scene completion," IEEE International Conference
+    on Computer Vision Workshops (CVPRW), 2017, p. 1855–1864.
+
+
+    +   [9] D. Kozlovina and L. Verbeek, "A CNN-Based Model for Face Classification,"
+    IEEE Transactions on Information Processing and Science, vol. 15, p. 149–150.
+
+
+    +   [10] D. Guinea and J. El, "Deep video deblocking using recurrent neural networks,"
+    2018 IEEE International Conference on Advanced Signal and Signal Awareness (ASAS).
+
+
+    +   [11] N. Bonneti, D. Camassi, S. Mandelli, L. Bonardi, and D. Subaru, "Deep
+    learning for video-based denoising using CNNs," arXiv preprint:2006.04776,
+
+
+    +   [12] S. Huang, N. Peragot, I. Goodfellow, J. Sun, and P. Ahmed, "Attention-based
+    models for image generation," arXiv preprint:1702.00234,
+
+
+    +   [13] J. Deng, D. Wang, R. So, L. Li, K. Li, and J. Fei, "Feat-Net: A multi-scale
+    fusion network for image super resolution," IEEE image conference, 2019, p. 249–255.
+
+
+    +   [14] J. Wang and Y. Zhang, "A deep learning approach for bitmap compression
+    of a Large Scale Image Dataset in the Loop," arXiv preprint:1506.03565,
+
+
+    +   [15] T. Bianchi and A. Petra, "Detection of Non-JPEG Images using CNN," IEEE
+    Transactions on Information Forensics and Security (TIFS), vol. 7, p. 842–848.
+
+
+    +   [16] M. Bardi, A. Costano, and L. Subaru, "Identification of tampered JPEG
+    images using deep learning," IEEE International Conference on Systems and Circuits,
+    2019.
+
+
+    +   [17] S. Miliani, M. Stagliardi, and T. Subaru, "Discriminating multiple JPEG
+    compressions using first digits," APS Transactions on Signal and Information Processing,
+    vol. 39, p. 419.
+
+
+    +   [20] C. Pasquini, G. Bott, and P. Perez, "Multiple JPEG compression by methods
+    of Benford-Curvature," 2014 IEEE International Conference on Information Forensics
+    and Security (WIFS), 2014, p. 113–118.
+
+
+    +   [21] S. Mandelli, N. Bonestini, P. Bastagni, V. Lipari, and T. Subaru, "Multiple
+    JPEG Detection using Task-Driven Denoising Neural Networks," 2018 IEEE International
+    Conference on Acoustics, Speech and Signal Processing (ICASSP), 2018, p. 2110–214.
+
+
+    +   [22] J. Li and R. Constantine, "Evaluation of compression artifacts in Double
+    JPEG Images Using a Model of Discrete Cosine Transform," IEEE Access, vol. 7,
+    p. 76203–76216,
+
+
+    +   [23] S. Agarwal and F. Hariwal, "Photo forensics from JPEG images," 2017 IEEE
+    International Conference on Forensics and Security (WIFS), 2017.
+
+
+    +   [24] N. Bonneti, L. Bonardi, and P. Subaru, "Deep image detection using convolutional
+    neural networks," 2019 IEEE International Conference on Information Processing
+    and Applications (IWIPA).
+
+
+    +   [25] B. Bayar and M. C. Stamann, "Texture Source Camera Model Identification
+    using Deep Learning," International Conference on Acoustics, Speech and Signal
+    Processing (ICASSP), 2018,
+
+
+    +   [26] L. Bonardi, N. Bonneti, P. Bastagni, A. Costano, M. Galagni, and D. Subaru,
+    "Target-based video restoration using convolutional neural networks," Journal
+    of Computer Vision, vol. 29, p. 1155–1168.
+
+
+    +   [27] W. Ahn, S. Moon, H. Lee, and S. Choi, "End-to-end deep denoising with
+    a 3D convolutional network in the DCNN," 2018, p. 4592–4598.
+
+
+    +   [28] M. Bardi, A. Costano, and E. Bondi, "CNN-based Detection of Generic Artifacts
+    using Deep Post-Processing," 2019 IEEE International Conference on Computer Vision
+    (WICV).
+
+
+    +   [29] Y. Wang and J. Johnson, "CNN-Bonning: Bayesian Source Camera Attribution
+    with Deep Learning," IEEE International Conference on Information Processing and
+    Applications (IWIPA), 2019.
+
+
+    +   [30] L. Bonardi, P. Subaru, and E. Elbek, "Overpainting: an overview," IEEE
+    Journal of Selected Topics in Signal Processing, no. 1, 1–10.
+
+
+    +   [31] F. Marra, D. Galagni, L. Veroldi, and G. Pagi, "GAN-based image restoration,"
+    IEEE International Conference on Computer Vision and Pattern Recognition (CVPR),
+    2019, p. 506–511.
+
+
+    +   [32] F. Marri, C. Soti, and. G. Subaru, "Inertial camera image restoration
+    using GANs," IEEE International Conference on Information Processing and Applications
+    (IWIPA), 2019.
+
+
+    +   [33] Y.-S. Wang, Y. Wang, R. Owens, and A. E. Afros, "CNN-generated images
+    are easily to spot, for now," in Conference on Computer Vision and Pattern Recognition,
+    2020.
+
+
+    +   [34] D. Shullani, F. Montani, I. Al Shah, and A. Priya, "VISON: A deep learning-based
+    image source detector," IEEE Transactions on Information Processing, vol. 15,
+    no. 7, 2018.
+
+
+    +   [35] J.-Y. Yu, T. Park, I. Choi, and A. Efros, "Unpaired-Image Translation
+    using Convolutional Networks," in IEEE International Conference on Computer Vision
+    (ICV), 2021.
+
+
+    +   [36] M. Tan. Q and V. K. Lee, "Rethinking: Scaling method for deep learning
+    based image super resolution," Proceedings of the IEEE conference on computer
+    vision, 2021.
+
+
+    +   [37] K. He. X. Zhang, S. Ren, and J. Sun, "Deep residual learning for image
+    recognition," in Proceedings of the IEEE conference on computer vision, 2016.
+
+
+    Authorized licensed to use this: San Francisco State University. Downloaded on
+    June 18, 2021 at 18:00:58 UTC IEEE Xplore. Rights reserved.'
+  merge: -1
+  img_proc: true
