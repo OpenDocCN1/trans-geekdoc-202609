@@ -1,0 +1,599 @@
+- pgno: 0
+  md: '# # A Systematic Literature Review of Machine Learning Applications for Port
+    Operations
+
+
+    Sara E Mekkaoui
+
+    Equipe AMIPS
+
+    Ecole Management d''Ingénieurs
+
+    Mohammamed V University in Rabat
+
+    Rabat, Morocco
+
+    saraelemekkaoui@research.emci.ma
+
+
+    Louba Benaoud
+
+    Département Sciences de la Gestion
+
+    Université du Québec à Rimouski (UQAR)
+
+    Campus de Lévis
+
+    Quebec, Canada
+
+    louba_benaoud@uqar.ca
+
+
+    Abdelaziz Berrado
+
+    Equipe AMIPS
+
+    Ecole Management d''Ingénieurs
+
+    Mohammamed V University in Rabat
+
+    Rabat, Morocco
+
+    berrado@dei.cmi.ma
+
+
+    **Abstract—**In transportation, there is a need for Machine Learning (ML) to create
+    intelligent solutions for many issues. In ports, there has been a long focus on
+    optimization and simulation modeling, but ML still needed in building more complex
+    decision systems for supports for port operations. To evaluate the ML application
+    for port operations, we conducted this Systematic Literature Review (SLR) in order
+    to select and analyze the relevant papers. This paper reports the analyzed protocol
+    and highlights the gaps that could be addressed in future works.
+
+
+    **Keywords—** machine learning, shipping, analytics, ports, systematic literature
+    review
+
+
+    # I. INTRODUCTION
+
+
+    The application of Machine Learning (ML) techniques has revolutionized transportation
+    systems [1]. Ports face various challenges due to increasing activity and complex
+    processes. Ports as an international transport system is an example of case study
+    offering attractive research opportunities by their complex network. In overcoming
+    some issues related to port operations and underining the limitations that could
+    be considered in future works.
+
+
+    We conducted this Systematic Literature Review (SLR) according to the procedure
+    adopted by Kitchenhem [2]. The proposed procedure is adopted to support the software
+    engineering complexity and what we could support. The review will be carried out
+    through three stages. The first step is planning, the second is execution and
+    the last is reporting. The first step of planning includes the review objectives
+    and defining a protocol. The SLR consists of searching and selecting papers according
+    to the refined protocol. After extracting and synthesizing information, the last
+    phase of the reporting will be communicating the results in various forms. The
+    objective of this study is to provide a SLR to Machine Learning applications for
+    port operations efficiency. The background is given in the next section. In section
+    3 we describe the research methodology, and in section 4 we present the results.
+    This work will draw conclusions.
+
+
+    container terminals, have been abundant and several proposed relevant reviews
+    in this field [13–12]. In addition to the widespread use of outdated modeling,
+    simulation has been an important tool to develop more than 200 models for ports
+    and container terminals [13]. The existing literature has many issues from resource
+    allocation and scheduling to port operations, including scheduling, logistics,
+    and many more. Optimization and simulation models, data-driven approaches have
+    helped analyzing the effect of variables on the port''s performance, machine learning
+    analytics would be benefiting the integration of machine learning. Optimization
+    and simulation methods, methods to extract the full information to better support
+    port under. The growing volume of trade has pushed port operations to adopt improving
+    the efficiency [14]. The development of maritime logistics has been useful in
+    monitoring and controlling operations. This development has led to the generation
+    of data in terms of volume and unit cost analytics and optimization methods. These
+    systems can help in limiting various important of operations.
+
+
+    Today, Business industries helps drive their operational efficiency, and able
+    to the benefit in solving complex problems. Data analysis and statistics constitute
+    the main benefits of Business Intelligence [15]. Analytics are meant to find patterns
+    and decisions using statistical analysis, forecasting, predictive modeling and
+    optimization. Machine learning can boost the prediction in order to assist human
+    decisions and operations. The technologies have been discussed in [16] as a future
+    merging field and a single integrated system. They also acknowledged the importance
+    of mixing analytics and operations for achieving positive results in real case
+    applications.
+
+
+    Through this SLR, we aim to contribute on the application of ML for port operations
+    and determine further research directions that would help in understanding port
+    system features and executing operations.
+
+
+    # II. BACKGROUND
+
+
+    Today, intelligent systems can assist port operations in their day-to-day work
+    are required. For that, the application of operations in solving port''s issues
+    potentially is
+
+
+    # III. REVIEW
+
+
+    The last reviews related to the application of ML techniques for port operations
+    is the principal motivation behind conducting this work. Therefore, the objective
+    of this review is to provide a comparison between the existing works with the
+    collection and evaluation of relevant studies. Hereafter, we describe the methodology'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'followed by your First, all of we the research questions, then we follow a
+    search process to identify the primary studies, after that, we keep only relevant
+    works by applying the selection criteria and the quality assessment, next, we
+    extract data to answer the pre-defined questions, and finally we synthesize our
+    results.
+
+
+    +   • Studies focusing on weather nearby port and harbor areas.
+
+
+    +   • Studies on terrific trends.
+
+
+    +   • Studies on planning and design of future ports.
+
+
+    +   • Studies on ship routing, and stowage planning.
+
+
+    +   • Studies in written languages other than English.
+
+
+    # A. Research Questions:
+
+
+    In purpose of our objective, we formulated the research questions in order to
+    determine the studies'', research focus and outcomes, the ML techniques and techniques
+    as well as data sources, their geographical focus and the type of terminals they
+    addressed. The research questions formulated as follows:
+
+
+    +   • RQ1. What are the sources and the selected studies and how many of publications
+    were excluded over time?
+
+
+    +   • RQ2. What are the researched areas and topics?
+
+
+    +   • RQ3. What are the performed ML techniques, and data sources?
+
+
+    +   • RQ4. What are the studied geographic areas and type of terminals?
+
+
+    Regarding RQ1, we identified the papers of our research, the electronic libraries
+    they were extracted from and journals they were published. To answer RQ2, we proposed
+    a classification of research areas and sub fields. With regards to RQ3, if we
+    identified the problem formed by classification, regression, or reinforcement
+    learning, then we registered the techniques and the sources of data. For RQ4,
+    we used the studied port and the type of ships and terminals.
+
+
+    # TABLE I APPLIED FILTERS FOR DIGITAL LIBRARY
+
+
+    | Digital Library | Search Filters |
+
+    |---|---|
+
+    | ASCE | Journal of transportation engineering, Part A: Systems; Journal of waterway,
+    port, and ocean engineering; Technical: numerous models |
+
+    | IEEE Xplore | All results exposed |
+
+    | JSTOR | Content type; Subjects: computer science, engineering; statistics and
+    transportation studies |
+
+    | SAGE | Journal: Artificial intelligence; Artificial intelligence in Big Data
+    Research Computers & Engineering Data Knowledge Engineering Decision Support Systems
+    of Artificial Intelligence; European Journal of Operational Research Transportation
+    Record; Content types; Language: english; The first 1000 results were exposed.;
+    Subject: Mathematics and statistics |
+
+
+    # B. Search Process
+
+
+    In order to identify the primary potentials, we first step of search on the digital
+    libraries: ASCE, IEEE Xplore, SAGE, and JSTOR. We used the search string (port
+    OR HARBOR OR search OR wharf OR water AND ‘mining’ OR ‘statistical’ OR ‘machine
+    learning’) to collect relevant literature. The results are presented in Table
+    I, which the step was applying filters were chosen to close primary studies. In
+    the third step we scanned the titles, keywords and abstracts if we needed to find
+    the relevant studies in relation with the defined area of this SLR.
+
+
+    # D. Study quality assessment.
+
+
+    After filtering papers according to the criteria, we need to evaluate the quality.
+    We planned to plan the papers considering their methodologies, if they justified
+    the use of ML techniques or not, and we used Scimager for analysis, CORE for for.
+    As we found more than three papers, we didn''t apply the quality assessment rules.
+
+
+    # E. Data extraction
+
+
+    Data extraction from the selected papers is an important step for the research
+    questions. In we used the data form to extract the needed information:
+
+
+    +   • Year of publication.
+
+    • Authors.
+
+    • Source of publication.
+
+    • Application area and focus.
+
+    • Data source.
+
+
+    +   • Task, regression, classification, unsupervised Techniques; or reinforcement
+    learning.
+
+    • Techniques: linear models, Neural Networks, Additive models, Methods, Trees,
+    etc.
+
+    • Cargo type: bulk, Ro-Ro, etc.
+
+    • Port of study and region name.
+
+
+    # C. Selection criteria:
+
+
+    This is the final and first step to reach the most relevant studies, we need to
+    sort out the papers by some criteria. The criteria we opted to include or exclude
+    papers are:
+
+
+    +   1) Inclusion criteria:
+
+
+    +   • Studies with an impact of ML with an objective of bringing optimization
+    within the port system. Here the port system is designed from anchorage to inland
+    gates. In instance, choosing the inland transport (truck, train, etc.) is considered
+    in scope.
+
+
+    +   2) Exclusion criteria:
+
+
+    +   • Studies without an impact on port system.
+
+
+    # F. Synthesis of the extracted data:
+
+
+    Data will be tabulated and summarized to answer the pre-established research questions.
+    Regarding RQ1, we'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "presents work related to every digital library or conference, a histogram which\
+    \ will show the number of papers published per year. For RQ2, a table will display\
+    \ the research area and sub fields, the classification system is proposed to reflect\
+    \ the effects of the selected papers. With regards to RQ3, where ML techniques\
+    \ were used, we also measured the works using different optimization methods to\
+    \ boost the quality of their models, and the various sources of data. RQ4 will\
+    \ be answered by a pie chart of the different regions and the ship types to be\
+    \ evoked as well.\n\nonly one paper. Cargo forecasting and turnaround estimation\
+    \ are the most studied-fields. However, some topics are poorly or not covered\
+    \ where there is substantial work to be done. For instance important issues such\
+    \ as, congestion, and resource utilization have not been explored enough.\n\n\
+    # IV. RESULTS AND DISCUSSION\n\nAfter performing the search process and selection\
+    \ criteria defined in our previously, we obtained 310 studies. The outcomes are\
+    \ shown in Table II, the first step of using only the search string retrieved\
+    \ a large number of 180005 papers, after application of appropriate filters we\
+    \ got 25251 which were reduced to 423 studies based on title and abstract, 30\
+    \ papers responded to the set of criteria consisting of 27 articles and 35 conference\
+    \ papers.\n\n![](img/9fd9b088bf65dd05939af614424f0fce_2_0.png)\n\nTABLE II. SEARCH\
+    \ RESULTS BY LIBRARY AND STEP\n\n| Digital Library | Phase 1 | Phase 2 | Phase\
+    \ 3 | Phase 4 |\n| --- | --- | --- | --- | --- |\n| ASCE | 29900 | 784 | 3 | |\n\
+    | IEEE Xplore | 19334 | 1935 | 21 | |\n| SAGE | 25200 | 213 | 83 | 12 |\n| Science\
+    \ Direct | 54480 | 17719 | 73 | |\n| JSTOR | 30319 | 5312 | 5 | 2 |\n| Taylor\
+    \ & Francis | 7787 | 650 | |\n| Total | 180005 | 25251 | 423 | 30 |\n\nTABLE III.\
+    \ CLASSIFICATION OF PAPERS BY USER\n\n| Library | Journal name/Conference | Papers\
+    \ |\n| --- | --- | --- |\n| ASCE | Academic Journal of Shipping Logistics | [25]\
+    \ |\n| | Computers and Industrial Engineering | [26] |\n| | Decision Support Systems\
+    \ | [27][29] |\n| Science | Ocean Engineering | [31] |\n| | Research in Transportation\
+    \ Science | [33] |\n| | Transportation Research | [34] |\n| | Transportation Research\
+    \ | [35][36] |\n| | Annals of Operations Research | [37] |\n| | Information Technology\
+    \ and Management | [38] |\n| | Journal of Intelligent Management | [39] |\n| |\
+    \ Journal of Transportation Engineering and Complexity | [40] |\n | Maritime Economics\
+    \ and Logistics | [42][43] |\n | Operational Research | [44] |\n| | Journal of\
+    \ Port, Coastal, and Ocean | [17][18] |\n| IEEE | Xplore | [20][22] |\n| SAGE\
+    \ | Transportation Research: Journal of the Transportation Research | [23][24]\
+    \ |\n| Taylor & Francis | Journal of Operational Research | [45] |\n| | Marine\
+    \ Online | [46] |\n\n**A. Classification of papers by topic and year**\n\nTo address\
+    \ RQ1, we quantified the selected papers by digital library and year. From Table\
+    \ II we can see that Science Direct is the free group of all the included studies.\
+    \ It is provided by Springer, while the rest of papers between 77% and 94% each,\
+    \ and JSTOR is completely free. However they were dispersed among 31 libraries\
+    \ and 35 conferences in Table 1. The number of papers per year, as we see in Fig.\
+    \ 1, many except for 2017 where 7 papers were published. The first paper was published\
+    \ in 2006 and the papers distributed as as we expected.\n\n**B. Classification\
+    \ of papers by research area**\n\nIt is important to classify the studies according\
+    \ to their research area. Here are five areas: planning & development, safety\
+    \ & security, storage yard area and transport area. For each area a number of\
+    \ topics is defined to identify the issues handled by the papers. The classification\
+    \ of papers is presented in Table IV where we can see that the research areas\
+    \ are on footing except for the safety & security segment by\n\nTABLE IV. CLASSIFICATION\
+    \ OF PAPERS BY RESEARCH AREA\n\n| Research area | Research focus | Papers |\n\
+    | --- | --- | --- |\n| Port & development | Cargo forecasting | [36] |\n| | Traffic\
+    \ flow | [21][38] |\n| Safety & Security | Birth allocation model | [37] |\n|\
+    \ | Port congestion | [22] |\n| | Process execution | [19][26] |\n| | Shipping\
+    \ schedule | [25][26] |\n| | Process time | [35][49] |\n| Storage yard area |\
+    \ Reshuffling operations of containers | [33] |\n| | Yard crane scheduling selection\
+    \ and traffic | [17][31][27][24][28][39] |\n| Transport area | Truck turnaround\
+    \ \n| Vehicle routing and dispatching | [34] |"
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# C. Studies'' classification for ML tasks and techniques, and data sources:
+
+
+    Different formulations were proposed, 10 papers treated classification problems,
+    17 papers used reinforcement learning, and 4 paper dealt with unsupervised learning.
+    Among techniques, artificial neural networks (ANN) are followed by them employed,
+    such as Decision Trees (DT), Linear Regression (LR) and Support Vector Machines
+    (SVM). Some works used the rest of the methods: heuristic search for models parameters
+    settings ([31], [38], [41], [44]), such as particle swarm optimization, annealing,
+    and genetic algorithms. Hence, future studies should consider how to build models
+    for heterogeneous data, many sources used. Terminal operation was the most employed,
+    also data from port operators as service providers, port authorities or companies.
+    From a ship tracking system, known as the Automatic Identification System, were
+    also in some models [22]
+
+
+    # V. CONCLUSION
+
+
+    In this SLR of ML applications for port operations, presented papers that were
+    selected according to a specific methodology to sieve the different operations
+    to keep perfect papers. After synthesis and having obtained the results, we can
+    say that this review deals mainly with port operations. Only 30 papers were identified
+    as review, where we can find hundreds of optimization and simulation models and
+    many relevant reviews in this field. Hence, we need more works in ML applications
+    for various scenarios such as inland transport, maritime transport, port planning
+    and development & safety. From point of view, the used techniques could be improved
+    using some methods of defining models parameters as heuristic search algorithms.
+    Also, the terminal techniques used are compared with other of seaports. Therefore,
+    future works should consider other terminal and ship types as bulk terminals where
+    uncertainties are magnified. For instance, the study on bulk shipments from high
+    frequency led to results over such last times, vessel''s stability, and vessel''s
+    availability. Also, the operators in containers are standardized and might differ
+    slightly from one to other in bulk terminals different depending on the type of
+    cargo and different strategies. We highlight the need of working on other geographic
+    areas.
+
+
+    Fig. 2. Frequency of ML techniques
+
+
+    ![](img/9fd9b088bf65dd05939af614424f0fce_3_0.png)
+
+
+    REFERENCES
+
+
+    [1] X. Xu, J. Liu, R. Wang, and C. Jian, Smart port operations. Singapore: Springer,
+    2019.
+
+
+    [2] B.Aitchcock, "Procedures for Performing Systematic Reviews", report-SE-04201,
+    Univ., and report 04000-IT1.1, National University of Australia, 2004.
+
+
+    [3] S. Stevens, D. Volkov, and B. Stahlhof, "Container operations and operations
+    research: classification and literature review", Operations Research, 57, no.
+    4, 2009.
+
+
+    [4] R. Stahlhof, and S. Volkov, "Port operations research at container terminals:
+    a literature update", Or. oper., 30, no. 1, pp. 1–58, 2022.
+
+
+    [5] S. Theofilis, M. Bile, and M. M. Golias, "Container terminal operations: a
+    review of research trends, challenges, and prospects", Trans. Port Res., 210,
+    no. 22, pp. 100–215, 2022.
+
+
+    [6] C. Biewert, and M. Feist, "A survey of berth analysis and cargo scheduling
+    in container terminals", J. Oper Res., 202, no. 3, pp. 615–627, 2021.
+
+
+    [7] H. J. Carlo, I. V. Fis, and K. J. Roebuck, "Operations strategies in container
+    terminals: time overview, trends and research directions", Flexible and Service
+    Management, vol. 27, no. 2, pp. 223–244, 2022.
+
+
+    [8] H. J. Carlo, I. V. Fis, and K. J. Roebuck, "Terminal operations in container
+    terminals: Literature review, trends, and research directions", J. Eur of Oper.
+    Res., vol. 255, no. 2, pp. 412–430, 2014.
+
+
+    [9] H. J. Carlo, and K. Roebuck, "Terminal operations in container terminals:
+    Literature review and research scope", J. Eur of Oper. Res., vol. 236, no. 1,
+    pp. 13–14, 2013.
+
+
+    # D. Studies'' classification for geographic area and type of tasks:
+
+
+    There is huge focus on containership as 24 papers dealt with issues related to.
+    Only one paper dealt with terminal and one other Ro-Ro, 4 papers didn''t specify
+    the type of ships or terminals and they can be considered. Figure 3 shows decomposition
+    of the geographic areas of selected papers. 16% reported the region, Asia and
+    Europe were fairly studied other regions were not considered as Africa. Consequently,
+    we need works on other regions that have not received much attention.
+
+
+    Fig. 3. Geographic area reported tasks.
+
+
+    ![](img/9fd9b088bf65dd05939af614424f0fce_3_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '[B. Bacon, E. Erannaks, and N. K. Park, "Simulation modelling in ports and
+    container terminals: literature review and analysis research, field application
+    and flexible tools." Services and Port Management, vol. 32, pp. 438–452, 2017.
+
+
+    [M. Fruth, and F. Teuteberg, "Digitalization in maritime logistics—what it is
+    and why it is costly? Cost & Management, vol. 4, no. 1, pp. 17–23, 2020.
+
+
+    [T. Tavenport, and I. Harris, On Analytics: The New Science of Winning. Harvard
+    Business Press, 2007.
+
+
+    [X. Xie, and N. Hoyukh, "Kernel-based machine learning models for predicting container
+    terminal operations." Journal of Transport, vol. 136, no. 12, pp. 1145–1152, 2020.
+
+
+    [C. H. Chu, "Empirical method for predicting internal-external truck arrivals
+    at a major port." J. Transport, vol. 137, no. 4, pp. 497–506, 2018.
+
+
+    [R. Gomez, A. Ramirez, and M. Rodriguez, "A performance-based decision system
+    for container terminal operations: a case study." Journal of Water Resources,
+    Control and Ocean Eng., vol. 142, no. 2, p:0240516,2018.
+
+
+    [Y. Xie, Y. Li, J. Li, and G. Li, "Container flow forecasting based on BP neural
+    network and analysis," Int. Conf. on Inf. Comput. and, Soc., 2019.
+
+
+    [J. Wang, J. Liu, and C. Peters, "Predicting Port Congestion Using AIS Big Data,"
+    in 2018 Int. Conf. on Nav. (ICON). IEEE, pp. 181–188, 2018.
+
+
+    [N. Shen, and S. Wang, "Analysis of Sources of Delays in Day at Container Terminals."
+    Trans. Res. Soc., vol. 26, no. 1, pp. 46–49, 2006.
+
+
+    [Q. Pham, N. Hoyukh, and Y. Xie, "Estimating truck queuing time at marine terminal
+    gate." Trans. Res., vol. 22, no. 2, pp. 43–53, 2011.
+
+
+    [V. Garrison, Chhandrakprasad, and S. Sikikalidis, "A traditional and neural networks
+    forecasting for container throughput throughout the port." The Asian Journal of
+    Shipping and Logistics, vol. 33, pp. 281–292, 2017.
+
+
+    [R. A. Stratuoniati, H. Baee, and M. Bongay, "Real-time container transport planning
+    with decision trees based on offline demand support." Support Systems, vol. 90,
+    pp. 111–126, 2020.
+
+
+    [B. van Riesen, R. R. Neijbergh, and R. Dekker, "Real-time container transport
+    planning with decision trees based on offline demand support." Support Systems,
+    vol.90, pp.111–126, 2020.
+
+
+    [M. Wasema, A. Stem, and H. van Hoek, "The service request prediction system:
+    Using drayage truck trajectory data to predict demand." Support Systems, vol.
+    95, pp. 37–48, 2019.
+
+
+    [M. Saldonado, R. Gonzalez-Ramirez, F. Quijada, and A. Ramirez, Analytics metrics:
+    A decision support system for terminal operations." Support Systems, vol. 121,
+    pp. 84–93, 2019.
+
+
+    [A. D. León, E. Lalla-Río, B. Martínez-Julian, and J. Marcos Morgana, "A Machine
+    Learning-based method for scheduling berth allocation." Exp. Syst. with Appl.,
+    vol. 88, pp. 170–183, 2019.
+
+
+    [J. Meng, W. Li, Z. H. Dong, and Y. S. Liao, "Port throughput forecasting by MARS-RSVAR
+    with stochastic simulated neural network analysis." Network Comput., vol. 147,
+    no. 2, pp. 239–250, 2015.
+
+
+    [J. Yu et al., "Ship arrival date and its value on container terminal operations."
+    Ocean Fleet, vol. 155, pp. 71–76, 2019.
+
+
+    [F. Fohuchi, N. Hoyukh, J. M. Vidal, and Y. Xie, "Modeling crane operations as
+    reinforcement learning agents." Trans. Res. Econ., vol. 42, pp. 105–120, 2021.
+
+
+    [Q. Zeng, Z. Yang, and L. Lai, "Models and algorithms for crane oriented scheduling
+    method in container terminals." Transport Policy, vol. 16, no. 4, pp. 273–279,
+    2009.
+
+
+    [I. Kourountelis, A. Podolopoulou, and C. Tiklidis, "Modeling of Predicting Double
+    Time of Import in Port Container Terminals - An Neural Network Application." Trans.
+    Res. Proceedings, vol. 44, pp. 243–252, 2016.
+
+
+    [J. M. López-Ruiz, I. T. Murías, C. J. Ruiz-Aguilar, "Short-term forecasting of
+    terminal freight using AIS and neural networks." Artificial Intelligence in Transportation
+    research, vol. 58, pp. 108–114, 2019.
+
+
+    [R. Dushnoy, C. Siveraj, S. Ivanova, N. Hoyukh, and A. Trichechenko, "Applications
+    and evaluation of cost curves to maintain container shipping competitiveness."
+    Transportation Research Part, vol. 136, pp. 182–189, 2009.
+
+
+    [Z. Zhang, Y. Ni, and W. Wang, "Vessel traffic flow and analysis by an improved
+    AIS-based method using ABC." Data Syst., vol. 110, no. 3, pp. 397–409, 2017.
+
+
+    [A. Hill, and W. Bice, "A decision support system for container terminal berth
+    routing at major ports." Information Technology and Management, vol. 38, no. 2,
+    pp. 241–251, 2007.
+
+
+    [K. J. Kang, R. Y. Lee, and K. H. Kim, "Scheduling for container terminals: A
+    review." Operations Research, vol. 17, no. 4, pp. 309–316, 2007.
+
+
+    [X. Qian, Y. Liu, J. Fu, and K. Lai, "A forecasting model for container terminal
+    scheduling by discrete PSO." J. Soft Sci. and Comput., 27, pp. 181–194, 2012.
+
+
+    [G. Fanceelli, C. Pano, M. Sanchez, R. Prado, and F. Padella, "Prediction of vessel
+    arrival times and resource allocation for container terminals." Maritime Economics,
+    vol. 13, no. 2, pp. 93–106, 2012.
+
+
+    [N. Amin, M. Boole, F. Stotifanis, and W. Weifhal, "Analysis of the determinant
+    factors of container demand at seaports." Trans. Res., vol. 2, no. 2, pp. 169–178,
+    2005.
+
+
+    [K. Milenkovic, N. Milojevic, N. Božovic, and S. Val, "Container flow forecasting
+    through neural networks based on operations." Support Systems, vol. 38, pp. 115–124,
+    2015.
+
+
+    [S. Kim, and Y. Park, "An estimation method for berth and calling times of vessel
+    using historical and real-time data." J. Oper. Res. Soc., vol. 66, no. 2, pp.
+    182–191, 2017.
+
+
+    [M. Gürkan, "An empirical method for berth and calling times of container ships."
+    Maritime Policy & Management, vol.45, 8, pp. 1078–1093, 2018.'
+  merge: -1
+  img_proc: true
