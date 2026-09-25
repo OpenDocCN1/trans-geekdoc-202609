@@ -1,0 +1,1032 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # Implementation of Machine Learning Algorithm for predicting performance of
+    student with specific reference Master of Computer Application (MCA) Programme
+
+
+    Dipti Verma
+
+    MCA Department,
+
+    DYPCAM
+
+    Pune, INDIA
+
+    dipti.vasudev@gmail.com
+
+
+    K. Nirmala
+
+    MCA Department,
+
+    DYPCAM
+
+    Pune , INDIA
+
+    skita_nirmala@rediffmail.com
+
+
+    Abstract— ML is aggressively reclaiming each domain and sector for its innovation.
+    ML is widening in terms of its ability for teaching and touching great height
+    in helping all in possible manners. It can make strong result and predicting ML
+    algorithm which have been implemented successfully and in various fields. Education
+    sector is not without the vast freedom of ML so it is implemented in this paper
+    to predict performance of student. Grounded on the different gathered after ML
+    algorithm, Appropriate and suitable model is carefully chosen and thus can be
+    planned for better performance improvement.
+
+
+    Ciolacu, Ali Fallah Tohani, Leon Binder and Mujahid Svasta, is focused on Artificial
+    Intelligence Education system with smart devices some sensors and wearable devices
+    for self-structured learning. The first results of Education 4.0 methods which
+    is applied with ML. In paper titled to analyze past student historical data and
+    to Predict Student Academic Performance, by Amandeep Kaur, Nitin Umesh, Barinder
+    Singh, Study focuses on predicting academic performance through the result of
+    these methods by considering different factorslike personal, economical,social,culture,
+    institute environment.
+
+
+    **Keywords**—Machine learning, MCA Program, Linear Regression, Logistic Regression,
+    Decision Tree
+
+
+    # I INTRODUCTION
+
+
+    Machine learning has successfully implemented in many sectors such as banking,
+    insurance, retail, stock exchange and exchange in us. In this paper implementation
+    of ML algorithm is showing to predict performance of student. The results are
+    successfully implemented and here are discussed. This discussion of era where
+    the veracity of a student plays important role in his/her career ML can be proved
+    as a direction for forecasting; towards and use such an approach for extracting
+    best out of a student''s talent.
+
+
+    # II LITERATURE REVIEW
+
+
+    In research paper titled "Assessing Intervention in Computer-Education Using Machine
+    Learning by Alexander J. Jameson and Mary L. Simpton, focuses was given on effectiveness
+    of performance level. Here in this research paper query marks are considered for
+    building model for prediction.
+
+
+    +   1) The effect that ML algorithm has had on processlevel information is seen.
+
+    2) Established result of type of ML technique used on prediction results.
+
+
+    In research paper "Education 4.0 - Artificial Intelligence Assisted Education:
+    Early recognition with Machine Learning to supporting Students'' Success" By Monica
+
+
+    # III. METHOD REGULARIZATION
+
+
+    Machine learning is the science of making system smart. Machine learning can say
+    has improved the lives of human being in terms of their successful implementation
+    and accuracy predicting results.[1]
+
+
+    Machine learning is the art of making your thing smart as per the situation which
+    we have never aware. Our system can respond to those of new problem based on the
+    data. The data is divided into training and setting a test and results which are
+    later compared, analyzed and new results are generated. Machine learning is almost
+    all domains so education sector as well. These days teaching has becoming a challenge.
+    Students are as smart as it is better. item interactive in class so ML has huge
+    gap. Some of these are listed below:
+
+
+    +   - Adaptive Learning
+
+    - Predictive analysis
+
+    - Predictive results
+
+    - Placement prediction and correction actions
+
+    - Personalized learning for students
+
+    - Automated grading system
+
+    - Preventing reason
+
+    - Teacher support to weak student'
+  - "[PAGE 1]\n\n# IV. RECENT TRENDS IN AI\n\nAI and Machine Learning are found to\
+    \ be adapted and implemented in many areas which include:\n\n+   i) Reinforcement\
+    \ learning which focuses on self-learning.\nii) face detection for solving criminal\
+    \ cases and missing person,\niii) emotional judgment,\niv) Work on recognizing\
+    \ handwriting,\nv) Computer Vision,\nvi) speech recognition,\nvii) Identification\
+    \ and Judging of Voice,\nviii) Solving cases of fraud and fault.\nix) Health care\
+    \ and medical sector\nx) Academics and education sector not much explored in AI.\n\
+    \n![](img/f9fc79b70a40bda2ea9ebd5e4dfbc65c_1_0.png)\n\n# V. PROBLEM STATEMENT\
+    \ AND SIGNIFICANCE OF THE STUDY\n\nAim of study is to show \"Will Machine Learning\
+    \ techniques beneficial to improve students' performance in MCA.\"\n\nIt is important\
+    \ to ensure the skills of students by doing proper and manner. Sharing result\
+    \ within time will give opportunities to students. So ML algorithms are implemented,\
+    \ tested and checked to know the best ML algorithm for students' performance.\n\
+    \nThe ML forecasting and predictions will help the institutes to take corrective\
+    \ actions, to mentor and guide the students in their learning before university\
+    \ examinations.\n\n# VI. OBJECTIVE AND HYPOTHESIS\n\n+   * To enhance performance\
+    \ of MCA student by early prediction of result.\n* To mentor and infuse aware\
+    \ of student performance through ML models.\n\nBased on the data collected, I\
+    \ am able to predict following: \n\nStudents scoring higher in HSC, SSC and quantity\
+    \ are more likely to get good performance in MCA. Based on data collected for\
+    \ the following hypothesis made:\nH0: Students scoring ML techniques do not help\
+    \ in improving student result in MCA course.\nH1: ML techniques help in improving\
+    \ student result in MCA course.\n\n# VII. OBJECTIVE AND HYPOTHESIS\n\nThe research\
+    \ design that is used performing research here by the diagram below. Basically\
+    \ a different module that is used in the study is arranged in logical way for\
+    \ effective point point on the research project; it organizes the design for the\
+    \ gathering, experimenting of data, and analysis.\n\n# Sampling Methods-Stratified\
+    \ Sampling & Convenience Sampling\n\nData Collection-As discussed in sampling\
+    \ method, stratified and convenience sampling technique is used and for research\
+    \ work data has been collected from students of college\nIt contains records of\
+    \ first batch of MCA student which includes their SSC, HSC, Graduation, CET final\
+    \ score back and data has been collected by an excel set. It contains 68 observations\
+    \ and 14 variables having factor data type and 9 variables are firstly type\n\n\
+    # VIII. IMPLEMENTATION OF DIFFERENT MACHINE LEARNING ALGORITHM\n\nAuthor state\
+    \ that machine learning empowers the computer with the ability to learn without\
+    \ human intervention [15]. Predictive analytics have scope of machine learning.\
+    \ If data is structured based on the type of data then useful linear regression,\
+    \ Logistic regression, and if it is unstructured then machine learning type is\
+    \ used. Some algorithms which are used in this research:\n\n# A. Linear Regression\n\
+    \nLinear regression is an algorithm in Machine Learning which is used to calculate\
+    \ relationship between dependent and independent variable or we can predict target\
+    \ variable and other variable using a linear equation. This is represented by\
+    \ an following equation:\n\n```\nY = α + β line of least squares was used to analyze\
+    \ the relationship between student's SSC, HSC score and Graduation with MCA score.\
+    \ The disadvantage of using linear regression is that the data points are not\
+    \ covered while plotting the linear model. This leads to inaccuracy in prediction\
+    \ and the p-value received after implementing linear model is quite high so it\
+    \ lowers the accuracy of prediction. This model cannot be accepted.\n```\n\n>\
+    \ Y = α + βX"
+  - '[PAGE 2]
+
+
+    ![](img/f9fc79b70a40bda2ea9ebd5e4dfbc65c_2_0.png)
+
+
+    Fig 1: plotting of Linear regression line
+
+
+    # ## B. Logistic Regression
+
+
+    Logistic regression measures the relationship between the dependent feature and
+    one or more independent features by estimating probabilities utilizing logistic
+    function [31].
+
+
+    $f(x)=1/(1+e^{-x})$
+
+
+    After Linear Regression does not give result Logistic regression model was implemented
+    for predicted the MCA final of student algorithm implemented in open source. The
+    probability predicted by logistic classifier of the student learned, which were
+    important to calculate the probability of student getting good score.
+
+
+    The data was divided into 80:20 ratio for training and testing the model. The
+    model was trained on 80% of data, testing of model is done on 20% of data. The
+    result received by implementing logistic regression model was not satisfactory
+    and this was tested on testing data. This was proved by implementing confusion
+    matrix.
+
+
+    # ## C. Decision Tree Algorithm
+
+
+    Decision Tree (DT) is considered to be one of widely used Machine Learning algorithms
+    in classification. A Decision Tree works like an inverted tree, wherein each node
+    represents a predictor (feature), and each leaf node represents an outcome (response
+    variable). DT is used to take a decision that a specific value can be accepted
+    or rejected given tree in form of IF-THEN rules. A smart and intelligent system
+    is built using Decision Tree, pvalue received after implementing the DT was significantly
+    low and this was tested successfully on testing data. Figure 2 shows the tree
+    received after implementing DT. Data training, dataset is done successfully on
+    data set.
+
+
+    ![](img/f9fc79b70a40bda2ea9ebd5e4dfbc65c_2_1.png)
+
+
+    Fig. 2: Decision Tree
+
+
+    # ## I. Data collection and gathering
+
+
+    Real time data was carried out for our collecting work. The data consists of 53
+    students. The data name of student, gender, email id, ssc score, hsc score, graduation
+    score, MCA score, backup paper details, no of backgrounds. The data was compiled
+    in excel file. A shot of data is shown in below figure.
+
+
+    ![](img/f9fc79b70a40bda2ea9ebd5e4dfbc65c_2_2.png)
+
+
+    Fig. 3 Data set in excel format
+
+
+    # ## II. Methodology
+
+
+    The study was carried out to find out the relationship between the MCA final score
+    and student''s previous scores sc, HSC, and graduation. Implementing different
+    algorithms, the accuracy of the model is checked.
+
+
+    From the analysis on above mentioned algorithm it has been found that Decision
+    Tree fits to the data set for this. Since data was of type i.e. numerical as well
+    as text data, different algorithm is applied 3 major algorithm are Linear Regression,
+    Logistic Regression and Decision Tree. ML algorithm when'
+  md: "\n# Implementation of Machine Learning Algorithm for predicting performance\
+    \ of student with specific reference Master of Computer Application (MCA) Programme\n\
+    \nDipti Verma\nMCA Department,\nDYPCAM\nPune, INDIA\ndipti.vasudev@gmail.com\n\
+    \nK. Nirmala\nMCA Department,\nDYPCAM\nPune , INDIA\nskita_nirmala@rediffmail.com\n\
+    \nAbstract— ML is aggressively reclaiming each domain and sector for its innovation.\
+    \ ML is widening in terms of its ability for teaching and touching great height\
+    \ in helping all in possible manners. It can make strong result and predicting\
+    \ ML algorithm which have been implemented successfully and in various fields.\
+    \ Education sector is not without the vast freedom of ML so it is implemented\
+    \ in this paper to predict performance of student. Grounded on the different gathered\
+    \ after ML algorithm, Appropriate and suitable model is carefully chosen and thus\
+    \ can be planned for better performance improvement.\n\nCiolacu, Ali Fallah Tohani,\
+    \ Leon Binder and Mujahid Svasta, is focused on Artificial Intelligence Education\
+    \ system with smart devices some sensors and wearable devices for self-structured\
+    \ learning. The first results of Education 4.0 methods which is applied with ML.\
+    \ In paper titled to analyze past student historical data and to Predict Student\
+    \ Academic Performance, by Amandeep Kaur, Nitin Umesh, Barinder Singh, Study focuses\
+    \ on predicting academic performance through the result of these methods by considering\
+    \ different factors like personal, economical, social, culture, institute environment.\n\
+    \n**Keywords**—Machine learning, MCA Program, Linear Regression, Logistic Regression,\
+    \ Decision Tree\n\n# I INTRODUCTION\n\nMachine learning has successfully implemented\
+    \ in many sectors such as banking, insurance, retail, stock exchange and exchange\
+    \ in us. In this paper implementation of ML algorithm is showing to predict performance\
+    \ of student. The results are successfully implemented and here are discussed.\
+    \ This discussion of era where the veracity of a student plays important role\
+    \ in his/her career ML can be proved as a direction for forecasting; towards and\
+    \ use such an approach for extracting best out of a student's talent.\n\n# II\
+    \ LITERATURE REVIEW\n\nIn research paper titled \"Assessing Intervention in Computer-Education\
+    \ Using Machine Learning\" by Alexander J. Jameson and Mary L. Simpton, focuses\
+    \ was given on effectiveness of performance level. Here in this research paper\
+    \ query marks are considered for building model for prediction.\n\n- 1) The effect\
+    \ that ML algorithm has had on process level information is seen.\n- 2) Established\
+    \ result of type of ML technique used on prediction results.\n\nIn research paper\
+    \ \"Education 4.0 - Artificial Intelligence Assisted Education: Early recognition\
+    \ with Machine Learning to supporting Students' Success\" by Monica\n\n# III.\
+    \ METHOD REGULARIZATION\n\nMachine learning is the science of making system smart.\
+    \ Machine learning can say has improved the lives of human being in terms of their\
+    \ successful implementation and accuracy predicting results [1].\n\nMachine learning\
+    \ is the art of making your thing smart as per the situation which we have never\
+    \ aware. Our system can respond to those of new problem based on the data. The\
+    \ data is divided into training and setting a test and results which are later\
+    \ compared, analyzed and new results are generated. Machine learning is almost\
+    \ all domains so education sector as well. These days teaching has becoming a\
+    \ challenge. Students are as smart as it is better. item interactive in class\
+    \ so ML has huge gap. Some of these are listed below:\n\n- Adaptive Learning\n\
+    - Predictive analysis\n- Predictive results\n- Placement prediction and correction\
+    \ actions\n- Personalized learning for students\n- Automated grading system\n\
+    - Preventing reason\n- Teacher support to weak student\n\n# IV. RECENT TRENDS\
+    \ IN AI\n\nAI and Machine Learning are found to be adapted and implemented in\
+    \ many areas which include:\n\n- i) Reinforcement learning which focuses on self-learning.\n\
+    - ii) face detection for solving criminal cases and missing person,\n- iii) emotional\
+    \ judgment,\n- iv) Work on recognizing handwriting,\n- v) Computer Vision,\n-\
+    \ vi) speech recognition,\n- vii) Identification and Judging of Voice,\n- viii)\
+    \ Solving cases of fraud and fault.\n- ix) Health care and medical sector\n- x)\
+    \ Academics and education sector not much explored in AI.\n\n![](img/f9fc79b70a40bda2ea9ebd5e4dfbc65c_1_0.png)\n\
+    \n# V. PROBLEM STATEMENT AND SIGNIFICANCE OF THE STUDY\n\nAim of study is to show\
+    \ \"Will Machine Learning techniques beneficial to improve students' performance\
+    \ in MCA.\"\n\nIt is important to ensure the skills of students by doing proper\
+    \ and manner. Sharing result within time will give opportunities to students.\
+    \ So ML algorithms are implemented, tested and checked to know the best ML algorithm\
+    \ for students' performance.\n\nThe ML forecasting and predictions will help the\
+    \ institutes to take corrective actions, to mentor and guide the students in their\
+    \ learning before university examinations.\n\n# VI. OBJECTIVE AND HYPOTHESIS\n\
+    \n- To enhance performance of MCA student by early prediction of result.\n- To\
+    \ mentor and infuse aware of student performance through ML models.\n\nBased on\
+    \ the data collected, I am able to predict following: \n\nStudents scoring higher\
+    \ in HSC, SSC and quantity are more likely to get good performance in MCA. Based\
+    \ on data collected for the following hypothesis made:\nH0: Students scoring ML\
+    \ techniques do not help in improving student result in MCA course.\nH1: ML techniques\
+    \ help in improving student result in MCA course.\n\n# VII. OBJECTIVE AND HYPOTHESIS\n\
+    \nThe research design that is used performing research here by the diagram below.\
+    \ Basically a different module that is used in the study is arranged in logical\
+    \ way for effective point point on the research project; it organizes the design\
+    \ for the gathering, experimenting of data, and analysis.\n\n# Sampling Methods-Stratified\
+    \ Sampling & Convenience Sampling\n\nData Collection-As discussed in sampling\
+    \ method, stratified and convenience sampling technique is used and for research\
+    \ work data has been collected from students of college. It contains records of\
+    \ first batch of MCA student which includes their SSC, HSC, Graduation, CET final\
+    \ score back and data has been collected by an excel set.\n\n# VIII. IMPLEMENTATION\
+    \ OF DIFFERENT MACHINE LEARNING\n\n## A. Linear Regression\n\nLinear regression\
+    \ is the science of making system smart. Machine learning can say has improved\
+    \ the lives of human being in terms of their successful implementation and accuracy\
+    \ predicting results [1].\n\nMachine learning is the art of making your thing\
+    \ smart as per the situation which we have never aware. Our system can respond\
+    \ to those of new problem based on the data. The data is divided into training\
+    \ and setting a test and results which are later compared, analyzed and new results\
+    \ are generated. Machine learning is almost all domains so education sector as\
+    \ well. These days teaching has becoming a challenge. Students are as smart as\
+    \ it is better. item interactive in class so ML has huge gap. Some of these are\
+    \ listed below:\n\n- Adaptive Learning\n- Predictive analysis\n- Predictive results\n\
+    - Placement prediction and correction actions\n- Personalized learning for students\n\
+    - Automated grading system\n- Preventing reason\n- Teacher support to weak student\n\
+    \n## B. Logistic Regression\n\nLogistic regression measures the relationship between\
+    \ the dependent and one or more independent features estimating probabilities.\n\
+    \n$f(x)=1/(1+e^{-x})$\n\n![](img/f9fc79b70a40bda2ea9ebd5e4dfbc65c_2_0.png)\n\n\
+    Fig. 1: plotting of Linear line\n\n## C. Decision Tree Algorithm\n\nDecision Tree\
+    \ (DT) is considered to be one of widely used Machine Learning algorithms in classification.\
+    \ A Decision Tree works like an inverted tree, wherein each node represents a\
+    \ predictor (feature), and each leaf node represents an outcome (response variable).\
+    \ DT is used to take a decision that a specific value can be accepted or rejected\
+    \ given tree in IF-THEN rules.\n\n![](img/f9fc79b70a40bda2ea9ebd5e4dfbc65c_2_1.png)\n\
+    \nFig. 2: Decision Tree\n\n## I. Data collection and gathering\n\nReal time data\
+    \ was carried out for our collecting work. The data consists of 53 students. The\
+    \ data name of student, gender, email id, ssc score, hsc score, graduation score,\
+    \ MCA score, backup paper details, no of backgrounds. The data was compiled in\
+    \ excel file. A shot of data is shown in below figure.\n\n![](img/f9fc79b70a40bda2ea9ebd5e4dfbc65c_2_2.png)\n\
+    \nFig. 3 Data set in excel format\n\n## II. Methodology\n\nThe study was carried\
+    \ out to find out the relationship between the MCA final score and student's previous\
+    \ scores sc, HSC, and graduation. Implementing different algorithms, the accuracy\
+    \ of the model is checked.\n"
+  mdcn: '
+
+
+    # 用于预测计算机应用硕士（MCA）专业学生表现的机器学习算法实现
+
+
+    Dipti Verma
+
+    MCA 部门，
+
+    DYPCAM
+
+    浦买，印度
+
+    dipti.vasudev@gmail.com
+
+
+    K. Nirmala
+
+    MCA 部门，
+
+    DYPCAM
+
+    浦买，印度
+
+    skita_nirmala@rediffmail.com
+
+
+    摘要— 机器学习（ML）正通过其创新积极地夺回每个领域和行业。机器学习在教学方面的能力不断扩大，并在以所有可能的方式帮助所有人方面达到了极高度。它能够产生强有力的结果，并对对已在各个领域成功实施的机器学习算法进行预测。教育领域并非没有机器学习的广阔自由空间，因此本文中实现了该算法以预测学生的表现。基于机器学习算法收集的不同数据，仔细选择了恰当且合适的模型，从而可以为性能的提升制定计划。
+
+
+    Ciolacu, Ali Fallah Tohani, Leon Binder 和 Mujahid Svasta 关注带有智能设备、某些传感器和可穿戴设备的人工智能教育系统，用于自结构学习。应用于机器学习的教育
+    4.0 方法的初步结果。Amandeep Kaur、Nitin Umesh、Barinder Singh 撰写的名为《分析学生过去历史数据并预测学生学术表现》的论文，重点在于通过考虑个人、经济、社会、文化、学校环境等不同因素，通过这些方法的结果来预测学术表现。
+
+
+    **关键词**— 机器学习，MCA 专业，线性回归，逻辑回归，决策树
+
+
+    # I 引言
+
+
+    机器学习已成功应用于银行、保险、零售、股票交易所和美国交易所等许多领域。本文展示了机器学习算法的实现，用于预测学生的表现。结果已成功实施，并在此进行讨论。在这个学生的真实性在其职业中起着重要作用的时代，机器学习可以被证明是预测的一个方向；并利用这种方法从学生的才华中提取最大的价值。
+
+
+    # II 文献综述
+
+
+    在 Alexander J. Jameson 和 Mary L. Simpton 撰写的研究论文《使用机器学习评估计算机教育中的干预》中，重点关注了表现水平的有效性。在这篇研究论文中，通过查询标记来考虑构建预测模型。
+
+
+    - 1) 观察了机器学习算法对过程级信息的影响。
+
+    - 2) 建立了用于预测结果的机器学习技术类型结果。
+
+
+    在 Monica 撰写的研究论文《教育 4.0 - 人工智能辅助教育：利用机器学习早期识别以支持学生成功》中
+
+
+    # III. 方法正则化
+
+
+    机器学习是使系统变得智能的科学。机器学习可以说，在成功实施和准确预测结果方面，它改善了人类的生活 [1]。
+
+
+    机器学习是根据我们从未察觉到的情况使你的事物变得智能的艺术。我们的系统可以根据数据对新问题做出响应。数据被分为训练集、测试集和结果，随后对这些结果进行比较、分析并生成新结果。机器学习几乎涵盖所有领域，教育领域也是如此。如今，教学已成为一种挑战。学生越聪明，情况越好。课堂互动性越高，因此机器学习存在巨大的差距。其中一些列举如下：
+
+
+    - 自适应学习
+
+    - 预测分析
+
+    - 预测结果
+
+    - 录取预测和纠正措施
+
+    - 针对学生的个性化学习
+
+    - 自动评分系统
+
+    - 预防原因
+
+    - 教师对弱势学生的支持
+
+
+    # IV AI 的最新趋势
+
+
+    人工智能和机器学习被发现在许多领域被采纳和实施，包括：
+
+
+    - i) 关注自学学习的强化学习。
+
+    - ii) 用于解决刑事案件和失踪人员的人脸识别，
+
+    - iii) 情感判断，
+
+    - iv) 识别手写体，
+
+    - v) 计算机视觉，
+
+    - vi) 语音识别，
+
+    - vii) 语音的识别和判断，
+
+    - viii) 解决欺诈和故障案件。
+
+    - ix) 医疗和健康领域
+
+    - x) 学术和教育领域在 AI 中没有多少探索。
+
+
+    ![](img/f9fc79b70a40bda2ea9ebd5e4dfbc65c_1_0.png)
+
+
+    # V 问题陈述与研究意义
+
+
+    研究目标是展示“机器学习技术是否有利于提高 MCA 学生的表现”。
+
+
+    通过正确和适当的方法确保学生的技能至关重要。及时分享结果将为学生提供机会。因此，实施、测试并检查了机器学习算法，以确定适用于学生表现的最佳算法。
+
+
+    机器学习的预测和预测将帮助机构在大学考试之前采取纠正措施，并在学习中指导引导学生。
+
+
+    # VI 目标与假设
+
+
+    - 通过早期预测结果来提高 MCA 学生的表现。
+
+    - 通过机器学习模型指导并增强学生对表现的意识。
+
+
+    根据收集的数据，我能够预测以下内容：
+
+
+    在 HSC、SSC 和数量上得分较高的学生更有可能在 MCA 中获得良好的表现。根据收集的数据得出了以下假设：
+
+    H0: 机器学习技术得分的学生无助于提高 MCA 课程中学生的成绩。
+
+    H1: 机器学习技术有助于提高 MCA 课程中学生的成绩。
+
+
+    # VII 目标与假设
+
+
+    此处执行研究的研究设计如下图所示。基本上，研究中使用的不同模块以逻辑方式排列，以便对研究项目进行有效的论点说明；它组织了数据收集、实验和分析的设计。
+
+
+    # 抽样方法-分层抽样与便利抽样
+
+
+    数据收集-如抽样方法所述，使用了分层抽样和便利抽样技术，研究工作的数据从大学学生中收集。它包含了第一批 MCA 学生的记录，包括他们的 SSC、HSC、毕业、CET
+    最终分补考数据，并通过 Excel 集合收集数据。
+
+
+    # VIII 不同机器学习的实现
+
+
+    ## A. 线性回归
+
+
+    线性回归是使系统变得智能的科学。机器学习可以说，在成功实施和准确预测结果方面，它改善了人类的生活 [1]。
+
+
+    机器学习是根据我们从未察觉到的情况使你的事物变得智能的艺术。我们的系统可以根据数据对新问题做出响应。数据被分为训练集、测试集和结果，随后对这些结果进行比较、分析并生成新结果。机器学习几乎涵盖所有领域，教育领域也是如此。如今，教学已成为一种挑战。学生越聪明，情况越好。课堂互动性越高，因此机器学习存在巨大的差距。其中一些列举如下：
+
+
+    - 自适应学习
+
+    - 预测分析
+
+    - 预测结果
+
+    - 录取预测和纠正措施
+
+    - 针对学生的个性化学习
+
+    - 自动评分系统
+
+    - 预防原因
+
+    - 教师对弱势学生的支持
+
+
+    ## B. 逻辑回归
+
+
+    逻辑回归通过概率衡量变量与一个或多个独立特征之间的关系。
+
+
+    $f(x)=1/(1+e^{-x})$
+
+
+    ![](img/f9fc79b70a40bda2ea9ebd5e4dfbc65c_2_0.png)
+
+
+    图 1：线性线的绘图
+
+
+    ## C. 决策树算法
+
+
+    决策树（DT）被认为是分类中广泛使用的机器学习算法之一。决策树运行像一棵倒立的树，其中每个节点代表一个预测（特征），每个叶子节点代表一个结果（响应变量）。DT
+    用于根据 IF-THEN 规则树来决定特定值可以被接受还是拒绝。
+
+
+    ![](img/f9fc79b70a40bda2ea9ebd5e4dfbc65c_2_1.png)
+
+
+    图 2：决策树
+
+
+    ## I. 数据收集与整合
+
+
+    收集工作完成了实时数据采集。数据包含 53 名学生。数据包括姓名、性别、电子邮件 ID、SSC 分数、HSC 分数、毕业分数、MCA 分数、补考详情、背景数量。数据已在
+    Excel 文件中汇总。数据快照如下所示。
+
+
+    ![](img/f9fc79b70a40bda2ea9ebd5e4dfbc65c_2_2.png)
+
+
+    图 3：Excel 格式的数据集
+
+
+    ## II. 方法论
+
+
+    该研究旨在找出 MCA 最终成绩与学生之前的 SSC、HSC 和毕业成绩之间的关系。通过实施不同的算法检查模型的准确性。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 3]
+
+
+    implemented on data set model for data. When Decision Tree is built on data set,
+    algorithm selects its root node and leaf nodes.
+
+
+    +   - And it can be concluded that students have
+
+    more than 67% in HSC has only 13 chances of
+
+    backlogs
+
+
+    Students showing more than 65% of
+
+    graduation have 15% chances of backlogs
+
+    HSC and percentage have strong
+
+    significance in students MC performance
+
+
+    The results that has from earlier predictor can
+
+    many students, particularly for the students who are
+
+    to get good score. Their performance can be predicted
+
+    to actual exam, and all alternative ways can be
+
+    improving their learning approaches and it can help
+
+    the teacher to prepare and teach slow
+
+    performs and students can improve their performance.
+
+    The teacher/college can make use of simple model for
+
+    prediction. Based on the results of the students,
+
+    then performance as predictor can
+
+    model become unique with their experience
+
+    and knowledge with slow students.
+
+
+    There are two possibilities of applying
+
+    which advantages and disadvantages. The
+
+    prediction shows if it is developed of a set
+
+    but if accuracy is or not correct it may lead
+
+    toappropriate inappropriate and unjust judgments which
+
+    motivate the students and their growth. The limits
+
+    can occur in the process of gathering of data, building
+
+    model and testing which in
+
+    ustaccuracy.
+
+
+    This gives an overview about the Machine
+
+    Learning Techniques used in education sector and the scope
+
+    where it is used more education. The 역시 is
+
+    important part of every individual and becomes the
+
+    responsibility of every educator to maintain the teaching
+
+    learning process up to the highest standards, where
+
+    students get benefits in all aspects. This papers outline
+
+    some of the most common issues in machine learning.
+
+
+    # X. CLASSIFICATION
+
+
+    Machine learning can be successfully used for
+
+    hancing Teaching process in education. This
+
+    paper focuses on ML implementation. Machine Learning
+
+    technique is used for student''s benefit, and
+
+    administration enhancement over students''
+
+    performance. The study also shows that corre
+
+    lation between degree of graduation and MCA score. If
+
+    score of a student can be predicted in well advance, then
+
+    that student can be motivated and more focused by
+
+    learning.
+
+
+    The foremost objective of this paper is to understand
+
+    tproblem being faced in education sector and the possible
+
+    solution by machine learning techniques. Machine Learning
+
+    has been confirmed to be useful to discover changes
+
+    and improve the loopholes in education system.
+
+
+    # XI. FUTURE REQUIREMENT
+
+
+    There are many algorithms which can be tested on the set
+
+    of data used in this paper. As huge data is collected
+
+
+    many hidden patterns and knowledge can
+
+    iscovered using other aspects of ML. On different
+
+    models can be implemented through training, testing
+
+    and validation using Machine learning.
+
+
+    REFERENCES
+
+
+    +   [1] Campbell, W. E., and K.A. Smith (Eds.), 2009. "New paradigms for
+
+    college teaching." Edna, MN Business Company
+
+
+    +   [2] http://badget-site.com/8-ways-machine-learning-will-
+
+    import education (Nelson, 2017)
+
+
+    +   [3] wetechshare.com
+
+
+    +   [4] Fatimah, S. and Anders Gustafson "Machine Learning-Based App
+
+    Self-Evaluation of Teacher-Specific Instructional Styles and To
+
+
+    +   [5] D. Khairy, M. Mahmoud Technique Learning and Using It in
+
+    Education: International Journal of Advanced Computer
+
+    Science and Analytics, Vol. 5, No. 12, 2014
+
+
+    +   [6] Nakadari, P., M. Ono-Macho, L., and Jackman, W. W. (2021).
+
+    Machine Learning in education: International Journal of
+
+    Business Applications, 18(3), 544-551
+
+
+    +   [7] Burton, J. (2009). Opportunities for natural language learning
+
+    research in education. International Journal of Linguistics and
+
+    Technology, 6(4), 627-673. doi:10.5277/1978-3642-0018-2_2009-page
+
+
+    +   [8] Babah, N. U. (2010). Introduction to natural language
+
+    synthesis. Lessons in Human Language Technologies,
+
+    NIHT, 3(1), 75-80.
+
+    http://www.mongeaily.com/doi/10.22060/022777ed1019v01:2010-20
+
+
+    +   [9] Lee, J., Wang, H. V., and Crowley, R. S. (2011). Machine
+
+    learning for students in biomedical education technology
+
+    International Journal of Educational Technology, 4(04), 1-15.
+
+
+    +   [10] Mo, Y. H., Monaghan, P., Neale, S., and Zwickert, P. (2008).
+
+    "Syntactic and article grammar learning: The
+
+    enforcement of embodied structures. Conference,
+
+    10(2),762-773. doi:10.1109/ICCAE.2008.4721957
+
+
+    +   [11] Deep Rajput and Khushal Dawahi (2018). Machine Learning
+
+    Approach: A science to Student Learning "Literature Review" in
+
+    Proceedings of International Conference on Educational
+
+    Technology and Management (ICACETM) in Association
+
+    of International Computer Engineers, IEEE, ISSN: 978-1-729-33355-0
+
+
+    +   [12] Breesave, Vaish. Paul. "Analysis and impact on students''
+
+    performance in rural areas in West Africa." International
+
+    Technologies, Informatics, 2007. (IT 2007. 2007th International Conference
+
+
+    +   [13] Nguyen, Thai, James Patel, and Jaeher, A. "Analysis
+
+    of analytics techniques for predicting student performance
+
+    in Education." Conference-Global Education
+
+    Knowledge Without Boundaries, IEEE, 2007.
+
+
+    +   [14] Felix Sanchez (2018). The Rise to Ignore Business: The Business
+
+    Case for Data. 9(1). doi: 10.978-3-811-19888-7_3_1
+
+
+    +   [15] Koriskanen, Saart, B. and Panikotis, E. "Predicting students''\nperformance
+    in a university." IEEE International
+
+    conference on advanced learning technologies, ICALT 2005, pp
+
+
+    +   [16] Brett Lantz, Learning with R: Barmingham; 2016, pp
+
+
+    +   [17] Radhika R, Rahul. "Application of Machine Learning for
+
+    better in education system." 2011 International Conference on
+
+    Control and Dynamics, Optimization Techniques
+
+    (ICADAOT) International Institute of Information Technology (IIIT),
+
+    Pune'
+  md: '
+
+    implemented on data set model for data. When Decision Tree is built on data set,
+    algorithm selects its root node and leaf nodes.
+
+
+    - And it can be concluded that students have more than 67% in HSC has only 13
+    chances of backlogs
+
+    - Students showing more than 65% of graduation have 15% chances of backlogs
+
+    - HSC and percentage have strong significance in students MC performance
+
+
+    The results that has from earlier predictor can help many students, particularly
+    for the students who are to get good score. Their performance can be predicted
+    to actual exam, and all alternative ways can be improving their learning approaches
+    and it can help the teacher to prepare and teach slow performs and students can
+    improve their performance. The teacher/college can make use of simple model for
+    prediction. Based on the results of the students, then performance as predictor
+    can model become unique with their experience and knowledge with slow students.
+
+
+    There are two possibilities of applying which advantages and disadvantages. The
+    prediction shows if it is developed of a set but if accuracy is or not correct
+    it may lead to appropriate inappropriate and unjust judgments which may motivate
+    the students and their growth. The limits can occur in the process of gathering
+    of data, building model and testing which in accuracy. This gives an overview
+    about Machine Learning Techniques used in education and the scope where it is
+    used more. 역시 is important part of every individual and becomes the responsibility
+    of every educator to maintain teaching process up to the highest standards, where
+    students get benefits in all aspects. This papers outline some of the most common
+    issues in machine learning.
+
+
+    ## X. CLASSIFICATION
+
+
+    Machine learning can be successfully used for implementation in education. Machine
+    Learning technique is used for student''s benefit, and administration over students''
+    performance. The study also shows correlation between degree of graduation and
+    score of a student can be predicted in well advance, then that student can be
+    motivated and more focused by learning. The foremost objective of this paper is
+    to understand problem being faced in education and possible solution by machine
+    learning.
+
+
+    ## XI. FUTURE REQUIREMENT
+
+
+    There are many algorithms which can be tested on set. As huge data is collected
+    many hidden patterns and knowledge can be discovered using other aspects of ML.
+    Different models can be implemented through training, testing and validation.
+
+
+    ## REFERENCES
+
+
+    - [1] Campbell, W. E., and K.A. Smith (Eds.), 2009. "New paradigms for college
+    teaching." Edna
+
+    - [2] Nelson, 2017. http://badget-site.com/8-ways-machine-learning-will
+
+    - [3] wetechshare.com
+
+    - [4] Fatimah, S. and Anders Gustafson Machine Learning-Based Evaluation of Teacher-Specific
+    Instructional Styles and To
+
+    - [5] D. Khairy, M. Mahmoud Using It in Education: International Journal of Advanced
+    Computer Science and Analytics, Vol. 5, No. 12
+
+    - [6] Nakadari, P., M. Ono-Macho, L., and Jackman, W. (2021). Machine Learning
+    in education: International Journal of Business Applications, 18(3), 544-551
+
+    - [7] Burton, J. (2009). Opportunities for natural language research in education.
+    International Journal of Linguistics and Technology, 6(4), 627-673. doi:10.5277/1978-3642-0018-2_2009page
+
+    - [8] Babah, N. U. (2010). Introduction to natural language synthesis. Lessons
+    in Human Language Technologies, NIHT, 3(1), 75-80. http://www.mongeaily.com/doi/10.22060/02277ed1019v01:2010-20
+
+    - [9] Lee, J., Wang, H. V., and Crowley, R. S. (2011). Machine learning for students
+    in biomedical education International Journal of Educational Technology, 4(04),
+    1-15.
+
+    - [10] Mo, Y. H., Monaghan, P., Neale, S., and Zwickert, P. (2008). "Syntactic
+    and article grammar learning: The enforcement of embodied structures." Conference,
+    10(2),762-773. doi:10.1109/ICCAE.2008.4721957
+
+    - [11] Deep Rajput and Khushal Dawahi (2018). Machine Learning Approach: A science
+    to Student Learning "Literature Review" in Proceedings of International Conference
+    on Educational Technology and Management (ICACETM) in Association of International
+    Computer Engineers, IEEE, ISSN: 978-1-729-33355-0
+
+    - [12] Breesave, Vaish. Paul. "Analysis and impact on students'' performance in
+    rural areas in West Africa." International Technologies, Informatics, 2007. (IT
+    2007. 2007th International Conference
+
+    - [13] Nguyen, Thai, James Patel, and Jaeher, A. "Analysis of analytics techniques
+    for predicting student performance in Education." Conference-Global Education
+    Knowledge Without Boundaries, IEEE, 2007.
+
+    - [14] Felix Sanchez (2018). The Rise to Ignore Business: The Business Case for
+    Data. 9(1). doi: 10.978-3-811-19888-7_3_1
+
+    - [15] Koriskanen, Saart, B. and Panikotis, E. "Predicting students'' performance
+    in a university." IEEE International conference on advanced learning technologies,
+    ICALT 2005, pp
+
+    - [16] Brett Lantz, Learning with R: Barmingham; 2016, pp
+
+    - [17] Radhika R, Rahul. "Application of Machine Learning for better in education
+    system." 2011 International Conference on Control and Dynamics, Optimization Techniques
+    (ICADAOT) International Institute of Information Technology (IIIT), Pune
+
+    '
+  mdcn: '
+
+    在数据数据集模型上进行实现。当在数据集上构建决策树时，算法会选择其根节点和叶子节点。
+
+
+    - 可以得出结论：HSC（高中毕业考试）成绩超过 67% 的学生只有 13% 的挂科概率
+
+    - 毕业率超过 65% 的学生挂科概率为 15%
+
+    - HSC 成绩百分比对学生的 MC（模拟考试）表现具有很强的显著性
+
+
+    这些从早期预测中获得的结果可以帮助许多学生，特别是那些想要获得高分的学生。他们的表现可以预测到实际考试中，而且所有的替代方法都可以改进他们的学习方法，并帮助教师准备和教表现较慢的学生，而学生也可以提高自己的表现。教师/学院可以使用简单的模型进行预测。根据学生的结果，表现作为预测因素，模型可以根据他们对慢速学生的经验和知识变得具有独特性。
+
+
+    在应用其优缺点方面存在两种可能性。预测显示，如果开发了一套系统，但如果准确性不正确，可能会导致恰当或不公正的判断，这可能会影响学生及其成长。局限性可能会出现在数据收集、模型构建和准确性测试的过程中。这提供了关于教育领域使用的机器学习技术及其更广泛用途的概述。此外，它是每个人的重要部分，将教学过程维持到最高标准是每位教育工作者的责任，让学生在各个方面都能受益。本文概述了机器学习中的一些常见问题。
+
+
+    ## X. 分类
+
+
+    机器学习可以成功地用于教育领域的实施。机器学习技术被用于学生的利益，以及对学生表现的管理。研究还显示，毕业程度与学生分数之间的相关性可以被提前预测，这样该学生就可以受到激励并更加关注学习。本文的首要目标是理解教育中面临的问题以及以及通过机器学习提供可能的解决方案。
+
+
+    ## XI. 未来需求
+
+
+    有很多算法可以被应用。当收集了大量数据时，可以通过训练、测试和验证发现许多隐藏模式。
+
+
+    ## 参考文献
+
+
+    - [1] Campbell, W. E., 和 K.A. Smith (2009). 新教学范式。
+
+    - [2] Nelson, 2017. 机器学习。http://badget.com/8-ways-machine-learning-will-。
+
+    - [3] wetech.com
+
+    - [4] Fatimah, S. 和 Anders Gustafson 基于机器学习的评估。
+
+    - [5] D. Khairy, M. Mahmoud 在教育中的应用。高级计算机科学与分析期刊，第 5 。
+
+    - [6] Nakadari, P., Ono, M., 和 Jackman, W. (2021). 教育中的机器学习。国际业务应用期刊，18(3), 544-551。
+
+    - [7] Burton, J. (2009). 自然语言研究的机会。国际语言与技术期刊，6(4), 627-673. doi:10.5277/1978-3642-0019-2_3_2007-4721.
+
+    - [8] Babah, N. U. (2010). 自然语言合成导论。国际技术期刊，3(1), 75-80. http://www.mongeaily.com/doi/10.22060/0227ed10-20
+
+    - [9] Lee, J., Wang, H., 和 Crowley, R. S. (2011). 生物医学教育中的机器学习。教育技术期刊，4(4), 1-15。
+
+    - [10] Mo, Y. H., Monaghan, P., Neale, S., 和 Zwickert, P. (2008). 句法与冠法的执行。会议，10(2),762-773.
+    doi:10.1109/ICCAE.2008.472195
+
+    - [11] Deep Rajput 和 Khushal Dawahi (2018). 机器学习方法：学生学习文献综述。国际教育技术与管理会议（ICETM）论文集，国际工程师协会，IEEE,
+    ISSN: 978-1-729-33355-0
+
+    - [12] Breesave, Vaish. Paul. 西非农村地区学生表现的分析与影响。国际技术、信息，2007. 2007届国际会议
+
+    - [13] Nguyen, Thai, James Patel, 和 Jaeher, A. 用于预测学生表现的分析技术。全球教育知识无界会议，IEEE,
+    2007。
+
+    - [14] Felix Sanchez (2018). 忽视业务的兴起：数据的业务案例。9(1). doi:10.978-3-811-19888-7_3_1
+
+    - [15] Koriskanen, Saart, B. 和 Panikotis, E. 大学学生表现预测。IEEE高级学习技术国际会议，ICAL 2005,
+    pp
+
+    - [16] Brett Lantz, 使用 R 学习：Barmingham; 2016, pp
+
+    - [17] Radhika R, Rahul. 机器学习在改进教育系统中的应用。
+
+    '
+  merge: 0
