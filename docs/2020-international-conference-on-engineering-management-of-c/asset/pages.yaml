@@ -1,0 +1,714 @@
+- pgno: 0
+  md: '# # Methods for Recognizing Unstructured Road Maintenance Objects Using Deep
+    Learning Algorithms
+
+
+    M. Gorodichev, M. Moseva, Kh. Dhabraililov
+
+    Moscow Technical University of Communications and Informatics
+
+    Moscow, Russia
+
+    g.gorodichev@mtuci.ru; mmoseva@yandex.ru;
+
+    hizazmullin@mail.ru
+
+
+    R. Gematudinov
+
+    Moscow Automobile and Road Construction State
+
+    Technical University
+
+    Moscow, Russia
+
+    Rinatag86@mail.ru
+
+
+    **Abstract—** This work is devoted to the study of crack algorithms in the roadway,
+    and the development of a system of automatic defect detection using computer vision
+    and neural network. The article provides a classification of defects, as well
+    as a classification of the possible causes of their formation. A review of the
+    work related to this problem area shows that convolutional neural network and
+    a feed forward network. These solutions are used as a first step of crack classification.
+
+
+    *Keywords—* neural network, crack detection, deep learning, crack classification,
+    road detection, convolutional network
+
+
+    The road system as a vital component of the infrastructure, plays a critical-economic
+    role. The cost of building new roads is extremely expensive, it is much more efficient
+    to optimize the stages of damage of the road surface. Thus, the goal of maintenance
+    is to prevent collapse at the time of reality. In addition, the condition of the
+    road affects human safety. Today in Russia there is a problem associated with
+    the quality of the road surface. Due to poor quality-road pavement people are
+    dying every year. According to the State Report for first half of 2017 in the
+    Russian Federation, due to unsatisfactory conditions and arrangement of the road
+    network, there were 60330 traffic accidents, in which 6992 people died and 8056
+    were injured. The road quality affects the period of operation and after this
+    period becomes unbearable. Whether conditions of coverage, timing repairs, the
+    treatment of a particular area of the carriageway—all this is important according
+    Rosstat, the total length of roads in Russia reaches 1.66 million km, of which
+    1.16 million km are driven. In 2017, 230 km of new built and reconstructed roads
+    were commissioned in Russia. According to the results of 2017, share of federal
+    highways that meet regulatory requirements reaches 77.8%.
+
+
+    According to the applied standards for the maintenance of a single-lane road (first
+    category), it costs 8006 rubles / km per year, repairs - 4.7 million rubles /
+    km, however 12 million km are in significant condition mode, 70% of these roads
+    require more work, more than 50% of these roads need to be reinforced with pavement,
+    and to ensure necessary coefficient of adhesion of the wheel to the road.
+
+
+    To solve this problem, modern road laboratories are created. The task of the laboratory
+    is to assess the condition of the roadway with high-resolution equipment, three-dimensional
+    scanners, a gyro-integrated positioning system, and other sensors. The laboratories
+    capture images the examination takes place manually by the operator. The specialist
+    in manual mode selects objects, such as marking length, road edge, road surface
+    cracks and other features. As a result, it is clear that this is a laborious procedure,
+    the automation of this process is very relevant. It should be noted that the human
+    factor, many defects are overlooked.
+
+
+    # II. CRACK TYPE CLASSIFICATION
+
+
+    There are several types of cracks, but they are mainly divided into three groups:
+    transverse, longitudinal and alligator cracks [1]. Each year of pavement is repaired
+    in one way. It is very important to detect crack and classify them. Transverse
+    cracks are perpendicular to the center line of the road surface. They are usually
+    caused by thermal changes. Other reasons are due to base-longitudinal forces.
+    Alligator cracks are formed due to road surface fatigue, by the combination of
+    fatigue and instability of asphalt pavement.
+
+
+    Crack width is an important measure for assessing pavement, and most state and
+    federal agencies use this option.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'Width, allows you to evaluate the type and severity of cracks. Three types
+    of cracks and their features are represented in the area of Table I. Width and
+    length of cracks is considered in the area of 700 m².
+
+
+    the boundaries of cracks requires a lot of human intuition, which is not all feasible.
+
+
+    As noted above, automatic crack detection is a complex problem for machine vision.
+    In recent years, many image-based crack detection algorithms have been developed.
+
+
+    There are studies using methods that combine image processing algorithms, such
+    as a threshold [11], mathematical [13] and detection of cracks [6]. These methods
+    of crack detection based on photometric and geometric hypotheses about the properties
+    of cracks [7]. The most distinctive part of the crack is its width. Based on this,
+    the threshold is determined globally locally for segmentation of cracks [4], [8].
+    The distinctive weakness of these approaches is noise sensitivity, which leads
+    to overestimation problem.
+
+
+    # TABLE I CLASSIFICATION OF CRACK SEVERITY
+
+
+    | Type of crack | Width of crack, m | Length of crack, m |
+
+    |---|---|---|
+
+    | Weak | < 6 | < 35 |
+
+    | | < 6 | > 35 |
+
+    | Medium | 6 - 19 | < 35 |
+
+    | | > 19 | < 15 |
+
+    | Strong | > 15 | - |
+
+
+    Longitudinal cracks represent the destruction of the surface in the form of an
+    extended rupture of the pavement material in the direction of the axis of the
+    road. Classification of crack destruction is represented in Table II. Width and
+    length of cracks is considered in a 100 m length
+
+
+    # TABLE II CLASSIFICATION OF SURFACE DESTRUCTION
+
+
+    | Type of crack | Width of crack, m | Length of crack, m |
+
+    |---|---|---|
+
+    | Weak | < 6 | < 35 |
+
+    | | < 6 | > 35 |
+
+    | Medium | 6 - 19 | < 35 |
+
+    | | > 19 | < 15 |
+
+    | Strong | > 15 | - |
+
+
+    Oblique and intersecting cracks (mesh cracks) are destruction of the road surface
+    in the form of extended discontinuities in the pavement material in directions
+    at an angle to the axis of the road.
+
+
+    # III. UNSTRUCTURED DEFECT DETECTING METHODS
+
+
+    An automated system should be used to identify types of cracks, which assesses
+    the severity and content of such cracks. Each crack can be different in shape,
+    size, color, orientation. In addition, different features of the road pavement
+    lead to a significant change in the background of the image. The random background,
+    along with shadows and objects, makes the identification process extremely difficult.
+    Therefore identification of road pavement defects requires the development of
+    computer vision and machine learning algorithms.
+
+
+    Another crack detection is finding the minimum path, which is the path between
+    the nodes of the graph. Methods have also been proposed on the principle of a
+    minimal path that finds an optimal solution without losing topology [9]. By selecting
+    endpoints on cracks and detecting a minimum on a global scale [14]. These methods
+    use the distinctive features of cracks as they are computationally efficient for
+    their practical applications.
+
+
+    With the development of machine learning, methods have been proposed to focus
+    on feature extraction and use supervised learning to distinguish between images
+    with a crack [1]. One of the best methods uses AdaBoost to describe what is a
+    crack in images [13]. A new descriptor based on local features can represent the
+    characteristics of cracks. The performance of these methods is high, but very
+    dependent on the conditions recovered. It is difficult to find suitable features
+    for all conditions.
+
+
+    Deep road pavement defects in an image is difficult for computer vision because
+    of many reasons. First, the camera is positioned in such a way that captures images
+    from the passenger''s point of view. Second, damaged sections of the road do not
+    differ in color from the background and do not easily distinguished compared to
+    objects such as vehicles and humans on the road, so they cannot be easily segmented.
+    In annotation,
+
+
+    method has been developed with a sliding window, allowing to divide the image
+    into N-blocks, which determines whether a given section of the image contains
+    a crack or not [13]. In addition, neural networks determines whether a single
+    pixel belongs to a crack based on local image information. However, the method
+    ignores the spatial relationships between the pixels and overestimates the width
+    of.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# IV. THEORETICAL ASPECTS OF AUTOMATED SYSTEM FOR DETECTING FEATURES
+
+
+    The main component of the convolutional neural network is convolution. Convolution
+    is on two real arguments, generating a third function. The convolution turns on
+    filters for each layer of the image. Also, the convolution layer has a convolution
+    kernel. The convolution kernel is an Nx matrix. The following is the convolution
+    operation formula
+
+
+    ```
+
+    $x_{ij}^l = \sum_{m=0}^{\infty} \sum_{n=0}^{\infty} w_{mn}^l \cdot y_{i-m,j-n}^{l-1}
+    + b_{ij}^l$
+
+    ```
+
+
+    ```
+
+    $i \in (0, \dots, N), j \in (0, \dots, M)$
+
+    ```
+
+
+    Here subscripts $i, j, b$ are the indices of the elements in the matrices, and
+    $l$ is the value of the stride step. The superscripts 1 and -1 are the indices
+    of the network layers.
+
+
+    $x^l$ - the output of some previous function, or the input of the network; $y^l$
+    - $x^l$ after passing the activation function (for example, ReLU or sigmoid);
+    the item about the activation function will be a bit later;
+
+
+    $w^l$ - convolution kernel; $b^l$ - bias; $x^l$ - result of a convolution operation.
+
+
+    That is, operations take place separately for each element $i, j$ of the matrix
+    $x$ whose dimension is $(N, M)$. The convolution layer has a small number of parameters
+    that are configured when training the neural network. With a 100x100 image having
+    3 channels, with a 3x3 kernel for each of 6 channels it will have $9 * 3 * 6 =
+    162$ parameters for training.
+
+
+    hyphenation of the input, highlighting important features. Transfer invariance
+    means that if the input is a small amount, the values of most pooled outputs will
+    not change. This important property is necessary for ensuring the existence of
+    a fact and its location.
+
+
+    After convolutional networks a fully connected layer acts as a connection for
+    the next layer. Typically, a fully connected network is a multi-layer perceptron.
+    In most cases, in such a network, each neuron is connected to all neurons of the
+    next layer. Such a network is shown in the figure 2.
+
+
+    ![](img/7e552bee7be7ea346d7eed66f3f5219a_2_0.png)
+
+
+    Fig. 2. Feed forward network
+
+
+    For such networks the activation function is calculated as shown below.
+
+
+    ```
+
+    $net_i = \sum_{i=0}^{n} w_i x_i\ny_i = f(net_i)$
+
+    ```
+
+
+    Important in deep and convolutional networks is the activation function. If the
+    behavior of the model is close to linear, then it is easier to train. Such activation
+    function used in hidden and convolutional layers is ReLU (Rectified Linear Unit).
+
+
+    ![](img/7e552bee7be7ea346d7eed66f3f5219a_2_1.png)
+
+
+    Fig. 3. ReLU activation function
+
+
+    ![](img/7e552bee7be7ea346d7eed66f3f5219a_2_2.png)
+
+
+    Fig. 1. Pooling operation
+
+
+    The pooling layer is a non-linear deformation of the feature map, a group of pixels
+    is compressed to one pixel, and a non-linear transformation occurs. Pooling creates
+    disjoint regions and each is compressed to one pixel, after which a pixel is selected
+    with the maximum value. The pooling layer is usually placed after the convolution
+    layer, but before the next convolution layer. Pooling makes it possible to invariant
+    the representation of relatively small
+
+
+    ReLU is differentiable at all points except x=0. Features of ReLU: it''s easy
+    to optimize, since it is very similar to linear function. The only difference
+    between a linear unit and a rectified unit is that a rectified unit yields zero
+    through half its area.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'Gradients are not large, but permanent. The second derivative of the operation
+    is 0 almost everywhere, and the first is wherever the neuron is active. This means
+    that the direction of the gradient is most useful for training functions that
+    introduce second-order effects. One of the disadvantages of rectified linear unit
+    is that they cannot be trained using gradient methods using examples where their
+    activation is zero. Another generalization of the rectified linear unit is leaky,
+    which allows them to be used in their exceptional cases. But it restricts their
+    use in cases where the activation is zero. There are rectified linear units which
+    use max(0,x), and in some cases this is useful. Max is another generalization,
+    where the vector g (x) is divided into a few k values, and the maximum is selected
+    from these values.
+
+
+    no contraction to activation, the gradients for dropped neurons also drop to zero.
+
+
+    ![](img/7e552bee7be7ea346d7eed66f3f5219a_3_0.png)
+
+
+    Fig. 4. Dropout
+
+
+    # $F(x) = max(x)$
+
+
+    This type of network has an advantage, it reduces the number of parameters necessary
+    for training, which brings flexibility. The signed filters can generalize without
+    loss of information by training a group reduces the number of features at each
+    level. This redundancy allows you to deal with the problem of catastrophic forgetting.
+
+
+    The dropped nodes are randomly selected at each step of the gradient descent.
+    The basic principle is that the network will be forced to avoid "co-adaptation."
+    In short, we will explain what coadaptation is and how it arises in deep networks.
+    A deep network has many neurons. Then other neurons in the network will quickly
+    depend on this particular neuron for information. This will make the network less
+    sensitive to the functions learned by this neuron, which may represent the deviation
+    of the dataset, instead of learning the general rule.
+
+
+    Another important function is softmax.
+
+
+    ```
+
+    $out = \frac{e^{net_i}}{\sum e^{net_j}}$
+
+    ```
+
+
+    The softmax compresses the output of each block so that it is in range of 0 and
+    1, just like a sigmoid function but the output was converted to it. The output
+    of the softmax function is equivalent to the probability that any of the classes
+    is. Mathematically, the softmax function is shown above, where $i$ is the output
+    index (if you have 10 outputs, then there are 10 classes). Softmax is used in
+    neural networks to represent the probability distribution of the predicted classes.
+
+
+    Dropout prevents this type of co-adaptation, because it will no longer be possible
+    to depend on the presence of specific neurons during training. As such, other
+    neurons will be forced to "relax" and learn useful ideas. A theoretical argument
+    follows that this practice does not allow the network to memorize data; with loss
+    losses no longer taper rapidly to 0 for very deep networks. Then, dropout allows
+    the network to generalize well on unseen test data for a wide range of datasets,
+    which is one of the reasons that dropout is a recognized powerful invention, and
+    not just bringing force. It is because dropout makes it much noisier and thus
+    more useful predictions. We will explain how to properly dropout for training
+    and predicting. There is also an introduced method to tune the set activation
+    to a coefficient without using dropout. Dropout modifies the network for testing,
+    without scaling $q$ the neuron until returns values are higher than during training.
+
+
+    # V. REGULARIZATION METHODS
+
+
+    Regularization is a general term for a mathematical operation that limits overfitting,
+    generalized regularization. There are many different types of regularization,
+    which we will consider in the next sections.
+
+
+    Dropout is a form of regularization that discards a fraction of the nodes that
+    are fed into a fully connected layer (Fig. 4)., dropping a node means that its
+    contribution to the corresponding activation is set to 0. Since there
+
+
+    Now we consider methods of regularization that are used along with dropout. Regularization
+    is a very important technique in machine learning for retraining. There are 2
+    types of regularization of L1 and L2, the difference between them is that only
+    L2 (Ridge Regression) is the sum of the squared weights, and L1 (Lasso Regression)
+    is just the sum of the weights. The basis of'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'regularization is a very simple, but effective idea is the fine classification,
+    which reduces the complexity of the model.
+
+
+    Now we consider other methods of regularization in neural networks when used with
+    dropout. Regularization is a very important technique in machine learning for
+    training. There are 2 types of regularization of L1 (Ridge Regression) is just
+    the sum of the squared weights, and L1 (Lasso Regression) is just a very simple,
+    but effective idea is the fine classification, which reduces the complexity of
+    model.
+
+
+    | Layer name | Structure |
+
+    |---|---|
+
+    | F.C. | 2 |
+
+
+    This neural network represents the VGG-Net topology and is based on the model
+    proposed in [13]. Below is a graphic representation of this network.
+
+
+    ```
+
+    $L2: ||\omega||^2 = \sum \omega^2$
+
+    ```
+
+
+    ```
+
+    $L1: ||\omega|| = \sum |\omega|$
+
+    ```
+
+
+    ![](img/7e552bee7be7ea346d7eed66f3f5219a_4_0.png)
+
+
+    Fig.5. Architecture of proposed convolutional network.
+
+
+    L1-regularization is selection of the most important factors that most affect
+    the result. For simplicity, it is assumed that factors with a small amount of
+    influence on the final result are less important to predict during training. L2
+    regularization prevents retraining the model by disproportionately weights. With
+    a quadratic polynomial, the closer you are to zero, the smaller your derivative
+    becomes so when your value of weight is already small, further gradient descent
+    will not change it. In the case of absolute value, the derivative is a constant
+    equal to one. Therefore, in the case of L1, it is also equal to zero. Therefore
+    with L1-regularization, the gradient descent will tend to zero at a constant rate,
+    and upon reaching it, it will remain. As L2-regularization contributes to the
+    value of the weight coefficients, and L1-regularization contributes to their equality
+    to zero, providing sparsity.
+
+
+    The neural network contains convolutional layers, pooling and feed forward network.
+    The proposed network has 4 convolutional layers with 2 layers each, pooling with
+    3 layers of a feed forward network. All convolutional layers have a 3 x 3 kernel
+    and stride of 1, of which these was tested with VGG-Net. Each of the feed forward
+    network has two neurons to determine the accuracy of detection at the True and
+    False. Activation function is the softmax. Hidden layers use rectified linear
+    activation function (ReLU) to work with non-linearity. For training cross-entropy
+    loss, L2 regularization is used to fine the network.
+
+
+    Another element is proposed to reduce retraining. During training, the value of
+    hidden neurons in the first two layers of the feed forward network is set to zero.
+    The coefficient is set to 0.5. Weights in the convolutional layers and feed forward
+    layers are initialized by the Xavier method.
+
+
+    # VI. RECONSTRUCTION METHOD USING DEEP LEARNING
+
+
+    # VII. DATA COLLECTING AND PROCESSING FOR TRAINING PROCESS
+
+
+    In this work, the possibility of using a detector based on a convolutional neural
+    network was demonstrated. Below Table 1 with the structure of the layers of the
+    model.
+
+
+    | Layer name | Structure |
+
+    |---|---|
+
+    | Conv16 | 3x3,1 |
+
+    | Conv16 | 3x3,1 |
+
+    | maxpool | 3x3,1 |
+
+    | Conv32 | 2x2 |
+
+    | Conv32 | 2x2 |
+
+    | Conv64 | 3x3,1 |
+
+    | maxpool | 2x2 |
+
+    | F.C. | 64 |
+
+    | F.C. | 64 |
+
+
+    TABLE III. NEURAL NETWORK ARCHITECTURE USING DETECTOR
+
+
+    For this work, we used the database that contains 118 RGB images with a size of
+    32 x 480 pixels. All images are taken from smartphone in Moscow, Russia. These
+    images contain no such as shadows, clouds, and water stains, and for training
+    1-channel layers are used as network input, this is due to the Theuma limitation.
+    In a cropped problem, pixels are much larger than pixels with pixels. For each
+    problem, we analyzed examples, both positive and negative, has a big impact on
+    network performance. In the sample for training, it was proposed to use 2600 labeled
+    images, of which 800 were negative and 1800 were positive. Scaling raw data selected
+
+
+    ![](img/7e552bee7be7ea346d7eed66f3f5219a_4_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'Detection results by different classifiers represented below.
+
+
+    Fig. 7. Negative image example
+
+
+    ![](img/7e552bee7be7ea346d7eed66f3f5219a_5_0.png)
+
+
+    For this project we used hybrid network, by VGG topology.
+
+    Convolution step is 3x3 susceptible field allows to detect the smallest details
+    of the image. On a VGG network, three 3x3 convolutions follow one another without
+    subsampling.
+
+    The number of feature maps is gradually growing on a order phenomenal vector for
+    further training of a fully connected network. The depth of the neural network
+    is 16 or 19 layers of the neural network, which allows for a good generalization.
+
+
+    Fig. 8. Convolutional neural network detection
+
+
+    # III. ALTERN RECOGNITION APPROACH
+
+
+    It should also be considered a detection method using a multilayer perceptron
+    using LBP preprocessing. For this, the Sklearn library was used with 50 neurons
+    in the hidden layer and 2 neurons in the output layer, a maximum of 1000 iterations
+    were set for training. The training was carried out the basis of the images presented
+    above image, preprocessing is carried out by LBP operators. LBP is an operator
+    that operates as a binary number, depending on the intensity of the image pixels.
+    An important feature is invariant to image brightness in various conditions. Different
+    images have various changes in absolute value, colors, brightness, texture elements.
+    But the initial relations between the nearest values are subject to changes. The
+    principle of operation is to take the central pixel as a threshold and compare
+    its brightness with values in the neighborhood. If the value is greater than the
+    threshold, then the result is set to 1, or 0.
+
+
+    ![](img/7e552bee7be7ea346d7eed66f3f5219a_5_1.png)
+
+
+    Fig. 9. Detection by a feed forward network with LBP operator.
+
+
+    # IX. CONCLUSION
+
+
+    Through the analysis we found that most crack detection algorithms on the basis
+    of image features do not achieve optimal performance in terms of accuracy and
+    speed, which can be explained in the following two aspects. First, the LBP features
+    are not suitable for complex backgrounds and multilayer extraction of pixels is
+    efficient and this allows to skip defects. With massive image region data, the
+    traditional classification is computationally expensive and very sensitive to
+    noise. In order to solve the aforementioned problems, we developed developed models
+    and detection methodologies using the Local Binary Patterns operator LBP was used
+    to compare with VGG -net, which allowed to extract fine texture details. As a
+    result, the disadvantages were identified:
+
+
+    ```
+
+    s(x) = \begin{cases} x \ge 0 \ 0, x < 0 \end{cases}
+
+    LBP_{pq} = \sum_{p=0}^{L-1} s(g_p - g_q) \cdot 2^p$
+
+    ```
+
+
+    The resulting number, depending on the neighborhood of the pixels, can take eight-bit
+    binary code created. Further based on these data, a histogram is constructed on
+    the basis of which our network is trained. So, it is assumed that it is possible
+    to extract small details of the image and on its basis to train the neural network,
+    the result is shown below in the figure. The concept is based on work on the detection
+    of cracks in concrete.
+
+
+    +   1. Not enough training images, it is too few.
+
+    2. Noisy and too dark images
+
+
+    The following methods are proposed to improve these models. An increase in the
+    number of training images for this'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'proposal verification and training on new data set. This dataset has a more
+    complex texture, as well as a darkened background.
+
+
+    To improve the second model, a combination of LBP and HOG (of oriented gradient)
+    is proposed. This method allows us to highlight the features of the crack area,
+    well as texture features (which allows us to select a local pattern boundary)
+    and features (which allows us to select a highlight of the oriented gradient).
+    By combining these additional functions, the representation of the image is enriched
+    with features, and noise interference is further suppressed.
+
+
+    Provided methods can be used for the first step of crack classification. Second
+    step consists of combining images with defects and detecting the class of cracks.
+
+
+    # Acknowledgments
+
+
+    The reported study was funded by RFBR, report number 19-29-06336.
+
+
+    # References
+
+
+    +   [1] Fan, Z., Wu, Y., Lu, J., & Li, W. (2018). Automatic Crack Detection Based
+    on Structured Projection with the Convolutional Neural Network.
+
+
+    +   [2] Quintana, M., Torres, J., & Méndez, J. (2016). A Simplified Computer Vision
+    System for Road Surface Inspection and Maintenance. IEEE Transactions on Industrial
+    Informatics.
+
+
+    +   [3] Wang, Y., Wu, G., Pang, Y., & Wang, Z. (2018). Crack Damage Detection
+    Method via Multiple Features and Efficient Multi-Task Learning Model. Sensors
+    (Basel, Switzerland).
+
+
+    +   [4] Sidorov, A. V., & Ryabov, A. (2008). Detection of defects in road surface
+    by a vision system. In Trudy 18-j Mezhdunarodnoy konferencji po komputernoy grafike
+    i zreniyu GrafikKon2008, GraphCon, Moscow, 206-212.
+
+
+    +   [5] Sakharov, A. B., Borisov, A. A., Kinshakov, V., and Krylov, A. (2008).
+    Detection of road lane marking and artifacts of road surface.
+
+
+    +   [6] http://www.scolarly.org/Library;Patterns
+
+
+    +   [7] Petrov, V. I., Samorodov, A. V., & Standrandin, I. N. (2011). Application
+    of Local Patterns to solve the Face Recognition Problem. Journal of the Moscow
+    State University Technical. Series Instrument Engineering (Engineering), (5),
+    42.
+
+
+    +   [8] Goodfellow, I. Deep Learning by Yoshua Bengadeh, David Bazariah [Ramsdar](https://www.coursera.com/library/tensor-flow/9780195440334.html).
+
+
+    +   [9] Ulyanov, A. Doroznhiaya Drizheva S. Karlozkova Doroznykhaya Parnnikov
+    K.M., Stashkiy D.Y. Utrb. ORGANIZACZIYA I BEZOPASNOST DOROZNYH ORGANIZACIJ Vii
+    Международnoy konferencji, pochaschemoy 15-j roli doroznykh d. t.,
+
+
+    +   [10] Ulrich, M. L. (2009). Automated road crack detection using inspection
+    and image dynamics. 2009 17th European International Signal Processing Conference,
+    22.
+
+
+    +   [11] Tanaka, K., & Kubo, A. (1998). A Crack Detection Method in Road Surface
+    Images Using Morphology.
+
+
+    +   [12] Johnson, Ann M. (2000). Best Practices Handbook, Asphalt Pavement. Minnesota
+    Technology Transfer/APT Center for Transportation Services. Retrieved from The
+    University of Minnesota Digital Conservancy, http://digital.umn.edu/1129/179967.
+
+
+    +   [13] Cubero-Fernandez
+
+
+    +   [14] Donald, Pavement Surface Evaluation and Rating (PASER) Manuals (Wisconsin
+    Transportation Information Center, Wisconsin, 2002).
+
+
+    +   [15] RK, Taylor. Pavement Surface Condition Maintaining Manual Northwest Transportation
+    Center, Washington Department of Transportation (Washington, 1992).
+
+
+    +   [16] N.E. Konstantinov, M.G. Gordichevich, R.A. Gematudin, “Blockchain as
+    an iot development platform,” T-Comm, vol. 12, no. 9, pp. 63-68,
+
+
+    +   [17] A.S. Bugaev, A. Tatashev, M.Y. Yashina, O.S. Lavrov, E.A. Nosov, “Reconstruction
+    of bridges based on deterministic model and data obtained from intelligent transport
+    systems,” T-Comm, vol. 13, no. 10, pp. 35-44, 2019.'
+  merge: -1
+  img_proc: true
