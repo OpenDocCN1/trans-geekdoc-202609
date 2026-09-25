@@ -1,0 +1,621 @@
+- pgno: 0
+  md: '# # Study on Electric Sharing and Leasing Business Model for Group Users based
+    on Blockchain
+
+
+    Xiaoqing Zhang
+
+    Innovation center
+
+    State Grid Electric Vehicle Service
+
+    Company, Ltd,
+
+    Beijing, China
+
+    chaidong@163.com
+
+
+    Ye Yang
+
+    Innovation center
+
+    State Grid Electric Vehicle Service
+
+    Company, Ltd,
+
+    Beijing, China
+
+    nyeyao@neo.live
+
+
+    Shu Su
+
+    Platform Center of Internet of Things
+
+    State Grid Electric Vehicle Service
+
+    Company, Ltd,
+
+    Beijing, China
+
+    sushu@aliyun.com
+
+
+    *Abstract*—In order to meet the needs of the group users'' official and private
+    travel, an electric vehicle (EV) sharing and leasing model with participation
+    of multiple entities, including the group, owners and rental platform, is proposed.
+    Based on the analysis of EV sharing and leasing business model a trusted transaction
+    agreement based on blockchain technologies for group users'' official and private
+    vehicle-using scenarios, corresponding business processes, implementation plans,
+    group credit for business, individual cost and car rental cost are also considered
+    in this paper which can provide effective support for the construction of the
+    EV leasing.
+
+
+    expenses—market-based vehicle use, such as online ride-hailing, which has loopholes
+    in expense reimbursement, sometimes regulation may lead to excessive reimbursement;
+    at the same time, and curb the enthusiasm of group users'' official vehicle travel.
+
+
+    **Keywords**—official travel, electric vehicle, blockchain, EV sharing, leasing
+
+
+    # I. INTRODUCTION
+
+
+    With the market development of official vehicles, the traditional planning vehicle
+    model has not adapted to the group''s official vehicle needs, and caused many
+    problems in the use of vehicle management, highlighted: in the high cost of official
+    vehicle allocations, causing a serious economic burden on the group; leading to
+    excessive waste; and the phenomenon of private use of official vehicles which
+    is a serious problem.
+
+
+    Against this background, groups represented by state-owned institutions and private
+    enterprises, have been exploring official management efficiency, strictly reducing
+    the number and use of official vehicles, limiting the use of non-official vehicles
+    with market-oriented travel or other forms. These challenges have several numbers:
+    1) insufficient vehicles: limited number of vehicles reached by the group cannot
+    almost meet the actual demand of electric vehicles; “official vehicle for official
+    travel” may result in low efficiency of official vehicles in some groups; 2) insufficient
+    supervision of vehicle
+
+
+    This work was supported by the State Grid Technology Project “Research on application
+    in operation shared mode electric vehicle and power grid” (SB/T 2019.11784-000)
+    from State Grid Corporation of China
+
+
+    II. MARKET ANALYSIS OF SHARING OFFICIAL TRAVEL
+
+
+    From the perspective of groups, some enterprises, especially state-owned institutions,
+    are not in position to share the group owned vehicles with public service or emergency
+    reasons because the number of vehicles in groups is limited and may have idle
+    during certain periods (e.g., weekends), which makes it possible to share the
+    group vehicles within the organization or even with the public
+
+
+    From the technical realization point of use, the sharing of group vehicles involves
+    management and insurance data, the authenticity and reliability of such data is
+    key for settlement of vehicle lease costs and the prevention of private use of
+    official vehicles.
+
+
+    From the perspective of the group ecology, the business scope of group''s official
+    travel vehicle, leasing, with its size and growing trend of vehicle use, is no
+    longer conducive to the formation of a business model with extensive diversification
+    and diversified profits. It is necessary to introduce the group sharing of EV
+    vehicle use as a supposed and based platform with multi-user participation.
+
+
+    Therefore, on one hand, it is necessary to establish vehicle sharing and leasing
+    platform with wide participation and sustainable development to meet the group''s
+    needs for'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# # iSPEC 2020
+
+    2020 IEEE Software Power and Energy Conference
+
+
+    private travel, and to allow the EV to be shared directly or publicly by groups
+    that have redundant vehicles. On the other hand, the blockchain technology should
+    be introduced into the business model to achieve effective reconciliation and
+    supervision of travel process based on its typical techniques.
+
+
+    group''s employee can use the sharing and leasing platform for official or private
+    use of vehicles.
+
+
+    As shown in Fig. 1, participants in the leasing activities include platform operator,
+    groups of vehicles and vehicle-employees. The operator is responsible for the
+    EV sharing platform (app), provides service for the group and individuals, reviews
+    the service quality, and maintains the platform and owned vehicles.
+
+
+    # ### III. GROUP EV SHARING AND LEASING STRUCTURE
+
+
+    Based on the above, a sharing and leasing model groups employees, employees in
+    the group and leasing operators are proposed. In this model, the platform operator
+    builds a vehicle-using app (app) to provide service such as online ride-hailing,
+    time-sharing, short- and long-term leasing for the group''s official and private
+    travel. The vehicles accessed to the platform are provided by groups, the leasing
+    platform operators and third-party B-terminal vehicles. The group can be decided
+    whether to provide paid sharing or targeted leasing according to its actual situation.
+
+
+    organizations that provide EVs to the sharing and leasing platform. The group
+    managers can use the hailing and app for employees'' ride-hailing management,
+    including the input of group employees'' information, permissions and rules of
+    sharing. For groups that do own vehicles, they can also use the app to ride-hailing
+    EV management of group vehicles.
+
+
+    employees who use the EV leasing for official use can use the app for private
+    use at their own expense and enjoy group sharing''s guarantees and discounts.
+
+
+    enterprises and institutions, etc.
+
+
+    ![](img/5ed13185228e7513fb5f8e5e3bea6281_1_0.png)
+
+
+    Fig. 1. Shared rental business model
+
+
+    The group''s official and private EV-using scenarios can be categorized into online
+    ride-hailing, time-sharing leasing, short-term EV leasing and preferential-term
+    EV leasing according to actual needs. When the group''s employees needs vehicles
+    for official use they can select a service, submit their application on the app
+    and start using the service after the approval of them. When group employees use
+    vehicles for private trips, the expenses are paid by the individual and until
+    the end of the order.
+
+
+    chain can run through the process of vehicle appointment, compensation, insurance
+    and default, playing an important role in the application scenario of group business
+    vehicle sharing.
+
+
+    The sharing and leasing platform, groups, and vehicle owners, insurance company,
+    vehicle maintenance company, EV charging operator, or government regulator, establish
+    alliance to achieve contracts through sharing of data and intelligent contract.
+
+
+    # ### B. Blockchain applications
+
+
+    Blockchain is a decentralized database and an innovative application of distributed
+    data storage, multi-point-point transmission, consensus mechanism, encryption
+    and other technologies in the Internet era. The key to technology is convergence,
+    which requires blockchain technology to be embedded in specific scenarios. Due
+    to its features of automatic execution and credibility, willingness,
+
+
+    For every EV accessed to the platform, its insurance information and maintenance
+    records should be connected to the block chain to ensure transparency. For the
+    group''s official travel, the order number, user ID, EV service time, driving
+    path, settlement location, cost order, charging and discharging, time discharging
+    and energy, and discharging location data in the upper order needs to be linked,
+    and the block chain intelligent contract should be used to complete the
+
+
+    Paper No. 202000730000099 2/6 2629'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# # iSPEC 2020
+
+    2020 IEEE Sustainable Power and Energy Conference
+
+
+    Chengdu, Nov.2020
+
+
+    settlement of all parties. The credible sharing of travel data can enable the
+    effective supervision of group employees'' EV use, and avoid the behavior of private
+    of public vehicles and false application of EV expenses. The introduction of blockchain
+    can play the following:
+
+
+    +   1) Establish trust among all parties
+
+    Vehicle-sharing is an industry that has great importance to offline. In addition
+    to the current information sharing and evaluation system, there are behaviors
+    such as malicious, damage and infringement of users'' rights, the cost of social
+    intervention is relatively high.
+
+
+    By validating who is other at the end of the transaction, it clarifies the division
+    of responsibility, ownership, and access. With the blockchain technology, the
+    operation of EV is enhanced by platforms, and multiple vehicles in the EV-sharing
+    platform can be encouraged to join in the industry so to avoid the disadvantages
+    of idle vehicle use and improve the use of efficiency. By placing idle vehicles
+    on the platform, owners can obtain order revenue, which can only guarantee vehicle
+    safety but also stable operation. In the future, with the help of blockchain technology,
+    core problems such as authentication, data sharing, protection, security data,
+    transparency and incentives can be solved. Business insurance, business finance,
+    IT, business auto, repair, maintenance, and auto beauty, and even be expanded
+    to meet the demand of development in the industry.
+
+
+    +   2) Official and individual credit grading
+
+    With the help of blockchain, the behavior of group users and individual users
+    can be tracked by the shared operation platform. Based on the historical data,
+    the credit of users can be recorded and updated, which is the premise for enterprise
+    users to have the right to use the shared EV. For private users, their historical
+    behavior data can be graded as personal credit. For individuals with good credit,
+    personal travel can also be paid by credit granting rather than real-time payment.
+    Blockchain-based vehicle credit not only improves the utilization of cars and
+    reduces the operating cost of the platform, but also enables a sense of self-restraint
+    and reduce idle usage.
+
+
+    +   3) Industry points sharing
+
+    As a result of the Internet, points connecting a role between B (enterprise) and
+    C terminal (user) in the shared world. In general, general-businesses use points
+    to mark various rights and their interests within the ecosystem to maintain user
+    loyalty and costly usage.
+
+
+    In the EV-sharing business, users can obtain through various behaviors such as
+    travel, vehicle maintenance. With the help of blockchain, points can be collected
+    among many participants in the share, so as to realize the ecology of the upstream
+    and downstream of the electric industry producing consuming consumers. The points
+    obtained from the enterprise''s behavior can be transferred to group employees
+    as an incentive
+
+
+    the company to give employees. The acquisition and circulation of points can greatly
+    promote the establishment of the upstream and downstream ecology of the industry
+    and the internal incentives of electric enterprises.
+
+
+    # IV. SHARING AND LEASING BUSINESS PROCESS AND IMPLEMENTATION PLAN
+
+
+    A. Business process
+
+    in terms of business process, as in Fig. 2, relying on the operating platform
+    app, the group needs to verify its identity and the business scope. With the group
+    qualifications, the platform further carries out registration and examination,
+    approves the credit limit, deposit amount of the vehicle and payment method (real-time
+    statement, monthly statement, etc.).
+
+
+    After groups join, they can enter employees'' information into the platform system
+    and finish route authority management. If a group chooses suitable vehicles for
+    their group trip (intra-group ordering interest or public leading). The group
+    can carry out official use of personal and private vehicles on the platform.
+
+
+    ![](img/5ed13185228e7513fb5f8e5e3bea6281_2_0.png)
+
+
+    > Fig. 2: EV leasing business process flow
+
+
+    The process of group employees'' EV use is shown in Fig. 3. Relying on the platform
+    app, employees choose between official travel and private travel. With the help
+    of flexible choice, the trip can be made online ride-hailing, time-sharing, and
+    preferential long-term lease. When online ride-hailing is chosen, there are two
+    types of vehicle use with using the common fixed-zone vehicles put by the set
+    groups and approval vehicle using the flexible-route vehicle. All official trips
+    require the approval of the employee''s leader, which is managed by the group
+    manager on the platform. When an employee needs to use an EV for private travel,
+    he she must also select a specific entry, parameters such as times and locations,
+    then pay for the trip and if it after missed
+
+
+    Paper NO. 202007300000097
+
+
+    Page 3/6
+
+
+    2660
+
+
+    Article license granted to: University of Michigan. Downloaded on 2021-05-27 at
+    06:00:08 UTC IEEE Xplore. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# 2020 IEEE Sustainable Power and Energy Conference
+
+
+    Chengdu, Nov.2020
+
+
+    ![](img/5ed13185228e7513fb5f8e5e3bea6281_3_0.png)
+
+
+    reservation, open and close the door with the APP, travel by themselves, returning
+    the car to the designated location after use, and finishing using the car after
+    paying the fee according to the ''time + mileage'' agreement. Group employees
+    should submit-EV usage in the APP their official vehicle, use the car after approval,
+    and related expenses then be paid directly by the group enterprise. The process
+    of using the car is shown in Fig. 5;
+
+
+    Fig. 3. Group employees'' official and private EV-using process
+
+
+    Enterprise-sharing lease approval process
+
+
+    # B. Sharing and lease service type
+
+
+    The specific services and processes are as follows:
+
+
+    # 1) Online ride-sharing
+
+
+    The sharing and leasing platform provides the group''s employees with online ride-sharing.
+    Groups place an order for a ride through the APP, instantly matching the car,
+    various payment methods such as Alipay and personal accounts are supported. Employees''
+    travel for business purposes can be reimbursed for vehicles in the APP, which
+    will be settled by the group''s account after approval. The process of using the
+    car is shown in Fig. 4.
+
+
+    | Approver | employee |
+
+    | --- | --- |
+
+    | The enterprise payment audit function is set | Start |
+
+    | | 1. Pick up the EV outlet |
+
+    | | Fill in the information | 2. Return outlets |
+
+    | | application'' and submission of the | 3. Use EV time-limit |
+
+    | View details of application | 4. Department
+
+    | | | Approved |
+
+    | | Generate records | 5. Application reasons |
+
+
+    Enterprise-sharing lease approval process
+
+
+    | Approver | employee |
+
+    | --- | --- |
+
+    | The enterprise payment audit function is set | Start |
+
+    | | 1. Pick up the EV outlet |
+
+    | | Fill in the information | 2. Return outlets |
+
+    | | application'' and submission of the | 3. Use EV time-limit |
+
+    | View details of application | 4. Department
+
+    | | | Approved |
+
+    | | Generate records | 5. Application reasons |
+
+
+    ![](img/5ed13185228e7513fb5f8e5e3bea6281_3_1.png)
+
+
+    Fig. 5. Enterprises-sharing lease approval process
+
+
+    # 3) Flexible short-term and preferential long-term
+
+
+    The leasing platform can provide short-term and long-term rental services for
+    EVs, including general vehicles, special production vehicles with daily, weekly,
+    monthly and yearly to meet the group''s needs for business and engineering vehicles.
+    The group employees can order and pay for the vehicles online through the APP,
+    or fill in the application form offline to apply for the vehicles. See Fig. 6
+    for the car-use process.
+
+
+    | Approver | employee |
+
+    | --- | --- |
+
+    | The enterprise payment audit function is set | Start |
+
+    | | 1. Pick up the EV outlet |
+
+    | | Fill in the information | 2. Return outlets |
+
+    | | application'' and submission of the | 3. Use EV time-limit |
+
+    | View details of application | 4. Department
+
+    | | | Approved |
+
+    | | Generate records | 5. Application reasons |
+
+
+    Fig. 4. Enterprise online ride-sharing process
+
+
+    # 2) Time-sharing lease
+
+
+    Time-sharing lease can provide pick-up-and-use EV rental service for group employees
+    and other individuals. Employees can freely choose the vehicle demand, make an
+    online
+
+
+    Paper No: 2020C73000000092
+
+
+    Page 4/6
+
+
+    2631
+
+
+    Authorized user use limited to: University of Brighton. Downloaded on 27 May 2021
+    at 06:00:08 UTC from IEEE Xplore. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: "# 2020 IEEE Sustainable Power and Energy Conference\n\nChengdu, Nov.2020\n\n\
+    Department administrator/\ndepartment employee\nPlatform operator\n\nhigher credit\
+    \ score tends to be I. The credibility of\ngroup with major contract violations\
+    \ or serious\ndelinency in leasing fees is lower, and the credit\ncoefficient\
+    \ of these groups can be reduced to zero, as,\n\n+   Start\n1. The rental\n2.\
+    \ EV type\n3. Number of passengers\n4. Leasing reasons\n\nAccording to the credit\
+    \ score, the platform can\nare reduce the deposit and increase the shared\ncredit\
+    \ limit of the group. The adoption of a deposit\ngrading system can effectively\
+    \ differentiate the\nmanagement of different groups and guides to\nlong-term leasing\
+    \ credit. For example, based on\ncredit score of the enterprise, the platform\
+    \ can decide\\whether the enterprise should settle fees in real time or\nadopt\
+    \ such credit settlement methods as de\\/settlement settlement with credit agreement\n\
+    amount.\n\nApply for a EV\nrental\nGenerate\nrecords and\nsubmit them\nto approvers\n\
+    \nView details\nof application\n\nConfirm EV\nneeds\n\nWhether to\napprove or\
+    \ not.\n\nConfirm service\nAgreement\n\nGenerate\nservice\nprotocol\n\nPlace the\n\
+    order\n\nPick up the\nEV\n\nProvide the\nEV\n\nReturn the\nEV\n\nConfirm the\n\
+    deposit\n\nIssue notice\n\nInform users of\ndefault and\nby\n30 days\ninner letter\n\
+    \nGroup account payment\n\nEnd\n\nFig. 6. EV rental process\n\nThe group's official\
+    \ credit can be increased in\ntwo ways: first, the group pays fees in advance,\
+    \ and\ncorresponding advance payment is directly added\nto accumulated settlement\
+    \ statement F. Secondly, the\nplatform operates monthly to adjust the\nssettlement\
+    \ of the group, and appropriately\nincreases group's credit limit when the credit\
+    \ score and\nEV uses growing credit. The deposit and\nrocess is shown in Fig 6,\
+    \ and the process is shown in\nFigure 7.\n\n![](img/5ed13185228e7513fb5f8e5e3bea6281_4_0.png)\n\
+    \nFig. 7. Group deposit and credit flow\n\nDEPOSITS AND FEES OF GROUP CREDIT\n\
+    \nThe group deposit is the amount of\ngroup to reduce the risk factor. The group\n\
+    credit limit refers to the total amount of\nleasing fees that are covered by the\
+    \ enterprise's\nentprises for real-time settlement period\n\nWhen registering\
+    \ for the group's official vehicles,\\prises are not required to pay a deposit\
+    \ if they\nonly the 'ride hailing' service. A deposit is\nrequired when the group's\
+    \ service includes time-sharing,\nflexible short-term and preferential long-term\n\
+    rental needs.\n\nGenerally, the initial amount of the credit deposit\nis referred\
+    \ to the local market price, and the group's\ncredit limit is not less than the\
+    \ credit.\n\nWhen renewing the subsequent deposit, and\n'credit scores' are used\
+    \ as rating indicators. The\nformula of credit score is shown in (1), when S is\n\
+    credit score, T is continuous on-site time, F is\naccumulated settlement period,\
+    \ and k is group\ncoefficient.\n\n```\nS = T * F * k\n```\n\nIn detail, T is the\
+    \ time that the group pays the\n-using fees continuously on, and k is related\
+    \ to the\nnature, scale and financial status of the group, in which\nofficial\
+    \ duties of the state and organs can be\nregarded as endorsed by the group\n\n\
+    Subject to the payment of a deposit and the\nright of credit, the group enterprises\
+    \ are not\nrequired to pay internal deposit when they use\nofvolving EVs for time-sharing\
+    \ short-term\nnor preferential long-term rental. For the group\nentprises use\
+    \ for service purpose, whether or not\npay deposit is determined by the group's\
+    \ credit score. No\ndeposit is required for enterprises, except for\nhave excellent\
+    \ credit scores, except for private. The\nentprises in group with low credit,\
+    \ then they can\nmulti ways to finish group credit authentication; 1)\nalipay\
+    \ deposit binds good group credit\nfor pre-authorization; 2) any group binds credit\r\
+    epayment. When an credit score is low and no credit, he should pay the\ndeposit\
+    \ through WeChat, Alipay, bank cards and\nother ways, and after returning the\
+    \ EV, the deposit will\nbe returned in the same way after operators\n\nPaper No.\
+    \ 202007300000097\n\nPage 5/6\n\n2632\n\nAuthorized licensed use limited to: University\
+    \ of Brighton, Download on May 27, 2021 at 06:08:08 UTC from IEEE X. Restrictions\
+    \ apply."
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# 2020 IEEE Power and Energy Conference
+
+
+    confirming that the vehicle is not damaged and violated
+
+
+    In terms of EV leasing fees, a dynamic mechanism is in place for each service
+    charge. The third-party EVs on the platform should be paid to the market price,
+    and the platform operator can charge an competitive service fee at a rate lower
+    than the market price. Changes by the platform operators are implemented with
+    reference to market price. For the groups, EV leasing for private use, partial
+    discounts should be granted based on the amount of usage between the platform
+    and the group, so as to consider the group''s personal habits of leasing EVs on
+    the operating platform
+
+
+    # VI. CONCLUSION
+
+
+    Economicization and environmental protection is one of the social development
+    trends. In order to solve the problems faced by the group official travel, such
+    as insufficient buses, and those faced by market-oriented enterprises, this paper
+    provides an EV sharing and leasing business model based on blockchain technology,
+    which broadens the scene of the group''s official travel and a leasing model supported
+    by the group''s personal private travel. In this model, including multiple actors
+    such as the group, employees in the group and the group platform operator, the
+    business process solutions for official and private EV use are established, the
+    cost settlement for group employees'' trips is streamlined, while using blockchain
+    technology to ensure reliability of EV leasing costs and to avoid situations such
+    as use of private vehicles and false reimbursement. In addition, this paper proposes
+    an incentive mechanism based on group credit, to motivate employees to use EV
+    sharing and leasing for private use, so as to form a diversified economy. In 2018,
+    Guangzhou and Jilin in China have successfully supported the use of shared vehicles
+    for business travel, and the scheme proposed in this paper will support the EV
+    official travel market of further development and improvement.
+
+
+    # REFERENCES
+
+
+    +   [1] De L. S., Di P. R. Modelling behaviour in inter-urban carsharing: a stated
+    preference approach. Transportation Research A, 2017,51:79-96.
+
+    [2] Shahen A. G., Zhang P. Carsharing and vehicle sharing systems: recent developments
+    and emerging trends. International Journal of Urban Transportation, 2013,11:5-26.
+
+    [3] Mine, George B., Valentina S. Car sharing adoption intention in urban areas:
+    what are the key demographic drivers? Transportation Research Part A, 2017,1:11.
+
+    [4] Guado P., Francesco F., Stefan M., et al. Business models and feasibility
+    simulation in car-sharing services. Transportation Research A: Policy and Practice,
+    2015,82:1-9.
+
+    [5] Guberger, H., Kaimarch P. P., et al. Blockchain technology in the German energy
+    industry. Energy Systems and Smart Management, GmbH(Germany)-German Energy Systems,
+    2019,12:46-53.
+
+    [6] Mikhailov Y., Jurasov M., Mokoftay X.G. X: A novel framework for energy trading
+    in smart grids using the 3rd Generation of Smart Cities and Green Cities. Barcelona,
+    2014:101-10.
+
+    [7] Qianyin Y. Can-the de-off-the-grid,blockchain-based solar power market model
+    for cities?KBE/JOB(2016),1-18.
+
+    [8] AHTIZAN N, SVNETOVIC D., Secinovic S. A blockchain-based trading without identity
+    and anonymous seamless messaging. IEEE Transactions on Service Management and
+    Computing, 2019,9:1-1.
+
+    [9] Ioannis Karimoulis, Maria Papadakis. The Blockchain of Security and Smart
+    Contracts: A Case for Real Estate Industry. Journal of Information Security, 2018,9:177-190.
+
+    [10] DONG Ning, Liang H, Yan Y., Xu C., et al. An analysis and implementation
+    of shared electric data platform based on blockchain internet. Electric Vehicle,
+    Power Construction, 2020,41:38-420.
+
+    [11] XUE Jin-hua, Ye Je-li, Xu Qian-qiang, et al. Interactive package for shared
+    electricity business model with distributed energy storage. Power System Technology,
+    2020,44:1310-1316.
+
+    [12] LI Yan-hao, Liu Yofeng, Wang Wei-tao, et al. Application of blockchain technology
+    in market contract management of power industry. Computer Systems and Networks,
+    2021,185:1067.
+
+    [13] Jin Ji-guo, Wu Ru-jian, Li G, et al. Transaction model for electric vehicle
+    charging based on consortium blockchain, Power Systems, vol.43 p.107523.
+
+    [14] LIU Dong-lan, LIU Xin, CHEN Jian-jia, et al. A cross-domain authentication
+    technique based on consensus in V2G networks. Computer Measurement & Control,
+    v27,240-254, 2019.'
+  merge: -1
+  img_proc: true
