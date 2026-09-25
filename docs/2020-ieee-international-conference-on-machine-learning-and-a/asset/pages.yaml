@@ -1,0 +1,649 @@
+- pgno: 0
+  md: '# Blockchain enabled healthcare Systems
+
+
+    Mrs. Wetha M S
+
+    Assistant Professor,
+
+    Department Of Information
+
+    Science & Engineering
+
+    BMS Institute Of Technology &
+
+    Management
+
+    Bengaluru, India
+
+    swethams_isc204@bmsnit
+
+
+    Mr. Muneshwari M S
+
+    Assistant Professor,
+
+    Department Of Computer
+
+    Science & Engineering
+
+    BMS Institute Of Technology &
+
+    Management
+
+    Bengaluru, India
+
+    muneshwarams@bmsnit
+
+
+    Dr. Pushpak K
+
+    Professor,
+
+    Department Of Information
+
+    Science & Engineering
+
+    BMS Institute Of Technology &
+
+    Management
+
+    Bengaluru, India
+
+    npushpak@bmsnit
+
+
+    **Abstract—** Blockchain technology is known for its application in fields such
+    as finance, banking and cryptocurrency and these are the very sensitive data that
+    can be stored and transferred securely. An important advantage of blockchain is
+    its decentralized nature. The data store several disadvantages in centralized
+    systems. Blockchain uses ad-hoc messaging. One such risk in a blockchain is that
+    we avoid the central point of failure. This advantage of blockchain can be used
+    to take increase the number of IoT devices in which turn it is to the patient''s
+    medical data. This paper is aimed at ever how Blockchain can be used not only
+    to secure patient information in their EHRs but also allow them to give permission
+    to entities and when deemed necessary. We use Hyperledger here in order to show
+    how the EHR can be distributed among the various entities of the network such
+    as doctor, patient and so on.
+
+
+    easy to access. Chain-link is created of data on EHR and we can use to sense patient
+    condition, and transfer data easily [6]. This reduces the time and money involved.
+
+
+    Blockchain isness of importance and efficiency in hashing. As the name suggests
+    it is an extending list of records, which are known as blocks. Each of these blocks
+    is interlinked to one and another using cryptography. Each of these blocks not
+    only contains cryptographic hash of itself but also of the preceding block. It
+    also contains a timestamp or transaction. In addition to this it also contains
+    some other data related to the transaction [9]. The transaction is represented
+    by a Merkle Tree.
+
+
+    **Keywords—** Electronic Health Record (EHR), Electronic Medical Record (EMR),
+    Hyperledger, Ethereum, Smart Contracts
+
+
+    # 1. INTRODUCTION
+
+
+    Blockchain was invented by Satoshi Nakamoto by person or a group of people. Blockchain
+    for bitcoin became popular and it was the first digital currency that was able
+    to solve the problem of double-spending without needing any central or some third
+    party [3]. After this blockchain began to make a wide application in other fields
+    such as Supply, IoT, Healthcare, etc.
+
+
+    Blockchain in healthcare system is a vital role and is becoming popular as it
+    helps both the patient and doctor in giving the data in real time wherein both
+    can be in part of the world, creating the block which is secured and
+
+
+    A block is a record and it is immutable to modification or deletion. One of the
+    most important properties is that it is an open and distributed ledger. It records
+    records the transaction that occur between any two of the several parties very
+    in a conformal and almost completely in permanent way [2]. Blockchain adds to
+    a platform for communication and storage of new blocks and it is managed by a
+    P2P network. If any block is fixed then, the consensus of the network is required.
+    Blockchains have Byzantine tolerance as the data is not altered and has been made
+    very secure.
+
+
+    A block in a record and it holds a series of valid transaction that are hashed
+    and stored in the form of a Merkle Tree. As we have stated a block contains hash
+    of itself and the preceding block it''s further made secure using timestamp [8].
+    Therefore, if any data in the block is modified or tampered in any way, then the
+    hash has to change and it doesn''t match the value in the next block and so we
+    know that it is modified. Another important term is'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'block time which is the average time by the network to generate a new block.
+
+
+    Block is inversely proportional to the speed of transactions. Therefore, a shorter
+    block time equals faster transactions. When the data is stored in a database that
+    is managed by a P2P network, it eliminates several disadvantages that occur in
+    centralized systems[14]. Blockchain uses hash mechanism. One such risk which is
+    avoided in a blockchain is central point of failure. Since all the nodes are connected
+    to one central node, any failure affects the others when connected to it. Blockchain
+    validates public-key cryptography which is asymmetric form of cryptography.
+
+
+    Hybrid blockchains, as the name suggests, is a combination of public and private
+    blockchain. We can determine which information should be kept private and which
+    can be public. Dragonchain and Whatsapp use Interchange which allows the users
+    to host their transaction on other blockchains.
+
+
+    Therefore, public blockchains are not used in the Healthcare Industry as the data
+    is highly classified and sensitive should be kept private and permission to be
+    provided to those who access it.
+
+
+    # 3. SMART CONTRACTS
+
+
+    Key, as the name suggests, is an address on a blockchain, allows the network to
+    know when it is addressed. A private key is like a password that the owner can
+    use to access his digital assets. Anyone can have their own copy of the blockchain[15].
+    Due to this replication the data quality is maintained. Therefore, there is also
+    another scheme called proof-of-stake or chain time-stamping scheme.
+
+
+    Blockchain is a platform on which smart contracts can be executed and hosted.
+    Smart contracts are basically computer programs that run on blockchain. They are
+    used to trigger, conditions and business logic so as programmable contracts. They
+    generally control value and state[4]. They are used to validate the contracts
+    made between two or more parties that are part of the blockchain.
+
+
+    Working of a smart contract
+
+
+    A proof of work is very difficult to secure. However, it is easier to verify.
+    Proof of work can be produced randomly and with a low probability[16]. Therefore,
+    a lot of experiment and trials are required in order to produce a valid proof
+    of work. SHA-256 is the most widely used.
+
+
+    +   triggers and the corresponding actions to be performed before. Triggers usually
+    involve statements and conditions as ‘if-then’, while each
+
+
+    +   2. The smart contracts have to be agreed upon and also signed by every party
+    in the blockchain network before being submitted.
+
+
+    +   3. The user who created the smart contract then returned parameters the contract
+    address. He/she can also invoke a contract sending out a transaction.
+
+
+    +   4. The miners will then verify the transaction.
+
+
+    # 2. BLOCKCHAIN TYPES
+
+
+    The types of blockchains are presented given below:
+
+
+    +   1) Public blockchains
+
+    This kind of blockchain does not possess any access restriction. Anyone can become
+    a validator if they have internet connection. In addition to they can also do
+    transactions. They use algorithms such as Proof of Work or Proof of Stake Popular
+    examples of blockchains are Bitcoin and Ethereum Blockchain.
+
+
+    +   5. The code is executed by the miners in Sandbox Execution Environment.
+
+
+    +   2) Private Blockchains
+
+    Unlike the public blockchain anyone can join or access the data unless they are
+    the administrator of the network. Access has been granted to the participant as
+    well as the validator. This type of blockchain is useful for companies that want
+    to integrate blockchain into their network but they do not want to share any of
+    it with the public internet.
+
+
+    +   6. On the oracles (i.e., trusted feeds) and also
+
+
+    +   3) Consortium blockchain
+
+    This type of blockchain is said to be decentralized. This is also a kind of permissioned
+    network and it is not completely by private companies, each operating one node,
+    will be controlling it. The admins of consortium blockchain grant access to the
+    users whenever necessary. In addition to this only a set few trusted nodes will
+    be granted access to execute the consensus protocol.
+
+
+    # 4. LITERATURE SURVEY
+
+
+    Electronic Health Record or EHR has a pivotal role in the healthcare industry.
+    It is a medical history of a patient stored in the form of a record. It contains
+    details of the patient''s condition, progress through the treatment, the prescription
+    provided and so on.
+
+
+    Anastasia Theondoni et al., Blockchain method was originally designed and used
+    in accounts, and financial department. But nowadays it has its use in various
+    applications especially in medical industry [1]. Patient health details can be
+    saved and shared at any point of time making anyone required by taking permission
+    of patient. This paper is
+
+
+    # 4 Hybrid blockchains
+
+
+    978-1-7281-8885-0/S31.00©2020 IEEE'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'focused on blockchain technology to maintain privacy and sharing of healthcare
+    data of patient by keeping secured data access.
+
+
+    | Key issues | Explanation | Challenges with current system | Use of blockchain
+    to provide solution |
+
+    | --- | --- | --- | --- |
+
+    | Authentication of an entity | Information that has to be verified or authenticated
+    such as username, email, password and timestamp | In current systems these identity
+    related information in systems that are not secure data exchange is inactive.
+    | On blockchain each transaction is digitally signed and shared with the private
+    key. |
+
+    | Information about entity | This information includes data that users generates
+    such as preferences | This information is stored in silos and it is not very effective.
+    | On using blockchain the transaction contains the data flow and in the form of
+    a chain. |
+
+    | Access Control | Information about the details of given access to each of the
+    entities in the network. | Users don''t have control over permissions possible
+    for them to provide access control | Blockchain prevents patients who are allowed
+    by parties to manipulate the data. |
+
+    | Efficiency | This includes things with patient data storage, exchange and analysis.
+    | There are inefficient methods for data transfer. Even with standardized tools,
+    these operations are all manual. | Blockchain provides efficiency and security
+    for data transfer. |
+
+
+    Jinglin Ou et al., This paper is providing the integration between healthcare
+    system and smart city, which provides easy and improved quality of life of patients
+    in the smart city[2]. Also using blockchain method helped the system to keep the
+    patient''s data in safe and secured storage.
+
+
+    Thomas K et al., Blockchain technology[3] has become widely used technology in
+    healthcare system where the improvements can be seen every day. Three main things
+    are being focused which are: i. reduction in cost ii. Privacy on data & data sharing
+    of patient. iii. Access control, Efficiency and Transparency. From this is able
+    to achieve integration of smart city and blockchain in an effective manner.
+
+
+    Tanesh Kumar et al., As we know the blockchain''s initial use was in finance and
+    banking sector, in healthcare[4], challenges are very high as transparency and
+    trust play vital role. To fulfill these challenges there are creating a secured
+    smart contract between healthcare system based on predefined agreement between
+    all stakeholders.
+
+
+    Table 1: Blockchain can be used to fill the current gaps in the Healthcare Management
+    system
+
+
+    Hoai Xuan Huan et al., Internet of Things (IoT) technology is playing a vital
+    role in the present technology [5]. It is very widely used in all fields like
+    smart city, healthcare, etc., In the integration of IoT and blockchain blockchain
+    plays a vital role in creating a block chain with the help of Ethereum protocol.
+    In this patient''s health condition is monitored by sensors and data will be added
+    automatically in the block of hospital management by the doctors and they can
+    treat the patient independently even when they are far out of reach from hospital.
+
+
+    Jayneel Ora et al., There have been increase in breaching security and this system
+    which is serious that has approached in healthcare system. When security is in
+    health care arises we need patient information and privacy will be in danger[6].
+    Changes of sharing of data to solve the problem by providing a framework for safe
+    storage of data. Electronic healthcare records, through this is he analyzing the
+    requirement between patient, data provider and third party.
+
+
+    # 5. PROPOSED SYSTEM
+
+
+    Therefore, after considering the various challenges and gaps in the current systems,
+    the blockchain technology in the field of healthcare. It is essential to utilize
+    the blockchain technology has the capability to carry out a role in number of
+    applications, for instance, used to securely share electronic health records (EHR)
+    and it can also provide access. Smart contracts can be further built in the blockchain
+    to avoid interacting any party in the network. The blockchain in the healthcare
+    system should improve data security.
+
+
+    Hence, the aim of this paper is not only to give over the utilization of blockchain
+    in healthcare systems. In addition to this, it also elaborates the use of blockchain
+    for efficiently and transferring data.
+
+
+    As we have one of the major in the current healthcare management systems is the
+    fact that patients don''t have access to their medical data and don''t have control
+    over patients'' data who is about or accessing their data and to what what extent.
+    Therefore, blockchain can be used not only to secure the patient information in
+    their EHR''s and allow to give permission to entries as when deemed necessary.
+    We can use hyperledger here to provide data access control. Below mentioned Table
+    2 provides the steps of proposed system:
+
+
+    Current gaps in Electronic Healthcare management a system along using blockchain
+    is as explained in Table-1:'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "Participant\n\nPermissions\n\n| Participant | Permissions |\n|---|---|\n| |\
+    \ 1. Permission to read their EHR.\n| 2. Provide permission to a doctor/ Medical\
+    \ Practitioner to write in their EHR\n| 3. Provide permission to a Research Institute.\n\
+    | 4. Provide permission to laboratory.\n| 5. Revoke permission from doctor/Medical\
+    \ Practitioner from accessing their EHR.\n| 6. Revoke permission from Research\
+    \ Institute from accessing their EHR.\n| 7. Revoke permission from laboratories\
+    \ from accessing their EHR.\n| 8. Provide permission to their emergency contact\
+    \ to read their EHR.\n| 9. Provide permission to their emergency contact to grant\
+    \ permission for their EHR.\n| 10. Add attributes to their EHR such as:\n| 10.1\
+    \ Exercise performed\n| 10.2 Tobacco/Alcohol consumption\n| 10.3 Prescribed drugs\
+    \ consumed and so.\n| 11. Authority to integrate IoT data into their EHR |\n\n\
+    Patient\n\nThe EHR is encrypted with Research Institution’s public key which will\
+    \ be decrypted by Research Institution’s private key.\n\n# 3. Patient Grant Access\
+    \ to Laboratory:\n\n+   * Patient X grants access to, the whole or partial information,\
+    \ to his/her EHR to the Laboratory A.\n* Laboratory’s ID is added to the authorized\
+    \ asset of X on the corresponding ledger.\n* Patient’s ID is added to the authorized\
+    \ asset of Laboratory over the corresponding ledger.\n* The EHR is encrypted with\
+    \ the Patient’s private key.\n The EHR is encrypted with Research Institution’s\
+    \ public key which will be decrypted by Laboratory A’s private key.\n\n# 4. Patient\
+    \ Revoke Access from Doctor:\n\n+   * Patient X revokes access from doctor/Medical\
+    \ Practitioner Y.\n* Doctor’s ID is removed from the authorized asset of X on\
+    \ the corresponding ledger.\n* Patient’s ID is removed from the authorized asset\
+    \ of Doctor Y on the corresponding ledger.\n* Patient’s key will be used to decrypt\
+    \ the EHR.\n The EHR is only encrypted with public keys of remaining ID’s that\
+    \ still have permission to access EHR.\n\n# 5. Patient revoke Access from Research\
+    \ Institution:\n\n+   * Patient X revokes access from Research Institution Z.\n\
+    * Research Institution’s ID is removed from the authorized asset of X on the corresponding\
+    \ ledger.\n* Patient’s ID is removed from the authorized asset of Research Institution\
+    \ Z on the corresponding ledger.\n* Patient’s key will be used to decrypt the\
+    \ EHR.\n The EHR is only encrypted with the public keys of remaining ID’s that\
+    \ still have permission to access the EHR.\n\nDoctor/\n\nRead/write on their/her\
+    \ EHR key\n\n+   * Request permission for EHR’s keys from patients or other doctor/Medical\
+    \ Practitioner to read/write with\n\nMedical Practitioner\n\nRead/write on EHR’s\
+    \ which have permission.\n\n+   * Read the EHR’s keys who is permitted to them\n\
+    \nLaboratory\n\nResearch Institute\n\n# Table 2: shows all the participants in\
+    \ the network and their permissions\n\nAny form of interaction with the Electronic\
+    \ Health will be recorded as a transaction on that particular.\nIt has to note\
+    \ that a transaction can only be viewed by the participants involved. As we have\
+    \ already discussed, blockchain is decentralized and uses public-cryptography.\
+    \ These transactions also show us how this works:\n\n# 1. Patient Grant Access\
+    \ to the Doctor:\n\n+   * Patient grants write access to his/her EHR to doctor/Medical\
+    \ Practitioner Y.\n* Doctor’s ID is added to the authorized asset of X on the\
+    \ corresponding ledger.\n* Patient’s ID is added to the authorized asset of X\
+    \ on the corresponding ledger.\n* The EHR is encrypted with Patient’s private\
+    \ key.\n The EHR is encrypted with Doctor’s public key which will be decrypted\
+    \ by Doctor’s private key.\n\n# 2. Patient Grant Access to Research institutions:\n\
+    \n+   * Patient X grants access to, the whole or partial information, to his/her\
+    \ EHR to the Research Institution Z.\n* Research Institution Z’s ID is added to\
+    \ the authorized asset of X on the corresponding ledger.\n* Patient is then added\
+    \ to the authorized asset of Research Institution Z over the corresponding ledger.\n\
+    * The EHR is encrypted with Patient’s private key.\n\n978-1-721-8885-0/S21.00/2020\
+    \ IEEE\n\nAuthorized license used by: Tsinghua University. Downloaded on 18 June\
+    \ 2021 at 22:53:04 UTC from IEEE Xplore. Restrictions apply.\n\n# 6. Patient revoke\
+    \ Access from Laboratory:\n\n+   * Patient X revokes access from Laboratory A.\n\
+    * Laboratory’s ID is removed from the authorized asset of X on the corresponding\
+    \ ledger.\n* Patient’s ID is removed from the authorized asset of A on the corresponding\
+    \ ledger.\n* Patient’s private key will be used to decrypt the EHR.\n The EHR\
+    \ is only encrypted with the public keys of remaining ID’s that still have permission\
+    \ to access the EHR.\n\n# 7. Doctor/Medical practitioner referring to Patient\n\
+    \n+   * Doctor updates the permissions of Patient X in order to allow Doctor M\
+    \ to access the EHR.\n* The code will check if Doctor has the permission on Patient\
+    \ X’s EHR.\n* Doctor uses his private key to decrypt the EHR.\n The EHR is encrypted\
+    \ with Doctor’s public key.\n* Doctor’s ID is added to the authorized asset of\
+    \ A on the corresponding ledger.\n* Patient’s ID is added to the authorized asset\
+    \ of Doctor on the corresponding ledger."
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# 6. OTHER APPLICATIONS OF BLOCKCHAIN IN HEALTHCARE
+
+
+    Blockchain technology as shown above can be further extended and improved in the
+    following technologies.
+
+
+    # 6.1 Medical data sharing
+
+
+    A critical and essential application of blockchain with respect to healthcare
+    systems is the sharing of medical data digitally between the various subjects
+    in the system. Electronic healthcare records (EHR''s) and Electronic Medical records
+    (EMR''s) contain very sensitive medical information with respect to the patient.
+    Thus, it is necessary to keep this data
+
+
+    In addition to this it should also be secured and shared. This can be improved
+    by decentralizing the data it can be stored and transferred between various participants
+    of the network such as patients, doctors, medical practitioners, insurers, researchers,
+    Pharmacies Institutions, and so on. However, in order to make so frequently and
+    as many entities it has
+
+
+    Each entity be accountable for their transactions therefore it is transparent.
+    This can be obtained using blockchain technology. In addition to this, the entire
+    data in the network is recorded along with metadata.
+
+
+    # 6.2 Maintenance of patients Medical History
+
+
+    Medical history of a patient is also very important. It is very in order to provide
+    a diagnosis for any current health issue. It can be used by research institutions
+    to predict and analyze health studies to discover a cure or even preventive measures.
+    Examining a patient parent medical history is also very helpful. It is very secure
+    to store the medical history of patient.
+
+
+    As we have already double double is another major issue in the current healthcare
+    systems. When patient is going to a different hospital he will have to explain
+    again to several doctors who are already prepared with previous history. For example
+    the example will be to take an X-ray in this hospital, even though it has already
+    been taken in the previous hospital. This is not only a waste of time and money
+    but also bad for the health of the patient. This can be avoided by standardizing
+    and using blockchain to keep track of all the details, and reports hospital history
+    visit, i.e. audit trail.
+
+
+    # 6.3 Sharing data globally
+
+
+    It is also possible that the patient is travelling and a situation arises where
+    they need to seek treatment for some disease. Using it''s quite evident that the
+    previous medical history is very important for the doctor to provide a diagnosis
+    for the disease. This can be improved by using blockchain. It''s like to give
+    an example to why this is so important. The patient is out of his/her hometown
+    and far away and is unable to communicate. He/she is designated for a diagnosis
+    in case but the
+
+
+    978-1-2281-0820-5/031. ©2022 IEEE
+
+
+    doctor prescribes certain medicines only to find out the patient is allergic to
+    one of those. It could have been prevented if the doctor had access to the patients
+    electronic health record which would contain all this data. Therefore, this can
+    be securely implemented using blockchain.
+
+
+    # 6.4 Medical drug supply chain management
+
+
+    # BLOCKCHAIN FOR DRUG TRACEABILITY
+
+
+    ![](img/bf3d4ef673c4bd540c6d106ac5d56426_4_0.png)
+
+
+    Fig 1: Drug Chain Traceability
+
+
+    Medical drug supply management is facing several issues and losses due to counterfeit.
+    It is very important to get the right drug from the right source. In addition
+    to this the drug should also reach the end of the supply chain, to the patient
+    without being tampered. For this reason traceability is very important but can
+    be achieved using blockchain.
+
+
+    To have an overview of how this we can look at the Fig 1. When a drug is first
+    manufactured, the manufacturer marks it with a unique code. The hash is produced
+    using timestamp stamp as proof-of-counterfeit. This information is added to the
+    blockchain. The manufacturer then sends the drugs to the wholesaler.
+
+
+    The wholesaler will be to verify the origin of the drug. The transaction between
+    the manufacturer and the wholesaler is added to the blockchain. When the wholesaler
+    sends the drugs to the pharmacist who can also verify the origin of the drug the
+    transaction between wholesaler and the pharmacist is added to the blockchain.
+
+
+    Finally, the pharmacist sends the drug to the patient and can verify its source.
+    The transaction between the patient and the wholesaler is also added to the blockchain.
+    Using blockchain for drug traceability increases the integrity of the process.
+
+
+    # 6.5 Research
+
+
+    There are several medical institutions that require a large amount of medical
+    data for research purposes. They use medical data from patients and analyze it
+    the trends and predict a disease before it occurs based on medical data to develop
+    preventive measures for diseases. In addition to this they also to develop cure
+    for certain conditions and diseases. For this reason the patient may want to share'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'might have. Therefore, by using blockchain this data can be shared securely
+    and the patient can also allow permissions to the different portions of data in
+    the EHR.
+
+
+    Blockchain Smart, IEEE Globecom Workshops (GC Wkshops), 9-13 Dec, 2018.
+
+
+    # 6.6 Payment of hospital bills through Cryptocurrency and billing
+
+
+    It is observed in the current system there has been a lot of fraud with billing.
+    For this purpose blockchain can be used so that it cannot be tampered with. Another
+    problem with the current system is it takes very long time to gain confidence
+    from the insurers many weeks. Using blockchain ensures faster claims and also
+    reduce the overhead and costs. As we have discussed blockchain is a very fast,
+    and secure way to transfer funds which can also be used as a mode of payment in
+    hospitals and other medical facilities.
+
+
+    +   [Shai Wan, Li Oeyang, Yong Jiang, Xiaochun Ni, Xuan Han, Fei-Yue Wang “Blockchain-Enabled
+    Contracts: Architecture, Applications, and Future Trends,” IEEE International
+    Conference on Systems, and Cybernetics, 2019.
+
+
+    +   [8] Rin, G., Mayur, A., Sharma, S. (2021) Adoption of Fog Computing in Healthcare
+    4.0: In Tanvir S. (eds) Fog Computing for Healthcare 4.0. Security, Privacy, and
+    Challenges. Springer,
+
+
+    +   [9] Vidhi Ramani, Tanish Kumar, Ar Baesh, Madhushan Dhanaka, Mika Litha, Yillanta,
+    “Secure and Efficient Accessibility in Blockchain Healthcare Systems,” IEEE Global
+    Communications Conference (GLOBECOM), 2016.
+
+
+    # 7. CONCLUSION
+
+
+    Blockchain is a powerful technology, but as seen above, there are several gaps
+    in the current healthcare systems which cause loss of inconvenience like lost
+    cost, not effective and inefficient. All these gaps can be filled by the use of
+    blockchain. The blockchain technology used should be done after proper analysis
+    and experiment. If implemented blockchain can improve efficiency, effectiveness
+    and security greatly and are very important for storage and transfer of data.
+    Future research can provide better accuracy and we can extend the work in the
+    field of Agriculture.
+
+
+    +   [10]Vikas Kumar, MS Muneshwar, MS Rajesh, S Prakash, “Cloud computing: case
+    study of data security,” volume-2, no-1 po-2018,
+
+
+    +   [11]MS Kumar, MS Rajesh, MS Swetha, TG Thammani, GN Anil, “Digital genomics
+    to build a smart marketplace in retail applications,” IEEE International Conference
+    on Circuit and Power Technologies (ICCEPT), IEEE no-1-2017,
+
+
+    +   [12]MS Muneshwar, A Lokesh, MS Swetha, M Thungamani, “Ultrasonic and image
+    map probe for the finder in the real time,” IEEE International Conference on Control,
+    Signals and Instrumentation Engineering (ICSIE),
+
+
+    # 8. REFERENCES
+
+
+    +   [1] Anastasia Teodoulos, Stelios Arlakakis, Konstantin Mosoglou, Dimitrios
+    Vos “On the design of a blockchain-based system to facilitate Data Sharing,” 2018
+    17th IEEE International Conference on Security and Privacy in Computing. IEEE
+    International Conference on Data Science and Engineering, 1-3 Aug, 2018.
+
+
+    +   [13] MS Swetha M Thungamani “A Novel Approach to Secure Location Based Routing
+    For Marketplace” in International Journal of Information Technology and Exploring
+    Engineering (IJITEE): 2278-3075, Volume 8-Issue 7 May 2019,
+
+
+    +   [14]K.Peterson, Kevin, et al. “A blockchain-based approach to health information
+    exchange.” In Proc. Network Workshop Conference, vol. 5, no. 1-3, Jan, 2016.
+
+
+    +   [2] Seyedseina Kumar, Md Moniduruzzaman, Abdullah Yasine, Rashid Rahmani “Towards
+    Secure and Smart Healthcare in Smart Cities Using Blockchain,”1st International
+    Workshop on Blockchain for Smart Cities, 2018
+
+
+    +   [16] T. Kumar, A. Braiken, M. Yillanta and M. Yillanta, “Privacy preserving
+    using biometric assessment scheme for healthcare environment,” 2017 IEEE International
+    Conference on Communications (ICCC), Paris, 2017, pp. 1-7.
+
+
+    +   [3]Yajav Anand, Nayar A., Sudarshan Tan, Subhash Shetty, Vijay, Tejagar Kumar,
+    M. S. Obaid, J P C Rodrigues, “Blockchain-Based Framework for Securing Electronic
+    Records,”IEEE Globecom Workshops (GC Wkshops), 9-13 Dec, 2018.
+
+
+    +   [4]Jhoras K. Watkins, Dasinski, Francisco Casatino, “Blockchain Based Smart
+    Healthcare: Toward Needs Prediction,” 2018 9th International Conference on Information,
+    Systems and Applications (IISA), July 2018.
+
+
+    +   [5] Taresh Kumar, Vidhi Ramani, Etki Harika, Mika Yillanta, “Blockchain Utilization
+    in Healthcare: Requirements and Challenges,” 2002th International Conference on
+    e-Health Networking, Applications and Services (IEEE), 17-20 Sept. 2018.
+
+
+    +   [6] Hoai Xuan Phan, Thi Tran, Yashiro Nakashima, “A Remote Healthcare System
+    Using
+
+
+    978-1-7281-0828-0/031.0020 IEEE
+
+
+    Authorized license used by: Tsinghua University. Download on June 18, 2021 at
+    22:53:04 UTC from IEEE Xplore. Restrictions apply.'
+  merge: -1
+  img_proc: true
