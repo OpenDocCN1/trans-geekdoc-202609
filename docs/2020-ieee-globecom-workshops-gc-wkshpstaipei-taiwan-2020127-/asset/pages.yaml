@@ -1,0 +1,471 @@
+- pgno: 0
+  md: '# A Novel Machine Learning-Based Handover Scheme for Hybrid LiFi and WiFi Networks
+
+
+    Xiping Wu and Dominic C. O''Brien
+
+
+    Department of Engineering
+
+    University of Oxford, OX1 3PF, UK
+
+    {xiping.wu, dominic.obrien}@eng.ox.ac.uk
+
+
+    Abstract—Combining the high spectrum efficiency of light fidelity (LiFi), WiFi
+    and hybrid networks have increasing research attention. Meanwhile, the issue in
+    hybrid networks becomes a hotspot since the coverage areas of LiFi and WiFi overlap.
+    For handovers for mobile users, selection between LiFI and WiFi becomes a tricky
+    problem. We propose a novel method based on machine learning to adjust the selection
+    preference between LiFI and WiFi. The new method channel quality, resource availability
+    show that compared to received signal (RSS)-based and trajectory-based handover
+    methods, the proposed scheme can improve the user''s throughput by up to 20% and
+    50%, respectively.
+
+
+    A significant number of studies have been considered out [3], trajectory-based
+    handover scheme was proposed for other handovers. This type of method handovers
+    place between two non-adjacent APs but rely on the user''s trajectory information.
+    Associating AP with user location-education and various balancing methods were
+    developed, [4], with enormous computational complexity. To reduce the processing
+    power, researchers to apply game theory in [5] and fuzzy logic in [6]. However,
+    it requires iterations of iterations to reach a stable state, where only one can
+    provide optimal solutions. Moreover, [4] fail to implement the concept of load
+    balancing into account when maximizing network throughput, while still considering
+    computational complexity.
+
+
+    # I. INTRODUCTION
+
+
+    Indoor wireless communications are facing exponentially increasing demand on data,
+    which WiFi is a promising solution to future wireless communications, LiFi and
+    WiFi have recently attracted research attention. [2] Such a combination enables
+    the high spectrum efficiency of LiFi, which uses light wave as signal carrier.
+    Compared with WiFi, LiFi has many advantages including: (i) huge optical spectrum,
+    (ii) immunity to radio frequency (RF)-restricted areas, (iii) freedom of illumination
+    and (iv) security communications.
+
+
+    The hybrid network can substantially improve indoor network performance, handover
+    becomes a challenging issue. This is due to two factors. First, the coverage of
+    a single access point (AP) is relatively small, with a 2-3 meter distance. As
+    result, frequent handovers occur to mobile users with a walking speed. Second,
+    the coverage areas of LiFi and WiFi overlap each other. This means the handover
+    methods that only consider channel quality less effective. Thus, WiFi is susceptible
+    to traffic overload, while LiFi AP has limited coverage. Consequently, resource
+    availability needs to be taken into account to balance the traffic loads. When
+    executing handovers in a hybrid LiFi and WiFi network,
+
+
+    In this paper we investigate the use of machine learning in the handover process
+    for hybrid networks. Our research work has been conducted in this field. In [8],
+    a handover scheme was developed for heterogeneous networks. Also using an ANN,
+    a quality of experience (QoE)-based vertical handover scheme was proposed in [9].
+    These studies have two limitations: (i) they only manage VHO and (ii) resource
+    availability is not considered. Motivated by this, we propose a novel ANN-based
+    handover scheme that takes into account channel quality and user mobility. By
+    using ANNs to train a dynamic decision maker, the proposed method employs an ANN
+    to adjust the selection preference between LiFi and WiFi. To the best of our knowledge,
+    the proposed handover scheme is the first of its kind in the existing literature.
+
+
+    The remainder of this paper is organised as follows. The system model is introduced
+    in Section II, including network channel model and light-path blocks. The novel
+    handover scheme is proposed in Section III. Results are presented in Section IV.
+    Finally, conclusions are drawn in Section V.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: "![](img/1976553fdc5e85dccd6e164437e551b1_1_0.png)\n\nFig. 1. Schematic diagram\
+    \ of an indoor HLWNet.\n\n# II. SYSTEM MODEL\n\nFig 1 shows the schematic diagram\
+    \ of an indoor HLWNet. A number of LiFi APs are located in the coverage area of\
+    \ each WiFi AP. The LiFi APs are arranged in a lattice topology, with each operating\
+    \ on a ceiling led lamp. The WiFi system carries sense multiple access avoidance\
+    \ to avoid interference contention (ICI) at the indoor level. For LiFi, frequency\
+    \ with a factor of 4 is used to mitigate ICI. The users are assumed to move randomly\
+    \ by following the random waypoint (RWP) model [2010]. Time-division multiple\
+    \ access (TDMA) is employed to enable the APs to reach multiple users.\n\n# A.\
+    \ LiFi Channel Model\n\nA LiFi channel consists of two components: line-of-sight\
+    \ (LoS) and non-line-of-sight (NLoS) paths. Let $d_{i,u}$ be the Euclidean distance\
+    \ of the LoS path between AP $i$ and user $u$. Let $\theta_{i,u}$ and $\\psi_{i,u}$\
+    \ denote the angles of incidence and incidence, respectively. The LoS channel\
+    \ gain can be expressed as [11]:\n\n```\n$H_{i,u}^{LoS} = \\frac{(m+1)}{2\\pi}\
+    \ \\cos^m(\\\theta_{i,u})g_i(\\psi_{i,u})g_u(\\cos_{i,u}), \\quad (1)$\n```\n\n\
+    where $m = -ln[\\ln(\\Phi_{i,2})/2]$ is the Lambertian envelope, and $\\Phi_{i,2}$\
+    \ is the angle of half intensity angle. $A_{pd}$ is the physical area of the photodiode\
+    \ (pd); $g_i$ is the optical filter gain; $g_u(\\psi_{i,u})$ denotes the optical\
+    \ concentration gain, which is given by:\n\n```\n$g_u(\\psi_{i,u}) = \\begin{cases}\
+    \ n^2\\sin^2(\\psi_{i,u}) & 0 \\le \\psi_{i,u} \\le \\Psi_{max} \\ 0, & \\psi_{i,u}\
+    \ > \\Psi_{max} \\end{cases} \\quad (2)$\n```\n\nwhere $n$ represents the reflectivity,\
+    \ and $\\Psi_{max}$ is the semi-angle of the field of view (FOV) of the PD.\n\n\
+    Only-order reflections are considered for the NLoS paths, since higher-order reflections\
+    \ contribute little [11]. The NLoS channel gain is generated by $H_{i,u}^{NLoS}$,\
+    \ which is expressed in (3). The total gain of a LiFi channel is At the receiver,\
+    \ a PD captures photons and converts them into a photocurrent:\n\n```\n$I = R_{pd}H_{i,u}P_{mod}.\
+    \ \\quad (4)$\n```\n\nwhere $R_{pd}$ denotes the detector sensitivity and $P_{mod}$\
+    \ is the average modulated optical power. The signal-to-noise ratio (SNR) of the\
+    \ LiFi link between AP i and user u is written as:\n\n```\n$SNR_{i,u}^{LiFi} =\
+    \ \\frac{(R_{pd}H_{i,u}P_{mod})^2}{N_{LiFi}B_{LiFi} + \\sum_{j\\in J_{i}}(R_{pd}H_{j,u}P_{mod})^2}\
+    \ \\quad (5)$\n```\n\nwhere $B_{LiFi}$ is the bandwidth of the LiFi AP, $N_{LiFi}$\
+    \ denotes the power spectral density (PSD) of noise, which is assumed zero and\
+    \ $Z$ is the set of APs that have the same optical spectrum as AP i.\n\n# B. WiFi\
+    \ Channel Model\n\nThe gain of a WiFi channel is given by:\n\n```\n$G_{i,u}^{WiFi}\
+    \ = |H_{i,u}^{WiFi}|^2 \\10^{-\\frac{\\alpha d_{xu}}{10}} \\quad (6)$\n```\n\n\
+    $H_{i,u}^{WiFi}$ denotes the transfer function, which follows a Rayleigh distribution;\
+    \ the fading factor $X_u$ is a zero-mean Gaussian variable with a standard deviation\
+    \ of 10 dB; $L(d)$ denotes the free-path loss:\n\n```\n$L(d) = \\begin{cases}\
+    \ 20\\log_{10}(f_c) - 147.5, & d < d_{ref} \\ 20\\log_{10}(d_{ref}) - 147.5, &\
+    \ d \\ge d_{ref} \\end{cases} \\quad (7)$\n```\n\nwhere $f_c$ is the center frequency\
+    \ and $d = 10$ m is the reference distance. The SNR of a WiFi link can then be\
+    \ written as:\n\n```\n$SNR_{i,u}^{WiFi} = \\frac{G_{i,u}^{WiFi}P_{WiFi}}{N_{WiFi}B_{WiFi}}\
+    \ \\quad (8)$\n```\n\nwhere $N_{WiFi}$ is the PSD of noise at the receiver; $B_{WiFi}$\
+    \ and $P_{WiFi}$ denote the bandwidth and transmit power of the WiFi AP, respectively.\n\
+    \n# C. Light-path Blockage\n\nTwo parameters are considered to model the light-path\
+    \ blockage: occurrence rate and occupation rate [7]. The occurrence rate is the\
+    \ average number of blockages that occurs in a unit time. Using the Poisson point\
+    \ process (PPP) is used to model random events such as the arrival of packets\
+    \ at a switch. Here the blockage events are assumed to follow the PPP. The occupation\
+    \ rate is defined as the time that is occupied by blockages during a unit time.\
+    \ This parameter is assumed to be distributed between 0 and 1."
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '```
+
+    $H_{NoS}^{i,u} = \int \frac{(m+1)A_{pd}}{2(\pi d_{i,w}d_{w,u}^2)} \rho_w \cos^m(\phi_{i,w})g
+    f_g(\psi_{v,w}) \cos(\psi_{v,w}) \cos(\theta_{i,w}) \cos(\theta_{w,u})dA_{w}$
+
+    ```
+
+
+    # ## Achievable Data Rate
+
+
+    The WiFi capacity can be measured by Shannon capacity.
+
+    Unfortunately this does not apply to LiFi since $\Gamma^{WiFi}$ is an elastic
+    SNR for non-negative signals. A lower bound of the LiFi channel defined in [23],
+    which can be used for. Regarding the link between AP $i$ and user $u$, the achievable
+    data rate can be computed as:
+
+
+    ```
+
+    $r_{i,u} = \begin{cases} \rho_u \log_2(1 + \frac{\Gamma_{i,u}^{LiFi}}{B}), & \text{for
+    a LiFi AP} \ (1-\rho_u)\log_2(1 + \frac{\Gamma_{i,u}^{WiFi}}{B}), & \text{for
+    a WiFi AP} \end{cases}$
+
+    ```
+
+
+    where $\rho_u$, denotes the proportion of time that AP $i$ allocates to user $u$.
+    The parameter $\rho_u$, can be determined by a proportional fairness scheduler
+    in [6, 13].
+
+
+    # ## III. PROPOSED HANDOVER SCHEME
+
+
+    In this section, a novel handover scheme is proposed to handle channel quality,
+    resource availability and user mobility. A dynamic coefficient is introduced to
+    adjust the selection preference between LiFi and WiFi. This coefficient is trained
+    by ANN to fit different scenarios.
+
+
+    # ## A. Handover Scheme
+
+
+    Our previous work in [14] has shown that the rate of change in RSS can indicate
+    whether the user is moving towards the center of an AP. Comparing RSS and rate
+    of change can effectively reduce unnecessary handover by skipping certain AP.
+    Taking resource availability into account, the objective function of the proposed
+    handover scheme is formulated as follows:
+
+
+    ```
+
+    $\Gamma_i = \begin{cases} (\Gamma_{i,u} + \Delta\Gamma_{i,u}), & \text{if } i
+    \text{ is a LiFi AP} \ (\Gamma_{i,u} + \Delta\Gamma_{i,u}), & \text{if } i \text{
+    is a WiFi AP} \end{cases}$
+
+    ```
+
+
+    where $\Gamma_u$ denotes the user''s signal, this parameter is defined as the
+    achievable data rate to the required data $y_u$; it indicates the RSS, $\Delta\Gamma_{i,u}$
+    represents its change of rate. Three parameters reflect the impact of resource
+    availability, channel quality and user mobility on handover densities, respectively.
+    The coefficient $\lambda$ is used to indicate the selection preference between
+    LiFi and WiFi in the network (See details about this in Section III-B).
+
+
+    The handover algorithm in long evolution (LTE) [15] employs the concept of hysteresis
+    to mitigate the ping-pong effect. Specifically, the making-decision process is
+    triggered when the RSS of the host AP is above that. But the decision is not immediately
+    made until the target AP keeps providing a higher RSS for a certain amount of
+    time, with a typical value of hundreds of milliseconds [15]. Here we use a mechanism
+    but dual triggers: RSS and the user''s suggestion decision. When either of the
+    two
+
+
+    ![](img/1976553fdc5e85dccd6e164437e551b1_2_0.png)
+
+
+    parameters related to LiFi is above any other AP, the proposed handover scheme
+    starts to count time. Time counter counts as the trigger condition is met or otherwise
+    is reset. When the counter reaches the preset threshold, a decision is made to
+    transfer the user from the host AP to the target AP that provides the highest
+    value of $\Gamma_i$.
+
+
+    # ## B. Machine Learning Algorithm
+
+
+    Now we discuss how to determine the coefficient $\lambda$. In general-most users
+    prefer WiFi to avoid frequent handover APs. In this case, $\lambda$ should be
+    a larger number than 1 to increase the value of $\Gamma_i$ for WiFi APs. When
+    the user is static or moving slowly, $\lambda$ should be 1 to choose the AP that
+    provides the highest $C_u$. For such a user, the different coverage of LiFi and
+    WiFi do not interfere with each other. The optimal value of $\lambda$ depends
+    on a number of factors including the user''s speed (denoted by $V_u$), the separation
+    between two LiFi APs (denoted by $S_u$), the height of LiFi APs (H), and the number
+    of WiFi APs per AP (N). The choice of $\lambda$ depends on these factors. However,
+    due to the complicated process of making decision, it is not to develop a closed-form
+    expression for this function. Therefore, we propose to decide with ANN.
+
+
+    Fig. 2 describes the basic structure of a neuron. A ANN with a number of inputs,
+    $x_i$ denoting the $i$-th input. The output of the $j$-th neuron is $y_j$. For
+    each input and output, there is a weight which is denoted by $w_{i,j}$. A bias
+    $b_j$ is added to the weighted sum of inputs. Apart from that, an activation function
+    $f(\cdot)$ is used to introduce non-linearity to the output of a neuron. The activation
+    function is chosen to be tanh, which is widely used in ANNs. The output of a neuron
+    can be expressed as:
+
+
+    ```
+
+    $y_j = \tanh(b_j + \sum x_i w_{i,j})$
+
+    ```
+
+
+    Based on the structure, the ANN model can be constructed in Fig. 3. Here $h_j$
+    denote the $j$-th node in the hidden layer. The number of weights is modified
+    to'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# TABLE I
+
+    SIMULATION PARAMETERS
+
+
+    | Parameter | Value |
+
+    | --- | --- |
+
+    | The physical area of $D_{pd}$ | $1 cm^2$ |
+
+    | Optical filter gain, $g$ | 1 |
+
+    | Refractive index, $n$ | 1.5 |
+
+    | Half-intensity radiation angle, $\Phi_{1/2}$ | $60^\circ$ |
+
+    | FOV semi-angle of the $P_{pd}$, $W_{max}$ | $90^\circ$ |
+
+    | Detector responsiveness, $R_{pd}$ | 0.53 A/W |
+
+    | Wall reflectivity | 0.8 |
+
+    | Modulated power by LiFi $AP_{i}$, $P_{mod}$ | 1 |
+
+    | Transmitted power by WiFi $AP_{i}$, $P_{W}$ | 20 dBm |
+
+    | Bandwidth of LiFi $AP_{i}$, $B_{Li}$ | 20 MHz |
+
+    | PSD of noise in LiFi, $N_{LiFi}$ | $10^{-21} dB^2/Hz$ |
+
+    | PSD of noise in WiFi, $N_{WFi}$ | -174 dBm/Hz |
+
+
+    ![](img/1976553fdc5e85dccd6e164437e551b1_3_0.png)
+
+
+    Fig. 3. The ANN model of $\lambda$.
+
+
+    $w_{k,i,j}$, where $k$ indicates different layers. Similarly, the bias pertaining
+    to the hidden nodes are denoted by $b_{1,j}$, and the bias to the output is denoted
+    by $b_2$. The ANN output be computed by:
+
+
+    ```
+
+    $\lambda = b_2 + \tanh\left(b_{1,j} + \sum_{i} w_{2,i,j}x_{i,j}\right)$ (12)
+
+    ```
+
+
+    # C. Training and Test
+
+
+    Given inputs, the optimal solution (denoted by $\lambda$) can be obtained numerically
+    by measuring the average with different values of $\lambda$. It is worth noting
+    that the output range is restricted between -1 and 1 due to the tanh function.
+    As a result, these optimal solutions need to be confirmed by set training and
+    validation. A 75:25 ratio between the training data and the test data is adopted.
+    In other words, we randomly choose 3/4 of the samples to training the ANN and
+    use the remaining samples to measure the fitness. Let $M$ denote the number of
+    training samples which can be calculated by:
+
+
+    ```
+
+    $L = \frac{1}{M}\sum_{m=1}^{M}(\lambda_m - \lambda)^2$ (13)
+
+    ```
+
+
+    The gradient descent is used to update the weights and biases on each iteration:
+
+
+    ```
+
+    $w_{k,i,j} = w_{k,i,j} - \eta\frac{\partial L}{\partial w_{k,i,j}}$ (14)
+
+    ```
+
+
+    where $\eta$ is the learning rate, which controls the step of iteration. Backpropagation
+    is used to reduce computational complexity. Specifically, the parameters are updated
+    in the sequence of $b_2$, $w_{2,i,j}$, and $w_{1,j}$.
+
+
+    ![](img/1976553fdc5e85dccd6e164437e551b1_3_1.png)
+
+
+    Fig. 4. Training and test results of the ANN model.
+
+
+    provide a factor. The average overhead of HHO is about 200 ms in wireless local
+    area networks (WLANs), the average overhead of VHO is set to under 50 ms [7].
+    The results are presented in Table I.
+
+
+    The model is validated. The initial weights and biases are small random numbers,
+    while the learning rate is set to 0.01. We use 75 training samples with the ANN
+    model. As the number of iterations increases, the loss function decreases and
+    reaches $2\times10^{-3}$ with 10000 iterations. After training, the ANN model
+    is tested with 25 test samples. All outputs match the target, with a mean error
+    error below:
+
+
+    Now we evaluate the performance of the proposed method in different scenarios,
+    with the dynamic characteristic $\lambda$ yielded by the trained ANN model. Fig.
+    5 shows the average achievable as a function of the user''s speed, light-path
+    blockages are not included here. As can be seen, all handovers provide the same
+    throughput when the user''s speed is
+
+
+    # IV. SIMULATION RESULTS
+
+
+    Monte Carlo simulations are implemented to evaluate the performance of the proposed
+    method. Two baselines are considered: the standard LTE handover scheme (referred
+    to as STD) and the trajectory-based handover method [31]. All methods use the
+    same time-to-trigger of 160 ms [15],'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# V. CONCLUSIONS
+
+
+    ![](img/1976553fdc5e85dccd6e164437e551b1_4_0.png)
+
+
+    In this paper, a novel machine learning-based handover scheme was proposed for
+    hybrid LiFi and WiFi networks. This approach takes into account channel quality,
+    resource availability and mobility, and adopts a dynamic coefficient to adjust
+    selection through ANN including the user''s speed, the separation from LiFi APs,
+    and the number ratio between LiFi APs and WiFi APs. Simulations were carried out
+    to evaluate the ANN model and the performance of the proposed handover scheme.
+    The results show that the new method can effectively avoid frequent handovers,
+    with a handover rate 68% less and 27% than the trajectory-based method. In terms
+    of effective throughput, the proposed scheme outperforms the baseline by 260%
+    and 50%, respectively. Future work will aim to reduce the complexity of the ANN
+    model and its rate of convergence.
+
+
+    ![](img/1976553fdc5e85dccd6e164437e551b1_4_1.png)
+
+
+    # ACKNOWLEDGMENT
+
+
+    This work was supported by the Union Horizon 2020 research and innovation programme
+    under grant agreement 82651 (ELiOT).
+
+
+    # REFERENCES
+
+
+    +   [1] C. Cisco Network Index: Forecast and trends, 2017-2022.
+
+    [2] W. Xu et al., Hybrid LiFi and WiFi networks: A survey, arXiv preprint arXiv
+    July, 2021.
+
+    [3] R. Arash et al., Mobility in 5G and beyond: A topology-aware switching scheme,
+    IEEE Access, Vol. 4, pp. 9073–9081, 2016.
+
+    [4] X. Liu, P. Zhang, and L. Han, “Cooperative visible light communications and
+    WiFi,” IEEE Tran. Commun., Vol. 66, pp. 1319–1329, Apr. 2013.
+
+    [5] Y. Zhou et al., “Load balancing with gaming effect for indoor LiFi/RFID networks,”
+    IEEE Tran. Commun., Vol. 16, pp. 2356–2368, Aug. 2017.
+
+    [6] W. Wu et al., “Access selection for hybrid LiFi and Wi-Fi networks,” IEEE
+    Tran. Commun., Vol. 65, no. 12, pp. 5375–5386, Dec. 2016.
+
+    [7] X. Xu and Y. Han, “Load balancing for hybrid LiFi and WiFi networks: To track
+    mobility object and light-path handover,” IEEE Tran. Commun., Vol. 9, pp. 325–330,
+    Mar. 2020.
+
+    [8] M. N. Alouti and S. S. Aakeel, “A neural network based management strategy
+    for heterogeneous networks,” In 14th Int. Conf. on Communications and Applications
+    (ICCAI), Miami, 2015, pp. 1210–1214.
+
+    [9] A. Zhou et al., “Q-learning based reinforcement learning decision management
+    in heterogeneous networks,” In 66th Int. Conf. on Communications and Networking
+    (ComNet), pp. 1771–1778, 2017.
+
+    [10] D. Johnson and M. Hall, “Dynamic resource allocation in radio access networks,”
+    In 2020 IEEE Int. Conf. on Communications (ICC), Dublin, Ireland, pp. 1–5, 2020.
+
+    [11] J. Kahn and J. Barry, “Wireless interference prediction,” IEEE Tran. Commun.,
+    Feb. Feb, 1997.
+
+    [12] E. Perera and R. Stacey, “Next Generation Wireless Access: 802.11ah and 802.11ac,”
+    Cambridge University Press, 2013.
+
+    [13] J. Wang, J. Li, and M. Chen, “Resource allocation based on channel capacity
+    for dynamic white space LiFi,” IEEE Tran. Technol., Vol. 61, no. 3, pp. 3711–3729,
+    2012.
+
+
+    the proposed method achieves a significantly higher throughput than the baseline
+    methods. This is also observed that the dynamic network selection preference works
+    for a $N_a$, $S$, and a $H$. When $V=5$ m/s, $N_a=4$, $S=2$ and $H=2.5$ m, the
+    proposed scheme offers an average throughput of 72 Mbps, which is over 260% and
+    50% higher than the trajectory-based method.
+
+    Finally, the handover rates of BHO and WHO are measured in the scenario of $V=5$
+    m/s, $N_a=4$, $S=2$ and $H=2.5$ m, the method is taken as an example. As shown
+    in Fig. 6, the proposed method can effectively suppress VHO choices compared to
+    the baseline methods. When the occurrence rate is 3 times per minute, for example,
+    the proposed method can reduce the overall handover rate by 68% and 27% than STD
+    and the trajectory-based approach, respectively.'
+  merge: -1
+  img_proc: true
