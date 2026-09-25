@@ -1,0 +1,643 @@
+- pgno: 0
+  md: '# Multimedia Big Data Platform with a Deep Learning Approach for Flood Emergency
+    Management
+
+
+    I.D.T.T.Weerasinghe
+
+    Department of Computing and Information System
+
+    Sarabagura University of Sri Lanka
+
+    Belihoya, Sri Lanka
+
+    dttweerasinghe@std.appsec.sab.lk
+
+
+    K.P.N.Jayasena
+
+    Department of Computing and Information System
+
+    Sarabagura University of Sri Lanka
+
+    Belihoya, Sri Lanka
+
+    pubajuda@std.appsec.sab.lk
+
+
+    **Abstract**—Flood emergency has a major issue dealt with in decades as it can
+    cause extensive loss of property as well as overflow of water that melts relatively
+    and dry. In the hydrology, floods are a field of study and they are the most common
+    and unpredictable natural events. Floods occur from a few inches of water to quite
+    feet because is affected by flooding. They can also occur on, or slowly increase.
+    If frequent frequency of flood impact levels is very high, this study uses a deep
+    learning approach for flood emergency management. We use multiple data as which
+    are from social media sites, satellite imagery, crowdsourcing, and sensor network
+    data. Based on research on flood and image processing cutting technologies, authorities
+    can identify using stated methods to provide early warning time for the people
+    or people can use this for self-assessment of flood level when they are in that
+    day to help them save lives. The deep neural network plays a major role in feature
+    extraction and data augmentation to increase the number of samples. This study
+    compares study between VGG16, VCG19, DenseNet16 and MobileNet deep models and
+    evaluates the performance using training and testing data. Datasets comprises
+    over 1500 examples drawn from work prove that the MobileNet worked with 86% accuracy
+    high performance. In the latter part of the paper, it will describe future recommendations.
+
+
+    *Keywords*— multimedia, big data, crowdsourcing, Neural network.
+
+
+    directed to rescue warnings in early stage. To such a system, it is important
+    to retrieve real-time re-scattered flood-water level information from the hazard
+    location. Instead, the collection of field data is totally costly and risky, it
+    needs the least area as to be ignored. Another alternative of information comes
+    from social media sites in this place. People can also exchange texts and photographs
+    that describe the situation. These data have the advantage of being cheap and
+    available in the flood area. To obtain information, the main downside is that
+    photographs need to be properly processed. Some studies have already examined
+    the use of flood data from social media, which has been proposed in automated
+    manner. We planned to use deep learning techniques to analyze image data and predict
+    the flood impact level or risk level. Here mainly consider the available flood
+    learning model by comparing each.
+
+
+    I. INTRODUCTION
+
+
+    The term “emergency” is defined as an exceptional occurrence that exceeds the
+    ability of usual resources and organizations to deal with it. Emergencies arise
+    because of natural and human-human events. These are liking with little warnings
+    and predictions. Flood management emergencies are a global challenge for every
+    community [1]. To provide effective flood management based on forecast and recovery,
+    rapid analysis of previous or current disasters is critical. This paper mainly
+    focuses on flood emergency management in natural disaster management. Flood are
+    expected to become more severe and dangerous due to climate change. To minimize
+    the loss of human life it is important to have a relative flood emergency management
+    system that can be properly
+
+
+    ![](img/743a6e1780ed464787729fa6135e261b_0_0.png)
+
+
+    Fig. 1:Type of disasters occur from 1998-2017 globally
+
+
+    Fig. 1 shows the type of natural disasters occur from 1998 to 2017. It visualized
+    that flood is the major disaster that affects humans'' life all over the world
+    since since.
+
+    When coming to Sri Lanka, National Disaster Relief Services (NDRCB) announced
+    that the number of flood increases by year compared to the previous year. 2 shows
+    the number of flood-affected people from 2014-2019 in Sri Lanka.
+
+
+    978-1665-1475-3/20/$30.00 ©2020 IEEE
+
+
+    Authorized licensed used to use: Linking University Library. Download on June
+    23, 2021 at 05:20:29 UTC by IEEE Xplore. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Flood affected people 2014-2018
+
+
+    ![](img/743a6e1780ed464787729fa6135e261b_1_0.png)
+
+
+    Fig. 2: Flood affected people from 2014-2018 in Sri Lanka
+
+
+    In case of reducing affected people it is necessary to have a real-time flood
+    emergency management system and then help people about the flood situations and
+    be safe from dangerous places. It is not impossible to easily realize the flood
+    situations and what can we do to estimate the flood and warn people. Because people
+    who travel via the flooding area have difficulties in recognizing the possible
+    road or the low-risk road for traveling along the flooding area. Another thing
+    is to warn the victims before they do know about the flood risk level. The overall
+    goal of this study is to create a real-time platform for the flood impact level
+    estimation using deep learning. We can need a method to identify the flood impact
+    level using deep learning for classification. So this paper identifies the flood
+    risk level using deep learning processing with Python programming language Keras
+    and TensorFlow Machine Learning
+
+
+    A natural disaster like a flood is a significant and non-trivial problem. To detect
+    various disasters, a traditional method relies on specialized sensors. With advances
+    in information communication technology we can improve the efficiency and accuracy
+    of emergency management systems through data processing techniques. They help
+    decision-makers to understand real-time data related to flood and collect and
+    process using deep learning techniques, which may provide valuable insights into
+    flood emergency management.
+
+
+    # ## RELATED WORKS
+
+
+    Flood impact level identification is necessary for reducing the risk associated
+    with the flooding areas. Before doing directly for an implementation, a study
+    of the previous work is necessary to get domain knowledge and identify the available
+    mechanism, techniques, and approach. As it is a comparative study, knowing used
+    technology is essential. As the initial phase of the methodology, a review was
+    conducted to get the domain knowledge.
+
+
+    # A. Social media usage in flood estimation
+
+
+    P.Choudhary et al. proposed a multi-task learning approach based on the regression
+    and pairwise ranking method [2]. They used a DEEPFLOOD dataset that contains 8145
+    images that contain different water levels. Recent years have seen an increase
+    in using multimedia data from social media for flood detection, visualization,
+    and prediction. This research has the benefit of being accurate in real-time,
+    while it is also to collect the data using social media for flood detection and
+    prediction [3-6]. Wang et al. in Twitter data and crowdsourcing to detect the
+    event of the flood region using regression.
+
+
+    Another solution is creating a flood map by identifying areas using. [7] studies
+    identified creating flood maps using different types of social data. Community-based
+    data such as videos and images have been used for flood prediction. [8] have revealed
+    that social media is an information source for rapid flood inundation. It also
+    includes the challenges of processing unstructured data obtained from social media.
+    Other studies such as [6][7] described the impact of social media usage in flood
+    levels. M. Smith et al [7]Used Twitter data to develop a real-time framework for
+    flood risk management.
+
+
+    Wang et al used Twitter text to estimate flood level using English text analysis.
+    Authors have demonstrated that they also used natural language processing (NLP)
+    for the text message content
+
+
+    # B. The deep learning model for image classification
+
+
+    This research mainly depends on cutting-edge technology called deep learning and
+    deep learning techniques which we need to get about deep learning applications
+    in the image processing sector.
+
+
+    P.Choudhary et al[10] used the VGG model as the network backbone to predict the
+    water level from flood images. They fine-tuned the model by replacing final layers
+    to reduce the scale depth as they want to know the water level. Lu et al [11]
+    have found that the VGG16 model performs well in the context of natural disasters.
+    Visual revealed that VGG deep models are suitable for large scale image recognition.
+
+
+    Studies such as [13-15] Used Deep learning models for the image classification
+    task. A deep model that provides efficient features for mobile vision applications.
+    Ord. G et al[15] identified hyper-parameters effectively the balance-off tradeoff
+    in traffic detection. In their paper [16] Mobile models were used in a relevant
+    network framework called SSDnet. A new version of the mobile model called Vmob
+    was used in a research study [17] for object detection and semantic segmentation.
+
+
+    Other deep learning models such as ResNet [16], Inception model [17], [18], Googenet
+    [19], ResNet [20],'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'efficientient model [21] are the most used deep learning
+
+    images for image classification task.
+
+
+    # B. Image pre-processing
+
+
+    # III. METHODOLOGY
+
+
+    Image pre-processing is an application of a wide array of
+
+    ranging from altering images, applying artistic
+
+    filters, enhancing the competitiveness of the images,
+
+    segmenting. In image pre-processing data augmentation
+
+    is technique used to increase the number of image data.
+
+    Data augmentation is a process of creation usually by
+
+    performing rotation or reflection of the original image,
+
+    zoming in and out, and shifting, amplifying distortion,
+
+    changing the color palette [22].
+
+
+    The following Fig. 3 shows the phases of the followed
+
+    methodology to create a comparative study and propose the
+
+    best fit model for flood impact detection.
+
+
+    | Collecting Dataset | Image Processing | Deep learning model |
+
+    |---|---||
+
+    | Performance evaluation | Analysing results | Active learning |
+
+
+    ![](img/743a6e1780ed464787729fa6135e261b_2_0.png)
+
+
+    Fig. 3: Followed methodology
+
+
+    ![](img/743a6e1780ed464787729fa6135e261b_2_1.png)
+
+
+    # A. Data set
+
+
+    ![](img/743a6e1780ed464787729fa6135e261b_2_2.png)
+
+
+    Dataset is composed of 1543 social media images and
+
+    has been categorized into three categories High-Risk,
+
+    Medium-Risk, and Low-Risk. There are 553 "high-risk level"
+
+    images, 607 "Medium-risk level" images, and 383 as "low-
+
+    risk, level" images. Dataset divides into parts as a training set
+
+    (1245 images) and a validation set (306 images).
+
+
+    ![](img/743a6e1780ed464787729fa6135e261b_2_3.png)
+
+
+    Fig. 7: Image augmentation
+
+
+    ![](img/743a6e1780ed464787729fa6135e261b_2_4.png)
+
+
+    As in Fig. 7 original image can represent 4
+
+    different images as the augmented images and it can
+
+    increase the volume of the dataset and enhance the visibility
+
+    of water level too.
+
+
+    ![](img/743a6e1780ed464787729fa6135e261b_2_5.png)
+
+
+    Fig. 4: Example of high-risk level flooding images in the dataset
+
+
+    # C. Deep level methodology
+
+
+    In image processing context many advanced
+
+    Convolutional Neural network architectures have been used to
+
+    feature extraction VGG16, VGG19, InceptionV3,
+
+    MobileNet, DenseNet169, DenseNet201, there are
+
+    some models available to extract image features [23].nA Convolutional Neural network
+    is formed with several layers.
+
+    These layers perform image classification tasks. A CNN
+
+    architecture generally consists of convolutional
+
+    convolution and pooling layer and one or more
+
+    connected layers. For the transfer learning VGG16,
+
+    VGG19, DenseNet169, and MobileNet.
+
+
+    # D. Transfer learning
+
+
+    Transfer learning and domain adaptation to the
+
+    situation where what has been learned in one setting is
+
+    exploited to improve generalization in another setting.
+
+    Transfer learning is an optimization that allows
+
+    progress or improved performance when modeling the
+
+    second task. Simple methods with a large amount of
+
+    data and adjust model weight and however
+
+    The network is going to solving this new tasks with
+
+    pre-trained weights. Fine-tuning the models,
+
+    we can adjust the model to be unique in our data and improve
+
+    accuracy. There here we unfreeze the last layers in
+
+
+    ![](img/743a6e1780ed464787729fa6135e261b_2_6.png)
+
+
+    Fig. 5: Example of medium-risk level flooding images in the dataset
+
+
+    ![](img/743a6e1780ed464787729fa6135e261b_2_7.png)
+
+
+    Fig. 6: Example for low-risk level images in the dataset
+
+
+    Fig. 4, 5, and 6 included the subset of the dataset related
+
+    to each risk level classification from high-risk level, medium-
+
+    risk level, and low-risk level.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/743a6e1780ed464787729fa6135e261b_3_0.png)
+
+
+    Fig. 8: Example of deep learning model architecture (VGG16)
+
+
+    # ## E. Confusion Matrix
+
+
+    The Confusion matrix is used for finding the accuracy and the performances of
+    the model for the classification problem where the output is two or more types
+    of classes.
+
+
+    +   * True Positive (TP) = Real label and predicted the label of the sample is
+    positive.
+
+    * True Negative (TN) = Real label and predicted the label of the sample is negative.
+
+    * False Negative (FN) = Real label of the sample is positive, and the predicted
+    label is negative.
+
+    * False Positive (FP) = Real label of the sample is negative, and the predicted
+    label is positive.
+
+    * Real Positives (RP) = Real positives
+
+    * Real Negatives (RN) = Real negatives
+
+    * Predictive Positives (PP) =Predicted Positives
+
+    * Predictive Negatives (PN) =Predicted Negatives
+
+
+    F1-score defines true positives are considered as twice important as the other
+    metrics.
+
+
+    Accuracy = \frac{TN+TP}{TN+TP+FP+FN}
+
+
+    Precision = \frac{TP}{TP+FP}
+
+
+    Recall = \frac{TP}{TP+FN}
+
+
+    F1Score = \frac{2 \times TP}{2 \times TP+FP+FN}
+
+
+    # ## IV. RESULTS AND DISCUSSION
+
+
+    Final accuracy and the loss of each deep learning model are included in Table
+    1.
+
+
+    Table 1: Summary results of deep learning models
+
+
+    | Deep learning model | Accuracy | Loss |
+
+    |---|---|--|
+
+    | VGG16 | 63% | 0.47 |
+
+    | VGG19 | 68% | 0.52 |
+
+    | MobileNet | 86% | 0.43 |
+
+    | DenseNet16 | 65% | 0.98 |
+
+
+    Data analysis results of each model are shown in the following figures. These
+    graphs show the training and validation accuracy of each model respectively.
+
+
+    ![](img/743a6e1780ed464787729fa6135e261b_3_1.png)
+
+
+    Fig. 9: Training and validation accuracy of the VGG16 model
+
+
+    ![](img/743a6e1780ed464787729fa6135e261b_3_2.png)
+
+
+    Fig. 10: Training and validation accuracy of the mobilenet model'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '![](img/743a6e1780ed464787729fa6135e261b_4_0.png)
+
+
+    Fig. 11: Training and validation accuracy of Denset169 model
+
+
+    ![](img/743a6e1780ed464787729fa6135e261b_4_1.png)
+
+
+    Fig. 12: Training and validation accuracy of VGG19 model
+
+
+    Fig. 14 shows the sample images for the final prediction and its generated results.
+
+
+    ![](img/743a6e1780ed464787729fa6135e261b_4_2.png)
+
+
+    Img 1 \quad\quad Img 2 \quad\quad Img 3
+
+    Fig. 14: Images used for evaluation
+
+
+    | | Img1 | Img2 | Img3 |
+
+    |---|---|---|--|
+
+    | High-Risk | 0.935892 | 0.067895 | 0.006743 |
+
+    | Medium-Risk | 0.036322 | 0.633542 | 0.195670 |
+
+    | Low-Risk | 0.0277850 | 0.2985633 | 0.797644 |
+
+    | Prediction Result | High Risk | Medium Risk | Low Risk |
+
+
+    Table 2: Prediction results table
+
+
+    # V. CONCLUSION
+
+
+    After getting results the MobileNet worked with high accuracy and it is 86% and
+    then move to the validation evaluation process. In the next phase, we will describe
+    the evaluation of the mobilenet model. As explained in section E in heading III
+    confusion matrix to analyze the performance of the mobilenet and it is shown in
+    Fig. 13. It compares the predicted labels with true labels and constructed the
+    confusion matrix.
+
+
+    A systematic review was conducted to understand the techniques, algorithms, and
+    Frameworks for flood disaster management globally. It was very essential when
+    proposing a new image-based analysis to predict related areas. The proposed method
+    describes the image-based analysis to predict flood disasters. CNN-based models
+    can automatically identify the features in the image and categorized them by their
+    impact level. For the image segmentation, the Fully Convolutional Network (FCN)
+    model was used. CNN has limitations which can''t manage different input sizes.
+    CNNs use convolutional layers for processing input sizes and can work faster.
+    The output layers of softmax activation function output
+
+
+    ![](img/743a6e1780ed464787729fa6135e261b_4_3.png)
+
+
+    Figure 13: Confusion Matrix
+
+
+    As in Fig. 13, there is a high quantity in the value for the same class both predicted
+    and true labels. Then we can validate the performance of our model using a matrix.
+
+
+    In this study, we used the level based flood image classification and evaluation
+    segment also we have proposed an image classification study according to their
+    impact level. Further, Densenet169, and MobileNet deep learning used. When comparing
+    the results MobileNet model predicts the output with 80% accuracy. The other thing
+    is that the result is the result of the increase when increasing the batch size
+    of the training phase. This phase also allows
+
+
+    To analyze the prediction randomly choose the images from the social media and
+    them to the above-trained
+
+
+    can predict the flood level in minimum time and we go for a real-time prediction
+    system by embedding these models for the system.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'As work, we are suggested to combine different types of multimedia data such
+    as image, audio, and video to create a real-time platform for flood prediction.
+    and for an ensemble to increase the accuracy of the model.
+
+
+    # REFERENCES
+
+
+    +   [1] L. Starkey et al., "Professional development: Embodying educational reform
+    in New York," Teaching and Education, vol. 25, no. 1, pp. 181–189, 2009. doi:10.1016/j.ied.2008.08.007.
+
+
+    +   [2] N. Chaudhary, S. Jang, P. J. Leito, K. Schindler, and J. D. Weber, Water
+    level prediction from social media with a multi-ranking approach," ISPRS Journal
+    of Photogrammetry and Remote Sensing, vol. 167, pp. 55–262, 2020. doi:10.1016/j.isprs.2020.10.073.
+
+
+    +   [3] R. Q. Wang, H. Mao, Y. Cang, and W. Shaw, "Resolution of urban flooding
+    using social media and crowdsourcing data," Communications and Geosciences, vol.
+    111, pp. 139–147, 2018; doi:10.1016/j.cg.2017.10.118.
+
+
+    +   [4] J. Forberg, D. Dransch, H. Schmitz, and K. Schuster, "Social media as
+    an information source for flood mapping," Natural Hazards and Earth Science, vol.
+    14, no. 2, pp. 2728–2735, 2015; doi:10.1007/s21105-015-2738-5.
+
+
+    +   [5] M. Krifner and A. Erlich, "Mobile sensing and low-cost application for
+    flood mapping," International Archives of Photogrammetry, Remote Sensing and Spatial
+    Information - ISPRS Archives, vol. 42, no. 2, pp. 543–550, 2018; doi:10.5194/isprs-archives-v42-2-543.
+
+
+    +   [6] L. Zi, W. C. Chang, and D. Gu, "Assessing the utility of social media
+    for flood mapping: a case study of the 2015 Karachi floods," Geographic and Earth
+    Information Science, vol. 15, no. 2, pp. 97–110, 2018; doi:10.1080/15230460.2016.1217356.
+
+
+    +   [7] L. Smith, Q Liang, P. James, and W. Lin, "Assessing the utility of social
+    media as a source for flood risk management using a real-time framework," Journal
+    of Flood Risk Management, vol. 10, no. 3, pp. 370–380, 2017; doi:10.1111/jfrfm.12314.
+
+
+    +   [8] E. Starkey, G. Parikin, S. Birkinshaw, A. Page, P. Quinn, and G. Gibson,
+    "Demonstrating the value of community-based (‘citizen science’) observations for
+    catchment modelling and characterisation," Journal of Geography, vol. 548, pp.
+    801–817, 2017, doi:10.1016/j.jse.2017.03.019.
+
+
+    +   [9] O Pavlov, A. Price, and M. Halon, "OpenMaps: A platform for crowd visualization
+    and analysis of disaster related hazard
+
+
+    sensor network observations," ISRAM 2014 Conference - 11th International Conference
+    on Information for Crisis Response and Management, no. pp. 802–806, 2014.
+
+
+    P. Chaudhary, S. D. Arroya, M. Mo DeV, P. J. Leito, and J. G., "FLOOD LEVEL ESTIMATION
+    FROM SOCIAL MEDIA IMAGES," ISPRS Annals of the Photogrammetry and Spatial Information,
+    vol. 4, no. 2, pp. 5–12, 2019; doi:10.5194/isprs-v4-2-5.
+
+
+    X. Liu, J. Van De Jaeger, and A. D. Bagdanov, "Unloaded Data for Crowd Counting
+    by Learning to Rank," Proceedings of the IEEE Conference on Computer Vision and
+    Pattern Recognition, 7661–7668, 2019; doi:10.1109/CVPR.2019.0008198.
+
+
+    A. Z. Simonovsky, "Deep Convolutional Networks for Large Scale Image Recognition,"
+    International Conference on Learning, vol. 1, pp. 1–14, 2015.
+
+
+    A. Howard, W. G. Chu, L. Chen, B. Chen, and M. Tan, "Sanchling for MobileNetV3,"
+    2019.
+
+
+    C. Szogedy, V. Vanhoucke, J. Shlin, and J. Wiener, "Rethinking Residual Connections
+    on Learning,"
+
+
+    A. Huang and K. Weiner, "Applications," 2012.
+
+
+    C. Szogedy, P. Reed, V. Vanhoucke, and A. Rabikov, "Group skip with convolutions,"
+    pp. 1–2.
+
+
+    M. Tan and J. V. Le, "EfficientNet: Scaling Convolutional Neural Networks," 2019.
+
+
+    F. Agostinelli, M. Hoffman, P. Sadowski, and P. Bail, "Learning activation functions
+    to improve deep networks," 3rd International Conference on Learning Representations,
+    ICLR 2015–Workshop Track, 2013, pp. 1–9, 2015.
+
+
+    D. Lee and J. Du, "Flood detection using multispectral satellite image ensemble
+    and learning with CNN architectures," IEEE CBR Workshop Proceedings, vol. 2283,
+    pp. 3–5, 2018.'
+  merge: -1
+  img_proc: true
