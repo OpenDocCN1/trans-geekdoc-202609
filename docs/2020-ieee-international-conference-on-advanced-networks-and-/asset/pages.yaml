@@ -1,0 +1,557 @@
+- pgno: 0
+  md: '# # A Survey on Blockchain and Edge Computing applied to the Internet of Vehicles
+
+
+    Anderson Queiroz, Eduardo Oliveira, Maria Barbosa and Kelvin Dias
+
+    Centro de informática
+
+    Universidade Federal de Pernambuco
+
+    Recife, Brazil
+
+    alq@cin.ufpe.br, ehammo@cin.ufpe.br, mskb@cin.ufpe.br, kld@cin.ufpe.br
+
+
+    # ## INTRODUCTION
+
+
+    **Abstract—** With the advent of Intelligent Transportation Systems (ITS), data
+    from sensors embedded into vehicles or smart infrastructure are of utmost importance.
+    This survey explores recent mechanisms for information exchange in vehicle-to-vehicle
+    edge computing (IoV). To accomplish these requirements, edge computing has been
+    recently adopted to support the Internet of Vehicles (IoV). This survey presents
+    solutions for blockchain-based vehicular edge computing (IoV), provides a taxonomy
+    of their features, advantages, and limitations to provide guidance for future
+    research.
+
+
+    ***Index Terms—* Internet of Vehicles (IoV), Fog, Edge and Cloud Computing.*
+
+
+    Vehicular Ad Hoc Networks (VANETs) are a key technology to support road safety,
+    comfort, and infotainment payments for passengers and citizens of cities. VANETs
+    rely on following communication modes: Vehicle-to-Vehicle (V2V), Vehicle-to-Edge
+    (V2E), and Vehicle-to-Infrastructure (V2I) to provide communication with any component
+    of the Intelligent Transportation System (ITS) in cities, such as highways, stations,
+    pedestrians, traffic lights, and other participating members in this ecosystem.
+    VANETs use On-Board Units (OBU) located in roads, Road Side Units (RSU), and BS
+    with various communication standards, such as 802.11p, DSRC/LTE, and 5G, which
+    have more computational power than vehicular edge computing.
+
+
+    The data can be processed and delivered by the base station or by cloud or vehicles.
+    Figure 1 shows the various architectural, technological, and communication aspects
+    that emerge from the IoV environment in the context of this article. We will show
+    why VANETs need effective security and privacy mechanisms to minimize false and
+    malicious exchanges of information between vehicles. Such incidents can cause
+    different types of accidents that threaten the lives of drivers, passengers, and
+    pedestrians [2]. Considering that even with the growth in the number of devices
+    carrying transactions on VANETs, it is possible to reach security through the
+    features (immutability, crypt-
+
+
+    topography, registration, distribution, and joining validation of data and transactions)
+    offered by the blockchain.
+
+
+    Traditional access to the remote cloud may degrade VANET services due to latency.
+    Nevertheless, with the use of Edge Vehicle Computing (Edge), processing and storage
+    are now close to vehicles, that is, at the edge of the network. Recently, researchers
+    proposed solutions for fog and edge computing and edge computing to the Internet
+    of Vehicles (IoV) which are closer to the user, such as Software-Defined Networking
+    (SDN) and Network Functions Virtualization (NFV), as well, artificial intelligence
+    support for both automotive service orchestration and management of vehicular
+    infrastructure.
+
+
+    The proposed solutions have common features in vehicular architecture and also
+    design characteristics that must be clarified to understand their advantages and
+    disadvantages in the scenario of future developments. Each area, different edge
+    computing techniques and applications, blockchain, and other security mechanisms
+    for exchanging information and data, have been introduced to the academic community
+    and nations in recent years. This study summarizes these different researches,
+    relating the proposals, helping to understand each technology, and how they modes
+    deal with the environment in each ecosystem [3]-[8].
+
+
+    This article examines crucial solutions for edge computing and blockchain applied
+    to IoV, provides a taxonomy, and comparative summary, its main proposals, technologies,
+    architectures and a view of providing to to others. Section II shows the background
+    and taxonomy of the proposed elements of study, the summary of the solutions,
+    and the discussion of advantages and limitations of each approach. Section IV
+    presents the conclusion of the article.
+
+
+    > *This article considers Fog to refer to the nodes, that is,'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# 2020 IEEE International Conference on Advanced Networks and Telecommunications
+    Systems (ANTS)
+
+
+    Fig. 1. A General Framework for Blockchain-based Vehicular Edge Computing
+
+
+    ![](img/5172031a44df5202921ea0013d8c0b7f_1_0.png)
+
+
+    # II. FOUNDATION
+
+
+    # A. Blockchain
+
+
+    As Jianbin said in [1] "Blockchain is a decentralized infrastructure and a distributed
+    computing paradigm that uses encrypted blockchain blocks to store and validate
+    data consensus algorithms to generate and update data and smart contracts to manage
+    and automate". These blocks are made of transactions that are recorded and validated
+    in a distributed network without the need for a central authority. This entity
+    was proposed by Satoshi Nakamoto [2] to define what transactions are carried out
+    by the bitcoin cryptocurrency.
+
+
+    Blockchain management is achieved by several participants, unlike traditional
+    centralized databases, which are generally managed by a single organization. Other
+    than that, the transparency of blockchain is easy to track and verify data [1].
+
+
+    Currently, there are three ways to implement blockchain on a network: public,
+    private, or consortium. The most common used by cryptocurrencies is the public
+    blockchain where anyone can participate in some activity of the management process.
+    Private implementations is
+
+
+    characterized by the centralized control of nodes and rules by a single organization.
+    Finally, the consortium blockchain, where a group of companies, with the same
+    objective, performs the control and management of the nodes and rules. This type
+    of implementation is used in IoT environment since its characteristics are similar
+    to the current state of vehicular networks as demonstrated in [1].
+
+
+    We also need to know in mind two concepts: The consensus algorithm and the smart
+    contract. The consensus algorithm ensures higher trust and security on the network.
+    Furthermore, it verifies the authenticity of the transactions and validates the
+    blocks. However, for this to happen, there must be a consensus. In other words,
+    the consensus algorithm is the means to do agreements between nodes. Each user
+    and each has a unique address. This smart contract automatically executes in the
+    blockchain, as it cannot be altered and based on the rules predefined in a contract
+    or consensus, based on these rules it performs transactions among vehicles without
+    the need for an intermediary.
+
+
+    > Bitcoin: a point-to-point ATM system, Satoshi Nakamoto https://bitcoin.org/bitcoin.pdf
+
+
+    > What is blockchain, SAP https://www.sap.com/insights/what-is-blockchain.html
+
+
+    Authorized license used limited to: University of Prince Edward. Download on May
+    16, 2021 at 13:39:47 from IEEE Xplore. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '2020 IEEE International Conference on Advanced Networks and Telecommunications
+    Systems (ANTS)
+
+
+    Fig. 2. Taxonomy of Blockchain and Edge computing for IoV
+
+
+    ![](img/5172031a44df5202921ea0013d8c0b7f_2_0.png)
+
+
+    # ### III. TAXONOMY OF BLOCKCHAIN APPLIED IN IOV
+
+
+    The proposed system is depicted in Fig. 2. The taxonomy contains building blocks
+    of surveyed architectures that integrate Blockchain and Vehicle Edge Computing
+    for IoV environment. It was structured into five categories: Access layers; Layers
+    of the IoV architecture; Networking technologies; Execution of blockchain tasks,
+    including mining, pooling, consensus, and managing all algorithms and machine
+    learning techniques.
+
+
+    authority.
+
+
+    Considering the add of blockchain in an IoV environment to improve the security
+    of the network. [2] presents a solution for the adequate use of blockchain in
+    vehicles with the division of activities and services in a balance needed within
+    the three layers of IoV. The blockchain is depicted in the network layer, security-related
+    blockchain tasks are handled by the Edge layer, and the Cloud-layer has a backup
+    of the blockchain storage. On the other hand, some articles bring unconventional
+    approaches, like [3]. To solve problem of data consistency and integrity attacks
+    in the VANET, the proposed network is driven by an acyclic graph, where each block
+    has a single chain.
+
+
+    The study proposal [7] created a scheme for certification authority, applying
+    the session key to identify each vehicle. They use the blockchain for the V2V
+    groups, sharing, and managing all the existing vehicles of the group.
+
+
+    Some of the papers utilize software-defined network (SDN) or software-defined
+    vehicle (SDV). [1] uses the combination of blockchain and SDN technologies as
+    a way to improve the operation and management of the vehicle networks that operate
+    5G networks and edge computing. Being the major responsibilities shared between
+    the SDN and blockchain. To create a secure, reliable, and connective network,
+    [8] proposes a structure using SDVN along with a paradigm for the blockchain that
+    will allow the certification of transactions to guarantee the anonymity of the
+    nodes in a totally distributed network. The blockchain uses cluster based distributed
+    connected miners (D-MS), which dynamically selects operating miners.
+
+
+    Considering the paradigm of Electric vehicle cloud and edge (EVCE) [4] less blockchain
+    in the distributed consensus activities, which are based on the frequency and
+    contribution of data and energy in the system, [5] consortium blockchain was used,
+    the authors elaborated a consensus mechanism through a triple-weight subjective
+    voting (TWSL) model to secure consensus and sharing between vehicles.
+
+
+    In authors [9] use an optimization-based solution for scaling resources in a virtual
+    edge computing environment. The proposed server would be the best for a requested
+    request. To request they utilized blockchain.
+
+
+    The paper [6] proposes a many-tier caching scheme, and a trusted-access authentication
+    scheme using Blockchain. The authentication scheme is a mechanism used to achieve
+    real-time monitoring and promote collaborative sharing for vehicles. The blockchain
+    is distributed, being the certifying
+
+
+    In the paradigm of connected and autonomous vehicles (CAVs), [11] is to decentralized
+    the ML learning, creating global models to share data with each other, and at
+    time ensure privacy and security in the network. To do this, they utilize blockchain-based
+    learning (BCL) technique. The ML algorithms are used to improve the decision-making
+    process of executions in the various layers of the IoV network, and the Blockchain
+    is to protect the users from security and privacy threats.
+
+
+    The research work [11] is using security and dynamism
+
+
+    Authorized license used for: University of Prince East. Downloaded on 16 May 2021
+    at 13:39:47 UTC from IEEE Xplore. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# 2020 IEEE International Conference on Advanced Networks and Telecommunications
+    Systems (ANTS)
+
+
+    in the exchange of information. So, they Autonomous Vehicular Social Networks
+    (AVNs) in the blockchain context. Besides, they feature a consensus algorithm
+    based on reputation, Proof of Reputation (PoR).
+
+
+    In order to alleviate the traffic and reduce latency, [12] propose an unmanned
+    blockchain to create a caching scheme. Due to the high mobility of vehicles, it
+    is a challenge to decide when and where to cache. Therefore they seek to explore
+    deep learning for recognition task design. In this design, a new method for the
+    selection of the block checker, the Utility Proof (UP), was proposed.
+
+
+    The research [13] sought to solve the limited issue of contention resources in
+    IoT, proposing a brokerage mechanism to assist the decision process whether on-site
+    or at the edge. Using Smart Market Theories (SMT) method, the mining of the blockchain
+    can happen anywhere in the network and storage is in participant node.
+
+
+    The surveyed papers mostly adopted learning algorithms as a strategy for decision
+    making, and heuristic for consensus agreements. It is worth noting that many papers
+    focused on reinforcement and deep learning. Although these were used for different
+    reasons, most have different techniques when working in IoT context. It would
+    be a comparative study of various decision-making algorithms, to analyze which
+    one is more appropriate in an IoV context. It is also worth noting that each article
+    used blockchain for a different purpose, like offloading [13], resource allocation
+    [9] and for its application [10].
+
+
+    should only communicate and not any computation. By moving the computation to
+    the Edge, there is less delay between messages while maintaining a better processing
+    power than the vehicle''s BOU. Both single layer (Fog) and this scenario have
+    a big issue on resource allocation all the processing scenarios.
+
+
+    Static multi-layer. In this case, the blockchain-related tasks are also in the
+    Edge/MEC-layer [2], [4]-[7], [11]. Nevertheless, in this scenario, the Fog-layer
+    and the Cloud-layer may handle tasks, some of these tasks could be related. Each
+    of the tasks is assigned specifically, and in this scenario there is the issue
+    of overlaying the MEC-layer, but by sending the resource to the cloud layer. Some
+    of issues, such the task never completing due to a congested network. And by never
+    sending tasks to the cloud, the MEC may be overtaken in the same way as it was.
+
+
+    Dynamic multi-layer. This scenario deals with balancing in hybrid IoT [13]. In
+    the previous scenario, the blockchain-related tasks may be handled in any layer.
+    Nevertheless, in this case, resources of each layer and the user''s context are
+    coordinated dynamically. However, the decision mechanism might cause an inappropriate
+    layer to perform one task, it may cause some of the tasks that were mentioned
+    in previous scenarios
+
+
+    # A. Scenarios definition
+
+
+    We defined four scenarios to classify the architectures of the surveyed networks.
+    Three faces were taken into account to devise these scenarios:
+
+
+    +   * Network layer is for the blockchain-related tasks:
+
+    What is the role of the Edge in this scenario?
+
+    * Single layer (Fog). In this scenario, the blockchain-related tasks are also
+    one of the Fog-layer (in the vehicle''s BOU) [8]. The Edge/MEC-layer exclusively
+    transmits data from the VANETs and data to the Fog and Cloud. The Cloud-layer
+    may handle some services to the vehicles, but those would not be blockchain-related.
+    By distributing the blockchain in the final layer, there is less delay between
+    messages, exchange blockchain-related communications are carried out in V.
+
+    * Single layer (MEC). In this context, the blockchain-related tasks are in the
+    Edge/MEC-layer [9], [10], [11]. This layer may offer services that are necessary
+    for the user. The Cloud-layer does not have an important role in this scenario.
+    As for the Fog-layer, it
+
+
+    # B. Dimension of Blockchain Solutions in IoV
+
+
+    +   On we classified:
+
+    * Type (Public, Private, or Consortium) - it is interesting that most referenced
+    blockchains over other types. Public blockchains have low scalability, such as
+    decentralized nodes where every node processes transactions. There are strategies
+    to improve the scalability, as the architecture is designed on [3]. On public
+    blockchains have the advantage since it does not have many public nodes, the authority
+    decides which nodes can be miners, which are nodes that must have all transactions
+    executed. But it is centralized since a single company manages the whole blockchain.
+    Consortium blockchain is usually private and several companies share the ownership
+    of blockchain
+
+
+    +   * Blockchain layer, i. where the mining and consensus are mostly happening.
+    This column is relevant for the reader to know which layers were used in a static
+    or dynamic layer architecture.
+
+    * Architectural Approach, using the previously defined architecture model. Bringing
+    the blockchain closer to the
+
+
+    Authorized license used to: University of East Ireland. Downloaded on May 16,
+    2021 at 13:39:47 from IEEE Xplore. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# 2020 IEEE International Conference on Advanced Networks and Telecommunications
+    Systems (ANTS)
+
+
+    ### SUMMARY OF SOLUTIONS: BLOCKCHAIN FEATURES.
+
+
+    | Paper | BlockchainType | BlockchainLayer | ConsensusAlgorithm | Architectural
+    Approach |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | Jianbin Gao (2019) | Consortium | Edge | PBFT | Edge-layer |
+
+    | Shaobin Ge (2019) | Consortium | Edge/Cloud | PoW | Static-layer |
+
+    | Wang Jian (2019) | Consortium | Fog | PoW | Static-layer |
+
+    | Yuejie Dai (2019) | private/permissioned | Fog | PBFT | Edge-layer |
+
+    | Heixin Chen (2019) | - | Fog | PoW | Fog-layer |
+
+    | Youcai Yatiba (2018) | Public&Private | - | Tang6CV | Authors created DM-CS
+    | |
+
+    | Xiaodong Zhang (2016) | private/permissioned | Fog&Edge/Cloud | PBFT | Static-layer
+    |
+
+    | Chun Ou (2018) | Consortium | Fog&Edge/Cloud | PoS+PoW | Dynamic-layer |
+
+    | Hawen Tan (2019) | - | Fog&Edge | PoW+PoF+PoS | Static-layer |
+
+    | Hong Liu (2014) | Consortium | Fog&Edge | BFT-DFS | Edge-layer |
+
+    | Yuchao Tian (2019) | Consortium | Edge | - | - |
+
+    | Y.-Wang Mao (2020) | Consortium | Edge | PoR | Static-layer |
+
+
+    users decreased and increased the quality of service since the information got
+    to the user [3], [8]. But every vehicle is so well equipped to do all storage
+    and consumption. Researchers decided to delegate these blockchain tasks to the
+    edge or cloud layer. However, most passengers have to choose between the edge
+    or create a hybrid Fog-Cloud architecture. This is to avoid overloading the vehicles
+    with processing and consistency
+
+
+    +   * **Consensus** — Here we specify which consensus algorithm was used in each
+    survey
+
+    1) PoW — Proof-of Work, one of the most known consensus algorithms, used by Bitcoin.
+    Every node competes with another to solve a challenge, and the nodes with the
+    best computational power usually generate the new money. This makes it harder
+    for attackers to handle the attack, chaining is because the cost of mining a block
+    with fraudulent transactions is too high. But it puts a strain on the nodes for
+    every consensus there is a need for competition. In a VANET environment, a researcher
+    chooses this method, then it would be best to keep the mining outside the vehicles,
+    [5], [8] but with PoW, but combined with another strategy, so the difficulty of
+    the challenge will be smaller for certain individuals. The energy consumption
+    during this challenge would be best.
+
+    2) PoS — Proof-of-Stake, a very common consensus algorithm used by NYT cryptocurrency.
+    This algorithm also tries to solve inherent issues of energy consumption. This
+    approach chooses the miner based on how many coins the node has accumulated. The
+    main issue is that of the lack of variation
+
+
+    randomization.
+
+
+    3) PoU — Proof-of-utility, similar to DPoS in this, the nodes for vehicle has
+    the higher utility. This utility can be using multiple variables that change their
+    weight over time, making these values non-linear distributed. These variables
+    could vary as on the implementation. PoU is scalable and safe. [12] authors used
+    this based on the amount the node takes to provide information for the. The main
+    issue is how well it works, and how the number of nodes and their weights is all
+    optional for the developer to choose, which could cause a major security issue.
+    If so, hard to implement and correct, it''s to
+
+
+    4) PoS — Proof of Stake. DPoS is proved in [11], it is similar to DPoS. and the
+    node reputation is directly proportional to its voting power. The main difference
+    is, that after the elected nodes start to work, they will compete in a PoW challenge
+    and the winner is going to be rewarded. The reputation, the difficulty of the
+    challenge is is
+
+
+    5) PBFT — Proof of Byzantine Fault Tolerance is a nonanonymous, message heavy.
+    If 7 nodes are to reach consensus 71 messages are necessary. If a node is considered
+    in the traditional sense, as a RSU or a vehicle, it doesn''t scale.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# 2020 IEEE International Conference on Advanced Networks and Telecommunications
+    Systems (ANTS)
+
+
+    It is possible, however, in a consortium blockchain where each organization elects
+    a node to participate in the consensus. The paper [1] does not mention this approach.
+
+
+    the guarantee of safety in the use of integrated technologies of ITS. This study
+    seeks to identify the types of blockchain, consensus algorithms, as well as their
+    users, contexts, and operation in the environment (cloud, edge, and fog). We categorize
+    the different usage scenarios, taking into account the various characteristics
+    and aspects of each approach. For communication, security, and decision-making,
+    all of these are presented in Figure 2. We then discussed the approaches of Table
+    1, delivering a comparative study of how blockchain is used in various scenarios,
+    what algorithms and technologies were used, highlighting their advantages and
+    disadvantages. In summary, this survey
+
+
+    +   6) BFT-PoS - Byzantine fault tolerated proof-of-stake. The,, algorithm puts
+    together to choose the nodes that will achieve consensus-after the stake. These
+    21 nodes will produce 12 blocks, and for each one they apply the consensus, the
+    BFT algorithm ensures. This is a scalable and fast way to generate blocks. Since
+    the users have a chance to ensure the result, in a real-life scenario, it is likely
+    that the users would trust their money on the blockchain exchange for vote. For
+    that reason, centralized consensus is seen in Dmos.
+
+
+    +   7) tangleCV - To use tangle, it''s necessary to explain the tangle architecture.
+    It is based on blockchain, but it takes a different approach. The blocks may be
+    chained in an acyclic graph, where each block has one transaction and each new
+    transaction require PoW validation of previous transactions. After validation,
+    a transaction gains a weight based on the work necessary to validate that transaction,
+    and weight is its trustworthiness. The tangleCV states that a transaction with
+    a higher weight than others might be rewarded with so fast validation.
+
+
+    In the tangle architecture, this method has many advantages such reducing bandwidth
+    congestion and eliminating delays. But no security test done in [3]. Also, it
+    fail to compare the different consensus algorithms, since the architecture is
+    a little different.
+
+
+    +   8) DM-CDS - The Distributed miners connect different algorithms is based on
+    another algorithm, DSP-CDS or Distributed single-phase dominating set. DSP-CDS
+    is used to define when a given node enters a set of nodes dominating; it adapts
+    to the network topology. DM-CDS uses a mine-score function which considers several
+    parameters, such as a tree model, degree of connectivity, link quality, to decide
+    which node may validate the transactions. This algorithm is similar to PoS instead
+    of stake, the factor that decides the miner score. And since the miners are variable
+    with time
+
+
+    do a PKI request validation. In the tangle architecture, this method has many
+    advantages such reducing bandwidth congestion and eliminating delays. But no security
+    test done in [3].
+
+
+    # REFERENCES
+
+
+    +   [1] Guo, X. et al. Blockchain-based includes types of environment for for
+    computing and 5g networks. 5 vol. 7, 4278–4289 (2020). DOI: 10.1109/JIOT.2020.2995241
+
+
+    +   [2] Wang, J. and Xu, C. B. A. Security analysis of web based on blockchain
+    and model agree. *In Proc. IEEE Conf. Hot Int. Conet.* 288–293 (2018).
+
+
+    +   [3] Kim, S. et al. A blockchain-based technique for secure data sharing in
+    connected vehicles. *ACM*, (2019). DOI: 10.1145/3330711/3370817
+
+
+    +   [4] Zhang, Y. et al. A decentralized blockchain-based key management for vehicular
+    communication networks. *IEEE Trans. on Veh. Technol.*, 68, 4660–4670 (2019).
+    DOI: 10.1109/TVT.2019.2916774
+
+
+    +   [5] Guo, S. et al. Trust authentication and key management in vehicular network
+    based on blockchain. *IEEE*, p. 2488–2496 (2019).
+
+
+    +   [6] Yahiene, Y. et al. A blockchain-based framework for secure vehicular networks.
+    *IEEE Trans. on Veh. Technol.*, 67, 5818–5828 (2019).
+
+
+    +   [7] Li, J. et al. A blockchain-based software framework for decentralized
+    vehicle networks via peer-to-peer communication. *In Proc. ICCNet.* (2018). DOI:
+    10.1109/8860350
+
+
+    +   [8] Tian, P. et al. Vehicular blockchain and deep reinforcement learning for
+    connected autonomous vehicles. *IEEE IoT J.*, 7:3115 (2019). DOI: 10.1109/JIOT.2019.2928099
+
+
+    +   [9] Wang, Y. et al. Algorithms and strategies in autonomous driving: *IEEE
+    Network* 34, 218–228 (2020). DOI: 10.1109/MWN.2020.19010054
+
+
+    IV. CONCLUSION
+
+    The Internet of Vehicles (IoV) will play an important role in smart cities future,
+    providing road safety, convenience and other benefits. However, it is necessary
+    to search for
+
+
+    the guarantee of safety in the use of integrated technologies of ITS. This study
+    seeks to identify the types of blockchain, consensus algorithms, as well as their
+    users, contexts, and operation in the environment (cloud, edge, and fog). We categorize
+    the different usage scenarios, taking into account the various characteristics
+    and aspects of each approach. For communication, security, and decision-making,
+    all of these are presented in Figure 2. We then discussed the approaches of Table
+    1, delivering a comparative study of how blockchain is used in various scenarios,
+    what algorithms and technologies were used, highlighting their advantages and
+    disadvantages. In summary, this survey'
+  merge: -1
+  img_proc: true
