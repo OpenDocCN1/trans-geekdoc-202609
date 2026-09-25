@@ -1,0 +1,2342 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # 2020 IEEE/ACMP Symposium on Edge Computing (SEC)
+
+
+    # FlexDNN: Input-Adaptive On-Device\Deep Learning for Efficient Mobile Vision
+
+
+    Biyi Fang†, Xiao Zheng*, Faen Zhang*, Hui Xu*, Mi Zhang†
+
+    Michigan State University, †Ahnovation
+
+
+    Abstract—Mobile vision systems powered by the recent advent of Deep Neural Networks
+    (DNNs) operate on a wide range of on-video analytics. Mobile systems are constrained
+    by resources, making efficient deployment of DNNs critical. In this paper, we
+    present FlexDNN, an input-adaptive DNN-based framework for on-device video analytics.
+    Unlike previous methods that adapt video dynamics to computation, FlexDNN adapts
+    the number of video frames to match computation efficiency. FlexDNN addresses
+    the key drawbacks of existing systems and pushes the state-of-the-art mobile DNN
+    further. We evaluate its performance on both mobile CPU and GPU platforms, measuring
+    CPU/GPU processing time per frame, frame rate, and energy consumption.
+
+
+    **Keywords**—Mobile Vision Systems, On-Device AI, Deep Neural Networks, Mobile
+    Vision
+
+
+    # I. INTRODUCTION
+
+
+    # A. Motivation
+
+
+    Mobile vision systems such as phones, drones, and augmented reality (AR) are ubiquitous
+    today. By recent breakthrough in Deep Neural Networks (DNNs) [19] and the era
+    of AI chips, shift-on-device processing enables high-quality video processing
+    [10], [15, 36] and shift from cloud-constrained processing (e.g., MPEG) to on-device
+    video analytics.
+
+
+    On-device video analytics requires processing streaming video frames in real-time
+    with low latency. Unfortunately, DNNs are constrained by limited computation-inefficiency
+    [31], and high cost directly leads to high latency and energy consumption. On
+    mobile devices with limited compute resources and battery capacities, the computation
+    cost of DNN-based pipelines is crucial for any application built on on-device
+    video analytics.
+
+
+    To reduce cost, many research work pursues model compression techniques [8, 9].
+    However, model compression yields only one-size-fits-all neural networks that
+    have the same set of features to extract for all video frames regardless of content
+    in each frame. Consequently, a small low-capacity DNN model is insufficient when
+    a large high-capacity DNN model is overkill; on the other hand,
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_0_0.png)
+
+
+    for video frames that contain hard, it is necessary to adapt the contents in the
+    processing pipeline to be correctly recognized. This is very similar to human
+    vision systems where a glance is sufficient to recognize simple scenes and objects
+    of interest, whereas more attention is needed for complex scenes and objects that
+    are partially or occluded [43].
+
+
+    # B. State-of-the-Art for input-adaptive video analytics
+
+
+    Based on this approach, systems such as Chameleon [15] have recently emerged.
+    Leveraging the dynamics of video content, these methods adapt the complexity of
+    the DNN-based pipelines by dynamically changing the DNN model to match the levels
+    of the video frames. Unfortunately, as we demonstrate in §III-B, this model-of-model
+    approach is resource-constrained because it requires all the models with various
+    capacities to be loaded in the mobile system, which results in large memory footprint.
+    More importantly, if a large model is loaded and executed, the overhead is substantial,
+    the cost of searching the optimal model and switching models at runtime can be
+    prohibitively expensive, which degrades the benefit brought by adaptation.
+
+
+    The limitation of Chameleon is rooted in the constraint where it requires multiple
+    independent model variants with various capacities to adapt to different levels
+    of video frames. To address this issue, FlexAny [33] introduces the idea of using
+    a single model with convolutional layers of light branches that exit at inserted
+    points. For each frame, it exits at the early exit inserted at an earlier location
+
+
+    978-1-6659-9421-0/2020/$35.00 ©2020 IEEE\DOI 10.1109/SEC53.2020.000014
+
+
+    84'
+  - '[PAGE 1]
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_1_0.png)
+
+
+    Figure 2. Conceptual illustration of the early exit mechanism.
+
+
+    since the extracted features are good enough to recognize it content. For a hard
+    case, it proceeds until the extracted features are good enough. With such early
+    exit mechanism, easy to go through all the layers and their computation cost is
+    reduced significantly.
+
+
+    The early exit mechanism is prone to consume computation. Computation consumed
+    by frames that fail to exit the early exits are wasted and the overhead incurred
+    by the early exit mechanism. Unfortunately, the early exit architecture of prior
+    work is based on heuristics without relying on the data. Early exit rates and
+    incur overhead. Without accounting for such trade-off, the overhead could diminish
+    the benefit brought by early exits.
+
+
+    +   * Second, the number and location of the inserted exits in early work are
+    also based on heuristics. While effective in comparison with many models without
+    exits, the exponential benefits of considering number and location of early exits
+    without exhaustive effort on trial and error, it would be extremely challenging
+    to define an early exit plan that can leverage the benefit brought by early exits.
+    Moreover, the overhead and the number of inserted exits play a critical role in
+    determining the amount of computation that can be saved, making the derivation
+    of the early exit plan even more challenging.
+
+
+    FlexDNN has no model switching at runtime. At runtime, it dynamically adapts the
+    model capacity to match the difficulty levels of the input video frames at the
+    granularity of real time.
+
+
+    To address the drawbacks of BranchNet, FlexDNN adopts an architecture search based
+    to find the optimal early exit plan. FlexDNN is able to derive an early exit plan
+    which identifies which exit layer is inserted to maximize the accuracy benefit
+    brought by input adaptation. Thus, FlexDNN allows the developers with limited
+    deep learning expertise to build DNN-based-on-device video applications with multiple
+    exits. Each exit is trained, validated, and tested.
+
+
+    Table I provides a comparison between FlexDNN and existing input-adaptive video
+    applications frameworks. FlexDNN differs from BranchNet and MCDNN as it is an
+    on-device model that can dynamically adapt to any input changes. Compared to BranchNet,
+    the computation of the optimized architecture and the early exit plan makes FlexDNN
+    a superior to on-device solution.
+
+
+    | | Single Model | Early Exit Architecture | Early Exit Insurance Plan |
+
+    |---|---|---|---||
+
+    | Chameleon [15] | Server | No | Heuristics | Heuristics |
+
+    | MCDNN (10) | Cloud-Based | On-Device | Yes | Optimized | Optimized |
+
+    | BranchNet (13) | On-Device | No | | |
+
+
+    TABLE I COMPARISON BETWEEN FLEXDNN AND EXISTING INPUT-ADAPTIVE ANALYSIS FRAMEWORKS
+
+
+    # C. Proposed Approach
+
+
+    In this paper, we present an input-adaptive DNN-based-on-device video applications
+    framework FlexDNN that addresses the aforementioned drawbacks. Similar to BranchNet,
+    instead of carrying a bag of many models, FlexDNN leverages the early exit mechanism
+    to construct a single model on top of a regular DNN (i.e., base model). It replaces
+    the fixed capacity of the regular DNN model with flexible capacities. Since only
+    one model is involved, FlexDNN has a compact footprint and
+
+
+    The generated FlexDNN has a compact footprint and is able to handle early exit
+    rate without loss of accuracy. With-comparison, FlexDNN substantially preserves
+    the accuracy and reduces the computation burden brought by the adaptation.
+
+
+    +   * At runtime, FlexDNN outperforms both input-generic approach and BranchNet.
+    Compared to BranchNet, FlexDNN reduces the computation by 7% with accuracy same
+    as amount of resources, or achieves the same accuracy with up to 23.4% of the
+    computation. Compared to BranchNet, FlexDNN reduces up to 48.9% computational
+    cost, and up to 1.9× energy consumption.'
+  - '[PAGE 2]
+
+
+    # II. BACKGROUND AND MOTIVATION
+
+
+    We begin by illustrating the intrinsic dynamics of videos taken in real-world
+    mobile settings and demonstrate that considerable resource can be benefited by
+    leveraging this dynamic characteristic (§II-A). We then show that the bag-of-model
+    approach incurs overhead that dwarfs the benefit by adaptation (§II-B), which
+    motivates the use of FlexDNN.
+
+
+    # A. Dynamics of Mobile Video Content & Leveraging Dynamics
+
+
+    Due to mobility, videos taken in real-world mobile settings exhibit substantial
+    content dynamics in terms of difficulty level across frames. To illustrate this,
+    Figure 3 shows frames of a video clip captured by a biker in the human dataset
+    UCU-101. However, since the entirety of the biker and bike is captured, frame
+    (a) and (d) are relatively easier to recognize as biking activity. In contrast,
+    frame (b) and (c) capture only partially, which makes them harder to recognize.
+    In such case, a smaller model is sufficient for (a) and (d), but a more complex
+    model is necessary for (b) and (c).
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_2_0.png)
+
+
+    Fig. 3. Four frames of a video clip captured by a mobile camera in UCU-101 dataset;
+    (a) and (d) are frames with content that are easy to recognize; (b) and (c) are
+    frames that are hard to recognize.
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_2_1.png)
+
+
+    Fig. 4. Blue curve: minimum consumption to correctly recognize the content in
+    each frame (optimal model). Red dotted curve: cost of the one-size-fits-all model
+    (unit: GFLOPs).
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_2_2.png)
+
+
+    Fig. 5. Best benefit by the adaptation vs. model switching of the bag-of-model
+    approach.
+
+
+    The intrinsic dynamics of videos present an opportunity to reduce computation
+    cost by matching the capacity of the DNN model to the difficulty level of each
+    video frame. To quantify how much computation can be saved, we first define the
+    minimum computation cost in terms of the number of floating point operations (GFLOPs)
+    that is needed to correctly recognize the content in each frame of the video clip.
+    Specifically, we test different model variants with VGG-16 from 19 layers to filters.
+    For each frame, we select the model with the lowest FLOPs (framewise optimal model).
+    We then compare it to the model with the lowest FLOPs that is able to correctly
+    recognize the contents in all frames.
+
+
+    Figure 4 shows our result. As shown in the solid curve, the minimum consumption
+    to recognize the content in each frame changes frequently across frames. This
+    observation strongly highlights the dynamics of video content illustrated. In
+    addition, the difference between "areas" under the two curves reflects
+
+
+    benefit by the adaptation. The large difference indicates that substantial consumption
+    can be reduced by matching the capacity of the model to the difficulty level of
+    each video frame.
+
+
+    # B. Why-of-model Approach is a Misuse
+
+
+    The benefit of computation requires dynamically change the model capacity to adapt
+    to the contents of each frame. Existing methods such as Chameleon [15] use multiple
+    model variants to achieve changeable content adaptation. For a scalable solution,
+    this multi-variant approach is problematic for resource-constrained mobile platforms
+    for the following two reasons:
+
+
+    +   - First, the bag-of-model approach requires all model variants with various
+    capacities to be installed in the mobile device. This is not practical and can
+    lead to large memory footprint.
+
+
+    +   - Second, the bag-of-model approach incurs large overhead for searching for
+    the optimal model variant and model switching at runtime. Take model switching
+    as an example. Model switching requires loading the model from memory space to
+    switch to and model loading (i.e., loading the parameters into architecture memory).
+
+
+    As shown in Figure 4, switching cost of 400 frames can change the contents of
+    videos captured by mobile cameras can drastically in a short period of time. To
+    quantify model'
+  md: '
+
+    # 2020 IEEE/ACMP Symposium on Edge Computing (SEC)
+
+
+    # FlexDNN: Input-Adaptive On-Device Deep Learning for Efficient Mobile Vision
+
+
+    Biyi Fang†, Xiao Zheng*, Faen Zhang*, Hui Xu*, Mi Zhang†
+
+    Michigan State University, †Ahnovation
+
+
+    Abstract—Mobile vision systems powered by the recent advent of Deep Neural Networks
+    (DNNs) operate on a wide range of on-video analytics. Mobile systems are constrained
+    by resources, making efficient deployment of DNNs critical. In this paper, we
+    present FlexDNN, an input-adaptive DNN-based framework for on-device video analytics.
+    Unlike previous methods that adapt video dynamics to computation, FlexDNN adapts
+    the number of video frames to match computation efficiency. FlexDNN addresses
+    the key drawbacks of existing systems and pushes the state-of-the-art mobile DNN
+    further. We evaluate its performance on both mobile CPU and GPU platforms, measuring
+    CPU/GPU processing time per frame, frame rate, and energy consumption.
+
+
+    **Keywords**—Mobile Vision Systems, On-Device AI, Deep Neural Networks, Mobile
+    Vision
+
+
+    # I. INTRODUCTION
+
+
+    ### A. Motivation
+
+
+    Mobile vision systems such as phones, drones, and augmented reality (AR) are ubiquitous
+    today. By recent breakthrough in Deep Neural Networks (DNNs) [19] and the era
+    of AI chips, shift-on-device processing enables high-quality video processing
+    [10], [15, 36] and shift from cloud-constrained processing (e.g., MPEG) to on-device
+    video analytics.
+
+
+    On-device video analytics requires processing streaming video frames in real-time
+    with low latency. Unfortunately, DNNs are constrained by limited computation-ineefficiency
+    [31], and high cost directly leads to high latency and energy consumption. On
+    mobile devices with limited compute resources and battery capacities, the computation
+    cost of DNN-based pipelines is crucial for any application built on on-device
+    video analytics.
+
+
+    To reduce cost, many research work pursues model compression techniques [8, 9].
+    However, model compression yields only one-size-fits-all neural networks that
+    have the same set of features to extract for all video frames regardless of content
+    in each frame. Consequently, a small low-capacity DNN model is insufficient when
+    a large high-capacity DNN model is overkill; on the other hand,
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_0_0.png)
+
+
+    for video frames that contain hard, it is necessary to adapt the contents in the
+    processing pipeline to be correctly recognized. This is very similar to human
+    vision systems where a glance is sufficient to recognize simple scenes and objects
+    of interest, whereas more attention is needed for complex scenes and objects that
+    are partially or occluded [43].
+
+
+    ### B. State-of-the-Art for input-adaptive video analytics
+
+
+    Based on this approach, systems such as Chameleon [15] have recently emerged.
+    Leveraging the dynamics of video content, these methods adapt the complexity of
+    the DNN-based pipelines by dynamically changing the DNN model to match the levels
+    of the video frames. Unfortunately, as we demonstrate in §III-B, this model-of-model
+    approach is resource-constrained because it requires all the models with various
+    capacities to be loaded in the mobile system, which results in large memory footprint.
+    More importantly, if a large model is loaded and executed, the overhead is substantial,
+    the cost of searching the optimal model and switching models at runtime can be
+    prohibitively expensive, which degrades the benefit brought by adaptation.
+
+
+    The limitation of Chameleon is rooted in the constraint where it requires multiple
+    independent model variants with various capacities to adapt to different levels
+    of video frames. To address this issue, FlexAny [33] introduces the idea of using
+    a single model with convolutional layers of light branches that exit at inserted
+    points. For each frame, it exits at the early exit inserted at an earlier location
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_1_0.png)
+
+
+    Figure 2. Conceptual illustration of the early exit mechanism.
+
+
+    since the extracted features are good enough to recognize it content. For a hard
+    case, it proceeds until the extracted features are good enough. With such early
+    exit mechanism, easy to go through all the layers and their computation cost is
+    reduced significantly.
+
+
+    The early exit mechanism is prone to consume computation. Computation consumed
+    by frames that fail to exit the early exits are wasted and the overhead incurred
+    by the early exit mechanism. Unfortunately, the early exit architecture of prior
+    work is based on heuristics without relying on the data. Early exit rates and
+    incur overhead. Without accounting for such trade-off, the overhead could diminish
+    the benefit brought by early exits.
+
+
+    - Second, the number and location of the inserted exits in early work are also
+    based on heuristics. While effective in comparison with many models without exits,
+    the exponential benefits of considering number and location of early exits without
+    exhaustive effort on trial and error, it would be extremely challenging to define
+    an early exit plan that can leverage the benefit brought by early exits. Moreover,
+    the overhead and the number of inserted exits play a critical role in determining
+    the amount of computation that can be saved, making the derivation of the early
+    exit plan even more challenging.
+
+
+    FlexDNN has no model switching at runtime. At runtime, it dynamically adapts the
+    model capacity to match the difficulty levels of the input video frames at the
+    granularity of real time.
+
+
+    To address the drawbacks of BranchNet, FlexDNN adopts an architecture search based
+    to find the optimal early exit plan. FlexDNN is able to derive an early exit plan
+    which identifies which exit layer is inserted to maximize the benefit brought
+    by early exits. Thus, FlexDNN allows the developers with limited expertise to
+    build.
+
+
+    Table I provides a comparison between FlexDNN and existing-adaptive frameworks.
+
+
+    | Method | Early Exit Architecture | Early Exit Plan |
+
+    | :--- | :--- | :--- |
+
+    | Chameleon [15] | Server | Heuristics |
+
+    | MCDNN (10) | On-Device | Heuristics |
+
+    | BranchNet (13) | On-Device | No |
+
+    | FlexDNN | On-Device | Yes |
+
+
+    ### C. Proposed Approach
+
+
+    In this paper, we present FlexDNN, an input-adaptive DNN-based framework for on-device
+    video analytics. Unlike previous methods that adapt video dynamics to computation,
+    FlexDNN adapts the number of video frames to match computation efficiency. FlexDNN
+    addresses the key drawbacks of existing systems and pushes the state-of-the-art
+    mobile DNN further. We evaluate its performance on both mobile CPU and GPU platforms,
+    measuring CPU/GPU processing time per frame, frame rate, and energy consumption.
+
+
+    FlexDNN has no model switching at runtime. At runtime, it dynamically adapts the
+    model capacity to match the difficulty levels of the input video frames at the
+    granularity of real time.
+
+
+    To address the drawbacks of BranchNet, FlexDNN adopts an architecture search based
+    to find the optimal early exit plan. FlexDNN is able to derive an early exit plan
+    which identifies which exit layer is inserted to maximize the benefit brought
+    by early exits. Thus, FlexDNN allows the developers with limited expertise to
+    build.
+
+
+    # II. BACKGROUND AND MOTIVATION
+
+
+    ### A. Dynamics of Video Content
+
+
+    Mobile vision systems such as phones, drones, and augmented reality (AR) are ubiquitous
+    today. By recent breakthrough in Deep Neural Networks (DNNs) [19] and the era
+    of AI chips, shift-on-device processing enables high-quality video processing
+    [10], [15, 36] and shift from cloud-constrained processing (e.g., MPEG) to on-device
+    video analytics.
+
+
+    On-device video analytics requires processing streaming video frames in real-time
+    with low latency. Unfortunately, DNNs are constrained by limited computation-ineefficiency
+    [31], and high cost directly leads to high latency and energy consumption. On
+    mobile devices with limited compute resources and battery capacities, the computation
+    cost of DNN-based pipelines is crucial for any application built on on-device
+    video analytics.
+
+
+    The intrinsic dynamics of video present an opportunity to reduce computation by
+    matching the capacity of the model to the difficulty level of each frame. To quantify
+    how much computation can be saved, we first define the minimum computation cost
+    in terms of floating point operations (GFLOPs) that is needed to correctly recognize
+    the content. for any application built on on-device video analytics.
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_0_0.png)
+
+
+    Figure 3. Four frames of UCU; (a) and (d) are easy to recognize, (b) and (c) are
+    harder to recognize.
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_1_0.png)
+
+
+    Figure 4. Blue curve: minimum consumption to recognize the content. Red dotted
+    curve: one-size-fits-all model.
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_2_2.png)
+
+
+    Figure 5. Best benefit by the adaptation vs. model switching
+
+
+    ### B. Why-of-model Approach is a Misuse
+
+
+    The benefit of computation requires dynamically change the model capacity to adapt
+    to the contents of each frame. Existing methods such as Chameleon [15] use multiple
+    model variants to achieve changeable content adaptation. However, FlexAny [33]
+    introduces the idea of using a single model with convolutional layers of light
+    branches that exit at inserted points. For each frame, it exits at the early exit
+    inserted at an earlier location since the extracted features are good enough to
+    recognize it content. For a hard case, it proceeds until the extracted features
+    are good enough. With such early exit mechanism, easy to go through all the layers
+    and their computation cost is reduced significantly.
+
+
+    The early exit mechanism is prone to consume computation. Computation consumed
+    by frames that fail to exit the early exits are wasted and the overhead incurred
+    by the early exit mechanism. Unfortunately, the early exit architecture of prior
+    work is based on heuristics without relying on the data. Early exit rates and
+    incur overhead. Without accounting for such trade-off, the overhead could diminish
+    the benefit brought by early exits.
+
+    '
+  mdcn: '
+
+
+    # 2020 IEEE/ACMP 边缘计算会议 (SEC)
+
+
+    # FlexDNN：用于高效移动视觉的输入自适应设备端深度学习
+
+
+    Biyi Fang†, Xiao Zheng*, Faen Zhang*, Hui Xu*, Mi Zhang†
+
+    密歇根州立大学，†Ahnovation
+
+
+    摘要—随着深度神经网络（DNN）的出现，移动视觉系统已应用于广泛的视频分析。移动系统受到资源限制，因此高效部署 DNN 至关重要。在本文中，我们提出了 FlexDNN，一种基于
+    DNN 的输入自适应设备端视频分析框架。与以往调整视频动态以适应计算的方法不同，FlexDNN 通过调整视频帧数来匹配计算效率。FlexDNN 解决了现有系统的主要缺点，进一步提升了移动
+    DNN 的水平。我们在移动 CPU 和 GPU 平台上评估了其性能，测量了每帧的 CPU/GPU 处理时间、帧率和能耗。
+
+
+    **关键词**—移动视觉系统、设备端 AI、深度神经网络、移动视觉
+
+
+    # I. 引言
+
+
+    ### A. 动机
+
+
+    手机、无人机和增强现实（AR）等移动视觉系统如今已无处不在。随着深度神经网络（DNN）[19] 的近期突破以及 AI 芯片时代的到来，设备端处理实现了高质量的视频处理
+    [10], [15, 36]，并实现了从云端受限处理（如 MPEG）到设备端视频分析的转变。
+
+
+    设备端视频分析需要低延迟实时处理流式视频帧。遗憾的是，DNN 受到计算效率低下 [31] 的限制，高成本直接导致了高延迟和高能耗。在计算资源和电池容量有限的移动设备上，基于
+    DNN 的流水线的计算成本对于任何构建在设备端视频分析上的应用都至关重要。
+
+
+    为了降低成本，许多研究工作追求模型压缩技术 [8, 9]。然而，模型压缩产生的是“一刀切””的神经网络，无论每帧视频的内容如何，它们对所有视频帧提取相同的特征集。因此，当大型高容量
+    DNN 模型过剩时，较小的低容量 DNN 模型是不够的；另一方面，
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_0_0.png)
+
+
+    对于包含困难内容的视频帧，有必要调整处理流水线中的内容以被正确识别。这与人类视觉系统非常相似，一眼即可识别出简单的场景和感兴趣的对象，而对于复杂场景和部分或遮挡的对象则需要更多的注意力
+    [43]。
+
+
+    ### B. 输入自适应视频分析的先进技术
+
+
+    基于这种方法，诸如 Chameleon [15] 等系统最近涌现。这些方法利用视频内容的动态，通过动态更改 DNN 模型来匹配视频帧的水平，从而调整基于 DNN
+    的流水线的复杂度。然而，正如我们在第 III-B 节所示，这种“模型模型”方法是受资源限制的，因为它需要将所有不同容量的模型都加载到移动系统中，这导致了巨大的内存占用。更重要的是，如果加载并执行大模型，开销将是巨大的，运行时搜索最优模型和切换模型的成本可能昂得惊人，从而削弱了自适应带来的益处。
+
+
+    Chameleon 的局限性源于其限制：它需要多个具有不同容量的独立模型变体来适应不同水平的视频帧。为了解决这个问题，FlexAny [33] 引入了使用带有轻量级分支卷积层的单个模型的想法，这些分支在插入点退出。对于每一帧，如果提取的特征足以识别其内容，它就会在较早位置插入的早期退出处退出
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_1_0.png)
+
+
+    图2。早期退出机制的概念示意图。
+
+
+    对于困难情况，它会继续进行直到提取的特征足够好。通过这种早期退出机制，通过所有层及其计算的成本将显著降低。
+
+
+    早期退出机制容易消耗计算。未能从早期退出退出的帧所消耗的计算是浪费的，并且存在早期退出机制带来的开销。遗憾的是，之前工作的早期退出架构是基于启发式的，而不依赖于数据。早期退出率会产生开销。如果不考虑这种权衡，开销可能会抵消早期退出带来的益处。
+
+
+    - 第二，早期工作中插入退出口的数量和位置也是基于启发式的。虽然与许多没有退出的模型相比这种方法是有效的，但在不进行详尽试错的情况下，考虑到早期退出的数量和位置所带来的指数级收益，定义一个能够利用早期退出益处的早期退出计划将是极具挑战性的。此外，开销和插入退出的数量在决定可以节省的计算量方面起着关键作用，使得导出早期退出计划变得更具挑战性。
+
+
+    FlexDNN 在运行时没有模型切换。在运行时，它动态调整模型容量，以实时粒度匹配输入视频帧的难度水平。
+
+
+    为了解决 BranchNet 的缺点，FlexDNN 采用了基于架构搜索的方法寻找最优的早期退出计划。FlexDNN 能够推导出早期退出计划，识别插入哪个退出层以最大化早期退出带来的益处。因此，FlexDNN
+    允许专业有限的开发者进行构建。
+
+
+    表 I 提供了 FlexDNN 与现有自适应框架的对比。
+
+
+    | 方法 | 早期退出架构 | 早期退出计划 |
+
+    | :--- | :--- | :--- |
+
+    | Chameleon [15] | 服务端 | 启发式 |
+
+    | MCDNN (10) | 设备端 | 启发式 |
+
+    | BranchNet (13) | 设备端 | 无 |
+
+    | FlexDNN | 设备端 | 有 |
+
+
+    ### C. 提出的方法
+
+
+    在本文中，我们提出了 FlexDNN，一种基于 DNN 的输入自适应设备端视频分析框架。与以往调整视频动态以适应计算的方法不同，FlexDNN 通过调整视频帧数来匹配计算效率。FlexDNN
+    解决了现有系统的主要缺点，进一步提升了移动 DNN 的水平。我们在移动 CPU 和 GPU 平台上评估了其性能，测量了每帧的 CPU/GPU 处理时间、帧率和能耗。
+
+
+    FlexDNN 在运行时没有模型切换。在运行时，它动态调整模型容量，以实时粒度匹配输入视频帧的难度水平。
+
+
+    为了解决 BranchNet 的缺点，FlexDNN 采用了基于架构搜索的方法寻找最优的早期退出计划。FlexDNN 能够推导出早期退出计划，识别插入哪个退出层以最大化早期退出带来的益处。因此，FlexDNN
+    允许专业有限的开发者进行构建。
+
+
+    # II. 背景与动机
+
+
+    ### A. 视频内容的动态
+
+
+    手机、无人机和增强现实（AR）等移动视觉系统如今已无处不在。随着深度神经网络（DNN）[19] 的近期突破以及 AI 芯片时代的到来，设备端处理实现了高质量的视频处理
+    [10], [15, 36]，并实现了从云端受限处理（如 MPEG）到设备端视频分析的转变。
+
+
+    设备端视频分析需要低延迟实时处理流式视频帧。遗憾的是，DNN 受到计算效率低下 [31] 的限制，高成本直接导致了高延迟和高能耗。在计算资源和电池容量有限的移动设备上，基于
+    DNN 的流水线的计算成本对于任何构建在设备端视频分析上的应用都至关重要。
+
+
+    视频的内在动态提供了通过匹配模型容量与每帧难度水平来减少计算的机会。为了量化可以节省多少计算，我们首先定义了识别内容所需的最小计算成本（浮点运算 GFLOPs），对于任何构建在设备端视频分析上的应用。
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_0_0.png)
+
+
+    图3。UC 的四个帧；(a) 和 (d) 容易识别，(b) 和 (c) 较难。
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_1_0.png)
+
+
+    图4。蓝色曲线：识别内容的最小消耗。红色虚线：一刀切模型。
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_2_2.png)
+
+
+    图5。自适应与模型切换的最佳益处
+
+
+    ### B. “模型模型”方法是一种误用
+
+
+    计算的益处要求动态更改模型容量以适应每帧的内容。诸如 Chameleon [15] 等现有方法使用多个模型变体来实现内容自适应。然而，FlexAny [33]
+    引入了使用带有轻量级分支卷积层的单个模型的想法，这些分支在插入点退出。对于每一帧，如果提取的特征足以识别其内容，它就会在较早位置插入的早期退出处退出。对于困难情况，它会继续进行直到提取的特征足够好。通过这种早期退出机制，通过所有层及其计算的成本将显著降低。
+
+
+    早期退出机制容易消耗计算。未能从早期退出退出的帧所消耗的计算是浪费的，并且存在早期退出机制带来的开销。遗憾的是，之前工作的早期退出架构是基于启发式的，而不依赖于数据。早期退出率会产生开销。如果不考虑这种权衡，开销可能会抵消早期退出带来的益处。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 3]
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_3_0.png)
+
+
+    switching over, we average the processing time of the model initialization and
+    parameter loading observed in the 360-frame video clip on the Samsung Galaxy S8
+    smartphone CPU. result far more meaningful, we also average the inference time
+    per our optimal model and one-size-fits-all model.
+
+
+    Figure 5 shows our profiling result. Specifically, the average inference time
+    per of the one-size-fits-all model is 11.0 ms, while the optimal model is 11.0
+    ms. The difference between them measures the benefit brought by using our optimal
+    model instead of the one-size-fits-all model, we are able to reduce by 42%. The
+    processing time of model initialization and parameter loading is 13.3 ms and 25.0
+    ms, which increases 21.8% and 11.6% of the resource demand, as a result, the switching
+    overhead drops the actual computation to only 9.4%, which significantly cuts the
+    benefit brought by the adaptation.
+
+
+    # III. Overview and Design Challenges
+
+
+    **Overview.** In this work, we present FlexDNN, an adaptive DNN-based framework
+    for on-device video analytics. At the high level, FlexDNN leverages the intrinsic
+    nature of video contents, and is capable of dynamically changing the complexity
+    to adapt to the video frames. FlexDNN differs from others on the adaptation: instead
+    of creating a model of variants with different capacities, FlexDNN leverages the
+    architecture of DNNs, and constructs several exits inserted throughout the architecture.
+
+
+    A typical DNN consists of various types of layers, including convolutional layers,
+    activations, pooling layers, and fully-connected layers. Among them is the role
+    of the "feature extracts", which generates sets of features organized in form
+    of feature maps. These convolutional layers are sequentially connected so that
+    the set of features generated from the early layer is the input of the next convolutional
+    layer, which generates a new set of features at the next level.
+
+
+    the complexity of a DNN depends on its depth. A more complex DNN contains more
+    convolutional layers. However, as we have shown in Figure 2, not all the inputs
+    branch through every convolutional layer. By inserting exits at different convolutional
+    layers of a regular DNN model (we refer to it as the base model), FlexDNN provides
+    a mechanism to let inputs exit as soon as the features become enough, allowing
+    us to dynamically adapt its model complexity to the level of input frames of the
+    game category.
+
+
+    **Design Challenges.** There are two key challenges: first, how to design the
+    base model with addition of early exits inserted throughout the base. For each
+    exit, it contains two components—early exit logic and decision module—that determine
+    whether to exit early at the current layer or to continue the inference predictions
+    or pass the generated feature maps to the next layer.
+
+
+    While early exit mechanism is promising, it also introduces key challenges:
+
+
+    +   * First, the early exits themselves have overhead.
+
+    Take Game as example: for this frame, the early head comes from the computation
+    consumed at the current layer (the $i^{th}$ layer), however the exit comes from
+    the computation consumed at $i^{th}$ layers. As such, it is necessary to minimize
+    the computational overhead of exits. On devices with extremely lightweight architecture
+    we could exit much less frames (i.e., low early exit rate), which makes the early
+    exit mechanism less useful. Therefore,
+
+    * Second, early exit at all the convolutional layers of the base model may not
+    be the optimal choice. This is'
+  - '[PAGE 4]
+
+
+    because some inserted early exits, their overheads can actually be higher than
+    the benefits they bring. Therefore, identifying the number and locations of early
+    exits that are inserted can verify the benefit by early exits represents another
+    challenge.
+
+
+    Addressing these challenges is not trivial. The early exit architecture and incur
+    of the prior work are based on heuristics. With a careful design, overhead of
+    early exits can overshadow the benefits unless using lossless framet prematurely,
+    which sacrifices the original accuracy of the base model.
+
+
+    In this paper, we describe the techniques that effectively address those challenges
+    by a summary of the key characteristics of the input-output model generated by
+    FlexDNN.
+
+
+    # B. Design of Early Branch
+
+
+    The design of early branch needs to take the trade-off between computational overhead
+    and early exit rate contention. To achieve this, FlexDNN leverages computation
+    as the building block, and employs an architecture search scheme to find the optimal
+    architecture that optimizes the early exit rate and computation for each early
+    branch.
+
+
+    Among various types of layers that an early branch can contain, convolutional
+    layers are the most computation intensive. To reduce the overhead, we use deep
+    separable convolutions as the standard building block for the early branch. Figure
+    7 illustrates the structural differences between standard convolutional and deep
+    separable convolutions.
+
+
+    For the standard convolutional layer ($w_{i-1} \times h_{i-1} \times c_{i-1}$
+    and $\Theta_i \in \mathbb{R}^{k_i \times k_i \times c_{i-1} \times c_i}$), we
+    denote the input and output feature maps for both types of convolutions, respectively.
+    We use a filter with size of 2D kernel to generate the output feature maps $\Theta_i$.
+    This process consumes a cost of $k_i^2 w_{i-1} h_{i-1}$ floating point operations
+    (FLOPs). In (7), it reduces the computational cost by decomposing the convolution
+    into two cheap sequential operations: depthwise and pointwise. The deep separable
+    convolution applies a $k \times k \timesbeta$ filter on each of the $m_{i-1}$
+    input feature maps, then applies a $1 \times 1$ filter on the output of the depthwise
+    convolution to generate $\Theta_i$. Therefore, via the decomposition, the computational
+    cost of deep separable convolutional layer is reduced to $(k_i^2 m_{i-1} + \beta
+    m_{i-1} m_i)$ FLOPs.
+
+
+    With the deep separable convolutions as the computation-efficient building blocks,
+    FlexDNN employs an architecture search scheme to find the optimal architecture
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_4_0.png)
+
+
+    that balances the trade-off between early exit rate and computational overhead
+    for each early branch. In general, architecture search schemes can be grouped
+    into two categories: 1) the online approach that searches for an optimal cell
+    structure based on reinforcement learning (RL) or evolutionary algorithms (EA)
+    and collects cells to evolve; 2) the offline approach that prunes an over-parameterized
+    network until the target network is found [39]. Although both approaches are effective
+    for network architectures, FlexDNN employs the top-down approach for its more
+    efficient architecture search process.
+
+
+    Specifically, to identify the most efficient architecture of each early branch,
+    FlexDNN uses three deep separable convolutional layers (each by one activation),
+    two pooling layers, and one connected layer. The architecture search process,
+    starts from a standard convolutional layer which has no early exit rate at that
+    particular early branch. This process terminates when the redundant deep separable
+    convolutional layers at all early branches are removed.
+
+
+    # C. Training Scheme
+
+
+    To train FlexDNN model which is built on top of the base model with inserted early
+    exits, we combine the loss function of the base model with those
+
+
+    In our design, we use cross entropy for both the base model and early branches,
+    and a loss function that is the weighted sum of the loss of the base model and
+    each individual early branch:
+
+
+    ```
+
+    L = L_B + \sum_{i=1}^{N} \alpha_i L_i
+
+    ```
+
+
+    where $L_B$ is the loss of the base model, $L_i$ is the loss of the inserted early
+    branch,'
+  - "[PAGE 5]\n\n# Correct Classification\n\n# Proceed Exit\n\n# Wrong Classification\n\
+    \n# Exit\n\n# Base Model Layer\n\n# Cumulative Exit Rate\n\n# Early Exit Branch\n\
+    \n# CB Cost of Base Model Layer(s)\n\n# Decision Model\n\n# CE Cost of Early Exit\
+    \ Branch\n\n![](img/dbd3717613f6831d359ca8ca40e8950f_5_0.png)\n\n![](img/dbd3717613f6831d359ca8ca40e8950f_5_1.png)\n\
+    \nDetermination of confidence score threshold.\n\nFig. 9. Illustration of determination\
+    \ on whether to insert an exit at the $j^{th}$ convolutional layer.\n\nbranches,\
+    \ and $\\alpha_i$ is the weight of the $i^{th}$ early exit branch, reflecting\
+    \ its importance within the entire model. We find that after all, $\\alpha_i$\
+    \ to 1 well based. Based on this loss function, we find FlexDNN using stochastic\
+    \ gradient.\n\n# D. Design of Decision Model\n\nThe inserted exit branches introduce\
+    \ the possibilities of having early exits, which can significantly harm the original\
+    \ accuracy of the base model. To preserve accuracy, we use confidence score, $Conf\
+    \ \\in [0, 1]$, in the decision model and use it to decide whether the exit should\
+    \ be inserted or deferred to the following layers. Confidence score is defined\
+    \ as:\n\n```\n$Conf(y) = 1 + \\frac{\\sum y_i \\log y_i}{\\log C}$\n```\n\nwhere\
+    \ $y = \\{y_1, y_2, \\dots, y_C\\}$ is the softmax probability generated by the\
+    \ early exit, $C$ is the total number of classes, and $\\sum y_i \\log y_i$ is\
+    \ the entropy of the softmax classification probability distribution over classes.\n\
+    \nIn sense, confidence measures the level of the prediction result generated by\
+    \ the early exit branch. The higher the confidence, the more likely the decision\
+    \ model is to insert the exit at the $j^{th}$ convolutional layer if it exceeds\
+    \ a pre-defined threshold.\n\n# E. Design of Early Exit Placement\n\nIn theory,\
+    \ early exit can be inserted at any convolutional layer of the network. However,\
+    \ since early exits have overhead, an early exit should be inserted if the overhead\
+    \ is higher than the benefits it brings.\n\nTo determine if an exit should be\
+    \ inserted at the $j^{th}$ convolutional layer of the base model, we use the ratio,\
+    \ $R_j$, as the ratio between the benefit $B_j$ that the early exit brings and\
+    \ the cost $C_j$ it incurs.\n\n```\n$R_j = B_j / C_j$\n```\n\nwhere $C_j$ is the\
+    \ computation cost by the early exit, and $B_j$ is the computation avoided due\
+    \ to the early exit of the model. Both $B_j$ and $C_j$ are measured by the number\
+    \ of point operations.\n\nIn general, we calculate $B_j$ and $C_j$ for each $j^{th}$\
+    \ and $k^{th}$ convolutional layer ($0 \\leq j < k$). The total number of input\
+    \ frames, $N$, and for the $j^{th}$ and $k^{th}$ convolutional layer ($0 \\leq\
+    \ \\epsilon_j \\leq \\epsilon_k$), $CE_j$, the computation consumed by the $j^{th}$\
+    \ early exit, and $CB_j$, the computational cost of the base model between the\
+    \ $j^{th}$ and $k^{th}$ convolutional layer.\n\nSince $N$ is large, early exit\
+    \ at the $j^{th}$ layer results in $N*(1-j)$ input frames passing through the\
+    \ $j^{th}$ and $k^{th}$ convolutional layers. As a result, $CE_j$ is calculated\
+    \ as:\n\n```\n$CE_j = N(1-j) \times ce_j$\n```\n\nWhere $N(1-j)$ are input frames\
+    \ entering the $j^{th}$ early exit.\n\n```\n$CB_j = N \times cr_j \times ce_j$\n\
+    ```\n\nBased on the insertion in Eq. (3), if $R_j$ is larger than the $j^{th}$\
+    \ convolutional layer exceeds the overhead, it indicates that the benefit of inserting\
+    \ an exit at that layer is worth. We start with the trained FlexDNN with early\
+    \ exit inserted at every convolutional layer, and then remove exits while $R$\
+    \ values are less than or equal to 1 while maintaining those $R$ values are greater\
+    \ than 1."
+  md: '
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_3_0.png)
+
+
+    switching over, we average the processing time of the model initialization and
+    parameter loading observed in the 360-frame video clip on the Samsung Galaxy S8
+    smartphone CPU. For a result far more meaningful, we also average the inference
+    time of our optimal model and one-size-fits-all model.
+
+
+    Figure 5 shows our profiling result. Specifically, the average inference time
+    of the one-size-fits-all model is 11.0 ms, while the optimal model is 6.4 ms.
+    The difference between them measures the benefit brought by using our optimal
+    model instead of the one-size-fits-all model; we are able to reduce the latency
+    by 42%. The processing time of model initialization and parameter loading is 13.3
+    ms and 25.0 ms, which increases 21.8% and 11.6% of the resource demand; as a result,
+    the switching overhead drops the actual computation to only 9.4%, which significantly
+    cuts the benefit brought by the adaptation.
+
+
+    ## III. Overview and Design Challenges
+
+
+    **Overview.** In this work, we present FlexDNN, an adaptive DNN-based framework
+    for on-device video analytics. At the high level, FlexDNN leverages the intrinsic
+    nature of video contents and is capable of dynamically changing the complexity
+    to adapt to the video frames. FlexDNN differs from others in the adaptation: instead
+    of creating a model of variants with different capacities, FlexDNN leverages the
+    architecture of DNNs and constructs several exits inserted throughout the architecture.
+
+
+    A typical DNN consists of various types of layers, including convolutional layers,
+    activations, pooling layers, and fully-connected layers. Among them is the role
+    of the "feature extractors", which generate sets of features organized in form
+    of feature maps. These convolutional layers are sequentially connected so that
+    the set of features generated from the early layer is the input of the next convolutional
+    layer, which generates a new set of features at the next level.
+
+
+    The complexity of a DNN depends on its depth. A more complex DNN contains more
+    convolutional layers. However, as we have shown in Figure 2, not all the inputs
+    branch through every convolutional layer. By inserting exits at different convolutional
+    layers of a regular DNN model (we refer to it as the base model), FlexDNN provides
+    a mechanism to let inputs exit as soon as the features become enough, allowing
+    us to dynamically adapt its model complexity to the level of input frames of the
+    game category.
+
+
+    **Design Challenges.** There are two key challenges: first, how to design the
+    base model with addition of early exits inserted throughout the base. For each
+    exit, it contains two components—early exit logic and decision module—that determine
+    whether to exit early at the current layer or to continue the inference predictions
+    or pass the generated feature maps to the next layer.
+
+
+    While early exit mechanism is promising, it also introduces key challenges:
+
+
+    - First, the early exits themselves have overhead. Take Game as example: for this
+    frame, the early head comes from the computation consumed at the current layer
+    (the $i^{th}$ layer), however, the exit comes from the computation consumed at
+    $i^{th}$ layers. As such, it is necessary to minimize the computational overhead
+    of exits. On devices with extremely lightweight architecture we could exit much
+    less frames (i.e., low early exit rate), which makes the early exit mechanism
+    less useful. Therefore,
+
+    - Second, early exit at all the convolutional layers of the base model may not
+    be the optimal choice. This is because some inserted early exits, their overheads
+    can actually be higher than the benefits they bring. Therefore, identifying the
+    number and locations of early exits that are inserted to verify the benefit by
+    early exits represents another challenge.
+
+
+    Addressing these challenges is not trivial. The early exit architecture and incur
+    of the prior work are based on heuristics. With a careful design, overhead of
+    early exits can overshadow the benefits unless using lossless framet prematurely,
+    which sacrifices the original accuracy of the base model.
+
+
+    In this paper, we describe the techniques that effectively address those challenges
+    by a summary of the key characteristics of the input-output model generated by
+    FlexDNN.
+
+
+    ## B. Design of Early Branch
+
+
+    The design of early branch needs to take the trade-off between computational overhead
+    and early exit rate contention. To achieve this, FlexDNN leverages computation
+    as the building block and employs an architecture search scheme to find the optimal
+    architecture that optimizes the early exit rate and computation for each early
+    branch.
+
+
+    Among various types of layers that an early branch can contain, convolutional
+    layers are the most computation intensive. To reduce the overhead, we use deep
+    separable convolutions as the standard building block for the early branch. Figure
+    7 illustrates the structural differences between standard convolutional and deep
+    separable convolutions.
+
+
+    For the standard convolutional layer ($w_{i-1} \times h_{i-1} \times c_{i-1}$
+    and $\Theta_i \in \mathbb{R}^{k_i \times k_i \times c_{i-1} \times c_i}$), we
+    denote the input and output feature maps for both types of convolutions, respectively.
+    We use a filter with size of 2D kernel to generate the output feature maps $\Theta_i$.
+    This process consumes a cost of $k_i^2 w_{i-1} h_{i-1}$ floating point operations
+    (FLOPs). In (7), it reduces the computational cost by decomposing the convolution
+    into two cheap sequential operations: depthwise and pointwise. The deep separable
+    convolution applies a $k \times k \times \beta$ filter on each of the $m_{i-1}$
+    input feature maps, then applies a $1 \times 1$ filter on the output of the depthwise
+    convolution to generate $\Theta_i$. Therefore, via the decomposition, the computational
+    cost of deep separable convolutional layer is reduced to $(k_i^2 m_{i-1} + \beta)$
+    floating point operations.
+
+
+    With the deep separable convolutions as the building block, FlexDNN employs an
+    architecture search scheme to find the optimal architecture that optimizes the
+    early exit rate and computation for each early branch. ![](img/dbd3717613f6831d359ca8ca40e8950f_3_0.png)
+
+
+    Specifically, the architecture search uses deep separable convolutions to find
+    the early exit rate.
+
+    '
+  mdcn: '
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_3_0.png)
+
+
+    切换后，我们对在三星 Galaxy S8 手机 CPU 上通过 360 帧视频片段观察到的模型初始化和参数加载时间进行了平均处理。为了获得更具意义的结果，我们还对最优模型和通用模型的推理时间进行了平均处理。
+
+
+    图 5 显示了我们的性能分析结果。具体而言，通用模型的平均推理时间为 11.0 ms，而最优模型为 6.4 ms。两者之间的差异衡量了使用我们的最优模型而非通用模型带来的收益；我们能够降低
+    42% 的延迟。模型初始化和参数加载的处理时间分别为 13.3 ms 和 25.0 ms，分别增加了 21.8% 和 11.6% 的资源需求；结果，切换开销使得实际计算量仅降至
+    9.4%，这显著削减了自适应带来的收益。
+
+
+    ## III. 概述与设计挑战
+
+
+    **概述。** 在这项工作中，我们提出了 FlexDNN，这是一种基于 DNN 的自适应设备端视频分析框架。在高级层次，FlexDNN 利用视频内容的内在属性，并能够动态改变复杂度以适应视频帧。FlexDNN
+    与其他方法在自适应方面的不同在于：它不是创建不同容量的变体模型，而是利用 DNN 的架构，并在整个架构中构建了多个插入出口（exits）。
+
+
+    一个典型的 DNN 由各种类型的层组成，包括卷积层、激活层、池化层和全连接层。其中，“特征提取器”起着重要作用，它们生成以特征图形式组织的特征集。这些卷积层是顺序连接的，使得从早期层生成的特征集是下一个卷积层的输入，从而在下一层生成一组新特征。
+
+
+    DNN 的复杂度取决于其深度。更复杂的 DNN 包含更多的卷积层。然而，如我们在图 2 中所示，并不是所有输入都会通过每一层卷积层。通过在常规 DNN 模型（我们称之为基础模型）的不同卷积层处插入出口，FlexDNN
+    提供了一种机制，让输入在特征变得足够时立即退出，允许我们根据游戏类别的输入帧水平动态地调整其模型复杂度。
+
+
+    **设计挑战。** 存在两个关键挑战：首先，如何设计在基础模型中添加插入的早期出口的基础模型。每个出口包含两个组件——早期退出逻辑和决策模块——它们决定了是在当前层提前退出，还是继续推理预测，或将生成的特征图传递给下一层。
+
+
+    虽然早期退出机制很有前景，但它也引入了关键挑战：
+
+
+    - 第一，早期出口本身具有开销。以游戏为例：对于这一帧，早期头部（early head）源于当前层（第 $i^{th}$ 层）的计算消耗，然而出口源于第 $i^{th}$
+    层计算消耗。因此，有必要最小化出口的计算开销。在架构极其轻量化的设备上，我们可以让更少的帧退出（即低早期退出率），这使得早期退出机制的用性降低。因此，
+
+    - 第二，在基础模型的所有卷积层处进行早期退出可能不是最优选择。这是因为某些插入的早期出口，其开销实际上高于它们带来的收益。因此，确定插入的早期出口的数量和位置以验证早期退出的收益代表了另一个挑战。
+
+
+    解决这些挑战并非易事。之前工作的早期退出架构和开销是基于启发式的。通过仔细的设计，早期出口的开销可能会掩盖收益，除非过早使用无损帧，而这将牺牲基础模型的原始准确性。
+
+
+    在本文中，我们通过对输入-输出模型关键特征的总结，描述了有效解决这些挑战的技术。
+
+
+    ## B. 早期分支的设计
+
+
+    早期分支的设计需要在计算开销和早期退出率之间进行权衡。为了实现这一点，FlexDNN 利用计算作为构建块，并采用架构搜索方案找到优化每个早期分支退出率和计算的最优架构。
+
+
+    在早期分支可能包含的各种层中，卷积层是计算密集型的。为了减少开销，我们使用深度可分离卷积作为早期分支的标准构建块。图 7 展示了标准卷积与深度可分离卷积的结构差异。
+
+
+    对于标准卷积层（$w_{i-1} \times h_{i-1} \times c_{i-1}$ 和 $\Theta_i \in \mathbb{R}^{k_i
+    \times k_i \times c_{i-1} \times c_i}$），我们分别表示了两种类型的输入和输出特征图。我们使用大小为 2D 核的滤波器来生成输出特征图
+    $\Theta_i$。该过程消耗了 $k_i^2 w_{i-1} h_{i-1}$ 次浮点运算。在 (7) 中，通过将卷积分解为两个廉价的顺序操作（深度和逐点）来减少计算。深度可分离卷积对
+    $m_{i-1}$ 个输入特征图每一个应用 $k \times k \times \beta$ 滤波器，然后在深度卷积的输出上应用 $1 \times 1$
+    滤波器以生成 $\Theta_i$。因此，通过分解，深度可分离卷积层的计算成本降低到 $(k_i^2 m_{i-1} + \beta)$ 次浮点运算。
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 6]
+
+
+    doing so, we are able to identify the number and locations of the early exits
+    that can fully leverage the benefit brought by early exit mechanism.
+
+
+    captured by mobile camera as our dataset (UCF-15). We split training and test
+    videos by following the original paper [30]. Example video frames of UCF-15 are
+    shown in Figure 10 (a).
+
+
+    # F. Characteristics of FlexDNN Model
+
+
+    With careful design, the input-adaptive model generated by FlexDNN exhibits a
+    number of key characteristics which we summarize:
+
+
+    Application#2: Scene Understanding for Mobile Reality. Scene understanding is
+    one of the capabilities of augmented reality. This application aims to recognize
+    objects from mobile cameras. Due to lack of publicly available datasets with IRB
+    approval. During data collection, we recorded videos from different places using
+    the ORDO head-held mobile camera [3]. From the labeled video clips, we selected
+    8 most places that are difficult to recognize as indoor or outdoor scenes.
+
+
+    # Single Model with Flexible Complex. With the inserted early exits, FlexDNN is
+    able to provide flexible model complexities within a single model with complex
+    memory to accommodate a large number of models with different complexities. Moreover,
+    due to the single-model design, FlexDNN allows model size and model selection
+    at runtime.
+
+
+    Application#3: Drone-based Traffic Surveillance. Due to the lack of traffic surveillance
+    drone is able to track traffic in a large area with a low cost that traditional
+    video-based traffic surveillance systems cannot provide [18]. This application
+    is collected by drone. Due to lack of publicly available datasets, we used the
+    commercial drone, DJI Mavic Pro [1], to collect our own traffic surveillance video
+    clips with IRB approval. To ensure diversity, we collected videos under various
+    altitudes (25m to 90m), heights (25.5m to 52.1m), speeds (11.2m/s), weather conditions
+    (cloudy, sunny), and road types (urban, highway). In all video clips we labeled
+    the dataset: 15% for training and testing. Data collection of data using drone
+    and one example video frame of Place-8 are shown in Figure 10 (b).
+
+
+    Computation Early Exit Free. Without expensive separable convolution, the computational
+    cost of the early exit branch significantly reduced. This effectively minimizes
+    the overhead brought by the early exits.
+
+
+    High Computational Reduction. By the computation-efficient early exit and the
+    high rate, FlexDNN model is able to provide the high computation reduction brought
+    by the adaptation.
+
+
+    # IV. EVALUATION
+
+
+    Base Models. We select V-3 [32] and VGG-16 [19] as our base models to evaluate
+    the effectiveness of FlexDNN. We select Inception-V3 due to its architecture-computation
+    efficiency compared to other models as Mobile-Net [2], and to demonstrate the
+    effectiveness of FlexDNN to resource-demanding base models, we select VGG-16 as
+    another base model.
+
+
+    On-Device Mobile Applications. To demonstrate the practicality of FlexDNN applications,
+    we use FlexDNN to build three representative on-device applications for three
+    different mobile platforms.
+
+
+    Application1: Activity Recognition on Mobile. Labeling human activities videos
+    is becoming a very attractive feature for smartphones. This application aims to
+    recognize activities performed by an individual from video streams captured by
+    mobile camera. To this application, we use UCF-101 human activity dataset [17],
+    which contains video clips of fixed or mobile cameras in the wild. We selected
+    video activities (e.g., biking and skiing
+
+
+    B. Performance. In this section, we focus on profiling the models generated by
+    FlexDNN with the goal to quantify the characteristics summarized in III-F.
+
+
+    High Early Exit Without Accuracy Loss. The model generated by FlexDNN is able
+    to achieve high exit rates without early loss of accuracy. To quantify this, we
+    profile each of the six models on the test set, and the cumulative exit rate when
+    the same is maintained as the base model.'
+  - '[PAGE 7]
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_7_0.png)
+
+
+    Fig. 10. (a) UCF-15: example video frame of biking (left) and skiing (right).
+    (b) Place-8: illustration of data collection using an ORDRO PE5 head-mounted camera
+    (left); example video frame of parking (right). (c) VDrone: illustration of data
+    collection using a DJI Mavic drone (left); example video frame of traffic surveillance
+    in the residential area (right).
+
+
+    | Application | Mobile Platform | Total Length (min) | Number of Video Clips |
+    Base Model | FlexDNN Model |
+
+    |---|---|---|---|---|---||
+
+    | Activity Recognition | Mobile Phone | UCF-15 | 240 | 1,863 | Inception-V3, VGG-16
+    | FlexDNN |
+
+    | Scene Understanding | AR Headset | - | 81 | Inception-V3, VGG-16 | I-Place,
+    Place |
+
+    | Traffic Surveillance | Drone | VDrone | - | 40 | Inception-V3, VGG-16 | - |
+
+
+    TABLE II
+
+    SUMMARY OF THREE APPLICATIONS, TWO BASE MODELS, AND SIX GENERATED FlexDNN MODELS.
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_7_1.png)
+
+
+    Fig. 11. The cumulative exit rate at each exit with low error. Early exits (at
+    E1, E2, ... ) are ordered by their distances to the input layer (I). E1 is the
+    earliest exit, I. FlexDNN shows the regress of the base model.
+
+
+    Figure 11 shows the cumulative exit rate at each exit. As shown for each of the
+    six models, the cumulative exit rate implies the significance of each inserted
+    early exit. Exactly, the early exits are able to achieve 95.0%, 96.5%, 97.6%,
+    98.0%, 98.5%, and 98.8% of the input on V-UCF, I-UCF, V-Place, I-Place, V-VDrone,
+    and I-VDrone, respectively. This demonstrates that FlexDNN is capable of inserting
+    early exits replacing less efficient ones.
+
+
+    **Compact Memory Footprint.** The model generated by FlexDNN has a compact footprint.
+    To quantify this, we compare our model size with that of the base model for various
+    number of early exits early exits (plus the size of the base model) in the FlexDNN
+    model.
+
+
+    As shown in Figure 12, FlexDNN is able to reduce the memory footprint for 7.8%,
+    3.2%, 7.9%, 2.8%, 7.8%, and 3.0% on V-UCF, I-UCF, V-Place, I-Place, V-VDrone,
+    and I-VDrone, respectively. This demonstrates the considerable enable benefit
+    of FlexDNN on memory footprint.
+
+
+    **High Computational Consumption.** The computation saved by early exit frames
+    reflects benefit brought by the adaptation. The computational cost of the early
+    exits reflects the overhead by our FlexDNN model. Because of the high exit rate
+    and the computation-efficient early exit design, the generated'
+  - '[PAGE 8]
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_8_0.png)
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_8_1.png)
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_8_2.png)
+
+
+    Fig. 12. Memory footprint comparison between the FlexNN and its bag-of-model counterpart.
+
+
+    Fig. 13. Comparison between the accumulated cost of all early and the computational
+    cost of the base model.
+
+
+    Fig. 14. Comparison between benefit (the average saving per input) and overhead
+    (introduced by the early exits) per frame.
+
+
+    FlexDNN is able to provide the cost reduction benefit by the adaptation. To quantify
+    this, we use the average consumption from early exits per input frame and use
+    the average consumption by the early exit input frame and the benefit and overhead
+    of each.
+
+
+    Figure 14 shows the benefit for each model. As shown in the table, the benefit-over-overhead
+    ratio ranges from 81x to 124x for I-UCF, V-Place, I-Vedrone, and I-Vedrone. The
+    benefit-over-overhead ratio is significantly higher than the bag-of-model approach
+    as shown in Table 5. As we show in IV-C, the achieved benefit-over-overhead ratio
+    translates into various system performance improvement at runtime.
+
+
+    with a set of models which can use the bag-of-model approach in FlexDNN as our
+    baseline model. Note that we do not use [10], [15] as baseline because of their
+    accuracy in i1-B; 3) BranchyNet [33]. To make comparisons, we use and train the
+    BranchyNet to achieve the same variance-performance tradeoff as Input-Generic-Lossy.
+
+
+    Evaluation Metrics. We use four metrics to evaluate the runtime performance: 1)
+    inference accuracy: we use Top-1 accuracy on frames in the test set of inference
+    accuracy; 2) computational cost: we use 100% CPU/GPU usage as the metric of computational
+    cost; 3) frame rate: the number of frames that can be processed per unit. A frame
+    is dropped when its estimated processing time is greater than the maximum latency
+    required by the video application. We also use 4) memory reduction; 5) energy
+    consumption: computational cost also translates into energy consumption per frame
+    and we calculate the energy consumption percentage.
+
+
+    # C. Runtime Performance
+
+
+    In this section, we evaluate the runtime performance of the models generated by
+    FlexDNN when deployed on different platforms and with the following scenarios:
+
+
+    Deployment Platforms. To match the three applications to their target platforms,
+    we deploy V-UCF and I-UCF on S8 shuffle and V-Place on mobile smartphone; we deploy
+    FlexDNN, V-Vedrone and I-Vedrone on an NVIDIA Jetson development board [2] and
+    on the onboard GPU.
+
+
+    2) Input-Generic-Lossy: the computational cost of this baseline can be reduced
+    via model compression techniques but with a loss in accuracy as trade-off. It
+    is quite difficult to generate a variant model that has the same computational
+    cost as the FlexDNN model, we generate
+
+
+    Inference Accuracy. Figure 15 compares FlexDNN with the baselines in the accuracy
+    computational space. We make three observations: 1) The Input-Generic-Lossy approach
+    is able to achieve the same accuracy with a significant reduction on computational
+    cost. Specifically, FlexDNN achieves only 51.3%, 26.6%, 30.5%, 32.4%, and 23.4%
+    of the computational cost of I-UCF, V-Place, V-Vedrone, and I-Vedrone, respectively.
+    This is equivalent to 2.0x, 3.9x, 2.8x, and 4.3x-speedup in CPU/GPU processing
+    time.
+
+
+    FlexDNN achieves an average gain of 7%, 3%, 6%, 3%, and 2% gain in accuracy with
+    Input-Generic-Lossy compared to Input-Generic-Lossy. It is important to note that
+    in computer vision, accuracy gains are considered to be fairly significant, for
+    I-UCF, V-Vedrone, and I-Vedrone which have high accuracy outcomes.'
+  md: '
+
+    doing so, we are able to identify the number and locations of the early exits
+    that can fully leverage the benefit brought by early exit mechanism.
+
+
+    captured by mobile camera as our dataset (UCF-15). We split training and test
+    videos by following the original paper [30]. Example video frames of UCF-15 are
+    shown in Figure 10 (a).
+
+
+    ## F. Characteristics of FlexDNN Model
+
+
+    With careful design, the input-adaptive model generated by FlexDNN exhibits a
+    number of key characteristics which we summarize:
+
+
+    Application #2: Scene Understanding for Mobile Reality. Scene understanding is
+    one of the capabilities of augmented reality. This application aims to recognize
+    objects from mobile cameras. Due to lack of publicly available datasets with IRB
+    approval, during data collection, we recorded videos from different places using
+    the ORDO head-held mobile camera [3]. From the labeled video clips, we selected
+    8 most places that are difficult to recognize as indoor or outdoor scenes.
+
+
+    Single Model with Flexible Complex. With the inserted early exits, FlexDNN is
+    able to provide flexible model complexities within a single model. Moreover the
+    single-model design, FlexDNN allows model size and model selection at runtime.
+
+
+    Application #3: Drone-based Traffic Surveillance. Due to the lack of traffic surveillance
+    drone is able to track traffic in a large area with a low cost that traditional
+    video-based traffic surveillance systems cannot provide [18]. This application
+    is collected by drone. Due to lack of publicly available datasets, we used the
+    commercial drone, DJI Mavic Pro [1], to collect our own traffic surveillance video
+    clips with IRB approval. To ensure diversity, we collected videos under various
+    altitudes (25m to 90m), heights (25.5m to 52.1m), speeds (11.2m/s), weather conditions
+    (cloudy, sunny), and road types (urban, highway). In all video clips we labeled
+    the dataset: 15% for training and testing. Data collection of data using drone
+    and one example video frame of Place-8 are shown in Figure 10 (b).
+
+
+    Computation Early Exit Free. Without expensive separable convolution, the computational
+    cost of the early exit branch significantly reduced. This effectively minimizes
+    the overhead brought by the early exits.
+
+
+    High Computational Reduction. By the computation-efficient early exit and the
+    high rate, FlexDNN model is able to provide the high computation reduction brought
+    by the adaptation.
+
+
+    ## IV. EVALUATION
+
+
+    Base Models. We select V-3 [32] and VGG-16 [19] as our base models to evaluate
+    the effectiveness of FlexDNN. We select Inception-V3 due to its architecture-computation
+    efficiency compared to other models as Mobile-Net [2], and to demonstrate the
+    effectiveness of FlexDNN to resource-demanding base models, we select VGG-16 as
+    another base model.
+
+
+    On-Device Mobile Applications. To demonstrate the practicality of FlexDNN applications,
+    we use FlexDNN to build three representative on-device applications for three
+    different mobile platforms.
+
+
+    Application 1: Activity Recognition on Mobile. Labeling human activities videos
+    is becoming a very attractive feature for smartphones. This application aims to
+    recognize activities performed by an individual from video streams captured by
+    mobile camera. To this application, we use UCF-101 human activity dataset [17],
+    which contains video clips of fixed or mobile cameras in the wild. We selected
+    video activities (e.g., biking and skiing).
+
+
+    B. Performance. In this section, we focus on profiling the models generated by
+    FlexDNN with the goal to quantify the characteristics summarized in III-F.
+
+
+    High Early Exit Without Accuracy Loss. The model generated by FlexDNN is able
+    to achieve high exit rates without early loss of accuracy. To quantify this, we
+    profile each of the six models on the test set, and the cumulative exit rate when
+    the same is maintained as the base model.
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_7_0.png)
+
+
+    Fig. 10. (a) UCF-15: example video frame of biking (left) and skiing (right).
+    (b) Place-8: illustration of data collection using an ORDRO PE5 head-mounted camera
+    (left); example video frame of parking (right). (c) VDrone: illustration of data
+    collection using a DJI Mavic drone (left); example video frame of traffic surveillance
+    in the residential area (right).
+
+
+    | Application | Mobile Platform | Total Length (min) | Number of Video Clips |
+    Base Model | FlexDNN Model |
+
+    |---|---|---|---|---|---|
+
+    | Activity Recognition | Mobile Phone | UCF-15 | 240 | Inception-V3 | VGG-16 |
+
+    | Scene Understanding | ARset | - | 81 | Inception-V3 | VGG-16 |
+
+    | Traffic Surveillance | Drone | - | 40 | Inception-V3 | VGG-16 |
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_7_1.png)
+
+
+    TABLE II. SUMMARY OF THREE APPLICATIONS, TWO BASE MODELS, AND SIX GENERATED MODELS.
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_7_2.png)
+
+
+    Fig. 11. (a) UCF-15: example video frame of biking (left) and skiing (right).
+    (b) Place-8: illustration of data collection using an ORDRO PE5 head-mounted camera
+    (left); example video frame of parking (right). (c) VDrone: illustration of data
+    collection using a DJI Mavic drone (left); example video frame of traffic surveillance
+    in the residential area (right).
+
+
+    Fig. 12. (a) UCF-15: example video frame of biking (left) and skiing (right).
+    (b) Place-8: illustration of data collection using an ORDRO PE5 head-mounted camera
+    (left); example video frame of parking (right). (c) VDrone: illustration of data
+    collection using a DJI Mavic drone (left); example video frame of traffic surveillance
+    in the residential area (right).
+
+
+    Fig. 13. (a) UCF-15: example video frame of biking (left) and skiing (right).
+    (b) Place-8: illustration of data collection using an ORDRO PE5 head-mounted camera
+    (left); example video frame of parking (right). (c) VDrone: illustration of data
+    collection using a DJI Mavic drone (left); example video frame of traffic surveillance
+    in the residential area (right).
+
+
+    Fig. 14. (a) UCF-15: example video frame of biking (left) and skiing (right).
+    (b) Place-8: illustration of data collection using an ORDRO PE5 head-mounted camera
+    (left); example video frame of parking (right). (c) VDrone: illustration of data
+    collection using a DJI Mavic drone (left); example video frame of traffic surveillance
+    in the residential area (right).
+
+    '
+  mdcn: '
+
+    通过这种方式，我们能够识别早期退出（early exits）的数量和位置，从而充分利用早期退出机制带来的收益。
+
+
+    使用手机摄像头拍摄的视频作为我们的数据集（UCF-15）。我们遵循原始论文 [30] 分分训练和测试视频。UCF-15 的示例视频帧如图 10 (a) 所示。
+
+
+    ## F. FlexDNN 模型特性
+
+
+    通过精心设计，FlexDNN 生成的输入自适应模型表现出许多关键特性，我们总结如下：
+
+
+    应用 #2：移动现实世界中的场景理解。场景理解是增强现实的能力之一。该应用旨在从手机摄像头的视频识别物体。由于缺乏经过 IRB 批准的公开数据集，在数据收集期间，我们使用
+    ORDO 手持式手机摄像头 [3] 在不同地点录制了视频。从标记的视频片段中，我们选取了 8 个最难识别为室内或室外场景的地方。
+
+
+    **具有灵活复杂度的单模型**。通过插入早期退出节点，FlexDNN 能够在单个模型中提供灵活的模型复杂度。此外，由于采用了单模型设计，FlexDNN 允许在运行时进行模型调整和选择。
+
+
+    应用 #3：基于无人机的交通监控。由于缺乏交通监控，无人机能够以低成本对大区域流量进行追踪，这是传统的基于视频的交通监控系统无法提供的 [18]。该应用通过无人机采集。由于缺乏公开数据集，我们使用商用无人机
+    DJI Mavic Pro [1] 收集了经过 IRB 批准的自有交通监控视频片段。为了确保多样性，我们在不同的海拔（25m 到 90m）、高度（25.5m
+    到 52.1m）、速度（11.2m/s）、天气条件（多云、晴天）和道路类型（城市、高速公路）下收集了视频。在所有视频片段中，我们对数据集进行了标记：15%
+    用于训练和测试。使用无人机收集数据的过程以及 Place-8 的示例视频帧如图 10 (b) 所示。
+
+
+    **无计算开销早期退出**。由于没有使用昂贵的分离卷积，早期退出分支的计算成本显著降低。这有效地最小化了早期退出带来的开销。
+
+
+    **高计算削减**。通过计算高效的早期退出和高退出率，FlexDNN 模型能够提供由自适应带来的高计算削减。
+
+
+    ## IV. 评估
+
+
+    基模型。我们选择 V-3 [32] 和 VGG-16 [19] 作为基模型来评估 FlexDNN 的有效性。我们选择 Inception-V3 是由于与 Mobile-Net
+    [2] 等模型相比，它的架构计算效率更高；为了证明 FlexDNN 对资源密集型基模型的有效性，我们选择了 VGG-16 作为另一个基模型。
+
+
+    设备端移动应用。为了证明 FlexDNN 应用的实用性，我们使用 FlexDNN 为三个不同的移动平台构建了三个代表性的设备端应用。
+
+
+    应用 1：手机活动识别。标记人类活动视频正成为智能手机的一个非常有前景的功能。该应用旨在从手机摄像头捕捉的视频流中识别个人进行的活动。对于该应用，我们使用了
+    UCF-101 人类活动数据集 [17]，它包含环境中固定或移动摄像头的视频片段。我们选取了视频活动（例如自行车和滑雪）。
+
+
+    B. 性能。在本节中，我们关注对 FlexDNN 生成的模型进行分析，目标是量化 III-F 中总结的特性。
+
+
+    **无精度损失的高早期退出**。由 FlexDNN 生成的模型能够在不提前损失精度的情况下实现高退出率。为了量化这一点，我们在测试集上对六个模型中的每一个进行了分析，并在保持与基模型相同精度时的累计退出率。
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_7_0.png)
+
+
+    Fig. 10. (a) UCF-15：自行车（左）和滑雪（右）的示例视频帧。(b) Place-8：使用 ORDO PE5 头戴式摄像头收集数据的说明。(c)
+    VDrone：使用 DJI 无人机收集数据的说明。
+
+
+    | 应用 | 移动平台 | 总长度 (min) | 视频片段数量 | 基模型 | FlexDNN 模型 |
+
+    |---|---|---|---|---|
+
+    | 活动识别 | 手机 | UCF-15 | 240 | Inception-V3 | VGG-16 |
+
+    | 场景理解 | ARset | - | 81 | Inception-V3 | VGG-16 |
+
+    | 交通监控 | 无人机 | - | 40 | Inception-V3 | VGG-16 |
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_7_1.png)
+
+
+    TABLE II. 三个应用、两个基模型六六生成模型的总结。
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_7_2.png)
+
+
+    Fig. 11. (a) UCF-15：自行车（左）和滑雪（右）的示例视频帧。(b) Place-8：使用 ORDO PE5 头戴式摄像头收集数据的说明（左）；停车（右）。(c)
+    VDrone：使用 DJI 无人机收集数据的说明（右）。
+
+
+    Fig. 12. (a) UCF-15：自行车（左）和滑雪（右）的示例视频帧。(b) Place-8：使用 ORDO PE5 头戴式摄像头收集数据的说明（左）；停车（右）。(c)
+    VDrone：使用 DJI 无人机收集数据的说明（右）。
+
+
+    Fig. 13. (a) UCF-15：自行车（左）和滑雪（右）的示例视频帧。(b) Place-8：使用 ORDO PE5 头戴式摄像头收集数据的说明（左）；停车（右）。(c)
+    VDrone：使用 DJI 无人机收集数据的说明（右）。
+
+
+    Fig. 14. (a) UCF-15：自行车（左）和滑雪（右）的示例视频帧。(b) Place-8：使用 ORDO PE5 头戴式摄像头收集数据的说明（左）；停车（右）。(c)
+    VDrone：使用 DJI 无人机收集数据的说明（右）。
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 9]
+
+
+    # FlexDNN Frame Drop Rate FlexDNN Input-Lossless BranchyNet
+
+
+    | Model | IFN | MTL | Platform | FlexDNN Input-Lossless | BranchyNet |
+
+    |---|---|---|---|---|---||
+
+    | U-UCF | 2 | 2000 | S8 | 10.0% | 48.5% | 37.2% |
+
+    | V-Place | 30 | 50 | Xavier | 75.1% | 28.6% | 31.5% |
+
+    | I-Place | 30 | 50 | Xavier | 50.0% | 50.1% | 26.7% |
+
+    | V-Vedrone | 30 | 50 | Xavier | 37.5% | 50.6% | 30.0% |
+
+    | I-Vedrone | 30 | 50 | Xavier | 0.0% | 19.5% | 19.5% |
+
+
+    TABLE III FRAME DROP RATE BETWEEN FLEXDNN (INPUT-ADAPTIVE) AND INPUT-AGNOSTIC
+    AND BRANCHYNET.
+
+
+    # FlexDNN IFN MTL Platform Energy Consumption FlexDNN Input-Lossless BranchyNet
+
+
+    | Model | IFN | MTL | Platform | FlexDNN Input-Lossless | BranchyNet |
+
+    |---|---|---|---|---|---||
+
+    | U-UCF | 2 | 2000 | S8 | 2.36 | 4.81 | 3.19 |
+
+    | V-Place | 30 | 50 | Xavier | 0.81 | 0.63 | 0.49 |
+
+    | I-Place | 30 | 50 | Xavier | 0.48 | 0.49 | 0.49 |
+
+    | V-Vedrone | 30 | 50 | Xavier | 0.32 | 0.61 | 0.42 |
+
+    | I-Vedrone | 30 | 50 | Xavier | 0.0 | 0.71 | 0.82 |
+
+
+    TABLE IV ENERGY CONSUMPTION BETWEEN FLEXDNN (INPUT-ADAPTIVE) AND INPUT-AGNOSTIC
+    AND BRANCHYNET.
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_9_0.png)
+
+
+    Fig. 15. Comparison between FlexDNN, Input-Agnostic and Input-Agnostic Loss in
+    the inference-accuracy cost space.
+
+
+    Reduction on Frame Rate Table III compares the frame drop rate of FlexDNN to Input-Agnostic
+    and BranchyNet. In our evaluation, we set up a video input frame rate (FPS) (in
+    unit of frame) and maximum latency (ms) for processing a single frame (in unit
+    of ms) for each application. Since the STU is much faster than the mobile GPU,
+    the ISR is much higher and for U-UCF,
+
+
+    As shown, compared to Input-Agnostic, FlexDNN is able to reduce the frame rate
+    by 38.1%, 69.0%, 42.6%, 48.5%, and 50.0% on U-UCF, I-UCF, V-Place, I-Place, V-Vedrone,
+    and I-Vedrone, respectively. This is achieved because FlexDNN continuously adapts
+    by skipping redundant frames, while the input-agnostic counter wastes the unnecessary
+    computation on the empty frames.
+
+
+    Reduction on Energy Consumption. FlexDNN is able to reduce the energy consumption
+    by 27.6%, 22.5%, 31.3%, and 19.55%. Such reduction is achieved because FlexDNN
+    has much earlier exit points at optimized locations.
+
+
+    Third, compared to BranchNet that adopts early exit design, FlexDNN is able to
+    achieve the same accuracy with much lower computational cost. FlexDNN reduces
+    28.4%, 49.3%, 20.5%, 23.9%, and 40.9% computational cost on V-UCF, I-UCF, V-Place,
+    I-Place, V-Vedrone and I-Vedrone respectively, demonstrating its superiority over
+    BranchNet.
+
+
+    Impact of Workload and Real-Time. At last, we evaluate the impact of input frame
+    rate (FPS) and maximum latency (ms) on the frame rate. ISR reflects'
+  - '[PAGE 10]
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_10_0.png)
+
+
+    Fig. 16. Impact of workload (IFR) and real-time constraint (MT) on frame drop
+    rate.
+
+
+    the workload allocated to the mobile vision system, and real-time constraints
+    require the variety included. We vary from 22 FPS to 30 FPS to create wide ranges
+    of workloads, and for more and less tight real-time constraints respectively.
+    We did not evaluate mobile CNN in this specific experiment because of its low
+    IFR.
+
+
+    Figure 1 shows the results we make. First, when the real-time constraint is tight
+    (MTL=50, ms), FlexDNN, Input-Agnostic-Lossless and BranchyNet show similar frame
+    drop rate when the workload increases. As the workload increases, the frame drop
+    rate of FlexDNN remains low, while the drop rate of others increases. Second,
+    when the real time constraint is tighter (MTL=40 ms), Input-Agnostic-Lossless
+    struggles to catch the deadline and drops all the frames. For BranchyNet, the
+    drop rate is still quite high and it increases as the workload. In contrast, the
+    frame drop rate of FlexDNN remains low when the workload is heavy.
+
+
+    # V. RELATED WORK
+
+
+    **Mobile Vision.** Our work is closely related to mobile vision [55]. Over the
+    past few years, several methods have been proposed to realize continuous mobile
+    vision [7], [10], [14], [21], [24–[26], [28]. One key theme of these works is
+    to improve the computational efficiency for video analytics applications, which
+    is also the focus of this work. In [25], the authors proposed a framework named
+    DeepEye that improves resource efficiency of concurrent DNNs by interleaving the
+    execution of computation-heavy-convolutional layers and loading
+
+
+    memory-heavy fully-connected layers. In [14], [37], the authors propose to cache
+    intermediate results between consecutive frames to improve compression efficiency.
+    In [10], the authors proposed a framework named MCDNN, which uses compression
+    techniques to generate a catalog of models for trading DNN classification for
+    resource use. In [7] they also use compression techniques to reduce demand by
+    trading off accuracy, but apply it to a single multi-capacity model instead of
+    a catalog of variants. Our work offers a complementary approach by adapting model
+    complexity dynamically to manage the difficulty levels of video. Our approach
+    is to reduce computation cost without trading off accuracy.
+
+
+    Our work is presented in [26], [28]. In this the authors proposed efficient continuous
+    mobile vision by leveraging the highly skewed distributions in real-world video.
+    In [32], the authors proposed mobile vision system that guarantees “glimpse” under
+    undertimed mobile video streams. Our work is similar to them in that we sense
+    all the characteristics in video and adapt computation cost of video segments.
+    From them, FlexDNN explains the high-dynamics in real-world videos and reduces
+    computation by dynamically adapting model complexity to match the difficulty of
+    video frames.
+
+
+    **Dynamic DNN.** Our work is also related to the concept of DNN in the deep learning.
+    Dynamic DNN is a type of DNN that allows to adjust the inference behavior based
+    on inputs. It has attracted a lot of attention in improving computational efficiency.
+    See [19], [21], [33], [38]. In [23], the authors proposed a dynamic DNN D''NN
+    that consists of multiple subnetworks and uses control modules to determine which
+    subnetwork to execute. The overhead of multiple subnetworks makes D''NN extreme
+    resource demand, which is not suitable for mobile devices that have resource constraints.
+    Our work is similar to them but the authors proposed BranchyNet, a dynamic DNN
+    that adapts to the workload. FlexDNN avoids the efficiency drawbacks with automatically
+    early exit architecture and implementation that plan the early exit mechanism.
+
+
+    # VI. CONCLUSION
+
+
+    In this paper, we present the design, evaluation of FlexDNN, an adaptive-input
+    deep learning for resource-efficient on-device video analytics. FlexDNN allows
+    with dynamic deep learning to persist to resource-efficient DNN-based video analytics
+    applications that can run smoothly on mobile vision'
+  - '[PAGE 11]
+
+
+    with minimum effort. We evaluated FDNN using three representative video applications.
+    Our results show that FDNN outperforms status quo approaches and BranchNet. We
+    believe our work represents a significant step towards turning the continuous
+    mobile vision into
+
+
+    We thank our reviewers for their valuable feedback. This work was supported by
+    NSF Awards CNS-1617267, CNS-1814571 and PIF-BC162350.
+
+
+    # ACKNOWLEDGEMENT
+
+
+    # REFERENCES
+
+
+    +   [1] DL Mobile Pro. https://developer.nvidia.com (2023).
+
+    [2] NVIDIA Jetson Developer Kit. https://developer.nvidia.com/embedded/jetson-xavier-dev-kit
+    (2018).
+
+
+    +   [3] J. Huang, J. Wang, Y. Wang, and J. Huang. Mobile Vision with deep learning.
+    http://www.artroad.com (2020).
+
+
+    +   [4] M. Chen, Y. Sun, J. Chen, A. Zhao, J. Davis, M. Chen, S. Gumarat, G. Irving,
+    M. Ismail, and A. Tesrofeni: A system for large-scale mobile video understanding.
+    In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition
+    (CVPR), pages 12-21.
+
+
+    +   [5] P. Bai, M. Li, and L. Jung. Vision: Cloud-powered for-edge computing:
+    showing the world as you want. In Proceedings of the third ACM Conference on Mobile
+    Computing and Wireless Networking (MCOM), pages 1-8 (2020).
+
+
+    +   [6] F. Xichtler. Deep learning with separable convolutional networks. In International
+    Conference on Computer Vision (ICCV), 2019.
+
+
+    +   [7] F. Bao, X. Zhang, and M. Wang. Resource-efficient multi-task neural networks
+    for deep learning on mobile devices. In MobiCom, 2018.
+
+
+    +   [8] S. Han and J. Du. Deep compression of deep neural networks with pruning
+    and quantization techniques. arXiv preprint:1512.04776 (2015).
+
+
+    +   [9] J. Han and Y. Lee. Learning for efficient and effective convolutional
+    network architectures. In IEEE International Conference on Information Processing
+    Technology (ICIPT), pages 1-6 (2019).
+
+
+    +   [10] S. Han, H. Sen, M. Liu, and A. Adobesoye: Efficient convolutional networks
+    for mobile devices: Deep learning stream resource processing. In Proceedings of
+    the IEEE Conference on Computer Vision and Pattern Recognition, pages 770-788
+    (2017).
+
+
+    +   [11] K. Lee, S. Choi, J. Lee, and S. Kim: Mobile-centric deep learning for
+    resource efficiency. In IEEE Conference on Computer Vision and Pattern Recognition
+    (CVPR), pages 20-29.
+
+
+    +   [12] T. Weyand, M. Andrew, and A. Mohler: Efficient convolutional networks
+    for mobile vision classification. arXiv preprint:1704.04861 (2017).
+
+
+    +   [13] Y. Zhou, X. Li, J. Fu, L. Wan, and M. Ma, and K. Young: Multi-scale deep
+    learning for resource efficiency in image classification. In International Conference
+    on Computer Vision (ICCV), pages 3680-3689 (2019).
+
+
+    +   [14] L. H. Lynch, Y. Lee, and R. Bao: Mobile-grade deep learning for continuous
+    mobile vision. In MobiCom, 2019.
+
+
+    +   [15] J. Gao, A. Anantharam, P. Bodik, S. Sen, and I. Stochkov: Scalable deep
+    learning for deep stream processing. In Proceedings of the 2018 Conference ACM
+    Special Interest Group on Data Mining (SDM), pages 715-724 (2018).
+
+
+    +   [16] S. Zhang, M. Za, X. Xu, M. Wang, C. Zhang, and Y. Liu: Hardware-aware
+    neural learning for deep neural network recognition. In IEEE Conference on Computer
+    Vision and Pattern Recognition (CVPR), pages 1369–1378 (2020).
+
+
+    +   [17] M. R. S. J. J. Kim, D. Janssen, and G. Wets: Wavelet traffic analysis
+    using a universal graph-based framework based on architecture search.
+
+
+    +   [18] Y. Lecun, Y. Bengio, and G. Hinton: Deep learning. Nature, 521(7553):436–444
+    (2015).
+
+
+    +   [19] H. A. Karalin, D. Izhovskikh, M. Howard, and H. P. Graf: Deep filters
+    for efficient networks. arXiv preprint:1608.06810, 2016.
+
+
+    +   [21] R. LiKanWo and L. Zhang: Efficient concurrency support for computer vision.
+    In Proceedings of the 15th International Conference on Mobile Systems, and Services,
+    pages 213–220 (2016).
+
+
+    +   [22] L. Chen, Y. Lin, and Y. Yang: Dynamic neural networks: efficiency-accuracy
+    trade-offs via selection. arXiv preprint:1707.02133 (2017).
+
+
+    +   [23] S. Li, L. Zhou, K. Han, H. Liu, and J. Au: On-demand deep model compression
+    for mobile devices: a usage-driven selection framework. In MobiCom, 2019.
+
+
+    +   [24] A. Mathur, N. Lee, S. Bhattacharjee, A. Forbes, and K. Kim: Energy-efficient
+    mobile vision models using usage-driven context. In Proceedings of the IEEE International
+    Conference on Mobile Systems, and Services, pages 68–88 (2021).
+
+
+    +   [25] S. Saderaju, P. Zhang, M. Mohite, P. Jitha, and D. Liu: Deep learning-based
+    architecture for continuous mobile vision. In Proceedings of the 15th International
+    Conference on Computer Vision, pages 292–305 (2017).
+
+
+    +   [26] M. Zhang, M. Zhao, and L. Chen: MobileNetV2: Rethinking neural networks
+    for linear inverted bottlenecks. In IEEE CVPR, 2018.
+
+
+    +   [27] H. Shen, S. Han, and A. Krishnamrishnan: Lightweight classification via
+    adaptive pruning of deep networks. In CVPR, 2019.
+
+
+    +   [29] J. Cao, Y. Liu, and J. Sun: The state of deep learning in vision: a survey.
+    IEEE Surveys, 2020.
+
+
+    +   [30] C. Szegedy, V. Vuskovic, J. Shlens, and W. Wojbroner: Searching for convolutional
+    network architecture for computer vision. In Proceedings of the IEEE International
+    Conference on Computer Vision (ICCV), 2017.
+
+
+    +   [31] D. B. Walter, B. Chai, E. Ceddem, M. Baek, and L. Fei-Feri: Efficient
+    deep learning for image classification. In Proceedings of the National Academy
+    of Sciences, 2017.
+
+
+    +   [32] Z. Wang, F. Chen, S. George, M. Bala, P. Sun, Y. Yang, and M. Sanyagandran:
+    Bandwidth-efficient live video analytics for crowd counting. In Proceedings of
+    the IEEE Conference on Computer Security (SEC), 2018.
+
+
+    +   [33] M. Xu, Y. Zhu, F. Li, X. Lin, and L. Lee: Decoupled Pruning for efficient
+    neural networks. In IEEE International Conference on Mobile Computing and Networking,
+    pages 139–144. (2017).
+
+
+    +   [34] T.-Y. Yang, A. Howard, B. Chen, S. Yan, and A. Wills: Mobilenet: A convolutional
+    neural network for efficient vision applications. In Proceedings of the IEEE Conference
+    on Computer Vision and Pattern Recognition, pages 285–300 (2017).
+
+
+    +   [35] J. Park, S. Kim, and J. Lee: Real-time video action analysis with delay-tolerance.
+    In IEEE Journal, volume 9, page 1 (2017)
+
+
+    +   [36] K. Alhosaini, M. Belong, A. Aranhaha, and A. Torralba: Places: A 10 million
+    image database for scene recognition. IEEE Transactions on Machine Learning,
+
+
+    +   [37] B. P. Vasudevan, J. Shlens, and Q. V. Le: Learnable architectures for
+    scalable image recognition. In IEEE CVPR, pages 8691–8710. (2018).'
+  md: '
+
+    # FlexDNN Frame Drop Rate FlexDNN Input-Lossless BranchyNet
+
+
+    | Model | IFN | MTL | Platform | FlexDNN Input-Lossless | BranchyNet |
+
+    |---|---|---|---|---|---|---|
+
+    | U-UCF | 2 | 2000 | S8 | 10.0% | 48.5% | 37.2% |
+
+    | V-Place | 30 | 50 | Xavier | 75.1% | 28.6% | 31.5% |
+
+    | I-Place | 30 | 50 | Xavier | 50.0% | 50.1% | 26.7% |
+
+    | V-Vedrone | 30 | 50 | Xavier | 37.5% | 50.6% | 30.0% |
+
+    | I-Vedrone | 30 | 50 | Xavier | 0.0% | 19.5% | 19.5% |
+
+
+    TABLE III FRAME DROP RATE BETWEEN FLEXDNN (INPUT-ADAPTIVE) AND INPUT-AGNOSTIC
+    AND BRANCHYNET.
+
+
+    # FlexDNN IFN MTL Platform Energy Consumption FlexDNN Input-Lossless BranchyNet
+
+
+    | Model | IFN | MTL | Platform | FlexDNN Input-Lossless | BranchyNet |
+
+    |---|---|---|---|---|---|---|
+
+    | U-UCF | 2 | 2000 | S8 | 2.36 | 4.81 | 3.19 |
+
+    | V-Place | 30 | 50 | Xavier | 0.81 | 0.63 | 0.49 |
+
+    | I-Place | 30 | 50 | Xavier | 0.48 | 0.49 | 0.49 |
+
+    | V-Vedrone | 30 | 50 | Xavier | 0.32 | 0.61 | 0.42 |
+
+    | I-Vedrone | 30 | 50 | Xavier | 0.0 | 0.71 | 0.82 |
+
+
+    TABLE IV ENERGY CONSUMPTION BETWEEN FLEXDNN (INPUT-ADAPTIVE) AND INPUT-AGNOSTIC
+    AND BRANCHYNET.
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_9_0.png)
+
+
+    Fig. 15. Comparison between FlexDNN, Input-Agnostic and Input-Agnostic Loss in
+    the inference-accuracy cost space.
+
+
+    Reduction on Frame Rate Table III compares the frame drop rate of FlexDNN to Input-Agnostic
+    and BranchyNet. In our evaluation, we set up a video input frame rate (FPS) (in
+    unit of frame) and maximum latency (ms) for processing a single frame (in unit
+    of ms) for each application. Since the STU is much faster than the mobile GPU,
+    the ISR is much higher and for U-UCF,
+
+
+    As shown, compared to Input-Agnostic, FlexDNN is able to reduce the frame rate
+    by 38.1%, 69.0%, 42.6%, 48.5%, and 50.0% on U-UCF, I-UCF, V-Place, I-Place, V-Vedrone,
+    and I-Vedrone, respectively. This is achieved because FlexDNN continuously adapts
+    by skipping redundant frames, while the input-agnostic counter wastes the unnecessary
+    computation on the empty frames.
+
+
+    Reduction on Energy Consumption. FlexDNN is able to reduce the energy consumption
+    by 27.6%, 22.5%, 31.3%, and 19.55%. Such reduction is achieved because FlexDNN
+    has much earlier exit points at optimized locations.
+
+
+    Third, compared to BranchNet that adopts early exit design, FlexDNN is able to
+    achieve the same accuracy with much lower computational cost. FlexDNN reduces
+    28.4%, 49.3%, 20.5%, 23.9%, and 40.9% computational cost on V-UCF, I-UCF, V-Place,
+    I-Place, V-Vedrone and I-Vedrone respectively, demonstrating its superiority over
+    BranchNet.
+
+
+    Impact of Workload and Real-Time. At last, we evaluate the impact of input frame
+    rate (FPS) and maximum latency (ms) on the frame rate. ISR reflects
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_10_0.png)
+
+
+    Fig. 16. Impact of workload (IFR) and real-time constraint (MT) on frame drop
+    rate.
+
+
+    the workload allocated to the mobile vision system, and real-time constraints
+    require the variety included. We vary from 22 FPS to 30 FPS to create wide ranges
+    of workloads, and for more and less tight real-time constraints respectively.
+    We did not evaluate mobile CNN in this specific experiment because of its low
+    IFR.
+
+
+    Figure 1 shows the results we make. First, when the real-time constraint is tight
+    (MTL=50, ms), FlexDNN, Input-Agnostic-Lossless and BranchyNet show similar frame
+    drop rate when the workload increases. As the workload increases, the frame drop
+    rate of FlexDNN remains low, while the drop rate of others increases. Second,
+    when the real time constraint is tighter (MTL=40 ms), Input-Agnostic-Lossless
+    struggles to catch the deadline and drops all the frames. For BranchyNet, the
+    drop rate is still quite high and it increases as the workload. In contrast, the
+    frame drop rate of FlexDNN remains low when the workload is heavy.
+
+
+    # V. RELATED WORK
+
+
+    **Mobile Vision.** Our work is closely related to mobile vision [55]. Over the
+    past years, several methods have been proposed to realize continuous mobile vision
+    [7], [10], [14], [21–26], [28]. One key theme of these works is to improve the
+    computational efficiency for video analytics, which is also the focus of this
+    work. In [25], the authors proposed a framework named DeepEye that improves resource
+    efficiency of concurrent DNNs by interleaving the execution of computation-heavy-convolutional
+    layers and memory-heavy fully-connected layers. In [37], the authors propose to
+    cache intermediate results between consecutive frames. In [10], the authors proposed
+    a framework named MCDNN, which uses compression techniques to generate a catalog
+    of models for classification. In [7] they also use compression techniques to reduce
+    demand by trading off accuracy, but apply it to a single multi-capacity model
+    instead of a catalog of variants. Our work offers a complementary approach by
+    adapting model complexity to manage difficulty levels of video. Our approach is
+    presented in [26], [28] the authors proposed efficient mobile vision by leveraging
+    the highly skewed distributions in real-world video. In [32], the authors proposed
+    mobile vision system that guarantees “glimpse” under timed video streams. Our
+    work is similar to them in that we sense all characteristics in video and adapt
+    computation cost of video segments. From them, FlexDNN explains the high-dynamics
+    in real-world videos and reduces computation by dynamically adapting model complexity
+    to match difficulty of frames.
+
+
+    **Dynamic DNN.** Our work is also related to the concept of DNN in deep learning.
+    Dynamic DNN is a type of DNN that allows to adjust inference behavior based on
+    inputs. It has attracted a lot of attention in improving computational efficiency.
+    See [19], [21], [38]. In [23], the authors proposed a dynamic DNN that consists
+    of multiple subnetworks and uses control modules to determine which subnetwork
+    to execute. The overhead of multiple subnetworks makes extreme resource demand,
+    which is not suitable for mobile devices. Our work is similar to them but the
+    authors proposed BranchyNet, a dynamic DNN that adapts to workload. FlexDNN avoids
+    efficiency drawbacks with automatically early exit architecture and implementation
+    that plan the early exit mechanism.
+
+
+    # VI. CONCLUSION
+
+
+    In this paper, we present the design, evaluation of FlexDNN, an adaptive-input
+    deep learning for resource-efficient on-device video analytics applications that
+    can run smoothly on mobile vision with minimum effort. We evaluated DNN using
+    three representative video applications. Our results show that DNN outperforms
+    status quo approaches and BranchNet. We believe our work represents a significant
+    step towards turning the continuous mobile vision into. We thank our reviewers
+    for their valuable feedback. This work was supported by NSF Awards CNS-1617267,
+    CNS-1814571 and PI-BC162350.
+
+
+    # ACKNOWLEDGEMENT
+
+
+    # REFERENCES
+
+
+    - [1] Mobile Pro. https://developer.nvidia.com (2023).
+
+    - [2] NVIDIA Jetson Developer Kit. https://developer.nvidia.com/embedded/jetson-dev-kit
+    (2018).
+
+    - [3] J. Huang, J. Wang, Y. Wang, and J. Huang. Mobile Vision with deep learning.
+    http://www.artroad.com (2020).
+
+    - [4] M. Chen, Y. Sun, J. Chen, A. Zhao, J. Davis, M. Chen, S. Gupta, G. Irving,
+    M. Ismail, and A. Tesrofeni: A system for large-scale mobile video understanding.
+    In Proceedings of the IEEE Conference on Computer Vision and Recognition (CVPR),
+    pages 12-21.
+
+    - [5] P. Bai, M. Li, and L. Jung. Vision: Cloud-powered-for-edge computing: showing
+    the world as you want. In Proceedings of the third ACM Conference on Mobile Computing
+    and Networking (MCOM), pages 1-8 (2020).
+
+    - [6] F. Xichtler. Deep learning with separable convolutional networks. In International
+    Conference on Computer Vision (ICCV), 2019.
+
+    - [7] F. Bao, X. Zhang, and M. Wang. Resource-efficient multi-task neural networks
+    for deep learning on mobile devices. In MobiCom, 2018.
+
+    - [8] S. Han and J. Du. Deep compression of deep neural networks with pruning
+    and quantization techniques. arXiv preprint:1512.04776 (2015).
+
+    - [9] J. Han and Y. Lee. Learning for efficient and effective convolutional network
+    architectures. In IEEE International Conference on Information Processing Technology
+    (ICIPT), pages 1-6 (2019).
+
+    - [10] S. Han, H. Sen, M. Liu, and A. Adobesoye: Efficient convolutional networks
+    for mobile devices: Deep learning stream resource processing. In Proceedings of
+    the IEEE Conference on Computer Vision and Recognition (CVPR), pages 770-788 (2017).
+
+    - [11] K. Lee, S. Choi, J. Lee, and S. Kim: Mobile-centric deep learning for resource
+    efficiency. In IEEE Conference on Computer Vision and Recognition (CVPR), pages
+    20-29.
+
+    - [12] T. Weyand, M. Andrew, and A. Mohler. Efficient convolutional networks for
+    mobile vision. arXiv preprint:1704.0861 (2017).
+
+    - [13] Y. Zhou, X. Li, J. Fu, L. Wan, and K. Young. Multi-scale deep learning
+    for resource efficiency. In International Conference on Computer Vision (ICCV),
+    pages 3680-3689 (2019).
+
+    - [14] L. H. Lynch, Y. Lee, and R. Bao. Mobile-grade deep learning for continuous
+    mobile vision. In MobiCom, 2019.
+
+    - [15] J. Gao, A. Anantharam, P. Bodik, and S. Sen. Scalable deep learning for
+    stream processing. In Proceedings of the 2018 Conference Special Interest Group
+    on Data Mining (SDM), pages 715-724 (2018).
+
+    - [16] S. Zhang, M. Xu, C. Wang, and Y. Liu. Hardware-aware neural learning for
+    neural network recognition. In IEEE Conference on Computer Vision and Recognition
+    (CVPR), pages 1369–1378.
+
+    - [17] M. R. S. J. Kim, and G. W. Wavelet analysis using a universal graph-based
+    framework on architecture search.
+
+    - [18] Y. Lecun, Y. Bengio, and G. Hinton. Deep learning. Nature, 521(7553):436–444
+    (2015).
+
+    - [19] H. A. Karalin, D. Izhovskikh, M. Howard, and H. P. Graf. Deep filters for
+    efficient networks. arXiv preprint:1608.0610, 2016.
+
+    - [21] R. Li and L. Zhang. Efficient support for computer vision. In Proceedings
+    of the 15th International Conference on Mobile Systems, and Services, pages 213–220
+    (2016).
+
+    - [22] L. Chen, Y. Lin, and Y. Yang. Dynamic neural networks: efficiency-accuracy
+    trade-offs. arXiv preprint:1707.02133 (2017).
+
+    - [23] S. Li, L. Zhou, K. Han, and J. Au. On-demand deep compression for mobile
+    devices. In MobiCom, 2019.
+
+    - [24] A. Mathur, N. Lee, S. Bhattacharjee, and K. Kim. Energy-efficient vision
+    models using usage-driven context. In Proceedings of the IEEE International Conference
+    on Mobile Systems, and Services, pages 68–88 (2021).
+
+    - [25] S. Saderaju, P. Zhang, M. Mohite, P. Jitha, and D. Liu. Deep learning-based
+    architecture for continuous mobile vision. In Proceedings of the 15th International
+    Conference on Computer Vision, pages 292–305 (2017).
+
+    - [26] M. Zhang, M. Zhao, and L. Chen. MobileNetV2: Rethinking neural networks
+    for linear bottlenecks. In IEEE CVPR, 2018.
+
+    - [27] H. Shen, S. Han, and A. Krishnamrishnan. Lightweight classification via
+    adaptive pruning of deep networks. In CVPR, 2019.
+
+    - [29] J. Cao, Y. Liu, and J. Sun. The state of deep learning in vision: a survey.
+    IEEE Surveys, 2020.
+
+    - [30] C. Szegedy, V. Vuskovic, J. Shlens, and W. Wojbroner. Searching for convolutional
+    network architecture for computer vision. In Proceedings of the IEEE International
+    Conference on Computer Vision (ICCV), 2017.
+
+    - [31] D. B. Walter, B. Chai, E. Ceddem, M. Baek, and L. Fei-Feri. Efficient deep
+    learning for image classification. In Proceedings of the National Academy of Sciences,
+    2017.
+
+    - [32] Z. Wang, F. Chen, S. George, M. Bala, P. Sun, Y. Yang, and M. Sanyagandran.
+    Bandwidth-efficient live video analytics for crowd counting. In Proceedings of
+    the IEEE Conference on Computer Security (SEC), 2018.
+
+    - [33] M. Xu, Y. Zhu, F. Li, X. Lin, and L. Lee. Decoupled Pruning for efficient
+    neural networks. In IEEE International Conference on Mobile Computing and Networking,
+    pages 139–144. (2017).
+
+    - [34] T.-Y. Yang, A. Howard, B. Chen, S. Yan, and A. Wills. Mobilenet: A convolutional
+    neural network for efficient vision applications. In Proceedings of the IEEE Conference
+    on Computer Vision and Recognition, pages 285–300 (2017).
+
+    - [35] J. Park, S. Kim, and J. Lee. Real-time video action analysis with delay-tolerance.
+    In IEEE Journal, volume 9, page 1 (2017)
+
+    - [36] K. Alhosaini, M. Belong, A. Aranhaha, and A. Torralba. Places: A 10 million
+    image database for scene recognition. IEEE Transactions on Machine Learning,
+
+    - [37] B. P. Vasudevan, J. Shlens, and Q. V. Le. Learnable architectures for scalable
+    image recognition. In IEEE CVPR, pages 8691–8710. (2018).
+
+    '
+  mdcn: '
+
+
+    # FlexDNN 帧帧率 FlexDNN 输入无损 BranchyNet
+
+
+    | 模型 | IFN | MTL | 平台 | FlexDNN 输入无损 | BranchyNet |
+
+    |---|---|---|---|---|---|-|
+
+    | U-UCF | 2 | 2000 | S8 | 10.0% | 48.5% | 37.2% |
+
+    | V-Place | 30 | 50 | Xavier | 75.1% | 28.6% | 31.5% |
+
+    | I-Place | 30 | 50 | Xavier | 50.0% | 50.1% | 26.7% |
+
+    | V-Vedrone | 30 | 50 | Xavier | 37.5% | 50.6% | 30.0% |
+
+    | I-Vedrone | 30 | 50 | Xavier | 0.0% | 19.5% | 19.5% |
+
+
+    表 III FlexDNN（输入自适应）与输入无关及 BranchyNet 之间的帧帧率
+
+
+    # FlexDNN IFN MTL 平台 功耗 FlexDNN 输入无损 BranchyNet
+
+
+    | 模型 | IFN | MTL | 平台 | FlexDNN 输入无损 | BranchyNet |
+
+    |---|---|---|---|---|---|-
+
+    | U-UCF | 2 | 2000 | S8 | 2.36 | 4.81 | 3.19 |
+
+    | V-Place | 30 | 50 | Xavier | 0.81 | 0.63 | 0.49 |
+
+    | I-Place | 30 | 50 | Xavier | 0.48 | 0.49 | 0.49 |
+
+    | V-Vedrone | 30 | 50 | Xavier | 0.32 | 0.61 | 0.42 |
+
+    | I-Vedrone | 30 | 50 | Xavier | 0.0 | 0.71 | 0.82 |
+
+
+    表 IV FlexDNN（输入自适应）与输入无关及 BranchyNet 之间的能耗
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_9_0.png)
+
+
+    图 15. 在推理-精度成本空间中 FlexDNN、输入无关与输入无关损失的对比。
+
+
+    帧率表 III 的降低情况比较了 FlexDNN 与输入无关以及 BranchyNet 的帧帧率。在我们的评估中，我们为每个应用设置了视频输入帧率 (FPS)（以帧为单位）和处理单帧的最大延迟
+    (ms)（以毫秒为单位）。由于 STU 远快于移动 GPU，因此 ISR 高得多，且对于 U-UCF，
+
+
+    所示，与输入无关方法相比，FlexDNN 能够在 U-UCF、I-UCF、V-Place、I-Place、V-Vedrone 和 I-Vedrone 上分别将帧率降低
+    38.1%、69.0%、42.6%、48.5% 和 50.0%。这是因为 FlexDNN 通过跳过冗余帧进行持续自适应，而输入无关的计数器则在空帧上浪费了不必要的计算。
+
+
+    能耗降低。FlexDNN 能够将能耗降低 27.6%、22.5%、31.3% 和 19.55%。这种降低的实现是因为 FlexDNN 在优化位置具有更早的退出点。
+
+
+    第三，与采用早期退出设计的 BranchNet 相比，FlexDNN 能够以得得计算成本达到相同的精度。FlexDNN 在 V-UCF、I-UCF、V-Place、I-Place、V-Vedrone
+    和 I-Vedrone 上分别减少了 28.4%、49.3%、20.5%、23.9% 和 40.9% 的计算成本，证明了其优于 BranchNet。
+
+
+    工作负载与实时性的影响。最后，我们评估了输入帧率 (FPS) 和最大延迟 (ms) 对帧率的影响。ISR 反映了
+
+
+    ![](img/dbd3717613f6831d359ca8ca40e8950f_10_0.png)
+
+
+    图 16. 工作负载 (IFR) 和实时性约束 (MT) 对帧帧率的影响。
+
+
+    分配给移动视觉系统的工作负载，而实时性约束要求包含多样性。我们从 22 FPS 变化到 30 FPS 以创建宽范围的工作负载，分别对应更紧和更松的实时性约束。我们没有在这个特定实验中评估移动
+    CNN，因为它的 IFR 较低。
+
+
+    图 1 显示了我们得到的结果。首先，当实时性约束较紧（MTL=50 ms）时，FlexDNN、输入无关和 BranchyNet 在负载增加时显示出相似的帧率。随着负载的增加，FlexDNN
+    的帧率保持较低，而其他的则增加。其次，当实时性约束更紧（MT=40 ms）时，输入无关难以难以截止日期并丢失所有帧。对于 BranchyNet，帧率仍然很高并随着负载而增加。相比之下，当负载很大时，FlexDNN
+    的帧率保持较低。
+
+
+    # V. 相关工作
+
+
+    **移动视觉**。我们的工作与移动视觉密切相关 [55]。在过去的几年里，已有许多方法被实现连续移动视觉 [7], [10], [14], [21–26]。这些工作的一个核心主题是提高视频分析的计算效率，这也是本文的重点。在
+    [25]，作者提出了一种名为 DeepEye 的框架，通过交替执行计算密集卷积层和内存密集全连接层来提高并发 DNN 的效率。在 [37]，作者提出了一种名为
+    MCDNN 的框架，使用压缩技术通过权衡精度来减少需求。我们的方法在 [26] 中提出，通过利用真实视频的高度倾偏分布来实现移动视觉。在 [32]，作者提出了一种移动视觉系统，确保实时视频流的“窥视”。我们的工作与它们相似，在于
+    FlexDNN 通过动态调整模型复杂度来匹配视频帧的计算成本。
+
+
+    **动态 DNN**。我们的工作也与深度学习中的 DNN 概念相关。动态 DNN 是一种根据输入调整推理行为的 DNN，它引起了广泛关注。见 [19], [38]。在
+    [23]，作者提出了一种由多个子网络组成的动态 DNN，并使用控制模块决定执行哪个子网络，这对于移动设备是极高需求的。我们的工作与它们相似，但 BranchyNet
+    是一种通过自动退出架构和实现来避免移动设备效率的的 DNN。
+
+
+    # VI. 结论
+
+
+    在本文中，我们介绍了 FlexDNN 的设计与评估，这是一种可以在移动设备上平滑运行的自适应输入深度学习。我们的结果显示 DNN 优于现状方法。我们认为我们的工作是向连续移动视觉迈出的重要一步。感谢审稿人的宝贵意见。这项工作得到了
+    NSF 奖励 CNS-161726, CNS-181457 和 PI-BC62350 的支持。
+
+
+    # 致谢
+
+
+    # 参考文献
+
+
+    - [1] Mobile Pro. https://developer.nvidia.com (2023).
+
+    - [2] NVIDIA Jetson Developer Kit. https://developer.nvidia.com/embedded/jetson-dev-kit
+    (2018).
+
+    - [3] J. Huang, Y. Wang, and J. Huang. Mobile Vision with deep learning. http://www.artroad.com
+    (2020).
+
+    - [4] M. Chen, Y. Sun, J. Chen, A. Zhao, M. Chen, S. Gupta, M. Ismail, and A.
+    Tesrof: A system for large-scale mobile video understanding. In Proceedings of
+    the IEEE Conference on Computer Vision and Recognition (CVPR), pages 12-21.
+
+    - [5] P. Bai, M. Li, and L. Jung. Vision: Cloud-powered-for-edge computing: showing
+    the world as you want. In Proceedings of the third ACM Conference on Mobile Computing
+    and Networking (MCOM), pages 1-8 (2020).
+
+    - [6] F. Xichtler. Deep learning with separable convolutional networks. In International
+    Conference on Computer Vision (ICCV), 2019.
+
+    - [7] F. Bao, X. Zhang, and M. Wang. Resource-efficient multi-task neural networks
+    for deep learning on mobile devices. In MobiCom, 2018.
+
+    - [8] S. Han and J. Du. Deep compression of deep neural networks with pruning
+    and quantization techniques. arXiv preprint:1512.04776 (2015).
+
+    - [9] J. Han and Y. Lee. Learning for efficient and effective convolutional network
+    architectures. In IEEE International Conference on Information Processing Technology
+    (ICIPT), pages 1-6 (2019).
+
+    - [10] S. Han, H. Sen, M. Liu, and A. Adobesoye: Efficient convolutional networks
+    for mobile devices: Deep learning stream processing. In Proceedings of the IEEE
+    Conference on Computer Vision and Recognition (CVPR), pages 770-788 (2017).
+
+    - [11] K. Lee, S. Choi, J. Lee, and S. Kim: Mobile-centric deep learning for resource
+    efficiency. In IEEE Conference on Computer Vision and Recognition (CVPR), pages
+    20-29.
+
+    - [12] T. Weyand, M. Andrew, and A. Mohler. Efficient convolutional networks for
+    mobile vision. arXiv preprint:1704.0861 (2017).
+
+    - [13] Y. Zhou, X. Li, J. Fu, L. Wan, and K. Young. Multi-scale deep learning
+    for resource efficiency. In International Conference on Computer Vision (ICCV),
+    pages 3680-3689 (2019).
+
+    - [14] L. H. Lynch, Y. Lee, and R. Bao. Mobile-grade deep learning for continuous
+    mobile vision. In MobiCom, 2019.
+
+    - [15] J. Gao, A. Anantharam, P. Bodik, and S. Sen. Scalable deep learning for
+    stream processing. In Proceedings of the 2018 Conference Special Interest Group
+    on Data Mining (SDM), pages 715-724 (2018).
+
+    - [16] S. Zhang, M. Xu, C. Wang, and Y. Liu. Hardware-aware neural learning for
+    neural network recognition. In IEEE Conference on Computer Vision and Recognition.
+
+    - [17] ... (省略)
+
+    '
+  merge: 0
