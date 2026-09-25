@@ -1,0 +1,1010 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # ARdeep: Adaptive and Reliable Routing Protocol for Mobile Robotic Networks
+    with Deep Reinforcement Learning
+
+
+    Jianmin LIU *1, QI WANG*, Chaoenta HE *1, Yongjun X *
+
+
+    *Institute of Computing Technology, Chinese Academy of Sciences, Beijing, CHINA
+
+    †University of Chinese Academy of Sciences, Beijing, CHINA
+
+    Email: [liujianmin82, wang008, heentaox, xyj]@ict.ac.cn
+
+
+    **Abstract—The mobile robotic network connecting multiple robotic devices such
+    as unmanned aerial vehicles (UAVs) needs protocols that can handle the instability
+    of robotic networks in the intermittently connected links and frequent changes.**
+    This paper proposes a deep reinforcement learning adaptive and reliable routing
+    protocol, ARdeep. We formulate routing decisions with a Markov Decision Process
+    model to adapt to the network environment, making routing decisions. Results demonstrate
+    that ARdeep outperforms the existing good performing QGeo and conventional GPR.
+
+
+    **Index Terms—** routing, deep reinforcement learning, Deep-Q (DQN), mobile robotic
+    networks
+
+
+    an adaptive and highly autonomous routing protocol that can adaptively design
+    routing decisions is.
+
+
+    In this work, we formulate the process of routing decisions with a Markov Decision
+    Process (MDP) model to automatically characterize the network variations and proposed
+    ARdeep, a Deep Reinforcement Learning (DRL)-based adaptive and reliable routing
+    protocol for mobile robotic networks. ARdeep is a distributed and geographic based
+    routing protocol, where each node distributively makes optimal routing decisions
+    on local context. We use a vector consisting of the distance between the neighbor
+    and the destination, the neighbor, Packet Error Ratio (PER) and the expected connection
+    time of the link to the cluster status. In general RL, we use DRL to learn optimal
+    policy because RL is capable of handling large state space. Moreover, we propose
+    an advanced approach where Deep-Q Network (DQN) is distributed at each robotic
+    node, while DQN training is centralized to improve implementation and stability.
+
+
+    # I. INTRODUCTION
+
+
+    As a result of the advancements in sensors, computation technologies and mobile
+    robotic devices such as unmanned vehicles,get unmanned aerial vehicles (UAVs)
+    provide opportunities for future services. Mobile robotic devices have been extensively
+    used in fields such as transportation and surveillance [4]. Mobile robotic network,
+    a high-speed mobile robotic network, allows communication between devices without
+    the need for any fixed infrastructure. It can govern the autonomous movement of
+    robotic devices and support robot-to-robot communication. However, due to changing
+    topology caused by high speed of moving nodes and unstable communication, networking
+    is still a challenging problem in mobile robotic networks.
+
+
+    Existing based routing protocols and geographic based routing protocols limit
+    the path selection and are also hard to use in such a dynamic environment due
+    to the lack of understanding of the changes of dynamic environment. In mobile
+    robotic networks, frequent topology changes may necessitate change routing decisions
+    in real time to adapt to the network variations. Hence,
+
+
+    # II. RELATED WORK
+
+
+    Topology-based routing protocols use topology information to maintain up-to-date
+    tables. LTOL[8], a proactive routing protocol, considers traffic factors and link
+    quality to offer efficient communication in Flying Ad Hoc Networks (FANETS). Ganghuk
+    et al. [1] proposed Robust and Reliable Routing (PAR) based on the reactive reactive
+    protocol AODV [9], which uses the bidirectional and directional routing mechanism
+    to achieve the requirement of some of FANETs. Nevertheless, topology-based routing
+    protocols tend to increase the overhead because of the frequent changes of network
+    topologies in dynamic network environment. Geographic routing is one of the primary
+    solution to reduce routing overhead. Location-based routing (LAR) [5] is proposed
+    to control the routing overhead'
+  - "[PAGE 1]\n\nby limiting the routing of requests. KAR et al. [3] proposed greedy\
+    \ perimeter status to GPSR by using only the location of neighbors to route setup\
+    \ delays. Although these geographic protocols reduce the overhead, they limit\
+    \ the route path selection due to the lack of understanding the dynamically changing\
+    \ nature\n\nTo solve the problem, machine learning algorithms are adapted to routing\
+    \ protocols. There are noteworthy studies of RL-based routing protocols. [Qgrid12],\
+    \ a grid-based geographic routing for ad hoc networks, it selects an optimal next-hop\
+    \ grid, and chooses a specific vehicle to carry the next-hop grid information.\
+    \ Pogeo [26] is a Q-learning-based geographic routing protocol for unmanned networks.\
+    \ It considers link quality and error rate in routing to improve packet delivery\
+    \ ratio. However, most of existing RL-based protocols ignore link status when\
+    \ making forwardings, which makes it difficult for them to capture the changes\
+    \ of link status, leading to low adaptability to the network variations.\n\n#\
+    \ III. DEFINITION AND MODEL\n\n# A. Problem definition\n\nIn this paper, we consider\
+    \ a routing optimization problem for data transmission from a source to a destination\
+    \ in the mobile robotic network of multiple devices. We define a vector $C_{u_i}\
+    \ = (c_{u_i,b_j}, PER_{u_i,b_j})$ to characterize the link between a node $u_i$\
+    \ and its neighbor $b_j$, where $c_{u_i,b_j}$ represents the expected connection\
+    \ time of link, and $PER_{u_i,b_j}$ represents the packet error rate (PER) of\
+    \ neighbor $b_j$ and the destination. Meanwhile, a minimum distance $d_{min}$\
+    \ between two neighbors $b_i$ and $j$ is considered\n\n# B. MDP Model\n\nIn this\
+    \ paper, we formulate the routing decision process with a Markov Decision Process\
+    \ (MDP) to adapt the network time variations. We assume that routing decisions\
+    \ are executed in units of time slots, each time slot is set to 1 and total time\
+    \ slots of a routing process from source to a destination is T. Then the mission\
+    \ task is to select the next hop and forward a packet to it. In ARDeep, the state,\
+    \ action and reward function of MDP are defined as follows:\n\n+   1) State: We\
+    \ assume that, at time slot $t \\in \\{1, 2, ..., T\\}$, node $u_i$ with $m$ many\
+    \ neighbors. To capture the changes of link status, these defined links are formed\
+    \ by $u_i$ and all its neighbors as a discrete state $s$, compared to previous\
+    \ studies that regard node $u_i$ as the state. The, the state $s_i \\in S$ is\
+    \ defined by a vector $(C_{u_i,b_1}, ..., C_{u_i,b_m})$.\n\n+   2) Action: In\
+    \ routing process, node $u_i$ who has the packet needs to select a neighbor as\
+    \ the next hop to forward the Packet. At time slot $t$, we define an action $a_i\
+    \ \\in A$, where $B$ is the set of neighbors. Action $a_i$ chooses the selected\
+    \ neighbor to forward the packet.\n\n+   3) Reward: To achieve reliable and timely\
+    \ data transmission, we introduce a new concept of reliable reward, which is based\
+    \ on not only the distance but also link quality. The reliable distance $D_{u_i,j}$\
+    \ is calculated as\n\n```\n$D_{u_i,j} = \\frac{d_{u_i,j}}{d_{u_i,b_j}} \\times\
+    \ (1 - PER_{u_i,b_j}) \\quad (1)$\n```\n\n```\n$\begin{cases} 1, c_{u_i,b_j} <\
+    \ c_{min} \\ 0, c_{u_i,b_j} \\geq c_{min} \\end{cases} \\quad (2)$\n```\n\nWhere\
+    \ $d_{u_i,j}$ is the distance between node $u_i$ and the destination, and $d_{u_i,b_j}$\
+    \ is the distance between node $u_i$ and its neighbor $b_j$. $PER_{u_i,b_j}$ is\
+    \ the packet error rate of the link between node $u_i$ and neighbor $b_j$; $c_{u_i,b_j}$\
+    \ is the expected connection time of the link between node $u_i$ and neighbor\
+    \ $b_j$. If $c_{u_i,b_j} \\geq c_{min}$, then the data packet cannot be successfully\
+    \ transmitted from time $t$ to its neighbor.\n\nThe reward reflects the process\
+    \ of data transmission, which is linked to the distance between the source and\
+    \ destination. In this case, $s$ is set to 0 to reduce the probability of the\
+    \ link selected to forward packets.\n\nThe reward is defined as follows:\n\n```\n\
+    $r_i = R_{max} - R_{max} \\text{ when neighbor } b_j \\text{ is the local minimum}\
+    \ \\\\omega D_{u_i,b_j} + (1-\\omega) E_{u_i,b_j}, \\quad (3)$\n```\n\nWhere,\
+    \ $R_{max}$ is the maximum reward value, $c_i$ and $E_{u_i,b_j}$ are the remaining\
+    \ and initial energy of neighbor $b_j$, respectively. $\\omega \\in (0, \\omega\
+    \ < 1)$ is used to adjust the impact of reliable distance $D_{u_i,j}$ in reward.\
+    \ If the reliable distance is the destination, the maximum reward $R_{max}$ is\
+    \ used; when the reliable reward is negative to avoid a cycle when neighbor $b_j$\
+    \ is local minimum (i.e., when all neighbors of $u_i$ are further from the destination)\n\
+    \nTo adapt the dynamic networks with the feature of the topology changes, ARDeep\
+    \ adopts the distributed routing decision mechanism, where routing decisions are\
+    \ constructed to include of routing path in network. The architecture of ARDeep\
+    \ is shown in Fig.1. ARDeep contains two modules of Routing discovery and RL based\
+    \ routing decisions.\n\n# IV. ARDEP DESIGN\n\nARDeep is implemented by an alternative\
+    \ approach where DQN is executed at each node, while training of DQN is centralized\
+    \ to simpel implementation"
+  md: '
+
+    # ARdeep: Adaptive and Reliable Routing Protocol for Mobile Robotic Networks with
+    Deep Reinforcement Learning
+
+
+    Jianmin LIU *1, QI WANG*, Chaoenta HE *1, Yongjun X *
+
+
+    *Institute of Computing Technology, Chinese Academy of Sciences, Beijing, CHINA
+
+    †University of Chinese Academy of Sciences, Beijing, CHINA
+
+    Email: [liujianmin82, wang008, heentaox, xyj]@ict.ac.cn
+
+
+    **Abstract—The mobile robotic network connecting multiple robotic devices such
+    as unmanned aerial vehicles (UAVs) needs protocols that can handle the instability
+    of robotic networks in the intermittently connected links and frequent changes.**
+    This paper proposes a deep reinforcement learning adaptive and reliable routing
+    protocol, ARdeep. We formulate routing decisions with a Markov Decision Process
+    model to adapt to the network environment, making routing decisions. Results demonstrate
+    that ARdeep outperforms the existing good performing QGeo and conventional GPR.
+
+
+    **Index Terms—** routing, deep reinforcement learning, Deep-Q (DQN), mobile robotic
+    networks
+
+
+    An adaptive and highly autonomous routing protocol that can adaptively design
+    routing decisions is.
+
+
+    In this work, we formulate the process of routing decisions with a Markov Decision
+    Process (MDP) model to automatically characterize the network variations and proposed
+    ARdeep, a Deep Reinforcement Learning (DRL)-based adaptive and reliable routing
+    protocol for mobile robotic networks. ARdeep is a distributed and geographic based
+    routing protocol, where each node distributively makes optimal routing decisions
+    on local context. We use a vector consisting of the distance between the neighbor
+    and the destination, the neighbor, Packet Error Ratio (PER) and the expected connection
+    time of the link to the cluster status. In general RL, we use DRL to learn optimal
+    policy because RL is capable of handling large state space. Moreover, we propose
+    an advanced approach where Deep-Q Network (DQN) is distributed at each robotic
+    node, while DQN training is centralized to improve implementation and stability.
+
+
+    # I. INTRODUCTION
+
+
+    As a result of the advancements in sensors, computation technologies and mobile
+    robotic devices such as unmanned vehicles, unmanned aerial vehicles (UAVs) provide
+    opportunities for future services. Mobile robotic devices have been extensively
+    used in fields such as transportation and surveillance [4]. Mobile robotic network,
+    a high-speed mobile robotic network, allows communication between devices without
+    the need for any fixed infrastructure. It can govern the autonomous movement of
+    robotic devices and support robot-to-robot communication. However, due to changing
+    topology caused by high speed of moving nodes and unstable communication, networking
+    is still a challenging problem in mobile robotic networks.
+
+
+    Existing based routing protocols and geographic based routing protocols limit
+    the path selection and are also hard to use in such a dynamic environment due
+    to the lack of understanding of the changes of dynamic environment. In mobile
+    robotic networks, frequent topology changes may necessitate change routing decisions
+    in real time to adapt to the network variations. Hence,
+
+
+    # II. RELATED WORK
+
+
+    Topology-based routing protocols use topology information to maintain up-to-date
+    tables. LTOL[8], a proactive routing protocol, considers traffic factors and link
+    quality to offer efficient communication in Flying Ad Hoc Networks (FANETS). Ganghuk
+    et al. [1] proposed Robust and Reliable Routing (PAR) based on the reactive reactive
+    protocol AODV [9], which uses the bidirectional and directional routing mechanism
+    to achieve the requirement of some of FANETs. Nevertheless, topology-based routing
+    protocols tend to increase the overhead because of the frequent changes of network
+    topologies in dynamic network environment. Geographic routing is one of the primary
+    solution to reduce routing overhead. Location-based routing (LAR) [5] is proposed
+    to control the routing overhead by limiting the routing of requests. KAR et al.
+    [3] proposed greedy perimeter status to GPSR by using only the location of neighbors
+    to route setup delays. Although these geographic protocols reduce the overhead,
+    they limit the route path selection due to the lack of understanding the dynamically
+    changing nature.
+
+
+    To solve the problem, machine learning algorithms are adapted to routing protocols.
+    There are noteworthy studies of RL-based routing protocols. [Qgrid12], a grid-based
+    geographic routing for ad hoc networks, it selects an optimal next-hop grid, and
+    chooses a specific vehicle to carry the next-hop grid information. Pogeo [26]
+    is a Q-learning-based geographic routing protocol for unmanned networks. It considers
+    link quality and error rate in routing to improve packet delivery ratio. However,
+    most of existing RL-based protocols ignore link status when making forwardings,
+    which makes it difficult for them to capture the changes of link status, leading
+    to low adaptability to the network variations.
+
+
+    # III. DEFINITION AND MODEL
+
+
+    ### A. Problem definition
+
+
+    In this paper, we consider a routing optimization problem for data transmission
+    from a source to a destination in the mobile robotic network of multiple devices.
+    We define a vector $C_{u_i} = (c_{u_i,b_j}, PER_{u_i,b_j})$ to characterize the
+    link between a node $u_i$ and its neighbor $b_j$, where $c_{u_i,b_j}$ represents
+    the expected connection time of link, and $PER_{u_i,b_j}$ represents the packet
+    error rate (PER) of neighbor $b_j$ and the destination. Meanwhile, a minimum distance
+    $d_{min}$ between two neighbors $b_i$ and $j$ is considered.
+
+
+    ### B. MDP Model
+
+
+    In this paper, we formulate the routing decision process with a Markov Decision
+    Process (MDP) to adapt the network time variations. We assume that routing decisions
+    are executed in units of time slots, each time slot is set to 1 and total time
+    slots of a routing process from source to a destination is T. Then the mission
+    task is to select the next hop and forward a packet to it. In ARDeep, the state,
+    action and reward function of MDP are defined as follows:
+
+
+    - 1) State: We assume that, at time slot $t \in \{1, 2, ..., T\}$, node $u_i$
+    with $m$ many neighbors. To capture the changes of link status, these defined
+    links are formed by $u_i$ and all its neighbors as a discrete state $s$, compared
+    to previous studies that regard node $u_i$ as the state. The, the state $s_i \in
+    S$ is defined by a vector $(C_{u_i,b_1}, ..., C_{u_i,b_m})$.
+
+
+    - 2) Action: In routing process, node $u_i$ who has the packet needs to select
+    a neighbor as the next hop to forward the Packet. At time slot $t$, we define
+    an action $a_i \in A$, where $B$ is the set of neighbors. Action $a_i$ chooses
+    the selected neighbor to forward the packet.
+
+
+    - 3) Reward: To achieve reliable and timely data transmission, we introduce a
+    new concept of reliable reward, which is based on not only the distance but also
+    link quality. The reliable distance $D_{u_i,j}$ is calculated as:
+
+
+    $D_{u_i,j} = \frac{d_{u_i,j}}{d_{u_i,b_j}} \times (1 - PER_{u_i,b_j}) \quad (1)$
+
+
+    $r_i = \begin{cases} R_{max} - R_{max} & \text{when neighbor } b_j \text{ is the
+    local minimum} \\ \omega D_{u_i,b_j} + (1-\omega) E_{u_i,b_j} & \text{if } c_{u_i,b_j}
+    < c_{min} \end{cases} \quad (2)$
+
+
+    Where $d_{u_i,j}$ is the distance between $u_i$ and the destination, and $d_{u_i,b_j}$
+    is the distance between $u_i$ and neighbor $b_j$. $PER_{u_i,b_j}$ is the packet
+    error rate of the link between $u_i$ and neighbor $b_j$; $c_{u_i,b_j}$ is the
+    expected connection time of the link between $u_i$ and neighbor $b_j$. $R_{max}$
+    is the maximum reward value, $c_i$ and $E_{u_i,b_j}$ are the remaining and initial
+    energy of neighbor $b_j$, respectively. $\omega \in (0, 1)$ is used to adjust
+    the impact of reliable distance $D_{u_i,j}$ in reward. If the reliable distance
+    is the destination, the maximum reward $R_{max}$ is used; when the reliable reward
+    is negative to avoid a cycle when neighbor $b_j$ is local minimum (i.e., when
+    all neighbors of $u_i$ are further from the destination).
+
+
+    To adapt the dynamic networks with the feature of the topology changes, ARDeep
+    adopts the distributed routing decision mechanism, where routing decisions are
+    constructed to include of routing path in network.
+
+
+    # IV. ARDEP DESIGN
+
+
+    ARDeep is implemented by an alternative approach where DQN is executed at each
+    node, while training of DQN is centralized to simpel implementation.
+
+    '
+  mdcn: '
+
+
+    # ARdeep: 基于深度强化学习的移动机器人网络自适应可靠路由协议
+
+
+    Jianmin LIU *1, QI WANG*, Chaoenta HE *1, Yongjun X *
+
+
+    *中国科学院计算技术研究所，北京，中国
+
+    †中国科学院，北京，中国
+
+    Email: [liujianmin82, wang008, heentaox, xyj]@ict.ac.cn
+
+
+    **摘要—连接多个无人机（UAVs）等多个机器人设备的移动机器人网络需要能够处理间歇性连接链路和频繁变化的机器人网络不稳定性的协议。** 本文提出了一种基于深度强化学习的自适应可靠路由协议
+    ARdeep。我们用马尔可夫决策过程模型对路由决策进行建模以适应网络环境并做出路由决策。结果表明，ARdeep 的性能优于现有的高性能 QGeo 和传统的
+    GPR。
+
+
+    **索引词—** 路由，深度强化学习，Deep-Q (DQN)，移动机器人网络
+
+
+    能够自适应设计路由决策的自适应且高度自主的路由协议是。
+
+
+    在工作中，我们用马尔可夫决策过程（MDP）模型对路由决策过程进行建模，以自动表征网络变化，并提出了 ARdeep，一种基于深度强化学习（DRL）的移动机器人网络自适应可靠路由协议。ARdeep
+    是一种分布式且基于地理的路由协议，每个节点根据本地上下文分布式地做出最优路由决策。我们使用一个包含邻居与目的地之间的距离、邻居节点、数据包错误率（PER）以及链路预期连接时间的簇状态向量。在通用强化学习（RL）中，我们使用
+    DRL 来学习最优策略，因为 RL 能够处理大型状态空间。此外，我们提出了一种先进方法，将深度 Q 网络（DQN）分布在每个机器人节点上，同时将 DQN 训练集中以提高实现稳定性。
+
+
+    # I. 引言
+
+
+    随着传感器、计算技术和如无人机等移动机器人设备的进步，无人机（UAV）为未来的服务提供了机会。移动机器人设备已广泛应用于运输和监控等领域 [4]。移动机器人网络作为一种高速移动机器人网络，允许设备之间在不需要任何固定基础设施的情况下进行通信。它可以控制机器人设备的自主移动并支持机器人之间的通信。然而，由于高速移动节点导致拓扑结构变化以及通信不稳定，网络在移动机器人网络中仍然是一个具有挑战性的问题。
+
+
+    现有的基于拓扑的路由协议和基于地理的路由协议限制了路径选择，由于对动态环境变化的缺乏理解，在这种动态环境中也难以使用。在移动机器人网络中，频繁的拓扑变化可能需要实时更改路由决策以适应网络变化。因此，
+
+
+    # II. 相关工作
+
+
+    基于拓扑的路由协议利用拓扑信息来维护最新表。LTOL[8] 是一种主动路由协议，考虑了流量因素和链路质量，以为飞行自组网络（FANETS）提供高效的通信。Ganghuk
+    等人 [1] 提出了基于响应式协议 AODV [9] 的鲁棒可靠路由协议（PAR），它使用双向和定向路由机制来满足某些 FANETs 的需求。然而，由于动态网络环境中拓扑结构的频繁变化，基于拓扑的路由协议往往会增加开销。地理路由是减少路由开销的主要解决方案之一。基于位置的路由（LAR）[5]
+    被提出限制请求路由来控制路由开销。KAR 等人 [3] 仅通过邻居的位置为 GPSR 提出了贪婪周边界状态以减少路由设置延迟。尽管这些地理协议减少了开销，但由于对动态变化特性的缺乏理解，它们限制了路由路径的选择。
+
+
+    为了解决这个问题，机器学习算法被引入到路由协议中。关于基于 RL 的路由协议有值得关注的研究。[Qgrid12] 是一种基于网格的自组网络地理路由，它选择最优的下一跳网格，并选择特定的车辆来携带下一跳网格信息。Pogeo
+    [26] 是一种基于 Q-learning 的无人网络地理路由协议。它在路由中考虑了链路质量和错误率以提高数据包交付率。然而，现有的大多数基于 RL 的协议在转发时忽略了链路状态，这使得它们难以捕捉链路状态的变化，导致对网络变化的适应性较低。
+
+
+    # III. 定义与模型
+
+
+    ### A. 问题定义
+
+
+    在本文中，我们考虑了多设备移动机器人网络中从源到目的数据传输的路由优化问题。我们定义了一个向量 $C_{u_i} = (c_{u_i,b_j}, PER_{u_i,b_j})$
+    来表征节点 $u_i$ 与其邻居 $b_j$ 之间的链路，其中 $c_{u_i,b_j}$ 代表链路的预期连接时间，$PER_{u_i,b_j}$ 代表邻居
+    $b_j$ 与目的地之间的数据包错误率（PER）。同时，考虑了两个邻居 $b_i$ 和 $j$ 之间的最小距离 $d_{min}$。
+
+
+    ### B. MDP 模型
+
+
+    本文中，我们用马尔可夫决策过程（MDP）对路由决策过程建模以适应网络时间变化。我们假设路由决策是以时间槽为单位执行的，每个时间槽设置为 1，从源到目的地的路由过程的总时间槽为
+    T。那么，任务目标是选择下一跳并将数据包转发到那里。在 ARDeep 中，MDP 的状态、动作和奖励函数定义如下：
+
+
+    - 1) 状态：我们假设在时间槽 $t \in \{1, 2, ..., T\}$，节点 $u_i$ 有 $m$ 个邻居。为了捕捉链路状态的变化，这些定义的链路由
+    $u_i$ 及其所有邻居组成一个离散状态 $s$，与之前将节点 $u_i$ 视为状态的研究相比。因此，状态 $s_i \in S$ 定义为向量 $(C_{u_i,b_1},
+    ..., C_{u_i,b_m})$。
+
+
+    - 2) 动作：在路由过程中，拥有数据包的节点 $u_i$ 需要选择一个邻居作为下一跳来转发数据包。在时间槽 $t$，我们定义动作 $a_i \in A$，其中
+    $B$ 是邻居集合。
+
+
+    - 3) 奖励：为了实现可靠及时的数据传输，我们引入了可靠奖励的新概念，它不仅基于距离，还基于链路质量。可靠距离 $D_{u_i,j}$ 计算如下：
+
+
+    $D_{u_i,j} = \frac{d_{u_i,j}}{d_{u_i,b_j}} \times (1 - PER_{u_i,b_j}) \quad (1)$
+
+
+    $r_i = \begin{cases} R_{max} - R_{max} & \text{当邻居 } b_j \text{ 是局部最小值时 \\ \omega
+    D_{u_i,j} + (1-\omega) E_{u_i,b_j} & \text{如果 } c_{u_i,b_j} < c_{min} \end{cases}
+    \quad (2)$
+
+
+    其中 $d_{u_i,j}$ 是 $u_i$ 到目的地的距离，$d_{u_i,b_j}$ 是 $u_i$ 与邻居 $b_j$ 之间的距离。PER_{u_i,b_j}$
+    是 $u_i$ 与邻居 $b_j$ 之间链路的数据包错误率；$R_{max}$ 是最大奖励值，$c_i$ 和 $E_{u_i,b_j}$ 分别是邻居 $b_j$
+    的剩余能量和初始能量。$\omega \in (0, 1)$ 用于调整可靠距离 $D_{u_i,j}$ 对奖励的影响。如果距离是目的地，则使用最大奖励 $R_{max}$；当可靠奖励为负时，以避免在邻居
+    $b_j$ 为局部最小值时产生环（即 $u_i$ 的所有邻居距离目的地都远时）。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    # DRL-Based Routing Decision
+
+
+    Routing Decision
+
+
+    | Neighbor Table |
+
+    |---|---|\| Position $l_i$ | $b_{i,des}$, $E_i$ |
+
+    | Position $l_j$ | Velocity $v_j$, $E_j$ |
+
+
+    ![](img/b044d4857b67ad2569632f230f0bb833_2_0.png)
+
+
+    Figure 1: Architecture of ARdee
+
+
+    it. we use the distance $d_u$, and the destination to normalize distance $db_{i,des}$
+    and $d_{min}$. $d_{ij}$ may be smaller than $db_{i,des}$ or $d_{min}$, we limit
+    the normalized $db_{i,des}$ and $d$ to 1, respectively. The Q-value to each neighbor
+    $b_i$ is calculated by the DQN with the normalized $C_{u,i}$, as the input. After
+    Q-values of all neighbors are obtained, the maximum Q-value is selected as the
+    next-hop to forward the packet.
+
+
+    and improve stability. In the execution procedure, a node who holds a packet selects
+    an action using DQN to determine the next-hop. After action is taken, the node
+    gets a reward from environment. In the training process, the centralized trainer
+    runs mini-batches from experience-memory to update parameters of DQN minimizing
+    its loss. After parameters are updated, centralized trainer sends updates to each
+    node. When node updates parameters of its DQN.
+
+
+    # V. PERFORMANCE ANALYSIS
+
+
+    In this experiment, we implemented our ARdee and compared it with existing good
+    protocol QoGo [2] and conventional GPR [38]. We evaluated the performance using
+    network simulator with Python 3.5 installed on ThinkPad E2460 with i5-6250U CPUs.
+    The DQN was built with back propagation network method which uses three layers,
+    and ReLU [7] and linear activation function was used in hidden layers and output
+    layer.
+
+
+    The simulation set is 1 km and a Gaussian Mobility (GMK) model is used to capture
+    the reality of mobile nodes. We adopted IEEE 802.11 for MAC protocol and omnidirectional
+    antenna with range. In the simulation, we randomly select five nodes as sources
+    to send a packet of 127Bytes to one station at a speed of 100 meters. Each link
+    is set to random in the range [0, 0.2]. The moving speed of nodes changes We use
+    the packet delivery ratio (PDR) and average end-to-end delay (average ED) to evaluate
+    the routing performance.
+
+
+    # A. Routing Node Decision
+
+
+    Each routing node can obtain its position and speed by a global positioning system
+    (GPS) or other localization methods. The HELLO message, including the position
+    of the node, speed and the remaining energy of the node, is exchanged among neighbors.
+    After receiving a HELLO message from some neighbors, node $b_i$ maintains its
+    neighbor table and updates the information of the position, speed and the remaining
+    energy of neighbor $b_j$ into its neighbor table. The information in the table
+    is used in routing decision process.
+
+
+    ![](img/b044d4857b67ad2569632f230f0bb833_2_1.png)
+
+
+    (a) PDR under different maximum speed
+
+
+    # B. DRL based decisions
+
+
+    In this paper, we calculate the Q-value of each neighbor (i.e. action) by step.
+    We represent the status of the link neighbor as an input of DQN, and the Q-value
+    of the neighbor as the output of DQN. That node $u$ with $m$ neighbors carries
+    a packet at time slot $t$. That node calculates each $C_{u,b_i}$ related to the
+    link between node and neighbor based on its neighbor table.
+
+
+    The vector $C_{u,b_i} = [d_{u,b_i}, PER_{u,b_i}, E_{u,b_i}, d_{min}]$ is described
+    in Section III-A. It is used to check the link and represent the link status.
+    Since $C_{u,b_i}$ has different dimensions and different units, we first normalize
+    the elements to the range of [0, 1] before using them as input of DQN to calculate
+    the Q-value. The value $C_{u,b_i}$ is normalized as:
+
+
+    ![](img/b044d4857b67ad2569632f230f0bb833_2_2.png)
+
+
+    (b) PDR under different number of nodes
+
+
+    $CT_{u,b_i} = \min(d_{u,b_i}/d_{min}, 1)$, where $CT_{min}$ is the maximum expected
+    time. Since the PER value of the initial of neighbor $b_i$ is in the range of
+    [0,1], we do not need to
+
+
+    Figure 2: rapid comparison of different routing protocols
+
+
+    467'
+  - '[PAGE 3]
+
+
+    ![](img/b044d4857b67ad2569632f230f0bb833_3_0.png)
+
+
+    (A) Average ED under different moving speed
+
+
+    In a word, under the dynamic networks with different moving speed of nodes and
+    different number of nodes, ARDeep outperforms the existing performing Qgeo and
+    conventional GPS.
+
+
+    # VI. CONCLUSIONS
+
+
+    Due to high-speed mobility and topology changes, network routing is still a challenging
+    problem in mobile robotics. In this paper, we propose a novel reinforcement learning
+    based adaptive and reliable routing protocol, ARDeep. In order to adapt to dynamic
+    network environment, we formulate the routing decision process within a MDP model
+    which allows to capture the link status, when making decisions, the PER, the expected
+    connection time of the link, the remaining energy of nodes and the distance between
+    the node and the destination, which allows ARDeep to better intersect networks.
+    Simulation results show ARDeep is more appropriate for forwarding decisions and
+    outperforms the existing Qgeo and conventional GPS.
+
+
+    ![](img/b044d4857b67ad2569632f230f0bb833_3_1.png)
+
+
+    (B) Average ED under different number of nodes
+
+
+    Figure 3: Comparison of different routing protocols
+
+
+    Fig.2(a) and (b) show the PDR of routing protocols under different moving speed
+    and different number of nodes. From the two, we see that ARDeep has the highest
+    PDR. Qgeo always tries to find the nearest neighbor to the destination to forward
+    packets by the lack of information, PDR degradation due to the lack of path. Although
+    Qgeo has high, PDR decreases due to the lack of link status. ARDeep considers
+    the link quality, expected connection of the link, remaining energy of the nodes
+    and the distance between the nodes and the destination, which allows ARDeep to
+    capture link changes and to make more reliable routing decisions. In return, a
+    link is selected to transmit data packets, resulting in higher PDR.
+
+
+    Fig.3(a) and (b) show the average ED of routing protocols under different moving
+    speed and different number of nodes. We see that GPS has the highest ever average
+    end-to-end delay due to relay mechanism to bypass the area. As nodes continuously
+    moves, the network topology changes and areas may be generated in the network
+    topology of the solution. In a word, ARDeep frequently adopts forwarding policy
+    instead of greedy forwarding due to the increase in link status. Although Qgeo
+    has low ED, ARDeep using Q-learning and packet selection in the calculation of
+    the reward value, average end-to-end time is still high because it cannot capture
+    the changes of link status to make more reliable routing decisions. Compared to
+    GPS and Qgeo, ARDeep is capable of capturing link status and predict the value
+    of area, in leading to lower end-to-end time.
+
+
+    This work was supported by the National Science Foundation of China (NSFC) under
+    No. 6160247.
+
+
+    # REFERENCES
+
+
+    +   [1] G. Ghangukh, A. P. Sheresha, and Y. Shao, "Robust and reliable routing
+    protocol for flying ad-hoc networks," IEEE Access, 2019, pp. 643-654,
+
+    [2] W. Jung, J. Kim, and Y. Ko, "Q-learning-based dynamic routing protocol for
+    mobile vehicle ad-hoc networks," IEEE Communications Letters, 2020, pp. 1225-1229,
+
+    [3] B. Karp and H. T. Kim, "Greedy perimeter routing for wireless networks," in
+    ACM MobiCom, 2003, pp. 2425-2432,
+
+    [4] S. J. Zhao, "A survey of wireless services," The Financial Times, Vol. 54,
+    no. 2, 2001,
+
+    [5] Y.-Bo Ko and H. Haathi, "Location-aided routing in mobile ad-hoc networks,"
+    IEEE International Conference on Computer Communications, 2021, pp. 1215-1218,
+
+    [6] D. S. Lucas, S. Duan, N. W. Du, and S. Chen, "Routing in flying ad-hoc networks:
+    A comprehensive survey," IEEE Communications Surveys & Tutorials, 2022, vol. 24,
+    no. 4, pp. 2030-2050,
+
+    [7] Y. Li and Y. Chung, "Analysis of two-layer neural networks for wireless ad-hoc
+    networks," 18th IEEE International Conference on Computer and Informatics (ICCI),
+    2017, pp. 71-76,
+
+    [8] X. Wang, Y. Zhang, and J. Li, "Ad-hoc dynamic routing in wireless networks,"
+    IEEE, 2003.
+
+    [9] K. Wang, F. Qi Russo, Y. Liu, J. Zhang, Z. An, and A. Fraboul, "Using deep
+    learning for wireless communications: A comprehensive review and analysis," IEEE
+    Access, vol. 13, no. 2, pp. 877-887, 2021.
+
+    [10] H. Kim, J. Wei, S. Huang, L. Zhou, and Q. Zhang, "Regular topology formation
+    based on artificial for mobile robotic networks," IEEE Transactions on Mobile
+    Computing, vol. 18, no. 10, pp. 2415-2429,
+
+
+    Authorized licensed use limited to: East California University. Download on June
+    18, 2021 at 04:56:50 UTC IEEE Xplore. Exceptions'
+  md: '
+
+    # DRL-Based Routing Decision
+
+
+    Routing Decision
+
+
+    | Neighbor Table | |
+
+    | :--- | --- |
+
+    | Position $l_i$ | $b_{i,des}$, $E_i$ |
+
+    | Position $l_j$ | Velocity $v_j$, $E_j$ |
+
+
+    ![](img/b044d4857b67ad2569632f230f0bb833_2_0.png)
+
+
+    Figure 1: Architecture of ARdee
+
+
+    it we use the distance $d_u$, and the destination to normalize distance $db_{i,des}$
+    and $d_{min}$. $d_{ij}$ may be smaller than $db_{i,des}$ or $d_{min}$, we limit
+    the normalized $db_{i,des}$ and $d$ to 1, respectively. The Q-value to each neighbor
+    $b_i$ is calculated by the DQN with the normalized $C_{u,i}$, as the input. After
+    Q-values of all neighbors are obtained, the maximum Q-value is selected as the
+    next-hop to forward the packet.
+
+
+    and improve stability. In the execution procedure, a node who holds a packet selects
+    an action using DQN to determine the next-hop. After action is taken, the node
+    gets a reward from environment. In the training process, the centralized trainer
+    runs mini-batches from experience-memory to update parameters of DQN minimizing
+    its loss. After parameters are updated, centralized trainer sends updates to each
+    node. When node updates parameters of its DQN.
+
+
+    # V. PERFORMANCE ANALYSIS
+
+
+    In this experiment, we implemented our ARdee and compared it with existing good
+    protocol QoGo [2] and conventional GPR [38]. We evaluated the performance using
+    network simulator with Python 3.5 installed on ThinkPad E2460 with i5-6250U CPUs.
+    The DQN was built with back propagation network method which uses three layers,
+    and ReLU [7] and linear activation function was used in hidden layers and output
+    layer.
+
+
+    The simulation set is 1 km and a Gaussian Mobility (GMK) model is used to capture
+    the reality of mobile nodes. We adopted IEEE 802.11 for MAC protocol and omnidirectional
+    antenna with range. In the simulation, we randomly select five nodes as sources
+    to send a packet of 127Bytes to one station at a speed of 100 meters. Each link
+    is set to random in the range [0, 0.2]. The moving speed of nodes changes We use
+    the packet delivery ratio (PDR) and average end-to-end delay (average ED) to evaluate
+    the routing performance.
+
+
+    # A. Routing Node Decision
+
+
+    Each routing node can obtain its position and speed by a global positioning system
+    (GPS) or other localization methods. The HELLO message, including the position
+    of the node, speed and the remaining energy of the node, is exchanged among neighbors.
+    After receiving a HELLO message from some neighbors, node $b_i$ maintains its
+    neighbor table and updates the information of the position, speed and the remaining
+    energy of neighbor $b_j$ into its neighbor table. The information in the table
+    is used in routing decision process.
+
+
+    ![](img/b044d4857b67ad2569632f230f0bb833_2_1.png)
+
+
+    (a) PDR under different maximum speed
+
+
+    # B. DRL based decisions
+
+
+    In this paper, we calculate the Q-value of each neighbor (i.e. action) by step.
+    We represent the status of the link neighbor as an input of DQN, and the Q-value
+    of the neighbor as the output of DQN. That node $u$ with $m$ neighbors carries
+    a packet at time slot $t$. That node calculates each $C_{u,b_i}$ related to the
+    link between node and neighbor based on its neighbor table.
+
+
+    The vector $C_{u,b_i} = [d_{u,b_i}, PER_{u,b_i}, E_{u,b_i}, d_{min}]$ is described
+    in Section III-A. It is used to check the link and represent the link status.
+    Since $C_{u,b_i}$ has different dimensions and different units, we first normalize
+    the elements to the range of [0, 1] before using them as input of DQN to calculate
+    the Q-value. The value $C_{u,b_i}$ is normalized as:
+
+
+    ![](img/b044d4857b67ad2569632f230f0bb833_2_2.png)
+
+
+    (b) PDR under different number of nodes
+
+
+    $CT_{u,b_i} = \min(d_{u,b_i}/d_{min}, 1)$, where $CT_{min}$ is the maximum expected
+    time. Since the PER value of the initial of neighbor $b_i$ is in the range of
+    [0,1], we do not need to
+
+
+    Figure 2: rapid comparison of different routing protocols
+
+
+    467
+
+
+    ![](img/b044d4857b67ad2569632f230f0bb833_3_0.png)
+
+
+    (A) Average ED under different moving speed
+
+
+    In a word, under the dynamic networks with different moving speed of nodes and
+    different number of nodes, ARDeep outperforms the existing performing Qgeo and
+    conventional GPS.
+
+
+    # VI. CONCLUSIONS
+
+
+    Due to high-speed mobility and topology changes, network routing is still a challenging
+    problem in mobile robotics. In this paper, we propose a novel reinforcement learning
+    based adaptive and reliable routing protocol, ARDeep. In order to adapt to dynamic
+    network environment, we formulate the routing decision process within a MDP model
+    which allows to capture the link status, when making decisions, the PER, the expected
+    connection time of the link, the remaining energy of nodes and the distance between
+    the node and the destination, which allows ARDeep to better intersect networks.
+    Simulation results show ARDeep is more appropriate for forwarding decisions and
+    outperforms the existing Qgeo and conventional GPS.
+
+
+    ![](img/b044d4857b67ad2569632f230f0bb833_3_1.png)
+
+
+    (B) Average ED under different number of nodes
+
+
+    Figure 3: Comparison of different routing protocols
+
+
+    Fig.2(a) and (b) show the PDR of routing protocols under different moving speed
+    and different number of nodes. From the two, we see that ARDeep has the highest
+    PDR. Qgeo always tries to find the nearest neighbor to the destination to forward
+    packets by the lack of information, PDR degradation due to the lack of path. Although
+    Qgeo has high, PDR decreases due to the lack of link status. ARDeep considers
+    the link quality, expected connection of the link, remaining energy of the nodes
+    and the distance between the nodes and the destination, which allows ARDeep to
+    capture link changes and to make more reliable routing decisions. In return, a
+    link is selected to transmit data packets, resulting in higher PDR.
+
+
+    Fig.3(a) and (b) show the average ED of routing protocols under different moving
+    speed and different number of nodes. We see that GPS has the highest ever average
+    end-to-end delay due to relay mechanism to bypass the area. As nodes continuously
+    moves, the network topology changes and areas may be generated in the network
+    topology of the solution. In a word, ARDeep frequently adopts forwarding policy
+    instead of greedy forwarding due to the increase in link status. Although Qgeo
+    has low ED, ARDeep using Q-learning and packet selection in the calculation of
+    the reward value, average end-to-end time is still high because it cannot capture
+    the changes of link status to make more reliable routing decisions. Compared to
+    GPS and Qgeo, ARDeep is capable of capturing link status and predict the value
+    of area, in leading to lower end-to-end time.
+
+
+    This work was supported by the National Science Foundation of China (NSFC) under
+    No. 6160247.
+
+
+    # REFERENCES
+
+
+    - [1] G. Ghangukh, A. P. Sheresha, and Y. Shao, "Robust and reliable protocol
+    for flying-hoc networks," IEEE Access, 2019, pp. 643-654,
+
+    - [2] W. Jung, J. Kim, and Y. Ko, "Q-learning-based dynamic routing for mobile
+    ad-hoc networks," IEEE Communications Letters, 2020, pp. 1225-1229,
+
+    - [3] B. Karp and H. T. Kim, "Greedy perimeter routing for wireless networks,"
+    in ACM MobiCom, 2003, pp. 2425-2432,
+
+    - [4] S. J. Zhao, "A survey of wireless services," Financial Times, Vol. 54, no.
+    2, 2001,
+
+    - [5] Y.-Bo Ko and H. Haathi, "Location-aided routing in mobile ad-hoc networks,"
+    IEEE International Conference on Computer Communications, 2021, pp. 1215-1218,
+
+    - [6] D. S. Lucas, S. Duan, N. W. Du, and S. Chen, "Routing in flying ad-hoc networks:
+    A comprehensive survey," IEEE Communications Surveys & Tutorials, 2022, vol. 24,
+    no. 4, pp. 2030-2050,
+
+    - [7] Y. Li and Y. Chung, "Analysis of two-layer neural networks for wireless
+    ad-hoc networks," 18th IEEE International Conference on Computer and Informatics
+    (ICCI), 2017, pp. 71-76,
+
+    - [8] X. Wang, Y. Zhang, and J. Li, "Ad-hoc dynamic routing in wireless networks,"
+    IEEE, 2003.
+
+    - [9] K. Wang, F. Qi Russo, Y. Liu, J. Zhang, Z. An, and A. Fraboul, "Using deep
+    learning for wireless communications: A comprehensive review and analysis," IEEE
+    Access, vol. 13, no. 2, pp. 877-887, 2021.
+
+    - [10] H. Kim, J. Wei, S. Huang, L. Zhou, and Q. Zhang, "Regular topology formation
+    based on artificial for mobile robotic networks," IEEE Transactions on Mobile
+    Computing, vol. 18, no. 10, pp. 2415-2429,
+
+    '
+  mdcn: '
+
+
+    # 基于 DRL 的路由决策
+
+
+    路由决策
+
+
+    | 邻居表 | |
+
+    | :--- | --- |
+
+    | 位置 $l_i$ | $b_{i,des}$, $E_i$ |
+
+    | 位置 $l_j$ | 速度 $v_j$， $E_j$ |
+
+
+    ![](img/b044d4857b67ad2569632f230f0bb833_2_0.png)
+
+
+    图 1：ARdee 架构
+
+
+    我们使用距离 $d_u$ 和目的地来标准化距离 $db_{i,des}$ 和 $d_{min}$。由于 $d_{ij}$ 可能小于 $db_{i,des}$
+    或 $d_{min}$，我们分别将归一化的 $db_{i,des}$ 和 $d$ 限制为1。每个邻居 $b_i$ 的 Q 值通过 DQN 以归一化的 $C_{u,i}$
+    作为输入进行计算。获取所有邻居的 Q 值后，选择最大 Q 值作为下一跳来转发数据包。
+
+
+    并提高稳定性。在执行过程中，持有数据包的节点使用 DQN 选择动作来确定下一跳。采取动作后，节点从环境中获得奖励。在训练过程中，中心化训练器从经验内存中运行批处理（mini-batches）以更新
+    DQN 参数并最小损失。参数更新后，中心化训练器将更新发送到每个节点。当节点更新其 DQN 参数时。
+
+
+    # V. 性能分析
+
+
+    在本次实验中，我们实现了 ARdee，并将其与现有优秀协议 QoGo [2] 和传统 GPR [38] 进行了比较。我们在使用安装了 Python 3.5
+    的 ThinkPad E2460（配备 i5-6250U CPU）上的网络仿真器评估了性能。DQN 使用三层反传播网络方法构建，隐藏层和输出层使用了 ReLU
+    [7] 和线性激活函数。
+
+
+    仿真设置设置为 1 km，并使用高斯移动性（GMK）模型来捕捉移动节点的真实性。我们采用 IEEE 802.11 作为 MAC 协议，并使用带有范围的全向天线。在仿真中，我们随机选择五个节点作为源，以
+    100 米/秒的速度向一个站发送 127 字节的数据包。每条链路设置为 [0, 0.2] 范围内的随机值。节点的移动速度变化。我们使用包交付率（PDR）和平均端到端延迟（平均
+    ED）来评估路由性能。
+
+
+    # A. 路由节点决策
+
+
+    每个路由节点可以通过定位系统（GPS）或其他定位方法获取其位置和速度。HELLO 消息（包括节点的位置、速度和剩余能量）在邻居之间交换。在收到某些邻居的 HELLO
+    消息后，节点 $b_i$ 维护其邻居表，并将邻居 $b_j$ 的位置、速度和剩余能量信息更新到邻居表中。表中的信息用于路由决策过程。
+
+
+    ![](img/b044d4857b67ad2569632f230f0bb833_2_1.png)
+
+
+    (a) 不同最大速度下的 PDR
+
+
+    # B. 基于 DRL 的决策
+
+
+    在本文，我们逐步计算每个邻居（即动作）的 Q 值。我们将邻居链路的状态作为 DQN 的输入，邻居的 Q 值作为 DQN 的输出。假设节点 $u$ 拥有 $m$
+    个邻居并在时间隙 $t$ 携带数据包。该节点根据其邻居表计算与节点和邻居之间链路相关的 $C_{u,b_i}$。
+
+
+    向量 $C_{u,b_i} = [d_{u,b_i}, PER_{u,b_i}, E_{u,b_i}, d_{min}]$ 在节 III-A 中描述。它用于检查链路并表示链路状态。由于
+    $C_{u,b_i}$ 具有不同的维度和单位，我们在将其作为 DQN 输入计算 Q 值之前，首先将这些元素归一化到 [0, 1] 范围。值 $C_{u,b_i}$
+    的归一化方法如下：
+
+
+    ![](img/b044d4857b67ad2569632f230f0bb833_2_2.png)
+
+
+    (b) 不同节点数量下的 PDR
+
+
+    $CT_{u,b_i} = \min(d_{u,b_i}/d_{min}, 1)$，其中 $CT_{min}$ 是最大预期时间。由于邻居 $b_i$ 的初始
+    PER 值在 [0,1] 范围内，我们不需要。
+
+
+    图 2：不同路由协议的快速比较
+
+
+    467
+
+
+    ![](img/b044d4857b67ad2569632f230f0bb833_3_0.png)
+
+
+    (A) 不同移动速度下的平均 ED
+
+
+    简而言之，在节点移动速度和节点数量不同的动态网络中，ARDeep 优于现有的 Qgeo 和传统 GPS。
+
+
+    # VI. 结论
+
+
+    由于高速移动和拓扑变化，网络路由仍然移动机器人领域的一个具有挑战性的问题。在本文中，我们提出了一种基于强化学习的新自适应可靠路由协议 ARDeep。为了适应动态网络环境，我们在
+    MDP 模型中制定了路由决策过程，该模型在决策时能够捕捉链路状态、PER、链路的预期连接时间、节点的剩余能量以及节点与目的地之间的距离，从而允许 ARDeep
+    更好地跨越网络。仿真结果显示，ARDeep 更适用于转发决策，并且优于现有的 Qgeo 和传统 GPS。
+
+
+    ![](img/b044d4857b67ad2569632f230f0bb833_3_1.png)
+
+
+    (B) 不同节点数量下的平均 ED
+
+
+    图 3：不同路由协议的比较
+
+
+    图 2(a) 和 (b) 显示了路由协议在不同移动速度和不同节点数量下的 PDR。从这两点可以看出，ARDeep 具有最高的 PDR。Qgeo 因为缺乏信息，总是尝试寻找距离目的地最近的邻居来转发数据包，由于路径导致
+    PDR 下降。虽然 Qgeo 的 PDR 很高，但由于缺乏链路状态 PDR 会下降。ARDeep 考虑了链路质量、链路预期连接、节点剩余能量以及节点与目的地之间的距离，这使得
+    ARDeep 能够捕捉链路变化并做出更可靠的路由决策。相反选择选择链路来传输数据包，从而获得更高的 PDR。
+
+
+    图 3(a) 和 (b) 显示了路由协议在不同移动速度和不同节点数量下的平均 ED。我们看到由于中继机制绕过区域，GPS 具有最高的平均端到端延迟。随着节点的不断移动，网络拓扑发生变化，解决方案的网络拓扑中可能会产生空隙。简而言之，由于链路状态的增加，ARDeep
+    频繁采用转发策略而非贪婪转发。虽然 Qgeo 的 ED 较低，但 ARDeep 在计算奖励值未使用 Q-learning 和数据包选择，平均端到端时间仍然很高，因为它无法捕捉链路状态的变化以做出更可靠的路由决策。与
+    GPS 和 Qgeo 相比，ARDeep 能够捕捉链路状态并预测区域价值，从而导致更低的端到端时间。
+
+
+    此工作由国家科学基金（NSFC）资助，编号 6160247。
+
+
+    # 参考文献
+
+
+    - [1] G. Ghangukh, A. P. Sheresha, and Y. Shao, "Robust and reliable protocol
+    for flying-hoc networks," IEEE Access, 2019, pp. 643-654,
+
+    - [2] W. Jung, J. Kim, and Y. Ko, "Q-learning-based dynamic routing for mobile
+    ad-hoc networks," IEEE Communications Letters, 2020, pp. 1225-1229,
+
+    - [3] B. Karp and H. T. Kim, "Greedy perimeter routing for wireless networks,"
+    in ACM MobiCom, 2003, pp. 2425-2432,
+
+    - [4] S. J. Zhao, "A survey of wireless services," Financial Times, Vol. 54, no.
+    2, 2001,
+
+    - [5] Y.-Bo Ko and H. Haathi, "Location-aided routing in mobile ad-hoc networks,"
+    IEEE International Conference on Computer Communications, 2021, pp. 1215-1218,
+
+    - [6] D. S. Lucas, S. Duan, N. W. Du, and S. Chen, "Routing in flying ad-hoc networks:
+    A comprehensive survey," IEEE Communications Surveys & Tutorials, 2022, vol. 24,
+    no. 4, pp. 2030-2050,
+
+    - [7] Y. Li and Y. Chung, "Analysis of two-layer neural networks for wireless
+    ad-hoc networks," 18th IEEE International Conference on Computer and Informatics
+    (ICCI), 2017, pp. 71-76,
+
+    - [8] X. Wang, Y. Zhang, and J. Li, "Ad-hoc dynamic routing in wireless networks,"
+    IEEE, 2003.
+
+    - [9] K. Wang, F. Qi Russo, Y. Liu, J. Zhang, Z. An, and A. Fraboul, "Using deep
+    learning for wireless communications: A comprehensive review and analysis," IEEE
+    Access, vol. 13, no. 2, pp. 877-887, 2021.
+
+    - [10] H. Kim, J. Wei, S. Huang, L. Zhou, and Q. Zhang, "Regular topology formation
+    based on artificial for mobile robotic networks," IEEE Transactions on Mobile
+    Computing, vol. 18, no. 10, pp. 2415-2429,
+
+
+    '
+  merge: 0
