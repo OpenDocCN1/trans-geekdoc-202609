@@ -1,0 +1,645 @@
+- pgno: 0
+  md: '# # Research Application of Ensemble Learning Methods to the Problem of Multiclass
+    Classification of DDoS Attacks Identification
+
+
+    Denis Parfenev
+
+    Department of Applied Mathematics
+
+    Orenburg State University
+
+    Orenburg, Russia
+
+    parfenov.d@yandex.ru
+
+
+    Larisa Kuznetsova
+
+    Department of Applied Mathematics
+
+    Orenburg State University
+
+    Orenburg, Russia
+
+    larisa.2258@yandex.ru
+
+
+    Natalia Yishevskaya
+
+    Department of Applied Mathematics
+
+    Orenburg State University
+
+    Orenburg, Russia
+
+    natalia.yishevskaya1990@yandex.ru
+
+
+    Irina Dolgorova
+
+    Department of Applied Mathematics
+
+    Orenburg State University
+
+    Orenburg, Russia
+
+    ipblodorbina@yandex.ru
+
+
+    Arthur Zhalilov
+
+    Department of Applied Mathematics
+
+    Orenburg State University
+
+    Orenburg, Russia
+
+    leroy137@artur.com
+
+
+    Lara Lescheva
+
+    Department of Applied Mathematics
+
+    Orenburg State University
+
+    Orenburg, Russia
+
+    sligentir@gmail.com
+
+
+    **Abstract—** This article addresses the problem of network security. In the case
+    of identifying DDoS attacks, a multiclass classification was proposed based on
+    expanding the set of features using a specialized hashing algorithm for device
+    configuration files in the network of devices. Using the proposed approach, we
+    compared several machine learning methods to ensure security in the IT networks.
+    The approaches to multiclass classification proved effective in detecting attacks,
+    including the proposed hashing algorithm. As a pilot study, the article provides
+    a comparison of methods, and in the first classification, the one considered is
+    CatBoost, which performed better than the others in the experiments.
+
+
+    for their smart devices, and 35% who do not change their passwords before using
+    them |
+
+
+    Although the Internet of Things has been used actively for more than a decade,
+    the issue of security is still relevant. This is due to the increase in the number
+    of vulnerable entry points. Experts in the field of cybersecurity focus on these
+    types of attacks because they can cause damage and information attacks.
+
+
+    In recent circumstances, the definition of cyberattacks and their subsequent consequences
+    become relevant. With the use of Artificial Intelligence (AI) all you to make
+    computer tools more intelligent, enriching the knowledge of analysis, and reducing
+    the response time to threats.
+
+
+    **Keywords—**DDoS, hashing, Gradient Boosting, AdaBoost, Multiclass classification
+
+
+    This paper performs the classification of network traffic for various types of
+    DDoS attacks on the CICDoS2019 dataset [2].
+
+
+    # I. INTRODUCTION
+
+
+    In recent years, we have recorded a steady increase in attacks on the Internet
+    of Things (IoT). In 2019, along with Authorities representatives, the number of
+    cyberattacks on IoT devices increased by 300%.
+
+
+    The rest of the article is organized as follows. The second part provides a review
+    of existing literature on the topic. In the third part, the dataset is described,
+    and the method of multiclass classification is formulated. The fourth part contains
+    a brief description of the machine learning methods used to solve the problem.
+    The fifth part describes experimental studies and results. The last part gives
+    a conclusion.
+
+
+    Also, surveys conducted by Trustsoluk in 2017 the awareness of users of IoT devices
+    showed that than half of respondents do not use additional security measures
+
+
+    # II. RELATED WORKS
+
+
+    The study was carried out with funding of the RFBR in the scientific framework
+    of projects No. 25-07-53019, No. 20-07-01065 as well as a grant from the Russian
+    Federation for support of research conducted under the Program 2.250.2.2019 and
+    a grant from the Russian Federation for support of Russian scientists - conducted
+
+
+    Next, we review several scientific papers in which the focus is intrusion detection
+    with the use of the CICDoS2019 dataset are considered.
+
+
+    In [3], the authors review existing datasets for intrusion detection and propose
+    a new method for DDoS attacks. Besides, authors of this article created a new
+    dataset CICDoS2019, which includes 11 DDoS attacks based on a network of flow
+    characteristics.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: "The authors conducted a study of this dataset using common machine learning\
+    \ algorithms, namely ID3, Random Forest (RF), Naive Bayes, and logistic regression.\
+    \ The metrics were calculated: Precision, Recall, and F-score. The authors obtained\
+    \ the following: the best classification algorithm achieved values of the metrics\
+    \ - 78%, Recall - 65%, and F-score - 69%.\n\noptimizes the drop rate in the policy\
+    \ applied by the Central SDN controller. Comparative analysis shows that the method\
+    \ chosen by the authors achieved low-positive results of classification compared\
+    \ to Multi-Layer Perceptron (MLP) and Dense MLP showing accuracy - 94.5%, Precision\
+    \ - 93.3%, Recall - 95.7% and F-measure - 92.8.\n\nSo, the authors of the article\
+    \ [24] developed the Energy-Based Classifier (EFC) - a binary classifier of traffic\
+    \ based on energy, which is used for the construction of a structural model at\
+    \ the study time. This model is based on samples of good-quality traffic and is\
+    \ used for further classification by comparing energy threshold. This method allows\
+    \ you to identify the value of the F-score metric of the order of 96% and Area\
+    \ Under the Curve (AUC) metric of over 99%.\n\nThe analysis of the work allows\
+    \ us to conclude that the classification method used in CICDoS82019 is for research\
+    \ and testing of various systems and attacks to protect network intrusions. It\
+    \ is evident that the use of Machine Learning and Deep Learning methods to detect\
+    \ DDoS attacks can achieve fairly accurate results [9].\n\nThe relevance of this\
+    \ work lies in detecting illegitimate attacks based on changes in the hash values\
+    \ of individuals or device configurations in the network under consideration.\n\
+    \n# III. PROBLEM STATEMENT\n\nThe article [5] of [DDoSNet-system binary classification\
+    \ of traffic in Software-Defined Network (SDN)] is proposed, based on a Deep Learning\
+    \ method (DL), using an Autoencoder (AE) and a Recursive Neural Network (RNN).\
+    \ It achieved better performance in comparison with classical Machine Learning\
+    \ methods, such as Decision Tree (DT), Naive Bayes (NB), Booster Forest (RF),\
+    \ Support Vector Machine (SVM), and Logistic Regression (LR), leaving values of\
+    \ precision up to 99%.\n\nIn this paper, we consider the traffic classification\
+    \ problem to determine the type of DDoS using the CICDoS82019 dataset. This dataset\
+    \ contains results of attacks in CICDoS82019 information about different types\
+    \ of DDoS attacks. The characteristics of the attacks under study are described\
+    \ in the [10]. The considered DDoS attacks in the IoT network can be represented\
+    \ as the following figure:\n\n![](img/5e09c921f63a2bf0de70affe69784dbc_1_0.png)\n\
+    \nFig. 1. DDoS attacks in the IoT\n\nIn paper, the long-term memory (LSTM) FUZZ\
+    \ system is proposed, which is designed to detect DDoS attacks in SDN environments.\
+    \ The process of this system consists of three consecutive stages: (1) forecasting\
+    \ legitimate traffic using LSTM and RNN network; (2) detecting attacks using the\
+    \ fuzzy-logic tools; (3) identifying classified attacks by Automated Mitigation\
+    \ Technique. A comparative analysis of the solution proposed by the authors and\
+    \ ML-based methods shows that LSTM-FUZZ has better performance (2.2%) with high\
+    \ value: precision - 97.89%, Recall - 93.13%, and AUC - 96.22.\n\nThe authors\
+    \ of the [7] FirewallGuard scheme for identification DDoS attacks in the IoT-network\
+    \ have described an approach based on ML methods: LSTM and Convolutional Neural\
+    \ Network (CNN). It is effective at detecting, classifying and mitigating. In\
+    \ the course of study conducted by the authors, it was found that the proposed\
+    \ method achieved a DDoS attack detection of 98.9%, and accuracy of 99%.\n\nIn\
+    \ paper [8] a real-time SDN environment security system is proposed. The possibility\
+    \ of this system is that it prevents DDoS attacks coming from internal devices\
+    \ (IoT bot) on the network under and at the same time. The system consists of\
+    \ two modules: (1) detection and identification of intrusion based on CNN method\
+    \ using multidimensional flow analysis, (2) mitigation by the game theory (GT)\
+    \ method, which\n\nThe main purpose of DDoS attacks is to significantly slow down\
+    \ the system or restrict its functionality. They exploit the following features\
+    \ of DDoS attacks: high volume, changing the information about the attack source.\n\
+    \nIn this paper, we will research the class of DDoS attacks based on exploration.\
+    \ In this case we should follow to define a classifier that defines the types\
+    \ of DDoS attacks $f(Z): Z \rightarrow K$ and makes each traffic flow $z$ in the\
+    \ analyzed network set of all flows $Z, a, k$, identifying one or types of DDoS\
+    \ attacks. A set of class labels corresponds to the one type of attacks [DDoS\\\
+    _UDP, UDBGEN, WebDDoS, UDP\\_lag—\n\nThe traffic flow $z$ is described by describing\
+    \ the traffic characteristics $z = \\{x_1, x_2, ..., x_m\\}$, where $m$ is the\
+    \ number of recorded characteristics. DDoS attacks in networks are generally carried\
+    \ out using compromised devices. Devices controlled by a single IoT controller\
+    \ can generate significant amounts of"
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'information. Within the framework of this study, it is proposed to identify
+    infected devices by carrying out an attack on the changes of information in their
+    configuration files. The difference between our study and the others is mainly
+    in the source data we present, in the availability of data to identify each device
+    in the network. Since we are not in a complete description of the device configuration
+    we highlight the parts where changes are most basic: Route Configuration, Network
+    Configuration, Configuring Security Features, Configuring a Firewall.
+
+
+    dataset. Note that traffic readings are taken simultaneously from all network
+    devices at regular intervals. The data collection for each network is individually
+    selected and recorded in the monitoring system.
+
+
+    To track changes in configuration parameters, it is convenient to represent it
+    as a single hash value, which is a combination of the hash values of each configuration
+    parameter under consideration. In this case, hashing is a fast way to compare
+    configuration data, as opposed to full-text comparison. Also, the time and quantitative
+    factors (about 84 characteristics in total) are important data for us in the characteristics
+    of the
+
+
+    The idea of classification is as follows:
+
+
+    +   1. Represent initial changes of the network devices as a hash value.
+
+    2. In the case of change of configuration settings, it is necessary to replace
+    the hash value.
+
+    3. Track the changes of this configuration from the initial to the next one (taking
+    a timestamp).
+
+    4. To conclude on the direction of change: whether the change is malicious in
+    nature, or legitimate.
+
+
+    A block diagram of the mechanism for detecting and classifying DDoS attacks in
+    the network study is shown in Fig. 2.
+
+
+    ![](img/5e09c921f63a2bf0de70affe69784dbc_2_0.png)
+
+
+    Fig. 2. A block diagram of the mechanism for detecting and classifying DDoS attacks
+    in the network
+
+
+    # IV. MACHINE LEARNING METHODS
+
+
+    High-quality data is a prerequisite for building forecasting models. Therefore,
+    the dataset used to train the data were prepared and cleared; outliers and implicit
+    duplicates were detected and deleted, and missing data was produced by interpolation
+    method data. However, some outliers were excluded: ‘ID’, ‘Destination Port’, ‘SimHarp’,
+    ‘Source Port’, ‘Destination Port’, ‘Timestamp’, ‘Source IP’, ‘Inbound’. Besides,
+    data balancing was previously applied to the dataset (Sampling Method ADASYN [11]).
+    The dataset is increased to 80% for training and validation and 20% for
+
+
+    To detect abnormal traffic, we suggest using the following machine learning methods:
+
+
+    +   1. Gradient Boosting is a machine learning method that creates a crucial prediction
+    model in the form of an ensemble of weak predictions, using decision trees. It
+    builds the model sequentially, adding new models to previous ones to correct errors
+    made by previous predictors [12].
+
+
+    +   2. Adaptive Boosting (AdaBoost) typically uses weak classifiers. After each
+    call, the distribution of weights corresponding to the importance of each of the
+    training set objects for classification. At each iteration, the weights of misclassified
+    objects increase, so the performance of basic classifiers focuses on these objects
+    [13].
+
+
+    +   3. Chaos is a machine learning method based on boosting using decision trees.
+    During training, a set of decision trees is built with less compared to the previous
+    ones. The number of trees is controlled by the starting parameters. The peculiarity
+    of this algorithm is it is well suited for working with heterogeneous data. Also,
+    it can take into account categorical features [14].
+
+
+    # V. EXPERIMENTS
+
+
+    Machine learning for Big Data operate with continuous information flows from online
+    sources (applications, devices, users) constantly send data, and process them
+    as they arrive. An example of such is shown in Fig. 3.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/5e09c921f63a2bf0de70affe69784dbc_3_0.png)
+
+
+    Fig. 3. A prototype of machine learning systems for Big Data analysis of network
+    traffic
+
+
+    The input data to the machine learning systems for Big Data comes from the network
+    devices. This system includes the following:
+
+
+    +   - The “Gateway for receiving traffic data to the data warehouse” allows us
+    to interact with existing sensors and IoT devices and provides a bridge between
+    the local communication network, cloud computing power, and visualization devices.
+
+    - The “Data Warehouse” is a storage location for the raw data.
+
+    - Raw data in structured and unstructured forms is sent for further preliminary
+    statistical processing, which is performed using the appropriate method to prepare
+    data for effective use in machine learning. At this stage, each record corresponds
+    to the configuration of an individual network device.
+
+    - “Highlighting significant features in the network traffic reduces the size of
+    the original dataset to manage manageable groups (functions) for further processing,
+    which helps solve performance problems on high-speed networks without significantly
+    affecting the accuracy of identifying attacks.
+
+    - Using the “Binary statistical traffic analyzer” module, incoming traffic is
+    monitored to detect abnormal activity, binary classification of traffic into legitimate
+    and abnormal.
+
+    - The “Predictive statistical and machine learning” model defines a class of traffic
+    using analysis methods that focus on predicting the future behavior of objects
+    and subjects to make optimal decisions.
+
+    - The “Accuracy check” evaluates the accuracy of traffic classification using
+    various methods.
+
+
+    To evaluate the effectiveness of the Gradient Boosting, AdaBoost, and CatBoost
+    classifiers, a comparative analysis of the classification results was performed
+    for this purpose, the following metrics were calculated: F1-score, Recall, and
+    Precision:
+
+
+    ```
+
+    Recall = \frac{tp}{tp + fn}
+
+    ```
+
+
+    ```
+
+    Precision = \frac{tp}{tp + fp}
+
+    ```
+
+
+    ```
+
+    F1 = 2 \times \frac{(Precision \times Recall)}{(Precision + Recall)}
+
+    ```
+
+
+    where tp is the number of true positives, fp is the number of false positives
+    and fn is the number of false negatives.
+
+    All calculations were implemented using Python using Gradient Boosting, AdaBoost,
+    and CatBoost. To do this, we re-encode the label of traffic instance classes to
+    the “attack” / “non-attack” classes. The analysis of the results shows that CatBoost
+    gets good performance. Table 1 shows the numerical value of the metrics obtained
+    including the characteristics of these metrics that were obtained in the work
+    [4], [5], and [8].
+
+
+    # TABLE 1: COMPARISON OF CLASSIFICATION METRICS
+
+
+    | Paper | Methods | F1-score | Recall |
+
+    |---|---|---|--|
+
+    | C. Pointe, S. Monteiro, G. Gondim, and M. Marota [4] | Energy-based Flow Classifier
+    | 90% | |
+
+    | M. S. Elsayed, N. A, L. Sun, and A. D. Jerome [5] | DL + AE | 99% | 99% |
+
+    | O. V. A. Melo, L. F. Camargo, J. P. P. Rodrigues, J. Oliveira, O. L. Preença
+    [6] | CNN DL-method + Gamma Theory | 93.3% | 95.7% | 92.8%
+
+    | CatBoost (Hashing - CatBoost) | CatBoost | 99.1% | 99.3% | 99% |
+
+
+    Note that our approach also achieved numerical value of the metrics obtained more
+    than 99% and showed the best result of the binary classification of network'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Normalized confusion matrix
+
+
+    traffic classification allows you to uniquely identify signs of an attack on a
+    network. Also, in terms of performance, the solutions have low computational requirements.
+    After evaluating the consumption of computing resources, it was found that binary
+    classification using the identified methods, the CPU load is <15%, the RAM load
+    is <17.5%, while the processing delay does not increase by more than 20%. For
+    effective network security and protection measures, specific attack classes need
+    to be identified. In the future, performance readings obtained on the binary classification
+    can be used as reference values for comparison with other methods.
+
+
+    ![](img/5e09c921f63a2bf0de70affe69784dbc_4_0.png)
+
+
+    The next of our experimental research investigating the multiclass classification
+    of network traffic. The results of the studies for all the considered features
+    of the dataset are shown in Fig. 4.
+
+
+    # Normalized confusion matrix
+
+
+    ![](img/5e09c921f63a2bf0de70affe69784dbc_4_1.png)
+
+
+    ![](img/5e09c921f63a2bf0de70affe69784dbc_4_2.png)
+
+
+    According to the results, the best classifier among the considered methods is
+    CatBoost, which reaches precision 97.1%, F1-score 96.9% and Recall 97.4%. Also
+    confusion matrices allow us to confirm that both CatBoost and Gradient Boosting
+    classifiers correlate data more accurately than the AdaBoost classifier. Note
+    that the Gradient Boosting classifier also performs relatively accurately (97.1%,
+    F1-score = 96.8%). On this dataset, AdaBoost showed the worst result, exceeding
+    62% of the considered methods, and is inaccurate in classification of DDoS attacks.
+    In terms of performance and resource consumption, multiclass classification on
+    the dataset consumes on 25% more computing resources than a binary classification.
+    At the same time, latency is decreased by 1.5%.
+
+
+    The normalized accuracy output quality of evaluating the Gradient Boosting, AdaBoost,
+    and CatBoost classifiers on the dataset are shown in Fig. 5.
+
+
+    # Normalized confusion matrix
+
+
+    Now, we will determine how classification results change based on the most significant
+    features under consideration. To determine this, we will use the Extra Trees Classifier
+    method, setting the significance level to 0.01. In Fig. 8 histogram of the feature
+    importance is shown.
+
+
+    ![](img/5e09c921f63a2bf0de70affe69784dbc_4_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/5e09c921f63a2bf0de70affe69784dbc_5_0.png)
+
+
+    Fig. 8. Feature importance with extra trees classifier
+
+
+    Thus, the feature values for feature importance are shown in Fig. 9.
+
+
+    ![](img/5e09c921f63a2bf0de70affe69784dbc_5_1.png)
+
+
+    | Method | Precision | Recall | F1 |
+
+    | :--- | :--- | :--- | :--- |
+
+    | I. Sharafaddin, A. H., Lashkati, S., Sakaei, and A. Ghorbani | ID3 | 78% | 65%
+    | 69% |
+
+    | M. P. Novaes, L. Carvalho, J. Loeb, and M. Prost | LSTM and RNN method + Fuzzy
+    Logic | 97.9% | 93.1% | |
+
+    | Y. Jia, F. Zhang, Alrawais, B. Gong, and S. Choi | LSTM + CNN | 99.47% | 93.91%
+    | 99.35% |
+
+    | CatBoost | 96.7% | 96.8% | 97.0% |
+
+
+    the accuracy of the result, at the same time, it increases the efficiency of identification
+    in terms of computational resources, which are very valuable at the high intensity
+    of DDoS attacks.
+
+
+    # TABLE II COMPARISON OF MULTICLASFICATION METRICS
+
+
+    Table II shows a comparison of the numeric values of the Precision, Recall, and
+    F1-score metrics obtained using Catboost and the metrics obtained in the articles
+    [3], [6], and [7].
+
+
+    ![](img/5e09c921f63a2bf0de70affe69784dbc_5_2.png)
+
+
+    | Method | Precision | Recall | F1 |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Gradient Boosting | 0.97 | 0.95 | 0.96 |
+
+    | Random Forest | 0.96 | 0.92 | 0.93 |
+
+    | CatBoost | 0.97 | 0.98 | 0.97 |
+
+
+    Fig. 9. Comparison of the metrics of the machine learning methods using the most
+    important features of the dataset with different hardware configuration of device.
+
+
+    According to the table, the following conclusions allow us to achieve better results,
+    but the authors of article [7] observed classification accuracy higher by 2.7%,
+    precision, 2%, for Recall and 2.35% for F1-score. Note also that in article [6],
+    the value of the Precision metric is 1.19% higher than the value used. This result
+    could be due to the authors of article who have not taken into account the redundancy
+    of features, which we managed to avoid by excluding them from consideration. It
+    should be noted that the metric values obtained by us are higher than in article
+    [3] for Precision by 10.7%, for Recall by 31.8% and 28.8% for F1-score, and for
+    Recall in article [6] by 36.7%.
+
+
+    # CONCLUSION
+
+
+    In this paper, three different learning models have been implemented: Boosting,
+    AdaBoosting, and CatBoost for detecting-DDoS attacks using the CICDoS2019 dataset,
+    as well as a multiclass classification of traffic data. For a binary and multiclass
+    classification of traffic carried out, it was found that CatBoost is the best
+    among others with an accuracy of 99.1%, F1-grade 99%, and Recall 99.3. We also
+    found that CatBoost also performs better than other methods with Precision 96.7%,
+    Recall - 96.8%, and in the case of classification on a reduced dataset. Note that
+    the gradient boosting classifier also showed high results with Precision = 62.2%,
+    Recall = 63%, and F1-score = 47.2%, and Recall = 52.5%. Also, during the most
+    important features identified using the method of additional classifier trees,
+    it was found that the classifiers the accuracy of the CatBoost and Gradient booster
+    deteriorated over the classification in all aspects.
+
+
+    It was found that the quality of classification is important for the method used.
+    The results are follows: Precision = 62.2%, F1-score = 62.4% and Recall = 63%.
+    However, the other classifiers CatBoost and Gradient Boosting showed results such
+    as: Precision decreased by 0.1%, Recall by 0% and F1 by 1%, and Boosting decreased
+    by 0.4%, Recall by 0.1% and F1-score by 4%. After CatBoost, reducing the set of
+    features made it possible to reduce the resources needed during analysis by an
+    average of 11.5% of the approach to identifying DDoS attacks on a full set of
+    features. This performance is gained because the hashing algorithm performs the
+    features of memory trace classification, for specific types of attacks. Thus,
+    we can say that even though the proposed method somewhat we'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'difference between us was no more than 1%, the performance analysis showed
+    that the reduction in features made it possible to reduce the consumption of resources
+    when analyzing data by 11.5% about identifying DDoS attacks on the basis of features.
+    Thus, we can conclude that our presentation of data for classification, based
+    on the use of the characteristics of network traffic and configuration files of
+    the service is sufficiently accurate and reliable results with sufficiently high
+    performance. Further work is aimed at developing algorithms by an ensemble of
+    machine learning to achieve more accurate results of classification.
+
+
+    Multimedia networks (IEEE WomNet2020), CCNSP2020
+
+    Workshop, 6, p. 2020.
+
+
+    # REFERENCES
+
+
+    +   [1] "IoT Security: A Coming Crisis?", TruSense, San Jose, CA, USA, Sept, 2017.
+    Oct. 10, 2020. [Online]. Available: https://securityblog.wordpress.com/2019/07/iot-security-survey-microsoft.pdf
+
+
+    +   [2] M. Norouzi, A. Gallo, J. Lirot, and M. L. Prenaea "Short Term Memory and
+    LSTM For Anomaly Detection and Mitigation in Software-Defensive Network Environment,"
+    in IEEE Access, pp. 83765-83780, 2021.
+
+
+    +   [3] I. Shaffahdin, A. H. Lashkari, S. Hakak, and A. A. Ghorbani, "Developing
+    Realistic Distributed Denial of Service (DDoS) Attack Dataset for Deep Learning,"
+    in Proc. IEEE International International Conference on Security Technology, 2019,
+    p. 8-9.
+
+
+    +   [4] S. Zohrab, A. Ghorbani, B. Gong, and X. Cheng, "Cloud-Based Defense Against
+    IoT Attacks," in IEEE International Conference of Information Systems, 11, p.
+    1-5, 2019.
+
+
+    +   [5] DDoS evaluation dataset (CICDDoS2019), Institute for Cybersecurity, 2019.
+    [Online]. Available: https://www.unb.ca/datasets/cicddos2019
+
+
+    +   [6] M. L. Prenaea, J. Carillo, J. J. P. Rodrigues, J. Lirot, and M. Gallo,
+    "Security system applied to IoT networks using convolutional security neural network,"
+    in Proc. 2020 15th International International Conference on Computer and Applications
+    (ICCA), p. 1-6, September 2020.
+
+
+    +   [7] M. S. Elsayed, N.-A. Le-Kac, S. Dev, and A. D. Juret, "DDoSNet: A Deep-Learning
+    Model for Detecting Network Attacks," in Proc. IEEE International Symposium on
+    Wireless of Mobile, and Multimedia
+
+
+    +   [8] V. Lakhova, N. Infeloni, B. Bodorina, T. Vorchin, A. Zholiev, "Developing
+    realistic dataset of cyberattacks detection based on the analysis of device states
+    in the telecommunications system," in IEEE International Conference on Engineering
+    and Information Sciences (SIHIRCON), pp. 67-72, 2020.
+
+
+    +   [9] A. H. Lashkari, S. Hakak, and A. A. Ghorbani, "Developing realistic distributed
+    denial of service (DDoS) attack dataset and taxonomy," in Proc. IEEE ICCST, vol.
+    8, p. 1-8, 2020.
+
+
+    +   [10] H. He, Y. Bai, A. E. Garcia, S. Li, ADASYN: adaptive sampling for imbalanced
+    learning," in 2008 IEEE Third International Conference on Neural Networks and
+    IEEE World Conference on Computational Intelligence, pp. 1322–1328, 2008.
+
+
+    +   [11] J. H. Friedman, R. Schapire, "Greedy function approximation: a gradient
+    boosting machine," pp. 99–120, 1999.
+
+
+    +   [12] Y. Freund, R. Schapire, "A Decision-Theoretic Generalization of Online
+    Learning and an Application to Boosting," in Proceedings of the Second International
+    Conference on Computational Learning Theory, Springer, Berlin, p. 23–37, 1995.
+
+
+    +   [13] A. V. Dongushah, E. Ershov, A. Gulin, "CatBoost: gradient boosting with
+    categorical features," 2017, arXiv:1706.09511'
+  merge: -1
+  img_proc: true
