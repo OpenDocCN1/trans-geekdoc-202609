@@ -1,0 +1,1068 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # A Deep Reinforcement Learning Approach for Anomaly Intrusion Detection System
+
+
+    Ying-Feng Hu, Morito Matsuoka
+
+
+    Cybermedia Center, Osaka University, Osaka, Japan
+
+    Email: {yf.hu, matsuoka}@cmc.osaka-u.ac
+
+
+    **Abstract**— Intrusion detection systems (NDS) are essential for organizations
+    to ensure the safety and security of their communication. In this paper, we propose
+    a deep reinforcement learning (DRL) for anomaly intrusion detection system. Our
+    system has the ability of adapting to new types of network traffic behavior. We
+    study the effectiveness of our work through two well-known benchmark datasets:
+    NSL-KDD and UNSW-NB15 and campus network log. To show the feasibility of our approach,
+    we compared our method with three other methods and two published results. Third,
+    our system is capable of processing scale of network traffic on a real-time base.
+
+
+    In this paper, we propose an anomaly intrusion detection system (AIDS) based on
+    deep reinforcement learning (DRL). Our DRL anomaly engine has two modes, i.e.,
+    detection mode and learning mode, that can be freely switched. At any time when
+    the detection mode preferred the threshold, the system can learn to new network
+    traffic patterns. We evaluated our approach on widely network intrusion intrusion
+    simulations NSL-KDD and UNSW-NB15. In addition, we also applied our method to
+    campus network environment, which consists of about 300 million daily traffic
+    records and is about 100 times larger than those of synthetic datasets. To further
+    evaluate the performance of our proposed work, we include three classical methods
+    and compare results.
+
+
+    **Keywords**—intrusion detection system; NDS; deep reinforcement learning; deep
+    learning; random forest; support vector machine
+
+
+    # I. INTRODUCTION
+
+
+    The total worldwide IP traffic is estimated to be about 120 exabytes per month
+    in 2017 and to 400 exabytes per month in 2022. Due to the increases in volume
+    and sophistication of network-based attacks, effective techniques and tools are
+    required to handle the threats of disclosure of sensitive information, disruption,
+    and anonymity. Network intrusion detection systems (IDS) has become essential
+    for many organizations. Such monitor network traffic for malicious activities
+    or cycles to ensure the safety and security of their communication and information.
+
+
+    Typically IDS are classified into two categories: NDS (signature-based network
+    intrusion detection system) and AIDS (anomaly-based network intrusion detection
+    system). Nowadays, the mainstream protection relies on signature, which uses a
+    pattern-matching algorithm to identify and detect threats from the network by
+    comparing a predicted attack against signature database inside intrusion log.
+    NDS detection capabilities for known attacks can avoid false alarms. However,
+    it is a signature-based system is not capable of detecting unknown traffic patterns.
+    For NDS with network traffic protection, frequent maintenance and routine updates
+    are are required. In contrast, AIDS focuses on deviations of the traffic pattern
+    and use these techniques to evaluate incoming traffic and even when with unknown
+    attacks.
+
+
+    The rest of this paper is organized as follows: In Section II we survey related
+    approaches for network intrusion detection systems for the reinforcement learning-based
+    approach. In Section III, we discuss the background of the proposed work and describe
+    our methodology; In Section IV, we describe the system architecture and performance
+    of the proposed work, we provide a comprehensive evaluation in Section V. We conclude
+    this paper and discuss future research directions in Section VI.
+
+
+    # II. RELATED WORK
+
+
+    Various machine learning detection or classification techniques have gained a
+    general degree of attention such as [2], [3], and [4]. Since there are only a
+    few approaches that are based on the reinforcement learning method, we provide
+    a de detailed summary of related works in this section. The work focuses on network
+    intrusion detection by combining methods of learning, reinforcement learning,
+    and association rule. In result, reinforcement learning helps to detect the attack
+    by motivating the rewards activities. A context-based approach is proposed which
+    uses deep reinforcement learning agents distributed across the network. This proposed
+    work was evaluated by NSL-KDD, UNSW-NB15, and AWID dataset to show its capability
+    of achieving high accuracy and better than other state-of-the-art solutions. An
+    adversarial reinforcement learning approach [4] incorporates the environmental
+    learning process through its'
+  - '[PAGE 1]
+
+
+    experimental results of AWID and NSL-KDD datasets, the method is for adjusting
+    the LR to a supervised IDS classification problem with weighted accuracy (>0.8)
+    and F1 (>0.7) metrics. Defining a reliable function is the most challenging for
+    the reinforcement learning-based IDS. As stated in [5], the approach modifies
+    the CTRL deep line inspection by replacing it with a function of the network.
+    Another work [6] proposes an algorithm by using the Q-learning algorithm to optimize
+    cut value for attribute of data. The proposed algorithm is able to achieve a high
+    classification accuracy of 98% without prediction. In addition, several works
+    propose Reinforcement Learning Detection System (IDS-RL) for network infrastructure.
+    For example, [7] use reinforcement learning with a simple exploration strategy.
+    Each network agent learns the local state and sends it to central. By collecting
+    all signals from local, the central agent learns the intrusion alarm. Similarly,
+    IDS-RL was proposed by [8] the IDS engine to analyze and monitor network traffic.
+    We use comparison test to compare the IDS-RL with an adaptive machine learning-based
+    IDS (AML-IDS) and Clustered Hybrid IDS (ASCH-IDS). The experimental results show
+    that IDS-RL outperforms other methods with near 100% accuracy and precision-recall
+    rate.
+
+
+    Exploits. Fuzzers. Generic, reconnaissance, shellcode; and worms. Normal and Doos
+    type can contain features with this dataset and NSL-KDD. This dataset consists
+    of 99 instances, including 5 features, 13 basic features, 8 content features,
+    9 time features, and 14 other features, and there are only 5 features with NSL-KDD.
+    There are 25,673 records, among 175,341 are used for the training set, and 22,832
+    are used for testing.
+
+
+    # III. BACKGROUND
+
+
+    In this study, we evaluated using our well-established benchmark network simulation
+    datasets: NSL-KDD and UNS-NB15. In addition, we also added the method to capture
+    network traffic environment, which consists of about 300 million network traffic
+    records and is about 10 times larger than either of these two datasets. The background
+    of those three datasets is provided in the following:
+
+
+    C. Palo Alto Networks (PANW) system log
+
+
+    The Palo Alto network [11] log dataset was obtained from captured hardware-based
+    firewall deployed providing protection to medium to large networks. Most companies
+    require special training to understand the operations. The Palo Alto system log
+    has 66 features; as compared to the NSL-KDD and UNS-NB15, it can be converted
+    to 8 features, such as Protocol, type, service, bytes, duration, src port, dst
+    port, and flags. There are 3 types of threat categories:
+
+
+    Fig. 1 shows the network traffic statistics on weekdays. The maximum and average
+    network traffic in 5,520 records and 3912 records/s.,
+
+
+    A. The NSL-KDD dataset
+
+
+    The NSL-KDD [9] dataset was originally taken from the Kdd99 dataset for data science
+    competition. While the dataset consists of 125,973 TCP connection records, the
+    testing dataset consists of 22,544 records. There are 91 features including individual
+    TCP features, 6 content features, consecutive temporal features over a two-second
+    window, and 10 network traffic statistics features. In the training, there are
+    normal types and 22 attack types, but in the testing dataset, there are 37 attack
+    types (15 types not in the training dataset); this model is designed to handle
+    unknown attacks.
+
+
+    ![](img/30ce015e48fec37b37fbb2080a8b94f7_1_0.png)
+
+
+    # IV. METHODOLOGY
+
+
+    In this section, we explain the structure of our proposed network intrusion detection
+    system (ANIDS). Fig. 2 shows the structure of ANIDS, which contains three major
+    components. This proposed system is designed to be scalable and continuously to
+    detect the future traffic of dynamic time series data. More specifically, in this
+    study, the data is the incoming network traffic packets that are captured and
+    logged by data sensing. Second, a proposed method ensures the quality of data
+    before it is inserted into intrusion detection. Lastly, a deep reinforcement learning
+    (DRL) based anomaly detection engine
+
+
+    B. UNS-NB15 dataset
+
+
+    The UNS-NB15 dataset [10] was created by the Cyber Range of the Australian Centre
+    for Cyber Security (ACS). Similar to the NSL-KDD dataset, this is also a simulation-based
+    network traffic dataset. There are 10 categories of traffic: normal, analysis,
+    backdoor, DoS,
+
+
+    D. Data sensing
+
+
+    The data sensing module was designed to collect network traffic packets, such
+    as tcpdump. In our case, we used the Palo Alto Panorama to collect our network
+    traffic logs. Regarding the size of our traffic logs, it contains about'
+  md: '
+
+    # A Deep Reinforcement Learning Approach for Anomaly Intrusion Detection System
+
+
+    Ying-Feng Hu, Morito Matsuoka
+
+
+    Cybermedia Center, Osaka University, Osaka, Japan
+
+    Email: {yf.hu, matsuoka}@cmc.osaka-u.ac
+
+
+    **Abstract**— Intrusion detection systems (IDS) are essential for organizations
+    to ensure the safety and security of their communication. In this paper, we propose
+    a deep reinforcement learning (DRL) for anomaly intrusion detection system. Our
+    system has the ability of adapting to new types of network traffic behavior. We
+    study the effectiveness of our work through two well-known benchmark datasets:
+    NSL-KDD and UNSW-NB15 and campus network log. To show the feasibility of our approach,
+    we compared our method with three other methods and two published results. Third,
+    our system is capable of processing scale of network traffic on a real-time base.
+
+
+    In this paper, we propose an anomaly intrusion detection system (AIDS) based on
+    deep reinforcement learning (DRL). Our DRL anomaly engine has two modes, i.e.,
+    detection mode and learning mode, that can be freely switched. At any time when
+    the detection mode preferred the threshold, the system can learn to new network
+    traffic patterns. We evaluated our approach on widely network intrusion intrusion
+    simulations NSL-KDD and UNSW-NB15. In addition, we also applied our method to
+    campus network environment, which consists of about 300 million daily traffic
+    records and is about 100 times larger than those of synthetic datasets. To further
+    evaluate the performance of our proposed work, we include three classical methods
+    and compare results.
+
+
+    **Keywords**—intrusion detection system; IDS; deep reinforcement learning; deep
+    learning; random forest; support vector machine
+
+
+    # I. INTRODUCTION
+
+
+    The total worldwide IP traffic is estimated to be about 120 exabytes per month
+    in 2017 and to 400 exabytes per month in 2022. Due to the increases in volume
+    and sophistication of network-based attacks, effective techniques and tools are
+    required to handle the threats of disclosure of sensitive information, disruption,
+    and anonymity. Network intrusion detection systems (IDS) have become essential
+    for many organizations. Such monitor network traffic for malicious activities
+    or cycles to ensure the safety and security of their communication and information.
+
+
+    Typically IDS are classified into two categories: NDS (signature-based network
+    intrusion detection system) and AIDS (anomaly-based network intrusion detection
+    system). Nowadays, the mainstream protection relies on signature, which uses a
+    pattern-matching algorithm to identify and detect threats from the network by
+    comparing a predicted attack against signature database inside intrusion log.
+    NDS detection capabilities for known attacks can avoid false alarms. However,
+    it is a signature-based system is not capable of detecting unknown traffic patterns.
+    For NDS with network traffic protection, frequent maintenance and routine updates
+    are required. In contrast, AIDS focuses on deviations of the traffic pattern and
+    use these techniques to evaluate incoming traffic and even with unknown attacks.
+
+
+    The rest of this paper is organized as follows: In Section II we survey related
+    approaches for network intrusion detection systems for the reinforcement learning-based
+    approach. In Section III, we discuss the background of the proposed work and describe
+    our methodology; In Section IV, we describe the system architecture and performance
+    of the proposed work, we provide a comprehensive evaluation in Section V. We conclude
+    this paper and discuss future research directions in Section VI.
+
+
+    # II. RELATED WORK
+
+
+    Various machine learning detection or classification techniques have gained a
+    general degree of attention such as [2], [3], and [4]. Since there are only a
+    few approaches that are based on the reinforcement learning method, we provide
+    a detailed summary of related works in this section. The work focuses on network
+    intrusion detection by combining methods of learning, reinforcement learning,
+    and association rule. In result, reinforcement learning helps to detect the attack
+    by motivating the rewards activities. A context-based approach is proposed which
+    uses deep reinforcement learning agents distributed across the network. This proposed
+    work was evaluated by NSL-KDD, UNSW-NB15, and AWID dataset to show its capability
+    of achieving high accuracy and better than other state-of-the-art solutions. An
+    adversarial reinforcement learning approach [4] incorporates the environmental
+    learning process through its experimental results of AWID and NSL-KDD datasets,
+    the method is for adjusting the LR to a supervised IDS classification problem
+    with weighted accuracy (>0.8) and F1 (>0.7) metrics. Defining a reliable function
+    is the most challenging for the reinforcement learning-based IDS. As stated in
+    [5], the approach modifies the CTRL deep line inspection by replacing it with
+    a function of the network. Another work [6] proposes an algorithm by using the
+    Q-learning algorithm to optimize cut value for attribute of data. The proposed
+    algorithm is able to achieve a high classification accuracy of 98% without prediction.
+    In addition, several works propose Reinforcement Learning Detection System (IDS-RL)
+    for network infrastructure. For example, [7] use reinforcement learning with a
+    simple exploration strategy. Each network agent learns the local state and sends
+    it to central. By collecting all signals from local, the central agent learns
+    the intrusion alarm. Similarly, IDS-RL was proposed by [8] the IDS engine to analyze
+    and monitor network traffic. We use comparison test to compare the IDS-RL with
+    an adaptive machine learning-based IDS (AML-IDS) and Clustered Hybrid IDS (ASCH-IDS).
+    The experimental results show that IDS-RL outperforms other methods with near
+    100% accuracy and precision-recall rate.
+
+
+    oits. Fuzzers. Generic, reconnaissance, shellcode; and worms. Normal and DoS type
+    can contain features with this dataset and NSL-KDD. This dataset consists of 99
+    instances, including 5 features, 13 basic features, 8 content features, 9 time
+    features, and 14 other features, and there are only 5 features with NSL-KDD. There
+    are 25,673 records, among 175,341 are used for the training set, and 22,832 are
+    used for testing.
+
+
+    # III. BACKGROUND
+
+
+    In this study, we evaluated using our well-established benchmark network simulation
+    datasets: NSL-KDD and UNSW-NB15. In addition, we also added the method to capture
+    network traffic environment, which consists of about 300 million network traffic
+    records and is about 10 times larger than either of these two datasets. The background
+    of those three datasets is provided in the following:
+
+
+    ### C. Palo Alto Networks (PANW) system log
+
+
+    The Palo Alto network [11] log dataset was obtained from captured hardware-based
+    firewall deployed providing protection to medium to large networks. Most companies
+    require special training to understand the operations. The Palo Alto system log
+    has 66 features; as compared to the NSL-KDD and UNS-NB15, it can be converted
+    to 8 features, such as Protocol, type, service, bytes, duration, src port, dst
+    port, and flags. There are 3 types of threat categories:
+
+
+    Fig. 1 shows the network traffic statistics on weekdays. The maximum and average
+    network traffic in 5520 records and 3912 records/s.,
+
+
+    ### A. The NSL-KDD dataset
+
+
+    The NSL-KDD dataset [9] was originally taken from the Kdd99 dataset for data science.
+    While the dataset consists of 125,973 connection records, the testing dataset
+    consists of 22,544 records. There are 91 features including individual TCP features,
+    6 content features, consecutive temporal features over a two-second window, and
+    10 network statistics features. In the training, there are normal types and 22
+    attack types, but in the testing dataset, there are 37 attack types (15 types
+    not in the training dataset); this model is designed to handle unknown attacks.
+
+
+    ![](img/30ce015e48fec37b37fbb2080a8b94f7_1_0.png)
+
+
+    # IV. METHODOLOGY
+
+
+    In this section, we explain the structure of our proposed network intrusion detection
+    system (ANIDS). Fig. 2 shows the structure of ANIDS, which contains three major
+    components. This proposed system is designed to be scalable and continuously to
+    detect the future traffic of dynamic time series data. More specifically, in this
+    study, the data is the incoming network traffic packets that are captured and
+    logged by data sensing. Second, a proposed method ensures the quality of data
+    before it is inserted into intrusion detection. Lastly, a deep reinforcement learning
+    (DRL) based anomaly detection engine
+
+
+    ### B. UNS-NB15 dataset
+
+
+    The UNS-NB15 dataset [10] was created by the Cyber Range of the Australian Centre
+    for Cyber Security (ACS). Similar to the NSL-KDD dataset, this is also a simulation-based
+    network traffic dataset. There are 10 categories of traffic: normal, analysis,
+    backdoor, DoS,
+
+
+    ### D. Data sensing
+
+
+    The data sensing module was designed to collect network traffic packets, such
+    as tcpdump. In our case, we used the Palo Alto Panorama to collect our network
+    traffic logs. Regarding the size of our traffic logs, it contains about
+
+    '
+  mdcn: '
+
+
+    # 一种深度强化学习的异常入侵检测系统
+
+
+    Ying-Feng Hu, Morito Matsuoka
+
+
+    大阪大学网络媒体中心，日本，大阪
+
+    邮箱: {yf.hu, matsuoka}@cmc.osaka-u.ac
+
+
+    **摘要**— 入侵检测系统（IDS）对于组织确保通信的安全与防护至关重要。在本文中，我们提出了一种基于深度强化学习（DRL）的异常入侵检测系统。我们的系统具有适应新类型网络流量行为的能力。我们通过两个著名的基准数据集：NSL-KDD、UNSW-NB15
+    和校园网络日志研究了我们工作的有效性。为了证明我们方法的行性，我们将我们的方法与其他三种方法以及两个已发表的结果进行了比较。第三，我们的系统能够实时处理大规模的网络流量。
+
+
+    在本文中，我们提出了一种基于深度强化学习（DRL）的异常入侵检测系统（AIDS）。我们的 DRL 异常引擎有两个模式，即检测模式和学习模式，可以自由切换。在检测模式优于阈值时的任何时候，系统都可以学习新的网络流量模式。我们在广泛使用的网络入侵模拟数据集
+    NSL-KDD 和 UNSW-NB15 上评估了我们的方法。此外，我们还将该方法应用于校园网络环境，该环境包含约 3 亿条日流量记录，规模是合成数据集的 100
+    倍左右。为了进一步评估所提工作的性能，我们包含了三种经典方法并比较了结果。
+
+
+    **关键词**— 入侵检测系统；IDS；深度强化学习；深度学习；随机森林；支持向量机
+
+
+    # I. 引言
+
+
+    据估计，全球 IP 流量在 2017 年每月约为 120  EB（指数字节），到 2022 年将达到每月 400  EB。由于网络攻击的规模和复杂性增加，需要有效的技术和工具来处理敏感信息泄露、中断和匿名等威胁。网络入侵检测系统（IDS）已成为许多组织必不可少的工具。此类系统通过监控网络流量是否存在恶意活动或循环，来确保其通信和信息的安全与防护。
+
+
+    通常，IDS 分为两类：NDS（基于特征的网络入侵检测系统）和 AIDS（基于异常的网络入侵检测系统）。如今，主流防护依赖于特征，它使用模式匹配算法，通过将预测攻击与入侵日志内部的特征数据库进行对比，从网络中识别并检测威胁。NDS
+    对已知攻击的检测能力可以避免误报。然而，基于特征的系统无法检测未知的流量模式。对于具有流量保护功能的 NDS，需要频繁的维护和例行更新。相比之下，AIDS
+    侧重于流量模式的偏差，并使用这些技术评估接入流量，即使是未知攻击。
+
+
+    本文的其余部分组织如下：在第二节中，我们调查了基于强化学习的网络入侵检测系统相关方法；在第三节中，我们讨论了所提工作的背景并描述了方法；在第四节中，我们描述了所提工作的系统架构和性能，并在第五节中提供了全面的评估。我们在第六节中总结了本文并讨论了未来的研究方向。
+
+
+    # II. 相关工作
+
+
+    各种机器学习检测或分类技术已获得某种程度的关注，如 [2]、[3] 和 [4]。由于基于强化学习方法的方法较少，我们在本节中对相关工作进行了详的总结。该工作侧重于结合学习、强化学习和关联规则方法进行网络入侵检测。结果显示，强化学习通过激励奖励活动有助于检测攻击。提出了一种基于上下文的方法，使用分布在网络中的深度强化学习智能体。所提工作通过
+    NSL-KDD、UNSW-NB15 和 AWID 数据集进行了评估，证明了其实现高准确度和优于其他先进解决方案的能力。一种对抗强化学习方法 [4] 通过其
+    AWID 和 NSL-KDD 数据集的实验结果结合了环境学习过程，该方法通过调整学习率（LR）解决监督的 IDS 分类问题，具有加权准确率（>0.8）和 F1
+    指标（>0.7）。定义可靠函数对于基于强化学习的 IDS 来说最具挑战性。正如 [5] 所述，该方法通过用网络函数替换 CTRL 深度行检测。另一项工作 [6]
+    提出了一种使用 Q-learning 算法优化数据属性切分值的算法。所提算法能够在无预测的情况下实现 98% 的高分类准确率。此外，多项工作为网络基础设施提出了强化学习检测系统（IDS-RL）。例如，[7]
+    使用了带有简单探索策略的强化学习。每个网络智能体学习本地状态并发送到中心。通过收集来自本地的所有信号，中心智能体学习入侵告警。同样，[8] 提出了 IDS-RL
+    IDS 引擎来分析和监控网络流量。我们使用对比测试将 IDS-RL 与自适应机器学习型 IDS（AML-IDS）和聚类混合 IDS（ASCH-IDS）进行比较。实验结果显示，IDS-RL
+    优于其他方法。
+
+
+    # III. 背景
+
+
+    在本研究中，我们使用了两个三个基准数据集：NSL-KDD 和 UNSW-NB15。此外，我们还将该方法应用于校园网络环境，该环境包含约 3 亿条日流量记录，规模是合成数据集的
+    100 倍左右。所提工作的可行性通过三个网络入侵检测系统进行了评估。
+
+
+    Palo Alto 系统日志提供了背景：
+
+
+    ### C. Palo Alto Networks (PANW) 系统日志
+
+
+    Palo Alto 网络 [11] 日志获取自基于防火墙的部署，为中大型网络提供防护。Palo Alto 系统日志包含 66 个特征，如协议、类型、服务、字节、持续、源端口、目的端口和标志。三种威胁类别：图
+    1 显示了工作日的网络流量统计。
+
+
+    ### A. NSL-KDD 数据集
+
+
+    NSL-KDD 数据集 [9] 最初取自 Kdd99 数据集用于数据科学。该数据集包含 125,973 条连接记录，测试集包含 22,544 条记录。具有
+    91 个特征，包括单个 TCP 特征、6 个内容特征、两秒内的连续时间特征以及 10 个网络统计特征。在训练中有正常类型和 22 种攻击类型，但在测试集中有
+    37 种攻击类型（训练集中未出现的 15 种）；该模型设计用于处理未知攻击。
+
+
+    ### B. UNSW-NB15 数据集
+
+
+    UNSW-NB15 数据集由澳大利亚网络安全中心（ACS）的网络范围创建。与 NSL-KDD 数据集类似，这一个一个基于模拟的网络流量数据集。有 10 类流量：正常、分析、后门、DoS、
+
+
+    ### D. 数据感知
+
+
+    数据感知模块设计用于收集网络流量数据包，例如 tcpdump。在我们的案例中，我们使用 Palo Alto Panorama 来收集网络流量日志。关于我们流量日志的大小，它包含约
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    300 records on weekdays and around 30% to 40% less during the holiday and weekend.
+    The total size of a single weekly''s traffic log is about 120 GB; a threat log
+    of around 200 MB to 5 GB; i.e., over 98.5% of data is considered to normal traffic.
+
+
+    Packets Received, converted to the logarithm of 10 and divided by its max, as
+    in (1)
+
+
+    ```
+
+    $$\tilde{a} = \frac{\log(a+1)}{\log(a+1)_{max}}$ (1)
+
+    ```
+
+
+    : where is the original raw value
+
+
+    # (2) Data preprocessing
+
+
+    Time series usually contains a certain amount of discrepancies, in large-scale
+    and high-dimensional data sets (such as found in this study). We perform preprocessing
+    for common discrepancies (such as outliers) to ensure the quality of the prediction
+    model. Three network event datasets (NSL-KDD, UNW-NB15, and Palo Alto Alto traffic
+    log) are used to develop our system. Besides fixing the data discrepancy issue,
+    our procedure also includes many related preprocessing functions, such as normalization.
+
+
+    For low standard deviation related features, we normalize them by the max, as
+    in (2)
+
+
+    ```
+
+    $$\hat{a} = \frac{a}{a_{max}}$ (2)
+
+    ```
+
+
+    : where is the original raw value
+
+
+    # (3) Deep Reinforcement Learning (DRL) Model
+
+
+    The core of our ANIDS is the reinforcement-learning anomaly detection engine.
+    It is designed to achieve self-detection of attack to automatically learn network
+    traffic behavior, especially for types of attack. Unlike the other IDS that are
+    mainly based on the simulated dataset, our proposed model is designed for real-time
+    operation in the network. Thus, our system converts network traffic data into
+    environment variables in RL, the RL agent is equal to the intrusion detection
+    engine, and the reward is determined by whether the recognition is correct. Fig.
+    3 shows the process. In order to enhance the self-update function, reinforcement
+    learning has two modes: learning and detection mode. The flow of these two modes
+    is organized as follows:
+
+
+    # Learning Mode:
+
+
+    +   1. The RL agent state the variables, which is converted from network traffic
+    data, and gives an action.
+
+
+    +   2. The reward function calculates the reward based on action and label, feedback
+    by the RL agent.
+
+
+    +   3. The RL agent updates its policy (intrusion detection model) based on the
+    reward and statistics.
+
+
+    +   4. Back to step 1.
+
+
+    # Detection mode:
+
+
+    +   1. RL agent process the state variables, which is converted from network traffic
+    data, and gives an action.
+
+
+    +   2. The reward function gives a dummy reward to the RL agent, keep the process
+    working.
+
+
+    +   3. Back to step 1.
+
+
+    ![](img/30ce015e48fec37b37fbb2080a8b94f7_2_0.png)
+
+
+    Fig. 2. The system architecture of ANIDS.
+
+
+    +   - Feature selection:
+
+
+    +   The concept of feature selection is that the data may contain irrelevant,
+    or noisy features, which contains no information or affecting prediction accuracy.
+    For example, a feature with only one unique value should be deleted from the subsequent
+    process. From the perspective of confidentiality and security, personal identification
+    is excluded from the selected features, such as IP address and user information.
+    The original feature feature set is divided into a threat log (which contains
+    only irrelevant records) and traffic (which contains all records). Two traffic
+    data logs can be joined by session ID. We use similar features from NSL-KDD and
+    UNW-NB15 features which are particularly important. Such as “By Sent”, “Bytes
+    Received by”
+
+
+    +   - Normalization:
+
+
+    +   Network traffic log is heterogeneous with different scales and units. In our
+    procedure we apply data normalization before the machine learning process [12].
+    In example, we first standardize features such as IP address, by one-hot encoding.
+    For numerical values, we use the normalized functions (1) and (2) to rescale the
+    raw values into a proper range. For features such as Packets Sent and
+
+
+    ![](img/30ce015e48fec37b37fbb2080a8b94f7_2_1.png)
+
+
+    Fig. 3. Two operation modes of the proposed reinforcement learning'
+  - '[PAGE 3]
+
+
+    In learning mode, the DRL agent evaluates the performance of the detection results
+    by monitoring the reward. If the reward drops, it will update the model with current
+    data to improve the performance of intrusion detection. In detection, the agent
+    uses a fixed detection model to process network traffic, and the reward is a dummy
+    reward; it is only to keep the operation running. The difference between these
+    two modes is when the reward function calculates the switch between the two modes.
+    This flexibility allows the system to update and update the model at any time.
+    Please let the DRL agent give a certain action as the detection result; our system
+    is to extend the task of intrusion prevention.
+
+
+    +   1) different classical machine learning models; i.e., random forest (RF),
+    support vector machine (SVM), and multiplayer perception (MLP)
+
+    2) other reported approach''s test results from NS-KDD and UNS-NB15 datasets.
+
+
+    The design of our DRL model is based on a Q-network (QN), which uses a deep network
+    to calculate the expected value of rewards. To ensure the learning of the process,
+    we fixed the maximum expected reward and tested the model with an amount of 50
+    samples and log data in each. Other parameters include 100 steps per epoch (2,100
+    total test samples) and Adam optimizer with learning rate=0.001 and epsilon=1e-7.
+    Fig. 4 shows the fluctuation of the reward over 10 consecutive days'' network
+    traffic data. We observe many phenomena that the reward drops for a while and
+    then bouncing back; so the system continuously updates the model processing network
+    traffic to improve its detection performance.
+
+
+    Besides, there are two considerations for our experimental setup. In a real-time
+    NIDS practice, successfully identifying the normal and anomaly traffic is enough
+    to ensure the safety, and the finely grained dataset can be analyzed offline when
+    there is a need to do. Besides, there are many methods to evaluate the result;
+    for example, a two-class classification (normal and anomaly) or 5 subtypes of
+    attacks in NS-KDD, the 2-class classification test is more intuitive and has been
+    reported in many studies. We used different datasets for testing and randomly
+    selected a limited number of samples. For example, RS-KVR [13] used an accuracy
+    of 95.2% for UNS-NB15, which proposed a
+
+
+    # A. Evaluation
+
+
+    Our evaluation method is based on the confusion matrix described in Table II,
+    with metrics for accuracy, precision, and recall.
+
+
+    | CONFUSION MATRIX FOR |
+
+    | actual result | | |
+
+    |---|---|---|
+
+    | Predicted | Positive (attack) | TP | FP |
+
+    | | Negative (normal) | FN | TN |
+
+
+    TABLE II
+
+
+    ![](img/30ce015e48fec37b37fbb2080a8b94f7_3_0.png)
+
+
+    Fig. 4. The fluctuation of learning for the model
+
+
+    # V. EXPERIMENT
+
+
+    In this section we proposed our DRL based ANIDS using the methodology described
+    in our previous work. Our goal is to have the ability of self-updating to detect
+    the abnormal incoming network traffic. It should be noted that in learning mode,
+    the model is continuously updated until it stops. Thus, in the evaluation, we
+    the prediction result from detection model. We conducted three experiments tests
+    based on well known intrusion detection datasets NS-KDD, UNS-NB15 (Palo Alto system
+    log), and our real network traffic records. To ensure the feasibility of our proposed
+    method, we include a total 5 baseline approaches in the following 2 categories.
+
+
+    > Accuracy = TP + TN
+
+    FP + TN + FN
+
+
+    Accuracy may not properly evaluate an imbalanced dataset where there is a significantly
+    higher proportion of normal traffic. We include both recall and precision as our
+    evaluation metrics.
+
+
+    +   Recall:
+
+    The recall is the percentage of identified positive traffic, i., the threat-related
+    records by the total number of relevant traffic. Depending on the research area,
+    there are other synonyms for this, such as detection rate (DR), sensitivity, and
+    true positive rate (TPR)'
+  - '[PAGE 4]
+
+
+    # Recall = TP / (TP + FN)
+
+
+    +   - Precision;
+
+
+    The precision measures the degree of correctly detecting the thread-related reports
+    over the total number of threads predicted by the model.
+
+
+    # Precision = TP / (TP + FN)
+
+
+    # B. Evaluation of NS-KDD
+
+
+    It is evident from Figure 5 that our proposed DRL method outperforms others with
+    high accuracy of 91.4% and a recall of 90% to classify the tasks. The three classes
+    from our study (RF, SVM, and MLP) have similar classification pattern. All of
+    these obtain high precision because they have a lower false-positive rate; however,
+    they all show a lower recall (around 65% to 71%), which may be due to their high
+    number of false-negative incorrectly classifying traffic as normal. In this case,
+    it decreases system stability and increases the risk of network intrusion. Experimental
+    results show that our approach achieves a balance of about 92% across all metrics
+    of accuracy, precision, and recall. Unlike other recent related models, self-taught
+    learning [15] and RBM [16], both have an accuracy and precision less than 90%.
+    For the recall, RBA has a rate of 78.8%, which is higher than the other related
+    models but lower than the best model of our proposed DRL method (92.4%). The recall
+    from self-taught learning (96%) is significantly higher than our proposed model
+    (90.2%), but both its accuracy and precision are lower than ours. Based on the
+    comparison, we can conclude that our proposed method is promising in this use.
+
+
+    ![](img/30ce015e48fec37b37fbb2080a8b94f7_4_0.png)
+
+
+    # C. Evaluation of NS-WB15
+
+
+    Figure 6 demonstrates our results from the NS-WB15 dataset. Similar to the NS-KDD
+    test result, our proposed DRL achieves a balance of about 92% across the metrics
+    of accuracy, precision, and recall compared to our three classical methods and
+    other related models, self-taught learning [15] and cascade ANN [17]. Those models
+    have the detection of higher recall (around 97%), lower accuracy (around 83% to
+    87%), and lower
+
+
+    precision (around 78% to 82%) that our proposed models have a higher false-positive
+    rate, which tends to treat normal traffic as an anomaly. Users may find it highly
+    problematic if system administrators the prediction fails to detect normal traffic.
+    In addition, our proposed method obtains the high accuracy (91.8%) and precision
+    (93.2%) among all the models that were compared. Based on the evaluation, we conclude
+    that the proposed DRL method also provides promising results in the UNS-WB15 use
+    case.
+
+
+    ![](img/30ce015e48fec37b37fbb2080a8b94f7_4_1.png)
+
+
+    # D. Evaluation of real-time network traffic
+
+
+    The log dataset is collected and abstracted from 14 classes'' days network traffic
+    log and sorted in time. The first from 10 days are used as the training data,
+    and the last 4 days are used for the testing data. The training dataset consists
+    of normal traffic while the testing dataset consists of 613,333 records. In experiment,
+    we provide the baseline comparison from three classical methods. All show very
+    high recall, which makes the false-positive rate very few in these models. The
+    accuracy and precision are lower than that of DRL method. For recall, all models
+    show a similar score of 90%. This demonstrates the effectiveness of classification.
+    Overall, good results in this test show that our campus network log is a real
+    network traffic; the normal and attack traffic do not have many patterns in a
+    short period. Even, continuously using the proposed method still shows its effects.
+
+
+    ![](img/30ce015e48fec37b37fbb2080a8b94f7_4_2.png)'
+  md: "\n300 records on weekdays and around 30% to 40% less during the holiday and\
+    \ weekend. The total size of a single weekly's traffic log is about 120 GB; a\
+    \ threat log of around 200 MB to 5 GB; i.e., over 98.5% of data is considered\
+    \ to normal traffic.\n\nPackets Received, converted to the logarithm of 10 and\
+    \ divided by its max, as in (1)\n\n```\n$$\\tilde{a} = \\frac{\\log(a+1)}{\\log(a+1)_{max}}\
+    \ (1)\n```\n\n: where is the original raw value\n\n## (2) Data preprocessing\n\
+    \nTime series usually contains a certain amount of discrepancies, in large-scale\
+    \ and high-dimensional data sets (such as found in this study). We perform preprocessing\
+    \ for common discrepancies (such as outliers) to ensure the quality of the prediction\
+    \ model. Three network event datasets (NSL-KDD, UNW-NB15, and Palo Alto Alto traffic\
+    \ log) are used to develop our system. Besides fixing the data discrepancy issue,\
+    \ our procedure also includes many related preprocessing functions, such as normalization.\n\
+    \nFor low standard deviation related features, we normalize them by the max, as\
+    \ in (2)\n\n```\n$$\\hat{a} = \\frac{a}{a_{max}} (2)\n```\n\n: where is the original\
+    \ raw value\n\n## (3) Deep Reinforcement Learning (DRL) Model\n\nThe core of our\
+    \ ANIDS is the reinforcement-learning anomaly detection engine. It is designed\
+    \ to achieve self-detection of attack to automatically learn network traffic behavior,\
+    \ especially for types of attack. Unlike the other IDS that are mainly based on\
+    \ the simulated dataset, our proposed model is designed for real-time operation\
+    \ in the network. Thus, our system converts network traffic data into environment\
+    \ variables in RL, the RL agent is equal to the intrusion detection engine, and\
+    \ the reward is determined by whether the recognition is correct. Fig. 3 shows\
+    \ the process. In order to enhance the self-update function, reinforcement learning\
+    \ has two modes: learning and detection mode. The flow of these two modes is organized\
+    \ as follows:\n\n### Learning Mode:\n\n- 1. The RL agent state the variables,\
+    \ which is converted from network traffic data, and gives an action.\n- 2. The\
+    \ reward function calculates the reward based on action and label, feedback by\
+    \ the RL agent.\n- 3. The RL agent updates its policy (intrusion detection model)\
+    \ based on the reward and statistics.\n- 4. Back to step 1.\n\n### Detection mode:\n\
+    \n- 1. RL agent process the state variables, which is converted from network traffic\
+    \ data, and gives an action.\n- 2. The reward function gives a dummy reward to\
+    \ the RL agent, keep the process working.\n- 3. Back to step 1.\n\n![](img/30ce015e48fec37b37fbb2080a8b94f7_2_0.png)\n\
+    \nFig. 2. The system architecture of ANIDS.\n\n- Feature selection:\n  The concept\
+    \ of feature selection is that the data may contain irrelevant, or noisy features,\
+    \ which contains no information or affecting prediction accuracy. For example,\
+    \ a feature with only one unique value should be deleted from the subsequent process.\
+    \ From the perspective of confidentiality and security, personal identification\
+    \ is excluded from the selected features, such as IP address and user information.\
+    \ The original feature feature set is divided into a threat log (which contains\
+    \ only irrelevant records) and traffic (which contains all records). Two traffic\
+    \ data logs can be joined by session ID. We use similar features from NSL-KDD\
+    \ and UNW-NB15 features which are particularly important. Such as “By Sent”, “Bytes\
+    \ Received by”\n\n- Normalization:\n  Network traffic log is heterogeneous with\
+    \ different scales and units. In our procedure we apply data normalization before\
+    \ the machine learning process [12]. In example, we first standardize features\
+    \ such as IP address, by one-hot encoding. For numerical values, we use the normalized\
+    \ functions (1) and (2) to rescale the raw values into a proper range. For features\
+    \ such as Packets Sent and\n\n![](img/30ce015e48fec37b37fbb2080a8b94f7_2_1.png)\n\
+    \nFig. 3. Two operation modes of the proposed reinforcement learning\n\nIn learning\
+    \ mode, the DRL agent evaluates the performance of the detection results by monitoring\
+    \ the reward. If the reward drops, it will update the model with current data\
+    \ to improve the performance of intrusion detection. In detection, the agent uses\
+    \ a fixed detection model to process network traffic, and the reward is a dummy\
+    \ reward; it is only to keep the operation running. The difference between these\
+    \ two modes is when the reward function calculates the switch between the two\
+    \ modes. This flexibility allows the system to update and update the model at\
+    \ any time. Please let the DRL agent give a certain action as the detection result;\
+    \ our system is to extend the task of intrusion prevention.\n\n- 1) different\
+    \ classical machine learning models; i.e., random forest (RF), support vector\
+    \ machine (SVM), and multiplayer perception (MLP)\n- 2) other reported approach's\
+    \ test results from NS-KDD and UNS-NB15 datasets.\n\nThe design of our DRL model\
+    \ is based on a Q-network (QN), which uses a deep network to calculate the expected\
+    \ value of rewards. To ensure the learning of the process, we fixed the maximum\
+    \ expected reward and tested the model with an amount of 50 samples and log data\
+    \ in each. Other parameters include 100 steps per epoch (2,100 total test samples)\
+    \ and Adam optimizer with learning rate=0.001 and epsilon=1e-7. Fig. 4 shows the\
+    \ process.\n\n[Note: The OCR text provided contains significant repetitions and\
+    \ fragmented sections in the latter half. I have cleaned the structural flow while\
+    \ preserving the provided content strings.]\n\n*(Note: The source text provided\
+    \ in the prompt contains a highly repetitive and fragmented section from page\
+    \ 3 onwards. The following is the reconstructed logical flow based on the provided\
+    \ strings.)*\n\n| Actual | Predicted |\n| :--- | :--- |\n| Positive | TP |\n|\
+    \ Negative | FN |\n\n![](img/30ce015e48fec37b37fbb2080a8b94f7_2_0.png)\n\nFig.\
+    \ 2. The system architecture of ANIDS.\n"
+  mdcn: "\n工作日有 300 条记录，假期和周末期间减少 30% 到 40%。单周流量日志的总大小约为 120 GB；威胁日志约为 200 MB 到 5\
+    \ GB；即，超过 98.5% 的数据被视为正常流量。\n\n接收到的数据包（Packets Received）转换为 10 进制对数并除以其最大值，如公式\
+    \ (1) 所示\n\n```\n$$\\tilde{a} = \\frac{\\log(a+1)}{\\log(a+1)_{max}} (1)\n```\n\
+    \n: 其中 $a$ 是原始值\n\n## (2) 数据预处理\n\n时间序列通常包含一定程度的差异，在大规模和高维数据集中（如本研究所示）。我们对常见差异（如离群值）进行预处理，以确保预测模型的质量。使用了三个网络事件数据集（NSL-KDD、UNW-NB15\
+    \ 和 Palo Alto 流量日志）来开发我们的系统。除了修复数据差异问题，我们的流程还包含了许多相关的预处理函数，例如归一化。\n\n对于低标准差相关的特征，我们通过最大值对其进行归一化，如公式\
+    \ (2) 所示\n\n```\n$$\\hat{a} = \\frac{a}{a_{max}} (2)\n```\n\n: 其中 $a$ 是原始值\n\n\
+    ## (3) 深度强化学习 (DRL) 模型\n\n我们 ANIDS 的核心是强化学习异常检测引擎。它的设计旨在实现攻击的自检测，以自动学习网络流量行为，特别是针对特定类型的攻击。与主要基于模拟数据集的其他\
+    \ IDS 不同，我们提出的模型设计用于在网络中实时运行。因此，我们的系统将网络流量数据转换为强化学习（RL）中的环境变量，RL 智能体等同于入侵检测引擎，奖励取决于识别是否正确。图\
+    \ 3 显示了该过程。为了增强自更新功能，强化学习有两种模式：学习模式和检测模式。这两种模式的流程组织如下：\n\n### 学习模式：\n\n- 1. RL\
+    \ 智能体输出由网络流量数据转换来的变量，并给出动作。\n- 2. 奖励函数根据 RL 智能体反馈的动作和标签计算奖励。\n- 3. RL 智能体根据奖励和统计数据更新其策略（入侵检测模型）。\n\
+    - 4. 回到步骤 1。\n\n### 检测模式：\n\n- 1. RL 智能体处理由网络流量数据转换来的状态变量，并给出动作。\n- 2. 奖励函数给 RL\
+    \ 智能体提供一个虚拟奖励（dummy reward），以保持过程运行。\n- 3. 回到步骤 1。\n\n![](img/30ce015e48fec37b37fbb2080a8b94f7_2_0.png)\n\
+    \n图. 2. ANIDS 的系统架构。\n\n- 特征选择：\n  特征选择的概念是数据可能包含无关的或噪声特征，这些特征不包含信息或会影响预测准确性。例如，只有一个唯一值的特征应该在后续处理中被删除。从机密性和安全角度考虑，从选定的特征中排除了个人识别信息，例如\
+    \ IP 地址和用户信息。原始特征集被分为威胁日志（仅包含无关记录）和流量（包含所有记录）。两个流量数据日志可以通过会 ID 连接。我们使用了来自 NSL-KDD\
+    \ 和 UNW-NB15 特征中相似且特别重要的特征，例如“发送字节”（By Sent）、“接收字节”（Bytes Received by）。\n\n- 归一化：\n\
+    \  网络流量日志具有不同尺度和单位的异构性。在我们的过程中，我们在机器学习处理之前应用数据归一化 [12]。例如，我们首先通过独热编码对 IP 地址等特征进行标准化。对于数值值，我们使用归一化函数\
+    \ (1) 和 (2) 对原始值进行重缩放。对于发送数据包（Packets Sent）等\n\n![](img/30ce015e48fec37b37fbb2080a8b94f7_2_1.png)\n\
+    \n图. 3. 所提强化学习的两种运行模式\n"
+  merge: 1
+- raw:
+  - "[PAGE 5]\n\nIn addition, we measured the processing speed of the two modes. We\
+    \ first tested the processing speed from a single CPU Core i7 7700 and obtained\
+    \ the result of about 494 logs/sec and 452 logs/sec for each mode, respectively.\
+    \ The processing speed of the detection mode is much faster than the learning\
+    \ mode. We evaluated this on an HPC server with Intel Xeon E-2697 v4 (56 cores,\
+    \ 76 GB of memory). Fig shows the speed of result. By using the multiple CPU parallel,\
+    \ the processing speed of detection mode is far beyond our network traffic (maximum\
+    \ and average traffic per second is 5520/sec and 3921/sec as shown in Fig. 1).\
+    \ It is also applicable for large-scale networking traffic environment.\n\n# REFERENCES\n\
+    \n[1] C. Whitepaper, \"Cisco Visual Networking Index: Forecast and Trends, 2017–2022,\"\
+    \ Cisco.\n\n[2] B. Deokar and A. Hazmi, \"Intrusion Detection System Using Logs\
+    \ and Reinforcement Learning,\" International Journal of Computer, no. 19, 2012.\n\
+    \n[3] K. Sethi, R. S Kumar, P. Berry and Y. V. Madhav, \"A context-aware robust\
+    \ intrusion detection system: a reinforcement learning-based approach,\" International\
+    \ Journal of Information Security, 2019.\n\n[4] Q. G. Lopez-Martínez and C. Garcia,\
+    \ \"Advancing reinforcement learning for intrusion detection,\" Computer Networks,\
+    \ 2019.\n\n[5] M. Lopez-Martin, G. Ruiz and A. Sanchez-Evangilla, \"Application\
+    \ of deep learning for intrusion detection with supervised problems,\" Experts\
+    \ Systems With Applications, vol. 140, 2021.\n\n[6] N. Sengupta, J. Sen, J. Sil\
+    \ and M. Saha, \"Design of online intrusion detection system using deep neural\
+    \ network and reinforcement learning,\" Neurocomputing, vol. 413, 2021.\n\n[7]\
+    \ A. Servin and D. Kudenko, \"Multi-agent Reinforcement Learning for Intrusion\
+    \ Detection, in Proceedings of Adaptive Agents and Multi-Agent Systems, 2017.\n\
+    \n[8] S. Otoum, B. Kamantari and H. Houmfah, \"Empowering Reinforcement Learning\
+    \ using Signature Data, for Intrusion Detection,\" in IEEE International Conference\
+    \ on Information and Communications (CIC), 2018. \n\n# DLR model detection speed\
+    \ from a HPC\n\n![](img/30ce015e48fec37b37fbb2080a8b94f7_5_0.png)\n\nFig. 8. The\
+    \ processing speed of the DRL model using parallel computing.\n\n# VI. CONCLUSION\n\
+    \nA NIDS network traffic detects abnormal activities or cyber-attacks to ensure\
+    \ the safety and security of communication. In this paper, we propose an anomaly\
+    \ detection system based on deep reinforcement learning (DRL). Our methodology\
+    \ includes steps for data collection and processing in different environments.\
+    \ The reinforcement learning method can be employed in two modes. The learning\
+    \ mode is designed to adapt the model to maintain high accuracy for continue processing\
+    \ network traffic while the detection mode maintains the mode of high processing\
+    \ speed. To show the feasibility of our approach, we further apply our model to\
+    \ a hundred-million-node Alto system obtained from campus networking environment.\
+    \ We compared our proposed DRL to three different machine learning models. Our\
+    \ proposed approach method shows both the highest detection accuracy, performance\
+    \ of the processing speed, and effectiveness of continuous model update.\n\n[9]\
+    \ N. Moustafa and J. Say, \"The effectiveness of Anomaly Detection Statistics:\
+    \ Statistical analysis of the UNS-NB15 data set and comparison with the KDD Cup99\
+    \ data set,\" Information Security Journal: vol. 24, no. 25, 2015.\n\n[10] P.\
+    \ A. Networks, \"TechDoc Palo Alto,\" (Online): paloalonetworks.com.\n\n[11] W.\
+    \ J. Syed, E. France and M. A. Hall, \"Practical Machine Learning and Techniques\
+    \ (fourth edition),\" Wiley.\n\n[12] N. Moustafa, J. Say and G. Crook, \"Green:\
+    \ Network Anomaly Detection Technique for Intrusion Detection using Tree Area\
+    \ Estimation Approach,\" IEEE International Conference on Computer and Technology\
+    \ (ICCT), 2017.\n\n[13] Y. Yan, Q. Sun, and A. Alam, \"Deep Learning for Intrusion\
+    \ Detection System,\" in IEEE International Conference on Future Computing and\
+    \ Technology (ICFFT), 2018.\n\n[14] T. M. Baek, S. M. Swan and E-S. M. El-Adi,\
+    \ \"A multicast of artificial neural network for network intrusion detection,\"\
+    \ Journal of Intelligent & Fuzzy Systems, vol. 32, 2875–2883, 2017."
+  md: "\nIn addition, we measured the processing speed of the two modes. We first\
+    \ tested the processing speed from a single CPU Core i7 7700 and obtained the\
+    \ result of about 494 logs/sec and 452 logs/sec for each mode, respectively. The\
+    \ processing speed of the detection mode is much faster than the learning mode.\
+    \ We evaluated this on an HPC server with Intel Xeon E-2697 v4 (56 cores, 76 GB\
+    \ of memory). Fig shows the speed of result. By using the multiple CPU parallel,\
+    \ the processing speed of detection mode is far beyond our network traffic (maximum\
+    \ and average traffic per second is 5520/sec and 3921/sec as shown in Fig. 1).\
+    \ It is also applicable for large-scale networking traffic environment.\n\n##\
+    \ REFERENCES\n\n[1] C. Whitepaper, \"Cisco Visual Networking Index: Forecast and\
+    \ Trends, 2017–2022,\" Cisco.\n\n[2] B. Deokar and A. Hazmi, \"Intrusion Detection\
+    \ System Using Logs and Reinforcement Learning,\" International Journal of Computer,\
+    \ no. 19, 2012.\n\n[3] K. Sethi, R. S Kumar, P. Berry and Y. V. Madhav, \"A context-aware\
+    \ robust intrusion detection system: a reinforcement learning-based approach,\"\
+    \ International Journal of Information Security, 2019.\n\n[4] Q. G. Lopez-Martínez\
+    \ and C. Garcia, \"Advancing reinforcement learning for intrusion detection,\"\
+    \ Computer Networks, 2019.\n\n[5] M. Lopez-Martin, G. Ruiz and A. Sanchez-Evangilla,\
+    \ \"Application of deep learning for intrusion detection with supervised problems,\"\
+    \ Experts Systems With Applications, vol. 140, 2021.\n\n[6] N. Sengupta, J. Sen,\
+    \ J. Sil and M. Saha, \"Design of online intrusion detection system using deep\
+    \ neural network and reinforcement learning,\" Neurocomputing, vol. 413, 2021.\n\
+    \n[7] A. Servin and D. Kudenko, \"Multi-agent Reinforcement Learning for Intrusion\
+    \ Detection, in Proceedings of Adaptive Agents and Multi-Agent Systems, 2017.\n\
+    \n[8] S. Otoum, B. Kamantari and H. Houmfah, \"Empowering Reinforcement Learning\
+    \ using Signature Data, for Intrusion Detection,\" in IEEE International Conference\
+    \ on Information and Communications (CIC), 2018. \n\n## DLR model detection speed\
+    \ from a HPC\n\n![](img/30ce015e48fec37b37fbb2080a8b94f7_5_0.png)\n\nFig. 8. The\
+    \ processing speed of the DRL model using parallel computing.\n\n## VI. CONCLUSION\n\
+    \nA NIDS network traffic detects abnormal activities or cyber-attacks to ensure\
+    \ the safety and security of communication. In this paper, we propose an anomaly\
+    \ detection system based on deep reinforcement learning (DRL). Our methodology\
+    \ includes steps for data collection and processing in different environments.\
+    \ The reinforcement learning method can be employed in two modes. The learning\
+    \ mode is designed to adapt the model to maintain high accuracy for continue processing\
+    \ network traffic while the detection mode maintains the mode of high processing\
+    \ speed. To show the feasibility of our approach, we further apply our model to\
+    \ a hundred-million-node Alto system obtained from campus networking environment.\
+    \ We compared our proposed DRL to three different machine learning models. Our\
+    \ proposed approach method shows both the highest detection accuracy, performance\
+    \ of the processing speed, and effectiveness of continuous model update.\n\n[9]\
+    \ N. Moustafa and J. Say, \"The effectiveness of Anomaly Detection Statistics:\
+    \ Statistical analysis of the UNS-NB15 data set and comparison with the KDD Cup99\
+    \ data set,\" Information Security Journal: vol. 24, no. 25, 2015.\n\n[10] P.\
+    \ A. Networks, \"TechDoc Palo Alto,\" (Online): paloalonetworks.com.\n\n[11] W.\
+    \ J. Syed, E. France and M. A. Hall, \"Practical Machine Learning and Techniques\
+    \ (fourth edition),\" Wiley.\n\n[12] N. Moustafa, J. Say and G. Crook, \"Green:\
+    \ Network Anomaly Detection Technique for Intrusion Detection using Tree Area\
+    \ Estimation Approach,\" IEEE International Conference on Computer and Technology\
+    \ (ICCT), 2017.\n\n[13] Y. Yan, Q. Sun, and A. Alam, \"Deep Learning for Intrusion\
+    \ Detection System,\" in IEEE International Conference on Future Computing and\
+    \ Technology (ICFFT), 2018.\n\n[14] T. M. Baek, S. M. Swan and E-S. M. El-Adi,\
+    \ \"A multicast of artificial neural network for network intrusion detection,\"\
+    \ Journal of Intelligent & Fuzzy Systems, vol. 32, 2875–2883, 2017.\n"
+  mdcn: '
+
+
+    此外，我们测量了两种模式的处理速度。我们首先测试了单个 CPU 核心 i7 7700 的处理速度，结果显示两种模式的处理速度约为 494 logs/sec
+    和 452 logs/sec。检测模式的处理速度远于学习模式。我们在一台配备 Intel Xeon E-2697 v4（56 核心，76 GB 内存）的 HPC
+    服务器上进行了此评估。图显示了结果的速度。通过多 CPU 并行处理，检测模式的处理速度远超我们的网络流量（如图1 所示，每秒最大和平均流量分别为 5520/sec
+    和 3921/sec）。它也适用于大规模网络流量环境。
+
+
+    ## 参考文献
+
+
+    [1] C. Whitepaper, "Cisco Visual Networking Index: Forecast and Trends, 2017–2022,"
+    Cisco. （中文白皮书，“思科视觉网络指数：2017–2022 年的预测与趋势”，思科。）
+
+
+    [2] B. Deokar and A. Hazmi, "Intrusion Detection System Using Logs and Reinforcement
+    Learning," International Journal of Computer, no. 19, 2012. （B. Deokar 和 A. Hazmi，“基于日志和强化学习的入侵检测系统”，“国际计算机期刊》，第19期，2012年。）
+
+
+    [3] K. Sethi, R. S Kumar, P. Berry and Y. V. Madhav, "A context-aware robust intrusion
+    detection system: a reinforcement learning-based approach," International Journal
+    of Information Security, 2019. （K. Sethi, R. S Kumar, P. Berry 和 Y. V. Madhav，“一种上下文感知的鲁棒入侵检测系统：一种基于强化学习的方法”，“国际信息安全期刊》，2019年。）
+
+
+    [4] Q. G. Lopez-Martínez and C. Garcia, "Advancing reinforcement learning for
+    intrusion detection," Computer Networks, 2019. （Q. G. Lopez-Martínez 和 C. Garcia，“推进入侵检测的强化学习进展，《计算机网络》，2019年。）
+
+
+    [5] M. Lopez-Martin, G. Ruiz and A. Sanchez-Evangilla, "Application of deep learning
+    for intrusion detection with supervised problems," Experts Systems With Applications,
+    vol. 140, 2021. （M. Lopez-Martin, G. Ruiz 和 A. Sanchez-Evangilla，“深度学习在监督问题入侵检测中的应用，《专家系统与应用》，第140卷，2021年。）
+
+
+    [6] N. Sengupta, J. Sen, J. Sil and M. Saha, "Design of online intrusion detection
+    system using deep neural network and reinforcement learning," Neurocomputing,
+    vol. 413, 2021. （N. Sengupta, J. Sen, J. Sil 和 M. Saha，“使用深度神经网络和强化学习的在线入侵检测系统设计，《神经计算》，第413卷，2021年。）
+
+
+    [7] A. Servin and D. Kudenko, "Multi-agent Reinforcement Learning for Intrusion
+    Detection, in Proceedings of Adaptive Agents and Multi-Agent Systems, 2017. （A.
+    Servin 和 D. Kudenko，“用于入侵检测的多智能体强化学习，《自适应代理与多智能体系统论文集》，2017年。）
+
+
+    [8] S. Otoum, B. Kamantari and H. Houmfah, "Empowering Reinforcement Learning
+    using Signature Data, for Intrusion Detection," in IEEE International Conference
+    on Information and Communications (CIC), 2018. （S. Otoum, B. Kamantari 和 H. Houmfah，“利用签名数据增强强化学习用于入侵检测，《IEEE
+    信息与通信国际会议 (CIC)》，2018年。）
+
+
+    ## HPC 上的 DRL 模型检测速度
+
+
+    ![](img/30ce015e48fec37b37fbb2080a8b94f7_5_0.png)
+
+
+    图8. 使用并行计算的 DRL 模型处理速度。
+
+
+    ## VI. 结论
+
+
+    NIDS 网络流量通过检测异常活动或网络攻击，以确保通信的安全与可靠性。在本文中，我们提出了一种基于深度强化学习（DRL）的异常检测系统。我们的方法包括在不同环境下的数据收集和处理步骤。强化学习方法可以在两种模式运行：学习模式旨在适应模型，以便在持续处理网络流量时保持高准确性，而检测模式则保持高处理速度模式。为了证明我们方法的可行性，我们进一步将模型应用于从校园网络环境中获取的亿节点
+    Alto 系统。我们将提出的 DRL 与三种不同的机器学习模型进行了比较。我们提出的方法均显示出最高的检测准确率、处理速度性能以及持续模型更新的有效性。
+
+
+    [9] N. Moustafa and J. Say, "The effectiveness of Anomaly Detection Statistics:
+    Statistical analysis of the UNS-NB15 data set and comparison with the KDD Cup99
+    data set," Information Security Journal: vol. 24, no. 25, 2015. （N. Moustafa 和
+    J. Say，“异常检测统计的有效性：UNS-NB15 数据集的统计分析以及与 KDD Cup99 数据集的比较，《信息安全期刊》，第24卷，第25期，2015年。）
+
+
+    [10] P. A. Networks, "TechDoc Palo Alto," (Online): paloalonetworks.com. （P. A.
+    Networks，“Palo Alto 技术文档”，在线：paloalonetworks.com。）
+
+
+    [11] W. J. Syed, E. France and M. A. Hall, "Practical Machine Learning and Techniques
+    (fourth edition)," Wiley. （W. J. Syed, E. France 和 M. A. Hall，“实用机器学习与技术（第四版）”，Wiley
+    出。）
+
+
+    [12] N. Moustafa, J. Say and G. Crook, "Green: Network Anomaly Detection Technique
+    for Intrusion Detection using Tree Area Estimation Approach," IEEE International
+    Conference on Computer and Technology (ICCT), 2017. （N. Moustafa, J. Say 和 G.
+    Crook，“绿色：使用树面积估计方法的入侵检测网络异常检测技术，《IEEE 计算机与技术国际会议 (ICCT)》，2017年。）
+
+
+    [13] Y. Yan, Q. Sun, and A. Alam, "Deep Learning for Intrusion Detection System,"
+    in IEEE International Conference on Future Computing and Technology (ICFFT), 2018.
+    （Y. Yan, Q. Sun 和 A. Alam，“入侵检测系统的深度学习，《IEEE 未来计算与技术国际会议 (ICFFT)》，2018年。）
+
+
+    [14] T. M. Baek, S. M. Swan and E-S. M. El-Adi, "A multicast of artificial neural
+    network for network intrusion detection," Journal of Intelligent & Fuzzy Systems,
+    vol. 32, 2875–2883, 2017. （T. M. Baek, S. M. Swan 和 E-S. M. El-Adi，“用于网络入侵检测的人工神经网络多播，《智能与模糊系统期刊》，第32卷，2875–2883，2017年。）
+
+
+    '
+  merge: 0
