@@ -1,0 +1,1724 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # Improving machine learning accuracy in diagnosing diseases using feature selection
+    based on the fruit-fly algorithm
+
+
+    Mehkdi Salkhhorde Hagighi
+
+    Faculty of Computer Engineering and IT
+
+    Sadjad University of Technology
+
+    Mashhad, Iran
+
+    haghigh@sadjad.ac.ir
+
+
+    Mohammad Javad Mashhadi Hoseini
+
+    Faculty of Computer Engineering and IT
+
+    Sadjad University of Technology
+
+    Mashhad, Iran
+
+    mo.mashhadi_hoseini42@sadjad.ac.ir
+
+
+    Abstract
+
+    Mining methods can be used to classify people as sick or healthy to diagnose diseases.
+    One of the important challenges in diagnosing the disease using learning methods
+    such as multicilayer neural network is the option of parameters to be solved with
+    meta-heuristic algorithms, but these are not without problems in these methods
+    meta-heuristic To a certain extent, it can only reduce the error, and to reduce
+    the machine learning error it is necessary to select the appropriate features.
+    The proposed method has two layers and in the first layer the selection of features
+    is done using the fruit fly algorithm and in the input layer, the feature selection
+    is done using the binary version of the fruit fly algorithm. Results on various
+    medical datasets in the UCI database show that the accuracy, sensitivity, and
+    specificity of the proposed method are 98.80%, respectively. The proposed method
+    is accurate in diagnosing diabetes besides the PSO, FA, SHO, and HMO algorithms.
+
+
+    require train and create a classification model in medical field where healthy
+    and individuals are separated. With the help of machine learning classification
+    is important because it reduces the cost of using, using data and past information
+    of medical doctors to discover the hidden pattern of the disease, and on the other
+    hand classification can help physicians diagnose diseases. Various based on machine
+    learning methods, of which some use meta-heuristic algorithms to output error.
+    It is necessary to perform the feature selection to focus only on the important
+    features. Machine learning is used to reduce the error of diagnosing diseases
+    in the study [4], 2019, before using the Gray Wolf Optimization (GWO) to diagnose
+    diseases. The proposed method shows that more than 76%, but in their experiments,
+    the accuracy is also around 73%. In their experiments, it is observed that the
+    sensitivity of the proposed method is about 88%, and the specificity is about
+    90%.
+
+
+    **Keywords** Feature selection, data mining, fruit fly algorithm, machine learning,
+    disease diagnosis, swarm intelligence
+
+
+    # ## I. INTRODUCTION
+
+
+    Classification is process in which data is divided into categories according to
+    the label they have, and unlike clustering, these are defined before or created
+    after time [1]. There are various methods for classifying information, including
+    support vector machine, decision tree and nearest neighbor [2]. Data related to
+    patients is used to classify heart disease, diabetes, and gastrointestinal diseases
+    using data mining methods. It is said that the information in the history of healthy
+    people and patients can be an important source for analyzing the patterns of them
+    and predicting diseases. With this data it is rarely and requires a high level
+    of knowledge to analyze them.
+
+
+    Be discovered in them and evaluated based on this knowledge [3]. Learning techniques
+    for diagnosing diseases
+
+
+    analysis of medical data using the fuzzy method with a feature extraction method
+    for data classification. Experiments show that the proposed method performs better
+    than others for solving real-world problems in diagnosing the disease. In the
+    study [7], 2020, the analysis of medical structure using the technique of support
+    vector was shown. In the study [8], 2020, one of the advantages of a swarm intelligence
+    approach to feature selection in data mining is it review the group intelligence
+    approach to select features. One of the disadvantages is that it is used for data
+    problems in various fields which is medicine in terms of the number of features
+    or dimensions, which makes, if the machine learning is used specifically algorithms
+    “large dimensions” create time challenges and classification error. Feature Selection
+    is an important technique that selects a subset of small and informative features
+    to improve performance.'
+  - '[PAGE 1]
+
+
+    - In the study [9], 2020, a optimization algorithm based on chaos for a support
+    vector machine for medical diagnosis is presented and modeled. Experimental results
+    show that the proposed method is better than other competitors in classification
+    performance and feature subset size.
+
+
+    In the study [10], 2020, the classification method for liver cancer with feature
+    based on the data are presented and introduced. Experimental results show that
+    the accuracy of their proposed method is significantly better than existing methods.
+
+
+    In the study [13], 2020classified method for hepatitis disease by Genetic Algorithm(GA)
+    and multi layer network. Experimental results show that the proposed method is
+    significantly better in terms of classification performance and feature subset
+    size. It shows that combination of multi neural network and evolutionary algorithms
+    is a novel model for diagnosis
+
+
+    According to the reviewed, the limitations that in the research and the proposed
+    method tried to overcome it are as follows:
+
+
+    +   - In these studies, as support vector machines have been used to classify
+    and analyze the disease, the main challenge is the complexity of the support vector
+    machine while the proposed method used an artificial neural, which is less complex,
+
+
+    +   - In research, optimization and meta-optimization algorithms have been used
+    to select the parameter in machine learning, the important challenge is that the
+    accuracy of learning methods depends not only on the optimal selection of parameter
+    but also requires the optimal selection of features.
+
+
+    +   - In some methods feature selection is used but learning parameters are not
+    optimized to reduce errors. In the proposed method, the same method that the parameters
+    of the artificial neural network are optimized to reduce the error with the fly
+    fruit algorithm, the feature selection by the fly algorithm is used to reduce
+    the classification error.
+
+
+    In studies, more feature selection method has been used for classification and
+    learning parameters to need to optimize the increase of accuracy and pattern discovery.
+    For this reason, the article tries to increase the accuracy and discovery in two
+    levels of feature selection and optimal selection of artificial neural network
+    learning. To do this, the fruit-eating evolutionary algorithm is used, which has
+    a high ability to search the problem space, and is better than other evolutionary
+    algorithms such as Genetic Algorithm and Particle swarm optimization. The goal
+    of this paper includes diagnosis of diseases by improved machine learning, reducing
+    learning disease diagnosis with group intelligence to reduce machine learning
+    in disease diagnosis and use fly fruit algorithm For applications in classification
+    and
+
+
+    feature selection in medicine. It is prepared in several sections. First, the
+    artificial neural network and the fruit-eating algorithm are described, and then
+    the proposed method is explained, and the experiments and analysis of the proposed
+    method are presented, and then the conclusion of the article is stated.
+
+
+    # II. MULTILAYER NEURAL NETWORK
+
+
+    The multilayer artificial neural network is modeled on the structure and function
+    of the human brain its neurons in information processing. The multilayer artificial
+    neural network is an example of type of neural network and has sections such as
+    input layers, hidden layers, neurons of each layer, there are hidden layers between
+    the input and output layers in this type of neural network. In each, there are
+    artificial neurons whose task is to act on the input and provide output function.
+
+
+    An artificial neuron can map the inputs into weights and add them to some of called
+    bases and make the final output using the activity function :
+
+
+    # III. FLY FR OPTIMIZATION ALGORITHM
+
+
+    The Fly fruit optimization algorithm is a meta-heuristic algorithm with group
+    intelligence approach is to solve problems and its performance is illustrated
+    in Figure (1). It can be seen in that, the optimal solution is considered the
+    prey and food position or other solutions fly towards that optimal solution
+
+
+    ![](img/2850741be238fbb31e5292a4a6444119_1_0.png)
+
+
+    Figure 1: Optimal solution performance by fly fruit algorithm [12]
+
+
+    The fly fruit optimization algorithm is based on the abilities of flies to detect
+    food. Fruit flies are superior to other species in terms of olfactory and visual
+    ability. Therefore, it makes use of both kind to find food. Fruit-flies can sense
+    food by visual and by searching an area to place food. The proposed of this algorithm
+    is that each solution to the problem is considered as a vector of decision variables
+    such as Equation (1). An initial population of solutions is then created in a
+    random problem space as Equation (2), and each of these solutions is'
+  md: '
+
+    ## Improving machine learning accuracy in diagnosing diseases using feature selection
+    based on the fruit-fly algorithm
+
+
+    Mehkdi Salkhhorde Hagighi
+
+    Faculty of Computer Engineering and IT
+
+    Sadjad University of Technology
+
+    Mashhad, Iran
+
+    haghigh@sadjad.ac.ir
+
+
+    Mohammad Javad Mashhadi Hoseini
+
+    Faculty of Computer Engineering and IT
+
+    Sadjad University of Technology
+
+    Mashhad, Iran
+
+    mo.mashhadi_hoseini42@sadjad.ac.ir
+
+
+    ### Abstract
+
+    Mining methods can be used to classify people as sick or healthy to diagnose diseases.
+    One of the important challenges in diagnosing the disease using learning methods
+    such as multicilayer neural network is the option of parameters to be solved with
+    meta-heuristic algorithms, but these are not without problems in these methods
+    meta-heuristic. To a certain extent, it can only reduce the error, and to reduce
+    the machine learning error it is necessary to select the appropriate features.
+    The proposed method has two layers and in the first layer the selection of features
+    is done using the fruit fly algorithm and in the input layer, the feature selection
+    is done using the binary version of the fruit fly algorithm. Results on various
+    medical datasets in the UCI database show that the accuracy, sensitivity, and
+    specificity of the proposed method are 98.80%, respectively. The proposed method
+    is accurate in diagnosing diabetes besides the PSO, FA, SHO, and HMO algorithms.
+
+
+    require train and create a classification model in medical field where healthy
+    and individuals are separated. With the help of machine learning classification
+    is important because it reduces the cost of using, using data and past information
+    of medical doctors to discover the hidden pattern of the disease, and on the other
+    hand classification can help physicians diagnose diseases. Various based on machine
+    learning methods, of which some use meta-heuristic algorithms to output error.
+    It is necessary to perform the feature selection to focus only on the important
+    features. Machine learning is used to reduce the error of diagnosing diseases
+    in the study [4], 2019, before using the Gray Wolf Optimization (GWO) to diagnose
+    diseases. The proposed method shows that more than 76%, but in their experiments,
+    the accuracy is also around 73%. In their experiments, it is observed that the
+    sensitivity of the proposed method is about 88%, and the specificity is about
+    90%.
+
+
+    **Keywords** Feature selection, data mining, fruit fly algorithm, machine learning,
+    disease diagnosis, swarm intelligence
+
+
+    ## I. INTRODUCTION
+
+
+    Classification is process in which data is divided into categories according to
+    the label they have, and unlike clustering, these are defined before or created
+    after time [1]. There are various methods for classifying information, including
+    support vector machine, decision tree and nearest neighbor [2]. Data related to
+    patients is used to classify heart disease, diabetes, and gastrointestinal diseases
+    using data mining methods. It is said that the information in the history of healthy
+    people and patients can be an important source for analyzing the patterns of them
+    and predicting diseases. With this data it is rarely and requires a high level
+    of knowledge to analyze them.
+
+
+    Be discovered in them and evaluated based on this knowledge [3]. Learning techniques
+    for diagnosing diseases analysis of medical data using the fuzzy method with a
+    feature extraction method for data classification. Experiments show that the proposed
+    method performs better than others for solving real-world problems in diagnosing
+    the disease. In the study [7], 2020, the analysis of medical structure using the
+    technique of support vector was shown. In the study [8], 2020, one of the advantages
+    of a swarm intelligence approach to feature selection in data mining is it review
+    the group intelligence approach to select features. One of the disadvantages is
+    that it is used for data problems in various fields which is medicine in terms
+    of the number of features or dimensions, which makes, if the machine learning
+    is used specifically algorithms “large dimensions” create time challenges and
+    classification error. Feature Selection is an important technique that selects
+    a subset of small and informative features to improve performance.
+
+
+    - In the study [9], 2020, a optimization algorithm based on chaos for a support
+    vector machine for medical diagnosis is presented and modeled. Experimental results
+    show that the proposed method is better than other competitors in classification
+    performance and feature subset size.
+
+
+    In the study [10], 2020, the classification method for liver cancer with feature
+    based on the data are presented and introduced. Experimental results show that
+    the accuracy of their proposed method is significantly better than existing methods.
+
+
+    In the study [13], 2020 classified method for hepatitis disease by Genetic Algorithm(GA)
+    and multi layer network. Experimental results show that the proposed method is
+    significantly better in terms of classification performance and feature subset
+    size. It shows that combination of multi neural network and evolutionary algorithms
+    is a novel model for diagnosis.
+
+
+    According to the reviewed, the limitations that in the research and the proposed
+    method tried to overcome it are as follows:
+
+
+    - In these studies, as support vector machines have been used to classify and
+    analyze the disease, the main challenge is the complexity of the support vector
+    machine while the proposed method used an artificial neural, which is less complex.
+
+
+    - In research, optimization and meta-optimization algorithms have been used to
+    select the parameter in machine learning, the important challenge is that the
+    accuracy of learning methods depends not only on the optimal selection of parameter
+    but also requires the optimal selection of features.
+
+
+    - In some methods feature selection is used but learning parameters are not optimized
+    to reduce errors. In the proposed method, the same method that the parameters
+    of the artificial neural network are optimized to reduce the error with the fly
+    fruit algorithm, the feature selection by the fly algorithm is used to reduce
+    the classification error.
+
+
+    In studies, more feature selection method has been used for classification and
+    learning parameters to need to optimize the increase of accuracy and pattern discovery.
+    For this reason, the article tries to increase the accuracy and discovery in two
+    levels of feature selection and optimal selection of artificial neural network
+    learning. To do this, the fruit-eating evolutionary algorithm is used, which has
+    a high ability to search the problem space, and is better than other evolutionary
+    algorithms such as Genetic Algorithm and Particle swarm optimization. The goal
+    of this paper includes diagnosis of diseases by improved machine learning, reducing
+    disease diagnosis with group intelligence and use fly algorithm for applications
+    in classification and feature selection in medicine. It is prepared in several
+    sections. First, the artificial neural network and the fruit fly algorithm are
+    described, and then the proposed method is explained, and the experiments and
+    analysis of the proposed method are presented, and then the conclusion of the
+    article is stated.
+
+
+    ## II. MULTILAYER NEURAL NETWORK
+
+
+    The multilayer artificial neural network is modeled on the structure and function
+    of the human brain its information processing. The multilayer artificial neural
+    network is an example of type of neural network and has sections as input layers,
+    hidden layers, neurons of each layer, there are hidden layers between the input
+    and output layers in this type of neural network. In each, there are artificial
+    neurons whose task is to act on the input and provide output function.
+
+
+    An artificial neuron can map the inputs into weights and add them to some of called
+    bases and make the final output using the activity function:
+
+
+    ## III. FLY OPTIMIZATION ALGORITHM
+
+
+    The Fly fruit optimization algorithm is a meta-heuristic algorithm with group
+    intelligence approach is to solve problems and its performance is illustrated
+    in Figure (1). It can be seen in that, the optimal solution is considered the
+    prey and food position or other solutions fly towards that optimal solution.
+
+
+    ![](img/2850741be238fbb31e5292a4a6444119_1_0.png)
+
+
+    Figure 1: Optimal solution performance by fly fruit algorithm [12]
+
+
+    The fly fruit optimization algorithm is based on the abilities of flies to detect
+    food. Fruit flies are superior to other species in terms of olfactory and visual
+    ability. Therefore, it makes use of both kind to find food. Fruit-flies can sense
+    food by visual and by searching an area to place food. The proposed of this algorithm
+    is that each solution to the problem is considered as a vector of decision variables
+    such as Equation (1). An initial population of solutions is then created in a
+    random problem space as Equation (2), and each of these solutions is
+
+    '
+  mdcn: '
+
+
+    ## 基于果蝇算法的特征选择提高机器学习诊断疾病的准确性
+
+
+    Mehkdi Salkhhorde Hagighi
+
+    计算机工程与信息学院
+
+    Sadjad大学
+
+    伊朗马什哈德
+
+    haghigh@sadjad.ac.ir
+
+
+    Mohammad Javad Mashhadi Hoseini
+
+    计算机工程与信息学院
+
+    Sadjad大学
+
+    伊朗马什哈德
+
+    mo.mashhadi_hoseini42@sadjad.ac.ir
+
+
+    ### 摘要
+
+    挖掘方法可用于将人员分类为患病或健康以诊断疾病。使用多层神经网络等学习方法诊断疾病时，面临的重大挑战之一是需要用元启发式算法求解的参数选择，但这些元启发式方法中并非没有问题。在某种程度上，它们只能减少误差，而为了减少机器学习误差，必须选择合适的特征。所提方法包含两层：第一层使用果蝇算法进行特征选择，在输入层使用果蝇算法的二进制版本进行特征选择。在
+    UCI 数据库中各种医疗数据集上的结果表明，所提方法的准确率、敏感性和特异性分别为 98.80%。除了 PSO、FA、SHO 和 HMO 算法外，所提方法在糖尿病诊断方面也是准确的。
+
+
+    在医疗领域需要训练并创建一个分类模型，将健康与个体分开。在机器学习的帮助下，分类至关重要，因为它降低了使用数据和医疗医生过去信息来发现疾病隐藏模式的成本，另一方面，分类可以帮助医生诊断疾病。基于机器学习的方法有多种，其中一些使用元启发式算法输出误差。有必要进行特征选择以仅关注重要特征。在研究
+    [4], 2019 中，在使用灰狼优化算法 (GWO) 诊断疾病之前，利用机器学习减少疾病诊断误差。所提方法显示的准确率超过 76%，但在他们的实验中，准确率也在
+    73% 左右。在他们的实验中观察到，所提方法的敏感性约为 88%，特异性约为 90%。
+
+
+    **关键词** 特征选择、数据挖掘、果蝇算法、机器学习、疾病诊断、群智能
+
+
+    ## I. 引言
+
+
+    分类是根据拥有的标签将数据分为不同类别的过程，与聚类不同，这些类别是在时间之前定义的或之后创建的 [1]。分类信息有多种方法，包括支持向量机、决策树和最近邻
+    [2]。与患者相关的数据被用于数据挖掘方法分类心脏病、糖尿病和胃肠道疾病。据报道，健康人和患者病史中的信息可以是分析其模式和预测疾病的重要来源。对这些数据进行分析是稀缺的，且需要高水平的知识。
+
+
+    在其中发现它们并根据这些知识进行评估 [3]。使用模糊方法结合特征提取方法进行数据分类的医疗数据分析诊断技术。实验表明，所提方法在解决疾病诊断的现实问题方面优于其他方法。在研究
+    [7], 2020 中，展示了使用支持向量技术分析医疗结构。在研究 [8], 2020 中，群智能方法在数据挖掘特征选择中的优势之一是它回顾了群体智能方法来选择特征。缺点之一是它被用于各个领域的数据问题，医学领域在特征数量或维度方面，这导致当专门使用机器学习算法时，“大维度”会产生时间挑战和分类误差。特征选择是一项选择少量且信息丰富的特征子集以提高性能的重要技术。
+
+
+    - 在研究 [9], 2020 中，提出并建模了一种基于混沌的用于医疗诊断的支持向量机优化算法。实验结果表明，所提方法在分类性能和特征子集大小方面优于其他竞争对手。
+
+
+    在研究 [10], 2020 中，介绍并展示了用于癌症诊断的基于混沌的支持向量机优化算法。实验结果表明，所提方法在分类性能上优于其他对手。
+
+
+    在研究 [13], 2020 中，使用了遗传算法 (GA) 用于肝炎诊断的分类方法。实验结果表明，所提方法在分类性能和特征子集大小方面优于现有方法。
+
+
+    根据综述，所提方法尝试克服的神经网络局限性如下：
+
+
+    - 在这些研究中，支持向量机被用于分类和分析疾病，主要的挑战是支持向量机的复杂性，所提方法使用了神经网络。
+
+
+    - 在研究中，优化算法被用于机器学习中的参数选择，重要的挑战是分类不仅取决于参数选择，还需要特征的最优选择。
+
+
+    - 在某些方法中，特征选择被用于减少误差。所提方法通过果蝇算法优化神经网络的参数以减少分类误差。
+
+
+    在研究中，果蝇算法被用于特征选择以提高准确率和发现。因此，所提方法尝试通过神经网络的优选择来增加准确率和发现。
+
+
+    本文的目标包括通过改进的机器学习和群智能使用果蝇算法进行疾病诊断，并在医学应用于特征选择。为此，使用了果蝇进化算法，它具有很强的空间搜索能力，优于遗传算法等粒子群优化算法。本文由若干部分组成：首先描述神经网络和果蝇算法，然后解释所提方法，接着展示所提方法的实验和分析，最后给出结论。
+
+
+    ## II. 多层神经网络
+
+
+    多层神经网络根据大脑的信息处理结构和功能进行建模。多层神经网络是神经网络的一种示例，具有输入层、隐藏层，在这种类型的网络中，在输入层和输出层之间有隐藏层。每一层都有人工神经元，其任务是对输入起作用并提供输出函数。
+
+
+    人工神经元可以将输入映射为权重，并将它们加到某些基上，利用激活函数产生最终输出：
+
+
+    ## III. 果蝇优化算法
+
+
+    果蝇优化算法是一种具有群体智能方法的元启发式算法，用于解决问题，其性能如图 1 所示。可以看到，最优解被视为猎物和食物位置，其他解向该最优解飞去。
+
+
+    ![](img/2850741be238fbb31e5292a4a6444119_1_0.png)
+
+
+    图 1：果蝇算法的最优解性能 [12]
+
+
+    果蝇优化算法基于果蝇探测食物的能力。果蝇在嗅觉和视觉能力方面优于其他物种。因此，它利用这两种方式来寻找食物。果蝇可以通过视觉和搜索放置食物的区域来感知食物。该算法提出的是问题的每个解都被视为决策变量的向量，如公式
+    (1) 所示。随后在随机问题空间中创建初始解种，其中每个解是
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    # 2020 Iranian Conference on Signal Processing and Intelligent Systems (ICSIPS)
+
+
+    evaluated using an evaluation function such as Equation (3), and the suitability
+    of each function is defined. Because:
+
+
+    ```
+
+    $X_i = <<\nX_{i,1}, X_{i,2}, ..., X_{i,d} = <<\n\n\alpha + \beta = \chi.$
+
+    ```
+
+
+    In these relationships, $D_i$ is the distance of the $i$-th solution from the
+    optimal solution and $S_i$ is the suitability of the solution and fitness. In
+    the algorithm, the position of the best solution in the horizontal and vertical
+    dimensions (it can be evaluated using a function) that gives the most reward is
+    considered with bestsmell. Then its horizontal and vertical position is placed
+    in the step variable as equation (10) and (11):
+
+
+    ```
+
+    $X_{1,1} X_{1,2} ... X_{1,d}\nX_{2,1} X_{2,2} ... X_{2,d}\nX_{m,1} X_{m,2} ...
+    X_{m,d} = Pop$
+
+    ```
+
+
+    ```
+
+    $X_{axis} = X(bestsmell)\nY_{axis} = Y(bestsmell)$
+
+    ```
+
+
+    ```
+
+    $Pop = f(X_{1,1} X_{1,2} ... X_{1,d}), \f(X_{2,1} X_{2,2} ... X_{2,d}), \f(X_{m,1}
+    X_{m,2} ... X_{m,d})$
+
+    ```
+
+
+    One of the important challenges in designing diseases is the classification of
+    healthy people from the sick, and other is that if the number of data features
+    and samples is large, learning methods with more error will design sick people.
+    To solve this the method has the following two layers:
+
+
+    In these relationships, $S_i$ is a quality or fruit duty, the number of populations
+    and $f$ is a function of the objective optimization. In each solution can run
+    randomly in the horizontal or vertical dimensional space as equations (4) and
+    (5):
+
+
+    +   - Selection of appropriate traits relates to disease and reduction of data
+    dimensions using selection feature by fruit algorithm.
+
+    - Optimal weight and bias for artificial neural network to reduce its classification
+    error in disease using fruit algorithm.
+
+
+    ```
+
+    $X_{axis} = rands(1,2)\nY_{axis} = rands(1,2)$
+
+    ```
+
+
+    In these relationships, the fitness step size is between 1 and 2 and is random.
+    Based on the size of fit step in relation (4) and (5), fly can expand its dimension
+    in a horizontal or vertical direction, as shown in (6) and (7):
+
+
+    In a multilayer neural network to distinguish sick and healthy individuals, patient-related
+    and healthy samples are collected in a data set and the samples are divided equally.
+    training samples are used to train and create a learning model in an artificial
+    neural network, and this model needs to be evaluated after training to calculate
+    its accuracy and error. The difficulty of distinguishing sick and healthy people
+    means the problem. The model can be used to determine the accuracy of distinguishing
+    sick people from a healthy one. The error of distinguishing sick people from healthy
+    depends on various factors, the most important being what features distinguish
+    sick people from healthy people. All the features are used to train the artificial
+    neural network because they are not equally important, then it can be expected
+    that this importance will control the dimensions of the problem and data to be
+    large. This phenomenon also increases the execution time. To reduce or modify
+    these problem, feature selection can be used to reduce the artificial networks
+    using a meta-heuristic algorithm as the framework in (2). Is larger. In this context,
+    important phases for distinguishing sick people from healthy can be as follows:
+
+
+    ```
+
+    $X_i = X_i + RandomValue\nY = Y_i + RandomValue$
+
+    ```
+
+
+    To evaluate each, its distance from the food or the optimal answer, can be calculated:
+
+
+    ```
+
+    $D_i = \sqrt{X_i^2 + Y_i^2}$
+
+    ```
+
+
+    The value of each solution can be considered by its inverse distance from the
+    optimal solution (9):
+
+
+    ```
+
+    $S_i = \frac{1}{D_i}$
+
+    ```
+
+
+    Authorized limit used to: San Francisco State Univ. Download on June 24, 2021
+    at 23:16:42 UTC from IEEE Xplore. Restrictions apply.'
+  - "[PAGE 3]\n\n# Training Data\n\nA feature set is considered a member of a meta-heuristic\
+    \ algorithm.\n\nA number of disease-related feature vectors are randomly generated\n\
+    \nArtificial neural network training with feature vectors\n\nSelect the optimal\
+    \ feature vector\n\nUpdate disease-related feature vectors\n\nRepetition?\n\n\
+    No\n\nData\n\nNeural network training with optimal feature vectors and creating\
+    \ a classification model. \n\nSelect optimal weight and bias from artificial neural\
+    \ network\n\nHealthy\n\nPatient\n\nFramework 2: Framework of the proposed method\n\
+    \n+   * Feature vector coding in the form of a member of the meta-innovation algorithm\
+    \ or the fruit fly optimization algorithm.\n* Generate the initial and random\
+    \ population of property vectors that have zero and one.\n* Each of the feature\
+    \ vectors is used to learn artificial neural network.\n* In each iteration, the\
+    \ most optimal feature vector is selected and updated updated the meta-heuristic\
+    \ algorithm.\n* In similar way, Feature coding in form of weight and bias of multi\
+    \ layer network passed to the meta-heuristic algorithm. It is continues until\
+    \ optimal weight and bias for artificial neural network .\n* The most optimal\
+    \ feature vector in the last iteration is used to learn and classify with the\
+    \ artificial neural network that has optimal weight and bias in the diagnosis\
+    \ of individuals from the patients\n\nTo evaluate each attribute vector, the two\
+    \ important factors can be considered and an objective function can be rewritten\
+    \ based on these factors:\n\n+   * The error factor in distinguishing healthy\
+    \ people from patients.\n* Number of features\n\nIf a feature can minimize these\
+    \ two indicators, can it be said that a feature vector is optimal for training\
+    \ neural networks. An appropriate objective or evaluation for feature selection\
+    \ in the diagnosis of the disease can be presented as a result of (12):\n\n```\n\
+    $CostFun = \\delta_i * \\mu_i + \\frac{\\delta_j}{4}$ (12)\n```\n\nIn this regard,\
+    \ most is the average error of distinguishing people from healthy people, and\
+    \ $|||i||$ the number of features selected and $|||j||$ the total number of features\
+    \ associated with the data set $rateFeature$ is also the average of the selected\
+    \ features to the properties. In this relation, the sum of two coefficients $\\\
+    delta_i$ and $\\delta_j$ must be considered as one, and each of them has a range\
+    \ value between zero and one, and there is a relation (13) between them:\n\n```\n\
+    $\\delta_1 + \\delta_2 = 1$ (13)\n```\n\nThe mean square error of distinguishing\
+    \ people from healthy people, is an important part of the objective function,\
+    \ and can be calculated as Equation (14):\n\n![](img/2850741be238fbb31e5292a4a6444119_3_0.png)"
+  - '[PAGE 4]
+
+
+    $mse = \sum_{k=1}^{n} (y_k - \hat{y}_k)^2$
+
+
+    In regard, $y_k$ is the actual value of a sample, $\hat{y}_k$ is the estimated
+    number of sample in the proposed method, and $n$ is the number of samples. The
+    following assumptions are needed to reduce the error of the multicayer artificial
+    neural network for the diagnosis of the disease:
+
+
+    +   - The weight and bias used in the multicayer artificial neural network are
+    encoded as a vector or memory of the fruit fly algorithm.
+
+
+    +   - A number of weight and bias vectors are generated in the form of a population
+    random fly optimization algorithms.
+
+    - The average disorder of diagnosis and classifying individuals into sticky and
+    healthy groups is considered as goal function and an attempt is made to select
+    weight and bias to minimize error.
+
+
+    +   - The weight and bias of the artificial neural network are updated at each
+    stage by the relationships of the fruit fly optimization algorithm, and the role
+    of this algorithm is to search the final space with the optimal weight and bias
+    to reduce the classification error.
+
+
+    +   - An optimal multilayer neural network with optimal weight and bias is used
+    for the final classification of healthy and sick people.
+
+
+    One of the most important datasets in the diagnosis of diseases is the Diabetes
+    dataset. In this data set, record is defined for each patient, and each patient
+    has 8 characteristics related to diabetes and blood sugar, and number of samples
+    is equal to 768, and a method of the proposed method is to learn accurately on
+    all these samples. Figure (3) shows the MSE index in the proposed method and the
+    particle algorithm, firstly, hyena, and for the diagnosis of diabetes compared
+    to other methods. The method uses a multilayer artificial neural network, each
+    layer of 10 neurons and the type of activity function which is Gaussian, for classification.
+    The tests were performed 50 times to calculate the average classification in diagnosing
+    the disease:
+
+
+    ![](img/2850741be238fbb31e5292a4a6444119_4_0.png)
+
+
+    Figure 3: Comparison of MSE in diagnosis method
+
+
+    # V. EXPERIMENTS
+
+
+    To evaluate the proposed method and compare with diagnostic methods, the criteria
+    of accuracy, sensitivity, and specificity have been used in most studies. The
+    percentage of accuracy in the best and worst cases are 0 and 100, respectively
+    the proximity to 100 indicates the good accuracy of the proposed algorithm. In
+    (15), (16) and (17) show how to calculate accuracy, sensitivity, or specificity
+    or diagnosis, respectively:
+
+
+    $Accuracy = (TP + TN)/(TP + TN + FP + FN) = (15)
+
+
+    $Specificity = TN/(TN + FN) = (16)
+
+
+    $Sensitivity = TP/(TP + FP) = (17)
+
+
+    The values used to calculate the accuracy, sensitivity, and specificity in diagnosis
+    is as follows:
+
+
+    Experiments show that the error of the proposed method and particle algorithm,
+    firstly, hyena, and for the classification and diagnosis of diabetes are 0.116,
+    0.175, 0.164, and 0.134, respectively, and the proposed method has less error
+    in optimizing the neural network. The method the multilayer neural network has
+    an error of 0.098 in the diagnosis of diabetes, and the algorithm has an error
+    of about 32% less than this method. Table (1) also compares the accuracy, sensitivity,
+    and specificity index or detection of the proposed method with other meta-heuristic
+    and similar methods:
+
+
+    Table 1: Comparison of accuracy, sensitivity, and diagnosis of diabetes
+
+
+    | specificity | sensitivity | accuracy | Method |
+
+    |---|---|---|---|
+
+    | 96.62 | 96.76 | 96.84 | MLP-PSO |
+
+    | 96.88 | 97.24 | 97.02 | MLP-FA |
+
+    | 97.06 | 97.14 | 97.54 | MLP-SHO |
+
+    | 97.11 | 97.22 | 97.28 | MLP-HHO |
+
+    | 98.08 | 98.12 | 98.36 | MLP-FOA |
+
+
+    TP: People who have been correctly diagnosed as healthy
+
+    TN: Healthy people who are properly diagnosed as healthy
+
+    FP: People who have been misidentified as patients
+
+    FN: People who have been misidentified as diseased
+
+
+    Experiments show that accuracy, sensitivity, and diagnosis of the proposed method
+    for diabetes diabetes are 98.36%, 98.12%, and 98.08%, respectively, and that methods
+    such as the particle algorithm, nightshade, hyena, and have have more'
+  md: '
+
+    # 2020 Iranian Conference on Signal Processing and Intelligent Systems (ICSIPS)
+
+
+    evaluated using an evaluation function such as Equation (3), and the suitability
+    of each function is defined. Because:
+
+
+    ```
+
+    $X_i = <<\nX_{i,1}, X_{i,2}, ..., X_{i,d} = <<\n\n\alpha + \beta = \chi.$
+
+    ```
+
+
+    In these relationships, $D_i$ is the distance of the $i$-th solution from the
+    optimal solution and $S_i$ is the suitability of the solution and fitness. In
+    the algorithm, the position of the best solution in the horizontal and vertical
+    dimensions (it can be evaluated using a function) that gives the most reward is
+    considered with bestsmell. Then its horizontal and vertical position is placed
+    in the step variable as equation (10) and (11):
+
+
+    ```
+
+    $X_{1,1} X_{1,2} ... X_{1,d}\nX_{2,1} X_{2,2} ... X_{2,d}\nX_{m,1} X_{m,2} ...
+    X_{m,d} = Pop$
+
+    ```
+
+
+    ```
+
+    $X_{axis} = X(bestsmell)\nY_{axis} = Y(bestsmell)$
+
+    ```
+
+
+    ```
+
+    $Pop = f(X_{1,1} X_{1,2} ... X_{1,d}), \f(X_{2,1} X_{2,2} ... X_{2,d}), \f(X_{m,1}
+    X_{m,2} ... X_{m,d})$
+
+    ```
+
+
+    One of the important challenges in designing diseases is the classification of
+    healthy people from the sick, and other is that if the number of data features
+    and samples is large, learning methods with more error will design sick people.
+    To solve this the method has the following two layers:
+
+
+    In these relationships, $S_i$ is a quality or fruit duty, the number of populations
+    and $f$ is a function of the objective optimization. In each solution can run
+    randomly in the horizontal or vertical dimensional space as equations (4) and
+    (5):
+
+
+    - Selection of appropriate traits relates to disease and reduction of data dimensions
+    using selection feature by fruit algorithm.
+
+    - Optimal weight and bias for artificial neural network to reduce its classification
+    error in disease using fruit algorithm.
+
+
+    ```
+
+    $X_{axis} = rands(1,2)\nY_{axis} = rands(1,2)$
+
+    ```
+
+
+    In these relationships, the fitness step size is between 1 and 2 and is random.
+    Based on the size of fit step in relation (4) and (5), fly can expand its dimension
+    in a horizontal or vertical direction, as shown in (6) and (7):
+
+
+    In a multilayer neural network to distinguish sick and healthy individuals, patient-related
+    and healthy samples are collected in a data set and the samples are divided equally.
+    training samples are used to train and create a learning model in an artificial
+    neural network, and this model needs to be evaluated after training to calculate
+    its accuracy and error. The difficulty of distinguishing sick and healthy people
+    means the problem. The model can be used to determine the accuracy of distinguishing
+    sick people from a healthy one. The error of distinguishing sick people from healthy
+    depends on various factors, the most important being what features distinguish
+    sick people from healthy people. All the features are used to train the artificial
+    neural network because they are not equally important, then it can be expected
+    that this importance will control the dimensions of the problem and data to be
+    large. This phenomenon also increases the execution time. To reduce or modify
+    these problem, feature selection can be used to reduce the artificial networks
+    using a meta-heuristic algorithm as the framework in (2). Is larger. In this context,
+    important phases for distinguishing sick people from healthy can be as follows:
+
+
+    ```
+
+    $X_i = X_i + RandomValue\nY = Y_i + RandomValue$
+
+    ```
+
+
+    To evaluate each, its distance from the food or the optimal answer, can be calculated:
+
+
+    ```
+
+    $D_i = \sqrt{X_i^2 + Y_i^2}$
+
+    ```
+
+
+    The value of each solution can be considered by its inverse distance from the
+    optimal solution (9):
+
+
+    ```
+
+    $S_i = \frac{1}{D_i}$
+
+    ```
+
+
+    # Training Data
+
+
+    A feature set is considered a member of a meta-heuristic algorithm.
+
+
+    - A number of disease-related feature vectors are randomly generated
+
+    - Artificial neural network training with feature vectors
+
+    - Select the optimal feature vector
+
+    - Update disease-related feature vectors
+
+    - Repetition?
+
+    - No
+
+    - Data
+
+
+    Neural network training with optimal feature vectors and creating a classification
+    model.
+
+
+    - Select optimal weight and bias from artificial neural network
+
+    - Healthy
+
+    - Patient
+
+
+    ## Framework 2: Framework of the proposed method
+
+
+    - Feature vector coding in the form of a member of the meta-innovation algorithm
+    or the fruit fly optimization algorithm.
+
+    - Generate the initial and random population of property vectors that have zero
+    and one.
+
+    - Each of the feature vectors is used to learn artificial neural network.
+
+    - In each iteration, the most optimal feature vector is selected and updated updated
+    the meta-heuristic algorithm.
+
+    - In similar way, Feature coding in form of weight and bias of multi layer network
+    passed to the meta-heuristic algorithm. It is continues until optimal weight and
+    bias for artificial neural network .
+
+    - The most optimal feature vector in the last iteration is used to learn and classify
+    with the artificial neural network that has optimal weight and bias in the diagnosis
+    of individuals from the patients
+
+
+    To evaluate each attribute vector, the two important factors can be considered
+    and an objective function can be rewritten based on these factors:
+
+
+    - The error factor relates to disease and reduction of data dimensions using selection
+    feature by fruit algorithm.
+
+    - Optimal weight and bias for artificial neural network to reduce its classification
+    error in disease using fruit algorithm.
+
+
+    In these relationships, the fitness step size is between 1 and 2 and is random.
+    Based on the size of fit step in relation (4) and (5), fly can expand its dimension
+    in a horizontal or vertical direction, as shown in (6) and (7):
+
+
+    In a multilayer neural network to distinguish sick and healthy individuals, patient-related
+    and healthy samples are collected in a data set and the samples are divided equally.
+    training samples are used to train and create a learning model in an artificial
+    neural network, and this model needs to be evaluated after training to calculate
+    its accuracy and error. The difficulty of distinguishing sick and healthy people
+    means the problem. The model can be used to determine the accuracy of distinguishing
+    sick people from a healthy one. The error of distinguishing sick people from healthy
+    depends on various factors, the most important being what features distinguish
+    sick people from healthy people. All the features are used to train the artificial
+    neural network because they are not equally important, then it can be expected
+    that this importance will control the dimensions of the problem and data to be
+    large. This phenomenon also increases the execution time. To reduce or modify
+    these problem, feature selection can be used to reduce the artificial networks
+    using a meta-heuristic algorithm as the framework in (2). Is larger. In this context,
+    important phases for distinguishing sick people from healthy can be as follows:
+
+
+    To evaluate each attribute vector, the two important factors can be considered
+    and an objective function can be rewritten based on these factors:
+
+
+    - The error factor relates to disease and reduction of data dimensions using selection
+    feature by fruit algorithm.
+
+    - Optimal weight and bias for artificial neural network to reduce its classification
+    error in disease using fruit algorithm.
+
+
+    In these relationships, the fitness step size is between 1 and 2 and is random.
+    Based on the size of fit step in relation (4) and (5), fly can expand its dimension
+    in a horizontal or vertical direction, as shown in (6) and (7):
+
+
+    In a multilayer neural network to distinguish sick and healthy individuals, patient-related
+    and healthy samples are collected in a data set and the samples are divided equally.
+    training samples are used to train and create a learning model in an artificial
+    neural network, and this model needs to be evaluated after training to calculate
+    its accuracy and error. The difficulty of distinguishing sick and healthy people
+    means the problem. The model can be used to determine the accuracy of distinguishing
+    sick people from a healthy one. The error of distinguishing sick people from healthy
+    depends on various factors, the most important being what features distinguish
+    sick people from healthy people. All the features are used to train the artificial
+    neural network because they are not equally important, then it can be expected
+    that this importance will control the dimensions of the problem and data to be
+    large. This phenomenon also increases the execution time. To reduce or modify
+    these problem, feature selection can be used to reduce the artificial networks
+    using a meta-heuristic algorithm as the framework in (2). Is larger. In this context,
+    important phases for distinguishing sick people from healthy can be as follows:
+
+
+    To evaluate each attribute vector, the two important factors can be considered
+    and an objective function can be rewritten based on these factors:
+
+
+    - The error factor relates to disease and reduction of data dimensions using selection
+    feature by fruit algorithm.
+
+    - Optimal weight and bias for artificial neural network to reduce its classification
+    error in disease using fruit algorithm.
+
+
+    In these relationships, the fitness step size is between 1 and 2 and is random.
+    Based on the size of fit step in relation (4) and (5), fly can expand its dimension
+    in a horizontal or vertical direction, as shown in (6) and (7):
+
+
+    In a multilayer neural network to distinguish sick and healthy individuals, patient-related
+    and healthy samples are collected in a data set and the samples are divided equally.
+    training samples are used to train and create a learning model in an artificial
+    neural network, and this model needs to be evaluated after training to calculate
+    its accuracy and error. The difficulty of distinguishing sick and healthy people
+    means the problem. The model can be used to determine the accuracy of distinguishing
+    sick people from a healthy one. The error of distinguishing sick people from healthy
+    depends on various factors, the most important being what features distinguish
+    sick people from healthy people. All the features are used to train the artificial
+    neural network because they are not equally important, then it can be expected
+    that this importance will control the dimensions of the problem and data to be
+    large. This phenomenon also increases the execution time. To reduce or modify
+    these problem, feature selection can be used to reduce the artificial networks
+    using a meta-heuristic algorithm as the framework in (2). Is larger. In this context,
+    important phases for distinguishing sick people from healthy can be as follows:
+
+
+    To evaluate each attribute vector, the two important factors can be considered
+    and an objective function can be rewritten based on these factors:
+
+
+    - The error factor relates to disease and reduction of data dimensions using selection
+    feature by fruit algorithm.
+
+    - Optimal weight and bias for artificial neural network to reduce its classification
+    error in disease using fruit algorithm.
+
+
+    In these relationships, the fitness step size is between 1 and 2 and is random.
+    Based on the size of fit step in relation (4) and (5), fly can expand its dimension
+    in a horizontal or vertical direction, as shown in (6) and (7):
+
+
+    In a multilayer neural network to distinguish sick and healthy individuals, patient-related
+    and healthy samples are collected in a data set and the samples are divided equally.
+    training samples are used to train and create a learning model in an artificial
+    neural network, and this model needs to be evaluated after training to calculate
+    its accuracy and error. The difficulty of distinguishing sick and healthy people
+    means the problem. The model can be used to determine the accuracy of distinguishing
+    sick people from a healthy one. The error of distinguishing sick people from healthy
+    depends on various factors, the most important being what features distinguish
+    sick people from healthy people. All the features are used to train the artificial
+    neural network because they are not equally important, then it can be expected
+    that this importance will control the dimensions of the problem and data to be
+    large. This phenomenon also increases the execution time. To reduce or modify
+    these problem, feature selection can be used to reduce the artificial networks
+    using a meta-heuristic algorithm as the framework in (2). Is larger. In this context,
+    important phases for distinguishing sick people from healthy can be as follows:
+
+
+    To evaluate each attribute vector, the two important factors can be considered
+    and an objective function can be rewritten based on these factors:
+
+
+    - The error factor relates to disease and reduction of data dimensions using selection
+    feature by fruit algorithm.
+
+    - Optimal weight and bias for artificial neural network to reduce its classification
+    error in disease using fruit algorithm.
+
+
+    In these relationships, the fitness step size is between 1 and 2 and is random.
+    Based on the size of fit step in relation (4) and (5), fly can expand its dimension
+    in a horizontal or vertical direction, as shown in (6) and (7):
+
+
+    In a multilayer neural network to distinguish sick and healthy individuals, patient-related
+    and healthy samples are collected in a data set and the samples are divided equally.
+    training samples are used to train and create a learning model in an artificial
+    neural network, and this model needs to be evaluated after training to calculate
+    its accuracy and error. The difficulty of distinguishing sick and healthy people
+    means the problem. The model can be used to determine the accuracy of distinguishing
+    sick people from a healthy one. The error of distinguishing sick people from healthy
+    depends on various factors, the most important being what features distinguish
+    sick people from healthy people. All the features are used to train the artificial
+    neural network because they are not equally important, then it can be expected
+    that this importance will control the dimensions of the problem and data to be
+    large. This phenomenon also increases the execution time. To reduce or modify
+    these problem, feature selection can be used to reduce the artificial networks
+    using a meta-heuristic algorithm as the framework in (2). Is larger. In this context,
+    important phases for distinguishing sick people from healthy can be as follows:
+
+
+    To evaluate each attribute vector, the two important factors can be considered
+    and an objective function can be rewritten based on these factors:
+
+
+    - The error factor relates to disease and reduction of data dimensions using selection
+    feature by fruit algorithm.
+
+    - Optimal weight and bias for artificial neural network to reduce its classification
+    error in disease using fruit algorithm.
+
+
+    ## V. EXPERIMENTS
+
+
+    To evaluate the proposed method and compare with other methods, the criteria of
+    accuracy, sensitivity, and specificity have been used. The percentage of accuracy,
+    sensitivity, and specificity are 0 and 100, respectively. The difficulty of distinguishing
+    sick and healthy individuals is used in a multilayer neural network to distinguish
+    sick and healthy individuals.
+
+
+    The model can be used to determine the accuracy of distinguishing sick people
+    from a healthy one. The error of distinguishing sick people from healthy depends
+    on various factors, the most important being what features distinguish sick people
+    from healthy people. All the features are used to train the artificial neural
+    network because they are not equally important, then it can be expected that this
+    importance will control the dimensions of the problem and data to be large. This
+    phenomenon also increases the execution time. To reduce or modify these problem,
+    feature selection can be used to reduce the artificial networks using a meta-heuristic
+    algorithm as the framework in (2). Is larger. In this context, important phases
+    for distinguishing sick people from healthy can be as follows:
+
+
+    To evaluate each attribute vector, the two important factors can be considered
+    and an objective function can be rewritten based on these factors:
+
+
+    - The error factor relates to disease and reduction of data dimensions using selection
+    feature by fruit algorithm.
+
+    - Optimal weight and bias for artificial neural network to reduce its classification
+    error in disease using fruit algorithm.
+
+
+    In these relationships, the fitness step size is between 1 and 2 and is random.
+    Based on the size of fit step in relation (4) and (5), fly can expand its dimension
+    in a horizontal or vertical direction, as shown in (6) and (7):
+
+
+    In a multilayer neural network to distinguish sick and healthy individuals, patient-related
+    and healthy samples are collected in a data set and the samples are divided equally.
+    training samples are used to train and create a learning model in an artificial
+    neural network, and this model needs to be evaluated after training to calculate
+    its accuracy and error. The difficulty of distinguishing sick and healthy people
+    means the problem. The model can be used to determine the accuracy of distinguishing
+    sick people from a healthy one. The error of distinguishing sick people from healthy
+    depends on various factors, the most important being what features distinguish
+    sick people from healthy people. All the features are used to train the artificial
+    neural network because they are not equally important, then it can be expected
+    that this importance will control the dimensions of the problem and data to be
+    large. This phenomenon also increases the execution time. To reduce or modify
+    these problem, feature selection can be used to reduce the artificial networks
+    using a meta-heuristic algorithm as the framework in (2). Is larger. In this context,
+    important phases for distinguishing sick people from healthy can be as follows:
+
+
+    To evaluate each attribute vector, the two important factors can be considered
+    and an objective function can be rewritten based on these factors:
+
+
+    - The error factor relates to disease and reduction of data dimensions using selection
+    feature by fruit algorithm.
+
+    - Optimal weight and bias for artificial neural network to reduce its classification
+    error in disease using fruit algorithm.
+
+
+    In these relationships, the fitness step size is between 1 and 2 and is random.
+    Based on the size of fit step in relation (4) and (5), fly can expand its dimension
+    in a horizontal or vertical direction, as shown in (6) and (7):
+
+
+    In a multilayer neural network to distinguish sick and healthy individuals, patient-related
+    and healthy samples are collected in a data set and the samples are divided equally.
+    training samples are used to train and create a learning model in an artificial
+    neural network, and this model needs to be evaluated after training to calculate
+    its accuracy and error.
+
+
+    The results of the proposed method are compared with other existing methods for
+    the classification of diseases. The results are shown that the proposed method
+    is better in terms of accuracy, sensitivity, and specificity.
+
+    '
+  mdcn: '
+
+
+    # 2020年伊朗信号处理与智能系统会议 (ICSIPS)
+
+
+    使用如方程 (3) 等评估函数进行评估，并定义了每个函数的适用性。由于：
+
+
+    ```
+
+    $X_i = <<\nX_{i,1}, X_{i,2}, ..., X_{i,d} = <<\n\n\alpha + \beta = \chi.$
+
+    ```
+
+
+    在这些关系中，$D_i$ 是第 $i$ 个解距离最优解的距离，$S_i$ 是解的适应度和适应度度。在算法中，在水平和垂直维度上产生最大奖励（可以使用函数进行评估）的最优解的位置被视为
+    `bestsmell`。然后将它的水平和垂直位置放置在步长变量中，如方程 (10) 和 (11) 所示：
+
+
+    ```
+
+    $X_{1,1} X_{1,2} ... X_{1,d}\nX_{2,1} X_{2,2} ... X_{2,d}\nX_{m,1} X_{m,2} ...
+    X_{m,d} = Pop$
+
+    ```
+
+
+    ```
+
+    $X_{axis} = X(bestsmell)\nY_{axis} = Y(bestsmell)$
+
+    ```
+
+
+    ```
+
+    $Pop = f(X_{1,1} X_{1,2} ... X_{1,d}), \f(X_{2,1} X_{2,2} ... X_{2,d}), \f(X_{m,1}
+    X_{m,2} ... X_{m,d})$
+
+    ```
+
+
+    疾病设计中的重要挑战之一是将健康人与病人进行分类，另一个挑战是如果数据特征和样本数量很大，误差较大的学习方法会设计错病人。为了解决这个问题，该方法具有以下两个层：
+
+
+    在这些关系中，$S_i$ 是质量或果实职责，种群数量，$f$ 是目标优化的函数。每个解都可以在水平或垂直维度空间中随机运行，如方程 (4) 和 (5) 所示：
+
+
+    - 使用果蝇算法通过特征选择与疾病相关的适当性，并减少数据维度。
+
+    - 使用果蝇算法优化人工神经网络的权重和偏置，以减少其在疾病分类中的误差。
+
+
+    ```
+
+    $X_{axis} = rands(1,2)\nY_{axis} = rands(1,2)$
+
+    ```
+
+
+    在这些关系中，适应度步长在 1 和 2 之间，是随机的。根据关系 (4) 和 (5) 中适应步长的大小，蝇可以在水平或垂直方向上扩展其维度，如 (6) 和
+    (7) 所示：
+
+
+    在区分病人和健康人的多层神经网络中，在数据集中收集了患者和健康样本，并平均划分样本。训练样本用于训练和创建人工神经网络中的学习模型，该模型在训练后需要进行评估以计算其准确率和误差。区分病人和健康人的难度意味着问题所在。该模型可以用于确定区分病人与健康人的准确性。区分病人与健康人的误差取决于多种因素，最重要的是哪些特征区分了病人和病人。所有特征都用于训练人工神经网络，因为它们并不同等重要，因此可以预期这种重要性将导致问题维度和数据很大。这种现象也增加了执行时间。为了减少或修改这些问题，可以使用特征选择，利用
+    (2) 中的元启发式算法作为框架来减少人工网络。这更大。在这种背景下，区分病人和健康人的重要阶段如下：
+
+
+    ```
+
+    $X_i = X_i + RandomValue\nY = Y_i + RandomValue$
+
+    ```
+
+
+    为了评估每个解其距离食物或最优答案的距离，可以计算：
+
+
+    ```
+
+    $D_i = \sqrt{X_i^2 + Y_i^2}$
+
+    ```
+
+
+    每个解的值可以根据其与最优解的倒数距离 (9) 来考虑：
+
+
+    ```
+
+    $S_i = \frac{1}{D_i}$
+
+    ```
+
+
+    # 训练数据
+
+
+    特征集被视为元启发式算法的成员。
+
+
+    - 随机生成疾病相关的特征向量
+
+    - 使用特征向量进行人工神经网络训练
+
+    - 选择最优特征向量
+
+    - 更新疾病相关的特征向量
+
+    - 重复？
+
+    - 否
+
+    - 数据
+
+
+    使用最优特征向量进行神经网络神经网络训练并创建分类模型。
+
+
+    - 从人工神经网络中选择最优权重和偏置
+
+    - 健康
+
+    - 病人
+
+
+    ## 框架 2：所提方法的框架
+
+
+    - 以元创新算法或果蝇优化算法成员的形式对特征向量编码。
+
+    - 生成具有 0 和 1 的属性向量初始随机种群。
+
+    - 每个特征向量都用于学习人工神经网络。
+
+    - 在每次迭代中，选择最优特征向量并使用元启发式算法更新。
+
+    - 以此，以多层网络权重和偏置的形式将特征编码传递给元启发式算法。它持续到人工神经网络的最优权重和偏置。
+
+    - 最后一次迭代中最优特征向量用于学习和具有最优权重和偏置的。为了评估每个属性向量，可以考虑两个重要因素，并根据这些因素重写目标函数：
+
+
+    - 误差因素与疾病有关，使用果蝇算法特征选择减少数据维度。
+
+    - 使用果蝇算法优化人工神经网络的权重和偏置以减少其在疾病分类中的误差。
+
+
+    在这些关系中，适应步长在 1 和 2 之间，是随机的。根据关系 (4) 和 (5) 中适应步长的大小，蝇可以在水平或垂直方向上扩展其维度，如 (6) 和 (7)
+    所示：
+
+
+    在区分病人和健康人的多层神经网络中，在数据集中收集了患者和健康样本，并平均划分样本。训练样本用于训练和创建人工神经网络中的学习模型，该模型在训练后需要进行评估以计算其准确率和误差。区分病人和健康人的难度意味着问题所在。该模型可以用于确定区分病人与健康人的准确性。区分病人与健康人的误差取决于多种因素，最重要的是哪些特征区分了病人和病人。所有特征都用于训练人工神经网络，因为它们并不同等重要，因此可以预期这种重要性将导致问题维度和数据很大。这种现象也增加了执行时间。为了减少或修改这些问题，可以使用特征选择，利用
+    (2) 中的元启发式算法作为框架来减少人工网络。这更大。在这种背景下，区分病人和健康人的重要阶段如下：
+
+
+    为了评估每个属性向量，可以考虑两个重要因素，并根据这些因素重写目标函数：
+
+
+    - 误差因素与疾病有关，使用果蝇算法特征选择减少数据维度。
+
+    - 使用果蝇算法优化人工神经网络的权重和偏置以减少其在疾病分类中的误差。
+
+
+    在这些关系中，适应步长在 1 和 2 之间，是随机的。根据关系 (4) 和 (5) 中适应步长的大小，蝇可以在水平或垂直方向上扩展其维度，如 (6) 和 (7)
+    所示：
+
+
+    在区分病人和健康人的多层神经网络中，在数据集中收集了患者和健康样本，并平均划分样本。训练样本用于训练和创建人工神经网络中的学习模型，该模型在训练后需要进行评估以计算其准确率和误差。区分病人和健康人的难度意味着问题所在。该模型可以用于确定区分病人与健康人的准确性。区分病人与健康人的误差取决于多种因素，最重要的是哪些特征区分了病人和病人。所有特征都用于训练人工神经网络，因为它们并不同等重要，因此可以预期这种重要性将导致问题维度和数据很大。这种现象也增加了执行时间。为了减少或修改这些问题，可以使用特征选择，利用
+    (2) 中的元启发式算法作为框架来减少人工网络。这更大。在这种背景下，区分病人和健康人的重要阶段如下：
+
+
+    为了评估每个属性向量，可以考虑两个重要因素，并根据这些因素重写目标函数：
+
+
+    - 误差因素与疾病有关，使用果蝇算法特征选择减少数据维度。
+
+    - 使用果蝇算法优化人工神经网络的权重和偏置以减少其在疾病分类中的误差。
+
+
+    在这些关系中，适应步长在 1 和 2 之间，是随机的。根据关系 (4) 和 (5) 中适应步长的大小，蝇可以在水平或垂直方向上扩展其维度，如 (6) 和 (7)
+    所示：
+
+
+    在区分病人和健康人的多层神经网络中，在数据集中收集了患者和健康样本，并平均划分样本。训练样本用于训练和创建人工神经网络中的学习模型，该模型在训练后需要进行评估以计算其准确率和误差。区分病人和健康人的难度意味着问题所在。该模型可以用于确定区分病人与健康人的准确性。区分病人与健康人的误差取决于多种因素，最重要的是哪些特征区分了病人和病人。所有特征都用于训练人工神经网络，因为它们并不同等重要，因此可以预期这种重要性将导致问题维度和数据很大。这种现象也增加了执行时间。为了减少或修改这些问题，可以使用特征选择，利用
+    (2) 中的元启发式算法作为框架来减少人工网络。这更大。在这种背景下，区分病人和健康人的重要阶段如下：
+
+
+    为了评估每个属性向量，可以考虑两个重要因素，并根据这些因素重写目标函数：
+
+
+    - 误差因素与疾病有关，使用果蝇算法特征选择减少数据维度。
+
+    - 使用果蝇算法优化人工神经网络的权重和偏置以减少其在疾病分类中的误差。
+
+
+    在这些关系中，适应步长在 1 和 2 之间，是随机的。根据关系 (4) 和 (5) 中适应步长的大小，蝇可以在水平或垂直方向上扩展其维度，如 (6) 和 (7)
+    所示：
+
+
+    在区分病人和健康人的多层神经网络中，在数据集中收集了患者和健康样本，并平均划分样本。训练样本用于训练和创建人工神经网络中的学习模型，该模型在训练后需要进行评估以计算其准确率和误差。区分病人和健康人的难度意味着问题所在。该模型可以用于确定区分病人与健康人的准确性。区分病人与健康人的误差取决于多种因素，最重要的是哪些特征区分了病人和病人。所有特征都用于训练人工神经网络，因为它们并不同等重要，因此可以预期这种重要性将导致问题维度和数据很大。这种现象也增加了执行时间。为了减少或修改这些问题，可以使用特征选择，利用
+    (2) 中的元启发式算法作为框架来减少人工网络。这更大。在这种背景下，区分病人和健康人的重要阶段如下：
+
+
+    为了评估每个属性向量，可以考虑两个重要因素，并根据这些因素重写目标函数：
+
+
+    - 误差因素与疾病有关，使用果蝇算法特征选择减少数据维度。
+
+    - 使用果蝇算法优化人工神经网络的权重和偏置以减少其在疾病分类中的误差。
+
+
+    在这些关系中，适应步长在 1 和 2 之间，是随机的。根据关系 (4) 和 (5) 中适应步长的大小，蝇可以在水平或垂直方向上扩展其维度，如 (6) 和 (7)
+    所示：
+
+
+    ## V. 实验
+
+
+    将所提方法与其他现有的疾病分类方法进行比较。结果显示，所提方法在准确率、灵敏度和特异性方面更好。结果显示，所提方法的准确率、灵敏度和特异性分别为 100%。区分病人和健康人的难度意味着问题所在。该模型可以用于确定区分病人与健康人的准确性。区分病人与健康人的误差取决于多种因素，最重要的是哪些特征区分了病人和病人。所有特征都用于训练人工神经网络，因为它们并不同等重要，因此可以预期这种重要性将导致问题维度和数据很大。这种现象也增加了执行时间。为了减少或修改这些问题，可以使用特征选择，利用
+    (2) 中的元启发式算法作为框架来减少人工网络。这更大。在这种背景下，区分病人和健康人的重要阶段如下：
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 5]
+
+
+    2020 6th International Conference on Signal Processing and Intelligent Systems
+    (ICSPIS)
+
+
+    accuracy, sensitivity, and diagnosis for Classification of such
+
+    healthy people.
+
+
+    # VI. CONCLUSION
+
+
+    One of the important applications of data mining
+
+    machine learning is to diagnose diseases such as diabetes. The
+
+    proposed method to enhance feature selection and weight bias of
+
+    multilayer neural network to reduce data classification
+
+    error and pattern samples are presented. Experiments show that
+
+    the proposed method outperforms existing methods The
+
+    basic of machine learning and classification used in the
+
+    disease of diabetes has been reduced by 32% and that the
+
+    accuracy, sensitivity, and detection of the proposed method
+
+    is improved by combining feature selection and optimizing
+
+    the neural network weights. Future research will attempt to
+
+    identify other diseases, such as heart
+
+    disease, liver disease, and data sets related to a variety of
+
+    diseases.
+
+
+    # Reference
+
+
+    +   [1] Alazoubi, L., Fahed, M. A., Olwei, S. R., Al-Shamma, O., & Zhang, J.
+
+    (2020). QUTNet: diabetic foot ulcer classification using novel
+
+    deep convolutional neural network. Methods in Applications, 15(1), 247-254.
+
+
+    +   [2] Nalli, S., Rahmani, R. V., Ramasubahari, S., Govinda, K., &
+
+    Swetha, S. (2020). Chronic Heart Disease Prediction Using Data Mining
+
+    Techniques. In Data Engineering and Communication Technology (pp.
+
+    903–910). Singapore: Springer.
+
+
+    +   [3] Islam, M. F., Ferdosi, R., Rahman, S., & Bushra, H. Y. (2020).
+
+    Likelihood prediction of diabetes at early stage using data mining
+
+    technology Support Vector Machine and Machine Learning in Medical
+
+    Image Analysis (pp. 113-125). Springer, Singapore.
+
+
+    +   [4] Shankar, A., & Mashkandari, S. (2019). Diagnosis of Diabetes
+
+    Diseases Using Fuzzy Rule Set by Gray Optimization
+
+    Pattern Recognition Letters.
+
+
+    +   [5] Alam, M. M., Khan, M. S., & Rahman, M. S. (2019). A Random Forest
+
+    based predictor for medical classification using feature
+
+    attention mechanism in Medical Informatics, 22, 101908.
+
+
+    +   [6] Dao, H., Naik, B., & He, S. (2020). Medical disease analysis using
+
+    -fuzzy logic with feature selection for classification. In
+
+    Informatics, 7(4), 101628.
+
+
+    +   [7] Li, T., Li, Z., Zhao, W., Li, X., Xu, X., Pan, S., ..., & Li, J.
+
+    (2020). Analysis of medical rescue strategies on a rough and genetic
+
+    algorithm based classification perspective. International Journal of
+
+    Daster Risk Reduction, 42, 101325.
+
+
+    +   [8] Nguyen, B. H., Xue, B., & Zhang, M. (2020). A survey on
+
+    intelligence approaches to feature selection in data mining. Swarm and
+
+    Evolutionary Computation, 54, 100683.
+
+
+    +   [9] Wang, M., & Chen, H. (2020). Chaotic multi-wave optimizer
+
+    support vector machine for medical diagnosis. Applied Soft
+
+    Optimization method based on feature selection. Medical
+
+
+    +   [10] Demir, F. B., Tancer, C., Kocamaz, A., & Ertam, F. (2020). A survival
+
+    classification method for hepat own patients with chaotic
+
+    diabetes optimization method based feature selection. Medical
+
+
+    +   [11] Sujitha, M., Sujitha, R., Nitha, R., Nandini, A. S., & Harsh, N.
+
+    (2020). An Diabetes Risk Assessment System Using IoT
+
+    Cloud Based Artificial Neural Network for
+
+    Cognitive Computing Computing (pp. 322–327). Springer,
+
+
+    +   [12] Shen, L., Chen, H., Yu, Z., Wang, Z., Zhang, B., Li, H., ..., & Li, D.
+
+    (2016). Evaluating support vector machine using feature property
+
+    optimization for classification. Soft Computing, 96, 61-75.
+
+
+    +   [13] Parisi, L., & Ravichandran, N. (2020). Evolutionary feature
+
+    tformation improving prognostic forecast of hepatitis. Knowledge-
+
+    Systems, 299, 106012.
+
+
+    Authorized user limited to: San Francisco State Univ. Downloaded on June 24,2021
+    at 23:16:42 UTC by IEEE Xplore. Restrictions apply.'
+  md: '
+
+    2020 6th International Conference on Signal Processing and Intelligent Systems
+    (ICSPIS)
+
+
+    accuracy, sensitivity, and diagnosis for Classification of such healthy people.
+
+
+    ## CONCLUSION
+
+
+    One of the important applications of data mining machine learning is to diagnose
+    diseases such as diabetes. The proposed method to enhance feature selection and
+    weight bias of multilayer neural network to reduce data classification error and
+    pattern samples are presented. Experiments show that the proposed method outperforms
+    existing methods. The basic of machine learning and classification used in the
+    disease of diabetes has been reduced by 32% and that the accuracy, sensitivity,
+    and detection of the proposed method is improved by combining feature selection
+    and optimizing the neural network weights. Future research will attempt to identify
+    other diseases, such as heart disease, liver disease, and data sets related to
+    a variety of diseases.
+
+
+    ## Reference
+
+
+    - [1] Alazoubi, L., Fahed, M. A., Olwei, S. R., Al-Shamma, O., & Zhang, J. (2020).
+    QUTNet: diabetic foot ulcer classification using novel deep convolutional neural
+    network. Methods in Applications, 15(1), 247-254.
+
+    - [2] Nalli, S., Rahmani, R. V., Ramasubahari, S., Govinda, K., & Swetha, S. (2020).
+    Chronic Heart Disease Prediction Using Data Mining Techniques. In Data Engineering
+    and Communication Technology (pp. 903–910). Singapore: Springer.
+
+    - [3] Islam, M. F., Ferdosi, R., Rahman, S., & Bushra, H. Y. (2020). Likelihood
+    prediction of diabetes at early stage using data mining technology Support Vector
+    Machine and Machine Learning in Medical Image Analysis (pp. 113-125). Springer,
+    Singapore.
+
+    - [4] Shankar, A., & Mashkandari, S. (2019). Diagnosis of Diabetes Diseases Using
+    Fuzzy Rule Set by Gray Optimization Pattern Recognition Letters.
+
+    - [5] Alam, M. M., Khan, M. S., & Rahman, M. S. (2019). A Random Forest based
+    predictor for medical classification using feature attention mechanism in Medical
+    Informatics, 22, 101908.
+
+    - [6] Dao, H., Naik, B., & He, S. (2020). Medical disease analysis using fuzzy
+    logic with feature selection for classification. In Informatics, 7(4), 101628.
+
+    - [7] Li, T., Li, Z., Zhao, W., Li, X., Xu, X., Pan, S., ..., & Li, J. (2020).
+    Analysis of medical rescue strategies on a rough and genetic algorithm based classification
+    perspective. International Journal of Daster Risk Reduction, 42, 101325.
+
+    - [8] Nguyen, B. H., Xue, B., & Zhang, M. (2020). A survey on intelligence approaches
+    to feature selection in data mining. Swarm and Evolutionary Computation, 54, 100683.
+
+    - [9] Wang, M., & Chen, H. (2020). Chaotic multi-wave optimizer support vector
+    machine for medical diagnosis. Applied Soft Optimization method based on feature
+    selection. Medical.
+
+    - [10] Demir, F. B., Tancer, C., Kocamaz, A., & Ertam, F. (2020). A survival classification
+    method for hepat own patients with chaotic diabetes optimization method based
+    feature selection. Medical.
+
+    - [11] Sujitha, M., Sujitha, R., Nitha, R., Nandini, A. S., & Harsh, N. (2020).
+    An Diabetes Risk Assessment System Using IoT Cloud Based Artificial Neural Network
+    for Cognitive Computing Computing (pp. 322–327). Springer,
+
+    - [12] Shen, L., Chen, H., Yu, Z., Wang, Z., Zhang, B., Li, H., ..., & Li, D.
+    (2016). Evaluating support vector machine using feature property optimization
+    for classification. Soft Computing, 96, 61-75.
+
+    - [13] Parisi, L., & Ravichandran, N. (2020). Evolutionary feature formation improving
+    prognostic forecast of hepatitis. Knowledge-Systems, 299, 106012.
+
+    '
+  mdcn: '
+
+
+    2020 第6 届信号处理与智能系统国际会议 (ICSPIS)
+
+
+    此类健康人群分类的准确率、灵敏度和诊断能力。
+
+
+    ## 结论
+
+
+    数据挖掘机器学习的重要应用之一是诊断如糖尿病等疾病。本文提出了一种通过增强多层神经网络的特征选择和权重偏差的方法，以减少数据分类错误和模式样本。实验表明，所提方法优于现有方法。通过结合特征选择和优化神经网络权重，糖尿病疾病中使用的机器学习和分类基础错误降低了
+    32%，且所提方法的准确率、灵敏度和检测能力得到了提高。未来的研究将尝试识别其他疾病（例如心脏病、肝脏疾病）以及与多种疾病相关的数据集。
+
+
+    ## 参考文献
+
+
+    - [1] Alazoubi, L., Fahed, M. A., Olwei, S. R., Al-Shamma, O., & Zhang, J. (2020).
+    QUTNet: diabetic foot ulcer classification using novel deep convolutional neural
+    network. Methods in Applications, 15(1), 247-254.
+
+    - [2] Nalli, S., Rahmani, R. V., Ramasubahari, S., Govinda, K., & Swetha, S. (2020).
+    Chronic Heart Disease Prediction Using Data Mining Techniques. In Data Engineering
+    and Communication Technology (pp. 903–910). Singapore: Springer.
+
+    - [3] Islam, M. F., Ferdosi, R., Rahman, S., & Bushra, H. Y. (2020). Likelihood
+    prediction of diabetes at early stage using data mining technology Support Vector
+    Machine and Machine Learning in Medical Image Analysis (pp. 113-125). Springer,
+    Singapore.
+
+    - [4] Shankar, A., & Mashkandari, S. (2019). Diagnosis of Diabetes Diseases Using
+    Fuzzy Rule Set by Gray Optimization Pattern Recognition Letters.
+
+    - [5] Alam, M. M., Khan, M. S., & Rahman, M. S. (2019). A Random Forest based
+    predictor for medical classification using feature attention mechanism in Medical
+    Informatics, 22, 101908.
+
+    - [6] Dao, H., Naik, B., & He, S. (2020). Medical disease analysis using fuzzy
+    logic with feature selection for classification. In Informatics, 7(4), 101628.
+
+    - [7] Li, T., Li, Z., Zhao, W., Li, X., Xu, X., Pan, S., ..., & Li, J. (2020).
+    Analysis of medical rescue strategies on a rough and genetic algorithm based classification
+    perspective. International Journal of Daster Risk Reduction, 42, 101325.
+
+    - [8] Nguyen, B. H., Xue, B., & Zhang, M. (2020). A survey on intelligence approaches
+    to feature selection in data mining. Swarm and Evolutionary Computation, 54, 100683.
+
+    - [9] Wang, M., & Chen, H. (2020). Chaotic multi-wave optimizer support vector
+    machine for medical diagnosis. Applied Soft Optimization method based on feature
+    selection. Medical.
+
+    - [10] Demir, F. B., Tancer, C., Kocamaz, A., & Ertam, F. (2020). A survival classification
+    method for hepat own patients with chaotic diabetes optimization method based
+    feature selection. Medical.
+
+    - [11] Sujitha, M., Sujitha, R., Nitha, R., Nandini, A. S., & Harsh, N. (2020).
+    An Diabetes Risk Assessment System Using IoT Cloud Based Artificial Neural Network
+    for Cognitive Computing Computing (pp. 322–327). Springer,
+
+    - [12] Shen, L., Chen, H., Yu, Z., Wang, Z., Zhang, B., Li, H., ..., & Li, D.
+    (2016). Evaluating support vector machine using feature property optimization
+    for classification. Soft Computing, 96, 61-75.
+
+    - [13] Parisi, L., & Ravichandran, N. (2020). Evolutionary feature formation improving
+    prognostic forecast of hepatitis. Knowledge-Systems, 299, 106012.
+
+
+    '
+  merge: 0

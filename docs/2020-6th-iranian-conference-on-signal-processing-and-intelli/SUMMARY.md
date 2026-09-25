@@ -1,0 +1,2 @@
++   [2020 第六次伊朗信号处理与智能系统会议 (ICSPIS)(伊朗马什哈德 2020.12.23-2020.12.24)](README.md)
++   [2020 第六次伊朗信号处理与智能系统会议 (ICSPIS)(伊朗马什哈德 2020.12.23-2020.12.24)](2020-6th-iranian-conference-on-signal-processing-and-intelli.md)
