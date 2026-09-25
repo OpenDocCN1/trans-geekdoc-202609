@@ -1,0 +1,492 @@
+- pgno: 0
+  md: '# The Design and Implementation of Arrow Game Projection Interactive System
+    Based on Deep Learning
+
+
+    Lianhao Xu
+
+
+    College of Automation Science and Technology
+
+    South China University of Technology
+
+    Guangzhou, China
+
+    aulianhaoxu@mail.scut.com
+
+
+    Bo Li
+
+
+    Jianmang Construction Investment Group O.Co., LTD
+
+    Jiamen, China
+
+    784946993@qq.com
+
+
+    Wei Xie
+
+
+    College of Automation Science and Technology
+
+    South China University of Technology
+
+    Guangzhou, China
+
+    weixie@scut.com
+
+
+    Langwen Zhang
+
+
+    College of Automation Science and Technology
+
+    South China University of Technology
+
+    Guangzhou, China
+
+    aulwzhang@scut.com
+
+
+    **Abstract**—With the rapid development of projection technology, the design of
+    projection interactive systems with different scenarios has made progress. Humans
+    are no longer satisfied with the traditional way of interacting with computers
+    through devices, but are able to obtain a more natural and free mode of interaction.
+    Thus, an arrow game projection interactive system is based on deep learning game
+    scheme involving various kinds of interfaces developed by Unity3D in order to
+    improve user experience. Secondly, a method of mapping the arrow in in the real
+    world to the corresponding position of game scene is achieved. Third, recognition
+    is recognized by the target detection algorithm YOLOv3. The finally results demonstrate
+    that the proposed interactive system has good real-time performance and high robustness.
+
+    **Index Terms**—object detection, convolutional neural network, Unity3D, interactive
+    system
+
+
+    camera produced the bright spot with which it was able to find the precise position
+    of targets. However, because of the infrared in natural light, the system was
+    superbly disturbed by ambient light, the system must be shielded from natural
+    light in the process of use, and the accuracy was also affected by the flatness
+    of the projection. In 2004, Kimura proposed an effective method of coloring light
+    from the projector affecting the capturing of gestures [3]. Users should be required
+    to affix stickers with their color for fingers, following by the threshold segmentation
+    algorithm and filter positioning, and finally used the template recognition algorithm
+    to determine the position of the finger by detecting the specified stickers. This
+    method had all of its high recognition accuracy under certain circumstance, it
+    brought inconvenient and prone to user experiences due to the auxiliary equipment
+    and has some limitations that the color in the scene should be different from
+    the color of the stickers. In 2013, Hiroki Goto in Italy created an interactive
+    system, which can detect and recognize gestures, based on the frame method and
+    skin color method, in which the method was used to eliminate the effect of the
+    complex background by learning the frequency of gestures [4]. He proposed a gestures
+    segmentation method based on the clustering of hand colors in the HSV and YCbCr
+    space to separate the hand from complicated background. Duan proposed a projection
+    keyboard interactive system [5]. Firriottu developed a game projection interactive
+    system based on deformable surface [6]. Raskar proposed Shading Layer for enhancing
+    real object [7].
+
+
+    # I. INTRODUCTION
+
+
+    Augmented Reality (AR), a technology that seamlessly integrates the real world
+    and the virtual world, enables users to interact with virtual reality. Nowadays,
+    it has swiftly gained much to master virtual reality, image processing [1] and
+    pattern recognition techniques.
+
+
+    With the development of increasingly complicated image processing and computer
+    vision, the applications of human-computer interactive system have become more
+    and more. In 2002, Jin Tsukimoto in Tokyo developed a method of mapping the position
+    of real-world objects with the assistance of an infrared generator, which emitted
+    a layer of infrared light to the projection plane [2]. When the users'' body or
+    object blocked the infrared light, the image was captured by the
+
+
+    In [2], the camera-projection interactive system should'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# 2020 International Symposium on Autonomous Systems (ISAS)
+
+
+    shielded from ambient light it can be used, greatly improved the operation condition.
+    Nevertheless, in [3] and [4], the recognition accuracy, to a large extent, affected
+    by the differences between targets and background. Besides, the consideration
+    of object recognition, fingerprints in [3] must be affixed with specific colored
+    stickers, which greatly improved the user experience. In the others above, a new
+    game interaction system contains the three parts: 1) a method of mapping the position
+    of arrow in the captured image to the corresponding position of game scene is
+    designed to show imitate arrow in the game and scene including 2) any game scene
+    including kinds of interfaces is developed through Unity3D [8] for the purpose
+    of the game gameplay, animation and player experience. 3) object recognition is
+    realized by using target detection algorithm based on YOLOv3 [9] for solving the
+    constraints of projection background and overall light.
+
+
+    the users; interest and satisfaction in the projection interactive system. Moreover,
+    in order to achieve the great interest of users and the projection, the most important
+    step is to identify the accuracy from every frame captured by camera and calculate
+    the target position quickly. Environmental impact like natural light and fastest
+    of projection plane, an improved object recognition algorithm is based on YOLOv3.
+    With the arrow affixed in front of it, it can be tracked for a period of time,
+    and capable of taking a picture when the arrow hits. Then the target location,
+    an interactive delivery, helps to connect the real world and the virtual world.
+    The projection position should be mapped to the corresponding position of game
+    scene.
+
+
+    # II. DESIGN OF AR PROJECTION INTERACTIVE SYSTEM BASED ON DEEP LEARNING
+
+
+    In our passage the hardware composition of the arrow game interactive system on
+    deep learning consists of a projector, an USB camera and a PC. The projector that
+    connects to the PC projects the scene onto the walls. The camera by USB interface
+    captures images in real time, which will be sent to the PC for image processing
+    and targeting. What''s more, the projector and camera are facing in the same direction.
+    The entire structural design of the system is shown in Fig. 1.
+
+
+    ![](img/3e0c467946d9c60efd092f9af7a7da3c_1_0.png)
+
+
+    Fig. 1. The structural design of the interactive system.
+
+
+    Because users'' experience is an important evaluation standard of the human-computer
+    system, several kinds of game scenes such as shooting target, forest shooting,
+    snow shooting snowman and mountain shooting shooting, are developed by Unity3D,
+    a 3D game development engine. So the real flying and vivid objects in 3D scenarios
+    all create an immersive experience for the users. In some degree, these unique
+    animations can enhance
+
+
+    the work of our pass is to develop an arrow game scene including varieties of
+    interfaces by Unity3D; to achieve arrow position mapping to the corresponding
+    position of game scene based on Hough detection [10] and homotopy transformation
+    [11]; to collect and label plenty of data in different interfaces; to realize
+    recognition using the improved object detection algorithm based YOLOv3; to train
+    and validate target recognition network based on deep learning.
+
+
+    # III. ALGORITHMS OF THE SYSTEM REALIZATION
+
+
+    # A. Diversified Game Scenes on Unity3D
+
+
+    First, in order to define different kinds of game scenes, such as snow, forest,
+    mountain, grass, monkey and archery target formed by five kinds. Secondly, the
+    collision response function is used for the purpose of defining actions when arrow
+    hits the target projection plane. Thirdly, a bar is is utilized to adjust the
+    difficulty of game by increasing or decreasing the response area. Finally, gain
+    arrow coordinates from text in a certain period, generate a virtual arrow in Unity3D
+    software and similar the next flight trajectory. The game scenarios are shown
+    in Fig. 2.
+
+
+    ![](img/3e0c467946d9c60efd092f9af7a7da3c_1_1.png)
+
+
+    Fig. 2. Game interfaces like shooting snowman (top left), forest shooting (top
+    right), mountain shooting (bottom left) and grass shooting target (bottom right).'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "# B. Arrow Position Mapping to the Coordinating Game Scene Position\n\nDue\
+    \ to projection error, the projection image is not exactly the same as (x, y)\
+    \ on PC screen displays. In Fig. 3, ABCD represents the projection on the projection\
+    \ plane and point O represents the arrow position; A, B, C, D are the corresponding\
+    \ positions of A, B, C, D mean the four vectors of PC screen respectively. Moreover,\
+    \ W is the height and H width of the resolution of PC monitor. O means the position\
+    \ of the mouse pointer. O(x, y) is mapped to O(x',y') in the interactive system\
+    \ to control the arrow position in the software.\n\nAfter mapping, we can get:\n\
+    \n```\n$x' = h_1x + h_2y + h_3\\ny' = h_4x + h_5y + h_6\\ny'' = h_7x + h_8y +\
+    \ h_9\\quad\\quad\\quad\\quad\\quad(4)$\n```\n\nThat is to say, one point corresponds\
+    \ to two locations.\\nSo at least four points are needed to calculate the homotopy.\
+    \ Then a method of mapping the arrows' position in the corresponding image to\
+    \ the game scene is achieved.\n\n# C. Target Recognition Algorithm Based on YOLO3\n\
+    \nThe R-CNN algorithm [12] introduced by Girshick in 2015 is to introduce CNN\
+    \ in the field of target detection, and its performance has been confirmed by\
+    \ many researchers to be better than traditional detection methods. After R-CNN,\
+    \ many excellent object detection algorithm based on convolutional neural networks\
+    \ have emerged, such as SPNet [14], Fast R-CNN [16], YOLO [17], SSD [18] etc.\
+    \ These algorithms belong to classes, object detection algorithm according to\
+    \ regions and convolutional neural networks.\n\nIn our way, we employ YOLO3, which\
+    \ is based on deep convolutional neural networks. The network predicts the position\
+    \ from the entire image at once, and the target position is predicted by the bounding\
+    \ boxes. It predicts the confidence that the bounding box contains object, and\
+    \ the probability that the target belongs to a category.\n\nYOLO3 selects 5 layers\
+    \ of 52 neurons(-as a fully connected layer), which has a large number of residual\
+    \ hidden layers. To avoid the gradient explosion problem, pooling of convolutional\
+    \ layers helps prevent information loss during training.\n\nFor the output, YOLO3\
+    \ produces features of three scales, which detect different sizes of target. The\
+    \ relatively small and large receptive field of the feature map is used to detect\
+    \ small-sized and large-sized targets.\n\n![](img/3e0c467946d9c60efd092f9af7a7da3c_2_0.png)\n\
+    \nFirst, points A, B, C, D should be detected automatically using line detection\
+    \ algorithm. A straight line is represented by the following equation:\n\n```\n\
+    $y = kx + b\\quad\\quad\\quad(1)$\n```\n\nwhere k is the straight slope, and b\
+    \ is the intercept.\\nx, y) is the point in the x-y space.\n\nAt the same time,\
+    \ a point on the plane can also be defined by distance-angle, where $\theta$ is\
+    \ the angle between a straight line from point (x, y) to origin, and $\theta$\
+    \ is the original and the half angle of the x-axis.\n\n```\n$p = x\\cos(\\theta)\
+    \ + y\\sin(\\theta)\\quad\\quad\\quad(2)$\n```\n\nIn the new-distance space, the\
+    \ image becomes a curve. If there are many points in x-space that intersect at\
+    \ one point in p-space, then this intersection is the straight line we want to\
+    \ detect. We can get four straight AB, BC, CD, and AD to find their intersection\
+    \ A, B, C, D.\n\nSecondly, the homotopy of a plane is described as the projection\
+    \ of one plane to another. We use homotopy to realize image correction. Assume\
+    \ that the homogeneous coordinates of the corresponding points in images are (x,\
+    \ y) and (x', y'), and the homotopy matrix H is defined as:\n\n```\n$H = \\begin{bmatrix}\
+    \ m_1 & m_2 & m_3 \\ m_4 & m_5 & m_6 \\ m_7 & m_8 & 1 \\end{bmatrix}\\quad\\quad\\\
+    quad(3)$\n```\n\nwhere the parameters define each degree of freedom of the plane\
+    \ transformation.\n\n# IV. EXPERIMENTS\n\n# A. Training Data\n\nThe arrow sample\
+    \ has 3300 images captured in different scenarios and environmental situation.\
+    \ Each image has 1280 x 720 pixels. There are 2000 images for training, 300 images\
+    \ for validation and for testing.\n\n# B. Training Loss\n\nIn the detection task,\
+    \ there are several pixels of information needs to be defined: (x, y), (w, h),\
+    \ class and confidence. The total loss function consists of four parts of loss,\
+    \ defined as:\n\n```\n$loss = xy\\_loss + wh\\_loss + class\\_loss + confidence\\\
+    _loss\\quad\\quad\\quad(5)$\n```"
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# 2020 International Symposium on Autonomous Systems (ISAS)
+
+
+    Except for the function of w, which still utilizes equation (6), the mean average,
+    the other part of loss utilizes equation (7), binary cross entropy cost function.
+
+
+    What is, for the purpose of further comparing the capability of detectors, mAP(Mean
+    Average Precision) how should be calculated and designed?
+
+
+    ```
+
+    $C = \frac{1}{n} \sum_{x} |y(x) - a(x)|^2$ (6)
+
+    ```
+
+
+    ```
+
+    $mAP = \int P(R)dR$ (10)
+
+    ```
+
+
+    ```
+
+    $C = \frac{1}{n} \sum_{x} [yylna + (1-y)ln(1-a)]$ (7)
+
+    ```
+
+
+    At last, the mAP calculated from precision-recall curve is 0.84223.
+
+
+    where C is the loss, y is the sample, x is the actual value, a is the output and
+    n is total number of samples.
+
+
+    Another important evaluating for the time complexity of the interactive system
+    is average time consuming of each system. The target recognition algorithm is
+    achieved with Python and game scenes. The development platform is developed with
+    PyCharm2019 and Unity3D2017 on Windows. After 400 frames are captured when the
+    system runs, the average time consuming of part of the system realization is calculated
+    in real time. The results are shown in Table I.
+
+
+    # C. Implementation Details
+
+
+    We achieve the implementation of our model using tensor framework and Unity3D
+    engine. The parameters of the backbone are trained by darknet-53. All images are
+    resized to 416. The proposed model is trained by Adam optimizer. The batch size
+    is 32, for trade off between speed and convergence. The primary learning rate
+    is $10^{-4}$.
+
+
+    Table I. AVERAGE TIME CONSUMING OF PART OF THE SYSTEM
+
+    | System component | Average Time consuming (ms) |
+
+    |---|---|n| Object Recognition | 108 |
+
+    | Hough Line Detection | 5 |
+
+    | Unity3D of period recording | 20 |
+
+
+    # V. ANALYSIS FOR THE SYSTEM
+
+
+    # A. System Performance Test
+
+
+    The Precision-Recall curve, an evaluation index of the target object, is precision
+    and recall that vary well both when the parameters are high changing the confidence.
+    Precision is defined to discover only the relevant targets:
+
+
+    ```
+
+    $Precision = \frac{TP}{TP + FP}$ (8)
+
+    ```
+
+
+    where TP is the relevant targets that should be true, and FP is the relevant targets
+    that are false. Recall is defined to discover the well relevant targets:
+
+
+    ```
+
+    $Recall = \frac{TP}{TP + FN}$ (9)
+
+    ```
+
+
+    where FN is the irrelevant targets that are wrong. The experimental Precision-Recall
+    curve about object detection is shown in Fig. 4.
+
+
+    ![](img/3e0c467946d9c60efd092f9af7a7da3c_3_0.png)
+
+
+    Data in Table I demonstrates that the system spends most of the time consuming
+    and detecting the recall precisely. And total time consuming of system realization
+    for each frame is 125ms, which guarantees that the system performs well in real-time
+    response.
+
+
+    # B. System Running and Analysis
+
+
+    The only rule of arrow game projection interactive system is to hit the position
+    where you want to. When shooting game target scene, the objects will ring to shoot.
+    If you miss the target, you get zero score; while 20 for for the outermost ring
+    and 100 for the innermost ring. The other game scenes will monitor or swing, it
+    will disappear. Moreover, if the position of arrow is located, the Unity3D system
+    will produce a virtual arrow and simulate the next trajectory to create an immersive
+    feeling. The procedure of arrow game projection interactive system is shown in
+    Fig. 5.
+
+
+    From Fig. 5, user is able to interact with the projection scene by clicking the
+    arrow, raising and shooting the projection plane as if you were really at the
+    shooting scene. Experiments show that our arrow game interactive system runs well
+    in real time for experience no how the environments change.
+
+
+    # VI. CONCLUSION
+
+
+    An innovative arrow game projection system based on deep learning is put forward
+    in our way. The first part of human-computer interaction system is the several'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# 2020 International Symposium on Autonomous Systems (ISAS)
+
+
+    [8] La Li, Application and Handled Handle Interaction Based on Unity3D[C]. Science
+    and Engineering Research Center. Proceedings of 20th International Conference
+    on Electronic, Mechanical and Materials Engineering, 2019, 160–165.
+
+
+    [9] Redmon J, Farhad A. Yolov3: An incremental improvement.; arXiv preprint arXiv:1804.02677,
+    2018.
+
+
+    [10] Sen A, Sic O O, Andrews E. Extended Standard Hand Recognition for Analytical
+    Line Recognition; International Journal of Advanced Computer Science & Applications,
+    2011(2): 431–438.
+
+
+    [11] Lingzhi, Zhao L, et al. A New 3D Reconstruction Approach from Uncalibrated
+    Multiple Views Based on Homography[J]. of Computer, 2014.
+
+
+    [12] Girshik K, Deshmukh J, Darrell T, et al. Rich features for accurate object
+    detection and semantic segmentation[C]. Columbus, OH, USA: Proceedings of the
+    IEEE Conference on Computer Vision and Pattern Recognition, 2014: 598–607.
+
+
+    [13] Kirthevsky A, Stoskovic I, Hinton G. Geometric interpretation of deep convolutional
+    neural networks[J]. Neural networks, 2012; 1097–1106.
+
+
+    [14] He K, Zhang X, Ren, et al. Spatial pyramid pooling in deep convolutional
+    networks for visual recognition[C]. European Conference on Computer Vision, 2014,
+    346–353.
+
+
+    [15] Girshik R. Feminist[J]. Computer Science, 2015.
+
+
+    [16] Liu W, Chen Y, et al. Towards real-time object detection with new proposal
+    method[J]. IEEE Transactions on Pattern Analysis and Machine Intelligence, 2019,
+    39(6): 1137–1150.
+
+    Redmon J, Divick, R, et al. Real-time object detection[C]. Las Vegas, NV, USA:
+    Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition,
+    2016: 728–736.
+
+
+    [18] Liu W, Angelow D, Erhan E, et al. SSD: Single Shot Multi Box Detection[J].
+    2015: 2–17.
+
+
+    ![](img/3e0c467946d9c60efd092f9af7a7da3c_4_0.png)
+
+
+    vivid scene generated by Unity3D to improve interest and experience. The second
+    method is of mapping the map''s position of game scene based on gone line detection
+    and linear interpolation
+
+
+    Compared with those based on infused generator or specific auxiliary, our projection
+    puts the shackles of equipment and enhances the intelligence of interaction. Moreover,
+    thanks to the deep learning algorithm for object detection, we solve the problems
+    of humancomputer interactive system being susceptible to the environment and affected
+    by the flatness of the projection plane.
+
+
+    # ACKNOWLEDGMENT
+
+
+    This work was supported by Key-Area Research and Development Program Guangdong
+    Province under the grant (2018B01010801).
+
+
+    # REFERENCES
+
+
+    +   [1] G. Brackmann, A. Kistler. Learning OpenCV: Computer Vision with OpenCV.
+    Beijing University Press, 2009, chapter 12.
+
+    [2] Rekimoto J, Jmartnik S; Interaction with an infrastructure manifold on interactive
+    surfaces[C]. New York, USA: SIGgraph Conference on Human Vision Systems, 2002:
+    113–120.
+
+    [3] Kim, Hyun, Fellitier, Dieter W. Interaction with gesture and back-wall projection[J].
+    Proceedings of Computer Graphics International Conference, 2004: 384–392.
+
+    [4] H. Goto, T. Takazawa, Y. Kawasaki, et al. Development of an information projection
+    interface using a projector-camera system; IEEE Transactions on Information and
+    Systems, 2012; 32:558–569.
+
+    [5] Huan Du, Thierry Ogier. A Virtual Keyboard Based on True-3D Optical Tracking,
+    2012 International Workshop Project-Camera Systems, 2012:1–6.
+
+    [6] Firtiani, Gob W.B. Interacting with projecting method on deformable surfaces[C].
+    Rio Janeiro, Brazil: IEEE International Conference on Computer Vision, 2007: 1–14.
+
+    [7] R.Raskar, Greg Wech, Kol-low Lim, D. Dandypayadhyay. Shadow Animation Objects
+    With Image-Based Illumination. In Rendering Techniques 2001: The 12th International
+    Workshop on Rendering (IGRAPH), 0011, pages 89–102.'
+  merge: -1
+  img_proc: true
