@@ -1,0 +1,959 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Machine Learning to Improve Numerical Weather Forecasting
+
+
+    Anatoly Doroshenko
+
+    Institute of Software of NAS of
+
+    Ukraine
+
+    NTUU ''Igor Sikorsky Kyiv Polytechnic''
+
+    Kyiv, Ukraine
+
+    doroshenkanatoli2@gmail.com
+
+
+    Vitalii Shpygy
+
+    Ukrainian Hydrometeorological
+
+    Institute of SES of Ukraine and NAS of
+
+    Ukraine
+
+    Kyiv, Ukraine
+
+    vitold82@ua.com
+
+
+    Roman Kushnirenko
+
+    Institute of Software of NAS of
+
+    Ukraine
+
+    Kyiv, Ukraine
+
+    roman.kushirenko@gmail.com
+
+
+    **Abstract** This paper presents a review of trends in numerical weather prediction,
+    the nature of their errors, and ways to improve them. The neural network is proposed
+    to increase the accuracy of the temperature forecast by the COSMO regional model.
+    This architecture allows predicting errors of the atmospheric model further conducted
+    with different historical models of regional errors. The number of epochs after
+    network overfitting overlaps is determined by that the architecture makes possible
+    to achieve an improvement of a 2m temperature forecast in approximately 50%.
+
+
+    *Keywords*—neural network, model, COSMO, atmospheric, temperature
+
+
+    # I. INTRODUCTION
+
+
+    Over the past 30 years, the development and application of numerical hydrodynamic
+    methods for weather forecasting have improved unexpectedly. It became possible
+    primarily due to the creation of powerful computers, the designing of sophisticated
+    and realistic methods, and the essential improvement of meteorological instrumentation
+    and data.
+
+
+    Nature of the atmosphere is based on complex thermodynamic processes in the troposphere
+    and stratosphere and the lasting relationship between these processes allow us
+    to define them by the equations of hydrodynamics [1, 2]. In this, enables modeling
+    of different parts of the atmospheric character and other phenomena. In the world,
+    forecasts are classified based on the meteorological type, the mathematical implementation
+    specifications, the forecast range, and the size of the territory they are made.
+
+
+    Today, the quality of weather forecasts consists of two dimensions: accuracy and
+    the increasing range. The short-range forecast is determined by the initial state
+    of the atmosphere. The long range forecast is required not only to detect limited
+    knowledge of the initial fields but also to describe the effects of external factors
+    that lead to a new equilibrium state of the system. The long range depends on
+    the initial state of the atmosphere and elements of modeling. Increasing the range
+    of forecasts leads to the need to expand the area of integration to cover the
+    entire surface of the globe, making time of calculations and the power of computers
+    critical factors.
+
+
+    There are processes and phenomena of different types in the atmosphere. Some occur
+    in a limited area for short times - or in space for a long time. Currently, today,
+    all atmospheric processes and objects can be identified by these types [3]: (up
+    to 200m), from 2000km and to scale. It is clear that the formation of processes
+    and phenomena in each area occurs at all scales and each process in general circulation
+    will be different.,
+
+
+    Previously, the weather services of developed countries focused on synoptic periods
+    in the hemisphere, despite the nature of results, according to the success of
+    such forecasts remained almost constant. With the development of computing resources,
+    several new operational models were created in specially created meteorological
+    centers. For investigation and the forecasting of the macroscale processes, models
+    were used in all existing world meteorological centers (Washington, Melbourne,
+    Moscow, Offenbach and etc.), as well as the largest and national regions. For
+    macroscale examples of parallel computer systems were used in up to 300 used.
+
+
+    Execution of numerical methods for complex task atmospheric processing is impossible
+    without high-performance computing methods. Current forecasting is limited with
+    severe constraints that can be overcome only by powerful multiprocessor systems.
+    Nowadays, network technologies of the Internet, operating systems, and distributed
+    computing clusters. Their usage is to achieve high-performance indicators of multiprocessor
+    processing and parallel programming.
+
+
+    Nowadays, promising directions in the development of study and parallel forecasting
+    systems is the construction of program abstractions in the field of algebra-linguistic
+    languages and models, which allow to the development of architecture and language-independent
+    multiprocessor computing systems and networks. Application of algebra-linguistic
+    approach to the construction of structured abstractions in parallel program models
+    provide parallel calculations with high-performance performances.'
+  - '[PAGE 1]
+
+
+    # 354
+
+
+    Further progress in the improvement of the quality of parallel meteorological
+    forecasting systems is assured not only with increased productivity but also with
+    a decrease in energy consumption per unit of power. Changes have laying the way
+    to use non-homogeneous parallel computing systems capable of making computation
+    specialization for specific tasks order to obtain the highest performance with
+    the least resource costs. In recent years, graphics processing units (GPUs) have
+    shown their best in this regard. GPUs are particularly well-suited as means of
+    information processing, and as microprocessor general-purpose platforms (GPGPU).
+
+
+    This paper describes the network architecture for the task of refining the numerical
+    forecast. The proposed network predicts the errors of the numerical model''s predictions
+    for further adjustment of the actual forecast.
+
+
+    # A. Dataset Description
+
+
+    A neural model''s ability to solve the problem depends on the representativeness
+    and integrity of data for its training.
+
+
+    Data used for the proposed model training, validation, and testing the following
+    features:
+
+
+    +   - Date
+
+    - Coordinated Universal Time
+
+    - 1-day forecast value (Fcst) by the regional numerical model
+
+    - Temperature value by Kyiv weather station (Obs)
+
+
+    It is known that non-homogeneous architectures are significantly more complex
+    than homogeneous architectures, which arises from the development of special tools
+    that would efficiently generate the most productive code for such systems.
+
+
+    It can be noticed that choice of non-homogeneous architectures also arises in
+    connection with building of global information and computing infrastructures,
+    such as GRID-systems and cloud-computing systems. With use of iterated interfaces,
+    including concepts of utility, services, and virtualization, resources are achieved
+    at the maximum abstraction of resources and simplification of access to them the
+    task
+
+
+    The regional numerical model used for forecasting is the COSMO model developed
+    and Small-Scale Modeling. It was developed by the Consortium for Model Hydromological
+    Institute of the SES of Ukraine and the NAS for both research and applications
+    services since 2011 [6].
+
+
+    This article proposes to solving the problem of numerical weather forecast. It
+    combines physical models of atmospheric processes with machine learning which
+    achieves higher degree of accuracy, completeness, and range of meteorological
+    forecasts.
+
+
+    The COSMO model is a non-homogeneous model designed for various scientific applications
+    on the meso- and scale-o. It is based on the thermo-hydrodynamic equations describing
+    compressible atmosphere. All physical processes are taken into account by parameterization
+    schemes. The region (shown in fig. 1) consists of 209 grid points in the east-west
+    and 101 grid points in the north-south direction with resolution approximately
+    14km. The number of vertical layers is 50.
+
+
+    # II. NEURAL NETWORK PROCESS
+
+
+    The circulating processes in the atmosphere affect meteorological values are described
+    with complex mathematical models. To obtain an accurate forecast, it is necessary
+    to out the atmosphere''s spatial sampling with high resolution, while microscale
+    meteorological processes can be erroneously treated as subset scales. Spatial
+    sampling with high resolution resources that cannot be provided except by powerful
+    computer systems.
+
+
+    Of course, computer systems are increasing with the development of technology,
+    and in the future, may become performant sampling with high resolution and, as
+    result, can achieve accurate predictions. However, such computer system will have
+    a high cost, and therefore it may be unusable. It is important to develop other
+    methods and techniques for obtaining predictions of higher accuracy.
+
+
+    ![](img/b3ddd68c3bed4054519497a876aab20a_1_0.png)
+
+
+    Fig. 1. The calculated region of the numerical weather forecasting model.
+
+
+    One technique for addressing the region of a numerical model may be the use of
+    machine learning, namely neural networks. Neural networks are widely used that
+    is caused by the development of new learning algorithms and the increasing of
+    the power of computer systems. Reason why neural networks are so popular is that
+    they allow finding common attention paying to local details [4].
+
+
+    Observations are made here three times i.e. at 00:00, 03:00, 06:00, 09:00, 12:00,
+    15:00 and 18:00 UTC. The numerical forecast is also calculated for these times.
+    We have eight days for each date: The dataset covers 489 days (from 01.07.2012
+    to 01.11.2013), and consists of 392 days, 392 times.
+
+
+    To create, validate, and test datasets, we split data into three subsets. The
+    training dataset covers 365 days (from 01.07.2012 to 30.06.2013), the test dataset
+    covers 116 days (from 01.07/2013 to 24.10.2013), and the validation
+
+
+    IEEE ATIT 2020-9-1-7281-9999-20/9/30*©2020 IEEE
+
+
+    * Authorized licensed to use: University of Cape Town. Download on 18 May 2021
+    at 09:47:23 UTC from IEEE Xplore. Restrictions apply.'
+  md: "\n# Machine Learning to Improve Numerical Weather Forecasting\n\nAnatoly Doroshenko\n\
+    Institute of Software of NAS of Ukraine\nNTUU 'Igor Sikorsky Kyiv Polytechnic'\n\
+    Kyiv, Ukraine\ndoroshenkanatoli2@gmail.com\n\nVitalii Shpygy\nUkrainian Hydrometeorological\
+    \ Institute of SES of Ukraine and NAS of Ukraine\nKyiv, Ukraine\nvitold82@ua.com\n\
+    \nRoman Kushnirenko\nInstitute of Software of NAS of Ukraine\nKyiv, Ukraine\n\
+    roman.kushirenko@gmail.com\n\n**Abstract** This paper presents a review of trends\
+    \ in numerical weather prediction, the nature of their errors, and ways to improve\
+    \ them. The neural network is proposed to increase the accuracy of the temperature\
+    \ forecast by the COSMO regional model. This architecture allows predicting errors\
+    \ of the atmospheric model further conducted with different historical models\
+    \ of regional errors. The number of epochs after network overfitting overlaps\
+    \ is determined by that the architecture makes possible to achieve an improvement\
+    \ of a 2m temperature forecast in approximately 50%.\n\n*Keywords*—neural network,\
+    \ model, COSMO, atmospheric, temperature\n\n## I. INTRODUCTION\n\nOver the past\
+    \ 30 years, the development and application of numerical hydrodynamic methods\
+    \ for weather forecasting have improved unexpectedly. It became possible primarily\
+    \ due to the creation of powerful computers, the designing of sophisticated and\
+    \ realistic methods, and the essential improvement of meteorological instrumentation\
+    \ and data.\n\nNature of the atmosphere is based on complex thermodynamic processes\
+    \ in the troposphere and stratosphere and the lasting relationship between these\
+    \ processes allow us to define them by the equations of hydrodynamics [1, 2].\
+    \ In this, enables modeling of different parts of the atmospheric character and\
+    \ other phenomena. In the world, forecasts are classified based on the meteorological\
+    \ type, the mathematical implementation specifications, the forecast range, and\
+    \ the size of the territory they are made.\n\nToday, the quality of weather forecasts\
+    \ consists of two dimensions: accuracy and the increasing range. The short-range\
+    \ forecast is determined by the initial state of the atmosphere. The long range\
+    \ forecast is required not only to detect limited knowledge of the initial fields\
+    \ but also to describe the effects of external factors that lead to a new equilibrium\
+    \ state of the system. The long range depends on the initial state of the atmosphere\
+    \ and elements of modeling. Increasing the range of forecasts leads to the need\
+    \ to expand the area of integration to cover the entire surface of the globe,\
+    \ making time of calculations and the power of computers critical factors.\n\n\
+    There are processes and phenomena of different types in the atmosphere. Some occur\
+    \ in a limited area for short times - or in space for a long time. Currently,\
+    \ today, all atmospheric processes and objects can be identified by these types\
+    \ [3]: (up to 200m), from 2000km and to scale. It is clear that the formation\
+    \ of processes and phenomena in each area occurs at all scales and each process\
+    \ in general circulation will be different.\n\nPreviously, the weather services\
+    \ of developed countries focused on synoptic periods in the hemisphere, despite\
+    \ the nature of results, according to the success of such forecasts remained almost\
+    \ constant. With the development of computing resources, several new operational\
+    \ models were created in specially created meteorological centers. For investigation\
+    \ and the forecasting of the macroscale processes, models were used in all existing\
+    \ world meteorological centers (Washington, Melbourne, Moscow, Offenbach and etc.),\
+    \ as well as the largest and national regions. For macroscale examples of parallel\
+    \ computer systems were used in up to 300 used.\n\nExecution of numerical methods\
+    \ for complex task atmospheric processing is impossible without high-performance\
+    \ computing methods. Current forecasting is limited with severe constraints that\
+    \ can be overcome only by powerful multiprocessor systems. Nowadays, network technologies\
+    \ of the Internet, operating systems, and distributed computing clusters. Their\
+    \ usage is to achieve high-performance indicators of multiprocessor processing\
+    \ and parallel programming.\n\nNowadays, promising directions in the development\
+    \ of study and parallel forecasting systems is the construction of program abstractions\
+    \ in the field of algebra-linguistic languages and models, which allow to the\
+    \ development of architecture and language-independent multiprocessor computing\
+    \ systems and networks. Application of algebra-linguistic approach to the construction\
+    \ of structured abstractions in parallel program models provide parallel calculations\
+    \ with high-performance performances.\n\nFurther progress in the improvement of\
+    \ the quality of parallel meteorological forecasting systems is assured not only\
+    \ with increased productivity but also with a decrease in energy consumption per\
+    \ unit of power. Changes have laying the way to use non-homogeneous parallel computing\
+    \ systems capable of making computation specialization for specific tasks order\
+    \ to obtain the highest performance with the least resource costs. In recent years,\
+    \ graphics processing units (GPUs) have shown their best in this regard. GPUs\
+    \ are particularly well-suited as means of information processing, and as microprocessor\
+    \ general-purpose platforms (GPGPU).\n\nThis paper describes the network architecture\
+    \ for the task of refining the numerical forecast. The proposed network predicts\
+    \ errors of the atmospheric model further conducted with different historical\
+    \ models of regional errors.\n\n## A. Dataset\n\nThe proposed network predicts\
+    \ errors of the atmospheric model further conducted with different historical\
+    \ models of regional errors. The number of epochs after network overfitting overlaps\
+    \ is determined by that the architecture makes possible to achieve an improvement\
+    \ of a 2m temperature forecast in approximately 50%.\n\nThis paper describes the\
+    \ network architecture for the task of refining the numerical forecast. The proposed\
+    \ network predicts errors of the atmospheric model further conducted with different\
+    \ historical models of regional errors.\n\n- Date\n- Temperature\n- Forecast (Obs)\n\
+    \nThe proposed network predicts errors of the atmospheric model further conducted.\
+    \ The proposed network predicts errors of the atmospheric model further conducted\
+    \ with different historical models of regional errors. The number of epochs after\
+    \ network overfitting overlaps is determined by that the architecture makes possible\
+    \ to achieve an improvement of a 2m temperature forecast in approximately 50%.\n\
+    \nThis paper describes the network architecture for the task of refining the numerical\
+    \ forecast. The proposed network predicts errors of the atmospheric model further\
+    \ conducted with different historical models of regional errors.\n\nThis paper\
+    \ describes the network architecture for the task of refining the numerical forecast.\
+    \ The proposed network predicts errors of the atmospheric model further conducted\
+    \ with different historical models of regional errors. The number of epochs after\
+    \ network overfitting overlaps is determined by that the architecture makes possible\
+    \ to achieve an improvement of a 2m temperature forecast in approximately 50%.\n\
+    \nThis paper describes the network architecture for the task of refining the numerical\
+    \ forecast. The proposed network predicts errors of the atmospheric model further\
+    \ conducted with different historical models of regional errors.\n\nThis paper\
+    \ describes the network architecture for the task of refining the numerical forecast.\
+    \ The proposed network predicts errors of the atmospheric model further conducted\
+    \ with different historical models of regional errors.\n\n## II. NEURAL NETWORK\n\
+    \nThe circulating processes in the atmosphere affect meteorological values are\
+    \ described with complex models. To obtain an accurate forecast, it is necessary\
+    \ to out the atmosphere with high resolution.\n\n![Fig. 1. The calculated region\
+    \ of the numerical forecasting](img/b3ddd68c3bed4054519497a876ab20a_1.png)\n\n\
+    One technique for addressing the region of a numerical model may be the use of\
+    \ machine learning, namely neural networks. Neural networks are widely used that\
+    \ is caused by the development of new learning algorithms and the increasing of\
+    \ the power of computer systems. Reason why neural networks are so popular is\
+    \ that they allow finding common attention paying local details [4].\n\nObservations\
+    \ are made here three times i.e. at 00:00, 03:00, 06:00, 09:00, 12:00, 15:00 and\
+    \ 18:00 UTC. The numerical forecast is also calculated for these times. We have\
+    \ eight days for each date: The dataset covers 489 days (from 01.07.2012 to 01.11.2013),\
+    \ and consists of 392 days, 392 times. \n\nTo create, validate, and test datasets,\
+    \ we split data into three subsets. The training dataset covers 365 days (from\
+    \ 01.07.2012 to 30.06.2013), the test dataset covers 116 days (from 01.07/2013\
+    \ to 24.10.2013), and the validation\n"
+  mdcn: "\n\n# 利用机器学习改进数值化天气预报\n\nAnatoly Doroshenko\n乌克兰国家科学院软件研究所\nNTUU '伊戈尔·西科尔斯基基辅理工大学'\
+    \ \n基辅，乌克兰\ndoroshenkanatoli2@gmail.com\n\nVitalii Shpygy\n乌克兰国家应急局（SES of Ukraine）水文气象学院及乌克兰国家科学院\n\
+    基辅，乌克兰\nvitold82@ua.com\n\nRoman Kushnirenko\n乌克兰国家科学院软件研究所\n基辅，乌克兰\nroman.kushirenko@gmail.com\n\
+    \n**摘要** 本文回顾了数值天气预报的趋势、误差的性质以及改进方法。提出了一种神经网络来提高 COSMO 区域模型温度预报的准确性。该架构允许通过不同的历史区域误差模型进行进一步的研究，对大气模型的误差进行预测。网络过拟合叠加后的\
+    \ epoch 数量取决于该架构能够使 2米高度温度预报的精度提高约 50%。\n\n*关键词*—神经网络、模型、COSMO、大气、温度\n\n## I.\
+    \ 引言\n\n在过去的30年里，用于天气预报的数值流体动力学方法的发展应用取得了意想不到的进展。这主要归功于强大计算机的出现、复杂方法的设计以及气象仪的本质改进。\n\
+    \n大气的性质基于对流层和对流层复杂热力学过程的研究，这些过程允许我们通过流体力学方程对其进行定义 [1]。在世界范围内，天气预报已根据气象类型、数学实现、预报范围和规模进行分类。\n\
+    \n今天，天气预报的质量由两个维度组成：准确性和范围。短效预报取决于大气的初始状态。长效预报不仅需要检测有限的初始场，还需要描述导致系统新平衡状态的因素。长效预报取决于大气的初始状态和建模元素。预报范围的扩大导致了覆盖整个地球表面的需求，计算时间和计算机功率是关键因素。\n\
+    \n大气中存在不同类型的过程和现象。某些现象在有限区域内短时间内或长时间发生。目前，所有大气过程可以通过这些类型进行识别 [3]：（从 200m 到 2000km\
+    \ 的尺度）。在每个区域和每个尺度，过程的形成是清晰的。\n\n在此之前，天气服务关注的是半球的天气状况，尽管此类预报的结果几乎保持不变。随着计算资源的发展，新的运行模型在所有现有气象中心（华盛顿、墨斯科、奥芬堡等）被创建。对于大尺度过程，并行计算机系统被用于\
+    \ 300 个。\n\n如果没有高性能计算方法，执行复杂大气处理的数值方法是不可能的。目前的预报面临严格限制，只有通过强大的多处理器系统才能克服。如今，网络技术、操作系统和分布式计算集群是为了实现多处理器处理和并行编程的高性能。\n\
+    \n如今，研究和并行预报系统的前景是在代数语言和模型领域构建程序抽象，这允许架构和语言无关的多处理器计算网络的发展。代数方法在构建并行程序模型中的应用提供了高性能性能。\n\
+    \n并行气象预报系统的进一步改进不仅通过提高生产力，还通过降低单位能耗来实现。使用非均匀并行计算系统是特定任务以获得最低成本最高性能的方法。近年来，图形处理器（GPU）在这方面表现出色。GPU\
+    \ 特别适用于信息处理以及通用处理器平台（GPGPU）。\n\n本文描述了用于改进数值预报任务的神经网络架构。所提出的神经网络通过不同的历史误差模型对大气模型的误差进行进一步预测。\n\
+    \n## A. 数据集\n\n所提出的神经网络通过不同的历史误差模型对大气模型的误差进行进一步预测。网络过拟合叠加后的 epoch 数量取决于该架构能够使\
+    \ 2米温度预报的精度提高约 50%。\n\n本文描述了用于改进数值预报任务的神经网络架构。所提出的神经网络通过不同的历史误差模型对大气模型的误差进行进一步预测。\n\
+    \n- 日期\n- 温度\n- 预报（观测值）\n\n所提出的神经网络对大气模型的误差进行进一步预测。进一步预测。网络过拟合叠加后的 epoch 数量取决于该架构能够使\
+    \ 2米温度预报的精度提高约 50%。\n\n本文描述了用于改进数值预报任务的神经网络架构。所提出的神经网络通过不同的历史误差模型对大气模型的误差进行进一步预测。\n\
+    \n本文描述了用于改进数值预报任务的神经网络架构。所提出的神经网络通过不同的历史误差模型对大气模型的误差进行进一步预测。网络过拟合叠加后的 epoch 数量取决于该架构能够使\
+    \ 2米温度预报的精度提高约 50%。\n\n本文描述了用于改进数值预报任务的神经网络架构。所提出的神经网络通过不同的历史误差模型对大气模型的误差进行进一步预测。\n\
+    \n本文描述了用于改进数值预报任务的神经网络架构。所提出的神经网络通过不同的历史误差模型对大气模型的误差进行进一步预测。\n\n## II. 神经网络\n\n\
+    影响气象值的地球循环过程通过复杂模型描述。为了获得准确的预报，需要高分辨率的大气数据。\n\n![图1. 数值预报的计算区域](img/b3ddd68c3bed4054519497a876ab20a_1.png)\n\
+    \n处理数值模型区域的技术可以是使用机器学习，即神经网络。神经网络的广泛使用是因为新学习算法的发展和计算机功率的提高。神经网络如此受欢迎的原因是它们允许在关注局部细节的同时寻找共同点\
+    \ [4]。\n\n观测在此进行三次，即 UTC 时间的 00:00、03:00、06:00、09:00、12:00、15:00 和 18:00。数值预报也针对这些时间进行了计算。每个日期都有八天的数据：数据集涵盖\
+    \ 489 天（从 2012-07-01 到 2013-11-01），由 392 天、392 个时间组成。\n\n为了创建、验证和测试数据集，我们将数据划分为子集。训练集涵盖\
+    \ 365 天（从 2012-07-01 到 2013-06-30），测试集涵盖 116 天（从 2013-07-01 到 2013-10-24），以及验证集\n\
+    \n"
+  merge: -1
+- raw:
+  - "[PAGE 2]\n\n# 355\n\ndataset covers 8 days (from 25.10.2013 to 01.11.2013). Thus\
+    \ we obtained a 75/25 ratio between the train set and the test set.\n\nThe proposed\
+    \ neural network architecture has a 16-unit GRU layer as the first layer and fewer\
+    \ units to lose worse. Two fully-connected (dense) layers follow the first layer.\
+    \ The number of units in them depend on error history. Models based on 1, 2-day\
+    \ error history have 8 and 16 units, models based on 3, 5-day error history have\
+    \ 32 and 16 units based on 7-day error history have 8 and 32 units,\n\n# B. Input\
+    \ and Output Vectors\n\nAs mentioned above, the proposed approach's main idea\
+    \ is to train a neural model on errors given by the forecast of the regional model,\
+    \ i.e., on Err = Forecast - Obs. If so, we can calculate the numerical forecast\
+    \ as FCNt = Err + forecast.\n\nThe experiments were conducted with 1, 2, 3, 5,\
+    \ 7-day error history. The output vector dimensions were equal to 1, 2, 3, 5,\
+    \ and 7 respectively. We have the day input vector contained all data for numerical\
+    \ forecast error for the given history.\n\nThe last layer of the proposed architecture\
+    \ is also fully-connected. It has 8 units the result obtained after the possible\
+    \ model ensures some diversity of the output vectors.\n\nThe output vector dimension\
+    \ was equal to 1×8. These contained all data on numerical forecast error for 1-day\
+    \ prediction.\n\nAll experiments were conducted using Keras (an open-source library\
+    \ that provides a Python interface for neural networks) learning platform. Tensorflow\
+    \ (an open-source machine learning framework). The code was written in the Python\
+    \ programming language.\n\n# C. Neural Network Architecture\n\nNumerical forecast\
+    \ error has a time-series nature. We decided to use a recurrent layer as the first\
+    \ layer of the since recent models were designed to deal with such history.\n\n\
+    Among many recurrent networks, we used gated recurrent (GRU) architecture [7].\
+    \ The GRU is a popular long short-term memory (LSTM), but it has fewer parameters,\
+    \ and it does not face many problems in learning long-term dependencies, particularly\
+    \ from vanishing and exploding gradients.\n\nGRU unit works in the following way.\
+    \ At each step, it takes input vector xt, from the current step and the output\
+    \ vector ht-1, from the previous one. The current output vector is calculated\
+    \ as a linear interpolation between ht-1, and the current candidate vector h-t\n\
+    \n```\n$h_t = (1 - z_t) \\odot h_{t-1} + z_t \\odot \\tilde{h}_t;\\;(1)$\n```\n\
+    \nwhere $z_t$ is a gate vector (decides which part of the input vectors will use\
+    \ the current output); $\\odot$ is a symbol for the Hadamard product. The update\
+    \ vector is calculated as follows:\n\n```\n$z_t = \\sigma(W_z x_t + U_z h_{t-1}\
+    \ + b_z);$\\;(2)$\n```\n\nThe current candidate vector $\tilde{h}_t$ is calculated\
+    \ as the simple recurrent network (RNN):\n\n```\n$\\tilde{h}_t = \\sigma(W_h x_t\
+    \ + U_h (r_t \\odot h_{t-1}) + b_h);$\\;(3)$\n```\n\nwhere $r_t$ is a reset vector.\
+    \ It is calculated like $W_r, U_r, b_r$ are parameter matrices, Update and reset\
+    \ gate vectors are activated with a sigmoid function, whereas the current candidate\
+    \ vector is activated with a hyperbolic tangent.\n\n```\n$r_t = \\sigma(W_r x_t\
+    \ + U_r h_{t-1} + b_r);$\\;(4)$\n```\n\n$W_w, U_w, b_w, W_h, U_h, b_h$ are parameter\
+    \ matrices.\n\nAs mentioned above, the experiments were conducted with different\
+    \ error histories (1, 2, 3, 5, 7-day). The models were trained for a different\
+    \ number of epochs: 15 for 1, 2-day error history and 6 for 3, 5-7-day error history.\
+    \ More epochs leads to better overfitting models, and as a result, the mean squared\
+    \ error (MSE) used during testing. MSE changes during validation are shown in\
+    \ Fig. 2-ig.\n\nThe dashed lines denote MSE on the training dataset, whereas the\
+    \ solid lines denote MSE on the validation dataset. The experiments (as be seen\
+    \ in Fig. 2) show MSE obtained on 1-day error history (i.e., synchronous with\
+    \ the regional neural model).\n\nAn increase in error size decreases the number\
+    \ of cases with better forecast obtained. The effect observed in the cases of\
+    \ 5 and 7-day error history (which one) needs to be investigated more thoroughly.\n\
+    \n![](img/b3ddd68c3bed4054519497a876aab20a_2_0.png)\n\nFig. 2. MSE changes for\
+    \ 1-day error history.\n\n# IEEE ATIT 2020 978-1-2271-9999-0/$30.00 ©2020 IEEE"
+  - '[PAGE 3]
+
+
+    # model loss
+
+
+    # model loss
+
+
+    ![](img/b3ddd68c3bed4054519497a876aab20a_3_0.png)
+
+
+    ![](img/b3ddd68c3bed4054519497a876aab20a_3_1.png)
+
+
+    Fig. 3. MSE changes for 2-day error history.
+
+
+    Fig. 6. MSE changes for 7-day error history.
+
+
+    TABLE I. THE PERCENT OF CASES WITH A BETTER FORECAST OBTAINED
+
+
+    | Error History Size, days | Percent of Cases, |
+
+    |---|---|
+
+    | 1 | 52.05 |
+
+    | 2 | 50.98 |
+
+    | 3 | 50.44 |
+
+    | 5 | 51.67 |
+
+    | 7 | 52.04 |
+
+
+    ![](img/b3ddd68c3bed4054519497a876aab20a_3_2.png)
+
+
+    # IV. CONCLUSION
+
+
+    Fig. 4. MSE changes for 3-day error history.
+
+
+    In the current study, we introduced neural network architecture correcting the
+    regional numerical models to improve the 2m temperature forecast. Hopefully, of
+    other continuous meteorological quantities can capitalize on this approach.
+
+
+    ![](img/b3ddd68c3bed4054519497a876aab20a_3_3.png)
+
+
+    We conducted experiments with different error histories (1, 2, 3, 5, 7-day ones)
+    and determined the number of epochs after which the model overfits 15 (for 1,
+    2-day error histories) and 6 (for 3, 7-day error histories).
+
+
+    Fig. 5. MSE changes for 5-day error history.
+
+
+    We showed that the proposed architecture is possible to improve the 2m temperature
+    forecast in approximately 50% of cases.
+
+
+    # REFERENCES
+
+
+    It should be noted that MSE value correlates with the results obtained using kriging-interpolation
+    [39]. However, the neural network approach seems to be more promising as it corrects
+    inaccuracies caused by physical processes that the numerical model does not consider
+    or consider.
+
+
+    [1] Belov, N., Borisenkov, E., and Panin B.D. Methods of Numerical Prediction
+    (Russian). Gidrometmeteorizdat, Leningrad, 1989.
+
+
+    [2] Vitaly P. and Anatoly Dobronskiy. Computational Techniques for Meteorology:
+    Process Modeling. Pennsylvania, USA, 2003. Bulletin of the American Meteorological
+    Society, 96(57), 1925–230.
+
+
+    [3] Okuyama, J. A. A statistical approach for weather model accuracy analysis
+    and enhancement by neural networks. Sensors, 2013, 2019–2140.
+
+
+    [4] Domain, S. Description of the Nonhydro COSMO-Model: Part I Dynamics and Determinism.
+    Deutscher Wetterdienst, Offenbach, 2011.
+
+
+    [5] Shiny, Y. et al. The application of regional numerical models to operational
+    weather forecasting using CAM Techniques. Responding to the Environment of the
+    21st Century, 2013.
+
+
+    [6] Cho, K et al. Learning phrase representations using neural machine translation.
+    arXiv:1406.10718, 2014.
+
+
+    [7] Hochreiter, S. and Schmidhuber, J. Long short-term memory. Neural computation,
+    (W8), 1997; 1735–1780.
+
+
+    [8] Kadousawa, L. and Strom, Y. The choice of optimal lag for kriging interpolation
+    of weather forecast model. Hydrology and Water Management, (42), 2016, 22–38.'
+  md: '
+
+    dataset covers 8 days (from 25.10.2013 to 01.11.2013). Thus we obtained a 75/25
+    ratio between the train set and the test set.
+
+
+    The proposed neural network architecture has a 16-unit GRU layer as the first
+    layer and fewer units to lose worse. Two fully-connected (dense) layers follow
+    the first layer. The number of units in them depend on error history. Models based
+    on 1, 2-day error history have 8 and 16 units, models based on 3, 5-day error
+    history have 32 and 16 units, based on 7-day error history have 8 and 32 units,
+
+
+    ## B. Input and Output Vectors
+
+
+    As mentioned above, the proposed approach''s main idea is to train a neural model
+    on errors given by the forecast of the regional model, i.e., on Err = Forecast
+    - Obs. If so, we can calculate the numerical forecast as FCNt = Err + forecast.
+
+
+    The experiments were conducted with 1, 2, 3, 5, 7-day error history. The output
+    vector dimensions were equal to 1, 2, 3, 5, and 7 respectively. We have the day
+    input vector contained all data for numerical forecast error for the given history.
+
+
+    The last layer of the proposed architecture is also fully-connected. It has 8
+    units the result obtained after the possible model ensures some diversity of the
+    output vectors.
+
+
+    The output vector dimension was equal to 1×8. These contained all data on numerical
+    forecast error for 1-day prediction.
+
+
+    All experiments were conducted using Keras (an open-source library that provides
+    a Python interface for neural networks) learning platform. Tensorflow (an open-source
+    machine learning framework). The code was written in the Python programming language.
+
+
+    ## C. Neural Network Architecture
+
+
+    Numerical forecast error has a time-series nature. We decided to use a recurrent
+    layer as the first layer of the since recent models were designed to deal with
+    such history.
+
+
+    Among many recurrent networks, we used gated recurrent (GRU) architecture [7].
+    The GRU is a popular long short-term memory (LSTM), but it has fewer parameters,
+    and it does not face many problems in learning long-term dependencies, particularly
+    from vanishing and exploding gradients.
+
+
+    GRU unit works in the following way. At each step, it takes input vector xt, from
+    the current step and the output vector ht-1, from the previous one. The current
+    output vector is calculated as a linear interpolation between ht-1, and the current
+    candidate vector h-t
+
+
+    ```
+
+    $h_t = (1 - z_t) \odot h_{t-1} + z_t \odot \tilde{h}_t;\;(1)$
+
+    ```
+
+
+    where $z_t$ is a gate vector (decides which part of the input vectors will use
+    the current output); $\odot$ is a symbol for the Hadamard product. The update
+    vector is calculated as follows:
+
+
+    ```
+
+    $z_t = \sigma(W_z x_t + U_z h_{t-1} + b_z);;(2)$
+
+    ```
+
+
+    The current candidate vector $\tilde{h}_t$ is calculated as the simple recurrent
+    network (RNN):
+
+
+    ```
+
+    $\tilde{h}_t = \sigma(W_h x_t + U_h (r_t \odot h_{t-1}) + b_h);;(3)$
+
+    ```
+
+
+    where $r_t$ is a reset vector. It is calculated like $W_r, U_r, b_r$ are parameter
+    matrices, Update and reset gate vectors are activated with a sigmoid function,
+    whereas the current candidate vector is activated with a hyperbolic tangent.
+
+
+    ```
+
+    $r_t = \sigma(W_r x_t + U_r h_{t-1} + b_r);;(4)$
+
+    ```
+
+
+    $W_w, U_w, b_w, W_h, U_h, b_h$ are parameter matrices.
+
+
+    As mentioned above, the experiments were conducted with different error histories
+    (1, 2, 3, 5, 7-day). The models were trained for a different number of epochs:
+    15 for 1, 2-day error history and 6 for 3, 5-7-day error history. More epochs
+    leads to better overfitting models, and as a result, the mean squared error (MSE)
+    used during testing. MSE changes during validation are shown in Fig. 2-ig.
+
+
+    The dashed lines denote MSE on the training dataset, whereas the solid lines denote
+    MSE on the validation dataset. The experiments (as be seen in Fig. 2) show MSE
+    obtained on 1-day error history (i.e., synchronous with the regional neural model).
+
+
+    An increase in error size decreases the number of cases with better forecast obtained.
+    The effect observed in the cases of 5 and 7-day error history (which one) needs
+    to be investigated more thoroughly.
+
+
+    ![](img/b3ddd68c3bed4054519497a876aab20a_2_0.png)
+
+
+    Fig. 2. MSE changes for 1-day error history.
+
+
+    ![](img/b3ddd68c3bed4054519497a876aab20a_3_0.png)
+
+
+    ![](img/b3ddd68c3bed4054519497a876aab20a_3_1.png)
+
+
+    Fig. 3. MSE changes for 2-day error history.
+
+
+    Fig. 6. MSE changes for 7-day error history.
+
+
+    TABLE I. THE PERCENT OF CASES WITH A BETTER FORECAST OBTAINED
+
+
+    | Error History Size, days | Percent of Cases, |
+
+    |---|---|
+
+    | 1 | 52.05 |
+
+    | 2 | 50.98 |
+
+    | 3 | 50.44 |
+
+    | 5 | 51.67 |
+
+    | 7 | 52.04 |
+
+
+    ![](img/b3ddd68c3bed4054519497a876aab20a_3_2.png)
+
+
+    ## IV. CONCLUSION
+
+
+    Fig. 4. MSE changes for 3-day error history.
+
+
+    In the current study, we introduced neural network architecture correcting the
+    regional numerical models to improve the 2m temperature forecast. Hopefully, of
+    other continuous meteorological quantities can capitalize on this approach.
+
+
+    ![](img/b3ddd68c3bed4054519497a876aab20a_3_3.png)
+
+
+    We conducted experiments with different error histories (1, 2, 3, 5, 7-day) and
+    determined the number of epochs after which the model overfits 15 (for 1, 2-day
+    error histories) and 6 (for 3, 7-day error histories).
+
+
+    Fig. 5. MSE changes for 5-day error history.
+
+
+    We showed that the proposed architecture is possible to improve the 2m temperature
+    forecast in approximately 50% of cases.
+
+
+    # REFERENCES
+
+
+    It should be noted that MSE value correlates with the results obtained using kriging
+    [39]. However, the neural network approach seems to be more promising as it corrects
+    inaccuracies caused by physical processes that the numerical model does not.
+
+
+    [1] Belov, N., Borisenkov, E., and Panin B. Methods of Numerical Prediction (Russian).
+    Gidrometizdat, Leningrad, 1989.
+
+
+    [2] Vitaly P. and Anatoly Dobronskiy. Computational Techniques for Meteorology:
+    Process Modeling. Pennsylvania, USA, 2003. Bulletin of the American Meteorological
+    Society, 96(57), 1925–230.
+
+
+    [3] Okuyama, J. A statistical approach for weather model accuracy analysis and
+    enhancement by neural networks. Sensors, 2013, 2019–2140.
+
+
+    [4] Domain, S. Description of the Nonhydro COSMO-Model: Part I Dynamics and Determinism.
+    Deutscher Wetterdienst, Offenbach, 2011.
+
+
+    [5] Shiny, Y. et al. The application of regional numerical models to operational
+    weather forecasting using CAM Techniques. Responding to the Environment of the
+    21st Century, 2013.
+
+
+    [6] Cho, K et al. Learning phrase representations using neural machine translation.
+    arXiv:1406.10718, 2014.
+
+
+    [7] Hochreiter, S. and Schmidhuber, J. Long short-term memory. Neural computation,
+    (W8), 1997; 1735–1780.
+
+
+    [8] Kadousawa, L. and Strom, Y. The choice of optimal lag for kriging interpolation
+    of weather forecast model. Hydrology and Water Management, (42), 2016, 22–38.
+
+    '
+  mdcn: '
+
+    数据集涵盖 8 天（从 2013.10.25 到 2013.11.01）。因此，我们在训练集和测试集之间获得了 75/25 的比例。
+
+
+    所提的神经网络架构第一层为具有 16 个单元的 GRU 层，后续层单元数量较少以减少性能损失。第一层之后是两个全连接（密集型）层。它们的单元数量取决于误差历史。基于
+    1, 2 天误差历史的模型具有 8 和 16 个单元；基于 3, 5 天误差历史的模型具有 32 和 16 个单元；基于 7 天误差历史的模型具有 8 和
+    32 个单元。
+
+
+    ## B. 输入和输出向量
+
+
+    如上所述，所提方法的核心思想是根据区域模型预测给出的误差来训练神经网络模型，即 Err = Forecast - Obs。如果是这样，我们可以将数值预报计算为
+    FCNt = Err + forecast。
+
+
+    实验是 1, 2, 3, 5, 7 天误差历史进行的。输出向量维度分别为 1, 2, 3, 5 和 7。我们的日输入向量包含了给定历史下数值预报误差的所有数据。
+
+
+    所提架构的最后一层也是全连接的。它具有 8 个单元，在可能模型处理后获得的结果确保了输出向量的某些多样性。
+
+
+    输出向量维度等于 1×8。这些数据包含了 1 天预测的数值预报误差的所有数据。
+
+
+    所有实验都是使用 Keras（一个为神经网络提供 Python 接口的开源库）学习平台完成的。Tensorflow（一个开源机器学习框架）。代码使用 Python
+    编程语言编写。
+
+
+    ## C. 神经网络架构
+
+
+    数值预报误差具有时间序列特性。我们决定使用循环层作为第一层，因为近期的模型是为处理此类历史而设计的。
+
+
+    在许多循环网络中，我们使用了门控循环单元（GRU）架构 [7]。GRU 是一种流行的长短期记忆网络（LSTM），但它的参数更少，并且在学习长期依赖方面不会遇到很多问题，特别是梯度消失和爆炸问题。
+
+
+    GRU 单元的工作方式如下：在每一步中，它接收来自当前步骤的输入向量 $x_t$ 和来自上一步骤的输出向量 $h_{t-1}$。当前输出向量计算为 $h_{t-1}$
+    和当前候选向量 $\tilde{h}_t$ 之间的线性插值。
+
+
+    ```
+
+    $h_t = (1 - z_t) \odot h_{t-1} + z_t \odot \tilde{h}_t;\;(1)$
+
+    ```
+
+
+    其中 $z_t$ 是门向量（决定输入向量的哪些部分将使用当前输出）；$\odot$ 是哈达玛积的符号。更新向量计算如下：
+
+
+    ```
+
+    $z_t = \sigma(W_z x_t + U_z h_{t-1} + b_z);;(2)$
+
+    ```
+
+
+    当前候选向量 $\tilde{h}_t$ 通过简单循环网络（RNN）计算：
+
+
+    ```
+
+    $\tilde{h}_t = \sigma(W_h x_t + U_h (r_t \odot h_{t-1}) + b_h);;(3)$
+
+    ```
+
+
+    其中 $r_t$ 是重置向量。它的计算方式类似于 $W_r, U_r, b_r$ 是参数矩阵，更新门和重置门向量使用 sigmoid 函数激活，而当前候选向量使用双曲正切函数激活。
+
+
+    ```
+
+    $r_t = \sigma(W_r x_t + U_r h_{t-1} + b_r);;(4)$
+
+    ```
+
+
+    $W_w, U_w, b_w, W_h, U_h, b_h$ 是参数矩阵。
+
+
+    如上所述，实验是在不同的误差历史（1, 2, 3, 5, 7 天）下进行的。模型以不同的 epoch 数（次数）进行训练：1, 2 天误差历史训练了 15
+    次，3, 5-7 天误差历史训练了 6 次。更多的 epoch 会导致更好的过拟合模型，结果导致了测试期间使用的均方误差（MSE）发生变化。验证期间的 MSE
+    变化如图 2-ig 所示。
+
+
+    虚线表示训练数据集上的 MSE，而实线表示验证数据集上的 MSE。实验（如图 2 所示）显示了在 1 天误差历史上获得的 MSE（即与区域神经网络模型同步）。
+
+
+    误差值的增加会减少获得更好预报的案例数量。在 5 天和 7 天误差历史案例中观察到的影响（哪一个）需要更深入的调查。
+
+
+    ![](img/b3ddd68c3bed4054519497a876aab20a_2_0.png)
+
+
+    图 2. 1 天误差历史的 MSE 变化。
+
+
+    ![](img/b3ddd68c3bed4054519497a876aab20a_3_0.png)
+
+
+    ![](img/b3ddd68c3bed4054519497a876aab20a_3_1.png)
+
+
+    图 3. 2 天误差历史的 MSE 变化。
+
+
+    图 6. 7 天误差历史的 MSE 变化。
+
+
+    表 I 获得更好预报的案例百分比
+
+
+    | 误差历史大小（天） | 案例百分比 |
+
+    |---|---|
+
+    | 1 | 52.05 |
+
+    | 2 | 50.98 |
+
+    | 3 | 50.44 |
+
+    | 5 | 51.67 |
+
+    | 7 | 52.04 |
+
+
+    ![](img/b3ddd68c3bed4054519497a876aab20a_3_2.png)
+
+
+    ## IV. 结论
+
+
+    图 4. 3 天误差历史的 MSE 变化。
+
+
+    在研究中，我们引入了神经网络架构来修正区域数值模型，以改进温度预报。希望其他连续气象量可以使用这种方法。
+
+
+    ![](img/b3ddd68c3bed4054519497a876aab20a_3_3.png)
+
+
+    我们对不同的误差历史（1, 2, 3, 5, 7 天）进行了实验，并确定了模型过拟合的 epoch 数：1, 2 天误差历史为 15，3, 5-7 天误差历史为
+    6。
+
+
+    图 5. 5 天误差历史的 MSE 变化。
+
+
+    我们证明了所提架构能够在 50% 的案例中改进温度预报。
+
+
+    # 参考文献
+
+
+    注意的是 MSE 值与使用克金法获得的结果相关 [39]。然而，神经网络方法似乎更有前景，因为它修正了数值模型未考虑的物理过程误差。
+
+
+    [1] Belov, N., Borisenkov, E., 和 Panin B. 数值预测方法（俄语）。Gidrometizdat, Leningrad,
+    1989.
+
+
+    [2] Vitaly P. 和 Anatoly Dobronsky. 天气计算技术：过程建模。美国宾州，2003. 美国气象学报，96(57)，1925–230.
+
+
+    [3] Okuyama, J. 一种神经网络增强天气模型准确性分析的统计方法。Sensors, 2013，2019–2140.
+
+
+    [4] Domain, S. 非流 COSMO 模型描述：第一部分动力学与确定性。Deutscher Wetterdienst, Offenbach, 2011.
+
+
+    [5] Shiny, Y. 等. 区域数值模型在业务天气预报中的应用。响应21世纪的环境，2013.
+
+
+    [6] Cho, K 等. 使用神经机器翻译学习短语表示。arXiv:1406.10718, 2014.
+
+
+    [7] Hochreiter, S. 和 Schmidhuber, J. 长短期记忆。神经计算，(W8), 1997;1735–1780.
+
+
+    [8] Kadousawa, L. 和 Strom, Y. 天气预报模型克金插值的最佳滞后选择。Hydrology and Water Management,
+    (42), 2016，22–38.
+
+    '
+  merge: 1
