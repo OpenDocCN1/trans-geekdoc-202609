@@ -1,0 +1,675 @@
+- pgno: 0
+  md: '# # Coconut Disease Prediction System Using Image and Deep Learning Techniques
+
+
+    1st Dhapitha Najarajan
+
+    Faculty of Computing
+
+    Sri Lanka Institute of Information
+
+    Technology
+
+    Malabe, Sri Lanka
+
+    dhapitha1996@gmail.com
+
+
+    2nd Lokini Kumalan
+
+    Faculty of Computing
+
+    Sri Lanka Institute of Information
+
+    Technology
+
+    Malabe, Sri Lanka
+
+    lokini2196@gmail.com
+
+
+    3rd Mithun Logesaran
+
+    Faculty of Computing
+
+    Sri Lanka Institute of Information
+
+    Technology
+
+    Malabe, Sri Lanka
+
+    adomithun@gmail.com
+
+
+    4th Sanvitha Kausharachchi
+
+    Faculty of Computing
+
+    Sri Lanka Institute of Information
+
+    Technology
+
+    Malabe, Sri Lanka
+
+    sanvita.my@skit.com
+
+
+    5th Dilani Luhage
+
+    Faculty of Computing
+
+    Sri Lanka Institute of Information
+
+    Technology
+
+    Malabe, Sri Lanka
+
+    dilani.lj@skit.com
+
+
+    Abstract—Coconut production is the most important and one of the main sources
+    of income in the Sri Lankan country. Recent time it has been observed that most
+    of the coconut trees are affected by diseases which reduces the strength and production
+    of coconut. Most of the trees are affected by pests and nutritional deficiency.
+    Our aim is to identify the diseases early so that farmers get more benefit from
+    coconut production. This paper proposes a deep learning approach to identify the
+    leaves and leaves of coconut. Coconut diseases monitoring has taken place after
+    the use of pesticides and image processing techniques. Rather than humans, automated
+    recognition will be the fastest approach to identify the diseases in coconut very
+    effectively. This paper proposes an application to identify the diseases by their
+    food behavior, pests and nutritional deficiencies in the coconut trees. We used
+    pre-processing steps such as converting RGB to grayscale, filtering, resizing,
+    horizontal flip and vertical flip. After analyzing various algorithms in the literature
+    review, SVM and CNN were the best and appropriate classifier with 93.54% and 97.52%
+    accuracy respectively. The outcome of this study helps to improve the coconut
+    production and undoubtedly will make a revolution in the agricultural sector.
+
+
+    the trees, especially in coconut leaves. Therefore, recent years, it has been
+    observed that these types of diseases reduce the growth of the tree and the economic
+    condition of the country. Hence, the planters must find the ideal solution to
+    protect their growth. As nutritional deficiency, pests are also a main concern
+    that threatens their survival for many years. Early identification of pests, diseases,
+    reduction of pest attacks and use of pesticides are the essential factors to be
+    considered in this.
+
+
+    Insects and pests are major threats to the overall growth of crops. Pests are
+    rapidly damaging crops like coconut. They may cause major and minor defects in
+    the quality and quantity of harvest. For instance, the caterpillar and beetle
+    larvae are some of the pests and, coconut leaf miners are the major pests that
+    attack the leaves of the coconut. The early detection and control of these pests
+    is important so pesticides should be sprayed at an early stage. This protects
+    the crop from severe pest attacks to increase the coconut production and get more
+    cost-effective (benefits).
+
+
+    Another essential consideration for cultivation is nutritional deficiency. Usually,
+    nutrients will spread the disease. In the coconut tree, the nutritional deficiencies
+    can be identified using the leaf based the color changes. Most of the farmers
+    are unable to recognize the different nutritional deficiencies and symptoms and
+    more than one. Identifying suitable fertilizers is the most important thing since
+    there are fertilizers containing more nutrients in the industry.
+
+
+    This project proposes an Android application that will use deep learning to identify
+    pests and nutritional deficiency in the early stage to allow smooth coconut production.
+    The system identifies the leaf using the shape of the bitten and the symptoms
+    of the leaf. According to the result, the system will identify the type of fertilizer
+    to use or to kill pests. Most people use pesticides to reduce the affected leaves.
+    But some are are affected and they are ineffective at work. A proper monitoring
+    process is required through the cultivation.
+
+
+    Mobile application with image processing, machine and deep learning will be used
+    in an effective way to solve agricultural issues. This is aimed at identifying
+    the specific requirements of farmers to detect early pest diseases
+
+
+    # I. INTRODUCTION
+
+
+    Over the years coconut and production have increased in a significant manner.
+    After tea and rubber, coconut plays a major role in the Sri Lankan country. The
+    coconut industry is an important source of foreign exchange. It is an essential
+    need for Sri Lankan cooking, nutrition, and livelihood. According to this, we
+    can ensure coconut quality. In recent years, these coconut trees are affected
+    by many diseases which reduces the productivity of coconut. Nutrient deficiency
+    is one of the problems with coconut trees (mostly young trees). It causes diseases
+    in'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# 2020 IEEE 44th International Conference on Image Processing, Applications
+    and Systems (IPAS)
+
+
+    and deficiency, needed in rural areas. The application helps the farmers to control
+    the pest and attack deficiency. The system will monitor the plant using techniques
+    after applying the suggested pesticides or fertilizers to reduce the likelihood
+    of the detecting deficiencies effectively and encourage non-experts in involvement
+    with the level of help.
+
+
+    better pest detection results in all cases, yielding better result and execution
+    time.
+
+
+    A unique and novel algorithm was proposed in [6], to detect the pests using image
+    processing techniques. The algorithm is basically the difference in intensities
+    of the pixel values. Dedicated computational power and complex algorithms have
+    proposed various algorithms which differ attack deficiency and achieved 96% of
+    accuracy''s deficiency.
+
+
+    # II. LITERATURE REVIEW
+
+
+    In recent times, several researches have been involved in the analysis of identifying
+    the leaves disease, machine learning and deep learning techniques. The authors
+    discuss the major pests and minor pests which causes the disease in the leaves.
+    F. Fernando mentioned that cocoon mite, black beetle, cootepillar and caterpillar
+    are the major pests on the leaves. Also, they mentioned that various leaves like
+    leaf blight, are less important than the pests, but this causes great economic
+    loss in this field. This paper provides more information about these pests like
+    how these pests are, how to start to detect, how they attack the leaves, and how
+    to execute an integrated method to solve.
+
+
+    Color analysis of the texture of the plants will increase the disease detection.
+    S. Rishabh proposed a method to identify the diseases in leaves. K-mean clustering
+    is used in their research, which mainly deals with plant color and texture. The
+    proposed method follows a step procedure for detection, separation of RGB components,
+    image analysis and finally matching. They also mentioned that a Bayes classifier
+    can classify various plant diseases working upon the results [7]
+
+
+    T. Kamara et al identified that there are three most significant and harmful pests
+    that attack the cocoa leaves often in. They are red weevil, black-headed caterpillar
+    and rhinoptera who live usually in cocoa cultivation. Biosology is a method that
+    can be used to identify the current status and management of the pests. The most
+    significant and critical part in cocoa production [3]. In [1], authors discuss
+    the pest detection using image processing. They found that small whiteflies, relatively
+    small size cause damages to crops. As an initial step, they detected the pests
+    on the leaves to identify how many insects are on a leaf. Different algorithms
+    were represented on their studies, the RMSE and proposed approach compare, both
+    with over 98% success! [1]
+
+
+    In [8], researchers proposed an automatic pest detection using CNN to control
+    the pests in monocrop plantations. They developed a method for the early identification
+    of pest attacks. They aimed to identify the pests to detect leaves coffee berries
+    in field. Then using different methods, the image-processing techniques were applied
+    to images such as preprocessing, transforming and clustering. They showed that
+    the goal of their system is to find the starting point and control the attacks
+    on crops.
+
+
+    Several research studies on crops also give an understanding of how these pests
+    are in attacks. L. Miranda discussed in their research, experimental impact on
+    production. Their proposed system developed to automatically identify the pest
+    few. The pests were identified by image processing and deep learning to recognize
+    patterns. This pattern of this automation system is to identify the pests and
+    accurately. They have provided a reliable method using the sticky trap, they in
+    identifying pests. There is a space for future development with learning algorithms
+    like support vector machine (SVM) to identify and detect pests and insects more
+    effectively.
+
+
+    Nutrition deficiency also plays a major role in reducing crop quality. Nutrition
+    deficiency in plant growth and phases. The leaves were identified based on preprocessing
+    using the image processing and a natural neural network is used as a classifier
+    for the whole type. In the second phase k-mean, clustering is used to segment
+    the leaves [10]. Color analysis plays an important role in recognizing plant deficiencies
+    such as nitrogen, phosphorus and potassium (NPK) when the crop is growing. In
+    [9], a group of which controls nitrogen, phosphorus and potassium deficiency deficiencies.
+    Hue, saturation and value (HSV) color model
+
+
+    In [5], P. Rajan et al conducted a survey on image processing techniques for plant
+    diseases and identification. A various set of feature extraction techniques of
+    SVM, radial basis function (RBF), probabilistic neural networks (PNN), K-nearest
+    neighbor (KNN) and backpropagation Neural Network were used in the identification
+    process. In their research, SVM classification proved
+
+
+    various analysis can be suggested as a future development, which further enhance
+    efficiency.
+
+
+    Authorized license used limited to: University of Canberra. Downloaded on 23 May
+    2021 at 18:00:14 UTC from IEEE Xplore. Restrictions apply.
+
+
+    213'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# 2020 IEE 44th International Conference on Image Processing, Applications
+    and Systems (IPAS)
+
+
+    G. Xua et expressed new ideas by computer vision to identify deficiency in tomatoes.
+    as such percent derivative histogram, percent intensity histogram (FT), and wavelet
+    transform were applied to leaf color features. Genetic algorithms (GAs) were also
+    used, which can receive ideal information for diagnosing disease. Experiment results
+    have shown that the accuracy of this diagnostic system is over 82.2%, and it has
+    taken 6 - 10 days to make an expert decision.
+
+
+    # III. METHOD
+
+
+    In [12], authors focused on pattern analysis to identify the nutrient deficiency
+    from RGB colors. They measured the multiple deficiencies of nutrient deficiency
+    in leaves. In addition, image effect comparisons were trained at various levels
+    such as multiple color comparison, multiple pattern comparison of color and pattern
+    comparison. It accurately detected the defects for combination of nitrogen (NK),
+    potassium (PK) and nitrogen deficiencies.
+
+
+    ![](img/c0928381b4ba4c9adee6fbf3b1448ae6_2_0.png)
+
+
+    Fig. 1. Overview of model extraction
+
+
+    Researchers from University Malaysia discussed the edge detection of Canny and
+    Sobel and how they extract the information before images are sent to the detector.
+    The study showed that Canny edge detection method can produce a smooth and clean
+    edge. But the same as other methods, Canny and Sobel also methods to detect the
+    noise. [13] developed a website that suggests pesticides based on user input such
+    as land area, crop and Lin. Through the website, there are features to search
+    for suitable patches that work in their areas. The relevant information to the
+    pesticides was collected from the farmers in Nadiul, India [14].
+
+
+    Coconut proceed detection system from the below main steps. To achieve these steps,
+    image processing, machine and deep learning techniques should be applied.
+
+
+    # A. Image Acquisition
+
+
+    The health of affected leaves are captured by digital devices like camera and
+    other digital images. As an initial step of image processing technique, the captured
+    images were uploaded to the system.
+
+
+    # B. Image Preprocessing
+
+
+    After uploading the image into the system, it needs to be standardization form
+    and have clear data. Preprocessing can reduce the complexity of the dataset. While
+    converting the color to grayscale is an accepted preprocessing technique, we employed
+    image standardization.
+
+
+    # C. Image Segmentation
+
+
+    The segmentation is the process of identifying the objects in the image and understanding
+    what object, each pixel belongs to. In our approach segmentation can be done by
+    K-means clustering, Otsu method, mountain clustering, edge detection method and
+    methods method, Canny edge detection and Laplacian edge detection. Sobel method
+    has a 3 x 3 max mask, which will determine the quality of the edge and affects
+    the segmentation. The threshold value of the green pixels will be illustrated
+    by the threshold equation. Nevertheless, the quality of the leaves using K-means
+    algorithms can help to detect the nutrient deficiency (mainly Canny method and
+    Sobel method)
+
+
+    With the comprehensive study of literature review, early detection of nutrient
+    deficiencies and the pests are the major problem for farmers to address this problem.
+    Various techniques for analysis include blacklight tracks and sprays, which are
+    used for detection and observing in crop fields. It is found that some of the
+    systems only detect pest and diseases and have further improvements to detect
+    nutrient deficiency and respect fertilizer. In the previous work, the system correctly
+    identifies issues and makes suggestions, but there is no facility to monitor the
+    plant until the disorder is completed cured.
+
+
+    ![](img/c0928381b4ba4c9adee6fbf3b1448ae6_2_1.png)
+
+
+    In the past methodologies, low-level features such as spaces, edges, lighting,
+    rotation, and shapes were extracted to the pests effectively. Many studies have
+    failed to focus on pattern and structure, which gives significantly better results.
+    In the advance technology, SVM is used for binary classification of leaves with
+    hyperplane to identify and detect insects. Convolutional neural networks (CNN)
+    are commonly developed to detect the nutrient deficiency type and then be scaled
+    up for better accuracy if more resources are available. There have been several
+    ups and downs in the past researches which can be taken as a guide to improve
+    our methodology.
+
+
+    Fig. 2. Image after segmentation
+
+
+    Authorized sense used limited to: University of California. Downloaded on May
+    23,2021 at 18:00:14 UTC from IEEE X. Restrictions apply.
+
+
+    214'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Feature Extraction
+
+
+    After image segmentation, the image will be sent to the feature extraction module.
+    Extracting the information from input image is the process, where we transform
+    the data into set of features. Various types of features such as color, texture,
+    magnesium and edges. In our proposed method, we use the color and shape of the
+    leaf to get better accuracy. Accordingly, we consider as feature, the skewed asymmetry
+    of the pixel distribution in the specified window around.
+
+
+    These three are effectively used as feature extractors. They give ability to learn
+    a better representation of low-level features such as space, edges, lighting,
+    rotation and spatial. It also shares these features of knowledge enables communication
+    and extraction of new images in various computer vision facilities.
+
+
+    # Classification
+
+
+    After extraction, the affected leaves will be sent to the classification module.
+    Classification techniques include both the training and testing processes. In
+    the training step, features are checked and in the test step, their generalization
+    is valued. SVM is the most popular classification for leaves'' classification
+    based on a hyperplane. This hyperplane divides the space into two parts, corresponding
+    to healthy leaves and unhealthy.
+
+
+    | Model | Average Accuracy |
+
+    |---|---|n| EfficientNetB0 | 0.9372 |
+
+    | ResNet50 | 0.8316 |
+
+    | VGG16 | 0.2092 |
+
+
+    Three machine learning classification algorithms were trained to get higher accuracy
+    among overall results. According to the average accuracy performance metric, the
+    EfficientNetB0 model should be implemented in our system for the prediction of
+    nutrient deficiency.
+
+
+    ![](img/c0928381b4ba4c9adee6fbf3b1448ae6_3_0.png)
+
+
+    ![](img/c0928381b4ba4c9adee6fbf3b1448ae6_3_1.png)
+
+
+    Fig. 3. Overview of SVM architecture
+
+
+    Fig. 4. Internal block of CNN architecture
+
+
+    After we use a learning algorithm for classification, CNN is used here to classify
+    the image to predict the actual nutrient deficiency. There are five main steps
+    to build the CNN, with convolution operation, ReLU, pooling and fully connected
+    layer. CNN has an automatic feature extraction facility. Convolution operation
+    is used to extract the feature from the input image and moreover, it retains the
+    relationship between features using a kernel. The ReLU reduces the number of parameters.
+    Softmax activation function is used to classify the output.
+
+
+    # F. Suspecting Deficiencies and Fertilizers
+
+
+    Once the system completes analysis, it recommends pesticides and fertilizers for
+    recommendation. For the process of pesticides and fertilizers recommendation,
+    we have several discussions with farmers to get more information from their experience
+    and come with suitable suggestions for diseases. Diseases will be suggested for
+    suggested pesticides and organic fertilizers. Through this process, coconut leaves
+    will be recovered from the diseases.
+
+
+    # G. OpenCV for Leaf Monitoring
+
+
+    After the initial usage of the pesticides and fertilizers, this system focuses
+    on the monitoring process. A frequent monitoring will be called to analyze the
+    content of the affected leaves by using OpenCV. SIFT which is getting the key
+    points of the items. The system can easily find the solution to the affected leaves.
+
+
+    # H. Mobile App
+
+
+    “Coconut DR System” is an android application which connects with the respect
+    device and display the results to the users. The device takes the reading from
+    a green leaf sample, android application will show the type of diseases or disorder.
+    It also has an advanced function to monitor the plant until it is used.
+
+
+    The training dataset is split into 4 classes and are potassium deficiency, nitrogen
+    deficiency deficiency and health. Using the loss function cross-entropy to handle
+    this multi-class classification problem. Then, we trained the CNN using its feature
+    generator.
+
+
+    Nutrient deficiency detection was implemented using altered CNN architecture.
+    With the help of previously studied, the three CNN model architectures were developed
+    as VGG-16, ResNet50, and EfficientNet-B0'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# IV. RESEARCH & FINDINGS
+
+
+    This chapter describes the results with the code segments and each function to
+    demonstrate the functionality of the application. With the use of SVM and CNN
+    classifiers, this proposed system can achieve better accuracy with good results.
+    In terms of accuracy, SVM classifier is better with the above-mentioned algorithm
+    is decided. According to the results, the most accurate classifier could also
+    be applied to the extracted features. SVM algorithm used to detect the leaves
+    such as logistic regression, KNN and SVM algorithm, which are initially developed
+    to check the better accuracy. SVM is selected with 93.54% accuracy. SVM is a supervised
+    learning, which creates a hyperplane to separate the two classes. Compared to
+    other ML algorithms, SVM provides better accuracy for the images.
+
+
+    # Confusion Matrix
+
+
+    | | Pest Affected | 0 |
+
+    |---|---|---|
+
+    | | 5 | 0 |
+
+    | Healthy | 2 | 24 | |
+
+
+    Fig. 5. Confusion matrix of SVM classifier
+
+
+    # Confusion Matrix
+
+
+    | | 24 | 0 | 0 |
+
+    |---|---|---|---|
+
+    | magnesium | 0 | 0 | 80 |
+
+    | nitrogen | 0 | 96 | 0 |
+
+    | potassium | 0 | 15 | 40 |
+
+    | healthy | 0 | 10 | 40 |
+
+
+    magnesium nitrogen potassium healthy
+
+    accuracy = 0.83682008368200383
+
+    Fig. 7. Confusion matrix and overall accuracy of ResNet50
+
+
+    # Confusion Matrix
+
+
+    | | 0 | 0 | 24 |
+
+    |---|---|---|---|
+
+    | magnesium | 0 | 0 | 80 |
+
+    | nitrogen | 0 | 0 | 96 |
+
+    | potassium | 0 | 0 | 59 |
+
+    | healthy | 0 | 0 | 50 |
+
+
+    magnesium nitrogen potassium healthy
+
+    accuracy = 0.92095020092050208
+
+    Fig. 8. Confusion matrix and overall accuracy of VGG16
+
+
+    The preprocessed data was used to create a model with architectures of VGG-16,
+    ResNet50, and EfficientNetB0. These architectures are CNN algorithms for nutrition
+    deficiency problem. Among them, EfficientNetB0 achieved highest accuracy, thus
+    it implemented in the final version.
+
+
+    # Confusion Matrix
+
+
+    | | 0 | 0 | 0 |
+
+    |---|---|---|---|
+
+    | magnesium | 0 | 0 | 40 |
+
+    | nitrogen | 0 | 95 | 1 |
+
+    | potassium | 0 | 85 | 56 |
+
+    | healthy | 0 | 0 | 50 |
+
+
+    magnesium nitrogen potassium healthy
+
+    accuracy = 0.9372384937238495
+
+    Fig. 6. Confusion matrix and overall accuracy of EfficientNetB0
+
+
+    # V. CONCLUSION & RESULTS
+
+
+    Our results show highly accurate performance with overall detection accuracy of
+    93.7%, 82.9% and for EfficientNetB0 ResNet50 and VGG16 backbones respectively
+    on the fixed test set. Nitrogen, potassium and magnesium deficiency class is the
+    problem. The row refers to the classification (output class) and the column refers
+    to the test result.
+
+
+    This paper examines the process for coconut leaf disease and the method to provide
+    advanced agriculture for farmers in the coconut trees and pest attack and provide
+    appropriate strategies to overcome the issues. Image processing techniques are
+    used to enhance the quality of the image to detect nutrients and feature extraction
+    techniques before the classifier. Several algorithms are initially developed to
+    check the better accuracy. SVM and CNN algorithms with the accuracy of 93.54%
+    and 97.32%, were used to identify the pest diseases and nutrition deficiency respectively.
+    A major drawback in the previous researches we have achieved in our work that
+    our system has the facility to monitor the plant completely from the integration
+    system until the disease
+
+
+    Authorized licensed limited to use: University of Canberra. Downloaded on May
+    23, 2021 at 18:00:14 UTC from IEEE Xplore. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'recovers. Our methodology is effective, and accurate to detect diseases at
+    early stage. Both and inexperienced farmers will get more benefits with this early
+    automatic detection system, which is expanded by considering features like crop
+    type and value with more advanced technology. This highly effective system will
+    help farmers to increase their productivity and maximize profit in the cultivation
+    sector.
+
+
+    pests using image processing, Third International Conference on Computing, Communication
+    and Networking (ICCCN)
+
+
+    +   [7] S. Bashir and N. Sharma, "Remote area plant disease detection using image
+    processing, International Journal of Electronics and Communication Engineering,
+    vol. 7, pp. 115-120.
+
+
+    +   [8] K. Krishna and A. Jha, "Pest control in agricultural plantations using
+    image processing, International Journal of Electronics and Communication Engineering,
+    vol. 6, no. 4, pp. 66-74.
+
+
+    +   [9] A. Kumar and S. Sharma, "Leaf disease detection and classification using
+    computer vision and fuzzy logic, International Conference on Signal Processing
+    and Networking (ISP), pp. 500-508.
+
+
+    # REFERENCES
+
+
+    +   [1] M. Gondal and Y. Khan, "Early pest detection from crop image processing
+    and computational intelligence," FAST-NU Research Journal, vol. 1, no. 1, pp.
+    59-68.
+
+
+    +   [2] P. Fernando, "Identification and management of major crop pests in Sri
+    Lanka, International Coconut Community, pp. 134-149.
+
+
+    +   [3] T. Kumara, M. Sivapathaya, S. Kandyara and A. Chakravarthy, "Management
+    of Three Major Insect Pests of Crop in the Tropics and sustainable management,
+    New Delhi: Springer India, 2015, pp. 359-38.
+
+
+    +   [10] M. Latte, S. Shidhal and B. Anami, "Rule based approach to determine
+    nutrient deficiency in paddy leaves, International Journal of Agriculture, vol.
+    5, no. 2, pp. 115-120.
+
+
+    +   [4] J. Miranda, B. Gerardo and T. Tangquille, "Pest identification using image
+    processing techniques in deep neural network methods, International Journal of
+    Advances in Computer and Electronics Technology, pp. 43-48.
+
+
+    +   [11] G. Xia, F. Zhang, S. Zha, Y. Yeh and H. Mao, "Use of leaf images to identify
+    nitrogen and potassium deficient patterns, International Journal on Communication
+    and Signal Processing, vol. 11, no. 1, pp. 1-8.
+
+
+    +   [12] M. Latte and S. Shidhal, "Multiple nutrient deficiency in paddy leaves
+    using color and pattern analysis, International Conference on Communication and
+    Signal Processing (CCSP), pp. 1247-1250.
+
+
+    +   [5] P. Rajian and B. Radhakrishnan, "A survey on different image processing
+    techniques for pest identification and plant disease detection, International
+    Journal of Computer Science and Network, vol. 5, no. 1, pp. 137-146.
+
+
+    +   [13] O. Ziman, H. Haron and M. Kadir, "Comparison of Canny and Sobel edge
+    detectors in images, International Journal of Technology Malaysia, 2009.
+
+
+    +   [14] D. Kumaradas, K. Krishna, P. Mangalpuda and K. Santhosh, "Identifying
+    pests using data mining, International Journal for Applied Science and Engineering
+    Technology, vol. 5, no. 5, pp. 403-408.
+
+
+    +   [6] S. Huddar, S. Gowri, K. Keerthanas, S. Vasani and R. Rajipunadi, "Novel
+    algorithm for segmentation and automatic identification of'
+  merge: -1
+  img_proc: true
