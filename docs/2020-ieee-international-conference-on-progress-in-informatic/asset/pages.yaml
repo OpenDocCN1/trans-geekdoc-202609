@@ -1,0 +1,573 @@
+- pgno: 0
+  md: '# BBSF: A Blockchain Secured Framework for The Internet of Things with User
+    Revocation
+
+
+    Yingxua Hu¹, Dan Yin², Chanyang Huang*
+
+
+    1. School of Computer Science & Engineering, Nanjing University of Science and
+    Technology, Nanjing, China
+
+    2. School of Computer Science & Technology, Harbin Engineering University, Harbin,
+    China
+
+
+    *huay@njust.edu.cn, yindan@hrbin.edu.cn, hcy@njust.edu.cn
+
+
+    *corresponding author
+
+
+    Abstract—Internet of Things (IoT), which uses to connect users (devices) from
+    various fields, has become widely popular nowadays. The security of IoT will play
+    an increasingly important role and need to protect daily life. However, there
+    are still serious issues to be addressed in IoT, such as decentralization, power
+    device and lightweight framework, privacy protection. Blockchain technology with
+    characteristics of decentralization, permission, transparency, and immutability,
+    has greatly attracted attention. To address the credibility of the authentication
+    problem of IoT, this paper presents a Blockchain-Secured Framework (BBSF) for
+    the Internet of Things. It supports certificate issuance, update, revocation,
+    and audit functions. We conduct security analysis and show the performance of
+    data confidentiality, integrity, and security. In addition, we deploy BBSF with
+    environment to verify the system stability, scalability, and efficiency.
+
+
+    **Keywords—blockchain, authentication, IoT, smart contract**
+
+
+    # I. INTRODUCTION
+
+
+    The Internet of Things (IoT) is a revolutionary technology that represents the
+    future of communication and computing. With the commercialization of IoT and the
+    large-scale implementation of artificial technology, the IoT market has fully
+    emerged. However when IoT promotes the development of advanced technology and
+    brings great convenience, serious security issues emerge. Severe security issues
+    exist in IoT network, such as decentralization, unauthorized authentication, lightweight
+    protocol and threats, malicious attacks, however, are becoming problems [1].
+
+
+    The traditional security mechanism is based on centralized architecture. There
+    is a center that manages all users. For a centralized authentication, the identities
+    of users are authenticated and verified by the central authority. However, this
+    centralization of IoT is not suitable for decentralized or center-less network
+    environment such as IoT networks, where a single center cannot manage users in
+    various domains. For example, the encryption methods proposed in [4] and [5] were
+    only dependent on third-party organizations, and their security issues could not
+    be addressed by decentralized authentication methods, such that the server
+
+
+    was vulnerable to common attacks, and it was difficult to achieve mutual authentication
+    under the assumption of multiple authority [8]. All mentioned problems pushed
+    forward the requirement of a new authentication mechanism for blockchain applications.
+
+
+    Since the idea of blockchain was proposed in 2009, research fields have gained
+    great attention due to its distributed structure and security features. With the
+    emergence of the Ethereum platform, blockchain is no longer just for encrypted
+    digital currency. Blockchain has broad application scenarios, including finance,
+    medical care, education, information associations, and so on [9].
+
+
+    # A. Literature Review
+
+
+    The field of application of blockchain technology continues to expand the development
+    of technology.
+
+
+    In [7], a method of the blockchain system was proposed. The algorithms elaborated
+    on the principle, and application of blockchain, and the introduced the social
+    development of blockchain work provided useful guidance and reference for the
+    research of similarity. [8] summarizes key challenges and the latest important
+    developments of the blockchain technology, which is divided into three types:
+    Public chain, Private chain, and Consortium chain. [9], the author analyzes the
+    framework of private blockchain, the security issues, and provides a comprehensive
+    evaluation and method.
+
+
+    Lots of works employed blockchain and developed untrusted environments. [10],
+    the authors proposed a blockchain-based IoT authentication scheme with smart contracts.
+    However, the high calculation cost was performed in the scheme, the IoT devices
+    [11] proposed authentication and authorization system that enabled users to authenticate
+    and verify identity. However, scalability is not handled well. [12] presents a
+    blockchain-multi WSN authentication scheme for authentication in IoT. However,
+    its layered network structure has high scalability and decentralized authentication
+    scheme for IoT. Our scheme could achieve scheme registry, and is resistant to
+    common attacks such forgery attack and replay attacks. However, all authentication
+    in the network is regarded as a public ledger and resulted in users'' privacy
+    disclosure.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'To address the security risks of IoT networks, region-based have introduced
+    solutions, separation, policies, and blockchain applications [14–17]. To maintain
+    the trustworthiness connectivity and the authentication for WSNs, the authors
+    proposed a framework that supported resource security of the data integrity, and
+    availability in [14]. In [15], secure and efficient authentication architecture
+    were proposed for IoT-based healthcare systems distributed smart e-gateway that
+    did not consider congestion and attack scenarios. In [17], out-of-band two-factor
+    authentication architecture was proposed to exploit delete relationships. But
+    the system has the similar limit as [15].
+
+
+    To avoid centrality, provide a decentralized distributed environment, this paper
+    proposes a blockchain-based security framework to achieve lightweight decentralized
+    authentication for IoT networks.
+
+
+    # B. Contributions
+
+
+    The main contributions of this paper are summarized as:
+
+
+    The notations used in this paper are listed in Table 1.
+
+
+    # TABLE I. NOTATIONS
+
+
+    | Notations | Descriptions |
+
+    |---|---|
+
+    | idU | The identity of User |
+
+    | ureg | User''s request for registration |
+
+    | uSer | User''s private key |
+
+    | pKU | User''s public key |
+
+    | infor | The User''s individual info. |
+
+    | info | User information |
+
+    | refo | Relevant information in the blockchain |
+
+    | auth | The request info to launch authentication |
+
+    | ord | Order that can be used to modify |
+
+    | modif | The type of data to be modified |
+
+    | cont | The new modified data content |
+
+    | req | The info used to apply for digital certificates |
+
+    | cert | User''s certificate key |
+
+    | upReg | The request used to apply for renewal certificate |
+
+    | verReq | The request info used to apply for certificate verification |
+
+    | newCert | User''s generated digital certificate |
+
+    | res | The request to revoke current certificate |
+
+    | aud | The request used to apply for certificate audit |
+
+
+    # II. SYSTEM MODEL
+
+
+    # A. Architecture Overview
+
+
+    ![](img/f694c30b80e2eaa80b933991754781cb_1_0.png)
+
+
+    The architecture of the proposed BBSF is shown in Fig. 1. BBSF contains three
+    components: users, authentication server (AS), and underlying blockchain.
+
+
+    The user will register with the authentication server using the corresponding
+    public and private key pair and the certificate is used for identity authentication.
+    Before using the system, the user will authenticate to AS with her certificate.
+    After that, the user can use the certificate for update, revocation, and auditing.
+    All operations of the user will be managed by smart contract, which can manage
+    and track users'' requests.
+
+
+    Authentication server (AS): AS receives the user''s request with the corresponding
+    key for the certificate. The certificate generated by AS includes the certificate,
+    the validity of the certificate, the user''s public key, and private key information.
+    AS is also responsible for authentication, and assists in users'' certificate
+    query, and auditing. Once a legitimate user wants a certificate, AS performs authentication
+    and verification to assist us.
+
+
+    BBSF (Blockchain): BBSF is essentially a distributed data system that stores information
+    and smart contract performs various operations according to the defined rules.
+    The proposed framework runs on the Ethereum private chain which contains a private
+    smart contract, and we use Truffle to deploy and develop contracts. The rules
+    of smart contract are formulated in the bottom layer.
+
+
+    # B. Requirement
+
+
+    We proposed a blockchain-based framework for the IoT which achieves security features
+    such as decentralized authentication, user revocation, and so on. To applicable
+    to IoT networks, security and performance requirements should be satisfied.
+
+
+    +   1) Confidentiality: It is the basic requirement for the framework where data
+    is exchanged in plain.
+
+    2) Privacy: Users'' key information and data in the framework should not be modified
+    by unregistered users or illegal modification to guarantee system security and
+    data integrity of the proposed framework.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '3) Availability: On one hand, the system should be reliable when a legitimate
+    user wants to access. On the other hand, data availability should also be achieved,
+    eg. data consistency. And data should also be accessible anytime and anywhere.
+
+
+    4) Audit: To detect system/data errors, analyze records and report these errors,
+    the framework should be traceable.
+
+
+    5) System Reliability: When the system encounters unexpected situations such as
+    external attacks or internal failures, it should be able to locate the cause of
+    the failure and recover in the system.
+
+
+    6) Scalability: The framework should support large scales of users.
+
+
+    7) Efficiency: End-users in IoT networks generally have low power and capacity.
+    Therefore, the design should be efficient in small storage and computation, short
+    response times, and so on.
+
+
+    8) Stability and Use: The system should stay avoid a single point of failure and
+    provide a friendly user interface for users to perform operations.
+
+
+    # III. The Proposed FRAMEWORK BBSF
+
+
+    Aiming at decentralization of IoT and improving the credibility, this section
+    outlines the detailed framework and phases: user registration, authentication,
+    data query and modification, certificate update, revocation, and audit.
+
+
+    # A. User Registration
+
+
+    In registration, user U will register to the authentication server AS as apply
+    for a digital certificate, e.g. X.509. The registration process is shown in Fig.
+    2.
+
+
+    ![](img/f694c30b80e2eaa80b933991754781cb_2_0.png)
+
+
+    Fig. 2. User registration phase
+
+
+    User U first submits the registration to AS including Idc, reg. U info and cert
+    req. Once receives the request, AS generates a pair of public and private key
+    (SK), and the corresponding certificate cert for the user (e.g., PKU, SK) and
+    cert is generated by ECC algorithm [3], cert contains the certificate subject,
+    cert is written as the record of the new block by storing cert and the operation
+    ok. Finally, U will receive feedback on successful registration, PKU and certs
+    would be sent to the user in secure manner.
+
+
+    # B. User Authentication
+
+
+    This process allows users to perform authentication. U launches the request by
+    sending their identity id and auth, where auth=[timestamp] and [x], x are encrypted
+    by ECC algorithm with key y. Receiving the Idu and auth, AS will verify auth,
+    and cert req to BC to request relevant information from BC. Next, AS verifies
+    the user identity. After receiving the corresponding cert info from BC, AS then
+    verifies the public key of U PKU, and then verifies auth by comparing received
+    ID with decrypted ID using ECC decryption. The authentication process is shown
+    in Fig. 3.
+
+
+    ![](img/f694c30b80e2eaa80b933991754781cb_2_1.png)
+
+
+    Fig. 3. User authentication phase
+
+
+    # C. Data Query and Modification
+
+
+    After authentication, user U can search for data from BC and modify information.
+    After data query, user AS as the requested data Idu, requinfo BC. Both data will
+    be forwarded to BC. BC then returns the requested information info to AS. If BC
+    is involved, U sends a query: Idu, modifyinfo, and Cont, where modifyinfo. New
+    Cont indicate the type of data (e.g. individual U info) to be modified and the
+    data query respectively. AS directly forwards the mentioned contract to BC, to
+    determine modifyinfo and then modify it to Cont. After that, BC returns feedback
+    to AS and the user. The entire data query and modification is shown in Fig. 4.
+
+
+    ![](img/f694c30b80e2eaa80b933991754781cb_2_2.png)
+
+
+    Fig. 4. Data query and modification phase
+
+
+    Authorized licensed use limited to: University of California Santa Barbara. Downloaded
+    on 15 May 2021 at 11:33:36 UTC by IEEE Explorer. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# D. Certificate Update
+
+
+    When U wants to update the validity period of the certificate; or verify whether
+    it has expired, she will apply to AS. The certificate update process again requires
+    participation of a smart contract. After authentication, U sends IdU, upReq or
+    verifyReq to AS. AS then checks and validates the certificate request, and forwards
+    it to BC. Both new certificate and its operation are recorded and stored in the
+    blockchain. The update process can also update the content of the certificate,
+    such as the private keys used by AS. The process of renewing a certificate is
+    similar to the process of issuing a certificate. After registration, the old certificate
+    will be marked as revoked in the blockchain. The revocation process will be introduced
+    in the next subsection. Fig. 5 shows the specific process of certificate update,
+    as below:
+
+
+    The status of this certificate in BC is marked as "revoked". AS can also launch
+    the revocation process if some user or certificate is malicious. In this case,
+    no revocation request sent by the user in the procedure. The revocation process
+    is shown in Fig. 6
+
+
+    # F. Certificate Tracking Audit
+
+
+    Certificate audit operation can be performed by the whole system''s certificate
+    operation records, as the validity period of the certificate, the issuance and
+    revocation of the certificate, and other operations. Since all the records are
+    stored in the blockchain in huge number of data blocks, our framework randomly
+    extracts a part of the records during the audit process.
+
+
+    | users | AS | BC |
+
+    | --- | --- | --- |
+
+    | IdU, upReq/verifyReq | | |
+
+    | | re-generate | |
+
+    | | IdU, newCert | |
+
+    | | feedback, newCert | |
+
+
+    | users | AS | BC |
+
+    | --- | --- | --- |
+
+    | | IdU | | |
+
+    | | aud | |
+
+    | | | info |
+
+
+    Fig. 5. Certificate update/renewal phase
+
+
+    Fig. 7. Certificate audit phase
+
+
+    # E. Certificate Revocation
+
+
+    Fig. 7 shows the process of certificate audit. After U applies for certificate
+    audit, AS forwards the IdU and aud to BC. randomly returns parts of the records
+    to U for audit purposes.
+
+
+    # IV. SECURITY ANALYSIS
+
+
+    | users | AS | BC |
+
+    | --- | --- | --- |
+
+    | IdU, rev cert | | |
+
+    | | | cert |
+
+    | | feedback | |
+
+
+    In this section, we analyze the security issues of the proposed framework BBSF.
+
+
+    Confidentiality: In BBSF, only registered users can use the framework and query
+    for related data. Furthermore, data are encrypted to ensure confidentiality, and
+    stored within blockchain through the consensus mechanism.
+
+
+    Fig. 6. Certificate revocation phase
+
+
+    When U wants to revoke a certificate, she sends a revocation application to the
+    AS. The application includes IdU, rev, and the certificate to be revoked. To execute
+    the revocation, the user needs to be verified by AS first, and then AS calls a
+    smart contract to delete the corresponding certificate locally. Finally, the certificate
+    operation is written into BC, and feedback U''s has been returned to AS and U.
+
+
+    Data integrity: During the registration, the user receives a pair of keys (PK,
+    SK), which is issued by the ECC algorithm. And for data query and modification,
+    Certificate Revocation, the user needs to pass the authentication, which cannot
+    be skipped. Since the blockchain and verification step includes ECC with key pair
+    of (PK, SK), data integrity is guaranteed in BBSF.
+
+
+    Availability: With the data availability and the deployment of blockchain nodes,
+    any node can monitor the state of blockchain at any time that provide credible
+    and consistent results. If unexpected node failure occurs, other nodes will not
+    be affected in blockchain. Secondly, data in BBSF is transparent, consistent,
+    and credible to all registered users. All users synchronize the content of the
+    blockchain, and the
+
+
+    361'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'universal smart contract interface makes it adaptable to application scenarios.
+    Therefore, availability is supported.
+
+
+    **Auditable:** Function audit is called in the Tracking Audit phase to query all
+    records of the blockchain. The framework will query the blockchain network through
+    rules of the smart contract and provide some records for user audit. If there
+    is any abnormal record, the user can find the abnormality through audit and confirm.
+    In BBSF, users can audit all records if they
+
+
+    address of decentralization in IoT and improve credibility. Based on Blockchain,
+    BBSF achieved authentication through certificate issuance, renewal, verification
+    and as well as tracking and audit. Security and performance discussion in data
+    quality analysis are also provided. In future work, we will deploy BBSF into public
+    chains or consortium frameworks to ensure the scalability and efficiency of the
+    proposed BBSF.
+
+
+    # V. PERFORMANCE DISCUSSION
+
+
+    In this paper, we evaluate the performance of BBSF in terms of average time and
+    reliability. We evaluate with the environment of v1.9.12-dev-16.6, Windows NT
+    x64 10.0.18363, and carry a total of 100 tests (10 tests each with 20 seconds).
+
+
+    For average time, we evaluate data efficiency in all phases. Since the operation
+    of each phase is called by the corresponding function in the smart contract via
+    web3, we then consider the main overhead of each phase calling the corresponding
+    function. The registration phase calls authentication(), the information query
+    phase calls authentication and modify(), and the audit audit phase calls audit(),
+    each with 20 times. The average response times are 10542ms, 4439ms, 3235ms and
+    3089ms. As shown in Table II,
+
+
+    For reliability, we measure the system operation duration and failure rate. The
+    results are summarized in Table II.
+
+
+    This work is supported by NSF (6180253, 6170232), the Fundamental Research Funds
+    for the Central Universities (309202510), Planned Projects for Research Foundations
+    (1711468).
+
+
+    # TABLE II. PERFORMANCE OF THE PROPOSED BBSF
+
+
+    | Performance | Specific Indicators | Value |
+
+    | --- | --- | --- |
+
+    | Average | operation duration() | 10542ms |
+
+    | Response Time | information query and modify() | 4439ms |
+
+    | | Certificate renewal and verification | 3235ms |
+
+    | | audit audit() | 3089ms |
+
+    | Reliability | System stable operation | 7*24 |
+
+    | | failure rate | 4/weeks |
+
+
+    # ACKNOWLEDGMENT
+
+
+    +   1. Dorani, A., Khan, S. J., Jard, R., & Gauravar, P., “Blockchain for IoT
+    and privacy: The security challenges and opportunities in IoT era,” IEEE conference
+    on pervasive computing and communications (Workshops) (pp. 63-68). IEEE, 2018.
+
+    2. Huang, C., Wei, S., & Fu, A., “An Efficient Privacy-Preserving Authentication
+    Scheme for IoT Devices,” IEEE Journal of Sensors and Networks, 8(4), 195016, 2018.
+
+    3. Khan, Minhaj, Ahmed and Khalid Salah, “IoT-based security: Review, challenges,
+    and future directions,” Future Computer Systems, 82(3): 395-411, 2019.
+
+    4. Underwood, S.,, “Blockchain beyond bitcoin,” Communications of the ACM, 2017.
+
+    5. Lamport, L., “Password-based authentication with insecure communication,” Communications
+    of the ACM, 1986.
+
+    6. Chen, X., et al., “Blockchain-based systems for securing IoT data,” 2019.
+
+    7. Yuan, Y., Wang F. Y., “The State of the Art and Future Directions of Blockchain,”
+    IEEE Access, 2016.
+
+    8. Zheng, Z., Xie, D., et al., “Over-view of Blockchain Technology: Architecture,
+    Consensus, and Future,” 2017 IEEE International Conference on Big Data (pp. 3712-3715).
+    IEEE, 2017.
+
+    9. Dinh T. A., Wang, J., et al., “BLOCKCHAIN: A Framework for Analyzing Private
+    Blockchain,” 2018.
+
+    10. Park, S. H., & Kim, J., “Blockchain-Based IoT Authentication Scheme,” Journal
+    of the Korea Institute of Information Security, 2019.
+
+    11. Cui Z., Xie, F. S., et al., “A Hybrid-Based Blockchain Framework for Multi-WSN
+    IoT,” IEEE Transactions on Services Computing, 2020.
+
+    12. Kim, J., Schmidt, C., Kumar, P., et al., “A Secure and Efficient Authentication
+    and Architecture for IoT-Based Healthcare using Smart Gateway,” Procedia Computer,
+    2015, 5(2): 451-452.
+
+    13. Lee, J., et al., “A secure emergency response solution for mobile healthcare
+    in virtual environments,” The Computer Journal, 2015, 58(10), 2461-2475.
+
+    14. Lu, D., Wang, W., et al., “An Out-of-Based Authentication Scheme for Internet
+    of Using Technology,” ICC, 2018.
+
+
+    After testing basic functions of the proposed framework BBSF, it is clearly found
+    that the proposed BBSF is relatively stable. And the experimental results show
+    that the efficiency of BBSF is relatively high with low probability of failure:
+
+
+    # VI. CONCLUSIONS
+
+
+    In this paper, we provided a Blockchain-Sec Framework for IoT (BBSF). The objectives
+    of BBSF were
+
+
+    362'
+  merge: -1
+  img_proc: true
