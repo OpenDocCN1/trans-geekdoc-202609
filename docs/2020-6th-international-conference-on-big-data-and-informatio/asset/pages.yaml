@@ -1,0 +1,363 @@
+- pgno: 0
+  md: '# # Machine Learning in Epilepsy Drug Treatment Outcome Prediction Using Multi-modality
+    Data in Children with Tuberous Sclerosis Complex
+
+
+    Jun Yang
+
+    Research Centre for Medical AI
+
+    Shenzhen Institutes of Advanced Technology
+
+    Chinese Academy of Science
+
+    Shenzhen, China
+
+    University of Chinese Academy of Science
+
+    Beijing, China
+
+    j.yang@siat.ac.com
+
+
+    Cailei Zhao
+
+    Department of Radiology
+
+    Shenzhen Hospital
+
+    Shenzhen, China
+
+    zhaocaile197866@63.com
+
+
+    Shi Su
+
+    Centre for Biomedical Engineering
+
+    Shenzhen Institutes of Advanced Technology
+
+    Chinese Academy of Science
+
+    Shenzhen, China
+
+    shi.su@siat.ac.com
+
+
+    Dong Liang
+
+    Research Centre for Medical AI
+
+    Shenzhen Institutes of Advanced Technology
+
+    Chinese Academy of Science
+
+    Shenzhen, China
+
+    dndong.liang@siat.ac.com
+
+
+    Zhanqi Hu
+
+    Department of Neurology
+
+    Shenzhen Hospital
+
+    Shenzhen, China
+
+    huzhanqi1983@aliyun.com
+
+
+    Haifeng Wang
+
+    Centre for Laerbur Research
+
+    Shenzhen Institutes of Advanced Technology
+
+    Chinese Academy of Science
+
+    Shenzhen, China
+
+    hf.wang1@siat.ac.com
+
+
+    Jianxiang Liao
+
+    Department of Neurology
+
+    Shenzhen Hospital
+
+    Shenzhen, China
+
+    liaojianxiao@vip.site.com
+
+
+    **Abstract**—Epilepsy treatment outcome prediction is valued for the treatment
+    of children with tuberous sclerosis complex. In this paper, three common feature
+    selection methods and machine learning models are used to predict drug treatment
+    outcomes with multimodality data in children with tuberous sclerosis. The analysis
+    of variable F regression with confidence interval of 0.812 (±0.005), shows the
+    feasibility of using machine learning to predict the outcomes of drug treatments.
+    Furthermore, the effectiveness of the methods in the feature analysis is maintained
+    across different lesion quantity, location, and type. Our analysis results show
+    that among them, lesion type is the most important factor in predicting drug treatment
+    outcome.
+
+
+    **Index Terms**—machine learning, multi-modality, outcome prediction, tuberous
+    sclerosis complex
+
+
+    Tuberous sclerosis complex (TSC) is an autosomal dominant disorder caused by mutations
+    in the TSC1 or TSC2 genes [1], and is associated with the formation of hamartomas
+
+
+    organs including the heart, brain, kidney, liver, and lungs [2]. Epilepsy occurs
+    in 80%-90% of TSC patients, and almost two-thirds of them have their first seizure
+    onset in the first year of life [3]. Many manifestations of TSC symptoms affect
+    the quality of life. Epilepsy is one of the most severe. The main treatment for
+    epilepsy is antiepileptic drugs (AEDs) [4]. However, most of the epileptic patients
+    have an increased risk of mortality [4], which may take a long time to identify
+    the seizures as drug-resistant. It is important to identify early which patients
+    are resistant to the AEDs.
+
+
+    An et al. [4] predicts drug-resistant epileptic patients at the time of first
+    AED prescription, and achieved an area under curve of random forest. They work
+    mainly on general epilepsy. However, epilepsy caused by TSC is different. It has
+    many more imaging manifestations. In this study, we are mainly aimed at demonstrating
+    the feasibility of predicting drug treatment outcomes caused by TSC.
+
+
+    In this study, we compare 3 feature selection methods and 6 machine learning models
+    predicting epilepsy drug treatment outcomes in TSC. The feature selection methods
+    and machine learning models are the most common
+
+
+    > *Co-First Authors: Jun Yang and Yalie Cao; Haifeng Wang, and Jianxiang Liao.
+
+
+    # I. INTRODUCTION'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'ones machine learning. The results showed that the best model achieved an AUC
+    (95% confidence interval [CI]) of 0.812 (±0.005), showing the feasibility of predicting
+    treatment outcomes using machine learning. Based on clinical experience, features
+    in magnetic resonance imaging are useful to predict the outcomes. So, we evaluated
+    the effectiveness of these features from 3 important perspectives: quantity, location,
+    and type. Our results found that among them, lesion type is most important in
+    the outcome prediction.
+
+
+    Controlled by a reduced number of features to less than half of an observation
+    time of at least one year. Uncontrolled is defined as the opposite.
+
+
+    # II. Methods
+
+
+    # A. Data preprocessing
+
+
+    # B. Data selection
+
+
+    All the data were from Shenzhen Children''s Hospital, and written consent was
+    obtained from all subjects prior to study. The protocols were approved by the
+    Institutional Review Board (ARB) of Shenzhen Institutes of Advanced Technology,
+    Chinese Science. The data contained 103 patients with TSC. The ages of the children
+    when they visited the hospital were between 50 days and 16 years, with a median
+    of 3 years. All patients had epilepsy, and one had had resection surgery.
+
+
+    The patients were confirmed with TSC, but not every patient had epilepsy. The
+    patients with epilepsy were removed from the data.
+
+
+    Data, date of birth, and other features that are personal information or irrelevant
+    to the task used. The drug-resistance experience, which was not available at the
+    first visit to the doctor, and the target value, epilepsy treatment outcome were
+    also removed.
+
+
+    The multi-modality data included clinical data, TSC1 and CT2 test results, magnetic
+    resonance imaging (MRI), computerized tomography (CT), and electroencephalography
+    (EEG). The clinical data were manually extracted from medical history data, including
+    patient name, age, sex, the existence of several typical types of TSC, and examination
+    results. The features of MRI, CT and EEG were also manually extracted. For MRI,
+    the lesions were located and classified by type. For CT data, the subcortical
+    lesions were classified by size. For EEG, the discharge features were recorded.
+    In total, each patient has 155 features and 1 target. The pie chart in Fig. 1
+    shows the modality distribution of the 155 features.
+
+
+    There are two types of missing values in the data: the first is for example, number
+    of lesions omitted if it is zero. The second is when value was unknown or the
+    patient did not go the examination. For example, the CT-related features of the
+    first type, they were simply filled with median. In the second type, the age of
+    the first seizure were filled with median, and other missing values were filled
+    with zero.
+
+
+    # C. Normalization
+
+
+    Before normalization, certain features such as the existence of epilepsy (all
+    true) and the type of lesions that has no patent (all zero) were removed. All
+    features were normalized to the range 0 and 1, using Eq. 1.
+
+
+    > $x_{normalized} = \frac{x - x_{min}}{x_{max} - x_{min}}, \quad x \in R$
+
+
+    After the whole process of data preprocessing, the number of patients remained
+    is 102, and features remained is 109.
+
+
+    # III. EXPERIMENT SETUP
+
+
+    # A. Feature selection and models
+
+
+    There are many features for feature selection, which is very important in the
+    learning process, but we do not know which one is the best choice. So several
+    methods were used, and were combined with models in pairs. The combination was
+    evaluated and compared as a whole.
+
+
+    ![](img/174ec4fca331024f023477a434b61a6d_1_0.png)
+
+
+    Fig. 1. The modality distribution of the 155 features.
+
+
+    The target is drug treatment outcome, which was classified into two categories:
+    controlled and uncontrolled.
+
+
+    Specifically, analysis of variance (ANOVA) F-values, Chi-squared statistics, and
+    mutual information were used for feature selection. In detail, the F-values, Chi-squared,
+    and mutual information of the features are calculated. Then, the features are
+    sorted by the calculated values in a descending order. The top k features are
+    selected. For each of the three methods, k is a parameter that needs to be chosen.
+    For comparison, there were three settings, with $k = 20, 35, 50$. For comparison,
+    a baseline method that selects all features was set up.
+
+
+    Decision tree [5], random forest [6], support vector machine (SVM) [7], Naive
+    Bayes, regression [8] and multilayer'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/174ec4fca331024f023477a434b61a6d_2_0.png)
+
+
+    Fig. 2. The AUC scores of 60 combinations of feature selection, with 95% CI plotted.
+    Nothing denotes selecting all the features. Fest_k denotes selecting k features
+    by ANOVA f-values. Chi2_k denotes k features by Chi-squared results. Multainfo_k
+    denotes selecting k features
+
+
+    perceptron (MLP) classifiers, which are very common models in machine learning,
+    were used to train on the data and predict the drug outcome. Using a function
+    $f : X \rightarrow Y$. In our problem, the features are $X$, and the outcomes
+    are $Y$. The Python library Scikit-learn version 0.23.1 was used to implement
+    the experiment code, and all the hyperparameters of the models were kept default
+    and not tuned. The kernel forest of SVM and random forest 100 trees. There is
+    only one layer with 100 neurons in the MLP, and the activation function was Rectified
+    Linear Unit (ReLU).
+
+
+    The 10 sets of features were evaluated with the 6 models in pair. Then, the 60
+    combinations were evaluated using 10-fold cross-validation. AUC was evaluated
+    by repeating 50 times. The mean AUC and 95% CI were calculated.
+
+
+    curves and AUCs were calculated to evaluate the performance. Each experiment was
+    repeated 50 times to calculate the mean and 95% CI of AUC, and the mean ROC curve.
+
+
+    # B. MRI effectiveness evaluation
+
+
+    In a clinical study, we found that MRI could be helpful in predicting drug treatment
+    outcomes. We then evaluated the effectiveness of MRI in our features. First, the
+    best of feature extraction and model was evaluated by AUC. Second, some of the
+    information in the MRI was limited. Specifically, there were 5 sets: 1) Only the
+    information of the MRI was removed. Nothing is changed. 2) The counts of lesions
+    were greater than or equal to 1. 3) Only the location of the MRI lesions were
+    removed. The number of locations at different brain levels were summed. 4) Only
+    the type information of the MRI lesions were removed. 5) The number of different
+    types of lesions were removed. 5) All the features about MRI were removed.
+
+
+    Then, the 5 sets of features were evaluated using 10-fold cross-validation. The
+    receiver operating characteristic (ROC
+
+
+    The ANOVA F-test and MLP combined with the best performance with an AUC (95% CI)
+    of 0.812 ($\pm$0.005). In this combination, 35 features were selected, including
+    9 clinical features, 23 MRI features, and 3 EEG features. Or Gen or CT feature
+    were selected. The AUC performances of all the evaluated features were in Fig.
+    2. Larger AUC indicates better performance.
+
+
+    # IV. RESULTS & DISCUSSION
+
+
+    the combination with the best performance we used to evaluate the effectiveness
+    of MRI in predicting the drug treatment outcomes. Fig. 3 shows the mean ROC of
+    all 5 sets. The first set does not change the outcome in the experiment but has
+    an AUC (95% CI) of 0.812 ($\pm$0.005). Second
+
+
+    From the analysis results, we can see that the quantity, location, and type information
+    are the most important, as the AUC of the combination reduced only 0.017 after
+    removing the quantity information. The most important is type information, after
+    removing the type information, the performance reduced the'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/174ec4fca331024f023477a434b61a6d_3_0.png)
+
+
+    Fig. 3. The ROC curve of AllFeatures denotes that the features are not changed.
+    NoMLRIQuantity denotes that the quantity information of the MRI is removed. NoMLRILocation
+    denotes that only the location of the MRI is removed. NoMLRIType denotes that
+    only the type information of the MRI is removed. NoMLRILesion denotes that all
+    the MRI features are removed. The values and 95% CI are marked in the legend.
+
+
+    # V. CONCLUSIONS
+
+
+    In sum, we evaluated common feature selection methods and 6 common machine learning
+    methods for multi-modality TSC treatment outcome data. Using ANOVA F value and
+    MLP achieved the best AUC (95% CI) performance of 0.82 (±0.005). It shows that
+    it is feasible to use machine learning to predict the outcomes of drug treatments.
+    Then, the effectiveness of quantity, location, and type information of MRI were
+    evaluated, and we conclude that type information is the most important, followed
+    by location information and quantity information. In the future, more features
+    and models will be considered as case.
+
+
+    # ACKNOWLEDGMENT
+
+
+    Some of the work was partially supported by the Sanning Project of Medicine in
+    Shenzhen (SZZM20181005), the Pearl River Talent Program of Guangdong Province
+    (2019Q01Y986), the Shenzhen Peacock Plan Program (KTD20180413183478), the Chinese
+    Academy of Sciences Engineering Laboratory for Medical Technology and Equipment
+    (KFI-PTXM-012), the Natural Science Foundation of Guangdong Province (2018A030313012),
+    and the National Science Foundation of China (61871373, 81729003, and 81901736).
+
+
+    # REFERENCES
+
+
+    +   [1] K. A. Ortiz and P. B. Crino, “The tuberculous sclerosis complex,” Annals
+    of the New York Academy of Sciences, vol. 1184, no. 1, pp. 87–105, 2010.'
+  merge: -1
+  img_proc: true

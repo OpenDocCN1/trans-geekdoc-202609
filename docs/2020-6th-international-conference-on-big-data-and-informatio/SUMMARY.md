@@ -1,0 +1,2 @@
++   [2020 第六届国际大数据与信息分析会议 (BigDIA)（中国深圳 2020.12.4-2020.12.6） 2020 第六届国际大数据与信息分析会议 (BigDIA)](README.md)
++   [2020 第六届国际大数据与信息分析会议 (BigDIA)（中国深圳 2020.12.4-2020.12.6） 2020 第六届国际大数据与信息分析会议 (BigDIA)](2020-6th-international-conference-on-big-data-and-informatio.md)
