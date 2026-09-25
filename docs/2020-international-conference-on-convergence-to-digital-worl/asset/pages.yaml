@@ -1,0 +1,327 @@
+- pgno: 0
+  md: '# # Securing the Internet of Things using Machine
+
+    Learning: A Review
+
+
+    Shikha Malik
+
+    Electronics and Telecommunication
+
+    Atharva College of Engineering
+
+    Mumbai, India
+
+    shhikalik@atharacoce.ac.in
+
+
+    Ruchi Chauhan
+
+    Electronics and Telecommunication
+
+    Atharva College of Engineering
+
+    Mumbai, India
+
+    ruchichauhan@atharacoce.ac.in
+
+
+    **Abstract—** Internet of Things facilitates connecting massive group of devices
+    into networks for an ever-growing number of applications. The current and future
+    IoT holdings promise to improve convenience and comfort for the user by various
+    types of threats namely Denial of Service (DoS), Man-in-the-Middle spoofing, Eavesdropping
+    and software attacks. These threats present serious challenges. We discuss major
+    security threats that exist at IoT and review Machine Learning based IoT systems
+    with Supervised Learning.
+
+
+    collect data coming from different services to perform functions.
+
+
+    +   **Network Layer** is a communication network that enables transmission of
+    data and connection of loose IoT devices
+
+
+    +   **Middleware Layer** is a connectivity link between application layer and
+    network layer. It is a cloud which provides powerful processing and storage capabilities
+
+
+    +   **Application Layer** includes end-to-end applications on IoT such as smart-grids,
+    smart-homes, smart-buildings [2]
+
+
+    **Keywords—** security attacks in IoT, supervised learning, machine learning
+
+
+    All these lately technologies that are susceptible to a number of users and security
+    threats. Table 1 includes description of critical attacks that exist at IoT layers.
+
+
+    The Internet of Things (IoT) facilitates connecting massive group of devices into
+    networks for an ever-growing number of applications. There has been a rapidly
+    increasing number of devices in years which is expected to reach 24 billion by
+    2022 [1]. IoT exists over vast spectrum of applications like smart cities, smart-grids,
+    smart-farming smart environment which touch every aspect of our present day life.
+    With a broad range of IoT applications comes issue of privacy and security. Without
+    securing IoT, there will be special security challenges throughout many areas
+    of life from home, automobiles and critical infrastructure.
+
+
+    TABLE I. DESCRIPTION OF CRITICAL SECURITY ATTACKS THAT EXIST AT I LAYERS
+
+
+    | Critical attacks that exist at IoT layers | Description |
+
+    |---|---|
+
+    | Denial of Service (DoS) | The attacker overwhelms the server with redundant
+    requests which IoT devices in getting response |
+
+    | Man-in-the-Middle | The attacker-in-middle intercepts the communication or alters
+    data communication between IoT devices by jamming and spoofing signals |
+
+    | Spoofing | Attacker impersonates an IoT device with selfish identity to gain
+    illegal access and crashes the server by DoS and man in middle |
+
+    | Jamming | A DoS attack ,which malicious nodes send fake signals to interrupt
+    the learning, causing communication interference |
+
+    | Eavesdropping | When unauthorized party senses, modifies and deletes the information
+    transmitted over a network |
+
+    | Software attacks | Malicious software such as Malware, Trojans, and worms use
+    user personal information or causes malicious damage leading to performance degradation
+    of IoT systems |
+
+
+    Machine learning is a branch of Artificial intelligence that enables systems to
+    learn from experience and improve performance without being explicitly programmed.
+    Machine learning promises to secure IoT devices from various security more efficiently
+    compared to traditional methods.
+
+
+    This paper describes architecture of IoT and gives information about the security
+    attacks affecting the various IoT layers. Machine learning algorithms for prediction
+    of attacks and for enhancing IoT security has been discussed in this paper.
+
+
+    # II. IoT ARCHITECTURE AND SECURITY ATTACKS
+
+
+    Four layers of IoT architecture are described as follows
+
+
+    +   (1) **Sensing Layer** consists of sensors and actuators connected to smart
+    IoT devices that are
+
+
+    # III. MACHINE LEARNING ALGORITHMS FOR I SECURITY
+
+
+    Machine Learning (ML) Algorithms that are applicable for enhancing IoT security
+    are as follows'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# A. Machine Learning Algorithms
+
+
+    (2) Unsupervised Learning: It uses labelled data and on the basis of similarities
+    between them, it clusters the data into groups. Examples of Unsupervised Learning
+    are Singular Value Decomposition, Multivariate Correlation Analysis, and K-means
+    clustering.
+
+
+    (3) Reinforcement learning (RL): It involves observation of the environment in
+    order to self-continue continually by trial and error. Examples of RL are Q-Learning
+    and Deep-Learning [4].
+
+
+    24112 positive classes and 24890 negative classes of 42 features each[6]. They
+    examined the accuracy by various parameters of RF algorithm quality of trees,
+    depth of each tree and number of features. It is observed from experimental results
+    of 5 fold-validation that RF provides high accuracy with very low mean error and
+    We have Used open source tool for temporal analysis of RF.
+
+
+    Hyo-Sak Kim et al. (2014) examined various methods like Behavior based and Signature
+    based techniques for detection of malware on Android platform and showed behavioral
+    detection combined with linear Support vector machine (SVM) achieved high classification
+    accuracy. However, various features like CPU usage, size and energy are monitored
+    and analyzed for malware classification using Learning classifier[7]. It found
+    that SVM outperforms others with respect to Precision, Accuracy and F measure.
+
+
+    Figure 1 Machine Learning classification and various algorithms applicable for
+    IoT security.
+
+
+    ![](img/987701006fdb492b442c4ae545b95bfb_1_0.png)
+
+
+    Fig.1. Types of Machine Learning algorithms applicable for enhancing IoT security
+
+
+    J. Canada and A. Skjellum (2016) used Artificial Neural Network (ANN) network
+    to identify intruders in the edge devices from the gateway level in IoT. This
+    approach includes IoT detection by creating Arduino devices acting as edge devices
+    and Raspberry Pi 1 model acting as gateway [9]. R statistical language was used
+    to create a neural network. Proposed architecture 5-layer network with 3 hidden
+    layers. The system was able to predict valid and invalid attacks with false negatives
+    < 1%.
+
+
+    # B. Deep Learning Algorithms
+
+
+    Deep Learning (DL) is a part of Machine Learning from Artificial Neural Networks.
+    The network consists of several neurons connected through weighted connections.
+    It utilizes multiple layers of hidden layers for extracting higher features from
+    input. Deep learning includes Recurrent Neural Network (RNN), Generative adversarial
+    networks (GAN), Convolutional Neural Network (CNN) [5].
+
+
+    Diro A and Chilamkar S (2018) proposed Deep Learning for the detection of small
+    network attacks because of its self-thought and compression capabilities. Fog
+    IoT architecture is implemented to reduce the storage and complex complexities
+    from resource constraints IoT devices. Author focus is to explore the performance
+    of classes of attacks (DoS, DOS, probe...). The proposed model achieved an accuracy
+    of 98.27%, detection rate of 96.5% and false alarm rate of 2.57%. Deep learning
+    also found better than Shannon Learning in terms of performance metrics [10].
+
+
+    # IV. REVIEW OF IOT SECURITY METHODS BASED ON ML
+
+
+    In this section, we review the existing works that discusses the security problems
+    in IoT
+
+
+    M. Sam and S. T. Young (2013) implemented Classifier for analyzing Android applications
+    as malicious or benign on android dataset of 48919 data samples'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'detection of layer attacks[11]. The SVM model working as instruction system
+    is trained with malicious and benign data and 100% accuracy when evaluated with
+    unknown sets chosen from network topology and 81 % when training in unknown topology.
+    The 100% performance is found in classification of layer attacks as Selective,
+    Forsaking, and Sinkhole [8]
+
+
+    Learning algorithms like Logistic Regression, Decision Tree Support Machine, Artificial
+    Neural Network (ANN) and Random Forest are compared using various metrics like
+    Accuracy, Confusion Matrix, Precision, Recall F1 Score and Area Under the Operating
+    Characteristic Curve (ROC). Based on the confusion table, RF has come out as the
+    best for identifying every class with 99.4% accuracy [12].
+
+
+    Hasan and et al. (2019) predicted all types of attack like Denial of Service (DoS),
+    Malicious Control (M,C), Data type probing (DT), Spy (Scan), Wrong Setup (W) and
+    Malicious Operations by operating various
+
+
+    Table II includes analysis of surveyed Machine Learning based IoT security mechanisms.
+
+
+    | Author and Year | Attacks | ML Algorithm | Dataset | Evaluation |
+
+    |---|---|---|---|---||
+
+    | M. S. A and S. T. Vuong (2016) | Android Malware | Random Forest (RF) | GitHub
+    dataset | Root Mean Square Error: 0.0171 Out-of-bag: 0.0002 |
+
+    | Hyo-Sik Ham et al (2014) | Android Malware | Support machine | Own data from
+    environment | Accuracy: 99.5% F-measure: 95.4 Precision: 99.2% |
+
+    | Pajodh, J., Khayani, Ali & Chao (2016) | UserRemote Remote2 | Naive Bayes K-Neighbor
+    | NSL-KD | Detection Rate: 84.2% False Alarm Rate: 5.6% |
+
+    | J. Caedo and A Sigmund (2018) | In the Middle | Artificial Network | Own from
+    sensors | Detection Accuracy: 99% |
+
+    | Diro A and Chamlkanti (2018) | DoS Deep Neural Network R2UR | NSL-KD | Accuracy:
+    98.27% Detection Rate: 96.5% False alarm rate: 2.57% |
+
+    | Ioanon C and Vassilov (2015) | Selective backward Sinkhole | Support Machine
+    | Real data | Accuracy: 100% for known topology Accuracy: 81% for unknown topology
+    |
+
+    | Hasan et al. (2019) | Malicious Control Data Type Probing Spying Scan Wrong
+    Setup Malicious Operations | Logistic Regression Decision Tree Support Machine
+    Artificial Neural Network Random Forest | Synthetic data from virtual environment
+    | Logistic Regression: 98.3% Decision Accuracy: 99.4% Support Machine Accuracy:
+    98.2% Artificial Neural Network: 99.4% Random Forest Accuracy: 99.4% |
+
+
+    # V. CONCLUSION
+
+
+    In this survey we have identified various security threats which exist at different
+    levels of an IoT device. We have emphasized the thorough study on various solutions
+    to IoT security using Machine Learning technology. Machine learning security methods
+    like Support Machine, Random Forest, Decision Tree, Artificial Neural Net etc.
+    have the potential for security improvement for various IoT applications
+
+
+    # REFERENCES
+
+
+    +   [1] K. Ramaswamy, D. Furlinger, "Blockchain-Based Transformation," 2018, Jun.
+    [online]: https://www.gartner.com/en/article/3860966-blockchain-transformation-trend-insight-report.
+    [Accessed 20-Dec-2019].
+
+
+    +   [2] V. Hassima, V. Chaula, Saxena, D. Jain, Goyal, B. Sikdar, "Security of
+    IoT applications," IEEE Access, vol. 7, pp. 77236-77243, 2019.
+
+
+    +   [3] L. Xiao, X. Lu, et al., "IoT security techniques based on machine learning:
+    how do we enhance security?" IEEE Signal Processing Magazine, vol. 35, no. 5,
+    pp. 41,
+
+
+    +   [4] U. Shanthakumar, S. Spona, C. Teng, M. Surya, "A Survey of Machine Learning
+    Methods and Their Use in IoT Applications," 88th International Conference on Information,
+    Intelligence, and Systems (II IEEE), 2019.
+
+
+    +   [5] F. Hassanan, R. Hussain, S. A. Hassan, "Machine learning in IoT security:
+    Current Solutions and Future Challenges," arXiv preprint arXiv:1902.02769, 2019.
+
+
+    +   [6] M. S. A, S. T. Vuong, "Random forest for detection of android malware,"
+    IEEE Int. Conf. Gen. Comput. Commun. IEEE Conf. Commun., pp. 1-6, Aug. 2013.
+
+
+    +   [7] Hyo-Sik Ham, Wan-Hee Kim, Min-Kyung Kim, and Min-Cho Lee, "Improved Android
+    Malware Detection for Reliable IoT Services," Journal of Applied Mathematics,
+    2014, doi: 10.1155/2014/994501'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '[8] H. Haddad Pajoush, R. Javidan, R. Khayami, D. Ali, K. K., K. R. Choo, "A
+    Two-layer Dimension Reduction and Two-tier Classification Model for Cloud-Based
+    Intrusion Detection in IoT Backbone Networks," IEEE Transactions on Emerging Topics
+    in Computing, vol. PP, no. 99, pp. 1–16,,
+
+
+    [9] J. Cendo, A. Skylliam, "Using machine learning to secure IoT systems," 2016
+    6th Int. Conf. Privacy Security Trust (PST 2016), pp. 219-222.
+
+
+    [10] A. A, D. Chilankarni, "Distributed attack detection scheme using deep learning
+    approach for Internet of Things," Future Gen. Comput. Syst., vol. 82, pp. 761–768,
+    May 2018.
+
+
+    [11] Ioannou C. and Vasiliev V., "Classification of Security Attacks in IoT Networks
+    using Deep Supervised Learning," 12th International Conference on Distributed
+    Computing in Sensor Systems (DCOSS) 2019 pp. 652-658,
+
+
+    [12] M. Khan, M. M. Islam, M. I. I. Zarif, M. Hashem, "Attack and anomaly detection
+    in iot sites using machine learning approaches," Internet of Things, vol. 7, pp.
+    100059, 2019.'
+  merge: -1
+  img_proc: true
