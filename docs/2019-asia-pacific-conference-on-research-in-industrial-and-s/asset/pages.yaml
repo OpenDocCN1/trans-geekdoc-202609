@@ -1,0 +1,593 @@
+- pgno: 0
+  md: '# # Preliminary Study on Machine Learning Application for Parkinson’s Disease
+    Diagnosis
+
+
+    Ahmad Habbie Thies, Isca Amanda, Jessica, Nikita Akhsan Fitri, Rai Rona Althof,
+    Sukmandhari Harimuti, Widyaawardana Adiprawita, Ita Ansari*
+
+
+    Department of Biomedical Engineering, School of Electrical Engineering and Informatics
+
+    Institut Teknologi Bandung, Bandung, Indonesia
+
+    is_ansari@stei.itb.ac.id
+
+
+    Abstract—Early detection for Parkinson’s Disease (PD) can be verified by investigating
+    speech features of the patient. Using machine learning, PD can be well detected
+    by investigating the speech Parkinson’s Disease (PD) dataset containing pieces
+    of PD features and speech method used in this study. The investigated features
+    were tested using Support Vector Machine, K-Nearest, Logistic Regression, Gradient
+    Boost, Multi-layer Perceptron, and Decision Tree. The performance of all these
+    methods was evaluated on accuracy, precision, and F1 score. Based on the results,
+    the most suitable algorithm for PD is Machine Learning with an accuracy of 95.92%
+    without data scaling.
+
+
+    in Colorado, who recorded the speech signals. This study published the feature
+    extraction methods for general voice disorders.
+
+
+    Keywords—parkinson’s disease, speech analysis, machine learning
+
+
+    The dataset composed of a range of voiced measurements taken from 31 people, with
+    22 people having Parkinson’s disease (PD). The dataset collected in this study
+    contains multiple voice samples per subject, such as vowels, numbers, words, and
+    short sentences. Each line in the table has a particular measure and each row
+    corresponds to one of 15 voices recorded from each subject. The method was used
+    to discriminate people with PD. According to literature
+
+
+    The dataset used in this study has many advantages such as various types of sounds
+    for each subject, and many features that were collected in the dataset. The amount
+    of data is lacking with a number of subjects that are only 31 people. All 23 features
+    used in this study may not necessarily have a significant contribution to the
+    diagnosis of Parkinson’s disease. However, the dataset is not fully fulfilled.
+    With the subjects, only 8 people were not Parkinson’s sufferers. Dataset weaknesses
+    may affect the accuracy of the resulting model, regardless of what algorithm is
+    used.
+
+
+    # I. INTRODUCTION
+
+
+    Parkinson’s disease is a neurodegenerative disorder characterized by dopamine-producing
+    neurons in the central nervous system; Dysfunction in the basal ganglia causes
+    symptoms such as impaired speech fluency; Parkinson’s patient may have different
+    voice levels in intensity as well as expected speech voice degradation or inability
+    to produce sustained phonations,
+
+
+    Currently, there is no specific test to diagnose Parkinson’s disease. Currently,
+    research on the development of decision support tools, using algorithms to differentiate
+    healthy individuals from Parkinson’s patients, has been conducted [1]. In this
+    study, machine learning approach is investigated to diagnose Parkinson’s Disease
+    using a dataset of speech features (a non-invasive method) from the University
+    of Oxford. Some machine learning algorithms used in this work are Support Vector
+    Machine, Linear Discriminant, K-Nearest Neighbors, Decision Tree, Naive Bayes,
+    Gradient Boost, and Multilayer Perceptron. This work aims to gain knowledge of
+    which learning model with given features or a patient’s case can give at least
+    90% accuracy and a Mathews Correlation Coefficient of at least 0.9 to predict
+    Parkinson’s Disease.
+
+
+    # II. METHOD
+
+
+    A. Dataset
+
+
+    The speech dataset used in this study is from Oxford Parkinson’s Disease (OPD)
+    Dataset. The dataset was created by Max Little from Oxford, in collaboration with
+    the National Center for Voice and Speech
+
+
+    ![](img/54663eb0214ef1b4c1cf3884333343a7_0_0.png)
+
+
+    Fig. 1. SVM flow diagram'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# B. Feature Extraction
+
+
+    One of the important processes in machine learning is the feature extraction process
+    from data. These features will be the input of algorithm to produce a particular
+    classification model. In other cases, a new test (data) will be classified into
+    certain classes with pretrained data.
+
+
+    this case, voice samples are extracted into 22 features. Voice feature extraction
+    uses the Multidimensional Voice Program (MDVP). This program provides several
+    menus, and that feature can be extracted
+
+
+    # A. Support Vector Machine (SVM)
+
+
+    To implement the SVM using sklearn-learn package, several parameters must be adjusted.
+    To perform the classification, the ''kernel'' needs to be adjusted because of
+    choice in SVM methods. The kernel parameter that are tested include RBF, poly,
+    and sigmoid. SVM diagram is described in Fig. 1.
+
+
+    # B. K-Nearest Neighbor (KNN)
+
+
+    By using the Python scikit-learn package, some parameters can be adjusted using
+    this algorithm, such as n_neighbors, weight used in prediction (weight), algorithm
+    used to compute the nearest neighbors (algorithm), leaf size for BallTree or KDTree
+    (leaf_size), parameter which metric to use for the tree (metric), additional keywords
+    for the metric function (metric_params), and the number of parallel jobs to run
+    search (n). In this, n neighbors variation is
+
+
+    # C. Linear Discriminant Analysis (LDA)
+
+
+    LDA has classes in sklearn-learn package, i.components, priors, shrinkage, solver,
+    covariance, and tol. For this case of classification, solver ''svd'' is ''False''
+    and the threshold in parameter ''tol'' is set to a default value of 0.001. Using
+    value ''svd'' in solver means the covariance matrix is not computed because the
+    data has a large number of features available. The LDA is step-by-step as flow
+    diagram in Fig. 2.
+
+
+    # D. Gradient Boosting
+
+
+    Gradient boost is implemented using Scikit-learn library. Gradient boost improves
+    performance by combining multiple weak learner. An additive model was built in
+    a forward stage-wise fashion which shows the optimization of arbitrary differentiable
+    loss functions. In each case, n classes, regression trees minimize the negative
+    gradient of the binomial or multinomial loss function. Binary classification is
+    an example case where only a single regression tree is used.
+
+
+    # E. Multi-Layer Perceptron (MLP)
+
+
+    MLP is implemented by using the Python Scikit-learn package as described in Fig.
+    3. It begins with Parkinson speech data uploaded to the system. Then, data is
+    preprocessed to improve quality data. In data preprocessing stage there are several
+    stages: scaling data, feature extraction and labels, separating training and testing
+    data, data was separated from test and training set. MLP workflow as follow:
+
+
+    +   1. Signal start from input layer, signal propagate to generate an output.
+
+    2. On output network, calculate error.
+
+    3. Backpropagate error, find derivative of each weight, minimize error.
+
+
+    ![](img/54663eb0214ef1b4c1cf3884333343a7_1_0.png)
+
+
+    Fig. 2. LDA flow diagram
+
+
+    ![](img/54663eb0214ef1b4c1cf3884333343a7_1_1.png)
+
+
+    Fig. 3. Multi-layer Perceptron Methodology
+
+
+    # III. Classification'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# 2019 Asia Pacific Conference on Research in Industrial and Engineering Systems
+    (APCORISE)
+
+
+    Next, some parameters in MLP will be varied to analyze the influence of each parameter.
+    These parameters are the hidden layers, the number of elements of each layer,
+    and the difference between training and scaling with
+
+
+    TABLE III. SVM KERNEL POLYNOMIAL
+
+    | Validation size | Accuracy(%) | Precision | Recall | F-score |
+
+    |---|---|---|---|---|n| 0.25 | 82.05 | 0.67 | 0.82 | 0.74 |
+
+    | 0.25 | 79.59 | 0.63 | 0.80 | 0.71 |
+
+    | 0.30 | 79.66 | 0.63 | 0.80 | 0.71 |
+
+    | 0.35 | 76.81 | 0.59 | 0.77 | 0.67 |
+
+
+    # F. Decision Tree
+
+
+    In this work, decision tree algorithm is the core for building Scikit-Learn library.
+    ID3 is the core algorithm for building decision trees. It employs a top-down,
+    greedy search through the space of possible branches with no backtracking. This
+    method partitions data into subsets with various homogeneous characteristic. The
+    entropy of a sample was calculated using the entropy before. If the sample is
+    equal, the entropy becomes zero. The information gain is measured by the decrease
+    in entropy after a dataset is split on. Constructing a decision tree typically
+    find that returns the highest information gain, such as the most homogeneous instances.
+
+
+    # IV. RESULTS AND ANALYSIS
+
+
+    To achieve the target of diagnosis using SVM depends on the selection of the kernel.
+    From the mentioned kernel, linear algorithm gives maximum (89.79%) on linear kernel
+    with splitting of 25 (Table I). Table II and III are the results of using RBF
+    scaled and unscaled data respectively. The results are not good enough to diagnose
+    PD as it is not under 90.0%. SVM is a good classifier when the number of features
+    and instances are small, even when the dataset is not linearly separable, so using
+    SVM will not give a high accuracy even with an even kernel.
+
+
+    # A. Classification Performance
+
+
+    Each algorithm is reviewed and compared by their accuracy, obtained from (1):
+
+
+    ```
+
+    FN = \frac{TN + FP}{TN + FP + FN}
+
+    ```
+
+
+    # 1. Support Vector Machine (SVM)
+
+
+    SVM has several kernel such as linear, RBF, and polynomial. The following Table
+    I-III shows the result of using each kernel with the variation of percentage of
+    splitting on scaled data (SD) and unscaled data (UD)
+
+
+    TABLE I. SVM KERNEL LINEAR
+
+    | Validation size | Accuracy(%) | Precision | Recall | F-score |
+
+    |---|---|---|---|---|n| SD | UD | SD | UD | SD | UD | SD | UD |
+
+    | 0.20 | 88.17 | 89.74 | 0.89 | 0.87 | 0.87 | 0.90 | 0.84 | 0.89 |
+
+    | 0.25 | 89.79 | 89.79 | 0.91 | 0.90 | 0.90 | 0.90 | 0.88 | 0.89 |
+
+    | 0.30 | 88.14 | 86.44 | 0.88 | 0.86 | 0.86 | 0.88 | 0.86 | 0.87 |
+
+    | 0.35 | 85.51 | 82.61 | 0.81 | 0.88 | 0.81 | 0.83 | 0.83 | 0.81 |
+
+
+    TABLE II. SVM KERNEL RBF
+
+    | Validation size | Accuracy(%) | Precision | Recall | F-score |
+
+    |---|---|---|---|---|n| SD | UD | SD | UD | SD | UD | SD | UD |
+
+    | 0.20 | 82.05 | 82.05 | 0.67 | 0.82 | 0.72 | 0.74 | 0.74 | 0.74 |
+
+    | 0.25 | 79.59 | 81.63 | 0.63 | 0.85 | 0.80 | 0.82 | 0.71 | 0.75 |
+
+    | 0.30 | 79.66 | 81.36 | 0.63 | 0.83 | 0.81 | 0.81 | 0.71 | 0.74 |
+
+    | 0.35 | 76.81 | 78.26 | 0.59 | 0.83 | 0.77 | 0.78 | 0.67 | 0.70 |
+
+
+    TABLE IV. KERNEL RESULT WITH VARIATION SIZE
+
+    | Validation size | Accuracy(%) | Precision | Recall | F-score |
+
+    |---|---|---|---|---|n| 0.20 | 84.61 | 0.83 | 0.85 | 0.82 |
+
+    | 0.25 | 85.71 | 0.85 | 0.84 | 0.85 |
+
+    | 0.30 | 86.44 | 0.86 | 0.86 | 0.85 |
+
+    | 0.35 | 84.06 | 0.84 | 0.84 | 0.83 |
+
+
+    Table V shows the classification model using the KNN algorithm with a variation
+    of k value size=0.3. By knowing the value of k, there are no specific rules whether
+    it depends on the needs of the dataset. Research shows that smaller k will produce
+    more decision boundary, while a larger k will produce smooth decision boundary.
+
+
+    TABLE V. KNN RESULT WITH K VALUE VARIATION
+
+    | k value | Accuracy(%) | Precision | Recall | F-score |
+
+    |---|---|---|---|---|n| 1 | 84.06 | 0.84 | 0.84 | 0.84 |
+
+    | 3 | 79.71 | 0.78 | 0.80 | 0.79 |
+
+    | 5 | 84.06 | 0.84 | 0.84 | 0.82 |
+
+    | 7 | 79.71 | 0.78 | 0.80 | 0.77 |
+
+
+    Authorized limit used to: University of Prince Edward Island. Downloaded on June
+    05, 2021 at 13:01:07 UTC from IEEE Xplore. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# 2019 Asia Pacific Conference on Research in Industrial and Systems Engineering
+    (APCORISE)
+
+
+    Besides, with Euclidean distance is sensitive to magnitude. Features with higher
+    magnitude will have burden that it needs scaling such as data. So, in the following
+    table, we tried to classify classifiers by data. The result better accuracy is
+    achieved, as shown in Table VI.
+
+
+    | Validation size | Daata | Accuracy (%) | Precision | Recall | F-score |
+
+    |---|---|---|---|---|-|
+
+    | 0.20 | | 94.87 | 0.95 | 0.95 | 0.95 |
+
+    | | SD | 94.87 | 0.95 | 0.95 | 0.95 |
+
+    | 0.25 | | 95.92 | 0.96 | 0.96 | 0.96 |
+
+    | | SD | 93.88 | 0.94 | 0.94 | 0.94 |
+
+    | 0.30 | | 94.92 | 0.95 | 0.95 | 0.95 |
+
+    | | SD | 94.92 | 0.95 | 0.95 | 0.95 |
+
+    | 0.35 | | 94.20 | 0.94 | 0.94 | 0.94 |
+
+    | | SD | 94.20 | 0.94 | 0.94 | 0.94 |
+
+
+    # TABLE VI. KNN Performance Before After Data Scaling
+
+
+    | Accuracy(%) | Precision | Recall | F-score |
+
+    |---|---|---|---||
+
+    | without data scaling | 84.06 | 0.84 | 0.84 | 0.82 |
+
+    | with data scaling | 96.61 | 0.97 | 0.96 | |
+
+
+    KNN algorithm is unlikely to be implemented for this dataset because KNN has fewer
+    amount of features. More features need to be built before while increase in dimension
+    may cause overfitting. This point can be tackled by implementing PCA before reducing
+    features. Therefore, implementation of KNN algorithm require corresponding methods.
+
+
+    +   3) Linear Discriminant Analysis (LDA)
+
+
+    The performance of LDA in validation size is shown in the table VI. This classifier
+    has best accuracy (87.76%) in validation to split the data into 25.
+
+
+    # TABLE VII. LDA RESULTS WITH VARIATION OF VALIDATION SIZE
+
+
+    | Validation size | Accuracy(%) | Precision | Recall | F-score |
+
+    |---|---|---|---|---||
+
+    | SD | SD | SD | SD | SD | SD |
+
+    | 0.20 | 87.18 | 87.16 | 0.86 | 0.87 | 0.87 | 0.86 |
+
+    | 0.25 | 87.76 | 87.76 | 0.88 | 0.88 | 0.87 | 0.87 |
+
+    | 0.30 | 86.44 | 86.44 | 0.86 | 0.86 | 0.85 | 0.85 |
+
+    | 0.35 | 81.16 | 81.16 | 0.81 | 0.81 | 0.80 | 0.80 |
+
+
+    From Table VII, we can see that the performance of LDA for PD points lacks accuracy.
+    The drawbacks of the LDA is small sample size and density. Scaling is not enough
+    to be implemented in our case because of the small amount of instances on many
+    features. However, LDA does perform best in linearly separable, it cannot perform
+    for data scaling due to the small linearity of the data we used.
+
+
+    +   4) Gradient Boosting
+
+
+    Classification model performance compared by using variation in the composition
+    of data splitting (validation size), the result are shown on following Table VIII.
+
+    Table VIII shows that the optimum results are achieved in the performance of test
+    and train results 25:77 with accuracy 95.92%. The result above also shows that
+    the dataset will not give significant difference in this implementation case.
+
+
+    | Validation size | Accuracy (%) | Precision | Recall | F-score |
+
+    |---|---|---|---|---||
+
+    | 0.20 | 94.87 | 0.95 | 0.95 | 0.95 |
+
+    | 0.25 | 95.92 | 0.96 | 0.96 | 0.96 |
+
+    | 0.30 | 94.23 | 0.93 | 0.93 | 0.93 |
+
+    | 0.35 | 92.75 | 0.93 | 0.93 | 0.93 |
+
+
+    # TABLE IX. MLP PERFORMANCE WITH VARIATION WITHOUT SCALING
+
+
+    | Accuracy(%) | Precision | Recall | F-score |
+
+    |---|---|---|---||
+
+    | without data scaling | 79.59 | 0.63 | 0.8 | 0.71 |
+
+    | with data scaling | 97.96 | 0.98 | 0.98 | 0.98 |
+
+
+    The result is quite satisfying as is one of the most accurate model compared with
+    the others. The result is achieved because gradient boosting algorithm by reducing
+    bias and variance, causing meaningful differences in actual data and predicted
+    values.
+
+
+    +   5) Multi-Layer Perceptron
+
+
+    This algorithm implemented using Scikit learn library on python. Classifier performance
+    can be improved by data scaling relation between data scaling and classification
+    performance shown in Table IX.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# 2019 Asia Pacific Conference on Research in Industrial and Systems Engineering
+    (APCRISE)
+
+
+    From Table IX, it can be concluded that data scaling can improve performance of
+    classifier system. Before scaling, dataset variant in range. It is harder for
+    the classifier to model the data. Table XII shows the classification model implemented
+    with decision tree algorithm. It is shown that the highest accuracy achieved with
+    this method is when the ratio between test set and data is 25.
+
+
+    Table XI shows the high accuracy achieved when the data is divided into 25-75
+    between the test set and the train set. The selection of the test and train data
+    is important for evaluating the performance of a machine learning process. On
+    the contrary, the data training process may result in less accuracy which is not
+    good enough.
+
+
+    In addition to the size of parameter, other factors that are the parameters of
+    the Multi-Layer Perceptron show the effects of the hidden layers and the elements
+    of each layer. Table XI shows the effects and the elements of hidden layer.
+
+
+    | Layer | Element 1 | Element 2 | Accuracy(%) |
+
+    |---|---|---||}{
+
+    | 1 | 10 | | 89.79 |
+
+    | 1 | 50 | | 93.87 |
+
+    | 1 | 100 | | 95.90 |
+
+    | 2 | 10 | | 91.83 |
+
+    | 2 | 50 | | 95.92 |
+
+    | 2 | 100 | | 97.95 |
+
+
+    TABLE XI OF NUMBER AND ELEMENTS OF HIDDEN LAYER ON ACCURACY
+
+
+    Low performance of decision trees may be caused by reason, one prominent reason
+    is that this method does not consider the inter-dependency of variables or target
+    value on other variables.
+
+
+    Adding flexibility in Decision Tree''s growth. Each decision in the first level
+    may shape the tree as a single data point leads to get a totally different tree,
+    if the sample is small or if the data is noisy. Pruning, and bootstrapping are
+    methods to overcome this problem. Scaling does not improve its performance in
+    trees.
+
+
+    # B. Results Comparison
+
+
+    From the classification results on previous part, it can be concluded that Multi-Layer
+    Perceptron is the most suitable for this algorithm. MLP model have the highest
+    accuracy with 95.92% result without processing data.
+
+
+    Model performance of some other classifiers show the lack of accuracy because
+    those of them come from the data classifier. If KNN and LDA perform better in
+    small size of data but have a weakness in high features so they may not get enough
+    accuracy to classify the PD using the dataset.
+
+
+    # V. CONCLUSION
+
+
+    The whole content of this paper is the development of machine learning technology
+    implementation. Parkinson Disease diagnosis can be conducted through patient with
+    the voice of the supportive learning algorithm for PD classification.
+
+
+    After comparing 6 algorithms, it found that Multi-Layer Perceptron had the best
+    performance with 95.92% result without processing data.
+
+
+    The results from this paper can be used as a reference to develop Parkinson Disease
+    analysis. Classification algorithm can be further explored and parameters other
+    than validation size be taken into account, varied, and analyzed to improve the
+    performance. This can also be implemented as a method to solve another problem
+    that can be done through voice analysis with corresponding datasets.
+
+
+    From Table IX, it can be seen that the number of elements from each layer increase
+    the accuracy of the system. More elements from each layer cause the system accuracy
+    to increase, the same effect also increases the number of hidden layers. However,
+    adding more layers and elements of each layer will increase the complexity of
+    the system, the training process becomes longer. Therefore, it is necessary to
+    find the optimal parameters where all values provide the best value.
+
+
+    +   6) Decision Tree Decision Tree
+
+
+    # TABLE XII
+
+
+    | Validation size | Accuracy (%) | Precision | Recall | F1-score |
+
+    |---|---|---|---||}{
+
+    | 0.20 | 89.74 | 0.90 | 0.90 | 0.90 |
+
+    | 0.25 | 91.84 | 0.92 | 0.92 | 0.91 |
+
+    | 0.30 | 83.05 | 0.84 | 0.83 | 0.84 |
+
+    | 0.35 | 84.10 | 0.85 | 0.84 | 0.85 |
+
+
+    ACKNOWLEDGMENT
+
+    The authors would like to thank the School of Engineering and Informatics Institut
+    Teknologi Bandung Indonesia for the conference financial supports.
+
+
+    # REFERENCES
+
+
+    +   [1] National Institute of Neurological Disorders and Stroke, (2018). Parkinson''s
+    Disease Information Page [Online]. Available: https://www.ninds.nih.gov/Disorders/All-Disorders/Parkinson-Disease-Information-Page'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '[2] N.C. Brabo, T.S.C. Minett, and K.Z. Ortiz, “Fluency in Parkinson’s disease:
+    disease duration, cognitive status and age,” Arquivos de Neuro-Psiquiatry, vol.
+    72 no. 5, pp. 349-355. May 2014.
+
+
+    [3] G.J. Canter, “Speech Characteristics of Patients with Parkinson’s Disease.
+    I. Intimacy, Pitch, and Duration,” Journal of Speech and Hearing Disorders, vol.
+    28, no. 6, pp. 221. Aug. 1963.
+
+
+    [4] O. Kramer, “K-Nearest Neighbors,” in Dimensionality Reduction with Unsupervised
+    Nearest Neighbors. 1st ed. Berlin, Germany: Springer-Verlag Berlin Heidelberg,
+    2013, pp. 13-23.'
+  merge: -1
+  img_proc: true
