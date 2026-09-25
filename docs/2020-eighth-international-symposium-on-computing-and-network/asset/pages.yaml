@@ -1,0 +1,692 @@
+- pgno: 0
+  md: '# An In-Network Parameter Aggregation using DPDK for Multi-GPU Deep Learning
+
+
+    Masaki Furukawa, Tomoya Itsubo, and Hiroshi Matsumoto
+
+    Keio University, 3-14-1 Hiyoshi, Kohaka-ku, Yokohama, Japan 223-8552
+
+    Email: {furukawa,itsubo,matutani}@arc.iec.co.jp
+
+
+    Abstract—In deep neural network training using GPU nodes, communicate iteratively
+    between nodes for parameter aggregation. Communication latency limits the benefit
+    of training with faster GPUs. In distributed deep neural network training using
+    GPU nodes, workload of gradient aggregation is performed on a host machine. We
+    propose to offload the aggregation to a Data Plane Development Kit (DPDK)-based
+    switch between the host machine and GPU. In this approach, the aggregation is
+    completed in the network switch. We evaluate the switch using a standard IP communication
+    over Express and EthernetX 40G (A PCIe over 40GbE product). The evaluation results
+    show that the proposed switch provides a higher throughput compared to the method
+    performed on the host machine. The evaluation results using the PCIe over 40GbE
+    show that the proposed--DPDK-based switch reduces the aggregation time by the
+    host machine by 1.66x. This approach is thus useful for distributed training with
+    multiple GPUs.
+
+
+    to the network switch and executed by its extra computing resources. We evaluate
+    the switch GPU and the host machine with a standard IP communication and EthernetX
+    40G (A PCIe over 40GbE product). The evaluation results show that the proposed
+    switch provides a higher throughput compared to the method performed on the host
+    machine.
+
+    This paper is organized as follows: Section 2 introduces distributed training
+    and GPU extension. Section 3 proposes the DPDK-based switch that performs the
+    gradient aggregation. Section 4 describes the configuration and implementation.
+    Section 5 evaluates the aggregation performance using the proposed switch. Section
+    6 concludes this paper.
+
+
+    # 1. Introduction
+
+
+    Distributed learning using multiple GPUs is used to reduce training time. In data
+    parallel training, training process has (1) GPU computation phase for backpass
+    and (2) communication phase for parameter aggregation. The computation phase is
+    accelerated by GPUs. However, the communication phase is not accelerated, and
+    is not increased with GPU work counter. The performance of modern GPUs is significantly
+    increased, the aggregation overhead limit the benefit of distributed training
+    with multiple GPUs [1]. This paper proposes to offload the aggregation to a switch
+    of distributed training.
+
+
+    In this paper, we assume remote GPU environment using network-attached GPU, where
+    a host machine and GPUs are connected over 40GbE. In this case since the aggregation
+    is performed on the host machine, the aggregation depends on the performance of
+    the host machine. We propose a DPDK (Data Plane Development Kit) [2] based switch
+    which performs the aggregation in the network. The parameter aggregation is offloaded
+
+
+    The training process is divided into three phases: forward pass, backward pass,
+    and optimization. In the forward pass, a prediction is performed for each GPU.
+    In the backward pass, the gradient is calculated for each GPU. In the optimization,
+    parameters are updated using GPUs so that the errors are minimized. Generally,
+    the communications are on a GPU and can be parallelized using multiple GPUs.
+
+
+    There are two approaches to parallelize the training using multiple GPUs data
+    parallel and model parallel [4]. In the data parallel, the network data is divided
+    and applied to the neural network of each GPU. On the other hand, in the model
+    parallel, training is performed by duplicating the model into each GPU. The distributed
+    training using multiple GPUs requires an aggregation called All-Reduce. The performance
+    of a single GPU is a bottleneck in a distributed training. In the distributed
+    training, the gradients calculated by each GPU need to be aggregated between the
+    backward pass and the optimization. By performing this All-Reduce process, a large-scale
+    distributed training using a huge number bottleneck becomes possible. The model
+    parameters are updated based on these aggregated gradients in the optimization
+    phase.
+
+
+    # 2. Related Work
+
+
+    # 2.1. Distributed Training'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: "# 2.3. Communication Bottlenecks\n\nIn distributed training using remote GPUs,\
+    \ communication between remote GPUs is required to aggregate gradients. The aggregation\
+    \ is a sequential process. Furthermore, as the number of GPUs increase, parallel\
+    \ computation becomes faster, but overhead of the aggregation process increase.\
+    \ Communication latency of the network bottleneck. In [8], state-of-the-art DNN\
+    \ (Deep Neural Networks) were trained using a five-node cluster with 10GbE connections.\
+    \ In this case the communication time is a significant part of the total training\
+    \ time. In [9], parameter optimization algorithms, accelerated in 100GbE-based\
+    \ network.\n\nIn addition, some methods to de-centralize DNN using GPU clusters\
+    \ were proposed [10] [11]. A cluster consisting of 128 nodes with 1024 Tesla P100\
+    \ GPUs completed a training of ImageNet in 15 minutes. The nodes are connected\
+    \ with InfiniBand as a high-speed interconnect. The communication libraries used\
+    \ like NVIDIA Collective Communications and MPI accelerate the performance, but\
+    \ the communication overhead increases as the number of GPUs increases. In [10],\
+    \ it is reported that 20% of the training time with 1,024 GPUs is spent for the\
+    \ communication bottleneck.\n\n![](img/8db08bcf098fb19248fde4b91cb00e0e_1_0.png)\n\
+    \nSeveral variants of the gradient descent optimization algorithm have been proposed.\
+    \ Using the commonly basic optimization is SGD (Stochastic Gradient Descent).\
+    \ It is assumed that $\\beta_i$ is assigned to corresponding GPU, and $\\ell_i$\
+    \ denotes the loss function for minibatch $\beta_i$. In SGD, the weights are updated\
+    \ as follows:\n\n```\n$w^{(i+1)} = w^{(i)} - \\eta \\cdot \\sum_{j \\in \\beta_i}\
+    \ \\nabla \\ell_j(w^{(i)})$\n```\n\nwhere $w^{(i)}$, $\\ell_i$, and $\\eta$ denote\
+    \ the current weights, the current gradients, and the learning rate, respectively.\
+    \ Then, the minibatch is trained. This process employs synchronous training, which\
+    \ is important in terms of learning accuracy and convergence speed [5], but our\
+    \ proposal is also useful for asynchronous training.\n\n# 2.2-Networked GPU Technology\n\
+    \nDue to limitations in the number of PCIe slots and power, the number of GPUs\
+    \ that can be equipped on a single machine is limited. To mitigate these limitations,\
+    \ there is an approach to connect GPUs via remote network. This approach is also\
+    \ effective in terms of GPU utilization and power efficiency. In this approach,\
+    \ networked GPUs can be used as well as directly connected GPUs. The following\
+    \ describes two remote extension technologies.\n\nExpEther [3] is a PCIe over\
+    \ Ethernet that makes GPUs available via Ethernet. Each GPU and a host are connected\
+    \ to Ethernet using a hardware ExpEther. PCIe packets are encapsulated into Ethernet\
+    \ frames by this bridge and transmitted to remote nodes. We employ ExpEther 40G\
+    \ as a case of remote GPU environment in this study.\n\nrCUDA (remote CUDA) [7]\
+    \ is used to use GPUs via a network. rCUDA is a client-based server model. In\
+    \ this approach, GPUs are connected to server machines via PCIe slots, and the\
+    \ server machines are connected to the network. Clients request the server machines\
+    \ for processing via TCP/IP communication. Then, the server machines instead of\
+    \ clients perform the tasks using CUDA.\n\nMelanox SHARP (scalable Hierarchical\
+    \ Aggregation Protocol) [12] is known as a reduction communication offload technology.\
+    \ Reduction operations based on SHARP can be offloaded to InfiniBand switches\
+    \ as well to reduce the communication latency between machines equipped with GPUs.\
+    \ This paper targets the communication of the network-attached GPU clusters over\
+    \ Ethernet expressed by switch.\n\nComputing clusters consisting of several GPUs\
+    \ have been used for high-performance computing. This paper focuses on building\
+    \ low-cost clusters, where several GPUs and host with PCIe slots are loosely-coupled\
+    \ with technologies such as Ethernet.\n\n# 3. DPDK-Based Switch Design\n\n# 3.1.\
+    \ Remote GPU Environment\n\nThis section proposes a DPDK-based acceleration of\
+    \ gradient aggregation in deep learning. First, an assumed GPU configuration and\
+    \ bottlenecks in this configuration are described. The remote environment consists\
+    \ of a host machine, an Ethernet switch, and multiple GPU workers, and each component\
+    \ is connected to 40GbE network cables. As mentioned in Section 2.2, general-purpose\
+    \ machines cannot mount many GPUs due to the limited number of PCIe slots"
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'slots. In the remote GPU environments, the availability of GPUs is increased
+    by introducing Ethernet switches between the host machine and GPU workers (see
+    Figure 3).
+
+
+    In this case, gradient is aggregated by the CPU on a host machine for several
+    reasons. First, the use of a GPU enables unbalanced workload. Second, the GPU
+    does not have enough memory to hold all gradients. Third, since aggregation calculation
+    is done by simple vector additions, the overhead of copying gradients to the GPU
+    cannot be ignored. Communication latency between nodes during the aggregation
+    limits the benefit of GPUs. Finally, the breakdown of the system using two ExpterI/O
+    boxes each equipped with a GPU (GTX 1080). In this measurement, PyTorch is used
+    as a deep learning framework. ResNet152 is used as a DNN model, and SGD is used
+    as an optimization algorithm. Gradient computation and optimization are executed
+    by GPUs, while gradient aggregation is executed by the CPU on the host.
+
+
+    | Host | Host |
+
+    | --- | --- |
+
+    | | Gradient Aggregation |
+
+    | Ethernet Switch | Switch DDPK |
+
+    | GF GPU | GF GPU |
+
+
+    of GPUs. The aggregation by the network switch enables the wide bandwidth to be
+    used efficiently. In addition, since the aggregation is done by the network switch,
+    the switched resources at the host machine can be used for other computations.
+
+
+    Conventional System | Proposed System
+
+
+    Figure 3. When gradients are computed by GPUs, then transferred to a machine.
+    In our proposed system, gradient aggregation is done by DPDK-based switch.
+
+
+    ![](img/8db08bcf098fb19248fde4b91cb00e0e_2_0.png)
+
+
+    Figure 2. Breakdown of execution times in training phase
+
+
+    As shown in Figure 2, the gradient communication accounts for approximately 9%
+    of the time. Although GPU computation is dominant with few GPUs, the gradient
+    communication increases with the number of GPU nodes, which hinders the training.
+
+
+    # 3.3. DPDK-In-Network Aggregation
+
+
+    We offload aggregation to a software network. Switches are typically programmable
+    and can add many modules; they are useful for the aggregation task that needs
+    to synchronize gradient data. There are many ways to implement the software network.
+    In this case, we employ DPDK (2), which enables high-speed packet processing.
+    The dedicated de-threading of a CPU core polls NIC (Network Interface Card), and
+    an application controls the NIC directly. In distributed training with remote
+    GPUs, all gradient passes through the proposed switch. The gradient data is aggregated
+    at the same time by the switch. The switch reduces the gradient data in the network
+    by $1/N$, where $N$ is the number of GPUs. By performing the aggregation in the
+    network, the workload on a host machine is significantly mitigated.
+
+
+    # 3.2. Gradient aggregation using Network Switch
+
+
+    In recent years, the size of DNN models has increased with the benefit of faster
+    GPUs. The model size and number of connected GPUs, aggregation throughput is limited
+    by the bandwidth of an Ethernet switch and host switch. We estimate the minimum
+    communication time for each iteration. For a model of size $M$, with $N$ GPU workers,
+    and $B$ batches iteration, assuming gradients from GPU workers arrive asynchronously,
+    the minimum communication time between the switch and the GPU is $2M/B$, while
+    the time between the switch and the GPU is limited to $B/N$.
+
+
+    In this paper, we propose to offload the gradient aggregation to the network.
+    Figure 3 illustrates the proposed system, where gradients are aggregated by the
+    switch that connects the host machine and each GPU. This approach prevents the
+    mission time from increasing proportionally to the
+
+
+    # 4. Implementation
+
+
+    # 4.1. GPU Environment Setup
+
+
+    In this paper, we consider the following cases as
+
+
+    +   - Case 1 remote invocation of GPU tasks over a network, inspired by rCUDA,
+    where the proposed system is verified using a standard TCP/IP communication.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Proposed Network Switch
+
+
+    # Aggregation
+
+
+    # DPDK
+
+
+    User Space
+
+
+    MN
+
+
+    M
+
+
+    Hardware
+
+
+    NIC
+
+
+    Network
+
+
+    M
+
+
+    M
+
+
+    (5) Aggregated gradient
+
+
+    Host
+
+
+    Machine
+
+
+    (6) Signal
+
+
+    Application
+
+
+    GPU CPU NIC
+
+
+    DPDK Switch
+
+
+    OS
+
+
+    Machine
+
+
+    NIC
+
+
+    (4) AllReduce
+
+
+    GPU CPU NIC
+
+
+    (3) Send
+
+
+    (2) Gradient computation
+
+
+    (1) Mini-Batch
+
+
+    Figure 4. In-network aggregation using DPDK, N: GPU count, M: gradient size, z
+    -> Direction; Aggregated gradient
+
+
+    Figure 5. Case 1 using remote invocation of gpu tasks
+
+
+    +   - Case 2 ExpEther 40G, where the proposed system is applied to the actual
+    remote GPU technology.
+
+
+    4.2. Case 2. Case 6 shows the configuration of Case 2 and its data flow. This
+    environment consists of a host machine, I/O boxes equipped with GPUs, and the
+    proposed switch. Case 7a shows the IO box with 40GbE network using ExpEther. Figure
+    7b shows the 40G host adapter. The PCIe packet is encapsulated into an Ethernet
+    frame. The host machine handles protocols (transmission control, rate control,
+    retransmission for lost packets). Therefore, reliable communication does not forward
+    all packets to the host machine when gradients are aggregated on the switch. This
+    processing is for enabling the trace of packets. The flow from (1) to (4) is the
+    same as in Case 1.
+
+
+    We employ 40GBE as an interconnect between a host machine and GPU nodes. We implement
+    the environment using PyTorch as the deep learning framework in both cases.
+
+
+    # 4.2. Implementation Overview
+
+
+    4.2.1. Case 1. Figure 5 shows the configuration of Case 1 and its data flow. This
+    environment consists of a host machine, worker machines equipped with GPUs, and
+    the proposed DPDK-based network switch. In Case 1, each learning iteration proceeds
+    as:
+
+
+    +   1. The host machine extracts minibatches from a training dataset and distributes
+    them to each GPU.
+
+    2. The GPU of each worker calculates the gradient by aggregating matches to the
+    host machine using its own DNN model.
+
+    3. The calculated gradient is sent to the host machine.
+
+    4. These gradients are aggregated on the network switch of the host machine.
+
+    5. The aggregated gradient is multiplied by the switch to each GPU, not the host
+    machine.
+
+    6. Instead of receiving gradients from each GPU, the host machine receives a signal
+    indicating completion of the aggregation from the switch.
+
+
+    These steps can be used to mitigate communication overhead for gradient data communication.
+    In this implementation, we use UDP/IP and TCP/IP for other communication. Considering
+    the transmission efficiency and the packet buffer size in DPDK switch, packet
+    length containing gradient data is 1516 bytes, which includes additional headers
+    indicating the type of data and the sequence number of gradients.
+
+
+    ![](img/8db08bcf098fb19248fde4b91cb00e0e_3_0.png)
+
+
+    Figure 6. Case 2 using ExpEther
+
+
+    # 4.3. DPDK-Based Aggregation
+
+
+    Figure 8 illustrates an overview of the implemented DPDK-based aggregation switch.
+    The DPDK application receives packets directly in user space using a polling-receiving
+    mechanism (PMD, Mode Driver). The received packet is placed in the packet buffer
+    allocated on Huge, the adapter obtains the packet pointer using DPDK libraries.
+    The aggregation switch mainly consists of a sending / receiving thread group and
+    a aggregation thread group. These elements are implemented as DPDK threads, which
+    require no linear locks. Threads guarantee the order of the received packets,
+    and
+
+
+    111'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Evaluations
+
+
+    the aggregated data based on MAC address table and requests the corresponding
+    sending / receiving threads to send the packet. In actual environments, there
+    is a delay in the time until arrays are generated from all GPU nodes. In particular,
+    for larger data, a longer time occurs until the data is fully received. In this
+    organization, data receiving and aggregation operations can be efficiently overlapped
+    with less inter-thread synchronization. This is a preferable way to organize aggregation
+    threads.
+
+
+    ![](img/8db08bcf098fb19248fde4b91cb00e0e_4_0.png)
+
+
+    | Thread 1 | Thread 2 | Thread 3 | Thread 4 |
+
+    | --- | --- | --- | --- |
+
+    | | | | Gradient array 1 |
+
+    | | | Gradient array 2 |
+
+    | | | | Gradient array 3 |
+
+
+    perform packet processing using the header The packet containing the data to be
+    aggregated is passed from receiving to aggregation threads. The aggregation extracts
+    the data from the received packet and temporarily stores it on Hugeday in advance.
+    Assuming that the DNN model size M and N and additional memory MN are required
+    in the network switch. Packets are not to be aggregated based on the header information
+    and the MAC address table held by the each of port.
+
+
+    ![](img/8db08bcf098fb19248fde4b91cb00e0e_4_1.png)
+
+
+    # 5.1. Packet Processing Throughput
+
+
+    First, the proposed DPDK based network switch is evaluated in terms of packet
+    processing. In this evaluation, the switch is directly connected to NIC port of
+    another machine with 40ge cables. Each NIC is installed in PCIe 3.0 x16 slot of
+    meshes. These packets including gradient data are generated at a rate of 40Gbps
+    by DPDK-Pgen [13] and sent continuously from the packet generator to the proposed
+    switch. The throughput is measured by the number of packets processed per second.
+    The switch shows one the execution period for the proposed DPDK switch. In our
+    prototype implementation (Case 1), each packet contains 96 gradients and the length
+    including a packet header and the payload is 1536 bytes. By Exifer is used (Case
+    2), each packet contains 32 gradients and the total length is 1922.
+
+
+    ![](img/8db08bcf098fb19248fde4b91cb00e0e_4_2.png)
+
+
+    There are several ways to organize them. Figure 9 illustrates the way of gradient
+    aggregation for this switch. In this way, gradient array obtained by each NIC
+    port is divided into chunks of a fixed size. Each aggregation thread works on
+    the same chunk in all arrays. When chunks with a specific index are received from
+    all GPU nodes, the aggregation thread assigned to that chunk starts aggregation.
+    Then, when the aggregation operation is completed the
+
+
+    As a result of measuring the throughput in both cases, the proposed switch is
+    tested at 40Gbps and 26.1Gbps. Although the packets are transmitted continuously
+    at 40Gbps, the 40ge line is lower than 40Gbps when the Ethernet profile and interface
+    gate are considered for each packet. Considering the theoretical maximum of our
+    environment is 39.48Gbps for Case 1 and 36.23Gbps for Case 2. In Case 1, the measured
+    throughput of gradient aggregation is 99.8% of the maximum throughput, and thus
+    almost the line is achieved. However, in Case 2, the measured throughput is to
+    71.8% of the maximum. From this, it is considered that the'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'network bandwidth is limited by the proposed switch when ExEther is used in
+    our current implementation. Regarding the throughput, there is still room for
+    improved implementations, such as using RSS (Receive Side Scaling) and multi-threading
+    the switching thread, which will be addressed in our future work.
+
+
+    | OS | Ubuntu 18.04 |
+
+    | --- | --- |
+
+    | CPU | Intel Xeon E-2567 v3 @3.5GHz |
+
+    | Memory | 51GB |
+
+    | Hugepages | 16GB |
+
+    | NIC | Intel Ethernet XL710-QDA2 |
+
+    | DPDK | ver 18.11.2 |
+
+    | Pktgen | ver 19.10.0 |
+
+
+    TABLE 1. DPDK-SWITCH EXECUTION ENVIRONMENT
+
+
+    # 5.2. Aggregation Performance
+
+
+    5.2.1. Case 1. In this case, the proposed DPDK-switch is evaluated in the execution
+    time of gradient aggregation by removing GPU stacks. The environment consists
+    of three GPU workers, one host machine, and the switch connecting them. In particular,
+    the execution time when the packet gradient data received from any GPU node to
+    the aggregation is completely transmitted to each GPU is measured. CIFAR 100 using
+    dataset, and several DNN models with different sizes are used for the evaluation.
+    Table 2 shows DNN models and their sizes used in our evaluation. To verify the
+    effectiveness of the proposed switch, we compare the aggregation executed by the
+    switch with the aggregation in an application layer. Table 3 shows the execution
+    times for the workers and the host machine.
+
+
+    | Model | Parameter size |
+
+    | --- | --- |
+
+    | GoogleNet | 24.7 MB |
+
+    | VGG 19 | 80.2 MB |
+
+    | ResNet50 | 94.0 MB |
+
+    | ResNet152 | 232.6 MB |
+
+
+    TABLE 2. DNN MODELS
+
+
+    Figure 10 shows the execution time of gradient aggregation for each model, which
+    is averaged over 100 iterations. In this graph, X and Y-axes represent DNN models
+    and execution times respectively. As result, the aggregation using the proposed
+    switch (red bar) outperforms the aggregation on the host machine (blue bar) by
+    reducing communication overhead when using DPDK. By performing the aggregation
+    using the network switch, the transmission time of gradients can keep constant
+    over the number of nodes. Therefore, it is considered that further benefits can
+    be gained when using more GPUs.
+
+
+    ![](img/8db08bcf098fb19248fde4b91cb00e0e_5_0.png)
+
+
+    Figure 10. Execution time of the aggregation in case 1
+
+
+    | Worker | Host machine |
+
+    | --- | --- |
+
+    | OS | Ubuntu 18.04 |
+
+    | CPU | Intel Xeon E-2567 v3 @3.5GHz | Intel Core i7-4790 |
+
+    | Memory | 128GB | 8GB |
+
+    | GPU | GeForce GTX 1080 (11GB RAM) | - |
+
+    | DPDK | ver 18.11.2 | ver 1.3 |
+
+    | NIC | Intel Ethernet XL710-QDA2 | -
+
+
+    TABLE 3. WORKER AND HOST EXECUTION ENVIRONMENT
+
+
+    5.2.2. Case 2. We evaluate the execution time when using ExEther as the actual
+    remote GPU entity. In ReEther, socket communications performed by ExEther on proprietary
+    protocols contain many more packet-bridges, which lowers the throughput of the
+    proposed switch. In this evaluation, the execution time is aggregated using 32,000
+    parameters considering 1,000 packets. This execution time is defined as the time
+    until the addition of all gradients from each GPU is completed. The execution
+    time consists of two equipped GPUs, one host machine, and the proposed switch.
+    Figure 11 shows the comparison of the aggregation execution time. Note that this
+    time does not include processing the aggregated gradient. The aggregation performed
+    on the switch is 1.6 times faster than on the host machine. In particular, the
+    parameter size is used. In addition, packet for controlling ExEther protocols
+    introduces unnecessary overheads. Thus, there is room for improvement in our aggregation.
+    Through further implementation, the results show that the proposed switch is useful
+    for the actual remote GPU environment.
+
+
+    In evaluation, the aggregation throughput is improved by approximately 1.6x. Based
+    on the development of training time in Section 3.1, the entry time is shortened
+    by approximately 1.25%. In this paper, only'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '![](img/8db08bcf098fb19248fde4b91cb00e0e_6_0.png)
+
+
+    Figure 11. Execution of the aggregation in Case 2
+
+
+    few GPUs are used for the evaluation, but more GPUs are generally used. Overheads
+    of the increase with GPU node count. The proposed switch would further reduce
+    the entire time in distributed with more GPUs. Please note that the aggregation
+    is done by the network, the switch compute resources at the host machine can be
+    used for other tasks.
+
+
+    # 6. Summary
+
+
+    In distributed training using remote nodes, aggregation occurred between remote
+    nodes when gradients are aggregated. This aggregation causes some overhead. We
+    focused on remote GPU environments using network attached GPUs. In these environments,
+    aggregation load is on a host machine which lowers aggregation throughput. Therefore
+    we proposed to switch the aggregation to a DPDK-based network switch between the
+    host machine and remote GPU. Our evaluation showed that the proposed switch outperformed
+    the aggregation executed on the host machine by 2.2-5.4x. Our evaluation using
+    ExpEther showed aggregation throughput was improved by 1.66x with our current
+    implementation.
+
+
+    As a future work, we are evaluating the scalability of the switch (which is using
+    more GPUs in remote GPU environments). We are also planning to demonstrate the
+    performance improvement of training using low-cost GPU clusters composed of power-efficient
+    GPUs such as NVIDIA Jetson servers.
+
+
+    # References
+
+
+    +   [1] L. Gao, J. Nelson, L. Ceza, A. Phansheehee, and A. Krishnan, "Parameter
+    Hub: A Rack-Scale Server for Distributed Deep Neural Training," in Proceedings
+    of the ACM Symposium on Cloud Computing (Sys18), 2018, pp. 41-54.
+
+
+    +   [2] "Data Plane Kit." https://www.dpdk.org/
+
+
+    +   [3] J. Suzuki, Y. Hidaoka, Y. Hayashi, M. Kan, and T. Yoshida, "Disaggregation
+    and Sharing of IO Devices in Data Centers," IEEE Transactions on Computers, vol.
+    65, no. 10, 3013-3026, Oct 2016.
+
+
+    +   [4] M. Abadi, et al., "TensorFlow: A System for Large-Scale Machine Learning,"
+    in Proceedings of the USENIX Conference on Systems Design and Implementation (OSDI
+    16), 2016, pp. 268-283.
+
+
+    +   [5] J. Chen, R. Meng, S. Bengio, and R. Geoffois, "Revisiting Synchronous
+    SGD," arXiv:1604.00981, Mar 2017.
+
+
+    +   [6] Z. Suzuki, Y. Higuchi, T. Yoshikawa, and A. Iwata, "Ether-Presence - Hardware-Assisted
+    Technique for Virtualizing High-Performance Networks," in Proceedings of High-Performance
+    Computing (HOTPC), 2006, pp. 45-52.
+
+
+    +   [7] J. Duuto, A. J. Perilla, F. Silla, R. Mayo, and E. S. Quintana-Arri, "CUDA:
+    Reducing the number of GPU accelerators in High Performance Computing," in Proceedings
+    of High Performance Computing & Symposium (HICS), 2010, pp. 224-234.
+
+
+    +   [8] M. Chen, M. Alian, Y. Quan, Z. P. Wang, R. W. G. Schwarz, H. Emailizadeh,
+    and N. S. Kim, "Network-Centric Hardware-Design to Accelerate Distributed Training
+    of Deep Learning in Proceedings of International Conference on Computer Microarchitecture
+    (MICRO), 2018, pp. 175-188.
+
+
+    +   [9] T. Itubo, M. Koibishi, H. Amano, and H. Matatsu, "Accelerating Deep Learning
+    using multiple GPUs and DPDK-based SGD," in International Conference on Distributed
+    and Networked Computing (DPNC), Mar 2020, pp. 20-29.
+
+
+    +   [10] H. Akiba, S. Suzuki, and K. Fukuda, "Extremely Large Mini-batch SGD:
+    ResNet-50 in 15 Minutes," arXiv:1811.05233, Nov 2018.
+
+
+    +   [11] H. Hamada, S. Sugimoto, Y. Uchihara, T. Tanaka, and Y. Yamazaki, "Machine
+    Learning-Distributed SGD: ResNet-50 Training in a Flash," arXiv:1811.05233, Nov
+    2018.
+
+
+    +   [12] R. L. Graham, D. B. Lu, H. Rosenberg, G. Shimmer, G. Bleich, D. Goldberg,
+    M. Dubman, S. Kobachevsky, V. Koshnik, L. Lee, A. Meng, S. Summer, W. Etherne,
+    and A. Zahahi, "Scalable Hierarchical Aggregation Protocol (SHARP): Hardware Architecture
+    for Data Reduction," in 2016 First International Conference on Communication Informatics
+    (HOCOMIC), Nov 2016.
+
+
+    +   [13] "pktgen-dpdk," https://www.dpdk.org/doc/pages/pktgen-dpdk/
+
+
+    114'
+  merge: -1
+  img_proc: true
