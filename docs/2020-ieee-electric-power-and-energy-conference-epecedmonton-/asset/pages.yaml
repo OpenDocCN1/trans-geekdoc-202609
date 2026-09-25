@@ -1,0 +1,434 @@
+- pgno: 0
+  md: "# A Two-Stage Deep-Learning Based Detection Method for Pipeline Leakage and\
+    \ Transient Conditions\n\nIman Anmani, Yindi Jing, Tongwen Chen, Amin Colin, and\
+    \ Gordon Meyerer\nDepartment of Electrical and Computer Engineering, University\
+    \ of Alberta, Edmonton, AB, Canada T6G 2V4\nSuncor Energy Logistics Corporation\n\
+    \nLeakage detection is of great importance\nas pipelines are the means of transporting\
+    \ hydrocarbon\ngases and fluids. In this paper, a novel two-stage\nmethod is introduced\
+    \ to handle multiple, leakage and transient\nconditions. In this method, the hyperbolic-\n\
+    characteristics from the flow and pressure leakage\ntargeting estimator, are normalized\
+    \ with the modified\ndifferentiient neural network is used in the first stage\n\
+    to extract the features with the feature vectors. In the second stage,\nmachine\
+    \ learning is used to classify the normal and\nabnormal time-windows. In addition,\
+    \ a pre-leak-size tolerance\nis used to trigger alarms for detect leakage-windows.\
+    \ The results\nare been shown to have higher detection performance and less false\
+    \ alarms\nwith comparison to the baseline and Kandovich detection method.\n\n\
+    The point analysis method shows the statistical\nproperties of the before and\
+    \ after leakage conditions\n[7]. The drawback of this method is the triggering\
+    \ of false\nalarms during transient conditions. A novel method based\nKandovich\
+    \ detection (KD) was proposed in [4], which was\nshown to be sensitive to changes\
+    \ in pressure and flow\npipeline modeling can also be used to detect leakage\n\
+    as the difference between the predicted values and\nmeasurement. This method,\
+    \ however, is computationally\nintensive and lacks the flexibility of the method.\n\
+    \nIndex Terms—leakage detection, data analytics, signal processing,\ndeep machine\
+    \ learning\n\n# I. INTRODUCTION\n\nPIPELINES are vital in transporting hydro-\n\
+    drocarbon products such as fuels, gas, and other\nchemicals; however, leakage\
+    \ is caused by age,\nncrosion, and third-party damages, are highly critical.\n\
+    Leakage poses severe risks to the environment, and\nhuman safety are of great\
+    \ importance. Many methods have\nbeen proposed to monitor pipelines, which generally\
+    \ fall into four\ncaterories: non-technical methods, hardware-based,\nsoftware-based\
+    \ methods. Among these three methods,\nnon-technical and hardware-based methods\
+    \ are not\ntically used as the main strategy for pipeline monitoring\ncost-effective\
+    \ solutions.\n\nSoftware-based methods use flow measurements as\nt flow rate,\
+    \ pressure, temperature and other parameters\nto monitor discrepancies in online\
+    \ data [5]. The line\nnnalarm is based on the difference between inlet and outlet\n\
+    flow difference. This method is easily implemented;\nhowever, the threshold tuning\
+    \ can be challenging\nto a trade-off between false alarms and detection.\n\nIn\
+    \ recent years, a few methods utilize advanced\nprocessing tools have also been\
+    \ proposed. They consider\nextraction of leakage data in the pressure and flow\
+    \ rate\nto signification between normal and leakage conditions.\nMarkov-based\
+    \ method, wavelet and statistical features\n[9], and correlation coefficient to\
+    \ extract features\nlong short-term memory (LSTM) are used to extract\nfeatures\
+    \ in these methods. The leakage detection\nis prone to high false alarms due to\
+    \ operational (\ntient) or noisy data.\nThese false alarms can overwhelm operators\
+    \ during\nmonitoring.\n\nIn this paper, targeting to eliminate false alarms caused\n\
+    \ conditions such as accurate leakage detection,\nwe propose a two-stage deep-learning\
+    \ detection\nmethod to handle normal (state), transient), and\nleakage conditions\
+    \ in pipelines with flow method. This\nutilizes the method of flow rate difference\
+    \ and pressure variation\ntow extract the features. The modified neural network\
+    \ is\nsensitive to the small change and effect of every characteristic\nis used\
+    \ to normalize the feature vectors. In the first stage of\nthe, a trained deep-learning-based\
+    \ classifier\nto classify the normal and abnormal (or \ntient) conditions. The\
+    \ second stage, leakage and\ntient are separated using simple logic. In addition,\n\
+    leak size size and restriction are used to remove\nfalse alarms caused by noises\
+    \ and disturbances. The proposed\nmethod is tested using real industry data and\
+    \ to have a\nhigh F1 score and a low alarm rate. The result shows that\n\nThis\
+    \ work was supported by NSERC of Canada.\n\n978-1-6281-4469-2/20:$35.00 ©2020\
+    \ IEEE"
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# 2020 IEEE Electric Power and Energy Conference (EPEC)
+
+
+    the proposed method leads to a better performance in comparison to two methods
+    in the literature. The rest of this paper is structured as follows. Section II
+    describes the problem formulation and leak signature. Section III proposes the
+    scheme including pre-processing, classification using artificial neural networks
+    (ANN) and differentiation of transients and leak-size restriction for alarm detection.
+    Finally, the detection results of the proposed scheme and comparisons based on
+    real industrial data are shown in Section IV.
+
+
+    ![](img/2b334e8c817fc860dd71e02094b44f66_1_0.png)
+
+
+    Fig. 1: Flow rate and pressure data under leakage and transient conditions (scaled
+    industrial data).
+
+
+    # II. PIPELINE MODEL AND FEATURE EXTRACTION
+
+
+    # A. System Description and Problem Statement
+
+    in this paper, datasets from Suntran Energy Logistics Corporation are used to
+    train and test the proposed algorithm. The data were obtained through online monitoring
+    of data from the Supervisory Control and Data Acquisition (SCADA) system. In these
+    datasets, flow rates for upstream and downstream are provided, as well as pressure
+    at the two nodes and the three middle nodes. In the proposed method, the flow
+    difference and pressure from the upstream sensor are used
+
+
+    happens, due to fluid loss in the pipeline, the outlet rate is less than the inlet
+    rate, which causes an imbalance between inlet and outlet flow rates.
+
+    on the other hand, pipeline transient conditions, pressure and flow rate can increase
+    or decrease, due to operational changes made by the pipeline control center. This
+    operator can cause difficulty in the detection of transient. For instance, when
+    there is a transient condition in the pipeline, the pressure decreases, which
+    is the first characteristic of a transient. For example, a step-up (increase in
+    flow rate), in the pipeline, the flow difference increases, which has the same
+    trend as a leakage. Nevertheless, there are signatures to separate a leakage from
+    transient condition. For example, the step-down case, the flow rate decreases,
+    which is different from the leak signature. The second transient condition, the
+    pressure and flow rate increases, which is from leakage. Therefore, the flow difference
+    and pressure signals are required to distinguish leak from transient conditions
+    (Fig. 1 shows both process: step-up, step-down, and leakage for the flow rate
+    and pressure).
+
+
+    In order to apply the machine learning algorithm, time-series data are transformed
+    into feature vectors over time-windows. A time-window length, $L$, is set to define
+    the interval between time-windows:
+
+
+    ```
+
+    $TW(i) = [x(i-L+1), \dots, x(i)]$
+
+    ```
+
+
+    where $TW(i)$ is the vector containing indexes of data of the $i^{th}$ time-window
+    and $s$ is the number of samples by which the time-window moves from one index
+    to the next. The leak detection is to provide a label for each time-window using
+    the feature extractor from data of the time-window. This can be modeled by the
+    following function:
+
+
+    ```
+
+    $y(i) = f(TW(i))$
+
+    ```
+
+
+    where $y(i)$ is the predicted label of $TW(i)$. There are three important conditions
+    in the oil and gas pipeline: (steady-state), transient and leakage. These are
+    the possible labels for the leak detection output:
+
+
+    # B. Pipeline Leak Signature
+
+
+    Pipeline leakage has significant characteristics as “leak signatures” in pipelines
+    with fluid loss, the equilibrium rate in pressure and flow rate change. The first
+    one is when the pressure drops at all measure nodes. The behavior is behavior
+    based on mass conservation which states that the fluid remains inside the pipeline
+    until it exits from the end node [5]. During steady-state condition, the inlet
+    and outlet volume rates inside the pipeline are balanced, provided that fluid
+    density and cross-sectional area of the pipeline remain along the pipeline. On
+    the contrary, when a leakage
+
+
+    # III. Proposed Algorithm
+
+
+    In this section, a data-based method is introduced to detect and classify transient
+    conditions from pressure and flow rate signals. The detection scheme is shown
+    in Fig. 2, which has three main stages: pre-processing, Stage 1, detection and
+    Stage 2. During pre-processing, the data is divided into time-windows. The features
+    are extracted from data of these time-windows and are normalized. In this method,
+    an ANN is used to classify the normal class ($y = 0$) from the leak event and
+    transient conditions. In the detection stage, the method is used to detect transient
+    conditions via a low difference between the flow rate and pressure change and
+    a leak-size restriction. This stage helps to remove false alarms by transient
+    and noisy time-windows. In the following subsections, we explain the three components
+    in detail:'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# 2020 IEEE Electric Power and Energy Conference (EPEC)
+
+
+    ![](img/2b334e8c817fc860dd71e02094b44f66_2_0.png)
+
+
+    Fig. 2: The two-stage detection algorithm.
+
+
+    # A. Data Pre-processing
+
+
+    The flow difference and pressure data are pre-processed through several steps
+    before the detection stages. First, a sliding time window with size L and mean
+    lengths s are processed, and the data is grouped into a sequence of leads to go
+    robust. Then, for each time-window, a feature vector is obtained. In order to
+    have a common scale for these features, we normalize the feature vectors.
+
+
+    +   1) Features: As discussed in Section II, a drop and increase in flow rate
+    difference between the first and last nodes are key features of a leak in pipelines.
+    The following two features are used in this work:
+
+
+    +   * Mean of volume flow rate difference denoted as $X(i)$: For the k-th window,
+    the mean of the volume flow difference between inlet and outlet nodes is based
+    on
+
+
+    $$X_i(k) = \frac{1}{L} \sum (V_i(k) - \hat{V}_i(k))$
+
+
+    where $k_j$ is the $k$-th time-window and $L$ is the length of the time-window.
+
+
+    +   * Mean of pressure difference denoted as $Y(i)$: The mean of pressure difference
+    for the k-th time-window is obtained as follows:
+
+
+    $$Y_i(k) = \frac{1}{L} \sum (P(k) - P(k))$
+
+
+    where $P(k)$ is the measured pressure for the k-th window at the upstream sensor.
+
+
+    +   2) Modified Hyper-Tangent Estimation: Modified tangent estimation to perform
+    classification for neural networks. The main advantage of this method is robustness
+    to outliers. The normalized feature vectors $X^{(i)}$ for $i = 1, 2$. This estimator
+    yields normalized data with the following expression:
+
+
+    $$X^{(i)}(k) = \tanh(\frac{0.01(X(k) - \mu_i)}{\sigma_i})$
+
+
+    where $X^{(i)}(k)$ is the normalized value of $X(k)$ by $\mu_i$ and $\sigma_i$
+    are the mean and standard deviation of the scores
+
+
+    of the variable respectively [11]. In this method, we compute the mean and standard
+    deviation respectively through steady-condition samples and use them in the normalization,
+    which leads to go robustness.
+
+
+    # B. Stage 1 Detection
+
+
+    The first stage of detection is to differentiate normal and abnormal (leak or
+    transient) conditions. In this stage, an ANN is trained using pre-processed training
+    data and leads to classify pipelines. The ANN is composed of normalized features,
+    the normal (state-condition) is labeled as ''abnormal'', if both transient and
+    leak conditions are considered as an abnormal and as ''1''.
+
+
+    In our design, the layers use the ''relu'' function and the last layer uses the
+    probability of difference in time-windows. Thus, the output yields the probability
+    of $y_i(k)$ in the $k$-th time-window. In order to perform classification, a threshold
+    function, $\alpha$, is set using $y_i(k)$ to label each time-window. The classification
+    results vary over different values of $\alpha$.
+
+
+    # C. Stage 2 Detection
+
+
+    In the second stage of detection, we separate transient and leak conditions. In
+    addition, we reduce false alarms using a pre-set size threshold. Here we use two
+    strategies to remove false alarms by operational changes (transient conditions).
+
+
+    +   1) Distinguishing Conditions Using Signs of Flow Change and Pressure Change:
+    From our discussion in Section II, an increase in flow rate difference and pressure
+    drop are the most major characteristics of leak conditions. However, the leak
+    structure also normalizes the variation in pressure becomes similar to steady-state.
+    On the contrary, the pressure always varies during transient conditions such as
+    pipeline shutdown or flow steps. Therefore, the following logic-based on the signs
+    of the flow change and pressure change is used to distinguish leak and transient
+    conditions.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "# Algorithm 1 Stage Detection\n\n```\nFor Time window $k$ labeled as $y(k)\
+    \ = 1$\n  if $X_1(k) < 0$ then\n    $y(k) = 2$;    Step-down\n  else\n    if $X_1(k)\
+    \ \\geq 0$ and $X_2(k) > \\lambda$ then\n      $y(k) = 2$;    Step-up\n    else\n\
+    \      Alert = 1;\n      if $LE(k) \\geq \\gamma$ then\n        $y(k) = 1$;n \
+    \       else\n          $y(k) = 0$;    Normal\n  end\nend\n```\n\n![](img/2b334e8c817fc860dd71e02094b44f66_3_0.png)\n\
+    \nFig. 3: DR-FAR curves of the proposed method and the line learning tools for\
+    \ Stage 1\n\nTABLE I: Comparison of performance machine learning tools for Stage\
+    \ 1 detection\n\n| Machine Learning Methods | FAR (%) | DR (%) | F1 |\n|---|---|---|-|\n\
+    | Linear Regression | 0.08% | 90.6% | 0.9444 |\n| SVM | 0.25% | 92.1% | 0.9482\
+    \ |\n| ANN | 0.16% | 91.39% | 0.9485 |\n\nFor the 5th time window, when the average\
+    \ flow is negative ($X_1(k) < 0$), the abnormality is labeled as step-down (transition)\
+    \ $y(k) = 2$. In the case of a positive average flow, it can either be normal\
+    \ or raised (step-up). If $X_2(k)$ exceeds a pre-set threshold $\\lambda > 0$,\
+    \ the time-window is labeled as stabilizing ($y(k) = 2$). If the flow increases\
+    \ three times in a row, it is raised. The threshold $\\lambda$ can be set to three\
+    \ the standard deviation of $X_k$ under normal conditions. If the pressure increases\
+    \ three times more than normal conditions, it is considered as a process of recovery.\n\
+    \n**2) Removal Based on Leak-Size:** When a time-window is labeled as leakage,\
+    \ an alert is raised in size. This data may be labeled as $LE(k) = 1$ due to the\
+    \ noise, fluctuation in values, and the estimation of the leak size is affected\
+    \ by the effect of temporarily noise. The leak size for the $k^{th}$ time window\
+    \ is obtained using the flow rate difference in $L(k^{th})$ for a sequence of\
+    \ alerts starting from $k_0^{th}$:\n\n```\n$LE(k) = \\frac{d}{j-i_0} \\sum(V(j)\
+    \ - V(i_0))$$\n```\n\nwhere $i_0$ is the start index of the $k^{th}$ time-window,\
+    \ $j$ is the last index of the last time-window and it is raised. In this step,\
+    \ if the leak size of a time-window exceeds a pre-specified tolerance $\\gamma$,\
+    \ an alert is raised; otherwise, the alert is rejected.\n\nThe overall scheme\
+    \ for the second stage of detection is summarized in Algorithm 1.\n\n# IV. PERFORMANCE\
+    \ VALIDATION\n\n# A. Real Industrial Data and Detection Setting System\n\nIn this\
+    \ section, the proposed detection is tested with real industrial data from Sanhui\
+    \ Energies Corp.\n\nIn order to compare the performance of machine learning tools\
+    \ for Stage 1, in Table I, the FAR, DR and F1 scores are shown for the ANN and\
+    \ two popular machine learning methods, whose parameters are tuned with k-fold\
+    \ cross-validation. The leak-size detection is set to zero for all methods and\
+    \ $\\alpha$ is 0.5 where it applies. It can be observed, ANN has the best overall\
+    \ performance. The linear regression has has less false alarm. Nevertheless, the\
+    \ DR is lower than other methods. The ANN classifier also has the highest F1 score."
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# 2020 IEEE Power and Energy Conference (EPEC)
+
+
+    # II. Sensitivity of the proposed method with leak-size
+
+    tolerance
+
+
+    | λ (m3) | FAR (%) | DR (%) | F1 |
+
+    |---|---|---|--|
+
+    | 0 | 0.16% | 91.30% | 0.9484 |
+
+    | 1 | 0.16% | 90.73% | 0.9448 |
+
+    | 2 | 0.08% | 88.74% | 0.9371 |
+
+    | 3 | 0.05% | 86.75% | 0.9291 |
+
+
+    Table II: Sensitivity of the proposed method with leak-size tolerance
+
+
+    Table II shows that as the leak-size increases, the algorithm becomes more conservative
+    in detection. Therefore, it fails to detect some leaks, while the detection rate
+    also decreases. As can be seen in Table II when λ = 0, the algorithm achieves
+    the highest DR and FAR. By increasing λ, the false alarm rate decreases and DR
+    is received when λ = 0.3, with a reasonable detection rate of 75.1 F1 scores
+
+
+    Fig. 4 shows the DR of the proposed method using comparison with the linear method
+    using various methods. As can be seen from Fig. 3, in low FAR, the DR of the proposed
+    method is significantly higher than the linear method. For the case of FAR ≥ 10%,
+    the DR of the linear method is slightly higher.
+
+
+    ![](img/2b334e8c817fc860dd71e02094b44f66_4_0.png)
+
+
+    Fig. 4: Detection delay of the small leak scenario VERSUS FAR.
+
+
+    ![](img/2b334e8c817fc860dd71e02094b44f66_4_1.png)
+
+
+    Fig. 4 and 5 compare the performance of the proposed method and the Kantarovich
+    distance method for small and large leak scenarios. In this comparison, both methods
+    use the upstream pressure and flow rate data. For the proposed method, α is set
+    to 0.5. For the Kantarovich distance method, the
+
+
+    Fig. 5: Detection delay of the large leak scenario VERSUS FAR.
+
+
+    difference is larger than the standard deviation of the 100th first-day scenario
+    flow rate difference. We show the detection delay and FAR for leak-size values
+    for the proposed method and Kantarovich distance methods for the upstream pressure.
+    The difference is significant in the case of large leak scenario, the proposed
+    method fails in FAR for all detected leak values. However, the Kantarovich distance
+    method has a smaller delay in detection
+
+
+    increasing the leak-size, the algorithm gives no false alarms while making 86.7%
+    FAR. Finally, the method shows have better performance in comparison with two
+    existing methods, the linear and Kantarovich distance methods.
+
+
+    detection with no false alarms.
+
+
+    # V. CONCLUSION
+
+
+    In this paper, we proposed a leak detection algorithm using signature based feature
+    vectors and deep classification method. The algorithm was implemented on an industrial
+    dataset in one month and the efficiency of the method was compared to two existing
+    methods. The result showed that the proposed algorithm with ANN has the highest
+    F1 score in comparison with all three machine learning methods. Further, by
+
+
+    +   [1] K. Rehman and F. Wang, “Remote pipeline monitoring using gas sensors,”
+    in Proc. IEEE 2017 International Conference on Communication, Computing and Systems
+    (CCDE), pp. 32–37, 2017.
+
+    [2] S. Wang and M. Li, “A survey on leak detection and localization in natural
+    gas networks,” in Proc. IEEE 2016 International Conference on Industrial Electronics,
+    pp. 2562–2567, 2016.
+
+    [3] Y. Liu, X. Zhang and J. Zhao, “A novel hybrid for leak detection and location
+    in pipelines,” Journal of Process Control, vol. 68, pp. 103–110, 2018.
+
+    [4] X. Li, Y. Zhang, G. A. Gher, and A. Melin, “A novel method for leak detection
+    and localization using Kantarovich distance method,” Journal of Process Control,
+    vol. 75, pp. 115–125, 2019.
+
+    [5] M. A. Addegue, F. Wang and K. P. Kumari, “Leak detection in pipeline monitoring
+    and leak localization techniques: Principles and prospects,” Energy, vol. 189,
+    pp. 116833, 2021.
+
+    [6] G. Geiger, D. Vogt and T. Teitzner, “State-of-the-art leak detection and localization
+    in gas pipelines,” Energy, vol. 228, pp. 119833, 2022.
+
+    [7] A. Min, Md. A Khan and V. Vasudevara, “Pressure point analysis for early leak
+    detection system,” in Proc. IEEE 2011 International Conference on Communications
+    and Technology (ICCIT), pp. 762–767, 2011.
+
+    [8] D. Wang, J. Liu and H. Wang, “Machine-based feature extraction for anomaly
+    detection in industrial processes,” in 2018 Chinese Conference on Data and Conference
+    (CDCDC), pp. 1095–1103, 2018.
+
+    [9] J. Li, Y. Zhang and K. Wang, “A review on leak detection and isolation methods,”
+    Energy Reports, vol. 6, pp. 542–555, 2020.
+
+    [10] P. Xu, J. Liu and Z. Zhang, “Predicting leak detection in pipeline systems
+    using GAN and LSTM,” Knowledge-Based Systems, vol. 175, pp. 50–61, 2020.
+
+    [11] L. Latha and S. Sangamitha, “Efficient approach to normalization of multiple
+    time series,” International Journal of Computer Applications, 322(10), 1–10, 2019.
+
+    [12] D. P. Kingnana and J. Ba, “A method for stochastic optimization,” arXiv:
+    preprint:1412.60904, 2014.'
+  merge: -1
+  img_proc: true
