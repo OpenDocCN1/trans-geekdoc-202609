@@ -1,0 +1,1002 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Application of Deep Learning Algorithm in
+
+    Generator Fault Prediction
+
+
+    Xia Yun
+
+    Information Center of Zhejiang University
+
+    Hangzhou, China
+
+    yunxia@163.com
+
+
+    Haiwei Wu
+
+    China Electric Power Research Institute (Nanjing)
+
+    nanjing, China
+
+    wh2010081@126.com
+
+
+    **Abstract—** Rapid development of information and
+
+    communication technology brings the advantage of advanced
+
+    management and control system, especially for power system.
+
+    ful information has been extracted but this data is not
+
+    fully utilized, the existing fault detection technologies are
+
+    usually based on monitoring and diagnosis rather than\prediction. This paper proposes
+    integrating deep learning
+
+    alalgorithm into the fault prediction of generators in power
+
+    system, and explore the validity and feasibility of
+
+    operation data in fault prediction application. Our method\includes two preprocess-based
+    module which is used to reduce the
+
+    dimension, there is a deep linear regression model which
+
+    delineates the extracted data and predicting
+
+    the fault behavior of generators. Experimental
+
+    results demonstrate the effectiveness of our
+
+
+    **Keywords—** fault prediction, feature extraction, dimension
+
+    relation, least square, deep learning
+
+
+    production safety of the whole power plant. In recent years,
+
+    t frequency of unscheduled shutdown caused by
+
+    generators'' abnormal faults increased, so monitoring the
+
+    generators'' state in an all-way way, studying the state
+
+    information to predict the fault in advance, and improving
+
+    the equipment management and to reduce the
+
+    requency of accidents and improve the reliable, and
+
+    term-long operation of the generator is what
+
+
+    Recent fault detection technology has experienced a
+
+    level development, which mainly includes post-fault
+
+    diagnostic, diagnosis, equipment condition
+
+    monitoring and pre-fault. Except for pre-fault
+
+    prediction, fault detection technologies have been
+
+    relatively developed. They use time-ndomain and frequency-domain analysis
+
+    to analyze the signal data of engines, fans, bearings,
+
+    gearbox and joints. Since then, artificial intelligence,
+
+    edge neural network and support vector machine
+
+    have been applied in it. As an application of part
+
+    fault, fault detection technology has become the main
+
+    field of fault diagnosis research in industrial and\enterprise departments. These
+    technologies were used in
+
+    military equipment management, and then applied to
+
+    generator units, various power generation
+
+    fault prediction network [1, 3, 5, 6]. A large
+
+    number of different methods have been used, in the
+
+    practical work today, all kinds of prediction methods
+
+    have their limitations. However it is also clear
+
+    it is difficult to determine the relationship between
+
+    parameters, or the speed of prediction can be
+
+    improved. In other words, the task of fault prediction
+
+    many is limited. The real-time accuracy of fault
+
+    prediction, the robustness and most mainly part of
+
+    the evaluation of index fault.
+
+
+    # I. INTRODUCTION
+
+
+    With the rapid development of information and
+
+    communication technology, the power system has
+
+    sachieved automated management, and many distributed
+
+    management and control system brings which a
+
+    great benefit for the real-time monitoring and
+
+    of operation of unit in the power system.
+
+
+    As an important subset of the power system,
+
+    ower generation system is responsible for managing
+
+    and controlling electrical power generation
+
+    equipment, such as the generators. With the rapid
+
+    development, the economic demand of
+
+    varies increasing every year. In order to meet
+
+    the demand for electricity generation to increase
+
+    the number of generator units. However, the more
+
+    number of generator units, the more complex the
+
+    ordination between equipment will be. Therefore, the
+
+    trequency of fault and the number of
+
+    components will increase correspondingly. If there is a fault,
+
+    it will cause severe consequences, for example, the
+
+    unit will be out for a long time, and personal
+
+    safety will be threatened. These
+
+    time-consuming maintenance, and the cost of
+
+    maintenance and rest of the unit also affects the
+
+    economic benefits of power generation. Therefore,
+
+    it very important to improve the reliable and safe operation
+
+    power generation equipment.
+
+
+    As the main power equipment, and safe
+
+    reliable operation of the generators is closely related to the
+
+
+    In this paper, we focus on the fault prediction
+
+    generators in power system, and introduce deep learning
+
+    methods. Our method includes two: the first is
+
+    a Partial Least Squares (PLS)-based pre-process
+
+    module which is used to reduce the dimension, the
+
+    second is a deep linear regression model which is dedicatnto the extracted data
+    to predict the
+
+    fault behavior of generators. The PLS method not only
+
+    reduce the dimensions and explain the variables,
+
+    but also retain the information in the original knowledge
+
+    system and eliminate the noise interference. The knowledge of
+
+    de linear regression is that it can well fit the
+
+    distribution relation in the original system, get
+
+
+    Shenyang, China
+
+    November-20, 2022'
+  - '[PAGE 1]
+
+
+    the global optimal, and learn the mapping relationship with generalization performance.
+    reducing dimension and complexity can improve the efficiency of data processing
+    and shorten the processing time of the model, while the prediction error can be
+    reduced by the deep linear regression model, which results have a good quality
+    alignment. The combination of two can fulfill the requirements of real-time and
+    accuracy, and has a practical value for equipment diagnosis.
+
+
+    # II. RELATED WORKS
+
+
+    Fault diagnosis technology has a long development stage, which includes many posts-fault
+    diagnosis, preventive condition monitoring and pre-fault detection. The technologies
+    of fault detection and preventive monitoring are relatively mature and used for
+    many state detection and diagnosis systems, such as Nevada, Colorado, Vibport,
+    and Turning. These technologies use time-domain analysis and frequency-domain
+    analysis to analyze the vibration signal, and are mainly used in fault detection
+    and diagnosis of bearing, gearbox and so on [1, 2].
+
+
+    Since 1980s, expert system, neural network vector machine have been applied in
+    practice. As an important part of fault diagnosis, fault prediction technology
+    has become the main direction of research institutions and enterprises. In early
+    stage, it was generally used to predict the faults of industrial equipment. The
+    U.S. military first proposed and developed a new type of independent logistics
+    systems for the
+
+
+    ![](img/4cafb5035990948b952cd5e8b5b5f9da_1_0.png)
+
+
+    **PLS-based Module.** As one of the most effective extraction and dimensionality
+    reduction methods, PLS [16, 17] can fully consider all of principal components
+    to interpret the output variables. The basic idea is to regress the decompose
+    input matrix and the output matrix maybe step by step to consider the extraction
+    of the extracted principal components to interpret the input matrix and the output
+    matrix until the required performance is met. It can be seen that this process
+    is an operation of gradually extracting the change information of dependent variable
+    and independent variable. The total amount of information remains unchanged,
+
+
+    # III. ALGORITHM
+
+
+    We explore the application of deep learning in generator fault prediction. Our
+    method includes two parts, the first is Partial Least Squares (PLS)-based proposed
+    method which is used to reduce the feature dimension, the second is a deep linear
+    regression model which is dedicated to regenerating the generator operation data
+    and predicting the behavior of faults. The overview of our method is shown in
+    Figure 1.
+
+
+    and each component knowledge recognizes the change information of important components
+    of PLS should be determined according to the cumulative ratio of generation. Generally,
+    only the independent variables explain the change information of most independent
+    variables and dependent variables, which are 65%, 75%, 80%, or so on.,
+
+
+    As shown in Table 1, the feature parameter data of the generator from the set
+    of a power plant. We can find there are 23 factors that affect the normal operation
+    of the generator. The analysis of some previous work on the generator fault, the
+    two'
+  md: '
+
+    # Application of Deep Learning Algorithm in Generator Fault Prediction
+
+
+    Xia Yun
+
+    Information Center of Zhejiang University
+
+    Hangzhou, China
+
+    yunxia@163.com
+
+
+    Haiwei Wu
+
+    China Electric Power Research Institute (Nanjing)
+
+    nanjing, China
+
+    wh2010081@126.com
+
+
+    **Abstract—** Rapid development of information and communication technology brings
+    the advantage of advanced management and control system, especially for power
+    system. Useful information has been extracted but this data is not fully utilized,
+    the existing fault detection technologies are usually based on monitoring and
+    diagnosis rather than prediction. This paper proposes integrating deep learning
+    algorithm into the fault prediction of generators in power system, and explore
+    the validity and feasibility of operation data in fault prediction application.
+    Our method includes two preprocess-based module which is used to reduce the dimension,
+    there is a deep linear regression model which delineates the extracted data and
+    predicting the fault behavior of generators. Experimental results demonstrate
+    the effectiveness of our
+
+
+    **Keywords—** fault prediction, feature extraction, dimension relation, least
+    square, deep learning
+
+
+    In recent years, the frequency of unscheduled shutdown caused by generators''
+    abnormal faults increased, so monitoring the generators'' state in an all-way
+    way, studying the state information to predict the fault in advance, and improving
+    the equipment management and to reduce the frequency of accidents and improve
+    the reliable, and long-term operation of the generator is what ensures production
+    safety of the whole power plant.
+
+
+    Recent fault detection technology has experienced a level development, which mainly
+    includes post-fault diagnostic, diagnosis, equipment condition monitoring and
+    pre-fault. Except for pre-fault prediction, fault detection technologies have
+    been relatively developed. They use time-domain and frequency-domain analysis
+    to analyze the signal data of engines, fans, bearings, gearbox and joints. Since
+    then, artificial intelligence, edge neural network and support vector machine
+    have been applied in it. As an application of part fault, fault detection technology
+    has become the main field of fault diagnosis research in industrial and enterprise
+    departments. These technologies were used in military equipment management, and
+    then applied to generator units, various power generation fault prediction network
+    [1, 3, 5, 6]. A large number of different methods have been used, in the practical
+    work today, all kinds of prediction methods have their limitations. However it
+    is also clear it is difficult to determine the relationship between parameters,
+    or the speed of prediction can be improved. In other words, the task of fault
+    prediction many is limited. The real-time accuracy of fault prediction, the robustness
+    and most mainly part of the evaluation of index fault.
+
+
+    # I. INTRODUCTION
+
+
+    With the rapid development of information and communication technology, the power
+    system has achieved automated management, and many distributed management and
+    control system brings which a great benefit for the real-time monitoring and of
+    operation of unit in the power system.
+
+
+    As an important subset of the power system, power generation system is responsible
+    for managing and controlling electrical power generation equipment, such as the
+    generators. With the rapid development, the economic demand of varies increasing
+    every year. In order to meet the demand for electricity generation to increase
+    the number of generator units. However, the more number of generator units, the
+    more complex the coordination between equipment will be. Therefore, the frequency
+    of fault and the number of components will increase correspondingly. If there
+    is a fault, it will cause severe consequences, for example, the unit will be out
+    for a long time, and personal safety will be threatened. These time-consuming
+    maintenance, and the cost of maintenance and rest of the unit also affects the
+    economic benefits of power generation. Therefore, it very important to improve
+    the reliable and safe operation power generation equipment.
+
+
+    As the main power equipment, and safe reliable operation of the generators is
+    closely related to the.
+
+
+    In this paper, we focus on the fault prediction of generators in power system,
+    and introduce deep learning methods. Our method includes two: the first is a Partial
+    Least Squares (PLS)-based pre-process module which is used to reduce the dimension,
+    the second is a deep linear regression model which is dedicated to the extracted
+    data to predict the fault behavior of generators. The PLS method not only reduce
+    the dimensions and explain the variables, but also retain the information in the
+    original knowledge system and eliminate the noise interference. The knowledge
+    of de linear regression is that it can well fit the distribution relation in the
+    original system, get the global optimal, and learn the mapping relationship with
+    generalization performance. reducing dimension and complexity can improve the
+    efficiency of data processing and shorten the processing time of the model, while
+    the prediction error can be reduced by the deep linear regression model, which
+    results have a good quality alignment. The combination of two can fulfill the
+    requirements of real-time and accuracy, and has a practical value for equipment
+    diagnosis.
+
+
+    Shenyang, China
+
+    November-20, 2022
+
+
+    # II. RELATED WORKS
+
+
+    Fault diagnosis technology has a long development stage, which includes many posts-fault
+    diagnosis, preventive condition monitoring and pre-fault detection. The technologies
+    of fault detection and preventive monitoring are relatively mature and used for
+    many state detection and diagnosis systems, such as Nevada, Colorado, Vibport,
+    and Turning. These technologies use time-domain analysis and frequency-domain
+    analysis to analyze the vibration signal, and are mainly used in fault detection
+    and diagnosis of bearing, gearbox and so on [1, 2].
+
+
+    Since 1980s, expert system, neural network vector machine have been applied in
+    practice. As an important part of fault diagnosis, fault prediction technology
+    has become the main direction of research institutions and enterprises. In early
+    stage, it was generally used to predict the faults of industrial equipment. The
+    U.S. military first proposed and developed a new type of independent logistics
+    systems for the
+
+
+    ![](img/4cafb5035990948b952cd58b5b5f9da_1_0.png)
+
+
+    **PLS-based Module.** As one of the most effective extraction and dimensionality
+    reduction methods, PLS [16, 17] can fully consider all of principal components
+    to interpret the output variables. The basic idea is to regress the decompose
+    input matrix and the output matrix maybe step by step to consider the extraction
+    of the extracted principal components to interpret the input matrix and the output
+    matrix until the required performance is met. It can be seen that this process
+    is an operation of gradually extracting the change information of dependent variable
+    and independent variable. The total amount of information remains unchanged,
+
+
+    # III. ALGORITHM
+
+
+    We explore the application of deep learning in generator fault prediction. Our
+    method includes two parts, the first is Partial Least Squares (PLS)-based proposed
+    method which is used to reduce the feature dimension, the second is a deep linear
+    regression model which is dedicated to regenerating the generator operation data
+    and predicting the behavior of faults. The overview of our method is shown in
+    Figure 1.
+
+
+    As shown in Table 1, the feature parameter data of the generator from the set
+    of a power plant. We can find there are 23 factors that affect the normal operation
+    of the generator. The analysis of some previous work on the generator fault, the
+    two
+
+    '
+  mdcn: '
+
+
+    # 深度学习算法在发电组故障预测中的应用
+
+
+    夏云
+
+    浙江大学信息中心
+
+    中国，杭州
+
+    yunxia@163.com
+
+
+    吴海为
+
+    中国电力科学研究院（南京）
+
+    中国，南京
+
+    wh2010081@126.com
+
+
+    **摘要—** 信息通信技术的快速发展为先进管理和控制系统带来了优势，特别是对于电力系统。虽然已经提取了有用信息，但这些数据尚未充分利用，现有的故障检测技术通常基于监测和诊断而非预测。本文提出将深度学习算法集成到电力系统中发电组的故障预测中，并探索了运行数据在故障预测应用中的有效性和可行性。我们的方法包含两个用于降的预处理模块，以及一个用于描述提取数据并预测发电组故障行为的深度线性回归模型。实验结果证明了我们方法的有效性。
+
+
+    **关键词—** 故障预测、特征提取、维度关系、最小二乘、深度学习
+
+
+    近年来，发电组异常故障导致的非计划停机频率增加，因此全方位监控发电组状态、研究状态信息以预测故障，并改进设备管理以减少事故频率、提高发电组的可靠性和长期运行，是确保整个电厂生产安全的关键。
+
+
+    近期故障检测技术经历了水平化发展，主要包括故障后诊断、诊断、设备状态监测和故障前检测。除了故障前预测，故障检测技术已相对成熟。它们使用时域和频域分析来分析发动机、风扇、轴承、齿箱和接头的信号数据。从那时起，人工智能、边缘神经网络和支持向量机已应用于其中。作为局部故障检测的应用，故障检测技术已成为工业和企业部门故障诊断研究的主要领域。这些技术被用于军事设备管理，随后被应用于发电机组以及各种发电故障预测网络
+    [1, 3, 5, 6]。尽管使用了许多不同的方法，在今天的实际工作中，各种预测方法都有其局限性。然而，显而易见，确定参数之间的关系或提高预测速度仍然困难。换句话说，许多故障预测任务受到了限制。故障预测的实时准确性、鲁棒性以及最重要的故障指标评估部分。
+
+
+    # I. 引言
+
+
+    随着信息通信技术的快速发展，电力系统已实现自动化管理，许多分布式管理和控制系统为电力系统中单元的实时监测和运行带来了巨大收益。
+
+
+    作为电力系统的重要子集，发电系统负责管理和控制发电设备（如发电机）。随着快速发展，经济需求逐年增长。为了满足发电需求，增加了发电机组的数量。然而，发电机组数量越多，设备之间的协调就越复杂。因此，故障频率和组件数量将随之增加。如果发生故障，将导致严重后果，例如单元将长时间停机，人身安全将受到威胁。这些耗时的维护以及单元的维护和停机成本也影响了发电的经济效益。因此，提高发电设备的安全可靠运行至关重要。
+
+
+    作为主要电力设备，发电组的安全可靠运行与其密切相关。
+
+
+    在本文中，我们关注电力系统中发电组的故障预测，并引入了深度学习方法。我们的方法包括两个部分：第一是基于偏最小二乘（PLS）的预处理模块，用于降维；第二是专门用于提取数据以预测发电组故障行为的深度线性回归模型。PLS方法不仅能降维并解释变量，还能保留原始知识系统中的信息并消除噪声干扰。线性回归的知识在于它可以很好地拟合原始系统的分布关系，获得全局最优，并学习具有泛泛化性能的映射关系。降维和降低复杂性可以提高数据处理效率并缩短模型处理时间，而深度线性回归模型可以减少预测误差，结果具有良好的对齐质量。两者的结合可以满足实时性和准确性的要求，对设备诊断具有实际价值。
+
+
+    中国，沈阳
+
+    2022年11月20日
+
+
+    # II. 相关工作
+
+
+    故障诊断技术有着很长的发展阶段，包括许多故障后诊断、预防性状态监测和故障前检测。故障检测和预防性监测技术相对成熟，用于许多状态检测和诊断系统，如 Nevada、Colorado、Vibport
+    和 Turning。这些技术利用时域分析和频域分析来分析振动信号，主要用于轴承、齿箱等的故障检测和诊断 [1, 2]。
+
+
+    自20世纪80年代以来，专家系统、神经网络、向量机已应用于实践。作为故障诊断的重要部分，故障预测技术已成为研究机构和企业的主要方向。在早期阶段，它通常被用于预测工业设备的故障。美国军首先提出并开发了一种新型独立物流系统，用于
+
+
+    ![](img/4cafb5035990948b952cd58b5b5f9da_1_0.png)
+
+
+    **基于PLS的模块。** 作为最有效的提取和降维方法之一，PLS [16, 17] 可以充分考虑所有主成分来解释输出变量。其基本思想是逐步对分解的输入矩阵和输出矩阵进行回归，以考虑提取的主成分提取来解释输入矩阵和输出矩阵，直到满足所需的性能。可以看出，这个过程是一个逐渐提取因变量和自变量变化信息的操作。总信息量不变，
+
+
+    # III. 算法
+
+
+    我们探索了深度学习在发电组故障预测中的应用。我们的方法包括两个部分：第一是基于偏最小二乘（PLS）的方法，用于降低特征维度；第二是专门重建发电组运行数据并预测故障行为的深度线性回归模型。我们方法的概述如图1所示。
+
+
+    表1所示了来自某电厂的发电组特征参数数据。我们可以发现有23个影响发电组正常运行的因素。对之前关于发电组故障的一些工作分析，这两个
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    # Table I. ORIGINAL FEATUREETERS BEFORE REDUCTION.
+
+
+    | | Feature Parameters | Feature Parameters |
+
+    |---|---|---|n| 1 | output voltage | Axial vibration of bearing |
+
+    | 2 | output current | horizontal bearing |
+
+    | 3 | generation frequency | feed vibration of engine bearing |
+
+    | 4 | inlet pressure | outlet gas pressure |
+
+    | 5 | temperature | exhaust temperature |
+
+    | 6 | engine bearing | outlet gas temperature |
+
+    | 7 | horizontal vibration | |
+
+    | 8 | Vibration of engine bearing | oil pressure |
+
+    | 9 | Axial vibration of engine bearing | oil tank level |
+
+    | 10 | horizontal vibration | coolant level |
+
+    | 11 | horizontal vibration of fan bearing | |
+
+    | 12 | Axial vibration of fan bearing | |
+
+
+    most common affairs are high temperature of the engine bearing and the horizontal
+    vibration of the engine bearing. Therefore, we take the temperature and vibration
+    of the engine bearing to be parameters, reduce the dimension containing 22 different
+    features by PLS, extract the principal components which could carry most of the
+    information in the data, and predict the dependent variables. The process is shown
+    in Figure 1
+
+
+    deep features of the input data and improve the fitting of the network model.
+    The last layer of classes fully connected networks which output dimensions are
+    1, horizontal vibration and axial vibration of engine bearings.
+
+    For the first case, our data is X = (x1,...,xn), where n is the number of feature
+    parameters after dimension reduction. The mapping function is Y = (y1,y2) where
+    Y is the ground label for supervision of our deep learning, y1 is the horizontal
+    vibration and y2 is the axial vibration. Our model can be seen as a learning regression
+    model, mapping function to fit the input data and ground truth, i.e.,
+
+
+    ```
+
+    $$\hat{Y}(X) = \omega_1x_1 + \omega_2x_2 + ... + \omega_nx_n + b$ (2)
+
+    ```
+
+
+    where [\omega_1,...,\omega_n] are the learned parameters of our model, b is the
+    bias. $\hat{Y} = (\hat{y}_1,\hat{y}_2)$ is the predicted value. We define our
+    output as follows:where the loss is some square between the predicted output and
+    ground truth Y. By using stochastic gradient descent (SGD) algorithm to optimize
+    this loss, so as our model to learn the data distribution relationship between
+    the inputs and outputs.
+
+
+    ```
+
+    $Prediction Error = \frac{1}{m} \sum_{i=1}^{m}(\hat{Y}_i - Y_i)^2$ (3)
+
+    ```
+
+
+    For the test phase, our deep linear regression model directly outputs the predicted
+    results for the test data. We evaluate the regression performance, we define the
+    prediction error metric as:
+
+    where m is the number of samples. We use this to evaluate the performance of our
+    method and compare it with other methods.
+
+
+    # Deep Linear Regression Model. Based on the principles extracted from the former
+    pls-based process, we design the deep linear regression model to learn the data
+    distribution in the original knowledge system and generalize the target behavior.
+    As shown in the second part of Figure 1, our deep regression model consists of
+    8 layers of fully connected networks. The first 7 layers gradually increase and
+    then decrease, using expansion and compression process can extract the
+
+
+    # TABLE II OF TEST PREDICTION ERROR OF OUR METHOD AND OTHER METHODS.
+
+
+    | | Ours (PLS-DLR) | PCA+DLR | PLS+SVM | PCA+SVM |
+
+    |---|---|---|---||}{
+
+    | Temperature | 1.2432 | 2.4607 | 2.8713 | 3.7258 |
+
+    | horizontal vibration | 0.1321 | 0.3442 | 0.8734 |
+
+    | Axial vibration | 0.1532 | 0.4223 | 0.8317 |
+
+
+    # IV. RESULTS
+
+
+    We show the results in several sections, including the results of PL dimension,
+    prediction error of our deep linear regression model and comparisons of our method
+    with other methods. First we remove the data engine bearing temperature, horizontal
+    vibration and axial vibration and then perform PLS analysis on Table I to obtain
+    the remaining features in component contribution rate that affects the generator.
+    Take these feature parameters as independent variables, normal state to 0, and
+    determine the main component according to the component''s cumulative contribution
+    rate generally only
+
+
+    to satisfy the expectations that most of the independent and variables input such
+    as 75% and 80%. The data analysis shows that the first 6 components of the contribution
+    rate can reach 78.2173% of the engine and 82.3538% of the dependent variables.
+    The contribution rate of the 7th component is not much different from the minimum
+    value. Therefore, the first 6 independent variables can be selected as the principal
+    components.
+
+
+    2) Test Prediction of Error Reduction. Our deep linear regression model meets
+    the first 6 principal components after data dimension reduction as input, and
+    predicts the engine bearing temperature, the horizontal vibration and the axial
+    vibration, we selected
+
+
+    154'
+  - '[PAGE 3]
+
+
+    # V. CONCLUSION
+
+
+    In this paper, we introduce the deep learning algorithm to handle the fault of
+    power generators, and evaluate the feasibility and generator of error data in
+    fault prediction application. Our method includes two parts: the first is a Deep
+    Least Squares module used to reduce the dimension, and the second is a deep regression
+    model which is decompress the operating data and predicting the fault behavior
+    of generators. The results show that our method reduces and expands the data but
+    also retain the information in the original knowledge system and eliminate the
+    noise interference. The deep regression model can get the global optimum, and
+    learn the mapping with good generalization performance. By reducing dimension
+    and complexity can improve the accuracy and processing time of the model, while
+    the generalization error rate can be further reduced by the deep regression model,
+    which has a high learning ability, and accuracy. Experimental results demonstrate
+    that our method can meet the requirements of real-accuracy, and has a certain
+    practical value for equipment fault prediction.
+
+
+    # ACKNOWLEDGMENT
+
+
+    This paper is partly funded by National Key R&D Program of China (2017YFB0026000)
+    and Application of Key Technology Intelligent Dispatching and Security Early-warning
+    of Power Grid, and Technology project of State Grid of China (GS0000DJKIS700840).
+
+
+    # REFERENCES
+
+
+    [1] Tumer I, Bajwa B. A. A survey of aircraft health monitoring system, 35th Joint
+    Conference on Reliability. 1999: 2529-2538.
+
+
+    [2] Rosmer M. J., Kacprynski G. J. Diagnostics and predictions for gas turbine
+    engine assessment C); 2000 IEEE Aerospace Conference (Cat. No. 00TH4B84), IEEE,
+    2000: 644-35.
+
+
+    [3] Zhao, L., Sun P., Roper, N, et al. An architecture for intelligent fault management
+    system (IFMS); AAAI Symposium, California, 2002.
+
+
+    [4] Smith G., Boucher J. J., Navakumar A. Development of a prediction-based impact
+    system for IVHM (Integrated Vehicle Health Management); IEEE AUTOTESTCON/AUTOTESTX,
+    IEEE Systems Technology Conference, Reliability Robustness and Awareness in Industry,
+    IEEE, 1997: 676-682.
+
+
+    [5] Fessa H. A., Li T. A study of fault prediction using PRCA (principal component
+    analysis). IEEE Conference on Electronics, IEEE, 2002: 6-14.
+
+
+    [6] Dickson B., Crunckle J., Belefeld F. Feasibility of a Structural Life Monitoring
+    System (HMS); Use of Monitoring and Test Data Network (MTDN). IEEE, 2001: 21R.
+    2BELL||1-1
+
+
+    [7] Baracz E., Powar F., Ha J, et al. Integrated Vehicle Health Management (IVHM)
+    techniques for vehicle support; 35th Joint Conference on Reliability and IEEE
+    2001: 3521-3528.
+
+
+    [8] Polf G. C., Adams. J., et al. A result-oriented Asset Management System. System
+    architecture and maintenance strategy; 35th Joint Conference and Reliability IEEE,
+    1999: 2527-2534.
+
+
+    [9] Gianpacca F., Giacominta G. Monitoring the condition-based maintenance of
+    a multi-product production system. Journal of Process Industries, 2006: 316-322.
+
+
+    [10] Alban H. S., Nass M A. Machine learning based fault prediction for the primary
+    heat transport system of CANDU type power plant; 2015 IEEE International Conference
+    on Reliability (ISRC), IEEE, 2015: 1-6.
+
+
+    [11] Wang Y, Li X. Fault prediction of power electric circuits based on support
+    vector machine; 2014 IEEE International Conference on Signal Processing (ICSP),
+    IEEE, 2014: 229-234.
+
+
+    [12] Liao X, Tao C. Fault detection based on deep support vector machine online
+    prediction; 2011 IEEE 5th International Conference on Robotics, Automation and
+    Mechatronics (RAM), IEEE, 2011: 275-279.
+
+
+    [13] Zhang Q, Wang A. A base-data-driven prediction framework for fault classification;
+    2015 IEEE Energy Conference and Exposition (ECCE), IEEE, 2015: 3997-4002.
+
+
+    [14] Lin M, Chen Q, Y. Your network in network; arXiv preprint:1312.4460, 2013.
+
+
+    [15] Bottou Y. Deep machine learning with stochastic gradient descent[Des]. Proceedings
+    of COMPSTAT, 2010: 177-186.
+
+
+    [16] World S., Eskanen K, Galperin P. Principal component analysis; Chemometrics
+    and intelligent laboratory systems, 1987, 2(1-3): 37-52.
+
+
+    155'
+  md: "\n## Table I. ORIGINAL FEATURES BEFORE REDUCTION.\n\n| | Feature Parameters\
+    \ | Feature Parameters |\n|---|---|---|\n| 1 | output voltage | Axial vibration\
+    \ of bearing |\n| 2 | output current | horizontal bearing |\n| 3 | generation\
+    \ frequency | feed vibration of engine bearing |\n| 4 | inlet pressure | outlet\
+    \ gas pressure |\n| 5 | temperature | exhaust temperature |\n| 6 | engine bearing\
+    \ | outlet gas temperature |\n| 7 | horizontal vibration | |\n| 8 | Vibration\
+    \ of engine bearing | oil pressure |\n| 9 | Axial vibration of engine bearing\
+    \ | oil tank level |\n| 10 | horizontal vibration | coolant level |\n| 11 | horizontal\
+    \ vibration of fan bearing | |\n| 12 | Axial vibration of fan bearing | |\n\n\
+    The most common de affairs are high temperature of the engine bearing and the\
+    \ horizontal vibration of the engine bearing. Therefore, we take the temperature\
+    \ and vibration of the engine bearing to be parameters, reduce the dimension containing\
+    \ 22 different features by PLS, extract the principal components which could carry\
+    \ most of the information in the data, and predict the dependent variables. The\
+    \ process is shown in Figure 1.\n\nDeep features of the input data and improve\
+    \ the fitting of the network model. The last layer of classes fully connected\
+    \ networks which output dimensions are 1, horizontal vibration and axial vibration\
+    \ of engine bearings.\n\nFor the first case, our data is X = (x1,...,xn), where\
+    \ n is the number of feature parameters after dimension reduction. The mapping\
+    \ function is Y = (y1,y2) where Y is the ground label for supervision of our deep\
+    \ learning, y1 is the horizontal vibration and y2 is the axial vibration. Our\
+    \ model can be seen as a learning regression model, mapping function to fit the\
+    \ input data and ground truth, i.e.,\n\n$$\\hat{Y}(X) = \\omega_1x_1 + \\omega_2x_2\
+    \ + ... + \\omega_nx_n + b$$ (2)\n\nwhere $[\\omega_1,...,\\omega_n]$ are the\
+    \ learned parameters of our model, b is the bias. $\\hat{Y} = (\\hat{y}_1,\\hat{y}_2)$\
+    \ is the predicted value. We define our output as follows: where the loss is some\
+    \ square between the predicted output and ground truth Y. By using stochastic\
+    \ gradient descent (SGD) algorithm to optimize this loss, so as our model to learn\
+    \ the data distribution relationship between the inputs and outputs.\n\n$$Prediction\
+    \ Error = \\frac{1}{m} \\sum_{i=1}^{m}(\\hat{Y}_i - Y_i)^2$$ (3)\n\nFor the test\
+    \ phase, our deep linear regression model directly outputs the predicted results\
+    \ for the test data. We evaluate the regression performance, we define the prediction\
+    \ error metric as: where m is the number of samples. We use this to evaluate the\
+    \ performance of our method and compare it with other methods.\n\n## Deep Linear\
+    \ Regression Model.\n\nBased on the principles extracted from the former pls-based\
+    \ process, we design the deep linear regression model to learn the data distribution\
+    \ in the original knowledge system and generalize the target behavior. As shown\
+    \ in the second part of Figure 1, our deep regression model consists of 8 layers\
+    \ of fully connected networks. The first 7 layers gradually increase and then\
+    \ decrease, using expansion and compression process can extract the.\n\n## TABLE\
+    \ II OF TEST PREDICTION ERROR OF OUR METHOD AND OTHER METHODS.\n\n| | Ours (PLS-DLR)\
+    \ | PCA+DLR | PLS+SVM | PCA+SVM |\n|---|---|---|---|---|\n| Temperature | 1.2432\
+    \ | 2.4607 | 2.8713 | 3.7258 |\n| horizontal vibration | 0.1321 | 0.3442 | 0.8734\
+    \ | |\n| Axial vibration | 0.1532 | 0.4223 | 0.8317 | |\n\n## IV. RESULTS\n\n\
+    We show the results in several sections, including the results of PL dimension,\
+    \ prediction error of our deep linear regression model and comparisons of our\
+    \ method with other methods. First we remove the data engine bearing temperature,\
+    \ horizontal vibration and axial vibration and then perform PLS analysis on Table\
+    \ I to obtain the remaining features in component contribution rate that affects\
+    \ the generator. Take these feature parameters as independent variables, normal\
+    \ state to 0, and determine the main component according to the component's cumulative\
+    \ contribution rate generally only to satisfy the expectations that most of the\
+    \ independent and variables input such as 75% and 80%. The data analysis shows\
+    \ that the first 6 components of the contribution rate can reach 78.2173% of the\
+    \ engine and 82.3538% of the dependent variables. The contribution rate of the\
+    \ 7th component is not much different from the minimum value. Therefore, the first\
+    \ 6 independent variables can be selected as the principal components.\n\n2) Test\
+    \ Prediction of Error Reduction. Our deep linear regression model meets the first\
+    \ 6 principal components after data dimension reduction as input, and predicts\
+    \ the engine bearing temperature, the horizontal vibration and the axial vibration,\
+    \ we selected.\n\n## V. CONCLUSION\n\nIn this paper, we introduce the deep learning\
+    \ algorithm to handle the fault of power generators, and evaluate the feasibility\
+    \ and generator of error data in fault prediction application. Our method includes\
+    \ two parts: the first is a Deep Least Squares module used to reduce the dimension,\
+    \ and the second is a deep regression model which is decompress the operating\
+    \ data and predicting the fault behavior of generators. The results show that\
+    \ our method reduces and expands the data but also retain the information in the\
+    \ original knowledge system and eliminate the noise interference. The deep regression\
+    \ model can get the global optimum, and learn the mapping with good generalization\
+    \ performance. By reducing dimension and complexity can improve the accuracy of\
+    \ the model. \n\n## ACKNOWLEDGMENT\n\nThis paper is partly funded by National\
+    \ Key R&D Program (2017) and Application of State Grid of China.\n\n## REFERENCES\n\
+    \n- [1] World S., Eskanen K., Galperin P. Principal component analysis; Chemometrics\
+    \ and intelligent laboratory systems, 1987, 2(1-3): 37-52.\n- [2] Dickson B.,\
+    \ Crunck J. A study of fault prediction using PRCA (principal component analysis);\
+    \ IEEE Conference on Electronics, 2002: 6-14.\n- [3] Zhao L., Sun P., Wang A.\
+    \ A base-data-driven prediction framework for fault classification; 2015 IEEE\
+    \ Energy Conference and Exposition (ECCE), IEEE, 2015: 3997-4002.\n- [4] Lin M,\
+    \ Chen Q. Your network in network; 2013:2460.\n- [5] Wang Y., Li X. Fault prediction\
+    \ of power electric circuits based on support vector machine; 2014 IEEE International\
+    \ Conference on Signal Processing (ICSP), IEEE, 2014: 229-234.\n- [6] Liao X,\
+    \ Tao C. Fault detection based on deep support vector machine online prediction;\
+    \ 2011 IEEE 5th International Conference on Robotics, Automation and Mechatronics\
+    \ (RAM), IEEE, 2011: 275-279.\n- [7] Baracz E., Powar F., Ha J. Integrated Vehicle\
+    \ Health Management (IVHM) techniques for vehicle support; 35th Joint Conference\
+    \ on Reliability, 2001: 3521-3528.\n- [8] Polf G., Adams J. A result-oriented\
+    \ Asset Management. System architecture and maintenance strategy; 35th Joint Conference\
+    \ and Reliability, 1999: 2527-2538.\n- [9] Gianpacca F., Giacominta G. Monitoring\
+    \ the condition-based maintenance of a multi-product production system. Journal\
+    \ of Process Industries, 2006: 316-322.\n- [10] Alban H., Nass M. Machine learning\
+    \ based fault prediction for the primary heat transport system of CANDU type power\
+    \ plant; 2015 IEEE International Conference on Reliability (ISRC), IEEE, 2015:\
+    \ 1-6.\n- [11] Bottou Y. Deep machine learning with stochastic gradient descent[Des].\
+    \ Proceedings of COMPSTAT, 2010: 177-186.\n"
+  mdcn: '
+
+
+    ## 表 I. 降维前的原始特征
+
+
+    | | 特征参数 | 特征参数 |
+
+    |---|---|---|
+
+    | 1 | 输出电压 | 轴承轴向振动 |
+
+    | 2 | 输出电流 | 水平轴承 |
+
+    | 3 | 频率 | 发动机轴承进振动 |
+
+    | 4 | 入口压力 | 出口气体压力 |
+
+    | 5 | 温度 | 排气温度 |
+
+    | 6 | 发动机轴承 | 出口气体温度 |
+
+    | 7 | 水平振动 | |
+
+    | 8 | 发动机轴承振动 | 油压 |
+
+    | 9 | 发动机轴承轴向振动 | 油位 |
+
+    | 10 | 水平振动 | 冷却液位 |
+
+    | 11 | 风扇轴承水平振动 | |
+
+    | 12 |轴向振动 | |
+
+
+    最常见的故障是发动机轴承温度高和发动机轴承水平振动。因此，我们将发动机轴承的温度和振动作为参数，通过偏最小二乘法（PLS）对包含22个不同特征的维度进行降维，提取能够携带数据大部分信息的主成分，并预测因变量。该过程如图1所示。
+
+
+    提取输入数据的深度特征并改进网络模型的拟合。分类全连接网络的最后一层输出维度为1，分别为发动机轴承的水平振动和轴向振动。
+
+
+    对于第一个案例，我们的数据为 $X = (x1,...,xn)$，其中 $n$ 是降维后特征参数的数量。映射函数为 $Y = (y1,y2)$，其中 $Y$
+    是深度学习监督的地面标签，$y1$ 是水平振动，$y2$ 是轴向振动。我们的模型可以看作一个学习回归模型，其拟合输入数据和真值的映射函数为：
+
+
+    $$\hat{Y}(X) = \omega_1x_1 + \omega_2x_2 + ... + \omega_nx_n + b$$ (2)
+
+
+    其中 $[\omega_1,...,\omega_n]$ 是模型学习到的参数，$b$ 是偏置。$\hat{Y} = (\hat{y}_1,\hat{y}_2)$
+    是预测值。我们定义输出如下：其中损失为预测输出与真值 $Y$ 之间的平方。通过使用随机梯度下降（SGD）算法优化此损失，使我们的模型能够学习输入与输出之间的数据分布关系。
+
+
+    $$Prediction Error = \frac{1}{m} \sum_{i=1}^{m}(\hat{Y}_i - Y_i)^2$$ (3)
+
+
+    在测试阶段，我们的深度线性回归模型直接输出测试数据的预测结果。为了评估回归性能，我们定义预测误差指标为：其中 $m$ 是样本数量。我们用此来评估我们方法的性能，并与其他方法进行比较。
+
+
+    ## 深度线性回归模型
+
+
+    基于从上述 PLS 处理中提取的原理，我们设计了深度线性回归模型来学习原始知识系统中的数据分布并泛化目标行为。如图1第二部分所示，我们的深度回归模型由8层全连接网络组成。前7层逐渐增加后减少，通过扩展和压缩过程可以提取。
+
+
+    ## 表 II. 我们的方法与其他方法的测试预测误差对比
+
+
+    | | 我们的方法 (PLS-DLR) | PCA+DLR | PLS+SVM | PCA+SVM |
+
+    |---|---|---|---|---|
+
+    | 温度 | 1.2432 | 2.4607 | 2.8713 | 3.7258 |
+
+    | 水平振动 | 0.1321 | 0.3442 | 0.8734 | |
+
+    | 轴向振动 | 0.1532 | 0.4223 | 0.8317 | |
+
+
+    ## IV. 结果
+
+
+    我们在几个章节中展示结果，包括 PL 降维结果、深度线性回归模型的预测误差，以及我们的方法与其他方法的比较。首先，我们移除发动机轴承温度、水平振动和轴向振动数据，然后对表I进行
+    PLS 分析，以从贡献率角度获得影响发电机的剩余特征。将这些特征参数作为自变量，正常状态设为0，并根据成分的累积贡献率确定主成分，通常只需满足大多数自变量输入（如75%和80%）的预期。数据分析表明，前6个成分的贡献率可以达到发动机的78.2173%和因变量的82.3538%。第7个成分的贡献率与最小值值相比差异不大。因此，可以选择前6个自变量作为主成分。
+
+    2) 降维误差测试预测。我们的深度线性回归模型以数据降维后的前6个主成分作为输入，并预测我们选择的发动机轴承温度、水平振动和轴向振动。
+
+
+    ## V. 结论
+
+
+    在本文中，引入了深度学习算法来处理发电机的故障，并评估了故障预测应用中误差数据的可行性。我们的方法包含两个部分：第一部分用于降维的深度最小二乘模块，第二部分用于压缩运行数据并预测电机故障行为的深度回归模型。结果显示，我们的方法在压缩和扩展数据的同时保留了原始知识系统的信息并消除了噪声干扰。深度回归模型可以获得全局最优，并学习具有良好泛化性能的映射。通过降低维度复杂度可以提高模型的准确性。
+
+
+    ## 致谢
+
+
+    本文部分受国家重点计划（2017）及中国电网资助。
+
+
+    ## 参考文献
+
+
+    - [1] World S., Eskanen K., Galperin P. 主成分分析; Chemometrics and intelligent systems,
+    1987, 2(1-3): 37-52.
+
+    - [2] Dickson B., Crunck J. 基于PCA（主成分分析）的故障预测研究; IEEE Conference on Electronics,
+    2002:6-14.
+
+    - [3] Zhao L., Sun P., Wang A. 基于数据驱动的故障分类框架; 2015 IEEE Energy Conference and
+    Exposition (ECCE), 2015: 3997-4002.
+
+    - [4] Lin M, Chen Q. 网络网络; 2013:2460.
+
+    - [5] Wang Y., Li X. 基于支持向量机的电力电路故障预测; 2014 IEEE International Conference on Signal
+    Processing (ICSP), IEEE, 2014: 229-234.
+
+    - [6] Liao X, Tao C. 基于深度支持向量机的故障检测检测; 2011 IEEE 5th International Conference
+    on Robotics, Automation and Mechatronics (RAM), IEEE, 2011: 275-279.
+
+    - [7] Baracz E., Powar F., Ha J. 车辆集成健康管理（IVHM）技术; 35th Joint Conference on Reliability,
+    2001: 3521-3528.
+
+    - [8] Polf G., Adams J. 结果导向的资产管理; 系统架构与维护策略; 35th Joint Conference and Reliability,
+    1999: 2527-3538.
+
+    - [9] Gianpacca F., Giacominta G. 多产品生产系统的状态状态维护监控. Journal of Process Industries,
+    2006: 316-322.
+
+    - [10] Alban H., Nass M. 基于机器学习的CANDU型电厂主热系统故障预测; 2015 IEEE International Conference
+    on Reliability (ISRC), IEEE, 2015: 1-6.
+
+    - [11] Bottou Y. 带有随机梯度下降的深度学习[Des]. Proceedings of COMPSTAT, 2010: 177-186.
+
+
+    '
+  merge: 0
