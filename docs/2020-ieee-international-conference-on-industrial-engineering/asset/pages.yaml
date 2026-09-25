@@ -1,0 +1,569 @@
+- pgno: 0
+  md: '# Development and Evaluation of a Blockchain Concept for Production Planning
+    and Control in the Semiconductor Industry
+
+
+    L. Herbst¹, J. Lohmer², G. Schneider², R. Lasch²
+
+    ¹Infineon Technologies Dresden GmbH & Co. KG. Dresden, Germany
+
+    ²Chair of Business Management, logistics, Technische Universität Dresden, Germany
+
+    jacob.lohmer@tu-dresden.de
+
+
+    Abstract — Blockchain technology provides several benefits for operations management,
+    but most reported concepts and applications are rare. This contribution indicates
+    the findings from a case study analyzing the suitability of blockchain technology
+    for manufacturing at the 300 m wafer frontline of the industry. Here, several
+    different integrated digital solutions were used to access centralized databases
+    with different views and restrictions. We assess if and how a blockchain solution
+    could be designed to enhance the analytics capabilities for manufacturing using
+    the design science approach and evaluate the economic value of the designed application
+    through the analytical hierarchy.
+
+
+    related to the manufacturing process in a wafer fab (including volatile, high
+    product mixes and complex process flows, and limited capacity of expensive equipment).
+    To analyze the suitability of blockchain for semiconductor manufacturing, we conduct
+    a case study of the 300 m wafer fab of Infineon Technologies in Dresden, Germany.
+    Different digital tools have been implemented in the various departments over
+    the past years, all of which access centralized databases with different views
+    and restrictions. We explore the idea of applying blockchain as decentralized
+    decentralized in semiconductor production using the design science approach of
+    Heverner et al. [9] and evaluate the economic value of the designed application
+    through the analytical hierarchy.
+
+
+    **Keywords** Blockchain technology, semiconductor manufacturing, case study
+
+
+    # I. INTRODUCTION
+
+
+    Operations management (OM) may use several technologies in the industry of Industry
+    4.0 [1]. One of the technologies with the potential for a substantial disruption
+    in OM, manufacturing, and supply chain management (SCM) is blockchain technology,
+    which is based on decentralization, transparency, and visibility [2–4]. Blockchain
+    can be perceived as a trustless system since no entity has control over any specific
+    component. The technology verifies confidence in the network with immutable transaction
+    records and decentralized governance [2]; After first case in the industry de
+    consider using blockchain in SCM, the area of OM and manufacturing has not been
+    considered in-depth to date [5]. Although the prospective potentials are recognized
+    throughout the industry, there are few publications or reports on this successful
+    application of the technology [6].
+
+
+    Especially manufacturing companies need to realign their strategic objectives
+    and goals in the current investment revolution. It is essential to go beyond the
+    hype surrounding technologies and identify the real potential in the context of
+    Industry 4.0. In this contribution, we focus on one of the most complex and integrated
+    domains: semiconductor manufacturing. To follow the More-than-Moore approach,
+    semiconductor manufacturers invest heavily in automation and as well as productivity
+    improvements and are at the forefront of virtual production control using sensors
+    and IoT technologies [7]. However, there are several issues
+
+
+    this contribution answers two questions regarding the application of blockchain
+    technology for operations management, especially in the semiconductor industry
+    and considering the specific case of the case:
+
+
+    > RQ1: How could blockchain manufacturing profit from new technologies for the
+    storage, analysis and visualization of production data? Would a blockchain solution
+    be suitable?
+
+
+    > RQ2: How should a blockchain application be structured for a suitable case in
+    semiconductor manufacturing and how will it perform compared to the existing technology?
+
+
+    The remainder of this contribution is structured as follows. In Section 2, we
+    present the research methodology, followed by a collection of the results in this
+    case in Section 3. Findings are presented and discussed in Section 4 and a conclusion
+    will be drawn in Section 5.
+
+
+    # II. METHODOLOGY
+
+
+    To analyze whether blockchain technology could be a solution for the semiconductor
+    industry, we conducted a case study of the 300 m wafer fab of Infineon in Dresden,
+    Germany. The design science research (DSR) by Heverner et al. [9] was adopted
+    for the case study. This method, which originates from information systems research,
+    aims to increase the efficiency of the organization in the center of the research'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# III. RESULTS
+
+
+    By analyzing the manufacturing processes and supporting IT systems in our case
+    study, three issues were identified: high product mix, complex process flows,
+    and customer orders competing for limited capacities. These three issues created
+    fragile flows, period of overload and even severe fluctuation in the individual
+    process flows and a significant amount of insecurity in production, staff, and
+    maintenance planning. The fluctuation resulted in increased maintenance utilization.
+    Assembly based on real-time data from upstream processing steps of the lots would
+    allow for better scheduling of downstream assembly in the focus of this case study.
+    The pre-assembly area of the 300 mm is highly dependent on the upstream areas
+    and usually receives information on incoming WIP at very short notice, if all
+    data security
+
+
+    is an important issue since some of the lots are exchanged between different factories
+    in the supply chain and the data must be transferred consistently for this. Furthermore,
+    as different segments in the production pursue their own KPIs and with a strong
+    interest, values in the databases can change frequently and lead to inconsistent
+    scheduling. Therefore, the different production divisions can be considered as
+    independent to a certain extent sharing an even critical issue.
+
+
+    All analytical systems are available to the planners and engineers to cope with
+    this situation and prepare for future overload or scenarios. However, all of these
+    systems (e.g., process flow visualization, reporting KPIs) can access a centralized
+    database, which contains current status of production data and therefore serves
+    the purpose of overall equipment effectiveness management (OEE). Current analysis
+    tools are only on a static basis and provide all the data in real-time. For the
+    semiconductor industry management (OCM) approach is more fitting than OEE. OCM
+    takes into account dynamic information and data to also consider variables in
+    the production process. An important step implementing this OCM is to provide
+    high availability with optimal reliability. A new storage and data collection
+    technology to accomplish this goal will benefit the data exchange and for strategic
+    tactics,
+
+
+    B. Knowledge base – blockchain technology
+
+    Blockchain was identified as possible technology to help achieve this goal. The
+    blockchain is a distributed ledger that is stored decentrally as a geographical
+    record of data in blocks. The communication occurs across geographically distributed
+    nodes through cryptography network, making the immutable ledger between all participants
+    in the network. Organizations of all kinds can communicate and exchange data with
+    others without needing to trust them or use an intermediary. For a detailed technical
+    description, we would like to refer to the readers to current and systematic literature
+    reviews on blockchain technology, e.g., [4], [11], [12]. Blockchain technology
+    can be used in diverse applications, such as public records and consumer configuration.
+    Furthermore, the security of contracts is probably the most important aspect for
+    OM and SCM. A smart contract represents a computerized agreement that can be automated
+    once a set of terms, of the contract, are met. Apart from the automation itself
+    and to increase efficiency by using smart contracts, other properties of blockchain
+    applications include immutability, transparency, and transparency which can be
+    highlighted [11]. Through these technical features, blockchain as a decentralized
+    data storage technique can provide a higher level of reliability, transparency,
+    flexibility, irreversibility,
+
+
+    ![](img/f47403e9a7e6a244dddba2d95ffbe1af_1_0.png)
+
+
+    The resulting three-pillar research framework is shown in Fig. 1. In this case,
+    the environment considered of organization and technology was assessed in interviews
+    with different departments. Analysis of the current status of the research problem
+    regarding processes, technologies, infrastructure, strategies, and applications.
+    A knowledge base using the existing literature on blockchain technology provides
+    the foundation for the specific environment to develop a novel technical solution
+    for the research problem. This new solution will be evaluated by implementing
+    an application [10]. This application serves as an example to collect experience
+    with the use of new understanding of the possibilities of blockchain and its current
+    development status, the case can pursue more projects, bringing in even more benefits.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'Proceedings of the 2020 IEEE IEM
+
+
+    and integrity a centralized blockchain while also eliminating costs for networking,
+    trust, and monitoring. However, as there is no central supervision in the network,
+    several issues include authority, vulnerability, legal implications, computing
+    and data storage capacity, and scalability must be considered for specific needs.
+
+
+    to have the highest potential to improve data provision and exchange for platforms.
+    In the blockchain, an individual blockchain will be created to track the status
+    and completion of operations. This enables a timely pre-planning of the pre-assembly
+    on a raw data base. Individual blockchains could be joined together in a universal
+    decentralized blockchain, as depicted in figure.
+
+
+    Recent reviews identified countless numbers of scientific papers on blockchain
+    in SCM and OM [4, 6]. Recent focus on successful proofs-of-concept or applications
+    that are produced of OM in the industry landscape. Security, intellectual property
+    concerns or standardization, and interoperability are major barriers for adoption
+    [14]. Some authors have contributed with a technical perspective on manufacturing
+    applications [15, 16], while others highlighted the benefits of blockchain with
+    tracking and solutions for worthy products to ensure the declared prevalence [17].
+    IBM and Maersk developed solutions for globalizing trade activities in a platform
+    called TradeLens [18] that OM is one of the most promising areas for blockchain
+    adoption by industry [19]. Supplier contract management, digital threat mitigation,
+    as production and maintenance are some opportunities that would like to appear
+    in future applications.
+
+
+    Once the general flow is determined, the next decision involves the type of the
+    network. Due to confidential data, a public blockchain is not suitable. For example,
+    only supply chain partners are allowed and exchanging data within the blockchain
+    at the moment, for a private blockchain. This could be adapted to private blockchain
+    as more partners are added to the network in future operations.
+
+
+    An open-source framework was chosen for this application. The Hyperledger project
+    coordinated by the Linux Foundation has members who have joined the project community
+    and the blockchain framework to optimize the solutions in the service and manufacturing
+    industry. A very active community provides development support documentation,
+    tutorials and as assistance of industry standards. Hyperledger Fabric was chosen
+    for the used case because of its suitability for application in the industry [22].
+
+
+    Several authors favor of implementation challenges and effective measures for
+    implementation case studies [21]. Additionally, blockchain should be considered
+    the technologies for the digital transformation of OM, SCM, and manufacturing,
+    always keeping in the economic value of the technology.
+
+
+    Hyperledger Fabric consists of the blockchain and a so-called world state. The
+    blockchain irreversibly tracks the transactions that change the status of the
+    data set and provides the current status of the system, but with no transaction
+    history, making the process of calculating the data status after a new transaction
+    more efficient. The smart contract - the program written for blockchain - can
+    be directly executed without having the history stored in the blockchain. The
+    world state will change after each transaction and is irreversible. The unique
+    token is used as the key for the set and value all relevant data (e.g., date,
+    price, product type, cycle time).
+
+
+    # C. Development of a blockchain solution
+
+
+    The feasibility assessment, according to Diterich [22], utilized a specific case
+    that we developed from input of multiple experts interviews. The concept is based
+    on a blockchain that tracks the individual transactions in all manufacturing operations
+    performed on an individual lot. With the existing system, this approach created
+    visuals and with considerable effort. Of several concepts, the blockchain concept
+    was estimated
+
+
+    ![](img/f47403e9a7e6a244dddba2d95ffbe1af_2_0.png)
+
+
+    Fig. 2. Structure of the blockchain concept for the manufacturing
+
+
+    Authorized license used to: Carleton University. Download on June 01, 2021 at
+    22:11:47 UTC from IEEE Xplore. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '1. Proposed for a transaction
+
+    (smart contract)
+
+
+    2. Invoke a smart contract
+
+
+    ![](img/f47403e9a7e6a244dddba2d95ffbe1af_3_0.png)
+
+
+    3. Smart contract
+
+    computes the
+
+    result of the
+
+    proposed transaction.
+
+
+    4. Send results and signature
+
+
+    5. Notify others
+
+
+    Decentralized
+
+    App
+
+
+    6. Distribute
+
+    the block
+
+
+    7. Adjusting
+
+    state
+
+    started by the peer
+
+
+    Ordering Service
+
+
+    5. Order transaction
+
+
+    Fig. 3. Process in Hyperledger Fabric
+
+    This shows a smart contract and connects the resulting data set. If this be done
+    correctly, the peer informs the app that the transaction may be published. When
+    the peer contacts the ordering service, which is responsible for forming the block,
+    all peers in the network receive the block. As soon as a peer receives a block
+    from the ordering, its copy of the blockchain ledger is updated. Each participant
+    then sets up the business processes that should be supported by the blockchain.
+    A simplified smart contract for a query of data and new transaction is shown in
+    the following. Lines 2 and 5 represent the data that the decentralized app transfers
+    to the peers.
+
+
+    designed based common decisions of Industry 4.0 and digital technologies, indicated
+    in Fig. 4.
+
+    Three main criteria were identified for the analytical hierarchy to evaluate the
+    concept (based on [10]), technical, organizational and economic criteria. The
+    weights of the criteria were determined by literature review and external experience
+    from the semiconductor fab in Dresden. Overall, the economic criteria are considered
+    most important (54%), followed by technical (34%). Organizational criteria are
+    considered important for this decision (12%) because an organization in need can
+    quickly adapt to changes. The blockchain was compared with the current solutions
+    in the case,, where different software tools are used for databases. Nevertheless,
+    the blockchain is not predominant regarding technical criteria but outperforms
+    on data quality, completeness, and fault tolerance. Nevertheless, the other criteria
+    were determined by the authors. Transparency, security, customizability, standardization
+    of data, strategic fit, and knowledge gains were provided by the experts. The
+    full survey details, the AHP structure and results are provided in the Appendix,
+    which is accessible at [24] due to limited space.
+
+
+    # IV. DISCUSSION
+
+
+    +   1 lot contract;
+
+    2 query (lot);
+
+    3 get (lot);
+
+    4 return (lot);
+
+    5 update (lot, Operation, TransactionType, ...);
+
+    6 get (lot);
+
+    7 lot:operation = ''Operation'';
+
+    29 lot:route = Route;
+
+    30 put (lot);
+
+    31 return (lot);
+
+
+    The results can be used to answer the following questions: The design process
+    of the blockchain solution indicated that blockchain could also be suitable for
+    supply chain applications in semiconductor manufacturing. In many cases, there
+    are international interests in production segments as well as lack of transparency
+    and control. Here, blockchain can offer an opportunity to move from centralized
+    systems to a simple form of data transaction. The irreversibility is an essential
+    feature. Besides, in reimbursement cryptocurrencies can be used for efficient
+    payment processing. The choice of network type is not important. Important criteria
+    for the customers are currently only obtainable in a private smart network
+
+
+    # D. Evaluation of the blockchain solution
+
+
+    A qualitative hierarchy process (AHP) was used to evaluate the economic value
+    of the new blockchain concept. The potential of a blockchain data storage was
+    compared with the potential of centralized database systems currently established
+    at the case company. For this purpose, a decision made by
+
+
+    | Decision category | Weighting | Blockchain | Data-warehouse | Decision category
+    | Weighting | Blockchain | Data-warehouse | Decision category | Weighting | Blockchain
+    | Data-warehouse |
+
+    |---|---|---|---|---|---|---|---|---|---|---||
+
+    | Technical | 0.34 | 0.49 | 0.51 | | | 0.31 | 0.38 | 0.17 | Economic | 0.54 |
+    0.74 | 0.26 |
+
+    | Feasibility | 0.23 | 0.20 | 0.80 | | Transparency | 0.31 | 0.63 | 0.17 | Standardization
+    | 0.23 | 0.89 | 0.11 |
+
+    | Data quality | 0.32 | 0.57 | 0.12 | | availability | 0.24 | 0.27 | 0.13 | Resource
+    efficiency | 0.20 | 0.89 | 0.11 |
+
+    | Data completeness | 0.14 | 0.80 | 0.20 | | Service | 0.17 | 0.17 | 0.66 | Customer
+    orientation | 0.12 | 0.75 | 0.25 |
+
+    | User friendliness | 0.11 | 0.25 | 0.75 | | | 0.12 | 0.75 | 0.25 | Simplicity
+    | 0.11 | 0.87 | 0.13 |
+
+    | Fault tolerance | 0.08 | 0.11 | 0.89 | | Training | 0.08 | 0.17 | 0.75 | Strategic
+    fit | 0.06 | 0.83 | 0.11 |
+
+    | Latency | 0.04 | 0.25 | 0.75 | | Customizability | 0.05 | 0.80 | 0.25 | Knowledge
+    gain | 0.04 | 0.89 | 0.11 |
+
+    | Scalability, comparability | 0.03 | 0.17 | 0.83 | | Environment & People | 0.03
+    | 0.25 | 0.72 | | | |
+
+
+    Fig. 4. AHP for the blockchain solution and the data warehouse solution
+
+
+    443
+
+
+    Authorized licensed use to: Carleton University. Joined on 01/02/2021 at 22:17
+    UTC from IEEE Xplore. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# V. CONCLUSION
+
+
+    Blockchain technology provides great potential for the manufacturing industry
+    and, as indicated in this contribution, especially the semiconductor industry.
+    Blockchain enables a guaranteed level of security, transparency and immortality
+    that no centralized data storage can provide at this time. For the criteria examined,
+    blockchain outperforms traditional solutions and delivers promising results, especially
+    in critical areas. However, the knowledge acquired through blockchain in the industry
+    suggests that more complex cases can be used. This may include including pay-per-use
+    functionalities when outsourcing to semiconductor manufacturing to simplify financial
+    controlling. Our future outlook consists of the integration of more production
+    facilities and businesses into the network, as blockchain is particularly useful
+    when data is exchanged between multiple parties.
+
+
+    # ACKNOWLEDGMENT
+
+
+    This research was supported by the EU project Id40. The project Id40 was funded
+    from the ECS Joint Undertaking (JU) under grant number 87613. The JU receives
+    support from the European Union''s Horizon 2020 research and innovation program.
+    It is funded by the consortium members, as well as from Austria, Germany, Belgium,
+    Spain and Romania. The content does not necessarily reflect the official opinion
+    of the Joint Undertaking Europe. The information and views expressed in this article
+    entirely belong to the authors.
+
+
+    # REFERENCES
+
+
+    +   [1] A. G. Frank, L. S. Dangango, and N. F. Ayala, ‘Blockchain technology implementations
+    in manufacturing’, J. Ind. Econ., vol. 220, pp. 15-26, 2019; doi: 10.1016/j.indeco.2019.01.004.
+
+
+    +   [2] M. Swan, ‘Blockchain for Biproxy: A new entry’, 2019. Sebastopol, CA:
+    O’Reilly Media.
+
+
+    +   [3] T. Tapaswi and A. Tiwari, ‘How Blockchain Can Change Our Organizations’,
+    Digital Today, vol. 58, pp. 1-10, 2019; doi: 10.1007/s12522-019-0333.
+
+
+    +   [4] Y. Wang, J. Han, and P. DeVaney, ‘Blockchain technology for manufacturing
+    supply chain: a systematic review of the literature’, Int. J. Prod. Res., vol.
+    24, pp. 62-84, 2020; doi: 10.1080/00198838.2018-18148.
+
+
+    +   [5] A. Graver, B. Kraus, and S. Bailey, ‘Fab2bc: A Strategy for Peer-to-Peer
+    Networks in Manufacturing’, IEEE Transactions on Manufacturing, vol. 26, pp. 1180-1192,
+    2018; doi: 10.1109/TMAC.2018.2781054.
+
+
+    +   [6] G. Glassey, J. Eisenberg, and G. Hahn, ‘Blockchain Technology in Supply
+    Chain Management: An Opportunity’, Proceedings of the 52nd Hawaii International
+    Conference on Computer Systems, 2019, vol. 6, pp. 6885-6893,
+
+
+    +   [7] L. Münch, R. Uzai, and J. W. Fowler, ‘A review of semiconductor supply
+    chain management using blockchain technology’, Int. J. Prod. Res., vol. 754, pp.
+    1-20, 2020; doi: 10.1080/00202753.2017.1401234.
+
+
+    +   [8] J. Luhn, C. Fischer, R. Lasch, K. Bittner, B. Zetter, and G. Schubert,
+    ‘Blockchain in Manufacturing: State-of-the-Art in Science and Industry’, 2020.
+
+
+    +   [9] A. H. St, T. March, K. Park, and S. Ram, ‘Blockchain design in Information
+    Systems Research’, MIS Q, vol. 28, no. 1–75, 2021.
+
+
+    +   [10] R. W, ‘The analytical hierarchy process-how it works and what it is’,
+    Math Research, vol. 35, pp. 1-76, 1981; doi: 10.1007/BF0094447-8.
+
+
+    +   [11] R. Cole, M. Stephanidis, and J. Johnston, ‘Blockchain applications in
+    operations and supply chain management’, Supply Chain Management, vol. 24, no.
+    5, pp. 311-324, 2019; doi: 10.1108/SCM-07-2018-02439.
+
+
+    +   [12] K. Wang, S. Zhang, and C. L. Lo, ‘Blockchain applications in supply chain,
+    transparency and logistics: a systematic review of the literature’, Int. J. Prod.
+    Res., vol. 58, pp. 5-26, 2023; doi: 10.1080/00198837.2021.1693354.
+
+
+    +   [13] M. Laacity and S. Han, ‘Exploring Preliminary Challenges and Emerging
+    Best Practices in Enterprise Blockchain Applications’, Proceedings of the 2nd
+    IEEE International Conference on Information Systems, 2019, pp. 4665-4674, doi.
+
+
+    +   [14] N. Petramann, H. Heck, and S. van Baij, ‘Blockchain in supply chain and
+    logistics, – Impact of technology on performance’, Int. J. Prod. Res., vol. 58,
+    pp. 45-54, 2020; doi: 10.1080/00198837.2019.1651511.
+
+
+    +   [15] V. Barucci, J. Li, and W. M. Wang, ‘Blockchain cloud map for manufacturing:
+    Mapping of the smart factory’, SmartX 2019, 10258.
+
+
+    +   [16] J. L. Wang, ‘Applications of Blockchain in Manufacturing Within Developing:
+    Management of the German Academic Association’, Springer: Berlin, 2021.
+
+
+    +   [17] Everledger, ‘Real-world solutions for all industries’, 2019. https://www.everledger.com/industry-applications
+    (accessed Aug.).
+
+
+    +   [18] Tradelen, ‘Digitalizing the Global Supply Chain’, 2019.
+
+
+    +   [19] S. Paai and E. Ali, ‘Does blockchain help the key to a new era of supply
+    chain transparency and trust?’, Research Insight, 2020. https://doi.org/10.1108/RHI-03-2019-0050.
+
+
+    +   [20] Stahel A, ‘Industry 4.0: Index’, 2018. https://www.weforum.org/sites/default/files/2017-07/Industry_4.0_Index.pdf
+
+
+    +   [21] L. Gentleman, ‘Blockchain in Digital – Einmatz-Potential, Transformation-Einheiten,
+    Transformation-Potential’, 2020. https://www.bitcoin.com/Blockchain/Digital-Einmatz-Potential-Transformation-Einheiten-Transformation-Potential
+    (accessed Apr. 20).
+
+
+    +   [22] V. Dichmeier, M. Tafer, and J. Sanchez, ‘Analysis and Application of
+    Blockchain in the Manufacturing Industry’, 2018. doi: 10.1109/IJCC.2018.8821895.
+
+
+    +   [23] Hyperledger, Open Source Blockchain Technologies’, 2020. https://www.hyperledger.org/
+
+
+    +   [24] Appendix, doi:10.25532-OPARA-8.
+
+
+    environment. This approach was also used to design the blockchain solution to
+    store operation data in this study.
+
+
+    Proceedings of the 2022 IEEE
+
+
+    444
+
+
+    Authorized users licensed to use the Content: Created on on 01/01/2021 at 22:47
+    UTC from IEEE X. Restrictions apply.'
+  merge: -1
+  img_proc: true
