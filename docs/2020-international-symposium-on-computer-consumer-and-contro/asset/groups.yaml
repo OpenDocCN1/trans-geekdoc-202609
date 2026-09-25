@@ -1,0 +1,1001 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # Comparison of Deep Reinforcement Learning Algorithms in a Robot Manipulator
+    Control Application
+
+
+    Chang Chu
+
+    Graduate School of Science and Engineering
+
+    Doshita University
+
+    Kyoto, Japan
+
+    ctwd0105@mail.doshita.ac.jp
+
+
+    Kazuhiko Takahashi
+
+    Faculty of Science and Engineering
+
+    Doshita University
+
+    Kyoto, Japan
+
+    katakahama@mail.doshita.ac.jp
+
+
+    Masafumi Hashimoto
+
+    Faculty of Science and Engineering
+
+    Doshita University
+
+    Kyoto, Japan
+
+    mashashimo0@mail.doshita.ac.jp
+
+
+    **Abstract—**In this study we apply deep reinforcement learning (DRL) to control
+    a robot manipulator and investigate its effectiveness by comparing the performance
+    of various DRL algorithms, namely deep policy gradient (DDPG) and distributed
+    deterministic policy gradient (D4PG). We conduct training experiments on a real-world
+    task of reaching for the robot manipulator. Experimental results show that the
+    D4PG algorithm achieves a higher success rate than the DDPG algorithm and demonstrates
+    the potential of DRL for controlling robots.
+
+
+    **Index Terms**—reinforcement learning, robot manipulator, deep deterministic
+    policy gradient (DDPG), distributed deterministic policy gradient (D4PG)
+
+
+    # I. INTRODUCTION
+
+
+    Reinforcement learning (RL) is one of the most machine learning methods, that
+    deals with the problem of generating an agent that takes actions in an environment
+    to get maximum rewards in a state or task that leads rewards based on the agent''s
+    behaviour. RL has the potential to allow agents to any level of skill. There are
+    many types of RL: value-based and policy-based algorithms. Value-based algorithms
+    determine control policies for an agent by estimating the probability of reaching
+    a given state, while policy-based algorithms directly control policies for agents
+    without using value estimations. The performance of the RL techniques NNs can
+    approximate optimal value functions in RL algorithms, e.g., deep Q-networks (DQNs),
+    which are value-based algorithms, deep learning techniques, specifically convolutional
+    CNNs, to operate [1]. Deep learning applied to control policies, achieving performances
+    comparable with many others; however, recent successful applications, such as
+    surpassing humans at Atari games and games of Go, have attracted considerable
+    consideration in the application of DRL to solve-real-world problems in many fields.
+
+
+    In control engineering, RL is expected to control autonomous agents, and many
+    studies have used RL for several robotic systems despite many limitations such
+    as the required samples and real-time constraints. For instance, robot manipulators
+    are widely employed in fields and controlling robot manipulators is a difficult
+    task due to the highly nonlinear characteristics of robotic mechanisms and dynamics.
+    Moreover, a robot must adapt to new and unknown environments. Using the flexible
+    and fast nature of DRL to learn an appropriate robot manipulator control [4] is
+    sometimes difficult to use DQNs to control robot manipulators, because DQNs can
+    only handle discrete-dimensional and continuous action spaces. To solve this problem,
+    the policy gradient algorithm (DDPG) [5], integrates a deep policy gradient algorithm
+    [6] and DQNs into an actor-critic framework. It is proposed. On the other hand,
+    a modified Q-algorithm normalised advantage (NAF) [7] was developed in which the
+    Q-function is represented by its maximum value obtained during the learning. These
+    DRL algorithms are applied and evaluated for controlling robot manipulators in
+    several studies
+
+
+    In this study we apply DRL to a robot manipulator approach in which the robot
+    manipulator acts as an agent interacting with an environment and investigate the
+    characteristics of a control model using a DDPG or a distributed deterministic
+    policy gradient (D4PG) [9], which is an extension of the DRL algorithms. To evaluate
+    the performance of DRL for controlling a robot, computational experiments on controlling
+    the position of the end-effector of the robot manipulator are conducted, and the
+    performances of these algorithms are compared.'
+  - '[PAGE 1]
+
+
+    # II. DEEP REINFORCEMENT LEARNING
+
+
+    # A. DDPG [5]
+
+
+    A DDPG algorithm integrates a DPG by policy approximation and value function approximation
+    into an actor critic framework. The actor takes actions in an environment to optimise
+    and enhance its policy using the value function provided by the critic. The critic
+    receives the rewards from the environment and enhances the value function used
+    for policy approximation. In a DDPG algorithm, representing the actor as policy
+    and the critic as value function achieved using deep NNs. Thus, a DDPG algorithm
+    is a model-free DRL algorithm. The parameters of the critic network are used to
+    minimise the loss function
+
+
+    ```
+
+    $L = \frac{1}{M} \sum_{i=1}^{M} (y_i - Q(s_i, a_i; \theta^Q))^2$
+
+    ```
+
+
+    where
+
+
+    ```
+
+    $y_i = r_i + \gamma Q(s_{i+1}, \mu(s_{i+1}; \theta^\mu))$
+
+    ```
+
+
+    where the parameters of the actor network are updated using the following gradient:
+
+
+    ```
+
+    $\nabla_{\theta^\mu} J \approx \sum_{i=1}^{M} \nabla_a Q(s_i, a; \theta^Q)|_{a=\mu(s_i;
+    \theta^\mu)} \times \nabla_{\theta^\mu} \mu(s_i; \theta^\mu)$
+
+    ```
+
+
+    where $s_i, a_i$, and $r_i$, denote the state, action and reward of an agent in
+    the i-th time step. $s_{i+1}$ denotes the state value function; $\mu(s_{i+1})$
+    denotes the actor function representing the current policy; $\theta^\mu$ and $\theta^Q$
+    denote the weights of the critic and actor networks, respectively; $\theta^\mu''$
+    and $\theta^Q''$ denote the parameters of the critic and actor target networks,
+    respectively; and $\gamma$ is the discount rate.
+
+
+    # B. DDPG [9]
+
+
+    A DDPG algorithm attempts to improve the accuracy of A DDPG by incorporating a
+    distributional approach: a critic update with multiple distributed actors, where
+    K independent agents collect experience and feed data into a common replay buffer.
+    Additionally, N-step returns are used, which incorporate an N-step target rather
+    than a one-step target to capture more rewards in futures when calculating a TD
+    error. Moreover, prioritisation of the experience, allows to practise tuples in
+    the reply tables to gain an actor relevant experience for improving its policy,
+    is introduced over the normal experience replay policy. The parameters of the
+    critic network are updated using the following gradient:
+
+
+    ```
+
+    $\delta_w = \frac{1}{M} \sum_{i=1}^{M} \nabla_w(Y_i, Z_w(s_i, a_i; \alpha_w))$
+
+    ```
+
+
+    where
+
+
+    ```
+
+    $Y_i = \sum_{n=0}^{N-1} \gamma^n r_{i+n} + \gamma^N Z_w(s_{i+N}, (s_{i+N}))$
+
+    ```
+
+
+    the parameters of the actor network are updated using the following gradient:
+
+
+    ```
+
+    $\delta_v = \frac{1}{M} \sum_{i=1}^{M} \nabla_\pi(s_i, a_i) E[\nabla_a Q(s_i,
+    a)]_{a=\pi(s_i)}$
+
+    ```
+
+
+    where R represents the replay size, $p_i$ denotes the priority at an i-th time
+    step, $d$ the distance between two distributions, $(s_i, a_i)$ denotes the parametrized
+    distribution and $\pi(s)$ denotes the parametrised policy.
+
+
+    # III. COMPUTATIONAL EXPERIMENT
+
+
+    To evaluate the performance of RL techniques to control robotic agents, as a robot
+    manipulator, is required to interact directly with the environment. In the environment,
+    the control objective is to reach a task, the robot manipulator moves from an
+    arbitrary initial position and keeps its end-effector at the target position.
+    We use the 7-DOF arm (Dof from Scius Tech, Kyoto, Japan, as shown in Fig. 1) The
+    model of the robot manipulator with its shoulder, elbow and wrist joints having
+    two, two and DO respectively, is illustrated in Fig. 1. For computational experiments,
+    we developed a motion simulator using Python and implemented the RL algorithm
+    based on DDPG and SAC, representing the simulator.
+
+
+    ![](img/0d964d9c0f3cd7715fe07c9eb0edd363_1_0.png)
+
+
+    To train and testing the experiments, we constrained the DOF of joints $q_1, q_2$
+    and $q_3$ were fixed to 0. Consequently, the motion of the robot manipulator was
+    restricted to a 2D plane in parallel to the range of the robot manipulator''s
+    shoulder, elbow and wrist joints were $\pi < q_1 < q_2 < \pi, 1.13 < q_4 < 2$
+    and $-0.33 < q_5 < 0.06$, respectively, A.
+
+
+    Fig. 1. Overview of the robot manipulator (left: humanoid robot, right: schematic
+    of a 7-DOF robot manipulator (left: arm)).'
+  md: '
+
+    ## Comparison of Deep Reinforcement Learning Algorithms in a Robot Manipulator
+    Control Application
+
+
+    Chang Chu
+
+    Graduate School of Science and Engineering
+
+    Doshita University
+
+    Kyoto, Japan
+
+    ctwd0105@mail.doshita.ac.jp
+
+
+    Kazuhiko Takahashi
+
+    Faculty of Science and Engineering
+
+    Doshita University
+
+    Kyoto, Japan
+
+    katakahama@mail.doshita.ac.jp
+
+
+    Masafumi Hashimoto
+
+    Faculty of Science and Engineering
+
+    Doshita University
+
+    Kyoto, Japan
+
+    mashashimo0@mail.doshita.ac.jp
+
+
+    **Abstract—** In this study we apply deep reinforcement learning (DRL) to control
+    a robot manipulator and investigate its effectiveness by comparing the performance
+    of various DRL algorithms, namely deep policy gradient (DDPG) and distributed
+    deterministic policy gradient (D4PG). We conduct training experiments on a real-world
+    task of reaching for the robot manipulator. Experimental results show that the
+    D4PG algorithm achieves a higher success rate than the DDPG algorithm and demonstrates
+    the potential of DRL for controlling robots.
+
+
+    **Index Terms——reinforcement learning, robot manipulator, deep deterministic policy
+    gradient (DDPG), distributed deterministic policy gradient (D4PG)
+
+
+    ## I. INTRODUCTION
+
+
+    Reinforcement learning (RL) is one of the most machine learning methods, that
+    deals with the problem of generating an agent that takes actions in an environment
+    to get maximum rewards in a state or task that leads rewards based on the agent''s
+    behaviour. RL has the potential to allow agents to any level of skill. There are
+    many types of RL: value-based and policy-based algorithms. Value-based algorithms
+    determine control policies for an agent by estimating the probability of reaching
+    a given state, while policy-based algorithms directly control policies for agents
+    without using value estimations. The performance of the RL techniques NNs can
+    approximate optimal value functions in RL algorithms, e.g., deep Q-networks (DQNs),
+    which are value-based algorithms, deep learning techniques, specifically convolutional
+    CNNs, to operate [1]. Deep learning applied to control policies, achieving performances
+    comparable with many others; however, recent successful applications, such as
+    surpassing humans at Atari games and games of Go, have attracted considerable
+    consideration in the application of DRL to solve real-world problems in many fields.
+
+
+    In control engineering, RL is expected to control autonomous agents, and many
+    studies have used RL for several robotic systems despite many limitations such
+    as the required samples and real-time constraints. For instance, robot manipulators
+    are widely employed in fields and controlling robot manipulators is a difficult
+    task due to the highly nonlinear characteristics of robotic mechanisms and dynamics.
+    Moreover, a robot must adapt to new and unknown environments. Using the flexible
+    and fast nature of DRL to learn an appropriate robot manipulator control [4] is
+    sometimes difficult to use DQNs to control robot manipulators, because DQNs can
+    only handle discrete-dimensional and continuous action spaces. To solve this problem,
+    the policy gradient algorithm (DDPG) [5], integrates a deep policy gradient algorithm
+    [6] and DQNs into an actor-critic framework. It is proposed. On the other hand,
+    a modified Q-algorithm normalized advantage (NAF) [7] was developed in which the
+    Q-function is represented by its maximum value obtained during the learning. These
+    DRL algorithms are applied and evaluated for controlling robot manipulators in
+    several studies.
+
+
+    In this study we apply DRL to a robot manipulator approach in which the robot
+    manipulator acts as an agent interacting with an environment and investigate the
+    characteristics of a control model using a DDPG or a distributed deterministic
+    policy gradient (D4PG) [9], which is an extension of the DRL algorithms. To evaluate
+    the performance of DRL for controlling a robot, computational experiments on controlling
+    the position of the end-effector of the robot manipulator are conducted, and the
+    performances of these algorithms are compared.
+
+
+    ## II. DEEP REINFORCEMENT LEARNING
+
+
+    ### A. DDPG [5]
+
+
+    A DDPG algorithm integrates a DPG by policy approximation and value function approximation
+    into an actor critic framework. The actor takes actions in an environment to optimize
+    and enhance its policy using the value function provided by the critic. The critic
+    receives the rewards from the environment and enhances the value function used
+    for policy approximation. In a DDPG algorithm, representing the actor as policy
+    and the critic as value function achieved using deep NNs. Thus, a DDPG algorithm
+    is a model-free DRL algorithm. The parameters of the critic network are used to
+    minimize the loss function:
+
+
+    $$L = \frac{1}{M} \sum_{i=1}^{M} (y_i - Q(s_i, a_i; \theta^Q))^2$$
+
+
+    where
+
+
+    $$y_i = r_i + \gamma Q(s_{i+1}, \mu(s_{i+1}; \theta^\mu))$$
+
+
+    where the parameters of the actor network are updated using the following gradient:
+
+
+    $$\nabla_{\theta^\mu} J \approx \sum_{i=1}^{M} \nabla_a Q(s_i, a; \theta^Q)|_{a=\mu(s_i;
+    \theta^\mu)} \times \nabla_{\theta^\mu} \mu(s_i; \theta^\mu)$$
+
+
+    where $s_i, a_i$, and $r_i$, denote the state, action and reward of an agent in
+    the i-th time step. $s_{i+1}$ denotes the state value function; $\mu(s_{i+1})$
+    denotes the actor function representing the current policy; $\theta^\mu$ and $\theta^Q$
+    denote the weights of the critic and actor networks, respectively; $\theta^\mu''$
+    and $\theta^Q''$ denote the parameters of the critic and actor target networks,
+    respectively; and $\gamma$ is the discount rate.
+
+
+    ### B. D4PG [9]
+
+
+    A DDPG algorithm attempts to improve the accuracy of DDPG by incorporating a distributional
+    approach: multiple actors, where independent agents collect data into a common
+    replay buffer. Additionally, N-step returns are used, which incorporate an N-step
+    target rather than a one-step target to capture more rewards when calculating
+    a TD error. Moreover, prioritisation of the experience allows to practise in the
+    normal replay policy, is introduced. The parameters of the critic network are
+    updated using the following gradient:
+
+
+    $$\delta_w = \frac{1}{M} \sum_{i=1}^{M} \nabla_w(Y_i, Z_w(s_i; a_i))$$
+
+
+    where
+
+
+    $$Y_i = \sum_{n=0}^{N-1} \gamma^n r_{i+n} + \gamma^N Z_w(s_{i+N})$$
+
+
+    the parameters of the actor network are updated using the following gradient:
+
+
+    $$\delta_v = \frac{1}{M} \sum_{i=1}^{M} \nabla_\pi(s_i, a_i) E[\nabla_a Q(s_i,
+    a)]_{a=\pi(s_i)}$$
+
+
+    where R represents the replay size, $p_i$ denotes the priority at an i-th time
+    step, $d$ the distance between two distributions, $(s_i, a_i)$ denotes the parametrized
+    distribution and $\pi(s)$ denotes theised policy.
+
+
+    ## III. COMPUTATIONAL EXPERIMENT
+
+
+    To evaluate the performance of RL techniques to control robotic agents, as a robot
+    manipulator, is required to interact directly with the environment. In the environment,
+    the control objective is to reach a task, the robot manipulator moves from an
+    arbitrary initial position and keeps its end-effector at the target position.
+    We use the 7-DOF arm (Dof from Scius Tech, Kyoto, Japan, as shown in Fig. 1) The
+    model of the robot manipulator with its shoulder, elbow and wrist joints having
+    two, two and DO respectively, is illustrated in Fig. 1. For computational experiments,
+    we developed a motion simulator using Python and implemented the RL algorithm
+    based on DDPG and SAC, representing the simulator.
+
+
+    ![](img/0d964d9c0f3cd7715fe07c9eb0edd363_1_0.png)
+
+
+    A. Fig. 1. Overview of the robot manipulator (left: humanoid robot, right: schematic
+    of a 7-DOF robot manipulator (left: arm)).
+
+    '
+  mdcn: '
+
+
+    ## 机器人手臂控制应用中深度强化学习算法的比较
+
+
+    Chang Chu
+
+    科学与工程研究生院
+
+    足石大学
+
+    日本，京都
+
+    ctwd0105@mail.doshita.ac.jp
+
+
+    Kazuhiko Takahashi
+
+    科学与工程学部
+
+    足石大学
+
+    日本，京都
+
+    katakahama@mail.doshita.ac.jp
+
+
+    Masafumi Hashimoto
+
+    科学与工程学部
+
+    足石大学
+
+    日本，京都
+
+    mashashimo0@mail.doshita.ac.jp
+
+
+    **摘要——** 在本研究中，我们将深度强化学习（DRL）应用于机器人手臂的控制，并通过比较各种 DRL 算法（即深度策略梯度（DDPG）和分布式确定性策略梯度（D4PG））的性能来研究其有效性。我们针对机器人手臂抓取的现实任务开展了训练实验。实验结果表明，D4PG
+    算法的成功率高于 DDPG 算法，并展示了深度强化学习在机器人控制方面的潜力。
+
+
+    **索引词——强化学习，机器人手臂，深度确定性策略梯度（DDPG），分布式确定性策略梯度（D4PG）**
+
+
+    ## I. 引言
+
+
+    强化学习（RL）是机器学习中最的方法之一，它解决了生成智能体的问题，使智能体在环境中采取行动，并在状态或任务中获得最大奖励。强化学习具有让智能体掌握任何水平技能的潜力。强化学习有很多类型：基于值的（value-based）和基于策略（policy-based）的算法。基于值的算法通过估计到达给定状态的概率来确定智能体的控制策略，而基于策略的算法在不使用值估计的情况下直接控制智能体的策略。RL
+    技术的性能：神经网络（NNs）可以近似 RL 算法中的最优值函数，例如深度 Q 网络（DQNs），这是基于值的算法；深度学习技术，特别是卷积神经网络 CNN，用于操作
+    [1]。应用于控制策略的深度学习取得了与许多其他方法相当的性能；然而，近期成功的应用（例如在雅达利游戏和围棋中击败人类）已经引起了人们对应用深度强化学习解决许多领域现实问题的高度关注。
+
+
+    在控制工程中，RL 被用于控制自主智能体，尽管存在样本需求和实时性限制等许多限制，但许多研究已将 RL 用于多个机器人系统。例如，机器人手臂被广泛应用于各个领域，由于机器人机构和动力学的高度非线性特性，控制机器人手臂是一项困难的任务。此外，机器人必须适应新的且未知的环境。利用深度强化学习灵活且快速的特性来学习合适的机器人手臂控制
+    [4] 有时很难使用 DQNs 控制机器人手臂，因为 DQNs 只能处理离散和连续动作空间。为了解决这个问题，提出了策略梯度算法（DDPG）[5]，并将深度策略梯度算法
+    [6] 和 DQNs 集成到执行者-评论（actor-critic）框架中。另一方面，开发了改进的 Q 算法归一化优势（NAF）[7]，其中 Q 函数由学习过程中获得的最大值表示。这些
+    DRL 算法已在多项研究中应用于机器人手臂控制。
+
+
+    在本研究中，我们将 DRL 应用于机器人手臂方法，其中机器人手臂作为与环境交互的智能体，并使用 DDPG 或分布式确定性策略梯度（D4PG）[9]（DRL
+    算法的扩展）研究控制模型的特性。为了评估深度强化学习控制机器人的性能，对机器人手臂末端执行器的位置控制进行了计算实验，并比较了这些算法的性能。
+
+
+    ## II. 深度强化学习
+
+
+    ### A. DDPG [5]
+
+
+    DDPG 算法通过策略近似和值函数近似将 DPG 集成到执行者-评论框架中。执行者（actor）在环境中采取行动，利用评论者（critic）提供的值函数来优化和增强其策略。评论者接收来自环境的奖励，并增强用于策略近似的值函数。在
+    DDPG 算法中，使用深度神经网络将执行者表示为策略，评论者表示为值函数。因此，DDPG 算法是一种无模型的 DRL 算法。评论者网络的参数被用于最小化损失函数：
+
+
+    $$L = \frac{1}{M} \sum_{i=1}^{M} (y_i - Q(s_i, a_i; \theta^Q))^2$$
+
+
+    其中
+
+
+    $$y_i = r_i + \gamma Q(s_{i+1}, \mu(s_{i+1}; \theta^\mu))$$
+
+
+    其中执行者网络的参数使用以下梯度更新：
+
+
+    $$\nabla_{\theta^\mu} J \approx \sum_{i=1}^{M} \nabla_a Q(s_i, a; \theta^Q)|_{a=\mu(s_i;
+    \theta^\mu)} \times \nabla_{\theta^\mu} \mu(s_i; \theta^\mu)$$
+
+
+    其中 $s_i, a_i$ 和 $r_i$ 表示智能体在第 $i$ 个时间步的状态、动作和奖励。$s_{i+1}$ 表示状态值函数；$\mu(s_{i+1})$
+    表示代表当前策略的执行者函数；$\theta^\mu$ 和 $\theta^Q$ 分别表示评论者和执行者网络的权重；$\theta^\mu''$ 和 $\theta^Q''$
+    分别表示目标评论者执行者网络的参数；$\gamma$ 是折扣率。
+
+
+    ### B. D4PG [9]
+
+
+    DDPG 算法尝试通过引入分布方法来提高 DDPG 的准确性：多个执行者，其中独立智能体将数据收集到公共的回放缓冲区中。此外，使用了 N 步回报（N-step
+    returns），它在计算 TD 误差时使用 N 步目标而非单步目标来捕捉更多奖励。此外，引入了经验优先化允许在正常的回放策略中进行练习。评论者网络的参数使用以下梯度更新：
+
+
+    $$\delta_w = \frac{1}{M} \sum_{i=1}^{M} \nabla_w(Y_i, Z_w(s_i; a_i))$$
+
+
+    其中
+
+
+    $$Y_i = \sum_{n=0}^{N-1} \gamma^n r_{i+n} + \gamma^N Z_w(s_{i+N})$$
+
+
+    执行者网络的参数使用以下梯度更新：
+
+
+    $$\delta_v = \frac{1}{M} \sum_{i=1}^{M} \nabla_\pi(s_i, a_i) E[\nabla_a Q(s_i,
+    a)]_{a=\pi(s_i)}$$
+
+
+    其中 $R$ 代表回放大小，$p_i$ 表示第 $i$ 个时间步的优先级，$d$ 是两个分布之间的距离$(s_i, a_i)$ 表示参数化的分布，$\pi(s)$
+    表示参数化的策略。
+
+
+    ## III. 计算实验
+
+
+    为了评估 RL 技术控制机器人智能体的性能，需要机器人手臂直接与环境交互。在环境中，控制目标是到达某个任务，机器人手臂从任意初始位置移动并将其末端执行器保持在目标位置。我们使用了
+    7 自由手臂（Dof 来自 Scius Tech，日本，京都，如图 1 所示）。肩部、肘部和腕部关节具有 2、2 和 3 个自由度的机器人手臂模型如图 1
+    所示。对于计算实验，我们使用 Python 开发了运动模拟器，并实现了基于 DDPG 和 SAC 的 RL 算法来代表模拟器。
+
+
+    ![](img/0d964d9c0f3cd7715fe07c9eb0edd363_1_0.png)
+
+
+    A. 图 1. 机器人手臂概述（左：人形机器人，右：7 自由机器人手臂示意图（左：手臂））。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    square with the side length of 600 centred on the shoulder joint of the robot
+    manipulator was few used to simulate its motion. As a result, the length of each
+    robot manipulator in the simulator was geometrically reducing the links of an
+    actual manipulator: $l_1 = 100$, $l_2 = 20$ and $l_3 = 40$. In the initial process,
+    the values of the joints were randomly set. The position of the robot manipulator''s
+    end-effector was placed randomly on the circumference of three circles, of which
+    the position of the shoulder was the origin of the manipulator''s motion. The
+    target position was located at the centre of the square with a side length of
+    40. In the experiments, we generated 200,000 experiments with per parameters.
+
+
+    Table shows the learning rates. For all algorithms, the closer the end-effector
+    is to the target, the higher the reward was obtained. The longer the end-effector
+    stayed in the square around the target, the higher the reward was. The learning
+    process terminated when the robot manipulator (agents) moved to the specified
+    target stayed at that position for a predetermined number of steps or when the
+    number of steps exceeded 200.
+
+
+    Fig. 2 shows the learning rate of each algorithm; the horizontal axis shows the
+    learning intervals, whereas one interval has 1,000 experiments, while the vertical
+    axis represents the success rate in each. In Fig. 2, the D4PG achieves a higher
+    success rate and more stability than the DDPG during the process.
+
+
+    Next, we investigated the positioning errors after unfamil
+
+
+    TABLE I
+
+    LEARNING PARAMETERS
+
+    | Learning | value |
+
+    |---||---|
+
+    | learning rate | 0.001 |
+
+    | Discount factor | 0.9 |
+
+
+    ![](img/0d964d9c0f3cd7715fe07c9eb0edd363_2_0.png)
+
+
+    Fig. 2. Comparison of learning success rates between DDPG and D4PG algorithms.
+
+
+    ![](img/0d964d9c0f3cd7715fe07c9eb0edd363_2_1.png)
+
+
+    Fig. 3. Comparison of the positioning error after unfamiliar target positions
+    between DDPG and D4PG algorithms.
+
+
+    target positions located on an unfamiliar circular trajectory after training the
+    control model using the two algorithms. Positioning error is defined as the Euclidean
+    distance between the target and an end-effector''s position. The total number
+    of target points for testing was 19, and the positioning error at each point was
+    evaluated using 1,000 experimental results obtained using different values of
+    the joint configuration. The errors observed using both the algorithms, and the
+    error bars show the standard deviation. In Fig. 3, the mean error and variance
+    obtained by training the control model are lower than that of DDPG. The D4PG algorithm
+    achieves the task of robot manipulator with higher accuracy than the DDPG.
+
+
+    Finally, the tracking of the robot manipulator along the desired trajectory was
+    conducted as a practical control approach. Fig. 5 illustrates the unfamiliar circular
+    trajectory following the completion of the learning process using the D4PG and
+    DDPG algorithms. The robot manipulator first moves its end-effector to the start
+    of the trajectory, follows the control from until the initial joint angles are
+    randomly set and then they follow the trajectory point-to-point for each specified
+    end-point. As shown in Fig. 4, it is difficult to ensure that the end-effector
+    tracks the desired trajectory maintaining the accuracy of the D4PG-controlled
+    model. Although the control model does not meet practical requirements and a relatively
+    large error is observed around the final position of the desired trajectory, as
+    shown in Fig. 5, the D4PG-trained model performs better than the DDPG-trained
+    model.
+
+
+    # IV. CONCLUSIONS
+
+
+    This study investigated the effectiveness of DRL to control a robot manipulator:
+    two types of, namely the DDPG and D4PG algorithms, were explored to train a control
+    model, and their performances were compared. A motion simulation of a robot manipulator
+    used the 7-DOF arm of a humanoid robot, and the simulator was used to implement
+    the two'
+  - '[PAGE 3]
+
+
+    ![](img/0d964d9c0f3cd7715fe07c9eb0edd363_3_0.png)
+
+
+    ![](img/0d964d9c0f3cd7715fe07c9eb0edd363_3_1.png)
+
+
+    Fig. 4. Example of the robot manipulator''s end-effector''s response along unfamiliar
+    target trajectory after the model is trained with DDPG algorithm-the desired trajectory
+    of the end-effector is denoted by blue line, and illustrated by the grey line
+    indicates the positions of the robot manipulator at Steps 0, 30 and 80 respectively.
+
+
+    Fig. 5. Example of the robot manipulator''s end-effector''s response along unfamiliar
+    target trajectory after the model is trained with DDPG algorithm-the desired trajectory
+    of the end-effector is denoted by blue line, and illustrated by the grey line
+    indicates the positions of the robot manipulator at Steps 0, 30 and 80.
+
+
+    algorithms conduct computational experiments, based on the reaching task of the
+    robot manipulator''s end-effector, the model was trained and its performance was
+    tested using the aforementioned experiments. Experimental results validated the
+    application of DRL to control robot manipulators and demonstrated that achieved
+    better performance than the DDPG algorithm for the task.
+
+
+    The goal of the simulation presented in this study is to enhance the accuracy
+    and control of robot manipulator in complex scenarios. Optimisation of the DRL
+    algorithms to improve the model''s tracking accuracy and experiments on real-world
+    scenarios by evaluating the performance of the control in a real-world setup would
+    be discussed in future work.
+
+
+    # ACKNOWLEDGMENT
+
+
+    This work was supported by JSPS KAKEN Grant Number JP20KP11990.
+
+
+    # REFERENCES
+
+
+    +   [1] V. Minh, K. Kavoucioglu, D. Silver, A. Graves, I. Agmonval, D. Wierstra
+    and M. Riedlund, “Playing with Deep Reinforcement Learning,” in Proceedings of
+    Deep Learning Workshop in Conjunction with Neural Information Processing Systems
+    2013, 203.
+
+
+    +   [2] J. Kever, J. Bagrawal and T. Peters, “Reinforcement Learning: A Survey,”
+    The International Journal of Robotics Research, Vol. 32, 1238–1274, 2013.
+
+
+    +   [3] H. Nguyen and M. Li, “Review of Deep Reinforcement Learning for Robotic
+    Control,” in Proceedings of 2019 IEEE International Conference on Robotics, pp.
+    590–595, 2019.
+
+
+    +   [4] S. Bharti, A. Wienberg, Z. T. Lee and H. Ren, “Deep Reinforcement Learning
+    for Robotic Manipulation,” in IEEE Proceedings of the 24th International Conference
+    on Robotics and Challenges, 2017.
+
+
+    +   [5] T. P. Lillicoup, J. H. Hunt, A. Prit, N. Heess, T. Eyer, Y. Tassa, D.
+    Silver, “Learning Deep Reinforcement Learning for Continuous Control,” in 2016
+    IEEE International Conference on Robotics and Learning (ICRA), 2016.
+
+
+    +   [6] D. Silver, G. Eeler, N. Heess, D. Wright, D. Vordal and M. Riedlund, “Proximal
+    Policy Optimization,” in Proceedings of the 33rd International Conference on Machine
+    Learning (ICML), Vol. 34, 2016.
+
+
+    +   [7] S. Amadeo, “Deep Reinforcement Learning for Robot Manipulation The State
+    of the Art,” arXiv:1701.08878, 2017.
+
+
+    +   [8] G. B. Wang, J. Finn, A. Finnman, D. Duncan, G. TB, A. Maddal, N. Heess
+    and T. Lillicoup, “Distributed Demographic Policy Optimization,” in Proceedings
+    of 6th International Conference on Learning Representations (ICLR), 2018.'
+  md: '
+
+    square with the side length of 600 centred on the shoulder joint of the robot
+    manipulator was few used to simulate its motion. As a result, the length of each
+    robot manipulator in the simulator was geometrically reducing the links of an
+    actual manipulator: $l_1 = 100$, $l_2 = 20$ and $l_3 = 40$. In the initial process,
+    the values of the joints were randomly set. The position of the robot manipulator''s
+    end-effector was placed randomly on the circumference of three circles, of which
+    the position of the shoulder was the origin of the manipulator''s motion. The
+    target position was located at the centre of the square with a side length of
+    40. In the experiments, we generated 200,000 experiments with per parameters.
+
+
+    Table shows the learning rates. For all algorithms, the closer the end-effector
+    is to the target, the higher the reward was obtained. The longer the end-effector
+    stayed in the square around the target, the higher the reward was. The learning
+    process terminated when the robot manipulator (agents) moved to the specified
+    target stayed at that position for a predetermined number of steps or when the
+    number of steps exceeded 200.
+
+
+    Fig. 2 shows the learning rate of each algorithm; the horizontal axis shows the
+    learning intervals, whereas one interval has 1,000 experiments, while the vertical
+    axis represents the success rate in each. In Fig. 2, the D4PG achieves a higher
+    success rate and more stability than the DDPG during the process.
+
+
+    Next, we investigated the positioning errors after unfamiliar
+
+
+    TABLE I
+
+    LEARNING PARAMETERS
+
+    | Learning | value |
+
+    |--- | --- |
+
+    | learning rate | 0.001 |
+
+    | Discount factor | 0.9 |
+
+
+    ![](img/0d964d9c0f3cd7715fe07c9eb0edd363_2_0.png)
+
+
+    Fig. 2. Comparison of learning success rates between DDPG and D4PG algorithms.
+
+
+    ![](img/0d964d9c0f3cd7715fe07c9eb0edd363_2_1.png)
+
+
+    Fig. 3. Comparison of the positioning error after unfamiliar target positions
+    between DDPG and D4PG algorithms.
+
+
+    target positions located on an unfamiliar circular trajectory after training the
+    control model using the two algorithms. Positioning error is defined as the Euclidean
+    distance between the target and an end-effector''s position. The total number
+    of target points for testing was 19, and the positioning error at each point was
+    evaluated using 1,000 experimental results obtained using different values of
+    the joint configuration. The errors observed using both the algorithms, and the
+    error bars show the standard deviation. In Fig. 3, the mean error and variance
+    obtained by training the control model are lower than that of DDPG. The D4PG algorithm
+    achieves the task of robot manipulator with higher accuracy than the DDPG.
+
+
+    Finally, the tracking of the robot manipulator along the desired trajectory was
+    conducted as a practical control approach. Fig. 5 illustrates the unfamiliar circular
+    trajectory following the completion of the learning process using the D4PG and
+    DDPG algorithms. The robot manipulator first moves its end-effector to the start
+    of the trajectory, follows the control from until the initial joint angles are
+    randomly set and then they follow the trajectory point-to-point for each specified
+    end-point. As shown in Fig. 4, it is difficult to ensure that the end-effector
+    tracks the desired trajectory maintaining the accuracy of the D4PG-controlled
+    model. Although the control model does not meet practical requirements and a relatively
+    large error is observed around the final position of the desired trajectory, as
+    shown in Fig. 5, the D4PG-trained model performs better than the DDPG-trained
+    model.
+
+
+    # IV. CONCLUSIONS
+
+
+    This study investigated the effectiveness of DRL to control a robot manipulator:
+    two types of, namely the DDPG and D4PG algorithms, were explored to train a control
+    model, and their performances were compared. A motion simulation of a robot manipulator
+    used the 7-DOF arm of a humanoid robot, and the simulator was used to implement
+    the two
+
+
+    ![](img/0d964d9c0f3cd7715fe07c9eb0edd363_3_0.png)
+
+
+    ![](img/0d964d9c0f3cd7715fe07c9eb0edd363_3_1.png)
+
+
+    Fig. 4. Example of the robot manipulator''s end-effector''s response along unfamiliar
+    target trajectory after the model is trained with DDPG algorithm-the desired trajectory
+    of the end-effector is denoted by blue line, and illustrated by the grey line
+    indicates the positions of the robot manipulator at Steps 0, 30 and 80 respectively.
+
+
+    Fig. 5. Example of the robot manipulator''s end-effector''s response along unfamiliar
+    target trajectory after the model is trained with DDPG algorithm-the desired trajectory
+    of the end-effector is denoted by blue line, and illustrated by the grey line
+    indicates the positions of the robot manipulator at Steps 0, 30 and 80.
+
+
+    algorithms conduct computational experiments, based on the reaching task of the
+    robot manipulator''s end-effector, the model was trained and its performance was
+    tested using the aforementioned experiments. Experimental results validated the
+    application of DRL to control robot manipulators and demonstrated that achieved
+    better performance than the DDPG algorithm for the task.
+
+
+    The goal of the simulation presented in this study is to enhance the accuracy
+    and control of robot manipulator in complex scenarios. Optimisation of the DRL
+    algorithms to improve the model''s tracking accuracy and experiments on real-world
+    scenarios by evaluating the performance of the control in a real-world setup would
+    be discussed in future work.
+
+
+    # ACKNOWLEDGMENT
+
+
+    This work was supported by JSPS KAKEN Grant 20.KP1190.
+
+
+    # REFERENCES
+
+
+    - [1] V. Minh, K. Kavouci, D. Silver, A. Graves, I. Agmon, D. Wierstra and M.
+    Riedlund, "Playing with Deep Reinforcement Learning," in Proceedings of Deep Learning
+    Workshop in Conjunction with Neural Information Systems, 2013.
+
+    - [2] J. Kever, J. Bagrawal and T. Peters, "Reinforcement Learning: A Survey,"
+    The International Journal of Robotics Research, Vol. 32, 1238–1274, 2013.
+
+    - [3] H. Nguyen and M. Li, "Review of Deep Reinforcement Learning for Robotic
+    Control," in Proceedings 2019 IEEE International Conference, pp. 590–595, 2019.
+
+    - [4] S. Bharti, A. Wienberg, Z. T. Lee and H. Ren, "Deep Reinforcement Learning
+    for Robotic Manipulation," in IEEE Proceedings of the 24th International Conference
+    on Robotics and Challenges, 2017.
+
+    - [5] T. P. Lillicoup, J. H. Hunt, A. Prit, N. Heess, T. Eyer, Y. Tassa, D. Silver,
+    "Learning Deep Reinforcement Learning for Continuous Control," in 2016 IEEE International
+    Conference on Robotics and Learning (ICRA), 2016.
+
+    - [6] D. Silver, G. Eeler, N. Heess, D. Wright, D. Vordal and M. Riedlund, "Proximal
+    Policy Optimization," in Proceedings of the 33rd International Conference on Machine
+    Learning (ICML), Vol. 34, 2016.
+
+    - [7] S. Amadeo, "Deep Reinforcement Learning for Robot Manipulation The State
+    of the Art," arXiv:1701.08878, 2017.
+
+    - [8] G. B. Wang, J. Finn, A. Finnman, D. Duncan, G. TB, A. Maddal, N. Heess and
+    T. Lillicoup, "Distributed Demographic Policy Optimization," in Proceedings of
+    6th International Conference on Learning Representations (ICLR), 2018.
+
+    '
+  mdcn: '
+
+    以机器人机械臂肩关节为中心、边长为 600 的正方形被用于模拟其运动。结果是，模拟器中每个机器人机械臂的长度在几何上缩减了实际机械臂的连杆长度：$l_1 =
+    100$，$l_2 = 20$ 和 $l_3 = 40$。在初始过程中，关节值被随机设置。机械臂端执行器的位置随机放置在三个圆周周上，其中肩部的位置是机械臂运动的原点。目标位置位于边长为
+    40 的正方形中心。在实验中，我们为每组参数生成了 200,000 次实验。
+
+
+    表格显示了学习率。对于所有算法，端执行器越接近目标，获得的奖励越高。端执行器在目标周围正方形内停留的时间越长，奖励越高。当机械臂（智能体）移动到指定目标并在位置停留预定的步数，或者步数超过
+    200 时，学习过程终止。
+
+
+    图 2 显示了每个算法的学习率；横轴显示学习间隔，每个间隔包含 1,000 次实验，而纵轴代表每个间隔的成功率。在图 2 中，D4PG 在过程中比 DDPG
+    实现了更高的成功率和更好的稳定性。
+
+
+    接下来，我们研究了在使用两种算法训练控制模型后，位于不熟悉的圆周轨迹上的目标位置的定位误差。
+
+
+    表格 I
+
+    学习参数
+
+    | 学习 | 数值 |
+
+    |--- | --- |
+
+    | 学习率 | 0.001 |
+
+    | 折扣因子 | 0.9 |
+
+
+    ![](img/0d964d9c0f3cd7715fe07c9eb0edd363_2_0.png)
+
+
+    图 2. DDPG 和 D4PG 算法学习成功率对比。
+
+
+    ![](img/0d964d9c0f3cd7715fe07c9eb0edd363_2_1.png)
+
+
+    图 3. DDPG 和 D4PG 算法在不熟悉目标位置后的定位误差对比。
+
+
+    定位误差定义为目标与端执行器位置之间的欧几里得距离。测试的目标点总数为 19 个，每个点的定位误差通过使用不同关节配置值获得的 1,000 次实验结果进行评估。两种算法观察到的误差以及误差棒棒显示了标准差。在图
+    3 中，通过训练控制模型获得的平均误差和方差低于 DDPG。D4PG 算法实现的机器人机械臂任务精度比 DDPG 高。
+
+
+    最后，进行了机器人机械臂沿期望轨迹的跟踪，以作为一种实际的控制方法。图 5 展示了使用 D4PG 和 DDPG 算法完成学习过程后，不熟悉的圆周轨迹。机械臂首先将其端执行器移动到轨迹起点，在初始关节角随机设置后遵循控制指令，然后它们对于每个指定的终点点对点地跟踪轨迹。如图
+    4 所示，很难确保端执行器在保持 D4PG 控制模型精度的同时跟踪期望轨迹。尽管该控制模型不满足实际需求，且在期望轨迹的最终位置周围观察到较大的误差（如图
+    5 所示），但 D4PG 训练的模型表现得优于 DDPG 训练的模型。
+
+
+    # IV. 结论
+
+
+    本研究调查了深度强化学习（DRL）控制机器人机械臂的有效性：探索了两种类型，即 DDPG 和 D4PG 算法来训练控制模型，并比较了它们的性能。机器人机械臂的运动模拟使用了人形机器人的
+    7 自由手臂，并使用模拟器实现了两种
+
+
+    ![](img/0d964d9c0f3cd7715fe07c9eb0edd363_3_0.png)
+
+
+    ![](img/0d964d9c0f3cd7715fe07c9eb0edd363_3_1.png)
+
+
+    算法进行计算实验，基于机器人机械臂端执行器的到达任务，通过上述实验训练了模型并测试了其性能。实验结果验证了 DRL 在机器人机械臂控制中的应用，并证明了在该任务中取得了比
+    DDPG 算法更好的性能。
+
+
+    本研究提出的提出的仿真目标是提高机器人机械臂在复杂场景下的精度和控制。未来的工作将讨论优化 DRL 算法以提高模型的跟踪精度，并通过在真实世界设置中评估控制性能来对真实场景进行实验。
+
+
+    # 谢谢
+
+
+    这项工作由 JSPS KAKEN Grant 20.KP190 支持。
+
+
+    # 参考文献
+
+
+    - [1] V. Minh, K. Kavouci, D. Silver, A. Graves, I. Agmon, D. Wierstra and M.
+    Riedlund, "Playing with Deep Reinforcement Learning," in Proceedings of Deep Learning
+    Workshop in Conjunction with Neural Systems, 2013.
+
+    - [2] J. Kever, J. Bagrawal and T. Peters, "Reinforcement Learning: A Survey,"
+    The International Journal of Robotics Research, Vol. 32, 1238–1274, 2013.
+
+    - [3] H. Nguyen and M. Li, "Review of Deep Reinforcement Learning for Robotic
+    Control," in Proceedings 2019 IEEE International Conference, pp. 590–595, 2019.
+
+    - [4] S. Bharti, A. Wienberg, Z. T. Lee and H. Ren, "Deep Reinforcement Learning
+    for Robotic Manipulation," in IEEE Proceedings of the 24th International Conference
+    on Robotics and Challenges, 2017.
+
+    - [5] T. P. Lillicoup, J. H. Hunt, A. Prit, N. Heess, T. Eyer, Y. Tassa, D. Silver,
+    "Learning Deep Reinforcement Learning for Continuous Control," in 2016 IEEE International
+    Conference on Robotics and Learning (ICRA), 2016.
+
+    - [6] D. Silver, G. Eeler, N. Heess, D. Wright, D. Vordal and M. Riedlund, "Proximal
+    Policy Optimization," in Proceedings of the 33rd International Conference on Machine
+    Learning (ICML), Vol. 34, 2016.
+
+    - [7] S. Amadeo, "Deep Reinforcement Learning for Robot Manipulation The State
+    of the Art," arXiv:1701.08878, 2017.
+
+    - [8] G. B. Wang, J. Finn, A. Finnman, D. Duncan, G. TB, A. Maddal, N. Heess and
+    T. Lillicoup, "Distributed Demographic Policy Optimization," in Proceedings of
+    6th International Conference on Learning Representations (ICLR), 2018.
+
+
+    '
+  merge: 0
