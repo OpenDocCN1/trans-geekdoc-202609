@@ -1,0 +1,2012 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # 13th International Colloquium of Logistics and Supply Chain Management - LOGISTICA
+    2020 - December, 02 - 04
+
+    HST (EST) - Sidi Ben Abdullah University - Morocco
+
+
+    # # The potential of the blockchain for coordinated border management in developing
+    countries
+
+
+    Mohamed ANOUCHE
+
+    Doctoral researcher in management sciences
+
+    Research Laboratory in Organizational Management, Business
+
+    Law and Sustainable Development
+
+    Faculty of Legal, Economic and Social Sciences - Souissi
+
+    Mohamed V University of Rabat - Kingdom of Morocco
+
+    Email: address.anouche@um5.net
+
+
+    Youssef BOUMAZ
+
+    Doctoral student in economics
+
+    Research Team on the Regulation of International Trade and
+
+    Morocco''s Foreign Trade
+
+    Faculty of Legal, Economic and Social Sciences - Souissi
+
+    Mohamed V University of Rabat - Kingdom of Morocco
+
+    Email: you.boumaaz@um5.net
+
+
+    **Abstract** - Globalization 4.0 opens new scenarios for the world economy, faced
+    by advanced technologies and the movement of ideas, people and goods. With this
+    situation of disruption, borders have new opportunities to adapt their policies
+    and business processes for efficiency and security. Blockchain technology could
+    help supply chain efficiency by providing a set of solutions that could offer
+    new opportunities for the actors at the border (information exchange, inter-agency
+    cooperation). In these challenges, countries can exploit the potential offered
+    by blockchain technology for better management of the international trade environment.
+
+
+    **Keywords** - Blockchain; coordinated border management; border agencies; developing
+    countries.
+
+
+    coded registry, could be extremely promising for various business processes involving
+    a multitude of actors. It allows any type of data to be quickly secured and keeping
+    a record of that change or transaction instantly, reliably and undeniably to the
+    participants in a network of blockchains, called validators or nodes. Indeed,
+    the blockchain-based approach interactions between actors without the intervention
+    of a central authority, proves to be reliable and reduces costs [2].
+
+
+    Among the characteristics of the blockchain we use:
+
+
+    +   * **Distributed**: The technology operates on a distributed, not centralized,
+    platform where each participant (node) has access to same registries.
+
+    * **Trust**: The blockchain technology establishes "trust" between third parties,
+    allowing them to conduct business transactions and exchange information without
+    intermediaries, ensuring data integrity and leaving a complete audit trail.
+
+    * **Immutability**: Transactions are verified and approved by consensus among
+    participants, making fraud impossible.
+
+    * **Traceability**: The chronology of all transactions from the source is tracked,
+    allowing everyone (with access), including regulatory authorities, to follow or
+    review previous transactions.
+
+
+    # I. INTRODUCTION
+
+
+    The blockchain is a sophisticated cryptographic distributed registry [1].
+
+
+    ![](img/daeb56ceae0ec2933fbc567871dc1d78_0_0.png)
+
+
+    | Traditional centralized ledger | Distributed ledger |
+
+    | --- | --- |
+
+    | Central server Data | Data |
+
+    | | Data |
+
+
+    Source: E. Ganne, "Can the blockchain revolutionize international trade", World
+    Trade Organization, 2018, p.6.
+
+
+    The most widespread use of this technology today, for cryptocurrency, is reminiscent
+    of the use of the Internet at its very beginning, for email. Blockchain technology,
+    with this
+
+
+    Although blockchain was originally designed for financial purposes, distributed
+    technology can serve as the basis for many useful applications, including information
+    management and processing. These features can be leveraged in international supply
+    chain management.
+
+
+    Thus, this research will attempt to answer the following question: how can blockchain
+    technology transform the process of coordinated border management of a'
+  - '[PAGE 1]
+
+
+    # LOGISTQUA 2020 •December 02 - 04 HST (EST) •Sidi Mohamed Abdullah University
+    •Morocco
+
+
+    country in the yields of control and facilitation of international trade? and
+    what contribution can it make to developing countries?
+
+
+    requests for data registry, and enhance risk analysis and targeting capabilities
+    of customs and other border agencies, contributing to trade facilitation.
+
+
+    This paper is organized in three main axes, providing material for a more global
+    reflection:
+
+
+    Blockchain technology could be used in the business processes of customs and other
+    border regulatory agencies to validate the transactions of various players in
+    the international supply chain via blockchains, where roles, rules and incentives
+    would be clearly defined. It could offer for, a solution to complex issues as
+    an important tool, to simplify and share information between independent parties,
+    which could help ensure supply chain transparency and remain end to end.
+
+
+    +   - The blockchains in processes of coordinated border management;
+
+
+    +   - The possibilities for use of blockchains by borders control and management
+    agencies;
+
+
+    +   - A prospective strategy for the use of blockchains in coordinated border
+    management.
+
+
+    # II. BLOCKCHAINS IN THE PROCESSES OF COORDINATED BORDER MANAGEMENT
+
+
+    Harnessing the potential of blockchains for process integrity and data quality,
+    and requires appropriate policy. International supply chain actors can play a
+    significant role in defining policy and frameworks to address emerging challenges
+    and facilitate a transparent, fair and stable regulatory environment for the development
+    and use of blockchains.
+
+
+    In 2018, blockchain initiatives have emerged in the shipping industry. One is
+    the joint-venture TradeLens which was launched by Maersk and IBM in early 2018.
+    In November, nine customs and terminal operators joined forces to create the Global
+    Shipping Network [4].
+
+
+    The current international trading events face various challenges.
+
+
+    In addition, several initiatives and pilot projects have already been launched
+    by the private sector and some customs administrations for the use of blockchain
+    for end-to-end supply chain management and border controls process.
+
+
+    +   - Regulatory challenges: Various traditional trade laws, including customs
+    rules, need to be adapted to provide provisions that permit and regulate the use
+    of blockchains. It will be necessary to determine which node can be held responsible
+    for compliance and how. In other, who will ultimately be responsible for the accuracy
+    and timely availability of data and documents to government?
+
+
+    Blockchain technology has the potential to increase supply chain efficiency by
+    reducing intermediaries and manual tasks, but also by increasing certainty and
+    predictability through real-time data availability to actors in a supply chain.
+    Real-time availability end-to-end transparency and visibility, enhancing supply
+    chain security and compliance.
+
+
+    +   - Operational challenges: Inappropriate use of blockchain strings (including
+    encryption) for illicit trade, evasion of duties and taxes, intellectual property
+    rights infringements, money laundering and other forms of financial crime.
+
+
+    Blockchain solutions could provide new opportunities for border agencies to access
+    more varied and reliable data from different supply chain actors. This shared
+    data could be used to supplement the settlement of data/customs declaration as
+    provided by any inhabitant of an international transaction, and could potentially
+    eliminate the need for supporting documentation (Table 1).
+
+
+    Technological challenges: The implementation of interfaces between various processes
+    and activities based on them, is increasingly problematic. The question is how
+    to ensure a seamless integration between decentralized and centralized processing.
+
+
+    # TABLE I. STANDARD DOCUMENTS ISSUED IN INTERNATIONAL TRADE
+
+
+    | Sales and commercial documents | Commercial invoice | Packing list |
+
+    |---|---|---|n| Letter of credit | Insurance Policy | Certificate of Origin |
+
+    | Declaration of the customs value | Export licenses | Bill of lading |
+
+    | Delivery note | Manifesto | Shipment status |
+
+    | Port of entry declaration | Customs declaration | Import certificates |
+
+
+    Source: From A. E. Ganne, "The blockchain revolutionizing international trade?",
+    World Trade Organization, 2018, p.18.
+
+
+    This approach, based on access through the blockchain to a broader range of supply
+    chain, could significantly simplify border crossing procedures, eliminate redundant
+
+
+    Taking advantage of the widespread use of technology and connected objects, and
+    in order to compensate for limited resources at their checkpoints while limiting
+    delays at authority, developing countries will be able to mobilize this technology
+    to improve their economic attractiveness and business performance, and can curb
+    the scourge of corruption.'
+  md: '
+
+    [content]
+
+    # 13th International Colloquium of Logistics and Supply Chain Management - LOGISTICA
+    2020 - December, 02 - 04
+
+    HST (EST) - Sidi Ben Abdullah University - Morocco
+
+
+    ## The potential of the blockchain for coordinated border management in developing
+    countries
+
+
+    Mohamed ANOUCHE
+
+    Doctoral researcher in management sciences
+
+    Research Laboratory in Organizational Management, Business
+
+    Law and Sustainable Development
+
+    Faculty of Legal, Economic and Social Sciences - Souissi
+
+    Mohamed V University of Rabat - Kingdom of Morocco
+
+    Email: address.anouche@um5.net
+
+
+    Youssef BOUMAZ
+
+    Doctoral student in economics
+
+    Research Team on the Regulation of International Trade and
+
+    Morocco''s Foreign Trade
+
+    Faculty of Legal, Economic and Social Sciences - Souissi
+
+    Mohamed V University of Rabat - Kingdom of Morocco
+
+    Email: you.boumaaz@um5.net
+
+
+    **Abstract** - Globalization 4.0 opens new scenarios for the world economy, faced
+    by advanced technologies and the movement of ideas, people and goods. With this
+    situation of disruption, borders have new opportunities to adapt their policies
+    and business processes for efficiency and security. Blockchain technology could
+    help supply chain efficiency by providing a set of solutions that could offer
+    new opportunities for the actors at the border (information exchange, inter-agency
+    cooperation). In these challenges, countries can exploit the potential offered
+    by blockchain technology for better management of the international trade environment.
+
+
+    **Keywords** - Blockchain; coordinated border management; border agencies; developing
+    countries.
+
+
+    The blockchain is a sophisticated cryptographic distributed registry [1].
+
+
+    ![](img/daeb56ceae0ec2933fbc567871dc1d78_0_0.png)
+
+
+    | Traditional centralized ledger | Distributed ledger |
+
+    | --- | --- |
+
+    | Central server Data | Data |
+
+    | | Data |
+
+
+    Source: E. Ganne, "Can the blockchain revolutionize international trade", World
+    Trade Organization, 2018, p.6.
+
+
+    The most widespread use of this technology today, for cryptocurrency, is reminiscent
+    of the use of the Internet at its very beginning, for email. Blockchain technology,
+    with this
+
+
+    Although blockchain was originally designed for financial purposes, distributed
+    technology can serve as the basis for many useful applications, including information
+    management and processing. These features can be leveraged in international supply
+    chain management.
+
+
+    Thus, this research will attempt to answer the following question: how can blockchain
+    technology transform the process of coordinated border management of a country
+    in the yields of control and facilitation of international trade? and what contribution
+    can it make to developing countries? requests for data registry, and enhance risk
+    analysis and targeting capabilities of customs and other border agencies, contributing
+    to trade facilitation.
+
+
+    This paper is organized in three main axes, providing material for a more global
+    reflection:
+
+
+    Blockchain technology could be used in the business processes of customs and other
+    border regulatory agencies to validate the transactions of various players in
+    the international supply chain via blockchains, where roles, rules and incentives
+    would be clearly defined. It could offer for, a solution to complex issues as
+    an important tool, to simplify and share information between independent parties,
+    which could help ensure supply chain transparency and remain end to end.
+
+
+    - The blockchains in processes of coordinated border management;
+
+    - The possibilities for use of blockchains by borders control and management agencies;
+
+    - A prospective strategy for the use of blockchains in coordinated border management.
+
+
+    # II. BLOCKCHAINS IN THE PROCESSES OF COORDINATED BORDER MANAGEMENT
+
+
+    Harnessing the potential of blockchains for process integrity and data quality,
+    and requires appropriate policy. International supply chain actors can play a
+    significant role in defining policy and frameworks to address emerging challenges
+    and facilitate a transparent, fair and stable regulatory environment for the development
+    and use of blockchains.
+
+
+    In 2018, blockchain initiatives have emerged in the shipping industry. One is
+    the joint-venture TradeLens which was launched by Maersk and IBM in early 2018.
+    In November, nine customs and terminal operators joined forces to create the Global
+    Shipping Network [4].
+
+
+    The current international trading events face various challenges.
+
+
+    In addition, several initiatives and pilot projects have already been launched
+    by the private sector and some customs administrations for the use of blockchain
+    for end-to-end supply chain management and border controls process.
+
+
+    - Regulatory challenges: Various traditional trade laws, including customs rules,
+    need to be adapted to provide provisions that permit and regulate the use of blockchains.
+    It will be necessary to determine which node can be held responsible for compliance
+    and how. In other, who will ultimately be responsible for the accuracy and timely
+    availability of data and documents to government?
+
+
+    Blockchain technology has the potential to increase supply chain efficiency by
+    reducing intermediaries and manual tasks, but also by increasing certainty and
+    predictability through real-time data availability to actors in a supply chain.
+    Real-time availability end-to-end transparency and visibility, enhancing supply
+    chain security and compliance.
+
+
+    - Operational challenges: Inappropriate use of blockchain strings (including encryption)
+    for illicit trade, evasion of duties and taxes, intellectual property rights infringements,
+    money laundering and other forms of financial crime.
+
+
+    Blockchain solutions could provide new opportunities for border agencies to access
+    more varied and reliable data from different supply chain actors. This shared
+    data could be used to supplement the settlement of data/customs declaration as
+    provided by any inhabitant of an international transaction, and could potentially
+    eliminate the need for supporting documentation (Table 1).
+
+
+    Technological challenges: the implementation of interfaces between various processes
+    and activities based on them, is increasingly problematic. The question is how
+    to ensure a seamless integration between decentralized and centralized processing.
+
+
+    # TABLE I. STANDARD DOCUMENTS ISSUED IN INTERNATIONAL TRADE
+
+
+    | Sales and commercial documents | Commercial invoice | Packing list |
+
+    |---|---|---|
+
+    | Letter of credit | Insurance Policy | Certificate of Origin |
+
+    | Declaration of the customs value | Export licenses | Bill of lading |
+
+    | Delivery note | Manifesto | Shipment status |
+
+    | Port of entry declaration | Customs declaration | Import certificates |
+
+
+    Source: From A. E. Ganne, "The blockchain revolutionizing trade?", World Trade
+    Organization, 2018, p.18.
+
+
+    coded registry, could be extremely promising for various business processes involving
+    a multitude of actors. It allows any type of data to be quickly secured and keeping
+    a record of that change or transaction instantly, reliably and undeniably to the
+    participants in a network of blockchains, called validators or nodes. Indeed,
+    the blockchain-based approach interactions between actors without the intervention
+    of a central authority, proves to be reliable and reduces costs [2].
+
+
+    Among the characteristics of the blockchain we use:
+
+
+    - **Distributed**: The technology operates on a distributed, not centralized,
+    platform where each participant (node) has access to same registries.
+
+    - **Trust**: The blockchain technology establishes "trust" between third parties,
+    allowing them to conduct business transactions and exchange information without
+    intermediaries, ensuring data integrity and leaving a complete audit trail.
+
+    - **Immutability**: Transactions are verified and approved by consensus among
+    participants, making fraud impossible.
+
+    - **Traceability**: The chronology of all transactions from the source is tracked,
+    allowing everyone (with access), including regulatory authorities, to follow or
+    review previous transactions.
+
+
+    Taking advantage of the widespread use of technology and connected objects, and
+    in order to compensate for limited resources at their checkpoints while limiting
+    delays at authority, developing countries will be able to mobilize this technology
+    to improve their economic attractiveness and business performance, and can curb
+    the scourge of corruption.
+
+    [/content]
+
+    '
+  mdcn: '
+
+    # 第13届国际物流与供应链管理研讨会 - LOGISTICA 2020 - 12月02-04日
+
+    HST (EST) - 摩洛哥西迪本阿杜拉大学
+
+
+    ## 区块链对发展中国家协调边境管理的潜力
+
+
+    Mohamed ANOUCHE
+
+    管理科学博士研究员
+
+    组织管理、商业法与可持续发展研究实验室
+
+    法律、经济和社会科学学院 - Souissi
+
+    拉巴特穆哈默德五世大学 - 摩洛哥王国
+
+    电子邮箱：address.anouche@um5.net
+
+
+    Youssef BOUMAZ
+
+    经济学博士生
+
+    国际贸易监管与摩洛哥外贸研究小组
+
+    法律、经济和社会科学学院 - Souissi
+
+    拉巴特穆哈默德五世大学 - 摩洛哥王国
+
+    电子邮箱：you.boumaaz@um5.net
+
+
+    **摘要** - 全球化4.0 为世界经济开辟了新局面，面临着先进技术以及思想、人员和货物的流动。在这一动荡的背景下，边境拥有新的机会来调整其政策和业务流程，以提高效率和安全性。区块链技术通过提供一系列解决方案，可以为边境参与者提供新的机会（信息交换、机构间合作），帮助提高供应链效率。在这些挑战中，各国可以利用区块链技术提供的潜力，以更好地管理国际贸易环境。
+
+
+    **关键词** - 区块链；协调边境管理；边境机构；发展中国家。
+
+
+    区块链是一种复杂的加密分布式账本 [1]。
+
+
+    ![](img/daeb56ceae0ec2933fbc567871dc1d78_0_0.png)
+
+
+    | 传统中心化账本 | 分布式账本 |
+
+    | --- | --- |
+
+    | 中央服务器数据 | 数据 |
+
+    | | 数据 |
+
+
+    来源：E. Ganne, "区块链是否能彻底改变国际贸易", 世界贸易组织，2018年，第6页。
+
+
+    目前该技术最广泛的应用是用于加密货币，这让人联想到互联网最初用于电子邮件的时期。区块链技术，凭借这种
+
+
+    尽管区块链最初是为了金融目的而设计的，但分布式技术可以作为许多有用应用的基础，包括信息管理和处理。这些特征可以被应用于国际供应链管理中。
+
+
+    因此，本研究将尝试回答以下问题：区块链技术如何转型一个国家的协调边境管理流程，以实现国际贸易的控制与促进目标？它对发展中国家能做出什么贡献？以及数据登记请求。
+
+
+    本文由三个主要轴组成，为更全球化的思考提供材料：
+
+
+    区块链技术可用于海关和其他边境监管机构的业务流程，通过区块链验证国际供应链中各种参与者的交易，在区块链中，角色、规则和激励机制将被明确定义。它可以作为一种重要工具提供复杂问题的解决方案，简化并共享独立方之间的信息，这有助于确保供应链的透明度并保持端到端。
+
+
+    - 协调边境管理流程中的区块链；
+
+    - 边境控制和管理机构使用区块链的可能性；
+
+    - 在协调边境管理中使用区块链的前瞻性策略。
+
+
+    # II. 协调边境管理流程中的区块链
+
+
+    利用区块链在流程完整性和数据质量方面的潜力需要适当的政策。国际供应链参与者可以在定义政策和框架方面发挥重要作用，以应对新兴挑战，并为区块链的发展和使用营造一个透明、公平和稳定的监管环境。
+
+
+    2018年，区块链倡议在航运业兴起。其中一个是马士基（Maersk）和IBM于2018年初推出的合资企业TradeLens。11月，九家海关和码头运营商联手创建了“全球航运网络”（Global
+    Shipping Network）[4]。
+
+
+    当前的国际贸易事件面临着各种挑战。
+
+
+    此外，私营部门和一些海关当局已经启动了若干倡议和试点项目，将区块链用于端到端供应链管理和边界控制。
+
+
+    - 监管挑战：各种传统的贸易法（包括海关规则）需要调整，以提供允许和规范使用区块链的规定。有必要确定哪个节点应对合规性负责以及如何负责。另一方面，最终谁对提交给政府的数据和文件的准确性和及时性负责？
+
+
+    区块链技术具有通过减少中间环节和手动任务来提高供应链效率的潜力，还可以通过向供应链参与者提供实时可用数据来增加确定性和可预测性。实时可用实现了端到端的透明度和可见性，增强了供应链的安全性和合规性。
+
+
+    - 运营挑战：不当利用区块链链（包括加密）进行非法贸易、逃避税收、知识产权侵权、洗钱或其他形式的金融犯罪。
+
+
+    区块链解决方案可以为边境机构提供新机会，从不同的供应链参与者处获取更多化且可靠的数据。这些共享数据可用于补充任何国际交易参与者所提供的数据/海关申报结算，并可能消除对支持性文件的需求（表1）。
+
+
+    - 技术挑战：基于这些各种流程和活动的接口实现变得日益棘手。问题在于如何确保去中心化与中心化处理之间的无缝整合。
+
+
+    # 表 I 国际贸易中的标准文件
+
+
+    | 销售和商业文件 | 商业发票 | 装箱单 |
+
+    |---|---|---|
+
+    | 信用证 | 保险单 | 原产地证书 |
+
+    | 关值申报 | 出口许可证 | 提单 |
+
+    | 交货单 | 舱单 | 货物状态 |
+
+    | 入口港申报 | 海关申报 | 进口证书 |
+
+
+    来源：参考 A. E. Ganne, "区块链正在改变贸易吗?", 世界贸易组织，2018年，第18页。
+
+
+    编码账本对于涉及大量参与者的各种业务流程可能非常有前景。它允许任何类型的数据被快速加密，并由区块链网络成员（称为验证者或节点）对该更改或交易进行实时、可靠且不可否认的记录。事实上，基于区块链的在没有中央权威干预的情况下的互动被证明是可靠的并降低了成本
+    [2]。
+
+
+    我们使用的区块链特征包括：
+
+
+    - **分布式**：该技术运行在分布式而非中心化的平台上，每个参与者（节点）都可以访问相同的账本。
+
+    - **信任**：区块链技术在第三方之间建立了信任，允许他们在没有中介的情况下进行业务交易和信息交换，确保数据完整性并留下完整的审计追踪。
+
+    - **不可篡改性**：交易通过参与者的共识进行验证和批准，使欺诈变得不可能。
+
+    - **可追溯性**：从源头的所有交易时间顺序被追踪，允许所有拥有访问权限的人（包括监管机构）跟踪或审查之前的交易。
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    # LOGISTIQA 2020 •December 02 • 04:00 (EST) •Sidi Mohamed Ben Abdellah University
+    •Morocco
+
+
+    # III. THE POSSIBILITIES OF USING THE BLOCKCHAIN BY THE ORGANIZATIONS PRESENT
+    AT THE BORDERS
+
+
+    update It. As a border, agencies can obtain accurate data from the direct source:
+
+
+    Given the global security environment and the renewed interest in trade facilitation
+    brought by the implementation of the World Trade Organization Agreement [7], the
+    need for more cooperation between different governments is more evident including
+    customs, with new opportunities to share information and resources using a common
+    and distributed technical platform, in a single window environment without borders.
+    South Korea is illustrative in this context where projects have been launched
+    since 2017 to identify many technical and institutional challenges and how to
+    integrate the blockchain technology into customs systems [8]
+
+
+    # A. Customs declaration and customs
+
+
+    In the case of customs declarations, the advantages of using the blockchain can
+    be seen at several levels:
+
+
+    +   - Reliability: The creation of customs declarations is an extremely complex
+    task that involves a variety of activities. The (often manual) collection of information
+    from various stakeholders and various documents such as sales data, product information
+    and manufacturing poses many challenges. Due to the outsourcing of services and
+    the distribution of data sources, this process is cumbersome and carries a risk
+    of inaccuracy. In many cases, it requires a third party to manage the customs
+    declarations.
+
+    - Simplicity: The use of blockchain technology could contribute to the elimination
+    of supervising documents required for goods or cargo declarations, which are considered
+    tedious. In a blockchain environment having a variety of supply chain data be
+    brought in real-time data elements not specifically found in a traditional customs
+    declaration and thus enhance the accuracy of risk analysis, risk management and
+    targeted customs and other government agencies.
+
+
+    The blockchain can help to collect all the necessary order, preparation and sharing
+    information in a common registry. Border authorities could automatically obtain
+    information from key sources for purposes, providing transparency and high quality
+    data.
+
+
+    In a rapidly globalizing world, this technology could also streamline border exchange
+    between customs and tax authorities for a more harmonized revenue collection,
+    auditing, risk management, customs valuation and tariff pricing.
+
+
+    +   - Time saving: For businesses, the work required to properly consolidate the
+    information as asked by customs will be reduced. For customs authorities, the
+    manual checks and resources to validate declarations will also be limited. Consequently,
+    this will generate faster processes of customs declarations and reduced processing
+    time.
+
+
+    # B. Electronic exchange of preliminary Information: Cooperation among borders
+
+
+    Receiving and sharing electronic information presents several challenges. These
+    challenges include data quality, submission of data out of time, and the introduction,
+    whether deliberate or not, errors due to the vast users.
+
+
+    Some of these difficulties can be overcome through blockchain technology. Sharing
+    data reliably and securely through authorization. Blockchains can contribute to
+    an end-to-end "pipeline". Such a blockchain can be managed by a supply consortium.
+    All participants can participate and see
+
+
+    # C. Electronic certification: Verification of regulatory requirements
+
+
+    Customs must meet various requirements such as meeting criteria. Concerns about
+    product quality and safety have led to a tightening of certification requirements.
+    Licenses, certificates and other authorizations may now be required for border
+    crossings depending on the nature of the goods and the results related to the
+    exporter and the importer.
+
+
+    Several parts of the data are required, relating to the certification of product
+    components. In addition, various stakeholders are involved in a number of activities
+    related to product information. Examples include authorities, manufacturers, regulators
+    and consumers. However, this information is not shared between the parties involved,
+    leading to repeated collection of information and the necessary certifications
+    and validations.
+
+
+    The blockchain can help solve some of these challenges through centralized management
+    of product lifecycle. All authorities, laboratories, supply chain actors, regulators
+    and consumers can work together in sharing data on the origins of goods, allowing
+    all stakeholders to access all relevant information.
+
+
+    Furthermore, the blockchain technology offers the possibility to implement more
+    efficient, secure and reliable electronic certification of licenses. Certificates
+    and other authorizations are based on the digital physics of the electronic certificate.
+    It ensures that a certificate is issued and validated by a valid electronic signature
+    from a regulatory body/issuer and, at the same time, it can prevent any alteration/manipulation
+    or misuse of the content of an electronic certificate by a third party.
+
+
+    Authorized use limited to: University of Canberra. Download on May 20, 2021 at
+    20:08:22 UTC from IEEE Xplore. Restrictions apply.'
+  - '[PAGE 3]
+
+
+    # LOGISTQUA 2020 •December 02-04 HST (EST) •Sidi Ben Abd University •Morocco
+
+
+    The use of a blockchain also makes it possible to implement self-certification,
+    for example in the case of the certificate of origin, which usually has to be
+    issued by an authorized entity.
+
+
+    # D. Implementation of Free Trade Agreements
+
+
+    The main challenges and related to the effective implementation of free trade
+    agreements are as follows:
+
+
+    +   - Compliance with requirements/criteria, including value addition;
+
+    - Preferential certificate of origin;
+
+    - Exchange of information;
+
+    - Validation.
+
+
+    The blockchain technology could help overcome these problems since it will allow
+    tracking of goods from the import and will, for example, on the case of these
+    imports, certification in the harmonized of tariff classification [10], their
+    origin, the cost of processing and value addition, etc.
+
+
+    All actors, including customers and other public members of the blockchain platform
+    will have full visibility on the data. Under conditions, even certification of
+    origin for preferential treatments may not be necessary. This arrangement refers
+    to the establishment of Mutual Recognition Agreements (MRAs) [11] for Authorized
+    Economic Operator (AEO) programs
+
+
+    # E. Implementation of Authorized Economic Operators
+
+
+    The growing number of MRAs in the AEO programs, their implementation may be disrupted
+    by certain difficulties.
+
+
+    +   - Securing the AEO master data with MRA partner customers administrations,
+    including the real time sharing of changes in AEO status;
+
+    - Effective identification of AEOs by MRA partner customs administrations, greatly
+    needed.
+
+
+    The blockchain can help overcome some of these difficulties by a reliable and
+    secure sharing of and an "authorized" blockchain which can contribute to an efficient
+    and transparent implementation of AEO programs.
+
+
+    The blockchain technology can also provide a distributed platform for the AEO
+    certification process and the implementation of MRAs, then, opening up the possibility
+    of recording and sharing transactions according to a protocol agreed between members
+    and AEOs, with each transaction secured and protected by an unbroken audit process
+    [13]
+
+
+    The technology of blockchain can also facilitate the recognition of controls.
+
+
+    # F. Transit
+
+
+    With regard to transit, several problems arise. Each country has its own system
+    for customs declarations. A reconciliation of the data entry declaration made
+    at the customs of exit with the data transit exit declaration made at the customs
+    of entry is necessary. This reconciliation and exchange of bilateral between national
+    transit systems, as well as a manual procedure [14]
+
+
+    The application of the distributed blockchain registry for national transit systems
+    would allow reconciliation of sharing the register of transit data through the
+    blockchain technology, the sending of messages between customs offices could be
+    necessary, reducing those of the manual work of sending messages. This would save
+    time and reduce the risk of errors for companies.
+
+
+    # G. Identity management
+
+
+    The blockchain technology could be very useful in managing the identities of various
+    actors and customers in a supply chain (especially in an e-commerce environment),
+    improving the quality and security of service.
+
+
+    This technology will eliminate the need for intermediary to identify the companies
+    of parties and consolidate multiple identities (e.g, unique identity, business
+    identification number) into a single number that would be recognized by the government-business
+    ecosystem, in a single window environment.
+
+
+    # H. Revenue collection
+
+
+    The blockchain collection could allow any intermediary in the supply chain collect
+    revenue on behalf of buyers through smart contracts, offer the possibility of
+    automatic transfer of duties and taxes to the respective authorities. This could
+    be used when implementing new methods for revenue collection on small scale or
+    by the seller or in an e-commerce environment.
+
+
+    The lack of transparency in the supply chain raises concerns, including the possibility
+    that the price paid may not accurately reflect the true value of goods and revenue
+    implications. In this case, the undervaluation and mismanagement could be addressed
+    with greater transparency in a blockchain.
+
+
+    # I. Compliance management and traceability
+
+
+    The blockchain could indicate the source of the data, reduce fraud and improve
+    visibility in the supply chain by allowing, for example, to access commercial
+    documents, starting with the initial purchase order between the two parties [15].
+
+
+    It can also reduce and eliminate risks related to food safety, counterfeit goods,
+    forced labor, child labor, corruption,'
+  md: '
+
+    # LOGISTIQA 2020 •December 02 • 04:00 (EST) • Sidi Mohamed Ben Abdellah University
+    • Morocco
+
+
+    ## III. THE POSSIBILITIES OF USING THE BLOCKCHAIN BY THE ORGANIZATIONS PRESENT
+    AT THE BORDERS
+
+
+    update It. As a border, agencies can obtain accurate data from the direct source:
+
+
+    Given the global security environment and the renewed interest in trade facilitation
+    brought by the implementation of the World Trade Organization Agreement [7], the
+    need for more cooperation between different governments is more evident including
+    customs, with new opportunities to share information and resources using a common
+    and distributed technical platform, in a single window environment without borders.
+    South Korea is illustrative in this context where projects have been launched
+    since 2017 to identify many technical and institutional challenges and how to
+    integrate the blockchain technology into customs systems [8]
+
+
+    ## A. Customs declaration and customs
+
+
+    In the case of customs declarations, the advantages of using the blockchain can
+    be seen at several levels:
+
+
+    - Reliability: The creation of customs declarations is an extremely complex task
+    that involves a variety of activities. The (often manual) collection of information
+    from various stakeholders and various documents such as sales data, product information
+    and manufacturing poses many challenges. Due to the outsourcing of services and
+    the distribution of data sources, this process is cumbersome and carries a risk
+    of inaccuracy. In many cases, it requires a third party to manage the customs
+    declarations.
+
+    - Simplicity: The use of blockchain technology could contribute to the elimination
+    of supervising documents required for goods or cargo declarations, which are considered
+    tedious. In a blockchain environment having a variety of supply chain data be
+    brought in real-time data elements not specifically found in a traditional customs
+    declaration and thus enhance the accuracy of risk analysis, risk management and
+    targeted customs and other government agencies.
+
+
+    The blockchain can help to collect all the necessary order, preparation and sharing
+    information in a common registry. Border authorities could automatically obtain
+    information from key sources for purposes, providing transparency and high quality
+    data.
+
+
+    In a rapidly globalizing world, this technology could also streamline border exchange
+    between customs and tax authorities for a more harmonized revenue collection,
+    auditing, risk management, customs valuation and tariff pricing.
+
+
+    - Time saving: For businesses, the work required to properly consolidate the information
+    as asked by customs will be reduced. For customs authorities, the manual checks
+    and resources to validate declarations will also be limited. Consequently, this
+    will generate faster processes of customs declarations and reduced processing
+    time.
+
+
+    ## B. Electronic exchange of preliminary Information: Cooperation among borders
+
+
+    Receiving and sharing electronic information presents several challenges. These
+    challenges include data quality, submission of data out of time, and the introduction,
+    whether deliberate or not, errors due to the vast users.
+
+
+    Some of these difficulties can be overcome through blockchain technology. Sharing
+    data reliably and securely through authorization. Blockchains can contribute to
+    an end-to-end "pipeline". Such a blockchain can be managed by a supply consortium.
+    All participants can participate and see
+
+
+    ## C. Electronic certification: Verification of regulatory requirements
+
+
+    Customs must meet various requirements such as meeting criteria. Concerns about
+    product quality and safety have led to a tightening of certification requirements.
+    Licenses, certificates and other authorizations may now be required for border
+    crossings depending on the nature of the goods and the results related to the
+    exporter and the importer.
+
+
+    Several parts of the data are required, relating to the certification of product
+    components. In addition, various stakeholders are involved in a number of activities
+    related to product information. Examples include authorities, manufacturers, regulators
+    and consumers. However, this information is not shared between the parties involved,
+    leading to repeated collection of information and the necessary certifications
+    and validations.
+
+
+    The blockchain can help solve some of these challenges through centralized management
+    of product lifecycle. All authorities, laboratories, supply chain actors, regulators
+    and consumers can work together in sharing data on the origins of goods, allowing
+    all stakeholders to access all relevant information.
+
+
+    Furthermore, the blockchain technology offers the possibility to implement more
+    efficient, secure and reliable electronic certification of licenses. Certificates
+    and other authorizations are based on the digital physics of the electronic certificate.
+    It ensures that a certificate is issued and validated by a valid electronic signature
+    from a regulatory body/issuer and, at the same time, it can prevent any alteration/manipulation
+    or misuse of the content of an electronic certificate by a third party.
+
+
+    Authorized use limited to: University of Canberra. Download on May 20, 2021 at
+    20:08:22 UTC from IEEE Xplore. Restrictions apply.
+
+
+    The use of a blockchain also makes it possible to implement self-certification,
+    for example in the case of the certificate of origin also makes it possible to
+    implement self-certification, for example in the case of the certificate of origin,
+    which usually has to be issued by an authorized entity.
+
+
+    ## D. Implementation of Free Trade Agreements
+
+
+    The main challenges and related to the effective implementation of free trade
+    agreements are as follows:
+
+
+    - Compliance with requirements/criteria, including value addition;
+
+    - Preferential certificate of origin;
+
+    - Exchange of information;
+
+    - Validation.
+
+
+    The blockchain technology could help overcome these problems since it will allow
+    tracking of goods from the import and will, for example, on the case of these
+    imports, certification in the harmonized of tariff classification [10], their
+    origin, the cost of processing and value addition, etc.
+
+
+    All actors, including customers and other public members of the blockchain platform
+    will have full visibility on the data. Under conditions, even certification of
+    origin for preferential treatments may not be necessary. This arrangement refers
+    to the establishment of Mutual Recognition Agreements (MRAs) [11] for Authorized
+    Economic Operator (AEO) programs
+
+
+    ## E. Implementation of Authorized Economic Operators
+
+
+    The growing number of MRAs in the AEO programs, their implementation may be disrupted
+    by certain difficulties.
+
+
+    - Securing the AEO master data with MRA partner customers administrations, including
+    the real time sharing of changes in AEO status;
+
+    - Effective identification of AEOs by MRA partner customs administrations, greatly
+    needed.
+
+
+    The blockchain can help overcome some of these difficulties by a reliable and
+    secure sharing of and an "authorized" blockchain which can contribute to an efficient
+    and transparent implementation of AEO programs.
+
+
+    The blockchain technology can also provide a distributed platform for the AEO
+    certification process and the implementation of MRAs, then, opening up the possibility
+    of recording and sharing transactions according to a protocol agreed between members
+    and AEOs, with each transaction secured and protected by an unbroken audit process
+    [13]
+
+
+    The technology of blockchain can also facilitate the recognition of controls.
+
+
+    ## F. Transit
+
+
+    With regard to transit, several problems arise. Each country has its own system
+    for customs declarations. A reconciliation of the data entry declaration made
+    at the customs of exit with the data transit exit declaration made at the customs
+    of entry is necessary. This reconciliation and exchange of bilateral between national
+    transit systems, as well as a manual procedure [14]
+
+
+    The application of the distributed blockchain registry for national transit systems
+    would allow reconciliation of sharing the register of transit data through the
+    blockchain technology, the sending of messages between customs offices could be
+    necessary, reducing those of the manual work of sending messages. This would save
+    time and reduce the risk of errors for companies.
+
+
+    ## G. Identity management
+
+
+    The blockchain technology could be very useful in managing the identities of various
+    actors and customers in a supply chain (especially in an e-commerce environment),
+    improving the quality and security of service.
+
+
+    This technology will eliminate the need for intermediary to identify the companies
+    of parties and consolidate multiple identities (e.g, unique identity, business
+    identification number) into a single number that would be recognized by the government-business
+    ecosystem, in a single window environment.
+
+
+    ## H. Revenue collection
+
+
+    The blockchain collection could allow any intermediary in the supply chain collect
+    revenue on behalf of buyers through smart contracts, offer the possibility of
+    automatic transfer of duties and taxes to the respective authorities. This could
+    be used when implementing new methods for revenue collection on small scale or
+    by the seller or in an e-commerce environment.
+
+
+    The lack of transparency in the supply chain raises concerns, including the possibility
+    that the price paid may not accurately reflect the true value of goods and revenue
+    implications. In this case, the undervaluation and mismanagement could be addressed
+    with greater transparency in a blockchain.
+
+
+    ## I. Compliance management and traceability
+
+
+    The blockchain could indicate the source of the data, reduce fraud and improve
+    visibility in the supply chain by allowing, for example, to access commercial
+    documents, starting with the initial purchase order between the two parties [15].
+
+
+    It can also reduce and eliminate risks related to food safety, counterfeit goods,
+    forced labor, child labor, corruption,
+
+    '
+  mdcn: '
+
+
+    # LOGISTIQA 2020 • 12月02日 • 04:00 (EST) • Sidi Mohamed Ben Abdellah 大学 • 摩洛哥
+
+
+    ## III. 边境机构使用区块链的可能性
+
+
+    更新它。作为边界，机构可以从直接源获取准确数据：
+
+
+    考虑到全球安全环境以及实施《世界贸易组织协议》[7]带来的对贸易便利化的重新关注，不同政府之间加强合作的需求变得更加明显，包括海关。通过通用的分布式技术平台，可以在无国界的单一窗口环境中共享信息和资源的新机会。韩国在此方面具有代表性，自2017年以来已启动相关项目，以识别许多技术和制度挑战以及如何将区块链技术整合到海关系统中[8]。
+
+
+    ## A. 报关与海关
+
+
+    在海关报关方面，使用区块链的优势体现在以下几个层面：
+
+
+    - **可靠性**：报关单的创建是一项极其复杂的任务，涉及各种活动。从（通常是手工的）各种利益相关者和各种文档（如销售数据、产品信息和制造数据）收集信息面临许多挑战。由于服务外包和数据源分散，这一过程非常繁琐并带有不准确的风险。在许多情况下，需要第三方来管理海关报关。
+
+    - **简单性**：区块链技术的使用有助于消除货物或货运申报所需的监管文件，这些文件被认为是繁琐的。在区块链环境中，各种供应链数据作为实时数据元素引入，这些元素是传统海关报关中没有没有的，从而增强了风险分析、风险管理以及海关和其他政府部门的针对性监管的准确性。
+
+
+    区块链可以帮助在公共注册中收集所有必要的订单、准备和共享信息。边境当局可以从关键源自动获取信息用于目的，提供透明且高质量的数据。
+
+
+    在快速全球化的世界中，这项技术还可以简化海关与税务机关之间的边境交换，以实现更协调的税收收集、审计、风险管理、海关估值和关税定价。
+
+
+    - **节省时间**：对于企业而言，按海关要求正确整合信息所需的工作将减少。对于海关当局而言，验证报关单的人工检查和资源也将受到限制。因此，这将产生更快的关关申报流程并缩短处理时间。
+
+
+    ## B. 初步信息的电子交换：边境间的合作
+
+
+    接收和共享电子信息面临多项挑战。这些挑战包括数据质量、提交数据延迟以及由于用户众多而引入的错误（无论是有无意）。
+
+
+    这些困难中的某些可以通过区块链技术克服。通过授权可靠且安全地共享数据。区块链有助于构建一个端到端的“管道”。此类区块链可以由供应链联盟管理。所有参与者都可以参与并查看。
+
+
+    ## C. 电子认证：监管要求的验证
+
+
+    海关必须满足各种要求，例如符合标准。对产品质量和安全的担忧导致认证要求的收紧。根据货物性质以及与出口商和进口商相关的结果，跨越边界时现在可能需要许可证、证书和其他授权。
+
+
+    需要部分数据涉及产品组件的认证。此外，各种利益相关者参与了许多与产品信息相关的活动，包括当局、制造商、监管机构和消费者。然而，这些信息在相关方之间并不共享，导致信息的重复收集以及必要的认证和验证。
+
+
+    区块链可以通过产品生命周期的集中化管理帮助解决这些挑战。所有当局、实验室、供应链参与者、监管机构和消费者可以共同分享货物产地数据，允许所有利益相关者访问所有相关信息。
+
+
+    此外，区块链技术提供了实施更高效、安全和可靠的许可证电子认证的可能性。证书和其他授权基于电子证书的数字物理特性。它确保证书由监管机构/签发者的有效电子签名发布并验证，同时，它可以防止第三方篡改/操纵或误用电子证书的内容。
+
+
+    授权使用范围：堪培拉大学。于2021年5月20日 20:08:22 UTC 从 IEEE Xplore 下载。受限制限制。
+
+
+    使用区块链还可能实施自认证，例如在产地证书的情况下，由于产地证书通常必须由授权实体签发，现在也可能实施自认证。
+
+
+    ## D. 自由贸易协定的实施
+
+
+    有效实施自由贸易协定的主要挑战及相关如下：
+
+
+    - 符合要求/标准，包括增值；
+
+    - 优惠原产地证书；
+
+    - 信息交换；
+
+    - 验证。
+
+
+    区块链技术可以帮助克服这些问题，因为它允许从进口开始跟踪货物，例如在这些进口的情况下，进行协调关税分类[10]、产地、加工成本和增值等方面的认证。
+
+
+    所有参与者（包括客户和其他平台的其他公共成员）将对数据具有完全可见性。在某些条件下，甚至对于优惠待遇的原产地认证也可能是必要的。这种安排指的是互认可协议（MRAs）[11]对于认证经济经营者（AEO）。
+
+
+    ## E. 认证经济经营者的实施
+
+
+    日益增多的 MRAs 实施受到某些困难的干扰：
+
+
+    - 通过合作伙伴海关当局确保 AEO 主数据，实时共享 AEO 状态；
+
+    - 合作伙伴海关有效识别 AEO。
+
+
+    区块链通过可靠和安全的共享来帮助解决这些困难，这种“授权”的区块链有助于高效透明地实施 AEO 项目。
+
+
+    区块链技术还可以为 AEO 认证过程提供分布式平台，根据成员和 AEO 之间的协议记录并共享交易，且每笔交易都受到完整审计过程的保护[13]。
+
+
+    技术还可以便利监管的认可。
+
+
+    ## F. 转运
+
+
+    关于转运，出现了许多问题。由于每个国家都有自己的报关系统。需要对出口海关的入境申报数据与入境海关的出口申报数据进行比对。这涉及到国境转运系统之间的双边交换以及手动程序[14]。
+
+
+    国境转运系统的分布式区块链注册的应用将允许通过区块链技术对转运数据进行比对，海关办公室之间的信息发送可能是必要的，从而减少了手动发送信息的工作量。这将为企业节省时间并减少错误风险。
+
+
+    ## G. 身份管理
+
+
+    区块链技术对于管理供应链中各种参与者和客户的身份（特别是电子商务环境中）非常有用，可以提高服务的质量和安全性。这项技术将消除中介识别双方身份的需求，并将多个身份（例如唯一身份、业务识别码）合并为单一数字，该数字将被政府-业务生态系统认可。
+
+
+    ## H. 税收收集
+
+
+    区块链收集允许供应链中的任何中介通过智能合约代表买方收取收入，提供将关税和税自动转移给相应当局的可能性。这可以用于小规模或通过卖家在电子商务环境中实施新的税收收集方法。
+
+
+    供应链缺乏透明度引发了担忧，包括支付的价格可能无法准确反映货真实价值和税收影响。在这种情况下，低估和管理不当可以通过提高区块链透明度来解决。
+
+
+    ## I. 合规管理与可追溯性
+
+
+    区块链可以指示数据来源，通过允许访问商业文档（例如从双方的初始订单开始）来减少欺诈并提高供应链可见性[15]。它还可以减少和消除与食品安全、伪造品、强迫劳动、童工、腐败相关的风险。
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 4]
+
+
+    # LOGISTIQA 2020 *December 02 - 04 HST (EST) *Sidi Mohamed Ben Abdullah University
+    *Morocco
+
+
+    etc. [In addition, the blockchain can contribute to the management of intellectual
+    property rights, the transparency of processes for the registration of grants,
+    licensing, enforcement and taxes.
+
+
+    Standards, technical specifications and certification allow companies using the
+    blockchain to engage with confidence, as they will have better guarantees of interoperability
+    and a wide variety of providers. Blockchain technology is used by a variety of
+    organizations, operating across different blockchain platforms and in a large
+    scale. Thus, it will only transform the supply chain through greater efficiency
+    and to cooperate across blockchain platforms, developers have to adhere to common
+    standards.
+
+
+    # J. Customs control
+
+
+    The last possibility of using the blockchain technology is the customs control.
+    Indeed, it is possible to use this technology when checking customs declarations
+    and transactions, particularly in customs based based on a risk-management system,
+    each trace of the transaction is examined.
+
+
+    With the various possibilities mentioned above, the international trade environment
+    of developing countries will be able to take advantage of blockchain technology
+    to strengthen the control of the movement of passengers and goods, and at the
+    same time, make border crossing more free.
+
+
+    # IV. FORWARD-LOOKING STRATEGY FOR USE OF BLOCKCHAINS IN COORDINATED BORDER MANAGEMENT
+
+
+    After reviewing the possibilities for use of blockchain technology by agencies,
+    it is necessary to consider a strategy for using blockchain in the environment
+    of border control.
+
+
+    Indeed, although created for very special purposes, there are multiple initiatives
+    in areas of blockchain that are operating on different platforms and with different
+    structures. The approach introducing this blockchain technology could lead to
+    the creation of "islands of blockchains", which would result in fragmentation
+    and disconnection of blockchain platforms at the level of border agents [40].
+
+
+    # B. Data Standardization
+
+
+    The questions are what kind of standardized development of blockchain technology
+    should be considered by customs administrations.
+
+
+    One of the major issues in the blockchain is the difficulty of data quality in
+    a distributed registry environment, where each agency might initiate a transaction
+    and customize the corresponding data elements.
+
+
+    This issue of data quality becomes more acute when the actor in a supply chain
+    can insert data, in a standardized way. Customs administrations must examine and
+    work under the issues of definitions, interoperation and data quality in the blockchain
+    environment [19].
+
+
+    As in this example, the Open Data Alliance (OADA) is working to establish standards
+    for agricultural data collection and analysis processes. It learns that blockchain
+    technology can help improve networking, security, and web data. The OADA will
+    help establish standards for application programming interfaces that can use for
+    sharing.
+
+
+    Collaboration in this domain could help initiate exploratory work on standardizing
+    data elements of the supply chain.
+
+
+    # A. Interoperability
+
+
+    Standardized development of blockchains will contribute to interoperability between
+    them and within, to ensure connectivity/integration with the information systems
+    of border agencies for data access.
+
+
+    In 2018, one of the largest organizations (Ethereum and Hyperledger) joined forces
+    to facilitate the creation of blockchain-based business tools. The Ethereum Alliance
+    (EEA) is a global standards organization promoting the adoption of distributed
+    general ledger technology. Hyperledger is an open source blockchain initiative
+    designed to help companies build and adopt blockchain tools [18].
+
+
+    The EEA-Hyperledger partnership is expected to provide a wide range of resources
+    to be used in the development of blockchain-based tools, and greater assurance
+    of compatibility between all these tools.
+
+
+    # C. Governance Model
+
+
+    The blockchain environment will theoretically involve many actors. In order to
+    meet their interests, a governance mechanism must be in place. This should clearly
+    explain the functions and responsibilities, ensure effective coordination, and
+    define the rules and standards of the blockchain (source code) application. Within
+    this framework, each modification of the chain must be transparent to the decision-making
+    processes defined in a governance framework.
+
+
+    Also, the different types of blockchains implemented require an enhanced governance
+    approach to include related information and communication technologies.
+
+
+    Indeed, the use of computing, big data, artificial intelligence and smart phones,
+    disruptive technologies [21] are reshaping the business landscape and business
+    processes of the private sector, as well as of border authorities.'
+  - '[PAGE 5]
+
+
+    A growing number of companies around the world are investing in digitizing their
+    processes in order to take advantage of the cost savings of speed and efficiency,
+    or to align their production processes with the products and services of the future.
+    In order to better respond to this rapidly changing digital economy and to strengthen
+    flexibility, companies are adopting new technologies in their daily operations,
+    according to their national priorities, technological developments and the availability
+    of resources.
+
+
+    Following are some disruptive technologies and how they are being used and how
+    they affect businesses:
+
+
+    +   - **Artificial Intelligence (AI)** and machine learning: CEO Mark Zuckerberg
+    has called for Jarvis, a virtual assistant for home. The AI systems for Jarvis
+    use natural language processing and facial recognition. The use of AI and machine
+    learning to cross-border passenger movements will be one of many other possible
+    applications. But their progress is engaged in the risk management capabilities
+    for cross-border movement of goods.
+
+
+    +   - **Internet of Things (IoT)**: IoT refers to the interconnection of hardware
+    devices, widely referred to as "intelligent devices", elements of electronics,
+    sensors and the networked capacity to collect and exchange data. Information security
+    remains challenges facing IoT, particularly by manufacturers of IoT devices. The
+    opportunities offered by IoT can also be considered for the implementation of
+    Integrated Supply Chain Management (ISCM) and Single Shipment Reference (SCR)
+    components.
+
+
+    +   - **Blockchain**: A blockchain with a fingerprint has become an everyday procedure
+    for many. In the future, personal data will be stored by means of blockchain.
+    To some extent, this technology is already being used to control the cross-border
+    movement of belongings, but its potential has yet to be de-mystified.
+
+
+    +   - **Robotics**: This technology area involves the design, construction and
+    operation of robots. Robots with increased capabilities, senses, dexterity and
+    intelligence can take tasks that are considered too difficult for humans to perform.
+    Expected to reach the next level, with a greater focus on content creation and
+    other tasks that are reserved for humans. Today, some administrations such as
+    the Customs Administration of China, for example, use robotics applications in
+    their work [2].
+
+
+    Virtual Reality: Samsung is probably the most widespread example of how virtual
+    reality works. Much work remain to be done to determine the possibilities of using
+    virtual reality, but one of its applications around the world is, perhaps the
+    physical experience of goods from a distance.
+
+
+    # V. CONCLUSION
+
+
+    The blockchain technology presents opportunities for the working methods of the
+    border agencies. It is essential for developing countries to make choices about
+    technologies that are relevant to their environment and to prepare them accordingly.
+
+
+    The potential of these technologies could be considerable, although the challenges
+    for their impact are not. While developing countries expect have these technologies
+    to help the global economy, there will be a significant shortfall in efficiency,
+    including economic and administrative efficiencies, compared to developed countries
+    that must made.
+
+
+    How benefits of these technologies have not been fully identified. It is important
+    to continue exploratory work and research on these technologies and gather more
+    information on them, benefits, risks, and role in the supply chain.
+
+
+    The exploratory path may show other things, sight of the links between various
+    disruptive technologies and a more comprehensive approach to how they can support
+    coordinated border management activities.
+
+
+    # References
+
+
+    +   [1] E. Gauss, "Can the blockchain revolutionize international trade?" World
+    Trade Organization, 2018,p.6.
+
+
+    +   [2] K. Veramani, J. Suresh, "A synopsis of blockchain technology." IEEE Cryptography
+    and Cryptocurrencies, Vol. 1, 2019.
+
+
+    +   [3] N. Kouame, J. Toukan, "Tkadera ou à la blockchain des services de douane
+    pour la facilitation des échanges et pour une confiance accrue," OMC report, no
+    87, October 2018, p.6.
+
+
+    +   [4] G. S. Williams, "Customs and Terminal Operators International Blockchain
+    Consortium," November, 2016.
+
+
+    +   [5] L. Segers, A. Bukwana and Y.H. Yan, "The use of a blockchain-based declaration
+    of goods in cross-border customs by authorities authorities," ACM International
+    Conference Proceedings, 2019, 196–202.
+
+
+    +   [6] J. Guérard, "L''impact de la blockchain pour la douane," Document de recherche
+    de l''Organisation Mondiale des Douanes n° 45, juin 2018.
+
+
+    +   [7] Organisation Mondiale de la Douane, Accord sur la facilitation des échanges,
+    décembre 7 2013, OMC (MIN)(13/36, L/991).
+
+
+    +   [8] W. Tan, "Chaines de blocs, la Corée est de préparer pour l''avenir," OMD
+    acte n° 88, Février 2019, p.
+
+
+    +   [9] Denise de Sangour, "All-aller-du guchet national," OMD acte n° 87, October
+    2018, p.
+
+
+    ![](img/daeb56ceae0ec2933fbc567871dc1d78_5_0.png)'
+  md: '
+
+    # LOGISTIQA 2020 *December 02 - 04 HST (EST) *Sidi Mohamed Ben Abdullah University
+    *Morocco
+
+
+    etc. [In addition, the blockchain can contribute to the management of intellectual
+    property rights, the transparency of processes for the registration of grants,
+    licensing, enforcement and taxes.
+
+
+    Standards, technical specifications and certification allow companies using the
+    blockchain to engage with confidence, as they will have better guarantees of interoperability
+    and a wide variety of providers. Blockchain technology is used by a variety of
+    organizations, operating across different blockchain platforms and in a large
+    scale. Thus, it will only transform the supply chain through greater efficiency
+    and to cooperate across blockchain platforms, developers have to adhere to common
+    standards.
+
+
+    ## J. Customs control
+
+
+    The last possibility of using the blockchain technology is the customs control.
+    Indeed, it is possible to use this technology when checking customs declarations
+    and transactions, particularly in customs based based on a risk-management system,
+    each trace of the transaction is examined.
+
+
+    With the various possibilities mentioned above, the international trade environment
+    of developing countries will be able to take advantage of blockchain technology
+    to strengthen the control of the movement of passengers and goods, and at the
+    same time, make border crossing more free.
+
+
+    ## IV. FORWARD-LOOKING STRATEGY FOR USE OF BLOCKCHAINS IN COORDINATED BORDER MANAGEMENT
+
+
+    After reviewing the possibilities for use of blockchain technology by agencies,
+    it is necessary to consider a strategy for using blockchain in the environment
+    of border control.
+
+
+    Indeed, although created for very special purposes, there are multiple initiatives
+    in areas of blockchain that are operating on different platforms and with different
+    structures. The approach introducing this blockchain technology could lead to
+    the creation of "islands of blockchains", which would result in fragmentation
+    and disconnection of blockchain platforms at the level of border agents [40].
+
+
+    ## B. Data Standardization
+
+
+    The questions are what kind of standardized development of blockchain technology
+    should be considered by customs administrations.
+
+
+    One of the major issues in the blockchain is the difficulty of data quality in
+    a distributed registry environment, where each agency might initiate a transaction
+    and customize the corresponding data elements.
+
+
+    This issue of data quality becomes more acute when the actor in a supply chain
+    can insert data, in a standardized way. Customs administrations must examine and
+    work under the issues of definitions, interoperation and data quality in the blockchain
+    environment [19].
+
+
+    As in this example, the Open Data Alliance (OADA) is working to establish standards
+    for agricultural data collection and analysis processes. It learns that blockchain
+    technology can help improve networking, security, and web data. The OADA will
+    help establish standards for application programming interfaces that can use for
+    sharing.
+
+
+    Collaboration in this domain could help initiate exploratory work on standardizing
+    data elements of the supply chain.
+
+
+    ## A. Interoperability
+
+
+    Standardized development of blockchains will contribute to interoperability between
+    them and within, to ensure connectivity/integration with the information systems
+    of border agencies for data access.
+
+
+    In 2018, one of the largest organizations (Ethereum and Hyperledger) joined forces
+    to facilitate the creation of blockchain-based business tools. The Ethereum Alliance
+    (EEA) is a global standards organization promoting the adoption of distributed
+    general ledger technology. Hyperledger is an open source blockchain initiative
+    designed to help companies build and adopt blockchain tools [18].
+
+
+    The EEA-Hyperledger partnership is expected to provide a wide range of resources
+    to be used in the development of blockchain-based tools, and greater assurance
+    of compatibility between all these tools.
+
+
+    ## C. Governance Model
+
+
+    The blockchain environment will theoretically involve many actors. In order to
+    meet their interests, a governance mechanism must be in place. This should clearly
+    explain the functions and responsibilities, ensure effective coordination, and
+    define the rules and standards of the blockchain (source code) application. Within
+    this framework, each modification of the chain must be transparent to the decision-making
+    processes defined in a governance framework.
+
+
+    Also, the different types of blockchains implemented require an enhanced governance
+    approach to include related information and communication technologies.
+
+
+    Indeed, the use of computing, big data, artificial intelligence and smart phones,
+    disruptive technologies [21] are reshaping the business landscape and business
+    processes of the private sector, as well as of border authorities.
+
+
+    A growing number of companies around the world are investing in digitizing their
+    processes in order to take advantage of the cost savings of speed and efficiency,
+    or to align their production processes with the products and services of the future.
+    In order to better respond to this rapidly changing digital economy and to strengthen
+    flexibility, companies are adopting new technologies in their daily operations,
+    according to their national priorities, technological developments and the availability
+    of resources.
+
+
+    Following are some disruptive technologies and how they are being used and how
+    they affect businesses:
+
+
+    - **Artificial Intelligence (AI)** and machine learning: CEO Mark Zuckerberg has
+    called for Jarvis, a virtual assistant for home. The AI systems for Jarvis use
+    natural language processing and facial recognition. The use of AI and machine
+    learning to cross-border passenger movements will be one of many other possible
+    applications. But their progress is engaged in the risk management capabilities
+    for cross-border movement of goods.
+
+
+    - **Internet of Things (IoT)**: IoT refers to the interconnection of hardware
+    devices, widely referred to as "intelligent devices", elements of electronics,
+    sensors and the networked capacity to collect and exchange data. Information security
+    remains challenges facing IoT, particularly by manufacturers of IoT devices. The
+    opportunities offered by IoT can also be considered for the implementation of
+    Integrated Supply Chain Management (ISCM) and Single Shipment Reference (SCR)
+    components.
+
+
+    - **Blockchain**: A blockchain with a fingerprint has become an everyday procedure
+    for many. In the future, personal data will be stored by means of blockchain.
+    To some extent, this technology is already being used to control the cross-border
+    movement of belongings, but its potential has yet to be de-mystified.
+
+
+    - **Robotics**: This technology area involves the design, construction and operation
+    of robots. Robots with increased capabilities, senses, dexterity and intelligence
+    can take tasks that are considered too difficult for humans to perform. Expected
+    to reach the next level, with a greater focus on content creation and other tasks
+    that are reserved for humans. Today, some administrations such as the Customs
+    Administration of China, for example, use robotics applications in their work
+    [2].
+
+
+    - Virtual Reality: Samsung is probably the most widespread example of how virtual
+    reality works. Much work remain to be done to determine the possibilities of using
+    virtual reality, but one of its applications around the world is, perhaps, the
+    physical experience of goods from a distance.
+
+
+    ## V. CONCLUSION
+
+
+    The blockchain technology presents opportunities for the working methods of the
+    border agencies. It is essential for developing countries to make choices about
+    technologies that are relevant to their environment and to prepare them accordingly.
+
+
+    The potential of these technologies could be considerable, although the challenges
+    for their impact are not. While developing countries expect have these technologies
+    to help the global economy, there will be a significant shortfall in efficiency,
+    including economic and administrative efficiencies, compared to developed countries
+    that must made.
+
+
+    How benefits of these technologies have not been fully identified. It is important
+    to continue exploratory work and research on these technologies and gather more
+    information on them, benefits, risks, and role in the supply chain.
+
+
+    The exploratory path may show other things, sight of the links between various
+    disruptive technologies and a more comprehensive approach to how they can support
+    coordinated border management.
+
+
+    # References
+
+
+    - [1] E. Gauss, "Can the blockchain revolutionize trade?" World Trade Organization,
+    2018,p.6.
+
+    - [2] K. Veramani, J. Suresh, "A synopsis of blockchain technology." IEEE Cryptography
+    and Newspapers, Vol. 1, 2019.
+
+    - [3] N. Kouame, J. Toukan, "Tkadera ou à la blockchain des services de douane
+    pour la facilitation des échanges et pour une confiance accrue," OMC report, no
+    87, October 2018, p.6.
+
+    - [4] G. S. Williams, "Customs and Terminal Operators International Consortium,"
+    November, 2016.
+
+    - [5] L. Segers, A. Bukwana and Y.H. Yan, "The use of a blockchain-based declaration
+    of goods in cross-border customs by authorities," ACM International Conference
+    Proceedings, 2019, 196–202.
+
+    - [6] J. Guérard, "L''impact de la blockchain pour la douane," Document de recherche
+    de l''Organisation Mondiale des Douanes n° 45, juin 2018.
+
+    - [7] Organisation Mondiale de la Douane, Accord sur la facilitation des échanges,
+    décembre 7 2013, OMC (MIN)(13/36, L/991).
+
+    - [8] W. Tan, "Chaines de blocs, la Corée est de préparer pour l''avenir," OMD
+    acte n° 88, Février 2019.
+
+    - [9] Denise de Sangour, "All-aller-du guchet national," OMD acte n° 87, October
+    2018.
+
+    '
+  mdcn: '
+
+
+    # LOGISTIQA 2020 *12月02日-04日 HST (EST) *西迪·穆哈默德·本阿杜拉大学 *摩洛哥
+
+
+    等. [此外，区块链可以有助于知识产权管理，并提高助成注册、许可、执法和税收流程的透明度。
+
+
+    标准、技术规范和认证使使用区块链的企业能够放心地参与其中，因为它们将获得更好的互操作性保障以及多样化的供应商选择。区块链技术已被多种机构使用，横跨多个不同的区块链平台并进行大规模运作。因此，它若要通过提高效率来转型供应链并跨区块链平台进行协作，开发者就必须遵守共同标准。
+
+
+    ## J. 海关监管
+
+
+    使用区块链技术的最后一种可能性是海关监管。事实上，在检查海关申报单和交易时，可以使用这项技术，特别是在基于风险管理系统的海关中，每笔交易记录都会经过审查。
+
+
+    凭借上述各种可能性，发展中国家的国际贸易环境将能够利用区块链技术加强对旅客和货物移动的控制，同时让跨境入境变得更加自由。
+
+
+    ## IV. 协调边境管理中使用区块链的前瞻性战略
+
+
+    在审查了机构使用区块链技术的可能性后，有必要考虑一种在边境控制环境中使用区块链的战略。
+
+
+    事实上，尽管区块链是为非常特殊的目的创建的，但区块链领域已有多项倡议在不同的平台上以不同的结构在运行。引入这项区块链技术的方法可能会导致“区块链孤岛”的产生，从而导致边境执法层面区块链平台的碎片化和脱节
+    [40]。
+
+
+    ## B. 数据标准化
+
+
+    问题在于，海关管理部门应该考虑何种类型的区块链技术标准化开发。
+
+
+    区块链的主要问题之一是分布式注册环境中数据质量的难以保证，在这一环境中，每个机构都可能启动交易并自定义相应的数据元素。
+
+
+    当供应链中的执行者能够以标准化的方式插入数据时，数据质量问题会变得更加严重。海关管理部门必须审查并处理区块链环境中定义、互操作性和数据质量方面的问题 [19]。
+
+
+    正如示例所示，开放数据联盟（OADA）正致力于为农业数据收集和分析过程建立标准。它了解到区块链技术可以帮助改进网络、安全和网络数据。OADA 将帮助建立可用于共享的应用程序接口（API）标准。
+
+
+    该领域的协作有助于启动供应链数据元素标准化的探索性工作。
+
+
+    ## A. 互操作性
+
+
+    区块链的标准化开发将有助于它们之间以及内部的互操作性，以确保与边境机构的信息系统连接/集成，以便访问数据。
+
+
+    2018年，最大的组织之一（Ethereum 和 Hyperledger）联手，以促进基于区块链的业务工具的创建。以太坊联盟（EEA）是一个全球标准组织，旨在推广分布式通用账本技术的采用。Hyperledger
+    是一个开源区块链倡议，旨在帮助公司构建和采用区块链工具 [18]。
+
+
+    EEA-Hyperledger 的合作伙伴关系预计提供大量的资源，用于开发基于区块链的工具，并为所有这些工具之间的兼容提供更大的保障。
+
+
+    ## C. 治理模型
+
+
+    区块链环境理论上将涉及许多参与者。为了满足他们的利益，必须建立一种治理机制。这种机制应该清楚地解释功能和职责，确保有效协调，并定义区块链（源代码）应用的规则和标准。在这个框架内，链的每次修改都必须对治理框架中定义的决策过程透明。
+
+
+    此外，实施的不同类型的区块链需要一种增强的治理方法，以纳入相关的信息和通信技术。
+
+
+    事实上，计算、大数据、人工智能和智能手机的使用——这些颠覆性技术 [21] 正在重塑私营部门以及边境当局的业务格局和业务流程。
+
+
+    全球范围内越来越多的公司正在投资于其流程数字化，以利用速度和效率带来的成本节省，或使其生产流程与未来的产品和服务对齐。为了更好地应对这种快速变化的数字经济并增强灵活性，公司根据其国家优先事项、技术发展和资源可用性在日常运营中采用新技术。
+
+
+    以下是一些颠覆性技术以及它们是如何被使用的，以及如何影响业务：
+
+
+    - **人工智能 (AI)** 和机器学习：首席执行官马克·扎克伯格曾呼吁开发家庭虚拟助手 Jarvis。Jarvis 的 AI 系统使用自然语言处理和人脸识别。将人工智能和机器学习用于跨境旅客移动将是许多可能应用之一。但它们的进展正投入到货物跨境移动的风险管理中。
+
+
+    - **物联网 (IoT)**：物联网指的是硬件设备的互连，广泛被称为“智能设备”、电子元件、传感器以及收集和交换数据的网络能力。信息安全仍然是物联网面临的挑战，特别是对于物联网设备制造商而言。物联网提供的机会也可以考虑用于集成供应链管理（ISCM）和单批货物参考（SCR）组件的实施。
+
+
+    - **区块链**：带有指纹的区块链已对许多人来说成为一种日常程序。在未来，个人数据将通过区块链存储。在某种程度上，这项技术已开始用于控制物品的跨境移动，但其潜力尚未被完全开发。
+
+
+    - **机器人技术**：这一技术领域涉及机器人的设计、建造和操作。具有增强能力、感知、灵活性和智能的机器人可以承担被认为人类太难完成的任务。预计将达到下一个水平，更多地关注内容创作和其他留给人类的任务。今天，某些行政机构（例如中国海关总署）已在其工作中使用机器人应用
+    [2]。
+
+
+    - **虚拟现实**：三星可能是虚拟现实如何运作的最广泛的例子。在确定虚拟现实的使用可能性方面仍有大量工作要做，但它在全球范围内的应用之一可能是对货物的远程物理体验。
+
+
+    ## V. 结论
+
+
+    区块链技术为边境机构的工作方法提供了机会。对于发展中国家来说，选择与其环境相关的技术并做好相应准备是关重要的。
+
+
+    这些技术的潜力可能是巨大的，尽管其影响面临的挑战并非如此。虽然发展中国家希望这些技术帮助全球经济，但与必须实现的发达国家相比，在效率（包括经济和行政效率）方面将出现巨大的短缺。
+
+
+    这些技术的益处尚未被完全确定。继续对这些技术进行探索性工作和研究，并收集更多关于其益处、风险以及在供应链中作用的信息是重要的。
+
+
+    探索路径可能会显示其他情况，即各种颠覆性技术之间的联系，以及关于它们如何支持协调边境管理的更全面方法。
+
+
+    # References
+
+
+    - [1] E. Gauss, "Can the blockchain revolutionize trade?" World Trade Organization,
+    2018,p.6.
+
+    - [2] K. Veramani, J. Suresh, "A synopsis of blockchain technology." IEEE Cryptography
+    and Newspapers, Vol. 1, 2019.
+
+    - [3] N. Kouame, J. Toukan, "Tkadera ou à la blockchain des services de douane
+    pour la facilitation des échanges et pour une confiance accrue," OMC report, no
+    87, October 2018, p6.
+
+    - [4] G. S. Williams, "Customs and Terminal Operators International Consortium,"
+    November, 2016.
+
+    - [5] L. Segers, A. Bukwana and Y.H. Yan, "The use of a blockchain-based declaration
+    of goods in cross-border customs by authorities," ACM International Conference
+    Proceedings, 2019, 196–202.
+
+    - [6] J. Guérard, "L''impact de la blockchain pour la douane," Document de recherche
+    de l''Organisation Mondiale des Douanes n° 45, juin 2018.
+
+    - [7] Organisation Mondiale de la Douane, Accord sur la facilitation des échanges,
+    décembre 7 2013, OMC（MIN)(13/36, L/991).
+
+    - [8] W. Tan, "Chaines de blocs, la Corée est de préparer pour l''avenir," OMD
+    acte n° 88, Février 2019.
+
+    - [9] Denise de Sangour, "All-aller-du guchet national," OMD acte n° 87, October
+    2018.
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 6]
+
+
+    # LOGISTUQA 2020 •December 02 - 04 HST (EST) • Sidi Mohamed Ben Abdallah University
+    •Morocco
+
+
+    +   [10] Organisation Mondiale des Douanes, "Convention internationale sur le
+    système mondial d''désignation et de codification des marchandises", 19 juin 1983.
+
+
+    +   [11] Organisation Mondiale des Douanes, "Reconnaissance mutuelle des Operateurs
+    économiques (OEA)", Document de guide de stratégie, Jun 2018.
+
+
+    +   [12] M. Polner, "Recueil des Documents d''Opérateurs économiques agréés (OEA)",
+    Document de recherche de l''Organisation Mondiale des Douanes, Jan 2010.
+
+
+    +   [13] S. Ccurarta, "CADENA, la chaîne de blocs sous-tendant la mise en œuvre
+    des Accords de Reconnaissance Mutuelle", OMD act no 43, 2019.
+
+
+    +   [14] A. Sturmanis, J. Hudenko and M. Juruss, "The Application of Blockchain
+    Technologies for Rail Transit Customs Procedures", Lecture Notes in Computer Systems
+    938, 2017.
+
+
+    +   [15] M.A. Mohamed, C. Taconet and M. Oud Mohamed Lemine, "La traçabilité dans
+    les chaînes logistiques utilisant l''IoT et la Blockchain", Université Paris I
+    Panthéon-Sorbonne, Jun 2019, Paris, France, pp.1-50.
+
+
+    +   [16] A. Bratanova, D. DeVujär, J. Caughton, B. Kluster, K. Truth, I. Weber
+    and D. Dawson, "Blockchain 2030: A Look at the Future of Blockchain in Australia",
+    CSIRO Data 61: Brisbane, Australia, 2019.
+
+
+    +   [17] Hyperledger., "Enterprise Ethereum Alliance and Hyperledger Foundation
+    Business Outlook", October, 2018.
+
+
+    +   [18] L. Masedo, "Blockchain for trade facilitation: Ethereum, eWTP, and regulatory
+    issues", World Customs Journal, 12, 2018, pp. 87-94.
+
+
+    +   [19] H. Yaron, "Implementing blockchain technology in the customs industry:
+    a framework of standards", World Customs Journal, 14 (1), pp. 72-73, 2020.
+
+
+    +   [20] IEEE Standards, "Open Ag Alliance: Open Standards Fuel Customs Systems",
+    2014.
+
+
+    +   [21] M. Clayton Christensen, E. Raymond Moore and Richard McDonald, "What
+    Is Disruptive Innovation?", Harvard Business Review, December 2015
+
+
+    +   [22] W. Linguin, "Bâtir des organisations résolument axées sur la technologie
+    : l''expérience de la Douane chinoise", OMD actu n° 87, octobre 2018, p-48.'
+  md: '
+
+    # LOGISTUQA 2020 •December 02 - 04 HST (EST) • Sidi Mohamed Ben Abdallah University
+    •Morocco
+
+
+    - [10] Organisation Mondiale des Douanes, "Convention internationale sur le système
+    mondial d''désignation et de codification des marchandises", 19 juin 1983.
+
+
+    - [11] Organisation Mondiale des Douanes, "Reconnaissance mutuelle des Operateurs
+    économiques (OEA)", Document de guide de stratégie, Jun 2018.
+
+
+    - [12] M. Polner, "Recueil des Documents d''Opérateurs économiques agréés (OEA)",
+    Document de recherche de l''Organisation Mondiale des Douanes, Jan 2010.
+
+
+    - [13] S. Ccurarta, "CADENA, la chaîne de blocs sous-tendant la mise en œuvre
+    des Accords de Reconnaissance Mutuelle", OMD act no 43, 2019.
+
+
+    - [14] A. Sturmanis, J. Hudenko and M. Juruss, "The Application of Blockchain
+    Technologies for Rail Transit Customs Procedures", Lecture Notes in Computer Systems
+    938, 2017.
+
+
+    - [15] M.A. Mohamed, C. Taconet and M. Oud Mohamed Lemine, "La traçabilité dans
+    les chaînes logistiques utilisant l''IoT et la Blockchain", Université Paris I
+    Panthéon-Sorbonne, Jun 2019, Paris, France, pp.1-50.
+
+
+    - [16] A. Bratanova, D. DeVujär, J. Caughton, B. Kluster, K. Truth, I. Weber and
+    D. Dawson, "Blockchain 2030: A Look at the Future of Blockchain in Australia",
+    CSIRO Data 61: Brisbane, Australia, 2019.
+
+
+    - [17] Hyperledger., "Enterprise Ethereum Alliance and Hyperledger Foundation
+    Business Outlook", October, 2018.
+
+
+    - [18] L. Masedo, "Blockchain for trade facilitation: Ethereum, eWTP, and regulatory
+    issues", World Customs Journal, 12, 2018, pp. 87-94.
+
+
+    - [19] H. Yaron, "Implementing blockchain technology in the customs industry:
+    a framework of standards", World Customs Journal, 14 (1), pp. 72-73, 2020.
+
+
+    - [20] IEEE Standards, "Open Ag Alliance: Open Standards Fuel Customs Systems",
+    2014.
+
+
+    - [21] M. Clayton Christensen, E. Raymond Moore and Richard McDonald, "What Is
+    Disruptive Innovation?", Harvard Business Review, December 2015
+
+
+    - [22] W. Linguin, "Bâtir des organisations résolument axées sur la technologie
+    : l''expérience de la Douane chinoise", OMD actu n° 87, octobre 2018, p-48.
+
+    '
+  mdcn: '
+
+
+    # LOGISTUQA 2020 •12月02日-04日 HST (EST) • 西迪·穆哈默德·本阿卜杜拉大学 •摩洛哥
+
+
+    - [10] 世界海关组织（WCO），《货物术语和编码系统国际公约》，1983年6月29日。
+
+
+    - [11] 世界海关组织（WCO），“经认证经营者（OEA）互认”，策略指南文件，2018年6月。
+
+
+    - [12] M. Polner，“经认证经营者（OEA）文件集》，世界海关组织研究文件，2010年1月。
+
+
+    - [13] S. Ccurarta，“CADENA：支持互认协议实施的区块链”，世界海关组织第43号公告，2019年。
+
+
+    - [14] A. Sturmanis, J. Hudenko and M. Juruss，“区块链技术在轨道交通海关程序中的应用》，计算机系统讲义录第938，2017年。
+
+
+    - [15] M.A. Mohamed, C. Taconet and M. Oud Mohamed Lemine，“利用物联网和区块链的供应链可追溯性”，巴黎第一大学泛泰神-索邦大学，2019年6月，法国巴黎，第1-50页。
+
+
+    - [16] A. Bratanova, D. DeVujär, J. Caughton, B. Kluster, K. Truth, I. Weber and
+    D. Dawson，“区块链2030：展望澳大利亚区块链的未来”，CSIRO 数据 61：澳大利亚布斯班，2019年。
+
+
+    - [17] Hyperledger，“企业以太坊联盟与 Hyperledger 会业务展望”，2018年10月。
+
+
+    - [18] L. Masedo，“用于贸易便利化的区块链：Ethereum、eWTP 与监管问题，《世界海关杂志》，第12，2018年，第87-94页。
+
+
+    - [19] H. Yaron，“在海关行业实施区块链技术：标准框架，《世界海关杂志》，第14 (1)，第72-73页，2020年。
+
+
+    - [20] IEEE 标准，“开放农业 联盟：开放标准驱动海关系统”，2014年。
+
+
+    - [21] M. Clayton Christensen, E. Raymond Moore and Richard McDonald，“什么是颠覆性创新？，《哈佛商业评论》，2015年12月。
+
+
+    - [22] W. Linguin，“构建坚定以技术为中心的组织：中国海关的经验”，世界海关组织第87号公告，2018年10月，第48页。
+
+
+    '
+  merge: 0
