@@ -1,0 +1,2 @@
++   [2020 第五届国际云计算与人工智能会议：技术与应用 (CloudTech)(摩洛哥马拉喀什 2020.11.24-2020.11.26)](README.md)
++   [2020 第五届国际云计算与人工智能会议：技术与应用 (CloudTech)(摩洛哥马拉喀什 2020.11.24-2020.11.26)](2020-5th-international-conference-on-cloud-computing-and-art.md)

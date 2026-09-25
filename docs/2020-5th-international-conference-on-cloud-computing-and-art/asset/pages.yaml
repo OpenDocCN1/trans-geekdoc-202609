@@ -1,0 +1,520 @@
+- pgno: 0
+  md: '# A Review of Credit Card Fraud Detection Using Machine Learning Techniques
+
+
+    Nadia Bouthera
+
+    Laboratory of Computer Science, Systems
+
+    Modeling and Decision Support
+
+    Faculty of Sciences Ain Chock, Hassan II University
+
+    Casablanca, Morocco
+
+    nadia.bauthera@gmail.com
+
+
+    Amina Elnorni, Noredine Abghour, Khalid Moussaid
+
+    and Mohamed Rida
+
+    Laboratory of Computer Science, Systems
+
+    Modeling and Decision Support
+
+    Faculty of Sciences Ain Chock, Hassan II University
+
+    Casablanca, Morocco
+
+    {amina.elnorni,noredine.abghour,khalid.moussaid,mohamed.rida}@univh2.ma
+
+
+    **Abstract—** Data technologies connect several areas such as Healthcare, Finance,
+    Manufacturing, Transport, and E-Commerce. They play an indispensable role in the
+    financial sector, especially banking services are impacted by the digitalization
+    of services and the element of connectivity. The use of data and the increasing
+    number of fraudsters generate different issues that concern the banking sector.
+    Unfortunately, these issues obstruct the performance of Fraud Control Systems
+    and fraudsters abuse the transparency of online payments. Thus, financial institutions
+    also use credit card transactions and allow their customers. To reach this goal,
+    they need more relevant fraud detection techniques that can identify more fraudulent
+    transactions and decrease frauds. The purpose of this article is to define the
+    techniques and challenges of frauds related to fraud detection, in the banking
+    sector, and the existing solutions by machine learning techniques.
+
+
+    leads to the fraud detection systems (FDS) which are more relevant and efficient
+    to detect and recognize fraudulent activities.
+
+
+    Some big data limit the development and effectiveness of Fraud Detection Systems
+    (FDS) [3]. Then, many researchers have used various machine learning techniques
+    that increase low detection accuracy, up to the time of detection, and reduce
+    false alerts.
+
+
+    This paper focuses on the current fraud banking systems, the issues and challenges
+    they face, and the existing machine learning techniques used to maximize detection
+    rate and reduce the rate of fraud. We also analyzed and compared these techniques
+    to underline their assumptions and objectives.
+
+
+    The remainder of this article providing the following points: First, it defines
+    the theoretical aspects of fraud detection systems. Second, it explains the machine
+    learning techniques used to handle fraud detection issues and challenges and provides
+    a comparative analysis of these techniques based on different. Third, it defines
+    the
+
+
+    **Keywords—** machine learning techniques; credit card fraud detection; legitimate
+    transaction; financial institutions; digitalization; e-commerce.
+
+
+    # I. INTRODUCTION
+
+
+    Nowadays, various economic institutions and financial companies use big data technologies
+    in their electronic commerce to help their customers making online transactions
+    from anywhere and wherever they are. There are different categories of systems,
+    such as Credit card systems, payment systems [3] that are used by legitimate users
+    and fraudsters. Unfortunately, more systems are used more frauds are generated
+    day by day, especially in the banking sector. Then, the fraud prevention systems
+    (FPSs) are used to protect the customers and the companies from these electronic
+    crime issues.
+
+
+    However, with the intelligence of fraudsters and their adaptability to these systems,
+    banks and customers faced more issues and challenges compared to the past. The
+    fact that
+
+
+    # A. Anomaly Detection
+
+
+    Anomaly detection is a machine learning method used to identify data points and
+    observations that diverge from the normal behavior of [8].
+
+
+    It is issue that has occurred in various domains, like intrusion detection, system
+    health monitoring and fraud detection in credit card transactions [9].
+
+
+    In data mining and machine learning fields, we categorize anomalies into:
+
+
+    +   * Point anomalies: if a single instance of data deviates from the rest of
+    the data, it is defined as an anomalous point.
+
+
+    # II. THEORETICAL BACKGROUND'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'Contextual anomalies: This type of anomaly is identified when a data instance
+    is anomalous in a specific context (but not otherwise), it can also be called
+    conditional anomaly.
+
+
+    Collective anomalies: If a group of related data is anomalous with respect to
+    each data point of the dataset.
+
+
+    # B. Financial Fraud Detection
+
+
+    In general, financial fraud can be identified when a fraudster takes more or financial
+    assets from another through one deception or criminality.
+
+
+    Therefore, generically and breaches have an effect on the reputation of customers
+    and their confidential information stored by financial institutions, which can
+    provide losses and a damaged reputation [11].
+
+
+    Financial fraud affects various sectors, especially in the banking sector. Banking
+    fraud can be classified as follows [6][12]:
+
+
+    +   - Money Laundering: It is an illegal action used to appear the amounts of
+    money generated by criminal activities to a legitimate source.
+
+
+    +   - Mortgage Fraud: It is also used to obtain a mortgage loan. Specifically,
+    it occurs when a homebuyers tries to manipulate significant information in the
+    process of applying for a mortgage to property.
+
+
+    +   - Credit card fraud: It occurs when fraudsters make illegal operations in
+    credit card transactions. It can be presented in different activities, losing
+    the credit card or having it, stealing the confidential information of a credit
+    card (i.e. card-not-present fraud).
+
+
+    # C. Credit Card Fraud Detection
+
+
+    Credit Card Fraud Detection is one of the important financial fraud detection
+    techniques because it has generated a huge amount of losses more than others.
+    The prevention measures used to combat the credit card frauds, but these are not
+    effective enough to reduce the impact of such frauds as Fraud Detection Systems
+    (FDS).
+
+
+    Therefore, another type of Fraud Detection System (FDS) is identified to be more
+    effective in detecting fraud in credit card transaction.
+
+
+    Some issues hinder the development and progress of an efficient FDS and lead to
+    negative effects like bias, alerts, and low detection. These issues and challenges
+    are based on Big Data V''s characteristics like:
+
+
+    +   - Volume detection: The data in the Credit Fraud Detection System (CFDS) is
+    highly used and the number of attributes to define the behavior of a cardholder
+    is around 25 attributes on average. So, the need for reduced data is important
+    in reducing the transaction time and the complexity in
+
+
+    processing. To fix this, various data reduction techniques are used like dimensionality
+    reduction (PCA) for selecting the most relevant attributes and novelty approaches
+    for aggregating credit transactions [3]:
+
+
+    +   - Velocity detection: This issue occurs when we look to detect anomaly by
+    using CCFDS on big data technologies. Different algorithms are used with BOAT
+    (Bayesian Online Analysis Test for Construction) algorithm that detects time and
+    shift of new transactions [15]:
+
+
+    +   - Veracity detection: The cardholders change their activities over time and
+    by several reasons. As fraudsters'' attacks evolve, the Credit Card Fraud System
+    should be more adaptable and efficient to these types of news.
+
+
+    +   - Value Detection: Credit transactions contain many fraudulent less than others,
+    which skewed class distribution to the imbalanced data. Supervised approaches
+    are the most impacted techniques by this type of issue because the training of
+    the model are too fit to the majority and not the minority class (i.e fraudulent
+    transactions). Many modeling and training errors are produced and affect Credit
+    Card Fraud System performance.
+
+
+    +   - Variety data: Data refers to various types of credit data sources. Therefore,
+    banking institutions might have stored data in selber database formats that are
+    accurate by their own unique model. This variety can also be in the diversity
+    of processes developed by fraudsters to make.
+
+
+    # III. DETECTION TECHNIQUES
+
+
+    To build an accurate Credit Fraud Detection System, we must follow several:
+
+
+    +   1) Parameterization stage: This presents the initial stage to collect the
+    credit card transaction data, loading into the appropriate database system and
+    preprocessing it into a format without issues.
+
+
+    +   2) Training stage: This stage involves the modeling and processing of the
+    fraud detection system. There are different machine learning algorithms and data
+    mining techniques that can be applied, depending on the nature of the data.
+
+
+    +   3) Detection stage: When the training stage is achieved and the model is available,
+    it is evaluated based on criteria to have the most efficient technique in detection
+    rates.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "![](img/9f72d54f9b180ab0aabec2e4e8d046c8_2_0.png)\n\nFigure 1. Process of detecting\
+    \ credit card frauds (Parameterization, Training, and Detection)\n\nTo analyze\
+    \ machine learning approaches that concern the modeling and training stage, we\
+    \ present various comparative studies related to the existing research credit\
+    \ fraud detection area.\n\n# ## B. Comparative Study\n\n| No. | Paper Title (Year)\
+    \ | Theoretical Criteria | Limitations |\n|---|---|---|--|\n| 13 | Predictive\
+    \ Modeling for Using Data Analytics (2018) | provide the best accuracy and precision\
+    \ compared to the others | Random Forest lead to the overfitting of trees in memory.\
+    \ |\n| 14 | Evaluation of Algorithms for Credit Fraud Detection (2019) | utilize\
+    \ techniques selected and provide best results than other Isolation Forest and\
+    \ Outer | The work should be resampling techniques that reduce high imbalance.\
+    \ |\n| 15 | Machine Learning Methodologies (2018) | Random Forest efficiently\
+    \ applying PCA | If there is no match data relevant to work classical (Component)\
+    \ and if we have no issue, other techniques will be needed. |\n| 16 | Credit Card\
+    \ Detection Learning and methods (2019) | The Convolutional Neural Network oversampling\
+    \ SMOTE (Synthetic Minority Oversampling technique). | the proposed method has\
+    \ best results but the future methods should focus on handling highly imbalanced\
+    \ data. |\n| 17 | Credit Fraud Detection Using Convolutional Neural Networks (2016)\
+    \ | The Convolutional Neural Network achieves the best performance. \n\n# ## C.\
+    \ Comparative Study on Big Data Characteristics\n\n| No. | Volume of Data | Time\
+    \ | Speed | Imbalance of Data |\n|---|---|---|---|--|\n| 14 | 20 attributes (are\
+    \ numerical / 13 categorical features) | 1000 transactions (30% reads & 70% writes)\
+    \ | Real | Time | None |\n| 15 | 31 numerical features | 24807 transactions (0.173%\
+    \ reads & 99.82% normals) | Batch | Highly Imbalanced |\n| 16 | 28 features |\
+    \ 24807 transactions (0.173% reads & 99.82% normals) | Batch | Highly Imbalanced\
+    \ |\n| 17 | NA | 260 million transactions (4000 fraudulent transactions) | Real\
+    \ | Time | None |\n| 18 | 28 features | 24807 PCA variable, amount and class |\
+    \ Real | Time | Highly Imbalanced |\n| 19 (2021) | 69 attributes | 80 million\
+    \ count level (99.86% legitimate & 0.136% reads) | Batch | Highly Imbalanced |\n\
+    | 20 | 21 features | 24831 records in whereas 429 fraudulent records | Batch |\
+    \ Highly Imbalanced |\n| 21 | 28 features | 24807 transactions (0.173% reads &\
+    \ 99.82% normals) | Batch | Highly Imbalanced |"
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# D. Comparative Study of Existing Machine Learning Techniques based on Metrics
+    of Performance
+
+
+    COMPARISON OF EXISTING MACHINE LEARNING TECHNIQUES
+
+
+    | No of Ref. | Machine Learning Techniques | Metrics of Performance | |
+
+    |---|---|---||
+
+    | | Accuracy (%) | Precision (%) | Fallout (FPR %) | Miss Rate (FNR %) |
+
+    | [13] | Logistic Regression | 72 | 76 | 64 | 12 |
+
+    | | Decision Tree | 82 | 89 | 44 | 25 |
+
+    | | Random Forest | 76 | 93 | 21 | 30 |
+
+    | | Logistic Regression | 97.46 | 58.52 | 3 | 8 |
+
+    | [14] | Naive Bayes | 99.23 | 16.17 | 0 | 17 |
+
+    | | Multilayer Perceptron | 99.96 | 03.8 | 0 | 18 |
+
+    | | Naive Bayes | 89 | 6 | NA | NA |
+
+    | | Random Forest | 95 | NA | NA | NA |
+
+    | | SVM | 93 | NA | NA | NA |
+
+    | | Artificial Neural Network | 88 | NA | NA | NA |
+
+    | | Logistic Regression | 94 | NA | NA | NA |
+
+    | | Isolation Forest Classifier | 99 | NA | NA | NA |
+
+    | | K-Means | 50 | NA | NA | NA |
+
+    | [16] | Neural Network | | | | 0.29 |
+
+    | | SVM | | | | 0.27 |
+
+    | | Random Forest | | | | 0.30 |
+
+    | | CNN | | | | 0.32 |
+
+
+    *a. Accuracy,Precision(%) With "Feature".
+
+    *b. Accuracy,Precision(%) Without "Feature".*
+
+
+    # E. Synthesis and discussion
+
+
+    To identify the most used machine learning techniques that handle and solve the
+    issues of credit fraud detection, we analyzed and compared current research contributions
+    using various criteria.
+
+
+    As a purpose, in the current literature, the used machine learning techniques
+    are supervised techniques like Logistic Regression which has high accuracy and
+    works with linear data, SVM that reduce the time of detection, Random Forest and
+    Neural Network which improve the classification rates (FPR).
+
+
+    +   - A lack of publicly available datasets: The majority of cases in this comparative
+    study are based on one specific data set from the Kaggle platform
+
+    - Large Datasets: Credit Card Fraud Detection System works fast and efficiently
+    with one big data
+
+    - The real-time processing is not implemented in most of machine learning techniques:
+    When the model is applied in a real-time context, the credit card fraud detection
+    may not be adaptable to any new attacks of fraud.
+
+
+    These comparative studies help to identify several issues related to credit fraud
+    detection area as:
+
+
+    # IV. CONCLUSION & FUTURE WORK
+
+
+    | No of Ref. | Machine Learning Techniques | Metrics of Performance | |
+
+    |---|---|---||
+
+    | | F Score | Incremental Learning |
+
+    | | AUC | AP | AUC |
+
+    | [18] | Random Forest | 0.91 | 0.85 | 0.90 | 0.83 |
+
+    | | SVM | 0.89 | 0.80 | 0.87 | 0.80 |
+
+    | | Logistic Regression | 0.91 | 0.73 | 0.91 | 0.84 |
+
+    | | Logistic Regression | | | | |
+
+    | | Gradient | | | | 0.86 |
+
+    | | Boosted Trees Deep Learning (NN) | | | | |
+
+    | | Logistic Regression | 99.75 | NA | NA | NA |
+
+    | [21] | Decision Tree | 99.21 | NA | NA | NA |
+
+    | | Extreme Gradient Boosting | 98.8 | NA | NA | NA |
+
+    | | Logistic Regression | 94a / 94b | 95a / 94b | NA | NA |
+
+    | [22] | Decision Tree | 90a / 90b | 91a / 91b | NA | NA |
+
+    | | Naive Bayes | 91a / 91b | NA | NA | NA |
+
+
+    Credit Card Fraud detection highly impacts the financial area. To avoid fraud
+    losses, banks institutions have tried to develop new and advanced fraud detection
+    techniques. Hence, this paper aimed to present the theoretical aspects of credit
+    card detection and provide comparative studies of the existing machine learning
+    techniques used to deal with credit fraud.
+
+
+    It is concluded from this analysis that supervised algorithms are much used than
+    other types of techniques like Logistic Regression, Random Forest, and SVM.
+
+
+    As perspectives, our work will focus on the level machine learning algorithms
+    identified in this paper and analyze data engineering techniques, in order to
+    propose our contribution that can handle the imbalanced data, the'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'fraud detection system more relevant to the real-time problem, and provide
+    more effective classification metrics.
+
+
+    # ACKNOWLEDGMENT
+
+
+    We thank all members of Laboratory of Computer Science, Systems Modeling and Design
+    for their suggestions and help.
+
+
+    # REFERENCES
+
+
+    +   [1] I. Beneschahi and S. Souza, "Using Genetic Algorithm to Improve Classification
+    of Imbalanced Datas for Credit Card Fraud Detection," p. 5.
+
+
+    +   [2] Z. Lazar, I. Amir and S. Shahman, "A Survey of Credit Card Fraud Detection
+    Techniques," Int. Appl. Inf. Syst., vol. 10, no. 2, pp. 26–32, Dec. 2022.
+
+
+    +   [3] A. Abdallah, M. A. Maouf, and A. Zainal, "Fraud detection system: A survey,"
+    New. Comput. Appl. Syst., vol. 68, pp. 60–98, Jun. 2016.
+
+
+    +   [4] A. Kunda, S. Rao and A. Majhi, "Two-stage Credit Card Fraud Detection
+    Using Sequence Algorithms," Proc. Computer Systems Security, vol. 4332, A. Bagchi
+    and V. Bakhtari, Eds. Berlin, Springer Berlin Heidelberg, 2006, pp. 265–72.
+
+
+    +   [5] K. Singh, S. Kumar and F. Grawsky, "The use of predictive analytics technology
+    to detect credit card fraud in Canada," in 2016th International Conference on
+    Systems and Technologies (CISTC), GIST Conference, India, 2016, pp. 1–6.
+
+
+    +   [6] R. R. Potat and J. Chaudhary, "A Survey on Credit Card Fraud Detection
+    Using Machine Learning," in 2018 International Conference on Electronics and Informatics
+    (IEEECOFI), Tirureville, 2018, pp. 1120–125.
+
+
+    +   [7] J. West and M. Bhattacharjee, "Intelligent financial fraud detection:
+    A survey," J. Comput. Secur., vol. 57, pp. 47–66, Mar. 2016.
+
+
+    +   [8] S. Agrawal and J. Agarwal, "Survey on Anomaly Detection using Data Mining
+    Techniques," Procedia Comput. Syst., vol. 60, pp. 708–713, 2019.
+
+
+    +   [9] M. Ahmed, A. Mahmood, and M. Rdlam, "A survey of anomaly detection techniques
+    in financial domain," Future Gen. Comput. Syst., vol. 58, Jun 2019.
+
+
+    +   [10] A. Alnaess and G. Casle, "Artificial neural networks for anomaly detection
+    in Apache Spark," T. Comput. Comput., ACFE.
+
+
+    +   [11] "Preventing and Detecting Financial Institution Fraud ACFE Insight.
+
+
+    +   [12] S. Islam, N. Noel, and F. Bennano, "Performance of machine learning techniques
+    in the detection of financial fraud," Procedia Comput. Syst., vol. 148, pp. 45–54,
+    2019.
+
+
+    +   [13] S. Islam, N. Noel, and P. K. Toni, "Modelling For Credit Card Fraud Detection
+    Using Data Analytics," Procedia Comput., vol. 132, pp. 509–516, 2019.
+
+
+    +   [14] D. Jovic, M. Kamovic, S. Sladjevic, M. Arsenjevic, and A. Anderla, "Credit
+    Card Fraud Detection — Learning methods," in 2019 12th International Symposium
+    on Information Technology (INFOTETH), INFOTEH, Sarajevo and Herzegovina, 2019,
+    pp. 1–5.
+
+
+    +   [15] Y. Dai, J. Yan, K. Zhang, H. Zhao, and M. Guo, "Online Credit Card Fraud
+    Detection: A Hybrid Framework with Big Data Technologies," in 2016 9th International
+    Conference on Big Data (BD), Tianjin, China, 2016, pp. 1641–1651.
+
+
+    +   [16] K. Du, D. Cheng, Y. Lu, and L. Zhang, "Credit Card Fraud Detection Using
+    Convolutional Neural Networks," in Neural Information Processing, vol. 9949, A.
+    Hirose, S. Ozawa, D. Koya, J. Ikeda, M. Lee, and J. Liu, Eds. Springer International
+    Publishing, 2016, pp. 483–490.
+
+
+    +   [17] M. Mittal and S. Bajaj, "Performance Evaluation of Machine Learning Algorithms
+    for Credit Card Fraud Detection in 2019 9th International Conference on Cloud
+    Computing, Data Science & Engineering (Confluence), Noida, India, 2019, pp. 320–324.
+
+
+    +   [18] M. Pah and L. Brki, "Detecting Credit Card Fraud Using Selected Machine
+    Learning Algorithms," in 2019 42nd International Convention
+
+
+    on Information and Communication Technology, and Microelectronics (MIPI), Opatia,
+    Croatia, 2019, pp. 1250–1255.
+
+
+    +   [19] G. Qashami, S. Shah, A. Ali, and B. Lee, Analysis of credit card fraud
+    detection—deep learning, logistic regression, and Boosted Tree, in 2017 Systems
+    and Information Engineering Design Symposium (SIEDED), Charleston, USA, 2017,
+    pp. 117–124.
+
+
+    +   [20] L. Zheng, et al., "A new credit card fraud detection method based on
+    behavior," in 2018 15th International Conference on Network and Computer Communication
+    (ICCNC), IEEE.
+
+
+    +   [21] T. Koudhary, G. Dani, T. P. Singh, A. Chauhan, and A. Agrawal, "An Efficient
+    Way to Detect Credit Card Fraud Using Machine Learning," in International Conference
+    on Computing and Information (ICCGoT), Bangalore, India, 2018, pp. 591–597.
+
+
+    +   [22] R. Kumari, "A Survey of Machine Learning Techniques for Credit Card Fraud
+    Detection Based on Time Variance in 2018 IEEE Series on Soft Intelligence (SSCI),
+    Bangalore, India, 2018, pp. 1958–1963.'
+  merge: -1
+  img_proc: true
