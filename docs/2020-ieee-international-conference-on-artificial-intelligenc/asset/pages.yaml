@@ -1,0 +1,407 @@
+- pgno: 0
+  md: '# 2020 IEEE International Conference on Artificial Intelligence and Virtual
+    Reality (AIVR)
+
+
+    # # Immersive Node-Link Visualization of Artificial
+
+    Networks for Machine Learning Experiments
+
+
+    Martin Bellgard
+
+    Visual Computing Institute
+
+    RWTH Aachen University\Germany
+
+    Christian Schneider
+
+    Institute for Information Management
+
+    in Mechanical Engineering
+
+    RWTH Aachen University, Germany
+
+    Torsten R. Kuhlen
+
+    Visual Computing Institute
+
+    RWTH Aachen University
+
+    Germany
+
+
+    **Abstract—** The black box problem of artificial neural networks (ANN) is still
+    a relevant issue. When communicating concepts of ANNs, they are often depicted
+    as node-link diagrams. Despite this strategy it remains limited to educational
+    context. We hypothesize that large-scale node-link diagrams of full ANNs could
+    be useful for machine learning experiments. We made a tool to depict ANNs as node-link
+    diagrams using virtual reality. We applied it to the field of machine learning
+    research and adapted it to the specific challenges. Finally, we performed an expert
+    review to evaluate the usefulness of our visualization. The node-link visualization
+    of ANNs was proved as helpful in this professional context.
+
+
+    **Index Terms—** Artificial Neural Networks, Analysis, Node-Link Diagram
+
+
+    # I. INTRODUCTION
+
+
+    During the past decade, ANNs have become a standard tool within the field of artificial
+    intelligence. They form an integral part of many state-of-the-art approaches in
+    the areas of, e.g., image classification, object detection or semantic image management.
+    These approaches remain opaque; understanding their means is alike a challenge,
+    commonly called the **black box problem** [3]. The behavior and explainability
+    of ANNs have failed to be made simple to be acceptable in sensitive applications.
+    As, the field of explainable AI (XAI) has recently gained traction [4], with many
+    methods to address the black box problem. We refer the reader to the surveys on
+    methods for explaining black box models in [5–7].
+
+
+    ![](img/c0cbb3a27f44dfb3b0b8e1bcc5443bd8_0_0.png)
+
+
+    A common way to depict neural networks are node-link diagrams [7]. In a node-link
+    diagram, the concepts of neurons and synapses are represented by nodes and links,
+    respectively. However, the representation of appearance of ANNs becomes complicated.
+    Despite this, visualizations for complex ANNs are rarely made using node-link
+    diagrams. They are mainly used to illustrate small scale networks, as shown in
+    [11] or in many Figures in [12]. There are also interactive visualizations using
+    node-link diagrams, such as the tensorflow playground. Their interactive website
+    allows users to set the hyperparameters of a small neural network and observe
+    their behavior of a two dimensional
+
+
+    Datasets, while it is not possible to teach the layers of the ANNs to beginners,
+    the networks depicted are just as small and exemplary. To the best of our knowledge
+    has attempted to depict a large ANN, that is subject to active review, as node-link
+    diagram in this paper.
+
+
+    Another way node-link diagrams are used to depict ANNs is in a computation graph,
+    as described in [8]. In a computation graph the edges do not depict individual
+    neurons but the computations and the data flowing between these computations.
+    In this case, it is usually highly convenient to represent the weights, biases,
+    and gradients. For this reason, node-link diagrams do not represent the networks
+    themselves, but the computations involved. Although this kind of node-link diagram
+    is used for large networks by the ANN Toolbox [5]
+
+
+    One might want to emphasize that this is not only relative that the visualization
+    is very close to reality. The web-based visualization described in [6] depicts
+    a three-dimensional node-link graph. Users are able to see their doings in the
+    network and immediately observe the responses of any neuron as their color is
+    mapped to
+
+
+    978-1-7284-7463-3/S1.10.2020 IEEE
+
+    DOI 10.1109/AIVR5068.2020.00015
+
+
+    33
+
+
+    Authorized licensed limited to use: Rutgers University. Published on May 17, 2021
+    at 17:44:55 UTC from IEEE Xplore. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'their activation. The weights of all synapses are also depicted using colored
+    lines and the filtered kernels can be displayed. While their approach depicts
+    a working, full-scale ANN, the author state that it is targeted at an educational
+    use case. In this work, we aim to take their idea one step further and evaluate
+    if a similar depiction of ANNs can also be used for machine learning experiments.
+
+
+    One major challenge, probably why large scale-node visualizations have not been
+    attempted more, is the increasing size and complexity of ANNs. ANN consist of
+    hundreds of neurons and millions of synapses. Naively drawing of the that on a
+    two-dimensional plane would result in a lot of visual clutter and be interpretable.
+    A three-dimensional visualization is much better but still limited if displayed
+    on a two-dimensional screen. This is why, for our visualization, we decided to
+    make use of immersive virtual reality (VR) technology. Due to recent economic
+    advancements, VR is now feasible for every everyday work [11]. This is for our
+    task, since to easily display our visualization in three dimensions needs the
+    use of three filters with higher degrees of freedom than in some data tasks [9],
+    [13].
+
+
+    To show that our system can be used for machine learning examples, we use MNIST
+    which is not. We need to apply our system to a use case that is helpful. In the
+    field of production technologies, machine learning is currently an area of increasing
+    interest. Therefore we decided to apply our visualization to a use case in that
+    area. The following sections describe this use case in more detail.
+
+
+    # II. USE CASE
+
+
+    We demonstrate our approach on a convolutional ANN that controls a robot arm.
+    This section gives a short overview of the project. A more description is presented
+    in [10].
+
+
+    In essence the project describes how the movements of a robot arm are generated
+    via reinforcement learning. The robot is given the task of following a loop wire,
+    which has to be moved along a path defined by a wire without touching it. Touching
+    the wire in an electric circuit being closed. This provides the information and
+    the images of a camera that is mounted to the robot''s head, a reinforcement learning
+    approach trains a convolutional ANN. This ANN uses (down) camera images and generates
+    rewards.
+
+
+    To put it simply, the process works as follows: First, an image is taken of next
+    to the part. Then, the ANN calculates a trajectory based on this image. Finally,
+    the robot moves along the trajectory and the process repeats. If the robot touches
+    the wire, it has to reset its position and receives a negative reward
+
+
+    ![](img/c0cbb3a27f44dfb3b0b8e1bcc5443bd8_1_0.png)
+
+
+    Fig. 2. Schematic of our approach architecture.
+
+
+    during the training process. The details of this training process are not relevant
+    to this work and are omitted.
+
+
+    The project already demonstrated that it is possible to learn a control-policy
+    for a robot arm to tie the loop wire, based on camera images. Nevertheless, there
+    are still issues with the learning process. which makes this project an ideal
+    case for our visualization, since the experts on it can likely benefit from a
+    better understanding of ANNs. Additionally, the inputs and outputs have only a
+    few differences. The control of the robot is a lot more complex. Furthermore,
+    it uses color inputs and constraints. The robot is moved every step robot, which
+    is about once every second. These aspects pose additional challenges, which had
+    to be addressed to the visualization to use this case. The way we want to describe
+    these aspects is described in the next section.
+
+
+    # III. CONCEPT
+
+
+    An overview of our use case can be seen in Figure 1. As described, it is greatly
+    inspired by the system in [6]. Like them we visualize the ANN as a node-link graph
+    where the nodes represent activations and the edges represent the weights between
+    them. However, we only show edges that connect nodes. This is because due to the
+    large number of neurons in our case, using a linear layout and showing the visualization
+    on a 2D screen, as is done in [6], it is not feasible. This is why we use VR which
+    allows the use of the third dimension. The decisions made regarding our VR implementation
+    are described in Section III-A. Section III-C describes additional aspects that
+    needed to be addressed in our application to adapt to our use case.
+
+
+    34'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# A. Immersive Virtual Reality
+
+
+    Our goal was to design an application that machine learning experts could integrate
+    into their workflow. The first decision, when designing an immersive VR application
+    for everyday work, was the usage scenario [1]. ANNs abstract objects that do not
+    exist in the physical world, so the user''s sense of their own body will likely
+    affect their immersion; a seated scenario would be feasible for this application.
+    However, the experts in our use case worked standing in front of the robot and
+    walking around. The location of the robot inside their workshop was large enough
+    to walk around. Therefore, we decided to design our application to be while standing
+    and allowing the users to walk around if they wish. Additionally, we included
+    a virtual travel mode (flying) to give users freedom to move around.
+
+
+    Naturally, we sensed the availability of our visualization as high as possible,
+    and decided to use head mounted displays (HMDs) as our target device. These devices
+    are affordable and do not require a complex setup. To enable virtual travel and
+    all interactive elements of the visualization, we used the standard input devices
+    that are included with the HMD. Navigation is intuitive but might require a redesign
+    of the control scheme, since the button on our VR controllers is not yet standardized.
+
+
+    ![](img/c0cbb3a27f44dfb3b0b8e1bcc5443bd8_2_0.png)
+
+
+    Fig. 3. Pointing at any activation shows that it connects to it. For convolutional
+    layers, the filters are known as such.
+
+
+    Still, it preserves the good properties of the linear layout, as users can look
+    at parts of the network within without clutter. To decrease the amount of work
+    the users have to do and give the neurons of adjacent layers along the circle,
+    Additionally, there is that no inherent information is communicated better than
+    in the linear layout. This layout, shown in figure 2, is a good compromise between
+    compactness, and simplicity. We do not use little of the another dimension. Other
+    layouts could use the spatial arrangement of neurons to explore properties of
+    them or relationship. We plan to investigate this in future work.
+
+
+    # B. Spatial Layout
+
+
+    The baseline for the spatial layout of the nodes in our visualization is the linear
+    approach used in [6]. In this case, the third dimension is used to show the activations
+    of the neural network, while all neurons are placed along a straight line. This
+    layout works well for smaller networks, and especially useful when the target
+    platforms are only 2D. Another positive aspect of this is the users can see any
+    part of the network in isolation. However, our layout is a very long line, where
+    information is hard to process across the dimension. This is why we need to find
+    a layout that is more compact but does not include too much visual.
+
+
+    We wanted to preserve the idea of linking the structure of the neural network.
+    This leaves us with two spatial dimensions to the layout. The neurons in the hidden
+    layers of an ANN do not have any ordering or structure that could be implemented
+    from the calculation, there is a lot of freedom here. By placing them on a regular
+    grid, this would result in a very compact layout. Unfortunately, this caused many
+    of them to be occluded. In the end, we settled on arranging the neurons in circles.
+    This makes the visualization compact enough to fit the users'' field
+
+
+    # C. Use Specific Features
+
+
+    There were a few challenges that we had to address to make our visualization feasible
+    for the experts in our study. First, the output of our control robot is not interpretable
+    as the MNIST network in [6]. Instead of encoding class probabilities, the output
+    layer of neurons encodes a path that the robot will follow. This path also contains
+    the input image and plots that the robot will take as a step. An example of this
+    is shown in figure 1. The experts were to be notified when the path is ready.
+    We also made our visualization flash ready for a short time, if a network package
+    is received. Additionally, we added a function to hold and load the state of the
+    visualization. This was because we frequently receive new inputs which might cause
+    the user to fly around the visualization or change the parameters in an undirected
+    fashion.
+
+
+    To test our hypothesis that a node-link visualization of a complete network is
+    helpful to machine learning experts, we performed an experiment review. Overall,
+    we interviewed four experts. Two of them were working in our use case'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'and had worked with us and our visualization before.
+
+
+    The other two had had the project but were not directly involved and had never
+    seen our visualization.
+
+
+    Every person we interviewed had an exhaustive tour of our visualization and an
+    explanation of all its features. After that, they were given the opportunity to
+    look around freely as long as they wanted, and when finished, we conducted a structured
+    interview with them to get qualitative feedback.
+
+
+    All experts that we interviewed found ours helpful. One even suggested they developed
+    visualizations of their own but ours were more helpful than all of them. We also
+    asked which part of their work could benefit from our visualization and a variety
+    of answers could help them find out more layers or neurons are needed in the network.
+    While they did not elaborate on how to do that, we suspect that this is because
+    of hyperparameters. Using hyperparameters are usually help the experts to determine
+    where they are too deep and the visualization is help to get a feeling for the
+    size of the network. Additionally the experts mentioned they could determine similar
+    feature maps, which filters are activated frequently or if the patterns were learned
+    by the network made to some. One of them mentioned that using the case set caused
+    a potential error in their interpretation when they were using a pooling layer
+    and noticed that it did not appear clearly in the convolutional layer.
+
+
+    We also asked the experts if they would like to see more networks in a different
+    fashion. Two experts mentioned that they would definitely like to see recurrent
+    architectures like RNNs. One expert said that the tool could be used for scientific
+    purposes but in practical projects they would not have the time to analyze the
+    network in that depth.
+
+
+    We also received criticism and suggestions from the experts. For example one expert
+    asked to show only the most important edges of all of them. The same experts requested
+    a way to pick one node selected without looking at it, to see the edges from different
+    directions. Two experts mentioned that the fully-connected layers were through
+    multiple layers, like a tree. Another point was that two experts mentioned it
+    were too complicated to reliably gain information from them. Points of criticism
+    we received were that it was too difficult to show the individual layers, which
+    we flashed when the
+
+
+    was felt too costly and that the selection was sometimes difficult to see in front
+    of a red background.
+
+
+    # V. CONCLUSION
+
+
+    We presented an interactive node-link visualization for ANNs based on immersive
+    reality. Unlike previous work, our system is targeted at machine learning experts.
+    We performed an expert review to test our hypothesis that a node-link visualization
+    can help them in their experiments. We perceived the feedback from the experts
+    as evidence that our hypothesis holds. More evaluations are needed to perform
+    that node-link visualizations can actually improve the workflow of machine learning
+    experts. However, we are optimistic that future versions of our visualization
+    could be used by experts on a larger scale.
+
+
+    # VI. ACKNOWLEDGMENTS
+
+
+    # REFERENCES
+
+
+    +   [1] M. Müller, A. Peck, and C. Zaklas, J. Beyers, W. Yates, and T. Kiling.
+    Immersive Reality in Reality. In VR Workshop on Immersive Reality. WeVR, 2017.
+
+
+    +   [2] C. Rudin. The Black Box Problem of Explainable Artificial Intelligence
+    (XAI). IEEE Access, 6:5218–5236, 2018.
+
+
+    +   [3] C. Lund. Can we open the black box of AI? Nature, 355(6338):297–298, 2018.
+
+
+    +   [4] D. Doran, S. Sukh, and T. R. Boyd. What does explainable AI mean? A survey
+    of methods, applications, and future directions, 2017.
+
+
+    +   [5] E. Arrinzo, A. Molnar, F. Dujini, and P. Garario. A Survey of Methods
+    for Explaining Black Box Models. CoRR, 2019.
+
+
+    +   [6] A. W. Harvey. Interactive Node-Link Visualization of Convolutional Neural
+    Networks. International Symposium on Vision Computing, 2018.
+
+
+    +   [7] F. Hoffman, M. Kingler, J. Pierre, and D. Hu. Visual Analysis in Deep
+    Learning: A Survey of Recent Techniques. CoRR, 2019.
+
+
+    +   [8] Y. Wang, M. J. Castro, A. Harkler, and D. Hu. Active Visualization: Exploration
+    of Neural Networks. arXiv preprint abs/1810.02362, 2018.
+
+
+    +   [9] L. Bakas, K. Sengirthala, J. D. Schifferbauer, and D. Bakman. Evaluation
+    of Immersive Reality for Analysis of Visual Data. IEEE TV, 29(4):597–604, 2020.
+
+
+    +   [10] O. Chang and S. King. Attention and Augmented Recurrent Neural Networks.
+    Deep, 2017.
+
+
+    +   [11] J. Smith, J. Lucas, and C. North. Exploring the Benefits of Immersion
+    in Abstract Information Visualization. In: Proceedings of the 2012 IEEE International
+    Conference on Human Science and Technology, 2012.
+
+
+    +   [12] D. Molnarov, S. Carter, D. F. Beagle, V. Viegas, and M. Wattenberg. Manipulation
+    of Deep Networks. CoRR, abs/1708.03118, 2017.
+
+
+    +   [13] K. Wongsuprasert, D. Smilkov, J. Wexler, J. Wilson, D. Mané, D. Pinto,
+    D. Krinsky, and M. Wattenberg. Visualizing Data Graphs of Deep Learning Models
+    in TensorFlow. TVCG, 24, 2017.
+
+
+    36'
+  merge: -1
+  img_proc: true
