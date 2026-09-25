@@ -1,0 +1,603 @@
+- pgno: 0
+  md: '# A Comparative Analysis of Ensemble Based Machine Learning Techniques for
+    Diabetes Identification
+
+
+    Nahid Hossain Tazz, Akbar Islam and Ismail Mahmud
+
+    Department of Electrical and Computer Engineering
+
+    Islam, University of Technology
+
+    Dhaka, Bangladesh
+
+
+    Email: nahidhossain15@ut-daka.com, akbarislam@ut-daka.com, ismailmahmud@ut-daka.com
+
+
+    **Abstract—** This manuscript details a framework to develop prediction methods
+    using the ensemble-based Machine Learning techniques on Indian Diabetes Dataset
+    (PIDD). We investigate the performance of machine classifiers separately by a
+    soft voting classifier to enhance the performance of Metrics Identification. The
+    classifications are estimated according to accuracy, precision, recall, and ROC
+    of individual classifiers. Analyzed performance metrics confirm that LightGB produced
+    the optimal result as soft voting improved the complete accuracy to score 95%
+    and ROC 96%.
+
+
+    In recent times, machine learning has been applied to the clinical and medical
+    field for disease identification [5]. The most vital and significant purpose of
+    classification analysis in the medical and clinical sectors is the accuracy of
+    the decisions and predictions. Researchers have worked to develop effective Machine
+    Learning methodology using available datasets or to obtain a proper diagnosis
+    of various chronic diseases. In recent times, diverse classes of machine learning
+    algorithms have been used to distinguish the diabetic as well as for early detection.
+    In this paper, a wide range of ensemble machine learning methods have been applied
+    to perform the performance metrics and classify the Indian Diabetes Dataset.
+
+
+    **Keywords—Machine Learning, Diabetes Mellitus, Indian Diabetes Dataset, Ensemble,
+    LightGBM, XGBoost, Adaboost, Random Forest, Soft Voting
+
+
+    # I. INTRODUCTION
+
+
+    Diabetes is a chronic disease in which the blood glucose of the body becomes too
+    high following blood glucose or not metabolized in the body. Diabetes originates
+    from various factors; including obesity, unhealthy food, ancestral heredity, etc.
+    [1]. Patients of diabetes highly require ongoing monitoring; otherwise, it can
+    lead directly to severe complications [2]. The United States Diabetes Association
+    categorize two kinds of types of diabetes as Type 1 Diabetes for which the body
+    requires the insulin hormone regular regulation of propulsion of insulin; Type
+    2 diabetes for which the insulin it cannot be utilized properly [3]. A survey
+    depicts in 2019, predicted that 9.3% of the global population has diabetes which
+    increased to 9.9% [4]. Diabetes affects health as well as well-being and also
+    strictly infringe the finances of the diabetes affected individuals by a very
+    high price to get access to affordable insulin, an essential impediment to successful
+    treatment which is making impact on the substantial economic loss through medical
+    care, catastrophic medical expenditure and loss of job.
+
+
+    In this paper, Section II discusses the related results performed on PIDD. Section
+    III (A) presents the overviews of the relevant dataset with corresponding properties.
+    Section III (B) includes the necessary classifier design methods. Section III
+    (C) includes the performance metrics. Section IV analyzes and analyzes observations
+    and discussions, finally concluded in Section V.
+
+
+    # II. RELATED WORK
+
+
+    Smit and his team implemented an algorithm to find out the performance of diabetes
+    mellitus where the sensitivity and specificity were found. 76%. The ADAPT Algorithm
+    also used the dataset of Puma Indians, and eight variables were chosen as features
+    and as significant risk factors for all 576 trainings. Amin Yahoui and his associates
+    [7] worked on Support Vector Machines and random forest algorithm for detecting
+    diabetes on the Puma Indian dataset of 706 samples and eight different variables.
+    They achieved accuracy and'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# 2022 2nd International Conference on Robotics, Electrical and Signal Processing
+    Techniques (ICREST)
+
+
+    precision of 65.8% and 62.56% accordingly in SVM and 83.67% and 84.36% accordingly
+    in random forest. The RBF Kernel was used for the SVM modelling where recall of
+    45.82% and F-measure of 51.93 was obtained. The number of decisions effectively
+    controlled the random forest classifiers, and 70.95% and 70.99% respectively.
+    We used AdaBoostM1 and Logistic algorithm using 10-cross-validation on the dataset
+    of 35691 patients with twenty-five tests where AdaBoostM1 showed an accuracy of
+    92.6% and the ROC Area 0.973. We achieved an accuracy rate of 93.23% and ROC area
+    of 0.97 in the case of Logisticsoft. [9] has discussed PIDD for diagnosing Diabetes
+    type II and eventually evaluated the testing accuracy at 89.56% and testing accuracy
+    at 81.49%
+
+
+    The comprehensive framework that we have three basic segments; the first is described
+    as data preprocessing that recovers the missing values, data cleaning, normalization
+    and scaling while the next segment is to execute the comprehensive differentiation
+    of accuracy, precision and F-score between both techniques. The final segment
+    consists of a voting classifier, which is basically a method for the ensemble
+    learning. In this research, all the available features for PIDD were used to train
+    the training (70%) and testing (30%) segments. For providing detailed results,
+    the training data was set using 10-fold cross-validation to estimate the performance
+    of each model. The training and test dataset were used for all the corresponding
+    Machine Learning algorithms, which compares feasible execution time for individual
+    classifiers also as an essential feature.
+
+
+    # III. PROPOSED FRAMEWORK.
+
+
+    # A. DATA SELECTION
+
+
+    The Pima Indian diabetes dataset (PIDD) is a publicly available dataset obtained
+    from UCI machine learning repository for experimental purposes. This dataset is
+    a compilation of information from Piman Indians with 21 years of history and in
+    the presence of Arabic and Phoenix Indians [10]. The dataset includes 768 instances
+    (268 males and 500 females) of 9 attributes (all numeric) and 1 binary class;
+    1 and 0 designate patient status. It is noticeable that enough missing data is
+    used for binary classification, and it is mainly enough to support various machine
+    learning classification algorithms. In Table I, we represent the statistical representation
+    of the PIDD data using type, mean value, min value, and max value for each attribute.
+
+
+    | Attribute Name | Data Type | Mean Value | Min Value | Max Value |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | Number of Times Pregnancy | Numeric | 3.84502 | 0.00 | 17.00 |
+
+    | Glucose | Numeric | 120.89541 | 0.00 | 199.00 |
+
+    | Diabetes Blood Pressure | Numeric | 69.10549 | 0.00 | 122.00 |
+
+    | Triceps Skin Fold Thickness | Numeric | 20.53645 | 0.00 | 99.00 |
+
+    | 2-Hour Serum Insulin | Numeric | 79.79949 | 0.00 | 846.00 |
+
+    | Body Mass Index | Numeric | 31.992578 | 0.00 | 67.10 |
+
+    | Pedigree Function | Numeric | 0.471876 | 0.00 | 2.42 |
+
+    | Age | Numeric | 33.240085 | 21.00 | 81.00 |
+
+    | Outcome | Numeric | 0.348958 | 0.00 | 1.00 |
+
+
+    Table I | PIDD Dataset Properties
+
+
+    ![](img/5ace2adb0c4a26902fb70dfb7cc8f6e8_1_0.png)
+
+
+    # C. APPLIED CLASSIFIERS
+
+
+    Based on the tree algorithm, LGBM (Light Gradient Boosting Machine) has emerged
+    as a versatile model that provides high performance with high accuracy and can
+    be used for classification, and various machine learning applications. LGBM employs
+    Gradient-Based-Side Sampling. Unlike Sample, XGB Go uses a pre-sorted algorithm
+    for that case [11]. The equation, at the step i is represented below $L(y, f(x))$
+    is the loss function
+
+
+    ```
+
+    $\Gamma_t = \sum_{j=1}^{n} L(y_j, f_{t-1}(x_j) + f_t(x_j))$
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# 2021 2nd International Conference on Robotics,Electrical and Signal Processing
+    Techniques (ICREST)
+
+
+    +   - XGBOOST
+
+
+    XGBoost is also an ensemble technique like other boosting algorithms. It merges
+    several machine learning algorithms and using the output of each algorithm provides
+    better performance by correcting the errors of each algorithm''s output [12].
+    It is more innovative and clear approach approaching with other algorithms. The
+    target of algorithm is to minimize the objective function which is defined as
+
+
+    ```
+
+    \Omega = L + \lambda R
+
+    ```
+
+
+    L is represented as the training loss factor and \Omega is the regularization
+    term, which is defined as
+
+
+    ```
+
+    L = \sum_{i=1}^{n}(y_i - \hat{y}_i)^2 , \text{and} \Omega = \Gamma + \lambda \sum_{j=1}^{m}
+    w_j^2
+
+    ```
+
+
+    Where $y_i$ and $\hat{y}_i$ are the target and output of the data set. $T$ is
+    the number of features, $w_j$ is the weight vector, $\lambda$ is $L2$ regularization,
+    and $\Gamma$ is a penalty parameter.
+
+
+    +   - Voting Classifier
+
+
+    It is an ensemble solution that does not act as a generic classifier but is for
+    a wrapper of several classifiers that are prepared and evaluated in resemblance
+    to employ the peculiarities of a specific algorithm. There are two different strategies
+    for this, a. Hard voting and b. Soft voting. In hard voting, the model predicts
+    votes for a class. In the end, the class with the majority voting is predicted
+    as the final output. In soft voting, instead of direct voting, there is a probability
+    of single data belonging to a certain class which is also used for each classifier
+    representing how important they are to the system. In hard voting or majority
+    voting
+
+
+    ```
+
+    \hat{y} = C_1(x), C_2(x), ... C_m(x)
+
+    ```
+
+
+    Where, $\hat{y}$ is predicted by majority voting of each classifier $C_i$
+
+
+    +   - Ensemble-learning
+
+
+    Random forest is used as a supervised learning algorithm that can be used for
+    both classification and regression difficulties. It is also based on the concept
+    of ensemble learning, which combines multiple individual classifiers to solve
+    a complex problem and improve classifier''s accuracy [13]. RF is a tree-based
+    learning algorithm that leverages the power of numerous decision trees for making
+    decisions. In the case of classification, the random forest classifier is obtained
+    by maximizing the individual trees, which is defined as
+
+
+    An ensemble algorithm which makes predictions through supervised learning by using
+    multiple individual models or weak learners. Basically, many ensembles are available
+    bagging and boosting are the most widely known. Among bagging methods are Random
+    Bagging, Random Forest and for boosting methods are gradient boosting. Adaboost,
+    extreme gradient boosting used widely. Theoretically, ensembles are supposed to
+    contain more effective results if the models used are weak, even though some dense
+    decision tree algorithm can be better than the deliberate ones and it can be used
+    to establish models like Random Forest, Support Vector Machine, Logistic Regression
+    etc. For weak learners, two types of voting are used to make predictions, which
+    are also soft and hard voting [16]
+
+
+    ```
+
+    m_j(x;\theta_1, ..., \theta_D) = \frac{1}{M} \sum_{t=1}^{M} m_t(x;\theta_1, ...,
+    \theta_D) > 1/2
+
+    ```
+
+
+    Where, $M$ is the number of regression tree, $D_t(\theta)$ are the data points
+    and $\theta$ are independent random variables.
+
+
+    +   - AdaBoost
+
+
+    AdaBoost stands for ''Adaptive Boosting'', which focuses on classification difficulties
+    and intends to persade a set of weak classifiers into an influential one [14].
+    It is the first practical boosting algorithm whose terminal equation can be displayed
+    as
+
+
+    ```
+
+    F(x) = sign(\sum_{t=1}^{T} \alpha_t f_t(x))
+
+    ```
+
+
+    Where, $f_t$ denotes the m-th weak classifier and $O_m$ represents the corresponding
+    weight.
+
+
+    ![](img/5ace2adb0c4a26902fb70dfb7cc8f6e8_2_0.png)
+
+
+    Authorized user use limited to: Central Michigan University. Downloaded on May
+    14, 2021 at UTC from IEEE Xplore. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# D. PERFORMANCE MEASUREMENT
+
+
+    Precision, Recall, Accuracy and F-Score metrics were chosen to measure the performance
+    of machine learning algorithms.
+
+
+    +   * Precision
+
+    Precision can be categorized as the ratio of true positive (TP) to the total recall.
+    Here total result is the summation of true positive (TP) and false positive (FP).
+    It can be defined as
+
+
+    ```
+
+    $TP\nTP+FP$ (7)
+
+    ```
+
+
+    +   * Recall
+
+    Theoretically, recall is presented as the proportion of quantity of true positive
+    (TP) to the summation of true positive (TP) and the false negative (FN). It can
+    be interpreted as
+
+
+    ```
+
+    $TP\nTP+FN$ (8)
+
+    ```
+
+
+    +   * Accuracy
+
+    Accuracy is represented as the quantity of events over the number of total results.
+    Total accurate results are the aggregate of true positive (TP) and true negative
+    (FN). In contrast, total results include all four events - true positive (TP),
+    true negative (TN), false positive (FP), false negative (FN). It can be demonstrated
+    as
+
+
+    ```
+
+    $Accuracy\nTP+TN+FN$ (9)
+
+    ```
+
+
+    +   * F-Score
+
+    In statistics, F-Score measures two parameters, which are precision and recall.
+    F1Score introduces equivalence between these two parameters that can be specified
+    as
+
+
+    ```
+
+    $precision*recall\nF1 Score = 2*precision/recall$ (10)
+
+    ```
+
+
+    We performed the analyses using Python 3.7 software. The script was developed
+    in Jupyter Notebook from Anaconda Package, which is a free and open-source distribution
+    of Python Provides supervised machine learning techniques with different modules
+    that permit the user to associate outputs from machine learning results. In this
+    paper, we used flask for our classifier model performance analysis. The scikit-learn
+    documentation is associated with seaborn, pandas, matplotlib and yellowbrick.
+    We used pandas for data ranging, and both
+
+
+    matplotlib and yellowbrick affords various graphs and performance metrics that
+    are beneficial for illustrating the comparative investigation. LightGBM, XGBoost,
+    AdaBoost, and random forest soft classifiers were used for the analysis of PIDD
+    identification. We divided a total of 786 instances into 70%–30% to train and
+    test containing 550 and 228 instances includes attributes that are recognized
+    as high-risk factors associated with the appearance of diabetes. Developing the
+    implementation in LightGBM, the leaf-wise algorithm reduces more loss than the
+    linear algorithm. XGBoost constructs structured or tabular datasets for classification
+    and regression problems. Due to regularization and validation XGBoost classifier
+    achieves higher performance balancing mean and variance in tabular data. AdaBoost
+    is fast, precise and straightforward to interpret the classification analysis
+    which the dataset is skewed. Random Forest classifier deals with variance by reducing
+    overfitting and aims to achieve more. In soft voting, each specific classifier
+    provides a probability value that is particular to each target class. We use soft
+    classifier to get what structured classifier value for each performance measure.
+
+
+    We investigated the missing values of attributes, which is a significant portion
+    of data property. The missing values were replaced by the mean values of each
+    attribute. Fig3 and Fig4 indicate the pre and post attributes distribution were
+    managed in the imputation mechanism. Necessary data cleaning and data warping
+    were performed in order to optimize accuracy and performance measures. The dataset
+    was distributed sequentially among the classifiers. The performance measure along
+    execution time was observed for each imputation.
+
+
+    ![](img/5ace2adb0c4a26902fb70dfb7cc8f6e8_3_0.png)
+
+
+    Fig: 3: Imputation data statistics'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Percentage of Missing Values in Each Attribute (%)
+
+
+    # Accuracy, Precision, Recall, F1 Score and ROC AUC (Without Data Preprocessing)
+
+
+    ![](img/5ace2adb0c4a26902fb70dfb7cc8f6e8_4_0.png)
+
+
+    ![](img/5ace2adb0c4a26902fb70dfb7cc8f6e8_4_1.png)
+
+
+    Fig.4: Post Imputation data statistics
+
+
+    Fig.6: Performance Measures Without Data Preprocessing
+
+
+    | Classifier Name | Accuracy | Precision | Recall | F1 Score | ROC AUC |
+
+    |---|---|---|---|---||
+
+    | LightGB | 0.87 | 0.84 | 0.778 | 0.808 | 0.93 |
+
+    | XGBoost | 0.85 | 0.81 | 0.731 | 0.75 | 0.91 |
+
+    | AdaBoost | 0.84 | 0.79 | 0.738 | 0.74 | 0.88 |
+
+    | Random Forest | 0.81 | 0.73 | 0.756 | 0.75 | 0.90 |
+
+    | Soft Voting | 0.88 | 0.82 | 0.758 | 0.77 | 0.94 |
+
+
+    | Classifier Name | Accuracy | Precision | Recall | F1 Score | ROC AUC |
+
+    |---|---|---|---|---||
+
+    | LightGB | 0.94 | 0.92 | 0.814 | 0.82 | 0.95 |
+
+    | XGBoost | 0.91 | 0.90 | 0.807 | 0.83 | 0.92 |
+
+    | AdaBoost | 0.88 | 0.89 | 0.803 | 0.81 | 0.93 |
+
+    | Random Forest | 0.86 | 0.87 | 0.782 | 0.81 | 0.94 |
+
+    | Soft Voting | 0.95 | 0.92 | 0.823 | 0.86 | 0.96 |
+
+
+    Table II demonstrates a set of performance metrics. From the table, the average
+    accuracy scores for PIDD are observed in the range of 81% and 87%. The best accuracy
+    score was performance achieved by LightGBM, and the Random Forest obtained the
+    worst one. LightForest obtained an accuracy of 87%, precision of 77%, recall and
+    F1 score of 81% with ROC AUC 93%. The most variance was obtained by RF classifier
+    with accuracy, 89%, recall 73.1%, and F1 score of 76% with ROC AUC 90%. XGBoost
+    and AdaBoost performed in different accuracy, precision and recall scores. Soft
+    voting classifier achieved accuracy 88%, precision 82%, recall 73.8%, and F1 score
+    77%, with ROC AUC 94%.
+
+
+    Table III represents a sequence of performance metrics and accuracy scores for
+    the PIDD after preprocessing, which includes imputation and data cleaning. The
+    dataset was helped with normalization and scaling. The results average accuracy
+    scores ranged from 86% to 94% for multiple classifiers. LightGBM obtained 94%
+    accuracy, precision 92%, recall 84%, and F1 score 84.2% with ROC 95%. XGBoost
+    obtained an accuracy of 91% on 95% precision, 80.7%, and F1 score 83% with ROC
+    92%. AdaBoost generated 88% accuracy score at precision, 89%, recall and F1 score
+    of 82% with ROC AUC 92%. Random Forest obtained 86% accuracy at score precision,
+    87%, recall 81%, and F1 score 81%. Soft voting classifier achieved 95% accuracy
+    at precision, 92%, recall 82.3%, and F1 score 84% with ROC AUC 96%. Execution
+    times were 36sec, 45 sec, 48 sec and 57 sec for LightGBM, XGBoost, AdaBoost, Random
+    Forest and Soft voting classifier accordingly. We can observe a significant improvement
+    in Table III due to data preprocessing.
+
+
+    ![](img/5ace2adb0c4a26902fb70dfb7cc8f6e8_4_2.png)
+
+
+    Fig.5: Accuracy Without Data Preprocessing'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# 2021 Second International Conference on Robotics,Electrical and Signal Processing
+    Techniques (ICREST)
+
+
+    # Accuracy (With Data Preprocessing)
+
+
+    ![](img/5ace2adb0c4a26902fb70dfb7cc8f6e8_5_0.png)
+
+
+    values and therefore producing multiple sets of outcomes for the related sets
+    of inputs which increases the performance in calculating the accuracy, model fitting,
+    error percentages, mean, and variance of the outputs.
+
+
+    Fig.7: Accuracy With Data Preprocessing
+
+
+    # Accuracy, Precision, Recall, F1 Score and ROC AUC
+
+
+    (With Data Preprocessing)
+
+
+    ![](img/5ace2adb0c4a26902fb70dfb7cc8f6e8_5_1.png)
+
+
+    # VI. REFERENCES
+
+
+    Fig.8: Performance Measures With Data Preprocessing.
+
+
+    +   [1] Zhou, X et al., “Predicting diabetes mellitus with machine learning techniques.”
+    *Frontiers in genetics* (2019), 8, 515.
+
+    [2] Kawacishi, K., et al., “Machine learning and data mining methods in diabetes
+    research.” *Computer and structural biology journal* (2017), 15(1), 1.
+
+    [3] Dalagiazni, A, et al., “Machine learning techniques to predict diabetes complications.”
+    *Journal of diabetes and technology* 12.2 (2018), 295-302.
+
+    [4] Sisodeia, Aditya, and Dilip Singh Sinha. “Prediction of diabetes using classification
+    algorithms.” *Procedia computer science* 152 (2018), 1578-1585.
+
+    [5] Kanhadhy, P, and S. J. S. Balanuri: “Performance analysis of classifier methods
+    for diabetes prediction.” *International Journal of Computer Science* 47 (2015),
+    45-54.
+
+    [6] Smith, J. W, et al., “Using the AdaBoost algorithm to learn the outcome of
+    the American Survey oning on Diabetes.” *American Medical Association Journal*
+    (1999), 1983.
+
+    [7] Tajayani, A, et al., “A Support System for Diabetes Prediction Using Machine
+    Learning and Deep Learning Techniques” *2019 4th International Conference on Medical
+    Informatics and Soft Engineering (IMISE)*, IEEE, 2019.
+
+    [8] Chen, Y., and Tushar Pan. “A diabetes classification model based on boosting
+    algorithms.” *BMJ open informatics* 7(1) (2020), e010.
+
+    [9] Soltan, Zakal, and Afnan Jafar. “A new artificial neural network approach
+    for diabetes prediction.” *Soft Computing* 26:7 (2016), 89-94.
+
+    [10] Liu, C., et al. UCI Machine Learning Repository: Data Sets [Online]. Available:
+    http://archive.ics.uci.edu/ml/datasets/diabetes (Accessed 2019 Sep-06).
+
+    [11] Ke, Tian, et al., “A highly efficient gradient boosting decision tree.” *Advances
+    in neural information processing systems*, 2017.
+
+    [12] Chen, Tao, and Carlos Gordon. “Xgboost: A scalable tree boosting system.”
+    *Proceedings of the 22nd International Conference on Knowledge Discovery and Data
+    Mining*, 2016.
+
+    [13] Hastie, Geoffrey, Leo Friedman, Vijay Venkates, and Rebecca N. Wright. “A
+    practical framework for random decision trees.” *2089 IEEE International Conference
+    on Data Mining Workshops*, 362-367.
+
+    [14] Sharpe, Robert, and William William. “Empirical inference.” *Journal of Business
+    Research*, 31(1) (1998), 7-16.
+
+    [15] Amershi, Salcena, et al. “Modeldracker prediction analysis tools for machine
+    learning.” *Proceedings of the 33rd ACM International Conference on Human Factors
+    in Computing Systems*, 201.
+
+    [16] Chang, Xia, and Yunquang Ma. Ensemble machine learning methods and applications.
+    Springer Science & Business Media, 2012.
+
+
+    # ROC AUC (96%)
+
+
+    PRECISION RECALL
+
+
+    ![](img/5ace2adb0c4a26902fb70dfb7cc8f6e8_5_2.png)
+
+
+    Fig.9: ROC AUC and Precision-Recall Curve for soft classifier after data preprocessing.
+
+
+    # V. CONCLUSION
+
+
+    In this manuscript, a parallel investigation was demonstrated with machine learning
+    techniques to analyze the PIDD data with preprocessing and without preprocessing.
+    Multiple machine learning techniques were used to carry out the prediction in
+    a 10-fold cross validation procedure. The outcomes indicate that the performance
+    provided by LightGB classifier after data preprocessing with an accuracy of 94%
+    and maximum ROC AUC at 95%. Further, we investigated soft ensemble classifier,
+    which provided us overall best-fitted classifier performance at accuracy 95% and
+    ROC 95%. The objective of ensemble learning is that it practices multiple classifiers
+    for the identical sets of'
+  merge: -1
+  img_proc: true
