@@ -1,0 +1,502 @@
+- pgno: 0
+  md: '# Deep reinforcement learning based socially aware mobile robot navigation
+    framework
+
+
+    Nam Thang Do¹, Trung Dung Pham¹, Nguyen Huu So¹, Trung Dung Ngo² and Xuan Truong
+    Truong¹
+
+
+    —In this study, we propose a socially aware navigation framework, which enables
+    a mobile robot to avoid humans and social interactions in dynamic environments,
+    using reinforcement learning algorithm. The proposed framework is composed of
+    two stages. In the first stage, the spatio-temporal characteristics of the humans
+    involved and social interactions are extracted and projected onto the 2D layer.
+    In the second stage, these dynamic features are then fed into a deep neural network,
+    which is trained using the advantage actor-critic (AAC) technique, safety rules
+    and constraints. The trained deep neural network is used for the motion control
+    of the robot. To evaluate the proposed framework, we integrate it into a conventional
+    robot navigation system and verify its effectiveness. Simulation results indicate
+    that the socially aware robot can navigate to avoid humans and social interactions,
+    and generate socially acceptable behavior for the robot.
+
+
+    ![](img/34334a10cbd5159f67d06c615d2518e2_0_0.png)
+
+
+    Fig. 1. An example of a dynamic social environment, in which there are a robot
+    and six people $p_1$ to $p_6$. The $p_1$ and $p_2$ are forming a socially group,
+    while a group of two people $p_3$ and $p_4$ are moving towards the robot, and
+    $p_5$ is interacting with an object. The robot needs to navigate to avoid person
+    $p_6$, while avoiding people $p_1$-$p_5$, and social interactions.
+
+
+    # I. INTRODUCTION
+
+
+    To deploy mobile robots in dynamic environments, the robots should avoid humans
+    and social interactions in their vicinity, while efficiently navigating towards
+    a goal. To achieve that, several socially aware robot navigation systems have
+    been proposed in the recent years and [1], [2] to generally generate the acceptable
+    behaviors for mobile robot and ensure the human safety and comfort.
+
+
+    The conventional socially aware robot navigation frameworks can be classified
+    into two categories according to the techniques used to develop the motion planning:
+    (i) model-based and (ii) learning-based approaches. In the first case, the navigation
+    system utilizes algorithms such as potential field method [3], and social costmap
+    [4] to develop the motion planning. In the second category, the machine learning
+    techniques, including reinforcement learning [6], and reinforcement learning [7]
+    are used to enable the robot to navigate safely and socially in social environments.
+
+
+    Although the model-based approaches [8], [9], and [10] have evaluated that, the
+    navigation systems are able to navigate safely towards a goal, but still suffer
+    weaknesses that seriously hinder the robot capabilities to navigate in crowded
+    and dynamic environments. For example, in these papers, the authors have to craft
+    all the features of the humans
+
+
+    surrounding environments, and models then incorporate them into the robot navigation
+    system. In addition, several parameters are either specific to a specific environment.
+    However, this parameter set not be individual, and can vary significantly for
+    different environments.
+
+
+    To overcome the drawbacks, a number of machine learning-based navigation systems
+    have been proposed to navigate safely and socially in dynamic environments [11],
+    [12], and [13] [14]. The learning-based approaches can be divided into two categories
+    according to the information used as inputs of the navigation system: (i) sensor-level-based
+    and (ii) agent-based techniques. In the former, the agent information is used
+    to develop the navigation system of the robot.
+
+
+    The sensor-level robot navigation system [11] selects actions directly from raw
+    sensors (e.g. 2D lidar, RGB image) with end-to-end training. The raw sensor approach
+    has the advantage that, the navigation system can deal with both static and dynamic
+    obstacles (including walls). In addition, data from sensors can be fed into the
+    neural network with a single framework. In real-real environments, especially
+    in human environments, it is important to extract an agent-level representation
+    of the world from multiple sensors [15], [16]. The input of the model is the states
+    including position and motion of nearby humans and moving obstacles. It is difficult
+    to incorporate the surrounding environment
+
+
+    > *Nam Thang Do¹, Trung Dung Pham¹, Nguyen Huu So¹ and Xuan Truong Truong¹ are
+    with Faculty of Engineering, Le Quy Don Technology University, Hanoi, Vietnam,truong@gmail.com.
+    Trung Dung Ngo is with More-Than-One-Robotics Laboratory, University of Prince
+    Edward Island, Canada dung@ieee.org*'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# 2020 7th NAFSOFT Conference on Information and
+
+    Computer Science (NICS)
+
+
+    information into the model. In addition, surrounding humans can vary dramatically
+    in different scenes, we need a model that can handle an arbitrary number of inputs
+    into a fixed size output. This uses long term memory network to process the state
+    of each neighbor in reverse order of the robot. However, that the closest neighbors
+    have the strongest influence is not always true. Other factors, such as motion
+    and direction, are also considered when estimating the importance of a neighbor,
+    which reflects this neighbor''s goal acquisition.
+
+
+    ![](img/34334a10cbd5159f67d06c615d2518e2_1_0.png)
+
+
+    Fig. 2. The model with four zones (a): The human interaction with the radius rH
+    (b): The human-object interaction with the radius rc (c).
+
+
+    (a) (b) (c)
+
+
+    Although, learning navigation systems have been demonstrated, that they can navigate
+    safely and socially in dynamic environments. Each approach has its advantages
+    and disadvantages. In this paper, we exploit the advantages to perform a deep
+    reinforcement-based socially aware navigation system, which can handle both agent-level
+    and sensor-level. In addition, the proposed system takes into account the social
+    interactions (human and human-object interactions). In order to accomplish that,
+    we project the human and social interactions onto the 2D plane, and use this as
+    input of neural network. In addition, the parallel training process help the robot
+    learn to deal with variety of social situations in the social environment, we
+    utilize the advantageous actor-critic (A3C) technique proposed by Minh [15] for
+    teaching the robot. Our method of the A3C algorithm is to train a single agent
+    in the environment using multiple agents in a set of environments in parallel,
+    and sharing knowledge with what others have learned. This allows the algorithm
+    to not only train faster as agents are in in parallel but also to increase the
+    diversity of training data as workers experience increases. As a result, the proposed
+    framework is capable of generating the socially capable behavior and providing
+    human safety and comfort in the robot''s vicinity.
+
+
+    ![](img/34334a10cbd5159f67d06c615d2518e2_1_1.png)
+
+
+    Fig. 3. Socially aware navigation framework based on advantageous actor-critic
+    (A3C) learning technique.
+
+
+    The rest of this paper is organized as follows. Section II presents the proposed
+    socially aware robot navigation framework using the advantageous actor critic
+    technique. Section III describes the simulation results. We conclude our paper
+    in section IV.
+
+
+    # II. PROPOSED FRAMEWORK
+
+
+    # A. Problem Description
+
+
+    We consider a social of a robot navigating towards a given goal ($x_g^t$) through
+    a social environment in the presence of N humans and objects, as shown in Fig.
+    1. Although, states of the robot in the local area at time t are represented as
+    $s^t = \{x^t, y^t, v^t\}$, where $s^t$ is the robot''s position and velocity.
+    We assume that, if there are N people in the robot''s vicinity at time $t$, $P
+    = \{p_1^t, p_2^t, ..., p_N^t\}$, where $p_i^t$ is the $i^{th}$ person. The states
+    of $p$ are represented as $s_i^t = \{x_i^t, y_i^t, v_i^t\}$, where $s_i^t$ is
+    the position, velocity,
+
+
+    the head orientation. Our de objects $O = \{o_1^t, o_2^t, ..., o_M^t\}$, where
+    $o_j^t$ is the $j^{th}$ object. The states of object $o$ are represented as $s_o^t
+    = \{x_o^t, y_o^t, v_o^t\}$, where $s_o^t$ is the object''s position, orientation,
+    is the
+
+
+    To generate the socially aware behavior, the robot should take the social space
+    around the human person proposed by Hall [16], the human interaction space (F-boundary)
+    proposed by Kenyon [17], and the human-object interaction space proposed by Trung
+    et al. [9] as shown in Fig. 2(a), 2(b) and 2(c).
+
+
+    # B. Proposed Social Aware Navigation Framework
+
+
+    As shown in Fig. 1, this robot should navigate towards the goal while guaranteeing
+    the safety and comfort of the humans in the robot vicinity. In order to achieve,
+    the navigation system of the robot should take into account the obstacles, humans.
+    social interactions. In addition, inspired by the use of the A3C algorithm [15],
+    instead of using a single agent to learn social situations we use multiple agents
+    in parallel to solve all situations. Then we proposed a socially aware navigation
+    framework for robot using the A3C algorithm and the conventional navigation system
+    [18], as shown in Fig. 3. The proposed framework first detects the surrounding
+    environment equipped with a rangefinder and a social sensor, and a Microsoft Kinect
+    detects the humans and interacting objects using the data from
+
+
+    Authorized license used to limit: Limit of San Barbara California. 227 June 16,
+    2021 at 14:29:04 UTC IEEE Explorer. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "# 2020 7th NAFOSTED Conference on Information and Computer Science (NICS)\n\
+    \n![](img/34334a10cbd5159f67d06c615d2518e2_2_0.png)\n\nFig. 4. The state of the\
+    \ mobile robot; (a) the scenario involving humans, a goal, and social interactions;\
+    \ (b) the state of the obstacle avoidance; (c) the social state of the robot;\
+    \ (d) the goal state of the robot.\n\nthe laser and Kinect sensor. Then it recognises\
+    \ social interactions in the robot's vision. The human and social interaction\
+    \ information are projected onto 2D layer plane. Finally, the laser data, the\
+    \ projected human and social interaction, and the robot's state are used of ABC-based\
+    \ motion control, which generates the motion command for the robot. This motion\
+    \ control command is used to control other people, social interaction and obstacles\
+    \ in the robot's vision.\n\n# E. Network Architecture\n\n| 722 | [32,7,2] | [32,5,2]\
+    \ | [32,3,2] | 32 | 512 | 512 | 14 |\n|---|---|---|---|---|---|---||}{\n| $s^o$\
+    \ | | | | | | | |\n| $s^s$ | Conv1D | Conv1D | Conv1D | LSTM | FC | FC | |\n|\
+    \ $s^g$ | | | | | | | |\n\nFig. 5. The architecture of the policy and values network.\
+    \ The deep convolutional neural network (Conv1D layer) [32,7] indicates that,\
+    \ in this case the convolutional layer of kernel size is 7. The output of the\
+    \ final layer (D) is concatenated with the state, is then fed into long-term memory\
+    \ network (LSTM). The LSTM has 32 hidden states. There are two fully connected\
+    \ (FC) output layers for the policy and value network. The output of the policy\
+    \ network ($\\pi$) is the action space of the robot. The output of the value network\
+    \ ($v$) is one with linear function.\n\n# C. State Space\n\nIn this study we use\
+    \ the 2D layer as state space of the robot. However, in order to incorporate the\
+    \ dynamic of the humans (state, social interactions) into the proposed social\
+    \ avoidance framework, we project these information onto the 2D layer, as shown\
+    \ in Fig. 4. To accomplish this, we see that in Fig. 4(a), in each direction the\
+    \ robot has 240 eyes looking out in 240 directions, the robot observes 3 variables\
+    \ in its vision: (1) the distance to the humans, (2) the distance to the surrounding\
+    \ obstacles, and (3) the distance to the goal. In Fig. 4(b) we also include the\
+    \ information of obstacle avoidance and named as $s^o$. As shown in Fig. 4(c).\
+    \ The type of sensed objects includes (2) humans and social interactions, and\
+    \ named as $s^s$ and (3) goals, named as $s^g$, as shown in Fig. 4(d). In addition,\
+    \ the robot's state is $s=\\{s^o, s^s, s^g\\}$. Therefore, the total state of\
+    \ the robot is a result of $(240 \times 3)$-dimensional state space $N_s=720$.\
+    \ This state is then used as an input of a deep neural network.\n\n# D. Action\
+    \ Space\n\nThe action space is a set of possible velocities. In this study we\
+    \ use a differential robot platform, then the action space includes the linear\
+    \ and angular velocities, $a=\\{v,\\omega\\}$. Thus a, we consider the robot kinematics\
+    \ and the real world applications, where we use the result of the linear velocity\
+    \ $v \\in [0,1,2]$ and the angular velocity $\\omega \\in [-\\pi,\\pi]$. We call\
+    \ it A the action space of the robot. Then, at each step the robot will select\
+    \ an optimal action in the action space $N_a$. In this paper we choose the size\
+    \ of the action space $N_a=14$. That, the backward moving of the robot ($v < 0$)\
+    \ is not allowed using the laser runderfinder\n\n# F. Reward Function\n\nIn this\
+    \ study, a neural network-based function approach is implemented to map from the\
+    \ state space of the robot. However, the neural networks have many advantages,\
+    \ such as the generalization, limited memory requirement for storing the knowledge,\
+    \ and continuous state mapping systems. To handle the deep spatio-temporal state\
+    \ space of the robot, we use the network architecture as shown in Fig. 5.\n\n\
+    Using this network we extract the features of the state space using three layers\
+    \ of convolutional neural network. We then feed these into the LSTM with 32 hidden\
+    \ states to learn the temporal dependence of the state space. Following the LSTM\
+    \ two fully connected layers, which learn linear combinations of the features.\
+    \ The output of the value network ($V$) is used for learning process. The output\
+    \ of the policy network ($\\pi$) is utilized to select the optimal action of the\
+    \ robot during the training and testing stages.\n\nIn order to guide the robot\
+    \ to help avoid obstacles, humans and social interactions in the surrounding environment,\
+    \ and minimize the mean arrival time to the given target, we use a reward function\
+    \ as follows:\n\n$r_t' = r_t^o + r_t^s + r_t^g$"
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "# 2020 7th NaFOSTED Conference on Information and\nComputer Science (ICS)\n\
+    \nwhere, $r_i^t$ is the reward received at time-step $t$. It is a sum of components\
+    \ including $r_i^t$-obstacle reward, $r_i^t$-human avoidance, $r_i^t$-interaction\
+    \ reward and $r_i^t$-goal reward. Specifically, it is penalized by $r_i^t$ when\
+    \ it collides with obstacles or others\n\n```\n$r_i^t = \\begin{cases} \\sqrt{x^2+y^2}\
+    \ < r^o & \\text{if collision} \\ 0 & \\text{otherwise} \\end{cases} \\eqno (2)$\n\
+    ```\n\nWhen the robot collides with a human or others, it is penalized by $r_i^h$\
+    \ depending on the distance $d^h$ from the robot to the surrounding humans:\n\n\
+    ```\n$r_i^h = \\begin{cases} d_i^h \\leq r^h & \\text{if collision} \\ d_i^h <\
+    \ r^h & \\text{if collision} \\ 0 & \\text{otherwise} \\end{cases} \\eqno (3)$\n\
+    ```\n\nwhere, $r_i^h$ is much when the robot collides with the humans; it is penalized\
+    \ by $r_i^h$ when it enters the personal space of the human; $r$ is the radius\
+    \ of the personal space according to Hall [16], in Fig. 2(a).\n\nWhen the robot\
+    \ crosses social interactions including human and human-object interactions, it\
+    \ is penalized by $r_i^s$ on the distance $d^s$ from the social interactions:\n\
+    \n```\n$r_i^s = \\begin{cases} d_i^s \\leq r_s^m & \\text{if collision} \\ d_i^s\
+    \ < r_s^m & \\text{if collision} \\end{cases} \\eqno (4)$\n```\n\nwhere, $r_i^s$\
+    \ and $r_s^m$ are the rewards of the human group and human-object interactions\
+    \ spaces, respectively.\n\nIn order to encourage the robot to quickly approach\
+    \ a goal, and track the target when it is moving, the reward is awarded by $r_i^g$\
+    \ for reaching and tracking the goal $(x_g^t, y_g^t)$:\n\n```\n$r_i^g = \\begin{cases}\
+    \ r_i^{goal} + r_i^{track} \\ r_i^{arrival} = \\sqrt{(x^2+y^2)} \\ r_i^{goal}\
+    \ \\end{cases} \\eqno (7)$\n```\n\nwhere, $r_i^g$ is awarded when the robot approaching\
+    \ the goal, and computed using Eq. 6; when the robot approaching a goal in time\
+    \ $t_i$ it is awarded by $r_i^{goal}$ which is calculated in Eq. 7.\n\n# G. A3-based\
+    \ Social Aware Navigation Framework\n\nIn this study, the A3-algorithm is used\
+    \ to train the robot how to navigate dynamically in social environments. To achieve\
+    \ this, we use multiple robots with each robot having its own network parameters\
+    \ and a copy of the environment. The robots will interact with respective environments\
+    \ asynchronously, and learning each interaction. As each robot gains more knowledge,\
+    \ it contributes to the total knowledge of the global network. The presence of\
+    \ a global network allows each robot to have more diverse training task,\n\n+\
+    \   Algorithm 1: A3C-based socially aware robot navigation algorithm\ninput :\
+    \ State $N_s$, action section of the state $N_a$, number of robot $N_r$, global\
+    \ shared policy network episode $T_{max}$, learning rate $\\alpha$.\n1 Initialize\
+    \ global shared policy network using $N_s, N_a$\n2 Initialize global shared value\
+    \ network using $N_s$\n3 Initialize $N$ of actor-critics with local policy and\
+    \ network values\n4 Assign each actor-critic to a target\n5 Start starts\n6 repeat\n\
+    7 Asynchronous update the global shared networks using local gradients from each\
+    \ actor-critic\n8 until all are terminated\n\nThe A3-based socially aware navigation\
+    \ framework of the robot is presented in Algorithm 1. Inputs of the algorithm\
+    \ are the size of state space $N_s$, and action size $N_a$, the global shared\
+    \ policy episode $T_{max}$ and learning rate $\\alpha$. The trained global shared\
+    \ policy network, which is used to choose the optimal action of the robot. We\
+    \ initialize the global shared policy and value network using the network architecture\
+    \ presented in Section II-E (Lines 2 and 3 of the Algorithms 1). We initialize\
+    \ $N$ of actor-critics (Line 4 of the Algorithm 1) to navigate to robots. Each\
+    \ agent is assigned policy and value networks, which are similar to the local\
+    \ networks. We then assign each actor-critic to a target, and start the starts\
+    \ (Lines 5 and 6 of the Algorithms 1). The shared networks are updated using local\
+    \ gradients from each actor-critic.\n\nAlgorithm 2 shows the learning process\
+    \ of each robot (episode). The inputs of the algorithm are the state space $N_s$,\
+    \ action space $a$, global shared episode $T_{max}$, frequency update $t_{update}$\
+    \ and discount factor $\\gamma$. The outputs are calculated gradients of the policy\
+    \ network $\theta$ and the value network $\theta'$, which are used to update the\
+    \ asynchronous global shared networks. At the first of each episode, the local\
+    \ networks will be initialized from the global network (Line 4 and 5 of the Algorithm\
+    \ 2), and the robot will get the state (Line 6 of the Algorithm 2). In each loop,\
+    \ the robot will interact with humans, obstacles and then performs the action\
+    \ to receive new reward and rewards (Lines 7 and 8 of Algorithm 2). At each $t_{update}$\
+    \ or episode the algorithm calculates the accumulate policy and value gradients,\
+    \ which are then used to update the weights for the global networks (Lines 11-16\
+    \ of the Algorithm 2).\n\n![](img/34334a10cbd5159f67d06c615d2518e2_3_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: "# Algorithm 2: Actor-critic thread in A3C algorithm\n\ninput : State space\
+    \ $s_t$, action space $A$, maximum\nglobal shared episode $t_{max}$, maximum step\
+    \ of\nepoch $t_{max}$ frequency $t_{update}$,ndiscount factor $\\gamma$.\n\n|\
+    \ Parameter | Value | Parameter | Value | Parameter | Value |\n|---|---|---|---|---||}{\n\
+    | $\\alpha$ | 0.001 | $\\gamma$ | 0.99 | $\\epsilon$ | 20 |\n| $t_{max}$ | 500\
+    \ | $t_{update}$ | 14 | $\rho$ | 0.9 [m] |\n| $t_{collision}$ | 0.02 | $t_{collision}$\
+    \ | -0.2 | | 10 |\n\noutput: Calculate gradients $\theta$ and $\theta'$\n\n```\n\
+    begin\n  Initialize memory M to capture t_{update}\n  for i=1 to tmax\n    Update\
+    \ local networks using global shared\n    networks $\\theta$ and $\\theta'$\\\
+    n    Get current state $s_t$\n    while ((t < t_{max}) and (not terminal))\n \
+    \     Select action according to policy $\\pi(s_t|\\theta')$\n      Perform action,\
+    \ receive state $s_{t+1}$, reward $r_t$\n      Store $(s_t, a, r_t, s_{t+1})$\
+    \ in memory M\n      if (t mod t_{update} == 0) or (terminal)\n        // update\
+    \ gradients $\\theta$, $\\theta'$\\n        for i=1 to length(M)\n          $R\
+    \ = R + r_t$\n          $A = R - V(s_t)$\n          $\\theta \\leftarrow \\theta\
+    \ + d\\nabla\\pi(s_t|\\theta')A$\n          $\\theta' \\leftarrow \\theta' + d\\\
+    nabla(R - V(s_t))^2 / 2'$\n      end\n  Asynchronous update: $\\theta$, using\
+    \ $d\\theta$,\n  Clear the memory M\n  if\n    $s_{t+1} \\leftarrow t; t \\leftarrow\
+    \ t+1\n  end\nend\n```\n\n(i) static stage, (ii)-dynamic stage and (iii) dynamic\
+    \ stage.\nIn the static stage, all of the humans and goals in the scenario\nare\
+    \ static. In the dynamic stage, the movement of humans and goals\nare navigated\
+    \ around the scenario.\n\n![](img/34334a10cbd5159f67d06c615d2518e2_4_0.png)\n\n\
+    The output of the A3C-based motion control system is the\noptimal command of the\
+    \ robot $a_t = v_t$. It is used\nto drive the diff drive robot to safely navigate\n\
+    dynamically in dynamic environments, providing the\nsafety and comfort for the\
+    \ robot and acceptable behavior.\n\n# III. RESULTS\n\nTo validate the proposed\
+    \ socially navigation framework,\nadopt the social individual index (SII) proposed\
+    \ by\nTruang et al. [2022]. The SII is used to estimate the human\nsafety and\
+    \ comfort, and acceptable behaviours of the\nmobile robot.\n\nThe robot is required\
+    \ to navigate around the\nscenario avoiding the humans and interactions in\nits\
+    \ vicinity. The simulation results are shown in Fig. 7. As\nblue line. The SII\
+    \ value is smaller than 0.14 (the\nrobot often maintains a distance to the).\n\
+    \nIn summary, the simulation results indicate that the\nproposed social motion\
+    \ model is capable of avoiding\nhumans and groups in socially acceptable manners\
+    \ while\nsuring the human safety and comfort in dndynamic environments.\n\n# IV.\
+    \ CONCLUSIONS\n\nWe have presented a socially aware navigation framework,\nwhich\
+    \ enables a robot to move around humans and social\ndynamic environments, using\
+    \ deep reinforcement\nlearning. The proposed framework is composed of\ntwo stages.\
+    \ In the first stage, the spatio-temporal characteristics of the humans including\
+    \ human\nstates and interactions are extracted and projected onto\nthe 2D layer.\
+    \ In the second stage, dynamic\nfeatures are then fed into a deep neural network,\
+    \ which\ntrained using the asynchronous actor-critic (A3C)\nsafety rules and social\
+    \ constraints. The trained\ndeep neural network is then used to generate the motion\n\
+    control commands. We evaluate the proposed\nmotion model in a conventional robot\
+    \ system, and\nverify it in a simulation environment. The experimental\nresults\
+    \ show that, the proposed socially aware\n\n# H. Training\n\n+   1) Training Environment:\
+    \ In order to guide the robot\nto avoid humans, social interactions, obstacles,\
+    \ and approach\ngo, we created a hallway-like scenario with walls,\nintersecting\
+    \ humans, social interactions, and goals\nbase on the robot simulator [1], which\
+    \ is depicted in Fig. 6\nmoving humans, goals and obstacles are controlled using\n\
+    social force model proposed by Hefling et al. [4] and the\nave software platform.\n\
+    \n+   2) Training Setup: The setup is based on\nthe Robot Operating System (ROS).\
+    \ The proposed\nframework is implemented using Python and TensorFlow\nlibrary.\
+    \ We used the Adam optimization [12] for\ntraining. We proposed the socially aware\n\
+    navigation framework on Intel i7-4.2 GHz CPU\ndesktop The running time is 16 hours\
+    \ with about 1000\nepisodes. The performance of the training and testing\nprocess\
+    \ is empirically in Table 1.\n\n+   3) Training Process: In order to help the\
+    \ robot\nto learn, we divide the training process into three stages\n\n> ^https://pedsim.simulator.org\n\
+    ^https://www.tensorflow.org"
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# 2020 7th NAFOsted Conference on Information andnComputer Science (NICS)
+
+
+    Fig. 6. A hallway with walls,, objects, humans, and goals. Eight robots (magenta),
+    8 social situations, 10 people (cyan bots), 6 people moving (dark blue bots),
+    two moving object (brown triangle and square), and 8 goals (green) are distributed
+    in the scenario. The robot is assigned a task to navigate the crowd while avoiding
+    humans and social situations: (1) a group of two standing people; (2) a group
+    of three standing people; (3) a group of four standing people; (4) a human-object
+    interaction; (5) a group of two people moving across the scenario; (6) a group
+    of two people moving forward; (7) a human-object moving forward; (8) a human-human
+    moving across the scenario.
+
+
+    ![](img/34334a10cbd5159f67d06c615d2518e2_5_0.png)
+
+
+    framework enables the mobile robot to avoid humans and social interactions, providing
+    socially acceptable behavior for the robot.
+
+
+    In the future, we will evaluate the performance of method in several social situations,
+    especially in real world environments. In addition, we will extend our approach
+    to three dimensional space using the RGB-D image as the input of the deep neural
+    network.
+
+
+    # ACKNOWLEDGMENT
+
+
+    This research is funded by Vietnam National Foundation for Science and Technology
+    Development (NAFOSTED) under grant number 102-2018-ST-01.
+
+
+    # REFERENCES
+
+
+    +   [1] T. Kruse, A. Pankaj, P. Randy, and A. Kamath, “Human-robot navigation
+    in crowded environments”, Robotics and Autonomous Systems, vol. 61, no. 7, pp.
+    94–104, 2015.
+
+    [2] J. Rosito, A. Spianno, and C. Quaglia, “Theory to social-aware navigation:
+    A survey”, International Journal of Social Robotics, vol. 7, pp. 123–156, September
+    2017.
+
+    [3] D. Casas and J. Liu, “Social-aware navigators and mobile robots”, in Proceedings
+    of the IEEE Conference on Robotics and Automation, vol. 2, pp. 500–505, March
+    2005.
+
+    [4] D. Baker, “Path planning in dynamic environments using velocity obstacles”,
+    Physical Review, vol. 52, pp. 4282–4292, 1985.
+
+    [5] P. Finster and J. Shiller, W. G. Bart, “Reinforcement Learning: An Introduction”,
+    Cambridge, MA: MIT Press, 1st ed., 1998.
+
+    [6] R. S. Sutton and A. Barto, Reinforcement Learning: An Introduction.
+
+    [7] K. Henrik, S. Markus, S. Christoph, and B. Wolfram, “Collaborative mobile
+    robot navigation via reinforcement learning”, the International Journal of Robotics
+    Research, vol. 35, no. 11, pp. 1289–1307, 2016.
+
+    [8] M. Shomi, F. Paolo, Z. Hayashi, and T. Kanda, “Towards a socially acceptable
+    collision avoidance for a mobile robot navigating pedestrians using a pedestrian
+    model”, International Journal of Social Robotics, vol. 6, pp. 445–455, 2017.
+
+    [9] X. T. Truong and D. T. Deng, “Dynamic space based mobile robot navigation
+    for human comfort in social environments”, International Conference on Intelligent
+    Robots and Systems, 2016.
+
+    [10] F. Chen and K. Tayls, “Virtual-to-real reinforcement learning for social
+    navigation”, Autonomous Robotics, vol. 42, pp. 1749–1770, December 2018.
+
+    [11] T. Liu, C. Palo, and M. Liu, “Multi robot collision avoidance through reinforcement
+    learning”, IEEE/IEEE International Conference on Intelligent Robots and Systems,
+    pp. 3762–3767, 2017.
+
+    [12] T. Fan, P. Long, and J. Pan, “Fully distributed multi-robot collision avoidance
+    via deep reinforcement learning for safe and efficient”, in 2019 IEEE International
+    Conference on Robotics and Automation, pp. 6041–6046.
+
+    [13] M. Everett, Y. P. Chen, and J. P. Ho, “Motion planning for decision-making
+    agents with reinforcement learning”, IEEE/IEEE International Conference on Intelligent
+    Robots and Systems, pp. 2503–2510, 2018.
+
+    [14] C. Chen, Y. Liu, S. Kerkis, and A. Alahi, “Crowd-robot interaction: Crowd-aware
+    navigation with attention-based deep reinforcement”, in 2019 IEEE International
+    Conference on Computer Vision and Pattern Recognition, pp. 1511–1520.
+
+    [15] V. Minh, A. P. Mirza, A. G. Harley, T. P. L. Lipchik, D. Silver, and K. Kavcioglu,
+    “Methods for navigating human-crowded environments”, in Proceedings of the 2016
+    AAA International Conference on Machine Learning, vol. 48, pp. 1616–1624, 2017.
+
+    [16] A. Kennedy, “Human behavior: Use of space in public and private space”, Cambridge
+    University Press, 1969.
+
+    [17] R. I. Siegwart, I. R. Darbaugh, and D. Scarciello, “Social navigation for
+    robots”, The MIT Press, 2013.
+
+    [18] B. P. Berger, K. Tully, and A. House, “The projectlayer: Tools for multi-robot
+    and distributed sensor systems”, in Proceedings of the International Conference
+    on Advanced Robotics, pp. 321–323, 2003.
+
+    [19] Q. Moutley, B. Berger, K. Konsey, J. Footee, T. Lee, E. Burger, and R. Watkins,
+    “Multi-robot navigation in open-world environments”, in IEEE Workshop on Service
+    Robotics, 2017.
+
+    [20] D. P. Kingma and J. B. Adam, “Adam: A method for stochastic optimization”,
+    in Proceedings of the 13th International Conference on Learning Representations,
+    pp. 1–15, 2011.
+
+    [21] X. Truong and T. Ngo, “To Approach Humans: a unified framework for intention
+    prediction and socially aware robot navigation”, IEEE Transactions on Cognitive
+    and Developmental Systems, vol. 10, no. 3, pp. 557–572, 2017.
+
+
+    Authorized license used to use: University of California Santa Barbara.n'
+  merge: -1
+  img_proc: true
