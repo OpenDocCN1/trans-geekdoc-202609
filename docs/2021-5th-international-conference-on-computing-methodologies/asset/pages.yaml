@@ -1,0 +1,782 @@
+- pgno: 0
+  md: '# Machine learning for Inverse Kinematics in Trajectory Planning of Pioneer
+    2 Manipulator with Cubic Spline Interpolation
+
+
+    M Arunadevi
+
+    Professor, Mechanical Engineering
+
+    DSCE,Bangalore,
+
+    arunadevi@gmail.com
+
+
+    Praveen J Jadhav
+
+    Research Scholar, Mechanical Engineering,
+
+    DSCE,Bangalore,
+
+    praveenjadhav@gmail.com
+
+
+    Ruchik,M.A
+
+    Student, Mechanical Engineering
+
+    DSCE,Bangalore,
+
+    ruchik_m@yahoo.com
+
+
+    Kishore Ghandhi,P
+
+    Student, Mechanical Engineering
+
+    DSCE,Bangalore,
+
+    p.kishoreghandhi@gmail.com
+
+
+    Siddhu, K.V
+
+    Student, Mechanical Engineering
+
+    DSCE,Bangalore,
+
+    siddhuster100@gmail.com
+
+
+    Vishnu Prasad,S
+
+    Student, Mechanical Engineering
+
+    DSCE,Bangalore,
+
+    vishnuprasad@vinfmail.com
+
+
+    **Abstract—** The primary objective of robot manipulator is to achieve the desired
+    orientation and end point of the pre-established task. Inverse kinematics analysis
+    is used in the Pioneer 2 manipulator to obtain a successful solution to design
+    the arm. This paper presents a 5-DOF manipulator which is compact, light and with
+    low cost. When the DOF of the robot increases, the inverse kinematics becomes
+    more complex and difficult to solve for the same position. This results in making
+    the standard solution for such problems tricky. To overcome the complexity of
+    inverse kinematics analysis of the Pioneer 2 robot, we used the computation of
+    inverse kinematics with the use of machine learning techniques that consist of
+    linear, regression, R, and KNN. By comparing three algorithms R-square values
+    and RMSE, it is observed that KNN is better than others to solve inverse kinematics
+    with fast results and high accuracy. The smooth trajectory is achieved using cubic
+    spline interpolation.
+
+
+    **Keywords—Kinematics, KNN, ANN, Regression, Pioneer Manipulator, Machine Learning,
+    Cubic Spline interpolation.**
+
+
+    # I. INTRODUCTION
+
+
+    Industrial robots or automated machines are used in industries for process which
+    require high precision, flexibility and repeatability that manual labor cannot
+    provide. Control of the robot is the main area in robotics. For forward kinematics
+    also the result of the motion depends on particular values of the joint parameters
+    using equations used for cubic interpolation. Inverse kinematics makes a use of
+    orientation and joint variable in Cartesian space to find the joint values in
+    joint space.
+
+
+    In this paper [1], the author explored about the manipulator which is used in
+    six axis servo where the manpower cannot be worked as. Many researchers have proposed
+    to eliminate the errors in different DOFs. The author used technique to solve
+    these errors are ANFIS, PSO, or DE. By optimizing the working function of
+
+
+    robot then be accurate decision making by the robot. In [2], Due to its high accuracy
+    and good prediction of robots. These robots are used in major sector like, military
+    and industrial application. This paper talks about the improvement of kinematics
+    in robots and robots dynamics. The proposed research and differentiate between
+    joint space and the Cartesian space in robot motion. In [3] mentioned about using
+    the optimization algorithm to represent population element. Hence this proposes
+    an improvement plan for the problems in BGA. In [4] the author proposed the planning
+    approach which is based on trajectory using machine learning and showed results
+    about robot architecture, robotics motion generation, birth algorithm and optimization
+    process. In this paper [5], they presented the results and discussions about the
+    feedback loop. In [6], the precision of optimal joint angles of the robot with
+    the help of neural network used. The experiments implemented using KUKA are detailed
+    about industrial implementation, robot manipulator, and predictor for the neural
+    network. In [7], the main aim is to reduce the mean square error of the network-based
+    solution using GA. Both of the forward and inverse kinematics for 6 PUMA robot
+    are solved. In [8] the author proposed an optimization of algorithms and scenarios
+    in the robotics is described. The method is compared with results. The working
+    function of 5-DOF pioneer is explained in [9] which includes kinematics with the
+    help of forward kinematics. In [10] the authors prove that correct inverse kinematics
+    can be solved using the detection and guiding of movements for inverse kinematics.
+    An analytical solution for the inverse kinematics of a robot arm is derived with
+    five degrees of freedom. In [11], the difficulties in solving the inverse kinematics
+    equations of 2, 5-DOF redundant manipulator arise due to uncertainty, varying
+    time and non-linear equations with transcendental equations are explained. In
+    [12], the'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'modeling and kinematics of Pioneer 2 robotic arms are discussed and explained
+    the ineffective solutions of robotic manipulators with high degrees of freedom.
+    In [13], author discussed inverse kinematics which can be solved by methods as
+    iterative, DI rotation and translation rotation. In [14], machine learning techniques
+    such as Linear regression, Artificial Neural network and K-Nearest Neighbor algorithm
+    are used for the prediction of properties in the type of supervised regression.
+    In [15], kinematic analysis of robot designed for serving various applications
+    are explained. A Pioneer 2 robot with a 5-DOF robot has a list of advantages including
+    adjustable axis, suitable operation, compact volume so, in the process of making
+    like KNN, ANN and linear regression are proposed for the kinematic analysis of
+    the same robot manipulator in this paper. In [17,18], the different applications
+    of robotic manipulator like developing a robotic arm for playing and sensing control
+    in manufacturing process of automobile industry is discussed.
+
+
+    +   > Joints rotation
+
+    > Base rotation
+
+    > Shoulder rotation
+
+    > Elbow rotation
+
+    > Wrist rotation
+
+    > Gripper mount
+
+    > Gripper fingers
+
+
+    Servo motors are used to drive all the joints except gripper.
+
+
+    # B. Objective
+
+
+    To overcome the computational complexity of analysis of Pioneer 2 robot, the objective
+    of this study is to perform intelligent computation of inverse kinematics with
+    the help of machine learning algorithms such as linear regression, K-Nearest Neighbor
+    algorithm and Artificial Neural Network.
+
+
+    # III. METHODOLOGY
+
+
+    This paper considers a 5-dof Pioneer 2 manipulator which is compact, low cost
+    and lightweight. If the degrees of freedom is 3 (high) also or redundant, then
+    inverse kinematics solutions will become more complex and given number of joint
+    configurations for the same position.
+
+
+    In this study, data is generated using forward kinematics of a Pioneer 2 robot.
+    Modelling of different machine learning algorithms is done using the generated
+    data. The joint variables can be predicted using the machine learning models.
+    Finally accuracy of algorithm is compared and best algorithm will be selected
+    for the future predictions. The same is explained using the flowchart given Figure
+    2.
+
+
+    # A. Working Environment
+
+
+    The structure of 5-dof Pioneer 2 manipulator with revolute joint is shown in Figure
+    1.
+
+
+    ![](img/dfc54b09c671d9c08645b4ac51e29d73_1_0.png)
+
+
+    ![](img/dfc54b09c671d9c08645b4ac51e29d73_1_1.png)
+
+
+    ![](img/dfc54b09c671d9c08645b4ac51e29d73_1_2.png)
+
+
+    ![](img/dfc54b09c671d9c08645b4ac51e29d73_1_3.png)
+
+
+    ![](img/dfc54b09c671d9c08645b4ac51e29d73_1_4.png)
+
+
+    ![](img/dfc54b09c671d9c08645b4ac51e29d73_1_5.png)
+
+
+    ![](img/dfc54b09c671d9c08645b4ac51e29d73_1_6.png)
+
+
+    Fig. 1. Structure of 5-dof revolute Pioneer 2 manipulator
+
+
+    Fig. 2. Flowchart for methodology
+
+
+    This robot is mainly used for grasping and manipulation of light weight objects
+    like soda cans with the weight limit of 150grams. Different joints and movements
+    are
+
+
+    # A. Mathematical Modeling Of Pioneer 2 Robot
+
+
+    Different joint value range and constants are defined to find forward and inverse
+    kinematics solutions of Pioneer 2 robot is shown in Table 2.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# DATA SET GENERATED USING FORWARD KINEMATICS
+
+
+    | No | $\theta_1(deg)$ | $\theta_2(deg)$ | $\theta_3(deg)$ | $\theta_4(deg)$ |
+    $\theta_5(deg)$ | X(m) | Y(m) | Z(m) |
+
+    |---|---|---|---|---|---|---|---||
+
+    | 1 | -180 | -180 | -180 | -180 | -180 | -190 | 9.1886E-15 | 150 |
+
+    | 2 | -179.64 | -179.64 | -179.64 | -179.64 | -179.64 | -190.0011518 | 0.4768383
+    | 150.9110546 |
+
+    | 3 | -179.28 | -179.28 | -179.28 | -179.28 | -179.28 | -190.004476 | 0.96039826
+    | 151.822059 |
+
+
+    # TABLE II.
+
+    JOINT VARIABLES OF PRIONER 2 ROBOT
+
+
+    | Joins | $\theta_i(deg)$ | $d_i(mm)$ | $a_i(mm)$ | $\alpha_i(deg)$ |
+
+    |---|---|---|---|--|
+
+    | 0 | $\theta_1=180$ | $d_1=150$ | 0 | -90 |
+
+    | 2 | $\theta_2=180$ | | $a_2=145$ | 0 |
+
+    | 3 | $\theta_3=180$ | $d_3=125$ | 0 | -90 |
+
+    | 4 | $\theta_4=180$ | $d_5=130$ | 0 | 0 |
+
+
+    The data sets for the algorithms were generated using forward kinematic equations
+    as follows
+
+
+    X = $-c_1c_2 - s_1c_2c_3 - s_1s_2s_3c_4 - s_1s_2s_3c_4c_5 + c_2c_3 + c_2c_4 +
+    c_1c_5$
+
+    Y = $-s_1c_2 + c_1c_2c_3 + c_1s_2s_3c_4 + c_1s_2s_3c_4c_5 - s_2c_3 - s_2c_4 -
+    s_1c_5$
+
+    Z = $d_1 + d_2s_2 + d_3s_2s_3 - d_4s_2s_3c_4 - d_5s_2s_3c_4c_5 - a_2 - a_3$
+
+
+    where, $a_i$: Length
+
+    $d_i$: Joint Distance
+
+    $c_i$: $\cos(\theta_i, i=1,2,3,n)$
+
+    $s_i$: $\sin(\theta_i, i=1,2,3,n)$
+
+
+    The training is generated using the above formula and the input values X, Y and
+    Z coordinates are calculated by the different values of 01,02,03,04 and 05 as
+    shown in table 2. The above data sets are used for the training and validation
+    of different algorithms like the Linear Regression, KNN and MLP neural network.
+    This modeling, testing and predictions are performed using python. There are three
+    algorithms involved in any data science algorithm which follows
+
+
+    generated using forward kinematic models, which makes the joint variables and
+    coordinates (X,Y,Z Coordinates) is presented in table.
+
+
+    2) Feature Engineering: It is the method of selecting the suitable parameters
+    for the model. In this paper, Cartesian variables X, Y and Z are selected for
+    the Joints prediction.
+
+
+    B. Modeling
+
+
+    Modeling is a process, equation or model which will be used for data analysis.
+    The algorithm modeling is performed in three steps: selecting the algorithm, training
+    the algorithm and predicting the result. We use the Linear Regression, K-Nearest
+    Neighbor and Artificial Neural Network. Python software is used for the modeling
+    and predictions.
+
+
+    1) Linear Regression
+
+
+    Linear regression is the techniques used to find the relationship between input
+    and output variable by fitting a line for the given data set. This is a type of
+    unsupervised learning and deals with continuous output.
+
+
+    2) K-Nearest-Neighbor Algorithm (KNN)
+
+
+    It is also a type of supervised learning which can be used to solve the continuous
+    as as categorical data. This data points have many characteristics of test input
+    are selected as neighbors and their corresponding outputs are used for predicting
+    the output for given test input. The following three steps are performed to obtain
+    the results which are
+
+
+    +   1. Data Processing
+
+    2. Modeling
+
+    3. Validation
+
+
+    A. Data Processing
+
+
+    Data processing is a very important step in data science because the accuracy
+    and performance of any model depends on only data quality. Data processing is
+    performed in two steps:
+
+
+    +   a. Data selection
+
+    b. Feature engineering.
+
+
+    1) Data Selection: Method of data selection based on application, in this a set
+    of 1000 data where'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# KNN
+
+
+    # ANN
+
+
+    # Linearer
+
+
+    ![](img/dfc54b09c671d9c08645b4ac51e29d73_3_0.png)
+
+
+    ![](img/dfc54b09c671d9c08645b4ac51e29d73_3_1.png)
+
+
+    ![](img/dfc54b09c671d9c08645b4ac51e29d73_3_2.png)
+
+
+    # Theta 1
+
+
+    # KNN
+
+
+    # ANN
+
+
+    # Linear
+
+
+    ![](img/dfc54b09c671d9c08645b4ac51e29d73_3_3.png)
+
+
+    ![](img/dfc54b09c671d9c08645b4ac51e29d73_3_4.png)
+
+
+    ![](img/dfc54b09c671d9c08645b4ac51e29d73_3_5.png)
+
+
+    # Theta 2
+
+
+    # KNN
+
+
+    # ANN
+
+
+    # Linear
+
+
+    ![](img/dfc54b09c671d9c08645b4ac51e29d73_3_6.png)
+
+
+    ![](img/dfc54b09c671d9c08645b4ac51e29d73_3_7.png)
+
+
+    ![](img/dfc54b09c671d9c08645b4ac51e29d73_3_8.png)
+
+
+    # Theta 3
+
+
+    # KNN
+
+
+    # ANN
+
+
+    # Linear
+
+
+    ![](img/dfc54b09c671d9c08645b4ac51e29d73_3_9.png)
+
+
+    ![](img/dfc54b09c671d9c08645b4ac51e29d73_3_10.png)
+
+
+    ![](img/dfc54b09c671d9c08645b4ac51e29d73_3_11.png)
+
+
+    # Theta 4
+
+
+    # KNN
+
+
+    # ANN
+
+
+    # Linear
+
+
+    ![](img/dfc54b09c671d9c08645b4ac51e29d73_3_12.png)
+
+
+    ![](img/dfc54b09c671d9c08645b4ac51e29d73_3_13.png)
+
+
+    ![](img/dfc54b09c671d9c08645b4ac51e29d73_3_14.png)
+
+
+    Fig. 3. Theta values predicted using KNN, ANN and Linear Regression versus actual
+    values
+
+
+    # Theta 5'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# 3) Artificial Neural Network
+
+
+    There are layers of neurons such as input layer, hidden layer and output are arranged
+    in network. Each neuron get the input and give some weightage or function gives
+    an output. The activation function is function of weightage and input. A suitable
+    activation function gives better output prediction. The accuracy of the model
+    depends on weightage values only
+
+
+    # C. Validation of model
+
+
+    Validation is the process of checking the accuracy of created data. In every data
+    science details will be built in test set which will be used for testing created
+    model and training set will be used for training the model.
+
+
+    # IV. RESULTS AND DISCUSSIONS
+
+
+    The model building, training and testing of algorithms are done using python3.
+    Linear regression, KNN and ANN algorithm tools are used for modeling and testing.
+    In this work, our data set is generated using forward kinematics. A thousand samples
+    were first generated for the input variables X, Y and Z controlled in mm and joint
+    joints. In the training, testing and validation of different machine learning
+    techniques are used using generated data.
+
+
+    After validation versus Predicted theta value for every joint variable three algorithms
+    are shown in Figure 3. From the above graph observations make that the better
+    fit is achieved using KNN by comparing with ANN & Linear property R=91.85 clearly
+    shows the property with better line only in KNN algorithm. In KNN, points are
+    uniformly spread with Zero line and very R-square values, it is proved that KNN
+    algorithm is giving better results.
+
+
+    # R VALUE FOR JOINT VARIABLES
+
+
+    | Technique | R Squared value |
+
+    | --- | --- |
+
+    | LR | 91.3% |
+
+    | KNN | 99.4% |
+
+    | ANN | 60.5% |
+
+
+    The R-squared value was obtained using the k-NN algorithm (90.4%). The R-squared
+    values obtained using ANN and Linear Regression are (91.3%) and (60.5%), respectively
+    is presented in Table.3.
+
+
+    RMSE values are calculated by varying the percentage of training size of dataset
+    (60% to 90%) and the same is plotted in Figure 4, which again proves that RMSE
+    values of the KNN algorithm for all the different percentage of training datasets.
+
+
+    ![](img/dfc54b09c671d9c08645b4ac51e29d73_4_0.png)
+
+
+    Fig. 4. Comparison ofRMSE for LR, KNN and ANN
+
+
+    | Sl.No | X(mm) | Y(mm) | Z(mm) |
+
+    | --- | --- | --- | --- |
+
+    | 1 | 200 | 150 | 400 |
+
+    | 2 | 180 | 180 | 150 |
+
+    | 3 | 240 | 210 | 500 |
+
+    | 4 | 160 | 240 | 700 |
+
+    | 5 | 280 | 270 | 650 |
+
+    | 6 | 400 | 300 | 500 |
+
+
+    # TABLE IV CONTROL POINTS
+
+
+    After validation, the three angles are predicted using the model giving six points
+    in Cartesian space. Control points defined in Cartesian space and the path is
+    obtained using cubic B -spline polynomials which is shown in figure.
+
+
+    ![](img/dfc54b09c671d9c08645b4ac51e29d73_4_1.png)
+
+
+    Fig. 5. Cubic Spline Interpolation
+
+
+    The predicted joint variables using KNN algorithm is given in table 5.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# TABLE V
+
+    JOINT ANGLES OBTAINED
+
+
+    | No | θ1 (deg) | θ2 (deg) | θ3 (deg) | θ4 (deg) |
+
+    |---|---|---|---|---||
+
+    | 1 | -70 | 130 | 105 | 27 | 10 |
+
+    | 2 | | 40 | 90 | 45 | -120 |
+
+    | 3 | | 40 | -46 | | |
+
+    | 4 | 20 | -90 | -96 | 47 | -55 |
+
+    | 5 | | 70 | -71 | -120 | -25 |
+
+    | 6 | 37 | -40 | 25 | 40 | 60 |
+
+
+    Control points define the space is given and the path is obtained using cubic
+    B-spline polynomials[19]. From the path, velocity, acceleration and jerk values
+    are obtained by varying the parameter u from 0 to 3.
+
+
+    $u = (k/4);
+
+
+    u values can be obtained by varying the k value from 0 to 12.
+
+
+    Angular Dislocation
+
+
+    $P(k) = \theta0(1-u)^4 + \theta1(7u-18u^2+12u^3) + \theta2(-11u^3+18u^2) + \theta3(u^4)$
+
+
+    Angular Velocity
+
+
+    $V(k) = \theta0(3-3u)^4 + \theta1(21u-36u^2+12u) + \theta2(-33u^3+36u^2) + \theta3(6u^3)$
+
+
+    Acceleration
+
+
+    $A(k) = \theta0(6-u) + \theta1(42u-36) + \theta2(-42u+54) + \theta3(6u)$
+
+
+    Jerk
+
+
+    $J(k) = \theta0(0) + \theta1(10.5) + \theta2(-5.5) + \theta3(1)$
+
+
+    If $(1 \le u \le 2)$
+
+
+    Angular Dislocation
+
+
+    $\theta0(3u^2-18u+18) + \theta1(-3u^3+27u^2-27u+9) + \theta2(u-1)^4$
+
+
+    Angular Velocity
+
+
+    $\theta0(-3u^2+21u-36) + \theta1(-24u+54) + \theta2(12u) + \theta3(3(u-1)^2)$
+
+
+    Acceleration
+
+
+    $\theta0(6-u) + \theta1(24u-36) + \theta2(-42u+54) + \theta3(6(u-1))$
+
+
+    Jerk
+
+
+    $\theta0(1-1.5) + \theta1(3.5) + \theta2(-3.5) + \theta3(1.4)$
+
+
+    If $(2 \le u \le 3)$
+
+
+    Angular Dislocation
+
+
+    $\theta0(u-2)^4 + \theta1(-8(u-2)^3+18(u-2)^2) + \theta2(-7(u-2)^3+45(u-2)+63)$
+
+
+    Angular Velocity
+
+
+    # TABLE VII
+
+    TIME AND JERK VALUES FOR CUBIC SPLINE TRAJECTORY
+
+
+    | Cubic Spline Trajectory |
+
+    | Time (sec) | Jerk(rad/s) |
+
+    |---|---|
+
+    | 4.09 | 27.8 |
+
+
+    # V. CONCLUSION
+
+
+    In this paper, the Linear Regression-K Neighbor and Artificial Neural Network
+    are used to obtain the inverse kinematics of Pioneer 2 robot. The forward kinematic
+    equations are utilized to train the data set for machine learning. The difference
+    of Linear Regression gives better results compared to ANN. Then KNN can be used
+    better solution of inverse kinematics with fast results and accuracy. Comprehensive
+    complexity of inverse kinematics can be solved using forward kinematics with machine
+    learning algorithms. Using KNN accuracy depends on quality of data, which requires
+    more space and sensitive to relevant feature. The same methodology can be applied
+    for different industrial robots with different learning algorithms.
+
+
+    REFERENCES,
+
+
+    [1] Kamar, A., Banga, V.K., Kumar, D. and Yagishwarth, T., Using Genetic Algorithms
+    Method. In 2019 IEEE International Conference on Signal Processing and Information-Based
+    Systems (ICSPIS), pp. 1-12.
+
+
+    [2] Mir, H., Talqi A, and Abbas H. Hera., Inverse kinematics manifolds for robot
+    using logic and PD-Al-Sudawal International Conference on Multidisciplinary in
+    Tech.
+
+
+    [3] Xu, J. and Zhao, M., 2019. Applied inverse kinematics BOGA in industrial applications.
+    Journal of Robotics, 2019, 201-210.
+
+
+    [4] Yin, J., Shi, W. and Wang, L., 2019. A machine learning based energy efficient
+    trajectory planning algorithm for industrial robots. Robotics China, 2019, 15-20.
+
+
+    [5] Fang, Y., Hu, J., Wang, S., Q, J. and Pang, Y., 2019. Nonlinear and optimal-time
+    S-spline trajectory planning for automated robots and applications. Applied Soft
+    Computing, 2019, 715-735.
+
+
+    [6] Yildirim, S. and Ulu, B., 2017. Design of Artificial Neural Network Predictor
+    for Trajectory Planning of an Experimental 6 DOF Robot Manipulator. In International
+    Workshop on Machine kinematics (pp. 155-166). Springer, Cham.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'Jha, P., Biswal, B. and Babu, S., 2015, Inverse kinematics of robot manipulator
+    using hybrid neural net, J Mater Sci Eng., 91(1),pp.1-10.
+
+
+    [8] Ayaz, M. and Crtkaya, K., 2016, Comparison of different heuristic optimization
+    algorithms for the inverse kinematics solutions of a 4-DOF robot manipulator.
+    Neural Computing and Applications, 29, pp.825-836.
+
+
+    [9] Jing Li, Fei Ye, Nan Yan Shen *, Wang Li, Liang Geng Dimensional analysis
+    of a 5-DOF robot rewhw, 20 February 2020 - Mechanics Conference, Mechanical Theory
+    and Applications, 28
+
+
+    [10] Ali Roshianfarda, Nobuya Nobeguchi, “Kinematics and Simulation of a 5-DOF
+    Articulated Arm for Applied to Hexedy Robot”, Journal of Applied Cultural Sciences,
+    24 (2016) Page 91-104,SEP 2017.
+
+
+    [11] Jinyuan Lu, De Xu, Nanda N, S. S. Malhotra, “A Comparative Study of Inverse
+    Kinematics Solution of 2-DOF, 3-DOF and 5-DOF Redundant Manipulators by ANHIS”,
+    International Conference on Robotics and Mechatronics (ICRC-2014), Volume 3, Issue
+    5 - 5-7 Technical Report No CSM-414,2014.
+
+
+    [12] Guo-Shiang Huang, Po-Hao Teng, “Development and Analysis of 5-DOF Manipulator
+    Kinematics”, International Conference on System Science and Engineering (ICSSSE),
+    National Chi Nan University, Taiwan, July 7-9,2016
+
+
+    [14] M. A. Devi, C. P. S. Prakash, R. P. Chinnamavar, V. P. Joshi, R. S. Patel
+    and R. Divikh, “An Informatic Approach to Predict the
+
+
+    Mechanical Properties of Aluminum Alloys using Machine Kinematics Techniques”,
+    2020 International Conference on Electronics and Communications (ECE), Trich,
+    India, 2020, pp. 536-541, doi:10.1109/ICECE49089.2020.9215277
+
+
+    [15] Song Kai and Wushing Zhou, “Kinematic Analysis, Simulation and Manipulating
+    of a 5-DOF Robot Manipulator for Service Robots”, Proceedings of the IEEE, 105
+    (2017) 4498-505.
+
+
+    [17] Ranganathan, G. “An Economic Analysis of Robotic Arm Playing Chess Using
+    Visual Industry”, Journal of Innovative Imaging (HIP), no. 03 (2020) 141-146.2.
+
+
+    [18] Emys, S., and G. Ranganathan, “Robot assisted sensing and control of robotic
+    industrial arms”, Journal of Robotics, no. 03 (2019) 180-187.
+
+
+    Arunade, M. T. P. Prakash, “A Multi Performance Characteristic Optimization of
+    Robotic Arm Trajectory using Machine Learning Technique”, International Journal
+    of Engineering and Technology, Special Issue, (Vol. 4, Issue 3, pp. 32-36, 2018)'
+  merge: -1
+  img_proc: true
