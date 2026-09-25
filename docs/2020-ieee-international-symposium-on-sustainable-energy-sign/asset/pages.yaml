@@ -1,0 +1,623 @@
+- pgno: 0
+  md: '# Analysis of Trustworthiness of Secondary Users using Machine Learning Approaches
+    in Cognitive Radio Network Environment.
+
+
+    1st Umakanta Samanthingar
+
+    Dept. of Electronics & Comm. science,
+
+
+    2nd Srinivas Sethi
+
+    Dept. of Computer Science Eng.
+
+
+    3rd Dhruba C. Chanda
+
+    Dept. of Electronic Science
+
+
+    BJB Autonomous College
+
+    Bhubaneswar, India
+
+    umakants@rediffmail.com
+
+
+    Indira Gandhi Institute of Technology
+
+    Saranga, Dhenikanal, India
+
+    srinivas_sethi@gmail.com
+
+
+    Berhampur University
+
+    Berhampur, India
+
+    dcpanda@gmail.com
+
+
+    4th Ramesh K. Saho
+
+    Dept. of Computer Science
+
+
+    Indira Gandhi Institute of Technology
+
+    Saranga, Dhenikanal, India
+
+    ramesh0986@gmail.com
+
+
+    The Trustworthiness of Secondary Users (SUs) can be measured through their past
+    and present trust with sensing reputations by the neighboring nodes in Cognitive
+    Radio Network (CRN). Based on these values, it is cleared that SUs can be utilized
+    the free spectrum efficiently. We have proposed a model to analyze the trustworthiness
+    of Secondary Users (SUs) in Cognitive Radio Network (CRN) with the help of Machine
+    Learning (ML) approaches. It is demonstrated to achieve more accuracy on the data
+    predicted from sensing reputation of SUs in Cognitive Radio Network (CRN). It
+    has also helped to sense the correct number of malicious, suspicious SUs and honest
+    users among the nodes. The software that we have used, is a collection of machine
+    learning algorithms for data mining task.
+
+
+    channels may be improved as a result of spectrum identifying, sensing and dividing
+    it, without creating interference to the PU. Sensing is two types – cooperative
+    and non have vital role in these environments. Cooperative spectrum sensing every
+    SU is aware of the white space within a CRN. A central node which is Fusion Centre
+    receives all the reports from SUs and starts operation based on the part reports
+    on the CRN as per requirement. In non-cooperative sensing, each SU operates independently
+    within the CRN for sensing and analyzing the spectrum.
+
+
+    Different types of machine learning approaches have been analyzed in this mission
+    such as Naive Bayes, Decision Tree, Support Vector Machine and Artificial Neural
+    Network. We observed that Decision Tree and Neural Network are performing better
+    than Bayes Bayes in achieving high accuracy.
+
+
+    As compared to non-cooperative, cooperative spectrum sensing methodology is advantageous
+    for accurate sensing reputation, reducing false alarms and mitigating fading problems.
+    In co-cooperative spectrum sensing process sensing occurs at regular interval
+    of time. Each node has to co-operate with other nodes in the network to get accurate
+    and trustworthiness of each has a great role in the network. It is always instructed
+    to Fusion Centre (FC) not to accept any information provided by an un-trusted
+    node of the spectrum. In fact, a fault management scheme is included in the network
+    which provides the valid information or authorization before entering the. Secondary
+    Users (SUs) before entering the network. It constantly observes the past and present
+    behavior of secondary users to estimate the trust value. This trust management
+    scheme is very useful for the computation of trust value of Secondary Users in
+    the network, which provides better opportunities for a node with higher trust
+    value to satisfy its need and help avoid malicious attacks from the malicious
+    users.
+
+
+    Trustworthiness, Machine Learning Approaches (MLA), Sensing, Reputation Malicious,
+    Suspicious Users, Honest Users: WEKA, Naive Bayes, Decision Tree, Trees.
+
+
+    # I. INTRODUCTION
+
+
+    A large number of applications depend on communication technology. There is a
+    high demand for the spectral resources provided by the wireless applications and
+    services. The need for more frequency spectrum is one of under-utilization of
+    spectrum used by the Primary Users (PUs) in other mode, for the search of a new
+    method, Jospita Mitali has first-introduced the idea of Cognitive Radio Network
+    (CRN) to overcome the problem of spectrum.
+
+
+    The CRN helps to diminish the shortage of frequency resources for wireless communication
+    using intelligent sensing and resource allocation technique. CRN can utilize available
+    un-utilized spectrum and self-configuring the transmission and reception parameters
+    as per the change of environmental conditions. To fulfill this,
+
+
+    In this paper, a cooperative spectrum sensing scheme is proposed where Machine
+    Learning (ML) approach has been implemented. It provides a high degree of accuracy
+    on predicted trust values of secondary SUs. These ML techniques are frequently
+    used for predicting the data which is extracted and then inserted into the classifier
+    to classify a certain class. Now the dataset class is divided into two groups
+    i, training phase and validation data set. The training phase, data is collected
+    from each secondary user locally. The performance of MLA on the approach of trustworthiness
+    of SU under'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'data. as volume increases, the performance and accuracy can also be increases.
+    Analysis of trustworthiness helps achieve various objectives like improving accuracy
+    on the results of Spectrum Sensing (SR) calculation at Fusion Centre, correctly
+    detecting and taking appropriate measures for minimization of false alarms.
+
+
+    The rest of the part started with work in II, followed by system III. The proposed
+    method described in section IV, followed by simulation results and its observation,
+    in section V. Finally we consider the problem in VI.
+
+
+    # II. RELATED WORKS
+
+
+    The trust management process is initiated by Cognitive Base (CBS) when the newly
+    secondary user enters the registry of SU. The SU-based sensing network is designed
+    to receive and forward sensing reports to the Fusion Centre or Base Station [2].
+    Now the Fusion Centre receives the report from all SU and determines the final
+    result based on the report of each Secondary User (SU). It is noted, that Base
+    continuously checks the accuracy of every SU for their sensing values. According
+    to the decision made by the Base [3], the trust management of the system contains
+    five formats as (i) Trust evaluation (ii) Trust evaluation (iii) Reward implementation.
+    The different models of trust management are explained in [5]. The reward system
+    is one of them. According to the trust assessment, the SUs are considered for
+    giving rewards or punishments. Reward can be rendered in terms of offering incentives
+    or in making a profit. Similarly, punishment can be in terms of degrading the
+    sensing value of malicious and suspicious SUs, which causes more to be removed
+    from CRN and loses chances to access to the network resources. As shown in [6],
+    the Multi-Factor Trust mechanism can manage the Spectrum Sensing Data Falsification
+    attack, which helps to evaluate the trustworthiness of every SU. This sensing
+    mechanism provides good performance in de-centralized Cognitive Network. In [7],
+    author has proposed a new trust scheme, which worked on Spectrum Sensing Data
+    Falsification attack in multi-cooperative spectrum sensing network. In [8], author
+    states that in CRN there may be the possibility for dishonest SUs to undermine
+    the spectrum operations priority. Such of malicious behavior may affect the overall
+    performance of the entire network. In this, a Trust & Reputation Management scheme
+    is highly essential which overcomes the above problems. In [9], author has proposed
+    a new Least Mean Square (LMS) algorithm for cooperative spectrum sensing in CRN,
+    where the multiple weight factors are updated timely. Finally, the spectrum report
+    of
+
+
+    allUs are combined at Fusion Center and is made on the basis of their trust values.
+
+
+    In order to sense the spectrum accurately and reducing the computational time
+    at fusion center, author has introduced in [10], Machine Learning neural network
+    approach to achieve quick sensing in CRN. In [11], author has explained the need
+    of Machine Learning for the development of CRN. According to the methodology,
+    all nodes in CRNs are classified as either supervised or non-supervised learning.
+    In [12], author discussed the usefulness of Machine Learning (ML) approaches in
+    case of network operation management, with the target of performance optimization,
+    and security in CRN. In [13], author has proposed a Multi-factor based trust evaluation
+    scheme which makes the CRN performance more precise and powerful. Now, Spectrum
+    Recognition (SR) has been included in this scheme to keep record and monitor the
+    malicious and suspicious users in CRN. But author has not focused on the area
+    where high accuracy can be achieved. This objective motivated to implement Machine
+    Learning (ML) approaches in this paper for improving the accuracy of the result
+    of spectrum recognition and trustworthiness at Fusion Center in CRN.
+
+
+    # III. SYSTEM MODEL
+
+
+    In this section, a proposed scheme is described in details, to measure the degree
+    of accuracy in the process of calculating the trustworthiness and sensing reputation
+    of Secondary Users (SU). Since the trust value of SUs allows for sensing free
+    frequencies of Malicious Users, the management of accuracy on predicted value
+    of SU is highly essential.
+
+
+    # A. Trust Computation
+
+
+    To calculate trust, many important and methods have been proposed in the literatures.
+    The CRN can be secured from the unknown and unknowingly attacks based upon the
+    trust value of the SU, which are considered as Honest, and Malicious Users.
+
+
+    | Category | Trust Value | Users |
+
+    |---|---|---|
+
+    | A | 0.9-1 | Honest |
+
+    | B | 0.51-0.89 | Suspicious |
+
+    | C | 0-0.5 | Malicious |
+
+
+    The trustworthiness of Secondary Users (SUs) can be calculated by taking weight
+    factors into account, which are the coefficients used in the mathematical model
+    to give more "weightage" or preferences than the other nodes in CRN. Finally,
+    the Recognition (SR) of each SU is calculated [4] as given below.
+
+
+    ```
+
+    SR[$u_n] = w1*TF[$u_n] + w2*AF[$u_n] + w3*IF[$u_n]
+
+    +w4*CF[$u_n] = (1)
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'Where u1, u2, u3 & u4 are the respective weight factors.
+
+
+    The representation of Confusion Matrix in fig-1 is just like a binary classification
+    model. Therefore, the True Positive Rate (TPR) is defined as the number of correctly
+    predicted outputs which are deduced from the confusion table
+
+
+    TF, AF, IF & CF are the Trust Factor, Active Factor, Incentive Factor & Consistency
+    factor respectively.
+
+
+    To calculate the Sensing Reputation, it is highly required to calculate the true
+    value of secondary user. This trust of secondary user can be derived as:
+
+
+    ```
+
+    Positive
+
+    Positive + Negative ---------- (2)
+
+    ```
+
+
+    In Contrast, the False Positive Rate (FPR) is defined as the number of incorrect
+    predictions which are deduced from the confusion table
+
+
+    # B. Machine Learning Approach
+
+
+    In this paper, the work has been implemented through Machine Learning (ML) to
+    improve the efficiency and accuracy in the sensing of unutilized spectrum of Primary
+    User. Therefore, we use two sets of data: one, training set and validation set
+    in machine learning.
+
+
+    ```
+
+    TPR = TP
+
+    TPR = TP + FN ---------- (4)
+
+    ```
+
+
+    The Precision Rate of the Machine learning concept can be defined as the frequency
+    of correctly predicted outputs for actual instances.
+
+
+    +   1. The data for training is used to train an algorithm or program which understands
+    how to classify concepts using input data and expected result.
+
+
+    ```
+
+    FPR = FP
+
+    FPR = FP + TN ---------- (5)
+
+    ```
+
+
+    F-measures to make the analysis and balance between Precision and Recall by using
+    harmonic average ideal of the metrics,
+
+
+    +   2. A data set is used to train with Artificial Intelligence (AI) concept to
+    classify the data of a given problem. Validation set, is used to evaluate the
+    network efficiency by keeping the parameters maintained during the training. In
+    case of limitation, it is advised to refine the principle which is resulting a
+    confusion matrix [12], as shown in Fig.1.
+
+
+    ```
+
+    Precision = TP
+
+    Precision = TP / (TP + FP) ---------- (6)
+
+    ```
+
+
+    | Actual Instances |
+
+    | Positive (P) | Negative (N) |
+
+    | Positive | True (TP) False (FP) |
+
+    | Negative | False (FN) True (TN) |
+
+
+    Fig.1. Confusion Matrix
+
+
+    # IV. PROPOSED SCHEME
+
+
+    In this section, a proposed scheme has been implemented to improve the accuracy
+    of classifying trustworthiness and spectrum sensing of SUs in CR. It also helps
+    to detect malicious users and filter out host users of the total users.
+
+
+    From this confusion matrix, it is assumed that each row and column represent as
+    the actual output respectively. True Positive (TP) means the convergence between
+    correctly predicted and actual positive instances. In the other hand, True Negative
+    (TN), is the intersection between correctly predicted and actual negative instances.
+    Similarly, False Positive (FP) and False Negative (FN) describes incorrect predicted
+    output for negative and positive respectively.
+
+
+    The model has been validated using MATLAB simulation software and revealed in
+    the text file model which was generated by WEKA software [106] using Machine Learning
+    concept. It simulated the performance after pre-processing, then classify with
+    Machine Learning concept. The WEKA package is used to transform data for preprocessing,
+    transformation& feature extraction.
+
+
+    The Machine Learning algorithms are called Classifiers in WEKA. In terms of accuracy
+    of each classification is classified using the training data, model performance
+    and accuracy focus.
+
+
+    It is noted that TP correspond to the true predictions for the positive classes
+    and TN to the negative classes. So, the appearance for accuracy can be termed
+    as the confusion matrix [12] which is mentioned as follows:
+
+    Here is after, a cooperative sensing system consists of 5 Primary Users and 60
+    Secondary Users. We use weights w1=0.4, w2=0.2, w3=0.2 for the Based Trust. Trust,
+    Active factor, Incentive factor & Consistency factor respectively. A multifactor
+    based trust scheme has been validated in this paper, which made the system more
+    accurate and efficient for the calculation of sensing reputation of each secondary
+    node. Finally it is trying to minimize the effect of malicious and suspicious
+    users'' attack.
+
+
+    ```
+
+    Accuracy = TP + TN
+
+    Accuracy = TP + FP + FN ---------- (3)
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'In this paper, Machine Learning has been introduced to output data of the validated
+    data through simulation and efficiency on the calculation of true value and achieve
+    better accuracy and reputation. In this method, three different classifiers like
+    Naive Bayes (NB), Decision Table (DT) and Bayes Network (BN) have been considered
+    and compared all the classifiers with predicted values in terms of accuracy.
+
+
+    # V. SIMULATION RESULT AND OBSERVATIONS
+
+
+    In this section, we have discussed the results and observation in different directions.
+
+    Table-II shows that the cross validation data model where different classifiers
+    have different values but the decision and Bayes Network values are nearly same.
+
+    Fig-2 is the graphical representation of Table-II. From Fig-2, it is seen that
+    in Decision Table and Bayes Network classifier the correctly classified instances
+    are 100% which gives significant accuracy, in case of Naive Bayes classifier,
+    it is 93%, which is less than other two. Similarly, the incorrectly classified
+    instances are 0% in case of Decision Table and Bayes Network but in case of Bayes
+    the value is 7%.
+
+
+    ![](img/5acba87421eee147bd91e1bc08b3de6a_3_0.png)
+
+
+    Fig. 2. Stratified Cross Validation for different classifiers
+
+
+    Fig., reflect the perfect representation of Table-II. It is displayed in the graph
+    for correctly/incorrectly classified instances, Kappa statistic, mean absolute
+    error, root squared error, relative absolute error, root squared error. It is
+    seen that, the correctly classified instances and Kappa statistic of
+
+
+    | TABLE II. | STRATIFIED CROSS VALIDATION MODEL DATA |
+
+    |---|---n| Instances: 600 | |
+
+    | Attributes: 3 | |
+
+    | PU: 5 | |
+
+    | SU-60: Class: Malicious, Suspicious, Honest | |
+
+    | Test mode: 10-fold cross-validation | |
+
+    | Classifier model (full training set) | |
+
+    | Naive Bayes Classifier | Decision Table | Bayes Network |
+
+    | Correctly Classified Instances | 92.33% | 100% | 100% |
+
+    | Incorrect Classified Instances | 7.67% | 0% | 0% |
+
+    | Kappa statistic | 0.8698 | | 1 |
+
+    | Mean absolute error | 0.0648 | 0.0023 | 0.0037 |
+
+    | Root mean squared | 0.0157 | 0.0088 | 0.0044 |
+
+    | Relative absolute error | 16.69% | 1.88% | 0.94% |
+
+    | Root squared error | 36.27% | 2.00% | 1.01% |
+
+
+    | TABLE III. | ACCURATE DATA FOR DIFFERENT CLASSIFIERS |
+
+    |---|---|
+
+    | TP Rate | FP Rate | Preci | Recall | F-Me | MC | RO | C | PRC | Class |
+
+    |---|---|---|---|---|---|---|---|---|---|
+
+    | NAIVE BAYES CLASSIFIER | | | | | | | | | |
+
+    | 0.93 | 79 | 0.688 | 0.93 | | 0.793 | | 0.76 | 0.99 | Sus delicious |
+
+    | 0.0 | | 0.76 | | 0.80 | | 3 | 3 | | malicious |
+
+    | 0.765 | 14 | 0.056 | | 0.85 | | 5 | 7 | | |
+
+    | DECISION TABLE | | | | | | | | | |
+
+    | | | | 0 | 1 | | 1 | 1 | 1 | | Sus delicious |
+
+    | | | | 0 | 1 | | 1 | 1 | 1 | | Malicious |
+
+    | | | | 0 | 1 | | 1 | 1 | 1 | | Honest Weight |
+
+    | | | | 0.91 | 1 | | 0.92 | | 0.99 | 0.99 | Honest Weight |
+
+    | | | | 0.923 | 19 | | 0.925 | | 8 | 2 | |
+
+    | BAYES NETWORK | | | | | | | | | |
+
+    | | | | 0 | 1 | | 1 | 1 | 1 | | Sus delicious |
+
+    | | | | 0 | 1 | | 1 | 1 | 1 | | Malicious |
+
+    | | | | 0 | 1 | | 1 | 1 | 1 | | Honest Weight |
+
+    | AVERAGE WEIGHT | | | | | | | | | |
+
+    | | | | 0.0 | | 0.92 | | 0.90 | 0.99 | Avg. Weight |
+
+    | | | | 0.923 | 16 | 0.939 | 3 | 0.925 | 8 | 2 | Avg. Weight |
+
+    | | | | 0 | 1 | | 1 | 1 | 1 | | Honest Weight |
+
+    | | | | 0 | 1 | | 1 | 1 | 1 | | Avg. |
+
+
+    Authorized user limit limited to: University of California Santa Barbara. Download
+    on June 20, 2021 at 19:18 UTC by IEEE X. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# VI CONCLUSION
+
+
+    The implementation of a multi-factor based calculation scheme in simulation process
+    which the system made efficient and accurate for the calculation of trustworthiness
+    and reputation saving of each user. First, it has been observed that the large
+    volume of data is obtained through the calculation of spectrum and data validation
+    has been verified WEKA solution. In this process multiple weight factors along
+    with present results helped decision-making process as FC. Finally, by trying
+    to minimize the effects of malicious and suspicious users in spectrum sensing
+    process. In this paper, Machine Learning approach on the predicted dataset of
+    true values and values of SU. Thus it has been seen that, the trustworthiness
+    of SUS has been analysed and high level of accuracy has been achieved using different
+    classifiers. It is also helped to identify the suspicious users which greatly
+    improves the performance and efficiency of CBR. Finally, it is observed that Decision
+    Tree and Bayes Networks classifiers are performing better than Bayes Networks
+    in cases of providing high accuracy.
+
+
+    # REFERENCES
+
+
+    +   1. Mosa, Ahmed and G. Rahman. "Cognitive radio technique for making software
+    radios more."IEEE personal communications 6 (1999): 13-18.
+
+
+    +   2. Mohtamam, A. "A survey on cognitive spectrum and query in cognitive radio
+    networks."International Journal of Communication Networks and Information Services
+    5(1) (2013): 19-39.
+
+
+    +   3. Akkyizlar, F., Brandon F. Lo, and Ravindar Balakrishnan. "Cognitive spectrum
+    sensing in cognitive radio networks." Survey Physical communication 44(1) (2011):
+    40-62.
+
+
+    +   4. Kar, Srinivasaj, Souvitha and Ramesh Kumar Sharma. "A machine learning
+    based spectrum management scheme for spectrum in cognitive radio networks."Wireless
+    Personal Communications 97.2 (2017): 2523-2528.
+
+
+    +   5. Lee, J., S. Kim, and M. Nandi. "Survey on Spectrum Management in Cognitive
+    Radio Networks." (2017).
+
+
+    +   6. Magadelena, A. Hayri and T. Hizumluzan. "Fuzzy logic based method for mitigating
+    Spectrum Sensing Data Fusion (SSDF) Attack on cognitive radio networks."IEEE International
+    Conference, International Conference on Computer Engineering and Applications
+    (ICCE), 2012, pp.1015-1018.
+
+
+    +   7. M. Young, Khademizadeh, Adele, Nadegha, and Mohammadi. "Shafeizadeh Ghaifzadeh:
+    Tree-multi hop based spectrum sensing in cognitive radio networks." and applications
+    42(2) (2018): 29-42.
+
+
+    +   8. Kar, Srinivasaj, Souvitha and Ramesh Kumar Sharma. "Techniques of spectrum
+    access in cognitive radio networks."Computers in Analytics 9 (2019): 1-9.
+
+
+    +   9. Tababahee, Hussain, and Vabid Tabataki. "A method for sensing cognitive
+    radio networks under attack."(2018).
+
+
+    +   10. S. Ahmed, M. Sayed, and M. Elif. "Detection of Malicious Node in Cognitive
+    Radio Networks based on ML Neural Network."Fundamental Research in Electrical
+    and Electronics Engineering 5(12) (2018): 1-5.
+
+
+    +   11. Binnassy, Mario, Yang Li, and Sudman K. Jayashera. "A survey on machine
+    learning techniques in cognitive radio."IEEE Journal of Vehicular Technology and
+    Applications 9(1) (2018): 16-.
+
+
+    +   12. Boutaiba, Raf, et al. "A comprehensive survey on spectrum sensing for
+    networking, applications and research opportunities."International Journal of
+    Electronic Services and Applications 9(1) (2018): 16.
+
+
+    +   13. Feng, Jung, et al. "Securing spectrum sensing using false falseback attack
+    in cognitive radio networks."IEEE Transactions on Vehicular Technology 67(9) (2018):
+    8276-8288.
+
+
+    ![](img/5acba87421eee147bd91e1bc08b3de6a_4_0.png)
+
+
+    Fig. 3. Detailed Performance Analysis by three classifiers
+
+
+    # Overall
+
+
+    ![](img/5acba87421eee147bd91e1bc08b3de6a_4_1.png)
+
+
+    Fig. 4. The overall output of out different SUSs from Confusion Matrix
+
+
+    From Fig 4, it is observed that out of different classes, in Honest class the
+    predicted values of Native Bayes, Decision Table and Bayes Networks equal the
+    actual value of confusion matrix whereas the classes Suspicious and Malicious
+    are the predicted values of Decision Table and Bayes Networks are perfectly matched
+    with the actual value of confusion matrix but the value of Native Bayes does not
+    match with the actual value. Therefore, Decision Table and Bayes classifier predicts
+    accurate result as compared to Bayes classifiers in this way the proposed model
+    provides better accuracy and optimized performance.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '+   [14] Feng, Jingyu, et al. "Securing cooperative spectrum sensing against
+    collusive SSDF attack using XOR distance analysis in cognitive radio networks."
+    Sensors 18.2 (2018): 370.
+
+
+    +   [15] Arjoune, Youness, and Naima Kaahouch, "A comprehensive survey on spectrum
+    sensing in cognitive radio networks: Recent advances, new challenges, and future
+    research directions." Sensors 19.1 (2019): 126.
+
+
+    +   [16] ManualforWEKA3.8.x https://downloads.sourceforge.net/project/weka/documentation/3.8.x/WekaManual-3-8-3.pdf
+    retrieved as on 20-03-2020'
+  merge: -1
+  img_proc: true
