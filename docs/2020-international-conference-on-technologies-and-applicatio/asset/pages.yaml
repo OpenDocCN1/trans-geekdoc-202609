@@ -1,0 +1,590 @@
+- pgno: 0
+  md: '# Cost-Sensitive Deep Learning with Layer-Wise Cost Estimation
+
+
+    Yu-An Chung
+
+    Massachusetts Institute of Technology
+
+    Cambridge, MA, U.S.
+
+    andyuan@mit.edu
+
+
+    Shao-Wen Yang
+
+    Amazon
+
+    Seattle, WA, U.S.
+
+    swyang@amazon.com
+
+
+    Hsuan-Tien Lin
+
+    National Taiwan University
+
+    Taipei, Taiwan
+
+    hlin@csie.ntu.edu
+
+
+    **Abstract—** While deep networks have succeeded in several applications, such
+    as image classification, object detection, and speech recognition, reaching very
+    high accuracy is difficult when application demands costs for different types
+    of misclassification and classification errors. Current models of deep networks
+    for cost-sensitive classification are limited by their architecture and depth.
+    In this paper, we propose a new framework that can be applied to deep networks
+    with any structure to facilitate their learning of cost-sensitive problems. The
+    framework allows end-to-end training of deep networks. The framework is designed
+    by augmenting neural networks with cost estimation within the optimization objective.
+    Experimental results on benchmark datasets with two cost settings show that our
+    framework outperforms state-of-the-art cost-sensitive deep learning methods.
+
+
+    **Index Terms—** Cost-sensitive classification, deep learning, cost-estimation
+
+
+    # I. INTRODUCTION
+
+
+    Deep learning has shown great success in many of applications such as image classification
+    [1, 2, 3, 4], and speech recognition [5]. In such applications belonging to a
+    large class of classification in which each of misclassification error is penalized
+    equally, the performance is limited.
+
+
+    Nevertheless, using accuracy as the metric for all cases does not always produce
+    the most cost-sensitive system in the world. In fact, real-world applications
+    like [6, 7, 8, 9, 10] demand varying costs for different types of misclassification.
+    For example, in building a realistic face recognition system [9, 11, 12], in which
+    a government staff is misidentified as an impostor can only cause a slight inconvenience;
+    however, a misclassified person can result in severe damage.
+
+
+    Much effort has been made to study cost-sensitive classification algorithms. In
+    the works of [14, 15, 16], the researchers proposed to consider probabilistic
+    classifiers with
+
+
+    Bayes theory enables the classifiers to consider the cost information during prediction.
+    Other studies have extended existing cost-sensitive classification algorithms
+    to cost-sensitive, such as support machine [17]. Deep neural (DNN) have become
+    state-of-the-art on a broad range of machine learning [5, 3, 4], researchers are
+    attempting to make DNN cost-sensitive through the called Cost-Sensitive DNN (CSDN)
+    in [18]. The first step is to initialize the DNN in the layer-wise by a cost-sensitive
+    version of the conventional auto-encoder [19]. The second step involves the training
+    of a cost-sensitive loss function to minimize the final cost.
+
+
+    CSSDN, whose design is based on the fully-connected DNN with ReLU activation functions
+    and experiences two issues. First, the design restricts the applicability to more
+    structures such as convolutional [20] and pooling layers. Second, the sigmoid
+    functions from the problem of vanishing gradients in deep networks, even after
+    many epochs,
+
+
+    In this paper, we propose to build a new framework for cost-sensitive deep learning.
+    For a K-class cost-sensitive classification problem, the proposed framework replaces
+    the layer-wise cost estimation with cost estimation units. K additional neurons
+    are added to the output of each layer. K neural units serve as auxiliary to help
+    that the DNN learn meaningful representations towards units. The DNN is trained
+    by solving a joint optimization problem on the weighted loss function associated
+    with these units. Experiments conducted on benchmark datasets with two cost settings
+    validate that the proposed framework outperforms DNN. The proposed framework can
+    be easily and effectively applied to deep networks like ReLU [AlexNet], as shown
+    in the longer version of this work [22]. The performance of benefits and generality'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'make the proposed framework believable in choice.
+
+    The idea of using additional neurons as auxiliary units has been studied by several
+    deep learning works, as the well-known GoogleLeNet [3], which takes the neurons
+    as intermediate classifiers in selected hidden layers as regulators. Deeply-Supervised
+    Nets [23] add additional neurons as intermediate classifiers to all layers and
+    reported that the nodes are not only as regulators but also improve convergence
+    benefit. BehaviorNet [24] considers each hidden layer at various points of prediction
+    to test. Nevertheless, all previous works focus on using regular (cost-sensitive)
+    classifiers as auxiliary units. To the best of our knowledge, proposed framework
+    is the first that tackles cost-sensitive deep learning with layer-wise auxiliary
+    units.
+
+
+    The rest of this paper is organized as follows. In Section II, we formally define
+    the cost-sensitive classification problem and introduce related works. Then, we
+    propose our framework in Section III, and validate the performance with real-world
+    data sets in Section IV. Finally, we conclude in Section V.
+
+
+    # II. PRELIMINARY
+
+
+    # A. Cost-Sensitive Classification
+
+
+    In a K-class classification problem, a size-N set $S = \{(x_i, y_i)\}_{i=1}^N$,
+    where each input vector $x_i$ is within input space $x_i \in \mathcal{X}$, and
+    each label $y_i$ is within a label space $\mathcal{Y} = \{1, ..., K\}$. Regular
+    classification uses $S$ to train a classifier $g: \mathcal{X} \to \mathcal{Y}$
+    to minimize the expected error $[\[y \neq g(x)\]$ on the test examples $(x, y)$
+    which is small. That is, each type of misclassification is carried with the same
+    penalty.
+
+
+    We consider cost-sensitive classification [14, 17] of cost-vector when designing
+    the proposed framework. The cost-vector setting represents the information by
+    adding an additional cost vector $c \in \{0, ..., \infty\}^K$ for each example
+    $(x, y)$, where the $j$-th component $c_j$ of $c$ denotes the cost of predicting
+    class $j$ as class $k$.
+
+
+    A special case of the cost-sensitive setting is using a $K \times K$ cost matrix.
+    Each entry $C_{ij}$ denotes the cost of predicting class $j$ as class $i$. The
+    information in cost matrix can be simply cast as the cost vectors by defining
+    the cost vector in $(x, y)$ as the $y$-th row of the cost matrix $C$. Consider
+    $S = \{(x_i, y_i, c_i)\}_{i=1}^N$, cost-sensitive classification at using $S_i$
+    to train a classifier $g: \mathcal{X} \to \mathcal{Y}$ to minimize the expected
+    cost $[\[c_{y_i, g(x_i)}\]]$ on the test examples $(x, y)$.
+
+
+    demanded costs more easily. We follow many earlier cost-sensitive works [14, 15,
+    27, 18] to take the cost-sensitive setting when conducting benchmark experiments.
+
+
+    # B. Learning for Cost-Sensitive Classification
+
+
+    Nowadays DNNs are designed to solve regular classification problems [3, 4]. Those
+    DNNs usually use a softmax layer with $K$ neurons at the end. Each input $x$ passes
+    through different hidden layers and is transformed into different levels of latent
+    representations. The softmax layer converts the last representation into per-class
+    probability, and the class with the highest estimated probability is the predicted
+    class of the network.
+
+
+    On the other hand, few works have explored cost-sensitive classification using
+    deep or neural networks. Prior to the developing of making neural networks cost-sensitive
+    by sampling and re-thresholding to take the class imbalance problem; [26] Each
+    of these explores methods of neural networks for cost-sensitivity. [18] attempted
+    to make cost-sensitive neural networks by producing a cost-sensitive deep learning
+    algorithm Cost-DNN (CDNN).
+
+
+    In the structure, we use a cost-sensitive loss function $L_{cost}$ on the cost-estimation
+    layer. [18] found that the performance of the network can be improved by careful
+    training, and proposed a Cost-Sensitive Auto-Encoder (CAE). CAE operates similar
+    to a conventional auto-encoder [19], which is a neural network that maps any input
+    $x$ to a space where the output $x$ is the reconstruction of the input image.
+
+
+    The reconstruction error is measured by cross-entropy loss, but that does not
+    make that the network is cost-sensitive. We show that the network is cost-sensitive
+    with $K$ additional neurons for cost estimation. That is, CAE attempts not only
+    to reconstruct x but also estimating the cost $c$. The attempt is attempted with
+    a mixture layer $L = \alpha L_{rec} + (1-\\alpha) L_{cost}$, where $L$ is the
+    loss layer of CAE. When $\alpha = 0$, CAE converts to a generic auto-encoder.
+
+
+    Figure 1 shows how CAE is used to present CDNN. With theing, each layer in CDDNN
+    carries to estimate the cost. That is, the practices the latent representations.
+    reported that such initialization allows CDNN to converge to a better option than
+    state-of-the-art methods.
+
+
+    > ¹ The term $L_{cost}$ stands for One-Sensitive Regression and roots from a sensitive
+    SVM work [17]. Details are omitted here for lack of space.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/f31ca6d362fad6bbb3ee936a52aee682_2_0.png)
+
+
+    Fig. 1. CSAE pretraining for DNN [18]
+
+
+    # ### III. FRAMEWORK
+
+
+    While CSNN is state-of-the-art, its design is based on fully-connected layers
+    with sigmoid activation functions and suffer from some issues. We discuss the
+    issues within CSNN that motivate us to propose a better framework in Section III-A,
+    and present the framework in Section III-B.
+
+
+    # #### A. Motivation
+
+
+    Perhaps the key idea within CSNN is CSAE. To understand the necessity of pretraining
+    for deep learning. In early years, networks used sigmoid or hyperbolic activation
+    functions for non-linear transformation in the layers [27, 28, 29]. Both functions
+    exhibit flatness in part of their curves, which can cause the gradients to be
+    small. As the network grows, the smaller gradients in the later layers of the
+    network make the earlier layers suffer during backpropagation, a phenomenon known
+    as the diminishing gradients. Early workers by [29] and [19] tackled the diminishing-gradient
+    problem by proposing a greedy layer-wise strategy. However, to some degree, the
+    problem would remain suffer as the network deepens if with the same activation
+    functions.
+
+
+    In recent years, another route to resolve the diminishing-gradient problem is
+    through other activation functions, such as ReLU which does not suffer from the
+    diminishing-gradient problem as much as sigmoid or hyperbolic activation functions,
+    which is no necessary [30]. ReLU and many of its variants [31, 32] maintain the
+    mainstream activation functions in deep learning studies [33, 44]. CSNN is introduced
+    to handle cost-sensitive deep learning by mimicking what [19] did for regular
+    deep learning: using sigmoid activation functions, and adopting greedy layer-wise
+    pretraining. CSNN carries the problem of diminishing gradients when the network
+    deepens, as our experimental results in Section IV will demonstrate. To keep cost-sensitive
+    deep learning up to date with modern deep learning, it is necessary to conduct
+    cost-sensitive
+
+
+    ![](img/f31ca6d362fad6bbb3ee936a52aee682_2_1.png)
+
+
+    Fig. 2. a DNN with hidden layers designed with the Auxiliary Cost-Sensitive Targets
+    (AuxCost) framework.
+
+
+    deep learning with other routes, such as adopting ReLU and removing the pretraining
+    stage.
+
+
+    Nevertheless, directly removing the pretraining stage in CSNN would away one important
+    benefit of CSAE in making the latest representations cost-aware. Next, we propose
+    our proposed framework to rescue the benefit.
+
+
+    # #### B. Layer-wise Cost Estimation
+
+
+    Our goal is to construct a DNN that can simultaneously enjoy the benefit of cost-aware
+    representation estimation (similar to what CSAE uses) and the flexibility of any
+    structures. CSAE achieved cost-aware representation by using $K$ auxiliary neurons
+    in the auto-encoder for cost estimation. Our key idea is to use $K$ additional
+    neurons in the autoencoder that are separated from the DNN, we propose to replace
+    CSAE by “merging” the internal neurons of the DNN with that of the proposed. The
+    proposed structure is illustrated with Figure 2. the original DNN in each layer
+    has an auxiliary latent representation output to estimate the costs, thus achieving
+    cost-aware estimation almost effortlessly.
+
+
+    As shown in Figure 2, by adding K auxiliary neurons to each layer of the DNN,
+    we follow CSAE to surface the output layer of the DNN with a cost estimation.
+    The only remaining task is to train the “upgraded” DNN with a better loss function.
+    We define $L_{OSR}^{(i)}$ as the auxiliary loss function for the output of the
+    $i$-th hidden layer and $L_{OSR}^{(i)}$ as the mean of the function at the layer,
+    we train the upgraded DNN with
+
+
+    ```
+
+    $$\sum_{i=1}^{H} a_{i} \cdot (L_{OSR}^{(i)} + L_{OSR}^{(i)})$$
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "$H$ is the number of hidden layers in DNN, and $\\alpha_i$ is the balancing\
+    \ coefficient for $L_{OSR}^{(i)}.$\n\nWith the proposed structural additions and\
+    \ the loss functions we are now ready to present the full framework in Algorithm\
+    \ 1. The framework will named AusCost-Sensitive Targets (AusCT). The new framework\
+    \ appears simple, carries many benefits. With it, we can now use ReLU or other\
+    \ activation functions and avoid diminishing-gradient problem. We can also build\
+    \ cost-sensitive DNNs with any number of layers. Furthermore, we can apply this\
+    \ framework directly, or on state-of-the-art DNN structures as ResNet [4] for\
+    \ solving large-scale cost-sensitive classification problems.\n\nArgably one the\
+    \ most important use of cost-sensitive classification is to deal with imbalanced\
+    \ datasets. Nevertheless the first three datasets MNIST, CIFAR-10, and CIFAR-100\
+    \ are somewhat balanced, and the randomized proposal may generate similar cost\
+    \ for each type of classification error. To better meet the real-world usage scenario\
+    \ and increase the diversity of data sets, we further conduct experiments to evaluate\
+    \ the algorithms with imbalanced datasets. In particular, for each of the first\
+    \ three datasets MNIST, CIFAR-10, and CIFAR-100, we construct them by randomly\
+    \ picking 40% of the classes and removing 70% of the examples that belong to 40\
+    \ classes. We name these imbalanced variants as $MNIST_{im}$, $CIFAR-10_{im}$,\
+    \ and $CIFAR-100_{im}$.\n\n# Algorithm 1 Cost-Sensitive Targets (AusCT)\n\nInput:\
+    \ your variable DNN or any-of-the-shelf one [1], $H$ with hidden layers; balancing\
+    \ coefficients: $\\alpha^{(H-1)}.$\n\n+   1: Replace the softmax loss at layer\
+    \ $i$ of regression with regression loss and function $L_{OSR}^{(i)}$\n2: for\
+    \ $i=1, \\dots, H$:\n3: Add $K$ regression loss with function $L^{(i)}$ to the\
+    \ output of the $i$-th hidden layer and connect them to the $i$-th hidden layer\n\
+    4: end\n5: Train the new DNN by back-propagation [10]\n\n# IV. EXPERIMENTS\n\n\
+    Three sets of experiments are conducted to validate the usefulness of the proposed\
+    \ AusCost framework. For benchmark datasets: MNIST, CIFAR-10 [34], and CIFAR-100\
+    \ [34]. For all data sets, the training and testing follows the same would: the\
+    \ inputs in training set are scaled to [0, 1], and the inputs in testing sets\
+    \ are scaled accordingly.\n\nThe data sets were collected for regular (incentive)\
+    \ classification and thus contain no cost information. With the most frequently-used\
+    \ method in cost-sensitive learning, the randomized proposal may generate the\
+    \ costs. For a data set $S = \\{x_{ij}\\}$, the algorithm first generates a $K\
+    \ \times K$ matrix $C$ and sets the entries $C_{ij}$ to 0 by sampling the non-diagonal\
+    \ entries uniformly from S. Then, for each example $x_{ij}$ in $S$, its cost $s_{ij}$\
+    \ is calculated.\n\nOur experiment in IV-A intends to investigate the relationship\
+    \ between the coefficient $\\alpha$ in (1) using AusCost and the performance.\
+    \ Our second experiment in IV-B DNN equipped with AusCost with state-of-the-art\
+    \ CNN DNN [18] to show the usefulness of AusCost. For the first and second experiments,\
+    \ we use the randomized proposal. In the randomized proposal method. In each of\
+    \ the experiments we will describe the goal of experiment, the experimental results,\
+    \ and provide discussions and conclusions.\n\nHow does $\\alpha$ affect AusCost?\n\
+    \nIn our AusCost Cost-Sensitive Targets (AusCT), additional layers are added in\
+    \ parallel to the hidden layer in DNN. As an example the output, to the final\
+    \ layer, the DNN outputs $K$ prediction values in each hidden layer. Same with\
+    \ the final prediction, each hidden layer used to estimate costs, and are calculated\
+    \ with $L_{OSR}^{(H)}$. The final objective for optimizing the DNN is a weighted\
+    \ sum of the one-sided prediction for the final layer and the Aus cost, which\
+    \ has the form (1)\n\n```\n$\\sum_{i=1}^{H-1} \\alpha^i L^{(i)} + L^{(H)}$\n```\n\
+    \nIn this experiment, we would like to investigate the relationship between the\
+    \ value of $\\alpha$ in (1) and the performance (average cost) of AusCost. To\
+    \ simplify it, we keep all coefficients $\\alpha$ to identical values, that is\
+    \ $\\alpha_1 = \\alpha_2 = \\dots = \\alpha_{H-1} = \\alpha$, and (1):\n\nAnd\
+    \ we increase the value of $\\alpha$ from 0 to 1 by step 0.1. We show the results\
+    \ of imbalanced version of MNIST, CIFAR-10, CIFAR-100 and their imbalanced variants.\
+    \ Their cost information generated by randomized proposal.\n\nWe constructed fully\
+    \ connected DNN with varying numbers of layers $\\{1, 2, 3, 4, 5\\}$, where each\
+    \ layer contains 1024 neurons. Then we proposed that AusCost framework can be\
+    \ to connect to any kind of layers, but since our goal in current experiment is\
+    \ not to pursue\n\n> There is no need to consider $L^{(H)}$ for the outputs of\
+    \ the last layer, as the main function $L_{OSR}^{(H)}$ readily costs cost estimation."
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'the best performance but to investigate more AuCST, we choose to use only fully-connected
+    layers for constructing DNN in order to reduce the number of hyper-parameters.
+
+
+    The results are shown in Figure 3. We plot 5 curves (we tested with 5 numbers
+    of hidden layers), the x-axis is the value of α, and the y-axis is the corresponding
+    average test costs. Note that when α = 0, it means the DNN does not use AuCST.
+    From the figure, no matter how many hidden layers there are, shaped curves could
+    be observed, and the average test costs were achieved when α fell in the range
+    0.2 ~ 0.5, implying that α within this range best layer-wise and ideal for final
+    cost estimation.
+
+
+    because CSAE doing cost-aware feature extraction relatively well, which according
+    to the experimental results in [18]. When the number of hidden layers exceeded
+    twelve, all of the three models began to suffer from overfitting, by looking at
+    CDNN and NaiveDNN, it is interesting to observe that the average test costs of
+    both models increased, the increase of CDNN was much larger than that of NaiveDNN.
+    We inferred that this phenomenon was caused by deep functions and CSAE had done
+    better to mitigate this problem when the network was relatively slow, CDNN could
+    not escape the fate of diminishing gradients when the network grew deeper. This
+    phenomenon could not be observed in [18] because the deepest network we had three
+    hidden layers, CDNN and NaiveDNN regardless of number of hidden layers, this further
+    demonstrated the usability of our proposed AuCST framework.
+
+
+    ![](img/f31ca6d362fad6bbb3ee936a52aee682_4_0.png)
+
+
+    Fig. 3 depicts the relationship between the selection of α for AuCST framework
+    and the performance achieved on MNIST,with curves. The numbers are the number
+    of hidden layers, and each number corresponds to a curve.
+
+
+    # B. Compare with state-of-the-art
+
+
+    In this experiment, we used two DNNs with without AuCST framework and compare
+    them to state-of-the-art Cost-sensitive Deep Neural Network (DNN) [18]. We emphasize
+    the two major drawbacks of CDNN such:
+
+
+    +   1) CDNN uses sigmoid functions for non-transformation which results in diminishing
+    gradients when the network grows.
+
+    2) CDNN can be applied to DNN that consists of fully-connected layers, which limits
+    its potential to be extended by adding more layers that require modern functions
+    such as convolution and attention layers.
+
+
+    To give CDNN fair comparison, the two DNNs used also consist of fully-connected
+    layers, and ReLU is used as activation function. The first DNN is equipped with
+    AuCST by setting α = 0.2, as 0.2 was found to be of the best value for comparison
+    in IV, whereas the second DNN, referred to as NaiveDNN, did not use any AuCST
+    and was directly optimized by L_out, it is equivalent to setting α = 0 in (2).
+
+
+    ![](img/f31ca6d362fad6bbb3ee936a52aee682_4_1.png)
+
+
+    The experimental results are displayed in Figure 4. The x-axis is the number of
+    hidden layers and the y-axis is the corresponding average test costs. As we can
+    observe from Figure 4, when the number of hidden layers was less than or equal
+    to three, CDNN outperformed NaiveDNN
+
+
+    Fig. 4. The six-figures display the performance of the three DNNs on MNIST, CIFAR-10,
+    MNIST_imb, CIFAR-100, and each curve corresponds to one dataset.
+
+
+    # V. CONCLUSION AND FUTURE
+
+
+    We propose a novel framework Auxiliary-Sensitive Targets (AuCST) for end-to-end
+    cost-sensitive DNN learning. From the previous approaches, the framework can be
+    applied to DNN that consists of any structures to challenging cost-sensitive classification
+    problems. Experimental results demonstrate the uselessness of the proposed framework
+    for making any DNN models'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'cost-sensitive. In the future, we will build a deeper network with AuxCost
+    framework to tackle ImageNet-sensitive classification problem.
+
+
+    # ACKNOWLEDGEMENT
+
+
+    We thank members of the NTU Computational Learning Laboratory and the anonymous
+    reviewers for valuable comments. The work was partially supported by the Ministry
+    of Science and Technology via MOST 107-2628-E-002-008-MY and 108-2119-M-007-010.
+
+
+    # REFERENCES
+
+
+    +   [1] A. Krizhevsky, I. Sutskever, and G. Hinton, "Imageet classification with
+    deep convolutional neural networks," in NeurIPS, 2012.
+
+
+    +   [2] D. Uirean, J. Jaeger, and J. Schmidhuber, "Multiclass deep convolutional
+    neural network for image classification," in CVPR, 2012.
+
+
+    +   [3] S. Zegedy, W. Liu, Y. Jia, P. Setnet, S. Reed, D. Angskdev, E. Erhan,
+    V. Vanochek, and A. Rabinikov, "Deep learning with convolutions," in CVPR, 2015.
+
+
+    +   [4] K. H. Zhang, S. Ren, and J. Sun, "Deep learning for image recognition,"
+    in CVPR, 2016.
+
+
+    +   [5] G. Dahl, D. Yu, L. Deng, and A. Cheng, "Context-dependent pretrained deep
+    neural networks for vocabulary speech recognition," TASLP, vol. 20, no. 1, pp.
+    30–42, 2021.
+
+
+    +   [6] M. Tan, "Cost-sensitive learning of classification knowledge and applications,"
+    Machine Learning, vol. 13, no. 3, pp. 77–73, 1993.
+
+
+    +   [7] P. K. Sun and S. J. Stoloff, "Toward scalable learning with non-uniform
+    cost and cost distributions: A study in credit fraud detection," in KDD, 1998.
+
+
+    +   [8] W. Wan, F. Stello, and M. Miller, "Multiple cost-sensitive inductive approach
+    for detection," in ECML, 2000.
+
+
+    +   [9] Y. Zhang and W. Lu, "Cost-sensitive face recognition," TPAMI, vol. 32,
+    no. 10, pp. 1758–1769, 2020.
+
+
+    +   [10] T.-K. Tan, H.-Lin, H.-P. Chen, T.-Chen, C.-Y. Huang, B.-G. Wen, W.-C.
+    Chen, Y.-Liu, Y.-Y. Chang, L.-J. Chen, J.-K. Wang, Y.-J. Wang, Y.-Chen, and D.-W.
+    Wang, "Cost-sensitive classification of pathogen species by metrics with Enhanced
+    Raman Scattering," in BiBM, 2011.
+
+
+    +   [11] J. Lu and Y.-Tan, "Cost-sensitive learning for face recognition," IEEE
+    Access, 2019.
+
+
+    +   [12] L. Zhong, H. Li, Z. Huang, and L. Sang, "Cost-sensitive three-way decision
+    forest for face recognition," in RISEP, 2014.
+
+
+    +   [13] G. Huang, H. Sun, J. Y., H.-Yan, and Q. Sun, "Cost-sensitive dictionary
+    for face recognition," Pattern Recognition, vol. 60, pp. 613–629, 2016.
+
+
+    +   [14] M. Mukar and I. Kotonoski, "Cost-sensitive learning with neural networks,"
+    in EAI, 1998.
+
+
+    +   [15] P. Domingos, "Metacost: A general method for making classifiers cost-sensitive,"
+    in KDD, 1999.
+
+
+    +   [16] B. Zadrozny and C. Elkan, "Learning and making decisions when costs and
+    probabilities are unknown," in KDD, 2001.
+
+
+    +   [17] H.-H. Sun and H.-T. Lin, and S.-W. Yang, "Cost-aware costsvm machine
+    for multi-class cost-sensitive classification," in ICML, 2010.
+
+
+    +   [18] Y.-A. Chang, S. Ren, and J. Sun, "Cost-aware preprocessing for multiclass
+    cost-sensitive deep learning," in IJCAI, 2016.
+
+
+    +   [19] Y. Beng, "Deep learning architectures for ai," Machine Learning, vol.
+    2, no. 1, pp. 1–127, 2009.
+
+
+    +   [20] Y. Lecun, L. Bottou, Y. Beng, and P. Haffer, "Gradient-based learning
+    applied to document recognition," Proceedings of the IEEE, vol. 86, pp. 2278–2295,
+    1998.
+
+
+    +   [21] V. Nair and G. Hinton, "Robust iterative machines for image classification,"
+    in ICML, 2010.
+
+
+    +   [22] Y.-A. Chang, S. Yang, and H.-T. Lin, "Cost-sensitive deep learning with
+    layer-cost estimation," NTU. Tech., 2016; https://arxiv.org/abs/1611.05314.
+
+
+    +   [23] C.-Y. Lee, S. E. Pagerlee, G. Zhang, and Z. Zhou, "Deep-supervised deets
+    in ai," NeurIPS, 2017.
+
+
+    +   [24] S. Triyannopoulos, M. Bastien, and H. King, "Branchify: Fast inference
+    via early entry from deep neural networks," in CVPR, 2016.
+
+
+    +   [25] N. A. B. Zadrozny, and J. Langford, "Iterative method for multi-class
+    cost-sensitive classification," in KDD, 2004.
+
+
+    +   [26] Z. Zhou and X. Liu, "Cost-sensitive neural networks with methods addressing
+    class imbalance," TKDE, vol. 18, no. 1, pp. 63–77, 2006.
+
+
+    +   [27] J. Dayhoff, Neural Network Applications: An Introduction. No Vanstand
+    Reinhold, 2000.
+
+
+    +   [28] S. Lawrence, L. Giles, C. Atti, and T. Faci, "Back-propagation for a
+    convolutional neural network approach," TNN, vol. 5, no. 1, pp. 98–113, 1997.
+
+
+    +   [29] G. Hinton, S. Osindiro, and Y.-W. Teh, "Fast learning for deep deets,"
+    Neural Computation, vol. 17, no. 7, pp. 1527–1554, 2006.
+
+
+    +   [30] X. Glor, A. Bordes, and Y. Wang, "Deep sparse neural networks," in AISTATS,
+    2011.
+
+
+    +   [31] B. Xu, N. Tang, and M. Li, "Empirical evaluation of rectified activations
+    in convolutional networks," arxiv preprint arXiv:1505.00833, 2015.
+
+
+    +   [32] K. He. Zhang, S. Ren, and J. Sun, "Delving into deep residual performance
+    on image classification," in ICCV, 2015.
+
+
+    +   [33] A. L. Ma, A. Hannun, and A. Y. Ng, "Rectified nonlinearities improve
+    neural acoustic models," in ICML, Workshop on Deep Learning for Audio, Speech
+    and Language Processing, 2013.
+
+
+    +   [34] A. Krizhevsky and G. Hinton, "Learning multiple layers of features from
+    images," Master’s thesis, Department of Computer Science, University of Toronto,
+    2009.'
+  merge: -1
+  img_proc: true
