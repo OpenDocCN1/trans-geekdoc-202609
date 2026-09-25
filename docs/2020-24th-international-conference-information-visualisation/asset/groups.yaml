@@ -1,0 +1,1510 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # A Visual Interactive Analytics Interface for Complex Event Processing and Machine
+    Learning Processing of Financial Market Data
+
+
+    Nhan (Trian) Luong
+
+    Deontik
+
+    Brisbane, Australia
+
+    luongtrinh@gmail.com
+
+
+    Zoran Milovic
+
+    Deontik
+
+    Brisbane, Australia
+
+    zoranon@deontik.com
+
+
+    Andrew Berry
+
+    Deontik
+
+    Brisbane, Australia
+
+    andyl@deontik.com
+
+
+    Fethi Rabhi
+
+    School of Computer Science and Engineering
+
+    University of New South Wales
+
+    Sydney, Australia
+
+    frabhi@usw.edu.au
+
+
+    **Abstract**— Applying machine learning techniques over streaming data is difficult
+    as it involves the interplay of technologies that need to be judiciously put together
+    and easy interfaces for financial experts to leverage both Complex Event Processing
+    (CEP) and Machine Learning (ML) technologies. The solution proposed in this paper
+    is based on an open architecture where CEP engines provide functionality for downstream
+    ML training and predictions. This approach using a sensors network involving the
+    analysis of financial market data streams.
+
+
+    functions while allowing operate with downstream ML and AI functions ensure easy
+    customisation with CEP engines and ML libraries.
+
+    The next section presents related work in streaming analytics that involve using
+    ML and AI on adopted methods and their implementation. Section III describes the
+    implementation, focusing on the analytics user experience that was developed to
+    assist experts in using the implementation. Section IV provides an overview of
+    our approach using selected scenarios and sections. Section V discusses conclusions
+    and future directions.
+
+
+    **Keywords**— visual analytics; real-time analytics; complex event processing;
+    machine learning; artificial intelligence; financial market; data.
+
+
+    # I. INTRODUCTION
+
+
+    Nowadays, Machine Learning (ML) technologies and tools are used in fields like
+    healthcare, where ML agents are both faster and more accurate than humans at detecting
+    patterns and where self-driving software learns how to drive a car by itself.
+    They are also being used in the financial industry to assist investors and with
+    decision-making processes. When market shifts arise, the market need to respond
+    to both environmental factors and any of the investors'' actions, ML algorithms
+    need be able to adapt very quickly to changes and capture the latest. This is
+    why integrating live data streams is vital for ML to ensure that algorithms operate
+    on the new data as it becomes available.
+
+
+    Technologies for analyzing data streams (like Complex Event Processing (CEP) and
+    those for building ML predictors (often based on static data) have traditionally
+    developed in isolation [1]. The challenge is to solve a problem with skills that
+    domain experts often do not possess. This paper describes a solution to domain
+    experts to extract real-time patterns in financial market data streams using ML
+    algorithms that are based on an open architecture that supports event-based streaming
+
+
+    # II. RELATED WORK, INTEGRATING EVENT-BASED STREAMING
+
+
+    In the financial field, there is increasing interest in the Area of Direction
+    Changes (ADC) that promotes that an event-based system can capture significant
+    points in price movements that traditional financial methods cannot [2]. On the
+    computing field, research by Gal in 2014 [6] investigated the integration of ML
+    and CEP in the context of market Analysis and Surveillance, as well providing
+    performance benchmarks. The authors suggest that the combination of the two technologies
+    with different capabilities can be created to increase the accuracy of the overall
+    system. CEP technologies handle the correlation between multiple events while
+    ML algorithms might specify operations on the data stream to add a prediction
+    element that is difficult to model. Recent work conducted by Gal in [5] introduced
+    a scalable framework for multiew streaming data analytics using deep learning.
+    Another related research is about the use of Massive Data Analytics (MOA) which
+    is a software environment for experimenting with both offline and ML techniques
+    on a stream of data. It is the successor of the popular WEKA project [1]. But
+    references mentioned above allow data scientists with so technical knowledge to
+    exist as discovering the underlying correlation that exists in large'
+  - '[PAGE 1]
+
+
+    volume of data. However, these projects lack support for the potential integration
+    of a CEP engine processes streaming data and provides sophisticated detection
+    of event patterns. Furthermore, they do not have user interfaces that non-experts
+    can use to reconfigure the system based on their needs or conduct experiments.
+
+
+    Our recent research in [3] has proposed a novel architecture which follows the
+    following design principles:
+
+
+    +   - Separating functionality with CEP solutions from emerging streaming solutions,
+    e.g. Kafka [1], Flink [2], which provide processing maturity and are becoming
+    more widely used;
+
+    - Using pre-streaming data coming either from the streams or from the CEP engines
+    as input to the machine learning (training) capacity;
+
+    - Allowing any predictor to be linked to the machine learning models.
+
+
+    In this architecture, the continuous learning is supported by collecting the traces
+    of event patterns that satisfy pattern conditions and detected by the CEP engine.
+    These are then processed in the message layer of the Stream Processor and can
+    be used as training data for the Trainer. Performance is dictated by the specifications
+    of the application in use. For example, in the stock price prediction scenario,
+    this can be done at the end of the trading day, or in extremes, on demand. We
+    also separate the functionalities of the Trainer and Predictor, to allow the model
+    to be updated background while the Predictor continues to predict without interruption.
+    This is a general architecture which can be realized using specific technologies,
+    as shown in Fig. 1. Details of the specific components are given in [3].
+
+
+    This architecture is only a first step as the possibility to leverage technologies
+    but does not guarantee usability for experts. Furthermore, this effort must be
+    followed by the development of interactive user interfaces that are highly customized
+    to address the needs of domain experts.
+
+
+    # III. PROPOSED SOLUTION
+
+
+    The main contribution of this paper is to extend the implementation in [3] with
+    a novel way for domain experts to combine CEP/ML analytics over financial market
+    streams. We provide more details about the implementation used by a description
+    of the user experience.
+
+
+    # A. Description of the implementation used
+
+
+    The implementation used has been realized using a number of open-source components
+    as described below:
+
+
+    ![](img/b65f30970daf78d0ad95e042058fffa0_1_0.png)
+
+
+    Figure 1. Architecture and implementation described in [3].
+
+
+    +   - Dashboard: allows a user-friendly specification of CEP events, times and
+    events of significance for particular application, e.g. event sequences, indicating
+    increase or decrease of stock price; the dashboard will be visually relevant and
+    store extracted stock patterns.
+
+
+    +   - Orchestrator: purpose is to pass the definition of these event patterns
+    to components, namely Flink (for accessing data sources) and Catch, to process
+    CEP rules. It also handles the internal state of the application, e. relationship
+    between events, and controls their execution.
+
+
+    +   - Fetch: provides access to external data streams from the Dashboard Catch
+    can. The Fetch component is essentially an observer of events of a pattern type
+    which are fetched from the environment for the stream processing.
+
+
+    +   - Stream Processor: carries out event processing functions such as filtering,
+    joining event of patterns on different channels, and keeping a persistent event
+    store of events, which can subsequently be processed for analytics purposes.
+
+
+    +   - Catch: is an event detecting engine that processes events captured by the
+    Stream Processor and then analyzes them as CEP processing rules. This component
+    is intended for the processing of opportunities of sophisticated CEP functionality
+    to be delivered ever.
+
+
+    +   - Trainer: a machine learning component, intends to access the trained dataset
+    incremented by the Stream Processor. The dataset consists of either the events
+    received by the Stream Processor from the Fetch or the detected event instances
+    after CEP processing performed by the Catch, using the underlying ML model which
+    is TensorFlow [7] in this case.
+
+
+    +   - Predictor: uses the trained model produced by the Trainer, then applies
+    it to the new data to generate predictions. This is part of the continuous learning
+    approach and which is not shown in the diagram, but we can investigate this in
+    the future.'
+  md: " # A Visual Interactive Analytics Interface for Complex Event Processing and\
+    \ Machine Learning Processing of Financial Market Data\n\nNhan (Trian) Luong\n\
+    Deontik\nBrisbane, Australia\nluongtrinh@gmail.com\n\nZoran Milovic\nDeontik\n\
+    Brisbane, Australia\nzoranon@deontik.com\n\nAndrew Berry\nDeontik\nBrisbane, Australia\n\
+    andyl@deontik.com\n\nFethi Rabhi\nSchool of Computer Science and Engineering\n\
+    University of New South Wales\nSydney, Australia\nfrabhi@usw.edu.au\n\n**Abstract**—\
+    \ Applying machine learning techniques over streaming data is difficult as it\
+    \ involves the interplay of technologies that need to be judiciously put together\
+    \ and easy interfaces for financial experts to leverage both Complex Event Processing\
+    \ (CEP) and Machine Learning (ML) technologies. The solution proposed in this\
+    \ paper is based on an open architecture where CEP engines provide functionality\
+    \ for downstream ML training and predictions. This approach using a sensors network\
+    \ involving the analysis of financial market data streams functions while allowing\
+    \ operate with downstream ML and AI functions ensure easy customisation with CEP\
+    \ engines and ML libraries. \n\nThe next section presents related work in streaming\
+    \ analytics that involve using ML and AI on adopted methods and their implementation.\
+    \ Section III describes the implementation, focusing on the analytics user experience\
+    \ that was developed to assist experts in using the implementation. Section IV\
+    \ provides an overview of our approach using selected scenarios and sections.\
+    \ Section V discusses conclusions and future directions.\n\n**Keywords**— visual\
+    \ analytics; real-time analytics; complex event processing; machine learning;\
+    \ artificial intelligence; financial market; data.\n\n# I. INTRODUCTION\n\nNowadays,\
+    \ Machine Learning (ML) technologies and tools are used in fields like healthcare,\
+    \ where ML agents are both faster and more accurate than humans at detecting patterns\
+    \ and where self-driving software learns how to drive a car by itself. They are\
+    \ also being used in the financial industry to assist investors and with decision-making\
+    \ processes. When market shifts arise, the market need to respond to both environmental\
+    \ factors and any of the investors' actions, ML algorithms need be able to adapt\
+    \ very quickly to changes and capture the latest. This is why integrating live\
+    \ data streams is vital for ML to ensure that algorithms operate on the new data\
+    \ as it becomes available.\n\nTechnologies for analyzing data streams (like Complex\
+    \ Event Processing (CEP) and those for building ML predictors (often based on\
+    \ static data) have traditionally developed in isolation [1]. The challenge is\
+    \ to solve a problem with skills that domain experts often do not possess. This\
+    \ paper describes a solution to domain experts to extract real-time patterns in\
+    \ financial market data streams using ML algorithms that are based on an open\
+    \ architecture that supports event-based streaming\n\n# II. RELATED WORK, INTEGRATING\
+    \ EVENT-BASED STREAMING\n\nIn the financial field, there is increasing interest\
+    \ in the Area of Direction Changes (ADC) that promotes that an event-based system\
+    \ can capture significant points in price movements that traditional financial\
+    \ methods cannot [2]. On the computing field, research by Gal in 2014 [6] investigated\
+    \ the integration of ML and CEP in the context of market Analysis and Surveillance,\
+    \ as well providing performance benchmarks. The authors suggest that the combination\
+    \ of the two technologies with different capabilities can be created to increase\
+    \ the accuracy of the overall system. CEP technologies handle the correlation\
+    \ between multiple events while ML algorithms might specify operations on the\
+    \ data stream to add a prediction element that is difficult to model. Recent work\
+    \ conducted by Gal in [5] introduced a scalable framework for multiew streaming\
+    \ data analytics using deep learning. Another related research is about the use\
+    \ of Massive Data Analytics (MOA) which is a software environment for experimenting\
+    \ with both offline and ML techniques on a stream of data. It is the successor\
+    \ of the popular WEKA project [1]. But references mentioned above allow data scientists\
+    \ with so technical knowledge to exist as discovering the underlying correlation\
+    \ that exists in large volume of data. However, these projects lack support for\
+    \ the potential integration of a CEP engine processes streaming data and provides\
+    \ sophisticated detection of event patterns. Furthermore, they do not have user\
+    \ interfaces that non-experts can use to reconfigure the system based on their\
+    \ needs or conduct experiments.\n\nOur recent research in [3] has proposed a novel\
+    \ architecture which follows the following design principles:\n\n- Separating\
+    \ functionality with CEP solutions from emerging streaming solutions, e.g. Kafka\
+    \ [1], Flink [2], which provide processing maturity and are becoming more widely\
+    \ used;\n- Using pre-streaming data coming either from the streams or from the\
+    \ CEP engines as input to the machine learning (training) capacity;\n- Allowing\
+    \ any predictor to be linked to the machine learning models.\n\nIn this architecture,\
+    \ the continuous learning is supported by collecting the traces of event patterns\
+    \ that satisfy pattern conditions and detected by the CEP engine. These are then\
+    \ processed in the message layer of the Stream Processor and can be used as training\
+    \ data for the Trainer. For example, in the stock price scenario, this can be\
+    \ done at the end of the day, or on demand. We also separate the functionalities\
+    \ of the Trainer and Predictor, to allow the model to be updated background while\
+    \ the Predictor continues to predict without interruption. Details of the specific\
+    \ components are given in [3].\n\nThis architecture is only a first step as the\
+    \ possibility to leverage technologies but does not guarantee usability for experts.\
+    \ Furthermore, this effort must be followed by the development of interactive\
+    \ user interfaces that address the needs.\n\n# III. PROPOSED SOLUTION\n\nThe main\
+    \ contribution of this paper is to extend the implementation in [3] with a novel\
+    \ way for domain experts to combine CEP/ML analytics over financial streams. We\
+    \ provide more details about the implementation by a description of the user experience.\n\
+    \n## A. Description of the implementation used\n\nThe implementation used has\
+    \ been realized using a number of open-source components as described below:\n\
+    \n![](img/b65f30970daf78d0ad95e042058fffa0_1.png)\n\nFigure 1. Architecture and\
+    \ implementation described in [3].\n\n- Dashboard: allows user-friendly specification\
+    \ of CEP events, times and events of significance for particular application,\
+    \ e.g. event sequences, indicating increase or decrease of stock price; the dashboard\
+    \ will be visually relevant and store extracted patterns.\n- Orchestrator: purpose\
+    \ is to pass the definition of these event patterns to components, namely Flink\
+    \ (for accessing data sources) and Catch, to process CEP rules. It also handles\
+    \ the internal state of the application, e. relationship between events, and controls\
+    \ their execution.\n- Fetch: provides access to external data streams from the\
+    \ Dashboard Catch. The Fetch component is essentially an observer of events of\
+    \ a pattern type which are fetched from the environment for the stream processing.\n\
+    - Stream Processor: carries out event processing functions such as filtering,\
+    \ joining event of patterns on different channels, and keeping a persistent event\
+    \ store of events, which can subsequently be processed for analytics purposes.\n\
+    - Catch: is an event detecting engine that processes events captured by the Stream\
+    \ Processor and then analyzes them as CEP processing rules. This component is\
+    \ intended for the processing of opportunities of sophisticated CEP functionality\
+    \ to be delivered.\n- Trainer: a machine learning component, intends to access\
+    \ the trained dataset incremented by the Stream Processor. The dataset consists\
+    \ of either the events received by the Stream Processor from the Fetch or the\
+    \ detected event instances after CEP processing performed by the Catch, using\
+    \ the underlying ML model which is TensorFlow [7] in this case.\n- Predictor:\
+    \ uses the trained model produced by the Trainer, then applies it to the new data\
+    \ to generate predictions. This is part of the continuous learning approach and\
+    \ which is not shown in the diagram, but we can investigate this in the future.\n"
+  mdcn: '
+
+    # 一种用于复杂事件处理和机器学习金融市场数据的可视化分析接口
+
+
+    Nhan (Trian) Luong
+
+    Deontik
+
+    Brisbane, Australia
+
+    luongtrinh@gmail.com
+
+
+    Zoran Milovic
+
+    Deontik
+
+    Brisbane, Australia
+
+    zoranon@deontik.com
+
+
+    Andrew Berry
+
+    Deontik
+
+    Brisbane, Australia
+
+    andyl@deontik.com
+
+
+    Fethi Rabhi
+
+    科学与工程学院
+
+    新南威尔士大学
+
+    悉尼，澳大利亚
+
+    frabhi@us.au
+
+
+    **摘要**——在流式数据上应用机器学习技术是复杂的，因为它需要谨慎地整合技术并为专家提供简单的接口。本文提出的解决方案基于一种开放架构，其中复杂事件处理
+    (CEP) 引擎为下游机器学习 (ML) 提供功能。下一节介绍了涉及机器学习和人工智能的流式分析的相关工作。第三部分描述了实现细节，重点关注为领域专家开发的用户体验。第四部分提供了我们方法和所选场景的概述。第五部分讨论了结论和未来方向。
+
+
+    **关键词**——可视化分析；实时分析；复杂事件处理；机器学习；人工智能；金融市场；数据。
+
+
+    # I. 引言
+
+
+    如今，机器学习 (ML) 技术和工具已应用于医疗保健等领域，其中机器学习代理比人类在检测模式方面更快、更准确。它们也被用于让汽车学习如何自动驾驶。当市场发生变化时，机器学习需要能够快速适应环境因素并协助投资者进行决策过程。因此，集成实时数据流以确保机器学习算法在可用数据上运行至关重要。
+
+
+    分析流式数据的技术（如复杂事件处理 CEP）和用于预测的工具通常是孤立开发的，领域专家通常不具备解决问题的技能。本文描述了一种解决方案，基于开放架构，允许领域专家从金融市场数据流中提取实时模式。
+
+
+    # II. 相关工作，集成基于事件的流
+
+
+    在金融领域，人们对基于事件流 (ADC) 的兴趣日益增加，这种系统可以可以捕捉到传统方法无法捕捉的重要点。在计算领域，Gal 在 2014 年的研究调查了监控背景下机器学习和
+    CEP 的集成，并提供了性能基准。作者建议将这两种技术结合，以增加整个系统的准确性。CEP 技术处理多个事件之间的相关性，同时允许机器学习算法在数据流上指定操作。Gal
+    在 [5] 中进行的近期工作引入了使用深度学习分析流式数据的可扩展框架。另一项相关研究关于大规模数据分析 (MOA) 的使用，这是一个在流式数据上进行机器学习实验的软件环境，它是流行的
+    WEKA 项目的继任者。上述参考文献允许数据科学家利用技术知识发现海量数据中的相关性。然而，这些项目缺乏对 CEP 引擎处理流式数据的潜在集成的支持，也没有专家可以使用重新配置系统的交互式用户界面。
+
+
+    我们在 [3] 中的近期研究提出了一种新架构，遵循以下设计原则：
+
+    - 将 CEP 解决方案与新兴流式解决方案分离，例如 Kafka [1]、Flink [2]，这些解决方案正被广泛使用；
+
+    - 使用来自流或 CEP 引擎的预处理流式数据作为机器学习（训练）能力的输入；
+
+    - 允许任何预测器链接到机器学习模型。
+
+
+    在此架构中，持续学习通过收集由 CEP 引擎检测到的满足模式条件的轨迹来支持。这些轨迹随后在流式处理器的消息层中处理，并可以作为训练器的训练数据。例如，在股票价格场景中，可以在一天结束时根据需要进行。我们还分离了训练器（Trainer）和预测器（Predictor）的功能，以允许模型在后台更新，而预测器不中断地继续预测。特定组件的细节在
+    [3] 中给出。
+
+
+    这种架构只是第一步，提供了利用技术的可能性，但并未保证专家可用性。此外，这项工作必须后续开发满足需求的交互式用户界面。
+
+
+    # III. 提出的解决方案
+
+
+    本文的主要贡献是扩展了 [3] 中的实现，为领域专家提供了一种在金融流上结合 CEP/ML 分析的新方法。我们通过对用户体验的描述提供了有关实现的更多细节。
+
+
+    ## A. 所用实现的描述
+
+
+    所使用的实现是通过许多开源组件实现的，描述如下：
+
+
+    ![](img/b65f30970daf78dad95e042058fffa0_1.png)
+
+
+    图1 [3] 中描述的架构和实现。
+
+
+    - **仪表板 (Dashboard)**：允许用户友好地指定 CEP 事件、时间和特定应用程序的重要事件，例如指示股票价格上涨或下降的事件序列；仪表板将具有视觉相关并存储提取的模式。
+
+    - **编排器 (Orchestrator)**：目的是将这些事件模式的定义传递给组件，即 Flink（用于访问数据源）和 Catch（用于处理 CEP 规则）。它还处理应用程序的内部状态，例如事件之间的关系并控制它们的执行。
+
+    - **抓取器 (Fetch)**：从 Dashboard Catch 访问外部数据流。Fetch 组件本质上是模式类型事件的观察者，这些事件从环境中获取以进行流式处理。
+
+    - **流式处理器 (Stream Processor)**：执行事件处理函数，如过滤、连接不同通道上的模式事件以及保持持久的事件存储，随后可以为了分析目的处理。
+
+    - **Catch**：是一个事件检测引擎，处理流式处理器捕获的事件，然后将其作为 CEP 处理规则进行分析。该组件旨在处理交付交付复杂 CEP 功能的机会。
+
+    - **训练器 (Trainer)**：一个机器学习组件，旨在访问由流式处理器递增的训练数据集。该数据集由流式处理器从 Fetch 接收到的事件，或由 Catch
+    执行 CEP 处理后检测到的事件实例组成，使用底层的机器学习模型（在这种情况下是 TensorFlow [7]）。
+
+    - **预测器 (Predictor)**：使用训练器产生的已训练模型，然后将其应用于新数据以生成预测。这是持续学习方法的一部分，图中未显示，但我们可以在未来调查这一点。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    The user is presented with a dark-blue Dashboard depicted in Fig. 2. The first
+    title they use is the Define Title. It is used to define either CEP or ML configurations,
+    and the user can toggle between these types using the "Analytics Type" menu at
+    the top. It is worth noting that the Define Title changes its color to pink if
+    it is defining ML configurations, otherwise it stays blue when defining CEP rules.
+    The rest of this section will describe in more detail how to use these types of
+    titles.
+
+
+    # B. Define Title
+
+
+    A Define Title is the Define Title that has CEP as its Analytics. It allows you
+    to define rules for extracting sequence patterns. Since the underlying CEP engine
+    supports a variety of CEP types, a "CEP Type" menu is provided under the "Analytics
+    Type" to allow users to select an option. As per the prototype, the "Sequence
+    of Gradients" CEP is supported (Fig. 3). Gradient is a special kind of event which
+    depicts a continuously increasing, decreasing, or unchanged numerical sequence.
+    Each gradient (line segment) is defined by the stock price values at key events.
+    Two or more gradients in the same direction form an event pattern as a CEP sequence
+    rule.
+
+
+    This simple gradient pattern is insufficient to explore complex patterns such
+    as overlapping patterns (Fig. 4). The composition of Gradients comprises individual
+    gradients that can be combined using the sequence editor depicted in Fig. 3, which
+    is called a Sequence of Gradients.
+
+
+    In this prototype, we analyze daily data originating from Yahoo Finance [1]. Therefore,
+    the Gradients are looking for the opening (or closing) price of each stock day
+    that will capture intraday price data streams if the configuration is switched
+    to a different data source. All Gradients are connected back-to-back to each starting
+    Gradient. Each Gradient has a minimum and maximum length of the Gradient, and
+    direction (+1 for going up, -1 for going down, and 0 for staying flat). Using
+    Fig. 3 as an example, the values in the sequence are shown as follows:
+
+
+    +   * Gradient 1 captures a continuously increasing sequence of opening patterns
+    with a minimum length of 2 and a maximum length of 3.
+
+    * Gradient 2 captures a continuously decreasing sequence of opening patterns with
+    a minimum length of 2 and a maximum length of 3.
+
+
+    ![](img/b65f30970daf78d0ad95e042058fffa0_2_0.png)
+
+
+    Figure 2. Initial state of the Dashboard
+
+
+    ![](img/b65f30970daf78d0ad95e042058fffa0_2_1.png)
+
+
+    Figure 3. CEP Define Title
+
+
+    Combining Gradient 1 and Gradient 2, we get Sequence of Two Gradients visualized
+    in the graph in Fig. 5, where each event is represented using a circle. The solid
+    line creates a set of minimal sequence that is matched by the specified parameters,
+    while the maximum includes both solid and dashed lines. Users can add or remove
+    Gradients using the "+/-/ buttons.
+
+    The user also needs to select the Stock Symbol, which is an abbreviation used
+    to uniquely identify traded shares (e.g., "MSFT" for Microsoft).
+
+
+    ![](img/b65f30970daf78d0ad95e042058fffa0_2_2.png)
+
+
+    Figure 4. Popular stock patterns'
+  - '[PAGE 3]
+
+
+    ![](img/b65f30970daf78d0ad95e042058fffa0_3_0.png)
+
+
+    Figure 5. Gradient Event Sequence Visualization
+
+
+    Eventually, the users have to choose which source to get the data from. It is
+    important to note that this is not the data source from which the fetches the
+    stock data (Yahoo Finance), but rather referring to the internal mechanism of
+    the system. There are two options:
+
+
+    +   - Fetch: This is raw data fetched directly from Yahoo Finance.
+
+    - Catch: Each is a match between the raw stock data and the event pattern defined
+    by the CEP Title defined previously. Many of these events depends on the CEP rules
+    defined by the users in first pass. As a result, the captured events cannot be
+    fed directly into a CEP Display Title without applying a mapping to specific fields
+    that the users are interested in capturing.
+
+
+    A user can give the title a custom name, and the Data Source that the ML can train
+    using the respective menu. There are two data sources which are either a Fetch
+    or Catch components, and if the user decides to use a Catch source, they have
+    to specify Data Mapping as well. It is exactly the same mechanism used in Titan
+    II.B.
+
+
+    The user can click the "Create" button at the bottom to create a CEP Display Title
+    (Section III).
+
+
+    A user needs to use one of supervised ML algorithms provided. At present, the
+    platform only supports the Dynamic Time Warping (DTW) and Long-Term Memory Neural
+    Network (LSTM) algorithms. By default, DTW is chosen as the default "Create" button,
+    and a responsive CEP Display Title (Section III).
+
+
+    | ANALYTICS TYPE | Machine Learning |
+
+    | ML TYPE | Supervised |
+
+    | Name None |
+
+    | ML ALGO DATA SOURCE DATA MAPPING |
+
+    | Create | | |
+
+
+    Figure 6. ML Define Title
+
+
+    # C. ML Define Title
+
+
+    An ML Define Title is the Title that ML as the Analytics Type (Fig. 6). A user
+    can define configuration to perform various analysis tasks. At the top of the
+    title, there is the "ML Type" menu which defines the ML category in use. There
+    are two main types of ML algorithms presented to the:
+
+
+    +   - Supervised: The ML algorithm is trained on a labeled dataset. Note that
+    there are many types of supervised ML algorithms, such as regression or LSTM algorithms.
+
+    - Unsupervised: The ML algorithm is left on its own devices to discover and present
+    interesting patterns or structures in the data.
+
+
+    # D. CEP Display Title
+
+
+    A CEP Display Title (Fig. 7) is the visualization of the output produced by CEP
+    rules using the corresponding CEP Title defined. It is simplistic with the Symbol
+    in the ... charts, the name of the CEP Title next to the charts, and a counter
+    that shows the count of the catch component detected. Users can hit the "Activate"
+    button on the title to start the fetch configuration, which retrieves the new
+    data about a stock event every minute, and an event sequence processing in the
+    catch component. Raw stock data will fetch if it matches the matched data to increment
+    the counter on the CEP Display Title, via Kafka (red line in Fig. 1). Once the
+    user finishes their experiment, they can use the "Delete" button to get rid of
+    the title and clean up the system.
+
+
+    ```
+
+    [ msft ] | Peak 1
+
+    18
+
+    event detected
+
+    Activate Delete
+
+    ```
+
+
+    Figure 7. CEP Display Title'
+  - '[PAGE 4]
+
+
+    # E. ML Display Title
+
+
+    ML Display Title (Fig. 9) is the visualization of the ML output as a result of
+    using the ML Definition It allows users to start the training process. What happens
+    behind the scene is the Trainer component pulls data from a Kafka Source, then
+    performs the training. As soon as the process completes, the model is transferred
+    to the Prediction component for predictions on the new incoming data from the
+    Data Source. The results are shown directly on the title. An example of using
+    this and interpreting the result will be given in section IV.
+
+
+    Users can also use the “Get Data” button to download the training dataset, which
+    is in CSV format and created based on the parameters specified at creation stage
+    using the ML Definition. This dataset can be used as the input to other systems
+    for further analysis if needed. If any time the user wants to get rid of the title,
+    they can click the “Delete” button.
+
+
+    We demonstrate the user experience using two scenarios, both of which are related
+    to price status, as described below.
+
+
+    # IV. Evaluation Scenarios
+
+
+    # A. Scenario 1
+
+
+    In this scenario, it is interested to know which two different scenarios, for
+    Microsoft (MSFT) and Apple (AAPL) shows together a sequence of increasing followed
+    by a decreasing gradient. Here are the specific steps that the user has to perform
+    in this:
+
+
+    +   - The inventor creates a CEP Title that is called “Peak 1”, and fetches data
+    on the “MSFT” stock symbol. He then creates two rules called “Sequence of Gradients”.
+    The first one with a minimum length of 2, a maximum length of 3, and direction
+    (increasing). The second one with a minimum length of 1, a maximum length of 3,
+    and direction of -1 (decreasing). He should use the Fetch Data source and the
+    Display Title on which he can hit “Activate” to see event patterns showing up.
+
+    - The inventor creates another CEP Title that is called “Peak 2”, and fetches
+    data on the “AAPL” stock symbol. He can create the same “Sequence of Gradients”
+    rules as above to capture the same pattern.
+
+    - The inventor can create an ML Display Title by 역시 the “Supervised ML” type,
+    with source, “DTW” ML algorithm, and an appropriate Data Mapping. He can then
+    click the “Train” button to get a number showing the difference between the event
+    patterns.
+
+
+    ![](img/b65f30970daf78d0ad95e042058fffa0_4_0.png)
+
+
+    After following all the steps above, the resulting Dashboard will like Fig. 9.
+    The presented titles are:
+
+
+    +   - Top-left: is a CEP Title capturing Peak Event Pattern (Fig. 5) on Microsoft
+    (MSFT) opening price.
+
+    - Top-right: is a CEP Title capturing Peak Event Pattern (Fig. 5) on Apple (AAPL)
+    opening price.
+
+    - Bottom-left: is an ML Title that calculates the difference between event patterns
+    of Microsoft and Apple.
+
+    - Bottom-right: is a CEP Definition with parameters filled by the user to create
+    the new respective CEP Title.
+
+
+    By assuring Fig, we find out that 18 and 2 event patterns are detected on Microsoft
+    (MSFT) and Apple (AAPL), respectively, in the ML Display Title (3.8473) the distance
+    between these two event patterns are smaller. The smaller distance related to
+    these event patterns are: In other words, two stocks seem to move in a similar
+    way during scenario.
+
+
+    | msft | Peak 1 | aapl | Peak 2 |
+
+    |---|---|---||
+
+    | 18 | | 21 | |
+
+    | event patterns detected | event patterns detected |
+
+    | Activate | | Activate |
+
+
+    ![](img/b65f30970daf78d0ad95e042058fffa0_4_1.png)
+
+
+    Fig 9. Dashboard after implementing Scenario 1'
+  md: '
+
+    The user is presented with a dark-blue Dashboard depicted in Fig. 2. The first
+    title they use is the Define Title. It is used to define either CEP or ML configurations,
+    and the user can toggle between these types using the "Analytics Type" menu at
+    the top. It is worth noting that the Define Title changes its color to pink if
+    it is defining ML configurations, otherwise it stays blue when defining CEP rules.
+    The rest of this section will describe in more detail how to use these types of
+    titles.
+
+
+    ## B. Define Title
+
+
+    A Define Title is the Define Title that has CEP as its Analytics. It allows you
+    to define rules for extracting sequence patterns. Since the underlying CEP engine
+    supports a variety of CEP types, a "CEP Type" menu is provided under the "Analytics
+    Type" to allow users to select an option. As per the prototype, the "Sequence
+    of Gradients" CEP is supported (Fig. 3). Gradient is a special kind of event which
+    depicts a continuously increasing, decreasing, or unchanged numerical sequence.
+    Each gradient (line segment) is defined by the stock price values at key events.
+    Two or more gradients in the same direction form an event pattern as a CEP sequence
+    rule.
+
+
+    This simple gradient pattern is insufficient to explore complex patterns such
+    as overlapping patterns (Fig. 4). The composition of Gradients comprises individual
+    gradients that can be combined using the sequence editor depicted in Fig. 3, which
+    is called a Sequence of Gradients.
+
+
+    In this prototype, we analyze daily data originating from Yahoo Finance [1]. Therefore,
+    the Gradients are looking for the opening (or closing) price of each stock day
+    that will capture intraday price data streams if the configuration is switched
+    to a different data source. All Gradients are connected back-to-back to each starting
+    Gradient. Each Gradient has a minimum and maximum length of the Gradient, and
+    direction (+1 for going up, -1 for going down, and 0 for staying flat). Using
+    Fig. 3 as an example, the values in the sequence are shown as follows:
+
+
+    - Gradient 1 captures a continuously increasing sequence of opening patterns with
+    a minimum length of 2 and a maximum length of 3.
+
+    - Gradient 2 captures a continuously decreasing sequence of opening patterns with
+    a minimum length of 2 and a maximum length of 3.
+
+
+    ![](img/b65f30970daf78d0ad95e042058fffa0_2_0.png)
+
+
+    Figure 2. Initial state of the Dashboard
+
+
+    ![](img/b65f30970daf78d0ad95e042058fffa0_2_1.png)
+
+
+    Figure 3. CEP Define Title
+
+
+    Combining Gradient 1 and Gradient 2, we get Sequence of Two Gradients visualized
+    in the graph in Fig. 5, where each event is represented using a circle. The solid
+    line creates a set of minimal sequence that is matched by the specified parameters,
+    while the maximum includes both solid and dashed lines. Users can add or remove
+    Gradients using the "+/-" buttons.
+
+    The user also needs to select the Stock Symbol, which is an abbreviation used
+    to uniquely identify traded shares (e.g., "MSFT" for Microsoft).
+
+
+    ![](img/b65f30970daf78d0ad95e042058fffa0_2_2.png)
+
+
+    Figure 4. Popular stock patterns
+
+
+    ![](img/b65f30970daf78d0ad95e042058fffa0_3_0.png)
+
+
+    Figure 5. Gradient Event Sequence Visualization
+
+
+    Eventually, the users have to choose which source to get the data from. It is
+    important to note that this is not the data source from which it fetches the stock
+    data (Yahoo Finance), but rather referring to the internal mechanism of the system.
+    There are two options:
+
+
+    - Fetch: This is raw data fetched directly from Yahoo Finance.
+
+    - Catch: Each is a match between the raw stock data and the event pattern defined
+    by the CEP Title defined previously. Many of these events depends on the CEP rules
+    defined by the users in first pass. As a result, the captured events cannot be
+    fed directly into a CEP Display Title without applying a mapping to specific fields
+    that the users are interested in capturing.
+
+
+    A user can give the title a custom name, and the Data Source that the ML can train
+    using the respective menu. There are two data sources which are either a Fetch
+    or Catch components, and if the user decides to use a Catch source, they have
+    to specify Data Mapping as well. It is exactly the same mechanism used in Titan
+    II.B.
+
+
+    The user can click the "Create" button at the bottom to create a CEP Display Title
+    (Section III).
+
+
+    A user needs to use one of supervised ML algorithms provided. At present, the
+    platform only supports the Dynamic Time Warping (DTW) and Long-Term Memory Neural
+    Network (LSTM) algorithms. By default, DTW is chosen as the default "Create" button,
+    and a responsive CEP Display Title (Section III).
+
+
+    | ANALYTICS TYPE | Machine Learning |
+
+    | :--- | :--- |
+
+    | ML TYPE | Supervised |
+
+    | Name None | |
+
+    | ML ALGO DATA SOURCE DATA MAPPING | |
+
+    | Create | |
+
+
+    Figure 6. ML Define Title
+
+
+    ## C. ML Define Title
+
+
+    An ML Define Title is the Title that ML as the Analytics Type (Fig. 6). A user
+    can define configuration to perform various analysis tasks. At the top of the
+    title, there is the "ML Type" menu which defines the ML category in use. There
+    are two main types of ML algorithms presented to the:
+
+
+    - Supervised: The ML algorithm is trained on a labeled dataset. Note that there
+    are many types of supervised ML algorithms, such as regression or LSTM algorithms.
+
+    - Unsupervised: The ML algorithm is left on its own devices to discover and present
+    interesting patterns or structures in the data.
+
+
+    ## D. CEP Display Title
+
+
+    A CEP Display Title (Fig. 7) is the visualization of the output produced by CEP
+    rules using the corresponding CEP Title defined. It is simplistic with the Symbol
+    in the ... charts, the name of the CEP Title next to the charts, and a counter
+    that shows the count of the catch component detected. Users can hit the "Activate"
+    button on the title to start the fetch configuration, which retrieves the new
+    data about a stock event every minute, and an event sequence processing in the
+    catch component. Raw stock data will fetch if it matches the matched data to increment
+    the counter on the CEP Display Title, via Kafka (red line in Fig. 1). Once the
+    user finishes their experiment, they can use the "Delete" button to get rid of
+    the title and clean up the system.
+
+
+    ```
+
+    [ msft ] | Peak 1
+
+    18
+
+    event detected
+
+    Activate Delete
+
+    ```
+
+
+    Figure 7. CEP Display Title
+
+
+    ## E. ML Display Title
+
+
+    ML Display Title (Fig. 9) is the visualization of the ML output as a result of
+    using the ML Definition. It allows users to start the training process. What happens
+    behind the scene is the Trainer component pulls data from a Kafka Source, then
+    performs the training. As soon as the process completes, the model is transferred
+    to the Prediction component for predictions on the new incoming data from the
+    Data Source. The results are shown directly on the title. An example of using
+    this and interpreting the result will be given in section IV.
+
+
+    Users can also use the “Get Data” button to download the training dataset, which
+    is in CSV format and created based on the parameters specified at creation stage
+    using the ML Definition. This dataset can be used as the input to other systems
+    for further analysis if needed. If any time the user wants to get rid of the title,
+    they can click the “Delete” button.
+
+
+    We demonstrate the user experience using two scenarios, both of which are related
+    to price status, as described below.
+
+
+    ## IV. Evaluation Scenarios
+
+
+    ### A. Scenario 1
+
+
+    In this scenario, it is interested to know which two different scenarios, for
+    Microsoft (MSFT) and Apple (AAPL) shows together a sequence of increasing followed
+    by a decreasing gradient. Here are the specific steps that the user has to perform
+    in this:
+
+
+    - The inventor creates a CEP Title that is called “Peak 1”, and fetches data on
+    the “MSFT” symbol. He then creates two rules called “Sequence of Gradients”. The
+    first one with a minimum length of 2, a maximum length of 3, and direction (increasing).
+    The second one with a minimum length of 1, a maximum length of 3, and direction
+    of -1 (decreasing). He should use Fetch Data source and the Display Title on which
+    he can hit “Activate” to see event patterns.
+
+    - The inventor creates another CEP Title that is called “Peak 2”, and fetches
+    data on “AAPL” symbol. He can create the same “Sequence of Gradients” rules as
+    above.
+
+    - The inventor can create an ML Title by 역시 “Supervised ML” type, with source,
+    “DTW” ML algorithm, and an appropriate Data Mapping. He can then click the “Train”
+    button to get a number showing the difference between event patterns.
+
+
+    ![](img/b65f30970daf78d0ad95e042058fffa0_4_0.png)
+
+
+    After following all the steps above, the resulting Dashboard will like Fig. 9.
+    The presented titles are:
+
+
+    - Top-left: is a CEP Title capturing Peak Event Pattern (Fig. 5) on Microsoft
+    (MSFT) opening price.
+
+    - Top-right: is a CEP Title capturing Peak Event Pattern (Fig. 5) on Apple (AAPL)
+    opening price.
+
+    - Bottom-left: is an ML Title that calculates the difference between event patterns
+    of Microsoft and Apple.
+
+    - Bottom-right: is a CEP Definition with parameters filled by the user to create
+    the new respective CEP Title.
+
+
+    By assuring Fig, we find out that 18 and 21 event patterns are detected on Microsoft
+    (MSFT) and Apple (AAPL), respectively, in the ML Display Title (3.8473) the distance
+    between these event patterns are smaller. The smaller distance related to these
+    event patterns are: In other words, two stocks seem to move in a similar way during.
+
+
+    | msft | Peak 1 | aapl | Peak 2 |
+
+    |---|---|---|---|
+
+    | 18 | | 21 | |
+
+    | event patterns detected | | event patterns detected | |
+
+    | Activate | | Activate | |
+
+
+    ![](img/b65f30970daf78d0ad95e042058fffa0_4_1.png)
+
+
+    Fig 9. Dashboard after implementing Scenario 1
+
+    '
+  mdcn: '
+
+
+    用户看到的是图 2 所示的深蓝色仪表板。他们使用的第一个标题是“定义标题”（Define Title）。它被用于定义 CEP 或 ML 配置，用户可以使用顶部的“分析类型”（Analytics
+    Type）菜单在这些类型之间切换。值得注意的是，如果正在定义 ML 配置，定义标题的颜色会变为粉色，否则在定义 CEP 规则时保持蓝色。本节的其余部分将详细描述如何使用这些类型的标题。
+
+
+    ## B. 定义标题 (Define Title)
+
+
+    定义标题是以 CEP 作为其分析类型的定义标题。它允许你定义用于提取序列模式的规则。由于底层 CEP 引擎支持多种 CEP 类型，在“分析类型”下方提供了一个“CEP
+    类型”菜单，允许用户选择选项。根据原型，支持“梯度序列”（Sequence of Gradients）CEP（如图 3 所示）。梯度是一种特殊的事件，描述了连续增加、减少或保持不变的数值序列。每个梯度（线段）由关键事件处的股票价格值定义。相同方向的两个或多个梯度形成一个作为
+    CEP 序列规则的事件模式。
+
+
+    这种简单的梯度模式不足以探索复杂的模式，例如重叠模式（图 4）。梯度的组合由单个梯度组成，可以使用图 3 所示的序列编辑器进行组合，这被称为“梯度序列”。
+
+
+    在此原型中，我们分析了源自 Yahoo Finance [1] 的每日数据。因此，梯度正在寻找每个交易日的开盘价（或收盘价），如果配置切换到不同的数据源，它将捕捉日内价格数据流。所有梯度都背尾连接到每个起始梯度。每个梯度都有最小长度和最大长度，以及一个方向（+1
+    表示上升，-1 表示下降，0 表示平直）。以图 3 为例，序列中的值所示：
+
+
+    - 梯度 1 捕捉一个连续增加的开盘模式序列，最小长度为 2，最大长度为 3。
+
+    - 梯度 2 捕捉一个连续减少的开盘模式序列，最小长度为 2，最大长度为 3。
+
+
+    ![](img/b65f30970daf78d0ad95e042058fffa0_2_0.png)
+
+
+    图 2 仪表板的初始状态
+
+
+    ![](img/b65f30970daf78d0ad95e042058fffa0_2_1.png)
+
+
+    图 3. CEP 定义标题
+
+
+    将梯度 1 和梯度 2 结合，我们得到了图 5 图表可视化的“双梯度序列”，其中每个事件都用圆圈表示。实线创建了一组由指定参数匹配的最小序列，而最大值则包含了实线和虚线。用户可以使用
+    "+/-"按钮添加或删除梯度。
+
+    用户还需要选择“股票代码”（Stock Symbol），这是用于唯一标识交易股票的缩写（例如微软的“MSFT”）。
+
+
+    ![](img/b65f30970daf78d0ad95e042058fffa0_2_2.png)
+
+
+    图 4 热门股票模式
+
+
+    ![](img/b65f30970daf78d0ad95e042058fffa0_3_0.png)
+
+
+    图 5 梯度事件序列可视化
+
+
+    最终，用户必须选择从哪个源获取数据。需要注意的是，这并不是获取股票数据的数据源（Yahoo Finance），而是指系统的内部机制。有两个选项：
+
+
+    - Fetch（获取）：直接从 Yahoo Finance 获取的原始数据。
+
+    - Catch（捕获）：每个原始股票数据与之前定义的 CEP 标题所定义的事件模式之间的匹配。这些事件中的许多取决于用户在第一步中定义的 CEP 规则。因此，在对用户感兴趣捕捉的特定字段应用映射之前，捕获的事件无法直接馈送到
+    CEP 显示标题（Display Title）。
+
+
+    用户可以为标题赋予自定义名称，并使用相应的菜单指定 ML 可以训练的数据源。有两种数据源，即是 Fetch 组件或是 Catch 组件，如果用户决定使用 Catch
+    源，他们还必须指定“数据映射”（Data Mapping）。这与 Titan II.B 中使用的机制完全相同。
+
+
+    用户可以点击底部的“创建”（Create）按钮创建一个 CEP 显示标题（第 III 节）。
+
+
+    用户需要使用提供的监督式 ML 算法之一。目前，平台仅支持动态时间规整（DTW）和长短期记忆神经网络（LSTM）算法。默认情况下，DTW 被选为“创建”按钮的默认算法，并生成响应式的
+    CEP 显示标题（第 III 节）。
+
+
+    | 分析类型 | 机器学习 |
+
+    | :--- | :--- |
+
+    | ML 类型 | 监督式 |
+
+    | 名称无 | |
+
+    | ML 算法数据源数据映射 | |
+
+    | 创建 | |
+
+
+    图 6. ML 定义标题
+
+
+    ## C. ML 定义标题 (ML Define Title)
+
+
+    ML 定义标题是以 ML 作为分析类型的标题（图 6）。用户可以定义配置来执行各种分析任务。标题顶部有一个“ML 类型”菜单，定义了使用的 ML 类别。向用户提供了两种主要的
+    ML 算法：
+
+
+    - 监督式（Supervised）：ML 算法在标记数据集上进行训练。注意有许多类型的监督式 ML 算法，如回归或 LSTM 算法。
+
+    - 无监督式（Unsupervised）：ML 算法自行发现并展示数据中有趣的模式或结构。
+
+
+    ## D. CEP 显示标题 (CEP Display Title)
+
+
+    CEP 显示标题（图 7）是使用相应 CEP 标题产生的 CEP 规则输出的可视化。它非常简单，... 图表中显示符号，图旁边显示 CEP 标题名称，以及一个显示检测到的
+    catch 组件数量的计数器。用户可以点击标题上的“激活”（Activate）按钮启动获取配置，该配置每分钟检索一次有关股票事件的新数据，以及 catch
+    组件中的事件序列处理。如果原始股票数据与匹配的数据，将通过 Kafka（图 1 中的红线）增加 CEP 显示标题上的计数器。一旦用户完成实验，可以使用“删除”（Delete）按钮移除标题并清理系统。
+
+
+    ```
+
+    [ msft ] | Peak 1
+
+    18
+
+    event detected
+
+    Activate Delete
+
+    ```
+
+
+    图 7. CEP 显示标题
+
+
+    ## E. ML 显示标题 (ML Display Title)
+
+
+    ML 显示标题（图 9） 是使用 ML 定义结果产生的 ML 输出的可视化。它允许用户启动训练过程。后台发生的情况是 Trainer 组件从 Kafka 源拉取数据，然后执行训练。一旦过程完成，模型将传输到
+    Prediction 组件以对来自数据源的新输入数据进行预测。结果直接显示在标题上。第 IV 节将给出使用此方法并解释结果示例。
+
+
+    用户还可以使用“获取数据”（Get Data）按钮下载训练数据集，该数据集为 CSV 格式，并根据创建阶段使用 ML 定义指定的参数创建。如果需要，此数据集可以作为其他系统的输入进一步分析。如果用户任何时候想要删除标题，可以点击“删除”按钮。
+
+
+    我们演示了使用此方法并解释结果的示例如下。
+
+
+    ## IV. 评估场景 (Evaluation Scenarios)
+
+
+    ### A. 场景 1
+
+
+    在这种场景中，我们感兴趣的是微软 (MSFT) 和苹果 (AAPL) 的两个不同场景显示先上升后下降。以下是用户必须执行的特定步骤：
+
+
+    - 用户创建一个名为“Peak 1”的 CEP 标题，并获取“MSFT”符号的数据。然后创建“梯度序列”规则：第一个最小长度为 2，最大长度为 3，方向上升；第二个最小长度为
+    1，最大长度为 3，方向为 -1（下降）。他应该使用 Fetch 数据源并在显示标题上点击“激活”以查看。
+
+    - 用户创建一个另一个名为“Peak 2”的 CEP 标题，并获取“AAPL”符号的数据。他可以创建相同的“梯度序列”规则。
+
+    - 用户可以通过“监督式 ML”类型创建一个 ML 标题，带有源、“DTW”ML 算法以及适当的数据映射。然后可以点击“训练”（Train）按钮获取显示事件差异的数字。
+
+
+    ![](img/b65f30970daf78d0ad95e042058fffa0_4_0.png)
+
+
+    在遵循上述步骤后，生成的仪表板将如所示图 9 所示。呈现的标题有：
+
+
+    - 左上：捕捉微软 (MSFT) 开盘价模式的 CEP 标题（图 5）。
+
+    - 右上：捕捉苹果 (AAPL) 开盘价模式的 CEP 标题（图 5）。
+
+    - 左下：计算微软和苹果事件模式差异的 ML 标题。
+
+    - 右下：由用户填充参数的 CEP 定义，用于创建新的相应的 CEP 标题。
+
+
+    通过确保如图，我们发现微软 (MSFT) 和苹果 (AAPL) 分别检测到 18 和 21 个事件模式，在 ML 显示标题 (3.8473) 中，这些事件模式之间的距离较小。这些事件模式相关的较小距离意味着：换句话说，两只股票似乎以相似的方式移动。
+
+
+    | msft | Peak 1 | aapl | Peak 2 |
+
+    |---|---|---|---|
+
+    | 18 | | 21 | |
+
+    | event patterns detected | | event patterns detected | |
+
+    | Activate | | Activate | |
+
+
+    ![](img/b65f30970daf78d0ad95e042058fffa0_4_1.png)
+
+
+    图 9. 实现场景 1 后的仪表板
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 5]
+
+
+    # B. Scenario II
+
+
+    In this scenario, an investor wants to know which securities, for example, Microsoft
+    (MSFT) and Apple (AAPL) show peaks together. This is done as follows:
+
+
+    +   - For peak detection, the investor defines two CEP Displays which are called
+    "MSFT Peak" and "AAPL Peak", and they each fetch data on the stock symbols. Each
+    should have a generic of CEP Type, and two gradients. The one with a minimum length
+    of 5, a maximum length of 10, and a direction of -1 (increasing). The second one
+    with a minimum length of 5, a maximum length of 10, and a direction of -1 (decreasing).
+    He should use the Fetch Data Source and "Activate" the tiles to start capturing
+    events.
+
+    - For thresholds, the investor creates a pattern sequence as described above,
+    with the use of a contrasting set of gradients.
+
+    - To calculate the difference between event pattern sequences, the investor creates
+    an ML Table by specifying the "Supervised ML Type", data source "DTW ML", and
+    an appropriate Mapping, to create the tile and show the difference between the
+    event pattern sequences. If this number is large, MSFT and AAPL do not have overlapping
+    peaks, and vice versa.
+
+
+    data from Yahoo Finance comes in every minute, whereas high-frequency data refers
+    to any time series updates that occur in fractions of a second.
+
+
+    +   - The current platform starts all the ML training jobs as they are activated.
+    This might cause problems because ML algorithms are computationally expensive.
+
+
+    # CONCLUSION AND FUTURE WORK
+
+
+    The objective of this paper is to introduce an interactive and easy to use platform
+    for financial experts to explore the combined power of CEP and ML engines in an
+    interactive way. We developed a general architecture of the platform, which consists
+    of components that interact with each other, and a specific implementation that
+    handles financial data through all elements of the user interface and explained
+    how they work, as described two specific use cases that the financial experts
+    may want to explore. We made certain observations while exploring the platform
+    and encountered a number of limitations that we would like to mention in our work
+    on the platform.
+
+
+    In terms of future work, our priority is to support a larger variety of CEP and
+    ML algorithms. We will perform usability testing to see how easy or hard it is
+    to use the platform. Using user feedback is very important as the platform is
+    built for financial experts, so we want the platform to be straightforward as
+    possible for this stakeholder. Lastly, we will increase the stability of the platform
+    and user experience, restricted from addressing large and complex experiments.
+
+
+    # REFERENCES
+
+
+    +   [1] Real Time Intelligence and Event Processing, https://complexevent.com
+    (accessed 27 Apr 2020)
+
+    [2] M. Kamparidis and F. B. E. Otov (2017). Evaluating trading strategies using
+    directed events. Expert Systems, 72, 145-160, doi:10.1016/j.esys.2016.12.002
+
+    [3] J. Santos, A. Berg and F. Liu (2019). Advanced open integrating architecture,
+    complex event processing and machine learning, in IEEE 2019 International Conference
+    on Computer Engineering, 2020.
+
+    [4] A. Bifert, R. Guadal, G. Holmes and B. Pihrainer Machine Learning for Data
+    Streams, with Practical Applications in MOA
+
+    [5] S. Ge, Ha, I. Sulifkan, and S. Khan (2019). A Framework for Multidimensional
+    Data Analysis using Deep Learning and Applications, in IEEE IEEE International
+    Conference (COMPACS).
+
+    [6] R. Gast, M. Kakeshi and I. Medina-Bulo (2014). The Feasibility to Combine
+    CEP and EDA with Machine Learning using the Stock Market, in Congresso de Computação
+    e Engenharia de Sistemas (JACIS - SISTEMAS 2014), Madrid.
+
+    [7] Apache TensorFlow, https://www.tensorflow.org (accessed 30 Apr 2020)
+
+    [8] Apache Kafka, https://kafka.apache.org (accessed 27 Apr 2020)
+
+    [9] Apache Flink, https://flink.apache.org (accessed 27 Apr 2020)
+
+    [10] Apache Spark, https://spark.apache.org (accessed 27 Apr 2020)
+
+    [11] Weka Project, https://www.waikato.ac.nz/weka/index.html (accessed 28 May
+    2020)
+
+    [12] Yahoo Finance, https://finance.yahoo.com (accessed 01 May 2020)
+
+
+    # C. Observations
+
+
+    While testing the above scenarios and some others, we made a few observations:
+
+
+    +   - The platform is fast and responsive because all components in the proposed
+    architecture are loosely coupled
+
+    - The platform offers a high degree of flexibility to the users. Tile-based design
+    allows the users to create a variety of tiles, each capable of processing highly
+    complex financial use cases.
+
+    - One of the main features is the ability to edit the tile while it is created.
+    This could be worked by deleting and recreating the tile. we would like to implement
+    this in our future work.
+
+    - In order to fetch data from other sources than Yahoo Finance, a software engineer
+    should be involved to extend the Fetch component.
+
+    - The platform does not support currently ML algorithms or CEP patterns. All of
+    these are currently hard-coded into components, and a software engineer should
+    be involved to implement such features to adapt to new cases.
+
+    - Two scenarios that we proposed in section IV most with low-frequency data. The
+    stock'
+  md: '
+
+    ## B. Scenario II
+
+
+    In this scenario, an investor wants to know which securities, for example, Microsoft
+    (MSFT) and Apple (AAPL) show peaks together. This is done as follows:
+
+
+    - For peak detection, the investor defines two CEP Displays which are called "MSFT
+    Peak" and "AAPL Peak", and they each fetch data on the stock symbols. Each should
+    have a generic of CEP Type, and two gradients. The one with a minimum length of
+    5, a maximum length of 10, and a direction of -1 (increasing). The second one
+    with a minimum length of 5, a maximum length of 10, and a direction of -1 (decreasing).
+    He should use the Fetch Data Source and "Activate" the tiles to start capturing
+    events.
+
+    - For thresholds, the investor creates a pattern sequence as described above,
+    with the use of a contrasting set of gradients.
+
+    - To calculate the difference between event pattern sequences, the investor creates
+    an ML Table by specifying the "Supervised ML Type", data source "DTW ML", and
+    an appropriate Mapping, to create the tile and show the difference between the
+    event pattern sequences. If this number is large, MSFT and AAPL do not have overlapping
+    peaks, and vice versa.
+
+
+    data from Yahoo Finance comes in every minute, whereas high-frequency data refers
+    to any time series updates that occur in fractions of a second.
+
+
+    - The current platform starts all the ML training jobs as they are activated.
+    This might cause problems because ML algorithms are computationally expensive.
+
+
+    ## CONCLUSION AND FUTURE WORK
+
+
+    The objective of this paper is to introduce an interactive and easy to use platform
+    for financial experts to explore the combined power of CEP and ML engines in an
+    interactive way. We developed a general architecture of the platform, which consists
+    of components that interact with each other, and a specific implementation that
+    handles financial data through all elements of the user interface and explained
+    how they work, as described two specific use cases that the financial experts
+    may want to explore. We made certain observations while exploring the platform
+    and encountered a number of limitations that we would like to mention in our work
+    on the platform.
+
+
+    In terms of future work, our priority is to support a larger variety of CEP and
+    ML algorithms. We will perform usability testing to see how easy or hard it is
+    to use the platform. Using user feedback is very important as the platform is
+    built for financial experts, so we want the platform to be straightforward as
+    possible for this stakeholder. Lastly, we will increase the stability of the platform
+    and user experience, restricted from addressing large and complex experiments.
+
+
+    ## REFERENCES
+
+
+    - [1] Real Time Intelligence and Event Processing, https://complexevent.com (accessed
+    27 Apr 2020)
+
+    - [2] M. Kamparidis and F. B. E. Otov (2017). Evaluating trading strategies using
+    directed events. Expert Systems, 72, 145-160, doi:10.1016/j.esys.2016.12.002
+
+    - [3] J. Santos, A. Berg and F. Liu (2019). Advanced open integrating architecture,
+    complex event processing and machine learning, in IEEE 2019 International Conference
+    on Computer Engineering, 2020.
+
+    - [4] A. Bifert, R. Guadal, G. Holmes and B. Pihrainer Machine Learning for Data
+    Streams, with Practical Applications in MOA
+
+    - [5] S. Ge, Ha, I. Sulifkan, and S. Khan (2019). A Framework for Multidimensional
+    Data Analysis using Deep Learning and Applications, in IEEE IEEE International
+    Conference (COMPACS).
+
+    - [6] R. Gast, M. Kakeshi and I. Medina-Bulo (2014). The Feasibility to Combine
+    CEP and EDA with Machine Learning using the Stock Market, in Congresso de Computação
+    e Engenharia de Sistemas (JACIS - SISTEMAS 2014), Madrid.
+
+    - [7] Apache TensorFlow, https://www.tensorflow.org (accessed 30 Apr 2020)
+
+    - [8] Apache Kafka, https://kafka.apache.org (accessed 27 Apr 2020)
+
+    - [9] Apache Flink, https://flink.apache.org (accessed 27 Apr 2020)
+
+    - [10] Apache Spark, https://spark.apache.org (accessed 27 Apr 2020)
+
+    - [11] Weka Project, https://www.waikato.ac.nz/weka/index.html (accessed 28 May
+    2020)
+
+    - [12] Yahoo Finance, https://finance.yahoo.com (accessed 01 May 2020)
+
+
+    ## C. Observations
+
+
+    While testing the above scenarios and some others, we made a few observations:
+
+
+    - The platform is fast and responsive because all components in the proposed architecture
+    are loosely coupled
+
+    - The platform offers a high degree of flexibility to the users. Tile-based design
+    allows the users to create a variety of tiles, each capable of processing highly
+    complex use cases.
+
+    - One of the main features is the ability to edit the tile while it is created.
+    This could be worked by deleting and recreating the tile. we would like to implement
+    this in our future work.
+
+    - In order to fetch data from other sources than Yahoo Finance, a software engineer
+    should be involved to extend the Fetch component.
+
+    - The platform does not support currently ML algorithms or CEP patterns. All of
+    these are currently hard-coded into components, and a software engineer should
+    be involved to implement such features to adapt to new cases.
+
+    - Two scenarios that we proposed in section IV most with low-frequency data. The
+    stock
+
+    '
+  mdcn: '
+
+
+    ## B. 场景 II
+
+
+    在此场景下，投资者想知道哪些证券（例如，微软 MSFT 和苹果 AAPL）会同时出现峰值。操作方法如下：
+
+
+    - 对于峰值检测，投资者定义了两个名为“MSFT Peak”和“AAPL Peak”的 CEP 显示（CEP Displays），它们分别获取股票代码的数据。每个显示都应该有一个通用的
+    CEP 类型以及两个梯度（gradients）。第一个最小长度为 5，最大长度为 10，方向为 -1（递增）。第二个最小长度为 5，最大长度为 10，方向为
+    -1（下降）。他应该使用数据源（Fetch Data Source）并“激活”（Activate）磁片以开始捕事件。
+
+    - 对于阈值，投资者按照上述描述创建了一个模式序列，并使用了一组对比的梯度。
+
+    - 为了计算事件模式序列之间的差异，投资者通过指定“监督机器学习类型”（Supervised ML Type）、数据源“DTW ML”以及适当的映射（Mapping）创建一个
+    ML 表，以创建磁片并显示事件模式序列之间的差异。如果数字很大，说明 MSFT 和 AAPL 没有重叠的峰值，反之亦然。
+
+
+    来自雅虎财经的数据每分钟更新一次，而高频数据指的是在数秒内发生的任何时间序列更新。
+
+
+    - 当前平台会在激活时启动所有 ML 训练任务。这可能会导致问题，因为机器学习算法的计算开销很大。
+
+
+    ## 结论与未来工作
+
+
+    本文的目标是为金融专家提供一个交互且易用的平台，以便以交互方式探索 CEP 和 ML 引擎的结合力量。我们开发了平台的通用架构，该架构由相互作用的组件组成，以及一个通过用户界面所有元素处理金融数据的特定实现，并解释了它们的工作原理，正如金融专家可能想要探索的两个特定用例所描述。在探索平台时，我们得出了一些观察，并遇到了一些局限性，我们将在平台工作中提到这些局限性。
+
+
+    在未来工作方面，我们的首要任务是支持更多 CEP 和 ML 算法。我们将进行可用性测试，以查看该平台的易用程度。用户反馈非常重要，因为平台是为金融专家构建的，所以我们希望平台对于这类利益相关者来说尽可能简单。最后，我们将提高平台的稳定性和用户体验，解决处理大型复杂实验时的限制。
+
+
+    ## 参考文献
+
+
+    - [1] 实时智能与事件处理，https://complexevent.com (访问于2020年4月27日)
+
+    - [2] M. Kamparidis and F. B. E. Otov (2017). 使用有向事件评估交易策略。Expert Systems, 72,
+    145-160, doi:10.1016/j.esys.2016.12.002
+
+    - [3] J. Santos, A. Berg and F. Liu (2019). 高级开放集成架构、复杂事件处理和机器学习，发表于 IEEE 2019
+    计算机工程国际会议, 2020。
+
+    - [4] A. Bifert, R. Guadal, G. Holmes and B. Pihrainer Machine Learning for Data
+    Streams, with Practical Applications in MOA
+
+    - [5] S. Ge, Ha, I. Sulifkan, and S. Khan (2019). 基于深度学习的多维数据分析框架及应用，发表于 IEEE
+    International Conference (COMPACS)。
+
+    - [6] R. Gast, M. Kakeshi and I. Medina-Bulo (2014). 利用股票市场结合 CEP、EDA 和机器学习 的可行性，发表于
+    Congresso de Computação e Engenharia de Sistemas (JACIS - SISTEMAS 2014), Madrid。
+
+    - [7] Apache TensorFlow，https://www.tensorflow.org (访问于2020年4月30日)
+
+    - [8] Apache Kafka,https://kafka.apache.org (访问于2020年4月27日)
+
+    - [9] Apache Flink,https://flink.apache.org (访问于2020年4月27日)
+
+    - [10] Apache Spark,https://spark.apache.org (访问于2020年4月27日)
+
+    - [11] Weka 项目，https://www.waikato.ac.nz/weka/index.html (访问于2020年5月28日)
+
+    - [12] 雅虎财经，https://finance.yahoo.com (访问于2020年5月1日)
+
+
+    ## C. 观察
+
+
+    在测试上述场景及其他一些场景时，我们有几点观察：
+
+
+    - 平台运行快速且响应迅速，因为所提架构中的所有组件都是松耦合的
+
+    - 平台为用户提供了高度的灵活性。磁片设计允许用户创建各种磁片，每个磁片都能处理极其复杂的用例。
+
+    - 主要功能之一是在创建时编辑磁片。这可以通过删除并重建磁片来实现，我们希望在未来的工作中实现这一功能。
+
+    - 为了从雅虎财经以外的其他获取数据，需要软件工程师参与扩展 Fetch 组件。
+
+    - 平台目前不支持 ML 算法或 CEP 模式。所有这些目前硬编码在组件中，需要软件工程师参与实现此类功能以适应新案例。
+
+    - 我们在第四部分提出的两个场景最适用于低频数据。股票
+
+
+    '
+  merge: 0
