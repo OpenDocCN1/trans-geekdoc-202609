@@ -1,0 +1,1575 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # Blockchain-based dynamic group management for multiple keywords search encryption
+    technology
+
+
+    Yuxian Chen1,2,3, Jian Bai1,2, Yao Hao1,2, Sijiao Liao, Zhongqiang Yi1,2, and
+    Hao Zhang1,2
+
+
+    ^1Science and Technology on Communication Security Laboratory, Chengdu 610041,
+    China
+
+    2No.30 Inst, China Electronics Technology Group, Chengdu 610041, China
+
+    3 China Electronics Technology Security Co., Ltd
+
+    239282759@qq.com
+
+
+    **Abstract—**Search encryption (SE) provides online search functions to protect
+    encrypted data and the user query privacy. It has challenges of substantial bandwidth
+    and storage overhead that should be mitigated for a practical SE. In this paper,
+    we propose a blockchain-based user management scheme for SE that can decentralize
+    bandwidth management, and enhances the security of privacy in order to prevent
+    identity loss, tampering brought by TTP. We leverage blockchain to offer security
+    efficiency, and theoretical analysis validates the feasibility and security. Further
+    experiments are carried out to demonstrate the SE effectiveness.
+
+
+    **Keywords—Search encryption;** Multiple; Decentralized; encryption; Blockchain.
+
+
+    not only reduces the computational complexity on the client, but also realizes
+    secure dynamic group management. The usage of TTP (proxy) is also the strategy
+    adopted by most solutions in the basis of dynamic search encryption. Li, Huang
+    [15] further designs a multi-keyword search scheme supporting fine-grained results.
+
+
+    At present many server providers such as Azure and Google App Engine protect user
+    privacy through authentication and ACL (Access Control List) [16]. However, these
+    applications are constructed on the assumption that the server is trusted. In
+    practical implementation, cloud service providers can rely on user''s privacy,
+    that the server is semi-trusted, however curious. Although search encryption technology
+    solves the contradiction between data privacy and availability on the cloud, there
+    is no mature commercial application. On the basis of encryption, ciphertext documents
+    and search process increase bandwidth and economic cost; other many solutions
+    with application scenarios still need improvement in function, efficiency, and
+    security.
+
+
+    # I. INTRODUCTION
+
+
+    Search encryption is a technology to protect user data''s security and query privacy
+    without affecting data retrieval. The basic scenario is that the user encrypts
+    his own data, generates the keywords and uploads it to the cloud. When he needs
+    to retrieve the data, he submits the keywords to the cloud server. The cloud does
+    not know the keywords or the ciphertext, but uses the traps of the keywords to
+    retrieve the cipher text of the data, then returns the result [1]
+
+
+    Search encryption is mainly divided into symmetric and asymmetric. However, it
+    can be further subdivided according to the number of creators and searchers. Its
+    research has many properties, efficiency, security, correctness, etc [4–7]; Jin
+    Li [8] proposes which switch support keyword search in encryption. Wang [9] proposes
+    scheme that can support range of search query. For B [10] proposes supporting
+    search encryption in ciphertext. Hector [11] proposes SQL query that can support
+    encrypted search. The server does not need to decrypt the ciphertext, but operates
+    the ciphertext, which further increases the potential of search encryption, but
+    at present, the efficiency of homomorphic encryption is not practical. Yong H
+    [13] proposed a public key scheme that supports file sharing among multiple users
+    and efficient search of multiple keywords. Dong [14] uses a TTP (Trusted Party)
+    to manage and distribute keys, uses El-Gamal proxy encryption, which
+
+
+    dynamic user management is an important direction for SE. However, user management
+    in SE is implemented by TTP, but TTPs also have a lot of issues with users, for
+    example, single point of failure, identity disclosure, hard to find a TTP that
+    all trust in practice, etc. These issues are related to service availability,
+    efficiency and security.
+
+
+    In this paper, we propose a blockchain-based scheme that can realize file sharing
+    within a user group and dynamic user management without proxy. The scenario supports
+    various creators and searchers, that is, ciphertext and keywords created by various
+    creators can be searched by various searchers. Based on the analysis of the previous
+    research that supports index of conjunctive keyword search, Our contributions
+    can be summarized as follows:
+
+
+    +   - A blockchain-based scheme that can realize file sharing within a user group
+    and dynamic user management without proxy.
+
+    - On the basis of scenario that supports various creators and searchers, the scheme
+    naturally has the feature of multi-service index book, which brings the availability
+    of'
+  - '[PAGE 1]
+
+
+    the system.
+
+
+    +   * We proved the feasibility of our proposed scheme theoretically and implemented
+    the principle for a traditional searchable encryption system. Further experiments
+    show that our scheme has the characteristics of high efficiency and usability
+    in terms of user management compared with traditional schemes.
+
+
+    The rest of the paper is organized as follows: In Section 2, we familiarize with
+    the scheme''s preliminaries, bilinear map and blockchain. In Section 3, we put
+    forward the model and structure of our scheme. Section 4 presents blockchain-based
+    architecture. Section 5 covers the principle verification of the scheme, including
+    theory proof, advantage description and encryption feasibility. Section 6 concludes
+    the paper.
+
+
+    # II. PRELIMINARIES
+
+
+    # A. Elliptic bilinear map
+
+
+    For any two groups $G_1, G_2$ with same prime order, there exists a bilinear map
+    $e$ satisfying $G_1 \times G_2 \rightarrow G_2$, which then has properties as
+    follows:
+
+
+    +   1) Bilinearity: for any $a_1, a_2$ in group $G_1$, and $b_1, b_2$ in group
+    $G_2$, $e(a_1a_2, b_1b_2) = e(a_1, b_1)^{a_2b_2}$;n2) Non-degeneracy: if $g_1,
+    g_2$ is the generator of $G_1$, then $e(g_1, g_2)$ is the generator of $G_2$;n3)
+    Computational: for any elements $g^a, g^b$ in group $G_1$, of $a, b \in Z_p$,
+    $e(g^a, g^b)$ can be calculated in a polynomial time.
+
+
+    # B. Blockchain and smart contract
+
+
+    Blockchain is a time-ordered data structure using cryptographic technology to
+    guarantee the consensus and credibility of the system. Its advantages mainly contains
+    following aspects:
+
+
+    +   1) Decentralization: the management of the system is executed by multiple
+    nodes, which increases the system''s transparency and fairness.
+
+    2) Anti-tampering: hash function based data structure can store the correlation
+    of information, a bit tampering can be detected by the correction of the chain
+    structure.
+
+    3) Strong fault tolerance: consensus algorithm and multiple backups can detect
+    and reject malicious actors and attackers.
+
+    4) No trusted third party: smart contract is a piece of code that runs on blockchain
+    to secure the agreement. It is triggered by event, making it possible to get rid
+    of TTP (Trusted Third Party) which may also be untrusted.
+
+
+    In our scheme, we use blockchain and smart contract to manage the generation and
+    distribution of user''s key instead of TTP (Trusted Third Party), which gives
+    users more autonomy and get rid of the risk of keys being compromised by TTP.
+
+
+    Considering the multi-party relationship in searchable encryption, the efficiency
+    of consensus algorithm, and the scheme designs dynamic membership management by
+    the trusted Consortium blockchain platform meets different needs of multi-parties,
+    as (Consortium chain, public chain, and private chain). The engineering experiment
+    will also be based on blockchain in the following chapters.
+
+
+    # C. Index structure
+
+
+    The encrypted object in our scheme is text-based, unstructured. User stores a
+    set $D=\{d_1, d_2, ..., d_n\}$ where each document has a corresponding index structure,
+    recording its attribute domain in json format. 1: $attr(d) = \{name: value; name:
+    value; ...\}$, such as age, author, height, etc. There may be some overall difference
+    between documents, so index structure and data are separately stored and searched
+    on server for every query.
+
+
+    ![](img/2a600712fcb0af2f22fbfb36492ba977_1_0.png)
+
+
+    # III. SYSTEM MODEL AND SCHEMA PROCESS
+
+
+    The scheme involves two participants in blockchain management
+
+
+    +   * users: U represent a group of users $U_1, U_2, ...$ these users are in charge
+    of encryption and query. Each user in the group have many permissions, including
+    encryption, decrypt and search. Moreover, each user can search other users'' encrypted
+    documents and decrypt them.
+
+    * CSP (Cloud Service Provider): CSP provides user server storage, service encryption
+    and key services. Generally, CSP is honest and won''t violate the service contracts,
+    but may be curious and analyze user''s behavior to get privacy. Blockchain is
+    responsible for calculation public, compute and distribute keys for each group
+    member to realize group management, including key distribution and permission
+    revocation. Rules are written in the smart contract to consensus previously and
+    can be executed automatically by triggered events.'
+  md: '
+
+    # Blockchain-based dynamic group management for multiple keywords search encryption
+    technology
+
+
+    Yuxian Chen1,2,3, Jian Bai1,2, Yao Hao1,2, Sijiao Liao, Zhongqiang Yi1,2, and
+    Hao Zhang1,2
+
+
+    ^1Science and Technology on Communication Security Laboratory, Chengdu 610041,
+    China
+
+    2No.30 Inst, China Electronics Technology Group, Chengdu 610041, China
+
+    3 China Electronics Technology Security Co., Ltd
+
+    239282759@qq.com
+
+
+    **Abstract—**Search encryption (SE) provides online search functions to protect
+    encrypted data and the user query privacy. It has challenges of substantial bandwidth
+    and storage overhead that should be mitigated for a practical SE. In this paper,
+    we propose a blockchain-based user management scheme for SE that can decentralize
+    bandwidth management, and enhances the security of privacy in order to prevent
+    identity loss, tampering brought by TTP. We leverage blockchain to offer security
+    efficiency, and theoretical analysis validates the feasibility and security. Further
+    experiments are carried out to demonstrate the SE effectiveness.
+
+
+    **Keywords—Search encryption;** Multiple; Decentralized; encryption; Blockchain.
+
+
+    not only reduces the computational complexity on the client, but also realizes
+    secure dynamic group management. The usage of TTP (proxy) is also the strategy
+    adopted by most solutions in the basis of dynamic search encryption. Li, Huang
+    [15] further designs a multi-keyword search scheme supporting fine-grained results.
+
+
+    At present many server providers such as Azure and Google App Engine protect user
+    privacy through authentication and ACL (Access Control List) [16]. However, these
+    applications are constructed on the assumption that the server is trusted. In
+    practical implementation, cloud service providers can rely on user''s privacy,
+    that the server is semi-trusted, however curious. Although search encryption technology
+    solves the contradiction between data privacy and availability on the cloud, there
+    is no mature commercial application. On the basis of encryption, ciphertext documents
+    and search process increase bandwidth and economic cost; other many solutions
+    with application scenarios still need improvement in function, efficiency, and
+    security.
+
+
+    # I. INTRODUCTION
+
+
+    Search encryption is a technology to protect user data''s security and query privacy
+    without affecting data retrieval. The basic scenario is that the user encrypts
+    his own data, generates the keywords and uploads it to the cloud. When he needs
+    to retrieve the data, he submits the keywords to the cloud server. The cloud does
+    not know the keywords or the ciphertext, but uses the traps of the keywords to
+    retrieve the cipher text of the data, then returns the result [1]
+
+
+    Search encryption is mainly divided into symmetric and asymmetric. However, it
+    can be further subdivided according to the number of creators and searchers. Its
+    research has many properties, efficiency, security, correctness, etc [4–7]; Jin
+    Li [8] proposes which switch support keyword search in encryption. Wang [9] proposes
+    scheme that can support range of search query. For B [10] proposes supporting
+    search encryption in ciphertext. Hector [11] proposes SQL query that can support
+    encrypted search. The server does not need to decrypt the ciphertext, but operates
+    the ciphertext, which further increases the potential of search encryption, but
+    at present, the efficiency of homomorphic encryption is not practical. Yong H
+    [13] proposed a public key scheme that supports file sharing among multiple users
+    and efficient search of multiple keywords. Dong [14] uses a TTP (Trusted Party)
+    to manage and distribute keys, uses El-Gamal proxy encryption, which
+
+
+    dynamic user management is an important direction for SE. However, user management
+    in SE is implemented by TTP, but TTPs also have a lot of issues with users, for
+    example, single point of failure, identity disclosure, hard to find a TTP that
+    all trust in practice, etc. These issues are related to service availability,
+    efficiency and security.
+
+
+    In this paper, we propose a blockchain-based scheme that can realize file sharing
+    within a user group and dynamic user management without proxy. The scenario supports
+    various creators and searchers, that is, ciphertext and keywords created by various
+    creators can be searched by various searchers. Based on the analysis of the previous
+    research that supports index of conjunctive keyword search, Our contributions
+    can be summarized as follows:
+
+
+    - A blockchain-based scheme that can realize file sharing within a user group
+    and dynamic user management without proxy.
+
+    - On the basis of scenario that supports various creators and searchers, the scheme
+    naturally has the feature of multi-service index book, which brings the availability
+    of the system.
+
+    - We proved the feasibility of our proposed scheme theoretically and implemented
+    the principle for a traditional searchable encryption system. Further experiments
+    show that our scheme has the characteristics of high efficiency and usability
+    in terms of user management compared with traditional schemes.
+
+
+    The rest of the paper is organized as follows: In Section 2, we familiarize with
+    the scheme''s preliminaries, bilinear map and blockchain. In Section 3, we put
+    forward the model and structure of our scheme. Section 4 presents blockchain-based
+    architecture. Section 5 covers the principle verification of the scheme, including
+    theory proof, advantage description and encryption feasibility. Section 6 concludes
+    the paper.
+
+
+    # II. PRELIMINARIES
+
+
+    # A. Elliptic bilinear map
+
+
+    For any two groups $G_1, G_2$ with same prime order, there exists a bilinear map
+    $e$ satisfying $G_1 \times G_2 \rightarrow G_2$, which then has properties as
+    follows:
+
+
+    - 1) Bilinearity: for any $a_1, a_2$ in group $G_1$, and $b_1, b_2$ in group $G_2$,
+    $e(a_1a_2, b_1b_2) = e(a_1, b_1)^{a_2b_2}$;
+
+    - 2) Non-degeneracy: if $g_1, g_2$ is the generator of $G_1$, then $e(g_1, g_2)$
+    is the generator of $G_2$;
+
+    - 3) Computational: for any elements $g^a, g^b$ in group $G_1$, of $a, b \in Z_p$,
+    $e(g^a, g^b)$ can be calculated in a polynomial time.
+
+
+    # B. Blockchain and smart contract
+
+
+    Blockchain is a time-ordered data structure using cryptographic technology to
+    guarantee the consensus and credibility of the system. Its advantages mainly contains
+    following aspects:
+
+
+    - 1) Decentralization: the management of the system is executed by multiple nodes,
+    which increases the system''s transparency and fairness.
+
+    - 2) Anti-tampering: hash function based data structure can store the correlation
+    of information, a bit tampering can be detected by the correction of the chain
+    structure.
+
+    - 3) Strong fault tolerance: consensus algorithm and multiple backups can detect
+    and reject malicious actors and attackers.
+
+    - 4) No trusted third party: smart contract is a piece of code that runs on blockchain
+    to secure the agreement. It is triggered by event, making it possible to get rid
+    of TTP (Trusted Third Party) which may also be untrusted.
+
+
+    In our scheme, we use blockchain and smart contract to manage the generation and
+    distribution of user''s key instead of TTP (Trusted Party), which gives users
+    more autonomy and get rid the risk of keys being compromised by TTP.
+
+
+    Considering the multi-party relationship in searchable encryption, the efficiency
+    of consensus algorithm, and the scheme designs dynamic management by the trusted
+    Consortium platform meets different needs of multi-parties, as (Consortium chain,
+    public chain, and private chain). The engineering experiment will also be based
+    on blockchain in the following chapters.
+
+
+    # C. Index structure
+
+
+    The encrypted object in our scheme is text-based, unstructured. User stores a
+    set $D=\{d_1, d_2, ..., d_n\}$ where each document has a corresponding index structure,
+    recording its attribute domain in json format. 1: $attr(d) = \{name: value; name:
+    value; ...\}$, such as age, author, height, etc. There may be some overall difference
+    between documents, so index structure and data are separately stored and searched
+    on server for every query.
+
+
+    ![](img/2a600712fcb0af2f22fbfb36492ba977_1_0.png)
+
+
+    # III. SYSTEM MODEL AND SCHEMA PROCESS
+
+
+    The scheme involves two participants in blockchain management
+
+
+    - users: U represent a group of users $U_1, U_2, ...$ these users are in charge
+    of encryption and query. Each user in the group have many permissions, including
+    encryption, decrypt and search. Moreover, each user can search other users'' encrypted
+    documents and decrypt them.
+
+    - CSP (Cloud Service Provider): CSP provides user server storage, service encryption
+    and key services. Generally, CSP is honest and won''t violate the service contracts,
+    but may be curious and analyze user''s behavior to get privacy. Blockchain is
+    responsible for calculation public, compute and distribute keys for each group
+    member to realize group management, including key distribution and permission
+    revocation. Rules are written in the smart contract to consensus previously and
+    can be executed automatically by triggered events.
+
+    '
+  mdcn: '
+
+
+    # 基于区块链的多关键字搜索加密技术动态组管理方案
+
+
+    Yuxian Chen1,2,3, Jian Bai1,2, Yao Hao1,2, Sijiao Liao, Zhongqiang Yi1,2, and
+    Hao Zhang1,2
+
+
+    ^1 通信安全实验室，成都市 610041，中国
+
+    2 中国电子科技集团有限公司，第30研究所，成都市 610041，中国
+
+    3 中国电子科技安全有限公司
+
+    239282759@qq.com
+
+
+    **摘要—** 搜索加密（SE）通过提供在线搜索功能来保护加密数据和用户查询隐私。但实际应用中面临着巨大的带宽和存储开销挑战，需要进行缓解。在本文中，我们提出了一种基于区块链的SE用户管理方案，能够去中心化带宽管理，并增强隐私安全性以防止由于信任第三方（TTP）带来的身份丢失或篡改。我们利用区块链提供安全效率，并通过理论分析验证了其可行性和安全性。进一步的实验证明了SE的有效性。
+
+
+    **关键词—** 搜索加密；多关键字；去中心化；加密；区块链。
+
+
+    动态用户管理是SE的一个重要方向。它不仅降低了客户端的计算复杂度，还实现了安全的动态组管理。TTP（代理）的使用也是大多数基于动态搜索加密方案所的策略。Li,
+    Huang [15] 进一步设计了一种支持细粒度结果的多关键字搜索方案。
+
+
+    目前，如Azure和Google App Engine等服务器提供商通过身份验证和ACL（访问控制列表）保护用户隐私 [16]。然而，这些应用是构建在服务器可信的假设上的。在实际实现中，云服务提供商可以依赖用户隐私，服务器是半可信但具有好奇心的。尽管搜索加密技术解决了云端数据隐私与可用性之间的矛盾，但还没有成熟的商业应用。在加密的基础上，密文文档和搜索过程增加了带宽和经济成本；其他许多应用场景方案在功能、效率和安全性方面仍需改进。
+
+
+    # I. 引言
+
+
+    搜索加密是一种保护用户数据安全和查询隐私且不影响数据检索的技术。基本场景是：用户加密自己的数据，生成关键字并上传到云端。当他需要检索数据时，将关键字提交给云服务器。云端不知道关键字或密文，但利用关键字的陷阱（traps）来检索数据的密文，然后返回结果
+    [1]。
+
+
+    搜索加密主要分为对称和非对称。然而，根据创建者和搜索者的数量还可以进一步细分。其研究具有许多属性，如效率、安全性、正确性等 [4–7]；Jin Li [8]
+    提出了支持加密关键字搜索的开关。Wang [9] 提出了支持范围搜索查询的方案。B [10] 提出支持在密文中进行搜索加密。Hector [11] 提出了支持加密搜索的SQL查询。服务器不需要解密密文，而是对密文进行操作，这进一步增加了搜索加密的潜力，但目前同态加密的效率尚不可用。Yong
+    H [13] 提出了支持多用户文件共享和多关键字高效搜索的公钥方案。Dong [14] 使用TTP（第三方）来管理和分配密钥，使用El-Gamal代理加密，这种方法不仅降低了客户端的计算复杂度……
+
+
+    SE中的用户管理通常由TTP实现，但TTP与用户之间存在许多问题，例如单点故障、身份泄露、在实践中难以找到所有人都信任的TTP等。这些问题与服务的可用性、效率和安全性有关。
+
+
+    本文中，我们提出了一种基于区块链的方案，可以实现用户组内的文件共享和无代理的动态用户管理。该场景支持不同的创建者和搜索者，即不同创建者创建的密文和关键字可以被不同的搜索者检索。基于对支持交集关键字搜索索引现有现有分析，我们的贡献总结如下：
+
+
+    - 一种基于区块链的方案，可以实现用户组内的文件共享和无代理的动态用户管理。
+
+    - 在支持不同创建者和搜索者的场景基础上，该方案自然具有多服务索引书的特征，带来了系统的可用性。
+
+    - 我们从理论上证明了所提方案的可行性，并在传统的可搜索系统中实现了该原理。进一步的实验表明，与传统方案相比，我们的方案在用户管理方面具有高效率和易用性的特点。
+
+
+    本文其余部分的结构如下：第2节介绍方案的预备知识、双线性映射和区块链。第3节提出了我们方案的模型和结构。第4节介绍了基于区块链的架构。第5节涵盖了方案的原理验证，包括理论证明、优势描述和加密可行性。第6节总结全文。
+
+
+    # II. 预备知识
+
+
+    # A. 双线性映射
+
+
+    对于任意具有相同素数阶的两个群 $G_1, G_2$，存在一个满足 $G_1 \times G_2 \rightarrow G_2$ 的双线性映射 $e$，它具有如下属性：
+
+
+    - 1) 双线性：对于群 $G_1$ 中的任意 $a_1, a_2$ 和群 $G_2$ 中的任意 $b_1, b_2，$e(a_1a_2, b_1b_2)
+    = e(a_1, b_1)^{a_2b_2}$；
+
+    - 2) 非退化：如果 $g_1, g_2$ 是 $G_1$ 的生成器，则 $e(g_1, g_2)$ 是 $G_2$ 的生成器；
+
+    - 3) 计算性：对于群 $G_1$ 中的任意元素 $g^a, g^b$，其中a, b \in Z_p，$e(g^a, g^b)$ 可以在多项式时间内计算。
+
+
+    # B. 区块链与智能合约
+
+
+    区块链是一种使用加密技术来保证系统共识和信誉的时间有序数据结构。其优势主要包含以下方面：
+
+
+    - 1) 去中心化：系统的管理由多个节点执行，增加了系统的透明度和公平性。
+
+    - 2) 防篡改：基于哈希函数的数据结构可以存储信息的关联，篡改可以通过链检测。
+
+    - 3) 强容错性：共识算法和多个备份可以检测并拒绝恶意行为者和攻击者。
+
+    - 4) 无第三方：智能合约是运行在区块链上的代码，用于确保协议。它由事件触发，使得能够消除可能不可信的第三方。
+
+
+    在我们的方案中，我们使用区块链和智能合约来管理用户密钥的生成和分配，而不是TTP，这给了用户更大的自主权并避免了密钥被TTP破解的风险。
+
+
+    考虑到搜索加密中的多方关系、共识算法的效率，该方案通过区块链平台满足不同用户的需求（如联盟链、公有链）。后续工程实验也将基于区块链。
+
+
+    # C. 索引结构
+
+
+    我们方案中的加密对象是基于文本的非结构化。用户存储一个文档集 $D=\{d_1, d_2, ..., d_n\}$，每个文档都有一个对应的索引结构，以json格式记录其属性域。1:
+    $attr(d) = \{name: value; name: value; ...\}$，例如年龄、作者、高度等。文档之间可能存在整体差异，因此索引结构和数据在服务器上分别存储和检索。
+
+
+    ![](img/2a600712fcb0af2f22fbfb36492ba977_1_0.png)
+
+
+    # III. 系统模型与方案流程
+
+
+    方案涉及区块链管理的两个参与者
+
+
+    - 用户：U代表一个用户组 $U_1, U_2, ...$，这些用户负责加密和查询。组中的每个用户拥有许多权限，包括加密、解密和搜索。此外，每个用户都可以搜索并解密其他用户的加密文档。
+
+    - CSP（云服务提供商）：CSP提供用户服务器存储、服务加密和密钥服务。通常，CSP是诚实的，不会违反服务合同，但可能会好奇并分析用户行为以获取隐私。区块链负责为每个组员计算、计算和分配公钥，以实现组管理，包括密钥分配和权限撤销。规则写在智能合约中以便预先共识，并由触发的事件自动执行。
+
+
+    '
+  merge: -1
+- raw:
+  - "[PAGE 2]\n\n![](img/2a600712fcb0af2f22fbfb36492ba977_2_0.png)\n\nFig. 2. System\
+    \ model\n\nReferring to the figure in Figure 2.\n\n+   1) system boot: Blockchain\
+    \ generate parity systems and keys for group member, then distribute keys to each\
+    \ user and cloud server to store.\n2) encryption process: User uses symmetric\
+    \ key to encrypt the document, then uses her other key to encrypt symmetric key\
+    \ and indices. Package the encrypted documents,key to the server. The server uses\
+    \ user's other half key to approve the proxy encryption, stores the rest encrypted\
+    \ indices.\n3) query process: user uses her key to generate the parity of the\
+    \ keyword and sends it to the server, then uses the other half key to decrypt\
+    \ the entire document, then use it to search.\n4) decryption process: for documents\
+    \ that are eligible for search, server will execute first decryption for file\
+    \ keys, then after using user's own key, she will be able to decrypt the file.\n\
+    \n# IV. PROPOSED SCHEME\n\n# A. Initialization\n\n+   - System boot: SystemSetup($r)$\r\
+    ightarrow$ (param, MSK). The initial parameters are generated by SystemSetup which\
+    \ is inserted into the smart contract. The input parameter $r$ is bit length of\
+    \ prime number to generate the group $(G_1, G_2, p, g, h)$. $g_i$ are generated\
+    \ separately in $G_1; G_2$ includes prime groups $G_1, G_2$ of order $p$, a binary\
+    \ map $g: G_i \rightarrow H$ and an anti-collision function $f \rightarrow H$.\n\
+    Smart contract randomly chooses $x$ which is generated and stores it as master\
+    \ key(MSK) while others can be published publicly.\n- Key generation and distribution:\
+    \ KeyGen(MSK) $\rightarrow$ $(K_u, K_s)$, in our scheme two sets of keys are generated\
+    \ separately for users and cloud, which is the foundation of dynamic\n\nmembership\
+    \ management. Key generation function is also written in the smart contract. The\
+    \ membership management smart contract generates $x_i$ from $Z_p^*$ for each user,\
+    \ $x_i$ which satisfies $x_i^r = MSK(id)$. After that it will send $(id_u, x_u^{-1})$\
+    \ to user $u$ and $(id_u, x_u)$ to CSP (Cloud Service Provider) through such channel.\
+    \ CSP keeps the users' other half key in a table, performing for encryption, decryption,\
+    \ and query.) (Referring to the figure in Figure 3.\n\n![](img/2a600712fcb0af2f22fbfb36492ba977_2_1.png)\n\
+    \nFig. 3. Scheme Process\n\n# B. Index Building\n\n+   - User-side: $Ek_I = E_K(D)$\
+    \ and user key $K_u = x_u$. For $i$-th document $D^j$-th keyword $w_j$"
+  - '[PAGE 3]
+
+
+    Finally, the cloud server $E_{K_c}(I(D)) = E_{K_c}(E_k(D), f^{MSK})$, of which
+    is the cipher index of document $d$ generated.
+
+
+    # V. PRINCIPLE VERIFICATION AND FEASIBILITY ANALYSIS
+
+
+    # A. Index theory proof and security analysis
+
+
+    Right half:
+
+
+    Equation verification:Take equation(4) into consideration.
+
+
+    1. User search: user uses the keyword trap $Trap \equiv (id_u, g^{\gamma_u}, g^{\sigma_u},
+    \sigma_{i_1}, ..., \sigma_{i_m})$, which is generated from $Z_u$, $y = g^{\gamma_u}
+    = g^{\delta}$, and $g^{\sigma_u} = y^{g_{i_2}}(I_{i_1}, ..., I_{i_m})$ is an out-of-range
+    index of keywords which has
+
+
+    ![](img/2a600712fcb0af2f22fbfb36492ba977_3_0.png)
+
+
+    2. Client: when the client sends $Trap = (id_u, g^{\gamma_u}, g^{\sigma_u}, \sigma_{i_1},
+    ..., \sigma_{i_m})$, if first search $x_2$ using $id_u$, then uses $x_2$ to encrypt
+    $\gamma$ and $\delta$, since $g^{\gamma_u} = g^{\delta}$, then the final trap
+    will be $Trap$ which means only the server is able to search, effectively prevent
+    the in-middle attack.
+
+
+    Combined with previous storage
+
+
+    Meanwhile the left half of equation(4):
+
+
+    $E_{K_c,K_k}(I(D)) = E_{K_c}(E_k(D), w_1), ..., I_{d_1}, ..., I_{d_m} = g^{\sigma_{i_1}},
+    ..., g^{\sigma_{i_m}}, (C_m)$, check: whether these
+
+
+    $e(\delta^2, g^{\sigma}) = e(e(\delta,x_{x_2})^{\sum \sigma_i}, C) = e(C,x_{x_2}^2)^{\sum
+    \sigma_i}}$
+
+
+    ![](img/2a600712fcb0af2f22fbfb36492ba977_3_1.png)
+
+
+    in the cloud storage, that means the search is a success. According to the previous
+    scheme $E_{K_c,K_k}(I(D)) = E_{K_c}(E_k(D), f^{MSK})$, CSP first computes $f^{MSK}y^{\sigma_i}$
+    using $x_{x_2}^2$, returns the result with $E_{K_c}(E_k(D))$. Otherwise, returns
+    1.
+
+
+    When user gets the result $E_{K_c}(E_k(D))$, he then computes file key using his
+    private key $x_{x_1}^{-1}$ to decrypt $E_k(D)$.
+
+
+    Blockchain-based user management: for each
+
+
+    who wants to join smart contracts, quite can register $x_1, x_2$ for him and key
+    pair $(x_2, x_2'')$ for cloud, which satisfies $x_1^2 = x_2^2$, of $x$ is registered
+    through blockchain, key pair is transferred through blockchain de-of-contract.
+    otherwise, it cannot
+
+
+    # E. Blockchain-based membership management
+
+
+    Prevent-In-the-middle attack(MITM): Some attacker
+
+
+    To the best of our knowledge, we are the first to try to realize user management
+    with TTP (Triple Trust) using blockchain.
+
+
+    attacker monitors communication between CSP and registered users, the search query
+    $Trap \equiv (id_u, g^{\gamma_u}, g^{\sigma_u}, \sigma_{i_1}, ..., \sigma_{i_m})$
+    is registered, and the result is
+
+
+    In our scheme, blockchain with smart contract can solve the problem of TTP membership
+    mentioned.
+
+
+    the user $rs = (E_{K_c}(E_k(D)))$. Since using $x_{x_1}^{-1}$ is a Discrete Logarithm
+    Problem (DLP), the possibility that an attacker can decrypt $x_1$ is impossible.
+
+
+    With regards to issues, as shown in fig. 3, smart contracts separates $x_1, x_2$
+    for user and CSP, $MSK$ is put into the blockchain, which means the success of
+    a user''s joining.
+
+
+    it means that the attacker can decrypt $E_{fk}(D)$, which can be ignored. We have
+    proved that the scheme can prevent MITM attacks.
+
+
+    In addition to new users, the revocation of user''s identity is possible for user
+    management. When user needs to be registered, smart contract will send order,
+    ask CSP to delete the user half storage $(id_u, x_2, x_2^{-1})$, then user can
+    neither search nor distinguish result by using his private key $x_{x_1}^{-1}$,
+    meanwhile, he cannot get encrypted documents shared by other users unless smart
+    contract registers a key for him.
+
+
+    # B. Principle verification system pressure test
+
+
+    We verified our scheme from the perspective of engineering. As shown in Table
+    1. The situation
+
+
+    2500 users invoke operations/relation to key distribution within 5000 seconds
+    continuously until the operation is repeated 300 times.
+
+
+    From figure 4 we can see the success number fluctuations fluctuate a lot at time.
+    By the end of the elapsed time, there is an upward trend in the rate of transactions.
+
+
+    4'
+  - '[PAGE 4]
+
+
+    # TABLE I
+
+    SYSTEM CONFIGURATION AND EXPERIMENTAL ENVIRONMENT
+
+
+    | Feature | Value |
+
+    |---|---|
+
+    | Operation System | Ubuntu Linux version 4.4 |
+
+    | Network test tool | Apache JMeter, mainly invoke operation |
+
+    | Hyperledger fabric edition | 2 machines with same configuration(2CPU, 32G) |
+
+    | Blockchain node status | includes 1 orderer nodes and 1 peer node Kafka cluster
+    |
+
+    | Test scant command | chain-codeexample2;generic |
+
+    | Number of Thread | 250 |
+
+    | Ramp-Up Period(in seconds) | 300 |
+
+    | Loop Count | 300 |
+
+
+    ![](img/2a600712fcb0af2f22fbfb36492ba977_4_0.png)
+
+
+    transactions become stable, fluctuating around 400 tps (transactions per second).
+
+
+    As for the fluctuations, it is consistent with blockchain
+
+    record mechanism. Unlike traditional channel membership
+
+    agystem (TTP, Trusted third party), who do record
+
+    authority or revocation when an event is issued
+
+    immediately. The code shows that a membership management
+
+    behavior is its its (such as identity, key),
+
+    exists in the blocks. The theory is based on a block
+
+    generation of issue and block generation, after which
+
+
+    According to fabric strategy, a new block
+
+    be triggered when one of two conditions is met. It is
+
+    that the number of transactions in the blocks reaches the
+
+    limit of allocation. Second, the number of transactions
+
+    counts, but can also be generated when
+
+    the time reaches the preset period. Both could be set
+
+    to transaction frequency and volume business.
+
+
+    In our simulation, stress tests were carried out without
+
+    dish to consider-test-because of the impact of large
+
+    transaction volume. The fluctuation around the stable mean
+
+    dis due to the block size and the number of
+
+    transactions to reach the preset limit, which is when
+
+    the fluctuation emerges. The more, one is when
+
+    tps exceeds the system nodes processing capacity. At this
+
+    time, the system may become unstable and the probability
+
+    ofissue failure will, this is why history and failure
+
+    line emerge in the figure 4 when times exceeds
+
+    25 minutes.
+
+
+    Issue refers to membership behaviors which
+
+    as key distribution, revocation, etc.
+
+
+    # C. Advantage analysis
+
+
+    Blockchain has the characteristics of multi-node block,
+
+    each node has the entry ledger, which means it is
+
+    decentralized management service, which is secure
+
+    compared with TTP (Trusted Third Party). Each node can
+
+    provide basic management service. The scheme can also get rid
+
+    single point of failure by TTP. The flow of orders and
+
+    cloud services are written into the blockchain in the
+
+    form of "contracts", and when "contracts" are triggered
+
+    by events to execute (automatically), so to realize the
+
+
+    management of users and cloud. There is no need
+
+    to worry about the theft, tampering and disclosure of user
+
+    identities, and other data by TTP. Multi-node
+
+    also makes supervision possible, for that, nodes are deployed
+
+    the service department exists to work the flow of
+
+    cloud, make no one violates the "pre-set" contract.
+
+
+    # VI. CONCLUSION
+
+
+    This scheme is a beneficial implementation of blockchain applic-
+
+    ication searchable encryption. The trust mechanism based
+
+    blockchain leads to a new type of non-
+
+    consensus-based trust relation, which can make
+
+    research points and open a new direction for solving
+
+    t problems in searchable environment.
+
+
+    # VII. ACKNOWLEDGEMENT
+
+
+    This work is supported by the National Key Research
+
+    d Development of China Program (2017YFB0802300)
+
+    (2017YFB0802300), the main science and tech-
+
+    projects in Sichuan Province, Research and development
+
+    d implementation of key technologies, by Part of
+
+    city government and information horizons
+
+    (2017GTZ20002), the Applied Basic Research Project
+
+    of Sichuan Province''s Research and Development Plan "Dist-
+
+    ecur Storage Technology for Massive Sensitive Data"
+
+    (2020YFG00298)
+
+
+    # REFERENCES
+
+
+    +   [1] Lu Y, Tsudik G. Enhancing data privacy in the blockchain[J]. Trust Manage-
+
+    ment V. 2011:117-132.
+
+
+    5
+
+    Authorized licensed limited to use: San Francisco State. Date 2021/09/26 09:28:32
+    UTC from IEEE Xplore. Restrictions apply.'
+  md: '
+
+    ![](img/2a600712fcb0af2f22fbfb36492ba977_2_0.png)
+
+
+    Fig. 2. System model
+
+
+    Referring to the figure in Figure 2.
+
+
+    - 1) system boot: Blockchain generate parity systems and keys for group member,
+    then distribute keys to each user and cloud server to store.
+
+    - 2) encryption process: User uses symmetric key to encrypt the document, then
+    uses her other key to encrypt symmetric key and indices. Package the encrypted
+    documents, key to the server. The server uses user''s other half key to approve
+    the proxy encryption, stores the rest encrypted indices.
+
+    - 3) query process: user uses her key to generate the parity of the keyword and
+    sends it to the server, then uses the other half key to decrypt the entire document,
+    then use it to search.
+
+    - 4) decryption process: for documents that are eligible for search, server will
+    execute first decryption for file keys, then after using user''s own key, she
+    will be able to decrypt the file.
+
+
+    # IV. PROPOSED SCHEME
+
+
+    ## A. Initialization
+
+
+    - System boot: SystemSetup($r) \rightarrow (param, MSK)$. The initial parameters
+    are generated by SystemSetup which is inserted into the smart contract. The input
+    parameter $r$ is bit length of prime number to generate the group $(G_1, G_2,
+    p, g, h)$. $g_i$ are generated separately in $G_1$; $G_2$ includes prime groups
+    $G_1, G_2$ of order $p$, a binary map $g: G_i \rightarrow H$ and an anti-collision
+    function $f \rightarrow H$. Smart contract randomly chooses $x$ which is generated
+    and stores it as master key(MSK) while others can be published publicly.
+
+    - Key generation and distribution: KeyGen(MSK) $\rightarrow (K_u, K_s)$, in our
+    scheme two sets of keys are generated separately for users and cloud, which is
+    the foundation of dynamic membership management. Key generation function is also
+    written in the smart contract. The membership management smart contract generates
+    $x_i$ from $Z_p^*$ for each user, $x_i$ which satisfies $x_i^r = MSK(id)$. After
+    that it will send $(id_u, x_u^{-1})$ to user $u$ and $(id_u, x_u)$ to CSP (Cloud
+    Service Provider) through such channel. CSP keeps the users'' other half key in
+    a table, performing for encryption, decryption, and query. (Referring to the figure
+    in Figure 3.)
+
+
+    ![](img/2a600712fcb0af2f22fbfb36492ba977_2_1.png)
+
+
+    Fig. 3. Scheme Process
+
+
+    ## B. Index Building
+
+
+    - User-side: $Ek_I = E_K(D)$ and user key $K_u = x_u$. For $i$-th document $D^j$-th
+    keyword $w_j$, Finally, the cloud server $E_{K_c}(I(D)) = E_{K_c}(E_k(D), f^{MSK})$,
+    of which is the cipher index of document $d$ generated.
+
+
+    # V. PRINCIPLE VERIFICATION AND FEASIBILITY ANALYSIS
+
+
+    ## A. Index theory proof and security analysis
+
+
+    Right half:
+
+
+    Equation verification: Take equation(4) into consideration.
+
+
+    1. User search: user uses the keyword trap $Trap \equiv (id_u, g^{\gamma_u}, g^{\sigma_u},
+    \sigma_{i_1}, ..., \sigma_{i_m})$, which is generated from $Z_u$, $y = g^{\gamma_u}
+    = g^{\delta}$, and $g^{\sigma_u} = y^{g_{i_2}}(I_{i_1}, ..., I_{i_m})$ is an out-of-range
+    index of keywords which has
+
+
+    ![](img/2a600712fcb0af2f22fbfb36492ba977_3_0.png)
+
+
+    2. Client: when the client sends $Trap = (id_u, g^{\gamma_u}, g^{\sigma_u}, \sigma_{i_1},
+    ..., \sigma_{i_m})$, if first search $x_2$ using $id_u$, then uses $x_2$ to encrypt
+    $\gamma$ and $\delta$, since $g^{\gamma_u} = g^{\delta}$, then the final trap
+    will be $Trap$ which means only the server is able to search, effectively prevent
+    the in-middle attack.
+
+
+    Combined with previous storage
+
+
+    Meanwhile the left half of equation(4):
+
+
+    $E_{K_c,K_k}(I(D)) = E_{K_c}(E_k(D), w_1), ..., I_{d_1}, ..., I_{d_m} = g^{\sigma_{i_1}},
+    ..., g^{\sigma_{i_m}}, (C_m)$, check: whether these
+
+
+    $e(\delta^2, g^{\sigma}) = e(e(\delta,x_{x_2})^{\sum \sigma_i}, C) = e(C,x_{x_2}^2)^{\sum
+    \sigma_i}}$
+
+
+    ![](img/2a600712fcb0af2f22fbfb36492ba977_3_1.png)
+
+
+    in the cloud storage, that means the search is a success. According to the previous
+    scheme $E_{K_c,K_k}(I(D)) = E_{K_c}(E_k(D), f^{MSK})$, CSP first computes $f^{MSK}y^{\sigma_i}$
+    using $x_{x_2}^2$, returns the result with $E_{K_c}(E_k(D))$. Otherwise, returns
+    1.
+
+
+    When user gets the result $E_{K_c}(E_k(D))$, he then computes file key using his
+    private key $x_{x_1}^{-1}$ to decrypt $E_k(D)$.
+
+
+    Blockchain-based user management: for each user who wants to join, smart contracts
+    can register $x_1, x_2$ for him and key pair $(x_2, x_2'')$ for cloud, which satisfies
+    $x_1^2 = x_2^2$, the key pair is transferred through blockchain, otherwise, it
+    cannot.
+
+
+    ## E. Blockchain-based membership management
+
+
+    Prevent-In-the-middle attack(MITM): To the best of our knowledge, we are the first
+    to realize user management with TTP (Triple Trust) using blockchain. attacker
+    monitors communication between CSP and registered users, the search query $Trap
+    \equiv (id_u, g^{\gamma_u}, g^{\sigma_u}, \sigma_{i_1}, ..., \sigma_{i_m})$ is
+    registered, and the result is $rs = (E_{K_c}(E_k(D)))$. Since $x_{x_1}^{-1}$ is
+    a Discrete Logarithm Problem (DLP), the possibility that attacker can decrypt
+    $x_1$ is impossible.
+
+
+    With regards to issues, as shown in fig. 3, smart contracts separates $x_1, x_2$
+    for user and CSP, $MSK$ is put into blockchain, which means the success of user''s
+    joining. We have proved that the scheme can prevent MITM attacks. In addition
+    to new users, revocation of user''s identity is possible for user management.
+    When user needs to be registered, smart contract will send order, ask CSP to delete
+    half storage $(id_u, x_2^{-1})$, then user can neither search nor distinguish
+    result get encrypted documents shared by other users using his private key $x_{x_1}^{-1}$.
+
+
+    ## B. Principle verification and pressure test
+
+
+    We verified our scheme from the perspective of engineering. As shown in Table
+    1, 2500 users invoke operations continuously within 5000 seconds until operation
+    is repeated. From figure 4 we can see the success number fluctuate a lot. By the
+    end of elapsed time, there is an upward trend in the rate of transactions.
+
+
+    # TABLE I SYSTEM CONFIGURATION AND EXPERIMENTAL ENVIRONMENT
+
+
+    | Feature | Value |
+
+    |---|---|
+
+    | Operation System | Ubuntu Linux version 4.4 |
+
+    | Network test tool | Apache JMeter, generic operation |
+
+    | Hyperledger fabric edition | 2 machines with same configuration(2CPU, 32G) |
+
+    | Blockchain node status | includes 1 orderer nodes and 1 peer node Kafka cluster
+    |
+
+    | Test command | chaincode |
+
+    | Number of Thread | 250 |
+
+    | Ramp-Up Period(seconds) | 300 |
+
+    | Loop Count | 300 |
+
+
+    transactions become stable, fluctuating around 400 tps (transactions per second).
+    As for the fluctuations, it is consistent with blockchain record mechanism. Unlike
+    traditional system (TTP, Trusted third party), who do record authority when an
+    event is issued immediately, the code shows that membership management behavior
+    exists in the blocks (such as identity, key). The theory is based on block generation,
+    which according to fabric strategy, a new block is triggered when one of two conditions
+    is met. First, the number of transactions in the blocks reaches the limit of allocation.
+    Second, the number of transactions counts, but also be generated when the time
+    reaches the preset period. Both could be set to transaction frequency and volume.
+    In our simulation, stress tests were carried out because of the impact of large
+    transaction volume. The fluctuation around the stable mean due to the block size
+    and the number of transactions to reach the preset limit, which is when fluctuation
+    emerges. The more is when tps exceeds system nodes processing capacity. At this
+    time, the system may become unstable and the probability of failure will, this
+    is why history and failure line emerge in figure 4 when times exceeds 25 minutes.
+    Issue refers to membership behaviors which as key distribution, etc.
+
+
+    ## C. Advantage analysis
+
+
+    Blockchain has the characteristics of multi-node block, each node has entry ledger,
+    which means it is decentralized management service, which is secure compared with
+    TTP (Trusted Third Party). Each node can provide basic management service. The
+    scheme can also get rid single point of failure by TTP. The flow of orders and
+    cloud services are written into the blockchain in the form of "contracts", and
+    when "contracts" are triggered by events to execute (automatically), so to realize
+    the management of users and cloud. There is no need to worry about the theft,
+    tampering and disclosure of user identities, and other data by TTP. Multi-node
+    also makes supervision possible, for that, nodes are deployed the service department
+    exists to work the flow of cloud, make no one violates the "pre-set" contract.
+
+
+    # VI. CONCLUSION
+
+
+    This scheme is a beneficial implementation of blockchain application searchable
+    encryption. The trust mechanism based blockchain leads to a new type of nonconsensus-based
+    trust relation, which can make research points and open a new direction for solving
+    problems in searchable environment.
+
+
+    # VII. ACKNOWLEDGEMENT
+
+
+    This work is supported by the National Key Research and Development of China Program
+    (2017YFB080230) (2017YFB080230), the main science and tech-projects in Sichuan
+    Province, Research and development implementation of key technologies, by Part
+    of city government and information horizons (2017GTZ20002), the Applied Basic
+    Research Project of Sichuan Province''s Research and Development Plan "Secure
+    Storage Technology for Massive Sensitive Data" (2020YFG00298).
+
+
+    # REFERENCES
+
+
+    [1] Lu Y, Tsudik G. Enhancing data privacy in the blockchain[J]. Trust Management
+    V. 2011:117-132.
+
+    '
+  mdcn: '
+
+
+    ![](img/2a600712fcb0af2f22fbfb36492ba977_2_0.png)
+
+
+    图 2. 系统模型
+
+
+    参考图 2。
+
+
+    - 1) 系统启动：区块链为组员生成奇偶校验系统和密钥，然后将密钥分发给每个用户和云服务器进行存储。
+
+    - 2) 加密过程：用户使用对称密钥加密文档，然后使用其另一个密钥加密对称密钥和索引。将加密后的文档、密钥发送到服务器。服务器使用用户的另一半密钥通过代理加密，存储剩余的加密索引。
+
+    - 3) 查询过程：用户使用其密钥生成关键词的奇偶校验并发送到服务器，然后使用另一半密钥解密整个文档，并对其进行搜索。
+
+    - 4) 解密过程：对于符合搜索条件的文档，服务器将首先对文件密钥执行首次解密，在使用用户自己的密钥后，用户将能够解密该文件。
+
+
+    # IV. 提出的方案
+
+
+    ## A. 初始化
+
+
+    - 系统启动：SystemSetup($r) \rightarrow (param, MSK)$。初始参数由 SystemSetup 生成并插入智能合约中。输入参数
+    $r$ 是生成群 $(G_1, G_2, p, g, h)$ 的素数位长度。$g_i$ 在 $G_1$ 中分别生成；$G_2$ 包含阶为 $p$ 的素数群
+    $G_1, G_2$、一个二进制映射 $g: G_i \rightarrow H$ 和一个抗冲突函数 $f \rightarrow H$。智能合约随机选择生成的
+    $x$ 并将其存储为主密钥(MSK)，而其他部分可以公开。
+
+    - 密钥生成与分：KeyGen(MSK) $\rightarrow (K_u, K_s)$，在我们方案中，为用户和云端分别生成两组密钥，这是动态成员管理的基础。密钥生成函数也写在智能合约中。成员管理智能合约为每个用户从
+    $Z_p^*$ 生成 $x_i$，该 $x_i$ 满足 $x_i^r = MSK(id)$。之后，它通过此类通道将 $(id_u, x_u^{-1})$ 发给用户
+    $u$，将 $(id_u, x_u)$ 发给 CSP（云服务提供商）。CSP 将用户的另一半密钥保留在表中，用于加密、解密和查询。（参考图 3。）
+
+
+    ![](img/2a600712fcb0af2f22fbfb36492ba977_2_1.png)
+
+
+    图 3. 方案流程
+
+
+    ## B. 索引构建
+
+
+    - 用户端：$Ek_I = E_K(D)$ 用户密钥 $K_u = x_u$。对于第 $i$ 个文档 $D$ 的第 $j$ 个关键词 $w_j$，最终云服务器生成
+    $E_{K_c}(I(D)) = E_{K_c}(E_k(D), f^{MSK})$，即文档 $d$ 的密索引。
+
+
+    # V. 原理验证与可行性分析
+
+
+    ## A. 索引理论证明与安全性分析
+
+
+    右侧：
+
+
+    方程验证：考虑方程(4)。
+
+
+    1. 用户搜索：用户使用关键词陷阱 $Trap \equiv (id_u, g^{\gamma_u}, g^{\sigma_u}, \sigma_{i_1},
+    ..., \sigma_{i_m})$，其由 $Z_u$ 生成，$y = g^{\gamma_u} = g^{\delta}$，且 $g^{\sigma_u}
+    = y^{g_{i_2}}(I_{i_1}, ..., I_{i_m})$ 是超出关键词范围的索引，具有：
+
+
+    ![](img/2a600712fcb0af2f22fbfb36492ba977_3_0.png)
+
+
+    2. 客户端：当客户端发送 $Trap = (id_u, g^{\gamma_u}, g^{\sigma_u}, \sigma_{i_1}, ..., \sigma_{i_m})$
+    时，如果使用 $id_u$ 首次搜索 $x_2$，则使用 $x_2$ 加密 $\gamma$ 和 $\delta$，由于 $g^{\gamma_u} = g^{\delta}$，最终陷阱将是
+    $Trap$，这意味着只有服务器能够搜索，有效防止了中间人攻击。
+
+
+    结合之前的存储
+
+
+    同时考虑方程(4)的左侧：
+
+
+    $E_{K_c,K_k}(I(D)) = E_{K_c}(E_k(D), w_1), ..., I_{d_1}, ..., I_{d_m} = g^{\sigma_{i_1}},
+    ..., g^{\sigma_{i_m}}, (C_m)$，检查：这些
+
+
+    $e(\delta^2, g^{\sigma}) = e(e(\delta,x_{x_2})^{\sum \sigma_i}, C) = e(C,x_{x_2}^2)^{\sum
+    \sigma_i}}$
+
+
+    ![](img/2a600712fcb0af2f22fbfb36492ba977_3_1.png)
+
+
+    是否在云存储中，这意味着搜索成功了。根据之前的方案 $E_{K_c,K_k}(I(D)) = E_{K_c}(E_k(D), f^{MSK})$，CSP 首先使用
+    $x_{x_2}^2$ 计算 $f^{MSK}y^{\sigma_i}$，返回结果 $E_{K_c}(E_k(D))$。否则，返回 1。
+
+
+    当用户获得结果 $E_{K_c}(E_k(D))$ 时，他随后使用私钥 $x_{x_1}^{-1}$ 计算文件密钥来解密 $E_k(D)$。
+
+
+    基于区块链的用户管理：对于每个想要加入的用户，智能合约可以为其注册 $x_1, x_2$，并为云端注册密钥对 $(x_2, x_2'')$，满足 $x_1^2
+    = x_2^2$，该密钥对通过区块链传输，否则无法传输。
+
+
+    ## E. 基于区块链的成员管理
+
+
+    防止中间人攻击 (MITM)：据我们所知，我们是第一个利用区块链和 TTP（三重信任）实现用户管理的。攻击者监控 CSP 与注册用户之间的通信，搜索查询 $Trap
+    \equiv (id_u, g^{\gamma_u}, g^{\sigma_u}, \sigma_{i_1}, ..., \sigma_{i_m})$ 被注册，结果为
+    $rs = (E_{K_c}(E_k(D)))$。由于 $x_{x_1}^{-1}$ 是离散数问题（DLP），攻击者解密 $x_1$ 的可能性不存在。
+
+
+    关于问题，如图 3 所示，智能合约为用户和 CSP 分离了 $x_1, x_2$MSK$ 被放入区块链，这意味着用户加入的成功。我们已经证明了该方案可以防止
+    MITM 攻击。除了新用户外，用户管理还可能撤销用户身份。当用户需要注销时，智能合约将发送指令，要求 CSP 删除部分存储 $(id_u, x_2^{-1})$，然后用户既无法搜索，也无法使用其私钥
+    $x_{x_1}^{-1}$ 区分其他用户共享的加密文档结果。
+
+
+    ## B. 原理验证与压力测试
+
+
+    我们从工程角度验证了我们的方案。如表 1 所示，2500 个用户在 5000 秒内连续调用操作，直到操作重复。从图 4 可以看到成功数量波动很大。随着经过时间的结束，交易速率呈现上升趋势。
+
+
+    交易变得稳定，在 400 tps（每秒交易数）左右波动。至于波动，这与区块链记录机制一致。与传统系统（TTP，受信第三方）在事件发布时立即记录权威性不同，代码显示成员管理行为存在于区块中（如身份、密钥）。该理论基于区块生成，根据
+    fabric 策略，当满足两个条件之一时，就会触发一个新区块。
+
+
+    # 表 I 系统配置与实验环境
+
+
+    | 特性 | 值 |
+
+    |---|---|
+
+    | 操作系统 | Ubuntu Linux 版本 4.4 |
+
+    | 网络测试工具 | Apache JMeter, 通用操作 |
+
+    | Hyperledger fabric 版本 | 2 台配置相同的机器(2CPU, 32G) |
+
+    | 区块链节点状态 | 包含 1 个排序器节点和 1 个对等节点 Kafka 集群 |
+
+    | 测试命令 | chaincode |
+
+    | 线程数 | 250 |
+
+    | 启动阶段（秒） | 300 |
+
+    | 循环计数 | 300 |
+
+
+    交易变得稳定，在 400 tps 左右波动。至于波动，这与区块链记录机制一致。与传统系统（TTP，受信第三方）在事件发布时立即记录权威性不同，代码显示成员管理行为存在于区块中（如身份、密钥）。该理论基于区块生成，根据
+    fabric 策略，当满足两个条件之一时，就会触发一个新区块。首先，区块中的数量达到限制。其次，交易计数达到预设时间。在我们的模拟中，由于交易量的影响，进行了压力测试。当
+    tps 超过系统节点处理能力时，系统可能会变得不稳定，这就是为什么在 25 分钟后出现了故障线。问题指的是成员行为等。
+
+
+    ## C. 优势分析
+
+
+    区块链具有多节点区块的特点，每个节点都有账本，这意味着它是去中心化管理，与 TTP（受信第三方）相比更安全。每个节点都可以提供基础管理服务。该方案还可以消除
+    TTP 的单点故障。多节点也使得监管成为可能，为此，服务部门存在，确保无人违反“预设”合约。
+
+
+    # VI. 结论
+
+
+    该方案是区块链应用搜索加密的一种有效实现。基于区块链的信任机制导致了新型非共识信任关系，为解决搜索环境中的问题开启了新方向。
+
+
+    # VII. 致谢
+
+
+    本工作感谢国家重点研发计划支持（2017YFB080230）（2017YFB080230）、四川省主要科技项目关键技术研发、部分市政府及信息产业支持（2017GTZ20002）、四川省应用基础研究计划“大规模敏感数据安全存储技术”（2020YFG00298）。
+
+
+    # 参考文献
+
+
+    [1] Lu Y, Tsudik G. Enhancing data privacy in the blockchain[J]. Trust Management
+    V. 2011:117-132.
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 5]
+
+
+    | Label | # Samples | Average | Min | Max | 90% Line | Std Dev | Error % | Throughput
+    | Received | Avg. Bts |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | metric | | 802775 | 315 | | 9401 | 1064 | 530.5 | 10.75% | | 1324 | 958.4 |
+
+    | TOTAL | | 802775 | 315 | 4 | 9401 | 1064 | 520.3 | 10.75% | | 1324 | 958.5 |
+
+
+    Figure 5. Index of position per search
+
+
+    | Label | # Samples | Average | Min | Max | 90% Line | Std Dev | Error % | Throughput
+    | Received | Avg. Bts |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | metric | | 821784 | 2784 | 397 | 11657 | 1058 | 321.5 | | 456.7 | 383 | 794.1
+    |
+
+    | TOTAL | | 821784 | 2784 | 3 | 11657 | 1058 | 321.5 | | 456.7 | 383 | 794.1 |
+
+
+    Figure 6. Index of position per search
+
+
+    +   [2] D. Practical Searches for Data[/]: Proceedings of IEEE 2000 Symposium
+    on Privacy and Security. IEEE, 2000:44-55.
+
+    [3] Chang Y, M Munchver P. Searching Keywords in Remote Data[/]: International
+    Conference on Applied Connectivity and Network Security. Springer, Berlin, 2014:361-369.
+
+    [4] Cash, David, et al. "Fast, scalable highly searchable keyword search with
+    boolean queries." In CRYPTOTO 2013. Springer, Berlin, 2013:251-268.
+
+    [5] Boyd, Steven F. "Forward Searchable Encryption." Proceedings of the 2016 ACM
+    SIGSAC Conference on Computer and Communications Security. ACM, 2016.
+
+    [6] Li, Hongkai. "Enabling granular multi-keyword search by partitioned sub-domains
+    over encrypted cloud data." IEEE Transactions on Database and Knowledge Systems
+    33(2016):312-325.
+
+    [7] Boyd, Raphael, Bryce Rice, and Olga Olshansky. "Forward and backward searchable
+    encodings from constrained primitives." Proceedings of the 2017 ACM SIGSAC Conference
+    on Computer and Communications Security. ACM, 2017.
+
+    [8] Lu, Qi, Cong W, et al. Keyword Search over Encrypted Cloud Data[/]: INFOCOM
+    2010, IEEE 2010:1-4-15.
+
+    [9] Wang, C, N, Li, J, et al. Ranked Keyword Search over Encrypted Cloud Data[/]:
+    International Conference on Distributed Computing (ICDC), 2010, IEEE, Genoa, Italy,
+    July 21-25, 2010:253-266.
+
+    [10] Hor B, Meredith S, Treidais G. A privacy-preserving index for encrypted data.
+    Tenth International Conference on Large Data Bases. VLDB Endowment, 2004:720-731.
+
+    [11] Hagan, Aaron Yi, et al. Encryptable SQL over an encrypted server-provider-model[/]:
+    Proceedings of the ACM SIGMOD International Conference on Data Management. 2002:216-227.
+
+    [12] Gentry. A fully homomorphic encryption scheme[/]. Stanford University, 2009.
+
+    [13] Yong H, Lee J C, Lee I. Public Key Encryption with Conjunctive Keyword Search
+    with Attention to a Multi-user Setting/International Conference on Pairing-based
+    Cryptography. 2007:2-22.
+
+    [14] Doug C, Russello G, Gully N. Sharded and Searchable Encrypted Data for Queries[/]:
+    Proceedings of the IEEE 113 Working Conference on Data and Applications Science.
+    2008:127-143.
+
+    [15] Li, Hongkai, et al. "Enabling fine-grained multi-keyword search sporty by
+    partitioned sub-domains over encrypted cloud data." IEEE Transactions on Database
+    and Knowledge Systems 33(2016):312-325.
+
+    [16] Agado, Guido N, Giumazato G, et al. Cryptography Goes to the
+
+
+    +   Cloud/C/ FTRA International Conference on Security and Trust, Data Management,
+    and Application. Springer Berlin Heidelberg, 2011:1-8.
+
+    [17] Hyperledger Project. Charles Ledger. https://hyperledger.org/character. Last
+    accessed 4 April 2018.
+
+    [18] Tsai, W, Yu, Wang, R, Li, N, et al. Blockchain application for healthcare.
+    IEEE International Conference on Information Processing, IEEE 2018:1477-1487.
+
+    [19] Yuan, Yong, Wang-Fei. Blockchain: the state of the art and future directions.
+    Automata and Systems 52(4),2019:481-494
+
+    [20] Cloud Computing and Application Development White Paper, http://www.stanford.edu/index/rub-6.html.
+    Last accessed 4 April 2018.'
+  md: '
+
+    | Label | # Samples | Average | Min | Max | 90% Line | Std Dev | Error % | Throughput
+    | Received | Avg. Bts |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | metric | | 802775 | 315 | | 9401 | 1064 | 530.5 | 10.75% | | 1324 | 958.4 |
+
+    | TOTAL | | 802775 | 315 | 4 | 9401 | 1064 | 520.3 | 10.75% | | 1324 | 958.5 |
+
+
+    Figure 5. Index of position per search
+
+
+    | Label | # Samples | Average | Min | Max | 90% Line | Std Dev | Error % | Throughput
+    | Received | Avg. Bts |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | metric | | 821784 | 2784 | 397 | 11657 | 1058 | 321.5 | | 456.7 | 383 | 794.1
+    |
+
+    | TOTAL | | 821784 | 2784 | 3 | 11657 | 1058 | 321.5 | | 456.7 | 383 | 794.1 |
+
+
+    Figure 6. Index of position per search
+
+
+    - [2] D. Practical Searches for Data: Proceedings of IEEE 2000 Symposium on Privacy
+    and Security. IEEE, 2000:44-55.
+
+    - [3] Chang Y, M Munchver P. Searching Keywords in Remote Data: International
+    Conference on Applied Connectivity and Network Security. Springer, Berlin, 2014:361-369.
+
+    - [4] Cash, David, et al. "Fast, scalable highly searchable keyword search with
+    boolean queries." In CRYPTO 2013. Springer, Berlin, 2013:251-268.
+
+    - [5] Boyd, Steven F. "Forward Searchable Encryption." Proceedings of the 2016
+    ACM SIGSAC Conference on Computer and Communications Security. ACM, 2016.
+
+    - [6] Li, Hongkai. "Enabling granular multi-keyword search by partitioned sub-domains
+    over encrypted cloud data." IEEE Transactions on Database and Knowledge Systems
+    33(2016):312-325.
+
+    - [7] Boyd, Raphael, Bryce Rice, and Olga Olshansky. "Forward and backward searchable
+    encodings from constrained primitives." Proceedings of the 2017 ACM SIGSAC Conference
+    on Computer and Communications Security. ACM, 2017.
+
+    - [8] Lu, Qi, Cong W, et al. Keyword Search over Encrypted Cloud Data: INFOCOM
+    2010, IEEE 2010:1-4-15.
+
+    - [9] Wang, C, N, Li, J, et al. Ranked Keyword Search over Encrypted Cloud Data:
+    International Conference on Distributed Computing (ICDC), 2010, IEEE, Genoa, Italy,
+    July 21-25, 2010:253-266.
+
+    - [10] Hor B, Meredith S, Treidais G. A privacy-preserving index for encrypted
+    data. Tenth International Conference on Large Data Bases. VLDB Endowment, 2004:720-731.
+
+    - [11] Hagan, Aaron Yi, et al. Encryptable SQL over an encrypted server-provider-model:
+    Proceedings of the ACM SIGMOD International Conference on Data Management. 2002:216-227.
+
+    - [12] Gentry. A fully homomorphic encryption scheme. Stanford University, 2009.
+
+    - [13] Yong H, Lee J C, Lee I. Public Key Encryption with Conjunctive Keyword
+    Search with Attention to a Multi-user Setting/International Conference on Pairing-based
+    Cryptography. 2007:2-22.
+
+    - [14] Doug C, Russello G, Gully N. Sharded and Searchable Encrypted Data for
+    Queries: Proceedings of the IEEE 113 Working Conference on Data and Applications
+    Science. 2008:127-143.
+
+    - [15] Li, Hongkai, et al. "Enabling fine-grained multi-keyword search sporty
+    by partitioned sub-domains over encrypted cloud data." IEEE Transactions on Database
+    and Knowledge Systems 33(2016):312-325.
+
+    - [16] Agado, Guido N, Giumazato G, et al. Cryptography Goes to the Cloud/C/FTRA
+    International Conference on Security and Trust, Data Management, and Application.
+    Springer Berlin Heidelberg, 2011:1-8.
+
+    - [17] Hyperledger Project. Charles Ledger. https://hyperledger.org/character.
+    Last accessed 4 April 2018.
+
+    - [18] Tsai, W, Yu, Wang, R, Li, N, et al. Blockchain application for healthcare.
+    IEEE International Conference on Information Processing, IEEE 2018:1477-1487.
+
+    - [19] Yuan, Yong, Wang-Fei. Blockchain: the state of the art and future directions.
+    Automata and Systems 52(4),2019:481-494.
+
+    - [20] Cloud Computing and Application Development White Paper, http://www.stanford.edu/index/rub-6.html.
+    Last accessed 4 April 2018.
+
+    '
+  mdcn: '
+
+
+    | 标签 | 样本数 | 平均值 | 最小值 | 最大值 | 90%线 | 标准差 | 错误率 | 吞吐量 | 接收量 | 平均字节 |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | 指标 | | 802775 | 315 | | 9401 | 1064 | 530.5 | 10.75% | | 1324 | 958.4 |
+
+    | 总计 | | 802775 | 315 | 4 | 9401 | 1064 | 520.3 | 10.75% | | 1324 | 958.5 |
+
+
+    图 5. 每次搜索的位置索引
+
+
+    | 标签 | 样本数 | 平均值 | 最小值 | 最大值 | 90%线 | 标准差 | 错误率 | 吞吐量 | 接收量 | 平均字节 |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | 指标 | | 821784 | 2784 | 397 | 11657 | 1058 | 321.5 | | 456.7 | 383 | 794.1 |
+
+    | 总计 | | 821784 | 2784 | 3 | 11657 | 1058 | 321.5 | | 456.7 | 383 | 794.1 |
+
+
+    图 6. 每次搜索的位置索引
+
+
+    - [2] D. Practical Searches for Data: Proceedings of IEEE 2000 Symposium on Privacy
+    and Security. IEEE, 2000:44-55.
+
+    - [3] Chang Y, M Munchver P. Searching Keywords in Remote Data: International
+    Conference on Applied Connectivity and Network Security. Springer, Berlin, 2014:361-369.
+
+    - [4] Cash, David, et al. "Fast, scalable highly searchable keyword search with
+    boolean queries." In CRYPTO 2013. Springer, Berlin, 2013:251-268.
+
+    - [5] Boyd, Steven F. "Forward Searchable Encryption." Proceedings of the 2016
+    ACM SIGSAC Conference on Computer and Communications Security. ACM, 2016.
+
+    - [6] Li, Hongkai. "Enabling granular multi-keyword search by partitioned sub-domains
+    over encrypted cloud data." IEEE Transactions on Database and Knowledge Systems
+    33(2016):312-325.
+
+    - [7] Boyd, Raphael, Bryce Rice, and Olga Olshansky. "Forward and backward searchable
+    encodings from constrained primitives." Proceedings of the 2017 ACM SIGSAC Conference
+    on Computer and Communications Security. ACM, 2017.
+
+    - [8] Lu, Qi, Cong W, et al. Keyword Search over Encrypted Cloud Data: INFOCOM
+    2010, IEEE 2010:1-4-15.
+
+    - [9] Wang, C, N, Li, J, et al. Ranked Keyword Search over Encrypted Cloud Data:
+    International Conference on Distributed Computing (ICDC), 2010, IEEE, Genoa, Italy,
+    July 21-25, 2010:253-266.
+
+    - [10] Hor B, Meredith S, Treidais G. A privacy-preserving index for encrypted
+    data. Tenth International Conference on Large Data Bases. VLDB Endowment, 2004:720-731.
+
+    - [11] Hagan, Aaron Yi, et al. Encryptable SQL over an encrypted server-provider-model:
+    Proceedings of the ACM SIGMOD International Conference on Data Management. 2002:216-227.
+
+    - [12] Gentry. A fully homomorphic encryption scheme. Stanford University, 2009.
+
+    - [13] Yong H, Lee J C, Lee I. Public Key Encryption with Conjunctive Keyword
+    Search with Attention to a Multi-user Setting/International Conference on Pairing-based
+    Cryptography. 2007:2-22.
+
+    - [14] Doug C, Russello G, Gully N. Sharded and Searchable Encrypted Data for
+    Queries: Proceedings of the IEEE 113 Working Conference on Data and Applications
+    Science. 2008:127-143.
+
+    - [15] Li, Hongkai, et al. "Enabling fine-grained multi-keyword search sporty
+    by partitioned sub-domains over encrypted cloud data." IEEE Transactions on Database
+    and Knowledge Systems 33(2016):312-325.
+
+    - [16] Agado, Guido N, Giumazato G, et al. Cryptography Goes to the Cloud/C/FTRA
+    International Conference on Security and Trust, Data Management, and Application.
+    Springer Berlin Heidelberg, 2011:1-8.
+
+    - [17] Hyperledger Project. Charles Ledger. https://hyperledger.org/character.
+    最后访问于 4 April 2018.
+
+    - [18] Tsai, W, Yu, Wang, R, Li, N, et al. Blockchain application for healthcare.
+    IEEE International Conference on Information Processing, IEEE 2018:1477-1487.
+
+    - [19] Yuan, Yong, Wang-Fei. Blockchain: the state of the art and future directions.
+    Automata and Systems 52(4),2019:481-494.
+
+    - [20] Cloud Computing and Application Development White Paper, http://www.stanford.edu/index/rub-6.html.
+    最后访问于 4 April 2018.
+
+
+    '
+  merge: 0
