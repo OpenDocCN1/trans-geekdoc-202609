@@ -1,0 +1,739 @@
+- pgno: 0
+  md: '# Blockchaingraph: A blockchain for mobile ad hoc networks
+
+
+    David Cordova, Alexandre Laube, Thi-Mai-Trang Nguyen
+
+    Sorbonne Université, CNRS, LIP6, 7525 Paris, France
+
+    Email: (firstname.Lastname)@lip6.fr
+
+    Guy Pujolle
+
+    Green Communications, Paris, France
+
+    Email: Guy.Pujolle@green-communications.com
+
+
+    *Abstract—Blockchain is one of the most promising technologies to offer the ability
+    to maintain a distributed database, ensuring the integrity and authenticity of
+    data in a decentralized system. However, when using blockchain in a dynamic community,
+    such as mobile nodes in ad hoc and mesh networks, the structure is no longer enough
+    to handle the mobility challenges of using a DAG-based blockchain for mobile ad
+    hoc networks (MANETs) that we call “Blockchaingraph”. We detail the design of
+    the proposed blockchain data structure;
+
+
+    Finally, we implemented our framework in the discrete event network NS-3 as a
+    proof-of-concept for blockchain.
+
+
+    Index—blockchain, mesh networks, MANETS
+
+
+    zones. We also believe that this technology could lead to new application opportunities
+    in industries such as the Internet-of-things (IoT), Vehicular ad Hoc networks
+    (VANETs) and operational networks “the field” where a blockchain structure is
+    not guaranteed and node mobility is likely to happen.
+
+
+    When the network is dynamic as the case of MANETs, a network can split into several
+    network partitions for a period of time. Under such circumstances, it is difficult
+    to maintain a single chain of blocks because the community of nodes changes. High
+    mobility can lead to the split of the network. To maintain a single chain structure,
+    all nodes in the network must agree upon the leader and status. We argue that
+    the chain of structure is not enough to solve this problem. In we use a Directed
+    Acyclic Graph (DAG) structure to solve this problem in MANETs.
+
+
+    Blockchain was introduced by Satoshi Nakamoto in 2008 [1], as a peer-to-peer cash
+    system that we know today as Bitcoin. It has also established itself as a technology
+    capable of efficiently safeguarding the integrity and authenticity of data. However,
+    network partitions prevent the technology to resolve partitions. Even though network
+    partitions are not frequent in structures such as the Internet-of-things (IoT),
+    a partition in the network can cause the bifurcation of the blockchain, creating
+    two different chains. Since chains cannot coexist, usually one of them (the shorter
+    one) is erased to maintain a main global consistency. The key benefit of blockchain
+    is that to resolve partitions, but it may find its benefit of infrastructure in
+    MANETs. Indeed, by providing these networks with blockchain’s properties, we can
+    contribute to the improvement of already existing applications using this kind
+    of network in disaster recovery areas, nature monitoring and
+
+
+    We defined the partition as a set of nodes in a network, identified when the topology
+    of the graph changes. We design the blockchain framework to resolve to topology
+    changes opening up opportunities in the implementation. In our work, we structure
+    our framework in three different modules: Consensus, Blockchaingraph and Group
+    Management. Each module is designed in a way that it can be de-coupled to solve
+    the partition problem. Moreover, nodes are relatively independent from one other,
+    so they can be easily adapted to the application requirements. The architecture
+    of our blockchain framework is our main contribution in this paper. We evaluate
+    the proposed framework in section VI. We review relevant papers related to the
+    blockchain with a DAG-based structure; Section III introduces the blockchain which
+    is used for ad hoc and mesh networks and we describe the characteristics of this
+    new generation of blockchains; section IV we present our first results from an
+    implementation of our framework in a simulation environment and section V concludes
+    this paper.
+
+
+    # I. INTRODUCTION'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# II. STATE-OF-THE-ART
+
+
+    Reference [2] was the first contribution proposing DAG-based model as a solution
+    to the partition caused by user mobility. However, this model uses a passive method
+    to detect topology only relying on the structure of the graph. The method is not
+    completely efficient and can be the source of delay when converging the graph''s
+    branches during a regrouping of several network partitions. This solution cannot
+    detect a split of network without requiring any adaptation of the consensus algorithm
+    to the new configuration of network. Distributed Ledger Technology (DLT) in the
+    context of MANETs. In contrast with our model, the specification of our group
+    management provides much more resilience to network changes with features to handle
+    splits and merges more effectively.
+
+
+    Blockchain can be considered as any DAG-based structure derived from Satoshi''s
+    [1] original system. However, we find in the literature that that blockchain is
+    the only one, as far as we know, that uses a DAG-based structure to solve the
+    network partition problem. Other DAG-based models, either for a need to improve
+    the performance of blockchain or as an alternative to the traditional structure
+    of blocks. Both models can be explained as follows:
+
+
+    # A. DAG-Based
+
+
+    One of the main barriers of scalability is the rate problem. Blocks that are created
+    outside the longest chain can devalue unordered propagation delays. By increasing
+    the block size, block rate or blocks are more likely to be created. This phenomenon
+    is explained by the fact that the time it takes for a block to propagate through
+    the network determines whether new blocks follow that block or are propagated
+    later resulting in spurious forks in the chain. However, Satoshi''s original system
+    implements mechanisms such as the chain length and the Proof-of-Work (PoW), which
+    fixes the block creation rate at a certain level. But even if such mechanisms
+    are efficient in securing the blockchain and guaranteeing data consistency, at
+    present, blocks are made every 10 minutes and the average transaction throughput
+    is low [3]. This is from being a competitive system. DAGs modify the block structure
+    so that a block can refer to several predecessors instead of a newly created block
+    or fork. However, increasing different blocks can lead to conflicting transactions.
+    To solve this the Hebrew University has developed a consensus protocol such as
+    INCLUSIVE [4], SPECTRE [5] and PHANTOM [6]. These protocols use the natural topology
+    of a DAG that includes a partial order over the blocks. This, it only
+
+
+    needs to define an order over blocks created in parallel. In this, ways based
+    on block-DAG can increase their block creation rate to get better performances.
+    As we see, the DAG structure of block-DAGs is created as way of improving the
+    performance of the blockchain. In contrast with blockchain, our subgraph does
+    not obtain its DAG structure when improving the performance of a system by allowing
+    the creation of spontaneous forks that may occur on the blockchain. It gets its
+    DAG structure based on the different network partitions that may occur on the
+    network.
+
+
+    # B. Blockchain-Based
+
+
+    In the work of Venice and Zato [7], a comparison between blockchain and blockchain-DAG
+    revealed that the main difference between these two technologies is to the structure
+    design. While blockchain, Blockchain-DAG forms not every a block of transactions
+    but instead. Uses a block-based system such as Nano [8], Bygraph [9] and IoTA
+    [10] choose a DAG-based alternative to a consensus mechanism other than PoW. In
+    this case, the DAG structure of blockchain-DAG is not to solve any partition problem,
+    but it is used as an alternative to traditional blocks and PoW consensus. Our
+    DAG model enables a solution to maintain blockchain-like structure resistant to
+    network partitions.
+
+
+    # III. GRAPHII
+
+
+    # A. System model and nodes
+
+
+    Nodes and network: In the system, a set of n independent nodes communicates over
+    a mobile hoc network. A node is defined as an electronic device that runs the
+    blockchain framework. In this system a consensus algorithm, a block management
+    system and a group management system, mobile hoc network is a network where part
+    of nodes communicates over a sequence of wireless links can include one or more
+    nodes. Since nodes are mobile, partitions in the network are likely to happen.
+    Network partitions are the result of a wireless link that occurs when two nodes
+    are within the range of each other. Unlike likewise, wireless link formations
+    occur when two nodes are too far from each other to communicate that they are
+    moving away from the network. Each node is capable of creating transactions and
+    blocks. Nodes have a unique identity.
+
+
+    In our framework, network topology changes an implementation of the management
+    blocks. Graph is designed to handle network partitions while maintaining a DLT
+    structure. Any considerable change in network topology would result in an update
+    in the consensus protocol and the block management parameters. In [2] authors
+    characterize the different changes in the network topology in two types of'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'changes. We redefine these characterizations applied to the context in the
+    following way:
+
+
+    +   - **Split**: A split occurs when the network is partitioned into several network
+    partitions. Each network partition remains disconnected from the other network
+    partitions. In the blockgraph when a split happens, the consensus parameters need
+    to be updated. For instance, in a vote-based consensus algorithm as raft [11]
+    or pbft [12], the majority criteria defines the minimum number of nodes to reach
+    consensus, and this needs to be changed when the topology changes
+
+    - **Merge**: A merge occurs when several independent network partitions become
+    into one connected network. In a split, consensus parameters need to be updated.
+    However, the merge of network partitions should not depend on the different versions
+    of the blockgraph involved in the merging. To merge, it is needed that the block
+    management module synchronizes all versions of the blockgraph.
+
+
+    +   2) **Blockgraph as DLT**: The blockgraph concept refers to DLT for MANETs.
+    It is a means for disseminating information through the network by guaranteeing
+    the properties of blockgraph, specially the immutability, integrity, transparency)
+    and authenticity of the data. In other words, blockgraph is considered as a distributed
+    structure where honored and certified information can be replicated to all nodes
+    in the system. As blockgraph
+
+
+    +   - **Permissive blockchain**: a permissive blockchain allows anybody to participate
+    in the network and in the consensus, increasing dramatically the risk of an attack
+    on the network (e.g. sybil attacks [13] and double-spending attacks [14]). By
+    limiting the number of participating users, we can ensure that each node in the
+    network works for the proper functioning of the system and that only those that
+    want to take part in the transaction process in a private network of nodes. Moreover,
+    we eliminate the possibility of having malicious nodes that we adopt a vote-based
+    consensus protocol, providing better performances in terms of block creation and
+    avoiding collisions when electing a leader. Since a leader is already well-known
+    to the system there is no need to reach consensus when a block occurs. We can
+    achieve consensus by using a state replication algorithm as paxos [15], raft [11]
+    or pbft [12] to elect a unique leader to ensure data consistency.
+
+    - **Transaction conflict**: A transaction is a digital piece of information replicated
+    to the application using the blockchain technology. A transaction could be with
+    the date, time, geographical coordinates, or more commonly, cryptocurrency transactions.
+    As opposed to most well-known blockchains,
+
+
+    ![](img/0542d618905e96e156fc6c2105c796fd_2_0.png)
+
+
+    transactions in a blockchain do not represent the exchange of a block associated
+    with a certain value. A transaction in blockchain can be represented as a piece
+    of information that transactions cannot handle. Therefore, the context of blocks
+    in blockgraph is not well suited for transactions that allows conflicts. If we
+    assume that transactions are parallel, then an attacker would be able to duplicate
+    its own identity and be present in two partitions at the same time and kinds of
+    creating attacks. Since network partitions are independent from one another, we
+    would be able to detect these conflicts after a merge of the network.
+
+
+    # B. Block structure
+
+
+    Similar to blockgraph, a blockgraph starts with a genesis block, which is the
+    starting of the ancestor and all blocks. Each block is formed of transactions
+    propagated from other nodes. In Fig 1 we detail the data structure of a block.
+    Most of the fields are present in block. However, the following fields are necessary
+    for the correct operation of the blockgraph:
+
+
+    +   - **Group Id**: to identify the group, which is the output of a hash function
+    calculated by the block management system identifies the alters of nodes belonging
+    to the same partition, as an input.
+
+    - **Parent hash**: It is a list of the hashes of the parent blocks.
+
+
+    As the system evolves, blockgraph grows to a DAG structure due to splits and merges
+    caused by node behavior. When a split occurs, the nodes within the same partition
+    remain a group in which they will continue the blockgraph. In case when a new
+    block is added, the block will be labeled with the Group Id calculated by the
+    group management system and will refer to the last common block among all network
+    partitions before the split. Once the block is created, it is propagated to all
+    nodes within the group. At this'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/0542d618905e96e156fc6c2105c796fd_3_0.png)
+
+
+    # Fig. 2: DAG-based structure of block
+
+
+    point, each graph has created a block in the global structure of the blockgraph.
+    Or when a merge occurs, the ancestor from the fusion of all partitions involved
+    in the merge creates a block in which references to previous blocks from groups
+    are specified; such block is a merge block the terminology used for the block
+    structure as follows:
+
+
+    +   - **Genesis block:** It is the starting block of the graph and it is used
+    as root to identify the blocks attached to the application.
+
+    - **Branch:** A branch is chain of blocks in the blockgraph''s DAG where every
+    block has the same *Id* as identifier.
+
+    - **Merge block:** A merge block is a block of transactions which can refer to
+    several previous blocks. It is the result of several partitions merged into the
+    data structure.
+
+    - **Child:** A child is a block in the blockgraph''s DAG that is not referred
+    by any other block. In other words, it is the last committed of block in the blockgraph.
+
+
+    When the network is partitioned, each graph in a partition will maintain its version
+    of the ledger, which is a branch of the blockgraph. Since graphs evolve differently
+    and thus one another, data consistency is only maintained when groups merge, a
+    merge arises, is to unify all the partitions involved in the merge into one single
+    data structure that all transactions are guaranteed and safeguard immutability
+    and transparency properties.
+
+
+    # C. Blockgraph specification
+
+
+    We decompose the blockgraph into three subsystems for the correct operation of
+    the global system. We define them as follows:
+
+
+    +   - **Consensus:** The consensus algorithm is responsible for providing a suitable
+    leader to the protocol in order to propose new blocks to be added to the blockgraph.
+    It needs to be able to adapt to topology changes during partition.
+
+    - **Block management:** The block management is in charge of changing the local
+    blockgraph data structure. This includes creating and validating blocks, ensuring
+    the partial order of blocks, recovering missing blocks and managing the list of
+    transactions of a node.
+
+
+    **Group Management:** The module responsible for detecting changes in the network
+    topology as well as reducing the nature of changes so that they can be transmitted
+    to the consensus and block management modules. It is also responsible for the
+    creation of groups.
+
+
+    **Consensus:** Most of the consensus algorithms used in a permissionless environment
+    as PoW, PoS and PoET assume a stable connectivity to the network and implement
+    security mechanisms to identify pseudo-identities that honest nodes can process
+    blocks. Using a block-based structure for the blockgraph is not only contrary
+    to the permitted nature of blockgraph, but could also lead to a waste of resources
+    as they are not writable. On the other hand, as blockgraph is a permissionless
+    network, tight control over the partitions in the process can be achieved through
+    legacy, state-machine-based algorithms such as pasos [15], raft and [11] may be
+    used. Once more, such consensus algorithms consider a stable network and do not
+    fail to deal with partition problems. In order to work in MANETs, where current
+    consensus algorithms in the literature are not fit to the particular circumstances
+    of our context, we are developing a modified version of raft that is tolerant
+    to the network partition problem. We believe that a graph-based algorithm has
+    the advantage of a flexible leader protocol that reaches consensus with a minimum
+    of messages exchanged.
+
+
+    We address the problem of reaching consensus in MANETs by decomposing the network
+    into two different subsets:
+
+
+    +   - **Leader election:** The leader election algorithm is responsible for selecting
+    a suitable leader for every partition (groups) in the system. The leader is then
+    tasked with the responsibility of proposing new blocks to all peer-nodes in the
+    group. As blockgraph is a permissionless network, we can carry out this task easily.
+
+    - **Log Replication:** The leader propagates its blocks to all others in the group
+    so they replicate. When a block is included in the majority of copies, the replication
+    condition is met. The block management module is also responsible for the replication
+    process. It ensures that all group members have the blocks recovered during a
+    synchronization process.
+
+
+    We define the properties of the The set of properties needs to be fulfilled in
+    the leader election process that takes into consideration the network partition
+    problem. Those properties will ensure that a suitable leader is always elected,
+    ensuring consistency of the data. We define the properties as:'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: "+   Election safety: At most one leader can be elected in a network partition.\
+    \ If a leader fails, a new leader is elected.\n\n+   Leader competence: No one\
+    \ can be elected if and only if its block ledger has at least one childish block\
+    \ or one higher index with respect to other peers-nodes participating in the election.\
+    \ This ensures that only nodes with leader status are eligible to become a leader\
+    \ and respect the partial order of blocks.\n\n+   Partition tolerance: The leader\
+    \ election algorithm must consider the network topology in order to update its\
+    \ parameters to the network when a split or merge occurs.\n\n2) Block management:\
+    \ The block management subsystem implements the process of managing the local\
+    \ block data structure. This includes the creation and validation of blocks, the\
+    \ ordering of the blocks in blockchain, the recording and management of the list\
+    \ of pending transactions (a.mempool) of the node. A node can only create a block\
+    \ if it has been elected by the leader through the consensus. The process of creating\
+    \ a block is to collect the transactions from other nodes and synchronize them.\
+    \ The block is then transmitted to the consensus module so it can be replicated\
+    \ by group members. Once the block is committed by the consensus algorithm, it\
+    \ can be effectively added to the network through a merge. The recovery of a block\
+    \ can be done by node either through the consensus module or via the block management\
+    \ in the case of a synchronization process. A validation process is required since\
+    \ the final application must ensure a block that is compliant with the application\
+    \ requirements before any addition to the blockchain. When these blocks are received,\
+    \ it is possible to verify the information in the block and thus ensure the correct\
+    \ sequencing of the blocks. The parent hash list allows in particular to analyze\
+    \ the structure of the graph and identify the blocks whose parents have not yet\
+    \ been present in the blockchain. These blocks with unknown parents indicate the\
+    \ presence of branches of the graph that must be recovered in order to maintain\
+    \ the overall consistency of the blockchain. On the other hand, it is important\
+    \ to ensure that all recovered blocks are valid and part of the same application.\
+    \ Algorithm 1 shows the process of a block treatment upon its arrival to the node.\n\
+    \nThe process of validating a block consists of verifying that the block has been\
+    \ created by the system, that the data corresponds to the expected format and\
+    \ the block is valid. Other validation criteria may be added to this processing\
+    \ before the final application. If a block does not pass this step, it is systematically\
+    \ rejected. Otherwise, processing of the block continues. For any block that is\
+    \ not already present in the blockchain, we extract the hashes of the block from\n\
+    \n# Algorithm 1: Block treatment\n\n```\nBlock b := NewlyReceivedBlock;\nip :=\
+    \ SenderIP;\nif Validate(b)\n  if NotInBlockGraph(b) then\n    missing_block.list.erase(b);\n\
+    \  end\n  if KnownParents(b) == false then\n    unknown_parents := GetUnknownParents(b);\n\
+    \    missing_block_list.add(unknown_parents, ip);\n  end\n  block.add(b);\n  updateMempool(b);\n\
+    end\nDump(b);\nend\nRecoverBlocks(i);\n```\n\nthe parent hash list field and those\
+    \ that are unknown to the list of blocks. Then, this new block is added to the\
+    \ graph and its contents are removed from the memory. This list of missing blocks\
+    \ is a list of blocks that have not yet been present in the graph but blocks already\
+    \ present. This list is periodically examined in order to recover the new requests.\
+    \ When a block is removed from the list of missing blocks, the RecoverBlocks(i)\
+    \ function is particularly useful when synchronizing the non-leader node after\
+    \ a merge. The dissimation of a merge in the network leads to the discovery of\
+    \ several missing blocks (blocks differing between two partitions). These blocks\
+    \ are then recovered via the list of missing blocks.\n\nUpon reception of the\
+    \ block, it is the parents of the parents are requested. A request occurs in this\
+    \ way until the complete block has been received or the list of missing blocks\
+    \ is exhausted.\n\n3) Synchronization: When a leader node starts a synchronization\
+    \ in the network topology, it starts a procedure to recover blocks from another\
+    \ group's leader. This procedure is only triggered when a merge occurs. The main\
+    \ goal is to synchronize the branches. When a new branch is detected, the leader\
+    \ node needs to retrieve the full branch of the unknown group to update its ledger\
+    \ before creating a merge. Algorithm 2 details the synchronization procedure followed\
+    \ by the leader node.\n\nUpon detection of a change in the network topology,"
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: "# Algorithm 2: Synchronization procedure in leader\nnode using a list of childish\
+    \ block hashes reception\n\n```\nVector childish_hashes :=\nChildish_from_NonLeaderNode:\n\
+    ip := senderIp;\nfor hash : childish_hashes do\n  if InBlockGraph(hash) then\n\
+    \    continue\n  else\n    if IsMissingBlock(hash) then\n      continue\n    else\n\
+    \      BlockHashRequest(hash, ip);\n    end\n  end\nend\n```\n\nof the data can\
+    \ be guaranteed as fast as possible. Groups are\nthe necessary component to achieve\
+    \ consensus in a dynamic\nnetwork.\n\n+   1) Detecting changes: Detecting network\
+    \ partitions in the\ncontext of a dynamic network is important in order to react\n\
+    asplit or a merge. Since both changes lead to\ndifferent treatments, differentiating\
+    \ a split from a merge\nis us to easily react to a topology change. We detect\n\
+    split or merge by calculating the difference between a\nprevious topology and\
+    \ the current topology.\nA split can be detected by checking that all nodes\n\
+    in the current configuration are also present in the previous\nconfiguration.\
+    \ In addition, the size in terms of number of nodes\nis strictly smaller than\
+    \ the previous. To detect a merge, check\nthat all nodes in the previous configuration\
+    \ are present in\nt current configuration and that the size of the current\nis\
+    \ strictly greater than the previous configuration.\nOnce the network topology\
+    \ is confirmed, a group\nformation is created and the block management protocol\
+    \ is\ntotified of the changes.\n\nleader, elected by the consensus algorithm,\
+    \ will ask\na a list of childish hashes of every-node in the\nnewly created group.\
+    \ Upon reception of a list from peer,\nthe leader will perform the following:\n\
+    \n+   1) Presence of the block in the block management:\nsystem will check for\
+    \ the presence of the block in the\nlocal ledger. If the received block is already\
+    \ in\nthe local ledger, then the leader cannot create a\ndifferent branch and\
+    \ no action is taken.\n2) Presence of the block in the missing list: If the\n\
+    received block is not present in the local ledger,\nthen the leader will check\
+    \ if the block is in the\nmissing list. If so, no action will be taken\nsince\
+    \ the block is already known by the leader\nand consensus group. However, if the\n\
+    received block is not present in this\nit, it must come from another group.\n\n\
+    Once the leader detects that a block has\ncomes from another group, it will ask\
+    \ for the list\nof all non-leader nodes from which it received\nchildish block\
+    \ list. It then adds the block to\nt list of missing blocks to prevent that same\
+    \ childish\nblock coming from another non-leader triggers\nbranch synchronization.\
+    \ Finally, a merge is produced\n propagated to all nodes. Non-leaders will update\n\
+    the ledger by following Algorithm 1.\n\nD. Group Management System\nThe group\
+    \ management system is a process running on\ne node in the network. Its main purpose\
+    \ is detect\ntopology changes caused by node mobility in order to adapt\nt consensus\
+    \ and the block management parameters to a\nnew configuration. It is also responsible\
+    \ for\ngroups resulting from topology changes. Detecting topology\nchanges is\
+    \ important in order to react efficiently and split\nmges occur during operation,\
+    \ as the consistency\n\n+   2) Group formation: In order to maintain a\nblock-like\
+    \ structure in a mobile network, where\npartitions are not likely to happen it\
+    \ is necessary\nto form groups. Nodes will agree upon a\nleader and with the partial\
+    \ order of\nblocks to reach consensus within its group, so that\ndata consistency\
+    \ is maintained in the groups' ledger.\nTo establish a group, each node in the\n\
+    network becomes aware of the other nodes. To this\nproblem several approaches\
+    \ may be considered. A\npartition can be considered as a connected graph, and\n\
+    graph traversal algorithm such DFS (Depth-first search)\n[18] and BFS (Breadth-first\
+    \ search) [19] may be employed\nto identify all nodes that belong to the same\n\
+    network partition or to the same group. Another\napproach may be the exploitation\
+    \ of the leader to\nprovide information on the network topology. A\nrouting algorithm\
+    \ such as RPL [16] and DSDV [17] maintains\ntopology to reach all destinations.\
+    \ The group\nof who shares the same network information. Each\ninformation on\
+    \ the topology is obtained by the\nwe can use information to notify the consensus\n\
+    node about the new configuration. The information\nofide identifiers belonging\
+    \ to the same network partition\nto create the group identifier (Group Id). To\
+    \ create\na group hash function that has all the nodes\nidentifiers to the same\
+    \ network partition, including\nthe local ledger, as an input. The output of the\
+    \ hash\nfunction is a unique series of characters called\nt Group Id. It is added\
+    \ to each block produced\nused as a means to identify blocks by other groups.\
+    \ It can also\nused to identify which nodes were involved in the"
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'validation of a block or to confirm a participation in a group.
+
+
+    # IV. ALGORITHM AND RESULTS
+
+
+    To verify the logic of the blockgraph framework and obtain a first performance
+    of the mobile mesh networks supporting a blockgraph. After a careful development
+    we reduced the complexity of the algorithm in this chapter while ensuring the
+    good functioning of our framework. More specifically, we are going to show firstly
+    scenarios: the performance of the operation when there are no network partitions
+    and the case where a network partition is followed by a regrouping of the complete
+    network (split by a merge).
+
+
+    # A. Description of the simulator and parameters
+
+
+    The simulator that we use for our framework is a discrete event simulator NS3.
+    This software consists of models capable of simulating different networks and
+    in particular us to simulate mesh networks with mobility. We developed a blockgraph
+    application using several models of NS3 to test our algorithms with the protocol
+    stack corresponding to our environment. The description of our two scenarios is
+    extensive:
+
+
+    In the first "split" scenario, all nodes in the network move in parallel during
+    the partition phase. There are no network partitions in this case. The second
+    scenario "Split followed by a merge" involves a partition (split) and a regrouping
+    (merge) of the network. The first scenario is to validate the blockgraph mechanism
+    by maintaining a DAG-DLT on a mesh and network; and second, to see the impact
+    that a network partition can have on the functioning of the system. From our operations,
+    we tracked the following metrics:
+
+
+    Each scenario corresponds to a relative duration of 15 minutes (900s). For each
+    scenario we made a simulation for a network composed of 10 nodes. Table I and
+    II describe the description of the scenario and simulation times for each scenario
+    respectively.
+
+
+    The creation of a block by a leader node occurs when the leader''s mempool reaches
+    130 transactions. Each size of transaction is generated by a random variable that
+    follows a uniform distribution between 300 and 600 bytes. On average, each block
+    has a size of 58.5 KB which does not exceed the theoretical limit of a UDP packet
+    which is defined at 65.5 KB. Each node generates transactions are propagated to
+    all groups belonging to them. The generation of transactions in each node is modeled
+    as follows: each node generates a random variable that follows an exponential
+    law to represent the time between two arrivals. We can then model the arrival
+    of transactions as a Poisson process with a lambda ($\lambda$) parameter, where
+    $\lambda$ represents the
+
+
+    | TABLE I: Mobility for "No Split" scenario |
+
+    | Simulation time | Description |
+
+    | --- | --- |
+
+    | < 900s | All nodes move towards the same direction in a single connected network.
+    |
+
+
+    | TABLE II: Mobility description for "Split followed by a merge" scenario |
+
+    | Simulation time | Description |
+
+    | --- | --- |
+
+    | < 900s | All nodes move towards the same direction in a single connected network.
+    |
+
+    | 300 - 600s | A partition in the network occurs. Nodes 0 to 4 form an independent
+    partition and nodes 5 to 9 form another independent partition |
+
+    | > 600s | All nodes regroup into one connected network. They all move in the
+    same direction as connected network.
+
+
+    transaction arrival rate per node is defined as the inverse of the time between
+    two arrivals. For our first simulation, we chose to set $\lambda$ to a relatively
+    low rate to ensure that we do not saturate the network. Each scenario is set to
+    a simulation of 2 hours.
+
+
+    # B. No split scenario
+
+
+    Fig 3 shows the number of confirmed transactions in the leader''s mempool. Every
+    time mempool reaches 130 transactions, a block is created and transactions disappear
+    from the mempool. The figure shows the expected behavior of the system. With a
+    lambda of 0.5 and a connected network of 10 nodes, we had a global transaction
+    rate of 5 tx/s. We were able to form blocks every 26s and have a total of 276
+    blocks at the end of the simulation. The results of the simulation are consistent
+    with the theoretical results. From the simulation we can see that both the number
+    of blocks created during the simulation and the number of transactions generated
+    correspond to the theoretical results.
+
+
+    ![](img/0542d618905e96e156fc6c2105c796fd_6_0.png)
+
+
+    Fig. 3: Number of transactions in accordance with simulation time in the leader''s
+    mempool. No split scenario. $\lambda$ equal to 0.5 tx/s.
+
+
+    Authorized license used to: Carleton University. Download on May 30, 2021 at 10:45:58
+    UTC from IEEE Explorer. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# TABLE III: Summary of the “No Split” scenario simulation
+
+
+    | Number of blocks | 35 |
+
+    | --- | --- |
+
+    | Number of transactions in the blockgraph | 4030 |
+
+    | Block replication percentage | 89.34% |
+
+
+    # C. Split followed by a merge scenario
+
+
+    In this scenario, we can appreciate that there is a deceleration in the production
+    of blocks between 300s and 600s. That is compared to the moment in which there
+    was a split and in which there was a merge of the two partitions. This can be
+    explained by the fact that the network was partitioned into two separate networks,
+    each partition is now composed of 9 nodes. With this configuration, it takes around
+    52 seconds to reconnect, each network had only produced 57 blocks approximately.
+    Table IV summarizes some results from this simulation. We can appreciate that
+    this scenario also corresponds to the worst case where block replication is limited
+    up to 99.72%. The difference between the two scenarios may be due to a decrease
+    in the load on the network during this period. By reducing the number of nodes,
+    the exchange of messages needed to reach consensus is also reduced, delaying the
+    arrival of blocks by two during this time period. Some of these factors may be
+    due to the cause of the difference in the two scenarios presented. Further simulations
+    will be conducted in the future to rigorously measure our blockgraph performance.
+
+
+    # V. CONCLUSIONS
+
+
+    In this paper we have introduced a new generation of blockchain, called graph,
+    which is a DET with the blockchain’s properties resilient to network partitions.
+    The blockgraph can be used in MANIT since it takes into account the characteristics
+    of mesh networks where node mobility causes splits and merges in the network.
+    We have proposed a framework of three modules (Consensus, Blockgraph and Management
+    Systems) that work to solve the network partition problem. Finally, we evaluated
+    the first drafts of our blockgraph as a proof of concept. Further results and
+    evaluation will follow in a future paper.
+
+
+    # REFERENCES
+
+
+    [1] S. Nakamoto, “Bitcoin: Electronic Cash System,” 2008.
+
+
+    [2] A. Latour, S. Martin and K. Ali, “A solution to the split and merge problem
+    for blockchain-based applications in Ad Hoc Mode in Wired and Wireless Networks,”,
+    pp. 1–6, 2019.
+
+
+    [3] Blockgraph Consortium (Lumbauer, S.A.), [Online]. Available: https://www.blockgraph.com/analytics/
+    [Accessed 2021].
+
+
+    [4] Y. Narayanan, “Scalable and Fault Tolerant Blockchain Protocols,” International
+    Conference on Financial Cryptography and Data Surveys, Sep. 528–547, 2015.
+
+
+    [5] Y. Sompolinsky and A. David, “SPARKLE: A Fast and Secure Arrival Protocol,”
+    CRYPT International Conference Archive, April 2019.
+
+
+    [6] Y. Sompolinsky and A. David, “PHANTOM: A Scalable BlockDAG,” CRYPT Conference
+    Archive, 2018, no. 10, p. 4.
+
+
+    [7] F. M. Enrici and L. P. Zarko, “Ledger technology: Blockchain and smart contracts,”
+    In Proceedings of the IEEE International Conference on Distributed Computing Systems,
+    pp. 519–526, 2015.
+
+
+    [8] C. L’Mamon, “Nano Feeless Distributed Transactions,” CRYPT Conference Archive,
+    April 2019.
+
+
+    [9] A. Castro, “Byzantine: A decentralized system for storage and transfer of
+    bits,” 2016. [Online]. Available: https://github.com/byzantine/byzantine [Accessed
+    2021].
+
+
+    [10] K. Popov, “Tangle Report,” 1 October 2017. [Online]. Available: https://tangle.com/wp/IOTA_Dataspaper.pdf,
+    [Accessed 2021].
+
+
+    [11] D. Orange and J. Ostendorff, “In a Search of Understandable Consensus Algorithms,”
+    Annual Technical Conference (UNIXIX), 2014, no. 9, pp. 1099–1113.
+
+
+    [12] M. Castro and B. Lifkov, “Practical Byzantine fault tolerance,” IEEE, 1999.
+
+
+    [13] DOUCE, John R. “The sybil attack,” Workshop on peer-to-peer systems, Springer,
+    Heidelberg, 2002.
+
+
+    [14] CONTI, Mauro, et al., “A survey on security and privacy issues in blockchain,”
+    IEEE: Communications Surveys & Tutorials, 2018, no. 2.,
+
+
+    [15] LAMPORT, Leslie, et al., “Paxos made simple,” ACM SIG News, 1998.
+
+
+    [16] CLAUSEN, Thomas; JACQUET, Philippe. [Online]. RFC 6526: Integrated link state
+    routing protocol (OSPF3), 2005.
+
+
+    [17] PERDOM, Charles; E. HATHAWAY, Wayne. “Highly distributed segmentation-distance-vector
+    routing (DSV) for mobile computing,” IEEE/ACM computer communication review, 1994,
+    no. 4, p. 23–44.
+
+
+    [18] TARIAN, Robert. “First-depth search and linear graph algorithms,” SIAM Journal,
+    1972, vol. 1, p. 1–6.
+
+
+    [19] MOORE, Edward F. “The shortest path through a tree,” En Proc. In. Symp. Switching
+    Theory, 1959, p. 285–292.
+
+
+    ![](img/0542d618905e96e156fc6c2105c796fd_7_0.png)
+
+
+    Fig. 4: Number of transactions in accordance with time the leader’s node in the
+    Split followed by a merge with Λ equal to 0,5 tx/s
+
+
+    # TABLE IV: Summary of the “Split followed by a merge” scenario simulation
+
+
+    | Number of blocks | 36 |
+
+    | --- | --- |
+
+    | Number of transactions in the blockgraph | 4680 |
+
+    | Block replication percentage | 99.72% |'
+  merge: -1
+  img_proc: true
