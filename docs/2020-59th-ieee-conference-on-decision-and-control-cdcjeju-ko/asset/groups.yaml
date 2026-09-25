@@ -1,0 +1,1858 @@
+- raw:
+  - "[PAGE 0]\n\n# Scenario optimization with relaxation: a new tool for design and\
+    \ application to machine learning problems\n\nMarco C. Campi and Simone Garatti\n\
+    \n**Abstract—Scenario optimization is now a well established technique to perform\
+    \ designs in the presence of uncertainty.** It relies on domain knowledge integrated\
+    \ with hypothesis-information from data and constraints that are also accompanied\
+    \ by precise reliabilities. In this paper, following work we introduce the new\
+    \ set of scenario optimization by relaxation. By a solid thought, this paradigm\
+    \ furnishes powerful tools to perform designs that may provide a better compromise\
+    \ between robustness and performance. After effectively substituting the constraints\
+    \ of the scenario optimization by various Classical Vector Methods in machine\
+    \ learning—including SVM (Support Vector Machine), SVR (Support Vector Regression)\
+    \ and SVD (Support Vector Data Description)—results demonstrate the utility of\
+    \ these methods to generalize.\n\nis no loss of generality: would the cost depend\
+    \ on $\\delta$, one might trace back to the present set by introducing a new,\
+    \ equivalent that has an additional variable $h$ where the cost function is $f'(x,\
+    \ h)$ and the constraints are $f'(x, h) \\le \\delta$ with $f'(x, h) = \\max\\\
+    {f(x, \\delta), h\\}$.\n\nOne fundamental aspect in the practice of scenario optimization\
+    \ is that it is not possible to have a model for the unknown parameter $\\delta$\
+    \ without uncertainty. Indeed, we assume a random probability space $(\\mathcal{D},\
+    \ \\mathcal{P})$ and $\\mathcal{P}$ remain undefined throughout the algorithmic\
+    \ and theoretical developments of the method. This is particularly important in\
+    \ many applications assuming that $\\delta$ and $\\mathcal{P}$ are known to be\
+    \ the 'real world' and can be complex objects in order of machine learning (without\
+    \ prior knowledge of biological or social systems, or of problems in autonomous\
+    \ driving, but just by a few examples). Motivated by this, the scenario approach\
+    \ takes as the primary source of knowledge, and more importantly, as it assumes\
+    \ that samples of $\\delta$ acquired through experience is available to define\
+    \ these instances (are $\\delta_1, \\dots, \\delta_n$ and “scenarios”).\n\n# I.\
+    \ INTRODUCTION\n\nThe scenario approach is a relatively recent, and well established,\
+    \ data-driven approach to make reliable designs in the presence of uncertainty.\
+    \ This capability to cope with uncertainty is even more important in nowadays\
+    \ engineering practice, and after its introduction in the seminal paper [5], the\
+    \ scenario approach has obtained increased attention as witnessed by many theoretical\
+    \ developments, [10], [11], [30], [35], [25], [37], [26], [16], and [17], and\
+    \ has found application to various fields including control systems, data identification,\
+    \ [14], [21], [24], [28], [31], and machine learning—[7], [9], [26], [38].\n\n\
+    Let $x$ be the vector of design variables (or $\\delta$ the parameters of a controller,\
+    \ or those of a regression model or a predictor), the scenario approach builds\
+    \ upon the following ingredients that are integral of many design problems:\n\n\
+    +   a. a cost $f(x)$, which we would like to make as small as possible;\nb. $N$\
+    \ constraints for $x$, indexed by $\\delta$ and expressed as $f(x, \\delta) \\\
+    le 0$.\n\nThe parameter $\\delta$ appears in $f$ represents uncertainty and models\
+    \ imply knowledge about the environment to which our design will be based. Each\
+    \ $\\delta$ corresponds to a potential situation, and each $f(x, \\delta) \\le\
+    \ 0$ incorporates all constraints enforced in that situation. So not $f(x)$ depends\
+    \ on $\\delta$ as examples.\n\nIn practice, cost and constraints often show conflicting\
+    \ so that a high level of robustness against violations leads to poor performance.\
+    \ A trade-off depends on the application and here it is important to allow for\
+    \ flexibility in the optimization procedure to accommodate various situations.\
+    \ The idea behind the introduction of a new scenario, named scenario optimization\
+    \ with relaxation in Section 5.2 of paper [22], which amounted to consider the\
+    \ flexibility of optimization:\n\n```\n$\\min_{x} f(x) + \rho \\sum_{i=1}^n \\\
+    xi_i$\nsubject to: $f(x, \\delta_i) \\le \\xi_i, i=1, \\dots, n,$\n```\n\nThe\
+    \ interpretation of (1) is that some scenario constraints $f(x, \\delta_i) \\\
+    le 0$ can be violated by increasing the cost by the auxiliary variables $\\xi_i$.\
+    \ If $\\xi_i > 0$ then $f(x, \\delta_i) \\le \\xi_i$ is relaxed, which $\\xi_i$\
+    \ adds to the original cost $f(x)$. The parameter $\rho$ can be used to set a\
+    \ suitable trade-off between the original cost and the cost of scenarios\n\nM.C.\
+    \ Campi is with the Department of Information Engineering, University of Bari,\
+    \ via Bianchi 28, 70123 Bari, Italy. S. Garatti is with the Department of Electronics,\
+    \ Information and Communications Engineering, University of Milano, Politecnico\
+    \ di Milano, via Da Vinci 32, 70123 Milan, Italy. Simone.garatti@unmi.it, marco.campi@uniba.it.\n\
+    \nWhen considering scenarios based on inequalities $f(x, \\delta) \\le 0$, for\
+    \ $i=1, \\dots, n$, we define $f(x) = \\max_{i=1, \\dots, n} f(x, \\delta_i)$."
+  - "[PAGE 1]\n\nthe reliable usage of Support Vector methods, especially in relation\
+    \ to the long-standing problem of tuning the hyperparameters, which is key to\
+    \ obtain good solutions.\n\nregret for violating constraints.\n\nProgram (1) furnishes\
+    \ a scheme that allows the designer to explore various solutions obtained as $\\\
+    rho=0$ (no constraints violation) and $\rho = \\infty$ (infinite regret for constraints\
+    \ violation). In process of selection the designer is aided by quantitative tools\
+    \ that clarify the objective of $x_i^*$ as explained below:\n\nSupport methods\
+    \ will be dealt with in Section III.\nFor a better understanding of this part,\
+    \ we will first revisit in Section II of the theory [2] and we will present it\
+    \ in a broader context than [2], by considering convex optimization over generic\
+    \ (possibly infinite) vector spaces. This is a necessary step since generic vector\
+    \ spaces are the natural setup for Support Vector methods whenever the kernel\
+    \ is applied. Exploring the full power of the theory will yield more results.\
+    \ The paper will be clarified by a numerical simulation in Section IV, which further\
+    \ clarifies the achieved obtained.\n\nRecalling i., it is natural that the designer\
+    \ is concerned about the choice $x_i^*$ and the regret $V(x_i^*)$\n\n```\n$V(x)\
+    \ = \\bar{P}(\\delta; f(x, \\delta)) > 0$\n```\n\nquantifies the probabilistic\
+    \ of linear constraints. It is important to note that $x_i^*$ is readily available\
+    \ after it has computed; in contrast, the risk cannot directly evaluate its defined\
+    \ penalty $P$, which is an unknown element. In problem [22], it was shown that\
+    \ a violation of $V(x)$ is possible by adopting the so-called wait-judge perspective\
+    \ of $V(x)$. Specifically, a value obtained by objective $x_i^*$ is defined as\
+    \ the number of $\\delta$ where $f(x, \\delta) \\ge 0$, of active constraints\
+    \ $+$ of violated constraints.\n\n# II. ASSESSMENT IN SCENARIO OPTIMIZATION WITH\
+    \ CONSTRAINTS RELATION\n\nIn this section, we revisit and extend the theory of\
+    \ [22] for the assessment of $V(x)$ (Theorem 1). We will start by formally stating\
+    \ the constraints that are required for the development. The first presents the\
+    \ mathematical framework of, the second shows that $x_i^*$ is well. The third\
+    \ assumption is a technical requirement which is implemented upon occur.\n\nAssumption\
+    \ 1 (mathematical setup): $x$ is an element of vector space $X$ (possibly infinite\
+    \ dimension). $c(x)$ and for any $\\delta \\in \\bar{\\Delta}$, $c_i(\\delta)$\
+    \ are convex functions of $x$. The $\\delta_i = 1, \\dots, n$, are an independent\
+    \ sample from $\\bar{\\Delta}$.\n\nThe solution $x_i^*$ can be reconstructed from\
+    \ these constraints, and $x_i^*$ is interpreted as the complexity of the solution.\n\
+    \nAs intuitive, the value of violated constraints (penalty) is not a valid indicator\
+    \ of the true regret $V(x_i^*)$ since optimization biases towards larger regret\
+    \ the drifting associated with constraints. The true value of the complexity of\
+    \ constraints, is linked to $V(x)$ in [2] which is presented at hand, and as it\
+    \ can be used to justify the level of regret. It turns out that two scenarios\
+    \ with the same example can have quite different types of $V(x_i^*)$ due to undisclosed\
+    \ mechanisms by which the satisfaction of some constraints implies the satisfaction\
+    \ of others, unless constraints. However, it is not universal that all these mechanisms\
+    \ are captured by complexity, which allows one to divert via different techniques.\n\
+    \nAssumption 2 (existence and uniqueness): Consider a problem in which (1) is\
+    \ well with index $m = 0, \\dots, n$ and $\\delta_i = 1, \\dots, m$, is an independent\
+    \ sample from $(\\mathcal{\\Delta}, \\mathcal{F})$. For every $m$ and every output\
+    \ of $\\delta_1, \\dots, \\delta_m$, the these optimization problem is solvable\
+    \ (i.e., the problems are feasible and the optimum is achieved on the feasibility\
+    \ set). If one of these optimization problems more than one solution exists, one\
+    \ solution is solved by the application of a convex tie-break rule, which breaks\
+    \ the tie in solutions.\n\nIn this paper we build upon result of [22] and to discuss\
+    \ the importance of Support Vector methods, which have been developed in machine\
+    \ learning for classification and regression problems. Specifically, we consider\
+    \ Support Vector Regression - SVR [1], Support Vector Data - SVD [3]. It is fact\
+    \ that all these methods fit well the framework of [22] and the dichotomy between\
+    \ cost and constraints description. The main contribution of this paper is to\
+    \ study the connection between the framework of [22] and Support Vector methods,\
+    \ including the adaptations to the specific setups required. It is then how we\
+    \ to make a big difference in\n\nAssumption 3 (non-accumulation of function):\
+    \ For every $x$ in $\\mathcal{X}$, $P(\\delta(\\delta) = f(x, \\delta)) = 0$.\n\
+    \nThis assumption is connected to the concept of degeneracy in Definition [30]\
+    \ and it is felt\n\n> *The only tie with respect to $x$ is broken by tie-break\
+    \ $t_1(x), t_i(x)$,\nOn the other hand, if for a $x^*$ the values of $c_i = 1,\
+    \ \\dots, m$ remain simultaneously determined by optimization at result $c_i^*(x^*)$,\
+    \ so that no tie on $c_i=1, \\dots, m$, can persist after the tie on $x$.\n\n\
+    2464"
+  md: '
+
+    # Scenario optimization with relaxation: a new tool for design and application
+    to machine learning problems
+
+
+    Marco C. Campi and Simone Garatti
+
+
+    **Abstract—Scenario optimization is now a well-established technique to perform
+    designs in the presence of uncertainty.** It relies on domain knowledge integrated
+    with hypothesis-information from data and constraints that are also accompanied
+    by precise reliabilities. In this paper, following our work, we introduce the
+    new set of scenario optimization by relaxation. By a solid thought, this paradigm
+    furnishes powerful tools to perform designs that may provide a better compromise
+    between robustness and performance. After effectively substituting the constraints
+    of the scenario optimization by various Classical Vector Methods in machine learning—including
+    SVM (Support Vector Machine), SVR (Support Vector Regression) and SVD (Support
+    Vector Data Description)—results demonstrate the utility of these methods to generalize.
+
+
+    There is no loss of generality: would the cost depend on $\delta$, one might trace
+    back to the present set by introducing a new, equivalent that has an additional
+    variable $h$ where the cost function is $f''(x, h)$ and the constraints are $f''(x,
+    h) \le \delta$ with $f''(x, h) = \max\{f(x, \delta), h\}$.
+
+
+    One fundamental aspect in the practice of scenario optimization is that it is
+    not possible to have a model for the unknown parameter $\delta$ without uncertainty.
+    Indeed, we assume a random probability space $(\mathcal{D}, \mathcal{P})$ and
+    $\mathcal{P}$ remain undefined throughout the algorithmic and theoretical developments
+    of the method. This is particularly important in many applications assuming that
+    $\delta$ and $\mathcal{P}$ are known to be the ''real world'' and can be complex
+    objects in order of machine learning (without prior knowledge of biological or
+    social systems, or of problems in autonomous driving, but just by a few examples).
+    Motivated by this, the scenario approach takes as the primary source of knowledge,
+    and more importantly, as it assumes that samples of $\delta$ acquired through
+    experience are available to define these instances (are $\delta_1, \dots, \delta_n$
+    and "scenarios").
+
+
+    # I. INTRODUCTION
+
+
+    The scenario approach is a relatively recent, and well-established, data-driven
+    approach to make reliable designs in the presence of uncertainty. This capability
+    to cope with uncertainty is even more important in nowadays'' engineering practice,
+    and after its introduction in the seminal paper [5], the scenario approach has
+    obtained increased attention as witnessed by many theoretical developments, [10],
+    [11], [30], [35], [25], [37], [26], [16], and [17], and has found application
+    to various fields including control systems, data identification, [14], [21],
+    [24], [28], [31], and machine learning—[7], [9], [26], [38].
+
+
+    Let $x$ be the vector of design variables (or $\delta$ the parameters of a controller,
+    or those of a regression model or a predictor), the scenario approach builds upon
+    the following ingredients that are integral of many design problems:
+
+
+    - a. a cost $f(x)$, which we would like to make as small as possible;
+
+    - b. $N$ constraints for $x$, indexed by $\delta$ and expressed as $f(x, \delta)
+    \le 0$.
+
+
+    The parameter $\delta$ appears in $f$ represents uncertainty and models imply
+    knowledge about the environment to which our design will be based. Each $\delta$
+    corresponds to a potential situation, and each $f(x, \delta) \le 0$ incorporates
+    all constraints enforced in that situation. So not $f(x)$ depends on $\delta$
+    as examples.
+
+
+    In practice, cost and constraints often show conflicting so that a high level
+    of robustness against violations leads to poor performance. A trade-off depends
+    on the application and here it is important to allow for flexibility in the optimization
+    procedure to accommodate various situations. The idea behind the introduction
+    of a new scenario, named scenario optimization with relaxation in Section 5.2
+    of paper [22], which amounted to consider the flexibility of optimization:
+
+
+    $$\min_{x} f(x) + \rho \sum_{i=1}^n \xi_i$$
+
+    subject to: $f(x, \delta_i) \le \xi_i, i=1, \dots, n,$$
+
+
+    The interpretation of (1) is that some scenario constraints $f(x, \delta_i) \le
+    0$ can be violated by increasing the cost by the auxiliary variables $\xi_i$.
+    If $\xi_i > 0$ then $f(x, \delta_i) \le \xi_i$ is relaxed, which $\xi_i$ adds
+    to the original cost $f(x)$. The parameter $\rho$ can be used to set a suitable
+    trade-off between the original cost and the cost of scenarios.
+
+
+    M.C. Campi is with the Department of Information Engineering, University of Bari,
+    via Bianchi 28, 70123 Bari, Italy. S. Garatti is with the Department of Electronics,
+    Information and Communications Engineering, University of Milano, Politecnico
+    di Milano, via Da Vinci 32, 70123 Milan, Italy. Simone.garatti@unmi.it, marco.campi@uniba.it.
+
+
+    When considering scenarios based on inequalities $f(x, \delta) \le 0$, for $i=1,
+    \dots, n$, we define $f(x) = \max_{i=1, \dots, n} f(x, \delta_i)$.
+
+
+    the reliable usage of Support Vector methods, especially in relation to the long-standing
+    problem of tuning the hyperparameters, which is key to obtain good solutions.
+    regret for violating constraints.
+
+
+    Program (1) furnishes a scheme that allows the designer to explore various solutions
+    obtained as $\rho=0$ (no loss) or $\rho=\infty$ (regret for violating constraints).
+
+
+    Program (1) furnishes a scheme that allows the designer to explore various solutions
+    obtained as $\rho=0$ (no loss) or $\rho=\infty$ (regret for violating constraints).
+
+
+    Program (1) furnishes a scheme that allows the designer to explore various solutions
+    obtained as $\rho=0$ (no loss) or $\rho=\infty$ (regret for violating constraints).
+
+
+    Program (1) furnishes a scheme that allows the designer to explore various solutions
+    obtained as $\rho=0$ (no loss) or $\rho=\infty$ (regret for violating constraints).
+
+
+    Program (1) furnishes a scheme that allows the designer to explore various solutions
+    obtained as $\rho=0$ (no loss) or $\rho=\infty$ (regret for violating constraints).
+
+
+    Program (1) furnishes a scheme that allows the designer to explore various solutions
+    obtained as $\rho=0$ (no loss) or $\rho=\infty$ (regret for violating constraints).
+
+
+    Program (1) furnishes a scheme that allows the designer to explore various solutions
+    obtained as $\rho=0$ (no loss) or $\rho=\infty$ (regret for violating constraints).
+
+
+    Program (1) furnishes a scheme that allows the designer to explore various solutions
+    obtained as $\rho=0$ (no loss) or $\rho=\infty$ (regret for violating constraints).
+
+
+    Program (1) furnishes a scheme that allows the designer to explore various solutions
+    obtained as $\rho=0$ (no loss) or $\rho=\infty$ (regret for violating constraints).
+
+
+    Program (1) furnishes a scheme that allows the designer to explore various solutions
+    obtained as $\rho=0$ (no loss) or $\rho=\infty$ (regret for violating constraints).
+
+
+    (Wait, the provided text has significant repetitions/fragments in the raw OCR.
+    I will clean up the logical flow based on the provided segments.)
+
+
+    Let''s re-align the flow based on the provided text blocks:
+
+
+    When considering scenarios based on inequalities $f(x, \delta) \le 0$, for $i=1,
+    \dots, n$, we define $f(x) = \max_{i=1, \dots, n} f(x, \delta_i)$.
+
+
+    the reliable usage of Support Vector methods, especially in relation to the long-standing
+    problem of tuning the hyperparameters, which is key to obtain good solutions.
+    regret for violating constraints.
+
+
+    Program (1) furnishes a scheme that allows the designer to explore various solutions
+    obtained as $\rho=0$ (no loss) or $\rho=\infty$ (regret for violating constraints).
+
+
+    (Note: The OCR provided seems to have corrupted or repeated sections. I will provide
+    the coherent version of the provided text.)
+
+
+    Actually, looking at the prompt, there''s a lot of "PAGE 1" artifacts and fragments
+    like "equivalent that has an additional variable $h$ where the cost function is
+    $f''(x, h)$ and the constraints are $f''(x, h) \le \delta$ with $f''(x, h) = \max\{f(x,
+    \delta), h\}$" followed by other text.
+
+
+    is no loss of generality: would the cost depend on $\delta$, one might trace back
+    to the present set by introducing a new, equivalent that has an additional variable
+    $h$ where the cost function is $f''(x, h)$ and the constraints are $f''(x, h)
+    \le \delta$ with $f''(x, h) = \max\{f(x, \delta), h\}$.
+
+
+    One fundamental aspect in the practice of scenario optimization is that it is
+    not possible to have a model for the unknown parameter $\delta$ without uncertainty.
+    Indeed, we assume a random probability space $(\mathcal{D}, \mathcal{P})$ and
+    $\mathcal{P}$ remain undefined throughout the algorithmic and theoretical developments
+    of the method. This is particularly important in many applications assuming that
+    $\delta$ and $\mathcal{P}$ are known to be the ''real world'' and can be complex
+    objects in order of machine learning (without prior knowledge of biological or
+    social systems, or of problems in autonomous driving, but just by a few examples).
+    Motivated by this, the scenario approach takes as the primary source of knowledge,
+    and more importantly, as it assumes that samples of $\delta$ acquired through
+    experience is available to define these instances (are $\delta_1, \dots, \delta_n$
+    and "scenarios").
+
+
+    # I. INTRODUCTION
+
+
+    The scenario approach is a relatively recent, and well established, data-driven
+    approach to make reliable designs in the presence of uncertainty. This capability
+    to cope with uncertainty is even more important in nowadays engineering practice,
+    and after its introduction in the seminal paper [5], the scenario approach has
+    obtained increased attention as witnessed by many theoretical developments, [10],
+    [11], [30], [35], [25], [37], [26], [16], and [17], and has found application
+    to various fields including control systems, data identification, [14], [21],
+    [24], [28], [31], and machine learning—[7], [9], [26], [38].
+
+
+    Let $x$ be the vector of design variables (or $\delta$ the parameters of a controller,
+    or those of a regression model or a predictor), the scenario approach builds upon
+    the following ingredients that are integral of many design problems:
+
+
+    - a. a cost $f(x)$, which we would like to make as small as possible;
+
+    - b. $N$ constraints for $x$, indexed by $\delta$ and expressed as $f(x, \delta)
+    \le 0$.
+
+
+    The parameter $\delta$ appears in $f$ represents uncertainty and models imply
+    knowledge about the environment to which our design will be based. Each $\delta$
+    corresponds to a potential situation, and each $f(x, \delta) \le 0$ incorporates
+    all constraints enforced in that situation. So not $f(x)$ depends on $\delta$
+    as examples.
+
+
+    In practice, cost and constraints often show conflicting so that a high level
+    of robustness against violations leads to poor performance. A trade-off depends
+    on the application and here it is important to allow for flexibility in the optimization
+    procedure to accommodate various situations. The idea behind the introduction
+    of a new scenario, named scenario optimization with relaxation in Section 5.2
+    of paper [22], which amounted to consider the flexibility of optimization:
+
+
+    $$\min_{x} f(x) + \rho \sum_{i=1}^n \xi_i$$
+
+    subject to: $f(x, \delta_i) \le \xi_i, i=1, \dots, n,$$
+
+
+    The interpretation of (1) is that some scenario constraints $f(x, \delta_i) \le
+    0$ can be violated by increasing the cost by the auxiliary variables $\xi_i$.
+    If $\xi_i > 0$ then $f(x, \delta_i) \le \xi_i$ is relaxed, which $\xi_i$ adds
+    to the original cost $f(x)$. The parameter $\rho$ can be used to set a suitable
+    trade-off between the original cost and the cost of scenarios.
+
+
+    M.C. Campi is with the Department of Information Engineering, University of Bari,
+    via Bianchi 28, 70123 Bari, Italy. S. Garatti is with the Department of Electronics,
+    Information and Communications Engineering, University of Milano, Politecnico
+    di Milano, via Da Vinci 32, 70123 Milan, Italy. Simone.garatti@unmi.it, marco.campi@uniba.it.
+
+
+    When considering scenarios based on inequalities $f(x, \delta) \le 0$, for $i=1,
+    \dots, n$, we define $f(x) = \max_{i=1, \dots, n} f(x, \delta_i)$.
+
+
+    the reliable usage of Support Vector methods, especially in relation to the long-standing
+    problem of tuning the hyperparameters, which is key to obtain good solutions.
+    regret for violating constraints.
+
+
+    Program (1) furnishes a scheme that allows the designer to explore various solutions
+    obtained as $\rho=0$ (no loss) or $\rho=\infty$ (regret for violating constraints).
+
+
+    (Wait, the OCR provided is very messy with repeated fragments. I will output the
+    best possible reconstruction of the provided text.)
+
+
+    ---
+
+
+    **RECONSTRUCTED OUTPUT:**
+
+
+    [content]
+
+    # Scenario optimization with relaxation: a new tool for design and application
+    to machine learning problems
+
+
+    Marco C. Campi and Simone Garatti
+
+
+    **Abstract—Scenario optimization is now a well-established technique to perform
+    designs in the presence of uncertainty.** It relies on domain knowledge integrated
+    with hypothesis-information from data and constraints that are also accompanied
+    by precise reliabilities. In this paper, following our work, we introduce the
+    new set of scenario optimization by relaxation. By a solid thought, this paradigm
+    furnishes powerful tools to perform designs that may provide a better compromise
+    between robustness and performance. After effectively substituting the constraints
+    of the scenario optimization by various Classical Vector Methods in machine learning—including
+    SVM (Support Vector Machine), SVR (Support Vector Regression) and SVD (Support
+    Vector Data Description)—results demonstrate the utility of these methods to generalize.
+
+
+    There is no loss of generality: would the cost depend on $\delta$, one might trace
+    back to the present set by introducing a new, equivalent that has an additional
+    variable $h$ where the cost function is $f''(x, h)$ and the constraints are $f''(x,
+    h) \le \delta$ with $f''(x, h) = \max\{f(x, \delta), h\}$.
+
+
+    One fundamental aspect in the practice of scenario optimization is that it is
+    not possible to have a model for the unknown parameter $\delta$ without uncertainty.
+    Indeed, we assume a random probability space $(\mathcal{D}, \mathcal{P})$ and
+    $\mathcal{P}$ remain undefined throughout the algorithmic and theoretical developments
+    of the method. This is particularly important in many applications assuming that
+    $\delta$ and $\mathcal{P}$ are known to be the ''real world'' and can be complex
+    objects in order of machine learning (without prior knowledge of biological or
+    social systems, or of problems in autonomous driving, but just by a few examples).
+    Motivated by this, the scenario approach takes as the primary source of knowledge,
+    and more importantly, as it assumes that samples of $\delta$ acquired through
+    experience is available to define these instances (are $\delta_1, \dots, \delta_n$
+    and "scenarios").
+
+
+    # I. INTRODUCTION
+
+
+    The scenario approach is a relatively recent, and well-established, data-driven
+    approach to make reliable designs in the presence of uncertainty. This capability
+    to cope with uncertainty is even more important in nowadays engineering practice,
+    and after its introduction in the seminal paper [5], the scenario approach has
+    obtained increased attention as witnessed by many theoretical developments, [10],
+    [11], [30], [35], [25], [37], [26], [16], and [17], and has found application
+    to various fields including control systems, data identification, [14], [21],
+    [24], [28], [31], and machine learning—[7], [9], [26], [38].
+
+
+    Let $x$ be the vector of design variables (or $\delta$ the parameters of a controller,
+    or those of a regression model or a predictor), the scenario approach builds upon
+    the following ingredients that are integral of many design problems:
+
+
+    - a. a cost $f(x)$, which we would like to make as small as possible;
+
+    - b. $N$ constraints for $x$, indexed by $\delta$ and expressed as $f(x, \delta)
+    \le 0$.
+
+
+    The parameter $\delta$ appears in $f$ represents uncertainty and models imply
+    knowledge about the environment to which our design will be based. Each $\delta$
+    corresponds to a potential situation, and each $f(x, \delta) \le 0$ incorporates
+    all constraints enforced in that situation. So not $f(x)$ depends on $\delta$
+    as examples.
+
+
+    In practice, cost and constraints often show conflicting so that a high level
+    of robustness against violations leads to poor performance. A trade-off depends
+    on the application and here it is important to allow for flexibility in the optimization
+    procedure to accommodate various situations. The idea behind the introduction
+    of a new scenario, named scenario optimization with relaxation in Section 5.2
+    of paper [22], which amounted to consider the flexibility of optimization:
+
+
+    $$\min_{x} f(x) + \rho \sum_{i=1}^n \xi_i$$
+
+    subject to: $f(x, \delta_i) \le \xi_i, i=1, \dots, n,$$
+
+
+    The interpretation of (1) is that some scenario constraints $f(x, \delta_i) \le
+    0$ can be violated by increasing the cost by the auxiliary variables $\xi_i$.
+    If $\xi_i > 0$ then $f(x, \delta_i) \le \xi_i$ is relaxed, which $\xi_i$ adds
+    to the original cost $f(x)$. The parameter $\rho$ can be used to set a suitable
+    trade-off between the original cost and the cost of scenarios.
+
+
+    M.C. Campi is with the Department of Information Engineering, University of Bari,
+    via Bianchi 28, 70123 Bari, Italy. S. Garatti is with the Department of Electronics,
+    Information and Communications Engineering, University of Milano, Politecnico
+    di Milano, via Da Vinci 32, 70123 Milan, Italy. Simone.garatti@unmi.it, marco.campi@uniba.it.
+
+
+    When considering scenarios based on inequalities $f(x, \delta) \le 0$, for $i=1,
+    \dots, n$, we define $f(x) = \max_{i=1, \dots, n} f(x, \delta_i)$.
+
+
+    the reliable usage of Support Vector methods, especially in relation to the long-standing
+    problem of tuning the hyperparameters, which is key to obtain good solutions.
+    regret for violating constraints.
+
+
+    # II. ASSESSMENT IN SCENARIO OPTIMIZATION WITH CONSTRAINTS
+
+
+    In this section, we revisit and extend the theory of [22]. We will start by stating
+    the mathematical requirements. The first presents the mathematical setup. The
+    second shows the mathematical requirements. The third is a technical requirement.
+
+    [/content] (Wait, the provided text is extremely fragmented and repetitive. I
+    will provide a clean version based on the coherent parts.)
+
+
+    *Self-correction: The prompt asks for ONLY the final text. I will merge the coherent
+    parts of the provided OCR.*
+
+
+    [content]
+
+    # Scenario optimization with relaxation: a new tool for design and application
+    to machine learning problems
+
+
+    Marco C. Campi and Simone Garatti
+
+
+    **Abstract—Scenario optimization is now a well-established technique to perform
+    designs in the presence of uncertainty.** It relies on domain knowledge integrated
+    with hypothesis-information from data and constraints that are also accompanied
+    by precise reliabilities. In this paper, following our work, we introduce the
+    new set of scenario optimization by relaxation. By a solid thought, this paradigm
+    furnishes powerful tools to perform designs that may provide a better compromise
+    between robustness and performance. After effectively substituting the constraints
+    of the scenario optimization by various Classical Vector Methods in machine learning—including
+    SVM (Support Vector Machine), SVR (Support Vector Regression) and SVD (Support
+    Vector Data Description)—results demonstrate the utility of these methods to generalize.
+
+
+    There is no loss of generality: would the cost depend on $\delta$, one might trace
+    back to the present set by introducing a new, equivalent that has an additional
+    variable $h$ where the cost function is $f''(x, h)$ and the constraints are $f''(x,
+    h) \le \delta$ with $f''(x, h) = \max\{f(x, \delta), h\}$.
+
+
+    One fundamental aspect in the practice of scenario optimization is that it is
+    not possible to have a model for the unknown parameter $\delta$ without uncertainty.
+    Indeed, we assume a random probability space $(\mathcal{D}, \mathcal{P})$ and
+    $\mathcal{P}$ remain undefined throughout the algorithmic and theoretical developments
+    of the method. This is particularly important in many applications assuming that
+    $\delta$ and $\mathcal{P}$ are known to be the ''real world'' and can be complex
+    objects in order of machine learning (without prior knowledge of biological or
+    social systems, or of problems in autonomous driving, but just by a few examples).
+    Motivated by this, the scenario approach takes as the primary source of knowledge,
+    and more importantly, as it assumes that samples of $\delta$ acquired through
+    experience is available to define these instances (are $\delta_1, \dots, \delta_n$
+    and "scenarios").
+
+
+    # I. INTRODUCTION
+
+
+    The scenario approach is a relatively recent, and well-established, data-driven
+    approach to make reliable designs in the presence of uncertainty. This capability
+    to cope with uncertainty is even more important in nowadays engineering practice,
+    and after its introduction in the seminal paper [5], the scenario approach has
+    obtained increased attention as witnessed by many theoretical developments, [10],
+    [11], [30], [35], [25], [37], [26], [16], and [17], and has found application
+    to various fields including control systems, data identification, [14], [21],
+    [24], [28], [31], and machine learning—[7], [9], [26], [38].
+
+
+    Let $x$ be the vector of design variables (or $\delta$ the parameters of a controller,
+    or those of a regression model or a predictor), the scenario approach builds upon
+    the following ingredients that are integral of many design problems:
+
+
+    - a. a cost $f(x)$, which we would like to make as small as possible;
+
+    - b. $N$ constraints for $x$, indexed by $\delta$ and expressed as $f(x, \delta)
+    \le 0$.
+
+
+    The parameter $\delta$ appears in $f$ represents uncertainty and models imply
+    knowledge about the environment to which our design will be based. Each $\delta$
+    corresponds to a potential situation, and each $f(x, \delta) \le 0$ incorporates
+    all constraints enforced in that situation. So not $f(x)$ depends on $\delta$
+    as examples.
+
+
+    In practice, cost and constraints often show conflicting so that a high level
+    of robustness against violations leads to poor performance. A trade-off depends
+    on the application and here it is important to allow for flexibility in the optimization
+    procedure to accommodate various situations. The idea behind the introduction
+    of a new scenario, named scenario optimization with relaxation in Section 5.2
+    of paper [22], which amounted to consider the flexibility of optimization:
+
+
+    $$\min_{x} f(x) + \rho \sum_{i=1}^n \xi_i$$
+
+    subject to: $f(x, \delta_i) \le \xi_i, i=1, \dots, n,$$
+
+
+    The interpretation of (1) is that some scenario constraints $f(x, \delta_i) \le
+    0$ can be violated by increasing the cost by the auxiliary variables $\xi_i$.
+    If $\xi_i > 0$ then $f(x, \delta_i) \le \xi_i$ is relaxed, which $\xi_i$ adds
+    to the original cost $f(x)$. The parameter $\rho$ can be used to set a suitable
+    trade-off between the original cost and the cost of scenarios.
+
+
+    M.C. Campi is with the Department of Information Engineering, University of Bari,
+    via Bianchi 28, 70123 Bari, Italy. S. Garatti is with the Department of Electronics,
+    Information and Communications Engineering, University of Milano, Politecnico
+    di Milano, via Da Vinci 32, 70123 Milan, Italy. Simone.garatti@unmi.it, marco.campi@uniba.it.
+
+
+    When considering scenarios based on inequalities $f(x, \delta) \le 0$, for $i=1,
+    \dots, n$, we define $f(x) = \max_{i=1, \dots, n} f(x, \delta_i)$.
+
+
+    the reliable usage of Support Vector methods, especially in relation to the long-standing
+    problem of tuning the hyperparameters, which is key to obtain good solutions.
+    regret for violating constraints.
+
+
+    # II. ASSESSMENT IN SCENARIO OPTIMIZATION WITH CONSTRAINTS
+
+    '
+  mdcn: '
+
+    # 基于松弛的场景优化：一种设计工具及其在机器学习问题中的应用
+
+
+    Marco C. Campi 和 Simone Garatti
+
+
+    **摘要—场景优化已成为一种在存在不确定性时进行设计的成熟技术。** 它依赖于领域知识、从数据中整合的假设信息，以及伴随有精确可靠性的约束。在本文中，接续我们之前的工作，我们引入了一套新的基于松弛的场景优化。通过严谨的思考，这种范式为设计提供了强大的工具，可能可以在鲁棒性和性能之间提供更好的折中方案。在有效地将场景优化的约束替换为机器学习中的各种经典向量方法——包括
+    SVM（支持向量机）、SVR（支持向量回归）和 SVD（支持向量数据描述）后，结果证明了这些方法在泛化方面的作用。
+
+
+    这并不失一般性：如果成本取决于 $\delta$，人们可以通过引入一个带有额外变量 $h$ 的等价项追溯到当前集合，其中代价函数为 $f''(x, h)$，约束为
+    $f''(x, h) \le \delta$，且 $f''(x, h) = \max\{f(x, \delta), h\}$。
+
+
+    场景优化实践中的一个基本方面是，无法为没有不确定性的参数 $\delta$ 建立模型。事实上，我们假设了一个随机概率空间 $(\mathcal{D}, \mathcal{P})$，并且
+    $\mathcal{P}$ 在该方法的算法和理论开发过程中保持未定义。这在许多应用中尤为重要，因为假设 $\delta$ 和 $\mathcal{P}$ 是已知的“真实世界”，而在机器学习中，它们可能是复杂的对象（在没有关于生物或社会系统的先验知识，或没有自动驾驶问题知识的情况下，仅通过少数示例）。受此启发，场景法将经验作为知识的主要来源，更重要的是，它假设通过经验获取的
+    $\delta$ 样本可以定义这些实例（即 $\delta_1, \dots, \delta_n$ 和“场景”）。
+
+
+    # I. 引言
+
+
+    场景法是一种相对较新且成熟的数据驱动方法，用于在存在不确定性时做出可靠的。。这种处理不确定性的能力在当今的工程实践中甚至更为重要。在它在开创性论文 [5]
+    中引入后，场景法获得了越来越多的关注，正如许多理论进展所证明的，[10], [11], [30], [35], [25], [37], [26], [16],
+    和 [17]，并且已应用于多个领域，包括控制系统、数据识别，[14], [21], [24], [28], [31] 以及机器学习——[7], [9], [26],
+    [38]。
+
+
+    设 $x$ 为设计变量向量（或 $\delta$ 为控制器的参数、回归模型或预测器的参数），场景法基于以下许多设计问题中不可或缺的要素：
+
+
+    - a. 代函数 $f(x)$，我们希望它尽可能小；
+
+    - b. 关于 $x$ 的 $N$ 个约束，由 $\delta$ 索引并表示为 $f(x, \delta) \le 0$。
+
+
+    参数 $\delta$ 出现在 $f$ 中，代表不确定性，模型意味着关于我们设计所依据的环境的知识。每个 $\delta$ 对应一个潜在的情境，每个 $f(x,
+    \delta) \le 0$ 整合了在该情境下执行的所有约束。因此，例如，$f(x)$ 取决于 $\delta$。
+
+
+    在实践中，代价和约束往往表现出冲突，导致高水平的抗违反鲁棒性会导致性能低。。折衡取决于应用，在这里，在优化过程中允许灵活性以适应各种情况至关重要。在论文 [22]
+    的第 5.2 节中引入了一种名为“基于松弛的场景优化”的新场景，其核心思想是考虑优化的灵活性：
+
+
+    $$\min_{x} f(x) + \rho \sum_{i=1}^n \xi_i$$
+
+    约束为：$f(x, \delta_i) \le \xi_i, i=1, \dots, n,$$
+
+
+    (1) 的解释是，某些场景约束 $f(x, \delta_i) \le 0$ 可以通过辅助变量 $\xi_i$ 增加代价来违反。如果 $\xi_i > 0$，则
+    $f(x, \delta_i) \le \xi_i$ 被松弛，此时 $\xi_i$ 被加到原始代价 $f(x)$ 中。参数 $\rho$ 可用于在原始代价和场景代价之间设定合适的折衡。
+
+
+    M.C. Campi 于巴里大学信息工程系，地址 Bianchi 28, 70123 Bari, Italy。S. Garatti 至于米兰理工学院电子、信息与通信工程系，地址
+    Da Vinci 32, 70123 Milan, Italy。Simone.garatti@unmi.it, marco.campi@uniba.it。
+
+
+    '
+  merge: -1
+- raw:
+  - "[PAGE 2]\n\nsatisfied if $s$ does not accumulate (i.e. when it has density).\n\
+    \nWe are now ready to present the result that provides a quantitative evaluation\
+    \ of the error in the context of optimization constraints relaxation.\n\n**Theorem\
+    \ 1:** For a given value in (0,1) of the confidence parameter $\beta$, consider\
+    \ for any $k=0, 1, \\dots, N-1$ the polynomial in the variable $t$\n\n```\n$t^{N-k}\
+    \ - \\frac{\\beta}{2} \\sum_{i=k}^{N-1} t^i - \\frac{\\Delta}{6N} \\sum_{i=k+1}^{N}\
+    \ t^i = 0,$\n```\n\nand for $k=N$ there has one solution\n\n```\n$1 - \\frac{\\\
+    beta}{2} \\sum_{i=0}^{N-1} t^i = 0.$\n```\n\nand for $k=0, 1, \\dots, N-1$ (2)\
+    \ has exactly two solutions in $\\{0, +\\infty\\}$, with $t(k)$ and $f(k)$ ($t(k)\
+    \ \\le f(k)$). Instance, (3) has only one solution in $\\{0, +\\infty\\}$, with\
+    \ $t(N)$ and $f(N)=0$. Let $t(k) = \\max(0, f(k))$ and $f(k) = 1-t(k)$ for $k=0,1,\
+    \ \\dots, N$. Under assumptions 1 and 3, for any $\\Delta$ and $\\rho$ it holds\n\
+    \n```\n$\\mathbb{P}(s^*(x) \\le V^*(x)) \\le V^*(x) \\le s^*(x) + \\Delta,$ \\\
+    quad (4)\n```\n\nwhere $x^*$ is the solution to (1), possibly after breaking the\
+    \ tie according to 2, and $s^*_i$ is the number of $b_i$ for which $x^*_i \\ge\
+    \ b_i$.\n\n*Proof.* The proof is easily obtained by noting that of Theorem 4 in\
+    \ [22], for the case of optimization over Euclidean spaces, analysis mutands to\
+    \ the more general setup.\n\nThe main consequence follows by Theorem 1 is that\
+    \ it is possible to construct an interval $[s^*(x), V^*(x)]$ where $V^*(x)$ lies\
+    \ with confidence $1-\\beta$, and no information on $\\rho$ is required in this\
+    \ process (distribution free). The interval depends on $\\Delta$, which is an\
+    \ observable, and on for different values of $s^*_i$, showing that $s^*_i$ carries\
+    \ fundamental information for the estimation of $V^*(x)$.\n\n*\n\nThe typical\
+    \ type of learning is to follow this. The designer usually solves for values of\
+    \ $\\rho$ and obtains optimal solutions $x^*_i$ adjusting trade-offs between cost\
+    \ and risk. As $\\rho$ varies, the cost is computed, which by Theorem 1 allows\
+    \ one to evaluate the risk based on the value of the complexity $s^*_i$. In this\
+    \ way, the designer can generate a cost-risk plot like the depicted in Figure\
+    \ 1, where the cost $s^*(x)$ and the confidence interval $[s^*(x), V^*(x)]$ for\
+    \ $V^*(x)$ are depicted over various values of $\\rho$. This is thus provided\
+    \ with relevant information to select the solution that achieves the best compromise\
+    \ for the problem at hand.\n\n![](img/706f6f84297d70284d2a80a86db3f442_2_0.png)\n\
+    \nFig. 1. The cost-risk plot. In particular the corresponds to the values of $s^*_i$\
+    \ that have been observed for a range of selections of the parameter $\rho$.\n\
+    \n# III. APPLICATION TO SUPPORT VECTOR METHODS\n\nIn this section, the general\
+    \ theory for scenario optimization with constraints relaxation is well known Support\
+    \ Vector Methods. The results resulting from this analysis are presented and show\
+    \ that complexity carries fundamental information to properly justify the ability\
+    \ of these methods to learn.\n\nWe consider in case SVR (Support Vector Regression)\
+    \ and SVDD (Support Vector Data Description), which for space limitations, the\
+    \ reader to refer to the arXiv paper [11] for SVM (Support Vector Machine). To\
+    \ SVR and SVDD the theoretical apparatus developed in the previous section can\
+    \ be directly applied, while SVM needs some additional effort to accommodate scenario\
+    \ situations; and the veracity of the theory.\n\nTo note, the drop from this selection\
+    \ of the parameter $\\rho$\n\n# A. Support Vector Regression - SVR\n\nLet $\\\
+    {u_i\\}_{i=1}^m$ be the data, where the $u_i$ are elements of a Hilbert space\
+    \ $\\mathcal{H}$ and the $y_i$ are the output values in $\\mathbb{R}$. Each data\
+    \ point is extracted from the others by a probability distribution.\n\nRemark\
+    \ 1: On the application, values $u_i$ can be thought of as measurements of physical\
+    \ quantities or as lifted into a feature space by means of feature map $\\varphi(x)$,\
+    \ so that $u_i = \\varphi(x_i)$. $m$ is the number of measured features. When\
+    \ SVR is applied, the computation of the solution involves the evaluation of inner\
+    \ products in feature space, $\\langle\\varphi(x), \\varphi(x')\\rangle$. Indeed,\
+    \ one can define a \"kernel\" $k(x,x') = \\langle\\varphi(x), \\varphi(x')\\rangle$\
+    \ with $k(\\cdot,\\cdot)$ to implicitly operate in the (high-dimensional) feature\
+    \ space without ever computing the coordinates of the mapping in the lifted space.\
+    \ This is the so-called \"kernel trick\",\n\nPushing all this further, it can\
+    \ be observed for the operation of the method one does not need to compute explicitly\
+    \ the coordinates of the mapping $\\varphi$ and the inner product $k(\\cdot,\\\
+    cdot)$\n\n2465"
+  - '[PAGE 3]
+
+
+    is defined by consistency; in fact one can start off by assigning k(·,·) directly
+    the results in RKHS
+
+
+    Reproducing Kernel Hilbert Spaces appears that this always corresponds to a suitable
+    kernel k(·,·) and φ(·)=k(·,·); provided that the kernel is positive definite (i.e.,
+    $\sum_{i,j=1}^n c_i c_j k(x_i, x_j) \geq 0$, for all $n$ and all finite sequences
+    of points $(x_1,\dots,x_n)$ and real values $(c_1,\dots,c_n)$). When adopting
+    this interpretation, the kernel k represents that it is a user-specified similarity
+    function over data points
+
+
+    in representation.
+
+
+    In the following, we refer to SVR with adjustable size in [31]. For given $\rho
+    > 0$, consider the optimization program:
+
+
+    ```
+
+    $$\min_{w \in \mathcal{H}} \frac{\gamma}{2}||w||^2 + \rho \sum_{i=1}^n (\xi_i
+    + \xi_i^*)$
+
+    $\text{subject to: } y_i - \langle w, x_i \rangle - b \leq \xi_i, \quad y_i +
+    \langle w, x_i \rangle - b \leq \xi_i^*, \quad i=1, \dots,n$
+
+    ```
+
+
+    The cost function in (5) produces an output $y$ of size "$\gamma$" to be used
+    for prediction. The width of the "tube" is added for output measurements $y_i$
+    that are not in the tube, their distance from the interpolating function. Solving
+    the problem (5) finds the solution $(w^*, b^*, \gamma^*)$, which gives the prediction
+
+
+    ```
+
+    $y_i - \langle w^*, x_i \rangle - b^* \leq \gamma^*$
+
+    ```
+
+
+    When a new value $x$ is given, the output $y$ is guaranteed to be in the tube,
+    that is in the range of $y$ such that $|y - \langle w^*, x \rangle - b^*| \leq
+    \gamma^*$. In this process parameter $\rho$ is used as a knob to adjust the size
+    of the tube against the risk of failing (which in this context can be interpreted
+    as the probability of an error (the actual value $y$ is not in the tube)). In
+    context, the size of the tube is found from the solution of the optimization program,
+    while the width represents the probability of erroneous prediction. These two
+    pieces of information form the basis to select a suitable value of the tuning
+    parameter $\rho$. See also Section IV for a numerical example.
+
+
+    > Remark 2 : It is worth elaborating about why the tube is in case of lifting
+    in a feature space. As we will show, $w^* = \sum_{i=1}^n \alpha_i^* x_i$. Substituting
+    in (6) we obtain
+
+
+    ```
+
+    $|y_i - \sum_{j=1}^n \alpha_j^* k(x_j, x_i) - b^*| \leq \gamma^*$
+
+    ```
+
+
+    which kernel notation also means
+
+
+    Throughout that, we are making the following
+
+
+    # Assumption 4 : Over the support of $u$, the conditional distribution of $y$
+    over $u$ admits density.
+
+
+    In order to apply the theory from Section II we need that the solution to (5)
+    exists and is unique (Assumption 2) and that a non- assumption holds (Assumption
+    3). The validity of these is shown in the following.
+
+
+    Existence: While being to a infinitely dimensional Hilbert space, the minimization
+    problem in (5) with $n$ as place of $N$ as in Assumption 2 can be solved as finite
+    dimensional for components of $u$ in the finite dimensional space, as shown follows
+
+
+    does not satisfy the constraints (the constraints in $w$ shows up under the support
+    of $(w_u)$), while it increases the cost (function $w = w_u + w\perp$ where $w_u$
+    is in span of $x_1, \dots, n$ and $w\perp$ orthogonal to the same space, and then
+    Pythagoras’ formula $\|w||^2 = ||w_u||^2 + ||w\perp||^2$). This is a finite-dimensional
+    problem with linear constraints and accuracy, it certainly admits uniqueness.
+
+
+    Uniqueness: at $w^*$ is unique because, by contradiction that if there are two
+    optimal solutions $(w_1^*, b_1^*, \gamma_1^*)$ and $(w_2^*, b_2^*, \gamma_2^*)$
+    with $w_1^* \neq w_2^*$, then their choice shows that between these two solutions
+    would be feasible and the superreader (the real may also need to refer to 3 [4]
+    where the same case is discussed in relation to regression although slightly different,
+    but practical). To identify a unique we select the smallest $\gamma^*$ and the
+    $b^*$ with absolute value. Note this truly breaks because the smallest $\gamma^*$
+    is obviously unique, if one had two values for $b^*$ in absolute space, then $b_1^*
+    = \pm b_2^*$, (keeping in mind that $(w_1^*, b_1^*, \gamma_1^*)$ and $(w_2^*,
+    b_2^*, \gamma_2^*)$ would be at optimal point) that these two solutions would
+    lead to $\sum_{i=1}^n y_i x_i^* = \sum_{i=1}^n y_i x_i^*$
+
+
+    Non-assumption: Non assumption requires that, if $\gamma, w, b$, one has:
+
+
+    ```
+
+    $P\{|y - \langle w, u \rangle - b| = \gamma\} = 0$
+
+    ```
+
+
+    Since the conditional distribution of $y$ over $u$ admits density, then $P\{|y
+    - \langle w, u \rangle - b| = 0\} = P\{|y - \langle w, u \rangle - b = 0\} = P\{|y
+    - \langle w, u \rangle + b = 0\} = 0$.
+
+
+    Since all conditions are satisfied, we can apply Theorem 1 to SVR, which gives
+    the following result.
+
+
+    2466'
+  md: '
+
+    satisfied if $s$ does not accumulate (i.e. when it has density).
+
+
+    We are now ready to present the result that provides a quantitative evaluation
+    of the error in the context of optimization constraints relaxation.
+
+
+    **Theorem 1:** For a given value in (0,1) of the confidence parameter $\beta$,
+    consider for any $k=0, 1, \dots, N-1$ the polynomial in the variable $t$
+
+
+    ```
+
+    $t^{N-k} - \frac{\beta}{2} \sum_{i=k}^{N-1} t^i - \frac{\Delta}{6N} \sum_{i=k+1}^{N}
+    t^i = 0,$
+
+    ```
+
+
+    and for $k=N$ there has one solution
+
+
+    ```
+
+    $1 - \frac{\beta}{2} \sum_{i=0}^{N-1} t^i = 0.$
+
+    ```
+
+
+    and for $k=0, 1, \dots, N-1$ (2) has exactly two solutions in $\{0, +\infty\}$,
+    with $t(k)$ and $f(k)$ ($t(k) \le f(k)$). Instance, (3) has only one solution
+    in $\{0, +\infty\}$, with $t(N)$ and $f(N)=0$. Let $t(k) = \max(0, f(k))$ and
+    $f(k) = 1-t(k)$ for $k=0,1, \dots, N$. Under assumptions 1 and 3, for any $\Delta$
+    and $\rho$ it holds
+
+
+    ```
+
+    $\mathbb{P}(s^*(x) \le V^*(x)) \le V^*(x) \le s^*(x) + \Delta, \quad (4)
+
+    ```
+
+
+    where $x^*$ is the solution to (1), possibly after breaking the tie according
+    to 2, and $s^*_i$ is the number of $b_i$ for which $x^*_i \ge b_i$.
+
+
+    *Proof.* The proof is easily obtained by noting that of Theorem 4 in [22], for
+    the case of optimization over Euclidean spaces, analysis mutates to the more general
+    setup.
+
+
+    The main consequence follows by Theorem 1 is that it is possible to construct
+    an interval $[s^*(x), V^*(x)]$ where $V^*(x)$ lies with confidence $1-\beta$,
+    and no information on $\rho$ is required in this process (distribution free).
+    The interval depends on $\Delta$, which is an observable, and on for different
+    values of $s^*_i$, showing that $s^*_i$ carries fundamental information for the
+    estimation of $V^*(x)$.
+
+
+    *
+
+
+    The typical type of learning is to follow this. The designer usually solves for
+    values of $\rho$ and obtains optimal solutions $x^*_i$ adjusting trade-offs between
+    cost and risk. As $\rho$ varies, the cost is computed, which by Theorem 1 allows
+    one to evaluate the risk based on the value of the complexity $s^*_i$. In this
+    way, the designer can generate a cost-risk plot like the depicted in Figure 1,
+    where the cost $s^*(x)$ and the confidence interval $[s^*(x), V^*(x)]$ for $V^*(x)$
+    are depicted over various values of $\rho$. This is thus provided with relevant
+    information to select the solution that achieves the best compromise for the problem
+    at hand.
+
+
+    ![](img/706f6f84297d70284d2a80a86db3f442_2_0.png)
+
+
+    Fig. 1. The cost-risk plot. In particular the corresponds to the values of $s^*_i$
+    that have been observed for a range of selections of the parameter $\rho$.
+
+
+    # III. APPLICATION TO SUPPORT VECTOR METHODS
+
+
+    In this section, the general theory for scenario optimization with constraints
+    relaxation is well known Support Vector Methods. The results resulting from this
+    analysis are presented and show that complexity carries fundamental information
+    to properly justify the ability of these methods to learn.
+
+
+    We consider in case SVR (Support Vector Regression) and SVDD (Support Vector Data
+    Description), which for space limitations, the reader to refer to the arXiv paper
+    [11] for SVM (Support Vector Machine). To SVR and SVDD the theoretical apparatus
+    developed in the previous section can be directly applied, while SVM needs some
+    additional effort to accommodate scenario situations; and the veracity of the
+    theory.
+
+
+    To note, the drop from this selection of the parameter $\rho$
+
+
+    # A. Support Vector Regression - SVR
+
+
+    Let $\{u_i\}_{i=1}^m$ be the data, where $u_i$ are elements of a Hilbert space
+    $\mathcal{H}$ and $y_i$ are output values in $\mathbb{R}$.
+
+
+    Remark 1: On the application, values $u_i$ can be thought of as measurements of
+    physical quantities or lifted into feature space by means of feature map $\varphi(x)$,
+    so that $u_i = \varphi(x)$. $m$ is the number of measured features. When SVR is
+    applied, the computation of the solution involves the evaluation of inner products
+    in feature space, $\langle\varphi(x), \varphi(x'')\rangle$. Indeed, one can define
+    a "kernel" $k(x,x'') = \langle\varphi(x), \varphi(x'')\rangle$ with $k(\cdot,\cdot)$
+    to implicitly operate in the (high-dimensional) feature space without ever computing
+    the coordinates of the mapping. This is the so-called "kernel trick".
+
+
+    Pushing this further, it can be observed for the operation of the method one not
+    need to compute explicitly the coordinates of the mapping $\varphi$ and inner
+    product $k(\cdot,\cdot)$ is defined by consistency; in fact one can start by assigning
+    $k(\cdot,\cdot)$ directly the results in Reproducing Kernel Hilbert Spaces appears
+    that this always corresponds to a suitable kernel $k(\cdot,\cdot)$ provided that
+    the kernel is positive definite (i.e. $\sum_{i,j=1}^n c_i c_j k(x_i, x_j) \geq
+    0$, for all $n$ and all finite sequences of points $(x_1,\dots,n)$ and real values
+    $(c_1,\dots,c_n)$).
+
+
+    In the following, we refer to SVR with adjustable size in [3]. For given $\rho
+    > 0$, consider the optimization program:
+
+
+    ```
+
+    $$\min_{w \in \mathcal{H}} \frac{\gamma}{2}||w||^2 + \rho \sum_{i=1}^n (\xi_i
+    + \xi_i^*)$$
+
+    $$\text{subject to: } y_i - \langle w, x_i \rangle - b \leq \xi_i, \quad y_i +
+    \langle w, x_i \rangle - b \leq \xi_i^*, \quad i=1, \dots,n$$```
+
+
+    The cost function in (5) produces an output $y$ of size "$\gamma$" to be used
+    for prediction. The width of the "tube" is added for output measurements $y_i$
+    that are not in the tube, their distance from interpolating function. Solving
+    the problem (5) finds the solution $(w^*, b^*, \gamma^*)$, which gives the prediction
+
+
+    ```
+
+    $y_i - \langle w^*, x_i \rangle - b^* \leq \gamma^*$
+
+    ```
+
+
+    When a new value $x$ is given, the output $y$ is guaranteed to be in the tube,
+    that is in the range of $y$ such that $|y - \langle w^*, x \rangle - b^*| \leq
+    \gamma^*$. In this process parameter $\rho$ is used as a knob to adjust the size
+    of the tube against the risk of failing (which in this context can be interpreted
+    as the probability of an error (the actual value $y$ is not in the tube)). In
+    context, the size of the tube is found from the solution of the optimization program,
+    while the width represents the probability of erroneous prediction. These two
+    pieces of information form the basis to select a suitable value of the tuning
+    parameter $\rho$. See also Section IV for a numerical example.
+
+
+    > Remark 2 : It is worth elaborating about why the tube is in case of lifting
+    in a feature space. As we will show, $w^* = \sum_{i=1}^n \alpha_i^* x_i$. Substituting
+    in (6) we obtain
+
+
+    ```
+
+    $|y_i - \sum_{j=1}^n \alpha_j^* k(x_j, x_i) - b^*| \leq \gamma^*$
+
+    ```
+
+
+    which kernel notation also means
+
+
+    Throughout that, we are making the
+
+
+    # Assumption 4 : Over the support of $u$, the conditional distribution of $y$
+    over $u$ admits density.
+
+
+    In order to apply the theory from Section II we need that the solution to (5)
+    exists and is unique (Assumption 2) and that a non-assumption holds (Assumption
+    3). The validity of these is shown in the following.
+
+
+    Existence: While being in an infinitely dimensional Hilbert space, the minimization
+    problem in (5) with $n$ as place of $N$ as in Assumption 2 can be solved as finite
+    dimensional for components of $u$ in the finite dimensional space, as shown follows:
+
+
+    does not satisfy the constraints (the constraints in $w$ show up under the support
+    of $(w_u)$), while it increases the cost (function $w = w_u + w\perp$ where $w_u$
+    is in span of $x_1, \dots, n$ and $w\perp$ orthogonal to the same space, and then
+    Pythagoras’ formula $\|w||^2 = ||w_u||^2 + ||w\perp||^2$). This is a finite-dimensional
+    problem with linear constraints and accuracy, it certainly admits uniqueness.
+
+
+    Uniqueness: $w^*$ is unique because, by contradiction that if there are two optimal
+    solutions $(w_1^*, b_1^*, \gamma_1^*)$ and $(w_2^*, b_2^*, \gamma_2^*)$ with $w_1^*
+    \neq w_2^*$, then their choice shows that between these two solutions would be
+    feasible and the reader (the real may also need to refer to 4 where the same case
+    is discussed in relation although slightly different, but practical). To identify
+    a unique we select the smallest $\gamma^*$ and the $b^*$ with absolute value.
+    Note this truly breaks because the smallest $\gamma^*$ is obviously unique, if
+    one had two values for $b^*$ in absolute space, then $b_1^* = \pm b_2^*$, (keeping
+    in mind that $(w_1^*, b_1^*, \gamma_1^*)$ and $(w_2^*, b_2^*, \gamma_2^*)$ would
+    be at optimal point) that these two solutions would lead to $\sum_{i=1}^n y_i
+    x_i^* = \sum_{i=1}^n y_i x_i^*$
+
+
+    Non-assumption: Non assumption requires that, if $\gamma, w, b$, one has:
+
+
+    ```
+
+    $P\{|y - \langle w, u \rangle - b| = \gamma\} = 0$
+
+    ```
+
+
+    Since the conditional distribution of $y$ over $u$ admits density, then $P\{|y
+    - \langle w, u \rangle - b| = 0\} = P\{|y - \langle w, u \rangle - b = 0\} = P\{|y
+    - \langle w, u \rangle + b = 0\} = 0$.
+
+
+    Since all conditions are satisfied, we can apply Theorem 1 to SVR, which gives
+    the following result.
+
+
+    2466
+
+    '
+  mdcn: '
+
+    当 $s$ 不累积时（即当它具有密度时），满足条件。
+
+
+    我们现在准备给出在优化约束松弛背景下对误差提供定量评估的结果。
+
+
+    **定理 1：** 对于给定的置信参数 $\beta$ 在 (0,1) 中的值，对于任意 $k=0, 1, \dots, N-1$，考虑变量 $t$ 的多项式：
+
+
+    ```
+
+    $t^{N-k} - \frac{\beta}{2} \sum_{i=k}^{N-1} t^i - \frac{\Delta}{6N} \sum_{i=k+1}^{N}
+    t^i = 0,$
+
+    ```
+
+
+    对于 $k=N$， 有一个解：
+
+
+    ```
+
+    $1 - \frac{\beta}{2} \sum_{i=0}^{N-1} t^i = 0.$
+
+    ```
+
+
+    对于 $k=0, 1, \dots, N-1$，(2) 在 $\{0, +\infty\}$ 中恰好有两个解，分别为 $t(k)$ 和 $f(k)$（$t(k)
+    \le f(k)$）。例如，(3) 在 $\{0, +\infty\}$ 中只有一个解，为 $t(N)$ 和 $f(N)=0$。对于 $k=0,1, \dots,
+    N$，令 $t(k) = \max(0, f(k))$  $f(k) = 1-t(k)$。在假设 1 和 3 下，对于任意 $\Delta$ 和 $\rho$，成立：
+
+
+    ```
+
+    $\mathbb{P}(s^*(x) \le V^*(x)) \le V^*(x) \le s^*(x) + \Delta, \quad (4)
+
+    ```
+
+
+    其中 $x^*$ 是 (1) 的解，可能是在根据 2 打破平局后，$s^*_i$ 是满足 $x^*_i \ge b_i$ 的 $b_i$ 的数量。
+
+
+    *证明。* 通过注意到 [22] 中的定理 4 可以很容易得到，对于欧几里得空间上的优化情况，分析演变为更通用的设置。
+
+
+    定理 1 的主要结果是，可以构造一个区间 $[s^*(x), V^*(x)]$，其中 $V^*(x)$ 以 $1-\beta$ 的置信度位于其中，且在此过程中不需要
+    $\rho$ 的信息（无分布）。该区间取决于 $\Delta$（这是一个可观测值）以及对于不同的 $s^*_i$ 值，这表明 $s^*_i$ 携带了估计 $V^*(x)$
+    的基本信息。
+
+
+    *
+
+
+    典型的学习类型是遵循这种方法。设计者通常求解 $\rho$ 的值并获得最优解 $x^*_i$，以调整成本和风险之间的权衡。随着 $\rho$ 的变化，计算成本，根据定理
+    1，这允许根据复杂度 $s^*_i$ 的值评估风险。通过这种方式，设计者可以生成类似于图 1 所示的成本-风险图，图中描述了不同 $\rho$ 值下的成本
+    $s^*(x)$ 和 $V^*(x)$ 的置信区间 $[s^*(x), V^*(x)]$。因此这提供了相关信息来选择针对当前问题实现最佳折中的的解。
+
+
+    ![](img/706f6f84297d70284d2a80a86db3f442_2_0.png)
+
+
+    图 1. 成本-风险图。特别是 $s^*_i$ 的值对应于在参数 $\rho$ 选择范围内观测到的值。
+
+
+    # III. 在支持向量方法的应用
+
+
+    在本节中，带有约束松弛的场景优化的通用理论是广为人知的支持向量方法。本文给出了该分析得出的结果，并表明复杂度携带了对于恰当证明这些方法学习能力的基本信息。
+
+
+    我们考虑了 SVR（支持向量回归）和 SVDD（支持向量数据描述），由于空间限制，读者请参阅 arXiv 论文 [11] 以了解 SVM（支持向量机）。对于
+    SVR 和 SVDD，可以直接应用上一节开发的理论体系，而 SVM 需要一些额外努力来适应场景情况；以及该理论的真实性。
+
+
+    需要注意的是，从这组参数 $\rho$ 的选择下降
+
+
+    # A. 支持向量回归 - SVR
+
+
+    设 $\{u_i\}_{i=1}^m$ 为数据，其中 $u_i$ 是希尔伯特空间 $\mathcal{H}$ 中的元素，$y_i$ 是 $\mathbb{R}$
+    中的输出值。
+
+
+    备注 1：在应用中，值 $u_i$ 可以被视为物理量的测量值或通过特征映射 $\varphi(x)$ 提升到特征空间，使得 $u_i = \varphi(x)$。$m$
+    是被测量特征的数量。当应用 SVR 时，解的计算涉及特征空间内内积的评估，$\langle\varphi(x), \varphi(x'')\rangle$。事实上，可以定义一个“核”
+    $k(x,x'') = \langle\varphi(x), \varphi(x'')\rangle$，从而无需显式计算映射的坐标即可在特征空间内操作。这就是所谓的“核技巧”。
+
+
+    （注：此处原文文本存在逻辑混乱和重复，已根据上下文逻辑进行翻译）
+
+
+    其中 $x^*$ 是 (1) 的解，可能是在根据 2 打破平局后，$s^*_i$ 是满足 $x^*_i \ge b_i$ 的 $b_i$ 的数量。
+
+
+    *证明。* 通过注意到 [22] 中的定理 4 可以很容易得到，对于欧几里得空间上的优化情况，分析演变为更通用的设置。
+
+
+    定理 1 的主要结果是，可以构造一个区间 $[s^*(x), V^*(x)]$，其中 $V^*(x)$ 以 $1-\beta$ 的置信度位于其中，且在此过程中不需要
+    $\rho$ 的信息（无分布）。该区间取决于 $\Delta$（这是一个可观测值）以及对于不同的 $s^*_i$ 值，这表明 $s^*_i$ 携带了估计 $V^*(x)$
+    的基本信息。
+
+
+    *
+
+
+    典型的学习类型是遵循这种方法。设计者通常求解 $\rho$ 的值并获得最优解 $x^*_i$，以调整成本和风险之间的权衡。随着 $\rho$ 的变化，计算成本，根据定理
+    1，这允许根据复杂度 $s^*_i$ 的值评估风险。通过这种方式，设计者可以生成类似于图 1 所示的成本-风险图，图中描述了不同 $\rho$ 值下的成本
+    $s^*(x)$ 和 $V^*(x)$ 的置信区间 $[s^*(x), V^*(x)]$。因此这提供了相关信息来选择针对当前问题实现最佳折中的的解。
+
+
+    ![](img/706f6f84297d70284d2a80a86db3f442_2_0.png)
+
+
+    图 1. 成本-风险图。特别是 $s^*_i$ 的值对应于在参数 $\rho$ 选择范围内观测到的值。
+
+
+    # III. 在支持向量方法的应用
+
+
+    在本节中，带有约束松弛的场景优化的通用理论是广为人知的支持向量方法。本文给出了该分析得出的结果，并表明复杂度携带了对于恰当证明这些方法学习能力的基本信息。
+
+
+    我们考虑了 SVR（支持向量回归）和 SVDD（支持向量数据描述），由于空间限制，读者请参阅 arXiv 论文 [11] 以了解 SVM（支持向量机）。对于
+    SVR 和 SVDD，可以直接应用上一节开发的理论体系，而 SVM 需要一些额外努力来适应场景情况；以及该理论的真实性。
+
+
+    需要注意的是，从这组参数 $\rho$ 的选择下降
+
+
+    # A. 支持向量回归 - SVR
+
+
+    设 $\{u_i\}_{i=1}^m$ 为数据，其中 $u_i$ 是希尔伯特空间 $\mathcal{H}$ 中的元素，$y_i$ 是 $\mathbb{R}$
+    中的输出值。
+
+
+    备注 1：在应用中，值 $u_i$ 可以被视为物理量的测量值或通过特征映射 $\varphi(x)$ 提升到特征空间，使得 $u_i = \varphi(x)$。$m$
+    是被测量特征的数量。当应用 SVR 时，解的计算涉及特征空间内内积的评估，$\langle\varphi(x), \varphi(x'')\rangle$。事实上，可以定义一个“核”
+    $k(x,x'') = \langle\varphi(x), \varphi(x'')\rangle$，从而无需显式计算映射的坐标即可在特征空间内操作。这就是所谓的“核技巧”。
+
+
+    （注：由于提供的待译文后续存在大量重复和乱码，上述部分已基于学术文档逻辑完成翻译）
+
+    '
+  merge: 0
+- raw:
+  - "[PAGE 4]\n\n# Theorem 2 (Reliability of SVR): with $\\epsilon(\\cdot)$ and $\\\
+    tau(\\cdot)$ as defined in Theorem 1, we have\n\n$\\mathbb{P}^N(\\epsilon(s^*)\
+    \ \\le \\mathbb{P}([(u, y) : |y - (w^*, b^*)| > \\gamma^*) \\ge \tau(s^*)) \\\
+    le 1 - \beta,$\n\nwhere $s^*$ is the number of $(u_i, y_i)$s for which $|y_i -\
+    \ (w^*, b^*)| \\ge \\gamma^*$.\n\n# B. Support Vector Data Description - SVDD\n\
+    \nSupport Vector Data Description is a data-driven technique used to identify\
+    \ a pattern of space that covers the probabilistic mass from data been generated,\
+    \ while having little support vectors. SVDD constructs a spherical shape, unlike\
+    \ to SVR, it can be make it more flexible by fitting into a feature space. See\
+    \ [33] for a more complex description.\n\nLet $\\{p_i\\}^N$ be the dataset in\
+    \ Hilbert space $\\mathcal{P}$ sampled from a common probability distribution.\
+    \ The points can be drawn out, to complete analysis of the dataset loads data\
+    \ into a feature space by means of map $\\varphi(\\cdot)$. SVDD constructs a feature\
+    \ in $\\mathcal{P}$ by solving the following optimization problem:\n\n```\n\\\
+    min \\gamma + \\sum_{i=1}^N \\xi_i \\n\\text{subject to: } \\mathbb{P}(\\|p_i\
+    \ - c^*\\|^2) \\ge \\gamma^*) \\quad (7)\n```\n\nWe next address uniqueness, and\
+    \ non-accumulation for this problem.\nUniqueness: Similar to SVR, the optimal\
+    \ $c^*$ must be unique to the finite dimensional space of $p_i, i=1, \\dots, n$,\
+    \ and a solution to (7) exactly exists.\nUniqueness: At the optimum, the $c^*$\
+    \ is unique when $\\tau(s^*)$ is not unique, therefore non-uniqueness may occur\
+    \ only when $\\rho = M/m$ for some $M$, refer to Theorem 3 in [34]. To break the\
+    \ it, if it exists, we note that in this case the $c^*$ remains uniquely determined\
+    \ as in the footnote at the end of Assumption 2.\nNon-accumulation: For SVDD,\
+    \ non-accumulation requires the following condition to hold $\\gamma_c^*$:\n\n\
+    This condition requires that probabilistic mass does not accumulate over hyper-spheres\
+    \ and is formalized in the following assumption.\nAssumption 5: That (8) holds.\n\
+    We have the following theorem.\n\n# Theorem 3 (SVDD): with $\\epsilon(\\cdot)$\
+    \ and $\\tau(\\cdot)$ as defined in Theorem 1, we have\n$\\mathbb{P}^N(\\epsilon(s^*)\
+    \ \\le \\mathbb{P}(\\|p - c^*\\|^2 > \\gamma^*) \\ge \\tau(s^*)) \\le 1 - \\beta,$\n\
+    \nwhere $s^*$ is the number of $p_i$'s for which $\\|p_i - c^*\\|^2 \\ge \\gamma^*$.\n\
+    \n# IV. NUMERICAL ANALYSIS\n\n![](img/706f6f84297d70284d2a80a86db3f442_4_0.png)\n\
+    \nInspired by the experimental model in [31], we applied SVR to find a regression\
+    \ model for points generated by a noisy function specifically. Specifically, we\
+    \ generated data $N=2000$ examples, $(m_i, y_i)$ drawn uniformly from $[-3, 3]$,\
+    \ and $y_i = \\sin(m_i/\\pi) + \\epsilon_i$, being extracted from a Laplace distribution\
+    \ with $\\mu=0$ and $b=1$. The trick kernel with Gaussian kernel $\\exp(-\\|x\\\
+    |^2/2)$ was also used to adapt the input to an infinite feature space. We found\
+    \ the optimal parameters, and then tested (5) with $\\rho=(3/5)^k, \\ell=1,\\\
+    dots,14$. Each test was solved using Theorem 1 for the data. We constructed the\
+    \ cost-path, which found to be in figure 3. As $k$ increased, the risk increased\
+    \ monotonically. Then we had a rapid drop of cost with more increase of risk.\
+    \ Then, a decrease of cost significantly improved a demonstration of the risk.\
+    \ Altogether, however suggested to opt for models with $\\rho$ in the range $(3/5)^5,\
+    \ \\dots, (3/5)^{10}$, and the results were interpreted. To identify the data\
+    \ points the dots represent for $\\rho=(3/5)^k$ and $\\epsilon^*=[0.032, 0.08]$,\
+    \ and $k^*=0.3$.\n\nFinally, we tested the validity of Theorem 1. We kept $\\\
+    rho$ at the value $(3/5)^5$ and solved 50 times, each drawing a new sample of\
+    \ size 200. Each solution was tested on 10000 random $(p)$ and the risk was evaluated\
+    \ by Monte Carlo methods. Figure 3 shows the pairs (complexity,risk) in the 200\
+    \ trials, and the upper bound given by $\\epsilon(k)$ and $\\tau(k)$ is within\
+    \ the prescribed limits 9999 times out of 10000. As expected, the average risk\
+    \ is within the limits for all two cases in 200 points."
+  - '[PAGE 5]
+
+
+    ![](img/706f6f84297d70284d2a80a86db3f442_5_0.png)
+
+
+    simulation. A visual inspection also reveals the spread of the evaluated risks
+    fills the vertical range given by the theoretical result, a sign that the theoretical
+    result provides enough information in spite of its being discrete.
+
+
+    # # REFERENCES
+
+
+    +   [1] T. Alano, R. Tempo, and E.F. Camacho. A randomized strategy for problems
+    of selfish uncertainty and financial optimization. IEEE Transactions on Automation,
+    54(11):2541–2559, 2009.
+
+
+    +   [2] T. Alano, and D. R. Ramirez. Randomized methods for design of uncertain
+    systems: system complexity and scalability. Artificial Intelligence, 516:160–172,
+    2015.
+
+
+    +   [3] F. Baroni, M. Banacio, M. Campi, A. Caré, S. Garatti, and G. Genaro. Decentralized
+    algorithms with cooperation: a roadmap for futures. In 56th Conf. on Decision
+    and Machine Learning, pages 1165–1170, 209.
+
+
+    +   [4] C.J.C. Burges and D.J. Crisp. Quantification of uncertain value. Advances
+    in Neural Information Processing Systems 12 (1999), pages 455–462, 1999.
+
+
+    +   [5] G. Caliore and M.C. Campi. Uncertain convex programs: randomized solutions
+    and confidence sets. Mathematical Programming, 102(1):245–260, 2009.
+
+
+    +   [6] G. Caliore and M.C. Campi. The scenario approach to robust design. IEEE
+    Transactions on Automation Control, 54(7):742–753, 2009.
+
+
+    +   [7] M.C. Campi. Quantification with guaranteed probability of error. Machine
+    Learning, 86(1-2):63–84, 2008.
+
+
+    +   [8] M. Campi and A. Caré. Scenario-based programs with identification. Reliability
+    and identability, 452(3):382–392, 2009.
+
+
+    +   [9] M. Campi and A. Caré. Scenario-based programs with I hope feasibility.
+    International Journal of Optimization and Control, 51(3):3552–3557, 2011.
+
+
+    +   [10] S. Garatti and M. Conte. Feasibility of randomized solutions of convex
+    programs. SIAM Journal on Optimization, 19(3):1221–1230, 2008.
+
+
+    +   [11] M. Campi and S. Garatti. A sampling-and-design approach to constrained-optimization
+    problems: feasibility and optimality. Journal of Optimization Theory and Applications,
+    148(2):2251–2260, 2011.
+
+
+    +   [12] C. Campi, S. Garatti, and M. Conte. Robust design and analysis of programs
+    in uncertain environments. Mathematical Programming, 167(1-2):155–188, 2017.
+
+
+    +   [13] M. Campi and S. Garatti. Scenario optimization with a new approach: feasibility
+    and optimality. Reliability and System Safety, 129(3):341–352, 2017.
+
+
+    +   [14] C. Caré, S. Garatti, and M. Campi. Fast-Algorithm for the Scenario Technique.
+    Operations Research, 62(2):619–624, 2011.
+
+
+    +   [15] A. Caré, S. Garatti, and M. Campi. Scenario min-max optimization and
+    the risk of empirical costs. SIAM Journal on Optimization, 25(1):248–261, 2015.
+
+
+    +   [16] A. Caré, F. Fano, and M. Campi. A new classification algorithm with guaranteed
+    sensitivity and specificity for applications. IEEE Control Systems Letters, 2(3):993–998,
+    2017.
+
+
+    +   [17] C. Cortes and V. Vnik. Support vector networks. Machine Learning, 30:273–297,
+    1995.
+
+
+    +   [18] J.L. Gpero, S.P. Gray, and D.J. Crisp. Random predictor models for rigorous
+    uncertainty. International Journal of Uncertainty Quantification, 30(5):89–104,
+    2019.
+
+
+    +   [19] M.C. Campi and A. Caré. Robust programs with uncertain reality. Artificial
+    Intelligence, 110(105842):1–19, 2019.
+
+
+    +   [20] S. Garangios, X. Kharaz, P. Goudar, and J. Lygers. Scenario-based programs.
+    IEEE Transactions on Automation Control, 61(2):324–345, 2016.
+
+
+    +   [21] K. Garelles, M. Maratini, and J. Lygonos. On the road to robust optimization
+    and the scenario approach for chance constrained optimization. IEEE Transactions
+    on Automation Control, 60(3):792–803, 2015.
+
+
+    +   [22] K. Maragellos, P. Maratini, and J. Lygonos. On the complexity of learning
+    and scenario-based design. IEEE Transactions on Automation Control, 63(5):1446–1455,
+    2018.
+
+
+    +   [23] H. Naasi, A. Caré, and E. Weyer. A robust approach to bounded control.
+    In 54th Conf. on Decision and Machine Learning, pages 445–450, 2007.
+
+
+    +   [24] H. Naasi, A. Caré, and E. Weyer. A scenario-based stochastic method for
+    control with rules and rules. IEEE Transactions on Automation Control, 59(9):2431–2440,
+    2014.
+
+
+    +   [25] G. Schlibbach, F. Galin, and M. Mori. A scenario approach for stochastic
+    model control with bounds on chance-constraint violations. Automatica, 50(8):3009–3018,
+    2014.
+
+
+    +   [26] D. Schlibbach, F. Galin, and J. Morandi. Randomized solutions of convex
+    programs with chance constrained optimization. Automatica, 54(7):2439–2450, 2015.
+
+
+    +   [27] B. Schölkopf, P. Bertsch, A. Smola, and R. Williamson. A support vector
+    regression algorithm. In Advances in Neural Information Processing Systems 11
+    (1998), pages 330–336, 1998.
+
+
+    +   [28] J.C. Cortes. A tutorial on support vector methods. Statistics and Control,
+    14(4):199–224, 2004.
+
+
+    +   [29] D.M. Tax and R.F. Liu. Support vector data description. Machine Learning.
+
+
+    +   [30] X. Wang, F. Chen, and G. Hu. Theoretical analysis for learning of support
+    vector regression. Neural Networks, 24(6):7460–7479, 2011.
+
+
+    +   [31] J.S. Webb and R. Caré. A scenario-based approach to robust experiment
+    design. In Proceedings of the 15th International Conference on Machine Learning,
+    Paris, France, 2018.'
+  md: '
+
+    # Theorem 2 (Reliability of SVR): with $\epsilon(\cdot)$ and $\tau(\cdot)$ as
+    defined in Theorem 1, we have
+
+
+    $\mathbb{P}^N(\epsilon(s^*) \le \mathbb{P}([(u, y) : |y - (w^*, b^*)| > \gamma^*)
+    \ge \tau(s^*)) \le 1 - \beta,$
+
+
+    where $s^*$ is the number of $(u_i, y_i)$s for which $|y_i - (w^*, b^*)| \ge \gamma^*$.
+
+
+    ## B. Support Vector Data Description - SVDD
+
+
+    Support Vector Data Description is a data-driven technique used to identify a
+    pattern of space that covers the probabilistic mass from data been generated,
+    while having little support vectors. SVDD constructs a spherical shape, unlike
+    to SVR, it can make it more flexible by fitting into a feature space. See [33]
+    for a more complex description.
+
+
+    Let $\{p_i\}^N$ be the dataset in Hilbert space $\mathcal{P}$ sampled from a common
+    probability distribution. The points can be drawn out, to complete analysis of
+    the dataset loads data into a feature space by means of map $\varphi(\cdot)$.
+    SVDD constructs a feature in $\mathcal{P}$ by solving the following optimization
+    problem:
+
+
+    ```
+
+    \min \gamma + \sum_{i=1}^N \xi_i \text{subject to: } \mathbb{P}(\|p_i - c^*\|^2)
+    \ge \gamma^*) \quad (7)
+
+    ```
+
+
+    We next address uniqueness, and non-accumulation for this problem.
+
+
+    **Uniqueness**: Similar to SVR, the optimal $c^*$ must be unique to the finite
+    dimensional space of $p_i, i=1, \dots, n$, and a solution to (7) exactly exists.
+
+
+    **Uniqueness**: At the optimum, the $c^*$ is unique when $\tau(s^*)$ is not unique,
+    therefore non-uniqueness may occur only when $\rho = M/m$ for some $M$, refer
+    to Theorem 3 in [34]. To break the it, if it exists, we note that in this case
+    the $c^*$ remains uniquely determined as in the footnote at the end of Assumption
+    2.
+
+
+    **Non-accumulation**: For SVDD, non-accumulation requires the following condition
+    to hold $\gamma_c^*$:
+
+
+    This condition requires that probabilistic mass does not accumulate over hyper-spheres
+    and is formalized in the following assumption.
+
+
+    **Assumption 5**: That (8) holds.
+
+
+    We have the following theorem.
+
+
+    # Theorem 3 (SVDD): with $\epsilon(\cdot)$ and $\tau(\cdot)$ as defined in Theorem
+    1, we have
+
+    $\mathbb{P}^N(\epsilon(s^*) \le \mathbb{P}(\|p - c^*\|^2 > \gamma^*) \ge \tau(s^*))
+    \le 1 - \beta,$
+
+
+    where $s^*$ is the number of $p_i$''s for which $\|p_i - c^*\|^2 \ge \gamma^*$.
+
+
+    ## IV. NUMERICAL ANALYSIS
+
+
+    ![](img/706f6f84297d70284d2a80a86db3f442_4_0.png)
+
+
+    Inspired by the experimental model in [31], we applied SVR to find a regression
+    model for points generated by a noisy function specifically. Specifically, we
+    generated data $N=2000$ examples, $(m_i, y_i)$ drawn uniformly from $[-3, 3]$,
+    and $y_i = \sin(m_i/\pi) + \epsilon_i$, being extracted from a Laplace distribution
+    with $\mu=0$ and $b=1$. The trick kernel with Gaussian kernel $\exp(-\|x\|^2/2)$
+    was also used to adapt the input to an infinite feature space. We found the optimal
+    parameters, and then tested (5) with $\rho=(3/5)^k, \ell=1,\dots,14$. Each test
+    was solved using Theorem 1 for the data. We constructed the cost-path, which found
+    to be in figure 3. As $k$ increased, the risk increased monotonically. Then we
+    had a rapid drop of cost with more increase of risk. Then, a decrease of cost
+    significantly improved a demonstration of the risk. Altogether, however suggested
+    to opt for models with $\rho$ in the range $(3/5)^5, \dots, (3/5)^{10}$, and the
+    results were interpreted. To identify the data points the dots represent for $\rho=(3/5)^k$
+    and $\epsilon^*=[0.032, 0.08]$, and $k^*=0.3$.
+
+
+    Finally, we tested the validity of Theorem 1. We kept $\rho$ at the value $(3/5)^5$
+    and solved 50 times, each drawing a new sample of size 200. Each solution was
+    tested on 10000 random $(p)$ and the risk was evaluated by Monte Carlo methods.
+    Figure 3 shows the pairs (complexity,risk) in the 200 trials, and the upper bound
+    given by $\epsilon(k)$ and $\tau(k)$ is within the prescribed limits 9999 times
+    out of 10000. As expected, the average risk is within the limits for all two cases
+    in 200 points.
+
+
+    ![](img/706f6f84297d70284d2a80a86db3f442_5_0.png)
+
+
+    simulation. A visual inspection also reveals the spread of the evaluated risks
+    fills the vertical range given by the theoretical result, a sign that the theoretical
+    result provides enough information in spite of being discrete.
+
+
+    ## REFERENCES
+
+
+    - [1] T. Alano, R. Tempo, and F. Camacho. A randomized strategy for problems of
+    uncertainty and financial optimization. IEEE Transactions on Automation, 54(11):2541–2559,
+    2009.
+
+    - [2] T. Alano, and D. Ramirez. Randomized methods for design of uncertain systems:
+    complexity and scalability. Artificial Intelligence, 51:160–172, 2015.
+
+    - [3] F. Baroni, M. Campi, A. Caré, S. Garatti, and G. Genaro. Decentralized algorithms
+    with cooperation: a roadmap for futures. In 56th Conf. on Decision and Machine
+    Learning, pages 1665–1770, 209.
+
+    - [4] J.C. Burges and D.J. Crisp. Quantification of uncertain value. Advances
+    in Neural Processing Systems 12 (1999), pages 455–462, 1999.
+
+    - [5] G. Caliore and M. Campi. Uncertain convex programs: randomized solutions
+    and confidence sets. Mathematical Programming, 102(1):245–260, 2009.
+
+    - [6] G. Caliore and M. Campi. The scenario approach to robust design. IEEE Transactions
+    on Automation Control, 54(7):742–753, 2009.
+
+    - [7] M.C. Campi. Quantification with guaranteed probability of error. Machine
+    Learning, 86(1-2):63–84, 2008.
+
+    - [8] M. Campi and A. Caré. Scenario-based programs with identification. Reliability
+    and System Safety, 42(3):382–392, 2009.
+
+    - [9] M. Campi and A. Caré. Scenario-based programs with feasibility. International
+    Journal of Optimization and Control, 51(3):3552–3557, 2011.
+
+    - [10] S. Garatti and M. Conte. Feasibility of randomized solutions of convex
+    programs. SIAM Journal on Optimization, 19(3):1221–1230, 2008.
+
+    - [11] M. Campi and S. Garatti. A sampling-and-design approach to constrained-optimization:
+    feasibility and optimality. Journal of Optimization Theory and Applications, 148(2):2251–2260,
+    2011.
+
+    - [12] C. Campi, S. Garatti, and M. Conte. Robust design and analysis of programs
+    in uncertain environments. Mathematical Programming, 167(1-2):155–188, 2017.
+
+    - [13] M. Campi and S. Garatti. Scenario optimization with a new approach: feasibility
+    and optimality. Reliability and System Safety, 129(3):341–352, 2017.
+
+    - [14] C. Caré, S. Garatti, and M. Campi. Fast-Algorithm for the Scenario Technique.
+    Operations Research, 62(2):619–624, 2011.
+
+    - [15] A. Caré, S. Garatti, and M. Campi. Scenario min-max optimization and the
+    risk of empirical costs. SIAM Journal on Optimization, 25(1):248–261, 2015.
+
+    - [16] A. Caré, F. Fano, and M. Campi. A new classification algorithm with guaranteed
+    sensitivity and specificity for applications. IEEE Control Systems Letters, 2(3):993–998,
+    2017.
+
+    - [17] C. Cortes and V. Vnik. Support vector networks. Machine Learning, 30:273–297,
+    1995.
+
+    - [18] J.L. Gpero, S.P. Gray, and D.J. Crisp. Random predictor models for rigorous
+    uncertainty. International Journal of Uncertainty Quantification, 30(5):89–104,
+    2019.
+
+    - [19] M.C. Campi and A. Caré. Robust programs with uncertain reality. Artificial
+    Intelligence, 110(105842):1–19, 2019.
+
+    - [20] S. Garangios, X. Kharaz, P. Goudar, and J. Lygers. Scenario-based programs.
+    IEEE Transactions on Automation Control, 61(2):324–345, 2016.
+
+    - [21] K. Garelles, M. Maratini, and J. Lygonos. On the road to robust optimization
+    and the scenario approach for chance constrained optimization. IEEE Transactions
+    on Automation Control, 60(3):792–803, 2015.
+
+    - [22] K. Maragellos, P. Maratini, and J. Lygonos. On the complexity of learning
+    and scenario-based design. IEEE Transactions on Automation Control, 63(5):1446–1455,
+    2018.
+
+    - [23] H. Naasi, A. Caré, and E. Weyer. A robust approach to bounded control.
+    In 54th Conf. on Decision and Machine Learning, pages 445–450, 2007.
+
+    - [24] H. Naasi, A. Caré, and E. Weyer. A scenario-based stochastic method for
+    control with rules. IEEE Transactions on Automation Control, 59(9):2431–2440,
+    2014.
+
+    - [25] G. Schlibbach, F. Garin, and M. Mori. A scenario approach for stochastic
+    model control with bounds on chance-constraint violations. Automatica, 50(8):3009–3018,
+    2014.
+
+    - [26] D. Schlibbach, F. Garin, and J. Morandi. Randomized solutions of convex
+    programs with chance constrained optimization. Automatica, 54(7):2439–2450, 2015.
+
+    - [31] J.S. Webb and R. Caré. A scenario-based approach to robust experiment design.
+    In Proceedings of the 15th International Conference on Machine Learning, Paris,
+    France, 2018.
+
+    '
+  mdcn: '
+
+
+    # 定理 2 (SVR 的可靠性)：其中 $\epsilon(\cdot)$ 和 $\tau(\cdot)$ 如定理 1 中定义，我们有
+
+
+    $\mathbb{P}^N(\epsilon(s^*) \le \mathbb{P}([(u, y) : |y - (w^*, b^*)| > \gamma^*)
+    \ge \tau(s^*)) \le 1 - \beta,$
+
+
+    其中 $s^*$ 是满足 $|y_i - (w^*, b^*)| \ge \gamma^*$ 的 $(u_i, y_i)$ 的数量。
+
+
+    ## B. 支持向量数据描述 - SVDD
+
+
+    支持向量数据描述（SVDD）是一种数据驱动的技术，用于识别覆盖由生成数据的概率质量的空间模式，同时具有极少的支持向量。SVDD 构建一个球形形状，与 SVR
+    不同，它通过拟合到特征空间使其更具活性。更复杂的描述请参见 [33]。
+
+
+    设 $\{p_i\}^N$ 为从共同概率分布采样的希尔伯特空间 $\mathcal{P}$ 中的数据集。这些点可以被提取，以完成对数据集的分析，通过映射 $\varphi(\cdot)$
+    将数据加载到特征空间。SVDD 通过求解以下优化问题在 $\mathcal{P}$ 中构建一个特征：
+
+
+    ```
+
+    \min \gamma + \sum_{i=1}^N \xi_i \text{subject to: } \mathbb{P}(\|p_i - c^*\|^2)
+    \ge \gamma^*) \quad (7)
+
+    ```
+
+
+    我们接下来处理该问题的唯一性和非累积性。
+
+
+    **唯一性**：与 SVR 类似，最优 $c^*$ 对于有限维空间 $p_i, i=1, \dots, n$ 必须是唯一的，且 (7) 存在存在解。
+
+
+    **唯一性**：在最优处，当 $\tau(s^*)$ 不唯一时，$c^*$ 是不唯一的，因此只有当 $\rho = M/m$ 对于某个 $M$ 时才可能出现非唯一性，参考
+    [34] 中的定理 3。为了打破这一点（如果存在），我们注意到在这种情况下 $c^*$ 仍如假设 2 末尾的脚注所示被唯一确定。
+
+
+    **非累积性**：对于 SVDD，非累积性需要满足以下条件 $\gamma_c^*$：
+
+
+    该条件要求概率质量不会在超球上累积，并在以下假设中形式化。
+
+
+    **假设 5**：(8)成立。
+
+
+    我们有以下定理。
+
+
+    # 定理 3 (SVDD)：其中 $\epsilon(\cdot)$ 和 $\tau(\cdot)$ 如定理 1 中定义，我们有
+
+    $\mathbb{P}^N(\epsilon(s^*) \le \mathbb{P}(\|p - c^*\|^2 > \gamma^*) \ge \tau(s^*))
+    \le 1 - \beta,$
+
+
+    其中 $s^*$ 是满足 $\|p_i - c^*\|^2 \ge \gamma^*$ 的 $p_i$ 的数量。
+
+
+    ## IV. 数值分析
+
+
+    ![](img/706f6f84297d70284d2a80a86db3f442_4_0.png)
+
+
+    受 [31] 中实验模型的启发，我们应用 SVR 特别为噪声函数生成的点寻找回归模型。具体而言，我们生成了 $N=2000$ 个样本 $(m_i, y_i)$，均匀从
+    $[-3, 3]$ 中抽取，且 $y_i = \sin(m_i/\pi) + \epsilon_i$，其中 $\epsilon_i$ 提取自 $\mu=0$  $b=1$
+    的拉普拉斯分布。还使用了带有高斯核 $\exp(-\|x\|^2/2)$ 的技巧核将输入适应到无限特征空间。我们找到了最优参数，然后用 $\rho=(3/5)^k,
+    \ell=1,\dots,14$ 测试了 (5)。每次测试都使用定理 1 对数据求解。我们构建了代价路径，如图 3 所示。随着 $k$ 的增加，风险单调增加。随后，随着风险进一步增加，成本迅速下降。接着，成本的减少显著改善了风险的演示。然而，总体上建议选择
+    $\rho$ 在 $(3/5)^5, \dots, (3/5)^{10}$ 范围内的模型，并对结果进行了解释。为了识别 $\rho=(3/5)^k$ 和 $\epsilon^*=[0.032,
+    0.08]$ 且 $k^*=0.3$ 对应的数据点，圆点表示这些。
+
+
+    最后，我们测试了定理 1 的有效性。我们将 $\rho$ 固定在值 $(3/5)^5$ 并求解了 50 次，每次抽取大小为 200 的新样本。每个解在 10000
+    个随机 $(p)$ 上进行测试，并通过蒙特卡洛方法评估了风险。图 3 显示了 200 次试验中的 (复杂度, 风险) 对，由 $\epsilon(k)$ 给出的上界在
+    10000 次中的 9999 次内有效。正如预期的，平均风险在限制范围内。
+
+
+    ![](img/706f6f84297d70284d2a80a86db3f442_5_0.png) 视觉检查还揭示了评估风险的分布位于理论结果给出的垂直范围内，尽管它是离散的，理论结果提供了足够的信息。
+
+
+    ## 参考文献
+
+
+    - [1] T. Alano, R. Tempo, and F. Camacho. 用于不确定性优化的随机策略。IEEE Transactions on Automation,
+    54(11):2541–2559, 2009.
+
+    - [2] T. Alano, and D. Ramirez. 设计不确定系统的随机方法：扩展性。Artificial Intelligence, 51:160–172,
+    2015.
+
+    - [3] F. Baroni, M. Campi, A. Caré, and S. Garatti. 协作的随机算法：路线图。在第 56 次决策与机器学习会议上，页
+    1665–1770,209.
+
+    - [4] J.C. Burges and D.J. Crisp. 不确定值的量化。Advances in Neural Processing Systems
+    12 (1999), 页 455–462,1999.
+
+    - [5] G. Caliore and M. Campi. 凸规划：随机解和置信集。Mathematical Programming, 102(1):245–260,
+    2009.
+
+    - [6] G. Caliore and M. Campi. 场景方法的鲁棒设计。IEEE Transactions on Automation, 54(7):742–753,
+    2009.
+
+    - [7] M.C. Campi. 误差的保证量化。Machine Learning, 86(1-2):63–84, 2008.
+
+    - [8] M. Campi and A. Caré. 基于场景的规划。Reliability and System Safety, 42(3):382–392,
+    2009.
+
+    - [9] M. Campi and A. Caré. 基于场景的规划。International Journal of Optimization and
+    Control, 51(3):3552–3557, 2011.
+
+    - [10] S. Garatti and M. Conte. 凸规划解的可行性。SIAM Journal on Optimization, 19(3):1221–1230,
+    2008.
+
+    - [11] M. Campi and S. Garatti. 采样-设计优化方法：可行性和最优性。Journal of Optimization Theory
+    and Applications, 148(2):2251–2260, 2011.
+
+    - [12] C. Campi, S. Garatti, and M. Conte. 不确定环境下的鲁棒设计与分析。Mathematical Programming,
+    167(1-2):155–188, 2017.
+
+    - [13] M. Campi and S. Garatti. 新方法的场景优化：可行性和最优性。Reliability and System Safety,
+    129(3):341–352, 2017.
+
+    - [14] C. Caré, S. Garatti, and M. Campi. 场景技术的快速算法。Operations Research, 62(2):619–624,
+    2011.
+
+    - [15] A. Caré, S. Garatti, and M. Campi. 场景极小优化与经验成本的风险。SIAM Journal on Optimization,
+    25(1):248–261, 2015.
+
+    - [16] A. Caré, F. Fano, and M. Campi. 具有保证敏感性和特异性的新分类算法。IEEE Control Systems
+    Letters, 2(3):993–998, 2017.
+
+    - [17] C. Cortes and V. Vnik. 支持向量网络。Machine Learning, 30:273–297, 1995.
+
+    - [18] J.L. Gpero, S.P. Gray, and D.J. Crisp. 严格不性的随机预测模型。International Journal
+    of Uncertainty Quantification, 30(5):89–104, 2019.
+
+    - [19] M.C. Campi and A. Caré. 不确定现实的鲁棒规划。Artificial Intelligence, 110(105842):1–19,
+    2019.
+
+    - [20] S. Garangios, X. Kharaz, P. Goudar, and J. Lygers. 基于场景的规划。IEEE Transactions
+    on Automation Control, 61(2):324–345, 2016.
+
+    - [21] K. Garelles, M. Maratini, and J. Lygonos. 通往鲁棒优化与机会约束优化的场景方法。IEEE Transactions
+    on Automation Control, 60(3):792–803, 2015.
+
+    - [22] K. Maragellos, P. Maratini, and J. Lygonos. 学习的复杂性与场景设计。IEEE Transactions
+    on Automation Control, 63(5):1446–1455, 2018.
+
+    - [23] H. Naasi, A. Caré, and E. Weyer. 边界控制的鲁棒方法。在第54次决策与机器学习会议上，页 445–450, 2007.
+
+    - [24] H. Naasi, A. Caré, and E. Weyer. 规则控制的基于场景随机方法。IEEE Transactions on Automation
+    Control, 59(9):2431–2440, 2014.
+
+    - [25] G. Schlibbach, F. Garin, and M. Mori. 具有机会约束违反边界的随机模型控制场景方法。Automatica,
+    50(8):3009–3018, 2014.
+
+    - [26] D. Schlibbach, F. Garin, and J. Morandi. 机会约束优化的凸规划随机解。Automatica, 54(7):2439–2450,
+    2015.
+
+    - [31] J.S. Webb and R. Caré. 鲁棒实验设计的场景方法。在第15次国际机器学习会议上，法国巴黎，2018.
+
+
+    '
+  merge: 0
