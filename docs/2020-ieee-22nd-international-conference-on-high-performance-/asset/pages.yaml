@@ -1,0 +1,881 @@
+- pgno: 0
+  md: '# Applying An Adaptive Multi-Population Optimization Algorithm to Enhance Machine
+    Learning Models for Computational Finance
+
+
+    Zhixi Li, Vincent Tam, Lawrence K. Young and Zhenglong Li
+
+    Department of Electrical and Engineering
+
+    The University of Hong Kong
+
+    Hong Kong, P.R.
+
+    lix@ee.hku.hk
+
+
+    Abstract—Developing effective learning models to maximize the generalization capability
+    of the learned patterns while minimizing the ultimate cost of the trained models
+    is very significant in many real-world applications. Due to the high complexity
+    and huge amount of data, selecting appropriate learning models will become more
+    challenging. Typically, data scientists and researchers may explore various algorithms.
+    In this paper, we propose an Adaptive Multi-Population Optimization Algorithm
+    (AMPAOA), utilizing multiple populations with different search strategies to decide
+    on which value of parameters to use. We enhance the feature selection process
+    by using K-nearest neighbor classifier classifier on a set of 12 features. To
+    determine whether a feature is useful or not for the learning model while the
+    BAMPOAO utilizes a specific function to decide on that. The proposed optimizer
+    for financial applications, the BAMPOAO-R approach with repeating technique identifies
+    the best performance in the test experiments.
+
+
+    Index Terms—optimization, feature selection, machine learning, metaheuristic,
+    stock market prediction
+
+
+    # I. INTRODUCTION
+
+
+    In machine learning, feature selection (FS) is a very challenging yet crucial
+    step in reducing the risk of overfitting, improving the generalization capability
+    of the learned patterns and reducing the computational cost of the resulting learning
+    model [1]. In many financial applications, data is mostly noisy, redundant and/or
+    irrelevant, so FS is vital to enhance the performance of the prediction models
+
+
+    [3], Essentially, FS is to find the optimal feature subset of the complete set
+    of input features in order to improve the performance of the ultimate machine
+    learning model.
+
+
+    FS algorithms are divided into three main categories: filter, wrapper and embedded
+    techniques [4]. The filter techniques, like Information Gain, Mutual Information,
+    Fisher Score, Relevance Features, etc., evaluate features based solely on the
+    characteristics of the data without involving any learning algorithms [6]. Due
+    to the relatively simple selection mechanism, these techniques have major drawbacks
+    and fail to consider the effects of the selected features on the performance of
+    the learning algorithms [4].
+
+
+    [7], The wrapper techniques directly connect FS to the learning algorithm, so
+    it is more likely to achieve better results. Although the learning model needs
+    to be re-evaluated the selected features continuously in this process, wrapper
+    techniques are very computationally expensive, especially when processing a complex
+    learning model with a large number of features. But at least, an embedded approach
+    is integrated as a part of a specific learning model. Specifically, selecting
+    the features and training the learning model are done simultaneously [8].
+
+
+    In this work, the investigation is focused on the wrapper techniques. Basically,
+    each optimization problem with binary variables specifies whether to include a
+    feature or not. The goal is an optimal approach to find the exhaustive search
+    space. It is increasingly difficult to tackle a FS with high-dimensional data.
+    In instance, if one dataset contains 20 features, the number of feature subsets
+    is 2²⁰-¹ (i.e, 1,048,575). Recent studies show that metaheuristic optimization
+    algorithms are the possible alternatives for solving this FS problem in a reason-'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'able, with some algorithms achieving impressive performance. There are numerous
+    metaheuristic approaches proposed for FS in machine learning. Examples include
+    the conventional approaches such as the Genetic Algorithm (GA) [9], Particle Swarm
+    Optimization (PSO) [10], the Binary Wolf Optimization (BGWO) [11], the Scatter
+    Search Algorithm (SSA) [12], the Binary Grasshopper Optimization (BGO) [13], the
+    Binary Search Algorithm (BSGA) [14], the Binary Cuckoo Search (BCS) [15].
+
+
+    ous problems. Section III presents the two variants of the BAMPOA using different
+    techniques in detail. The experimental results on the benchmark datasets for classification
+    and the stock market index for prediction are analyzed and discussed in Section
+    IV. Section V concludes the work and sheds light on potential directions for future
+    investigation.
+
+
+    Optimally inspired by the seeds of viruses [17], the Adaptive Multi-Population
+    Optimization Algorithm (AMPOA) is a recently proposed metaheuristic for tackling
+    continuous optimization problems. The AMPOA integrates several useful features
+    from the swarm intelligence into an optimization algorithm utilizing multiple
+    populations. The novel control mechanisms on the multiple populations, solution
+    cloning mechanism and reset operation are carefully designed in the AMPOA approach
+    to solve the global or sub-optimal solution in complex search spaces.
+
+
+    # II. THE ADAPT MULTI-POPULATION OPTIMIZATION ALGORITHM
+
+
+    In this section, the Adaptive Multi-Population Optimization Algorithm (AMPOA)
+    was originally inspired by [17] for solving continuous optimization problems provided
+    as below.
+
+
+    # A. Population
+
+
+    In AMPOA, each population consists of individuals. The population size is indicated
+    by $N_{pop}$. Each individual represents a possible solution to the problem at
+    hand, and is formally defined as:
+
+
+    ```
+
+    $X_i = [x_{i,1}, x_{i,2}, ..., x_{i,n}]^T, X_i \in S$
+
+    ```
+
+
+    Utilizing the concept of population-based methods, the AMPOA algorithm is designed
+    in a multiple population. The whole population of the AMPOA is divided into five
+    subclasses: random search group, global search group, local search group, leader
+    group and migrating group. Different search behaviors are assigned to the individuals
+    based on different criteria. Generally, each can be one of the best solutions
+    chosen in the leader group. For simplicity, it is considered that for all the
+    subsequent decision there is only the best solution chromosome selected into the
+    leader served as the best solution found by the population so far. In the global
+    search group with large step sizes search for the best solutions within the whole
+    search space. In the local search group perform local search in smaller search
+    spaces. The individuals in the random search group basically walk random in the
+    whole search space. Lastly, in the migrating group is empowered by the Classical
+    Differential Evolution (DE/rand/1) algorithm with a different mechanism than the
+    other search groups for solutions of a better quality.
+
+
+    # B. Operations
+
+
+    Six operations are employed in the AMPOA approach: initialization, selection,
+    update, transformation, migration and reset that are explained below.
+
+
+    # 1. Initialization
+
+
+    At the starting point, all solutions of the whole population are randomly generated
+    in the search space using a uniform distribution function.
+
+
+    In order to evaluate the performance of the proposed method, a comparative study
+    on the wrapper was conducted with the K-nearest (KNN) classifiers on 12 benchmark
+    datasets. The BAMPOA algorithm was compared with conventional techniques including
+    the GA and the BPSO, other state-of-the-art approach in optimization such as BCS,
+    Binary Search Differential Algorithm (SBDA) [18] and Binary Social Optimization
+    with SMO function [19]. Then, both BAMPOA were applied to the practical application
+    of stock price prediction, using the Support Vector Regression (SVR) to predict
+    the next-day ahead of 10 market index values in the global markets. The performance
+    of the proposed methods are compared with those of other approaches including
+    the SVR integrated with convolutional networks.
+
+
+    The rest of this paper is organized as follows. Section II introduces the continual
+    BAMPOA algorithm for'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '2) Selection:
+
+
+    As stated above, the most optimal among the random search group, global search
+    group, or the local search group can be selected as the solution into the leader
+    group at each iteration. When a new optimal solution is found, the individual
+    of the leader group at the previous iteration will be downgraded to the local
+    search group.
+
+
+    3) Update:
+
+
+    The update mechanism of each individual depends on its search group.
+
+
+    +   - The Random Search Group
+
+    Each individual of the random search group conducts a random search in the solution
+    domain to improve the exploration ability.
+
+    - The Global Search Group
+
+
+    As in (2-3), the solution of an individual in the global group is updated with
+    a search group:
+
+
+    ```
+
+    $S_i^{t+1} = S_i^t + C_i^{t} + r_1(g_{best}^t - S_i^t)$,
+
+    ```
+
+
+    ```
+
+    $X_i^{t+1} = X_i^t$,
+
+    ```
+
+
+    where $S_i^t$ is a vector representing the search group of the individual within
+    the global search group at iteration $t$, $w \in (0,1)$ is the weighting factor,
+    $g_{best}^t$ is the best solution obtained by the population at $i-1$, and rand(0,1)
+    is a random number between 0 and 1.
+
+
+    The update functions for each individual of the local search group are shown in
+    (4)-(6):
+
+
+    ```
+
+    $\delta_i = \gamma \delta_{i}$
+
+    ```
+
+
+    ```
+
+    $S_i^{t+1} = X_i^t + \delta_i$
+
+    ```
+
+
+    where $S_i^t$ is the size of search for each individual in the local search group
+    at iteration $t$, $\delta_i$, $\gamma \in (0,1)$ is the constant decay, and $Gaussian(0,
+    \delta_i)$ is the Gaussian function with mean 0 and the standard deviation as
+
+
+    +   - The Leader Group
+
+    As the only individual in the Leader group is the most optimal solution, no solution
+    update is needed below.
+
+
+    +   - The Migrating Group
+
+    In the AMPOA, the migrating group is developed through the well-known DE/rand
+    algorithm. Its size is $N_{pop} (1-Pr)$.
+
+
+    4) Transformation:
+
+
+    The goal of the transformation is to spread the solution information among all
+    individuals so as to improve its effectiveness.
+
+
+    A three-step mechanism is designed in the AMPOA algorithm. In the first step,
+    the individuals belonging to the leader group, global search group and local search
+    group will
+
+
+    the Source Group while all its solutions sorted in the descending order of the
+    random search group will form the Target Group With all the solutions sorted in
+    the ascending order, each sorted individual will be paired with the paired individual
+    of the random search group. Then, each individual of the Target Group, will be
+    transformed into a global search group or local search group depending on the
+    probabilities of that individual. For example, the paired probability $(P_G^t
+    + P_L^t) = 1$ denotes the transformation probabilities of an individual of the
+    random search group with the best solution in the leader group (LD) transforming
+    into a global or local search. After being transformed into the global search
+    group, the detailed update mechanism is performed on each of individuals as
+
+
+    +   - Transformation to the Global Search Group
+
+    When an individual of the random search group will be transformed to the global
+    group, a single crossover is applied. Each value of the individual solution of
+    the random search group will be replaced by the value of that paired individual
+    from the global group with a predefined probability (4)
+
+    - Transformation to the Local Search Group
+
+    When an individual of the random search group will be transformed to the local
+    search group being paired with the individual in the global search, the solution
+    from the Source group will be transformed into the local search group (6)
+
+    - 5) Reset:
+
+    Due to the powerful transformation, all individuals of the random search group
+    may be transformed very times, possibly leading to local migration. The reset
+    operation, as a mechanism, is performed to effectively recover a percentage of
+    the individuals with poor solutions in the global search group or local search
+    group with the randomly reset parameter. This parameter is generated by resetParameter
+    between 0.1 and 0.9 at each iteration. In addition, a doubling mechanism is implemented:
+    a block of the local or global search group will move into the global search group
+    or some selected individual of the random search group will be shifted during
+    the reset process.
+
+
+    ```
+
+    $X_i^{t+1} = X_i^t$
+
+    ```
+
+
+    ```
+
+    $\delta_i = \gamma \delta_{i}$
+
+    ```
+
+
+    ```
+
+    $S_i^{t+1} = X_i^t + \delta_i$
+
+    ```
+
+
+    1324'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "# 6) Migration\n\nThe AMPOA introduces the migration operation as an additional\
+    \ function to enhance its search capability in complex optimization problems.\
+    \ While the migrating search group fails, such solution may get into the leader\
+    \ group to recover the current best under the condition of rand(0,1) ≤ 0.5 or\
+    \ iterations.\n\n# C. Algorithmic Flow\n\nAt first, the user-defined parameters\
+    \ of the algorithm and the fitness function of the problem are provided as the\
+    \ input to execute the AMPOA. The initialization process is performed. Then, at\
+    \ each iteration, the algorithm operations are executed; respectively, the evaluation\
+    \ of the function, selection, transformation, migration, and update are repeated\
+    \ until the predefined criterion is met.\n\n# III. THE BINARY ADAPTIVE MULTI-POPULATION\
+    \ OPTIMIZATION ALGORITHM\n\nA solution to any binary problem is defined as follows\n\
+    \n```\n$X_i = [x_1^i, x_2^i, ..., x_n^i], x_j^i \\in \\{0, 1\\}$\n```\n\nAccordingly,\
+    \ the original AMPOA approach can be adapted to solve the binary problem through\
+    \ rounding or transfer functions to be considered as follows\n\n# A. The Rounding\
+    \ Approach\n\nThe rounding approach is simple and straightforward for handling\
+    \ discrete optimization problems in binary search space. Basically, the first\
+    \ variant of the AMPOA algorithm named the BAMOA-R inherits the main body of the\
+    \ continuous AMPOA while adopting the following technique\n\n```\n$X_i = \\begin{cases}\
+    \ 0, & X_i < 0.5 \\ 1, & X_i \\geq 0.5 \\end{cases}$\n```\n\nwhere $X_i$ is the\
+    \ binary conversion from the continuous variable $x_i$,\n\n# B. The Transfer Function\
+    \ Approach\n\n(11)\n\n```\n$S_\theta(x) = \\frac{1}{1+e^{-\\theta x}}$\n```\n\n\
+    where $S_\theta(x)$ is a sigmoid function, rand(0,1) is a random number between\
+    \ 0 and 1, and $\theta$ is set to 1.\n\n+   * Modification: The Local Search Group\n\
+    To update a solution, tanh function is used to conduct the transformation. The\
+    \ transformation operations are listed in the following (12)-(13).\n\n```\n$X_{i+1}\
+    \ = \\begin{cases} 1, & rand(0,1) \\leq T(S_i) \\ 0, & rand(0,1) \\leq T(S_i)\
+    \ \\ 1, & rand(0,1) > T(S_i) \\ 0, & rand(0,1) > T(S_i) \\end{cases}$\n```\n\n\
+    ```\n$T(x) = \\frac{e^x - e^{-x}}{e^x + e^{-x}}$\n```\n\nwhere $T(x)$ is a tanh\
+    \ function.\n\n+   * Modification: The Migration Search Group\nAs the De/Rand1\
+    \ algorithm is involved in the migration search, a group is applied in (16).\n\
+    \n```\n$V_i = \\begin{cases} 0, & V_i < 0.5 \\ 1, & V_i \\geq 0.5 \\end{cases}$\n\
+    ```\n\nwhere $F = [0.5]$ is the binary factor, the difference $c = 0.3$ is the\
+    \ crossover probability, $r1, r2$ and $r3$ are the random numbers to select solutions\
+    \ from the migration search group.\n\n# TABLE I\nA CONCISE DESCRIPTION OF THE\
+    \ BENCHMARK DATASETS\n\n| Dataset | Features | No. of Features |\n|---|---|---|n|\
+    \ Congress | Politics | 16 | 435 |\n| Heart | Biology | 13 | 2196 |\n| KrVsWg\
+    \ | Wine | 36 | 3190 |\n| Penguins | Satellite | 15 | 721 |\n| Physical | Physics\
+    \ | 35 | 6435 |\n| Soil | Geology | 20 | 327 |\n| Tree | Biology | 6 | 268 |\n\
+    | Tic-tace | Vegetable | 9 | 958 |\n| Waveform | Wave | 18 | 846 |\n| Artificial\
+    \ | Physics | 40 | 5000 |\n| Zoo | Chemistry | 16 | 101 |\n\nFor the second binary\
+    \ variant, the BAMOA-T to utilize the transfer function, the modification of original\
+    \ AMPOA are clearly described as follows\n\n+   * Modification: The Random Search\
+    \ Group\nEach individual of the random search group carries out a random search\
+    \ with the binary number rand(0,1) in the binary domain.\n\n+   * Modification:\
+    \ The Global Search Group\nThe original solution updated by function (11) is inherited.\
+    \ Instead, the solution is updated according to (10) where a sigmoid function\
+    \ is used as the transformation function [20].\n\n```\n$X_{i+1} = \\begin{cases}\
+    \ 1, & rand(0,1) \\leq S_\theta(S_i^2) \\ 0, & rand(0,1) > S_\theta(S_i^2) \\\
+    end{cases}$\n```\n\n# IV. EXPERIMENTAL RESULTS AND DISCUSSION\n\nTo carefully\
+    \ evaluate the performance of the proposed methods, both the BAMOA-R and BAMOA-T\
+    \ are firstly tested with state-of-the-art-optimizers to enhance the feature selection\
+    \ of the K-nearest-neighbor classifier on 12 well-known benchmark datasets. In,\
+    \ the BAMOA-R approach attaining the best performance in the first set of tests\
+    \ is confirmed with Support Vector Regression (SVR)"
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: "as the BAMPOA-R-SVR algorithm to compare against sophisticated regressors on\
+    \ 10 major indices of the global financial market.\n\nIn both evaluation, the\
+    \ feature selection is defined as a binary optimization problem where each input\
+    \ feature is associated with a binary decision variable 0 or 1 indicating whether\
+    \ it is selected or not.\n\n# Testing on the Benchmark Datasets\n\nAs described\
+    \ in Table 1, 12 different domains like politics, biology, botany, etc., were\
+    \ utilized in this experiment. The maximum number of features is 32. These benchmark\
+    \ datasets are publicly available at [22]. The following fitness function is defined\
+    \ in [13]:\n\n```\n$min Fitness = \\gamma(C) + \\beta\\frac{|M|}{|N|} (17)$\n\
+    ```\n\nwhere $\\gamma(C)$ is the error rate of the classifier, $|M|$ is the total\
+    \ number of features, and $\\alpha$ and $\beta$ are the parameters to represent\
+    \ the relative importance of classification rate and length of set,\n\nIn this\
+    \ evaluation, 30 and 200 runs were conducted for each dataset as is split for\
+    \ 80% and 20% tests. Both GA and PSO were used as conventional algorithms, and\
+    \ SBDA and SMJO as the state-of-the-art algorithms used for comparison. The\n\n\
+    +   - GA: Pa=0.01, C=0.6;\n- PSO: w1=1.5, w2=2.0, w3=0.8;\n- SBDA: Ref: [18];\n\
+    - SMJO: Ref: [19];\n- BAMPOA: $\\alpha=0.08, \\beta=0.8, \\gamma=0.6, \\omega=0.1,\
+    \ \\epsilon=0.1$;\n\nAll algorithms were implemented in Python and executed on\
+    \ a computer with Intel Core i7-9700K processor at 3.6GHz and 24GB of RAM.\n\n\
+    Table II gives the performance of the classifiers with the optimizers on the 12\
+    \ benchmark datasets using Wilcox rank statistical test with significance level\
+    \ of 0.05 to determine whether the results are statistically significant. We found\
+    \ that the BAMPOA tends to attend better performance. Table III lists the number\
+    \ of features for each algorithm while Table IV shows the execution time of the\
+    \ optimizers in CPU seconds. Overall, the BAMPOA-R and GA algorithms would select\
+    \ optimizers that were significantly better in performance on most datasets, the\
+    \ differences in the execution times over these algorithms are not very distinct.\
+    \ To evaluate the performance of the proposed approaches\n\nagainst the competing\
+    \ ones, another Wilcoxon sum test was conducted. The alternative hypothesis is\
+    \ that the proposed algorithm outperforms the competitors for one the tasks. The\
+    \ results show that all $p$ values are smaller than 0.05 for the BAMPOA-R and\
+    \ 0.0002-0.046 for the BAMPOA-T in accuracy. This indicates that BAMPOA-R and\
+    \ BAMPOA-T effectively select these feature features on the concerned datasets.\n\
+    \n# B. Stock Market Index Prediction\n\nIn many financial applications, the prediction\
+    \ of the stock market has a very significant role for investment management, risk\
+    \ assessment, and market prediction. In as, most input features may be noisy,\
+    \ and irrelevant to develop machine learning models for stock tasks, FS becomes\
+    \ a very vital process to execute the challenge of predicting future prices.\n\
+    \nIn this study, the Support Vector Regression (SVR) algorithm with the radial\
+    \ basis function (RBF) was used to predict the next day's values of 10 major stock\
+    \ indices of global financial market. The 10 stock indices used are Dow Jones\
+    \ Average (DJIA), Paris 40 (CAC40), Financial Index (FCI), Hong Kong Seng Index\
+    \ (HSI), Hang Seng Stock Index (HSSI), Nasdaq Composite Index (NKI), Korea Stock\
+    \ Index (KOSPI), Mexico Index (INTR), Shanghai 100 (N100), Nikkei 225 (N225) and\
+    \ the Shanghai Composite Index (SSE).\n\nThe dataset collected from 1 January\
+    \ 2016 to 31 December 2018 for three years. The selection of the most relevant\
+    \ features as indicators was performed by an open-source library called Tablib.\
+    \ Each of input feature and the output labels were normalized to the range of\
+    \ 0 to 1 to avoid any bias during the process of optimization for features. The\
+    \ dataset was split into three sets for training,\n\nDuring the training phase\
+    \ of the regressor, an optimizer was employed to select the input features. The\
+    \ fitness function is defined in terms of the error regression and the percentage\
+    \ of selected features-\n\n```\n$min Fitness = \\gamma(R) + \\beta\\frac{|M|}{|N|}\
+    \ (18)$\n```\n\nwhere $\\gamma(R)$ is the regression error based on most data,\
+    \ $|M|$ is the total number of features, [N] the parameters $\\alpha$ and $\b\
+    eta$ with the same definition in (17).\n\nThe population size and maximum number\
+    \ (MaxFe) were the same as the earlier test on the 12 benchmark dataset. The parameters\
+    \ of all algorithms, except for the first clause of the fitness function in $\\\
+    alpha$ and $\beta$ in the fitness function were set to 1.00 and 0.05 respectively.\
+    \ The parameters $C_{\\gamma}$, $\\gamma$ and $\\epsilon$ of the SVR were set\
+    \ to 64, 1.0 and 0.056."
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# TABLE II
+
+    A COMPARISON OF THE PREDICTION ACCURACIES ON THE BENCHMARK DATASETS
+
+
+    | Dataset | Metric | BCS | BPSO | GA | SBDA | SMOX | BAMPOA-R | BAMPOA-T |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | Congress | Mean | 0.9816 | 0.9858 | 0.9782 | 0.9824 | 0.9831 | 0.9874 | 0.9863
+    |
+
+    | | | | 0.0184 | 0.0142 | 0.0218 | 0.0169 | 0.0112 | 0.0127 | 0.0137 |
+
+    | Heart | Mean | 0.9849 | 0.9833 | 0.9768 | 0.9812 | 0.9805 | 0.9829 | 0.9835
+    |
+
+    | | | | 0.0157 | 0.0147 | 0.0241 | 0.0133 | 0.0131 | 0.0171 | 0.0165 |
+
+    | KrVsKpEl | Mean | 0.9796 | 0.9814 | 0.9715 | 0.9717 | 0.0046 | 0.9867 | 0.9834
+    |
+
+    | | | | 0.0204 | 0.0186 | 0.0285 | 0.0283 | 0.0054 | 0.0133 | 0.0166 |
+
+    | PenguinEW | Mean | 0.9657 | 0.9645 | 0.9600 | 0.9601 | 0.0065 | 0.9744 | 0.9711
+    |
+
+    | | | | 0.0722 | 0.0663 | 0.0605 | 0.0673 | 0.0614 | 0.0657 | 0.0669 |
+
+    | Satellite | Mean | 0.9220 | 0.9211 | 0.9213 | 0.9198 | 0.9198 | 0.9243 | 0.9265
+    |
+
+    | | | | 0.0780 | 0.0789 | 0.0787 | 0.0802 | 0.0757 | 0.0735 | 0.0735 |
+
+    | Sonar | Mean | 0.9959 | 0.9950 | 0.9965 | 0.9913 | 0.9928 | 0.9303 | 0.9952
+    |
+
+    | | | | 0.0041 | 0.0050 | 0.0035 | 0.0072 | 0.0072 | 0.0048 | 0.0048 |
+
+    | Spect | Mean | 0.9056 | 0.9167 | 0.9068 | 0.9006 | 0.9038 | 0.9119 | 0.9192
+    |
+
+    | | | | 0.0944 | 0.0833 | 0.0932 | 0.0944 | 0.0881 | 0.0808 |
+
+    | Tic-tac-toe | Mean | 0.8439 | 0.8471 | 0.8398 | 0.8436 | 0.8439 | 0.8429 | 0.8421
+    |
+
+    | | | | 0.0183 | 0.0183 | 0.0182 | 0.0186 | 0.0163 | 0.0181 | 0.0179 |
+
+    | Vehicle | Mean | 0.9849 | 0.9833 | 0.9814 | 0.9816 | 0.9826 | 0.9778 | 0.9771
+    |
+
+    | | | | 0.0195 | 0.0220 | 0.0222 | 0.0219 | 0.0221 | 0.0224 | 0.0227 |
+
+    | Waveform | Mean | 0.9195 | 0.9198 | 0.9163 | 0.9168 | 0.9185 | 0.9067 | 0.9068
+    |
+
+    | | | | 0.0062 | 0.0055 | 0.0011 | 0.0065 | 0.0066 | 0.0065 | 0.0068 |
+
+    | Wine | Mean | 0.9843 | 0.9852 | 0.9769 | 0.9852 | 0.9824 | 0.9819 | 0.9819 |
+
+    | | | | 0.0157 | 0.0148 | 0.0231 | 0.0148 | 0.0176 | 0.0172 | 0.0181 |
+
+    | Zoo | Mean | 0.9714 | 0.9726 | 0.9619 | 0.9764 | 0.9712 | 0.9746 | 0.9763 |
+
+    | | | | 0.0286 | 0.0274 | 0.0281 | 0.0260 | 0.0254 | 0.0237 | 0.0237 |
+
+    | Statistical Test | | | | | | | | |
+
+    | BAMPOA-R | + | 903 | 619 | 1200 | 940 | 901 | 860 | 3 |
+
+    | BAMPOA-T | - | 1194 | 1053 | 1012 | 1023 | 1018 | 1011 | 1037 | 27
+
+
+    # TABLE III
+
+    THE NUMBER OF FEATURES USED BY EACH OPTIMIZER
+
+
+    | Dataset | BCS | BPSO | GA | SBDA | SMOX | BAMPOA-R | BAMPOA-T |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | Congress | 7.1 | 5.0 | 4.9 | 5.3 | 5.8 | 6.0 | 6.4 |
+
+    | Heart | 10.7 | 9.3 | 9.4 | 9.9 | 10.1 | 10.2 | 10.5 |
+
+    | KrVsKpEl | 24.8 | 18.9 | 19.7 | 20.6 | 24.5 | 24.3 | 24.0 |
+
+    | PenguinEW | 31.3 | 21.7 | 22.9 | 23.8 | 25.1 | 24.9 | 23.5 |
+
+    | Satellite | 23.8 | 18.3 | 19.4 | 21.7 | 19.8 | 21.8 | 23.0 |
+
+    | Sonar | 14.7 | 14.3 | 14.7 | 14.9 | 15.0 | 15.2 | 15.2 |
+
+    | Spect | 7.7 | 7.1 | 7.1 | 7.3 | 7.7 | 7.7 | 7.7 |
+
+    | Tic-tac-toe | 7.5 | 7.0 | 7.5 | 8.1 | 8.3 | 8.4 | 8.4 |
+
+    | Vehicle | 22.6 | 20.7 | 22.5 | 24.8 | 22.9 | 27.5 | 27.1 |
+
+    | Waveform | 13.8 | 14.7 | 10.7 | 11.1 | 13.1 | 13.7 | 12.6 |
+
+    | Wine | 11.9 | 10.7 | 10.9 | 11.5 | 11.8 | 12.2 | 12.5 |
+
+    | Zoo | 10.3 | 8.7 | 8.8 | 9.1 | 9.5 | 9.9 | 9.9 |
+
+    | Avg | 24.8 | 19.5 | 19.3 | 108.2 | 22.1 | 20.6 | 16.8
+
+
+    # TABLE IV
+
+    A COMPARISON OF THE AVERAGE EXECUTION TIME (IN SECONDS)
+
+
+    | Dataset | BCS | BPSO | GA | SBDA | SMOX | BAMPOA-R | BAMPOA-T |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | Congress | 24.6 | 24.2 | 22.1 | 25.7 | 26.2 | 25.7 | 25.3 |
+
+    | Heart | 406.7 | 403.2 | 401.4 | 405.4 | 408.8 | 411.4 | 419.6 |
+
+    | KrVsKpEl | 496.7 | 493.3 | 498.4 | 508.8 | 511.4 | 519.6 | 517.5 |
+
+    | PenguinEW | 500.5 | 500.2 | 504.3 | 510.5 | 515.8 | 520.4 | 530.5 |
+
+    | Satellite | 850.9 | 849.3 | 851.3 | 854.7 | 858.1 | 863.3 | 870.5 |
+
+    | Sonar | 766.5 | 762.7 | 764.3 | 775.4 | 780.5 | 790.5 | 800.5 |
+
+    | Spect | 558.9 | 556.7 | 563.7 | 569.7 | 575.5 | 580.5 | 591.5 |
+
+    | Tic-tac-toe | 469.7 | 468.2 | 472.9 | 482.9 | 491.4 | 497.4 | 507.4 |
+
+    | Waveform | 1398.3 | 1414.7 | 1077.1 | 1118.1 | 1101.3 | 1137.5 | 1264.3 |
+
+    | Wine | 1110.9 | 1105.7 | 1109.9 | 1135.8 | 1128.5 | 1179.5 | 1225.5 |
+
+    | Zoo | 1110.9 | 1105.7 | 1109.9 | 1135.8 | 1128.5 | 1179.5 | 1225.5 |
+
+    | Avg | 242.8 | 195.1 | 193.9 | 108.2 | 22.1 | 20.6 | 168
+
+
+    # TABLE V
+
+    INPUT STOCK FEATURES INDEXES
+
+
+    | Input Features | Open | High | Low | Close | Volume |
+
+    | --- | --- | --- | --- | --- | --- | --- |
+
+    | All | | | | | |
+
+    | AllDown | | | | | |
+
+    | Bull | | | | | |
+
+    | ADX | | | | | ADX |
+
+    | CCI | | | | | CCI |
+
+    | DEMA | | | | | DEMA |
+
+    | EMA6 | | | | | EMA6 | |
+
+    | MACD | | | | | MACD |
+
+    | MINROC | | | | | MINROC |
+
+    | ROC | | | | | ROC | |
+
+    | ROCP | | | | | ROCP |
+
+    | TEMA12 | | | | | TEMA12 |
+
+    | TLL | | | | | TLL |'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'got worse. The average training and testing errors are 288.30 and 185.53 for
+    DJI, and 49.85 and 121.53 for FCHI, indicating the possible overfitting of the
+    learned model to training data. Furthermore, the BAMPOA-RA improves the generalization
+    of the SVM model with the smallest testing errors for 3 indexes.
+
+
+    Besides other variants, the proposed algorithms were compared with other competitive
+    approaches including PCA, FR, and MI as the popular feature selection methods
+    [23] which were used to predict financial data. Our approach compared with SVM
+    to construct the PCA-SVM, MI-SVM and FR-SVM. In both MI and FR, the 20 best features
+    were selected and used respectively. Additionally, we adopted two-sided methods
+    including the LSTM [25] (with LSTM layers with 64 and 32 units) and the RF were
+    used to predict the error of the testing data. In VII of these terms, the proposed
+    BAMPOA-RA achieved the best among the other 5 indexes. The FR-SVM model produced
+    good results on the testing data since the FR is much lower (only 4 times the
+    error of time) compared to the testing datasets. Overall, the BAMPOA-RA approach
+    is competitive with other competitive approaches for predicting the market indexes
+    under our investigation.
+
+
+    # V. CONCLUSION AND FUTURE WORK
+
+
+    In this work, we proposed optimization algorithms based on the BAMPOA-namely and
+    BAMPOA-T, for the crucial task of feature selection in constructing machine learning
+    models for real-world applications. The performances of these algorithms were
+    compared with various classification methods through experiments of classification
+    using KNN on 12 benchmark datasets and the regression tasks with SVM on 10 major
+    indexes of the global financial market.
+
+
+    For the future, it is interesting to investigate more transformations and techniques
+    of the BAMPOA approach. The proposed optimizers can be applied to fine-tune the
+    hyperparameters of the machine learning model as FS. But last but not, the proposed
+    approaches can be applied to more real-world problems for comparisons with more
+    sophisticated deep learning approaches.
+
+
+    # REFERENCES
+
+
+    +   [1] S. Kashef and H. Nezabadi-pour, "An advanced acoe algorithm for feature
+    selection," *Neurocomputing*, 2014, pp. 271–279.
+
+
+    +   [3] C-F. Tsai and Y-C. Hsiao, "Combining feature selection methods for stock
+    prediction: Intersection, and multi-intersection approach," *Expert Systems with
+    Applications*, vol. 37, pp. 3353–3360, 2010.
+
+
+    +   [4] N. Lokozik, I. Frey, and V. Podorelec, "Swarm intelligence algorithms
+    for feature selection: A review," *AI Science*, vol. 8, 2020.
+
+
+    +   [5] J. Tang, S. Alijani, and H. Lin, "Feature selection for classification:
+    A review," *Data Applications*, vol. 67, pp. 365–374, 2017.
+
+
+    +   [6] H. Lin and J. Wang, "A survey of feature selection methods for classification,"
+    *IEEE Transactions on Knowledge and Data Engineering*, vol. 24, no. 2, pp. 221–234,
+    2012.
+
+
+    +   [7] H. Lin and L. Lu, "Comparison of feature selection algorithms for classification,"
+    *IEEE Transactions on Knowledge and Data Engineering*, vol. 17, no. 4, pp. 491–502,
+    2005.
+
+
+    +   [8] J. Koh and H. Johnston, "A binary selection method for feature selection,"
+    *International Journal of Artificial Intelligence*, vol. 9, no. 2, pp. 203–214,
+    1997.
+
+
+    +   [9] J. Wang, A. Lee, and A. E. Hassanian, "Binary tree for feature selection,"
+    *Neurocomputing*, vol. 22, 2009.
+
+
+    +   [10] J. Kennedy and R. E. Eberhart, "A binary version of the particle swarm
+    optimization for feature selection," *1997 IEEE International Conference on Neural
+    Systems*, pp. 4104–4108, 1997.
+
+
+    +   [11] M. Alhafidh, J. Jaradeh, H. Amjari, A. F. Souza, C. Rocha, and M. Ali,
+    "A new hybrid algorithm for feature selection," *2013 IEEE International Symposium
+    on Circuits and Systems*, pp. 542–547.
+
+
+    +   [12] M. El Ghi, T. Jaber, A. Hammani, and S. Merjhi, "Binary algorithm for
+    feature selection," in *2013 IEEE International Symposium on Circuits and Systems*,
+    pp. 12–17.
+
+
+    +   [13] F. Ma and A. Van, "A meta-heuristic optimization algorithm for feature
+    selection," *arXiv preprint arXiv:2206.06232*, 2022.
+
+
+    +   [14] A. Hammani, M. Maalouf, A. El-Bari, A. Al-Medhed, and A. Ibouh, "An hybrid
+    algorithm for feature selection and classification," *Soft Computing*, vol. 24,
+    pp. 715–725, 2020.
+
+
+    +   [15] J. K. Koh, P. G. King, S. J. Wang, W. Ge, and R. Sarkar, "Binary swarm
+    optimization with a mutation function for feature selection," *Applied Soft Computing*,
+    vol. 80, pp. 9780–9789, 2019.
+
+
+    +   [16] S. Mirajjahi and E. Lee, "Shaped-v v-shaped transfer functions for feature
+    selection," *Information Sciences*, vol. 44, pp. 1–14, 2017.
+
+
+    +   [17] D. E. Eberg, "Evolutionary computation: an overview of the field," vol.
+    15, no. 1, pp. 41–48, 1999.
+
+
+    +   [18] T. Simon, *Machine learning introduction*, 2002.
+
+
+    +   [19] A. Hammani, M. El Ghi, S. Merjhi, J. Jaradeh, J. Tang, and H. Lin, "Feature
+    selection: A data perspective," *ACM Computing Surveys*, vol. 52, no. 4, pp. 1–35,
+    2019.
+
+
+    +   [20] Z. Li, V. Tam, and L. Yang, "Combining cloud computing, machine learning
+    and heuristic optimization for investment opportunities: a study of recurrent
+    neural network for predicting movements of stocks with different volatilities,"
+    *2017 IEEE Conference on Computational Artificial Intelligence*, pp. 1–8, 2017.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# TABLE VI
+
+    RESULTS OF STOCK INDEX PREDICTION BY REGRESSION ERROR
+
+
+    | Index | BCS | BPSO | GA | SBDA | SMOX | BAMPOA-R | BAMPOA-T | No FS |
+
+    |---|---|---|---|---|---|---|---|-|
+
+    | DJI | Avg Train MA | 1382.59 | 2373.61 | 1036.83 | 3457.46 | 1386.83 | 886.54
+    | 1621.06 | 288.30 |
+
+    | | Avg Test MA | 494.54 | 57.61 | 367.79 | 466.84 | 710.55 | 418.89 | 464.37
+    | 1853.55 |
+
+    | FCIH | Avg Train MA | 516.54 | 61.05 | 61.06 | 64.55 | 59.24 | 45.67 | 60.75
+    | 121.53 |
+
+    | | Avg Test MA | 362.39 | 78.87 | 77.43 | 90.16 | 61.91 | 68.95 | 88.46 | 235.93
+    |
+
+    | HSI | Avg Train MA | 1298.27 | 121.44 | 121.69 | 119.71 | 117.23 | 803.30 |
+    1669.44 | 671.08 |
+
+    | | Avg Test MA | 762.47 | 714.14 | 685.67 | 756.91 | 1137.23 | 830.30 | 1081.08
+    | 671.08 |
+
+    | KSLL | Avg Train MA | 390.55 | 598.90 | 219.07 | 309.03 | 334.96 | 204.55 |
+    430.07 | 98.26 |
+
+    | | Avg Test MA | 34.81 | 76.25 | 28.38 | 114.72 | 133.85 | 23.57 | 50.22 | 23.10
+    |
+
+    | N100 | Avg Train MA | 375.09 | 333.13 | 319.92 | 352.76 | 361.53 | 310.54 |
+    321.24 | 354.47 |
+
+    | | Avg Test MA | 546.22 | 665.59 | 588.87 | 790.42 | 522.65 | 424.51 | 424.94
+    | 137.40 |
+
+    | N255 | Avg Train MA | 11.25 | | | | | | 9.30 | 9.68 |
+
+    | | Avg Test MA | 10.89 | 12.25 | 12.01 | 10.61 | 10.91 | 9.71 | 11.86 | 20.09
+    |
+
+    | SSE | Avg Train MA | 288.94 | 291.06 | 339.41 | 354.62 | 319.29 | 287.17 | 374.32
+    | 851.36 |
+
+    | | Avg Test MA | 39.11 | 44.15 | 32.80 | 62.94 | 62.59 | 36.53 | 40.21 | 54.4
+    |
+
+    | | Time(s) | 141.35 | 225.20 | 207.70 | 266.99 | 163.45 | 164.45 | | 207.22 |
+
+
+    # TABLE VII
+
+    COMPARATIVE RESULTS OF STOCK INDEX PREDICTION ERROR BETWEEN VARIOUS APPROACHES
+
+
+    | Index | Metric | FTR-FR | SVI | PCA-Index | SVR | RF | LSTM | BAMPOA-R |
+
+    |---|---|---|---|---|---|---|---|-|
+
+    | DJI | Avg Train MA | 209.59 | 223.95 | 248.08 | 288.37 | 416.17 | 851.56 | 622.23
+    | 886.54 |
+
+    | | Avg Test MA | 576.03 | 301.14 | 0.18 | 0.55 | 0.52 | 42.10 | 126.00 | 244.64
+    |
+
+    | FCIH | Avg Train MA | 39.96 | 38.86 | 44.23 | 49.85 | 73.53 | 122.71 | 117.85
+    | 37.81 |
+
+    | | Avg Test MA | 52.97 | 66.21 | 54.64 | 66.53 | 117.83 | 73.54 | 135.43 | 45.67
+    |
+
+    | FTSE | Avg Train MA | 71.80 | 71.80 | 92.25 | 235.93 | 123.27 | 162.19 | 169.15
+    | 45.14 |
+
+    | | Avg Test MA | 0.25 | 0.60 | 0.72 | 0.50 | 0.52 | 0.37 | 14.71 | 85.67 |
+
+    | HSI | Avg Train MA | 235.72 | 230.17 | 408.22 | 445.32 | 671.68 | 709.45 | 526.75
+    | 833.30 |
+
+    | | Avg Test MA | 71.66 | 38.00 | 428.22 | 445.32 | 671.68 | 719.45 | 433.09 |
+    63.88 |
+
+    | IXIC | Avg Train MA | 71.66 | 75.54 | 80.28 | 98.16 | 105.09 | 142.78 | 194.52
+    | 205.45 |
+
+    | | Avg Test MA | 41.60 | 39.93 | 81.18 | 88.59 | 0.09 | 0.52 | 02.69 | 208.11
+    |
+
+    | KSLL | Avg Train MA | 15.18 | 15.18 | 18.20 | 23.10 | 29.32 | 38.41 | 74.28
+    | 23.57 |
+
+    | | Avg Test MA | 0.30 | 0.36 | 0.67 | 0.03 | 0.52 | 0.35 | 0.42 | 24.28 |
+
+    | MXX | Avg Train MA | 202.59 | 204.54 | 217.83 | 262.67 | 427.56 | 455.91 | 525.02
+    | 729.27 |
+
+    | | Avg Test MA | 1113.82 | 840.46 | 9457.40 | 1437.48 | 854.60 | 1058.37 | |
+    424.51 |
+
+    | N100 | Avg Train MA | 7.07 | 7.17 | 7.98 | 9.00 | 13.68 | 37.21 | 67.62 | 8.08
+    |
+
+    | | Avg Test MA | 17.35 | 10.39 | 11.37 | 20.69 | 20.80 | 28.85 | 45.72 | 9.71
+    |
+
+    | N255 | Avg Train MA | 200.59 | 200.54 | 217.83 | 262.67 | 427.56 | 455.91 |
+    525.02 | 729.27 |
+
+    | | Avg Test MA | 369.13 | 355.13 | 388.11 | 529.28 | 942.07 | 102.17 | 408.88
+    | 71.31 |
+
+    | SSE | Avg Train MA | 24.24 | 23.67 | 25.28 | 322.71 | 331.59 | 75.94 | 75.99
+    | 28.22 |
+
+    | | Time(s) | 0.28 | 0.58 | 0.86 | 0.02 | 0.51 | 40.97 | | 69.46 |'
+  merge: -1
+  img_proc: true
