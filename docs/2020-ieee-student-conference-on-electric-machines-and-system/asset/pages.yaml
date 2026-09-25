@@ -1,0 +1,601 @@
+- pgno: 0
+  md: '# A Control Strategy Based on Deep Reinforcement Learning Under the Combined
+    Wind-Solar Storage System
+
+
+    Shiyang Huang
+
+    Key Laboratory of
+
+    Power System Intelligent Dispatch and
+
+    Control
+
+    Shandong University
+
+    Jinan,China
+
+    Huang_shi_ying@163.com
+
+
+    Ming Yang
+
+    Key Laboratory of
+
+    Power System Intelligent Dispatch and
+
+    Control
+
+    Shandong University
+
+    Jinan,China
+
+    myang@sdu.edu.cn
+
+
+    Changhang Zhang
+
+    Key Laboratory of
+
+    Power System Intelligent Dispatch and
+
+    Control
+
+    Shandong University
+
+    Jinan,China
+
+    zhangchanghang1991@163.com
+
+
+    Jiangyang Yan
+
+    Key Laboratory of
+
+    Power System Intelligent Dispatch and
+
+    Control
+
+    Shandong University
+
+    Jinan,China
+
+    15098659318@163.com
+
+
+    Yuan Gao
+
+    Key Laboratory of
+
+    Power System Intelligent Dispatch and
+
+    Control
+
+    Shandong University
+
+    Jinan,China
+
+    beex26@163.com
+
+
+    Peng Li
+
+    Key Laboratory of
+
+    Power System Intelligent Dispatch and
+
+    Control
+
+    Shandong University
+
+    Jinan,China
+
+    pengli112211@yahoo.com
+
+
+    Abstract—The cooperation of hybrid system of wind power, photovoltaic and energy
+    storage (ESS) in the power market can effectively improve the renewable energy
+    utilization. The traditional power scheduling starts with forecast prediction
+    and then scheduling, which can lead to information loss and modeling error. To
+    solve this problem, this paper proposes an energy control strategy using deep
+    reinforcement learning. The scheme of the combined wind-solar storage system.
+    The DQN (Deep Q Network) algorithm is introduced to regulate the control of wind
+    power and photovoltaic power, so as to maximize the benefit of renewable energy
+    generators in the power market.
+
+
+    Keywords—energy storage, photovoltaic, wind power, deep reinforcement learning,
+    control strategy
+
+
+    method energy scheduling control system and external reserve.
+
+
+    Due to the uncertainty of wind power and photovoltaic, the stochastic optimization
+    method is often used to deal with the uncertainty of wind power, solar energy
+    and energy-ESS systems components in the power market operation research. In[1],
+    a two-stage stochastic programming model was established to handle the uncertainty
+    of wind energy by electricity price and power demand. A CI-based clustering method
+    was used to model the distributional characteristics of wind energy. The proposed
+    augmented scheme was used to track the true distribution as the historical data
+    increased[2-3]. The problem of wind-solar energy integration in the power market
+    was dealt in different stages. A scheduling algorithm based on demand-driven forecasting
+    and the coordination of power market based on online model control (MPC) was proposed,
+    which can offset the photovoltaic generation. In[6] the MPC method was taken as
+    the operation strategy for photovoltaic-ESS system participation in the market,
+    so as to reduce battery cost and realize operation benefits. [7], a strategy method
+    based on robust model predictive control (MPC) was proposed. In [8], the operation
+    of electric battery charging systems with multi-day horizons was modeled to handle
+    the uncertainty of photovoltaic power, and the day-ahead rolling optimization
+    strategy was adopted to optimize the scheduling of energy charge and discharge
+    with the minimizing cost of charging station.
+
+
+    # I. INTRODUCTION
+
+
+    With the depletion of the fossil energy and the adverse impact of the use of energy
+    on the environment, the global adjustment is moving towards renewable energy.
+    Wind power generation and photovoltaic generation are playing an increasingly
+    important role in the development and utilization of renewable energy. In fact,
+    the energy generation of wind and photovoltaic power stations will inevitably
+    prevent the establishment of the electricity market. The benefits of renewable
+    energy suppliers are directly related to power market volatility. Since energy
+    generation output is not controllable and time-varying in price the electricity
+    market generation''s profit is diverse and uncertain. Renewable energy power equipped
+    with feasible storage makes the output of renewable energy power station can be
+    controlled to an extent, and then can achieve the long-term benefits.
+
+
+    This work was supported by the Science and Technology Project of State-owned Group
+    of China under Grant No. 20000000X, and in the National Natural Science Foundation
+    of China under Grant Zebra 21773118 (Corresponding author: Ming Yang)'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'In the research, the uncertainty of wind and photovoltaic power was firstly
+    solved on the premise of predicting the power of power station, and then scheduling
+    of ESS was carried out on the basis of optimization for maximizing or minimizing
+    the costs. In the process of solving problems, the difference between the assumed
+    distribution and the actual distribution affects subsequent optimization. On the
+    other hand, high-dimensional meteorological modeling of renewable energy power
+    stations are also to be lost in the process of feature extraction which will also
+    affect the results of the optimization, thus affecting the income of renewable
+    energy.
+
+
+    To solve the problem of traditional grid scheduling, some scholars introduced
+    reinforcement learning (RL) to forecast control as a whole, and in each scheduling
+    constantly learns to experience uncertainty. The decision-making algorithm is
+    widely used in the strategy to handle uncertainties such as market competition
+    and AGC control in the power system[9–11];However, the advantage of DRL in handling
+    state with high dimensional constraints is better represented. In[13] constructed
+    an agent DRL used to gradually embody the wind-hybrid ESS system of charging and
+    discharging learning process. In an end-to-end scheduling model based on RL Rainbow
+    algorithm was proposed for combined wind-power energy strategy.
+
+
+    of RL will be greatly increased. Therefore, on the basis of RL, DRL introduces
+    neural network to establish the mapping between state and value in RL, so as to
+    solve the computation problem of large data space under multiple scenes.
+
+
+    DRL is used in the combined wind-solar storage system status data with original
+    measurement data are used to drive the ESS and the control output of ESS. The
+    scheduling model is effective in dealing with the uncertainty of energy generation
+    prediction of power of renewable energy with the control action of ESS to solve
+    the loss of effective information in the prediction strategy.
+
+
+    ![](img/c9ea3afe465f52c87757df956199f24a_1_0.png)
+
+
+    Fig. 1. Reinforcement learning schemes.
+
+
+    # III. ENERGY SYSTEM STRATEGY FOR THE COMBINED WIND-SOLAR STORAGE SYSTEM
+
+
+    # A. Energy System Control Model Based on Reinforcement Learning
+
+
+    In the traditional scheduling method, there are only prediction and decision making.
+    In the prediction, the input includes the real-time, historical and predicted
+    meteorological data of wind and photovoltaic power station, as well as the real-time
+    and predicted output power value of the power station at the time of future dispatch.
+    After obtaining the results, it is used in the decision-making process. The energy
+    system control schedules the charging and discharging power based on the basis
+    of state of charge (SOC) of electricity.
+
+
+    In the traditional scheduling method, the prediction stage is confirmed by the
+    algorithm itself, the optimization process is limited to the decision of ESS.
+    There are two stages to the same scheduling process have no cooperation. Secondly,
+    it is difficult to represent the uncertainty of renewable energy generation prediction.
+    As the power of the optimization algorithm describes its attributes as known problem
+    attributes, the actual effect of the optimization will be affected if the algorithm
+    is uncertain in the generation of the actual power generation laws. The quality
+    of the
+
+
+    The basic principle of RL is the process by which the agent learns to achieve
+    the optimal goal through trial in the environment, observing the state and giving
+    feedback from the environment. In Fig. 1 the schematic diagram is shown to describe
+    learning. When the agent is trained, the agent knows how to get the optimal reward
+    based on the experience of previous trials.
+
+
+    In the learning process of RL we describe and update the value of the current
+    state. For continuous inputs, continuous state must be discretized. If applicable,
+    so information is lost easy to be discarded. On the other hand, when faced with
+    a large state of data space to be processed, the computation amount
+
+
+    the overall scheduling effect. The system control model combines two independent
+    stages into one unified scheduling, as shown in Fig. 2. After the dispatch, the
+    power injected into the grid by the combined wind-solar storage system is the
+    system of actual output power of'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "photovoltaic power $P_{pv}$, the actual output of the wind farm $P_w$, and\
+    \ the charging/discharging power of ESS demanded by $P_{ESS}$, namely, Equation\
+    \ (1):\n\n```\n$P_{ESS} = P_{pv} + P_w - P_{load},$$\n```\n\nWhere, $P_{ESS}$\
+    \ indicates that ESS is in discharging state; negative value means ESS is in charging\
+    \ state.\n\n![](img/c9ea3afe465f52c87757df956199f24a_2_0.png)\n\nFig. 2. Energy\
+    \ system control model of combined wind-solar system.\n\nThe training of the deep\
+    \ reinforcement learning network, mapping the relationship between the state and\
+    \ the value is fixed by the neural network, so that the agent can process the\
+    \ complex state space. The experience learns continuously. That, samples are sampled\
+    \ randomly with equal probability as neural network training sets. This mechanism\
+    \ makes the correlation between the state and action of deep learning and reinforcement\
+    \ learning, and ensures the convergence.\n\nThe iterative process of Q value is\
+    \ shown in Equation (2).After the Q value iteration, DQN trains the network based\
+    \ on the difference of Q values between before and after iteration, which is called\
+    \ temporal difference error (TD error). The difference is used as the loss function\
+    \ of deep neural network, so as to make the Q value converge finally, as shown\
+    \ in Equation (3). The agent dynamically selects the action in the action space\
+    \ that can bring the highest expected long-term reward, according to different\
+    \ states. The algorithm of DQN is shown as follows:\n\n```\n$Q(s_t, a_t) \\leftarrow\
+    \ Q(s_t, a_t) + \\alpha [r_t + \\gamma \\max_{a} Q(s_{t+1}, a) - Q(s_t, a_t)]\
+    \ \\quad (2)$\n```\n\n```\n$Loss(\\theta) = TD-Error^2 = (r_t + \\gamma \\max_{a}\
+    \ Q(s_{t+1}, a) - Q(s_t, a_t))^2 \\quad (3)$\n```\n\nWhere, $Q(s_t, a_t)$ is the\
+    \ Q value of action $a_t$, the current state $s_t$; $theta$ is the network parameter\
+    \ of the target network; $\\alpha$ is the learning rate; $r$ is the current reward\
+    \ value; $\\gamma$ is the attention coefficient.\n\n# Algorithm Deep Q-Learning\
+    \ with experience replay\n\n```\nInitialize replay memory to capacity N\nInitialize\
+    \ action-value function with weights $\\theta$\nInitialize target action-value\
+    \ function with weights $\\theta'\nFor each episode $i$:\nSample sequence $s =\
+    \ (s_t, a_t, r_t, s_{t+1})$ from replay memory\nWith probability select a random\
+    \ action, or otherwise selecting the best action $(\\epsilon$-greedy policy)\n\
+    Execute action $a_t$ in the environment and receive reward $r_t$ and state $s_{t+1}$\n\
+    Store $(s_t, a_t, r_t, s_{t+1})$ in replay memory\nCalculate $y_t = r_t + \\gamma\
+    \ \\max_{a'} Q'(s_{t+1}, a')$ if episode terminates at $t$\nUpdate $\theta$ using\
+    \ gradient descent with weight $y_t$\nEnd\n```\n\nFig. 4. DQN algorithm\n\n# B.\
+    \ State and Action Space\n\nThe state space is composed of prospective electricity\
+    \ price, the stored value of ESS after the end of the renewable power source,\
+    \ and the measured period, as shown in Equation (4)\n\nWhere, $M_t$ represents\
+    \ the real-time and historical output of wind power and solar power, as well as\
+    \ real-time, historical and predicted meteorological data such as temperature,\
+    \ wind speed and direction; $E_t$ represents the value of electricity stored by\
+    \ ESS after the end of the period since the renewable power source started.\n\n\
+    The action space is composed of n equal quantities of the charging and discharging\
+    \ power of ESS, and the demand output instructs the actions that the ESS needs\
+    \ to handle in the future. As shown in Equation (5)\n\n```\n$A_t = (a_{t^1}, a_{t^2},\
+    \ \\dots, a_{t^n})$\n```\n\n# C. Reward and Return\n\nDuring the training, the\
+    \ algorithm adjusts the parameter update according to the reward received by the\
+    \ environment. In this paper, the reward returned the current environment is the\
+    \ dispatch income obtained by combined wind-solar system, as shown in Equation\
+    \ (6). The charging and discharging power of ESS of maximizing the long-term benefits\
+    \ of the combined wind-solar storage system. The return $R$, is the long-term\
+    \ benefit, is defined as the discounted rewards of the combined system, as shown\
+    \ in Equation (7)\n\n```\n$R_t = \\rho_t p_t - \\lambda C_t,$\n```\n\n```\n$R\
+    \ = \\sum_{i=0}^{t} \\gamma^{t-i} R_i \\quad (7)$\n```\n\nWhere, $C_t$ is the\
+    \ penalty cost paid by the system due to the lack of ESS exceeding the limit.\
+    \ i\n\n![](img/c9ea3afe465f52c87757df956199f24a_2_1.png)\n\nFig. 3. Energy system\
+    \ control model based by DQN"
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "represents the number of scheduling cycles experienced by the agent.\\gamma$\
+    \ is the attenuation coefficient.\n\n# D. Energy Storage System Operating Constraints\
+    \ and Penalty Costs\n\nThe reliability of algorithm is limited by its operating\
+    \ constraints. In this paper, battery group is used as energy storage element.\
+    \ The charge-discharge of ESS can be\n\n```\n$P_{ESS,j}^{ch} = \\rho_{ch}P_{ESS,j}^{}-\\\
+    rho_{dis}P_{ESS,j}^{}$ (8)\n```\n\n```\n$U_{ESS,j}^{ch}+U_{ESS,j}^{dis} \\le 1$\
+    \ (9)\n```\n\nWhere, $P_{ESS,j}^{ch}$ and $P_{ESS,j}^{dis}$ are respectively the\
+    \ charging and discharging values of ESS at time period $t$; $U_{ESS,j}^{ch}$\
+    \ and $U_{ESS,j}^{dis}$ are the charge and discharging state variables of ESS\
+    \ in time period $t$. When the value is 0, when the value is 1, it means\n\nThe\
+    \ operating constraints of the battery bank are many as:\n\n+   - Constraints\
+    \ on charge-discharge power.\\n- Energy constraint of ESS.\\n- Electric quantity\
+    \ constraint at the end of the cycle.\\n- Constraints on the number of state transitions\
+    \ of ESS.\n\nThese constraints are expressed in the following equations:\n\n```\n\
+    $0 \\le P_{ESS,j}^{ch} \\le P_{ESS,j}^{max,ch}$ (10)\\n$0 \\le P_{ESS,j}^{dis}\
+    \ \\le P_{ESS,j}^{max,dis}$ (11)\n```\n\n```\n$E_{min} \\le E_{j} \\le E_{max}$\
+    \ (12)\n```\n\n```\n$E_{j+1}=E_{j}-\\dots$\n```\n\n```\n$\\sum_{t=1}^{T} Y_{ESS,j}\
+    \ \\le N_{max}$ (13)\n```\n\nWhere, $E_{min}$ respectively represent the minimum/maximum\
+    \ energy storage capacity of ESS. $E_{j}$ represents the electric quantity requirement\
+    \ at the end of the period. $Y_{ESS,j}$ is the charge and discharge state conversion\
+    \ variable of ESS. $N_{max}$ is the maximum number of ESS allowed within a period.\n\
+    \nWhen the power of ESS violates, the penalty must be paid by the combined system\
+    \ is composed of two kinds of costs, which are calculated as:\n\n```\n$C_{j} =\
+    \ ((E_{min}-E_{j})\\rho_{ch}P_{j}^{pen} + \\sum_{t=1}^{T} Y_{ESS,j}\\rho_{dis}P_{j}^{pen})(t=24)$\
+    \ (14)\n```\n\nWhere, $P_{j}^{pen}$ is the penalty coefficient when ESS violates\
+    \ the electric quantity constraint at the end of the cycle. $P_{j}^{pen}$ is the\
+    \ penalty coefficient when ESS violates the constraint of charge and discharge\
+    \ times. \n\n# IV. CASE STUDY\n\nThis paper takes a wind farm and photovoltaic\
+    \ power system in Ningxia to analyze and verify the proposed method. The capacity\
+    \ of wind farm is 48MW, and the capacity of photovoltaic power is 20MW.\n\n# A.\
+    \ The Case Scenario\n\nThe battery parameters equipped in the scenario are shown\
+    \ in Table I. In each scheduling, the number of transitions allowed of ESS is\
+    \ 18. The penalty cost of ESS for violating the two kinds of constraints is 800\
+    \ CNY/MW.\n\n| Parameter | Data |\n|---|---|\n| $P_{ESS,max}^{ch}$ | 8.5 |\n|\
+    \ $P_{ESS,max}^{dis}$ | 8.5 |\n| $E_{min}$ | 0.85 |\n| $E_{max}$ | 0.95 |\n| $E_{ch}$\
+    \ | 51 |\n| $E_{dis}$ | 90 |\n| $N_{max}$ | 30 |\n\nIn the ESSCM, the state is\
+    \ composed of prospective electricity, electricity storage of ESS at the end of\
+    \ the scheduling period, and measured data of the power system. Measured data\
+    \ include temperature, humidity, color, short-wave radiation, wind speed and direction,\
+    \ and as real-time output power of generators and load demand square area. The\
+    \ entire state is composed of 15 dimensional data. The electricity price of each\
+    \ period is shown in Fig. 5. In the action, the charge and discharging power of\
+    \ ESS is discretized into 35 actions at equal intervals, i.e., -8.5, 0.0, 8.0,\
+    \ 8.5.\n\n![](img/c9ea3afe465f52c87757df956199f24a_3_0.png)\n\nFig. 5. Electricity\
+    \ price.\n\n# B. Results and Analysis\n\nIn the training of the combined system\
+    \ control model, one year of data from local power systems in Ningxia is used\
+    \ for training, the learning rate is 0.001, the discount rate of the dropout layer\
+    \ is 0.7, the sample capacity of experience replay mechanism is 3000, the"
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'impact of TD-Error on the sampling probability is 0.6,
+
+    single small batch sampling scale is 32, update the reward
+
+    coefficient is 0.9, and the $\epsilon$ in the $\epsilon$-strategy is 0.1.
+
+
+    will charge a battery when it is high, has as the
+
+    next three days. From 8 to 9 am, on the first day, battery\starts charging when
+    electricity prices and power output are
+
+    low and the power output has been greatly increased.
+
+    when electricity prices fluctuate, the battery
+
+    will charge enough for high returns. When
+
+    although the electricity price is high and the power output is
+
+    very low, the revenue from electricity sales is difficult
+
+    for the penalty of electricity constraint at; therefore to avoid
+
+    p penalty cost, the battery starts to charge. Fig. 10 shows
+
+    that ESS will not affect in a scheduling cycle due to
+
+    t penalty for exceeding constraints.
+
+
+    Fig. 6 takes-day output of wind and photovoltaic\power sources. It can be seen,
+    that
+
+    independent operation, wind and photovoltaic
+
+    power meets enough demand, especially at night,
+
+    which can guarantee supply load.
+
+    The combination of wind and photovoltaic power
+
+    during the day can also cope with higher demands.
+
+    where load is low during the time from night to
+
+    early early morning, be stored by
+
+    ESS when the electricity price is high, otherwise
+
+    will waste energy and cause loss income.
+
+
+    ![](img/c9ea3afe465f52c87757df956199f24a_4_0.png)
+
+
+    Fig. 6. Output of wind and photovoltaic power.
+
+
+    ![](img/c9ea3afe465f52c87757df956199f24a_4_1.png)
+
+
+    Fig. 7. Income curve.
+
+
+    During the training, and penalty costs of
+
+    system will fluctuate with the function of
+
+    power output. Both reaches a stable range. Fig. 7 and
+
+    8 shows the curve of the average hourly
+
+    income and penalty cost of combined system with the
+
+    number of samples of the agent. It can be seen from
+
+    the figure that in the sample accumulation (the
+
+    first 300 steps), due to the insufficient number of
+
+    samples stored in the experience replay mechanism, Q
+
+    value and tuning of neural network are not performed,
+
+    so the phase of the penalty is high and not
+
+    stable. After the accumulation of samples, the mapping
+
+    relation to the state process, the Q value is
+
+    ously optimized in the training process, and the
+
+    revenue of the power station also has an obvious rising\sand the penalty cost.
+    Both eventually reaches a
+
+    stable range after training and finally to
+
+    stable. When stable, the average return
+
+    obtained by combined wind-solar system
+
+    scheduling is 16835.99 CNY/Hour, 361 CNY/Hour. When
+
+    t revenue and penalty cost of combined system tends to
+
+    stable, it means that the parameters of ESSCEM have
+
+    can be put into the actual operational scenario.
+
+
+    ![](img/c9ea3afe465f52c87757df956199f24a_4_2.png)
+
+
+    Fig. 8. Penalty cost.
+
+
+    During the actual operation, part of the
+
+    day takes place as a test set. Fig. 9 shows the battery
+
+    status and wind-PV output data of four days. Fig. 10 shows
+
+    controlling environmental constraints of ESS and these
+
+    During the early hours of, when the electricity
+
+    price is low and the power output is also low, in order
+
+    toensure power output and electricity; consequently, the
+
+    battery will not charge or discharge the battery
+
+    is very low, as on the hours of the first day: The battery
+
+
+    ![](img/c9ea3afe465f52c87757df956199f24a_4_3.png)
+
+
+    Fig. 9. Battery status and wind-PV output of four days.
+
+
+    To sum, the combined wind-solar storage system
+
+    en energy storage control strategy helps to reduce the
+
+    change of market price after training DRL, so as to obtain
+
+    the greater benefits of the joint system in the power market
+
+    environment.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/c9ea3afe465f52c87757df956199f24a_5_0.png)
+
+
+    # # CONCLUSION
+
+
+    In this paper, we propose a control strategy under the wind solar combined storage
+    system strategy which follows the instructions of ESS. We model the storage control
+    model by DRL to consider the uncertainty of photovoltaic power and forecasting
+    with decision-making process. The target of this model is to maximize the long-term
+    gain of combined system under model. It is solved by DQN with experience replay
+    mechanism, and the optimal scheduling instruction of ESS is obtained. An experiment
+    based on real-world data from the wind farm and power station of Ningxia is conducted
+    to establish model power station calculation and analysis. The results show that
+    the high-photovoltaic power data can be accurately predicted in proposed method.
+    The income curve and the penalty cost under this model and directly output the
+    action instructions of ESS. The prediction accuracy by the agent will be adjusted
+    according to time-varying electricity prices and renewable energy to achieve the
+    maximum long-term benefits of the combined system.
+
+
+    Future work can model the control strategy in more detail; we will take the cost
+    of battery degradation for a charging battery into consideration. In addition,
+    we will consider the influence of different penalty coefficients and the self-adaptive
+    adjustment of penalty coefficient instead of manual adjustment.
+
+
+    # # REFERENCES
+
+
+    +   [1] J. Garcia-Gonzalez, R. M. de Muelo, L. M. Santos and A. M. Gonzalez, “Stochastic
+    Unit Optimization of Wind Generation and Power Storage Units in IEEE Transactions
+    on Power Systems, vol. 23, no. 2, p. 460–468.
+
+
+    +   [2] P. Li, M. Yang and Q. Wu, “Confidence Interval Distributally Robust Real-Time
+    Dispatch Approach for Power: Accommodation Risk,” in IEEE Transactions on Energy,
+    in press.
+
+
+    +   [3] P. C. Wang, Q. Wu and M. Yang, “Risk Distributional Robust Real-Time Dispatch
+    Constraints,” IEEE Transactions on Power Systems, vol. 31, no. 4, p. 1775–1786.
+
+
+    +   [4] M. Dicarto, G. Pisiani and M. Wang, “Planning and Optimization of Wind-Solar
+    Power Storage Strategy in Electricity Market,” in IEEE Transactions on Smart Grid,
+    vol. 10, no. 2, p. 209–217.
+
+
+    +   [5] A. Saad-Deerra, A. M. Li, H. Hazavigas, G. Bezureik and S. Sanchez, “Optimal
+    Storage Strategy for Integrated Photovoltaic Power Plants Integration,” in IEEE
+    Transactions on Sustainable Energy, vol. 7, no. 4, p. 1749–1761.
+
+
+    +   [6] A. Gonzalez-Garillo, A. Saad-Deerra, H. Hazavigas, A. Milo and E. Perez,
+    “Joint Unit Commitment and Scheduling Reserve Markets for Solar Power Systems,”
+    in IEEE Transactions on Power Systems, vol. 34, no. 6, p. 2.
+
+
+    +   [7] XIE Yuyun, ZH Guijun, YANG Xiafeng, ZH Li, Y Wang Ke, KENG Jian, “Optimal
+    Operation Strategy of Combined Wind and Solar Power Storage,” IEEE Transactions
+    on Power Technology, vol. 44, no. 5, p. 2278–2285.
+
+
+    +   [8] LI Ruixian, Hu Zhong, Chen Zhang, “Stochastic Optimization for Dispatch
+    Management of Wind and Solar Power Storage,” IEEE Transactions on Power Systems,
+    vol. 41, no. 2, p. 3772–3780.
+
+
+    +   [9] YA ZHOU Bin, ZHEN Gao, “Application of Deep Reinforcement Learning for
+    Wind and Solar Powerless Prediction,” in IEEE Transactions on Power Protection
+    and Control, vol. 37, no. 4, p. 122–128.
+
+
+    +   [10] ZOU Bin, Lin Qi-hua, YAO Mao-song, “Agent-Based Reinforcement Learning
+    for Wind Power Prediction,” in Proceedings of the IEEE, vol.25, no. 5, p. 37–46.
+
+
+    +   [11] GAO Rong-hua, WI Liu, Jue Liu-jiang, YANG Chun-ru, “Application of Reinforcement
+    Learning to Storage Control,” in IEEE Power Systems, vol. 28, no. 5, p. 1331–1339.
+
+
+    +   [12] Sergey Levin, Charles Finn, Trevor Dillon, Peter Abbeel, “End-to-End
+    Training of Deep Visuo Predictors,” in Machine Learning Research, 17, p. 1331–1347
+    (2016).
+
+
+    +   [13] LI Nan, HAN Xiaoxun, YANG Ming, YANG Mingqing, “Optimal Decision-Making
+    in the Cooperation of Wind and Solar Power Storage Based on Reinforcement Learning,”
+    in Power Systems Technology, vol. 40, no. 9, p. 2729–2736.
+
+
+    +   [14] Y Yixiao, YANG Jujan, YANG Ming, Gao Yuan, “Scheduling of Energy Storage
+    in Wind Farm With Integration of Prediction and Based on Deep Reinforcement Learning,”
+    in Automation of Electric Power Systems, in press.'
+  merge: -1
+  img_proc: true
