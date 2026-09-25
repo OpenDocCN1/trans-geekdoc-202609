@@ -1,0 +1,2 @@
++   [2020 第七届国际电气工程与自动化论坛 (IFEEA)(中国合肥 2020.9.25-2020.9.27) 论文集](README.md)
++   [2020 第七届国际电气工程与自动化论坛 (IFEEA)(中国合肥 2020.9.25-2020.9.27) 论文集](2020-7th-international-forum-on-electrical-engineering-and-a.md)

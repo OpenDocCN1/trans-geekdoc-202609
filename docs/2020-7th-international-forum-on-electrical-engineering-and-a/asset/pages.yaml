@@ -1,0 +1,442 @@
+- pgno: 0
+  md: '# Research on Power Load Forecasting based on Machine Learning
+
+
+    Jinghua Va
+
+    *Quishi Honors College, Tianjin University, Tianjin 300072, China
+
+    e-mail: 1552201239@ieee.com
+
+
+    Abstract: Accurate load forecasting is helps to realize safe and economic management
+    of power systems and technologies. It has importance to improve utilization and
+    economic dispatching of power generation assembly. Machine learning based method
+    which has relatively high fitting ability is conductive to effective analysis
+    and prediction of loads. In this paper, a new framework is proposed in a region
+    by PJM Company, such as although autoregressive and confirential models respectively.
+    Secondly, BP neural network model and XGBoost algorithm model were constructed.
+
+
+    Machine learning is a tool centered at the mathematical model and a computer system
+    finally simulates perception, reasoning, learning and decision-making functions
+    of human combining research results in different disciplines, competitive technology
+    can handle the large quantity of customer consumers demands, data and calculation,
+    customer load forecasting solutions based on big data technical architecture was
+    proposed [3]. A new framework for forecasting and evaluation to address power-security
+    system was discussed [4]. Moreover, the generation of artificial intelligence
+    and new technologies (e. big) is influential to the global power and energy industry.
+    It is driving the deep integration of power, energy and information technology
+    to form a new era of Energy Efficiency Portfolio Standards (EEPS) and power management
+    and information technology integration. Smart power management system makes it
+    possible that all different systems can be integrated, to ensure safe control
+    automation for unmanned power system. In the future it can also help manage power
+    systems in a good working condition and reveal other benefits [5].
+
+
+    Keywords: load forecasting; time series; BP neural network; XGBoost algorithm
+
+
+    # I. Introduction
+
+
+    With the rapid development in China, power system is developing toward marketization.
+    To adapt to the quality of life in the modern era, power system has access to
+    large-scale renewable energy sources, and it is desirable to be a smart grid which
+    is highly integrated with electric power, information flow and flow behavior.
+    Research on construction of smart grids are based on existing technologies for
+    load management of power system. The load management system is an important supporting
+    tool of promoting Demand Side Management (DSM) and achieving optimal load control
+    [1]. Accurate load forecasting is not only the basis for safe and economic operation
+    and efficient management of power grid, but also an important guarantee to improve
+    utilization and economic dispatching of power generation assembly. It is of significant
+    importance to optimize the scheduling of power flow and electricity market transactions
+    of the unit. Several professors have discussed the most relevant studies on electric
+    demand prediction over the last 40 years, and identified the different methods
+    as well as features [2]. However, data analysis in various methods, most power
+    loads show evident periodic variations. Machine learning is conducive to effective
+    analysis and prediction of power loads in time
+
+
+    At present, there are many techniques considered for load forecasting and they
+    are performed through various methods. Combined with international standards on
+    load forecasting of power system, forecasting methods and forecasting accuracies
+    vary. Classical method, traditional method and intelligent method are main types
+    of load forecasting. Classical prediction makes a general direction of classification
+    in the future considering to experiments to exp or correlations of some variables.
+    To solve the problem that common-used loading methods rely on subjective experiences
+    and in classical method empirical decomposition (EEBD) based power load forecasting
+    method was proposed [6]. Lim et al constructed a power estimation method for EPS
+    by using an electric power consumption model [7]. Traditional methods include
+    growth curve, regression analysis and high frequency autoregressive moving average
+    (ARIMA) to estimate the relationships between demand and various variables was
+    proposed [8]. Van et al presented a comparative study of two models for electric
+    load data from Hanan city. There are three types of models based on the methodology
+    Adaptive Network Fuzzy'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'Inference System (ANFIS) and Seasonal Auto Regressive Moving Average (SARIMA)[9].
+    Dima et al. presented two nonseasonal and two sliding window-based ARIMA algorithms,
+    which integrated nonseasonal and seasonal ARIMA models with the online network
+    (OLIN) methodology [10]. Intelligent forecasting method needs prior knowledge
+    about structure and parameters of the process model. Intelligent forecasting method
+    mainly includes expert system method, artificial neural network method, theoretical
+    and comprehensive prediction model, and so on.
+
+
+    forecasting methods with relatively high prediction accuracy based on AI and modeling
+    analysis. Section 2 mainly preprocessing of original data and constructs features.
+    Section 3 describes framework of two forecasting models, which are the BP neural
+    network model and the XGBoost model. Section 4 implements practical forecasting
+    models by using real data and assessed effect. Section 5 concludes and further
+    prospects on model improvements.
+
+
+    # II. Data
+
+
+    Intelligent forecasting method mainly includes expert system method, artificial
+    neural network method, theoretical and comprehensive prediction model, and so
+    on. For example, Zhao et al. developed a multi-level wavelet network method to
+    forecast the load of next day. To forecast the load for days as well as the days
+    before and after, a correlation coefficient scheme with holiday weighting [11].
+    Song et al. proposed an algorithm for short-term traffic flow and electricity
+    load forecasting based on echo state network (ESS) [12]. A hybrid neural network
+    method for forecasting smart aimed at improving the forecasting accuracy without
+    increasing the time cost
+
+
+    Data used in this study comes from an open source (https://www.kaggle.com). It
+    has datasets of. In this study, PJIME hourly which refers to power loads used.
+    The daily power data is gained by summing the hourly loads. To ensure the accuracy
+    and for the convenience of subsequent data analysis, the data and monthly loads
+    were calculated by summing method.
+
+
+    One issue about Artificial Neural Network (ANN) used in Short-term Load Forecasting
+    (STLF) was proposed by Alonsa et al. The adjusted ANN showed temperature and humidity
+    were associated with the demand of the electric load [14]. According to comparison,
+    we found that machine learning has higher prediction accuracy.
+
+
+    With observations to although data, data is eliminated and basic monthly trend
+    is shown as Observed and Trend in Fig.1). Obviously, monthly power consumption
+    fluctuates although. The overall trend in recent years increases firstly and then
+    decreases. Power peak was in 2008. After seasonal decomposition of the data, the
+    basic trend is shown in Seasonal.1. The annual power consumption fluctuates. Summer
+    is always a power consumption peak period and there is a small peak in winter.
+    Power consumption in spring and autumn are significantly lower.
+
+
+    Based on hourly load data from a region provided by PJM Company, this study investigated
+    short-term load prediction
+
+
+    ![](img/f1deca4d5b8beaa0ac9bda6fb49165f8_1_0.png)
+
+
+    Fig.1. Periodic changes and trend of loads.
+
+
+    Features of data were extracted. While specific date was applied, while power
+    consumptions in the week, month, season and year data was used as input indicators.
+    In addition, data with physical significance were constructed continuously based
+    on the tsfresh base in python. Details are introduced as follows:
+
+
+    > $E = \sum_{i=1}^{n} X_i^2$
+
+
+    It is used to return absolute energy of time series data, that is, the square;'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'ASC = $\sum_{i=1}^{n} |X_{i} - X_{j}|$
+
+
+    It is used to return the sum of absolute value of the first order difference results
+    of time series.
+
+
+    $R(l) = -\sum_{i=1}^{n}(X_{i} - \mu)(X_{i} - \mu)$
+
+
+    It is used to return polymerization statistical features (variance and mean) of
+    different order values of time series. Linear regression after blocking of time
+    series data (based on OLS) is used to return attribute value of the linear regression;
+
+
+    $E_{l} = \Phi^{l}(r) - \Phi^{l+1}(r)$
+
+
+    It is used to approximate measure unpredictability and fluctuation of time series;
+
+
+    $X_{i} = \Psi_{i} + \sum_{j=1}^{k} \Psi_{ij}X_{j} + \varepsilon_{i}$
+
+
+    This formula is used to autoregressive coefficient and measure periodicity; unpredictability
+    and fluctuation of time series data.
+
+
+    Finally, a period (August 3rd, 2016) was determined as the break point between
+    the training set and test set. Experimental regression and observation were performed.
+
+
+    # III. BP neural network
+
+
+    BP neural network, the learning process of backpropagation algorithm, is composed
+    of forward information dissemination and background error. The basic idea of this
+    method lies in the gradient descent method to achieve the minimum mean error
+
+
+    of deviation between practical output value of the network and expected value.
+
+
+    The neural network is mainly composed of three layers (Fig.2). The first one is
+    the input layer, in which neurons receive receive information from input in the
+    middle layer, and transmit the information to neurons in the middle layer, the
+    second one is the hidden layer, which is the internal processing layer for information
+    exchange. The information transmitted from the neurons in the input layer is then
+    processed, through one forward propagation of learning. The third is the output
+    layer which is responsible for output processing. If the practical output matches
+    the expected, it enters the backward propagation stage of error. The error propagates
+    through the output layer and input into the hidden layer and input layer by using
+    the gradient descent method. Periodic propagation of information and background
+    error are the process of adjusting weights of layers during learning and training
+    of the neural network. This process continues until the network decreases to the
+    acceptable level or until the presetting times of learning.
+
+
+    BP neural network is relatively mature in network topology and performance. It
+    has a prominent advantage of very strong mapping capability and flexible network
+    structure. The middle number of layers of the network and the number of neurons
+    in different layers can be set randomly according to specific conditions. Performance
+    of BP network varies. However, the BP neural network also has some main disadvantages,
+    including low learning speed. It generally requires hundreds and thousands of
+    iterations to reach convergence for an even result it is easy to get trapped in
+    local minimum. Selection of the numbers of layers and neurons lacks sufficient
+    theoretical guidance. It has limited ability in network motion.
+
+
+    # the dissemination of positive information
+
+
+    ![](img/f1deca4d5b8beaa0ac9bda6fb49165f8_2_0.png)
+
+
+    Error back propagation
+
+
+    Fig.2. Topology of BP neural network.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# XGBoost algorithm
+
+
+    XGBoost is an optimized distributed gradient enhancement library and it aims at
+    high efficiency, and portable performance. GBDT (gradient boosted tree) is one
+    that uses regression as the basic learner and boosting as framework. A weak classifier
+    is constructed by making loss function from each iteration greedily, adding results
+    of combining them with weights to form a stronger classifier for the forecasting
+    results. The final forecasting results are output. XGBoost is the optimization
+    of GBDT and this model implements parallel computing system to increase the operation
+    speed. Rapidly, quadratic calculation of Taylor''s formula is implemented to control
+    the objective, increasing the forecasting accuracy. Regular terms are included
+    to constrain the loss function and complexity of the whole model. The objective
+    function of XGBoost is:
+
+
+    ```
+
+    $Obj = \sum_{i=1}^{n} (y_i, \hat{y}_i) + \sum_{k=1}^{K} \Omega(f_k)$
+
+    ```
+
+
+    The objective function is composed of two parts: the error function which measures
+    the difference between the forecasted score and real score. $y_i$ and $\hat{y}_i$
+    are the predicted value of the model. The other part is the regular term $\Omega$
+    that is used to define complexity. $K$ is the number of regression trees and $f_k$
+    is the model of the number $k$.
+
+
+    regular term also contains two parts. $T$ is the number of leaf nodes and $\gamma$
+    denotes count of leaf nodes. $\gamma$ can control the number of leaf nodes and
+    $\lambda$ can control the function of leaf nodes not to excessive and prevent
+    overfitting. The objective function is simplified as:
+
+
+    ```
+
+    $T = \sum_{i=1}^{n} l(y_i, f_t(x_i)) + \frac{1}{2}\lambda f_t^2(x_i) + \Omega(f_t)$
+
+    ```
+
+
+    $g_i$ refers to the first-order derivative of $l(y_i, f_t(x_i))$ and $h_i$ refers
+    to the second-order derivative of $l(y_i, f_t(x_i))$.
+
+
+    XGBoost model has many advantages. Specifically, existing objective function utilizes
+    the second-order derivative of the loss function about the desired function. When
+    there are many samples of values, XGBoost can make automatic learning of sparsity.
+    The XGBoost training supports parallel and pre-ranking is implemented before iteration,
+    which is started in each iteration as block structure. This block structure enables
+    parallel calculation of the objective. The block structure also provides possibilities
+    for parallel of training. During splitting of nodes, gains of each feature are
+    calculated and the feature with the largest gain is selected for splitting through
+    thread of different features. The block structure also supports to sets of weights,
+    which are reflected by the first-order derivative and the second-order derivative
+    of the model by adjusting weights. After each iteration, XGBoost boosting the
+    learning rates to leaf nodes, decreases weights of each tree, and relieves the
+    impacts of each tree, which provides a better space for the follow-up learning.
+
+
+    | Base classifier | Model training | Model weight |
+
+    |---|---|---|
+
+    | 1 | 1 | 1 |
+
+    | 2 | 2 | 2 |
+
+    | Model formation | | |
+
+    | |
+
+
+    ![](img/f1deca4d5b8beaa0ac9bda6fb49165f8_3_0.png)
+
+
+    First, basically parameters of BP neural network and XGBoost were selected. For
+    BP network, it is widely accepted that increasing the number of hidden layers
+    can lower network error and complexity, increasing the training time of network
+    and causing a trend of “overfitting”. The most basic principle of the number of
+    nodes in the hidden layers is to choose structure as much as possible under the
+    satisfying
+
+
+    # IV. Results'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'accuracy. In this experiment, 367 inputs and 1 output layer were chosen. The
+    number of nodes in the hidden layers was 100. The XGBoost algorithm has three
+    types of parameters: General Parameters responsible for voting, Booster Parameters
+    for each chooser, and Learning Tasks for guidance of task estimation. Hyperparameters
+    control optimization of parameter adjustment; the learning rate was set at 0.3
+    (it can decrease with each step to make the model deeper). If we set 5 it can
+    control complexity and the value of these parameters limits the overfitting. Maximum
+    number of iterations learned (1000) is too appropriate. If it is too high, it
+    is easy to avoid overfitting.
+
+
+    on According to comparison between BP neural model and XGBoost algorithm model,
+    the latter one has higher accuracy in short-term power load forecasting.
+
+
+    Based on the chosen models of forecasting, results of two methods were used (Fig.
+    4). Fig4 results of BP neural network and XGBoost algorithm model conform to trends
+    of the load curve, but there is significant difference in accuracy of prediction.
+    BP neural network model on the test set were calculated 0.752 and 0.802, Moreover,
+    XGBoost algorithm has obvious weaker accuracy than the BP neural model calculation
+    of considering residual data and fitting degree. XGBoost algorithm is better for
+    short-term power load forecasting.
+
+
+    The short-term power load forecasting method is also further studied and improved.
+    Improvement suggestions are proposed for reference. One is to introduce LightGBM
+    which is a stronger and much better model than XGBoost. Specifically, the histogram-based
+    Pre-Series method provides accuracy in a given set. Constructing a histogram based
+    on differences of histograms is more creative. The leafwise growth with depth
+    replaces the traditional level growth strategy without increasing accuracy, also
+    avoids risks of overfitting. It is to increase accuracy by model integration.
+    Two groups of very different features can be considered as features when they
+    are integrated. The same model can generate multiple groups of results by forecasting
+    with different parameters and different seeds, and then integrate them. Although
+    we are at the beginning, this method is useful for deep learning. The power of
+    model integration is that we can explore features with limited data and achieve
+    the final accuracy by combining advantages of different submodels.
+
+
+    ![](img/f1deca4d5b8beaa0ac9bda6fb49165f8_4_0.png)
+
+
+    # References
+
+
+    +   [1] Hong-Yi, Za-W. Construction of power load management system[J]. Information
+    technology, 2008.
+
+
+    +   [2] Hernandez, L., Cador A, Aguar J M, et al. Accuracy on Electric Power Forecasting:
+    Future Trends in Smart Cities, Microgrids and Smart Grid, Surveys & Tutorials,
+    IEEE, 2014, 16(3):1460-1469.
+
+
+    +   [3] De-Jin, W. Short-term Load Analysis and Forecasting Based on Data Utilization,
+    J east china power, 2014.
+
+
+    +   [4] Wenchem, L. Machine learning approaches to forecasting-power-system assessment,
+    IEEE Expert Rep., 1997, 6(2):9-12.
+
+
+    +   [5] Group, S., Wang, Y., Chen, S., and Liu, Y. Load Management and Visualization:
+    Smart Power Management System[J]. International Conference & Expo on Energy Technologies
+    for Smart Grid IEEE, 2012.
+
+
+    Fig. 4. Forecasting results of BP neural network model and XGBoost algorithm model
+
+
+    ![](img/f1deca4d5b8beaa0ac9bda6fb49165f8_4_1.png)
+
+
+    # Short-term power load forecasting
+
+
+    is an indispensable factor in power planning and system operation as well as practical
+    dispatch. To increase the accuracy becomes extremely important. Based on practical
+    hourly data in a region provided by PJM Company, time series and features are
+    established by focusing
+
+
+    +   [6] Lee, C.-O., Park, B., Lee, J.-C., Kim, M., Lee, S.-H., Shin, C..Short-term
+    power consumption using optimization of electric power consumption considering
+    the marine environment, International Journal of Marine Resources and Ocean Engineering,
+    https://doi.org/10.1016/j.jaeo.2019.02.016
+
+
+    +   [7] He, H., Lu T, Chen, R, et al. High frequency short-term power load forecasting
+    using neural wavelet-based grid base selection, IEEE International Conference
+    on Computer and Electrical Engineering, 2012.
+
+
+    +   [8] Tra, Y., Wang, J., and Wang, S. One very short hourly power load prediction
+    using Neuro-Wavelet and Seasonal ARIMA model[J]. IFC Forecasting, 2012, 52(4):1211-1225.
+
+
+    +   [9] Vinh, N. T. Short-term load forecasting in smart cities using window-based
+    ARIMA algorithms[J]. Vietnam of Computer Science, 2014.
+
+
+    +   [10] Guan, C, Luo P B, Michel L D, et al. Very Short-term Load Forecasting:
+    Levelwise Wavelet Neural Networks with D Pre-Ferring[J]/ IEEE Transactions on
+    Power Systems, 2012, 28(1):1-10.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '[13] Ahmad A, Javaid N, Mateen A, et al. Short-Term Load Forecasting in Smart
+    Grids: An Intelligent Modular Approach], Energies, 2019, 12(1).
+
+
+    [14] Alonso R and Chávez A, "Short term load forecast method using artificial
+    neural network with artificial immune systems," 2017 IEEE URICON, Montevideo,
+    2017, pp. 1-4.'
+  merge: -1
+  img_proc: true
