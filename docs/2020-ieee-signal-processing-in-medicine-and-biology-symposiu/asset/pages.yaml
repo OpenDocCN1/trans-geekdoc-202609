@@ -1,0 +1,349 @@
+- pgno: 0
+  md: '# Ultrasound-Mediated Chemical Sensing Using Titanium Diode (TiO₂) Nanoparticles-Embedded
+    Hydrogel with Possibilities of Performance Enhancement Using Machine Learning
+
+
+    S. Islam, M. Park, R. Campbell and A. Kim
+
+    [sayemul, moonpark, rebecca, albertkim]@email.com
+
+
+    **Introduction:** In chemical sensing, such as temperature, pH, or a specific
+    molecule, is important in healthcare and environmental monitoring [1]. The principle
+    of chemical sensing usually involves multiple elements, including receptor, transducer,
+    and a complex readout. The receptor selectively detects chemical information,
+    which is then translated into electrical signals by the transducer. However, the
+    receptor is usually consumable, and the transducer requires frequent calibration
+    due to the accumulation of chemical species (e.g., protein, biofilm). Recently,
+    hydrogel-based sensing mechanisms based on the incorporation of micro/nanoparticles
+    onto the polymeric network of hydrogels have been reported [2]. For instance,
+    Holt et al. demonstrated crystalline particles within the polymeric hydrogel allowed
+    the change of color in response to glucose [3]. Another effort by our group was
+    embedding silica beads in a pH-sensitive hydrogel, which can be interrogated by
+    ultrasonic imaging [4].
+
+
+    In this paper, we present a new wireless pH sensing technique using the ultrasound
+    through titanium dioxide (TiO₂) nanoparticle-embedded hydrogels. Fig. 1 illustrates
+    the principle of the proposed chemical sensing system. The sensing system consists
+    of an ultrasonic transmitter/receiver pair and TiO-embedded hydrogel that is implanted
+    under the skin (or any other body that requires pH monitoring). Filling hydrogel
+    with TiO₂ nanoparticles enhances the ultrasonic wave scattering, which eliminates
+    the readouts, such as the ultrasonic imaging system. Its physical behavior is
+    depending on the thickness of the hydrogel. The transmitted signals are collected,
+    with design of feature extraction for machine learning implementation. We seek
+    to interpret pH information from ultrasonic waves with minimal effects to reduce
+    friction and noise using this method. Regardless of having many scopes, machine
+    learning enabled direct pH measurement schemes were not reported in the present.
+    The current state of the art sensors (with accuracy errors within 0.1 to 0.01
+    pH, therefore, our aim in this is to achieve even lower error rate using machine
+    learning.
+
+
+    Method: In order to verify the effectiveness of the concept, we prepared a hydrogel
+    that absorbs water molecules depending on pH levels of the media; we tested it
+    at high pH and shrunken at low pH [5]. We created a disc-shaped hydrogel, whose
+    size was 20 mm in diameter and 3 mm in thickness. During hydrogel synthesis, TiO₂
+    nanoparticles (21 mm, Sigma-Aldrich) were mixed into the polymer solution. The
+    prepared hydrogel was tested in media at different pH levels (pH = 3, 4.4, 5.7,
+    6.2, 7.4). For a composite sample (swelling or shrinking), the hydrogel change
+    in size for each pH level for at least 15 minutes is taken. We designed an experimental
+    setup. We used a piezoelectric transducer (36 × 36 × 1 mm; PZT-5H, Piezo Inc.)
+    to apply ultrasonic waves into the medium. The prepared hydrogel was placed approximately
+    6 cm away from the ultrasonic transmitter. A short burst (10 pulses at 7.0 MHz)
+    was delivered to the hydrogel embedded at
+
+
+    ![](img/cb7ec08c19c0ac96725c21dd279fe864_0_0.png)
+
+
+    ![](img/cb7ec08c19c0ac96725c21dd279fe864_0_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'S. Islam et al.; Ultrasound-Mediated Chemical Sensing using Titanium Dioxide
+    (TiO2) Nanoparticles-Embedded Hydrogels with Possibilities of Performance Enhancement
+    Using Imaging Page 2 of 3
+
+
+    MHz with 1 kHz frequency was transmitted through the body to reach the TiO2-hydrogel.
+    A fiber-optic hydrophone (FOH64) was used as an ultrasonic receiver. It captured
+    the ultrasonic wave at 10 cm from the ultrasonic transducer (or 4 cm from the
+    hydrogel). The data acquisition was done using an oscilloscope (MSO3024T, Keysight)
+    connected to the hydrophone. The signal was captured for an average of 4.6 µs
+    duration at a 5 GHz sampling rate.
+
+
+    # Results and Discussion: The results presented in this paper were collected and
+    structured for a future machine learning interrogation. The received ultrasonic
+    wave was a one-dimensional discrete-time signal that had a different characteristic
+    depending on the thickness of the transmitted and received wave (shown in Fig.
+    3a and Fig. 3b). The received signal showed a rising then falling trend in its
+    amplitude. A minimum of 10 input burst pulses was required to reduce the characteristic
+    ultrasonic waves to the change in hydrogel thickness in the environmental pH.
+    More than 10 pulses was not required as it would induce repetitive waveforms which
+    do not carry any significance in terms of amplitude or frequency change. After
+    8 pulses, the ultrasonic waves gradually decayed until the supply energy was consumed.
+    The received signal could be segmented visually indicating more information than
+    the change in amplitude. The change in frequency was analyzed during the feature
+    extraction of the machine learning process; however, they are not visually obvious
+    and can be detected using a precision measurement method (as an oscilloscope).
+
+
+    ![](img/cb7ec08c19c0ac96725c21dd279fe864_1_0.png)
+
+
+    For comparison purposes, we used three concentrations of TiO2 (0, 2.5, and 5 wt%)
+    in the experiment. The changes in ultrasonic waves due to these hydrogels in different
+    pH levels were characterized. First, the volume of transmission to the TiO; embedded
+    hydrogel was characterized; Fig. 3(c) shows the pictures of swelled hydrogels
+    at different pH. The maximum swelling ratio of hydrogel was 2.3, 2.1, and 1 for
+    0, 2.5, and 5 wt% TiO2 concentration, respectively. Filling the TiO nanoparticles
+    impeded the hydrogel interrogation in terms of sensing linearity and higher sensitivity,
+    as shown in Fig. 3d). Due to the characteristic impedance of the hydrogel (1.5
+    Mrays) and water (1.8 Mrays), there were not sufficient reflections, except at
+    the boundary where random reflections occurred. This led to unexpected responses
+    when the pristine hydrogel (TiO) was in the path of the ultrasonic waves. When
+    TiO nanoparticles were loaded in the hydrogel; the overall acoustic impedance
+    became 6.61 Mrays (@ 5 wt%, pH =7), which could reflect ultrasonic waves unless
+    the transmission intensity as the hydrogel shrinks or expands (R² = 0.94). The
+    rates of changes in ultrasonic intensities were 1.38, 1.50, and 1.8 mW/cm²pH for
+    0, 2.5, and 5 wt% of TiO2 in the hydrogel, respectively (Fig. 3(e)).
+
+
+    ![](img/cb7ec08c19c0ac96725c21dd279fe864_1_1.png)
+
+
+    IEEE SPMSE 2020
+
+
+    Authorized use limited to: Rutgers University. Downloaded on May 17, 2021 at 03:32:58
+    UTC via IEEE Xplore. Terms and conditions'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'S. Islam et al.; Ultrasound-Mediated Chemical Sensing Using Titanium Dioxide
+    (TiO2) Nanoparticles-Embedded Hydrorogel with Properties of Performance Enhancement
+    Using Machine Learning
+
+
+    Page 3 of 3
+
+
+    While the amplitude-based physical analysis was demonstrated in the hydrogel-based
+    pH sensing, acoustic features can be extracted from the received signals. Thus,
+    for speech recognition, we envision our model will extract frequency, phase, energy,
+    and entropy features, as shown in the block diagram [1]. The first training dataset
+    will be segmented by small moving frames. Each segment will be sequentially analyzed
+    by a Fast Fourier transformation. Then, phase and power spectrum can be extracted
+    from the processed signal. Notably, we will further process these features and
+    compute a more localized view, such as its entropy and amplitude spectrum, as
+    entropy and its ratio; and crest frequency, continuity, and duration [7]. Once
+    all the features are extracted, we can implement machine learning algorithms such
+    as linear regression, support vector machine, or random forest on the training
+    dataset values. In the future, more complex and advanced models such as a convolutional
+    neural network (CNN), deep neural networks will be employed to enhance accuracy
+    performance [8]. The size of the training dataset can be determined by the validation
+    accuracy after the training and evaluation of the ML model. Typically, pH measurements
+    have measurement error within 0.1 to 0.1 pH, depending on the quality of the device
+    and the measurement procedure. Therefore, we plan to provide training data for
+    which the accuracy will be on with parameters. After training, the machine learning
+    model will be tested using ultrasonic waves (e.g., unknown pH). The hydrogel can
+    be adapted for different pH ranges, for example, pH 3.5, 7.5 to 8 and lower (e.g.,
+    pH of 2 in the stomach) or higher (e.g. pH of 7.0-8.5 in the intestine) depending
+    on the region in the body [10]. We will result be compared with capability using
+    different performance indicators, such as mean absolute error (MAE), mean square
+    error (MSE), Pearson correlation coefficient (Pearson''s R), and coefficient of
+    determination (R).
+
+
+    In summary, we reported a new wireless sensing technique using smart hydrogel
+    material. We analyzed the proposed sensing scheme using a traditional method,
+    acknowledge the need for machine learning to reveal features that could be hidden
+    within the ultrasonic waves.
+
+
+    # ACKNOWLEDGMENTS
+
+
+    This research is supported by funds provided by the College of Engineering at
+    University Tech.
+
+
+    # REFERENCES
+
+
+    +   [1] K. G. Ong, A. C. Grimes, L. L. Robbins, and R. S. Singh, “Design and application
+    of a wireless, phase-resonant environmental monitoring sensor,” Sensors A Phys.,
+    vol. 93, no. 1, pp. 33–43, Aug. 2001.
+
+    [2] R. U. Ujin et al., “Biocompatible hydrogels,” Materials Today, vol. 10, no.
+    4, pp. 44–48, 2007.
+
+    [3] H. J. Holtz and S. A. Asher, “Photoresponsive colloidal hydrogel films as
+    intelligent sensing materials,” Nature, vol. 389, 6653, pp. 822–832, 2004.
+
+    [4] J. Park, A. Kim, H. Jang, S. S. Jong, and J. Woo, “A Wireless Sensing Scheme
+    using Ultrasonic Imaging of Particle-Embedded Hydrogels (Silgels),” Sensors Chem.,
+    vol. 259, pp. 552–559, 2019.
+
+    [5] T. Bartil, M. Bonoukhel, C. Cedric, and R. Jeanner, “Swelling behavior and
+    release properties of pH-sensitive hydrogels based on polymeric derivatives,”
+    Acta Pharm., vol. 57, no. 3, pp. 301–314, Jan 2007.
+
+    [6] C. Demiriti, A. Sansino, F. Conversano, S. Casciaro, A. Distante, and A. Mafezzoli,
+    “Hydrogel based tissue binding for in-vitro ultrasonic contrast agents,” J. Biomed.
+    Mater. Res Part B Appl., vol. 87B, no. 2, pp. 338–345, Nov 2008.
+
+    [7] M. As, A. Sumer, M. Kashif, R. Talib, and H. Ulash, “Acoustic classification
+    using Deep Learning,” Int. Adv. Comput. Sci. Appl., vol. 9, no. 153–159, 2018.
+
+    [8] A. Graves and N. Jaitaly, “End-to-end speech recognition with recurrent neural
+    networks,” in 31st International Conference on Machine Learning. ICML 2014, vol.
+    5, pp. 3771–3779.
+
+    [9] P. Woodward, “Arterial blood gas analysis,” Nurs. Stand., vol. 18, no. 21,
+    pp. 45–52, Feb. 2004.
+
+    [10] W. F. Boron and E. L. Boulpaep, Medical Physiology: A Cellular And Molecular
+    Approach.
+
+
+    IEEE SPME 2008'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# # Ultrasound-Mediated Chemical Sensing Using Titanium Dioxide (TiO2) Nanoparticles-Embedded
+    Hydrogel with Possibilities of Performance Enhancement Using Machine Learning
+
+
+    S. Islam, Mark, R. Campbell and A. Kim
+
+
+    Department of Computer and Engineering, Temple University, Philadelphia, Pennsylvania,
+    USA (sayamoun, mark, recbecca, albertkim)@temple.edu
+
+
+    # I. Introduction
+
+
+    +   - In-situ chemical sensing, such as temperature, pH, or a specific molecule,
+    is important in environmental and healthcare monitoring.
+
+    - The principle of chemical sensing usually involves receptor, transducer, and
+    complex readout circuit.
+
+    - The receiver is usually consumable, and the transducer requires frequent calibration
+    due to the accumulation of chemical species.
+
+    - We propose ultrasonic sensing mechanism that minimizes unwanted shortcomings
+    (Figure 1).
+
+    - Non-consumable hydrogel with titanium dioxide
+
+    - Ultrasound reads the volume change; thus, nowadays is not necessary.
+
+
+    ![](img/cb7ec08c19c0ac96725c21dd279fe864_3_0.png)
+
+
+    # II. Experiment Setup
+
+
+    +   - Different pH solutions (pH = 3, 4.4, 5, 6, 7, 7.4) were prepared in water
+    tank (Figure 3).
+
+    - TiO2-nanoparticle embedded hydrogel were soaked for 40 minutes to ensure baseline
+    for each pH level.
+
+    - A 6 mm x 1 mm piezoelectric transducer (PZT-5) was used as an ultrasonic transducer.
+
+    - A fiber-optic hydro (FOH64, Precision Acoustic) was placed on the other side
+    to capture the ultrasonic waves.
+
+    - A short burst wave (10 pulse at 7.0 MHz with 1 kHz frequency) was transmitted
+    through the hydrogel.
+
+
+    ![](img/cb7ec08c19c0ac96725c21dd279fe864_3_1.png)
+
+
+    # VI. Results
+
+
+    # I. Swelling Test Results
+
+
+    ![](img/cb7ec08c19c0ac96725c21dd279fe864_3_2.png)
+
+
+    +   - For 0, 2, and 5 wt% TiO2, loaded hydrogel:
+
+    - Swelling ratio: 0.84, 0.81, 0.76 mm/mm
+
+    - Max swelling ratio: 2.3, 2.07, and 1.74 mm/mm
+
+    - Maximum swelling ratio was 11.39% for 2.5 wt% and by 26% for 5 wt% TiO2 loaded
+    hydrogel.
+
+
+    # II. Ultrasonic Test Results
+
+
+    ![](img/cb7ec08c19c0ac96725c21dd279fe864_3_3.png)
+
+
+    +   - Improved linearity in pH sensing (R'' = 0.72 for 0 wt% and R'' = 0.95 for
+    both 2.5, 5 wt% TiO2 loaded hydrogel).
+
+    - Rate of change in acoustic intensities of 150 mV/cm² for 2.5 wt., and 188 mV/cm²
+    for 5 wt% TiO2, loaded hydrogel.
+
+
+    # II. Methodology
+
+
+    +   - Sensing elements: An ultrasonic transducer, TiO2-embedded hydrogel, an ultrasonic
+    receiver.
+
+    - Sensing mechanism: Hydrogel swells at high frequencies at low pH. By transmitting
+    ultrasonic waves through the hydrogel, the temporal and spectral scale change.
+
+    - Data processing: Ultrasonic waves are captured and analyzed to extract the pH
+    information of the method.
+
+
+    # III. Data Processing
+
+
+    +   - We investigated the acoustic intensity in of amplitude change.
+
+    - Features such as peak-peak, peak-spectrum, entropy, FFT, and power spectrum,
+    can be used to train machine learning algorithms for machine learning integration
+    (Figure 4).
+
+
+    ![](img/cb7ec08c19c0ac96725c21dd279fe864_3_4.png)
+
+
+    # IV. Fabrication
+
+
+    ![](img/cb7ec08c19c0ac96725c21dd279fe864_3_5.png)
+
+
+    # VII. Conclusion
+
+
+    +   - A new chemical sensing method based on smart hydrogel.
+
+    - The sensor is non-consumable and does not require calibration due to the reversible
+    swelling of hydrogel and the use of ultrasonic receiver.
+
+    - Preliminary dataset was obtained for machine learning enabled sensing for more
+    accurate and robust monitoring
+
+
+    # VIII. Acknowledgments'
+  merge: -1
+  img_proc: true
