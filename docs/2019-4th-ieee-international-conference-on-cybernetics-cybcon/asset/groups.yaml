@@ -1,0 +1,1141 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # Research on Monetary Assessment of Ship Oil Spillage Damage with Machine Learning
+    Methods
+
+
+    Chenhao Lu
+
+    School of Economics and Management
+
+    University of Chinese Academy of Sciences
+
+    Beijing, China
+
+    E-address: 105511689@qq.com
+
+
+    Yuan Bian
+
+    School of Economics and Management
+
+    University of Chinese Academy of Sciences
+
+    Beijing, China
+
+    E-address: bianyuan@ucas.cn
+
+
+    Desheng Wu
+
+    School of Economics and Management
+
+    University of Chinese Academy of Sciences
+
+    Beijing, China
+
+    E-address: dwu@ucas.cn
+
+
+    **Abstract:** Based on ship oil spills in recent decades, this work builds a rapid
+    monetary assessment for damage caused by ship oil spill. By analyzing the sample
+    data, five types of indicators (oil spill volume, oil area, product proportion,
+    shoreline, shoreline type) have been selected to develop machine learning method
+    for a quick evaluation and estimation of compensation amount of the oil damage.
+    The results obtained with BP artificial neural network, RBF artificial neural
+    network are compared. At the same time, multiple regression is used to analyze
+    the degree of compensation amount of each index. Finally, the most model and influencing
+    factors are identified to support the real world cases in future.
+
+
+    survival and development of the Security Council directly. The strength of national
+    defense also poses an impact on the economic resources and the marine environment
+    (Yang et al., 2005). Developing countries are fully aware of the claim and compensation
+    in the pollution control. A vicious circle has been realized with a claim and
+    compensation mechanism for damages. However, it is often complicated because of
+    legal and backward assessment methods. Meanwhile, insufficient compensation cannot
+    afford the cleaning expenses. Failure to eliminate the oil spill results in indistinguishable
+    losses. The implementation of the compensation mechanism is difficult. On the
+    one hand, it is aimed at providing a direct calculation method for the stakeholders
+    in calculating the amounts; on the other hand provides a value estimation for
+    the stakeholders (Yang et al.).
+
+
+    *Keywords:* ship oil, monetary assessment, machine learning, multiple regression,
+
+
+    # INTRODUCTION
+
+
+    The marine environment is a system that contains various factors in the ocean
+    and adjacent areas. It is an important part of the global ecological chain and
+    changes the human life and production through a large amount of resources. The
+    real-time impact of oil spills is a main source of marine pollution. Effective
+    removal and preventive measures must be taken to control the scale and scope of
+    pollution to minimize losses and damage. According to the principle of "polluter
+    pays", the implementer of the damage and the involved IMF bust must abide by international
+    conventions or relevant regulations. The stipulated of oil spill damage, economic
+    and environmental compensation, the readiness and completeness of the compensation
+    are significant impact on the effectiveness of oil control and environmental remediation.
+    Local government departments, marine department, departments, ports and shipping,
+    maritime courts, fisheries and aquaculture management, and other departments are
+    involved in the elimination of oil pollution. Timely and reasonable compensation
+    is an economic and legal issue that affects the
+
+
+    After the oil spill, the regulatory agency in the jurisdiction will evaluate the
+    nature of the incident and damage caused by the accident on the basis of the oil
+    spill damage model. Carrying out the real-time compensation and regard for damaged
+    interests and the implementation of the compensation is difficult because of the
+    great number of affected residents, and the number of organisms in the area, the
+    numerous items considered in the incident, and the long time for the estimation.
+    In many cases, the following solution after an accident occurs. Generally, the
+    compensation is calculated by evaluating the extent and amount of each damage
+    in the part. The evaluated results are aggregated and arranged and concluded for
+    the comprehensive and real data. However, the implementation of compensation is
+    difficult because the requirements of the method evaluation are high. In the actual
+    process, multiple accidents are calculated and compared on the basis of the traditional
+    model algorithms. The new accidents are diversified according to the index, follow
+    the damage of oil cylinders as the reference. Such algorithms are more efficient
+    and convenient in obtaining data with higher accuracy. Compensation based on the
+    data obtained by any algorithm'
+  - '[PAGE 1]
+
+
+    can also be recognized by accident victims. In this research, the current estimation
+    model is analyzed and compared with the center, and the specific correlation between
+    accident loss indicator data are integrated. The data are obtained from related
+    accident loss compensation methods. Binary linear regression, radial basis function
+    network, BP artificial network, and support vector machine are used to ensure
+    accuracy of compensation. The estimation results in the university with guiding
+    pre-assessment methods show similarity for cases, and the correlation between
+    the assessment and the case data are also summarized. Systematic research provides
+    scientific and confidence for the estimates of related cases. More instructive,
+    constructive guidelines for accident prevention and can be prepared.
+
+
+    research on the estimation of ship oil pollution compensation is conducted on
+    the basis of the existing methods for the compensation for clean-up (including
+    the direct evaluation, neural network, fuzzy clustering methods) in this paper.
+    The moreover network method is adopted to reduce the assessment time of marine
+    oil pollution compensation.
+
+
+    # II. METHODOLOGY
+
+
+    In this paper, the research method is presented as follows: First, the existing
+    literature in the field is surveyed and out. Second, current accidents are counted
+    and analyzed, and the data are summarized statistically. Depth exploration is
+    carried out on the basis of existing achievements in this paper. The specific
+    content is arranged as follows:
+
+
+    +   (1) On ecological damage assessment methods: The calculation of the ship damage
+    caused by the oil spill in the marine area are arranged and summarized comprehensively.
+    The research is classified on the basis of environmental, natural resource, and
+    ecological damage. Once secondary characteristics are established, the theoretical
+    framework of the method is sorted out in detail for comparison, and the correlation
+    between the data and indicators is analyzed.
+
+
+    +   (2) Establishment of indicators: Previous results are used as the object to
+    analyze the relevant model influencing factors in the literature and specific
+    methods in establishing indicators. The comprehensive indicator methods in the
+    research are selected as the main methods in the research.
+
+
+    +   (3) Detailed exploration on the measurement and evaluation of the oil spill
+    accident: Based on the elements of previous events, multiple linear regression,
+    radial basis function network, support vector machine learning, and other models
+    are used to analyze the data and results, thereby confirming the correlation among
+    the accidents. The data obtained by the neural network and other algorithms are
+    proven on such basis. Finally, the results of all algorithms are compared to determine
+    the most accurate and reasonable assessment method.
+
+
+    By investigating the relevant literature, we found that the selection of reference
+    criteria is essential to determine the selection. The selection should adhere
+    to the principles of authenticity, elements, and practicality. In this paper,
+    linear regression, BP artificial network, radial basis function network model,
+    and support vector machine, which are the most valuable and reliable algorithms,
+    are used for data analysis and results discussion. There are many cases in oil
+    spill, and it is difficult to obtain consistent and relatively large amount of
+    structural data in this paper. The sample data of oil spill damage in this paper
+    is obtained through the China Maritime Management Department, and various international
+    cases like IOPC case database. Consequently, data processing is executed to complete
+    each data set by synthesizing and investigating the corresponding case. In total,
+    72 case information can be found in the following table.
+
+
+    Firstly, according to related literature, the criterion range is selected as follows:
+    the compensation method is one of the elements, and the correlation is one thousand
+    year. The unit of oil spill is tons, and the range is between 100 and 500, which
+    is a medium-sized oil accident. The unit of oil area and shoreline length of polluted
+    shoreline is in form of expression, which are discrete variables decided by the
+    combination with the data measurement rules presented by (Gao, 2007). This is
+    normalized for further. Normalization can help reduce the order of magnitude,
+    so as to consider the coefficients in regression analysis, and some neurons in
+    marine network being overfitted.
+
+
+    # III. ASSESSMENT OF SHIP OIL SPILL DAMAGE WITH MACHINE LEARNING METHODS
+
+
+    Marine oil spills can cause damage to the marine environment and life in the sea.
+    In recent years, marine spills occur frequently in China, there properly corresponding
+    damage to the marine environment and people''s properties. However, inadequate
+    compensation often leads to difficulties in the payment of cases. Thus, the oil
+    spill damage cannot be cleared in time. Based on the collected literature and
+    materials related to the evaluation and compensation,
+
+
+    # B. Compensation amount estimation with different models
+
+
+    +   1. Multiple linear regression model
+
+
+    +   1.1 Full-criterion linear regression model
+
+
+    First of all, the multiple linear regression model integrates five independent
+    variables, marine oil spill volume, gravity, oil area, polluted shoreline length
+    and shoreline type as well as the dependent variable evaluated compensation amount.
+    The corresponding confidence level is 95% to help the model perform SPSS regression.
+    The equation expression is formulated as follows:
+
+
+    ```
+
+    Y = 0.466X₁ - 0.393X₂ + 0.163X₃ + 0.231X₄ - 0.053X₅ + 0.120
+
+    ```
+
+
+    Authorized license used to: China Jiaotong University. Downloaded on 30 May 2021
+    at 01:04:00 UTC IEEE Xplore. Restrictions apply.'
+  md: '
+
+    # Research on Monetary Assessment of Ship Oil Spillage Damage with Machine Learning
+    Methods
+
+
+    Chenhao Lu
+
+    School of Economics and Management
+
+    University of Chinese Academy of Sciences
+
+    Beijing, China
+
+    E-address: 105511689@qq.com
+
+
+    Yuan Bian
+
+    School of Economics and Management
+
+    University of Chinese Academy of Sciences
+
+    Beijing, China
+
+    E-address: bianyuan@ucas.cn
+
+
+    Desheng Wu
+
+    School of Economics and Management
+
+    University of Chinese Academy of Sciences
+
+    Beijing, China
+
+    E-address: dwu@ucas.cn
+
+
+    **Abstract:** Based on ship oil spills in recent decades, this work builds a rapid
+    monetary assessment for damage caused by ship oil spill. By analyzing the sample
+    data, five types of indicators (oil spill volume, oil area, product proportion,
+    shoreline, shoreline type) have been selected to develop machine learning method
+    for a quick evaluation and estimation of compensation amount of the oil damage.
+    The results obtained with BP artificial neural network, RBF artificial neural
+    network are compared. At the same time, multiple regression is used to analyze
+    the degree of compensation amount of each index. Finally, the most model and influencing
+    factors are identified to support the real world cases in future.
+
+
+    survival and development of the Security Council directly. The strength of national
+    defense also poses an impact on the economic resources and the marine environment
+    (Yang et al., 2005). Developing countries are fully aware of the claim and compensation
+    in the pollution control. A vicious circle has been realized with a claim and
+    compensation mechanism for damages. However, it is often complicated because of
+    legal and backward assessment methods. Meanwhile, insufficient compensation cannot
+    afford the cleaning expenses. Failure to eliminate the oil spill results in indistinguishable
+    losses. The implementation of the compensation mechanism is difficult. On the
+    one hand, it is aimed at providing a direct calculation method for the stakeholders
+    in calculating the amounts; on the other hand provides a value estimation for
+    the stakeholders (Yang et al.).
+
+
+    *Keywords:* ship oil, monetary assessment, machine learning, multiple regression.
+
+
+    # INTRODUCTION
+
+
+    The marine environment is a system that contains various factors in the ocean
+    and adjacent areas. It is an important part of the global ecological chain and
+    changes the human life and production through a large amount of resources. The
+    real-time impact of oil spills is a main source of marine pollution. Effective
+    removal and preventive measures must be taken to control the scale and scope of
+    pollution to minimize losses and damage. According to the principle of "polluter
+    pays", the implementer of the damage and the involved IMF must abide by international
+    conventions or relevant regulations. The stipulated of oil spill damage, economic
+    and environmental compensation, the readiness and completeness of the compensation
+    are significant impact on the effectiveness of oil control and environmental remediation.
+    Local government departments, marine department, departments, ports and shipping,
+    maritime courts, fisheries and aquaculture management, and other departments are
+    involved in the elimination of oil pollution. Timely and reasonable compensation
+    is an economic and legal issue that affects the-
+
+
+    After the oil spill, the regulatory agency in the jurisdiction will evaluate the
+    nature of the incident and damage caused by the accident on the basis of the oil
+    spill damage model. Carrying out the real-time compensation and regard for damaged
+    interests and the implementation of the compensation is difficult because of the
+    great number of affected residents, and the number of organisms in the area, the
+    numerous items considered in the incident, and the long time for the estimation.
+    In many cases, the following solution after an accident occurs. Generally, the
+    compensation is calculated by evaluating the extent and amount of each damage
+    in the part. The evaluated results are aggregated and arranged and concluded for
+    the comprehensive and real data. However, the implementation of compensation is
+    difficult because the requirements of the method evaluation are high. In the actual
+    process, multiple accidents are calculated and compared on the basis of the traditional
+    model algorithms. The new accidents are diversified according to the index, follow
+    the damage of oil cylinders as the reference. Such algorithms are more efficient
+    and convenient in obtaining data with higher accuracy. Compensation based on the
+    data obtained by any algorithm
+
+
+    can also be recognized by accident victims. In this research, the current estimation
+    model is analyzed and compared with the center, and the specific correlation between
+    accident loss indicator data are integrated. The data are obtained from related
+    accident loss compensation methods. Binary linear regression, radial basis function
+    network, BP artificial network, and support vector machine are used to ensure
+    accuracy of compensation. The estimation results in the university with guiding
+    pre-assessment methods show similarity for cases, and the correlation between
+    the assessment and the case data are also summarized. Systematic research provides
+    scientific and confidence for the estimates of related cases. More instructive,
+    constructive guidelines for accident prevention and can be prepared.
+
+
+    research on the estimation of ship oil pollution compensation is conducted on
+    the basis of the existing methods for the compensation for clean-up (including
+    the direct evaluation, neural network, fuzzy).
+
+
+    # II. METHODOLOGY
+
+
+    In this paper, the research is presented as follows: First, the data is obtained
+    from related accident loss compensation methods. Binary linear regression, radial
+    basis function network, BP artificial network, and support vector machine are
+    used to ensure accuracy of compensation. The estimation results in the university
+    with guiding pre-assessment methods show similarity for cases, and the correlation
+    between the assessment and the case data are also summarized. Systematic research
+    provides scientific and confidence for the estimates of related cases. More instructive,
+    constructive guidelines for accident prevention and can be prepared.
+
+
+    The data are obtained from related accident loss compensation methods. Binary
+    linear regression, radial basis function network, BP artificial network, and support
+    vector machine are used to ensure accuracy of compensation. The estimation results
+    in the university with guiding pre-assessment methods show similarity for cases,
+    and the correlation between the assessment and the case data are also summarized.
+    Systematic research provides scientific and confidence for the estimates of related
+    cases. More instructive, constructive guidelines for accident prevention and can
+    be prepared.
+
+
+    - (1) Establishment of indicators: The data is processed and analyzed based on
+    existing literature.
+
+    - (2) Selection of factors: The correlation between the assessment and the case
+    data is summarized. Based on related literature, the results are summarized.
+
+    - (3) Selection of models: Binary linear regression, radial basis function network,
+    BP artificial network, and support vector machine are used to ensure accuracy
+    of compensation.
+
+
+    # III. ASSESSMENT OF SHIP OIL SPILL DAMAGE WITH MACHINE LEARNING METHODS
+
+
+    Marine oil spills can cause damage to the marine environment and life in the sea.
+    In recent years, marine spills occur frequently in China, there properly corresponding
+    damage to the marine environment and people''s properties. However, inadequate
+    compensation often leads to difficulties in the payment of cases. Thus, the oil
+    spill damage cannot be cleared in time. Based on the collected literature and
+    materials related to the evaluation and compensation,
+
+
+    # B. Compensation amount estimation with different models
+
+
+    - 1. Multiple linear regression model
+
+
+    - 1.1 Full-criterion linear regression model
+
+
+    First of all, the multiple linear regression model integrates five independent
+    variables, marine oil spill volume, gravity, oil area, polluted shoreline length
+    and shoreline type as well as the dependent variable evaluated compensation amount.
+    The corresponding confidence level is 95% to help the model perform SPSS regression.
+    The equation expression is formulated as follows:
+
+
+    Y = 0.466X₁ - 0.393X₂ + 0.163X₃ + 0.231X₄ - 0.053X₅ + 0.120
+
+    '
+  mdcn: '
+
+
+    # 基于机器学习方法的船舶油溢油损害货币化评估研究
+
+
+    陆晨浩
+
+    中国科学院 经济与管理学院
+
+    中国，北京
+
+    电子邮箱：105511689@qq.com
+
+
+    边渊源
+
+    中国科学院 经济与管理学院
+
+    中国，北京
+
+    电子邮箱：bianyuan@ucas.cn
+
+
+    吴德胜
+
+    中国科学院 经济与管理学院
+
+    中国，北京
+
+    电子邮箱：dwu@ucas.cn
+
+
+    **摘要：** 基于近几十年的船舶油溢油事件，本研究建立了一种针对船舶油溢油损害的快速货币化评估方法。通过分析样本数据，选取了五类指标（溢油量、溢油面积、产品比例、海岸线、海岸线类型），开发了机器学习方法，用于对油油损害补偿金额进行快速评估和估计。比较了
+    BP 人工神经网络和 RBF 径基函数神经网络的结果。同时，利用多元回归分析了各评价指标对补偿金额的影响程度。最后，确定了最优模型和影响因素，为未来的现实世界案例提供支持。
+
+
+    溢油直接关系到安全会的生存与发展。国防实力也对经济资源和海洋环境产生影响（Yang et al., 2005）。发展中国家充分意识到污染控制中的索赔与补偿。损害的索赔与补偿机制已形成一种恶性循环。然而，由于法律和落后的评估方法，这往往变得非常复杂。同时，补偿不足无法支付清理费用。溢油未能消除将导致无法区分的损失。补偿机制的实施存在困难。一方面，旨在为利益相关者计算金额提供直接计算方法；另一方面，为利益相关者提供价值估算（Yang
+    et al.）。
+
+
+    *关键词：*船舶油、货币化评估、机器学习、多元回归。
+
+
+    # 引言
+
+
+    海洋环境是一个包含海洋及相邻区域各种因素的系统。它是全球生态链的重要部分，通过大量资源改变着人类的生活和生产。溢油的即时影响是海洋污染的主要来源。必须采取有效的清除和预防措施来控制污染规模和范围，以最大地减少损失和损害。根据“污染者付费”原则，损害实施者和相关的国际组织（IMF）必须遵守国际公约或相关规定。溢油损害的规定、经济和环境补偿、补偿的准备程度和完整性对控油和环境修复的有效性具有重大影响。地方政府部门、海洋部门、港口运输部门、海事法院、渔业和水产管理等部门参与了油污染的消除。及时且合理的补偿是一个影响……的经济和法律问题。
+
+
+    溢油发生后，管辖区的监管机构将根据溢油损害模型评估事故性质及事故造成的损害。由于受影响居民人数众多、区域内生物数量、事故中考虑的因素众多以及估时间较长，开展实时补偿并考虑受损利益的实施非常困难。在许多情况下，事故发生后采取以下解决方案。通常，补偿是通过评估每个部分损害的程度和金额来计算的。对评估结果进行汇总、安排，并得出综合性、真实数据的结论。然而，由于对方法评估的要求较高，补偿的实施存在困难。在实际过程中，基于传统模型算法对多次事故进行计算和比较。根据指标对新事故进行多样化处理，以油柱的损害作为参考。此类算法在获取高准确度数据方面更加高效方便。基于任何算法获得的数据进行补偿也可以得到事故受害者的认可。在本研究中，对现有估计模型进行了中心分析和比较，并整合了事故损失指标数据之间的特定相关性。数据获取自相关的事故损失补偿方法。采用二线性回归、径基函数网络、BP人工网络和支持向量机以确保补偿的准确性。大学指导性预评估方法的估计结果与案例具有相似性，并总结了评估与案例数据之间的相关性。系统性研究为相关案例的估计提供了科学依据和信心。更重要的是，可以制定更具指导性和建设性的指南以预防事故。
+
+
+    在现有清理补偿方法（包括直接评估、神经网络、模糊法）的基础上，开展了关于船舶油污染补偿估算的研究。
+
+
+    # II. 方法论
+
+
+    本文的研究内容如下：首先，从相关的事故损失补偿方法获取数据。采用二线性回归、径基函数网络、BP 人工网络和支持向量机以确保补偿的准确性。大学指导性预评估方法的估计结果与案例具有相似性，并总结了评估与案例数据之间的相关性。系统性研究为相关案例的估计提供了科学依据和信心。更重要的是，可以制定更具指导性和建设性的指南以预防事故。
+
+
+    数据从相关的事故损失补偿方法获取。采用二线性回归、径基函数网络、BP 人工网络和支持向量机以确保补偿的准确性。大学指导性预评估方法的估计结果与案例具有相似性，并总结了评估与案例数据之间的相关性。系统性研究为相关案例的估计提供了科学依据和信心。更重要的是，可以制定更具指导性和建设性的指南以预防事故。
+
+
+    - (1) 指标建立：基于现有文献对数据进行处理。
+
+    - (2) 因素选择：总结评估与案例数据之间的相关性。基于相关文献总结结果。
+
+    - (3) 模型选择：采用二线性回归、径基函数网络、BP 人工网络和支持向量机以确保补偿的准确性。
+
+
+    # III. 基于机器学习方法的船舶油溢油损害评估
+
+
+    海洋溢油会对海洋环境和海洋生物造成损害。近年来，中国海洋溢油频繁，对海洋环境和个人财产造成了相应的损害。然而，补偿不足会导致案件支付困难。因此，溢油损害无法及时清除。根据收集的与评估和补偿相关的文献材料，
+
+
+    # B. 不同模型的补偿估计
+
+
+    - 1. 多元回归模型
+
+
+    - 1.1 全准则线性回归模型
+
+
+    首先，多元回归模型整合了五个自变量——海洋溢油量、重力、溢油面积、污染海岸线长度和海岸线类型，以及因变量评估补偿金额。相应的置信水平为 95%，有助于模型进行
+    SPSS 回归。方程表达式如下：
+
+
+    Y = 0.466X₁ - 0.393X₂ + 0.163X₃ + 0.231X₄ - 0.053X₅ + 0.120
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    where Y=comparison amount, X1=oil spill volume, X2=specific gravity, X3=oil spill
+    area, X4=polluted shoreline, X5=polluted shoreline type.
+
+
+    The multiple linear regression shows that the results of goodness-of-fit criteria
+    are in a relatively ideal state, which means that the explanatory variables have
+    a relatively high explanation degree for the estimated amount. The corresponding
+    criteria show good statistical significance for testing. According to the Sig
+    value, input variables of the model are determined by removing the last.
+
+
+    # 2. Four-feature linear regression model
+
+
+    Based on previous analysis results, oil spill volume, specific gravity, oil area
+    and shoreline, as explanatory variables are selected as explanatory variables
+    of linear regression, denoted as Model 2. The goodness of fit has a better fitting
+    than that of five-feature regression means that the compensation amount can be
+    better estimated using these variables. After checking the significance of the
+    relevance result, a linear relation between the explanatory variable and the explained
+    variable has identified. Through the related results, it can be seen that the
+    explanatory variables include oil spill volume, specific gravity, oil area and
+    shoreline. The equation fraction fitted by Model 2 is:
+
+
+    $Y = 0.4666, 0.249X1 + 0.1837, 0.2444X2 + 0.1055$
+
+
+    where Y=comparison amount, X1=oil spill volume, X2=specific gravity, X3=oil spill
+    area, X4=polluted shoreline
+
+    Compared with above results, it is shown that many variables have an important
+    impact on the decision when estimating the damage compensation, which needs to
+    be paid attention to, especially in prevention and control of the process of accident
+    damage estimation. The simplicity of this method is to use for a quick assessment
+    for this type of accident.
+
+
+    # 2. BP neural network model (BPANN)
+
+
+    # 2.1 Set training and sampling sets
+
+
+    Using the normalized data, the first 70% of the data is taken as the training
+    set, and the remaining 15% of the data is as the verification set and the BP neural
+    network is constructed by MATLAB. Note the output layer of our model has only
+    one output, every calculation will get its output value, and we use R to represent
+    the predicted value.
+
+
+    # 2.2 Training process of damage assessment model for oil spill incident
+
+
+    In this section, the training of the model will be completed, and the objective
+    is to determine the parameters and in the model 600 samples are randomly selected
+    to train the neural network model. The training process of the model is completed
+    using the neural network tool in MATLAB 9.5. Two initial weight matrices and thresholds
+    of the model are obtained
+
+
+    from the training results. The initial weight of transmitted from the input layer
+    to the hidden layer is in form of a two-dimensional matrix with 5 rows and 10
+    columns.
+
+
+    $W_{ij}$
+
+    |0.1289|0.06705|1.13077|-0.32225|-0.4664|
+
+    |0.23167|-0.04896|0.13121|1.15688|0.45834|
+
+    |-0.54357|0.13113|0.58012|-0.86479|0.47447|
+
+    |-0.24085|-0.14118|-0.06922|0.56645|0.05497|
+
+    |0.11652|-0.04216|-0.05552|1.62927|1.20176|
+
+    |-0.24019|-0.18441|-0.08987|-0.16856|-0.01015|
+
+    |-0.15787|-0.13708|-0.42343|0.39917|
+
+
+    The threshold of the hidden layer is:
+
+
+    0.06535|-0.23718|0.02578|0.09325|-0.17817|0.08391|-1.09966|-1.46649|-2.3573|-0.19422|-0.29796
+
+
+    The threshold of the output layer is -0.51227. The initial weights and thresholds
+    of the model obtained above, are trained for the first pass. This selection curve
+    was built after the first four iterations when the mean squared error (MSE) of
+    the validation set reaches 0.066.
+
+
+    The result of the hidden layer is:
+
+
+    The following tests the prediction ability of the training model obtained in the
+    first step, and the results are shown in Figure 4.2. 4.2 horizontal axis is the
+    classification result produced by the neural network model. Vertical axis is the
+    model model output value linearly fitted to the model defined in the previous
+    sections. R value in the result of the model indicates that the model can explain
+    the relationship between the explanatory variable and the dependent variable,
+    and its value is between 0 and 1. In the closeness, the relationship between the
+    R value and the mean squared error means. As the maximum value of R is trivially
+    the highest, and its value is 0.9527. The smallest test is the test set, and its
+    R value of the variable sample is 0.9173. Therefore, according to the test results
+    of the model, the oil spill damage assessment model is constructed to be reliable
+    and accurate.
+
+
+    # 3. Radial basis function network model (RBFNN)
+
+
+    Using the normalized data in Table 4.2, the first 70% of this data is taken as
+    training samples, the remaining 15% is as verification samples, and the 15% as
+    test samples. The mean squared error of training set is 0.0048, and that of test
+    is 0.0066. In this section, the mean squared error of oil spill damage model is
+    constructed. According to the sample data, the model is trained with training
+    samples, and the parameters of the model are determined. Finally, the result of
+    the test set is 0.0065. In simulation scenarios, radial'
+  - '[PAGE 3]
+
+
+    basic neural network is usually used, mainly because of its good applicability.
+
+
+    ![](img/e67b2acc221e23f120b5e081f57edc2f_3_0.png)
+
+
+    | Training: R=09526 | Validation: R=091726 |
+
+    | --- | --- |
+
+    | Data | Data |
+
+    | Y+T | Y+T |
+
+
+    Since the error measured in the previous models are all mean square errors of
+    our training set, but not the final predicted values, root square error of the
+    final test set are calculated here to obtain the final error values of the predicted
+    values of the three machine models, as shown in the final test set in Table 1.
+    It can be found in Table 1 that the predicted errors of the machine learning models
+    are all within 10%. Among three models, the BP artificial neural network has the
+    smallest error, all within 8%, by the radial basis function network, with an error
+    of around 8%. The support vector machine has the best result, with an error of
+    around 8.5%, which is most acceptable in the evaluation and application of environmental
+    damage compensation. For the 10%, BP artificial neural network performs better
+    than different models
+
+
+    ![](img/e67b2acc221e23f120b5e081f57edc2f_3_1.png)
+
+
+    | Test: R=090161 | All: R=094076 |
+
+    | --- | --- |
+
+    | Data | Data |
+
+    | Y+T | Y+T |
+
+
+    | Model | Training | Verification | Final |
+
+    | --- | --- | --- | --- |
+
+    | BPANN | 0.0035 | 0.0066 | 0.0075 |
+
+    | RBFNN | 0.0040 | 0.0065 | 0.0806 |
+
+    | SVM | 0.0048 | 0.0066 | 0.0825 |
+
+
+    Table 1 Comparison with different models
+
+
+    # 4. Support vector machine model(SVM)
+
+
+    Using the normalized data, the first 41 items are taken as training samples, the
+    other 41 items are taken as test samples. MATLAB is used to build the model of
+    support vector machine. The results show that the mean error of training is 0.0060,
+    the mean square error of verification is 0.0068. In this assessment of the sample
+    data, the model is constructed. By training with trained samples, and the method
+    of the final data is determined. Finally, the model showed that the final test
+    set error is 0.0825. For simulation results, the SVM model can effectively reflect
+    the compensation amount of oil pollution loss from ships and the influencing factors.
+    Except for the corresponding results, other results are relatively consistent
+    with the actual SVM network, can be used to predict and estimate oil pollution
+    costs in ships.
+
+
+    # IV. CONCLUSION
+
+
+    In this paper, the oil pollution worldwide, the actual situation and related results
+    of oil spill accidents, is discussed. The solving of oil spill damage is widely
+    helpful for the assessment of oil spill damage. Under the current relevant laws
+    and regulations, and as the policy of evaluation and methods, the differences
+    in various countries are given by accounting the changes in the international
+    crude oil industry and the legal status in the United Union, North America, and
+    China. Corresponding data bases are provided for the improvement of related indicators,
+    and different calculation methods are given to select an established industry
+    system.
+
+
+    Among the four selected, the standard coefficient obtained from the regression
+    analysis of the first model can improve the importance of comparison among the
+    various variables. The following five indicators are listed in order of: gravity
+    > oil area > shoreline length > shoreline type. The oil spill volume has the highest
+    influence on the results, with which the assessment is carried out for the hits
+    with great influence. In the whole process of accident investigation, tracking
+    and recovery, and the loss can be greatly reduced by predicting the influence
+    on degree in this aspect.
+
+
+    Following the evaluation results, the regression model shows that the R value
+    is not significant. Therefore, linear regression is not suitable. Subsequently,
+    if the indicator is not meaningful, then the regression model is established successfully.
+    In addition, comparing the performance of each indicator in the regression equation
+    should be analyzed, and then a machine learning model is established by using
+    the same data, which should be tested with different advantages. The comparison
+    of two methods is achieved through direct comparison. The aforementioned methods
+    can be used as the corresponding bases in the calculation of the related losses
+    of oil spills in the future. In terms of relevant laws and regulations in China,
+    the assessment of oil ecological damage is not adequate, and
+
+
+    # 5. Comparison with different models'
+  md: '
+
+    where Y=comparison amount, X1=oil spill volume, X2=specific gravity, X3=oil spill
+    area, X4=polluted shoreline, X5=polluted shoreline type.
+
+
+    The multiple linear regression shows that the results of goodness-of-fit criteria
+    are in a relatively ideal state, which means that the explanatory variables have
+    a relatively high explanation degree for the estimated amount. The corresponding
+    criteria show good statistical significance for testing. According to the Sig
+    value, input variables of the model are determined by removing the last.
+
+
+    ## 2. Four-feature linear regression model
+
+
+    Based on previous analysis results, oil spill volume, specific gravity, oil area
+    and shoreline, as explanatory variables are selected as explanatory variables
+    of linear regression, denoted as Model 2. The goodness of fit has a better fitting
+    than that of five-feature regression means that the compensation amount can be
+    better estimated using these variables. After checking the significance of the
+    relevance result, a linear relation between the explanatory variable and the explained
+    variable has identified. Through the related results, it can be seen that the
+    explanatory variables include oil spill volume, specific gravity, oil area and
+    shoreline. The equation fraction fitted by Model 2 is:
+
+
+    $Y = 0.4666, 0.249X1 + 0.1837, 0.2444X2 + 0.1055$
+
+
+    where Y=comparison amount, X1=oil spill volume, X2=specific gravity, X3=oil spill
+    area, X4=polluted shoreline
+
+
+    Compared with above results, it is shown that many variables have an important
+    impact on the decision when estimating the damage compensation, which needs to
+    be paid attention to, especially in prevention and control of the process of accident
+    damage estimation. The simplicity of this method is to use for a quick assessment
+    for this type of accident.
+
+
+    ## 2. BP neural network model (BPANN)
+
+
+    ### 2.1 Set training and sampling sets
+
+
+    Using the normalized data, the first 70% of the data is taken as the training
+    set, and the remaining 15% of the data is as the verification set and the BP neural
+    network is constructed by MATLAB. Note the output layer of our model has only
+    one output, every calculation will get its output value, and we use R to represent
+    the predicted value.
+
+
+    ### 2.2 Training process of damage assessment model for oil spill incident
+
+
+    In this section, the training of the model will be completed, and the objective
+    is to determine the parameters and in the model 600 samples are randomly selected
+    to train the neural network model. The training process of the model is completed
+    using the neural network tool in MATLAB 9.5. Two initial weight matrices and thresholds
+    of the model are obtained from the training results. The initial weight of transmitted
+    from the input layer to the hidden layer is in form of a two-dimensional matrix
+    with 5 rows and 10 columns.
+
+
+    $W_{ij}$
+
+    | 0.1289 | 0.06705 | 1.13077 | -0.32225 | -0.4664 |
+
+    | 0.23167 | -0.04896 | 0.13121 | 1.15688 | 0.45834 |
+
+    | -0.54357 | 0.13113 | 0.58012 | -0.86479 | 0.47447 |
+
+    | -0.24085 | -0.14118 | -0.06922 | 0.56645 | 0.05497 |
+
+    | 0.11652 | -0.04216 | -0.05552 | 1.62927 | 1.20176 |
+
+    | -0.24019 | -0.18441 | -0.08987 | -0.16856 | -0.01015 |
+
+    | -0.15787 | -0.13708 | -0.42343 | 0.39917 | |
+
+
+    The threshold of the hidden layer is:
+
+
+    0.06535 | -0.23718 | 0.02578 | 0.09325 | -0.17817 | 0.08391 | -1.09966 | -1.46649
+    | -2.3573 | -0.19422 | -0.29796
+
+
+    The threshold of the output layer is -0.51227. The initial weights and thresholds
+    of the model obtained above, are trained for the first pass. This selection curve
+    was built after the first iterations when the mean squared error (MSE) of the
+    validation set reaches 0.066. The result of the hidden layer is: The following
+    tests the prediction ability of the training model obtained in the first step,
+    and the results are shown in Figure 4.2. 4.2 horizontal axis is the result produced
+    by the neural network. Vertical axis is the model output value fitted to the model
+    defined in the previous sections. R value in the result of the model indicates
+    that the model can explain the relationship between the explanatory variable and
+    the dependent variable, and its value is between 0 and 1. In the closeness, the
+    relationship between the R value and the mean squared error means As the maximum
+    value of R is trivially the highest, and its value is 0.9527. The smallest test
+    is the set, and its R value of the variable is 0.9173. Therefore, according to
+    the test results of model, the oil spill damage assessment model is constructed
+    to be reliable and accurate.
+
+
+    ## 3. Radial basis function network (RBFNN)
+
+
+    Using the normalized data in Table 4.2, the first 70% of this data is taken as
+    training samples, the remaining 15% is as verification samples, and 15% as test
+    samples. The mean squared error of training set is 0.0048, and that of test is
+    0.0066. In this section, the mean squared error of oil spill damage model is constructed.
+    According to the sample data, the model is trained with training samples, and
+    the parameters of the model are determined. Finally, the result of the test set
+    is 0.0065. In simulation scenarios, basic neural network is usually used, mainly
+    because of its good applicability. ![](img/e67bacc221e3f120b5e081f57ed2f_3_0.png)
+
+
+    | Training: R=0.9526 | Validation: R=0.91726 |
+
+    | :--- | :--- |
+
+    | Data | Data |
+
+    | Y+T | Y+T |
+
+
+    Since the error measured in the previous models are all mean square errors of
+    our training set, but not the final predicted values, root square error of the
+    final test set are calculated here to obtain the final error of the predicted
+    values, as shown in the test set in Table 1. It can be found in Table 1 that the
+    predicted errors of the machine models are all within 10%. Among three models,
+    the BP neural network has the smallest error, all within 8%, by the radial function
+    network, with an error around 8%. The support vector machine has the best result,
+    with an error around 8.5%, which is most acceptable in the evaluation and application
+    of environmental damage. For the 10%, BP neural network performs better than different
+    models ![](img/e67bacc221e3f120b5e081f57ed2f_3_1.png)
+
+
+    | Test: R=0.90161 | All: R=0.94076 |
+
+    | :--- | :--- |
+
+    | Data | Data |
+
+    | Y+T | Y+T |
+
+
+    | Model | Training | Verification | Final |
+
+    | :--- | :--- | :--- |
+
+    | BPANN | 0.0035 | 0.0066 | 0.0075 |
+
+    | RBFNN | 0.0040 | 0.0065 | 0.0806 |
+
+    | SVM | 0.0048 | 0.0066 | 0.0825 |
+
+
+    Table 1 Comparison with different models
+
+
+    ## 4. Support vector machine model (SVM)
+
+
+    Using the normalized data, the first 41 items are taken as training samples, the
+    other 41 items are taken as test samples. MATLAB is used to build the model of
+    support vector machine. The results show that the mean error of training is 0.0060,
+    the mean square error of verification is 0.0068. In this assessment of the sample
+    data, the model is constructed. By training with trained samples, and the method
+    of the final data is determined. Finally, the model showed that the final test
+    set error is 0.0825. For simulation results, the SVM model can effectively reflect
+    the compensation amount of oil pollution loss from ships and the influencing factors.
+    Except for the corresponding results, other results are relatively consistent
+    with the actual SVM network, can be used to predict and estimate oil pollution
+    costs in ships.
+
+
+    ## IV. CONCLUSION
+
+
+    In this paper, the oil pollution worldwide, the actual situation and related results
+    of oil spill accidents is discussed. The solving of oil spill damage is widely
+    helpful for the assessment of oil spill damage. Under the current relevant laws
+    and regulations, and as the policy of evaluation and methods, the differences
+    in various countries are given by accounting the changes in the international
+    crude oil industry and the legal status in the European Union, North America,
+    and China. Corresponding databases are provided for the improvement of related
+    indicators, and different calculation methods are given to select an established
+    industry system.
+
+
+    Among the four selected, the standard coefficient obtained from the regression
+    analysis of the first model can improve the importance of comparison among the
+    various variables. The following five indicators are listed in order of: gravity
+    > oil area > shoreline length > shoreline type. The oil spill volume has the highest
+    influence on the results, with which the assessment is carried out for the hits
+    with great influence. In the whole process of accident investigation, tracking
+    and recovery, and the loss can be greatly reduced by predicting the influence
+    degree in this aspect.
+
+    '
+  mdcn: '
+
+    其中 Y=补偿金额，X1=溢油量，X2=比重，X3=溢油面积，X4受污染海岸线，X5受污染海岸线类型。
+
+
+    多元线性回归显示拟合优度标准处于较为理想的状态，这意味着解释变量对估计金额具有较高的解释程度。相应的准则显示出测试结果具有良好的统计学显著性。根据 Sig
+    值，通过删除最后一项来确定模型的输入变量。
+
+
+    ## 2. 四特征线性回归模型
+
+
+    基于之前的分析结果，选择溢油量、比重、溢油面积和海岸线作为解释变量，作为线性回归的解释变量，记为模型 2。拟合优度优五特征回归，意味着使用这些变量可以更好地估计补偿金额。在检查相关性结果的显著性后，确定了解释变量与被变量之间的线性关系。通过相关结果可以看出，解释变量包括溢油量、比重、溢油面积和海岸线。模型
+    2 拟合的方程系数为：
+
+
+    $Y = 0.4666, 0.249X1 + 0.1837, 0.2444X2 + 0.1055$
+
+
+    其中 Y=补偿金额，X1=溢油量，X2=比重，X3=溢油面积，X4受污染海岸线
+
+
+    与上述结果相比，表明在估计损害补偿时，许多变量对决策有重要影响，需要引起注意，特别是事故损害估计过程的预防和控制中。该方法的简单性用于此类事故的快速评估。
+
+
+    ## 2. BP神经网络模型 (BPANN)
+
+
+    ### 2.1 设置训练集和采样集
+
+
+    使用归一化数据，取前70%的数据作为训练集，剩余15%的数据作为验证集，并通过 MATLAB 构建神经网络。注意模型的输出层只有一个输出，每次计算都会得到其输出值，我们使用
+    R 表示预测值。
+
+
+    ### 2.2 溢油事故损害评估模型的训练过程
+
+
+    在本节中将完成模型的训练，目标是确定参数，模型中随机选择了 600 个样本来训练神经网络模型。使用 MATLAB 9.5 中的神经网络工具完成模型训练。从训练结果中获得了模型的两个初始权重矩阵和阈值。从输入层传输到隐藏层的初始权重为
+    5 行 10 列的二维矩阵形式。
+
+
+    $W_{ij}$
+
+    | 0.1289 | 0.06705 | 1.13077 | -0.32225 | -0.4664 |
+
+    | 0.23167 | -0.04896 | 0.13121 | 1.15688 | 0.45834 |
+
+    | -0.54357 | 0.13113 | 0.58012 | -0.86479 | 0.47447 |
+
+    | -0.24085 | -0.14118 | -0.06922 | 0.56645 | 0.05497 |
+
+    | 0.11652 | -0.04216 | -0.05552 | 1.62927 | 1.20176 |
+
+    | -0.24019 | -0.18441 | -0.08987 | -0.16856 | -0.01015 |
+
+    | -0.5787 | -0.13708 | -0.42343 | 0.39917 |
+
+
+    隐藏层阈值为：
+
+    0.06535 | -0.23718 | 0.02578 | 0.09325 | -0.17817 | 0.08391 | -1.09966 | -1.46649
+    | -2.3573 | -0.19422 | -0.29796
+
+
+    输出层阈值为 -0.51227。上述获得的初始权重和阈值用于首次训练。在第一次迭代时验证集的均方误差 (MSE) 达到 0.066。隐藏层的结果是：第一步获得的训练预测能力如图
+    4.2 所示。4.2 横轴是神经网络产生的结果，纵轴是拟合到模型的输出值。在之前的部分 R 值的结果表明模型可以解释变量与因变量之间的关系，且其值在 0 到
+    1 之间。在接近程度上，R 最大值为 0.9527，测试集的 R 值为 0.9173。因此，根据模型的测试结果，构建的溢油损害模型是可靠且准确的。
+
+
+    ## 3. 径基函数网络 (RBFNN)
+
+
+    使用表 4.2 中的归一化数据，取前70%的数据作为训练样本，剩余15%作为验证样本，15%作为测试样本。训练集的均方误差为 0.0048，测试集的 0.0066。在本节中构建了溢油损害模型。根据样本数据，用训练样本训练模型并确定模型参数。最后，测试集的结果为
+    0.0065。在仿真场景下，通常使用神经网络，主要是因为其良好的适用性。(img/e7bacc221e3f12b5e081f57ed2f_3_0.png)
+
+
+    | 训练: R=0.9526 | 验证: R=0.91726 |
+
+    | :--- | :--- |
+
+    | 数据 | 数据 |
+
+    | Y+T | Y+T |
+
+
+    由于之前模型的测量误差都是训练集的均方误差，而不是最终预测值，此处计算最终测试集的均方误差以获得预测值的最终误差，如表 1 所示。从表 1 可以发现，模型的预测误差均在10%以内。在三个模型中，BP神经网络误差最小，均在8%以内；径函数网络误差在8%左右；支持机结果最好，误差在8.5%左右，在环境损害的评估和应用中最为接受。对于10%，BP神经网络的性能优于不同模型。(img/e7bacc221e3f12b5e081f57ed2f_3_1.png)
+
+
+    | 测试: R=0.90161 | 全部: R=0.94076 |
+
+    | :--- | :--- |
+
+    | 数据 | 数据 |
+
+    | Y+T | Y+T |
+
+
+    | 模型 | 训练 | 验证 | 最终 |
+
+    | :--- | :--- | :--- | :--- |
+
+    | BPANN | 0.0035 | 0.0066 | 0.0075 |
+
+    | RBFNN | 0.0040 | 0.0065 | 0.0806 |
+
+    | SVM | 0.0048 | 0.0066 | 0.0825 |
+
+
+    表 1 与不同模型的比较
+
+
+    ## 4. 支持机模型 (SVM)
+
+
+    使用归一化数据，取前41项作为训练样本，另外41项作为测试样本。使用 MATLAB 构建支持机模型。结果显示训练的平均误差为 0.0060，验证的均方误差为
+    0.0068。在这些样本数据的评估中，构建了模型。通过训练样本进行训练并确定最终数据的方法。最后，模型显示最终测试集的误差为0.0825。对于仿真结果，SVM模型可以有效反映船舶油污染损失的补偿金额和影响因素。除了对应结果外，其他结果与实际SVM网络基本一致，可预测和估计船舶油污染成本。
+
+
+    ## IV. 结论
+
+
+    本文讨论了全球油污染、溢油事故的实际情况及相关结果。解决溢油损害对溢油损害评估具有广泛帮助。在现行相关法律法规以及评估方法政策指导下，通过考虑国际原油行业的变化以及欧洲、北美和中国的法律地位，给出了各国差异。为相关指标的改进提供了相应的数据库，并给出了不同的计算方法以建立建立行业体系。
+
+
+    在选出的四个指标中，通过第一个模型回归分析的标准系数可以提高各变量之间比较的重要性。以下五个指标按顺序列出：比重 > 面积 > 海岸线长度 > 海岸线类型。
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 4]
+
+
+    the technical method of compensation for oil spill damage can be improved further.
+    In this paper, the research on the ecological damage assessment of oil spills
+    is discussed from a scientific perspective. Meanwhile, learning from the countries
+    with mature theoretical systems and research practices in the process of claiming
+    for oil spill accidents is necessary. Continuous theoretical and practical processes
+    can guarantee the construction of an ecological marine operating system by strengthening
+    the construction of an ecological assessment system and reducing the environmental
+    damage caused by oil spills by using of current laws and regulations.
+
+
+    # REFERENCES
+
+
+    +   [1] Yang Wenhui, Yan Zhongmin, Wu Jianhua. Research progress of river health
+    assessment [J]. Journal of Hohai University (Natural Science Edition), 2005, 33(6):
+    5-9.
+
+    [2] Wang Chaohui, Wang Kelin, Xu Lianfang. Study on the index system of ecosystem
+    health assessment [J]. Land and Natural Resources Research, 2003(4): 63-64.
+
+    [3] Gao zhenhui, Yang Jianqi, Wang peigang et al. theory, method and case study
+    of marine oil spill ecological assessment [M]. Beijing: ocean press, 2007, 21-52.'
+  md: '
+
+    the technical method of compensation for oil spill damage can be improved further.
+    In this paper, the research on the ecological damage assessment of oil spills
+    is discussed from a scientific perspective. Meanwhile, learning from the countries
+    with mature theoretical systems and research practices in the process of claiming
+    for oil spill accidents is necessary. Continuous theoretical and practical processes
+    can guarantee the construction of an ecological marine operating system by strengthening
+    the construction of an ecological assessment system and reducing the environmental
+    damage caused by oil spills by using of current laws and regulations.
+
+
+    ## REFERENCES
+
+
+    - [1] Yang Wenhui, Yan Zhongmin, Wu Jianhua. Research progress of river health
+    assessment [J]. Journal of Hohai University (Natural Science Edition), 2005, 33(6):
+    5-9.
+
+    - [2] Wang Chaohui, Wang Kelin, Xu Lianfang. Study on the index system of ecosystem
+    health assessment [J]. Land and Natural Resources Research, 2003(4): 63-64.
+
+    - [3] Gao zhenhui, Yang Jianqi, Wang peigang et al. theory, method and case study
+    of marine oil spill ecological assessment [M]. Beijing: ocean press, 2007, 21-52.
+
+    '
+  mdcn: '
+
+    溢油损害补偿的技术方法仍有进一步改进的空间。本文从科学角度出发，对溢油生态损害评估进行了讨论。同时，在处理溢油事故索赔的过程中，有向具有成熟理论体系和研究实践的国家学习其经验的必要性。通过加强生态评估体系的建设，并利用现行法规减少溢油造成的环境损害，持续的理论与实践过程可以确保海洋生态运行系统的构建。
+
+
+    ## 参考文献
+
+
+    - [1] Yang Wenhui, Yan Zhongmin, Wu Jianhua. Research progress of river health
+    assessment [J]. Journal of Hohai University (Natural Science Edition), 2005, 33(6):
+    5-9.
+
+    - [2] Wang Chaohui, Wang Kelin, Xu Lianfang. Study on the index system of ecosystem
+    health assessment [J]. Land and Natural Resources Research, 2003(4): 63-64.
+
+    - [3] Gao zhenhui, Yang Jianqi, Wang peigang et al. theory, method and case study
+    of marine oil spill ecological assessment [M]. Beijing: ocean press, 2007, 21-52.
+
+
+    [/'
+  merge: 0
