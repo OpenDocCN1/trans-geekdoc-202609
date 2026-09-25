@@ -1,0 +1,654 @@
+- pgno: 0
+  md: "# # NUCLEI CELL SEMANTIC SEGMENTATION\nUSING DEEP LEARNING Unet\n\nRahul Pandey*\n\
+    Department of Information Technology\nMizoram University\nMizoram, India\nra.pan.91294@gmail.com\n\
+    \nR.Lachchhima\nDepartment of Information Technology\nMizoram University\nMizoram,\
+    \ India\nmzut145@mzu.edu.in\n\nKsh. Robert Singh\nDepartment of Electrical Engineering\n\
+    Mizoram University\nMizoram, India\nmzut158@mzu.edu.in\n\n**Abstract**—Semantic\
+    \ Segmentation has benefited from the advancement of Deep Learning technologies.\
+    \ Image Segmentation has been a boon for medical field in both application and\
+    \ research area identification and lesion of infected parts of the organs can\
+    \ be extracted. Study of cell images from infected organs medical images taken\
+    \ from MRL, CT, etc to provide treatment as well as is possible for researchers\
+    \ to develop vaccines for such disease This study is to train a model using different\
+    \ hyper-parameters so that the network learns to automatically segment medical\
+    \ images available from dated library. Segmentation is the key problem before\
+    \ any other type of problems can be encountered like that nucleus detection and\
+    \ classification. This study also looks at the performance of the network through\
+    \ evaluation matrix.\n\n![](img/8ce026269c3728baf0d4c7d2546c7d3b_0_0.png)\n\n\
+    Fig. 1. Semantic segmentation for autosomal polycystic kidney disease [4 ].\n\n\
+    **Index Terms**—Deep Learning ; Neural Networks, Semantic Segmentation, Cell Unit,\
+    \ Medical Images Segmentation, Application Unet.\n\n# I. INTRODUCTION\n\nSegmentation\
+    \ involves partitioning an image (or video frames) into various segments and assigning\
+    \ them to similar pixel level contrasts [1]–3. In particular, semantic segmentation\
+    \ is the task of allocating a color to each pixel in a given sample generally\
+    \ representing two areas i.e., background and the object. Semantic segmentation\
+    \ treats various 'regions' of interest similarity clusters as a single unit. Segmentation\
+    \ is a crucial area in image computing and vision with applications in perception,\
+    \ bonding, inspection, image/video compression and many more. For, an example\
+    \ of semantic segmentation in medical [4].\n\nWith the advancement of modern technology\
+    \ such as Deep Learning using Neural Networks as foundation, various architectures\
+    \ have been developed to achieve segmentation (semantic segmentation in our case).\
+    \ Deep Learning has remarkably improved in performing semantic segmentation and\
+    \ is fostering output of outstanding calibre. Some of the widely known Deep Learning\
+    \ architectures are CNN, FCN, UNet, VNet, GoogleNet, ResNet-18, etc\n\n# B. Deep\
+    \ Network\n\nDeep Learning is fundamentally a subset of ML that in turn is also\
+    \ a subset of AI in Fig: 1. Deep Neural Networks basically represent artificial\
+    \ neural networks with deep layers, inspired by the neurons in the human brain\
+    \ that learn from past data of sample. Deep learning algorithms frequently update\
+    \ the task over and over, every time tuning to enhance the output.\n\nused different\
+    \ applications to achieve its desired objective [5].\n\n| Artificial Intelligence\
+    \ |\n| Machine Learning |\n| Deep Learning |\n\nFig. 2. Relation of Deep Learning.\
+    \ Machine Learning and Artificial Intelligence. \n\nIn the last years, Deep Convolutional\
+    \ Networks have outperformed the 'state of the art' in visual recognition tasks,\
+    \ e.g. [6] [7]. While Convolutional Networks have existed for a long time, their\
+    \ success was limited to the size of the available training sets and networks.\
+    \ The breakthrough was achieved due supervised"
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'learning of a large network with 8 layers and millions of parameters on the
+    ImageNet data-set with 1 million training images. Since, even larger and deeper
+    networks have been trained.
+
+
+    # II. STATE OF THE ART
+
+
+    The ‘futuristic’ models for deep-learning based semantic segmentation methods
+    are adaptations of the Encoder-Decoder and FCN architectures have some pieces
+    that are common among them, such as using of encoder and skip connections. The
+    skip-connections have demonstrated to be impressive in refining fine-grained characteristics
+    of the desired objects, generating semantic labels of minute details on even complex
+    sample [8]–10].
+
+
+    # A. FCN Semantic Segmentation Model
+
+
+    In 2015 the deep network method for semantic segmentation with FCN was proposed
+    [8]. Widely used convolutions like VGG16 and GoogleNet architecture was modified
+    by using fully convolutional upsampling in place of fully layers. The pixel resolution
+    output is achieved for even comprehension by propagation from pixel-wise. From
+    the final layers, maps are upsampled using skip connections and concatenated with
+    previous layer maps. Semantic spatial details from deep and rough layers while
+    high resolution feature details from shallow and sublim layers are combined to
+    obtain precision segmentation of high accuracy [9].
+
+
+    ![](img/8ce026269c3728baf0d4c7d2546c7d3b_1_0.png)
+
+
+    Fig. 4. SegNet:Encoder-Decoder Model [5]
+
+
+    # C. UNet for Semantic Segmentation
+
+
+    In 2015, the U-Net model was presented to actively segment bio-microscopic samples
+    for research purposes. To efficiently comprehend from the annotated image samples,
+    its architecture and training tactics hinge on augmentation issues. The network
+    in FCN consists of tasks, detection and capturing approach linked with expression
+    process for accurate location. On the depth of the network, the VGG16 model as
+    a foundation is considered, that employs a tactic feature sample map quality rises
+    with the spatial resolution falls. The lowering of pixel-density by 32 is also
+    one of the U-Net characteristic.
+
+
+    ![](img/8ce026269c3728baf0d4c7d2546c7d3b_1_1.png)
+
+
+    Fig. 3. FCN Model Semantic Segmentation [8]
+
+
+    ![](img/8ce026269c3728baf0d4c7d2546c7d3b_1_2.png)
+
+
+    Fig. 5. U-Net Architecture [10]
+
+
+    # B. Encoder-Decoder Semantic Segmentation Model
+
+
+    The notion of the encoder-decoder networks, was initially moot for machine translation
+    [10] and sequence learning [11]. The slabs used as encoder are responsible for
+    a single dimension representation which can be easily employed for semantic segmentation
+    but lacking fine details. Decoders will recover the signal lost stride during
+    down-sampling operations or max-pooling, for the example style the architecture
+    is shown in Fig: 3.
+
+
+    FCN and Encoder-Decoder have inspired other models such as U-Net and VNet, to
+    solve medical image issues by segmentation and are also explored beyond the medical
+    area.
+
+
+    # III. LITERATURE REVIEW
+
+
+    In clinical diagnosis, for therapy design, operation and prognosis analysis medical
+    imaging is a key factor. Possible critical organ details extracted from images
+    through weight,'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'precise segmentation and segmentation is the core of diagnosis [11]. It is
+    essential to use self-learning techniques that can detect, segment and classify
+    the post.
+
+
+    out really and increase the efficiency for processing.
+
+
+    The segmentation procedures are anticipated to have ample influence by supporting
+    clinician decisiveness. However, there are few techniques in clinical sample-segmentation.
+    The insufficient and short-supply of samples for certain infections becomes the
+    hurdle to segmentation problems. In similarity, contour size of region of interest
+    causes in capturing images, such as sampling artifacts, spatial alignment and
+    noise factors may confuse the boundary of structures to be indistinct and disconnected.
+    In recent years, the development of deep learning techniques has achieved remarkable
+    emerging in medical image segmentation. The UNet [10] was published in 2015, and
+    since then more about 5000 models for bio-medical samples have been mainly inspired
+    by the UNet as their base in framework for segmentation or the U-Net model evaluation
+    technique.
+
+
+    For DL models, attention techniques were utilized to enhance the distinction capacity
+    on RNN. Sequentially employed in other areas such as machine translation, speech
+    recognition, image segmentation etc[23]. As shown in [24], We are the earliest
+    scholars to introduce the attention technique into segmentation of medical images
+    [26]. Proposed a 3D residual attention mechanism utilized in RA-UNet to extract
+    information by combining low-level maps with high-level ones, which helps to compensate
+    the missing feature information.
+
+
+    # TABLE II
+
+
+    | Network Name | Year | Region of Interest |
+
+    |---|---|---||
+
+    | STRAINet | 2019 | MRI | Cancer(Prostate) |
+
+    | DRINet | 2019 | MRI | Tumor(Brain) |
+
+    | RA-UNet | 2018 | CT | Tumor(Liver) |
+
+    | Attention UNet | 2019 | CT | Pancreas/Liver
+
+
+    # A. Enhanced Techniques
+
+
+    In spite of the basic UNet producing significant bio-medical sample, it also has
+    its drawbacks in some areas. Researchers have proposed enhanced techniques to
+    enhance the performance of the based UNet through such technique: attention technique,
+    module technique, dilated technique, and residual technique. The segmentation
+    networks designed on these techniques are likely better.
+
+
+    +   1) Ensemble Technique: In CNN, ensemble networks are applied to solve over-fitting
+    issue during training process [12]. An ensemble module consists of a set of parallel
+    networks, which process the same input data in parallel and finally combine their
+    outputs to complete the segmentation [12]. It consists of a main segmentation
+    network and a pre-processing module. In most cases, of ensemble modules is more
+    effective than that of a sub-net. In ensemble, sub-nets can learn from the data
+    during the batch processing [13].
+
+
+    # C. Multi-Node Attention
+
+
+    Multi-Node attention module is a broad phrase for a class of techniques, which
+    employs multiple layers to enhance segmentation execution. It is used in many
+    deep learning techniques [30] [31]. These methods are usually using multi-scale
+    or multi-scale frameworks which contain informative and complementary features.
+    The different levels of these methods have different regions of interest, and
+    allow the construction of multi-grained feature information. Multi-node attention
+    can process high and low resolution images at the same time, which helps networks
+    to combine complementary feature information. These segmentation networks are
+    usually used to connect with other techniques.
+
+
+    # PAPERS ENSEMBLE TECHNIQUE IN UNET MODELS.
+
+
+    | Network Name | Year | Region of Interest |
+
+    |---|---|---||
+
+    | MHL | 2014 | DCE-MRI | Tumor (Brain) |
+
+    | M-Net | 2015 | PNG | - |
+
+    | 3D U-Net | 2016 | MRI | Tumor(Brain-Glioma) |
+
+    | Intu | 2017 | MRI | Cerebrospinal Fluid |
+
+    | Dual & Unet | 2018 | CT | Abdomen |
+
+    | UN++ | 2018 | CT | Lung, Liver(Tumor) |
+
+    | EMMA | 2017 | MRI | Cerebrospinal Fluid |
+
+    | M-net | 2017 | MRI | -
+
+
+    # TABLE III
+
+
+    | Network Name | Year | Region of Interest |
+
+    |---|---|---||
+
+    | MK-DCNN | 2012 | MRI | Ischemic perine |
+
+    | VNet | 2019 | MRI | Tumor(Brain) |
+
+    | Dense Path-UNet | 2015 | MRI | Ischemic stroke location
+
+
+    # D. Residual technique:
+
+
+    In 2015, residual networks(ResNet) was proposed using residual learning with skip
+    connections and convolutions to enhance the feature usability and performance
+    of networks. Establishing stability while residual technique increased layer depth
+    to the network. The increase helps to away with the gradient dissipating hurdle
+    in learning networks. From the day one, ResNet built for Image classification
+    [36] was applied-to domains of
+
+
+    # B. Attention technique:
+
+
+    In Deep Learning, attention technique emerges from the human attention mechanism
+    [22], which assigns to refine to'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# IV. EXPERIMENTAL RESULTS & ANALYSIS
+
+
+    The dataset used for our experiments is taken from a publicly available database
+    on Internet. The dataset was uploaded to Kaggle for 2018 Data Science Bowl as
+    part of Challenges in the Medical Image Problem. We have been automatically identifying
+    nuclei cells in dataset images to facilitate medical segmentation [45]. For this,
+    we used these images to perform segmentation of the nuclei-cells in the given
+    sample.
+
+
+    # TABLE IV
+
+    EXPERIMENTING RESIDUAL IN UNET MODELS.
+
+
+    | Network Name | Year | Format | Region of Interest |
+
+    | --- | --- | --- | --- | --- |
+
+    | CE-Net [38] | 2019 | CT, Endoscopy | Lung, Retina, Optic Disc |
+
+    | MultiResUNet [39] | 2019 | MRI, Endoscopy | Tumor (Brain) |
+
+    | DRUNet [28] | 2019 | MRI | Tumor (Brain) Leukosarcoma (Brain) |
+
+    | ResUNet [40] | 2019 | MRI | |
+
+    | FC-ResNet [41] | 2017 | CT | Prostate, Liver, Neural Structures |
+
+
+    # A. Raw Data Pre-processing
+
+
+    Pre-processing of the dataset is performed in following two parts, namely:
+
+
+    +   - Firstly, all images of the train as well as test are resized to 128x128
+    as the dataset contains images of varying dimensions.
+
+    - Secondly, all mask of each is combined/squeezed to a single mask image containing
+    all the nuclei.I for each test image exist same size.
+
+
+    In VI, the total number of training samples, validation samples, in the network,
+    trainable parameters of the network and non-trainable parameters listed.
+
+
+    ![](img/8ce026269c3728baf0d4c7d2546c7d3b_3_0.png)
+
+
+    # E. Dense & Dilated technique:
+
+
+    In 2017, [35] presented DenseNet with techniques to acquire information and gradient
+    flow. At the moment, the checks out gradient using repetition and decrease the
+    tally of features using DenseNet is not only greatly. [40]suggested a highly dense
+    connection for tumor and liver sample segmentation. Dense connected paths and
+    U-shaped network [15] character edge is inherited by the H-DenseNet. In 2015,
+    [42] Dilated convolution was initially initiated to the start of segmentation.
+    Conventional CNNs employ pooling and convolution on given samples, that may shrink
+    it dimension and improve the receptive field during convolution operation. During
+    sample dimension pruning and broadening, details about the erosion of details
+    using dilated contraction and expansion passes. It expands the field size, so
+    as out each convolution predicts larger range of features. The performance of
+    segmentation models using dilated convolution as in by sample and refined architecture,
+    [44]used dilated convolution as input convolution of the network, which outperforms
+    the original architecture in nearly all used experiments.
+
+
+    # TABLE VI
+
+    NUMBER OF PARAMETERS AVAILABLE FOR THE SAMPLES
+
+
+    | Trn_sample | Val_sample | paramtrs | Trn_paramtrs | Trn_parameters |
+
+    | --- | --- | --- | --- | --- |
+
+    | 603 | 67 | 1,415 | 1,415 | 0 |
+
+
+    # TABLE V
+
+    DENSE & DILATED TECHNIQUE IN UNET MODELS.
+
+
+    | Network Name | Year | Format | Region of Interest |
+
+    | --- | --- | --- | --- |
+
+    | Dense-Net [48] | 2018 | MRI | Tumor(Brain) |
+
+    | MR-CNN [49] | 2019 | MRI | Ischemia pancreas |
+
+    | DenseNet [42] | 2019 | MRI | Tumor(Brain) |
+
+    | DRINet [43] | 2019 | MRICT | Tumor(Brain), CSF |
+
+    | CSAU [44] | 2019 | Fundus | Retina (Eye) |
+
+    | RA-UNet [15] | 2019 | CT | Tumor(Liver) |
+
+
+    # B. Results from each epoch training
+
+
+    The following are the corresponding values from each epoch during the segmentation
+    of the tuned-UNet model. For each epoch - Loss, Accuracy, Validation Loss, are
+    calculated. It can be seen from: VII that the total of epochs results, validation
+    loss decreases and at the same time the accuracy values increases on increasing.
+    Once trainable model stops show improvement in the validation loss values, it
+    terminates the training.
+
+
+    medical segmentation integration by integrating residual chunks and UNet shape.
+    [37] embedded residual chunks into U-shape network for extracting external features.
+    Residual chunks used of different kinds could capture larger feature maps from
+    departments'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# TABLE VII
+
+    Loss , Accuracy, Validation Loss and Validation
+
+    ACCURACY WITH RESPECT TO EPOCH
+
+
+    | Epoch | Accuracy | Val_Loss | Val_Accuracy |
+
+    |---|---|---|---||
+
+    | 1 | 0.5218 | 0.7705 | 0.2986 | 0.8162 |
+
+    | 2 | 0.3276 | 0.8254 | 0.1953 | 0.8237 |
+
+    | 3 | 0.2077 | 0.9024 | 0.1131 | 0.9458 |
+
+    | 4 | 0.1457 | 0.9476 | 0.1131 | 0.9553 |
+
+    | 5 | 0.1750 | 0.9548 | 0.1127 | 0.9548 |
+
+    | 6 | 0.1255 | 0.9523 | 0.1101 | 0.9568 |
+
+    | 7 | 0.1098 | 0.9590 | 0.1073 | 0.9610 |
+
+    | 8 | 0.1077 | 0.9589 | 0.1058 | 0.9638 |
+
+    | 9 | 0.0999 | 0.9625 | 0.1026 | 0.9610 |
+
+    | 10 | 0.1006 | 0.9624 | 0.1023 | 0.9660 |
+
+    | 11 | 0.0965 | 0.9639 | 0.0956 | 0.9667 |
+
+    | 12 | 0.0924 | 0.9651 | 0.0883 | 0.9658 |
+
+    | 13 | 0.0895 | 0.9660 | 0.0858 | 0.9664 |
+
+    | 14 | 0.0887 | 0.9663 | 0.0845 | 0.9667 |
+
+    | 15 | 0.0867 | 0.9668 | 0.0884 | 0.9667 |
+
+    | 16 | 0.0862 | 0.9672 | 0.0793 | 0.9678 |
+
+    | 17 | 0.0883 | 0.9670 | 0.0815 | 0.9676 |
+
+    | 18 | 0.0823 | 0.9683 | 0.0883 | 0.9680 |
+
+
+    ![](img/8ce026269c3728baf0d4c7d2546c7d3b_4_0.png)
+
+
+    ![](img/8ce026269c3728baf0d4c7d2546c7d3b_4_1.png)
+
+
+    # C. Segmentation Results
+
+
+    An images was arbitrary chosen from the test set as well as validation set and
+    through the trained model for semantic segmentation. Figure 7 & 8 displays the
+    segmented image from the process along with the input sample.
+
+
+    ![](img/8ce026269c3728baf0d4c7d2546c7d3b_4_2.png)
+
+
+    ![](img/8ce026269c3728baf0d4c7d2546c7d3b_4_3.png)
+
+
+    In the graphs Fig: 9 & 10, the red and blue curves represents the data from the
+    training and validation process.
+
+
+    # V. CONCLUSION
+
+
+    Semantic segmentation is a subject of significant interest in computer-vision
+    applications that has been deployed in various applications such as object detection,
+    autonomous steering, medical-imaging and recognizing objects. Effective segmentation
+    techniques depend on manual initialization from user to some degree. This paper
+    proposed pre-processing images and tuning in parameters such as Optimizer, Activation
+    functions as well as Loss of the UNet model to automate the process of segmentation
+    for the input images. In doing, we have successfully attained finer segmentation
+    in terms of accuracy which can be observed from the graphs.
+
+
+    # REFERENCES
+
+
+    +   [1] S. Slansky, "Image segmentation and feature extraction," IEEE Transactions
+    on Systems, Man, and Cybernetics, vol. 8, no. 4, p. 237-247, 1980.
+
+    [2] D. P. Panda and A. Rosenfeld, "Image segmentation by pixel classification
+    (in gray level, edge space),'' IEEE Transactions on computers, no. 9, p. 175-180,
+    1979.
+
+    [3] W. Petick, "Area segmentation of images using edges," IEEE Transactions on
+    Pattern Analysis and Machine Learning, no. 1, p. 8-13, 1999.
+
+    [4] V. Vrilakova, A. Buransetti, G. D. Cascarano, A. Guerrier, F. Sace, M. Moschella,
+    and L. Urban, "A comparison between two deep learning architectures for the autonomous
+    policy driving task based on stereo camera dataset," BMC Med. Inf. & Decision
+    Making, vol. 19, no. 9, p. 244, 2019. [Online]. Available: https://doi.org/10.1186/s12913-019-0988-8
+
+    [5] L. Liu and J. Zhao, "A survey on the new generation of deep learning in image
+    processing," IEEE Access, vol. 7, p. 172-200, 2019.
+
+
+    It can be observed that for both the test set as validation set, the parameter-tuned
+    model has predicted good segmented nuclei. In the output images, nuclei cells
+    can be easily identified.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'R. Risch, J. Donahue, T. Darrell, and J. Malik, "Rich hierarchies for object
+    detection and semantic segmentation," in Proceedings of the IEEE conference on
+    computer vision and pattern recognition, pp. 650–657.
+
+
+    Y. LeCun, C. Boser, S. J. Denker, R. E. Wahba, H. Hubbard, and L. D. Kan, "Backpropagation
+    applied to handwritten digits Neural computation, vol. 4, pp. 541–551, 1989.
+
+
+    J. Long, E. Shelham, and T. Darrell, "Fully convolutional networks for semantic
+    segmentation," in Proceedings of the IEEE conference on computer vision and pattern
+    recognition, 2015, pp. 3431–3440.
+
+
+    A. Ben-Cohen, I. Danielian, K. Matiagi, and H. Greensfield, "Free-form detection,
+    in deep learning and data labeling for medical applications. Spring, 2017, pp.
+    67–78.
+
+
+    O. Ronneberger, and A. Brox, "U-Net: Convolutional networks for biomedical image
+    segmentation," in International Conference on Medical Imaging and computer-assisted
+    intervention. Springer, 2015.
+
+
+    D. Ortiz and R. Merlin, "Ensemble methods: An empirical study." Journal of artificial
+    intelligence research, vol. 12, pp. 169–198, 2009.
+
+
+    Y. Han and J. C. Chen, "Semantic segmentation using deep convolutional networks:
+    Application to space-to-vct. IEEE transactions on medical imaging, vol. 36, no.
+    6, 2019.
+
+
+    I. Sutevernik and O. Vsksky, "Sequence to sequence learning with neural networks
+    and attention mechanism." Advances in neural information processing systems, 2014.
+
+
+    J. Zhang, A. Shao, Z. Zhu, and M. A. Mazuraka, "Hierarchical convolutional networks
+    for natural segmentation of tumors in mri." Medical image analysis, vol. 38, pp.
+    2663–2674, 2018.
+
+
+    F. Hu, J. Zhou, X. Du, W. K. Wang, J. Liu, and X. Cao, "Joint deep learning for
+    medical image segmentation and polarization." IEEE transactions on medical imaging,
+    vol. 37, no. 7, pp. 1597–1608, 2018.
+
+
+    H. Chen, S. Sun, S. Patel, and C. Meyer, "Brain segmentation using 3d u-nets and
+    overall validation of proposed results." In Computational Neuroscience, vol. 4,
+    p. 25–32, 2017.
+
+
+    S. Kumar, C. Joshi, A. G. Roy, and N. Navabha, "Fully automatic deep learning
+    for medical image segmentation." In 2018 15th International Symposium on Medical
+    Biomedical Imaging (ISBIA), 2018, IEEE, pp. 148–153.
+
+
+    K. Kamuitas, Y. Bai, E. Ferrette, S. Mcnough, I. Smith, N. Pawlowski, R. Majki,
+    L. C. Baek, D. Ruisskert, et al., "Unsupervised deep convolutional neural networks
+    for tumor segmentation." in International Conference on Medical Biomedical Imaging.
+    Springer, 2017, pp. 459–462.
+
+
+    V. Ronneberger and A. Brox, "U-Net: Convolutional networks for application to
+    space-to-vct." IEEE transactions on medical imaging, vol. 37, no. 6, 2018.
+
+
+    V. Mnih, H. Andreas, A. Graves, et al., "Recurrent models of visual attention."
+    Advances in neural information processing systems, vol. 28, pp. 1721–1729, 2015.
+
+
+    D. Bahdanau, K. Cho, and Y. Bengio, "Neural translation for learning to align
+    and translate." arXiv preprint:1409.0485, 2014.
+
+
+    K. H. Hermann, T. Cockey, K. Ergenfeld, L. Escher, W. M. Seymour, and P. Bousman,
+    "Teaching machines to read and comprehend," in Advances in neural information
+    processing systems, 2015, pp. 1699–1701.
+
+
+    Q. Jin, Z. Meng, C. Sun, L. Wei, and R. Su, "U-net: A hybrid deep attention-attention
+    network for liver and lung scans." arXiv preprint:1811.01328, 2018.
+
+
+    Q. Q, Z. Meng, T. J. Phan, Q. Chen, L. Su, and Y. Du, "Deformable-net: Deformable
+    residual neural network for vessel segmentation," Knowledge-Based Systems, vol.
+    178, pp. 149–162, 2020.
+
+
+    Y. Tian, J. Wang, J. Liu, and D. Shen, "Strainet: Varying stochastic residual
+    neural networks for metric optic segmentation," IEEE transactions on neural networks
+    and machine learning, vol. 32, pp. 2446–2455, 2021.
+
+
+    H. Li, A. Zhaily, and M. Benze, "Atomic brain structures using deep u-net," in
+    International MICCAI Workshop, 2019.
+
+
+    O. Oktay, J. Julian, L. Geigerer, M. Meinbel, H. Rikstein, K. Mori, S. Michalski,
+    N. Y. Hameyer, K. Baets, et al., "Attention is all you need for medical image
+    segmentation." arXiv preprint:1804.04339, 2018.
+
+
+    L. Liu, F. Xu, and Y. Wang, "Efficient u-net with deep skip connections for medical
+    image segmentation," in International Conference on Medical Imaging. Springer,
+    2020, pp. 117–127.
+
+
+    J. Liu, Y. Jin, X. Xu, and Y. Zhang, "Multi-scale densely connected u-net for
+    biomedical image segmentation," arXiv preprint:1812.00152, 2018.
+
+
+    M. Taun, A. Castro, I. Matacha, M. Müller, and Y. Vilanueva, "Vascaded u-net roi
+    brain mask for tumor segmentation." International MICCAI Workshop. Springer, 2018.
+
+
+    T. A. Auan, et al., "Tumor brain segmentation using u-net and attention," in International
+    MICCAI Workshop. Springer, 2018.
+
+
+    S. Li, H. Chen, Q. Ou, D. Wu, and A. F. Huang, "H-denseunet: hybrid densely connected
+    network for liver and tumor segmentation via ct scans." Medical image analysis,
+    vol. 33, pp. 2453–2462, 2019.
+
+
+    Z. Zhou, J. Chen, and J. Sun, "Deep learning for medical image segmentation,"
+    in Proceedings of the IEEE conference on computer vision and pattern recognition,
+    vol. 31, pp. 770–778, 2016.
+
+
+    N. Itabeh and M. S. Rahman, "ResUNet: The u-net architecture for biomedical medical
+    image segmentation," Medical image analysis, vol. 54, pp. 39–47, 2019.
+
+
+    D. Jin, X. Xu, Z. Zhou, and J. Liu, "White matter hyperintensity lesion in brain
+    segmentation using deep convolutional neural networks with residual connections,"
+    in 2018 15th International Symposium on Medical Biomedical Imaging (ISBIA), 2018.
+
+
+    A. Fahry, T. Zeng, and J. Si, "Convolutional residual networks for brain image
+    segmentation." Medical image analysis, vol. 36, no. 2, pp. 447–456, 2016.
+
+
+    F. Yu and V. Tollkov, "Multi-scale context aggregated by deep learning for medical
+    segmentation," in International MICCAI Workshop. Springer, 2019.
+
+
+    Master''s thesis. [Online]. Available: https://www.kaggle.com/c/data-segmentation'
+  merge: -1
+  img_proc: true
