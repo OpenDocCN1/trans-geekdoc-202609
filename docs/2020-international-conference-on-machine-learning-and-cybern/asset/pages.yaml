@@ -1,0 +1,715 @@
+- pgno: 0
+  md: '# OPERATING SYSTEM CLASSIFICATION: A MINIMALIST APPROACH
+
+
+    KYLE MILLER¹, ADRIEL CHENG¹,², HONG CHUN GEW¹, CHENG-CHEW LIM¹
+
+
+    ¹School of Electrical and Electronic Engineering, The University of Adelaide,
+    Australia
+
+    ²Cyber and Electronic Warfare, Defence Science & Technology Group, Australia
+
+    E-MAIL: <kyle.millar, adriel.cheng, hongchun, cheng.lim>@adelaide.edu.au, adriel.cheng@dst.defence.gov.au
+
+
+    Abstract:
+
+    Operating system (OS) classification is growing of importance for network administrators
+    and for a better quality of device composition of a network to be achieved. Additionally,
+    it can be used to identify devices that pose security risk to the network. However,
+    the sheer number and diversity of OS that make classification increasingly difficult.
+    We leverage social-invariant OS classification technique that is quick to train
+    and deploy on various network configurations. We show how an affiliation graph
+    can be used as input to a machine learning classifier to predict the OS of a device
+    using only social features.
+
+
+    with the growing number of OS, a comprehensive OS classification technique is
+    becoming increasingly difficult in practice.
+
+
+    Current OS classification techniques have typically relied on a larger number
+    of devices to extract features (e.g., Internet protocol (IP) ID monotonicity and
+    clock frequency) or a subset of them [7]. The wide variety of present on modern
+    networks makes classification ineffective at scale. Additionally, the wide adoption
+    of encryption standards has the ability to extract these rich feature sets from
+    packet data. It has therefore become necessary for OS classification techniques
+    to rely on other features.
+
+
+    We examine the effectiveness of our approach on an analysis of 499 devices on
+    a university wireless network. We show that our method can classify different
+    OS families (i.e., Apple, Windows, and Android) with an accuracy of 99.3%. We
+    extend this study by: 1) examining different OS (iOS, OS X, and Windows 10); 2)
+    investigating the time required to make an accurate prediction; and 3) determining
+    the effectiveness of our approach over six months.
+
+
+    The aim of this paper is to produce an OS classifier that uses only the minimum
+    of information that are available to a network administrator. To achieve this,
+    we propose the use of affiliation graphs to construct a behavioural profile of
+    a device by the IP addresses that the device communicates with. Via this, we create
+    an encryption-invariant graph that is quick and requires little sample. An example
+    of constructing an affiliation graph from IP addresses is shown in Figure 1.
+
+
+    Affiliation graphs are a social networking technique that investigates the characteristics
+    of an individual (denoted as an actor) through the communities they are affiliated
+    with [6]. Social communities form both implicit and explicit communities in their
+    membership, such as shared interests, occupation, or genealogy [14]. Through this
+    mechanism, a common affinity within a membership set can be revealed. For example,
+    Facebook is able to identify the potential affinity of a user based solely on
+    the groups the user is affiliated with [11].
+
+
+    Keywords:
+
+    Cybersecurity; Machine learning; Affiliation graphs; Operating system classification;
+    Passive monitoring
+
+
+    # 1. Introduction
+
+
+    Operating system classification allows us to identify the OS of a device (i.e.,
+    iOS, Android, or Windows 10) solely through the observation of network traffic
+    [2]. Identifying the OS helps provide a better quality of service (QoS) and assists
+    cybersecurity in identifying vulnerable devices [4]. However,
+
+
+    The advantage of an affiliation graph lies in the case where the affiliations
+    between an actor and their communities are observed [5]. Through understanding
+    why these affiliations are'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'Proceedings of the 2020 International Conference on Machine Learning and Cybernetics,
+    4 December, 2020
+
+
+    made inferences can be made about an actor without requiring a priori knowledge
+    of the actors.
+
+    It is the axiom of this that the OS of a device (actor) can be determined by the
+    IP addresses (communities) that the device affiliates with. Internet. For example,
+    a device OS update might reveal it is Windows OS [7]. A generalisable behavioural
+    profile of distinct OSs could be constructed given the knowledge of communities
+    an actor will affiliate with. The key contribution of our work is:
+
+
+    mance of this methodology after six months. We show that there is a relatively
+    small decrease in overall accuracy for both Apple and Android OSs (3% and 7%,
+    respectively), a significant decrease of 29% was observed for Windows OS. This
+    deterioration can be mitigated by retraining the classifier every months.
+
+
+    +   1. We show that a random forest (RF) classifier on affiliation graph can achieve
+    99.3% classification accuracy for distinct OS families (e.g., Apple, Windows,
+    and Android OS). Furthermore, a 94.6% classification accuracy achieved for distinct
+    OS (e.g., iOS, X, and 10).
+
+
+    +   2. We take that approximately one hour to construct a representative profile
+    of OS based on community IP addresses with the Internet. Monitoring for longer
+    than one hour in minimal improvement to over the overall OS classification performance.
+
+
+    +   3. We examine the deterioration of the classification performance
+
+
+    The remainder of this paper is structured as follows: Brief review of related
+    work on OS classification is given in Section 2. Overview of the data set used
+    for this analysis. Section 4 introduces a feature selection process to select
+    the relevant communities for OS classification. For OS Family and OS classification
+    are given in Section 5. Section 6 investigates the amount of time required to
+    achieve accuracy. Section 7 examines the classification performance of proposed
+    method after six months. The paper concludes in Section 8 with a discussion of
+    results and suggestions for future work.
+
+
+    # Related Work
+
+
+    There has been growing interest in device management strategies due to the urgency
+    for maintaining security and functioning network. OS classification is a major
+    field of device management and as such has received considerable attention in
+    the past few years.
+
+
+    The most used OS classification technique is packet inspection. Packet inspection
+    reveals the idiosyncrasies in the packet creation process of distinct OSs. For
+    example, the time-to-live (TTL) of a packet can be used to identify OS. Windows
+    OS (TTL=128) for both Apple and Android OSs (TTL=64). Packet inspection can also
+    extract more significant signatures of the packet of lead to be achieved. For
+    example, the HTTP-User-Agent field can be used to identify the version and edition
+    of an OS [2]. Encryption has reduced the effectiveness of techniques that rely
+    only on the inspection of payload details.
+
+
+    There are several well-known OS tools that make use of packet inspection (e.g.,
+    Nmap [9], Probe[2], and p0 [16]). These techniques achieve high classification
+    performance as well as the ability to identify distinct versions of the OS. Nmap
+    and Probe require both the device to be connected to the network during analysis.
+    Furthermore, these tools cannot be used to perform an investigation into devices
+    that are no longer present on the network, p0 can be used to perform a retrospective
+    analysis of a device''s OS given sufficient packet data; however, the
+
+
+    | Communities (C) / Destination addresses |
+
+    |---|---|---|n| 52.137.90.34 (Windows Update) | 157.240.13.1 (Facebook) | 172.253.68.125
+    (App iTunes Store) |
+
+    | c1 | c2 | c3 |
+
+    | Mac_c1 | Mac_c2 | Mac_c3 |
+
+    | Mac_m1 | Mac_m2 | Members (M) / Undirected connections / Destination addresses.
+    |
+
+    | a1 | a2 | a3 |
+
+    | 192.168.1.1 | 192.168.1.2 | 192.168.1.3 |
+
+
+    FIGURE 1. An affiliation graph created from network data. The actors and communities
+    of the affiliation graph are internal and external to the network under analysis,
+    respectively. The membership set consists of the communications between the internal
+    and external devices.
+
+
+    Actors (A) / Devices under analysis
+
+
+    Authorized users use limited to: UNIVERSITY OF BATH. Download on September 03.2021
+    at 14:42:32 UTC from IEEE Xplore. Restrictions apply.
+
+
+    144'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Proceedings of the 2020 International Conference on Machine Learning and
+    Cybernetics, 4 December, 2020
+
+
+    storage and processing of packet data can lead to security and privacy concerns
+    if it is insufficiently sanitised.
+
+
+    A device''s OS can be predicted by observing how its network traffic changes over
+    time. For example, the frequency with which a device sends packets in network
+    can be used to identify the OS [13, 10]. The challenge of such approaches is that
+    there can be significant variation in a device''s network characteristics due
+    to the relative activity on the device. The optimal results are often observed
+    when the device is under a heavy load. Additionally, these techniques are effective
+    for large networks without adding processing time required to construct their
+    feature set.
+
+
+    only the source and destination IP addresses are required from each network flow¹.
+    This results in a technique that is quick to populate and require little storage.
+    Additionally, this technique is widely deployable as most network administrators
+    have access to flow records.
+
+
+    An affiliation graph from 26 hours of network traffic is shown in Figure 2. It
+    can be seen that the majority of devices that affiliate with the span of 26 hours
+    are owned by the manufacturers of their OS.
+
+
+    To represent an affiliation graph to the ML classifier, a one-hot encoding of
+    the devices that each device affiliated with
+
+
+    The aim of this paper is to produce an OS classifier that uses the bare minimum
+    of information that would be useful to a network administrator. Restricting our
+    analysis to just enough to create an affiliation graph that is widely applicable
+    to any TCP/IP network. In previous work [12], we show the feasibility of affiliation
+    graphs for OS classification.
+
+
+    In this paper we present an extension of this work through the utilisation of
+    machine learning (ML) to identify relevant features for OS classification. Furthermore,
+    we evaluate our firstly by: 1) examining the required length of a heart beat to
+    ensure an accurate prediction of OS can be made; and; 2) investigating the longitudinal
+    aspects of our proposed method over the course of six months.
+
+
+    A large and realistic dataset is required to analyse the behavioural characteristics
+    of different OS. To provide this data set, captures were taken from one of the
+    University of Adelaide''s networks. This was created to allow both staff and students
+    to connect their wireless devices into the university''s enterprise network. It
+    provides for analysis insight into the realistic behaviour of current OS.
+
+
+    # 3.1. Data Set – University Campus
+
+
+    The wireless network under analysis is a /23 subnet which allows for up to 510
+    IP addresses to be allocated at any
+
+
+    ![](img/e8955c6e2e8b572a11371707bfbbdc2e_2_0.png)
+
+
+    # Affiliation Graphs for OS Classification
+
+
+    The axiom of affiliation graphs is that there exists a reason for actors who are
+    affiliated with certain communities [14]. Once this is known, it can be used to
+    infer information about the actors affiliated with a particular community without
+    a priori. Affiliation graphs have widespread use in sociological surveys for investigating
+    the behavioural characteristics of an individual affiliated with a set of communities.
+    The insight drawn in this paper is that the characteristics of a device can be
+    identified through the communities it is affiliated with over time.
+
+
+    Devices now rely on online infrastructure to manage, notify, and update the majority
+    of the software they use. The software on a device can therefore be reliably identified
+    through monitoring the device''s communication to its server dependencies. The
+    benefit of using an affiliation graph to investigate these communications is the
+    case in which it can be constructed. To create an affiliation graph from network
+    data,
+
+
+    FIGURE 2. An affiliation graph populated over 26 hours of network traffic the
+    six devices (Four Apple OS, two Windows OS, and two Android OS). Only the communities
+    for each device were depicted to increase reliability.
+
+
+    > ¹A network flow (flow) is defined in this work as the bi-directional exchange
+    of information between two devices over the Internet.
+
+
+    145'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Proceedings of the 2020 International Conference on Machine Learning and
+    Cycles, December 4, 2020
+
+
+    one time. An IP address can be re-allocated to multiple devices within the capture
+    period. To account for this re-allocation of IP addresses, the address resolution
+    protocol (ARP) log was used to identify when a device was allocated to a particular
+    IP address.
+
+
+    The traffic for each OS on the network was captured through dynamic configuration
+    protocol (DHCP) fingerprinting. DHCP fingerprinting allows for the identification
+    of a host''s signature-based-analysis of the parameters it requests during its
+    DHCP handshake. Devices with OSs that could not be identified through DHCP fingerprinting
+    were labelled as ''Unknown'' and excluded from this analysis.
+
+
+    Three captures were taken over three months on the 1st of March ($t_0$), August
+    ($t_1$), and November ($t_2$). The three-month period allows for the evaluation
+    of our methodology over time. All analysis will be conducted on the $t_0$ capture
+    except for Section 7 (Longitudinal Analysis) which was conducted on all three
+    captures.
+
+
+    The distribution of OS within the wireless network is lessless. OS were also grouped
+    into an OS family. Family groups of OSs which share similar features either being
+    forged from the same base code or a shared master function. OSs were taken to
+    share similar functionality and vulnerabilities. Therefore, classifying
+
+
+    | OS Family | OS | $t_0$ | $t_1$ | $t_2$ |
+
+    | --- | --- | --- | --- | --- |
+
+    | Apple | iOS | 240 | 217 | 234 |
+
+    | Windows | OS X | 91 | 77 | 84 |
+
+    | Windows | Windows 8/8.1 | 26 | 22 | 2 |
+
+    | Windows | Windows/7 | 17 | 15 | 14 |
+
+    | Android | Samsung (One UI) | 37 | 26 | 31 |
+
+    | Android | Huawei (EMUI) | 19 | 16 | 16 |
+
+    | Android | Oppo (ColorOS) | 10 | 10 | 8 |
+
+    | Android | Google (Stock) | 1 | 2 | 2 |
+
+    | Android | Xiaomi (MIUI) | 3 | 2 | 2 |
+
+    | Other | Other | 51 | 50 | 50 |
+
+    | Other | Printer | 1 | 1 | 1 |
+
+    | Other | Unknown | 181 | 151 | 172 |
+
+    | Total | | 681 | 598 | 632 |
+
+    TABLE I. The distribution of operating systems on the wireless''sless network.
+    Network captures were taken on the 1st of March ($t_0$), August ($t_1$), and November
+    ($t_2$) of 2019.
+
+
+    # 4. Communities for OS classification
+
+
+    The set of $t_0$ capture contained a total of 19,222 communities. However, not
+    all of these communities will be relevant for OS classification. A feature selection
+    process must be used to reduce redundant communities. Implementing a feature selection
+    process before training an OS classifier has shown to improve the overall performance
+    that we claimed [11]. Reducing redundant communities can help further research
+    into OS classification.
+
+
+    Recursive feature elimination (RFE) was used to feature the set of communities
+    within the $t_0$ capture. RFE iteratively runs a ML classifier with fewer features
+    after each iteration. The features with the least importance to the overall performance
+    were selected for re-
+
+
+    Ten trials of RFE were performed on the $t_0$ capture to
+
+
+    ![](img/e8955c6e2e8b572a11371707bfbbdc2e_3_0.png)
+
+
+    FIGURE 3. Classification performance versus the number of communities used for
+    OS classification. Recursive feature elimination (RFE) was used to reduce the
+    number of communities in each iteration of training. Ten trials of RFE were trained
+    on 80% of the $t_0$. The mean and standard deviation of the Micro and Macro F1-Scores
+    of the 20 validation set are shown for each iteration.
+
+
+    Authorized minus used to limit: UNIVERSITY OF BATH. Downloaded on September 03,
+    2021 at 14:42:32 UTC from IEEE Xplore. Restrictions apply.
+
+
+    146'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'Proceedings of the 2020 International Conference on Machine Learning and Cybernetics,
+    4 December, 2020
+
+
+    identify the most significant communities for OS classification. For each case,
+    80% of the category was randomly selected for training an RF classifier using
+    RFE. After training the classifier, the Macro and Micro F1-Scores [15] were evaluated
+    on the remaining 20% of the category to provide an overview of the classification
+    performance. Providing a summary of the results from the tests of RF. Classification
+    performance was high when the top 200 communities were used for classification.
+    Fewer communities resulted in a classifier that is unable to distinguish between
+    different OSes, additional communities increased the difficulty to find the correct
+    OS of each.
+
+
+    From the list of the top 200 communities for OS classification, it was found that
+    75 (72.5%) were owned by Apple, Microsoft, or Google. This result was not surprising
+    given these are the manufacturers of the three OSes. The communities within this
+    set were required to manage and update their respective OS. For example, a Microsoft
+    provided Windows updates to all devices in the $t_0$. A further analysis into
+    the information provided from the community set was found in our work [12].
+
+
+    The top 200 communities in this section were used as the feature for all subsequent
+    analysis.
+
+
+    # 5. OS Classification
+
+
+    The aim of OS classification is to acquire more information about the OS running
+    on a device. Given this, OS classification has been divided into two categories:
+
+
+    +   1. OS family classification to identify the family of OSes
+
+
+    for the target OS belongs (i.e., Apple, Windows, or Android). A device''s OS family
+    often dictates the managerial and security practices which should be enforced
+    for that device. OS classification aims to be beneficial for obtaining a general
+    overview of the OS composition on a network.
+
+
+    +   2. OS classification to identify the distinct OS on a device. OS classification
+    allows for a greater level of insight into the specific OS on device. OS classification
+    is therefore used when a more analysis of a set of devices is required.
+
+
+    To examine the performance of our methodology, trials of RF classifier were conducted
+    on the $t_0$ capture. For each, 80% training and 20% validation set were randomly
+    selected. The result of this processing for both OS family and OS classification
+    are given in Figures 4 and 5.
+
+
+    The average accuracy for OS family and OS classification were 99.3% and 94.6%,
+    respectively. This highlights that a prediction of a device OS can be made using
+    only an easily obtainable set. This methodology is therefore well suited for large
+    networks where the set of devices shares the same package space. The underlying
+    assumption is that the host device is not observing its own behaviour. For example,
+    a device could use a private network (VPN) to service the communities it affords.
+    This observation would reduce the effectiveness of our methodology for OS classification.
+    However, the resultant reduction in a device''s community could be used to detect
+    which devices are using VPN services.
+
+
+    # 6. Time Interval
+
+
+    The popularity of portable devices (e.g., laptops, mobile phones, and tablets)
+    has decreased the length of time for which a device is typically connected to
+    a given network. It is prudent to investigate how long a device is required to
+    be monitored on a network for reliability.
+
+
+    The results presented in Sections 4 and 5 were conducted on the entire $t_0$ capture.
+    Therefore, up to 26 hours of activity for each device could be utilised to perform
+    OS classification. However not all devices were active for the entire period.
+    Within the $t_0$ capture, the average interval a device was active on the network
+    was 5.67 $\pm$ 6.80 hours. The large variation in this time interval indicates
+    that the
+
+
+    ![](img/e8955c6e2e8b572a11371707bfbbdc2e_4_0.png)
+
+
+    147
+
+
+    Authorized licensed use limited to: UNIVERSITY OF BATH. Download on September
+    03,2021 at 14:42:32 UTC from IEEE Xplore. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'Proceedings of the 2020 International Conference on Machine Learning and Cybernetics,
+    4 December, 2020
+
+
+    ![](img/e8955c6e2e8b572a11371707bfbbdc2e_5_0.png)
+
+
+    **FIGURE 5.** Performance of OS classification. Ten trials of training an RF classifier
+    were performed. In each 80% of the to capture was randomly selected for training.
+    The results show the mean and standard deviation of the precision, recall, and
+    F1-Score of the classes within the 20% validation set.
+
+
+    classification made in the previous sections are not heavily dependent on the
+    length of capture. However, these results do not provide a good indication of
+    the classification performance for devices which are only present on the network
+    for a short period of time (e.g., less than an hour).
+
+
+    The network activity of the devices in the capture was considerably smaller time
+    intervals to ensure that the effect the length of capture has on classification
+    performance. For each time interval, ten trials were conducted using 80% of the
+    to to train an RF classifier and 20% to validate its performance. The results
+    can be seen in Figure 6.
+
+
+    Figure 6 depicts a relatively stable classification performance for a time interval
+    of one or two hours. 490 (98.4%) of the devices within the to capture exceeded
+    this time threshold. Therefore, the results support that the classification is
+    not heavily dependent on the length of capture. However, no decrease in classification
+    performance was exhibited for time intervals of less than an hour. Therefore,
+    we posit that on average it takes approximately one hour to construct a characteristic
+    profile of a device''s OS through only monitoring the IP addresses it communicates
+    with.
+
+
+    # 7. Longitudinal Analysis
+
+
+    It is expected that the behaviour of an OS will change over time. For example,
+    an OS may receive update modifying the online services (and hence community IP
+    addresses) it communicates with. Conversely, an online service may modify the
+    IP addresses it uses to communicate with its client-side devices. In both cases,
+    the classification performance of this methodology will as more modifications
+    made to an OS ecosystem.
+
+
+    ![](img/e8955c6e2e8b572a11371707bfbbdc2e_5_1.png)
+
+
+    A longitudinal analysis was conducted over the same university network to examine
+    the length in which the classification performance of this methodology is effective.
+    Two captures were taken (t1 and t2 months) after the to capture. These captures
+    allow us to provide an insight into the changes of an OS online environment over
+    the course of six months. An RF classifier was trained on 80% of the to and tested
+    on 20% of the to. Table 2 summarises the OS Family and OS classification performance
+    on the set of all three captures.
+
+
+    Table indicates a correlation between the classification performance and the time
+    period between the training and testing captures. This supports the expectation
+    that an OS environment changes over time causing a
+
+
+    **FIGURE 6.** Classification performance over the time interval used for analysis.
+    RF classifiers were trained for each time interval. For each classifier, 80% of
+    the to capture was used for training with 20% for validation. The mean and standard
+    deviation of the Micro and Macro F1-Scores of the 20% validation set are shown
+    for each time interval.
+
+
+    Authorized use only limited to: UNIVERSITY OF BATH. Download on September 03,2021
+    at 14:42:32 UTC from IEEE Xplore. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'Proceedings of the 2020 International Conference on Machine Learning and Cybernetics,
+    4, 2020
+
+
+    degradation in this methodology''s classification performance. However, there
+    was less than 10% decrease in the overall classification performance (Micro F1-Score)
+    for both OS Family and OS classification after six months. The degradation in
+    classification performance may still be tolerable for acquiring an initial overview
+    of the OS composition on network.
+
+
+    In work we provide a broader analysis on utilising affiliation graphs for device
+    characterisation. In particular, we aim to utilise unpersonalised machine learning
+    to identify clusters of devices on a network which exhibit similar behavioural
+    characteristics.
+
+
+    There was large variation between the classification performance of individual
+    classes over the six month period. Both Android and iOS showed a relatively small
+    decrease in their F1-Scores (5% and 2% respectively). However, a 29% decrease
+    in the F1-Score of Windows was seen for the same period. There are multiple factors
+    which may have affected the performance of this methodology on Windows. For example,
+    updates to Windows were released during the month between t1 and t2. It is therefore
+    recommended that this methodology be updated every few months or after a update
+    to an OS is released.
+
+
+    # Acknowledgments
+
+
+    This research is supported by the Australian Government Research Training Program
+    (KTP) Scholarship and the Commonwealth of Australia as represented by the Defence
+    Science and Technology Group of the Department of Defence.
+
+
+    # References
+
+
+    +   [1] Ahmet Oksoy, Louis Sishoul, and Mehed Ganes. Operating system fingerprinting
+    via automated network traffic. In 2017 IEEE Congress on Computer Communications
+    (CEC), pages 2502–2509, 2017.
+
+
+    +   [2] Blake Andrew and David McGregor. OS fingerprinting: New techniques and
+    a study of information gain and publication. In IEEE Conference on Network and
+    Security (CNS), pages 1–9, 2017.
+
+
+    +   [3] Ofir Arlik, Yusuf Yarshikin, and Keder Yudashvili. The power of protobuf:
+    The next generation of operating system fingerprinting. Sys-Security Group, 2003.
+
+
+    +   [4] Deepali Arora, Kun Fun Li, and Alex Loff. Big data analytics for classification
+    of network enabled devices. In Advanced Information Networking and Applications,
+    pages 708–715, 2018.
+
+
+    +   [5] Stephen Bogartz and Daniel Halnin. Analyzing affinity within social networks.
+    The Handbook of Social Network Analysis, 2011.
+
+
+    +   [6] Ronald L Britger. The density of persons and groups. Science Forces, 53(2):181–190,
+    1974.
+
+
+    +   [7] Yi-Chao Chen, Yong Liao, Mario Baldi, Sun-Ju Lee, and Lee Qi. OS fingerprinting
+    and detection in mobile networks. Proceedings of the 2014 Conference on Internet
+    Measurement Conference, pages 173–180. ACM, 2014.
+
+
+    +   [8] Babnikh Guyon, Jason West, Stephenson Barth, and Vladimirnik. Gene selection
+    for class classification using support vector machines. Machine Learning, 46(1-3):389–442,
+    2002.
+
+
+    In this paper minimalist approach to OS classification was introduced. This approach
+    approach that an accurate OS classifier can be trained using only the IP addresses
+    that a device communicates with the Internet, we show that only 20 out of 2000
+    IP addresses are required to classify OS types. Furthermore, we identified that
+    on average it takes approximately one hour to construct a characteristic profile
+    of a device through OS only monitoring its communications with the Internet. We
+    found that the performance of this methodology will differ for each OS but can
+    be mitigated by retraining the classifier every few months or after a update to
+    an OS is released.
+
+
+    TABLE 2. Longitudinal analysis of OS and OS classification performance.
+
+
+    | F1-Score | t0 | t1 | t2 |
+
+    |---|---|---|---|n| OS Family | | | |
+
+    | Micro | 01/2019 | 08/2019 | 01/2019 |
+
+    | Macro | 0.98 | 0.94 | 0.92 |
+
+    | OS Classification | | | |
+
+    | Micro | 0.90 | 0.83 | 0.81 |
+
+    | Macro | 0.78 | 0.64 | 0.61 |
+
+
+    149
+
+
+    Authorized users use limited to: UNIVERSITY OF BATH. Downloaded on September 03,
+    2021 at 14:42:32 UTC from IEEE Store. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'Proceedings of the 2020 International Conference on Machine Learning and Cybernetics,
+    4 December, 2020
+
+
+    [10] Nikunj Malik, Jayanarayanan Chandamouli, Pralad Suresh, Kevin Fairbanks,
+    Lanier Watkins, and William H. Robinson. Using network traffic to verify mobile
+    device forensics. In 2017 14th IEEE Annual Communications & Networking Conference
+    (CCNC), pages 114–119,
+
+
+    [11] Jeremy Merrill. Liberal, moderate or conservative? see how Facebook labels
+    you, 2016. [Online]. Available: https://www.nytimes.com/2016/08/24/us/politics/facebook-ads.html.
+    [Accessed: September 2019].
+
+
+    [12] Kip Miller, Adrian Cheng, Hong Guin Chew, and Cheng-Chew Tian. Characterizing
+    smart devices using affiliation graphs. 2020 IEEE/FIP Network Operations and Management
+    Symposium, 2020.
+
+
+    [13] Nicholas Ruffing, Ye Zhu, Rudy Libertini, Yong Guan, and Riccardo Bettatti.
+    Smartphone reconnaissance: Op-
+
+
+    erating system identification. In 2016 IEEE 13th Annual Consumer Communications
+    & Networking Conference (CCNC), pages 1086–1091, 2016.
+
+
+    [14] Jaewon Yang and Jure Lesovec. Community-affiliation graph model for overlapping
+    network community detection. IEEE 12th International Conference on Data Mining,
+    pages 1170–1175. IEEE, 2012.
+
+
+    [15] Yiming Yang and Xin Lu. A re-examination of text categorization methods.
+    In Proceedings of the 22nd Annual International ACM SIGIR Conference on Research
+    and Development in Information Retrieval, pages 42–49, 2019.
+
+
+    [16] Michal Zalewski. p0f v3, 2014. [Online]. Available: https://lcamutf.cooredump.cx/p0f3/.
+    [Accessed: March 2020].'
+  merge: -1
+  img_proc: true
