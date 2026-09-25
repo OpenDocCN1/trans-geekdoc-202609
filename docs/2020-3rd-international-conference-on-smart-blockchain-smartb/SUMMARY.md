@@ -1,0 +1,2 @@
++   [020年第三届国际智能区块链会议 (SmartBlock) (中国郑州 2020.10.23-2020.10.25) 2020第三届国际智能区块链会议 (SmartBlock) ｜｜ 大主席致辞](README.md)
++   [020年第三届国际智能区块链会议 (SmartBlock) (中国郑州 2020.10.23-2020.10.25) 2020第三届国际智能区块链会议 (SmartBlock) ｜｜ 大主席致辞](2020-3rd-international-conference-on-smart-blockchain-smartb.md)
