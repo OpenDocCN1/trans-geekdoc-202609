@@ -1,0 +1,617 @@
+- pgno: 0
+  md: 'Available now at @www.sciencedirect.com
+
+
+    ![](img/677d3822c8fe2c691b08becd97b8b870_0_0.png)
+
+
+    ![](img/677d3822c8fe2c691b08becd97b8b870_0_1.png)
+
+
+    # # ScienceDirect
+
+
+    Procedia CIRP 115 (2022) 184-189
+
+
+    www.sciencedirect.com/locate/procedia
+
+
+    10th CIRP Global Web Conference — Material Aspects of Manufacturing Processes
+
+
+    # # Applying Natural Language Processing in Manufacturing
+
+
+    Marvin May *a, Jan Heidinhöfer†a, Tom Körner‡, Luis Schäfer‡, Gisela Lanza§
+
+
+    *Institute of Production, Karlsruhe Institute of Technology (KIT), Karlsruhe,
+    72631 Karlsruhe, Germany
+
+
+    ^The Authors. Tel:+49-1523-9520-2624; +49-721-6845005. Email address: marvin.may@kit.de
+
+
+    # Abstract
+
+
+    Despite great potential in the data driven industry 4.0 and widely available data,
+    data analysis is constrained to manual data, not the synthesis of knowledge. Although
+    employee knowledge in manufacturing is often hidden, it is rarely formalized and
+    effectively harnessed. To close this gap, we develop a NLP Natural Language Processing
+    (NLP) pipeline to handle text information from machines. We provide them with
+    this production process to reduce downtime. The resulting formalized knowledge
+    could be used as a base for optimizing manufacturing processes.
+
+
+    © 2022 The Authors. Published by Elsevier B.V.
+
+    Peer-reviewed article is published under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+
+    Peer-review under the responsibility of the scientific committee of the 10th CIRP
+    Global Web Conference — Material Aspects of Manufacturing
+
+    Processes (CIRP2022)
+
+
+    *Keywords*: Natural Language Processing; Predictive Maintenance; Knowledge Extraction;
+    Machine Learning; Production Planning
+
+
+    # ## 1. Introduction
+
+
+    Industry 4.0, widely regarded as a development in manufacturing, is based on the
+    ubiquitous acquisition, analysis and application of data and models in industrial
+    settings. The fundamentals is the ability to derive knowledge from stupid data.
+    In this now, the scheme is effectively applied to tabular data, data patterns
+    or control sequences. In such contexts, natural language used in manufacturing
+    is far more expressive and capable of transferring and knowledge [2]. However,
+    an effective formalization and analysis of this knowledge is missing in manufacturing
+    [18]. Instead of tapping into what is expressed in natural language, only numerical
+    data from regular Industry 4.0 systems is harnessed. standardized questionnaires,
+    fault reports and outlines are promoted to a limited scope. With lots of challenges
+    in manufacturing, there is a variety of influencing factors that cannot be thought
+    of in advance, which results in a loss of valuable natural data. Thus, Natural
+    Language Processing (NLP), the art of formalizing natural language to distill
+    knowledge [14], can serve as a valuable method and holds immense potential. To
+    effectively use the knowledge inherent in natural conversation and texts in manufacturing
+    -
+
+
+    especially from data where the structure cannot be changed — this paper proposes
+    a novel NLP pipeline for the application. Based on the developed NLP pipeline
+    a case study with real industrial data is presented and exemplary, results are
+    illustrated. In particular, comments from operators that are digitally recorded
+    and describe failures from manufacturing are analyzed for increasing the accuracy
+    of outcomes through NLP techniques. The approach can be applied to processing
+    text-written comments by adding a predicted orthogonal corrector.
+
+
+    This article is structured as follows: Section 2 discusses the current-of-the-art
+    in Natural Language as well as one of the far few applications in manufacturing.
+    Based on the state of keeping the knowledge Section 3 introduces the methods.
+    The approach is to test with a case study in Section 4. Section 5 finds the findings
+    are discussed by a brief summary and outlook in Section 6.
+
+
+    # ## 2. Related Work
+
+
+    A brief-of-the-art of NLP, as discussed in Section 2.1, and a general review of
+    possible applications of NLP in manufacturing in Section 2.2.
+
+
+    2221-2022 The Authors. Published by Elsevier B.V.
+
+    This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+
+    Peer-review under the responsibility of the scientific committee of the 10th CIRP
+    Global Web Conference — Material Aspects of Manufacturing
+
+    Processes (CIRP2022)
+
+    10.1016/j.proc.2022.101071
+
+
+    This is a mockup of March 2023 the template used in the publication of the original
+    article contains errors. The content of the article remains unchanged.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# State-of-the-art Natural Language Processing
+
+
+    In manufacturing companies, text data is often available in an unorganized form.
+    There is a relatively small amount of literature to sense of what is directly
+    connected with NLP methods in combination with Machine Learning (ML) for relation
+    data. Due to data acquisition on the shop floor and data scarcity despite powerful
+    NLP algorithms, the application of NLP remains in the production domain. To order
+    apply NLP in the production environment and ultimately tap into the unstructured
+    available human knowledge of texts and spoken language, a general understanding
+    of methods and requirements is essential.
+
+
+    At the beginning of NLP, the textual documents have to be sorted, processed and
+    filtered [14]. The texts are preprocessed in the preparation stage. Examples of
+    preprocessing include the removal of unknown characters, words, and stemming.
+    Lemmatization describes the grouping of words, such as “best” and “good” [20].
+    Stop words which have no sense to search for or occur frequently in a document
+    such as to search or for them (e.g., that, is, ...) are often referred to as a
+    stop word. After the preparation, the tokenization takes place [25]. The vectorization
+    is the embedding of words for the sake of representation (i.g. Word2Vec, fastText)
+    or their frequency-based vectorization (i.g. One-Hot Encoding, TF-IDF [7]). This
+    vectorization allows NLP to process documents and train the model. An evaluation
+    metric can be determined and the algorithm or model can be adjusted.
+
+
+    A typical process using NLP on textual data is shown in Fig. 1.
+
+
+    BERT is deep meaningful algorithm that uses the left and right context of words
+    and, thus, distinguishes words like “seat bank or money”. Eventually BERT can
+    generate a deeper understanding of the text in unidirectional directions, such
+    as: TF-IDF [8]. With the TF-IDF score, it is possible to calculate the relevance
+    between a word and a document without taking into account the position of a word
+    and its purpose, the frequency with which a word occurs in a document is not the
+    document of a series of documents [4].
+
+
+    The de-trained models are utilized in the GPT-algorithm [3]. GPT-3 is a deep neural
+    network with 175 billion parameters in all structures. It is shown that of a transformer
+    [24]. It predicts by taking a token based on a sequence of tokens. A token is
+    represented as an N-gram, or in language. So, GPT-3 can also solve NLP tasks for
+    what was not possible before.
+
+
+    These types of algorithms were not trained on text data within production, which
+    uses a different terminology. This presents the challenge of a vectorization of
+    texts without prior knowledge and accurately the sequential steps shown in Table
+    1
+
+
+    Table 1. NLP and ML
+
+
+    | Steps for NLP | Overview |
+
+    |---|---|
+
+    | 1. Data preparation | Tokenization, stop removal, processing, stemming, normalization,
+    | |
+
+    | 2. Vectorization | One-hot-encoding, TF-IDF, Bag of Words, Word2Vec, fastText,
+    BERT |
+
+    | 3. ML | Supervised (e.g. XGBoost, LightGB, Random Forest), Unsupervised (e.g.
+    Means-DS, Expectation Maximization) |
+
+
+    ![](img/677d3822c8fe2c691b08becd97b8b870_1_0.png)
+
+
+    # 2. Literature Review
+
+
+    NLP is mainly in non-industrial sectors, where since collections of texts are
+    already available. In the following, we describe some approaches of NLP the industrial
+    sector in order to recognize the possibility of already existing solutions for
+    their industrial applications. One approach is to train a scale-down language
+    model with the goal of processing text that occurs in dialogues or not [7]. We
+    use a ML method in this research, which filters relevant features from the text
+    to summarize it automatically. A different application describes data-driven,
+    editorial correction of human-understandable as well as informative texts through
+    ML algorithms. Here, the authors used the case of automated reporting on the 2017
+    Finnish local elections [15]'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'Text is prevalent in manufacturing, but often used for computational analysis
+    due to its complexity [18]. As about 80% of average knowledge is available in
+    text form, manufacturing represents a rare use case for NLP methods [10]. Researchable
+    available knowledge and merging data accounts accounts for about 70 % of the design
+    of projects [16]. Therefore, that the application of NLP methods may lead to increased
+    efficiency and time savings in industry.
+
+
+    or textual needs to be identified and made available on a large scale (0). This
+    includes the selection of suitable data and texts that are meaningful and provide
+    insights for the later algorithms to make feasible predictions, classifications
+    or decisions. Secondly, the data should be cleaned (1). This includes the removal
+    of punctuation marks, labels, spaces, and other characters. Converting text to
+    vectors is another challenge that may improve accuracy (step 2). In the production
+    context, spell checking and autocor are useful additions as some options to prevent
+    spelling mistakes. After the following tokenization (step 3): shortening sentences
+    to shorter, i.e. consisting of one word per sentence would be better as these
+    regularly words carry little or no information (step 4). The next step is the
+    lemmatization of the text, whereby the individual terms are converted into their
+    base form (step 5). The text is processed by various algorithms such as NLTK or
+    Word2Vec. There are also other algorithms (step 7) for tasks ranging from maintenance
+    decision selection and course analysis to downtime prediction.
+
+
+    In the field of manufacturing, more precisely in the maintenance of machines,
+    there are several opportunities using NLP and ML. Understanding language of past
+    logs by combining NLP and ML may help extracting hidden knowledge, which can provide
+    a competitive edge for maintenance decisions [4]. Furthermore, an application
+    at retrieving potential solutions for new problems by searching for similar stored
+    there in technical assistance reports [2], and NLP to find the root cause of failures
+    could be invaluable. The NLP process can be based on reliable, central knowledge
+    databases often found in manufacturing environments. In the area of administration,
+    NLP may be relevant for employee and applicant management for identifying and
+    categorizing resumes.
+
+
+    For problem-solving management with an integrated content-based recommender engine
+    to enhance knowledge management on the shopfloor [21]. This can be extended towards
+    the company within and with the outside world is also a potential area for such
+    applications. Applications are commonly used for these purposes.
+
+
+    However, since there are many analyses performed on less specific text and language
+    [19], the application of NLP in manufacturing is not capable of end to end prediction
+    on textual knowledge but rather focused on very well described, tasks. However,
+    overcoming the inefficiency of NLP in manufacturing enables an transferable and
+    applicable NLP pipeline for end to prediction or classification based on textual
+    data.
+
+
+    # ## Own Approach
+
+
+    Applications of NLP in many facets as before. Fig. 2 shows the possible applications
+    of NLP in manufacturing environments that have been described in literature and
+    with current NLP Algorithms. Pre-trained models such as BERT are used to process
+    the vocabulary of every language. Using a large amount of data for training the
+    models is therefore effective. Thus, the structured approach, from shopfloor based
+    textual data to the resulting prediction or classification.
+
+
+    Using production data for NLP requires preprocessing before the application of
+    Machine Learning algorithms as the data is unstructured and uncleaned. The structure
+    is visualized in Fig. 2. Available manufacturing execution (MES) and
+
+
+    | Possible Tasks: e.g. |
+
+    | --- |
+
+    | Maintenance Decisions |
+
+    | Troubleshooting |
+
+    | 1 Cleaning |
+
+    | 2 Test Prediction |
+
+    | Root Cause Analysis |
+
+    | 3 Tokenization |
+
+    | 4 Stop removal |
+
+    | 5 Lemmatization |
+
+    | 6 Vectorization |
+
+    | 7 Algorithm |
+
+
+    ![](img/677d3822c8fe2c691b08becd97b8b870_2_0.png)
+
+
+    In the following, we describe the plausible use case of forecasting downtime by
+    analyzing text data in combination with machine information. The goal of our approach
+    is to develop a pipeline that is feasible to forecast machine'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Marvin Carl May / Procedia CIRP 115 (2022) 184–189
+
+
+    downtime of production lines or single machines. Typically, in modern manufacturing
+    systems, production lines and machines are connected to a MES that tracks events
+    and production data. The data is automatically generated by the system during
+    production events and saved in table format. The data typically contains information
+    about the event, type of error, information about the production as times-. In
+    many cases, machine operators or staff can manually add text to additional information.
+    Those who operate at a machine or supervise production processes and have enhanced
+    knowledge about certain, potentially recurring events. Therefore the added comments
+    contain important information. However, they do not follow standard standards,
+    which may vary in format and language. In addition, companies have established
+    their own fixed and abbreviations, the production text deviates from the expected
+    language. Grammatical, and spelling errors are of course expected and often ignored
+    in the hectic production environment. We assume that the added text contains relevant
+    information about events and the information provided by machine operators to
+    solve the resulting issue. We assume that the additions in the form of comments
+    can significantly contribute to the prediction of production downtime. Based on
+    these proposed NLP pipeline with concrete aggregates and real world data in the
+    case study in Section 4
+
+
+    recorded. Events, for example, setups, machine stops, maintenance and project-based
+    events. Events are divided into planned and unplanned events using a unique identifier.
+
+
+    The data set includes 98,434 observations of unplanned events from 27 production
+    lines. Each accounts for a specific machine stop. As soon as a stop occurs, the
+    equipment downtime is recorded. The duration of the stop in minutes is calculated
+    from the difference to the following event and inserted subsequently. Since the
+    error is not necessarily of technical nature, but for example from incorrect settings,
+    product characteristics or behavior of the individual who produced the entity
+    entry. This assis describes the cause of the error or the reason for the production
+    downtime concisely as possible.
+
+
+    The machine-generated data is partly inconsistent, certain pieces of equipment
+    are linked to different units. Likewise, machines may be replaced or changed over
+    time, but have not been corrected. The data is therefore, cleaned (step 1) before
+    the actual analysis and free from missing errors. All events that do not describe
+    an unplanned downtime are removed. To prevent the severity
+
+
+    # 4. Case Study
+
+
+    In the following, we describe a case study using NLP for downtime prediction in
+    manufacturing environments. We develop a pipeline to predict the downtime of machine
+    stops based on text comments from machine operators with events and alerts (A&E)
+    data from production lines. We use the facility with regard to downtime. This
+    information can be used by the department management to distribute production
+    orders to other production schedules, maintenance or cleaning operations, or assign
+    staff to different tasks. We examined data from multiple departments and production
+    lines of a product.
+
+
+    The data used in this case study comes from a production facility of consumer
+    goods (step 0). The products manufactured in the production facility belonging
+    to the same business unit. The individual operators are responsible for different
+    steps in the production of the product. The individual lines within the department
+    also differ from each, other, in the case of certain machines or other hierarchy.
+    However, the production data is collected by the Line Events Data System (LEDS)
+    of overseeing MES and stored in a central database. In addition to metadata on
+    production, for all production events are
+
+
+    The data also contains various errors. In spelling errors, there are comments,
+    superfluous punctuation, and spaces. The quality of the data requires preparation
+    (step 2) before use. All first text is stripped of punctuation, as it provides
+    no information in content. All text is converted to lowercase and word (step 3).
+    Stop words are not only not frequently used, but also examples of noise, which
+    are removed after a frequency analysis. In the real data, there are 32,635 events
+    in the light error category, 41,880 events in the medium error category, and 23,919
+    events in the severe error category. We also classified the description of each
+    event by nature. This method (step 5) provides additional little but is useful.
+
+
+    Following preprocessing, we convert the text into a feature vector (step 6). We
+    use two methods in this case TF-IDF and Bag-of-Words (BoW). Bow is a method to
+    select features that create categories for each instance type. In NLP a Bow is
+    a measure of number of occurrences. Each document is represented by the length
+    and frequency of text, and a vector of a corresponding dimension length. Furthermore,
+    we divide the data set into a training set and test set with the distribution
+    80/20%, we use Gradient Boosting Decision Tree (GBDT) algorithms XGBoost [5] and
+    LightGBM [11] classification for our models as in Fig. 3. XGBoost algorithms iterate
+    over trees and fit to the limit of loss function with respect to the'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Marvin Carl et al. / Perdocia CIRP 115 (2022) 184–189
+
+
+    output of the previous tree. The benefits of XGBoost and LightGBM are their scalability
+    and speed that are achieved through out-of-core computation and their ability
+    to handle data sparsity. Data sparsity can occur by missing values or as a result
+    of feature-encoding and may cause prolonged sequences in conventional algorithms
+    [5, 12] We define models as multi-class classifiers with such as their objective.
+    We found that using grid search in cross-validation to tune the hyperparameters
+    and find the best hypothesis. The method with the best accuracy is what we used
+    for evaluation. We also consider the F1-score as well as the one-vs-one ROC-AUC
+    (ROC-AUC-OVO). In addition, we use a zero rate classifier to the data to set the
+    performance of our models from the baseline classification (step 7).
+
+
+    | | Metric | XGBoost | LightGB |
+
+    |---|---|---||
+
+    | Bag-Of-Words | Accuracy | 57.21% | 55.48% |
+
+    | | F1 Weighted | 57.09% | 55.13% |
+
+    | | ROC AUC | 74.11% | 73.77% |
+
+    | TF-IDF | Accuracy | 58.87% | 62.06% |
+
+    | | F1 Weighted | 58.28% | 62.10% |
+
+    | | ROC AUC | 77.52% | 79.77% |
+
+    | Word2Vec | Accuracy | 43.57% | 46.15% |
+
+    | | F1 Weighted | 28.91% | 45.31% |
+
+    | | ROC AUC | 60.92% | 62.85% |
+
+    | Baseline Classifier | | 34% |
+
+
+    ![](img/677d3822c8fe2c691b08becd97b8b870_4_0.png)
+
+
+    Fig. 3. Pipeline approach and modeling for decision.
+
+
+    The results of the experiment are summarized in Table 2. 57.21 and 55.48%, with
+    a F1-score of 57.09 and 55.13, and a ROC AUC of 74.11 and 73.77 for XGBoost and
+    LightGBM. The use of TF-IDF resulted in an F1-score of 58.28% (62.06%), and a
+    ROC AUC of 77.52% (79.77%), while Word2Vec achieved an F1-score of 43.57% (46.15%)
+    and ROC AUC of 60.92% (62.85%). Baseline classification results in 34%.
+
+
+    We found that TF-IDF yields the better performance compared to Bag-Of-Words or
+    Word2Vec. This indicates superior performance for more complex and accurate vectorization
+    algorithms. The method for careful vectorization and sophisticated algorithms
+    is, therefore, reinforced. When using Bag-Of-Words, XGBoost and LightGBM show
+    very similar performance. When using TF-IDF, the LightGBM model provides the better
+    results. Compared to the zero classification, both models demonstrate significant
+    increase in performance.
+
+
+    # 5. Summary & Outlook
+
+
+    In our case, we used gradient boosting ML algorithms, to predict the severity
+    of machine downtime. Based on this, it can be seen that the downtime comments
+    with shop owners are willing to offer explicit reply with our request. However,
+    the forecast lacks high accuracy for direct use in operations. The nature and
+    information content of the data play a major role in the accuracy of the predictions.
+    With 100,000 observations, the dataset is large enough for a particular NLP problem.
+    This task is established by the division into training and test sets. Also missing
+    are some features that could have impact on downtime, such as information about
+    the product or randomness. In the future, autocorrection as well as the filtering
+    of outliers could have a positive impact on the result. For outrection, a production
+    or company-specific lexicon should be used, since the vocabulary is not covered
+    with common implementations. The role model varies in length. Thus, the deployment
+    method should be trained on the data set. Further experiments are needed. Larger
+    datasets such as well of the data could lead to a more comprehensive approach.
+    The use of a standardized comment format could have a positive effect on the result
+    in the long term. Thus, industry readers are advised to keep standardized comment
+    formats, the introduction of specific autocorrection lexicons and early data gathering
+    for large scale NLP in publishing.
+
+
+    # 6. Summary & Outlook
+
+
+    In a nutshell, the need for NLP in manufacturing is evident. With increasing awareness,
+    availability of natural language based on the knowledge and easy NLP pipelines
+    need can be addressed. Thus, this paper proposes a NLP pipeline for the application
+    in manufacturing and the effective application in a case study where machine downtime
+    are successfully predicted based on'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Marvin Karl May et al. / Proceedings CIRP 115 (2022) 184–189
+
+
+    textual descriptions. Downtime prediction being a first step in the application
+    of supervised learning with NLP for results, follow up studies could shed light
+    on a long term, however a thorough analysis of NLP use cases with unsupervised
+    and reinforcement learning is of high interest. By bypassed approaches presented
+    the eligibility of intelligent, reinforcement learning should be considered. Moreover,
+    research could be enhanced with very large datasets from manufacturing and shopfloor.
+    As the application in manufacturing and the shopfloor differs greatly from task,
+    individual techniques on all levels can be beneficial for future NLP. In the future,
+    the analysis may be extended to process hand-written comments by adding a preceding
+    optical character recognition algorithms. Also, a comprehensive NLP application
+    in manufacturing can further promise using cases and lead to the selection of
+    NLP use cases to improve prediction decisions and digital shopfloor management.
+    By focusing on this knowledge, the potential of NLP in manufacturing can be unleashed.
+
+
+    # Acknowledgements
+
+
+    This research was undertaken in the context of DIGIMAN40 "Zero-defect Manufacturing
+    4.0 Production". http://www.digiman40-o.met.dk, DIGIMAN40 is a European Network
+    supported by Horizon 2020, the EU Framework Programme for Research and Innovation
+    (Project ID: 814225).
+
+
+    # References
+
+
+    +   [1] Alfeo, A.L., Cimino, M.G., Vaglini, G., Technical troubleshooting based
+    on sensor data in shopfloor environments using deep transformers. Journal of Industrial
+    Production 118 (2019), 1099–1108.
+
+
+    +   [2] Brown, T.B., Mann, B., Ryder, N., Subbiah, M., Khan, J., Dhariwal, V.,
+    Neelakantan, A., Lyntham, P., Sastry, G., Agrawal, A., Herbert, S., V,, K., Wu,
+    J., Child, R., Ramesh, A., Ziegler, M., Madras, L., Shyam, P., Nayak, J., Clark,
+    B., Bench, C., Chess, B., Radford, S., Sutskever, A., Amodei, D. (2020). Language
+    models are few-shot learners. doi:10.48550/arXiv.2005.14185
+
+
+    +   [3] Colbert, R., Horvitz, W. (2008). A unified architecture for natural language
+    processing. In: Proceedings of the 25th international conference on machine learning
+    -ICML. ACM Press. doi:10.1145/1390126.1390197
+
+
+    +   [4] Devin, J., Wang, M., Lee, K., Toutanova, K. (2018). Pre-training of deep-directional
+    transformers for natural language understanding. doi:10.48550/arXiv.1810.04818
+
+
+    +   [5] Ewouze, T., Horvath, H., Ayouen, B., Boscher, M., Cheroux, G. (2021).
+    Deep learning based fault data mining in manufacturing and industry natural language
+    process management with clustering. In: 2021 IEEE 17th International Conference
+    on Automation and Engineering (CAE). pp. 482–487.
+
+
+    +   [6] He, H., and Zhang, Y. (2021). A heuristic strategy for manufacturing optimization
+    using knowledge graph construction and property learning. Knowledge-Based Systems
+    219, 106962.
+
+
+    +   [7] Kalinder, M., May, M.C., Kurt, J., Kuhle, A., Lanza, G. (2021). Development
+    of a human-centered-of-the-art integration strategy for industry 4.0 production
+    environments: a case study on smart shopfloor management using natural language
+    processing. Springer. pp. 738–745
+
+
+    +   [8] Liao, Y., Li, J., Wang, T., Chen, W., Ma, W., Wu, Q., Liu, Y., T. (2017).
+    Deep learning as an efficient gradient descent deicer. In: NIPS.
+
+
+    +   [9] Li, K., May, M., and Lanza, G. (2021). Explainable reinforcement learning
+    in production control of job shop management systems. International Journal of
+    Production Research–59.
+
+
+    +   [10] Liu, J., and Wang, Q. (2019). Natural language generation for recipes.
+    Academic Press. doi:10.1017/9781501984266_4
+
+
+    +   [11] Leppinen, J., Muller, S., Graf-Mikhail, W., Toomainen, M. (2020). Digital
+    data generation for natural language generation. In: 10th International Conference
+    on Natural Language Generation, Association for Computational Linguistics. doi:10.18653/v1/INLG.20-12
+
+
+    +   [12] Mital, V., Holme, P., Pelna, R., Gabrani, G. (2020). Methodology for
+    research design and job decision support. Journal of Statistics and Management
+    54(3), 215–230.
+
+
+    +   [13] Moon, J., Park, Y., Wang, J., and Lee, J. (2022). Design and evaluation
+    of process discovery based on nlp and visualization for manufacturing systems.
+    Journal of Manufacturing Systems 71, 103–110.
+
+
+    +   [14] Muller, A., Alexander, E., and Metzner, J. (2021). Digital shop floor
+    management enhanced by natural language processing. Conference CRP. 26, 21–26.
+
+
+    +   [15] Qin, X., Sun, T., Xie, Y., Yan, D., Han, N., and Zhou, J. (2022). Natural
+    language processing for the shop floor management through requirements extraction.
+    Production Engineering 552, 334–349. doi:10.1016/j.proproeng.2021.11.067
+
+
+    +   [16] Sebastian, T., Bishop, P., and Holman, M.C. (2017). Transformer-based
+    neural network for question answer answering. In: IEEE 2017 IEEE International
+    Conference on Big Data (Big Data). pp. 1769–1777. doi:10.1109/BigData.2017.8287028
+
+
+    +   [17] Sun, Y., and Devlin, Z. (2019). Transformer-based neural network for
+    question answer in settings. IEEE Access 7, 26146–26156. doi:10.1109/ACCESS.2019.2900753
+
+
+    +   [18] Singh, A.K., and Sharma, M. (2019). Vectorization of text documents for
+    identifying title annual news. Int. J. Adv. Comput. Sci. App. 10, 2
+
+
+    This is a resumpy of March 2023, the terms used in the publication of the original
+    article are. The content of the article has remained unchanged.'
+  merge: -1
+  img_proc: true
