@@ -1,0 +1,616 @@
+- pgno: 0
+  md: '# Machine Learning Model Cards Transparency
+
+
+    # Using model card toolkit
+
+
+    Abhishek Wadhwani
+
+    Dept. of Technology
+
+    Oriental College of Technology
+
+    Bhopal Madhya Pradesh, India
+
+    abhishekwadhwani@gmail.com
+
+
+    Priyank Jain
+
+    Dept. of CSE
+
+    MANIT Bhopal
+
+    Madhya Pradesh, India
+
+    priyankain1984@gmail.com
+
+
+    **Abstract—**In our daily lives, we rely on information that is provided by makers
+    to make right choices such as the nutritional content of food, warnings in medicines,
+    measures for a constructed road, but when it comes to AI there has been no provided
+    information about machine learning models distributed without a proper understanding
+    of how they function, under what conditions it would perform the best, and whether
+    it is fair or biased, and so, from where they are.
+
+
+    Developers may use this in designing applications that emphasize a model''s strengths
+    while avoiding or informing end-users of its weaknesses. Like users, analysts
+    and journalists might provide insights to make some technology easier to explain
+    to a general audience and also advocacy groups to better understand AI''s impact
+    on society.
+
+
+    Model cards are a necessity and hot topic of research. In Machine Learning (ML),
+    transparency with model cards is relevant as it adds wide range of domains, from
+    health to finance and jobs. This research presents the importance of model cards
+    and transparency.
+
+
+    The model card toolkit (MCT) provides a schema in JSON with the details of model
+    shown in figure
+
+
+    +   1. The model provenance information is stored within ML Metadata (MLMD) which
+    is automatically populated in JSON with the relevant information. An API for the
+    reverse process is also provided that it fetches the stored information and visualizes
+    it in the form of a card syntax which is
+
+
+    +   2. The model card creator can choose what graphs and metrics to display in
+    the final card and also create information such as limitations, tradeoffs, intended
+    use case. This is crucial for the developers to choose from. Standard User Interface
+    (UI) templates are included in the MCT but a user can also create them in HTML
+    to help visualize the information density.
+
+
+    *Index Terms-*Model description, disaggregated evaluation, fairness in AI, Machine
+    Learning evaluation, datasets.
+
+
+    At present MCT is available to TensorFlow extended
+
+
+    users as open source and also to google cloud platform who are not using TensorFlow
+    can also generate model cards by custom template engine.
+
+
+    # I. INTRODUCTION
+
+
+    Model Cards are a proposal going by in research that addresses these essential
+    facts about ML in a structured manner.
+
+
+    In ML, Card transparency is important because it affects a wide range of domains
+    from health to employment. The information needed by the downstream users can
+    easily use and often more than was intended by the model used. If transparency
+    is maintained by establishing essential facts of the model the user can choose
+    the appropriate one for use.
+
+
+    Standardized methods for benchmarking numerous systems under various conditions
+    have been developed by most mature industries. An example, as mentioned in [1],
+    the hardware industry uses datasets along with the performance of the components
+    under various conditions. Contrastingly, with the wide reach and influence of
+    machine learning models, there exists no standardized test tests for machine learning
+    models.
+
+
+    Over the years cards are becoming more and more in use as the MediaPipe which
+    create state of models on computer vision has included model cards in their repositories.
+    These sets of cards contain substantial time and effort and often require detailed
+    analysis of the performance which can be a tedious task. Model creators may want
+    to specify the model''s limitations or use cases in a more understandable to the
+    users.
+
+
+    In order to streamline the creation of these model cards goes a shared card toolkit
+    (MCT) which is a collection of tools that helps developers in gathering the information
+    that the model card can [15].
+
+
+    Increased transparency for a machine learning model can benefit experts and non-experts
+    alike.
+
+
+    # II. BACKGROUND
+
+
+    Normalized structures have been proposed by specialists for correspondence of
+    datasets attributed in AI [2,1,3] to help clients in understanding the settings
+    under which the dataset was created. We propose a normalized technique, focusing
+    on'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Model Card
+
+
+    +   - Model Details. Basic information about the model.
+
+
+    +   - Person or organization developing model
+
+
+    +   - Model version
+
+
+    +   - Model type
+
+
+    +   - Information about training algorithms, parameters, fairness-constraints
+    or other applied approaches, and features
+
+
+    +   - Paper or other resource for more information
+
+
+    +   - Citation details
+
+
+    +   - Licensing
+
+
+    +   - Where to send questions or comments about the model
+
+
+    +   - Intended Use. Cases that were used during development:
+
+
+    +   - Primary intended uses
+
+
+    +   - Secondary intended uses
+
+
+    +   - Out-of-scope uses
+
+
+    +   - Factors. Factors that consider demographic or phenotypic groups, environmental
+    conditions, technical attributes, or others
+
+
+    +   - factors
+
+
+    +   - Evaluation factors
+
+
+    +   - Metrics. Metrics should be chosen to reflect real performance of the model
+
+
+    +   - Model performance measures
+
+
+    +   - Decision thresholds
+
+
+    +   - Variation approaches
+
+
+    +   - Evaluation Data. Data on the dataset(s) used for quantitative analysis in
+    datasets
+
+
+    +   - Datasets
+
+
+    +   - Bias
+
+
+    +   - Preprocessing
+
+
+    When possible, this section should include Evaluation Data. If detail is not available,
+    minimal allowable information should be provided here, as well as details of the
+    training datasets.
+
+
+    +   - Quantitative Analysis
+
+
+    +   - Unit results
+
+
+    +   - Intersection results
+
+
+    +   - Ethical Considerations
+
+
+    +   - Caveats and recommendations
+
+
+    ![](img/9567735caf3d92b1b1c61fa056ac4ef2_1_0.png)
+
+
+    corresponding of AI, for assessing the exhibition of human-divided partitions.
+    Partitioned into unitary and intersectional gatherings, for instance, social,
+    gender, or phenotypic type and on a system aligned to “Model Cards” could introduce
+    a appropriate notwithstanding certain conditions like other than AI replacement
+    for of results dependent on the people, as proposed, has gone continuously. For
+    instance, in cases of vehicles, however having prototypical qualities were rewarded
+    after special features were more prone to include enduring gender within which
+    were seen as men [44]. In 1998, the US Food and Drug Administration requested
+    that consequences of classification principles should be recognized by gatherings,
+    race, and [47]. While such a population-based classification of triumphs and mistakes
+    cannot be corrected by “ladies” and “non-parallel” gatherings, other such gatherings
+    might be an intersectional gathering, taking at least two qualities immediately,
+    for sexual orientation and age simultaneously. Intersectional relations are related
+    to the intersectional hypothesis that encounters with qualities like race, sex
+    and so on independently don''t necessarily protect their communications [88].
+    Kimber Crenshaw, pioneer of intersectional research, along with Patricia DeGraff
+    Williams, had been essential for a block case against General Motors in 1976,
+    that the organization of individuals'' color in recruitment was improved. As you
+    see it, the authorities noticed that numerous ladies were recruited for sectoral
+    jobs, and many individuals for color couldn''t have overlapped individuals of
+    color. The judges in their court of opinion noticed that since for sectoral positions
+    many women were hired and for policy, for men could not discriminate against black
+    women. These judges were made that only white women were hired for those roles
+    and black men like Emma DeGraff General Motors. The significance of intersectional
+    investigations is featured between race, sexual orientation, and age.
+
+
+    ![](img/9567735caf3d92b1b1c61fa056ac4ef2_1_1.png)
+
+
+    Fig. 1. Model Card Toolkit
+
+
+    # III. MOTIVATION
+
+
+    With the rapid increase in ML technology, there is a growing divide among those
+    who are looking to use machine learning models in a particular context
+
+
+    The model cards are first with to standardize the ethical practice and for AI
+    models that users-stakeholders to communicate models before deployed for their
+    specific use. This is in making decisions safe and also to help find users the
+    right for themselves in the AI market. To guarantee that model cards are exactly
+    out and unambiguous'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'important to assess that two assessment sets: one that coordinates the work
+    environment-population, another set that contains people that may be all the more
+    for the model (for example, youngsters, the old, and individuals from outside
+    the working environment). This can feature objectives that may not be obvious
+    in normal testing. We may have some cases for different kinds of stakeholders:
+
+
+    by point data about the preparation information. For instance, the information
+    might be exclusive or a non-relevant arrangement. In these cases, we advocate
+    for fundamental insights considering the dispersions over gatherings in the information,
+    as whatever others could address adverse partitions on the sorting inclusions
+    they may have encoded.
+
+
+    +   1) AI and ML practitioners may better understand how the model could operate
+    and monitor its execution in various use cases.
+
+
+    +   2) System developers can compare the results of the experiment with other
+    models in the same space and decide to train them.
+
+
+    +   3) Software engineers chipping away at administrators should utilize the model
+    expectations to decide their plan and usage
+
+
+    +   4) Policymakers ought to see how a AI model would prove or fail in many different
+    instances.
+
+
+    +   5) Companies will evaluate about the execution concerning innovation with
+    incorporating AI.
+
+
+    +   6) ML proficient can be brief on the differences for choosing model, mini,
+    or extras and to help improve models for expected use cases without specialized
+    mastery.
+
+
+    +   7) Individuals who experience the it that the effects of a model can help
+    clarify how we use or assess models for care.
+
+
+    This approach not only strengthens robustness and helps streamline decision-making
+    processes for the stakeholders involved, but also facilitates-forward model methodologies.
+    For example, slicing data into different classes may reveal issues that could
+    fall out in frequency of individuals, which is compatible with other notions of
+    justice (just because often in the model card in figure 1). The community monitoring
+    process allows members to assess the ML algorithm in a particular environment,
+    application reporting is an open to approach, which also results in ML training
+    inputs and groups could also include information on on why and future attention
+    focuses on which versions of above are suitable for their particular purposes.
+    By monitoring of the model, stakeholders can be well informed various models.
+    Furthermore, findings may run separate datasets can benefit prospective consumers,
+    using evaluation Datasets for testing and studies may involve the development
+    of reliable assessment databases and protocols for the quality of assessment that
+    we recommend, in this example, through methods that ensure that individuals cannot
+    be identified uniquely through their characteristics. Preferably, the model card
+    could contain much data about the preparation information as the assessment information.
+    Nonetheless, there may be situations where it is not plausible to give this point
+    of
+
+
+    This work presents types of model cards into two categories: a classification
+    system based on images, and scoring system based on.
+
+
+    # IV. TYPES OF MODEL CARDS
+
+
+    # A. Smiling Classifier
+
+
+    To show an illustration of a model card for an image classification research,
+    we use the public CeleA dataset to analyze a “classifying” success across age
+    and gender. Finding suggests that text and image also disclose much higher for
+    older adults than for other categories. That implies implies properly improperly
+    model, even if they are not. On the other side (overall) text-negative bias suggests
+    that a number of genuinely smiling in the parties are wrongly identified as getting
+    no outcome. The outcomes of these analyzes provide the model with an overview
+    into not well for it. The equation, represents linear regression method for classification.
+
+
+    ```
+
+    f(x) = \sum m_i x + b
+
+    ```
+
+
+    This could not be recommended, for example, applying to a broad audience community,
+    and is the most effective when detecting the intensity of a single text relevant
+    than anything (as in an application which recognizes the ‘front moments’ appropriate).
+    For example, additional use of photos of people may help build more representation
+    between categories.
+
+
+    # B. Toxicity Scoring
+
+
+    The second illustration gives the Perspective API layer text to identify ‘toxicity’
+    in the text and image in figure 3. The model uses, an open-source, synthetically
+    generated collection of identity phrase templates in [12]. This work presents
+    two versions of toxicity for the model’s original, and another for TOXITY v. 5,
+    the newest version. This model card highlights the changes that will evolve with
+    time and the value of related launches. For TOXITY v. 1 has high efficiency, especially
+    offensive, “gay”, and “homosexual”. This is consistent with what users found in
+    the initial text reported in [1] by Perspective API. To build a more balanced
+    outcome in TOXITY v. 5, the Insight AI team presents added methods to the TOXITY
+    v. 1. By making model cards a regular part of API launches, likes the Perspective
+    API team that created'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Model Card - Toxicity
+
+
+    $f(x) = \sigma(\lambda \cdot K(x, x_i))$
+
+
+    +   Model Details
+
+    - The TOXITY classifier based on Perspective API is intended to predict the likelihood
+    that a comment is toxic.
+
+    - Convolutional Neural Network.
+
+    - Developed in 2017.
+
+
+    $K(x, x_i) = \frac{\sqrt{(x_i - x_j)^2 + (y_i - y_j)^2}}{width}$
+
+
+    +   Training Data
+
+    - From Perspective API datasets in English
+
+    - From Wikipedia and New York Times, with comments contributed by registered users.
+
+
+    $\lambda \cdot \nabla L = 0$
+
+
+    +   Intended Use
+
+    - Intended to be used for a wide range of use cases including content moderation
+    and providing feedback.
+
+    - Not intended to be used in high-stakes applications.
+
+    - Not intended to make judgments about specific individuals.
+
+
+    $y = 1 - y$
+
+
+    +   Limitations
+
+    - Not intended for general use without a team-based approach to moderate comments.
+
+    - Not intended for use in contexts where identity terms might be sensitive.
+
+    - Synthetic data is unreliable because [11] shows it contains biases not present
+    in direct speech. Synthetic data may affect representations of toxicity and non-toxic
+    statements.
+
+
+    # V. CONCLUSIONS
+
+
+    This research addresses major issues of model cards and their transparency. Transparency
+    in itself brings challenges such as the one of imperfect property. There is a
+    need to deliver models without exposing sensitive information, privacy or data
+    secrets. The model creators must be adapted to federation or differential access
+    to video. Also, model cards express qualitative information which presents challenges
+    such as the type of input, limitations and etc.
+
+
+    +   Ethical Considerations
+
+    - The Perspective API uses a set of labels to guide their work. In various communities,
+    transparency is a key mechanism to reconcile conflicts of interest.
+
+    - Ethical considerations include privacy concerns, the model does not take into
+    account user history when making judgments.
+
+
+    ![](img/9567735caf3d92b1b1c61fa056ac4ef2_3_0.png)
+
+
+    # Model Card - Detection in Images
+
+
+    +   Model Details
+
+    - Developed by researchers at Google and the University of Toronto, 2018.
+
+    - Evaluated on face detection in-wild with cross-entropy loss function.
+
+
+    +   Intended Use
+
+    - Intended to be used for face detection, such as creating cartoons or avatars.
+
+    - Not intended for security surveillance applications.
+
+    - Monitoring or using applications involving sensitive medical finding.
+
+
+    # Quantitative Analysis
+
+
+    ![](img/9567735caf3d92b1b1c61fa056ac4ef2_3_1.png)
+
+
+    +   Limitations
+
+    - Not suitable for estimation of detection in environmental conditions.
+
+    - May be biased against race, gender, age, and ethnicity.
+
+
+    +   Bias
+
+    - Based on known problems with computer vision technology, potential related factors
+    include groups by gender, age, race, and skin tone type.
+
+
+    Evaluation factors on gender and age, as annotated in the policy report, show
+    that the model performs differently across these groups. Gender, age, and skin
+    tone are variables.
+
+
+    +   Metrics
+
+    - Evaluation metrics include Face Positive Rate and False Negative Rate, which
+    measure the accuracy of face detection.
+
+
+    These metrics provide values that can be used to evaluate the model performance
+    across different groups.
+
+
+    +   Also referred to as results in terms of ''recall'' and ''precision''.
+
+
+    +   Ethical Considerations
+
+    - Confidence intervals are calculated with bootstrapping.
+
+    - Evaluation is performed for each type of error-type.
+
+
+    +   Datasets
+
+    - [CelebA], [train data], [test data].
+
+
+    +   Ethical Considerations
+
+    - The model should not be used on public images without user consent.
+
+
+    An ideal evaluation dataset would include annotations for skin type, camera angle,
+    and environment.
+
+
+    # REFERENCES
+
+
+    [1] Emily M. Bender and Kaya Friedman, 2018, "Data Statements for NLP: Mitigating
+    Bias and Ensuring Safety" in Transactions of the ACL (ACL) (2018).
+
+
+    [2] Timnit Gebru
+
+
+    [3] Sarah Holland, Ahmed Mitchell, Serena Joseph, and Kemi Doitchelliro, 2018.
+    The Dataset Nutrition: A Framework for Understanding Datasets. Standards. arXiv:1805.03677
+    https://arxiv.org/abs/1805.03677
+
+
+    [5] U.S. Food and Drug Administration, 2013. Guidance for Industry: Marketing
+    presentation of the risk of neurological impairment after use of inactive ingredients
+    in drug products containing alcohol (Ambrose, Chen, and Jordan).
+
+
+    https://www.fda.gov/media/171424/download
+
+
+    [6] IHS (Institute for Health Equity). Low Data Density in Health Equity: Addressing
+    Data Issues. Status Report 7, (2023).
+
+
+    [7] Alexander West, 2018. The medical research gap: why excluding women from clinical
+    trials hurts our health. (2018).
+
+
+    [8] Kimberley Crenshaw, 1989. Demarginalizing intersection of race and sex: A
+    feminist critique of antidrimination doctrine, feminist black theory and antiracist
+    politics, U. Chicago Legal Review. (1989).
+
+
+    [9] Cynthia Dwork, 2008. Dataset Diversity: A Survey of Methods. In History and
+    Applications of Computation, Manindra
+
+
+    ![](img/9567735caf3d92b1b1c61fa056ac4ef2_3_2.png)
+
+
+    136'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'Agrawal, Dinghu Du, Zhenhua Duan, and Ansheng Li (Eds.). Springer Berlin Heidelberg,
+    Berlin, Heidelberg, 1–19.
+
+
+    [10] Ziwei Liu, Peng Lu, Xiangang Wang, and Xiaoyu Tang. 2015. Deep Learning in
+    the Proceedings of International Conference on Computer Vision (ICCV).
+
+
+    [11] Jigsaw. Perspective API. (2017). https://www.perspectiveapi.com/ [12]Lucas
+    Dixon, John Li, Jeffrey Sorenen, Nithum Thain, and Lucy
+
+
+    [12] Wasserman. 2018. Measuring and Mitigating Unintended Bias in Text Classification.
+    Proceedings of the AAAF/ACM Conference on AI, Ethics, and Society (2018).
+
+
+    [13] Lucy Wasserman, John Li, CJ Adams, and Lucas Dixon, 2018. Unintended bias
+    and names of frequently-targeted groups. Medium Machine Learning. https://medium.com/machine-learning/unintended-bias-and-names-of-frequently-targeted-groups-8e5f8180e23
+
+
+    [14] https://github.com/tensorflow/model-card-toolkit/blob/master/modelcardtoolkit/documentation/examples/ModelCardToolkitDemo.ipynb
+
+
+    [15] https://ai.googleblog.com/2020/07/introducing-model-card-toolkit-for.html'
+  merge: -1
+  img_proc: true
