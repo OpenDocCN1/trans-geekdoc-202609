@@ -1,0 +1,672 @@
+- pgno: 0
+  md: '# 2020 International Conference on Interdisciplinary Cyber Physical Systems
+    (ICPS)
+
+
+    # # Real Time Arrhythmia Detecting wearable using a Novel Deep Learning Model
+
+
+    Sayak Banerjee
+
+    School of Electronics
+
+    Engineering
+
+    Vellore Institute of
+
+    Technology
+
+    nVellore, India
+
+
+    Arin Paul
+
+    School of Electronics
+
+    Engineering
+
+    Vellore Institute of
+
+    Technology
+
+    Vellore, India
+
+
+    Amshika Agarwal
+
+    School of Electronics
+
+    Engineering
+
+    Vellore Institute of
+
+    Technology
+
+    Vellore, India
+
+
+    Sumit Kumar
+
+    School of Electronics
+
+    Engineering
+
+    Vellore Institute of
+
+    Technology
+
+    Vellore, India
+
+    sumijindi08@gmail.com
+
+
+    **Abstract** Arrhythmia is by-far the most common cardiovascular ailment. It makes
+    the heart with an irregular rhythm; either too fast or too slow. Atrial fibrillation
+    is the well-known form of arrhythmia which occurs when the upper chambers of the
+    heart (atria) experiences chaotic electrical signals and results in rapid heart
+    rate. Although initially it may not have any symptoms if the electrocardiogram
+    (ECG) is used to find out if the patient is suffering from atrial fibrillation.
+    ECG helps to diagnose arrhythmia. In this work, we use signal pre-processing with
+    a Deep Learning Model of I-D Convolutional Neural Network to classify single-lead
+    ECG into different categories. The model classifies between sinus rhythm, atrial
+    fibrillation, noise ECG and others with high precision and displays the results
+    and notifies the user about a condition that might be connected to arrhythmia.
+    This method is fast and reliable for the early diagnosis of arrhythmia which patients
+    can follow proper protocols to avoid complications.
+
+
+    33.5 million people suffer from Atrial Fibrillation to grow exponentially, due
+    to the unhealthy lifestyle of people. This work mainly aims at distinguishing
+    atrial fibrillation - the most common cause of cardiac arrhythmia which is most
+    severe as well as growing at rapid pace.
+
+
+    **Keywords ** - ECG arrhythmia; atrial fibrillation; ECG; wearable technology;
+    deep-learning; code
+
+
+    Electrocardiogram (ECG) is a common test used to diagnose Atrial Fibrillation.
+    The traditional way of using ECG is when the doctor or the cardiologist takes
+    the decision and is without monitor. Continuous monitoring and therefore, a self-portable
+    device is needed in the last. In recent decades, many of work has been done to
+    enable automatic ECG analysis and classification. Conventional methods are already
+    used using different methods of Machine Learning commonly used in hospitals.
+
+
+    # I. INTRODUCTION
+
+
+    Nowadays, deep learning based neural networks are used for computer vision, signal
+    processing. Cardiac Arrhythmia is a condition in which the heart beats at not
+    normal rhythm. It may be caused by bradycardia or tachycardia Ventricular fibrillation
+    or Atrial Fibrillation by changes in the tissues. According to the European Society
+    of Cardiology (ECG), arrhythmia accounts for 15-20% of all cardiovascular cerebrovascular
+    as ischemic stroke which is commonly associated with heart failure. And Ventricular
+    Tachycardia is the most popular causes of cardiac arrhythmia.
+
+
+    Atrial Fibrillation is a medical condition rather than a disease, which causes
+    the heart to beat chaotically which results in stroke or heart failure resulting
+    in permanent paralysis or death. Ventricular Tachycardia causes fast, unpredictable
+    rhythm originating from unstable electrical signals which results in the ventricles.
+
+
+    With Parallely, for classification, many works have been done by choosing the
+    right features. However the it is constructed by high dimensionality reduction.
+
+
+    On the other hand, input features were extracted using wavelet transform or higher-order
+    statistics with such complex statistics and signals to process these algorithms
+    resulted in poor or average accuracy high error.
+
+
+    Deep learning with significant layer helps in detection of fibrillation is preferred
+    over machine learning. Here, deep learning based classification algorithms are
+    used for ECG and arrhythmia detection.
+
+
+    In this work, the authors propose a novel idea using a four-layer deep learning
+    model which consists of 1-D Convolutional Neural Networks (CNN) which extracts
+    representation features and Long Short-Term Memory (LSTM) which extracts sequence
+    features with the Dense layer then processes the ECG result into 4 classes. The
+    classified result is then shown on the NodeMCU, which is saved in Google Firebase.
+    The data is collected here as a real-time database. From the database, the results
+    and the notifications are being displayed in a mobile application. This is highly
+    effective, cost-effective alternative to the conventional system makes things
+    convenient but
+
+
+    978-1-723-9654-1/5020/10.00020 IEEE
+
+    DOI 10.1109/ICPS518.2020.00009
+
+
+    14
+
+
+    Authorized licensed to use: National University of Singapore. Download on 04 July
+    2021 at 13:58:46 UTC from IEEE Xplore. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: "also claims a higher accuracy as compared to the expected conventions.\n\n\
+    Temporal characteristics of a non-deterministic signal is often used by researchers\
+    \ and professionals nowadays. They mainly focus on a few important and promising\
+    \ features in that. There are a few overlooked chunk or group of information which\
+    \ sometimes becomes the basic block of classification. If information and the\
+    \ results are in the median of all human-central classification and analysis of\
+    \ these signals then generation of information can be reconstructed and used in\
+    \ the methodology of EEG signal. Signal representation is a two-step procedure\
+    \ which can be done by performing windowing and by use of Fuzzy logic.\n\nFor\
+    \ the purpose of building the deep learning model the features used, 8259 samples\
+    \ of short-leaf ECG dataset has been used. ECG signals have been sampled with\
+    \ a sampling frequency of 300Hz. The duration of each varies between 2 and 1 min.\
+    \ The dataset has been divided into four classes. There are 5154 samples classified\
+    \ to the normal sinus rhythm while 771 samples have been allotted to atrial fibrillation.\
+    \ 2257 samples of EEG have been labelled as others and only 46 samples of the\
+    \ available 8258 samples are used.\n\n# II. LITERATURE REVIEW\n\nArrhythmia in\
+    \ infants is highly avoidable, but an ECG test in month or two may not be able\
+    \ to detect such disorder. A continuous monitoring of the heart in this area of\
+    \ concern does not provide any reliable or convenient solution for common people.\
+    \ Methods of this practice include the lack of practical implementation, connectivity\
+    \ issue over the data transport, and the accuracy and performance of classification\
+    \ methods used procedure.\n\nCurrent research on ECG classification is mainly\
+    \ based on Deep Learning techniques. Each of them like KNN, SVM, Random Forests\
+    \ are being used for single classification but in a single ECG signal multiple\
+    \ cardiac problems. Multi-level classification (MLC) is being used for problems\
+    \ where one is adaption and another is problem transformation. Now problem transformation\
+    \ approach use Binary Relevance to transform multi-label problem into binary level\
+    \ classification without the consideration of label correction whereas adaptation\
+    \ approach uses some efficient algorithm as SVM. These approaches have intrinsic\
+    \ properties and generation of output depending on what goes well with that particular\
+    \ case: [1]\n\nIt has been noted that convolutional neural networks (CNNs) are\
+    \ combined with recurrent neural networks (RNNs) and the combination is used in\
+    \ distinguishing sound or words recognition it gives much better performance.\
+    \ By combining RNNs into a single model resulted in convolutional recurrent neural\
+    \ networks (CRNN).\n\nElectrocardiogram (ECG) is one of the most popular paradigm\
+    \ which helps in diagnosis of cardiovascular disorder. The performance of Artificial\
+    \ Neural Networks has outperformed other methods like Bayes, Markov Model, Expert\
+    \ System and Hidden Markov Models. This is not ANN ability to manage classification\
+    \ which is not between classes and accept partial or absent patterns.\n\nThe CRNN\
+    \ layer helps in extracting features and patterns from ECG data. Obtained features\
+    \ are then transformed into a series prediction; in this case the RNN. The recurrent\
+    \ neural network layers extract further insight from the patterns data. Finally,\
+    \ we analyze and compare the proposed model with different ML algorithms like\
+    \ SVM or k-NN:\n\nArtificial Neural Network (ANN) takes place of classifying techniques\
+    \ which are mainly based on Hidden Markov Model (HMM) are used for some of them.\
+    \ For non-stationary signals like Wavelet Transform is very useful with special\
+    \ transform as temporal Wavelet Transformation (DWT) and Morphological are used\
+    \ for training the ANN which enhances performance. Non-stationary ECG signal classification\
+    \ is a four-step process where the signal is processed, then Y is classified.\
+    \ Wave features are followed by the detection of P and T wave. The penultimate\
+    \ step includes taking beneficial features from the crest and edge of ECG. The\
+    \ last step of the classification is. \n\nThe working of patient-specific ECG\
+    \ classification methods was possible with cutting-edge differ and deep learning\
+    \ methods yielding results that the performance of each patient gave much better\
+    \ than a particular individual. This is a flexible mechanism of a 1-D convolutional\
+    \ neural network (CNN). The method is used for extracting features and classification\
+    \ of ECG signals. A basic CNN model is used for patient-specific ECG data.\n\n\
+    Patient feature extraction performance is required for every patient by every\
+    \ expert by evaluating each patient's ECG data. A trained convolutional model\
+    \ for specific case, it would be very well for the patient's real-time ECG monitoring.\
+    \ However, it is also possible to develop an early alert system on a wearable\
+    \ device. However specific models are not a feasible to a solution-deep learning\
+    \ wearable device which can be used for consumers for real-time monitoring and\
+    \ analysis, [7]\n\nIn recent works although classification using determined QRS\
+    \ features of ECG signals with deep learning architecture is becoming. The performance\
+    \ of such techniques depends on extracting features"
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'along with their peaks. Peak ECG signals
+
+    through bandpass filters reduce noise which facilitate
+
+    peak detection is achieved using the Pan-Tompkins
+
+    algorithm. Abstract features include RR, QQ
+
+    interval, IP interval among several others.
+
+    The extracted features are times series data
+
+    and time series prediction such as
+
+    RNNs or LSTMs. Such a model significantly reduces
+
+    training time due to the fact that the LSTM layers are
+
+    pre-defined features and are highly accurate in the
+
+    required task [9]
+
+
+    Imbalanced datasets where the classification are
+
+    not equally represented is one of the hurdles that can
+
+    ing inadequate or misleading results. Many
+
+    eorts have been made by researchers to tackle
+
+    this problem. Few works have been done down-
+
+    sampling or over-sampling techniques. SHINKRY
+
+    systems have come up which differentiates between
+
+    regions of different clusters. Further work has
+
+    been done using down-sampling and Synthetic
+
+    Minor Over-Sampling Technique (SMOTE)
+
+    izes a unique approach in which the minority
+
+    class is over-sampled by filling with artificial data
+
+    points. These classes have equal number of
+
+    similar to the class with the maximum number.
+
+    H, SMOTE provides a good amount of recall and
+
+    precision over other approaches. [9] [10]
+
+
+    # III. SYSTEM MODEL
+
+
+    The entire system architecture is described by the flowchart
+
+    in Fig. 1.
+
+
+    | Raw ECG Signal | Training and Padding of ECG Signal | Normalization of ECG Signal
+    |
+
+    |---|---|---|
+
+    | Results | Training of Model | SMOTE |
+
+    | NodeJS Board | Cloud Database | Mobile Application |
+
+
+    Fig. 1. Block Diagram of the proposed System
+
+
+    # B. Binding and Tuning of Signal
+
+
+    ECG is a continuous and non-deterministic signal
+
+    any type of classification is not possible. Thus, the ECG
+
+    s have been sampled at a sampling rate of 300
+
+    samples/sec. The dataset contains ECG signal of during
+
+    varying from 9 s to more than 60 s. For unanimity 750
+
+    samples from each signal have been taken which is
+
+    25s of duration. Signals having duration less than that
+
+    been padded with zeros. The trimmed data gives good
+
+    results and ensures no data loss.
+
+
+    # C. Normalizing the ECG signal
+
+
+    The sampled value of ECG produces a wide range of values,
+
+    which might mislead the lead absolute values of
+
+    one instance for the instance of all instances.
+
+    to prevent such situation data normalization is being
+
+    d adding to a common scale. For better accuracy,
+
+    t mean of the data is adjusted by subtracting
+
+    original value which is divided by its maximum
+
+    absolute value. Thus, the normalized data lies within the
+
+    nof [-1, 1].
+
+
+    # D. SMOTE
+
+
+    As we can observed the Patient dataset is imbalanced
+
+    There are 5154 samples belonging to normal
+
+    rhythm class while only 46 samples belong to the
+
+    Noisy ECG class. Hence, to balance the SMOTE
+
+    alalgorithm is used. This technique over-samples the\minority class by filling
+    with artificial data
+
+    points.nsamples similar to the class normal sinus rhythm
+
+    number, i.e. This technique is not only being applied on the training dataset
+
+    would lead to increased accuracy and performance.
+
+    after applying SMOTE using a ratio factor of 1 to 4
+
+    each class contains samples from 1765 to 18400
+
+    sach each have 4620 samples. The authors
+
+    proposed the model before and after applying this
+
+    case training the test dataset gives much better performance and accuracy on the
+
+    test dataset.
+
+
+    # F. Deep Learning Model Architecture
+
+
+    In this work, the authors have proposed a unique deep
+
+    learning model. The DL model has fourteen layers. Layers of ID convolution have
+    used. These ID
+
+    convolution layers are used for feature extraction
+
+    preprocessed and ECG signals. For each
+
+    convolution layer a 1D MaxPooling layer with a
+
+    stride of 2 pixels. MaxPooling layers then show the
+
+    feature maps from the CNN operation by selecting the
+
+    maximum value along its stride, this reduces
+
+    redundant data in the feature maps and maximizing redundant
+
+    information. The CNN layers have kernel sizes of 10, 6, 5, 3
+
+    respectively. Dropout layers with values 0.05, 0.10, 0.15 are
+
+    starting after the convolutional CNN for
+
+    regularization. Regularization warrants that the model does
+
+
+    16'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'not training-data. ''logit unform'' class has been used as the layers-weight
+    initializer in it.
+
+
+    The extracted features are fed into two LSTM layers with 64 outputs each LSTM
+    layers from traditional/conventional RNN. (Recurrent neural network) layers have
+    obstructive nature and learning long term dependencies. LSTMs work better with
+    sequences prediction data if there is enough data which is true for this. The
+    main advantages of LSTM over traditional network is that LSTM layers have loops
+    in them with memory units. They allow information to persist. A LSTM layer also
+    has a hidden structure like the RNN. Without using a single NN layer in RNN they
+    have four layers, interacting with the data in a flexible way. Finally, the output
+    layer for the reactive neurons is activated by Soft activation function. Each
+    neuron gives a probability value of the signal belonging to the class. The class
+    to which the classifier gives maximum probability is to that class label for the
+    given signal.
+
+
+    The model was executed using Keras functional API. Keras is supported by Tensor
+    flow backend. ''Adam'' optimizer, ''categorical cross'' loss function and [''accuracy'']
+    metrics are used to compile the model.
+
+
+    # H Hardware Implementation
+
+
+    The flowchart of the hardware implementation for the proposed smart application
+    is given in Fig. 4.
+
+
+    ![](img/cca51b32600c08da07bc3d739952c81a_3_0.png)
+
+
+    # G. Training of the DL
+
+
+    After applying SMOTE oversampling technique, there are 18480 samples in the training
+    set. 10% of the original data, 853 samples are in the test set. The model is trained
+    for 75 epochs at the end of which the model is given training loss of 0.015, validation
+    loss of 0.056, validation loss of 0.0545 and validation accuracy of 84.64%. The
+    validation loss is plotted in Fig. 2. In training vs test accuracy and loss in
+    each epoch is plotted for visualization.
+
+
+    NodeMCU ESP8266 has been used for the hardware implementation of this part. NodeMCU
+    is a microcontroller with enhanced API for ESP8266, GPIOs, I2C, ADC and PWM for
+    prototyping. The NodeMCUs are used as prototype in our project.
+
+
+    The NodeMCU takes real ECG signal from source ECG Sensor. The ECG signal is sent
+    through bootstrap filter, sampled at 300Hz and normalized to [0, 1] before entering
+    the model. The model predicts the output of real-time ECG input. The output is
+    sent to web-server by publishing using writeAPI key, which is further read by
+    the NodeMCU using readAPI key. The NodeMCU detects whether the ECG signal is normal
+    or Atrial Fibrillation based on the output generated by the model of numerical
+    value between 0 and 2 (0: Normal 1: Atrial Fibrillation 2: Noisy). Then it generates
+    a notification to be displayed in the mobile app with the result. The notification
+    is then sent to a test database Firebase which stores the medical history of each
+    user. The medical history is shown below in Fig. 5. The most recent result is
+    retrieved from the database and eventually shown through a mobile application.
+
+
+    ![](img/cca51b32600c08da07bc3d739952c81a_3_1.png)
+
+
+    Fig. 2. Training vs Test Loss
+
+
+    ![](img/cca51b32600c08da07bc3d739952c81a_3_2.png)
+
+
+    Fig. 3. Training vs Test Accuracy
+
+
+    ![](img/cca51b32600c08da07bc3d739952c81a_3_3.png)
+
+
+    Fig. 5. Database of Test Results and Notifications'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# I. Mobile Application
+
+
+    The mobile application developed acts as the device for the proposed wearable.
+    The mobile app is connected with the real-time Firebase database in the backend.
+    History of results from the ECG test and the notifications are available. The
+    mobile application retrieves the most recent medical test result and displays
+    it. A snap of the user interface of the application along with the retrieved notifications
+    is shown below Fig.
+
+
+    The predicted output is sent to the NodeMCU (acting as the prototype). Results
+    and notification are compiled and pushed to the real-time Firebase database. The
+    mobile application retrieves the data and displays it.
+
+
+    TABLE I. confusion matrix
+
+
+    | Predictions by our Model |
+
+    |---|---|---|---||
+
+    | Sinus Rhythm (N) | Others | Noisy A/L | Support |
+
+    | Sinus Rhythm (N) | 497 | 34 | 0 | 534 |
+
+    | Others | 61 | 160 | 14 | 238 |
+
+    | Atrial Fibrillation (AF) | 4 | 12 | 61 | 77 |
+
+    | Noisy S | 0 | 0 | 4 | 4 |
+
+
+    ![](img/cca51b32600c08da07bc3d739952c81a_4_0.png)
+
+
+    Fig. 6. Result and Notification displayed in the mobile application
+
+
+    # V. COMPARISON WITH EXISTING LITERATURE
+
+
+    Now the F_1 value of the technique is differentiated with the existing literature
+    and performance. The comparative study is shown in Table II.
+
+    The model produces a F_1 value of 70% which is among the top 2 scores of existing
+    techniques. This really feels good the main aim in our work was to classify fibrillation
+    from ECG signals as fibrillation is the most common cause of cardiac arrhythmia
+    and increasing at a rapid rate.
+
+
+    TABLE II. confusion matrix with existing literature
+
+
+    | Title | F1a | F1b | F1c | Fip |
+
+    |---|---|---|---||
+
+    | Classification of Atrial Fibrillation in Short-term ECG Recordings Using Machine
+    Learning Approach and Hybrid QRS Detection | 86 | 76 | 78 | |
+
+    | Atrial Fibrillation Detection and Classification based on Convolutional Recurrent
+    Neural Network, [6] | 89 | 78 | | |
+
+    | Atrial Fibrillation Classification from a Single-Lead ECG Recording using Hierarchical
+    Classifier | 78.2 | 80.4 | 85.2 |
+
+    | Automatic Detection of Atrial Fibrillation and Arrhythmia as Holer ECG recordings
+    using recurrent networks, [13] | 91 | 80 | 74 | |
+
+    | Convolutional Recurrent Neural Networks for Electrocardiogram Classification,
+    [14] | 87.8 | 79.1 | 65.3 |
+
+    | Proposed technique | 91 | 79 | 73 | |
+
+
+    # IV. RESULTS AND DISCUSSION
+
+
+    By using 100% of the original dataset as test i.e. 853 samples we get a test accuracy
+    of 84.64%. SMART technique used to up sampling data to 84 samples got a test accuracy
+    of 94.95%. F_1 performance has been calculated on the 2017 PhysioNet Cardiology
+    challenge. A score of -91%, F_1 score of -79%, and Fip score of -73% with an overall
+    F_1 score of 81 obtained. These values are calculated in the given score of 2017
+    PhysioNet challenge. Table 1 visualises the confusion matrix of the test dataset.
+    The cells in Table 1 are the true positives for the corresponding ECG signals
+    and confirm the fact that they have correctly classified.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# VI. CONCLUSION
+
+
+    A real arrhythmia detection was implemented in this work which can detect such
+    problem from ECG signal. We can also continue monitoring of the user''s cardiac
+    health, thus without any avoid conditions of developing arrhythmia which
+
+
+    Therefore, the authors have successfully built a prototype of lightweight wearable
+    Arrhythmia Detector that classifies ECG signals. This can also be used with other
+    hand bands like which provide ECG signal of the user. Further, the use of CNN
+    and Long Short Term Memory in this work will increase accuracy and make the application
+    makes more convenient for patients.
+
+
+    The proposed model can be upgraded with better methods for recording ECG signals
+    which increases accuracy due to its low-noise and accurate. Further use of chatbots
+    in the mobile application further enhances its capabilities to people who face
+    problems handling end smartphones or the version to be available in different
+    languages.
+
+
+    # REFERENCES
+
+
+    +   [1] J. Sun, G. Wang, and C. Yan, Multi-Label ECG Signal Classification Based
+    on Ensemble, in IEEE Access, vol. 8, pp. 117996–117996, 2020, doi: 10.1109/ACCESS.2020.300490
+
+
+    +   [2] R. Silipo and C. Marquez, Artificial neural networks for automatic ECG
+    analysis, in IEEE Transactions on Signal Processing, vol. 46, no. 5, pp. 1415–1427,
+    1998, May, doi:10.1109/76.6883
+
+
+    +   [3] N. K. Dewan and S. P. Shikila, “ECG arrhythmia classification using wavelet
+    transform and artificial neural networks,” in 2016 IEEE International Conference
+    on Electronics, Information & Communication Technology (RETICT), 2016, pp. 1892–1896,
+    doi: 10.1109/RETICT.2016.708164
+
+
+    +   [4] A. Gacek and D. Weyner, “A Grammar Detection of ECG Signals,” in IEEE
+    Transactions on Biomedical Engineering, vol. 50, no. 5, pp. 1982–1982, 2003, doi:10.1109/TBME.288172
+
+
+    +   [5] X. Chen, J. Li, K. Loparo and P. Li, “Real-time personalized arrhythmia
+    detection and diagnosis: A cloud computing architecture,” 2017 IEEE International
+    Conference on Biomedical & Health Informatics (BHI), Orlando, FL, 2017, pp. 201–214,
+    doi:10.1109/BHI.2017.89722
+
+
+    +   [6] M. Linam and F. Preioso, “Atrial fibrillation detection and classification
+    using recurrent neural network,” 2017 Computing in Cardiology (CinC), Rennes,
+    2017, pp. 1–4, doi: 10.22489/CinC.2017.171-325
+
+
+    +   [7] S. Kiranyaz, T. Ince and M. Gubboi, “Real-Time Patient-Specific ECG Classification
+    by 1-D Convolutional Neural Networks,” in IEEE Transactions on Biomedical Engineering,
+    vol. 63, no. 3, pp. 664–675, 2016, doi:10.1109/TBME.2015.246858
+
+
+    +   [8] V. Maknickas and A Makinas, “Atrial fibrillation classification using
+    QR features and LSTM,” 2017 Computing in Cardiology (CinC), Rennes, 2017, pp.
+    1–4, doi:10.2249/CinC.2017.350.114
+
+
+    +   [9] N. V. Chava, L. O. Hall, K. W. Boyer, and W. P. Keyes. Smote: Minority
+    oversampling technique. Journal of Artificial Intelligence Research, (16):321–357,
+    2002.
+
+
+    +   [10] C. Seifert, T. M. Ghoshajar, J. Vanse and A. Napolit, “RUSBOOST: Improving
+    classification performance when data is skewed,” 2008 International Conference
+    on Pattern Recognition, Tampa, FL, 2008, pp. 1–14, doi:10.1109/ICPR.2008.476297
+
+
+    +   [11] M. Soliski, A. Perka, J. Rosinski, M. Lepek and J. Rymko, “Atrial fibrillation
+    classification in short ECG using machine learning and hybrid algorithms,” 2017
+    Computing in Cardiology (CinC), Rennes, 2017, pp. 1–4, doi: 10.22489/CinC.2017.337
+
+
+    +   [12] E. E. Copola, P. K. Kowyala, N. Djaima, D. Glaime and L. Wang, “Atrial
+    fibrillation classification from short ECG recording using hierarchical classification,”
+    2017 Computing in Cardiology (CinC), Rennes, 2017, pp. 1–4, doi:10.22489/CinC.2017.354-425
+
+
+    +   [13] F. Piesler, P. Neijedly, I. Viscor, J. Halamek and P. Jurak, “Automatic
+    detection of atrial fibrillation and arrhythmias holter eclectic using rhythm
+    features and neural networks,” 2017 Computing in Cardiology (CinC), Rennes, 2017,
+    pp. 1–4, doi:10.22489/CinC.2017.364'
+  merge: -1
+  img_proc: true

@@ -1,0 +1,2 @@
++   [2020年跨学科信息物理系统国际会议 (ICPS)(印度金奈纳 2020.12.28-2020.12.29) 2020年跨学科信息物理系统国际会议 (ICPS)](README.md)
++   [2020年跨学科信息物理系统国际会议 (ICPS)(印度金奈纳 2020.12.28-2020.12.29) 2020年跨学科信息物理系统国际会议 (ICPS)](2020-international-conference-on-interdisciplinary-cyber-phy.md)
