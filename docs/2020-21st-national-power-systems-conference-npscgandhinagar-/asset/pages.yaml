@@ -1,0 +1,546 @@
+- pgno: 0
+  md: '# An Ensemble Model for Short-Term Wind Forecasting using Deep Learning and
+    Gradient Boosting Algorithms
+
+
+    Deshesh Kumar, Student Member, IEEE, Rishab Abhin, Student Member, IEEE, and
+
+    aran Pindoriya, Senior Member, IEEE
+
+    Electrical Engineering, Institute of Technology Gandnagar, Gujarat, India
+
+    Email: dehesh.kumar,rishabh.abhin,naran@itgn.ac
+
+
+    Abstract— Accurate wind power forecasting is crucial for energy management and
+    plays a significant role in making wind power producers competitive in the electricity
+    market. Deep learning and gradient boosting decision-based algorithms have been
+    proven in extreme scenarios to achieve good results. Since wind speed is highly
+    volatile and varies both temporally and geographically, algorithms perform well
+    in constrained datasets and poorly in others. For instance, it is better to use
+    an ensemble model rather than relying on a single model. By combining the benefits
+    of four machine learning algorithms, including Convolutional Neural Network (CNN),
+    Long Short-Term Memory (LSTM), Gradient Boosting (LightGBM), and Extreme Gradient
+    Boosting (XGB), to demonstrate the effectiveness of the proposed model, we utilize
+    data from an actual wind field study. The proposed model outperforms the individual
+    models and predicts wind power for different months with significant accuracy.
+
+
+    On the other hand, methods learn the relationship between past and future data
+    without explicitly programmed. Decision learning algorithms have been used for
+    prediction due to their interpretability and simplicity [7]. It uses a boosting
+    technique where weak learners are used to reduce bias and improve their error
+    over each sequence. Gradient boosting is a powerful technique which utilizes parallel
+    processing and regularization to overcome bias and overfitting [8]. Gradient Boosting
+    Machine (LightGBM) is a highly efficient gradient-based algorithm that fosters
+    level-wise growth resulting in significant loss reduction [9].
+
+
+    Keywords—Neural network, deep learning, ensemble model, extreme gradient boosting,
+    short-term memory, wind power prediction.
+
+
+    Among machine learning algorithms, Artificial Neural Network (ANN) has been prevented
+    in the past because of its complexity in handling nonlinear relationship between
+    the input and output. Researchers have utilized several variations of ANN for
+    wind power predictions like Adaptive Neuro-Fuzzy Inference System [10], Wavelet-based
+    Neural Network [11]. In recent times, deep learning has been used extensively
+    for applications. Deep learning utilizes hierarchical levels of ANN, such as Convolutional
+    Neural Networks (CNN), which consist of deep neural networks, and Long-Term Memory
+    (LSTM), which has sequential input data to handle long-term dependencies in the
+    sequences faced by factual neural networks. This approach addresses the vanishing
+    gradient problem by using convolutional RNNs [13]. Convolutional Neural Network
+    (CNN) has better capabilities in terms of performance, and are far much faster
+    than the LSTM [14].
+
+
+    # I. INTRODUCTION
+
+
+    Wind power forecasting has become increasingly important with an increase in the
+    demand for wind power. All energy generating plants are called based on the day-ahead
+    forecast for wind power. The deviation from the forecast to actual output will
+    be an economic burden to wind farmers. Additionally, this leads to load imbalance,
+    which may affect the stability of the grid. Therefore, the need for an accurate
+    wind power forecast is essential in the development of strategies to participate
+    in electricity markets [1].
+
+
+    Wind power prediction can be achieved by two strategies. The first one determines
+    the output of a wind from the wind speed, which itself depends on several atmospheric
+    parameters like temperature, humidity, and air density. This prediction is achieved
+    by Numerical Weather Prediction (NWP), which are based on mathematical models
+    and resources [2]. The second approach involves wind power forecasting directly
+    from the same wind field. Furthermore, this approach can be classified into statistical
+    methods and machine learning methods. Algorithms try to find the mathematical
+    relationship between the past and future time-series data using a recursive technique.
+    The most common statistical methods used for wind forecasting are ARIMA [3], ARIMA
+    [4], seasonal-ARIMA, and ARIMA with exogenous input (ARIMAX) [6].
+
+
+    It is observed that all models perform well with different datasets. Since wind
+    power is highly intermittent and varies, it is difficult to identify a single
+    algorithm that works well for all cases. Therefore, combining two or more models
+    in better forecasting and robustness [15], [16]. This paper presents a novel ensemble
+    model that extracts benefits of combining CNN, LSTM, and LightGBM. The accuracy
+    of each algorithm is enhanced using hyperparameters tuning and regularization,
+    which is reflected in the ensemble test. The proposed model predicts wind power
+    data from an actual wind field.
+
+
+    The rest of the paper is organized as follows. We explain the individual algorithms
+    and the proposed ensemble in Section II. Section III describes data-processing
+    and hyperparameters tuning. The comparison of methods and results are discussed
+    in Section IV, while the concluding remarks are presented in Section V.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: "# II. METHODOLOGY\n\nDeep learning architectures are efficient in learning\
+    \ complex features of a dataset but at cost of large training requirements and\
+    \ high computational power. In contrast, tree models are computationally inexpensive\
+    \ and require fewer data to provide satisfactory predictions. We have considered\
+    \ two deep neural networks (CNN and LSTM) and two Gradient Decision Tree (GBDT)\
+    \ algorithms (XGBoost and LightGBM) for our study. Each of the algorithms is briefly\
+    \ discussed.\n\n# A. Long-Term Memory (LSTM)\n\nThe fundamental principle behind\
+    \ the LSTM is with a memory cell carries, which travels throughout the network\
+    \ with its unchanged and controlling the information using specific regulatory\
+    \ structures known as, controlling the process of memory. A standard LSTM architecture\
+    \ is shown in Fig. 1, which is explained by (1):\n\n```\n$f_t = \\sigma(W_f x_t\
+    \ + U_f h_{t-1} + b_f)$ (1)\n$i_t = \\sigma(W_i x_t + U_i h_{t-1} + b_i)$ (2)\n\
+    $o_t = \\sigma(W_o x_t + U_o h_{t-1} + b_o)$ (3)\n$$\\tilde{c}_t = \\tanh(W_c\
+    \ x_t + U_c h_{t-1} + b_c)$ (4)\n$c_t = f_t \\odot c_{t-1} + i_t \\odot \\tilde{c}_t$\
+    \ (5)\n$h_t = o_t \\odot \\tanh(c_t)$ (6)\n```\n\nwhere $f_t, i_t,$ and $o_t$\
+    \ are forget, input and output gates, respectively. $h$ and $c$ indicate the hidden\
+    \ layer and memory cell state, respectively. $W$ represents the weight coefficient,\
+    \ and $b$ represents the bias vector. $\\odot$ is element-wise multiplication,\
+    \ $\\sigma$ is the sigmoid function, and $\tanh$ is the tangent function. For\
+    \ example the gate with a sigmoid layer decides the acceptance or rejection of\
+    \ information from the cell state representing long-term memory. The cell with\
+    \ a sigmoid layer decides what new information is to be added to the cell state.\
+    \ The tanh function helps in preventing the vanishing gradient problem as its\
+    \ successive derivative is close to unity. Therefore, the output of the network\
+    \ is obtained after updating the cell state. Similar to the store process, the\
+    \ product of the tanh layer and sigmoid layer decides the acceptance or rejection\
+    \ of output. All of these constitutes the neural network learning process.\n\n\
+    ![](img/7b4181520465acaef9ad22655e5fdc35_1_0.png)\n\nFig. 2. CNN Architecture\n\
+    \n# B. Convolutional Neural Networks (CNN)\n\nThe primary design of CNN is to\
+    \ create a scale of network layers, where the initial layer performs feature extraction\
+    \ and propagate to the next layers for higher-order feature generation. Standard\
+    \ CNN architecture is shown in Fig. 2. In the time power data is to enter the\
+    \ layer, which travels through the convolutional layers of the same width as of\
+    \ input time series. Next, a pooling layer reduces the dimension and is prepared\
+    \ for further training. Flatting the output data from the pooling layer, is fed\
+    \ to a fully connected layer, which is standard neural network. In the output\
+    \ nonlinear activation functions are present, from which final output is obtained.\n\
+    \n# C. Extreme Gradient Boosting (XGBoost)\n\nXGBoost is an extensible learning\
+    \ system that implements optimized gradient GBDT framework. Generic algorithm\
+    \ is shown by (7)-(10), where each ensemble model learns one tree at a time using\
+    \ an additive technique.\n\n```\n$y^{(k)} = \\sum_{i} f_k(x_i) = y^{(k-1)} + f_k(x_i),\
+    \ f_k \\in \\mathcal{F}$ (7)\n$\\Omega(f) = \\gamma T + \\lambda ||f||^2$ (8)\n\
+    $L^{(k)} = \\sum_{i} (l(y_i, y^{(k-1)} + f_k(x_i)) + \\Omega(f_k)$ (9)\n$f_k =\
+    \ \\arg\\min_{f} \\sum_{i} (l^{(k-1)}(y_i, f(x_i)) + \\alpha \\Omega(f)$ (10)\n\
+    ```\n\n![](img/7b4181520465acaef9ad22655e5fdc35_1_1.png)\n\nFig. 1. LSTM Architecture"
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "using objective function $\\mathcal{L}^{(i)}$, given in (9). The first term\
+    \ in the summation, $l(y^{(i)}, y)$, is the differentiable loss function with\
+    \ $n$ denoting sample size, and the second term with the regularization function\
+    \ handles the complexity of the model. Equation (10) gives the objective function\
+    \ combining (7)-(9). XGBoost distributed, parallel processing with regularization\
+    \ to prevent overfitting and overfitting. The sparsity present in the data is\
+    \ also well handled by XGBoost, as explained in [19]:\n\nmodels. The assigned\
+    \ weights will be proportional to the number of times the model has performed\
+    \ best/second-best, $R^2$ score, and, RMSE, as explained by (14)-(15). Equation\
+    \ (16) gives the ensemble prediction, which is the weighted average of the predictions\
+    \ from all models.\n\n# D. Light Gradient Boosting (LightGBM)\n\nLightGBM is a\
+    \ gradient boosting algorithm that splits trees by leaf-wise [20]. Unlike traditional\
+    \ GBM, the number of data points for each feature is reduced during information\
+    \ gain search. The learning process of LightGBM can be explained by [11]. The\
+    \ Large and Small Gradient, any refer to the number of instances trained with\
+    \ it. This technique is adopted for training data where instances with large gradient\
+    \ are kept, and small samples which are already trained are discarded randomly\
+    \ [19]:\n\n```\n$V_p = \\frac{1}{n} \\sum_{i=1}^{n} (1 - \\alpha_i)(\\sigma_{i_t}\
+    \ + \\beta_i)^2 + \\frac{\\alpha_i}{n} \\sum_{i=1}^{n}(\\sigma_{i_t} - \\beta_i)^2\
+    \ \\quad (11)$\n```\n\n```\n$w_j^{(i)} = -\\frac{N_j^{(i)}}{N_i} + \\frac{S_j^{(i)}}{N_i}\
+    \ + \\frac{\\Sigma_j^{(i)}}{\\Sigma_i^{(i)}} - \\frac{V_j^{(i)}}{\\Sigma_i^{(i)}}\
+    \ \\quad (14)$\n```\n\n```\n$\\beta_i + \\beta_j + \\beta_k = 1 \\quad (15)$\n\
+    ```\n\nwhere $N_j^{(i)}$ and $N_i^{(i)}$ are the number of instances-i-th model\
+    \ performs best-second-best. The total number of observations, $R^2$ and $\\mathcal{E}^{(i)}$\
+    \ are the average RMSE and score of i-th model, respectively. The weights assigned\
+    \ to each model are $\beta_i$. $y_p^{(i)}$ is the prediction of i-th model and\
+    \ $y_p$ is the ensemble prediction in i-time.\n\n```\n$y_p = \\sum_{i=1}^{n} \\\
+    beta_i y_p^{(i)} \\quad (16)$\n```\n\nwhere $j$ is split at point $p$, $V_p$ is\
+    \ the variance for the split, where $(i_1, i_2, ..., i_n)$ are $n$ independent\
+    \ and identically distributed instances for the left and right data, respectively.\
+    \ The gradient loss for each instance is given by $(\\sigma_{i_t}, \\beta_i)$\
+    \ where $\\sigma$ and $\beta$ are large and small gradient samples, respectively.\
+    \ Approximation and validation sets are used to determine determine accuracy and\
+    \ variance, which can be measured similarly to XGBoost. LightGBM well handles\
+    \ the sparsity present in high dimensional data. By bundling certain features\
+    \ present in feature space, they are bundled together, reducing the complexity\
+    \ during training.\n\n# E. Proposed Model\n\nThe accuracy of time-series prediction\
+    \ is highly sensitive, and there is no consensus determining which model is best.\
+    \ The most and simplest approaches are to use a linear combination of all available\
+    \ models. In this paper, we propose a convex combination method, which takes the\
+    \ weighted average of the prediction of four models discussed previously by combining\
+    \ the error-based approach and outperformance model [21] to calculate the corresponding\
+    \ weights. Error is measured for every month of the year and then ranked according\
+    \ to their performances. The performance is measured using Root Mean Square Error\
+    \ (RMSE) and R-squared score ($R^2$), given by (12)-(13).\n\n![](img/7b4181520465acaef9ad22655e5fdc35_2_0.png)\n\
+    \n```\n$RMSE = \\sqrt{\\frac{\\sum_{i=1}^{n}(y_i - \\hat{y}_i)^2}{n}} \\quad (12)$\n\
+    ```\n\n```\n$R^2 = 1 - \\frac{\\sum_{i=1}^{n}(y_i - \\hat{y}_i)^2}{\\sum_{i=1}^{n}(y_i\
+    \ - \\bar{y})^2} \\quad (13)$\n```\n\nwhere $y_i$ and $\\hat{y}_i$ are the actual\
+    \ and predicted power at $i$-th-step, and $\bar{y}$ is the mean of actual power\
+    \ over the sample size $n$. We calculate the RMSE and $R^2$ for each month and\
+    \ rank the best and second-performing\n\nFig. 3. Wind power data\n\n# A. Data\
+    \ Pre-processing\n\n```\n$[x_{t-w_1}, x_{t-w_2}, ..., x_{t-w_t}, 0\\}, \\n\\n[x_{t-1-w_1},\
+    \ ..., x_{t-1}, \\{0+t_p\\}] \\quad (17)$\n```"
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/7b4181520465acaef9ad22655e5fdc35_3_0.png)
+
+
+    where t is training input and o is the output label to be predicted at each training
+    instance t. The window size is given by w, which determines the length of the
+    input vector t and prediction t. When we have $t_{wr} = 12$ and $t_p = 9$ to train
+    our multi-step series models for day-ahead prediction. The obtained multi-step
+    series are then normalized to [0,1] using min-max normalization given by (18).
+
+
+    ```
+
+    $x_i = \frac{x_i - x_{min}}{x_{max} - x_{min}}$ (18)
+
+    ```
+
+
+    The process of prediction using individual models and the ensemble model is depicted
+    in Fig. 4.
+
+
+    # B. Hyperparameter tuning and regularization
+
+
+    Machine algorithms often suffer from overfitting (high variance), which can be
+    prevented using various regularization techniques. On the other hand, underfitting
+    or high bias can be reduced by tuning hyperparameters. Hyperparameter tuning and
+    regularization help in improving the accuracy of the algorithm
+
+
+    a) LSTM: We used bidirectional LSTM layers with the tan-sigmoid activation function.
+    Considering the training process we had to trade between the accuracy and the
+    computational time by choosing appropriate batch size and epochs. We observed
+    that L2 regularization and dropout significantly improved the prediction accuracy.
+
+
+    b) CNN: We used a one-dimensional CNN model because of the univariate series data.
+    Similar to the LSTM model, L2 regularization and dropout improved model performance.
+    Additionally, adding the pooling layer significantly improved the metrics and
+    predictions [23].
+
+
+    c) XGBoost: The prediction accuracy improved by tuning the number of estimators,
+    minimum child weight, gamma and learning rate.
+
+
+    d) LightGBM: Similar to XGBoost, minimum child weight, learning rate enhanced
+    the model performance. Furthermore, the computational speed and accuracy of the
+    algorithm improved by tuning the maximum depth and the number of leaves. The tuned
+    values for the discussed models are presented in Table I and II.
+
+
+    | TABLE I. CONTROL PARAMETERS FOR LSTM & CNN |
+
+    |---|---|---|n| Control parameters | LSTM | CNN |
+
+    | Model type | Bi-directional | 1D Convolution |
+
+    | Mini batch size | 256 | 256 |
+
+    | Dropout | 0.2 | 100 |
+
+    | Activation function | tan-sigmoid | rectified linear |
+
+    | Optimizer | Adam | Adam |
+
+    | L2 regularization | 0.01 | 0.001 |
+
+    | Layers | 6 | 6 |
+
+    | Dense layers | 2 | 2 |
+
+    | Output dimensionality | 50 per layer | 32, 16, 4 |
+
+    | Learning rate | 0.2 | 0.01/epoch |
+
+    | Kernel size | - | 2 |
+
+
+    | TABLE II. CONTROL PARAMETERS FOR XGBOOST & LIGHTGBM |
+
+    |---|---|---|n| Tuned values | XGBoost | LightGBM |
+
+    | Number of estimators | 2500 | |
+
+    | Maximum depth | 6 | 5 |
+
+    | Min child weight | 1 | 7 |
+
+    | Learning rate | 0.3 | 0.02 |
+
+    | Gamma | 1 | |
+
+    | Samplesize | - | GBDT |
+
+    | Boasting type | - | |
+
+    | Number of leaves | - | 64 |
+
+    | Feature fraction | - | 0.9 |
+
+    | Bagging fraction | - | |
+
+    | Minimum split gain | - | 0.037 |
+
+
+    Fig. 5 demonstrates the improvement metrics by hyperparameters, dropout, and regularization
+    of different models. In case of CNN and LSTM, the learning rate reduced RMSE significantly.
+    Similarly, the accuracy of XGBoost and LightGBM improved by increasing the maximum
+    depth and minimum child weight.
+
+
+    ![](img/7b4181520465acaef9ad22655e5fdc35_3_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '![](img/7b4181520465acaef9ad22655e5fdc35_4_0.png)
+
+
+    Fig. 6. Day-ahead wind predictions of all models
+
+
+    # ## IV. RESULTS & DISCUSSIONS
+
+
+    We ran each of the four models for month in 2014 to find out the weights of each
+    model. Then, we used weights to predict the wind power for each month. Wind power
+    in the month of August showed the highest weight. In Fig. 7, we compared all the
+    models and the ensemble model using the metric $R^2$, score, which is presented
+    in Table III and Table IV. It can be noted from the above tables that CNN performed
+    best among all. Also, the mean RMSE and $R^2$ score were for CNN, LSTM, LightGBM,
+    and XGBoost. For, the ensemble was enhanced enough that deep learning models outperformed
+    the GBDT based models. However, we observed that XGBoost overpredicted, whereas
+    other models seemed to underfit.
+
+
+    | | CNN | LSTM | XGBoost | LightGBM | Proposed Ensemble |
+
+    |---|---|---|---|---||
+
+    | Feb | 0.9732 | 0.9407 | 0.8773 | 0.8809 | 0.9689 |
+
+    | Mar | 0.9518 | 0.9531 | 0.8813 | 0.8096 | 0.9668 |
+
+    | Apr | 0.9731 | 0.9291 | 0.8215 | 0.8365 | 0.9563 |
+
+    | May | 0.9703 | 0.9418 | 0.9107 | 0.9229 | 0.9707 |
+
+    | Jun | 0.9399 | 0.9387 | 0.8701 | 0.8407 | 0.9254 |
+
+    | Jul | 0.9512 | 0.9516 | 0.8794 | 0.8526 | 0.9521 |
+
+    | Aug | 0.9480 | 0.9440 | 0.8492 | 0.8948 | 0.9517 |
+
+    | Sep | 0.9633 | 0.9393 | 0.8836 | 0.8332 | 0.9662 |
+
+    | Oct | 0.9591 | 0.9360 | 0.8951 | 0.9031 | 0.9609 |
+
+    | Nov | 0.9667 | 0.9495 | 0.8278 | 0.7308 | 0.9639 |
+
+    | Dec | 0.9759 | 0.9507 | 0.8643 | 0.8824 | 0.9762 |
+
+    | Jan | 0.9738 | 0.9511 | 0.7749 | 0.7916 | 0.9616 |
+
+
+    # ## RMSE COMPARISON FOR ALL MODELS
+
+
+    | | CNN | LSTM | XGBoost | LightGBM | Proposed Ensemble |
+
+    |---|---|---|---|---||
+
+    | Jan | 0.0328 | 0.0488 | 0.0700 | 0.0691 | 0.0353 |
+
+    | Feb | 0.0357 | 0.0437 | 0.0693 | 0.0653 | 0.0346 |
+
+    | Mar | 0.0302 | 0.0611 | 0.0780 | 0.0746 | 0.0347 |
+
+    | Apr | 0.0427 | 0.0548 | 0.0570 | 0.0527 | 0.0325 |
+
+    | May | 0.0393 | 0.0531 | 0.0710 | 0.0720 | 0.0381 |
+
+    | Jun | 0.0552 | 0.0582 | 0.0890 | 0.0875 | 0.0450 |
+
+    | Jul | 0.0616 | 0.0634 | 0.1150 | 0.0876 | 0.0594 |
+
+    | Aug | 0.0505 | 0.0656 | 0.0758 | 0.0728 | 0.0552 |
+
+    | Sep | 0.0320 | 0.0401 | 0.0570 | 0.0493 | 0.0314 |
+
+    | Oct | 0.0316 | 0.0358 | 0.0666 | 0.0827 | 0.0303 |
+
+    | Nov | 0.0356 | 0.0419 | 0.0701 | 0.0668 | 0.0362 |
+
+    | Dec | 0.0327 | 0.0376 | 0.0690 | 0.0919 | 0.0355 |
+
+
+    As values presented in Table III, the difference between the best performing CNN
+    and the normalization is not problem. However, we observe that the ensemble model
+    can reduce the error by up to 100 kW at a single instance, as illustrated in Fig.
+    7. The error histogram of the ensemble model is shown to be more perceptible from
+    the figure that the mean of the normalized results shows the potency of our ensemble
+    model and validates this.
+
+
+    ![](img/7b4181520465acaef9ad22655e5fdc35_4_1.png)
+
+
+    Fig. 7. Error variance plot of all models.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# REFERENCES
+
+
+    ![](img/7b4181520465acaef9ad22655e5fdc35_5_0.png)
+
+
+    +   [1] R. Abhin and M. Pidoriya, and key challenges for wind energy forecasting
+    with high penetration in Indian power market,” Energy Surveys, vol. 47, pp. 53–63.
+
+
+    +   [2] S. Ahmed, M. Okada, and I. Cook, “Wind Pattern Recognition and Reference
+    Wind Data Correlations With NWP for Wind-Electric Power Forecasts,” IEEE Trans.
+    Ind Informatics, vol. 12, pp. 1085–1095, 2016.
+
+
+    +   [3] J. L. Torres, A. Garcia, M. Blas and A. Franco, “Forecast of hourly wind
+    speed with ARMA models in Navarra (Spain),”
+
+
+    +   [4] O. Fathi, “Time series forecasting by using ARIMA and LSTM model,” Soft
+    Systems, vol. 71, pp. 55–67, 2019.
+
+
+    +   [5] D. Barbosa, A. C. Ferreira, R. C. Lima, and J. C. Filho, “Hybrid ARIMA
+    LSTM for short term wind power forecasting in Brazil,” Energy Access, vol. 6,
+    pp. 455–466, 2018.
+
+
+    +   [6] C. E-Rodriguez and D. Decomchao, “Decomposed Transformer for short to
+    medium term wind power forecasting,” IAF-PaperOnline, vol. 51, no. 13, pp. 49–54,
+    Aug 2018.
+
+
+    +   [7] A. Galicia, T. Ramirez-Jimenez, A. Tronco, I. Kofinasinas, and F. Martinez,
+    “Multivariate wind power forecasting based on ensemble learning,” Knowledge-Based
+    Syst., vol. 63, pp. 415–426, 2015.
+
+
+    +   [8] T. Chen and C. Guest, “XGBoost: A scalable tree system for machine learning,”
+    Proc. KDDDD Conf. on Data Mining, vol. 22, pp. 785–794, 2016.
+
+
+    +   [9] G. Ke, et al., “Highly efficient gradient boosting decision tree,” Adv.
+    Neural Inf. Syst. Data Mining, vol. 30, pp. 4781–4798, 2017.
+
+
+    +   [10] M. Mohammad and A. Karimi, “Prediction of wind turbine generation using
+    LSTM-RNN,” IEEE J. Renewable Energy, vol. 10, pp. 1025–1034, 2019.
+
+
+    +   [11] R. Abhin, N. Pidoriya, Y. Liu, and C. Long, “Short-term wind power forecasting
+    using deep neural networks,” IEEE Energy Produc., vol. 42, pp. 455–460, 2017.
+
+
+    +   [12] H. Li and C. Wang, “Wind power forecasting using deep convolutional neural
+    network,” IEEE Trans. Power Energy Soc. Gen. Meng., Aug. 2017.
+
+
+    +   [14] J. Wang and K. Voltan, “An ensemble of Convolutional and Recurrent Networks
+    for Sequence Prediction,” Knowledge-Based Syst., 2018.
+
+
+    +   [15] J. Heermann and O. Karimian, “Ensemble methods for wind power forecasting,”
+    Energy Energy, vol. 89, pp. 671–679, Apr. 2019.
+
+
+    +   [16] H. Li, Z. Wang, G. Li, B. Wang, J. Peng, H. Huang, and Y. Liu, “Deep
+    learning based wind power forecasting,” IEEE Trans Smart Grid, vol. 10, pp. 2019–2020,
+    2019.
+
+
+    +   [17] K. Reef, R. Sivasastraj, K. Smutnik, B. Berstein, and J. Smolenjak, “LSTM:
+    A Search Space for Sequence Modeling,” IEEE Trans. Neural Net. Learn. Syst., vol.
+    29, no. 10, pp. 1828, 2018.
+
+
+    +   [18] A. Gu, et al., “Advances in convolutional neural networks,” Nature, vol.
+    535, pp. 444–457, 2016.
+
+
+    +   [19] Y. Wang and Y. Guo, “Forecasting of stock market volatility in time series
+    data based on ARMA and XGBoost,”
+
+
+    +   [20] Q. Meng, et al., “A communication-efficient partition algorithm for decision
+    trees,” Adv. Neural Inf. Syst. Data Mining, vol. 7, pp. 115–125, 2016.
+
+
+    +   [21] A. Elahi and M. Khoshandar, “A Ranking Based Selective Ensemble Approach
+    for Wind Power Forecasting,” IEEE Trans. Power Energy, vol. 14, pp. 292–300, 2019.
+
+
+    +   [22] A. Ruwal, A. J. Smith, K. Burakh, R. Prasad, G. Sivagrasasad, and D.
+    Rao, “Implementation of Deep Learning LSTM-CNN for Wind Power Forecasting,” IEEE
+    Geosci. Remote Sens. Lett., vol. 11, pp. 1–5, May 2020.
+
+
+    ![](img/7b4181520465acaef9ad22655e5fdc35_5_1.png)
+
+
+    Fig. 8. Actual error of CNN and the ensemble model
+
+
+    Fig. 9. Error histogram for the Ensemble model
+
+
+    # V. CONCLUSION
+
+
+    This paper proposes an ensemble of four learning algorithms, namely CNN, LSTM,
+    LGBM, and XGBoost for short term wind power forecasting. The proposed method uses
+    a weighted average of the models to improve the performance of the models by using
+    the performance-based approach and adjust the weight of each model. Among the
+    two deep learning, CNN is competitive with LSTM, but achieved the fastest among
+    all models. However, due to the high time cost of the LSTM model, LGBM’s learning
+    could not add any significant impact on the speed of the proposed method. Integrating
+    regularization and tuning the hyperparameters can enhance the performance and
+    flexibility of both. Both the deep learning algorithms work because of the sufficiently
+    large data available for adequate training. The ensemble model is detected by
+    CNN, which shows the performance of the ensemble is reasonably well throughout
+    the year compared to the other models. The proposed method is robust enough to
+    predict for different months with relatively low RMSE and high R$^2$.
+
+
+    # ACKNOWLEDGMENT
+
+
+    This work is supported by the Department of Science & Technology (DST). Govt.
+    of India, under the DST/INT/UK/P-138/2016. The authors also acknowledge the support
+    of Gujarat State Load Dispatch Centre (SLDC-Gujarat) for sharing the wind power
+    data used in this paper.'
+  merge: -1
+  img_proc: true
