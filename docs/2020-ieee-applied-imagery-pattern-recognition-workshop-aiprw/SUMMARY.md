@@ -1,0 +1,2 @@
++   [2020 IEEE 应用图像模式识别研讨会 (AIPR) (美国华盛顿特区 2020.10.13-2020.10.15) 2020 IEEE 应用图像模式识别研讨会 (AIPR) ｜｜ 机器学习，压缩](README.md)
++   [2020 IEEE 应用图像模式识别研讨会 (AIPR) (美国华盛顿特区 2020.10.13-2020.10.15) 2020 IEEE 应用图像模式识别研讨会 (AIPR) ｜｜ 机器学习，压缩](2020-ieee-applied-imagery-pattern-recognition-workshop-aiprw.md)

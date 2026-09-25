@@ -1,0 +1,408 @@
+- pgno: 0
+  md: '# # MACHINE LEARNING, COMPRESSION, AND IMAGE QUALITY
+
+
+    Steven A. Israel*, John M. Irvine*, Steve Tate*
+
+    a The Charles Stark Draper Laboratory, Inc., 1943 Newton Square East, Reston,
+    VA, 20190
+
+    b The MITRE, 202lington Road, Bedford, MA 01730-1420
+
+    c The Charles Stark Draper Laboratory, Inc., 555 Technology Square, Cambridge,
+    MA 02139
+
+
+    # ## ABSTRACT
+
+
+    The current trend toward incorporating learning (ML) models within closed-loop
+    workflows renew existing issues for image compression and reconstruction; specifically,
+    matching the generation-loop system operations. Our paper reviews methods to assess
+    content in the reconstruction process to maintain trust in closed-loop workflows.
+    We structure commonly ML architectures in the form of Autencoders. Autencoders
+    are commonly studied for image reconstruction. For instance, the interpretability
+    of image potential the intelligence value of data. Historically, the National
+    Imagery Interpretability Rating (NIR) has been the standard for quantifying the
+    intelligence potential by human observers. Experimental studies demonstrated that
+    spatial resolution is the dominant predictor of NIR of an image and compression
+    to 1 bit per pixel can maintain NIR levels. However, with ML that digits images
+    rather than extracts, what the corresponding size of image required to maintain
+    the NIR levels? To ends, we need to operate on moderate sizes, 480x480, to provide
+    realistic estimates over experiments against small sprite size (< 100x100 pixels)
+    images.
+
+
+    interpretability is reason finer the resolution, the better humans can perform
+    tasks. In the 1990s, NIR was needed to expand the thermal infrared, and multispectral
+    imagery acquired in the reflective region. More, the NIR was standard to be viewed
+    [30].
+
+
+    Image collection has evolved. Advanced sensors encounter enormous data volumes
+    multiple spectral regions and motion imagery. Automated primary processing cues
+    operators-on-confirmation to take action based on need. The learning algorithms
+    have developed to digit imagery rather than extract features, with the goal of
+    improved characterization and consistency across processes. Consequently, there
+    is a need to rethink the NIR human perception paradigm for effective exploration.
+    To address this challenge, we explore the feasibility of developing a computational
+    method learned standard. Furthermore, we seek a new standard that addresses the
+    range of imaging materials and types. The preliminary investigations presented
+    here show that any new standard must adapt model architectures in addition to
+    target characterization.
+
+
+    # ## 2. THE EXPERIMENT
+
+
+    # ### 2.1 HYPOTHESIS
+
+
+    We explore the role of convolutional autoencoders (CAE) as a tool for characterizing
+    image quality. One hypothesis is to establish that a CAE trained with a larger
+    window (7x7) at each layer retains greater amount of information compared with
+    a CAE trained with smaller (3x3) for the same size network. The expectation is
+    that a 7x7 window captures more available space for features and therefore higher
+    quality results. The second avenue of investigation is the size of the smallest
+    space to capture the information contained within the image database.
+
+
+    # ## 1. INTRODUCTION
+
+
+    Image quality is a key of potential intelligence value for military and security
+    missions. Images of poor quality will not provide the necessary information for
+    analysis and decision making. Humans analyzing imagery, the National Imagery Interpretability
+    Rating (NIR) is the standard for quantifying the intelligence potential of an
+    image [1]. The original NIR used that image analysis consists of humans viewing,
+    still images [2]. Thus, the primary determinant of image
+
+
+    Approved for Public Release: Distribution Limited. Public Release Number 30-2149
+
+    978-1-7281-8243-8/20/$30 ©2020 IEEE'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# 2.2 IMAGE DATABASE
+
+
+    Much the current autoencoder research [4] [5] is focused on small format images,
+    typically 100 by100 pixels or smaller. Many target models are trained using larger
+    segments.¹ Further, small images do not
+
+
+    allow for information content assessment because of their limited number of attributes.
+    In particular, the Modified National Institute of Standards and Technology (MNIST)
+    database of handwritten numbers [6] contains about 30% of unused varying pixels.²
+
+
+    ![](img/0d22eb0c1c13ea71522d9dc9b3ec2246_1_0.png)
+
+
+    Our database consists of grayscale 480x480 pixel (Figure 1). Top row shows a coarse
+    resolution image and the bottom row depicts a scene with strong information, as
+    indicated by the annotations. In row, the left image is a reconstruction better
+    than optimal latent space. The center scene is the original image and the right
+    is using a near optimum latent space. The bottom row shows aggregation of small
+    features to a “blob” which is indicative of reconstruction that a full NIRS level
+    worse than the original. The bottom row shows which that distorts features around
+    the edges. Small ringing enhances visual segmentation, but large ringing reduces
+    coherence:
+
+
+    Our database includes images spanning the majority of the NIRS levels (Table 1
+    and Table 2). Images at each row consist of different edge quality and noise floor.
+    All the images were collected with download (near-tadir) viewing. Because of the
+    ‘image’ across large areas, multiple segments were extracted from the images.
+    The database totals 329 image segments. Each segment was rendered with flip, rotation,
+    shear x y, and center offset augmentations for training.
+
+
+    +   ¹ The WorldView 3 satellite claims a spatial resolution of 0.3m. So, and image
+    segment encapsulating a 737 airplane would require nearly 400 pixels on a side.
+
+
+    +   ² Off-line experiments with the MNIST dataset revealed indiscriminable loss
+    with a 7 attribute latent space.
+
+
+    Academic license used to: Robert Gordon University. Downloaded on May 28, 2021
+    at 12:19:16 UTC from IEEE X. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '| NIIRS | <1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | Total |
+
+    |---|---|---|---|---|---|---|---|---|---|---|n| Approx. GSD (m) | >8 | 4 | 2 |
+    1 | | 0.5 | 0.25 | 0.1 | 0.02 | |
+
+    | Image Segments | 48 | 71 | 44 | 40 | 36 | | 16 | | 22 | 329 |
+
+
+    These experiments compare the input image and its corresponding merged image created
+    by the CAE at a specific latent space size. We believe that learning on a heterogeneous
+    database will yield a smaller latent space than the heterogeneous data chosen
+    for this experiment. The images were chosen from different handful, aerial, and
+    satellite platforms to provide insights into images with different optical parameters.
+    Reconstruction quality was assessed using the Structural Similarity Metrics and
+    Mean Square Error.
+
+
+    **Structural Similarity Metric**: Structural Similarity Metric (SSIM) was designed
+    to objectively measure differences between images. SSIM typically uses an original
+    and a processed version
+
+
+    > $SSIM(x,y) = \frac{(2\mu_x\mu_y + C_1)(2\sigma_{xy} + C_2)}{(\mu_x^2 + \mu_y^2
+    + C_1)(\sigma_x^2 + \sigma_y^2 + C_2)}$
+
+
+    SSIM is performed on pixel by pixel and can be commonly applied to a single metric
+    for the entire image. When reviewing the SSIM results, the SSIM is more sensitive
+    to correlated latent space for the resolution rather than edge information. Again,
+    let $x''$ represent the normalized images, and $y''$ represent the normalized
+    image. Denote the pixels by $x''(i,j)$ and $y''(i,j)$, respectively.
+
+
+    ```
+
+    $MSE(x,y) = \sum_{i,j}[(x''(i,j) - y''(i,j)]^2]/N$
+
+    ```
+
+
+    # 2. AUTOENCODER ARCHITECTURE AND TRAINING
+
+
+    During our initial work with image quality, we discovered that compression of
+    1 bit per pixel enables image reconstruction without using NIIRS [9]. As a baseline,
+    we utilized the CAE to neck the raw images below the 1% latent space size. There
+    was a later latent size of 40x40N, where N is the variable number of filters in
+    the network N. For each layer, convolution (and up-sampling reconstruction), bottleneck,
+    normalization, and activation were performed sequentially.
+
+
+    Applying the process to exemplar images using varying latent size and filter size
+    illustrates the effects (Figure 2). show reconstructions where the CAE (ineffectively)
+    passed reconstruction through a filter size and number of filters on the left
+    and side respectively. The middle column shows the baseline. The upper row consists
+    of 3 filters while the lower row consists of 7 filters. The results consist of
+    reconstructions using different latent space sizes. The left to right is 5x, 10x,
+    30x, 40x.
+
+
+    All of the networks were trained using 200 iterations for the 12,000 cases. In
+    all cases, training passed the knee-in-curve update where updates were marginal.
+    The CAE architecture is extremely deep, without using an ever increasing number
+    of layers. We used Windows laptops. The networks were implemented using Keras
+    Spotify integrated development environment (IDE). The smallest 3x3 network contained
+    39k parameters and trained in about 60 seconds per iteration. The largest 7x7
+    network contained 375k parameters and trained in about 160 seconds per iteration.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/0d22eb0c1c13ea71522d9dc9b3ec2246_3_0.png)
+
+
+    | Layer | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | Window (x,y) | (480,480) | (240,240) | (80,80) | (40,40) | (40,40) | (80,80)
+    | (240,240) | (480,480) |
+
+    | Filters | 1 | 20 | 32 | 64 | [1,600-64,000] | 204,000 | 31,360 | 20 | 1 |
+
+    | Attributes | 230,400 | 1,152,000 | 204,000 | 102,400 | 125,440 | | 1,152,000
+    | 230,400 |
+
+    | Training Parameters | 180, 980 | 5,760, 31,360 | 18,432, 100,352 | 2,880-, 125,440
+    | 5,760, 62,720 | 3,600, 19,600 | 181, 981 |
+
+    | Convolution Window | 3x3, 7x7 | 3x3, 7x7 | 3x3, 7x7 | 3x3, 7x7 | 3x3, 7x7 |
+    3x3, 7x7 | 3x3, 7x7 | 3x3, 7x7 |
+
+    | Stride | Conv 2x2 | Conv 3x3 | Conv 2x2 | Conv 1x1 | Up 2x2 | Up 3x3 | Up 2x2
+    | 1x1 |
+
+    | Batch Norm | Yes | Yes | | | Yes | | | No |
+
+
+    # # 3. RESULTS
+
+
+    The analysis focuses on empirical characterization of the various representations
+    induced by "parent" image to the data derived from autoencoding, we quantify the
+    image quality loss using the SSIM and MSE. Linear modeling suggests that SSIM
+    provides a clearer indication of the quality loss, but both metrics show clear
+    relationships with the autoencoder processing (Table 3 and 4). In both cases,
+    the size of the latent space and the NIIRS of the parent image are highly significant
+    factors for predicting the metric for the processed image. However, filter size
+    exhibits a weak relationship. Turning the analysis, we modelled the NIIRS of the
+    processed image and found the SSIM, together with the NIIRS of the parent'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'image, provided excellent prediction of the NIIRS level for the processed image
+    (Table 5).
+
+
+    # Table 3. Linear model for SSIM
+
+
+    | Factor | Coefficient | t-statistic | P-value |
+
+    |---|---|---||}{
+
+    | Intercept | 0.6443 | 91.97 | < 0.0001 |
+
+    | Latent Space Size | 0.006567 | 47.52 | < 0.0001 |
+
+    | Filter Size | 0.001484 | 1.6 | < 0.0001 |
+
+    | NIIRS of Parent Image | 0.01324 | 12.52 | < 0.0001 |
+
+    | R-squared: 0.487 | | | |
+
+
+    # Table 5. Linear model for NIIRS of Processed Image
+
+
+    | Factor | Coefficient | t-statistic | P-value |
+
+    |---|---|---||}{
+
+    | Intercept | -0.116 | -4.74 | < 0.0001 |
+
+    | SSIM | 0.259 | 6.13 | < 0.0001 |
+
+    | NIIRS of Parent Image | 0.995 | 420.11 | < 0.0001 |
+
+    | R-squared: 0.997 | | | |
+
+
+    Visual inspection of the imagery suggested that the autoencoder has a substantial
+    effect on edges in the imagery, where the loss of sharpness is apparent when the
+    latent space is sharp. Empirical analysis confirms the finding. Applying a Cny
+    detector to the baseline and processed images demonstrate the phenomenon (Figure
+    3). i.e., the mention of the edge density provides a simple measure of the overall
+    sharpness. Reconstruction can be observed in the relative edge strength (Figure
+    4). Faithful reconstruction depends on the size of the latent space and preservation
+    of edges is a key indicator. Similarly, SSIM is a useful measure of the information
+    lost with the size of the latent space (Table 6).
+
+
+    # Table 4. Linear model for MSE
+
+
+    | Factor | Coefficient | t-statistic | P-value |
+
+    |---|---|---||}{
+
+    | Intercept | 28.29 | 44.99 | < 0.0001 |
+
+    | Latent Space Size | -0.402 | -32.42 | < 0.0001 |
+
+    | Filter Size | -0.149 | -1.87 | 0.062 |
+
+    | NIIRS of Parent Image | -0.636 | -6.70 | < 0.0001 |
+
+    | R-squared: 0.302 | | | |
+
+
+    # Table 6. Relationship between SSIM and Latent Space
+
+
+    | Latent Size (filter size) | 5 (3x3) | 10 (3x3) | 20 (3x3) | 30 (3x3) | 40 (3x3)
+    | 5 (7x7) | 10 (7x7) | 20 (7x7) | 30 (7x7) | 40 (7x7) |
+
+    |---|---|---|---|---|---|---|---|---|---||}{
+
+    | Mean SSIM | 0.94 | 0.92 | 0.88 | 0.80 | 0.69 | 0.93 | 0.92 | 0.89 | 0.81 | 0.71
+    |
+
+    | Std Dev of SSIM | 0.04 | 0.05 | 0.08 | 0.10 | 0.13 | 0.05 | 0.05 | 0.07 | 0.10
+    | 0.13 |'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/0d22eb0c1c13ea71522d9dc9b3ec2246_5_0.png)
+
+
+    Figure 3. Edge images computed from the baseline (Original) and processed images
+    with varying sizes of the latent space
+
+
+    ![](img/0d22eb0c1c13ea71522d9dc9b3ec2246_5_1.png)
+
+
+    Figure 4. Relationship of the edge metric with size of the latent space'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# 4. CONCLUSIONS AND FUTURE DIRECTIONS
+
+
+    CAE provide a flexible method for representing imagery at varying levels of fidelity
+    depending on the size of the latent space. Using a smaller space yields a smaller
+    file size, but at the cost of level quality. Our analysis indicates that SSIM
+    and overall edge strength are methods methods characterizing quality imagery,
+    and we have presented empirical metrics for quantifying these relationships. Furthermore,
+    we demonstrate the relationship with perceptual interpretability measured by the
+    NIRS of the image.
+
+
+    Future investigations will seek to refine and validate the models presented here.
+    Generalizations to others (RGB) imagery, thermal infrared imagery, and natural
+    extensions. These methods could be useful in analyzing the image for new sensors
+    or establishing bandwidth requirements for data transmission and storage.
+
+
+    # 5. ACKNOWLEDGMENTS
+
+
+    The author affiliation with The MITRE Corporation is provided for identification
+    purposes only and is not intended to convey or imply MITRE''s concurrence with,
+    or support for, the positions, opinions, or viewpoints expressed by the author.
+    ©2020 The MITRE Corporation. ALL RIGHTS RESERVED.
+
+
+    # 6. REFERENCES
+
+
+    +   [1] J. Leachtenauer and R. Dirgers, Surveillance and Reconnaissance Imaging
+    Systems: Modeling and Performance Prediction, Boston: Artech House, Inc., 2001.
+
+
+    +   [2] J. Irvine, "National Imagery Interpretability Rating Scale," in Encyclopedia
+    of Optical Engineering, New York, Marcel Dekker, 2003, pp. 1442-1456.
+
+
+    +   [3] J. Irvine, A. Aviles, D. Cannon, C. Fenimore, D. Haverkamp, S. Israel,
+    G. O’Brien and J. Roberts, "Developing an Interpretability Scale for Motion Imagery,"
+    Optical Engineering, vol. 46, no. 11-11740, 1 p. 12 pages, 2007.
+
+
+    +   [4] A. Dosovitsky and T. Broks, "Generating Images with Perceptual Similarity
+    Metrics based on Deep Networks," arXiv, 1602.02644v2, p. 14 pages, 2016.
+
+
+    +   [5] A. Makhzani, J. Shlens, N. Jaitly, I. Goodfellow and B. Frey, "Adversarial
+    Autoencoders," arXiv, 1511.05644v2, p. 16 pages, 2016.
+
+
+    +   [6] Y. LeCun, L. Boutvou, Y. Bengio and P. Haffner, "Gradient-based learning
+    applied to document recognition," in in Proceedings of the IEEE, 86, 1998.
+
+
+    +   [7] G. O’Brien, S. Israel, J. Irvine, C. Fenimore, J. Roberts, M. Brennan,
+    D. Cannon and J. Miller, "Metrics to Estimate Quality in Compressed Video Sequences,"
+    in SPIE Defense and Security Symposium, 6546, Orlando, 2007.
+
+
+    +   [9] J. Irvine and S. Israel, "Chapter 3: How Much to Compress: Interpretability
+    Loss from Compression," in Video Compression, ISBN: 978-953-51-0422-3, InTech
+    Open Science, 2012.'
+  merge: -1
+  img_proc: true
