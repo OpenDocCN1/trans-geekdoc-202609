@@ -1,0 +1,711 @@
+- pgno: 0
+  md: '# 2020 International Conference on Information Security and Cryptography (ISTCURKEY)
+
+
+    # # Discovering Inconsistencies between Requested
+
+    Permissions and Application Metadata using
+
+    Deep Learning
+
+
+    Huseyin Alecakir
+
+    Cognitive Science
+
+    Middle East Technical University
+
+    Ankara, Turkey
+
+    huseynalecakir@gmail.com
+
+
+    Muhammet Kabukcu
+
+    WISE Lab.
+
+    Hacettepe University
+
+    Ankara, Turkey
+
+    mkababukcu@gmail.com
+
+
+    Burcu Can
+
+    RIILP
+
+    University of Wolverhampton
+
+    Wolverhampton, UK
+
+    b.can@lvw.ac.uk
+
+
+    Sevil Sen
+
+    WISE Lab.
+
+    Hacettepe University
+
+    Ankara, Turkey
+
+    ssen@cs.hacettepe.edu
+
+
+    **Abstract**—Using gaps gives us opportunity to extract information from metadata.
+    From the point of view, the missing information in metadata of an application
+    could be a sign of suspicious activity, which could be detected for extensive
+    analysis. The usage of user reviews on such inconsistencies is also helpful. In
+    addition to how to discover such inconsistencies through the use of permissions
+    and metadata, this study proposes a method based on natural language processing
+    and recurring neural networks.
+
+
+    *Index Terms*—Abstract, description-permission-fidelity, deep learning, natural
+    language processing, recurring neural networks**
+
+
+    language processing (NLP) in order to extract meaningful,
+
+    security-related data from metadata of Android applications.
+
+
+    In this study, a new approach based on NLP and recurring
+
+    neural networks (RNNs) are employed to find incor-
+
+    sistencies between requested permissions of an application
+
+    and its metadata. This problem is known as the description-
+
+    ofidelity problem [3] in the literature. Permissions [4] is one of
+
+    t important security mechanisms introduced by Android, or
+
+    users have to grant permissions before they use.
+
+    While permissions are required to be granted at the time of
+
+    installation, in later versions of Android (e.g., Android 6.0), they
+
+    are asked to be granted at runtime in recent
+
+    n years.
+
+
+    We expect Android developers to get more information
+
+    out the usage of their permissions in their metadata
+
+    such descriptions and policies. The missing of such sign
+
+    of suspicious activity could be used for further automatic
+
+    analysis. This is the main assumption of the current study and
+
+    the previous studies proposed for the description-fidelity
+
+    problem. In this research, recurring neural networks are used
+
+    to detect whether a particular application needs permission.
+
+    n For comparison, an LSTM model utilizes
+
+    long short-term memory (LSTM) networks. We then
+
+    them of the inconsistencies can be summarized as follows.
+
+
+    # I. INTRODUCTION
+
+
+    Mobile devices have become inescapable part of our lives.
+
+    With the use of applications, they provide many functionalities
+
+    as as writing/reading emails, mobile banking, finding
+
+    features that make our lives easier. While Android is
+
+    leading mobile operating system with approximately 75%
+
+    share in the market [1], it is one of the most popular
+
+    platforms used by [2].
+
+
+    There are two main techniques to detect:
+
+    static and dynamic analysis. While applications are run
+
+    a device or emulator to observe the runtime behaviour of
+
+    gapplications, in static analysis the application is
+
+    not run and consists of its code. In the application
+
+    package analyze the file using static methods. Both
+
+    techniques have their pros and cons which could be
+
+    bypassed by evasion techniques. Beside and dynamic
+
+    behaviour of applications, Android platform gives us
+
+    to analyze applications from the security point of view:
+
+    metadata in a market store such as descriptions, user
+
+    reviews and ratings, policies. In the last
+
+    five years, we have started to see the applications of natural
+
+
+    Firstly, a neural model using deep neural networks is
+
+    tposed to detect the inconsistencies between requested
+
+    permissions and metadata. Section III introduces the method
+
+    based on LSTMs for the problem. The experimental
+
+    results of the proposed approach on the Ac-Net dataset [5]
+
+    are given and discussed in Section IV. The effects of user
+
+    reviews on the results are also discussed in this section.
+
+    Section V concludes the paper.
+
+
+    978-1-6653-1820-3/$20.00 © 2020 IEEE
+
+
+    2020 International Conference on Information Security and Cryptography (ISTCURKEY)
+
+
+    56'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# II. RELATED WORK
+
+
+    # TABLE 1
+
+    INFORMATION ABOUT THE SELECTED PERMISSION GROUPS.
+
+
+    Google Pay, Android official market, and other market stores provide a platform
+    for users to search and download for applications. These platforms are also used
+    by attackers to distribute malicious applications. In market stores, besides the
+    application package, other information about applications such as descriptions,
+    ratings, user reviews exist. Such information is mainly based on text. Here, we
+    summarize the methods that we used for Android and proposed for the permission-description
+    fidelity problem.
+
+
+    | Protection Levels | Permission Groups | Permission |
+
+    | --- | --- | --- |
+
+    | Dangerous | STORAGE | WRITE_EXTERNAL_STORAGE |
+
+    | | CONTACTS | READ_CONTACTS |
+
+    | | LOCATION | ACCESS_LOCATION |
+
+    | | CAMERA | ACCESS_CAMERA |
+
+    | | SMS | READ_SMS |
+
+    | | CALL_LOG | SEND_SMS, CALL_PHONE, READ_PHONE |
+
+    | | CALENDAR | WRITE_SETTINGS |
+
+    | | TASKS | KILL_BACK_GROUND |
+
+
+    Wyper [6] is one of the effective methods to automatically analyze description-to-permission
+    fidelity of applications. We utilize natural language processing methods to identify
+    applications that involve a specific permission and describe the need for it.
+    In this purpose, first-order logic descriptions of permissions are sentence to
+    match with the semantic groups of permissions using a keyword-based method for
+    description-to-permission fidelity and achieves comparable results with Wyper
+    [6]. One of the main advantage of this is that it can be easily applied to other
+    languages.
+
+
+    AutoConfig, proposed by Cu et al. is based on explicit semantic analysis (ESA)
+    which provides a vector representation of a text group, giving a representation
+    of the meaning in the text. The model uses vector representations of app descriptions
+    to assess whether an application needs certain permissions. AutoConfig is arguably
+    better than that Wyper. A recent study by Feng [5] is one of the few that applied
+    natural language techniques before us to predict permission-description fidelity.
+    In this study, AC-Net uses of sequential-based neural networks, gated recurrent
+    unit (GRU). GRU [8] is a type of recurrent neural networks (RNNs) which are used
+    to model sequential data relate. In the current study, we use sequential data
+    to relate that the prediction is independently from AC-Net, a model based on LSTM.
+    Furthermore, differently from AC-NET, the effects of these studies are evident.
+
+
+    extract attributes associated with similarity. In SmartPI, the reviews are not
+    labeled.
+
+
+    Wang et al [12] proposed a data-based method for explaining why applications apply
+    for certain permissions. We make the use of semantic analysis to extract related
+    features for their machine learning based classifiers, the classifier outputs
+    a categorical group of permissions. There are also methods based on automatic-criterion
+    description generation [12], [13]. NLP has to be used in malware detection as
+    well. Yu et al [14] proposed a malware detection system based on the privacy policy
+    and security context analysis. Another study by Zhang et al [15] used Natural
+    Language Generation to generate security-centric descriptions based on the permission
+    groups.
+
+
+    # III. MODEL
+
+
+    The overall architecture of the proposed approach is given in Figure 1, which
+    is on the right side of Figure 1, labeled application descriptions (i.e. sentences)
+    are pre-processed, then feature vectors are built based on trained embeddings,
+    and into a Long Short Term Memory (LSTM). An LSTM-based prediction model is built
+    for each permission. In testing, which is on the left side of Figure 1, a new
+    description is first pre-processed and the feature vector is then fed into the
+    prediction model for each permission. The prediction score for a permission is
+    used to determine whether the permission is identified as a correct permission.
+
+
+    Other studies have examined the impact of app security and privacy features [91].
+    Kong et al [9] proposed a system AUTOBER to learn the privacy-related behaviors
+    inferred from user applications. AUTOBER is a machine learning algorithm to associate
+    relationship between reviews and privacy-related behaviors. A study by Nguyen
+    used a natural language-based model to classify the users into security&privacy
+    related (SPR) or non-SPR. They showed that there is a strong correlation between
+    reviews and privacy-related app updates. A more recent study, we made use of user
+    comments to understand why an application is asking for permissions. The proposed
+    NLP based on SmartPI [11] framework detects users comment relate to functionality
+
+
+    For labeled descriptions, AC-Net [5] dataset is employed in this study. This dataset
+    annotation from 1417 applications'' descriptions are manually labeled into permission
+    groups. Each is related to the relevant permission group, it is labeled as 1;
+    not it is labeled as 0. Previous studies in the literature [3], [6], AC-Net labeled
+    application descriptions to certain permission groups relate larger than single
+    permission. 9 of these permission groups belong to dangerous permission groups.
+    The dangerous permissions, 2 permission groups belong to the signature and normal
+    permissions, Table 1'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/6fd3c72287bc5b6622208ffad3f3951f_2_0.png)
+
+
+    (LSTMs) [16] filter out irrelevant information while remembering past also provides
+    such networks to overcome vanishing gradient problem. We utilize LSTM in our approach
+    for processing app descriptions that are composed of sequences and by nature.
+
+
+    First, app descriptions are preprocessed feeding into the LSTMs. The pre-processing
+    tasks involve sentence extraction, word tokenization, punctuation removal, elimination,
+    non-alphabetic character removal, and stemming; then embeddings are obtained from
+    pre-trained word embeddings and these embeddings are fed into an LSTM. The output
+    of each LSTM is the compositional representation of the input sentence that identifies
+    its semantics. We use a bidirectional LSTM, where one LSTM processes the words
+    in forward order, and another processes the words in reverse order;
+
+
+    ```
+
+    $s_i = BiLSTM(x_{t,i})$
+
+    ```
+
+
+    Here, $s_i = (x_{t,i})$ is the sentence in the data and $y_j$ is the embedding
+    of the $j$th word in the sentence. We use $s_i$ for the compositional representation
+    of sentence. The final hidden vectors of both LSTMs are concatenated to form the
+    sentence representation $s_i$. The compositional representation of each sentence
+    is obtained from the bidirectional LSTM, each sentence is classified by a multipilayer
+    perceptron with a sigmoid activation function as given below:
+
+
+    ```
+
+    $\alpha_i = sigmoid(MLP(s_i))$
+
+    ```
+
+
+    where $\alpha_i$ is the prediction, which called the permission score. It is a
+    value between 0 and 1 in order to decide whether the corresponding permission
+    is in the given input. If it is greater than 0.5, the classification is output.
+    Otherwise, the output is 0, hence of the permission is not stated in the sentence.
+
+    Our task is a binary classification problem. A different LSTM is produced for
+    each permission category.
+
+
+    ```
+
+    $-\ell = (y * \log(y)) + (1 - y) * \log(1 - y)$
+
+    ```
+
+
+    Here, $y$ refers to the target and $\hat{y}$ refers to the predicted output. The
+    architecture of the model is shown in Figure 2.
+
+    The model is implemented in DeepTorch2. Each LSTM has an input dimension of 300
+    and hidden layer size of 128. The MLP has a hidden layer of 128 and an output
+    layer of 1 which of output indicates that the permission is stated in the sentence,
+    and an output of 0 indicates that the permission is not mentioned in the given
+    sentence descriptions. We randomly initialize the model
+
+
+    ![](img/6fd3c72287bc5b6622208ffad3f3951f_2_1.png)
+
+
+    TABLE II
+
+    AC-NET DATASET STATISTICS: SENTENCES PER PERMISSION SENTENCES.
+
+    | Permissions | # Apps | # Sent. | # S |
+
+    | --- | --- | --- | --- |
+
+    | STORAGE | 1904 | 21101 | 1318 |
+
+    | CONTACTS | 951 | 17533 | 997 |
+
+    | LOCATION | 632 | 12887 | 724 |
+
+    | MOBILE | 350 | 7016 | 562 |
+
+    | SNS | 337 | 6371 | 319 |
+
+    | CALL_LOG | 228 | 5457 | 323 |
+
+    | PHONE | 280 | 3455 | 245 |
+
+    | CALENDAR | 197 | 3927 | 289 |
+
+    | SETTINGS | 369 | 7016 | 560 |
+
+    | TOTAL | 4415 | 24726 | 4984 |
+
+
+    shows the permission groups used in the AC-NET dataset, the permissions that these
+    permission groups correspond and the number of applications in each. Here, the
+    number of sentences and the number of permission sentences that are marked as
+    1 are also shown.
+
+    Unlike Feed-Forward Neural Networks, Recurrent Neural Networks (RNNs) have the
+    ability to process sequence data with an internal memory that allows to remember
+    history while processing inputs. Due to the vanishing gradient problem in RNN,
+    Long Term Memory Networks
+
+
+    > * We use pytorch.
+
+    * https://pytorch.org/en/latest/tutorial.html
+
+    The implementation will be made available if the paper gets accepted.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Sigmoid Activation
+
+
+    ![](img/6fd3c72287bc5b6622208ffad3f3951f_3_0.png)
+
+
+    embedding from collected descriptions of Android applications. In loosely speaking,
+    word vectors correspond to the meaning of words, and they can have different meanings
+    in different domains. We have created the word vectors from the Android context
+    in order to eliminate the ambiguity that results from meaning of words in other
+    domains. The results of the proposed approach competes with Fasttext, which is
+    a type of unsupervised learning algorithm for obtaining vector representations
+    for words, in Table III. It is clear that the accuracy increases by using the
+    domain adapted word embeddings. The results we obtained by instantiating our own
+    in Table IV. The AC-Net study produces similarly to its own Word embedding. As
+    can be seen in Table IV, we get comparable results with the AC-Net dataset.
+
+
+    Classification
+
+
+    Sentence Encoding
+
+
+    ![](img/6fd3c72287bc5b6622208ffad3f3951f_3_1.png)
+
+
+    simple good looking calendar widget
+
+
+    ![](img/6fd3c72287bc5b6622208ffad3f3951f_3_2.png)
+
+
+    We use the sample of erroneous cases to determine the capacity and effectiveness
+    of our model. Here, we compare the proposed approach with AC-Net dataset. This
+    analysis only includes the CONTACTS. Of the 24726 sentences in the AC-Net dataset,
+    only 937 have been shown to be associated contacts. Our model classifies 99.01
+    out of 24726 sentences.
+
+
+    Fig. 2. BI-LSTM based classification.
+
+
+    # TABLE III
+
+    VALUATION SCORES OF THE PROPOSED MODEL ON THE AC-NET
+
+    DATASET
+
+
+    | Permission Group | CONTACTS | Domain adapted |
+
+    |---|---|---||
+
+    | | ROC-CUC | PR-AUC | ROC-CUC | PR-AUC |
+
+    | CONTACTS | 0.96 | 0.71 | 0.97 | 0.73 |
+
+    | MICROPHONE | 0.88 | 0.33 | 0.94 | 0.39 |
+
+    | CALENDAR | 0.97 | 0.73 | 0.98 | 0.76 |
+
+
+    In this section, we explain the reasons for the erroneous classifications. Our
+    model can distinguish the meaning of words, in different contexts. For instance,
+    our model differs from the ''contact'' key by saying “please share your contact
+    with us” and in a statement “please give us permission to hear from them us”.
+    However, our model does not have enough context to classify the latter. This helps
+    applies to apps that requests requests permission. In this instance, the candidate
+    app does not reject the mentioned permission, our model classifies it as a permission
+    request.
+
+
+    parameters from a uniform distribution in the range of 0.08 and 0.05. We use Adaptive
+    Method Estimation (Adam) optimizer during training [18]. We apply gradient norm
+    clipping to deal with gradient problem [19]. We use 10-fold cross-validation for
+    training.
+
+
+    # IV. EXPERIMENTS
+
+
+    # A. Evaluation Metrics
+
+
+    In this study, we evaluate the PR-AUC and ROC-AUC metrics. Since the AC-Net dataset
+    [5] is not well balanced, we use the PR-AUC and ROC-AUC metrics as standard of
+    standard metrics such as. To give an example from the camera permission, only
+    522 of the 2474 sentences in the AC-Net dataset seem to be related to the CAMERA
+    permission.
+
+
+    Finally, inconsistencies arising from the data cause the model to produce erroneous
+    results. This situation is because many cases contain information about social
+    media. For example, phrases as “share with friends via Facebook” classified as
+    permission and some as normals. In training and prediction, some labeling may
+    lead to contradictory results, increasing both false positives and false negatives.
+
+
+    # C. Results of the Document-Based Model Using Reviews
+
+
+    One of the reasons for developing the document-based model in using reviews is
+    to evaluate the permission-permission de-boundary problem. In order to evaluate,
+    the document-based model is trained and tested on the AC-Net dataset. Using the
+    same LSTM model which is trained on the reviews, however we use the full text
+    when deeding into the LSTM, rather than feeling the sentences within the description
+    one by one. We train the model each as a single document.
+
+
+    # B. Results Without Reviews
+
+
+    In this study, we initialize word vectors with our pre-trained embeddings. We
+    use the skip-gram word2vec embeddings. [20], in particular to produce our domain
+    adapted word'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# TABLE IV
+
+    COMPARISON WITH AC-NET
+
+
+    | Permission Group | AC-NET ROC-AUC | AC-NET PR-AUC | Our Model ROC-AUC | Our
+    Model PR-AUC |
+
+    |---|---|---|---|--|
+
+    | CONTACTS | 0.97 | 0.75 | 0.97 | 0.72 |
+
+    | MICROPHONE | 0.96 | 0.50 | 0.95 | 0.61 |
+
+    | ACCESS_AUDIO | 0.94 | 0.80 | 0.97 | 0.78 |
+
+    | LOCATION | 0.94 | 0.63 | 0.95 | 0.57 |
+
+    | CAMERA | 0.98 | 0.76 | 0.98 | 0.70 |
+
+    | READ_CALLS | 0.99 | 0.61 | 0.93 | 0.47 |
+
+    | READ_SMS | 0.99 | 0.84 | 0.99 | 0.80 |
+
+    | WRITE_SMS | 0.98 | 0.83 | 0.95 | 0.44 |
+
+
+    # TABLE V
+
+    EFFECTS OF USER REVIEWS
+
+
+    | Permission Group | Without Reviews ROC-AUC | Without Reviews PR-AUC | With Reviews
+    ROC-AUC | With Reviews PR-AUC |
+
+    |---|---|---|---|--|
+
+    | READ_CONTACTS | 0.57 | 0.41 | 0.69 | 0.53 |
+
+    | READ_AUDIO | 0.48 | 0.15 | 0.61 | 0.21 |
+
+    | STORAGE | 0.65 | 0.56 | 0.71 | 0.47 |
+
+
+    In this study, user reviews are also treated as a text-based description. In our
+    document-based model, we follow the following strategy. First we train the model,
+    is trained then we test the description in the test set whether a permission is
+    stated or not. If the permission is high and the permission is detected, then
+    it is concluded that the permission is required by the application. However, if
+    the permission is low then it is still possible for the permission to be required
+    by the application but it could be ignored in the description. This time we used
+    3 user reviews of the system to apply the trained LSTM model and concatenate the
+    encoding of description with encoding of the LSTM to predict the permission. The
+    permission errors are expected to overlap with the errors of the reviews in testing.
+    The results we obtained from testing are shown in Table V. Here, the threshold
+    of permission is set to 0.5 to show results especially for the READ_CONTACTS and
+    READ_AUDIO permissions. However, as it is noted, the performance of the document-based
+    model is considerably lower than the sentence-based model.
+
+
+    # V. CONCLUSION AND FUTURE WORK
+
+
+    Description-fidelity problem refers to the inconsistencies between requested permission
+    and app metadata. In this paper we use natural language processing methods, as
+    well as recurrent neural networks to tackle the description-fidelity problem in
+    Android applications. Our results show that
+
+
+    using a bidirectional LSTM network detects the inconsistencies between the requested
+    permissions and app descriptions respectively.
+
+
+    Our model is similar to the recent model AC-Net [5] based on deep recurrent networks.
+    However, their model uses Gated Recurrent Units (GRU), whereas ours uses LSTM.
+    Difference between our model and theirs is the inclusion of the user reviews.
+    It is possible to have some descriptions that are not about the permissions, but
+    user reviews are. Our results show that using user reviews could improve the system
+    performance.
+
+
+    We plan to investigate the methods to include the reviews in the sentence-based
+    model, which is left to future work.
+
+
+    # REFERENCES
+
+
+    [1] Statista. Mobile operating system market share from 2012 to 2010 (Visited
+    2020). [Online]. https://www.statista.com/statistics/272609/global-mobile-market-share-by-operating-system/
+
+
+    [2] Imperner. Internet security report, 2019. [Online]. https://www.imperner.com/
+
+
+    [3] Z. Qi, R. Wang, X. Zhang, Y. Chen, and Z. Chen. Permission-to-permission fidelity
+    in Android applications, in Proceedings of the 2024 ACM SIGSOFT Conference on
+    Software Engineering, pp. 136–145. New York, NY, USA: ACM, 10.1145/3641162.3641165.
+    [Online]. https://doi.org/10.1145/3641162.3641165
+
+
+    [4] D. Guo, Y. Li, J. Wang, and J. Zhang. AC-Net: Assessing the consistency of
+    permission detection in Android apps, IEEE 2022 IEEE International Conference
+    on Computer Science and Informatics (ICCI), pp. 578–582.
+
+
+    [5] Y. Wang, J. Zhang, T. Sakai, and T. Mori. Understanding risk assessment of
+    mobile permissions, in Proceedings of the 2015 IEEE International Conference on
+    Systems and Security (SICS 2015), pp. 241–255. [Online]. https://doi.org/10.1109/SICS.2015.7454068
+
+
+    [6] K. Chu, Y. Li, and C. Gibson. Using recurrent neural learning techniques for
+    understanding permission requests in Android applications. Journal of Machine
+    Learning, 2014. [Online]. https://arxiv.org/abs/1406.1070
+
+
+    [7] D. Gong, L. C. Chen, H. Lin, and J. Auto. Understanding user expectations
+    of mobile permission requests, in Proceedings of the 22nd ACM SIGSOFT Conference
+    on Computer and Software Engineering, pp. 899–908.
+
+
+    [11] R. Wang, Z. Wang, B. Tang, L. Zhao, and L. Wang. Smartni: Understanding permission
+    implications of android apps from user reviews, IEEE Transactions on Mobile Computing,
+    2019.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '[17] H. Wang, Y. Li, Y. Guo, A. Agarwal, and J. Hong, "Understanding the purpose
+    of permission use in mobile apps," ACM Transactions on Information Systems (TOIS),
+    vol. 8, no. 4, pp. 1–23, 2015.
+
+
+    [18] M. Zhang, Y. Duan, Q. Feng, and H. Yin, "Towards automatic generation of
+    security-centric descriptions for android apps," in Proceedings of the 22nd ACM
+    International Conference on Computer and Communications Security, CCS ''15. New
+    York, NY, ACM: 2015, pp. 518–529
+
+
+    [14] L. Yo, J. Qi, Q. Sun, and S. Lu, "Improving the description-behavior fidelity
+    in android apps with privacy policy," IEEE Transactions on Software Engineering,
+    vol. 40, no. 9, pp. 834–854, 2020.
+
+
+    [15] J. Elman, "Finding structure in time," Cognitive science, vol. 14, no. 2,
+    pp. 173–208, 1990.
+
+
+    [16] S. Hochreiter and J. Schmidhuber, "Long short-term memory," Neural Comput.,
+    vol. 9, no. 8, pp. 1735–1780, Nov. 1997. [Online]. Available: http://doi.org/10.1109/neco.1997.9.8.1735
+
+
+    [17] M. F. Porter, "Readings in information retrieval," K. Spark Jones and P.
+    Willey, Eds. San Francisco, CA: Morgan Kaufmann Publishers Inc., 1997, pp. 31–63.
+    [Online]. Available: http://doi.org/10.acm.org/citation/3345705
+
+
+    [18] D. P. Kingma and J. Ba, "Adam: a method for stochastic optimization,"
+
+
+    [19] R. Pascana, T. Mikolov, and Y. Bengio, "On the difficulty of training recurrent
+    neural networks," in Proceedings of the 30th International Conference on Machine
+    Learning, 26th, ICML''13. JMLR.org, 2013, pp. III-1310–III-1318. [Online].
+
+
+    [20] T. Mikolov, I. Sutskever, K. Chen, G. S. Corrado, and J. Dean, "Distributed
+    representations of words and phrases and their compositional similarity in neural
+    vector space," arXiv preprint arXiv:1307.3766, J. C. Burges, L. Bottou, M. Welling,
+    G. Ghahramani, and K. Q. Wexler, Eds. Curran Associates, Inc., 2013, pp. 3111–3119.
+
+
+    [21] T. Mikolov, K. Chen, G. Corrado, and J. Dean, "Efficient representation of
+    word in vector space," arXiv preprint arXiv:1301.3781, 2013.'
+  merge: -1
+  img_proc: true
