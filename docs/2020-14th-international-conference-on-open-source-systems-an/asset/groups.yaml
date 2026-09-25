@@ -1,0 +1,1552 @@
+- raw:
+  - "[PAGE 0]\n\n# 2020 14th International Conference on Open Source Systems and Technologies\
+    \ (ICOSST)\n\n# AI Detect: A Machine Learning Based Approach for Fault Identification\
+    \ in Gear Bearing System using Low-Frequency Data\n\nMuhammad Usman*, Shahzad\
+    \ Anwar, Muhammad Akmal and Abdul Hafez\n\nDepartment of Mechanical Engineering,\
+    \ University of Engineering and Technology Peshawar, Khyber Pakhtunkhwa, Pakistan\n\
+    \n*Corresponding author: uetpmwct@upeteshawar.edu\n\n**Abstract—** Rotary machines\
+    \ are essential components of any industrial operation. A fault in these machines\
+    \ can result in some of damage causing a fatal failure of the system. This work\
+    \ develops a low-frequency technique for effectively detecting various faults\
+    \ in a gear bearing system using a monitoring rig that observes the vibration\
+    \ profile of gears and bearings in a system using low-frequency data extracted\
+    \ from the side using MATLAB. A machine learning model based I-a bagged tree is\
+    \ trained on these features and validated. The highest accuracy of 96.65% with\
+    \ a proportion of 80% and 20% split of 80% and 20% shows the effectiveness of\
+    \ the developed algorithm, comparison with SVC and KNV method is demonstrated.\n\
+    \nEnsemble classifiers combine individual classifiers that aggregate results either\
+    \ weighted or unweighted classification. The ensemble classification accuracy\
+    \ is generally much higher than the individual classifier [6]. There are many\
+    \ ensemble classifiers like bagging (as bootstrap aggregation) [7], boosting and\
+    \ Random Forest are commonly introduced. Many random algorithms can increase predictive\
+    \ maintenance. In this study, six universal and Random forest (RF) have achieved\
+    \ an average accuracy of 95.56% when compared with the algorithm average accuracy\
+    \ of 95.33%.\n\nIn supervised learning, decision trees are popular to design variant\
+    \ and robust algorithms. They mimic the human brain for decision making, which\
+    \ makes them suitable for industrial applications like fault detection [10]. Item\
+    \ et al. [11] investigate tree selection for industrial applications. Lee et al.\
+    \ [12] detect fault from a faulty bearing, where bearing status using principal\
+    \ component analysis (PCA) is also used with the C.5 detection tree models and\
+    \ results are compared with a normal tree to show the effects. There are many\
+    \ types of decision trees that have unique characteristics and are suitable for\
+    \ fault classification. In some cases [13] diagnosed gearbox faults using back\
+    \ propagation (BP) neural network and the AdaBoost-based algorithm. Vernek et\
+    \ al. [14] presented tree selection to select the most features from the set of\
+    \ extracted features.\n\n**Keywords—** Fault diagnosis, ensemble, tree, frequency\
+    \ data, statistical features.\n\n# INTRODUCTION\n\nGears and bearings are the\
+    \ main components of machines. A defect in these components sometimes triggers\
+    \ a fault that could lead to catastrophic failure. According to Ni et al. [1],\
+    \ 40.55% of faults occur due to bearing failure. Gearboxes (as an important component\
+    \ in a machine) are likely to cause a failure due to high speed and complex operation\
+    \ [2]. Machine learning strategies are emerging moving from preventive to condition-monitoring\
+    \ techniques due to an increasing need for low cost, higher quality, and safety\
+    \ protection.\n\nResearchers have focused on machine fault prediction and detection\
+    \ to shut down hence, reducing production loss. Consequently, many developed methods\
+    \ have adopted fault identification for industrial machines. They have implemented\
+    \ vibration-based methods for fault detection due to the increased demand and\
+    \ machine reliability [4], Time-domain features for fault detection and in some\
+    \ cases, frequency domain features are extracted for fault identification. Other\
+    \ common techniques include signature analysis, temperature monitoring, noise\
+    \ signature analysis, acoustic, and envelope analysis.\n\nFault extraction is\
+    \ challenging from raw signals due to laboriously time-consuming and most of the\
+    \ time error-prone. Therefore, machine learning methods could automate the fault\
+    \ detection process based on features that are indispensable [5].\n\nSupport vector\
+    \ machine (SVM) classification algorithms classifies faults efficiently in comparison\
+    \ with classifiers [15]. Solamani et al. [16] identified four different types\
+    \ of gears using fault signal processing and SVM. The developed method based on\
+    \ their research on gearbox gears connected with a motor of motorcycle resulted\
+    \ in fault classification having 22.5% error in saltient features and 25% using\
+    \ randomly selected features. \n\nGunerkar et al. [18] propose ANN and KNN methods\
+    \ for fault classification in bearings. The signals from the accelerometer were\
+    \ processed and denoised using wavelet transform, features are extracted from\
+    \ the"
+  - '[PAGE 1]
+
+
+    # 2020 14th International Conference on Open Source Systems and Technologies (ICOSST)
+
+
+    denoised signal. These features are featured in a train-test split with 80% and
+    20%. These features along with different speed and loading conditions are used
+    as input to ANN and KNN. There are many classifier than KNN. In literature, there
+    are many learning algorithms, and choosing the right for a specific task is classification
+    accuracy. Carana et al. [19] used various machine learning algorithms including
+    decision trees, random forest, SVM, neural networks, logistic regression and boosted
+    stumps. Their study concluded that the best performing algorithm is boosted trees,
+    random forest, uncalibrated trees and uncalibrated neural networks. In this research
+    based decision tree is used for classification of gears and bearings.
+
+
+    The frequency at which data is collected is critical in many experimental setups.
+    Using data for high-frequency data is expensive, however, in most research high
+    sampling frequency is rare for fault identification. Soleimani et al. [16] have
+    used 16384 Hz and 1420 rpm for extraction. Zhang et al. [13] used 5120 Hz and
+    880 rpm. Chen et al. [15] have used 44.1 Hz and 1900 rpm respectively.
+
+
+    This paper contributes to the development of a rig for testing gears and bearings
+    with a marked speed of 400-600 rpm. The data was collected using accelerometer
+    with frequency of 500 Hz which is much lower than the frequency used for target
+    feature. The extraction and features selection based on the variance make it less
+    challenging for fault diagnosis in gears and bearings using tree classifiers.
+    The results from the proposed method are compared with other machine learning
+    algorithms.
+
+
+    Table 1 PARAMETERS DESCRIPTION
+
+    | Name | Description |
+
+    | :--- | :--- |
+
+    | Skewness | $g = \sum(x_i-\bar{x})^3/\sigma^3$ |
+
+    | Kurtosis | $k = \sum(x_i-\bar{x})^4/\sigma^4 - 3$ |
+
+    | Variance | $v = \sum(x_i-\bar{x})^2/n$ |
+
+    | Mean | $m = x_1 + ... + x_n/n$ |
+
+    | Median | $M = (n+1)/2$ |
+
+    | Standard Deviation | $\sigma = \sqrt{\sum(x_i-\bar{x})^2/n}$ |
+
+    | RMS | $RMS = \sqrt{\sum x_i^2/n}$ |
+
+
+    # II. MATERIALS AND METHODOLOGY
+
+
+    The apparatus consists of a motor, bearings, gears, a sensor and other components.
+    The sensor signal is complicated and extraction of fault information it requires
+    expertise. The proposed technique aim to identify the faults that are hidden in
+    the mentioned sections. The following section presents the methodology employed
+    in this study.
+
+
+    # A. Statistical Features
+
+
+    Feature extraction is an important part of this research. Kurtosis, skewness,
+    mean and some other features are selected in TABLE 1. Kurtosis and skewness are
+    advanced functions. The kurtosis shows the peak value of the probability density
+    function (PDF) and skewness shows whether the signal is positively or negatively
+    skewed. For healthy components kurtosis is approximately 3 with 0 skewness when
+    the fault develops the signal generates negatively or positively skewed [20][21].
+
+
+    In TABLE 1, $x_i$ is the value of the input, $\bar{x}$ is the mean of the input
+    vector, $n$ is the number of elements in the input vector and $\sigma$ is the
+    standard deviation. The quality of model training depends on the features of the
+    data. These features are extracted after acquiring data through an accelerometer
+    as shown in Fig. 1.
+
+
+    # B. Decision Tree Algorithm
+
+
+    Decision tree are built as a top-down flow chart in which each block represents
+    a tree node. In each node tree has two or several branches. The decision tree
+    divides the number of classes based on the conditions in each node. The best splitting
+    is chosen to split the data into branched nodes starting from the root and a tree
+    structure is formed. Finally, a stopping criterion is applied in the terminal
+    nodes of the decision tree is applied.
+
+
+    # C. Bagged Tree Algorithm
+
+
+    Bagging (Bootstrap Aggregation) is a general algorithm that is used to reduce
+    variance. The decision tree used classification and regression models normally
+    have high variance. These algorithms work perfectly with specific data that creates
+    variance. In such cases, the decision tree from many different differs. Therefore,
+    bagging is used to reduce the variance in the decision tree. The voting classifiers
+    are created using bootstrap sampling techniques. In Bauer et al. [8], bootstrap
+    samples are created by taking a uniform sample of size B from an initial dataset
+    of S by randomly sampling
+
+
+    ![](img/6b21703010358de8762b84cb51ef2cfb_1_0.png)
+
+
+    Fig. 1. Flow chart for data extraction'
+  md: '
+
+    # 2020 14th International Conference on Open Source Systems and Technologies (ICOSST)
+
+
+    # AI Detect: A Machine Learning Based Approach for Fault Identification in Gear
+    Bearing System using Low-Frequency Data
+
+
+    Muhammad Usman*, Shahzad Anwar, Muhammad Akmal and Abdul Hafez
+
+
+    Department of Mechanical Engineering, University of Engineering and Technology
+    Peshawar, Khyber Pakhtunkhwa, Pakistan
+
+
+    *Corresponding author: uetpmwct@upeteshawar.edu
+
+
+    **Abstract—** Rotary machines are essential components of any industrial operation.
+    A fault in these machines can result in some of damage causing a fatal failure
+    of the system. This work develops a low-frequency technique for effectively detecting
+    various faults in a gear bearing system using a monitoring rig that observes the
+    vibration profile of gears and bearings in a system using low-frequency data extracted
+    from the side using MATLAB. A machine learning model based on bagged tree is trained
+    on these features and validated. The highest accuracy of 96.65% with a proportion
+    of 80% and 20% split of 80% and 20% shows the effectiveness of the developed algorithm,
+    comparison with SVC and KNN method is demonstrated.
+
+
+    Ensemble classifiers combine individual classifiers that aggregate results either
+    weighted or unweighted classification. The ensemble classification accuracy is
+    generally much higher than the individual classifier [6]. There are many ensemble
+    classifiers like bagging (as bootstrap aggregation) [7], boosting and Random Forest
+    are commonly introduced. Many random algorithms can increase predictive maintenance.
+    In this study, six universal and Random forest (RF) have achieved an average accuracy
+    of 95.56% when compared with the algorithm average accuracy of 95.33%.
+
+
+    In supervised learning, decision trees are popular to design variant and robust
+    algorithms. They mimic the human brain for decision making, which makes them suitable
+    for industrial applications like fault detection [10]. Item et al. [11] investigate
+    tree selection for industrial applications. Lee et al. [12] detect fault from
+    a faulty bearing, where bearing status using principal component analysis (PCA)
+    is also used with the C.5 detection tree models and results are compared with
+    a normal tree to show the effects. There are many types of decision trees that
+    have unique characteristics and are suitable for fault classification. In some
+    cases [13] diagnosed gearbox faults using back propagation (BP) neural network
+    and the AdaBoost-based algorithm. Vernek et al. [14] presented tree selection
+    to select the most features from the set of extracted features.
+
+
+    **Keywords—** Fault diagnosis, ensemble, tree, frequency data, statistical features.
+
+
+    # INTRODUCTION
+
+
+    Gears and bearings are the main components of machines. A defect in these components
+    sometimes triggers a fault that could lead to catastrophic failure. According
+    to Ni et al. [1], 40.55% of faults occur due to bearing failure. Gearboxes (as
+    an important component in a machine) are likely to cause a failure due to high
+    speed and complex operation [2]. Machine learning strategies are emerging moving
+    from preventive to condition-monitoring techniques due to an increasing need for
+    low cost, higher quality, and safety protection.
+
+
+    Researchers have focused on machine fault prediction and detection to shut down
+    hence, reducing production loss. Consequently, many developed methods have adopted
+    fault identification for industrial machines. They have implemented vibration-based
+    methods for fault detection due to the increased demand and machine reliability
+    [4], Time-domain features for fault detection and in some cases, frequency domain
+    features are extracted for fault identification. Other common techniques include
+    signature analysis, temperature monitoring, noise signature analysis, acoustic,
+    and envelope analysis.
+
+
+    Fault extraction is challenging from raw signals due to laboriously time-consuming
+    and most of the time error-prone. Therefore, machine learning methods could automate
+    the fault detection process based on features that are indispensable [5].
+
+
+    Support vector machine (SVM) classification algorithms classifies faults efficiently
+    in comparison with classifiers [15]. Solamani et al. [16] identified four different
+    types of gears using fault signal processing and SVM. The developed method based
+    on their research on gearbox gears connected with a motor of motorcycle resulted
+    in fault classification having 22.5% error in salient features and 25% using randomly
+    selected features.
+
+
+    Gunerkar et al. [18] propose ANN and KNN methods for fault classification in bearings.
+    The signals from the accelerometer were processed and denoised using wavelet transform,
+    features are extracted from the denoised signal. These features are featured in
+    a train-test split with 80% and 20%. These features along with different speed
+    and loading conditions are used as input to ANN and KNN. There are many classifier
+    than KNN. In literature, there are many learning algorithms, and choosing the
+    right for a specific task is classification accuracy. Carana et al. [19] used
+    various machine learning algorithms including decision trees, random forest, SVM,
+    neural networks, logistic regression and boosted stumps. Their study concluded
+    that the best performing algorithm is boosted trees, random forest, uncalibrated
+    trees and uncalibrated neural networks. In this research decision tree is used
+    for classification of gears and bearings.
+
+
+    The frequency at which data is collected is critical in many experimental setups.
+    Using data for high-frequency data is expensive, however, in most research high
+    sampling frequency is rare for fault identification. Soleimani et al. [16] have
+    used 16384 Hz and 1420 rpm for extraction. Zhang et al. [13] used 5120 Hz and
+    880 rpm. Chen et al. [15] have used 44.1 Hz and 1900 rpm respectively.
+
+
+    This paper contributes to the development of a rig for testing gears and bearings
+    with a marked speed of 400-600 rpm. The data was collected using accelerometer
+    with frequency of 500 Hz which is much lower than the frequency used for target
+    feature.
+
+
+    # II. MATERIALS AND METHODOLOGY
+
+
+    The apparatus consists of a motor, bearings, gears, a sensor and other components.
+    The sensor signal is complicated and extraction of fault information requires
+    expertise. The following section presents the methodology.
+
+
+    # A. Statistical Features
+
+
+    Feature extraction is an important part of this research. Kurtosis, skewness,
+    mean and some other features are selected in TABLE 1. Kurtosis and skewness are
+    advanced functions. The kurtosis shows the peak value of the probability density
+    function (PDF) and skewness shows whether the signal is positively or negatively
+    skewed. For healthy components kurtosis is approximately 3 with 0 skewness when
+    the fault develops the signal generates negatively or positively skewed [20][21].
+
+
+    In TABLE 1, $x_i$ is the value of the input, $\bar{x}$ is the mean of the input
+    vector, $n$ is the number of elements in the input vector and $\sigma$ is the
+    standard deviation. The quality of model training depends on the features of the
+    data. These features are extracted after acquiring data through an accelerometer
+    as shown in Fig. 1.
+
+
+    ### PARAMETERS
+
+    | Name | Description |
+
+    | :--- | :--- |
+
+    | Skewness | $g = \sum(x_i-\bar{x})^3/\sigma^3$ |
+
+    | Kurtosis | $k = \sum(x_i-\bar{x})^4/\sigma^4 - 3$ |
+
+    | Variance | $v = \sum(x_i-\bar{x})^2/n$ |
+
+    | Mean | $m = x_1 + ... + x_n/n$ |
+
+    | Median | $M = (n+1)/2$ |
+
+    | Standard Deviation | $\sigma = \sqrt{\sum(x_i-\bar{x})^2/n}$ |
+
+    | RMS | $RMS = \sqrt{\sum x_i^2/n}$ |
+
+
+    ### B. Decision Tree Algorithm
+
+
+    Decision tree are built as a top-down flow chart in which each block represents
+    a tree node. In each node tree has two or several branches. The decision tree
+    divides the number of classes based on the conditions in each node. The best splitting
+    is chosen to split the data into branched nodes starting from the root and a tree
+    structure is formed. Finally, a stopping criterion is applied in the terminal
+    nodes of the decision tree.
+
+
+    ### C. Bagged Tree Algorithm
+
+
+    Bagging (Bootstrap Aggregation) is a general algorithm that is used to reduce
+    variance. The decision tree used classification and regression models normally
+    have high variance. These algorithms work perfectly with specific data that creates
+    variance. In such cases, the decision tree from many different differs. Therefore,
+    bagging is used to reduce the variance in the decision tree. The voting classifiers
+    are created using bootstrap sampling techniques. In Bauer et al. [8], bootstrap
+    samples are created by taking a uniform sample of size B from an initial dataset
+    of S by randomly sampling
+
+
+    ![](img/6b21703010358de8762b84cb51ef2cfb_1_0.png)
+
+
+    Fig. 1. Flow chart for data extraction
+
+    '
+  mdcn: '
+
+
+    # 2020 年第14届开源系统与技术国际会议 (ICOSST)
+
+
+    # AI 检测：一种基于机器学习的低频数据齿轮轴承系统故障识别方法
+
+
+    Muhammad Usman*, Shahzad Anwar, Muhammad Akmal 和 Abdul Hafez
+
+
+    巴基斯坦，开译尔-帕什图图瓦省，白塞培尔工程技术大学，机械工程系
+
+
+    *通讯作者：uetpmwct@upeteshawar.edu
+
+
+    **摘要—** 旋转机械是任何工业运行中必不可的组件。这些机器的故障会导致某些损坏，从而引发系统的致命性故障。本工作开发了一种低频技术，通过使用 MATLAB
+    从侧面提取低频数据，利用监测台观察系统系统中齿轮和轴承的振动特性，从而有效检测齿轮轴承系统中的各种故障。基于袋装树（bagged tree）的机器学习模型对这些特征进行了训练和验证。在
+    80% 和 20% 的划分比例下，达到了 96.65% 的最高准确率，显示了所开发算法的有效性，并与 SVC 和 KNN 方法进行了对比演示。
+
+
+    集成分类器通过加权或未加权的分类来聚合单个分类器的结果。集成分类的准确率通常高于单个分类器 [6]。通常介绍了许多集成分类器，如装袋（作为自助聚合）[7]、提升（boosting）和随机森林。许多随机算法可以增加预测性维护。在本研究中，六种通用算法和随机森林（RF）在与算法比较时，达到了平均准确率
+    95.56%，而另一种算法的平均准确率为 95.33%。
+
+
+    在监督学习中，决策树在设计稳健变体算法方面非常流行，它们模拟人类的决策过程，适用于工业应用。Item 等人 [10] 研究了用于工业应用的决策树选择。对于轴承状态，Lee
+    等人 [12] 使用主成分分析（PCA）结合 C 检测了故障轴承。在决策树故障检测中，结果显示，许多类型的决策树具有独特特征并适用于故障分类。在某些情况下，[13]
+    使用 AdaBoost 和反向传播（BP）神经网络诊断了齿箱故障。Vernek 等人 [14] 展示了从特征集中提取的决策树选择。
+
+
+    **关键词—** 故障诊断，集成，树，频率数据，统计特征。
+
+
+    # 引言
+
+
+    齿轮和轴承是机器的主要组件。这些组件的缺陷有时会触发灾难性故障。根据 Ni 等人 [1]，40.55% 的故障由于轴承发生。齿轮箱（机器中的重要组件）由于高速度和复杂运行可能导致故障。机器学习策略专注于机器故障预测和检测，从而减少生产损失。因此，许多开发方法采用了基于振动的故障检测。其他常用技术包括特征分析、温度监控、声学特征分析和包络分析。
+
+
+    从原始信号提取故障是耗时且容易出错的。因此，基于特征的机器学习方法对于故障检测是必不可少的 [5]。支持向量机（SVM）分类算法在分类器比较中高效地分类故障。Solamani
+    等人 [16] 使用 SVM 处理信号并识别了四种类型的齿轮，其研究结果在齿轮故障分类中的准确率为 22.5% 和 25%。
+
+
+    Gunerkar 等人 [18] 提出了 ANN 和 KNN 方法用于轴承故障分类。来自加速度计的信号经过处理并使用小波变换去噪，从去噪信号中提取特征。这些特征在不同的速度和负载条件下通过
+    80% 和 20% 的训练测试划分作为 ANN 和 KNN 的输入。在文献中，有许多学习算法用于特定任务的分类。Carana 等人 [19] 使用了包括决策树、随机森林、SVM、神经网络、逻辑回归和增强分类桩（boosted
+    stumps）在内的多种机器学习算法。他们的研究得出，最好的算法是增强树、随机森林、未校准树和未校准神经网络。在本研究中，决策树用于齿轮和轴承的分类。
+
+
+    在许多实验设置中，采集数据的频率至关重要。然而，在大多数研究中，高采样频率很少见。Soleimani 等人 [16] 使用了 16384 Hz 和 1420
+    rpm。Zhang 等人 [13] 使用 5120 Hz 和 880 rpm。Chen 等人 [15] 分别使用了 44.1 Hz 和 1900 rpm。
+
+
+    本文贡献了一个用于测试 400-600 rpm 标记速度齿轮和轴承的台架。数据使用频率为 500 Hz 的加速度计采集，该频率远低于目标特征频率。
+
+
+    # II. 材料与方法
+
+
+    该设备由电机、轴承、齿轮、传感器和其他组件组成。传感器信号是复杂的，提取故障信息需要专业知识。下节介绍方法论。
+
+
+    # A. 统计特征
+
+
+    特征提取是本研究的重要部分。表 1 中选择了峭度、偏度、平均值和一些其他特征。峭度和偏度是高级函数。峭度显示概率密度函数（PDF）的峰值，偏度显示信号是正偏还是负偏。对于健康组件，当峭度约为
+    3，偏度为 0；当故障发生时，信号产生负偏或正偏 [20][21]。
+
+
+    在表 1 中，$x_i$ 是输入值，$\bar{x}$ 是输入向量的平均值，$n$ 是输入向量中的元素个数，$\sigma$ 是标准差。模型训练的质量取决于数据的特征。这些特征是通过加速度计获取数据后提取的，如图
+    1 所示。
+
+
+    ### 参数
+
+    | 名称 | 描述 |
+
+    | :--- | :--- |
+
+    | 偏度 | $g = \sum(x_i-\bar{x})^3/\sigma^3$ |
+
+    | 峭度 | $k = \sum(x_i-\bar{x})^4/\sigma^4 - 3$ |
+
+    | 方差 | $v = \sum(x_i-\bar{x})^2/n$ |
+
+    | 平均值 | $m = x_1 + ... + x_n/n$ |
+
+    | 中位数 | $M = (n+1)/2$ |
+
+    | 标准差 | $\sigma = \sqrt{\sum(x_i-\bar{x})^2/n}$ |
+
+    | 均方根 (RMS) | $RMS = \sqrt{\sum x_i^2/n}$ |
+
+
+    ### B. 决策树算法
+
+
+    决策树构建为自上而下的流程图，其中每个块代表一个树节点。每个节点有两个或多个分支。决策树根据节点中的条件划分类别。选择最佳划分方式从根节点将数据划分为分支节点，形成树结构。最后，在决策树的终端节点应用停止准则。
+
+
+    ### C. 袋装树算法
+
+
+    装袋（作为自助聚合）是一种减少方差的通用算法。决策树用于分类和回归的模型通常具有高方差。这些算法在产生方差特定数据上效果完美。在这种情况下，许多不同的决策树存在差异。因此，装袋用于减少决策树的方差。投票分类器使用自助采样技术创建。在
+    Bauer 等人 [8] 中，通过从初始数据集 S 中随机采样一个大小为 B 的均匀样本来创建自助样本。
+
+
+    ![](img/6b21703010358de8762b84cb51ef2cfb_1_0.png)
+
+
+    图 1. 数据提取流程图
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    # 2020 14th International Conference on Open Source Systems and Technologies (ICOOST)
+
+
+    elements from the initial dataset. T bootstrap samples created of size B. Each
+    B creates a classifier $C_t$, T number of individuals are created. A final classifier
+    $C''$ is built from $C_t$ whose output is predicted by its sub-classifier, with
+    ties broken randomly.
+
+
+    Let T be the number of bootstrap samples, S the number of samples and I the number
+    then the bagging algorithm can be formulated [8]:
+
+    1. $i = 1$ to $I$
+
+    2. $S'' = \text{bootstrap samples from } S$
+
+    3. $C_i = C(S'')$
+
+    4. $C'' = \text{argmax}_{y} \sigma_{C_i}(x)$ (the most often predicted value).
+
+
+    The focus of this paper is on the single-stage gear apparatus with a constant
+    load of 500 rpm. Numerical features are extracted from an array of 5000 samples
+    are collected in a duration of 10 seconds. These features are extracted from different
+    configurations states that are given in TABLE II. The procedure adopted for this
+    research is shown in Fig. 1. The features with least variance are filtered. The
+    remaining features are used as input vectors for the subsets. The proposed algorithm
+    based on a bagged tree is trained using 80% of the filtered features, the remaining
+    20% is used for testing and validation. The learning algorithm is tested with
+    a different number of learners and iterations.
+
+
+    The performance of the algorithm is analyzed with confusion matrix and Receiver
+    Operating Characteristics (ROC) curves. The ROC curve measures the performance
+    of a classifier by using different thresholds [22]. The threshold condition distinguishes
+    one feature from the other. In the ROC curve, true positive and false-positive
+    rate are plotted against each other. The parameters used in the ROC curves are
+    defined in TABLE III. The confusion matrix is the best way to visualize the performance
+    of the algorithms in detail. Each column of the confusion matrix shows the number
+    of samples of the predicted class. The rows of the matrix have elements of the
+    target or input class.
+
+
+    The method of removing the features with negligible variance is also analyzed.
+    To show the effectiveness of the algorithm, it is compared with other machine
+    learning algorithms.
+
+
+    # III. EXPERIMENT
+
+
+    The test rig for the experiments of a single-stage gear that is driven by a 24V
+    DC motor, with a maximum speed of 1000 rpm and a power rating of 60W as shown
+    in
+
+
+    Fig. 2. The bearing used in the NTK600. The spur gear has 48 mm outer, 40 mm inner,
+    and 44 mm of teeth. The module of the gear is equal to 1.4. The spur gear is driven
+    by voltage regulator connected with the motor. A motor is installed at the end
+    of the driven gear shaft. The gears have a 1:1 ratio. The motor operates at a
+    constant speed of 50 Hz without any load during the experiments.
+
+
+    Faults generated are shown in Fig. 3. The gear missing its tooth, which quantifies
+    a partial fault away. The gear on the left is missing one tooth which is a 100%
+    faulty gear generation. The outer race of the bearing as shown in Fig. 4 is damaged
+    with developed outer race and the effects on the sidelines
+
+
+    ![](img/6b21703010358de8762b84cb51ef2cfb_2_0.png)
+
+
+    Fig. 2. Experimental test rig
+
+
+    ![](img/6b21703010358de8762b84cb51ef2cfb_2_1.png)
+
+
+    Fig. 3. faulty gears: 100% faulty (left) and 50% faulty (right)
+
+
+    ![](img/6b21703010358de8762b84cb51ef2cfb_2_2.png)
+
+
+    Fig. 4. faulty bearing
+
+
+    | Label | Group Name | Description |
+
+    |---|---||
+
+    | 1 | TE | All components are healthy |
+
+    | 4 | FG | The driven gear is 100% faulty |
+
+    | 2 | FB | Only bearing of the driven gear is faulty and FB in one experiment
+    |
+
+    | 3 | FGB | This configuration combines FG and FB |
+
+    | 5 | | | The driven gear is 50% faulty |'
+  - '[PAGE 3]
+
+
+    # 2020 14th International Conference on Open Source Technologies (ICOS T)
+
+
+    and outer cake. The experiment is conducted on various faults the sensor is acquired
+    in TABLE II. Data is acquired with an accelerometer that has a sensitivity of
+    270mV/g. The sensor is mounted on the target model. The sensor reads the data
+    from the driven gear with a 500 Hz frequency. Radial vibrations are experienced
+    with helical gears and vibrations are executed in SIMULINK and MATLAB for processing.
+    The sampling rate used in this proposal could be obtained with low cost controllers
+    that is one of the objectives of this research. For each machine condition, multiple
+    of 10 seconds are recorded.
+
+
+    # A. Data Extraction
+
+
+    Statistical features are extracted as shown in TABLE I. These features represent
+    the vibration of useful and are used as input for the machine classification.
+    We observed seven statistical features of the two raw signals for each fault.
+    The other features are mean, skewness and the sum of all the among the peaks.
+    These are used as input for the machine learning algorithm. It is evident from
+    the data in TABLE IV that the kurtosis increases as the fault develops shown in
+    Fig. 5. The kurtosis in the faults is much higher with accuracy. The number of
+    experiments is close to be handled comfortably; however, it increases with the
+    fault. The severity remains 0 when elements are healthy and it becomes negatively
+    as as a fault is introduced. The level of classification is determined by the
+    severity level. For instance, in Fig. 5 vertical straight line exists between
+    the healthy and fault condition. This means the learner would perfectly classify
+    the fault state. Nevertheless, the separation line does not exist between different
+    faults, which creates challenges for learning algorithms.
+
+
+    The variance is calculated for each fault column shown in TABLE I for all 60 experiments.
+    The variance
+
+
+    | Table III Parameters FOR ROC CURVE |
+
+    | Parameter | Formula |
+
+    | True Positive Rate (TPR) | TP + FN |
+
+    | Specificity | TN + FP |
+
+    | False Positive Rate (FPR) | 1-Specificity |
+
+
+    ![](img/6b21703010358de8762b84cb51ef2cfb_3_0.png)
+
+
+    Fig. 5. Visualization of Kurtosis for four types
+
+
+    the feature has small variance of 1.98 * 10⁻⁴. Due to low variance, the kurtosis
+    is even, even when a change in this fault does not adopt a significant change
+    in its value. Therefore, this feature is removed from the input matrix for the
+    learning algorithm, which improves
+
+
+    # B. Bagged algorithm for fault detection
+
+
+    The bagged algorithm is implemented with a different number of learners and students.
+    The learners represent the individual weak classifier that consolidates the ensemble
+    classifier. The simplest represents the number of branches or nodes for the classifier.
+    The training is performed with a total of 350 samples. Each sample contains features
+    (unlabeled) with a total of 3150 features. Each feature vector is an attribute
+    that belongs to a specific fault. The bagged tree algorithm is also compared with
+    the results of SVM and KNN algorithms on the acquired data that are implemented
+    respectively. The performance of the algorithm is shown in Fig. 6 and ROC curve
+    as shown in Fig. 7.
+
+
+    # IV. RESULTS
+
+
+    The results of the developed method and ensemble algorithms are shown in TABLE
+    V. The learning model is trained with 80% of data and the 20% is used for validation.
+
+
+    It is found that the developed method performs significantly better than the bagged
+    tree in fault classification, due to the removal of low variance fault features.
+    The highest
+
+
+    | TABLE V Statistical Features |
+
+    | Data Type | Sample No. | Mean | Median | STD | RMS | Var | Skewness | Kurtosis
+    |
+
+    |---|---|---|---|---|---|---|---||
+
+    | H | 1 | 0.0118 | 0.0163 | 0.0297 | 0.0286 | 0.0149 | -0.1650 | 2.8702 |
+
+    | H | 2 | -0.0485 | -0.0311 | 0.0214 | 0.0275 | 0.0045 | -0.1021 | 2.9829 |
+
+    | H | 3 | -0.0118 | 0.0173 | 0.0199 | 0.0172 | -0.0032 | -0.4496 | 3.0904 |
+
+    | FG | 1 | 0.0091 | -0.0082 | 0.0118 | 0.0232 | 0.0000 | -0.0441 | 3.5729 |
+
+    | FG | 2 | -0.0095 | -0.0028 | 0.0232 | 0.0336 | 0.0000 | -1.0957 | 3.1001 |
+
+    | FGB | 1 | -0.0256 | -0.0192 | 0.0313 | 0.0424 | 0.0011 | -0.8135 | 4.3416 |
+
+    | FGB | 2 | -0.0234 | -0.0123 | 0.0315 | 0.0388 | 0.0006 | -0.7115 | 4.3414 |
+
+    | PPG | 1 | -0.0128 | -0.0062 | 0.0292 | 0.0319 | 0.0009 | -0.7027 | 4.7026 |
+
+    | PPG | 2 | -0.0117 | -0.0110 | 0.0320 | 0.0341 | 0.0010 | -0.3414 | 4.0147 |
+
+
+    978-1-9281-0520-1/20/31/2020 IEEE. Authorized licensed to use by: University of
+    California, San Barbara. from IEEE Xplore.'
+  md: '
+
+    # 2020 14th International Conference on Open Source Systems and Technologies (ICOOST)
+
+
+    elements from the initial dataset. T bootstrap samples created of size B. Each
+    B creates a classifier $C_t$, T number of individuals are created. A final classifier
+    $C''$ is built from $C_t$ whose output is predicted by its sub-classifier, with
+    ties broken randomly.
+
+
+    Let T be the number of bootstrap samples, S the number of samples and I the number
+    then the bagging algorithm can be formulated [8]:
+
+    1. $i = 1$ to $I$
+
+    2. $S'' = \text{bootstrap samples from } S$
+
+    3. $C_i = C(S'')$
+
+    4. $C'' = \text{argmax}_{y} \sigma_{C_i}(x)$ (the most often predicted value).
+
+
+    The focus of this paper is on the single-stage gear apparatus with a constant
+    load of 500 rpm. Numerical features are extracted from an array of 5000 samples
+    are collected in a duration of 10 seconds. These features are extracted from different
+    configurations states that are given in TABLE II. The procedure adopted for this
+    research is shown in Fig. 1. The features with least variance are filtered. The
+    remaining features are used as input vectors for the subsets. The proposed algorithm
+    based on a bagged tree is trained using 80% of the filtered features, the remaining
+    20% is used for testing and validation. The learning algorithm is tested with
+    a different number of learners and iterations.
+
+
+    The performance of the algorithm is analyzed with confusion matrix and Receiver
+    Operating Characteristics (ROC) curves. The ROC curve measures the performance
+    of a classifier by using different thresholds [22]. The threshold condition distinguishes
+    one feature from the other. In the ROC curve, true positive and false-positive
+    rate are plotted against each other. The parameters used in the ROC curves are
+    defined in TABLE III. The confusion matrix is the best way to visualize the performance
+    of the algorithms in detail. Each column of the confusion matrix shows the number
+    of samples of the predicted class. The rows of the matrix have elements of the
+    target or input class.
+
+
+    The method of removing the features with negligible variance is also analyzed.
+    To show the effectiveness of the algorithm, it is compared with other machine
+    learning algorithms.
+
+
+    # III. EXPERIMENT
+
+
+    The test rig for the experiments of a single-stage gear that is driven by a 24V
+    DC motor, with a maximum speed of 1000 rpm and a power rating of 60W as shown
+    in
+
+
+    Fig. 2. The bearing used in the NTK600. The spur gear has 48 mm outer, 40 mm inner,
+    and 44 mm of teeth. The module of the gear is equal to 1.4. The spur gear is driven
+    by voltage regulator connected with the motor. A motor is installed at the end
+    of the driven gear shaft. The gears have a 1:1 ratio. The motor operates at a
+    constant speed of 50 Hz without any load during the experiments.
+
+
+    Faults generated are shown in Fig. 3. The gear missing its tooth, which quantifies
+    a partial fault away. The gear on the left is missing one tooth which is a 100%
+    faulty gear generation. The outer race of the bearing as shown in Fig. 4 is damaged
+    with developed outer race and the effects on the sidelines
+
+
+    ![](img/6b21703010358de8762b84cb51ef2cfb_2_0.png)
+
+
+    Fig. 2. Experimental test rig
+
+
+    ![](img/6b21703010358de8762b84cb51ef2cfb_2_1.png)
+
+
+    Fig. 3. faulty gears: 100% faulty (left) and 50% faulty (right)
+
+
+    ![](img/6b21703010358de8762b84cb51ef2cfb_2_2.png)
+
+
+    Fig. 4. faulty bearing
+
+
+    | Label | Group Name | Description |
+
+    |---|---|---|
+
+    | 1 | TE | All components are healthy |
+
+    | 4 | FG | The driven gear is 100% faulty |
+
+    | 2 | FB | Only bearing of the driven gear is faulty and FB in one experiment
+    |
+
+    | 3 | FGB | This configuration combines FG and FB |
+
+    | 5 | | | The driven gear is 50% faulty |
+
+
+    # 2020 14th International Conference on Open Source Technologies (ICOSOST)
+
+
+    and outer cake. The experiment is conducted on various faults the sensor is acquired
+    in TABLE II. Data is acquired with an accelerometer that has sensitivity of 270mV/g.
+    The sensor is mounted on the target model. The sensor reads the data from driven
+    gear with 500 Hz frequency. Radial vibrations are experienced with helical gears
+    and vibrations are executed in SIMULINK and MATLAB for processing. The sampling
+    rate used in this proposal could be obtained with low cost that is one of objectives
+    of this research. For each machine condition, multiple of 10 seconds are recorded.
+
+
+    ## A. Data Extraction
+
+
+    Statistical features are extracted as shown in TABLE I. These features represent
+    the vibration of useful classification. We observed seven raw signals for each
+    fault. The other features are mean, skewness and the sum of all among the peaks.
+    These are used as input for machine learning algorithm. It is evident from the
+    data in TABLE IV that the kurtosis increases as fault develops and is much higher
+    with accuracy; however, it remains 0 when elements are healthy and it becomes
+    negatively as a fault. The level of classification is determined by severity level.
+    For instance, in Fig. 5 vertical line exists between healthy and fault condition.
+    This means the learner would perfectly classify the fault state. Nevertheless,
+    separation does not exist between different faults, which creates challenges for
+    learning algorithms. The variance is calculated for each fault column in TABLE
+    I for 60 experiments.
+
+
+    | Table III FOR ROC CURVE | Parameter | Formula |
+
+    |---|---|---|
+
+    | True Positive Rate (TPR) | TP + FN |
+
+    | Specificity | TN + FP |
+
+    | False Positive Rate (FPR) | 1-Specificity |
+
+
+    ![](img/6b21703010358de8762b84cb51ef2cfb_3_0.png)
+
+
+    Fig. 5. Visualization of Kurtosis for four types the feature has small variance
+    of 1.98 * 10⁻⁴. Due to low variance, kurtosis is even, when a change in this fault
+    does not adopt significant change in its value. Therefore, this feature is removed
+    from input for learning algorithm, which improves
+
+
+    ## B. Bagged algorithm for fault detection
+
+
+    The bagged algorithm is implemented with different number of learners. The learners
+    represent the individual weak classifier that consolidates the ensemble. The simplest
+    represents the number of branches or nodes for the classifier. The training is
+    performed with total of 350 samples. Each sample contains features feature vector
+    is an attribute that belongs to specific fault. The bagged tree is also compared
+    with the results of SVM and KNN on the acquired data that are implemented respectively.
+    The performance of the algorithm is shown in Fig. 6 and ROC curve as shown in
+    Fig. 7.
+
+
+    # IV. RESULTS
+
+
+    The results of the developed method and ensemble algorithms are shown in TABLE
+    V. The learning model is trained with 80% of data and 20% is used for validation.
+    It is found that the developed method performs significantly better than the bagged
+    tree in fault classification, due to the removal of low variance features.
+
+
+    | TABLE V Statistical Features | Data Type | Sample No. | Mean | Median | RMS
+    | Var | Skewness | Kurtosis |
+
+    |---|---|---|---|---|---|---|---|
+
+    | H | 1 | 0.0118 | 0.0163 | 0.0297 | 0.0286 | 0.0149 | -0.1650 | 2.8702 |
+
+    | H | 2 | -0.0485 | -0.0311 | 0.0214 | 0.0275 | 0.0045 | -0.1021 | 2.9829 |
+
+    | H | 3 | -0.0118 | 0.0173 | 0.0199 | 0.0172 | -0.0032 | -0.4496 | 3.0904 |
+
+    | FG | 1 | 0.0091 | -0.0082 | 0.0118 | 0.0232 | 0.0000 | -0.0441 | 3.5729 |
+
+    | FG | 2 | -0.0095 | -0.0028 | 0.0232 | 0.0336 | 0.0000 | -1.0957 | 3.1001 |
+
+    | FGB | 1 | -0.0256 | -0.0192 | 0.0313 | 0.0424 | 0.0011 | -0.8135 | 4.3416 |
+
+    | FGB | 2 | -0.0234 | -0.0123 | 0.0315 | 0.0388 | 0.0006 | -0.7115 | 4.3414 |
+
+    | PPG | 1 | -0.0128 | -0.0062 | 0.0292 | 0.0319 | 0.0009 | -0.7027 | 4.7026 |
+
+    | PPG | 2 | -0.0117 | -0.0110 | 0.0320 | 0.0341 | 0.0010 | -0.3414 | 4.0147 |
+
+    '
+  mdcn: '
+
+
+    # 2020 第14次开源系统与技术国际会议 (ICOOST)
+
+
+    来自初始数据集的元素。创建了大小为 B 的 T 个自助样本。每个 B 产生一个分类器 $C_t$，总共创建了 T 个个体。最终的分类器 $C''$ 由 $C_t$
+    构建而成，其输出由其子分类器预测，并随机打破平局。
+
+
+    设 $T$ 为自助样本数量，$S$ 为样本数量，$I$ 为数量，则 bagging 算法可以表述为 [8]：
+
+    1. $i = 1$ 到 $I$
+
+    2. $S'' = \text{来自 } S \text{ 的自助样本}$
+
+    3. $C_i = C(S'')$
+
+    4. $C'' = \text{argmax}_{y} \sigma_{C_i}(x)$ （预测频率值）。
+
+
+    本文的重点是恒定负载为 500 rpm 的单级齿轮装置。从 10 秒内收集的 5000 个样本数组中提取数值特征。这些特征提取自表 II 所示的不同配置状态。本研究采用的流程如图1
+    所示。过滤掉方差最小的特征。剩余特征作为子集的输入向量。基于装袋树（bagged tree）的建议算法使用 80% 的过滤特征进行训练，剩余 20% 用于测试和验证。使用不同数量的学习器和迭代对学习算法进行测试。
+
+
+    通过混淆矩阵和接收者工作特征（ROC）曲线分析了算法的性能。ROC 曲线通过不同的阈值衡量分类器的性能 [22]。阈值条件区分一个特征与其他特征。在 ROC
+    曲线中，真阳率和假阳率相互绘制。ROC 曲线中使用的参数定义在表 中。混淆矩阵是详细可视化算法性能的最佳方法。混淆矩阵的每一列显示预测类别的样本数。矩阵的行包含目标类或输入类的元素。
+
+
+    还分析了移除方差极小特征的方法。为了展示算法的有效性，将其与其他机器学习算法进行了比较。
+
+
+    # III. 实验
+
+
+    由 24V 直流电机驱动的单级齿轮实验台，其最大速度为 1000 rpm，额定功率为 60W，如图2 所示。
+
+
+    ![](img/6b21703010358de8762b84cb51ef2cfb_2_0.png)
+
+
+    图2. NTK600 中使用的轴承。直齿轮外径 48 mm，内径 40 mm，齿宽 44 mm。齿轮的数为 1.4。直齿轮由连接到电机的电压调节器驱动。在动轮轴末端安装了一个电机。齿轮比例为
+    1:1。实验期间，电机以 50 Hz 的恒定速度运行且无负载。
+
+
+    产生的故障如图3 所示。齿轮缺齿，量化了部分故障。左侧齿轮缺少了一个齿，这属于 100% 故障齿轮生成。如图4 所示，轴承外圈受损，出现了外圈损坏以及对侧边的影响。
+
+
+    ![](img/6b21703010358de8762b84cb51ef2cfb_2_1.png)
+
+
+    图3. 故障齿轮：100% 故障（左侧）和 50% 故障（右侧）
+
+
+    ![](img/6b21703010358de8762b84cb51ef2cfb_2_2.png)
+
+
+    图4. 故障轴承
+
+
+    | 标签 | 组名 |  |
+
+    |---|---|---|
+
+    | 1 | TE | 所有组件均健康 |
+
+    | 4 | FG | 动轮为 100% 故障 |
+
+    | 2 | FB | 仅动轮轴承故障，且在某次实验中 FB |
+
+    | 3 | FGB | 此配置结合了 FG 和 FB |
+
+    | 5 | | | 动轮为 50% 故障 |
+
+
+    # 2020 第14次开源技术国际会议 (ICOSOST)
+
+
+    以及外圈。实验在各种故障下进行，传感器数据采集见于表 II。数据使用灵敏度为 270mV/g 的加速度计采集。传感器安装在目标模型上。传感器以 500 Hz
+    的频率读取动轮数据。螺旋齿轮产生径向振动，振动在 SIMULINK 和 MATLAB 中执行处理。本文建议的采样率可以通过低成本获得，这是本研究的目标之一。对于每个机器状态，记录了多个
+    10 秒。
+
+
+    ## A. 数据提取
+
+
+    统计特征提取所示表 I。这些特征代表了用于分类的振动。我们对每个故障观察了七种原始信号。其他特征是均值、偏度和所有峰值之和。这些被用作机器学习算法的输入。从表
+    IV 的数据可以明显看出，峭度随着故障的发展而增加，且准确性远高；然而，当元件健康时，它保持为 0，当发生故障时变为负值。分类水平由严严重程度决定。例如，在图5中，健康和故障状态之间存在一条垂直线。这意味着学习器可以完美地分类故障状态。然而，不同故障之间不存在分离，这为学习算法带来了挑战。针对表
+    I 中的每个故障列，计算了 60 次实验的方差。
+
+
+    | ROC 曲线参数表 III | 参数 | 公式 |
+
+    |---|---|---|
+
+    | 真阳率 (TPR) | TP + FN |
+
+    | 特异性 | TN + FP |
+
+    | 假阳率 (FPR) | 1-特异性 |
+
+
+    ![](img/6b21703010358de8762b84cb51ef2cfb_3_0.png)
+
+
+    图5. 四种类型特征峭度的可视化，该特征方差很小，为 1.98 * 10⁻⁴。由于方差低，峭度甚至相等，当此故障发生变化时，其值没有发生显著变化。因此，该特征从学习算法的输入中移除，这改进了
+
+
+    ## B. 用于故障检测的装袋算法
+
+
+    bagged 算法通过不同数量的学习器实现。学习器代表合并集成的个体弱分类器。最简单的代表分类器的分支数或节点数。训练使用总共 350 个样本进行。每个样本包含的特征向量属于特定故障。装袋树与
+    SVM 和 KNN 的结果进行了比较。算法的性能在图6 和图7 的 ROC 曲线中所示。
+
+
+    # IV. 结果
+
+
+    建议方法和集成算法的结果所示表 V。学习模型使用 80% 的数据进行训练，20% 用于验证。发现由于去除了低方差特征，建议方法优于装袋树。
+
+
+    | 表 V 统计特征 | 数据类型 | 样本数 | 均值 | 中位数 | RMS | 偏度 | 峭度 |
+
+    |---|---|---|---|---|---|---|
+
+    | H | 1 | 0.0118 | 0.0163 | 0.0297 | 0.0149 | -0.1650 | 2.8702 |
+
+    | H | 2 | -0.0485 | -0.0311 | 0.0214 | 0.0275 | 0.0045 | 2.9829 |
+
+    | H | 3 | -0.0118 | 0.0173 | 0.0199 | 0.0172 | -0.0032 | -0.4496 |
+
+    | FG | 1 | 0.0091 | -0.0082 | 0.0118 | 0.0232 | 0.0000 | -0.0441 | 3.5729 |
+
+    | FG | 2 | -0.0095 | -0.0028 | 0.0232 | 0.0336 | 0.0000 | -1.0957 | 3.1001 |
+
+    | FGB | 1 | -0.0256 | -0.0192 | 0.0313 | 0.0424 | 0.0011 | -0.8135 | 4.3416 |
+
+    | FGB | 2 | -0.0234 | -0.0123 | 0.0315 | 0.0388 | 0.0006 | -0.7115 | 4.3414 |
+
+    | PPG | 1 | -0.0128 | -0.0062 | 0.0292 | 0.0319 | 0.0009 | -0.7027 | 4.7026 |
+
+    | PPG | 2 | -0.0117 | -0.0110 | 0.0320 | 0.0341 | 0.0010 | -0.3414 | 4.0147 |
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 4]
+
+
+    # 2020 14th International Conference on Open Source Systems and Technologies (ICOSST)
+
+
+    # TABLE V ENSEMBLE CLASSIFIER ACCURACY
+
+
+    # TABLE VI COMPARISON WITH DIFFERENT ALGORITHMS
+
+
+    | S. No. | Ensemble Method | No. of learners | No. of Splits | No. of features
+    | Accuracy |
+
+    |---|---|---|---|---||
+
+    | 1 | Proposed Method | 40 | 40 | 8 | 98.6% |
+
+    | 2 | Bag [6] | 40 | 40 | 9 | 96.2% |
+
+    | 3 | Bag [6] | 40 | 40 | 7 | 97.1% |
+
+
+    | Holdout Ratio | SVM [15] | KNN [16] | Proposed Method |
+
+    |---|---|---|--|
+
+    | 0.45 | 91.1% | 89.2% | 98.4% |
+
+    | 0.35 | 91.8% | 88.6% | 97.0% |
+
+    | 0.23 | 92.9% | 89.4% | 97.1% |
+
+    | 0.15 | 93.1% | 86.2% | 94.3% |
+
+    | 0.1 | 93.7% | 88.8% | 96.8% |
+
+    | 0.05 | 94.0% | 88.5% | 92.3% |
+
+
+    accuracy achieved by the proposed method stands at 98.6%. In the developed method
+    feature the input matrix and a total of 8 features. The accuracy is only 96.2%
+    when features are used for the algorithm and reduce to 71% when more features
+    with significance evidence are excluded.
+
+
+    Confusion matrix in Fig. 6, shows that one example FB is misclassified as FG.
+    This is partly due to the faulty bearing and the failure do not create significant
+    vibrations; they change the vibration profile which is hard to detect. The method
+    has successfully identified the condition of the machine with 100% accuracy; severe
+    faults that FG and G are also perfectly identified with 100% accuracy.
+
+
+    To evaluate the effectiveness of the proposed algorithm, a comparison is made
+    with KNN [16] and SVM [15]. The results are presented in TABLE VI. The developed
+    method shows that at a 0.2 holdout ratio the accuracy of the proposed method is
+    96.6% compared with 91.4% of SVM and 90% of KNN. The accuracy of the proposed
+    method reaches 97.1% and 87%. The convolutional neural network [15] algorithm
+    is also tested with the data that having an average accuracy of 96% with 22 epochs.
+
+
+    The ROC curves for all fault types are shown in Fig. 7. For holdout ratio and
+    the area under the curve are given in TABLE VII. The AUC of the proposed method
+    is very high and stands at 99.7%. The SVM follows the developed method which is
+    followed by the KNN. The true positive rate for the proposed method is
+
+
+    | Method | Accuracy |
+
+    |---|--|
+
+    | Proposed Method | 99.7% |
+
+    | SVM | 97.7% |
+
+    | KNN | 93% |
+
+
+    ![](img/6b21703010358de8762b84cb51ef2cfb_4_0.png)
+
+
+    Fig. 7. ROC Curves for Proposed Method, SVM and KNN
+
+
+    # Accuracy: 98.6%
+
+
+    | | H | FG | FB | PFG |
+
+    |---|---|---|---|--|
+
+    | H | 14 | 0 | 0 | 0 |
+
+    | FG | 14 | 0 | 0 | 0 |
+
+    | FB | 0 | 13 | 0 | 1 |
+
+    | FGB | 0 | 0 | 14 | 0 |
+
+    | PFG | 0 | 0 | 0 | 14 |
+
+
+    ![](img/6b21703010358de8762b84cb51ef2cfb_4_1.png)
+
+
+    Fig. 6. Confusion Matrix for the Proposed Method using Bagged Tree (Holdout -
+    0.20)
+
+
+    higher than the other methods when the false positive rate is close to zero.
+
+
+    The developed method has potential applications, such as Predictive maintenance
+    that helps avoiding catastrophic industrial failures thus avoiding production.
+
+
+    # V. CONCLUSION AND FUTURE WORK
+
+
+    In this study, bearing and gears are classified using the Bagged tree. Data is
+    extracted from a single-stage gear with a 500 Hz sampling rate. Five different
+    machine conditions are diagnosed using this method. The proposed method has achieved
+    98.6% classification accuracy. The algorithm for SVM and KNN algorithms based
+    on different holdout ratios obtained an average accuracy of 91.7% and 87% respectively.
+    The developed method has achieved an accuracy of 90% for different holdout ratio.
+
+
+    In future, increasing the number of faults, which requires collection of additional
+    data that will ultimately result in increased accuracy of the algorithm is in
+    progress.
+
+
+    978-1-9050-1-2031/10 © 2020 IEEE
+
+
+    Authorized user limited to: University of California Santa Barbara. Downloaded
+    on 19.June.2021 at 18:28:27 UTC from IEEE Xpl. Restrictions apply.'
+  - '[PAGE 5]
+
+
+    # 2020 14th International Conference on Open Source Systems and Technologies (ICOCOST)
+
+
+    # REFERENCES
+
+
+    +   [1] S. Nandi, H. A. Tiwari, and X. Li, "Monitoring and fault diagnosis of
+    electric motors - a review," IEEE Transactions on Electric Conversion. 2005.
+
+
+    +   [2] C. Wu, J. Jiang, C. Ding, F. Feng, and T. Chen, "Intelligent fault diagnosis
+    of rotating machinery based on one-dimensional convolutional neural network,"
+    Comput. Input, vol. 108, p. 53–61, 2019.
+
+
+    +   [3] J. Yan, R. X. Gao, and X. Wavelet, "Fault diagnosis of rotating machinery:
+    A review," Signal Processing, vol. 96, p. AA1–15, 2014.
+
+
+    +   [4] A. A. H, H. A. Osman, S. Mohamed, M. Mostafa, "Predictive Maintenance
+    Program Based on Vibration Monitoring," Lect. Notes Elect. Sci., vol. 781, p.
+    651–660, 2021.
+
+
+    +   [5] O. H. Nandi, N. L. Smith, and A. Barizani, "Automation, or is not job
+    elimination: Artificial intelligence towards human-machine cochine," in 2017 IEEE
+    15th International Conference on Industrial Informatics, INDIN 2017, p. 899–904.
+
+
+    +   [6] T. G. Dietelmann, and H. J. Theory, "The Handbook of Brain Theory and
+    Neural Networks," in Handbook of Brain Theory and Neural Networks, 2nd ed, no.
+    1, To The MIT Press, 2002, p. 1689–1699.
+
+
+    +   [7] L. Breiman, "Bagging predictors," Mach. Learn., vol. 1, no. 2, p. 121–136,
+    1996.
+
+
+    +   [8] E. Bauer and R. Kohavi, "Comparison of voting classification algorithms:
+    boosting, bagging, and variants," Mach. Learn. Technol., vol. 22, no. 9, p. 1716–1725,
+    2008.
+
+
+    +   [9] B. S. Yang, Y. Di, and T. Han, "Random forests classifier for machine
+    diagnosis," J. Mech. Sci. Technol., vol. 22, no. 9, 13.
+
+
+    +   [10] O. H. Nandi and J. Baek, "Attractor States: A Bio-inspired Complementary
+    Approach to Reinforcement Learning,"
+
+
+    +   [11] N. E. Kerabadi, H. Serifi, I. Khedfi, and L. Laouar, "Decision tree selection
+    in an industrial machine fault diagnostics," Lect. Notes Comput. Sci. (including
+    Sub. Lect. Notes Artif. Sci. Lect. Notes Bioinformatics), vol. 7602 LNCS, p. 129–140,
+    2012.
+
+
+    +   [12] H. H. Lee, N. T. Nguyen, and J. M. Kwan, "Bearing
+
+
+    diagnosis using time-domain features and decision tree," Lect Notes Comput. Sci.
+    (including Sub. Lect. Notes Artif. Sci. Lect. Notes Bioinformatics), vol. 4682,
+    p. 952–960, 2007.
+
+
+    +   [13] Y. Zhang, Y. Liu, W. Wu, Z. Cheng, and A. Li, "A method for diagnosis
+    of the compound fault bearings based on multi-feature and hp-adaptboost," Symmetry,
+    vol. 12, no. 3, 2020.
+
+
+    +   [14] K. V. G. Kerikar Vernekar, and Mohammad Kamar, "Gear fault diagnosis
+    using machine learning techniques," J Quality Manag. 38, 2017.
+
+
+    +   [15] Z. Q. Chen, L. Li, and R. V. Sanchez, "Gearbox Identification and Classification
+    with Convolutional Neural Networks," Shock, 2018.
+
+
+    +   [16] A. Soleiman, M. J. Majidi, and M. Sharifahi, "Fault detection in gear
+    units using Support Vector Machines (SVMs) and signal processing," JCSW 2005 -
+    5th Int. Conf. Soft Comput. with Word Processing Spect. Anal. Dev. Control, vol.
+    9, no. 1, 1.
+
+
+    +   [17] I. Mando and C. Da Costa, "Vibration Analysis in Turbomachines using
+    Machine Learning Techniques," J. Eng. Res. Sci., vol. 4, no. 2, p. 12–23, 2020.
+
+
+    +   [18] R. S. Guner, A. K. Jalan, and S. G Belmang, "Fault diagnosis of rolling
+    element bearing based on artificial neural network," J. Mech. Sci. Technol., vol.
+    33, no. 2, p. 505–511, 2010.
+
+
+    +   [19] M. Caruana, "An Empirical Comparison of Supervised Learning Algorithms,"
+    in 23 rd International Conference on Machine Learning, Pittsburgh, 2004, p. 161–168.
+
+
+    +   [20] W. Gassaint and T. Tilpado, "A review of feature extraction methods in
+    monitoring and its application for degradation trend estimation of low-speed speed
+    bearing," Mach., vol. 5, no. 5, 2017.
+
+
+    +   [21] D. J. Guidi, A. Samraoui, and M. El Badouai, "Techniques analysis as
+    cycle-ratio fusion in gear and bearing fault detection," 13th Int. Conf. Cond.
+    Mon. Mach. Fail. Prev. Tech., April, 2018.
+
+
+    +   [22] D. J. Han and R. J. Hill, "A Simple Generalisation of the Area Under
+    the ROC for Multiple Classification Problems," Mach. Learn., vol. 45, no. 2, p.
+    171–186, 2001.
+
+
+    +   [23] C. Scheffer and P. Girdhar, Machinery Vibration Analysis & Predictive
+    Maintenance. 2004.'
+  md: "\n# 2020 14th International Conference on Open Source Systems and Technologies\
+    \ (ICOSST)\n\n## TABLE V ENSEMBLE CLASSIFIER ACCURACY\n\n## TABLE VI COMPARISON\
+    \ WITH DIFFERENT ALGORITHMS\n\n| S. No. | Ensemble Method | No. of learners |\
+    \ No. of Splits | No. of features | Accuracy |\n|---|---|---|---|---|---|\n| 1\
+    \ | Proposed Method | 40 | 40 | 8 | 98.6% |\n| 2 | Bag [6] | 40 | 40 | 9 | 96.2%\
+    \ |\n| 3 | Bag [6] | 40 | 40 | 7 | 97.1% |\n\n| Holdout Ratio | SVM [15] | KNN\
+    \ [16] | Proposed Method |\n|---|---|---|---|\n| 0.45 | 91.1% | 89.2% | 98.4%\
+    \ |\n| 0.35 | 91.8% | 88.6% | 97.0% |\n| 0.23 | 92.9% | 89.4% | 97.1% |\n| 0.15\
+    \ | 93.1% | 86.2% | 94.3% |\n| 0.1 | 93.7% | 88.8% | 96.8% |\n| 0.05 | 94.0% |\
+    \ 88.5% | 92.3% |\n\nAccuracy achieved by the proposed method stands at 98.6%.\
+    \ In the developed method, the input matrix features a total of 8 features. The\
+    \ accuracy is only 96.2% when features are used for the algorithm and reduce to\
+    \ 71% when more features with significance evidence are excluded.\n\nConfusion\
+    \ matrix in Fig. 6, shows that one example FB is misclassified as FG. This is\
+    \ partly due to the faulty bearing and the failure to not create significant vibrations;\
+    \ they change the vibration profile which is hard to detect. The method has successfully\
+    \ identified the condition of the machine with 100% accuracy; severe faults that\
+    \ FG and G are also perfectly identified with 100% accuracy.\n\nTo evaluate the\
+    \ effectiveness of the proposed algorithm, a comparison is made with KNN [16]\
+    \ and SVM [15]. The results are presented in TABLE VI. The developed method shows\
+    \ that at a 0.2 holdout ratio the accuracy of the proposed method is 96.6% compared\
+    \ with 91.4% of SVM and 90% of KNN. The accuracy of the proposed method reaches\
+    \ 97.1% and 87%. The convolutional neural network [15] algorithm is also tested\
+    \ with the data that having an average accuracy of 96% with 22 epochs.\n\nThe\
+    \ ROC curves for all fault types are shown in Fig. 7. For holdout ratio and the\
+    \ area under the curve are given in TABLE VII. The AUC of the proposed method\
+    \ is very high and stands at 99.7%. The SVM follows the developed method which\
+    \ is followed by the KNN. The true positive rate for the proposed method is\n\n\
+    | Method | Accuracy |\n|---|---|\n| Proposed Method | 99.7% |\n| SVM | 97.7% |\n\
+    | KNN | 93% |\n\n![](img/6b21703010358de8762b84cb51ef2cfb_4_0.png)\n\nFig. 7.\
+    \ ROC Curves for Proposed Method, SVM and KNN\n\n# Accuracy: 98.6%\n\n| | H |\
+    \ FG | FB | PFG |\n|---|---|---|---|---|\n| H | 14 | 0 | 0 | 0 |\n| FG | 14 |\
+    \ 0 | 0 | 0 |\n| FB | 0 | 13 | 0 | 1 |\n| FGB | 0 | 0 | 14 | 0 |\n| PFG | 0 |\
+    \ 0 | 0 | 14 |\n\n![](img/6b21703010358de8762b84cb51ef2cfb_4_1.png)\n\nFig. 6.\
+    \ Confusion Matrix for the Proposed Method using Bagged Tree (Holdout - 0.20)\n\
+    \nhigher than the other methods when the false positive rate is close to zero.\n\
+    \nThe developed method has potential applications, such as Predictive maintenance\
+    \ that helps avoiding catastrophic industrial failures thus avoiding production.\n\
+    \n# V. CONCLUSION AND FUTURE WORK\n\nIn this study, bearing and gears are classified\
+    \ using the Bagged tree. Data is extracted from a single-stage gear with a 500\
+    \ Hz sampling rate. Five different machine conditions are diagnosed using this\
+    \ method. The proposed method has achieved 98.6% classification accuracy. The\
+    \ algorithm for SVM and KNN algorithms based on different holdout ratios obtained\
+    \ an average accuracy of 91.7% and 87% respectively. The developed method has\
+    \ achieved an accuracy of 90% for different holdout ratio.\n\nIn future, increasing\
+    \ the number of faults, which requires collection of additional data that will\
+    \ ultimately result in increased accuracy of the algorithm is in progress.\n\n\
+    978-1-9050-1-2031/10 © 2020 IEEE\n\nAuthorized user limited to: University of\
+    \ California Santa Barbara. Downloaded on 19.June.2021 at 18:28:27 UTC from IEEE\
+    \ Xpl. Restrictions apply.\n\n# 2020 14th International Conference on Open Source\
+    \ Systems and Technologies (ICOSST)\n\n# REFERENCES\n\n- [1] S. Nandi, and H.\
+    \ A., \"Monitoring and fault detection,\" IEEE Transactions on Electric Conversion.\n\
+    - [2] C. Wu, J. Jiang, and F. Chen, \"Intelligent fault diagnosis of rotating\
+    \ machinery,\" Signal Processing.\n- [3] Y. Yan, S. Gao, and X. Li, \"A review\
+    \ of fault diagnosis,\" Soft Processing.\n- [4] S. Chen, A. Osman, and M. Mostafa,\
+    \ \"Predictive Maintenance,\" J. Eng. Res. Sci.\n- [5] N. Nandi, T. G., and L.\
+    \ Li, \"Fault diagnosis of rotating machinery,\" International Conference on Industrial.\n\
+    - [6] E. Dietmann, M. J., and S. G, \"Techniques analysis as cycle-ratio fusion,\"\
+    \ MIT Press.\n- [7] L. Breiman, \"Bagging predictors,\" Machine Learning. \n-\
+    \ [8] E. Bauer and R. Kohavi, \"An Empirical Comparison of Supervised Learning\
+    \ Algorithms,\" International Conference on Machine Learning.\n- [9] Y. Zhang,\
+    \ Y. Liu, and T., \"A Simple Generalisation of the Area Under the ROC for Multiple\
+    \ Classification Problems,\" Machine Learning.\n- [10] S. Nandi, H. A., and M.\
+    \ Sharif, \"Fault detection in gear units using Support Machines,\"\n- [11] D.\
+    \ Guidi, A. Samraoui, and M. El Badouai, \"Techniques analysis as cycle-ratio\
+    \ fusion in gear and bearing fault detection,\" 13th Int. Conf. Cond. Mon. Mach.\
+    \ Fail. Prev. Tech.\n- [12] W. Gassaint and T. Tilp, \"A review of feature extraction\
+    \ methods in monitoring and its application for degradation trend estimation of\
+    \ low-speed speed bearing,\" Mach.\n- [13] Y. Zhang, L. Liu, and R. S., \"Gearbox\
+    \ fault based on multi-feature,\" Symmetry.\n- [14] K. V. Gikar, and M. Kamar,\
+    \ \"Gearbox Identification and Classification with Convolutional Networks,\" Shock.\n\
+    - [15] Z. Q. Chen, L. Li, and R. S., \"Gear fault using machine learning,\"\n\
+    - [16] A. Soleiman, M. J., and M. Sharif, \"Vibration Analysis and Predictive\
+    \ Maintenance,\"\n- [17] C. Scheffer and P. Girdhar, \"Machinery Vibration Analysis\
+    \ & Predictive Maintenance.\"\n- [18] R. S. Guner, A. K. Jalan, and S. G, \"Fault\
+    \ diagnosis of rolling element bearing on artificial neural network,\" J. Mech.\
+    \ Sci. Technol.\n- [19] M. Caruana, \"An Empirical Comparison of Supervised Learning\
+    \ Algorithms,\"\n- [20] W. Gassaint and T. Tilp, \"A review of feature extraction\
+    \ methods in monitoring and its application for degradation trend estimation of\
+    \ low-speed speed bearing,\"\n- [21] D. J. Guidi, A. Samraoui, and M. El Badouai,\
+    \ \"Techniques analysis as cycle-ratio fusion in gear and bearing fault detection,\"\
+    \ 13th Int. Conf. Cond. Mon. Mach. Fail. Prev. Tech.\n- [22] D. J. Han and R.\
+    \ J. Hill, \"A Simple Generalisation of the Area Under the ROC for Multiple Classification\
+    \ Problems,\" Machine. Learning.\n- [23] C. Scheffer and P. Girdhar, \"Machinery\
+    \ Vibration Analysis & Predictive Maintenance.\"\n"
+  mdcn: '
+
+
+    # 2020 第14 届开源系统与技术国际会议 (ICOSST)
+
+
+    ## 表 V 集成分类器准确率
+
+
+    ## 表 VI 与不同算法的对比
+
+
+    | 序号 | 集成方法 | 学习器数量 | 划分次数 | 特征数量 | 准确率 |
+
+    |---|---|---|---|---|---|
+
+    | 1 | 提议方法 | 40 | 40 | 8 | 98.6% |
+
+    | 2 | Bag [6] | 40 | 40 | 9 | 96.2% |
+
+    | 3 | Bag [6] | 40 | 40 | 7 | 97.1% |
+
+
+    | 留出测试比例 | SVM [15] | KNN [16] | 提议方法 |
+
+    |---|---|---|---|
+
+    | 0.45 | 91.1% | 89.2% | 98.4% |
+
+    | 0.35 | 91.8% | 88.6% | 97.0% |
+
+    | 0.23 | 92.9% | 89.4% | 97.1% |
+
+    | 0.15 | 93.1% | 86.2% | 94.3% |
+
+    | 0.1 | 93.7% | 88.8% | 96.8% |
+
+    | 0.05 | 94.0% | 88.5% | 92.3% |
+
+
+    提议方法实现的准确率达到 98.6%。在开发的方法中，输入矩阵包含总计 8 个特征。当使用特征用于算法时，准确率仅为 96.2%，当排除更多具有显著性证据的特征时，准确率下降到
+    71%。
+
+
+    图 6 中的混淆矩阵显示，一个示例 FB 被错误分类为 FG。这部分是因为轴承故障以及未能产生显著振动导致的；它们改变了振动特征，使其难以检测。该方法成功地以
+    100% 的准确率识别了机器状态；FG 和 G 的严重故障也以 100% 的准确率被完美识别。
+
+
+    为了评估提议算法的有效性，与 KNN [16] 和 SVM [15] 进行了对比。结果如表 VI 所示。开发的方法显示，在 0.2 的留出测试比例下，提议方法的准确率为
+    96.6%，而 SVM 为 91.4%，KNN 为 90%。提议方法的准确率达到了 97.1% 和 87%。卷积神经网络 [15] 算法也对数据进行了测试，在
+    22 个 epoch（轮次）下的平均准确率为 96%。
+
+
+    所有故障类型的 ROC 曲线如图 7 所示。留出测试比例和曲线下面积给出表 VII 中。提议方法的 AUC 非常高，达到 99.7%。SVM 紧随开发方法之后，而
+    KNN 紧随其后。提议方法的真正例率为：
+
+
+    | 方法 | 准确率 |
+
+    |---|---|
+
+    | 提议方法 | 99.7% |
+
+    | SVM | 97.7% |
+
+    | KNN | 93% |
+
+
+    ![](img/6b21703010358de8762b84cb51ef2cfb_4_0.png)
+
+
+    图. 7. 提议方法、SVM 和 KNN 的 ROC 曲线
+
+
+    # 准确率：98.6%
+
+
+    | | H | FG | FB | PFG |
+
+    |---|---|---|---|---|
+
+    | H | 14 | 0 | 0 | 0 |
+
+    | FG | 14 | 0 | 0 | 0 |
+
+    | FB | 0 | 1 | 0 | 0 |
+
+    | FGB | 0 | 0 | 13 | 0 |
+
+    | PFG | 0 | 0 | 14 | |
+
+
+    ![](img/6b21703010358de8762b84cb51ef2cfb_4_0.png)
+
+
+    图. 6. 提议方法的混淆矩阵（留出测试）
+
+
+    该方法在留出测试比例下的准确率高于 SVM 和 KNN，部分是因为轴承故障以及未能产生显著振动导致的；它们改变了振动特征，使其难以检测。
+
+
+    V. 结论与未来工作
+
+
+    在该研究中，通过 Bag 方法提议方法的准确率高于 SVM 和 KNN。未来将增加特征数量的研究。
+
+
+    IEEE 保留所有权利。
+
+
+    # 2020 第14 届开源系统与技术国际会议 (ICOSST)
+
+
+    # 参考文献
+
+
+    - [1] S. Nandi, H. A., "检测," IEEE Transactions on Electric.
+
+    - [2] C. Wu, J. Jiang, and F. Chen, "故障诊断," Signal Processing.
+
+    - [3] Y. Yan, S. Gao, and L. Li, "故障诊断," Soft Processing.
+
+    - [4] S. Chen, A. Osman, and M. Mostafa, "预测性维护," J. Eng. Res. Sci.
+
+    - [5] N. Nandi, T. G., and L. Li, "故障诊断," International Conference on.
+
+    - [6] L. Breiman, "Bagging," Machine Learning.
+
+    - [7] E. Bauer and R. Kohavi, "An Empirical Comparison of Supervised Learning,"
+    Machine Learning.
+
+    - [8] Y. Zhang, L. Liu, and T., "A Simple Generalisation of the Area Under the
+    ROC for Multiple Classification Problems," Machine Learning.
+
+    - [9] S. Nandi, H. A., "检测," IEEE.
+
+    - [10] D. Guidi, A. Samraoui, and M. El Badouai, "技术分析," 13th Int. Conf. Cond.
+    Mon. Mach. Fail. Prev. Tech.
+
+    - [11] W. Gassaint and T. Tilp, "特征提取方法的综述," Mach.
+
+    - [12] W. Gassaint and T. Tilp, "特征提取方法的综述,"
+
+    - [13] Y. Zhang, L. Liu, and R. S., "基于多特征的故障," Symmetry.
+
+    - [14] K. V. Gikar, and M. Kamar, "基于卷积网络的齿箱识别与分类," Shock.
+
+    - [15] Z. Q. Chen, L. Li, and R. S., "基于机器学习的故障,"
+
+    - [16] A. Soleiman, M. J., and M. Sharif, "振动分析与预测性维护,"
+
+    - [17] C. Scheffer and P. Girdhar, "机器振动分析与预测性维护."
+
+    - [18] R. S. Guner, A. K. Jalan, and S. G, "人工神经网络滚动轴承故障诊断," J. Mech. Sci. Technol.
+
+    - [19] M. Caruana, "监督学习算法的经验比较," International Conference on.
+
+    - [20] W. Gassaint and T. Tilp, "特征提取方法的综述及其在低速设备下降趋势预测中的应用,"
+
+
+    '
+  merge: 0
