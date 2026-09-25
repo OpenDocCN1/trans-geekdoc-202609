@@ -1,0 +1,1944 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # An Optimized Customers Sentiment Analysis
+
+    Model Using Pastoralist Optimization Algorithm
+
+    (POA) and Deep Learning
+
+
+    Safiya A. Shehu
+
+    Department of Computer Science
+
+    Federal University of Technology,
+
+    Minna
+
+    Minna, Nigeria
+
+    salsaf3667@gmail.com
+
+
+    Abdulalik D. Mohammed
+
+    Department of Computer Science
+
+    Federal University of Technology,
+
+    Minna
+
+    Minna, Nigeria
+
+    drmalik@futminna.edu.ng
+
+
+    Ibrahim M. Abdullah
+
+    Department of Computer Engineering
+
+    Federal University of Technology,
+
+    Minna
+
+    Minna, Nigeria
+
+    amibrahim@futminna.edu.ng
+
+
+    **Abstract—** Users usually express their sentiment online regarding purchased
+    products. The computational study of people''s feelings and thoughts towards entities
+    is known as sentiment analysis. Long-Short-Term Memory (LSTM) is one of the most
+    common deep learning models for solving sentiment analysis problems. However,
+    they possess some drawbacks as long training time, memory cost and overfitting
+    on generated parameters. Hence, there is a need to optimize LSTM parameters for
+    enhanced sentiment analysis. This paper proposes a developed Pastoralist Optimization
+    Algorithm (POA) for enhanced sentiment analysis. The model was used to analyze
+    sentiments of customers retrieved from Amazon product reviews. The result shows
+    an optimal accuracy, precision, recall and F1 measure of 77.36%, 86.50%, 76.29%,
+    and 80.44% when compared with other models. It was also observed that 20 pastoralist
+    population size performs better than other models with 10, 15, 25 and 30 population
+    size.
+
+
+    **Keywords—** Sentiment Analysis, Natural Language Processing (NLP), Deep Learning,
+    Pastoralist Optimization Algorithm
+
+
+    # I. INTRODUCTION
+
+
+    In today''s world of high volume of information, data, values or opinions are
+    being shared in the websites of social media or e-services in the raw of data.
+    However to work with such raw data methods are required. This study describes
+    peoples'' opinion concerning products, and other characteristics. Sentiment analysis
+    is systematically identified, quantify and extract effective states and subjective
+    information. It is used in Web, text data, and for information retrieval [1]–2],
+    computer, social sciences and so on. To analyze sentiments, objects and characteristics,
+    viewpoints holder, and direction are the three that are used. Sentiment Analysis
+    involves some challenges such as object recognition, orientation classification,
+    and feature
+
+
+    Deep Learning (DL), an advanced machine learning model has solved some of the
+    challenges brought about by lack of vocabulary resources and the improvement of
+    sentiment classification in this field. DL has been successful in solving challenging
+    problems in the field of artificial intelligence. Its success, determining the
+    appropriate layers, number of variables a hidden size, still training is the greatest
+    challenge of deep learning [25]. The algorithm has been very successful in solving
+    combinatorial problems therefore is a good candidate for the DL models for sentiment
+    analysis.
+
+
+    In this paper, an optimized sentiment analysis model using deep learning (LSTM)
+    and POA for was proposed. The model will be tested on datasets from social interactions
+    of users. When developed, the model will implement sentiment analysis tasks by
+    improving the LSTM model and present opportunity to analyze members and product
+    from the opposite perspective. This makes the sentiment analysis an ideal tool
+    for expanding product order and market business analysis
+
+
+    The rest of the paper is organized as follows: The II section presents the works
+    that are connected to the field. This comprises of sentiment analysis, review
+    deep learning and POA. The methods and research objectives are presented. Section
+    IV is a presentation of the expected results and Section V, the conclusion is
+    presented.
+
+
+    # II. OF RELATED WORKS
+
+
+    # A. Sentiments Analysis
+
+
+    The research in sentiment analysis has grown over the years due to its importance
+    in various sector of life. Sentiments analysis can be classified based on some
+    criteria which includes; techniques, used dataset structure and rating level [12].
+    Figure shows the several categories of sentiment analysis. The various ways in
+    which sentiment analysis can be implemented:'
+  - "[PAGE 1]\n\ni. Machine learning-based: This involves training a sentiment analysis\
+    \ model with existing dataset prior to deployment [12].\n\nii. Rule-based: Extracts\
+    \ information from data and try to assess them according to the policy of words.\
+    \ There are different rules as negation words, idioms, dictionary, and emotions\
+    \ [13].\n\nits' deployment feasible [23]. Deep learning is capable of both supervised\
+    \ and unsupervised problems [24]. Convolutional Neural Networks (CNN), Deep Belief\
+    \ Networks (DBN), and Recurrent Neural Networks (RNN) are all common deep learning\
+    \ models success in solving challenging problems such as Speech recognition, Natural\
+    \ Language Processing (NLP), and Computer vision like face recognition. Despite\
+    \ its success, determining the parameters and number of hidden layers in the model\
+    \ has been the greatest challenge of deep learning [25].\n\nSentiment analysis\
+    \ is a challenging problem that can be solved using deep learning. Characteristics\
+    \ of Deep learning include processing features that are arranged in several layers\
+    \ for transforming and extracting features. [13] A Coupled Coupled and Noun (DCAN)\
+    \ neural model was proposed by Wang et al. [10]. Key to this technique is the\
+    \ adjective and noun descriptions for emotions and subsequent sentiment analysis.\
+    \ [11] We propose a deep neural network model based on LSTM-CNN and which utilizes\
+    \ word2vec and language embedding to classify sentiments successfully or to extract\
+    \ features.\n\nIn [27], a two-attention-two LSTM was improved sentiment analysis.\
+    \ performance follows the paradigm by discretizing the attention gained from left\
+    \ and right contexts. Many methods were added to help merge focus commitment.\
+    \ In [9], a DNN was proposed for following document representation and sentiment\
+    \ analysis respectively. Ahmad et al. [47] presented the analysis of ensemble\
+    \ methods for classification of microblogs and news. In [8], proposed and user\
+    \ features and preferences while classifying their sentiments.\n\n![](img/958604c68ccd723d8738236ae47572bc_1_0.png)\n\
+    \n![](img/958604c68ccd723d8738236ae47572bc_1_1.png)\n\nMathematically, LSTM are\
+    \ represented mathematically as follows: [23]:\n$f_t = \\sigma(W_f x_t + U_f h_{t-1}\
+    \ + b_f)$\n$i_t = \\sigma(W_i x_t + U_i h_{t-1} + b_i)$\n$\tilde{c}_t = \tanh(W_c\
+    \ x_t + U_c h_{t-1} + b_c)$\n$c_t = f_t \\odot c_{t-1} + i_t \\odot \tilde{c}_t$\n\
+    $o_t = \\sigma(W_o x_t + U_o h_{t-1} + b_o)$\n$h_t = o_t \\odot \tanh(c_t)$\n\n\
+    Where $W$ and $U$ are the parameters and $b$ is the bias, $x_t$ and $h_t$ are\
+    \ the input and hidden state of LSTM time respectively while, $i_t$, $o_t$, and\
+    \ $f_t$ are the activation gate input, output and forget gate respectively. Finally,\
+    \ $\\sigma$ and $C_t$ are the sigmoid function and memory cell state.\n\n# ##\
+    \ Deep Learning\n\nDeep learning is an ANN which adopted multiple deep network\
+    \ layers, due to its ability to solve problems harder than previous. In recent\
+    \ years deep learning has gained a lot of recognition. The collection and computing\
+    \ in big data has"
+  - '[PAGE 2]
+
+
+    Pastoralist Optimization Algorithm (POA) is a novel heuristic method inspired
+    by the socio-cultural life style of pastoralist. It mimics the behaviour of pastoralist
+    for quality pasture, environment for their livestock. In POA, the search agent
+    is called the $i^{th}$ pastoralist and $\hat{P} ={\hat{P}_1, \hat{P}_2, \dots,
+    \hat{P}_n\}$ where D is the domain of problem. The process is made up of two phases:
+    scouting; pastoralist move with larger step size; and the best scout moves to
+    camp. In the splitting phase, pastoralist move is characterized by shorter step
+    size. Herding pastoralist to split to minimize local optimum entropy [20]. The
+    initial location of the $i^{th}$ pastoralist is given in Equation (7) the location
+    of the $j^{th}$ pastoralist is given in Equation (8) and the evolution continues
+    until maximum criteria is reached [22].
+
+
+    ```
+
+    $P_i = {P_1, P_2, \dots, P_n}$ (6)
+
+    ```
+
+
+    ```
+
+    $S_i = rand(L_i, U_i) \eta_i$ (7)
+
+    $S''_j = (S_j - S_i) \zeta + \eta_j$ (8)
+
+    $S''_j$ is the new location of the $j^{th}$ pastoralist, $P_i$ is the best pastoralist
+    so far, $e$ is the energy of the $j^{th}$ pastoralist ($e \in \{-1,1\}$) and $\eta_j$
+    is the step size of the $j^{th}$ pastoralist (\eta \in (0,0.001)$) and $\zeta$
+    is a positive constant that represents the number of scouts moves faster than
+    herds. The best scout location ($S_0$) is initialized as the camp. Splitting by
+    her herd size is marked using Equation (9) and after each split, the herd is divided.
+
+    ```
+
+
+    ```
+
+    $P_k = P_k + rand(0, r) \times e * \eta_k$ (9)
+
+    ```
+
+
+    ```
+
+    $r'' = rP$ (10)
+
+    ```
+
+
+    Where $r''$ is the new location of the $k^{th}$ pastoralist, $P_k$ is the best
+    pastoralist so far, $r$ is a random number and $e$ is the energy of the $k^{th}$
+    pastoralist ($e \in \{-1,1\}$) and $\eta_k$ is the step size of the $k^{th}$ pastoralist
+    (\eta \in (0,0.001)$). Also, $r''$ is the camp radius of current iteration, and
+    is the status of previous iteration. If all herds have been explored, and if all
+    locations have been explored, the best camp is retained and the herd location
+    is returned as the global optimum solution, so the process is repeated with the
+    new scout location determined using Equation (11).
+
+    $S''_i = rand(L_i, U_i) - S_i$
+
+
+    Where $S''_i$ is the new location, $L_i$ and $U_i$ are the lower and upper limit
+    of the search space respectively. POA was developed using evolutionary strategy
+    and has been very successful when tested on numerical optimization and combinatorial
+    optimization problems. Other variants of POA have been proposed [21]. Fig. 3 shows
+    POA steps.
+
+
+    # Algorithm 1: Pastoralist Optimization Algorithm
+
+    Input: POA Parameters; Search space
+
+    Output: Optimal Solution
+
+
+    +   I. Start
+
+    II. Initialize POA parameters
+
+    III. Select pastoralist randomly and initialize scout location
+
+    IV. Evaluate the fitness of each scout, update locations and normalize scouts
+    locations within the search space until maximum criteria is reached
+
+    V. Select best camp location
+
+    VI. Evaluate of pastoralist and determine pastoralist within a camp
+
+    VII. Split pastoralist to different locations within camp and fitness of pastoralist
+
+    VIII. Repeat pastoralist until maximum iteration is reached. For each, divide
+    the current camp by number of best pastoralist
+
+    IX. Update location
+
+    X If regions within the search space have not been explored, Update location
+
+    X. Stop
+
+
+    ![](img/958604c68ccd723d8738236ae47572bc_2_0.png)
+
+
+    # III. EXPERIMENTAL SET
+
+
+    Fig. 4 shows the designed framework to achieve the aim and objectives of this
+    paper. It starts with data collection, preprocessing and feature extraction. Then,
+    the LSTM model design, training, and testing, performance evaluation.
+
+
+    ![](img/958604c68ccd723d8738236ae47572bc_2_1.png)
+
+
+    The dataset used for the experiments comprises three reviews of Customer dataset
+    which contains 531 entries. The reviews of all are from amazon and can be obtained
+    from amazon.com. Table 1 shows a'
+  md: '
+
+    # An Optimized Customers Sentiment Analysis Model Using Pastoralist Optimization
+    Algorithm (POA) and Deep Learning
+
+
+    Safiya A. Shehu
+
+    Department of Computer Science
+
+    Federal University of Technology,
+
+    Minna
+
+    Minna, Nigeria
+
+    salsaf3667@gmail.com
+
+
+    Abdulalik D. Mohammed
+
+    Department of Computer Science
+
+    Federal University of Technology,
+
+    Minna
+
+    Minna, Nigeria
+
+    drmalik@futminna.edu.ng
+
+
+    Ibrahim M. Abdullah
+
+    Department of Computer Engineering
+
+    Federal University of Technology,
+
+    Minna
+
+    Minna, Nigeria
+
+    amibrahim@futminna.edu.ng
+
+
+    **Abstract—** Users usually express their sentiment online regarding purchased
+    products. The computational study of people''s feelings and thoughts towards entities
+    is known as sentiment analysis. Long-Short-Term Memory (LSTM) is one of the most
+    common deep learning models for solving sentiment analysis problems. However,
+    they possess some drawbacks as long training time, memory cost and overfitting
+    on generated parameters. Hence, there is a need to optimize LSTM parameters for
+    enhanced sentiment analysis. This paper proposes a developed Pastoralist Optimization
+    Algorithm (POA) for enhanced sentiment analysis. The model was used to analyze
+    sentiments of customers retrieved from Amazon product reviews. The result shows
+    an optimal accuracy, precision, recall and F1 measure of 77.36%, 86.50%, 76.29%,
+    and 80.44% when compared with other models. It was also observed that 20 pastoralist
+    population size performs better than other models with 10, 15, 25 and 30 population
+    size.
+
+
+    **Keywords—** Sentiment Analysis, Natural Language Processing (NLP), Deep Learning,
+    Pastoralist Optimization Algorithm
+
+
+    ## I. INTRODUCTION
+
+
+    In today''s world of high volume of information, data, values or opinions are
+    being shared in the websites of social media or e-services in the raw of data.
+    However to work with such raw data methods are required. This study describes
+    peoples'' opinion concerning products, and other characteristics. Sentiment analysis
+    is systematically identified, quantify and extract effective states and subjective
+    information. It is used in Web, text data, and for information retrieval [1]–2],
+    computer, social sciences and so on. To analyze sentiments, objects and characteristics,
+    viewpoints holder, and direction are the three that are used. Sentiment Analysis
+    involves some challenges such as object recognition, orientation classification,
+    and feature.
+
+
+    Deep Learning (DL), an advanced machine learning model has solved some of the
+    challenges brought about by lack of vocabulary resources and the improvement of
+    sentiment classification in this field. DL has been successful in solving challenging
+    problems in the field of artificial intelligence. Its success, determining the
+    appropriate layers, number of variables a hidden size, still training is the greatest
+    challenge of deep learning [25]. The algorithm has been very successful in solving
+    combinatorial problems therefore is a good candidate for the DL models for sentiment
+    analysis.
+
+
+    In this paper, an optimized sentiment analysis model using deep learning (LSTM)
+    and POA was proposed. The model will be tested on datasets from social interactions
+    of users. When developed, the model will implement sentiment analysis tasks by
+    improving the LSTM model and present opportunity to analyze members and product
+    from the opposite perspective. This makes the sentiment analysis an ideal tool
+    for expanding product order and market business analysis.
+
+
+    The rest of the paper is organized as follows: The II section presents the works
+    that are connected to the field. This comprises of sentiment analysis, review
+    deep learning and POA. The methods and research objectives are presented. Section
+    IV is a presentation of the expected results and Section V, the conclusion is
+    presented.
+
+
+    ## II. OF RELATED WORKS
+
+
+    ### A. Sentiments Analysis
+
+
+    The research in sentiment analysis has grown over the years due to its importance
+    in various sector of life. Sentiments analysis can be classified based on some
+    criteria which includes; techniques, used dataset structure and rating level [12].
+    Figure shows the several categories of sentiment analysis. The various ways in
+    which sentiment analysis can be implemented:
+
+
+    i. Machine learning-based: This involves training a sentiment analysis model with
+    existing dataset prior to deployment [12].
+
+
+    ii. Rule-based: Extracts information from data and try to assess them according
+    to the policy of words. There are different rules as negation words, idioms, dictionary,
+    and emotions [13].
+
+
+    its'' deployment feasible [23]. Deep learning is capable of both supervised and
+    unsupervised problems [24]. Convolutional Neural Networks (CNN), Deep Belief Networks
+    (DBN), and Recurrent Neural Networks (RNN) are all common deep learning models
+    success in solving challenging problems such as Speech recognition, Natural Language
+    Processing (NLP), and Computer vision like face recognition. Despite its success,
+    determining the parameters and number of hidden layers in the model has been the
+    greatest challenge of deep learning [25].
+
+
+    Sentiment analysis is a challenging problem that can be solved using deep learning.
+    Characteristics of Deep learning include processing features that are arranged
+    in several layers for transforming and extracting features. [13] A Coupled Coupled
+    and Noun (DCAN) neural model was proposed by Wang et al. [10]. Key to this technique
+    is the adjective and noun descriptions for emotions and subsequent sentiment analysis.
+    [11] We propose a deep neural network model based on LSTM-CNN and which utilizes
+    word2vec and language embedding to classify sentiments successfully or to extract
+    features.
+
+
+    In [27], a two-attention-two LSTM was improved sentiment analysis. performance
+    follows the paradigm by discretizing the attention gained from left and right
+    contexts. Many methods were added to help merge focus commitment. In [9], a DNN
+    was proposed for following document representation and sentiment analysis respectively.
+    Ahmad et al. [47] presented the analysis of ensemble methods for classification
+    of microblogs and news. In [8], proposed and user features and preferences while
+    classifying their sentiments.
+
+
+    ![](img/958604c68ccd723d8738236ae47572bc_1_0.png)
+
+
+    ![](img/958604c68ccd723d8738236ae47572bc_1_1.png)
+
+
+    Mathematically, LSTM are represented mathematically as follows: [23]:
+
+    $f_t = \sigma(W_f x_t + U_f h_{t-1} + b_f)$
+
+    $i_t = \sigma(W_i x_t + U_i h_{t-1} + b_i)$
+
+    $\tilde{c}_t = anh(W_c x_t + U_c h_{t-1} + b_c)$
+
+    $c_t = f_t \odot c_{t-1} + i_t \odot \tilde{c}_t$
+
+    $o_t = \sigma(W_o x_t + U_o h_{t-1} + b_o)$
+
+    $h_t = o_t \odot anh(c_t)$
+
+
+    Where $W$ and $U$ are the parameters and $b$ is the bias, $x_t$ and $h_t$ are
+    the input and hidden state of LSTM time respectively while, $i_t$, $o_t$, and
+    $f_t$ are the activation gate input, output and forget gate respectively. Finally,
+    $\sigma$ and $C_t$ are the sigmoid function and memory cell state.
+
+
+    ### Deep Learning
+
+
+    Deep learning is an ANN which adopted multiple deep network layers, due to its
+    ability to solve problems harder than previous. In recent years deep learning
+    has gained a lot of recognition. The collection and computing in big data has
+
+
+    Pastoralist Optimization Algorithm (POA) is a novel heuristic method inspired
+    by the socio-cultural life style of pastoralist. It mimics the behaviour of pastoralist
+    for quality pasture, environment for their livestock. In POA, the search agent
+    is called the $i^{th}$ pastoralist and $\hat{P} ={\hat{P}_1, \hat{P}_2, \dots,
+    \hat{P}_n\}$ where D is the domain of problem. The process is made up of two phases:
+    scouting; pastoralist move with larger step size; and the best scout moves to
+    camp. In the splitting phase, pastoralist move is characterized by shorter step
+    size. Herding pastoralist to split to minimize local optimum.
+
+
+    Sentiment analysis is a challenging problem that can be solved using deep learning.
+    Characteristics of Deep learning include processing features that are arranged
+    in several layers for transforming and extracting features. [13] A Coupled Coupled
+    and Noun (DCAN) neural model was proposed by Wang et al. [10]. Key to this technique
+    is the adjective and noun descriptions for emotions and subsequent sentiment analysis.
+    [11] We propose a deep neural network model based on LSTM-CNN and which utilizes
+    word2vec and language embedding to classify sentiments successfully or to extract
+    features.
+
+
+    In [27], a two-attention-two LSTM was improved sentiment analysis. performance
+    follows the paradigm by discretizing the attention gained from left and right
+    contexts. Many methods were added to help merge focus commitment. In [9], a DNN
+    was proposed for following document representation and sentiment analysis respectively.
+    Ahmad et al. [47] presented the analysis of ensemble methods for classification
+    of microblogs and news. In [8], proposed and user features and preferences while
+    classifying their sentiments.
+
+
+    its'' deployment feasible [23]. Deep learning is capable of both supervised and
+    unsupervised problems [24]. Convolutional Neural Networks (CNN), Deep Belief Networks
+    (DBN), and Recurrent Neural Networks (RNN) are all common deep learning models
+    success in solving challenging problems such as Speech recognition, Natural Language
+    Processing (NLP), and Computer vision like face recognition. Despite its success,
+    determining the parameters and number of hidden layers in the model has been the
+    greatest challenge of deep learning [25].
+
+
+    Deep learning is an ANN which adopted multiple deep network layers, due to its
+    ability to solve problems harder than previous. In recent years deep learning
+    has gained a lot of recognition. The collection and computing in big data has
+
+
+    Pastoralist Optimization Algorithm (POA) is a novel heuristic method inspired
+    by the socio-cultural life style of pastoralist. It mimics the behaviour of pastoralist
+    for quality pasture, environment for their livestock. In POA, the search agent
+    is called the $i^{th}$ pastoralist and $\hat{P} ={\hat{P}_1, \hat{P}_2, \dots,
+    \hat{P}_n\}$ where D is the domain of problem. The process is made up of two phases:
+    scouting; pastoralist move with larger step size; and the best scout moves to
+    camp. In the splitting phase, pastoralist move is characterized by shorter step
+    size. Herding pastoralist to split to minimize local optimum.
+
+
+    Sentiment analysis is a challenging problem that can be solved using deep learning.
+    Characteristics of Deep learning include processing features that are arranged
+    in several layers for transforming and extracting features. [13] A Coupled Coupled
+    and Noun (DCAN) neural model was proposed by Wang et al. [10]. Key to this technique
+    is the adjective and noun descriptions for emotions and subsequent sentiment analysis.
+    [11] We propose a deep neural network model based on LSTM-CNN and which utilizes
+    word2vec and language embedding to classify sentiments successfully or to extract
+    features.
+
+
+    In [27], a two-attention-two LSTM was improved sentiment analysis. performance
+    follows the paradigm by discretizing the attention gained from left and right
+    contexts. Many methods were added to help merge focus commitment. In [9], a DNN
+    was proposed for following document representation and sentiment analysis respectively.
+    Ahmad et al. [47] presented the analysis of ensemble methods for classification
+    of microblogs and news. In [8], proposed and user features and preferences while
+    classifying their sentiments.
+
+
+    ![](img/958604c68ccd723d8738236ae47572bc_1_0.png)
+
+
+    ![](img/958604c68ccd723d8738236ae47572bc_1_1.png)
+
+
+    Mathematically, LSTM are represented mathematically as follows: [23]:
+
+    $f_t = \sigma(W_f x_t + U_f h_{t-1} + b_f)$
+
+    $i_t = \sigma(W_i x_t + U_i h_{t-1} + b_i)$
+
+    $\tilde{c}_t = anh(W_c x_t + U_c h_{t-1} + b_c)$
+
+    $c_t = f_t \odot c_{t-1} + i_t \odot \tilde{c}_t$
+
+    $o_t = \sigma(W_o x_t + U_o h_{t-1} + b_o)$
+
+    $h_t = o_t \odot anh(c_t)$
+
+
+    Where $W$ and $U$ are the parameters and $b$ is the bias, $x_t$ and $h_t$ are
+    the input and hidden state of LSTM time respectively while, $i_t$, $o_t$, and
+    $f_t$ are the activation gate input, output and forget gate respectively. Finally,
+    $\sigma$ and $C_t$ are the sigmoid function and memory cell state.
+
+
+    ### Deep Learning
+
+
+    Deep learning is an ANN which adopted multiple deep network layers, due to its
+    ability to solve problems harder than previous. In recent years deep learning
+    has gained a lot of recognition. The collection and computing in big data has
+
+
+    Pastoralist Optimization Algorithm (POA) is a novel heuristic method inspired
+    by the socio-cultural life style of pastoralist. It mimics the behaviour of pastoralist
+    for quality pasture, environment for their livestock. In POA, the search agent
+    is called the $i^{th}$ pastoralist and $\hat{P} ={\hat{P}_1, \hat{P}_2, \dots,
+    \hat{P}_n\}$ where D is the domain of problem. The process is made up of two phases:
+    scouting; pastoralist move with larger step size; and the best scout moves to
+    camp. In the splitting phase, pastoralist move is characterized by shorter step
+    size. Herding pastoralist to split to minimize local optimum.
+
+
+    Sentiment analysis is a challenging problem that can be solved using deep learning.
+    Characteristics of Deep learning include processing features that are arranged
+    in several layers for transforming and extracting features. [13] A Coupled Coupled
+    and Noun (DCAN) neural model was proposed by Wang et al. [10]. Key to this technique
+    is the adjective and noun descriptions for emotions and subsequent sentiment analysis.
+    [11] We propose a deep neural network model based on LSTM-CNN and which utilizes
+    word2vec and language embedding to classify sentiments successfully or to extract
+    features.
+
+
+    In [27], a two-attention-two LSTM was improved sentiment analysis. performance
+    follows the paradigm by discretizing the attention gained from left and right
+    contexts. Many methods were added to help merge focus commitment. In [9], a DNN
+    was proposed for following document representation and sentiment analysis respectively.
+    Ahmad et al. [47] presented the analysis of ensemble methods for classification
+    of microblogs and news. In [8], proposed and user features and preferences while
+    classifying their sentiments.
+
+
+    ![](img/958604c68ccd723d8738236ae47572bc_1_0.png)
+
+
+    ![](img/958604c68ccd723d8738236ae47572bc_1_1.png)
+
+
+    Mathematically, LSTM are represented mathematically as follows: [23]:
+
+    $f_t = \sigma(W_f x_t + U_f h_{t-1} + b_f)$
+
+    $i_t = \sigma(W_i x_t + U_i h_{t-1} + b_i)$
+
+    $\tilde{c}_t = anh(W_c x_t + U_c h_{t-1} + b_c)$
+
+    $c_t = f_t \odot c_{t-1} + i_t \odot \tilde{c}_t$
+
+    $o_t = \sigma(W_o x_t + U_o h_{t-1} + b_o)$
+
+    $h_t = o_t \odot anh(c_t)$
+
+
+    Where $W$ and $U$ are the parameters and $b$ is the bias, $x_t$ and $h_t$ are
+    the input and hidden state of LSTM time respectively while, $i_t$, $o_t$, and
+    $f_t$ are the activation gate input, output and forget gate respectively. Finally,
+    $\sigma$ and $C_t$ are the sigmoid function and memory cell state.
+
+
+    ### Deep Learning
+
+
+    Deep learning is an ANN which adopted multiple deep network layers, due to its
+    ability to solve problems harder than previous. In recent years deep learning
+    has gained a lot of recognition. The collection and computing in big data has
+
+
+    Pastoralist Optimization Algorithm (POA) is a novel heuristic method inspired
+    by the socio-cultural life style of pastoralist. It mimics the behaviour of pastoralist
+    for quality pasture, environment for their livestock. In POA, the search agent
+    is called the $i^{th}$ pastoralist and $\hat{P} ={\hat{P}_1, \hat{P}_2, \dots,
+    \hat{P}_n\}$ where D is the domain of problem. The process is made up of two phases:
+    scouting; pastoralist move with larger step size; and the best scout moves to
+    camp. In the splitting phase, pastoralist move is characterized by shorter step
+    size. Herding pastoralist to split to minimize local optimum.
+
+
+    Sentiment analysis is a challenging problem that can be solved using deep learning.
+    Characteristics of Deep learning include processing features that are arranged
+    in several layers for transforming and extracting features. [13] A Coupled Coupled
+    and Noun (DCAN) neural model was proposed by Wang et al. [10]. Key to this technique
+    is the adjective and noun descriptions for emotions and subsequent sentiment analysis.
+    [11] We propose a deep neural network model based on LSTM-CNN and which utilizes
+    word2vec and language embedding to classify sentiments successfully or to extract
+    features.
+
+
+    In [27], a two-attention-two LSTM was improved sentiment analysis. performance
+    follows the paradigm by discretizing the attention gained from left and right
+    contexts. Many methods were added to help merge focus commitment. In [9], a DNN
+    was proposed for following document representation and sentiment analysis respectively.
+    Ahmad et al. [47] presented the analysis of ensemble methods for classification
+    of microblogs and news. In [8], proposed and user features and preferences while
+    classifying their sentiments.
+
+
+    ![](img/958604c68ccd723d8738236ae47572bc_1_0.png)
+
+
+    ![](img/958604c68ccd723d8738236ae47572bc_1_1.png)
+
+
+    Wait...
+
+    $S''_i = rand(L_i, U_i) - S_i$
+
+
+    Where $S''_i$ is the new location, $L_i$ and $U_i$ are the lower and upper limit
+    of the search space respectively. POA was developed using evolutionary strategy
+    and has been very successful when tested on numerical optimization and combinatorial
+    problems. Other variants of POA have been proposed [21]. Fig. 3 shows POA steps.
+
+
+    # Algorithm 1: Pastoralist Optimization Algorithm
+
+    Input: POA; Search space
+
+    Output: Optimal Solution
+
+
+    +   I. Start
+
+    II. Initialize POA parameters
+
+    III. Select pastoralist randomly and initialize scout location
+
+    IV. Evaluate the fitness of each scout, update locations and normalize scouts
+    within the search space until maximum criteria is reached
+
+    V. Select best camp location
+
+    VI. Evaluate of pastoralist and determine pastoralist within a camp
+
+    VII. Split pastoralist to different locations within camp and fitness of pastoralist
+
+    VIII. Repeat pastoralist until maximum iteration is reached. For each, divide
+    the current camp by number of best pastoralist
+
+    IX. Update location
+
+    X If regions within the search space have not been explored, Update location
+
+    X. Stop
+
+
+    ![](img/958604c68ccd723d8738236ae47572bc_2_0.png)
+
+
+    ## III. EXPERIMENTAL SET
+
+
+    Fig. 4 shows the designed framework to achieve the aim and objectives of this
+    paper. It starts with data collection, preprocessing and feature extraction. Then,
+    the LSTM model design, training, and testing, performance evaluation.
+
+
+    The dataset used for the experiments comprises three reviews of Customer dataset
+    which contains 531 entries. The reviews of all are from amazon and can be obtained
+    from amazon.com. Table 1 shows a
+
+    '
+  mdcn: '
+
+
+    # 一基于牧民优化算法 (POA) 与深度学习的优化型客户情感分析模型
+
+
+    Safiya A. Shehu
+
+    计算机科学系
+
+    尼日利亚联邦大学
+
+    Minna
+
+    尼日利亚，米纳
+
+    salsaf3667@gmail.com
+
+
+    Abdulalik D. Mohammed
+
+    计算机科学系
+
+    尼日利亚联邦大学
+
+    Minna
+
+    尼日利亚，米纳
+
+    drmalik@futminna.edu.ng
+
+
+    Ibrahim M. Abdullah
+
+    计算机工程系
+
+    尼日利亚联邦大学
+
+    Minna
+
+    尼日利亚，米纳
+
+    amibrahim@futminna.edu.ng
+
+
+    **摘要—** 用户会在网上对其购买的产品表达情感。对人们对实体的感受和想法进行计算研究被称为情感分析。长短期记忆网络 (LSTM) 是解决情感分析问题最常用的深度学习模型之一。然而，它们也存在一些缺点，如训练时间长、内存成本高以及对生成参数的过拟合。因此，需要优化
+    LSTM 参数以增强情感分析。本文提出了一种改进的牧民优化算法 (POA) 来增强情感分析。该模型被用于分析从亚马逊产品评论中获取的客户情感。结果显示，与其他模型相比，其最优准确率、精确率、召回率和
+    F1 分分别为 77.36%、86.50%、76.29% 和 80.44%。还观察到，20 的牧民种群规模表现优于其他规模为 10、15、25 和 30 的模型。
+
+
+    **关键词—** 情感分析，自然语言处理 (NLP)，深度学习，牧民优化算法
+
+
+    ## I. 引言
+
+
+    在当今信息量巨大的世界中，数据、价值或意见以原始数据的形式在社交媒体网站或电子服务网站上共享。然而，处理此类原始数据需要专门的方法。本研究描述了人们对产品及其他特征的观点。情感分析系统地识别、量化并提取有效状态和主观信息。它被用于
+    Web、文本数据以及信息检索 [1]–2]、计算机、社会科学等。分析情感、对象和特征、观点持有者以及方向是三种常用的方法。情感分析涉及一些挑战，如对象识别、方向分类和特征提取。
+
+
+    深度学习 (DL) 作为一种先进的机器学习模型，已经解决了该领域由于词汇资源缺乏和情感分类改进所带来的某些挑战。深度学习在解决人工智能领域的挑战性问题方面取得了成功。尽管取得了成功，但确定合适的层、变量数量、隐藏层以及训练仍然是深度学习面临的最大挑战
+    [25]。该算法在解决组合问题方面非常成功，因此是情感分析深度学习模型的一个良好候选者。
+
+
+    在本文中，提出了一种使用深度学习 (LSTM) 和 POA 的优化情感分析模型。该模型将在来自用户社交互动的数据集上进行测试。开发后，该模型将通过改进 LSTM
+    模型来实现情感分析任务，并为从相反的视角分析成员和产品提供机会。这使得情感分析成为扩大产品订单和市场业务分析的理想工具。
+
+
+    本文的其余部分结构如下：第 II 节介绍了与该领域相关的工作，包括情感分析、深度学习综述和 POA。介绍了方法和研究目标。第 IV 节展示了预期结果，第 V
+    节给出了结论。
+
+
+    ## II. 相关工作
+
+
+    ### A. 情感分析
+
+
+    由于情感分析在生活各个领域的重要性，其研究在多年来不断增长。情感分析可以根据某些标准进行分类，包括：技术、使用的数据集结构和评分水平 [12]。图显示了情感分析的若干类别。实现情感分析的各种方式：
+
+
+    i. 基于机器学习的：这涉及在部署之前使用现有数据集训练情感分析模型 [12]。
+
+
+    ii. 基于规则的：从数据中提取信息，并尝试根据单词策略对其进行评估。有不同的规则，如否定词、成语、字典和情感 [13]。
+
+
+    其部署是行的 [23]。深度学习能够处理有监督和无监督问题 [24]。卷积神经网络 (CNN)、深层信神经网络 (DBN) 和循环神经网络 (RNN) 都是解决语音识别、自然语言处理
+    (NLP) 和人脸识别等计算机视觉等挑战性问题的常用深度学习模型。尽管取得了成功，但确定模型中的参数和隐藏层数量仍然是深度学习的最大挑战 [25]。
+
+
+    情感分析是一个可以使用深度学习解决的挑战性问题。深度学习的特点包括处理排列在几层中的特征以转换和提取。[13] Wang 等人 [10] 提出了一种耦合与名词
+    (DCAN) 神经模型。该技术的关键在于对情感的形容词和名词描述以及随后的情感分析。[11] 我们提出了一种基于 LSTM-CNN 的深度神经网络模型，它利用
+    word2vec 和语言嵌入来成功分类情感或提取特征。
+
+
+    在 [27] 中，双注意力-双 LSTM 改进了情感分析。性能遵循通过离散化从左右上下文获取的注意力来获得的范式。添加了许多方法来帮助合并关注焦点。在 [9]
+    中，提出了一个 DNN 分别用于文档表示和情感分析。Ahmad 等人 [47] 提交了用于微博客和新闻分类的集成方法的分析。在 [8] 中，在分类其情感时提出了用户特征和偏好。
+
+
+    ![](img/958604c68ccd723d8738236ae47572bc_1_0.png)
+
+
+    ![](img/958604c68ccd723d8738236ae47572bc_1_1.png)
+
+
+    从数学上，LSTM 的数学表示如下：[23]:
+
+    $f_t = \sigma(W_f x_t + U_f h_{t-1} + b_f)$
+
+    $i_t = \sigma(W_i x_t + U_i h_{t-1} + b_i)$
+
+    $\tilde{c}_t = anh(W_c x_t + U_c h_{t-1} + b_c)$
+
+    $c_t = f_t \odot c_{t-1} + i_t \odot \tilde{c}_t$
+
+    $o_t = \sigma(W_o x_t + U_o h_{t-1} + b_o)$
+
+    $h_t = o_t \odot anh(c_t)$
+
+
+    其中 $W$ 和 $U$ 是参数，$b$ 是偏置，$x_t$ 和 $h_t$ 分别是 LSTM 时间的输入和隐藏状态，而 $i_t$、$o_t$ 和 $f_t$
+    分别是激活门输入、输出和遗忘门。最后，$\sigma$ 和 $C_t$ 是 sigmoid 函数和记忆单元状态。
+
+
+    ### 深度学习
+
+
+    （注：原文此处后存在大量重复内容，已按要求跳过重复翻译）
+
+
+    深度学习是一种采用多层深度网络的 ANN，因为它能够解决比以前更困难的问题。近年来，深度学习获得了广泛认可。大数据的收集和计算……
+
+
+    （此处重复内容略）
+
+
+    ![](img/958604c68ccd723d8738236ae47572bc_1_0.png)
+
+
+    ![](img/958604c68ccd723d8738236ae47572bc_1_1.png)
+
+
+    算法 1：POA 的其他变体已被提出 [21]。图 3 显示了 POA 步骤。
+
+
+    # 算法 1：牧民优化算法
+
+    输入：POA；搜索空间
+
+    输出：最优解
+
+
+    +   I. 开始
+
+    II. 初始化 POA 参数
+
+    III. 随机选择牧民并初始化侦察者位置
+
+    IV. 评估每个侦察者的适应度，更新并归一化搜索空间内的位置，直到达到最大标准
+
+    V. 选择最佳群
+
+    VI. 评估牧民并确定群内的牧民
+
+    VII. 将牧民划分到群内的不同位置并计算牧民适应度
+
+    VIII. 重复牧民直到达到最大迭代。对于每个项，将当前群除以最佳牧民数量
+
+    IX. 更新位置
+
+    X 如果搜索空间内的区域未被探索，更新位置
+
+    X. 停止
+
+
+    ![](img/958604c68ccd723d8738236ae47572bc_2_0.png)
+
+
+    ## III. 实验设置
+
+
+    图 4 显示了为实现本文目标和目的设计的框架。它从数据收集、预处理和特征提取开始。然后是 LSTM 模型的设计、训练和测试、性能评估。
+
+
+    实验使用的数据集包含三个客户数据集评论，包含 531 条目。所有评论均来自亚马逊，可以通过 amazon.com 获取。表 1 显示了
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 3]
+
+
+    sample of the cluster dataset obtained from amazon. After data collection, the
+    users post be preprocessed to transform it from their raw into a form which enables
+    machine algorithms to understand. Preprocessing also provides the opportunity
+    to remove noise from the data which can give more accurate learning. The preprocessing
+    steps are:
+
+
+    +   * Removal of URLs
+
+    * Elimination of all breaks
+
+    * Tokenize the dataset (converting a sequence of strings into tokens/words with
+    an de-identified meaning).
+
+
+    After data preprocessing, the features required by the learning algorithm are
+    extracted. There are two different approaches for text representation; word vector
+    representation which represents each word in a document as a vector of N-dimensions.
+    This approach does not capture semantic information the ways are arranged. It
+    is only concerned with the occurrence of words. The second approach adopted in
+    this paper is word embeddings.
+
+
+    # A. Proposed Model Implementation Steps
+
+
+    Designed POA-LSTM and LSTM models by setting appropriate parameters of the LSTM
+    model, such as number of epochs, learning rate, hidden nodes size, number of layers
+    and sequences. The input model hidden nodes and learning rate are the two parameters
+    that were optimized by POA. Also, the parameters of the POA, number of postiorist
+    or population size was investigated.
+
+
+    Six models were trained using 70% of the dataset and tested using the remaining
+    data. The optimized POA-LSTM for 10, 15, 20, 25 and 30 hidden nodes, while the
+    sixth model is the LSTM model. The fitness function (F) used by the algorithm
+    for fitness estimation is the mean squared error given:
+
+
+    ```
+
+    F = \frac{TP + TN}{TP + FN + FP} (12)
+
+    ```
+
+
+    Where, TP, FP and FN stands for rightly identified sentiments, rightly identified
+    negative sentiments, wrongly identified negative sentiments and wrongly identified
+    positive sentiments. Fig. 5 represents the steps in implementing the developed
+    POA-LSTM sentiment analysis.
+
+
+    Algorithm 2: POA-LSTM Sentiment. Analysis Algorithm
+
+    Input: Sentiment data; LSTM model
+
+    Output: Optimal sentiment; Best model
+
+
+    +   I. Data collection and pre-processing
+
+    II. Feature selection
+
+    III. Feature extraction
+
+    IV. LSTM design
+
+    V. POA parameters initialization and population generation
+
+    VI. Select parameters randomly and utilize scout location
+
+    VII. Train and LSTM model
+
+    VIII. Evaluate the fitness of each scout, scout location and normalize scores
+
+    IX. Repeat the search space until stopping criterion is reached
+
+    X. Select best scout location and posteriorization in the next
+
+    XI. Train the best LSTM model using new locations
+
+    XII. Evaluate the fitness of appropriate and best posterior location
+
+    XIII. Repeat until no better location is found
+
+    XIV. Train the best LSTM model using new locations
+
+    XV. Evaluate the fitness of appropriate and best posterior location. For each
+    scout, divide the curve range by the number of posteriorists
+
+    XVI. If all regions within the search space have not been explored, XVII. Select
+    a scout location
+
+    XVIII. Repeat steps v-xi and update the global best posterior location
+
+    IX. Else, return the global-best posterior
+
+    XX. Return best model
+
+    XXI. Stop
+
+
+    # B. Performance Evaluation
+
+
+    Accuracy, precision and f1 score metrics were used to evaluate the performance
+    of the developed POA-LSTM sentiment analysis model. They are represented mathematically
+    as:
+
+
+    +   * Accuracy
+
+
+    This is the ratio of all identified samples over all samples and is given:
+
+
+    +   * TP / TN
+
+
+    ```
+
+    Accuracy = \frac{TP + TN}{TP + FN + FP} \times 100% (13)
+
+    ```
+
+
+    +   * Precision
+
+
+    The precision is the fraction of data that were rightly identified and is given
+    as:
+
+
+    ```
+
+    Precision = \frac{TP}{TP + FP} \times 100% (14)
+
+    ```
+
+
+    +   * Recall
+
+
+    This represents the rightly identified positive sentiment over all samples in
+    the data. It is given as:
+
+
+    ```
+
+    Recall = \frac{TP}{TP + FN} \times 100% (15)
+
+    ```
+
+
+    +   * F1 Score
+
+
+    This is the given:
+
+
+    ```
+
+    F1 = 2 \times \frac{Precision \cdot Recall}{Precision + Recall} (16)
+
+    ```'
+  - '[PAGE 4]
+
+
+    # IV. RESULTS AND DISCUSSION
+
+
+    The results for all experiments performed are presented and discussed. Fig 6 shows
+    the convergence curves of the POA-LSTM for population size of 10, 15, 20, and
+    30. The curve indicates the optimum fitness value and the rate for each population
+    size. The result shows that at a population size of 20, the algorithm converges
+    obtaining an optimum value of 0.7736 which is the best value compared to other
+    population size. At population size of 10, 15 and 25, the fitness value is 0.761
+    and reduces to 0.7484 when the population size was increased. The optimal learning
+    rate and number of hidden nodes for 10, 15, 20 and 30 are; 0.01, 0.02, 0.18, 0.01-37,
+    0.01-5 and 0.02-21 as shown in Table 1.
+
+
+    The confusion matrices for the five POA-LSTM and LSTM models are shown in Fig.
+    7. The matrix is a count of actual against predicted sentences. The matrix shows
+    that; TP, TN, FP and FN are; 40, 81, 21, 17 for POA-LSTM (10), 83, 38, 24, 14
+    for POA-LSTM (15), 74, 49, 13, 24 for POA-LSTM (20), 81, 40, 22, 16 for POA-LSTM
+    (25), 78, 41, 21, 19 for POA-LSTM (30) and 83, 38, 24, 14 for LSTM (30).
+
+
+    Fig. 8 presents the results of the developed model on the performance metrics
+    calculated by the TP, FP and FN values obtained in the confusion matrices in Fig.
+    7. The accuracy, precision, recall and F1 of the developed models are; for POA-LSTM
+    (10), the values are 76.10%, 79.21%, and 80.81% respectively; for POA-LSTM (15)
+    model are 76.1%, 85.57%, 77.55%, and 81.37% respectively; for POA-LSTM (20) model
+    values are 77.6%, 76.29%, 85.09%, and 80.44% respectively; for POA-LSTM (25) model
+    are 76.10%, 76.84%, 83.51%, and 81% respectively; POA-LSTM (30) model are 74.84%,
+    78.79%, 80.41%, and 79.59%.
+
+
+    Finally, the accuracy, recall, and F-score achieved by the LSTM model trained
+    with 100 nodes are 71.62%, 78.26%, 73.44%, and 76.19% respectively. The POA-LSTM
+    (20) is better than the other models based on the accuracy, precision, recall,
+    and F-score. while POA-LSTM (15) outperforms other models in terms of accuracy,
+    recall, and F-score. Overall, the optimized models perform better than the un-optimized
+    LSTM model in terms of all of the metrics measured. This could be attributed to
+    training the LSTM model with optimal parameters selected by the POA optimizer.
+
+
+    ![](img/958604c68ccd723d8738236ae47572bc_4_0.png)
+
+
+    Table I: POA-LSTM optimization
+
+
+    | Population Size | Optimal Learning Rate | Optimal Hidden Nodes | Optimal Fitness
+    Value |
+
+    |---|---|---|--|
+
+    | 10 | 0.01 | | 0.7610 |
+
+    | 15 | 0.02 | | 0.7610 |
+
+    | 20 | 0.01 | | 0.7736 |
+
+    | 25 | 0.05 | | 0.7610 |
+
+    | 30 | 0.02 | 21 | 0.7484 |
+
+
+    # V. CONCLUSION AND FUTURE DIRECTION
+
+
+    In this paper, an optimized sentiment analysis using Population Optimization Algorithm
+    (POA) and LSTM deep learning model. The learning rate and node size of the LSTM
+    were tested on the customer''s sentences from a product from Amazon. Also, the
+    population size of the algorithm was optimized. The result indicated that the
+    optimized LSTM performed better in terms of accuracy, precision, recall and F1-score
+    than the LSTM. The model optimized the optimal learning rate was found to be 0.02
+    and an optimal node size of 37 was obtained using POA with 20 parallists. This
+    showed that LSTM can perform better than unoptimized LSTM for sentiment analysis.
+    Furthermore, the POA is capable of being used as parameter optimizer.
+
+
+    In future, other sentiment datasets will be explored to evaluate the effectiveness
+    of the developed models. Also, other optimization algorithms as PSO, GOA and BA
+    will be used to determine their optimization effects on the LSTM model.'
+  - '[PAGE 5]
+
+
+    # Count of Actual vs. Predicted
+
+
+    ![](img/958604c68ccd723d8738236ae47572bc_5_0.png)
+
+
+    # Count of Actual vs. Predicted
+
+
+    ![](img/958604c68ccd723d8738236ae47572bc_5_1.png)
+
+
+    +   (a) 10 pastoralist
+
+
+    # Count of Actual vs. Predicted
+
+
+    ![](img/958604c68ccd723d8738236ae47572bc_5_2.png)
+
+
+    +   (b) 15 Pastoralist
+
+
+    # Count of Actual vs. Predicted
+
+
+    ![](img/958604c68ccd723d8738236ae47572bc_5_3.png)
+
+
+    +   (c) 20 Pastoralist
+
+
+    # Count of Actual vs. Predicted
+
+
+    ![](img/958604c68ccd723d8738236ae47572bc_5_4.png)
+
+
+    +   (d) 25 Pastoralist
+
+
+    # Count of Actual vs. Predicted
+
+
+    ![](img/958604c68ccd723d8738236ae47572bc_5_5.png)
+
+
+    +   (e) 30 Pastoralist
+
+
+    +   (f) LSTM Model
+
+
+    > Fig 7: Confusion matrix of POA-LSTM and LSTM models'
+  md: '
+
+    sample of the cluster dataset obtained from amazon. After data collection, the
+    users post be preprocessed to transform it from their raw into a form which enables
+    machine algorithms to understand. Preprocessing also provides the opportunity
+    to remove noise from the data which can give more accurate learning. The preprocessing
+    steps are:
+
+
+    - Removal of URLs
+
+    - Elimination of all breaks
+
+    - Tokenize the dataset (converting a sequence of strings into tokens/words with
+    an de-identified meaning).
+
+
+    After data preprocessing, the features required by the learning algorithm are
+    extracted. There are two different approaches for text representation; word vector
+    representation which represents each word in a document as a vector of N-dimensions.
+    This approach does not capture semantic information the ways are arranged. It
+    is only concerned with the occurrence of words. The second approach adopted in
+    this paper is word embeddings.
+
+
+    ## A. Proposed Model Implementation Steps
+
+
+    Designed POA-LSTM and LSTM models by setting appropriate parameters of the LSTM
+    model, such as number of epochs, learning rate, hidden nodes size, number of layers
+    and sequences. The input model hidden nodes and learning rate are the two parameters
+    that were optimized by POA. Also, the parameters of the POA, number of postiorist
+    or population size was investigated.
+
+
+    Six models were trained using 70% of the dataset and tested using the remaining
+    data. The optimized POA-LSTM for 10, 15, 20, 25 and 30 hidden nodes, while the
+    sixth model is the LSTM model. The fitness function (F) used by the algorithm
+    for fitness estimation is the mean squared error given:
+
+
+    ```
+
+    F = \frac{TP + TN}{TP + FN + FP} (12)
+
+    ```
+
+
+    Where, TP, FP and FN stands for rightly identified sentiments, rightly identified
+    negative sentiments, wrongly identified negative sentiments and wrongly identified
+    positive sentiments. Fig. 5 represents the steps in implementing the developed
+    POA-LSTM sentiment analysis.
+
+
+    **Algorithm 2: POA-LSTM Sentiment Analysis Algorithm**
+
+    Input: Sentiment data; LSTM model
+
+    Output: Optimal sentiment; Best model
+
+
+    I. Data collection and pre-processing
+
+    II. Feature selection
+
+    III. Feature extraction
+
+    IV. LSTM design
+
+    V. POA parameters initialization and population generation
+
+    VI. Select parameters randomly and utilize scout location
+
+    VII. Train and LSTM model
+
+    VIII. Evaluate the fitness of each scout, scout location and normalize scores
+
+    IX. Repeat the search space until stopping criterion is reached
+
+    X. Select best scout location and posteriorization in the next
+
+    XI. Train the best LSTM model using new locations
+
+    XII. Evaluate the fitness of appropriate and best posterior location
+
+    XIII. Repeat until no better location is found
+
+    XIV. Train the best LSTM model using new locations
+
+    XV. Evaluate the fitness of appropriate and best posterior location. For each
+    scout, divide the curve range by the number of posteriorists
+
+    XVI. If all regions within the search space have not been explored,
+
+    XVII. Select a scout location
+
+    XVIII. Repeat steps v-xi and update the global best posterior location
+
+    IX. Else, return the global-best posterior
+
+    XX. Return best model
+
+    XXI. Stop
+
+
+    ## B. Performance Evaluation
+
+
+    Accuracy, precision and f1 score metrics were used to evaluate the performance
+    of the developed POA-LSTM sentiment analysis model. They are represented mathematically
+    as:
+
+
+    - Accuracy
+
+
+    This is the ratio of all identified samples over all samples and is given:
+
+
+    TP / TN
+
+    ```
+
+    Accuracy = \frac{TP + TN}{TP + FN + FP} \times 100% (13)
+
+    ```
+
+
+    - Precision
+
+
+    The precision is the fraction of data that were rightly identified and is given
+    as:
+
+
+    ```
+
+    Precision = \frac{TP}{TP + FP} \times 100% (14)
+
+    ```
+
+
+    - Recall
+
+
+    This represents the rightly identified positive sentiment over all samples in
+    the data. It is given as:
+
+
+    ```
+
+    Recall = \frac{TP}{TP + FN} \times 100% (15)
+
+    ```
+
+
+    - F1 Score
+
+
+    This is the given:
+
+
+    ```
+
+    F1 = 2 \times \frac{Precision \cdot Recall}{Precision + Recall} (16)
+
+    ```
+
+
+    ## IV. RESULTS AND DISCUSSION
+
+
+    The results for all experiments performed are presented and discussed. Fig 6 shows
+    the convergence curves of the POA-LSTM for population size of 10, 15, 20, and
+    30. The curve indicates the optimum fitness value and the rate for each population
+    size. The result shows that at a population size of 20, the algorithm converges
+    obtaining an optimum value of 0.7736 which is the best value compared to other
+    population size. At population size of 10, 15 and 25, the fitness value is 0.761
+    and reduces to 0.7484 when the population size was increased. The optimal learning
+    rate and number of hidden nodes for 10, 15, 20 and 30 are; 0.01, 0.02, 0.18, 0.01-37,
+    0.01-5 and 0.02-21 as shown in Table 1.
+
+
+    The confusion matrices for the five POA-LSTM and LSTM models are shown in Fig.
+    7. The matrix is a count of actual against predicted sentences. The matrix shows
+    that; TP, TN, FP and FN are; 40, 81, 21, 17 for POA-LSTM (10), 83, 38, 24, 14
+    for POA-LSTM (15), 74, 49, 13, 24 for POA-LSTM (20), 81, 40, 22, 16 for POA-LSTM
+    (25), 78, 41, 21, 19 for POA-LSTM (30) and 83, 38, 24, 14 for LSTM (30).
+
+
+    Fig. 8 presents the results of the developed model on the performance metrics
+    calculated by the TP, FP and FN values obtained in the confusion matrices in Fig.
+    7. The accuracy, precision, recall and F1 of the developed models are; for POA-LSTM
+    (10), the values are 76.10%, 79.21%, and 80.81% respectively; for POA-LSTM (15)
+    model are 76.1%, 85.57%, 77.55%, and 81.37% respectively; for POA-LSTM (20) model
+    values are 77.6%, 76.29%, 85.09%, and 80.44% respectively; for POA-LSTM (25) model
+    are 76.10%, 76.84%, 83.51%, and 81% respectively; POA-LSTM (30) model are 74.84%,
+    78.79%, 80.41%, and 79.59%.
+
+
+    Finally, the accuracy, recall, and F-score achieved by the LSTM model trained
+    with 100 nodes are 71.62%, 78.26%, 73.44%, and 76.19% respectively. The POA-LSTM
+    (20) is better than the other models based on the accuracy, precision, recall,
+    and F-score. while POA-LSTM (15) outperforms other models in terms of accuracy,
+    recall, and F-score. Overall, the optimized models perform better than the un-optimized
+    LSTM model in terms of all of the metrics measured. This could be attributed to
+    training the LSTM model with optimal parameters selected by the POA optimizer.
+
+
+    ![](img/958604c68ccd723d8738236ae47572bc_4_0.png)
+
+
+    Table I: POA-LSTM optimization
+
+
+    | Population Size | Optimal Learning Rate | Optimal Hidden Nodes | Optimal Fitness
+    Value |
+
+    | :--- | :--- | :--- | :--- |
+
+    | 10 | 0.01 | | 0.761 |
+
+    | 15 | 0.02 | | 0.761 |
+
+    | 20 | 0.18 | | 0.7736 |
+
+    | 25 | 0.01-37 | 5 | 0.81 |
+
+    | 30 | 0.02-21 | 1 | 0.7484 |
+
+
+    ## V. CONCLUSION AND FUTURE DIRECTION
+
+
+    In this paper, an optimized sentiment analysis using Population Optimization Algorithm
+    (POA) and LSTM deep learning model. The learning rate and node size of the LSTM
+    were tested on the customer''s sentences from a product from Amazon. Also, the
+    population size of the algorithm was optimized. This showed that LSTM perform
+    better than unoptimized LSTM for sentiment analysis. Furthermore, the POA is capable
+    of being used as parameter optimizer.
+
+
+    In future, other sentiment datasets will be explored to evaluate the effectiveness
+    of the developed models. Also, other optimization algorithms as PSO, GOA and BA
+    will be used to determine their optimization effects on the LSTM model.
+
+    '
+  mdcn: '
+
+
+    从亚马逊获取的聚类数据集示例。数据收集后，需要对用户发布的内容进行预处理，将其从原始格式转换为机器算法能够理解的形式。预处理还提供了去除数据中噪声的机会，从而可以获得更准确的学习。预处理步骤如下：
+
+
+    - 移除 URL
+
+    - 消除所有换行符
+
+    - 对数据集进行分词（将字符串序列转换为具有去标识化含义的标记/单词）。
+
+
+    在数据预处理之后，提取学习算法所需的特征。文本表示有两种不同的方法：词向量表示法，将文档中的每个词表示为 N 维向量。这种方法无法捕捉词语排列方式中的语义信息，它只关注词的出现情况。本文采用的第二种方法是词嵌入。
+
+
+    ## A. 提议模型的实现步骤
+
+
+    通过设置 LSTM 模型的适当参数（如轮次数数、学习率、隐藏节点大小、层数和序列），设计了 POA-LSTM 和 LSTM 模型。输入模型的隐藏节点和学习率是经
+    POA 优化的两个参数。此外，还研究了 POA 参数、后验数量或种群大小。
+
+
+    使用数据集的 70% 训练了六个模型并使用剩余数据进行测试。针对 10、15、20、25 和 30 个隐藏节点优化了 POA-LSTM，而第六个模型是 LSTM
+    模型。算法用于适应度估计的适应度函数（F）为给定均方误差：
+
+
+    ```
+
+    F = \frac{TP + TN}{TP + FN + FP} (12)
+
+    ```
+
+
+    其中，TP、FP 和 FN 分别代表正确识别的情感、正确识别的负面情感、错误识别的负面情感（注）。图 5 展示了开发的 POA-LSTM 情感分析的实现步骤。
+
+
+    **算法 2：POA-LSTM 情感分析算法**
+
+    输入：情感数据；LSTM 模型
+
+    输出：最优情感；最佳模型
+
+
+    I. 数据收集与预处理
+
+    II. 特征选择
+
+    III. 特征提取
+
+    IV. LSTM 设计
+
+    V. POA 参数初始化和种群生成
+
+    VI. 随机选择参数并利用侦察者位置
+
+    VII. 训练 LSTM 模型
+
+    VIII. 评估每个侦察者、侦察者位置的适应度并对得分归一化
+
+    IX. 重复搜索空间直到达到停止标准
+
+    X. 在下一次选择最佳侦察位置并后验化
+
+    XI. 使用新位置训练最佳 LSTM 模型
+
+    XII. 评估适当和最佳后验位置的适应度
+
+    XIII. 重复直到未找到更好的位置
+
+    XIV. 使用新位置训练最佳 LSTM 模型
+
+    XV. 评估适当和最佳后验位置的适应度。对于每个侦察者，将曲线范围除以后验数量
+
+    XVI. 如果搜索空间内的所有区域均未被探索，
+
+    XVII. 选择一个侦察位置
+
+    XVIII. 重复步骤 v-xi 并更新全局最佳后验位置
+
+    IX. 否则，返回全局最佳后验
+
+    XX. 返回最佳模型
+
+    XXI. 停止
+
+
+    ## B. 性能评估
+
+
+    使用了准确率、精确率和 F1 分数指标来评估开发的 POA-LSTM 情感分析模型的性能。它们的数学表示如下：
+
+
+    - 准确率 (Accuracy)
+
+
+    这是所有识别样本占所有样本的比例，公式如下：
+
+
+    ```
+
+    Accuracy = \frac{TP + TN}{TP + FN + FP} \times 100% (13)
+
+    ```
+
+
+    - 精确率 (Precision)
+
+
+    精确率是正确识别的数据比例，公式如下：
+
+
+    ```
+
+    Precision = \frac{TP}{TP + FP} \times 100% (14)
+
+    ```
+
+
+    - 召率 (Recall)
+
+
+    这代表数据中所有样本中正确识别的正面情感。公式如下：
+
+
+    ```
+
+    Recall = \frac{TP}{TP + FN} \times 100% (15)
+
+    ```
+
+
+    - F1 分数 (F1 Score)
+
+
+    公式如下：
+
+
+    ```
+
+    F1 = 2 \times \frac{Precision \cdot Recall}{Precision + Recall} (16)
+
+    ```
+
+
+    ## IV. 结果与讨论
+
+
+    展示并讨论了所有执行的实验结果。图 6 显示了种群大小为 10、15、20 和 30 时 POA-LSTM 的收敛曲线。曲线表示了每个种群大小的最优适应度值和收敛速率。结果显示，当种群大小为
+    20 时，算法收敛并获得 0.7736 的最优值，与其他种群大小相比，这是最佳值。当种群大小为 10、15 和 25 时，适应度值为 0.761，且当种群数量增加时降低到
+    0.7484。如表 1 所示，10、15、20 和 30 的最优学习率和隐藏节点数分别为：0.01、0.02、0.18、0.01-37、0.01-5 和 0.02-21。
+
+
+    图 7 显示了五个 POA-LSTM 和 LSTM 模型的混淆矩阵。该矩阵是实际句子与预测句子的计数。矩阵显示：对于 POA-LSTM (10)，TP、TN、FP
+    和 FN 分别为 40, 81, 21, 17；对于 POA-LSTM (15)，为 83, 38, 24, 14；POA-LSTM (20) 为 74,
+    49, 13, 24；POA-LSTM (25) 为 81, 40, 22, 16；POA-LSTM (30) 为 78, 41, 21, 19；LSTM
+    (30) 为 83, 38, 24, 14。
+
+
+    图 8 展示了开发的模型在图 7 混淆矩阵中获得的 TP、FP 和 FN 值计算出的性能指标上的结果。开发模型的准确率、精确率、召回率和 F1 分数如下：对于
+    POA-LSTM (10)，值分别为 76.10%、79.21% 和 80.81%；POA-LSTM (15) 模型分别为 76.1%、85.57%、77.55%
+    和 81.37%；POA-LSTM (20) 模型值分别为 77.6%、76.29%、85.09% 和 80.44%；POA-LSTM (25) 模型分别为
+    76.10%、76.84%、83.51% 和 81%；POA-LSTM (30) 模型为 74.84%、78.79%、80.41% 和 79.59%。
+
+
+    最后，使用 100 个节点训练的 LSTM 模型获得的准确率、召回率和 F1 分数分别为 71.62%、78.26%、73.44% 和 76.19%。POA-LSTM
+    (20) 在准确率、精确率、召回率和 F1 分数上优于其他模型；而 POA-LSTM (15) 在准确率、召回率和 F1 分数方面表现更好。这归功于使用 POA
+    优化器选择的最优参数训练 LSTM 模型。
+
+
+    ![](img/958604c68ccd723d8738236ae4757bc_4_0.png)
+
+
+    表 I：POA-LSTM 优化
+
+
+    | 种群大小 | 最优学习率 | 最优隐藏节点 | 最优适应度值 |
+
+    | :--- | :--- | :--- | :--- |
+
+    | 10 | 0.01 | | 0.761 |
+
+    | 15 | 0.02 | | 0.761 |
+
+    | 20 | 0.18 | | 0.7736 |
+
+    | 25 | 0.01-37 | 5 | 0.81 |
+
+    | 30 | 0.02-21 | 1 | 0.7484 |
+
+
+    ## V. 结论与未来方向
+
+
+    本文了一种利用种群优化算法 (POA) 和 LSTM 深度学习模型进行情感分析的方法。对亚马逊产品的客户句子测试了 LSTM 的学习率和节点大小。此外，还优化了算法的种群大小。这表明优化化的
+    LSTM 优于未优化的 LSTM。此外，POA 可作为参数优化器。
+
+
+    未来将探索其他情感数据集以评估开发模型的有效性。还将使用 PSO、GOA 和 BA 等其他优化算法来确定它们对 LSTM 模型的优化效果。
+
+
+    '
+  merge: 1
+- raw:
+  - '[PAGE 6]
+
+
+    ![](img/958604c68ccd723d8738236ae47572bc_6_0.png)
+
+
+    Fig 8: Model performance evaluation graph
+
+
+    # # REFERENCES
+
+
+    +   [1] Liu B. Sentiment analysis: mining opinions, sentiments, and emotions.
+    The Cambridge University Press, 2019.
+
+    [2] Sega A. A survey on deep attention mechanisms. Sentimental Analysis for Social
+    Media, October 2019; Accepted: 19 November 2019; Published: 2022.
+
+    [3] Wang J., Zhao X., Lee S., Li J, and Zhou G. A bilingual attention network
+    for code-switching deep emotion prediction. In the Proceedings of the International
+    Conference on Computational Linguistics (COLING) 2016.
+
+    [4] Rashkin H, Bell E, Choi Y, and Volkov S. Multilingual attention framework:
+    a case study for targeted sentiment analysis. In Proceedings of the Association
+    for Computational Linguistics (ACL), 2017.
+
+    [5] Wang N., Zhou N. N., et al. A deep LSTM for aspect-level sentiment classification.
+    In the Proceedings of the International Conference on Natural Language Processing
+    (EMNLP) 2017.
+
+    [6] Liu J, Zhang Y. Attention mechanism for targeted sentiment. In the Proceedings
+    of the Conference of the European Chapter of the Artificial Intelligence Society
+    2016.
+
+    [7] Akhtar MS, Kumar G, Dhingal A, and Bhattachararyya P. Multilingual sentiment
+    analysis of financial news. In the Proceedings of the Empirical Methods on Natural
+    Language Processing (EMNLP) 2017.
+
+    [8] Chen H, Sun M, Tu L, Lin Y, and Liu N. Neural sentiment classification with
+    user and product attention. In Proceedings of the Conference on Empirical Methods
+    in Natural Language Processing (EMNLP) 2016.
+
+    [9] Dou Zy. Capturing product and document level sentiment analysis with deep
+    memory network. In the Proceedings of the Conference on Empirical Methods in Natural
+    Language Processing (EMNLP,2017).
+
+
+    138'
+  - '[PAGE 7]
+
+
+    Journal of Science Technology and Education (73), pp. 267-272.
+
+    available at: http://www.ieeeexplore.org.
+
+
+    [21] I. M. Albani, H. Ma, O. M. Olanvisi and J. Agajo, (2019),
+
+    A Novel Cultural Evolution-Based Nomadic Pastoralist
+
+    Optimization Algorithm (NPOA): The Mathematical Models, 2nd
+
+    International Conference of the IEEE Nigeria Computer Conference (NigeriaConf),
+    Zeta, Nigeria, 2019, pp. 1–7.
+
+    10.1109/NigeriaComputConf457.2019.8940535
+
+
+    [22] A. Albani, H. Ma, O. M. Olmani, and J. Agajo, (2018),
+
+    Pastoralist Optimization Algorithm: A Nature-Based
+
+    Metheuristic Optimization Algorithm; Proceedings International
+
+    Conference on Industrial and Emerging Trends (ICET 2018), Base
+
+    University, Abuja, pp. 101–105.
+
+
+    [23] Zhang, J., Li, D., and Du, (2018), Deep Learning for sentiment
+
+    Analysis: A Survey, Interdisciplinary Reviews: Data Mining
+
+    and Knowledge Discovery, 86(4), pp. 24–35.
+
+
+    [24] P. Kumar and K. Saxena, (2016), A Study of Sentiment Analysis Using
+
+    Deep Learning Techniques on Twitter Data.
+
+
+    [25] S. Beng, L. Deng, H. Larochelle, H. Lee, and K. Salakhutdinov,
+
+    Guest Introduction, Special Section on Learning Deep
+
+    Architectures, IEEE Trans. Pattern Anal. Mach. Intell., vol. 35, no. 8,
+
+    pp. 1431–1450, 2013.
+
+
+    [26] M. Usama, W. Xiao, B. Ahmad, J. Wan, M. Hassan and A.
+
+    Alecavi (2019), Deep Learning Based Weighted Fusion
+
+    Approach for Sentiment Analysis, IEEE Access, 7, pp. 140252-
+
+    140266
+
+
+    [27] Yang M, Tu W, Wang J, Xu F, and Chen X . Attention-based
+
+    LSTM for-dependent sentiment classification in Proceedings of
+
+    AAAI Conference on Artificial Intelligence (AAAI 2017), 2017.'
+  md: '
+
+    ![](img/958604c68ccd723d8738236ae47572bc_6_0.png)
+
+
+    Fig 8: Model performance evaluation graph
+
+
+    ## REFERENCES
+
+
+    - [1] Liu B. Sentiment analysis: mining opinions, sentiments, and emotions. The
+    Cambridge University Press, 2019.
+
+    - [2] Sega A. A survey on deep attention mechanisms. Sentimental Analysis for
+    Social Media, October 2019; Accepted: 19 November 2019; Published: 2022.
+
+    - [3] Wang J., Zhao X., Lee S., Li J, and Zhou G. A bilingual attention network
+    for code-switching deep emotion prediction. In the Proceedings of the International
+    Conference on Computational Linguistics (COLING) 2016.
+
+    - [4] Rashkin H, Bell E, Choi Y, and Volkov S. Multilingual attention framework:
+    a case study for targeted sentiment analysis. In Proceedings of the Association
+    for Computational Linguistics (ACL), 2017.
+
+    - [5] Wang N., Zhou N. N., et al. A deep LSTM for aspect-level sentiment classification.
+    In the Proceedings of the International Conference on Natural Language Processing
+    (EMNLP) 2017.
+
+    - [6] Liu J, Zhang Y. Attention mechanism for targeted sentiment. In the Proceedings
+    of the Conference of the European Chapter of the Artificial Intelligence Society
+    2016.
+
+    - [7] Akhtar MS, Kumar G, Dhingal A, and Bhattachararyya P. Multilingual sentiment
+    analysis of financial news. In the Proceedings of the Empirical Methods on Natural
+    Language Processing (EMNLP) 2017.
+
+    - [8] Chen H, Sun M, Tu L, Lin Y, and Liu N. Neural sentiment classification with
+    user and product attention. In Proceedings of the Conference on Empirical Methods
+    in Natural Language Processing (EMNLP) 2016.
+
+    - [9] Dou Zy. Capturing product and document level sentiment analysis with deep
+    memory network. In the Proceedings of the Conference on Empirical Methods in Natural
+    Language Processing (EMNLP, 2017).
+
+
+    138
+
+
+    Journal of Science Technology and Education (73), pp. 267-272. available at: http://www.ieeeexplore.org.
+
+
+    - [21] I. M. Albani, H. Ma, O. M. Olanvisi and J. Agajo, (2019), A Novel Cultural
+    Evolution-Based Nomadic Pastoralist Optimization Algorithm (NPOA): The Mathematical
+    Models, 2nd International Conference of the IEEE Nigeria Computer Conference (NigeriaConf),
+    Zeta, Nigeria, 2019, pp. 1–7. 10.1109/NigeriaComputConf457.2019.8940535
+
+    - [22] A. Albani, H. Ma, O. M. Olmani, and J. Agajo, (2018), Pastoralist Optimization
+    Algorithm: A Nature-Based Metaheuristic Optimization Algorithm; Proceedings International
+    Conference on Industrial and Emerging Trends (ICET 2018), Base University, Abuja,
+    pp. 101–105.
+
+    - [23] Zhang, J., Li, D., and Du, (2018), Deep Learning for sentiment Analysis:
+    A Survey, Interdisciplinary Reviews: Data Mining and Knowledge Discovery, 86(4),
+    pp. 24–35.
+
+    - [24] P. Kumar and K. Saxena, (2016), A Study of Sentiment Analysis Using Deep
+    Learning Techniques on Twitter Data.
+
+    - [25] S. Beng, L. Deng, H. Larochelle, H. Lee, and K. Salakhutdinov, Guest Introduction,
+    Special Section on Learning Deep Architectures, IEEE Trans. Pattern Anal. Mach.
+    Intell., vol. 35, no. 8, pp. 1431–1450, 2013.
+
+    - [26] M. Usama, W. Xiao, B. Ahmad, J. Wan, M. Hassan and A. Alecavi (2019), Deep
+    Learning Based Weighted Fusion Approach for Sentiment Analysis, IEEE Access, 7,
+    pp. 140252-140266.
+
+    - [27] Yang M, Tu W, Wang J, Xu F, and Chen X . Attention-based LSTM for-dependent
+    sentiment classification in Proceedings of AAAI Conference on Artificial Intelligence
+    (AAAI 2017), 2017.
+
+    '
+  mdcn: '
+
+
+    ![](img/958604c68ccd723d8738236ae47572bc_6_0.png)
+
+
+    图 8：模型性能评估图
+
+
+    ## 参考文献
+
+
+    - [1] Liu B. 情感分析：挖掘意见、情感与情绪。剑桥大学出版社, 2019.
+
+    - [2] Sega A. 深度注意力机制综述。社交媒体情感分析，2019年10月；接受于：2019年11月19日；发表于：2022。
+
+    - [3] Wang J., Zhao X., Lee S., Li J, and Zhou G. 一种用于代码语混合深度情感预测的双语注意力网络。收录于2016年国际计算语言学会议
+    (COLING) 论文集。
+
+    - [4] Rashkin H, Bell E, Choi Y, and Volkov S. 多语言注意力框架：目标情感分析的案例研究。收录于2017年计算语言协会会议
+    (ACL) 论文集。
+
+    - [5] Wang N., Zhou N. N., et al. 一种用于方面级情感分类的深度 LSTM。收录于2017年自然语言处理国际会议 (EMNLP)
+    论文集。
+
+    - [6] Liu J, Zhang Y. 针对目标情感的注意力机制。收录于2016年人工智能学会欧洲分会会议论文集。
+
+    - [7] Akhtar MS, Kumar G, Dhingal A, and Bhattachararyya P. 金融新闻的多语言情感分析。收录于2017年自然语言处理经验方法会议
+    (EMNLP) 论文集。
+
+    - [8] Chen H, Sun M, Tu L, Lin Y, and Liu N. 基于用户和产品注意力的神经情感分类。收录于2016年自然语言处理经验方法会议
+    (EMNLP) 论文集。
+
+    - [9] Dou Zy. 使用深度记忆网络捕捉产品级和文档级的情感分析。收录于2017年自然语言处理经验方法会议 (EMNLP, 2017) 论文集。
+
+
+    138
+
+
+    《科学技术与教育期刊》(73), 第 267-272 页。访问地址：http://www.ieeeexplore.org。
+
+
+    - [21] I. M. Albani, H. Ma, O. M. Olanvisi and J. Agajo, (2019), 一种基于文化演化的游牧牧民优化算法
+    (NPOA)：数学模型，第2届 IEEE 尼日利亚计算机会议 (NigeriaConf), 尼日利亚，塞塔, 2019, 第 1–7 页。10.1109/NigeriaComputConf457.2019.8940535
+
+    - [22] A. Albani, H. Ma, O. M. Olmani, and J. Agajo, (2018), 牧民优化算法：一种基于自然的元启发优化算法；工业与新兴趋势国际会议
+    (ICET 2018) 论文集，Base 大学，阿布贾，第 101–105 页。
+
+    - [23] Zhang, J., Li, D., and Du, (2018), 情感分析的深度学习综述，跨学科评论：数据挖掘与知识发现，86(4)，第
+    24–35 页。
+
+    - [24] P. Kumar and K. Saxena, (2016), 基于 Twitter 数据使用深度学习技术进行情感分析的研究。
+
+    - [25] S. Beng, L. Deng, H. Larochelle, H. Lee, and K. Salakhutdinov, 客座介绍，学习深度架构特辑，IEEE
+    模式分析与机器智能汇，第 35 卷，第 8 期，第 1431–1450 页，2013。
+
+    - [26] M. Usama, W. Xiao, B. Ahmad, J. Wan, M. Hassan and A. Alecavi (2019), 基于深度学习的情感分析加权融合方法，IEEE
+    Access，7，第 140252-140266 页。
+
+    - [27] Yang M, Tu W, Wang J, Xu F, and Chen X . 基于注意力的 LSTM 用于依赖情感分类，收录于 AAAI
+    人工智能会议 (AAAI 2017) 论文集，2017。
+
+
+    '
+  merge: 0
