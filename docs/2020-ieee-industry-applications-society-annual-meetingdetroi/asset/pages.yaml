@@ -1,0 +1,590 @@
+- pgno: 0
+  md: '# # Ultra-Short-Term PV Power Forecasting
+
+    Based on Frequency-Domain Decomposition and Deep Learning
+
+
+    Lin Hu, Zhao Zhen, Fei Wang
+
+    Department of Electrical Engineering
+
+    North China Electric Power University
+
+    Baoding 071003, China
+
+    feiwang@ncepu.edu.cn
+
+
+    Gang Qui, Yu Li
+
+    Dispatch and Control Center
+
+    State Grid Xinjiang Electric Power Co., Ltd
+
+    Urum 830018, China
+
+    qiujang412@163.com, lyu@sgcc.xjcc.com
+
+
+    Mithilesh Shafi-khaban
+
+    School of Technology and Innovations
+
+    University of Varasasa
+
+    Varasy 05250, India
+
+    mfashak@unvasasa.in
+
+
+    **Abstract—Ultra-short-term photovoltaic (PV) power forecasting can achieve the
+    efficient dispatch of PV and the optimal investment. However, due to various factors,
+    the photovoltaic power generation has fluctuations. To improve the ultra-short-term
+    forecasting of PV, this paper proposes a method based on frequency-domain decomposition
+    and deep learning. First, the amplitude and phase of each frequency wave is identified
+    by Fast Fourier. As the frequency decomposition component and the original data
+    is analyzed. By minimizing the difference of the correlation that the correlation
+    between high-frequency and raw data, the frequency generation demands for decomposition
+    are obtained. Finally, the paper presents the results of predicting 1, 2, 3 hours
+    and 4 hours. The results fully show that the proposed method improves forecasting
+    accuracy.
+
+
+    **Keywords—PV power forecasting, ultra-short-term, spectrum analysis, frequency-domain
+    decomposition**
+
+
+    # ## I. Introduction
+
+
+    # ### 1.1 Background and methodology
+
+
+    # ### 1.2 Frequency decomposition
+
+
+    Due to various factors, the photovoltaic power generation has high fluctuations
+    [9]. It is difficult to achieve satisfactory results with traditional forecasting
+    methods. In recent years, the analysis of PV power has become a research topic.
+    However, frequency-domain decomposition method extracts and analyzes PV characteristics
+    from the frequency domain. Literature [12] uses empirical mode decomposition (EMD)
+    to decompose different components time series and forecast PV generation by wavelet
+    decomposition. Literature [14] proposes a new forecasting method based on Hilbert-Huang
+    Transform (HHT) and integrated empirical mode decomposition (IEMD) to improve
+    the accuracy of forecasting engine. IEMD is used to analyze the data. In the above
+    literature, the data are only decomposed using existing methods, but can support
+    the reliability of the decomposition results through an effective method.
+
+
+    # ### 1.3 Challenges
+
+
+    Although the concerns that there is no effective method to support the reliability
+    of the frequency domain decomposition results, this paper proposes an ultra-short-term
+    forecasting of PV power based on optimal frequency decomposition point selection.
+    The amplitude and phase of each frequency wave is deined by Fast Fourier decomposition.
+    As the frequency decomposition point is different, the correlation between the
+    decomposition component and the original data is analyzed. By analyzing the results
+    of the decomposition components, the optimal frequency'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: "demarcation points for decomposing low-frequency components and high-frequency\
+    \ components are obtained. Then convolutional neural network is used to predict\
+    \ low-frequency component and high-frequency component, and final forecasting\
+    \ result is obtained by data reconstruction.\n\nThe main contributions of this\
+    \ paper are:\n\n+   (1) By minimizing the size of the difference that the correlation\
+    \ between low-frequency components and raw data is obtained from the condition\
+    \ high-frequency components and raw data, the optimal frequency-domain decomposition\
+    \ points are obtained, which supports the rationality of the frequency-domain\
+    \ decomposition.\n\n+   (2) The method proposed in this paper is verified by the\
+    \ data of PV power station in China Ningxia. The results show that the proposed\
+    \ method improves the accuracy.\n\nThe rest of this article is organized as follows.\
+    \ Section 2 introduces the theory of FFT and deep learning. Section 3 introduces\
+    \ how to choose the optimal frequency point of frequency domain decomposition.\
+    \ Section 4 introduces the model parameters and test results. In Section 6, conclusions\
+    \ are drawn.\n\n# II. METHODOLOGY\n\n# 2.1 Fast Fourier Transform\n\nDiscrete\
+    \ Fourier Transform (DFT) can discretize the frequency domain of a finite length,\
+    \ but its computational complexity is too large to process the problem in real-time.\
+    \ By using the Fast Fourier Transform (FFT) [15-17], DFT decomposes the sequence\
+    \ of N into two sequences of N/2. The subsequence of one sequence is even, the\
+    \ subsequence of the other is odd. The DFT of the original sequence is. Repeat\
+    \ the decomposition until a sequence of two points is reached. The FFT uses the\
+    \ periodicity and symmetry to improve the DFT algorithm, which greatly reduces\
+    \ the amount of computation. Compared with DFT, FFT is complicated and speedy.\n\
+    \nrepresents the sine wave of signals for which make up this single time domain.\
+    \ The signal is seen as a composite of many sine waves with various frequencies\
+    \ and amplitudes. In this paper, we consider to use FFT to decompose PV power\
+    \ in the frequency domain.\n\nDiscretized sequence consists of frequencies as\
+    \ shown in Eq. (1). According to Eq. (1), the sine and cosine of same frequency\
+    \ are seen as coefficients. We consider the sine waves of all the waveforms. The\
+    \ modulus\n\nof the number in the frequency domain obtained by FFT represents\
+    \ the coefficients of the cosine wave, and the amplitude of the complex number\
+    \ represents the amplitude spectrum and the phase spectrum. The actual\n\n(2)\
+    \ The frequency $f_k$ of the k-th point is defined in Eq. (1).\n\n```\nf(n) =\
+    \ a_0 + \\sum_{k=1}^{N} [a_k \\cos(2\\pi f_k n) + b_k \\sin(2\\pi f_k n)]\n```\n\
+    \n```\nc_k = \\frac{2}{N} \\sum_{n=1}^{N} c(n) \\cos(2\\pi f_k n + \\theta_n)$\n\
+    ```\n\n```\na_k = \\frac{2c_k}{N}\n```\n\n```\nf_k = \\frac{k}{N}f_s\n```\n\n\
+    In the formula, n is a positive integer. $a_0$ is constant coefficient, $a_k$\
+    \ is the constant amplitude and $b_k$ is the sinusoidal amplitude. Where $c_0$\
+    \ is the constant coefficient, $c_k$ is the amplitude, and $\\theta_n = \\frac{2\\\
+    pi kn}{N}$\n\nis the frequency, $\theta_n$ is the phase, n is a positive integer,\
+    \ and $\\Delta t$ is the sampling interval.\n\n# 2.2 Pearson correlation coefficient\n\
+    \nPearson correlation coefficient (R) represents the correlation of two sequences.\
+    \ Specifically, the critical criterion for R is a very strong correlation between\
+    \ 0.8 and 1.0, a medium correlation between 0.4 and 0.6, a weak correlation between\
+    \ 0.2 and 0.4, and a weak correlation or no correlation between 0 and 0.2[18].\
+    \ $R^*$ is defined as shown in: (4)\n\n```\nR_{X,Y} = \\frac{\\sum XY - \\sum\
+    \ X\\sum Y}{\\sqrt{[\\sum X^2-(\\sum X)^2][\\sum Y^2-(\\sum Y)^2]}}$\n```\n\n\
+    # 2.3 Convolutional neural network\n\nConvolutional Neural Network (CNN) is a\
+    \ deep learning model with powerful feature extraction capabilities. CNN generally\
+    \ consists of five types of layers, namely the\n\n![](img/b2070772115f03863ef6fb0189e63b2e_1_0.png)\n\
+    \nFig. 1 shows the relationship between the time domain signal and the sine waves\
+    \ of different frequencies. The black curve represents a piece of PV power and\
+    \ the color curve"
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'input layer, the convolutional layer, the pooling layer, the fully connected
+    layer, and the output layer [19]. The structure of CNN is shown in Fig. 2.
+
+
+    series data, this paper chooses CNN1D to build forecasting model. In the 1D convolution
+    layer, the size of kernel is 3 and the pooling layer, the size of kernel is 2
+    and the corresponding side is 1. The specific flow chart is shown in Fig. 3.
+
+
+    ![](img/b2070772115f03863ef6fb0189e63b2e_2_0.png)
+
+
+    Fig. 2.The structure of CNN
+
+
+    ![](img/b2070772115f03863ef6fb0189e63b2e_2_1.png)
+
+
+    Fig. 3.Illustration of 1D convolution and 1D pooling
+
+
+    # 2.3.1 Convolution layer
+
+
+    The role of the convolutional layer is to extract features from the input layer.
+    The convolutional layer is typically composed of multiple convolution kernels,
+    each of which is used to compute a feature map. Each cell of the feature map is
+    connected to the region of the adjacent cell in the previous layer. The convolution
+    of the input by the convolution kernel and nonlinear processing of convolution
+    by activation function can acquire the new feature. The formula for the convolutional
+    layers is shown by Eq. (5)
+
+
+    ```
+
+    $y_{i,j}^l = f(w_{ij}^l * x_i^l + b_j^l)$
+
+    ```
+
+
+    Where $w_{ij}^l$ and $b_j^l$ are the weights and biases of the $k$-th convolutional
+    kernel in the $l$-th layer, respectively. $x_i^l$ is the input information of
+    $(i,j)$ in the $l$-th convolution layer. The weight $w_{ij}^l$ is shared by each
+    region of the input, which is weights sharing. $f(\cdot)$ is the activation function
+    applied to the convolution layer, which can effectively improve the fitting ability
+    of the model.
+
+
+    ```
+
+    $y_{i,j}^l = pool(y_{m,n,a}^{l-1})$
+
+    ```
+
+
+    # 2.3.2 Pooling layer
+
+
+    The role of the pooling layer is to reduce the size of the feature map generated
+    by the convolutional layer, and to effectively extract the feature information
+    in the feature map. The formula for pool is shown by Eq. (6)
+
+
+    Where $(m,n) \in R_{i,j}$ and $R_{i,j}$ are the information at $(i,j)$.
+
+
+    # 2.3.3 Fully connected layer
+
+
+    The function of the fully connected layer is to summarize the distributed feature
+    representations learned by the previous layer into the same space for subsequent
+    applications. All neurons in the layer are connected to each neuron in the current
+    layer.
+
+
+    # 2.3.4 Description of one-dimensional CNN
+
+
+    One-dimensional(ID) CNN is a branch of CNN[2]. The convolution kernel window of
+    CNN1D slides in a direction (i.e. time step). As photovoltaic power is
+
+
+    ![](img/b2070772115f03863ef6fb0189e63b2e_2_2.png)
+
+
+    Fig.4.Ultra-short-short-term forecasting of PV power based on optimal frequency-domain
+    decomposition and deep learning. The framework of ultra-short-short-term forecasting
+    of PV power is shown in Fig. 4. The first, amplitude and phase of each frequency
+    sine wave is obtained by Fast Fourier. As the frequency changes, the correlation
+    between the decomposition component and the original data is analyzed. By minimizing
+    the size of the difference that the correlation between low-frequency components
+    and raw data is subtracted from'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'points for decomposition components are obtained. Then convolutional neural
+    network is used to predict low-frequency component and high-frequency component,
+    and final resulting result is obtained by addition correction.
+
+
+    frequencies, selected, the stronger correlation between low-frequency components
+    and raw data, and the weaker correlation between high-frequency components and
+    raw data,
+
+
+    # ### III. SPECTRUM ANALYSIS
+
+
+    This paper selects the PV data of Ningxia PV Station in 00:00 on January 1, 23:45
+    on December 31, 2017 to train the model, and perform frequency domain decomposition
+    using FFT to obtain the spectrum and a part of the phase spectrum, which are shown
+    in Fig. 5 and Fig. 6, respectively.
+
+
+    ![](img/b2070772115f03863ef6fb0189e63b2e_3_0.png)
+
+
+    Fig. 7. Correlation between decomposition components and raw data before weighting
+
+
+    ![](img/b2070772115f03863ef6fb0189e63b2e_3_1.png)
+
+
+    To illustrate the effect of the correlation between the decomposition component
+    and raw for the forecasting results, this paper uses the CNN model to predict
+    low-frequency and high-frequency components from 00:00 on January 1, 2017 to 23:45
+    on December 31, 2017. Table I compares forecasting results with different high-frequency
+    components. Table II compares the forecasting results of high-frequency components
+    at different frequencies. Table III shows forecasting results with large amplitudes
+    shown in Fig. 5. As the correlation between the low-frequency component and raw
+    data increases, the curve fitting becomes better. The correlation between the
+    high-frequency component and raw data increases, the curve fitting becomes better.
+    The relationship between the selected frequencies and the correlation of decomposition
+    component and raw data shows, as the frequency number increases, the accuracy
+    of the result of the low-frequency component and the forecasting result of the
+    high-frequency component, so the two are contradictory. Low-frequency component
+    represents the regular part of PV power which are relatively stable, predicted,
+    high-frequency components are random, which are difficult to predict. If the proportion
+    of low-frequency component in raw data increases, accurate forecasting of low-frequency
+    components to balance forecasting errors of high-frequency components effectively
+    improves the overall accuracy. The training idea of optimal frequency decomposition
+    point selection in this article is that low-frequency component to select the
+    highest frequency decomposition point as, and accounts for a large range of low-frequency
+    components, which frequency selection is not too high. Otherwise, it is difficult
+    to get to a certain level of data.
+
+
+    Fig. 5. Spectrum decomposition of pv power
+
+
+    ![](img/b2070772115f03863ef6fb0189e63b2e_3_2.png)
+
+
+    Fig. 6. Frequency decomposition of pv power
+
+
+    # ### 3. Selection of optimal frequency demarcation point
+
+
+    Through FFT analysis, PV power can be decomposed into low-frequency components
+    and high-frequency components. The low-frequency component represents the regular
+    part of PV power which indicates its trend, while the high-frequency component
+    represents the randomness of PV power, which indicates its fluctuations caused
+    by other factors such as weather. How accurately decompose low-frequency components
+    and high-frequency components is a difficult problem. In this study, the article
+    chooses the optimal frequency demarcation point from the perspective of the correlation
+    between decomposed data and raw data. It shows the correlation between decomposed
+    components and raw data. When frequency-domain decomposition is performed on PV
+    power, the data shows
+
+
+    From Fig. 7, it is seen that when the frequency reaches a value, as the frequency
+    increases, the correlation between low-frequency components and raw data does
+    not increase. It can be considered that there is no significant increase in the
+    correlation between low-frequency components and raw data and high-frequency component
+    and raw data to decline. This optimal frequency demarcation point that balances
+    both low-frequency components and high-frequency components not only ensures extraction
+    of low-frequency components, but also does not cause the difficulty'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: "of predicting high-frequency components to an unacceptable level due to excessive\
+    \ extraction of low-frequency components. In this paper, the optimal frequency\
+    \ is solved by minimizing the square of the difference between low-frequency components\
+    \ and raw data subtracted if the correlation between high-frequency components\
+    \ and raw data can be regarded as an optimization problem. The specific formula\
+    \ is given in Eq. (7)\n\ncomponents is. The new objective function is shown by\
+    \ Eq. (8). This paper chooses $\\alpha=0.173$, $\beta=0.827$, and obtains the\
+    \ frequency demarcation point $f_*=1825$.\n\n```\n$min F(f) = [L(f)-H(f)]^2\\\
+    ns1. \\quad f \\in [0, \\frac{N}{2}]$\n```\n\nAmong them, $F(f)$ is an objective\
+    \ function. The objective function reaches the minimum value, the correlation\
+    \ between low-frequency components and raw data and the correlation between high-frequency\
+    \ components and raw data reach an optimal balance. $L(f)$ is the correlation\
+    \ between low-frequency components and raw data, $H(f)$ is the correlation between\
+    \ high-frequency components and raw data, and $N$ is the total number of sampling\
+    \ frequencies.\n\n![](img/b2070772115f03863ef6fb0189e63b2e_4_0.png)\n\nFig. 9.\
+    \ Correlation between decomposition components and raw data after weighting\n\n\
+    ![](img/b2070772115f03863ef6fb0189e63b2e_4_1.png)\n\n![](img/b2070772115f03863ef6fb0189e63b2e_4_2.png)\n\
+    \nFig. 10. The graph of the squared difference after weighting\n\n![](img/b2070772115f03863ef6fb0189e63b2e_4_3.png)\n\
+    \nFig. 8. The graph of the squared difference before weighting\n\nFig is a graph\
+    \ of the difference that the correlation between low-frequency components and\
+    \ raw data is subtracted from the correlation between high-frequency components\
+    \ and raw data. It can be seen that when the frequency demarcation point $f_*=365$,\
+    \ the correlation between low-frequency components and raw data and the correlation\
+    \ between high-frequency components and raw data reach a balance. By weighting\
+    \ the regularity and high accuracy of low frequency components, this first shows\
+    \ that the proportion of low-frequency components is high. When the frequency\
+    \ value increases, the correlation between low-frequency components and raw data\
+    \ can be reduced. However, when the correlation between low-frequency components\
+    \ and raw data is basically unchanged, the accuracy of low-frequency components\
+    \ reaches the maximum value. At this time, the accuracy of forecasting mostly\
+    \ depends on high-frequency components. Therefore, in order to give priority to\
+    \ low-frequency components, the frequency is commonly increased. This approach\
+    \ adds weights to the objective function in Eq. (7). By multiplying the correlation\
+    \ between low-frequency components and raw data by a low weight and multiplying\
+    \ the correlation between high-frequency components and raw data by a high weight.\
+    \ In this value, the design idea of giving priority to low-frequency\n\n![](img/b2070772115f03863ef6fb0189e63b2e_4_4.png)\n\
+    \nFig. 11. Optimal frequency decomposition result\n\nFig. 10 shows the square\
+    \ of the difference that the correlation between low-frequency components and\
+    \ raw data is subtracted from the correlation between high-frequency components\
+    \ and raw data. It can be seen that after $f_*$, the frequency correlation between\
+    \ low-frequency components and raw data does not increase significantly, while\
+    \ the correlation between high-frequency components still maintain a downward\
+    \ trend. Therefore, $f_*$ is the optimal frequency demarcation point Fig. 11 shows\
+    \ the decomposition results at frequency point $f_*$.\n\n```\n$min F(f) = [\\\
+    alpha L(f)-\beta H(f)]^2\\ns1. \\quad f \\in [0, \\frac{N}{2}]$\n```"
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: "Where $\\alpha$ is the weight of the correlation between the low frequency\
+    \ component and the original data, and $\beta$ is the weight of the correlation\
+    \ between the high frequency component and the original data.\n\n# TABLE I. COMPARISON\
+    \ OF R OF LOW FREQUENCY COMPONENTS AT DIFFERENT FREQUENCIES\n\n| Time Scale of\
+    \ forecasting | 365 | 730 | 1092 | 1458 | 1825 | 2185 |\n|---|---|---|---|---|---|--|\n\
+    | 1h | 0.9243 | 0.9654 | 0.9792 | 0.9994 | 0.9997 | 0.9998 |\n| 2h | 0.9067 |\
+    \ 0.9534 | 0.9635 | 0.9947 | 0.9980 | 0.9984 |\n| 3h | 0.8286 | 0.8438 | 0.8912\
+    \ | 0.9032 | 0.9132 | 0.9245 |\n| 4h | 0.7395 | 0.7627 | 0.7821 | 0.7932 | 0.8060\
+    \ | 0.8125 |\n\n# TABLE, II. COMPARISON OF RESULTS OF HIGH FREQUENCY COMPONENTS\
+    \ AT DIFFERENT FREQUENCIES\n\n| Time Scale of forecasting | 365 | 730 | 1092 |\
+    \ 1458 | 1826 | 2186 |\n|---|---|---|---|---|---|--|\n| 1h | 0.6722 | 0.6584 |\
+    \ 0.4783 | 0.2947 | -0.1446 | -0.1876 |\n| 2h | 0.6612 | 0.6457 | 0.4378 | 0.2653\
+    \ | -0.3992 | -0.5743 |\n| 3h | 0.6576 | 0.6369 | 0.3989 | 0.2375 | -0.7690 |\
+    \ -1.0467 |\n| 4h | 0.6318 | 0.6128 | 0.3648 | 0.2014 | -1.3688 | -1.5674 |\n\n\
+    # TABLE III. ERROR INDICES OF LOW FREQUENCY FORECASTING AT DIFFERENT TIME SCALES\n\
+    \n| MODEL | MAE | RMSE | R |\n|---|---|---|--|\n| 1h | 0.0683 | 0.0860 | 0.9997\
+    \ |\n| 2h | 0.0352 | 0.0450 | 0.9980 |\n| 3h | 0.1509 | 0.1302 | 0.9232 |\n| 4h\
+    \ | 0.1487 | 0.2012 | 0.8060 |\n\n# TABLE, VI. FORECAST 2 HOUR RESULT ERROR\n\n\
+    | MODEL | MAE | RMSE | R |\n|---|---|---|--|\n| No frequency decomposition | 1.6755\
+    \ | 2.8731 | 0.5864 |\n| Frequency decomposition | 0.4875 | 0.9297 | 0.9610 |\n\
+    \n# V. CASE STUDY\n\nThe data used in this paper is historical weather data and\
+    \ hourly data with 15 min time resolution from 00:00 on January 1, 2017 to 23:45\
+    \ on January 31, 2018 in Ningxia Power Station in China. This article uses data\
+    \ from 00:00 on January 1, 2017 to 23:45 on December 31, 2017 as training set,\
+    \ and the data from January 1, 2018 to January 31, 2018 23:45 as testing set.\
+    \ The time scale of output data is 1 hour, 2 hours, 6 hours and 24 hours.\n\n\
+    We use Python 3.6 with TensorFlow and scikit-learn to perform all the simulations.\n\
+    \n# 4.2 Data processing\n\nDuring training, to eliminate the error in magnitude\
+    \ between each data sample, the samples of all samples are converted to [0, 1],\
+    \ which avoids large differences in sample magnitude and leads to later network\
+    \ forecasting errors. Its formula is shown as:\n\n# TABLE. V. FORECAST 1 HOUR\
+    \ RESULT ERROR\n\n| MODEL | MAE | RMSE | R |\n|---|---|---|--|\n| No frequency\
+    \ decomposition | 1.1001 | 2.1467 | 0.7654 |\n| Frequency decomposition | 0.4011\
+    \ | 0.8198 | 0.9695 |\n\n```\n$M' = \\frac{M - M_{min}}{M_{max} - M_{min}}$\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '![](img/b2070772115f03863ef6fb0189e63b2e_6_0.png)
+
+
+    # 4.4 Results
+
+
+    # 4.4.1 Decomposition component forecasting results
+
+
+    Table III and IV show forecasting error indices of low-frequency and high-frequency
+    components at different scales. From the results, it can be seen that as the number
+    of hours increases, MAE and RMSE also increase, and forecasting accuracy decreases.
+    This shows that as the time scale increases, the difficulty of forecasting increases.
+
+
+    # 4.4.2 Ultimate forecasting results
+
+
+    Fig. 12 shows final results at different scales, and Tables V-VIII show the comparison
+    of with and without frequency-decomposition model. As the number of hours increases,
+    the MAE of the model without frequency decomposition decreases. The proposed model
+    has improved accuracy by 63.54%, 70.90%, 23.32% and 39.51%. MAPE of the proposed
+    model has improved accuracy by 61.81%, 49.61% and the RMSE of the proposed model
+    has improved accuracy by 83.56%, 78.47%. It can be seen that frequency-decomposition
+    decomposition method improves forecasting accuracy. High-frequency components
+    are more volatile after the absorption of low-frequency components, which may
+    lead to reduced forecasting of high-frequency component. However, by selecting
+    the optimal frequency-decomposition method, the paper not only improves the proportion
+    of low-frequency components in raw data, but also balances the difficulty of predicting
+    high-frequency components to a certain extent. After adding and reconstructing
+    low and high frequency components, the accuracy of ultimate results is generally
+    improved.
+
+
+    ![](img/b2070772115f03863ef6fb0189e63b2e_6_1.png)
+
+
+    ![](img/b2070772115f03863ef6fb0189e63b2e_6_2.png)
+
+
+    ![](img/b2070772115f03863ef6fb0189e63b2e_6_3.png)
+
+
+    Fig. 12. Final results forecasting at different scales
+
+
+    # 4.3 Performance criterion
+
+
+    In order to evaluate the performance of the forecasting model, we employ two effective
+    indices as Mean Absolute Error (MAE) and Root Mean Square Error (RMSE). Under
+    the same set of training data, the smaller MAE and RMSE, and the better the forecasting
+    effect. The mathematical formulas for the two error indices are shown in (10)
+    and (11):
+
+
+    ```
+
+    MAE = \frac{1}{N} \sum |y_i - \hat{y}_i|
+
+    ```
+
+
+    # VI. CONCLUSION
+
+
+    To overcome the shortcomings that there is no effective to support the methodology
+    of the frequency domain decomposition results, we demonstrate an ultra short-term
+    forecasting of PV power based optimal frequency-domain decomposition and deep
+    learning. The amplitude and phase of each frequency wave are obtained by Fast
+    Fourier decomposition. As the frequency decomposition differs, the correlation
+    between low frequency component and the original data is minimized. minimizing
+    the square of the correlation between low frequency components and raw data is
+    subtracted from the high frequency components, the optimal frequency domain decomposition
+    points for components are obtained. Convolutional neural network is used to predict
+    low-frequency component and high-frequency component. The final forecasting result
+    is
+
+
+    In the future to utilize this proposed ultra short-term solar PV power forecasting
+    model to electric vehicle charging management [21, 22], demand response [23-25],
+    energy storage management [26, 27], load pattern [28-30], aggregator capacity
+    forecasting and energy trading in [31-34] will'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: "# ACKNOWLEDGMENT\n\nThis work was supported by the National Key R&D Program\
+    \ of China (Technology and application of wind solar photovoltaic power forecasting\
+    \ for promoting renewable energy generation, 2018YFB094020) and Enopus Common\
+    \ S&T Program of State Grid Corporation (SLGKDOUJ1800256). Joa. S. is also supported\
+    \ by COMPETE 2020 and by Portitude funds under F (02/SAICSIT/2017).\n\n# REFERENCES\n\
+    \n+   [1] W. Wang, J. Panahi, \"Grid-Connected Wind Power Forecasting: A Survey\
+    \ on the Implementation Methods in Modern Grid,\" IEEE Trans. Indr. Appl., vol.\
+    \ 55, no. 5, 5584–5593, Nov. 2006.\n\n+   [2] Y. Wang, J. Lin, and H. Shadden,\
+    \ \"Wind and Solar Forecasting: Review and Comparison,\" IEEE Trans. Indr. Appl.,\
+    \ vol. 53, no. 4, pp. 3205–3216, Jul.-2006.\n\n+   [3] Y. Wang, T. Wang, J. Ho,\
+    \ and M. Hasan, \"Probabilistic Wind Power Forecasting Using Weighted Ensemble\
+    \ Methods,\" IEEE Trans. Power Energy, vol. 26, no. 4, pp. 1083–1090, Oct.-2011.\n\
+    \n+   [4] F. Wang, X. Zhang, Z. Li, T. Wang, and M. Shi, \"A day-ahead wind power\
+    \ forecasting method using LSTM-RNN model with attention mechanism for renewable\
+    \ energy forecasting,\" Energy Convers., vol. 212, art. 112766, Nov. 2021. 112.476.\n\
+    \n+   [5] K. F. Wang, Z. Yi, M. Fotohi-Frizadeh, N. Daie, and T. Wang, \"Capacity\
+    \ and power output analysis of distributed-based renewable energy systems,\" Energy,\
+    \ vol. 223, 119858, 2021. 119. \n\n+   [6] Z. Zhou, J. Li, Z. Zhang, F. Chai,\
+    \ Y. Lu, L. Wang, and Y. Lin, \"Deep learning-based surface mapping method for\
+    \ solar power forecasting using image data,\" IEEE Access, vol. 9, pp. 45535–45546,\
+    \ 2021.\n\n+   [7] F. Wang, Z. Xuan, Z. Zhen, L. Li, J. Shao, M. Sha-kiah, and\
+    \ Y. P. C. Casato, \"A multi-output solar irradiation forecasting method based\
+    \ on deep learning,\" Energy, vol. 220, art. 119075, Sep. 2021.\n\n+   [8] H.\
+    \ Wang, J. Li, and C. Su, \"Impact of Fluctuating Generation on the Stability\
+    \ of Power System under High Penetration of Renewable Energy,\" IEEE Trans. Indr.\
+    \ Appl., vol. 58, no. 2, pp. 2245–2254, Mar. 2019.\n\n+   [9] H. Wang, C. Huang,\
+    \ Y. Huang, and Y. Pai, \"A weather-based hybrid model for wind power forecasting,\"\
+    \ IEEE Trans. Sustain. Energy, vol. 5, no. 3, pp. 917–926, 2014.\n\n+   [10] J.\
+    \ Shi, W. Lee, Y. Liu, and Y. Wang, \"Short-term power power forecasting for solar\
+    \ power plants using artificial neural networks and support vector machines,\"\
+    \ IEEE Trans. Indr. Appl., vol. 48, no. 4, pp. 1064–1069, Jun. 2012.\n\n+   [11]\
+    \ H. Ma, L. Li, S. Cheng, and Z. Lu, \"Short-term solar power forecasting for\
+    \ photovoltaic power plants using hybrid artificial neural network with meteorological\
+    \ factors and historical data,\" Energy Convers., vol. 117, pp. 700–717, Dec.\
+    \ 2018.\n\n+   [12] H. Chen, Y. Wang, X. Zhang, Z. Lu, Z. Wei, and G. Sun, \"\
+    Hybrid method for short-term photovoltaic power forecasting based on deep convolutional\
+    \ neural network,\" IEEE J. Trans. on Data Eng., 35, pp. 1485–1496, 2020.\n\n\
+    +   [13] V. Kushwaha, N. Pradhan, \"A SARIMA-RFVL hybrid model for assisted wind\
+    \ power forecasting with uncertain generation forecasts,\" Renewable Energy, vol.\
+    \ 14, pp. 124–139, 2019.\n\n+   [14] W. Zhang, H. Rios, and S. Lin, \"A new solar\
+    \ power plant forecasting based on extreme engine and design method,\" I4S Systems,\
+    \ vol. 81, pp. 105–120, 2018.\n\n+   [15] M. Alam, S. Rehman, L. Al-Hadhari, J.\
+    \ Meyer, \"The inherent nature of wind speed using wavelets and FFT,\" for Sustainable\
+    \ Development, vol. 22, pp. 37–44, 2017.\n\n+   [16] M. Wang, X. Huang, \"Ultra-short\
+    \ forecasting of photovoltaic power based on periodic extraction of V and LSTM\
+    \ algorithm,\" Neural Network, vol. 115, pp. 10333–10342, 2019.\n\n+   [17] M.\
+    \ Wang, X. Huang, \"An evaluation of the photovoltaic power forecasting capability,\"\
+    \ Mathematical Problems in Engineering, 2018.\n\n+   [18] T. Kim, S. Cho, \"Predicting\
+    \ residual energy generation using convolutional neural networks,\" IEEE Trans.\
+    \ Smart Grid, vol. 12, no. 6, pp. 7221–7229, 2021.\n\n+   [19] F. Wang, Y. Yu,\
+    \ Z. Zhang, J. Li, Z. Khan, and J. Li, \"Weighted ensemble forecasting using LSTM\
+    \ with attention based deep learning for solar power forecasting,\" Applied Soft,\
+    \ vol. 8, no. 18, 12296, 2022.\n\n+   [20] M. Wang, Y. Liu, Y. Sun, S. Park, N.\
+    \ Duan, M. Shafakiah, and J. Casato, \"Generative adversarial network for weather\
+    \ classification forecasting for day-ahead solar power forecasting,\" Energy,\
+    \ vol. 236, pp. 441–463, 2022.\n\n+   [21] Z. Ding, Y. Liang, L. Wang, Z. Chen,\
+    \ and D. Chao, \"Smart EV Charging Station Management for Energy Optimization\
+    \ and Price-Response Method,\" IEEE Trans. Indr. Appl., vol. 10, no. 4, pp. 2589–2599,\
+    \ 2020. DOI: 10.1109/TIE.2020.2993991.\n\n+   [22] Z. Ding, F. Zhu, Y. Wang, and\
+    \ L. Zhang, \"Flexible Demand Response Scheme: A Shared-Benefit Approach,\" IEEE\
+    \ Trans. Smart Grid, vol. 12, no. 5, pp. 5599–5608, Mar. 2021.\n\n+   [23] K.\
+    \ L. Liu, F. Wang, Y. Lu, N. Shi, M. Sha-kiah, and J. P. Casato, \"Impact analysis\
+    \ on the factors affecting consumer response to demand response programs,\" IEEE\
+    \ Trans. Smart Grid, vol. 9, no. 4, pp. 6972–6985, Oct. 2018.\n\n+   [24] F. Wang,\
+    \ K. Li, Z. Shi, M. Sha-kiah, and J. P. Casato, \"Stochastic pattern matching\
+    \ network-based method for distributed solar power forecasting,\" Mechanical Energy,\
+    \ vol. 185, art. 116733, 2021.\n\n+   [25] F. Razik, M.A. Aval, A.R. de Queiroz,\
+    \ and J. Huang, \"Real-Time Optimization of Energy Management System Using Deep\
+    \ Learning,\" IEEE Trans. Indr. Appl., vol. 56, no. 2, pp. 2216–2226, Nov. 2020.\n\
+    \n+   [26] T. Xu, C. Chen, L. Hu, and H. Huang, \"Management and Forecasting of\
+    \ Electric Demand Response and PV Systems,\" IEEE Trans. Indr. Appl., vol. 55,\
+    \ no. 11, pp. 4455–4466, Jan. 2019.\n\n+   [27] K. L. Liu, X. Ge, F. Wang, Y.\
+    \ Lu, M. Shi, R. Jin, and S. Chang, \"Meta-heuristic optimization-based two-stage\
+    \ residential load forecasting and demand response,\" IEEE Trans. Smart Grid,\
+    \ vol. 11, no. 5, pp. 5317–5328, Aug. 2020.\n\n+   [28] J. Sun, Y. Wang, and W.\
+    \ Lee, \"The Impact of Time-of-Use (TOU) Rate Sensitivity on Consumption Patterns\
+    \ of the Customers,\" IEEE Trans. Smart Grid, vol. 11, no. 6, pp. 4889–4898, Nov.\
+    \ 2017.\n\n+   [29] Y. Wang, X. Ge, X. Li, M. Li, and J. Chen, \"Feature selection\
+    \ and classification-based method for short-term load forecasting,\" IEEE Trans.\
+    \ Indr. Appl., vol. 55, no. 3, pp. 2251–2262, Mar. 2019.\n\n+   [30] F. Wang,\
+    \ B. Xiang, K. Li, H. Li, J. Lu, and P. Dehanian, \"Distributed energy capacity\
+    \ forecasting under demand response programs,\" IEEE Trans. Indr. Appl., vol.\
+    \ 56, no. 2, pp. 1086–1097, Mar. 2020.\n\n+   [31] L. Zhang, Y. Wang, Q. Huang,\
+    \ and J. Sun, \"A Game-Based Bidding Strategy for Peer-to-Peer Energy Trading\
+    \ of Nodes,\" IEEE Access, vol. 8, pp. 20691–20700, 2020. 2020.\n\n+   [32] H.\
+    \ Xu, Y. Lin, X. Zhang, and F. Wang, \"Attention mechanism for financial price\
+    \ forecasting in electricity markets,\" IEEE Trans. Smart Grid, vol. 11, no. 4,\
+    \ pp. 3438–3446, Jul. 2020. DOI: 10.1109/TSG.2020.297708."
+  merge: -1
+  img_proc: true
