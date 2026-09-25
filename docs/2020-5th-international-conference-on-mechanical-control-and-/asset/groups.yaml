@@ -1,0 +1,1062 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Design of Smart Security System Based on Hyper Text Markup Language 5 Gateway
+
+
+    Wenwen Dou¹, Peng Wang¹, Zhenglin Cul¹, Yanan Zhao¹, Wenlei Tian¹
+
+    *College of Information and Communication, Shandong University of Science and
+    Technology
+
+    Qingdao, Shandong, 266590, China
+
+    *Corresponding author''s e-mail: wengpeng045@foxmail.com
+
+
+    **Abstract—**Smart security refers to the information technology of security services.
+    With the rapid development of information technology in the 21st century, the
+    boundary between intelligent security and computer is greatly disappearing. We
+    design a security system using HTML5 (Hyper Text Markup Language 5 gateway) and
+    UDP (User Data Protocol), with fingerprint recognition, password control, remote
+    control, user interface, HTML5 multipaging device and notifications. We complete
+    the design and drawing of the PCB (Printed Circuit Board), release the software
+    and hardware design and construction, and complete the overall security system
+    design.
+
+
+    **Keywords—**Smart Security; HTML5; UDP
+
+
+    # I. INTRODUCTION
+
+
+    With the development of automatic control and communication technology, products
+    that are closely integrated with the Internet of Things have advanced rapidly.
+    Such as user interface, smart interaction, web camera, remote control, etc. This
+    article designs a security system based on HTML5 (Hyper Text Markup Language 5)
+    gateway, with the following functions:
+
+
+    +   (1) Using HTML5 to realize real-time video capture of local area network monitoring
+    and multi-platform login.
+
+
+    +   (2) Using control, the system can remotely view the current visitor situation
+    and temperature and humidity, and can control the switch of the access control
+    through the web page;
+
+
+    +   (3) Drawing an independent PCB (Printed Circuit Board), which improves the
+    stability and anti-interference ability of the work.
+
+
+    +   (4) Using voice prompt to interact with users through user experience;
+
+
+    +   (5) Using the fingerprint recognition method to control the access control
+    system, convenient and fast;
+
+
+    +   (6) Using the touch screen, users can make more intuitively touch the work.
+
+
+    The system can be divided into nine modules: main control module, HTML5-node,
+    voice module, sound module, fingerprint module, touch display,
+
+
+    # II. SYSTEM MODULE
+
+
+    camera module. WiFi communication module, and IoT platform [3]. Figure1 shows
+    the overall structure of the program.
+
+
+    This work combines HTML5 with technology to build a voice interact smart security
+    system; using HTML5 and local gateway to web pages; using HTML-node and gateway
+    to connect to web; STM32F103RTC6 chip as a lower-level MCU (Micro Control Unit)
+    to communicate with voice sounds, touch display screens, and mobile sensors; using
+    WiFi modules for data protocol.
+
+
+    # A. Wireless Communication Method
+
+
+    Wireless communication technologies may include ZigBee, RFID (radio frequency
+    identification), Bluetooth, and other technologies. WiFi is used to connect connect
+    devices. WiFi is a stable wireless communication technology; Bluetooth; RFID is
+    a radio frequency identification; Bluetooth [4]. Electronic devices can realize
+    real-distance data exchange through the network. Table 1 makes a horizontal comparison
+    of these four-short wireless technologies from six.
+
+
+    According to Table 1, it is in line with the needs of this project compared to
+    the other types of wireless communication methods. First of all, the WiFi communication
+    technology is easy to be compatible with other devices. Secondly handles the interconnection
+    of all and other devices. It can be seen that choosing WiFi as a wireless communication
+    method can easily complete the interaction between the device and the Internet,
+    achieve one step, and avoid secondary communication.
+
+
+    ![](img/8c171282c1cc602062ed1901608ef3ac_0_0.png)
+
+
+    Figure1. The overall structure of the scheme'
+  - '[PAGE 1]
+
+
+    # TABLE I. HORIZONTAL COMPARISON OF FOUR-RANGE WIRELESS COMMUNICATION TECHNOLOGIES
+
+
+    | Species | WiFi | ZigBee | RFID | Bluetooth |
+
+    |---|---|---|---|--|
+
+    | Single point coverage | 50m | 50-30m | 1m | 15m |
+
+    | Transmission rate | 50Mbps | 250Kbps | - | 1Mbps |
+
+    | Frequency band | 2.4GHz | 2.4GHz | 868MHz or 915MHz | 2.4GHz |
+
+    | Safety | Medium | Medium | Low | High |
+
+    | Standard | IEEE802.11 | IEEE802.15.4 | Not used | Not used |
+
+    | Power consumption | 500mW | 15mA | 5mA | 10mA |
+
+
+    # ## B. HTML-NET module
+
+
+    The HTML-NET device is developed on the Linux Operating System with the M76AN
+    gateway provided by MediaTek. It uses an STC14WK3254 enhanced C51 single-chip
+    bare with 4 UART (Asynchronous Universal Transmitter/Receiver) ports connected
+    inside the module. The module includes a wealth of interfaces: wireless antenna
+    interface, Ethernet network interface, USB2.0 interface, UART0, UART serial ports.
+
+
+    In addition TCP/IP communication and serial port transparent transmission, HTML-NET
+    also has web page design, which can be used for cross-platform UI user interface
+    design and configuration. The HTML web pages communicate with the UART1 serial
+    port to bridge the Websocket protocol and control the STC15WK3254 microcontroller.
+    HTML web pages are saved in the module system/html web directory.
+
+
+    The HTML-NET module has a built-in UDP (User Datagram Protocol) server and uses
+    a unique mechanism to re-encapsulate UDP communication and shared ID address.
+    IP of the UDP client is obtained specially. For the client connected to WiFi network,
+    the IP address will change often due to the occasion of mobile phones.
+
+
+    The HTML-NET interface mainly includes HTML-NET module, Ethernet network interface,
+    USB interface, 3.3V voltage regulator circuit, IO expansion circuit, and indicator
+    circuit. The HTML-NET module uses a DC (Direct Current) step-down converter MP2359
+    for the HTML-NET module separately due to the high current required. MP2359 is
+    a converter with built-in DC/DC by CMOS process switch, and the maximum output
+    is 1.2A, which can be satisfied by the HTML-NET module.
+
+
+    # III. UDP PROTOCOL COMMUNICATION
+
+
+    UDP is a transport protocol that provides multiplexing, demultiplexing, and error
+    detection services on top of IP
+
+
+    datagram [5-6]. Looking at the characteristics of data streaming in UDP, UDP has
+    the following advantages:
+
+
+    +   - UDP does not have the time delay to establish a connection. TCP needs to
+    maintain the connection in the end system, which loads a certain amount of overhead,
+    including receiving and sending buffers, congestion control, sequence numbering,
+    and connection maintenance. UDP has low overhead and has saves space and time.
+
+    - UDP has no congestion control. The application layer can better control the
+    data to be sent and the sending. Congestion in the network will not affect the
+    speed of the transmission. Some applications require transmission at a stable
+    speed, which can tolerate some data loss, but cannot afford large loss (such as
+    real-time video, broadcast, etc.).
+
+    - UDP provides best-effort delivery, but no guarantee reliability. All the reliability
+    requires users to complete the application layer. It has no checksum mechanism
+    or retransmission mechanism. If it is not transmitted the endpoint gets nothing.
+    UDP will not return an error to the application layer. UDP is also used in multimedia
+    applications (such as IP telephony, real-time video streaming, media, etc.).
+
+
+    # A. UDP Verification Method
+
+
+    When calculating a checksum, a 12-byte pseudo header needs to be added before
+    the UDP datagram. The pseudo header is not the real header of UDP. In contrast,
+    it is added when calculating the checksum of UDP datagram. It is calculated according
+    to this content UDP datagram. The pseudo header is neither sent nor, but only
+    for calculating the checksum. In this check, the checksum only checks the UDP
+    datagram, but also checks the source and destination IP address.'
+  - '[PAGE 2]
+
+
+    | Byte | 4 | 4 | 1 | 2 |
+
+    | --- | --- | --- | --- | --- |
+
+    | Source IP | Target IP | 0 | 17 | UDP Length |
+
+    | Byte | 32 | 2 | | |
+
+    | Pardo Header | Source Port | Target Port | Length | Checksum |
+
+
+    | Header | Date |
+
+    | --- | --- |
+
+    | | User Datagram |
+
+    | IP Packet Header | IP Packet Data |
+
+    | IP Grouping |
+
+
+    ![](img/8c171282c1cc602062ed1901608ef3ac_2_0.png)
+
+
+    kernel will form a UDP packet based on the relevant information we provide before
+    transmission (the lower-layers packets and frames).
+
+
+    | 00001001 | 00100100 → | 153.82 |
+
+    | 00001010 | 00100101 → | 8.41 |
+
+    | 00001011 | 00100111 → | 17.2 |
+
+    | 00001110 | 00100110 → | 14.10 |
+
+    | 00001101 | 00101100 → | 6.17 |
+
+    | 00001111 | 00101111 → | 108.7 |
+
+
+    | 153.82 | 84.6 |
+
+    | 172.16.0.14 | 100.0 |
+
+    | A 0 | 17 |
+
+    | UDP Header | 15 |
+
+    | UDP | | 0 |
+
+
+    The above figure illustrates how UDP works in a C/s clear diagram. Therefore,
+    socket must be established on the client and server sides, and data transmission
+    and reception are completed by the two objects.
+
+
+    ![](img/8c171282c1cc602062ed1901608ef3ac_2_1.png)
+
+
+    | 00000000 | 00100000 → | |
+
+    | 00000001 | 00100001 → | |
+
+    | 00000010 | 00100010 → | |
+
+    | 00000011 | 00100011 → | |
+
+    | 00000100 | 00100100 → | |
+
+    | 00000101 | 00100101 → | |
+
+    | 00000110 | 00100110 → | |
+
+    | 00000111 | 00100111 → | |
+
+    | 00001000 | 00101000 → | (Checksum Value) |
+
+    | 00001001 | 00101001 → | |
+
+    | 00001010 | 00101010 → | |
+
+    | 00001011 | 00101011 → | |
+
+    | 00001100 | 00101100 → | |
+
+    | 00001101 | 00101101 → | |
+
+    | 00001110 | 00101110 → | |
+
+    | 00001111 | 00101111 → | |
+
+
+    ![](img/8c171282c1cc602062ed1901608ef3ac_2_2.png)
+
+
+    For the sender, we put the all-zero into the checksum field and add a dummy header.
+    A UDP datagram can be viewed as a collection of 16-bit segments. If the part of
+    the datagram is not an even number of bytes, an all-zero byte at the end is added
+    (not sent). Then we calculate the sum of 16-bit words according to binary complement
+    and write the binary complement of this into the checksum field.
+
+
+    For the receiver, the received datagram is added with the padding (if it is not
+    an even number of bytes, all zero bytes are made) and the sum of these 16-bit
+    words is calculated according to the binary complement. If there is no error,
+    or otherwise, there is an error, and the receiver should discard the UDP datagram.
+
+
+    # B. UDP Communication Framework
+
+
+    Based on the architecture, the software of the client mobile monitors the monitoring
+    of sensor data and can perform real-time scheduling of related event. The received
+    data of the main controller manages the WiFi module through a serial port, and
+    the WiFi module sends the data to the server in JSON format which delivers them
+    to the client server. The cloud server of OneNet platform can share data with
+    terminals devices in real-time. Fig. 5 is a schematic diagram of system communication.
+
+
+    ![](img/8c171282c1cc602062ed1901608ef3ac_2_3.png)
+
+
+    ![](img/8c171282c1cc602062ed1901608ef3ac_2_4.png)
+
+
+    The software of the client mobile is mainly for the function of access control
+    security. The main interface uses two keys and touch to open the door or modify
+    the fingerprint. When the key to open the door is pressed, the system records
+    the fingerprint. If it is, it is checked whether the fingerprint has been entered.
+    If it is not entered, it returns to the door opening interface. If the'
+  md: '
+
+    # Design of Smart Security System Based on Hyper Text Markup Language 5 Gateway
+
+
+    Wenwen Dou¹, Peng Wang¹, Zhenglin Cul¹, Yanan Zhao¹, Wenlei Tian¹
+
+    *College of Information and Communication, Shandong University of Science and
+    Technology
+
+    Qingdao, Shandong, 266590, China
+
+    *Corresponding author''s e-mail: wengpeng045@foxmail.com
+
+
+    **Abstract—**Smart security refers to the information technology of security services.
+    With the rapid development of information technology in the 21st century, the
+    boundary between intelligent security and computer is greatly disappearing. We
+    design a security system using HTML5 (Hyper Text Markup Language 5 gateway) and
+    UDP (User Data Protocol), with fingerprint recognition, password control, remote
+    control, user interface, HTML5 multipaging device and notifications. We complete
+    the design and drawing of the PCB (Printed Circuit Board), release the software
+    and hardware design and construction, and complete the overall security system
+    design.
+
+
+    **Keywords—** Smart Security; HTML5; UDP
+
+
+    # I. INTRODUCTION
+
+
+    With the development of automatic control and communication technology, products
+    that are closely integrated with the Internet of Things have advanced rapidly.
+    Such as user interface, smart interaction, web camera, remote control, etc. This
+    article designs a security system based on HTML5 (Hyper Text Markup Language 5)
+    gateway, with the following functions:
+
+
+    - (1) Using HTML5 to realize real-time video capture of local area network monitoring
+    and multi-platform login.
+
+    - (2) Using control, the system can remotely view the current visitor situation
+    and temperature and humidity, and can control the switch of the access control
+    through the web page;
+
+    - (3) Drawing an independent PCB (Printed Circuit Board), which improves the stability
+    and anti-interference ability of the work.
+
+    - (4) Using voice prompt to interact with users through user experience;
+
+    - (5) Using the fingerprint recognition method to control the access control system,
+    convenient and fast;
+
+    - (6) Using the touch screen, users can make more intuitively touch the work.
+
+
+    The system can be divided into nine modules: main control module, HTML5-node,
+    voice module, sound module, fingerprint module, touch display, camera module.
+    WiFi communication module, and IoT platform [3]. Figure 1 shows the overall structure
+    of the program.
+
+
+    This work combines HTML5 with technology to build a voice interact smart security
+    system; using HTML5 and local gateway to web pages; using HTML-node and gateway
+    to connect to web; STM32F103RTC6 chip as a lower-level MCU (Micro Control Unit)
+    to communicate with voice sounds, touch display screens, and mobile sensors; using
+    WiFi modules for data protocol.
+
+
+    # A. Wireless Communication Method
+
+
+    Wireless communication technologies may include ZigBee, RFID (radio frequency
+    identification), Bluetooth, and other technologies. WiFi is used to connect devices.
+    WiFi is a stable wireless communication technology; Bluetooth; RFID is a radio
+    frequency identification; Bluetooth [4]. Electronic devices can realize real-distance
+    data exchange through the network. Table 1 makes a horizontal comparison of these
+    four-short wireless technologies from six.
+
+
+    According to Table 1, it is in line with the needs of this project compared to
+    the other types of wireless communication methods. First of all, the WiFi communication
+    technology is easy to be compatible with other devices. Secondly handles the interconnection
+    of all and other devices. It can be seen that choosing WiFi as a wireless communication
+    method can easily complete the interaction between the device and the Internet,
+    achieve one step, and avoid secondary communication.
+
+
+    ![](img/8c171282c1cc602062ed1901608ef3ac_0_0.png)
+
+
+    Figure1. The overall structure of the scheme
+
+
+    # TABLE I. HORIZONTAL COMPARISON OF FOUR-RANGE WIRELESS COMMUNICATION TECHNOLOGIES
+
+
+    | Species | WiFi | ZigBee | RFID | Bluetooth |
+
+    |---|---|---|---|---|
+
+    | Single point coverage | 50m | 50-30m | 1m | 15m |
+
+    | Transmission rate | 50Mbps | 250Kbps | - | 1Mbps |
+
+    | Frequency band | 2.4GHz | 2.4GHz | 868MHz or 915MHz | 2.4GHz |
+
+    | Safety | Medium | Medium | Low | High |
+
+    | Standard | IEEE802.11 | IEEE802.15.4 | Not used | Not used |
+
+    | Power consumption | 500mW | 15mA | 5mA | 10mA |
+
+
+    ## B. HTML-NET module
+
+
+    The HTML-NET device is developed on the Linux Operating System with the M76AN
+    gateway provided by MediaTek. It uses an STC14WK3254 enhanced C51 single-chip
+    bare with 4 UART (Asynchronous Universal Transmitter/Receiver) ports connected
+    inside the module. The module includes a wealth of interfaces: wireless antenna
+    interface, Ethernet network interface, USB2.0 interface, UART0, UART serial ports.
+
+
+    In addition TCP/IP communication and serial port transparent transmission, HTML-NET
+    also has web page design, which can be used for cross-platform UI user interface
+    design and configuration. The HTML web pages communicate with the UART1 serial
+    port to bridge the Websocket protocol and control the STC15WK3254 microcontroller.
+    HTML web pages are saved in the module system/html web directory.
+
+
+    The HTML-NET module has a built-in UDP (User Datagram Protocol) server and uses
+    a unique mechanism to re-encapsulate UDP communication and shared ID address.
+    IP of the UDP client is obtained specially. For the client connected to WiFi network,
+    the IP address will change often due to the occasion of mobile phones.
+
+
+    The HTML-NET interface mainly includes HTML-NET module, Ethernet network interface,
+    USB interface, 3.3V regulator circuit, IO circuit, and indicator circuit. The
+    HTML-NET module uses DC (Direct Current) step-down converter MP2359 for the HTML-NET
+    module separately. MP2359 is a converter with built-in DC/DC switch, and the maximum
+    output is 1.2A, which can be satisfied by the HTML-NET module.
+
+
+    # III. UDP PROTOCOL COMMUNICATION
+
+
+    UDP is a transport protocol that provides multiplexing, demultiplexing, and error
+    detection services on top of IP. Looking at characteristics of data streaming,
+    UDP has the following advantages:
+
+
+    - UDP does not have time delay to establish a connection. TCP needs to maintain
+    the connection in the end, a certain amount of overhead, including receiving buffers,
+    congestion control, sequence numbering. UDP has low overhead and saves space.
+
+    - UDP has no congestion control. The application layer can better control the
+    data to be sent. Congestion in the network will not affect the speed of transmission.
+    Some applications require stable speed, can tolerate some data loss (such as real-time
+    video, broadcast, etc.).
+
+    - UDP provides best-effort delivery, but no guarantee reliability users to complete
+    the application layer. It has no retransmission mechanism. If it is not transmitted,
+    UDP will not return error. UDP is also used in multimedia applications (such as
+    real-time video, media, etc.).
+
+
+    ## A. Verification Method
+
+
+    When calculating a checksum, a 12-byte pseudo header is added before the UDP datagram.
+    In contrast, it is added when calculating the checksum of UDP datagram. The pseudo
+    header is neither sent, nor only for calculating the checksum. In this check,
+    the UDP header also checks the source and destination address.
+
+
+    | Source IP | Target IP | Length | Checksum |
+
+    |---|---|---|---|
+
+    | Byte | 4 | 4 | 2 |
+
+    | Header | Source Port | Target Port | Date |
+
+    | User Datagram | | | |
+
+    | IP Packet | Grouping | | |
+
+
+    ![](img/8c171282c1cc602062ed1901608ef3ac_2_0.png)
+
+
+    For the sender, we put the all-zero into the checksum field and add a dummy header.
+    A UDP datagram can be viewed as a collection of 16-bit segments. If the part of
+    the datagram is not an even number of bytes, an all-zero byte at the end is added
+    (not sent). Then we calculate the sum of 16-bit words according to binary complement
+    and write the binary complement of this into the checksum field.
+
+
+    For the receiver, the received datagram is added with the padding (if it is not
+    an even number of bytes, all zero bytes are made) and the sum of these 16-bit
+    words is calculated according to binary complement. If there is no error, or otherwise,
+    there is an error, and the receiver should discard the UDP datagram.
+
+
+    # B. UDP Communication Framework
+
+
+    Based on the architecture, the software of the client mobile monitors the monitoring
+    of sensor data and can perform real-time scheduling of related event. The received
+    data of the main controller manages the WiFi module through a serial port, and
+    the WiFi module sends the data to the server in JSON format which delivers them
+    to the client server. The cloud server of OneNet platform can share data with
+    terminals devices in real-time. Fig. 5 is a schematic diagram of system communication.
+
+
+    ![](img/8c171282c1cc602062ed1901608ef3ac_2_1.png)
+
+
+    | 00000000 | 00100000 | |
+
+    | 00000001 | 00100001 | |
+
+    | 00000010 | 00100010 | |
+
+    | 00000011 | 00100011 | |
+
+    | 00000100 | 00100100 | |
+
+    | 00000101 | 00100101 | |
+
+    | 00000110 | 00100110 | |
+
+    | 00000111 | 00100111 | |
+
+    | 00001000 | 00101000 | (Checksum Value) |
+
+    | 00001001 | 00101001 | |
+
+    | 00001010 | 00101010 | |
+
+    | 00001011 | 00101011 | |
+
+    | 00001100 | 00101100 | |
+
+    | 00001101 | 00101101 | |
+
+    | 00001110 | 00101110 | |
+
+    | 00001111 | 00101111 | |
+
+
+    ![](img/8c171282c1cc602062ed1901608ef3ac_2_2.png)
+
+
+    The software of the client mobile is mainly for the function of access control
+    security. The main interface uses two keys and touch to open the door or modify
+    the fingerprint. When the key to open the door is pressed, the system records
+    the fingerprint. If it is, it is checked whether the fingerprint has been entered.
+    If it is not entered, it returns to the door opening interface. If the
+
+    '
+  mdcn: '
+
+
+    # 基于HTML5网关的智能安防系统设计
+
+
+    杜文文¹，王鹏¹，卓正林¹，赵亚南¹，天磊¹
+
+    *山东科学技术大学信息与通信学院
+
+    中国山东省青岛市，266590
+
+    *通讯作者邮箱：wengpeng045@foxmail.com
+
+
+    **摘要—** 智能安防是指安全服务的信息技术。随着21世纪信息技术的飞速发展，智能安防与计算机之间的界限正逐渐消失。我们使用HTML5（超文本标记语言5代网关）和UDP（用户数据报协议）设计了一种安全系统，具有指纹识别、密码控制、远程控制、用户界面、HTML5多页设备和通知等功能。我们完成了PCB（打印电路板）的设计与绘制，发布了软硬件设计与制作，并完成了整个安全系统的设计。
+
+
+    **关键词—** 智能安防；HTML5；UDP
+
+
+    # I. 引言
+
+
+    随着自动控制和通信技术的发展，与物联网密切结合的产品发展迅速。例如用户界面、智能交互、网络摄像头、远程控制等。本文设计了一种基于HTML5（超文本标记语言5）网关的安全系统，具有以下功能：
+
+
+    - (1) 使用HTML5实现局域网监控的实时视频采集和多平台登录。
+
+    - (2) 通过控制，系统可以远程查看访客情况及温湿度，并通过网页控制门禁开关的切换；
+
+    - (3) 绘制独立的PCB（打印电路板），提高了工作的稳定性和抗干扰能力。
+
+    - (4) 使用语音提示通过用户体验与用户交互；
+
+    - (5) 使用指纹识别方法控制门禁系统，方便快捷；
+
+    - (6) 使用触摸屏，用户可以更直观地触摸操作。
+
+
+    该系统可分为九个模块：主控模块、HTML5节点、语音模块、音频模块、指纹模块、触摸显示、摄像头模块、WiFi通信模块和IoT平台[3]。图1显示了程序的整体结构。
+
+
+    本工作结合HTML5与技术构建了语音交互智能安防系统；使用HTML5和本地网关制作网页；使用HTML-节点和网关连接到网络；使用STM32F103RTC6芯片作为底层MCU（微控制器）与语音、触摸屏和移动传感器进行通信；使用WiFi模块进行数据协议传输。
+
+
+    # A. 无线通信方法
+
+
+    无线通信技术可能ZigBee、RFID（无线射频识别）、蓝牙等技术。WiFi用于连接设备。WiFi是一种稳定的无线通信技术；蓝牙；RFID是无线射频识别[4]。电子设备可以通过网络实现远距离数据交换。表1从六方面对这四种短距离无线技术进行了水平比较。
+
+
+    根据表1，与其他类型的无线通信方法相比，该方法符合本项目的需求。首先，WiFi通信技术容易与其他设备兼容。其次处理了所有设备与其他设备的互连。可以看出，选择WiFi作为无线通信方法可以轻松完成设备与互联网之间的交互，一步到位，避免二次通信。
+
+
+    ![](img/8c171282c1cc602062ed1901608ef3ac_0_0.png)
+
+
+    图1 方案的整体结构
+
+
+    # 表 I 四种短距离无线通信技术的水平比较
+
+
+    | 特性 | WiFi | ZigBee | RFID | 蓝牙 |
+
+    |---|---|---|---|---|
+
+    | 单点覆盖范围 | 50m | 50-30m | 1m | 15m |
+
+    | 传输速率 | 50Mbps | 250Kbps | - | 1Mbps |
+
+    | 频段 | 2.4GHz | 2.4GHz | 868MHz或915MHz | 2.4GHz |
+
+    | 安全性 | 中 | 中 | 低 | 高 |
+
+    | 标准 | IEEE802.11 | IEEE802.15.4 | 未使用 | 未使用 |
+
+    | 功耗 | 500mW | 15mA | 5mA | 10mA |
+
+
+    ## B. HTML-NET 模块
+
+
+    HTML-NET设备在Linux操作系统上，基于MediaTek提供的M76AN网关开发。它使用增强型STC14WK3254 C51单片机，内部连接了4个UART（异步通用传输收发器）端口。模块包含了丰富的接口：无线天线接口、以太网接口、USB2.0接口、UART0、UART串口。
+
+
+    此外，由于TCP/IP通信和串口透明传输，HTML-NET还具有网页设计，可用于跨平台UI用户界面设计和配置。HTML网页与UART1串口通信，以桥接Websocket协议并控制STC15WK3254微控制器。HTML网页保存在模块系统的/html
+    web目录下。
+
+
+    HTML-NET模块内置了UDP（用户数据报协议）服务器，并使用唯一机制重新封装UDP通信并共享ID地址。专门获取UDP客户端的IP。对于连接WiFi网络的客户端，由于手机的情况，IP地址会频繁变化。
+
+
+    HTML-NET接口主要包括HTML-NET模块、以太网接口、USB接口、3.3V稳压电路、IO电路和指示灯。HTML-NET模块内置UDP服务器，并使用一种独特机制重新封装UDP通信并共享ID地址。
+
+
+    # III. UDP 协议
+
+
+    UDP是一种不可靠的传输协议，具有以下特点：
+
+
+    - 不建立连接。
+
+    - 不保证交付。
+
+    - 不保证顺序。
+
+    - 不支持流量控制。
+
+    - 不支持拥塞控制。
+
+    - 头部开销小。
+
+
+    UDP 协议：
+
+
+    首先，WiFi通信技术容易与其他设备兼容。其次处理了所有设备与其他设备的互连。可以看出，选择WiFi作为无线通信方法可以轻松完成设备与互联网之间的交互，一步到位，避免二次通信。
+
+
+    ## B. HTML-NET 模块
+
+
+    HTML-NET设备在Linux操作系统上，基于MediaTek提供的M76AN网关开发。它使用增强型STC14WK3254 C51单片机，内部连接了4个UART（异步通用传输收发器）端口。模块包含了丰富的接口：无线天线接口、以太网接口、USB2.0接口、UART0、UART串口。
+
+
+    此外，由于TCP/IP通信和串口透明传输，HTML-NET还具有网页设计，可用于跨平台UI用户界面设计和配置。HTML网页与UART1串口通信，以桥接Websocket协议并控制STC15WK3254微控制器。HTML网页保存在模块系统的/html
+    web目录下。
+
+
+    HTML-NET模块内置了UDP（用户数据报协议）服务器，并使用一种独特机制重新封装UDP通信并共享ID地址。专门获取UDP客户端的IP。对于连接WiFi网络的客户端，由于手机的情况，IP地址会频繁变化。
+
+
+    HTML-NET接口主要包括HTML-NET模块、以太网接口、USB接口、3.3V稳压电路、IO电路和指示灯。HTML-NET模块内置UDP服务器，并使用一种独特机制重新封装UDP通信并共享ID地址。
+
+
+    # III. UDP 协议
+
+
+    UDP是一种不可靠的传输协议，具有以下特点：
+
+
+    - 不建立连接。
+
+    - 不保证交付。
+
+    - 不保证顺序。
+
+    - 不支持流量控制。
+
+    - 不支持拥塞控制。
+
+    - 头部开销小。
+
+
+    UDP 协议：
+
+
+    首先，WiFi通信技术容易与其他设备兼容。其次处理了所有设备与其他设备的互连。可以看出，选择WiFi作为无线通信方法可以轻松完成设备与互联网之间的交互，一步到位，避免二次通信。
+
+
+    ## A. 校验方法
+
+
+    在计算校验和时，将头部字段为0。如果接收到的校验和不正确，则丢弃该数据包。
+
+
+    | 字段 | 校验和 |
+
+    |---|---|
+
+    | 源端口 | 0000000000000000 |
+
+    | 目的端口 | 0000000000000000 |
+
+    | 长度 | 0000000000000000 |
+
+    | 校验和 | 0000000000000000 |
+
+    | 数据 | 0000000000000000... |
+
+
+    ![](img/8c171282c1cc602062ed1901608ef3ac_0_0.png)
+
+
+    在计算校验和时，将头部字段为0。如果接收到的校验和不正确，则丢弃该数据包。
+
+
+    | 字段 | 校验和 |
+
+    |---|---|
+
+    | 源端口 | 0000000000000000 |
+
+    | 目的端口 | 0000000000000000 |
+
+    | 长度 | 0000000000000000 |
+
+    | 校验和 | 0000000000000000 |
+
+    | 数据 | 11111... |
+
+
+    在计算校验和时，将头部字段为0。如果接收到的校验和不正确，则丢弃该数据包。
+
+
+    | 字段 | 校验和 |
+
+    |---|---|
+
+    | 源端口 | 0000000000000000 |
+
+    | 目的端口 | 0000000000000000 |
+
+    | 长度 | 0000000000000000 |
+
+    | 校验和 | 0000000000000000 |
+
+    | 数据 | 10101... |
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 3]
+
+
+    fingerprint has been entered, it will display that the door is open. Next, fingerprint
+    ID and time will be sent to the WiFi module and return to the main interface.
+    When the fingerprint button is pressed, it will enter the fingerprint modification
+    interface. The numeric keyboard will be displayed at this moment, and the user
+    can enter the password that has been set. If the password is incorrect, it will
+    return to the fingerprint modification interface. If the password is successfully
+    entered, it will go to the fingerprint increases or decreases interface. After
+    the fingerprint increases or decreases, it will return to the main interface.
+    software program diagram of the lower computer is shown in Fig. 6.
+
+
+    ![](img/8c171282c1cc602062ed1901608ef3ac_3_0.png)
+
+
+    Fig. 5. HTML5 monitoring interface
+
+
+    # ## VI. CONCLUSIONS
+
+
+    This article introduces a smart security system based on HTML gateway from the
+    perspective of UDP protocol and system design, defines the main functions of HTMLNET
+    gateway, and operates the UDP framework and verification methods according to
+    the characteristics of the video stream. In this work, we complete the drawing
+    and design of the smart security system based on fingerprint recognition, password
+    control, remote control, interface, HTML5-multi-device, touch buttons, and etc.
+    After the implementation, the system is running and can fulfill the expected requirements.
+
+
+    ![](img/8c171282c1cc602062ed1901608ef3ac_3_1.png)
+
+
+    Fig. 6. The software block diagram of the lower computer
+
+
+    # ## V. SYSTEM TEST
+
+
+    After the system is powered, it performs a module function test on the fingerprint
+    module, touch screen, HTML5-NET module, control and data. After the test the overall
+    logic test of the system is carried out according to predetermined requirements.
+    We carry out different conditions. Under different circumstances, the system operates
+    normally, proves that the design meets the expected requirements. The system requirements
+    are shown in Fig. 7 and Fig. 8.
+
+
+    # ## REFERENCES
+
+
+    +   [1] R. A. Naifi, N. Satar, and L. Duan, "Speech and Lightweight Communication
+    Scheme on UDP for Low End IoT Devices," 11th IEEE International Conference on
+    Advanced Networks and Telecommunications Systems (ANTTS), 2019, Gaya, Delhi, India
+
+
+    +   [2] M. S. Hussain, N. Poponen, P. Oli and J. Salman, "Network Monitoring in
+    a Small-Scale Smart-Grid Laboratory," 2014 25th IEEE International Conference
+    on Reliability, Survivability, and Security, Finland, Switzerland, 316
+
+
+    +   [3] M. S. Hussain, "Status monitoring for smart home healthcare," 2016 IEEE
+    International Conference on Multimedia & Expo Workshops (ICMEW), 2016, Washington,
+    DC, USA
+
+
+    +   [4] Q. Wi, W. Wang, and L. Duan, "Video monitoring of security system based
+    on Wi-Fi," 2016 Chinese Conference on Control and Decision Conference (CCDC),
+    2016, Beijing, China
+
+
+    +   [5] A. K. Shaila, G. S. Gulhan, and M. Dubey, "UDP LTE: An Effective method
+    for video transmission via UDP protocol," 2016 International Conference on Communication,
+    Networking and Information Technologies (ICCNIT), 2016, Ramanagathapuram, India,
+    pp. 666-672.
+
+
+    +   [6] V. D. Vaidya and P. Vishwakarma, "A Comparative Analysis on Smart Home
+    Monitoring System based on different technologies like GSM, IOT, Bluetooth and
+    PI Microcontroller for Zigbee Mediation," 2018 International Conference on Smart
+    City and Emerging Technologies (ICSET), 2018, Mumbai, India, pp. 1-4.
+
+
+    ![](img/8c171282c1cc602062ed1901608ef3ac_3_2.png)
+
+
+    Fig. 7. System power-on diagram'
+  md: '
+
+    fingerprint has been entered, it will display that the door is open. Next, fingerprint
+    ID and time will be sent to the WiFi module and return to the main interface.
+    When the fingerprint button is pressed, it will enter the fingerprint modification
+    interface. The numeric keyboard will be displayed at this moment, and the user
+    can enter the password that has been set. If the password is incorrect, it will
+    return to the fingerprint modification interface. If the password is successfully
+    entered, it will go to the fingerprint increases or decreases interface. After
+    the fingerprint increases or decreases, it will return to the main interface.
+    software program diagram of the lower computer is shown in Fig. 6.
+
+
+    ![](img/8c171282c1cc602062ed1901608ef3ac_3_0.png)
+
+
+    Fig. 5. HTML5 monitoring interface
+
+
+    ## V. SYSTEM TEST
+
+
+    After the system is powered, it performs a module function test on the fingerprint
+    module, touch screen, HTML5-NET module, control and data. After the test the overall
+    logic test of the system is carried out according to predetermined requirements.
+    We carry out different conditions. Under different circumstances, the system operates
+    normally, proves that the design meets the expected requirements. The system requirements
+    are shown in Fig. 7 and Fig. 8.
+
+
+    ## VI. CONCLUSIONS
+
+
+    This article introduces a smart security system based on HTML gateway from the
+    perspective of UDP protocol and system design, defines the main functions of HTMLNET
+    gateway, and operates the UDP framework and verification methods according to
+    the characteristics of the video stream. In this work, we complete the drawing
+    and design of the smart security system based on fingerprint recognition, password
+    control, remote control, interface, HTML5-multi-device, touch buttons, and etc.
+    After the implementation, the system is running and can fulfill the expected requirements.
+
+
+    ![](img/8c171282c1cc602062ed1901608ef3ac_3_1.png)
+
+
+    Fig. 6. The software block diagram of the lower computer
+
+
+    ## REFERENCES
+
+
+    - [1] R. A. Naifi, N. Satar, and L. Duan, "Speech and Lightweight Communication
+    Scheme on UDP for Low End IoT Devices," 11th IEEE International Conference on
+    Advanced Networks and Telecommunications Systems (ANTTS), 2019, Gaya, Delhi, India
+
+    - [2] M. S. Hussain, N. Poponen, P. Oli and J. Salman, "Network Monitoring in
+    a Small-Scale Smart-Grid Laboratory," 2014 25th IEEE International Conference
+    on Reliability, Survivability, and Security, Finland, Switzerland, 316
+
+    - [3] M. S. Hussain, "Status monitoring for smart home healthcare," 2016 IEEE
+    International Conference on Multimedia & Expo Workshops (ICMEW), 2016, Washington,
+    DC, USA
+
+    - [4] Q. Wi, W. Wang, and L. Duan, "Video monitoring of security system based
+    on Wi-Fi," 2016 Chinese Conference on Control and Decision Conference (CCDC),
+    2016, Beijing, China
+
+    - [5] A. K. Shaila, G. S. Gulhan, and M. Dubey, "UDP LTE: An Effective method
+    for video transmission via UDP protocol," 2016 International Conference on Communication,
+    Networking and Information Technologies (ICCNIT), 2016, Ramanagathapuram, India,
+    pp. 666-672.
+
+    - [6] V. D. Vaidya and P. Vishwakarma, "A Comparative Analysis on Smart Home Monitoring
+    System based on different technologies like GSM, IOT, Bluetooth and PI Microcontroller
+    for Zigbee Mediation," 2018 International Conference on Smart City and Emerging
+    Technologies (ICSET), 2018, Mumbai, India, pp. 1-4.
+
+
+    ![](img/8c171282c1cc602062ed1901608ef3ac_3_2.png)
+
+
+    Fig. 7. System power-on diagram
+
+    '
+  mdcn: '
+
+    输入指纹后，系统将显示门已打开。接下来，指纹 ID 和时间将发送至 WiFi 模块并返回主界面。当按下指纹按钮时，将进入指纹修改界面。此时将显示数字键盘，用户可以输入设置的密码。如果密码错误，将返回到指纹修改界面。如果密码输入正确，将进入指纹增加或删除界面。指纹增加或删除后，将返回主界面。下机软件程序图如图
+    6 所示。
+
+
+    ![](img/8c171282c1cc602062ed1901608ef3ac_3_0.png)
+
+
+    图 5. HTML5 监控界面
+
+
+    ## V. 系统测试
+
+
+    系统上电后，对指纹模块、触摸屏、HTML5-NET 模块、控制和数据进行模块功能测试。测试完成后，根据预设要求进行系统的整体逻辑测试。我们设置了不同的条件。在不同情况下，系统运行正常，证明设计符合预期要求。系统需求见图
+    7 和图 8。
+
+
+    ## 六. 结论
+
+
+    本文从 UDP 协议和系统设计的角度介绍了一种基于 HTML 网关的智能安全系统，定义了 HTMLNET 网关的主要功能，并根据视频流特性运行了 UDP 框架和验证方法。在这项工作中，我们完成了基于指纹识别、密码控制、远程控制、界面、HTML5
+    多设备、触摸按钮等的智能安全系统的绘制与设计。实现后，系统运行良好，能够满足预期需求。
+
+
+    ![](img/8c171282c1cc602062ed1901608ef3ac_3_1.png)
+
+
+    图 6. 下机软件框图
+
+
+    ## 参考文献
+
+
+    - [1] R. A. Naifi, N. Satar, and L. Duan, "Speech and Lightweight Communication
+    Scheme on UDP for Low End IoT Devices," 11th IEEE International Conference on
+    Advanced Networks and Telecommunications Systems (ANTTS), 2019, Gaya, Delhi, India
+
+    - [2] M. S. Hussain, N. Poponen, P. Oli and J. Salman, "Network Monitoring in
+    a Small-Scale Smart-Grid Laboratory," 2014 25th IEEE International Conference
+    on Reliability, Survivability, and Security, Finland, Switzerland, 316
+
+    - [3] M. S. Hussain, "Status monitoring for smart home healthcare," 2016 IEEE
+    International Conference on Multimedia & Expo Workshops (ICMEW), 2016, Washington,
+    DC, USA
+
+    - [4] Q. Wi, W. Wang, and L. Duan, "Video monitoring of security system based
+    on Wi-Fi," 2016 Chinese Conference on Control and Decision Conference (CCDC),
+    2016, Beijing, China
+
+    - [5] A. K. Shaila, G. S. Gulhan, and M. Dubey, "UDP LTE: An Effective method
+    for video transmission via UDP protocol," 2016 International Conference on Communication,
+    Networking and Information Technologies (ICCNIT), 2016, Ramanagathapuram, India,
+    pp. 666-672.
+
+    - [6] V. D. Vaidya and P. Vishwakarma, "A Comparative Analysis on Smart Home Monitoring
+    System based on different technologies like GSM, IOT, Bluetooth and PI Microcontroller
+    for Zigbee Mediation," 2018 International Conference on Smart City and Emerging
+    Technologies (ICSET), 2018, Mumbai, India, pp. 1-4.
+
+
+    ![](img/8c171282c1cc602062ed1901608ef3ac_3_2.png)
+
+
+    图 7. 系统上电图
+
+    '
+  merge: 0
