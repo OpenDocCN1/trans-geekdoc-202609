@@ -1,0 +1,589 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # Deep Reinforcement Learning-based Through Silicon Via (TSV) Array Design Optimization
+    Method Considering Crosstalk
+
+
+    Keunwoo Kim, Hyunook Park, Daehwan Lo, Minsu Kim, Keyoung Son, Kyjungune So, Seongkuk
+    Kim, Tae Shin, Seung Choi, and Jongho Kim
+
+    Terahertz Interconnection and Package Laboratory
+
+    Korea Advanced Institute of Science and Technology (KAIST)
+
+    Daejeon, Republic of Korea
+
+    E-mail: keunwookim@kaist.ac.kr
+
+
+    **Abstract—** In this paper, we propose the silicon via (TSV) array design optimization
+    using reinforcement learning (DRL). The agent trained through the proposed method
+    provide an optimal TSV array that minimizes crosstalk (NEXT) in a single step.
+    We define the state, action, and reward to define the target NEXT, the Markov
+    Decision Process (MDP) for optimizing the TSV array crosstalk and a deep q network
+    (DNN). For verification, we apply the method to a 3-layer silicon via array at
+    stacked High Bandwidth Memory (HBM).
+
+
+    **Keywords—** Reinforcement learning (DRL), deep q network (DNN), near-end crosstalk
+    (NEXT), High Bandwidth Memory (HBM), silicon via (TSV)
+
+
+    Recently, the demand of high-performance computing is increasing due to the development
+    of computer vision, artificial intelligence (AI). However, with the limitations
+    of 2-dimensional (2-D) interconnection, there is a limit to bandwidth and interconnect.
+    A 2.5D and 3D technology has emerged as a promising solution to overcome the current
+    limit. Specifically, high bandwidth memory (HBM), which achieves bandwidth and
+    density by stacking memories, is attracting great attention from the market [2].
+    The technology that has contributed to the HBM is through silicon via (TSV), which
+    allows chips to be stacked. With TSV array to HBM, remarkable electrical performance
+    was achieved due to reduced length and interconnect interference.
+
+
+    However, TSV is vulnerable to crosstalk, especially far-end crosstalk (NEXT).
+    This is because the TSV structure has very few elements that act as guard against
+    conventional horizontal interconnects [4]. Only, the power/ground TSV and the
+    power distribution network (PDN) in the form of grid serves as the shielding.
+    Thus, the design of generation occurs because of crosstalk from adjacent TSVs
+    as shown in Fig. 1. Since the density of HBM is already high, additional structures
+    for shielding is not possible. Therefore, the only way to reduce crosstalk is
+    to change
+
+
+    # I. INTRODUCTION
+
+
+    ![](img/9b85c8ecfd965ba2f3a51c4b6e18b56c_0_0.png)
+
+
+    The conventional design method was focused on developing the equivalent-circuit
+    model with high accuracy and the design rule to optimize the TSV array design
+    through numerous designs with the design rule [5]. However, a simple formula cannot
+    capture the faults in frequencies and dimensions. Also, it takes a lot of time
+    because one-step optimization is impossible.
+
+
+    Reinforcement learning (RL) is used to solve complex problems with a simple algorithm
+    without supervision. Moreover, once it is trained with the proper Markov decision
+    process (MDP), the agent can produce an optimal design in a single step. Recently
+    we have seen hardware design optimization attempts using RL. In the signal integrity
+    (SI) and power integrity density (PI) due to issues of interconnects.
+
+
+    In this paper we propose the RL method of the Markov decision process (MDP) for
+    optimizing the TSV array crosstalk for NEXT and train the agent. After training,
+    we apply the proposed method to a 3 by TSV array at stacked DRAM of HBM for verification.
+
+
+    # II. TSV ARRAY OPTIMIZATION METHOD
+
+
+    The proposed method using DRL to optimize the TSV array design crosstalk between
+    TSVs. Fig. 2 shows the schematic design of the proposed method. DNN was used to
+    train'
+  - "[PAGE 1]\n\n# FEXT vision\nReward R\n\n![](img/9b85c8ecfd965ba2f3a51c4b6e18b56c_1_0.png)\n\
+    \nFig. 2. Schematic of RL for optimal TSV design considering FEXT\nfor TSV reward.\
+    \ The design policy is trained by repeating design and SI performance. When the\
+    \ train is completed, the optimal design is obtained through the design process\
+    \ sequentially using the trained policy of the initial design.\n\n![](img/9b85c8ecfd965ba2f3a51c4b6e18b56c_1_1.png)\n\
+    \nFig. 3. (a) Resistance and inductance of multi-signal and multi-group\nTSV using\
+    \ multi transmission line (MTL) modeling and (b) Conductance\\and capacitance\
+    \ modeling of multi-signal and multi-group TSV using MTL method.\n\nTo solve a\
+    \ problem with RL framework, the components of MDP should be clearly defined.\
+    \ Depending on how the MDP is defined on the target, the training efficiency and\
+    \ final performance are significantly changed. In this paper, we use the MDP components:\n\
+    \n**State: S** is expressed by a matrix of the TSVs. The value of each matrix\
+    \ is expressed as an index of 0-3 using the TSV type: unoccupied, signal, ground,\
+    \ power. therefore, the state can be expressed as a 3-vector.\n\n**Action: A**\
+    \ is defined in two ways: the choice of position of two TSVs and designing ground/power\
+    \ TSV using occupancy.\n\n**Agent: $\\pi$ and $Q$.** The value is parameterized\
+    \ by $\theta$, a parameter of DNN. We design the DNN with 2 hidden layers, 200\
+    \ neurons in each layer.\n\n**Reward: R** is defined by the difference between\
+    \ the target FEXT and the first TSV signals in frequency. In this research, the\
+    \ target FEXT is set to 3dB lower than the FEXT of the initial design. Then an\
+    \ additional reward is provided to reach the termination state as quickly as possible.\n\
+    \nTo detailed, designing a reward is important in evaluation of learning convergence\
+    \ time. The time it takes to converge in the SI is significant important. To train\
+    \ a design, a lot of design and SI metric evaluation might take too long, the\
+    \ training time becomes impossible and couldn't be used practically. Furthermore,\
+    \ the FEXT extraction method 3D EM simulation, which has high accuracy, the reward\
+    \ was calculated using an equivalent circuit model. Fig. 3 is a multi-signal multi-groups\
+    \ TSV equivalent circuit model, which was used to get the FEXT of TSVs [8]. Self\
+    \ inductance ($L_i$) and mutual-inductance ($L_{ij}$) of TSVs are defined as:\n\
+    \n```\n$L_{ii} = \\frac{\\mu_{TSV}}{\\pi} \\ln(\\frac{2d_{TSV}}{d_{TSV}}) \\quad\
+    \ (1)$\n```\n\nEffective inductance of TSVs can be obtained through the multicolor\
+    \ transmission line (MTL) modeling method. Through this method, the amount of\
+    \ computation FEXT can be drastically reduced. The capacitance and conductance\
+    \ of TSV could be enhanced by the properties of the surrounding medium.\n\nAfter\
+    \ the design, we train the agent with DQN with experience replay memory. The training\
+    \ process of MDP with DQN is followed as:\n\n```\n$\\nabla(\\theta) = E_{s,a}[r\
+    \ + \\gamma \\max_{a'} Q(s',\\theta)]$\n```\n\n```\n- Q(s,a)\\nabla Q(s,a)$\n\
+    ```\n\nwhere $L$ is the loss function\n\n# III. VERIFICATION OF THE PROPOSED METHOD\n\
+    \nTSVs at 16-HI IC was used for verifying the proposed method. The physical method\
+    \ of the TSV design is shown in Fig. 4. The reward was defined with the TSV of\
+    \ switching channel, including the capacitance of the transceiver/receiver(TSVx)\
+    \ at each layer. We assumed that the on-chip PNM is used, so signals are transmitted\
+    \ through surround/power TSV.\n33 size TSV was used for verifying the proposed\
+    \ method and the array size was fixed at this research. The available and valid\
+    \ number of actions was 45 and each action is mapped from 0 to 44. To prevent\
+    \ the train time from increasing infinitely, episodes that exceed more than 20\
+    \ steps are stopped and generate negative reward. Fig. 5 shows the loss and the\
+    \ average reward of training. After 12000 steps,"
+  - '[PAGE 2]
+
+
+    # THE PHYSICAL DIMENSION OF THE TSV
+
+
+    | Parameter | Value |
+
+    | --- | --- |
+
+    | Pitch of TSV (pTSV) | 50 um |
+
+    | Height of TSV (hTSV) | 50 um |
+
+    | Diameter of TSV (dTSV) | 5 um |
+
+    | Diameter of bump (dbump) | 20 um |
+
+    | Height of bump (hbump) | 20 um |
+
+    | Thickness of REDL (t_REDL) | 10 um |
+
+    | Thickness of oxide layer (t_oxide) | 0.5 um |
+
+    | The number of stacked DRAM | 16 |
+
+
+    Fig. (4) The physical dimension of TSV array at the stacked DRAM of HBM (Initial
+    size of TSV array design for verification
+
+
+    ![](img/9b85c8ecfd965ba2f3a51c4b6e18b56c_2_0.png)
+
+
+    ![](img/9b85c8ecfd965ba2f3a51c4b6e18b56c_2_1.png)
+
+
+    Fig. (6) Optimization process of the TSV array at HBM using the proposed method
+
+
+    ![](img/9b85c8ecfd965ba2f3a51c4b6e18b56c_2_2.png)
+
+
+    Fig. 5. Training loss and average reward of DRL agent
+
+
+    # ACKNOWLEDGMENT
+
+
+    We would like to acknowledge the technical support from ANSYS. This work was supported
+    in part by the National Research Foundation of Korea by the Korean Government
+    (NRF-2019-M3FA3A103079612 and NRF-2020M3FA3A202188)
+
+
+    After training with plenty number of density using reinforcement FEXT, the agent
+    is applied to get an optimal TSV array design that is least affected by crosstalk
+    in HB. This shows how the state and FEXT at each stage changes when the TSV array
+    design of the initial state is trained to the agent. Agent succeeds in satisfying
+    the FEXT by only two actions in total. The trained design meets many requirements.
+
+
+    In this paper, we propose the TSV array design method using DRL. We define the
+    elements of the Markov decision process (MDP) for optimizing the TSV array arrangement
+    using FEXT. We trained the agent using DQN. Finally, the loss converged and the
+    agent was trained well. We applied the proposed method to design the TSV array
+    at the stacked DRAM and got the optimal design successfully. This can be a base
+    for further researches of DRL-based TSV array design considering SI in practical
+    scales.
+
+
+    # IV. CONCLUSION
+
+
+    +   [1] J. Liu, ''Evolution, challenge, and outlook of TS, 3D integration and
+    3D simulation,'' 2011 International Symposium on Packaging Materials (XPM), Beijing,
+    2011, pp. 462–468
+
+    [2] K. Cho, et al., ''Signal Integrity Analysis and Interpretation of Crosstalk
+    in High-Bandwidth Interfaces,'' in IEEE Transactions on Packaging, Manufacturing
+    and Technology, vol. 58, no. 6, pp. 968–975 (2010)
+
+    [3] J. Kim, et al., ''High Reliability Scale Electrical Model and Analysis of
+    a Through Silicon Via (TSV),'' in IEEE Transactions on Packaging, Manufacturing
+    and Technology, vol. 15, no. 2, pp. 181–189 (2002)
+
+    [4] S. Kim, et al., ''Reliability Analysis of VSI,'' (IEEE Press, Hoboken, NJ,
+    2007).
+
+    [5] M. Lee, et al., ''Electrical Design of Through Silicon Via,'' Spring 1998
+    IEEE Asian-Pacific Conference on Computer Technology (ICCT) (IEEE Press, 1998)
+
+    [6] H. Park, et al., ''Deep Reinforcement Learning-Based Optimization of Decoupling
+    Capacitor Design for 2.5D/3D-D ICs, with Multilayer TSVs'' in IEEE Transactions
+    on Packaging, Manufacturing and Technology, vol. 10, no. 4, pp. 467–473 (2008)
+
+    [7] S. Kim, et al., ''A Deep Reinforcement Learning Network Modeling of a Silicon
+    Interposer for 2.5D/3-D ICs with Multilayer TSVs'' in IEEE Transactions on Packaging,
+    Manufacturing and Technology, vol. 43, pp. 1835–1846, 2020.
+
+    [8] C. Paul, Analysis of Multi-Conductor Transmission Line. New York: Wiley, 1994.
+
+    [9] Kings, D. P. and Ba, J., ''Adam: A Method for Stochastic Optimization,'' 2014.
+
+
+    # REFERENCES'
+  md: '
+
+    # Deep Reinforcement Learning-based Through Silicon Via (TSV) Array Design Optimization
+    Method Considering Crosstalk
+
+
+    Keunwoo Kim, Hyunook Park, Daehwan Lo, Minsu Kim, Keyoung Son, Kyjungune So, Seongkuk
+    Kim, Tae Shin, Seung Choi, and Jongho Kim
+
+    Terahertz Interconnection and Package Laboratory
+
+    Korea Advanced Institute of Science and Technology (KAIST)
+
+    Daejeon, Republic of Korea
+
+    E-mail: keunwookim@kaist.ac.kr
+
+
+    **Abstract—** In this paper, we propose the silicon via (TSV) array design optimization
+    using reinforcement learning (DRL). The agent trained through the proposed method
+    provide an optimal TSV array that minimizes crosstalk (NEXT) in a single step.
+    We define the state, action, and reward to define the target NEXT, the Markov
+    Decision Process (MDP) for optimizing the TSV array crosstalk and a deep q network
+    (DNN). For verification, we apply the method to a 3-layer silicon via array at
+    stacked High Bandwidth Memory (HBM).
+
+
+    **Keywords—** Reinforcement learning (DRL), deep q network (DNN), near-end crosstalk
+    (NEXT), High Bandwidth Memory (HBM), silicon via (TSV)
+
+
+    Recently, the demand of high-performance computing is increasing due to the development
+    of computer vision, artificial intelligence (AI). However, with the limitations
+    of 2-dimensional (2-D) interconnection, there is a limit to bandwidth and interconnect.
+    A 2.5D and 3D technology has emerged as a promising solution to overcome the current
+    limit. Specifically, high bandwidth memory (HBM), which achieves bandwidth and
+    density by stacking memories, is attracting great attention from the market [2].
+    The technology that has contributed to the HBM is through silicon via (TSV), which
+    allows chips to be stacked. With TSV array to HBM, remarkable electrical performance
+    was achieved due to reduced length and interconnect interference.
+
+
+    However, TSV is vulnerable to crosstalk, especially far-end crosstalk (NEXT).
+    This is because the TSV structure has very few elements that act as guard against
+    conventional horizontal interconnects [4]. Only, the power/ground TSV and the
+    power distribution network (PDN) in the form of grid serves as the shielding.
+    Thus, the design of generation occurs because of crosstalk from adjacent TSVs
+    as shown in Fig. 1. Since the density of HBM is already high, additional structures
+    for shielding is not possible. Therefore, the only way to reduce crosstalk is
+    to change
+
+
+    ## I. INTRODUCTION
+
+
+    ![](img/9b85c8ecfd965ba2f3a51c4b6e18b56c_0_0.png)
+
+
+    The conventional design method was focused on developing the equivalent-circuit
+    model with high accuracy and the design rule to optimize the TSV array design
+    through numerous designs with the design rule [5]. However, a simple formula cannot
+    capture the faults in frequencies and dimensions. Also, it takes a lot of time
+    because one-step optimization is impossible.
+
+
+    Reinforcement learning (RL) is used to solve complex problems with a simple algorithm
+    without supervision. Moreover, once it is trained with the proper Markov decision
+    process (MDP), the agent can produce an optimal design in a single step. Recently
+    we have seen hardware design optimization attempts using RL. In the signal integrity
+    (SI) and power integrity density (PI) due to issues of interconnects.
+
+
+    In this paper we propose the RL method of the Markov decision process (MDP) for
+    optimizing the TSV array crosstalk for NEXT and train the agent. After training,
+    we apply the proposed method to a 3 by TSV array at stacked DRAM of HBM for verification.
+
+
+    ## II. TSV ARRAY OPTIMIZATION METHOD
+
+
+    The proposed method using DRL to optimize the TSV array design crosstalk between
+    TSVs. Fig. 2 shows the schematic design of the proposed method. DNN was used to
+    train
+
+
+    ![](img/9b85c8ecfd965ba2f3a51c4b6e18b56c_1_0.png)
+
+
+    Fig. 2. Schematic of RL for optimal TSV design considering FEXT for TSV reward.
+    The design policy is trained by repeating design and SI performance. When the
+    train is completed, the optimal design is obtained through the design process
+    sequentially using the trained policy of the initial design.
+
+
+    ![](img/9b85c8ecfd965ba2f3a51c4b6e18b56c_1_1.png)
+
+
+    Fig. 3. (a) Resistance and inductance of multi-signal and multi-group TSV using
+    multi transmission line (MTL) modeling and (b) Conductance and capacitance modeling
+    of multi-signal and multi-group TSV.
+
+
+    To solve a problem with RL framework, the components of MDP should be clearly
+    defined. Depending on how MDP is defined on the target, the training efficiency
+    and final performance are significantly changed. In this paper, we use MDP:
+
+
+    - **State: S** is expressed by a matrix of TSVs. The value of each matrix is expressed
+    as index of 0-3 using TSV type: unoccupied, signal, ground, therefore, the state
+    can be expressed as a vector.
+
+    - **Action: A** is defined in two ways: the choice of position of TSVs and designing
+    ground/power TSV using occupancy.
+
+    - **Agent: $\pi$ and $Q$.** The value is parameterized by $\theta$. We design
+    the DNN with 2 hidden layers, 200 neurons in each layer.
+
+    - **Reward: R** is defined by the difference between the target FEXT and the first
+    TSV signals in frequency. In this research, the target FEXT is set to 3dB lower
+    than FEXT of initial design. Then an additional reward is provided to reach the
+    termination state as quickly as possible. Since SI evaluation might take too long,
+    the time becomes impossible and couldn''t be used practically. Furthermore, the
+    FEXT extraction method 3D EM simulation, which has high accuracy, was calculated
+    using equivalent circuit model. Fig. 3 is a multi-signal multi-group TSV equivalent
+    circuit model, which was used to get Self inductance ($L_i$) and mutual-inductance
+    ($L_{ij}$) of TSVs:
+
+
+    $$L_{ii} = \frac{\mu_{TSV}}{\pi} \ln\left(\frac{2d_{TSV}}{d_{TSV}}\right)$$
+
+
+    Effective inductance of TSVs can be obtained through multicolor transmission line
+    (MTL) method. Through this method, the amount of FEXT can be drastically reduced.
+    The capacitance and conductance of TSV could be enhanced by properties of surrounding
+    medium. After design, we train the agent with DQN with replay memory. The training
+    process of MDP with DQN is followed as:
+
+
+    $$\nabla(\theta) = E_{s,a}[r + \gamma \max_{a''} Q(s'',\theta) - Q(s,a)]$$
+
+
+    where $L$ is the loss function.
+
+
+    ## III. VERIFICATION OF THE PROPOSED METHOD
+
+
+    TSVs at 16-layer IC was used for verifying the proposed method. The physical method
+    of TSV design is shown in Fig. 4. The reward was defined with TSV of switching
+    channel, including the capacitance of transceiver/receiver at each layer. We assumed
+    that the on-chip PNM is used, so signals are transmitted through surround/power
+    TSV. 3 size TSV was used for verifying the proposed method and the array size
+    was fixed at this research. The available and valid number of actions was 45 and
+    each action is mapped from 0 to 44. To prevent the train time from increasing
+    infinitely, episodes that exceed more than 20 steps are stopped and generate negative
+    reward. Fig. 5 shows the loss and the average reward of training. After 12000
+    steps,
+
+
+    | Parameter | Value |
+
+    | :--- | --- |
+
+    | Pitch of TSV (pTSV) | 50 um |
+
+    | Height of TSV (hTSV) | 50 um |
+
+    | Diameter of TSV (dTSV) | 5 um |
+
+    | Diameter of bump (dbump) | 20 um |
+
+    | Height of bump (hbump) | 20 um |
+
+    | Thickness of REDL (t_REDL) | 10 um |
+
+    | Thickness of oxide layer (t_oxide) | 0.5 um |
+
+    | The number of stacked DRAM | 16 |
+
+
+    Fig. (4) The physical dimension of TSV array at the stacked DRAM of HBM (Initial
+    size of TSV array design for verification)
+
+
+    ![](img/9b85c8ecfd965ba2f3a51c4b6e18b56c_2_0.png)
+
+
+    ![](img/9b85c8ecfd965ba2f3a51c4b6e18b56c_2_1.png)
+
+
+    Fig. (6) Optimization process of the TSV array at HBM using the proposed method
+
+
+    ![](img/9b85c8ecfd965ba2f3a51c4b6e18b56c_2_2.png)
+
+
+    Fig. 5. Training loss and average reward of DRL agent
+
+
+    ## ACKNOWLEDGMENT
+
+
+    We would like to acknowledge the technical support from ANSYS. This work was supported
+    in part by the National Research Foundation of Korea by the Korean Government
+    (NRF-2019-M3FA3A103079612 and NRF-2020M3FA3A202188)
+
+
+    After training with plenty number of density using reinforcement FEXT, the agent
+    is applied to get an optimal TSV array design that is least affected by crosstalk
+    in HBM. This shows how the state and FEXT at each stage changes when the TSV array
+    design of the initial state is trained. In this paper, we propose the TSV design
+    method using DRL. We define the elements of the Markov decision process (MDP)
+    for optimizing the TSV arrangement using FEXT. We trained the agent using DQN.
+    Finally, the loss converged and the agent meets many requirements. This can be
+    a base for further researches of DRL-based TSV design in practical scales.
+
+    '
+  mdcn: '
+
+
+    # 考虑串扰的硅通孔（TSV）阵列设计优化方法
+
+
+    Keunwoo Kim, Hyunook Park, Daehwan Lo, Minsu Kim, Keyoung Son, Kyjungune So, Seongkuk
+    Kim, Tae Shin, Seung Choi, and Jongho Kim
+
+    太赫兹互连与封装实验室
+
+    韩国高级科学技术院 (KAIST)
+
+    韩国，대전市
+
+    电子邮箱：keunwookim@kaist.ac.kr
+
+
+    **摘要—** 在本文中，我们提出了一种基于深度强化学习（DRL）的硅通孔（TSV）阵列设计优化方法。通过所提方法训练的智能体单步提供最小串扰（NEXT）的最优
+    TSV 阵列。我们定义了状态、动作和奖励以确定目标 NEXT、优化 TSV 阵列串扰的马尔可夫决策过程（MDP）以及深度Q网络（DNN）。为了验证，我们将该方法应用于堆叠高带宽内存（HBM）中的3层通孔阵列。
+
+
+    **关键词—** 强化学习（DRL）、深度Q网络（DNN）、近端串扰（NEXT）、高带宽内存（HBM）、硅通孔（TSV）
+
+
+    最近，由于计算机视觉和人工智能（AI）的发展，对高性能计算的需求日益增加。然而，由于二维（2-D）互连的局限性，带宽和互连存在限制。2.5D和3D技术已成为克服当前限制的有望解决方案。具体而言，高带宽内存（HBM）通过堆叠内存实现带宽和密度，正受到市场的极大关注[2]。对HBM贡献的技术是通过硅通孔（TSV），它允许芯片进行堆叠。通过在HBM中使用TSV阵列，由于长度缩短和互连干扰减少，实现了显著的电气性能。
+
+
+    然而，TSV 容易受到串扰的影响，尤其是远端串扰（此处原文为NEXT）。这是因为 TSV 结构中作为传统水平互连保护的元件非常少[4]。只有电源/地线TSV
+    和网格形式的电源分配网络（PDN）起起到屏蔽作用。因此，如图1所示，由于相邻 TSV 之间的串扰会导致设计问题。由于 HBM 的密度已经很高，无法增加额外的屏蔽结构。因此，减少串扰的唯一方法是改变
+
+
+    ## I. 引言
+
+
+    ![](img/9b85c8ecfd965ba2f3a51c4b6e18b56c_0_0.png)
+
+
+    传统设计方法侧重于开发高精度的等效电路模型，以及通过大量带有设计规则的设计来优化 TSV 阵列的设计规则[5]。然而，简单的公式无法捕捉频率和尺寸上的故障。此外，由于无法进行一步优化，这需要大量时间。
+
+
+    强化学习（RL）被用于在无监督的情况下使用简单算法解决复杂问题。此外，一旦通过适当的马尔可夫决策过程（MDP）进行训练，智能体就可以单步产生最优设计。最近，我们看到了使用
+    RL 进行硬件设计优化的尝试，以解决互连问题引起的信号完整性（SI）和电源完整性（PI）密度问题。
+
+
+    在本文中，我们提出了用于优化 NEXT TSV 阵列串扰的马尔可夫决策过程（MDP）强化学习方法，并训练了智能体。训练后，我们将所提方法应用于 HBM 堆叠
+    DRAM 的 3x TSV 阵列进行验证。
+
+
+    ## II. TSV 阵列优化方法
+
+
+    所提方法使用 DRL 优化 TSV 之间的 TSV 阵列设计串扰。图2显示了所提方法的示意设计。使用 DNN 训练
+
+
+    ![](img/9b85c8ecfd965ba2f3a51c4b6e18b56c_1_0.png)
+
+
+    图2. 考虑 TSV 奖励中 FEXT 的最优 TSV 设计的强化学习示意图。设计策略通过重复设计和 SI 性能进行训练。当训练完成后，通过使用初始设计的训练策略顺贯执行设计过程获得最优设计。
+
+
+    ![](img/9b85c8ecfd965ba2f3a51c4b6e18b56c_1_1.png)
+
+
+    图 3. (a) 使用多传输线（MTL) 建模对多信号、多组 TSV 的电阻和电感，以及 (b) 多信号、多组 TSV 的电导和电容建模。
+
+
+    要用 RL 框架解决问题，MDP 的组件应该清晰定义。取决于根据目标如何定义 MDP，训练效率和最终性能会发生显著变化。在本文中，我们使用 MDP：
+
+
+    - **状态：S** 由 TSV 矩阵表示。矩阵的每个值表示为使用 TSV 类型（空、信号、地）的索引 0-3，因此状态可以表示为向量。
+
+    - **动作：A** 以两种方式定义：TSV 位置的选择和设计。
+
+    - **智能体：$\pi$**：通过重复设计和 SI 性能进行训练。训练完成后，通过使用初始设计的训练策略顺贯执行设计过程获得最优设计。
+
+    - **奖励：R**：定义为目标 NEXT。由于 HBM 的密度已经很高，无法增加额外的屏蔽结构。因此，减少串扰的唯一方法是改变。由于 HBM 的密度已经很高，无法增加额外的屏蔽结构。因此，减少串扰的唯一方法是改变。由于
+    HBM 的密度已经很高，无法增加额外的屏蔽结构。通过等效电路模型计算 TSV 的自感（$L_i$）和互感感（$L_{ij}$）：
+
+
+    $$L_{ii} = \frac{\mu}{\pi} \ln\left(\frac{2d_{TSV}}{d_{TSV}}\right)$$
+
+
+    通过多传输线（MTL) 建模可以获得 TSV 的电感。通过这种方法，TSV 的电容可以大幅降低。通过 DQN 训练智能体 如下：
+
+
+    $$\nabla(\theta) = E_{s,a}[r + \gamma \max_{a''} Q(s'',\theta) - Q(s,a)]$$
+
+
+    其中 $L$ 是损失函数。
+
+
+    ## III. 所提方法的验证
+
+
+    使用 16 层 TSV 验证所提方法。图4 显示了 TSV 的物理尺寸。奖励由每层传输器/接收器的电容定义。可用的动作数量为 45。为了防止训练时间无限增加，超过20
+    步的回合将停止并产生负奖励。图5 显示了训练。
+
+
+    | 参数 | 值 |
+
+    | :--- | :--- |
+
+    | TSV 间距 (pTSV) | 50 um |
+
+    | TSV 高 (hTSV) | 50 um |
+
+    | TSV 直径 (dTSV) | 5 um |
+
+    | 凸点直径 (dbump) | 20 um |
+
+    | 凸点高度 (hbump) | 20 um |
+
+    | REDL 厚度 (t_REDL) | 10 um |
+
+    | 氧化层厚度 (t_oxide) | 0.5 um |
+
+    | 堆叠 DRAM 数 | 16 |
+
+
+    图 (4) HBM 堆叠 DRAM 的 TSV 物理尺寸（TSV 设计初始尺寸）
+
+
+    图 (6) 使用所提方法对 HBM 的 TSV 阵列进行优化过程
+
+
+    ## 致谢
+
+
+    感谢 ANSYS 的技术支持。这项工作部分获得了韩国研究基金会（NRF）通过韩国政府的支持（NRF-2019-M3FA3A10307961 和 NRF-2020M3FA3A202188）。
+
+
+    '
+  merge: -1
