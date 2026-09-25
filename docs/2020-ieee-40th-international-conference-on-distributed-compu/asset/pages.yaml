@@ -1,0 +1,411 @@
+- pgno: 0
+  md: '# 2020 IEEE 40th International Conference on Distributed Computing Systems
+    (ICDCS)
+
+
+    # D-SmartML: A Distributed Automated Learning Framework
+
+
+    Ahmed Abd Rahman, Mohamed El Hew
+
+    Nile University
+
+    Giza, Egypt
+
+    [A.Rahman@nu.edu.eg,melhew@nu.edu.eg]
+
+    Radwa Elshawi, Sherif Sakr
+
+    University of Tartu
+
+    Tartu, Estonia
+
+    {radwa.elshawi,sherif.sakr}@ut.ee
+
+
+    **Abstract—**machine learning is a crucial role in the harnessing of massive data
+    amount every day. The process of building high-quality machine learning models
+    requires literacy and time-consuming various machine learning applications without
+    having a good experience with effectively tuning their hyper-parameters, it has
+    been noted that many scientists can not scale with the growing data and volumes
+    in our global world. Recently, several limitations of machine learning have been
+    developed by the process of Combined Selection and Hyper-parameter tuning (CASH).
+    It has been built on machine learning libraries (e.g. skikit-learn) that can only
+    work on a single node and are not capable to scale and handle large data volumes.
+    In this paper, we propose a distributed SmartML framework on Apache Spark, a distributed
+    data processing framework. Our framework is equipped to integrate machine learning
+    selection and different automated hyper-parameter tuning techniques: distributed
+    grid search, distributed random search and hyperband optimization. We demonstrate
+    the performance over state-of-the-art framework for Distributed ML optimization,
+    Transmogrify.
+
+
+    scientists with strong knowledge and good experience. Then, we are witnessing
+    a growing interest to support the process of building machine learning pipelines
+    with the presence of a human in the loop to be dramatically reduced. Particular,
+    AutoML techniques are enabling the widespread use of machine learning technique
+    by domain experts and non-technical users.
+
+
+    Recently, several frameworks have been designed to support Combined Selection
+    and Hyper-parameter tuning (CASH) [12], [14]. For example, Auto-Weka [6] is an
+    automation framework for the CASH problem that has been developed on top of the
+    popular machine learning library, Weka. It is based on Bayesian optimization using
+    model-based algorithm configuration (SMAC) and structured Pareto search [14].
+    We present AutoML framework that has been implemented on top of the popular python
+    scikit-learn machine learning library. In our work, we presented SmartML [6] a
+    package for CASH optimization using SMAC algorithm on top of R, a popular statistical
+    computing programming language.
+
+
+    # I. INTRODUCTION
+
+
+    Recently, we have witnessed a continuous increase in the size of data produced
+    by various fields of systems, devices and sources. It has been reported that there
+    are 25 quintillion bytes of data being generated over 90% of the world in 2020,
+    has been generated in the past two years. On the one hand, the more data there
+    is, the more the results and the results that machine learning can produce. In
+    this Big Data era, it is a winning goals lately achieved by machine learning and
+    deep learning techniques in a wide range of fields [15]. On the other hand, this
+    situation is increasingly contributing towards a potential data science crisis,
+    similar to the software crisis [5], due to the need of having an increasing number
+    of automated
+
+
+    We present D-SmartML, Scala-based Distributed AutoML, a machine learning package
+    implemented on top of Apache Spark, a distributed data processing framework. D-SmartML
+    is equipped with a machine learning mechanism [8] for automated algorithm selection
+    and supervised hyperparameter tuning techniques: grid search, random search and
+    hyperband optimization. As a distributed framework, D-SmartML enhances the power
+    of
+
+
+    > *1Forbes: How Much Data We Do Every Day May 21, 2018
+
+
+    2557-8411/S83/$31.00/2020
+
+    DOI 10.1109/ICDCS4774.2020.000115
+
+    1215
+
+
+    Authorized user limited to: University of Exeter. Download on May 31, 2021 at
+    04:03:03 UTC from IEEE Xplore. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: "# Algorithm 1: Hyperband Algorithm\n\n```\nInput : R, T, η, P\nOutput: Model\
+    \ with best performance\ninitialization s_{max} = ⌊|R|⌋\nfor s ∈ {s_{max}, s_{max}\
+    \ - 1, ..., 0}\n  if (T < Total(s)) then\n    n = ⌊s + 1⌋, r = R/s\n    / Start\
+    \ successive halving with (n, r) for T\n    while T < T\n    h = get(Hyperparameters,\
+    \ Configuration(n))\n    for i ∈ {0, ..., s}\n      n_i = n * r^i\n      r_i =\
+    \ r^i\n      M = evaluate_with_Time(Budget(r_i, T), h, P)\n      h = topK(M, ⌊n_i/k⌋)\n\
+    \    endfor\n  endif\nend\nreturn (best model)\n```\n\n![](img/29a2b2cbd7acd1fd203e1aa5bbc88f9d_1_0.png)\n\
+    \n# II. D-SMART ARCHITECTURE\n\ncomputing clusters to tackle the computational\
+    \ complexity\nof the AutoML on massive datasets.\n\nFigure 1 illustrates the components\
+    \ and framework\narchitecture of D-SMART consists of eleven classifiers. sparkML:\
+    \ Random\nForest, Logistic Regression, Decision Tree, Classifier\nceptron, Naive\
+    \ Bayes and Gradient-Boosted\nTrees. We have extended the package with the\nimplementation\
+    \ of classifiers: Linear Discriminative\nAnalysis and Quadratic Discriminative\
+    \ Analysis. Our library\nis extensible. Any new classifiers provided by sparkML\
+    \ or\nor customized implementations for Spark-based\ndistributed classifiers can\
+    \ be included.\n\nMeta-Learning is the process of learning from previous\\experience\
+    \ gained during various learning\nalgebras on different types of data, and reducing\n\
+    tneeded time to learn new tasks. For any Auto-\noptimization process, a goal is\
+    \ to effectively reduce the\nsearch space in order to make an efficient use of\
+    \ the\ntactic to select, or start with, with a few classifiers which\nis significant\
+    \ for the optimization process to provide\nthe higher potential to reduce the\
+    \ performance on the input\ndata when dealing with datasets. The crucial\nallenge\
+    \ as the optimization process would have\nto handle a large number of classifiers\
+    \ due to\nthe significant costs (e.g., time and computing resources)\nwith each\
+    \ configuration. In order to tackle\nthis challenge, we developed a Meta-Model\
+    \ for predicting\nthe best performers on given datasets, based on\nits features:\
+    \ number of instances, number of fe-\ntatures, classes, skewness and kurtosis\
+    \ of natural\nfeatures) [8], with that we have provided knowledge of\nhow the\
+    \ classifiers perform on similar meta-\ncharacteristics. To develop this meta-model,\
+    \ we selected\nt best accuracy achieved from a combination of\nhyparameters. Then,\
+    \ for each dataset, we calculated thenstandard deviation of the classifier accuracy\
+    \ results (and)\n\nwe labeled the dataset as Class 0 (Top Performer\nClassifier\
+    \ for the Dataset) if its accuracy\nthe is greater or equal to the maximum accuracy\n\
+    achieved by all classifiers c * std (is a constant), we labeled it as Class 1\
+    \ (Law\nPerformer Classifier for the Dataset).\n\nUsing the extracted information\
+    \ from the knowledge base,\nor our 50 experimental datasets, we fitted a model\
+    \ using\nGradient-Boosted Trees classifier for the top performers,\nusing the\
+    \ meta-features of the dataset- which effectively reduces the search space.\n\n\
+    The main objective of the hyperparameter optim-\ntization is to determine the\
+    \ performance of the\nlearning algorithm that can return the different\nperformance.\
+    \ D-SMART supports many techniques: Distributed Grid\nSearch [10], Random Search\
+    \ [1] and Hybrid [?\n\nThe Hyper optimization technique [7], for the\nofSuccessiveHalving\
+    \ algorithm. It runs multiple halving sessions where each\nsuses a different dataset\
+    \ and a different initial\nnumber of iterations to choose the best config sett-\\\
+    ion. As shown in Algorithm 1, the algorithm returns\nfour parameters:\n\n+   -\
+    \ R: defines the maximum amount of resources that can\nbe allocated to a single\
+    \ configuration, by we use\n100% of the data as a maximum resource that can be\n\
+    allocated to each trial (algorithm training).\n- j: controls the proportion of\
+    \ configurations discarded\nin each round of SuccessiveHalving."
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '• P: defines the maximum degree of parallelism: the inner loop, which
+
+
+    The algorithm consists of two loops: the SuccessiveHalving and the outer loop
+    that calls the inner loop with different budgets and number of hyper parameters.
+
+
+    We have used the Model Parallel capabilities in spark.ml to be able to train models
+    in parallel if the cluster has sufficient computing power. The library exposes
+    a parameter to control the number of jobs sent to the Spark scheduler which can
+    make better use of cluster resources.
+
+
+    AutoSkLearn (C columns) can provide a competitive performance for the relatively
+    small datasets. As the size of the datasets grow, the centralized framework is
+    outperformed by the distributed framework, especially for the largest datasets
+    (20.7 GB and 24.6 GB), the centralized solution won Out-Of-Memory (OOM). The result
+    also shows that the hybrid algorithm (i columns) for the different datasets and
+    time budgets. In particular, for 7, 10, 11 and 12 for the times of 100, 300, 600
+    and 1800 seconds the result is very best. The random search algorithm was not
+    able to complete its models training for four and three datasets (with 0% accuracy)
+    within the time budgets of 100 and 300 seconds. Hyperband algorithm was not able
+    to complete models for only two and three datasets. Both distributed algorithms
+    were able to handle all datasets at the time budgets of 600 and 1800 seconds which
+    reflects the scalability advantage of the distributed systems.
+
+
+    # III. EXPERIMENTAL EVALUATION
+
+
+    We have conducted experiments to evaluate the performance of D-SMartML. The experiments
+    ran on a Spark cluster, deployed on Google Cloud, with one master node with4 CPUs,
+    16 GB RAM and worker nodes. Each worker node has 8 CPUs, 30 GB RAM and 500GB HDD.
+    Our experiments have been conducted using 17 datasets from OpenML and UCI repositories.
+    The sizes of our datasets range from 2MB to 7.5GB.
+
+
+    A major factor for AutoML systems is the time budget which is allocated for the
+    search process to identify the best performing model. The higher the chance for
+    the AutoML system to explore various options in the search space and the higher
+    probability to get a better recommendation. However, the better the time budget,
+    the higher consumption cost, which could be translated into a monetary bill in
+    the case of cloud-based resources. Any AutoML search process is likely to identify
+    (near)optimal model in such a time. Thus, our first experiment has been designed
+    to compare the performance of two centralized framework, AutoSkLearn, with D-SmartML
+    implementation for the random search and hyperband algorithms (using four time
+    budgets: 100, 300, 600 and 1800 seconds). The grid search has been conducted as
+    it is designed to systematically attempt and evaluate all combinations of hyper-parameters
+    without consideration for the time budget. For each dataset, 80% of the data has
+    been used for the training phase and 20% for the testing phase.
+
+
+    Table 10 shows the centralized solution of
+
+
+    TransmogrAI is a Scale-based AutoML library, deployed by Salesforce, on Apache
+    Spark. The automate process of TransmogrAI is performed as a grid search. We compared
+    D-SmartML (using Hyperband) and TransmogrAI (Grid Search) using 15 datasets. This
+    experiment focuses on finding the best model for each dataset (based on accuracy)
+    in the shortest time. Therefore, we measured the time of each framework for the
+    different time budgets of 100, 300, 600 and 1800 seconds.
+
+
+    # IV. DEMO SCENARIO
+
+
+    D-SmartML was developed as a Scale-based, DSmartML published on the Maven repository.
+    In this experiment, we start by introducing all the challenges we face, the main
+    goals of our framework. In particular, we will demonstrate how centralized learning
+    libraries (e.g. Auto-Weka, Auto-Sklearn, SmartML) are not able to handle large
+    datasets. Then,
+
+
+    > https://www.openml.org/
+
+
+    > http://archive.uci.edu/ml/index.php
+
+
+    > The allocated computing resources (CPU, Memory) for the centralized tool is
+    equal to the amount of computing resources by the distributed framework
+
+
+    > https://autoai.com/
+
+
+    > We are reporting on a subset of the datasets to the space limitation.
+
+
+    > The best values for each comparison has been highlighted with bold font and
+    underlined
+
+
+    > https://github.com/salesforce/TransmogrAI
+
+
+    > The source code of the D-SmartML is available at: github.com/DataSystemsGroupUP/Distributed-SmartML,
+
+
+    > https://maven.apache.org/artifact/com.DataSystemsGroupUP/D-SmartML/0.0.1/
+
+
+    1217
+
+    Authorized license used limited to: University of Exeter. Deployed on May 31,
+    2021 at 04:03:03 UTC by IEEE X. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '| Dataset | 2 Class | 100 Seconds | 300 Seconds | 600 Seconds | 1800 Seconds
+    |
+
+    | --- | --- | --- | --- | --- | --- | --- |
+
+    | Poker Hand | 24 MB | 50.18% | 49.99% | 53.28% | 73.85% | 53.60% | 53.62% | 53.54%
+    |
+
+    | C.Card Fraud | 98 MB | 99.81% | 99.92% | 99.94% | 99.95% | 99.95% | 99.94% |
+    99.96% |
+
+    | BNG Amount | 120 MB | 99.8% | 99.98% | 99.98% | 99.98% | 99.98% | 99.98% | 99.98%
+    |
+
+    | BNG Mfeat | 540 MB | 9.20% | 73.11% | 76.94% | 78.75% | 76.94% | 79.96% | 78.12%
+    | 80.36% |
+
+    | BNG Image | 1.2 GB | 88.8% | 89.8% | 89.8% | 89.8% | 89.8% | 90% | 89.8% | 89.8%
+    |
+
+    | HEPMASS | 4.8 GB | 49.99% | 83.50% | 80.00% | 89.95% | 80.41% | 89.52% | 83.94%
+    | 85.12% |
+
+    | HIGGS-1 | 11.2 GB | 73.5% | 73.5% | 73.5% | 73.5% | 73.5% | 63.20% | 71.5% |
+    80.63% |
+
+    | HIGGS-2 | 20.7 GB | OOM | OOM | OOM | 0.00% | 0.00% | OOM | OOM | 81.87% |
+
+    | HEPMASS-2 | 24.8 GB | OOM | OOM | OOM | OOM | OOM | 61.17% | OOM | 80.59%
+
+
+    Table I: Performance Comparison: Hyperband VS Random Search
+
+
+    | Dataset | TransforAI | D-SmartML |
+
+    | --- | --- | --- | --- |
+
+    | Poker Hand | 285 | 900 | 971 |
+
+    | APS Fraud | 624 | 989 | 998 |
+
+    | Gas analysis | 206 | 994 | 999 |
+
+    | Credit Card Fraud | 112 | 991 | 993 |
+
+    | Detection of Illegal attacks | 525 | 998 | 999 |
+
+    | BNG Mfeat | 332 | 790 | 806 |
+
+    | Smart City | 718 | 809 | 823 |
+
+    | Sensor Flo4 | 640 | 809 | 823 |
+
+    | CoPelek | 710 | 639 | 710 |
+
+    | The bean machine | 1345 | 956 | 998 |
+
+    | CIFAR-10 | 2396 | 986 | 998 |
+
+    | SVHN | 5214 | 998 | 999 |
+
+    | LSTMs | 1195 | 7915 | 7964 |
+
+    | HEPMASS | 1492 | 838 | 806 |
+
+    | HIGGS-1 | 826 | 809 | 823 |
+
+    | HIGGS-2 | >10000 | 100 | 80.07%
+
+
+    Table II: Performance Comparison: D-SmartML VS TransforAI
+
+
+    we will show how our approach, with few lines of code¹¹⁴, can help to tackle this
+    challenge by demonstrating that the power of a computing cluster can help the
+    end-users identify the machine learning algorithms and their hyperparameter settings
+    that achieve optimal or near optimal results with little effort. We will also
+    show how the performance of different hyperparameter tuning techniques (grid search,
+    random search and hyperband) differ. The users will be able to monitor the progress
+    of the search process as the library returns a stream of models when the best
+    budget is discovered during any part of the search space.
+
+
+    Finally, as part of our objective, we will provide the audience with the chance
+    to compare the performance of D-SmartML using various datasets.
+
+
+    # REFERENCES
+
+
+    [1] James Briggs and Yoshua Beng. Random search for hyperparameter optimization.
+    Journal of Machine Learning Research, 12(1):281-305, 2011.
+
+
+    [2] Matthias Boehem et al. Systematic: machine learning search. PVLB, 6:1 (2013).
+
+
+    [3] Jalajna Dimissi, Radwa Elshy, and Sherif Saif. A decision support framework
+    for automated machine learning. IEEE Conference on AutoML in March, 2019.
+
+
+    [4] Matthias Feurer, Aaron Klein, Katherine Eggberger, Tobias Josef Springer,
+    Manuel Blum, and Frank Hunter. Efficient and robust automated machine learning.
+    In NIPS, 15, 2775–2783. MIT Press, 2015.
+
+
+    [5] Brian FitzGerald. Software craft 2.0. Computer, 45(2), 2014.
+
+
+    [6] Lars Lotharsch, Karl Thornton, Helen G. Foss, Frank Hunter, and Kevin Robyn.
+    Auto-meta 2.0: Automated machine search and hyperparameter optimization in. J.
+    Mach. Learn., 18(8):826–836, 2017.
+
+
+    [7] Li Li, Kevin G Johnson, Julia DeSalvo, Afif Ramirezzadeh, and Ahmet Talwalkar.
+    Hyperband: A bandit-based approach to hyperparameter optimization. JMLR, 2017.
+
+
+    [8] Mohamed Maher and Sherif Saif. Smartart: A machine learning-aware bandit-based
+    framework for automated feature selection and hyperparameter tuning for machine
+    learning. EDRT’19, 2019.
+
+
+    [9] Xiantang Meng et al. Machine learning in a search space. JMLR, 17(1), 2016.
+
+
+    [10] Douglas C Montgory. Design and analysis of experiments. John Wiley & sons,
+    2017.
+
+
+    [11] Sherif Saif and Albert Yomza. Encyclopedia of Big Data Technologies. Springer,
+    2019.
+
+
+    [12] Radwa Elshy, Mohamed Maher, and Sherif Saif. Auto-mated machine learning:
+    State-of-the-art approach and open tools. CoRR, arXiv:1906.02287, 2019.
+
+
+    [13] Joaquin Vancanish. Meta-learning: A survey. arxiv preprint arXiv:1810.0548,
+
+
+    [14] Marc-André Zolleller and Manuel Huber. Survey on automated machine learning.
+    arXiv:1904.12054, 2019.
+
+
+    ¹⁴The complete documentation of our library is available at: https://datasets.github.io/D-SmartML/docs
+
+
+    1218'
+  merge: -1
+  img_proc: true
