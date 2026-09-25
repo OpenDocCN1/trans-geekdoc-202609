@@ -1,0 +1,2 @@
++   [2020 年泛在人工智能国际会议 (ICPAI)(台湾台北 2020.12.3-2020.12.5) 2020 年泛在人工智能国际会议 (ICPAI) ｜｜ 论文集](README.md)
++   [2020 年泛在人工智能国际会议 (ICPAI)(台湾台北 2020.12.3-2020.12.5) 2020 年泛在人工智能国际会议 (ICPAI) ｜｜ 论文集](2020-international-conference-on-pervasive-artificial-intell.md)

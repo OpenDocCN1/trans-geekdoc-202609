@@ -1,0 +1,352 @@
+- pgno: 0
+  md: "# 2020 International Conference on Pervasive Artificial Intelligence (ICPAI)\n\
+    \n# # Portfolio Management based on Deep\nReinforcement Learning with Adaptive\
+    \ Sampling\n\n1st Yu-Hsiang Miao, Yi-Ting Hsiao\nInstitute of Information Management\n\
+    National Chiao Tung University\nHsinchu, Taiwan\njathan1011.iom09@nctu.edu.tw,\
+    \ tiffany.iom09@nctu.edu.tw\n\n2nd Szu-Hao Huang\nDepartment of Information Management\
+    \ and Finance\nNational Chiao Tung University\nHsinchu, Taiwan\nszahaohuang@nctu.edu.tw\n\
+    \n**Abstract—**Quantitative trading finds stable and profitable\ntrades by observing\
+    \ historical data through statistics\nor mathematics methods. However, existing\
+    \ studies are all\nufficient for the generation of trading strategies. Therefore,\n\
+    this study consists of the construction of the Dow Jones\nIndex target and application\
+    \ to the\nportfolio. The goal is to construct a portfolio of diverse\nfrom the\
+    \ constituent stocks, and this portfolio could achieve\nexcellent performance\
+    \ through our trading strategy. Also, this\nstudy proposes a sampling strategy\
+    \ that is\nworth learning by observing the learning condition in order\nto save\
+    \ computational time. From the result of the experiment,\nwe find that the model\
+    \ with our sampling strategy\nperformed 6-7% better than our baseline in terms\
+    \ of Sharpe\nratio.\n\n**Index Terms—**deep learning, Reinforcement, Portfolio-\n\
+    management.\n\ncomputing power in unfamiliar places. Also, through this\ndesign,\
+    \ the learning of general rules could be\naccelerated for the agent. Moreover,\
+    \ we also know that the role of\nt agent is not to press profit maximization,\
+    \ but to\nhave the ability to handle risk, because improvement\nto consider risk\
+    \ factors in the design of reward. Therefore,\nwe train the model of an embedding\
+    \ network to\nthe relationship between the trend and future price trends, after\n\
+    training the embedding network, a policy network is adopted in\nof fine-tune it.\
+    \ Finally, the whole design performs 6-7%\nb than plan methods in terms of Sharpe\
+    \ ratio, and reduced\national time compared with random sampling.\n\n# ## I. INTRODUCTION\n\
+    \nThere are many machine learning approaches to financial\ntmarket. However, the\
+    \ more the work try to predict\nthe movements of trends, and according to the\
+    \ Random\nwork theory, the historical trend is not the current trend.\nHistory\
+    \ depends highly rely on the accuracy of prediction.\nThis problem becomes extremely\
+    \ difficult\nto make the prediction.\n\nTo elaborate, portfolio research studies\
+    \ are code\nd in a limited environment. In other words, it is possible\nto train\
+    \ agents by portion selection. If we can\nthe generation problem that the model\
+    \ performs\nwell in the training phase, but it is however.\nto solve the problem.\
+    \ Our goal is to\nfind a basic trading strategy for any portfolio which makes\n\
+    selected by the system, the agent should have\nt ability to optimize the portfolio.\
+    \ In order to achieve the\ngoal. Then could be solved. However, train all\nbibility\
+    \ permutations are impossible tasks, to take a\nof time and computing power.\n\
+    \nTherefore, this paper provides an adaptive sampling\nto increase the chances\
+    \ of a portfolio agents that are not good\nthrough our sampling strategy, agents\
+    \ can be prevented\nfrom spending too much on the portfolio they have\nalready\
+    \ learned. Then, the agent spends more time and\n\n# ## II. RELATES TO Portfolio\
+    \ Management\n\nThe Modern Portfolio Theory or Mean-Variance Theory\nposed by\
+    \ Markowitz used a mathematical solution\nbuild a portfolio that maximizes the\
+    \ expected return and\nt given level of risk [1] into consideration. When\n variance\
+    \ analysis was widely accepted in the finance\nfield. The Mean-Variance theory\
+    \ has two\ncomponents, expected return, Variance differs\nthe risk of the asset,\
+    \ which implies the mathematical\nprobability of occurrence or negative outcome.\n\
+    To that theory, investors only have to consider\nt trade-off between mean and\
+    \ variance of the return\nand seek the maximum expected return for a given level\
+    \ of\nrisk to increase the certainty of adjusting the agent\nreturn. However,\
+    \ Mean-Variance Theory is better because it\nis possible to accurately control\
+    \ the future return\nand standard deviations of various assets, in practice,\n\
+    ve have accurately determining those methods. Moreover, this\nleads to very unstable\
+    \ results. Moreover, this\nwork depends on normal assumptions.\n\nIn mathematical\
+    \ and statistical methods, method-\nment investment is one of the most well-known\
+    \ quantitative\nment strategies. Financial markets, such as stock\nmarkets, and\
+    \ foreign exchanges offer many\ninvestment strategies. It is a strategy that uses\n\
+    moment effect to show the price stickers of stocks\nover a period, predicting\
+    \ the continuous trend of prices\nd then investing operations [2]. Rowenhorst\
+    \ finds similar\n\n978-1-6648-9823-9/25/30 ©2020 IEEE\nDOI 10.1109/ICPAI5196.2020.00031\n\
+    \n130\n\nAuthorized license used to: Central Michigan University. Published on\
+    \ May 14, 2021 at 06:11:22 UTC from IEEE Xplore. Restrictions apply."
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'momentum patterns for European and emerging stock markets and reported that
+    the momentum profit was not limited to a particular market, but was present in
+    all 12 European markets investigated [4].
+
+
+    reach all possible combinations during the training process. This task is very
+    time consuming and resource-intensive. Consequently, to let the agent learn the
+    generalized trading strategy using a diversity of environment is a challenging
+    problem. In section III-C, this paper proposes the sampling weight-adjusted method
+    to determine which portfolios are learning for the current agent. Next, the policy
+    is adopted, and it will be implemented by three standard reinforcement learning
+    algorithms. Policy Gradient, Actor-Critic, and Proximal Policy Optimization.
+
+
+    # B. Deep Learning Approach in Portfolio Management
+
+
+    In recent years, there are works of applying a financial-model reinforcement learning
+    with a deep learning learning to the portfolio optimization problem [6] [7]-[8].
+
+
+    Alahmadi [9] except the recent reinforcement learning framework by using a risk-adjusted
+    performance objective and the frequent maximum drawdown. [8] proposed a framework
+    that combined three components. Li [10] implemented various algorithms such as
+    DQN, DDPG, and PVP on portfolio optimization. The portfolio is randomly constructed
+    from the five Chinese stocks. It''s worth noting that this work uses the adversarial
+    training method which is pushing to make the price data in this distribution and
+    Sharpe ratio in the backend period. The outcome states that the DDPG has a better
+    performance compared with the DDPG or PPO algorithm.
+
+
+    # A. Action
+
+
+    In Fig. 2 the agent''s duty in the portfolio framework is to determine the portfolio
+    weight. The action space can be divided into discrete action and continuous action.
+    The policy adapts, the distribution
+
+
+    # III. Methodology
+
+
+    In this section, we provide a brief overview of the portfolio management system.
+    The system overview is shown in Figure 1. The discrepancy with previous portfolios
+    that is
+
+
+    ![](img/062c58f7966b76767b42466415b418f4_1_0.png)
+
+
+    ![](img/062c58f7966b76767b42466415b418f4_1_1.png)
+
+
+    Since each agent is independent for each other, the network outputs the mu and
+    diagonal sigma. For the context, this paper adapts the task as an activation function
+    to control the value range from -1 to 1. For the output signal, this paper learns
+    as an activation function. The signal value range from zero to infinity which
+    indicates could be larger than 1. Because the mu could be only value within 1
+    to -1, this paper applies the clip function to limit the continuous value. In
+    the attempt of this, if policy does not use any activation function, it will be
+    very difficult to train. It is worth noting that the portfolio weight after the
+    transformation of software is the portfolio weight used only to interact with
+    the environment to get the portfolio reward. We should adjust the optimal weight
+    to update the policy network.
+
+
+    # B. Reward Function
+
+
+    Our reward design only considers profit. To maximize the long-term reward, Each
+    step reward is rt, which is expressed as the portfolio value from time t+1 to
+    t. The desired policy of the agent is to choose a series of actions to maximize
+    the accumulated reward over time. In long-term portfolio management, we pursue
+    the highest portfolio value pt. The immediate reward for each step is rt = pt+1-pt.
+    Considering the
+
+
+    ![](img/062c58f7966b76767b42466415b418f4_1_2.png)
+
+
+    work''s primary settings are to find a generalized trading strategy based on limited
+    training and multiple portfolio pools. The implication is that we cannot adopt
+    violent solutions to
+
+
+    131'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "long reward with the discount factor, we can ensure the cumulative reward $R_t$\n\
+    \n```\n$R(st_t, at_t, ... , st_{t+j1}, at_{t+j1}) = \\sum_{i=0}^{j1} \\gamma^i\
+    \ r_{t+i} \\quad (1)$\n```\n\nWhere $\\gamma$ is the discount factor, considering\
+    \ the cumulative rewards with it, we should not take the profitability of the\
+    \ policy which is too far into account, because the profit at that time has been\
+    \ affected by other decision points. Hence we utilize the discount factor to reduce\
+    \ the influence of the long-term.\n\n# C. Adaptive Sampling Strategy\n\nOur sampling\
+    \ strategy is coming from the idea of Adaboost. Adapun is an boosting improvement\
+    \ algorithm. The goal is to increase the weight of the errors which are easily\
+    \ corrected by the first classifiers, so that each time the new classifier is\
+    \ trained, it will be focused on the samples that are hard to classify. Each classifier\
+    \ uses a weighted voting mechanism instead of average voting, and only classifiers\
+    \ with higher weight are greater. The policy is made up of all the classifiers\
+    \ which are also classified as part of the large number of samples. With this,\
+    \ we will make the following discussion based on whether the sampling weight of\
+    \ each company is the same on the different trading days or.\n\n# IV. Experiment\n\
+    \n# A. The Datasets\n\nThe price data used in this work comes from Wharton Research\
+    \ Services (WRDS). We use the database which is called Trade and Quote. The data\
+    \ frequency is regular and spans from 2017-01-03 to 2017-12-29 for a total of\
+    \ 251 trading days. Daily trading hours are from 9:30 am to 4:00 pm.\n\n# TABLE\
+    \ I\nSHARP RATIO FOR SAMPLING IN 2017\n\n| Test set | Sample 1 PG | AC | Sample\
+    \ 2 PG | AC |\n|---|---|---|---|--|\n| 0 | 0.31 | 0.12 | 0.35 | 0.19 | 0.37 |\n\
+    | 1 | 0.49 | 0.32 | 0.35 | 0.41 | 0.35 |\n| 2 | -0.01 | 0.06 | 0.12 | 0.19 | 0.19\
+    \ |\n| 3 | 0.41 | 0.31 | 0.43 | 0.46 | 0.34 |\n| 4 | 0.27 | 0.34 | 0.37 | 0.37\
+    \ | 0.36 |\n| 5 | 0.25 | 0.25 | 0.23 | 0.16 | 0.23 |\n| 6 | 0.23 | 0.22 | 0.24\
+    \ | 0.22 | 0.24 |\n| 7 | 0.35 | 0.31 | 0.26 | 0.29 | 0.31 |\n| 8 | 0.02 | 0.08\
+    \ | 0.01 | 0.11 | 0.05 |\n| 9 | 0.19 | 0.19 | 0.23 | 0.35 | 0.25 |\n| 10 | -0.05\
+    \ | -0.05 | -0.01 | -0.01 | -0.01 |\n| 11 | 0.29 | 0.29 | 0.25 | 0.29 | 0.25 |\n\
+    | 12 | 0.06 | 0.02 | 0.04 | 0.02 | 0.04 |\n| 13 | -0.04 | -0.05 | -0.06 | -0.02\
+    \ | -0.11 |\n| 14 | 0.19 | 0.15 | 0.13 | 0.18 | 0.12 |\n| 15 | 0.17 | 0.14 | 0.15\
+    \ | 0.17 | 0.13 |\n| 16 | -0.16 | -0.02 | -0.03 | -0.02 | -0.06 |\n| 17 | 0.04\
+    \ | 0.17 | 0.12 | 0.15 | 0.16 |\n| 18 | 0.14 | 0.12 | 0.16 | 0.16 | 0.13 |\n|\
+    \ 19 | 0.06 | 0.06 | 0.12 | 0.15 | 0.15 |\n| 20 | 0.26 | 0.34 | 0.31 | 0.41 |\
+    \ 0.36 |\n| 21 | 0.02 | 0.27 | 0.32 | 0.41 | 0.37 |\n| 22 | -0.06 | 0.16 | 0.11\
+    \ | 0.17 | 0.07 |\n| 23 | 0.01 | 0.16 | 0.16 | 0.19 | 0.13 |\n| 24 | 0.07 | 0.14\
+    \ | 0.18 | 0.14 | 0.12 |\n| 25 | 0.26 | 0.21 | 0.33 | 0.32 | 0.33 |\n| 26 | -0.06\
+    \ | 0.07 | 0.15 | 0.17 | 0.02 |\n| 27 | 0.07 | 0.17 | 0.24 | 0.27 | 0.22 |\n|\
+    \ 28 | -0.01 | 0.15 | 0.18 | 0.20 | 0.25 |\n| 29 | 0.14 | 0.14 | 0.16 | 0.29 |\
+    \ 0.32 |\n| 30 | 0.12 | 0.17 | 0.19 | 0.18 | 0.23 |\n\n# B. Experiment Setting\n\
+    \nThis section will outline our experimental parameters. A portfolio contains\
+    \ five assets. The first parameter is assets number $m$, and it is set to 5. Due\
+    \ to the diversity of the whole world, we have a lot of different portfolios when\
+    \ we use our models. The number of various portfolios that we call stochastic\
+    \ policy, which is set to 500 in the above process, will have many variances.\
+    \ We need to repeat each policy many times to get a more accurate expected value.\
+    \ In other words, we will run workers (sample policy) to collect transaction and\
+    \ calculate the average performance of the agent. The number of times of $U_i$\
+    \ is set to 10 for the process that an agent collects updates and updates the\
+    \ model. After five updates, the policy will be re-selected. The process of model\
+    \ training is the same as above. Each agent collects one\n\nexperience like as\
+    \ we mentioned in our goal, we have to learn a general trading strategy under\
+    \ a limit ratio. The number of limit is set to 1. If the agent could achieve excellent\
+    \ performance in the training interval, this passes reveals that the agent is\
+    \ very powerful so can handle any portfolio optimization problem. Therefore, the\
+    \ testing period is the same as the training period. We will randomly select 30\
+    \ portfolios and each portfolio consists of five assets as mentioned above. For\
+    \ tricky trading days, which is from 2017-01-03 to 2017-03-27. The following experiments\
+    \ will use the settings to compare our results.\n\n# C. Portfolio Performance\
+    \ Measurement\n\nIn terms of portfolio measurement, this paper will use the following\
+    \ indicators to measure its performance. Sharpe ratio is used to measure the performance\
+    \ of an investment by taking its risk into account and is defined as:\n\n```\n\
+    $Sharpe = \\frac{E[\\rho_p - \\rho_f]}{\\sqrt{Var(\\rho_p - \\rho_f)}} \\quad\
+    \ (2)$\n```\n\nwhere $\rho_p$ is the periodic return, $\rho_f$ is the risk-free\
+    \ rate of return. The higher the Sharpe ratio, the more returns are earned under\
+    \ each"
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# TABLE B
+
+    PROFIT BY SAMPLING METHOD IN
+
+
+    | Test set | original AC | original PG | sample 1 AC | sample 1 PG | sample 2
+    AC | sample 2 PG |
+
+    |---|---|---|---|---|---||
+
+    | | 831.66 | 283.97 | 762.48 | 759.09 | 490.14 | 979.81 |
+
+    | 1 | 1097.78 | 282.90 | 784.72 | 552.11 | 1064.13 | 578.06 |
+
+    | 2 | 963.99 | 275.57 | 792.25 | 548.22 | 993.32 | 606.36 |
+
+    | 3 | 831.59 | 258.69 | 801.75 | 718.77 | 734.19 | 836.45 |
+
+    | 4 | 1205.92 | 310.66 | 795.17 | 582.32 | 1309.66 | 710.22 |
+
+    | 5 | 992.27 | 501.28 | 658.01 | 604.57 | 638.81 | 529.66 |
+
+    | 6 | 780.00 | 554.56 | 885.11 | 797.28 | 897.72 | 882.78 |
+
+    | 7 | 1330.59 | 468.32 | 806.44 | 912.95 | 1452.13 | 945.28 |
+
+    | 8 | 59.43 | 176.18 | 314.26 | 229.96 | 106.41 | 385.75 |
+
+    | 9 | 15.72 | 309.41 | 381.54 | 518.29 | 531.39 | 851.33 |
+
+    | 10 | 3021.18 | 406.06 | 848.56 | 552.18 | 2006.45 | 1033.17 |
+
+    | 11 | 719.77 | 614.82 | 532.12 | 629.18 | 519.18 | 1113.12 |
+
+    | 12 | 124.68 | 218.56 | 1058.48 | -115.11 | -559.22 | -462.36 |
+
+    | 13 | 511.27 | 305.56 | 329.36 | 356.29 | 598.22 | 928.13 |
+
+    | 14 | 3006.18 | 412.16 | 822.44 | 598.28 | 3011.18 | 1214.53 |
+
+    | 15 | 450.05 | 73.3 | 74.82 | -554.04 | -148.42 | 639.39 |
+
+    | 16 | 1309.15 | 473.39 | 404.45 | 207.33 | 1381.12 | 204.14 |
+
+    | 17 | 182.26 | 120.24 | 274.31 | 278.42 | 264.11 | 798.22 |
+
+    | 18 | 1106.98 | 311.44 | 334.45 | 302.63 | 1253.12 | 667.48 |
+
+    | 19 | 539.68 | 363.33 | 781.43 | 800.05 | 1062.29 | 978.13 |
+
+    | 20 | 342.75 | 271.17 | 478.67 | 450.81 | 184.55 | 515.55 |
+
+    | 21 | 130.69 | 436.28 | 447.32 | 516.12 | 438.12 | 555.12 |
+
+    | 22 | 215.74 | 344.11 | 333.45 | 402.68 | 297.25 | 687.47 |
+
+    | 23 | 3011.18 | 412.16 | 806.88 | 744.79 | 321.11 | 648.61 |
+
+    | 24 | -244.45 | 309.79 | 218.84 | 477.97 | 238.17 | 971.47 |
+
+    | 25 | 232.59 | 391.41 | 602.45 | 708.03 | 577.54 | 810.19 |
+
+    | 26 | 1337.65 | 406.36 | 796.92 | 855.12 | 1433.12 | 1012.12 |
+
+    | 27 | 370.01 | 308.38 | 498.52 | 451.92 | 448.53 | 638.56 |
+
+    | 28 | 208.59 | 415.32 | 419.20 | 421.76 | 427.88 | 453.03 |
+
+
+    In sample I. The sharp value of the 20 portfolios with the sampling method is
+    higher than the random sampling. The sharp profit has grown by 7%. sample1 has
+    nearly 70% of the portfolios is better than PG, and sample2 has nearly 66% of
+    the portfolios is better than PG.
+
+
+    In view, as first aspect of portfolio management, AC shows far considerably possible,
+    AC sample2 has the sharp score in terms of sampling but the profit factor is AC.
+    Unlike others, the agents applied to the sampling strategy are better than any
+    PG in algorithms.
+
+
+    # V. CONCLUSION
+
+
+    This work proposes an adaptive sampling strategy for portfolio management to determine
+    which value is worth observing by the learning condition.
+
+
+    From the result of the experiment, we could observe that the adaptive sampling
+    strategy is better than the random sampling strategy. The sharp factor is reduced
+    by 6%-
+
+
+    The outcome of our demonstration proves that our proposed framework using the
+    sampling strategy is capable of obtaining reliable strategies.
+
+
+    # ACKNOWLEDGMENT
+
+
+    The authors would like to thank the Ministry of Science and Technology, for supporting
+    this research under contract number MOST 2021-E-009-01 and MOST 2019-E-009-05.
+    This work was also supported by Artificial Intelligence Research Foundation (PARIF).
+
+
+    per unit of risk. The Profit Factor is the ratio of
+
+
+    > ProfitFactor = \frac{Profit}{GrossLoss}
+
+
+    # D. Performance of Adaptive Sampling Strategy
+
+
+    Our idea of adaptive sampling strategy is to spend more time to learn with those
+    portfolios that the agent is not familiar with or not. In Section III-C, the outcome
+    of our result is presented in table 1 and II. The company''s sampling design weight
+    is compared with two categories: different days having different weight or not.
+    In the first case, the company''s sampling weight is the same as in the different
+    days, we represent it as sample1 in the following table and description. In the
+    second case, the company''s sampling weight is different in the different days;
+    we represent it as sample2. To verify our sampling mechanism, we will use the
+    Actor critic and Policy gradient algorithm. The method is the same as the previous
+    experiment. In this experiment, we have six models in focus, namely PG, AC, PG
+    sample1, PG sample2, and AC sample2. They are compared with original, which means
+    the network without the adaptive sampling strategy.'
+  merge: -1
+  img_proc: true
