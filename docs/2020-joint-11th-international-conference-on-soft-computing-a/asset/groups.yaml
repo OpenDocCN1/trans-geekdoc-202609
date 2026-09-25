@@ -1,0 +1,875 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # Classification of Worries and Consultations with School Refusal Students Using
+    Machine Learning
+
+
+    Rikuto Ishikura
+
+    Mashiro Takeda and Shinji Iwasashita
+
+    Graduate of Biomics, Computer and Media Sciences
+
+    School of Computer Science
+
+    Tokyo University of Technology
+
+    Tokyo University of Technology
+
+    Tokyo, Japan
+
+    g22120081e@edu.teu.ac.jp {takeda, Iwasashita}@sf.teu.ac.jp
+
+
+    **Abstract**—This study proposes a classification method for the automatic tagging
+    of posts on an Internet bulletin board for school refusal students. Four tags
+    are defined based on the concern: health, family, and study. A status is generated
+    for each tag, and multiple tags are assigned. The results of classification showed
+    that the accuracy of each class was more than expected, but precision was low
+    for the others than Family. As the solutions, by reviewing the dataset and changing
+    the method, we will choose the method that is most appropriate for each class.
+
+
+    **Index Terms**—classification, machine learning, sentence
+
+
+    I. INTRODUCTION
+
+    Non attendance in Japan is increasing every year. There were 164,558 non-attending
+    students in 2018 according to the Ministry of Education, and the rate of increase
+    was as high as 14.2% in the past [1], which is a serious problem. Moreover, there
+    are other types of students who are not included in the definition of “Non-attendance”
+    by the Ministry of Education [2]. In this study we define school refusal students
+    as elementary students who have anxiety or worries about going to school.
+
+    Sugiyama indicated that external factors were the main reasons for school refusal.
+    In addition, many of them have a poor physical condition that cannot control.
+    Sugiyama suggests the period of school refusal is a “maintenance period”, while
+    Haaito calls it a “recharging period”. They also stated that it is important to
+    support children by not forcing them to do things they do not want to do and by
+    allowing them to do the things they want to do. The most effective support is
+    to trust the child and wait for the completion of the time without providing assistance.
+
+    During the maintenance and recharging period, when children refuse spontaneously
+    to discuss their concerns, their parents and teachers should also be a good mentor.
+    However, sometimes students cannot discuss cause of of problems because of a teacher
+    or parent, or due to a psychological problem. In such cases, they can discuss
+    their worries with a counselor or support group, person service, or on
+
+
+    networking sites or Internet bulletin board (BBSs) for school refusal students.
+    In this study, we consider the use of a BBS.
+
+    A BBS for school refusal students enables them to post their worries and concern
+    about other posts. Comments can be made by users who have had similar experiences
+    or worries. Those who do not post can also read about those with similar problems.
+    Reading that makes them feel better in that they are not the only ones with worries.
+
+    This study proposes a classification method for the automatic tagging of posts
+    on BBS for school refusal students. The proposed method enables us to categorize
+    the experiences and worries into posts easily. The students will be able to read
+    many posts with similar problems. In cases when there are multiple factors of
+    concern in a single post, multiple tags can be assigned to a single post.
+
+
+    II. PROPOSED METHOD
+
+
+    Tags are automatically assigned using machine learning. The dataset contains the
+    postings of two BBS for school refusal students [6], [7].
+
+    Only refused school high students discussing his or own concerns were extracted.
+    As a result, 1,599 sentences were extracted. The selected sentences were annotated
+    by one person. Four tags were defined based on the reasons for the refusal there
+    as follows:
+
+
+    +   1) Friend
+
+    (friends, sisters, juniors, bullying, class, etc.)
+
+    2) Teacher
+
+    (teacher, etc.)
+
+    3) Family
+
+    (parent, father, brother, sister, etc.)
+
+    4) Study
+
+    (schoolwork, examination, etc.)
+
+
+    Each tag is assigned to a text when it contains a problem or consultation related
+    to a post. Multiple tags are allowed. The number of each tag is shown in Table
+    I.
+
+    Each sentence is morphologically analyzed using GiNZA, and the words of nouns,
+    adjectives, and verbs are extracted. The words are then vectorized with TF-IDF.'
+  - '[PAGE 1]
+
+
+    # TABLE I
+
+    NUMBER OF EACH TAG
+
+
+    | Friend | Teacher | Family | Study |
+
+    |---|---|---|--|
+
+    |767 | 203 | 602 | 213 |
+
+
+    only problems with friends, including bullying. The Friend classifier 16 sentences
+    that contained the word “death” as incorrect tags.
+
+
+    # TABLE III
+
+    CONFUSION MATRIX (%)
+
+
+    | | Friend | Teacher | Family | Study |
+
+    |---|---|---|---|--|
+
+    | Prediction | | 38.7 | 52.5 | 18.5 |
+
+    | Result | 60.9 | 22.2 | 20.6 | 19 |
+
+    | Family | 62.5 | 18.75 | 28.13 |
+
+
+    A Naive Bayesian classifier is used and a multimodal model is adopted the classification
+    accuracy of the model is higher when the number of words is large. A classifier
+    is generated for each tag, and each sentence passes through all classifiers, when
+    multiple tags can be assigned to the number.
+
+
+    We use cross-validation to evaluate the accuracy of the classifier. The dataset
+    tagged and un-tagged in a 1:1 ratio, is split into training and validation data.
+    Multiple trials and verifications are performed each.
+
+
+    # A. Verification of Single-Tag Classification
+
+
+    To verify the accuracy of the classifier for each tag. 75% of the dataset is used
+    for training and 25% is for validation. Four trials are performed.
+
+
+    # B. Verification of Multi-Tag Classification
+
+
+    162 sentences with multiple tags in the entire dataset are divided into three
+    sets of average number of tags in each is as similar as possible. One set is used
+    for validation and the other two are used for testing. The same process is performed
+    for all combinations (Test1, Test2, ...).
+
+
+    # B. Multi-Tag Classification
+
+
+    The evaluation of the multi-tag classifier is shown in Table IV. The average number
+    of sentences that correctly predicted all tags was instances of 54 sentences.
+    16.6% on accuracy, and average was 27.8% for Test 1. An average of 26 sentences
+    with 2 or 3 tags were predicted as incorrect. Since the theoretical value of correctness
+    against the accuracy of the single-tag classifier is a simultaneous probability,
+    it can be used to determine 45.43. Therefore, the theoretical values were not
+
+
+    # TABLE IV
+
+    NUMBER OF WORDS PREDICT IS CORRECT
+
+
+    | | 4 | 3 | 2 | 1 | 0 |
+
+    |---|---|---|---|---||}{
+
+    | Test 1 | 15.0 | 22.0 | 13.0 | 4.0 | 0.0 |
+
+    | Test 2 | 3.0 | 17.0 | 17.0 | 1.0 | 1.0 |
+
+    | Test 3 | 4.0 | 17.0 | 20.0 | 11.0 | 2.0 |
+
+    | Average | 9.0 | 18.7 | 16.7 | 8.6 | 1.0 |
+
+
+    # III. EVALUATION
+
+
+    The accuracy of single-tag and multi-tag classification is evaluated by each evaluation
+    of.
+
+
+    # A. Single-Tag Classification
+
+
+    The evaluation of the single-tag classifier is shown in Table II. The accuracy
+    for all were more than 70%. In this, it is necessary to tune the classifier with
+    an emphasis on precision, so to prevent predicting incorrect tags. However, recall
+    oriented results were obtained for all classifiers except Family.
+
+
+    # TABLE II
+
+    EVALUATION OF SINGLE-TAG CLASSIFICATION (%)
+
+
+    | Friend | Teacher | Family | Study |
+
+    |---|---|---|--|
+
+    | Accuracy | 80.96 | 70.69 | 83.2 | 56.7 |
+
+    | Precision | 79.25 | 69.82 | 85.3 | 18.5 |
+
+    | Recall | 84.00 | 73.13 | 81.8 | 37.6 |
+
+
+    Table III shows the confusion matrix of tags predicted by the classifiers. All
+    classifiers tend to predict a sentence with Friend. The Friend classifier also
+    tends to predict that sentences with Family. It was discovered that 9 of the sentences
+    judged as incorrect in the Family tag were annotation errors. Similarly, there
+    were annotation errors in 4 sentences from the Study tag. The Teacher classifier
+    describing 18 sentences as incorrect tags
+
+
+    # IV. DISCUSSION
+
+
+    All single-tag classifiers had an accuracy of 70% for all tags, indicating that
+    classification was possible. Only the Family classifier was oriented. There are
+    three reasons for this:
+
+    The first is the effect of variation. Words in Japanese that are used to refer
+    to the same person. For example, one could be referred to as “parents” or “爸爸”
+    or “妈妈”. So, and is it is also possible to refer as “parents” or “father” or “mother”
+    in the text. However, it is necessary to vary the use of words depending on the
+    granularity of classification. For example, the Family classifier predicted Sibling
+    instead of Family. To refine the classification it is necessary to reduce the
+    granularity of words like “parents” and “sibling”.
+
+    Since the dataset used for untagged Friend and Family. The number of sentences
+    with these tags increases because the sentences were extracted randomly. As a
+    result, text which has the highest number of'
+  md: '
+
+    # Classification of Worries and Consultations with School Refusal Students Using
+    Machine Learning
+
+
+    Rikuto Ishikura
+
+    Mashiro Takeda and Shinji Iwasashita
+
+    Graduate of Biomics, Computer and Media Sciences
+
+    School of Computer Science
+
+    Tokyo University of Technology
+
+    Tokyo, Japan
+
+    g22120081e@edu.teu.ac.jp {takeda, Iwasashita}@sf.teu.ac.jp
+
+
+    **Abstract**—This study proposes a classification method for the automatic tagging
+    of posts on an Internet bulletin board for school refusal students. Four tags
+    are defined based on the concern: health, family, and study. A status is generated
+    for each tag, and multiple tags are assigned. The results of classification showed
+    that the accuracy of each class was more than expected, but precision was low
+    for the others than Family. As the solutions, by reviewing the dataset and changing
+    the method, we will choose the method that is most appropriate for each class.
+
+
+    **Index Terms**—classification, machine learning, sentence
+
+
+    I. INTRODUCTION
+
+    Non-attendance in Japan is increasing every year. There were 164,558 non-attending
+    students in 2018 according to the Ministry of Education, and the rate of increase
+    was as high as 14.2% in the past [1], which is a serious problem. Moreover, there
+    are other types of students who are not included in the definition of “Non-attendance”
+    by the Ministry of Education [2]. In this study we define school refusal students
+    as elementary students who have anxiety or worries about going to school.
+
+
+    Sugiyama indicated that external factors were the main reasons for school refusal.
+    In addition, many of them have a poor physical condition that cannot control.
+    Sugiyama suggests the period of school refusal is a “maintenance period”, while
+    Haaito calls it a “recharging period”. They also stated that it is important to
+    support children by not forcing them to do things they do not want to do and by
+    allowing them to do the things they want to do. The most effective support is
+    to trust the child and wait for the completion of the time without providing assistance.
+
+
+    During the maintenance and recharging period, when children refuse spontaneously
+    to discuss their concerns, their parents and teachers should also be a good mentor.
+    However, sometimes students cannot discuss cause of problems because of a teacher
+    or parent, or due to a psychological problem. In such cases, they can discuss
+    their worries with a counselor or support group, person service, or on networking
+    sites or Internet bulletin board (BBSs) for school refusal students. In this study,
+    we consider the use of a BBS.
+
+
+    A BBS for school refusal students enables them to post their worries and concern
+    about other posts. Comments can be made by users who have had similar experiences
+    or worries. Those who do not post can also read about those with similar problems.
+    Reading that makes them feel better in that they are not the only ones with worries.
+
+
+    This study proposes a classification method for the automatic tagging of posts
+    on BBS for school refusal students. The proposed method enables us to categorize
+    the experiences and worries into posts easily. The students will be able to read
+    many posts with similar problems. In cases when there are multiple factors of
+    concern in a single post, multiple tags can be assigned to a single post.
+
+
+    II. PROPOSED METHOD
+
+
+    Tags are automatically assigned using machine learning. The dataset contains the
+    postings of two BBS for school refusal students [6], [7]. Only refused school
+    high students discussing his or own concerns were extracted. As a result, 1,599
+    sentences were extracted. The selected sentences were annotated by one person.
+    Four tags were defined based on the reasons for the refusal there as follows:
+
+
+    - 1) Friend (friends, sisters, juniors, bullying, class, etc.)
+
+    - 2) Teacher (teacher, etc.)
+
+    - 3) Family (parent, father, brother, sister, etc.)
+
+    - 4) Study (schoolwork, examination, etc.)
+
+
+    Each tag is assigned to a text when it contains a problem or consultation related
+    to a post. Multiple tags are allowed. The number of each tag is shown in Table
+    I. Each sentence is morphologically analyzed using GiNZA, and the words of nouns,
+    adjectives, and verbs are extracted. The words are then vectorized with TF-IDF.
+
+
+    # TABLE I
+
+    NUMBER OF EACH TAG
+
+
+    | Friend | Teacher | Family | Study |
+
+    |---|---|---|---|
+
+    | 767 | 203 | 602 | 213 |
+
+
+    only problems with friends, including bullying. The Friend classifier 16 sentences
+    that contained the word “death” as incorrect tags.
+
+
+    # TABLE III
+
+    CONFUSION MATRIX (%)
+
+
+    | | Friend | Teacher | Family | Study |
+
+    |---|---|---|---|---|
+
+    | Prediction | | 38.7 | 52.5 | 18.5 |
+
+    | Result | 60.9 | 22.2 | 20.6 | 19 |
+
+    | Family | 62.5 | 18.75 | 28.13 |
+
+
+    A Naive Bayesian classifier is used and a multimodal model is adopted the classification
+    accuracy of the model is higher when the number of words is large. A classifier
+    is generated for each tag, and each sentence passes through all classifiers, when
+    multiple tags can be assigned to the number.
+
+
+    We use cross-validation to evaluate the accuracy of the classifier. The dataset
+    tagged and un-tagged in a 1:1 ratio, is split into training and validation data.
+    Multiple trials and verifications are performed each.
+
+
+    ### A. Verification of Single-Tag Classification
+
+
+    To verify the accuracy of the classifier for each tag. 75% of the dataset is used
+    for training and 25% is for validation. Four trials are performed.
+
+
+    ### B. Verification of Multi-Tag Classification
+
+
+    162 sentences with multiple tags in the entire dataset are divided into three
+    sets of average number of tags in each is as similar as possible. One set is used
+    for validation and the other two are used for testing. The same process is performed
+    for all combinations (Test1, Test2, ...).
+
+
+    ### B. Multi-Tag Classification
+
+
+    The evaluation of the multi-tag classifier is shown in Table IV. The average number
+    of sentences that correctly predicted all tags was instances of 54 sentences.
+    16.6% on accuracy, and average was 27.8% for Test 1. An average of 26 sentences
+    with 2 or 3 tags were predicted as incorrect. Since the theoretical value of correctness
+    against the accuracy of the single-tag classifier is a simultaneous probability,
+    it can be used to determine 45.43. Therefore, the theoretical values were not
+
+
+    # TABLE IV
+
+    NUMBER OF WORDS PREDICT IS CORRECT
+
+
+    | | 4 | 3 | 2 | 1 | 0 |
+
+    |---|---|---|---|---|
+
+    | Test 1 | 15.0 | 22.0 | 13.0 | 4.0 | 0.0 |
+
+    | Test 2 | 3.0 | 17.0 | 17.0 | 1.0 | 1.0 |
+
+    | Test 3 | 4.0 | 17.0 | 20.0 | 11.0 | 2.0 |
+
+    | Average | 9.0 | 18.7 | 16.7 | 8.6 | 1.0 |
+
+
+    III. EVALUATION
+
+
+    The accuracy of single-tag and multi-tag classification is evaluated by each evaluation
+    of.
+
+
+    ### A. Single-Tag Classification
+
+
+    The evaluation of the single-tag classifier is shown in Table II. The accuracy
+    for all were more than 70%. In this, it is necessary to tune the classifier with
+    an emphasis on precision, so to prevent predicting incorrect tags. However, recall
+    oriented results were obtained for all classifiers except Family.
+
+
+    # TABLE II
+
+    EVALUATION OF SINGLE-TAG CLASSIFICATION (%)
+
+
+    | Friend | Teacher | Family | Study |
+
+    |---|---|---|---|
+
+    | Accuracy | 80.96 | 70.69 | 83.2 | 56.7 |
+
+    | Precision | 79.25 | 69.82 | 85.3 | 18.5 |
+
+    | Recall | 84.00 | 73.13 | 81.8 | 37.6 |
+
+
+    Table III shows the confusion matrix of tags predicted by the classifiers. All
+    classifiers tend to predict a sentence with Friend. The Friend classifier also
+    tends to predict that sentences with Family. It was discovered that 9 of the sentences
+    judged as incorrect in the Family tag were annotation errors. Similarly, there
+    were annotation errors in 4 sentences from the Study tag. The Teacher classifier
+    18 sentences as incorrect
+
+
+    IV. DISCUSSION
+
+
+    All single-tag classifiers had an accuracy of 70% for all tags, indicating that
+    classification was possible. Only the Family classifier was oriented. There are
+    three reasons for this:
+
+    The first is the effect of variation. Words in Japanese that are used to refer
+    to the same person. For example, one could be referred to as “parents” or “father”-“mother”
+    equivalents? No, the text says “爸爸” or “妈妈”.
+
+    The first is the effect of variation. Words in Japanese that are used to refer
+    to the same person. For example, one could be referred to as “parents” or “爸爸”
+    or “妈妈”. So, and it is also possible to refer as “parents” or “father” or “mother”
+    in the text.
+
+    However, it is necessary to vary the use of words depending on the granularity
+    of classification. For example, the Family classifier predicted Sibling instead
+    of Family.
+
+    Since the dataset used for untagged Friend and Family. The number of sentences
+    with these tags increases because the sentences were extracted randomly. As a
+    result, text which has the highest number of
+
+    '
+  mdcn: '
+
+
+    # 基于机器学习的拒学学生烦扰与咨询帖文分类研究
+
+
+    Ishikura Rikuto
+
+    Takeda Mashiro 和 Iwasashita Shinji
+
+    东京工业大学 计算机与媒体科学学院 生物信息学系研究生
+
+    计算机科学学院
+
+    日本，东京
+
+    g22120081e@edu.teu.ac.jp {takeda, Iwasashita}@sf.teu.ac.jp
+
+
+    **摘要**—本研究提出了一种针对拒学学生网络公告板帖子进行自动标签分类的分类方法。根据关注点，定义了四个标签：健康、家庭和学习。为每个标签生成一个状态，并分配了多个标签。分类结果显示，每个类别的准确率均高于预期，但除“家庭”类外，其他类别的精确率较低。作为解决方案，通过回审数据集并调整方法，我们将为每个类别选择最合适的方法。
+
+
+    **索引词**—分类，机器学习，句子
+
+
+    I. 引言
+
+    日本的缺勤上学人数每年都在增加。根据文部科学省的数据，2018年共有164,558名缺勤学生，在过去的增长率高达14.2%[1]，这是一个严峻的问题。此外，还有其他未包含在文部科学省“缺勤”定义中的学生类型[2]。在本研究中，我们将拒学学生定义为对上学产生焦虑或忧虑的小学学生。
+
+
+    杉山（Sugiyama）指出外部因素是拒学的主要原因。此外，他们中许多人的身体状况不良且无法控制。杉山认为拒学期间是一个“维持期”，而海斗（Haaito）则称之为“充电期”。他们还认为，通过不强迫孩子做他们不想做的事，并允许他们做想做的事来支持孩子是很。最有效的支持是信任孩子并等待时间的完成，而不提供帮助。
+
+
+    在维持和充电期间，当孩子自发地拒绝讨论他们的烦扰时，他们的父母和老师也应该成为良好的导师。然而，有时学生因为老师或父母或心理问题无法讨论问题的原因。在这种情况下，他们可以在咨询师、支持小组、个人服务，或者在社交网站或针对拒学学生的网络公告板（BBS）上讨论他们的烦扰。在本研究中，我们考虑了使用BBS。
+
+
+    拒学学生的BBS让他们发布自己的烦扰，并对其他帖子发表看法。具有相似经历或烦扰的用户可以发表评论。不发帖的人也可以阅读那些有类似问题的人的内容。阅读这些让他们感觉好受，因为他们发现自己不是唯一担忧的人。
+
+
+    本研究提出了一种针对拒学学生BBS帖子进行自动标签分类的分类方法。所提出的方法使我们能够轻松将经历和烦扰分类到帖子中。学生将能够阅读许多类似问题的帖子。当一个帖子中存在多个关注因素时，可以给单个帖子分配多个标签。
+
+
+    II. 提议方法
+
+
+    使用机器学习自动分配标签。数据集包含两个拒学学生BBS的帖子[6], [7]。仅提取了讨论其或自身烦扰的拒学高中生的帖子。结果是，共提取了1,599句句子。选定的句子由一人进行标注。根据其中拒学的原因定义了四个标签，如下所示：
+
+
+    - 1) 朋友（朋友、姐妹、后辈、欺凌、班级等）
+
+    - 2) 老师（老师等）
+
+    - 3) 家庭（父母、父亲、兄弟、姐妹等）
+
+    - 4) 学习（作业、考试等）
+
+
+    当文本包含与帖子相关的问题或咨询时，会为其分配每个标签。允许分配多个标签。每个标签的数量如表所示。每句句子使用 GiNZA 进行形态法分析，并提取名词、形容词和动词。然后使用
+    TF-IDF 对这些词进行向量化。
+
+
+    # 表 I
+
+    每个标签的数量
+
+
+    | 朋友 | 老师 | 家庭 | 学习 |
+
+    |---|---|---|---|
+
+    | 767 | 203 | 602 | 213 |
+
+
+    仅有包括欺凌在内的朋友问题。朋友分类器将包含“死亡”字的16句句子误标为错误标签。
+
+
+    # 表 III
+
+    混淆矩阵 (%)
+
+
+    | | 朋友 | 老师 | 家庭 | 学习 |
+
+    |---|---|---|---|---|
+
+    | 预测 | | 38.7 | 52.5 | 18.5 |
+
+    | 结果 | 60.9 | 22.2 | 20.6 | 19 |
+
+    | 家庭 | 62.5 | 18.75 | 28.13 |
+
+
+    使用了朴素贝叶斯分类器并采用了多模态模型，当词数较大时，模型的分类准确率更高。为每个标签生成一个分类器，每个句子通过所有分类器，当可以分配多个标签到数量时。
+
+
+    我们使用交叉验证来评估分类器的准确性。数据集按1:1的比例分为标记和未标记，并分为训练数据和验证数据。每次都进行了多次尝试和验证。
+
+
+    ### A. 单标签分类验证
+
+
+    为了验证每个标签分类器的准确性。使用数据集的75%用于训练，25%用于验证。进行了四次试验。
+
+
+    ### B. 多标签分类验证
+
+
+    整个数据集中具有多个标签的162句被分为三组，每组的平均标签数量尽可能相似。其中一组用于验证，另外两组用于测试。对于。
+
+
+    ### B. 多标签分类
+
+
+    多标签分类的评估结果如表IV所示。多标签分类的准确率显示，平均标签数为。54个句子被预测为错误标签。在这种情况下，多标签分类的准确率为45.4%。因此，理论值。
+
+
+    # 表 IV
+
+    正确预测单词的数量
+
+
+    | | 4 | 3 | 2 | 1 | 0 |
+
+    |---|---|---|---|---|
+
+    | 测试 1 | 15.0 | 22.0 | 13.0 | 4.0 | 0.0 |
+
+    | 测试 2 | 3.0 | 17.0 | 17.0 | 1.0 | 0.0 |
+
+    | 测试 3 | 4.0 | 17.0 | 20.0 | 11.0 | |
+
+    | 平均 | 9.0 | 18.7 | 16.7 | 8.6 | |
+
+
+    III. 评估
+
+
+    单标签和多标签分类的准确性通过每个评估进行评估。
+
+
+    ### A. 单标签分类
+
+
+    单标签分类的评估如表II所示。所有标签的准确率都高于70%。为了防止预测错误标签，需要在精确率上调整分类器。然而，除了家庭外，所有分类器都得到了召回率结果。
+
+
+    # 表 II
+
+    单标签分类评估 (%)
+
+
+    | 朋友 | 老师 | 家庭 | 学习 |
+
+    |---|---|---|---|
+
+    | 准确率 | 80.96 | 70.69 | 83.2 | 56.7 |
+
+    | 精确率 | 79.25 | 69.82 | 85.3 | 18.5 |
+
+    | 召回率 | 84.00 | 73.13 | 81.8 | 37.6 |
+
+
+    表III显示了分类器预测标签的混淆矩阵。所有分类器都倾向于预测朋友。朋友分类器也倾向于预测家庭。发现家庭标签被判断为错误的句子中有9个是标注错误。同样，学习标签中有4个标注错误。老师分类器将18句误为
+
+
+    IV. 讨论
+
+
+    所有单标签分类器在所有标签上的准确率均为70%，表明分类是可能的。只有家庭分类器是倾向性的。有三个原因：
+
+    第一个是变体的影响。日语中用于指代同一个人的词。例如，一个人可以被称为“父母”或“父亲”-“妈妈”等价词？不，文中说是“爸爸”或“妈妈”。
+
+    第一个是变体的影响。日语中用于指代同一个人的词。例如，一个人可以被称为“父母”或“爸爸”或“妈妈”。所以，在文中也可以称称为“父母”或“爸爸”或“妈妈”。
+
+    然而，需要根据分类的细粒度改变词汇的使用。例如，家庭分类器预测“兄弟”而非“家庭”。
+
+    由于使用了未标记的朋友和家庭的数据集。这些标签的句子数量增加，因为句子是随机提取的。结果是具有最高数量的'
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    labeled sentences, was easily judged as incorrect tags in Table 3. This might
+    be due to the fact that the sentences including Friend have a high degree of similarity
+    to sentences including any tag, which are not and should be ignored for the dataset.
+    Also, multi-tagged sentences should not be used for learning.
+
+
+    Third, because TF-IDF was used for vectorization, the context in the sentence
+    was not considered. This can be solved by using Bidirectional Encoder Representations
+    from Transformers (BERT) for context-aware vectorization. However, over emotional
+    sentences, and many with incorrect structures, and many misspelled words, these
+    factors can hinder a correct guess.
+
+
+    The multi-tag classification showed that the percentage of errors did not reach
+    the theoretical value. In the method, the accuracy of each classifier can be increased
+    by improving the accuracy of the single label classifiers. In addition, the prediction
+    results revealed an annotation error, so multiple people are needed to annotate
+    the dataset to improve its objectivity.
+
+
+    We proposed a method that can re-train each classifier by adjusting the parameters
+    and changing the training algorithm for each classifier. This makes possible to
+    do flexibly with the challenges of each classifier. If the accuracy of the solution
+    was reduced as a result of implementing the solution, we can determine whether
+    to apply the solution for each classifier.
+
+
+    # V. CONCLUSIONS
+
+
+    In this study, we proposed a classification method by automatic tagging BBS using
+    a Naive Bayesian method. As result, the accuracy was 70% for each classifier,
+    indicating that classification is possible. The classifier identifies correct
+    tags to sentences that have been annotated with incorrect tags. However, the precision
+    was lower than the recall, so some text will be incorrect tags.
+
+
+    In the future, we aim to create more detailed tags and improve the accuracy of
+    the classifier. We will also collect data from other BBS and social networking
+    sites to scale our data. We found that problems related to parents written in
+    texts were more about mothers than fathers. This is because mothers are more involved
+    in their children''s lives in Japan, and are more likely to think and act for
+    their children properly. Conversely, fathers may be reluctant and less involved
+    in parenting. By analyzing the worries and consultations of school refusal students,
+    we can discover the latent problems that persist.
+
+
+    # REFERENCES
+
+
+    +   [2] Nippon Foundation, "Survey of children who tend to be school refusal",
+    2010.
+
+
+    +   [3] M. Sugiyama, "About the recent school refusal", Saitama Campus bulletin.
+    Anthropology part.18, pp.299-304, 2018.
+
+
+    +   [4] R. Hashimoto and M. Syovji, "Considering support for school refusal students",
+    Educational practice study, pp.3-10, 2015.
+
+
+    +   [5] A. McCallum and K. Nigam, "A concept of event models for Natural text
+    classification", Proceedings of the ACM/ICML ,pp.41-48, 1998
+
+
+    +   [6] teens place, http://teens-place.com/
+
+
+    +   [7] babyjp.jp, http://babyjp.jp/'
+  md: '
+
+    labeled sentences, was easily judged as incorrect tags in Table 3. This might
+    be due to the fact that the sentences including Friend have a high degree of similarity
+    to sentences including any tag, which are not and should be ignored for the dataset.
+    Also, multi-tagged sentences should not be used for learning.
+
+
+    Third, because TF-IDF was used for vectorization, the context in the sentence
+    was not considered. This can be solved by using Bidirectional Encoder Representations
+    from Transformers (BERT) for context-aware vectorization. However, over emotional
+    sentences, and many with incorrect structures, and many misspelled words, these
+    factors can hinder a correct guess.
+
+
+    The multi-tag classification showed that the percentage of errors did not reach
+    the theoretical value. In the method, the accuracy of each classifier can be increased
+    by improving the accuracy of the single label classifiers. In addition, the prediction
+    results revealed an annotation error, so multiple people are needed to annotate
+    the dataset to improve its objectivity.
+
+
+    We proposed a method that can re-train each classifier by adjusting the parameters
+    and changing the training algorithm for each classifier. This makes possible to
+    do flexibly with the challenges of each classifier. If the accuracy of the solution
+    was reduced as a result of implementing the solution, we can determine whether
+    to apply the solution for each classifier.
+
+
+    ## V. CONCLUSIONS
+
+
+    In this study, we proposed a classification method by automatic tagging BBS using
+    a Naive Bayesian method. As result, the accuracy was 70% for each classifier,
+    indicating that classification is possible. The classifier identifies correct
+    tags to sentences that have been annotated with incorrect tags. However, the precision
+    was lower than the recall, so some text will be incorrect tags.
+
+
+    In the future, we aim to create more detailed tags and improve the accuracy of
+    the classifier. We will also collect data from other BBS and social networking
+    sites to scale our data. We found that problems related to parents written in
+    texts were more about mothers than fathers. This is because mothers are more involved
+    in their children''s lives in Japan, and are more likely to think and act for
+    their children properly. Conversely, fathers may be reluctant and less involved
+    in parenting. By analyzing the worries and consultations of school refusal students,
+    we can discover the latent problems that persist.
+
+
+    ## REFERENCES
+
+
+    - [2] Nippon Foundation, "Survey of children who tend to be school refusal", 2010.
+
+    - [3] M. Sugiyama, "About the recent school refusal", Saitama Campus bulletin.
+    Anthropology part.18, pp.299-304, 2018.
+
+    - [4] R. Hashimoto and M. Syovji, "Considering support for school refusal students",
+    Educational practice study, pp.3-10, 2015.
+
+    - [5] A. McCallum and K. Nigam, "A concept of event models for Natural text classification",
+    Proceedings of the ACM/ICML ,pp.41-48, 1998
+
+    - [6] teens place, http://teens-place.com/
+
+    - [7] babyjp.jp, http://babyjp.jp/
+
+    '
+  mdcn: '
+
+    被标记的句子在表 3 中被很容易地判断为错误标签。这可能是因为包含“Friend（朋友）”的句子与包含任何标签的句子具有高度相似性，而这些句子是不相关的且应该在数据集中被忽略。此外，多标签句子不应用于学习。
+
+
+    第三，由于使用了 TF-IDF 进行向量化，句子中的上下文没有被考虑。这可以通过使用双向 Transformer 编码表示（BERT）进行上下文感知向量化来解决。然而，对于情感化过强的句子，以及许多结构不正确和单词拼写错误的句子，这些因素可能会阻碍准确判断。
+
+
+    多标签分类显示，错误百分比没有达到理论值。在该中，可以通过提高单标签分类器的准确率来增加每个分类器的准确率。此外，预测结果揭示了标注错误，因此需要多人对数据集进行标注，以提高其客观性。
+
+
+    我们提出了一种方法，通过调整每个分类器的参数并更改其训练算法来重新训练每个分类器。这使得灵活地应对每个分类器的挑战成为可能。如果实施方案后导致准确率下降，我们可以决定是否对每个分类器应用该方案。
+
+
+    ## V. 结论
+
+
+    在本研究中，我们提出了一种通过朴素贝叶斯方法对 BBS 进行自动标记的分类方法。结果显示，每个分类器的准确率为 70%，表明分类是可能的。分类器可以识别出被标记为错误标签的句子的正确标签。然而，精确率低于召回率，因此某些文本将是错误标签。
+
+
+    未来，我们旨在创建更详细的标签并提高分类器的准确率。我们还将从其他 BBS 和社交网络网站收集数据以扩大我们的数据规模。我们发现文中关于父母的问题更多是关于母亲而非父亲。这是因为在日本，母亲更多地参与孩子的生活，并且更有可能为孩子做出恰当的思考和行动。相反，父亲可能不情愿且参与育儿较少。通过分析厌学学生的烦恼和咨询，我们可以发现持续存在的潜性问题。
+
+
+    ## 参考文献
+
+
+    - [2] 日本公益团, "Survey of children who tend to be school refusal", 2010.
+
+    - [3] M. Sugiyama, "About the recent school refusal", Saitama Campus bulletin.
+    Anthropology part.18, pp.299-304, 2018.
+
+    - [4] R. Hashimoto and M. Syovji, "Considering support for school refusal students",
+    Educational practice study, pp.3-10, 2015.
+
+    - [5] A. McCallum and K. Nigam, "A concept of event models for Natural text classification",
+    Proceedings of the ACM/ICML ,pp.41-48, 1998
+
+    - [6] teens place, http://teens-place.com/
+
+    - [7] babyjp.jp, http://babyjp.jp/
+
+    '
+  merge: 1
