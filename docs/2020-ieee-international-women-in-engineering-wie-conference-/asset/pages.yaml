@@ -1,0 +1,469 @@
+- pgno: 0
+  md: '# Two Layer Machine Learning System for Intrusion Detection Based on Random
+    Forest and Support Vector Machine
+
+
+    Sabra Afroz
+
+    Dept. of Computer Science and Engineering
+
+    East West University
+
+    Dhaka, Bangladesh
+
+    sabrinaafroz44@gmail.com
+
+
+    S.M Ariful Islam
+
+    Dept. of Computer Science and Engineering
+
+    East West University
+
+    Dhaka, Bangladesh
+
+    arisifham.ewu@gmail.com
+
+
+    Samin Nafer Rifa
+
+    Dept. of Computer Science and Engineering
+
+    East West University
+
+    Dhaka, Bangladesh
+
+    terrafifa@gmail.com
+
+
+    Maheen Islam
+
+    Dept. of Computer Science and Engineering
+
+    East West University
+
+    Dhaka, Bangladesh
+
+    maheen285@yahoo.com
+
+
+    Abstract—Unauthorized access to a network is a threatening issue for today. This
+    paper proposes a design for an ideal intrusion detection system capable of defending
+    network by alerting the admins against various malicious activities. This study
+    proposes a two layered-based model that uses filter for dimensionality reduction
+    with Random Forest and Support Vector Machine. It achieved a very good detection
+    rate against all sorts of attacks including a low rate of false alarms. The contribution
+    of this study is providing a framework for scientists designing good intrusion
+    detection systems to keep industry and organization safe from the cyber threats
+    as it achieved the desired goals of a functional IDS model.
+
+
+    signature for intrusion detection up to the number of vulnerabilities continues
+    to continue into [3]. Anomalous activities can be detected in four categories—DoS,
+    Probe, U2R and R2.
+
+
+    Keywords—Intrusion Detection, Anomaly, Feature Selection, Random Forest, SVM
+
+
+    In this study, the proposed intrusion detection system uses Filter Correlation
+    Method for selecting the features to reduce dimensionality. Support Vector Machine
+    algorithms used as classifiers in the two layers. This study proposes a model
+    which can detect anomalies of attacks at a low computational cost and false alarm
+    rate.
+
+
+    # I. INTRODUCTION
+
+
+    One of the most significant problems in modern era is the Internet. While many
+    use the Internet for constructive purposes, some individuals use it as an opportunity
+    for malicious intent. As more users are connected to the Internet and more networks
+    become accessible in our everyday lives, the Internet and its connected computers
+    are becoming increasingly more targets for attacks [1]. These attacks could lead
+    to network flooding, information theft or ever damage.
+
+
+    Intrusion refers to the unwanted interruption or unauthorized access to a network
+    or a system. It is the process of entering a computer by bypassing the security
+    systems. It can lead to network flooding, information theft or ever damage. An
+    IDS functions by monitoring network traffic and observing a network to detect
+    malicious behavior or violations of policy. The system administrator is informed
+    of any malicious behavior or compromise using a security information and event
+    management system [2]. The detector redundant inspected data and then determines
+    the possibility of an intrusion perceived as sign of these activities. In addition,
+    it is difficult to keep the
+
+
+    In [6], authors proposed an intrusion detection system based on SVM using the
+    combination of hierarchical clustering algorithm. They were able to detect common
+    types of attacks easily failed to detect rare attacks efficiently. In [4], they
+    proposed a two-layer model that uses LDA for feature selection in the two layers
+    and SVM and KNN. This study achieved a very good detection rate against unseen
+    and rare attacks like U2R and R2L. However the results were lower than the existing
+    methods used. In [7], an unsupervised anomaly detection model that uses clustering
+    based on subspace method to identify anomalies. The method does not specify which
+    specific attacks should be dealt with. In [8], they proposed a two layer model
+    that uses Random Forest and SVM as classifiers. The study achieved very good detection
+    rates. In [10], the writers explained the functionalities of feature selection
+    process and stated the significant benefits it is able to provide a dataset to
+    be
+
+
+    # II. RELATED WORKS
+
+
+    978-1-6654-1917-8/20/$31.00 IEEE 2022
+
+
+    authorized licensed to use: Carleton University. Download on May 05, 2021 at 09:51:52
+    UTC from IEEE Xplore. Restrictions apply.
+
+
+    300'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'In comparison with many of the coexisting models, the proposed model was able
+    to gain a higher detection rate but the detection rate against rare attacks was
+    not close 100%. Another limitation is that the proposed model used simple and
+    common techniques.
+
+
+    In the proposed two-layered model, the first layer performs data and preprocessing
+    along with dimension reduction. Classification has been performed using Support
+    Vector Machine (SVM). After the second layer of the proposed model, distinction
+    between anomalous activities and normal behavior has been enhanced by the implementation
+    of a specific classification using Random Forest algorithms.
+
+
+    # III. PROPOSED MODEL
+
+
+    For better distinction between unusual and normal behavior, feature selection
+    process would be performed prior to classification. In the newly formed feature
+    space containing dimensions, filter-correlation feature selection method would
+    select the most effective features of the training data and then classification
+    would be performed using SVM algorithm which would distinguish between the anomalous
+    and the normal data. To improve the performance of the classifiers that Random
+    Forest is used to hoard the data training set. By using two machine learners to
+    perform its classification, the model could be considered as a two classifier.
+
+
+    y are correlated, r is defined as the value of either 1 or -1. If x and y are
+    not correlated or in other words, r would be considered as 0 [9].
+
+
+    # B. Support Vector Machine (SVM)
+
+
+    Support Vector Machine, we generally considered as a supervised learning algorithm
+    [8]. It creates a N-dimensional hyperplane and separates the information into
+    different categories. SVM can perform classification. Without the fundamental
+    algorithm, SVM can classify the data into two categories.
+
+
+    Given a set of occasions with labeled {x, y}, where y is the name of occurrence,
+    SVM works by maximizing the margin to achieve the most effective execution of
+    performance in terms of classification [6].
+
+
+    The computation issue of margin-maximizing bounding function in SVM can be identified
+    by the subsequent QP problem:
+
+
+    Minimize:
+
+
+    ```
+
+    W(\\alpha) = \sum_{i=1}^{n} \alpha_i + \frac{1}{2} \sum_{i=1}^{n}\sum_{j=1}^{n}
+    y_i y_j \alpha_i \alpha_j <X_i, X_j> \dots (2)
+
+    ```
+
+
+    Subject to:
+
+
+    ```
+
+    $y_i \alpha_i = 0 \dots (3)
+
+    ```
+
+
+    Here, the number of training data represents by 1, is 1 variable where each communicates
+    with the training data xi. Soft margin parameter C controls the impact of deviations
+    in the training data. The data points are clustered, and the class boundaries
+    can be expressed as linear functions. SVM Equation (3) is the computation of vector,
+    where each element indicates the weight of each of the data points. The support
+    vectors are the data points with a greater value, containing a value not equal
+    to 0 on the other hand. SVM maps all training data into a greater dimensional
+    space. SVM is able to discover and correlate a maximal margin in this greater
+    dimensional space [6] [8].
+
+
+    # C. Random Forest
+
+
+    A group of unsupervised or classification regression is referred to as the random
+    forest [12]. On the other hand, an ensemble classifier used to boost accuracy
+    is Random Forest (RF). Random Forest consists of several trees
+
+
+    Many classification trees are created by Random Forest and each tree is developed
+    by bootstrap sample from the original data. The task is done by using a tree algorithm.
+    After formation of the forest, the classification which needs to be categorized.
+    It is performed on each and every tree of the forest [8].
+
+
+    Random Forest can be implemented with scikit-learn software. The feature importance
+    of a level in Random Forest algorithm is average over all the trees. Summation
+    of the importance of feature values on each
+
+
+    # IV. FEATURE SELECTION AND ALGORITHM
+
+
+    # A. Feature Selection
+
+
+    Feature selection can be defined as a pre-processing stage in both data mining
+    and machine learning. It helps to define the features that are convenient for
+    class prediction [11]. Feature selection is a technique that is used to minimize
+    the number of features in an application high dimensional data. The technique
+    of selecting features can improve performance, predictive accuracy and decreasing
+    the complexity of the results [9].
+
+
+    For selection procedure, the linear correlation efficient method is the most common
+    and the most used all over the world. For variables pairs (x, y), the linear correlation
+    coefficient r could be derived by the following formula,
+
+
+    ```
+
+    $$\frac{\sum(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum(x_i - \bar{x})^2 \sum(y_i
+    - \bar{y})^2}} = \dots (1)$
+
+    ```
+
+
+    Here, $\bar{x}$ and $\bar{y}$ are considered as the mean of x and y, respectively.
+    The value of r lies between -1 and 1. If x and y
+
+
+    ![](img/5b472fb1e89c8f5eebf4f1ad658c0890_1_0.png)
+
+
+    Fig-1: Framework for the proposed method
+
+
+    301'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "every is counted and divided by the entire number of\ntrees using the following\
+    \ formula:\n\n```\n$Rfi_{ij} = \\frac{\\sum normf_{ij}}{T} \\dots \\quad (4)$\n\
+    ```\n\nHere,\n\nRfi_{ij}: the importance of feature i calculated from all\ntrees\
+    \ in the Random Forest model\nnorm_{ij}: the normalized feature importance for\
+    \ i\ntree\n\n# V. DATASET AND IMPLEMENTATION\n\nNSL-KDD benchmark dataset used\
+    \ to test the\nproposed model. The KDD dataset [12] is the newer and\nimproved\
+    \ version of the NSL-KDD dataset. This data was\n for competition in IDS. A host-host\
+    \ link\nis included in each NSL-KDD record, which contains 11\nfeatures (e.g.,\
+    \ Normal, logins, Root, Source)\nnamed either attack or none of the specific names\
+    \ of the\nattacks in original KDD dataset).\nNSL-KDD was used to test the proposed\
+    \ model [12];\nKDD99 is extracted from DARPA by attacks.\nBy, eliminating duplicates\
+    \ and reducing the number,\nNSL-KDD is derived from KDD99. Two training sets and\n\
+    two test sets (DDoS, Probe, U2R, and R2 attack classes\nlares included in the\
+    \ dataset.\n\n# B. Data Preprocessing\n\nThe original dataset was transformed\
+    \ into a normal\nin the preprocessing stage so that it can achieve\ndecision-making\
+    \ and diminishing computational\nhead; it will be as follows:\n\nAll categorical\
+    \ features were labeled as a\ndistinct number as follows: (TCP = 1, UDP = 1,\n\
+    ICMP = 1).\n\nTo avoid sort of bias, features containing\ncontinuous values would\
+    \ be converted to discrete values\nusing log base2. After that the result values\n\
+    would be converted into integers using the following\nz as of the continuous values,\n\
+    \n```\n$if(z \\geq 2) = log(z + 1) \\dots \\quad (5)$\n```\n\nFor better classification,\
+    \ normalization process has\nimplemented after that and attack classes have been\
+    \ grouped\ninto a normal and four classes\n\n# VI. EXPERIMENT RESULT AND DISCUSSION\n\
+    \nThe proposed model was trained by both of the\ntraining sets (Train, Test*)\
+    \ and it has been evaluated by the\ntest set. Set-KDD contains\n22544 instances\
+    \ and the evaluation has been done with\nthe projection metric; it could be stated\
+    \ that\nmost of the results here in our research are evaluated\nby the test. The\
+    \ proposed model is capable of\nalalmost this using Random Forest as its\nsecond\
+    \ classifier. Following the normalization process of\nthe test set, the projection\
+    \ metric was that for the\n\nmost part obtained from the training set, has been\
+    \ applied\nthe test set. At this point 45 iterations have been\ntested. This experiment's\
+    \ detection rates, k=5\nhas selected in order to obtain greater detection rate\n\
+    the rare and unseen attacks in connection with\nout chosen values.\n\n![](img/5b472fb1e89c8f5eebf4f1ad658c0890_2_0.png)\n\
+    \nFig-2 shows the different attack types that are in the\nt-dataset. It also reflects\
+    \ on the total number of the\nattack types. Here stands 0 for DDoS, 1 for Probe,\n\
+    and U2R and 2 for R2. The generated model is visible\nnelanation of the attack\
+    \ types.\n\n| Table-1: Dataset of NSL-KDD Data Classes.\n| | Total | Normal |\
+    \ Probe | DDoS | U2R | R2 |\n|---|---|---|---|---|---||}{\n| Train | 25192 | 13449\
+    \ | 2289 | 9234 | 11 | 20 |\n| Train* | 12597 | 6743 | 11656 | 4592 | 52 | 95\
+    \ |\n| Test* | 22544 | 9711 | 2421 | 7458 | 67 | 2887 |\n\nTable-1 represents\
+    \ the number of attack types in\ndaset. It is the biggest number of attacks are\n\
+    present in this test set and the train_20% shows\nlowest number of attacks. This\
+    \ makes the test set\nmore than the rest.\n\n| Table-2: Anomalous behavior detection\
+    \ rate in levels\n(classes)|\n| | Probe | DDoS | U2R | R2 |\n|---|---|---|---|---||}{\n\
+    | First Level of | | 98 | 97 | 11 | 9 |\n| Second Level of | 85 | | 69 | 54 |\n\
+    \nIn Table-2, it can see that after SVM in the\nfirst layer, the detection rate\
+    \ of the common attack\ntype DDoS has being satisfying. The\ndetection rate of\
+    \ others is poor. The second\nlayers have been greatly. After applying\nRandom\
+    \ forest classifier, the detection rates of all the\ntypes have been satisfactory.\n\
+    An improvement in the co-existing IDS\nmodels and the proposed model has been\
+    \ shown. It is visible\nthat the proposed model has better detection rate against\n\
+    the existing ones. Difference of algorithms has\nhuge changes in terms of detection\
+    \ used."
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'techniques acute in these significant changes. Difference in techniques and
+    classifiers confuse a lot in these significant changes. SVM with BIRCH clustering
+    uses a mixture of hierarchical clustering algorithms. The rest consist of two
+    layers similar to the proposed model. Detection rates are better with multiple
+    layers in comparison with the one layered model.
+
+
+    model has higher detection rates against common and rare types of attacks. The
+    proposed model has a comparatively low alarm rate which adds an advantage to the
+    model. Overall, detection rate of the proposed model is 93.8% which is better
+    than other model detection rates for the specific attacks (99%, 95%, 88%, 69%
+    for Normal, DoS, U2R and R2L), it could be seen from the result section that the
+    rates are higher than the others making the proposed model better.
+
+
+    Table-3: Comparison of detection rate and proposed models for the rare attacks.
+
+
+    | Model | Normal | DoS | U2R | R2L |
+
+    |---|---|---|---|--|
+
+    | The proposed model | 99 | 88 | 69 | 54 |
+
+    | SVM with BIRCH clustering [6] | 99.3 | 97.5 | 28.8 | 19.7 |
+
+    | SVM with Random Forest | 92.99 | 63.1 | 96.3 | 44.8 |
+
+    | Two Tier with Naive Bayes and KNN [4] | 94.56 | 79.76 | 84.6 | 38.1 |
+
+
+    # VII. CONCLUSION
+
+
+    In this study, the writers have explored the field of intrusion detection and
+    proposed a layered model that could work well for common and rare attacks. The
+    challenges of designing a working model of detecting attacks has been described.
+    The implementation was done via a machine learning approach using various algorithms
+    and techniques. Finally, it is safe to state that the proposed model has higher
+    detection rate for types of attacks, lower alarm rate and lower computational
+    cost in comparison with the coexing models. In future aim, the proposed model
+    is to use non-parametric techniques to obtain more useful features for intrusion
+    detection, improving the detection rate by separating the normal from the anomalous
+    ones. It could be an efficient solution for organizations and industries to ensure
+    their server safety.
+
+
+    Analyzing Fig-3, it can be seen that the first layer (of SVM), the false alarm
+    rate is lower than the coexing models. But in the second layer the proposed model
+    performed better, obtaining 0.0237% false alarm when using Train-20 dataset and
+    0.0204 % in using Test set as well using testing the proposed model.
+
+
+    # VIII. REFERENCES
+
+
+    ![](img/5b472fb1e89c8f5eebf4f1ad658c0890_3_0.png)
+
+
+    Fig-3: Figure of false alarm rate of the proposed model.
+
+
+    | | Train-20 | Test |
+
+    |---|---|--|
+
+    | 3 | 2.5 | |
+
+    | 2 | 1.5 | |
+
+    | 1 | 0 | |
+
+    | SVM | 2.731 | 0.655 |
+
+    | RF | 0.227 | 0.053 |
+
+
+    In Table-4, a comparison has been shown between the proposed model and the existing
+    one model. It can be seen that the detection rate of the proposed two layers is
+    better than the existing layered model. The false alarm rate is also better in
+    the proposed model making it effective.
+
+
+    +   [1] P. Khan, M. Valardy, and M. A. Ahmad, "Rules and Constraints for Intrusion
+    Detection in Network Traffic", Cyber Security and Comput., pp. 81-89, 2005. doi:
+    10.1109/CSC.2005.342264.
+
+    [2] L. Denzing, "Intrusion Detection using Networks", IEEE Trans. Serv. Inf. Lett.,
+    vol. 15, no. 1, pp. 1-5, 2008. doi: 10.1109/TSI.2007.923894.
+
+    [3] Z. Tang, A. Jasmadi, H. Xu, and P. Wang, "Network Intrusion detection using
+    support vector machine", IEEE 2010 Global Conference on Communications (GLOBECOCOM),
+    pp. 2150-2155, 2010. doi: 10.1109/GLOBECOM.2010.560170.
+
+    [4] S. Elarifi, M. Mohamed, and A. Ahmed, "Intrusion detection using a machine
+    learning approach", IEEE Int. Inf. J., vol. 26, no. 4, pp. 279-290, 2010. doi:
+    10.1109/JIS.2010.2071750.
+
+    [5] A. N. Tousi and M. Khan, "A new approach to intrusion detection in an effective
+    software system using non-fuzzy classifiers", IEEE Trans. Syst. Man., vol. 18,
+    no. 6, pp. 1735-1743, 2007. doi: 10.1109/TSM.2007.904333.
+
+    [6] J. J. Lin, "Intrusion detection system based on hybrid classification and
+    support vector machines", IEEE Exp. Art. Intell. Syst., vol. 18, no. 1, pp. 93-100,
+    2002. doi: 10.1109/AEIS.2002.996655.
+
+    [7] S. Liang and Y. Wang, "Unsupervised anomaly detection in network intrusion
+    using clustering method", IEEE Conf. Rel. Syst. Inf., 2012, pp. 1-6. doi: 10.1109/ICSI.2012.6394734.
+
+    [8] M. M. A. Hassan, M. Bauer, S. Salah, and M. Mohamed, "Robust Network Intrusion
+    Detection Using Support Vector Machine Classifier", IEEE Trans. Serv. Inf. Lett.,
+    vol. 9, no. 4, pp. 211-214, 2016. doi: 10.1109/TSL.2016.2583334.
+
+    [9] Y. J. Kim, "Effective feature selection for based classification between continuous
+    and discrete features", Inf. Process. Lett., vol. 110, pp. 103-110, 2010. doi:
+    10.1016/j.inffffoc.2009.06.002.
+
+    [10] V. Svetnik, A. Ciao, J. Ting, C. Christopher, R. P. Shervani, and P. B. Berry,
+    "A Comparative Framework for Classification and Outlier Analysis", J. Chem. Comput.
+    Inf. Anal., vol. 32, no. 3, pp. 771-793, 2009. doi: 10.1002/jacci.3033
+
+
+    Table-4: Comparison of detection rate and false alarm rate in the proposed model
+    and existing Single layer model of test (%)
+
+
+    | Method | Dataset | Detection Rate | Alarm Rate |
+
+    |---|---|---|--|
+
+    | Proposed Model | Train-20 | 93.8 | 0.027 |
+
+    | Naive Bayes [12] | Random | 76.5 | N/A |
+
+    | Forest [11] | Random | 80.6 | N/A |
+
+    | SVM [6] | Train-20 | 69.2 | N/A |
+
+
+    After analyzing the detection rate and false alarm rate it is to state that all
+    work has been done prior to this is effective in detecting common seen or rare
+    types of attacks. Nevertheless, the proposed model
+
+
+    303'
+  merge: -1
+  img_proc: true

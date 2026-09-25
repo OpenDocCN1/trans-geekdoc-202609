@@ -1,0 +1,2 @@
++   [2020 第六届并行、分布式与网格计算国际会议 (PDGC)(印度瓦克纳哈特 2020.11.6-2020.11.8)](README.md)
++   [2020 第六届并行、分布式与网格计算国际会议 (PDGC)(印度瓦克纳哈特 2020.11.6-2020.11.8)](2020-sixth-international-conference-on-parallel-distributed-.md)

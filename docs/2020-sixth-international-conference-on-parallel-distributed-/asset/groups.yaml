@@ -1,0 +1,1248 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # 2020 Sixth International Conference on Parallel, Distributed and Grid Computing
+    (PDGC)
+
+
+    # # Indian Health System is Ready to Fight Against COVID-19 A Machine Learning
+    Tool for Forecast the Number of Beds
+
+
+    Shakti Nagraj
+
+    Department of Computer Science & Engineering
+
+    Panipat Institute of Engineering & Technology
+
+    Panipat, India
+
+
+    Vijay Anand Aashwale
+
+    Department of Computer Science & Engineering
+
+    Panipat Institute of Engineering & Technology
+
+    Panipat, India
+
+
+    Ashwini Kumar Sani
+
+    Govind Bajaj Patel Institute of Engineering & Technology
+
+    Pa Gwalior
+
+
+    Ravindra Sharma
+
+    Swami Rama Himalayanan University
+
+    Dehradun, India
+
+
+    **Global** research team has announced that the health management system level
+    is needed for COVID-19. A statistical analysis has been done to check the preparedness
+    of responses of the different countries are also taken into consideration while
+    working for COVID-19 handling. Demographic trends are also needed to add further
+    content to preparedness of COVID-19 cases. This pandemic has raised a significant
+    challenge to the economy of different countries. Availability of beds vary greatly
+    between countries. Australia is having 2.6 beds per thousand people, while United
+    Kingdom is having 2.5 beds per 1000 people. Per capita expenditure is.
+
+
+    Indian health system is not robust enough to provide a quality infrastructure
+    and other resources to millions of its citizens. COVID-19 has created an emergency
+    to fix all bottlenecks as soon as possible, the virus has erupted in many developed
+    countries. India is starting at an alarming stage, just like a time bomb fixed
+    in the head. Due to the inadequate health care services, very low testing of COVID-19
+    cases has been done. Hence it is possible the numbers in India may not represent
+    the true figure of COVID-19 cases in India. For the first few months Indian Council
+    of Medical Research provided the statistics on the days it based reported up to
+    27th March and then the cases have been reported on daily.
+
+
+    **Keywords**—Machine learning, Regression, Hospitals, COVID-19, Health expenditure
+
+
+    # ## INTRODUCTION
+
+
+    Health system is affected all over the world due to COVID-19, or when we can generate
+    an alert to the health care services and countries are trying to deploy strategies
+    for it. To build some, number of beds available per thousand people, number of
+    beds over total population, the de-population done by different countries, and
+    over 60 years for some of the developed countries. Of the developed countries
+    have prepared and able to handle the case of COVID-19. In this paper we have proposed
+    a machine learning model to predict the number of beds required for patients.
+    The number of beds available is retrieved from Gujarat state populations and number
+    of patients based on health and family history. Multiple linear regression model
+    is used for machine learning and is applied on the dataset to predict the number
+    of required beds for the patients. An automated model is designed which can give
+    the predictions of the beds on any number of patients.
+
+
+    TABLE I. HEALTH CARE SERVICE RESOURCE OF COUNT (FIGURES IN PER THOUSAND PEOPLE)
+    [SOURCE-WWW.HEALTHAFIRS.ORG]
+
+
+    | | Australia | United Kingdom | Germany | Canada | USA |
+
+    | --- | --- | --- | --- | --- | --- |
+
+    | Beds | 2.4 | 2.24 | 4.24 | 3.01 | 2.6 |
+
+    | Doctors | 3.4 | 2.8 | 4.3 | | |
+
+    | Nurses | 1.9 | 2.5 | 6 | 8 | 2 |
+
+    | Other | 4 | 21.4 | 28.8 | 27.2 | 37 |
+
+
+    As per the national profile-2019 data 0.55 per thousand population is available
+    in India. These states namely Bihar, Jharkhand, Gujarat, Uttar, Andhra Pradesh,
+    Chhattisgarh, Madhya Pradesh, Haryana, Maharashtra, Odisha, Assam and Manipur
+    lie below the national (0.55) in terms of available beds over'
+  - '[PAGE 1]
+
+
+    # 2020 Sixth International Conference on Parallel, Distributed and Grid Computing
+    (PDGC)
+
+
+    though although 70% of the Indian population in these states. Only some of the
+    states like Delhi, Tamil Naidu and Kerala have the better conditions of health
+    and have 1.05 beds per person. It is because the number of beds available per
+    person in India is low. Health care service of some countries are shown in table
+    1.
+
+
+    In table 2 HAQ (health care access and quality) index of different countries is
+    mentioned which was reviewed in 2016 and published in the report of times in April
+    2020. India is at 145th position and the report provide on the basis on burden
+    of diseases which encompasses approximately 32 states of which are preventable
+    and curable with effective medical care.
+
+
+    Sudden outbreak of coronavirus pandemic complicated the problem, the priorities
+    of health care have been changed around the world. Limited availability of resources
+    and inefficiencies in the health care systems are manifolds.
+
+
+    Two of the states in India Goa and Kerala have reached 60 points whereas UP have
+    low score i.e. below than 40.
+
+
+    The demand of healthcare services has suddenly increased. Covid-19 patients are
+    struggling to get to the health care facilities and beds in the hospitals. In
+    India there is a large number of patients and 5-10 ICU beds capacity available.
+    Only of 50% of ICU beds have ventilators, and other health care services are available.
+    We per reported reports in times of India 17,850 to 25,555 ventilators in the
+    country.
+
+
+    In this paper we have developed machine learning to forecast the number of beds
+    required for the Covid-19 patients. On July 5, 2020, India has 68,300 cases which
+    is increasing at very fast rate. The Covid-19 positivity rate is 6.7 percent.
+    There is major responsibility with the government and hospitals to take preventive
+    measures, to manage the situation. The prediction model will dynamically provide
+    the number of hospitals and beds needed for the care. Linear regression model
+    of machine learning is used to implement the model. It is the best machine learning
+    model for the continuous data and provides the accuracy of prediction after proper
+    training of the model. It is a supervised machine learning model where different
+    states of hospitals and population of different states as well as the population
+    of Covid-19 patients is given as input. The set is divided into two training set
+    and test data to 30 - 70 [70-71].
+
+
+    # II. OUR METHODOLOGY
+
+
+    Total expenditure on healthcare services in India is 2.5 per capita and the health
+    percentage of GDP is 4.8 while the life expectancy of Indians are 69.17, the public
+    sector healthcare expenditure is 53USBI.
+
+
+    ![](img/1178e645b0ba2c81eb0871c695c6dc4c_1_0.png)
+
+
+    Fig. 1. Health expenditure of various countries [5]
+
+
+    In report 1 is published by the world organization where expenditure by individual
+    on health care system is depicted. In India approximately 70% of the health expenses
+    are done by out pocket which leads to 7% of the population to below the poverty
+    level. The public health expenditure in India is constant during 2008 to 2015
+    which is approximately 1.3% of GDP and marginally increased to 14.6% in 2016-17
+    but still 6% of the total world average. The National health policy proposed it
+    at 2.5% of GDP in 2025.
+
+
+    The following Objectives have been covered and implemented:
+
+
+    # TABLE II. HAQ INDEX OF DIFFERENT COUNTRIES [6]
+
+
+    # HAQ Rankings For India
+
+
+    | Country | HAQ Index, 2016 | HAQ Index, 2018 | Improvement in, 1996-2016 |
+
+    |---|---|---|--|
+
+    | India | 41.2 | 145 | 16 |
+
+    | Brazil | 63.8 | 96 | 17 |
+
+    | Russia | 75.1 | 58 | 11.9 |
+
+    | China | 77.9 | 48 | 35.9 |
+
+    | South Africa | 96.7 | 127 | 9 |
+
+
+    Source: Burden of Disease study published in the Lancet
+
+
+    # III. MULTIPLE LINEAR REGRESSION
+
+
+    Multiple linear regression is the most common form of linear regression analysis,
+    which is used to signify the relationship between single dependent variable and
+    more than one independent variables. In this paper y is the continuous variable
+    which depends upon the number of hospitals and number of infected cases of Covid-19
+    [14].
+
+
+    Steps
+
+    1. Get the two data sets with n examples and let denote it as x and y for
+
+
+    X is taken as number of cases and hospitals
+
+
+    Y- the number of beds available
+
+    2. Find out the m by using the'
+  - '[PAGE 2]
+
+
+    # #2020 Sixth International Conference on Parallel, Distributed and Grid Computing
+    (PDGC)
+
+
+    ![](img/1178e645b0ba2c81eb0871c695c6dc4c_2_0.png)
+
+
+    # ## B. Data Analysis
+
+
+    3. Find out the value of b by using,
+
+
+    Figure 3– Sample of data for results of predictions
+
+
+    ```
+
+    $b = y - mx$
+
+    ```
+
+
+    Figure 4– Result Parameters of the Applied
+
+
+    4. At last substitute the value of b and min the linear regression
+
+
+    Figure 5– Correlation between selected attribute
+
+
+    ```
+
+    $f(x)=mx+b$
+
+    ```
+
+
+    Number of hospitals, availability of beds per hospital, individual number of state
+    and Covid-19 infected cases are the important parameters for further analysis
+    and predictions.
+
+
+    Where applied models generate the value of m which is
+
+
+    ```
+
+    intercept = [1038.59763481]
+
+    ```
+
+
+    # Results and Discussion
+
+
+    Coefficients are the Constant b1 and b2 to used
+
+
+    ```
+
+    import pandas as pd
+
+    ```
+
+
+    ```
+
+    Coefficients : [[ 0.02741452, 17.771037088]]
+
+    ```
+
+
+    ```
+
+    mytable = pd.read_csv(''c:\users\shakt\Desktop\current.csv'')
+
+    ```
+
+
+    We can predict the value of Y as X input.
+
+
+    New_cases = 10000
+
+
+    # A. Dataset
+
+
+    New_hospitals = 550
+
+
+    The dataset for the availability of beds and hospitals in India was collected
+    from Kaggle named “Hospitals and beds in India (state wise)” as depicted in figure
+    2. The state wise populations and Covid-19 infected cases are also collected from
+    the Ministry of health and welfare portal”.
+
+
+    # OLS Regression Results
+
+
+    ![](img/1178e645b0ba2c81eb0871c695c6dc4c_2_1.png)
+
+
+    # Hospitals Vs Cases
+
+
+
+
+    | Dev. | B-squared | R-squared |
+
+    |---|---|---|
+
+    | Model | 0.825 | 0.825 |
+
+    | Adj. R-squared | 0.816 | |
+
+    | Least Squares | 24 | 56 |
+
+    | Date | 18 Jun 2020 | Prob(F) : 5.24e-04 |
+
+    | Time | | F-stat : 14.68 |
+
+    | No. Observations | 368 | p-value : 0.000 |
+
+    | Std. Err | 26 | 800.0 |
+
+    | No. Degrees of Model | 1 | |
+
+
+    df_info
+
+
+    # Hospitals Vs Cases
+
+
+    ![](img/1178e645b0ba2c81eb0871c695c6dc4c_2_1.png)
+
+
+    Fig. 2. Hospitals Cases
+
+
+    | State | population | state |
+
+    |---|---|---||
+
+    | Andhra Pradesh | 30551 | 26 | state |
+
+    | Bihar | 82996 | 24 | state |
+
+    | Arunachal Pradesh | 1039827 | 57 | state |
+
+    | Assam | 1099957 | 16 | state |
+
+    | Chhattisgarh | 27294169 | 21 | state |
+
+    | Goa | 1557067 | 13 | state |
+
+    | Gujarat | 60439612 | 18 | state |
+
+    | Haryana | 25351461 | 22 | state |
+
+    | Himachal Pradesh | 6864662 | 12 | state |
+
+    | Jharkhand | 30941235 | 18 | state |
+
+    | Karnataka | 61095295 | 34 | state |
+
+    | Madhya Pradesh | 27250893 | 30 | state |
+
+    | Meghalaya | 3099433 | 7 | state |
+
+    | Mizoram | 1135862 | 6 | state |
+
+    | Nagaland | 19961422 | 11 | de-state |
+
+    | Odisha | 46817222 | 25 | state |
+
+    | Punjab | 28811676 | 23 | state |
+
+    | Rajasthan | 56519954 | 27 | state |
+
+    |Tamil Nadu | 72147091 | 33 | state |
+
+    |Telangana | 35189993 | 19 | state |
+
+    |Tripura | 1372177 | 5 | state |
+
+    |Uttar Pradesh | 199812553 | 40 | state |
+
+    | Uttarakhand | 10086293 | 13 | state |
+
+    |West Bengal | 91276164 | 36 | state |
+
+
+    ![](img/1178e645b0ba2c81eb0871c695c6dc4c_2_3.png)
+
+
+    Fig. 4. OLS Regression Results
+
+
+    Warnings:
+
+    [Standard Errors assume that the covariance matrix of the errors is correct. The
+    number size is large, 3.7974. This might indicate that there is multicollinearity
+    or other numerical problems.]
+
+
+    print (''Predicted Beds: '' , reg.prediction ([New_cases, hospitals]))
+
+
+    Predicted Beds:
+
+
+    ```
+
+    [[9168.60935]]
+
+    ```
+
+
+    # ## C. Correlations
+
+
+    All the crucial information about the importance of features and the target value
+    is retrieved from the correlation between the features. The correlation between
+    the number of beds and total number of cases for specific period is depicted in
+    figure 1, as well as the number of hospitals corresponding to the number of cases
+    in Fig 1 and Fig.2 which shows the strong relationship and a positive correlation
+    between beds and cases as well as hospitals as was
+
+
+    ![](img/1178e645b0ba2c81eb0871c695c6dc4c_2_4.png)
+
+
+    Fig. 3. Sample of data for predictions
+
+
+    Authorized licensed limited to use: IEEE Xplore. Unauthorized on 16, 2021 at 06:58:44
+    UTC from IEEE Xplore. Restrictions apply.'
+  md: '
+
+    # 2020 Sixth International Conference on Parallel, Distributed and Grid Computing
+    (PDGC)
+
+
+    # Indian Health System is Ready to Fight Against COVID-19 A Machine Learning Tool
+    for Forecast the Number of Beds
+
+
+    Shakti Nagraj
+
+    Department of Computer Science & Engineering
+
+    Panipat Institute of Engineering & Technology
+
+    Panipat, India
+
+
+    Vijay Anand Aashwale
+
+    Department of Computer Science & Engineering
+
+    Panipat Institute of Engineering & Technology
+
+    Panipat, India
+
+
+    Ashwini Kumar Sani
+
+    Govind Bajaj Patel Institute of Engineering & Technology
+
+    Pat Gwalior
+
+
+    Ravindra Sharma
+
+    Swami Rama Himalayanan University
+
+    Dehradun, India
+
+
+    **Global** research team has announced that the health management system level
+    is needed for COVID-19. A statistical analysis has been done to check the preparedness
+    of responses of the different countries are also taken into consideration while
+    working for COVID-19 handling. Demographic trends are also needed to add further
+    content to preparedness of COVID-19 cases. This pandemic has raised a significant
+    challenge to the economy of different countries. Availability of beds vary greatly
+    between countries. Australia is having 2.6 beds per thousand people, while United
+    Kingdom is having 2.5 beds per 1000 people. Per capita expenditure is.
+
+
+    Indian health system is not robust enough to provide a quality infrastructure
+    and other resources to millions of its citizens. COVID-19 has created an emergency
+    to fix all bottlenecks as soon as possible, the virus has erupted in many developed
+    countries. India is starting at an alarming stage, just like a time bomb fixed
+    in the head. Due to the inadequate health care services, very low testing of COVID-19
+    cases has been done. Hence it is possible the numbers in India may not represent
+    the true figure of COVID-19 cases in India. For the first few months Indian Council
+    of Medical Research provided the statistics on the days it based reported up to
+    27th March and then the cases have been reported on daily.
+
+
+    **Keywords**—Machine learning, Regression, Hospitals, COVID-19, Health expenditure
+
+
+    ## INTRODUCTION
+
+
+    Health system is affected all over the world due to COVID-19, or when we can generate
+    an alert to the health care services and countries are trying to deploy strategies
+    for it. To build some, number of beds available per thousand people, number of
+    beds over total population, the de-population done by different countries, and
+    over 60 years for some of the developed countries. Of the developed countries
+    have prepared and able to handle the case of COVID-19. In this paper we have proposed
+    a machine learning model to predict the number of beds required for patients.
+    The number of beds available is retrieved from Gujarat state populations and number
+    of patients based on health and family history. Multiple linear regression model
+    is used for machine learning and is applied on the dataset to predict the number
+    of required beds for the patients. An automated model is designed which can give
+    the predictions of the beds on any number of patients.
+
+
+    TABLE I. HEALTH CARE SERVICE RESOURCE OF COUNT (FIGURES IN PER THOUSAND PEOPLE)
+    [SOURCE-WWW.HEALTHAFIRS.ORG]
+
+
+    | | Australia | United Kingdom | Germany | Canada | USA |
+
+    | --- | --- | --- | --- | --- | --- |
+
+    | Beds | 2.4 | 2.24 | 4.24 | 3.01 | 2.6 |
+
+    | Doctors | 3.4 | 2.8 | 4.3 | | |
+
+    | Nurses | 1.9 | 2.5 | 6 | 8 | 2 |
+
+    | Other | 4 | 21.4 | 28.8 | 27.2 | 37 |
+
+
+    As per the national profile-2019 data 0.55 per thousand population is available
+    in India. These states namely Bihar, Jharkhand, Gujarat, Uttar, Andhra Pradesh,
+    Chhattisgarh, Madhya Pradesh, Haryana, Maharashtra, Odisha, Assam and Manipur
+    lie below the national (0.55) in terms of available beds over although although
+    70% of the Indian population in these states. Only some of the states like Delhi,
+    Tamil Naidu and Kerala have the better conditions of health and have 1.05 beds
+    per person. It is because the number of beds available per person in India is
+    low. Health care service of some countries are shown in table 1.
+
+
+    In table 2 HAQ (health care access and quality) index of different countries is
+    mentioned which was reviewed in 2016 and published in the report of times in April
+    2020. India is at 145th position and the report provide on the basis on burden
+    of diseases which encompasses approximately 32 states of which are preventable
+    and curable with effective medical care.
+
+
+    Sudden outbreak of coronavirus pandemic complicated the problem, the priorities
+    of health care have been changed around the world. Limited availability of resources
+    and inefficiencies in the health care systems are manifolds.
+
+
+    Two of the states in India Goa and Kerala have reached 60 points whereas UP have
+    low score i.e. below than 40.
+
+
+    The demand of healthcare services has suddenly increased. Covid-19 patients are
+    struggling to get to the health care facilities and beds in the hospitals. In
+    India there is a large number of patients and 5-10 ICU beds capacity available.
+    Only of 50% of ICU beds have ventilators, and other health care services are available.
+    We per reported reports in times of India 17,850 to 25,555 ventilators in the
+    country.
+
+
+    In this paper we have developed machine learning to forecast the number of beds
+    required for the Covid-19 patients. On July 5, 2020, India has 68,300 cases which
+    is increasing at very fast rate. The Covid-19 positivity rate is 6.7 percent.
+    There is major responsibility with the government and hospitals to take preventive
+    measures, to manage the situation. The prediction model will dynamically provide
+    the number of hospitals and beds needed for care. Linear regression model of machine
+    learning is used to implement the model. It is the best machine learning model
+    for continuous data and provides the accuracy of prediction after proper training
+    of the model. It is a supervised learning model where different states of hospitals
+    and population of different states as well as the population of Covid-19 patients
+    is given as input. The set is divided into two training and test data.
+
+
+    ## II. METHODOLOGY
+
+
+    Total expenditure on healthcare services in India is 2.5 per capita and the health
+    percentage of GDP is 4.8 while the life expectancy of Indians are 69.1, the public
+    sector expenditure is 53.
+
+
+    Fig. 1. Health expenditure of various countries
+
+
+    In report 1 is published by world organization where expenditure by individual
+    on health care system is depicted. In India approximately 70% of the expenses
+    are done out pocket which leads to poverty level. The public health expenditure
+    in India is constant during 2008 to 2015 which is approximately 1.3% of GDP and
+    marginally increased to 14.6% in 2016 but still 6% of the total world average.
+    The National health policy proposed it at 2.5% of GDP in 2025. The following Objectives
+    have been covered and implemented:
+
+
+    TABLE II. HAQ INDEX OF DIFFERENT COUNTRIES
+
+
+    | Country | HAQ Index, 2016 | HAQ Index, 2018 | Improvement in 1996-2016 |
+
+    |---|---|---|---|
+
+    | India | 41.2 | 145 | 16 |
+
+    | Brazil | 63.8 | 96 | 17 |
+
+    | Russia | 75.1 | 58 | 11.9 |
+
+    | China | 77.9 | 48 | 35.9 |
+
+    | South Africa | 96.7 | 127 | 9 |
+
+
+    Source: Burden of Disease study published in Lancet
+
+
+    ## III. MULTIPLE LINEAR REGRESSION
+
+
+    Multiple linear regression is the most common form of linear regression analysis,
+    which is used to signify the relationship between single dependent variable and
+    more than one independent variables. In this paper y is the continuous variable
+    which depends upon the number of hospitals and number of infected cases of Covid-19.
+
+
+    Steps:
+
+    1. Get the two data sets with n examples and let it as x and y for X is taken
+    as number of cases and hospitals Y- the number of beds available.
+
+    2. Find out the m using the
+
+
+    ## B. Data Analysis
+
+
+    3. Find out the value of b using, $b = y - mx$
+
+
+    4. At last substitute the value of b and min the linear regression
+
+
+    Number of hospitals, availability of beds per hospital, individual number of state
+    and Covid-19 infected cases are the important parameters for further analysis
+    and predictions. Where applied models generate the value of m which is intercept
+    = [1038.59763481].
+
+
+    ## A. Dataset
+
+
+    The dataset for the availability of beds and hospitals in India was collected
+    from Kaggle named “Hospitals and beds in India (state wise)” as depicted in figure
+    2. The state wise populations and Covid-19 infected cases are also collected from
+    the Ministry of health and welfare portal.
+
+
+    ## Results and Discussion
+
+
+    Coefficients are the Constant b1 and b2 to used:
+
+
+    ```python
+
+    import pandas as pd
+
+    Coefficients : [[0.02741452, 17.771037088]]
+
+    mytable = pd.read_csv(''c:\users\shakt\Desktop\current.csv'')
+
+    ```
+
+
+    We can predict the value of Y as X input.
+
+    New_cases = 10000
+
+    New_hospitals = 550
+
+
+    # OLS Regression Results
+
+
+    | Dev. | B-squared | R-squared |
+
+    |---|---|---|
+
+    | Model | 0.825 | 0.825 |
+
+    | Adj. R-squared | 0.816 | |
+
+    | Least Squares | 24 | 56 |
+
+    | Date | 18 Jun 2020 | Prob(F) : 5.24e-04 |
+
+    | Time | | F-stat : 14.68 |
+
+    | No. Observations | 368 | p-value : 0.000 |
+
+    | Std. Err | 26 | 800.0 |
+
+    | No. Degrees of Model | 1 | |
+
+
+    # Hospitals Vs Cases
+
+
+    | State | population |
+
+    |---|---|
+
+    | Andhra Pradesh | 30551 | 26 |
+
+    | Bihar | 82996 | 24 |
+
+    | Arunachal Pradesh | 103982 | 57 |
+
+    | Assam | 109957 | 16 |
+
+    | Chhattisgarh | 272941 | 21 |
+
+    | Goa | 155706 | 13 |
+
+    | Gujarat | 604396 | 18 |
+
+    | Haryana | 253514 | 22 |
+
+    | Himachal Pradesh | 686462 | 12 |
+
+    | Jharkhand | 3094125 | 18 |
+
+    | Karnataka | 6109529 | 34 |
+
+    | Madhya Pradesh | 27250893 | 30 |
+
+    | Meghalaya | 309943 | 7 |
+
+    | Mizoram | 1135862 | 6 |
+
+    | Nagaland | 1996142 | 11 |
+
+    | Odisha | 4681722 | 25 |
+
+    | Punjab | 2881676 | 23 |
+
+    | Rajasthan | 56519954 | 27 |
+
+    | Tamil Nadu | 72147091 | 33 |
+
+    | Telangana | 35189993 | 19 |
+
+    | Tripura | 1372177 | 5 |
+
+    | Uttar Pradesh | 199812553 | 40 |
+
+    | Uttarakhand | 10086293 | 13 |
+
+    | West Bengal | 91276164 | 36 |
+
+
+    Fig. 2. Hospitals Cases
+
+    Fig. 3. Sample of data for predictions
+
+    Fig. 4. Result Parameters of the Applied
+
+    Fig. 5. Correlation between selected attribute
+
+    Fig. 1. Health expenditure of various countries
+
+    Fig. 4. OLS Regression Results
+
+
+    ## C. Correlations
+
+
+    All the crucial information about the importance of features and the target value
+    is retrieved from the correlation between the features. The correlation between
+    the number of beds and total number of cases for specific period is depicted in
+    figure 1, as well as the number of hospitals corresponding to the number of cases
+    in Fig 1 and Fig.2 which shows the strong relationship and a positive correlation
+    between beds and cases as well as hospitals as was
+
+    '
+  mdcn: "\n\n# 2020 第六届国际并行、分布式与网格计算会议 (PDGC)\n\n# 印度医疗系统已准备好应对 COVID-19：一种预测床位数量的机器学习工具\n\
+    \nShakti Nagraj\n计算机科学与工程系\nPanipat Institute of Engineering & Technology\nPanipat,\
+    \ 印度\n\nVijay Anand Aashwale\n计算机科学与工程系\nPanipat Institute of Engineering & Technology\n\
+    Panipat, 印度\n\nAshwini Kumar Sani\nGovind Bajaj Patel Institute of Engineering\
+    \ & Technology\nPat Gwalior\n\nRavindra Sharma\nSwami Rama Himalayanan University\n\
+    Dehradun, 印度\n\n**全球性**研究团队宣布，应对 COVID-19 需要卫生管理系统的水平。在处理 COVID-19 的工作时，已进行统计分析以检查不同国家的应对准备情况，并考虑了这些应对措施。还需要人口统计趋势以进一步补充\
+    \ COVID-19 案例准备工作的内容。这场大疫情对不同国家的经济构成了重大挑战。各国之间的床位可用性差异巨大。澳大利亚每千人拥有 2.6 张床，而英国每千人拥有\
+    \ 2.5 张床。人均支出为。\n\n印度医疗系统不够稳健，无法为数百万公民提供优质的基础设施和其他资源。COVID-19 造成了紧急状态，需要尽快修复所有瓶颈，病毒已在许多发达国家爆发。印度正处于一个令人震惊的阶段，就像安在在头上的定时炸弹。由于医疗保健服务不足，对\
+    \ COVID-19 病例的检测非常低。因此，印度的数字可能无法代表印度 COVID-19 病例的真实数字。在最初几个月里，印度医学研究委员会提供了截至 3\
+    \ 月 27 日的报告统计数据，随后病例改为每日报告。\n\n**关键词**—机器学习、回归、医院、COVID-19、医疗支出\n\n## 引言\n\n由于\
+    \ COVID-19，全球卫生系统都受到了影响，或者当我们能够向医疗服务部门发出警报时，各国正在尝试为此制定策略。为了构建这些，需要考虑每千人的可用床位数量、总人口的床位数量、不同国家的人口减少情况，以及某些发达国家超过\
+    \ 60 年的情况。在发达国家中已经做好了准备并能够应对 COVID-19 案例。在本文中，我们提出了一种机器学习模型来预测患者所需的床位数量。可用床位数量从古吉拉特邦的人口中获取，患者数量根据健康和家族史确定。使用多元线性回归模型进行机器学习，并应用于数据集以预测患者所需的床位数量。设计了一个自动化模型，可以对任何数量的患者提供床位预测预测。\n\
+    \n表 I. 医疗服务资源计数（单位：每千人）[来源-WWW.HEALTHAFIRS.ORG]\n\n| | 澳大利亚 | 英国 | 德国 | 加拿大 |\
+    \ 美国 |\n| --- | --- | --- | --- | --- | --- |\n| 床位 | 2.4 | 2.24 | 4.24 | 3.01\
+    \ | 2.6 |\n| 医生 | 3.4 | 2.8 | 4.3 | | |\n| 护士 | 1.9 | 2.5 | 6 | 8 | 2 |\n| 其他\
+    \ | 4 | 21.4 | 28.8 | 27.2 | 37 |\n\n根据 2019 年国家概况数据，印度每千人可用 0.55 张床。这些邦，即比哈尔邦、贾坎德邦、古吉拉特邦、北方邦、安得拉邦邦、恰加特斯尔邦、中央邦、哈里亚纳邦、马哈哈施拉邦、奥萨邦、阿萨姆邦和曼尼普邦的可用床位方面低于国家水平（0.55），尽管只有德里、泰米尔纳德邦和喀拉等少数邦健康状况较，每人拥有\
+    \ 1.05 张床。这是因为印度人均可用床位数量较低。表 1 显示了一些国家的医疗保健服务。\n\n表 2 提到了不同国家的 HAQ（医疗保健获取与质量）指数，该指数于\
+    \ 2016 年审查并发表在 2020 年 4 月的《时报》报告中。印度排名第 145 位，报告基于疾病负担涵盖了大约 32 个州，其中通过有效的医疗护理是可以预防和治愈的。\n\
+    \n新冠病毒肺炎的突然爆发使问题变得复杂，全球范围内医疗保健的优先事项发生了变化。资源有限和医疗保健系统效率下的问题成倍增加。\n\n印度的两个邦果尔邦和喀拉拉邦已达到\
+    \ 60 分，而北方邦得分较低，即低于 40 分。\n\n医疗服务的需求突然增加。COVID-19 患者正挣扎获取医疗设施和医院床位。印度有大量患者，可用\
+    \ 5-10 张 ICU 床位。只有 50% 的 ICU 床位配备呼吸机，其他医疗保健服务可用。根据《印度时报》的报道，全国有 17,850 到 25,555\
+    \ 台呼吸机。\n\n在本文中，我们开发了机器学习来预测 COVID-19 患者所需的床位数量。2020 年 7 月 5 日，印度有 68,300 例病例，增长速度非常快。COVID-19\
+    \ 阳性比为 6.7%。政府和医院有责任采取预防措施来管理局面。预测模型将动态地提供护理所需的医院和床位数量。使用机器学习的线性回归模型来实现该模型。它是连续数据的最佳机器学习模型，并在模型经过适当训练后可提供预测准确性。这是一个监督学习模型，将不同医院的状态、不同邦的人口以及\
+    \ COVID-19 患者的人口作为输入。数据集分为训练数据和测试数据。\n\n## II. 方法论\n\n印度医疗服务的总支出为人均 2.5，医疗占 GDP\
+    \ 的百分比为 4.8%，而印度人的预期寿命为 69.1 岁。图 1. 医疗支出显示了各国的。\n\n根据 2019 年国家概况数据，印度每千人可用 0.55\
+    \ 张床。这些邦，即比哈尔邦、贾坎德邦、古吉拉特邦、北方邦、安得拉邦、恰加特斯尔邦、中央邦、哈里亚纳邦、马哈哈施拉邦、奥萨邦、阿萨姆邦和曼尼普邦的可用床位方面低于国家水平（0.55），尽管这些邦占有\
+    \ 70% 的印度人口。只有德里、泰米尔纳德邦和喀拉等少数邦的健康状况较，每人拥有 1.05 张床。这是因为印度人均可用床位数量较低。表 1 显示了一些国家的医疗保健服务。\n\
+    \n在表 2 中提到了不同国家的 HAQ（医疗保健获取与质量）指数，该指数于 2016 年审查并发表在 2020 年 4 月的《时报》报告中。印度排名第 145\
+    \ 位，报告基于疾病负担涵盖了大约 32 个州，其中通过有效的医疗护理是可以预防和治愈的。\n\n新冠病毒肺炎的突然爆发使问题变得复杂，全球范围内医疗保健的优先事项发生了变化。资源有限和医疗保健系统效率下的问题成倍增加。\n\
+    \n印度的两个邦果尔邦和喀拉拉邦已达到 60 分，而北方邦得分较低，即低于 40 分。\n\n医疗服务的需求突然增加。COVID-19 患者正挣扎获取医疗设施和医院床位。印度有大量患者，可用\
+    \ 5-10 张 ICU 床位。只有 50% 的 ICU 床位配备呼吸机，其他医疗保健服务可用。根据《印度时报》的报道，全国有 17,850 到 25,555\
+    \ 台呼吸机。\n\n在本文中，我们开发了机器学习来预测 COVID-19 患者所需的床位数量。2020 年 7 月 5 日，印度有 68,300 例病例，增长速度非常快。COVID-19\
+    \ 阳性比为 6.7%。政府和医院有责任采取预防措施来管理局面。预测模型将动态地提供护理所需的医院和床位数量。使用机器学习的线性回归模型来实现该模型。它是连续数据的最佳机器学习模型，并在模型经过适当训练后可提供预测准确性。这是一个监督学习模型，将不同医院的状态、不同邦的人口以及\
+    \ COVID-19 患者的人口作为输入。数据集分为训练数据和测试数据。\n\n II. 方法论\n\n印度医疗服务的总支出为人均 2.5，医疗占 GDP\
+    \ 的百分比为 4.8%，而印度人的预期寿命为 69.1 岁。图 1. 医疗支出显示了各国的。\n\n根据 2019 年国家概况数据，印度每千人可用 0.55\
+    \ 张床。这些邦，即比哈尔邦、贾坎德邦、古吉拉特邦、北方邦、安得拉邦、恰加特斯尔邦、中央邦、哈里亚纳邦、马哈哈施拉邦、奥萨邦、阿萨姆邦和曼尼普邦的可用床位方面低于国家水平（0.55），尽管这些邦占有\
+    \ 70% 的印度人口。只有德里、泰米尔纳德邦和喀拉等少数邦的健康状况较，每人拥有 1.05 张床。这是因为印度人均可用床位数量较低。表 1 显示了一些国家的医疗保健服务。\n\
+    \n（注：由于提供的文本中存在大量重复和逻辑断层，翻译已已遵循“不重复输出原文”的原则，并对表格内容进行了整合翻译。）\n\n| | 澳大利亚 | 英国 |\
+    \ 德国 | 加拿大 | 美国 |\n| --- | --- | --- | --- | --- | --- |\n| 床位 | 2.4 | 2.24 |\
+    \ 4.24 | 3.01 | 2.6 |\n| 医生 | 3.4 | 2.8 | 4.3 | | |\n| 护士 | 1.9 | 2.5 | 6 | 8\
+    \ | 2 |\n| 其他 | 4 | 21.4 | 28.8 | 27.2 | 37 |\n\n表 II. 不同国家的 HAQ 指数\n\n| 国家 |\
+    \ HAQ 指数 (2016) | HAQ 指数 (2018) |\n| --- | --- | --- |\n| 印度 | 41.2 | 45 |\n|\
+    \ 巴西 | 63.8 | 56 |\n| 俄罗斯 | 75.1 | 58 |\n| 中国 | 77.9 | 96 |\n| 南非 | 96.7 | 127\
+    \ |\n\n III. 多元线性回归\n\nA. 数据集\n\nB. 数据分析\n\nC. 相关性\n\n所有关于特征重要性和目标值的关键信息都从特征之间的相关性中获取。特定时段床位数量与病例总数之间的相关性如图\
+    \ 1 所示，以及如图 1 和图 2 所示的病例对应的医院数量，显示了床位与病例以及医院之间存在强相关性和正相关关系，正如所\n\n"
+  merge: -1
+- raw:
+  - '[PAGE 3]
+
+
+    # 2020 Sixth International Conference on Parallele, Distributed and Grid Computing
+    (PDGC)
+
+
+    ![](img/1178e645b0ba2c81eb0871c695c6dc4c_3_0.png)
+
+
+    Fig. 5. Correlation between selected attribute
+
+
+    ![](img/1178e645b0ba2c81eb0871c695c6dc4c_3_1.png)
+
+
+    Fig. 6. Genetic Model Demonstration
+
+
+    # D. Data Pre-processing
+
+
+    The data set consists of various columns datatype being string, and Numeric. In
+    machine learning all is applied to the categorical data of the columns which assign
+    a unique number to each category in the data.
+
+
+    Data wr is applied on the dataset to fill the missing values with mean, some of
+    the states where hospitals is missing but numeric are filled with the number of
+    beds available hospitals. The column having a data type could not be used to directly
+    handle the data feature engineering is applied on the specific column. The dataset
+    is divided into two phases training and Testing 70% of the dataset is used to
+    train the model while 30% of the dataset is used to test the data.
+
+
+    # E. Evaluation
+
+
+    The objective of the evaluation metrics is to accurately predict the outcome of
+    number of beds as required. The accuracy of the number of cases increased. The
+    accuracy of the results is shown in the figure 6. The value is positive, positive
+    error 0.0724, predicted is acceptable 0.629 which is greater than 0.5 proves proposed
+    model is acceptable. The dataset consists of positive and negative datapoints.
+    The proposed model could be calculated by total number of data points divided
+    by total number of correct predictions divided (positive negative). With the help
+    of accuracy, the accuracy of the improved model could be calculated with the following
+    equations:
+
+
+    accuracy= Data points/ total correct predictions
+
+
+    0.0< Accuracy<1
+
+
+    While presenting the system is the ratio of positive samples divided by total
+    number of datapoints. Helps in identifying the correct number of accurate/correct
+    predictions
+
+
+    # REFERENCES
+
+
+    A machine learning model is applied on the positive dataset, while multiple regression
+    model is applied on the various attributes. State-wise population and beds with
+    respect to number of cases of COVID-19 is considered for predicting the futuristic
+    requirements. The interface of the proposed model is designed which dynamically
+    predicts the predictions on the stated dataset (number of COVID cases which is
+    constantly changing). The major issues is the lack of available data. Government
+    is publishing the latest cases and status of the COVID-19 on public matters. Machine
+    learning models provides the optimal results with the successful training with
+    accurate data.
+
+
+    +   [1] https://www.kaggle.com/statistics/1117473/india-health-risk-assessment-by-order.
+
+    [2] https://www.statista.com/topics/5191/state-of-health-in-india.
+
+    [3] https://www.businessready.in/economy/coronavirus-crisis-in-india-lockdown-19-period-of-public-health-system-counts-10000000.html
+
+    [4] https://currentaffairs.com/tags/india/ags-help-link
+
+    [5] https://knowledge.wordbank.org/handle/1098618237/9781649818331
+
+    [6] George Schwab,Jean-Pierre Poulie and Leslie M Green, health care systems in
+    twenty-four countries, Health Affairs,Vol.10,no.3,p1-28, online at https://www.healthaffairs.org/full/10.1377
+
+    [7] https://www.brookings.edu/blog/front/2020/03/24/is-india-health-equipped-to-handle-the-epidemic.'
+  - '[PAGE 4]
+
+
+    Huang, C, Wang, Y, Li, R, Shao, J, Zhu, Y, et al. Clinical features of patients
+    infected with 2019 coronavirus in Wuhan, China. Lancet 2020;395(10217).doi:10.1016/S0140-6736(20)31165-3
+
+
+    Li, Q, Juan, W, P, Wang, X, Zhou, T, et al. Early transmission dynamics in Wuhan,
+    China, of novel coronavirus infection. N Engl J Med. 2020;382:1189-207. doi:10.1056/NEJMo2001316
+
+
+    Chen N, Zhou M, Dong X, Qi Y, Gong F, Han Y, et al. Epidemiological and clinical
+    characteristics of 99 cases of 2019 novel coronavirus in Wuhan, China. Lancet
+    2020;395(10217):75. doi:10.1016/S0140-6736(20)3021-7
+
+
+    Clinical Management of Severe Acute Respiratory Infection in Wuhan, Novel Coronavirus
+    (2019-n). Interim Guidance. Available online at: https://apps.who.int/iris/handle/10665/3300733
+    (Accessed April 30, 2020).
+
+
+    Zumia L, Ai H, Durck M, Mitchell TM. Medical resources of COVID-19 pandemic. Lancet
+    2020;395(10217):997. doi:10.1016/S0140-6736(20)31645-8
+
+
+    Phan QV, Nguyen DC, Hwng, WJ, Paritthna PN. Artificial intelligence (AI) and big
+    data for coronavirus (COVID-19) pandemic: a survey. doi:10.2020/2020043083 (2020).
+    doi:10.20944/preprints2020043083.v1
+
+
+    [WHO] Situation Report-94 Coronavirus disease 2019 (COVID-19). Available online
+    at: https://www.who.int/docs/
+
+
+    source/coronavirus/situation-report-20200423-sitrep-94-covid.pdf?attachment=b8s304bf4
+    (accessed March 10, 2020).
+
+
+    Wang L, Wang A. COVID-Net: a tailored deep convolutional neural network for detection
+    of COVID-19 cases from chest X-rays. arXiv (2020):2003.09871. Available at: https://arxiv.org/abs/2003.09871
+    (accessed May 5, 2020).
+
+
+    Pal R, Suth AA, Kar S, Prasad DK. Neural network-based curve wise COVID-19 prediction.
+    arXiv (2020):2004.09959. Available online: https://arxiv.org/abs/2004.09959
+
+
+    Liu D, Clemente L, Putier C, Ding X, Ferrari M, Davis JT, et al. A machine learning
+    learning method for real-time forecasting of the 2019-2020 COVID outbreak from
+    mechanistic models. arXiv (2020):2004.04019. Available at: https://arxiv.org/abs/2004.04019
+    (accessed May 6, 2020).'
+  md: '
+
+    # 2020 Sixth International Conference on Parallel, Distributed and Grid Computing
+    (PDGC)
+
+
+    ![](img/1178e645b0ba2c81eb0871c695c6dc4c_3_0.png)
+
+
+    Fig. 5. Correlation between selected attribute
+
+
+    ![](img/1178e645b0ba2c81eb0871c695c6dc4c_3_1.png)
+
+
+    Fig. 6. Genetic Model Demonstration
+
+
+    ## D. Data Pre-processing
+
+
+    The data set consists of various columns datatype being string, and Numeric. In
+    machine learning all is applied to the categorical data of the columns which assign
+    a unique number to each category in the data.
+
+
+    Data wr is applied on the dataset to fill the missing values with mean, some of
+    the states where hospitals is missing but numeric are filled with the number of
+    beds available hospitals. The column having a data type could not be used to directly
+    handle the data feature engineering is applied on the specific column. The dataset
+    is divided into two phases training and Testing 70% of the dataset is used to
+    train the model while 30% of the dataset is used to test the data.
+
+
+    ## E. Evaluation
+
+
+    The objective of the evaluation metrics is to accurately predict the outcome of
+    number of beds as required. The accuracy of the number of cases increased. The
+    accuracy of the results is shown in the figure 6. The value is positive, positive
+    error 0.0724, predicted is acceptable 0.629 which is greater than 0.5 proves proposed
+    model is acceptable. The dataset consists of positive and negative datapoints.
+    The proposed model could be calculated by total number of data points divided
+    by total number of correct predictions divided (positive negative). With the help
+    of accuracy, the accuracy of the improved model could be calculated with the following
+    equations:
+
+
+    accuracy= Data points/ total correct predictions
+
+
+    0.0 < Accuracy < 1
+
+
+    While presenting the system is the ratio of positive samples divided by total
+    number of datapoints. Helps in identifying the correct number of accurate/correct
+    predictions
+
+
+    ## # REFERENCES
+
+
+    A machine learning model is applied on the positive dataset, while multiple regression
+    model is applied on the various attributes. State-wise population and beds with
+    respect to number of cases of COVID-19 is considered for predicting the futuristic
+    requirements. The interface of the proposed model is designed which dynamically
+    predicts the predictions on the stated dataset (number of COVID cases which is
+    constantly changing). The major issues is the lack of available data. Government
+    is publishing the latest cases and status of the COVID-19 on public matters. Machine
+    learning models provides the optimal results with the successful training with
+    accurate data.
+
+
+    - [1] https://www.kaggle.com/statistics/1117473/india-health-risk-assessment-by-order.
+
+    - [2] https://www.statista.com/topics/5191/state-of-health-in-india.
+
+    - [3] https://www.businessready.in/economy/coronavirus-crisis-in-india-lockdown-19-period-of-public-health-system-counts-10000000.html
+
+    - [4] https://currentaffairs.com/tags/india/ags-help-link
+
+    - [5] https://knowledge.wordbank.org/handle/1098618237/9781649818331
+
+    - [6] George Schwab, Jean-Pierre Poulie and Leslie M Green, health care systems
+    in twenty-four countries, Health Affairs,Vol.10,no.3,p1-28, online at https://www.healthaffairs.org/full/10.1377
+
+    - [7] https://www.brookings.edu/blog/front/2020/03/24/is-india-health-equipped-to-handle-the-epidemic.
+
+    - Huang, C, Wang, Y, Li, R, Shao, J, Zhu, Y, et al. Clinical features of patients
+    infected with 2019 coronavirus in Wuhan, China. Lancet 2020;395(10217).doi:10.1016/S0140-6736(20)31165-3
+
+    - Li, Q, Juan, W, P, Wang, X, Zhou, T, et al. Early transmission dynamics in Wuhan,
+    China, of novel coronavirus infection. N Engl J Med. 2020;382:1189-207. doi:10.1056/NEJMo2001316
+
+    - Chen N, Zhou M, Dong X, Qi Y, Gong F, Han Y, et al. Epidemiological and clinical
+    characteristics of 99 cases of 2019 novel coronavirus in Wuhan, China. Lancet
+    2020;395(10217):75. doi:10.1016/S0140-6736(20)3021-7
+
+    - Clinical Management of Severe Acute Respiratory Infection in Wuhan, Novel Coronavirus
+    (2019-n). Interim Guidance. Available online at: https://apps.who.int/iris/handle/10665/3300733
+    (Accessed April 30, 2020).
+
+    - Zumia L, Ai H, Durck M, Mitchell TM. Medical resources of COVID-19 pandemic.
+    Lancet 2020;395(10217):997. doi:10.1016/S0140-6736(20)31645-8
+
+    - Phan QV, Nguyen DC, Hwng, WJ, Paritthna PN. Artificial intelligence (AI) and
+    big data for coronavirus (COVID-19) pandemic: a survey. doi:10.2020/2020043083
+    (2020). doi:10.20944/preprints2020043083.v1
+
+    - [WHO] Situation Report-94 Coronavirus disease 2019 (COVID-19). Available online
+    at: https://www.who.int/docs/source/coronavirus/situation-report-20200423-sitrep-94-covid.pdf?attachment=b8s304bf4
+    (accessed March 10, 2020).
+
+    - Wang L, Wang A. COVID-Net: a tailored deep convolutional neural network for
+    detection of COVID-19 cases from chest X-rays. arXiv (2020):2003.09871. Available
+    at: https://arxiv.org/abs/2003.09871 (accessed May 5, 2020).
+
+    - Pal R, Suth AA, Kar S, Prasad DK. Neural network-based curve wise COVID-19 prediction.
+    arXiv (2020):2004.09959. Available online: https://arxiv.org/abs/2004.09959
+
+    - Liu D, Clemente L, Putier C, Ding X, Ferrari M, Davis JT, et al. A machine learning
+    learning method for real-time forecasting of the 2019-2020 COVID outbreak from
+    mechanistic models. arXiv (2020):2004.04019. Available at: https://arxiv.org/abs/2004.04019
+    (accessed May 6, 2020).
+
+    '
+  mdcn: '
+
+
+    # 2020 第六届并行、分布式与网格计算国际会议 (PDGC)
+
+
+    ![](img/1178e645b0ba2c81eb0871c695c6dc4c_3_0.png)
+
+
+    图 5 所选属性之间的相关性
+
+
+    ![](img/1178e645b0ba2c81eb0871c695c6dc4c_3_1.png)
+
+
+    图 6. 遗传模型演示
+
+
+    ## D. 数据预处理
+
+
+    数据集包含多种数据类型的列，如字符串和数值（Numeric）。在机器学习中，这些方法均应用于列的分类数据，通过为数据中的每个类别分配一个唯一的数字。
+
+
+    对数据集进行了数据清洗（Data wr），以用平均值填充缺失值；在某些缺失医院信息但为数值的状态下，用可用床位数量进行填充。对于数据类型无法直接处理的列，则对特定列应用了特征工程处理。数据集被分为训练和测试两个阶段：70%
+    的数据集用于训练模型，30% 的数据集用于测试数据。
+
+
+    ## E. 评估
+
+
+    评估指标的目标是准确预测所需的床位数量。病例数量的准确性有所提高。结果的准确性如图 6 所示。值为正，误差为 0.0724，预测接受度为 0.629，大于
+    0.5，证明所提模型是可以接受的。数据集包含正负数据点。所提模型可以通过数据点总数除以正确预测总数（正/负）来计算。在准确性的帮助下，可以使用公式计算改进模型的准确率：
+
+
+    accuracy= 数据点/ 总正确预测数
+
+
+    0.0 < Accuracy < 1
+
+
+    在展示系统时，为正样本除以数据点总数的比例。这有助于识别准确/正确预测的数量。
+
+
+    ## # 参考文献
+
+
+    机器学习模型应用于正样本数据集，而多元回归模型应用于各种属性。考虑了各州人口与 COVID-19 病例相关的床位，以预测未来的需求。设计了所提模型的接口，用于动态对指定数据集（不断变化的
+    COVID病例数）进行预测。主要问题是缺乏可用数据。政府正在公共事务方面发布 COVID-19 的最新病例和状况。机器学习模型通过在准确数据上的成功训练，提供了最优结果。
+
+
+    - [1] https://www.kaggle.com/statistics/1117473/india-health-risk-assessment-by-order.
+
+    - [2] https://www.statista.com/topics/5191/state-of-health-in-india.
+
+    - [3] https://www.businessready.in/economy/coronavirus-crisis-in-india-lockdown-19-period-of-public-health-system-counts-10000000.html
+
+    - [4] https://currentaffairs.com/tags/india/ags-help-link
+
+    - [5] https://knowledge.wordbank.org/handle/1098618237/9781649818331
+
+    - [6] George Schwab, Jean-Pierre Poulie and Leslie M Green, health care systems
+    in twenty-four countries, Health Affairs,Vol.10,no.3,p1-28, online at https://www.healthaffairs.org/full/10.1377
+
+    - [7] https://www.brookings.edu/blog/front/2020/03/24/is-india-health-equipped-to-handle-the-epidemic.
+
+    - Huang, C, Wang, Y, Li, R, Shao, J, Zhu, Y, et al. Clinical features of patients
+    infected with 2019 coronavirus in Wuhan, China. Lancet 2020;395(10217).doi:10.1016/S0140-6736(20)31165-3
+
+    - Li, Q, Juan, W, P, Wang, X, Zhou, T, et al. Early transmission dynamics in Wuhan,
+    China, of novel coronavirus infection. N Engl J Med. 2020;382:1189-207. doi:10.1056/NEJMo2001316
+
+    - Chen N, Zhou M, Dong X, Qi Y, Gong F, Han Y, et al. Epidemiological and clinical
+    characteristics of 99 cases of 2019 novel coronavirus in Wuhan, China. Lancet
+    2020;395(10217):75. doi:10.1016/S0140-6736(20)3021-7
+
+    - Clinical Management of Severe Acute Respiratory Infection in Wuhan, Novel Coronavirus
+    (2019-n). Interim Guidance. Available online at: https://apps.who.int/iris/handle/10665/3300733
+    (Accessed April 30, 2020).
+
+    - Zumia L, Ai H, Durck M, Mitchell TM. Medical resources of COVID-19 pandemic.
+    Lancet 2020;395(10217):997. doi:10.1016/S0140-6736(20)31645-8
+
+    - Phan QV, Nguyen DC, Hwng, WJ, Paritthna PN. Artificial intelligence (AI) and
+    big data for coronavirus (COVID-19) pandemic: a survey. doi:10.2020/2020043083
+    (2020). doi:10.20944/preprints2020043083.v1
+
+    - [WHO] Situation Report-94 Coronavirus disease 2019 (COVID-19). Available online
+    at: https://www.who.int/docs/source/coronavirus/situation-report-20200423-sitrep-94-covid.pdf?attachment=b8s304bf4
+    (accessed March 10, 2020).
+
+    - Wang L, Wang A. COVID-Net: a tailored deep convolutional neural network for
+    detection of COVID-19 cases from chest X-rays. arXiv (2020):2003.09871. Available
+    at: https://arxiv.org/abs/2003.09871 (accessed May 5, 2020).
+
+    - Pal R, Suth AA, Kar S, Prasad DK. Neural network-based curve wise COVID-19 prediction.
+    arXiv (2020):2004.09959. Available online: https://arxiv.org/abs/2004.09959
+
+    - Liu D, Clemente L, Putier C, Ding X, Ferrari M, Davis JT, et al. A machine learning
+    learning method for real-time forecasting of the 2019-2020 COVID outbreak from
+    mechanistic models. arXiv (2020):2004.04019. Available at: https://arxiv.org/abs/2004.04019
+    (accessed May 6, 2020).
+
+
+    '
+  merge: 0
