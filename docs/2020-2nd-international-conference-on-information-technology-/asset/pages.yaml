@@ -1,0 +1,374 @@
+- pgno: 0
+  md: "# 2020 2nd International Conference on Information Technology and Computer\
+    \ Application (ITCA)\n\n# # Research on International and Domestic Internet of\n\
+    Things Security Policy\n\nZhan-Hui Gang\nMonitoring and Emergency Institute\n\
+    China Industrial Control Systems Cyber Emergency Response\nTeam\nBeijing, China\n\
+    ganghanhui@cics-cert.org\n\nChang-Yue Ya*\nIndustry Management Promotion Center\n\
+    China Electronics Standardization Institute\nBeijing, China\n'yuchangyue@aliyun.com\n\
+    \nHai-Bao Huang\nDepartment of Economics and Management\nBeijing University of\
+    \ Posts and Telecommunications\nBeijing, China\npochuang@163.com\n\nLi-Jun Wang\n\
+    Monitoring and Emergency Institute\nChina Industrial Control Systems Cyber Emergency\
+    \ Response\nTeam\nBeijing, China\nwlj0228@163.com\n\n**Abstract—With the vigorous\
+    \ development of the Internet of\nThings (IoT), the cybersecurity issues of the\
+    \ IoT are\nemerging. Putting IoT security into priorities has become\na a common\
+    \ practice in many countries around the world.\nIn this paper we discuss the relevant\
+    \ regulations, strategies,\nstandards, guidelines, and other policy documents\
+    \ released\by domestic and foreign governments. In recent years, the\npaper focuses\
+    \ on comparison and analysis of the IoT security\npolicies in US, EU, and China.\
+    \ The\ndevelopment of China's IoT security policies. Based on this, we\ngive some\
+    \ suggestions for the development of IoT security\nin China.\n\ndevelopment of\
+    \ foreign IoT security and accelerate the\ndevelopment of China's IoT security.\n\
+    \n**Keywords - Internet of things; security; policy; consumer\n\n# I. INTRODUCTION\n\
+    \nThe Internet of Things (IoT) has entered a new stage of\ndevelopment by making\
+    \ things intelligent and connected. As the\nIoT becomes critical infrastructure,\
+    \ it is expected that\nthe utilization and expansion of cyberspace for IoT will\n\
+    been incorporated into the strategic planning of\nevery development in many countries,\
+    \ which has used to\nbalance and enhance the competitive advantage of the IoT\
+    \ industry\nsecurity. With the rapid development of IPv6, the\npopularity of network\
+    \ attacks attacking IoT\ndices is increasing, and cybersecurity issues have become\n\
+    an essential factor for the practical application and sustainable\ndevelopment.\
+    \ Moreover, IoT has attracted\nached great interest to the top-level design of\
+    \ IoT security\nand the construction of the policy environment. By analyzing\n\
+    the characteristics of the IoT security policies in\ncountries, such as the US,\
+    \ EU, UK, Australia, it can\nare relevant insights and experiences in China to\
+    \ understand the\n\n# II. ANALYSIS OF FOREIGN COUNTRIES' I\nSECURITY POLICY\n\n\
+    # A. US: Adverse to top-level strategic planning and policy\nguidelines\n\nAs\
+    \ one of the leaders and pioneers of the IoT technology,\ndevelopment of national-level\
+    \ IoT security research and the\nstrategic plan has become an essential reference\
+    \ to guide\ndevelopment of the IoT in the US. At the end of 2016, the\nsecurity\
+    \ incident reports highlighted the\nsecurity issue of the IoT to the height of\
+    \ homeland security, the\nUS Department of Homeland Security used a set of\nPrinciples\
+    \ for Securing the Internet of Things (IoT), Version\nt federal government's mandate\
+    \ to ensure the security of the\nIoT, the white papers cover cross-departmental\
+    \ cooperation,\nt promotion of national security awareness, the promotion of\n\
+    IoT development and manufacturing. These standards were established and sought\
+    \ for\npractices to protect the IoT's security and would equip\nstakeholders to\
+    \ manage and risk-based security\nchallenges, including manufacturing, connected\n\
+    devices or services. Then, as the US\ngovernment has accelerated the development\
+    \ of IoT\npolicy documents to strengthen the development of IoT\nsecurity management,\
+    \ improve the management mechanisms,\ndevelopment and control capabilities. Since\
+    \ 2017,\nthe IoT security-related policies and regulations are shown\nin Table\
+    \ I.\n\n# TABLE I. THE I SECURITY RELATED POLICIES AND\nREGULATIONS\n\n| Time\
+    \ | File Name | IoT security-related |\n|---|---|-|\n| June 13, 2017 | Promoting\
+    \ Stakeholder Agreement and Othered Capabilities of IoT Security | Seek insight\
+    \ from private industry, academia, and society, and other experts to strengthen\
+    \ the security protection of IoT devices. |\n| Sep 28, SB-327 | Mandatory standards\
+    \ to the necessary safety |"
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# IoT Security Conference, which around the integrity of IoT supply chain and
+    the development of laws and regulations improved the security of the IoT supply
+    chain and the robustness of the ecosystem.
+
+
+    privacy connected standards of consumer IoT devices in terms of safety, privacy,
+    and trustworthiness
+
+
+    June 2019 Managing IoT IoT Privacy, Cybersecurity Guidelines Update IoT devices,
+    data, and privacy security policies and procedures in time.
+
+
+    Dec 10, 2019 Federal Cybersecurity Research and Development Strategy Plan Consider
+    the issues posed by IoT in global digital infrastructure, investment in the research
+    and development of IoT security, and the safety and privacy of consumer IoT.
+
+
+    Feb 5th, 2020 IoT Security Policy Principles All stakeholders should consider
+    the IoT ecological security, focus on the broader context of IoT, and evolve and
+    diversify industry-wide standards and regulatory frameworks. Promote global harmony.
+
+
+    May 29, 2020 IoT Device Capability Baseline Proposes the aspects of the IoT device
+    cybersecurity baseline core baseline for interoperability, identification, device
+    configuration, data protection, software, update, and cybersecurity.
+
+
+    # C. UK: Focus on the security protection of consumer IoT
+
+
+    The UK is the first country to apply consumer IoT regulations. The world first
+    IoT security guidelines developed by UK, which provides a baseline for the development
+    of other countries'' IoT-related documents, and for the development of a common
+    consumer IoT global security standard. Since 2018, the UK government has issued
+    security policy documents around the design of IoT devices and software security
+    baselines. For example, the "Code of Protection for Consumer IoT" starting from
+    the protection of smart products, 13 mandatory provisions are based on results
+    put forward to improve IoT security and privacy. The practice of establishing
+    a benchmark for Internet-connected products and IoT certification programs, has
+    been incorporated into the "Data Protection Regulation." The UK government''s
+    factors are clear. The UK government has also formulated more stringent security
+    regulations from the perspectives of consumers, such as using device passwords,
+    easy contact with manufacturers, and explicit consent. In 2020, the UK government
+    released "Guidelines for consumer smart device security" which pointed out that
+    processes and security risks in consumer smart products matter. The plan, which
+    aims at improving the standards of consumer IoT and can establish a cybersecurity
+    baseline for market protection.
+
+
+    After three years of policy, the "IoT Cybersecurity Improvement Act of 2020" was
+    signed by Trump on December 4th, 2020. The bill proposed to improve the federal
+    regulatory framework for internet-connected devices purchased or used by the federal
+    government. The bill sought to address the supply chain risk of the federal government,
+    which from IoT devices. The pass of the bill marks IoT an essential step in improving
+    the security of the IoT.
+
+
+    # B. EU: Strengthening the supervision of the IoT supply chain
+
+
+    Although there is a gap in the development of IoT compared with the US, the EU
+    is the first institution in the world to systematically approach the protection
+    and security plan of IoT. The bill "Consumer Internet of Things" is expected to
+    lay a benchmark for proposals and standard IoT certification schemes. Since the
+    establishment of the IoT Innovation Alliance in 2015, the EU has given paid attention
+    to the security of the IoT supply chain. In 2016, the European Commission, starting
+    from the network and cloud computing, released a communication strategy to ensure
+    the privacy and security of IoT by forming laws and regulations, and compelling
+    companies to comply with security standards and other protections. In 2017, the
+    European Commission released a strategy for the European Union, incorporating
+    the concept of "security by design" within the lifecycle of the IoT devices and
+    components, providing a baseline for the security of the IoT supply chain. In
+    2018, the European Agency for Network and Information Security (ENISA) stated
+    the importance of embedding security protection capabilities into the manufacturing
+    process of IoT. On November 9th, 2019, ENISA released "Guidelines," which defined
+    the IoT supply chain security from the whole lifecycle of device demand, product
+    design, operation and disposal, and to make better security decisions for stakeholders
+    when building, deploying or evaluating IoT technology. Besides, the EU has launched
+    an antitrust inquiry into the security of IoT, and the 4th
+
+
+    # D. Australia: Guide to the development of the IoT industry with policy
+
+
+    Since 2017, the development of the IoT in Australia has gained entered from the
+    exploration period. To deal with security problems of the IoT industry''s growth,
+    the Australian government has proposed the "Cyber Kangaroo" [scheme], which aims
+    to point out the security problems of their products through the safety rating
+    system to remove vulnerabilities of IoT devices. On the IoT security protections
+    and relevant standards of the UK, EU and other countries, the Australian government
+    has formulated a series of voluntary IoT security policy guidelines to provide
+    the best practices for IoT. Functions, is to address the consumer and the enterprise
+    market from bringing the digital divide due to the development of IoT technology.
+    In September 2020, the Australian Cyber Center based on the 13 recommendations
+    of the UK''s Security Policy Guidelines, made requirements to the end-users in
+    the industry to maintain security practices. The IoT security-related policy documents
+    issued by the Australian government in recent two years, can be regarded as the
+    necessary steps to improve the industrialization of Australian IoT. In November
+    2020, the Australian Government of Home Affairs issued the "Code of Practice securing
+    the Internet of Things for
+
+
+    522'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'Consumers," will bring the most extensive benefits in the short term. The Code
+    of Practice is committed to improving awareness of security safeguards with devices,
+    build greater confidence in IoT technology and allow Australia to reap the benefits
+    of IoT adoption.
+
+
+    disclose, and share vulnerability and track manufacturers to identify and rectify
+    vulnerabilities.
+
+
+    # IV. CHINA’S IoT SECURITY POLICY DEVELOPMENT
+
+
+    # A. Development status
+
+
+    In 2009, the IoT became one of China’s five critical strategic emerging industries,
+    and the cybersecurity issues of the IoT have attracted attention. Regard of the
+    development plans, guidelines, safety regulations that have been issued, or the
+    technical specification that is being formulated, the security issues of the IoT
+    are considered.
+
+
+    # III. CHARACTERISTICS OF FOREIGN IoT SECURITY POLICY
+
+
+    # A. Device security and consumer privacy protection the focus
+
+
+    With the acceleration of 5G commercial and the proliferation of IPv6, the IoT
+    is exponentially growing towards interconnection of billions of smart products
+    [5]. The security issues of the IoT are also increasingly prominent. The security
+    of manufacturing, integrating, and using IoT device becoming more and more critical.
+    In the formulation of IoT policies, the US, EU, and other countries have focused
+    on the trend of strengthening the security of the IoT consumer. The content focuses
+    on changing the default passwords, advancing security and vulnerability management,
+    ensuring integrity of data and device parameters, simplifying operation procedures,
+    and securing communication and legal verification. They can provide guidance for
+    protecting the organization’s IoT devices, consumers and entities.
+
+
+    In 2014, the Ministry of Industry and Technology of the People’s Republic of China
+    (MIIT) issued guidelines to establish and guarantee the security system of the
+    IoT and strengthen the formulation and implementation of security standards for
+    the IoT [7]. The “Fifth Five-Year Plan” clearly pointed out the development and
+    security of the IoT. At that time, it is necessary to address the principle of
+    safety and confidence. It was considering the development trend of IoT, the “White
+    Paper on Internet Security” published in 2014 by the MIIT addressed the risks,
+    proposed a security protection strategy framework, and pointed out the future
+    development and directions. In the same year, the security requirements for IoT
+    were further emphasized.
+
+
+    # B. Group collaboration to formulate policy standards based on the choice
+
+
+    Throughout the foreign IoT policy situation, the work of the IoT cybersecurity
+    strategy focuses on the concept of win-win cooperation. For instance, the US relies
+    more on the private sector for IoT policy development, which includes companies,
+    industries, academic institutions, professional associations, consumer groups
+    and others. UK of IoT policy underlines the importance of cooperation and trust-building
+    through public-private partnerships, and they stated that they would work with
+    international organizations and partners, the private and civil sectors to improve
+    cybersecurity capacity. The Department for Digital, Culture & Media is supported
+    by 45 agencies and bodies to develop the UK IoT security policy. The working mechanism
+    involving all forces provides a guarantee for the promotion and implementation
+    of
+
+
+    In the same year, the security requirements for IoT were further emphasized. In
+    critical areas such as 5G and IoT, by combining new-generation information and
+    technology. And they may formulate relevant data security standards in variety
+    with the development of the field and for the data security protection requirements
+    (See Li et al., 2016).
+
+
+    # B. Underdevelopment
+
+
+    From the perspective of the development process and policy documents of the IoT
+    cybersecurity in China, with the technical specifications, China’s IoT security
+    policy development is still in the very early stage. There are still gaps in the
+    formulation of laws and regulations, core baseline, and specifications related
+    to the IoT security, and the deficiencies in the safety supervision and implementation
+    of the IoT in China. As noted in the long journey of the IoT, a range of stakeholders
+    are not fully participating in the construction of IoT ecosystem. Cross-domain
+    and cross-industry interoperability issues are not well solved.
+
+
+    # C. The vulnerability strategy has become a hot spot.
+
+
+    In the IoT cybersecurity practices, guidelines, baselines, and other policy documents
+    establish a vulnerability disclosure policy and report management are more and
+    more emphasized. Vulnerability management strategy needs to provide a clear and
+    transparent establish a vulnerability disclosure policy, simplifying the reporting
+    systems of security researchers and other stakeholders clearly and update the
+    vulnerability disclosure strategy continuously. Besides, stakeholders or national
+    authorities will commit
+
+
+    However, with the substantial increase of industrial device and consumer IoT device
+    access, it also brings a large space for the development of China’s IoT security
+    policies and safety supervision.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# V. SUGGESTIONS ON PROMOTING THE SECURITY
+
+    DEVELOPMENT OF IoT IN CHINA
+
+
+    According to analysis, the US, EU, UK, Australia carry out strategies from the
+    perspective of IoT cybersecurity policy, combined with the current development
+    of IoT''s cybersecurity policy. The following suggestions are forward for the
+    development of IoT cybersecurity in China.
+
+
+    IoT security account, adhere to the static policy and dynamic technology, and
+    formulate the IoT security baseline and standard of China''s. Strengthen the supervision
+    of IoT device manufacturers and suppliers, focusing on device configuration, data
+    protection, vulnerability repair and other. It is necessary to improve IoT consumers''
+    security awareness, consumer industry confidence and achieve the status of "IoT
+    secure and eager to go", and further enhance the ability and level of IoT device
+    security and privacy protection in China.
+
+
+    +   A. Give full play to the advantage of the government and formulate a national
+    IoT security guidance document.
+
+
+    The government could give the benefit of overall planning and top-level coordination,
+    from the practical experience of the IoT security policy, regulations, and standards
+    in developed countries, and formulate a national IoT security strategy aligned
+    with China''s plan. We will strengthen the coordination of various departments
+    in policy and standard formation, infrastructure construction and cybersecurity
+    assurance. If the relevant level of IoT standards, specifications can be widely
+    recognized by the government and industry is needed, and then promote the implementation
+    of policy documents. We will create a suitable environment for the safety, health,
+    and orderly development of IoT.
+
+
+    Based on the ''Network Securityability Management Regulations (Draft for Comment),''
+    we could develop the IoT security management measures. According to the development
+    of the industry, the security level of IoT devices varies from the perspective,
+    information sharing and other aspects of the IoT vulnerability disclosure process
+    and methods. With the help of relevant national vulnerability database, reporting
+    mechanism, encourage social forces to join vulnerability management of IoT, and
+    improve efficiency.
+
+
+    +   B. Enhance the strength of the IoT industry to ensure a secure ecosystem of
+    the IoT.
+
+
+    The IoT industry could rely on the IoT Alliance, to generally connect the upstream
+    and downstream stakeholders of the IoT industry chain. They should reach a consensus
+    on integrity security covers the entire lifecycle of product development, production,
+    and deployment. We will jointly follow the best practices and requirements of
+    IoT cybersecurity, strengthen the risk management of the supply chain, and improve
+    the consumer security ecology in terms of IoT security requirements, standards
+    and specifications, testing and certification, and application demonstrations,
+    to promote the transparency of the industry.
+
+
+    # REFERENCES
+
+
+    +   [1] Kuang S, Min, Chao J, Ming Han, H. "An International Comparative Study
+    on Cybersecurity Strategy." International Journal of Security and Applications,
+    9, 2015, pp. 1-20.
+
+
+    +   [2] DHS. 2016. Critical Principles for Securing the Internet of Things (IoT),
+    Version 1. Washington, DC: US Department of Homeland Security.
+
+
+    +   [4] Zhao Y, Jamming M, Wong GTW, "The impact of IoT security on consumer product
+    quality and willingness to pay." PLoS One, 15, 2020, po e025768.
+
+
+    +   [5] Liu Y. "Security and IPv6-Based IoT Trust?" The Future Internet, 7858,
+    2013, pp. 161-172.
+
+
+    +   [6] National Institute of Standards and Technology, 2018. Report on the International
+    Cybersecurity Standardization for the Internet of Things, Gaersburg: US Department
+    of Commerce.
+
+
+    +   [7] MIIT, 2014. Critical points of Internet of things of the Ministry of industry
+    and information technology in 2014. Beijing: Ministry of Industry and Information
+    Technology of the People''s Republic of China.
+
+
+    +   [8] CAICT, 2018. White paper on Internet of Things; Beijing: China Academy
+    of Information and Communications Technology.
+
+
+    +   C. Enhance the effectiveness of IoT safety supervision and accelerate the
+    security layout of consumer IoT.
+
+
+    We actively draw lessons from the typical characteristics of the EU, and other
+    countries in IoT security supervision, and take into account diverse needs of
+    China''s'
+  merge: -1
+  img_proc: true
