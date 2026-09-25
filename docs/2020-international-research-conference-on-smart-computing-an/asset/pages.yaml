@@ -1,0 +1,782 @@
+- pgno: 0
+  md: '# A survey on applying machine learning to enhance trust in mobile adhoc networks
+
+
+    G. M. Linarajirasa*
+
+    Department of Software Engineering
+
+    Faculty of Computing and Technology
+
+    University of Kelaniya, Sri Lanka
+
+    madushikhani@gmail.com
+
+
+    S. R. Liyange
+
+    Department of Software Engineering
+
+    Faculty of Computing and Technology
+
+    University of Kelaniya, Sri Lanka
+
+    sidath@kln.ac.lk
+
+
+    **Abstract:** Mobile adhoc networks (MANETs) play a vital role in the increasingly
+    networked world where they have many applications in plenty including military,
+    society, Vehicular Adhoc Networks (VANETs), and other intelligent systems. By
+    the dynamic nature of mobile adhoc networks, they are often dejected to the various
+    malicious attacks. Over the years, various trust mechanisms have been developed
+    to ensure reliability and trust in MANET environment. Over the proposed solutions,
+    Machine learning applications have yielded results. Based on this, a survey of
+    trust-based approaches for mobile adhoc networks are presented. The focus of this
+    study is to classify and evaluate the existing trust mechanisms and provide guidance
+    for future research in the area.
+
+
+    **Keywords:** Machine learning, Malicious attacks, Mobile adhoc Network (MANET),
+    Trust, Vehicular Adhoc Network (VANET)
+
+
+    # I. INTRODUCTION
+
+
+    Because of the use of mobile devices, laptops, digital devices, and other IoT
+    (Internet of Things), wireless communication mechanisms have become popular through
+    the recent years. Mobile Adhoc Networks are one of the used class of wireless
+    networks which have been extensively examined by the researchers in the area.
+
+
+    But the major problem in MANETs is the security issue since it has some challenges
+    in data transmission because of its vulnerabilities. By having wireless lines
+    limited physical protection, autonomous behavior, mobility and lack of centralized
+    infrastructure, the security of MANETs is more challenging to achieve[1].
+
+
+    Also, level of trust varies upon the routing mechanism as well as the mobility
+    models. There are set of mobility models defined Random Point Mobility Model is
+    the most used model in MANETs.
+
+
+    Specific routing protocols are defined in the context of MANETs such as AODV (On-hoc
+    Demand- Trust), OLSR (Optimized Link State Routing), DSDV (Detection-Sequence-Direction-Source),
+    Batman Protocol To Mobile Adhoc network[2].
+
+
+    Although there are a lot of routing mechanisms, confirming the security of transferring
+    data through a MANET, is a major problem due to the vulnerable nature of these
+    networks where data can be missed or compromised. Since Trust is the major component
+    that relies
+
+
+    upon establishing reliable communication presents which have been done to enhancing
+    the security of MANETs.
+
+
+    This paper is a given comparative analysis through a critical analysis upon existing
+    trust enhancement in MANETs and specifically focuses on the machine learning approaches
+    and provides an idea for future research pathways.
+
+
+    Section II provides an idea about Trust in the context of MANETs and also some
+    description of basic MANETs. The challenges are as presented above with guidelines
+    selecting suitable trust for MANETs based on trust properties. Machine Learning
+    approaches for MANET trust are described in section IV and difference between
+    the machine learning techniques from different perspectives. Section V gives a
+    summary of the presented work and the future directions for researchers in the
+    area.
+
+
+    ![](img/f0d0bbd2b97f426c83fb011cd6b02a6d_0_0.png)
+
+
+    # II. TRUST IN MANETS
+
+
+    Trust is one of the most essential factors when providing security services. In
+    the context of MANETs Trust can be declared as a characteristic which determines
+    the accuracy of data received and transfer through specific node in the perspective
+    of the other nodes[4]. Hence, a Trust Management mechanism is needed to establish
+    security in a MANET by creating reliable trust which can be divided into several
+    phases including classification of trust, discretion of trust, aggregation of
+    trust, prediction and application of trust[4][5]. Figure 2 shows the primitive
+    steps of the process of establishing trust in MANETs.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Smart Computing and Systems Engineering, 2020
+
+    Department of Industrial Management, Faculty of Science, University of Kelaniya,
+    Sri Lanka
+
+
+    ![](img/f0d0bbd2b97f426c83fb011cd6b02a6d_1_0.png)
+
+
+    Fig. 2. Trust Establishment in a Network
+
+
+    # A. Challenges in MANETs
+
+
+    Establishing or building security services in MANETs is more challenging since
+    these hoc networks have a considerable amount of vulnerabilities in the wired
+    networks.
+
+
+    +   a) Wireless ad hoc
+
+
+    MANETs do not have a central infrastructure or any other fixed infrastructure.
+    Because of the lack of such infrastructures, nodes in hoc networks replace the
+    router, client and server. Also, the need to communicate through multi-hops and
+    data packets needs to be travelling through different mobile nodes arriving at
+    their destination. These may cause problems arise alike from mobility and the
+    loss of data by travelling through malicious nodes [7].
+
+
+    +   b) Unreliability of wireless links
+
+
+    Since connectivity is based on wireless links, MANETs are more susceptible to
+    malicious attacks such as eavesdropping, flooding, flushing, black-hole, wormhole
+    attack. Because having lower bandwidth than wired networks and not having capacity
+    to make an attack, attackers can exploit these features and cause a threat to
+    the all mobile hoc environment [7].
+
+
+    +   c) Mobility and dynamic network topology
+
+
+    MANETs are consisting of a set of autonomous and highly mobile nodes where a new
+    node/node can connect and existing nodes join or leave the network. As a result
+    of this, MANETs have a changing topology. Because of such a dynamic, if security
+    occurs, it is difficult to identify the responsibility of nodes for such malicious
+    attack [6][7].
+
+
+    +   d) Energy and bandwidth restriction
+
+
+    Fig. 3. Challenges in MANETs
+
+
+    # B. Trust properties of MANETs
+
+
+    The following characteristics can be illustrated as the trust properties considering
+    the unreliable and random nature of establishing communication links in MANETs.
+
+
+    +   a) Dynamicity
+
+
+    Due to constantly changing and the temptation of mobile MANET trust cannot be
+    static, and it has to be dynamic which is changing [5][8].
+
+
+    +   b) Subjectivity
+
+
+    MANET trust is subjective because one of node have different values concerning
+    another node where with the different experiences where the network is highly
+    dynamic [5][8].
+
+
+    +   c) Not Transitively In
+
+
+    Trust in MANETs is not transitive which means having different trust values; node
+    A, node B and node C where A A trust B and C; it does not ensure the expression
+    A trust C. To use the trust of a trust, a node must consider the direct and indirect
+    trust from the other nodes.
+
+
+    +   d) Asymmetry
+
+
+    When the heterogeneous Mobile hoc network environment trust is asymmetrical and
+    not equal due to different capabilities such as with high computational power
+    or battery capacity it is not going to trust another node of low capacities, but
+    in a very manner node where having capabilities is enough to give trust with high
+    capabilities [5][8].
+
+
+    +   e) Context dependency
+
+
+    MANET trust depends on context, which means different types of trust can be established
+    considering energy consumption, selfish behavior, computational power or efficiency,
+    the frequency of malicious attacks, etc such [5][8].
+
+
+    # III. SELECTING THE BEST ALGORITHM
+
+
+    When selecting the best algorithm, the aforementioned different challenges and
+    trust properties have to be considered. Because of the physical distribution of
+    MANET information also has to be distributed among the nodes of the MANET. Thus
+    the algorithm can be distributed
+
+
+    196'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Smart Computing and Systems Engineering, 2020
+
+    Department of Industrial Management, Faculty of Science, University of Kelaniya,
+    Sri Lanka
+
+
+    highly recommended for MANETs. The distributed trust computing mechanisms for
+    MANETs are divided into 3 major types which are direct, indirect trust or recommendation
+    based trust and hybrid[Fig.3]. Considering that, plenty of researches are proposed
+    in the area including the following approaches:
+
+
+    +   A. Swarm Intelligence
+
+    Swarm intelligence algorithms are those created with the inspirations of nature
+    most of the time being considered ''swarm'' and the ''AntHoc'' are algorithms
+    of swarm intelligence in MANETs where it utilizes the mechanism of Ant Colony
+    Optimization(ACO) by finding near-best to solution optimization problems[9]. And
+    the AntHoc relies on the communication graph without global information. The disadvantage
+    of this approach is that it creates critical communication overhead by the use
+    of ants[11]. Soonderweerde have addressed the issue by proposing the solution
+    Ant Based Control(ABC) which is very similar to Ant which makes the communication
+    overhead relatively small using only:
+
+
+    ![](img/f0d0bbd2b97f426c83fb011cd6b02a6d_2_0.png)
+
+
+    Bihar and Jiang have proposed a mechanism to manage the trust in MANETs in a way
+    which is, trust document distribution and distributed trust computation. They
+    have proposed an Ant Based Evaluation Distributed Trust (ABED) for trust document
+    and random graph to evaluate new results in the context of distributed trust computation
+    and establishment[13].
+
+
+    B. Probabilistic models
+
+    A fully distributed reputation system is proposed by Song et al which used a modified
+    ''Bayesian'' approach and ratings of trust are updated upon communication by third
+    parties, with priority ratings in recommendation of third-party testimonials,
+    also considered the CONFIDANT trust protocol[14].
+
+
+    An information-theoretical framework for model and evaluation in the MANETs has
+    been proposed by Yan Lindsay et al. some types of trust models have been proposed
+    by them, which are the entropy-based model and the probabilistic trust model.
+    Direct trust propagation is calculated in the entropy-based model and the probability
+    of the multi-agent trust dissemination are calculated in the probabilistic model
+    using the probability values[16].
+
+
+    C. Mobile agents
+
+    In the context of networking, mobile agents are referred to as small compositions
+    of information or data packets that can move from one node to another without
+    interaction with the environment. When considering the routing of mobile agents
+    such as Smart-Agents and the Ant-AODV approach updates the information of the
+    path and find the optimal path by saving the cost, transformation and resonant[17][18]
+
+
+    D. Machine learning
+
+    Several learning methods have been proposed regarding enhancing the capacity of
+    MANETs, including supervised learning, unsupervised learning, machine learning
+    for routing has been proposed in the earliest research work in the area as well
+    as using method Q-map to secure multicast routing using the multi-agent reinforcement
+    learning[19][20].
+
+
+    An approach that uses Team-based, opaque-transformation reinforcement learning
+    (TPOT-RL) has been proposed and the implementation is not. This achieved result
+    requires additional communication cost[21].
+
+
+    An implementation using Collaborative Reinforcement Learning (CRL) has been proposed
+    to solve the point-to-point routing in mobile ad hoc networks[22]. A model based
+    trust and Quality Security(TS) is proposed by Sivagathan et al which can distinguish
+    between trusted and malicious nodes based on behavior
+
+
+    A distributed reinforcement routing protocol QLAODV has been introduced to secure
+    the information sharing in VANETs[24]. The combination of Q-Learning and fuzzy
+    logic clustering algorithm is proposed by AODV-On Demand Distance Vectorrouting
+    protocol which is called Q-AFDV[25].
+
+
+    Support Vector Machine(SVM) which is a support learning clustering mechanism has
+    been proposed in the area as intrusion detection agents, node clustering and trust
+    frameworks, which detects the misbehavior of the nodes[26][27].
+
+
+    E. Other theoretical
+
+    uzzy logic-based computational method is proposed by Ashok Kumar and Vinoda Tinker
+    in order to enhance
+
+
+    197'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Smart Computing and Systems 2020
+
+    Department of Industrial Management, Faculty of Science, University of Kelaniya,
+    Sri Lanka
+
+
+    the security of routing considering the AODV routing protocol, we are presenting
+    a mechanism to detect blackhole attacks in MANETs [29]. A dynamic model for clustering
+    evaluates performance of MANETs has been proposed by Hui Xia et al. based on historical
+    behavior and behavior they used with an extended fuzzy logic to predict future
+    behavior.
+
+
+    is help to work as a multi-agent system or to only hold the relevant part of each
+    node in the network.
+
+
+    When compared to other distributed techniques machine learning requires a medium
+    memory amount of computational resources. Further, the accuracy of the results
+    is high and the initial cost and the other costs can be depending on the type
+    of reinforcement learning technique (Table 1).
+
+
+    we have come up with a mechanism for routing by integrating the prediction model
+    they have introduced a new routing protocol called Based Source Routing(TSR) which
+    optimize the flexibility and feasibility of finding the shortest and optimal path
+    [30].
+
+
+    TABLE 1 PROPERTIES OF DISTRIBUTED APPROACHES TO MANETS
+
+
+    | Property | Machine Learning | Swarm Intelligence | Mobile Agents | Heuristics
+    |
+
+    | --- | --- | --- | --- | --- |
+
+    | Memory requirement | Medium | Medium | Low | Low |
+
+    | Computational requirement | | Medium | | Low |
+
+    | Flexibility to scale | High | High | Medium | Medium |
+
+    | Accuracy of results | High | High | N/A | Medium |
+
+    | Initial cost | High/medium | Medium | Low | High |
+
+    | Additional cost | Low | Medium | Medium | Low |
+
+
+    Seridio et al. used the watchdog method and the path-ratcher which runs on each
+    node of the network it can identify the misbehavior and pick the most reliable
+    path to transfer data [31]. CORE is a watchful-based protocol recommendation that
+    identifies nodes and enforces cooperation between nodes to prevent selfish behavior
+    [32].
+
+
+    A scalable matter-based model for management which can provide recommendations
+    about sharing data with the neighbor been proposed by Pedro et al. they presented
+    a called Recommendation Exchange Protocol (REP) [33].
+
+
+    A route discovery protocol prevents malicious attacks by providing accurate data
+    linkage has been proposed by Papadimitros and Jmann Gauss [34].
+
+
+    A tool to improve Intrusion Detection Systems (IDS) which can protect situated
+    node has been proposed by the work of A dynamic trust model for MANETs which updates
+    the trust value and improves the security [35].
+
+
+    Further, ART and CAST are trust management schemes for VANET and context-aware
+    trust framework for MANETs [36] [37].
+
+
+    SEAD (Secure Ad Hoc Router Vehicle) A new routing protocol proposed using the
+    DSDV (Sequential Distance Protocol) that uses a one-way hash function against
+    Denial-of-Service attacks and other outstanding issues [38].
+
+
+    Y. Shang et al have proposed a heuristic search for ad hoc networks they have
+    proposed a constrained-based routing approach which consists of an efficient routing
+    algorithm CB-LRTA (Constraint-backpropagation LRTA) [39].
+
+
+    # IV. MACHINE LEARNING IMPLICATIONS IN MANETS
+
+
+    This paper further explores the machine learning approaches applied to the enhancement
+    of MANETs. Since mobile ad networks are fully distributed systems when choosing
+    the methods they should also be distributed. From the above-proposed Swarm Intelligence
+    and Mobile Agents Approaches are well suited to apply within MANETs. Moreover,
+    Machine learning algorithms are most suitable to apply within MANETs because of
+    having distributed nature, good prediction results, as well as the computational
+    power of the collaborative manner of
+
+
+    # A. Supervised learning approaches
+
+
+    Support Vector Machines are one of the supervised learning algorithms which are
+    widely utilized in clustering and classification purposes as cluster and classify
+    the mobile nodes in a ad network into two classes as clusters and members has
+    been proposed. The first classification is then done by making an SVM classifier
+    to learn the results of the WCA (Weighted Clustering) reduces the time of clustering
+    of VANETs, especially when the mobile nodes increase [27].
+
+
+    +   An application of classification uses SVM vector machines to cluster and classify
+    the mobile nodes in a ad network into two classes as clusters and members has
+    been proposed.
+
+
+    +   SVM best two approaches called SMART and SVM have been proposed upon mobile
+    ad for trust automation and misbehavior detection. The advantages are performing
+    well as the proposed mechanisms in the area, a larger fraction of adversaries.
+    Furthermore, they are more resilient when the nodes are highly as well as detect
+    mobile nodes that after their time behavior over [41].
+
+
+    CEAP is a multi-decision intelligence model that models the nature of VANET (Vehicular
+    Ad Hoc Networks). Vehicles are classified into smart and misbehavior vehicles
+    by analyzing the data exchange between two vehicles using SVM and they proposed
+    a routing protocol called VAN-QoS OLSR over the OLSR (Optimized Link State protocol)
+    [42].'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# B. Q-learning approaches
+
+
+    Q-learning is one of the simplest and powerful way for agent learning algorithms
+    to learn optimal actions in a controllable Markovian environment [43]. Some of
+    Q-learning approaches have been proposed in the area of traffic enhancement in
+    the mobile ad networks.
+
+
+    +   - Boyandan and Littman have proposed a Q-learning algorithm for packet routing
+    by embedding the reinforcement learning module in each node. They have tested
+    the algorithm using a network that consists of 36 nodes and the article can find
+    optimal routing without considering the network topology or the traffic patterns
+    previously [19].
+
+
+    The Q-MAP algorithm is a mesh-based on multicast routing scheme for mobile ad
+    networks with multi-agent Q-learning. It is well adapted to dynamic topology and
+    scaled distributed agents, handling the scalability and tolerance of faults effectively.
+    Because of this, its results ensure better utilization of the resources in wireless
+    ad networks [20].
+
+
+    An authentication mechanism based on Q learning has been introduced in early research
+    work, called TQS (Trust and Quality learning). The protocol detects the malicious
+    nodes over the AODV (Ad Hoc On-Demand Distance Vector) routing protocol by historical
+    behavior of data transfer. TQS is especially focused on detecting the black hole
+    attack which helps to improve the trust evaluation by quality learning.
+
+
+    # C. Dual reinforcement learning
+
+
+    Dual reinforcement learning implies the concepts of DQN (Deep Q-Network) and Double
+    Q learning algorithms, based on Q-learning and the reward function of dual reinforcement
+    learning uses the optimal Q of the next state and value as well. This is a bit
+    complex than the Q-learning algorithms. This Double reinforcement learning avoids
+    over-estimation by separating the operation of actions selection and evaluations
+    of actions [44]. Shaish Kumar et al. have done analysis on DQR (Dual Reinforcement
+    Q-routing) and found that DQ-Routing can sustain higher networks than DQN and
+    non-adaptive-shortest-path routing [45].
+
+
+    # D. TPOT-RL
+
+
+    Team-partitioned, opaque- reinforcement learning (TPOT-RL) is a distributed reinforcement
+    learning technique that has been applied within multi-agent domains. This has
+    achieved good results in maintaining the best routing, while minimizing the security
+    and the efficiency of data sharing in the network. The implementation of TPOT-RL
+    is not trivial but requires additional communication cost [21].
+
+
+    # E. Collaborative RL
+
+
+    SAMPLE is a Collaborative Reinforcement based approach that has been applied in
+    a novel routing protocol. It is also originated from Q-Learning and it presented
+    a reinforcement learning algorithm which is designed to adapt to dynamic topology.
+    SAMPLE optimizes the routing behavior by learning the variations of the network
+    properties from routing agents. This is a Q-learning based function which is very
+    similar to the mechanism of the Ant Colony Optimization. This approach allows
+    low cost and tolerance to topology changes [22].
+
+
+    # TABLE OF MACHINE LEARNING APPROACHES TO MANETS
+
+
+    | Technique | Capturing Dynamics | Additional Costs | Optimality of Results |
+
+    | --- | --- | --- | --- |
+
+    | Q-Learning | Low | High | High |
+
+    | TPOT-RL | High | Medium | High |
+
+    | Dual RL | High | Low | Medium |
+
+    | Collaborative RL | Low | High | |
+
+
+    According to the information, it is more than supervised and unsupervised, reinforcement
+    learning approaches have been used commonly since its results is as high as well
+    as it its ability to capture the dynamic behavior before giving predictions it
+    can be that Dual RL or RL routing is also optimal.
+
+
+    # V. CONCLUSION
+
+
+    The presented work consists of critical analysis about applying machine learning
+    to enhance in MANETS. The paper presents itself machine learning and other approaches
+    in the research area as well. The experiments have shown that the different machine
+    learning mechanisms outperform other mechanisms. Approaches from machine learning,
+    since it is well suited to the dynamic nature of the network, have the flexibility
+    to adapt to changes. But when it is difficult to apply such machine intelligence
+    ideas due to energy consumption it is in the energy-restricted network of MANET,
+    machine learning is better for better than unsupervised learning, considering
+    all the possible issues. Machine learning reinforcement learning gains are more
+    suitable for mobile networks since it has flexibility due to the ability to adapt
+    the dynamic behavior and give predictions where it can give predictions on newly
+    joined node online, also in the learning of network topology.
+
+
+    Hence, considering all this the future research work should be launched in the
+    area of machine learning; specifically, in the area of reinforcement learning
+    based on the presented results of early work.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# # REFERENCES
+
+
+    [2] L. J. Mayady, A. Madkour, and A. H. Al-Tahali,"Characteristics of mobility
+    models for ad hoc networks," IEEE International Conference on Communications,
+    2002, pp. 465–470. DOI:10.1109/ICC.2002.594268.
+
+
+    [3] E. Zeng and Chai-Toh Lee, "Review of routing protocols for ad hoc mobile networks,"
+    IEEE Communications Surveys & Tutorials, Vol. 7, no. 4, 2005, pp. 50–69.
+
+
+    [4] K. Govindas and P. Mobatura,"Trust and Dynamics in Ad Hoc Networks: A Survey,"
+    IEEE Communications Surveys & Tutorials, Vol. 9, no. 2, 2001, pp. 279–298. DOI:10.1109/LS.2001.9481113.
+
+
+    [5] R. Vijayan and N. Ejazhi,"A survey of trust management in ad hoc networks,"
+    Applied Engineering Research, Vol. 11, no. 4, 2018, pp. 2831–2843.
+
+
+    [6] A. Foster,"Machine Learning Applied to Ad Hoc Networks and Sensor Networks,"
+    International Conference on Intelligent Sensors and Sensor Networks, 2007.
+
+
+    [7] S. Gangwary,"Security issues in ad hoc networks," International Journal of
+    Computer Science and Information Technology, Vol. 1, no. 1, 2010, pp. 74–76.
+
+
+    [8] Cho, A. and Sun J., "A Survey on Trust Management in Mobile Ad Networks,"
+    Mobile Computing & Tutorials, Vol. 13, no. 4, 2011, pp. 562–583. DOI:10.1109/MSST.2011.2194092.
+
+
+    [9] M. El-Kifi, M. Moussi, and T. Tullah,"Ant Colony Optimization," IEEE Engineering
+    Intelligence Conference, 2006, pp. 1–6. DOI:10.1109/EIIC.2006.382.946.
+
+
+    [10] H. Zhang and J. Li,,"Distributed Cluster Management in Ad Hoc Networks,"
+    International Journal of Research, Vol. 9, 2009, pp. 365–378. DOI:10.5190/ijr.2009.91.533.
+
+
+    [11] M. Ghorbani and A. Guidi,"An analysis of machine learning-based routing protocol
+    in ad hoc networks," European Transactions on Telecommunications, Vol. 16, no.
+    5, 2005, pp. 397–406.
+
+
+    [12] R. Schoenwerder, O. Holland, J. Burton and L. Rothkartz,"Ad Load Balancing
+    Techniques in Mobile Networks," International Conference on Computer Applications,
+    2002, pp. 1070–1075. DOI:10.1109/ICCA.2002.10191973.
+
+
+    [13] B. Bara and J. Lung,"Cooperative games, phase transitions on graphs and ad
+    hoc networks," MANET, 2004 IEEE International Conference on Decision and Control
+    (ICCD) No. ICD(No. 07611), 2004.
+
+
+    [14] S. Baucher and J. L. Bouche,"A robust reputation system for mobile ad hoc
+    networks," IEEE International Conference on Communications, 2002, pp. 465–470.
+
+
+    [15] S. Baucher and J.-Y. Lou,"Performance analysis of the CONFIDENT protocol,"
+    Proceedings of the 3rd ACM international conference on Mobile and wireless computing,
+    2002, pp. 185–190.
+
+
+    [16] Yan Lin, Sun Wei, Zhou Han and X. Li,"Information theoretic framework for
+    routing and evaluation of ad hoc networks," IEEE Journal on Advances in Networks,
+    vol. 24, no. 2, 2004, pp. 92–98.
+
+
+    [17] E. Boubaï, S. Guirin, D. Sners, P. Kent and G. Gheral,"Routing in mobile
+    networks with link-agent intelligence," In 2006 IEEE International Conference
+    on Telecommunications Applications, Berlin, Germany, pp. 61–68.
+
+
+    [18] S. Marshall, K. C. Tham, and D. Sivanandan,"Mobile agents routing for ad
+    hoc networks," In IEEE International Telecommunications Conference, 2002, GLOBOCEE
+    COM IEEE, 2002.
+
+
+    [19] J.A. Boyle and M.L. Pickett,"Trust-based routing in dynamically changing
+    networks," International Journal of Advances in neural information processing,
+    vol 7, 1996, pp. 671–678.
+
+
+    [20] R. Sun, S. Tatsumi, and G. Zhao,"Q-Map: a novel routing protocol for mobile
+    networks," 2002 IEEE Conference on Computers, Communications, and Control and
+    Power Energy. TEMCOM 20. Proceedings, 2002.
+
+
+    [21] P. Stoneone,"TRPL-root applied to routing networks," ICC, pp. 935–942.
+
+
+    [22] E. Courling, R. Cunningham and C. Vahid,"Using Feedback in Collaborative
+    Learning to Optimize Ad hoc Networks," IEEE Transactions on Systems, Cybernetics-Part
+    A: Systems and Humans, vol. 50, no. 3, 2005, pp. 360–372. DOI:10.1109/TS.20046393.
+
+
+    [23] S. S. P. K and A. T. A,"Authentication Using Trust to Detect Malicious Nodes
+    in Ad Hoc Networks," International Journal of Network Services & Applications,
+    vol. 8, no. 3, 2016, pp. 37–46. DOI:10.1007/s12994-016-0014-y.
+
+
+    [24] C. W. Wang and K. Tao, "Distributed Reinforcement Learning Approach for Ad
+    Hoc Networks," IEEE Transactions on Networks, 9, no. 6, 2010, pp. 6431–6442. DOI:10.1109/TN.2010.8391.
+
+
+    [25] C. Wu, A. Ejazhi and T. Kubo,"Trust, Portable, and Scalable Routing in Ad
+    Hoc Networks," IEEE Transactions on Telecommunications, Vol. 59, no. 4, 2011 pp.
+    4251–4260. DOI:10.1109/TWC.2011.2123945.
+
+
+    [26] Y. Wang and D. Tang,"Trust based intrusion detection system for ad hoc networks,"
+    2003 5th IEEE International Conference on Telecommunications (TCC-2003), pp. 204–209.
+
+
+    [27] H. Chen, R. Da, P. Xian, X. Li and Y. Hu,"Clustering of SVM in Mobile Ad
+    Hoc Networks," International Journal of Computer Science and Technology, vol.
+    10, no. 4, pp. 595–604.
+
+
+    [28] L. Wen, Ajay Joshi, Tim Finlin,"SMART: Smart Ad Hoc Management and Trust
+    Detection Framework for Mobile Ad Hoc Networks," MIET-CON 2011, pp. 1102–1107.
+
+
+    [29] A. Yan and Y. Tari,"Security Evaluation of AODV Using Fuzzy Based Trust in
+    Mobile Ad Hoc Networks," International Journal of computer science, vol. 10, no.
+    1, 2015, pp. 90–98.
+
+
+    [30] H. Zhang, X. Li, J. Li and Y. H. Ma,"Trust-based routing in mobile ad hoc
+    networks," Ad Hoc Networks, vol no. 11, no. 3, 2006, pp. 2096–2114.
+
+
+    [31] S. Martí-Tijuk, J. Gulik and A. Bakke,"Mitigating routing attacks in ad hoc
+    networks using network coding," Journal of mobile computing and computing, 2000,
+    pp. 245–265.
+
+
+    [32] P. Rahal and R. Molina,"A Cooperative Learning Mechanism for Reinforcement
+    Node Selection in Ad Hoc Networks," IEEE Journal on Communications and Multimedia
+    Access, vol. 5, 2002, pp. 107–121.
+
+
+    [33] P. Velleros, R. Da, O. Cunha, D. Ortiz and Y. Pugalle,"Trust management in
+    mobile ad hoc networks using machine learning based methods," IEEE Transactions
+    on Networks and Security, vol 3, 2016, pp. 172–185. DOI:10.1109/TNS.2016.2591039.
+
+
+    [34] P. Paparamitopoulos and J. Zaharia,"Secure routing in dynamically changing
+    networks," Ad Hoc Networks, vol. 11, no. 1, 2003, pp. 199–213. DOI:10.1016/j.adhoc.2002.04.008.
+
+
+    [35] J. Liu, A. Roy, and P. Thompson,"A dynamic trust based model for mobile ad
+    hoc networks," Proceedings of the 6th IEEE International Conference on Trends
+    in Distributed Computing, 2007, pp. 175–180.
+
+
+    [36] S. Wang,"SMART: An Attack-Resistant Trust Management Mechanism for Secure
+    Wireless Ad Hoc Networks," IEEE Transactions on Networks, 2017.
+
+
+    [37] W. Li, A. Joshi, B. J. Johnson, and A. Perri,"Context-Aware Security and
+    Trust framework for Mobile Ad Hoc Networks using policies," IEEE Transactions
+    on Networks, vol 28, no. 7, 2014, pp. 1785–1796.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'Smart Computing and Systems Engineering, 2020
+
+    Department of Industrial Management, Faculty of Kelaniya, Sri Lanka
+
+
+    +   [40] L.Wang , Support vector machines: theory and applications ,Vol. 177,
+
+    Springer Science and Business Media ,2005
+
+
+    +   [41] S. Kumer and R. Mikkulainen, Dual reinforcement Q-routing: An online-learning
+    algorithm, Artificial neural networks in
+
+    engineering Conference, 1997, pp. 231-238.
+
+
+    +   [42] O. Wahab, A. Meourad, H. Otrok and J. Bentahar, CEAP: SVM-based
+
+    intelligence model for Distributed vehicular hoc networks,
+
+    Expert Systems with Applications, vol. 50, 2016, pp. 40-54. Available:
+
+    10.1016/j.eswa.2015.12.006
+
+
+    +   [43] W. Lee, S. J. Kim and T. Kim,SAT: An SVM-based automated trust
+
+    management system for Mobile Ad-hoc Networks,"2011 - MILCOM
+
+    2011 Military Communications Conference, 2011.
+
+
+    +   [44] C. Sutton and P. Dayan,Q-learning, Machine Learning, vol. 8, no.
+
+    3-4, 1992, pp. 279-292. Available, and 10.1007/bf0092698.
+
+
+    +   [45] H. Van Hasselt, A. Guez, and D.Silver, Deep Reinforcement Learning
+
+    with Double Q-learning, AAAI, vol. 2, 2016, p. 5.
+
+
+    201
+
+
+    Authorized licensed use limited to: Linkoping University Library. Downloaded on
+    June 22,2021 at 07:17:32 UTC from IEEE Xplore. Restrictions apply.'
+  merge: -1
+  img_proc: true
