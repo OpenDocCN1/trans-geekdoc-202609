@@ -1,0 +1,1040 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # A Novel Method to Detect Faults on Anchor Rods Using Reflectometry and Machine
+    Learning
+
+
+    Marcelo Sa Coutinho
+
+    Universidade Federal de Pernambuco
+
+    Recife, Brazil
+
+    https://orcid.org/0000-7609-1127
+
+
+    Lauro Rodrigo G. S. Lourenço Novo
+
+    Universidade Federal de Pernambuco
+
+    Recife, Brazil
+
+    https://orcid.org/0000-2372-9051
+
+
+    Henrique Batista Duffles T. Lott Neto
+
+    Sistemas de Transmissão Nordeste
+
+    Recife, Brazil
+
+    https://orcid.org/0000-2883-2163
+
+
+    Paulo Henrique Ramireza Pereira Gama
+
+    Instituto Tecnológico de Energia e Inovação
+
+    Recife, Brazil
+
+    https://orcid.org/0000-0062-2459-1533
+
+
+    Luiz Henrique Almeida dos Santos
+
+    Universidade Federal de Pernambuco
+
+    Recife, Brazil
+
+    https://orcid.org/0000-0001-6339-536X
+
+
+    M. T. de Melo
+
+    Universidade Federal de Pernambuco
+
+    Recife, Brazil
+
+    https://orcid.org/0000-0063-0616-1123
+
+
+    Douglas Batista Barbosa Pimentel
+
+    Universidade Federal de Pernambuco
+
+    Recife, Brazil
+
+    https://orcid.org/0000-0003-4462-3106
+
+
+    Marcelo Machado Alves
+
+    Universidade Federal de Pernambuco
+
+    Recife, Brazil
+
+    https://orcid.org/0000-0002-6582-8333
+
+
+    Vinicius Le Tarraz
+
+    Universidade Federal de Pernambuco
+
+    Recife, Brazil
+
+    https://orcid.org/0000-0003-1233-5046
+
+
+    Renan Guilherme Matias dos Santos
+
+    Universidade Federal de Pernambuco
+
+    Recife, Brazil
+
+    https://orcid.org/0000-0072-6896-0919
+
+
+    *Abstract—This paper presents a new methodology based on a FDR technique and machine
+    learning to detect faults on anchor rods used under power of transmission lines.
+    Faults are due to material loss in the rods, which may break, and can cause total
+    failure. The proposed non-destructive (NDT) method uses frequency domain reflectometry
+    (FDR). For detection, high-frequency pulses are inserted into the anchor rod and
+    analyzed in the simulated results. A dataset of anchor rods with and without faults
+    was simulated, manufactured and classified by a machine learning structure to
+    determine the presence or absence of the faults.*
+
+
+    A new method to detect faults on anchor rods, used to fix in soiled ground of
+    transmission lines, was developed. The detection of presence or not of anchor
+    rods uses an FDR method [5-9], and S11 parameter analysis by a machine learning
+    structure. The experimental setup consists of a vector analyzer (VNA), coupled
+    with a Custom-High Frequency Analyzer Filter (CHAAF, in Portuguese), and reflections.
+    The VNA is connected to the rods through the CHAAF. Machine learning-based classifiers
+    classified the presence and absence of faults on the anchor rods. A machine learning
+    structure based on logistic regression was used to implement a classifier for
+    the rod condition. The performance was simulated for a frequency range up to 1
+    GHz with 1001 data points the input was processed by the classifier.
+
+
+    *Keywords—anchor rod, transmission lines, frequency domain reflectometry, machine
+    learning, non-destructive*
+
+
+    # I. INTRODUCTION
+
+
+    The electric power transmission structures that support the cables. The V-type
+    cables and anchor rods are the main elements in the assembly and fixation of this
+    kind to the soil. In case of failure, the anchor rod may fall to the ground, interrupting
+    the power supply.
+
+
+    The most common method of assessing the anchor rods'' condition is visual inspection,
+    however, the soil is corroded and the rod corroded. This technique is effective
+    but destructive. Therefore, non-destructive techniques are applied in problems
+    like that in [1] where open microwave rectangular waveguides were proposed to
+    detect the presence of surface breaking cracks in soil using microwave reflectometry
+    (30-300 GHz range) [2] were also objects of study. In [3] a study is presented
+    where acoustic waves are inserted in cylindrical rods of 15 mm width and the signal-to-noise
+    ratio (SNR) the fault or corrosion is detected.
+
+
+    # II. METHODOLOGY
+
+
+    The proposed fault detection system is based on the classification of regard of
+    length and condition, with and without faults, by a machine learning algorithm
+    that performs the analysis of the S11 signals measured. The. Techniques of propagation
+    of electromagnetic waves in high frequencies as well as concepts of interaction
+    between the rod and a transmission line by parallel conductors, with different
+    diameters, to a system developed in [9]. When the electromagnetic wave reaches
+    a discontinuity, a reflection wave is sent back to the source and is analyzed
+    on the conductors. Thus, this system is characterized by non-destructive measurement
+    and analysis techniques with fast and accurate results. Fig. 1 presents the measurement
+    setup.'
+  - '[PAGE 1]
+
+
+    # 2019 SBMOE/MTT-5 International Microwave and Optoelectronics Conference (IMOC)
+
+
+    ![](img/0539430b5f4afb7bf8e3c550a26301df_1_0.png)
+
+
+    Fig. 1. Photography with descriptions of the measurement setup.
+
+
+    The elements of this method need to be electromagnetically compatible, economically
+    and industrially reliable, as used in [9], but mechanically robust.
+
+
+    The VNA injects signals into the transmission line by two same-length rods: the
+    anchor rod, and the reference rod CHAAF connects the reference references. The
+    measurement setup was modelled by an electromagnetic simulation tool. Through
+    the analysis of data by a machine learning structure it is possible to identify
+    the length and whether there is a fault in the anchor rod.
+
+
+    Electromagnetic simulations were carried out on each rod to predict the behavior
+    of them, and it allows to fabricate the reflectors given by the lifting eye and
+    copper rods, as shown in the figure 1. Fig. 2 presents the result of the simulation
+    model
+
+
+    # III. SIMULATION
+
+
+    Samples were designed as the following examples: a sample relative to a faulty
+    anchor rod (H1), H2D80 relative to a faulty (D1) two-meter rod (H20) with 20 cm
+    length, and a fault which is positioned 50 cm from the center. Sample rod H2D80-20
+    (a faulty two-meter rod (D2) with 20 cm length, and the fault is positioned 100
+    cm from the center). Sample rod H1D80-10 (a faulty one-meter rod with 10 cm length
+    and two faults positioned 80 cm from the eye reference). Table I details the sample
+
+
+    All faults were made of 10 or 20 mm length and 16.5 mm, the external diameter
+    of the rods was 33 mm. The measurements were performed for all 20 samples.
+
+
+    # TABLE I SAMPLE DESIGN
+
+
+    | Rod length | Sample |
+
+    |---|---|
+
+    | 1 Meter | H1D80, H1D280-20, H1D800-10, H1D80, H75 and D1280 |
+
+    | 2 Meters | H2D80, H2D280, H2D800-20, H2D90-20, H2D100, H2D40 and D2180 |
+
+
+    # IV. MEASUREMENT AND VALIDATION SYSTEM
+
+
+    The measurements were carried out and their results were compared with the ones
+    obtained by the simulations, which allows to evaluate the error caused by simulations.
+
+
+    A total of 130 measurements were carried out. Ninety using faulty anchor rods
+    and 40 using flawless anchor rods. A set of 20 samples were prepared to measure
+    the measurements: 10 one-meter rods (just 1 faulty rod) and 20 two-meter rods
+    (just 1 faulty rod). The VNA was calibrated in the frequency
+
+
+    ![](img/0539430b5f4afb7bf8e3c550a26301df_1_1.png)
+
+
+    Fig. 2. Photography with descriptions of the measurement setup.
+
+
+    range up to 1GHz using the 1001 points resolution. Each sample rod was measured
+    10 times to calculate the point-to-point value from the parameter S11 of these
+    measurements, and we generate a more reliable result. This new result was calculated
+    measurement average, or "Means". The measurements were used for training and testing
+    the machine learning structure. As shows the results of the simulation and the
+    ''Mean''. For the H1n rod the frequency range was -21.40 db for the measurement
+    result, and -22.6 db for the simulation result. These results show a good agreement
+    between the simulation model and the measurement setup.
+
+
+    # V. THE MACHINE LEARNING STRUCTURE
+
+
+    In order to detect the faults of the one and two-meter rods, three binary classifiers
+    were built using the logistic regression algorithm implemented. Logistic regression
+    is a classification model for which the output may be expressed as a logistic
+    sigmoid acting on the input features. The proposed logistic regression classifier
+    is simple to implement and fast to use.
+
+
+    Its probability is expressed as a function of the feature vector x and the set
+    of learned parameters by the expression (1)
+
+
+    ```
+
+    p(G_k|x) = 1/(1+exp(-w^T x))
+
+    ```
+
+
+    For the binary case, the fault x is classified as a member of the class C if p(G_k|x)
+    > 0.5.
+
+
+    ![](img/0539430b5f4afb7bf8e3c550a26301df_1_2.png)
+
+
+    Fig. 3. Measurement and simulation to the H1n rod sample.'
+  md: '
+
+    # A Novel Method to Detect Faults on Anchor Rods Using Reflectometry and Machine
+    Learning
+
+
+    Marcelo Sa Coutinho
+
+    Universidade Federal de Pernambuco
+
+    Recife, Brazil
+
+    https://orcid.org/0000-7609-1127
+
+
+    Lauro Rodrigo G. S. Lourenço Novo
+
+    Universidade Federal de Pernambuco
+
+    Recife, Brazil
+
+    https://orcid.org/0000-2372-9051
+
+
+    Henrique Batista Duffles T. Lott Neto
+
+    Sistemas de Transmissão Nordeste
+
+    Recife, Brazil
+
+    https://orcid.org/0000-2883-2163
+
+
+    Paulo Henrique Ramireza Pereira Gama
+
+    Instituto Tecnológico de Energia e Inovação
+
+    Recife, Brazil
+
+    https://orcid.org/0000-0062-2459-1533
+
+
+    Luiz Henrique Almeida dos Santos
+
+    Universidade Federal de Pernambuco
+
+    Recife, Brazil
+
+    https://orcid.org/0000-0001-6339-536X
+
+
+    M. T. de Melo
+
+    Universidade Federal de Pernambuco
+
+    Recife, Brazil
+
+    https://orcid.org/0000-0063-0616-1123
+
+
+    Douglas Batista Barbosa Pimentel
+
+    Universidade Federal de Pernambuco
+
+    Recife, Brazil
+
+    https://orcid.org/0000-0003-4462-3106
+
+
+    Marcelo Machado Alves
+
+    Universidade Federal de Pernambuco
+
+    Recife, Brazil
+
+    https://orcid.org/0000-0002-6582-8333
+
+
+    Vinicius Le Tarraz
+
+    Universidade Federal de Pernambuco
+
+    Recife, Brazil
+
+    https://orcid.org/0000-0003-1233-5046
+
+
+    Renan Guilherme Matias dos Santos
+
+    Universidade Federal de Pernambuco
+
+    Recife, Brazil
+
+    https://orcid.org/0000-0072-6896-0919
+
+
+    *Abstract—This paper presents a new methodology based on a FDR technique and machine
+    learning to detect faults on anchor rods used under power of transmission lines.
+    Faults are due to material loss in the rods, which may break, and can cause total
+    failure. The proposed non-destructive (NDT) method uses frequency domain reflectometry
+    (FDR). For detection, high-frequency pulses are inserted into the anchor rod and
+    analyzed in the simulated results. A dataset of anchor rods with and without faults
+    was simulated, manufactured and classified by a machine learning structure to
+    determine the presence or absence of the faults.*
+
+
+    A new method to detect faults on anchor rods, used to fix in soiled ground of
+    transmission lines, was developed. The detection of presence or not of anchor
+    rods uses an FDR method [5-9], and S11 parameter analysis by a machine learning
+    structure. The experimental setup consists of a vector analyzer (VNA), coupled
+    with a Custom-High Frequency Analyzer Filter (CHAAF, in Portuguese), and reflections.
+    The VNA is connected to the rods through the CHAAF. Machine learning-based classifiers
+    classified the presence and absence of faults on the anchor rods. A machine learning
+    structure based on logistic regression was used to implement a classifier for
+    the rod condition. The performance was simulated for a frequency range up to 1
+    GHz with 1001 data points the input was processed by the classifier.
+
+
+    *Keywords—anchor rod, transmission lines, frequency domain reflectometry, machine
+    learning, non-destructive*
+
+
+    # I. INTRODUCTION
+
+
+    The electric power transmission structures that support the cables. The V-type
+    cables and anchor rods are the main elements in the assembly and fixation of this
+    kind to the soil. In case of failure, the anchor rod may fall to the ground, interrupting
+    the power supply.
+
+
+    The most common method of assessing the anchor rods'' condition is visual inspection,
+    however, the soil is corroded and the rod corroded. This technique is effective
+    but destructive. Therefore, non-destructive techniques are applied in problems
+    like that in [1] where open microwave rectangular waveguides were proposed to
+    detect the presence of surface breaking cracks in soil using microwave reflectometry
+    (30-300 GHz range) [2] were also objects of study. In [3] a study is presented
+    where acoustic waves are inserted in cylindrical rods of 15 mm width and the signal-to-noise
+    ratio (SNR) the fault or corrosion is detected.
+
+
+    # II. METHODOLOGY
+
+
+    The proposed fault detection system is based on the classification of regard of
+    length and condition, with and without faults, by a machine learning algorithm
+    that performs the analysis of regard. The experimental setup consists of a vector
+    analyzer (VNA), coupled with a Custom-High Frequency Analyzer Filter (CHAAF, in
+    Portuguese), and reflections. The VNA is connected to the rods through the CHAAF.
+    Machine learning-based classifiers classified the presence and absence of faults
+    on the anchor rods. A machine learning structure based on logistic regression
+    was used to implement a classifier for the rod condition. The performance was
+    simulated for a frequency range up to 1 GHz with 1001 data points the input was
+    processed by the classifier.
+
+
+    The proposed fault detection system is based on the classification of regard of
+    length and condition, with and without faults, by a machine learning algorithm
+    that performs the analysis of regard. The experimental setup consists of a vector
+    analyzer (VNA), coupled with a Custom-High Frequency Analyzer Filter (CHAAF, in
+    Portuguese), and reflections. The VNA is connected to the rods through the CHAAF.
+    Machine learning-based classifiers classified the presence and absence of faults
+    on the anchor rods. A machine learning structure based on logistic regression
+    was used to implement a classifier for the rod condition. The performance was
+    simulated for a frequency range up to 1 GHz with 1001 data points the input was
+    processed by the classifier.
+
+
+    The proposed fault detection system is based on the classification of regard of
+    length and condition, with and without faults, by a machine learning algorithm
+    that performs the analysis of regard. The experimental setup consists of a vector
+    analyzer (VNA), coupled with a Custom-High Frequency Analyzer Filter (CHAAF, in
+    Portuguese), and reflections. The VNA is connected to the rods through the CHAAF.
+    Machine learning-based classifiers classified the presence and absence of faults
+    on the anchor rods. A machine learning structure based on logistic regression
+    was used to implement a classifier for the rod condition. The performance was
+    simulated for a frequency range up to 1 GHz with 1001 data points the input was
+    processed by the classifier.
+
+
+    The proposed fault detection system is based on the classification of regard of
+    length and condition, with and without faults, by a machine learning algorithm
+    that performs the analysis of regard. The experimental setup consists of a vector
+    analyzer (VNA), coupled with a Custom-High Frequency Analyzer Filter (CHAAF, in
+    Portuguese), and reflections. The VNA is connected to the rods through the CHAAF.
+    Machine learning-based classifiers classified the presence and absence of faults
+    on the anchor rods. A machine learning structure based on logistic regression
+    was used to implement a classifier for the rod condition. The performance was
+    simulated for a frequency range up to 1 GHz with 1001 data points the input was
+    processed by the classifier.
+
+
+    The proposed fault detection system is based on the classification of regard of
+    length and condition, with and without faults, by a machine learning algorithm
+    that performs the analysis of regard. The experimental setup consists of a vector
+    analyzer (VNA), coupled with a Custom-High Frequency Analyzer Filter (CHAAF, in
+    Portuguese), and reflections. The VNA is connected to the rods through the CHAAF.
+    Machine learning-based classifiers classified the presence and absence of faults
+    on the anchor rods. A machine learning structure based on logistic regression
+    was used to implement a classifier for the rod condition. The performance was
+    simulated for a frequency range up to 1 GHz with 1001 data points the input was
+    processed by the classifier.
+
+
+    # III. SIMULATION
+
+
+    The proposed fault detection system is based on the classification of regard of
+    length and condition, with and without faults, by a machine learning algorithm.
+    The experimental setup consists of a vector analyzer (VNA), coupled with a Custom-High
+    Frequency Analyzer Filter (CHAAF, in Portuguese), and reflections. The VNA is
+    connected to the rods through the CHAAF. Machine learning-based classifiers classified
+    the presence and absence of faults on the anchor rods. A machine learning structure
+    based on logistic regression was used to implement a classifier for the rod condition.
+    The performance was simulated for a frequency range up to 1 GHz with 1001 data
+    points the input was processed by the classifier.
+
+
+    The proposed fault detection system is based on the classification of regard of
+    length and condition, with and without faults, by a machine learning algorithm.
+    The experimental setup consists of a vector analyzer (VNA), coupled with a Custom-High
+    Frequency Analyzer Filter (CHAAF, in Portuguese), and reflections. The VNA is
+    connected to the rods through the CHAAF. Machine learning-based classifiers classified
+    the presence and absence of faults on the anchor rods. A machine learning structure
+    based on logistic regression was used to implement a classifier for the rod condition.
+    The performance was simulated for a frequency range up to 1 GHz with 1001 data
+    points the input was processed by the classifier.
+
+
+    The proposed fault detection system is based on the classification of regard of
+    length and condition, with and without faults, by a machine learning algorithm.
+    The experimental setup consists of a vector analyzer (VNA), coupled with a Custom-High
+    Frequency Analyzer Filter (CHAAF, in Portuguese), and reflections. The VNA is
+    connected to the rods through the CHAAF. Machine learning-based classifiers classified
+    the presence and absence of faults on the anchor rods. A machine learning structure
+    based on logistic regression was used to implement a classifier for the rod condition.
+    The performance was simulated for a frequency range up to 1 GHz with 1001 data
+    points the input was processed by the classifier.
+
+
+    # IV. MEASUREMENT AND VALIDATION
+
+
+    The proposed fault detection system is based on the classification of regard of
+    length and condition, with and without faults, by a machine learning algorithm.
+    The experimental setup consists of a vector analyzer (VNA), coupled with a Custom-High
+    Frequency Analyzer Filter (CHAAF, in Portuguese), and reflections. The VNA is
+    connected to the rods through the CHAAF. Machine learning-based classifiers classified
+    the presence and absence of faults on the anchor rods. A machine learning structure
+    based on logistic regression was used to implement a classifier for the rod condition.
+    The performance was simulated for a frequency range up to 1 GHz with 1001 data
+    points the input was processed by the classifier.
+
+
+    # V. THE MACHINE LEARNING STRUCTURE
+
+
+    In order to detect the faults of the one and two-meter rods, three binary classifiers
+    were built using the logistic regression algorithm implemented. Logistic regression
+    is a classification model for which the output may be expressed as a logistic
+    sigmoid acting on the input features. The proposed logistic regression classifier
+    is simple to implement and fast to use.
+
+    '
+  mdcn: '
+
+
+    # 一种利用反射技术和机器学习检测锚杆故障的新型方法
+
+
+    Marcelo Sa Coutinho
+
+    伯南约科联邦大学
+
+    巴西，里约约
+
+    https://orcid.org/0000-7609-1127
+
+
+    Lauro Rodrigo G. S. Lourenço Novo
+
+    伯南约科联邦大学
+
+    巴西，里约约
+
+    https://orcid.org/0000-2372-9051
+
+
+    Henrique Batista Duffles T. Lott Neto
+
+    东北部传输系统公司
+
+    巴西，里约约
+
+    https://orcid.org/0000-2883-2163
+
+
+    Paulo Henrique Ramireza Pereira Gama
+
+    能源与创新技术学院
+
+    巴西，里约约
+
+    https://orcid.org/0000-0062-2459-1533
+
+
+    Luiz Henrique Almeida dos Santos
+
+    伯南约科联邦大学
+
+    巴西，里约约
+
+    https://orcid.org/0000-0001-6339-536X
+
+
+    M. T. de Melo
+
+    伯南约科联邦大学
+
+    巴西，里约约
+
+    https://orcid.org/0000-0063-0616-1123
+
+
+    Douglas Batista Barbosa Pimentel
+
+    伯南约科联邦大学
+
+    巴西，里约约
+
+    https://orcid.org/0000-0003-4462-3106
+
+
+    Marcelo Machado Alves
+
+    伯南约科联邦大学
+
+    巴西，里约约
+
+    https://orcid.org/0000-0002-6582-8333
+
+
+    Vinicius Le Tarraz
+
+    伯南约科联邦大学
+
+    巴西，里约约
+
+    https://orcid.org/0000-0003-1233-5046
+
+
+    Renan Guilherme Matias dos Santos
+
+    伯南约科联邦大学
+
+    巴西，里约约
+
+    https://orcid.org/0000-0072-6896-0919
+
+
+    *摘要——本文提出了一种基于频域反射（FDR）技术和机器学习的新型方法，用于检测输电电线路运行中锚杆的故障。故障由于锚杆材料的流失引起，这可能导致断裂并引发完全失效。所提出的无损（NDT）方法使用了频域反射技术（FDR）。在检测方面，将高频脉冲插入锚杆并在仿真结果中进行分析。模拟了有和无故障锚杆的数据集，并通过机器学习结构进行制造和分类，以确定故障是否存在。*
+
+
+    开发了一种检测固定在输电线路污染土壤中的锚杆故障的新方法。锚杆故障的检测使用了 FDR 方法 [5-9] 以及基于机器学习结构的 S11 参数分析。实验装置由一个矢量分析仪（VNA）、配合一个自定义高频分析滤波器（CHAAF，葡萄牙语）以及反射装置组成。VNA
+    通过 CHAAF 连接到锚杆上。基于机器学习的分类器对锚杆是否存在故障进行了分类。使用基于逻辑回归的机器学习结构来实现了一个锚杆状态的分类器。性能在高达 1
+    GHz 的频率范围内进行了仿真，具有 1001 个数据点，输入由分类器处理。
+
+
+    *关键词——锚杆、输电线路、频域反射、机器学习、无损*
+
+
+    # I. 引言
+
+
+    支撑电缆的输电电力结构。V 型电缆和锚杆是此类结构在土壤中组和固定的主要元件。发生故障时，锚杆可能会落地，导致电源中断。
+
+
+    评估锚杆状态的最常用方法是目视检查，然而土壤会发生腐蚀，锚杆也会腐蚀。这种技术有效但具有破坏性。因此，无损技术被应用于此类问题中，例如在 [1] 中，矩形波导使用微波反射技术（30-300
+    GHz 范围）来检测表面裂缝，[2] 也是研究对象。在 [3] 中展示了一项将声波插入 15 mm 圆柱形锚杆并根据信噪比（SNR）检测故障或腐蚀的研究。
+
+
+    # II. 方法论
+
+
+    所提出的故障检测系统基于对长度和状态（有或无故障）的分类，使用了机器学习算法。实验装置由一个矢量分析仪（VNA）、配合一个自定义高频分析滤波器（CHAAF，葡萄牙语）以及反射装置组成。VNA
+    通过 CHAAF 连接到锚杆上。基于机器学习的分类器对锚杆是否存在故障进行了分类。使用基于逻辑回归的机器学习结构来实现了一个锚杆状态的分类器。性能在高达 1
+    GHz 的频率范围内进行了仿真，具有 1001 个数据点，输入由分类器处理。
+
+
+    所提出的故障检测系统基于对长度和状态（有或无故障）的分类，使用了机器学习算法。实验装置由一个矢量分析仪（VNA）、配合一个自定义高频分析滤波器（CHAAF，葡萄牙语）以及反射装置组成。VNA
+    通过 CHAAF 连接到锚杆上。基于机器学习的分类器对锚杆是否存在故障进行了分类。使用基于逻辑回归的机器学习结构来实现了一个锚杆状态的分类器。性能在高达 1
+    GHz 的频率范围内进行了仿真，具有 1001 个数据点，输入由分类器处理。
+
+
+    所提出的故障检测系统基于对长度和状态（有或无故障）的分类，使用了机器学习算法。实验装置由一个矢量分析仪（VNA）、配合一个自定义高频分析滤波器（CHAAF，葡萄牙语）以及反射装置组成。VNA
+    通过 CHAAF 连接到锚杆上。基于机器学习的分类器对锚杆是否存在故障进行了分类。使用基于逻辑回归的机器学习结构来实现了一个锚杆状态的分类器。性能在高达 1
+    GHz 的频率范围内进行了仿真，具有 1001 个数据点，输入由分类器处理。
+
+
+    所提出的故障检测系统基于对长度和状态（有或无故障）的分类，使用了机器学习算法。实验装置由一个矢量分析仪（VNA）、配合一个自定义高频分析滤波器（CHAAF，葡萄牙语）以及反射装置组成。VNA
+    通过 CHAAF 连接到锚杆上。基于机器学习的分类器对锚杆是否存在故障进行了分类。使用基于逻辑回归的机器学习结构来实现了一个锚杆状态的分类器。性能在高达 1
+    GHz 的频率范围内进行了仿真，具有 1001 个数据点，输入由分类器处理。
+
+
+    所提出的故障检测系统基于对长度和状态（有或无故障）的分类，使用了机器学习算法。实验装置由一个矢量分析仪（VNA）、配合一个自定义高频分析滤波器（CHAAF，葡萄牙语）以及反射装置组成。VNA
+    通过 CHAAF 连接到锚杆上。基于机器学习的分类器对锚杆是否存在故障进行了分类。使用基于逻辑回归的机器学习结构来实现了一个锚杆状态的分类器。性能在高达 1
+    GHz 的频率范围内进行了仿真，具有 1001 个数据点，输入由分类器处理。
+
+
+    # III. 仿真
+
+
+    所提出的故障检测系统基于对长度和状态（有或无故障）的分类，使用了机器学习算法。实验装置由一个矢量分析仪（VNA）、配合一个自定义高频分析滤波器（CHAAF，葡萄牙语）以及反射装置组成。VNA
+    通过 CHAAF 连接到锚杆上。基于机器学习的分类器对锚杆是否存在故障进行了分类。使用基于逻辑回归的机器学习结构来实现了一个锚杆状态的分类器。性能在高达 1
+    GHz 的频率范围内进行了仿真，具有 1001 个数据点，输入由分类器处理。
+
+
+    所提出的故障检测系统基于对长度和状态（有或无故障）的分类，使用了机器学习算法。实验装置由一个矢量分析仪（VNA）、配合一个自定义高频分析滤波器（CHAAF，葡萄牙语）以及反射装置组成。VNA
+    通过 CHAAF 连接到锚杆上。基于机器学习的分类器对锚杆是否存在故障进行了分类。使用基于逻辑回归的机器学习结构来实现了一个锚杆状态的分类器。性能在高达 1
+    GHz 的频率范围内进行了仿真，具有 1001 个数据点，输入由分类器处理。
+
+
+    所提出的故障检测系统基于对长度和状态（有或无故障）的分类，使用了机器学习算法。实验装置由一个矢量分析仪（VNA）、配合一个自定义高频分析滤波器（CHAAF，葡萄牙语）以及反射装置组成。VNA
+    通过 CHAAF 连接到锚杆上。基于机器学习的分类器对锚杆是否存在故障进行了分类。使用基于逻辑回归的机器学习结构来实现了一个锚杆状态的分类器。性能在高达 1
+    GHz 的频率范围内进行了仿真，具有 1001 个数据点，输入由分类器处理。
+
+
+    # IV. 测量与验证
+
+
+    所提出的故障检测系统基于对长度和状态（有或无故障）的分类，使用了机器学习算法。实验装置由一个矢量分析仪（VNA）、配合一个自定义高频分析滤波器（CHAAF，葡萄牙语）以及反射装置组成。VNA
+    通过 CHAAF 连接到锚杆上。基于机器学习的分类器对锚杆是否存在故障进行了分类。使用基于逻辑回归的机器学习结构来实现了一个锚杆状态的分类器。性能在高达 1
+    GHz 的频率范围内进行了仿真，具有 1001 个数据点，输入由分类器处理。
+
+
+    # V. 机器学习结构
+
+
+    为了检测一米和两米锚杆的故障，使用实现的逻辑回归算法构建了三个二分类器。逻辑回归是一种分类模型，其输出可以表示为作用于输入特征的逻辑 sigmoid 函数。所提出的逻辑回归分类器易于实现且使用快速。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    # 2019 IEEE/MTT-S International Microwave and Optoelectronics Conference (IMOC)
+
+
+    The first classifier was trained to separate the signals of the one-meter robots
+    from those of the two-meter robots. The two remaining classifiers were trained
+    to detect the presence of faults among the one-meter and two-meter robots respectively.
+    A vector x was used for training and testing of the classifiers, which were optimized
+    by using 101 points of each measured robot signal.
+
+
+    # VII. CONCLUSIONS
+
+
+    This paper presents a promising non-destructive methodology to detect fault in
+    anchor rods used in towers of power transmission lines, elements electromagnetically
+    capable and mechanically robust.
+
+
+    # VI. RESULTS AND DISCUSSION
+
+
+    Measurements and simulations were performed on the one-meter and two-meter robots,
+    and SI behavior patterns were determined to characterize each.
+
+
+    The "Mean. Average" results were delivered also shown in Fig. 4 (a) and (b). However,
+    the binary classifier performed the analysis using the 130 measurements in the
+    database and the subset used to reduce the inherent errors in the precision measurement.
+    The visual analysis on Fig. 4 shows slight variations on the faulty and faultless
+    results. This suggests that a machine learning structure to determine condition
+    accuracy works.
+
+
+    Binary classifiers were applied to analyze the measurements, which the accuracy
+    average over 98.33%. However, an input database with different fault patterns
+    on the anchor rod improves the results of reducing the over-fitting issues.
+
+
+    The three binary classifiers obtained accuracies of 99.28% in the test of the
+    identity of the robots, 98.33% on the detection of faults for the one-meter robots,
+    and 100.00% on the detection of faults for the two-meter robots. This suggests
+    that the logistic regression binary classifiers are able to detect accurately
+    the length and the presence of faults on the rods through the analysis of Figure
+    5.
+
+
+    The analysis was performed on 2-meter robots. Anchor rods length can be used for
+    this method. For this, classmates must be previously developed. The obtained results
+    showed that the proposed methodology may be applied to build a system to detect
+    faults on anchor rods used in towers of power transmission lines.
+
+
+    # ACKNOWLEDGMENT
+
+
+    This paper is a research project developed by the UFPE and IATH institute for
+    the STP company, as part of the Research and Development Program of the Brazilian
+    Electric Sector by National Agency of Energy (Energia Nacional de Elétrica – ANEE)
+
+
+    # REFERENCES
+
+
+    +   [1] J. R. Goliath and G. Yan, "Steel cord characterization using open-rectangular
+    waveguide probe," IEEE Sensors Journal, vol. 18, no. 3, pp. 1604–1662, February
+    2018.
+
+
+    +   [2] J. R. Goliath and R. Smith, "Microwave-wave-based characterization of
+    steel with wireless access," IEEE Transactions on Instrumentation and Measurement,
+    vol. 66, pp. 2786–2791, October 2017.
+
+
+    +   [3] M. Shao and Y. Li, "Ultrasonic wave-based detection of faults buried in
+    soil," 2016 IEEE International Ultrasonics Symposium (IUS), pp. 1–4.
+
+
+    +   [4] L. R. A. Silva, M. T. De Melo, M. R. T. De Oliveira, J. H. H. A. De Medros,
+    and L. B. Aquino, "Characterization of connections in high-frequency environments,"
+    International Journal of Applied Electromagnetics and Mechanics, vol. 45, pp.
+    457–464, May 2014.
+
+
+    +   [5] S. Cao and Y. Wang, "Waveguide-based fault detection in ground by impedance
+    spectroscopy," IEEE Transactions on Instrumentation and Measurement, vol. 64,
+    pp. 2179–2186, March 2017.
+
+
+    +   [6] M. J. Lee, S. Kim, and J. Park, "Application of time-domain reflectometry
+    base for multi-band detection and localization of cable," International Conference
+    on Control, Automation and Systems (ICAS) 2013 IEEE, pp. 1–6.
+
+
+    +   [7] Q. Shi, T. Ucheiro, and O. Nakau, "Detection and localization of cable
+    faults by time and frequency domain analysis," 2010 IEEE International Conference
+    on Control, Signals, and Devices, pp. 1–6, September 2010.
+
+
+    +   [8] II. Vanhuysse, "High frequency reflection-domain reflectometry," IEEE
+    Transactions on Instrumentation, vol. 39, no. 2, pp. 369–375, March 1992.
+
+
+    +   [9] J. M. B. Henriques, L. H. A. De Medros, R. R. B. Aquino, O. N. Silva,
+    L. R. G. Oliveira, M. F. de Melo. Santos, M. A. B. Fonseca, and P. R. Brito, "Localization
+    and detection of anchor rods applied by guy towers," 2014 IEEE International Conference
+    on High Wave Technology and Applications, pp. 1–5, August 2014.
+
+
+    +   [10] S. Dresti, and L. O-Machado, "Logistic regression and artificial neural
+    network classification: a methodology review," J. Biometrosc. Inform., vol. 55,
+    no. 3-6, pp. 325–339, 2002.
+
+
+    ![](img/0539430b5f4afb7bf8e3c550a26301df_2_0.png)
+
+
+    Fig. 4. "Mean. average" robot sample results. (a) one-meter; (b) two-meter.'
+  md: '
+
+    #2019 IEEE/MTT-S International Microwave and Optoelectronics Conference (IMOC)
+
+
+    The first classifier was trained to separate the signals of the one-meter robots
+    from those of the two-meter robots. The two remaining classifiers were trained
+    to detect the presence of faults among the one-meter and two-meter robots respectively.
+    A vector x was used for training and testing of the classifiers, which were optimized
+    by using 101 points of each measured robot signal.
+
+
+    ## VII. CONCLUSIONS
+
+
+    This paper presents a promising non-destructive methodology to detect fault in
+    anchor rods used in towers of power transmission lines, elements electromagnetically
+    capable and mechanically robust.
+
+
+    ## VI. RESULTS AND DISCUSSION
+
+
+    Measurements and simulations were performed on the one-meter and two-meter robots,
+    and SI behavior patterns were determined to characterize each.
+
+
+    The "Mean. Average" results were delivered also shown in Fig. 4 (a) and (b). However,
+    the binary classifier performed the analysis using the 130 measurements in the
+    database and the subset used to reduce the inherent errors in the precision measurement.
+    The visual analysis on Fig. 4 shows slight variations on the faulty and faultless
+    results. This suggests that a machine learning structure to determine condition
+    accuracy works.
+
+
+    Binary classifiers were applied to analyze the measurements, which the accuracy
+    average over 98.33%. However, an input database with different fault patterns
+    on the anchor rod improves the results of reducing the over-fitting issues.
+
+
+    The three binary classifiers obtained accuracies of 99.28% in the test of the
+    identity of the robots, 98.33% on the detection of faults for the one-meter robots,
+    and 100.00% on the detection of faults for the two-meter robots. This suggests
+    that the logistic regression binary classifiers are able to detect accurately
+    the length and the presence of faults on the rods through the analysis of Figure
+    5.
+
+
+    The analysis was performed on 2-meter robots. Anchor rods length can be used for
+    this method. For this, classmates must be previously developed. The obtained results
+    showed that the proposed methodology may be applied to build a system to detect
+    faults on anchor rods used in towers of power transmission lines.
+
+
+    ## ACKNOWLEDGMENT
+
+
+    This paper is a research project developed by the UFPE and IATH institute for
+    the STP company, as part of the Research and Development Program of the Brazilian
+    Electric Sector by National Agency of Energy (Energia Nacional de Elétrica – ANEE)
+
+
+    ## REFERENCES
+
+
+    - [1] J. R. Goliath and G. Yan, "Steel cord characterization using open-rectangular
+    waveguide probe," IEEE Sensors Journal, vol. 18, no. 3, pp. 1604–1662, February
+    2018.
+
+    - [2] J. R. Goliath and R. Smith, "Microwave-wave-based characterization of steel
+    with wireless access," IEEE Transactions on Instrumentation and Measurement, vol.
+    66, pp. 2786–2791, October 2017.
+
+    - [3] M. Shao and Y. Li, "Ultrasonic wave-based detection of faults buried in
+    soil," 2016 IEEE International Ultrasonics Symposium (IUS), pp. 1–4.
+
+    - [4] L. R. A. Silva, M. T. De Melo, M. R. T. De Oliveira, J. H. H. A. De Medros,
+    and L. B. Aquino, "Characterization of connections in high-frequency environments,"
+    International Journal of Applied Electromagnetics and Mechanics, vol. 45, pp.
+    457–464, May 2014.
+
+    - [5] S. Cao and Y. Wang, "Waveguide-based fault detection in ground by impedance
+    spectroscopy," IEEE Transactions on Instrumentation and Measurement, vol. 64,
+    pp. 2179–2186, March 2017.
+
+    - [6] M. J. Lee, S. Kim, and J. Park, "Application of time-domain reflectometry
+    base for multi-band detection and localization of cable," International Conference
+    on Control, Automation and Systems (ICAS) 2013 IEEE, pp. 1–6.
+
+    - [7] Q. Shi, T. Ucheiro, and O. Nakau, "Detection and localization of cable faults
+    by time and frequency domain analysis," 2010 IEEE International Conference on
+    Control, Signals, and Devices, pp. 1–6, September 2010.
+
+    - [8] II. Vanhuysse, "High frequency reflection-domain reflectometry," IEEE Transactions
+    on Instrumentation, vol. 39, no. 2, pp. 369–375, March 1992.
+
+    - [9] J. M. B. Henriques, L. H. A. De Medros, R. R. B. Aquino, O. N. Silva, L.
+    R. G. Oliveira, M. F. de Melo. Santos, M. A. B. Fonseca, and P. R. Brito, "Localization
+    and detection of anchor rods applied by guy towers," 2014 IEEE International Conference
+    on High Wave Technology and Applications, pp. 1–5, August 2014.
+
+    - [10] S. Dresti, and L. O-Machado, "Logistic regression and artificial neural
+    network classification: a methodology review," J. Biometrosc. Inform., vol. 55,
+    no. 3-6, pp. 325–339, 2002.
+
+
+    ![](img/0539430b5f4afb7bf8e3c550a26301df_2_0.png)
+
+
+    Fig. 4. "Mean. average" robot sample results. (a) one-meter; (b) two-meter.
+
+    '
+  mdcn: '
+
+
+    #2019 IEEE/MTT-S 国际微波与光电学会议 (IMOC)
+
+
+    第一个分类器被训练用于区分一米机器人和两米机器人的信号。另外两个分类器分别训练用于检测一米和两米机器人是否存在故障。使用向量 `x` 对分类器进行训练和测试，并通过使用每个测得机器人信号的
+    101 个点进行优化。
+
+
+    ## VII. 结论
+
+
+    本文介绍了一种前景良好的无破坏性检测方法，用于检测输电塔中锚杆的故障，这些元件具有电磁学能力且机械结构稳固。
+
+
+    ## VI. 结果与讨论
+
+
+    对一米和两米机器人进行了测量和仿真，并确定了它们的信号强度（SI）行为模式以表征。
+
+
+    “平均值”结果如图 4 (a) 和 (b) 所示。然而，二分类器利用数据库中的 130 次测量数据以及用于减少精密测量固有误差的子集进行了分析。图 4 的视觉分析显示故障与无故障结果之间存在微小差异。这表明判断状态准确性的机器学习结构是有效的。
+
+
+    二分类器被用于分析测量数据，平均准确率超过 98.33%。然而，使用具有不同锚杆故障模式的输入数据库可以改进结果，减少过拟问题。
+
+
+    三个二分类器在机器人识别测试中获得了 99.28% 的准确率，在一米机器人故障检测中获得 98.33%，在两米机器人故障检测中获得 100.00%。通过图
+    5 的分析表明，逻辑回归二分类器能够准确检测锚杆的长度和是否存在故障。
+
+
+    分析针对两米机器人进行的。锚杆长度可用于此方法。为此，必须预先开发同类机器人。获得的结果表明，所提方法可以构建一个用于检测输电塔锚杆故障的系统。
+
+
+    ## 致谢
+
+
+    本文是 UFPE 和 IATH 研究所为 STP 公司开发的一个研究项目，属于巴西国家能源局（Energia Nacional de Elétrica –
+    ANEE）巴西电力部门研发计划的一部分。
+
+
+    ## 参考文献
+
+
+    - [1] J. R. Goliath and G. Yan, "Steel cord characterization using open-rectangular
+    waveguide probe," IEEE Sensors Journal, vol. 18, no. 3, pp. 1604–1662, February
+    2018.
+
+    - [2] J. R. Goliath and R. Smith, "Microwave-wave-based characterization of steel
+    with wireless access," IEEE Transactions on Instrumentation and Measurement, vol.
+    66, pp. 2786–2791, October 2017.
+
+    - [3] M. Shao and Y. Li, "Ultrasonic wave-based detection of faults buried in
+    soil," 2016 IEEE International Ultrasonics Symposium (IUS), pp. 1–4.
+
+    - [4] L. R. A. Silva, M. T. De Melo, M. R. T. De Oliveira, J. H. H. A. De Medros,
+    and L. B. Aquino, "Characterization of connections in high-frequency environments,"
+    International Journal of Applied Electromagnetics and Mechanics, vol. 45, pp.
+    457–464, May 2014.
+
+    - [5] S. Cao and Y. Wang, "Waveguide-based fault detection in ground by impedance
+    spectroscopy," IEEE Transactions on Instrumentation and Measurement, vol. 64,
+    pp. 2179–2186, March 2017.
+
+    - [6] M. J. Lee, S. Kim, and J. Park, "Application of time-domain reflectometry
+    base for multi-band detection and localization of cable," International Conference
+    on Control, Automation and Systems (ICAS) 2013 IEEE, pp. 1–6.
+
+    - [7] Q. Shi, T. Ucheiro, and O. Nakau, "Detection and localization of cable faults
+    by time and domain analysis," 2010 IEEE International Conference on Control, Signals,
+    and Devices, pp. 1–6, September 2010.
+
+    - [8] II. Vanhuysse, "High frequency reflection-domain reflectometry," IEEE Transactions
+    on Instrumentation, vol. 39, no. 2, pp. 369–375, March 1992.
+
+    - [9] J. M. B. Henriques, L. H. A. De Medros, R. R. B. Aquino, O. N. Silva, L.
+    R. G. Oliveira, M. F. de Melo. Santos, M. A. B. Fonseca, and P. R. Brito, "Localization
+    and detection of anchor rods applied by guy towers," 2014 IEEE International Conference
+    on High Wave Technology and Applications, pp. 1–5, August 2014.
+
+    - [10] S. Dresti, and L. O-Machado, "Logistic regression and artificial neural
+    network classification: a methodology review," J. Biometrosc. Inform., vol. 55,
+    no. 3-6, pp. 325–339, 2002.
+
+
+    ![](img/0539430b5f4afb7bf8e3c550a26301df_2_0.png)
+
+
+    图. 4. “平均值”机器人样本结果。(a) 一米；(b) 两米。
+
+
+    '
+  merge: 0
