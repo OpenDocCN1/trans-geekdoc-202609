@@ -1,0 +1,577 @@
+- pgno: 0
+  md: '# Fault detection in photovoltaic systems using machine learning technique
+
+
+    Khadija Attouri, Mansour Hajji
+
+    Hig institute of Applied Science and Technology
+
+    Kasserine
+
+    University of Katrouni
+
+    Kasserine, Tunisia
+
+
+    Majid Mansouri, Mohamed-Fouzi Harkat,
+
+    Abdelalek Kouadri, Hazem Nounoun
+
+    Mohamed Nounou
+
+    Electrical and Computer Engineering Program
+
+    Texas A&M University at Qatar
+
+    Doha, Qatar
+
+
+    **Abstract—To ensure high reliability of the Grid-Connected Photovoltaic (PV)
+    systems, fault detection and automatic monitoring are essential to keep the PV
+    and grid operating properly. Regardless of fault types, incipient faults are more
+    difficult to detect and accurately isolate. As an alternative and effective method,
+    principal components analysis (PCA) is proposed to extract support vector machines
+    (SVM) technique is used to quickly detect faults that occurs in the GPV system.
+    The T-squared error (SPE) strategy is generally extracted and selected within
+    the PCA framework.
+
+
+    introduced to solve problem flexibly and reliably. In this case, a convolutional
+    neural network (CNN) is adopted to address fault classification. Beside, a FD
+    method based on using classifiers for detecting an increase of resistances connected
+    in series has been developed [11] under operating conditions of the PV system.
+    A decision tree (DT) has been developed for the detection of several conventional
+    faults in the PV system [12], [13]. Different intelligent techniques using various
+    types of PV systems can be found in [7] and the references therein.
+
+
+    The proposed task is learning from principal components analysis (PCA), Grid-Connected
+    PV systems, fault extraction and selection, fault detection.
+
+
+    Davarif et al. [14] have used power and statistical signal processing technique
+    in detecting-PV systems. Silvestres et al. [15] have developed an improved procedure
+    for fault detection based on the new voltage and current indicators. Silvestres
+    et al. [16] developed four indicators based on analysis of power for for fault
+    division and detection of PV-Side faults. On the other hand, the authors in [17],
+    [6], [5] have used several multivariate and univariate approaches for PV fault
+    detection. In order to solve fault complexities and handling temperature issues,
+    data-driven methods like machine learning techniques have been applied in the
+    establishment of fault detection PV systems. Support vector machines (SVM) are
+    the well-known learning applied for PD faults [18]. Spartaru et al. [19] have
+    presented and validated the detection of an increase in series resistance based
+    on fuzzy classifiers. This approach is better to isolate the detection of faultless
+    but less accurate for other faults.
+
+
+    # I. INTRODUCTION
+
+
+    Demand for Photovoltaic (PV) energy has constantly increased by 20% to 25% in
+    the last 20 years with many major developments in grid-connected systems. A key
+    factor to take into account for future Grid-Connected Photovoltaic (GCPV) systems
+    is fault detection [9]. Several FD techniques have been proposed in the literature
+    using model-based, electrical signal-based, and data-driven methods [2], [3],
+    [4], [5], [7].
+
+
+    For instance, Dress et al. [8] developed a fault detection task on monitoring
+    irregularities using satellite and local monitoring using sensors for GPV systems.
+    A simple method with fewer resources based on the wavelet transform is proposed
+    [19]. This approach uses the standard deviation of the wavelet coefficients for
+    the PV fault voltage. In [10], fault pattern recognition of aerial PV module images
+    are based on a deep learning is
+
+
+    Spartaru et al., [19] proposed a sequence-feature vector as input to the fault
+    diagnosis model based on the parameter extraction from I-V curve characteristics.
+    The emergence of kernel-based extreme learning (KBEL) has been employed in the
+    establishment of an automatic fault diagnosis system using improved Simulink PV
+    model.
+
+
+    The reasons for PV systems are numerous'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'including aging, PV system faults can be divided into three major categories
+    according to their characteristics: intermittent, abrupt, or incipient. Intermittent
+    faults refer to faults that change over time such as partial shading or environmental
+    stress (e.g., dust or contamination). Permanent or abrupt faults refer to faults
+    that occur instantaneously as a result of damage to the PV array such as line-to-line
+    or line-to-ground short circuits, junction boxes, or cellconnections. Hot spots
+    as permanent faults are the most challenging, and they are initially difficult
+    to detect because they are small and change over time. If they are not identified
+    early, they can result in gradual damage to the PV cells. Incipient faults can
+    occur on the DC or AC sides. Examples include PV module defects and DC/DC converters.
+    AC-side faults (inverter side) include Binary Gate Inverter (BGI) faults, wiring
+    degradation, and overheating.
+
+
+    The purpose of this paper is to provide a framework using SVM classifier to detect
+    GCPV faults in DC/DC converters (focusing on incipient faults). In the developed
+    approach, the principal component analysis (PCA) is used to extract and select
+    sufficiently important features from the GCPV data. These features are fed to
+    a SVM classifier which can detect faults in GCPV under a satisfactory random environment.
+    detected.
+
+
+    The rest of the paper is organized as follows: Section 2 briefly reviews types
+    of PCA in extracting and selecting features. Section 3 is devoted to machine learning
+    techniques. The simulation results that assess the performance of the proposed
+    PCA-based SVM are presented in Section 4. Section 5 concludes the paper.
+
+
+    # II. FEATURE EXTRACTION AND SELECTION
+
+
+    # A. PCA-based feature extraction
+
+
+    We consider the data matrix $X$, measured under normal conditions with $N$ variables,
+    the data is normalized to zero mean and unit variance
+
+
+    ```
+
+    $X = [X_1, X_2, ..., X_m] \in \mathbb{R}^{N \times m}$ (1)
+
+    ```
+
+
+    The PCA transforms the data matrix into a new matrix $T \in \mathbb{R}^{N \times
+    m}$ of uncorrelated features, $t_1, t_2, ..., t_m$
+
+
+    ```
+
+    $T = XP$ (2)
+
+    ```
+
+
+    $P$ is the loading matrix found by an orthogonal transformation of the covariance
+    matrix $\Phi$ which can be found through eigenvalue decomposition
+
+
+    ```
+
+    $\Phi = P\Lambda P^T$ (3)
+
+    ```
+
+
+    where $\Lambda = \text{diag}(\lambda_1, \lambda_2, ..., \lambda_m)$ is a diagonal
+    matrix containing the eigenvalues in a decreasing order.
+
+
+    Data dimensionality reduction can be achieved by splitting $P$ and $A$ into modelled
+    and non-modelled variations. The first one $P_k \in \mathbb{R}^{m \times k}$ and
+    $A_k \in \mathbb{R}^{k \times k}$ spanning the principal subspace and the other
+    $P_t \in \mathbb{R}^{m \times (m-k)}$ and $A_t \in \mathbb{R}^{(m-k) \times (m-k)}$
+    spanning the residual subspace. The columns of $P_k$ are the eigenvectors of the
+    covariance matrix associated with the first $k$ largest eigenvalues $\lambda_i$
+    which correspond to the principal components. The columns of $P_t$ are the remaining
+    $m-k$ eigenvectors in $\Lambda_t$.
+
+
+    As a result, the PCA decomposes the data $X$ into
+
+
+    ```
+
+    $X = XT + \hat{E}$ (4)
+
+    ```
+
+
+    $\hat{T}$ represents the selected features which are achieved through the projection
+    of $X$ onto the $i$ eigenvectors corresponding to the largest variances of the
+    covariance matrix. In summary, the PCA model is based on an eigen-decomposition
+    of the covariance matrix $\Phi$.
+
+
+    The selected features should be constructed in a way to enhance the differences
+    between normal and various abnormalities operating conditions. To obtain a good
+    performance of SVM classification-based approach, it is important to extract status
+    features via PCA-based model by enumerating possible values. This type of features
+    is simple to compute and efficient and robust. The features considered as appropriate
+    for faults diagnosis in GCPV include the following $T^2$ statistical measures
+    the variances in the principal subspace. It is given by
+
+
+    ```
+
+    $T^2 = X^T P \Lambda_k^{-1} P^T X$ (6)
+
+    ```
+
+
+    The Squared Reconstruction Error (SWE) is the most important measure in the remainder
+    principal components of subspace. It is defined as
+
+
+    ```
+
+    $SWE = X^T P_t \Lambda_t^{-1} P_t^T X$ (7)
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# III. FAULTS DETECTUTION USING PCA-BASED SVM TECHNIQUE
+
+
+    The objective of the next section is to apply PCA-based SVM technique for FD purposes.
+
+
+    # A. Support vector machines
+
+
+    Vapnik first introduced support vector machines (SVM) [18]. Next, an overview
+    of the basic ideas developing SVM classification is considered. Given a training
+    set of $N$ samples $x_k \in \mathbb{R}^m$ with output $y_k \in \{-1,1\}$ which
+    represents a set of labeled training data. The SVM takes the following form:
+
+
+    ```
+
+    $y_k = f(x_k) = w^Tx_k + b$
+
+    ```
+
+
+    where $w \in \mathbb{R}^m$ and $b \in \mathbb{R}$. In order to ensure the hyperplanes
+    of separation to be as far from the support vectors as possible, the margin defined
+    by $b$ should be maximized (see Fig.1). It is equivalent to:
+
+
+    ```
+
+    $\min \frac{1}{2}||w||^2$ subject to $y_k(w^Tx_k + b) \geq 0 \quad \forall k$
+
+    ```
+
+
+    Allocating Lagrange multipliers $\alpha_k$, where $\alpha_k \geq 0$, the quadratic
+    programming (QP) optimization problem (9) becomes
+
+
+    ```
+
+    $L_{QP} = \frac{1}{2}||w||^2 - \sum \alpha_k y_k(w^Tx_k + b) + \sum \alpha_k$
+
+    ```
+
+
+    by setting its with respect to $w$ and $b$ to zero
+
+
+    ```
+
+    $\begin{cases} \frac{\partial L_{QP}}{\partial w} = 0 \ \frac{\partial L_{QP}}{\partial
+    b} = 0 \end{cases} \Rightarrow \begin{cases} w = \sum \alpha_k y_k x_k \ \sum
+    \alpha_k y_k = 0 \end{cases}$
+
+    ```
+
+
+    Substituting (11) into (10) gives the optimal solution of the primary QP depending
+    on:
+
+
+    where $H = [x_i^Tx_j]_{i,j=1}^N$. The solution of the optimization problem (12)
+    to determine $\alpha$. Then, it is easily calculated using (11). In order to determine
+    $b$, a new data $x_s$ satisfying (11) is presented, and a support vector takes
+    the following form:
+
+
+    ```
+
+    $y_s(w^Tx_s + b) = 1$
+
+    ```
+
+
+    Referring to the support hyperplane equations and regardless of the class $y_s$,
+    the variable $b$ is given by:
+
+
+    ```
+
+    $b = -w^Tx + \sum_{m \in S} \alpha_m y_m x_m$
+
+    ```
+
+
+    In turn, the optimal orientation of the separating planes is obtained.
+
+
+    ![](img/f3f84f7d56d2b0eb64abc6bd106e286f_2_0.png)
+
+
+    # IV. FAULT DETECTION USING PCA-BASED SVM TECHNIQUE
+
+
+    The proposed method involves three stages including feature extraction, feature
+    selection and detection. The measures are applicable to different possible scenarios.
+    PCA is built using only the data in the training set under normal operating conditions.
+    This projection is achieved by projecting the data onto a subspace of positive
+    information. The structure of the obtained PCA model is represented by the directions
+    of the subspace where its dimension is less than that of the original data. Through
+    this operation, significant features are extracted (Section II-A observations).
+    After that, they will be used using logistic classification. These codes are kept
+    in $\{-1,1\}$ which represents a set of labeled training data. The comparison
+    between the obtained classifier and the set of features allows to make effective
+    decisions. As well, SVM-based experiments have been performed using different
+    features extracted and selected from the
+
+
+    # A. Description of grid-connected systems
+
+
+    In this study, the distributed structure has that considered. This structure is
+    a modular application that allows the multiplication and diversification of technologies,
+    for which the combination of several different types of photovoltaic sensors can
+    be made. Figure 2 shows one aspect of the possible configuration. It is a DC voltage
+    bus with a voltage value of 500 V. All panel/converter elements are connected
+    in parallel to this bus. Downstream converter does not control the global MPPT
+    tracking, each panel is individually controlled in optimal way. As well, the controllers
+    are robust to perturbations. The high voltage makes possible to avoid a reduction
+    of the cable sections, which constitutes a material gain in (copper or aluminum).'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/f3f84f7d56d2b0eb64abc6bd106e286f_3_0.png)
+
+
+    ![](img/f3f84f7d56d2b0eb64abc6bd106e286f_3_1.png)
+
+
+    The PV farm consists of three PV arrays delivering each a maximum of 4 (kW). A
+    PV array block consists of (2) parallel strings where each string has (24) modules
+    connected in series. Each module contains (20) cells, See Figure 3). Each PV array
+    is connected to a DC/DC converter. The outputs are connected to a DC bus of 500
+    (V). Each boost is controlled by individual Maximum Point Tracker (MPPT). The
+    MPPTs use the “Perturb and Observe” technique to verify the behavior of the terminals
+    of the PV array against the maximum possible power. A three-phase series converter
+    factors the 500 (V) to DC 26 (V) and AC in power coupling is used to convert power
+    to the grid. The simulation results are obtained for different irradiances. Three
+    PV faults (fault$_1$, fault$_2$ and fault$_3$) are considered.
+
+
+    The fault affects the bus by passes introducing a variation in resistance. The
+    current fault (fault$_2$) has been considered in string 1, between the modules
+    12 and 13. This fault is modeled by a variable resistance ($R_{12}$) at point
+    A. The resistance variance describes the state of the current fault. Similarly,
+    both faults 3 and 4 are modeled by the resistances $R_3$ and $R_4$, respectively.
+    These resistances are located between the point A and the grid and between the
+    points B and C, respectively. Resistive faults of 0.5, 1, 5, 10, 20, 30, 40, 50,
+    60 and 70 (Ohm) are established for two types of fault, and (fault$_1$ and fault$_2$).
+    For cases 3 and 4, resistive faults of 15, 20, 30, 50, 100, 1000, 1500 and 2000
+    (Ohm) are considered.
+
+
+    | Variables | Descriptions |
+
+    |---|---|
+
+    | $x_1$ | $PV_1$ current (A) |
+
+    | $x_2$ | $PV_2$ current (A) |
+
+    | $x_3$ | $PV_1$ voltage (V) |
+
+    | $x_4$ | $PV_2$ voltage (V) |
+
+    | $x_5$ | $PV_3$ voltage (V) |
+
+    | $x_6$ | $PV_1$ Power (W) |
+
+    | $x_7$ | $PV_2$ Power (W) |
+
+    | $x_8$ | Grid Power (W) |
+
+    | TABLE I
+
+
+    VARIABLES DESCRIPTION
+
+
+    ![](img/f3f84f7d56d2b0eb64abc6bd106e286f_3_2.png)
+
+
+    Fig. 4. Current and power of $PV_1$ time vs fault$_2$ amplitude.
+
+
+    In order to perform the experiments for FDI purposes, various simulated variables
+    are collected (see Table I). Figures 4, 5, 6 and 7 show the behaviors of the current
+    delivered by $PV_1$, field, supply current and power available to the grid as
+    a function of time and amplitude of faults 2 and 4, respectively. Under the stated
+    conditions, $I=1000$ (W/m$^2$) from 0 to 0.5 (s), $I=200$ (W/m$^2$) from 0.5 to
+    1.5s, $I=500$ (W/m$^2$) from 1.5 to 2.3 (s) and fault 3.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '![](img/f3f84f7d56d2b0eb64abc6bd106e286f_4_0.png)
+
+
+    Fig. 5. Current ($i_o$) and power of grid vs time and fault $\lambda$ amplitude.
+
+
+    | Fault | Values | Classifier | Classes | Recall (%) | Precision (%) |
+
+    |---|---|---|---|---|--|
+
+    | fault 1 | $R_{f1}=0$ Ohm | SVM | C1 | 83.25 | 68.00 |
+
+    | fault 2 | $R_{f2}=50$ Ohm | SVM | C1 | 96.89 | 96.62 |
+
+    | fault 3 | $R_{f3}=100$ Ohm | SVM | C1 | 73.86 | 63.67 |
+
+    | fault 4 | $R_{f4}=200$ Ohm | SVM | C1 | 99.96 | 99.88 |
+
+    | fault 5 | $R_{f5}=500$ Ohm | SVM | C1 | 81.36 | 72.24 |
+
+    | fault 6 | $R_{f6}=1000$ Ohm | SVM | C1 | 100.00 | 100.00 |
+
+    | fault 7 | $R_{f7}=2,3,4,5000$ Ohm | SVM | C1 | 97.66 | 96.66 |
+
+
+    CLASSIFICATION ACCURACY RESULTS FOR DIFFERENT VALUES OF INCIENT FAULTS USING SVM
+    CLASSIFIER FOR DETECTION
+
+
+    ![](img/f3f84f7d56d2b0eb64abc6bd106e286f_4_1.png)
+
+
+    Fig. 6. Current and power of $PV_1$ vs time and fault $\lambda$ amplitude.
+
+
+    ![](img/f3f84f7d56d2b0eb64abc6bd106e286f_4_2.png)
+
+
+    96 % (missed detection rate less than 4%), the value of $R_f$ should be less or
+    equal to 20 ohm. The conclusion for fault 2, fault 3 and fault 4, where $R_{f2}$
+    should be equal or greater than 5 ohm achieved a detection accuracy of 99 % (missed
+    detection rate less than 1%), $R_{f3}$ and $R_{f4}$ of 100 ohm provide a detection
+    accuracy of 100 % in the case of fault 3 and 4, respectively.
+
+
+    The last row of Table II presents the results of detection PCA-based SVM with
+    all type of faults. The developed approach provides a detection accuracy of 99.96
+    % and 99.93%, respectively.
+
+
+    ![](img/f3f84f7d56d2b0eb64abc6bd106e286f_4_3.png)
+
+
+    Fig. 7. Current ($i_o$) and power of grid vs time and fault $\lambda$ amplitude.
+
+
+    # VI. CONCLUSIONS
+
+
+    # B. Fault detection results
+
+
+    The PCA model is built from healthy data during normal operating conditions and
+    then features are extracted in both the residual and principal subspaces under
+    different faulty conditions. The features for this study are $T^2$ and $SWE$ statistics.
+    In order to show the incipient fault detection capabilities, different fault amplitudes
+    are simulated and the detection accuracy is computed using SVM. From Table II,
+    it is shown that for the fault 1 with $R_{f1}=30$ ohm, the SVM classifier provides
+    detection accuracy of 86 % when the amplitude becomes larger with $R_{f1}=20$
+    ohm, the detection accuracy is enhanced with 96.61 %. So to be able in detecting
+    fault 1 with at least an accuracy of
+
+
+    In this paper, we considered the problem of incipient fault detection (FD) for
+    Grid-Connected Photovoltaic (GCPV) systems. The developed techniques were based
+    on the support vector machines (SVM) and principal component analysis (PCA). They
+    were addressed using SVM for features extraction and selection and the SVM classifier
+    for detection. The $T^2$ and $SWE$ statistics were accurately applied for fault
+    detection. Each case was investigated in order to show the robustness and the
+    efficiency of the developed approach. The proposed solutions were effective in
+    detecting the incipient faults in GCPV systems under normal and abnormal conditions.
+
+
+    # ACKNOWLEDGMENT
+
+
+    This work was made possible by NPRP grant NPR999-330-2-140 from the Qatar National
+    Foundation (a member of the Foundation). The findings made herein are solely the
+    responsibility of the authors.
+
+
+    211'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# REFERENCES
+
+
+    +   [1] N. Katayama, S. Ogawa, S. Matsumoto, T. Nakano, and M. Sugiyama, "Degradation
+    and fault diagnosis of photovoltaic cells using impedance spectroscopy," Solar
+    Materials and Cells, vol. 194, pp. 130–136, 2019.
+
+    [2] H. Liu, S. Cheng, Z. Li, X. Wu, and Q. Zheng, "Fault diagnosis of photovoltaic
+    array based on convolutional neural network and electric time series," Energy
+    Conversion and Management, vol. 198, pp. 405–413, 2019.
+
+    [3] A. Mellit, M. Tanaka, and S. A. Kalogou, "Fault detection and diagnosis methods
+    for photovoltaic cells: A review," Renewable and Sustainable Energy Reviews, vol.
+    9, pp. 1–17, 2018.
+
+    [4] M. Mansouri, M. Haji, M. Trabelsi, M. F. Harkat, H. Nonou, and M. Nonnou,
+    "Enhanced likelihood ratio test for fault detection in photovoltaic systems,"
+    IEEE Transactions on Electrical Systems, vol. 28, no. 2, p. c2640, 2019.
+
+    [5] R. Faza, K. Abodaych, M. Mansouri, M. Trabelsi, M. Nonnou, "Machine learning-based
+    statistical testing for fault detection in photovoltaic systems," Solar Energy,
+    vol. 190, pp. 405–413, 2019.
+
+    [6] R. Mansouri, M. Trabelsi, M. Haji, and M. Nonnou, "Online reduced kernel gl
+    technique for fault detection in photovoltaic systems," Energy, vol. 179, pp.
+    1135–1150, 2019.
+
+    [7] M. Mansouri, M. Haji, M. Trabelsi, M. F. Harkat, A. Alkhazari, A. Rivera,
+    H. Nonou, "An effective fault detection technique for connected photovoltaic systems
+    based on generalized likelihood ratio test," Energy, vol. 150, pp. 842–856, 2018.
+
+    [8] A. De Reizer, A. Keizer, H. G. Beyer, E. Lorenz, J. Tegte, V. Van Sark, W.
+    Hayden, et al., "Monitoring and remote fault detection of grid systems based on
+    satellite observations," Energy, vol. 81, no. 4, pp. 548–564, 2007.
+
+    [9] J. Liu and Y. Liu, "The- fault detection algorithm of a photovoltaic system
+    using wavelet transform," Solar Energy, vol. 126, pp. 137–146, 2016.
+
+    [10] S. Zhao, J. Yang, Z. Chen, and W. Yan, "Intelligent fault pattern recognition
+    of photovoltaic array modules using deep learning, Proceedings of the 9th international
+    conference on complexity, informatics and cybernetics, imics, 2018."
+
+    [11] S. Siartakis, D. Sera, T. Kerkes, and H. Todirescu, "Detection of increased
+    losses in solar arrays using fuzzy inference," 2012 IEEE Photovoltaic Conference.
+    IEEE, 2012, pp. 00046–0049.
+
+    [12] Y. Zhao, J. De Palma, M. Mossian, R. Lyons, and B. Lehmann, "Line-level fault
+    analysis and protection challenges in solar photovoltaic systems," IEEE Transactions
+    on Electrical Systems, vol. 29, p. 3779, 2015.
+
+    [13] Y. Zhao, L. Yang, J. De Palma, and M. Lyons, "Decision tree-based fault detection
+    and classification in solar photovoltaic arrays," 2012 Seventh-Annual IEEE Applied
+    Power Conference and Exposition (APCEC), IEEE, 2012, pp. 51–58.
+
+    [14] M. Davifar, A. Rabbi, A. Al-Hajahi, and M. Dahmane, "Real-time model fault
+    diagnosis of PV systems using statistical signal processing," 2013 International
+    Conference on Renewable Energy Research and Applications (ICERAA). IEEE, 2013,
+    pp. 599–604.
+
+    [15] S. Slimane, M. A. da Silva, A. Chouder, D. Guasch, and E. Karate, "Procedure
+    for fault detection in grid connected pv systems based on the evaluation of current
+    and voltage," Energy Conversion and Management, vol. 86, pp. 241–249, 2014.
+
+    [16] S. Silvestre, A. Chouder, and E. Karate, "Automatic fault detection in connected
+    pv systems," Solar energy, vol. 94, pp. 119–127, 2013."'
+  merge: -1
+  img_proc: true
