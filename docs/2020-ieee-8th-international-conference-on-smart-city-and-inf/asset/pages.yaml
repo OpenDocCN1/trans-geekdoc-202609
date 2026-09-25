@@ -1,0 +1,770 @@
+- pgno: 0
+  md: '# A Survey of Emotion Analysis in Text Based on
+
+    Deep Learning
+
+
+    Lihong Cao
+
+    Laboratory of Lang. Eng. Comp.
+
+    Guangdong University of Foreign Studies
+
+    Guangzhou, PR China
+
+    201610130@gmail.gufs.edu
+
+
+    Sancheng Peng*
+
+    Laboratory of Lang. Eng. Comp.
+
+    Guangdong University of Foreign Studies
+
+    Guangzhou, PR China
+
+    npc334@alyun.com
+
+
+    Pengfei Yin
+
+    School of Computer
+
+    Central South University
+
+    Changsha, PR China
+
+    ppypyt@163.com
+
+
+    Yongnet Zhou
+
+    School of Info. Sci. and Tech.
+
+    Guangdong University of Foreign Studies
+
+    Guangzhou, PR China
+
+    yongmeizhou@163.com
+
+
+    Aimin Yang*
+
+    College of Computer
+
+    Guangdong University of Technology
+
+    Guangzhou, PR China
+
+    ay18@163.com
+
+
+    Xingliang Li
+
+    Laboratory of Lang. Eng. and Comp.
+
+    Guangdong University of Foreign Studies
+
+    Guangzhou, PR China
+
+    ixg@gdufs.edu
+
+
+    Abstract—With the rise of mobile internet, and the polarization of e-commerce
+    and social networks, people have shifted the focus from simple users of internet
+    to main publishers of text. A large number of various network data have been generated,
+    and a large part of these involve emotion analysis, which makes us better understand
+    the views and positions of netizens, and help to keep the key emotion of public
+    opinion. In this era of knowledge of emotion analysis, including different definitions
+    and classification methods of text, We summarize the existing research on emotion
+    analysis methods in text based on deep learning, and make a survey of the emotion
+    analysis in text, and the future trends for research.
+
+
+    information analysis.—On the 38th statistical report on the development of Internet
+    published by China Internet Information Center (CNIC) [3], the number of Internet
+    users in China has reached 710 million, and the penetration rate of sentiment
+    analysis has reached 51.7%. Among them, the number of Microblogs has reached 242
+    million, and the daily blogs have reached 100 million. In these short message
+    texts, a large part of them contain emotions.
+
+
+    Emotion analysis—is focused on targeting to extract the emotional states of users
+    from their reviews (e.g., blogs, tweets, post, etc.) in social networks [5]. The
+    key research work mostly focused on studying the positive and negative behavior
+    of emotion analysis, and based on the classification and classification methods
+    [7]. However, the emotion analysis based on perception and oriented emotion analysis.
+    From the perspective of human psychology, emotion analysis can characterize attitude
+    of people in multi-dimensional view, based on the existing coarse-grained sentiment
+    analysis.
+
+
+    Index Terms—emotion analysis, deep learning, social networks, public opinion
+
+
+    # I. INTRODUCTION
+
+
+    The seven emotions in the ''seven emotions and six desires'' are joy, love, anger,
+    fear, sadness, and desire. Among them, all are positive emotions, while most of
+    them are negative ones. This shows that human emotions in real world are much
+    more likely to spread negative emotions. The 2011 Annual Report of China''s Internet
+    Public Index [1], [22] shows that “In 2011, there are 80% negative events for
+    the topic of today. The negative events on Weibo and Twitter forum accounted for
+    75.6 and 95.8% respectively, which are higher than that of the traditional media.
+
+
+    As the popularity of Web 2.0 technology, people have changed from the general
+    users to producers
+
+    at present The work of natural language processing (NLP) based on neural networks
+    has achieved new levels of quality, and has become an essential technology for
+    tasks of NLP, such as sentiment analysis and machine translation. The popular
+    methods of deep learning (DL) are used to model analysis, including deep averaging
+    network (DAN) [8], denoising autoencoder (DAE) [9], convolutional neural network
+    (CNN), recurrent neural networks (RNN)
+
+
+    > *Corresponding author.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '[11], long term memory network (LSTM) [12], bi-directional long term memory
+    network (Bi-LSTM) [13], gated recurrent unit (GRU) [14], [Attention], Multi-Head
+    Attention (MHA), [16], and so on. To improve performance of emotion analysis,
+    researchers may integrate several methods to solve the task in a spatial model,
+    rather than on single method.
+
+
+    According to the text classification, DAN needs to map an input sequence of tokens
+    to n of k labels, and needs to work in three steps, which are listed as follows:
+
+
+    Step 1: Take the vector of the embeddings associated with n input of tokens n.
+
+
+    ```
+
+    $av = \sum_{i=1}^{n} t_{i/n}$
+
+    ```
+
+
+    Step 2: Pass the average through one or more feed-forward layers. If there is
+    one layer, the average embedding is listed as follows:
+
+
+    where b denotes the sequence of words, and w denotes the kxd weight matrix. If
+    there are more layers, the average embedding is listed as follows:
+
+
+    ```
+
+    $h_1 = (w_1 \cdot v + b_1)$
+
+    ```
+
+
+    Step 3: Perform linear classification on the final layers representation.
+
+
+    # II. OVERVIEW OF EMOTION
+
+
+    In this section, we will provide a brief overview of the different and classification
+    models for emotion.
+
+
+    +   1) Definition of Emotion
+
+
+    +   Definition 1: Emotions [17] are "generated in states that reflect evaluative
+    judgments of, the self and others",
+
+
+    +   Definition 2: Emotion [18] is defined as "A feeling resulting from one''s
+    circumstances, or relationships with others",
+
+
+    +   Definition 3: Emotion [19] is defined in Cambridge Linguistics as "A feeling
+    such as love or anger, from something we
+
+
+    +   Definition 4: Emotion [20] is the feeling or reaction that people have on
+    event. "Happy", "Sad", "Angry". Few examples of emotions which one could express
+    terms" and "emotions" are often considered as representable but sentiments represent
+    a general idea polarity of course,
+
+
+    ```
+
+    $h_i = (w_i \cdot h_{i-1} + b_i)$
+
+    ```
+
+
+    +   Definition 5: Emotion [21] is defined as an individual''s mental state associated
+    with thoughts, feelings, and beliefs,
+
+
+    +   2) Classification of Emotion
+
+
+    Parrott [22] presented an emotion classification model based on tree structure.
+    The model consists of basic emotions: love, joy, anger, sadness, and fear. Ekman
+    [23] categorized emotions into types: disgust, fear, happiness, sadness, and surprise.
+    Plutchik [24] categorized emotions into eight primary types, visualized by wheels,
+    which consist of six emotions, with two others: trust and anticipation.
+
+
+    ```
+
+    $soft(max) = \frac{\exp(q)}{\sum exp(q)}$
+
+    ```
+
+
+    DAE [9] is of an autoencoder, and it can be an unsupervised learning algorithm.
+    It can form a deep learning network by stacked layers. Autoencoders consists of
+    encoder, hide layer, and decoder. It can reduce the high dimensional input. The
+    input $x$ is needed to obtain a descriptor vector $z$, and to reconstruct it $f(x)$.
+    The reconstructed result $y$ is obtained with the linear transformation and the
+    activation function. Decoder $g(y)$ can reconstruct a vector $z$. and y is listed
+    as follows:
+
+
+    ```
+
+    $y = S_y(W_y x + b_y)$
+
+    ```
+
+
+    ```
+
+    $S_f = sigmoid(x) = 1/(1 + e^{-x})$
+
+    ```
+
+
+    ```
+
+    $S_g(y) = 1/(1 + e^{-y})$
+
+    ```
+
+
+    where $S_f$ denotes an activation function of the linear function, $S_g$ denotes
+    the activation function of the decoder, $b$ denotes the offset, and $W$ denotes
+    the weight matrix.
+
+
+    +   3) CNN
+
+
+    CNN [10] is a type of feed-forward neural network, including input layer, convolution
+    layer, pooling layer, full connection layer and output layer. For NLP, the approach
+    of CNNs includes: taking vectorized sentence matrix as input,卷积 input with multiple
+    kernels over convolution layer, and obtaining multiple
+
+
+    # III. RELATED METHODS OF DEEP LEARNING
+
+
+    +   1) DAN
+
+
+    DAN [8] is constructed by stacking layers over the traditional neural bag-of-words
+    (NBOW). Our method, DAN takes the arithmetic mean of the word vectors as input,
+    and passes through several feed-forward layers until softmax.
+
+
+    In this section, we will provide a detailed description of the related methods
+    of deep learning. The basic understanding of related methods are summarized as
+    follows:'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "feature representations of original input. Then, through pooling layer, extracted\
+    \ features as input, and it get more abstract features. By full connection layer,\
+    \ the corresponding classification function is used to classify the corresponding\
+    \ task.\n\nwhere $y_t$ denotes output at $t$; $W_{wh}$, and $W_{hy}$ denote weight\
+    \ matrix; $b_h$ and $b_h$ denote hidden in time $t$; $x_t$ denotes input data.\n\
+    \nInput layer: It represents the vectorization of input data. For a length of\
+    \ $n$ of a given sentence, the matrix of input layer can be listed as:\n\n+  \
+    \ (5) LSTM\n\n```\n$E = x^n$\n```\n\nLSTM [12] is a kind of RNN. It can learn\
+    \ the relationship of long-term dependency, characterize the information of time\
+    \ sequence, and effectively solve the problem of gradient vanishing or exploding\
+    \ gradient in the training process of RNN. Each unit of LSTM consists of components:\
+    \ memory cell and output gate. The memory cells are connected with each other.\
+    \ Nonlinear gates can be used to adjust the information of input and output flow\
+    \ of the memory cells. The forward calculation equations of LSTM are listed as\
+    \ follows:\n\nwhere $m$ denotes the dimensionality of word vector.\n\nConvolution\
+    \ layer: It uses convolution to perform operation over input matrix, to extract\
+    \ features of input, and to obtain feature maps of convolution layer. The specific\
+    \ representation is listed as:\n\n```\n$X^j = \\sum_{i=1}^{M} W_i^j x^i + b^j$\n\
+    ```\n\nwhere $X^j$ denotes the output of the input and the $j$-th convolution\
+    \ kernel, $x^i$ denotes the output of the previous layer, i.e., the $i$-th local\
+    \ region of the current convolution layer, $l_j$ the $j$-th kernel of the current\
+    \ convolution layer, $b^j$ denotes the offset of the current convolution kernel,\
+    \ and $M$ denotes all the local regions received by the convolution layer to represent\
+    \ translation.\n\nPooling layer: It uses pooling function to sample the characteristics\
+    \ of the generated matrix from the convolution operation, and extracts more features\
+    \ to greatly reduce dimensionality of the matrix. It not only simplifies the process\
+    \ but also maintains the key information not to be discarded. Different pooling\
+    \ algorithms may include max pooling and pooling averaging.\n\nInput gate:\n\n\
+    ```\n$it_t = \\sigma(W_{xi}x_t + U_{hi}h_{t-1} + b_i)$\n```\n\nMemory cell:\n\n\
+    ```\n$ft_t = \\sigma(W_{xf}x_t + U_{hf}h_{t-1} + b_f)$\n```\n\nOutput gate:\n\n\
+    ```\n$ct_t = ft_t \\cdot c_{t-1} + it_t \\cdot \\tanh(W_{xc}x_t + U_{hc}h_{t-1}\
+    \ + b_c)$\n```\n\n```\n$ot = \\sigma(W_{xo}x_t + U_{ho}h_t + b_o)$\n```\n\nOutput\
+    \ result:\n\n```\n$ht_t = ot_t \\cdot \\tanh(ct_t)$\n```\n\nFull connection layer:\
+    \ It classifies the input, obtains classification result, and is responsible for\
+    \ ranking the classification using the weight layer.\n\n+   (6) RNN\n\nRNN is\
+    \ a kind of feed-forward network with a ring structure, and has its memory function.\
+    \ It includes the input samples, as well as the information obtained in the previous\
+    \ time, so that the information can be cycled in the network at any time.\n\n\
+    Supports the input layer, $O$ denotes the output layer, $H$ denotes the hidden\
+    \ layer, and $U, V$ denote the weight of each layer, respectively. The output\
+    \ of the hidden layer is:\n\n```\n$h_t = \\sigma(W_{xh}x_t + W_{hh}h_{t-1} + b_h)$\n\
+    ```\n\nThe output of the outer layer is described:\n\n```\n$o_{t+1} = \\sigma(W_{hy}h_t\
+    \ + b_y)$\n```\n\n```\n$y_t = \\text{softmax}(o_t)$\n```\n\nwhere $x_t$ denotes\
+    \ input vector at time $t$; $i$, $f$, and $o$ denote input gate, forgetting gate,\
+    \ and output gate, respectively; $c$ denotes hidden state; $h$ denotes output\
+    \ layer of LSTM; $W_{xi}, W_{xf}, W_{xo}, U_{hi}, U_{hf}, U_{ho}$ denote weight\
+    \ matrix; $b_i, b_f, b_o$ denote bias vector; $\\sigma$ and $\tanh$ denote tanh\
+    \ activation function.\n\n+   (7) Bi-LSTM\n\nBi-LSTM [1] is a kind of model LSTM.\
+    \ Bidirectional LSTM model uses two functions to deduce the subsequent information\
+    \ in them, it has to process the information in turn, as it cannot access the\
+    \ future context, or the context information, which affects the performance of\
+    \ sequence prediction. Bi-LSTM uses two LSTM networks to train together, one of\
+    \ which starts from the past and the other from the future, and the two sequences\
+    \ are connected to the same output layer. It can integrate the past and future\
+    \ information of each point. Bi-LSTM includes forward and backward calculation.\
+    \ The horizontal direction represents the one-directional flow of time, from the\
+    \ input layer to the hidden layer, and from the hidden layer to the output layer.\
+    \ The forward calculation of $h$ is is as follows:"
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "$\\tilde{h}_t = LSTM(x_t, \tilde{h}_{t-1})$\n\nStep 2: Generally, a softmax\
+    \ function is used to normalize these weights. The weight is listed as follows:\n\
+    \nThe backward calculation of $h$ is listed as follows:\n\n```\n$\\tilde{h}_t\
+    \ = LSTM(x_t, \\tilde{h}_{t-1})$\n```\n\n```\n$a_t = \\text{softmax}(f(Q, K))\
+    \ = \\frac{\\exp(f(Q, K_t))}{\\sum_{j=1} \\exp(f(Q, K_j))}\n```\n\nThe output\
+    \ is listed as follows:\n\n```\n$y_t = \\sigma(W_y x_t + W_h \\tilde{h}_t + b_y)$\n\
+    ```\n\nStep 3: The final attention is obtained by weighting the sum and rewarding\
+    \ the key value. The specific is listed as follows:\n\n```\n$a_t = \\text{softmax}(f(Q,\
+    \ K)) = \\frac{\\exp(f(Q, K_t))}{\\sum_{j=1} \\exp(f(Q, K_j))}$\n```\n\nwhere\
+    \ $x_t$ denotes input data; $y_t$ denotes output in time; $W_y$, $W_h$ denote\
+    \ weight matrices; $b_y$, $b_h$ denote bias terms.\n\nAt present, NLP research,\
+    \ the key and value are often the same, which is equal value.\n\n+   7) GRU\n\n\
+    GRU is in [14] not only the advantages of LSTM (e.g., overcoming of vanishing\
+    \ or exploding gradient but maintains its network structure simpler. With three\
+    \ gate structures of LSTM, GRU has only two gate: update gate and reset gate.\n\
+    \nMHA is a variant of attention mechanism, which uses multiple queries to extract\
+    \ multiple groups of information in parallel using scaled dot product attention\
+    \ (SDA), and the operation is repeated for $h$ times. The input of each time is\
+    \ the linear transformation of input data. SDA is an attention mechanism using\
+    \ dot product, including a series of queries, keys with dimensions $d_k$, and\
+    \ a-series of values with dimensions $d_v$. The calculation is listed as follows\n\
+    \nThe forward calculation of GRU is listed as follows:\n\nUpdate gate:\n\n```\n\
+    $u_t = \\sigma(W_u x_t + V_u h_{t-1} + b_u)$\n```\n\nReset gate:\n\n```\n$r_t\
+    \ = \\sigma(W_r x_t + V_r h_{t-1} + b_r)$\n```\n\nMemory cell:\n\nOutput:\n\n\
+    ```\n$h_t = \\tanh(W_h x_t + V_h (r_t h_{t-1}) + b_h)$\n```\n\n```\n$\\text{attention}(Q,\
+    \ K, V) = \\text{softmax}(\\frac{QK^T}{\\sqrt{d_k}})V$\n```\n\nwhere $W_u, V_u,\
+    \ W_r, V_r, W_h, V_h$ denote weight matrices; $b_u, b_r, b_h$ denote bias terms;\
+    \ and tanh activation function.\n\n```\n$\\text{multihead}(Q, K, V) = \\text{concat}(head_1,\
+    \ ..., head_h)W^O$\n```\n\nMulti-head attention is calculated each time, when\
+    \ $Q, K$ and $V$ are equal to focus. The results of $h$ times attention mechanism\
+    \ are concatenated, and then are performed in linear transformation. The value\
+    \ obtained is of multi-head attention. The calculation is listed as follows\n\n\
+    +   8) Attention\n\nAttention mechanism is in [15] kind which mimics the visual\
+    \ process of human. that it aligns internal experience with external feelings\
+    \ to increase the observation of certain areas. For showing a picture, people\
+    \ can see the image quickly to focus on. certain area. Then, the attention is\
+    \ placed into the area to get more detailed information of the task, and the other\
+    \ useless is suppressed.\n\n```\n$head_i = \\text{attention}(Q^i, K^i, V^i)$\n\
+    ```\n\nwhere $Q^i \\in R^{d_k}, K^i \\in R^{d_k}, V^i \\in R^{d_v}, W^O \\in R^{d_v\
+    \ \times d}$, a single function with d-dimensional keys, values and queries.\n\
+    \nThe calculation process is divided into three parts:\nStep 1: The similarity\
+    \ between query and each key is to obtain the weight. The similarity functions\
+    \ include dot product, concatenation, perceptron. The related are listed as follows:\n\
+    \n```\n$f(Q, K) = \\begin{cases}Q^T W_k & dot general\\nW_a[Q;K] & concat\\na_a^{tanh}(W_q\
+    \ + U_k) & perceptron\\end{cases}\n```\n\n# IV. ANALYSIS METHOD BASED ON DEEP\
+    \ LEARNING\n\n# A. Single-language\n\nDeep learning methods have proven effective\
+    \ for many NLP tasks, including sentiment and emotion analysis. The following\
+    \ are the emotion analysis models for single-language based on deep learning methods.\n\
+    \nGhosal at [26] proposed the dialogue graph network (DialogueGCN) for emotion\
+    \ recognition in conversation based on a bidirectional GRU. DialogueGCN consists\
+    \ of three integral components: sequential encoder"
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'speaker-level context encoder, Abdul-Maged and Ungar [27] presented a method
+    for the finegrained emotion detection using the recurrent neural network. Majder
+    et al. [28] presented a new architecture called DialogueRNN, which is based on
+    RNN to detect emotion in a conversation, where the textual feature of each utterance
+    is extracted by CNN.
+
+
+    Kulshehra et al. [29] presented a neural architecture LC-DNN for emotion detection
+    using CNN which combines convolutional layers of CNN with fully layers in a non-sequential
+    /parallel performance. Mohammad et al. [30] presented a method for emotion text
+    detection. The model utilizes an attention-based recurrent neural network, and
+    connects experiments with GloVe and ELM embeddings, aligning pos tags with LSTM,
+    GRU as recurrent units, and a SVM classifier. Li et al. [31] presented an emotion-classification
+    method for short text, also using the skip-layer and LSTM.
+
+
+    Gu et al. [32] presented a sentiment analysis model to identify the emotion in
+    3-turn conversations on Twitter, using deep learning and two word embeddings.
+    Rathnave et al. [33] designed a pyramid attention network (PAN) for emotion detection
+    in methods, based on the gated recurrent network (GRN). Wang et al. [34] presented
+    a structured method to predict the degree of intensity and sentiment. They developed
+    three deep learning models on CNN, LSTM, GRU, and one supervised model based on
+    support vector regression (SVR).
+
+
+    Li et al. [35] presented a fully data-driven interactive emotion state model cell
+    (LSTM), for emotion prediction. In the model, BiLSTM and the mechanism were used
+    to extract the emotion features. Zhang et al used a multi-task CNN for text analysis,
+    based on the emotion distribution. Malhari et al. [37] designed an emotion detection
+    method using neural network by emotion vectors (ED-NNV), to predict the degree
+    of category in the conversation, based on CNN.
+
+
+    Khanpur and Karaage [38] presented a model, called Co-LSTM, for emotion detection
+    in health monitoring (OHS). With the emotion-features, which are all fed into
+    the LSTM network that produces the output via softmax mechanism. Kratzwal et al.
+    [39] presented a text-based emotion recognition using recurrent neural network
+    (RNN), named SanZect, which is a type of transformer for for attention mechanism.
+    Chatterjee et al. [40] presented an end-to-end trainable deep learning model called
+    sentiment and semantic emotion detector (SS-BEID) to detect emotions in textual
+    dialogues.
+
+
+    The specific comparison of existing monolingual emotion analysis models is listed
+    in Table I.
+
+
+    # Multi-Language
+
+
+    Wang et al. [41] presented a bilingual attention network (BAN) model based on
+    LSTM and the attention mechanism. The model can aggregate the monolingual and
+    bilingual information to form the attentions vectors from the document entities,
+    and can integrate the attentions vectors to predict the emotion. Zhou et al. [42]
+    presented an attention-based cross-lingual sentiment classification model, which
+    learns the distributed semantics of the documents in both the source and the target
+    languages. They used LSTM, attention mechanism, and dropout for Bi-LSTM. Chen
+    et al. [43] designed an adversarial DAN (AD) for cross-lingual sentiment classification.
+    ADAN consists of two branches: both branches train on a shared feature extractor
+    to learn emotion features that are discriminative and invariant across languages.
+
+
+    Zhou et al. [44] presented a bilingual word embedding (BSEW) using deep learning
+    for English-Chinese sentiment classification. They proposed a bilingual method
+    for cross-lingual sentiment classification (CLSC). Wang and Fan [45] presented
+    a cross-lingual indoor sentiment analysis (CLISA) based on the LSTM. It is an
+    end-to-end method that leverages the unlabeled data in multiple languages and
+    multiple domains. Bari et al. [46] presented a multi-based sentiment sentiment
+    embedding (MBSE), which uses a two-layer-fed averaging network to predict sentiment
+    and to minimize the translation pairs in vector space.
+
+
+    Ahmed et al. [47] designed a method for the emotion detection of Hindi languages.
+    They used CNN, cross-lingual embeddings, and different learning strategies for
+    tasks.
+
+
+    The specific comparison of existing monolingual emotion analysis models is listed
+    in Table II.
+
+
+    # V. Challenges of Emotion analysis based on
+
+
+    Due to the short history of emotion analysis based on deep, we find that the field
+    is in its infancy. According to our understanding and knowledge of this, which
+    we think that there are some differences of the surveyeded methodology
+
+
+    (1) Description of emotion
+
+
+    At present, there is no unified definition for emotion. And there is no standard
+    on how to classify emotions effectively and sensitively, which may affect the
+    perception of the emotional features respectively. However, due to the three components
+    of human emotion: physiological, subjective experience, and external expression,
+    there is different understanding for them in different fields. For example, as
+    to sociology, developmental psychology, and neuroscience, it is impossible for
+    researchers in each field to have the same understanding of emotion. It is difficult
+    to define a unified standard to accurately describe human emotions and their characteristics.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# TABLE I
+
+    COMPARISON OF EXISTING MULTILING EMOTION ANALYSIS MODELS
+
+
+    | No. | Name | DL - method | Pre - train | Year | Dataset | Accuracy |
+
+    | 1 | Dialogue[G26] | GRU, GCN | GoVe | 2019 | EMOCAP, AVEL | 0.6418 |
+
+    | 2 | Abdul-Maged''s [G27] | GRU | NA | 2017 | Twitter | 0.8758 |
+
+    | 3 | Dialogue[28] | RNN, CNN, attention | word2vec | 2019 | EMOCAP | 0.6275 |
+
+    | 4 | LE-PC-DNN | CNN | DeepMojo, word2vec | 2018 | Eminent shared text | 0.791
+    |
+
+    | 5 | Mahmoud[30] | CNN, LSTM, attention | GoVe, ELMs | 2019 | SemEval | 0.703
+    |
+
+    | 6 | LS [31] | LSTM | word2vec | 2017 | NCLR | 0.2512 |
+
+    | 7 | SS-LSTM [32] | LSTM | GoVe | 2017 | Twitter and And-Twitter | 0.7134 |
+
+    | 8 | PAN [33] | GRU, attention | word2vec | 2019 | SemEval | 0.701 |
+
+    | 9 | Akhtar[34] | CNN, LSTM, GRU | GoVe | 2020 | - | - |
+
+    | 10 | IDS-ECM [35] | DeepMojo | | 2019 | DailyDialog, SemEval | 0.3621 |
+
+    | 11 | Zhang [36] | CNN | word2vec | 2017 | SemEval | 0.403 |
+
+    | 12 | ED-NEV [37] | CNN | word2vec | 2018 | Chats of phone | 0.7488 |
+
+    | 13 | Con-LSTM[38] | CNN, LSTM | word2vec | 2018 | Cancer Survivors'' Network
+    | Joy: 0.932, Sad: 0.923 |
+
+    | 14 | sentaffect [39] | RNN | | 2018 | SemEval, SemEval: 0.856 |
+
+    | 15 | SS-BED [40] | LSTM | SSWE,GoVe | 2019 | Twitter House | 0.7355 |
+
+
+    # TABLE II
+
+    COMPARISON OF MULTILINGUAL LINGUISTIC EMOTION ANALYSIS MODELS
+
+
+    | No. | Name | DL - method | Pre - train | Year | Dataset | Accuracy |
+
+    | 1 | IAN [41] | LSTM, attention | Skip-gram | 2016 | - | 0.672 |
+
+    | 2 | Zhou [42] | LSTM, Bi-LSTM, Attention | BERT | 2018 | NLPC 2013 | 0.8 |
+
+    | 3 | ADAN [43] | deep neural network | attention | 2021 | Yelp. Choice hotel
+    reviews | 0.4249, 0.5454 |
+
+    | 4 | BSSE-C4 [44] | | BSWE | 2015 | NLPC 2013 | 0.8088 |
+
+    | 5 | CLISDA [45] | LSTM | | 2019 | Amazon review | 0.6483 |
+
+    | 6 | BLSE [46] | Deep averaging network | word2vec | 2019 | OpenEnglish and Spanish
+    datasets, Multilingual Chat and Bauguo | ES: 0.803, CA: 0.85; US: 0.718 SemEval-2020,
+    Emotion-Emo: 0.477, E-Emo-SemEval: 0.863 |
+
+
+    (2) Language imbalance
+
+    Most of the existing emotion analysis methods are aimed at English literature.
+    There are some methods in recent years. These methods based on emotion dictionaries
+    or semantic lexicons need external features of speakers'' speech to translate
+    English-based emotion analysis methods to other languages. In the training and
+    test set of non-English emotion analysis are are relatively scarce, especially
+    those of non-common language resources, which affects the performance of non-English
+    emotion analysis methods.
+
+
+    (3) Domain relevance
+
+    Some words carry different emotions in different domains, such as “long time”.
+    In the field of reviews for waiting for time to serve, they need to express negative
+    emotion but in the field of reviews for smart phone, they need to express the
+    positive emotion of long battery standby time. Thus, it is necessary to consider
+    the domain relevance of emotional words in emotion analysis, Cross-domain emotion
+    analysis is a hot topic, there are many problems to be solved.
+
+
+    Comments in social network texts are of limited length. From the different language
+    text, short texts have the characteristics of sparseness, lack of use, and massive
+    data. Due to the insufficiency of context information and the problem of processing
+    short (48) one word and synonym multiple, it is difficult in accurately extracting
+    the topic information, which affects the performance of text emotion analysis
+    in the
+
+
+    (5) Model depth of learning
+
+    Deep learning is a repeated process of adjusting the parameters of model. The
+    biggest problem is learning speed of the model, that is too slow and training
+    is too long. If we want to improve quality of the model, we have to reduce the
+    number of iterations in the same training time; if we want to improve the speed,
+    we have to reduce the number of training times, which will increase the chance
+    of different super parameters; all of these will affect the accuracy of the model.
+    The size of training dataset may affect the performance of the training model.
+    The larger dataset, the better training results. But the larger dataset'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'Authorized license used to limit: Central Michigan University. Published on
+    November 19, 2021 at 09:34:27 by IEEE Xplore. Rights reserved.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '[38] M. Iyer, V. Manjunatha, J. Boyd-Gray, and D. H. "Deep deconstructed variational
+    synthetic methods for text classification." Proceedings of the 53rd Annual Meeting
+    of the Association for Computational Linguistics, Beijing, 2015, pp. 168–173.
+
+
+    [39] V. Vincent, J. Bengio, Y. Klarman, and G. Gerard "Extracting and composing
+    robust features with denoising autoencoders." Proceedings of the 25th International
+    Conference on Machine Learning: ACM, 2008, pp. 893–900.
+
+
+    [40] L. LeCun, V. Bottou, Y. Bengio, and H. Hinton, "Gradient-based learning applied
+    to document recognition." Journal of Machine Research, 1998, 285–334.
+
+
+    [41] C. L. Giles, G. M. Kahn, and R. Williams, "Dynamic recurrent neural networks
+    for speech recognition." IEEE Transactions on Neural Networks, vol. 5, 1994, pp.
+    51–63.
+
+
+    [42] S. Socher and J. Schmidhuber, "Short-term memory." In Advances in Neural
+    Information Processing Systems, 2014, pp. 193–206.
+
+
+    [43] M. Schacker and A. K. Paliwal, "Bidirectional recurrent neural networks for
+    speech recognition." IEEE Transactions on Signal Processing, vol. 45, 1997, pp.
+    2671–2684.
+
+
+    [44] A. Avaswani, V. Nazar, N. Usar, et al., "Attention is all you need." Proceedings
+    of the 31st International Conference on Natural Language Processing, Long Beach,
+    California, 2017, pp. 5999–6008.
+
+
+    [45] E. Hochreiter and J. Schmidhuber, "Long short-term memory." Neural Computation,
+    9(8), 1997, pp. 1735–1770.
+
+
+    [46] O. Dictionaries. [Online]. Available: https://dictionary.merriam-webster.com/
+
+
+    [47] N. Munzer, C. Santos, E. Sutinen, and J. Payen, "Are they different? Affect,
+    feeling, and emotion detection in social media text." Proceedings of the 2019
+    International Conference on Empirical Methods in Natural Language,
+
+
+    [48] S. J. Noria, R. Majumder, and H. Hoy, "Emotion recognition in conversational
+    agents: research challenges, datasets, and evaluation." 2022.
+
+
+    [49] W. Parrott, "Emotions in psychology: edited edition." Oxford University Press,
+    2005.
+
+
+    [50] R. Darwin, "The nature of emotions." Philosophical Studies, 2001, 292–314.
+
+
+    [51] C. Lin, "Emotional intelligence in psychologists." Science of Psychology,
+    26(2), 2015, pp. 391–403.
+
+
+    [52] D. Ghoal, N. Majumder, S. Noria, et al., "DialogueCNN: A graph neural network
+    for emotion detection in conversations." Proceedings of Empirical Methods in Natural
+    Language Processing, Hong Kong, China, 2019.
+
+
+    [53] M. Ak-Meded and L. Unger, "Fine-grained emotion detection with gated neural
+    networks." Proceedings of the 55th Annual Meeting of the Association for Computational
+    Linguistics, Vancouver, Canada, 2017, pp. 1778–1788.
+
+
+    [54] N. Majumder, S. Noria, D. Ramizadeh, H. Bhattacharya, and A. Celukberg, "An
+    attention approach to emotion detection in conversations." Proceedings of the
+    Third AAAI Conference on Affect Computing, 2019, pp. 682–688.
+
+
+    [55] D. Rahaman and P. Sen, "How are you? Neural architectures for emotion detection
+    in midwifery." Proceedings of the 20th International Conference on Natural Language
+    Processing, San Fe, New Mexico, USA, 2018, pp. 2914–2926.
+
+
+    [56] E. Mohammadi, A. Hosini, and L. Koston, "Feature extraction for emotion detection."
+    Advances in Natural Language Processing, Warsaw, Bulgaria, 2019, pp. 785–794.
+
+
+    [57] P. L. Li, J. Li, F. Sun, and P. Wang, "Text attention-based emotion detection
+    using recurrent networks." Proceedings of the 56th Annual Meeting of the Association
+    for Linguistics, Dalian, China, 2017, pp. 1–5.
+
+
+    [32] U. Gupta, A. Chatterjee, R. Srikant, and P. Agarwal, "A sentiment-based approach
+    for emotion detection in conversations." arXiv preprint:1707.06996, 2017.
+
+
+    [33] P. Rahm way, A. Sayyambada, C. Samujgaina, I. Manshaka, M. Wagner, A. J.
+    Jain, A. Bhattacharjee, and D. Dabluk, "Gated recurrent neural network for multilingual
+    emotion detection in dialogues." arXiv:1907.07654, 2019.
+
+
+    [34] H. Wang and J. Wang, "How are you? Predicting emotions of intents and sentiments
+    using stacked embedding." IEEE Conference on Computer Vision and Pattern Recognition,
+    2016.
+
+
+    [35] D. L. Li and S. W. Wang, "Multi-attention dual states model for dialogue
+    emotion detection." Proceedings of ACLMNLP, 2021.
+
+
+    [36] J. Zhang, F. Li, D. She, Y. Wang, and J. Wang, "Text emotion detection in
+    multi-dialogue conversations." Proceedings of the Twenty-Second International
+    Conference on Artificial Intelligence, 2018, pp. 4985–4996.
+
+
+    [37] S. Jain, S. Chatterjee, S. Majum, S. Sandupta, and S. Roy, "Fine-grained
+    emotion detection in chat center using attention mechanisms." Proceedings of the
+    ACL International Conference on Knowledge Discovery and Data Mining, 2021.
+
+
+    [38] H. Khangpur and C. Karage, "Fine-grained emotion detection in health-related
+    conversations." Proceedings of the 4th International Conference on Natural Language
+    Processing, Beijing, China, 2016, pp. 1159–1166.
+
+
+    [39] B. Kravitz, M. S. Kim, F. Freerberg, and H. Jungaird, "Emotion detection
+    in decision support systems: review." Decision Support Systems, 2018, 115, 25–34.
+
+
+    [40] A. Wang, Y. J. Li, and G. L. Li, and P. Agarwal, "Understanding emotions
+    in text using deep learning and big data." Journal of Human Behavior, 2019, 93–109.
+
+
+    [41] X. Zhou, X. Xian, and J. Xu, "Attention-based LSTM for emotion detection
+    in conversations." Proceedings of Empirical Methods in Natural Language Processing,
+    Austin, 2017, pp. 246–250.
+
+
+    [42] S. Kim, A. Bhattacharya, C. Khalid, and H. Weinberger, "Deep adversarial
+    neural networks for cross-language sentiment classification." Proceedings of the
+    Association for Computational Linguistics, 2018, 658–670.
+
+
+    [43] F. Y. Wang and X. Wang, "Towards an end-to-end approach for unsupervised
+    cross-lingual sentiment analysis." Proceedings of the 26th International Conference
+    on Natural Language Processing, Beijing, 2018, pp. 1035–1044.
+
+
+    [44] J. Barnes, R. King, and S. Wall, "Bilingual emotion detection and sentiment
+    analysis across languages." Proceedings of the 55th Annual Meeting of the Association
+    for Computational Linguistics, Vancouver, Canada, 2017, pp. 2488–249.
+
+
+    [45] J. Wu, N. Wang, "Approximating Special Invariance for Multilingual Sentiment
+    Problems." Science and Technology, 2020, 5(6): 703–711.'
+  merge: -1
+  img_proc: true
