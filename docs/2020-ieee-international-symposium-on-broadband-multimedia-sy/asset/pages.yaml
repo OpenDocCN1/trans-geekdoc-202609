@@ -1,0 +1,389 @@
+- pgno: 0
+  md: '# # Image Super-Resolution Using Light-Deep Learning Methods
+
+
+    1st Honghui Zhu
+
+    Beijing University of Posts and Telecommunications
+
+    Beijing, China
+
+    zhhuonghui51@163.com
+
+
+    2nd Zhiqiang Jiang
+
+    Beijing University of Posts and Telecommunications
+
+    Beijing, China
+
+    jiangzhuqing@bpt..cn
+
+
+    3rd Aidong Men
+
+    Beijing University of Posts and Telecommunications
+
+    Beijing, China
+
+    manad@bpt.edu
+
+
+    Abstract—Design of neural networks with model size, light computation cost and
+    high performance, attracted much due to the needs of mobile devices. In inspired
+    by knowledge distillation, we design a multi-level supervised network (MSCN) with
+    lightweight parameters and computational complexity. Comprehensively evaluate
+    our method on benchmark datasets with two widely used methods: FSRN and EDSR.
+    Our method outperforms the context network without multi-level supervisions by
+    a comparable margin in terms of PSNR and SSIM.
+
+
+    Index—Super-Resolution, Knowledge Distillation, Deep, Light-Weight
+
+
+    Deep neural networks are the dominant solutions since Dong et al. [1] first introduce
+    convolutional networks into SR which significantly outperforms traditional methods.
+    Kim et al. [2] propose a very deep CNN model named VDRN, which adopts residual
+    learning and depth recursive convolutional network (DRCN). EDSR [4] removes the
+    normalization layers by ResNet [5] and employs deeper and wider network structures.
+    These methods perform well in signal-noise performance (PSNR) and structural similarity
+    (SSIM), they still have drawbacks. Firstly, the performance comes at the cost
+    of large parameters and computation time, which makes it less applicable in practice,
+    such as mobile and embedded vision. Secondly, the more the network is, the more
+    sensitive the performance is to structural changes. Then, it is difficult to reproduce
+    the level of the original paper due to the lack of network configuration. To tackle
+    these issues, it is possible to design networks with fewer parameters and complexity.
+
+
+    # I. INTRODUCTION
+
+
+    Ultra-High-Definition (UHD) video has been extensively accepted by the populations,
+    now it is the mainstream in the broadcasting industry. However, the 4K content
+    is still short due to the limited adoption of UHD video capture and production,
+    as well as large-resolution (LR) archives. There is an urgent need for Super-Resolution
+    (SR).
+
+
+    Image is based of video, so SR on images in paper is our initial task. SR is a
+    fundamental problem in computer vision, which learns a mapping from LR to HR (high-resolution)
+    image. However, this inverse problem is ill-posed since the mapping between LR
+    and HR has multiple solutions. Besides, it needs to predict specific values for
+    each LR image to form the corresponding image.
+
+
+    Recently, design of neural networks with model size, light computation cost and
+    high performance, attracted much due to the needs of mobile devices. Most current
+    efforts have been to designing light weight networks, such as MobileNet [4]. Advanced
+    strategies, like pruning and knowledge distillation [6], can compress neural networks
+    without losing complexity of the circumstances. The knowledge distillation strategy
+    has been verified in classification tasks, such as training a smaller student
+    network by transferring knowledge from a larger teacher network. However the original
+    distillation only applies the classification decision of the teacher model works
+    to tackle this issue by transferring intermediate representations of features.
+
+
+    Inspired by distillation, we design a multi-level supervised network (MSCN) for
+    SR with lightweight parameters and computational complexity. In the proposed
+
+
+    This work is supported by Mo-CMCC “Artificial Intelligence” Project No. MCM201902071
+    and the Fundamental Research Funds for the Central Universities 2019PTB-011.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '![](img/060e02dbf42b9cd7f6610eef7f204cff_1_0.png)
+
+
+    Fig. 1: Architecture of the proposed RMUN(for x2 SR).
+
+
+    MSCN, we employ a compact model which is not only supervised by the HR label,
+    but also by the intermediate representation of a cumbersmodel. We divide SR network
+    into two parts feature extraction and the reconstruction. In MSCN, we employ two
+    feature blocks which were modified from MSR [7] by making full use of the MobileNet.
+    We utilize eight blocks for MSR for feature extraction. The PixelShuffle module
+    is used in the reconstruction of both MSCN and the cumbersmodel. Considering the
+    characteristic of SR problem, we transfer the information of shallow LR features,
+    LR reconstruction features from the compact model to align the features between
+    the compact and the cumbersmodel, so we present a pairwise supervision motivated
+    by weakly supervised pairwise random field. To this end, we optimize a method
+    that combines a consistency loss task with the task-level feature pair-wise losses.
+    It is worth noting that the task-level callback with ground truth is optional.
+    We can apply our method to unlabeled data and further improve the performance
+    by a well-tuned cumbersmodel on which the labelled data is limited.
+
+
+    margin in terms of PSNR and SSIM. For instance, our MSCN is better in PSNR on
+    the Urban100 datasets for 2x SR by applying multi-supervisions. On the other hand,
+    MSCN is nearly 64% less than the VSR and 10% less than LapSRN. Comparing to SRCNN
+    and FSRCNN [9], our MSCN has about 0.6 to 0.9 dB improvement on the Urban100 dataset
+    for 4x SR. The main contributions of this paper are summarized as follows:
+
+
+    We propose the multi-level supervised strategy which is inspired by the knowledge
+    distillation for compact SR networks.
+
+
+    We devise a pairwise feature-wise loss function, enforcing consistency between
+    the outputs of the compact and cumbersmodel networks.
+
+
+    We demonstrate the effectiveness of our proposed method by conduct several comprehensive
+    experiments on benchmark datasets.
+
+
+    # II. METHOD
+
+
+    We comprehensively evaluate our MSCN on benchmark datasets with using image quality
+    metrics: PSNR and SSIM. We compare performance on 2x, 3x, and 4x SR. The model
+    is pre-trained by the DIVK2 training datasets. Then the MSCN is trained under
+    the supervision of HR label and intermediate representation of a cumbersmodel.
+    On one hand, the results show that our proposed method outperforms the compact
+    network which is without multi-level supervision by a comparable
+
+
+    In this section, we first the introduced knowledge distillation method for super-resolution.
+    An image takes the Y-channel of size W x H as input. Then we extract a feature
+    map F of size W x H, where N is the number of channels. Multiple feature modules
+    are extracted for feature extraction. After the feature extraction, we adopt PixelShuffle
+    module generating the super-resolution result of size SW x SH x N for image reconstruction.
+    Both the multi-level feature and the super-resolution result are applied for the
+    knowledge distillation.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "# TABLE I: Benchmark results. VQNR/SSIM for scale x2, x4 on datasets Set5,\
+    \ Set54, Set130, and Urban100.\n\n| Dataset | Scale | Bicubic | VDSR | LapSR |\
+    \ DRNN | MemNet | IDN | MSCN(ours) |\n|---|---|---|---|---|---|---|---||\n| Set5\
+    \ | x2 | 33.66/0.9299 | 37.53/0.9590 | 37.520/0.9591 | 37.74/0.9591 | 37.78/0.9597\
+    \ | 37.83/0.9600 | 37.46/0.9580 |\n| | x4 | 28.42/0.8104 | 31.15/0.8633 | 31.530/0.8850\
+    \ | 31.68/0.8888 | 31.745/0.8912 | 31.82/0.8931 | 31.10/0.8575 |\n| Set130 | x2\
+    \ | 30.24/0.8668 | 33.05/0.9130 | 33.098/0.9150 | 33.18/0.9203 | 33.23/0.9216\
+    \ | 33.280/0.9271 | 33.30/0.9248 | 32.96/0.9101 |\n| | x4 | 26.000/0.7827 | 28.026/0.7960\
+    \ | 28.190/0.8072 | 28.217/0.8121 | 28.269/0.8172 | 28.255/0.8177 | 27.90/0.7612\
+    \ | 27.10/0.7515 |\n| BSD00 | x2 | 29.56/0.8941 | 31.930/0.9386 | 31.989/0.9408\
+    \ | 32.055/0.9437 | 32.085/0.9462 | 32.088/0.9478 | 32.085/0.9486 | 31.760/0.9362\
+    \ |\n| Urban100 | x2 | 26.886/0.8307 | 30.417/0.8976 | 30.510/0.9013 | 31.023/0.9148\
+    \ | 31.238/0.9198 | 31.315/0.9219 | 31.217/0.9206 | 30.120/0.9179 |\n| | x4 |\
+    \ 23.154/0.7667 | 25.180/0.8274 | 25.210/0.8356 | 25.246/0.8407 | 25.478/0.8503\
+    \ | 25.503/0.8560 | 25.461/0.8542 | 24.750/0.7923 |\n\n**Pixel-wise attention**—we\
+    \ utilize the knowledge distillation strategy method to transfer the knowledge\
+    \ of a large teacher super-resolution network T to a compact network S for better\
+    \ training compact super-resolution. We directly use loss function to measure\
+    \ the difference between the teacher model and the student model.\n\nThe loss\
+    \ function is:\n\n```\n$L_{ps} = ||F_t - F_s||_2^2, \\quad (1)$\n```\n\nwhere\
+    \ $F_t$ denotes the average feature of the teacher network and $F_s$ represents\
+    \ the average feature of the student model.\n\n### A. Multi-level knowledge distillation\n\
+    In addition to above straightforward pixel-wise distillation, we present a structured\
+    \ knowledge distillation scheme: pixel-wise distillation. The pipeline is illustrated\
+    \ in figure 1.\nWe split the feature map into multiple domains, which are denoted\
+    \ by the dense spatial-wise pairs. Each domain represents different spatial locations\
+    \ and the connection between two domains represents the similarity. We denote\
+    \ the common range as $R$ and the size of each domain as $S$. We only consider\
+    \ similarities with top-$\\alpha$ near domain restricted to spatial distance and\
+    \ $\beta$ pixels in a spatial location to represent the feature of this domain.\n\
+    \nLet $\\alpha_i^j$ and $\beta_i^j$ denote the similarity between the $j$-th domain\
+    \ from the teacher network T and the compact network S. The loss follows:\n\n\
+    ```\n$L_{po} = \\frac{1}{N} \\sum_{i=1}^N \\sum_{j=1}^M (\\alpha_i^j - \\beta_i^j)^2,\
+    \ \\quad (2)$\n```\n\nwhere $R = [1, 2, ..., N]$ denotes all the domains. In our\
+    \ implementation, we use region pooling to aggregate $\\alpha$ and $\beta$ features\
+    \ in one domain to $1 \\times S$, and the similarity between two domains is computed\
+    \ from the aggregated features.\n\n# ### B. Network structure\n\nWe design a multi-level\
+    \ supervised compact network (MSCN) for training with lightweight parameters and\
+    \ computational complexity. In the proposed MSCN, we employ a compact model which\
+    \ is not only limited by its HR header,\n\n**Pixel-wise attention**: In the teacher,\
+    \ we utilize the cumbersmodel. We devise SR network architecture into two parts:\
+    \ the feature extraction and the reconstruction.\n1) **The teacher network**:\
+    \ In cumbersmodel, we utilize each block for feature extraction. The PixelShuffle\
+    \ module is used in the reconstruction of each model.\n2) **The student network**:\
+    \ In MSCN, we employ two blocks which are modified from MSR by making full use\
+    \ of MobileNet. We use deep separable convolution to reduce parameters and complexity.\n\
+    3) **Knowledge distillation**: Considering the characteristic of SR problem, we\
+    \ transfer the knowledge of LR features, LR features and reconstructions from\
+    \ the teacher to the student. The goal is to align the feature of the compact\
+    \ model and the cumbersmodel, so we devise a pairwise supervision loss function\
+    \ which is motivated by the dense-wise pairwise random field. We then define an\
+    \ objective that combines a conventional loss with the multi-level pixel-wise\
+    \ loss features. It is worth noting that the MAE pixel-wise loss features is not\
+    \ optimal. However, using the MAE loss calculated with ground truth is optimal.\
+    \ We can apply our method to supervise by a well-trained cumbersmodel when the\
+    \ labeled data is limited.\n\nWhile reported in [17] MAE loss could reach a better\
+    \ local minimum with fast convergence, it is to be more robust than MSE loss.\
+    \ So we use MAE loss in first part, it is formulated as:\n\n```\n$L_{MAE} = \\\
+    frac{1}{N} \\sum_{i=1}^N ||I_i - \\hat{I}_i||_1, \\quad (4)$\n```\n\nwhere $I_i$\
+    \ denotes the ground truth image and $\\hat{I}_i$ is the predicted HR. It refers\
+    \ to the patch size."
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# TABLE II Bench comparisons between teacher-student models. PSNR/SSIM for
+    scale factor ×2, ×4 on datasets Set5, Set6, BSD100, and Urban100.
+
+
+    | Dataset | Set5 | Set14 | BSD100 | Urban100 |
+
+    |---|---|---|---|---||
+
+    | MSN-teacher | ×2 | 37.99/0.9602 | 33.50/0.9152 | 32.14/0.9008 | 31.57/0.9343
+    |
+
+    | | ×4 | 41.93/0.9877 | 28.43/0.9728 | 27.48/0.8599 | 25.79/0.7804 |
+
+    | MSN-co | ×2 | 37.40/0.9579 | 32.92/0.9108 | 31.72/0.9069 | 30.04/0.9168 |
+
+    | | ×4 | 41.11/0.9837 | 27.98/0.9706 | 27.16/0.8149 | 24.95/0.7505 |
+
+    | MSCN | ×2 | 37.46/0.9580 | 32.96/0.9110 | 31.76/0.8962 | 30.12/0.9179 |
+
+    | | ×4 | 41.50/0.9875 | 27.91/0.9612 | 27.17/0.8153 | 24.96/0.7513 |
+
+
+    In our knowledge distillation, the objective function consists of a standard MAE
+    loss and a multi-level distribution is sensitive to changes in brightness than
+    the chromatic aberration.
+
+
+    $loss=\lambda_1loss_{MAE}(S)+\lambda_2loss_{pop}(T,S)$ (where $loss_{MAE}(S)$
+    is the loss and $loss_{pop}(T,S)$ is the distillation between the teacher and
+    the student network, and $\lambda_1$ and $\lambda_2$ are set to 1 and 0.1, making
+    these value range comparable.) (5)
+
+
+    We employ feature extraction in student. The kernel size of each convolution layer
+    (except the 1×1) is to be 3×3 with the stride and 1. Every convolution or deconvolution
+    is followed by a leaky rectified linear units (ReLU) with a negative slope of
+    0.02 for non-linear mapping.
+
+
+    As training, we utilize a batch size of 40 and the size of patches to 128×128.
+    The convolution filters is similar to match the method of He. The initial learning
+    rate is set to $10^{-3}$ and decreased every 150 epochs. The optimization is performed
+    via Stochastic Gradient Descent (SGD) with a momentum of 0.9 and the weight decay
+    of $10^{-4}$. The proposed method is implemented in PyTorch, and runs on an NVIDIA
+    GPU 2080 Ti GPU.
+
+
+    TABLE III: Parameters of CNN-based models.
+
+
+    | Model | Parameters |
+
+    |---|---|n| MSN-teacher | 5.06M |
+
+    | VDSR | |
+
+    | LapSRN | 0.81M |
+
+    | MSCN-ours | |
+
+
+    # III. EXPERIMENT
+
+
+    In this section, we first perform the training and testing used in method. The
+    details of our training strategy are presented. We evaluate the manifestation
+    of our method on standard benchmark datasets. We discuss the effect of multiple
+    components of our network.
+
+
+    # A. Datasets
+
+
+    For a fair comparison we use the datasets from Li et al. [8] for reference testing.
+    Note that the testing datasets include 291 images, where 91 images are from Meng
+    et al. (T91) and (T12), and the other 200 images are from Berkeley University
+    datasets [10], [13]. Testing is executed on four widely applied benchmark datasets:
+    Set5, Set14, BSD100, and Urban100, which involve 5, 4, 100, and 100 images, respectively.
+    The Set5, Set14, and BSD100 consist of natural surfaces, and the Urban100 consists
+    of challenging images with different frequencies in.
+
+
+    # B. Implementation details
+
+
+    First, input images are processed by randomly scaling, rotating, and flipping
+    as [8]. All the RGB images are converted into YCb color space, and the Y-channel
+    is retained for training. The underlying reason is that human
+
+
+    > [1] C. Dong, C.-K. Lee, and X. Tang, "Image super-resolution using deep convolutional
+    networks," IEEE Transactions on Pattern Analysis and Machine Intelligence, 38,
+    no. 2, 295–307, 2016.
+
+
+    > [2] J. Kim, J. Kim, and K. M. Lee, "Accurate image super-resolution network,"
+    2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2016,
+    pp. 1646–1653.\n[3] J. Kim, J. Kim, and K. M. Lee, "Deep residual convolutional
+    network for image super-resolution," 2016 IEEE Conference on Computer Vision and
+    Pattern Recognition (CVPR), 2016, pp. 1637–1646.
+
+
+    > [4] A.G.Howard,M.Zhu,B.Chen,D.K.Denchenko,W.Wang,T.Yang, and H. Adam, "Efficient
+    residual neural networks for image super-resolution applications," arXiv:1709.02531,
+    2017.
+
+
+    > [5] B. Lee, S. Hong, and K. Nah, "Enhanced deep residual networks for single
+    image super-resolution," in 2017 IEEE Conference on Computer Vision and Pattern
+    Recognition Workshops (CVPRW), 2017, pp. 1132–1140.
+
+
+    > [6] G. Hinton, O. Vinyals, and J. Dean, "Distilling the knowledge in a Neural
+    Network," arXiv-prints:1503.02531, 2015.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '[7] J. Li, F. Fang, K. Mei, and G. Zhang. "Multi-scale residual network for
+    image super-resolution," in Computer Vision – ECCV 2018. V. Ferrari, A. Keller,
+    C. Miniscusi, and Y. Weiss, Cham: Springer Publishing, 2018, pp. 575–582.
+
+
+    [8] W. Lai, J. Huang, N. Ahuja, and M. Yang. "Deep laplacian pyramid network for
+    fast and accurate super-resolution," in 2017 IEEE Conference on Computer Vision
+    and Pattern Recognition (CVPR), July 2017, pp. 5835–5843.
+
+
+    [9] D. Gong, C. Lee, L. Yang, and X. Zhang. "Accelerating the super-resolution
+    process with residual networks," 2016.
+
+
+    [10] Y. Tai, J. Yang, X. Liu, and C. Xu. "A persistent memory network for image
+    restoration," in 2017 IEEE International Conference on Computer Vision and Pattern
+    Recognition (CVPR), Oct. 2017, pp. 4548–4557.
+
+
+    [11] Z. Hui, X. Wang, and X. Gao. "Fast and accurate single image super-resolution
+    via information diversity," in 2016 IEEE/CVF Conference on Computer Vision and
+    Pattern Recognition (CVPR), June 2016, pp. 725–732.
+
+
+    [12] Y. Zhang, W. John, H. Thomas, and M. Yi. "Image super-resolution via sparse
+    representation," IEEE Transactions on Image Processing, 19, no. 11, pp. 2061–2073.
+
+
+    [13] A. Romero, S. French, M. Charles, and M. Jitendara. "Contour detection and
+    hierarchical image segmentation," IEEE Transactions on Pattern Analysis and Machine
+    Intelligence, 33, no. 5, p. 909–916, 2011.
+
+
+    [14] M. Chen, R. Murray, C. Guillou, and M. Mehta. "Night-time embedding for single-image
+    super-resolution using nonnegative matrix factorization," in 2012 IEEE International
+    Conference on Acoustics and Signal Processing (ICASSP), March 2012, pp. 1289–1292.
+
+
+    [15] R. Zheng, M. Elad, and M. Protter. "On single image scale-up using sparse-representations,"
+    in International Conference on Curves and Surfaces, 2012, pp. 711–738.
+
+
+    [16] J. Huang, S. Shekar, and N. Ahuja. "Single image super-resolution using residual
+    self-complexs," in 2015 IEEE Conference on Computer Vision and Pattern Recognition
+    (CVPR), June 2015, pp. 5197–5206.
+
+
+    [17] H. Zhao, G. Gallio, F. Presio, and J. Kant. "Loss functions for image restoration
+    with neural networks," IEEE Transactions on Computational Imaging, vol. 3, no.
+    1, pp. 47–57, March 2017.'
+  merge: -1
+  img_proc: true
