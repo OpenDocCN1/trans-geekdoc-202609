@@ -1,0 +1,1346 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # A Comprehensive Study of Deep Learning Networks for COVID-19 Recognition in
+    chest X-Ray images
+
+
+    Sabrina Nefoussi, Ednadir Ammar, Idriss Amir Amouche
+
+    Ecole Polytechnique
+
+    Bordj El-Bahri BP 17, Algeria
+
+
+    **Abstract—**The COVID-19 pandemic is devastatingly affecting the health and the
+    well-being of the world population. As one of the latest advances in the battle
+    against it is effective screening of patients using radiation such as X-rays.
+    With this challenge, various Artificial Intelligence (AI) frameworks, mostly based
+    on deep learning, have been proposed and results to recognize positive cases is
+    constantly refined. By previous work on automated X-ray screening, we trained
+    different models to classify pathologies into normal, pneumonia, and COVID-19.
+    We used three open-source datasets for the validation of our methods to address
+    the challenge of highly hindering COVID-19 recognition. In our case, we evaluated
+    several different architectures.
+
+
+    **Index Terms—**COVID-19, Pneumonia, Chest X-ray, Deep learning, Convolutional
+    Networks, Transfer Learning
+
+
+    convolutional neural networks for COVID-19 chest X-ray classification. In Section
+    III, we lay out the theoretical background of the tools used in our study. We
+    later explain our methodology in Section IV, where we shed light on the utilized
+    data and the methods. Experimental results and comparative performance deep learning
+    classifiers are provided in Section V. The final paper summarizes our findings
+    and give some future directions.
+
+
+    # I. INTRODUCTION
+
+
+    Coronavirus has a medical threat all around the globe. The number of infected
+    people and deaths are growing per the updated reports of the World Health Organization.
+    It has reported that this infection has taken 1.26 million lives until the date
+    of this writing. Since the start of the pandemic, numerous Artificial Intelligence
+    specialists have proposed methods and strategies for detecting the infection evolution
+    or recognition. One of the potential methods for deciding whether a patient is
+    contaminated with COVID-19 is achieved through the analysis of the chest X-ray
+    images. As there is a large number of patients in hospitals, it would be tedious
+    and hard to manually process a large number of X-ray images, therefore needs an
+    automated system.
+
+
+    The performance of automated detection systems depends on the training phase.
+    The latter requires good quality and sufficient quantity of data to reach its
+    full potential. Developing automated detection of COVID-19 in chest X-ray images
+    remains however, due to the insufficient amount of available COVID-19 data. In
+    our case, we compared the performance of different architectures that prove their
+    performance on the natural recognition task.
+
+
+    The remainder of the paper is structured as follows. In Section II, we provide
+    a review of the state-of-the-art deep
+
+
+    # II. RELATED WORK
+
+
+    As highlighted by the World Health Organization, the COVID-19 pandemic is extremely
+    challenging the health systems, under enormous pressure. The identification of
+    this infection will help in alleviating the burden of hospitals. Chest X-ray data
+    have been a playing role in the detection of pneumonia. As pneumonia is a type
+    of COVID-19, it is crucial to recognize it through chest X-ray screening. With
+    rapid development in the area of Machine Learning (ML) and Deep learning, several
+    methods have been proposed for pneumonia and normal cases.
+
+
+    Several works have been contributed to COVID-19 detection. The authors of [1]
+    proposed a neural classifier for classifying images into three classes: normal,
+    pneumonia, and COVID-19. They used X-ray images. They also proposed a conception
+    of CNN and ResNet50 to improve their accuracy. In [2], the authors proposed a
+    neural learning-based classification of COVID-19 chest X-ray images. Only 6 COVID-19
+    X-ray images were used. [3] proposed a convolutional neural network for the detection
+    of COVID-19 cases in chest X-ray images. Other authors [4] proposed COVID-19,
+    a deep learning framework that can be used by radiologists to automatically diagnose
+    COVID-19 in X-ray images. Only 60 COVID-19 images were used. [5] proposed seven
+    different architectures that were modified with VGG19 and the second version of
+    MobileNet. The authors in [5] demonstrated how to detect the COVID-19 infection
+    with chest X-rays using iteratively pruned deep learning ensembles. To improve
+    the performance of their approach, they used transfer learning and fine-tuning
+    approaches.
+
+
+    > * IEEE 2021. This is free to access and download, with rights for full text
+    and data metadata, de-analysis.'
+  - '[PAGE 1]
+
+
+    # 2020 International Workshop on Human-Centric Smart Environments for Health and
+    Well-being (IHSH)
+
+
+    In all cases, the application of deep learning to distinguish and identify novel
+    COVID-19 in x-ray data is still challenging because of the scarcity of publicly
+    available data, ready and adequate for training algorithms. Also, besides its
+    tediousness, the preparation of the training data sets, under current global health
+    conditions, remains of lower priority. Therefore, in this paper we extend the
+    contributions of the different deep neural architectures in recognizing COVID-19
+    in x-ray images.
+
+
+    # III. PNEUMONIA CHEST X-RAY DATABASES AND DEEP LEARNING IMAGE CLASSIFIERS
+
+
+    In this section, we discuss the used chest x-ray datasets in the literature for
+    medical image analysis. Then, we describe some of the state-of-the-art deep image
+    classifiers.
+
+
+    # A. Chest X-ray datasets
+
+
+    The creation of a large annotated ... image dataset is tedious and prone to error,
+    for reasons which researchers rely on the publicly available data. Several studies
+    have tried to create COVID-19 datasets in order to ensure works on the automatic
+    screening of the pathology. Among the well-known datasets for viral (COVID as
+    well as other viruses) pneumonia detection and classification methods:
+
+
+    +   - **COVID-19 Radiography Database [6]:** A team of researchers in collaboration
+    with medical doctors has created a dataset of chest x-ray images with Normal and
+    Viral pneumonia images. In their current release, there are 219 COVID-19 cases,
+    1341 normal, and 1345 viral pneumonia images.
+
+    - **COVID Chest X-Ray Dataset [7]:** This is a database of confirmed or suspicious
+    COVID-19 cases of viral or bacterial pneumonia (MERS, SARS, ARDS). The project
+    is approved by the University of Montreal''s Ethics Committee.
+
+    - **Mendley Chest X-ray Images [8]:** it consists of 2856 X-ray images (in JPEG
+    format) organized into two categories (Pneumonia/Normal), it contains 1 to 5 years
+    old patients. The particularity of this dataset is that the pneumonia type (viral
+    or bacterial) is revealed.
+
+
+    ![](img/5f15cd42eb8e067054e93b4cf3a9ca3c_1_0.png)
+
+
+    # B. Deep Image classification models
+
+
+    In this section, we review some of the state-of-the-art deep image classifiers
+    that have proven performance:
+
+
+    +   - **VGG:** Group Network was introduced in [9], Deep Convolutional Networks
+    for Large Image Recognition. To improve image extraction functionality, the VGGNet
+    used only 3x3 convolutional layers stacked on top of each other in increasing
+    depth. There are two versions of this network: VGG16 and VGG19. (“16” and “19”
+    stand for the number of layers in
+
+
+    +   - **Inception:** network or GoogleNet architecture was introduced in [10].
+    This network is based on a multi-level feature extractor by almost 1x1, 3x3 and
+    5x5 convolutions within the same module. Later layers are referred to as Inception
+    V where N is the number.
+
+    - **ResNet:** This architecture [11] relies on residual modules, or elementary
+    building blocks of the network. Although ResNet is much deeper than VGG16 and
+    VGG19, the module size is smaller than the usage of a global pooling rather than
+    fully-connected layers
+
+    - **Xception:** Proposed in [12], which is an extension of the Inception architecture,
+    the standard Inception modules were replaced with separable convolutions
+
+    - **Mobile:** This network [13] was designed to maximize accuracy while minimizing
+    the computational burden of most deep neural networks. This network has the plasticity
+    of longterm.
+
+
+    # IV. METHODOLOGY
+
+
+    In this section, we present the strategy we tested on the above-mentioned datasets
+    and the performance of each network in chest x-ray images with COVID-19. Our primary
+    focus is to discover the most adequate models, for COVID-19 screening, by different
+    techniques.
+
+
+    # A. Data description:
+
+
+    Since COVID-19 datasets are scarce, we seek to combine data from three open-source
+    chest x-ray datasets and an Algerian viral COVID-19 chest x-ray datasets. The
+    first dataset used COVID Chest X-ray Dataset Master [7] from a GitHub repository,
+    consists of X-ray and CT cases of patients infected by COVID-19 and other types
+    of pneumonia. We only considered the X-ray
+
+
+    Authorized use limited to: IEEE Xplore. Download on May 16 2021 at 05:17:27 UTC
+    from IEEE Xplore. Restrictions apply.
+
+
+    238'
+  md: '
+
+    ## A Comprehensive Study of Deep Learning Networks for COVID-19 Recognition in
+    chest X-Ray images
+
+
+    Sabrina Nefoussi, Ednadir Ammar, Idriss Amir Amouche
+
+    Ecole Polytechnique
+
+    Bordj El-Bahri BP 17, Algeria
+
+
+    **Abstract—**The COVID-19 pandemic is devastatingly affecting the health and the
+    well-being of the world population. As one of the latest advances in the battle
+    against it is effective screening of patients using radiation such as X-rays.
+    With this challenge, various Artificial Intelligence (AI) frameworks, mostly based
+    on deep learning, have been proposed and results to recognize positive cases is
+    constantly refined. By previous work on automated X-ray screening, we trained
+    different models to classify pathologies into normal, pneumonia, and COVID-19.
+    We used three open-source datasets for the validation of our methods to address
+    the challenge of highly hindering COVID-19 recognition. In our case, we evaluated
+    several different architectures.
+
+
+    **Index Terms—**COVID-19, Pneumonia, Chest X-ray, Deep learning, Convolutional
+    Networks, Transfer Learning
+
+
+    convolutional neural networks for COVID-19 chest X-ray classification. In Section
+    III, we lay out the theoretical background of the tools used in our study. We
+    later explain our methodology in Section IV, where we shed light on the utilized
+    data and the methods. Experimental results and comparative performance deep learning
+    classifiers are provided in Section V. The final paper summarizes our findings
+    and give some future directions.
+
+
+    # I. INTRODUCTION
+
+
+    Coronavirus has a medical threat all around the globe. The number of infected
+    people and deaths are growing per the updated reports of the World Health Organization.
+    It has reported that this infection has taken 1.26 million lives until the date
+    of this writing. Since the start of the pandemic, numerous Artificial Intelligence
+    specialists have proposed methods and strategies for detecting the infection evolution
+    or recognition. One of the potential methods for deciding whether a patient is
+    contaminated with COVID-19 is achieved through the analysis of the chest X-ray
+    images. As there is a large number of patients in hospitals, it would be tedious
+    and hard to manually process a large number of X-ray images, therefore needs an
+    automated system.
+
+
+    The performance of automated detection systems depends on the training phase.
+    The latter requires good quality and sufficient quantity of data to reach its
+    full potential. Developing automated detection of COVID-19 in chest X-ray images
+    remains however, due to the insufficient amount of available COVID-19 data. In
+    our case, we compared the performance of different architectures that prove their
+    performance on the natural recognition task.
+
+
+    The remainder of the paper is structured as follows. In Section II, we provide
+    a review of the state-of-the-art deep
+
+
+    # II. RELATED WORK
+
+
+    As highlighted by the World Health Organization, the COVID-19 pandemic is extremely
+    challenging the health systems, under enormous pressure. The identification of
+    this infection will help in alleviating the burden of hospitals. Chest X-ray data
+    have been a playing role in the detection of pneumonia. As pneumonia is a type
+    of COVID-19, it is crucial to recognize it through chest X-ray screening. With
+    rapid development in the area of Machine Learning (ML) and Deep learning, several
+    methods have been proposed for pneumonia and normal cases.
+
+
+    Several works have been contributed to COVID-19 detection. The authors of [1]
+    proposed a neural classifier for classifying images into three classes: normal,
+    pneumonia, and COVID-19. They used X-ray images. They also proposed a conception
+    of CNN and ResNet50 to improve their accuracy. In [2], the authors proposed a
+    neural learning-based classification of COVID-19 chest-ray images. Only 6 COVID-19
+    X-ray images were used. [3] proposed a convolutional neural network for the detection
+    of COVID-19 cases in chest X-ray images. Other authors [4] proposed COVID-19,
+    a deep learning framework that can be used by radiologists to automatically diagnose
+    COVID-19 in X-ray images. Only 60 COVID-19 images were used. [5] proposed seven
+    different architectures that were modified with VGG19 and the second version of
+    MobileNet. The authors in [5] demonstrated how to detect the COVID-19 infection
+    with chest X-rays using iteratively pruned deep learning ensembles. To improve
+    the performance of their approach, they used transfer learning and fine-tuning
+    approaches.
+
+
+    > * IEEE 2021. This is free to access and download, with rights for full text
+    and data metadata, de-analysis.
+
+
+    # 2020 International Workshop on Human-Centric Smart Environments for Health and
+    Well-being (IHSH)
+
+
+    In all cases, the application of deep learning to distinguish and identify novel
+    COVID-19 in x-ray data is still challenging because of the scarcity of publicly
+    available data, ready and adequate for training algorithms. Also, besides its
+    tediousness, the preparation of the training data sets, under current global health
+    conditions, remains of lower priority. Therefore, in this paper we extend the
+    contributions of the different deep neural architectures in recognizing COVID-19
+    in x-ray images.
+
+
+    # III. PNEUMONIA CHEST X-RAY DATABASES AND DEEP LEARNING IMAGE CLASSIFIERS
+
+
+    In this section, we discuss the used chest x-ray datasets in the literature for
+    medical image analysis. Then, we describe some of the state-of-the-art deep image
+    classifiers.
+
+
+    ### A. Chest X-ray datasets
+
+
+    The creation of a large annotated image dataset is tedious and prone to error,
+    for reasons which researchers rely on the publicly available data. Several studies
+    have tried to create COVID-19 datasets in order to ensure works on the automatic
+    screening of the pathology. Among the well-known datasets for viral (COVID as
+    well as other viruses) pneumonia detection and classification methods:
+
+
+    - **COVID-19 Radiography Database [6]:** A team of researchers in collaboration
+    with medical doctors has created a dataset of chest x-ray images with Normal and
+    Viral pneumonia images. In their current release, there are 219 COVID-19 cases,
+    1341 normal, and 1345 viral pneumonia images.
+
+    - **COVID Chest X-Ray Dataset [7]:** This is a database of confirmed or suspicious
+    COVID-19 cases of viral or bacterial pneumonia (MERS, SARS, ARDS). The project
+    is approved by the University of Montreal''s Ethics Committee.
+
+    - **Mendley Chest X-ray Images [8]:** it consists of 2856 X-ray images (in JPEG
+    format) organized into two categories (Pneumonia/Normal), it contains 1 to 5 years
+    old patients. The particularity of this dataset is that the pneumonia type (viral
+    or bacterial) is revealed.
+
+
+    ![](img/5f15cd42eb8e067054e93b4cf3a9ca3c_1_0.png)
+
+
+    ### B. Deep Image classification models
+
+
+    In this section, we review some of the state-of-the-art deep image classifiers
+    that have proven performance:
+
+
+    - **VGG:** Group Network was introduced in [9], Deep Convolutional Networks for
+    Large Image Recognition. To improve image functionality, the VGGNet used only
+    3x3 convolutional layers stacked on top of other in increasing depth. There are
+    two versions of this network: VGG16 and VGG19.
+
+    - **Inception:** network or GoogleNet architecture was introduced in [10]. This
+    network is based on a multi-level feature extractor by almost 1x1, 3x3 and 5x5
+    convolutions within the same module. Later layers are referred to as Inception
+    V where N is the number.
+
+    - **ResNet:** This architecture [11] relies on residual modules, or elementary
+    building blocks of the network. Although ResNet is much deeper than VGG16 and
+    VGG19, the module size is smaller than the usage of a global pooling rather than
+    fully-connected layers.
+
+    - **Xception:** Proposed in [12], which is an extension of the Inception architecture,
+    the standard Inception modules were replaced with separable convolutions.
+
+    - **Mobile:** This network [13] was designed to maximize accuracy while minimizing
+    the computational burden of most deep neural networks. This network has the plasticity
+    of longterm.
+
+
+    # IV. METHODOLOGY
+
+
+    In this section, we present the strategy we tested on the above-mentioned datasets
+    and the performance of each network in chest x-ray images with COVID-19. Our primary
+    focus is to discover the most adequate models, for COVID-19 screening, by different
+    techniques.
+
+
+    ### A. Data description:
+
+
+    Since COVID-19 datasets are scarce, we seek to combine data from three open-source
+    chest x-ray datasets and an Algerian viral COVID-19 chest x-ray datasets. The
+    first dataset used COVID Chest X-Ray Dataset Master [7] from a GitHub repository,
+    consists of X-ray and CT cases of patients infected by COVID-19 and other types
+    of pneumonia. We only considered the X-ray
+
+    '
+  mdcn: '
+
+
+    ## 用于胸部 X 光图像 COVID-19 识别的深度学习网络全面研究
+
+
+    Sabrina Nefoussi, Ednadir Ammar, Idris Amir Amouche
+
+    Ecole Polytechnique
+
+    Bordj El-Bahri BP 17, Algeria
+
+
+    **摘要—**COVID-19 疫情对全球人口的健康和福祉造成了毁灭性的影响。抗击这一疫情的最新进展之一是使用 X 射线等辐射对患者进行有效筛选。针对这一挑战，研究人员提出了多种基于深度学习的人工智能（AI）框架，并不断优化识别阳性病例的
+    result。根据之前在自动 X 光筛选方面的工作，我们训练了不同的模型来将病理情况分类为正常、肺炎和 COVID-19。我们使用了三个开源数据集来验证我们的方法，以应对严重阻碍
+    COVID-19 识别的挑战。在本文中，我们评估了几种不同的架构。
+
+
+    **索引词—**COVID-19、肺炎、胸部 X 光、深度学习、卷积神经网络、迁移学习
+
+
+    用于 COVID-19 胸部 X 光分类的卷积神经网络。在第 III节中，我们阐述了研究用工具的理论背景。随后我们在第 IV节中解释了我们的方法论，重点介绍了所使用的数据和方法。第
+    V节提供了实验结果和深度学习分类器的对比性能。论文最后总结了我们的发现，并给出了一些未来方向。
+
+
+    # I. 引言
+
+
+    冠状病毒在全球范围内都构成了医学威胁。根据世界卫生组织的最新报告，感染人数和死亡人数不断增加。报告显示，截至本文写作日期，该感染已夺了 126 万人的生命。自疫情开始以来，许多人工智能专家提出了各种方法和策略，用于检测感染的演变或识别。判断患者是否感染了
+    COVID-19 的潜在方法之一是通过分析胸部 X 光图像实现的。由于医院中有大量患者，手动处理大量的 X 光图像将既枯燥又困难，因此需要一个自动化系统。
+
+
+    自动检测系统的性能取决于训练阶段。后者需要高质量且足够数量的数据才能充分发挥潜力。然而，由于可用的 COVID-19 数据不足，开发胸部 X 光图像的 COVID-19
+    自动检测仍然是一项挑战。在本文中，我们比较了不同架构的性能，它们在自然识别任务中证明了自身的性能。
+
+
+    论文的其余部分结构如下：在第 II节中，我们提供了对最先进深度的综述
+
+
+    # II. 相关工作
+
+
+    正如世界卫生组织所强调的，COVID-19 疫情正使医疗系统面临严峻挑战，压力巨大。识别这种感染将有助于减轻医院负担。胸部 X 光数据在肺炎检测中发挥了作用。由于肺炎是
+    COVID-19 的一种类型，通过胸部 X 光筛选识别它至关重要。随着机器学习（ML）和深度学习领域的快速发展，研究人员已针对肺炎和正常病例提出了多种方法。
+
+
+    已有若干工作对 COVID-19 检测做出了贡献。[1] 的作者提出了一种神经分类器，将图像分为三类：正常、肺炎和 COVID-19。他们使用了 X 光图像。他们还引入了
+    CNN 和 ResNet50 的概念来提高其准确性。在 [2] 中，作者提出了一种基于神经学习的 COVID-19 胸部 X 光图像分类。仅使用了 6 张
+    COVID-19 X 光图像。[3] 提出了一种用于检测胸部 X 光图像中 COVID-19 病例的卷积神经网络。其他作者 [4] 提出了 COVID-19
+    这种深度学习框架，放射科医生可用其自动诊断 X 光图像中的 COVID-19。仅使用了 60 张 COVID-19 图像。[5] 提出了七种通过 VGG19
+    和第二版 MobileNet 修改的不同架构。[5] 的作者展示了如何使用迭代剪枝的深度学习集成模型通过胸部 X 光检测 COVID-19 感染。为了提高他们方法的性能，他们使用了迁移学习和微调方法。
+
+
+    > * IEEE 2021. 免费访问和下载，拥有全文和数据元数据、分析的权利。
+
+
+    # 2020 年以健康和福祉为中心的人性智能环境国际工作坊 (IHSH)
+
+
+    在所有情况下，将深度学习应用于 X 光数据以区分和识别新型 COVID-19 仍然具有挑战性，因为缺乏公开的、现成的且足以用于算法训练的数据。此外，除了处理过程枯燥外，在当前全球健康状况下，准备训练数据集的优先级仍然较低。因此，在本文论文中，我们扩展了不同深度神经网络架构在
+    X 光图像中识别 COVID-19 的贡献。
+
+
+    # III. 肺炎胸部 X 光数据库与深度学习图像分类器
+
+
+    在本节中，我们讨论了文献中用于医学图像分析的胸部 X 光数据集。然后我们描述了一些最先进的深度图像分类器。
+
+
+    ### A. 胸部 X 光数据集
+
+
+    创建一个大型标注图像数据集既枯燥又容易出错，由于这些原因，研究人员依赖公开数据。多项研究已尝试创建 COVID-19 数据集，以确保病理自动筛选工作。在著名的病毒性（COVID
+    及其他病毒）肺炎检测和分类方法集中的：
+
+
+    - **COVID-19 Radiography Database [6]:** 一组研究人员与医生合作创建了一个包含正常和病毒性肺炎图像的胸部 X 光数据集。在目前的发布中，有
+    219 例 COVID-19 病例、1341 例正常和 1345 例病毒性肺炎。
+
+    - **COVID Chest X-Ray Dataset [7]:** 这是一个确认或疑似感染 COVID-19 的病毒性或细菌性肺炎（MERS、SARS、ARDS）数据库。该项目已获得蒙特利尔大学伦理委员会的批准。
+
+    - **Medley Chest X-ray Images [8]:** 由 2856 张 X 光图像（JPEG 格式）组成，分为两类（肺炎/正常），包含
+    1 到 5 岁的患者。该数据集的特殊之处在于揭示了肺炎类型（病毒或细菌）。
+
+
+    ![](img/5f15cd42eb8e067054e93b4cf3a9ca3c_1_0.png)
+
+
+    ### B
+
+
+    在本节中，我们回顾了一些性能经过证明的深度图像分类模型：
+
+
+    - **VGG:** 该网络引入于 [9]，用于图像识别的深度卷积网络。为了提高图像功能，VGGNet 仅堆叠了 3x3 卷积层以增加深度。该网络有两个版本：VGG16
+    和 VGG19。
+
+    - **Inception:** 该网络或 GoogleNet 架构引入于 [10]。该网络基于在同一模块内使用 1x1、3x3 和 5x5 卷积的多级特征提取器。后续层被称为
+    Inception V，其中 N 是数量。
+
+    - **ResNet:** 这种架构 [11] 依赖残差模块，即网络的基本构建块。尽管 ResNet 比 VGG16 和 VGG19 深得多，但其模块尺寸由于使用全局池化而非全连接层而更小。
+
+    - **Xception:** 提出的 [12]，是 Inception 架构的扩展，将标准的 Inception 模块替换为可分离卷积。
+
+    - **Mobile:** 该网络 [13] 旨在最大化准确性的同时减少大多数深度神经网络的计算负担。该网络具有长期的塑性。
+
+
+    # IV. 方法论
+
+
+    在本节中，我们介绍了在上述数据集上测试的策略，以及每个网络在带有 COVID-19 的胸部 X 光图像上的性能我们的主要目标是通过不同技术发现最合适的 COVID-19
+    筛选模型。
+
+
+    ### A. 数据描述：
+
+
+    由于 COVID-19 数据集稀缺，我们试图结合三个开源胸部 X 光数据集和一组阿尔及利亚病毒性 COVID-19 胸部 X 光数据集的数据。第一个数据集来自
+    GitHub 仓库的 COVID Chest X-Ray Dataset [7]，包含了感染 COVID-19 和其他类型肺炎患者的 X 光和 CT 病例。我们仅考虑了
+    X 光
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    # 2020 2nd International Workshop on Human-Centric Environments for Health and
+    Well-being (IHSH)
+
+
+    # TABLE I
+
+    EXPERIMENTAL DATASETS
+
+
+    ![](img/5f15cd42eb8e067054e93b4cf3a9ca3c_2_0.png)
+
+
+    | Classes | COVID-19 | Normal | Viral Pneumonia |
+
+    | --- | --- | --- | --- |
+
+    | [6] | 219 | 1341 | |
+
+    | [7] | 261 | 1583 | 1495 |
+
+    | [8] | 518 | 2924 | 2838 |
+
+
+    Fig. 2. Example of viral pneumonia X-ray image
+
+
+    > *https://www.kaggle.com/datasets/afrahman/covid19-registry-database
+
+    *https://github.com/lee8023/chest-xray-data
+
+    *https://www.kaggle.com/paulimithmooney/chest-xray-pneumonia
+
+
+    # Training Loss and Accuracy on COVID-19 Dataset
+
+
+    ![](img/5f15cd42eb8e067054e93b4cf3a9ca3c_2_1.png)
+
+
+    ![](img/5f15cd42eb8e067054e93b4cf3a9ca3c_2_2.png)
+
+
+    Fig. 3. Example of normal chest X-ray image
+
+
+    Fig. 4. VGG9 training and validation performance over COVID-19 dataset
+
+
+    images, that contain a total of 261 COVID-19 samples. The second COVID-19 Radiology
+    Database [6], contains 219 COVID-19 positive images, 1341 normal and 1345 viral
+    pneumonia images. The third dataset was Mendeley X-Ray ImageDataset [8], which
+    contains X-ray images divided into two categories : Pneumonia (not COVID-19) and
+    Normal. The latter has an important role in increasing the quality of classification
+    collected with respect to the selectivity between COVID-19 and normal pneumonia.
+    The last one, which our study collected, contains only chest X-ray images. The
+    details of the datasets are given in Table 1.
+
+
+    amounting to 70% of the total number of considered images. the remaining data
+    was divided into 10% for validation, amounting to 51 images, 204, for the test.
+    It is worth mentioning that all the training, validation, and test data were selected
+    randomly.
+
+
+    # B. Architecture:
+
+
+    In order to properly achieve our study, we selected the best performing deep learning
+    models in the image recognition domain. We evaluated the performance of the networks
+    that have been trained on the ImageNet [5], VGG16 (1), VGG19 (2), Inception v3
+    (3), NasNet (4), ResNet50 (5), Xception (6), MobileNet (7) and VGG9 (8). Each
+    deep neural network is used to analyze the X-ray image in order to classify the
+    sample as Normal, COVID-19, or Viral Pneumonia. All images are resized to 400-400
+    pixels. We applied different data augmentation techniques to the training data
+    models, such as rotation, flipping, shearing transformations and zooming. As preprocessing,
+    we used contrast adaptive histogram equalization technique to improve contrast
+    in chest X-ray images. According to the Pareto principle, 80% of the data were
+    used for training and validation of the eight models. We trained each model for
+    100 epochs. Fig. 4 illustrates an example of the training performances of VGG19.
+
+
+    Models trained on imbalance dataset will show bias in minority class, and may
+    ignore the majority class altogether, in extreme case [14]. In our study, we considered
+    only balanced data, containing the same number of samples. We will consider the
+    three classes of chest X-ray images: Normal healthy cases without any pulmonary
+    traces, COVID-19 corresponding to patients detected by COVID and Viral Pneumonia
+    for patients suffering from non-COVID-19 pneumonia. Since the COVID-19 our class
+    of interest, contains the minimum number of samples, we apply under-sampling (RUS)
+    to discard samples from native classes to balance the sample number among categories;
+    resulting in 518 samples for each class. 363 images were randomly selected from
+    the 518 for training.'
+  - '[PAGE 3]
+
+
+    # 2020 Second International Workshop on Human-Centric Smart Environments for Health
+    and Well-being (IHSH)
+
+
+    We tested the trained on 20% of data, which should each sample into one of the
+    three classes. Then, we compute the evaluation metrics to assess their respective
+    performances on the data.
+
+
+    # V. RESULTS AND DISCUSSION
+
+
+    We used four performance metrics derived from the confusion matrix to evaluate
+    the models : Accuracy; the rate of correct predictions to the total number of
+    predictions,
+
+
+    ```
+
+    Acc = \frac{TP + TN}{TP + TN + FN}
+
+    ```
+
+
+    Precision or positive predictive value is the ratio of good positives to the total
+    detected:
+
+
+    ```
+
+    Pr = \frac{TP}{TP + FP}
+
+    ```
+
+
+    Recall or sensitivity corresponds to the probability of correctly classifying
+    a sample in the case,
+
+
+    ```
+
+    R = \frac{TP}{TP + FN}
+
+    ```
+
+
+    F-score is a measure that combines both precision and recall as determined in
+    the:
+
+
+    ```
+
+    F_{score} = \frac{2 \times Pr \times R}{Pr + R}
+
+    ```
+
+
+    Table II shows the accuracy results for each experiment conducted through different
+    models and on the test set. We used the models'' classification performance on
+    a balanced dataset, we used a test of 518 for each class among the models. VGG16,
+    Inception and MobileNet gave with a accuracy of 0.99, then the Inception model
+    with an accuracy of 0.93, VGG19 with, the Inception v2 and Nasnet layers, reached
+    the value of 0.91, the least accurate model was ResNet50 with 0.85 accuracy.
+
+
+    The precision analysis for each deep learning classifier is illustrated in Table
+    III. For our class of interest (COVID-19), the most precise networks are Inception
+    v2, Xception and MobileNet. The Resnet50 model got the worst value of 0.83 for
+    Normal class, and Nasnet-layer network with 0.79. Regarding Viral Pneumonia class,
+
+
+    Table IV shows the accuracy of the recall achieved by the different models across
+    the four classes. It can be seen that the Xception model gave the best result
+    for COVID, while VGG19 with 0.93. Nasnet layer gave the best value for the Normal
+    case, as opposed to Resnet with only 0.82. For the Viral Pneumonia, the models
+    had relatively inferior recall results which were below 0.95, reached by Inception
+    Reset v2, and greater than 0.74 recorded by Nasnet layer.
+
+
+    # TABLE II
+
+    ACC OF DIFFERENT TESTED MODELS
+
+
+    | | Inception v2 | Inception v3 | Nasnet layer |
+
+    |---|---|---|--|
+
+    | VGG16 | 0.94 | 0.91 | 0.91 |
+
+    | ResNet50 | 0.85 | - | - |
+
+    | Xception | - | 0.94 | 0.94 |
+
+    | VGG19 | - | - | 0.92 |
+
+
+    # TABLE III
+
+    PRECISION FOR EACH TYPE OVER THE DIFFERENT MODELS.
+
+
+    | | COVID-19 | Normal | Viral Pneumonia |
+
+    |---|---|---|--|
+
+    | VGG16 | 0.99 | 0.89 | 0.92 |
+
+    | Inception v2 | 1.00 | 0.84 | 0.96 |
+
+    | Inception v3 | 0.99 | 0.79 | 0.91 |
+
+    | RESNET50 | 0.88 | 0.83 | 0.85 |
+
+    | MobileNet | 1.00 | 0.86 | 0.97 |
+
+    | VGG19 | 0.95 | 0.89 | 0.91 |
+
+
+    The last metric considered is the F-score,. Var summarizes the results of the
+    different models. The Xception model achieved the best results for COVID-19, with
+    VGG19 being the least efficient in F-score with 0.94 for Normal. The two other
+    for Viral Pneumonia with 0.93 and 0.92 respectively, 0.81 F-score results of ResNet50
+    for Normal and Viral Pneumonia, as the results in the test cases:
+
+
+    The models that achieved the best results of accuracy are those capable of correctly
+    classifying images, such as VGG16, Xception and MobileNet. The highest precision
+    is with correct identification of the positive cases, for each class of interest
+    COVID-19, all the samples in the test set were classified as positive cases by
+    Xception were originally. The recall expresses the performance of detecting all
+    positive cases correctly or other terms the COVID-19 cases were all identified
+    by Xception model and this is the most important because of the high contamination
+    speed of this virus.
+
+
+    # VI. CONCLUSION
+
+
+    In this study, we trained several deep convolutional networks for classifying
+    X-ray images in three classes: Normal, Viral Pneumonia, and COVID-19, on four
+    datasets. The multitude of data sources contributes to better generalize the trained
+    networks. Unfortunately, the data of COVID-19 is still uncertain in terms of quality,
+    which presents a huge challenge for the development of the automatic classification
+    systems. Our data contain more than 500 X-ray images to identify COVID-positive
+    cases, which presents a significant number compared with previous work in this
+    field. This research mainly involves comparing the performance of several networks
+    on COVID-19 classification task. The presence of the viral pneumonia class plays
+    an
+
+
+    240'
+  - '[PAGE 4]
+
+
+    # 2020 International Workshop on Human-Centric Services for Health and Well-being
+    (HIW)
+
+
+    TABLE IV
+
+    RECALL FOR EACH INFECTION TYPE BY THE DIFFERENT MODELS.
+
+
+    | Classes | COVID-19 | Normal | Viral Pneumonia |
+
+    |---|---|---||
+
+    | VGG16 | 0.98 | 0.96 | 0.88 |
+
+    | Inception resnet v2 | 0.95 | 0.94 | 0.88 |
+
+    | Inception v3 | 0.99 | 1.00 | 0.74 |
+
+    | NasNet Large | 0.99 | 0.99 | 0.75 |
+
+    | ResNet150 | 0.97 | 0.94 | 0.71 |
+
+    | Xception | 0.98 | 0.97 | 0.78 |
+
+
+    TABLE V
+
+    F-SCORE FOR EACH INFECTION TYPE BY THE DIFFERENT MODELS.
+
+
+    | Classes | COVID-19 | Normal | Viral Pneumonia |
+
+    |---|---|---||
+
+    | VGG16 | 0.95 | 0.93 | 0.82 |
+
+    | Inception resnet v2 | 0.98 | 0.89 | 0.88 |
+
+    | Inception v3 | 0.99 | 0.90 | 0.89 |
+
+    | NasNet Large | 0.99 | 0.89 | 0.85 |
+
+    | ResNet150 | 0.97 | 0.91 | 0.81 |
+
+    | Xception | 0.98 | 0.95 | 0.82 |
+
+    | VGG19 | 0.94 | 0.92 | 0.82 |
+
+
+    important in recognizing the significance of the model. Among all the models tested,
+    we can see that Xception achieved the best results according to the overall metric.
+    Our work contributes to the new line of research aimed at the early detection
+    of COVID-19 cases helping doctors in the diagnosis of this disease. As perspective,
+    we will carry on with the detection of pulmonary areas affected by the virus in
+    order to drive the role of the radiologists in the region of interest, with labeled
+    tagging identifying abnormalities in the chest x-ray. Also, we will consider cross-validation
+    methods when we are dealing with medical images.
+
+
+    # REFERENCES
+
+
+    +   [1] M. Rahinezhad and A. Akbar, Modified deep convolutional neural network
+    for detecting covid-19 from chest x-rays based on concatenation and resnet50.
+    In Medicine and Informatics, vol. 19, p. 103560, 2020. [Online]: https://doi.org/10.1016/j.mediaIn.2020.103560
+
+
+    +   [2] R. Kumar, Awas, V. Bansal, V. J. Sahayhera, H. Bhardwaj, J. Imran, N.
+    Nagarajan, G. N. Predadi, and R. Raman, Accurate deep learning using chest x-ray
+    images through deep feature learning, 2020. [Online]: https://www.medrx.org/content/entry/2020/04/17/2020-04.2003641
+
+
+    +   [3] L. Sun and Wong, “Covid-Net: A labeled deep convolutional neural network
+    design for detection of covid-19 cases from chest x-rays,” 2020.
+
+
+    +   [4] E. E. Hendman, M. A. Shouman, and M. E. Karar, “Covids-net: A framework
+    of deep learning classifiers to diagnose covid-19 in x-ray images,” 2020.
+
+
+    +   [5] S. Siddiqui, J. Siegelman, P. O. Alexander, L. S. Folio, L. R. Folio,
+    and S. K. Antani, Iterated deep learning ensembles for covid-19 detection in chest
+    x-rays. IEEE Access, vol. 8, pp. 115041–115050, 2020.'
+  md: '
+
+    # 2020 2nd International Workshop on Human-Centric Environments for Health and
+    Well-being (IHSH)
+
+
+    # TABLE I
+
+    EXPERIMENTAL DATASETS
+
+
+    ![](img/5f15cd42eb8e067054e93b4cf3a9ca3c_2_0.png)
+
+
+    | Classes | COVID-19 | Normal | Viral Pneumonia |
+
+    | --- | --- | --- | --- |
+
+    | [6] | 219 | 1341 | |
+
+    | [7] | 261 | 1583 | 1495 |
+
+    | [8] | 518 | 2924 | 2838 |
+
+
+    Fig. 2. Example of viral pneumonia X-ray image
+
+
+    > *https://www.kaggle.com/datasets/afrahman/covid19-registry-database*
+
+    * *https://github.com/lee8023/chest-xray-data
+
+    * *https://www.kaggle.com/paulimithmooney/chest-xray-pneumonia
+
+
+    # Training Loss and Accuracy on COVID-19 Dataset
+
+
+    ![](img/5f15cd42eb8e067054e93b4cf3a9ca3c_2_1.png)
+
+
+    ![](img/5f15cd42eb8e067054e93b4cf3a9ca3c_2_2.png)
+
+
+    Fig. 3. Example of normal chest X-ray image
+
+
+    Fig. 4. VGG9 training and validation performance over COVID-19 dataset
+
+
+    images, that contain a total of 261 COVID-19 samples. The second COVID-19 Radiology
+    Database [6], contains 219 COVID-19 positive images, 1341 normal and 1345 viral
+    pneumonia images. The third dataset was Mendeley X-Ray ImageDataset [8], which
+    contains X-ray images divided into two categories: Pneumonia (not COVID-19) and
+    Normal. The latter has an important role in increasing the quality of classification
+    collected with respect to the selectivity between COVID-19 and normal pneumonia.
+    The last one, which our study collected, contains only chest X-ray images. The
+    details of the datasets are given in Table 1.
+
+
+    amounting to 70% of the total number of considered images. the remaining data
+    was divided into 10% for validation, amounting to 51 images, 204, for the test.
+    It is worth mentioning that all the training, validation, and test data were selected
+    randomly.
+
+
+    # B. Architecture:
+
+
+    In order to properly achieve our study, we selected the best performing deep learning
+    models in the image recognition domain. We evaluated the performance of the networks
+    that have been trained on the ImageNet [5], VGG16 (1), VGG19 (2), Inception v3
+    (3), NasNet (4), ResNet50 (5), Xception (6), MobileNet (7) and VGG9 (8). Each
+    deep neural network is used to analyze the X-ray image in order to classify the
+    sample as Normal, COVID-19, or Viral Pneumonia. All images are resized to 400-400
+    pixels. We applied different data augmentation techniques to the training data
+    models, such as rotation, flipping, shearing transformations and zooming. As preprocessing,
+    we used contrast adaptive histogram equalization technique to improve contrast
+    in chest X-ray images. According to the Pareto principle, 80% of the data were
+    used for training and validation of the eight models. We trained each model for
+    100 epochs. Fig. 4 illustrates an example of the training performances of VGG19.
+
+
+    Models trained on imbalance dataset will show bias in minority class, and may
+    ignore the majority class altogether, in extreme case [14]. In our study, we considered
+    only balanced data, containing the same number of samples. We will consider the
+    three classes of chest X-ray images: Normal healthy cases without any pulmonary
+    traces, COVID-19 corresponding to patients detected by COVID and Viral Pneumonia
+    for patients suffering from non-COVID-19 pneumonia. Since the COVID-19 our class
+    of interest, contains the minimum number of samples, we apply under-sampling (RUS)
+    to discard samples from native classes to balance the sample number among categories;
+    resulting in 518 samples for each class. 363 images were randomly selected from
+    the 518 for training.
+
+
+    We tested the trained on 20% of data, which should each sample into one of the
+    three classes. Then, we compute the evaluation metrics to assess their respective
+    performances on the data.
+
+
+    # V. RESULTS AND DISCUSSION
+
+
+    We used four performance metrics derived from the confusion matrix to evaluate
+    the models: Accuracy; the rate of correct predictions to the total number of predictions,
+
+
+    ```
+
+    Acc = \frac{TP + TN}{TP + TN + FN}
+
+    ```
+
+
+    Precision or positive predictive value is the ratio of good positives to the total
+    detected:
+
+
+    ```
+
+    Pr = \frac{TP}{TP + FP}
+
+    ```
+
+
+    Recall or sensitivity corresponds to the probability of correctly classifying
+    a sample in the case,
+
+
+    ```
+
+    R = \frac{TP}{TP + FN}
+
+    ```
+
+
+    F-score is a measure that combines both precision and recall as determined in
+    the:
+
+
+    ```
+
+    F_{score} = \frac{2 \times Pr \times R}{Pr + R}
+
+    ```
+
+
+    Table II shows the accuracy results for each experiment conducted through different
+    models and on the test set. We used the models'' classification performance on
+    a balanced dataset, we used a test of 518 for each class among the models. VGG16,
+    Inception and MobileNet gave with accuracy of 0.99, then the Inception model with
+    an accuracy of 0.93, VGG19 with, the Inception v2 and Nasnet layers, reached the
+    value of 0.91, the least accurate model was ResNet50 with 0.85. The precision
+    analysis for each deep learning classifier is illustrated in Table III. For our
+    class of interest (COVID-19), the most precise networks are Inception v2, Xception
+    and MobileNet. The Resnet50 model got worst value of 0.83 for Normal class, and
+    nasnet-layer with 0.79. Regarding Viral Pneumonia class, Table IV shows the accuracy
+    of the recall achieved by the different models across the four classes. can be
+    seen that the Xception model gave the best result for COVID, while VGG19 with
+    0.93. Nasnet layer gave the best value for the Normal, as opposed to resnet with
+    only 0.82. For the Viral Pneumonia, the models had relatively inferior results
+    which were below 0.95, reached by Inception v2, and greater than 0.74 by nasnet
+    layer.
+
+
+    # TABLE II
+
+    ACC OF TESTED MODELS
+
+
+    | | Inception v2 | Inception v3 | Nasnet layer |
+
+    | --- | --- | --- | --- |
+
+    | VGG16 | 0.94 | 0.91 | 0.91 |
+
+    | ResNet50 | 0.85 | - | - |
+
+    | Xception | - | 0.94 | 0.94 |
+
+    | VGG19 | - | - | 0.92 |
+
+
+    # TABLE III
+
+    PRECISION FOR EACH TYPE OVER THE MODELS.
+
+
+    | | COVID-19 | Normal | Viral Pneumonia |
+
+    | --- | --- | --- | --- |
+
+    | VGG16 | 0.99 | 0.89 | 0.92 |
+
+    | Inception v2 | 1.00 | 0.84 | 0.96 |
+
+    | Inception v3 | 0.99 | 0.79 | 0.91 |
+
+    | RESNET50 | 0.88 | 0.83 | 0.85 |
+
+    | MobileNet | 1.00 | 0.86 | 0.97 |
+
+    | VGG19 | 0.95 | 0.89 | 0.91 |
+
+
+    # TABLE IV
+
+    RECALL FOR EACH INFECTION TYPE BY THE DIFFERENT MODELS.
+
+
+    | Classes | COVID-19 | Normal | Viral Pneumonia |
+
+    | --- | --- | --- | --- |
+
+    | VGG16 | 0.98 | 0.96 | 0.88 |
+
+    | Inception resnet v2 | 0.95 | 0.94 | 0.88 |
+
+    | Inception v3 | 0.99 | 1.00 | 0.74 |
+
+    | NasNet Large | 0.99 | 0.99 | 0.75 |
+
+    | ResNet150 | 0.97 | 0.94 | 0.71 |
+
+    | Xception | 0.98 | 0.97 | 0.78 |
+
+
+    # TABLE V
+
+    F-SCORE FOR EACH INFECTION TYPE BY THE DIFFERENT MODELS.
+
+
+    | Classes | COVID-19 | Normal | Viral Pneumonia |
+
+    | --- | --- | --- | --- |
+
+    | VGG16 | 0.95 | 0.93 | 0.82 |
+
+    | Inception resnet v2 | 0.98 | 0.89 | 0.88 |
+
+    | Inception v3 | 0.99 | 0.90 | 0.89 |
+
+    | NasNet Large | 0.99 | 0.89 | 0.85 |
+
+    | ResNet150 | 0.97 | 0.91 | 0.81 |
+
+    | Xception | 0.98 | 0.95 | 0.82 |
+
+    | VGG19 | 0.94 | 0.92 | 0.82 |
+
+
+    The last metric considered is the F-score, summarizes the results of the different
+    models. The Xception model achieved the best results for COVID-19, with VGG19
+    being the least efficient in F-score with 0.94 for Normal and 0.93 for Viral Pneumonia
+    respectively, 0.81 F-score results of ResNet50 for Normal and Viral Pneumonia,
+    as the results in the test cases: The models that achieved the best results of
+    accuracy are those capable of correctly classifying images, such as VGG16, Xception
+    and MobileNet. The highest precision is with correct identification of the positive
+    cases for each class of interest COVID-19, all the samples in the test set were
+    classified as positive cases by Xception originally and this is the most important
+    because of high contamination of this virus.
+
+
+    # VI. CONCLUSION
+
+
+    In this study, we trained several deep convolutional networks for classifying
+    X-ray images in three classes: Normal, Viral Pneumonia, and COVID-19, on four
+    datasets. The multitude of data contributes to better generalize the trained networks.
+    Unfortunately, the data of COVID-19 is still uncertain in terms of quality, which
+    presents a huge challenge for the development of the automatic systems. Our data
+    contain more than 500 X-ray images to identify COVID-positive cases, which presents
+    a significant number compared with previous work in this field. This research
+    mainly involves comparing the performance of several networks on COVID-19 classification
+    task. The presence of the viral pneumonia class plays an important in recognizing
+    the significance of the model. Among all the models tested, we can see that Xception
+    achieved the best results according to the overall metric. Our work contributes
+    to the new line of research aimed at the early detection of COVID-19 cases helping
+    doctors in the diagnosis of this disease. As perspective, we will carry on with
+    the detection of pulmonary areas affected by the virus in order to drive the role
+    of the radiologists in the region of interest, with labeled tagging identifying
+    abnormalities in the chest x-ray. Also, we will consider cross-validation methods
+    when we are dealing with medical images.
+
+    '
+  mdcn: '
+
+
+    # 2020年第二届以健康与福祉为中心的环境国际研讨会 (IHSH)
+
+
+    # 表 I
+
+    实验数据集
+
+
+    ![](img/5f15cd42eb8e067054e93b4cf3a9ca3c_2_0.png)
+
+
+    | 类别 | COVID-19 | 正常 | 病毒性肺炎 |
+
+    | --- | --- | --- | --- |
+
+    | [6] | 219 | 1341 | |
+
+    | [7] | 261 | 1583 | 1495 |
+
+    | [8] | 518 | 2924 | 2838 |
+
+
+    图 2. 病毒性肺炎X光图像示例
+
+
+    > *https://www.kaggle.com/datasets/afrahman/covid19-registry-database*
+
+    * *https://github.com/lee8023/chest-xray-data
+
+    * *https://www.kaggle.com/paulimithmooney/chest-xray-pneumonia
+
+
+    # COVID-19数据集上的训练损失与准确率
+
+
+    ![](img/5f15cd42eb8e067054e93b4cf3a9ca3c_2_1.png)
+
+
+    ![](img/5f15cd42eb8e067054e93b4cf3a9ca3c_2_2.png)
+
+
+    图 3. 正常胸部X光图像示例
+
+
+    图 4. VGG9在COVID-19数据集上的训练与验证性能
+
+
+    包含总计261个COVID-19样本的图像。第二个COVID-19放射学数据库[6]包含219张COVID-19阳性图像、1341张正常图像和1345张病毒性肺炎图像。第三个数据集是Mendeley
+    X-Ray ImageDataset[8]，它将X光图像分为两类：肺炎（非COVID-19）和正常。后者在提高相对于COVID-19和普通肺炎之间选择性所收集的分类质量方面具有重要作用。最后一个是由我们研究收集的，仅包含胸部X光图像。数据集的详情如表1所示。
+
+
+    占所考虑图像总数的70%。剩余数据被分为10%用于验证（共51张图像），以及204张用于测试。值得注意的是，所有的训练、验证和测试数据都是随机选择的。
+
+
+    # B. 架构：
+
+
+    为了充分实现我们的研究，我们选择了图像识别领域中性能最好的深度学习模型。我们评估了在ImageNet [5]、VGG16 (1)、VGG19 (2)、Inception
+    v3 (3)、NasNet (4)、ResNet50 (5)、Xception (6)、MobileNet (7) 和VGG9 (8)上训练的网络的性能。每个深度神经网络都被用于分析X光图像，以将样本分类为正常、COVID-19或病毒性肺炎。所有图像均被缩放为`400-400`像素。我们在训练数据模型上应用了不同的数据增强技术，如旋转、翻转、剪切变换和缩放。作为预处理，我们使用了对比度自适应直方图均衡化技术来提高胸部X光图像的对比度。根据帕累托法则，80%的数据用于这八个模型的训练和验证。我们将每个模型训练了100个epoch。图4展示了VGG19训练性能的一个示例。
+
+
+    在不平衡数据集上训练的模型将在少数类上表现出偏差，在极端情况下，可能会完全忽略多数类[14]。在我们的研究中，我们只考虑了包含相同样本数量的平衡数据。我们考虑了三类胸部X光图像：无肺部迹象的正常病例、患有COVID-19的患者和肺炎。由于我们感兴趣的COVID-19类样本数量最少，我们采用欠采样（RUS）丢弃原始类别中的样本以平衡样本数量；每类保留518个样本。我们随机选择了363张图像在20%的数据上进行测试，这应该是三个类别中的每一个样本。然后，我们计算评估指标以衡量各自的性能。
+
+
+    # V. 结果与讨论
+
+
+    我们使用了从混淆矩阵得到的四种性能指标来评估模型：准确率（Accuracy）；正确预测数占总预测数的比例，
+
+    ```
+
+    Acc = \frac{TP + TN}{TP + TN + FP + FN}
+
+    ```
+
+    精确率（Precision）；检测到的良好阳性占总阳性的比例：
+
+    ```
+
+    Pr = \frac{TP}{TP + FP}
+
+    ```
+
+    召回率（Recall）；正确分类样本的概率：
+
+    ```
+
+    R = \frac{TP}{TP + FN}
+
+    ```
+
+    F-score是一个结合了精确率和召回率的指标：
+
+    ```
+
+    F_{score} = \frac{2 \times Pr \times R}{Pr + R}
+
+    ```
+
+    表二显示了不同模型在平衡数据集上实验的准确率结果。我们使用了518个样本进行测试，VGG16、Inception和MobileNet的准确率为0.99，VGG9达到0.91，准确率最低的模型是ResNet50，为0.85。表III说明了每个深度学习分类器在感兴趣的类别（COVID-19）上的精确率。最精确的网络是Inception、Xception和MobileNet，ResNet50在正常类上获得0.83，nasnet层为0.79。对于病毒性肺炎类，表四显示了不同模型跨四个类别的准确率，可以看到Xception在COVID-19上取得了最佳结果，为0.93，而ResNet50为0.82，nasnet层为0.74。
+
+
+    # 表 II
+
+    测试模型的准确率 (ACC)
+
+
+    | | Inception v2 | Inception v3 | Nasnet layer |
+
+    | --- | --- | --- | --- |
+
+    | VGG16 | 0.94 | 0.91 | 0.91 |
+
+    | ResNet50 | 0.85 | - | - |
+
+    | Xception | - | 0.94 | 0.94 |
+
+    | VGG19 | - | - | 0.92 |
+
+
+    # 表 III
+
+    各模型的精确率 (PRECISION)
+
+
+    | | COVID-19 | 正常 | 病毒性肺炎 |
+
+    | --- | --- | --- | --- |
+
+    | VGG16 | 0.99 | 0.89 | 0.92 |
+
+    | Inception v2 | 1.00 | 0.84 | 0.96 |
+
+    | Inception v3 | 0.99 | 0.79 | 0.91 |
+
+    | RESNET50 | 0.88 | 0.83 | 0.85 |
+
+    | MobileNet | 1.00 | 0.86 | 0.97 |
+
+    | VGG19 | 0.95 | 0.89 | 0.91 |
+
+
+    # 表 IV
+
+    不同模型的召回率 (RECALL)
+
+
+    | 类别 | COVID-19 | 正常 | 病毒性肺炎 |
+
+    | --- | --- | --- | --- |
+
+    | VGG16 | 0.98 | 0.96 | 0.88 |
+
+    | Inception resnet v2 | 0.95 | 0.94 | 0.88 |
+
+    | Inception v3 | 0.99 | 1.00 | 0.74 |
+
+    | NasNet Large | 0.99 | 0.99 | 0.75 |
+
+    | ResNet150 | 0.97 | 0.94 | 0.71 |
+
+    | Xception | 0.98 | 0.97 | 0.78 |
+
+
+    # 表 V
+
+    不同模型各感染类型的F分数 (F-SCORE)
+
+
+    | 类别 | COVID-19 | 正常 | 病毒性肺炎 |
+
+    | --- | --- | --- | --- |
+
+    | VGG16 | 0.95 | 0.93 | 0.82 |
+
+    | Inception resnet v2 | 0.98 | 0.89 | 0.88 |
+
+    | Inception v3 | 0.99 | 0.90 | 0.89 |
+
+    | NasNet Large | 0.99 | 0.89 | 0.85 |
+
+    | ResNet150 | 0.97 | 0.91 | 0.71 |
+
+    | Xception | 0.98 | 0.95 | 0.82 |
+
+    | VGG19 | 0.94 | 0.92 | 0.82 |
+
+
+    最后考虑的指标是F分数，它总结了不同模型的结果。Xception模型在COVID-19上取得了最佳结果，VGG19在正常类上为0.94，在病毒性肺炎上为0.92；ResNet50在正常类上为0.93，在病毒性肺炎上为0.81，这些是它们测试集上得的F分数。
+
+
+    # VI. 结论
+
+
+    在这项研究中，我们在四个数据集上训练了多种深度卷积网络，对X光图像进行三类分类：正常、病毒性肺炎和COVID-19。数据的多样性有助于提高训练网络的泛化能力。遗憾的是，COVID-19的数据在质量上仍不确定，这为自动系统的开发带来了巨大挑战。我们的数据包含500多张X光图像用于识别COVID阳性病例，与该领域以前的工作相比具有显著数量。本研究主要涉及比较多个网络在COVID-19分类任务上的性能。病毒性肺炎类的存在对于识别模型的重要性具有重要意义。作为展望，我们将继续检测受病毒影响的肺部区域，以推动放射科医生在感兴趣区域的作用，通过标签标记识别胸部X光中的异常。此外，在处理医学图像时，我们将考虑交叉验证方法。
+
+
+    '
+  merge: 0
