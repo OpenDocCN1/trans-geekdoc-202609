@@ -1,0 +1,828 @@
+- pgno: 0
+  md: '# Deep Reinforcement Learning for Computation
+
+    Offloading and Caching in Fog-Based Vehicular
+
+    Networks
+
+
+    Dapen Lam, Amin Taherkordi, and Frank Eliassen
+
+    Department of Informatics
+
+    University of Oslo
+
+    Oslo, Norway
+
+    (dapen.lamrost;frank@ifi.uio.no)
+
+
+    Lei Liu
+
+    State Key Library of Integrated Services
+
+    Xidian University
+
+    Xidian, China
+
+    tntianjialulei@163.com
+
+
+    **Abstract—**The fog of computing in vehicular networks is becoming significant,
+    a variety of applications that demand high computing resources and low latency,
+    such as connected and autonomous driving rely on computation offloading and service
+    caching resource-intensive services in vehicular networks. Fog computing has a
+    limited amount of computing resources. While computation offloading and caching
+    can maximize the system performance time, the heterogeneity, density, and stochastic
+    properties of vehicular networks pose challenges on resource allocation. In this
+    paper, we propose an intelligent offloading architecture with service caching,
+    considering both energy efficiency and the problem of computation offloading and
+    service caching. For energy efficiency, we propose an algorithm based on deep
+    reinforcement learning to solve this complex problem, ensuring feasibility of
+    our proposal. The results show that our proposed scheme exhibits an effective
+    performance improvement over others compared to the chosen baseline.
+
+
+    nodes in vehicular networks. [11], [5]–8]. Vehicular users can offload tasks to
+    the fog nodes with moderate computational resources to reduce latency. If the
+    processing demands exceed the fog platforms'' capacity, they will be offloaded
+    to the Cloud, which is relative to vertical offloading to other fog nodes, resulting
+    in a horizontal offloading method.
+
+
+    Moreover, offloaded tasks of vehicular users often depend on other services. For
+    example, to ensure more accurate detections in driving-autonomous systems, high-resolution
+    object detection is required. In detection, a fog node with sufficient computing
+    resources is needed to process the sensor data, e.g., from video sensors and radar
+    sensors. To make efficient, map services and related databases have to be cached
+    in the fog node itself. However, if the fog node has not cached the requested
+    services (i.e., map services) when offloaded (i.e., object detection), the tasks
+    can be further offloaded to other fog nodes, affecting the quality of service
+    delivery.
+
+
+    ***Index Terms—**Vehicular computing, computation offloading, service caching,
+    reinforcement learning.
+
+
+    # I. INTRODUCTION
+
+
+    With the emergence of advanced communication technologies, such as cloud computing
+    and cellular networks, vehicular networks and applications are becoming applicable.
+    The remarkable development of vehicular networks enables a large number of applications,
+    such as augmented reality (AR) and autonomous driving, all with complex processing
+    and high reliability requirements [1], [2]. However, offloading all tasks to the
+    Cloud results in a heavy backend load and unacceptable latency [3]. Vehicular
+    computing (VFC) (a.k.a. edge computing) has been proposed as a promising solution
+    to solve the issues caused by computation from the remote cloud to fog
+
+
+    Therefore, caching services is an important factor to achieve efficiency of tasks
+    offloaded to fog nodes. Caching appears in two different forms: content caching
+    and service caching. For example, content caching stores used-frequency media
+    data in a fog to be used by the user [11]. Service caching stores the metadata
+    of the program code and the related databases/files when performing computation
+    tasks [14]–16. In an example in the scenario, the maps needed for object detection
+    are cached in the fog node.
+
+
+    The design of optimal computation offloading and service caching faces many challenges.
+    The limited storage space makes it impractical for fog nodes to cache all the
+    application'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'services locally. How to cache the required services, i.e., which services
+    to cache, is of paramount importance, impacti- ng offloading on fog-based vehicular
+    systems. The computing resources on different fog nodes may be uneven distributed.
+    It is crucial to balance the computation load by realizing cooperation among different
+    fog nodes. The heterogeneous nature of vehicles raise the level of difficulty
+    in achieving an optimal computation offloading and service strategy.
+
+
+    # II. RELATED WORK
+
+
+    Task Offloading. Many efforts have been made to investi- gate offloading in mobile
+    cloud computing [27], [28], mobile edge computing (MEC) and where- computing are
+    mainly focused on how to offload tasks from end-to-end to the fog servers or to
+    the cloud. Recently, many have studied various factors for task offloading in
+    VFC. In the work [17], the authors proposed a method that can utilize VFC by partitioning
+    and moving nodes using the queuing theory, to minimize the response latency. In
+    the work [18], the authors designed a game-based algorithm to model task offloading
+    in vehicular networks to reduce price anarchy to the Nash equilibrium.
+
+
+    Some efforts have been made on computation offloading in fog computing [17–21],
+    but they do not consider the service caching issue. A few works [14–16] have addressed
+    the problem of computation offloading, including task optimization, local decision
+    design, and service caching. However, compared to what we propose a more comprehensive
+    system architecture that includes both fog-and-pool offloading, including task
+    optimization and service caching management.
+
+
+    Similarly, in the work [19] formulated task offloading in VFC considering the
+    mobility of the vehicles and the delay of the workload, and solve the reliability
+    reliability problem. In the work [25], the authors proposed a method for extra
+    reliability and low latency V2 infrastructures using a multi-server and transmission
+    latency in the network. The work [29] by considering the multi-edge server scenario.
+    In [31], the authors found that the vehicles in the network can learn the task
+    offloading policies from neighbors. This work further designs the offloading strategy
+    and solves the optimization problem of minimizing the average latency.
+
+
+    We design the deep policy gradient (DPG) [22] based on reinforcement learning
+    (DRL) to achieve our goal.
+
+
+    +   * We propose a fog-based vehicular architecture computation offloading with
+    service caching. This architecture adopts fog-and-pool computation management
+    to maximize system efficiency.
+
+    * We formalize the optimization problem of joint computation offloading and service
+    caching to reduce the task complexity.
+
+    * We design the offloading strategies based on a algorithm, DPG [22], to obtain
+    a solution to the formulated problem. The strategy allows efficient decision making
+    for computation offloading and service caching.
+
+
+    minimizing of the task performance and long-term energy consumption. This motivates
+    us to develop a novel architecture to optimize computation offloading and service
+    caching which is summarized as follows:
+
+
+    We conduct experimental and practical studies to evaluate the performance of the
+    proposed algorithm.
+
+
+    The rest of this paper is organized as follows: II discusses the related work
+    on task offloading, service caching and AI-based task offloading. We present an
+    architecture with service caching in Section III. In IV, we formulate the optimization
+    problem of joint computation offloading and service caching is formulated. In
+    V, the DRL algorithm leveraged to solve this problem is presented in Section V.
+    Finally, the performance of our proposed system is evaluated in Section VI. We
+    conclude the paper and future work in Section VII.
+
+
+    Service Caching. Service caching, and its databases/files, are pre-stored in fog
+    servers for faster access. This method reduces the latency and bandwidth consumption
+    on acquiring services when related tasks are offloaded to fog servers. For instance,
+    in the work [32], the authors use cache in the network to minimize the traffic
+    loads. In [33] proposed a framework for request routing in MEC. It further utilized
+    the edge cache to minimize the number of requests. More importantly, the work
+    [34] take into account communication, computation and formulated the problem as
+    a mixed-integer and nonconvex convex optimization.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "![](img/775161d23d6875d1f450fd1de859ce20_2_0.png)\n\nFigure 1: Overview of\
+    \ the architecture\n\nservice caching and task assignment to maintain the total\
+    \ offloading computation. In the work [16], the joint optimization of service\
+    \ caching and computation offloading methods studied for a used system and to\
+    \ reduce the total computation delay and energy costs of the works [14–16], [34]\
+    \ to be similar to us, we do not consider peer-fog and fog-pool cooperation among\
+    \ servers when executing offloading tasks, despite its limitations, to improve\
+    \ the system performance. We believe that the tasks can be considered in the peer\
+    \ pool and utilize some DRL algorithms.\n\nAnd AI Task Offloading, which is an\
+    \ emerging field, is increasingly applied to solve the optimization problem in\
+    \ VFC. The VFC in [23] uses the Double-Decoding Deep Q-Network to solve the optimization\
+    \ problem in a framework that can dynamically reconfigure, networking, and computing\
+    \ resources. The authors in [24] use DRL-based method offloading scheme for users\
+    \ and to solve the optimization problem considering the constraints of requests\
+    \ and communication channels. Moreover, we aim at computation offloading and service\
+    \ caching, for both peer-fog and fog-pool cooperation for servers, using a more\
+    \ appropriate and reliable algorithm based on DRL.\n\n# III. OVERVIEW OF ARCHITECTURE\n\
+    \nIn this section, we propose a high-level architecture which serves as a basis\
+    \ for the design of our computation offloading and service caching scheme in VFC.\n\
+    \n+   **Architectural Layers.** The proposed architecture is illustrated in Fig.\
+    \ 1, which contains three layers: The End Device (ED), the Fog-Network layer,\
+    \ and the Cloud layer.\n\n+   - **End Device:** In the VFC scenario, the end devices\
+    \ are mainly vehicles and automobiles. The devices usually have local computing\
+    \ and storage resources, which can hardly manage the demand of high computation\
+    \ tasks such as machine learning and video processing.\n\n+   - **Fog-network\
+    \ layer:** This layer consists of a set of fog servers, such as RSUs, which interconnect\
+    \ with\n\neach other. These fog servers offer moderate computing and caching capacities,\
+    \ not only processing their own tasks but also receiving offloaded tasks from\
+    \ end devices. They are densely distributed and seamlessly cover the entire area.\n\
+    \n+   - **Cloud.** The Cloud layer usually possesses abundant computing and storage\
+    \ resources, which can handle high computational tasks. In our system, the fog-pool\
+    \ network connects with computing resources and caching services in the fog servers.\
+    \ However, despite the communication delay between end devices and the Cloud,\
+    \ the Cloud layer processes real-time applications.\n\nOffloading Methods. In\
+    \ our architecture, we aim to utilize the computing and caching offloading by\
+    \ introducing two kinds of: peer-fog cooperation and fog-pool cooperation. The\
+    \ peer-fog cooperation can fully utilize the resources of three layers in the\
+    \ architecture while the fog-pool cooperation makes use of the fog pool.\n\nPeer-fog\
+    \ cooperation. In the peer-fog cooperation scenario, the end devices with limited\
+    \ computing resources can offload tasks to the fog servers in the fog-pool. However,\
+    \ it may introduce extra communication cost. That is because computing resources\
+    \ in the fog-pool are limited. In this case, tasks will be offloaded to the Cloud\
+    \ with rich computing resources, resulting in higher cost. In this way, there\
+    \ is a trade-off between computation offloading and communication costs. \n\n\
+    +   - **Fog-pool cooperation:** In the fog-pool cooperation scenario, the fog\
+    \ servers can communicate with each other and help each other, resulting in a\
+    \ fog-based resource pool. The resources of the fog network are unevenly distributed\
+    \ among the fog servers. This model of resource pool can handle the heterogeneous\
+    \ requests from end devices and balance resource\n\n**Service Caching.** Various\
+    \ applications may be implemented of AR-based driver assistance consisting of\
+    \ object recognition and 3D projection. In order to execute these tasks, service\
+    \ caching in the Fog-Network layer is necessary as mentioned above. In Fig. 1,\
+    \ the services need to be cached in the Fog-Network layer. Given the limited resources\
+    \ for caching on the fog nodes, it is impractical to cache and store databases/libraries\
+    \ for all nodes. Thus, one key issue is to determine which services should be\
+    \ cached. This will be addressed by our model in the next section."
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "# IV. SYSTEM MODEL\n\nIn this section, we first present the network model,\
+    \ communication model and computation model. Then, we formulate an optimization\
+    \ problem to minimize the total delay and energy cost for all the tasks.\n\nwhere\
+    \ $G_{ij}$ denotes the channel gain and $W_i$ means communication bandwidth between\
+    \ vehicle $i$ and its associated RSU. The symbol $\rho_i$ is the transmission\
+    \ power of vehicle $i$ and $\\sigma^2$ is the noise power.\n\nThen, the energy\
+    \ consumption when end task $i$ offloads to RSU $j$ can be presented as:\n\n```\n\
+    $e_{ij}^i = \\rho_i^* \\frac{d_i}{R_{ij}}$\n```\n\n# A. Network Model\n\nAs shown\
+    \ in Fig. 1, there are three main participants in our system: the Road Side Units\
+    \ (RSUs) and the vehicles. The vehicles communicate with each other via wireless\
+    \ connection, while RSUs have wire connection to the Cloud. There are $K$ vehicles\
+    \ and $N$ tasks, each represented by $(d_i, v_i)$, where $d_i$ denotes the input\
+    \ data and $v_i$ denotes the needed computation for processing task $i$. As for\
+    \ simplicity, we assume each vehicle $j \\in K$ can be represented as $\\{M_j,\
+    \ V_j\\}$, where $M_j$ denotes the computation capacity of the RSU and $V_j$ means\
+    \ its computation cost.\n\nWe define value sets $O = \\{o_i\\}$, $F = \\{f_i\\\
+    }$, and $C = \\{c_{ij}\\}$ in the process of computation service and offloading.\n\
+    \n+   - Peer-offloading: $O = \\{o_i\\}$, if $o_i = 1$, then the task is offloaded\
+    \ from the vehicles to RSUs while $o_i = 0$ means vehicle processes tasks locally.\n\
+    - Fog-offloading: $F = \\{f_i\\}$, the task can be offloaded only to the nearest\
+    \ fog server if $f_i=1$ denotes the nearest fog server and the computation task\
+    \ needs to be offloaded to other servers in the fog.\n- Cloud-offloading: $C =\
+    \ \\{c_{ij}\\}$, we C to be the set of computing services, $C = \\{0, 1, 2, ...\\\
+    }$. As RSU has limited storage space, RSU decides to cache tasks from service.\
+    \ If service caching $C = \\{c_{ij}\\}$, RSU $j$ is assigned the service assigned\
+    \ by the service if service caching decision $c_{ij} = 1$, it means to cache with\
+    \ the Cloud, which will cost later delay.\n\nIn our system, the optimal decision\
+    \ is made over time slot with frame times $T = \\{0, 1, ...\\}$, with the optimization\
+    \ module in the RSU sends back the optimization results. We assume all the decisions\
+    \ and actions can be made during each time slot, and environmental status remains\
+    \ stable in each time slot.\n\n# B. Communication Model\n\n+   - Vehicle to RSU\
+    \ (V2R): We assume the communication with RSUs using a one-hop ad-hoc network.\
+    \ The vehicle chooses the RSU with the strongest channel to communicate the communication\
+    \ pairs. Accordingly the communication rate between vehicle $i$ and RSU $j$ is\n\
+    \n```\n$R_{ij} = W_{ij} \\log_2(1 + \\frac{\rho_i G_{ij}}{\\sigma^2})$\n```\n\n\
+    where $G_{ij}$ denotes the channel gain and $W_i$ means communication bandwidth\
+    \ between vehicle $i$ and its associated RSU.\n\n```\n$e_{ij}^i = \\rho_i^* \\\
+    frac{d_i}{R_{ij}}$\n```\n\nwhere $\rho_i'$ denotes the transmission power of end\
+    \ task $i$; RSU to RSU (R2R) and RSU to Cloud (R2C): RJ and RC are communicating\
+    \ through, via fiber optic networks. $R_{ba}$ is the transmission rate among RSUs\
+    \ and the Cloud. We can calculate the energy consumption of the communication\
+    \ between RSU and RSU as:\n\n```\n$e_{ij}^i = \\rho_i^* \\frac{d_i}{R_{ij}}$\n\
+    ```\n\n# C. Computation Model\n\n+   - 1) Local: To simplify our analysis, we\
+    \ assume the local vehicle tasks at maximum CPU speed $m_i$, for end task $i$.\
+    \ Then, the needed to process task $i$ is expressed as:\n\n```\n$t_i^l = \\frac{q_i}{m_i}$\n\
+    ```\n\nFollowing, the energy consumption of local computation for task $i$ is\
+    \ expressed as:\n\n```\n$e_i^l = \\rho_i^* \\frac{q_i}{m_i}$\n```\n\nwhere $\r\
+    ho_i$ denotes the power when task $i$ is offloaded to server $j$,\n\n+   - 2)\
+    \ Fog: If the task is offloaded to server $j$, the time required for task $i$\
+    \ can be calculated based on the following cases\nFog-offloading: If server $j$\
+    \ is the associated end task $i$, the offloading is expressed as:\n\n```\n$t_{ij}^f\
+    \ = \\frac{d_i}{R_{ij}}$\n```\n\nand the execution time on time slot is:\n\n```\n\
+    $t_{ij}^i = \\rho_i^* (\\frac{q_i}{M_{ij}} + (1-c_{ij})t_{ij}^f)$\n```\n\nwhere\
+    \ $M_{ij}$ indicates the allocated computation capacity of fog $j$ for end task\
+    \ $i$, and $t_{ij}^f$ indicates the indicated\n\n625"
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'extra for the current server to upload this task to the Cloud and get the feedback
+    required when the server cache is not available. As the computing and storage
+    resources are in the Cloud, the weuing and queueing latency incurred by the Cloud.
+    Users need to consider the latency of offloading tasks to the Cloud. Therefore,
+    we have:
+
+
+    ```
+
+    $E_{ij}^* = p_{ij}^* \cdot c_{ij}^* \quad (11)$
+
+    ```
+
+
+    Based on (7) and (8), the time needed for processing task i is given by:
+
+
+    ```
+
+    $T_{ij}^* = t_{ij} + t_{ij}^* \quad (10)$
+
+    ```
+
+
+    The energy consumption for offloading task i consists of two parts: uploading
+    the task from the end to i RSU or j (as in (2)), and executing the task in RSU
+    or in the Cloud:
+
+
+    ```
+
+    $E_{ij}^* = p_{ij} \cdot c_{ij} + (1 - c_{ij})c_{jcs} \quad (12)$
+
+    ```
+
+
+    where $p_{ij}$ denotes the power consumption of computation in fog nodes. Therefore,
+    the cost for peer-peer offloading:
+
+
+    ```
+
+    $T_{ij}^* = t_{ij} + t_{ij}^* \quad (13)$
+
+    ```
+
+
+    Fog-fog offloading. If the associated server j is not the associated node of node
+    i, the time needed for processing is
+
+
+    ```
+
+    $t_{ij}^* = t_{im} + t_{mj}^* \quad (14)$
+
+    ```
+
+
+    where $t_{im}$ is the uploading time of task from node i to the associated server
+    m (as in (7)); $t_{mj}^*$ is the execution time of task on that server m (as in
+    (8)); $t_{mj}$ indicates the time of transfer between the associated server m,
+    and the current server j, by:
+
+
+    ```
+
+    $d_{mj} / R_{sw} \quad (15)$
+
+    ```
+
+
+    In this case, the energy consumption consists of three parts: energy consumption
+    for offloading the task from end to i RSU or j which can be expressed as the formula
+    (2); energy consumption for transfer from RSU to j which can be expressed as formula
+    (3); and therefore the energy consumption for executing the task in RSU or j is:
+
+
+    ```
+
+    $E_{ij}^* = e_{ij} \cdot c_{ij} + e_{jcs} \quad (16)$
+
+    ```
+
+
+    After finishing the process in the Cloud, the Cloud will send back the results
+    to end devices. Since the computing and storage resources are in the Cloud, we
+    can identify the latency and energy cost in this task [36].
+
+
+    By integrating Eq.(5)(6)(7)(8)(9)(10)(11)(13)(14), the total delay of processing
+    task i is expressed as local
+
+
+    or offloading delay which includes delay of offloading and uploading task i. Therefore,
+    we have:
+
+
+    ```
+
+    $T_{total} = (1 - \alpha_{ij}) \frac{d_{ij}}{C_{ij}} + \alpha_{ij}(\frac{d_{ij}}{C_{ij}}
+    + \frac{q_{ij}}{m_{ij}} + (1 - \alpha_{ij})\frac{c_{ij}}{R_{cloud}} + \frac{f_{ij}}{R_{sw}})
+    \quad (17)$
+
+    ```
+
+
+    According to (2)(3)(4)(6)(7)(12)(15), the total energy cost of processing task
+    i is expressed as the energy cost of offloading or the energy cost for offloading
+    cost which includes cost of uploading and executing task i. We have:
+
+
+    ```
+
+    $E_{total} = (1 - \alpha_{ij})\frac{d_{ij}}{C_{ij}} + \alpha_{ij}(\frac{d_{ij}}{C_{ij}}
+    + \frac{q_{ij}}{m_{ij}}) + (1 - \alpha_{ij})\frac{c_{ij}}{R_{cloud}} + \frac{f_{ij}}{R_{sw}})
+    \quad (18)$
+
+    ```
+
+
+    # D. Problem Formulation
+
+
+    The main goal of our work is to design an offloading scheduling scheme for the
+    fog environment to minimize processing time and long-term energy usage. The designed
+    scheme optimizes offloading decisions O, service caching C, computational resource
+    allocation M and the Fog-offloading capacity to minimize total cost and maximum
+    of the system, we design to reduce the weighted-sum of end tasks offloading cost
+    with weighted latency and energy costs:
+
+
+    ```
+
+    $\sum_{i \in T} \sum_{j \in J} (\lambda_{ij} T_{ij} + \lambda_{ij} E_{ij})$
+
+    ```
+
+
+    s.t.
+
+
+    +   C1: $\alpha_{ij} \in \{0, 1\}, i \in T, j \in J$
+
+    C2: $C_j \leq 1, i \in T$
+
+    C3: $c_{ij} \leq m_j, i \in T, j \in J$
+
+    C4: $\alpha_{ij} f_j \leq F_j, i \in T, j \in J$
+
+
+    $O = \{\alpha_{ij}\}, C = \{C_j\}, M = \{m_j\}, F = \{F_j\}$. Let $\lambda_{ij}$
+    represent the weight of the energy cost, and $\mu_{ij}$ the weight of the latency.
+    To simplify the model of the problem, we set $\lambda_{ij} = \mu_{ij} = 1$, and
+    that we can reduce the tasks according to different systems. We can apply multiple
+    criteria decision making and multi-attribute criteria. Constraint 1 indicates
+    that each task can be offloaded or by a fog node. Constraint 2 indicates that
+    each task can be executed at at most one server. Constraint 3 defines the capacity
+    limit of each fog server. Constraint 4 $\pi$ represents the size of the service
+    needed to execute task i. In order to solve this optimization problem, the key
+    is to find the suitable values O, C, M and F. The challenge (for solving the problem
+    is complex and large the number of states is with the increasing of the end'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: "devices, the mathematical problem increases as well. Moreover, this mathematical\
+    \ problem is non-convex and $NP$ hard. Therefore, we utilize a DRL-based algorithm,\
+    \ DDPG, to simplify the challenge and find the optimal solution.\n\n# V. REINFORCEMENT\
+    \ LEARNING APPROACH\n\nThe diverse user demands on constrained resources in terms\
+    \ of computation making it difficult to minimize the system cost in (18). DRL\
+    \ is viewed as an effective way to solve the complex problem. In DRL, an agent\
+    \ needs needed information about resources in the network and the diverse demands\
+    \ of users. Then, the agent acts to manage overall caching decisions and optimize\
+    \ resource allocation. In this paper, we use reinforcement learning algorithm\
+    \ called deterministic policy gradient (DDPG) (22) to solve the optimization of\
+    \ the problem in (18).\n\n# A. Problem formulation based on DRL\n\nThe motivation\
+    \ of using DRL is to improve flexibility of our system in a dynamic environment.\
+    \ Tasks emerge and are offloaded to the fog servers. Servers process these tasks\
+    \ and forward them to the cloud, and send results back to the users. These processes\
+    \ can be regarded as Markov Decision Process (MDP) where the state of the system\
+    \ depends only on the last state. Let $S = \\{s_1, s_2, ..., s_n\\}$, action space\
+    \ $A = \\{a_1, a_2, ..., a_m\\}$, transition probability $P = \\{p(s_j|s_i, a_k)\\\
+    }$, and reward function $R = \\{r(s_i, a_k)\\}$ is the system function that can\
+    \ maximize the rewards and choose the best actions in dynamic states.\n\nState:\
+    \ The state is used to reflect the environment. Here it is represented by the\
+    \ available resources, including computing and caching capacities. The state space\
+    \ is defined as $S = \\{M_1, M_2, ..., M_n\\}$, $V = \\{v_1, v_2, ..., v_n\\}$,\
+    \ $C = \\{c_1, c_2, ..., c_n\\}$, $B = \\{b_1, b_2, ..., b_n\\}$, $U = \\{u_1,\
+    \ u_2, ..., u_n\\}$, and $L = \\{l_1, l_2, ..., l_n\\}$.\n\nReward: The reward\
+    \ is used to reflect the benefit of a current state and the consuming objective.\
+    \ The objective of the formulated problem is to minimize the total delay and energy\
+    \ consumption for task processing. Thus, we set the reward as $R = -\\sum_{i=1}^{n}\
+    \ (delay_{i} + \beta energy_{i})$.\n\n# B. DDPG based on state space, action space,\
+    \ and reward,\n\nAfter defining the state space, action space, and reward, we\
+    \ utilize DRL to solve the optimization problem. For reinforcement learning, one\
+    \ representative is Q-learning. Q-learning uses Q-table to record the Q values\
+    \ with different kinds of state and action. However, it may not be suitable for\
+    \ scenarios with large state and action spaces. Deep Q-Network (DQN) uses a deep\
+    \ neural network to estimate the Q\n\nvalues, which can support dimensional states\
+    \ and action spaces, but with a slow speed of convergence. In case, we exploit\
+    \ the deterministic policy gradient (DDPG), a model-free and actor-critic algorithm\
+    \ to solve the computation off and caching problem.\n\nWe can regard the DDPG\
+    \ algorithm as a combination of DRL algorithms [38]. The DDPG algorithm consists\
+    \ of three parts, the primary network and the target network and the memory. For\
+    \ the primary network and the target network, each has two networks, actor and\
+    \ critic, totaling in four networks. We utilize the actor network to explore the\
+    \ policies and the critic network to criticize the policies. The critic also provides\
+    \ critical values to update the policy memory. By storing the state-action pairs,\
+    \ and the reward during training, the agent will select these samples to reduce\
+    \ data correlation effects. In this, we follow the deep neural network approach.\n\
+    \nThe primary actor is used to update the policy network $\theta$. It interacts\
+    \ with the environments and generates the next state $S'$ and rewards $R$ according\
+    \ to the current action $A$. The critic is responsible for choosing the optimal\
+    \ action $A'$ to update the next state $S'$ in the policy's memory. Its network\
+    \ $\theta'$ is copied from $\theta$ from the primary critic to update the value\
+    \ network parameter $\theta$ and calculate, but they are updated as follows:\n\
+    \n```\n$Y_t = R + \\gamma Q'(S', A')$  (19)\n```\n\n$\\gamma$ represents the discount\
+    \ factor with $(0, 1)$. $Q'(S', A')$ is calculated by the primary target network\
+    \ while $\\gamma$ is periodic. The values of $\theta'$ are not directly copied\
+    \ from $\theta$ but they are updated as follows:\n\n```\n$\theta = \tau\theta\
+    \ + (1 - \tau)\theta'$ (20)\n```\n\n$\tau$ represents updating parameters, with\
+    \ small values such as 0.1 or 0.01. $\theta$ is updated by the loss function:\n\
+    \n```\n$J(\theta) = \\frac{1}{m} \\sum_{i=1}^{m} (y_i - Q(\\hat{S}_i, A_i))^2$\
+    \ (21)\n```\n\nis updated by the policy gradient, which is as:\n\n```\n$\nabla\
+    \ J(\theta) = \\frac{1}{m} \\sum_{i=1}^{m} \nabla Q(s_i, \\omega_i)|s=s_i, a=a_i}\
+    \ \nabla \theta(s_i)|s=s_i$ (22)\n```\n\nNote that in order randomness for the\
+    \ learning process, DDPG algorithm introduces some noise $N$ when choosing action\
+    \ $A$. Therefore, the agent interacting with environment is as:\n\n```\n$A = \\\
+    pi(S) + N.$\" (23)\"\n```"
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: "# Algorithm 1: DRL-based joint computation offloading and service caching decision\
+    \ algorithm\n\n| Parameter | Value |\n|---|---|n| Number of RSU | M |\n| Number\
+    \ of vehicles | N |\n| Computation capacity of RSU | 2 Cycles/sec |\n| Caching\
+    \ capacity of RSU | 200 GB |\n| Local computing capacity | [300, 500]Cycles/sec\
+    \ |\n| Storage units | 29.72 Cycles/bits |\n| Computation intensity for each task\
+    \ | [2*10^2, 2*10^3] bits/sec\n\n**Input:** The initial state $S_0$ for available\
+    \ resources, computing and caching capacities; the parameters about the tested\
+    \ events; the initial parameters: $\theta_0, \\omega_0, \tau, m, n$; the target\
+    \ network offloading capacity $Q$\n\n**Output:** optimal actor parameter $\theta$;\
+    \ current optimal critic parameter $\\omega$; the optimal action for computing\
+    \ and service caching:\n\n+   1. Initialize parameters: $i=0, \theta=\theta_0,\
+    \ \\omega=\\omega_0$;\n2. Clear up memory set $D$;\n3. For $i$ from 1 to $T$:\n\
+    4. Initialize environment state $S_i$, get $\\pi(S_i)$;\n5. Take action $A_i$,\
+    \ get new state $S'$, reward $R$, and end index $end\\_idx$;\n6. Store $(S_i,\
+    \ A_i, R, S', end\\_idx)$ in memory set;\n7. $S=S';\n8. Take samples from memory\
+    \ set $D$, and calculate current target $Q$ if $end\\_idx=0$:\n9. $y_i = R_i +\
+    \ \\gamma Q'(S', \\pi(S'))$;\n10. else $y_i = R_i$;\n11. Update critic network\
+    \ parameter $\\omega$\n12. $J(\\omega) = \\sum_{i=1}^m (y_i - Q(s_i, a_i))^2$;n13.\
+    \ Update actor network parameter $\theta$ by the policy gradient function (21):\n\
+    14. If $T\\% < C$, update current actor and network parameters\n15. $\\omega \\\
+    leftarrow \tau\\omega + (1-\tau)\\omega$;\n16. $\theta \\leftarrow \tau\theta\
+    \ + (1-\tau)\theta$;\n17. If $S'$ is the end state, finish iteration, then;\n\
+    18. go back to Step (4).\n\nRSUs are located in a $200 \times 200$ square area.\
+    \ The distance between each vehicle and its associated RSU is within 100 meters.\
+    \ The scenarios we tested are motivated by the real life scenario in which the\
+    \ density of users will not be large in the computationally-limited fog scenario.\
+    \ RSUs are moving at different speeds. In our evaluation, scaling the number of\
+    \ RSUs and their services makes it faster.\n\nFor each experiment, the caching\
+    \ capacity is set to 200 GB. The local computing capacity of vehicles is unfinished\
+    \ over the interval [300, 500] Cycles/sec. The computation intensity for each\
+    \ task is 29.72 Cycles/bits. The computation for each task is offloaded to fog\
+    \ services is uniformly distributed throughout the simulation.\n\n+   We use the\
+    \ method with the following algorithms to control total cost, time and energy\
+    \ cost:\n- DQN: This algorithm utilizes Q-Network to optimize computation offloading\
+    \ and service caching.\n- Local executes all tasks in the vehicles without any\
+    \ offloading.\n- Offloading: This offloads all the tasks to fog servers without\
+    \ service caching.\n\nWe choose cumulative reward as the metric for performance\
+    \ as performed on the delay and energy consumption cost which will lead to an\
+    \ increase of reward.\n\n# B. Simulation Results\n\nIn this section, we evaluate\
+    \ the performance of the algorithm for computation offloading and service caching.\
+    \ We compare the performance of several existing algorithms considering total\
+    \ cost, service delay and energy cost.\n\n# A. Experimental Settings and Metrics\n\
+    \nOur tested settings are based on the related work [39] and consider a fog-based\
+    \ vehicular network system that consists of one cloud, $M=3$ RSUs and $N=6$ vehicles.\
+    \ The three are\n\nIn Figure 2(a), we plot the curve of cumulative reward using\
+    \ TensorFlow for a total of 200 episodes. Expected, DRL-based strategies show\
+    \ faster convergence and better performance than others. Figure 2(b) shows that\
+    \ the total cost of the system is increasing with the number of vehicles. According\
+    \ to the schemes, local policy carries the highest cost. The vehicles need more\
+    \ time to process all the tasks with limited computational resources. Offloading-policy\
+    \ behaves better than local policy as fog servers have more computational resources\
+    \ than vehicles. The DRL and DQN algorithms perform better as they take into account\
+    \ the peer-pool and fog cooperation as service caching. By these methods, all\
+    \ available resources can be utilized to a reasonable extent for task processing,\
+    \ facilitating the observed reduction in"
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '![](img/775161d23d6875d1f450fd1de859ce20_7_0.png)
+
+
+    (a) DDPG and DQN convergence.
+
+
+    ![](img/775161d23d6875d1f450fd1de859ce20_7_1.png)
+
+
+    (b) Total cost vs. Number of vehicles.
+
+
+    ![](img/775161d23d6875d1f450fd1de859ce20_7_2.png)
+
+
+    (c) Total cost vs. RSU computation capacity.
+
+
+    ![](img/775161d23d6875d1f450fd1de859ce20_7_3.png)
+
+
+    (d) Total cost vs. Caching capacity of RSUs (GB).
+
+
+    ![](img/775161d23d6875d1f450fd1de859ce20_7_4.png)
+
+
+    (e) Delay vs. RSU Computation capacity.
+
+
+    ![](img/775161d23d6875d1f450fd1de859ce20_7_5.png)
+
+
+    (f) Energy cost vs. RSU computation capacity.
+
+
+    Fig. 2: Evaluation results
+
+
+    delay and energy consumption. On the other hand, the DDPG algorithm is better
+    than DQN for obtaining the total and RSU computational resources. optimal solution
+    of the function.
+
+
+    Figure 2(c) describes the relationship between the total cost and RSU computational
+    resources in our system. The total cost of DDPG, DQN and Offloading-only schemes
+    decreases as computational capacity increases because more computational resources
+    in fog servers contribute to lower, resulting in better results. The Local policy
+    has the highest cost as it does not use any resources in fog, as shown in this
+    case.
+
+
+    Figure 2(d) illustrates the effectiveness of caching capacity of fog servers on
+    the total cost among all the schemes. Local and Offloading-only schemes show that
+    they do not rely on caching capacity of fog servers. The Offloading-only scheme
+    has a lower cost than others. This is because fog servers are able to assign the
+    tasks to the caching services available; otherwise, they need to solicit from
+    the Cloud, contributing to a higher cost. This is because when the capacity of
+    fog servers is increased, more tasks can be processed on fog servers without offloading
+    tasks to the remote Cloud, thereby reducing the total cost.
+
+
+    Figure 2(e) represents the delay among all schemes in terms of the computational
+    resources of fog servers. The Local policy exhibits the highest delay when executing
+    tasks. In the DDPG, DQN and Offloading-only schemes, the delay for task processing
+    is reduced when the computational capacity of fog servers increases. However our
+    proposed scheme achieves better performance than the Offloading-only schemes.
+    This is because the Offloading-only processing method does not use caching, which
+    results in higher communication delay. If a server has no needed service(s) for
+    the assigned task, it has to offload the task to the Remote Cloud with delay for
+    offloading delay.
+
+
+    Figure 2(f) represents the average energy consumption for each task versus RSU
+    capacity. The offloading-only scheme has the highest energy consumption per task.
+    The energy consumption is related to the power consumption of devices, and communication
+    and computational resources. The DDPG and DQN schemes have lower energy consumption
+    because the offloaded tasks to fog servers do not use caching capacity, they obtain
+    stable values in this case. The energy consumption of DDPG and DQN schemes decreases
+    with the increasing capacity of RSUs as they have a higher chance of obtaining
+    their services and database/libraries in the fog servers, thus reducing the frequency
+    of offloading the tasks to'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'The Cloud. An evaluation result shows that the deep reinforcement learning
+    algorithm has the advantage of offloading policies with lower total cost in dynamic
+    vehicle environments.
+
+
+    # ACKNOWLEDGMENT
+
+
+    This work was supported by the Norwegian Research Council under the DILLITE project
+    (grant No. 262854/2), and it was also supported by the National Science Foundation
+    of China under No. 6200137.
+
+
+    # VII. CONCLUSION
+
+
+    In this paper, we designed a vehicle network architecture to minimize the cost
+    of task offloading and service delivery in terms of delay and energy consumption.
+    Our architecture combines peer-and-fog-pool cooperation to optimize offloading
+    while considering service delivery in the cache network.
+
+
+    We employed a DRL algorithm called DDPG to solve the problem. Extensive simulation
+    results prove effectiveness. For future work, we will explore social relationship
+    between user terminals as well as aware services in the joint offloading framework.
+
+
+    # REFERENCES
+
+
+    +   1. Z. Jiang, J. Huang, and Y. Zhang, ''Vehicle fog computing for real-time
+    task management for service cities,'' IEEE Wireless Communications, vol. 26, no.
+    1, pp. 87–93, 2021.
+
+    2. Y. Liu, L. Chen, C. Qian, A. Taabordi, and F. Elissen, ''Latency analysis of
+    wireless networks for proximity services in mobile and home automation: The case
+    of IEEE,'' Access, 10, pp. 55631–55645, 2022.
+
+    3. Y. Liu, A. Hassan, M. Karifakis, O. Wester, and G. Gong, ''Active offloading
+    in mobile edge-enabled IoT networks,'' IEEE Access, 10, pp. 6361–6364, 2022.
+
+    4. Z. Chen, H. Ma, J. Liu, and G. Gong, ''Data-centric internet of things based
+    on edge cache,'' IEEE Internet of Things Journal, 7, pp. 9158–9169, 2020.
+
+    5. X. Chen, L. Zhou, L. Liu, H. Zheng, and Y. Ma, ''An intelligence-driven perspective
+    on mobile edge computing,'' 2019 IEEE International Conference on Communications
+    (ICCO), IEEE Press.
+
+    6. L. Liu, C. Chen, Q. Pei, S. Mahajan, and Y. Zhang, ''Joint offloading and network
+    resource allocation in mobile edge cloud computing,'' IEEE Access, 8, pp. 7791–7800,
+    2020.
+
+    7. J. Peng, et al., ''Joint offloading and resource allocation for block-enabled
+    mobile edge computing: Deep reinforcement learning approach,'' 2020 IEEE International
+    Conference on Communications (ICC), IEEE Press.
+
+    8. S. Liu, S. Tang, J. Bao, and Y. Wang, ''Optimizing task offloading and content
+    caching in vehicular ad hoc networks,'' IEEE Technol., vol. 107, no. 8, pp. 1716–1729,
+    2021.
+
+    9. J. Kim, A. Taabordi, and M. Lin, ''Deep content caching in vehicular wireless
+    networks: Cloudless edge caching,'' IEEE Wireless Communications Letters, 9, no.
+    5, pp. 995–999, 2020.
+
+    10. K. Zhang, S. Liu, Y. He, S. Mahajan, and Y. Zhang, ''Cooperative content caching
+    with mobile edge computing,'' IEEE Wireless,, 25, no. 5, pp. 8077–8083, 2022.
+
+
+    +   [13] H. Jiao et al., ''CVCG: Cooperative V2I aided transmission mechanism
+    based on popular content distribution in vehicular ad-networks,'' IEEE Trans.
+    Mobile Comput., 2021.
+
+
+    +   [14] Y. Liu, X. Zhang, and J., ''Cost-aware service caching for mobile edge
+    computing in dense networks,'' INFOCOM, 2020.
+
+
+    +   [15] T. X. Tran, K. Chen, and J. Domstic, ''Cost-aware service caching for
+    mobile edge computing in mobile environments,'' IEEE Trans. Mobile Comput., 2019.
+
+
+    +   [16] S. Zhou and Y. J. Zhang, ''Joint optimization of service caching placement
+    and offloading in mobile edge computing networks,'' IEEE Trans. Mobile Comput.,
+    2019.
+
+
+    +   [17] X. Wang, Z. Wang, and J. Li, ''Offloading-based traffic management: A
+    fog-enabled real-time traffic management,'' IEEE Transactions, vol. 14, no. 4,
+    pp. 1155–1166, 2018.
+
+
+    +   [19] J. Chen, et al., ''Workload scheduling in vehicle edge networks with
+    edge caching,'' IEEE Trans. Mobile Comput., 2021.
+
+
+    +   [20] M. Zhou, et al., ''A deep learning approach for mobile network slicing,''
+    IEEE Surveys & Tutorials, 2020.
+
+
+    +   [21] S. Wang, et al., ''Deep reinforcement learning policy optimization in
+    the proceedings of the 31st IEEE International Conference on Communications (ICCO),''
+    IEEE Press, 2020.
+
+
+    +   [23] D. Liu, A. Taabordi, F. Elissen, Z. Chen, and Y. Liu, ''Deep reinforcement
+    learning for content caching in vehicular networks,'' IEEE Trans. Veh. Technol.,
+    vol. 69, no. 6, pp. 5989–5998, 2020.
+
+
+    +   [24] N. C. Liu, et al., ''Applications of deep reinforcement learning in communication
+    networks,'' IEEE Surveys & Tutorials, 2020.
+
+
+    +   [25] F. Fernandez, S. K. Lo, and W. Rahajan, ''Mobile cloud computing in decentralized
+    vehicular networks,''
+
+
+    +   [26] X. Chen, ''Decentralized cloud offloading game for mobile cloud computing
+    in vehicular networks,'' IEEE Trans. Mobile Comput., vol. 26, no. 4, pp. 9774–9783,
+    2021.
+
+
+    +   [27] J. Zhou, L. Chen, F. Taabordi, and T. Xue, ''Edge caching for mobile
+    computing: a survey,'' IEEE Internet of Things J., vol. 7, no. 5, p. 1, 2020.
+
+
+    +   [28] D. Ru, Y. Xu, J. Feng, and G. Lu, ''Joint offloading and caching in vehicular
+    edge computing,'' IEEE Trans. Mobile Comput., 2020.
+
+
+    +   [29] Y. Zhang, et al., ''Dynamic caching in mobile edge networks,'' 2018 15th
+    IEEE International Conference on Communications (ICCO), IEEE Press.
+
+
+    +   [30] Y. Liu, H. Su, X. Xie, and Y. Zhang, ''Deep reinforcement learning for
+    caching in vehicle edge computing and networks,'' IEEE Trans. Veh. Comput., 2021.
+
+
+    +   [31] X. Chen, J. Liu, W. Li, and X. Fu, ''Multi-user collaborative caching
+    in vehicular networks,'' IEEE Trans. Networking, vol. 24, no. 5, 2795–2808, 2016.
+
+
+    +   [32] Y. Zhou, N. Wang, and X. Chen, ''VANET-modeling and clustering design
+    under practical traffic, control,'' IEEE Trans. Mobile Comput., 2018.
+
+
+    +   [33] T. P. Lilliscarcj, J. H. Hunt, A. Pritzel, N. Heess, T. Ernst, Y. Tassa,
+    D. Silver, and D. Wierstra, ''Continuous computing with deep reinforcement learning,''
+    IEEE Trans. Mobile Comput., vol. 19, no. 9, pp. 5991–6003, 2020.
+
+
+    +   [34] Y. Dai, S. M. Mahajan, and Y. Zhang, ''Joint balancing and offloading
+    in vehicular edge computing,'' IEEE Internet of T. J., 2018.
+
+
+    630'
+  merge: -1
+  img_proc: true
