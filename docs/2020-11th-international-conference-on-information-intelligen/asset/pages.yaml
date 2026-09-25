@@ -1,0 +1,692 @@
+- pgno: 0
+  md: '# # Applying Cloud Machine Learning on Biosensors Streaming Data for Health
+    Status Prediction
+
+
+    Ahmed Ismail Ebaida Information systems dept. Faculty of computers and information
+    Mansoura University Munich, Germany, a.ebada@outlook.com Samir Abdelrafek Mansoura
+    University Mansoura, Egypt, samir.abdelrafek@mansoura.edu Ibrahim Elhenawy Computer
+    science dept. Faculty of computers and information Zagazig University Zagazig
+    Egypt, henawy2009@yahoo.com
+
+
+    ABSTRACT The healthcare big data including medical history, Physician reports,
+    prescription, and family historical databases, laboratories, and scan reports
+    can help in disease detection and prediction. The article presents an overview
+    of the current technologies and methods in the medical area to get the benefits
+    of cloud systems, data science and analytics. The paper presents how current technologies
+    can be used to stream data for healthcare applications. Medical big data analysis
+    is an area of research and the article shows some impact on patient outcomes.
+    The proposed system employed an optimized Support Vector Machine classifier with
+    the parameter tuning to achieve high accuracy of classification, and efficiency.
+    The system gets the data of heart rate, diabetes, and blood pressure to analyze
+    and predict diseases with the help of the healthcare platform on cloud.
+
+
+    Keywords—mobile device; healthcare; healthcare data status; prediction.
+
+
+    # I. INTRODUCTION
+
+
+    Cardiovascular diseases are one of the biggest reasons for the death of millions
+    of people around the world only second to cancer[1]. A heart attack occurs when
+    a clot blocks the blood flow to a part of the heart this blood clot causes the
+    part of the heart muscle to die as result. By the statistics, a heart problem
+    can gradually start with the age of 40-50 for people with an unhealthy diet and
+    lifestyle choices[2]. So, an early prognosis can make huge difference in their
+    lives by motivating them towards a healthy lifestyle and diet this risk can be
+    reduced. This research aims to show the most risk factors of heart disease prediction
+    machine learning. Machine learning models predict the likelihood of patients getting
+    a heart disease trained on a dataset of individuals. As the probability of getting
+    a heart disease based on the current lifestyle and diet is calculated. The model
+    was trained with a Framingham heart study dataset.
+
+
+    There are lot of researchers who developed machine learning methods to diagnose
+    chronic diseases at early stages. The wearable devices are providing compact,
+    accurate, cheap, and light health monitoring systems of the body changes using
+    smart sensors make a lifestyle benefit for a lot of medical affairs. The most
+    of health awareness programs call for the disease''s prevention and early alerts
+    of diseases[1]. Big data analysis is very helpful and useful to use the data to
+    generate medical data with spark and machine learning algorithms to predict outcomes.
+    This can provide information about health risks and to get alerts about health
+    issues. This can help physicians to monitor the patients in real-time by using
+    wearable devices. It support diagnosis of diseases by using machine learning recommendation
+    systems.
+
+
+    The paper provides some information about the big data in healthcare. In Sect
+    2 we give a brief overview of the needed steps to analyze healthcare data. Section
+    5, it discusses the proposed system and its future work.
+
+
+    Many researchers develop new methods and technologies to employ machine learning
+    algorithms on big data to predict diseases before they occur. Spark is very fast
+    in processing a vast amount of data it can do computations in minutes. This is
+    very useful for data processing in runtime and makes decisions. Spark provides
+    lambda architecture to perform real-time processing and both batch[3].
+
+
+    # A. Data Integration
+
+
+    The proposed system is based on streaming data using Spark. Spark is very useful
+    in processing data that comes from the Internet of Things (IoT) as it uses fog
+    computing. It gathers data from multiple sources of wearable devices, Electronic
+    Health Record (EHR) data, user medical data[4]. Spark can be integrated with Hadoop
+    to work on streaming data from different resources[5] as shown in fig 1.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '![](img/a874a62cd4d1159451d7a4603aeb81e1_1_0.png)
+
+
+    as Python, Java, Scala and R. The main advantage of platform is that it can process
+    data for MapReduce in the memory at running time there is no Need to waste time
+    for writing and reading the data on the hard disks. Applications can be used by
+    analyzing data to generate features from the mental and physiologic data to predict
+    diseases.
+
+
+    # D. Streaming data over IoT systems
+
+
+    Many research projects try to use the power of new technologies in the Internet
+    of Things (IoT) using medical wearables to track and predict diseases. The medical
+    wearable devices with some physical sensor like heart rate sensor and blood pressure
+    sensors provide patients and old people any alert with sensors to notify them
+    about abnormal reading or give them overall information about the health status
+    [13]. Some medical sensors can provide health tracking applications based on wearable
+    devices as shown in fig 2.
+
+
+    Fig 1: The data architecture
+
+
+    Electronic medical data is a collection of medical data to be analyzed and give
+    valuable information. NoSQL databases provide some valuable features like better
+    performance, high availability, and auto-scaling that help to manage distributed
+    healthcare solutions rather than relational databases [66]. Hadoop Distributed
+    File System (HDFS) is a strategy that splits data into different chunks and stores
+    them in HDFS in multiple cluster nodes. HDFS is a reliable technique to access
+    data quickly [7].
+
+
+    Apache Spark is a powerful framework that supports data processing and batch processing
+    [8]. It can work with different data sources such as Cassandra and Mlib library.
+    It can apply machine learning techniques with high speed and efficiency. Apache
+    Spark also supports analytics for data using Hive.
+
+
+    # C. Data Analysis
+
+
+    The big medical data always needs to be analyzed after they are collected and
+    get valuable information out of the data. The data analysis process is comprised
+    of four categories. The first category is a descriptive analysis that describes
+    what happened based on the data. Then diagnostic analysis tries to figure out
+    the causes of the events. The third category is a predictive analysis which is
+    a forecast or prediction for the future. Prescriptive analytics is to react to
+    different situations using probabilities algorithms like decision trees [10].
+
+
+    Medical data analysis can be done using parallel computation to validate and develop
+    medical applications. MapReduce [11] and Dryad [12] provide frameworks that can
+    manage parallel complexity. Spark is a framework that processes the streaming
+    or batch data and it supports different programming languages, such
+
+
+    ![](img/a874a62cd4d1159451d7a4603aeb81e1_1_1.png)
+
+
+    Fig 2:Streaming health data from sensors.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# III. Related Work
+
+
+    Using the Support Vector Machine (SVM) [15] is widely in common classification.
+    SVM diagnoses can also classify the datasets with high rates of success When a
+    dataset with many data inputs, it increases the complexity of classification and
+    causes over-fitting problem [16]. Removing redundant and irrelevant features increases
+    the accuracy of disease classification and can enhance the machine learning model
+    performance.
+
+
+    In [25], the authors proposed a diagnosis system for diseases based on genetic
+    algorithm with feature selection. The proposed system used three classification
+    SVM, KMN, and back-propagation for testing. The tool had a accuracy of 99.5%.
+
+
+    The difference between feature selection and extraction is, first can select suitable
+    features but the second can construct them. There is an extraction method called
+    Principal Component Analysis (PCA), it can capture the ''principal components''
+    eigenvectors representing variability in the dataset [17]. A feature selection
+    example Relief, which can work with noisy element, data and it is very useful
+    for many classifications [18]. There are also researchers using SVM to develop
+    diagnosis systems, with some of them here.
+
+
+    IV. The proposed healthcare prediction system
+
+    Real-time processing is defined as the processing of unbounded stream of data,
+    with very short requirements for processing measured in milliseconds or unstructured
+    or semi-structured data, such as JSON, and this incoming data typically arrives
+    in the same processing requirements as batch processing. One of the challenges
+    of real-time processing solutions is to process, store in real-time, at high volumes.
+    Processing must be done in a way that does not block the ingestion pipeline. Another
+    challenge is to act on the data quickly, such as generating and presenting the
+    data in real-time-related dashboards.
+
+
+    A.Ismail et al proposed a system based on SVM which was used for heart disease
+    prediction. They reduced the dataset diversity with feature reduction methods.
+    The proposed system of achieved high success with 90.5% from a heart disease dataset.
+
+
+    The proposed solution in this paper is to provide an approach that applies to
+    medical device based on IoT wearable devices. As shown in fig 3, the architecture
+    is based on streaming sources such as medical devices, smartwatches, and other
+    smart wearable devices. The system is also based on cloud structure to handle
+    and store the medical data from different sources. The proposed system used Apache
+    Spark to handle the streaming data over time in the memory processing The proposed
+    system SVM with parameters to predict diseases based on the streaming data and
+    historical chronicles from the patient''s family.
+
+
+    In [20], J. Zhang et al applied the SVM classification using standardized tongue
+    images for diabetes diseases. By optimization on kernel parameters to improve
+    the SVM classification. A Phan al used SVM parameters optimization and applied
+    for features to improve SVM performance. We proposed a system using genetic algorithms
+    and SVM as a hybrid system. We implemented the SVM classification.
+
+
+    In [22], the authors used a combination of Grid Search and the k Cross-Validation
+    with multiple kernel functions for recognizing the optimal parameters of the SVM
+    classification. We proved that the polynomial function performance was the best
+    compared to other methods.
+
+
+    In [23], Y. Xiao adopted an objective function to select SVM parameters. They
+    proved the effectiveness of the proposed system based on results.
+
+
+    In [24], the adaptive SVM classification system was proposed to diagnose breast
+    cancer and diabetes. The system used ''if-then'' rules to make decisions. The
+    results of the proposed system produced 100% classification accuracy for breast
+    cancer and diabetes datasets.
+
+
+    ![](img/a874a62cd4d1159451d7a4603aeb81e1_2_0.png)
+
+
+    Fig 3: Streaming data architecture.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'Big data is a large amount of data, which needs a lot of time to be processed.
+    The MapReduce model can deal with big data. the proposed system uses MapReduce
+    to store big data and it recovers the results in time. the proposed system is
+    providing a framework that can process heterogeneous and massive data in IoT.
+    The proposed system is taking the streaming data from the wearable devices and
+    then the analysis is applied to streaming data on the storage and finally, the
+    data are processed with Apache Spark. The architecture of the proposed starts
+    with preprocessing for the data and processing phases to reduce the factors that
+    there is no need to be processed based on feature reduction methodology.
+
+
+    is trained using testing data and finally generating the prediction results.
+
+
+    # Algorithm 1
+
+
+    BEGIN
+
+
+    Load Dataset Initialize variables to raw Dataset.
+
+
+    Apply to pre-process on data
+
+
+    Apply cleaning missing data
+
+
+    Execute R Script
+
+
+    Set the Threshold value based on weights
+
+
+    Prepare the List Selected
+
+
+    For counter 1 to length(weights)
+
+
+    If weights >= threshold
+
+
+    Dataset. apply (lambda Val: Val > Threshold).
+
+
+    Append column in List Feature Selected
+
+
+    Apply cross-validation on the dataset
+
+
+    Create training and testing data using cross-validation.
+
+
+    Create a grid space of (cost, gamma, and epsilon) cost, gamma and epsilon is initialized
+    with random values
+
+
+    Each pair of (cost, gamma, epsilon) in the search space
+
+
+    validation on training dataset for parameter optimization
+
+
+    End for Each
+
+
+    Evaluation.
+
+
+    Predict
+
+
+    Visualize
+
+
+    END
+
+
+    +   A. The proposed system based on a machine learning algorithm
+
+
+    The proposed system uses SVM classifiers with parameter tuning to generate accurate
+    classification results. The proposed model filters the first data from the dataset
+    based on the factors and in the next step on the threshold we detect all features
+    that belong to the diseases. The SVM classification is employed to classify and
+    predict the possibility of disease occurrence.
+
+
+    The proposed system adapted SVM Parameter tuning using GridSearch in the kit library
+    to learn. The GridSearch is imported from kit set with a parameter grid and then
+    passing the algorithm
+
+
+    The tuning for the parameters to be considered the optimal value is a parameter
+    search. The grid search efficiently optimizes the SVM parameters (cost, gamma,
+    and epsilon) with all combinations and transmits them to the SVM model for classification.
+    The optimization for parameters before SVM classification can increase the prediction
+    performance for the dataset because it does not need to go through the whole dataset.
+    Removing the needed attributes from the dataset makes the focus only on important
+    parameters related to a disease.
+
+
+    The proposed system as shown in algorithm 1. It starts with pre-processing and
+    cleaning for the data we execute the weights for the values using a threshold.
+    The target is to ignore the values if they are less than the threshold to make
+    the process. We used the lambda function supported by Spark to apply the threshold
+    and choose only the needed data. Then feature selection is applied, and finally
+    applying the system
+
+
+    +   B. Healthcare decision-making framework
+
+
+    The proposed system is based on medical data that needs to be analyzed to make
+    the right decisions.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'The proposed system uses the Microsoft Azure platform with Spark to handle
+    the streaming data and HER data. The wearable devices can send data to the cloud
+    every seconds for user thousands of readers per day. Microsoft Azure provides
+    SQL Data Warehouse supports Polybase. Polybase provides the technique to access
+    data outside the database via the T-SQL language. The target of this system is
+    to connect with large datasets. Azure provides a distributed database, which enables
+    scalable applications. It supports NoSQL and supports key-value, graph, and document
+    data all in one. Azure Data Lake is a storage technology that has no limits to
+    store different structures, structured and semi-structured data to be processed
+    for big data analytics, and used with HDFS and Spark to the cloud. Azure Data
+    Lake can store trillions of files and a single file can be larger than one petabyte
+    in size.
+
+
+    medical data about the patients. Azure Functions services for developers to execute
+    codes without the need to prepare the interface. The mean target of this function
+    is it can run on a schedule or be triggered by an event another Azure service.
+    The Azure function can be triggered every time the new laboratory test result
+    is uploaded into Azure Blob Storage to generate a prediction, which calls out
+    to an AI model. Logic Apps are serverless which is useful for business process
+    automation.
+
+
+    The system is based on the data from wearable devices and EHR to be analyzed in
+    the cloud-based Azure system to handle the prediction.
+
+
+    Apache provides an effective solution to analyze healthcare data generated using
+    machine learning and memory computations in Spark. The proposed system provides
+    a healthcare system to give health state over time in the patient''s lifestyle,
+    personal health factors, and their social network activities. The proposed system
+    is Azure cloud-based with a social medical profile. The user''s medical profile
+    on the cloud contains all user historical data from the user and the family with
+    the streaming data from wearable devices.
+
+
+    The Cosmos DB is a hybrid DB model from Microsoft SQL Server and Mongo DB. The
+    streaming data from wearable devices is handled by Apache Spark as a streaming
+    processing. The EHR data is the available data from the patient such as historical
+    diseases and family chronic diseases. The data is finally visualized as BI reports
+    and predictions.
+
+
+    # VI. Results & Discussions
+
+
+    The proposed system has been implemented and tested using Microsoft Azure and
+    the system is trained on the cloud platform on Microsoft Azure machine learning
+    to use the efficiency of the cloud platform capabilities. The proposed system
+    was tested using Coronary Heart Disease (CHD) for heart disease prediction using
+    binary classification. The dataset collected from Boston University as shown in
+    4.
+
+
+    Spark can run on Azure via multiple tools such as Azure HDInsight, Data bricks,
+    and Azure Distributed Engineering Toolkit (AZK). Data bricks is a platform to
+    manage Spark, it provides useful features for team collaboration and version control.
+    Azure supports a fully managed cloud service called HDInsight with Spark. The
+    AZK is an application for provisioning-demand Spark clusters in Azure. The Spark
+    clusters run in Docker containers. AZK is a very flexible option that can support
+    all VM types including GPUs, which is especially helpful for deep learning methodologies.
+
+
+    The proposed system used Machine Learning for Apache Spark which uses a lot of
+    tools for Apache Spark including integration with the deep learning frameworks.
+    The system architecture is based on data sources from the laboratory test results,
+    streaming data from wearable devices, and EHR data which represents
+
+
+    ![](img/a874a62cd4d1159451d7a4603aeb81e1_4_0.png)
+
+
+    Figure 4: The proposed system implementation on CHD.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'The data set has categorized 4 different risk factors as demographic, behavioral,
+    medical, and physical. The dataset has 15 attributes and a class label. The patients
+    were observed for 10 years on various risk factors categorized as 4 different
+    risk factors as demographic, behavioral, medical, and physical. The demographic
+    risks are gender, age, education (1: high school; 2, diploma; 3, college; 4; higher
+    than a). The behavioral risks are Current Smoker - Current smoker or not. CigPerDay
+    - The average number of cigarettes smoked per day. BPMeds - The patient is under
+    blood pressure medication. PrevalentStroke shown if the user previously had a
+    stroke or not. PrevalentHyp - Prevalent Hypertension or not Diabetes has patients
+    or not
+
+
+    aims to remove duplicated data and missing data to resolve data inconsistencies.
+    The next step is the transformation of the data, data Reduction, binning, and
+    attributes selection. Then the feature selection is applied. Two-class SVM, multiclass
+    decision jungle, and tuning parameterization algorithms are applied on the dataset.
+    Finally, the results are evaluated to evaluate the model.
+
+
+    The confusion matrix is used to show the distribution of the proposed model. In
+    the confusion matrix, the regular heart rate is detected in blue cells as true
+    positive (TP) and true negative (TN) and irregular heart detection represented
+    in white cells as false positive (FP) and false-negative (FN) as shown in fig
+    5.
+
+
+    TotChol - Total Cholesterol. Glucose - Glucose level
+
+
+    Physical examination:
+
+
+    DBP - Diastolic blood pressure
+
+
+    BMI - Body mass index
+
+
+    Heart - Heart Rate Rate
+
+
+    | True Positive | False Negative | Accuracy | Precision |
+
+    |---|---|---|---|n| 18 | 626 | 0.852 | 0.900 |
+
+    | False Positive | True Negative | Recall | F1 Score |
+
+    | 2 | 3594 | 0.028 | 0.054 |
+
+    | Positive Label | Negative |
+
+    | 1 |
+
+
+    Fig 5: The system evaluation based on prediction.
+
+    The system evaluation used for evaluating the proposed model. Then-fold cross
+    validation divides the data into n folds. The n-1 folds are used for training,
+    and one-fold is used for testing. This process continued until each fold from
+    n is used for testing. The overall performance of these algorithms gives accuracy,
+    precision, recall, and F1 metrics that collectively show how the model is based
+    on the test to evaluate the module, the probability distribution of a positive
+    prediction in 10 bins. There are for 13 true positive and 1 true negative that
+    have a predicted probability. Precision and recall are calculated as shown in
+    calculations 1 and 2.
+
+
+    The proposed approach to complete this research is started by downloading an open-source
+    CHD data set [25]. The system used of heart disease data from the Machine Learning
+    repository to train a model for heart disease prediction.
+
+
+    We built a classification model for heart disease based on training the data which
+    consists of the following features: sex, chest pain type, age, resting blood pressure,
+    serum cholesterol, fasting blood sugar, resting EEG, max heart rate, depression
+    induced by exercise, exercise-induced angina, the slope of power exercise and
+    number of vessels, on detecting the presence of heart disease (value 1,2,3 and
+    4) and absence (value 0).
+
+
+    After verifying the dataset, the data need to pre-process and discretized for
+    cleaning data. The data cleaning process
+
+
+    ```
+
+    Precision=TP/(TP+FP)(1)
+
+    Recall=TP/(TP+FN)(2)
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '![](img/a874a62cd4d1159451d7a4603aeb81e1_6_0.png)
+
+
+    Fig. 6: The proposed system evaluation.
+
+
+    In fig 7, the Area under the curve (AUC) chart is used to measure the performance
+    of the machine learning models. AUC shows in the proposed system the increase
+    of positive rates that are scored on the dataset based on the trained model.
+
+
+    ![](img/a874a62cd4d1159451d7a4603aeb81e1_6_1.png)
+
+
+    Fig. 8: The heart frequency and correlation.
+
+
+    The proposed system proved an accuracy of 85.2% which is promising based on the
+    user''s personal data, depressions, sensors, and user profile parameters.
+
+
+    # VI. Conclusion and Future work
+
+
+    ![](img/a874a62cd4d1159451d7a4603aeb81e1_6_2.png)
+
+
+    The proposed system provides a platform that can handle real-time healthcare data
+    with the historical EHR data for clinicians and healthcare providers to predict
+    heart diseases, Spark spots real-time stream analytics over healthcare data. The
+    goal of the Biggest Platform in this paper is to acquire and analyze Enterprise-level
+    clinical usage. The proposed system provides a big data system that handles EHR
+    data based on streaming data from wearable devices and user medical profile. The
+    proposed system depends on a dataset as an input with some defined parameters
+    to filter the features of the heart dataset. This is achieved by Microsoft Azure
+    as a cloud platform with sql node.
+
+
+    Fig. 7: AUC of the proposed system.
+
+
+    The age of participants in the dataset is presented in figure 11, it shows most
+    of the participants are between 32 and 70 years old. In fig 8, the distribution
+    of max heart rates frequency and the age of the participants.
+
+
+    The paper presents an effective solution for the prediction of diseases using
+    knowledge discovery that processes on the EHR database and user social profile.
+    The proposed platform also provides an effective solution to connect streaming
+    data from wearable devices based on Spark and Microsoft Azure to predict. The
+    future work is to implement this proposed system with deep learning techniques
+    on its data. The next step of our proposed work to provide a platform on the cloud
+    which supports any kind of disease''s dataset with some predefined factors for
+    the disease''s classification process.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# REFERENCES
+
+
+    [1] A.Gahane, G. Kokkula, I. Pandya, K. Devadkar,” Prediction of heart disease
+    using machine learning., In 2018 Second International Conference on Electronics,
+    Communication, and Aerospace Technology (ICECA), IEEE, pp.1275–1278, 2018.
+
+
+    [2] World Health Organization. Available: http://www.who.int/ (accessed 9 March
+    2020).
+
+
+    [3] H. Mirza, M. Rizvi, “Prediction of heart disease using machine learning algorithms:
+    A survey”, International Journal on Research and Innovation Trends in Computing
+    and Machine, v5(8), pp. 99–104, 2017.
+
+
+    [4] Ismail, A. Shehab, El-Enahy, “Healthcare Analytics in Smart Data Analytics:
+    Reviews, Challenges, and Recommendations,” in Smart Cities: Models, Applications,
+    and Challenges, Springer Cham, pp. 27–45, 2019.
+
+
+    [5] L. Nair, S. Shetty, “Applying spark-based machine learning on big data for
+    heart health predictions,” Computers & Electrical Engineering, v65, pp. 393–399,
+    2019.
+
+
+    [6] M. Babar, F. Arif, M. Jan, Z. F. Khan, “Urban data analytics for Internet
+    of Things based on smart environment management systems using customized Hadoop,”
+    Generation Conference, vol.06, pp.396–406, 2019.
+
+
+    [7] S. Sarow, M. Kamal, N. Dey, “Impact of Heart Disease and Its Impacts on Computing
+    Intelligence: A Comprehensive Review-IoT Application for Big Data, In Big Data
+    Analytics for Smart and Connected Systems, pp. 103–136, 2019.
+
+
+    [8] P. Abraham, K. Kanipriya, N. Raghavi, “Analysis of Disease from Multiple Healthcare
+    Data using IIET Method of Hadoop,” International Journal of Computer & Mathematical
+    Sciences (IJMS), pp. 2347–8527, 2018.
+
+
+    [9] Z. Mariah, R. Xin, P. Wendelt, “Apache spark: a unified engine for big data
+    processing,” Communications of the ACM, vol.59, pp. 56–65, 2016.
+
+
+    [10] L. Benlima, “Data Management for Healthcare Systems: Architecture, Requirements,
+    and Implementation,” in bioinformatics, 2018.
+
+
+    [11] Y. Shahbaz, C. Gao, L. Jahi, F. Shah, “Investigating the adoption of big
+    data analytics in healthcare: the role of resistance to change,” Journal of data
+    science, doi(1), 2019.
+
+
+    [12] D. Dunka, A. Sah, “Smart ambulance system using the concept of big data and
+    intent of things,” In Healthcare Data Analytics and Management, pp. 165–176, 2019.
+
+
+    [13] J. Macadden, T. Durant, D. Bunch, A. Coppi, N. Price, K. Rodgerson, W. Schulz,
+    “Health Care and Precision Medicine Analytics: Analysis of a Scalable Data Science
+    Platform,” Journal of medical internet research, vol(21(4), 2019.
+
+
+    [14] A. Ismail, A. Shehab, El-Enahy, L. Osman, M. Elhosheny, “Quantified self-using
+    IoT wearable devices,” International Conference on Advanced Intelligent Systems
+    and Informatics, Springer, pp. 820–831, 2017.
+
+
+    [15] N. Mahdizazam, M. Mayeen, M. Ahmed, M. Zaman, “Prediction of Heart Disease
+    Using Multilayer Neural Network and Support Vector Machines,” In 2019 International
+    Conference on Electrical Information and Communication Technology (EIECT), IEEE,
+    pp. 1–6, 2019.
+
+
+    [16] D. Jain, V. Singh, “A two-phase approach for feature selection and SVM classification,”
+    International Journal of patterns recognition and way, pp. 1–13, 2019.
+
+
+    [17] J. Ang, A. Mirza, H. Harmon, “Supervised, and unsupervised-supervised feature
+    selection: review on gene selection,” IEEE/ACM Trans on Biol.11(1), 971–988, 2015.
+
+
+    [18] W. Lao, H. Mehrli, A. Khan, “Feature selection methods: importance of evaluation
+    criteria,” Expert System App, pp.11–19, 2018.
+
+
+    [19] A. Ismail, S. Abdelkarim, El-Enahy, “BIG DATA ANALYTICS IN HEART DISEASES
+    PREDICTION,” Journal of Theoretical and Applied Informatics, vol(38),2020.
+
+
+    [20] S. Ahmed, F. Khan, Z. Khan, A. Anjum, “Importance of chronic kidney disease
+    prediction using Feature Selection methods,” IEEE, pp. 619–623, 2019.
+
+
+    [21] H. Polat, H. Mehrli, A. Cetina, “The optimization of kernel function and
+    parameters for SVM in voting,” IEEE, 2016.
+
+
+    [22] Y. Ren, F. Hu, H. Miao, “The optimization of kernel function and parameters
+    for SVM in voting,” 2012.
+
+
+    [23] Y. Xiao, H. Wang, W. Xu, “Parameter selection of Gaussian kernel for one-class
+    SVM,” IEEE Transactions on Pattern(45), pp. 941–955, 2003.
+
+
+    [24] C. Lu, Z. Zhu, X. Yang, “An intelligent system for genetic-based cancer diagnosis
+    using a genetic algorithm-based selection method,” J Med Syst, 2014.
+
+
+    [25] N. Binder, J. Balsford, M. Schumacher, “A multi-state model based on the
+    reframing of Heart Failure: Is dementia incidence truly declining?,” European
+    journal of epidemiology, 34(11), pp.1075–1083, 2019.'
+  merge: -1
+  img_proc: true
