@@ -1,0 +1,2 @@
++   [2020第6届信息技术国际研讨会（ITIS）（印度尼西亚泗水巴 2020.10.14-2020.10.16） 2020第6届信息技术国际研讨会 (ITIS) ｜｜ CLOUDITY：云供应链 F](README.md)
++   [2020第6届信息技术国际研讨会（ITIS）（印度尼西亚泗水巴 2020.10.14-2020.10.16） 2020第6届信息技术国际研讨会 (ITIS) ｜｜ CLOUDITY：云供应链 F](2020-6th-information-technology-international-seminar-itissu.md)

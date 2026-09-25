@@ -1,0 +1,556 @@
+- pgno: 0
+  md: '# CLOUDITY: Cloud Supply Chain Framework
+
+    Design based on JUGO and Blockchain
+
+
+    Rukka Asyrofi
+
+    Informatics Department
+
+    Institut Teknologi Sepuluh November
+
+    Surabaya, Indonesia
+
+    asyrofi.1905@eng.its.ac.id
+
+
+    Nafa Zulfa
+
+    naftzzulfa@gmail.com
+
+    Informatics Department
+
+    Institut Teknologi Sepuluh November
+
+    Surabaya, Indonesia
+
+
+    **Abstract —** Supply chain management (SCM) is a main requirement for manufacturers
+    and companies to operate. There are many techniques to manage supply chains, such
+    as using Excel. However, that technique is ineffective, insecure, and susceptible
+    to human errors. In this paper, we propose SELAT (Relative Market) and Blockchain
+    system. We modify JUGO to develop SELAT as a connector between users and cloud
+    providers security. CLOUDITY can solve several cases: resource provisioning, service
+    selection, authentication, and access. Also, it improves the data security by
+    checking every changes of the supply chain management system using CLOUDITY.
+
+
+    within a network. It makes every user member could easily receive, and update
+    the record on database [5]. Unfortunately, it has several defects. The centralized
+    database has no failure-tolerance mechanism. It is because the centralized database
+    is located and maintained in a central server. All data stored on the server is
+    susceptible to data modification by irresponsible people. One of its advantages
+    is sharing, analyzing, or updating [6]. The cloud database is secure.
+
+
+    **Keywords —** Cloudity, Cloud as a Service, Smart Contracts, Supply Chain Management
+
+
+    # 1. INTRODUCTION
+
+
+    Setting up to use Excel to manage data of the current level in supply chain systems
+    [1]. This conventional supply chain management system is insecure, ineffective,
+    and susceptible to human errors. It ought to require an automated system that
+    needs less human intervention. Currently, a higher mechanism is needed to manipulate
+    the data chain emerges through the usage of an internet server or a digital server
+    hosted [1]
+
+
+    Setting up and hosting locations at local cloud servers are not the best. It is
+    because there are many technical aspects to consider, such as scaling, load balancing,
+    and flexibility. Therefore, cloud provides a solution. The cloud providers offer
+    to serve users with cheaper services. However, this means users might have to
+    pay for services that they do not need [2]. Problem is resource generation. Fragmentation
+    is a problem of sharing data between providers [3]. Also, vendor lock-in is a
+    big problem on supply chain providers side [4]. It is a condition where users
+    are stuck with one vendor because the very high cost to another vendor.
+
+
+    The proposed supply chain management (SCM) system receives and saves data in a
+    centralized database. A centralized database is a database which is saving data
+    at a single
+
+
+    In this paper, we present a cloud-based supply chain management system using CLOUDITY
+    and SELAT to solve the mentioned problems. The SELAT system acts as a broker between
+    users and CSP. It will select the most suitable CSPs with lowest price and highest
+    capacity. CLOUDITY uses the concept of Blockchain to improve the data security
+    by checking data in a decentralized system [1]. It uses a peer-to-peer network
+    to ensure data integrity and security [8]. We design a CLOUDITY system which can
+    solve several cases: resource provisioning, service selection, authentication,
+    and access.
+
+
+    The rest of this paper is organized as follows: Section 2 explains the detailed
+    method of proposed system. Section 4 describes the design of this proposed system.
+    Section 6 summarizes this paper and work.
+
+
+    # 2. RELATED WORKS
+
+
+    Cloud service management is a main agent of cloud architectures. It can be extended
+    to act as a service broker between cloud consumers and service providers (CSP).
+    A lot of research conducted to creates third-party cloud architecture for the
+    most suitable cloud services based on user requirements [10]. However, these works
+    did not consider a platform composed of multiple CSPs with different service capabilities.
+    Therefore, research conducted by [11]'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# III. METHODOLOGY
+
+
+    The proposed CLOUD system contains main parts: (1) the S system, (2) the SELAT
+    system, (3) the Blockchain system, and (4) various CSPs. First, the main company
+    builds a system which can be deployed together with other retailers in the supply
+    chain. The SELAT system can select the most suitable CSPs with the lowest price
+    and highest capability requirements.
+
+
+    ![](img/f3828bbe916f4d9adeaf9c243ad9fbec_1_0.png)
+
+
+    In the process, SELAT CSP recommendation lists items to the users. The users must
+    select the most suitable CSP from the recommendation, then the SELAT system gives
+    a request to the selected CSP and the system manages the initial servers. Mentioned
+    Blockchain also applies to create the connection, which the SELAT system uses
+    a protocol to communicate with the Blockchain system. The global CLOUD system
+    architecture is illustrated in Fig. 1.
+
+
+    develops a system architecture for recommendation cloud services based on user
+    requirements JAGGO. It connects several connected blocks between cloud resources
+    and users. We assume JAGGO to develop own architecture called (SELAT Market) for
+    managing supply chain actors with various CSPs which provides SELAT system Supply
+    Chain management requirements.
+
+
+    The blockchain system is a peer-to-peer network which connects several blocks
+    each other through the Internet. Blockchain permits for booking, receiving, and
+    validating records in the database. [12]. However no record can be changed once
+    published. Each block is linked to each other without any difference in code.
+    The above-mentioned mechanism causes the blockchain system is immutable to the
+    modification of data [13]. However, the blockchain chain must be centralized [14].
+    However, the supply chain management (SCM) system has a different database from
+    other i.e. components which makes it difficult to access each other. Presently,
+    many data stored in the database becomes more accessible. It is because: (1) Volume:
+    there is a huge data volume in order to process and save; (2) Veracity: Veracity
+    are the requirements for the data used in decision making. Many data stored in
+    financial analytics means that the data flows more quickly; etc [14]. A cloud
+    approach can make data accessible, using the Blockchain to improve data security
+    in the cloud [15].
+
+
+    # A. Selective Market (SELAT) system
+
+
+    One research [8] provides architecture for offering cloud services as a service.
+    We modify JAGGO to create a new architecture called Selective Market (system).
+    It functions to select CSPs with the lowest price and highest capability based
+    on user requirements. The difference between SELAT and JAGGO is system. SELAT
+    equips with the Blockchain system for its selection mechanism. SELAT provides
+    a list of CSP recommendations to users to fulfill the user''s request. Fig. 2
+    illustrates the architecture of the SELAT system.
+
+
+    Users act as users to connect with cloud providers. First, users make a request
+    for cloud services. The users send a request which contains specifications, budget
+    for cloud service system. SELAT gives several CSP recommendations which fulfills
+    the user''s request. The last, user selects one CSP in the recommendation list.
+    Upon the selection, the user selects CSP. The SELAT system is divided into three
+    main parts, which are illustrated as follows:
+
+
+    +   1) Cloud Controller
+
+
+    The SELAT services are for supply chain management (SCM). Initially, SCM system
+    sends request to the most suitable cloud service provider to the host
+
+
+    +   2) SELAT Cloud Controller
+
+
+    +   a) Service Catalog (SC)
+
+    SCM system works as follows: (1) In order to get aspects from CSPs, SCM gives
+    a request to Ads; (2) Ads receive some aspects from CSPs; and (3) SC displays
+    the aspects information informed about the assignment details.
+
+
+    Communication between JAGGO and SELAT needs a data management model. A research
+    was conducted by [16] introduces a prototype modeling functions as a cloud service,
+    sensing the user''s vital value using sensors for microcontrollers. Meanwhile,
+    the microcontrollers send the data to fetch devices alternately. Using this model,
+    we can collect SCM system logs and send them to the SELAT system. In the future,
+    we can apply several containers to improve CLOUD system. Container engines worked
+    because of portability and efficiency. The container can be portable because it
+    visualizes the operating system instead of hardware [17].'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Cloud Inspector
+
+
+    Service Management
+
+
+    # Cloud Burst
+
+
+    # Resource Controller and Scheduler
+
+
+    ![](img/f3828bbe916f4d9adeaf9c243ad9fbec_2_0.png)
+
+
+    | Id | Int (11) | Id | Int (11) |
+
+    |---|---|---|--|
+
+    | Name | Text | Name | Text |
+
+    | Price | In (8) | Address | Text |
+
+    | Sourcecd | Int (11) | PhoneNumber | Int |
+
+    | Total | Int (12) | | |
+
+
+    Fig. 3. Experimental Databases Tables
+
+
+    +   c) Billing and Reporting
+
+
+    Billing and reporting linked to a concept of CSP billing fund.
+
+
+    +   B. Blockchain
+
+
+    The equity of blockchain in the CLOUDITY system is to improve the security of
+    data by checking every change data of the SCM from the decentralized database.
+    The full blockchain mechanism defined as follows:
+
+
+    +   1) Set up Ethereum Node
+
+
+    Ethereum is a network. The way to create Ethereum is set up Ethereum node. One
+    of the many applications which can be used to create node is Geth.
+
+
+    +   2) Create Smart Contract
+
+
+    Contracts are floating databases that can be used by all the participants at a
+    particular address. The address is the contact point to the actual database. Smart
+    contracts are written in a language called Solidity, which is compiled through
+    an online compiler is RemixDE.
+
+
+    +   3) Create Distributed Application
+
+
+    Distributed Application (DAPP) is the application used to upload data from to
+    a Smart contract. DAPP is built to store data on the blockchain network.
+
+    The advantages of these methods are: (1) making a flexible system, (2) increasing
+    the data collection, (3) increasing transparency in user, (4) decentralized data,
+    and protecting product histories from the early today.
+
+
+    F. 2. SELAT (Service Level Architecture)
+
+
+    +   b) Service Integration (SI)
+
+
+    SI integration provides services by the CSPs.
+
+
+    +   c) Service Provisioning (SP)
+
+
+    Resources can be of two types. It is proactive or reactive. The user wants, the
+    balancer will be the one who manages the migration and registration. The SCM uses
+    resources from many CSPs based on the requirements.
+
+
+    +   d) Event Management (EM)
+
+
+    EM consists of two modules: (1) Monitoring, a module that regularly verifies QoS
+    and SLAs as that and (2) Alarm, a module that notifies the user when the resource
+    limit has hit, then the user can take the next step.
+
+
+    +   e) Security
+
+
+    Security is used to record all activities that have logged. It authentication
+    methods allows limit user access rights. It is regularly checking data in a decentralized
+    database.
+
+
+    +   f) Management Operation Console (MO)
+
+
+    MO is an interface of use. Users can operate feature in feature using SELAT.
+
+
+    +   g) Authentication Service (AS)
+
+
+    AS is used to authenticate the user who will access the accounts and services
+    in SELAT. Thus, only registered users can access the services.
+
+
+    +   h) Service Audit (SA)
+
+
+    SA is linked to the user''s account.
+
+
+    +   i) Access Control (AC)
+
+
+    AC controls the rights of the user to access (access over resources).
+
+
+    +   j) Cloud Provider Services (CSP)
+
+
+    +   a) Asset Discovery
+
+
+    SELAT provider contacts CSPs to receive new assets information by checking. SELAT
+    is allowed to receive information by checking the asset discovery of CSP.
+
+
+    +   b) Reusable Assets
+
+
+    Reusable assets are CSP''s main assets. SELAT architecture saves the reusable
+    assets in the database, so SELAT does not check the data periodically.
+
+
+    # IV. DESIGN OF EXPERIMENT
+
+
+    In this study, we conducted experiments. The data on the day to find out the results.
+    We conducted experiments 40 data and 33 days and a maximum of 10 servers. The
+    experiments were conducted using a local server. The server could improve connection
+    performance. It is the bandwidth connection is used with a limited linear.
+
+
+    We conducted experiments on the relational database. The relational database has
+    several tables with details, in Fig. 3. One of several tables is the tb table.
+    Tb has a primary key in the id column, tb source has a primary key in the id column.
+    Tb source has with join tb in the sourcecloud column.
+
+
+    21'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# TABLE I. DIFFERENT DATA SERVER
+
+
+    | Number of Same Data Servers | Number of Different Data Servers | Total Server
+    | Result |
+
+    |---|---|---|--|
+
+    | 9 | 1 | 10 | Show the most data |
+
+    | 8 | 2 | 10 | Show the most data |
+
+    | 7 | 3 | 10 | Show the most data |
+
+    | 6 | 4 | 10 | Show the most data |
+
+    | 4 | 6 | 10 | Show the most data |
+
+    | 3 | 7 | 10 | Show the most data |
+
+    | 2 | 8 | 10 | Error |
+
+    | 1 | 9 | | Error |
+
+
+    | # Name | Price | Source Name | Total |
+
+    |---|---|---|--|
+
+    | 1 Ring | 76 | Jewel Queen | 10 |
+
+    | 2 Socks | 4 | White Uniform | 17 |
+
+    | 3 Cap | 4 | Black Side | 13 |
+
+    | 4 T-shirt | 15 | Epic Tinder | 20 |
+
+    | 5 Shoes | 58 | White Rival | 12 |
+
+
+    Fig. 4. Results of An Experiment Display
+
+
+    # Performance Comparison
+
+
+    ![](img/f3828bbe916f4d9adeaf9c243ad9fbec_3_0.png)
+
+
+    Fig. 5. Performance Comparison
+
+
+    # V. EXPERIMENTAL RESULT
+
+
+    In this section we achieved several results from a different condition. The result
+    of an experimental display shown in Fig. 4. Result was grouped into two groups.
+
+
+    # A. Different Data Server
+
+
+    Table I shows the details of the experiments carried out on the condition of number
+    of different servers. Using different servers to get the results that displayed
+    has the same as that on each server. If data modification occurs on not used,
+    then the value on server is not used. However, using an unequal amount of data
+    will result in different error conditions on the first server even then the first
+    server may have a modification. It was modified because the blockchain was checked
+    by one on every server before delivering. Thus, blockchain could not handle it.
+
+
+    # B. Same Data Server
+
+
+    Table II shows the experiments'' details under the same number of servers that
+    have modification and do not have same time. Using the same number of servers
+    that have modification and not have modification data is not successful. It happened
+    because the blockchain was checked by one by one on every server before delivering.
+    On the performance, the load time from the server becoming longer. It happened
+    because the system needs to be checking on every connected server before deploying
+    the data to the blockchain to improve its security.
+
+
+    # TABLE II. Same Data Server
+
+
+    | Number of Same Data Servers | Total Server | Result |
+
+    |---|---|--|
+
+    | 1 | 2 | Error |
+
+    | 2 | 4 | Error |
+
+    | 3 | 6 | Error |
+
+    | 4 | 8 | Error |
+
+    | 5 | 10 | Error |
+
+
+    displaying. The detailed performance shown in Fig. 5. The performance using blockchain
+    directly proportional to the amount of data and total. The ratio of using 30 data
+    with the blockchain with ten servers and not one in 10. However, the ratio using
+    30 data with 40 data with blockchain is 12. This proves that blockchain requires
+    a longer processing time.
+
+
+    # VI. CONCLUSION AND FUTURE WORK
+
+
+    The PROPOSED cloudy system introduced a cloud-based supply chain mechanism which
+    utilizes the SELAT architecture in blockchain to make companies to exchange information
+    securely. The SELAT architecture functions as a connector between servers and
+    CSPS. The blockchain system shows that data can be securely stored and retrieved.
+    It shows the proposed system can improve the security of data modification by
+    getting data in the blockchain system. However, the blockchain system could improve
+    its security of operation. It increases performance. In future, we believe that
+    applying a blockchain in another web application would improve its security. However,
+    it could decrease the performance in stored data from the server'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# REFERENCES
+
+
+    [1] V. Naidu, K. Malliar, A. Naik, and P. Bhavathakar, “A Fully Observable Supply
+    Chain Management System Using Block Chain and IOT,” 2018, doi: 10.1109/ICGRD.2018.8592792.
+
+
+    [2] R. Dog, “Market-oriented cloud computing: Vision, hope, and reality of delivering
+    computing as the 5th utility,” 2009, doi: 10.1109/CCGRD.2009.0097.
+
+
+    [3] L. Cummins, and C. Carrião, “Improving grid resource usage: Metrics for measurement,”
+    2012, doi: 10.1109/CCGRD.2012.635183.
+
+
+    [4] B. S. Lee, S. Yan, D. Ma, and G. Zhao, “Aggregating IaaS as service,” Proc.
+    2011 - Annu. SIIF 2011, p. 335–338, 2011, doi: 10.1109/SIIF.2011.6081014.
+
+
+    [5] R. Elmasri and S. B. Navathe, “Distributed Databases Systems, 6th Edition.
+    2016.
+
+
+    [6] A. Ahmed, and B. M. Salem, “Centralized Database: A Prototype for Security
+    and Stability Development in Networks,” Proc. Int. Res. Comput. Cloud, 2017, doi:
+    10.1109/ICCLOUD.2017.7956217.
+
+
+    [7] Y. Yumuraj, J. Ajani, and J. Beni, “BaaS as a cloud service: Advantages and
+    Disadvantages,” Proc. - Soc. Behav. Sci., 2015, doi: 10.1217/SBS.2015.2006.12.
+
+
+    [8] R. Pagani, I. Acharyajam, and D. Devi, “Cloud Computing: A Tale of Peer to
+    Peer Security,” 2019, doi: 10.1109/ACCESS.2019.2916826.
+
+
+    [9] F. Hussain, P. Jambathe, D. Fang, and X. Lin, “A Publication and Comparison
+    Framework for Cloud Broker Service Architecture,” IEEE Trans. Ind. Comput., 2009,
+    doi: 10.1109/TIAC.2009.523733.
+
+
+    [10] S. Sundreswaran, A. Squairini, and D. Lin, “A brokerage-based approach for
+    cloud service selection,” 2012, doi: 10.1109/CLOUD.2012.119.
+
+
+    [11] M. Hossain, R. Khan, S. Al Noor, and R. Hasan, “A Generic Architecture for
+    Cloud as a Service,” 2016, IEEE Int. Conf. Comput., 2016, doi: 10.1109/ICCLOUD.2016.6011.2.
+
+
+    [12] S. Mon, A. Karin, Z. Safdar, K. Safdar, E. Ahmed, and M. Intrar, “Security
+    in distributed blockchain: Analysis, equipment and open future,” Fut. Comput.
+    Syst., 2019, doi: 10.1016/j.future.2019.02.023.
+
+
+    [13] G. Zohrab, O. Nelson, and A. S. Pentland, “Decentralizing privacy: Using
+    blockchain to protect personal data,” 2015, doi: 10.1109/ACCESS.2015.2727.
+
+
+    [14] D. Zhurkovsky, “Dismantle Data Silos through Cloud Integration., 2017.
+
+
+    [15] L. Xu, L. Chen, J. Yu, and W. Shi, “SoC: Secure chain management system based
+    on public ledger,” 2017, doi: 10.1109/CCRN.2017.3038154.
+
+
+    [16] K. Monteiro, E. Rocha, S. Silva, G. Santos, W. Santos, and P. T. Endo, “Development
+    of a health system based on IoT and cloud computing,” 2019, doi: 10.1109/UCC-Communication.2018.00024.
+
+
+    [17] D. Elliott, C. Otro, M. Rudney, and X. Merino, “A Cloud-Generic Container
+    for Interoperability,” 2018, doi: 10.1109/CLOUD.2018.00045.'
+  merge: -1
+  img_proc: true
