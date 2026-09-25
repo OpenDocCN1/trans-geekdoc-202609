@@ -1,0 +1,763 @@
+- pgno: 0
+  md: '# Research on CPU Instruction Security
+
+
+    Haolan Wu $^{1*}$ $
+
+
+    Qiang Wei $^{2**}$
+
+
+    $^1$China Digital Switching System Engineering and Technological Research Center
+    Zhengzhou
+
+
+    $^2$China National Digital Switching System Engineering and Technological Research
+    Center Zhengzhou
+
+
+    Henan, China
+
+
+    Henan, China
+
+
+    e-mail: wuhnmar3@163.com
+
+
+    *Corresponding author: "prof_weiqiang@163.com
+
+
+    Zebin Wu $^3$
+
+
+    $^3$China National Digital Switching System Engineering and Technological Research
+    Center Zhengzhou
+
+
+    Henan, China
+
+
+    e-mail: wuzhuhi2010@foxmail.com
+
+
+    **Abstract—**research on abnormal instruction, Midtown, Spectre, undocumented
+    instruction and on the processor lately claim that security is one of the few
+    processor security. This paper analyzes the extension standard, optimization technology
+    and the relationship between instruction and microarchitecture security problems
+    including instruction description, vulnerability of optimization technique, hijacking
+    updating, undocumented instruction. Then, the mitigating hardware and software
+    measures for the instruction problems are explained. Finally, it concludes that
+    the research on undocumented instruction, semantic ambiguity of undocumented instruction
+    and recovery mechanism are the trends of future security research.
+
+
+    Key words: CPU; instruction; vulnerability
+
+
+    # I. INTRODUCTION
+
+
+    As shown in 1971, Intel introduced the world''s first microprocessor 4004, marking
+    the birth of the CPU. To the emergence of the first microprocessor with superscalar
+    architecture pipeline, and in 1994 formally introduced out-of-order execution
+    branch prediction what has been used by processors, the performance has been greatly
+    improved. To improve performance and meet the increasing demands of software and
+    systems, modern processors introduce many issues such as hyperthreading, virtualization,
+    instruction set extension and more requirements.
+
+
+    ![](img/4a743204a52bd06086f2ff545a78ce07_0_0.png)
+
+
+    The booming of CPU also brought many security problems. As shown in 2002, FVD/
+    bug caused errors in floating-point division on the processor in 1994, and a number
+    of problems were revealed [1]. In 1997, the FPU abnormal instruction in the Pentium
+    processor caused data errors. Rift, the possibility of Ring -3 root exploit at
+    Blackhat in 2009 [2]. In 2014, the Transactional Extensions (TSX) has affected
+    the normal operation of the system; in 2015, the Memory Store vulnerability combined
+    with the inherent flaw of the system management could raise the privilege from
+
+
+    the Ring 0 to the Ring-level 3. In 2017, in Midtown and Spectre allowed unauthorized
+    code execution [4]. even though ever manufactured, and there were numerous variants,
+    such as Foreshadow and Meltdown (MDS) series, which made the information of operation
+    on the device risk to be leaked [5][6][7][8]. These security problems seriously
+    jeopardize network security, critical infrastructure and security information
+    in important industries, and have caused huge losses.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# FDIV bug
+
+
+    # Ring-3 rootkit
+
+
+    # CPU vulnerability
+
+
+    # 1994
+
+
+    # 1997
+
+
+    # 2009
+
+
+    # 2014
+
+
+    # F00 bug
+
+
+    # TSK bug
+
+
+    # ZombieLoad
+
+
+    # Intel ME RCE
+
+
+    # 2015
+
+
+    # 2020
+
+
+    # 2019
+
+
+    # 2018
+
+
+    # 2017
+
+
+    # Memory Sinkhole
+
+
+    # LVI
+
+
+    Meltdown, Spectre, RIDL, PortSmash, Foreshadow, TLBleed
+
+
+    Figure 2. CPU vulnerabilities
+
+
+    At present, research on CPU security is fragmented, with more problems and different
+    constraints. The industry and academia are now trying to define effective measures
+    against these problems, and existing measures are aimed at a single vulnerability.
+    Through the analysis of vulnerabilities, such as abnormal instruction, Meltdown,
+    Spectre and so on, this paper demonstrates that instruction security is the core
+    problem of processor security. Instruction security includes hardware protection
+    to violate the stated security, will not be used to generate abnormal problems,
+    nor be hijacked and tampered with to leak information and the normal execution
+    of CPU. The operation basis of CPUs depends on the instruction set architecture.
+    Instruction security affects the security of the CPU and the whole system. Our
+    work focuses on the analysis of the perspective of the established description
+    and execution of instructions, summarizes key findings such as violation description,
+    execution optimization, updating mechanism, undocumented instruction and backdoor,
+    and measures the security impact of various hardware protection techniques.
+
+
+    registers, address patterns, memory architectures, unexpected processing and execution
+    IO. The ISA is the specification for processor design and the implementation of
+    the processor corresponding to ISA, ISA can be implemented in different microarchitectures,
+    and different implementations may cause CPUs to differ in performance and cost.
+    If CPU violates the design standard of ISA fails to execute an instruction according
+    to the established description provided by the manufacturers to the developers
+    during the execution of instructions. The CPU manufacturers may leak sensitive
+    data through registers. The errata collects from 2007 to 2019 according to the
+    working mechanism of CPU, it is divided into six types in table [10]:
+
+
+    TABLE I. CPU IMPLEMENTATION PROBLEM CLASSIFICATION
+
+
+    | Error Categories | Definition |
+
+    |---||
+
+    | Execute Errors | An incorrect occurs during the execution of an instruction,
+    leading to the execution fault. |
+
+    | Memory Error | Improper memory access occurs during the execution of instructions.
+    |
+
+    | Result Error | A result exceeds the limit occurs in process execution. |
+
+    | Abnormal Signal | The relevant abnormal signal occurs appears during the execution
+    of instructions. |
+
+    | Parameter Error | The wrong parameters appear during the execution of instructions.
+    |
+
+    | Processor Supervisor | The exception occurs which causes the processor to suspend
+    during the execution of instructions. |
+
+
+    The architecture structure of CPU is as follows: in the first, we develop the
+    component of CPU. In the second, we discuss the design of instruction detail.
+    In the third part we discuss the defense mechanism of CPU protection. The fourth
+    part focuses on future research. In the final part we summarize the main work.
+
+
+    # II. Instruction SECURITY PROBLEM ANALYSIS
+
+
+    The CPU is the hardware unit for processing and execution program. The therefore,
+    design, optimization and execution of the instruction set of the CPU and are related
+    to the security of the entire system. This section describes the working mechanism
+    of the CPU and the execution and process of instructions. The current instruction
+    security issues from the aspects of instruction design, optimization, updating
+    mechanism and potential threats.
+
+
+    # A. Instruction violation description
+
+
+    ISA defines all information required by computer programmers, including local
+    data types, instruction formats,
+
+
+    Although most errors are harmful, some errors can result in the possibility of
+    the CPU hanging, or over a crash. FDIV bug is due to input errors in the multiplication
+    table [1], f0ef exception instruction is invalid encoding, and the exception handling
+    mechanism is deadlocked, which eventually causes the processor to stop running.
+    Therefore,'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'this paper considers that violating ISA design seriously affects instruction
+    security.
+
+
+    # B. The aspect of optimized execution
+
+
+    In order to improve the efficiency of instruction execution, modern processors
+    basically adopt the out-of-order execution and branch prediction technology. The
+    out-of-order execution technology is an optimization technique that allows all
+    execution units of the CPU core to be used as exhaustively as possible when the
+    execution unit is occupied, as a result of the instruction follows the schema,
+    the instruction can be reordered without effects, differences in timing can be
+    learned.
+
+
+    Branch prediction technology make CPU various mechanisms to produce the results
+    of branches or dependencies. The CPU will continue to execute along the predicted
+    path. For example, Branch Prediction Unit (BPU) is to predict the next instruction
+    branch, and Branch Target Buffers (BTB) to record useful information for prediction
+    [23]. With proper prediction, CPU can use precomputed results from the
+
+
+    reorder buffer, improving the overall performance. However, if the prediction
+    is incorrect, CPU needs to perform a rollback to the last correct state. It is
+    easy for sensitive information to be leaked.
+
+
+    In 2018, the Google Project Zero team announced the Meltdown [5]. This vulnerability
+    affects almost all processors except Intel processors. When Meltdown appeared,
+    the Google Project Zero team announced the Spectre [6]. This vulnerability affects
+    all modern processors, which are more extensive than Meltdown. By using optimization
+    technology, the side channel can read all the information in memory, which can
+    cause leak of sensitive information, and it can also threaten cloud protection
+    through virtualization technology.
+
+
+    Most of the side channel attacks are based on the speculative execution mechanism
+    and branch prediction mechanism. As shown in Table 2, if combined with other factors,
+    it can cause serious harm [77][51][52], and vulnerabilities will always exist
+    and can be predicted for specific vulnerabilities. Therefore, the security of
+    the processor is usually affected by the utilization of instruction optimization
+    technology.
+
+
+    | CVE number | Vulnerabilities at | Cause of leak |
+
+    |---|---|--|
+
+    | CVE-2017-3573 | Spectre | Bounds Checks Bypass (BCB) |
+
+    | CVE-2017-5715 | Spectre | Branch Target Injection (BTI) |
+
+    | CVE-2017-5754 | Meltdown | Rogue Data Cache Load (RDCL) |
+
+    | CVE-2018-3640 | Spectre-ng | Rogue System Register Read (RSRE) |
+
+    | CVE-2018-3639 | Spectre-ng | Speculative Store Bypass (SSB) |
+
+    | CVE-2018-3666 | Spectre-ng | Lazy FP State Restore |
+
+    | CVE-2018-3693 | Spectre-ng | Bounds Checks Store (BCBS) |
+
+    | CVE-2018-3615 | Foreshadow | L1 Terminal Fault (L1TF) |
+
+    | CVE-2018-3620 | Foreshadow-NG (OS) | L1 Terminal Fault (L1TF) |
+
+    | CVE-2018-3646 | Foreshadow-NG (OS) | L1 Terminal Fault (L1TF) |
+
+    | CVE-2018-12126 | Fallout | Microarchitectural Buffer DataSampling |
+
+    | CVE-2018-12130 | ZombieLoad | Microarchitectural Fill Buffer Data Sampling |
+
+    | CVE-2018-12127 | RIDL | Microarchitectural Load Port Data Sampling |
+
+    | CVE-2018-15572 | SpectreRSB | Return Mispredict |
+
+    | CVE-2019-11091 | RIDL | Microarchitectural Data Sampling Uncacheable memory
+    |
+
+    | CVE-2019-11135 | RIDL/ZombieLoad v2 | Transactional Asynchronous Attack (TAA)
+    |
+
+    | CVE-2020-0549 | RIDL/CacheOut | L1D Execution Sampling (L1DES) |
+
+    | CVE-2020-0548 | RIDL | Vector Register Sampling (VRS) |
+
+    | CVE-2020-0551 | LVI | Load Value Injection |
+
+
+    # C. Hijacking instruction updating mechanism
+
+
+    Usually in the software or security system, Trojan is a common security problem.
+    It''s not easy to build in hardware or
+
+
+    even instruction level, because the hardware is usually difficult to change later.
+    Microcode is the combination of a set of micro commands that implement certain
+    operation functions'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'in a cycle of the machine. Micro command is a control unit that sends out various
+    control through the control line to the execution path. The function of a machine
+    instruction is realized by a sequence of several microcode. The operation completed
+    by a machine instruction is divided into microcode, which is interpreted and executed
+    by the processor. The complex instructions are usually decoded into a series of
+    simplified microinstructions [9]. And each mechanism is introduced through random
+    access memory to fetch them. However, there are some functions of instructions,
+    and updating the microcode provides possibility of debugging.
+
+
+    In previous papers [54], our experimental test reduced the search space and greatly
+    improved the efficiency and accuracy of Sandsfter by improving the algorithm.
+    It was tested on processors such as I7-4770, I7-4820C, Xeon-E3, I126-M, C-50,
+    Nano U and KIH2680. The OFID was only discovered as FreeCTH in 20. The OF18 instruction
+    was introduced by Intel in 2018. The microcode processor is similar to VIA''s
+    name and the number of undocumented instructions, and some OA7 instruction do
+    not exist in other processors. These related vulnerabilities should be shared
+    among researchers.
+
+
+    By observing the test of undocumented instructions, it is found that most processors
+    contain a large number of undocumented instructions, and the specific execution
+    of these instructions is unknown. For example, in 2018 Blackumas, researchers
+    discovered an undocumented instruction in the backdoor. These instructions can
+    be upgraded to user privileges by using this instruction. This vulnerability exposes
+    the control of tens of millions devices
+
+
+    In 2014, Daming Chen [32] showed that on the x86 processor, having malicious microcode
+    could potentially implement malware structures or change instructions. Although
+    the undocumented requires privileges, the function is implemented in the processor
+    component. There is not easy to
+
+
+    In 2007, Koppe Philipp [33] analyzed the undocumented x86 processor. They reposed
+    the mutex structure of AMD''s KX and K8 series, and microcode updates. They found
+    05 JS instructions to hide the malicious load, and finally retrieved the microcode
+    trojan in the driver to retrieve the activation of the micro hook and use it to
+    remove the control
+
+
+    In 2008, King implemented hidden backdoors in the open source CPU and revealed
+    the advantage over others [29]. Another study analyzed how to add more mode to
+    the backdoor, and the backdoors which are not subject to operating system security
+    policies [2020]. Dufoil Loi proposed a verification method based on the modified
+    virtual machine built-in CPU for the processor backdoor security. It proved that
+    the existence of the processor backdoor would bring great benefit to the system
+
+
+    If there is a problem with the undocumented function, user would choose to errata
+    by providing updates to fix security problems and prevent the occurrence of vulnerabilities.
+    Although the specific details of the update mechanism have not been disclosed,
+    there is risk of being explored through reverse analysis, which affects the performance
+    of the processor. Once this process occurs, the mechanism can only be encrypted
+    to check to prevent hijacking.
+
+
+    If attackers add hidden instructions and some-backdoors, it is hard for software
+    to detect. Research on undocumented instructions is an important foundation for
+    preventing threats.
+
+
+    # ### III. SECURITY MEASURES
+
+
+    # D. Undocumented instruction and backdoor
+
+
+    The limited relating of undocumented instructions is not published by manufacturers,
+    so instruction research is challenging because of the limited resources. Currently,
+    security testing is based on the permission house of microcode [94]. However,
+    source code and test data are not easily collected because of the complexity and
+    integration of the CPU, it is difficult for researchers from non-microcode platforms
+    to test security.
+
+
+    Generally, the problem of instruction design, optimization and the updater will
+    regularly release errata patches to fix security problems. To prevent the emergence
+    of vulnerabilities, researchers design security mechanisms to protect. This paper
+    introduces the classification of security measures, and discusses in detail patch
+    mitigation measures and hardware technologies.
+
+
+    # ### A. Patch mitigation measures
+
+
+    Using the microcode patch is a general method to with vulnerabilities. It allows
+    allow to breach the target by injecting undocumented microcode patches to achieve
+    Indirect Branch Speculative Execution (IBRS) [36], Single Indirect Branch Predictors
+    and Indirect Branch Predictor (IBPB). Guo Chen [7] showed the effectiveness of
+    these three patches and found that it will be effective over hyperprediction.
+    Protection of RSA and other cryptography is essential for obtaining the key to
+    prevent the side channel attack from obtaining the cracking algorithm. The current
+    AMD processor uses a powerful encryption algorithm to protect the microcode update
+    mechanism, which also helps mitigate security threats
+
+
+    The Sandsifter discovered by Christopher Dumas [26] elevates finely fusing with
+    CPU instruction test, discovering undocumented changes from reverse analysis of
+    automatic instruction. Zhi Zhang proposed CPU security benchmark [27], which they
+    they developed and it''s better than Sandsifter, and can run under arm and other
+    architectures. Baires is a 64-bit hardware instruction set fitter after Sandsifter.
+    It is designed to run without-break without any operating system [
+
+
+    236'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# IV. OUTLOOK
+
+
+    at the command [35]. However, these can only be possible, not that the encrypted
+    data is as safe, prevent vulnerabilities from being exploited.
+
+
+    In recent years, CPU security has always been the focus of the attention of researchers.
+    However, the instruction security in CPU is less studied because of the high difficulty
+    in analysis. With the development of technology, CPU vulnerabilities are increasing,
+    and the security of instructions is gradually paid attention to. Many researchers
+    are also trying to correct the security issues of the next instruction and error.
+    This paper shows that the future development of CPU instruction security is divided
+    into three:
+
+
+    Although it is possible to correct some error by microcode update, it is not completely
+    effective, and the hardware patch can only roll back after the vulnerability occurs.
+    The loss of vulnerabilities can be effectively reduced by microcode update, performance
+    because of additional conditional checks. It is not possible to apply them in
+    all cases. For example, the microcode update of AMD K is detected by various technologies,
+    including Dia [35]. Spc [38], hardware mechanism of the programmable program [40]
+    and using software to detect and fix hardware errors [49-50].
+
+
+    # A. Search and analysis of undocumented instruction sets
+
+
+    There will be some instructions in the CPU for debugging, disregarding instructions
+    and test constructions without documentation documents. The processor will be
+    seriously affected if there is an instruction like these. C3 CPU God mode, [28]
+    of undocumented instruction [29], trojan made with microcode [33] can cause of
+    hardware-level vulnerabilities, searching and analyzing undocumented instructions
+    will be the focus of CPU instruction security.
+
+
+    # B. Hardware protection techniques
+
+
+    Hardware-level defense is essential to ensure the safety of processor, but due
+    to the technical limitations and considering the balance of performance, there
+    is no perfect security of the hardware. Level introduced by extension of cache
+    architecture (CAT) will help isolate critical areas and limiting capacity by securing
+    software data distribution to specific locations of the last-level.
+
+
+    # B. Semantic ambiguity of instructions
+
+
+    Although the manufacturers have open documents for instruction interpretation,
+    the core of the research is whether the semantics of the instruction is consistent
+    with the document. Professor Wei of Tsinghua University found that the real instruction
+    is different from implementation problems, the results of some instructions are
+    inconsistent with the expectation, resulting in processor timeout and lock. Some
+    security mechanisms can detect hidden vulnerabilities, such as hardware such as
+    Dias and Specs. However, software can find more complex problems, and hardware
+    requires more efforts. How to study and more efficiently the instruction analysis
+    and error is the focus of the following.
+
+
+    Also, protection can be achieved by combining other hardware protection techniques.
+    Intel TSX is designed to allow the application to execute fine-grained help, detect
+    malicious behavior and restore [42] roll back the system state in case of failure
+    [23]. Even TSX is not a trusted area and can also be used to prevent attacks for
+    cloud services [44][45][46], and effectively protect cloud services.
+
+
+    # C. Recovery of CPU internal mechanism
+
+
+    The analysis of instructions is inseparable from the recovery of internal mechanism
+    of CPU. For example, MDS [71][152] is detected through the reverse CPU internal
+    cache storage, building with instruction logic architecture branch to predict.
+    But few manufacturers have detected the internal structure and design, with current
+    of non-manufacturers security searching and analyzing is an important direction
+    of future research.
+
+
+    At present, virtualization technology, trusted computing and other system security
+    protection technologies are widely used, but they still have shortcomings. However,
+    virtualization uses privileged hypervisor to isolate multiple software that may
+    affect the whole system; the trusted platform module cannot ensure the security
+    of running. In 2013, Intel introduced Software Group Extension (SGX) security
+    set extension to add some memory access control techniques to protect applications
+    from higher-privilege area. In recent years, SGX has been applied to protect creating
+    trusted environments, and so on. Nevertheless, the processor with SGX will still
+    be vulnerable, and the protection method is still a long way to go.
+
+
+    Professor Wei of Tsinghua University has dynamic check and control technology
+    for CPU security [47]. To prevent CPU from being attacked by hardware trojan,
+    microcode update and hardware vulnerability, the instruction level CPU model and
+    hardware behavior security assertion are used to control the processor.
+
+
+    # V. CONCLUSIONS
+
+
+    The rapid development of the CPU has also brought many security problems. The
+    newly introduced functions and features have brought many vulnerabilities and
+    backdoors. It presents as “characters or are vulnerabilities” feature. There has
+    been a CPU instruction vulnerability in 1997, due to the complexity of studying,
+    the research started late. The existing security studies mainly focus on the security
+    analysis of a certain vulnerability in the processor, the implementation of attack
+    and design of defensive defense'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# ACKNOWLEDGEMENTS
+
+
+    This work was supported by the National Research and Development Program of China
+    under grant no. 2016Y07X014, 2017YFB08201, 2019Y09Q051.
+
+
+    # References
+
+
+    +   [1] Price D. Fortian IDV flaw-learned. IEEE Micro, 1995, 32(8): 56–88.
+
+
+    +   [2] Wojcik, R., Arisin, T., Fogg, A. SQL Injection reading-back attack. [Online]
+    Black Hat, USA, available: https://www.blackhat.com/reports/2009.
+
+
+    +   [3] Den, M. Sneynick. C. Black Hat, 2015: 1–2.
+
+
+    +   [4] Int AML vulnerability. IEEE security 2017: 1–27.
+
+
+    +   [5] Lin, J., Schwarz, D. G., et al. arXiv preprint arXiv:1801.01027, 2018.
+
+
+    +   [6] Kocher, P., Fogg, J. A., et al. Spectre and Meltdown: speculative execution
+    attacks. 2019 IEEE Symposium on Security and Privacy (S&), 2019, 1–19.
+
+
+    +   [7] Van Schaik, S., Miller A., Öksundela, S., et al. Rogue data: fault-induced
+    data leakage. 2019 IEEE Symposium on Security and Privacy (S&P), 2019, 88–95.
+
+
+    +   [8] Van Dijk, J. M., Miller W., and O''fetoward: Exploring the effects of
+    cache side-channel attacks. 2018 IEEE International Conference on Computer and
+    Communications Security (USENIX) [USENIX] Security Symposium (USENIX), 2018: 381–398.
+
+
+    +   [9] Raniero, P. M. Microgramming: A tutorial and survey of recent developments.
+    IEEE International Conference on Computers, 1990: 1–20.
+
+
+    +   [10] Qu, W., Xiong, X., Li, Z., and Wu, H. Comprehensive overview of security
+    problems in x86 CPU. Journal of communications, 2018, 11.
+
+
+    +   [11] Advanced Devices. Revision Guide for AMD Family 10th Generation[M]. 2014.
+
+
+    +   [12] Advanced Devices. Revision Guide for AMD Family 10th Processor[M]. 2014.
+
+
+    +   [13] Advanced Devices. Revision Guide for AMD Family 12th Processor[M]. 2014.
+
+
+    +   [14] Advanced Devices, Revision Guide for AMD Family 16th Processor[M], 2013.
+
+
+    +   [15] ARM. ARM Cortex-A7 Core Processor Developers Edition[M]. 2013.
+
+
+    +   [16] ARM. ARM Cortex-A5 Core Processor Developers Edition[M]. 2012.
+
+
+    +   [17] ARM. ARM Cortex-A9(M4320) and Cortex-M4 with FPU Software Developers
+    Edition[M]:2007.
+
+
+    +   [18] Intel. Core i7 2nd Generation Processor X6600 and Core i5 2nd Gen Processor
+    E6600 and E4000 Series Specification[M]: 2008.
+
+
+    +   [19] Intel. Core! Atom™ N400 Series Specification[M]: 2009.
+
+
+    +   [20] Intel. Intel® E-2100 Dual Core Processor Specification[M]: 2008.
+
+
+    +   [21] Intel. 8th and 9th Generation Intel® Core™ Processors Family Specification[M]:
+    2019.
+
+
+    +   [22] Lee S, Shih W M, Gera P, et al. Fine-grained control flow integrity with
+    branch shadowing (SOX) [USENIX] Security 2017, 557–574.
+
+
+    +   [23] Fournier L, Arthur A, Leyman J. Functional methodology for processors
+    using the test-generator approach on the x86 microarchitecture. Automation in
+    Test and Conference Edition, 2019. (Proc. No. PR00078). IEEE, 1999: 439–448.
+
+
+    +   [24] The fourth quantum of microprocessors/at the 38th Annual Computer Design
+    Conference. ACM, 2004: 241–258.
+
+
+    +   [25] Decoding the art of x86: Black Hat USA, 2017.
+
+
+    +   [26] Zhu J, Song W, Zhou X, et al. Security vulnerabilities in the On-Worklist-of-Execution
+    of Modern Processors. Computer, 2018: 8–14.
+
+
+    +   [27] Downards C. Hardware Attacks in x86 CPUs[J]. Black Hat USA, 2018: 1–14.
+
+
+    +   [28] Smith T. S., Tuccia J. A., et al. Execution analysis and Exploiting Malicious
+    Hardcode. IEEE, 2008: 1–8.
+
+
+    +   [29] David F. M, Carter E J, Carylie C, et al. Hacker: Word booted with Spectre
+    and meltdown. 2019 IEEE Symposium on Security and Privacy (S&P), 2019: 228–296.
+
+
+    +   [30] Lurlong L. CPU caches and consequences of execution. In Advances in Computer
+    Security. Springer, 2019.
+
+
+    +   [31] Chen D, Ahn H. J. Security analysis of x86 Processor Microarchitecture[J].
+    Arizona State University, 2014: 1–12.
+
+
+    +   [32] Zhang Y, Zhou J., Thomas Y, et al. Security analysis of x86 Processor
+    Microarchitecture[J]. USENIX Security Symposium (USENIX Security), USENIX Association,
+    2017: 1165–1184.
+
+
+    +   [33] Smith R, et al. Hardware attacks on microarchitecture. International
+    Conference on Computer Security, Berlin, Germany, 1994: 103–114.
+
+
+    +   [34] Intel. Speculative Execution Cache Mitigations. Intel White Paper, 2018:
+    revision 0.1, January 2018.
+
+
+    +   [35] Chen G, Zhang X, Sun Y, et al. Spectre attacks from speculative execution[J].
+    2019 IEEE Symposium on Security and Privacy (S&P), 2019: 142–157.
+
+
+    +   [36] Hurs S, Curtis K, and Smith T. S: A runtime attack stealing code from
+    branch predictor buffers[J]: Proceedings of the Twelfth International Conference
+    on Programming Languages and Systems, 2015: 517–526.
+
+
+    +   [37] Agustin T M. Divata: A reliable strategy for subversion of microarchitecture.
+    IEEE/ACM Transactions on Microarchitecture, 1999: 196–207.
+
+
+    +   [38] Intel. https://www.intel.com/content/www/us/en/support/articles/introduction-to-cache-attack.
+
+
+    +   [39] https://www.intel.com/content/www/us/en/support/blogs/2012/02/transient-execution-vulnerabilities.html
+
+
+    +   [40] Kuivakainen P, Fog, Bhathia P, et al. Hardware-assisted transient disclosure[J]:
+    Proceedings of the Eleventh International Conference on Computer and Communications
+    Security, 2016: 1–17.
+
+
+    +   [41] Shi M W, Lee S C, and T-Sg: Eradicating Control-Channel Attacks Against
+    Execution Programs[J]: NDSS, 2017.
+
+
+    +   [42] Xu Y, Cai P, and Wen L. Controlled-channel deterministic side channels
+    for unprotected operating systems[J]/2015 IEEE Symposium on Security and Privacy,
+    2015: 640–656.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '[46] Gauss D, Letnone J, Schuster F, et al. Strong and efficient cache side-channel
+    protection using transactional memory[C]/26th (USENIX). Security (USENIX) 17,
+    2017: 217–233.
+
+
+    [47] Liu J, Liu A, G et al. A Hardware Enhanced Server CPU with Xeon Cores under
+    Runtime Surveillance by an Application-Specific Programmable Processor[C]/2019
+    IEEE Hot Chip 11 Symposium (HCS), IEEE, 2019: 125.
+
+
+    [48] Chang G A R, August D J, Mukherjee R C S. Configurable transient fault detection
+    via dynamic binary translation[C]/Proc. 2nd Workshop on Processor Architecture,
+    2008.
+
+
+    [49] Sarangi S, Narakanasasamy S, Carneal B, et al. Patching processor design
+    errors with programmable hardware[J]. IEEE micro, 2007: 251–256.
+
+
+    [50] De Kruij M, Nomura S, Sankarkaling R. Relax: An architectural framework for
+    software-based attacks[J]. ACM Computer Architecture News, 2010, 38(3): 497–508.
+
+
+    [51] Canella C, Gentkin D, Diner G, et al. Loading data on meltdown-resistant
+    cpuid[C]/Proceedings of the 2019 ACM SIGSAC Conference on Computer and Communications
+    Security. 2019: 769–784.
+
+
+    [52] Schwarz M, Lipper M, Mughini D, et al. ZombieLoad: Cross-privilege-boundary
+    data sampling[C]/Proceedings of the 2019 ACM SIGSAC Conference on Computer and
+    Communications Security. 2019: 753–768.
+
+
+    [53] https://github.com/blitz/baesifter
+
+
+    [54] Li Xising, WU Zebei, Wei Qi, et al. UISFuzz: An Efficient Fuzzing Method
+    for CPU: Undocumented Instruction Searching[J]. IEEE Access, 2019: 14924–149236.'
+  merge: -1
+  img_proc: true
