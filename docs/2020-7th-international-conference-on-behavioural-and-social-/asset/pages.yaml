@@ -1,0 +1,690 @@
+- pgno: 0
+  md: '# # DEEP LEARNING MODEL FOR EARLY DETECTION OF FAKE NEWS ON SOCIAL MEDIA*
+
+
+    Pakindessa M. Konkobo
+
+    School of Computer Science
+
+    and Technology
+
+    Wuhan University of Technology
+
+    Wuhan 430070, China
+
+    maxime@@whut.edu
+
+
+    Rui Zhang
+
+    School of Computer Science
+
+    and Technology
+
+    Wuhan University of Technology
+
+    Wuhan 430070, China
+
+    zhanghangru@whut.edu
+
+
+    Siyuan Huang
+
+    Department of Computer Science
+
+    George Washington University
+
+    Washington, DC, USA
+
+    siyuanhuang@gwu.edu
+
+
+    Toussida D. Minongou
+
+    College of Information Science
+
+    and Technology
+
+    University of Nebraska at Omaha
+
+    Omaha, Nebraska 68106, USA
+
+    tminongou@unom.edu
+
+
+    Jose A. Ouedrado
+
+    Ecole Superie d''Informatique
+
+    University Nanzi Boni
+
+    josearth22_oused@gmail.com
+
+
+    Lin Li
+
+    School of Computer Science
+
+    and Technology
+
+    Wuhan University of Technology
+
+    Wuhan 430070, China
+
+    cathylin@whut.edu
+
+
+    **Abstract—** Fake news has become an important topic of research. This is due
+    to the impact of fake news on the internet es on social media. Many of the models
+    proposed in various studies are based on supervised learning. Therefore, these
+    models are unable to handle the huge amount of undetected fake news data. Few
+    studies focus on early detection. We propose a method to detect fake news on social
+    media at an early stage. By using semi-supervised learning, we make model able
+    to deal with the huge amount of unlabeled data. We use a method to extract queries
+    expressed in content, which we used CredRank to evaluate users'' credibility and
+    build a classifier. SSL is composed of three networks: a shared CNN, an unsupervised
+    CNN and a supervised CNN. We evaluated SSL on 25% of labeled data, SSL reaches
+    an accuracy of 72.57% on Politic and 70.35% on Gosip. When using data before in
+    the first 10 minutes of the beginning of the news, SSL reaches an accuracy of
+    71.10% on Politic and 68.07% on Gosip.
+
+
+    for consumption. The quality of stories on social media is far less than traditional
+    news organizations. Social media users get exposed to a myriad of misinformation
+    and falseinformation, producing fake news [1]. The impact of fake news has detrimental
+    effects on a variety of people and society [2]. Fake news on social media are
+    more complex than those on traditional media. The task of detection process more
+    complex and challenging.
+
+    Detecting fake news on social media has become a challenging area of research.
+    Studies have done each by the following: Some of them focused on news'' content
+    [3], This approach consists of extracting features from text and visual content
+    to classify news articles. However, this approach has a limit as news spreaders
+    can design their news so it becomes difficult to be detected as fake. Some others
+    focused on the characteristics of the user. Others who that the news [5], [6].
+    By basing the classification on user characteristics a high risk of based results
+    results in considering only true or fake news independently of the nature of the
+    news. Some researchers focused on analyzing news propagation and some focused
+    on users'' reactions about the news. These approaches have limits. Detection and
+    and the paths in news may be manipulated by the authors at the beginning of its
+    spread. As we noticed, all the proposed approaches have limitations, Detection
+    to better classify news [7], [8]. A of the few studies focused on fake detection
+    in an early stage and most of them proposed
+
+
+    **Index Terms**—fake detection, semi-supervised learning, credibility assessment
+
+
+    # I. INTRODUCTION
+
+
+    Nowadays people spend a lot of time on the internet. Some of the most-used apps
+    are social media site. Some of the well-known are Twitter, Weibo, Facebook, WhatsApp,
+    and WeChat we use daily. These social media are used by users to share news. It
+    is more affordable to get news from social media better than traditional media.
+    More than 62% of the US'' users getting information through social media in 2016
+    [1]. However, social media may be a double-edged sword'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'supervised learning models for fake news detection. they these models are unable
+    to deal with the huge amount of unlabeled data that is available in datasets for
+    news classification.
+
+
+    used in the last component to predict the truthfulness of the news. they experimented
+    their model on Weibo dataset and reached an accuracy of 87.2%. Visual contents
+    were shown to be an important factor for fake news propagation. Then, some research
+    focused on analyzing various characteristics of detection captured by the visual-based
+    features extracted from images and videos for verification. In [11], they used
+    a classification framework to identify fake news based on various tweet-level
+    and level-crafted features.
+
+
+    In this study, our objective is to build a simple supervised learning model to
+    classify news at the early stage of its spread. We extracted the expressed opinion
+    in the replies to the given news, evaluated the credibility of the users who posted
+    a tweet or replied the news and determine whether the news is fake or real. By
+    making the concern towards the sub-sections. These sections are based on following
+    the research questions.
+
+
+    +   - Q1: How to extract users'' opinion from comments?
+
+    - Q2: How to evaluate users'' credibility on social media?
+
+    - Q3: How to combine users'' user opinion, users'' credibility and network to
+    detect fake news?
+
+    - Q5: What is the influence of these elements on fake news?
+
+
+    To the best of our knowledge, none of the former research about news classification
+    on social media has taken consideration users'' credibility. This study is one
+    of the first to combine opinion, users'' credibility and use network for news
+    classification. The paper we present is organized as follows. First we present
+    related works. In section III we describe our approach. After that, we present
+    our data and the experimental results. And finally in section V, we conclude some
+    works.
+
+
+    # II. RELATED WORKS
+
+
+    Previous works mainly differ on how they are used. In this, we will describe some
+    previous studies using content news, social context and those using a combination
+    of features.
+
+
+    # A. Content-based
+
+
+    Content-based models extract features from news to predict the deception cues.
+    They are centralized on linguistic cues and visual-based approaches. Approaches
+    constructed in text analysis, and knowledge-based approaches to detect fake news
+    are introduced, they can contain some features that are inflammatory or negative.
+    Castillo et al. extracted linguistic features like hashtags, special characters,
+    emotion sentiment, positive/negative words to classify news stories [9]. They
+    analyzed related to "trending" topics and predicted whether they are credible
+    or not. The performance of their model was 0.754. Guo et al. proposed a model
+    that learns content and emotion to detect fake news on twitter [10]. Their model
+    learns emotions from two components. The first component learns emotions expressed
+    by the publisher, the second learns emotions expressed by other users. The purpose
+    of these two components are
+
+
+    This approach is based on social media engagement analysis. These techniques use
+    users and networks as, social context features representing the users of consumption
+    on social media. Social contexts can be categorized into propagation-based and
+    stance-based.
+
+
+    Stance-based models classify articles using users'' view. The stance of articles
+    can be explicit or implicit. Implicit stances are extracted from social media
+    posts and direct expressions of opinion ("hates and about") on Facebook. Stance
+    detection is the task of automatically determining whether the text is in favor
+    of, or neutral towards a proposal or target [12]. Tacch constructed a bipartite
+    network of user and Facebook using the "like" stance as information [13]; based
+    on this, the likelihood of Facebook posts was predicted using a supervised learning
+    model. Propagation models use elements of related social media posts to classify
+    news. These approaches assume that there is a correlation between the credibility
+    of a news and the credibility of the social media post. J. Ma et al. evaluated
+    the similarities between the page structures of the rumors to capture their high-order
+    pattern differing types [14]. The result of their work demonstrates that the kernel-based
+    approach is effective for accurate rumor detection.
+
+
+    # C. Hybrid-based
+
+
+    Hybrid-based models combine content-based and social-based approaches represent
+    an alternative to the previous approaches. Content-based and social context-based
+    approaches are mostly tailored of specific characteristics, they restrict the
+    power of the techniques. Combining content-based and social-based techniques increases
+    the accuracy of the detection models. Castillo et al. combined content-based,
+    user- and propagation-based features to evaluate credibility on Twitter [9]. Kwon
+    et al. explored set of users linguistic and temporal features by combining user
+    and linguistic features much [15]. They found consistently over short and long-time
+    windows.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# III. METHODS
+
+
+    The proposed model is composed of 4 major blocks: opinion extraction block, users''
+    credibility assessment block, users'' construction block and the classifier. Given
+    a news $n$ we get $t$ tweets as output. For each tweet $t_i$, we extract the replies
+    $r_{i1},\dots,r_{it}$ and the characteristics of the users $u_{i1},\dots,u_{it}$
+    where $u_i$ is the characteristics of the author of $t$. $[r_{i1},\dots,r_{it}]$
+    is used as input of the opinion extraction block and credibility block. The number
+    of users who replied to $t$ is the output of the opinion block $o_{i1},\dots,o_{it}$
+    and the output of the credibility assessment block $c_{i1},\dots,c_{it}$ are concatenated.
+    We assume that the result of concatenation of the author of $t$ is 1. $(L, G_0),
+    (o_{i1},\dots,o_{it}, c_{i1},\dots,c_{it})$ and the network $N$ are used as input
+    of our classifier SSLNES.
+
+
+    ![](img/3ee17d1bf468a266874217a050d4d552_2_0.png)
+
+
+    +   - The number of followers of the user;
+
+    - The number of users that these is using.
+
+    - We find users with similar characteristics. We use hierarchical clustering method
+    to cluster users into clusters. The similarity is determined using
+
+
+    $\sin(u_i, u_j) = \sigma(C(u_i), C(u_j))$
+
+
+    Where $C(u_i)$ represents the characteristics of the user and $\sigma(C(u_i),
+    C(u_j))$ represents the similarity between the characteristics of $u_i$ and $u_j$.
+    In our model, we use jaccard similarity to evaluate the similarity between users.
+    We have:
+
+
+    $$\sin(u_i, u_j) = \frac{C(u_i) \cap C(u_j)}{C(u_i) \cup C(u_j)}$
+
+
+    ![](img/3ee17d1bf468a266874217a050d4d552_2_1.png)
+
+
+    Fig. 1: Flowchart of the method
+
+
+    $\sigma(C(u_i)),\sigma(C(u_j)) = 1$ means that two users'' characteristics are
+    similar and $\sigma(C(u_i)),\sigma(C(u_j)) = 0$ means that their characteristics
+    are not. We use this to cluster users if their similarity exceeds the threshold
+    $tau$. The value of that varies for different domains. We use the following formula
+    to cluster users'' weights.
+
+
+    $\omega C_i = \frac{\sqrt{|C_i}|}{\sum \sqrt{|C_j|}}$
+
+
+    The flowchart of our opinion extraction model is shown in figure 2. We use GloVe
+    as an embedding layer of the network [16]. The text extracted from the replies
+    to a tweet is input of the embedding layer. The output of that layer is input
+    to the LSTM units. We use tanh as activation function. The output of the network
+    represents the opinion expressed in the content: 1 means that the author agrees
+    with the user and 0 means he/she does not agree. We sent sentiment140 to the test.
+
+
+    where $\omega C_i$ represents the weight assigned to the cluster with the members.
+    This value represents the credibility associated with the members.
+
+
+    # A. Opinion extraction
+
+
+    # B. User''s credibility assessment
+
+
+    In our study, we use the model described in [18] to evaluate users'' credibility.
+    That model, called CredRank algorithm, uses users'' behavior based on users''
+    characteristics:
+
+
+    +   - Whether the user''s account is a verified account or not;
+
+    - The number of statuses posted by the user;
+
+    - The geo-localization of the user is enabled or not;
+
+
+    # C. User''s network
+
+
+    To build the users'' network, we consider all the followers of the users who posted
+    a tweet about a news article. The algorithm 1 represents the algorithm of the
+    construction of the Network. Up represent the vectors of users who posted the
+    news $n$. Ur represents the vectors of users who replied to the news $n$. The
+    complexity of the algorithm is $O(x^2)$.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Algorithm 1 Network Builder
+
+
+    ```
+
+    **Input:** $U_p, U_r$
+
+    **Output:** $N : a$ matrix matrix
+
+    $y \leftarrow [U_p]$
+
+    $z \leftarrow [U_r]$
+
+    **for** $i = 0$ **to** $y$ **do**
+
+    $u \leftarrow U_p[i]$
+
+    **for** $j = 0$ **to** $z$ **do**
+
+    **if** $U_r[j]$ in followers of $u$ **then**
+
+    $N[i,j] \leftarrow 1
+
+    **else**
+
+    $N[i,j] \leftarrow 0
+
+    **end for**
+
+    **end for**
+
+    ```
+
+
+    # IV. EXPERIMENTS
+
+
+    A. Datasets
+
+    To experiment with our model, we used two opensource datasets mentioned in the
+    background: Feminist and GossipCop [19]. Both are extracted from Twitter. The
+    statistics of the two datasets are described in table V. Since our model is based
+    on users'' characteristics, reply and contents users, we treated these two datasets
+    to get final datasets. We used, python api to retrieve the missing values of users.
+    We then built a web crawler to get the replies to the tweets. In fact, Twitter
+    API can only fetch the replies not after that day. As our datasets were built
+    in 2018, we could get the replies that were web. Then, we used to get the characteristics
+    of all the users and all of the followers who posted a tweet about a given news.
+    The final features of our datasets are presented in table I. In GossipCop contains
+    a lot of data. For simplicity, we only consider the first 1000 tweets and 400
+    real news. The statistics of the datasets are described in tables II and III.
+    For each category we used the set of $U_p$ or $\sum_{j \in N} ||U_r|| = 2b$, where
+    $N$ is the set of $U_r$, which is the author of a tweet about a given news.
+
+
+    # D. Semi supervised classifier (SSLNess)
+
+
+    ![](img/3ee17d1bf468a266874217a050d4d552_3_0.png)
+
+
+    Fig. 3: Flow of SSLNess
+
+
+    Our classification model is represented in figure 3. It is a semisupervised model.
+    We built it with through Shared CNN. The output of that network is in two networks:
+    a supervised CNN and an unsupervised CNN. Samples $x_i$ as inputs is the concatenation
+    of the outputs of the two previous networks for the test $y_i$ ($0$ if it is not
+    labeled and $1$ otherwise). The cross-entropy loss $l^s$ is calculated only for
+    these samples. $l^u$ is the output of the output of the unsupervised. $l^u$ represents
+    the mean squared error. The weights of the optimization of $l^s$ and $l^u$ are
+    with. The weights of the layers of the shared CNN contain 128 ($3 \times 3$) filters.
+    The other layers contain 256 ($3 \times 3$) and 128 ($3 \times 3$) filters. A
+    ($2 \times 2$) pooling is used for all layers. So z and pooling is used to get
+    the final loss as:
+
+
+    ```
+
+    $Loss = -\frac{1}{|B|} \sum_{i \in B} \log(softmax(y_i)) + w(t) * \frac{1}{|C|}
+    \sum_{i \in C} ||z_i - z_i''||^2$$
+
+    ```
+
+
+    # TABLE I: Description of the final datasets
+
+
+    | Features | Description |
+
+    | --- | --- |
+
+    | News | The id of the news |
+
+    | Id | The id of the tweet |
+
+    | Date date | The time the tweet was posted |
+
+    | User id | The Id of the user |
+
+    | Author | The text of the tweet, if the user is an author, this is |
+
+    | Is verified | The author''s account verified or? |
+
+    | geo enable | The geo-localization of the user? |
+
+    | followers | The number of followers of the user |
+
+    | friends | The number of friends the user is |
+
+    | Description length | The length of the user''s account |
+
+    | Followers | The list of the followers of the user |
+
+
+    # TABLE II: Statistics of Politics
+
+
+    | Fake | Real |
+
+    | --- | --- | --- |
+
+    | Total of articles | 310 | 49 |
+
+    | Total of tweets/authors | 8591 | 2995 |
+
+    | Total of replies | 23908 | 10431 |
+
+    | Total of followers | 1,768,838 | 2,212,385 |
+
+
+    # TABLE III: Statistics of Gossipcop
+
+
+    | Fake | Real |
+
+    | --- | --- | --- |
+
+    | Total of articles | 350 | 120 |
+
+    | Total of tweets/authors | 10000 | 10000 |
+
+    | Total of replies | 44097 | 52790 |
+
+    | Total of followers | 3,000,000 | 3,000,000 |'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# B. Experiments setup
+
+
+    We set the dropout to 0.5; the number of epochs was set to 50; minibatch size
+    and the maximum learning were respectively set to 100 and 0.001. We used Adam
+    optimizer optimization algorithm [20]. Our baseline algorithms were used to compare
+    the performance of our model: Naive Bayes, Decision Tree, SVM and PCC_RNN+CNN
+    [21]. To evaluate the performance of our model, we used the metrics accuracy,
+    F1-Score and recall. Our problem is a classification problem. We predict whether
+    a news is true or not:
+
+
+    +   - True Positive (TP): correctly predicted true news;
+
+    - True Negative (TN): correctly predicted fake news;
+
+    - False Negative (FN): true news predicted as fake news;
+
+    - False Positive (FP): fake news predicted as true news,
+
+
+    Then we can define our metrics as follows:
+
+
+    ```
+
+    $Precision = \frac{TP}{TP+FP}$$
+
+    ```
+
+
+    ```
+
+    $Recall = \frac{TN}{TN+FN}$$
+
+    ```
+
+
+    ```
+
+    $F1 = 2 \times \frac{Precision \times Recall}{Precision + Recall}$
+
+    ```
+
+
+    ```
+
+    $Accuracy = \frac{|TP| + |TN|}{|TP| + |TN| + |FN| + |FN|}$
+
+    ```
+
+
+    # C. Results
+
+
+    ![](img/3ee17d1bf468a266874217a050d4d552_4_0.png)
+
+
+    Fig. 5: Comparison on performance on Gossipip
+
+
+    ![](img/3ee17d1bf468a266874217a050d4d552_4_1.png)
+
+
+    the PCC_RNN+CNN [21], that is a supervised learning model, achieves better results
+    than our model. The model achieves better results on Politifact than on Gossipip
+    due to the fact that gossipip data are less structured and the topics are more
+    subjective. We evaluated the effect of the different inputs on the accuracy of
+    the model. For that, we built three small versions of the model:
+
+
+    +   - SSLNews/Opinion-Network: it takes as the input of users and their network;
+
+    - SSLNews/Opinion-Credibility: it takes as the input of users and their credibility;
+
+    - SSLNews/Credibility-Network: it takes as the credit of users and their network;
+
+
+    25% of labeled data was used to evaluate these different models. From models 6,
+    it is noticed that SSLNews performs better when we use all the. The combination
+    of Credibility and Opinion seems to be better than the other ones. In the cases,
+    fake news were the most misclassified. That may be due to the fact that the network
+    is built by considering only the followers of the users who posted the about news.
+    By considering the network of all the users, we get better results. The result
+    was due to the time factor. For that, we considered for each news, the first $t_2$
+    to be the time about the news. We considered $T_0$ to be the time at $t_0$. We
+    set 3 windows: $W_1 = t_0 + 5$ minutes, $W_2 = t_0 + 10$ minutes and $W_3 = t_0
+    + 60$ minutes. For each news, the threads and replies that belong to each window.
+    We used 25% of labeled data to evaluate the model. The accuracy of the model tends
+    to 72% for the data in window 2. This shows that our model is able to classify
+    news 10 minutes after the first of the tweet news with an accuracy
+
+
+    Fig. 4: Comparison on performance on Politifact
+
+
+    The model is experimented using respectively 5%, 10% and 25% of labeled data.
+    The datasets are split randomly. The results of the experiments are presented
+    in figures 4 and 5. Our model achieves better scores than the first three baseline
+    that are standard learning models.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# REFERENCES
+
+
+    1. H. Alcott and M. Genzkov "Social media and fake news in the 2016 election.\,
+    Perspect. 31, no. 2, pp. 211–236, 2017.
+
+
+    2. J. Wang, K. Rubin, and Y. Chen, "Automatic deception detection: Methods for
+    finding fake news," Acc. Proc. Inf. Technol. 2018, no. 1, pp. 1–14, 2018.
+
+
+    3. M. Wang, S. HIZARD, et al., "A Symmetric Inquiry into Hyperinformation and
+    Fake News," [J. arXiv], 2017.
+
+
+    4. A. GUPTA, H. KUMARAGURU, P. Chen, "Taking shaky-challenges: fake news: during
+    hurricane sandstorm," Proceedings of the 22nd international conference on World
+    Web F, 2013.
+
+
+    5. M. MOHAMMAD, S. SOHMANI, P. KRITCHENKO, "Stance and Sentiment in tweets," ACM
+    Transactions on Internet Technology (TOIT), 2017, 10(4), 17–25.
+
+
+    6. TAKARASHI, T. GITA, N. "Detection of fake news on Twitter:" Proceedings of
+    the 16th International Conference on Soft Computing and Internet Systems, and
+    The 13th International Symposium on Advanced Intelligence Systems, 2012.
+
+
+    7. CASTELLO, C. MENDOZA, M. P. BELBORLE, "Information credibility in tweets,\”
+    Proceedings of the 20th international conference on the world web, 2011.
+
+
+    8. KOWN S, M. JUNG K, "Detection of Fake News Over Time using Variational Auto
+    Deep Learning," IEEE Access, 9:1217–1228, 2021.
+
+
+    9. Rubin, L. Chen and Y. Yin, and Nadia K, "Detection of fake news: for three
+    types of facts," Acc. Proc. Inf. Technol., 2020.
+
+
+    10. KG Kelley, et al. "Fake news vs. reality: A dataset and analysis," WebIA 2018:
+    10th ACM Conf. Web Sci., pp. 72–78, 2018. doi:10.1145/3239716.3239755
+
+
+    11. B. D. Horne and S. Sali, "Just In Fact: Fake News in a List of Items, Similarity
+    of Text in Body, More Similar to Real News than Fake News," arXiv:1805.09163.
+    http://arxiv.org/abs/1805.09163
+
+
+    12. E. Kochlenkov, M. Liu and A. Zubia, "Multi-task Learning for Rumor Verification,"
+    34: 3420–3413, 2018. Available: http://arxiv.org/abs/1801.01801
+
+
+    13. C. Paul and M. Williams, "The Russian ''Fake-hood'' Propaganda: Why It Might
+    Work and Options to Counter It," Santa Monica, CA: Rand Corporation, (2016).
+
+
+    14. E. Starberger and T. Metz, "The fake news crisis: Why it spreads and prevails?"
+    2017 26th ACM Conf. Web Sci., in New, Jun., pp. 235–239, 2017. doi:10.1145/3097149.3097152
+
+
+    15. J. Pennington, R. Schick, and C. D. Manning, "Global views on working with
+    fake news," Proceedings of the 24th international conference on empirical language
+    processing (EMNLP), 2014, pp. 1532–1542.
+
+
+    16. U. Gu, Al, Bha, and H. Li, "Using sentiment in social media for credit detection,"
+    2012, 24. URL: http://sentiment.sento.com/sentiment-analysis.
+
+
+    17. M. A. Abbas and H. Li, "Using sentiment in social media for credit detection,"
+    International Conference on Social Computing, Behavioral and Social Media Analysis,
+    2015.
+
+
+    18. Kingma, D. Perez, and J. Jimmy Ba, "A method for stochastic optimization,"
+    arXiv:1412.06910 (2014).
+
+
+    19. S. Zhou and J. Wang, "Deep learning for detecting fake news on Social Media,"
+    Web Data Vol 8, no. 3, pp. 171–188, 2018.
+
+
+    20. J. Li and J. Wang, "Detection of fake news on social media through propagation
+    tree with classification and convolutional networks," Twenty-second AAAI conference
+    on intelligence, 2018.
+
+
+    ![](img/3ee17d1bf468a266874217a050d4d552_5_0.png)
+
+
+    ![](img/3ee17d1bf468a266874217a050d4d552_5_1.png)
+
+
+    # V. DISCUSSION AND FUTURE WORKS
+
+
+    In this study, we built a supervised learning model to detect fake news on social
+    media. Our model used expressed features, users'' credibility and user networks.
+    We used LSTM and GRU vector to extract users'' emotions. credibility was evaluated
+    using RandomAlgorithm. We used real world data to test our model: News Precision
+    and Accuracy. When using data from the beginning of the news our model reaches
+    accuracy of 71.10 on Politfact and 68.07 on Gosossip. That is better than the
+    baseline. Compared to supervised learning your model reached competitive scores.
+    As future work, the scores of the proposed models will be improved. Some of the
+    tasks will consist in building a bigger network and using users'' activity on
+    social media for evaluation of credibility. During our study, we noticed that
+    the available datasets are all about one language. Therefore, we will build a
+    large language dataset and analyze the impact of languages on news classification'
+  merge: -1
+  img_proc: true
