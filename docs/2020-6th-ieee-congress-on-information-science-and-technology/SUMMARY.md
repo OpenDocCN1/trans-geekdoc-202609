@@ -1,0 +1,2 @@
++   [2020 第六届 IEEE 信息科学与技术大会 (CiSt) (摩洛哥 阿加迪尔-埃萨韦拉 2021.6.5-2021.6.12) 2020 第六届 IEEE 信息科学与技术大会 (CiSt) ｜｜ CoviNet：Au](README.md)
++   [2020 第六届 IEEE 信息科学与技术大会 (CiSt) (摩洛哥 阿加迪尔-埃萨韦拉 2021.6.5-2021.6.12) 2020 第六届 IEEE 信息科学与技术大会 (CiSt) ｜｜ CoviNet：Au](2020-6th-ieee-congress-on-information-science-and-technology.md)

@@ -1,0 +1,437 @@
+- pgno: 0
+  md: '# # CoviNet: Automated COVID-19 Detection from Xrays using Deep Learning Techniques
+
+
+    Samira Lafrazo
+
+    Department of Computer Science
+
+    Faculty of Science, Ibn Zohr University
+
+    BP 8106, 8000 Agadir, Morocco
+
+    samira.lafrazo@gmail.com
+
+
+    Mohamed El Ansari
+
+    Department of Computer Science
+
+    Faculty of Science, Ibn Zohr University
+
+    BP 8106, 8000 Agadir, Morocco
+
+    nelansari@gmail.com
+
+
+    **Abstract**—Coronavirus (COVID-19) is an infectious epidemic declared in March
+    2020 as Pandemic. Because of its rapid and easy transmission, Coronavirus has
+    caused thousands of deaths around the world. New methods for accurate and fast
+    COVID-19 detection are crucial. X-ray images are used for the diagnosis of coronavirus.
+    However, this requires considerable time. Artificial intelligence can help in
+    reducing pressure using deep learning to automatically detect COVID19 in chest
+    X-rays. The suggested architecture is based on a deep convolutional neural network.
+    It is trained end-to-end on a publicly available dataset. Our model achieved an
+    accuracy of 98.62% for binary classification and 97.75% for multi-class classification.
+
+
+    learning is becoming an evident choice for CXRs diagnosis. The main objective
+    of this paper is to provide an efficient framework for the automatic diagnosis
+    of COVID19. With this, we propose a deep learning model based on an end-to-end
+    convolutional neural network (CNN) [4] architecture without the use of any manual
+    feature extraction. In our method the preprocessing step is feeding the image
+    to the CNN. Even if our goal is to detect the presence of COVID19 in the images,
+    we worked on a multi-class classification (covid19 vs. normal). Examples of images
+    are presented in Fig. 1. In our study, we tried to improve the accuracy using
+    low computational cost and a lower number of parameters. The rest of this paper
+    will be organized as follows: Section II introduces sections of the article. The
+    method is described in Section III. Section IV demonstrates the results. Finally,
+    Section V concludes the paper.
+
+
+    *Index Terms*—coronavirus, covid19, deep, convolutional neural network, chest
+    X-ray, adaptive median filter-
+
+
+    # INTRODUCTION
+
+
+    Since 2019, coronavirus (also known as COVID19) has been spreading rapidly, causing
+    panic all over world. By June, more than 7.5 million people were infected and
+    425 thousand of these cases led to death [1]. This infection is transmitted easily
+    from person to person over sneezing, coughing or respiratory droplets. The virus
+    comes with cough, fever and shortness of breath, and can lead to pneumonia, multi-organ
+    failure and death [2]. Considering the fact of the absence vaccine or therapeutic
+    treatment for the novel coronavirus, early diagnosis is important. As they contain
+    useful information rapid radiological imaging including Chest X-ray (CXXR) and
+    computed tomography (CT), play an important role in early detection and treatment
+    of the pandemic [3]. However, the fast increase in the number of patients, makes
+    it hard for doctors to diagnose the cases in a limited time. In this context,
+    artificial intelligence can provide an accurate, fast and low cost for COVID19
+    diagnosis. Recently, deep learning is a subset of machine learning in artificial
+    intelligence, which works over-convolutional layers (crafted methods), in different
+    imaging tasks. It has been used in many problems such as classification and detection.
+    Here, deep
+
+
+    ![](img/84e8a91d8287baa77ba17a6d9e3006fd_0_0.png)
+
+
+    Fig. 1: Examples of Chest X-rays. (a) Normal. (b) Effusion affected lungs. (c)
+    COVID-19 positive.
+
+
+    # II. RELATED WORK
+
+
+    The use of machine learning for automatic diagnosis in the medical field has recently
+    become an important tool for scientists [5-8]. Recent works have been widely applied
+    to chest X-rays to detect the coronavirus. In this section, we will describe some
+    notable works in the field [9]. Khan et al have implemented the CorNetet, a convolutional
+    neural network based on Xception (Inception) which contains 71 layers trained
+    on ImageNet'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'dataset. The proposed model achieved an accuracy of 87% for COVID19 detection.
+    Sethy and Behra [10] proved that ResNet50 combined with SVM classifier provided
+    better performance in identifying COVID. [11] presented a comparison between several
+    well-known deep learning architectures. They used a small dataset of 50 images
+    in their experiments and proved that VGG19 and DenseNet200 were better. In [12],
+    they proposed a new architecture of CNN (COVID-Net), which is designed for classification
+    of normal and COVID19. The model was validated on a large dataset containing 13800
+    images. Wang and Wong [12] suggested a deep model for COVID19 recognition (COVID-Net),
+    which achieved 92.4% accuracy in detecting normal, non-pneumonia and COVID19.
+    Louis et al. [13] implemented a deep learning network using 234 labeled COVID-19
+    images. Their model obtained 98.75% and 93.48% accuracy rates for two classes,
+    respectively.
+
+
+    +   - The dataset images : 0 for normal, 1 for covid19 virus and 2 for effusion
+    disease.
+
+    - Resizing all of the images to one dimension size 256x256.
+
+    - Saving the images in one dimension scale (gray-scale).
+
+    - Solving the problem of imbalances of classes by data augmentation techniques
+    (mirroring, flipping and random rotation). Statistics of the new dataset are shown
+    in Table I.
+
+
+    # TABLE I
+
+    DATASET DISTRIBUTION.
+
+
+    | Dataset | Normal | Fusion | COVID19 |
+
+    |---|---|---||}{
+
+    | Original dataset | 1000 | 107 | 308 |
+
+    | Balanced dataset | 1000 | 1000 | 1000 |
+
+
+    # B. Adaptive Median Filter
+
+
+    The adaptive median filter is a non-linear filtering technique, often applied
+    on images to remove noise and make noise clearer and easier to distinguish. adaptive
+    median filter (AMF) changes the noise amplitude used to detect pixels in the neighborhood.
+    If noise is detected, they are replaced by median value and otherwise the original
+    pixel value is kept. The average of an AMF is the purpose of preserving details
+    when smoothing non-pulse noise which is not with traditional median filters.
+
+
+    # III. METHODS
+
+
+    We propose a new deep learning framework for automatically detecting of COVID19
+    in 2D X-ray images. Our system is also designed to distinguish between COVID19,
+    effusion, and normal cases. The network is based on Convolutional Neural Networks
+    which receives processed and filtered images (using Adaptive Median Filter and
+    Histogram Equalization). We evaluate the performance of the model and it again
+    architecture and hyperparameters, until get the best possible score. Fig. 2 illustrates
+    the overall work-flow of the proposed CovidNet.
+
+
+    ![](img/84e8a91d8287baa77ba17a6d9e3006fd_1_0.png)
+
+
+    Fig. 2. The overall framework of the proposed CovidNet.
+
+
+    # A. Preprocessing
+
+
+    The preprocessing step involves many operations including
+
+
+    # C. Network Architecture
+
+
+    CovidNet is a CNN architecture that includes different layers and stages of two
+    automata: feature extraction and classification part. As depicted in Fig. 3, the
+    proposed CNN has four convolutional layers, with a filter size of 3x3. After each
+    convolutional layer, 64 filters are used. Each convolutional ReLU is an activation
+    function. To reduce the computational complexity and the spatial size of the output
+    features, max-pooling follows the two convolutional layers with a window size
+    of 2 and 2 pixels. The pooled output is then flattened and fed to the first fully
+    connected layer which has 128 neurons. Dropout is used as a regularization technique
+    to avoid overfitting.
+
+
+    # IV. EXPERIMENTAL RESULTS
+
+
+    In this section, we describe the main dataset used in this study. We also present
+    the experimental setup and results for both binary and multi-class classification,
+    we show the comparison with the state-of-the-art methods.
+
+
+    # A. Dataset
+
+
+    In this study, two publicly available sub-datasets were used to build one dataset
+    :
+
+    - 1) COVID-19 Radiography database : Chowdhury et al. [16] have created a public
+    dataset on Kaggle [17] by collecting 219 COVID-positive chest x-ray images'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/84e8a91d8287baa77ba17a6d9e3006fd_2_0.png)
+
+
+    All images are in PNG format with resolution 1024x1024.
+
+
+    +   2) XR data - This dataset was created by Murai Kummitha, it contains two classes,
+    the first is effusion CXRs and the second is normal with a total number of 1000.
+    All the images in PNG format with different resolution size.
+
+
+    # B. Experimental Environment
+
+
+    Our model has been developed using python and keras with tensorflow on an Intel
+    (R) core (TM) i7 Gen core. Experiments were conducted using Graphical Processing
+    Unit (GPU) NVIDIA GeForce GTX 1050 Ti with 8GB and 4 GB of memory respectively.
+    To train the models, we used set of epochs, batch size, and learning rate to 120,
+    400, 0.001. We used cross entropy as loss function (binary, categorical) and Adam
+    as an optimizer for the cross-entropy function.
+
+
+    # C. Evaluation Process
+
+
+    The performance of our trained model was evaluated by calculating accuracy, specificity,
+    precision, and F1score. TP is the number of true-positive patterns, FP represents
+    the number of false-positive patterns, TN is the number of true-negative patterns
+    and FN is the number of false-negative patterns.
+
+
+    ```
+
+    $Accuracy = \frac{TP + TN}{TP + FP + FN + TN} (1)$$n$$Sensitivity = \frac{TP}{TP
+    + FN} (2)$$n$$Specificity = \frac{TN}{TP + FP} (3)$
+
+    ```
+
+
+    ```
+
+    $Precision = \frac{TP}{TP + FN} (4)$$n$$F1 - score = 2 \times \frac{Precision
+    \times Recall}{Precision + Recall} (5)$
+
+    ```
+
+
+    Sensitivity and specificity give the position of positives and negatives that
+    were classified, respectively. We conducted experiments to classify and detect
+    COVID19 using chest-ray radiographs in two scenarios: first train the CNN deep
+    learning network to classify CXRs into two classes covid19 and normal. In the
+    second scenario, the model was trained to distinguish between three classes covid19,
+    normal, and effusion.
+
+
+    # D. Model Performance
+
+
+    +   1) Binary classification results: The results are illustrated in Table II.
+    From this table, we observe that feeding images to the CNN model applying histogram
+    equalization (CNN) gets better results for most of the metrics. We note that the
+    model has achieved an average accuracy of 98.62% and specificity, precision, and
+    F1-score of 98.52%, 97.72%, and 98.65%. Fig. 4, 5, Fig. 6 refer respectively accuracy
+    and curve fusion, and ROC for the CNN model considering binary classification
+    tasks.
+
+    2) Multi-class classification: The triple classification performance of the two
+    models was evaluated and the accuracy, precision, recall metrics were calculated.
+    We can clearly see that the model when we applied histogram equalization on the
+    images feeding to the convolutional neural network achieved better results than
+    the other two models, with an average accuracy of 95.77% in just 940 seconds.
+    To better evaluate the efficiency of this model, we plot the accuracy curve in
+    Fig. 7. The confusion matrix is also shown in Fig. 8 to give an idea about how
+    the COVID19 cases have predicted to much higher probabilities than the nonCOVID
+    cases, which is as good as it is for the negative cases.
+
+    3) Comparison with methods: In this subsection, we compare the performance of
+    the proposed approach in this work with the set of the methods approach. Table
+    IV presents the results of this comparison, where types of images are used to
+    detect COVID: CT and CXR images. As we can see, our method shows better binary
+    and binary classification. We can explain the importance of choosing the hyper-parameters
+    for the problem and also all preprocessing images before feeding them to the network.
+
+
+    # V. CONCLUSION
+
+
+    In this study we have developed a deep-learning model to classify CXRs into COVID19,
+    normal, or effusion. Our model is entirely automated with an end-to-end architecture
+    that does not use any handcrafted method.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# TABLE II
+
+    PERFORMANCE OF THE TWO APPROACHES UNDER THE SAME DATASET FOR THE BINARY CLASSIFICATION.
+
+
+    | Model | Acc % | AUC % | Spec % | Sen % | Pre % | F-Score % | Time (s) |
+
+    |---|---|---|---|---|---|---||
+
+    | CNN | 96.0 | 0.99 | 95.53 | 98.49 | 93.77 | 96.07 | 223 |
+
+    | AMF-CNN | 95.5 | 0.99 | 95.52 | 95.47 | 95.47 | 95.48 | 149 |
+
+    | H-CNN | 98.2 | 0.99 | 98.72 | 98.52 | 98.77 | 98.65 | 705 |
+
+
+    ![](img/84e8a91d8287baa77ba17a6d9e3006fd_3_0.png)
+
+
+    # TABLE III
+
+    PERFORMANCE OF THE TWO APPROACHES UNDER THE SAME DATASET (CLASSES).
+
+
+    | Model | Acc % | Precision % | Recall % | Time (s) |
+
+    |---|---|---|---|--|
+
+    | CNN | 93.05 | 89.88 | 89.66 | 537 |
+
+    | AMF-CNN | 95.47 | 93.39 | 93.16 | 117 |
+
+    | H-CNN | 95.77 | 93.69 | 93.36 | 490 |
+
+
+    # REFERENCES
+
+
+    COVNet is designed to perform both, binary and multi-class classification with
+    an accuracy of 98.62% and 95.77% respectively. As a future work, we use larger
+    datasets to evaluate the effectiveness of our method, and also to work on the
+    segmentations stage.
+
+
+    492'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# COMPARISON OF THE PROPOSED COIVINET WITH BENCHMARKS.
+
+
+    | Authors | Method used | Type of images | Number of classes | Accuracy % |
+
+    |---|---|---|---|--|
+
+    | Wang et al. [19] | M-Inception | Chest CT | 2 | 82.9 |
+
+    | Song et al. [20] | DRE-Net | Chest CT | 2 | 86.0 |
+
+    | Xia et al. [21] | ResNet+5 Attention | Chest CT | 3 | 86.7 |
+
+    | Hemdan et al. [11] | COVID-Net | Chest X-ray | 2 | 90.0 |
+
+    | Zheng et al. [22] | U-Net deep network | Chest CT | 2 | 90.8 |
+
+    | Wang and Wang [12] | COVID-Net | Chest X-ray | 3 | 92.4 |
+
+    | Ioannis et al. [13] | VGG-19 | Chest X-ray | 3 | 93.8 |
+
+    | Seth and B [10] | ResNet50+ SVM | Chest X-ray | 2 | 95.8 |
+
+    | Our method | CoviNet | Chest X-ray | 2 | 98.6 |
+
+    | Our method | CoviNet | Chest X-ray | 3 | 95.7 |
+
+
+    ![](img/84e8a91d8287baa77ba17a6d9e3006fd_4_0.png)
+
+
+    ![](img/84e8a91d8287baa77ba17a6d9e3006fd_4_1.png)
+
+
+    ![](img/84e8a91d8287baa77ba17a6d9e3006fd_4_2.png)
+
+
+    Fig. 6. ROC curve for the binary classification.
+
+
+    using weak label., *medRxiv*, 2020.
+
+
+    Fig. 5. Confusion Matrix and normalized confusion matrix for the binary classification.
+
+
+    [17] [Online]. Available: https://www.kaggle.com/tawsifrahman/covid19-radiography-database
+
+
+    [18] [Online]. Available: https://www.kaggle.com/im006/coviddata
+
+
+    [19] S. Wang, B. Kang, Y. Zheng, M. Xiao, J. Gao, M. Cao, J. Yang, Y. Zhang, and
+    J. Wang *et al.*, "Deep learning algorithm using ct images for coronavirus virus
+    disease (covid-19)", *medRxiv*, 2020.
+
+
+    [20] Y. Song, S. Zheng, L. Li, X. Zhang, J. Huang, J. Chen, H. Zhang, and J. Wang
+    *et al.*, "Deep learning enables accurate diagnosis of novel coronavirus (covid-19)
+    with ct images," *medRxiv*, 2020.
+
+
+    [21] X. Xu, X. Jiang, C. Ma, P. Xu, S. Li, L. Yu, Y. Chen, J. Su, G. Lang *et
+    al.*, "Deep learning system to screen coronavirus virus disease 2019 pneumonia
+    arxiv predict.", *arxiv preprint:2002.09334*.
+
+
+    [22] C. Zheng, X. Deng, Q. Qu, F. Zhou, J. Feng, H. Ma, M. W. Liu, and X. Wang,
+    "Deep learning-based detection for covid-19 from chest ct'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Model Accuracy
+
+
+    # Model Loss
+
+
+    ![](img/84e8a91d8287baa77ba17a6d9e3006fd_5_0.png)
+
+
+    Fig. 7. Accuracy and loss model curves for the triple classification.
+
+
+    ![](img/84e8a91d8287baa77ba17a6d9e3006fd_5_1.png)
+
+
+    ![](img/84e8a91d8287baa77ba17a6d9e3006fd_5_2.png)
+
+
+    Fig. 8. Confusion matrix and normalized confusion matrix for the triple classification.'
+  merge: -1
+  img_proc: true
