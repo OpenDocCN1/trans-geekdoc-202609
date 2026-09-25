@@ -1,0 +1,728 @@
+- pgno: 0
+  md: '# # Heart disease monitoring and predicting by using machine learning on IoT
+    technology
+
+
+    Qingyun He*, Angelika Maag*, Amr Elchoui*
+
+    Study Group Australia, Sydney, Australia
+
+    Forbes school of business and technology, USA
+
+
+    daisyhe815@gmail.com, maag@studygroup.com, elchoui@ashford.edu
+
+
+    **— Abstract —** The major disease caused by human nowadays is heart disease,
+    which is often hidden and without symptoms, leads to many deaths. With the development
+    of IoT technology in the healthcare industry, providing technical support for
+    clinical staff to predict and monitor heart diseases remotely is the most relevant
+    and needs more papers to find the disadvantages and address the gap in this area.
+    Furthermore, comparing the proposed method and the best framework for heart disease
+    monitoring has been already by using different types of machine learning algorithms
+    to predict and diagnose heart disease. From the dataset, the data collected from
+    IoT sensors is harder than data collected from because contain more noise and
+    missing values in IoT datasets pose challenge in this problem. Therefore, to reduce
+    the research gap to find the best way to monitoring and predicting ECG signals
+    in the meantime achieved acceptable accuracy.
+
+    Naive Bayes, [9]. Choosing the appropriate algorithm with suitable signal pre-processing
+    techniques is the most important step to select the most useful features for accuracy
+    rate. However, many researchers indicate that they method can achieve an accuracy
+    rate higher than 40 percent in recent years. We expect we can improving the accuracy
+    rate and use less testing for the methods proposed by previous researchers.
+
+
+    **Keywords —** Machine learning, Heart disease, Internet of Things (IoT), Predicting
+    and monitoring.
+
+
+    # ## I. INTRODUCTION
+
+
+    Nowadays, the machine learning technique is widely used in many areas. For instance,
+    using a pre-trained machine model to predict of signals in the heart domain, heart
+    disease is the top one reason caused death around the world, about 35 million
+    people die due to heart disease each [1]. In the development of IoT and wearable
+    devices, it has provided a foundation for the integration of IoT and healthcare
+    industry [2]. For members, the most important thing is whether the model can predict
+    that they have heart disease for the first time or advise them. However, machine
+    learning can only analyze the data and predict whether the patient has heart disease.
+    Therefore, we need IoT sensors to continuously monitor heart signals and the major
+    data is the patient ECG signal [3], [4] and the blood pressure frequency[6]. Researchers
+    can use the ECG [7] and [8] as an important signal to diagnose disease.
+
+    This paper is mainly focused on finding the gaps in current research and improving
+    the machine learning prediction accuracy rate. The machine learning technique
+    has different types of methods. For instance, Random forest, k-nearest neighbour,
+    decision tree, support vector,
+
+
+    The MIT-BIH dataset contains 48 patients long data [15]. Researchers usually decomposition
+    the raw ECG signal into different segments or each heartbeat to diagnose,
+
+
+    # ## II. LITERATURE
+
+
+    We have reviewed 15 most related and latest papers in machine learning to predict
+    heart disease research, and deeply analyze these papers using the common components
+    and features they used. In the following, we divided commonly components into
+    nine aspects based on experiments used. At the step input, we analysis on dataset
+    and sensor devices, and the processed signal feature, feature extraction, and
+    classification as well as many methods. At the output result, we analyzed time
+    and energy cost.
+
+
+    # ### A. Mainly dataset and data
+
+
+    Most of the current research in this field is based on online data analysis, and
+    a small number of researchers use the data collected by testing them to the methods
+    they proposed [6], [11]. Most papers can be divided into two types, one is collecting
+    from [13], [14] and the other from MIT-BIH [9], [15], [16]. UCI dataset contains
+    303 records each has 7 features. For instance, blood pressure, blood sugar, age,
+    etc. However only 14 patients in heart disease dataset are used in research.
+
+
+    # ### B. Data sensor devices
+
+
+    The sensor devices play a vital role as a terminal for collecting signals and
+    communications on the Internet of Things [17]. For heart prediction, the main
+    signals'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'and we need to collect blood pressures and use only 2.5 minutes of patient
+    ECG record to achieve an acceptable accuracy rate. The reduction time has a significant
+    improvement throughout the operating speed in the entire system and the reduction
+    power.
+
+
+    There are already lots of devices on the market and many have been used for patient
+    data collection experiment. For example, smartwatches for detecting blood pressure
+    and heart rate, smartphones [8], and smart for collecting ECG [11]. Despite wearable
+    IoT sensors can collect various patient data in real-time, they also contain a
+    large number of nodes. In addition, the IoT sensor can only handle lightweight
+    computation and may lose data during the transmission process [16]. These two
+    issues increase the difficulty of the subsequent machine learning process.
+
+
+    # C. Signal and data preproc.
+
+
+    For an ECG signal, the details are in the 0.5Hz-100Hz frequency range and the
+    relevant information is in the frequency range of 0.5Hz-40Hz for the analysis
+    of heart data [3]. In order to eliminate the noise collected by sensors, pre-processing
+    of the data is necessary. In this process, bandpass filter [4], [5], [8], [9]
+    and median filter [11] are widely used. However, Gjki chose to add a built-in
+    filter to the digital device. For example, Moresanga, Saadatnejad [9], Wang [15],
+    Tekeste [16] used the Daubechies wavelet technique to remove the noise and compress
+    the signal.
+
+
+    For pre-processing physical features of type is mostly collected from the UCI
+    dataset one which relies on regression data imputation for the missing attributes
+    [6], [12]. Another method is delete attributes which have missing values [13].
+
+
+    # D. Feature extraction and algorithms.
+
+
+    After eliminating the noise, the ECG can become a noisy-free data, that some of
+    the previous segment contains the segment ECG data. [4]. Lai will segment the
+    segment into seconds or different lengths, segments, and Wang [15] choose to segment
+    by heart beat. Each heart beats contains R, P, S and T waves, which provides enough
+    information for analysis ECG data. [11]. Each heart beat has a fixed duration
+    which contains 0.25 seconds before the R and 0.5 seconds after the R. Each segment
+    is identified by R peak detection algorithm, [19], and [20] QRS detection, [11].
+    Pan-Tom algorithms [9], [15] are popular used. For physical attribute extraction,
+    one-hot method is used for categorical features [12] and a combination of new
+    features [21].
+
+
+    # F. Classification method
+
+
+    In this paper, we use a machine learning technique to predict and diagnose heart
+    disease. Machine learning has many algorithms. For support vector machine [4],
+    Neural network [6], [15], Random forest (RF) and Convolutional Neural (CNN) algorithms
+    are also used for classification of heart disease and can achieve acceptable accuracy
+    rates for different patients.
+
+
+    Random forest can classify the random data and the features to each node to form
+    multiple decision trees [9]. The advantage of random forest is that it needs not
+    to extract the features, can automatically discriminate the features. However,
+    when the data is extremely noisy, the random forest classifier will be prone to
+    overfitting. Furthermore, the latest researches in order to achieve higher accuracy,
+    combine RF with other techniques, and may have achieved better performance. [14]
+    combined Random selection with RF, [15] used the factor analysis of mixed data
+    with the RF algorithm is commonly used in the UCI dataset, which contains many
+    different features.
+
+
+    A convolutional network contains three layers: convolution layer, pooling layer,
+    and fully connected layer [24]. The ECG data can learn extract features automatically.
+    However, there is no need to process the extraction step for the ECG signal. Although,
+    Wang [15] used an improved CNN algorithm for heart disease classification, which
+    uses three layers and achieved high accuracy. Khan [6] combined the CNN with the
+    adaptive elimination algorithm, improving the weight and achieved 96.0% accuracy.
+    It is worth noting that Khan [6] used the data collected by sensors devices which
+    is real-time. CNN is popular to use in imaging data type. Therefore, for the classification
+    of ECG data in the MI-BI dataset, the effect of CNN may perform better than other
+    machine learning methods.
+
+
+    # G. System architecture: Cloud server
+
+
+    Since the sensor can only lightweight computation and cannot handle the load of
+    the machine learning method [2]
+
+
+    The training machine learning model is a vital part of the heart disease prediction
+    history. The heartbeat rate is healthy for most of the general people, but for
+    some individuals have different heartbeats per ordinary people, especially those
+    [22]. When training the machine learning model, Khan [4], Anurshi and Hash [5],
+    [29] choose to add personally combined heartbeat features for the training set.
+    In order to achieve a polarized standard and achieve higher accuracy. Note the
+    applied 5 minutes patient''s own ECG data will be used for testing. Based on the
+    previous researches, Saadatnejad [19] made'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'crafted specially for the Internet of Things. Liu [11] designed a wearable
+    smartness for continuous monitoring ECG and transmit data into Health Lenovo cloud
+    platform. However, the time required for real-time transmission from sensor to
+    cloud is longer than transition between sensor and edge requires more power.
+
+
+    personal ECG data for machine learning method training, before training, the first
+    step is pre-processing the data, eliminated the noise, and improved its value.
+    the noise-free data will be using different algorithms and techniques to extract
+    features. Finally, the noise-free testing data is completely collected from IoT
+    sensors and tested. Therefore, the types of diagrams and draw Fig 1 which shows
+    the overview of the heart disease prediction system framework include hardware
+    and software tools used in the most important heart disease prediction system,
+    which is the machine learning method deployed on the cloud server. If it trained
+    the system can predict patient better.
+
+
+    # H. Time and energy cost
+
+
+    Real-time monitoring and heart disease prediction system has constraint and request
+    on speed. Recently, researchers focus on the accuracy of prediction and ignore
+    the detection and comparison of power and consumption [25]. Because the system
+    is done before testing, monitoring is done to predict for each input data. Liu
+    [9], Liu [11], Wang [15], Saajjad [19] mentioned the proposed cost for testing.
+    However, Omidaki and Hashimi [5] considered the execution time as well as power
+    consumption.
+
+
+    # I. Classification and system framework
+
+
+    Below Table I shows that the relevant 15 papers are classifications. The input
+    process steps classification and the evaluation and output. We collect 6 papers
+    published by 2020, 9 of the 15 papers are highly related to our topic. We can
+    see from Table I that we has 4 authors collected from UCI, 7 authors from MIT-B,
+    and from 7 others we use 20-lead ECG collected with a global dataset to train
+    input data. Furthermore, the band-pass filter is the most common filter used in
+    15 papers to reduce and eliminate the noise. To extract features from the signal
+    data, the Pan-Tompkins is the most used algorithm to detect ECG and heart segment.
+    Additionally, most of the authors use to combine different features to improve
+    the accuracy of the. For prediction, the common method is convolutional neural
+    network (CNN) and random forest (RF), which are not need for data feature extraction.
+    Then we can extract all different features as a feature tree node. Moreover, all
+    of the 15 papers use the performance metric to evaluate the result. We have 12
+    authors'' performance metrics consist of Accuracy, Sensitivity, Sensitivity. However,
+    only 7 authors gave the timing result (e.g. processing time, testing time, training
+    time, prediction time) as final.
+
+
+    Table II is the collection table for the relevant 15 papers. Most of the authors
+    use an online dataset for training and machine learning method, some of the authors
+    have collected data by sensor devices for testers. Due to different data sets
+    for each classifier, it use the selected method for sequence prediction. The training
+    and testing features are various steps to system detection. Some authors have
+    used different datasets for classifier which can lead to high performance. In
+    addition, most use to extract the features, because the feature number can reduce
+    the system processing time and complex function. From the classifier we can use
+    that no longer need to combine two or more algorithms and techniques to achieve
+    higher accuracy. The most important step is the best performance and results for
+    classifier performance matrix, which are most commonly used for accuracy, sensitivity,
+    and specificity. However, only a few authors presented the system running time
+    and energy consumption results.
+
+
+    # III. EVALUATION
+
+
+    After reviewing and analyzing the relevant papers, we proposed method used a wearable
+    device as Smartwatch, Smarthealth, and ECG sensors to collect patient ECG, and
+    blood pressure data. We use the smartphones or phone to transfer the data signal.
+    Further, we use the machine learning model which has been trained and deployed
+    in the cloud to avoid the guidance of collected sensors and send to the computer.
+    The output will similarly send to the computer. However, some papers were presented
+    in the diagram about the machine learning method processing step. In the detail
+    of ECG machine learning, the first step is use the data collected from the dataset
+    and applied limited
+
+
+    Table III is the frequency of the terms mentioned in 30 articles. The column of
+    terms is the keywords for each paper, and there are 36 terms which listed are
+    most related to our topic. In addition, addition of the classifier is the total
+    time that is mentioned in 30 papers. For example, ECG, CNN, and ML, because some
+    authors use other expressions, or phrases have abbreviations, expressions, we
+    use the original form and count. The corresponding abbreviation is mentioned.
+    Then we use the result is related to the detection of heart disease, the electrocardiogram
+    is the most important data for diagnosis. ECG in 30 articles, machine learning
+    and the theory of things are also used in each paper. The key features are all
+    are around and related to heart disease, IoT devices, and machine methods.
+
+
+    # IV. VALIDATION
+
+
+    The Fig. 2 presents the percentage of mainly used in 30 latest published articles.
+    The below below we can clearly see the proportion of each component used in 30
+    articles, which can help us decide what component can be'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# CLASSIFICATION TABLE OF 15 PAPERS
+
+
+    | Ref | Dataset | Input device | Data | Signal noise filters | Technique | Algorithm
+    | Method | Process | Hardware tools | Software | Platform | Evaluation | Performance
+    metric | Output result |
+
+    |---|---|---|---|---|---|---|---|---|---|---|---|---|---||
+
+    | [6] | UCI; | Smartwatch, HMD; | ECG | N/A | LaRa-CP | MLFA; | | | python, java;
+    | LoRa cloud; | ACC, Error, PPV, NPV | Classifier; Error rate; SPE; PPV, NPV;
+    SPE; | |
+
+    | [7] | UCI; | Heart rate monitor | ECG | LBPF; | SW | OmiSense | | | heart rate
+    monitor | Bluetooth | | ACC, Error, SPE; LOSC-10; | ACC; Error, SPE; Averaged
+    learning curve | |
+
+    | [8] | UCI; | | ECG | BIF; | SWE | FADED | | RE/STR | | linear system; | | |
+    ACC, Error, SPE; ROCC-5; | ACC; ROCC, AUC; | |
+
+    | [9] | MITB-AHY | | ECG | IBF; | db-w6; | WtDa | Pan-Ta | | python, java; | |
+    | ACC, G; FI, SEN; SPEP; | SPE, DRA, EEC; Aug benefit; classification result table
+    | |
+
+    | [10] | MITB-AHY | | ECG | N/A | DWT; | | Imp-CNN | | tensorflow; | | | ACC,
+    G; FI, SEN; SPEP; | ACC; SPE, DRA, EEC; Aug benefit; | |
+
+    | [11] | MITB-AHY | | Moto 360; | N/A | | | | | raspberry pi; | | | ACC, G; FI,
+    SEN; SPEP; | ACC, SPE, DRA, EEC; Aug benefit; | |
+
+    | [12] | MITB-AHY | | IoT sensors | N/A | | | | | matlab; | | | ACC, G; FI, SEN;
+    SPEP; | ACC, SPE, DRA, EEC; Aug benefit; | |
+
+    | [13] | MITB-AHY | | | N/A | | | | | python | | | | ACC, 10-FC; | ACC for dataset;
+    processing; | |
+
+    | [14] | MITB-AHY | | | N/A | | | | | | | | | FI; ACC, SPE; PPR; | Energy Consumption,
+    FI; ALCT; processing; | |
+
+    | [15] | MITB-AHY | | | N/A | | | | | computer | | | | ACC, MCC, SPE; ACC-5; |
+    ACC; AUC, years early; | |
+
+    | [16] | MITB-AHY | | | N/A | | | | | | | | | N; SPE; INE; ROC-5; | ACC; SPE,
+    SEN; P-; | |
+
+    | [17] | MITB-AHY | | | N/A | | | | | | | | | ACC, SPE, SEN; P-; 10-FC; | | |
+
+    | [18] | MITB-AHY | | | N/A | | | | | | | cloud server; | | | |
+
+    | [19] | MITB-AHY | | | N/A | | | | | | | bluetooth; | | | |
+
+    | [20] | AIHA-BHI | | | | N/A | | | | | matlab, matlab; | | | | |
+
+    | [21] | MITB-AHY | | | | N/A | | | | | | | | | | | |
+
+    | [22] | MITB-AHY | | | | N/A | | | | | | | | | | | |
+
+    | [23] | MITB-AHY | | | | N/A | | | | | | | | | | | |
+
+    | [24] | MITB-AHY | | | | N/A | | | | | | | | | | | | |
+
+    | [25] | MITB-AHY | | | | N/A | | | | | | | | | | | | |
+
+    | [26] | MITB-AHY | | | | N/A | | | | | veril-rtl; compiler; | | SE; P; energy
+    consumption, Layout of the ALCT result; Energy saving, config | |
+
+
+    Authorized use limited to Robert Gordon University. Download on May 28, 2021 at
+    12:52:11 UTC IEEE Restrictions apply. *Note:'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Sensor devices
+
+
+    # Patient device
+
+
+    # Cloud server
+
+
+    ![](img/9bec3f21d1e297d0c40f77bf1ee8ad00_4_0.png)
+
+
+    Fig. 1. Heart monitoring and prediction system architecture.
+
+
+    used in our network. Certainly, different authors will use different classes to
+    handle the heart disease prediction task. The nine components listed in Fig 2
+    are the most important factors that were encountered based on the scope of heart
+    disease monitoring and by a machine learning method to IoT device collected data.
+    The components we listed, almost every item is mentioned by more than half of
+    the 30 articles except course, which 30% of papers use to get a stable and reliable
+    model [15]. The purpose of course-selection is to get a prediction accuracy. However,
+    the most important result is the prediction accuracy. However, nearly 100 percent
+    of the 30 papers have given the performance metric.
+
+
+    when using the system. Therefore, it is the limit for Yang [13] proposed system.
+    Furthermore, each class of UCI contains 76 features, only 14 are most commonly
+    used by researchers for heart disease diagnosis. By Khan [6], Javed have extracted
+    that 14 features and achieved the accuracy achieved by the previous scholars.
+    Because the feature selection needs to be enabled by using the system processing
+    time and reduce the power consumption.
+
+
+    # V. DISCUSSION
+
+
+    In the following section, we will compare and discuss the advantages and disadvantages
+    of important components used in the latest 15 papers based on evaluation tables.
+    From the comparison, we can find the best method for prediction and classification
+    accuracy for heart diseases in the state-of-the-art. Furthermore, based on the
+    comparison, we will try to find and point out the effects and limitations in these
+    papers.
+
+
+    # A. Data comparison: UCI dataset and MIH-B dataset
+
+
+    From the Table 2 we can see that the 15 papers can be divided into two types of
+    different datasets, one is UCI reported dataset and the other is MIH-B dataset.
+    8 papers used by this dataset. Khan [12] choose to use the UCI reported experimental
+    data, this dataset has 30 subjects which each contains 76 features. Most of the
+    researchers use all 30 subjects for the experiment. Nevertheless, Yang [13] choose
+    to delete 33 subjects that have missing values that mean the system they proposed
+    cannot recognize and import the data. The IoT devices are usually small and lightweight,
+    data dose, and incomplete data collecting may
+
+
+    # B. Dataset split
+
+
+    Generally, before the machine learning model is trained, researchers will divide
+    the data into a training set and testing set to a certain ratio. The number of
+    the training set will be more than the testing set. However, Khan [6], Gjorkesi
+    [7], Mehr [8], Liu [11] have their own data collected by the devices, and they
+    choose to use online dataset as the data they collected as a testing set, they
+    can examine their'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '| Ref | UCI | Total subject | Total test samples | Normal subjects | Heart
+    patient | Dataset split Training | Dataset split testing | Ratio | Testing set
+    | Features number Original features | Extract features | Best performance CC |
+    PPV | F1 | SEN | Recall | Time cost | Energy cost |
+
+    |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---||
+
+    | [6] | 900 | 4000 | 304 | N/A | 139 | 5528 | N/S | 16 | 900 | 14 | 7 | N/A |
+    98.5 | 92.6 | 97.8 | 82.3 | N/S | N/S |
+
+    | [7] | 900 | 5187 | 764 | N/A | 303 | 3153 | N/S | 15 | 161 | 15 | 2 | N/A |
+    98.2 | 95.5 | 96.2 | 82.3 | N/S |
+
+    | [12] | 900 | 4830 | 303 | N/A | 163 | 241 | N/S | 6.2 | 81 | 14 | 2 | N/A |
+    92.9 | 94.4 | 95.6 | 86.2 | N/S | N/S |
+
+    | [13] | 900 | 110007 | 800 | N/A | 100 | 70180 | N/S | 1.1 | 800 | 8 | 5 | N/A
+    | 99.18 | 99.0 | 99.1 | 98.8 | N/S | N/S |
+
+    | [19] | 900 | 49632 | 201 | N/A | 55 | 80594 | N/S | 8.2 | 201 | 7 | Auto extension
+    | N/A | 99.06 | 99.6 | 95.8 | 99.8 | N/S | Training-testing |
+
+    | | 900 | 2700 | 270 | N/A | 120 | 68256 | N/S | 8.1 | 270 | 13 | RAW ECG | N/A
+    | 91.2 | N/A | 93.0 | N/S | N/S | 31.2ms |
+
+    | | 900 | 2000 | 150 | N/A | 189 | 4428 | N/S | 7.3 | 150 | 17 | RAW ECG | N/A
+    | 88.0 | 80.8 | 98.8 | 80.2 | N/S | CPU75.N/S |
+
+    | | 900 | 1800 | 380 | N/A | 301 | D20000-min ECG | N/S | 7.2 | 380 | 15 | RAW
+    ECG | N/A | 93.3 | N/A | 99.8 | N/S | N/S | 0.8721 s |
+
+    | | 900 | 1800 | 300 | N/A | 303 | D20000-one min | N/S | 7.3 | 300 | 5 | RAW
+    ECG | N/A | 94.9 | N/A | 99.4 | N/S | N/S | 1.7l per beat |
+
+    | | 900 | 2500 | 250 | N/A | 150 | 480 | N/S | 7.3 | 250 | 6 | RAW ECG | N/A |
+    N/A | N/A | 96.9 | N/A | N/S | N/S |
+
+    | | 900 | 1357 | 112 | N/A | 278 | 186 | N/S | 5.3 | 112 | 28 | RAW ECG | N/A
+    | N/A | 91.7 | N/A | N/S | 2.3ms |
+
+    | | 900 | 300 | 317 | N/A | 94 | 450 | N/S | N/A | 317 | N/A | RAW ECG | N/A |
+    99.9 | 99.68 | N/A | 99.46 | N/S 6.5 W |
+
+    | | 900 | 30522 | 48 | N/A | 6198 | DS200+25-my ECG | N/S | 1.1 | 48 | 22 | RAW
+    ECG | N/A | N/A | N/A | 99.09 | N/A | N/S |
+
+    | [4] | 900 | 123 | - | N/A | - | DS200+22-my ECG | N/S | - | 123 | N/A | RAW
+    ECG | N/A | N/A | N/A | 99.38 | 99.37 | N/S 201s |'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# TABLE III. FREQUENCY IN THE 30 CHOSEN PRODUCTS
+
+
+    | Terms | Frequency | Terms | Frequency | Terms | Frequency |
+
+    |---|---|---|---|---|-|
+
+    | Support vector machine (SVM) | 76 (244) | Heart disease | 430 | XGBoost | 49
+    |
+
+    | Cardiovascular disease (CVD) | 60 (48) | MIT-bias | 75 | Real-time | 152 |
+
+    | Deep learning | 85 | Feature selection | 724 | Monitoring | 214 |
+
+    | Electrocardiogram (ECG) | 77/(140) | Healthcare | 148 | Overfitting | 34 |
+
+    | Machine learning (ML) | 293 (691) | Feature extraction | 636 | Noise | 186 |
+
+    | Convolutional neural networks (CNN) | 171/(354) | Deep learning | 85 | Classification
+    | 219 |
+
+    | Baseline wander (BW) | 22 (6) | Wearable care | 424 | PCG | 22 |
+
+    | Long-term memory (LSTM) | 10 (155) | Prediction | 557 | Biological | 84 |
+
+    | Semi-supervised learning | 46 | QRS detection | 86 | Sensor | 159 |
+
+    | Internet of things (IoT) | 96/(692) | Random forest | 120 | Computational |
+    737 |
+
+    | Power consumption | 21 | Heart sounds | 31 | Heartbeat | 377 |
+
+    | Signal processing | 43 | Heart failure | 201 | Cleveland | 89 |
+
+
+    ![](img/9bec3f21d1e297d0c40f77bf1ee8ad00_6_0.png)
+
+
+    proposed system processing collected data performance. Nevertheless, the majority
+    of current researches were chosen to split the dataset, that 4 papers used the
+    7:3 ratio for split [8], [13], [14], [15]. [15] Among them, Wang [1] divided the
+    data into three different ratios: 8: 2, 7: 3, and the results showed, the 7 papers
+    achieved the best performance. The moreover allocation of 7:3 is also chosen by
+    researchers, we decided to use the ratio of 7:3 in our system for evaluating the
+    machine models.
+
+
+    C. Personal ECG signal add for training
+
+
+    For the training set, the most different point is; Chen [4], Amirishashi and Hashemi
+    [5], Saadnej [19] also chose a segment of client personal private monitoring normal
+    ECG signal to implement private monitoring and the system, which is most specific
+    for identifying difference and have slightly different ECG features, and can improve
+    the accuracy. Saadnej based on the previous Chen [4], Amirishashi and Hashemi
+    [5], Kiranyaz [23] work, to only add 2.5 minutes of the personal data to training
+    set achieves higher accuracy which is 1.7% higher than Amirishashi and Hashemi
+
+
+    [5], 0.51% higher than Chen [4] and 1% higher than Kiranyaz [23].
+
+
+    Unlike the repository which has different features, researchers can improve the
+    system by extracting features. The MIT-BI dataset contains the ECG signal. In
+    order to process the digital type of data, the best way is choosing the machine
+    learning model can automatically extract the features or algorithms or techniques
+    help [5], From [15]. If we can see, the majority of authors choose different features
+    of MIT-BI data. For instance, convolutional neural networks [5], recurrent neural
+    networks [19], spiking neural networks [5]. All the papers used MIT-BI dataset
+    for classification are heart rate features used
+
+
+    D. System output. Accuracy; Time cost and consumption
+
+
+    The highest rate and positive predictive values are 99.8% and highly accurate,
+    which is achieved by Sangalah [3]. Furthermore, the best F1 score is 99.68% achieved
+    by Lu [11]. The highest result is 99.8% [5], [9]. Sangalah [3] are only 0.1% lower
+    than Wang: The performance comparison we saw, Sangalah [2]'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'achieved best heart disease prediction using Wavelet-based Markov model. And
+    Saadatnij[19] also achieved good performance in which accuracy is higher than
+    15, 0.2% lower than Sangath[3]. What''s more, Saadatnij[19] has achieved significant
+    improvement in only 31 seconds. Wang [85] and Barra [9] long-term recurrent neural
+    networks were the method used by Saadatnij [19] and 2.5 minute personal ECG data.
+
+
+    less than 1%, which reaches highly acceptable range for life disease prediction.
+    However, most of the previous researchers have focused on improving accuracy and
+    regulating speed and power, whereas their proposed models achieve an acceptable
+    accuracy range with the the Internet of Things technologies.
+
+
+    # REFERENCES
+
+
+    +   [3] A. Sangiah, M. Murugan and G. Bian, "Intelligent approach for improving
+    ECG classification and arrhythmia analysis," Journal of Medical Systems, vol.
+    44, pp. 107818–107820, 2020. doi: 10.1016/j.jms.2020.107819.
+
+
+    +   [4] J. Chen, A. Veli, and A. Rah, "Heart Smart Monitor: Improving Heart Arhythmia
+    Detection Through Deep Learning," IEEE Access, vol. 7, pp. 128031–128039, 2020.
+    doi: 10.1109/ACCESS.2020.2998375.",
+
+
+    +   [6] K. Alif, et al., "Deep Learning for Heart Disease Prediction Based on
+    MDCNN," IEEE Access, vol. 8, pp. 54717–54722, 2020. doi: 10.1109/ACCESS.2020.2997467.",
+
+
+    +   [8] S. Mehrang, et al., "Reliability of Smart-Smartphone Monitoring for Atrial
+    Fibrillation Detection," IEEE Journal of Biomedical and Informatics, vol. 22,
+    pp. 992–1000, 2018. doi: 10.1109/JBHI.2018.2833553.",
+
+
+    +   [9] D. Lai, Y. Zhang, Y. Sun and M. Bin, "An Automated Strategy for Early
+    Detection of Sudden Cardiac Death Using Deep Learning on Machine Markers," IEEE
+    Access, vol. 7, pp. 94701–94716, 2020. doi: 10.1109/ACCESS.2020.2992847.",
+
+
+    Since more than half of the selected patients chose to use ECG signals to diagnose
+    which heart leaves suffer, the proposed system uses wearable devices to collect
+    ECG signals. In addition, the most researchers choose to deploy machine learning
+    on the cloud server. After a full analysis of the state of art, deploying the
+    model in the cloud is efficient.
+
+
+    # VI. FUTURE AND CONCLUSION
+
+
+    In the future, we will base on the Saadatnij[19] proposed long-term recurrent
+    neural networks was the and try to reduce the local ECG data to achieve acceptable
+    levels of accuracy. The framework will be equipped and furnished with wearable
+    present devices. For the monitoring, a smart smartwatch, [360 Rico [94] will be
+    the wearable smartwatch, a smart-MTM Limited Electronic Device [7]. Furthermore,
+    referring to the state of art in heart disease prediction area, the later researchers
+    can use the ECG signal as the dataset for prediction and reduce the budget cost.
+    However, we still need to use the 7-3 ratio to do more exams for prediction and
+    analysis of the data collected by IoT devices to ensure the proposed system can
+    handle the large volume of data in 24 hours.
+
+
+    In this paper, we reviewed 30 latest journal paper, firstly and we evaluate and
+    analyze the results using the wearable IoT device for 24 hours collecting data
+    and use the Bluetooth and WiFi on the mobile computer and smartphone, then the
+    smartphone will transfer the data into the cloud server, and use the machine learning
+    method which is applied and deployed on cloud to diagnose the disease. After statistical
+    analysis we confirm the current proposed researchers model and technology has
+    been able to achieve heart disease prediction accuracy up to 90%, and many models
+    can even achieve an error rate
+
+
+    +   [10] L. Liu, et al., "Smart Assessment and Lightweight QRS Detection for Wearable
+    Smart Systems," IEEE Internet of Health Things, vol. 6, no. 2, pp. 1715–1722,
+    2019. doi: 10.1109/JIOT.2019.2918848.",
+
+
+    +   [11] A. Gomez, R. Kumar, S. Ahmed and B. Rahman, "Machine Learning for Heart
+    Disease Diagnosis," IEEE Access, vol. 8, pp. 14659–14670, 2020. doi: 10.1109/ACCESS.2020.2997153.",
+
+
+    +   [12] Y. Yang, et al., "Smart-Based Supervised Learning for Clinical Decision
+    Support in Health-IoT Platform," IEEE Access, vol. 8, pp. 211995–212006, 2020.
+    doi: 10.1109/ACCESS.2020.3013711.",
+
+
+    +   [13] Y. Zhao, S. Long, I. Qasim, A. Noor and R. Anwar, "An Intelligent System
+    based on Random Search Algorithm and Genetic Algorithm Model for Heart Disease
+    Prediction," IEEE Access, vol. 7, pp. 188205–188239, 2019. doi: 10.1109/ACCESS.2019.2932117.",
+
+
+    8'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: "# # APPENDIX\n\nABBREVIATIONS: Full Form\n\n| MCFA: matching-based cuffless\
+    \ optimization algorithm | Pan-TA: Pan-Ta algorithms | HD: Heart disease |\n|\
+    \ :--- | :--- | :--- |\n| ECG: Electrocardiogram | | CA: Cardiac arrhythmia |\n\
+    | MDCNN: Deep Convolutional Neural Network | MKDA: morphology-based detection\
+    \ algorithm | PWD: Personal wearable device |\n| G: g scores | QRS-DA: QRS detection\
+    \ algorithms | SRD: Sinus rhythm detection |\n| IE: Impaled entropy | HP: heart\
+    \ points | HDP: Hypertensive Heart Disease |\n| PPV-PP: Positive predictive value\
+    \ | Acce: Acceptable Electrocardiogram | IoT-HD: Internet of healthcare devices\
+    \ |\n| NPV: negative predictive value | unac-ECG: Unacceptable Electrocardiogram\
+    \ | BIF: Built-in filter |\n| SEN: Sensitivity | SEA: SEA algorithm | LPF: Low-pass\
+    \ Butterworth filter |\n| SPE: Specificity | Phy-A: Physiological application\
+    \ | BPF: band-pass filter |\n| DRE: Detection error ratio | GAN-SSA: GAN-based\
+    \ seamless attention mechanism | MF: median filter |\n| ORS: Over-sampling ratio\
+    \ | TFL: TensorFlow library | HOLP: high order linear phase filter |\n| CHF: Chronic\
+    \ Heart Failure | CDSS: clinical decision support system | SWT: sliding window\
+    \ technique |\n| DL: Deep learning | k-CV: k-fold cross-validation | dbt-wb: dwt\
+    \ wavelet baseline |\n| MORL: Multi-objective reinforcement learning | 5-CV: 5-fold\
+    \ cross-validation | dwt-wb: dwt wavelet technique |\n| LOSO: Leave-One-Subject-Out\
+    \ validation | K-CV: k-fold cross-validation | DWT: discrete wavelet transform\
+    \ |\n| FAMD: The factor of analysis of mixed data | | ACT: implicit calibration\
+    \ technique |\n| MIFM: Machine Intelligence Framework for Text | | BW: baseline\
+    \ waveform |\n| RF: Random forest | | WNF: wavelet based compression |\n| CVD:\
+    \ Cardiovascular disease | | LCT: Localless compression |\n| MCC: Pearson's correlation\
+    \ coefficient | | ULPT: Low-Order Power Design Technique |\n| RF+RS: Random forest\
+    \ + feature selection ResNet | | z-score: normalization |\n| XGBoost, Extreme\
+    \ Gradient Boosting | | OHE: one-hot encoding |\n| BVS: Boosting and vector support\
+    \ machine | GAN: generative adversarial networks | \n| IIRF: The Infinite impulse\
+    \ response filter | UCE: University of California Irvine |\n| N: Normal | LFM:\
+    \ Leaf-based learning model | LTP: long-term prediction |\n| S: upright ectopic\
+    \ beats | LDT: long-term dependency |\n| LFB: Left-Branch Left Branch Block |\
+    \ STDP: Spiking-timing dependent plasticity |\n| RBB: Right Branch Right Branch\
+    \ Block | R-STDP: Reward rewarded STDP |\n| VEB: Ventricular ectopic beats | RSA:\
+    \ Random search algorithm |\n| F/S: Feature selection | AHAD: American health\
+    \ association database |\n| Q: unknown beats | | |\n| RBB: Right Branch Right\
+    \ Branch Block | BP: Blood pressure | |\n| LBB: Left Bundle Left Branch Block\
+    \ | SF: Stage features | |\n| PVC: Premature Ventricular Contraction | AAMI: Association\
+    \ of Medical Instrumentation | | | |"
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '| APC: Atrial Premature Contraction | BMD: balanced medical datasets | NSRDB:
+    Normal Sinus Rhythm |
+
+    |---|---|--|
+
+    | MIT-BIH: Massachusetts Institute of | IBMD: imbalanced medical datasets | SCD:
+    Sudden cardiac death |
+
+    | Technology-Beth Israel Hospital | | |
+
+    | WT-BBM: Wavelet-based hidden Markov model | | BH: Beijing hospital | TSCS: KNN:
+    two-stage classification system: nearest neighbor |
+
+    | Imp-CNN: Improved convolutional neural network | HMD: Heart monitoring device;
+    | DT: decision tree |
+
+    | LSTM-based RNNs: long short-term memory recurrent neural networks | DS3MTMLE:
+    digital stethoscope 3MTM Littman Electronic; | SVM: support vector machine |
+
+    | Adam: Adaptive moment estimation algorithm | GyRs: Gyroscope sensors | NB: Naive
+    Bayes |'
+  merge: -1
+  img_proc: true
