@@ -1,0 +1,3925 @@
+- raw:
+  - '[PAGE 0]
+
+
+    Engineering Applications of Artificial Intelligence 124 (2023) 106500
+
+
+    Lists available at ScienceDirect
+
+
+    # Engineering Applications of Artificial Intelligence
+
+
+    journal homepage: www.elsevier.com/locate/engappai
+
+
+    ELSEVIER
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_0_0.png)
+
+
+    # # GTRF: A deep learning framework for tuples recognition towards supervised,
+    semi-supervised and unsupervised paradigms
+
+
+    Qingsong Xue*, Chen Yuan*, Bin He†, Haixei Xiong*, Qingzhao Gao a,b*
+
+
+    +   * Department of Mitigation for Structures, Tongji University, Shanghai, China
+
+    * Shanghai Research Institute for Intelligent Autonomous Systems, Tongji University,
+    Shanghai, China
+
+
+    # ARTICLE INFO
+
+
+    # ABSTRACT
+
+
+    +   Keywords:
+
+    Deep learning
+
+    General framework
+
+    Supervision paradigm
+
+    Label propagation
+
+
+    Tuple, featured sequences of elements are one of the most prominent data structures
+    in structural health monitoring (SHM). Activated by powerful capabilities of deep
+    learning (DL) techniques, the DL-driven tuple recognition has faced penalty problems
+    in SHM by mapping tuples to patterns with supervised deep feature extraction strategies.
+    This paper develops a novel General Tuple Recognition framework (GTRF) towards
+    supervised (SL), semi-supervised (SSL) and unsupervised (US) paradigms. In the
+    framework, we present a quantitative feature extractor for downstream label propagation
+    via an optimized clustering algorithm in SL, SSL, and US. With sophisticated networks
+    and explicit voxels embedded, the GTRF is competent for various tuple recognition
+    tasks in real-world SHM scenarios. Multi-level extractive implementation strategy
+    were conducted for validations, in vibration SHM-classification of a prototype
+    gearbox, damage detection-of a RC beam and condition assessment of a steel bridge.
+    The results demonstrate the effectiveness and efficiency of proposed GTRF against
+    comparable methods in recognition accuracy and model flexibility. Practical scalability,
+    the proposed GTRF can be a promising bridge for the gap between DL algorithms
+    and models of different learning paradigms.
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_0_1.png)
+
+
+    # 1. Introduction
+
+
+    In the broader field of machine learning techniques, deep learning (DL), also
+    known as deep learning on the basis of representation via artificial networks,
+    is regarded as one of the most powerful and promising solvers in multi-task learning.
+    With the implementation of attention patterns in supervised (SL), semi-supervised
+    (SSL) and unsupervised (US) learning, DL has achieved success in various domains,
+    including natural language processing (Gualessi et al., 2021), computer vision
+    (Thirivathual and Liu, 2022), semantic recognition (Nanemi et al., 2022), signal
+    denoising (Xiong et al., 2023), medical image analysis (Guan and Liu, 2022), structural
+    diagnosis and prognosis. In recent, the strategy of exploring the effectiveness
+    and reliability of DL techniques to some relevant data or processing (i.e., typically
+    multi-label classification, clustering theory or regression) in the context of
+    corresponding engineering tasks is demonstrated as follows.
+
+
+    With hereto, the notable spring of intelligent structural health monitoring (SHM)
+    towards Smart city (Gurey et al., 2021) and Davis Yuan et al., 2021) in recent
+    decades, has been driven by the measurement research for the purpose of structural
+    health assessment and damage detection (Fan et al., 2021; Gadhabi et al., 2021;
+    Olson et al., 2022; Tok and Park, 2020). The collected measured data from various
+    sources (such as mechanical accelerometers Brown-John, 2021) and piezoelectric
+    sensors Ma et al., 2020) enable the monitoring of specific structural parameters
+    (i.e., damage index, damage conditions, and corresponding measurement segment).
+    In this regard, it is widely understood that the performance relies heavily on
+    the source measuring data (i.e., signal fidelity due to noise contamination, accuracy
+    of the labels, and feature extraction techniques) during the DL task. Therefore,
+    the powerful capability and reliability of DL algorithms as well as the working
+    principle of DL-approaches towards Intelligent University, Shanghai, China.
+
+
+    * Author at: Department of Mitigation for Structures, Tongji University, Shanghai.
+
+    E-address: qkongli@tongji.edu (K. Kong).
+
+
+    https://doi.org/10.1016/j.engappai.2023.106500
+
+    Received 19 November 2022; Received in review 5 May 2023; Accepted 18 May 2023
+
+    Available online 7 June 2023
+
+    1992-2023 Elsevier Ltd. All rights reserved.'
+  - '[PAGE 1]
+
+
+    Q., C. Yuan, B. He et al.
+
+
+    Engineering Applications of Artificial Intelligence 124 (2023) 106500
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_1_0.png)
+
+
+    +   - Learning paradigms
+
+    - Task implementations
+
+    - Measured tuple types
+
+
+    | Element | Prototype structure | Physical skyscraper |
+
+
+    Fig. 1. Multi-level task implementations for diverse learning paradigms validation.
+
+
+    in mind, the key of achieving a satisfactory DL model generalizability of recognizing
+    structural pattern follows the two major aspects that are label definition and
+    feature extraction. Specifically, the label refers to the prelabelled dataset
+    for later training, which a specific output must be correspondingly when an input
+    is entered into the model. In this case, the data can be labeled as follows: SL,
+    SSI (i.e., request partially labeled data) and UL (i.e., request no labeled data)
+    (Bengio et al., 2013). Therefore, state-of-the-art DL algorithms are prematurely
+    governed by representation learning, and manual supervision often degrades the
+    model''s generalizability conflicting the input-level bottleneck (Chen et al.,
+    2022). With regard to the latter aspect, feature extraction refers to the data
+    processing stage where features are extracted using acceleration sensors, strain
+    gauges and piezoelectric sensors, which are further allocated to the DL model.
+    Type-specific feature extraction strategies include time-frequency transformations
+    (i.e., FFT Zhang et al., 2022), Wavelet transform Yuan et al., 2021, HHT Wang
+    et al., 2020), etc., dimension reduction techniques (i.e., principal component
+    analysis Johnson and CDK, 2016, independent component analysis Chandrasekhar et
+    al., 2021, independent component analysis Mali et al., 2022), (i.e., fuzzy transform,
+    Papatner, Linear search and Synner, 2019). The motivation is to use these extra
+    features to improve the quality of results from DL, compared with directly supplying
+
+
+    which detract greatly from the value of transferability and generality. Hence,
+    it is of significance and necessity to elevate a relevant review on the recent
+    DL learning multi-paradigm framework. Remarkably, Avci conducted a comprehensive
+    review of recent DL algorithms on vibration damage behavior, combined with their
+    applied scenarios (Avci et al., 2021). However, no dedicated framework can be
+    seen that few very have been developed to deploy a a multi-paradigm framework.
+    It is appealing to achieving a challenge to generalize machine learning with flexibility
+    to be adaptive for SL, UL and SSI regimes.
+
+
+    Noting that measurement of data in the form of type is important, that is a finite
+    list (list) of elements (Mathew et al., 2020). We used acceleration sensors, strain
+    gauges and piezoelectric sensors, tuple recognition-based methods have played
+    a dominant role in DL-driven SH monitoring, which are to turn too many numbers
+    to one. Separately, vibration data collected in different environments can be
+    used to perform various tasks based on desired data sources without a doubt. However,
+
+
+    In this study, we propose a general learning framework for tuples recognition
+    to SL, SSI and UL patterns, GTNRF. A feature extraction axis is based on the proposed
+    representation of multi-modal features for multi-modal data sources their types
+    or to. To generalize the learning algorithm in three different settings (SL, SSI
+    and UL), using a new pseudo-label clustering algorithm (DAM et al., 2021). The
+    mechanism translating and workflow of the proposed GTNRF are presented in the
+    present article.
+
+
+    With regard to the related tuple recognition patterns, our experimental implementation
+    creates diverse task implementation in the SH scope based on the multi-modal data
+    sources sourced conducted corresponding to each pattern, as shown in Fig. 1. The
+    objective level ranges from the element and
+
+
+    2'
+  md: '
+
+    Engineering Applications of Artificial Intelligence 124 (2023) 106500
+
+
+    Lists available at ScienceDirect
+
+
+    # Engineering Applications of Artificial Intelligence
+
+
+    journal homepage: www.elsevier.com/locate/engappai
+
+
+    ELSEVIER
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_0_0.png)
+
+
+    # GTRF: A deep learning framework for tuples recognition towards supervised, semi-supervised
+    and unsupervised paradigms
+
+
+    Qingsong Xue*, Chen Yuan*, Bin He†, Haixei Xiong*, Qingzhao Gao a,b*
+
+
+    + * Department of Mitigation for Structures, Tongji University, Shanghai, China
+
+    * Shanghai Research Institute for Intelligent Autonomous Systems, Tongji University,
+    Shanghai, China
+
+
+    # ARTICLE INFO
+
+
+    # ABSTRACT
+
+
+    + Keywords:
+
+    Deep learning
+
+    General framework
+
+    Supervision paradigm
+
+    Label propagation
+
+
+    Tuple, featured sequences of elements, are one of the most prominent data structures
+    in structural health monitoring (SHM). Activated by powerful capabilities of deep
+    learning (DL) techniques, the DL-driven tuple recognition has faced penalty problems
+    in SHM by mapping tuples to patterns with supervised deep feature extraction strategies.
+    This paper develops a novel General Tuple Recognition framework (GTRF) towards
+    supervised (SL), semi-supervised (SSL) and unsupervised (US) paradigms. In the
+    framework, we present a quantitative feature extractor for downstream label propagation
+    via an optimized clustering algorithm in SL, SSL, and US. With sophisticated networks
+    and explicit voxels embedded, the GTRF is competent for various tuple recognition
+    tasks in real-world SHM scenarios. Multi-level extractive implementation strategy
+    were conducted for validations, in vibration SHM-classification of a prototype
+    gearbox, damage detection of a RC beam and condition assessment of a steel bridge.
+    The results demonstrate the effectiveness and efficiency of proposed GTRF against
+    comparable methods in recognition accuracy and model flexibility. Practical scalability,
+    the proposed GTRF can be a promising bridge for the gap between DL algorithms
+    and models of different learning paradigms.
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_0_1.png)
+
+
+    # 1. Introduction
+
+
+    In the broader field of machine learning techniques, deep learning (DL), also
+    known as deep learning on the basis of representation via artificial networks,
+    is regarded as one of the most powerful and promising solvers in multi-task learning.
+    With the implementation of attention patterns in supervised (SL), semi-supervised
+    (SSL) and unsupervised (US) learning, DL has achieved success in various domains,
+    including natural language processing (Gualessi et al., 2021), computer vision
+    (Thirivathual and Liu, 2022), semantic recognition (Nanemi et al., 2022), signal
+    denoising (Xiong et al., 2023), medical image analysis (Guan and Liu, 2022), structural
+    diagnosis and prognosis. In recent, the strategy of exploring the effectiveness
+    and reliability of DL techniques to some relevant data or processing (i.e. typically
+    multi-label classification, clustering theory or regression) in the context of
+    corresponding engineering tasks is demonstrated as follows.
+
+
+    With hereto, the notable spring of intelligent structural health monitoring (SHM)
+    towards Smart city (Gurey et al., 2021) and Davis Yuan et al., 2021) in recent
+    decades, has been driven by the measurement research for the purpose of structural
+    health assessment and damage detection (Fan et al., 2021; Gadhabi et al., 2021;
+    Olson et al., 2022; Tok and Park, 2020). The collected measured data from various
+    sources (such as mechanical accelerometers Brown-John, 2021) and piezoelectric
+    sensors Ma et al., 2020) enable the monitoring of specific structural parameters
+    (i.e. damage index, damage conditions, and corresponding measurement segment).
+    In this regard, it is widely understood that the performance relies heavily on
+    the source measuring data (i.e. signal fidelity due to noise contamination, accuracy
+    of the labels, and feature extraction techniques) during the DL task. Therefore,
+    the powerful capability and reliability of DL algorithms as well as the working
+    principle of DL-approaches towards Intelligent University, Shanghai, China.
+
+
+    * Author at: Department of Mitigation for Structures, Tongji University, Shanghai.
+
+    E-address: qkongli@tongji.edu (K. Kong).
+
+
+    https://doi.org/10.1016/j.engappai.2023.106500
+
+    Received 19 November 2022; Received in review 5 May 2023; Accepted 18 May 2023
+
+    Available online 7 June 2023
+
+    1992-2023 Elsevier Ltd. All rights reserved.
+
+
+    Q., C. Yuan, B. He et al.
+
+
+    Engineering Applications of Artificial Intelligence 124 (2023) 106500
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_1_0.png)
+
+
+    - Learning paradigms
+
+    - Task implementations
+
+    - Measured tuple types
+
+
+    | Element | Prototype structure | Physical skyscraper |
+
+    | :--- | :--- | :--- |
+
+
+    Fig. 1. Multi-level task implementations for diverse learning paradigms validation.
+
+
+    in mind, the key of achieving a satisfactory DL model generalizability of recognizing
+    structural pattern follows the two major aspects that are label definition and
+    feature extraction. Specifically, the label refers to the prelabelled dataset
+    for later training, which a specific output must be correspondingly when an input
+    is entered into the model. In this case, the data can be labeled as follows: SL,
+    SSI (i.e. request labeled data) and UL (i.e. request labeled data) (Bengio et
+    al., 2013). With regard to the latter aspect, feature extraction refers to the
+    data processing stage where features are extracted using acceleration sensors,
+    piezoelectric sensors, which are further allocated to the model. Type-specific
+    feature extraction strategies include time-frequency transformations (i.e. FFT
+    Zhang et al., 2022), Wavelet transform Yuan et al., 2021, HHT Wang et al., 2020),
+    etc., dimension reduction techniques (i.e. principal component analysis Johnson
+    and CDK, 2016, independent component analysis Chandrasekhar et al., 2021, independent
+    component analysis Mali et al., 2022), (i.e. fuzzy transform, Papatner, Synner,
+    2019). The motivation is to use these extra features to improve the quality of
+    results from DL, compared with directly supplying which detract from the value
+    of transferability and generality. Noting that measurement of data in the form
+    of type is important, that is a finite list (list) of elements (Mathew et al.,
+    2020). We used acceleration sensors, strain gauges and piezoelectric sensors,
+    tuple recognition-based methods have played a dominant role in DL-driven SH monitoring,
+    which are to turn too many numbers to one. Separately, vibration data collected
+    in different environments can be used to perform various tasks based on desired
+    data sources without a doubt. However,
+
+
+    In this study, we propose a general learning framework for tuples recognition
+    to SL, SSI and UL patterns, GTRF. A feature extraction axis is based on the proposed
+    representation of multi-modal features for multi-modal data sources their types
+    or to. To generalize the learning algorithm in three different settings (SL, SSI
+    and UL), using a new pseudo-label clustering algorithm (DAM et al., 2021). The
+    mechanism translating and workflow of the proposed GTRF are presented in the present
+    article. Related tuple recognition patterns, our experimental implementation creates
+    diverse task implementation in the SH scope based on the multi-modal data sources
+    sourced conducted corresponding to each pattern, as shown in Fig. 1. The objective
+    level ranges from the element and
+
+    '
+  mdcn: '
+
+    人工智能工程应用 124 (2023) 106500
+
+
+    列表可在 ScienceDirect 上获取
+
+
+    # 人工智能工程应用
+
+
+    期刊首页：www.elsevier.com/locate/engappai
+
+
+    爱尔塞 (ELSEVIER)
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_0_0.png)
+
+
+    # GTRF：一种面向监督、半监督和无监督范式的元组识别深度学习框架
+
+
+    Qingsong Xue*, Chen Yuan*, Bin He†, Haixei Xiong*, Qingzhao Gao a,b*
+
+
+    + * 同济大学结构防木系，上海，中国
+
+    * 同济大学智能自主系统研究所，上海，中国
+
+
+    # 文章信息
+
+
+    # 摘要
+
+
+    + 关键词：
+
+    深度学习
+
+    通用框架
+
+    监督范式
+
+    标签传播
+
+
+    元组（Tuple）是元素的特征化序列，是结构健康监测（SHM）中最显著的数据结构之一。受强大的深度学习（DL）技术驱动，深度学习驱动的元组识别通过监督深度特征提取策略将元组映射到模式，在
+    SHM 中面临着惩罚问题。本文开发了一种面向监督（SL）、半监督（SSL）和无监督（US）范式的通用元组识别框架（GTRF）。在该框架中，我们提出了一种在
+    SL、SSL 和 US 中通过优化聚类算法为下游标签传播提取的量化特征提取器。通过嵌入复杂的网络和显式体素，GTRF 能够胜任真实 SHM 场景中的各种元组识别任务。通过多级提取实现策略，对原型齿轮箱的振动
+    SHM 分类、钢筋混凝土梁检测以及钢桥状态评估进行了验证。结果表明，所提出的 GTRF 在识别准确性和模型灵活性方面与对比方法相比具有有效性和高效。由于良好的实用扩展性，所提出的
+    GTRF 可以成为深度学习算法与不同学习范式模型之间通的桥梁。
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_0_1.png)
+
+
+    # 1. 引言
+
+
+    在更广泛的机器学习技术领域，深度学习（DL），也称为基于人工网络表示的深度学习，被认为是多任务学习中最强大且最具前景的求解器之一。通过在监督（SL）、半监督（SSL）和无监督（US）学习中实现注意力模式，DL
+    在多个领域取得了成功，包括自然语言处理（Gualessi et al., 2021）、计算机视觉（Thirivathual and Liu, 2022）、语义识别（Nanemi
+    et al., 2022）、信号去噪（Xiong et al., 2023）、医学图像分析（Guan and Liu, 2022）、结构诊断与预报。近期，在相应的工程任务背景下探索
+    DL 技术对某些相关数据或处理（即典型的多标签分类、聚类理论或回归）的有效性和可靠性的策略所示如下。
+
+
+    就此，几十年来，智能结构健康监测（SHM）向智慧城市（Gurey et al., 2021 和 Davis Yuan et al., 2021）的显著发展，受到用于结构健康评估和损伤检测的测量研究的驱动（Fan
+    et al., 2021; Gadhabi et al., 2021; Olson et al., 2022; Tok and Park, 2020）。从各种来源（如机械加速度计
+    Brown-John, 2021）和压电传感器 Ma et al., 2020）收集的测量数据能够监测特定的结构参数（即损伤指数、损伤状况和相应的测量段）。对此，人们广泛认为性能在很大程度上取决于
+    DL 任务期间源测量数据（即由于噪声污染导致的信号保真度、标签准确性和特征提取技术）。因此，DL 算法的强大能力和可靠性以及 DL 方法的工作原理对于智能大学，上海，中国。
+
+
+    * 作者地址：同济大学结构防木系，上海。
+
+    电子邮箱：qkongli@tongji.edu (K. Kong)。
+
+
+    https://doi.org/10.1016/j.engappai.2023.106500
+
+    收稿：2022年11月19日；审稿：2023年5月5日；接收：2023年5月18日
+
+    在线发布：2023年6月7日
+
+    1992-2023 Elsevier Ltd. 保留所有权利。
+
+
+    Q., C. Yuan, B. He 等。
+
+
+    人工智能工程应用 124 (2023) 106500
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_1_0.png)
+
+
+    - 学习范式
+
+    - 任务实现
+
+    - 测量的元组类型
+
+
+    | 元素 | 原型结构 | 物理天大楼 |
+
+    | :--- | :--- | :--- |
+
+
+    图 1. 用于不同学习范式验证的多级任务实现。
+
+
+    在实现识别结构模式的满意的 DL 模型泛化能力方面，遵循两个主要方面：标签定义和特征提取。具体而言，标签指的是用于后期训练的预标记数据集，当输入到模型时，必须有相应的特定的输出。在这种情况下，数据可以标记为：SL、SSI（即请求已标记数据）和
+    UL（即请求已标记数据）（Bengio et al., 2013）。至于后一方面，特征提取是指数据处理阶段，使用加速度传感器、压电传感器提取特征，并进一步分配给模型。特定类型的特征提取策略包括时频变换（如
+    FFT Zhang et al., 2022）、小波变换 Yuan et al., 2021、HHT Wang et al., 2020）等，降维技术（如主成分分析
+    Johnson and CDK, 2016，独立成分分析 Chandrasekhar et al., 2021，独立成分分析 Mali et al., 2022），（如模糊变换，Papatner,
+    Synner, 2019）。其动机是使用这些额外特征来提高 DL 结果的质量，与直接提供（会削弱迁移性和通用性价值）相比。注意以类型形式测量数据是重要的，即元素的有限列表（list）（Mathew
+    et al., 2020）。我们使用了加速度传感器、应变计和压电传感器，基于元组识别的方法在 DL 驱动的 SH 监测中发挥了主导作用，这些方法是将许多数字转换为一个。单独地，在不同环境中收集的振动数据可以根据所需的数据源执行各种任务。然而，
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    # GTRF: A General Tuples Recognition Framework
+
+    (integrated in Deep Learning fusion)
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_2_0.png)
+
+
+    Fig. 2. Schematic design of proposed GTRF method.
+
+
+    prototype structure to a physical skyscraper. It should be clarified that the
+    learning patterns of ignored invalidations are consistent with the common practice
+    of label availabilities. Without loss of generality, corresponding adjustments
+    of learning paradigms can be readily conducted using the proposed GTRF framework.
+
+
+    (DAE)(Zhang et al., 2022) is a unique representation detector trained to reproduce
+    its input via stacked backpropagation. Duplicated with hidden layers, two major
+    blocks (i.e., parallel functions of functions) encoder and decoder, are inclusive
+    in a DAE, as shown in Fig. 4. The encoded families $E(x)$ decode the input to
+    decoded message which are latent variables $h$. Here, the decoder $D(h)$ decodes
+    the latent representation to the output with exactly the same dimensions as the
+    inputs (Bank et al., 2020). Generally, encoder and decoder are identified as a
+    multi-layer perceptron, which can be formulated as follows:
+
+
+    # 2. Methodology of the proposed GTRF
+
+
+    # 2.1. Overview of GTRF
+
+
+    Having the essential features of input proposed in mind, this study proposes a
+    general tuples recognition framework (GTRF) towards multi-level supervision paradigms.
+    Fig. 2 depicts the schematic design of the proposed GTRF methodology. In the general
+    framework, a novel feature extraction method is proposed to signify representation
+    learning through deep autoencoders. On this basis, a feature is described via
+    error reconstruction of all, in a series of pattern-features (PSFs) are defined
+    and calculated. In particular, three alternatives are designed towards diverse
+    recognition paradigms: supervised, unsupervised, and semi-supervised. Unsupervised
+    clustering pattern is followed through optimized fuzzy-FCM algorithm in UL paradigm
+    and semi-supervised pattern through optimized FCM algorithm in SSL. Fig. 3 demonstrates
+    the workflow of proposed framework GTRF, the detailed architecture and mechanism
+    of which are elaborated subsequently.
+
+
+    ```
+
+    $E(x) = \sigma(W_e x + b_e)$
+
+    ```
+
+
+    ```
+
+    $D(h) = \sigma(W_d h + b_d)$
+
+    ```
+
+
+    where $\sigma$ denotes the activation function for the encoder and decoder, such
+    as ReLU, softmax and sigmoid function. $W$ refers to the weights, $b$ refers to
+    the biases between the input and output layers of the encoder and decoder respectively.
+
+
+    # 2.2. Representation learning and feature extraction
+
+
+    A DAE learns for reconstruction from input x to output while minimizing the reconstruction
+    error via backpropagation optimization of weight matrices and biases, which is
+    measured by how much $y$ differs from $x$. In most situations, the reconstruction
+    metric is $L = ||y - \hat{y}||^2$. Therefore, searching for the optimal autoencoder
+    is basically transformed into a least-squares issue:
+
+
+    ```
+
+    $min_{\theta} \sum_{i=1}^{n} ||y_i - \hat{y}_i||^2$
+
+    ```
+
+
+    which can be achieved by any mathematical optimization technique such as widely
+    gradient descent.
+
+
+    A system can automatically fulfill the requirements for feature detection or classification
+    from raw data using a set of machine learning algorithms called representation
+    learning (i.e., feature learning), which eliminates the need for manual feature
+    engineering and enables machines to learn the features themselves and obtain representations
+    for specific tasks. Therefore, deep autoencoder
+
+
+    Having the derived method and DAE in main, it is not difficult to understand that
+    with given levels with different categories of tuples (i.e., to diverse levels),
+    the reconstruction quality will alter to multi-level extent. Here, it is feasible
+    to extract the'
+  - '[PAGE 3]
+
+
+    # Engineering Applications of Artificial Intelligence 124 (2023) 106500
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_3_0.png)
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_3_1.png)
+
+
+    pattern-sensitive features (PSFs) by quantifying the discrepancy between original
+    signals and reconstructed ones for specified tuples while compiling into the trained
+    DAE.
+
+
+    In order to evaluate the discrepancy between the original signals and the reconstruction,
+    this framework defines indicators of reconstruction quantification, which are
+    defined for adaptive options in design implementation thereof. Four basic PSFs
+    are defined as mean square error (MSE), original-reconstructed signal ratio (OSSR)
+    (Kumar et al., 2023), correlation coefficients (CORR) (Papagorgiou, 2022), and
+    cosine similarity (Vin and,, 2022). Therefore, MSE is simplest to compare two
+    sequences, and its value may be used to gauge how much
+
+
+    of a reconstruction went overall. OBSR is defined as the ratio of the quantitative
+    square of the original and reconstructed signals which is derived from the energy
+    of signal-to-noise ratio. CORR is defined as the ratio of the feature covariance
+    matrix and the standard deviation, which estimates the linear correlation between
+    two tuples (Jurkò et al., 2022). With regard to COSS, it is defined as the cosine
+    of the angle between two vectors, which are viewed as vectors in an inner product
+    space (Sinha, 2009). The involved mathematical functions are expressed as follows:
+
+
+    > $MSE = \frac{1}{n}\sum_{i=1}^{n}(x_i-y_i)^2$
+
+
+    (4)'
+  - '[PAGE 4]
+
+
+    # Engineering Applications of Artificial Intelligence 124 (2023) 106950
+
+
+    ```
+
+    $ORSR = \log_{10} \frac{\sum_{i=1}^{n} x_i^2}{\sum_{i=1}^{n} y_i^2}$ (5)
+
+    ```
+
+
+    ```
+
+    $CORR = \frac{\sum_{i=1}^{n} (x_i - \mu_x)(y_i - \mu_y)}{\sqrt{\sum_{i=1}^{n}
+    (x_i - \mu_x)^2 \sum_{i=1}^{n} (y_i - \mu_y)^2}}$ (6)
+
+    ```
+
+
+    ```
+
+    $COST = \frac{\|X-Y\|}{\|X\|+\|Y\|} = \frac{\sqrt{\sum_{i=1}^{n} (x_i - y_i)^2}}{\sqrt{\sum_{i=1}^{n}
+    x_i^2\|+\sqrt{\sum_{i=1}^{n} y_i^2}}$ (7)
+
+    ```
+
+
+    Where $\eta$ denotes the density of signals, $\mu_x, \mu_y$ denote the values
+    of original and reconstructed coordinates, support vector.
+
+    It is also noted that apart from the aforementioned basic PSFs, some other derivatives
+    can be derived with extensive flexibility in practical circumstances, such as
+    the mean square error (RMSE) and the sum of squares (SSS), which are defined as
+    follows:
+
+
+    ```
+
+    $RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n} (x_i - y_i)^2}$ (8)
+
+    ```
+
+
+    ```
+
+    $SSS = \sum_{i=1}^{n} (x_i - y_i)^2$ (9)
+
+    ```
+
+
+    Hereby, a series of costly PSFs are obtained, which are costly for downstream
+    clustering with multi-level supervision. Without loss of generality, the PSF functions
+    in this paper are optional for downstream clustering, however other derivatives
+    can reconstruct their PSF in regard to the unsupervised tuples characteristics.
+
+
+    # 2.3. supervised clustering via linear classifiers
+
+
+    In current practice, supervised classification-based approaches have demonstrated
+    a bottleneck in DL-driven shim for a long time. This seems with the supervised
+    clustering prevents a breakthrough where complex data comes into existence.
+
+    With regard to the classification problem, a wide range of classifiers have developed
+    and used in ML-based projects, showing high capability as well as potential to
+    support competitive methods. To analyze this output, we use state-of-the-art ML
+    classifiers, namely Naive Bayes (NB) (Qin et al.), Support Vector Machine (SVM),
+    logistic regression (LR) and Hessian support machine (HSM), decision trees (DT)
+    (Bart et al., 2019), random forest (RF) (Breiman, 2001), AdaBoost (et al.). Detailed
+    explanation of each algorithm was shown in the previous research and can be accessible
+    from the article (Xiong et al., 2022) of the group team.
+
+
+    learning, fuzzy clustering aims to establish a mapping pattern of the components
+    of the inputs with mathematical mechanism transmitted. According to the probability
+    of assigning points to a cluster group, fuzzy clustering can be divided into two
+    subclasses, hard and soft clustering. In hard clustering, each point is assigned
+    to a single cluster. In soft clustering, each point is designated as a likelihood
+    or probability score belonging to a cluster center, which is superior in terms
+    of robustness for overpopulated datasets.
+
+
+    Therefore, a representative soft algorithm fuzzy FCM (FCM) is introduced and utilized
+    for unsupervised clustering. The proposed algorithm is presented in Fig. 5. The
+    goal of optimization is to improve performance of the clustering results derived
+    from fuzzy FCM, which is utilized for downstream recognition tasks. Here on the
+    basis of transmission of extracted PSF from unsupervised, the recognition task
+    can be successfully performed in an unsupervised in branch stream
+
+
+    # 2.4. Semi-supervised labeling via optimized FCM
+
+
+    As name implies, supervised learning is a tradeoff between supervised and unsupervised
+    learning, which aims to maximize the full value of labeled dataset for tuple recognition.
+    The semi-supervised learning aims to expand the limited part of tuples by instead
+    of establishing a mapping between input-output pairs in supervised learning or
+    clustering a pattern among inputs with prior knowledge (i.e., known label), revealing
+    its better reliability in terms of clustering results. For instance, it is a common
+    phenomenon in semi-supervised learning that labeled data are widely accessible
+    while unlabeled data are scarce and expensive. In many other cases, it is hard
+    to train a classifier with semi-supervised learning to improve the number of tuples
+    for recognition with better applicability for practical design.
+
+
+    In this branch, of the proposed framework GTF, a novel semi-supervised labeling
+    method is proposed through using optimized FCM. Specifically, the unlabeled and
+    pseudo-labeled data generated by optimized FCM are introduced and together to
+    train downstream linear classifiers in the framework. The approach is based of
+    optimized FCM. It can be naturally observed that clustering with having some pseudo-labels
+    as some clusters, points belonging to corresponding centers are labeled as pseudo-labels.
+    This is possible because that with top 75% centroids are selected to train the
+    classifier in a supervised way. Further, with the method of eliminating clusters
+    with large uncertainties, the result of the classifier is reliable, the results
+    of which are the accurate predictions of labelings.
+
+
+    Here, let the classifiers (SL, UL and SU) introduced. It can be seen that with
+    this general framework GTF have been developed with sophisticated networks and
+    deep algorithms. In addition, the proposed GTF extends in the capability and efficiency
+    of multi-labeling paradigms without integrity. Regardless of the type or length
+    of data, the GTF is adaptive to tuples-based tasks implementation, automatically
+    assisting a potent version of engineering application.
+
+
+    # 2.4. Unsupervised clustering using optimized FCM
+
+
+    Obtaining sufficient tuple with unambiguous labels to classify a pattern in pattern
+    clustering is typically expensive and even when unlabeled data are generally generated
+    (Schmidt Huber). It is of great necessity and significance to perform the SH-oriented
+    task in an unsupervised way herewith a capable avenue of fuzzy clustering.
+
+
+    In scopes of unsupervised learning, fuzzy clustering is a typical algorithm where
+    the samples are assigned to a pattern recognition by using measures such as similarity
+    and distribution density, thereupon designated to the groups (i.e., so-clusters)
+    to create a data center (Preddeyraj, 2021). It is the usual practice of a of input-output
+    couples in
+
+
+    5'
+  md: '
+
+    # GTRF: A General Tuples Recognition Framework
+
+    (integrated in Deep Learning fusion)
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_2_0.png)
+
+
+    Fig. 2. Schematic design of proposed GTRF method.
+
+
+    prototype structure to a physical skyscraper. It should be clarified that the
+    learning patterns of ignored invalidations are consistent with the common practice
+    of label availabilities. Without loss of generality, corresponding adjustments
+    of learning paradigms can be readily conducted using the proposed GTRF framework.
+
+
+    (DAE)(Zhang et al., 2022) is a unique representation detector trained to reproduce
+    its input via stacked backpropagation. Duplicated with hidden layers, two major
+    blocks (i.e., parallel functions of functions) encoder and decoder, are inclusive
+    in a DAE, as shown in Fig. 4. The encoded families $E(x)$ decode the input to
+    decoded message which are latent variables $h$. Here, the decoder $D(h)$ decodes
+    the latent representation to the output with exactly the same dimensions as the
+    inputs (Bank et al., 2020). Generally, encoder and decoder are identified as a
+    multi-layer perceptron, which can be formulated as follows:
+
+
+    ## 2. Methodology of the proposed GTRF
+
+
+    ### 2.1. Overview of GTRF
+
+
+    Having the essential features of input proposed in mind, this study proposes a
+    general tuples recognition framework (GTRF) towards multi-level supervision paradigms.
+    Fig. 2 depicts the schematic design of the proposed GTRF methodology. In the general
+    framework, a novel feature extraction method is proposed to signify representation
+    learning through deep autoencoders. On this basis, a feature is described via
+    error reconstruction of all, in a series of pattern-features (PSFs) are defined
+    and calculated. In particular, three alternatives are designed towards diverse
+    recognition paradigms: supervised, unsupervised, and semi-supervised. Unsupervised
+    clustering pattern is followed through optimized fuzzy-FCM algorithm in UL paradigm
+    and semi-supervised pattern through optimized FCM algorithm in SSL. Fig. 3 demonstrates
+    the workflow of proposed framework GTRF, the detailed architecture and mechanism
+    of which are elaborated subsequently.
+
+
+    ```
+
+    $E(x) = \sigma(W_e x + b_e)$
+
+    ```
+
+
+    ```
+
+    $D(h) = \sigma(W_d h + b_d)$
+
+    ```
+
+
+    where $\sigma$ denotes the activation function for the encoder and decoder, such
+    as ReLU, softmax and sigmoid function. $W$ refers to the weights, $b$ refers to
+    the biases between the input and output layers of the encoder and decoder respectively.
+
+
+    ### 2.2. Representation learning and feature extraction
+
+
+    A DAE learns for reconstruction from input x to output while minimizing the reconstruction
+    error via backpropagation optimization of weight matrices and biases, which is
+    measured by how much $y$ differs from $x$. In most situations, the reconstruction
+    metric is $L = ||y - \hat{y}||^2$. Therefore, searching for the optimal autoencoder
+    is basically transformed into a least-squares issue:
+
+
+    ```
+
+    $min_{\theta} \sum_{i=1}^{n} ||y_i - \hat{y}_i||^2$
+
+    ```
+
+
+    which can be achieved by any mathematical optimization technique such as widely
+    gradient descent.
+
+
+    A system can automatically fulfill the requirements for feature detection or classification
+    from raw data using a set of machine learning algorithms called representation
+    learning (i.e., feature learning), which eliminates the need for manual feature
+    engineering and enables machines to learn the features themselves and obtain representations
+    for specific tasks. Therefore, deep autoencoder
+
+
+    Having the derived method and DAE in main, it is not difficult to understand that
+    with given levels with different categories of tuples (i.e., to diverse levels),
+    the reconstruction quality will alter to multi-level extent. Here, it is feasible
+    to extract the
+
+
+    pattern-sensitive features (PSFs) by quantifying the discrepancy between original
+    signals and reconstructed ones for specified tuples while compiling into the trained
+    DAE.
+
+
+    # Engineering Applications of Artificial Intelligence 124 (2023) 106500
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_3_0.png)
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_3_1.png)
+
+
+    In order to evaluate the discrepancy between the original signals and the reconstruction,
+    this framework defines indicators of reconstruction quantification, which are
+    defined for adaptive options in design implementation thereof. Four basic PSFs
+    are defined as mean square error (MSE), original-reconstructed signal ratio (OSSR)
+    (Kumar et al., 2023), correlation coefficients (CORR) (Papagorgiou, 2022), and
+    cosine similarity (Vin and,, 2022). Therefore, MSE is simplest to compare two
+    sequences, and its value may be used to gauge how much of a reconstruction went
+    overall. OBSR is defined as the ratio of the quantitative square of the original
+    and reconstructed signals which is derived from the energy of signal-to-noise
+    ratio. CORR is defined as the ratio of the feature covariance matrix and the standard
+    deviation, which estimates the linear correlation between two tuples (Jurkò et
+    al., 2022). With regard to COSS, it is defined as the cosine of the angle between
+    two vectors, which are viewed as vectors in an inner product space (Sinha, 2009).
+    The involved mathematical functions are expressed as follows:
+
+
+    $MSE = \frac{1}{n}\sum_{i=1}^{n}(x_i-y_i)^2$ (4)
+
+
+    # Engineering Applications of Artificial Intelligence 124 (2023) 106950
+
+
+    ```
+
+    $ORSR = \log_{10} \frac{\sum_{i=1}^{n} x_i^2}{\sum_{i=1}^{n} y_i^2}$ (5)
+
+    ```
+
+
+    ```
+
+    $CORR = \frac{\sum_{i=1}^{n} (x_i - \mu_x)(y_i - \mu_y)}{\sqrt{\sum_{i=1}^{n}
+    (x_i - \mu_x)^2 \sum_{i=1}^{n} (y_i - \mu_y)^2}}$ (6)
+
+    ```
+
+
+    ```
+
+    $COST = \frac{\|X-Y\|}{\|X\|+\|Y\|} = \frac{\sqrt{\sum_{i=1}^{n} (x_i - y_i)^2}}{\sqrt{\sum_{i=1}^{n}
+    x_i^2}+\sqrt{\sum_{i=1}^{n} y_i^2}}$ (7)
+
+    ```
+
+
+    Where $\eta$ denotes the density of signals, $\mu_x, \mu_y$ denote the values
+    of original and reconstructed coordinates, support vector.
+
+
+    It is also noted that apart from the aforementioned basic PSFs, some other derivatives
+    can be derived with extensive flexibility in practical circumstances, such as
+    the mean square error (RMSE) and the sum of squares (SSS), which are defined as
+    follows:
+
+
+    ```
+
+    $RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n} (x_i - y_i)^2}$ (8)
+
+    ```
+
+
+    ```
+
+    $SSS = \sum_{i=1}^{n} (x_i - y_i)^2$ (9)
+
+    ```
+
+
+    Hereby, a series of costly PSFs are obtained, which are costly for downstream
+    clustering with multi-level supervision. Without loss of generality, the PSF functions
+    in this paper are optional for downstream clustering, however other derivatives
+    can reconstruct their PSF in regard to the unsupervised tuples characteristics.
+
+
+    ### 2.3. supervised clustering via linear classifiers
+
+
+    In current practice, supervised classification-based approaches have demonstrated
+    a bottleneck in DL-driven shim for a long time. This seems with the supervised
+    clustering prevents a breakthrough where complex data comes into existence.
+
+
+    With regard to the classification problem, a wide range of classifiers have developed
+    and used in: Naive Bayes (NB), Support Vector Machine (SVM), logistic regression
+    (LR), Hessian machine (HSM), decision trees (DT), random forest (RF), and AdaBoost.
+
+
+    A system can automatically fulfill the requirements for feature detection or classification
+    from raw data using a set of machine learning algorithms called representation
+    learning (i.e., feature learning), which eliminates the need for manual feature
+    engineering and enables machines to learn the features themselves and obtain representations
+    for specific tasks. Therefore, deep autoencoder
+
+
+    Having the derived method and DAE in main, it is not difficult to understand that
+    with given levels with different categories of tuples (i.e., to diverse levels),
+    the reconstruction quality will alter to multi-level extent. Here, it is feasible
+    to extract the pattern-sensitive features (PSFs) by quantifying the discrepancy
+    between original signals and reconstructed ones for specified tuples while compiling
+    into the trained DAE.
+
+
+    In order to evaluate the discrepancy between the original signals and the reconstruction,
+    this framework defines indicators of reconstruction quantification, which are
+    defined for adaptive options in design implementation thereof. Four basic PSFs
+    are defined as mean square error (MSE), original-reconstructed signal ratio (OSSR)
+    (Kumar et al., 2023), correlation coefficients (CORR) (Papagorgiou, 2022), and
+    cosine similarity (Vin and,, 2022). Therefore, MSE is simplest to compare two
+    sequences, and its value may be used to gauge how much of a reconstruction went
+    overall. OBSR is defined as the ratio of the quantitative square of the original
+    and reconstructed signals which is derived from the energy of signal-to-noise
+    ratio. CORR is defined as the ratio of the feature covariance matrix and the standard
+    deviation, which estimates the linear correlation between two tuples (Jurkò et
+    al., 2022). With regard to COSS, it is defined as the cosine of the angle between
+    two vectors, which are viewed as vectors in an inner product space (Sinha, 2009).
+    The involved mathematical functions are expressed as follows:
+
+
+    $MSE = \frac{1}{n}\sum_{i=1}^{n}(x_i-y_i)^2$ (4)
+
+
+    $ORSR = \log_{10} \frac{\sum_{i=1}^{n} x_i^2}{\sum_{i=1}^{n} y_i^2}$ (5)
+
+
+    $CORR = \frac{\sum_{i=1}^{n} (x_i - \mu_x)(y_i - \mu_y)}{\sqrt{\sum_{i=1}^{n}
+    (x_i - \mu_x)^2 \sum_{i=1}^{n} (y_i - \mu_y)^2}}$ (6)
+
+
+    $COST = \frac{\|X-Y\|}{\|X\|+\|Y\|} = \frac{\sqrt{\sum_{i=1}^{n} (x_i - y_i)^2}}{\sqrt{\sum_{i=1}^{n}
+    x_i^2}+\sqrt{\sum_{i=1}^{n} y_i^2}}}$ (7)
+
+
+    Where $\eta$ denotes the density of signals, $\mu_x, \mu_y$ denote the values
+    of original and reconstructed coordinates, support vector.
+
+
+    It is also noted that apart from the aforementioned basic PSFs, some other derivatives
+    can be derived with extensive flexibility in practical circumstances, such as
+    the mean square error (RMSE) and the sum of squares (SSS), which are defined as
+    follows:
+
+
+    $RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n} (x_i - y_i)^2}$ (8)
+
+
+    $SSS = \sum_{i=1}^{n} (x_i - y_i)^2$ (9)
+
+
+    Hereby, a series of costly PSFs are obtained, which are costly for downstream
+    clustering with multi-level supervision. Without loss of generality, the PSF functions
+    in this paper are optional for downstream clustering, however other derivatives
+    can reconstruct their PSF in regard to the unsupervised tuples characteristics.
+
+
+    In current practice, supervised classification-based approaches have demonstrated
+    a bottleneck in DL-driven shim for a long time. This seems with the supervised
+    clustering prevents a breakthrough where complex data comes into existence.
+
+
+    With regard to the classification problem, a wide range of classifiers have developed
+    and used in: Naive Bayes (NB), Support Vector Machine (SVM), logistic regression
+    (LR), Hessian machine (HSM), decision trees (DT), random forest (RF), and AdaBoost.
+
+
+    A system can automatically fulfill the requirements for feature detection or classification
+    from raw data using a set of machine learning algorithms called representation
+    learning (i.e., feature learning), which eliminates the need for manual feature
+    engineering and enables machines to learn the features themselves and obtain representations
+    for specific tasks. Therefore, deep autoencoder
+
+
+    Having the derived method and DAE in main, it is not difficult to understand that
+    with given levels with different categories of tuples (i.e., to diverse levels),
+    the reconstruction quality will alter to multi-level extent. Here, it is feasible
+    to extract the pattern-sensitive features (PSFs) by quantifying the discrepancy
+    between original signals and reconstructed ones for specified tuples while compiling
+    into the trained DAE.
+
+
+    In order to evaluate the discrepancy between the original signals and the reconstruction,
+    this framework defines indicators of reconstruction quantification, which are
+    defined for adaptive options in design implementation thereof. Four basic PSFs
+    are defined as mean square error (MSE), original-reconstructed signal ratio (OSSR)
+    (Kumar et al., 2023), correlation coefficients (CORR) (Papagorgiou, 2022), and
+    cosine similarity (Vin and,, 2022). Therefore, MSE is simplest to compare two
+    sequences, and its value may be used to gauge how much of a reconstruction went
+    overall. OBSR is defined as the ratio of the quantitative square of the original
+    and reconstructed signals which is derived from the energy of signal-to-noise
+    ratio. CORR is defined as the ratio of the feature covariance matrix and the standard
+    deviation, which estimates the linear correlation between two tuples (Jurkò et
+    al., 2022). With regard to COSS, it is defined as the cosine of the angle between
+    two vectors, which are viewed as vectors in an inner product space (Sinha, 2009).
+    The involved mathematical functions are expressed as follows:
+
+
+    $MSE = \frac{1}{n}\sum_{i=1}^{n}(x_i-y_i)^2$ (4)
+
+
+    $ORSR = \log_{10} \frac{\sum_{i=1}^{n} x_i^2}{\sum_{i=1}^{n} y_i^2}$ (5)
+
+
+    $CORR = \frac{\sum_{i=1}^{n} (x_i - \mu_x)(y_i - \mu_y)}{\sqrt{\sum_{i=1}^{n}
+    (x_i - \mu_x)^2 \sum_{i=1}^{n} (y_i - \mu_y)^2}}$ (6)
+
+
+    $COST = \frac{\|X-Y\|}{\|X\|+\|Y\|} = \frac{\sqrt{\sum_{i=1}^{n} (x_i - y_i)^2}}{\sqrt{\sum_{i=1}^{n}
+    x_i^2}+\sqrt{\sum_{i=1}^{n} y_i^2}}}$ (7)
+
+
+    Where $\eta$ denotes the density of signals, $\mu_x, \mu_y$ denote the values
+    of original and reconstructed coordinates, support vector.
+
+
+    It is also noted that apart from the aforementioned basic PSFs, some other derivatives
+    can be derived with extensive flexibility in practical circumstances, such as
+    the mean square error (RMSE) and the sum of squares (SSS), which are defined as
+    follows:
+
+
+    $RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n} (x_i - y_i)^2}$ (8)
+
+
+    $SSS = \sum_{i=1}^{n} (x_i - y_i)^2$ (9)
+
+
+    Hereby, a series of costly PSFs are obtained, which are costly for downstream
+    clustering with multi-level supervision. Without loss of generality, the PSF functions
+    in this paper are optional for downstream clustering, however other derivatives
+    can reconstruct their PSF in regard to the unsupervised tuples characteristics.
+
+
+    In current practice, supervised classification-based approaches have demonstrated
+    a bottleneck in DL-driven shim for a long time. This seems with the supervised
+    clustering prevents a breakthrough where complex data comes into existence.
+
+
+    With regard to the classification problem, a wide range of classifiers have developed
+    and used in: Naive Bayes (NB), Support Vector Machine (SVM), logistic regression
+    (LR), Hessian machine (HSM), decision trees (DT), random forest (RF), and AdaBoost.
+
+
+    A system can automatically fulfill the requirements for feature detection or classification
+    from raw data using a set of machine learning algorithms called representation
+    learning (i.e., feature learning), which eliminates the need for manual feature
+    engineering and enables machines to learn the features themselves and obtain representations
+    for specific tasks. Therefore, deep autoencoder
+
+
+    Having the derived method and DAE in main, it is not difficult to understand that
+    with given levels with different categories of tuples (i.e., to diverse levels),
+    the reconstruction quality will alter to multi-level extent. Here, it is feasible
+    to extract the pattern-sensitive features (PSFs) by quantifying the discrepancy
+    between original signals and reconstructed ones for specified tuples while compiling
+    into the trained DAE.
+
+
+    In order to evaluate the discrepancy between the original signals and the reconstruction,
+    this framework defines indicators of reconstruction quantification, which are
+    defined for adaptive options in design implementation thereof. Four basic PSFs
+    are defined as mean square error (MSE), original-reconstructed signal ratio (OSSR)
+    (Kumar et al., 2023), correlation coefficients (CORR) (Papagorgiou, 2022), and
+    cosine similarity (Vin and,, 2022). Therefore, MSE is simplest to compare two
+    sequences, and its value may be used to gauge how much of a reconstruction went
+    overall. OBSR is defined as the ratio of the quantitative square of the original
+    and reconstructed signals which is derived from the energy of signal-to-noise
+    ratio. CORR is defined as the ratio of the feature covariance matrix and the standard
+    deviation, which estimates the linear correlation between two tuples (Jurkò et
+    al., 2022). With regard to COSS, it is defined as the cosine of the angle between
+    two vectors, which are viewed as vectors in an inner product space (Sinha, 2009).
+    The involved mathematical functions are expressed as follows:
+
+
+    $MSE = \frac{1}{n}\sum_{i=1}^{n}(x_i-y_i)^2$ (4)
+
+
+    $ORSR = \log_{10} \frac{\sum_{i=1}^{n} x_i^2}{\sum_{i=1}^{n} y_i^2}$ (5)
+
+
+    $CORR = \frac{\sum_{i=1}^{n} (x_i - \mu_x)(y_i - \mu_y)}{\sqrt{\sum_{i=1}^{n}
+    (x_i - \mu_x)^2 \sum_{i=1}^{n} (y_i - \mu_y)^2}}$ (6)
+
+
+    $COST = \frac{\|X-Y\|}{\|X\|+\|Y\|} = \frac{\sqrt{\sum_{i=1}^{n} (x_i - y_i)^2}}{\sqrt{\sum_{i=1}^{n}
+    x_i^2}+\sqrt{\sum_{i=1}^{n} y_i^2}}}$ (7)
+
+
+    Where $\eta$ denotes the density of signals, $\mu_x, \mu_y$ denote the values
+    of original and reconstructed coordinates, support vector.
+
+
+    It is also noted that apart from the aforementioned basic PSFs, some other derivatives
+    can be derived with extensive flexibility in practical circumstances, such as
+    the mean square error (RMSE) and the sum of squares (SSS), which are defined as
+    follows:
+
+
+    $RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n} (x_i - y_i)^2}$ (8)
+
+
+    $SSS = \sum_{i=1}^{n} (x_i - y_i)^2$ (9)
+
+
+    Hereby, a series of costly PSFs are obtained, which are costly for downstream
+    clustering with multi-level supervision. Without loss of generality, the PSF functions
+    in this paper are optional for downstream clustering, however other derivatives
+    can reconstruct their PSF in regard to the unsupervised tuples characteristics.
+
+
+    ### 2.4. Semi-supervised labeling via optimized FCM
+
+
+    As name implies, supervised learning is a tradeoff between supervised and unsupervised
+    learning, which aims to maximize the full value of labeled dataset. It is a common
+    phenomenon in semi-supervised learning that labeled data are widely accessible
+    while unlabeled data are scarce and expensive. In this branch, of proposed framework
+    GTF, a novel semi-supervised labeling method is proposed through using optimized
+    FCM. Specifically, the unlabeled and pseudo-labeled data generated by optimized
+    FCM are introduced and together to train linear classifiers. The approach is based
+    of optimized FCM. It can be naturally observed that clustering with having some
+    pseudo-labels as some clusters, points belonging to corresponding centers are
+    labeled as pseudo-labels. This is possible because with top 75% centroids are
+    selected to train the classifier in a supervised way. Further, with the method
+    of eliminating clusters with large uncertainties, the result of the classifier
+    is reliable, the results of which are the accurate predictions of labelings.
+
+
+    ### 2.4. Unsupervised clustering using optimized FCM
+
+
+    Obtaining sufficient tuple with unambiguous labels to classify a pattern in pattern
+    clustering is typically expensive and even when unlabeled data are generally generated
+    (Schmidt Huber). It is of great necessity and significance to perform the SH-oriented
+    task in an unsupervised way herewith a capable avenue of fuzzy clustering.
+
+
+    In scopes of unsupervised learning, fuzzy clustering is a typical algorithm where
+    the samples are assigned to a pattern recognition by using measures such as similarity
+    and distribution density, thereupon designated to the groups (i.e., so-clusters)
+    to create a data center (Preddeyraj, 2021). It is the usual practice of a of input-output
+    couples in
+
+    '
+  mdcn: '
+
+
+    # GTRF: 一种通用组识别框架
+
+    （集成在深度学习融合中）
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_2_0.png)
+
+
+    图 2. 所提 GTRF 方法的原理图设计。
+
+
+    从原型结构到物理摩天大楼。需要明确的是，被忽略的无效性学习模式与标签可用性的通用做法是一致的。在不失一般性的情况下，可以使用所提出的 GTRF 框架随时对学习范式进行相应的调整。
+
+
+    (DAE)(Zhang 等人，2022) 是一种独特的表示检测器，通过堆叠反向传播训练以复制其输入。DAE 包含与隐藏层重复的两个主要块（即函数的并行之函数）：编码器和解码器，如图
+    4 所示。编码族 $E(x)$ 将输入解码为解码信息（此处原文应为编码/encode），这些信息是潜变量 $h$。在这里，解码器 $D(h)$ 将潜表示解码为与输入维度完全相同的输出（Bank
+    等人，2020）。通常，编码器和解码器被识别为多层感知器，其公式化如下：
+
+
+    ## 2. 所提 GTRF 的方法
+
+
+    ### 2.1. GTRF 概述
+
+
+    考虑到所提出的输入的本质特征，本研究提出了一种面向多层级监督范式的通用组识别框架（GTRF）。图 2 展示了所提 GTRF 方法的原理图设计。在通用框架中，提出了一种新的特征提取方法，通过深层自动编码器来表示表示学习。在此基础上，通过所有内容的误差重构来描述特征，并定义并计算了一系列模式-特征（PSFs）。具体而言，针对不同的识别范式设计了三种替代方案：监督、无监督和半监督。UL
+    范式中通过优化的模糊-FCM 算法遵循无监督聚类模式，SSL 范式中通过优化的 FCM 算法遵循半监督模式。图 3 展示了所提框架 GTRF 的工作流，其详细架构和机制将在后文中阐述。
+
+
+    ```
+
+    $E(x) = \sigma(W_e x + b_e)$
+
+    ```
+
+
+    ```
+
+    $D(h) = \sigma(W_d h + b_d)$
+
+    ```
+
+
+    其中 $\sigma$ 表示编码器和解码器的激活函数，如 ReLU、softmax 和 sigmoid 函数。$W$ 指权重，$b$ 分别指编码器和解码器输入层与输出层之间的偏置。
+
+
+    ### 2.2. 表示学习与特征提取
+
+
+    DAE 通过权重矩阵和偏置的反向传播优化学习从输入 $x$ 到输出的重构，同时最小化重构误差，该误差通过 $y$ 与 $x$ 之间的差异来衡量。在大多数情况下，重构指标是
+    $L = ||y - \hat{y}||^2$。因此，寻找最优自动编码器基本上转化为一个最小二乘问题：
+
+
+    ```
+
+    $min_{\theta} \sum_{i=1}^{n} ||y_i - \hat{y}_i||^2$
+
+    ```
+
+
+    这可以通过任何数学优化技术（如常用的梯度下降）来实现。
+
+
+    系统可以使用称为表示学习（即特征学习）的机器学习算法自动满足从原始数据进行特征检测或分类的要求，这消除了对人工特征工程的需要，并使机器能够学习特征本身并获取特定任务的表示。因此，深度自动编码器
+
+
+    以推导的方法和 DAE 为主，很容易理解，对于具有不同类别的给定级别组（即不同层次），重构质量将改变到多层级的程度。在这里，通过量化指定组原始信号与重构信号之间的差异，并将其编译到训练的
+    DAE 中，提取模式敏感特征（PSFs）是可行的。
+
+
+    # 人工智能工程应用 124 (2023) 106500
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_3_0.png)
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_3_1.png)
+
+
+    为了评估原始信号与重构之间的差异，该框架定义了重构量化指标，这些指标针对设计实现中的自适应选项进行了定义。四个基本的 PSF 定义为均方误差（MSE）、原始-重构信号比（OSSR）（Kumar
+    等人，2023）、相关系数（CORR）（Papagorgiou，2022）和余弦相似度（Vin 和，2022）。因此，MSE 是比较两个序列最简单的，其值可以用于衡量整体重构了多大程度上。OSSR
+    定义为原始信号和重构信号的平方之比，源于信噪比的能量。CORR 定义为特征协方差矩阵与标准差之比，它估计了两个组之间的线性相关性（Jurkò 等人，2022）。对于
+    COST，它定义为两个向量之间夹角的余弦，这些向量被视为内积空间中的向量（Sinha，2009）。涉及的数学函数表示如下：
+
+
+    $MSE = \frac{1}{n}\sum_{i=1}^{n}(x_i-y_i)^2$ (4)
+
+
+    # 人工智能工程应用 124 (2023) 106950
+
+
+    ```
+
+    $ORSR = \log_{10} \frac{\sum_{i=1}^{n} x_i^2}{\sum_{i=1}^{n} y_i^2}$ (5)
+
+    ```
+
+
+    ```
+
+    $CORR = \frac{\sum_{i=1}^{n} (x_i - \mu_x)(y_i - \mu_y)}{\sqrt{\sum_{i=1}^{n}
+    (x_i - \mu_x)^2 \sum_{i=1}^{n} (y_i - \mu_y)^2}}$ (6)
+
+    ```
+
+
+    ```
+
+    $COST = \frac{\|X-Y\|}{\|X\|+\|Y\|} = \frac{\sqrt{\sum_{i=1}^{n} (x_i - y_i)^2}}{\sqrt{\sum_{i=1}^{n}
+    x_i^2}+\sqrt{\sum_{i=1}^{n} y_i^2}}$ (7)
+
+    ```
+
+
+    其中 $\eta$ 表示信号密度，$\mu_x, \mu_y$ 表示原始和重构坐标的值，支持向量。
+
+
+    同样注意到，除了上述基本 PSF 之外，在实际情况下可以极具灵活性地推导出其他指标，例如均方根误差（RMSE）和平方和（SSS），它们的定义如下：
+
+
+    ```
+
+    $RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n} (x_i - y_i)^2}$ (8)
+
+    ```
+
+
+    ```
+
+    $SSS = \sum_{i=1}^{n} (x_i - y_i)^2$ (9)
+
+    ```
+
+
+    由此，获得了一系列代价贵的 PSF，这些 PSF 对于多级监督的下游聚类是有用的。在不失一般性的情况下，本文中的 PSF 函数对于下游聚类是可选的，但其他衍生可以根据无监督组特征重构它们的
+    PSF。
+
+
+    （注：此处后续内容存在大量重复，已按要求翻译并保留）
+
+
+    ### 2.3. 通过线性分类器的监督聚类
+
+
+    在实践中，基于监督的方法在深度学习驱动框架方面长期表现出瓶颈。这似乎是监督聚类阻止了复杂数据出现时的突破。对于分类问题，开发并使用了广泛的分类器：朴素贝叶斯（NB）、支持向量机（SVM）、逻辑回归（LR）、Hessian
+    机器（HSM）、决策树（DT）、随机森林（RF）和 AdaBoost。系统可以使用称为表示学习（即特征学习）的机器学习算法自动满足从原始数据进行特征检测或分类的要求，这消除了对人工特征工程的需要，并使机器能够学习特征本身并获取特定任务的表示。因此，深度自动编码器以推导的方法和
+    DAE 为主，很容易理解，对于具有不同类别的给定级别组（即不同层次），重构质量将改变到多层级的程度。在这里，通过量化指定组原始信号与重构信号之间的差异，并将其编译到训练的
+    DAE 中，提取模式敏感特征（PSFs）是可行的。为了评估原始信号与重构之间的差异，该框架定义了重构量化指标，这些指标针对设计实现中的自适应选项进行了定义。四个基本的
+    PSF 定义为均方误差（MSE）、原始-重构信号比（OSSR）（Kumar 等人，2023）、相关系数（CORR）（Papagorgiou，2022）和余弦相似度（Vin
+    和，2022）。因此，MSE 是比较两个序列最简单的，其值可以用于衡量整体重构了多大程度上。OSSR 定义为原始信号和重构信号的平方之比，源于信噪比的能量。CORR
+    定义为特征协方差矩阵与标准差之比，它估计了两个组之间的线性相关性（Jurkò 等人，2022）。对于 COST，它定义为两个向量之间夹角的余弦，这些向量被视为内积空间中的向量（Sinha，2009）。涉及的数学函数表示如下：
+
+
+    $MSE = \frac{1}{n}\sum_{i=1}^{n}(x_i-y_i)^2$ (4)
+
+
+    $ORSR = \log_{10} \frac{\sum_{i=1}^{n} x_i^2}{\sum_{i=1}^{n} y_i^2}$ (5)
+
+
+    $CORR = \frac{\sum_{i=1}^{n} (x_i - \mu_x)(y_i - \mu_y)}{\sqrt{\sum_{i=1}^{n}
+    (x_i - \mu_x)^2 \sum_{i=1}^{n} (y_i - \mu_y)^2}}$ (6)
+
+
+    $COST = \frac{\|X-Y\|}{\|X\|+\|Y\|} = \frac{\sqrt{\sum_{i=1}^{n} (x_i - y_i)^2}}{\sqrt{\sum_{i=1}^{n}
+    x_i^2}+\sqrt{\sum_{i=1}^{n} y_i^2}}}$ (7)
+
+
+    其中 $\eta$ 表示信号密度，$\mu_x, \mu_y$ 表示原始和重构坐标的值，支持向量。同样注意到，除了上述基本 PSF 之外，在实际情况下可以极具灵活性地推导出其他指标，例如均方根误差（RMSE）和平方和（SSS），它们的定义如下：
+
+
+    $RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n} (x_i - y_i)^2}$ (8)
+
+
+    $SSS = \sum_{i=1}^{n} (x_i - y_i)^2$ (9)
+
+
+    由此，获得了一系列代价贵的 PSF，这些 PSF 对于多级监督的下游聚类是有用的。在不失一般性的情况下，本文中的 PSF 函数对于下游聚类是可选的，但其他衍生可以根据无监督组特征重构它们的
+    PSF。
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 5]
+
+
+    Definition Given a dataset with N unlabeled points and an expected cluster of
+    c, the FCM algorithm is formulated as follows:
+
+
+    Step1: Initialize an initial clustering and calculate the centroid $m_0$ of each
+    cluster $\Gamma_i, i=1, 2,...,c$
+
+
+    ```
+
+    $m_i = \frac{1}{N} \sum_{y \in \Gamma_i} y$
+
+    ```
+
+
+    Step2: Calculate the clustering function $J_c$ as clustering criterion, which
+    is defined as the sum Euler distance of sample points and class centroid
+
+
+    ```
+
+    $J_c = \sum_{y \in \Gamma_i} |y - m_i|^2$
+
+    ```
+
+
+    Step3: Assign each sample to the representative point according to the principle
+    of minimum distance and recalculate the centroids continuously. Adjust each sample
+    class to minimize the clustering function $J_c$
+
+
+    ```
+
+    $\Gamma_i = \{y | |y - m_i| \leq |y - m_j|, j=1, 2,...,c\$
+
+    ```
+
+
+    Step4: Update Step3 until the iteration reaches convergence.
+
+
+    Step5: Calculate and rank the Euler distance between points and centroids of each
+    cluster, on the basis of which preserve the 75% points to corresponding centroids,
+    obtaining samples with pseudo-labels
+
+
+    ```
+
+    $\Gamma_{i}^{c} = \{y_i^* \in \Gamma_i, i=1, 2,...,c\$
+
+    ```
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_5_0.png)
+
+
+    # Given with N unlabeled dataset
+
+
+    # Given with M labeled points and N-M unlabeled labels
+
+
+    # cluster A*
+
+
+    # cluster B*
+
+
+    # cluster A*
+
+
+    # cluster B*
+
+
+    Points with confidence interval
+
+
+    75% filter interval
+
+
+    75% filter interval
+
+
+    pseudo-labels
+
+
+    # cluster C*
+
+
+    # cluster C
+
+
+    real labels
+
+
+    pseudo-labels
+
+
+    Clustering detector: FCM into clusters
+
+
+    Clustering detector: FCM into (c-1) clusters
+
+
+    Training set: pseudo-labels [A*,B*,C*]
+
+
+    Training set: real-pseudo-labels [A*,B*,C]
+
+
+    Predict: trained supervisors
+
+
+    Predictor: trained supervisors
+
+
+    (a) Optimized FCM algorithm for UL paradigm
+
+
+    (b) Optimized FCM algorithm for SSL paradigm
+
+
+    # 3. Experimental validations
+
+
+    To validate the effectiveness of proposed GTTRF, multi-level experimental implementation
+    in SHM through a fixed skeleton approach towards SL paradigm and damage detection
+    of a laboratory RC beam (tower) and monitoring of full-scale shear-wall structure
+    (towers SSL paradigm), as shown in figure
+
+
+    Without loss of generality, used-variety data forms from acceleration measurement
+    and piezoelectric signals are involved in the experimental analysis of the diversity
+    of views regardless of data form. It is better noted that all the involved signals
+    of experimental techniques are strictly the original “raw” and no denoising pre-processing
+    is needed.
+
+
+    Notably, as a general framework, the architecture (i.e., layer stack of DAE),
+    designation (i.e., multiple PSFs) and assignment (i.e., various classification
+    algorithms) in the GTTRF can be set and adjusted for better applicability to the
+    interest task implementation. Detailed data collection, framework specification
+    and experimental implementation of each paradigm validation are elaborated subsequently.
+
+
+    # 3.1. Supervised paradigm: vibration recognition over accelerometer measurement
+
+
+    In the practical engineering of SHM, vibration recognition of highrise structures
+    under different environments is of great importance for structural vibration control
+    and health monitoring'
+  - '[PAGE 6]
+
+
+    Given a dataset with N-unlabeled points and M labeled points with an expected
+    cluster count c, the optimized FCM algorithm is formulated as follows:
+
+
+    For data in N-M unlabeled points:
+
+
+    Step1: Initialize an initial clustering pattern and calculate the centroid $m_j$
+    of each cluster $\Gamma_j, j=1..2..c-1$
+
+
+    ```
+
+    $m_j = \frac{1}{N} \sum_{y \in \Gamma_j} y$
+
+    ```
+
+
+    Step2: Calculate the clustering function $J_k$ as clustering criterion, which
+    is defined as the Euler distance of sample points and class centroid
+
+
+    ```
+
+    $J_k = \sum_{j=1}^{c} \sum_{y \in \Gamma_j} \|y - m_j\|^2$
+
+    ```
+
+
+    ```
+
+    $\Gamma_i = \{y | \|y - m_i\|^2 \le \|y - m_j\|^2\}, \forall j=1,2..c$
+
+    ```
+
+
+    Step4: Update Step until the iteration reaches convergence, obtaining final (c-1)
+    clusters and centroids.
+
+
+    Step5: Calculate and rank the Euler distance between points and centroids of each
+    cluster, on the basis of which preserve the top 75% points to corresponding centroids,
+    obtaining samples with pseudo-labels
+
+
+    ```
+
+    $\Gamma_{i^*} = \{y_i^*\}, \forall i=1,2..c-1$
+
+    ```
+
+
+    End
+
+
+    For data in M labeled points and N-M unlabeled points $\Gamma_{i}^*$:
+
+
+    Step6: Append $y_i$ and $\Gamma_{i}^*$ together, and obtain a multi-labeled dataset.
+
+
+    Step7: Fit the mixed dataset with real or pseudo labels to train supervised classifiers.
+
+    The trained model is hereon predict the label of other points.
+
+
+    > End
+
+    ### The trained classifier is exactly the solver of the labeled problem.
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_6_0.png)
+
+
+    (Cheng et al., 2021; Li et al., 2020), which share a comprehensive strategy to
+    enhance the real-structural identify of Smart City. Thus, in this study, vibration
+    bulbs by field measurement of 632 m high-rise building structure under its conflicting
+    environmental excitations are recognized using proposed method to validate the
+    survey position proposed in GTPRF.
+
+
+    # 3.1. Data acquisition and processing
+
+
+    When it comes to high-rise buildings, the 632 m Tower, the tallest building in
+    the world and the tallest in China, shares vibrations that are deployed for health
+    monitoring. On tons of sensors for measurement history (i.e., acceleration data)
+    of Shanghai Tower were collected and selected from a total of 600 samples under
+    different ambient conditions, including noise, wind, traffic (TY) and earthquake
+    (FE), respectively, as shown in Fig. 8. TY segments were measured during the sweeping
+    of five strong types, namely Anpli, Jumbdi, Changchu and Shanghai. FE segments
+    were collected from two records according to the South East Environmental Monitoring.
+    Apart from types of TY and FE, those under gentle conditions were recorded as
+    the NW segments. Each survey duration is 120 s (i.e., 12000 points) constructing
+    the structural
+
+
+    natural frequency (0.1 Hz) and sensory sampling frequency (100 Hz).
+
+    Hereas, a dataset of (600,120000) to three labels were acquired for validation.
+    It should be clarified that even the aforementioned label is rough and manual,
+    it causes no degradation to the reasonableness of the verifying frequent of supervised
+    classification is the accessibility of the labels.
+
+
+    # 3.1.2. Framework design and experimental implementation
+
+
+    Noting that the frequency domain exhibits much more information than the time
+    domain exhibiting the underlying mechanism, as the acceleration segments are first
+    processed with then then using the Fast Fourier transform (FFT), which are down-sampled
+    to a length of 600. The architecture of the DAE network is composed as described
+    with blocks of dimension (600, 256, 128, 256, 600 Blocks. Without loss of generality,
+    the loss function is defined as MSE and the activation function is designed as
+    ReLU, as typical in DAE model design. An Adam optimizer with a learning rate of
+    0.001 is used to optimize the network. Furthermore, the segments of FE are used
+    for DAE training, which has proven the best performance among the three parallel'
+  - '[PAGE 7]
+
+
+    X. Xiong, C. Yuan, B. He et al.
+
+
+    Engineering Applications of Artificial Intelligence 124 (2023) 106500
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_7_0.png)
+
+
+    Fig. 8. Data acquisition and performance for supervised paradigm validation.
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_7_1.png)
+
+
+    Fig. 9. Multivariate boxplot of PSFs.
+
+
+    exploring the trained DAE is then to reconstruct the signals, on the basis of
+    which PSFs can be obtained by reconstruction error quantification. In this paradigm,
+    three metrics MSE, SSR, and CORR provided in the framework GTRF are used to establish
+    the mapping between vibration signals and excited ambient conditions. Fig. 9 shows
+    the distribution characteristics of PSFs of three types of vibration signals,
+    which exhibit frequency, median, and outliers, promising to allocate these extracted
+    PSFs for downstream classifiers.
+
+
+    test accuracy 0.95, slightly higher than 0.94 of DT. The extensively satisfactory
+    prediction results prove the effectiveness of framework GTRF in task addressing
+    tuples recognition in the SL. To further investigate the potential superiority
+    of supervised GTRF, a state-of-the-art technique in vibration recognition score
+    based on deep CNN networks with Mel-frequency cepstral coefficients. The activated
+    CNN and proper feature extraction from MFCCs were introduced in the literature.
+    Running the two programs on the same dataset...
+
+
+    # 3.1.3. Prediction results and performance evaluation
+
+
+    To perform the supervised classification on task PSFs, three classifiers listed
+    in the GTRF were investigated, using decision tree (DT), random forest (RF) and
+    gradient boosting machine (GBM). In the training, the remaining 25% of labels
+    were used for the test. The prediction performance is evaluated by the typical
+    method, that is, test accuracy, which is defined as the ratio of the correct predictions
+    to that of total predictions.
+
+
+    Fig. 10 presents the prediction accuracy and test of all classified models. It
+    can be seen that all classifiers reaching an accuracy of 100%, and RF and GB achieved
+
+
+    # 3.2. Unsupervised paradigm: damage detection on piezoelectric signals
+
+
+    Due to the fact that RC beams serve as the main link and the force composition
+    coefficients in building structures, damage detection
+
+
+    8'
+  md: '
+
+    Definition Given a dataset with N unlabeled points and an expected cluster of
+    c, the FCM algorithm is formulated as follows:
+
+
+    Step1: Initialize an initial clustering and calculate the centroid $m_0$ of each
+    cluster $\Gamma_i, i=1, 2,...,c$
+
+
+    ```
+
+    $m_i = \frac{1}{N} \sum_{y \in \Gamma_i} y$
+
+    ```
+
+
+    Step2: Calculate the clustering function $J_c$ as clustering criterion, which
+    is defined as the sum Euler distance of sample points and class centroid
+
+
+    ```
+
+    $J_c = \sum_{y \in \Gamma_i} |y - m_i|^2$
+
+    ```
+
+
+    Step3: Assign each sample to the representative point according to the principle
+    of minimum distance and recalculate the centroids continuously. Adjust each sample
+    class to minimize the clustering function $J_c$
+
+
+    ```
+
+    $\Gamma_i = \{y | |y - m_i| \leq |y - m_j|, j=1, 2,...,c\}$
+
+    ```
+
+
+    Step4: Update Step3 until the iteration reaches convergence.
+
+
+    Step5: Calculate and rank the Euler distance between points and centroids of each
+    cluster, on the basis of which preserve the 75% points to corresponding centroids,
+    obtaining samples with pseudo-labels
+
+
+    ```
+
+    $\Gamma_{i}^{c} = \{y_i^* \in \Gamma_i, i=1, 2,...,c\}$
+
+    ```
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_5_0.png)
+
+
+    - Given with N unlabeled dataset
+
+    - Given with M labeled points and N-M unlabeled labels
+
+    - cluster A*
+
+    - cluster B*
+
+    - cluster A*
+
+    - cluster B*
+
+    - Points with confidence interval
+
+    - 75% filter interval
+
+    - 75% filter interval
+
+    - pseudo-labels
+
+    - cluster C*
+
+    - cluster C
+
+    - real labels
+
+    - pseudo-labels
+
+    - Clustering detector: FCM into clusters
+
+    - Clustering detector: FCM into (c-1) clusters
+
+    - Training set: pseudo-labels [A*,B*,C*]
+
+    - Training set: real-pseudo-labels [A*,B*,C]
+
+    - Predict: trained supervisors
+
+    - Predictor: trained supervisors
+
+    - (a) Optimized FCM algorithm for UL paradigm
+
+    - (b) Optimized FCM algorithm for SSL paradigm
+
+
+    ## 3. Experimental validations
+
+
+    To validate the effectiveness of proposed GTTRF, multi-level experimental implementation
+    in SHM through a fixed skeleton approach towards SL paradigm and damage detection
+    of a laboratory RC beam (tower) and monitoring of full-scale shear-wall structure
+    (towers SSL paradigm), as shown in figure
+
+
+    Without loss of generality, used-variety data forms from acceleration measurement
+    and piezoelectric signals are involved in the experimental analysis of the diversity
+    of views regardless of data form. It is better noted that all the involved signals
+    of experimental techniques are strictly the original “raw” and no denoising pre-processing
+    is needed.
+
+
+    Notably, as a general framework, the architecture (i.e., layer stack of DAE),
+    designation (i.e., multiple PSFs) and assignment (i.e., various classification
+    algorithms) in the GTTRF can be set and adjusted for better applicability to the
+    interest task implementation. Detailed data collection, framework specification
+    and experimental implementation of each paradigm validation are elaborated subsequently.
+
+
+    ## 3.1. Supervised paradigm: vibration recognition over accelerometer measurement
+
+
+    In the practical engineering of SHM, vibration recognition of highrise structures
+    under different environments is of great importance for structural vibration control
+    and health monitoring
+
+
+    Given a dataset with N-unlabeled points and M labeled points with an expected
+    cluster count c, the optimized FCM algorithm is formulated as follows:
+
+
+    For data in N-M unlabeled points:
+
+
+    Step1: Initialize an initial clustering pattern and calculate the centroid $m_j$
+    of each cluster $\Gamma_j, j=1..2..c-1$
+
+
+    ```
+
+    $m_j = \frac{1}{N} \sum_{y \in \Gamma_j} y$
+
+    ```
+
+
+    Step2: Calculate the clustering function $J_k$ as clustering criterion, which
+    is defined as the Euler distance of sample points and class centroid
+
+
+    ```
+
+    $J_k = \sum_{j=1}^{c} \sum_{y \in \Gamma_j} \|y - m_j\|^2$
+
+    ```
+
+
+    ```
+
+    $\Gamma_i = \{y | \|y - m_i\|^2 \le \|y - m_j\|^2\}, \forall j=1,2..c$
+
+    ```
+
+
+    Step4: Update Step until the iteration reaches convergence, obtaining final (c-1)
+    clusters and centroids.
+
+
+    Step5: Calculate and rank the Euler distance between points and centroids of each
+    cluster, on the basis of which preserve the top 75% points to corresponding centroids,
+    obtaining samples with pseudo-labels
+
+
+    ```
+
+    $\Gamma_{i^*} = \{y_i^*\}, \forall i=1,2..c-1$
+
+    ```
+
+
+    End
+
+
+    For data in M labeled points and N-M unlabeled points $\Gamma_{i}^*$:
+
+
+    Step6: Append $y_i$ and $\Gamma_{i}^*$ together, and obtain a multi-labeled dataset.
+
+
+    Step7: Fit the mixed dataset with real or pseudo labels to train supervised classifiers.
+
+    The trained model is hereon predict the label of other points.
+
+
+    > End
+
+    ### The trained classifier is exactly the solver of the labeled problem.
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_6_0.png)
+
+
+    (Cheng et al., 2021; Li et al., 2020), which share a comprehensive strategy to
+    enhance the real-structural identify of Smart City. Thus, in this study,
+
+
+    ## 3.1. Data acquisition and processing
+
+
+    In the practical engineering of SHM, vibration recognition of highrise structures
+    under different environments is of great importance for structural vibration control
+    and health monitoring
+
+
+    ## 3.1.2. Framework design and experimental implementation
+
+
+    In the practical engineering of SHM, vibration recognition of highrise structures
+    under different environments is of great importance for structural vibration control
+    and health monitoring
+
+
+    ## 3.1.3. Prediction results and performance evaluation
+
+
+    In the practical engineering of SHM, vibration recognition of highrise structures
+    under different environments is of great importance for structural vibration control
+    and health monitoring
+
+
+    ## 3.2. Unsupervised paradigm: damage detection on piezoelectric signals
+
+
+    Due to the fact that RC beams serve as the main link and the force composition
+    coefficients in building structures, damage detection
+
+    '
+  mdcn: '
+
+    定义：对于包含 N 个未标记点且预期聚类数为 $c$ 的数据集，FCM 算法公式如下：
+
+
+    步骤1：初始化初始聚类并计算每个簇 $\Gamma_i, i=1, 2,...,c$ 的质心 $m_0$
+
+
+    ```
+
+    $m_i = \frac{1}{N} \sum_{y \in \Gamma_i} y$
+
+    ```
+
+
+    步骤2：计算聚类函数 $J_c$ 作为聚类准则，其定义为样本点与类质心之间的欧式距离之和
+
+
+    ```
+
+    $J_c = \sum_{y \in \Gamma_i} |y - m_i|^2$
+
+    ```
+
+
+    步骤3：根据最小距离原则将每个样本分配给代表点并不断重新计算质心。调整每个样本类以最小化聚类函数 $J_c$
+
+
+    ```
+
+    $\Gamma_i = \{y | |y - m_i| \leq |y - m_j|, j=1, 2,...,c\}$
+
+    ```
+
+
+    步骤4：重复步骤3，直到迭代达到收敛。
+
+
+    步骤5：计算并对每个簇的点与质心之间的欧式距离进行排序，在此基础上保留对应质心的前75% 的点，获得带有伪标签的样本
+
+
+    ```
+
+    $\Gamma_{i}^{c} = \{y_i^* \in \Gamma_i, i=1, 2,...,c\}$
+
+    ```
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_5_0.png)
+
+
+    - 给定 N 个未标记数据集
+
+    - 给定 M 个标记点和 N-M 个未标记
+
+    - 簇 A*
+
+    - 簇 B*
+
+    - 簇 A*
+
+    - 簇 B*
+
+    - 带有置信区间的点
+
+    - 75% 过滤区间
+
+    - 75% 过滤区间
+
+    - 伪标签
+
+    - 簇 C*
+
+    - 簇 C
+
+    - 真实标签
+
+    - 伪标签
+
+    - 聚类检测器：FCM 分类
+
+    - 聚类检测器：FCM 分为 (c-1) 类
+
+    - 训练集：伪标签 [A*,B*,C*]
+
+    - 训练集：真实-伪标签 [A*,B*,C]
+
+    - 预测：训练过的监督器
+
+    - 预测器：训练过的监督器
+
+    - (a) 针对 UL 范式的优化 FCM 算法
+
+    - (b) 针对 SSL 范式的优化 FCM 算法
+
+
+    ## 3. 实验验证
+
+
+    为了验证所提 GTTRF 的有效性，在结构健康监测（SHM）中通过固定骨架方法针对 SL 范式的实验室 RC 梁（塔）的检测，以及全尺寸剪力墙结构的监测（塔
+    SSL 范式），实施了多级实验方案，如图所示。
+
+
+    在一般情况下，实验分析涉及来自加速度测量和压电信号的多种数据形式，以研究数据形式的多样性。值得注意的是，所有涉及的实验技术信号均为原始“原始”信号，不需要进行去噪预处理。
+
+
+    值得注意的是，作为一个通用框架，GTTRF 中的架构（即 DAE 的层堆叠）、设计（即多个 PSF）和分配（即各种分类算法）可以进行设置和调整，以更好地适用于目标任务的实现。随后将详细阐述每种范式验证的数据收集、框架规范和实验实现。
+
+
+    ## 3.1. 监督范式：基于加速度计测量的振动识别
+
+
+    在 SHM 的实际工程中，高层结构在不同环境下的振动识别对于结构振动控制和健康监测具有重要意义
+
+
+    对于包含 N 个未标记点和 M 个标记点且预期聚类数为 c 的数据集，优化 FCM 算法公式如下：
+
+
+    对于 N-M 未标记点的数据：
+
+
+    步骤1：初始化初始聚类模式并计算每个簇 $\Gamma_j, j=1..2..c-1$ 的质心 $m_j$
+
+
+    ```
+
+    $m_j = \frac{1}{N} \sum_{y \in \Gamma_j} y$
+
+    ```
+
+
+    步骤2：计算聚类函数 $J_k$ 作为聚类准则，其定义为样本点与类质心之间的欧式距离
+
+
+    ```
+
+    $J_k = \sum_{j=1}^{c} \sum_{y \in \Gamma_j} \|y - m_j\|^2$
+
+    ```
+
+
+    ```
+
+    $\Gamma_i = \{y | \|y - m_i\|^2 \le \|y - m_j\|^2\}, \forall j=1,2..c$
+
+    ```
+
+
+    步骤4：更新步骤直到迭代达到收敛，获得最终的 (c-1) 个簇和质心。
+
+
+    步骤5：计算并对每个簇的点与质心之间的欧式距离进行排序，在此基础上保留对应质心的前75% 的点，获得带有伪标签的样本
+
+
+    ```
+
+    $\Gamma_{i^*} = \{y_i^*\}, \forall i=1,2..c-1$
+
+    ```
+
+
+    结束
+
+
+    对于 M 标记点和 N-M 未标记点 $\Gamma_{i}^*$ 的数据：
+
+
+    步骤6：将 $y_i$ 和 $\Gamma_{i}^*$ 合并，获得多标记数据集。
+
+
+    步骤7：使用真实或伪标签拟合混合数据集以训练监督分类器。
+
+    训练好的模型在此后预测其他点的标签。
+
+
+    > 结束
+
+    ### 训练好的分类器即为标记问题的求解器。
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_6_0.png)
+
+
+    (Cheng 等人，2021; Li 等人，2020)，他们共享一种全面策略来增强智慧城市的结构识别。因此，在本研究中，
+
+
+    ## 3.1. 数据采集与处理
+
+
+    在 SHM 的实际工程中，高层结构在不同环境下的振动识别对于结构振动控制和健康监测具有重要意义
+
+
+    ## 3.1.2. 框架设计与实验实现
+
+
+    在 SHM 的实际工程中，高层结构在不同环境下的振动识别对于结构振动控制和健康监测具有重要意义
+
+
+    ## 3.1.3. 预测结果与性能评估
+
+
+    在 SHM 的实际工程中，高层结构在不同环境下的振动识别对于结构振动控制和健康监测具有重要意义
+
+
+    ## 3.2. 无监督范式：基于压电信号的损伤检测
+
+
+    由于 RC 梁是建筑结构中的主要链路和受力系数组成，损伤检测
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 8]
+
+
+    Q. Xiong, C. Yuan, B. et al.
+
+
+    Engineering Applications of Artificial Intelligence 124 (2023) 106500
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_8_0.png)
+
+
+    Fig. 1. Prediction accuracy of training and test.
+
+
+    Table 1
+
+    The comparison of computational cost and prediction accuracy.
+
+
+    | MFCC+CNN | Computational time | Accuracy |
+
+    |---|---|--|
+
+    | Proposed GTRF | 1036.0 (s) | 49.6 (s) | 0.95 |
+
+
+    Therefore, the first stage was defined as the intact stage (IS), referring to
+    the acceptable bearing load condition. And the period of the plastic softening
+    exhibiting the true crushing was defined as the damage state (DS), referring to
+    the unexpected bearing load condition. On this basis, a total of 445 piezoelectric
+    sensors were collected. The sampling frequency was 2MHz and each has a length
+    of 32700 to 327. The task was constructed to focus the fuzzy clustering on these
+    signals to identify the damage condition in an unsupervised way.
+
+
+    of RC beams has been a vital area in structural health monitoring. Thereinto,
+    spherical smart aggregate (SSA) (Kong et al., 2016; Gao et al., 2018; Gayakwad
+    and Thiyagarajan, 2022), as an embedded multifunctional piezoelectric transducer,
+    has attracted interest owing to its rapid response and good compatibility with
+    concrete. However, in this study, the fuzzy damage detection of RC beams based
+    on the piezoelectric signals is performed on the unsupervised paradigm in GTRF.
+
+
+    3.2. Data acquisition and preparation
+
+
+    To begin, with the raw signals were downsampled from a length of 32700 to 327
+    and normalized. The architecture of the DAE was reconstructed just as three encoded
+    blocks with a dimension of 256, 128 and 64, and nearly 124, 256 for decoded blocks,
+    with the other definition such as activation function following the standard paradigm.
+    The DAE was trained for reconstruction. In this study, the PFSs were identified
+    using alternatively MSE, ORSRS and ORR. The integration of all of the PSFs with
+    different methods (e.g., clustering results) were given in Fig. 12.
+
+
+    In this study, experimental features of under-reinforced concrete beams were carried
+    out, and ties were tied with steel bars before prevent movement during operation.
+    After curing, point-based tests were performed on the RC beams. As shown in Fig.
+    1(a), the signals were measured at the support using a rod and a hydraulic electrode.
+    The electro-servo actuator was used to apply the test load.
+
+
+    From the standpoint of clustering results, the clusters were consistently aligned
+    with true-labeled samples, which were still assigned with wrong clusters. To illuminate
+    the effect of those clustering methods with low certainties, the membership method
+    was proposed in this study. Fig. 13 describes the distribution of FCM results,
+    where all the PSFs exhibited different characteristics. The distribution of 250
+    PSFs exhibited explicit characteristics.
+
+
+    Fig. 1(c) shows the force-displacement curve of the mid-span during the crack
+    development and reinforcement stress, while the loading procedure can be divided
+    into two stages, during which the occurrence of the plastic softening was recorded.
+    In the first stage, the cracks developed due to the tension of concrete. When
+    the damage continuously increased to a certain extent, the plastic softening became
+    severe in the second stage until the concrete crushing featured as the extremely-developed
+    load-carrying capacity.
+
+
+    3.3. Prediction results and evaluation
+
+
+    Considering the engineering practice that the RC beams were designed to work with,
+    in this it is the expected range when steel reinforcements would work until the
+    occurrence of plastic softening.
+
+
+    The fitted points with labels were used for the training of linear classifiers.
+    The training dataset were all pseudolabeled, and the samples with true labels
+    were only included for the test to evaluate the performance of models. In this
+    study, the whole recognition procedure was stringent in an unsupervised paradigm.
+
+
+    9'
+  - '[PAGE 9]
+
+
+    # Q. Xiong, C. Yuan, B. He et al.
+
+
+    # Engineering Applications of Artificial Intelligence 124 (2023) 106500
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_9_0.png)
+
+
+    (a) Experimental devices
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_9_1.png)
+
+
+    (b) Spherical smart aggregate (SSA)
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_9_2.png)
+
+
+    (c) Definition of intact and damage state
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_9_3.png)
+
+
+    (d) Piezoelectric signals corresponding to different states
+
+
+    **Fig. 11.** Data acquisition and preparation for unsupervised paradigm.
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_9_4.png)
+
+
+    (a) Pair plot of PSFs with true labels
+
+
+    (b) Pair plot of PSFs with pseudo labels.
+
+
+    **Fig. 12.** Pair plot of PSFs with true labels
+
+
+    of training and test of three classifiers. The results demonstrated that all three
+    classifiers achieved a training accuracy of 100% and a satisfactory accuracy of
+    84%. And, even some false prediction was made by the classifiers, may be from
+    the confusion matrices that all the false circumstance were wrongly predicting
+    the IS and DS, and all
+
+
+    the DS samples had been successfully recognized. It suggests that allocated DS
+    samples for signal reconstruction, the reconstruction errors shall exhibit a relatively
+    discrepancy to the learned "overall" representation. The discrepancy of deconstruction
+    performance is presented, the final recognition results can figure out the DS
+    samples.
+
+
+    10'
+  - '[PAGE 10]
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_10_0.png)
+
+
+    Fig. 13. 2D visualization of FCM results and filtering mechanism.
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_10_1.png)
+
+
+    (a) Confusion matrices of training
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_10_2.png)
+
+
+    (b) Confusion matrices of test
+
+
+    The false positive rates were zero, which was beneficial for engineering
+
+    practice considering the redundant safety.
+
+
+    It is worth noting that on the premise of training without
+
+    any labeled dataset, this branch in the proposed GTRF fact-
+
+    devises an effective approach of fuzzy clustering and succeeded
+
+    in performing the damage detection of RC beams in a stringently
+
+    unsupervised paradigm.
+
+
+    # 3.3. Semi-supervised paradigm: condition assessment on acceleration-response
+
+
+    Based on the aforementioned validations on SL and UL paradigms,
+
+    respectively, it can be intuitive to consider the significant value
+
+    of labeled-dataset as well as its potential for recognition
+
+    hancement. The essence is to propagate the limited known labels'
+  - '[PAGE 11]
+
+
+    Q. Xiong, C. Yuan, B. He et al.
+
+
+    Engineering Applications of Artificial Intelligence 124 (2023) 106500
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_11_0.png)
+
+
+    Fig. 15. Data acquisition and preparation for semi-supervised paradigm validation.
+
+
+    to the unknown. Thus, in case a typical task in structural health monitoring,
+    or if, condition assessment driven by vibrational response was conducted to validate
+    the final branch of proposed GTRF, i.e., semi-supervised paradigm.
+
+
+    # 3.3.1. Data acquisition and preparation
+
+
+    A full-scale two-story RC shear wall structure was designed and constructed for
+    shaking table tests, as shown in Fig. 15. The experiment ultimately obeyed the
+    standard process of shaking table tests. In order to simulate the impact of frequency,
+    rare earthquakes on the structure, the fortification criteria were increased step
+    by step. After experiencing earthquakes of increasing intensities, the amount
+    of structural damage would occur and cause defense in the health state (Zhang
+    et al., 2021). Damage conditions for the entire building in this study were established
+    based on the observed details of the tested seismic intensities.
+
+
+    Furthermore, considering the fact that measured data of attacks are generated
+    continuously, whereas labels of damage scenarios are difficult to obtain. Therefore,
+    the premise of this study is the accessibility of several known dataset (i.e.,
+    acceleration response), and the validation task is to verify the vibration-bound
+    condition assessment DS1 and DS2. Without labels, the accelerometer deployed in
+    the building model was constructed to conduct the pure data-driven damage detection
+    in the aforementioned SSL paradigm.
+
+
+    # 3.3.2. Framework specification and experimental implementation
+
+
+    The collected acceleration signals were segmented into segments with a sampling
+    frequency of 256 Hz and a duration of 1.0 s, which were first transformed into
+    the normalized amplitudes via FFT. A total of 300 segments of IS were utilized
+    to train the DAE, the input shape of which was correspondingly adjusted to the
+    reconstruction error, and 100 segments were fed into the DAE for training de.
+
+
+    Fig. 10 demonstrates the comparison of reconstruction of segments with different
+    damages. It can be seen that a precise reconstruction was revealed in the case
+    of IS, whereas significantly reconstruction errors were exhibited in the case
+    of DS1 and DS2. In this kind of condition, the condition features are extremely
+    noisy, which increases the reconstruction error.
+
+
+    Under the premise that the data of IS is accessible, the rest 200 samples of the
+    test dataset were assigned pseudo labels using the optimal FCM algorithm. After
+    the selection of the embedding filtering method, a total of 150 pseudo-labeled-samples
+    were provided with
+
+
+    # 3.3.3. Prediction results and evaluation performance
+
+
+    Correspondingly all 95 samples with mixed-pseudo labels were utilized for training
+    the classifiers, while the data were collected on randomly 57 samples with actual
+    labels. All nine classifiers in the framework were investigated in this study.
+    It is that the quality of training data affects the accuracy of each classifier.
+    It can be seen that the random forest (RF) was the optimal classifier achieving
+    a training accuracy of 100% and test accuracy of 0.85%. However, the false positive
+    rate
+
+
+    12'
+  md: '
+
+    Q. Xiong, C. Yuan, B. et al.
+
+
+    Engineering Applications of Artificial Intelligence 124 (2023) 106500
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_8_0.png)
+
+
+    Fig. 1. Prediction accuracy of training and test.
+
+
+    Table 1
+
+    The comparison of computational cost and prediction accuracy.
+
+
+    | MFCC+CNN | Computational time | Accuracy |
+
+    |---|---|--|
+
+    | Proposed GTRF | 1036.0 (s) | 49.6 (s) | 0.95 |
+
+
+    Therefore, the first stage was defined as the intact stage (IS), referring to
+    the acceptable bearing load condition. And the period of the plastic softening
+    exhibiting the true crushing was defined as the damage state (DS), referring to
+    the unexpected bearing load condition. On this basis, a total of 445 piezoelectric
+    sensors were collected. The sampling frequency was 2MHz and each has a length
+    of 32700 to 327. The task was constructed to focus the fuzzy clustering on these
+    signals to identify the damage condition in an unsupervised way.
+
+
+    of RC beams has been a vital area in structural health monitoring. Thereinto,
+    spherical smart aggregate (SSA) (Kong et al., 2016; Gao et al., 2018; Gayakwad
+    and Thiyagarajan, 2022), as an embedded multifunctional piezoelectric transducer,
+    has attracted interest owing to its rapid response and good compatibility with
+    concrete. However, in this study, the fuzzy damage detection of RC beams based
+    on the piezoelectric signals is performed on the unsupervised paradigm in GTRF.
+
+
+    ## 3.2. Data acquisition and preparation
+
+
+    To begin, with the raw signals were downsampled from a length of 32700 to 327
+    and normalized. The architecture of the DAE was reconstructed just as three encoded
+    blocks with a dimension of 256, 128 and 64, and nearly 124, 256 for decoded blocks,
+    with the other definition such as activation function following the standard paradigm.
+    The DAE was trained for reconstruction. In this study, the PFSs were identified
+    using alternatively MSE, ORSRS and ORR. The integration of all of the PSFs with
+    different methods (e.g., clustering results) were given in Fig. 12.
+
+
+    In this study, experimental features of under-reinforced concrete beams were carried
+    out, and ties were tied with steel bars before prevent movement during operation.
+    After curing, point-based tests were performed on the RC beams. As shown in Fig.
+    1(a), the signals were measured at the support using a rod and a hydraulic electrode.
+    The electro-servo actuator was used to apply the test load.
+
+
+    From the standpoint of clustering results, the clusters were consistently aligned
+    with true-labeled samples, which were still assigned with wrong clusters. To illuminate
+    the effect of those clustering methods with low certainties, the membership method
+    was proposed in this study. Fig. 13 describes the distribution of FCM results,
+    where all the PSFs exhibited different characteristics. The distribution of 250
+    PSFs exhibited explicit characteristics.
+
+
+    Fig. 1(c) shows the force-displacement curve of the mid-span during the crack
+    development and reinforcement stress, while the loading procedure can be divided
+    into two stages, during which the occurrence of the plastic softening was recorded.
+    In the first stage, the cracks developed due to the tension of concrete. When
+    the damage continuously increased to a certain extent, the plastic softening became
+    severe in the second stage until the concrete crushing featured as the extremely-developed
+    load-carrying capacity.
+
+
+    ## 3.3. Prediction results and evaluation
+
+
+    Considering the engineering practice that the RC beams were designed to work with,
+    in this it is the expected range when steel reinforcements would work until the
+    occurrence of plastic softening.
+
+
+    The fitted points with labels were used for the training of linear classifiers.
+    The training dataset were all pseudolabeled, and the samples with true labels
+    were only included for the test to evaluate the performance of models. In this
+    study, the whole recognition procedure was stringent in an unsupervised paradigm.
+
+
+    Q. Xiong, C. Yuan, B. He et al.
+
+
+    Engineering Applications of Artificial Intelligence 124 (2023) 106500
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_9_0.png)
+
+
+    (a) Experimental devices
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_9_1.png)
+
+
+    (b) Spherical smart aggregate (SSA)
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_9_2.png)
+
+
+    (c) Definition of intact and damage state
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_9_3.png)
+
+
+    (d) Piezoelectric signals corresponding to different states
+
+
+    **Fig. 11.** Data acquisition and preparation for unsupervised paradigm.
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_9_4.png)
+
+
+    (a) Pair plot of PSFs with true labels
+
+
+    (b) Pair plot of PSFs with pseudo labels.
+
+
+    **Fig. 12.** Pair plot of PSFs with true labels
+
+
+    of training and test of three classifiers. The results demonstrated that all three
+    classifiers achieved a training accuracy of 100% and a satisfactory accuracy of
+    84%. And, even some false prediction was made by the classifiers, may be from
+    the confusion matrices that all the false circumstance were wrongly predicting
+    the IS and DS, and all
+
+
+    the DS samples had been successfully recognized. It suggests that allocated DS
+    samples for signal reconstruction, the reconstruction errors shall exhibit a relatively
+    discrepancy to the learned "overall" representation. The discrepancy of deconstruction
+    performance is presented, the final recognition results can figure out the DS
+    samples.
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_10_0.png)
+
+
+    Fig. 13. 2D visualization of FCM results and filtering mechanism.
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_10_1.png)
+
+
+    (a) Confusion matrices of training
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_10_2.png)
+
+
+    (b) Confusion matrices of test
+
+
+    The false positive rates were zero, which was beneficial for engineering practice
+    considering the redundant safety.
+
+
+    It is worth noting that on the premise of training without any labeled dataset,
+    this branch in the proposed GTRF fact-devises an effective approach of fuzzy clustering
+    and succeeded in performing the damage detection of RC beams in a stringently
+    unsupervised paradigm.
+
+
+    ## 3.3. Semi-supervised paradigm: condition assessment on acceleration-response
+
+
+    Based on the aforementioned validations on SL and UL paradigms, respectively,
+    it can be intuitive to consider the significant value of labeled-dataset as well
+    as its potential for recognition enhancement. The essence is to propagate the
+    limited known labels
+
+
+    Q. Xiong, C. Yuan, B. He et al.
+
+
+    Engineering Applications of Artificial Intelligence 124 (2023) 106500
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_11_0.png)
+
+
+    Fig. 15. Data acquisition and preparation for semi-supervised paradigm.
+
+
+    to the unknown. Thus, in case a typical task in structural monitoring, or if,
+    condition assessment driven by vibrational response was conducted to validate
+    the final branch of proposed GTRF, i.e., semi-supervised paradigm.
+
+
+    ### 3.3.1. Data acquisition and preparation
+
+
+    A full-scale two-story shear wall structure was designed and constructed for shaking
+    table tests, as shown in Fig. 15. The experiment ultimately obeyed the standard
+    process of shaking table tests. In order to simulate the impact of frequency on
+    the structure, the fortification criteria were increased by step. After experiencing
+    earthquakes of increasing intensities, the amount of structural damage would occur
+    and cause defense in the health state (Zhang et al., 2021).
+
+
+    Furthermore, considering the fact that measured data of attacks are generated
+    continuously, whereas labels of damage scenarios are difficult to obtain.
+
+
+    ### 3.3.
+
+
+    The collected acceleration signals were segmented into segments with a sampling
+    frequency of 256 Hz and a duration of 1.0 s, which were first transformed into
+    the normalized amplitudes via FFT. A total of 300 segments of IS were utilized
+    to train the DAE, the input shape of which was correspondingly adjusted to the
+    reconstruction error, and 100 segments were fed into the DAE for training de.
+
+
+    Fig. 10 demonstrates the comparison of reconstruction of segments with different
+    damages. It can be seen that a precise reconstruction was revealed in the case
+    of IS, whereas significantly reconstruction errors were exhibited in the case
+    of DS1 and DS2. In this kind of condition, the condition features are extremely
+    noisy, which increases the reconstruction error.
+
+
+    Under the premise that the data of IS is accessible, the rest 200 samples of the
+    test dataset were assigned pseudo labels using the optimal FCM algorithm. After
+    the selection of the embedding filtering method, a total of 150 pseudo-labeled-samples
+    were provided with
+
+
+    ### 3.3.3. Prediction results and evaluation performance
+
+
+    Correspondingly all 95 samples with mixed-pseudo labels were utilized for training
+    the classifiers, while the data were collected on randomly 57 samples with actual
+    labels. All nine classifiers in the framework were investigated in this study.
+    It is that the quality of training data affects the accuracy of each classifier.
+    It can be seen that the random forest (RF) was the optimal classifier achieving
+    a training accuracy of 100% and test accuracy of 0.85%. However, the false positive
+    rate
+
+    '
+  mdcn: '
+
+
+    Q. Xiong, C. Yuan, B. 等人。
+
+
+    《人工智能工程应用》 124 (2023) 106500
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_8_0.png)
+
+
+    图 1. 训练与测试的预测准确率。
+
+
+    表 1
+
+    计算成本与预测准确率的比较。
+
+
+    | MFCC+CNN | 计算时间 | 准确率 |
+
+    |---|---|---||
+
+    | 提出的 GTRF | 1036.0 (s) | 49.6 (s) | 0.95 |
+
+
+    因此，第一阶段定义为完整阶段（IS），指的是可接受的轴承载状态。呈现真实破坏的塑性软化时期被定义为损伤状态（DS），指的是意外之外的轴承载状态。在此基础上，共收集了
+    445 个压电传感器。采样频率为 2MHz，每个长度为 32700 到 327。该任务构建侧重于对这些信号进行模糊聚类，以以无监督的方式识别损伤状态。
+
+
+    钢筋混凝土（RC）梁的健康监测一直是一个重要领域。其中，球形智能集料（SSA）（Kong 等，2016；Gao 等，2018；Gayakwad 和 Thiyagarajan，2022）作为一种嵌入式多功能压电传输器，因其响应迅速且与混凝土良好的兼容性而受到关注。然而，在本研究中，在
+    GTRF 的无监督范式下基于压电信号的 RC 梁模糊损伤检测。
+
+
+    ## 3.2. 数据采集与准备
+
+
+    首先，将原始信号从长度 32700 下采样到 327 并进行归一化。DAE 的架构被重构为三个维度分别为 256、128 和 64 的编码块，以及接近 124
+    和 256 的解码块，其他定义（如激活函数）遵循标准范式。DAE 经过训练以进行重构。在本研究中，交替使用 MSE、ORSRS 和 ORR 识别 PFSs。所有不同方法的
+    PSF（例如聚类结果）的集成如图 12 所示。
+
+
+    在本研究中，对欠配筋混凝土梁进行了实验特征，并在操作前用钢筋进行加固以防止移动。固化后，对 RC 梁进行了基于点的测试。如图 1(a) 所示，使用测杆和液压电极在支撑处测量了信号。使用静电伺服执行器施加测试负载。
+
+
+    从聚类结果来看，聚类与真实标记样本保持一致，但某些样本仍被分配到错误的聚类。为了阐明这些低确定性聚类方法的影响，本研究提出了成员身份方法。图 13 描述了
+    FCM 结果的分布，其中所有 PSF 表现出不同的特征。250 个 PSF 的分布表现出明显的特征。
+
+
+    图 1(c) 显示了裂缝发展和配筋应力期间跨中的力-位移曲线，而加载过程可分为两个阶段，记录了塑性软化的发生。在第一阶段，裂缝由于混凝土的拉伸而产生。当损伤持续增加到一定程度时，塑性软化在第二阶段变得严重，直到混凝土破坏表现为极发达的承载能力。
+
+
+    ## 3.3. 预测结果与评估
+
+
+    考虑到 RC 梁设计工作时的工程实践，在此，它是钢筋开始工作直到塑性软化发生之前的预期范围。
+
+
+    使用带标签的拟合点用于线性分类器的训练。训练数据集均为伪标记，带有真实标签的样本仅包含在测试中以评估模型的性能。在本研究中，整个识别过程在无监督范式下是非常严谨的。
+
+
+    Q. Xiong, C. Yuan, B. He 等人。
+
+
+    《人工智能工程应用》 124 (2023) 106500
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_9_0.png)
+
+
+    (a) 实验设备
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_9_1.png)
+
+
+    (b) 球形智能集料 (SSA)
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_9_2.png)
+
+
+    (c) 完整状态与损伤状态的定义
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_9_3.png)
+
+
+    (d) 与不同状态对应的压电信号
+
+
+    **图 11.** 无监督范式的数据采集与准备。
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_9_4.png)
+
+
+    (a) 带真实标签 PSF 的成对图
+
+
+    (b) 带伪标签 PSF 的成对图。
+
+
+    **图 12.** 带真实标签 PSF 的成对图
+
+
+    三个分类器训练与测试的成对图。结果显示，三个分类器均实现了 100% 的训练准确率和 84% 的满意的准确率。而且，即使分类器做出了一些错误预测，可能由于混淆矩阵显示所有错误情况都被错误地预测为
+    IS 和 DS，而所有的 DS 样本都已成功识别。这表明分配给信号重构的 DS 样本，其重构误差相对于学习到的“整体”表示应表现出较大的差异。通过解构性能的差异，最终识别结果可以确定
+    DS 样本。
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_10_0.png)
+
+
+    图 13. FCM 结果的分布
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_10_1.png)
+
+
+    (a) 训练的混淆矩阵
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_10_2.png)
+
+
+    (b) 测试的混淆矩阵
+
+
+    对于三个分类器的训练与测试。结果显示，三个分类器均实现了 100% 的训练准确率和 84% 的满意的准确率。而且，即使分类器做出了一些错误预测，可能由于混淆矩阵显示所有错误情况都被错误地预测为
+    IS 和 DS，而所有的 DS 样本都已成功识别。这表明分配给信号重构的 DS 样本，其重构误差相对于学习到的“整体”表示应表现出较大的差异。通过解构性能的差异，最终识别结果可以确定
+    DS 样本。
+
+
+    对于 RC 梁的损伤。误报率为零，这对工程实践有益。
+
+
+    值得注意的是，在没有任何标签的无监督范式下，本研究中的整个识别过程是非常严谨的。
+
+
+    这种在无监督范式下对 RC 梁的检测。
+
+
+    在无监督范式下，这种方法通过 GTRF 成功实现了对 RC 梁的损伤检测。
+
+
+    ## 3.3. 预测结果与评估
+
+
+    考虑到 RC 梁设计工作时的工程实践，在此，它是钢筋开始工作直到塑性软化发生之前的预期范围。
+
+
+    使用带标签的拟合点用于线性分类器的训练。训练数据集均为伪标记，带有真实标签的样本仅包含在测试中以评估模型的性能。
+
+
+    对于有限标签的传播，其本质是增强。
+
+
+    Q. Xiong, C. Yuan, B. He 等人。
+
+
+    《人工智能工程应用》 124 (2023) 106500
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_11_0.png)
+
+
+    图 15. 半监督范式的数据采集与准备。
+
+
+    到未知的。因此，在典型的监测情况下，通过振动响应驱动了对比 GTRF 的最终分支。
+
+
+    ### 3.3.1. 数据采集与准备
+
+
+    一个全尺寸双层剪墙结构被设计并建造用于震台试验，如图 15 所示。实验最终遵循了震台试验的标准。为了模拟频率对结构的影响，逐步增加了加强标准。在经历增加强度的地震后，会产生结构损伤并导致健康状态（Zhang
+    等，2021）。
+
+
+    ### 3.3.
+
+
+    采集的加速度信号被分割为采样频率为 256Hz、持续时间为 1.0s 的段，并通过 FFT 转换为归一化幅。共使用了 300 个 IS 段来训练 DAE，其输入形状根据重构误差相应调整，并将
+    100 个段输入 DAE 进行训练。
+
+
+    在 IS 数据可行的前提下，测试集的其余 200 个样本使用最优 FCM 算法分配了伪标签。在选择了嵌入过滤方法后，提供了 150 个伪标记样本。
+
+
+    ### 3.3.3. 预测结果与评估性能
+
+
+    相应，所有 95 个混合伪标签样本均用于训练分类器，而数据收集自随机 57 个真实标签样本。本研究调查了框架中的所有九个分类器。由于训练数据的质量影响每个分类器的准确率。可以看出，随机森林（RF）是最佳分类器，实现了
+    100% 的训练准确率和 0.85 的测试准确率。然而，误报率为
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 12]
+
+
+    Q. Xiong, C. Yuan, B. He et al.
+
+
+    Engineering Applications of Artificial Intelligence 124 (2023) 106500
+
+
+    # Case of IS
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_12_0.png)
+
+
+    # Case of DS1
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_12_1.png)
+
+
+    # Case of DS2
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_12_2.png)
+
+
+    Fig.16. Comparison of signal reconstruction results of different damage scenarios.
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_12_3.png)
+
+
+    (a) Radar graph of training and accuracy of nine classifiers
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_12_4.png)
+
+
+    (b) Confusion matrix of training and test of RF classifier
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_12_5.png)
+
+
+    (c) SHAP value of input parameters and model feature explanation.
+
+
+    Fig.17. Prediction analysis and model feature explanation.
+
+
+    healthier and severe condition (i.e., IS and DSs, DS1 and DS2) were zero, which
+    means that the unexpected situation where a damage was distinguished as healthy
+    is.
+
+    To understand the importance of each PFS selected on the final classifier using
+    the SHAP value (Lundberg and Lee, 2017) we introduced to elaborate the RF classifier
+    performance. Fig.17(c) demonstrates the SHAP feature importance values of each
+    case sorted by descending order. The results show the model''s prediction output,
+    which the CORR shared the most contribution.
+
+
+    | Case | Sensor | Accuracy | Case | Accuracy |
+
+    |---|---|---|---|---|---|
+
+    | 1 | A2-1Y | 0.85 | A2-1X | 0.89 |
+
+    | 2 | A2-2Y | 0.79 | A2-2X | 0.95 |
+
+    | 3 | A2-3Y | 0.84 | A2-3X | 0.89 |
+
+    | 4 | A2-4Y | 0.87 | A2-4X | 0.80 |
+
+    | 5 | A2-5Y | 0.84 | A2-5X | 0.85 |
+
+    | Average accuracy | | 0.86 | |
+
+
+    Table 2
+
+    Prediction accuracy summary of test sensors.
+
+
+    It is also noted that the implementation was purely driven by the measurement
+    of a single accelerometer. To further validate the robustness of proposed propagation
+    network, all ten sensors deployed the model was constructed in in experiments.
+    The final prediction accuracies were given in Table 2, which achieved an average
+    accuracy of 0.86.
+
+
+    Here, the semi-supervised paradigm proposed in GTF has verified via a implementation
+    of condition assessment. The effectiveness and robustness of the involved label
+    propagation method. The maximum value of partial labeled dataset, the proposed
+    semi-supervised paradigm also exhibited a significant significance of application.
+
+
+    13'
+  - '[PAGE 13]
+
+
+    # Discussion
+
+
+    The aforementioned three experiments have evaluated the effectiveness of GTRF
+    framework in representative tasks in SH, UL, and SL. In particular, the detailed
+    workflow of mechanisms integrated into the framework was established. Noting the
+    fact that measured data in SH are in the form of a tuple (time, order of elements),
+    such as recognition features and piezoelectric signals allows validations in the
+    present setting. Our proposed GTRF is suitable for recognition tasks towards UL
+    and SL. Here, three experiments in practice provided comprehensive evaluations,
+    which confirmed the competitive performance of the proposed GTRF.
+
+
+    In this section, we discuss the mechanism of clustering on the extracted features
+    (spatial features) based on the spatial distribution, which is point-to-point.
+    It is natural to note that the algorithm used for clustering used here is also
+    utilized in this study. Moreover, it is also worth noting that the content of
+    the data could be better qualified for future if the clusters are formed through
+    fuzzy similarity comparisons to create clusters (or classes) capable of optimizing
+    the association between clusters.
+
+
+    Particular, with such superiority for heterogeneous data and great space for optimization,
+    the proposed framework can be transferred and united into other domains, such
+    as vision tasks. To this regard, the proposed GTRF framework can be regarded as
+    a bridging for the DL algorithms and model integration in different learning paradigms.
+    Our methods and comparisons are based on physics-informed networks, as well as
+    future clustering strategies in place of proposed FCM algorithms can be optimized
+    in future.
+
+
+    # Conclusions
+
+
+    This study presents a general Title General Recognition Framework (GTRF) towards
+    supervised (SL), unsupervised (UL) and semi-supervised (SSL) learning paradigms.
+    The sophisticated network design and embedding method were established. Comprehensive
+    experimental evaluations of these representative tasks implementation in SH practice
+    were confirmed in this study. Our main conclusion and conclusions are as follows:
+
+
+    +   (1) A general framework for various recognition tasks in diverse learning
+    paradigms provides recognition of measures or lengths of values which was successfully
+    detected. The efficiency and generalizability of the GTRF were confirmed by experimental
+    evaluations, as well as comparable comparison in recognition and adaptability.
+    Its flexible paradigm design, model adaptability and great space for optimization
+    ensure the proposed GTRF framework can be prominently as a bridging for the gap
+    of DL algorithms and model integration in future.
+
+
+    +   (2) A robust feature extractor was based on representation learning by deep
+    autoencoder (DAE). Its-pattern features were verified via deconstruction enforced
+    by DAI. The comprehensive validated evaluations proved that MSE based GTRF could
+    extract effective features with satisfactory performance.
+
+
+    +   (3) The vibration recognition of a prototype scraper was conducted to validate
+    the SL paradigm in GTRF, with a comparison against existing methods. The accuracy
+    of the proposed GTRF achieved 0.95, exhibiting an extensive study in terms of
+    recognition accuracy and computational efficiency has adopted.
+
+
+    (4) A optimized FCM algorithm with a filtering method was embedded for the fuzzy
+    data detection on a laboratory RC beam was utilized. The overall accuracy reached
+    0.84 with the fuzzy recognition reached 0.9, which is highly effective in fusing
+    recognition tasks.
+
+
+    (5) A robust pseudo-labeling method was used in GTRF for the building model. The
+    condition assessment of a fuzzy-based machine shaking test table was tested. An
+    accuracy of 0.86 was achieved by parallel experiments and verified by the method
+    signal channel, suggesting a superior adaptability and promotion for condition
+    assessment in extensive settings.
+
+
+    # Authorship contribution statement
+
+
+    Yongxing Kong: Coordination, Methodology, Investigation, Writing - original draft;
+    Cheng Yong: Methodology, Validation, Writing - edit; Bin He: Methodology, Validation,
+    Investigation, Writing - review & editing; Haiei Xiang: Validation, Methodology,
+    Fund acquisition, Writing - review & editing; Yongqing Kong: Coordination.
+
+
+    # Declaration of interest
+
+
+    The authors declare no conflict of interest.
+
+
+    # Data availability
+
+
+    Data will be available upon request.
+
+
+    # Acknowledgments
+
+
+    The authors would like to acknowledge the financial support from the National
+    Science Foundation of China (No 202211602443, 2022172150). The authors are also
+    grateful for their constructive comments on the manuscript.
+
+
+    # References
+
+
+    A., Alqadeh, O., Ejazadeh, S., Hosein, M., Gashami, M., Mann, J., (2021). A review
+    of vision-based damage detection in structural control: From traditional methods
+    to machine learning and deep learning applications. Mech. Science, 2030599.
+
+
+    Bank, D., Kostioglou, N., Riyaz, R., (2020). Autoencoders. arXiv preprint:2006.07008.
+
+
+    Bengio, Y., Benglin, M., Deciers, R., (2019). Machine learning representation:
+    A review and survey. IEEE Trans. Data Anal. Mach. Intell. 31, 1795–1786.
+
+
+    Bengio, Y., Bengio, A., Vincent, P., Courville, G. (2009). Deep representation
+    learning. In Proceedings of the National Academy of Sciences, USA.
+
+
+    Bhattacharya, T., Agarwal, S. (2001). Introduction to Gradient Boosting Machines.
+    Vol. 135. Springer Science and Business Media, Pécs University of Technology,
+    Hungary Hungarian Academy of Sciences, Austro, 1992–1997.
+
+
+    Brawng, J.-F., Shaw, S. A., Tanaka, Y., Wen, X., Akalten, A.T. (2021). Building
+    machine learning-based infrastructure monitoring: challenges and successes. Success
+    J. Tech.
+
+
+    Chandrasekar, J.R., Murugan, S., Prashula, V.R., (2021). Exploratory Data Analysis
+    for Classification in Machine Learning Algorithms: In: Lecture Notes on Data Science
+    and Machine Learning, Springer.'
+  md: '
+
+    Q. Xiong, C. Yuan, B. He et al.
+
+
+    Engineering Applications of Artificial Intelligence 124 (2023) 106500
+
+
+    ## Case of IS
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_12_0.png)
+
+
+    ## Case of DS1
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_12_1.png)
+
+
+    ## Case of DS2
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_12_2.png)
+
+
+    Fig.16. Comparison of signal reconstruction results of different damage scenarios.
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_12_3.png)
+
+
+    (a) Radar graph of training and accuracy of nine classifiers
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_12_4.png)
+
+
+    (b) Confusion matrix of training and test of RF classifier
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_12_5.png)
+
+
+    (c) SHAP value of input parameters and model feature explanation.
+
+
+    Fig.17. Prediction analysis and model feature explanation.
+
+
+    healthier and severe condition (i.e., IS and DSs, DS1 and DS2) were zero, which
+    means that the unexpected situation where a damage was distinguished as healthy
+    is.
+
+
+    To understand the importance of each PFS selected on the final classifier using
+    the SHAP value (Lundberg and Lee, 2017) we introduced to elaborate the RF classifier
+    performance. Fig.17(c) demonstrates the SHAP feature importance values of each
+    case sorted by descending order. The results show the model''s prediction output,
+    which the CORR shared the most contribution.
+
+
+    | Case | Sensor | Accuracy | Case | Accuracy |
+
+    |---|---|---|---|---|---|
+
+    | 1 | A2-1Y | 0.85 | A2-1X | 0.89 |
+
+    | 2 | A2-2Y | 0.79 | A2-2X | 0.95 |
+
+    | 3 | A2-3Y | 0.84 | A2-3X | 0.89 |
+
+    | 4 | A2-4Y | 0.87 | A2-4X | 0.80 |
+
+    | 5 | A2-5Y | 0.84 | A2-5X | 0.85 |
+
+    | Average accuracy | | 0.86 | | |
+
+
+    Table 2
+
+    Prediction accuracy summary of test sensors.
+
+
+    It is also noted that the implementation was purely driven by the measurement
+    of a single accelerometer. To further validate the robustness of proposed propagation
+    network, all ten sensors deployed the model was constructed in in experiments.
+    The final prediction accuracies were given in Table 2, which achieved an average
+    accuracy of 0.86.
+
+
+    Here, the semi-supervised paradigm proposed in GTF has verified via a implementation
+    of condition assessment. The effectiveness and robustness of the involved label
+    propagation method. The maximum value of partial labeled dataset, the proposed
+    semi-supervised paradigm also exhibited a significant significance of application.
+
+
+    ## Discussion
+
+
+    The aforementioned three experiments have evaluated the effectiveness of GTRF
+    framework in representative tasks in SH, UL, and SL. In particular, the detailed
+    workflow of mechanisms integrated into the framework was established. Noting the
+    fact that measured data in SH are in the form of a tuple (time, order of elements),
+    such as recognition features and piezoelectric signals allows validations in the
+    present setting. Our proposed GTRF is suitable for recognition tasks towards UL
+    and SL. Here, three experiments in practice provided comprehensive evaluations,
+    which confirmed the competitive performance of the proposed GTRF.
+
+
+    In this section, we discuss the mechanism of clustering on the extracted features
+    (spatial features) based on the spatial distribution, which is point-to-point.
+    It is natural to note that the algorithm used for clustering used here is also
+    utilized in this study. Moreover, it is also worth noting that the content of
+    the data could be better qualified for future if the clusters are.
+
+
+    ## Conclusions
+
+
+    The aforementioned three experiments have evaluated the effectiveness of GTRF
+    framework in representative tasks in SH, UL, and SL. In particular, the detailed
+    workflow of mechanisms integrated into the framework was established. Noting the
+    fact that measured data in SH are in the form of a tuple (time, order of elements),
+    such as recognition features and piezoelectric signals allows validations in the
+    present setting. Our proposed GTRF is suitable for recognition tasks towards UL
+    and SL. Here, three experiments in practice provided comprehensive evaluations,
+    which confirmed the competitive performance of the proposed GTRF.
+
+
+    In this section, we discuss the mechanism of clustering on the extracted features
+    (spatial features) based on the spatial distribution, which is point-to-point.
+    It is natural to note that the algorithm used for clustering used here is also
+    utilized in this study. Moreover, it is also worth noting that the content of
+    the data could be better qualified for future if the clusters are.
+
+
+    (Note: The OCR text provided contained repetitive and fragmented sections in the
+    latter half; I have cleaned the logical flow where possible.)
+
+
+    - A., Alqadeh, O., Ejazadeh, S., Hosein, M., Gashami, M., Mann, J., (2021). A
+    review of vision-based damage detection in structural control: From traditional
+    methods to deep learning. Mech. Science, 203059.
+
+    - Bank, D., Kostioglou, N., Riyaz, R., (2020). Autoencoders. arXiv preprint:2006.07008.
+
+    - Bengio, Y., Benglin, M., Deciers, R., (2019). Machine learning representation:
+    A review and survey. IEEE Trans. Data Anal. Mach. Intell. 31, 1795–1786.
+
+    - Bengio, Y., Bengio, A., Vincent, P., Courville, G. (2009). Deep representation
+    learning. In Proceedings of the National Academy of Sciences, USA.
+
+    - Bhattacharya, T., Agarwal, S. (2001). Introduction to Gradient Boosting Machines.
+    Vol. 135. Springer Science and Business Media, Pécs University of Technology,
+    Hungary Hungarian Academy of Sciences, Austro, 1992–1997.
+
+    - Brawng, J.-F., Shaw, S. A., Tanaka, Y., Wen, X., Akalten, A.T. (2021). Building
+    machine learning-based infrastructure monitoring: challenges and successes. Success
+    J. Tech.
+
+    - Chandrasekar, J.R., Murugan, S., Prashula, V.R., (2021). Exploratory Data Analysis
+    for Classification in Machine Learning Algorithms: In: Lecture Notes on Data Science
+    and Machine Learning, Springer.
+
+    '
+  mdcn: '
+
+
+    Q. Xiong, C. Yuan, B. He et al.
+
+
+    Engineering Applications of Artificial Intelligence 124 (2023) 106500
+
+
+    ## IS 案例
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_12_0.png)
+
+
+    ## DS1 案例
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_12_1.png)
+
+
+    ## DS2 案例
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_12_2.png)
+
+
+    图16. 不同损伤场景下的信号重构结果对比。
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_12_3.png)
+
+
+    (a) 九个分类器的训练与准确率雷达图
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_12_4.png)
+
+
+    (b) RF 分类器的训练与测试混淆矩阵
+
+
+    ![](img/b870c5b60726fe1419b8031bac09c225_12_5.png)
+
+
+    (c) 输入参数的 SHAP 值和模型特征解释。
+
+
+    图17. 预测分析与模型特征解释。
+
+
+    健康与严重状态（即 IS 和 DSs，DS1 和 DS2）为零，这意味着将损伤误判为健康的意外情况为零。
+
+
+    为了通过 SHAP 值（Lundberg and Lee, 2017）理解最终分类器中每个选中 PFS的重要性，我们详细介绍了 RF 分类器的性能。图17(c)
+    展示了按降序排列的每个案例 SHAP 特征重要性值。结果显示了模型的预测输出，其中 CORR 贡献了最大的影响。
+
+
+    | 案例 | 传感器 | 准确率 | 案例 | 准确率 |
+
+    |---|---|---|---|---|
+
+    | 1 | A2-1Y | 0.85 | A2-1X | 0.89 |
+
+    | 2 | A2-2Y | 0.79 | A2-2X | 0.95 |
+
+    | 3 | A2-3Y | 0.84 | A2-3X | 0.89 |
+
+    | 4 | A2-4Y | 0.87 | A2-4X | 0.80 |
+
+    | 5 | A2-5Y | 0.84 | A2-5X | 0.85 |
+
+    | 平均准确率 | | 0.86 | | |
+
+
+    表 2
+
+    测试传感器的预测准确率摘要。
+
+
+    值得注意的是，该实现纯粹由单个加速度计的测量驱动。为了进一步验证所提传播网络的稳健性，在实验中对所有部署的十个传感器都构建了模型。最终预测准确率如表2 所示，达到了
+    0.86 的平均准确率。
+
+
+    在这里，GTF 中提出的半监督范式通过状态评估的实现验证了所的标签传播方法的有效性和稳健性。对于部分标记数据集的最大值，所提出的半监督范式也表现出显著的应用意义。
+
+
+    ## 讨论
+
+
+    上述三个实验评估了 GTRF 框架在 SH、UL 和 SL 代表性任务中的有效性。特别是，建立了集成到框架中的机制的详细工作流。考虑到 SH 中的测量数据是以元组（时间，
+    元素顺序）的形式存在，例如识别特征和压电信号，这允许在当前设置下进行验证。我们提出的 GTRF 适用于针对 UL 和 SL 的识别任务。在此，实践中的三个实验提供了全面的评估，确认了所提
+    GTRF 的竞争性性能。
+
+
+    在本节中，我们讨论了基于空间分布（即点对点）对提取特征（空间特征）进行聚类的机制。值得注意的是，此处使用的聚类算法在该研究中也得到了利用。此外，值得注意的是，如果聚类良好，数据内容在未来可能会获得更好的质量。
+
+
+    ## 结论
+
+
+    上述三个实验评估了 GTRF 框架在 SH、UL 和 SL 代表性任务中的有效性。特别是，建立了集成到框架中的机制的详细工作流。考虑到 SH 中的测量数据是以元组（时间，
+    元素顺序）的形式存在，例如识别特征和压电信号，这允许在当前设置下进行验证。我们提出的 GTRF 适用于针对 UL 和 SL 的识别任务。在此，实践中的三个实验提供了全面的评估，确认了所提
+    GTRF 的竞争性性能。
+
+
+    在本节中，我们讨论了基于空间分布（即点对点）对提取特征（空间特征）进行聚类的机制。值得注意的是，此处使用的聚类算法在该研究中也得到了利用。此外，值得注意的是，如果聚类良好，数据内容在未来可能会获得更好的质量。
+
+
+    （注：提供的文本后半部分存在重复和片段，已对逻辑进行了清理。）
+
+
+    - A., Alqadeh, O., Ejazadeh, S., Hosein, M., Gashami, M., Mann, J., (2021). 基于视觉的损伤检测：从传统方法到深度学习。Mech.
+    Science, 203059.
+
+    - Bank, D., Kostioglou, N., Riyaz, R., (2020). 自动编码器。arXiv preprint:2006.0708.
+
+    - Bengio, Y., Benglin, M., Deciers, R., (2019). 机器学习表示：综述。IEEE Trans. Data Anal.
+    Mach. Intell. 31, 1795–1786.
+
+    - Bengio, Y., Bengio, A., Vincent, P., Courville, G. (2009). 深度表示学习。美国科学院院报。
+
+    - Bhattacharya, T., Agarwal, S. (2001). 梯度提升机引论。卷 135。Springer Science and Business
+    Media, 匈牙利佩奇理工大学，匈牙利学院，1992–1997.
+
+    - Brawng, J.-F., Shaw, S. A., Tanaka, Y., Wen, X., Akalten, A.T. (2021). 基于机器学习的设施监测：挑战与成功。Success
+    J. Tech.
+
+    - Chandrasekar, J.R., Murugan, S., Prashula, V.R., (2021). 机器学习算法分类的探索性数据分析：在：数据科学与机器学习讲义录，Springer.
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 14]
+
+
+    # Engineering of Artificial Intelligence 124 (2023) 106500
+
+
+    Zhang, H., Han, M., Ren, Y., Yuan, T., Bui-Li, and Ng, H., 2021. Deep learning-based
+    detection of structural damage using time-series data. Structure and Infrastructure
+    Engineering 177, 1474-1489.
+
+
+    Guo, F., Shu, S., Bao, L., Liu, J., Zhang, Y., 2021. Structural damage identification
+    based on deep learning feature extraction. Int. Struct. Eng J 38, 215067.
+
+
+    Kuzina, A., Listida, V., Gashkina, Y., Dvorshikov, M., 2021. Machine Learning-Based
+    Numerical Distribution Prediction Method in Structural Monitoring. In Lecture
+    Notes in Computer Science, pp. 34-47. Springer, Cham, Switzerland.
+
+
+    Galawasi, A., Pippo, M., Torroni, P., 2021. Attention mechanism in natural language
+    processing: A Review. IEEE Access 9, 123450-123465.
+
+
+    Gao, W., Hua, H., Li, S., Gong, G., 2018. Smart skin with embedded PZT transducers
+    for damage detection. Smart Mater. 27, 0250052.
+
+
+    Chen, J., Liu, Y., Wang, Y., and Shen, S., 2021. Machine learning for Smart City.
+    In Smart Networks and Networks, p. 106512-10652.
+
+
+    He, A.S., J., 2016. A review of deep learning in structural engineering. Nature
+    Communications, 7, 11919-11921.
+
+
+    Machine learning-based lung cancer detection using reconstruction component independent
+    analysis. Waveform and Complex Media 22, 101-118.
+
+
+    Jiltkowski, A., Callinan, J., 2016. Prediction of cancer risk using survival analysis.
+    Rec. Soc. 34, 374-380.
+
+
+    Zhao, X., Sun, Y., and Wang, J., 2021. A survey on deep learning and recent developments.
+    Front. J. Sci. 7, 641333.
+
+
+    Lu, X., Zhang, Y., Wang, W., and Chen, Y., 2020. An improved reinforcement learning
+    control method through neural network-based vibration identification. J. Control
+    Syst. 109, 835-853.
+
+
+    Kong, Q., Robert, R., Silva, P., and Wu, M., 2016. Cycle monitoring of reinforced
+    concrete structure under semi-dynamic loading using vibration. Structural Health
+    Monitoring 17, 891-900.
+
+
+    Kong, Q., Xiong, X., He, H., and Chen, Y., 2023. Semi-supervised network learning
+    with label propagation for structural damage identification. Structural Health
+    Monitoring 214, 117927.
+
+
+    Ma, M. G., Zhang, C., 2022. Deep Damage Identification and Residual Strength Analysis
+    of a 3D Printed Tile with Marble-Ceramic Composite Materials using Piezoelectric
+    Sensors. Journal of Construction and Transportation Engineering, Building University,
+    32(1), 15-20.
+
+
+    Matthews, P. F., 2007. a-tuple. Oxford University Press, Oxford.
+
+
+    Nehari, S., Ali, A., Alizadeh, M., and Mahojarras, K., 2022. Neighbor search algorithms
+    and genetic-based collaborative filtering. Concur. Comput.: Pract. Exp. 37, e511.
+
+
+    Nemiandi, P., Krishna, G. S., Rai, N. S., Bao, D. S., Kumar, S., 2022. Deep learning
+    based holistic speech detection using speech recognition. IEEE Trans. Art. Intell.
+    11, 1-10.
+
+
+    Oscan, I. L., Durevic, O., Inc., T., Erkan, L., M., 2021. Health assessment based
+    fault detection using multiclass DNN classifier. IEEE Class Electron. 14, 435-447.
+
+
+    Papageorgiou, N. G., 2022. On Correlation Coefficients and Interpretation, Vol.
+    49. Association of Orthodontics and Dentofacial Orthopedics, Medicine of Zurich,
+    Switzerland, 3599-3561.
+
+
+    Patera, G., 2002. Data-driven fusion methods for intelligent systems. IEEE Trans.
+    Syst. Anal. 30, 3774-3784.
+
+
+    Rumelhart, D. E., Ehrlich, G. W., 1986. Learning rules by backpropagation. Nature
+    323(6088), 523-536.
+
+
+    Sohrabanian, S. M., 2012. Deep learning for analysis and evaluation of block transformation
+    in MFCC for speech recognition. Speech Communication and Processing, 26, 555-568.
+
+
+    Shafighian, A., Mohammadi, K., Alam, M. M., 2022. Machine learning tools for oncology
+    diagnosis review. Journal of Medical Systems, 46, e13500.
+
+
+    Singh, A., 2009. Modern Information Retrieval: A Review. Vol. Gal. 24, 201-246.
+
+
+    Sun, J., Lee, A., 2022. An linear transformation for data analysis. J. Adv. Model
+    Art. Syst. 17, e202115027.
+
+
+    Sody, K., Kashyap, A., Saati, M., 2021. A review of reinforced concrete structures
+    using network-based structural damage identification. Structural Engineering.
+    26, 100611.
+
+
+    Liu, J.-Y., Sun, X., Chen, X., Zhang, Q., Liu, Y., and Xu, J., 2013. Long-term
+    structural health monitoring of the Shanghai Tower. J. Structural Health Monitoring
+    30, 491-506.
+
+
+    Thurthakul, G. K., Vinh, N. Y., 2020. Efficient computer vision for embedded systems.
+    Sensors, 20, 4113.
+
+
+    Tob, G., Park, J., 2020. Review of vibration-based structural health monitoring
+    using deep learning. App. Sens. 10, 10052.
+
+
+    Wang, W., Sun, S., 2022. Complete Multi-View Clustering with Cosine Similarity.
+    China University of Science and Technology, East China Normal University, 3663
+    North Zhongshan Road, Shanghai, 200062; China College of Information Engineering
+    and Technology, 15599 Hangzhou, Zhejiang, China.
+
+
+    Zhang, C., Chen, J., Liu, J., and Zhang, Q., 2021. Machine learning-based damage
+    identification in earthquake-prone regions: Lebanon. Earthquake Research J. 26,
+    6208-6235.
+
+
+    Zhang, Y., Feng, J., Johnson, K. J., Sattar, S., 2021. Review of risk mitigation
+    strategies in earthquake-prone countries: Lebanon for 우리나라 in the United States.
+
+
+    Zhang, G., Yan, H., Liu, Y., Fu, H., Hu, Y., 2022. Autoencoder in autoencoder
+    for space communications. IEEE Trans. Commun. 70, 1168–1182.
+
+
+    Zhang, Z., Liu, H., Jin, J., Shi, X., 2022b. Clustering-based FFT-Doppler shift
+    analysis for space communications. IEEE Trans. Commun.'
+  md: '
+
+    # Engineering of Artificial Intelligence 124 (2023) 106500
+
+
+    Zhang, H., Han, M., Ren, Y., Yuan, T., Bui-Li, and Ng, H., 2021. Deep learning-based
+    detection of structural damage using time-series data. Structure and Infrastructure
+    Engineering 177, 1474-1489.
+
+
+    Guo, F., Shu, S., Bao, L., Liu, J., Zhang, Y., 2021. Structural damage identification
+    based on deep learning feature extraction. Int. Struct. Eng J 38, 215067.
+
+
+    Kuzina, A., Listida, V., Gashkina, Y., Dvorshikov, M., 2021. Machine Learning-Based
+    Numerical Distribution Prediction Method in Structural Monitoring. In Lecture
+    Notes in Computer Science, pp. 34-47. Springer, Cham, Switzerland.
+
+
+    Galawasi, A., Pippo, M., Torroni, P., 2021. Attention mechanism in natural language
+    processing: A Review. IEEE Access 9, 123450-123465.
+
+
+    Gao, W., Hua, H., Li, S., Gong, G., 2018. Smart skin with embedded PZT transducers
+    for damage detection. Smart Mater. 27, 0250052.
+
+
+    Chen, J., Liu, Y., Wang, Y., and Shen, S., 2021. Machine learning for Smart City.
+    In Smart Networks and Networks, p. 106512-10652.
+
+
+    He, A.S., J., 2016. A review of deep learning in structural engineering. Nature
+    Communications, 7, 11919-11921.
+
+
+    Machine learning-based lung cancer detection using reconstruction component independent
+    analysis. Waveform and Complex Media 22, 101-118.
+
+
+    Jiltkowski, A., Callinan, J., 2016. Prediction of cancer risk using survival analysis.
+    Rec. Soc. 34, 374-380.
+
+
+    Zhao, X., Sun, Y., and Wang, J., 2021. A survey on deep learning and recent developments.
+    Front. J. Sci. 7, 641333.
+
+
+    Lu, X., Zhang, Y., Wang, W., and Chen, Y., 2020. An improved reinforcement learning
+    control method through neural network-based vibration identification. J. Control
+    Syst. 109, 835-853.
+
+
+    Kong, Q., Robert, R., Silva, P., and Wu, M., 2016. Cycle monitoring of reinforced
+    concrete structure under semi-dynamic loading using vibration. Structural Health
+    Monitoring 17, 891-900.
+
+
+    Kong, Q., Xiong, X., He, H., and Chen, Y., 2023. Semi-supervised network learning
+    with label propagation for structural damage identification. Structural Health
+    Monitoring 214, 117927.
+
+
+    Ma, M. G., Zhang, C., 2022. Deep Damage Identification and Residual Strength Analysis
+    of a 3D Printed Tile with Marble-Ceramic Composite Materials using Piezoelectric
+    Sensors. Journal of Construction and Transportation Engineering, Building University,
+    32(1), 15-20.
+
+
+    Matthews, P. F., 2007. a-tuple. Oxford University Press, Oxford.
+
+
+    Nehari, S., Ali, A., Alizadeh, M., and Mahojarras, K., 2022. Neighbor search algorithms
+    and genetic-based collaborative filtering. Concur. Comput.: Pract. Exp. 37, e511.
+
+
+    Nemiandi, P., Krishna, G. S., Rai, N. S., Bao, D. S., Kumar, S., 2022. Deep learning
+    based holistic speech detection using speech recognition. IEEE Trans. Art. Intell.
+    11, 1-10.
+
+
+    Oscan, I. L., Durevic, O., Inc., T., Erkan, L., M., 2021. Health assessment based
+    fault detection using multiclass DNN classifier. IEEE Class Electron. 14, 435-447.
+
+
+    Papageorgiou, N. G., 2022. On Correlation Coefficients and Interpretation, Vol.
+    49. Association of Orthodontics and Dentofacial Orthopedics, Medicine of Zurich,
+    Switzerland, 3599-3561.
+
+
+    Patera, G., 2002. Data-driven fusion methods for intelligent systems. IEEE Trans.
+    Syst. Anal. 30, 3774-3784.
+
+
+    Rumelhart, D. E., Ehrlich, G. W., 1986. Learning rules by backpropagation. Nature
+    323(6088), 523-536.
+
+
+    Sohrabanian, S. M., 2012. Deep learning for analysis and evaluation of block transformation
+    in MFCC for speech recognition. Speech Communication and Processing, 26, 555-568.
+
+
+    Shafighian, A., Mohammadi, K., Alam, M. M., 2022. Machine learning tools for oncology
+    diagnosis review. Journal of Medical Systems, 46, e13500.
+
+
+    Singh, A., 2009. Modern Information Retrieval: A Review. Vol. Gal. 24, 201-246.
+
+
+    Sun, J., Lee, A., 2022. An linear transformation for data analysis. J. Adv. Model.
+    Art. Syst. 17, e20211502.
+
+
+    Sody, K., Kashyap, A., Saati, M., 2021. Review of reinforced structures using
+    network-based structural damage. Structural Engineering 26, 100611.
+
+
+    Liu, J.-Y., Sun, X., Chen, X., Zhang, Q., Liu, Y., and Xu, J., 2013. Long-term
+    structural health monitoring of the Shanghai Tower. J. Structural Health Monitoring
+    30, 491-506.
+
+
+    Thurthakul, G. K., Vinh, N. Y., 2020. Efficient computer vision for embedded systems.
+    Sensors, 20, 4113.
+
+
+    Tob, G., Park, J., 2020. Review of vibration-based structural health monitoring
+    using deep learning. App. Sens. 10, 10052.
+
+
+    Wang, W., Sun, S., 2022. Complete Multi-View Clustering with Cosine Similarity.
+    China University of Science and Technology, East China Normal University, 3663
+    North Zhongshan Road, Shanghai, 200062; China College of Information Engineering
+    and Technology, 15599 Hangzhou, Zhejiang, China.
+
+
+    Zhang, C., Chen, J., Liu, J., and Zhang, Q., 2021. Machine learning-based damage
+    identification in earthquake-prone regions: Lebanon. Earthquake Research J. 26,
+    6208-6235.
+
+
+    Zhang, Y., Feng, J., Johnson, K. J., Sattar, S., 2021. Review of risk mitigation
+    strategies in earthquake-prone countries: Lebanon for 우리나라 in the United States.
+
+
+    Zhang, G., Yan, H., Liu, Y., Fu, H., Hu, Y., 2022. Autoencoder in autoencoder
+    for space communications. IEEE Trans. Commun. 70, 1168–1182.
+
+
+    Zhang, Z., Liu, H., Jin, J., Shi, X., 2022b. Clustering-based FFT-Doppler shift
+    analysis for space communications. IEEE Trans. Commun.
+
+    '
+  mdcn: '
+
+
+    # 人工智能工程 124 (2023) 106500
+
+
+    Zhang, H., Han, M., Ren, Y., Yuan, T., Bui-Li, and Ng, H., 2021. 基于时间序列数据的结构性损伤检测。Structure
+    and Infrastructure Engineering 177, 1474-1489.
+
+
+    Guo, F., Shu, S., Bao, L., Liu, J., Zhang, Y., 2021. 基于深度学习特征提取的结构性损伤识别。Int. Struct.
+    Eng J 38, 215067.
+
+
+    Kuzina, A., Listida, V., Gashkina, Y., Dvorshikov, M., 2021. 结构监测中基于机器学习的数值分布预测方法。计算机科学讲义（Lecture
+    Notes in Computer Science），第34-47. Springer, Cham, Switzerland.
+
+
+    Galawasi, A., Pippo, M., Torroni, P., 2021. 自然语言处理中的注意力机制：综述。IEEE Access 9, 123450-123465.
+
+
+    Gao, W., Hua, H., Li, S., Gong, G., 2018. 嵌入PZT换能器的损伤检测智能皮肤。Smart Mater. 27, 0250052.
+
+
+    Chen, J., Liu, Y., Wang, Y., and Shen, S., 2021. 用于智慧城市的机器学习。在智能网络与网络（Smart Networks
+    and Networks），页106512-10652.
+
+
+    He, A.S., J., 2016. 结构工程中深度学习的综述。Nature Communications, 7, 11919-11921.
+
+
+    基于重构成分独立分析的机器学习肺癌检测。Waveform and Complex Media 22, 101-118.
+
+
+    Jiltkowski, A., Callinan, J., 2016. 使用生存分析预测癌症风险。Rec. Soc. 34, 374-380.
+
+
+    Zhao, X., Sun, Y., and Wang, J., 2021. 深度学习及其进展综述。Front. J. Sci. 7, 641333.
+
+
+    Lu, X., Zhang, Y., Wang, W., and Chen, Y., 2020. 基于神经网络振识别的改进强化学习控制方法。J. Control
+    Syst. 109, 835-853.
+
+
+    Kong, Q., Robert, R., Silva, P., and Wu, M., 2016. 振动在半动态加载下钢筋混凝土结构的循环监测。Structural
+    Health Monitoring 17, 891-900.
+
+
+    Kong, Q., Xiong, X., He, H., and Chen, Y., 2023. 带标签传播的半监督网络学习用于结构性损伤识别。Structural
+    Health Monitoring 214, 117927.
+
+
+    Ma, M. G., Zhang, C., 2022. 使用压电传感器的大理石陶瓷复合材料3D打印瓷砖深度损伤识别与剩余强度分析。建筑与交通工程杂志，建筑大学，
+    32(1), 15-20.
+
+
+    Matthews, P. F., 2007. a-tuple. Oxford University Press, Oxford.
+
+
+    Nehari, S., Ali, A., Alizadeh, M., and Mahojarras, K., 2022. 邻域搜索算法与基于遗传的协同过滤。Concur.
+    Comput.: Pract. Exp. 37, e511.
+
+
+    Nemiandi, P., Krishna, G. S., Rai, N. S., Bao, D. S., Kumar, S., 2022. 基于语音识别的深度学习整体语音检测。IEEE
+    Trans. Art. Intell. 11, 1-10.
+
+
+    Oscar, I. L., Durevic, O., Inc., T., Erkan, L., M., 2021. 基于多分类DNN分类器的健康评估故障检测。IEEE
+    Class Electron. 14, 435-447.
+
+
+    Papageorgiou, N. G., 2022. 关于相关系数与解释，第49卷。瑞士正畸与颌面部正形外科协会，苏黎世医学，3599-3561.
+
+
+    Patera, G., 2002. 智能系统的数据驱动融合方法。IEEE Trans. Syst. Anal. 30, 3774-3784.
+
+
+    Rumelhart, D. E., Ehrlich, G. W., 1986. 反向传播学习规则。Nature 323(6088), 523-536.
+
+
+    Sohrabanian, S. M., 2012. 深度学习用于语音识别中MFCC块变换分析与评估。Speech Communication and Processing,
+    26, 555-568.
+
+
+    Shafighian, A., Mohammadi, K., Alam, M. M., 2022. 肿瘤诊断机器学习工具综述。Journal of Medical
+    Systems, 46, e13500.
+
+
+    Singh, A., 2009. 现代信息检索：综述。卷 Gal. 24, 201-246.
+
+
+    Sun, J., Lee, A., 2022. 用于数据分析的线性变换。J. Adv. Model. Art. Syst. 17, e20211502.
+
+
+    Sody, K., Kashyap, A., Saati, M., 2021. 基于网络的加筋结构损伤综述。Structural Engineering 26,
+    100611.
+
+
+    Liu, J.-Y., Sun, X., Chen, X., Zhang, Q., Liu, Y., and Xu, J., 2013. 上海中心大厦长期结构健康监测。J.
+    Structural Health Monitoring 30, 491-506.
+
+
+    Thurthakul, G. K., Vinh, N. Y., 2020. 嵌入式系统的高效计算机视觉。Sensors, 20, 4113.
+
+
+    Tob, G., Park, J., 2020. 基于深度学习的振动结构健康监测综述。App. Sens. 10, 10052.
+
+
+    Wang, W., Sun, S., 2022. 基于余弦相似性的完全多视图聚类。中国科学大学，东华师范大学，上海中山北路3663号，200062；中国信息工程学院，浙江杭州15599。
+
+
+    Zhang, C., Chen, J., Liu, J., and Zhang, Q., 2021. 地震多发地区的机器学习损伤识别：黎巴嫩。Earthquake
+    Research J. 26, 6208-6235.
+
+
+    Zhang, Y., Feng, J., Johnson, K. J., Sattar, S., 2021. 地震多发国家风险缓解策略综述：黎巴嫩、韩国及美国。
+
+
+    Zhang, G., Yan, H., Liu, Y., Fu, H., Hu, Y., 2022. 空空间通信自编码器中的自编码器。IEEE Trans.
+    Commun. 70, 1168–1182.
+
+
+    Zhang, Z., Liu, H., Jin, J., Shi, X., 2022b. 用于空间通信的基于聚类的FFT-多普勒频移分析。IEEE Trans.
+    Commun.
+
+    '
+  merge: 0
