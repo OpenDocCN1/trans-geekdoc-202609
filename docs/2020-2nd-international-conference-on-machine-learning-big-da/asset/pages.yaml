@@ -1,0 +1,408 @@
+- pgno: 0
+  md: '# 2020 2nd International Conference on Machine Learning, Big Data and Business
+    Intelligence (MLDBDI)
+
+
+    # # Research on intelligent cyber security protection for electric power dispatching
+    and control system
+
+
+    Yaofu Cao, Xiaoming Li, Junwen Li, Chengwei Li, Jun Han, Jincheng Zhao
+
+    State Information & Telecommunication Branch
+
+    Beijing, 100761, China
+
+    E-mail: caoyao@outlook126.com
+
+
+    **Abstract—**Based on the principles and development status of current cyber security
+    protection for electric power dispatching and control system aiming at the problems
+    and defects in actual work, and closely monitoring the requirements of the network
+    security operation, by optimizing information learning, data analysis, security
+    research on intelligent analysis and monitoring of cyber security protection for
+    electric power dispatching and control system, and put forward reasonable strategy
+    and proposal that can improve the overall level of security.
+
+
+    certain that the monitoring system is free of malicious software, the operating
+    system has no malicious backdoors, the whole has no malicious chains, and the
+    main chips have no macromolecules, which embodies the ontology safety. The technology
+    of trusted computing [3] is introduced to achieve security merit.
+
+
+    **Keywords—**security; industrial control system(ICS); electric power dispatching
+    and control system; monitoring; intelligence; emergency dispatch
+
+
+    # I. INTRODUCTION
+
+
+    Electric power dispatching and control system refers to the business system intelligent
+    equipment that are based on computer and technology, based on communication and
+    data network, to monitor the power production and power supply. The theory [2]
+    defines that the overall security level is determined by the level of protection
+    in the network. The security protection for electric power dispatching and control
+    system is very necessary, in order to prevent hackers from exploiting noise loopholes
+    and malicious intrusion into enterprise systems through the use of various tools
+    to carry out attacks and damage, essentially causing the failure of electric power
+    dispatching and control system, and harming the operation and production of power
+    grid. The network security protection system has been built; safety protection;
+    emergency backup measures and comprehensive safety management [3]
+
+    d decade and the transition from static deployment to dynamic control has been
+    continuously improved and for more than a,
+
+
+    Emergency backup measures are taken from the aspects of redundant backup and emergency
+    dispatch. When the electric power dispatching and control system in the power
+    grid encounters an abnormal or illegal attack or a cyber-attack, the monitoring
+    system will report to the superior dispatching and regulatory unit level, and
+    emergency measures will be adopted to join, create multiple lines of defense from
+    outside to
+
+
+    The comprehensive safety dimension includes safety management of all personnel,
+    safety management of all equipment, safety management of the management system.
+    Through this comprehensive safety protection and safety management, a safety protection
+    system with wide coverage, whose management system, technical system and emergency
+    response system in coordination is
+
+
+    # A. Security analysis and development status
+
+
+    The electric power dispatching and control system is important to support the
+    stable and safe operation of the electric power supply. By the rapid expansion
+    of the network scale and the integration of cybersecurity, the management and
+    control of the network of electric power dispatching and control system become
+    more complex. From the perspective of international, the cyber warfare occurring
+    worldwide is increasing, the confrontations and cyberattacks from cyberspace are
+    becoming more frequent. These attacks have used various concealed means, also
+    tactics in obtaining evidence, which can affect the reputation, production and
+    operation of enterprises, and even a major impact on the security of national
+    countries. With the development of Electric power grid and the paralysis of Iran''s
+    nuclear power plants is an important target of cyber warfare, has always been
+    at the forefront of network attacks and destruction.
+
+
+    The dimensions of safety technology include infrastructure security, system structure
+    security, ontology security, and security immunity. Firstly, ensure basic security
+    from the aspects of server room, power supply, communication, shielding, and authentication.
+
+    Secondly, based on policy of security network, dedicated, horizontal isolation
+    [4] and vertical encryption, guarantee the security of the system structure. Thirdly
+    make'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'The State Grid Corporation of China has established a comprehensive electric
+    dispatch protection system in accordance with an overall strategy of "safety partition,
+    networked defense, horizontal isolation, and authenticated encryption", five-level
+    power grid dispatching stations, various substations and power plants. From the
+    aspects of safety technology, emergency backup and control system, the three-dimensional
+    security protection system has been built, which has achieved good protection
+    effects.
+
+
+    configurations, supporting the automation of security inspections and realizing
+    active defense of network security. It can be customized present and needs to
+    be triggered manually, periodically, or by events.
+
+
+    The State Grid Corporation has independently developed a network management system
+    for the electric dispatch platform fully deployed in dispatching stations above
+    the preference level, which monitor security alerts in cyberspace in real time.
+    The platform builds a three-tier logical structure of perception, decision and
+    control of network management with the principle of unified device distribution
+    collection, and unified management and control of the platform:
+
+
+    # II. CURRENT MAIN PROBLEMS
+
+
+    +   1. Alarm effectiveness is worrying, and platform functions are
+
+    The various functions of the existing network management platform are in a fragmented
+    state, especially the alarm platform that provides real-time monitors for security
+    alerts. The network management logic lacks information effective and/or intentional-influenced
+    being. It is difficult to quickly locate values, and security managers are required
+    to view and consider various functional index data separately from form an effective
+    management analysis, and lack judgment on the overall operation and security situation.
+
+
+    +   1) Self-awareness: the realization of perception and the network monitoring
+    of security data, servers, switches, encryption and forefront horizontal isolation
+    as and other monitoring, and objective of specific security effects.
+
+
+    +   2) Distributed collection: the use of monitoring devices to realize the network
+    data collection of related equipments such as dispatching stations, power plants
+    & substations, power distribution, and negative control, as well as communication
+    and interaction devices; the management platform realizes the integration of functions
+    such as real-time monitoring, warning, auditing, and verification of network security.
+
+
+    The security monitoring function can monitor running status, user login, operation
+    and management, and so on, hosts and other equipments in real time. The security
+    alarm, light and other methods, notify to monitor network security threats and
+    security alert events, such as login behaviors that do not follow the implementation
+    of security operation; The security is based on various statistical data collected
+    during operation, using methods such as comparison, correlation, and historical
+    and trend of network operation, and mainly analyze the index for evaluating security
+    indicators such as alarm status, encryption rate and date rate; Security alerts
+    from historical data collected behaviors and occurrences are correlated, tracked
+    and retrospectively, and corresponding security evaluations are made, to discover
+    security vulnerabilities and are not missed in time. The security verification,
+    based on the vulnerability database and configuration baselines, carry out scanning
+    and verification of security vulnerabilities, weak passwords, and security
+
+
+    +   B. Need for comprehensive data analysis and processing capabilities
+
+    The amount of security monitoring data is increasing. It is difficult for the
+    platform to store and effectively integrate heterogeneous information generated
+    by each equipment, resulting in single source of analysis data and low efficiency
+    correlation of large-scale data. It is difficult to quickly discover global and
+    local information. Thus, unable to meet the requirement for cybersecurity situation
+    awareness, and the degree of intelligent alarm analysis and filtering-decision
+    assistance is not high.
+
+
+    +   C. Do not have intelligent learning and decision-making assistance functions
+
+    In view network anomaly, the platform lacks feature recognition and autonomous
+    learning capabilities, and is unable to effectively and intuitively display the
+    current situation; it is impossible to detect and prevent the threats of 0day
+    vulnerabilities and APT attacks in a large scale, to maintain access and security
+
+
+    When a major security event occurs, it is difficult for staff to rely on technical
+    management and control methods, to promote, multi-level and process blocking of
+    sessions, hosts, and even the entire network in the center node. It is necessary
+    to organize the equipment manually for performing related operations. Emergency
+    requirements for rapid isolation of threats and containment of spread cannot be
+    met.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# III. INTELLIGENT ANALYSIS MANAGEMENT AND CONTROL STRATEGY
+
+
+    # A. Asset assessment scoring
+
+
+    Utilize the data resources sourced and collected by the existing network security
+    platform to comprehensively analyze operating status, vulnerability scanning,
+    weak password check, current threats, and abnormal behavior of assets to perform
+    assessment scoring. Provide network security and operations managers with key
+    information to achieve the goal of assessment of threats and effective control
+    of security.
+
+
+    Through the two paths of comprehensive static evaluation and dynamic evaluation,
+    all assets in the entire network space are scored, with the asset allocation and
+    control system, the overall assessment of the entire network space can be carried
+    out.
+
+
+    Scoring relations refer to considering and weighting by different factors and
+    static information such as asset vulnerabilities, baseline configuration and password
+    scanning. To establish a complete library, regularly perform auditing and configuration
+    implementation, implement a deduction system, the weight and vulnerability of
+    assets, some-one evaluation, the reality, that the scale of problems is difficult
+    to distinguish, and security reinforcement can be carried out in a flexible manner.
+    In terms of vulnerability collection, external intelligence is collected by various
+    open source organizations and commercial organizations on the Internet (Tianyi
+    Yongcheng, Webhh Online, FutureHub, etc.) and foreign authorities (CVE, CND, CNNVD).
+    The internal intelligence is the various early warning orders issued by the national
+    defense system. Based on the knowledge base, the hazards of vulnerabilities can
+    be predicted out, and universal solutions can be proposed for management purpose.
+
+
+    | Weight | Factor | Score |
+
+    |---|---|---|n| 10% | Weak password | Exist: 0 |
+
+    | | Not exist: 1 |
+
+
+    Dynamic evaluation aims at dynamic status alarms. On the one hand, it connects
+    network security threat intelligence to determine suspicious assets (there is
+    a risk of being exposed) from the three perspectives of IP address, address time
+    and type of asset. By being exposed, the warning characteristics of key assets
+    are threatened, and finally finds rules for threat warning and event according
+    to the degree of damage, counts the quantities, and ensures the security of assets
+    scoring.
+
+
+    # TABLE II. DYNAMIC EVALUATION RULES
+
+
+    | Weight | Factor | Score |
+
+    |---|---|---|n| 10% | Operating status | Abnormal process (new process, start/stop/of
+    process): 0.3 |
+
+    | | | CPU increase rate + current share: 0.3 |
+
+    | | | Memory increase + current memory share: 0.3 |
+
+    | 50% | Suspicious assets | Do not meet the characteristics of suspicious assets:
+    0.3 |
+
+    | | Meet [IP] characteristics: 0.3 |
+
+    | | Meet the characteristics of [IP+time type]: 0.6 |
+
+    | | Do not meet the characteristics of victim assets: 0 |
+
+    | 30% | Key assets | Meet [IP] characteristics: 0.6 |
+
+    | | | Meet the characteristics of [IP+time type]: 1 |
+
+    | | Threats and events warning | Number of (threats, 30): 0.4 |
+
+    | | | Number of (events, 1): 0.7 |
+
+    | | | [2]: 1 |
+
+
+    | Weight | Factor | Score |
+
+    |---|---|---|n| 45% | Vulnerability | (0, 1): 0.7 |
+
+    | | | High-risk vulnerability?: [2]: 0.9 |
+
+    | | | [10]: 1 |
+
+    | | | (0, 9): 0.3 |
+
+    | | | General vulnerability 20%: [10, 49]: 0.8 |
+
+    | | | Low-risk vulnerability?: [55, 100]: 0.9 |
+
+    | | | Verification terms and fully completed: 0 |
+
+    | 45% | Baseline verification | Compliance degree greater than 65%: 0.2 |
+
+    | | | Compliance degree greater than 60%: 0.6 |
+
+    | | | Other compliance degree: 1 |
+
+
+    Ultimately, calculate the score of each half of the static assessment and dynamic
+    assessment weights, and display the various assets and the total scores to provide
+    monitors with a comprehensive evaluation of asset safety.
+
+
+    # B. Attack analysis model
+
+
+    Integrate security devices that have been deployed to collect attack related information,
+    and process the attack information through correlation analysis, behavior correlation
+    analysis, dynamic'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'baseline, analytics, etc., to obtain the degree of attack, method attack and
+    the scope of attack. At the same time, based on knowledge information, disposal
+    personnel can obtain attack treatment suggestions, as hardening strategies, upgrading
+    software patches,
+
+
+    and point out the corresponding scenarios and solutions of the emergency plans
+
+
+    # IV. SUMMARY AND PROSPECT
+
+
+    The fast pace of development and natural industrial control system brings a variety
+    of challenges. In this paper, we presented an intelligent cyber security strategy
+    for electric dispatching and control system. Through the introduction of asset
+    assessment security and attack analysis models, an intelligent analysis and processing
+    of multiple sources have been achieved. The monitoring platform could realize
+    detection of security events promptly. The security protection of the whole electric
+    power dispatching and control system could be improved.
+
+
+    Data sources include the firewall event we know to find “who is knocking on the
+    door”, the intrusion detection and attack prevention WAF logs to discover “who
+    is transmitting attack and is planting malware code”, the security management
+    program which provide logs and operation to find “who is operating the equipment”,
+    and the traffic is seen by traffic to realize “Real attack traffic
+
+
+    We use data processing, firstly utilizing topology to identify the stages of emergency
+    attacks, namely plenty attacking the main station, province dispatching substation,
+    attacking the main station, zone I and II, III attacking cross-zone, cross-dimensional
+    codes and internal network on external networks. Secondly, using alike analysis
+    to identify the process of the attack as seen in scanning report, escalation backdoor,
+    etc. Thirdly using dimension analysis to identify the correlation of attacks and
+    recognize apt. By introducing analysis strategy to identify the attack source,
+    attack traffic analysis for sensing attacks, and finally using attack status,
+    as status of CPU, memory, or offline, to identify whether security events are
+    occurring normally.
+
+
+    In the next step, we need to study identity decision-making and emergency response.
+    Through analysis of operation monitoring, multi-scale, and fine-grained detail
+    analysis, and tracking of security events, and further apply knowledge engineering
+    to form an intelligent event model with reasoning mechanism and knowledge base,
+    to provide relevant professional knowledge and intelligent decision-making for
+    operation by synthesis and impact analysis, based on agent trust mechanism and
+    remote control strategy of network, security equipment and other technologies,
+    designing realistic hierarchical network emergency isolation measures to remove
+    multi-hierarchical blocking of stations: hosts and power plants & substations.
+
+
+    As the result of our method, the result battle map will be displayed on the loading
+    screen, using the network topology relation connection, the status of the deployed
+    equipment, the timestamp and traffic status from the two scenarios of attack and
+    defense will be. On the attack side, we can construct an attack source, attack
+    path, attack degree, and attack purpose. Then, through comparison and analysis
+    of the knowledge base, provide treatment suggestions for the disposed personnel
+    to identify attack impact and influence scope based on historical events and network
+    topology. To design integrate, with the current security divisions, mainly monitor
+    the availability of boundary security for the best in zone I, II, and III zone,
+    city dispatching and province dispatching, namely main station and power plants
+    & stations, ensures that all security controls are available, and the rationality
+    of the configuration of boundary security is presented, which reflects the idle
+    rate and purpose provides suggestions for the disposed personnel to identify impact
+    reinforcement in the time. The current count of real-time defense events are displayed
+    on the security equipment. In addition, we can change the trend of display, firstly
+    to identify possible attack path and attack range, that the attack dynamics
+
+
+    # ACKNOWLEDGMENT
+
+
+    # REFERENCES
+
+
+    +   [1] Yaobing, X. Y., and L. U. Chang. Analysis of data technologyforelectricpowersystem.
+    Automation/Electronics/Electric Power. 24:1 (2001): 1-20.
+
+
+    +   [2] Mi, Ben. Network security footing: Theory and Information security management,
+    vol. 10(1): 31-53, 2002.
+
+
+    +   [3] Li, K. Y., Z. Zhan, and J. Zhou. Development and evaluation of power protection
+    architecture for smart dispatching and control systems. Analysis of Electric Power
+    Systems 39:1 (2015):
+
+
+    +   [4] Gao, Xin-hua, Wen Wang, and Miao Ma. Security delivery for real-time power
+    network. Electric Power Systems 29:7 (2006): 71
+
+
+    +   [5] McNab, Chris. Network security assessment: know your network .. O''Reilly
+    Media/Professional Education, 2007.
+
+
+    +   [6] Chauhan, Pavitra, Nikita Singh, and Nikhil Chandra. “A Review on Intrusion
+    Detection System based on Artificial Intelligence System. International Journal
+    of Computer Applications 63.20 (2013).'
+  merge: -1
+  img_proc: true
