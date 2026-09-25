@@ -1,0 +1,319 @@
+- pgno: 0
+  md: '# A MULTICLASS DEEP LEARNING APPROACH FOR LUC CLASSIFICATION OF MULTISPECTRAL
+    SATELLITE IMAGES
+
+
+    Dinesh Sathanayarayanan, V Anudeep C Ananja Keshav, Santh Bahadur, Uma D R Hebbar,
+    K. Ganesha Raj*
+
+
+    PES University
+
+    Department of Computer Science
+
+    BSK III Stage, Bengaluru, Karnataka, India
+
+    National Remote Sensing Centre, ISRO
+
+    Bengaluru, Karnataka, India
+
+
+    # ABSTRACT
+
+
+    In general, a visual interpretation technique is adopted for mapping of Use /
+    Land Cover (LUC) using temporal satellite data. Although highly accurate, the
+    process is tedious, consuming and requires a significant amount of domain knowledge.
+    This limitation introduces a scope for automation to reduce manual effort involved
+    in interpretation. The research explores a multi-class training using a Deep Learning
+    (DL) model to generate major LUC classes. Five bands, namely Blue, Green, Red,
+    Near-Infrared (NIR) and Short Wave Infrared (SWIR) from the satellite, covering
+    Mandya, Karnataka, India was used to train the method. An existing LUC mapping
+    of the region was used as input for automated generated labeling tasks. Four LUC
+    classes of- water bodies, forests, grasslands, built-up were classified with an
+    average F1 score of 0.8. The trained model applied to objects has shown encouraging
+    results which makes this an effective method to produce the generation of LUC
+    maps.
+
+
+    **Index Terms**- Sentinel-2, Satellite Imagery, Multispectral Images, Remote Sensing,
+    Land Use Cover, Deep Learning (DL), Segmentation, Classification, SegNet
+
+
+    # 1. INTRODUCTION
+
+
+    Remote sensing is the science of acquiring information about the physical characteristics
+    of an area by measuring emitted or reflected radiation, typically from aerial
+    or space platforms. The discipline found us partly due to increasing ease of data
+    availability, with access to over satellite datasets like Landsat [1] and Sentinel
+    [2] providing free
+
+
+    > *This work was supported by the Regional Remote Sensing Centre (RRSC)- South,
+    India Sensing Research Organization, Dept. of Space, Govt. Of India.
+
+
+    access to large remote sensing data. The main challenges with remote sensing are
+    image interpretation and pattern recognition which are not straightforward surveying
+    methods of analysis are tedious. Recent developments in Deep Learning (DL) [3,
+    4] show its potential in remote sensing classification and object detection.
+
+
+    One of the major aspects of satellite data is generation of Land Use / Land Cover
+    (LUC) maps. LUC refers to the natural cover on the ground forest, water, bare
+    soil. Identification of land classes establishes the baseline information for
+    thematic mapping and change detection analysis. Land use refers to the purpose
+    such as agriculture, buildings, rectify habitat. These features can be represented
+    in
+
+
+    The objective of this study is to create a “Proof of concept” on the ability to
+    automate mapping of multispectral data using existing LUC map to generate major
+    maps for the region of Mandya, Karnataka, India. Croplands, forests, built-up
+    areas and water bodies are the major classes of interest in this study.
+
+
+    # 1.1. Previous Methodology
+
+
+    Multiple methods have been explored by various researchers with varying results
+    in generating LUC maps from multi'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'spectral satellite images. Among these, a popular technique is the quantitative
+    indices using Like Normalized Vegetation Index (NDVI) [5] and Modified Normalized
+    Water Index (MNDWI) [6], which are mathematical representations of physical information
+    present in combinations of bands. The values captured by these indices consistently
+    show variation in spectral characteristics, aiding satellite image classification
+    and segmentation with reasonable accuracy.
+
+
+    Further exploration in the use of spectral characteristics leads us to identify
+    homogeneous areas within a satellite image [7]. This grouping based on similarity
+    eliminates a large number of intermediate classes, generating a robust set of
+    classes which are lesser in number. A more recent study explores the use of discrete
+    transforms in improving LULC classification [8]. These techniques though quite
+    sufficient, still require a significant amount of manual effort for the creation
+    of LULC maps. Also, such techniques only take into account spectral values, omitting
+    contextual, texture and geometric features. DL models are capable of understanding
+    position, shape and scale, which makes them an excellent option for automation.
+
+
+    ![](img/9cc93e1db38a9f18c04a850088592e6b_1_0.png)
+
+
+    Fig. 1. Maps of natural classes: (a) Built-up, (b) Forest; (c) Cropland; (d) Water
+    Bodies
+
+
+    # ##2. DATASET
+
+
+    Multpectral Sentinel-2 satellite images are chosen as the dataset for this study.
+    This satellite was set up with the intention of monitoring changes on the Earth''s
+    surface. Sentinel-2 captures images in 13 bands with spatial resolution of 10m,
+    20m and 60m. Due to poor resolution the 60 bands are not taken into consideration
+    for the study.
+
+
+    ![](img/9cc93e1db38a9f18c04a850088592e6b_1_1.png)
+
+
+    Fig. 2. Dataset generation - shapefile with all classes split into fixed size
+    crops
+
+
+    The region of interest study is Mandya, a densely agricultural district in Karnataka.
+    Mandya is at 12.52°N with an average elevation of 67 m. For the purpose of this
+    study, satellite images for the time of December 2018 - January 2019 are used.
+
+
+    These masks were then concatenated and the corresponding attribute values were
+    assigned. An attribute contains information on the features of a particular layer
+    or mask, with each attribute capturing a zone of cells. In the context of LULC,
+    this was possible to merge the 50 classes to masks for water bodies, cropland,
+    forest and built areas shown in.
+
+
+    A three-tier approach is followed in order to accurately segment the satellite
+    images to generate LULC maps. It starts with preprocessing the collected data,
+    followed by a supervised DL model to perform pixel-wise classification, and finally
+    analysing the results produced by the trained model, geospatial.
+
+
+    # 3. METHODOLOGY
+
+
+    In order to train a multi-class segmentation network, the model requires mult-class
+    masks as input. To achieve this, the class masks were merged to create a multi-class
+    mask for training. Further, the multispectral images, as well as the combined
+    mask, were split into grids of size 256 x256 pixels to generate training, validation
+    and test samples as depicted in Fig. 2.
+
+
+    # 3.1. Dataset Preprocessing
+
+
+    The acquired LULC shapefile for the region of Mandya consists of 50 classes at
+    a higher granularity than the consideration of this. To conform to the proposed
+    scheme, these classes were combined into five high-level classes using relevant
+    tasks, and masks were generated for these classes.
+
+
+    # 3.2. Modified SegNet for multi-class classification
+
+
+    SegNet(9) is a segmentation network which performs pixel-wise classification,
+    and was primarily applied to the scene understanding problem. The architecture
+    of the model is shown in Fig. 3. It is an encoder-decoder network which is followed
+    by a pixel-wise classification layer. The'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "![](img/9cc93e1db38a9f18c04a850088592e6b_2_0.png)\n\n**Fig. 3.** SegNet - Model\
+    \ Architecture showing FCC input and segmented output map\n\n![](img/9cc93e1db38a9f18c04a850088592e6b_2_1.png)\n\
+    \n**Fig. 4.** Region of Mandya: 12.37'N 77.17'E - 12.31'N 77.26'E, showing FCC\
+    \ and test results for Forest land(Yellow), Waterbodies(Blue) and Cropland(Green)\n\
+    \nlayer is responsible for convolutions and max pooling, and also ensures to store\
+    \ the corresponding max-pooling indices. The decoder performs upsampling followed\
+    \ by convolutions. The upsampling is performed using the saved max-pooling indices.\
+    \ Batch normalization [10] layers are added to prevent overfitting. Finally, a\
+    \ K-softmax classifier performs the pixel-wise classification.\n\n![](img/9cc93e1db38a9f18c04a850088592e6b_2_2.png)\n\
+    \nSegNet is a good choice of model for annotation, due to use of max-pooling indices\
+    \ from the encoders in the corresponding decoders for upsampling of low-resolution\
+    \ feature maps. This also effectively reduces the number of trainable parameters.\n\
+    \n**Fig. 5.** Region of Mandya: 12.54'N 76.85'E - 12.48'N 76.97'E, showing FCC\
+    \ and test results for Built-up(Orange), Waterbodies(Blue) and Cropland(Green)\n\
+    \n# 3.3. Training configuration\n\nThe SegNet model with 4.6 million training\
+    \ parameters was implemented in python, using Google's tensorflow. Other libraries\
+    \ like keras, rasterio and fiona geospatial information. The model was trained\
+    \ on a 32GB RAM machine, with an NVIDIA RTX 2080.\n\n+   - Input shape = (5, 256,\
+    \ 256)\n- Output shape (5 classes) = (65536, 5)\n- Dataset = 3000 images of size\
+    \ 256 X 256, split into 60% train, 20% validation and 20% test sets\n\n| Class\
+    \ Name | Precision | Recall | F1 | Support pixels |\n|---|---|---|---||\n| Water\
+    \ | 0.89 | 0.73 | 0.80 | 220 |\n| Forest | 0.92 | 0.90 | 0.91 | 638 |\n| Built-up\
+    \ | 0.89 | 0.60 | 0.73 | 312 |\n| Cropland | 0.86 | 0.94 | 0.90 | 151 |\n| Weighted\
+    \ | **0.85** | **0.85** | **0.84** | **2.67 mil.** |\n\n# 4. RESULTS AND DISCUSSION\n\
+    \n| Water | Cropland | Built-up | Other Land |\n|---|---|---|---|---|\n| | 68.55\
+    \ | 87.42 | - | 93.53 |\n| | 89.41 | 83.38 | 93.57 | - |\n| | 87.14 | 82.98 |\
+    \ 50.78 | 61.64 |\n\nThere are many metrics that can be used to evaluate the performance\
+    \ of a DL model like SegNet. Traditional metrics like Precision, Recall and F1\
+    \ score are the base metrics. Precision quantifies how many relevant results were\
+    \ generated. While Recall quantifies the relevance of results While a balance\
+    \ between Precision and Recall. Apart, pixel match percentage is a useful metric\
+    \ which involves finding the number of pixels in every class between the test\
+    \ mask and the predicted.\n\n> $F1 = 2 * \frac{(Precision + Recall)}{(Precision\
+    \ + Recall)}$\n\nmodel. 1 shows the various metrics for the test set, test class.\
+    \ The test predictions have been shown here to highlight the model's performance\
+    \ for all the classes of interest. Fig. 5 shows predictions for an area with mainly\
+    \ forest lands and cropland. Forest land prediction with a good match of 93.53%\
+    \ and an F1 score of 0.91. The water body, being very narrow, is not as accurately\
+    \ segmented as the other classes interest. From the FCC in Fig. 5, it is evident\
+    \ that the central portions of built-up areas. These are composed with a pixel\
+    \ match of 93.57% and an F1 score of 0.72. Similar results\n\nFigures-7 show the\
+    \ test False Colour Composite (FCC) images and test predictions for the SegNet"
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/9cc93e1db38a9f18c04a850088592e6b_3_0.png)
+
+
+    **Fig. 6.** Region of Mandya: 12.44''N 76.67''E - 12.40''N 76.74''E, Following
+    FCC and test for results of land(Yellow), Built-up(Orange), Waterbodies(Blue)
+    and Cropland(Green)
+
+
+    ![](img/9cc93e1db38a9f18c04a850088592e6b_3_1.png)
+
+
+    **Fig. 7.** Region of Bangalore: 13.01''N 77.50''E - 12.88''N 77.69''E(Two prominent
+    waterbodies depicted in blue are Bellandur and BTM lake), showing FCC and test
+    results for classes Built-up(Orange), Waterbodies(Blue) and Cropland(Green)
+
+
+    are with many classes of interest in it. SegNet with multi-class training is able
+    to map the boundaries of the classes accurately.
+
+
+    Table 1 gives an overview of the model performance. While training, the majority
+    of the data samples belonging to one class (cropland), a weighted is specified
+    for accuracy during training. The number of support pixels gives an estimate covered
+    by each class. Low coverage and lack of tracing pixels for Waterbodies and built-up
+    areas relative to the relatively low recall, resulting in low F1-scores for these
+    two classes.
+
+
+    On feeding the model with a small subset of the city of Bangalore, Karnataka in
+    Figure 7, a visual interpretation of the output is very promising. The model successfully
+    identified a majority of built-up area as well as recognised the two water bodies
+    in river.
+
+
+    # 5. CONCLUSION
+
+
+    This research presents a DL methodology for LULC classification through images
+    multi-class segmentation using a single model. A major challenge for the remote
+    sensing community is the labeling of training classes, which has been addressed
+    in this study using existing LULC map of scale:150. The results are highly promising
+    with an average F1 Score of 0.84 with accuracy for classes forests and croplands.
+    Although accuracy was for
+
+
+    water and built-up, lower number of support pixels accounts for this difference.
+    These results support the SegNet model as a fast feasible solution for generation
+    of LULC maps. In the study, single date Sentinel-2A multispectral data was used
+    for production of broad LULC map. Machine learning, and in particular, fast evolving
+    sub-disciplines like DL with the promise of analysis of satellite images, more
+    scalable and scope for full or partial automation of spectral data analysis.
+
+
+    # 6. REFERENCES
+
+
+    [1] D. Roy et al., "Landsat-8: for terrestrial global change research," Remote
+    Sensing of Environment, 2014, pp. 154–172, 0013.
+
+
+    [2] F. Bertini et al., "Sentinel-2''s optical high-resolution mission for geosciences
+    operations," ESA bulletin. Bulletin European Space Agency, SP-1322, 03 2012.
+
+
+    [3] Y. LeCun, Y. Bengio, and G. Hinton, "Deep learning," Nature, 521, pp. 436–44,
+    2015.
+
+
+    [4] X. Xu et al., "Deep learning in remote sensing: a comprehensive review and
+    list of resources," IEEE Geos and Remote Sensing Magazine, 5, pp. 8–12, 2019.
+
+
+    [5] N. Robinson et al., "A dynamic longterm normalized vegetation index (ndvi)
+    product for the continued united states," Remote Sensing, 9: 008 (2017).
+
+
+    [6] H. Xu, "Modification of normalised water index (ndvi) to enhance open water
+    features in remote sensing imagery," International Journal of Remote Sensing,
+    27, pp. 3025–3033, 2016.
+
+
+    [7] R. T. Kettle and D. A. Graflade, "Classification of multispectral image data
+    extraction and classification of homogeneous objects," IEEE Transactions on Geoscience
+    Electronics, 14, no. 1, pp. 19–26, 1996.
+
+
+    [8] J. Sharma, R. Prasad, V. Mishra, Y. Yadav, and R. Bala, "Land and cover classification
+    of multispectral satellite-8 image using discrete wavelet transforms," XL-VII,
+    11 (2018).
+
+
+    [9] V. Badinarayan, A. Kendall, and R. Cipolla, "Net: a deep convolutional encoder-decoder
+    architecture for image segmentation," IEEE Transactions on Pattern Analysis and
+    Machine Intelligence, 39, no. 12, pp. 2481–2495, 2017.
+
+
+    [10] S. Ioffe and C. Szegedy, "Batch normalization: Accelerating deep network
+    training by reducing covariate shift," 02 2015.'
+  merge: -1
+  img_proc: true
