@@ -1,0 +1,599 @@
+- pgno: 0
+  md: '# # Prediction of Forest Fire Occurrences using Machine Learning Approaches
+
+
+    Dedi Rosadi
+
+    Department of Mathematics
+
+    Gadjah Mada University
+
+    Yogyakarta, Indonesia
+
+    dedrosadi@gadjmadah.edu
+
+
+    Widyastuti Andriyani
+
+    Master of Information Technology
+
+    Yogyakarta, Indonesia
+
+
+    Deasy Arisanty
+
+    Department of Geography Education
+
+    Lambung Mangkurat
+
+    Banjarmasin, Indonesia
+
+    deasyasant@gmail.com
+
+
+    Dina Agustina
+
+    Department of Statistics
+
+    University of Padjadjaran
+
+    dinaagust3@gmail.com
+
+
+    **Abstract—** we consider the application of machine learning approaches for the
+    prediction of forest fire occurrences in the area. We consider classical classification
+    methods such as support vector machine (SVM), K-Nearest Neighbor (KNN), Logistic
+    Regression (logit), DT and Naive Bayes (NB). For comparison we also consider more
+    advanced algorithms, AdaBoost (DT) based. Although the number of similar studies
+    is available for forest fire occurrences in Indonesia. To illustrate the method,
+    we **consider the method using topographical and meteorological data** from South
+    Kalimantan Province. All computations are done using opens software
+
+
+    Neighborhood, DT, and Naive Bayes) the case without the clustering, data. [4]
+    improve the empirical performance of [2] and [3] by using what called Adaptive
+    Boosting (AdaBoost) ([5]) to model the same data as and [2]. More recent studies
+    are available, see e.g. [1] and references therein. In [6], they used neural networks
+    classification using what called the extreme learning method (elm) and backpropagation
+    (bgpap) to predict the forest occurrence. However, except [6], none of the methods
+    studied in this area. We consider various classical methods, such as support vector
+    machine (SVM), K-Nearest Regression (logit), KNearest Neighbor (KNN) and Naive
+    Bayes (NB). For comparison we consider more advanced, AdaBoost (DT) based. To
+    illustrate the method, we consider the method using topographical and meteorological
+    data from South Kalimantan Province. The approach has not been considered in any
+    of the previous studies in forest fire prediction before Indonesia, either for
+    peat or non peat lands. This paper is organized as follows. In section we provide
+    a quick introduction to the problem that we considered in this paper. In Section
+    2, we outline short description of necessary theory related to our approach and
+    provide the methods. In Section 3, provide empirical results. Section 4 concludes
+    the results.
+
+
+    +   **Keywords—** early warning, forest occurrence, topographical and meteorological
+    data, land fires fire, machine learning
+
+
+    # I. INTRODUCTION
+
+
+    Forest fire is an international world problem and affected the environment, infrastructures,
+    and human life. There are various techniques in literature, that use modeling
+    methods which can be categorized into three main types: physics-based, statistical-based,
+    method-based method, see e.g. [1]. It is also known that the variables used in
+    the literature are based on satellite data, fire-related and meteorological data
+    (such as weather and meteorological data, see e.g. [2]].
+
+
+    Many approaches, machine and data approach may reach many researchers. For instances,
+    [2] studied forest fire algorithm, namely Regression (MR), Decision trees (DT),
+    Neural Networks (NN) and Support Vector Machines (SVM) to model the forest fire
+    occurrence prediction using meteorological and weather water data. [3] used clustering,
+    normalization to preprocess the data and application classification approach to
+    the normalized data. They found that the combination of Fuzzy-Cmeans with Cosine
+    distance, normalization and Back-Propagation Neural Networks (with one hidden
+    layer) classification give a relatively accurate prediction to other classification
+    approach (SVM, K-Nearest
+
+
+    # II. METHODS
+
+
+    # A. Classification Methods
+
+
+    As already noted in this, we consider various classical machine learning methods,
+    such as support vector machine (SVM), K-Nearest Neighbor (KNN), Logistic Regression
+    (logit), Decision Tree (DT) and Naive Bayes (NB). Here we provide only a short
+    summary of the description of the methods since all of these methods has been
+    considered in various standard machine learning books. See e.g. [7] for further
+    detail.
+
+
+    # 1) Support Vector Machine'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'Support Vector Machine (SVM) is a supervised learning algorithm often used
+    for classification. The SVM algorithms will find an optimal hyper plane in an
+    N-1 dimensional space (N denotes the number of features/variables which will classify
+    the data). By setting an optimization problem for obtaining the margin, i.e. the
+    maximum distance between data points of classes.
+
+    SVM can be of two types
+
+
+    See e. [8] for further detail.
+
+
+    +   2) K Nearest Neighbor (KNN)
+
+
+    +   1. Euclidean
+
+
+    ```
+
+    d(x, y) = \sqrt{\sum_{i=1}^n(x_i - y_i)^2}
+
+    ```
+
+
+    a) Linear Separable SVM
+
+    Hyper plane and support vector formula for linear data:
+
+
+    ```
+
+    g(x) = w^Tx + w_o
+
+    ```
+
+
+    with assumption:
+
+
+    ```
+
+    g(x) \geq -1, x \in C class 1
+
+    ```
+
+
+    and g(x) \leq 0 x class 2
+
+
+    Calculate the z for each support vector
+
+
+    ```
+
+    z_1 = \frac{|g(x)|}{\|w|} x \in C class 1\nz_2 = \frac{|g(x)|}{\|w\|} x \in C
+    class 2
+
+    ```
+
+
+    2. Mahattan
+
+
+    ```
+
+    d(x, y) = \sum_{i=1}^n|x_i - y_i|
+
+    ```
+
+
+    3. Minkowski
+
+
+    ```
+
+    d(x, y) = \sum_{i=1}^n|x_i - y_i|^{1/q}
+
+    ```
+
+
+    See e. [9] for further detail.
+
+
+    Then The Margin z is
+
+
+    ```
+
+    z = |frac{1}{n_1}\sum z_1 - \frac{1}{n_2}\sum z_2|
+
+    ```
+
+
+    Where: w = weight
+
+    Minimizing w is a non-linear optimization function used to maximize separation.
+    This minimization of w can be done using the KKT (Karush-Kuhn-Tucker) condition
+    with the Langrange multipliers $\lambda$.
+
+    Minimize vector weight to maximize distance between classes using the formula:
+
+
+    ```
+
+    w = \sum \lambda_i y_i x_i
+
+    ```
+
+
+    KKT (Karush-Kuhn-Tucker) condition:
+
+
+    ```
+
+    \sum \lambda_i y_i = 0
+
+    ```
+
+
+    b) Non-Linear Separable SVM
+
+    Finding non-linear SVM can be used to map data to higher dimension. The data is
+    mapped to a higher dimension using the kernel trick so that it is linearly separable.
+
+    There are 2 kernel that are used in SVM:
+
+    1. Radial Basis Function (RBF)
+
+
+    ```
+
+    k(z, x) = \exp(-\frac{\{\|x-z\^2}{\sigma^2})
+
+    ```
+
+
+    It is used when the number of variables is less than the number of observations
+
+    2. Polynomial Kernel
+
+
+    ```
+
+    k(z, x) = (x^Tx + c)^d
+
+    ```
+
+
+    It is used when the number of observations is less than the number of observations
+
+
+    See e. [10] for further detail.
+
+
+    4) Logistic Regression
+
+
+    Logistic Regression is one of the popular classification method. Logistic Regression
+    can be used to classify the data into two or more classes.
+
+    Steps for Logistic Regression in general can be
+
+
+    +   a) logistic regression hypothesis
+
+
+    Naive Bayes classifier is one of the probabilistic classification methods, derived
+    by Bayes Theorem, Bayes can be used to calculate posterior probability P(c|x),
+    P(x) and P(c).
+
+    Formulas for Bayes:
+
+
+    ```
+
+    P(c|x) = \frac{P(x|c)P(c)}{P(x)}
+
+    ```
+
+
+    ```
+
+    P(x) = P(x_1|c)P(x_2|c)...P(x_n|c)
+
+    ```
+
+
+    Where have
+
+    P(x) is the posterior probability of class (c or target) given variables, (attributes).
+
+    P(c) is the posterior probability of certain class.
+
+    P(x|c) is the likelihood which is the probability of predictor given certain class.
+
+    P(x) is the posterior probability of certain class.
+
+
+    +   Steps for Bayes algorithm:
+
+    1. Convert the data set into a frequency table.
+
+    2. Calculate the empirical probability and define the Likelihood table.
+
+    3. Equation (13) to obtain the posterior probability for each class. We define
+    the class suitable for the data with the highest posterior regression
+
+
+    The logistic regression is defined as'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# $h_0(x) = \theta''x$
+
+
+    Linear function is basically used as input to another function such as g in the
+    following relation
+
+
+    $h(x) = g(h_0(x)) \text{ where } h_0(x) \le 1$
+
+
+    Function g is the logistic or sigmoid function
+
+
+    $g(z) = \frac{1}{1+e^{-z}}$
+
+
+    Sigmoid curve could positive or negative. The output comes under the probability
+    of positive class if it lies between 0 and 1.
+
+
+    # B. Logistic regression decision boundary
+
+
+    Define loss to measure performance of algorithm using the weights, representations
+    that we use as:
+
+
+    $h_0(x) = g(\theta''x)$
+
+
+    # C Define the logistic regression parameter
+
+
+    $J(\theta) = \sum (-x \log(h) - (1-x) \log(1-h))$
+
+
+    After defining the function our primary goal is to minimize the function. The
+    function we use is:
+
+
+    $\frac{\partial j}{\partial \theta} = x - g(\theta''x)x$
+
+
+    See [11] for further detail.
+
+
+    # 5 Decision Tree
+
+
+    Decision tree uses supervised learning algorithms that can be used to solve the
+    classification problem. It can be applied using the following steps:
+
+
+    +   1. The complete dataset is used for the starting point of the tree (as the
+    root node)
+
+
+    +   2. The Attribute Selection (ASM) is used to select the best attribute. This
+    measure may be applied to find each node and sub-nodes. Popular measure for ASM
+    are
+
+
+    +   A. Information Gain
+
+
+    +   DT will use the node with highest information gain (IG), and it will be split.
+    IG can be calculated as:
+
+
+    +   Information gain
+
+
+    > $Entropy(S) = -Weighted Average \times Entropy(each feature)$
+
+
+    The entropy of S can be calculated as:
+
+
+    > $Entropy(S) = -\sum p_i \log p_i$
+
+
+    +   B. Gini Index is often called as Gini index, which is defined as:
+
+
+    > $Gini Index = 1 - \sum p_i^2$
+
+
+    +   3. The root node is used in subsets of datasets based on the best attribute
+    and the decision tree is generated. It is iteratively updated until the final
+    leaf/node is reached where the tree cannot be classified more.
+
+
+    +   4. To avoid overfitting, the tree size may be pruned. The pruning can be done
+    using methods which is called Cost Complexity Pruning or Reduced Error Pruning.
+
+
+    See [12] for further detail.
+
+
+    # B. Ensemble Classification: Adaboost Method
+
+
+    Adaptive Boosting is used in AdaBoost, a machine learning ensemble approach. Using
+    AdaBoost, the performance of the ''weak learners'' can be improved by combining
+    weighted sum that is called a boost classifier, which has the
+
+
+    $F(x) = \sum f(x)$
+
+
+    where x is a learner that takes a task as input and returns the class of x. There
+    are variations of AdaBoost, the algorithm used in this study is Adaptive Staging
+    using Multi-class Exponential loss function (SAMME) AdaBoost.
+
+
+    # III. RESULTS AND DISCUSSION
+
+
+    For the empirical study, we collect meteorological data from Kalimantan Province
+    of peatlands, a few days after the occurrence of fire the variable ''area'' is
+    labeled as ''1''. For classification we-also collect data at some time when there
+    is no fire occurrence, and therefore the area is labeled as ''0''. The variable
+    collected is (time of data collected), the district area (LAST Surface Temperature),
+    Wind Speed, Humidity, and NDVI (normalized index). Data is collected only for
+    year 2018 and is consisting of 202 cases.
+
+
+    # B. Algorithm
+
+
+    We employ the algorithms as follows
+
+
+    # Preprocessing steps
+
+
+    +   1. We use the split and split the data into two categories, which is case
+    of data with the variable area has the value 0 as labeled ''No Burned Area'' and
+    the case of data area has the value larger than 0 and labeled as ''Burned Area''.
+
+
+    +   2. Normalize of all the variables in the set of categories using min-max normalization,
+    which is defined as
+
+
+    $v_i = \frac{v - min A}{max A - min A}(new - min A) + min A$
+
+
+    where max A and min A is the minimum and the maximum values of an attribute A,
+    $v_i$ denotes the value in attribute A (which will be mapped to $v_i$). Here we
+    use the range [0,1] as the range of min A, max A'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Classification step
+
+
+    Ministry of Research and Technology of Republic of Indonesia.
+
+
+    +   3. We randomly split the data into training (70, 90 percent) and testing data
+    (30, 20 and 10 percent)
+
+
+    +   4. We apply the machine learning classification approaches to the training
+    data and the best model are tested into testing data. Here for the computation
+    we use R ([131])
+
+
+    +   5. To check the performance of the classification method, we use our measure
+    defined,
+
+
+    # TABLE I. SUMMARY OF THE PERFORMANCE CLASSIFICATION METHODS
+
+
+    ```
+
+    Accuracy = \frac{TP + TN}{TP + FP + FN}$ (26)
+
+    ```
+
+
+    | Algorithms | Data ratio and testing | Accuracy Training | Accuracy Testing |
+
+    |---|---|---|--|
+
+    | SVM | 9:1 | 91.76% | 95.00% |
+
+    | | 8:2 | 90.74% | 92.50% |
+
+    | | 7:3 | 90.78% | 100% |
+
+    | kNN | 9:1 (k=3) | | 95.00% |
+
+    | | 8:2 (k=5) | | 95.00% |
+
+    | | 7:3 (k=7) | | 95.00% |
+
+    | Logistic Regression (logreg) | 9:1 | 76.37% | 90.00% |
+
+    | | 8:2 | 75.92% | 85.00% |
+
+    | | 7:3 | 74.40% | 83.00% |
+
+    | Decision Tree (DT) | 9:1 | 95.00% | 90.00% |
+
+    | | 8:2 | 91.00% | 90.00% |
+
+    | | 7:3 | 90.00% | 90.00% |
+
+    | Naive Bayes (NB) | 9:1 | 82.40% | |
+
+    | | 8:2 | 82.00% | |
+
+    | | 7:3 | 83.00% | 86.90% |
+
+    | AdaBoost (DT) | 9:1 | 100% | |
+
+    | | 8:2 | 92.50% | |
+
+    | | 7:3 | 100% | |
+
+
+    where TP, TN, FP, FN denote the true positive, true negative, false positive and
+    false negative cases, in the classification data.
+
+
+    For comparison, we implement various machine learning approaches in step 4. The
+    considered approaches are implemented in R, where it was used and the function
+    of the packages (in paroles) follows: svm [e171], [k14], [cls [g16]], [caret [p17]],
+    naivebayes [e171] and boosting [ad108].
+
+
+    # IV. DISCUSSION
+
+
+    The summary of the empirical results is given in Table 1. We here consider training
+    and testing sets for checking the performance of considered algorithms. The performance
+    of each method in data training and testing results are given in the table. Here
+    we can see that the AdaBoost method outperforms the other approaches considered
+    in the in-sample data. However, for out-sample study, since in this case we use
+    the over DT approach, it is only over the weaker learning method (dt), and it
+    is outperformed by kNN classification approach. In general, this show that the
+    machine learning approach, either the classical or the more advanced and recent
+    approach can be used for fire detection of peatlands.
+
+
+    # REFERENCES
+
+
+    # V. CONCLUSION
+
+
+    One of the success cases that we found here is the early warning system of fire
+    detection. This study show that the machine learning learning approach, either
+    the classical or the more advanced and recent approach can be used for fire detection
+    of peatlands. With the connection of Internet of things, the approach will have
+    their importance in future application.
+
+
+    # Acknowledgement
+
+
+    The authors acknowledge the receipt of research funding PD 2020 from Deputy of
+    Research and Development,
+
+
+    > † corresponding author'
+  merge: -1
+  img_proc: true
