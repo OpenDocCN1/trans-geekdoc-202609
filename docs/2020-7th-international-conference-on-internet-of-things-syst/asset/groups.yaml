@@ -1,0 +1,1520 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # Adopting Machine Learning to Support the Detection of Malicious Domain Names
+
+
+    **1st Fernanda Magalhães**
+
+    LouEst Informatics and Research
+
+    LouEstR&D
+
+    Portugal
+
+    fernandomagalhaes@gmail.com
+
+
+    **2nd João Paulo Galalhães**
+
+    CICESI, Escola Superior de Tecnologia e Gestão
+
+    Politécnico do Porto
+
+    Felgueiras, Portugal
+
+    jpm@segi.pt
+
+
+    *Abstract—* there are many Domain Name System (DNS) solutions to prevent access
+    malicious domains. These can provide real-time protection and illegitimate communications.
+    Many of them rely on blocklists which are not been updated regularly. However,
+    this is only possible to block malicious communications for known malicious domains,
+    leaving out many that are malicious but not yet seen. The usefulness of adopting
+    machine learning to detect malicious domains from a large set of domain classified
+    features was experimentally analyzed. The exploratory analysis and the preparation
+    tasks were carried out and the results achieved by machine learning classification
+    algorithms. Results varied between 75% and 92% and the classification time ranged
+    between 2.77 and 5320 seconds. It is interesting that we can classify as malicious
+    or not in a short time and with good rate. *Index Terms* cybersecurity, machine
+    learning, malicious domains
+
+
+    many domains are registered every day, where some of them remain active for short
+    time, the process of detecting malicious domains in useful time a challenging
+    task. Most of domain naming filters are based on blocklists of malicious domains.
+    With blocklists in place when a domain request reaches the DNS server, it is filtered
+    and if in the list then the sinkholes the request, i.e the communication process
+    are constantly updated, but if a new domain is not in the list the request leaves
+    the organization at accessing a malicious domain
+
+
+    Considering the number of malicious domains created every day and their lifetime,
+    the filtering solutions based on blocklists are not enough to mitigate the problem.
+    In this context, solutions that adopt Machine Learning (ML) to support the detection
+    of new malicious domains accurately and in a timely manner could mitigate the
+    problem. In this paper, we explore the use of ML to classify domain names as benign
+    or malicious. More specifically, in this work
+
+
+    # I. Introduction
+
+
+    The domain names are central to the functioning of the Internet. The name servers
+    keep the mapping between a domain and the IP address of, so facilitate the communications
+    by contacting the DNS to get IP address after the desired service.
+
+
+    As the Internet grows, the number of domain names increases. According to a report
+    by Veris [1], the second quarter of 2020 saw 370.1 million domain name registrations
+    across all top-level domains (TLDs). An increase of 0.9% compared to the first
+    quarter of 2020 and a growth of 4.3%, per year. Unfortunately, this growth has
+    a less positive side. According to [2], 70% of the 200,000 domains registered
+    every day are malicious or suspicious. The study shows that some of the domain
+    names just stay active for short periods of time, while others remain active for
+    longer periods, serving as command servers, distributing malware or phishing sites.
+
+
+    The implementation of domain filtering solutions, like DNS firewalls is very important.
+    However, we
+
+
+    +   * Transform a domain name so it can be classified through ML?
+
+    * Build and prepare a dataset to measure the effectiveness of the ML algorithms?
+
+    * Study the best combination of hyperparameters to measure the detection accuracy?
+
+    * Measure the accuracy and duration by the ML classification algorithms?
+
+
+    The main objective is to use the usefulness of ML to classify domains and filters
+    them regarding the risk of requested domain name is malicious or not. The data
+    is enriched using Open Source Intelligence (OSINT) sources. The dataset is submitted
+    to exploratory analysis and prepared before it is analyzed by the ML algorithms.
+    Different algorithms are used to measure the accuracy and classify the domain
+    name problem.
+
+
+    The paper is organized as follows: Section 2 presents the related work; the dataset
+    in section 3; the experimental setup and the results are presented in section
+    4; section 5 concludes the paper.
+
+
+    This work was supported by national funds through FCT – Fundação para a Ciência
+    e Tecnologia through UIDB/04728/2020.'
+  - '[PAGE 1]
+
+
+    # II. RELATED WORK
+
+
+    Several prior studies investigate the security of DNS systems and how to improve
+    the detection of threats using ML algorithms.
+
+
+    In [3] authors used features of botnet querying and a popular classifier algorithm
+    to filter the malicious domains out of DNS traffic allowing security to improve
+    the accuracy of malicious domain detection. The results obtained using the Random
+    Forest classifier reached the 99.38% accuracy after four optimizations, a false
+    positive rate of 0.028 and a false negative rate of 1.86%.
+
+
+    Another study presented in [4] focus the importance of monitoring of a firewall
+    system for DNS server. The use of numerous attacks targets the DNS and the limitation
+    of the firewall to enforce specific rules the authors developed for the DNS to
+    allow attacks that DNS requests. A study was conducted in the suburb of a network
+    used by students and the firewall can dynamically adjust the traffic to allow
+    some packets when the DNS server is under attack. It used the traffic shaping
+    and prioritization for the rules of the firewall to ensure connectivity for the
+    objects of high demand.
+
+
+    A more recent study in [5] combines blockchain with ML approach on DNS traffic.
+    A deep neural architecture was built using passive DNS database. This study was
+    also to detect if a domain is benign, malicious or a sinkhole with 95% accuracy
+    and a false positive rate of 1:100. The authors collected different algorithms
+    and methods comparison between the algorithms.
+
+
+    To avoid the takeover of botnets by the enforcement authorities, malicious authors
+    make use of Domain Generation (DGA). It is a technique that generates domain names
+    change over time, making the process and takeover difficult. To cope with the
+    use of malicious domains generated using DGA algorithms typically use two methods.
+    The first tries to detect the algorithm and the seed, by reverse engineering,
+    which detects the domains, anticipating the names that will be generated and including
+    them in the blacklist. The other method consists of analyzing the structure of
+    the domain name to determine if it is potentially malicious or not. For example,
+    in [6], the authors proposed a DGA detection method and improve the security of
+    DNS solutions. In [7] the authors present a prototype of DNS firewall with flexible
+    response control. The policy handles the queries done by the DNS clients to the
+    DNS server and manipulates the responses of queries from attackers-based-the analysis.
+
+
+    In [8] authors propose a machine learning method to detect malware domain names
+    using Extreme Learning Machine (ELM). ELM is a modern neural network with high
+    accuracy and fast speed. Authors applied ELM to classify domain names based on
+    features extracted
+
+
+    multiple resources. The experimentation results reveal a high detection rate and
+    accuracy of more than 95%
+
+
+    Authors in [9] by considering that most of malicious domains use English words
+    or look meaningful English while many malicious domains are randomly generated
+    and do not include meaningful words. So, they transformed this observation into
+    informative features using second Order Markov models. Four matrices were built
+    to learn legitimate domain names, known domain words in English and based on a
+    distribution. The probabilities from these Markov models, as well as features
+    extracted from DNS data, were used to build a Random Forest classifier. The results
+    achieved by the authors show that the system can quickly catch malicious domains
+    with a low false rate.
+
+
+    In [10] authors explore a deep learning approach based and evaluate the effectiveness
+    of such deep learning approaches as recurrent neural network (RNN), short term
+    memory (LSTM) and other machine learning classifiers. From the results they concluded,
+    that deep learning approaches performed well in comparison to the other methods.
+    The authors found that the deep learning algorithms have the capability to obtain
+    the right features. Moreover, LSTM has obtained highest detection rate in all
+    comparisons to the other deep learning approaches.
+
+
+    The use of DNS Policy Zones (RPZ) to block malicious domains is still a useful
+    approach. Using ML based regression classification, to identify potentially threats
+    at DNS level in [12] with a DNS RPS approach can be valuable and avoid the detection
+    of malicious domains and avoid the communication with them.
+
+
+    # III. PRO METHOD TO DETECT MALICIOUS NAMES
+
+
+    This paper presented a study to verify if the creation of a dataset-based known
+    domain names, classified as benign or malicious, allows to classify by means of
+    ML domains. To do this, the domain names needs to be formatted and create a dataset
+    with specific features. The dataset needs to be analyzed so that it can be prepared
+    (e.g. handling missing values, treating outliers, and the distribution). With
+    the prepared dataset, the next steps to classify the ML queries and test their
+    effectiveness. The general process is illustrated in Figure 1 and its steps detailed
+    in the next sections.
+
+
+    # A. Feature extraction from a domain name
+
+
+    A domain name is composed of strings that identifies the top-level domain, another
+    that identifies the name by the organization wants to know in relation to its
+    brand or product (second-domain name) and'
+  md: '
+
+    # Adopting Machine Learning to Support the Detection of Malicious Domain Names
+
+
+    **1st Fernanda Magalhães**
+
+    LouEst Informatics and Research
+
+    LouEstR&D
+
+    Portugal
+
+    fernandomagalhaes@gmail.com
+
+
+    **2nd João Paulo Galalhães**
+
+    CICESI, Escola Superior de Tecnologia e Gestão
+
+    Politécnico do Porto
+
+    Felgueiras, Portugal
+
+    jpm@segi.pt
+
+
+    *Abstract—* there are many Domain Name System (DNS) solutions to prevent access
+    to malicious domains. These can provide real-time protection and illegitimate
+    communications. Many of them rely on blocklists which are not been updated regularly.
+    However, this is only possible to block malicious communications for known malicious
+    domains, leaving out many that are malicious but not yet seen. The usefulness
+    of adopting machine learning to detect malicious domains from a large set of domain
+    classified features was experimentally analyzed. The exploratory analysis and
+    the preparation tasks were carried out and the results achieved by machine learning
+    classification algorithms. Results varied between 75% and 92% and the classification
+    time ranged between 2.77 and 5320 seconds. It is interesting that we can classify
+    as malicious or not in a short time and with good rate. *Index Terms* cybersecurity,
+    machine learning, malicious domains
+
+
+    many domains are registered every day, where some of them remain active for short
+    time, the process of detecting malicious domains in useful time is a challenging
+    task. Most of domain naming filters are based on blocklists of malicious domains.
+    With blocklists in place when a domain request reaches the DNS server, it is filtered
+    and if in the list then the sinkholes the request, i.e. the communication process
+    are constantly updated, but if a new domain is not in the list the request leaves
+    the organization at accessing a malicious domain.
+
+
+    Considering the number of malicious domains created every day and their lifetime,
+    the filtering solutions based on blocklists are not enough to mitigate the problem.
+    In this context, solutions that adopt Machine Learning (ML) to support the detection
+    of new malicious domains accurately and in a timely manner could mitigate the
+    problem. In this paper, we explore the use of ML to classify domain names as benign
+    or malicious. More specifically, in this work
+
+
+    ## I. Introduction
+
+
+    The domain names are central to the functioning of the Internet. The name servers
+    keep the mapping between a domain and the IP address of, so facilitate the communications
+    by contacting the DNS to get IP address after the desired service.
+
+
+    As the Internet grows, the number of domain names increases. According to a report
+    by Veris [1], the second quarter of 2020 saw 370.1 million domain name registrations
+    across all top-level domains (TLDs). An increase of 0.9% compared to the first
+    quarter of 2020 and a growth of 4.3%, per year. Unfortunately, this growth has
+    a less positive side. According to [2], 70% of the 200,000 domains registered
+    every day are malicious or suspicious. The study shows that some of the domain
+    names just stay active for short periods of time, while others remain active for
+    longer periods, serving as command servers, distributing malware or phishing sites.
+
+
+    The implementation of domain filtering solutions, like DNS firewalls is very important.
+    However, we:
+
+
+    - Transform a domain name so it can be classified through ML?
+
+    - Build and prepare a dataset to measure the effectiveness of the ML algorithms?
+
+    - Study the best combination of hyperparameters to measure the detection accuracy?
+
+    - Measure the accuracy and duration by the ML classification algorithms?
+
+
+    The main objective is to use the usefulness of ML to classify domains and filters
+    them regarding the risk of requested domain name is malicious or not. The data
+    is enriched using Open Source Intelligence (OSINT) sources. The dataset is submitted
+    to exploratory analysis and prepared before it is analyzed by the ML algorithms.
+    Different algorithms are used to measure the accuracy and classify the domain
+    name problem.
+
+
+    The paper is organized as follows: Section 2 presents the related work; the dataset
+    in section 3; the experimental setup and the results are presented in section
+    4; section 5 concludes the paper.
+
+
+    This work was supported by national funds through FCT – Fundação para a Ciência
+    e Tecnologia through UIDB/04728/2020.
+
+
+    ## II. RELATED WORK
+
+
+    Several prior studies investigate the security of DNS systems and how to improve
+    the detection of threats using ML algorithms.
+
+
+    In [3] authors used features of botnet querying and a popular classifier algorithm
+    to filter the malicious domains out of DNS traffic allowing security to improve
+    the accuracy of malicious domain detection. The results obtained using the Random
+    Forest classifier reached the 99.38% accuracy after four optimizations, a false
+    positive rate of 0.028 and a false negative rate.
+
+
+    Another study presented in [4] focus on DNS. The authors found that the deep learning
+    algorithms have the capability to obtain the right features. Moreover, LSTM has
+    obtained highest detection rate in all comparisons to the other deep learning
+    approaches.
+
+
+    In [5] the authors used Machine Learning to detect malicious domains. The results
+    achieved by the authors show that the system can quickly catch malicious domains
+    with a low false rate.
+
+
+    In [6] the authors proposed DGA detection to improve the security.
+
+
+    In [7] the authors present a prototype of DNS.
+
+
+    In [8] authors propose a machine learning method to detect malware using Extreme
+    Learning Machine (ELM).
+
+
+    Authors in [9] considering that most of malicious domains use English words or
+    look meaningful while many malicious domains are randomly generated and do not
+    include meaningful words. So, they transformed this observation into informative
+    features using second Order Markov models.
+
+
+    In [10] authors explore a deep learning approach based and evaluate the effectiveness
+    of such deep learning approaches as recurrent neural network (RNN), short term
+    memory (LSTM) and other machine learning classifiers.
+
+
+    ## III. PRO METHOD TO DETECT MALICIOUS NAMES
+
+
+    This paper presented a study to verify if the creation of a dataset-based known
+    domain names, classified as benign or malicious, allows to classify by means of
+    ML domains. To do this, the domain names needs to be formatted and create a dataset
+    with specific features.
+
+
+    ### A. Feature extraction from a domain name
+
+
+    A domain name is composed of strings that identifies the top-level domain, another
+    that identifies the name by the organization wants to know in relation to its
+    brand or product (second-domain name) and
+
+    '
+  mdcn: '
+
+
+    # 采用机器学习支持恶意域名检测
+
+
+    **第一作者 Fernanda Magalhães**
+
+    LouEst Informatics and Research
+
+    LouEstR&D
+
+    葡萄牙
+
+    fernandomagalhaes@gmail.com
+
+
+    **第二作者 João Paulo Galalhães**
+
+    CICESI, Escola Superior de Tecnologia e Gestão
+
+    Politécnico do Porto
+
+    Felgueiras, 葡萄牙
+
+    jpm@segi.pt
+
+
+    *摘要—* 目前有许多域名命名系统（DNS）解决方案可以防止访问恶意域名。这些方案可以提供实时保护并防止非法通信。其中许多方案依赖于未定期更新的黑名单。然而，这只能阻止已知恶意域名的恶意通信，而忽略了许多恶意但尚未被发现的域名。本文通过实验分析了利用机器学习从大量分类的域名特征中检测恶意域名的实用性。开展了探索性分析和准备工作，并利用机器学习分类算法取得了结果。结果介于
+    75% 到 92% 之间，分类时间范围在 2.77 到 5320 秒之间。有趣的是，我们可以在短时间内以较好的准确率将其分类为恶意或非恶意。*索引术* 网络安全，机器学习，恶意域名
+
+
+    每天都有大量域名被注册，其中一些域名活跃时间很短，因此在有效时间内检测恶意域名是一项具有挑战性的任务。大多数域名解析过滤器基于恶意域名的黑名单。当域名请求到达
+    DNS 服务器时，由于黑名单的存在，请求会被过滤；如果存在于列表中，请求会被丢入陷洞（sinkholes），即通信过程在不断更新；但如果新域名不在列表中，请求将允许在访问恶意域名时离开组织网络。
+
+
+    考虑到每天创建的恶意域名数量及其生存周期，基于黑名单的过滤解决方案不足以缓解这一问题。在此背景下，采用机器学习（ML）来准确且及时检测新恶意域名的解决方案可以缓解该问题。在本文中，我们探索了使用机器学习将域名分类为良性或恶意。更具体地说，在这项工作中
+
+
+    ## I. 引言
+
+
+    域名是互联网运行的核心。名称服务器维护着域名与 IP 地址之间的映射关系，通过联系 DNS 获取所需服务的 IP 地址，从而促进通信。
+
+
+    随着互联网的增长，域名数量也随之增加。根据 Veris [1] 的一份报告，2020 年第二季度所有顶级域名（TLD）共注册了 3.701 亿域名。与 2020
+    年第一季度相比增加了 0.9%，年增长率为 4.3%。遗憾的是，这种增长也有其负面影响。根据 [2]，每天注册的 200,000 个域名中有 70% 是恶意或可疑的。研究显示，某些域名只活跃很短，而另一些则保持活跃较长时间，作为命令服务器、分发恶意软件或钓鱼网站。
+
+
+    实施域名过滤解决方案（如 DNS 防火墙）非常重要。然而，我们：
+
+
+    - 能够转换域名以便通过机器学习进行分类吗？
+
+    - 构建并准备了一个数据集以衡量机器学习算法的有效性吗？
+
+    - 研究最佳超参数组合以衡量检测准确率？
+
+    - 衡量机器学习分类算法的准确率和持续时间？
+
+
+    主要目标是利用机器学习的实用性对域名进行分类，并根据请求的域名是否为恶意来对其进行过滤。数据通过开源情报（OSINT）源进行增强。数据集在被机器学习算法分析之前，已经过探索性分析并完成了准备工作。使用了不同的算法来衡量准确率并解决域名分类问题。
+
+
+    本文的结构如下：第 2 节介绍了相关工作；第 3 节介绍了数据集；第 4 节介绍了实验设置和结果；第 5 节总结全文。
+
+
+    这项工作得到了 FCT – 科学技术基金会国家资金的支持，项目编号 UIDB/04728/2020。
+
+
+    ## II. 相关工作
+
+
+    之前的研究调查了 DNS 的安全以及如何使用机器学习算法改进检测。
+
+
+    在 [3] 中，作者利用僵尸网络查询特征和常用的分类算法从 DNS 流量中过滤恶意域名，以提高安全准确率。使用随机森林分类器在四次优化后达到了 99.38%
+    的准确率，误报率为 0.028。
+
+
+    [4] 中提出的另一项研究关注 DNS。作者发现深度学习算法具有获取正确特征的能力。此外，LSTM 在所有深度学习方法的对比中获得了最高的检测率。
+
+
+    在 [5] 中，作者使用机器学习检测恶意域名。作者获得的结果显示，该系统可以快速捕捉恶意域名且误报率较低。
+
+
+    在 [6] 中，作者提出了 DGA 检测以提高安全性。
+
+
+    在 [7] 中，作者展示了一个 DNS 原型。
+
+
+    在 [8] 中，作者提出了一种使用极限学习机（ELM）检测恶意软件的机器学习方法。
+
+
+    [9] 的作者考虑到大多数恶意域名使用单词或看起来有意义，而许多恶意域名是随机生成的，不包含意义单词。因此，他们使用二阶马尔可夫模型将这一观察转化为信息特征。
+
+
+    [10] 作者探索了基于深度学习的方法，并评估了循环神经网络（RNN）、长短期记忆（LSTM）和其他机器学习分类器的有效性。
+
+
+    ## III. 检测恶意名称的方案
+
+
+    本文介绍了一项研究，旨在验证基于已知域名（分类为良性或恶意）创建的数据集是否允许通过机器学习分类。为了实现这一点，需要格式化域名并创建一个包含特定特征的数据集。
+
+
+    ### A. 从域名提取特征
+
+
+    域名由识别顶级域名的字符串组成，另一个是组织与其品牌或产品相关的标识名称（二级域名）以及
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    # TABLE I
+
+    EXTRACTED FROM THE DOMAIN NAME
+
+
+    | Feature | Description |
+
+    | --- | --- |
+
+    | Domain name Entropy | Shannon entropy - Domains with high entropy that are gibberish
+    combinations of letters and numbers are more likely to be linguistically incoherent
+    content. |
+
+    | DomainOnline | Yes or No if the domain is online on common port (80, 443, 7547,
+    25, 21, 8080, 3306, 110, 543, 906, 465, 389, 123, 445) or not. |
+
+    | IPlist | List of IPs pointing to the domain. |
+
+    | WhoisAge | With the date and last creation of the domain to the reported WHOIS
+    |
+
+    | City | List of cities associated with IPs pointing to the domain (MaxMind) |
+
+    | TLD | Top-Level Domain from the Domain name. |
+
+    | ASN | List of Autonomous Systems associated with the IP (WHOIS). |
+
+    | Subdomains | List of organizations associated with the IP (WHOIS). |
+
+    | Google and Bing to determine the number of subdomains associated with the IP
+    (web scraper). |
+
+    | UnusualChar | Number of chars from [a-zA-Z]. |
+
+    | Class | 0 for non-malicious domains and 1 for malicious domains.
+
+
+    of operation. These domains domains were classified as malicious. Considering
+    a production environment, these domains can be obtained from the requests to DNS
+    servers.
+
+
+    2) Data features: As mentioned, the domain name is in enough information to tell
+    if it is malicious or not. One of the fundamental steps of the work we did, was
+    to parse domain name, domain information associated with it. For the study, we
+    derived from the domain name 13 different features. The list of features and its
+    description is presented in Table I.
+
+
+    it can also contain subdomains that hosts or gets accessed by name. A root domain
+    has top-level domains, each top-level domain has corresponding secondary domains
+    and each organization can manage their own names system, registering subdomains.
+    The responsibility for the secondary domain name and subdomains belongs to each
+    organization, ensuring that access to domain registration systems is not managed
+    by unauthorized parties.
+
+
+    Although malicious actors can exploit vectors, domains that will be used to distribute
+    malware, control a set of infected devices (command and control server) or to
+    pretend to be legitimate to evade users. The new domains may, belong to malicious-organizations,
+    so their careful analysis is essential.
+
+
+    A domain name is basically (set of characters) and, per is not provide useful
+    insights for the purpose of this work, however there is a number of characters
+    when analyzed showed whether a domain name is registered for malicious or purposes.
+    For example, a classifier types to classify a domain name by matching it to similar
+    patterns. Any random domain name is suspicious per. A domain name points to an
+    IP address and on that address, there memory that denotes its identity in the
+    use of. The geolocation of the server with the domain, whether the domain points
+    to an active server or not, the number of subdomains associated with the domain,
+    the number of characters in the domain name or its size are some of the characteristics
+    that may allow to derive information about the domain.
+
+
+    +   1) Data sources: We collected a total of 916538 malicious and benign domain
+    names. Of these, 612976 registered from Alexa Top 1 million websites CSV list
+    [13]. These domains are connected to websites widely accessed and frequently seen
+    as benign domains. The other 303182 domains were gleaned from sources such as
+    Internet (org) [14], [15], [16], however, make available lists of malicious domains
+    and also by means of CGA algorithms that allow us to generate domains by malware
+    that adopt these algorithms in their mode
+
+
+    The features presented in Table 1 are used to create a dataset. In the next data,
+    the data preparation process, some of these features will be better to adapt to
+    ML classification algorithms.
+
+
+    # B. Exploratory Analysis and Data Preparation
+
+
+    The exploratory analysis is an important step to analyzing datasets. Using it
+    allows us to discover patterns, spot anomalies, test hypothesis and check as assumption.
+    The data preparation. Preparation of the data started with the removal of duplicates
+    in the features that contain lists (i.e. arrays of values), IPlist, ASN, Country,
+    City, Age, Subdomains and Organizations. Some were also kept in order to be used
+    by ML algorithms. The resulting dataset, with the transformation criteria is presented
+    in Table II.
+
+
+    ![](img/48aebf7878ff8e4c3a83b1ba5c951e65_2_0.png)'
+  - '[PAGE 3]
+
+
+    # TABLE II
+
+    DATASET STRUCTURE
+
+
+    | Feature | Description |
+
+    | --- | --- |
+
+    | Domain name | Domain name including the TLD. |
+
+    | Entropy | Shannon entropy truncated to two decimal places. |
+
+    | isDomain | Yes (Y) or No (N). |
+
+    | diff_iplList | Number of IPs associated with the domain |
+
+    | n_Age | Number of days since the last change (creation age). |
+
+    | diff_Country | Number of different countries. |
+
+    | mc_Country | Most common country in the list of countries. |
+
+    | diff_City | Number of different cities. |
+
+    | mc_City | Most common city in the list of cities. |
+
+    | TLD | Top-Level Domain extracted from the domain name |
+
+    | diff_ASN | Number of different Autonomous Systems. |
+
+    |mc_ASN | Most common ASN in the list of ASNs. |
+
+    |diff_Organization | Number of different organizations. |
+
+    |mc_Organization | Most common organization in the list of organizations. |
+
+    | SubDomains | Number of subdomain associated with the IPs. |
+
+    | Unusual/Class | Number of different chars [0 for non-class and 1 for class domain]
+    |
+
+
+    With the dataset presented in Table II, we performed an exploratory analysis to
+    adapt the dataset for ML. This analysis consisted of treating missing values,
+    checking the existence of outliers, normalizing variables and converting variables
+    to numeric. The exploratory analysis was made advantage of Pandas [17] and scikit-learn
+    [18] libraries.
+
+
+    The missing values in TLD were replaced by ''None''. The isDomainOnline, mc_Age,
+    mc_Country, mc_City, mc_ASN, mc_Organization are created and have been automatically
+    transformed, using the Label Encoder function in the scikit library. Considering
+    that many machine learning algorithms perform better when input data is scaled
+    to a standard range, the sc-learn StandardScaler was used to standardize the dataset,
+    keeping the distribution of values and the standard deviation is 1. The entropy
+    was standardized.
+
+
+    # C. ML Classification Algorithms
+
+
+    With the dataset properly analyzed and prepared, the next phase is data analysis.
+    For this step, the following ML algorithms were chosen:
+
+
+    +   - Naive Bayes
+
+    - Support Vector Machines (SVM)
+
+    - Decision Tree
+
+    - Random Forest
+
+
+    +   - Logistic Regression
+
+    - Neural Networks (MLP Classifier)
+
+
+    The Naive Bayes classifier is based on a Bayesian approach. A probabilistic classifier
+    estimates conditional probabilities of the dependent variable using training data
+    and uses them for classification of new data.
+
+
+    Support vector SVM is a technique that splits the attribute space with a hyper-plane
+    to maximize the margin between the different of classes or class values.
+
+
+    The Decision Tree algorithm splits the data into one or more homogeneous sets.
+    It partitions the data using the most significant features in input variables.
+    Random Forest is an ensemble method that uses a set of Trees. Each Tree is built
+    from a sample extracted from the training data. When developing individual trees,
+    an attribute is split from that attribute to prevent overfitting. The final model
+    is based on the majority vote of independently developed Trees in the Forest.
+
+
+    The classic application of logistic regression is limited by the sample size
+
+
+    The mix of algorithms evaluate how they deal with situations of overfitting and
+    noise in the data. for the logistic regression and derivatives are prone to overfitting
+    but are more robust to noise, decision trees are less influenced by the presence
+    of them.
+
+
+    In the next section, we present the results obtained with of the algorithms presented
+    throughout this section.
+
+
+    # IV. DATA ANALYSIS AND RESULTS
+
+
+    A good approach for selecting the algorithms is to generate the generalization
+    performance of different models, and training set to select the one with the best
+    performance.
+
+
+    One criterion for selecting the algorithms is going through cross-validation.
+    In K fold-validation, the data is divided into k subsets. The method is repeated
+    k times, with that each one of the k is used as the test/validation set and the
+    k subsets put together to form a training set. The error is averaged over all
+    k trials to get total effectiveness of the method. We will adopt the rule determined
+    by empirical evidence of K = 5.
+
+
+    Before starting the dataset to the algorithms, a selection of the most relevant
+    parameters for the model was carried out. The information process conducted in
+    the application of Mutual informa-'
+  md: '
+
+    # TABLE I
+
+    EXTRACTED FROM THE DOMAIN NAME
+
+
+    | Feature | Description |
+
+    | --- | --- |
+
+    | Domain name Entropy | Shannon entropy - Domains with high entropy that are gibberish
+    combinations of letters and numbers are more likely to be linguistically incoherent
+    content. |
+
+    | DomainOnline | Yes or No if the domain is online on common port (80, 443, 7547,
+    25, 21, 8080, 3306, 110, 543, 906, 465, 389, 123, 445) or not. |
+
+    | IPlist | List of IPs pointing to the domain. |
+
+    | WhoisAge | With the date and last creation of the domain to the reported WHOIS
+    |
+
+    | City | List of cities associated with IPs pointing to the domain (MaxMind) |
+
+    | TLD | Top-Level Domain from the Domain name. |
+
+    | ASN | List of Autonomous Systems associated with the IP (WHOIS). |
+
+    | Subdomains | List of organizations associated with the IP (WHOIS). |
+
+    | Google and Bing | to determine the number of subdomains associated with the
+    IP (web scraper). |
+
+    | UnusualChar | Number of chars from [a-zA-Z]. |
+
+    | Class | 0 for non-malicious domains and 1 for malicious domains. |
+
+
+    of operation. These domains domains were classified as malicious. Considering
+    a production environment, these domains can be obtained from the requests to DNS
+    servers.
+
+
+    2) Data features: As mentioned, the domain name is in enough information to tell
+    if it is malicious or not. One of the fundamental steps of the work we did, was
+    to parse domain name, domain information associated with it. For the study, we
+    derived from the domain name 13 different features. The list of features and its
+    description is presented in Table I.
+
+
+    it can also contain subdomains that hosts or gets accessed by name. A root domain
+    has top-level domains, each top-level domain has corresponding secondary domains
+    and each organization can manage their own names system, registering subdomains.
+    The responsibility for the secondary domain name and subdomains belongs to each
+    organization, ensuring that access to domain registration systems is not managed
+    by unauthorized parties.
+
+
+    Although malicious actors can exploit vectors, domains that will be used to distribute
+    malware, control a set of infected devices (command and control server) or to
+    pretend to be legitimate to evade users. The new domains may, belong to malicious-organizations,
+    so their careful analysis is essential.
+
+
+    A domain name is basically (set of characters) and, per is not provide useful
+    insights for the purpose of this work, however there is a number of characters
+    when analyzed showed whether a domain name is registered for malicious or purposes.
+    For example, a classifier types to classify a domain name by matching it to similar
+    patterns. Any random domain name is suspicious per. A domain name points to an
+    IP address and on that address, there memory that denotes its identity in the
+    use of. The geolocation of the server with the domain, whether the domain points
+    to an active server or not, the number of subdomains associated with the domain,
+    the number of characters in the domain name or its size are some of the characteristics
+    that may allow to derive information about the domain.
+
+
+    - 1) Data sources: We collected a total of 916,538 malicious and benign domain
+    names. Of these, 612976 registered from Alexa Top 1 million websites CSV list
+    [13]. These domains are connected to websites widely accessed and frequently seen
+    as benign domains. The other 303,182 domains were gleaned from sources such as
+    Internet (org) [14], [15], [16], however, make available lists of malicious domains
+    and also by means of CGA algorithms that allow us to generate domains by malware
+    that adopt these algorithms in their mode
+
+
+    The features presented in Table 1 are used to create a dataset. In the next data,
+    the data preparation process, some of these features will be better to adapt to
+    ML classification algorithms.
+
+
+    ## B. Exploratory Analysis and Data Preparation
+
+
+    The exploratory analysis is an important step to analyzing datasets. Using it
+    allows us to discover patterns, spot anomalies, test hypothesis and check as assumption.
+    The data preparation. Preparation of the data started with the removal of duplicates
+    in the features that contain lists (i.e., arrays of values), IPlist, ASN, Country,
+    City, Age, Subdomains and Organizations. Some were also kept in order to be used
+    by ML algorithms. The resulting dataset, with the transformation criteria is presented
+    in Table II.
+
+
+    ![](img/48aebf7878ff8e4c3a83b1)
+
+
+    # TABLE II
+
+    DATASET
+
+
+    | Feature | Description |
+
+    | --- | --- |
+
+    | Domain name | Shannon entropy - Domains with high entropy that are gibberish
+    combinations of letters and numbers are more likely to be linguistically incoherent
+    content. |
+
+    | DomainOnline | Yes or No if the domain is online on common port (80, 443, 7547,
+    25, 21, 8080, 3306, 110, 543, 906, 465, 389, 123, 445) or not. |
+
+    | IPlist | List of IPs pointing to the domain. |
+
+    | WhoisAge | With the date and last creation of the domain to the reported WHOIS
+    |
+
+    | City | List of cities associated with IPs pointing to the domain (MaxMind) |
+
+    | TLD | Top-Level Domain from the Domain name. |
+
+    | ASN | List of Autonomous Systems associated with the IP (WHOIS). |
+
+    | Subdomains | List of organizations associated with the IP (WHOIS). |
+
+    | Google and Bing | to determine the number of subdomains associated with the
+    IP (web scraper). |
+
+    | UnusualChar | Number of chars from [a-zA-Z]. |
+
+    | Class | 0 for non-malicious domains and 1 for malicious domains. |
+
+
+    The features presented in Table 1 are used to create a dataset. In the next data,
+    the data preparation process, some of these features will be better to adapt to
+    ML classification algorithms.
+
+
+    ## C. ML Classification Algorithms
+
+
+    With the dataset properly analyzed, the next phase is data analysis. For this
+    step, the following ML algorithms were chosen:
+
+
+    - Naive Bayes
+
+    - Support Vector Machines (SVM)
+
+    - Decision Tree
+
+    - Random Forest
+
+    - Logistic Regression
+
+    - Neural Networks (MLP)
+
+
+    The Naive Bayes classifier is based on a Bayesian approach. A probabilistic classifier
+    estimates conditional probabilities of the dependent variable using training data
+    and uses them for classification of new data.
+
+
+    Support vector SVM is a technique that splits the attribute space with a hyper-plane
+    to maximize the margin between the different of.
+
+
+    The Decision Tree algorithm splits the data into one or more homogeneous sets.
+    It partitions the data using the most significant features. Random Forest is an
+    ensemble method that uses a set of Trees. Each Tree is built from a sample extracted
+    from the training data. When developing individual trees, an attribute is split
+    from that attribute to prevent overfitting. The final model is based on the majority
+    vote of independently developed Trees in the Forest.
+
+
+    ## IV. DATA ANALYSIS AND RESULTS
+
+
+    A good approach for selecting the algorithms is to generate the generalization
+    performance of different models, and training set to select the one with the best
+    performance.
+
+    '
+  mdcn: '
+
+
+    # 表 I
+
+    从域名中提取
+
+
+    | 特征 | 描述 |
+
+    | --- | --- |
+
+    | 域名熵 | 香农熵 - 高熵域名（字母和数字的无意义组合）域名）更有可能是语言上不连贯的内容。 |
+
+    | DomainOnline | 域名是否在常用端口（80, 443, 7547, 25, 21, 8080, 3306, 110, 543, 906, 465,
+    389, 123, 445）上在线，为是或否。 |
+
+    | IPlist | 指向域名的 IP 列表。 |
+
+    | WhoisAge | 根据报告的 WHOIS 域名的日期和最后创建日期。 |
+
+    | City | 指向域名的 IP 关联城市列表 (MaxMind) |
+
+    | TLD | 来自域名的顶级域名。 |
+
+    | ASN | 与 IP 关联的自治系统列表 (WHOIS)。 |
+
+    | Subdomains | 与 IP 关联的组织列表 (WHOIS)。 |
+
+    | Google and Bing | 用于确定与 IP 关联的子域名数量（网络爬虫）。 |
+
+    | UnusualChar | 来自 [a-zA-Z] 的字符数量。 |
+
+    | Class | 0 表示非恶意域名，1 表示恶意域名。 |
+
+
+    ...的运行。这些域名被归类为恶意。考虑到生产环境，这些域名可以从对 DNS 服务器的请求中获取。
+
+
+    2) 数据特征：如所述，域名包含的信息足以以判断其是否为恶意。我们所工作的一个基本步骤是解析域名以及与其关联的域名信息。对于这项研究，我们从域名中推导了 13
+    种不同的特征。特征列表及其描述如表 I 所示。
+
+
+    它还可能包含通过名称托管或通过名称访问的子域名。根域名拥有顶级域名，每个顶级域名都有相应的二级域名，每个组织都可以管理自己的域名系统，注册子域名。二级域名和子域名的责任属于每个组织，确保了对域名注册系统的访问不会由未经授权的第三方管理。
+
+
+    尽管恶意攻击者可以利用攻击向量，但域名将被用于分发恶意软件、控制一组受感染设备（命令与控制服务器）或伪装成合法域名以规避用户。新域名可能属于恶意组织，因此对其进行仔细分析至关重要。
+
+
+    域名基本上是（一组字符），并且对于本工作的目的来说它没有提供有用的见解，然而在分析时，某些字符显示了域名是否为恶意目的而注册。例如，分类器类型通过匹配相似模式来对域名进行分类。任何随机域名都是可疑的。域名指向一个
+    IP 地址，在该地址上，其内存标识了其在使用中的身份。域名所在服务器的地理位置、域名是否指向活动服务器、与域名关联的子域名数量、域名中的字符数或其大小都是允许推导出有关域名信息的特征。
+
+
+    - 1) 数据源：我们共收集了 916,538 个恶意和良性域名。其中，612,976 个来自 Alexa 前 100 万网站 CSV 列表 [13]。这些域名连接到广泛访问且经常被视为良性域名。其他
+    303,182 个域名从如 Internet (org) [14], [15], [16] 等来源收集，然而，这些提供了恶意域名列表，还通过 CGA 算法允许我们通过这些在模式中采用这些算法的恶意软件生成域名。
+
+
+    表 1 所示的特征用于创建一个数据集。在接下来的数据，数据准备过程中，其中某些特征将更好地适应机器学习（ML）分类算法。
+
+
+    ## B. 探索性分析与数据准备
+
+
+    探索性分析是分析数据集的重要步骤。使用它允许我们发现模式、发现异常、测试假设并检查假设。数据准备。数据的准备工作始于删除包含列表（即值数组）的特征中的重复项，如
+    IPlist, ASN, Country, City, Age, Subdomains 和 Organizations。某些特征还保留了顺序以供 ML 算法使用。带有转换标准的最终数据集如表
+    II 所示。
+
+
+    ![](img/48aebf7878ff8e4c3a83b1)
+
+
+    # 表 II
+
+    数据集
+
+
+    | 特征 | 描述 |
+
+    | --- | --- |
+
+    | 域名 | 香农熵 - 高熵域名（字母和数字的无意义组合）域名）更有可能是语言上不连贯的内容。 |
+
+    | DomainOnline | 域名是否在常用端口（80, 443, 7547, 25, 21, 8080, 3306, 110, 543, 906, 465,
+    389, 123, 445）上在线，为是或否。 |
+
+    | IPlist | 指向域名的 IP 列表。 |
+
+    | WhoisAge | 根据报告的 WHOIS 域名的日期和最后创建日期。 |
+
+    | City | 指向域名的 IP 关联城市列表 (MaxMind) |
+
+    | TLD | 来自域名的顶级域名。 |
+
+    | ASN | 与 IP 关联的自治系统列表 (WHOIS)。 |
+
+    | Subdomains | 与 IP 关联的组织列表 (WHOIS)。 |
+
+    | Google and Bing | 用于确定与 IP 关联的子域名数量（网络爬虫）。 |
+
+    | UnusualChar | 来自 [a-zA-Z] 的字符数量。 |
+
+    | Class | 0 表示非恶意域名，1 表示恶意域名。 |
+
+
+    表1 所示的特征用于创建一个数据集。在接下来的数据，数据准备过程中，其中某些特征将更好地适应机器学习（ML）分类算法。
+
+
+    ## C. ML 分类算法
+
+
+    在对数据集进行适当分析后，下一阶段是数据分析。对于这一步，选择了以下 ML 算法：
+
+
+    - 朴贝叶斯
+
+    - 支持向量机 (SVM)
+
+    - 决策树
+
+    - 随机森林
+
+    - 逻辑回归
+
+    - 神经网络 (MLP)
+
+
+    朴贝叶斯分类器基于贝叶斯方法。概率分类器使用训练数据估计因变量的条件概率，并将其用于新数据的分类。
+
+
+    支持向量 SVM 是一种使用超平面划分属性空间以最大化不同之间间隔的技术。
+
+
+    决策树算法将数据分为一个或多个同质集。它使用最显著的特征进行分区。随机森林是一种树的集合方法。每棵树都是从训练数据中提取的样本构建的。在开发单个树时，对属性进行分割以防止过拟合。最终模型基于森林中独立开发的树的多数投票。
+
+
+    ## IV. 数据分析与结果
+
+
+    选择算法的好方法是生成不同模型的泛化性能，并通过训练集来选择性能最好的。
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 4]
+
+
+    that calculated the statistical difference between two variables for the analysis.
+    The result is the set of most significant variables the top nine parameters are
+    ently, ld, _mASN, _mOrganization, _mWhoSage, isDomainName, _mCountry, _ldList,
+    _l, which are used as predictors for all the ML algorithms.
+
+
+    the computation time was not taken into account, so there can be significant gains
+    if the classification process is optimized. In any case based on the results,
+    the classification process can be used, as is, to support the decisions of network
+    administrators or IT security operations.
+
+
+    The comparison metrics between the ML classification algorithms are: Accuracy,
+    Precision, Recall, and Duration. Accuracy is the proportion of correctly classified
+    examples (Eq. 1). Precision is the proportion of true positives among identified
+    classified (true positive and false positive). Recall is the proportion of true
+    positives among all instances in the data (Eq. 2). The F is a weighted harmonic
+    mean of precision and recall (Eq. 4). Duration is the time in seconds to classify
+    a new domain, considering a properly trained.
+
+
+    Internet domains are indispensable for communications computer systems. Through
+    the domain name, the website is found and, emails are sent and hosted on servers.
+    Domain names are easier to remember and widely used. Unfortunately, domains are
+    used for both good and evil. Malicious actors register domains to use for malicious
+    communications or to trick users into believing they are a legitimate domain.
+    Use of a list of malicious domains is a common practice, however many of these
+    domains are only for short periods of time or their analysis requires a window
+    of opportunity for malicious actors.
+
+
+    ```
+
+    Accuracy = \frac{TP}{TP + FP + FN}
+
+    ```
+
+
+    ```
+
+    Precision = \frac{TP}{TP + FP}
+
+    ```
+
+
+    ```
+
+    Recall = \frac{TP}{TP + FN}
+
+    ```
+
+
+    ```
+
+    $F_i = \frac{2Precision \times Recall}{Precision + Recall}
+
+    ```
+
+
+    # V. CONCLUSIONS
+
+
+    The results were obtained in a system composed of an intel7 core, with 16GB of
+    RAM running macOS 10.15.7, python 3.7 with pandas 1.0.1 and pickle version 0.2.
+    The used dataset contains 121505 malicious domain names and 187518 non-malicious.
+    The data results are presented in Table III.
+
+
+    To maximize the detection of malicious domains it is necessary to create methods
+    that, in the face of a new domain, are able to determine in time whether it is
+    potentially malicious.
+
+
+    In this article we presented an analysis on ML to determine if it is viable from
+    the view of timely detecting malicious domains. An initial dataset was created,
+    labeled, and grown to a size of more than 300,000 domains malicious and non-malicious.
+    The dataset was analyzed using 6 ML algorithms and the results were collected
+    to classify the domains as being malicious or not with accuracy rates that varied
+    between 75% and 92%. The time required for classification was measured, and 277
+    and 5520 seconds were used.
+
+
+    # TABLE III
+
+
+    # ML Classification Results
+
+
+    | Algorithm | Accuracy | Precision | Recall | F1 | Duration(s) |
+
+    |---|---|---|---|---||}{
+
+    | NB | 76% | 71% | 76% | | 27 |
+
+    | SVM | 75% | 74% | 75% | | 520 |
+
+    | DT | 92% | 92% | 92% | | 99 |
+
+    | RF | 86% | 86% | 86% | | 157 |
+
+    | LR | 78% | 76% | 78% | | 101 |
+
+    | MLP | 87% | 85% | 87% | | 315 |
+
+
+    Among the algorithms used, one of the best results is the Decision Tree with 92%
+    of accuracy. It still requires 11 seconds to classify new domains which is a considerable
+    amount of time for real-time detection of malicious domains. The lowest time-to-classify
+    was achieved by the Naive Bayes with time-of-2.7 seconds, however the performance
+    drops to 76%.
+
+
+    Although the results show the work in progress, there is still of room to improve
+    the accuracy and to reduce the classification time. So, considering the results
+    presented in this paper and future perspectives a solution like ours contributes
+    to:
+
+
+    In general, the classification results went what was intended. The detection of
+    malicious domains is an interesting result, or or not with rates above 75% is
+    considering the risk of avoiding a malicious domain versus the risk of blocking
+    a benign domain. It should be noted that
+
+
+    As future work we will develop the features (e.g. with the vast domain the use
+    of SPF, DKIM and DMARC protocols, the existence of a Web site website with the
+    domain). We will also explore methods for data modeling and fine-tune models in
+    terms of parameters and hyperparameters.'
+  - '[PAGE 5]
+
+
+    # REFERENCES
+
+
+    [1] Verisign. The domain name brief., Verisign, Tech. Rep. Volume 17, Issue 3,
+    8, 2020. [Online]. Available: https://www.verisign.com/assets/domain-name-report-Q2020.pdf
+
+
+    [2] researchers. The majority of registered domains are malicious.; scamagene,
+    Tech. Rep. No. 8, 2019. [Online]. Available: https://www.scamagene.com/security-news/malware/vast-registered-domains-are-malicious/
+
+
+    [3] Z. Guo, J. Peng, F. Yu, Y. Chen, and C. Chen, "Bot detection method based
+    on artificial intelligence," Institute of Electronics and Electronics Engineers,
+    2019. [Online]. Available: https://ieexplore.org/document/8923353
+
+
+    [4] H. Ford and P. Kock, "Design, implementation and monitoring of a DNS server
+    protection." Institution of Engineering and Technology, 2016. [Online]. Available:
+    https://ieexplore.org/document/7802040
+
+
+    [5] P. Liu, "Neural representation models learned for passive DNS data." Institution
+    of Engineering and Technology, 2017. [Online]. Available: https://ieexplore.org/document/8056881
+
+
+    [6] J. Hu, T. Zhang, and Z. Zheng, "DNS anti-attack machine learning model for
+    DGA domain name detection." Elsevier B.V., 2020. [Online]. Available: https://ieexplore.org/document/911111
+
+
+    [7] S. Sevarajan, A. Kumar, and M. Mohammad, "Protection and Prototype of DNS
+    Server Firewall with Firewall Service Remote Management Center." Institute of
+    Electronics and Electronics Engineers, 2019. [Online]. Available: https://ieexplore.org/document/8795301
+
+
+    [8] Y. Shi, G. Chen, and J. Li, "Malicious domain name detection based on machine
+    learning." Neural Process., vol. 5, p. 3147–357, 2018. [Online]. Available: https://doi.org/10.1016/j.neupro.2018.06.0067
+
+
+    [9] Y. He, Zhenyi Zhou, S. Kraszer, and Y. Tang, "Mining for malicious domain
+    registrations," in 6th International Conference on Collaborative Conference: Networking,
+    Applications and Workshops (CollabConf2010), 2010, pp. 1–6.
+
+
+    [10] V. S. Rao and P. Poonchamuram, "Detecting malicious domains using deep learning
+    approaches and fuzz." Journal of Intelligence &h Systems, vol. 34, p. 1355–1367,
+    2023.
+
+
+    [11] N. Williams, R. Lopez, and T. Vaughn, "DNS RPZ firewall and current DNS practice."
+    Springer Verlag, 2019. [Online]. Available: https://doi.org/10.1007/978-3-030-47998-6_227
+
+
+    [12] G. Palaniamani, S. Sangeetha, R. Rajendran, S. Goyal, and B. Bindakaran,
+    "Malicious Domain Detection Using Machine Learning on Domain Name Features, Hosted-Based
+    Methods and Web-Features." Elsevier B.V., 2018. [Online]. Available: https://doi.org/10.1016/j.futuresys.2018.07.103
+
+
+    [13] "Alexa 1,000,000 sites," https://3.amazon.com/alexa/static-top-index, accessed:
+    2020-05-10.
+
+
+    [14] "Urlhaus with list for malware distribution," https://github.com/urlhaus/malicious-domain-list,
+    accessed: 2020-05-15.
+
+
+    [15] "Dhishold https://github.com/dhishold/domainblocklist/list, accessed: 2020-05-15
+
+
+    [16] "The collection," https://github.com/phishga/phish-collection, accessed:
+    2020-05-15.
+
+
+    [17] T. pandas development teams, "pandas-dev/Pandas." Feb. 2020. [Online]. Available:
+    https://doi.org/10.5281/zen1280.3509134
+
+
+    [18] F. Pedregosa, G. Varoquaux, A. Grambont, V. Michel, B. Thion, O. Grisel,
+    M. Blondel, P. Prettenhofer, R. Weiss, D. Dubourg, J. Vanderplas, A. Abon, L.
+    Gaudquamin, M. Hippcomb, T. Merquet, and E. Duchnay, "Scikit-learn: Machine learning
+    in Python," Journal of Machine Learning Research, vol. 12, pp. 2825–2830, 2011.'
+  md: '
+
+    that calculated the statistical difference between two variables for the analysis.
+    The result is the set of most significant variables: the top nine parameters are
+    _ently, _ld, _mASN, _mOrganization, _mWhoSage, _isDomainName, _mCountry, _ldList,
+    _l, which are used as predictors for all the ML algorithms.
+
+
+    the computation time was not taken into account, so there can be significant gains
+    if the classification process is optimized. In any case, based on the results,
+    the classification process can be used, as is, to support the decisions of network
+    administrators or IT security operations.
+
+
+    The comparison metrics between the ML classification algorithms are: Accuracy,
+    Precision, Recall, and Duration. Accuracy is the proportion of correctly classified
+    examples (Eq. 1). Precision is the proportion of true positives among identified
+    classified (true positive and false positive). Recall is the proportion of true
+    positives among all instances in the data (Eq. 2). The F1 is a weighted harmonic
+    mean of precision and recall (Eq. 4). Duration is the time in seconds to classify
+    a new domain, considering a properly trained.
+
+
+    Internet domains are indispensable for communications computer systems. Through
+    the domain name, the website is found and, emails are sent and hosted on servers.
+    Domain names are easier to remember and widely used. Unfortunately, domains are
+    used for both good and evil. Malicious actors register domains to use for malicious
+    communications or to trick users into believing they are a legitimate domain.
+    Use of a list of malicious domains is a common practice, however many of these
+    domains are only for short periods of time or their analysis requires a window
+    of opportunity for malicious actors.
+
+
+    ```
+
+    Accuracy = \frac{TP}{TP + FP + FN}
+
+    ```
+
+
+    ```
+
+    Precision = \frac{TP}{TP + FP}
+
+    ```
+
+
+    ```
+
+    Recall = \frac{TP}{TP + FN}
+
+    ```
+
+
+    ```
+
+    $F_i = \frac{2Precision \times Recall}{Precision + Recall}
+
+    ```
+
+
+    ## V. CONCLUSIONS
+
+
+    The results were obtained in a system composed of an intel7 core, with 16GB of
+    RAM running macOS 10.15.7, python 3.7 with pandas 1.0.1 and pickle version 0.2.
+    The used dataset contains 121505 malicious domain names and 187518 non-malicious.
+    The data results are presented in Table III.
+
+
+    To maximize the detection of malicious domains it is necessary to create methods
+    that, in the face of a new domain, are able to determine in time whether it is
+    potentially malicious.
+
+
+    In this article we presented an analysis on ML to determine if it is viable from
+    the view of timely detecting malicious domains. An initial dataset was created,
+    labeled, and grown to a size of more than 300,000 domains malicious and non-malicious.
+    The dataset was analyzed using 6 ML algorithms and the results were collected
+    to classify the domains as being malicious or not with accuracy rates that varied
+    between 75% and 92%. The time required for classification was measured, and 277
+    and 5520 seconds were used.
+
+
+    ## TABLE III: ML Classification Results
+
+
+    | Algorithm | Accuracy | Precision | Recall | F1 | Duration(s) |
+
+    |---|---|---|---|---|---|
+
+    | NB | 76% | 71% | 76% | | 27 |
+
+    | SVM | 75% | 74% | 75% | | 520 |
+
+    | DT | 92% | 92% | 92% | | 99 |
+
+    | RF | 86% | 86% | 86% | | 157 |
+
+    | LR | 78% | 76% | 78% | | 101 |
+
+    | MLP | 87% | 85% | 87% | | 315 |
+
+
+    Among the algorithms used, one of the best results is the Decision Tree with 92%
+    of accuracy. It still requires 11 seconds to classify new domains which is a considerable
+    amount of time for real-time detection of malicious domains. The lowest time-to-classify
+    was achieved by the Naive Bayes with time-of-2.7 seconds, however the performance
+    drops to 76%.
+
+
+    Although the results show the work in progress, there is still of room to improve
+    the accuracy and to reduce the classification time. So, considering the results
+    presented in this paper and future perspectives a solution like ours contributes
+    to:
+
+
+    In general, the classification results went what was intended. The detection of
+    malicious domains is an interesting result, or or not with rates above 75% is
+    considering the risk of avoiding a malicious domain versus the risk of blocking
+    a benign domain. It should be noted that
+
+
+    As future work we will develop the features (e.g. with the vast domain the use
+    of SPF, DKIM and DMARC protocols, the existence of a Web site with the domain).
+    We will also explore methods for data modeling and fine-tune models in terms of
+    parameters and hyperparameters.
+
+
+    ## REFERENCES
+
+
+    [1] Verisign. The domain name brief., Verisign, Tech. Rep. Volume 17, Issue 3,
+    8, 2020. [Online]. Available: https://www.verisign.com/assets/domain-name-report-Q2020.pdf
+
+
+    [2] researchers. The majority of registered domains are malicious.; scamagene,
+    Tech. Rep. No. 8, 2019. [Online]. Available: https://www.scamagene.com/security-news/malware/vast-registered-domains-are-malicious/
+
+
+    [3] Z. Guo, J. Peng, F. Yu, Y. Chen, and C. Chen, "Bot detection method based
+    on artificial intelligence," Institute of Electronics and Electronics Engineers,
+    2019. [Online]. Available: https://ieexplore.org/document/8923353
+
+
+    [4] H. Ford and P. Kock, "Design, implementation and monitoring of a DNS server
+    protection." Institution of Engineering and Technology, 2016. [Online]. Available:
+    https://ieexplore.org/document/7802040
+
+
+    [5] P. Liu, "Neural representation models learned for passive DNS data." Institution
+    of Engineering and Technology, 2017. [Online]. Available: https://ieexplore.org/document/8056881
+
+
+    [6] J. Hu, T. Zhang, and Z. Zheng, "DNS anti-attack machine learning model for
+    DGA domain name detection." Elsevier B.V., 2020. [Online]. Available: https://ieexplore.org/document/911111
+
+
+    [7] S. Sevarajan, A. Kumar, and M. Mohammad, "Protection and Prototype of DNS
+    Server Firewall with Firewall Service Remote Management Center." Institute of
+    Electronics and Electronics Engineers, 2019. [Online]. Available: https://ieexplore.org/document/87953
+
+
+    [8] Y. Shi, G. Chen, and J. Li, "Malicious domain using deep learning." Neural
+    Process., vol. 5, p. 3147–357, 2018. [Online]. Available: https://doi.org/10.1016/j.futuresys.2018.07
+
+
+    [9] Y. He, Zhen Zhou, S. Kraszer, and Y. Tang, "Mining for malicious domains,"
+    6th International Conference on Networking, Applications and Workshops (CollabConf),2010,
+    pp. 1–6.
+
+
+    [10] V. S. Rao, and P. Pooncham, "Detecting malicious domain-list." Journal of
+    Intelligence & Systems, vol. 34, 2023.
+
+
+    [11] N. Williams, R. Lopez, and T. Vaughn, "DNS RPZ firewall and current practice."
+    Springer Verlag, 2019. [Online]. Available: https://doi.org/10.1007/978-3-030-4798-6_227
+
+
+    [12] G. Palani, S. Setha, R. Rajendran, S. Goyal, and B. Bindakaran, "Malicious
+    Domain Detection Using Machine Learning on Domain Name Features, Hosted-Based
+    Methods and Web-Features." Elsevier B.V., 2018. [Online]. Available: https://doi.org/10.1016/j.future.2018.103
+
+
+    [13] "Alexa 1,000,000 sites," https://3.amazon.com/alexa/static-index, accessed:
+    2020-05-10.
+
+
+    [14] "Urlhaus with list for malware distribution," https://github.com/urlhaus/malicious-domain-list,
+    accessed: 2020-05-15.
+
+
+    [15] "Dhishold https://github.com/dhishold/domainblocklist/list, accessed: 2020-05-15
+
+
+    [16] "The collection," https://github.com/phishga/phish-collection, accessed:
+    2020-05-15.
+
+
+    [17] T. pandas development teams, "pandas-dev/Pandas." Feb. 2020. [Online]. Available:
+    https://doi.org/10.5281/zen1280.3509134
+
+
+    [18] F. Pedregosa, G. Varoquaux, A. Grambont, V. Michel, B. Thion, O. Grisel,
+    M. Blondel, P. Prettenhofer, R. Weiss, D. Dubourg, J. Vanderplas, A. Abon, L.
+    Gaudquamin, M. Hippcomb, T. Merquet, and E. Duchnay, "Scikit-learn: Machine learning
+    in Python," Journal of Machine Learning Research, vol. 12, pp. 2825–2830, 2011.
+
+    '
+  mdcn: "\n\n该分析计算了两个变量之间的统计差异。结果是具有最显著性的变量集合：前九个参数为 _ently, _ld, _mASN, _mOrganization,\
+    \ _mWhoSage, _isDomainName, _mCountry, _ldList, _l，它们被用作所有机器学习算法的预测器。\n\n未考虑计算时间，因此如果对分类过程进行优化，可能会获得显著的提升。无论如何，基于结果，可以直接使用该分类过程来支持网络管理员或\
+    \ IT 安全运营人员的决策。\n\n机器学习分类算法之间的比较指标为：准确率（Accuracy）、精确率（Precision）、召回率（Recall）和持续时间（Duration）。准确率是正确分类示例的比例（公式\
+    \ 1）。精确率是已识别分类（真阳性和假阳性）中真阳性的比例。召回率是数据中所有实例中真阳性的比例（公式 2）。F1 数数是精确率和召回率的加权调和平均数（公式\
+    \ 4）。持续时间是在考虑到适当训练的情况下，分类新域名所需的时间（单位：秒）。\n\n域名对于通信计算机系统是不可或缺的。通过域名可以找到网站，并在服务器上发送和托管电子邮件。域名更容易记忆且被广泛使用。遗憾的是，域名既被用于善意目的，也被用于恶意目的。恶意攻击者注册域名用于恶意通信，或欺骗用户相信它们是合法的域名。使用恶意域名列表是一种常见做法，但许多此类域名仅存在很短，或者它们的分析需要恶意攻击者利用一个窗口期。\n\
+    \n```\nAccuracy = \\frac{TP}{TP + FP + FN}\n```\n\n```\nPrecision = \\frac{TP}{TP\
+    \ + FP}\n```\n\n```\nRecall = \\frac{TP}{TP + FN}\n```\n\n```\n$F_i = \\frac{2Precision\
+    \ \\times Recall}{Precision + Recall}\n```\n\n## V. 结论\n\n结果是在一个由 intel7 核心组成、配备\
+    \ 16GB 内存并运行 macOS 10.15.7 的系统上获得的，该系统环境为 macOS 10.15.7，软件环境为 python 3.7 配合 pandas\
+    \ 1.0.1 和 pickle 版本 0.2。使用的数据集包含 121505 个恶意域名和 187518 个非恶意域名。数据结果如表 III 所示。\n\n\
+    为了最大化恶意域名的检测，有必要创建方法在面对新域名时能够及时判断其是否可能恶意。\n\n在本文中我们展示了关于机器学习的分析，以确定从及时检测恶意域名的角度来看其可行性。创建了一个初始数据集，并扩展到超过\
+    \ 300,000 个恶意和非恶意域名。使用 6 种机器学习算法对数据集进行分析，并收集结果以将域名分类为恶意或非恶意，准确率在 75% 到 92% 之间。测量了分类所需的时间，分别为\
+    \ 277 秒和 5520 秒。\n\n## 表 III：机器学习分类结果\n\n| 算法 | 准确率 (Accuracy) | 精确率 (Precision)\
+    \ | 召回率 (Recall) | F1 | 持续时间(秒) |\n|---|---|---|---|---|---|\n| NB | 76% | 71%\
+    \ | 76% | | 27 |\n| SVM | 75% | 74% | 75% | | 520 |\n| DT | 92% | 92% | 92% |\
+    \ | 99 |\n| RF | 86% | 86% | 86% | | 157 |\n| LR | 78% | 76% | 78% | | 101 |\n\
+    | MLP | 87% | 85% | 87% | | 315 |\n\n在所使用的算法中，最好的结果之一是决策树，准确率达到 92%。它分类新域名仍需 11\
+    \ 秒，这对于恶意域名的实时检测来说是一个相当长的时间。最短的分类时间由朴素贝叶斯实现，耗时为 2.7 秒，但性能下降到了 76%。\n\n尽管结果显示了工作仍在进行中，但在提高准确率和缩短分类时间方面仍有空间。因此，考虑到本文提出的结果和未来展望，我们的解决方案有助于：\n\
+    \n总而言之，分类结果符合预期。恶意域名的检测是一个有趣的结果，在准确率高于 75% 的情况下，考虑到避免恶意域名的风险与阻止良性域名的风险之间的权衡，这是有意义的。应当注意的是\n\
+    \n作为未来的工作，我们将开发更多特征（例如，针对海量域名，使用 SPF、DKIM 和 DMARC 协议，以及该域名是否存在网站）。我们还将探索数据建模方法，并在参数和超参数方面微调模型。\n\
+    \n## 参考文献\n\n[1] Verisign. The domain name brief., Verisign, Tech. Rep. Volume\
+    \ 17, Issue 3, 8, 2020. [Online]. Available: https://www.verisign.com/assets/domain-name-report-Q2020.pdf\n\
+    \n[2] researchers. The majority of registered domains are malicious.; scamagene,\
+    \ Tech. Rep. No. 8, 2019. [Online]. Available: https://www.scamagene.com/security-news/malware/vast-registered-domains-are-malicious/\n\
+    \n[3] Z. Guo, J. Peng, F. Yu, Y. Chen, and C. Chen, \"Bot detection method based\
+    \ on artificial intelligence,\" Institute of Electronics and...\n\n... (注：参考文献部分通常保留英文原样，仅根据格式要求处理，此处遵循指令保持其格式)\
+    \ \n\n"
+  merge: 0
