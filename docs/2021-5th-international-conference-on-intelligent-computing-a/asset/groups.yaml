@@ -1,0 +1,1513 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # A Study on Dengue Fever in Bangladesh: Predicting the Probability of
+
+    Dengue Infection with External Factor Using Machine Learning
+
+
+    Md. Sanzidur Islam
+
+    Dept. of CSE
+
+    Daffodil International University
+
+    Dhaka, Bangladesh
+
+    sanzidul.cse@diu.edu.bd
+
+
+    Shakur Akhtar Khushu
+
+    Dept. of CSE
+
+    Daffodil International University
+
+    Dhaka, Bangladesh
+
+    shaharun.cse@diu.edu.bd
+
+
+    Akam Shahar Azad Raby
+
+    Dept. of CSE
+
+    Daffodil International University
+
+    Dhaka, Bangladesh
+
+    shaharans.cse@diu.edu.bd
+
+
+    Dr. Touhid Bhuiyan
+
+    Daffodil International University
+
+    headase@diaffodility.edu.bd
+
+
+    **Abstract—** The 2019 Dengue Outbreak was a major peak situation in Bangladesh,
+    particularly. About 179 people and 101,354 confirmed cases were found all over
+    the country. The developing countries like Bangladesh have some limitations in
+    the medical and people resources to control dengue. Despite this, this work has
+    research to predict the chances to get infected with dengue from some external
+    factors such as fever, pain, photophobia, headache etc. This article denies fever
+    before taking the test. So, the patient may get some initial symptoms by varying
+    their and the dependency on the test for acquiring the primary treatment. Different
+    machine learning models are used to predict the probability and an accuracy near
+    100% has been achieved.
+
+
+    asa region, but with determination thought of earlier precaution to reduce the
+    number of cases [11]. Economic deficit has cost for any country economically family
+    by money issues, treatment costly, and so on suffer unless they maintain health
+    in early stages [12-13]. Due to this unstable state in Bangladesh should take
+    precautions about dengue fever before the test. Effective control is possible
+    by generating a forecast surveillance system on behalf of some external factors.
+    Dengue virus includes the occurrence of some non-specific symptoms in a very early
+    stage and commonly starts with a high fever. No vaccine has been saturated against
+    dengue for this immense burden of dengue. By dengue initially with the victim
+    of illustration factors such as high fever
+
+
+    **Keywords** Machine Learning model, Dengue, disease, anatomical symptoms.
+
+
+    # I. INTRODUCTION
+
+
+    Dengue fever (DF) and dengue hemorrhagic fever (DHF) are risk-transmitted mosquito-borne
+    disease, acute fever with severe symptoms [1]. Dengue fever presents severe when
+    it is transmitted by the bite of any mosquitoes [2]. This public epidemic spread
+    across the tropical and subtropical regions. In the nineteenth century of the
+    1850s, the Philippines has discovered and renow as a dengue fever. For the long
+    years, dengue has been a major health problem in the South Asian region, which
+    is caused by dog related forms [4]. Dengue affects 128 countries, which are half
+    of the population, where mostly people face once [3], in a single year millions
+    of people suffer with dengue fever. In 1964 Bangladesh was first identified as
+    ''Daca fever'' later discovery perhaps as a possible scale of situation in Dhaka.
+    The first official report showed the high death in 2000 around 6000 cases and
+    below 100 deaths [6-7] after in 2010 to 2011 this disease refused another form
+    [8-9] many people have been suffering from dengue. Current situation in 2020 DF
+    also hits as many as 30 million people in
+
+
+    To reduce the burden of dengue, it has been focused on the available 400 patient
+    data for cases of dengue in Dhaka city center. Around 70 people with positive
+    symptoms and about 30% of dengue fever reports. Including 10 to 12 early stage
+    patients with fever test positive or negative to their external behavior. The
+    proposed system methods mention public health in Bangladesh because in recent
+    years our approaches are quite different from the others. The prediction easily
+    predicts the hospitalization situation from severe and non severe dengue. In the
+    rural area it makes more convenient in early diagnosis.
+
+
+    Machine learning reflection has a wide response in every field. Among them the
+    biomedical field also covered with ML analysis. Fever prediction some approach
+    by the research field shown as an ML prediction based on some attractive behavioural
+    responses. Several countries during the situation they made analysis on ML in
+    dengue cases in recent years. Before starting the processing'
+  - '[PAGE 1]
+
+
+    # Proceedings of the Twelfth Conference on Intelligent Computing and Control Systems
+    (ICICCS 2021)
+
+    IEEE Xplore Library No: CP2117KA-827; ISBN: 978-1-2531-1327-2
+
+
+    there must be needed the understanding of the scope
+
+    flexible as well as rethink the research with a new
+
+    perspective in Bangladesh.
+
+
+    which is best. After ARIMA time series model
+
+    flexible but unlike a successful sequence of the series
+
+    reason behind is MAPE scores of 9.6. Knorr-Held(K-H)
+
+    model averaging was with a sensitive analysis
+
+    where MAPE value is 17.21. The section showed a
+
+    distinguishable difference on a weekly basis.
+
+
+    Hani M Abbas et al. [14] identified the analysis over
+
+    dengue prediction on confirmed cases through ANN model\estimation. Malaysia has
+    been a huge size of
+
+    affected by the disease since 2007. When dengue cases with need
+
+    from Malaysia towards high correlation coefficients of 0.96.
+
+    Neural networks require input sequence training and a
+
+    data detected by 70% and 30%. Index identified by
+
+    the 4 features like temperature, humidity etc produce
+
+    correlation and RMSE error.
+
+
+    Jonas Perez [15] explained a bimodal research dengue
+
+    which required machine learning classification.
+
+    Over the 100 countries were affected by the dengue
+
+    Thailand has been suffered by the dengue through this
+
+    consistency as two bipolar spikes identified in the
+
+    infected 72 hours. Machine classification is
+
+    Logistic Regression with 5 features of dengue
+
+    referred to as platelets, white blood cells and and
+
+    1, 230 patients are conducted to analyze suspected
+
+    dengue cases in 72 hours. The test results were
+
+    lassified accurately for 100% of febrile cases.
+
+
+    Nazim Karim et al. [16] introduced the circumstances of
+
+    Bangladesh in Dhaka city range 2000 to 2008 8 years
+
+    long data production preprocessing machine learning
+
+    alg is linear regression. Dengue disease like
+
+    features by means of validation climate change
+
+    have a great effect in Dhaka cases caused by.
+
+
+    Benjamin M. Alexander et al. [17] exhibited linear
+
+    and two classification of Logistic regression and SVM
+
+    ofor exceeded dengue cases in indonesia Bangkok and
+
+    single region. Dengue dataset outcomes to the
+
+    initial model for forecasting purposes. The
+
+    Dengue incidents by the binary classification
+
+    almost took 5 years of infection which generated 95%
+
+    level of accuracy. Due to classification LR and SVM
+
+    compared between value 2, Nangeetha et al. [18] revealed the
+
+    gner of SVM machine learning algorithm with
+
+    an efficient on three which is rainfall,
+
+    temperature and density in Thailand four
+
+    regions. Variable analysis showed that the
+
+    dengue scenario showed whether it is fever or.
+
+    Added a turning point to 77% accuracy of the SVM
+
+    machine learning algorithm on behavior of
+
+    coefficients and RMSE scores. During dengue
+
+    nprediction on land in 4 regions where temperature and density were
+
+    detetached with dengue rather than rainfall may cause dengue
+
+    for further checking we used 10 fold validation.
+
+
+    Ahmed et al. [19] performed DF and
+
+    HHF situation with forecasting with the analysis of
+
+    ARIMA model and K-H model. Dengue fever infected
+
+    daset was 2001 to 2006 which mean 6 years long
+
+    of dataset claimed on 2007 to june of 2008
+
+    decrease positive cases. Though illustration of the K-H
+
+    model and ARIMA expose a dilemma between
+
+
+    # III. PRO METHODOLOGY
+
+
+    The section of methodology using a combination of
+
+    statistical and analytical analysis of the
+
+    model specification. Therefore, in this section illustrated by
+
+    t working approach from start data to process
+
+    machine learning model also briefing with the
+
+    ient ML classifier is the proposed “Dengue positive\sand prediction” have necessary
+    steps are
+
+    mentioned below.
+
+
+    # A. Goal of Research
+
+
+    Prediction of research topics is better understanding
+
+    development, future turning and innovations.
+
+    A gist of research transformation shows the data
+
+    preprocessing the attribute response that are not
+
+    at the end of research deliberate intention with its
+
+    herents belonging to external affect after
+
+    weprocessing our DF cases occurrences of prediction
+
+    by several ML learning classifications.
+
+
+    # B. Data Collection
+
+
+    Due to the research of Dengue future probability
+
+    relevant data of dengue disease. Hence,
+
+    prediction quite is catching the external
+
+    symptoms. There is the reason why there has
+
+    to make a dataset which both types of patients
+
+    include which positive in dengue like to keep. So, we
+
+    prepared a dataset of 40 cases where 70% data consist of
+
+    the positive cases on the other 30% data of
+
+    negatives cases in Bangladesh. According to the
+
+    analysis of both positive and negative cases
+
+    for stand with a good accuracy which cases
+
+    the symptoms or not classify for them for dengue
+
+    prediction. Added label the behaviors
+
+    for attributes, which are clearly applied to
+
+    dengue-like, which enrich further study and
+
+    similar. The cases chosen by the different age
+
+    from child to older. The collected converts
+
+    into by the label of encoding where it is
+
+    designates the label with positive as true and
+
+    alalse respectively [21].
+
+
+    978-1-2531-1327-2/21.53/000 2021
+
+
+    1718
+
+
+    Authorized license used to: San Francisco State. Download on June 30 2021 at 18:46:35
+    UTC from IEEE Xplore. Restrictions apply.'
+  md: '
+
+    # A Study on Dengue Fever in Bangladesh: Predicting the Probability of Dengue
+    Infection with External Factor Using Machine Learning
+
+
+    Md. Sanzidur Islam
+
+    Dept. of CSE
+
+    Daffodil International University
+
+    Dhaka, Bangladesh
+
+    sanzidul.cse@diu.edu.bd
+
+
+    Shakur Akhtar Khushu
+
+    Dept. of CSE
+
+    Daffodil International University
+
+    Dhaka, Bangladesh
+
+    shaharun.cse@diu.edu.bd
+
+
+    Akam Shahar Azad Raby
+
+    Dept. of CSE
+
+    Daffodil International University
+
+    Dhaka, Bangladesh
+
+    shaharans.cse@diu.edu.bd
+
+
+    Dr. Touhid Bhuiyan
+
+    Daffodil International University
+
+    headase@diaffodility.edu.bd
+
+
+    **Abstract—** The 2019 Dengue Outbreak was a major peak situation in Bangladesh,
+    particularly. About 179 people and 101,354 confirmed cases were found all over
+    the country. The developing countries like Bangladesh have some limitations in
+    the medical and people resources to control dengue. Despite this, this work has
+    research to predict the chances to get infected with dengue from some external
+    factors such as fever, pain, photophobia, headache etc. This article denies fever
+    before taking the test. So, the patient may get some initial symptoms by varying
+    their and the dependency on the test for acquiring the primary treatment. Different
+    machine learning models are used to predict the probability and an accuracy near
+    100% has been achieved.
+
+
+    asa region, but with determination thought of earlier precaution to reduce the
+    number of cases [11]. Economic deficit has cost for any country economically family
+    by money issues, treatment costly, and so on suffer unless they maintain health
+    in early stages [12-13]. Due to this unstable state in Bangladesh should take
+    precautions about dengue fever before the test. Effective control is possible
+    by generating a forecast surveillance system on behalf of some external factors.
+    Dengue virus includes the occurrence of some non-specific symptoms in a very early
+    stage and commonly starts with a high fever. No vaccine has been saturated against
+    dengue for this immense burden of dengue initially with high fever.
+
+
+    **Keywords** Machine Learning model, Dengue disease, anatomical symptoms.
+
+
+    ## I. INTRODUCTION
+
+
+    Dengue fever (DF) and dengue hemorrhagic fever (DHF) are risk-transmitted mosquito-borne
+    disease, acute fever with severe symptoms [1]. Dengue fever presents severe when
+    it is transmitted by the bite of any mosquitoes [2]. This public epidemic spread
+    across tropical and subtropical regions. In the nineteenth century of 1850s, the
+    Philippines has discovered and known as dengue fever. For long years, dengue has
+    been a major health problem in the South Asian region, which is caused by related
+    forms [4]. Dengue affects 128 countries, which are half of the population, where
+    mostly face once [3]. In 1964 Bangladesh was first identified as ''Daca fever''
+    later perhaps as possible scale of situation in Dhaka. The first official report
+    showed high death in 2000 around 600 cases and below 100 deaths [6-7] after 2010
+    to 2011 this disease refused [8]. Current situation in 2020 DF also hits as many
+    as 30 million people.
+
+
+    To reduce the burden of dengue, it has been focused on available 400 cases of
+    dengue in Dhaka center. Around 70 people with positive and about 30% of dengue
+    reports. Including 10 to 12 stage patients with fever positive or negative to
+    their behavior. The proposed system mention public health in Bangladesh because
+    in recent years our approaches are quite different from others. The prediction
+    easily predicts hospitalization situation from severe and non-severe. In the rural
+    area it makes more convenient diagnosis. Machine learning reflection has a wide
+    response in every field. Among them the biomedical field also covered with ML
+    analysis. Before starting the processing.
+
+
+    ## III. METHODOLOGY
+
+
+    The section of methodology using a combination of statistical and analytical analysis
+    of the model specification. Therefore, in this section illustrated by the working
+    approach from start data to process machine learning model also briefing with
+    theient ML classifier is the proposed “Dengue positive and prediction” have necessary
+    steps are mentioned below.
+
+
+    ### A. Goal of Research
+
+
+    Prediction of research topics is better understanding development, future turning
+    and innovations. A gist of research transformation shows the data preprocessing
+    the attribute response that are not at the end of research deliberate intention
+    with its adherents belonging to external affect after we processing our DF cases
+    occurrences of prediction by several ML learning classifications.
+
+
+    ### B. Data Collection
+
+
+    Due to the research of Dengue future probability relevant data of dengue disease.
+    Hence, prediction quite is catching the external symptoms. There is the reason
+    why there has to make a dataset which both types of patients include which positive
+    in dengue like to keep. So, we prepared a dataset of 40 cases where 70% data consist
+    of the positive cases on the other 30% data of negatives cases in Bangladesh.
+    According to the analysis of both positive and negative cases for stand with a
+    good accuracy which cases the symptoms or not classify for them for dengue prediction.
+
+
+    Nazim Karim et al. [16] introduced the circumstances of Bangladesh in Dhaka city
+    range 2000 to 2008 8 years long data production machine learning alg is linear
+    regression. Dengue disease like features by of validation climate change have
+    a great effect in cases caused by.
+
+
+    Benjamin M. Alexander et al. [17] exhibited linear and two classification of Logistic
+    regression and SVM of exceeded dengue cases in Bangkok and single region. Dengue
+    dataset outcomes to the initial model for forecasting purposes. The Dengue incidents
+    by binary classification almost took 5 years of infection which generated 95%
+    level of accuracy.
+
+
+    Jonas Perez [15] explained a bimodal research dengue which required machine learning
+    classification. Over 100 countries were affected by the dengue through this consistency
+    as bipolar spikes identified in infected 72 hours. .
+
+
+    Ahmed et al. [19] performed DF and HHF situation with forecasting with the analysis
+    of ARIMA model and K-H model. Dengue fever infected dataset was 2001 to 2006 which
+    mean 6 years long of dataset claimed on 2007 to june of 2008 decrease positive
+    cases. Though illustration of the K-H model and ARIMA expose a dilemma between
+    ARIMA time series model but unlike a successful sequence reason behind is MAPE
+    scores of 9.6. K-Held(K-H) model averaging with sensitive analysis where MAPE
+    value is 17.21. The section showed distinguishable difference on weekly basis.
+
+
+    Hani M Abbas et al. [14] identified the analysis over dengue prediction on confirmed
+    cases through ANN estimation. Malaysia has been huge size affected by the disease
+    since 2007. When dengue cases need from Malaysia towards high coefficients of
+    0.96. Neural networks require input sequence and data detected by 70% and 30%.
+    Index by 4 features like temperature, humidity etc produce correlation and RMSE
+    error.
+
+
+    Nangeetha et al. [18] revealed the genre of SVM machine learning algorithm with
+    efficient on three is rainfall, temperature and density in Thailand four regions.
+    Variable analysis showed that the dengue scenario showed whether it is fever or.
+    Added a turning point to 77% accuracy of the SVM machine learning algorithm on
+    behavior of coefficients and RMSE scores. During prediction on land in 4 regions
+    where temperature and density were detached with dengue rather than rainfall may
+    cause dengue for further checking we used 10 fold validation.
+
+
+    Machine classification is Logistic Regression with 5 features of dengue. Machine
+    classification is Logistic Regression with 5 features of dengue referred to as
+    platelets, white blood cells and 1,230 patients are conducted to analyze suspected
+    dengue cases in 72 hours. The test results were classified accurately for 100%
+    of febrile cases. The collected converts into by the label of encoding where it
+    designates the label with positive as true and alalse respectively [21]. The cases
+    chosen by the different age from child to older. Added label the behaviors for
+    attributes, which are clearly applied to dengue-like, which enrich further study
+    and similar.
+
+    '
+  mdcn: "\n\n# 孟加拉国登热研究：利用机器学习根据外部因素预测登热感染概率\n\nMd. Sanzidur Islam\nCSE 部门\nDaffodil\
+    \ International University\n孟加拉达卡\nsanzidul.cse@diu.edu.bd\n\nShakur Akhtar Khushu\n\
+    CSE 部门\nDaffodil International University\n孟加拉达卡\nshaharun.cse@diu.edu.bd\n\n\
+    Akam Shahar Azad Raby\nCSE 部门\nDaffodil International University\n孟加拉达卡\nshaharans.cse@diu.edu.bd\n\
+    \nDr. Touhid Bhuiyan\nDaffodil International University \nheadase@diaffodility.edu.bd\n\
+    \n**摘要—** 2019 年的登热爆发是孟加拉的一个重大高峰，特别是全国范围内发现了约 179 人和 101,354 例确诊病例。孟加拉等发展中国在控制登热的医疗和人员资源方面存在局局限。尽管如此，本工作研究了根据发热、疼痛、畏光、头痛等某些外部因素预测感染登热的机会。本文在接受检测前排除发热。因此，患者可能会因其变化出现一些初期症状，并对获取初步治疗的检测产生依赖。使用了不同的机器学习模型来预测概率，并实现了接近\
+    \ 100% 的准确率。\n\n亚洲地区，但通过早期的预防性措施来减少病例数量 [11]。经济赤字会导致任何国家在资金问题、治疗成本高昂等问题上遭受家庭层面的经济损失，除非他们在早期阶段保持健康\
+    \ [12-13]。由于孟加拉国这种不稳定的状态，在检测前应该对登热采取措施。通过代表某些外部因素的预测监测系统可以实现有效控制。登热病毒包括在极早期出现某些非特异性症状，并通常从高热开始。由于登热最初的高热造成了巨大负担，目前还没有成熟的登热疫苗。\n\
+    \n**关键词** 机器学习模型、登热病、解剖症状。\n\n## I. 引言\n\n登热（DF）和登革出血性发热（DHF）是高风险的蚊传播疾病，伴有严重症状的急性发热\
+    \ [1]。当登热通过蚊子叮咬传播时，会表现出严重症状 [2]。这种公共流行病遍布热带和亚热带地区。19 世纪 1850 年代，菲律宾发现并已知登热。多年来，登热一直是南亚地区的主要健康问题，由相关形式引起\
+    \ [4]。登热影响了 128 个国家，占一半的人口，大多数人都会经历一次 [3]。1964 年，孟加拉国首次被识别为“达卡热”，后来可能是由于达卡的情况可能规模。首份官方报告显示\
+    \ 2000 年死亡人数较高，约 600 例病例和低于 100 人死亡 [6-7]，2010 年至 2011 年该疾病反复发 [8]。2020 年的现状显示登热也影响了多达\
+    \ 300 万人。\n\n为了减轻登热负担，重点关注了达卡中心现有 400 例登热病例。约 70 人呈阳性，约 30% 的登热报告。包括根据其行为处于发热阳性或阴性的\
+    \ 10 至 12 级患者。所提系统提到了孟加拉国的公共卫生，因为近年来我们的方法与人相当不同。该预测可以轻松预测严重和非严重的住院情况。在农村地区，它使得诊断更加方便。机器学习的反思在每个领域都有广泛的反响。其中生物医学领域也涵盖了\
+    \ ML 分析。在开始处理之前。\n\n## III. 方法论\n\n方法论部分使用了模型规格的统计和分析分析相结合。因此，在本节中说明了从数据开始到处理机器学习模型的工作方法，并简要介绍了适当的\
+    \ ML 分类器，所提出的“登热阳性及预测”具有必要步骤如下。\n\n### A. 研究目标\n\n预测研究主题有助于更好地理解发展、未来趋势和创新。研究转型的摘要显示了数据处理的属性响应并非研究刻意意图的终点，而是在处理我们的登热病例发生情况后，通过多种\
+    \ ML 学习分类进行预测。\n\n### B. 数据收集\n\n由于对登热未来概率的研究需要登热病的相关数据。因此，预测相当能捕捉外部症状。这就是为什么必须创建一个包含两类患者（如登热阳性）的数据集。因此，我们准备了一个包含\
+    \ 40 个病例的数据集，其中 70% 的数据由阳性病例组成，其他 30% 的数据为孟加国的阴性病例。根据对阳性和阴性病例的分析以获得良好的准确率，确定哪些病例的症状未被分类用于登热预测。\n\
+    \nNazim Karim 等人 [16] 介绍了孟加拉国达卡市 2000 年至 2008 年的8 年数据生产，机器学习算法是线性回归。登热病的特征通过气候变化的验证对引起病例的情况有很大影响。\n\
+    \nBenjamin M. Alexander 等人 [17] 展示了曼谷和单一地区超出登热病例的逻辑回归和 SVM 线性及二分类。登热数据集的结果用于预测目的的初始模型。通过二分类进行登热事件几乎花费了\
+    \ 5 年的感染，生成了 95% 级别的准确率。\n\nJonas Perez [15] 解释了双峰登热研究，这需要机器学习分类。超过 100 个国家受到登热的影响，通过这种一致性，在感染后\
+    \ 72 小时内识别出双极峰值。\n\nAhmed 等人 [19] 通过 ARIMA 模型和 K-H 模型分析对登热和 DHF 情况进行了预测。登热感染数据集数据集为\
+    \ 2001 年至 2006 年，这意味着 6 年的数据集，声称 2007 年至 2008 年 6 月阳性病例减少。尽管 K-H 模型和 ARIMA 的说明暴露了\
+    \ ARIMA 时间序列模型的困境，但与成功的序列不同，其原因是 MAPE 分数为 9.6。K-Held(K-H) 模型结合敏感性分析的 MAPE 值为 17.21。该部分显示了按周的明显差异。\n\
+    \nHani M Abbas 等人 [14] 通过 ANN 估计识别了确诊病例的登热预测分析。马来西亚自 2007 年受到该疾病的巨大影响。马来西亚登热病例需要高系数\
+    \ 0.96。神经网络需要输入序列，数据检测为 70% 和 30%。4 个特征如温度、湿度等指数产生相关性和 RMSE 误差。\n\nNangeetha 等人\
+    \ [18] 揭示了 SVM 机器学习算法在泰国四个地区降水、温度和密度方面的有效性。变量分析显示登热情况显示是否是发热或。增加了 SVM 机器学习算法在系数和\
+    \ RMSE 分数上的 77% 准确率转折点。在四个地区预测期间，温度和密度与登热分离，而非降水可能引起登热，为了进一步检查，我们使用了 10 折验证。\n\
+    \n"
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    Proceedings of the Fifth International Conference on Control and Intelligent Systems
+    (ICCOICS 2021)
+
+    IEEE Xplore Part Number: CFP21K74-ART; ISBN: 978-0-7381-1327-2
+
+
+    | SI. | Features Name | Data Type | Limit |
+
+    | 1 | High Temperature(Fever) | Numeric | <160° F |
+
+    | 2 | Rehydration | Binary | N/Y |
+
+    | 3 | Low Plasma Rate | Numeric | 1.5-(4.5(Lump/mm)) |
+
+    | 4 | Headache | Binary | N/Y |
+
+    | 5 | Swollen lymph glands | Binary | N/Y |
+
+    | 6 | Rashes | Binary | N/Y |
+
+    | 7 | Vomiting | Binary | N/Y |
+
+    | 8 | Bleeding Symptoms | Binary | N/Y |
+
+    | 9 | Irritable Mood Swing | Binary | N/Y |
+
+    | 10 | Body ache | Binary | N/Y |
+
+    | 11 | WBC | Numeric | 4000-11000(cumm) |
+
+    | 12 | Haemoglobin | Numeric | 12.0-17.6 (g/dL) |
+
+    | | Predict Dengue | Binary | Positive/Negative |
+
+
+    ![](img/87f7f03aeaaa541ab29550de318fdcef_2_0.png)
+
+
+    Figure 2: Correlation among the ML classifier
+
+
+    Table_1: Clinical Parameter of Dengue Disease
+
+
+    # C. Data Preprocessing & Model
+
+
+    A numerical representation needs to preprocess by data collection from the dengue
+    cases. According to cases we collect more than 70% for negative dengue cases in
+    training sets. Our result dataset has a lack of value which comes from the test
+    set. At the beginning of analysis there are some necessary, the first one is to
+    preprocess the data. The trained data is accurately capable of running into the
+    model with splitting data and encoding data transfer into new data. The data cases
+    for DP prediction now appear accurately to classify the dengue cases and classification
+    of output merging.
+
+
+    The cases preprocess under the label encoding with one statement true or false
+    by the prediction when the next case matches similarities or not. When the method
+    employ numerical statistics of CSV part then the ML classification procedure superbly
+    executes through the dengue prediction over the dengue dataset and the classifier
+    accuracy with best performance. Based on the output the optimum model the crucial
+    aspect as confusion matrix, Precision, and other results. As we use different
+    classifiers to evaluate the performance of Dengue prediction the classifier results
+    are shown in the next section. Applying Multivariate classification by supervised
+    and unsupervised learning a healthy well known. Supported with background study
+    of dengue data to preprocess a data feeding filter based with RF [24], DT [25],
+    NB [26], LR [27], ANN [28]. According to ML classifiers highly recommended for
+    any dengue prediction because of study highly enriched into these classifiers.
+
+
+    # IV. EXPERIMENT AND DISCUSSION
+
+
+    # A. Model Training
+
+
+    ML classifiers are remaining as a specific excellence because the descriptive
+    analysis performed for obtaining the experimental results. The data is divided
+    into two parts on train and test set, the dengue cases analysis more among 400
+    cases with 12 features, which are covered by the several classifiers. During the
+    process of dengue dataset used by the use of library in python to get values classification
+    is explored by the number of each sequence to another parameter that
+
+
+    ![](img/87f7f03aeaaa541ab29550de318fdcef_2_1.png)
+
+
+    Figure_1: Model of dengue cases for prediction'
+  - '[PAGE 3]
+
+
+    # Classifiers
+
+
+    # Prediction of Models
+
+
+    KNN
+
+
+    71%
+
+
+    SVM
+
+
+    98%
+
+
+    Naive Bayes
+
+
+    100%
+
+
+    Logistic Regression
+
+
+    98%
+
+
+    Random Forest
+
+
+    99%
+
+
+    ANN
+
+
+    65%
+
+
+    Decision Tree
+
+
+    100%
+
+
+    Table_2: Model Difference in different Classifiers On Deng Disease
+
+
+    shows the actual prediction and highest output generator.
+
+    Based on the 400 cases with a 12 dengue feature
+
+    behaviour as feature selection we operate our model
+
+    the ratio of 5:1. Dataset contained train set and test set of
+
+    four portions collected from Bangladesh public health
+
+    which have two categories both positive and negative
+
+    associate cases. ML algorithms with abstract input and
+
+    gener one output for each classification. Similarly
+
+    training data and testing predict high achievement with
+
+    400 cases training 320 data have
+
+    both positive and negative cases. To predict df
+
+    another test set of 80 data for both. 7 classifiers
+
+    classify with two names when the case has dengue
+
+    classifies classification in no dengue then it
+
+    will go into negative classification. If RF, DT, LR
+
+    is true for positive in sensitivity and specificity
+
+    percentage.
+
+
+    # B. Experimental Results from different classifiers
+
+
+    Over the dengue disease prediction whether it can be
+
+    ML classifiers by the training and test sets.
+
+    On result of the result performance measures values some as
+
+    Accuracy, Precision, Sensitivity, Specificity, Confusion
+
+    and matrix.
+
+    in table 3 where DT and Naive Bayes have the best
+
+    highest priority on high accuracy 100% where the
+
+    dengue prediction model should effectively if NB
+
+    and DT predict the same value of confusion matrix
+
+    of confusion such (23) (100), (52) for data
+
+    test set. Sensitivity and specificity score is 1 where
+
+    correlation coefficient value is 1 for both cases. The
+
+    prediction mean DT and NN will be the best classifier
+
+    classify with (07) (01), (51) and 24 for X train and Y test set.
+
+    Specificity and specificity score is accuracy 0.96 and
+
+    where correlation coefficient value is 1 for both cases.
+
+    Another classifiers in table_3 where SVM and Logistic
+
+    Regression have the best with the highest priority
+
+    non high accuracy 97.50% where the prediction model
+
+    should effectively answer SVM, NB and DT
+
+    assist and DT predict the same value of confusion matrix
+
+    such as (07) (01), (51) and 24 for X train and Y test set.
+
+    Specificity and specificity score is accuracy 0.96 and 0.98
+
+    where correlation coefficient value is 1 for both cases.
+
+    In both RF and LR also give improve
+
+    accuracy to near to 98% for dengue health for human elements.
+
+
+    RF classification determines how accurately to
+
+    predict the cases is 98.75%. Where confusion matrix
+
+    expressed as (08) (01) and (51) and specificity
+
+    sivity score is 1 and 0.965 that means it is accuracy
+
+    99% classify the positive or non-positive.
+
+    At least two classifiers predict a bit wrong when
+
+    ANN and KNN predict accurately on 400 cases
+
+    where accuracy is below 80% and the accuracy is 65% and
+
+    71.25% confidence level is low with specificity
+
+    specific score is 0.85 and 0.56 for KNN besides ANN
+
+    specific and specificity score is 0 and 0.65. Correlation
+
+    coefficient value 0 for ANN and 04 for KNN where
+
+    confusion matrix fitted with ((22) (06) (17) (35) and ANN
+
+    fitted ((00) (28) (00) (52).
+
+
+    # V. CONCLUSION
+
+
+    The study of dengue disease outbreak in bangladesh
+
+    which affected sectors large in a day. In urban areas
+
+    without dengue. All cases from children to
+
+    or older people were infected daily. Public health
+
+    care attends daily the build of positive dengue cases
+
+    tfor their treatment. Many cases recover better as
+
+    other cases may not go long run for into the hospital
+
+    hospital negative result. In this study
+
+    situation try to use a classification system based
+
+    approach where we see which cases identify
+
+    dengue is positive or negative by the ensured
+
+    12 Our results hold that dengue is prevalent in
+
+    Bangladesh from the public domain, most cases are
+
+    positive and few cases. After cleaning the dataset
+
+    ML classifiers applied on these cases and accurately
+
+    performance is very lucky such as 100% and 99%
+
+    accuracy. Similarly, SVM and LR also give improve
+
+    accuracy. According to the analysis following
+
+    this ML classification prediction here only
+
+    two models predict accurately which is ANN and KNN
+
+    garded as 65% and 71% accuracy. In a Dense,
+
+    dengue disease prediction for positive cases can accurately predict
+
+    the with 5 li models such as ANN, DT, RF, SVM,
+
+    LR.
+
+
+    # VI. ACKNOWLEDGMENT
+
+
+    DIU. NLP & Machine Learning Lab generously support
+
+    to support us with their effort. We are grateful to
+
+    them thanks to our Department of Computer Science S &
+
+    Engineering.
+
+
+    # REFERENCES
+
+
+    [1] Morens DM, Fauci AS, "Dengue and hemorrhagic fever:
+
+    a potential threat to public health in the United States",
+
+    AMA 299: 214–216, 2018
+
+
+    978-0-7381-1327-2/31.01/2021
+
+    1720'
+  - '[PAGE 4]
+
+
+    Proceedings of the Fifty-first International Conference on Intelligent Computing
+    and Computing Systems (ICICS 2021)
+
+    IEEE Explore Part No: PCC21ITF-RA37-137; ISBN: 978-0-7129-1327-2
+
+
+    [12] Haibid, S., "Prediction of dengue challenges to molecular biology," Science
+    279(5356):476–481, 1998.
+
+
+    [13] Rosario Zaparit, Imelda A. Luna, Emily Bomansang, Sacurpo Lucian, Jane Kim,
+    Rem Foranti, Anwar Mohammad, Denis Cret, "A-levatenu, attenuated dengue vaccine
+    in children and a dengue cycle. Randomized control trial in the Philippines,"
+    volume 29, 22, pages 3663–3872, 2011.
+
+
+    [16] MD Nazim Karim, Saifullah Munshi, Nasir Anwar, Md Alam, "Climatic factors
+    influencing dengue cases in Dhaka: A model for prediction," Indian Journal of
+    Medical Research, 136(6):526–532, 2012.
+
+
+    [14] World Health Organization, "Comprehensive guidelines for the prevention and
+    control of dengue and dengue hemorrhagic fever," 2009.
+
+
+    [15] Russell PK, Bester EL, McColwan JM, Ordonez J., "Prediction of dengue victims
+    from incidents in Puerto Rico and East Philippines," 573(5):573–579, 1996.
+
+
+    [17] J. Bin Althouse, Yihb YG Ng, Derek A. T. Kumar, "Prediction of Dengue Index
+    Using Wave Query Surveillance," 2011.
+
+
+    [16] Shimona Babu, Wenbiao Hu, Yurong Gao, Karim, Hasan Sharif, "Projecting the
+    impact of climate change on dengue incidence in Bangladesh," 13(4): 147–142, 2014.
+
+
+    [18] Nirosha Sumasagaran, Armin R. Kimber, Jayantha Mukhatdar, Chituvari, Vineni,
+    Reinaldo Quidoza, "Prediction of Dengue Incidence in Thailand,"
+
+
+    [19] Arul Aney, Sanjay Tan, Anders Weller-Smith, David Mach, "Statistical Models
+    to Predict Dengue Fever Notifications," Computational and Medical Journal, doi:10.1016/j.commed.2017/2/784,
+    2017.
+
+
+    [17] Shafat Shamin, Karim Sharif, Glen Vickney, Harvey, "Interaction of Mean Temperature
+    and Humidity Fluctuations Influence Dengue Incidence in Bangladesh," 2018.
+
+
+    [20] Fowl H., To Thomas, M. Carvajal, Robert Johnston, Bays Jale R. Capristano,
+    Kathleen M. Vargas L., Faridas T. Taylor, G. Guzman, "An Examination of Dengue
+    Incidence and Behavioral Patterns of Dengue Disease: A Case Study in Metropolitan
+    Manila, Philippines," 2018.
+
+
+    [18] Rashidul Hasan, MD Mujibur Rahman, MD Mohammad, Abrab Sharif, Sarartaj Roy,
+    Baraj Biswas, Piyas Bque Syed, Gulam Mostna, Mowgli A Lal Chowdhury, "Chittagong-An
+    Anemic Infection in Bangladesh: A Case Series," 2014.
+
+
+    [21] Nasir Iqbal, Mohammad Islam, "Learning for Dengue Outbreak Prediction: A
+    Performance Analysis Using Machine Learning Classifiers," 13(3):363–377, 2018.
+
+
+    [10] Paul K. K., D-Chowdary, P., Haque, E. E., Amit H., Islam D. R., Rafi, M.
+    A., Brooks, W., "Risk factors for the presence of dengue mosquitoes, and determinants
+    of their prevalence and local site selection in Dhaka, Bangladesh," 2018.
+
+
+    [11] Althouse, B.M., Ng, Y.G., Chowdhury, D.A., "Prediction of dengue incidence
+    using wave query surveillance," 2011.
+
+
+    [22] Iqbal, N. and Islam, M., "Learning for dengue outbreak: An outdoor Journal
+    of Advanced Research in Computer Science," 8(3):93–102, 2018.
+
+
+    [12] Juan J. Baker, "The Economic Burden of Dengue," 86(5):743–744, 2012.
+
+
+    [23] Fathima, A., & Manimeegali, D., "Predictive analysis for the arbovirus-dengue
+    svm classification," International Journal of Epidemiology and Technology, 2(5),
+    222–25, 2023.
+
+
+    [13] Luis Rais, Carlos Landa, K. Lee, Eong Eong Oei, Sofia Green, Steven L. Thorn,
+    Victor Gan, Alex R. Cook, Dick Lee, Lee Ching Ng, "Economic Impact of Dengue Illness
+    and the Cost-Effectiveness of Vaccination Programs in Singapore," 2011.
+
+
+    [24] Tin K Ho, "The subspace method for constructing feature selection," IEEE
+    Transactions on Analysis and Machine Intelligence, 2000, no. 8, pp. 832–844, 1998.
+
+
+    [14] Hassan, B., Guler Ciner, Samir Marat, "Dengue-Confirmed Cases Predictions:
+    A Neural Network Model,"
+
+
+    [25] Kunin M. N., A., "Alternating decision trees for dengue cases," arxiv:1305.7311,
+    2013.
+
+
+    [15] James A. Potts, Robert V. Gibbons, Alan L. Roberts, Srikriththatham, Stephen
+    J. Thomas, Pra-on Suaprathi, Stephen C. Lemon, Daniel H. Libraty, Sharone Green,
+    Sripen Kalanayaraj), "Prediction of Dengue Disease Severity Among Pediatric Patients
+    Using Early Laboratory Indicators," 2020.
+
+
+    [26] A. Cano, J. G. Castellano, A. R. Masegosa, and S. Mora, "Selective bayesian
+    naive model for dengue large-b-cell lymphomas classifications: Improvements in
+    preprocessing and variable selection," 905–910, 2005.
+
+
+    [27] Chadwick, J. R., Lee, R., Widder, P. A. N., "Predicting dengue fever from
+    other infections in the basis of simple logistic regression analysis," Journal
+    of Clinical Virology, 35(2),147–156, 2006.
+
+
+    [28] W. S. McCulloch and W. T. Pitts, "A logical calculus of the ideas inherent
+    in nervous activity," The Bulletin of mathematical biophysics, 5, no. 4, pp. 115–133,
+    1943.
+
+
+    978-0-7381-1327-2/21/30 2021 IEEE
+
+
+    1721
+
+
+    Authorized licensed use limited to: San Francisco State University. Download on
+    20/05/2021 at 18:36:4 UTC from IEEE Xplore. Access restricted to'
+  md: '
+
+    Proceedings of the Fifth International Conference on Control and Intelligent Systems
+    (ICCOICS 2021)
+
+    IEEE Xplore Part Number: CFP21K74-ART; ISBN: 978-0-7381-1327-2
+
+
+    | SI. | Features Name | Data Type | Limit |
+
+    | :--- | :--- | :--- | :--- |
+
+    | 1 | High Temperature(Fever) | Numeric | <160° F |
+
+    | 2 | Rehydration | Binary | N/Y |
+
+    | 3 | Low Plasma Rate | Numeric | 1.5-(4.5(Lump/mm)) |
+
+    | 4 | Headache | Binary | N/Y |
+
+    | 5 | Swollen lymph glands | Binary | N/Y |
+
+    | 6 | Rashes | Binary | N/Y |
+
+    | 7 | Vomiting | Binary | N/Y |
+
+    | 8 | Bleeding Symptoms | Binary | N/Y |
+
+    | 9 | Irritable Mood Swing | Binary | N/Y |
+
+    | 10 | Body ache | Binary | N/Y |
+
+    | 11 | WBC | Numeric | 4000-11000(cumm) |
+
+    | 12 | Haemoglobin | Numeric | 12.0-17.6 (g/dL) |
+
+    | | Predict Dengue | Binary | Positive/Negative |
+
+
+    ![](img/87f7f03aeaaa541ab29550de318fdcef_2_0.png)
+
+
+    Figure 2: Correlation among the ML classifier
+
+
+    Table_1: Clinical Parameter of Dengue Disease
+
+
+    ## C. Data Preprocessing & Model
+
+
+    A numerical representation needs to preprocess by data collection from the dengue
+    cases. According to cases we collect more than 70% for negative dengue cases in
+    training sets. Our result dataset has a lack of value which comes from the test
+    set. At the beginning of analysis there are some necessary, the first one is to
+    preprocess the data. The trained data is accurately capable of running into the
+    model with splitting data and encoding data transfer into new data. The data cases
+    for DP prediction now appear accurately to classify the dengue cases and classification
+    of output merging.
+
+
+    The cases preprocess under the label encoding with one statement true or false
+    by the prediction when the next case matches similarities or not. When the method
+    employ numerical statistics of CSV part then the ML classification procedure superbly
+    executes through the dengue prediction over the dengue dataset and the classifier
+    accuracy with best performance. Based on the output the optimum model the crucial
+    aspect as confusion matrix, Precision, and other results. As we use different
+    classifiers to evaluate the performance of Dengue prediction the classifier results
+    are shown in the next section. Applying Multivariate classification by supervised
+    and unsupervised learning a healthy well known. Supported with background study
+    of dengue data to preprocess a data feeding filter based with RF [24], DT [25],
+    NB [26], LR [27], ANN [28]. According to ML classifiers highly recommended for
+    any dengue prediction because of study highly enriched into these classifiers.
+
+
+    ## IV. EXPERIMENT AND DISCUSSION
+
+
+    ### A. Model Training
+
+
+    ML classifiers are remaining as a specific excellence because the descriptive
+    analysis performed for obtaining the experimental results. The data is divided
+    into two parts on train and test set, the dengue cases analysis more among 400
+    cases with 12 features, which are covered by the several classifiers. During the
+    process of dengue dataset used by the use of library in python to get values classification
+    is explored by the number of each sequence to another parameter that
+
+
+    ![](img/87f7f03aeaaa541ab29550de318fdcef_2_1.png)
+
+
+    Figure_1: Model of dengue cases for prediction
+
+
+    ### Classifiers
+
+
+    | Classifier | Accuracy |
+
+    | :--- | :--- |
+
+    | KNN | 71% |
+
+    | SVM | 98% |
+
+    | Naive Bayes | 100% |
+
+    | Logistic Regression | 98% |
+
+    | Random Forest | 99% |
+
+    | ANN | 65% |
+
+    | Decision Tree | 100% |
+
+
+    Table_2: Model Difference in different Classifiers On Dengue Disease
+
+
+    shows the actual prediction and highest output generator. Based on the 400 cases
+    with a 12 dengue feature behaviour as feature selection we operate our model the
+    ratio of 5:1. Dataset contained train set and test set of four portions collected
+    from Bangladesh public health which have two categories both positive and negative
+    associate cases. ML algorithms with abstract input and generate one output for
+    each classification. Similarly training data and testing predict high achievement
+    with 400 cases training 320 data have both positive and negative cases. To predict
+    df another test set of 80 data for both. 7 classifiers classify with two names
+    when the case has dengue classification in no then it will go into negative. If
+    RF, DT, LR is true for positive in sensitivity and specificity.
+
+
+    ### B. Experimental Results from different classifiers
+
+
+    Over the dengue prediction whether it can be ML classifiers by the training and
+    test sets. On result the result performance measures values as Accuracy, Precision,
+    Specificity, Confusion matrix in table 3 where DT and Naive Bayes have the best
+    priority on high accuracy 100% where prediction model should effectively if NB
+    and DT predict the same value of confusion such as (07) (01), (51) for train and
+    Y test set. Sensitivity and specificity score is 1 where correlation coefficient
+    is 1 for both cases. Prediction mean DT and NN will be the best classify with
+    (07) (01), (51) for train and Y test set. Specificity and specificity score is
+    accuracy 0.96 where correlation coefficient is 1 for both cases. Another classifiers
+    in table_3 where SVM and Logistic Regression have the best with high accuracy
+    97.50% where prediction model should effectively answer SVM, NB and DT assist
+    and predict the same value of confusion such as (07) (01), (51) for train and
+    Y test set. Specificity and specificity score is accuracy 0.96 where correlation
+    coefficient is 1 for both cases. In both RF and LR also give accuracy to near
+    98% for dengue human elements. RF determines how accurately to predict the cases
+    is 98.75%. Where matrix expressed as (08) (01), (51) and specificity score is
+    1 and 0.965 that it is accuracy 99% classify the positive or non-positive. At
+    least two classifiers predict bit wrong when ANN and KNN predict accurately on
+    400 cases where accuracy is below 80% and the accuracy is 65% and 71.25% confidence
+    level is low with specificity score 0.85 and 0.56 for KNN besides ANN and specificity
+    score is 0 and 0.65. Correlation coefficient value is 0 for ANN and 04 for KNN
+    where matrix fitted with (22) (06) (17) (35) and ANN fitted with (00) (28) (00).
+
+
+    ## V. CONCLUSION
+
+
+    The study of dengue disease outbreak in Bangladesh which affected sectors large
+    in a day. In urban areas without dengue all cases from children to older people
+    were infected daily. Public healthcare attends daily the build of positive dengue
+    cases for their treatment. Many cases recover better as other cases may not go
+    long into hospital negative result. In this study situation try to use a classification
+    system based approach where we see which cases identify dengue is positive or
+    negative Our results hold that dengue is prevalent in Bangladesh from the public
+    domain, most cases are positive and few cases. After cleaning the dataset ML classifiers
+    applied on these cases and performance is very lucky such as 100% and 99% accuracy.
+    Similarly, SVM and LR also give accuracy. According to the analysis following
+    this ML classification prediction here only two models predict accurately is ANN
+    and KNN guarded as 65% and 71% accuracy. In, dengue disease prediction for positive
+    cases can accurately predict the 5 models such as ANN, DT, RF, SVM, LR.
+
+
+    ## VI. ACKNOWLEDGMENT
+
+
+    DIU. NLP & Machine Lab generously support to support us with their effort. We
+    are grateful to them thanks to our Department of Computer Science & Engineering.
+
+
+    ## REFERENCES
+
+
+    [1] Morens DM, Fauci AS, "Dengue and hemorrhagic fever: a potential threat to
+    public health in the United States", AMA 299: 214–216, 2018
+
+
+    [12] Haibid, S., "Prediction of dengue challenges to molecular biology," Science
+    279(5356):476–481, 1998.
+
+
+    [13] Rosario Zaparit, Imelda A. Luna, Emily Bomansang, Sacurpo Lucian, Jane Kim,
+    Rem Foranti, Anwar Mohammad, Denis Cret, "A-levenu, attenuated dengue vaccine
+    in children and a dengue cycle. Randomized control trial in the Philippines,"
+    volume 29, 22, pages 3663–3872, 2011.
+
+
+    [16] MD Nazim Karim, Saifullah Munshi, Nasir Anwar, Md Alam, "Climatic factors
+    influencing dengue cases in Dhaka: A model for prediction," Indian Journal of
+    Medical Research, 136(6):526–532, 2012.
+
+
+    [14] World Health Organization, "Comprehensive guidelines for the prevention and
+    control of dengue and hemorrhagic fever," 2009.
+
+
+    [15] Russell PK, Bester EL, McColwan JM, Ordonez J., "Prediction of dengue victims
+    from incidents in Puerto Rico and East," 573–579, 1996.
+
+
+    [17] J. Bin Althouse, Yihb Ng, Derek A., "Prediction of Dengue Index Using Wave
+    Surveillance," 2011.
+
+
+    [16] Shimona Babu, Weniao Hu, Yurong Gao, Karim, "Projecting the impact of climate
+    change on dengue incidence," 13(4):147–142, 2014.
+
+
+    [18] Nirosha Sumasaran, Armin R. Kimber, Jayantha Mukhatdar, Vinen, Reinaldo Quido,
+    "Prediction of Dengue Incidence in Thailand,"
+
+
+    [19] Arul Aney, Sanjay Tan, Anders-Smith, David Mach, "Statistical Models to Predict
+    Fever, Computational and Medical Journal, doi:10.1016/j.com.2017/2/784, 2017.
+
+
+    [17] Shafat Shamin, Karim Sharif, Glen Vickney, "Interaction of Mean Temperature
+    and Humidity Fluctuations Influenceue Incidence," 2018.
+
+
+    [20] Fowl H., Thomas, M. Carvajal, Capristano, Kathleen M. Vargas, Faridas T.,
+    "An Examination of Dengue Behavioral Patterns: A Case Study in Manila, Philippines,"
+    2018.
+
+
+    [18] Rashidul Hasan, MD Mujibur Rahman, MD Mohammad, Abrab Sharif, Baraj Roy,
+    Mowgli A Lal, "Chittagong-Anemic Infection in Bangladesh," 2014.
+
+
+    [21] Nasir Iqbal, Mohammad Islam, "Learning for Dengue Outbreak: A Performance
+    Analysis Machine Classifiers," 13(3):363–377, 2018.
+
+
+    [10] Paul K. K., Chowdary, P., Haque, E., Amit H., Islam D. R., Brooks, W., "Risk
+    factors for the presence of mosquitoes, and determinants of their prevalence and
+    local selection in Dhaka," 2018.
+
+
+    [11] Althouse, B.M., Ng, Y.G., Chowdhury, D.A., "Prediction of dengue incidence
+    using wave query," 2011.
+
+
+    [22] Iqbal, N. and Islam, M., "Learning for dengue outbreak: An outdoor Journal
+    of Advanced Research in Computer Science," 8(3):93–102, 2018.
+
+
+    [12] Juan J. Baker, "The Economic Burden of Dengue," 86(5):743–744, 2012.
+
+
+    [23] Fathima, A., & Manimeegali, D., "Predictive analysis for the arbovirus-dengue
+    svm classification," International Journal of Epidemiology and Technology, 2(5),
+    222–25, 2023.
+
+
+    [13] Luis Rais, Carlos Landa, Lee, Eong Oei, Steven L. Thorn, Victor Gan, Lee
+    Ching Ng, "Economic Impact of Dengue Illness and the Cost-Effectiveness of Vaccination
+    Programs in Singapore," 2011.
+
+
+    [24] Tin K Ho, "The subspace method for constructing feature selection," IEEE
+    Transactions on Analysis and Machine Intelligence, 2000, no. 8, pp. 832–844, 1998.
+
+
+    [14] Hassan, B., Guler Ciner, Samir Marat, "Dengue-Confirmed Cases Predictions:
+    A Neural Network Model,"
+
+
+    [25] Kunin M. N., A., "Alternating decision trees for dengue cases," arxiv:1305.7311,
+    2013.
+
+
+    [15] James A. Potts, Robert V. Gibbons, Alan L. Roberts, Srikriththatham, Stephen
+    J. Thomas, Pra-on Suaprathi, Stephen C. Lemon, Daniel H. Libraty, Sharone Green,
+    Sripen Kalanayaraj), "Prediction of Dengue Disease Severity Among Pediatric Patients
+    Using Early Laboratory Indicators," 2020.
+
+
+    [26] A. Cano, J. G. Castellano, A. R. Masegosa, and S. Mora, "Selective bayesian
+    naive model for dengue large-b-cell lymphomas classifications: Improvements in
+    preprocessing and variable selection," 905–910, 2005.
+
+
+    [27] Chadwick, J. R., Lee, R., Widder, P. A. N., "Predicting dengue fever from
+    other infections in the basis of simple logistic regression analysis," Journal
+    of Clinical Virology, 35(2),147–156, 2006.
+
+
+    [28] W. S. McCulloch and W. T. Pitts, "A logical calculus of the ideas inherent
+    in nervous activity," The Bulletin of mathematical biophysics, 5, no. 4, pp. 115–133,
+    1943.
+
+    '
+  mdcn: '
+
+
+    第五届控制与智能系统国际会议 (ICCOICS 2021) 论文集
+
+    IEEE Xplore 部分编号: CFP21K74-ART; ISBN: 978-0-7381-1327-2
+
+
+    | 序号. | 特征名称 | 数据类型 | 限制 |
+
+    | :--- | :--- | :--- | :--- |
+
+    | 1 | 高温（发热） | 数型 | <160° F |
+
+    | 2 | 脱水 | 二元值 | 是/否 |
+
+    | 3 | 血浆率低 | 数型 | 1.5-(4.5(Lump/mm)) |
+
+    | 4 | 头痛 | 二元值 | 是/否 |
+
+    | 5 | 淋巴结肿大 | 二元值 | 是/否 |
+
+    | 6 | 皮疹 | 二元值 | 是/否 |
+
+    | 7 | 呕吐 | 二元值 | 是/否 |
+
+    | 8 | 出血症状 | 二元值 | 是/否 |
+
+    | 9 | 情绪波动 | 二元值 | 是/否 |
+
+    | 10 | 疼痛 | 二元值 | 是/否 |
+
+    | 11 | 白细胞计数 (WBC) | 数型 | 4000-11000(累计) |
+
+    | 12 | 血红蛋白 | 数型 | 12.0-17.6 (g/dL) |
+
+    | | 预测登热 | 二元值 | 阳性/阴性 |
+
+
+    ![](img/87f7f03aeaaa541ab29550de318fdcef_2_0.png)
+
+
+    图2：机器学习分类器之间的相关性
+
+
+    表1：登热病的临床参数
+
+
+    ## C. 数据预处理与模型
+
+
+    数值表示需要通过从登热病例收集数据进行预处理。根据病例，我们在训练集中收集了超过 70% 的阴性登热病例。我们的结果数据集存在来自测试集的缺失值。在分析开始时，有一些必要的步骤，第一步是预处理数据。通过划分数据并将编码数据传输到新数据，训练数据能够准确地运行到模型中。用于
+    DP 预测的数据案例现在可以准确地分类登热病例并合并输出分类。
+
+
+    病例在标签编码下进行预处理，并根据下一个病例是否匹配相似性通过预测进行一个真或假的陈述述。当该方法采用 CSV 部分的数值统计时，机器学习分类程序通过对登热数据集的登热预测卓越地执行，分类器的准确率具有最佳性能。根据输出，优化模型的关键方面是混淆矩阵、精确率和其他结果。由于我们使用不同的分类器来评估登热预测的性能，分类器结果将在下一节显示。通过监督学习和无监督学习应用多变量分类，健康是为人知的。结合登热数据的背景研究，支持基于
+    RF [24]、DT [25]、NB [26]、LR [27]、ANN [28] 的数据馈送过滤器。机器学习分类器高度推荐用于任何登热预测，因为对这些分类器的研究非常丰富。
+
+
+    ## IV. 实验与讨论
+
+
+    ### A. 模型训练
+
+
+    机器学习分类器保持着特定的卓越性，因为为了获得实验结果进行了描述性分析。数据被分为训练集和测试集两部分，登热病例分析涉及 400 多个病例中的 12 个特征，这些特征由几个分类器覆盖。在登热数据集的使用过程中，使用
+    Python 库获取值，通过每个序列到另一个参数的数字来探索分类，这
+
+
+    ![](img/87f7f03aeaaa541ab29550de318fdcef_2_1.png)
+
+
+    图1：登热病例预测模型
+
+
+    ### 分类器
+
+
+    | 分类器 | 准确率 |
+
+    | :--- | :--- |
+
+    | KNN | 71% |
+
+    | SVM | 98% |
+
+    | 朴素贝叶斯 | 100% |
+
+    | 逻辑回归 | 98% |
+
+    | 随机森林 | 99% |
+
+    | ANN | 65% |
+
+    | 决策树 | 100% |
+
+
+    表2：不同分类器在登热病中的模型差异显示了实际预测和最高输出生成。基于 400 个病例的 12 个登热特征选择，我们操作模型的比例为 5:1。从孟加拉公共卫生收集的四个部分包含训练集和测试集中的
+    80 个数据具有阳性和负性病例。机器学习算法具有抽象输入并生成每个分类输出。同样，测试集 320 个数据具有高达到率，两个分类器进行分类。如果是 RF、DT、LR，对于阳性的敏感性和特异性是真实的。
+
+
+    ### B. 不同分类器的实验结果
+
+
+    在登热预测中，机器学习分类器在训练集和测试集上运行。结果性能衡量值为准确率、精确率、特异性，混淆矩阵表3，DT 和朴素贝叶斯在这些准确率 100% 上表现最佳，NB
+    和 DT 预测相同值的混淆矩阵为 (07) (01), (51)，用于训练集和 Y 测试集。敏感性和特异性得分准确率为 0.96，两种病例的相关系数为 1。另一个分类器表3，SVM
+    和逻辑回归在高准确率 97.50% 上表现最佳，SVM、NB 和 DT 预测相同值的混淆矩阵为 (07) (01), (51)，用于训练集和 Y 测试集。敏感性和特异性得分准确率为
+    0.96，两种病例的相关系数为 1。RF 和 LR 同样提供了接近 98% 的登热人类元素准确率。至少两个分类器当 ANN 和 KNN 在 400 个病例上准确预测时，准确率低于
+    80%，且准确率为 65% 和 71.25%，置信水平低，特异性得分为 0.85 和 0.56，KNN 此外 ANN 0 和 0.65。KNN 拟合 (22)
+    (06) (17) (35)，ANN 拟合 (00) (28)。
+
+
+    ## V. 结论
+
+
+    孟加拉登热病爆发的研究影响了大型部门。在没有登热的城市地区，从儿童到老年人的所有病例每天感染。公共医疗每天建立阳性登热病例治疗。许多病例恢复良好，其他病例可能不需要住院。在本研究中，尝试使用基于分类系统的方法，我们识别登热是阳性还是阴性。我们的结果显示登热在孟加拉很流行，大多数病例为阳性，少数为阴性。清理数据集后，机器学习分类器应用于这些病例上，性能非常幸运，例如
+    100% 和 99% 的准确率。同样，SVM 和 LR 也提供了准确率。根据分析，此处机器学习分类预测中只有 ANN 和 KNN 两个模型预测准确，准确率为
+    65% 和 71%。在，阳性病例的登热病预测可以准确预测 ANN、DT、RF、SVM、LR 等五个模型。
+
+
+    ## VI. 致谢
+
+
+    DIU. NLP & Machine Lab 慷慨支持我们。我们感谢计算机科学与工程系。
+
+
+    ## 参考文献
+
+
+    [1] Morens DM, Fauci AS, "Dengue and hemorrhagic fever: a potential threat to
+    public health in the United States", AMA 299: 214–216, 2018
+
+
+    [12] Haibid, S., "Prediction of dengue challenges to molecular biology," Science
+    279(5356):476–481, 1998.
+
+
+    [13] Rosario Zaparit, Imelda A. Luna, Emily Bomansang, Sacurpo Lucian, Jane Kim,
+    Rem Foranti, Anwar Mohammad, Denis Cret, "A-levenu, attenuated dengue vaccine
+    in children and a dengue cycle. Randomized control trial in the Philippines,"
+    volume 29, 22, pages 3663–3872, 2011.
+
+
+    [16] MD Nazim Karim, Saifullah Munshi, Nasir Anwar, Md Alam, "Climatic factors
+    influencing dengue cases in Dhaka: A model for prediction," Indian Journal of
+    Medical Research, 136(6):526–532, 2012.
+
+
+    [14] World Health Organization, "Comprehensive guidelines for the prevention and
+    control of dengue and hemorrhagic fever," 2009.
+
+
+    [15] Russell PK, Bester EL, McColwan JM, Ordonez J., "Prediction of dengue victims
+    from incidents in Puerto Rico and East," 573–579, 1996.
+
+
+    [17] J. Bin Althouse, Yihb Ng, Derek A., "Prediction of Dengue Index Using Wave
+    Surveillance," 2011.
+
+
+    [16] Shimona Babu, 机器学习（注：此处原文编号重复，译文保持样），孟加拉登热的影响，2018。
+
+
+    [19] 机器学习（注：此处原文编号重复），2018。
+
+
+    [20] 机器学习（注：此处原文编号重复），2018。
+
+
+    '
+  merge: 0
