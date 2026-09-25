@@ -1,0 +1,1939 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Semantic Nonnegative Matrix Factorization with Automatic Mode Determination
+    for Topic Modeling
+
+
+    Ravitija Vanga\*
+
+
+    *Division, Los Alamos National Laboratory, Los Alamos, NM 77545, USA.
+
+    †Analytics, Intelligence and Technology Division, Los Alamos National Laboratory,
+    Los Alamos, NM 77545, USA.
+
+    ‡Department of Science Engineering, University of Maryland, College Park, MD,
+    20742
+
+
+    **Abstract—** Nonnegative Matrix Factorization (NMF) models the topics of a text
+    by decomposing its term-frequency (TF-IDF) representation, X into two low-rank
+    nonnegative matrices: W, representing the topics and H, mapping the documents
+    to topics. One challenge, common to all topic models, is the determination of
+    the number of topics. The correct number of topics is important: underestimating
+    leads to poor topic separation, overestimating to overlapping topics. Here, we
+    introduce SeNMF, a semantic-based NMF topic modeling method that incorporates
+    semantic information to guide the determination of the number of topics. SeNMF
+    creates a random ensemble of matrices based on TF-IDF coupled factorization to
+    acquire stable coherent topics that are robust to noise. Topic determination is
+    based on the stability of these topics. We show that SeNMF accurately determines
+    the number of topics in various text corpora, compared to other works.
+
+    **Index Terms—** NMF, Topic models, document clustering, NLF
+
+
+    be seen as dense reduction performed by mapping the documents to the much smaller
+    space. In this case, by clustering the coordinates of each topic in the topics
+    space, we can derive groups of documents related to some theme, and that is, to
+    perform clustering. This is a key challenge in topic modeling: the determination
+    of the latent dimension of the corpus. The determination of the correct latent
+    dimension is important for meaningful analysis of the corpus, as underestimating
+    the number of topics results in poor topic separation, overestimating to overlapping
+    topics.
+
+
+    In this paper, we introduce a new method for topic modeling, SeNMF which utilizes
+    the utilization of the Nonnegative Matrix Factorization (NMF) based on Kullback-Leibler
+    divergence (KL) to: (a) it takes into account the coupled term-frequency (TF-IDF)
+    representation of the corpus, X, and context matrix, M; and (b) using custom resampling
+    to determine the latent dimension. Specifically, based on the TF-IDF and word-context
+    matrices, X and M, by adding a small noise, ε, to create two noisy versions X''
+    and M'', where X''=X+ε and M''=M+ε. SeNMF performs a coupled factorization to
+    each of these pairs to acquire sets of topics into some accurate clustering. We
+    determine the latent dimension based on the stability of the resulting topics.
+    We show that SeNMF can identify the correct number of topics with a benchmark
+    compare, and perform as well as state-of-the-art techniques. Finally, we cluster
+    the results of each document in the space (obtained by the coupled factorization)
+    and identify the groups of documents related to some theme. We observe that the
+    number of groups is not always the same as the number of extracted topics, but
+    they present meaningful document clusters.
+
+
+    # I. INTRODUCTION
+
+
+    With the massive growth of digital content in the world of news articles, social
+    media,ic messages, and other textual data, keeping the relevant information from
+    noise is a double challenge. To extract and extract rich information from large
+    corpora, we need to automatically characterize the content of each document, is
+    to detecting the topics that span the meaning of each document. The process of
+    extracting and learning latent topics, which are observing hidden thematic information
+    across a corpus, is termed topic modeling.
+
+
+    Topic models are based on the following: (i) each topic is a collection of words,
+    and (ii) each document can be represented as a mixture of topics.
+
+
+    Document clustering identifies the groups of documents in a corpus that belong
+    to the same theme or related subjects are grouped in the same group. We demonstrate
+    that clustering and clustering are closely related, topic modeling can
+
+
+    +   The main contributions of our paper are:
+
+    - SeNMF, a robust semantic nonnegative matrix factorization in finding the latent
+    number of topics.
+
+    - We derive the multiple layers for NMF with KL divergence with semantic regularization.
+
+
+    > *These authors have equal contribution
+
+    ‡Correspondence: bolan@lnl.gov'
+  - '[PAGE 1]
+
+
+    • We demonstrate that SenMFX can accurately determine the latent model of topics
+    in text corpora.
+
+
+    • We show that the coupled factorization of word-count matrix and TF-IDF representation
+    of the corpus integrated with the statistical support of SenMFX produces high
+    quality topics and accurate document clustering among a number of benchmark datasets.
+
+
+    The paper is organized as follows. Section II discusses related work. Section
+    III describes SenMFX. Section IV evaluates our approach on five benchmark datasets.
+    Finally, Section V presents our conclusions.
+
+
+    # II. RELATED WORK
+
+
+    # A. Topic Modeling
+
+
+    There are a number of topic modeling methods: Latent Semantic Analysis (LSA) [2],
+    Probabilistic LSA) [3], Latent Dirichlet Allocation (LDA) [4] and Nonnegative
+    Matrix Factorization (NMF) [5]. Of these methods, LDA follows a probabilistic
+    model, where the model assumes a set of topics follows a Dirichlet distribution.
+    NMF follows a linear model which decomposes the corpus using bag-of-words (BoW)
+    or TF-IDF of the text corpus. NMF performs factorization similar to similarity
+    using singular value decomposition (SVD) for topic representation, which is unsuitable
+    and unnatural for topics. The large differences between the two approaches (probabilistic
+    and factorizer-based) are significant concerns. Thus, NMF and LDA with KL-divergence
+    constraints lead to a generative model [6], which is equivalent to LDA under a
+    Dirichlet prior.
+
+
+    There are many methods within the NMF family, such as OTUPAN [9] which uses semi-supervised
+    learning for users who can integrate the NMF algorithm with priors. Other methods
+    [10] use the discovery and constrain topics for understanding of large documents.
+    A limitation of the classical NMF approaches is its inability to integrate the
+    semantics of words, for example, word embeddings [11], which have been widely
+    used in deep learning. In [12] they show that word embeddings are equivalent to
+    factoring word-co-occurrence matrix.
+
+
+    Work in [13] incorporates SenMFX through the Shifted Point Matrix Factorization
+    (SPFM) topic models. A similar approach [14] simultaneously decomposes topics
+    using tri-factorization for topic modeling in short texts. Recently, in [15] NMF
+    was applied to short texts, where word-context semantic correlations help learning
+    the relationships between words and contexts in a corpus. All semantic-supervised
+    NMF methods demonstrate an excellent coverage of the extracted topics and high
+    quality document clusters, but they require the number of latent topics, k, as
+    a prior. In fact, identifying the number of latent topics is a challenging task
+    for all topic models.
+
+
+    the potential to extend (from [16]) to other application domains such as security.
+
+
+    # B. Model Determination
+
+
+    Several heuristics help to determine the number of topics. Some of them are based
+    on a measure of the quality of the topics as topics. One of the first metrics
+    is to estimate the topic quality perplexity [4], which counts how well a probability
+    model predicts a held-out test set. Unfortunately, perplexity does not reflect
+    the semantic content of a topic [17], and a new metric, coherence L-was proposed
+    for the evaluation of different topics. Another approach, Hierarchical Topic Attention
+    (HLTA) [19]. LDA also uses coherence of high-order co-occurrence patterns to determine
+    the most coherent topics and the hierarchical structures that lead to a number
+    of topics.
+
+
+    Most of the NMF methods explore various numbers of topics ($k_{max}$) and then
+    using some to choose an optimal k. One of the first methods used for estimation
+    of the latent density is the L-curve method [20], which represents between the
+    balance of the minimization and the number of latent factors. The L-curve method,
+    however, does not perform well in the case where it is not clear. Another used
+    method is the automatic relevance difference (ARD), originally introduced for
+    neural networks by [21] and for adaptive interpretation of NMF by Feve and Tan
+    [22].
+
+
+    Other methods investigate the clusters in the input matrix. Method proposed by
+    Brun et al. [23] relies on the stability of the NMF solutions obtained from random
+    initializations to consider each k. In this method, the stability of NMF solutions
+    is measured using clustering and to determine the number of clusters in X. Generally,
+    Green et al. [24] proposed a term-centric stability approach based on the agreement
+    between the rankings generated by multiple NMF solutions. In the non-negative
+    NMF, the stability of the approach shows low significance. Thus their stability
+    can be used to select the topics used by NMF.
+
+
+    In these approaches, SenMFX is mentioned and uses the ideas of a recent method
+    called NMF for the estimation of the latent topics. SenMFX was used to decompose
+    the biggest collection of human cancer out-of-factor corpus [30]. Freeman [33-34],
+    NMF creates an set of random matrices on the input, on it permits the clustering
+    results of the extracted latent features. The latent dimension k is determined
+    based on the quality of the clusters and'
+  md: '
+
+    # Semantic Nonnegative Matrix Factorization with Automatic Mode Determination
+    for Topic Modeling
+
+
+    Ravitija Vanga*
+
+
+    *Division, Los Alamos National Laboratory, Los Alamos, NM 77545, USA.
+
+    †Analytics, Intelligence and Technology Division, Los Alamos National Laboratory,
+    Los Alamos, NM 77545, USA.
+
+    ‡Department of Science Engineering, University of Maryland, College Park, MD,
+    20742
+
+
+    **Abstract—** Nonnegative Matrix Factorization (NMF) models the topics of a text
+    by decomposing its term-frequency (TF-IDF) representation, X, into two low-rank
+    nonnegative matrices: W, representing the topics and H, mapping the documents
+    to topics. One challenge, common to all topic models, is the determination of
+    the number of topics. The correct number of topics is important: underestimating
+    leads to poor topic separation, overestimating to overlapping topics. Here, we
+    introduce SeNMF, a semantic-based NMF topic modeling method that incorporates
+    semantic information to guide the determination of the number of topics. SeNMF
+    creates a random ensemble of matrices based on TF-IDF coupled factorization to
+    acquire stable coherent topics that are robust to noise. Topic determination is
+    based on the stability of these topics. We show that SeNMF accurately determines
+    the number of topics in various text corpora, compared to other works.
+
+    **Index Terms—** NMF, Topic models, document clustering, NLF
+
+
+    be seen as dense reduction performed by mapping the documents to the much smaller
+    space. In this case, by clustering the coordinates of each topic in the topics
+    space, we can derive groups of documents related to some theme, and that is, to
+    perform clustering. This is a key challenge in topic-modeling: the determination
+    of the latent dimension of the corpus. The determination of the correct latent
+    dimension is important for meaningful analysis of the corpus, as underestimating
+    the number of topics results in poor topic separation, overestimating to overlapping
+    topics.
+
+
+    In this paper, we introduce a new method for topic modeling, SeNMF which utilizes
+    the utilization of the Nonnegative Matrix Factorization (NMF) based on Kullback-Leibler
+    divergence (KL) to: (a) it takes into account the coupled term-frequency (TF-IDF)
+    representation of the corpus, X, and context matrix, M; and (b) using custom resampling
+    to determine the latent dimension. Specifically, based on the TF-IDF and word-context
+    matrices, X and M, by adding a small noise, ε, to create two noisy versions X''
+    and M'', where X''=X+ε and M''=M+ε. SeNMF performs a coupled factorization to
+    each of these pairs to acquire sets of topics into some accurate clustering. We
+    determine the latent dimension based on the stability of the resulting topics.
+    We show that SeNMF can identify the correct number of topics with a benchmark
+    compare, and perform as well as state-of-the-art techniques. Finally, we cluster
+    the results of each document in the space (obtained by the coupled factorization)
+    and identify the groups of documents related to some theme. We observe that the
+    number of groups is not always the same as the number of extracted topics, but
+    they present meaningful document clusters.
+
+
+    # I. INTRODUCTION
+
+
+    With the massive growth of digital content in the world of news articles, social
+    media,ic messages, and other textual data, keeping the relevant information from
+    noise is a double challenge. To extract and extract rich information from large
+    corpora, we need to automatically characterize the content of each document, is
+    to detecting the topics that span the meaning of each document. The process of
+    extracting and learning latent topics, which are observing hidden thematic information
+    across a corpus, is termed topic modeling.
+
+
+    Topic models are based on the following: (i) each topic is a collection of words,
+    and (ii) each document can be represented as a mixture of topics.
+
+
+    Document clustering identifies the groups of documents in a corpus that belong
+    to the same theme or related subjects are grouped in the same group. We demonstrate
+    that clustering and clustering are closely related, topic modeling can
+
+
+    + The main contributions of our paper are:
+
+    - SeNMF, a robust semantic nonnegative matrix factorization in finding the latent
+    number of topics.
+
+    - We derive the multiple layers for NMF with KL divergence with semantic regularization.
+
+
+    > *These authors have equal contribution
+
+    ‡Correspondence: bolan@lnl.gov
+
+
+    • We demonstrate that SeNMFX can accurately determine the latent model of topics
+    in text corpora.
+
+
+    • We show that the coupled factorization of word-count matrix and TF-IDF representation
+    of the corpus integrated with the statistical support of SenMFX produces high
+    quality topics and accurate document clustering among a number of benchmark datasets.
+
+
+    The paper is organized as follows. Section II discusses related work. Section
+    III describes SeNMF. Section IV evaluates our approach on five benchmark datasets.
+    Finally, Section V presents our conclusions.
+
+
+    # II. RELATED WORK
+
+
+    # A. Topic Modeling
+
+
+    There are a number of topic modeling methods: Latent Semantic Analysis (LSA) [2],
+    Probabilistic LSA) [3], Latent Dirichlet Allocation (LDA) [4] and Nonnegative
+    Matrix Factorization (NMF) [5]. Of these methods, LDA follows a probabilistic
+    model, where the model assumes a set of topics follows a Dirichlet distribution.
+    NMF follows a linear model which decomposes the corpus using bag-of-words (BoW)
+    or TF-IDF of the text corpus. NMF performs factorization similar to similarity
+    using singular value decomposition (SVD) for topic representation, which is unsuitable
+    and unnatural for topics. The large differences between the two approaches (probabilistic
+    and factorizer-based) are significant concerns. Thus, NMF and LDA with KL-divergence
+    constraints lead to a generative model [6], which is equivalent to LDA under a
+    Dirichlet prior.
+
+
+    There are many methods within the NMF family, such as UPN [9] which uses semi-supervised
+    learning for users who can integrate the NMF algorithm with priors. Other methods
+    [10] use the discovery and constrain topics.
+
+
+    # B. Model Determination
+
+
+    Several heuristics help to determine the number of topics. Some of them are based
+    on a measure of the quality of the topics. One of the first metrics is to estimate
+    the quality perplexity [4], which counts how well a probability model predicts
+    a held-out test set. Unfortunately, perplexity does not reflect the semantic content
+    of a topic [17], and a new metric, coherence-was proposed for the evaluation of
+    topics.
+
+    '
+  mdcn: '
+
+
+    # 用于主题建模的自动模式确定的语义非负矩阵分解
+
+
+    Ravitija Vanga*
+
+
+    *美国洛斯阿拉莫国家实验室，Los Alamos, NM 77545。
+
+    †美国洛斯阿拉莫国家实验室分析、智能与技术部门，Los Alamos, NM 77545。
+
+    ‡马里兰大学大学城帕克分校，科学工程系，College Park, MD, 20742
+
+
+    **摘要—** 非负矩阵分解（NMF）通过将文本的词频（TF-IDF）表示 $X$ 分解为两个低秩非负矩阵对文本主题建模：其中 $W$ 代表主题，$H$ 将文档映射到主题。所有主题模型共同面临的挑战之一是确定主题的数量。正确的主题数量非常重要：低估计会导致主题分离度差，高估计则会导致主题重叠。在这里，我们介绍了
+    SeNMF，一种基于语义的 NMF 主题建模方法，该方法结合了语义信息来指导主题数量的确定。SeNMF 基于 TF-IDF 耦合分解创建随机矩阵系，以获取对噪声鲁棒的稳定相干主题。主题的确定基于这些主题的稳定性。我们证明了与其它工作相比，SeNMF
+    能够在各种文本语料库中准确地确定主题数量。
+
+    **索引术—** NMF、主题模型、文档聚类、NLF
+
+
+    被视为通过将文档映射到小得多的的空间执行的密集降维。在这种情况下，通过对主题空间中每个主题的坐标进行聚类，我们可以导出与某些主题相关的文档组，即进行聚类。这是主题建模中的一个关键挑战：确定语料库的隐维度。确定正确的隐维度对于语料库的有意义的分析至关重要，因为低估计主题数量会导致主题分离度差，高估计会导致主题重叠。
+
+
+    在本文中，我们引入了一种新的主题建模方法 SeNMF，它利用基于库尔巴贝克-莱布勒散度（KL）的非负矩阵分解（NMF）来实现：(a) 考虑了语料库的耦合词频（TF-IDF）表示
+    $X$ 和上上下文矩阵 $M$；以及 (b) 使用自定义重采样来确定隐维度。具体而言，基于 TF-IDF 和词汇-上下文矩阵 $X$ 和 $M$，通过添加微小噪声
+    $\epsilon$ 创建两个噪声版本 $X''$ 和 $M''$，其中 $X''=X+\epsilon$ 且 $M''=M+\epsilon$。SeNMF
+    对这些对中的每一对执行耦合分解，以获得准确聚类的主题集。我们根据生成主题的稳定性来确定隐维度。我们证明了 SeNMF 能够在基准比较中识别正确的主题数量，并与最先进的技术相当。最后，我们对空间中（通过耦合分解获得）的每个文档结果进行聚类，并识别与某些主题相关的文档组。我们观察到，组的数量并不总是与提取的主题数量相同，但它们呈现了有意义的文档聚类。
+
+
+    # I. 引言
+
+
+    随着世界新闻文章、社交媒体、信息消息和其他文本数据数字内容的海量增长，从噪声中保留相关信息是一项双重挑战。为了从大型语料库中提取并提取丰富信息，我们需要自动表征每个文档的内容，即检测跨越每个文档含义的主题。提取和学习隐主题的过程（即观察跨越语料库的隐藏主题信息）被称为主题建模。
+
+
+    主题模型基于以下原理：(i) 每个主题都是词汇的集合，且 (ii) 每个文档都可以表示为主题的混合。
+
+
+    文档聚类识别语料库中属于同一主题或相关主题的文档组，并将它们归为一类。我们证明了聚类和聚类之间紧密相关，主题建模可以
+
+
+    + 本文的主要贡献有：
+
+    - SeNMF，一种用于寻找隐主题数量的鲁棒语义非负矩阵分解方法。
+
+    - 我们推导了带有语义正则化的 KL 散度 NMF 多层。
+
+
+    > *这些作者具有同等贡献
+
+    ‡通讯：bolan@lnl.gov
+
+
+    • 我们证明了 SeNMF 能够准确确定文本语料库的主题模型。
+
+
+    • 我们证明了单词矩阵与语料库 TF-IDF 表示的耦合分解结合统计支持，可以在基准数据集上产生高质量的主题和准确的文档聚类。
+
+
+    本文结构如下：第二节讨论相关工作。第三节介绍 SeNMF。第四节在五个基准数据集上对我们的方法进行评估。最后，第五节给出结论。
+
+
+    # II. 相关工作
+
+
+    # A. 主题建模
+
+
+    有很多主题建模方法：潜在语义分析（LSA）[2]、概率 LSA [3]、潜在狄利克分配（LDA）[4] 和非负矩阵分解（NMF）[5]。在这些方法中，LDA
+    遵循概率模型，该模型假设一组主题遵循狄利克分布。NMF 遵循线性模型，使用词袋（BoW）或 TF-IDF 分解文本语料库。NMF 使用类似于奇异值分解（SVD）的相似性进行主题表示，这对于主题来说是不适用且不自然的。这两种方法（概率的和基于分解的）之间的巨大差异是一个关注点。因此，带有
+    KL 散度约束的 NMF 和 LDA 引向了一个生成模型 [6]，该模型在狄利克先验下等同于 LDA。
+
+
+    NMF 家族有很多方法，例如用于集成 NMF 算法与先验 UPN [9]。其他方法 [10] 用于发现和约束主题。
+
+
+    # B. 模型确定
+
+
+    若干启发式方法有助于确定主题数量。其中一些基于主题质量的衡量。最早的指标之一是估计质量困惑度 [4]，它衡量概率模型预测留出测试集的效果。遗憾的是，困惑度不能反映主题的语义内容
+    [17]，并提出了一种新的指标——相干性，用于评估主题。
+
+
+    '
+  merge: -1
+- raw:
+  - "[PAGE 2]\n\n![](img/25cc2976511492602032e3cc24aa97aa_2_0.png)\n\n![](img/25cc2976511492602032e3cc24aa97aa_2_1.png)\n\
+    \n![](img/25cc2976511492602032e3cc24aa97aa_2_2.png)\n\n![](img/25cc2976511492602032e3cc24aa97aa_2_3.png)\n\
+    \n![](img/25cc2976511492602032e3cc24aa97aa_2_4.png)\n\n![](img/25cc2976511492602032e3cc24aa97aa_2_5.png)\n\
+    \n![](img/25cc2976511492602032e3cc24aa97aa_2_6.png)\n\n![](img/25cc2976511492602032e3cc24aa97aa_2_7.png)\n\
+    \n![](img/25cc2976511492602032e3cc24aa97aa_2_8.png)\n\n![](img/25cc2976511492602032e3cc24aa97aa_2_9.png)\n\
+    \n![](img/25cc2976511492602032e3cc24aa97aa_2_10.png)\n\nFig. 1: SNMF integrates\
+    \ (assembling), SNMF factorization and custom clustering for determination of\
+    \ latent topics (latent dimension k).\n\nFig. 2: SNMF uses input a TF-IDF matrix,\
+    \ X, and a SPMF matrix, M. It computes W, and H by minimizing an objective function\
+    \ that consists of (a) NMF with KL divergence (term) and (b) a SPMF regularization\
+    \ term (metric). The output includes W (topics), which can be combined to reproduce\
+    \ each document, using coefficients from H, as well as context-term matrices from\
+    \ M.\n\nthe accuracy of minimization. SNMF integrates minimization, clustering,\
+    \ and Silhouette statistics [35].\n\n```\n$D_{KL}(X||Y) = \\sum_{i,j} X_{ij} \\\
+    log\\frac{X_{ij}}{Y_{ij}} - Y_{ij}}$\n```\n\n# III. METHOD – SNMF\n\nHere we describe\
+    \ our SNMF model with further details, SNMF [6]. It includes: (1) assembling of\
+    \ pairs of TF-IDF and SPMF matrices, by applying random perturbations of the initial\
+    \ TF-IDF matrix, X, and SPMF matrix, M; (2) for each ensemble and number of topics,\
+    \ $k$, running SNMF clustered with KL-divergence and regularization terms to account\
+    \ for the semantic information of the matrices; (3) clustering the extracted set\
+    \ of latent topics in order to derive the final topics, W, and using the statistics\
+    \ of the clusters to estimate their stability; (5) determining the latest latent\
+    \ dimension, and (6) using the Silhouette index and results of the clustering\
+    \ to determine the document matrix, H, to find the document-term relationships.\
+    \ We then describe the following steps:\n\nthe co-occurrence matrix represents\
+    \ words as a vector that contains the frequencies of appearance of each word.\
+    \ Each of the co-occurrence matrix represents the number of times two words (i,\
+    \ j) occur in a predefined window (e.g., +/-5 words). This window contains the\
+    \ words. It has been demonstrated that word and context embeddings can be built\
+    \ by factoring the SPMF word-context matrix, $M$ [12]. The cells of the co-occurrence\
+    \ matrix contain the point-wise mutual information (PMI) defined by (denoted by\
+    \ log) PMI to guarantee non-negativity. Mathematically, PMI is defined as:\n\n\
+    # A. SNMF Semantic assisted with KL-Divergence\n\n```\n$PMI(i, j) = \\log\\frac{c_{ij}}{\\\
+    sum_{k} c_{ik} \\sum_{k} c_{kj}} (2)$\n```\n\nIn this section, we discuss the\
+    \ regularized SNMF, which is shown in Fig. 2. Our NMF approximates the TF-IDF\
+    \ representation of a non-negative document matrix, $X \\in \\mathbb{R}^{n \\\
+    times m}$ (n documents and m terms), by product of two low-rank matrices, $W \\\
+    in \\mathbb{R}^{n \times k}$ and $H \\in \\mathbb{R}^{k \\times m}$. The $k$ columns\
+    \ of $W$ represent the extracted latent topics, while each of the $k$ columns\
+    \ of $H$ provide the document-term representation. For document-term matrices,\
+    \ a Poisson noise model is appropriate, so approximation is computed using\n\n\
+    the point-wise mutual information and can be calculated from the co-occurrence\
+    \ matrix. PMI explains how the words $i$ and $j$ co-occur, relative to their independent\
+    \ occurrences. For expression for PMI,\n\nin order to account for semantic relationships\
+    \ among the words, we utilized a fooled factorization of the TF-IDF representation\
+    \ of the corpus, X, and the SPMF word-context matrix, M. Specifically, our SNMF\
+    \ uses an NMF with KL-divergence and a regularization term, so we:\n\n```\n$$\\\
+    min_{W,H \\ge 0} D_{KL}(X||WH)$\n```\n\n```\n$$\\min_{W,H \\ge 0} D_{KL}(X||WH)\
+    \ + \\frac{\\lambda}{2} ||M - SW||^2 (3)$\n```\n\nminimization,\n\n330"
+  - "[PAGE 3]\n\n$M \\in \\mathbb{R}^{m \times n}, S \\in \\mathbb{R}^{k \times k}$\
+    \ are non-negative matrices. This semantic regularization $\\alpha \\in \\mathbb{R}_+$\
+    \ is a regularization parameter. Introduced in [13], involves coupled factorization\
+    \ of $M$ and $X$ with a common factor $S$.\n\nTo solve the SeNMF optimization\
+    \ problem in Eq. 3 we incorporate the SPPM regularization into the multiplicative\
+    \ updates for NMF first in [36]. Multiplicative updates can be derived using the\
+    \ augmented Lagrangian. $L(W, H, \\Lambda_W, \\Lambda_H, \\Lambda_S)$, as for\
+    \ Eq. 3 is given by\n\n```\n$L = D_k(X||WH) + \\frac{\\lambda}{2} ||M - W^T S\
+    \ W||^2 +\\\nsum_{i=1}^m \\sum_{j=1}^n (Lambda_{W,ij}) + \\sum_{i=1}^m \\sum_{j=1}^n\
+    \ (Lambda_{H,ij}) + \\sum_{i=1}^k \\sum_{j=1}^k (Lambda_{S})_{ij}$\n```\n\nwhere\
+    \ $\\Lambda_W, \\Lambda_H, \\Lambda_S$ are the Lagrange variables for the constraints\
+    \ on $W, H,$ and $S$. The derivatives of $L$ with respect to $W_{ij}, H_{ij},$\
+    \ and $S_{ij}$ are as\n\n```\n$$\\frac{\\partial L}{\\partial W_{ij}} = -(H^T)_{ij}\
+    \ + \\frac{X_{ij} - (WH)_{ij}}{W_{ij}}H_{ij} + (W^T S W)_{ij} - (MSW)_{ij} + \\\
+    Lambda_{W,ij}$\n```\n\n```\n$$\\frac{\\partial L}{\\partial H_{ij}} = -(W^T)_{ij}\
+    \ + \\frac{X_{ij} - (WH)_{ij}}{H_{ij}}W_{ij} + (W^T SW)_{ij} + \\Lambda_{H,ij}$\n\
+    ```\n\n```\n$$\\frac{\\partial L}{\\partial S_{ij}} = -(W^TW)_{ij} + (W^TSW)_{ij}\
+    \ + \\Lambda_{S,ij}$\n```\n\nFrom the derivatives, we obtain multiplicative updates\
+    \ that prevent non-negativity of variables\n\n```\n$W_{i,\\\\cdot} \\leftarrow\
+    \ W_{i,\\\\cdot} \\frac{(X^T H)_{i,\\cdot} + (H^T S W)_{i,\\cdot}}{(H^T H + S\
+    \ W)_{i,\\cdot}}$\n```\n\n```\n$H_{\\cdot,j} \\leftarrow H_{\\cdot,j} \\frac{(W^T\
+    \ X)_{\\cdot,j} + (W^T S W)_{\\cdot,j}}{(W^T W + S)_{\\cdot,j}}$\n```\n\n```\n\
+    $S_{ij} \\leftarrow S_{ij} \\frac{(W^T X)_{ij}}{(W^T S W)_{ij}}$\n```\n\nWith\
+    \ a fixed SeNMF, we have many multiplicative updates that use rules. From our\
+    \ experiments (see Section IV-D) that the objective function, J, is non-increasing\
+    \ with the ability to converge to a local optimum. Fig. 2 shows the benefit of\
+    \ mixing both the term-document matrix and the word-context matrix to improve\
+    \ the objective function.\n\n# B. Semantic NMF with model selection\n\nSeNMF integrates\
+    \ regularization, SeNMF, and clustering to determine the number of latent factors.\
+    \ Figure 1 illustrates the different steps of SeNMF. The SeNMF algorithm is presented\
+    \ in Algorithm 1. Our approach is iterative. First we a random ensemble of the\n\
+    \nmatrices through resampling. Specifically, we resample the TF-IDF representation\
+    \ of the input X and content matrix $M$ using random noise. That is, $X=\\{X^{(1)},...^{(l)}\\\
+    }$ with element-wise noise means that $X$ and similarly $M=\\{M^{(1)},M^{(l)}\\\
+    }$ with generic means. We factorize each $X^{(l)},M^{(l)},S^{(l)}$ using SeNMF\
+    \ by resampling $l$ times latent factors, $k$, $(1,K_{max})$. To determine the\
+    \ number of latent factors and to stabilize clusters that are robust, we implement\
+    \ clustering on the clusters found by SeNMF for each $k$. We choose the set of\
+    \ latent factors $W, H, S$ that are obtained after resampling $l$ versions of\
+    \ $X$ and $M$, as shown in Algorithm 1.\n\n+   Algorithm 1 SeNMF Clustering\n\
+    Require: $X \\in \\mathbb{R}^{m \times n}$, $M \\in \\mathbb{R}^{m \times n}$,\
+    \ $k \\in \\mathbb{R}$, $k_{max} \\in \\mathbb{R}$\nDo:\n1. for $k$ in 1 to $k_{max}$\
+    \ do\n2. for $l$ in 1 to $l$ do\n3. $X',M'=Perturb(X,M)$ $\\leftarrow$ Creation\
+    \ of\n4. $W=$ solution at $q^{th}$ member of the ensemble,$H,S=$ SeNMF$(X',M',k')$\n\
+    5. for\n6. $W=$cluster(W,H,S)$ $\\leftarrow$ Clustering of\n7. factors\n8. $W=$median(W)$\
+    \ $\\leftarrow$ Median W $k$ clusters\n9. $H=$getcluster(W,H)$ $\\leftarrow$ inherits\
+    \ $H$ clusters\n10. Column-wise error\n11. $s_k=Silhouette^*(W)$ $\\leftarrow$\
+    \ Silhouette score of clusters\nend $[k_{min},k_{max}]$\nEnsure: $k=opt\\{s_k\\\
+    }, W[k] \\in \\in \\mathbb{R}^{m \times k}, H \\in \\mathbb{R}^{k \times n}, X\
+    \ \\approx W[k][H]$\n\nOur clustering method is similar with a key difference\
+    \ that each of the clusters must contain at least one member of the columns of\
+    \ clusters. If the number of latent factors is $k$, then this is clustering. If\
+    \ we have resampling $l$ members, then each of the clusters will have $r$ elements\
+    \ (columns). We employ the cluster distance as our distance metric. We analyze\
+    \ the stability of the latent factors using Silhouette for each $k$. Silhouette\
+    \ estimates the cohesion of the clusters (how compact they are) and the separation\
+    \ as a measure of the stability of the clusters. The values of the Silhouette\
+    \ are between $[-1,1]$, where -1 means a bad cluster, while one means a perfect\
+    \ cluster.\n\nAnother method we use is the relative reconstruction error. We use\
+    \ the medians of the clusters, $W$, as our final"
+  md: '
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_2_0.png)
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_2_1.png)
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_2_2.png)
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_2_3.png)
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_2_4.png)
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_2_5.png)
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_2_6.png)
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_2_7.png)
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_2_8.png)
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_2_9.png)
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_2_10.png)
+
+
+    Fig. 1: SNMF integrates (assembling), SNMF factorization and custom clustering
+    for determination of latent topics (latent dimension k).
+
+
+    Fig. 2: SNMF uses input a TF-IDF matrix, X, and a SPMF matrix, M. It computes
+    W, and H by minimizing an objective function that consists of (a) NMF with KL
+    divergence (term) and (b) a SPMF regularization term (metric). The output includes
+    W (topics), which can be combined to reproduce each document, using coefficients
+    from H, as well as context-term matrices from M.
+
+
+    the accuracy of minimization. SNMF integrates minimization, clustering, and Silhouette
+    statistics [35].
+
+
+    $$$D_{KL}(X||Y) = \sum_{i,j} X_{ij} \log\frac{X_{ij}}{Y_{ij}} - Y_{ij}}$$
+
+
+    ## III. METHOD – SNMF
+
+
+    Here we describe our SNMF model with further details, SNMF [6]. It includes:
+
+    (1) assembling of pairs of TF-IDF and SPMF matrices, by applying random perturbations
+    of the initial TF-IDF matrix, X, and SPMF matrix, M;
+
+    (2) for each ensemble and number of topics, $k$, running SNMF clustered with KL-divergence
+    and regularization terms to account for the semantic information of the matrices;
+
+    (3) clustering the extracted set of latent topics in order to derive the final
+    topics, W, and using the statistics of the clusters to estimate their stability;
+
+    (5) determining the latest latent dimension, and (6) using the Silhouette index
+    and results of the clustering to determine the document matrix, H, to find the
+    document-term relationships. We then describe the following steps:
+
+
+    the co-occurrence matrix represents words as a vector that contains the frequencies
+    of appearance of each word. Each of the co-occurrence matrix represents the number
+    of times two words (i, j) occur in a predefined window (e.g., +/-5 words). This
+    window contains the words. It has been demonstrated that word and context embeddings
+    can be built by factoring the SPMF word-context matrix, $M$ [12]. The cells of
+    the co-occurrence matrix contain the point-wise mutual information (PMI) defined
+    by (denoted by log) PMI to guarantee non-negativity. Mathematically, PMI is defined
+    as:
+
+
+    ### A. SNMF Semantic assisted with KL-Divergence
+
+
+    $$$PMI(i, j) = \log\frac{c_{ij}}{\sum_{k} c_{ik} \sum_{k} c_{kj}} (2)$$
+
+
+    In this section, we discuss the regularized SNMF, which is shown in Fig. 2. Our
+    NMF approximates the TF-IDF representation of a non-negative document matrix,
+    $X \in \mathbb{R}^{n \times m}$ (n documents and m terms), by product of two low-rank
+    matrices, $W \in \mathbb{R}^{n \times k}$ and $H \in \mathbb{R}^{k \times m}$.
+    The $k$ columns of $W$ represent the extracted latent topics, while each of the
+    $k$ columns of $H$ provide the document-term representation. For document-term
+    matrices, a Poisson noise model is appropriate, so approximation is computed using
+
+
+    the point-wise mutual information and can be calculated from the co-occurrence
+    matrix. PMI explains how the words $i$ and $j$ co-occur, relative to their independent
+    occurrences. For expression for PMI,
+
+
+    in order to account for semantic relationships among the words, we utilized a
+    fooled factorization of the TF-IDF representation of the corpus, X, and the SPMF
+    word-context matrix, M. Specifically, our SNMF uses an NMF with KL-divergence
+    and a regularization term, so we:
+
+
+    $$\ \min_{W,H \ge 0} D_{KL}(X||WH)$$
+
+
+    $$\ \min_{W,H \ge 0} D_{KL}(X||WH) + \frac{\lambda}{2} ||M - SW||^2$$
+
+
+    minimization, 330
+
+
+    $M \in \mathbb{R}^{m \times n}, S \in \mathbb{R}^{k \times k}$ are non-negative
+    matrices. This semantic regularization $\lambda \in \mathbb{R}_+$ is a regularization
+    parameter. Introduced in [13], involves coupled factorization of $M$ and $X$ with
+    a common factor $S$.
+
+
+    To solve the SNMF optimization problem in Eq. 3 we incorporate the SPM regularization
+    into multiplicative updates for NMF first in [36]. Multiplicative updates can
+    be derived using the augmented Lagrangian $L(W, H, \Lambda_W, \Lambda_S)$, as
+    for Eq. 3 is given by
+
+
+    $$L = D(X||WH) + \frac{\lambda}{2} ||M - W^T S||^2 +\sum_{i=1}^m \sum_{j=1}^n
+    (\Lambda_{W,ij}) + \sum_{i=1}^m \sum_{j=1}^n (\Lambda_{H,ij}) + \sum_{i=1}^k \sum_{j=1}^k
+    (\Lambda_{S,ij})$$
+
+
+    where $\Lambda_W, \Lambda_H, \Lambda_S$ are Lagrange variables for constraints
+    on $W, H,$ and $S$. The derivatives of $L$ with respect to $W_{ij}, H_{ij},$ and
+    $S_{ij}$ are as
+
+
+    $$\frac{\partial L}{\partial W_{ij}} = -(H^T)_{ij} + \frac{X_{ij} - (WH)_{ij}}{W_{ij}}
+    + (W^T S)_{ij} - \Lambda_{W,ij}}$$
+
+
+    $$\frac{\partial L}{\partial H_{ij}} = -(W^T)_{ij} + \frac{X_{ij} - (WH)_{ij}}{H_{ij}}
+    + (W^T S)_{ij} + \Lambda_{H,ij}}$$
+
+
+    $$\frac{\partial L}{\partial S_{ij}} = -(W^T)_{ij} + (W^TSW)_{ij} + \Lambda_{S,ij}}$$
+
+
+    From the derivatives, we obtain multiplicative updates that prevent non-negativity
+    of variables
+
+
+    $$W_{i,\cdot} \leftarrow W_{i,\cdot} \frac{(X^T H)_{i,\cdot} + (H^T S)_{i,\cdot}}{(H^T
+    H + S W)_{i,\cdot}}$$
+
+
+    $$H_{\cdot,j} \leftarrow H_{\cdot,j} \frac{(W^T X)_{\cdot,j} + (W^T S)_{\cdot,j}}{(W^T
+    W + S)_{\cdot,j}}$$
+
+
+    $$S_{ij} \leftarrow S_{ij} \frac{(W^T X)_{ij}}{(W^T S)_{ij}}$$
+
+
+    With a fixed SNMF, we have many multiplicative updates that use rules. From our
+    experiments (see IV-D) that the objective function, $J$, is non-increasing with
+    the ability to converge to a local optimum. Fig. 2 shows the benefit of mixing
+    both the term-document matrix and word-context matrix to improve the objective
+    function.
+
+
+    ### B. Semantic NMF with model selection
+
+
+    SNMF integrates regularization, SNMF, and clustering to determine the number of
+    latent factors. Figure 1 illustrates the different steps of SNMF. The SNMF algorithm
+    is presented in Algorithm 1. Our approach is iterative. First we create a random
+    ensemble of the matrices through resampling. Specifically, we resample the TF-IDF
+    representation of the input X and content matrix $M$ using random noise. That
+    is, $X=\{X^{(1)},...^{(l)}\}$ with element-wise noise means that $X$ and similarly
+    $M=\{M^{(1)},M^{(l)}\}$ with generic means. We factorize each $X^{(l)},M^{(l)},S^{(l)}$
+    using SNMF by resampling $l$ times latent factors, $k$, $(1,K_{max})$. To determine
+    the number of latent factors and to stabilize clusters that are robust, we implement
+    clustering on clusters found by SNMF for each $k$. We choose the set of latent
+    factors $W, H, S$ that are obtained after resampling $l$ versions of $X$ and $M$,
+    as shown in Algorithm 1.
+
+
+    | Algorithm 1 SNMF Clustering |
+
+    | :--- |
+
+    | **Require:** $X \in \mathbb{R}^{m \times n}, M \in \mathbb{R}^{m \times n},
+    k \in \mathbb{R}, k_{max} \in \mathbb{R}$ |
+
+    | **Do:** |
+
+    | 1. for $k$ in 1 to $k_{max}$ do |
+
+    | 2. for $l$ in 1 to $l$ do |
+
+    | 3. $X'',M''=Perturb(X,M)$ $\leftarrow$ Creation of factors |
+
+    | 4. $W=$ solution at $q^{th}$ member of the ensemble,$H,S=$ SNMF$(X'',M'',k'')$
+    |
+
+    | 5. for |
+
+    | 6. $W=$cluster(W,H,S)$ $\leftarrow$ Clustering of factors |
+
+    | 7. $W=$median(W)$ $\leftarrow$ Median $W$ $k$ clusters |
+
+    | 8. $H=$getcluster(W,H)$ $\leftarrow$ inherits $H$ clusters |
+
+    | 9. Column-wise error |
+
+    | 10. $s_k=Silhouette^*(W)$ $\leftarrow$ Silhouette score of clusters |
+
+    | end $[k_{min},k_{max}]$ |
+
+    | **Ensure:** $k=opt\{s_k\}, W[k] \in \mathbb{R}^{m \times k}, H \in \mathbb{R}^{k
+    \times n}, X \approx W[k][H]$ |
+
+
+    Another method we use is the relative reconstruction error. We use the medians
+    of the clusters, $W$, as our final
+
+    '
+  mdcn: '
+
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_2_0.png)
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_2_1.png)
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_2_2.png)
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_2_3.png)
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_2_4.png)
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_2_5.png)
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_2_6.png)
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_2_7.png)
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_2_8.png)
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_2_9.png)
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_2_10.png)
+
+
+    图 1：SNMF 集成了（组装）、SNMF 分解和自定义聚类，用于确定潜在主题（潜在维度 k）。
+
+
+    图 2：SNMF 使用输入的 TF-IDF 矩阵 $X$ 和 SPMF 矩阵 $M$。它通过最小化目标函数来计算 $W$ 和 $H$，该函数由 (a) 带有
+    KL 散度（项）的 NMF 和 (b) SPMF 正则项（指标）组成。输出包括 $W$（主题），可以使用来自 $H$ 的系数结合重现每个文档，以及来自 $M$
+    的上下文-词项矩阵。
+
+
+    最小化的准确性。SNMF 集成了最小化、聚类和轮廓系数统计 [35]。
+
+
+    $$$$D_{KL}(X||Y) = \sum_{i,j} X_{ij} \log\frac{X_{ij}}{Y_{ij}} - Y_{ij}}$$
+
+
+    ## III. 方法论 – SNMF
+
+
+    在这里我们详细描述我们的 SNMF 模型及其细节 [6]。它包括：
+
+    (1) 通过对初始 TF-IDF 矩阵 $X$ 和 SPMF 矩阵 $M$ 应用随机扰动，组装 TF-IDF 和 SPMF 矩阵对；
+
+    (2) 对于每个集合和主题数量 $k$，运行带有 KL 散度和正则项的聚类 SNMF，以考虑语义信息；
+
+    (3) 聚类提取的主题集，以导出最终主题 $W$，并使用聚类的统计数据估计其稳定性；
+
+    (4) 确定最新的潜在维度，以及 (5) 使用轮廓指数和聚类结果确定文档矩阵 $H$。我们随后描述以下步骤：
+
+
+    共现矩阵表示为包含每个词出现频率的向量。共现矩阵表示两个词 ($i$ 和 $j$) 在预定义窗口（例如 +/- 5 个词）内出现的次数。已经证明词嵌入可以通过分解
+    SPMF 词-上下文矩阵 $M$ 来构建。共现矩阵的单元格包含点对互信息 (PMI)，定义为 (log) PMI 以保证非负性。在数学上，PMI 定义为：
+
+
+    ### A. KL 散度辅助的 SNMF
+
+
+    $$$PMI(i, j) = \log\frac{c_{ij}}{\sum_{k} c_{ik} \sum_{k} c_{kj}} (2)$$
+
+
+    在本节中，我们讨论正则化 SNMF，如图 2 所示。我们的 NMF 通过两个低秩矩阵 $W \in \mathbb{R}^{n \times k}$ 和 $H
+    \in \mathbb{R}^{k \times m}$ 的乘积，近似非负文档矩阵 TF-IDF 表示 $X \in \mathbb{R}^{n \times
+    m}$。$W$ 的 $k$ 列表示提取的主题，而 $H$ 的 $k$ 列提供了文档-词表示。对于文档-词矩阵，泊松噪声模型是合适的，因此使用共现矩阵计算点对互信息。
+    PMI 解释了词 $i$ 和 $j$ 相对于它们独立出现的情况如何共现。
+
+
+    为了考虑词之间的语义关系，我们利用语料库 TF-IDF 表示 $X$ 和 SPMF 词-上下文矩阵 $M$。具体而言，我们的 SNMF 使用带有 KL 散度和正则项的
+    NMF，因此：
+
+
+    $$\ \min_{W,H \ge 0} D_{KL}(X||WH)$$
+
+
+    $$\ \min_{W,H \ge 0} D_{KL}(X||WH) + \frac{\lambda}{2} ||M - SW||^2$$
+
+
+    最小化，330
+
+
+    $M \in \mathbb{R}^{m \times n}, S \in \mathbb{R}^{k \times k}$ 是非负矩阵。该语义正则化 $\lambda
+    \in \mathbb{R}_+$ 是一个正则化参数。引入 [13]，涉及 $M$ 和 $X$ 与公共因子 $S$ 的耦合分解。
+
+
+    为了解决方程 3 中的 SNMF 优化问题，我们将 SPM 正则化整合到 NMF 的乘法更新中 [36]。乘法更新可以使用增广拉格朗日 $L(W, H, \Lambda_W,
+    \Lambda_S)$ 导出，如方程 3 所示：
+
+
+    $$L = D(X||WH) + \frac{\lambda}{2} ||M - W^T S||^2 +\sum_{i=1}^m \sum_{j=1}^n
+    (\Lambda_{W,ij}) + \sum_{i=1}^m \sum_{j=1}^n (\Lambda_{H,ij}) + \sum_{i=1}^k \sum_{j=1}^k
+    (\Lambda_{S,ij})$$
+
+
+    其中 $\Lambda_W, \Lambda_H, \Lambda_S$ 是 $W, H, S$ 约束的拉格朗变量。L$ 对 $W_{ij}, H_{ij}$
+    和 $S_{ij}$ 的导数为：
+
+
+    $$\frac{\partial L}{\partial W_{ij}} = -(H^T)_{ij} + \frac{X_{ij} - (WH)_{ij}}{W_{ij}}
+    + (W^T S)_{ij} - \Lambda_{W,ij}}$$
+
+
+    $$\frac{\partial L}{\partial H_{ij}} = -(W^T)_{ij} + \frac{X_{ij} - (WH)_{ij}}{H_{ij}}
+    + (W^T S)_{ij} + \Lambda_{H,ij}}$$
+
+
+    $$\frac{\partial L}{\partial S_{ij}} = -(W^T)_{ij} + (W^TSW)_{ij} + \Lambda_{S,ij}}$$
+
+
+    从导数中，我们获得了防止变量非负性的乘法更新：
+
+
+    $$W_{i,\cdot} \leftarrow W_{i,\cdot} \frac{(X^T H)_{i,\cdot} + (H^T S)_{i,\cdot}}{(H^T
+    H + S W)_{i,\cdot}}$$
+
+
+    $$H_{\cdot,j} \leftarrow H_{\cdot,j} \frac{(W^T X)_{\cdot,j} + (W^T S)_{\cdot,j}}{(W^T
+    W + S)_{\cdot,j}}$$
+
+
+    $$S_{ij} \leftarrow S_{ij} \frac{(W^T X)_{ij}}{(W^T S)_{ij}}$$
+
+
+    对于固定的 SNMF，我们有许多乘法更新规则。根据实验（见 IV-D），目标函数 $J$ 能够收敛到局部最优。图 2 显示了混合词-文档矩阵和上下文矩阵的益处。
+
+
+    ### B. 模型选择的语义 NMF
+
+
+    SNMF 集成了正则化、SNMF 和聚类以确定主题数量。图 1 展示了 SNMF 的不同步骤。我们的方法是迭代的。首先，通过重采样 $X$ 和 $M$ 创建一个随机集合。具体而言，我们使用随机噪声
+    $X=\{^{(1)},...^{(l)}\。为了稳定聚类，我们对发现的类进行聚类，如算法 1 所示：
+
+
+    | 算法 1 SNMF 聚类 |
+
+    | :--- |
+
+    | **输入：** $X \in \mathbb{R}^{m \times n}, M \in \mathbb{R}^{m \times n}, k \in
+    \mathbb{R}, k_{max} \in \mathbb{R}$ |
+
+    | **执行：** |
+
+    | 1. 对于 $k$ 从 1 到 $k_{max}$： |
+
+    | 2. 对于 $l$ 从 1 到 $l$： |
+
+    | 3. $X'',M''=Perturb(X,M)$ $\leftarrow$ 创建因子 |
+
+    | 4. $W=$ 集合中第 $q$ 个成员，$H,S=$ SNMF$(X'',M'',k'')$ |
+
+    | 5. 对于： |
+
+    | 6. $W=$cluster(W,H,S)$ $\leftarrow$ 因子的聚类 |
+
+    | 7. $W=$median(W)$ $\leftarrow$ $k$ 中位数 $W$ |
+
+    | 8. $H=$getcluster(W,H)$ $\leftarrow$ 继承 $H$ 类 |
+
+    | 9. 列误差 |
+
+    | 10. $s_k=Silhouette^*(W)$ $\leftarrow$ 类的轮廓系数 |
+
+    | 结束 $[k_{min},k_{max}]$ |
+
+    | **输出：** $k=opt\{s_k\}, W[k] \in \mathbb{R}^{m \times k}, H \in \mathbb{R}^{k
+    \times n}, X \approx W[k][H]$ |
+
+
+    我们使用的另一种方法是相对重构误差。我们使用类的中位数 $W$ 作为我们的最终
+
+
+    '
+  merge: 0
+- raw:
+  - "[PAGE 4]\n\nsolution for elapsed k, the reconstructed matrix $X^{rec} = WH^T$\
+    \ serves to calculate the reconstruction error, $R = \\|X - X^{rec}\\|/\\|X\\\
+    |$. $R$ evaluates the accuracy of our solutions reduces the initial error.\n\n\
+    To determine the number of latent topics, k SenMF chooses k to be the number of\
+    \ topics that reconstruct the initial document matrix in a stable manner (i.e.,\
+    \ their reconstruction error $R$ reaches a plateau) and the clustering of the\
+    \ sets is sufficiently robust (i.e., the clustering and final determinations of\
+    \ the latent features can be found in [27], [28])\n\n# C. Document clustering:\
+    \ Identifying similar documents in a text corpus\n\nAfter identifying the text,\
+    \ we employ an algorithm that we call H-clustering, to classify the documents\
+    \ in the text corpus according to these topics. We employ k-means clustering to\
+    \ the elements of H, which represent the centers of each document in the topic.\
+    \ To select the most representative topics from H, we use Silhouette statistics\
+    \ in a standard way. Finally, we map the identified clusters by clustering across\
+    \ the document space and identify the clusters in the text corpus.\n\n# IV. NUMERICAL\
+    \ RESULTS\n\nIn this section we validate and evaluate our method, SenMF, introduced\
+    \ in Section 3. First, we demonstrate that SenMF can accurately determine the\
+    \ number of latent topics of free-text corpus by calculating the normalized mutual\
+    \ information (NMI), then show the document clusters generated by SenMF and H-clustering\
+    \ of each of the analyzed text corpus with the \"ground truth\" assessed by experts.\
+    \ Finally, we calculate the coherence of the extracted topics to assess their\
+    \ quality, and to demonstrate that semantic regularization to SenMF performs in\
+    \ better topics.\n\n# A. Data\n\nThe five text corpora includes (a) one the datasets\
+    \ from [24] for topic identification, mbc, which belongs to renowned news agency,\
+    \ BBC, and have five topics; two of news genres (ng [30]), (s-ng, 2, with 2 and\
+    \ 3 topics); and (c) two corpora of Reuters [Reuters, 4-5] with 4 and 5 topics\
+    \ respectively. For Reuters, the selection of variations is based on the number\
+    \ of classes for the benchmark. We include all the documents of the Reuters reports\
+    \ that belong to the top 4 categories. A detailed description of the data is provided\
+    \ in Table 1.\n\n# B. Preprocessing\n\nIn preprocessing the text, we remove punctuation\
+    \ and the common words in English language. From the preprocess text, we ignore\
+    \ the words that occur less than 20 times.\n\nThe resultant-document matrix becomes\
+    \ a standard log TF-IDF matrix, with document-document $L_2$ normalization. We\
+    \ prepare the word-co-occurrence matrix using a document-length window. The co-occurrence\
+    \ matrix is then used to calculate the SPPM matrix, M.\n\n# C. Experimental setup\n\
+    \nFor each one of the analyzed text we run both SenMF and NMF to assess the role\
+    \ of the regularization term that accounts for the semantics of the words. For\
+    \ the hyperparameters, we adopt the method previously used by NMF. For each corpus,\
+    \ we create a random ensemble of matrices based on the TF-IDF representation $X$,\
+    \ and the corresponding SPPM matrix $M$. The elements of each matrix are sampled\
+    \ from random uniform distributions with element-wise means equal to $X$, and\
+    \ $M_{ij}$. For each element $x_{ij}$ of the matrix, it is chosen as $x_{ij}^*\
+    \ = x_{ij}U(1, 1+\beta)$, where $U(1, 1+\beta)$ is sampled from the uniform distribution\
+    \ $(1,1+\beta)$. The amplitude of $\beta$, was varied with $7\\%$, $5\\%$, $3\\\
+    %$, $1\\%$, $0\\%$, to explore the stability of the obtained. We also vary the\
+    \ number of $X_q$ in the experiment from 20 to 64 by sampling the documents without\
+    \ replacement. We observe that the number of clusters does not change a change\
+    \ more than $15\\%$ from the previous set. In this case, we run the SenMF and\
+    \ NMF optimizations (usually our approach more than 100 iterations). We also explore\
+    \ a range of $k$ values, $\\{k_1, k_2, ..., k_n\\}$, for the number of topics,\
+    \ and for each we minimize $W_q$ and $H_q$ matrices using Non-negative Singular\
+    \ Value Decomposition (NNDSD) [38]. The parameter $\\alpha$ was chosen in order\
+    \ for the two loss terms for $X_q$ and $M_q$ to have similar values. The clustering\
+    \ and H-clustering were run until convergence or at most 100 iterations, but until\
+    \ it converges in ~10 iterations.\n\n# D. Model Selection: Finding the Number\
+    \ of Topics\n\n![](img/25cc2976511492602032e3cc24aa97aa_4_0.png)\n\nOur model\
+    \ selection is based on a high Silhouette value and a low relative reconstruction\
+    \ error. Figure-3 shows the number of latent topics in bbc"
+  - '[PAGE 5]
+
+
+    # TABLE I: Description of the corpora, which includes the number of documents
+    ($N$), the size of the vocabulary (|V|), and the number of clusters (k).
+
+
+    | # | Dataset | N | |V| | k | Description |
+
+    |---|---|---|---|---||
+
+    | 1 | abc | 2225 | 6659 | 5 | General news articles from the BBC from 2003 |
+
+    | 2 | s-ng-2 | 1000 | 3626 | 5 | Separated balanced collection of 2 topics from
+    20 newsgroups |
+
+    | 3 | s-ng-3 | 1509 | 4781 | 3 | Separated balanced collection of 3 topics from
+    20 newsgroups |
+
+    | 4 | Reuters-4 | 6387 | 5605 | 4 | Documents from the top 4 classes of Reuters
+    news in 1987 |
+
+    | 5 | Reuters-5 | 6632 | 5911 | 5 | Documents from the top 5 classes of Reuters
+    news in 1987 |
+
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_5_0.png)
+
+
+    Fig. 4: Silhouette and relative error for NewsGroup with 2 topics and 3 document
+    clusters
+
+
+    In 3 (a), we can clearly see the determined number of topics for abc at k=5, marked
+    in a rectangular box. The peaks in the mean and min Silhouette values show a reliable
+    clustering of the SeNMF solutions. As k increases above the correct number of
+    topics, decreasing Silhouette shows that there are no additional benefit topics.
+    In contrast, the relative error decreases up to the correct number of topics,
+    and then only slightly after that. This suggests that the correct features are
+    being used in representing the density of the data, while the decline is due to
+    the over-fitting phenomenon, as the model begins to fit noise. Figure 4 shows
+    the Silhouettes and relative error for different topics in NewsGroup 20 showing
+    19 topics and 2 clusters.
+
+
+    documents in the scale of latent topics (H-clustering in Section III-C).
+
+
+    The abc and NewsGroup 20 demonstrate clusters each of which corresponds to a separate
+    topic. However, Reuters datasets do not exhibit the same property. For Reuters-4
+    and Reuters-5 (Fig. 5a and 5c), SeNMF, extracts k=5 and k=6 topics respectively,
+    while the H-clustering identifies 4 and 5 latent topics (Fig. 5c and (5d)) which
+    means that in these datasets some groups of documents respond not to single topics
+    but to multiple them.
+
+
+    # E. H-clustering and Document Clusters
+
+
+    The "ground-truth" of annotated text corpus is usually based on the clustering
+    of the documents in our method. However, it is known theoretically that (except
+    in PLSA) the number of documents in a cluster may not be the number of the latent
+    topics (39). We can observe that a document cluster has a variance that requires
+    multiple latent topics to explain it, resulting in better clusters than latent
+    topics. Such irregularity can be explained by a good topic model.
+
+
+    To compare the obtained results with the "ground-truth", we need to know how many
+    document clusters our method identify in the analyzed text corpora. To determine
+    this, we employ k-means to cluster the columns of matrix $H$, since they represent
+    the coordinates of the
+
+
+    We used normalized information (NMI) (40) to evaluate the quality of the document
+    clusters. We measures the mutual dependence between the document labels produced
+    by the H-clustering and the "ground-truth" labels assigned by each expert. The
+    closer the predicted labels match the truth labels, the higher the mutual information.
+    In general, mutual between ground-truth and predicted labels ($H_i$), where $\sqrt{H(H)H(H_i)}$,
+    where
+
+
+    Table 1 shows the average NMI score for all of the five methods. We observe that
+    our methods perform better results in the majority of the benchmarks. Among all
+    datasets, one of the methods, Nmfk or SeNMF with H-clustering, outperforms the
+    rest. Taking into account fact that the SeNMF solutions are the means of the corresponding'
+  md: '
+
+    solution for elapsed k, the reconstructed matrix $X^{rec} = WH^T$ serves to calculate
+    the reconstruction error, $R = \|X - X^{rec}\|/\|X\|$. $R$ evaluates the accuracy
+    of our solutions and reduces the initial error.
+
+
+    To determine the number of latent topics, k, SenMF chooses k to be the number
+    of topics that reconstruct the initial document matrix in a stable manner (i.e.,
+    their reconstruction error $R$ reaches a plateau) and the clustering of the sets
+    is sufficiently robust (i.e., the clustering and final determinations of the latent
+    features can be found in [27], [28])
+
+
+    ## C. Document clustering: Identifying similar documents in a text corpus
+
+
+    After identifying the text, we employ an algorithm that we call H-clustering,
+    to classify the documents in the text corpus according to these topics. We employ
+    k-means clustering to the elements of H, which represent the centers of each document
+    in the topic. To select the most representative topics from H, we use Silhouette
+    statistics in a standard way. Finally, we map the identified clusters by clustering
+    across the document space and identify the clusters in the text corpus.
+
+
+    ## IV. NUMERICAL RESULTS
+
+
+    In this section we validate and evaluate our method, SenMF, introduced in Section
+    3. First, we demonstrate that SenMF can accurately determine the number of latent
+    topics of free-text corpus by calculating the normalized mutual information (NMI),
+    then show the document clusters generated by SenMF and H-clustering of each of
+    the analyzed text corpus with the "ground truth" assessed by experts. Finally,
+    we calculate the coherence of the extracted topics to assess their quality, and
+    to demonstrate that semantic regularization to SenMF performs in better topics.
+
+
+    ## A. Data
+
+
+    The five text corpora includes (a) one of the datasets from [24] for topic identification,
+    mbc, which belongs to renowned news agency, BBC, and have five topics; two of
+    news genres (ng [30]), (s-ng-2, with 2 and 3 topics); and (c) two corpora of Reuters
+    [Reuters, 4-5] with 4 and 5 topics respectively. For Reuters, the selection of
+    variations is based on the number of classes for the benchmark. We include all
+    the documents of the Reuters reports that belong to the top 4 categories. A detailed
+    description of the data is provided in Table 1.
+
+
+    ## B. Preprocessing
+
+
+    In preprocessing the text, we remove punctuation and the common words in English
+    language. From the preprocess text, we ignore the words that occur less than 20
+    times.
+
+
+    The resultant-document matrix becomes a standard log TF-IDF matrix, with document-document
+    $L_2$ normalization. We prepare the word-co-occurrence matrix using a document-length
+    window. The co-occurrence matrix is then used to calculate the SPPM matrix, M.
+
+
+    ## C. Experimental setup
+
+
+    For each one of the analyzed text we run both SenMF and NMF to assess the role
+    of the regularization term that accounts for the semantics of the words. For the
+    hyperparameters, we adopt the method previously used by NMF. For each corpus,
+    we create a random ensemble of matrices based on the TF-IDF representation $X$,
+    and the corresponding SPPM matrix $M$. The elements of each matrix are sampled
+    from random uniform distributions with element-wise means equal to $X$, and $M_{ij}$.
+    For each element $x_{ij}$ of the matrix, it is chosen as $x_{ij}^* = x_{ij}U(1,
+    1+\beta)$, where $U(1, 1+\beta)$ is sampled from the uniform distribution $(1,1+\beta)$.
+    The amplitude of $\beta$, was varied with $7\%$, $5\%$, $3\%$, $1\%$, $0\%$, to
+    explore the stability of the obtained. We also vary the number of $X_q$ in the
+    experiment from 20 to 64 by sampling the documents without replacement. We observe
+    that the number of clusters does not change more than $15\%$ from the previous
+    set. In this case, we run the SenMF and NMF optimizations (usually our approach
+    more than 100 iterations). We also explore a range of $k$ values, $\{k_1, k_2,
+    ..., k_n\}$, for the number of topics, and for each we minimize $W_q$ and $H_q$
+    matrices using Non-negative Singular Value Decomposition (NNDSD) [38]. The parameter
+    $\alpha$ was chosen in order for the two loss terms for $X_q$ and $M_q$ to have
+    similar values. The clustering and H-clustering were run until convergence or
+    at most 100 iterations, but until it converges in ~10 iterations.
+
+
+    ## D. Model Selection: Finding the Number of Topics
+
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_4_0.png)
+
+
+    Our model selection is based on a high Silhouette value and a low relative reconstruction
+    error. Figure-3 shows the number of latent topics in bbc
+
+
+    ## TABLE I: Description of the corpora, which includes the number of documents
+    ($N$), the size of the vocabulary (|V|), and the number of clusters (k).
+
+
+    | # | Dataset | N | |V| | k | Description |
+
+    |---|---|---|---|---|---|
+
+    | 1 | abc | 2225 | 6659 | 5 | General news articles from the BBC from 2003 |
+
+    | 2 | s-ng-2 | 1000 | 3626 | 5 | Separated balanced collection of 2 topics from
+    20 newsgroups |
+
+    | 3 | s-ng-3 | 1509 | 4781 | 3 | Separated balanced collection of 3 topics from
+    20 newsgroups |
+
+    | 4 | Reuters-4 | 6387 | 5605 | 4 | Documents from the top 4 categories of Reuters
+    |
+
+    | 5 | Reuters-5 | 6632 | 5911 | 5 | Documents from the top 5 classes of Reuters
+    |
+
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_5_0.png)
+
+
+    Figure 4: Silhouette and relative error for NewsGroup with 2 topics
+
+
+    ## E. H-clustering and Document Clusters
+
+
+    The "ground-truth" of annotated text corpus is usually based on the clustering
+    of the documents in our method. However, it is known theoretically that (except
+    in PLSA) the number of documents in a cluster may not be the number of latent
+    topics. We can observe that a document cluster has a variance that requires multiple
+    latent topics to explain it, resulting in better clusters than latent topics.
+    Such irregularity can be explained by a good topic model.
+
+
+    To compare the obtained results with the "ground-truth", we need to know how many
+    document clusters our method identify in the analyzed text corpora. To determine
+    this, we employ k-means to cluster the columns of matrix $H$, since they represent
+    the coordinates of the documents in the topic.
+
+
+    We used normalized information (NMI) (40) to evaluate the quality of the document
+    clusters. We measures the mutual dependence between the document labels produced
+    by the H-clustering and the "ground-truth" labels assigned by each expert. The
+    closer the predicted labels match the truth labels, the higher the mutual information.
+
+
+    Table 1 shows the average NMI score for all of the five methods. We observe that
+    our methods perform better results in the majority of the benchmarks. Among all
+    datasets, one of the methods, Nmfk or SenMF with H-clustering, outperforms the
+    rest. Taking into account fact that the SenNMF solutions are the means of the
+    corresponding
+
+    '
+  mdcn: '
+
+    对于已过去的 $k$ 个解，重构矩阵 $X^{rec} = WH^T$ 用于计算重构误差 $R = \|X - X^{rec}\|/\|X\|$。$R$ 评估了我们解的准确性并减少了初始误差。
+
+
+    为了确定隐含主题的数量 $k$，SenMF 选择 $k$ 为能够以稳定方式重构初始文档矩阵的主题（即其重构误差 $R$ 达到平台期），且集合的聚类具有足够的稳健性（即隐含特征的聚类和最终确定可以在
+    [27], [28] 中找到）。
+
+
+    ## C. 文档聚类：识别文本语料库中的相似文档
+
+
+    在识别出文本后，我们采用了一种称为 H-聚类的算法，根据这些主题对文本语料库中的文档进行分类。我们对矩阵 $H$ 中的元素采用 $k$-means 聚类，这些元素代表了每个主题在主题空间中的文档中心。为了从
+    $H$ 中选择最具代表性的主题，我们以标准的方法使用了轮廓系数统计（Silhouette statistics）。最后，我们通过跨越文档空间的聚类来映射识别出的簇，并在文本语料库中识别这些簇。
+
+
+    ## IV. 数值结果
+
+
+    在本节中，我们验证并评估了第 3 节引入的 SenMF 方法。首先，我们证明了 SenMF 可以通过计算归一化互信息（NMI）准确确定自由文本语料库的隐含主题数量，然后展示了
+    SenMF 生成的文档簇以及每个分析的文本语料库通过 H-聚类生成的簇，并与专家评估的“地面真值（ground truth）”进行对比。最后，我们计算了提取主题的相干性以评估其质量，并证明对
+    SenMF 进行语义正则化可以获得更优的主题。
+
+
+    ## A. 数据
+
+
+    五个文本语料库包括：(a) 来自 [24] 的用于主题识别的数据集之一 mbc，它属于知名新闻机构 BBC，具有五个主题；(b) 两个类新闻类型（ng [30]，s-ng-2，具有
+    2 和 3 个主题）；以及 (c) 两个路透社的语料库 [Reuters, 4-5]，分别具有 4 和 5 个主题。对于路透社，变体的选择是基于基准测试的类别数量。我们包含了路透社报告中属于前
+    4 个类别的所有文档。表 1 提供了数据的详细描述。
+
+
+    ## B. 预处理
+
+
+    在文本预处理阶段，我们移除了标点符号和英语常用词。在预处理后的文本中，我们忽略出现次数少于 20 次的词。
+
+
+    生成的文档矩阵变为标准的 log TF-IDF 矩阵，并带有文档-文档 $L_2$ 归一化。我们使用文档长度窗口准备词共现矩阵。然后利用共现矩阵计算 SPPM
+    矩阵 $M$。
+
+
+    ## C. 实验设置
+
+
+    对于每个分析的文本，我们都运行了 SenMF 和 NMF，以评估考虑词汇语义的正则项的作用。对于超参数，我们采用了之前 NMF 使用的方法。对于每个语料库，我们基于
+    TF-IDF 表示 $X$ 和对应的 SPPM 矩阵 $M$ 创建了一个随机矩阵系。每个矩阵的元素从随机均匀分布中采样，其逐元素均值等于 $X$ 和 $M_{ij}$。对于矩阵的每个元素
+    $x_{ij}$，选择为 $x_{ij}^* = x_{ij}U(1, 1+\beta)$，其中 $U(1, 1+\beta)$ 从均匀分布 $(1,1+\beta)$
+    中采样。$\beta$ 的幅度以 $7\%, 5\%, 3\%, 1\%, 0\%$ 的步长变化，以探索所得结果的稳定性。我们还在实验中通过无放回采样文档将
+    $X_q$ 的数量从 20 增加到 64。我们观察到簇的数量与上一组相比变化不超过 15%。在这种情况下，我们运行了 SenMF 和 NMF 优化（通常我们的方法运行时间超过
+    10 次）。我们还探索了 $\{k_1, k_2, ..., k_n\}$ 的 $k$ 值范围，针对主题数量，并使用非负奇异值分解（NNDSD） [38]
+    处理 $X_q$ 和 $M_q$。参数 $\alpha$ 的选择是为了使得 $X_q$ 具有相似值。H-聚类运行直到收敛或最多 100 次迭代。
+
+
+    ## D. 模型选择：确定主题数量
+
+
+    ![](img/25cc29765149260232e3cc24aa97aa.png)
+
+
+    我们的模型选择基于高轮廓系数和低重构误差。图 3 显示了 bbc 的隐含主题。表 I：语料库描述，包括文档数量 ($N$)、词汇量 ($|V|$) 和簇的数量
+    ($k$)。
+
+
+    | # | 数据集 | N | |V| | k |  |
+
+    |---|---|---|---|---|---|
+
+    | 1 | abc | 2225 | 6659 | 5 | 2003年的 BBC 文章 |
+
+    | 2 | s-ng-2 | 1000 | 3626 | 5 | 20 新闻组的两个主题平衡集合 |
+
+    | 3 | s-ng-3 | 1509 | 4781 | 3 | 20 新闻组三个主题平衡集合 |
+
+    | 4 | Reuters-4 | 6387 | 5605 | 4 | 路透社的前 4 个类别文档 |
+
+    | 5 | Reuters-5 | 6632 | 5911 | 5 | 路透社的前 5 个类别文档 |
+
+
+    ![](img/25cc29765149260232e3cc24aa97aa.png)
+
+
+    图 4：具有 2 个主题的 NewsGroup 的轮廓系数和相对误差
+
+
+    ## E. H-聚类与文档簇
+
+
+    标注语料库的“地面真值”通常基于我们方法中的文档聚类。然而，理论上已知（除 PLSA 外），簇中的文档数量可能并不是隐含主题的数量。我们可以观察到某个文档簇的方差需要多个隐含主题来解释，从而导致比隐含主题更好的聚类。为了将获得的结果与“地面真值”对比，我们需要知道我们的方法识别了多少个文档簇。为了确定这一点，我们使用
+    k-means 对矩阵 $H$ 的列进行聚类，因为它们代表了文档在主题中的坐标。
+
+
+    我们使用归一化互信息（NMI）(40) 来评估文档簇的质量。我们衡量了 H-聚类生成的文档标签与专家分配的“地面真值”标签之间的相互依赖性。预测标签与真实标签越接近，互信息越高。
+
+
+    表 1 显示了五种方法的平均 NMI 分数。我们观察到我们的方法在大多数基准测试中表现得更好。在所有数据集中，其中一种方法（Nmfk 或带有 H-聚类的 SenMF）优于其他方法。考虑到
+    SenNMF 的解是相应的均值
+
+
+    '
+  merge: 1
+- raw:
+  - '[PAGE 6]
+
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_6_0.png)
+
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_6_1.png)
+
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_6_2.png)
+
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_6_3.png)
+
+
+    TABLE II: Compare the quality of various models using NMI
+
+    | Dataset | LDA | NMF | Kmeans | SeNMF | Ours SeNMF |
+
+    |---|---|---|---|---||
+
+    | bbc | 0.810 | 0.661 | 0.867 | 0.853 | 0.881 |
+
+    | ssg-2 | 0.754 | 0.893 | 0.890 | 0.899 | 0.906 |
+
+    | ssg-3 | 0.858 | 0.701 | 0.906 | 0.923 | 0.941 |
+
+    | Reuters-4 | 0.798 | 0.755 | 0.768 | 0.823 | 0.831 |
+
+    | Reuters-5 | 0.339 | 0.496 | 0.488 | 0.501 | 0.501 |
+
+
+    TABLE III: Compare the quality of various clustering methods using $C_v$ coherence
+
+    | Dataset | LDA | NMKF | Skmeans | NMFK | Ours SeNMF |
+
+    |---|---|---|---|---||
+
+    | bbc | 0.677 | 0.816 | 0.808 | 0.811 | 0.879 |
+
+    | ssg-2 | 0.732 | 0.772 | 0.768 | 0.770 | 0.797 |
+
+    | ssg-3 | 0.801 | 0.831 | 0.849 | 0.839 | 0.850 |
+
+    | Reuters-4 | 0.553 | 0.726 | 0.752 | 0.683 | 0.814 |
+
+    | Reuters-5 | 0.561 | 0.776 | 0.748 | 0.737 | 0.814 |
+
+
+    Fig. 5: Reuters-4 and Reuters-5: Finding the latent topics (a-b), and the nature
+    of various clusters (c-d)
+
+
+    clusters, which are overall robust and stable, our approach performs better than
+    the state-of-the-art methods.
+
+
+    In order to evaluate the quality of the extracted methods, we employ $C_v$ [42].
+    However as $C_v$ coherence depends on the human estimation of coherence. Moreover,
+    $C_v$ coherence does not depend on "ground-truth" labels, as it considers the
+    semantic information of word pairs. It is calculating a metric for word clustering
+    using normalized-point mutual information (NPMI). Table III shows the quality
+    of LDA, Kmeans, NMFK [31] and SeNMF. With this analysis, we demonstrate that for
+    the majority of the analyzed text corpora, our methods are competitive and/or
+    outperform existing methods.
+
+
+    # V. CONCLUSIONS
+
+
+    In this paper, we introduce a new NMF-based and semantic-topic model with automatic
+    determination of the number of topics, SeNMF. SeNMF has several features: First,
+    by using a small approach to identify the latent topics of the initial TF-IDF
+    representation of the text, $X$, by using a small approach to identify the latent
+    topics of the initial TF-IDF representation of the text, $X$, and constructing
+    word-context-matrix, $M$, SeNMF creates a representation of latent pairs of words,
+    $\{X_q, X_r\}$. Next, for each number of latent topics, $k \in \{1, \dots, k_{max}\}$,
+    by performing clustering based on KL-divergence and a regularization term based
+    on $M_k$, each pair of this word is reconstructed. The latent dimension is determined
+    by comparing the stability of the sets of topics extracted. The final latent topics
+    are extracted as the means of the chosen set of topics. Furthermore, SeNMF performs
+    $H$-clustering, which performs $k$-means clustering of the documents'' coordinates
+    in the latent space. We demonstrate the quality of our SeNMF on five benchmark
+    text corpora, and compare our results against'
+  - '[PAGE 7]
+
+
+    state-of-the-art semantic predicting the number of topics, coherence and the EMI
+    of the documents carries the known "ground-truth" labels.
+
+
+    # VI. ACKNOWLEDGEMENTS
+
+
+    This research was funded by DOE National Security Administration (NSSA) - Office
+    of Defense National Nonproliferation R&D (NA-22), supported by Los Alamos National
+    Laboratory Integrating Computing Program and LRD Grant 201902DDR, by the U.S.
+    Department of Energy Nuclear Security Administration under Contract 8923318CA00001.
+
+
+    +   REFERENCES
+
+    1. S. Rullback and A. R. Lee, "Information and similarity," The annals of mathematical
+    statistics, 22, no. 2, pp. 79–86, 1991.
+
+    2. D. Seerwee, S. T. Dumas, G. Wagner, F. K. Lander, and R. Hardman, "Indexing
+    by latent semantic analysis," Journal of Information Science, 31(4), pp. 349–363,
+    2005.
+
+    3. T. Hofman, "Probabilistic latent semantic allocation," arXiv preprint arXiv:0903.3133,
+    2009.
+
+    4. D. M. B et al., "Latent Dirichlet deallocation," Journal of machine learning
+    research, 9, pp. 993–1023, 2008.
+
+    5. W. Xu, X. Liu, and Y. Gong, "Clustering based on non-negative matrix factorization,"
+    Proceedings of the ACM SIGIR Conference on Research and information retrieval,
+    2003, pp. 267–273.
+
+    6. C. Hu et al., "On the relationship between non-negative matrix factorization
+    and probabilistic latent semantic analysis," Statistics & Data Analysis, 58, no.
+    2, pp. 445–462, 2007.
+
+    7. J. Casey and B. Lee, "Topic models in data mining," Proceedings of the 27th
+    international ACM SIGIR Conference on Research and information retrieval, 2014.
+
+    8. D. F. Para Toledo and A. De Londeira, "Using algorithms for non-negative matrix
+    factorization and latent Dirichlet allocation for document clustering," Knowledge-Based
+    Systems, 155, pp. 53–67, 2018.
+
+    9. J. Cho et al., "User-driven topic modeling for automatic document clustering,"
+    Proceedings of the 2012 International Conference on World Mining, 2012, pp. 1992–2003.
+
+    10. H. Kim et al., "Simultaneous discovery of discourse and document clustering
+    using non-negative matrix factorization," Proceedings of the 21st ACM SIGKDD International
+    Conference on Data and Information Mining, 2015, pp. 556–562.
+
+    11. M. Müller and T. Hardman, "Representation of words and their compositionality,"
+    In NAACL, 2014, pp. 3111–3119.
+
+    12. M. Ali, A. Salam, and M. Maed, "Non-negative matrix factorization for text
+    clustering," In Proceedings of the 11th ACM SIGIR Conference on Research and Information
+    Retrieval, 2008, pp. 73–80.
+
+    13. T. Shi et al., "Text-specific topic modeling using non-negative matrix factorization
+    with word-level constraints," Proceedings of EMNLP, 2011, pp. 504–518.
+
+    14. P. Hargavas, G. Chen, N. Samuthi, P. Romero, and J. S. Eidenberg, "Code visualization
+    for graph mining and capsule networks," IEEE Access, vol. 8, pp. 137 606–137 615,
+    2020.
+
+    15. J. Chang, G. Servan, C. Wang, J. L. Bordord, and D. M. Rea, "Scalable sparse
+    topic model with non-negative matrix factorization," Advances in neural information
+    processing systems, 2009, pp. 288–296.
+
+    16. K. Stevens et al., "Hierarchical clustering to cover many models," In EMNLP,
+    2018, pp. 4089–4099.
+
+    17. T. Liu, N. L. Zhang, and J. Chen, "Hierarchical latent tree analysis for topic
+    detection," In Joint European conference on machine learning and knowledge discovery.
+    Springer, 2014, pp. 256–272.
+
+
+    [20] A. Mirza, "Nonparametric regression and its application in cancer clustering,"
+    IEEEACM transactions on computational biology and bioinformatics, vol. 11, no.
+    6, pp. 1208–1217, 2014.
+
+
+    [21] D. J. McKinney and R. M. Real, "Automatic relevance detection for document
+    clustering," Technical Report of Stanford University, 1994.
+
+
+    [22] V. Y. Tan and C. Févotte, "Automatic relevance detection in non-negative
+    matrix factorization with beta-divergence," IEEE Transactions on Pattern Analysis
+    and Machine Intelligence, vol. 35, pp. 790–803, 2012.
+
+
+    [23] J.-P. Brun et al., "Metagenatures and pattern discovery using matrix factorization,"
+    Proceedings of the Academy of Sciences, 115(44), pp. 21494–21499, 2018.
+
+
+    [24] D. Grees, O. D''Gallagher, and C. Huffman, "How many topics? sparse topic-model
+    analysis using methods of EMNLP," Springer, 2018, pp. 498–515.
+
+
+    [25] L. B. Alexandrov, S. Nik-Zamac, C. D. Wege, J. P. Campbell, and M. Rea, "Non-negative
+    matrix factorization of gene expression in human cells," vol. 8, no. 1, pp. 246–259,
+    2003.
+
+
+    [26] S. Baxter and V. V. Benceau, "Sequence modeling for sparse topic-non nonnegative
+    matrix factorization," Research Science, 50, no. 7, pp. 7332–7347, 2019.
+
+
+    [27] Y. Gong, E. Skan, J. Hijdev, and A. Alexandrov, "Non-negative matrix factorization
+    with determination of the number of topics," The Journal of Machine Learning Research,
+    76, 2005.
+
+
+    [28] R. Vanga, K. O. Rausanen, N. De Pierre, G. Bel, and S. Alexander, "Non-negative
+    matrix factorization for document clustering," Physical Review Research, 22, no.
+    2, 023248, 2020.
+
+
+    [29] H. Carillo-Tealde, E. Sahai, and G. Ben Simon, "Non-negative matrix factorization
+    for document clustering," IEEE Access, 8, pp. 107749–107750, 2020.
+
+
+    [30] V. Stanev, V. Vev, A. Gose, K. Iwasake, and T. Tanaka, "Unsupervised topic
+    modeling using non-negative matrix factorization with document clustering npi,"
+    Computational Materials, 4, no. 1, pp. 1–10, 2013.
+
+
+    [31] M. Karmi et al., "Metabolomics and the physic model revealed adaptive energy
+    metabolism in diabetic patients," Scientific Reports, 7, 43633, 2017.
+
+
+    [32] D. L. Lee and S. Huang, "Algorithms for non-negative matrix factorization
+    and clustering," Advances in neural information processing systems, 2006, pp.
+    555–562.
+
+
+    [33] C. Xu, H. Hu, and J. Hu, "Clustering documents using sparse matrix factorization####
+    Proceedings of the IEEE Conference on Knowledge Discovery and Data Mining, vol.
+    17, no. 12, pp. 1624–1637, 2003.
+
+
+    [34] A. Strehl and J. Hwang, "Cluster-ensembles a knowledge reuse framework for
+    multiple partitions," Journal of machine learning research, 3, pp. 583–617, 2002.
+
+
+    [35] T. M. Carver and J. A. Thomas, Elements of Information Theory. "Exploring
+    the space of topic coherence measures," Proceedings of the ACM international conference
+    on search and data mining, 2015, pp. 399–408.'
+  md: '
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_6_0.png)
+
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_6_1.png)
+
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_6_2.png)
+
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_6_3.png)
+
+
+    TABLE II: Compare the quality of various models using NMI
+
+    | Dataset | LDA | NMF | Kmeans | SeNMF | Ours SeNMF |
+
+    |---|---|---|---|---|---|
+
+    | bbc | 0.810 | 0.661 | 0.867 | 0.853 | 0.881 |
+
+    | ssg-2 | 0.754 | 0.893 | 0.890 | 0.899 | 0.906 |
+
+    | ssg-3 | 0.858 | 0.701 | 0.906 | 0.923 | 0.941 |
+
+    | Reuters-4 | 0.798 | 0.755 | 0.768 | 0.823 | 0.831 |
+
+    | Reuters-5 | 0.339 | 0.496 | 0.488 | 0.501 | 0.501 |
+
+
+    TABLE III: Compare the quality of various clustering methods using $C_v$ coherence
+
+    | Dataset | LDA | NMKF | Skmeans | NMFK | Ours SeNMF |
+
+    |---|---|---|---|---|---|
+
+    | bbc | 0.677 | 0.816 | 0.808 | 0.811 | 0.879 |
+
+    | ssg-2 | 0.732 | 0.772 | 0.768 | 0.770 | 0.797 |
+
+    | ssg-3 | 0.801 | 0.831 | 0.849 | 0.839 | 0.850 |
+
+    | Reuters-4 | 0.553 | 0.726 | 0.752 | 0.683 | 0.814 |
+
+    | Reuters-5 | 0.561 | 0.776 | 0.748 | 0.737 | 0.814 |
+
+
+    Fig. 5: Reuters-4 and Reuters-5: Finding the latent topics (a-b), and the nature
+    of various clusters (c-d)
+
+
+    clusters, which are overall robust and stable, our approach performs better than
+    the state-of-the-art methods.
+
+
+    In order to evaluate the quality of the extracted methods, we employ $C_v$ [42].
+    However, as $C_v$ coherence depends on the human estimation of coherence. Moreover,
+    $C_v$ coherence does not depend on "ground-truth" labels, as it considers the
+    semantic information of word pairs. It is calculating a metric for word clustering
+    using normalized-point mutual information (NPMI). Table III shows the quality
+    of LDA, Kmeans, NMFK [31] and SeNMF. With this analysis, we demonstrate that for
+    the majority of the analyzed text corpora, our methods are competitive and/or
+    outperform existing methods.
+
+
+    ## V. CONCLUSIONS
+
+
+    In this paper, we introduce a new NMF-based and semantic-topic model with automatic
+    determination of the number of topics, SeNMF. SeNMF has several features: First,
+    by using a small approach to identify the latent topics of the initial TF-IDF
+    representation of the text, $X$, and constructing word-context-matrix, $M$, SeNMF
+    creates a representation of latent pairs of words, $\{X_q, X_r\}$. Next, for each
+    number of latent topics, $k \in \{1, \dots, k_{max}\}$, by performing clustering
+    based on KL-divergence and a regularization term based on $M_k$, each pair of
+    this word is reconstructed. The latent dimension is determined by comparing the
+    stability of the sets of topics extracted. The final latent topics are extracted
+    as the means of the chosen set of topics. Furthermore, SeNMF performs $H$-clustering,
+    which performs $k$-means clustering of the documents'' coordinates in the latent
+    space. We demonstrate the quality of our SeNMF on five benchmark text corpora,
+    and compare our results against state-of-the-art semantic predicting the number
+    of topics, coherence and the EMI of the documents carries the known "ground-truth"
+    labels.
+
+
+    ## VI. ACKNOWLEDGEMENTS
+
+
+    This research was funded by DOE National Security Administration (NSSA) - Office
+    of Defense National Nonproliferation R&D (NA-22), supported by Los Alamos National
+    Laboratory Integrating Computing Program and LRD Grant 201902DDR, by the U.S.
+    Department of Energy Nuclear Security Administration under Contract 8923318CA00001.
+
+
+    ## REFERENCES
+
+
+    1. S. Rullback and A. R. Lee, "Information and similarity," The annals of mathematical
+    statistics, 22, no. 2, pp. 79–86, 1991.
+
+    2. D. Seerwee, S. Dumas, G. Wagner, and F. Lander, "Indexing by latent semantic,"
+    Journal of Information Science, 31(4), pp. 349–363, 2005.
+
+    3. T. Hofman, "Probabilistic latent semantic," arXiv preprint arXiv:0903.3133,
+    2009.
+
+    4. D. M. et al., "Latent Dirichlet allocation," Journal of machine learning research,
+    9, pp. 993–1023, 2008.
+
+    5. W. Xu, X. Liu, and Y. Gong, "Clustering based on non-negative matrix," Proceedings
+    of the ACM SIGIR Conference on Research and retrieval, 2003, pp. 267–273.
+
+    6. C. Hu et al., "On the relationship between non-negative matrix factorization
+    and probabilistic latent analysis," Statistics & Data Analysis, 58, no. 2, pp.
+    445–462, 2007.
+
+    7. J. Casey and B. Lee, "Topic models in data mining," Proceedings of the 27th
+    international ACM SIGIR Conference on Research and retrieval, 2014.
+
+    8. D. F. Toledo and A. Londeira, "Using algorithms for non-negative matrix factorization
+    and latent Dirichlet for document clustering," Knowledge-Based Systems, 155, pp.
+    53–67, 2018.
+
+    9. J. Cho et al., "User-driven topic modeling for automatic document clustering,"
+    Proceedings of the 2012 International Conference on World Mining, 2012, pp. 1992–2003.
+
+    10. H. Kim et al., "Simultaneous discovery of discourse and document clustering
+    using non-negative matrix factorization," Proceedings of the 21st ACMKDD Conference
+    on Data and Information Mining, 2015, pp. 556–562.
+
+    11. M. Müller and T. Hardman, "Representation of words and their compositionality,"
+    In NAACL, 2014, pp. 3111–3119.
+
+    12. M. Ali, A. Salam, and M. Maed, "Non-negative matrix factorization for text
+    clustering," In Proceedings of the 11th ACM SIGIR Conference on Research and Retrieval,
+    2008, pp. 73–80.
+
+    13. T. Shi et al., "Text-specific topic modeling using non-negative matrix factorization
+    with word-level constraints," Proceedings of EMNLP, 2011, pp. 504–518.
+
+    14. P. Hargavas, G. Chen, N. Samuthi, P. Romero, and J. S. Eidenberg, "Code visualization
+    for graph mining and capsule networks," IEEE Access, vol. 8, pp. 13706–13715,
+    2020.
+
+    15. J. Chang, G. Servan, C. Wang, J. L. Bordord, and D. M. Rea, "Scalable sparse
+    topic model with non-negative matrix factorization," Advances in neural information
+    processing systems, 2009, pp. 288–296.
+
+    16. K. Stevens et al., "Hierarchical clustering to cover many models," In EMNLP,
+    2018, pp. 4089–4099.
+
+    17. T. Liu, N. L. Zhang, and J. Chen, "Hierarchical latent tree analysis for topic
+    detection," In Joint European conference on machine learning and knowledge discovery.
+    Springer, 2014, pp. 256–272.
+
+    20. A. Mirza, "Nonparametric regression and its application in cancer clustering,"
+    IEEE transactions on computational biology and bioinformatics, vol. 11, no. 6,
+    pp. 1208–1217, 2014.
+
+    21. D. J. McKinney and R. M. Real, "Automatic relevance detection for document
+    clustering," Technical Report of Stanford University, 1994.
+
+    22. V. Y. Tan and C. Févotte, "Automatic relevance detection in non-negative matrix
+    factorization with beta-divergence," IEEE Transactions on Pattern Analysis and
+    Machine Intelligence, vol. 35, pp. 790–803, 2012.
+
+    23. J.-P. Brun et al., "Metagenatures and pattern discovery using matrix factorization,"
+    Proceedings of the Academy of Sciences, 115(44), pp. 21494–21499, 2018.
+
+    24. D. Grees, O. D''Gallagher, and C. Huffman, "How many topics? sparse topic-model
+    analysis using methods of EMNLP," Springer, 2018, pp. 498–515.
+
+    25. L. B. Alexandrov, S. Nik-Zamac, C. D. Wege, J. P. Campbell, and M. Rea, "Non-negative
+    matrix factorization of gene expression in human cells," vol. 8, no. 1, pp. 246–259,
+    2003.
+
+    26. S. Baxter and V. V. Benceau, "Sequence-nonnegative matrix factorization,"
+    Statistics & Data Analysis, 50, no. 7, pp. 7332–7347, 2019.
+
+    27. R. Vanga, K. O. Rausanen, G. Bel, and S. Alexander, "Non-negative matrix factorization
+    with determination of the number of topics," The Journal of Machine Learning Research,
+    76, 2005.
+
+    28. R. Vanga, K. O. Rausanen, G. Bel, and S. Alexander, "Non-negative matrix factorization
+    for document clustering," Physical Review Research, 22, no. 2, 02348, 2020.
+
+    29. P. Hargavas, G. Chen, N. Samuthi, P. Romero, and J. S. Eidenberg, "Code visualization
+    for graph mining and capsule networks," IEEE Access, vol. 8, pp. 10749–10750,
+    2020.
+
+    30. V. Stanev, V. Vev, A. Gose, K. Iwasake, and T. Tanaka, "Unsupervised topic
+    modeling using non-negative matrix factorization with document clustering," Computational
+    Materials, 4, no. 1, pp. 1–10, 2013.
+
+    '
+  mdcn: '
+
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_6_0.png)
+
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_6_1.png)
+
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_6_2.png)
+
+
+    ![](img/25cc2976511492602032e3cc24aa97aa_6_3.png)
+
+
+    表 II：使用 NMI 比较各种模型的质量
+
+    | 数据集 | LDA | NMF | Kmeans | SeNMF | 我们的 SeNMF |
+
+    |---|---|---|---|---|---|
+
+    | bbc | 0.810 | 0.661 | 0.867 | 0.853 | 0.881 |
+
+    | ssg-2 | 0.754 | 0.893 | 0.890 | 0.899 | 0.906 |
+
+    | ssg-3 | 0.858 | 0.701 | 0.906 | 0.923 | 0.941 |
+
+    | Reuters-4 | 0.798 | 0.755 | 0.768 | 0.823 | 0.831 |
+
+    | Reuters-5 | 0.339 | 0.496 | 0.488 | 0.501 | 0.501 |
+
+
+    表 III：使用 $C_v$ 一致性比较各种聚类方法的质量
+
+    | 数据集 | LDA | NMKF | Skmeans | NMFK | 我们的 SeNMF |
+
+    |---|---|---|---|---|---|
+
+    | bbc | 0.677 | 0.816 | 0.808 | 0.811 | 0.879 |
+
+    | ssg-2 | 0.732 | 0.772 | 0.768 | 0.770 | 0.797 |
+
+    | ssg-3 | 0.801 | 0.831 | 0.849 | 0.839 | 0.850 |
+
+    | Reuters-4 | 0.553 | 0.726 | 0.752 | 0.683 | 0.814 |
+
+    | Reuters-5 | 0.561 | 0.776 | 0.748 | 0.737 | 0.814 |
+
+
+    图 5：Reuters-4 和 Reuters-5：寻找潜在主题 (a-b) 以及各种聚类的性质 (c-d)
+
+
+    聚类总体上是稳健且稳定的，我们的方法性能优于先进方法。
+
+
+    为了评估提取方法的质量，我们采用了 $C_v$ [42]。然而，$C_v$ 一致性依赖于人类对一致性的估算。此外，$C_v$ 一致性不依赖于“地面真值”标签，因为它考虑了词对的语义信息。它是使用归一化点互信息（NPMI）来计算词聚类的指标。表
+    III 显示了 LDA、Kmeans、NMFK [31] 和 SeNMF 的质量。通过这一分析，我们证明对于大多数分析的文本语料库，我们的方法具有竞争性且/或优于现有方法。
+
+
+    ## V. 结论
+
+
+    在本文中，我们引入了一种基于 NMF 且能自动确定主题数量的语义主题模型 SeNMF。SeNMF 具有几个特点：首先，通过使用一种小方法来识别文本初始 TF-IDF
+    表示 $X$ 的潜在主题，并构建词-上下文-矩阵 $M$，SeNMF 创建了潜在词对 $\{X_q, X_r\}$ 的表示。接下来，对于每个可能的潜在主题数量
+    $k \in \{1, \dots, k_{max}\}$，通过基于 KL 散度和基于 $M_k$ 的正则项进行聚类，对该词的对进行重构。潜在维度通过比较所提取主题集合的稳定性来确定。最终的潜在主题是作为所选主题集的均值提取的。此外，SeNMF
+    执行了 $H$-聚类，即对潜在空间中的文档坐标进行 $k$-means 聚类。我们证明了 SeNMF 在五个基准文本语料库上的质量，并将我们的结果与最先进的带有已知“地面真值”标签的预测主题数量、一致性和文档
+    EMI 的语义方法进行了比较。
+
+
+    ## VI. 致谢
+
+
+    本研究由美国能源部（DOE）国家安全管理局（NSSA）核不扩散办公室（NA-22）资助，洛斯阿拉莫斯国家实验室计算计划和 LRD 资助（201902DR），美国能源部合同
+    8923318CA00001。
+
+
+    ## 参考文献
+
+
+    1. S. Rullback and A. R. Lee, "Information and similarity," The annals of mathematical
+    statistics, 22, no. 2, pp. 79–86, 1991.
+
+    2. D. Seerwee, S. Dumas, G. Wagner, and F. Lander, "Indexing by latent semantic,"
+    Journal of Information Science, 31(4), pp. 349–363, 2005.
+
+    3. T. Hofman, "Probabilistic latent," arXiv preprint:0903.3133, 2009.
+
+    4. D. M. et al., "Latent Dirichlet allocation," Journal of machine learning research,
+    9, pp. 993–1023, 2008.
+
+    5. W. Xu, X. Liu, and Y. Gong, "Clustering based on non-negative matrix," Proceedings
+    of the ACM SIGIR Conference on Research and retrieval, 2003, pp. 267–273.
+
+    6. C. Hu et al., "On the relationship between non-negative matrix factorization
+    and probabilistic latent analysis," Statistics & Data Analysis, 58, no. 2, pp.
+    445–462, 2007.
+
+    7. J. Casey and B. Lee, "Topic models in data mining," Proceedings of 27th international
+    ACM SIGIR Conference on Research and retrieval, 2014.
+
+    8. D. F. Toledo and A. Londeira, "Using algorithms for non-negative matrix factorization
+    and latent Dirichlet for document clustering," Knowledge-Based Systems, 155, pp.
+    53–67, 2018.
+
+    9. J. Cho et al., "User-driven topic modeling for automatic document clustering,"
+    Proceedings of 2012 International Conference on World, 2012, pp. 1992–2003.
+
+    10. H. Kim et al., "Simultaneous discovery of discourse and document clustering
+    using non-negative matrix factorization," Proceedings of 21st ACMKDD Conference
+    on Data and Information Mining, 2015, pp. 556–562.
+
+    11. M. Müller and T. Hardman, "Representation of words and their compositionality,"
+    In NAACL, 2014, pp. 3111–3119.
+
+    12. M. Ali, A. Salam, and M. Maed, "Non-negative matrix factorization for text
+    clustering," In Proceedings of 11th ACM SIGIR Conference on Research and Retrieval,
+    2008, pp. 73–80.
+
+    13. T. Shi et al., "Text-specific topic modeling using non-negative matrix factorization
+    with word-level constraints," Proceedings of EMNLP, 2011, pp. 504–518.
+
+    14. P. Hargavas, G. Chen, N. Samuthi, P. Romero, and J. S. Eidenberg, "Code visualization
+    for graph mining and capsule networks," IEEE Access, vol. 8, pp. 13706–13715,
+    2020.
+
+    15. J. Chang, G. Servan, C. Wang, J. L. Bordord, and D. M. Rea, "Scalable sparse
+    topic model with non-negative matrix factorization," Advances in neural information
+    processing systems, 2009, pp. 288–296.
+
+    16. K. Stevens et al., "Hierarchical clustering to cover many models," In EMNLP,
+    2018, pp. 4089–4099.
+
+    17. T. Liu, N. L. Zhang, and J. Chen, "Hierarchical latent tree analysis for topic
+    detection," In European European conference on machine learning and knowledge
+    discovery, 2014, pp. 256–272.
+
+    18. A. Mirza, "Nonparametric regression and its application in cancer clustering,"
+    IEEE transactions on computational biology and bioinformatics, vol. 11, no. 6,
+    pp. 1208–1217, 2014.
+
+    19. D. J. McKinney and R. M. Real, "Automatic relevance detection for document
+    clustering," Technical Report of Stanford University, 1994.
+
+    20. V. Y. Tan and C. Févotte, "Automatic relevance detection in non-negative matrix
+    factorization with beta-divergence," IEEE Transactions on Pattern Analysis and
+    Machine Intelligence, vol. 35, pp. 790–803, 2012.
+
+    21. J.-P. Brun et al., "Metagenatures and pattern discovery using matrix factorization,"
+    Proceedings of the Academy of Sciences, 115(44), pp. 21494–21499, 2018.
+
+    22. D. Grees, O. D''Gallagher, and C. Huffman, "How many topics? sparse topic-model
+    analysis using methods of EMNLP," Springer, 2018, pp. 498–515.
+
+    23. L. B. Alexandrov, S. Nik-Zamac, C. D. Wege, J. P. Campbell, and M. Rea, "Non-negative
+    matrix factorization of gene expression in human cells," vol. 8, no. 1, pp. 246–259,
+    2003.
+
+    24. S. Baxter and V. V. Benceau, "Sequence-nonnegative matrix factorization,"
+    Statistics & Data Analysis, 50, no. 7, pp. 7332–7347, 2019.
+
+    25. R. Vanga, K. O. Rausanen, G. Bel, and S. Alexander, "Non-negative matrix factorization
+    with determination of the number of topics," The Journal of Machine Learning Research,
+    76, 2005.
+
+    26. R. Vanga, K. O. Rausanen, G. Bel, and S. Alexander, "Non-negative matrix factorization
+    for document clustering," Physical Review Research, 22, no. 2, 02348, 2020.
+
+    27. P. Hargavas, G. Chen, N. Samuthi, P. Romero, and J. S. Eidenberg, "Code visualization
+    for graph mining and capsule networks," IEEE Access, vol. 8, pp. 10749–10750,
+    2020.
+
+    28. V. Stanev, V. Vev, A. Gose, K. Iwasake, and T. Tanaka, "Unsupervised topic
+    modeling using non-negative matrix factorization with document clustering," Computational
+    Materials, 4, no. 1, pp. 1–10, 2013.
+
+
+    '
+  merge: 1
