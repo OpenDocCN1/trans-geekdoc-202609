@@ -1,0 +1,2 @@
++   [2020 第九届国际高级应用信息大会 (IIAI-AAI)（日本九州，2020.9.1-2020.9.15） 2020 第九届国际高级应用信息大会 (IIAI-AAI) ｜｜ 分布式](README.md)
++   [2020 第九届国际高级应用信息大会 (IIAI-AAI)（日本九州，2020.9.1-2020.9.15） 2020 第九届国际高级应用信息大会 (IIAI-AAI) ｜｜ 分布式](2020-9th-international-congress-on-advanced-applied-informat.md)

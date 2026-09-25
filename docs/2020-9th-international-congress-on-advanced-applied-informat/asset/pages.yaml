@@ -1,0 +1,518 @@
+- pgno: 0
+  md: '**Index Terms—** Deep Learning, Restricted Boltzmann Machine, KL Distillation,
+    Learning, AffectNet
+
+
+    The other deep learning model is a Deep Belief Network (DBN) that has high classification
+    performance by training and piling up a Restricted Boltzmann Machine (RBM) which
+    is a generative neural network. Although a DBN model does not have high classification
+    as CNN models, the automatically determined method [9] of hidden neurons of RBM
+    and hidden layers of DBN have been developed according to the input data space
+    learning. The method is the adaptive structural learning method of DBN (Adaptive
+    DBN) which uses genetic optimization algorithm to find the optimal network structure
+    [11]. The outstanding characteristic of Adaptive DBN can show higher classification
+    accuracy as several classes [13], for some image data set [12] and the real worlds.
+
+
+    Recently, the research of Deep Learning [1], [2] has caused an unforeseen influence
+    not only theoretical research of artificial intelligence, but also practical application
+    in our lives. The deep models such as AlexNet [3], GoogleNet [4], VGG [5] and
+    ResNet [6] have produced image recognition that greatly exceeded the capacity
+    of human ability. These models are a type of convolutional neural networks. The
+    features included in the input data are processed at multiple layers, and complex
+    features of the entry image can be represented with high capacity by piling up
+    layers hierarchically.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '![](img/0c190dbfa46c74bcca703aed90871083_1_0.png)
+
+
+    Fig. 1. Network structure of RBM
+
+
+    DBN can take huge iterative training. Moreover, the judgment for mis-labeled data
+    will require additional information.
+
+
+    In this paper, we reconstruct the trained DBN by using the training data. First,
+    a new child DBN is trained for the conflicted test data. Second, Kullback-Leibler
+    (KL) divergence is used to observe the difference between the parent and the child
+    models [16]. In large case of KL, a new neuron is generated in the parent DBN
+    and its weights are fine-tuned using the method described in [14]. We proposed
+    the method to verify which categories are misclassified for test data. The classification
+    accuracy improved from 78.4% to 91%.
+
+
+    The remainder of this paper is organized as follows. In section II, the structural
+    learning of DBN is explained. Section III explains the factual database: Affect.
+    In section IV, the effectiveness of our proposed method is verified through experiments.
+    In section V, we give some discussions to conclude this paper.
+
+
+    # II. STRUCTURAL LEARNING METHOD OF DBN
+
+
+    The basic idea of our proposed Adaptive DBN is described in this section to understand
+    the behavior of self-organized structure. The network structure of RBM consists
+    of two kinds of binary layers as shown in Fig. 1. DBN is stacking for stochastic
+    unsupervised learning by hierarchically building several RBMs.
+
+
+    # A. Neuron Generation/Annihilation Algorithm
+
+
+    We developed the adaptive structural learning method in RBM and DBN, called Adaptive
+    RBM and Adaptive DBN [13]. To generate an optimal number of hidden neurons for
+    given space during its training. In the method, idea of Walking Distance (WD)
+    was proposed for variance learning for parameters. If the variance is large, clearly
+    if the network does not have enough neurons, the WD will tend to fluctuate along
+    the trajectory. The situation shows that some hidden neurons may not represent
+    an anomaly pattern due to the lack of hidden neurons. To represent anomaly patterns
+    into neurons, a new neuron is generated to inherit the attributes of the parent
+    as shown in Fig. 2.
+
+
+    However, we may have a situation that some redundant neurons were generated due
+    to the neuron generation process. The neuron annihilation algorithm was applied
+    to kill the redundant neuron after neuron generation process. Fig. 2(b) shows
+    that the corresponding neuron is annihilated.
+
+
+    ![](img/0c190dbfa46c74bcca703aed90871083_1_1.png)
+
+
+    (a) Neuron generation
+
+
+    (b) Neuron Annihilation
+
+
+    Fig. 2. Adaptive DBN
+
+
+    Suitable number of hidden layers and neurons is automatically generated.
+
+
+    pre-training between 4th and 5th layers
+
+
+    pre-training between 2nd and 3rd layers
+
+
+    pre-training between 1st and 2nd layers
+
+
+    ![](img/0c190dbfa46c74bcca703aed90871083_1_2.png)
+
+
+    Fig. 3. An Adaptive of DBN
+
+
+    DBN is a hierarchical model of stacking the several trained RBMs. For building
+    hierarchical process, the output of hidden of i-1 RBM can be seen as the input
+    of i+1 RBM. Generally, with DBN we have higher power of data representation than
+    RBM. Such hierarchical model can represent the various features from abstract
+    to concrete representation in the direction of input layer. However, the number
+    of neurons depends on the data set.
+
+
+    Adaptive DBN can dynamically adjust the network to add new neuron one by one based
+    on the ID of WD. If the variance is large and the function does not converge,
+    a new RBM will be created to match the network structure set
+
+
+    # III. ADAPTIVE LEARNING METHOD FOR AFFECT
+
+
+    Affect is a face dataset containing human emotions from the Internet [15]. As
+    shown in Table 1, there are categories including testing and test cases. Fig.
+    4 shows the test categories except ''Non-Face''. These categories are labeled
+    according to subjectivity based on Valence and Arousal as shown in Fig. 5. Value
+    is the degree of pleasure/displeasure and Arousal is the degree of emotional strength.
+    Value of Valence'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# TABLE I
+
+    EMOTIONAL CATEGORY IN AFFECTNet
+
+
+    | Category | Train Data | Test Data |
+
+    | --- | --- | --- |
+
+    | Neutral | 54,758 | 500 |
+
+    | Happy | 134,415 | 500 |
+
+    | Sad | 25,695 | 500 |
+
+    | Surprise | 14,090 | 500 |
+
+    | Fear | 5,738 | 500 |
+
+    | Disgust | 5,803 | 500 |
+
+    | Anger | 4,892 | 500 |
+
+    | Concept | 1,750 | 500 |
+
+    | None | 11,108 | 500 |
+
+    | Uncertain | 11,645 | 500 |
+
+    | Non-binary | 5,267 | 500 |
+
+    | Total | 441,798 | 5500 |
+
+
+    ![](img/0c190dbfa46c74bcca703aed90871083_2_0.png)
+
+
+    (a) Neutral (b) Happy (c) Sad (d) Surprise (e) Fear
+
+
+    ![](img/0c190dbfa46c74bcca703aed90871083_2_1.png)
+
+
+    (f) Disgust (g) Disgust (h) Disgust (i) Anger (j) Anger (k) Anger
+
+    → Anger → Anger → Disgust → Disgust
+
+
+    ![](img/0c190dbfa46c74bcca703aed90871083_2_2.png)
+
+
+    (f) Disgust (g) Anger (h) Contentment (i) None (j) Uncertain
+
+
+    Fig. 5. Valence and Emotion
+
+
+    Fig. 6. Examples of mis-classified categories
+
+
+    Fig. 4. Samples in AffectNet
+
+
+    Arousal in [-1, 1], respectively, as shown in Fig. 5.
+
+    Fig. 5 shows the distribution of Valence and Emotion for emotion categories.
+
+
+    # IV. KLIVERGENCE DISTILLATION MODEL
+
+
+    The section details the learning method using KL Divergence Adaptation DBN. The
+    accuracy for test cases was investigated in each category. The results are reported
+    for some specified emotional type and shown in Section III. The KL divergence
+    between the trained and the mis-classified emotion was calculated. If the KL divergence
+    is larger than a certain threshold value, some neurons will be recreated at the
+    appropriate position to classify the mis-classified cases. The neuron generation
+    method involves matching the path with the target neurons.
+
+
+    # A. Classification of AffectNet by DBN
+
+
+    Table III shows the classification results by DBN for AffectNet. In this case,
+    the classification by AlexNet reported about 60% of the test set data. DBN achieved
+    100% classification accuracy for the training set. For test data, the classification
+    accuracy for emotion types was 87% on average. The best case was ‘Happy’, while
+    the worst one was ‘Anger’. The categories with less than 90% classification accuracy
+    were ‘Neutral’, ‘Sad’, ‘Surprise’, and ‘Disgust’. We investigated the mis-classified
+    cases by the label and the faces for the mis-classified categories.
+
+
+    Table IV shows the confusion matrix for the results in Table III. The element
+    in confusion matrix matches the number of predicted category and the label for
+    emotion faces. Fig. 6 shows some examples of the mis-classified cases. From Table
+    IV, we found that many mis-classified cases where ‘Anger’ was as ‘Disgust’
+
+
+    In [15], the ratio of labeled data by two annotations to an image for each category
+    was reported. Table II
+
+
+    An DBN trained on the method correctly classifies the three categories: ‘Neutral’,
+    ‘Uncertain’, and ‘Non-Face’ in the same way as [15]. Although the classification
+    accuracy for test data was higher than the CNN method, the accuracy was not high
+    (over 78.4%). The classification was not caused by over-fitting or over-training
+    while. We found some conflict patterns in the test data that were categorized
+    by one or more annotator’s answers.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# THE CATEGORY OF AGREEMENT BETWEEN TWO NOTATORS IN CATEGORICAL MODEL OF AFFECT
+    [15]
+
+
+    | Neutral | Happy | Sad | Surprise | Fear | Disgust | Anger | Content | Uncertain
+    | Non-Face |
+
+    |---|---|---|---|---|---|---|---|---|---||
+
+    | Neutral | 58.8 | 9.5 | 8.8 | 0.8 | 1.1 | 1.9 | 1.8 | 8.0 | - | - |
+
+    | Happy | 11.3 | 79.6 | 1.7 | 0.3 | 0.4 | 0.5 | 3 | 4.6 | - | 2.2 |
+
+    | Sad | 9.5 | 1.7 | 85.2 | 0.0 | 0.3 | 0.5 | 0 | 4.2 | - | 2.7 |
+
+    | Surprise | 2 | 3.8 | 6.6 | 66.5 | 14.0 | 0.8 | 1.9 | 2.7 | - | - |
+
+    | Fear | 0.8 | 0.4 | 0.0 | 0.1 | 91.5 | 0.0 | 0.0 | 0.5 | 1.5 | - |
+
+    | Disgust | 1.5 | 0.8 | 1.2 | 3.5 | 0.7 | 67.1 | 1.3 | 1.7 | 2.3 | 2.1 |
+
+    | Anger | 2.0 | 7.5 | 2.1 | 0.5 | 0.4 | 3.5 | 66.9 | 3.7 | 1.5 | 0.6 |
+
+    | Content | 10.2 | 7.5 | 5.2 | 2.1 | 0.5 | 4.4 | 3.7 | 72.5 | 1.5 | 8.9 |
+
+    | Uncertain | 13.5 | 12.1 | 7.8 | 4.3 | 4.5 | 6.2 | 2.6 | 12.3 | 20.6 | 8.9 |
+
+    | Non-Face | 3.7 | 3.8 | 1.7 | 1.1 | 0.0 | 1.4 | 0.7 | 0.4 | 1.4 | 83.9 |
+
+
+    TABLE II
+
+
+    # TABLE 103
+
+    CLASSIFICATION ACCURACY FOR OBJECT
+
+
+    | CNN [15] | Adaptive DNN |
+
+    |---|---|---|
+
+    | Category | Test data | Test data |
+
+    | Neutral | 63.0% | 87.8% |
+
+    | Happy | 88.0% | 92.4% |
+
+    | Sad | 99.9% | 95.8% |
+
+    | Surprise | 91.4% | 85.8% |
+
+    | Fear | 92.0% | 93.3% |
+
+    | Disgust | 92.3% | 92.4% |
+
+    | Anger | 98.2% | 78.4% |
+
+
+    ![](img/0c190dbfa46c74bcca703aed90871083_3_0.png)
+
+
+    shows that two annotators agree, for an image that is similar. From Table II,
+    the ratio is not random, with the highest being Happy, at 79.6%, with the level
+    of ''Content'', and ''Anger'' is at 50.8, 66.9% and 62.3. In addition, the agreement
+    degree is measured by Cohen''s coefficient [17], calculated from Table II, and
+    the data sets subjectivity of multiple annotators.
+
+
+    For the ensemble of two or more DNNs, we constructed a parent DNN which was trained
+    for the data set and two child DNNs which were trained for the test cases. The
+    KL divergence for the original model P and the child model Q was calculated by
+    the following equations:
+
+
+    ```
+
+    $D_{KL}(P||P_x) = \sum P_x(x) \log \frac{P_x(x)}{P(x)}, \quad (1)$
+
+    ```
+
+
+    ```
+
+    $D_{KL}(P_x||P) = \sum P_x(x) \log \frac{P(x)}{P_x(x)}, \quad (2)$
+
+    ```
+
+
+    In [16], we constructed a model for mis-classified data and correctly labeled
+    data for ''Neutral'' and ''Disgust''. As shown, we set the target to ''Value''
+    in V, ''Angle'' for all the images, Set1 is the correctly classified data, and
+    Set2 is the incorrectly classified data. The parent model P, and the child models
+    Q1 and Q2 were trained for the data Set0, Set1, and Set2, respectively.
+
+
+    Table VI shows the KL divergence of parent model P and child models Q1 and Q2.
+    KL divergence of P and Q2 was larger than P. The result shows a certain difference
+    between the models. KL divergence for each sample of P and Q2 was measured and
+    its result was from 0.0000 to 0.0025. If therefore, we assumed there that the
+    three levels of KL divergence in data and defined
+
+
+    three values of $D_{KL} = (0.0010, 0.0015, 0.0020)$ for the boundary of emotion
+    types for the mis-classified data. The three models were trained for the mis-classified
+    data by these three threshold values. As result, the classification accuracy was
+    95.8%, 97.2%, and 95.2% for the three threshold values. The model with the highest
+    accuracy was trained for $D_{KL} = 0.0015$.
+
+
+    We consider a method of new neurons in the parent DNN by using the threshold value
+    of KL divergence to connect the network. The child model Q trains the cases for
+    P''s mis-classified ''Anger'' and ''Disgust''. As shown from the re-classification,
+    the classification accuracy of the ratio model Q and P for an input x was improved.
+    The insertion of two models into subsets. The network structure of the parent
+    model will reduce the complexity of ensemble of deep learning.
+
+
+    # B. KL divergence based learning model
+
+
+    In this paper, we define a child model Q with KL which initializes the network
+    structure to connect values from the parent P. The child model Q trains the cases
+    for P''s mis-classified ''Anger'' and ''Disgust''. As shown from the re-classification,
+    the classification accuracy of the ratio model Q and P for an input x was calculated
+    by Eq. (3).
+
+
+    ```
+
+    $D_{KL}(P||Q) = \sum P(x) \log \frac{P(x)}{Q(x)}, \quad (3)$
+
+    ```
+
+
+    The KL divergence between P and Q showed 0.060, for the two cases of ''Anger''
+    and ''Disgust''. From Table 7, KL divergence for the mis-classified data was within
+    the range of 0.0000 to 0.0025 in experiment.
+
+    In addition to KL divergence, the difference of network signal flow for given
+    input data was investigated. The paths passed from input layer to output layer
+    were explored. If the wrong output was calculated for the test
+
+
+    453'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: "# THE CONFUSION MATRIX FOR CLASSIFICATION BY ADAPTIVE DBN (NUM.)\n\n| Neutral\
+    \ | Happy | Sad | Surprise | Fear | Disgust | Anger | Contempt |\n|---|---|---|---|---|---|---|---||\n\
+    | Neutral | 439 | 7 | 46 | 2 | 0 | 4 | 12 | 19 |\n| Happy | 5 | 442 | 0 | 4 |\
+    \ 12 | 11 | 1 | 12 |\n| Sad | 7 | 15 | 410 | 10 | 29 | 22 | 0 | 9 |\n| Surprise\
+    \ | 6 | 8 | 2 | 421 | 5 | 8 | 5 | 10 |\n| Disgust | 8 | 2 | 3 | 5 | 18 | 462 |\
+    \ 7 | 5 |\n| Anger | 6 | 1 | 0 | 0 | 5 | 5 | 416 | 17 |\n| Contempt | 1 | 0 |\
+    \ 0 | 3 | 2 | 5 | 21 | 438 |\n\n# TABLE V\nTRAINING DATA FOR MODEL DBN (1)\n\n\
+    | Set | Description | number |\n|---|---|---|\n| Set 0 | all images from Anger\
+    \ and Disgust | 1,008 |\n| Set 1 | the images clearly clustered at Set 0 | 862\
+    \ |\n| Set 2 | the images clearly clustered at Set 1 | 146 |\n\n# TABLE VI\nKL\
+    \ DIVERGENCE (16)\n\n| Model | KL |\n|---|---|\n| $D_{KL}(P||Q1)$ | 0.188 |\n\
+    | $D_{KL}(P||Q2)$ | 0.660 |\n\ncase, in the neuron the path was activated. The\
+    \ method is utilizing that a hidden node of RBM is represented as binary patterns\
+    \ [0, 1]. All possible combinations of binary pattern [o] are given to the trained\
+    \ DBN and such signal flow of the network from the lower layer to the upper layer\
+    \ is analyzed to find the activated path. The tuning method can repair the path\
+    \ of network partially for improving the classification accuracy. Algorithm 1-3\
+    \ shows the procedure of the tuning method.\n\nAs a result, there is no significant\
+    \ difference in the lower layer input, but there are characteristic differences\
+    \ in the upper layer near the output path shown in Fig. 8(a) and Fig. 8(b) of\
+    \ the paths from the first layer of the parent model and the child model, respectively.\
+    \ In Fig. 8, a node\n\n# Algorithm 2 Procedure of modifying path at the l-th\n\
+    \n+   1. Let $(x_1, \\dots, x_N)$ be patterns, where $N$ is the number of patterns.\
+    \ Let $Y(y_1, \\dots, y_N)$ be teacher signals. The trained DBN has $L$ layers.\
+    \ Let $l$ is the target layer for tuning.\n2. Give X to the network, for forward\
+    \ calculation. In the calculation, save information which neuron was activated\
+    \ from lower to upper layer. Let $X^l$ and $X^T$ be correct input patterns for\
+    \ $Y^T$.\n3. In the l-th layer, if a neuron is satisfied with Eq. (4), modify\
+    \ weights connected to the neuron j to $w^{correct}$. Eq. (5) is the ratio that\
+    \ only if $X^T$ is fixed at the layer j, $w^{correct}$ is a constant value (e.g.\
+    \ $w^{correct}=0$).\n\n```\n$|Activation^l(X^l) - |X^T|_j|^2 = (w^{correct})^2$.\
+    \ (4)\n```\n\n```\n$|Activation^l(X^l) - |X^T|_j|^2 = 0$. (5)\n```\n\nwhere, $\t\
+    heta^l$ is the threshold value. In this case, as $\theta^l$ is 0.3 from the empirical\
+    \ method.\n\n# Algorithm 3 Knowledge Extraction by C.4.5\n\n+   1. Let $(x_1,\
+    \ \\dots, x_N)$ be patterns, where $N$ is a 1-dimensional vector. The trained\
+    \ DBN has $L$ layers. Let $f(n)$ be the function that generates output patterns\
+    \ $Y(y_1, \\dots, y_N)$ for given $X$, $y_i$ has class value for classification.\n\
+    2. Give X to network and calculate $Y$.\n3. Extract rules by C.4.5.\n\n![](img/0c190dbfa46c74bcca703aed90871083_4_0.png)\n\
+    \n(a) Parent model (b) Child model\n\nFig. 8. Firing path in the DBN\n\n# Algorithm\
+    \ 1 Fine Tuning Method\n\n+   1. The L layers structure trained by training Adaptive\
+    \ DBN was constructed.\n2. Fine tuning method described in Algorithm 2 in the\
+    \ l-th layer ($l \\le L$) was implemented from the first layer to the L-th layer.\n\
+    \n454"
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: "# TABLE VII\nCLASSIFICATION RATE OF THE DISTILLATION MODEL\n\n| Category |\
+    \ Before | After |\n| --- | --- | --- |\n| Disgust | 92.4% | 94.7% |\n| Anger\
+    \ | 78.4% | 91.3% |\n\nmis-classified cases (e.g. 'Contempt'), which containnambiguous\
+    \ human emotions as 'Anger' and 'Disgust'.\nWe will investigate this in future\
+    \ work.\n\nACKNOWLEDGMENT\nThis work was supported by JASP KAKENHI Number\n192142,1924365,\
+    \ and obtained from commission\n by National Institute of Information and\nCommunications\
+    \ (NICT, 2015), JAPAN.\n\nactivated was not activated in the parent model. Due\n\
+    im proved instead output of 'Disgust' in the child model.\nThe difference in results\
+    \ among our models comes\nfrom the discrepancy in representing power features\n\
+    between the parent model and the child model. If the\nneuron in the child model\
+    \ as shown in Fig. 7 is also\nnerated by the generation process, the parent model\n\
+    can represent different pattern as the child\nmodel. Based on the observation\
+    \ that we found such:\nkl difference is large, which suggests that we\nconstruct\
+    \ the parent model by copying the corresponding\nneuron with same weights between\
+    \ neurons,\nif the larger KL diverge both the parent and\nchild model than the\
+    \ certain value 0.015 and the between\npattern is large, it means that the parent\n\
+    model is trained with small perturbation after the\nneuron is inserted at the\
+    \ center of position. If it\nnis difficult to control it by KL divergence and\
+    \ the\nof mis-classified cases in nature after.\n\n# REFERENCES\n\n+   [1] Vioio,\
+    \ Y. Deep learning architecture for AI. Foundations in\nMachine learning, vol.\
+    \ 2, pp.117-227 (2009).\n[2] LeCque, Q.R., Martinez, A., Bengio, Y., Building\
+    \ high-level features for-\nlarge unsupervised recognition. Proc. 2015 IEEE Conference\n\
+    of Computer Vision and Pattern Recognition (CVPR), pp. 471-478 (2015).\n[3] Maskovsky,\
+    \ I., Image Classification with Convolutional\nNeural Networks, in. International\
+    \ Conference on\nInformation Processing Systems (NeurIPS 25) (2012).\n[4] He,\
+    \ K., et al. Deep learning with linear ReLU, 2015 IEEE Conference\nof Computer\
+    \ Vision and Pattern Recognition, pp. 1-9 (2015).\n[5] Kian, A, Azerman, Y. Deep\
+    \ convolutional networks for-\nlarge image recognition, Proc. of International\
+    \ Conference on\nComputer Vision, 2015.\n[6] He, K.H., Zhang, S.J. Deep learning\
+    \ for image\nrecognition, Proc. of 2016 IEEE Conference on Computer Vision and\
+    \ Pattern Recognition, pp.708-718 (2016).\n[7] Ge,H.S., Ozdaglar, T., and Yaf.\
+    \ Fast learning algorithm for deep\nclassification of neural networks, In 2011\
+    \ IEEE International\nConference on Computer Vision, pp.1557-1564 (2011).\n[8]\
+    \ Sikanda and Timucha, An Adaptive Learning Method of Restricted\nBottleneck by\
+    \ Neuron Evolution and Application,\nInternational Journal of Neural Networks\
+    \ and\nSystems (IEEE), 2016(6):1273-1278.\n[9] Sikanda and Timucha, A Structural\
+    \ Learning Method of Restricted\nBottleneck for Neuron Generation in International\n\
+    Neural Processing, vol.990, of the Series Lectures in\nMachines, 2019.\n[10] Sikanda\
+    \ and Timucha,An Adaptive Learning Method of Deep\nNeuron by Layer Generation,\
+    \ Proc. of IEEE TENCOCON\n2020, pp.1-6.\n[11] Kirkpatrick, A., Deep Learning of\
+    \ Features from Tiny Images,\nInternational Journal of Computer Vision, 123(9),\
+    \ 2019.\n[12] Sikanda, T., Hikamira, A., and K.Jimuka,Adaptive Method of Deep\n\
+    Neuron Layer Generation Using Neuron An-\nputation, in International Conference\
+    \ on Computer\nVision and Applications, pp.1-5 (2018).\n[13] Sikanda, T., Hikamira,\
+    \ A., and K.Jimuka,Adaptive Method of Deep\nNeuron Generation Using Neuron An-\n\
+    putation, in International Conference on Computer\nVision and Applications, pp.15-20\
+    \ (2019).\n[14] Sikanda, T., Timucha,Knowledge Transfer of Strategy\nEvolution\
+    \ of Deep Bottleneck for Medical Examination\nData, International Journal of Semantic\
+    \ Computing, Vol.13, No.1, pp.\n-10.\n[15] Al-Mohasseni, A., Bhausani, Y., Mahmoud:\
+    \ AffectNet: Detection for\nFacial Expression, and Emotion Classification in the\
+    \ Wild,\nProceedings of the 2019 IEEE International Conference on\nComputer and\
+    \ Pattern Recognition (CVPR), pp.7442-7450 (2019).\n[16] Sikanda, T., Re-modeling\
+    \ of Class Misclassification for\nchild Data using Adaptive Method in AffectNet:\
+    \ A facial\nexpression study in IEEE International Conference on\nputational Intelligence\
+    \ and Applications (WCAIA2019), pp.15-20.\n[17] Sikanda and Timucha, Fine-tuning\
+    \ of Learning of Deep\nBottleneck for Classification and Recognition, International\n\
+    Journal Computer Intelligence Studies, Vol.6,No.4, \n333-347 (2017).\n[18] Lu,\
+    \ Q. Improved use of continuous attributes in c4.5, Journal of\nArtificial Intelligence,\
+    \ No.4, pp.77 (2019).\n\nTo show the classification results of re-modeling of\n\
+    test data. In this test set, we used 0.015 based on the\nperimental result in\
+    \ [16]. In re-modeling, the correct\nclassification for 'Disgust' and 'Anger'\
+    \ were 92.4 and\n78.4%, but those reached to 94.7 and\n91.3% by re-modeling. TABLE\
+    \ VII shows the result\nner of other categories did not change in the experiment\
+    \ of\nof KL based on the results of experiments. In,\nthe time of training was\
+    \ 30.32 hours, while the time of using\nchild models and KL divergence was 2.95\
+    \ hours, in our\nent two RTX GPUs.\n\n# V. CONCLUSIVE DISCUSSION\n\nIn this paper\
+    \ we propose Adaptive DBN that has the\noptimal structure by generating/activating\
+    \ neurons and\nglayers during learning to the AffectNet: Facial Im\nression Image\
+    \ database. The classification results for training\ndata set cannot reach perfect,\
+    \ but for certain categories in\ntest data cannot reach high, because human emotion\n\
+    contains many and ambiguous features to the-\nending on context. To improve them,\
+    \ the parent model and the child model were\nconstructed, and A re-modeling method\
+    \ was proposed to make\nthe tuned DBN, and then the re-trained model of\ntnew\
+    \ neurons also improve classification accuracy\nfor 'Anger' and 'Disgust'. Beside\
+    \ these cases, there are\n\n455"
+  merge: -1
+  img_proc: true
