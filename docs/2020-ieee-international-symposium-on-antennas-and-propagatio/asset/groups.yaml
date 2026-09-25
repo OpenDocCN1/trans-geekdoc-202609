@@ -1,0 +1,386 @@
+- raw:
+  - "[PAGE 0]\n\n# # Study of Machine Learning Using Wireless and Physical Network\
+    \ Data at a Factory\n\nKenshi Horihata, Kazuki Kanai, Rei Hasegawa, Yoshio Koyanagi\
+    \ and Yasufumi Ichikawa\nInnovation Center, Connected Solutions Company\nPanasonic\
+    \ Corporation\nYokohama, Kanagawa, Japan\nhorihata.kenshi@jp.panasonic.com, kanuki.kanai@jp.panasonic.com,hasegawa.rei@jp.panasonic.com,koyanagi.yoshio@jp.panasonic.com,\
+    \ ichikawa.yasufumi@jp.panasonic.com\n\n**Abstract—** Wireless communication is\
+    \ expected to improve the flexibility of equipment layout or the IoT factory (Things).\
+    \ In this paper, we show the result of constructing IoT sensor network using LPWA\
+    \ (Low Power Area) in a factory, performing machine learning, and analyzing the\
+    \ correlation between wireless and physical environment. As it has been shown\
+    \ that RSSI (received signal indicator) fluctuation could be estimated from physical\
+    \ environment around the terminal.\n\n***Keywords—Machine Learning; Random Forest;\
+    \ Factory; Sensor; Propagation***\n\n# I. INTRODUCTION\n\nWireless communication\
+    \ has been made in factories because of control reliability. But wireless communication\
+    \ is expected to improve the flexibility of equipment layout or the IoT factory\
+    \ (Things). However, large systems such as AGVs (Automated Guided Vehicles) and\
+    \ conveyors move on many factories. In effect, it is necessary for optimizing\
+    \ on-site wireless environment to operate the analysis cycle by cycle and physical\
+    \ factors at the rigid.\n\n a cyber side, others have been studying the framework\
+    \ of radio environment simulator that combines propagation and system calculation\
+    \ [2]. As a physical side, it is strongly required to gather crappy factors when\
+    \ the on-site wireless environment changes. As a method we have not only communication\
+    \ status but also physical environment around the sensors. Our aim is to apply\
+    \ it to a mechanism that allows field engineers to identify the early cuts and\
+    \ takeovers, or to a technique to improve parameter control by including the physical\
+    \ environment.\n\nIn this paper, we show the result of constructing IoT sensor\
+    \ network using LPWA (Low Power Area) in a factory, performing machine learning,\
+    \ and analyzing the correlation between wireless and physical environment.\n\n\
+    # II. MEASUREMENT SYSTEM AND EXPERIMENTAL CONDITIONS\n\n# A. LPWA network construction\n\
+    \nIn this study, we use LoRa in LPWA. Figure 1 shows the configuration diagram\
+    \ of the measurement system. The overall configuration is a star-type sensor network.\
+    \ The physical environment was acquired by the sensor in the factory and received\
+    \ by the LoRa base station. Next, the collected sensor data and RSSI (received\
+    \ signal indicator) are stored in the SQL database via the LoRa and sensor server\
+    \ mounted on the raspberry. The frequency was 920.2 MHz, channel 38, the transmission\
+    \ power was 13 dBm, the spreading factor was 125 kHz, the sensing intensity was\
+    \ once every 3 seconds.\n\n# B. Sensor device configuration\n\nIn this study,\
+    \ we use a human sensor and a distance sensor to acquire physical environment.\
+    \ The human sensor works in 5 and 150 m [15] in the range front direction, and\
+    \ can detect the movement of the human or machine as a source by infrared rays.\
+    \ The distance sensor works in 5 and 150 m and detects obstacles by waves. Each\
+    \ sensor acquires the data once every 5 seconds, and then each terminal calculates\
+    \ the human detection rate (Human), the average distance (AV. Distance) and the\
+    \ change rate of the distance (Diff. Rate). The calculation result is transmitted\
+    \ to the base station as application data.\n\n# C. Experimental conditions\n\n\
+    Figure 2 shows the 3D model in the factory and the locations of the bases and\
+    \ terminals, which are part of the factory building. This was a warehouse factory\
+    \ where tall metal shelves were linked up, and it was environment where the terminals\
+    \ were placed on the floor with the wall bending, and the sensors were placing\
+    \ gateways. A half day and one day, and several sets have been note\n\n> This\
+    \ work is supported by the Ministry of Internal Affairs and Communications for\
+    \ the project 'R&D on Technologies to develop and utilize 5G networks' (Contract\
+    \ No. 2020-0-3300044) in Distributed Areas."
+  - "[PAGE 1]\n\n# III. Machine Learning\n\n# A. Data Structure and machine learning\
+    \ conditions\n\nFor using machine learning, recording of data was performed. The\
+    \ data was a time-series data that were the RSSI, Human, AV_Distance, and Diff_Rate\
+    \ of each terminal. In addition, time windows of 0, 1, and 5 minutes have been\
+    \ applied to the features, the mean, median, and standard deviation were calculated\
+    \ for each time window. Note that the time window was used going back to the past\
+    \ time so that future information was not included.\n\nMachine learning was performed\
+    \ using the processed data, which had about 300,000 lines and 14 hours from 10:00\
+    \ to 24:00. This data was divided into training and test sets. Models were created\
+    \ using algorithm, Random Forest implemented in Python open source library sc-learn.\
+    \ The target parameter was 5 minutes of std. The RSSI for the 21st terminal and\
+    \ machine learning was performed without RSSI of any terminal. The results were\
+    \ shown as follows: \"estimators\" were 100, \"criteria\" were \"MSE\", \"max_features\"\
+    \ were 8, \"max_depth\" were \"sqrt\", \"min_samples_split\" and \"min_samples_leaf\"\
+    \ were \n\n# B. Results and discussion\n\nFirst, root mean square error (RMSE)\
+    \ between estimation and std. of RSSI using the RMSE of 5 data was calculated.\
+    \ The average value was 0.29 for the data and 0.32 for the test data. For comparison,\
+    \ RMSE between the simple average and target values for the test data was 0.5.\
+    \ Machine learning shows the top 10 rankings of impacts on the trained model.\
+    \ This figure indicates that the std. of the RSSI has been estimated using other\
+    \ terminals around the 21st terminal, which is the target. The top feature was\
+    \ 5 minutes of average at the 22nd terminal.\n\nIn addition, another test was\
+    \ performed with new data on a different day using the trained model in the section.\
+    \ Section 4 shows the target and estimated std. of the RSSI. A more important\
+    \ fact is the RMSE result is that the estimation could follow the target on a\
+    \ different day. This indicates that RSSI fluctuation could be linked to physical\
+    \ environment by machine learning.\n\n# IV. CONCLUSION\n\nIn this paper, we have\
+    \ analyzed the correlation between wireless and physical performance using machine\
+    \ learning in a factor. As it has been shown that RSSI fluctuation of a terminal\
+    \ could be estimated from std data that recorded physical environment around the\
+    \ terminal. A training model is considered to be useful for early uses of on-site\
+    \ wireless problems or as feedback for more advanced wireless parameter control.\
+    \ We are planning to use a method of estimating RSSI fluctuation of multiple terminals\
+    \ at a time, and separating different situations.\n\n![](img/1c304c22a72d42c17351fcef07a1cc72_1_0.png)\n\
+    \n![](img/1c304c22a72d42c17351fcef07a1cc72_1_1.png)\n\n![](img/1c304c22a72d42c17351fcef07a1cc72_1_2.png)\n\
+    \n![](img/1c304c22a72d42c17351fcef07a1cc72_1_3.png)\n\n| Data type | Statistical\
+    \ | Terminal |\n|---|---|---|\n| RSSI | 5 min. | 22nd |\n| Human | 5 min. | 21st\
+    \ |\n| AV_Distance | 5 min. | 21st |\n| AV_Distance | 0.5 min | 21st |\n| AV_Distance\
+    \ | 1 min. | 21st |\n| Diff_Rate | 5 min. | 18th |\n| Improved | 5 min. | 22nd\
+    \ |\n| Human | 5 min. | 22nd |\n\n# REFERENCES\n\n+   [1] K.Leheraito,A Framework\
+    \ of Study Methods for Wireless Communication in Smart Manufacturing Industry.\
+    \ The 2018 IEEE Global Conference, B-1.22, March 2018.\n[2] LoRa Alliance;\"https://lora-alliance.org/\"\
+    \n[3] LoRa Raspberry\n[4] Random Forest, \"https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html.\"\
+    ,"
+  md: '
+
+    ## Study of Machine Learning Using Wireless and Physical Network Data at a Factory
+
+
+    Kenshi Horihata, Kazuki Kanai, Rei Hasegawa, Yoshio Koyanagi and Yasufumi Ichikawa
+
+    Innovation Center, Connected Solutions Company
+
+    Panasonic Corporation
+
+    Yokohama, Kanagawa, Japan
+
+    horihata.kenshi@jp.panasonic.com, kanuki.kanai@jp.panasonic.com, hasegawa.rei@jp.panasonic.com,
+    koyanagi.yoshio@jp.panasonic.com, ichikawa.yasufumi@jp.panasonic.com
+
+
+    **Abstract—** Wireless communication is expected to improve the flexibility of
+    equipment layout or the IoT factory (Things). In this paper, we show the result
+    of constructing an IoT sensor network using LPWA (Low Power Area) in a factory,
+    performing machine learning, and analyzing the correlation between wireless and
+    physical environment. As it has been shown that RSSI (received signal indicator)
+    fluctuation could be estimated from physical environment around the terminal.
+
+
+    ***Keywords—Machine Learning; Random Forest; Factory; Sensor; Propagation***
+
+
+    # I. INTRODUCTION
+
+
+    Wireless communication has been made in factories because of control reliability.
+    But wireless communication is expected to improve the flexibility of equipment
+    layout or the IoT factory (Things). However, large systems such as AGVs (Automated
+    Guided Vehicles) and conveyors move on many factories. In effect, it is necessary
+    for optimizing on-site wireless environment to operate the analysis cycle by cycle
+    and physical factors at the rigid.
+
+
+    On a cyber side, others have been studying the framework of radio environment
+    simulator that combines propagation and system calculation [2]. As a physical
+    side, it is strongly required to gather crappy factors when the on-site wireless
+    environment changes. As a method we have not only communication status but also
+    physical environment around the sensors. Our aim is to apply it to a mechanism
+    that allows field engineers to identify the early cuts and takeovers, or to a
+    technique to improve parameter control by including the physical environment.
+
+
+    In this paper, we show the result of constructing IoT sensor network using LPWA
+    (Low Power Area) in a factory, performing machine learning, and analyzing the
+    correlation between wireless and physical environment.
+
+
+    # II. MEASUREMENT SYSTEM AND EXPERIMENTAL CONDITIONS
+
+
+    ### A. LPWA network construction
+
+
+    In this study, we use LoRa in LPWA. Figure 1 shows the configuration diagram of
+    the measurement system. The overall configuration is a star-type sensor network.
+    The physical environment was acquired by the sensor in the factory and received
+    by the LoRa base station. Next, the collected sensor data and RSSI (received signal
+    indicator) are stored in the SQL database via the LoRa and sensor server mounted
+    on the raspberry. The frequency was 920.2 MHz, channel 38, the transmission power
+    was 13 dBm, the spreading factor was 125 kHz, the sensing intensity was once every
+    3 seconds.
+
+
+    ### B. Sensor device configuration
+
+
+    In this study, we use a human sensor and a distance sensor to acquire physical
+    environment. The human sensor works in 5 and 150 m [15] in the range front direction,
+    and can detect the movement of the human or machine as a source by infrared rays.
+    The distance sensor works in 5 and 150 m and detects obstacles by waves. Each
+    sensor acquires the data once every 5 seconds, and then each terminal calculates
+    the human detection rate (Human), the average distance (AV. Distance) and the
+    change rate of the distance (Diff. Rate). The calculation result is transmitted
+    to the base station as application data.
+
+
+    ### C. Experimental conditions
+
+
+    Figure 2 shows the 3D model in the factory and the locations of the bases and
+    terminals, which are part of the factory building. This was a warehouse factory
+    where tall metal shelves were linked up, and it was environment where the terminals
+    were placed on the floor with the wall bending, and the sensors were placing gateways.
+    A half day and one day, and several sets have been noted.
+
+
+    > This work is supported by the Ministry of Internal Affairs and Communications
+    for the project ''R&D on Technologies to develop and utilize 5G networks'' (Contract
+    No. 2020-0-3300044) in Distributed Areas.
+
+
+    # III. Machine Learning
+
+
+    ### A. Data Structure and machine learning conditions
+
+
+    For using machine learning, recording of data was performed. The data was a time-series
+    data that were the RSSI, Human, AV_Distance, and Diff_Rate of each terminal. In
+    addition, time windows of 0, 1, and 5 minutes have been applied to the features,
+    the mean, median, and standard deviation were calculated for each time window.
+    Note that the time window was used going back to the past time so that future
+    information was not included.
+
+
+    Machine learning was performed using the processed data, which had about 300,000
+    lines and 14 hours from 10:00 to 24:00. This data was divided into training and
+    test sets. Models were created using algorithm, Random Forest implemented in Python
+    open source library scikit-learn. The target parameter was 5 minutes of std. The
+    RSSI for the 21st terminal and machine learning was performed without RSSI of
+    any terminal. The results were shown as follows: "estimators" were 100, "criteria"
+    were "MSE", "max_features" were 8, "max_depth" were "sqrt", "min_samples_split"
+    and "min_samples_leaf" were.
+
+
+    ### B. Results and discussion
+
+
+    First, root mean square error (RMSE) between estimation and std. of RSSI using
+    the RMSE of 5 data was calculated. The average value was 0.29 for the data and
+    0.32 for the test data. For comparison, RMSE between the simple average and target
+    values for the test data was 0.5. Machine learning shows the top 10 rankings of
+    impacts on the trained model. This figure indicates that the std. of the RSSI
+    has been estimated using other terminals around the 21st terminal, which is the
+    target. The top feature was 5 minutes of average at the 22nd terminal.
+
+
+    In addition, another test was performed with new data on a different day using
+    the trained model in the section. Section 4 shows the target and estimated std.
+    of the RSSI. A more important fact is the RMSE result is that the estimation could
+    follow the target on a different day. This indicates that RSSI fluctuation could
+    be linked to physical environment by machine learning.
+
+
+    # IV. CONCLUSION
+
+
+    In this paper, we have analyzed the correlation between wireless and physical
+    performance using machine learning in a factor. As it has been shown that RSSI
+    fluctuation of a terminal could be estimated from std data that recorded physical
+    environment around the terminal. A training model is considered to be useful for
+    early uses of on-site wireless problems or as feedback for more advanced wireless
+    parameter control. We are planning to use a method of estimating RSSI fluctuation
+    of multiple terminals at a time, and separating different situations.
+
+
+    ![](img/1c304c22a72d42c17351fcef07a1cc72_1_0.png)
+
+
+    ![](img/1c304c22a72d42c17351fcef07a1cc72_1_1.png)
+
+
+    ![](img/1c304c22a72d42c17351fcef07a1cc72_1_2.png)
+
+
+    ![](img/1c304c22a72d42c17351fcef07a1cc72_1_3.png)
+
+
+    | Data type | Statistical | Terminal |
+
+    |---|---|---|
+
+    | RSSI | 5 min. | 22nd |
+
+    | Human | 5 min. | 21st |
+
+    | AV_Distance | 5 min. | 21st |
+
+    | AV_Distance | 0.5 min | 21st |
+
+    | AV_Distance | 1 min. | 21st |
+
+    | Diff_Rate | 5 min. | 18th |
+
+    | Improved | 5 min. | 22nd |
+
+    | Human | 5 min. | 22nd |
+
+
+    # REFERENCES
+
+
+    +   [1] K.Leheraito,A Framework of Study Methods for Wireless Communication in
+    Smart Manufacturing Industry. The 2018 IEEE Global Conference, B-1.22, March 2018.
+
+    [2] LoRa Alliance;"https://lora-alliance.org/"
+
+    [3] LoRa Raspberry
+
+    [4] Random Forest, "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html.",
+
+    '
+  mdcn: '
+
+
+    ## 基于工厂无线与物理网络数据的机器学习研究
+
+
+    Kenshi Horihata, Kazuki Kanai, Rei Hasegawa, Yoshio Koyanagi 和 Yasufumi Ichikawa
+
+    连接解决方案公司，创新中心
+
+    松下公司
+
+    日本神奈川县横滨市
+
+    horihata.kenshi@jp.panasonic.com, kanuki.kanai@jp.panasonic.com, hasegawa.rei@jp.panasonic.com,
+    koyanagi.yoshio@jp.panasonic.com, ichikawa.yasufumi@panasonic.com
+
+
+    **摘要——** 无线通信有望提高设备布局的灵活性或物联网工厂（Things）。本文展示了在工厂中使用低功耗广域网（LPWA）构建传感器网络的结果，并分析了无线与物理环境之间的相关性。结果显示RSSI（接收信号强度）的波动可以从物理环境中进行估计。
+
+
+    ***关键词——机器学习；随机森林；工厂；传感器***
+
+
+    # I. 引言
+
+
+    为了控制可靠性，在工厂中实现了无线通信。无线通信有望提高设备布局的灵活性或物联网工厂（Things）。然而，在许多工厂中，如自动引导车辆（AGVs）和输送带等系统正在运行。因此，需要通过周期和物理因素对现场无线环境进行优化。
+
+
+    在数字侧，其他人研究了结合传播和系统计算的环境器框架。作为物理侧，强烈要求在现场无线环境变化时收集因素。我们的目标是将该方法应用于机制，允许工程师识别并接管物理环境的参数控制。
+
+
+    本文展示了在工厂中使用低功耗广域网（LPWA）构建传感器网络的结果，并分析了无线与物理环境之间的相关性。
+
+
+    # II. 测量系统与实验条件
+
+
+    ### A. LPWA网络构建
+
+
+    在本研究中，我们使用了LPWA中的LoRa。图1显示了测量系统的配置图。整体配置为星型传感器网络。物理环境通过工厂中的传感器获取。接下来，收集的传感器数据和RSSI通过SQL数据库存储在服务器。频率为920.2
+    MHz，通道为38，发射功率为13 dBm，扩因子为125，采样强度为每3秒一次。
+
+
+    ### B. 传感器配置
+
+
+    在本研究中，我们使用人体传感器和距离传感器来获取物理环境。人体传感器在前方150米范围内工作，并检测人体或机器的运动。距离传感器在150米范围内工作并检测障碍物。每个传感器每5秒获取一次数据，然后计算每个终端的人体检测率（Human）、平均距离（AV
+    Distance）和距离变化率（Diff Rate）。计算结果作为应用数据传输到基站。
+
+
+    ### C. 实验条件
+
+
+    图2显示了工厂中基站和终端位置的3D模型。这是一个连接了高金属架的仓库工厂，传感器被放置在带有墙壁的地板环境。。记录了半天和一天的多组数据。
+
+
+    > 本工作由日本总务省的“5G网络开发与利用技术”项目（合同编号2020-0-3300044）支持。
+
+
+    # III. 机器学习
+
+
+    ### A. 数据结构与机器学习条件
+
+
+    为了使用机器学习，进行了数据记录。数据是每个终端的RSSI、Human、AV_Distance和Diff_Rate的时间序列数据。此外，对特征应用了0、1和5分钟的时间窗口，计算了每个时间窗口的平均值、中位数标准差。注意时间窗口回溯到过去，因此不包含未来信息。
+
+
+    使用处理后的数据进行了机器学习，数据量约300,000行，时间范围从10:00到24:00。这些数据被分为训练集和测试集。使用Python开源库scikit-learn实现的随机森林算法创建了模型。目标参数是第21终端5分钟RSSI的标准差，并在没有其他终端RSSI的情况下进行机器学习。结果所示：“estimators”为100，“criteria”为“MSE”，“max_features”为8，“max_depth”为“sqrt”，“min_samples_split”和“min_samples_leaf”（未完）。
+
+
+    ### B. 结果与讨论
+
+
+    首先，使用5秒数据计算了估计值与RSSI标准差之间的均方根误差（RMSE）。数据的平均值为0.29，测试数据为0.32。作为比较，测试数据的简单平均值与目标值之间的RMSE为0.5。机器学习显示了对训练模型影响最大的前10名排名。该图表明，利用目标终端第21周围的其他终端估计出了RSSI的标准差。顶部特征是第22终端的5分钟平均值。
+
+
+    此外，使用本节中训练的模型对另一天的新数据进行了另一项测试。第4节显示了目标和估计的RSSI标准差。更重要的事实是RMSE结果表明，估计值可以在另一天跟随目标。这表明RSSI波动可以通过机器学习与物理环境相关。
+
+
+    # IV. 结论
+
+
+    在本文中，我们通过机器学习分析了工厂中无线与物理环境之间的相关性。结果显示RSSI的波动可以从物理环境的标准差数据进行估计。该方法被认为对现场无线环境的控制是有用的。我们计划使用该方法同时估计多个终端的波动，并区分不同的情况。
+
+
+    '
+  merge: -1
