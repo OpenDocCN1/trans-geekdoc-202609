@@ -1,0 +1,756 @@
+- pgno: 0
+  md: '# # Optimizing HVAC Systems in Buildings with Machine Learning Prediction Models:
+    an Algorithm Based Economic Analysis
+
+
+    Mofeyang Li
+
+    Xuan Gaoxin No.I High School
+
+    shanxi, China
+
+    1319407831@qq.com
+
+
+    Abstract—The Heating, Ventilation and Air Conditioning (HVAC) systems have been
+    widely employed by offices in China. However, 24-hour running schedules in cities
+    are often costly due to unnecessary energy consumed by extra power. To cope with
+    this challenge and maximize HVAC running efficiency, this study builds prediction
+    models with machine learning (ML) algorithms including clustering, regression,
+    and deep learning to optimize the systems data derived from an office building
+    in China. The goal of optimization is to minimize the amount of cooling which
+    is less consumed, which is done by controlling the temperature. With trained models,
+    the results of optimization showing a promising outcome, that for a single office
+    building, it can reduce the energy cost, Net Present Value (NPV), Life Cycle Cost
+    Analysis (LCCA), and Social Carbon Cost (SCC). Findings can be found in the field
+    of energy: power distribution by suggesting an optimization methodology for HVAC
+    systems, this paper also aims to inspire more work in energy conservation through
+    advanced machine learning technologies, in the hope that the volatile, global
+    climate can be mitigated by greater and better approaches in everyday life.
+
+
+    are for the HVAC system, but it will not only alleviate the shortage, but also
+    have important significance for reducing the consumption of non-renewable energy,
+    protecting the ecological environment, and maintaining air quality. This paper
+    presents a method by adjusting system parameters involved in HVAC operations in
+    buildings to order that a lower energy and cost system can be achieved. The method
+    uses the actual data of the chiller cooling system and heating water from a building
+    including 414 parameters from two points observed, and applies machine learning
+    to optimize the operation strategy of the central air conditioning system, and
+    then calculates the economic benefits of the model based on the full life cost
+    method and Net Present Value(NPV) and socioeconomic benefits using Social Cost
+    of Carbon (SCC) actually achieving the goal of energy saving for the city.
+
+
+    **Keywords**—HVAC system, machine learning, prediction, energy conservation
+
+
+    # I. INTRODUCTION
+
+
+    With the rapid growth of China, the improvement of people''s living standards
+    and the continuous expansion of per capita building area, the application of HVAC
+    has become widespread. The challenge of energy conservation of HVAC systems becomes
+    an energy problem to solve. In 2018, the total energy consumption of building
+    was 8 billion tons of the total energy consumption. In addition, the energy use
+    per unit of building in China is still three to that of developed countries with
+    similar climates in development. More technological innovations are needed in
+    the field of HVAC to reduce energy consumption. The role of building HVAC system
+    is reflected in the three major aspects of heating, ventilation and air conditioning.
+    To achieve the purpose of energy saving, we can select the appropriate system
+    design, and strengthen the system control. If energy saving and consumption reduction
+    measures
+
+
+    The classical control algorithms for building operations include logic like PID
+    and fuzzy control. However, since PID or fuzzy control cannot ensure the optimal
+    operation for minimizing energy consumption while maintaining the normal building
+    operations, researchers have focused on developing machine learning algorithms
+    to realize optimal prediction with historical data from building energy systems
+    [1][2]. Therefore, it has possible to optimize energy saving, especially HVAC
+    systems to save energy while maintaining normal operations such as comfort control.
+
+
+    # III. CONTRIBUTIONS
+
+
+    This paper presents data-driven models with machine learning algorithms (Gradient
+    Boosting, Random Forest, Adaptive Regression) to reduce chiller and power forecast
+    for HVAC systems in office buildings. A new framework is developed to optimize
+    the chiller plant operates with chillers dynamically to reduce energy efficiency
+    and carbon emission without new hardware and costs, which is by monitoring and
+    controlling parameters in HVAC thermostats with the prediction models trained,
+    the use is minimized without sacrificing any thermal comfort or amount'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'cooling. By combining LCCA (Life Cycle Cost Analysis) and SCC (Social Cost)
+    with NPV (Net Present Value), this paper connects commercial and social benefits
+    that could be generated by algorithms for energy conservation in a vivid lake.
+    Machine learning is powerful and it de facto works when it deals with data accurately
+    and effectively. With pseudocodes, number tables, and examples, the algorithms
+    should be easily visualized and generalized to other aspects in the field of energy
+    where there''s a potential to achieve achievement.
+
+
+    3) Adboost regression Adboost cascades weak learners and tune the weights on each
+    learner trained before adding them. Adboost provides a relatively prediction model
+    with no feature selection required. However it could be affected if the noises
+    worsens mislead the weight adjustment in each step and add to time. The parameters
+    in Adabo are listed below Table III.
+
+
+    # IV. METHODOLOGY
+
+
+    # A. Development of chilling power and power forecast models
+
+
+    1) Gradient Boosting Regression Gradient Boosting (GBR) is the main algorithm
+    used to train the model for a fairly accurate prediction of the chilling power.
+    Gradient Boosting is a kind of Gradient Descent. There are several key parameters
+    in GBR that noticed, number of estimators, learning rate, minimum sample split,
+    maximum depth and loss functions. Table 1 shows the description of each parameter.
+    With grid search for the parameter setting, the model can be optimized with top
+    performances.
+
+
+    TABLE I. THE PARAMETERS IN GRADIENT BOOSTING ALGORITHM (GBR).
+
+
+    | Parameter name | Description |
+
+    | --- | --- |
+
+    | number of estimators | the number of stages to perform |
+
+    | learning rate | the percent of the contributions from each tree |
+
+    | minimum sample split | the number of samples required to split an internal node
+    |
+
+    | maximum depth | the max depth of each individual regression |
+
+
+    TABLE III. THE PARAMETERS IN ADBOOST ALGORITHM
+
+
+    | Parameter name | Description |
+
+    | --- | --- |
+
+    | number of estimators | the number of boosting stages to perform |
+
+    | learning rate | the percent of the contributions from each |
+
+    | Random state | the random number generator used in the forests.
+
+
+    4) Metrics There are five different metrics to detect and monitor model performances;:
+
+
+    > MAE (Mean Absolute Error)
+
+    $$MAE = \frac{1}{n} \sum_{i=1}^{n} |\hat{y}_i - y_i|$$
+
+
+    > MSE (Mean Squared Error)
+
+    $$MSE = \frac{1}{n} \sum_{i=1}^{n} (\hat{y}_i - y_i)^2$$
+
+
+    > RMSE (Root Mean Squared Error)
+
+    $$RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (\hat{y}_i - y_i)^2}$$
+
+
+    > WMAPE (Weighted Absolute Percentage Error)
+
+    $$WMAPE = \frac{\sum_{i=1}^{n} |\hat{y}_i - y_i|}{\sum_{i=1}^{n} y_i}$$
+
+
+    Feature importance for the 192 parameters in the model are helped to detect which
+    variables contribute to the chilling power or other parameters to reduce the energy
+    cost to a lower level. The mechanism is to randomly perturb the values of a particular
+    parameter and observe how much modification affects the performance of the model;
+    if a performance, the perfect version should yield a lower accuracy and vice versa.
+
+
+    2) Random forest regression Gradient random consists of a great number of decision
+    trees, which out to work well and fast on linear regression problem, for the datasets
+    used in this research in which nearly 200 features are involved, random forest
+    algorithm to perform well without the need for feature selection; it also helps
+    inductively which features are more important for the final results. The random
+    forest parameters are listed below Table II.
+
+
+    > $R'' = 1 - \frac{\sum_{i=1}^{n} (\hat{y}_i - y_i)^2}{\sum_{i=1}^{n} y_i^2}$$
+
+
+    TABLE II. THE PARAMETERS IN RANDOM FOREST ALGORITHM
+
+
+    | Parameter name | Description |
+
+    | --- | --- |
+
+    | number of estimators | the total number of trees in the |
+
+    | minimum sample split | the minimum number of samples required to split an internal
+    node |
+
+    | maximum depth | the max depth of each individual tree
+
+
+    Where $\hat{y}$ represents the prediction value yield by $y$ represents the corresponding
+    actual value in the dataset.
+
+    Compared to MAPE, weighted WMAPE suits the dataset better since there are zeros
+    in certain parameter space.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'addition, R2 score often gives a more accurate intuition about the real performance
+    of the model in its formula eliminates false impressions of results caused by
+    difference in dimensions that may occur with other metrics. All the indicators
+    are computed each time the model is run, so it is clearer which model performs
+    better on datasets.
+
+
+    balancing the flow of two water systems: cooling water and cooled water. The mechanism
+    is seen in figure 2. There are several main factors contained in this system which
+    the optimization process is subject to, which are supply temperature, return temperature,
+    flow rate of cooling water and chilled water.
+
+
+    # 5) Parameter tuning with set
+
+
+    The tuning in each model is adjusted with the grid search, where every possible
+    combination is experimented and partitioned into three parts: training set, validation
+    set, and test set. The performance complete validation with the validation set
+    for purpose, after the model is trained with the training set, and the trained
+    model with new parameters are assessed with the test set until the performance
+    reaches optimal level.
+
+
+    ![](img/2a8a20e8c86db9d295f112e4303b8657_2_0.png)
+
+
+    Figure 2. Simple illustration of how chillers work in HVAC system
+
+
+    Overall, the flowchart of the prediction is displayed in figure 1 below illustrative
+    purpose.
+
+
+    Two variables that may affect the power consumption of chillers are flow rate
+    and supply temperature mentioned above. In order to minimize power and cooling
+    power prediction that can lead to a lower energy usage in real life, the optimization
+    process tries to find such configurations that bring results of the predictions
+    as possible for every value in the given parameter space. Since the optimization
+    is done, there should be contains final, minimized power and cooling power predictions
+    and corresponding flow rate and supply units which the predictions are made. With
+    the parameters stored, the operation strategy of the chillers can be updated while
+    holding a same level of cooling power so that no thermal comfort or temperature
+    is compromised.
+
+
+    ![](img/2a8a20e8c86db9d295f112e4303b8657_2_1.png)
+
+
+    Moreover implementation of this optimization algorithm is fairly straightforward
+    with loops repeating searches for supply temperature among the whole state space.
+    The whole process is programmed with the pseudocode
+
+
+    +   * Initialize the minimum cooling power as 1000 and minimum chiller power as
+    5000. In addition, three lists are created to save the optimization results, including
+    cooling power, and the supply temperature.
+
+    * Generate a state space between [6,13] where step size is 0.1. As a result, the
+    state space has 70 states, which is the search space for optimizing chiller temperature.
+
+    * In addition, each iteration, the cooling power model = f (x0, x1) is used for
+    cooling prediction, which should be larger than actual cooling power.
+
+    * Then, the optimization is conducted with grid search algorithm:
+
+
+    ```
+
+    for k in range(n): (n is the total number of the datapoints)
+
+    for i in supply temp:
+
+    for j in flow rate:
+
+    ```
+
+
+    # 6) Optimization
+
+
+    To achieve budget cuts and energy saving in real life, the optimization process
+    aims to minimize one benefit: the power usage. Chillers in HVAC systems provide
+    cooling air by'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "```\ncalculate cooling power prediction\nif cooling power >append cooling power:\n\
+    \    mincooling power > pred cooling power:\n        mincooling power = pred cooling\
+    \ power\ncalculate cooling power prediction\nif minpower > pred power:\n    minpower\
+    \ = pred power\n```\n\nIt is estimated that every kWh of electricity generated\
+    \ by burning coals, at least 96 kilograms of carbon dioxide is released. Social\
+    \ Cost of Carbon (SCC), is an estimate, in dollars, of the damages that would\
+    \ result from emitting one ton of carbon dioxide (CO2) into the atmosphere. SCC\
+    \ multiplied with the annual electricity should yield the yearly positive cash\
+    \ flows in NPV.\n\n# Optimization\n\n![](img/2a8a20e8c86db9d295f112e4303b8657_3_0.png)\n\
+    \nsupply temperature of chiller 03/0405 and other features\n\npredict the cooling\
+    \ power and the power\n\n+   Append the latest data into correspondent lists.\n\
+    cooling_final.append(mincooling)\npower_final.append(minpower)\ntupply_temp_final.append\n\
+    \nThe flowchart of the optimization process is displayed in Figure 3.\n\n# 7)\
+    \ Economic Analysis\n\nAfter the optimization is, the values previously stored\
+    \ of heating power and cooling power can be predicted with the actual power usage\
+    \ for an estimate of how the prediction models could cut down the costs and ensure\
+    \ energy savings. For the sake of argument, constructing the relative savings\
+    \ and total savings per year can help to yield more comprehensive metrics for\
+    \ an economic analysis.\n\n> Relative saving = $\\frac{P-\\hat{P}}{P} \\times\
+    \ 100\\%$ (6)\n\n> Yearly saving = $\\frac{(\bar{P}-\\hat{P}) \\times u_{cap}\
+    \ \\times t}{2}$ (7)\n\n![](img/2a8a20e8c86db9d295f112e4303b8657_3_1.png)\n\n\
+    $\bar{P}$ represents the actual power usage, $\\hat{P}$ represents predicted usage,\
+    \ $t$ represents the annual total of active hours of the HVAC system; and $u_{cap}$\
+    \ represents the mean of actual cooling power in the dataset. yearly saving has\
+    \ a unit of kWh; in order to convert it into kWh, the terms $u_{cap}$ are included\
+    \ to make the unit appropriate for computing the savings with units of money.\
+    \ Since HVAC is mainly active in summer and winter, the total savings is finally\
+    \ divided by 2 to yield the result of how much power can be saved per year according\
+    \ to the formula.\n\nThese two counts can be converted into real-life costs based\
+    \ on local electricity rates in local currency, which is in CNY, for the purpose\
+    \ of discussion.\n\nPowered by mostly thermal plants (69.6% of total energy supply\
+    \ in 2019), office buildings in China can consume billions of tons of coals every\
+    \ year, producing a heavy load of emissions including carbon dioxide and other\
+    \ wastes.\n\nNext two kinds of savings are used to calculate Net Present Value\
+    \ (NPV) of this project on optimizing HVAC systems for a life cycle of 50 years.\n\
+    \nThe following formula illustrates NPV is calculated:\n\n> $NPV = \\frac{\\sum_{t=1}^{n}\
+    \ C_t}{(1+r)^t}$ (8)\n\nWhere: C= Cash Flow at time t; r= discount rate; t= time\
+    \ period.\n\nFigure 3. The flowchart of the optimization process"
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# V. RESULT ANALYSIS
+
+
+    A. Forecast evaluation performances
+
+
+    With code implementation of the algorithms discussed above, models are able to
+    predict power efficiency in kW/ton cooling power in 3 different clusters within
+    the dataset. The first algorithm implemented is GBR, and Table 4 shows the configuration
+    of parameters when the prediction of chiller plant efficiency is best.
+
+
+    TABLE IV. THE CONFIGURATION OF PARAMETERS IN GBR AT THE BEST MODEL FOR CHILLER
+    PLANT EFFICIENCY
+
+    | Parameter name | Value |
+
+    |---|---|n| number of estimators | 500 |
+
+    | learning rate | 0.01 |
+
+    | minimum sample split | 6 |
+
+    | maximum estimator depth | 8 |
+
+
+    For this configuration, the prediction model yields results with coded metrics
+    in Table 5.
+
+
+    TABLE V. THE VALUES OF METRICS YIELDED BY THE PREDICTION MODEL FOR CHILLER PLANT
+    EFFICIENCY WITH GBR
+
+    THE VALUES OF METRICS YIELDED BY THE PREDICTION MODEL FOR CHILLER PLANT EFFICIENCY
+    WITH ADABOOST REGRESSOR
+
+    | Metrics | Value |
+
+    |---|---|n| MAE | 0.00361 |
+
+    | MSE | 3.1074e-05 |
+
+    | RMSE | 0.00557 |
+
+    | MAPE | 0.87766% |
+
+    | R_2 | 0.94580 |
+
+
+    The second algorithm is Random Forest Regression (RFR), Table 6 shows the configuration
+    of parameters when the prediction of chiller plant efficiency is at best.
+
+
+    TABLE VI. THE CONFIGURATION OF PARAMETERS IN RFR AT THE BEST MODEL FOR CHILLER
+    PLANT EFFICIENCY
+
+    | Parameter name | Value |
+
+    |---|---|n| number of estimators | 600 |
+
+    | minimum sample split | 6 |
+
+    | maximum estimator depth | 12 |
+
+
+    For this configuration, the prediction model yields results with coded metrics
+    in Table 7.
+
+
+    TABLE VII. THE VALUES OF METRICS YIELDED BY THE PREDICTION MODEL FOR CHILLER PLANT
+    EFFICIENCY WITH R
+
+    | Metrics | Value |
+
+    |---|---|n| MAE | 0.00400 |
+
+    | MSE | 7.38812e-05 |
+
+    | RMSE | 0.00860 |
+
+    | MAPE | 1.00152% |
+
+    | R_score | 0.98636 |
+
+
+    The third algorithm implemented is Ada Regression, Table 8 shows the configuration
+    of parameters when prediction model using is at its best.
+
+
+    TABLE VIII. THE CONFIGURATION OF PARAMETERS IN ADABOOST REGRESSOR AT THE BEST
+    MODEL FOR CHILLER PLANT EFFICIENCY
+
+    | Parameter name | Value |
+
+    |---|---|n| number of estimators | 600 |
+
+
+    For this configuration, the prediction model yields results with coded metrics
+    in Table 9.
+
+
+    | Parameter name | Value |
+
+    |---|---|n| minimum sample split | 5 |
+
+    | maximum estimator depth | 12 |
+
+
+    THE VALUES OF METRICS YIELDED BY THE PREDICTION MODEL FOR CHILLER PLANT EFFICIENCY
+    WITH ADABOOST REGRESSOR
+
+    | Metrics | Value |
+
+    |---|---|n| MAE | 0.01136 |
+
+    | MSE | 2.93480e-04 |
+
+    | RMSE | 0.01713 |
+
+    | MAPE | 2.84853% |
+
+    | R_score | 0.94580 |
+
+
+    As shown above, the results of three different algorithms applied to prediction
+    for power plant efficiency using the Gradient Boosting Regression (GBR) with the
+    appropriate parameters could yield much more accurate results than the other two,
+    evaluated by the metrics chosen and the figure.
+
+
+    Figure 4 shows how three models use their prediction on the same datasets given.
+
+
+    ![](img/2a8a20e8c86db9d295f112e4303b8657_4_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Chiller Plant Efficiency in kW/Ton
+
+
+    ![](img/2a8a20e8c86db9d295f112e4303b8657_5_0.png)
+
+
+    # Random Forest Regression
+
+
+    (b)
+
+
+    ![](img/2a8a20e8c86db9d295f112e4303b8657_5_1.png)
+
+
+    # Chiller Plant Efficiency in kW/Ton
+
+
+    ![](img/2a8a20e8c86db9d295f112e4303b8657_5_2.png)
+
+
+    # AdaBoost Regression
+
+
+    (c)
+
+
+    Figure 4- Model performances on predicting Chiller Plant Efficiency in kW/Ton
+    using different algorithms as: Gradient Boosting, Random Forest Regression, and
+    AdaBoost Regression,
+
+
+    To illustrate how the best parameters are found, the following methods can be
+    used: Gradient Boosting Regression apply to the other algorithms as well. The
+    parameters interact with each other so the value of each is determined by a exhaustive
+    search in a reasonable parameter space, with each search evaluating the model
+    based on like-squared parameters. For example, min sample split in GBR is optimized
+    to a value where the R-score reaches a point between a range of [2,12]. Each time
+    the process is repeated, the parameters are updated to the next optimal value
+    for a further iteration searching for another parameter until parameters are updated
+    to their optimum.
+
+
+    Figure 5- The exhaustive search for the optimal value of the parameter min_sample_split
+    in GBR.
+
+
+    Having known that GBR tends to yield the best performance, the predictions made
+    for cooling power of 3 different chillers were implemented with GBR since they''re
+    linear regression models. After running search for the parameters in GBR when
+    predicting cooling power, the optimal configuration is displayed in Table X.
+
+
+    TABLE X- THE CONFIGURATION OF PARAMETERS IN GBR AT THE BEST MODEL PREDICTION FOR
+    CHILLER 3 COOLING POWER.
+
+
+    | Parameter name | Value |
+
+    |---|---|n| number of estimators | 400 |
+
+    | learning rate | 0.01 |
+
+    | min sample split | 4 |
+
+    | maximum estimator depth | |
+
+
+    For similar datasets with the actual cooling power data derived for GBR with this
+    dataset 3, 4, and 5 GBR yields the best prediction all the results. The results
+    yielded by GBR of predicting cooling power of the 3 chillers are listed in Table
+    11. Here WAPE is used to evaluate models based on MAPE: cooling power for all
+    the 3 chillers.
+
+
+    TABLE XI- THE CONFIGURATION OF PARAMETERS IN GBR AT THE BEST PREDICTION FOR CHILLER
+    3 COOLING POWER.
+
+
+    | Chiller 3 | Chiller 4 | Chiller 5 |
+
+    |---|---|--|
+
+    | MAE | 0.17305 | 0.03259 | 0.19587 |
+
+    | WAPE | 1.64810 | 0.9987 | 1.45014 |
+
+    | RMSE | 1.2832 | 4.4761% | 0.3081% |
+
+    | R_score | 0.9976 | 0.99933 | 0.99293 |
+
+
+    # B Units
+
+
+    With all the results made, the next step is to put these results into optimization.
+    The optimization models previously trained on chiller efficiency and cooling power
+    got loaded the optimization model before it is run. The data is then used to compare
+    with the actual data to evaluate how much energy can be saved, and after that
+    the economic analysis can run based on the'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'savings from the optimization results. A total of 1811 datapoints are filtered
+    to be processed in optimization, with which the predictions and actual data are
+    compared and yield results displayed in the table below. 5 days of data are selected
+    to run optimization.
+
+
+    This paper deals with a paradigm in energy use exists due to overheads generated
+    by not optimal settings in operations. In this particular, the power output by
+    the HVAC is higher than is actually needed to create the same level of cooling
+    in buildings. With settings added to regulate the system, energy conservation
+    can be achieved.
+
+
+    # TABLE XII. VALUES OF PARAMETERS GENERATED BY OPTIMIZATION ALGORITHM
+
+
+    | Parameter | Value |
+
+    |---|---|
+
+    | Actual cooling power | 3341928 |
+
+    | Actual power | 1564690 |
+
+    | Predicted cooling power | 3352724 |
+
+    | Predicted power | 1514768 |
+
+
+    The field of energy use has applied to a relatively broad and ever enlarging range:
+    Google and Deepmind deployed an algorithm DQN Deep-Network which helped them achieve
+    a 40% reduction in the amount of energy used to cool cities in 2016. Global energy
+    analysis using machine learning algorithm to identify technologies and estimate
+    to reduce 20% of carbon dioxide emissions and reduce electricity expenditures.
+
+
+    The predicted electricity consumption for 120 operational hours (5 days) is approximately
+    500 kWh (999.24 less than the actual with a higher level of cooling power predicted).
+    In other words, the predicted model could generate the same amount of cooling
+    power with less energy cost.
+
+
+    # C. Economic analysis
+
+
+    To fulfill NPV, the actual data is required for the calculations. The electricity
+    rate in China from 0.7 RMB/kWh to 1 RMB/kWh for commercial. For simplicity, we
+    assume the average rate to be 1 RMB/kWh. The discount rate in China, updated in
+    June 2020, NPV formula with all the parameters helps to estimate Present Value
+    for the life of 50 years. For this investment, the cost of implementing the algorithm
+    into the actual building is estimated to be $40,000. Meanwhile, the SCC for China
+    is estimated to be $24 per tonCO$_2$].
+
+
+    Having large wind-power and solar power capacity in the world, China has developed
+    green technologies for decades. However, to face fossil fuels, energy use has
+    a lower priority over total energy consumption. Future development in this field
+    is emerging to be more important, which will be seen in the future. Machine learning
+    algorithms, like the one in this paper, should be a crucial part of innovations
+    and creations in green energy. Energy storage and dispatch technologies should
+    be developed in hand with experts who have joined cleaner energy. For example,
+    Germany and its citizens have suffered from extra costs created in redistributing
+    and stabilizing the volatility of energy through smart grids.
+
+
+    # TABLE XIII. ESTIMATED SAVINGS AND NET PRESENT VALUE BY PROJECT
+
+
+    | Parameter | Value |
+
+    |---|---|
+
+    | Relative saving | 3.23% |
+
+    | Yearly saving | $26205.40 |
+
+    | Annual SCC | $3951.00 |
+
+    | NPV of this project | $70917.64 |
+
+
+    As shown above, this machine learning algorithm once implemented could create
+    a yearly saving of $26205.40 actual and an NPV of $70917.64 for a 50-year life
+    span.
+
+
+    # VI. CONCLUSIONS
+
+
+    The hypothesis that applying prediction and optimization methods to real office
+    buildings can achieve budget savings and energy conservation is supported by the
+    results in this paper. By controlling settings in HVAC systems that programmed
+    to manage the power output when the amount of cooling is demanded, power usage
+    can be effectively monitored and reduced to a desirable level.
+
+
+    This paper studies and predicts optimization machine learning algorithms for energy
+    conservation in HVAC systems in office buildings yields economic benefits for
+    the society by implementing such algorithms.
+
+
+    Results are quite promising for future development in this field. For the particular
+    HVAC use, economic analysis shows that it would save more than $30,000 annually
+    for the booming society of China. The validity of the results and findings in
+    this
+
+
+    > * International Monetary Fund, Interest Rates, Discount Rate for China [ITDSRCCNM193N],
+    retrieved from Federal Reserve Bank of St. Louis; https://fred.louisf.edu/series/ITDSRCCNM193N,
+    September 5, 2020.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'paper are limited to the accuracy of prediction models, a small sized sample
+    in which all data is from a single office building, and a large estimate of the
+    cost of integrating the algorithms into real buildings. however, the general hypothesis
+    would still hold true despite the limitations mentioned above that implementing
+    machine learning algorithms and sensors in HVAC systems can reduce operational
+    costs and energy consumption and could be generalized to other studies without
+    much work.
+
+
+    Clean energy as mentioned earlier, is crucial for future generations on this planet.
+    Simple powerful methods applied in this paper could shed a light on improving
+    the current energy structure to a more effective and cleaner fashion as countries
+    Germany have been trying to do.
+
+
+    By providing a detailed technical foundation for such objectives relating budget
+    cuts and energy conservation for existing matters in the field of energy, hopefully
+    this paper will encourage further discussions and facilitates innovations to battle
+    the warming global climate.
+
+
+    # ACKNOWLEDGMENT
+
+
+    I would like to express my sincere gratitude to Mrs. Liu, my headteacher in school,
+    who has provided continuous help during the whole process, from advice on how
+    to progress on a formal paper to professional tips of the academic subject
+
+
+    focus on. This study would not be possible without her kind patience and expert
+    support.
+
+
+    # REFERENCES
+
+
+    +   [1] Wang, L., Lee, E. W. M., Yoon, R. K., & Feng, W. (2019). Cooling forecasting-based
+    predictive optimization for chiller plants. Energy and Building, 292, 107033.
+
+    [2] Wang, J., Dai, K., Keating, T., Bursynnek, N., Bu, Y., Wang, K., & Zhang,
+    Z. (2017). Data drivers chiller energy optimization with design knowledge. In
+    Proceedings of the 2017 IEEE International Conference on Knowledge and Management
+    (pp. 1-6).
+
+    [3] Ricke, D., Foster, L., Calderon, K., & Yadav, T. (2018). County-level cost
+    of carbon. Nature Climate, 8(9), 895–900. doi:10.1038/s41467-018-0518-2
+
+    [4] Howertower, T. (2017). How machine learning improves energy consumption. September
+    02, 2020, from https://internetofthingsagenda.com/blog/Agenda-How-machine-learning-improves-energy-consumption/
+
+    [5] Py, S. (2020). Seven reasons why you should be using machine learning. Retrieved
+    September 02, 2020, from https://blogs.oracle.com/cloud/analytics/machine-learning
+
+    [6] Adam, K. (2020). Re-dispatch costs in the German power grid. Retrieved September
+    05, 2020, from https://www.cleanenergywire.org/facts/re-dispatch-costs-german-grid
+
+    [7] Schermeier, Q. (2019). Germany’s renewable revolution agitates energy forecast.
+    Nature, 535(7611), 212–213. doi:10.1038/s43512a
+
+    [8] Green, A. (2019, April 25). Machine Learning in Energy. Retrieved September
+    02, 2020, from https://adefficiency.com/machine-learning-in-energy/'
+  merge: -1
+  img_proc: true
