@@ -1,0 +1,1284 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # Covid19 Identification using Machine Learning Classifiers with Histogram of
+    Luminance Chroma Features of X-ray images
+
+
+    Sadeep D. Theadeep, Piyush R. Chaudhary, Mayuresh R. Dindarkar, Shalakbh V. Bang
+
+    Pimprinchwad College of Engineering, Savitribai Phule University, Pune, India
+
+    sudeep@gmail.com, piyush26@gmail.com, mayureshn99@gmail.com,shalakbh99@gmail.com
+
+
+    **Abstract** The onset of the Novel coronavirus has caused catastrophic consequences
+    on the entire global economy leading a huge loss of health and wealth. Millions
+    have suffered a lot during this pandemic, especially with Covid-19. As the rate
+    of spread is increasing exponentially, many organizations are finding to detect
+    the suspected cases quickly. Coronavirus infection can be made from chest X-ray
+    images of an individual. Particular color space based global feature extraction
+    method to identify covid19 infected cases. The features are extracted from YCrCb,
+    KeVC-LU, and CIE-UV color spaces. These features are used for training machine
+    learning models. Results obtained at 10-frame convolution shows them better than
+    the individual machine learning (ML) classifiers. Performance of the proposed
+    method improved by 19% by considering Accuracy, Positive value (PPV), Sensitivity
+    (Recall), F Measure, and Matthew correlation measures.
+
+
+    to coronavirus due to which serious difficulty is faced by the medical organizations
+    for detection of Covid19 infection. Generally, use of chest X-rays is the most
+    preferred way for diagnosis of lung pneumonia. Even chest X-rays make it easier
+    to distinguish between the lungs caused due to pneumococcal pneumonia bacterial
+    or viral.
+
+
+    **Keywords** X-ray, Color, Color Space, Feature Extraction, Machine Learning,
+    Coronavirus, Ensembles
+
+
+    In this study, paper attempt to identify the coronavirus and normal cases by histogram
+    calculation using machine learning and ensemble models. The manner is organized
+    as follows: Section 1 presents an introduction to the covid19. After Section 2
+    consists of related works so far i.e. literature review, Section 3 covers the
+    proposed method, Section 4 provides information about experiment and environment,
+    Section 5 discussions of results and Section 6 concludes the paper.
+
+
+    # I. INTRODUCTION
+
+
+    Around the year of 2019, the birthplace of Revolution Wuhan, found the first covid19
+    (coronavirus) case in the World. It is also known as Novel Severe Acute Respiratory
+    Syndrome Coronavirus (SARS-CoV-2). The spread of coronavirus virus by heads in
+    China has led to a Global Pandemic. Now millions of people have died due to coronavirus,
+    while the global economy is plunged into recession by providing immediate medical
+    treatment, isolate or quarantine the infected cases, maintaining social distancing,
+    and focusing on early mild symptoms, which appeared during the course of infection.
+
+
+    The World Health Organization (WHO) has recently released the list of symptoms
+    that are supposed to be observed at the mild stage of coronavirus infection. In
+    contrast, the general symptoms like fever, difficulty in breathing, cough, or
+    viral flu pneumonia also correspond
+
+
+    Global pandemic has caused acute pneumonia in bleeding, chills, lung pneumonia.
+    The infection area of lungs are filled with pus which causes the formation of
+    cough and difficulty in breathing. As it is the symptoms are different when identifying
+    covid19. Through use of chest X-ray, pneumonia major difficulty lies in similarity
+    of lung infection and pneumonia. Major difficulty lies to conclude whether a case
+    is viral or bacterial pneumonia. This includes a survey of the proposed methodologies
+    used to detect tell for covid19 identification.
+
+
+    # II. LITERATURE REVIEW
+
+
+    In the authors proposed a novel method for classification & identification of
+    normal infection and pneumonia by haralick feature extraction. The features are
+    extracted from a total of 22 chest X-ray images, out of 11 being detected to normal
+    (healthy) lungs, and 11 images were of pneumonia infections. A haralick feature
+    extraction method is used on X-ray images, the difference between these values
+    is judged and considered that out of 14 computed features, 3 features (variance,
+    sum average, and sum) are most concern the rest 11 features were almost similar
+    to each other.'
+  - '[PAGE 1]
+
+
+    Author proposed a novel hierarchical approach in [2] for covid19 identification.
+    They have found a dataset named RYLDS containing a total of 1114 chest X rays
+    having seven classes (multiclass framework) and fourteen pattern labels (hierarchical
+    framework). At start, using different texture structures are then easily used
+    for the learner (multi-class and hierarchical). A multi-class classification has
+    achieved better results compared to a hierarchical classification.
+
+
+    # III. PROPOSED COVID19 IDENTIFICATION TECHNIQUE USING MACHINE LEARNING CLASSIFIER
+    WITH HISTOGRAM OF LUMINANCE FEATURES
+
+
+    Another approach used a deep convolutional network named COVID-19, except used
+    for identifying infected cases by their chest X-rays. The author used a COVIDAX
+    dataset, containing 13,975 X-rays having 13,975 cases. It is one of the largest
+    publicly available X-ray (CVR) covid19 datasets. Proposed network architecture
+    is built by combining design principles and machine-driven principles, the sensitivity
+    for covid19 as 80% and 95% for normal cases.
+
+
+    The proposed method is well visualized through the block diagram in Fig. 1. A
+    detailed explanation of computing features for covid19 identification using considered
+    color spaces is described in this section.
+
+
+    State-of-the-art for identifying bacterial pneumonia has been proposed in [4]
+    by use of deep learning techniques. Pneumonia clouds in chest X-ray images are
+    identified using histogram equalization (CLAHE) and other bilateral filtering
+    which preserves edges of lungs. Gray activation and saliency mapping has been
+    implemented for cross-validation of models achieving 98.3% accuracy in identifying
+    bacterial pneumonia. The proposed dataset is used at Mendeley Data and classified
+    into two classes: cases infected by bacterial pneumonia and that are normal.
+
+
+    ![](img/c84ee406c93027779e22f5c407f84623_1_0.png)
+
+
+    To identify covid19 infected cases, the authors in [5] have implemented a transfer
+    learning approach with pre pretrained convolutional neural networks (InceptionV3,
+    ResNet, and Inception). Available X-ray radiation is analyzed using a 5-fold cross-validation
+    method. As per results, Res50 has given the best performance with 98% identification
+    accuracy. Proposed method is based on a dataset [6] which holds 50 normal and
+    50 infected cases X-ray images.
+
+
+    Fig 1 The block diagram of proposed-class classification technique consisting
+    of histogram calculation for responsive color combinations using ensemble of machine
+    learning algorithms
+
+
+    Author in [7] have attempted to automate the diagnosis of pneumonia infection
+    using OTSU thresholding and histogram calculation. Japan Society of Radiological
+    Technology (JRT) dataset is used for the analysis of proposed method, containing
+    a total of 40 chest X-ray images. Chest X-ray image is resized and histogram calculated
+    with expected region of interest (ROI). This ROI, pneumonia clouds are detected
+    using OTSU thresholding followed by counting ratio of noncloudy (healthy) region
+    to total lung region. The proposed method in [7] includes the calculation of the
+    ratio and computing features for pneumonia infection identification.
+
+
+    The proposed method is divided into two phases: training and testing phase. During
+    the training phase, three-channel X-ray image from covid19 dataset is converted
+    into individual color spaces YCB [8], keV-KUV [9-11], and CIE-UE [12]. After the
+    conversion, three different features are computed by using different color space
+    combinations. The features are transformed by computing histograms of features:
+    keV-KUV, then feature vector length for each YCB, and CIE-LUV color spaces are
+    computed and then concatenated.
+
+
+    The three features are used to train machine learning classifiers and in turn
+    they yield a trained model. The evaluated individual machine learning classification
+    algorithms are: “ExtraTree”, “RandomForest” from Tree family, Ensembles: “ExtraTree
+    + RandomForest + SimpleLogistic”, “ExtraTree + RandomForest + NaBayes” and “ExtraTree
+    + RandomForest + RandomTree”'
+  md: "\n# Covid19 Identification using Machine Learning Classifiers with Histogram\
+    \ of Luminance Chroma Features of X-ray images\n\nSadeep D. Theadeep, Piyush R.\
+    \ Chaudhary, Mayuresh R. Dindarkar, Shalakbh V. Bang\nPimprinchwad College of\
+    \ Engineering, Savitribai Phule University, Pune, India\nsudeep@gmail.com, piyush26@gmail.com,\
+    \ mayureshn99@gmail.com,shalakbh99@gmail.com\n\n**Abstract** The onset of the\
+    \ Novel coronavirus has caused catastrophic consequences on the entire global\
+    \ economy leading a huge loss of health and wealth. Millions have suffered a lot\
+    \ during this pandemic, especially with Covid-19. As the rate of spread is increasing\
+    \ exponentially, many organizations are finding to detect the suspected cases\
+    \ quickly. Coronavirus infection can be made from chest X-ray images of an individual.\
+    \ Particular color space based global feature extraction method to identify covid19\
+    \ infected cases. The features are extracted from YCrCb, KeVC-LU, and CIE-UV color\
+    \ spaces. These features are used for training machine learning models. Results\
+    \ obtained at 10-frame convolution shows them better than the individual machine\
+    \ learning (ML) classifiers. Performance of the proposed method improved by 19%\
+    \ by considering Accuracy, Positive value (PPV), Sensitivity (Recall), F Measure,\
+    \ and Matthew correlation measures.\n\nThe coronavirus due to which serious difficulty\
+    \ is faced by the medical organizations for detection of Covid19 infection. Generally,\
+    \ use of chest X-rays is the most preferred way for diagnosis of lung pneumonia.\
+    \ Even chest X-rays make it easier to distinguish between the lungs caused due\
+    \ to pneumococcal pneumonia bacterial or viral.\n\n**Keywords** X-ray, Color,\
+    \ Color Space, Feature Extraction, Machine Learning, Coronavirus, Ensembles\n\n\
+    In this study, paper attempt to identify the coronavirus and normal cases by histogram\
+    \ calculation using machine learning and ensemble models. The manner is organized\
+    \ as follows: Section 1 presents an introduction to the covid19. After Section\
+    \ 2 consists of related works so far i.e. literature review, Section 3 covers\
+    \ the proposed method, Section 4 provides information about experiment and environment,\
+    \ Section 5 discussions of results and Section 6 concludes the paper.\n\n# I.\
+    \ INTRODUCTION\n\nAround the year of 2019, the birthplace of Revolution Wuhan,\
+    \ found the first covid19 (coronavirus) case in the World. It is also known as\
+    \ Novel Severe Acute Respiratory Syndrome Coronavirus (SARS-CoV-2). The spread\
+    \ of coronavirus virus by heads in China has led to a Global Pandemic. Now millions\
+    \ of people have died due to coronavirus, while the global economy is plunged\
+    \ into recession by providing immediate medical treatment, isolate or quarantine\
+    \ the infected cases, maintaining social distancing, and focusing on early mild\
+    \ symptoms, which appeared during the course of infection.\n\nThe World Health\
+    \ Organization (WHO) has recently released the list of symptoms that are supposed\
+    \ to be observed at the mild stage of coronavirus infection. In contrast, the\
+    \ general symptoms like fever, difficulty in breathing, cough, or viral flu pneumonia\
+    \ also correspond Global pandemic has caused acute pneumonia in bleeding, chills,\
+    \ lung pneumonia. The infection area of lungs are filled with pus which causes\
+    \ the formation of cough and difficulty in breathing. As it is the symptoms are\
+    \ different when identifying covid19. Through use of chest X-ray, pneumonia major\
+    \ difficulty lies in similarity of lung infection and pneumonia. Major difficulty\
+    \ lies to conclude whether a case is viral or bacterial pneumonia. This includes\
+    \ a survey of the proposed methodologies used to detect tell for covid19 identification.\n\
+    \n# II. LITERATURE REVIEW\n\nIn the authors proposed a novel method for classification\
+    \ & identification of normal infection and pneumonia by haralick feature extraction.\
+    \ The features are extracted from a total of 22 chest X-ray images, out of 11\
+    \ being detected to normal (healthy) lungs, and 11 images were of pneumonia infections.\
+    \ A haralick feature extraction method is used on X-ray images, the difference\
+    \ between these values is judged and considered that out of 14 computed features,\
+    \ 3 features (variance, sum average, and sum) are most concern the rest 11 features\
+    \ were almost similar to each other.\n\nAuthor proposed a novel hierarchical approach\
+    \ in [2] for covid19 identification. They have found a dataset named RYLDS containing\
+    \ a total of 1114 chest X rays having seven classes (multiclass framework) and\
+    \ fourteen pattern labels (hierarchical framework). At start, using different\
+    \ texture structures are then easily used for the learner (multi-class and hierarchical).\
+    \ A multi-class classification has achieved better results compared to a hierarchical\
+    \ classification.\n\n# III. PROPOSED COVID19 IDENTIFICATION TECHNIQUE USING MACHINE\
+    \ LEARNING CLASSIFIER WITH HISTOGRAM OF LUMINANCE FEATURES\n\nAnother approach\
+    \ used a deep convolutional network named COVID-19, except used for identifying\
+    \ infected cases by their chest X-rays. The author used a COVIDAX dataset, containing\
+    \ 13,975 X-rays having 13,975 cases. It is one of the largest publicly available\
+    \ X-ray (CVR) covid19 datasets. Proposed network architecture is built by combining\
+    \ design principles and machine-driven principles, the sensitivity for covid19\
+    \ as 80% and 95% for normal cases.\n\nThe proposed method is well visualized through\
+    \ the block diagram in Fig. 1. A detailed explanation of computing features for\
+    \ covid19 identification using considered color spaces is described in this section.\n\
+    \nState-of-the-art for identifying bacterial pneumonia has been proposed in [4]\
+    \ by use of deep learning techniques. Pneumonia clouds in chest X-ray images are\
+    \ identified using histogram equalization (CLAHE) and other bilateral filtering\
+    \ which preserves edges of lungs. Gray activation and saliency mapping has been\
+    \ implemented for cross-validation of models achieving 98.3% accuracy in identifying\
+    \ bacterial pneumonia. The proposed dataset is used at Mendeley Data and classified\
+    \ into two classes: cases infected by bacterial pneumonia and that are normal.\n\
+    \n![](img/c84ee06c93027779e22f5c407f84623_1_0.png)\n\nTo identify covid19 infected\
+    \ cases, the authors in [5] have implemented a transfer learning approach with\
+    \ pre pretrained convolutional neural networks (InceptionV3, ResNet, and Inception).\
+    \ Available X-ray radiation is analyzed using a 5-fold cross-validation method.\
+    \ As per results, Res50 has given the best performance with 98% accuracy. Proposed\
+    \ method is based on a dataset [6] which holds 50 normal and 50 infected cases\
+    \ X-ray images.\n\nFig 1 The block diagram of proposed-class classification technique\
+    \ consisting of histogram calculation for responsive color combinations using\
+    \ ensemble of machine learning algorithms\n\nAuthor in [7] have attempted to automate\
+    \ the diagnosis of pneumonia infection using OTSU thresholding and histogram calculation.\
+    \ Japan Society of Radiological Technology (JRT) dataset is used for the analysis\
+    \ of proposed method, containing a total of 40 chest X-ray images. Chest X-ray\
+    \ image is resized and histogram calculated with expected region of interest (ROI).\
+    \ This ROI, pneumonia clouds are detected using OTSU thresholding followed by\
+    \ counting ratio of noncloudy (healthy) region to total lung region. The proposed\
+    \ method in [7] includes the calculation of the ratio and computing features for\
+    \ pneumonia infection identification.\n\nThe proposed method is divided into two\
+    \ phases: training and testing phase. During the training phase, three-channel\
+    \ X-ray image from covid19 dataset is converted into individual color spaces YCB\
+    \ [8], keV-KUV [9-11], and CIE-UE [12]. After the conversion, three different\
+    \ features are computed by using different color space combinations. The features\
+    \ are transformed by computing histograms of features: keV-KUV, then feature vector\
+    \ length for each YCB, and CIE-LUV color spaces are computed and then concatenated.\n\
+    \nThe three features are used to train machine learning classifiers and in turn\
+    \ they yield a trained model. The evaluated individual machine learning classification\
+    \ algorithms are:\n ExtraTree\n- RandomForest from Tree family\n- Ensembles:\n\
+    \    - ExtraTree + RandomForest + SimpleLogistic\n    - ExtraTree + RandomForest\
+    \ + NaBayes\n    - ExtraTree + RandomForest + RandomTree\n"
+  mdcn: "\n\n# 基于 X 光图像亮度色度直方图特征机器学习分类器的 Covid19 识别\n\nSadeep D. Theadeep, Piyush\
+    \ R. Chaudhary, Mayuresh R. Dindarkar, Shalakbh V. Bang\nPimprinchwad College\
+    \ of Engineering, Savitribai Phule University, Pune, India\nsudeep@gmail.com,\
+    \ piyush26@gmail.com, mayureshn99@gmail.com,shalakbh99@gmail.com\n\n**摘要** 新冠病毒的爆发对整个全球经济造成了灾难性的后果，导致了健康和财富的巨大损失。在这场疫情期间，数百万人遭受了巨大痛苦，特别是\
+    \ Covid-19。随着传播速度呈指数级增长，许多机构寻求快速检测疑似病例。可以通过个人的胸部 X 光图像判断新冠病毒感染。本文了一种基于特定色彩空间的全局特征提取方法来识别\
+    \ covid19 感染病例。特征从 YCrCb、KeVC-LU 和 CIE-UV 色彩空间中提取。这些特征用于训练机器学习模型。10 帧卷积的结果显示其优于单一的机器学习（ML）分类器。通过考虑准确率（Accuracy）、正预测值（PPV）、灵敏度（Recall）、F\
+    \ 分和马修斯相关系数（Matthew correlation），所提方法的性能提升了 19%。\n\n新冠病毒导致医疗机构在检测 Covid19 感染方面面临严重困难。通常，使用胸部\
+    \ X 光是诊断肺肺炎的最优方法。即使是胸部 X 光也能更容易区分由球菌性肺炎或病毒性肺炎引起的肺部。\n\n**关键词** X 光、颜色、色彩空间、特征提取、机器学习、新冠病毒、集成学习\n\
+    \n在本研究中，论文尝试通过机器学习和集成模型利用直方图计算来识别新冠病毒和正常病例。文章结构如下：第 1 节介绍了 covid19；第 2 节包含目前的相关工作，即文献综述；第\
+    \ 3 节涵盖了所提的方法；第 4 节提供了实验和环境信息；第 5 节讨论了结果；第 6 节总结全文。\n\n# I. 引言\n\n2019 年左右，革命之武汉武汉发现了世界上第一例\
+    \ covid19（新冠病毒）病例。它也被称为新型严重急性呼吸系统综合病毒（SARS-CoV-2）。中国疫情的新冠病毒传播导致了全球大流行。现在，已有数百万人死于新冠病毒，而全球经济因提供即时医疗治疗、隔离或检疫感染病例、保持社交距离以及关注感染期间出现的早期轻微症状而陷入了衰退。\n\
+    \n世界卫生组织（WHO）近期发布了在新冠病毒感染轻微阶段应被观察的症状列表。相比之下，发热、呼吸困难、咳嗽或病毒性流感肺炎等一般症状也与之对应。全球大流行导致了出血、寒战、肺部肺炎等急性肺炎。肺部感染区域充满了脓液，导致咳嗽和呼吸困难的形成。由于，在识别\
+    \ covid19 时症状各不相同。通过使用胸部 X 光，肺炎的主要困难在于肺部感染和肺炎之间的相似性。主要的困难在于判断一个病例是病毒性肺炎还是细菌性肺炎。这包括对用于\
+    \ covid19 识别的所提方法的综述。\n\n# II. 文献综述\n\n作者提出了一种通过 Haralick 特征提取对正常感染和肺炎进行分类与识别的新方法。特征从总共\
+    \ 22 张胸部 X 光图像中提取，其中 11 张被检测为正常（健康）肺部，11 张图像为肺炎感染。在 X 光图像上使用了 Haralick 特征提取方法，判断这些值之间的差异，并认为在计算出的\
+    \ 14 个特征中，3 个特征（方差、总平均和总和）最受关注，其余 11 个特征彼此几乎相似。\n\n作者在 [2] 中提出了一种新的层次方法来识别 covid19。他们发现了一个名为\
+    \ RYLDS 的数据集，包含总共七类 X 光（层次框架）。从开始，使用不同的纹理结构用于分类器（层次框架）。多类分类取得了更好的结果。\n\n# III.\
+    \ 所提方法：使用具有亮度色度特征的直方图通过机器学习分类器进行 Covid19 识别\n\n另一种方法使用了名为 COVID19 的深度卷积网络，通过直方图识别（CVR）来识别感染病例。作者使用了一个名为\
+    \ COVIDAX 的数据集，包含 13,975 张 X 光。所提网络架构通过结合设计原理和机器学习驱动原理，covid19 的灵敏度为 80%，正常病例为\
+    \ 95%。通过图 1 形象地展示了所提方法。\n\n色彩空间计算 covid19 特征的详细解释在本节中描述。\n\n最先进的深度技术在 [4] 中提出，用于识别细菌性肺炎。X\
+    \ 光图像中的肺炎云使用直方图均衡化（CLAHE）和其他保护肺部边缘的双侧滤波进行识别。灰度激活和显著性映射已用于交叉验证，准确率达到 98.3%。所提数据集用于\
+    \ Mendeley Data，并分为两类：细菌性肺炎感染和正常。\n\n![](img/c84ee06c9302779e22f5c407f84623_1_0.png)\n\
+    \n为了识别感染病例，作者在 [5] 中实现了预训练卷积神经网络（InceptionV3、ResNet 和 Inception）的迁移学习方法。X 光辐射使用\
+    \ 5 折交叉验证进行分析。根据结果，Res50 提供了最佳性能，准确率达 98%。所提方法基于数据集 [6]，该数据集包含 50 张正常和 50 张感染病例的\
+    \ X 光图像。\n\n图 1 所提分类技术的框图，由使用机器学习算法集成的响应色彩组合的直方图计算组成\n\n作者在 [7] 中尝试使用 OTSU 阈值法和直方图计算自动诊断肺炎感染。日本放射线学会（JRT）数据集用于所提方法的分析，总共\
+    \ 40 张胸部 X 光图像。胸部 X 光图像进行缩放，并在感兴趣区域（ROI）计算直方图。在该 ROI 中，使用 OTSU 阈值法检测肺炎云，然后计算无云区域与总肺部区域的比例。[7]\
+    \ 中的所提方法包括比例计算和肺炎感染识别的特征计算。\n\n该方法分为两个阶段：训练阶段和测试阶段。在训练阶段，将 covid19 数据集的三通道 X 光图像转换为单个色彩空间\
+    \ YCB [8]、keV-KUV [9-11] 和 CIE-UE [12]。转换后，通过不同的色彩空间组合计算三种不同的特征。通过计算特征直方图进行变换：keV-KUV、然后每个\
+    \ YCB 的特征向量长度，以及 CIE-LUV 色彩空间。\n\n这三个特征用于训练机器学习分类器，并产生训练良好的模型。评估的单一机器学习分类算法为：\n\
+    \ ExtraTree\n- 来自森林家族的 RandomForest\n- 集成学习：\n    - ExtraTree + RandomForest +\
+    \ SimpleLogistic\n    - ExtraTree + RandomForest + NaBayes\n    - ExtraTree +\
+    \ RandomForest + RandomTree\n\n"
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    In the testing, the computed feature of the sample chest x-ray is supplied to
+    already trained machine learning classifiers or ensembles for covid19 identification.
+
+
+    The Waikato Environment for Knowledge Analysis (WEKA) [14], a machine learning
+    tool is used to carry out experimentation (training and testing phase) of the
+    proposed method for covid19 detection from input X-ray. WEKA is a tool that provides
+    a wide collection of different machine learning algorithms and data preprocessing
+    tools. Python 3 programming language is used for extracting features from images.
+
+
+    Covid19 dataset [6] is composed of 4-class labeled chest x-ray images. Total of
+    240 three-channel chest x-ray images of 50 patients are present in this dataset.
+    The dataset consists of covid class (60 images), normal class (60 images), pneumonia
+    (60 images), and pneumonia_bac (60 images). All images are not of same size, sizes
+    range from 456 to 2721 * 2438 pixels.
+
+
+    # IV. EXPERIMENTATION
+
+
+    This section discusses the efficacy of the proposed method of covid19 detection
+    from chest x-ray, overall by key performance metrics: Test Accuracy, Predictive
+    Value (Precision), Sensitivity (Recall), F Measure, and MCC. Graphs and tables
+    showing performance on overall machine learning algorithms and color space combinations
+    in individually considered metrics.
+
+
+    | Class | classifier or ensemble | Accuracy | PPV | F Measure | MCC |
+
+    |---|---|---|---|---||
+
+    | normal | ensemble | 87.2 | 80.4 | 75.9 | 69.3 |
+
+    | covid19 | Extreme+RandomForest+Naive | 91.7 | 89.4 | 87.9 | 81.4 |
+
+    | pneumonia | ensemble | 94.2 | 89.7 | 78.6 | 73.1 |
+
+    | pneumonia_bac | Extreme+RandomForest+Simple | 96.4 | 92.2 | 90.3 | 85.1 |
+
+    | covid19_bac | ensemble | 97.8 | 94.6 | 92.2 | 88.6 |
+
+
+    # TABLE 1 CLASSIFICATION RESULTS
+
+
+    ![](img/c84ee406c93027779e22f5c407f84623_2_0.png)
+
+
+    Fig. 2 X-ray images samples from covid19 dataset (f) composed of four sets namely:
+    (a) represents covid19, (b) includes pneumonia, (c) represents pneumonia_bac and
+    (d) includes normal chest x-ray images.
+
+
+    Table 1 illustrates the three color combinations for best-performing machine learning
+    classifiers or ensembles. It can be clearly identified that YCrB+Kek-LUV color
+    space combination with “Extreme+Random+SimpleLogistic” has the best performance
+    for covid19, pneumonia and normal class classification achieved by YCrB+CIE-LUV
+    color space combination
+
+
+    At time of experiment, x-ray images belonging to pneumonia_bac are classified
+    and newly labeled as pneumonia. 10 fold validation is used for evaluation of the
+    proposed method. Few representative examples of each class are shown by Dr. Joseph
+    Cohen on GitHub, which link is available in [6].
+
+
+    ![](img/c84ee406c93027779e22f5c407f84623_2_1.png)
+
+
+    Performance measures used for the proposed method of identifying covid are accuracy,
+    predictive value (precision), sensitivity (recall), F measure, and correlation
+    coefficient (MCC). Mathematical formula to calculate the identified performance
+    are as follows:
+
+
+    ```
+
+    Accuracy (%) = \frac{TP}{TP + TN} * 100
+
+    PPV (%) = \frac{TP}{TP + FP} * 100
+
+    Sensitivity (%) = \frac{TP}{TP + FN} * 100
+
+    MCC (%) = \frac{TP * TN}{(TP + FP) + (TN + FN)} * 100
+
+    F Measure (%) = \frac{2 * TP}{2 * TP + FP + FN} * 100
+
+    ```
+
+
+    Fig. 3 represents a bar chart of the percentage accuracy for mentioned individual
+    machine learning algorithms and ensembles over three color space combinations.
+    Here ensemble, Extreme+Random+SimpleLogistic performed best among considered ensembles
+    and machine learning algorithms. Table 2 outlines the average performance accuracy
+    calculated for all color space
+
+
+    Authorized license used to identify: IEEE Xplore. Download on 14, 2024 at 20:13:36
+    UTC from IEEE Xplore. Restrictions apply.'
+  - '[PAGE 3]
+
+
+    # TABLE 2
+
+    AVERAGE PERFORMANCE ACCURACY (%) FOR DIFFERENT
+
+    COLOR SPACE COMBINATIONS ACROSS RESPECTIVE MACHINE
+
+    LEARNING ALGORITHMS AND ENSEMBLES OVER THREE CLASSES
+
+
+    | Machine Learning Algorithms and Ensembles | Y+CIE-Lek-LUV | YCrCb + Kek-LUV
+    | YCrCb + CIE-LUV |
+
+    |---|---|---|---||
+
+    | NaiveBayes | 65 | 66.67 | 67.5 | |
+
+    | ExtraTree | 71.667 | 78.833 | 80.6 | |
+
+    | ExtraTree + RandomForest | 80.833 | 80.833 | 83.1 | |
+
+    | RandomForest | 82.917 | 84.167 | 84.5 | |
+
+    | ExtraTree + RandomForest + NaiveBayes | 80.833 | 85.833 | 85.1 | |
+
+    | ExtraTree + RandomForest + SimpleLogistic | 84.167 | 87.083 | 84.167 |
+
+    | Average across classifiers | 77.57 | 80.486 | 82.093 |
+
+
+    combinations considered individual machine learning
+
+    algorithms and ensembles. "YCrCb CIE-LUV" color
+
+    space combination has the best accuracy for
+
+    covid19 detection which is followed by "YCrCb and
+
+    Kekre-LUV" color space.
+
+
+    RandomForest + SimpleLogistic has outperformed the
+
+    considered algorithms. Similarly, from Table 3 "YCrCb and CIE-
+
+    LUV" color space combinations have got the overall
+
+    PPV value.
+
+
+    # TABLE 3
+
+    AVERAGE PREDICTED POSITIVE (%) FOR DIFFERENT
+
+    COLOR SPACE COMBINATIONS ACROSS RESPECTIVE MACHINE
+
+    LEARNING ALGORITHMS AND ENSEMBLES OVER THREE CLASSES
+
+
+    | Machine Learning Algorithms and Ensembles | Y+CIE-Lek-LUV | YCrCb + Kek-LUV
+    | YCrCb + CIE-LUV |
+
+    |---|---|---|---||
+
+    | NaiveBayes | | 72.9 | 73.6 | 75.2 |
+
+    | ExtraTree | | 71.5 | 78.7 | 80.6 |
+
+    | ExtraTree + RandomForest | | 80.6 | 80.6 | 83.1 |
+
+    | RandomForest | | 84.2 | 84.7 |
+
+    | ExtraTree + RandomForest + NaiveBayes | | 80.9 | 85.8 | 84.1 |
+
+    | ExtraTree + RandomForest + SimpleLogistic | | 83.9 | 87 | 84.1 |
+
+    | Average across classifiers | | 78.7 | 81.633 | 82.083 |
+
+
+    ![](img/c84ee406c93027779e22f5c407f84623_3_0.png)
+
+
+    Fig. 4 Average predicted value (%) for mentioned individual machine
+
+    algorithms and ensembles considering different color
+
+    space combinations all three classes.
+
+
+    ![](img/c84ee406c93027779e22f5c407f84623_3_1.png)
+
+
+    Fig. 5 Average sensitivity (%) for mentioned reste learning
+
+    algorithms and ensembles considering different color space
+
+    combinations all three classes.
+
+
+    Graph in 4 indicates the average percentage
+
+    predicted value (PPV) for mentioned individual
+
+    learning algorithms and ensembles considering different
+
+    space combinations. Here, positive predicted value (PPV) also
+
+    known as "precision", is the ratio of the correctly predicted
+
+    positive class images. As per results, ensemble "ExtraTree =
+
+
+    Fig. 5 gives the comparison of reste machine learning
+
+    algorithms and ensembles calculated over different space combinations. Sensitivity
+
+    t measure of the infected cases possesses a
+
+    positive test. As per results show in the bar graph,
+
+    emsemble "ExtraTree + RandomForest + SimpleLogistic"
+
+    t highest sensitivity value. For the best machine
+
+    learning algorithms and ensembles among considered is done
+
+    from the graphs shown in Fig. 5, similarly, from table 4,'
+  - '[PAGE 4]
+
+
+    # TABLE 4
+
+    SENSITIVITY (%) FOR DIFFERENT COLOR SPACE
+
+    COMBINATIONS AC RESPECTIVE MACHINE LEARNING
+
+    ALGORITHMS AND ENSEMBLES OVER THREE CLASSES
+
+
+    # TABLE 5
+
+    AVERAGE F MEASURE (%) FOR DIFFERENT COLOR SPACE
+
+    COMBINATIONS AC RESPECTIVE MACHINE LEARNING
+
+    ALGORITHMS AND ENSEMBLES OVER THREE CLASSES
+
+
+    | Machine Learning and Ensembles | YC+ Kekre-LUV | YCrCb + Kekre-LUV | YCrCb +
+    CIE-LUV |
+
+    | --- | --- | --- | --- |
+
+    | NaiveBayes | 65.5 | 67.7 | |
+
+    | ExtraTree | 71.7 | 78.3 | 80.8 |
+
+    | ExtraTree + RandomForest | 80.2 | 86.6 | 82.8 |
+
+    | ExtraTree + RandomForest | 82.4 | 83.4 | 83.7 |
+
+    | RandomForest | 80.8 | 85.8 | 85.5 |
+
+    | ExtraTree + RandomForest + NaiveBayes | 82.9 | 84.2 | 84.6 |
+
+    | ExtraTree + RandomForest + SimpleLogistic | 84.2 | 87.1 | 84.2 |
+
+    | Average across considered classifiers | 77.56 | 80.43 | 80.9 |
+
+
+    | Machine Learning and Ensembles | YC-L+ Kekre-LUV | YCrCb+ Kekre-LUV | YCrCb+
+    CIE-LUV |
+
+    | --- | --- | --- | --- |
+
+    | NaiveBayes | 65.5 | 69.6 | 68 |
+
+    | ExtraTree | 71.6 | 78.5 | 80.6 |
+
+    | ExtraTree + RandomForest | 80.2 | 86.6 | 82.8 |
+
+    | ExtraTree + RandomForest | 82.4 | 83.4 | 83.7 |
+
+    | ExtraTree + RandomForest | 80.8 | 85.8 | 85.5 |
+
+    | ExtraTree + | 83.9 | 86.9 | 83.8 |
+
+    | Average across considered classifiers | 77.4 | 80.3 | 80.6 |
+
+
+    F measure also called F, is measured as a weighted harmonic mean of precision
+    and recall. Bar graph in Fig. 6 depicts the averaged F Measure values over different
+    color space combinations against machine learning algorithms and ensembles. Results
+    of “ExtraTree+ RandomForest+ SimpleLogistic” ensemble and “YCrCb+ CIE-LUV” color
+    space combination from Metric 5 has given overall best performance for covid19
+    identification.
+
+
+    ![](img/c84ee406c93027779e22f5c407f84623_4_0.png)
+
+
+    ![](img/c84ee406c93027779e22f5c407f84623_4_1.png)
+
+
+    MCC is a discrete case for Pearson Correlation, which is a reliable statistical
+    test recorded as accuracy/F score. Fig. 7 shows a bar graph for average percentage
+    values of individual machine learning algorithms and ensembles over different
+    color space combinations “ExtraTree+ RandomForest+ SimpleLogistic” has output
+    the best MCC for covid19 identification. Similarly in Table 6, “YCrCb+ CIE-LUV”
+    color space combination has outperformed other considered with a minimal change
+    observed between best and second-best color space combination.'
+  md: '
+
+    In the testing, the computed feature of the sample chest x-ray is supplied to
+    already trained machine learning classifiers or ensembles for covid19 identification.
+
+
+    The Waikato Environment for Knowledge Analysis (WEKA) [14], a machine learning
+    tool is used to carry out experimentation (training and testing phase) of the
+    proposed method for covid19 detection from input X-ray. WEKA is a tool that provides
+    a wide collection of different machine learning algorithms and data preprocessing
+    tools. Python 3 programming language is used for extracting features from images.
+
+
+    Covid19 dataset [6] is composed of 4-class labeled chest x-ray images. Total of
+    240 three-channel chest x-ray images of 50 patients are present in this dataset.
+    The dataset consists of covid class (60 images), normal class (60 images), pneumonia
+    (60 images), and pneumonia_bac (60 images). All images are not of same size, sizes
+    range from 456 to 2721 * 2438 pixels.
+
+
+    ## IV. EXPERIMENTATION
+
+
+    This section discusses the efficacy of the proposed method of covid19 detection
+    from chest x-ray, overall by key performance metrics: Test Accuracy, Predictive
+    Value (Precision), Sensitivity (Recall), F Measure, and MCC. Graphs and tables
+    showing performance on overall machine learning algorithms and color space combinations
+    in individually considered metrics.
+
+
+    | Class | classifier or ensemble | Accuracy | PPV | F Measure | MCC |
+
+    |---|---|---|---|---|---|
+
+    | normal | ensemble | 87.2 | 80.4 | 75.9 | 69.3 |
+
+    | covid19 | Extreme+RandomForest+Naive | 91.7 | 89.4 | 87.9 | 81.4 |
+
+    | pneumonia | ensemble | 94.2 | 89.7 | 78.6 | 73.1 |
+
+    | pneumonia_bac | Extreme+RandomForest+Simple | 96.4 | 92.2 | 90.3 | 85.1 |
+
+    | covid19_bac | ensemble | 97.8 | 94.6 | 92.2 | 88.6 |
+
+
+    ### TABLE 1 CLASSIFICATION RESULTS
+
+
+    ![](img/c84ee406c93027779e22f5c407f84623_2_0.png)
+
+
+    Fig. 2 X-ray images samples from covid19 dataset (f) composed of four sets namely:
+    (a) represents covid19, (b) includes pneumonia, (c) represents pneumonia_bac and
+    (d) includes normal chest x-ray images.
+
+
+    Table 1 illustrates the three color combinations for best-performing machine learning
+    classifiers or ensembles. It can be clearly identified that YCrB+Kek-LUV color
+    space combination with “Extreme+Random+SimpleLogistic” has the best performance
+    for covid19, pneumonia and normal class classification achieved by YCrB+CIE-LUV
+    color space combination
+
+
+    At time of experiment, x-ray images belonging to pneumonia_bac are classified
+    and newly labeled as pneumonia. 10 fold validation is used for evaluation of the
+    proposed method. Few representative examples of each class are shown by Dr. Joseph
+    Cohen on GitHub, which link is available in [6].
+
+
+    ![](img/c84ee406c93027779e22f5c407f84623_2_1.png)
+
+
+    Performance measures used for the proposed method of identifying covid are accuracy,
+    predictive value (precision), sensitivity (recall), F measure, and correlation
+    coefficient (MCC). Mathematical formula to calculate the identified performance
+    are as follows:
+
+
+    ```
+
+    Accuracy (%) = \frac{TP}{TP + TN} * 100
+
+    PPV (%) = \frac{TP}{TP + FP} * 100
+
+    Sensitivity (%) = \frac{TP}{TP + FN} * 100
+
+    MCC (%) = \frac{TP * TN}{(TP + FP) + (TN + FN)} * 100
+
+    F Measure (%) = \frac{2 * TP}{2 * TP + FP + FN} * 100
+
+    ```
+
+
+    Fig. 3 represents a bar chart of the percentage accuracy for mentioned individual
+    machine learning algorithms and ensembles over three color space combinations.
+    Here ensemble, Extreme+Random+SimpleLogistic performed best among considered ensembles
+    and machine learning algorithms. Table 2 outlines the average performance accuracy
+    calculated for all color space
+
+
+    Authorized license used to identify: IEEE Xplore. Download on 14, 2024 at 20:13:36
+    UTC from IEEE Xplore. Restrictions apply.
+
+
+    ### TABLE 2
+
+    AVERAGE PERFORMANCE ACCURACY (%) FOR DIFFERENT COLOR SPACE COMBINATIONS ACROSS
+    RESPECTIVE MACHINE LEARNING ALGORITHMS AND ENSEMBLES OVER THREE CLASSES
+
+
+    | Machine Learning Algorithms and Ensembles | Y+CIE-Lek-LUV | YCrCb + Kek-LUV
+    | YCrCb + CIE-LUV |
+
+    |---|---|---|---|
+
+    | NaiveBayes | 65 | 66.67 | 67.5 |
+
+    | ExtraTree | 71.667 | 78.833 | 80.6 |
+
+    | ExtraTree + RandomForest | 80.833 | 80.833 | 83.1 |
+
+    | RandomForest | 82.917 | 84.167 | 84.5 |
+
+    | ExtraTree + RandomForest + NaiveBayes | 80.833 | 85.833 | 85.1 |
+
+    | ExtraTree + RandomForest + SimpleLogistic | 84.167 | 87.083 | 84.167 |
+
+    | Average across classifiers | 77.57 | 80.486 | 82.093 |
+
+
+    combinations considered individual machine learning algorithms and ensembles.
+    "YCrCb CIE-LUV" color space combination has the best accuracy for covid19 detection
+    which is followed by "YCrCb and Kekre-LUV" color space.
+
+
+    RandomForest + SimpleLogistic has outperformed the considered algorithms. Similarly,
+    from Table 3 "YCrCb and CIE-LUV" color space combinations have got the overall
+    PPV value.
+
+
+    ### TABLE 3
+
+    AVERAGE PREDICTED POSITIVE (%) FOR DIFFERENT COLOR SPACE COMBINATIONS ACROSS RESPECTIVE
+    MACHINE LEARNING ALGORITHMS AND ENSEMBLES OVER THREE CLASSES
+
+
+    | Machine Learning Algorithms and Ensembles | Y+CIE-Lek-LUV | YCrCb + Kek-LUV
+    | YCrCb + CIE-LUV |
+
+    |---|---|---|---|
+
+    | NaiveBayes | | 72.9 | 73.6 |
+
+    | ExtraTree | | 78.7 | 80.6 |
+
+    | ExtraTree + RandomForest | | 80.6 | 83.1 |
+
+    | RandomForest | | 84.2 | 84.7 |
+
+    | ExtraTree + RandomForest + NaiveBayes | | 85.8 | 85.1 |
+
+    | ExtraTree + RandomForest + SimpleLogistic | | 86.9 | 83.8 |
+
+    | Average across classifiers | | 80.4 | 82.0 |
+
+
+    ![](img/c84ee406c93027779e22f5c407f84623_3_0.png)
+
+
+    Fig. 4 Average percentage (PPV) for mentioned machine learning algorithms and
+    ensembles.
+
+
+    ![](img/c84ee406c93027779e22f5c407f84623_3_1.png)
+
+
+    Fig. 5 Average sensitivity for mentioned machine learning algorithms and ensembles.
+
+
+    ### TABLE 4
+
+    SENSITIVITY (%) FOR DIFFERENT COLOR SPACE COMBINATIONS ACROSS RESPECTIVE MACHINE
+    LEARNING ALGORITHMS AND ENSEMBLES
+
+
+    | Machine Learning Algorithms and Ensembles | Y+CIE-Lek-LUV | YCrCb + Kek-LUV
+    | YCrCb + CIE-LUV |
+
+    |---|---|---|---|
+
+    | NaiveBayes | 65.5 | 69.6 | 68.0 |
+
+    | ExtraTree | 71.7 | 78.5 | 80.8 |
+
+    | ExtraTree + RandomForest | 80.2 | 86.6 | 82.8 |
+
+    | RandomForest | 82.4 | 83.4 | 83.7 |
+
+    | ExtraTree + RandomForest + NaiveBayes | 80.8 | 85.8 | 85.5 |
+
+    | ExtraTree + RandomForest + SimpleLogistic | 84.2 | 87.1 | 84.2 |
+
+    | Average across classifiers | 77.4 | 80.3 | 80.6 |
+
+
+    ### TABLE 5
+
+    AVERAGE F MEASURE (%) FOR DIFFERENT COLOR SPACE COMBINATIONS ACROSS RESPECTIVE
+    MACHINE LEARNING ALGORITHMS AND ENSEMBLES
+
+
+    | Machine Learning Algorithms and Ensembles | Y+CIE-Lek-LUV | YCrCb + Kek-LUV
+    | YCrCb + CIE-LUV |
+
+    |---|---|---|---|
+
+    | NaiveBayes | 65.5 | 69.6 | 68.0 |
+
+    | ExtraTree | 71.7 | 78.5 | 80.8 |
+
+    | ExtraTree + RandomForest | 80.2 | 86.6 | 82.8 |
+
+    | RandomForest | 82.4 | 84.2 | 83.7 |
+
+    | ExtraTree + RandomForest + NaiveBayes | 80.8 | 85.8 | 85.5 |
+
+    | ExtraTree + RandomForest + SimpleLogistic | 84.2 | 86.9 | 83.8 |
+
+    | Average across classifiers | 77.4 | 80.3 | 80.6 |
+
+
+    ### TABLE 6
+
+    AVERAGE MCC (%) FOR DIFFERENT COLOR SPACE COMBINATIONS ACROSS RESPECTIVE MACHINE
+    LEARNING ALGORITHMS AND ENSEMBLES
+
+
+    | Machine Learning Algorithms and Ensembles | Y+CIE-Lek-LUV | YCrCb + Kek-LUV
+    | YCrCb + CIE-LUV |
+
+    |---|---|---|---|
+
+    | NaiveBayes | 65.5 | 69.6 | 68.0 |
+
+    | ExtraTree | 71.7 | 78.5 | 80.8 |
+
+    | ExtraTree + RandomForest | 80.2 | 86.6 | 82.8 |
+
+    | RandomForest | 82.4 | 84.2 | 83.7 |
+
+    | ExtraTree + RandomForest + NaiveBayes | 80.8 | 85.8 | 85.5 |
+
+    | ExtraTree + RandomForest + SimpleLogistic | 84.2 | 86.9 | 83.8 |
+
+    | Average across classifiers | 77.4 | 80.3 | 80.6 |
+
+    '
+  mdcn: '
+
+    在测试过程中，样本胸部 X光的计算特征被提供给已训练的机器学习分类器或集成模型，用于 covid19 的识别。
+
+
+    Waikato 知识分析环境（WEKA）[14] 是一种机器学习工具，用于对所提出的从输入 X 光检测 covid19 的方法进行实验（训练和测试阶段）。WEKA
+    是一个提供了多种机器学习算法和数据预处理工具的工具。使用 Python 3 编程语言从图像中提取特征。
+
+
+    Covid19 数据集 [6] 由 4 类标记的胸部 X 光图像组成。该数据集总包含 50 名患者的 240 张三通道胸部 X 光图像。数据集由 covid
+    类（60 张）、正常类（60 张）、肺炎类（60 张）和细菌性肺炎类 pneumonia_bac（60 张）组成。所有图像的大小并不相同，尺寸范围从 456
+    到 2721 * 2438 像素。
+
+
+    ## IV. 实验
+
+
+    本节讨论了所提出的胸部 X 光检测 covid19 方法的效能，总体通过关键性能指标：测试准确率、预测值（精确率）、灵敏度（召回率）、F 值和 MCC。图表展示了在整体机器学习算法和颜色空间组合下，单独考虑各个指标的性能。
+
+
+    | 类别 | 分类器或集成模型 | 准确率 | PPV | F 值 | MCC |
+
+    |---|---|---|---|---|---|
+
+    | normal | 集成 | 87.2 | 80.4 | 75.9 | 69.3 |
+
+    | covid19 | Extreme+RandomForest+Naive | 91.7 | 89.4 | 87.9 | 81.4 |
+
+    | pneumonia | 集成 | 94.2 | 89.7 | 78.6 | 73.1 |
+
+    | pneumonia_bac | Extreme+RandomForest+Simple | 96.4 | 92.2 | 90.3 | 85.1 |
+
+    | covid19_bac | 集成 | 97.8 | 94.6 | 92.2 | 88.6 |
+
+
+    ### 表 1 分类结果
+
+
+    ![](img/c84ee406c93027779e22f5c407f84623_2_0.png)
+
+
+    图 2 来自 covid19 数据集的 X 光图像样本 (f)，由以下四组组成：(a) 代表 covid19，(b) 包含肺炎，(c) 代表 pneumonia_bac
+    以及 (d) 包含正常胸部 X 光图像。
+
+
+    表 1 展示了性能最佳机器学习分类器或集成模型的三个颜色组合。可以清楚地识别出，YCrB+Kek-LUV 颜色空间结合“Extreme+Random+SimpleLogistic”在
+    covid19、肺炎和正常类分类中表现最佳，而 YCrB+CIE-LUV 颜色空间组合次之。
+
+
+    在实验时，属于 pneumonia_bac 的 X 光图像被分类并重新标记为肺炎。使用 10 折交叉验证对所提方法进行评估。Dr. Joseph Cohen
+    在 GitHub 上展示了每个类的少量代表性示例，链接可在 [6] 中找到。
+
+
+    ![](img/c84ee406c93027779e22f5c407f84623_2_1.png)
+
+
+    用于识别 covid 所提方法的性能指标包括准确率、预测值（精确率）、灵敏度（召回率）、F 值和相关系数（MCC）。计算识别性能的数学公式如下：
+
+
+    ```
+
+    Accuracy (%) = \frac{TP}{TP + TN} * 100
+
+    PPV (%) = \frac{TP}{TP + FP} * 100
+
+    Sensitivity (%) = \frac{TP}{TP + FN} * 100
+
+    MCC (%) = \frac{TP * TN}{(TP + FP) + (TN + FN)} * 100
+
+    F Measure (%) = \frac{2 * TP}{2 * TP + FP + FN} * 100
+
+    ```
+
+
+    图 3 表示了上述各个机器学习算法和集成模型在三种颜色空间组合下的准确率百分比柱状图。在这里，集成模型 Extreme+Random+SimpleLogistic
+    在所考虑的集成和机器学习算法中表现最好。表 2 概述了所有颜色空间计算出的平均性能准确率。
+
+
+    授权许可标识：IEEE Xplore。于 2024 年 4 月 14 日 UTC 20:13:36 从 IEEE Xplore 下载。受相关限制。
+
+
+    ### 表 2
+
+    不同颜色组合在相应机器学习算法和集成模型下跨越三个类别的平均性能准确率 (%)
+
+
+    | 机器学习算法与集成模型 | Y+CIE-Lek-LUV | YCrCb + Kek-LUV | YCrCb + CIE-LUV |
+
+    |---|---|---|---|
+
+    | NaiveBayes | 65 | 66.67 | 67.5 |
+
+    | ExtraTree | 71.667 | 78.833 | 80.6 |
+
+    | ExtraTree + RandomForest | 80.833 | 80.833 | 83.1 |
+
+    | RandomForest | 82.917 | 84.167 | 84.5 |
+
+    | ExtraTree + RandomForest + NaiveBayes | 80.833 | 85.833 | 85.1 |
+
+    | ExtraTree + RandomForest + SimpleLogistic | 84.167 | 85.833 | 85.1 |
+
+    | 平均值 | 77.57 | 80.486 | 82.093 |
+
+
+    上述机器学习算法和集成模型。YCrB+Kek-LUV 颜色空间组合对 covid19 的识别准确率最高，紧随其后的是 YCrCb 颜色空间。RandomForest+SimpleLogistic
+    超过了其他考虑的算法。同样，YCrCb 颜色空间组合组合了最高的预测值 (PPV)。
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 5]
+
+
+    # TABLE 6
+
+    MATTHEWS CORRELATION COEFFICIENT (%)
+
+    DIFFERENT COLOR SPACE COMBINATIONS AC RESPECT
+
+    MACHINE LEARNING ALGORITHMS AND ENSEMBLES OVER
+
+    THREE CLASSES
+
+
+    | Machine Learning Algorithms and Ensembles | Y+CIE-L+CIE-LUV | YCr+CIE-LUV |
+    YCrCh+CIE-LUV |
+
+    | --- | :--- | :--- | :--- |
+
+    | NaiveBayes | 50.8 | 52.4 | 54.1 |
+
+    | ExtraTree | 54.6 | 65.9 | |
+
+    | ExtraTree+ RandomForest+RandomForest | 68.9 | 65 | 73 |
+
+    | RandomForest | 72.5 | 74.7 | 75.4 |
+
+    | ExtraTree+RandomForest+NaiveBayes | 69.9 | 77.5 | 75.6 |
+
+    | ExtraTree+RandomForest+SimpleLogistic | | 75 | 74.4 |
+
+    | Average across considered classifiers | 65,283 | 69,917 | 70,25 |
+
+
+    Proposed method were very helpful in the early detection of coronavirus infection
+    because of its lighter and minimal computational requirement which takes so little
+    time as money
+
+
+    # REFERENCES
+
+
+    +   [1] Deepa, N., Krishna, S., Kumar, G.: Feature Extraction and Classification
+    of X-Ray Images Using Hierarchical Texture Features, in: Smart Innovations and
+    New Technologies in Computing, pp. 989-997 (2018).
+
+    [2] Pereira,P., Deitera, L., Silva, C., Costa, Y.: Identification of coronavirus
+    cases in X-ray images on flat and hierarchical classification methods. In: Computer
+    Vision and Pattern Recognition, 35532 (2020).
+
+    [3] Wang, L., Wong, C.: COVID-Net: A needed deep convolutional neural network
+    for detection of COVID-19 cases from chest radiology images. arXiv:2002.10990
+    (2020).
+
+    [4] Sarkar, R., Hazra, A., Sadhu, K., Ghosh, P.: A Novel Method for Pneumonia
+    diagnosis from Chest-X Images Using Deep Residual Learning with Convolutional
+    Neural Networks, in: 2017 IEEE International Conference on Emerging Technologies,
+    pp. 1-4 (2017).
+
+    [5] Naria, A., Kamal, P., Zamani, A.: Detection of Coronavirus Infection Using
+    Deep Convolutional Neural Networks. arXiv:2003.10849 (2020).
+
+    [6] Cole, J., Morgan, P., Dao, L.: COVID-19 Image Data Collection. In: 2020 15th
+    IEEE International Conference on Computer Vision, pp. 1-6 (2020).
+
+    [7] Sharma, A., Rai, D., Ranjan, S.: Detection of pneumonia cases in chest X-ray
+    images using deep learning, in: University International Conference on Emerging
+    Technologies, pp. 1-5 (2021).
+
+    [8] Ballister, F.: Color science: methods and quantitative data analysis. The
+    turn of the century: sees and new year 1982. In: Color Research & Application,
+    pp. 262-263.
+
+    [9] Kehne, H.B., Thepade, S.D.: Image Binding in Vision Creation using Convolutional
+    Neural Networks, in: Intelligent Systems and Computing and 99.2, pp. 359. Springer,
+    Springer (2019).
+
+    [10] Thepade, S.D.: Color Transfer to Grayscale Images. In: First International
+    Conference on Emerging Technologies and Regions (2020).
+
+    [11] ITU-R Recommendation 601 5-1: Stuendo video encoding parameters of digital
+    television for standard 4:3 and wide-screen 16:9 aspect ratio.
+
+    [12] Thepade, S.D., Jha, H.K.: Boosting Performance of Machine Learning based
+    Melanoma Detection using GLCM Features extracted from Limited Histogram Color
+    Space. Journal of Advanced Science and Technology, 29, 6467-6477 (2020).
+
+    [13] Mark Hall, Elie Graf, Geoffrey Johnmes, Bernhard Phlhinger, et al.: The WEKA
+    data mining software: An update. ACM SIGKDD Explorations, pp. 1-14 (2009).
+
+
+    # VI. CONCLUSIONS
+
+
+    As covid19 belongs to the taxonomy of viral pneumonia, their symptoms show great
+    similarity implying a challenge in front of the world. Generally, it is observed
+    that symptoms of covid19 are discovered after 14-15 days. Hence there is a need
+    to build a method that can identify the infection due to coronavirus in less amount
+    of time. By using of YCrCh our proposed method extracts local color texture features
+    to identify infected cases. According to results, the high average across all
+    three classes (80.93%) is shown by “YCrCh+ CIE-LUV” color space while “ExtraTree+
+    RandomForest+ SimpleLogistic” ensemble performed better classifiers. Specifically
+    for covid19 class, YCrCh+ Kekre color space with “ExtraTree+ RandomForest + SimpleLogistic”
+    ensemble has shown best results in terms of all considered performance metrics.'
+  md: '
+
+    # TABLE 6
+
+    MATTHEWS CORRELATION COEFFICIENT (%)
+
+    DIFFERENT COLOR SPACE COMBINATIONS AC RESPECT MACHINE LEARNING ALGORITHMS AND
+    ENSEMBLES OVER THREE CLASSES
+
+
+    | Machine Learning Algorithms and Ensembles | Y+CIE-L+CIE-LUV | YCr+CIE-LUV |
+    YCrCh+CIE-LUV |
+
+    | :--- | :--- | :--- | :--- |
+
+    | NaiveBayes | 50.8 | 52.4 | 54.1 |
+
+    | ExtraTree | 54.6 | 65.9 | |
+
+    | ExtraTree+RandomForest+RandomForest | 68.9 | 65 | 73 |
+
+    | RandomForest | 72.5 | 74.7 | 75.4 |
+
+    | ExtraTree+RandomForest+NaiveBayes | 69.9 | 77.5 | 75.6 |
+
+    | ExtraTree+RandomForest+SimpleLogistic | | 75 | 74.4 |
+
+    | Average across considered classifiers | 65.283 | 69.917 | 70.25 |
+
+
+    Proposed method were very helpful in the early detection of coronavirus infection
+    because of its lighter and minimal computational requirement which takes so little
+    time as money.
+
+
+    # REFERENCES
+
+
+    - [1] Deepa, N., Krishna, S., Kumar, G.: Feature Extraction and Classification
+    of X-Ray Images Using Hierarchical Texture Features, in: Smart Innovations and
+    New Technologies in Computing, pp. 989-997 (2018).
+
+    - [2] Pereira, P., Deitera, L., Silva, C., Costa, Y.: Identification of coronavirus
+    cases in X-ray images on flat and hierarchical classification methods. In: Computer
+    Vision and Pattern Recognition, 35532 (2020).
+
+    - [3] Wang, L., Wong, C.: COVID-Net: A needed deep convolutional neural network
+    for detection of COVID-19 cases from chest radiology images. arXiv:2002.10990
+    (2020).
+
+    - [4] Sarkar, R., Hazra, A., Sadhu, K., Ghosh, P.: A Novel Method for Pneumonia
+    diagnosis from Chest-X Images Using Deep Residual Learning with Convolutional
+    Neural Networks, in: 2017 IEEE International Conference on Emerging Technologies,
+    pp. 1-4 (2017).
+
+    - [5] Naria, A., Kamal, P., Zamani, A.: Detection of Coronavirus Infection Using
+    Deep Convolutional Neural Networks. arXiv:2003.10849 (2020).
+
+    - [6] Cole, J., Morgan, P., Dao, L.: COVID-19 Image Data Collection. In: 2020
+    15th IEEE International Conference on Computer Vision, pp. 1-6 (2020).
+
+    - [7] Sharma, A., Rai, D., Ranjan, S.: Detection of pneumonia cases in chest X-ray
+    images using deep learning, in: University International Conference on Emerging
+    Technologies, pp. 1-5 (2021).
+
+    - [8] Ballister, F.: Color science: methods and quantitative data analysis. The
+    turn of the century: sees and new year 1982. In: Color Research & Application,
+    pp. 262-263.
+
+    - [9] Kehne, H.B., Thepade, S.D.: Image Binding in Vision Creation using Convolutional
+    Neural Networks, in: Intelligent Systems and Computing and 99.2, pp. 359. Springer,
+    Springer (2019).
+
+    - [10] Thepade, S.D.: Color Transfer to Grayscale Images. In: First International
+    Conference on Emerging Technologies and Regions (2020).
+
+    - [11] ITU-R Recommendation 601 5-1: Standard video encoding parameters of digital
+    television for standard 4:3 and wide-screen 16:9 aspect ratio.
+
+    - [12] Thepade, S.D., Jha, H.K.: Boosting Performance of Machine Learning based
+    Melanoma Detection using GLCM Features extracted from Limited Histogram Color
+    Space. Journal of Advanced Science and Technology, 29, 6467-6477 (2020).
+
+    - [13] Mark Hall, Elie Graf, Geoffrey Johnmes, Bernhard Phlinger, et al.: The
+    WEKA data mining software: An update. ACM SIGKDD Explorations, pp. 1-14 (2009).
+
+
+    # VI. CONCLUSIONS
+
+
+    As covid19 belongs to the taxonomy of viral pneumonia, their symptoms show great
+    similarity implying a challenge in front of the world. Generally, it is observed
+    that symptoms of covid19 are discovered after 14-15 days. Hence there is a need
+    to build a method that can identify the infection due to coronavirus in less amount
+    of time. By using of YCrCh our proposed method extracts local color texture features
+    to identify infected cases. According to results, the high average across all
+    three classes (80.93%) is shown by “YCrCh+ CIE-LUV” color space while “ExtraTree+
+    RandomForest+ SimpleLogistic” ensemble performed better classifiers. Specifically
+    for covid19 class, YCrCh+ Kekre color space with “ExtraTree+ RandomForest + SimpleLogistic”
+    ensemble has shown best results in terms of all considered performance metrics.
+
+    '
+  mdcn: '
+
+
+    # 表 6
+
+    马特克斯斯相关系数 (%)
+
+    不同颜色空间组合针对三类别的机器学习算法与集成方法的表现
+
+
+    | 机器学习算法与集成方法 | Y+CIE-L+CIE-LUV | YCr+CIE-LUV | YCrCh+CIE-LUV |
+
+    | :--- | :--- | :--- | :--- |
+
+    | 朴素贝叶斯 (NaiveBayes) | 50.8 | 52.4 | 54.1 |
+
+    | 额外随机树 (ExtraTree) | 54.6 | 65.9 | |
+
+    | ExtraTree+随机森林+随机森林 | 68.9 | 65 | 73 |
+
+    | 随机森林 | 72.5 | 74.7 | 75.4 |
+
+    | ExtraTree+随机森林+朴素贝叶斯 | 69.9 | 77.5 | 75.6 |
+
+    | ExtraTree+随机森林+简单逻辑回归 | | 75 | 74.4 |
+
+    | 所考虑分类器的平均值 | 65.283 | 69.917 | 70.25 |
+
+
+    所提方法在冠病毒感染的早期检测非常有帮助，因为其计算需求轻量且极小，耗费的时间非常短。
+
+
+    # 参考文献
+
+
+    - [1] Deepa, N., Krishna, S., Kumar, G.: Feature Extraction and Classification
+    of X-Ray Images Using Hierarchical Texture Features, in: Smart Innovations and
+    New Technologies in Computing, pp. 989-997 (2018).
+
+    - [2] Pereira, P., Deitera, L., Silva, C., Costa, Y.: Identification of coronavirus
+    cases in X-ray images on flat and hierarchical classification methods. In: Computer
+    Vision and Pattern Recognition, 35532 (2020).
+
+    - [3] Wang, L., Wong, C.: COVID-Net: A needed deep convolutional neural network
+    for detection of COVID-19 cases from chest radiology images. arXiv:2002.10990
+    (2020).
+
+    - [4] Sarkar, R., Hazra, A., Sadhu, K., Ghosh, P.: A Novel Method for Pneumonia
+    diagnosis from Chest-X Images Using Deep Residual Learning with Convolutional
+    Neural Networks, in: 2017 IEEE International Conference on Emerging Technologies,
+    pp. 1-4 (2017).
+
+    - [5] Naria, A., Kamal, P., Zamani, A.: Detection of Coronavirus Infection Using
+    Deep Convolutional Neural Networks. arXiv:2003.10849 (2020).
+
+    - [6] Cole, J., Morgan, P., Dao, L.: COVID-19 Image Data Collection. In: 2020
+    15th IEEE International Conference on Computer Vision, pp. 1-6 (2020).
+
+    - [7] Sharma, A., Rai, D., Ranjan, S.: Detection of pneumonia cases in chest X-ray
+    images using deep learning, in: University International Conference on Emerging
+    Technologies, pp. 1-5 (2021).
+
+    - [8] Ballister, F.: Color science: methods and quantitative data analysis. The
+    turn of the century: sees and new year 1982. In: Color Research & Application,
+    pp. 262-263.
+
+    - [9] Kehne, H.B., Thepade, S.D.: Image Binding in Vision Creation using Convolutional
+    Neural Networks, in: Intelligent Systems and Computing and 99.2, pp. 359. Springer,
+    Springer (2019).
+
+    - [10] Thepade, S.D.: Color Transfer to Grayscale Images. In: First International
+    Conference on Emerging Technologies and Regions (2020).
+
+    - [11] ITU-R Recommendation 601 5-1: 标准 4:3 和宽屏 16:9 宽高比的数字电视标准视频编码参数。
+
+    - [12] Thepade, S.D., Jha, H.K.: Boosting Performance of Machine Learning based
+    Melanoma Detection using GLCM Features extracted from Limited Histogram Color
+    Space. Journal of Advanced Science and Technology, 29, 6467-6477 (2020).
+
+    - [13] Mark Hall, Elie Graf, Geoffrey Johnmes, Bernhard Phlinger, et al.: The
+    WEKA data mining software: An update. ACM SIGKDD Explorations, pp. 1-14 (2009).
+
+
+    # 六. 结论
+
+
+    由于 COVID-19 属于病毒性肺炎分类，其症状表现出极大的相似性，给世界带来了挑战。通常观察到 COVID-19 的症状在 14-15 天后才发现。因此，需要建立一种短时间内识别冠病毒感染的方法。通过使用
+    YCrCh，我们提出的方法提取了局部颜色纹理特征来识别感染病例。根据结果，“YCrCh+ CIE-LUV”颜色空间显示了跨三类别的高平均值（80.93%），而“ExtraTree+随机森林+简单逻辑回归”集成分类表现更好。特别是对于
+    COVID-19 类别，YCrCh+ Kekre 颜色空间结合“ExtraTree+随机森林+简单逻辑回归”集成在所有考虑的性能指标上均显示出最佳结果。
+
+
+    '
+  merge: 0
