@@ -1,0 +1,572 @@
+- pgno: 0
+  md: '# # Sentiment Analysis of Code-Mixed Roman Urdu-English Social Media Text using
+    Deep Learning Approaches
+
+
+    Aqsa Younas
+
+    Department of Computer Science,
+
+    University of Agriculture, Faisalabad,
+
+    Faisalabad, Pakistan, 38000.
+
+    aqayounasp@gmail.com
+
+
+    Rahela Nasim
+
+    Department of Computer Science,
+
+    University of Agriculture, Faisalabad,
+
+    Faisalabad, Pakistan, 38000.
+
+    rahela.nasim@uaf.edu.pk
+
+
+    Saqib Ali†, Guojun Wang*
+
+    School of Computer Science,
+
+    Guangzhou University,
+
+    Guangzhou, China, 510006.
+
+    Emails: {saqib,csgjwang}@gzhu.edu
+
+
+    Fang Qi
+
+    Central South University
+
+    Changsha, 410083.
+
+    csifang@cu.edu.cn
+
+
+    Abstract—Sentiment analysis is the computational study of attitudes, opinions,
+    and sentiments towards certain issues, products, individuals, and organizations.
+    Sentiment analysis is becoming intelligent with the advancement of artificial
+    intelligence and natural language processing. With the structure of a large volume
+    of text on these platforms in imperfect and informal languages like Roman Urdu
+    with the English language, previous research on these code-mixed imperfect, and
+    poorly researched is limited. A promising solution is the use of deep learning
+    models on such media data. The objective of this paper is to perform sentiment
+    analysis of code-mixed Roman Urdu and English social media text. We performed
+    sentiment analysis using Multilingual BERT (mBERT) and XLM-RoBERTa (XLM-R) models.
+    The result shows that sentiment analysis is better than mBERT with F1 score of
+    71%.
+
+
+    media data is very large in size. With the advancement in natural language processing
+    and artificial intelligence technologies sentiment analysis is becoming more reachable
+    and affordable for the community and small companies. Customers usually select
+    the product for purchasing after reviewing the customers'' review on data. Thus,
+    however have become better part of the decision-making process of the buyer and
+    influence the trade pattern of the poorer
+
+
+    Urdu is one of the popular languages of South Asia. It is also the national language
+    of Pakistan. More than 60 million people speak Urdu in different parts of the
+    world [4]. Nowadays people are using informal and code-mixed social media languages
+    to post their comments.
+
+
+    In South Asia, the primary language of use is Roman Urdu code-mixed with English
+    on social media platforms as they find it difficult to type in Urdu. As a result,
+    a large set of short text generated on social media contains informal and code-mixed
+    Roman Urdu-English language. It is one of the poorly researched languages, consequently,
+    it becomes extremely challenging to perform NLP tasks using deep learning.
+
+
+    **Index Terms**—Sentiment analysis, Code-mixed text, Roman Urdu, Deep Learning,
+    BERT, XLM-RoBERTa, Multilingual
+
+
+    One of the approaches to the above-mentioned problem is to translate resolve language
+    into the English language and then use English resources for sentiment prediction
+    [6].
+
+
+    However, this is not suitable for imperfect languages as it does not contain translation
+    resources. Recent approaches, perform sentiment analysis using deep learning models
+    [7]. The researchers evaluate the performance of these character-based-pretrained
+
+
+    # I. INTRODUCTION
+
+
+    Sentiment analysis is a technique to examine the user''s emotions, opinions, and
+    behaviors towards a topic or topic [1]. Manual extraction of emotions from social
+    media is a laborious and time-consuming task such as
+
+
+    > †Department of Computer Science, University of Agriculture, Faisalabad Pakistan,
+    38000. Email: saqib@uaf.edu.pk
+
+    *Correspondence to: * {saqib,csgjwang}@gzhu.edu'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'embedding models used for sentiment analysis. They proposed a deep learning
+    model by using Embeddings for Language Models (ELMo) to conduct experiments [5].
+    However, these could not take the advantage of both left and right contexts of
+    the target word simultaneously. Thus, in our work, we use transform-based models
+    to improve the accuracy of the sentiment analysis for poor resource-coded Roman
+    Urdu-English language.
+
+
+    The results revealed idat that ADAN achieved inspiring performance for cross-lingual
+    languages. In these approaches, the authors used language translation. However,
+    in the translation process, words normally lose their context which in turn lead
+    to a poor insight into customer''s sentiments.
+
+
+    Recently, deep learning approaches are used for sentiment and provide improved
+    results in the sentiments of the customers [7]. For example, Kumar and Dhar [18]
+    used a deep learning approach with surface features. Their network eliminated
+    the limitations of learning techniques for sentiment analysis on code-mixed Hindi
+    social media data. In [5] developed a method for Roman Urdu and English dataset
+    for sentiment analysis. They discovered the difficulty of adapting resources for
+    informal language. They developed a deep learning model for classification of
+    code-mixed data. However, these deep learning approaches did not use sub-word
+    embedding for sentiment classification.
+
+
+    The objective of this paper is to extract sentiment from code-mixed Roman Urdu
+    social media text using deep approaches. In this work, we use multilingual models,
+    i.e., XLM-RoBERTa [9] and nBERT [10] to extract the sentiments from the code-mixed
+    data. We perform the experiments and without tuning the parameters of models.
+    Furthermore, the experiments are conducted without any normalization, language
+    conversion, or language indication. We found the effectiveness of these models
+    for poor리소스 languages like Roman Urdu is better than previous approaches. The
+    experiments are performed using MultiSentiment dataset [5]. It is a dataset containing
+    Roman Urdu and English code-mixed text extracted from social media.
+
+
+    The rest of this paper is organized as follows. In Section II, we discussed the
+    literature review. The methodology of the paper is described in Section III. We
+    analyzed and the results in Section IV. Finally, the conclusion and future work
+    of the paper are summarized in Section V.
+
+
+    # II. LITERATURE REVIEW
+
+
+    Sentiment analysis is important especially for businesses as it extracts useful
+    information from a product or a service provided online by customers. The influence
+    choice of buyer and selling procedure provided by the seller [11]. Now, days users
+    write content in multiple languages. Thus, multilingual sentiment analysis is
+    gaining popularity as it provides more information about the sentiments of the
+    users [13]. There is another category of multilingual sentiment analysis where
+    customers are using informal languages like Roman Urdu with English or other highly
+    relevant languages [14], [15]. stated that instead of Urdu people are using Roman
+    Urdu to express their views on social media.
+
+
+    One of the challenges in sentiment analysis is such as lack of resources [16].
+    In [17], authors performed sentiment analysis on a code-mixed Urdu script and
+    English language. Sentiment analysis was performed by using Structural Correspondence
+    Learning (SCL). They used approach of speech (POS) tagging and trained two encoders
+    (one for accommodation of spelling variation and one for translation from Urdu
+    to English). Similarly, Chen et al. proposed an Adversarial Deep Average Network
+    (ADAN) to connect knowledge learning from labeled high resource language to unlabeled
+    low-resources for sentiment analysis. They performed experiments on unlabeled
+    Arabic and Chinese languages while using labeled data of the language.
+
+
+    ![](img/0deed0094275949b514a3e6367fb87f2_1_0.png)
+
+
+    Fig. 1. Proposed methodology - sentiment classification using mBERT and XLM-R
+    models
+
+
+    To address above mentioned issues, authors have developed a BERT (Bidirectional
+    Encoder Representations from Transformers) as a sub-word based language representation
+    model'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'which the context from both left and right directions simultaneously in all
+    layers. Further, they have developed a Multilingual BERT (mBERT) by training BERT
+    model on 104 languages of the Wikipedia data. The experiments reveal that language
+    transfer is possible in different scripts (e.g., code-mixed Urdu and English language).
+    They concluded that multilingual representations created by mBERT exhibit disparity
+    affecting certain languages. Similarly, others developed XLM-RoTa (XLMR)—a multilingual
+    model trained on 25 languages using BERT-architecture data. It provides stands
+    over mBERT in terms of classification, sentiment analysis, and questioning.
+
+
+    Thus, in this paper we perform the sentiment analysis on codemixed Urdu and English
+    using mBERT and XLMR models. These are pretrained multilingual models based on
+    BERT. Our experiment is bidirectional and unsupervised deep learning. Our model
+    is trained using only a plain text corpus. It saves time, energy, and resources,
+    as it does not require massive datasets for training.
+
+
+    positive, negative, and neutral sentiments in the supervision of a domain expert.
+    Further, the negative sentiments are labeled as ''0'', ''1'' and ''2'' as shown
+    in Table II. The data is converted into pandas frames for processing with simple
+    transformers using the Pandas library [20]. Finally, the dataset is divided 80/20
+    for training and testing of the models.
+
+
+    # III. METHODOLOGY
+
+
+    First of all, we collect the dataset of code-mixed Roman-Urdu and English and
+    proves it to our experiments. We perform classification of sentiments using mBERT
+    and XLMR models. We train the models with tuning the hyperparameters of the codemixed
+    Roman Urdu and English dataset. We evaluate the results with F1 score and accuracy
+    metrics. The proposed methodology is explained in Fig. 1.
+
+
+    # C. Classification Models
+
+
+    We used mBERT and XLMR the most recent multilingual models for sentiment classification.
+    The mBERT model is built using BERT base which consists of twelve transformer
+    layers with 768 hidden layers. XLM-R is identical to Robust Optimized BERT Pretraining
+    Approach (RoBERTa) but based on BERT layers with a dynamic masking mechanism to
+    avoid the mask token for the same task in every example with key hyperparameters
+    of BERT model. The model is trained on a dataset for a longer duration than BERT
+    model.
+
+
+    Transformers: BERT base consist of 12 transformer layers- consists of number of
+    transformer layers. The Transformer is an architecture in natural language processing
+    with the objective to perform sequence-to-sequence tasks with long range dependencies.
+    Its consists of encoders and decoders. Further, encoder consists of
+
+
+    Attention: It is an essential component in the Transformer. Self-attention layers
+    provide context understanding and representation of a word in the texts or the
+    context of the speech [21]. Attention calculates the context of words by applying
+    Equation One.
+
+
+    > $Attention(Q, K, V) = \frac{QK^T}{\sqrt{d_k}}v$$
+
+
+    In BERT model, the special classification <CLS> encodes the whole sequence, "es
+    as..." into a fixed-dimensional representation where possible. The special classification
+    token <SEP> denotes the end of this end sentence in Fig. 2. The token ''end''
+    is represented by the next token <102>. In XLM-R it is <sep>, and in every sequence
+    are are replaced with a [MASK] token (or word, ''da'' is replaced by [MASK]).
+    After, the model predicts the original values of masked words for the context
+    of non-masked words. The encoders embed each word with a special representation.
+    For example, El is the encoded representation of the first word of the sequence,
+    "es".
+
+
+    The models consist of multiple layers and every layer performed multi-head attention
+    on the output of the previous layer., mBERT consists of 12 layers. In Fig. 2,
+    the T1 is the first representation of each word code.
+
+
+    # A. Dataset Collection
+
+
+    In this work, the Multisenti dataset is extracted from the Twitter during the
+    general elections of Pakistan in 2018. The dataset gives the sentiments of the
+    public election procedure and results in both bilingual and multilingual languages,
+    i.e., English, Urdu code-mixed Urdu and English datasets. The sentiment ratio
+    and language percentage in the dataset are shown in Table I.
+
+
+    # B. Data Preprocessing
+
+
+    The preprocessing is performed by the layers and deleting all the tweets containing
+    ''single word'' text. After, dataset containing 20725 tweets is categorized in
+
+
+    > *https://github.com/hanomsukali/multisenti
+
+
+    # TABLE I
+
+    IMENT RATIO AND LANGUAGE PERCENTAGE IN THE DATASET
+
+
+    | Class | Language | Urdu English | Language % |
+
+    |---|---|---|---|
+
+    | Negative | 48.27% | Urdu | 46.34% |
+
+    | Positive | 35.10% | English | 2.52% |
+
+    | Neutral | 16.63% | Mixed | 51.14% |'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# TABLE II
+
+
+    CODE-MIXED ROMAN URDU-ENGLISH TWEETS WITH LABELED SENTIMENTS
+
+
+    # Code-Mixed Roman Urdu-Tweets
+
+
+    Labels
+
+
+    basically to ki central punjab results reject kar denay chahayn
+
+    na hi 7 qajarri par sit uhay 6 parish mein marcher i 49 900 votes
+
+    dise jaliya riakhi hai lol
+
+    ppk ka p o orgar jan mein iski hukumat nahi sukar ayaz sidiq ke par janbari ki
+    sukar istifa ki mutaluba
+
+    imra ho us peech se bhi pak jam le ki kr di hai
+
+    cast system bohat horai hai par meri khali ther 50 ho pohira hai ishar sath sit
+    peay ler kmn ko di gai hain
+
+    nimrankakhteps we did i mbarook to too to arwa naypakistan
+
+    karachi ne jishar par hum ne banaya 244 par ki ali zaid na 255 par khald maqoob
+
+    ik ki ki bad aik aumeed paida ho behtri ki bhi bt se neay dost tu ik ki speech
+    se him press ho go
+
+    same goes for patwas ki diwarsi jisay deta hai dhandali ka rona
+
+    chi nisar ki jyi diwarsi har hai choudry sawar
+
+    Es dafar turn over zyada hai
+
+
+    0
+
+    1
+
+    2
+
+    0
+
+    1
+
+    0
+
+    2
+
+    1
+
+    0
+
+    1
+
+    2
+
+
+    ![](img/0deed0094275949b514a3e6367fb87f2_3_0.png)
+
+
+    The softmax is a new layer added here for classification purposes. The classification
+    layer has a dimension of K x H, where K is the number of classes (which is three
+    i.e., positive, neutral, and negative) and H is the size of the hidden state neutral
+    which is 768 for mBERT model.
+
+
+    # D. Tuning of Hyperparameters
+
+
+    To get better results of sentiment analysis, we tuned the hyperparameters of both
+    models as shown in Table III. Each classification model has a dictionary of arguments.
+    For tuning the hyperparameters, we changed the default values of the learning
+    rate, the number of epochs, and the batch size of the models using the dictionary
+    of arguments. After changing the key hyperparameters, we trained the model on
+    MultiSentiment dataset.
+
+
+    # E. Training and Evaluation
+
+
+    # TABLE III TUNING OF HYPERPARAMETERS
+
+
+    In this step, we used the pre-trained mBERT and XLMR-sequence classification models
+    on code-mixed Roman Urdu and English text. We used the pre-trained models purposely
+    as
+
+
+    | Model | Batch Size | Learning Rate | Number of Epochs |
+
+    | :--- | :--- | :--- | :--- |
+
+    | mBERT | 16 | 2e-5 | 3 |
+
+    | XLM-R | 16 | 2e-6 | 3 |'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: "# TABLE IV\nPERFORMANCE EVALUATION OF THE MODELS\n\n| | Without Fine-tuning\
+    \ | | With Fine-tuning | |\n|---|---|---|---|---||\n| Models | Accuracy | FI-Score\
+    \ | MCC | Accuracy | FI-Score |\n| mBERT | 0.41 | 0.65 | 0.45 | 0.69 | 0.69 |\n\
+    | XLM-R | 0.00 | 0.49 | 0.52 | 0.71 | 0.71 |\n\ntraining of these models from\
+    \ scratch causing overfitting when the datasets are not small. We use five evaluation\
+    \ metrics in the experiments, i.: classification results, model output, wrong\
+    \ prediction score, and accuracy. The Correlation Coefficient (MCC) for results\
+    \ resulted Matthews Correlation (MCC) for calculation of each item\n\nmodel is\
+    \ specified for low-resource languages. Furthers, the model is built on BERT-architecture\
+    \ whereas mBERT is built on BERT-Based and better for higher resource languages.\
+    \ XLM-R is a transformer that gives the highest score for code-mixed Roman Urdu\
+    \ and English text. Text classification by ELMo embeddings on the same data result\
+    \ in FI score of 0.65; ELMo is Long Short-term memory (LSTM) [2015] model that\
+    \ cannot learn the left or right context of words seamlessly. BERT is a transformer\
+    \ that can learn the context of words in both left and right directions at the\
+    \ same time. BERT represents input as sub-words and embeddings for up to 30,000\
+    \ for model in various languages. XLM-R and BERT are implemented on BERT, but\
+    \ getting higher FI for the code-mixed English and Roman Urdu text.\n\nMCC = \n\
+    \n```\n$$\\frac{TP \\times TN - FP \\times FN}{TP \\times TN + FP \\times FN}$\n\
+    ```\n\nMCC is a contingency matrix calculating the Pearson-moment correlation\
+    \ coefficient between actual and the predicted values. Model outputs give the\
+    \ score of models for each item in the test dataset. It is valuable to calculate\
+    \ the probabilities for each class, i.: Positive, Negative, and Negative. Wrong\
+    \ predictions resulted a list of features for every wrong prediction. Accuracy\
+    \ measures the measure of all the correctly identified predictions and is given\
+    \ in 3\n\nAccuracy = \n\n```\n$$\\frac{TP}{TP + FP + FN}$\n```\n\nFinally, we\
+    \ calculated the score of models to return a better evaluation of the wrongly\
+    \ classified predictions without accuracy. The FI score is calculated according\
+    \ to Equation 4\n\nF1 = 2 × \n\n```\n$$\\frac{Precision \\times Recall}{Precision\
+    \ + Recall}$\n```\n\nF Implementation\n\nWe use the Transformers library for training\
+    \ and testing of the transformer-based models with PyTorch [22]. We finetuned\
+    \ the models by changing the default values of batch size, learning rate, and\
+    \ number of epochs. We use tqdm library to visualize the progress meter. We use\
+    \ sklearn.metrics library [24] to evaluate the performance of trained models\n\
+    \n# V. CONCLUSION AND FUTURE WORK\n\nIn this paper, we performed the analysis\
+    \ of code-mixed Roman Urdu and English social media text using multilingual and\
+    \ XLM-R models. These are pretrained multilingual models based on BERT. We found\
+    \ that XLM-R gives higher accuracy and FI score for informal and low resource\
+    \ languages like code-mixed Roman Urdu and English text for social media. For\
+    \ the results, we found that it is effective to use a multilingual model pre-trained\
+    \ on a corpus for small and informal datasets. Thus, it is possible to adapt BERT\
+    \ models for code-mixed languages. In future work, we will build a neural network\
+    \ with BERT embeddings and extend the MultiSent dataset.\n\n# ACKNOWLEDGMENT\n\
+    \nThis work was supported by the National Science Foundation of China under grant\
+    \ 6136200, and by the Guangdong Provincial Natural Science Foundation under grant\
+    \ 2017a03038006, and by the High-Level Talents Program of Higher Education in\
+    \ Guangdong grant 2016J01.\n\n# REFERENCES\n\n+   [1] M. Kaity and V. Basilakrishnan,\
+    \ “Sentiment lexicons and non-english languages: a survey,” Knowledge and Information\
+    \ Systems, pp. 1–36, 2020. [Online]. Available: https://doi.org/10.1007/s10115-020-01497-6\n\
+    \n> ^2simpletransformers.ai/\n\n# IV. RESULTS AND DISCUSSION\n\nWe compared the\
+    \ model results based on MCC, Accuracy, and FI-score as in Table IV. We recorded\
+    \ the outputs with and without the key hyperparameters of the models. We found\
+    \ that XLM-R multilingual performs better than mBERT for code-mixed languages\
+    \ after tuning the hyperparameters. This is because XLM-R is"
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '[29] N. Singh, D. S. Tomar, and A. K. Sangaiya, "Sentiment analysis as a review
+    and comparative analysis over social media," Journal of Artificial Intelligence
+    and Human Computing, vol. 11, no. 1, pp. 97–117, 2020. [Online]. Available: https://doi.org/10.1007/s42669-019-0002-6
+
+
+    [20] W. McKinney et al., "pandas: a foundational python library for data analysis
+    and statistics," Python for High Performance and Scientific Computing, vol. 14,
+    no. 9, 2011.
+
+
+    [30] M. Haider, S. J. Ali, M. Khan, and S. S. Ahmed, "Sentiment analysis in social
+    media data: a survey and systematic literature review," Concurrency and Computation:
+    Practice, vol. 32, no. 4, p. e2168, 2020. [Online]. Available: https://doi.org/10.1002/wcc.2168
+    (Accessed: 2021-05-20)
+
+
+    [31] A. Vaswani, N. Sharma, K. Parmar, J. Uszkoreit, L. Jones, A. Gomez, L.N.
+    Kaiser, and N. Polosukhin, "Attention is all you need," arXiv preprint arXiv:1706.03762,
+    2017. [Online]. Available: https://arxiv.org/abs/1706.03762
+
+
+    [31] T. Toomuru and S. Saha, "Current status of status on twitter," Journal of
+    Computer Science and Mathematical Applications, vol. 38, no. 1, pp. 28–33, 2020.
+    [Online]. Available: https://doi.org/10.3153/jccm.2020.313
+
+
+    [32] C. O. Das-Lin, "tqdm: a fast, smart progress bar for iter loops," In Advances
+    in Data Mining and Systems, 2019.
+
+
+    [32] M. Eloradi, M. Ali, and S. Mohammad, "Deep learning for sentiment classification
+    of short-texted reviews," in Proceedings of the 35th ACM Symposium International
+    Conference on Knowledge Discovery and Data Mining (SAC ''20), pp. 903–906, 2020.
+    [Online]. Available: https://doi.org/10.1145/3394734.3394741
+
+
+    [33] E. Bisong, "Using machine learning techniques with sentiment analysis," Machine
+    Learning and Data Mining for Social Media, Springer Berlin, 2019.
+
+
+    [33] X. Chen, Y. Sun, B. Aithavarni, C. Chang, and K. Weinberg, "Aspect-based
+    sentiment analysis: survey," Transactions of the Association for Computational
+    Linguistics, vol. 6, pp. 45–68, 2018. [Online]. Available: https://arxiv.org/abs/1812.09280
+
+
+    [34] S. Hochreiter and J. Schmidhuber, "Long-term memory," Neural Networks, vol.
+    9, no. 8, pp. 1775–1780, 1997. [Online]. Available: https://doi.org/10.1016/Sneco.1997.07.003
+
+
+    [34] L. Zhang, Z. Wang, and B. Liu, "Deep learning for sentiment analysis: A survey
+    on Mining and Knowledge Discovery," vol. 8, no. 4, p. 2258, 2018. [Online]. Available:
+    https://doi.org/10.1002/wkd.2258
+
+
+    [35] M. E. Perez, N. Neumann, I. Tyer, M. Gerhard, C. Clark, "Contextual word
+    representations," arXiv preprint arXiv:1512.03805, 2015.
+
+
+    [36] R. Rud, A. Agar, and V. Iuli, "Unsupervised cross-lingual representation,"
+    in Proceedings of the 57th Annual Meeting of the Association for Computational
+    Linguistics: Tutorial Analytics, 2019, pp. 1–13.
+
+
+    [37] J. Devlin, M. Chang, K. Lee, and K. Toutanova, "Pre-training of deep bidirectional
+    transformers for language understanding," arXiv preprint arXiv:1810.04815, 2018.
+
+
+    [38] M. Liotagou, M. G. Volakis, D. Chatzaras, A. Vakali, G. Sarigandidis, and
+    K. Chatzikavas, "Sentiment analysis using word embeddings," Expert Systems with
+    Applications, vol. 69, pp. 224, 2017. [Online]. Available: https://doi.org/10.1016/j.eswa.2016.10.014
+
+
+    [39] H. Ghulam, F. Wen, and Y. Xiao, "Deep-based sentiment analysis for roman
+    text," Procedia Computer, vol. 147, pp. 135–150, 2019. 2019 International Conference
+    on Identification, Knowledge and Information in the Internet of Technologies.
+
+
+    [40] K. Ismail, P. Hussain, D. Garba, and A. J. Wahalab, A. Gebikh, and Q. Zhou,
+    "Multilingual sentiment analysis of tweets using deep learning techniques," Computer
+    Applications, vol. 8, no. 4, pp. 757, 2021. [Online]. Available: https://doi.org/10.1007/s42974-021-0064-x
+
+
+    [41] M. Mahmoud, E. Quam, and M. K. Malik, "Sentiment analysis for resource poor
+    language-roman text," ACM Tran. Asian Low-Res Lang. Inf. Proc., vol. 19, no. 1,
+    2019. [Online]. Available: https://doi.org/10.1145/3341457.3341459
+
+
+    [42] S. Arif, R. M. A. M. Wahab, F. Bukhari, R. Nasir, "Sentiment analysis in
+    roman text using transformer control, and convolutional neural networks," Information
+    Processing & Management, vol. 57, no. 4, p.102233, 2020. [Online]. Available:
+    https://doi.org/10.1016/j.infopro.2020.102233
+
+
+    [43] A. S. Ali, G. Wang, and S. Ries, "Aspect based sentiment analysis for market
+    engineering," IEEE Access, vol. 88, pp. 17183–17186, 2020. [Online]. Available:
+    https://doi.org/10.1109/ACCESS.2020.3025823
+
+
+    [44] V. Kumar and M. Dhar, "Looking beyond the obvious: Code-mixed sentiment analysis
+    (cmisa)," 2018.
+
+
+    [45] T. Peng, F. Sohling, and D. Garrette, "How is multilingual bert?," arXiv
+    preprint arXiv:1906.01502, 2019. [Online]. Available: https://arxiv.org/abs/1906.01502'
+  merge: -1
+  img_proc: true
