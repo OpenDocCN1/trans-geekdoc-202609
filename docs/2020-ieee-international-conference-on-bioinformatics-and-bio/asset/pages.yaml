@@ -1,0 +1,476 @@
+- pgno: 0
+  md: '# Comparison of Convolutional Neural Network Architectures and their Influence
+    on Patient Classification Tasks Relating to Altered Mental Status
+
+
+    Kevin Gagnon
+
+    Computer Science
+
+    University of South Carolina
+
+    Columbia, SC
+
+    kevingagnon@protonmail.com
+
+
+    Tami L. Crawford
+
+    Biomedical Informatics
+
+    Medical University of South Carolina
+
+    Charleston, SC
+
+    crawford@musc.edu
+
+
+    Jihad Obaid
+
+    Biomedical Informatics
+
+    Medical University of South Carolina
+
+    Charleston, SC
+
+    jobead@musc.edu
+
+
+    **Abstract—** With the pervasiveness of Electronic Health Records in hospital
+    systems, the application of machine learning techniques to the field of health
+    informatics has become much more feasible as large amounts of data become more
+    accessible. In our experiment, we evaluated several convolutional neural network
+    architectures for in patient classification tasks. We tested these tasks based
+    on 113 histories of present (HPI). This data was processed using a recurrent architecture
+    with implemented attention mechanism meant to focus the model on the influential
+    data points in the text. We achieved an accuracy of 92%, while the attention method
+    performed with an accuracy of 90% and 89% respectively.
+
+
+    **Keywords—** Machine Learning, Deep Learning, Bioinformatics, Natural Language
+    Processing, Medical Informatics Computing
+
+
+    # I. INTRODUCTION
+
+
+    The utilization of health records (EHR) has a growing throughout the health informatics
+    community as the availability and size of datasets has increased over the past
+    decade [1]. This increases machine learning models the data it needs to make predictions.
+    Each EHR contains a wealth of patient information that is completely unstructured
+    for machine learning models. With rich contextual data about the patient, these
+    records can deget off for data that can be integrated into more traditional algorithms
+    to predict patients out outcome in a meaningful way. We are then able to utilize
+    this data and patients using convolutional neural network architectures.
+
+
+    Similar data has been used to make predictions using convolutional neural networks
+    (CNN). In many other contexts such as entity recognition or sentiment analysis
+    [2]. Text classification and CNNs, can predict and classify a text based on their
+    construction and which have been shown to outperform-
+
+
+    many traditional forms of machine learning [3]. This principle has been applied
+    to medical tasks in specific cases, each using a similar dataset, but for different
+    purposes [4].nA similar also applied attention CNNs to radiology reports in processing
+    with bag-of-words and support vector models [6]. From this study, it was shown
+    that CNNs significantly outperformed other models and demonstrated as well performed
+    better than the attention mechanism is a viable baseline model, the support vector
+    machine. We whether classification tasks are significantly improved between attention
+    models and their counterparts.
+
+
+    The objective of this experiment is to compare convolutional neural network architecture
+    and determine which is best for patient classification tasks based on structured
+    clinical notes. By comparing these three CNN models, we will be able to provide
+    guidance when developing models involving classification from classic text notes.
+
+
+    # II. OBJECTIVES
+
+
+    # III. METHODS
+
+
+    We extracted Emergency Department (ED) Patients Notes from the Blinded Research
+    Warehouse that has data extracted from the EHR system. The notes were taken over
+    a period of 6 years, all from the same EHR system. The data was enhanced with
+    records from adult patients who visited'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'tagged with International Classification of Disease (ICD)-10 codes, which indicated
+    that the patient had AMS (e.g. codes under the R4 ICD-10 code hierarchy, which
+    includes symptoms and signs ignoring cognitive functions and awareness) from records
+    without AMS codes as controls or negative cases. The others filtered into the
+    final record including the history of present illness (HIP). The parsed notes
+    were imported into REDCap [7] and shared with clinical experts on our research
+    (which included ED physicians) and labeled either AMS in preparation for the supervised
+    learners. The clinical members of the team labeled 1,113 HIPs. Of others, 473
+    487 (43%) were labeled as AMS, 626 (57%) were labeled as non-AMS.
+
+
+    operating systems using CPU only which resulted in similar results.
+
+
+    # E. Convolutional Neural Network Structures:
+
+
+    A. Convolutional Neural Network is a deep learning model developed specifically
+    for image processing by replicating the biological functions of vision [15], [16].
+    The convolutional layers feed out to be processed [17] by subsequent layers such
+    as pooling and dropout. We used the same basis for each of the models outlined
+    in the sections below except for word embedding layers from the Natural Language
+    Processing Lab (NLPpharm) building medical texts from PubMed and D220. We used
+    Python 3.6 [8], NumPy, and Pandas [19] for the pre-processing of the machine learning
+    pipeline, and Keras/TensorFlow [11] for building and training the three deep learning
+    models used in this experiment. We used the three CNN models in this experiment.
+    Processing for these models included feature extraction, sentence sentiment, pooling,
+    removal, tokenization, and sequence detection.
+
+
+    # A. Testing:
+
+
+    +   1. Multi-CNN Model. The architecture of the models on the Jaelleki [18]. A
+    multi-channel model, at best will select different features by setting out filters
+    into separate filters and concatenating the results of each filter. Added additional
+    filters seemed to detract from the performance of the model greatly as it was
+    slower to train and less accurate. Our filters are beneficial to the multi-channel
+    architecture. Because the architectures differ largely from those used in Opalikes
+    [19]. We have significantly a reduced channel size of just 3 channels. Our model
+    also does not separate the data into channels through the layers but selects the
+    best features in the concatenation. We started with an input size of 16x30 that
+    is the representation of the unique texts pulled out of word embedding. We then
+    used the embedding layer as mentioned above which includes medical reports from
+    various sources. This is because
+
+
+    # B. Tuning:
+
+
+    For each of the models, we did extensive hyperparameter tuning to determine the
+    best sets for overall performance of each model. For the sequential and bidirectional
+    models, we used Bayesian optimization on this model using the Hyperopt python
+    package [12]. From this, parameters such filters size, dropout, and learning rate
+    were adjusted between their minimum and maximums over 100 runs. The models were
+    then adjusted with the parameters that were found to be the most effective
+
+
+    # C. Word Embeddings:
+
+
+    Each of the models uses Word2vec skip gram [13]. Because of our small data size,
+    we did not have enough to train our Word2vec without a significant impact on the
+    reliability of the results and massive overfitting. We used a pretrained model
+    to help improve each of our models overall performance in classification. The
+    Word2vec model was built from NLP that used texts from PubMed and PMC [14] and
+    mapped our set of 1,110 words. We imported our models to the weights of 5.5 billion
+    tokens from the PubMed and PMC databases. This is a 200-dimension Word2vec model.
+
+
+    # D. Reproducibility:
+
+
+    We ran tests using an NVIDIA RTX 3080 on a Windows 10 server hosted and operated
+    by the Medical University of South Carolina. Results cannot be guaranteed to be
+    completely reproducible if other architectures were used, however these architectures
+    were tested
+
+
+    is meant to give the model some form of context to pick up on important entries.
+    Because the tensor is only formed on one vector, we must then reshape the tensor
+    through shared layers which are processed by the algorithms. This is by applying
+    a filter size to give 630x200. We used three convolutional layers, each that takes
+    the input from the previous layer and produces an output of the same size (3,5)
+    all the way up to (5,7). There were no improvements in the model by decreasing
+    or increasing it that to a filter size of (3,4) as many of the models that worked
+    well within that range of filter. This specific for features is that the filter
+    sizes and sizes of the filters are the joining of the data is particularizing
+    it. In an image processing application, this method might differ between black
+    and pixel, but in our case, it allows us to find the most important words/in text
+    and reduce the variables that the text representation contains as values are then
+    exported and fed into max-pooling layers that take the multi-dimensional output
+    of the convolutional layers and transform them into a 1x1 value. This is to apply
+    the features selected within'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'convolational steps to help filter out noise of competing, but less effective
+    features. Those values are concatenated to become a 3x1 tensor, flattened, reshaped.
+    We finally apply dropout rate of 0.25 to decrease overfitting [20]; Originally
+    a dropout rate of 0.5 was used here, but by hyperparameter tuning, we found that
+    a 0.25 yielded more accurate results. We add a single node with softmax activation
+    to our result.
+
+
+    2) Sequential CNN Model: A sequential model is built through the concatenation
+    of layers after another. This is one of many early models Including text classification
+    tasks dealt in Section 1. All details about the model architecture pipeline where
+    multiple convolutional layers are added to perform feature selection and reduce
+    the data as deemed [22]. Comparatively, this is the simplest model that was constructed
+    through this experiment. Similar to the multi-channel model, we start with a convolutional
+    layer and data was reshaped into a format of 200x1. This model has a much higher
+    size, in comparison with the multi-channel model, with a filter size of 20. We
+    decided to use one convolutional layer to contrast with the concatenation of layers
+    across three dimensions. We added a max pooling layer with a 1x1 matrix of features
+    to decide if the text contains a positive or negative sentiment. We then added
+    a dropout layer with a rate of 0.2 to reduce-overfitting the model and flatten
+    to output a softmax function.
+
+
+    3) Attention CNN: Theing of a model by adding an attention section to the data.
+    To do this, we used KPooling and Folding methods as described by Hughes [23].
+    We then introduced the pooling process of a time to help improve the ability to
+    use from the convolutional layers. We used this model here because of its ability
+    during prototyping. We used 1-dimensional convolutional layers instead of 2-dimensional
+    because of the difference might influence the output of the model, which affects
+    the aspects of the performance outcome. We started with the base embedding layer
+    and adding the best feature. Padding the embedding layer helps to improve the
+    performance of the model as it no longer needs to guess the length of the input.
+    We then used a max pooling layer to perform enough convolutions for the KPooling
+    model to take effect as per the volume of data to be too sparse [24]. Then we
+    used a 1-dimensional convolution layer with a to take the best max pool of first
+    and pass on. We then added another convolution layer with the half window size
+    of the first, add a folding layer, and then order another kPooling. We finally
+    flatten, and output using a softmax function.
+
+
+    # F. Training and Evaluation:
+
+
+    Each of the models described above was trained using a 50-20% split/test cycle.
+    The data was divided into training and testing sets. 80% of the data was used
+    for training, 10% for validation, and 10% was aside for evaluation. The data was
+    split into stratified folds, giving us enough of positive and negative samples.
+    The accuracy, precision, recall, F-Score, and loss were calculated. The operating
+    characteristic (AUC) was calculated based on all predictions taken in the data
+    in each of five models. Each model was trained for 100 epochs using a batch size
+    of 32 with early stopping to help prevent overfitting by the stopping if the model
+    was to lose. We had a patience of 10, meaning that if the loss increased, we would
+    provide a period of 10 epochs for the model to recover before stopping our experiment.
+    We also did not test learning rates as we not need to add callback parameters
+    each time. The model performing well without much issue, otherwise we would terminate
+    and continue with different hyperparameters.
+
+
+    # G. Ethical Considerations:
+
+
+    This study was approved by the Institutional Review Board at the Divided by IRB
+    Chair at Protocol.No0000855. This experiment was approved as a chart study and
+    no human subjects were used.
+
+
+    # IV. RESULTS
+
+
+    The multi-channel model outperformed by the attention model and attention and
+    sentiment classification task on AUC (97.4%), (92.3%), and (0.294) Table 1 We
+    showed their overlap in confidence intervals showing that in some cases, the model
+    outperformed the multi-channel model Table 2. The attention model and sequential
+    model second outperformed on AUC, but the sequential model outperformed the attention
+    model with an accuracy of 90.8% versus the attention model''s 89.3.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# TABLE I. Accuracy of CNN Architecture Part 1
+
+
+    | Model | Accuracy | Area Under the Curve | Loss | Confidence Interval |
+
+    |---|---|---|---|--|
+
+    | Multi-Channel | 92.3% | 97.4% | 0.294 | 96.1-97.8% |
+
+    | Sequential | 90.7% | 96.4% | 0.34 | 95.9-96.8% |
+
+    | Attention | 89.4% | 95.6% | 0.356 | 94.5-95.8% |
+
+
+    # TABLE II. Accuracy of CNN Architecture Part 2
+
+
+    | Model | Recall | Precision | F1-Score |
+
+    |---|---|---|--|
+
+    | Multi-Channel | 92.2% | | 92.2% |
+
+    | Sequential | 91.3% | 91.3% | 92% |
+
+    | Attention | 90.0% | | 90% |
+
+
+    # A. Limitations
+
+
+    Our data used for this experiment represents one health system, and one EHR system.
+    This means it is difficult to generalize the performance of these models to other
+    environments. Our experiment was also specifically designed as a classifier to
+    identify AMS. We also had a dataset of only 111 HPI notes, which might not have
+    enough data available for our study. More experiments need to be conducted at
+    other institutions and examining different types of models with a much larger
+    dataset size is to be applicable.
+
+
+    # V. DISCUSSION
+
+
+    Between each of the models, it is clear from the results that the multi-channel
+    model performed the best for patient classification task. The model achieved a
+    prediction of 97.4% Area Under the Curve and it also outperformed the sequential
+    and attention models by 2-4% over our testing. This indicates that the multi-channel
+    model is the most expensive of the three but could be better able to make predictions
+    with sparse data than in our dataset. The sequential and attention models performed
+    well, and may have certain hardware limitations or energy restrictions such as
+    embedded devices or portability, but it is clear that testing these models do
+    not complete our task as they were outperformed on every metric by the multi-channel
+    model.
+
+
+    We hypothesized that adding an attention mechanism would improve the ability for
+    the model to classify AMS; however we was not in the results of our testing. While
+    adding attention in theory would allow the model to discover smaller details in
+    the data, our particular set had short amount of text.
+
+
+    Because of the success of the multi-channel CNN models, we can say that text classification
+    has a useful place in patient classification tasks, as well as other decision-making
+    tools. To continue, we need these models tested with larger sets of data to generalize
+    to other forms of it. This sort of classification allows for much greater and
+    more accurate prediction, as once utilized textual data will now be used in a
+    more meaningful way. We envision that models could incorporate text classification
+    as one of larger systems that can involve text and numerical data.
+
+
+    # VI. CONCLUSION
+
+
+    Although our experiment had limitations, our tests demonstrated that the multi-channel
+    convolutional neural network is the best for patient classification on EHR. Even
+    with a difference between different models, performance was achieved with the
+    multi-channel model showing the power that neural networks present when medical
+    text classification tasks. Our results show that a multi-channel model is the
+    most robust of the three, several models could be depending on the medical text
+    classification task.
+
+
+    # ACKNOWLEDGMENT
+
+
+    This project was supported by the South Carolina Smart Growth, the South Carolina
+    & Translational Research Institute, with an academic team at the University of
+    Medicine of South Carolina, the National Institutes of Health - National Center
+    for Advancing Translational Sciences grant grant UL1-TR001450, and the project
+    from the University of General Medical Sciences grant G55-AM10941. The funds had
+    no role in study design, data collection and analysis, decision to publish, or
+    preparation of the research.
+
+
+    # REFERENCES
+
+
+    +   [1] J. Henry, Y. Philips, T. Seacy, and V. Wyatt, “Prediction of electronic
+    health record systems from US non-acute care hospitals, 2017, IEEE Data Sci. 5,
+    199–204.
+
+
+    +   [2] S. A. Roberts, “Deep learning for medical text recognition,” in Proceedings
+    of the 20th Conference on Clinical Informatics (2019), pp.215–239.
+
+
+    +   [3] V. Raj, “A deep learning framework for medical text classification,” arXiv
+    Preprint:1805.046882, 2018.
+
+
+    +   [4] T. Wang, “Scalable and accurate deep learning in electronic health records,”
+    EHR Dig. Med. vol. 1, p. 18, 2018.
+
+
+    +   [5] X. Liu, Y. Wang, and T. Lee, “Classification of radiology reports using
+    neural attention models,” in 2017 International Joint Conference on Neural Networks
+    (IJNN), Anchorage, AK, USA, vol. 201, pp. 1–6.
+
+
+    +   [6] P. A. Harris, R. Taylor, R. Tischele, J. Payne, N. Gonzalez, and J. G.
+    Conde, “Electronic data capture (REDCap) – a metadata-'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'driven methodology and workflow for translational research efforts support.,
+    J. Biomed. Inform., vol. 42, no. 2, p. 377–381, Apr 2009, doi: 10.1016/j.jbi.2008.06.010.
+
+
+    [8] G. LaCassous and F. Drake, The python language. Python Foundation, O''Reilly
+    Publishing USA, 2010.
+
+
+    [9] T. E. Oliphant, A Guide to Numpy, vol. 1. Drexel Publishing USA, 2005.
+
+
+    [10] W. McKinney,“Data Structures for Statistical Computing in Python,” Austin,
+    Texas, 2010, p. 56–61, doi: 10.2258/978-0-492-02922-6.
+
+
+    [11] F. Chollet, Deep learning with Python. Manning Publications, 2017.
+
+
+    [12] M. Thomas, N. Schiling, and L. Schmidh-Theiß,“Hyperparameter Based Hyperparameter
+    Optimization,” in Machine Learning and Knowledge Discovery in Data Mining, pp.
+    22, 2016, doi: 10.1007/s10606-022-1.
+
+
+    [13] T. Mikolov, I. Sutskever, K. Chen, G. Gorado, and J. Dean, “Distributed Representations
+    of Words and Their Phrases in Continuous Space,” arXiv preprint arXiv:1306.2734,
+    Aug. 2013 [Online]. Available: http://arxiv.org/abs/1306.2734
+
+
+    [14] S. Natarajan and M.wani,“Deep learning resources for biomedical text processing,”
+    Proc. LBM, vol. 3, 39–44, 2013.
+
+
+    [15] D. H. Hubel and T. N. Wiesel, Brain and visual perception: the story of a
+    25-year collaboration. New York, NY: Oxford University Press, 2005.
+
+
+    [16] K. Fukushima, “Neocognitron,” Scholaredia, vol. 2, no. 1, p. 1717, 2007,
+    doi: 10.4249/scholaredia.1717.
+
+
+    [17] D. Svozil, V. Kasmanka, and J. Pischical, “Introduction to multi-layer feed-forward
+    neural networks,” Chemom. Intell. Lab. Syst., vol. 39, no. 1, p. 43–66, Nov. 1997,
+    doi: 10.1016/S1367-5439(97)00061-4.
+
+
+    [18] M. Kecek, “CNN with pretrained word2vec,” Oct. 27, 2016. Available: http://arxiv.org/abs/1610.08433
+    with-pretrained-word2vec-weights.
+
+
+    [19] S. Kim, S. Soojman, and A. Wojciechowski, “Multi-Channel Convolutional Neural
+    Network for Feature Extraction of EEG Signals,” Sensors, vol. 18, no. 10, 3435,
+    2018, doi: 10.3390/s18103435
+
+
+    [20] A. Poernomo and D-K. Kang, “Dropout and CrossDropout for deep convolutional
+    neural networks,” Neural Net., vol. 104, p. 60–67, Aug. 2018, doi: 10.1016/j.neu.2018.08.016.
+
+
+    [21] S. Hinton, A. Osindskii, I. Sutskever, and R. Salakhdinov, “Dropout: a way
+    to prevent neural networks from overfitting,” J. Mach. Learn. Res., vol. 15, no.
+    1, p. 1929–1958, 2014.
+
+
+    [22] M. Jaderberg, A. Vedaldi, and A. Zisserman, “Speeding up convolutional neural
+    networks with experiments,” in Proceedings of the British Machine Vision Conference,
+    2014, p. 1–8.
+
+
+    [23] M. Hughes, I. Li, S. Kotolulas, and T. Suzumura, “Medical classification
+    using convolutional neural networks,” Stud Health, vol. 27, p. 45–50, 2017.
+
+
+    [24] F-F. Li, A. Karpathy, and J. Johnson, “Convolutional neural networks for
+    visual recognition,” 2015.'
+  merge: -1
+  img_proc: true
