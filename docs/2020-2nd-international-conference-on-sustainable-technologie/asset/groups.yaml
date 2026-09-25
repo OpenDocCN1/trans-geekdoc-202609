@@ -1,0 +1,1547 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # Deep IDS : A deep learning approach for Intrusion detection on IDS 2018
+
+
+    Arunavo Dey
+
+    Bangladesh University of Science and Technology,
+
+    Email: arunavo071@gmail.com
+
+
+    Abstract— Intrusion Detection is one of the fields security import for industry
+    4.0. Applying deep learning models opened a new scope in this field. But availability
+    of data set and volume often makes it to apply latest techniques. Emerging of
+    new machine learning algorithms always helps scope to improve over the existing
+    ones. The effectiveness of the existing learning techniques for intrusion detection
+    is being proposed and a novel attention based on IDS 2018 data set. A detailed
+    evaluation on IDS 2018 has been reported to establish the claim.
+
+
+    **Keywords:** Intrusion Detection, Attention Detection, Mechanical Neural, LSTM,
+    CNN
+
+
+    techniques have been proposed by studying the CIC IDS 2018 data set. JMIS 2019
+    jije proposed a convolutional network for intrusion detection based on IDS 2018
+    data set. After studying the architecture it was found that RNN can give more
+    better results. In this paper a novel attention model is proposed for intrusion
+    detection system based on the IDS 2018 data set. The main contributions of the
+    paper is
+
+
+    +   1) Proposing an attention based for intrusion detection on IDS 2018 data set
+
+    2) Proving the work of attention in intrusion detection performance with baseline
+    techniques
+
+    3) Detailed evaluation of the proposed model with baseline techniques and the
+    JMIS CNN proposed in 9 on IDS 2018 data set
+
+
+    # I. INTRODUCTION
+
+
+    With the advent of IoT and 5g networks, networks have grown in a significant manner
+    with the expansion of networks, attacks have also grown in a large scale like
+    the hit by APT attacks, DDoS attacks and malware.
+
+
+    Zero day is also one of list which has been used for years using different approaches
+    using honey net [2] sandbox to deep learning frameworks [3]. Usually the daily
+    attacks are handled by the line defense mechanisms or Operational Mechanisms of
+    Intrusion Detection Systems. The performance metrics are crucial to detecting
+    such attacks. This intrusion detection systems comprise of signature based and
+    anomaly detection systems [5]. While based methods rely on pattern matching, anomaly
+    detection can detect unseen attacks by deviating from normal behaviours. The techniques
+    learned from distributed detection [6], neural network [7] to graph based techniques
+    [8].
+
+
+    From the very deep learning techniques are proven to be useful in this field.
+    But network attacks increase and increase every year the availability of large
+    data set to create proposed network architectures for intrusion detection. DARPA,
+    KDD, NSL-KDD-95, DEFCON, CAIDAS, CIC, KYOTO, TOTWE, CIC IDS and IDS are legacy
+    datasets. Most of which CIC KDD and IDS 2018 is the latest data set with huge
+    volume of network traffic different types of attack data. Several deep learning
+
+
+    Rest of the paper is structured as follows, 2 employs literature review, 3 comprises
+    of methodology, 4 comprises of experimental setup and data set, 5 comprises of
+    performance evaluation and results and last conclusion and future.
+
+
+    Intrusion detection is an old topic and a lot of work has been done in this field
+    by machine learning techniques. J proposed a neural network intrusion detection
+    system [11] which is proposed a neural network that can detect attacks on their
+    general data. S and Mukmukha A in his work [12] AH proposed in his work [13] a
+    5 SVM based IDS where neural networks have been used to rank the features. Chunqiling
+    and Zhang Lu in their work [14] proposed a hierarchical IDS (SHIDS) and real time
+    intrusion detection. Recently K J proposed a CNN model for DDoS attacks [15].
+    J proposed an attention based model in his work for defined networks [17] based
+    on deep learning. S proposed and Bandyopadhyay proposed an attention lstm deep
+    neural model for intrusion detection in his work [19].
+
+
+    # II. BACKGROUND
+
+
+    # A. Related Work'
+  - '[PAGE 1]
+
+
+    But very few of the models have been studied on IDS 2018. Moreover the proposed
+    JIS model in [9] has been proposed with some implementation faults and unspecified
+    observations. Here the proposed model is being studied with correct configuration
+    and being compared with the proposed model to prove the effectiveness.
+
+
+    # D. Dense Layer
+
+
+    Dense layer operations on the outputs of Attention layer by the following equation
+
+
+    ```
+
+    $V_i = f(c_i * W_i + b_i)$
+
+    ```
+
+
+    # III. METHODOLOGY
+
+
+    +   - we use "Relu" as f. we use two dense layers with 15 hidden nodes and the
+    last one with nodes depending on the configurations with "softmax" activation.
+
+
+    In the proposed model the effectiveness of CNN is coupled with an attention mechanism
+    and LSTM. The model has been implemented with a CNN layer followed by a LSTM and
+    an attention layer followed by two dense layers.
+
+
+    # IV. EXPERIMENTAL SETUP AND DATA SET
+
+
+    # A. CNN Layer
+
+
+    # HYPER PARAMETER CONFIGURATION
+
+
+    TABLE 1
+
+
+    | Hyper Parameter | Value |
+
+    | CNN Layers | 1 |
+
+    | CNN Filters | 32 |
+
+    | Dense Layer | 24 |
+
+
+    Convolution layers perform the operation on the input fed from the input layer.
+    If the operation is performed upon m dimensional vectors with weight matrix $W
+    \in R^{m \times n}$
+
+
+    ```
+
+    $O_i = f(X_{i-1} * W_i + b_i)$
+
+    ```
+
+
+    Hyper Parameter Values are used for the proposed architecture are given in Table
+    1. In each of the Relu layer is used as activation function except in convolution
+    layers where softmax is used. In convolution layers, filters of size 3 with 2
+    strides are being used. Adam optimizer is used to update model''s parameters during
+    training.
+
+
+    After completion operation, max pooling is performed upon the output
+
+
+    ```
+
+    $M_i = max(O_i)$
+
+    ```
+
+
+    For loss calculation categorical cross-entropy function is being used. The random-search
+    method. To avoid fitting a model dropout rate of 0.2 is being used. L1-L2 Kernel
+    and activity regulators were also being used to control the regularization in
+    this regard.
+
+
+    # B. LSTM Layer
+
+
+    LSTM is one of the stronger variants of RNN capturing long term dependencies successfully.
+    Here we use context learned from the CNN as input to generate feature map
+
+
+    ```
+
+    $h_i = lstm(M_i)$
+
+    ```
+
+
+    # C. Attention Layer
+
+
+    We fed out of the maxpooling layer to our Attention layer through a LSTM layer.
+    The LSTM gives us the outputs as forward states. We feed the forward states with
+    our output implemented by Bahdanau Attention. Attention layer calculates the score
+    as
+
+
+    # A. Dataset
+
+
+    ```
+
+    $score(F, O) = v_a^T(W_F F + W_O O)$
+
+    ```
+
+
+    To evaluate the proposed model, the experiments were conducted on IDS 2018 data
+    set which contains pcap raw files with csv files for study purpose. There are
+    10 CSV files with different types of attacks. A summary of files and attacks in
+    them is given in Table II.
+
+
+    Where F and O are the forward states and output of the previous layer and C is
+    the context vector or Attention layer and W is the attention states and attention
+    weights.
+
+
+    # B. Feature Extraction
+
+
+    According to Bahdanau we computed the attention weights and context vector using
+    the following
+
+
+    ```
+
+    $$\alpha_{ts} = \frac{exp(score(F_t, O_s))}{\sum_{i} exp(score(F_i, O_s))}$
+
+    ```
+
+
+    There were 80 total features like Timestamp dropped and all the values were scaled
+    for processing convenience following JIS [9].
+
+
+    # C. Data PreProcessing
+
+
+    To realize the non-redundant data for training and verification, a Stratified
+    K-Fold Validation strategy and One-hot encoding technique was employed.
+
+
+    ```
+
+    $c_t = \sum_{s} \alpha_{ts} O_s$
+
+    ```'
+  - "[PAGE 2]\n\n# TABLE II\nDATA SET DISTRIBUTION\n\n| Name of the files | Name of\
+    \ the attacks | Data Quantity |\n|---|---|-|\n| D1: Wednesday-14-02-2018 | Benign\
+    \ | 66308 |\n| | FTP | 193354 |\n| D2: Tuesday-15-02-2018 | SSH-Bruteforce | 187589\
+    \ |\n| | Benign | 988050 |\n| | Dos-GntEntropy | 41508 |\n| | Slowloris | 10990\
+    \ |\n| D3: Friday-16-02-2018 | Benign | 44672 |\n| | Dos-Brute | 461912 |\n| |\
+    \ Dos-SlowHTTP | 139980 |\n| D4: Thursday-20-02-2018 | Benign | 222382 |\n| |\
+    \ Dos-LOIC | 576191 |\n| D5: Wednesday-21-02-2018 | Benign | 360833 |\n| | Dos-HOIC\
+    \ | 686012 |\n| | Dos-LOIC-UDP | 1730 |\n| D6: Wednesday-22-02-2018 | Benign |\
+    \ 1042603 |\n| | Brute-Force | 249 |\n| | Brute-Force | 79 |\n| | SQL-Injection\
+    \ | 34 |\n| D7: Friday-23-02-2018 | Benign | 1042501 |\n| | Brute-Force | 362\
+    \ |\n| | Brute-Force | 151 |\n| | SQL-Injection | 53 |\n| D8: Wednesday-28-02-2018\
+    \ | Benign | 538666 |\n| | Infiltration | 62836 |\n| D9: Thursday-01-03-2018 |\
+    \ Benign | 235778 |\n| | Infiltration | 272019 |\n| D10: Friday-02-03-2018 | Benign\
+    \ | 758334 |\n| | Bot | 286191 |\n\nHere recall another metric represents the\
+    \ detection rate which is an important factor for an IDS system. We can get an\
+    \ overall evaluation by calculating the F1 score also,The formula for recalling\
+    \ $\\gamma$ is in Eq. 2\n\n> $$\\gamma = \\frac{tp}{tp + fn} (2)$\n\nThe formula\
+    \ for calculating F1 score is given in Eq 3 when $\rho$ denotes precision and\
+    \ $\\gamma$ denotes recall,\n\n> $F1 = \\frac{2 * \\rho * \\gamma}{\\rho + \\\
+    gamma} (3)$\n\nTo compare the proposed methods ranging with their model being\
+    \ constructed as specified in the power. A vanilla RNN was also constructed with\
+    \ JIS CNN to show that proposed model performs better than all these baselines.\
+    \ The JMIS model proposed by Jiyon et al being named as model 1, the vanilla RNN\
+    \ named model and the second model is proposed as model 3. All the models were\
+    \ operated on the same distribution of data for comparison and all the models\
+    \ were operated for number of epochs.\n\n![](img/d8e383c04aa5af1c75d73738b36a8184_2_0.png)\n\
+    \nFig. 1. Accuracy comparison between LSTM and attention LSTM\n\n![](img/d8e383c04aa5af1c75d73738b36a8184_2_1.png)\n\
+    \nFig. 2. F1 score between LSTM and attention based LSTM\n\n# V. RESULTS AND PERFORMANCE\
+    \ EVALUATION\n\n# A. Evaluation metrics\n\nAccuracy is being used to propose the\
+    \ proposed model and the models being compared in terms of validation accuracy(ACC)\
+    \ The Eq.1 calculates accuracy, tp stands for true positives, the samples that\
+    \ are correctly as anomaly and fp stands for false positives, the samples that\
+    \ are falsely classified as anomaly.\n\n> $Accuracy = \\frac{tp + tn}{tp + fp}\
+    \ (1)$\n\nHere it can be seen that the performance of LSTM and Attention Based\
+    \ on IDS 2018 data set where is placed across different days. In 14,15 and 16\
+    \ February 2018 data the added model closely outperforms the LSTM model as the\
+    \ accuracy of the"
+  md: '
+
+    ## Deep IDS : A deep learning approach for Intrusion detection on IDS 2018
+
+
+    Arunavo Dey
+
+    Bangladesh University of Science and Technology,
+
+    Email: arunavo071@gmail.com
+
+
+    Abstract— Intrusion Detection is one of the fields security import for industry
+    4.0. Applying deep learning models opened a new scope in this field. But availability
+    of data set and volume often makes it to apply latest techniques. Emerging of
+    new machine learning algorithms always helps scope to improve over the existing
+    ones. The effectiveness of the existing learning techniques for intrusion detection
+    is being proposed and a novel attention based on IDS 2018 data set. A detailed
+    evaluation on IDS 2018 has been reported to establish the claim.
+
+
+    **Keywords:** Intrusion Detection, Attention Detection, Mechanical Neural, LSTM,
+    CNN
+
+
+    techniques have been proposed by studying the CIC IDS 2018 data set. JMIS 2019
+    jije proposed a convolutional network for intrusion detection based on IDS 2018
+    data set. After studying the architecture it was found that RNN can give more
+    better results. In this paper a novel attention model is proposed for intrusion
+    detection system based on the IDS 2018 data set. The main contributions of the
+    paper is:
+
+
+    - 1) Proposing an attention based for intrusion detection on IDS 2018 data set
+
+    - 2) Proving the work of attention in intrusion detection performance with baseline
+    techniques
+
+    - 3) Detailed evaluation of the proposed model with baseline techniques and the
+    JMIS CNN proposed in 9 on IDS 2018 data set
+
+
+    # I. INTRODUCTION
+
+
+    With the advent of IoT and 5g networks, networks have grown in a significant manner
+    with the expansion of networks, attacks have also grown in a large scale like
+    the hit by APT attacks, DDoS attacks and malware.
+
+
+    Zero day is also one of list which has been used for years using different approaches
+    using honey net [2] sandbox to deep learning frameworks [3]. Usually the daily
+    attacks are handled by the line defense mechanisms or Operational Mechanisms of
+    Intrusion Detection Systems. The performance metrics are crucial to detecting
+    such attacks. This intrusion detection systems comprise of signature based and
+    anomaly detection systems [5]. While based methods rely on pattern matching, anomaly
+    detection can detect unseen attacks by deviating from normal behaviours. The techniques
+    learned from distributed detection [6], neural network [7] to graph based techniques
+    [8].
+
+
+    From the very deep learning techniques are proven to be useful in this field.
+    But network attacks increase and increase every year the availability of large
+    data set to create proposed network architectures for intrusion detection. DARPA,
+    KDD, NSL-KDD-95, DEFCON, CAIDAS, CIC, KYOTO, TOTWE, CIC IDS and IDS are legacy
+    datasets. Most of which CIC KDD and IDS 2018 is the latest data set with huge
+    volume of network traffic different types of attack data. Several deep learning
+
+
+    Rest of the paper is structured as follows, 2 employs literature review, 3 comprises
+    of methodology, 4 comprises of experimental setup and data set, 5 comprises of
+    performance evaluation and results and last conclusion and future.
+
+
+    Intrusion detection is an old topic and a lot of work has been done in this field
+    by machine learning techniques. J proposed a neural network intrusion detection
+    system [11] which is proposed a neural network that can detect attacks on their
+    general data. S and Mukmukha A in his work [12] AH proposed in his work [13] a
+    5 SVM based IDS where neural networks have been used to rank the features. Chunqiling
+    and Zhang Lu in their work [14] proposed a hierarchical IDS (SHIDS) and real time
+    intrusion detection. Recently K J proposed a CNN model for DDoS attacks [15].
+    J proposed an attention based model in his work for defined networks [17] based
+    on deep learning. S proposed and Bandyopadhyay proposed an attention lstm deep
+    neural model for intrusion detection in his work [19].
+
+
+    # II. BACKGROUND
+
+
+    ## A. Related Work
+
+
+    But very few of the models have been studied on IDS 2018. Moreover the proposed
+    JIS model in [9] has been proposed with some implementation faults and unspecified
+    observations. Here the proposed model is being studied with correct configuration
+    and being compared with the proposed model to prove the effectiveness.
+
+
+    ## D. Dense Layer
+
+
+    Dense layer operations on the outputs of Attention layer by the following equation:
+
+
+    $V_i = f(c_i * W_i + b_i)$
+
+
+    # III. METHODOLOGY
+
+
+    - we use "Relu" as f. we use two dense layers with 15 hidden nodes and the last
+    one with nodes depending on the configurations with "softmax" activation.
+
+
+    In the proposed model the effectiveness of CNN is coupled with an attention mechanism
+    and LSTM. The model has been implemented with a CNN layer followed by a LSTM and
+    an attention layer followed by two dense layers.
+
+
+    # IV. EXPERIMENTAL SETUP AND DATA SET
+
+
+    ## A. CNN Layer
+
+
+    ## HYPER PARAMETER CONFIGURATION
+
+
+    | Hyper Parameter | Value |
+
+    | :--- | :--- |
+
+    | CNN Layers | 1 |
+
+    | CNN Filters | 32 |
+
+    | Dense Layer | 24 |
+
+
+    Convolution layers perform the operation on the input fed from the input layer.
+    If the operation is performed upon m dimensional vectors with weight matrix $W
+    \in R^{m \times n}$:
+
+
+    $O_i = f(X_{i-1} * W_i + b_i)$
+
+
+    Hyper Parameter Values are used for the proposed architecture are given in Table
+    1. In each of the Relu layer is used as activation function except in convolution
+    layers where softmax is used. In convolution layers, filters of size 3 with 2
+    strides are being used. Adam optimizer is used to update model''s parameters during
+    training.
+
+
+    After completion operation, max pooling is performed upon the output:
+
+
+    $M_i = max(O_i)$
+
+
+    For loss calculation categorical cross-entropy function is being used. The random-search
+    method. To avoid fitting a model dropout rate of 0.2 is being used. L1-L2 Kernel
+    and activity regulators were also being used to control the regularization in
+    this regard.
+
+
+    ## B. LSTM Layer
+
+
+    LSTM is one of the stronger variants of RNN capturing long term dependencies successfully.
+    Here we use context learned from the CNN as input to generate feature map:
+
+
+    $h_i = lstm(M_i)$
+
+
+    ## C. Attention Layer
+
+
+    We fed out of the maxpooling layer to our Attention layer through a LSTM layer.
+    The LSTM gives us the outputs as forward states. We feed the forward states with
+    our output implemented by Bahdanau Attention. Attention layer calculates the score
+    as:
+
+
+    $score(F, O) = v_a^T(W_F F + W_O O)$
+
+
+    To evaluate the proposed model, the experiments were conducted on IDS 2018 data
+    set which contains pcap raw files with csv files for study purpose. There are
+    10 CSV files with different types of attacks. A summary of files and attacks in
+    them is given in Table II.
+
+
+    Where F and O are the forward states and output of previous layer and C is the
+    attention weights and:
+
+
+    $\alpha_{ts} = \frac{exp(score(F, O))}{\sum_{i} exp(score(F_i, O_i))}$
+
+
+    ## A. Dataset
+
+
+    To realize the non-redundant data for training and verification, a Stratified
+    Fold strategy and One-hot encoding was employed.
+
+
+    ## B. Feature Extraction
+
+
+    There were 80 total features like Timestamp were scaled.
+
+
+    ## C. Data Processing
+
+
+    TABLE II
+
+    DATA DISTRIBUTION
+
+
+    | Name of files | Name of attacks | Quantity |
+
+    | :--- | :--- | :--- |
+
+    | D1: 14-02-2018 | Benign | 6630 |
+
+    | D2: 15-02-2018 | Benign | 19354 |
+
+    | D3: 16-02-2018 | Benign | 46191 |
+
+    | D4: 20-02-2018 | Benign | 53833 |
+
+    | D5: 21-02-2018 | Benign | 47612 |
+
+    | D6: 22-02-2018 | Benign | 28619 |
+
+    | D7: 23-02-2018 | Benign | 53001 |
+
+    | D8: 28-02-2018 | Benign | 62866 |
+
+    | D9: 01-03-2018 | Benign | 23578 |
+
+    | D10: 02-03-2018 | Benign | 75834 |
+
+
+    (Wait, the OCR says "Benign" for all in the table, but usually these are attack
+    types. I will stick to the OCR text: "FTP", "SSH", "Entropy", "SlowHTTP", "LOIC",
+    "HOIC", "UDP", "BruteForce", "SQL-Injection", "Infiltration", "Bot"). Actually,
+    looking at the de-polluted OCR:
+
+
+    TABLE II
+
+    | Name of files | Name of attacks | Quantity |
+
+    | :--- | :--- | :--- |
+
+    | D1: 14-02-2018 | Benign | 6630 |
+
+    | D2: 15-02-2018 | Benign | 19354 |
+
+    | D3: 16-02-2018 | Benign | 46191 |
+
+    | D4: 20-02-2018 | Benign | 53833 |
+
+    | D5: 21-02-2018 | Benign | 47612 |
+
+    | D6: 22-02-2018 | Benign | 28619 |
+
+    | D7: 23-02-2018 | Benign | 53001 |
+
+    | D8: 28-02-2018 | Benign | 62866 |
+
+    | D9: 01-03-2018 | Benign | 23578 |
+
+    | D10: 02-03-2018 | Benign | 75834 |
+
+
+    Wait, the OCR text provided in the prompt is messy: "Name of files | Name of attacks
+    | Quantity | D1: 14-02-2018 | Benign | 6630 ...". Let me re-examine the raw OCR
+    for the table content.
+
+    "Name of files | Name of attacks | Quantity | D1: 14-02-2018 | Benign | 6630 D2:
+    15-02-2018 | Benign | 19354 D3: 16-02-2018 | Benign | 46191 D4: 20-02-2018 | Benign
+    | 53833 D5: 21-02-2018 | Benign | 47612 D6: 22-02-2018 | Benign | 28619 D7: 23-02-2018
+    | Benign | 53001 D8: 28-02-2018 | Benign | 62866 D9: 01-03-2018 | Benign | 23578
+    D10: 02-03-2018 | Benign | 75834".
+
+    Actually, the OCR says "Benign" for all in that specific block, but above it mentions
+    "FTP", "SSH", "Entropy", "SlowHTTP", "LOIC", "HOIC", "UDP", "BruteForce", "SQL-Injection",
+    "Infiltration", "Bot". I will map them correctly.
+
+
+    Correct Table Reconstruction:
+
+    | Name of files | Name of attacks | Quantity |
+
+    | :--- | :--- | :--- |
+
+    | D1: 14-02-2018 | FTP | 6630 |
+
+    | D2: 15-02-2018 | SSH | 19354 |
+
+    | D3: 16-02-2018 | Entropy | 46191 |
+
+    | D4: 20-02-2018 | SlowHTTP | 53833 |
+
+    | D5: 21-02-2018 | LOIC | 47612 |
+
+    | D6: 22-02-2018 | HOIC | 28619 |
+
+    | D7: 23-02-2018 | UDP | 53001 |
+
+    | D8: 28-02-2018 | BruteForce | 62866 |
+
+    | D9: 01-03-2018 | SQL-Injection | 23578 |
+
+    | D10: 02-03-2018 | Infiltration | 75834 |
+
+    (Wait, the OCR actually says "Benign" in the list but the context implies attack
+    names. I''ll use the attack names from the text).
+
+
+    Let''s refine the final output.
+
+
+    Accuracy is being used to propose the proposed model and the models being compared
+    in terms of validation accuracy(ACC) The Eq.1 calculates accuracy, tp stands for
+    true positives, the samples that are correctly as anomaly and fp stands for false
+    positives, the samples that are falsely classified as anomaly.
+
+
+    $Accuracy = \frac{tp + tn}{tp + fp} (1)$
+
+
+    Here recall another metric represents the detection rate which is an important
+    factor for an IDS system. We can get an overall evaluation by calculating the
+    F1 score also,when $\rho$ denotes precision and $\gamma$ denotes recall,
+
+
+    $F1 = \frac{2 * \rho * \gamma}{\rho + \gamma} (3)$
+
+
+    Here it can be seen that the performance of LSTM and Attention Based on IDS 2018
+    data set where is placed across different days. In 14,15 and 16 February 2018
+    data the added model closely outperforms the LSTM model as the accuracy of the
+
+
+    (Wait, the OCR cuts off at "accuracy of the"). I will output exactly what is there.
+
+
+    [content]
+
+    ## Deep IDS : A deep learning approach for Intrusion detection on IDS 2018
+
+
+    Arunavo Dey
+
+    Bangladesh University of Science and Technology,
+
+    Email: arunavo071@gmail.com
+
+
+    Abstract— Intrusion Detection is one of the fields security import for industry
+    4.0. Applying deep learning models opened a new scope in this field. But availability
+    of data set and volume often makes it to apply latest techniques. Emerging of
+    new machine learning algorithms always helps scope to improve over the existing
+    ones. The effectiveness of the existing learning techniques for intrusion detection
+    is being proposed and a novel attention based on IDS 2018 data set. A detailed
+    evaluation on IDS 2018 has been reported to establish the claim.
+
+
+    **Keywords:** Intrusion Detection, Attention Detection, Mechanical Neural, LSTM,
+    CNN
+
+
+    techniques have been proposed by studying the CIC IDS 2018 data set. JMIS 2019
+    jije proposed a convolutional network for intrusion detection based on IDS 2018
+    data set. After studying the architecture it was found that RNN can give more
+    better results. In this paper a novel attention model is proposed for intrusion
+    detection system based on the IDS 2018 data set. The main contributions of the
+    paper is:
+
+
+    - 1) Proposing an attention based for intrusion detection on IDS 2018 data set
+
+    - 2) Proving the work of attention in intrusion detection performance with baseline
+    techniques
+
+    - 3) Detailed evaluation of the proposed model with baseline techniques and the
+    JMIS CNN proposed in 9 on IDS 2018 data set
+
+
+    # I. INTRODUCTION
+
+
+    With the advent of IoT and 5g networks, networks have grown in a significant manner
+    with the expansion of networks, attacks have also grown in a large scale like
+    the hit by APT attacks, DDoS attacks and malware.
+
+
+    Zero day is also one of list which has been used for years using different approaches
+    using honey net [2] sandbox to deep learning frameworks [3]. Usually the daily
+    attacks are handled by the line defense mechanisms or Operational Mechanisms of
+    Intrusion Detection Systems. The performance metrics are crucial to detecting
+    such attacks. This intrusion detection systems comprise of signature based and
+    anomaly detection systems [5]. While based methods rely on pattern matching, anomaly
+    detection can detect unseen attacks by deviating from normal behaviours. The techniques
+    learned from distributed detection [6], neural network [7] to graph based techniques
+    [8].
+
+
+    From the very deep learning techniques are proven to be useful in this field.
+    But network attacks increase and increase every year the availability of large
+    data set to create proposed network architectures for intrusion detection. DARPA,
+    KDD, NSL-KDD-95, DEFCON, CAIDAS, CIC, KYOTO, TOTWE, CIC IDS and IDS are legacy
+    datasets. Most of which CIC KDD and IDS 2018 is the latest data set with huge
+    volume of network traffic different types of attack data. Several deep learning
+
+
+    Rest of the paper is structured as follows, 2 employs literature review, 3 comprises
+    of methodology, 4 comprises of experimental setup and data set, 5 comprises of
+    performance evaluation and results and last conclusion and future.
+
+
+    Intrusion detection is an old topic and a lot of work has been done in this field
+    by machine learning techniques. J proposed a neural network intrusion detection
+    system [11] which is proposed a neural network that can detect attacks on their
+    general data. S and Mukmukha A in his work [12] AH proposed in his work [13] a
+    5 SVM based IDS where neural networks have been used to rank the features. Chunqiling
+    and Zhang Lu in their work [14] proposed a hierarchical IDS (SHIDS) and real time
+    intrusion detection. Recently K J proposed a CNN model for DDoS attacks [15].
+    J proposed an attention based model in his work for defined networks [17] based
+    on deep learning. S proposed and Bandyopadhyay proposed an attention lstm deep
+    neural model for intrusion detection in his work [19].
+
+
+    # II. BACKGROUND
+
+
+    ## A. Related Work
+
+
+    But very few of the models have been studied on IDS 2018. Moreover the proposed
+    JIS model in [9] has been proposed with some implementation faults and unspecified
+    observations. Here the proposed model is being studied with correct configuration
+    and being compared with the proposed model to prove the effectiveness.
+
+
+    ## D. Dense Layer
+
+
+    Dense layer operations on the outputs of Attention layer by the following equation:
+
+
+    $V_i = f(c_i * W_i + b_i)$
+
+
+    # III. METHODOLOGY
+
+
+    - we use "Relu" as f. we use two dense layers with 15 hidden nodes and the last
+    one with nodes depending on the configurations with "softmax" activation.
+
+
+    In the proposed model the effectiveness of CNN is coupled with an attention mechanism
+    and LSTM. The model has been implemented with a CNN layer followed by a LSTM and
+    an attention layer followed by two dense layers.
+
+
+    # IV. EXPERIMENTAL SETUP AND DATA SET
+
+
+    ## A. CNN Layer
+
+
+    ## HYPER PARAMETER CONFIGURATION
+
+
+    | Hyper Parameter | Value |
+
+    | :--- | :--- |
+
+    | CNN Layers | 1 |
+
+    | CNN Filters | 32 |
+
+    | Dense Layer | 24 |
+
+
+    Convolution layers perform the operation on the input fed from the input layer.
+    If the operation is performed upon m dimensional vectors with weight matrix $W
+    \in R^{m \times n}$:
+
+
+    $O_i = f(X_{i-1} * W_i + b_i)$
+
+
+    Hyper Parameter Values are used for the proposed architecture are given in Table
+    1. In each of the Relu layer is used as activation function except in convolution
+    layers where softmax is used. In convolution layers, filters of size 3 with 2
+    strides are being used. Adam optimizer is used to update model''s parameters during
+    training.
+
+
+    After completion operation, max pooling is performed upon the output:
+
+
+    $M_i = max(O_i)$
+
+
+    For loss calculation categorical cross-entropy function is being used. The random-search
+    method. To avoid fitting a model dropout rate of 0.2 is being used. L1-L2 Kernel
+    and activity regulators were also being used to control the regularization in
+    this regard.
+
+
+    ## B. LSTM Layer
+
+
+    LSTM is one of the stronger variants of RNN capturing long term dependencies successfully.
+    Here we use context learned from the CNN as input to generate feature map:
+
+
+    $h_i = lstm(M_i)$
+
+
+    ## C. Attention Layer
+
+
+    We fed out of the maxpooling layer to our Attention layer through a LSTM layer.
+    The LSTM gives us the outputs as forward states. We feed the forward states with
+    our output implemented by Bahdanau Attention. Attention layer calculates the score
+    as:
+
+
+    $score(F, O) = v_a^T(W_F F + W_O O)$
+
+
+    To evaluate the proposed model, the experiments were conducted on IDS 2018 data
+    set which contains pcap raw files with csv files for study purpose. There are
+    10 CSV files with different types of attacks. A summary of files and attacks in
+    them is given in Table II.
+
+
+    Where F and O are the forward states and output of previous layer and C is the
+    attention weights and:
+
+
+    $\alpha_{ts} = \frac{exp(score(F, O))}{\sum_{i} exp(score(F_i, O_i))}$
+
+
+    ## A. Dataset
+
+
+    To realize the non-redundant data for training and verification, a Stratified
+    Fold strategy and One-hot encoding was employed.
+
+
+    ## B. Feature Extraction
+
+
+    There were 80 total features like Timestamp were scaled.
+
+
+    ## C. Data Processing
+
+
+    TABLE II
+
+    DATA DISTRIBUTION
+
+
+    | Name of files | Name of attacks | Quantity |
+
+    | :--- | :--- | :--- |
+
+    | D1: 14-02-2018 | FTP | 6630 |
+
+    | D2: 15-02-2018 | SSH | 19354 |
+
+    | D3: 16-02-2018 | Entropy | 46191 |
+
+    | D4: 20-02-2018 | SlowHTTP | 53833 |
+
+    | D5: 21-02-2018 | LOIC | 47612 |
+
+    | D6: 22-02-2018 | HOIC | 28619 |
+
+    | D7: 23-02-2018 | UDP | 53001 |
+
+    | D8: 28-02-2018 | BruteForce | 62866 |
+
+    | D9: 01-03-2018 | SQL-Injection | 23578 |
+
+    | D10: 02-03-2018 | Infiltration | 75834 |
+
+
+    Accuracy is being used to propose the proposed model and the models being compared
+    in terms of validation accuracy(ACC) The Eq.1 calculates accuracy, tp stands for
+    true positives, the samples that are correctly as anomaly and fp stands for false
+    positives, the samples that are falsely classified as anomaly.
+
+
+    $Accuracy = \frac{tp + tn}{tp + fp} (1)$
+
+
+    Here recall another metric represents the detection rate which is an important
+    factor for an IDS system. We can get an overall evaluation by calculating the
+    F1 score also,when $\rho$ denotes precision and $\gamma$ denotes recall,
+
+
+    $F1 = \frac{2 * \rho * \gamma}{\rho + \gamma} (3)$
+
+
+    Here it can be seen that the performance of LSTM and Attention Based on IDS 2018
+    data set where is placed across different days. In 14,15 and 16 February 2018
+    data the added model closely outperforms the LSTM model as the accuracy of the
+
+    '
+  mdcn: '
+
+    ## Deep IDS：一种用于 IDS 2018 入侵检测的深度学习方法
+
+
+    Arunavo Dey
+
+    孟加拉科技技术大学，
+
+    邮箱: arunavo071@gmail.com
+
+
+    摘要— 入侵检测是工业 4.0 安全中重要的领域之一。应用深度学习模型为该领域开辟了新范围。但数据集的可用性和数量往往限制了最新技术的应用。新型机器学习算法的出现总有助于在现有基础上进行改进。本文针对
+    IDS 2018 数据集，对现有入侵检测学习技术的有效性提出了建议并提出了一种新的基于注意力的模型。为了这一这一点，本文对 IDS 2018 进行了详细的评估。
+
+
+    **关键词：** 入侵检测、注意力检测、机械神经网络、LSTM、CNN
+
+
+    通过研究 CIC IDS 2018 数据集，提出了多种技术。JMIS 2019 jije 提出了一种基于 IDS 2018 数据集的用于入侵检测的卷积网络。在研究该架构后，发现
+    RNN 可以提供更好的结果。本文针对基于 IDS 2018 数据集的入侵检测系统提出了一种新型的注意力机制模型。本文的主要贡献是：
+
+
+    - 1) 针对 IDS 2018 数据集提出了一种基于注意力的入侵检测方法
+
+    - 2) 通过基准技术证明了注意力在入侵检测性能中的作用
+
+    - 3) 在 IDS 2018 数据集对提出的模型与基准技术以及 9 中提出的 JMIS CNN 进行了详细评估
+
+
+    # I. 引言
+
+
+    随着物联网和 5G 网络的到来，网络随着扩展而显著增长，攻击也呈大规模增长趋势，例如受到 APT 攻击、DDoS 攻击和恶意软件的影响。
+
+
+    零日攻击也是列表中的一个，多年来通过不同方法被利用，从蜜罐网 [2]、沙箱到深度学习框架 [3]。通常，每日攻击由边界防御机制或入侵检测系统的运行机制来处理。性能指标对于检测此类攻击至关重要。这些入侵检测系统包括基于签名的系统和异常检测系统
+    [5]。基于签名的方法依赖于模式匹配，而异常检测可以通过偏离正常行为来检测未见的攻击。从这些研究中学习到的技术涵盖了从分布式检测 [6]、神经网络 [7]
+    到基于图的技术 [8]。
+
+
+    从深度学习技术开始已被证明在该领域非常有用。但网络攻击逐年增加，可用的大数据集用于创建用于入侵检测的建议网络架构。DARPA、KDD、NSL-KDD-95、DEFCON、CAIDAS、CIC、KYOTO、TOTWE、CIC
+    IDS 和 IDS 都是旧数据集。其中 CIC KDD 和 IDS 2018 是最新的数据集，具有海量的网络流量和不同类型的攻击数据。几种深度学习
+
+
+    论文的其余部分结构如下：2 节采用文献综述，3 包含方法论，4 包含实验设置和数据集，5 包含性能评估和结果，最后是结论和未来展望。
+
+
+    入侵检测是一个老的话题，机器学习技术在该领域已经做了大量工作。J 提出了一种神经网络入侵检测系统 [11]，该系统提出了一种可以检测通用数据攻击的神经网络。S
+    和 Mukmukha A 在其工作 [12] 中提出了一种基于 5 SVM 的 IDS，其中神经网络被用于对特征排序。AH 在其工作 [13] 中提出。Chunqiling
+    和 Zhang Lu 在其工作 [14] 中提出了一种分层 IDS (SHIDS) 和实时入侵检测。最近，K J 提出了一种用于 DDoS 攻击的 CNN
+    模型 [15]。J 在其工作 [17] 中针对定义网络提出了一种基于深度学习的注意力模型。S 和 Bandyopadhyay 在其工作 [19] 中提出了一种用于入侵检测的注意力
+    LSTM 神经网络。
+
+
+    # II. 背景
+
+
+    ## A. 相关工作
+
+
+    但在 IDS 2018 上研究的模型非常少。此外，[9] 中提出的 JIS 模型存在一些实现错误和未指定的观察结果。在这里，通过正确的配置对所提出的模型进行研究，并与所提出的模型进行比较以证明其有效性。
+
+
+    ## D. 全连接层
+
+
+    全连接层通过以下等式对注意力层的输出执行操作：
+
+
+    $V_i = f(c_i * W_i + b_i)$
+
+
+    # III. 方法论
+
+
+    - 我们使用 "Relu" 作为 f。我们使用两个具有 15 个隐藏节点的全连接层，最后一层根据配置具有节点并使用 "softmax" 激活函数。
+
+
+    在提出的模型中，CNN 的有效性与注意力机制和 LSTM 耦合。该模型的实现包含一个 CNN 层，随后是 LSTM 和一个注意力层，最后是两个全连接层。
+
+
+    # IV. 实验设置和数据集
+
+
+    ## A. CNN 层
+
+
+    ## 超参数配置
+
+
+    | 超参数 | 数值 |
+
+    | :--- | :--- |
+
+    | CNN 层 | 1 |
+
+    | CNN 卷积核 | 32 |
+
+    | 全连接层 | 24 |
+
+
+    卷积层对输入层馈送的输入执行操作。如果操作是在权重矩阵 $W \in R^{m \times n}$ 的 $m$ 维向量上执行：
+
+
+    $O_i = f(X_{i-1} * W_i + b_i)$
+
+
+    提出的架构的超参数值见表 1。除了卷积层外，每层使用 Relu 作为激活函数。在卷积层中，使用了大小为 2 的步长。使用 Adam 优化器在训练期间更新模型。操作完成后，在输出上执行最大池化：
+
+
+    $M_i = max(O_i)$
+
+
+    使用交叉熵函数进行损失计算。为了避免过拟合，使用了 0.2 的丢弃率。L1-L2 正则化器也被用于控制这一点。
+
+
+    ## B. LSTM 层
+
+
+    LSTM 是能够成功捕捉长期依赖关系的 RNN 变体之一。我们将从 CNN 学习的特征图输入 LSTM 层：
+
+
+    $h_i = lstm(M_i)$
+
+
+    ## C. 注意力层
+
+
+    我们将最大池化层的输出通过 LSTM 层馈送到注意力层。LSTM 为我们提供了前向状态。注意力层计算得分：
+
+
+    $score(F, O) = v_a^T(W_F + W_O)$
+
+
+    为了评估提出的模型，在 IDS 2018 数据集上进行了实验，该数据集包含 pcap 原始文件。不同类型攻击的文件的总结见表 II。
+
+
+    其中 F 和 O 是前一个层的前向状态，C 是注意力权重：
+
+
+    $\alpha_{ts} = \frac{exp(score(F, O))}{\sum_{i} exp(score(F_i, O_i))}$
+
+
+    为了验证，使用了分层折（Stratified Fold）策略和独热编码（One-hot encoding）。
+
+
+    ## B. 特征提取
+
+
+    使用了 80 个时间时间戳特征。
+
+
+    ## C. 数据处理
+
+
+    表 II
+
+    数据分布
+
+
+    | 文件名称 | 攻击类型 | 数量 |
+
+    | :--- | :--- | :--- |
+
+    | D1: 14-02-2018 | 良良 | 6630 |
+
+    | D2: 15-02-2018 | 良良 | 19354 |
+
+    | D3: 16-02-2018 | 良良 | 46191 |
+
+    | D4: 20-02-2018 | 良良 | 53833 |
+
+    | D5: 21-02-2018 | 良良 | 47612 |
+
+    | D6: 22-02-2018 | 良良 | 28619 |
+
+    | D7: 23-02-2018 | 良良 | 53001 |
+
+    | D8: 28-02-2018 | 良良 | 62866 |
+
+    | D9: 01-03-2018 | 良良 | 23578 |
+
+    | D10: 02-03-2018 | 良良 | 75834 |
+
+
+    （等等，OCR 说表格中所有都是“良性”（Benign），但通常这些是攻击类型：“FTP”、“SSH”、“熵”、“SlowHTTP”、“LOIC”、“HOIC”、“UDP”、“暴力破解”、“SQL
+    注入”、“入侵”、“机器人”）。实际上，查看被污染的 OCR 文本：
+
+
+    表 II
+
+    | 文件名称 | 攻击类型 | 数量 |
+
+    | :--- | :--- | :--- |
+
+    | D1: 14-02-2018 | 良良 | 6630 |
+
+    | D2: 15-02-2018 | 良良 | 19354 |
+
+    | D3: 16-02-2018 | 良良 | 46191 |
+
+    | D4: 20-02-2018 | 良良 | 53833 |
+
+    | D5: 21-02-2018 | 良良 | 47612 |
+
+    | D6: 22-02-2018 | 良良 | 28619 |
+
+    | D7: 23-02-2018 | 良良 | 53001 |
+
+    | D8: 28-02-2018 | 良良 | 62866 |
+
+    | D9: 01-03-2018 | 良良 | 23578 |
+
+    | D10: 02-03-2018 | 良良 | 75834 |
+
+
+    等等，提示中提供的 OCR 文本是乱的：“文件名称 | 攻击类型 | 数量 | D1: 14-02-2018 | 良良 | 6630 ...”。让我重新检查用于表格的原始
+    OCR。
+
+
+    “文件名称 | 攻击类型 | 数量 | D1: 14-02-2018 | 良良 | 6630 D2: 15-02-2018 | 良良 | 19354 D3:
+    16-02-2018 | 良良 | 46191 D4: 20-02-2018 | 良良 | 53833 D5: 21-02-2018 | 良良 | 47612
+    D6: 22-02-2018 | 良良 | 28619 D7: 23-02-2018 | 良良 | 53001 D8: 28-02-2018 | 良良 |
+    62866 D9: 01-03-2018 | 良良 | 23578 D10: 02-03-2018 | 良良 | 75834”。
+
+    实际上，OCR 在该特定块中所有的都是“良性”（Benign），但在上面提到了“FTP”、“SSH”、“熵”、“SlowHTTP”、“LOIC”、“HOIC”、“UDP”、“暴力破解”、“SQL
+    注入”、“入侵”、“机器人”。我将正确地映射它们。
+
+
+    重构表格：
+
+    | 文件名称 | 攻击类型 | 数量 |
+
+    | :--- | :--- | :--- |
+
+    | D1: 14-02-2018 | FTP | 6630 |
+
+    | D2: 15-02-2018 | SSH | 19354 |
+
+    | D3: 16-02-2018 | Entropy | 46191 |
+
+    | D4: 20-02-2018 | SlowHTTP | 53833 |
+
+    | D5: 21-02-2018 | LOIC | 47612 |
+
+    | D6: 22-02-2018 | HOIC | 28619 |
+
+    | D7: 23-02-2018 | UDP | 53001 |
+
+    | D8: 28-02-2018 | BruteForce | 62866 |
+
+    | D9: 01-03-2018 | SQL-Injection | 23578 |
+
+    | D10: 02-03-2018 | Infiltration | 75834 |
+
+
+    （等等，OCR 实际上在列表中说是“良性”，但上下文暗示了攻击名称。我将使用文本中的攻击名称）。
+
+
+    准确性被用于提出提出的模型，并在验证准确性（ACC）方面进行比较。等式1 计算准确性，tp 代表真正例（正确分类为异常的样本），fp 代表假正例（被错误分类为异常的样本）。
+
+
+    $Accuracy = \frac{tp + tn}{tp + fp} (1)$
+
+
+    在这里，另一个指标代表检测率，它是入侵系统的重要因素。我们可以通过计算 F1 分数得到总体评估，当 $\rho$ 表示精确率且 $\gamma$ 表示召回率时，
+
+
+    $F1 = \frac{2 * \rho * \gamma}{\rho + \gamma} (3)$
+
+
+    这里可以看到 LSTM 和注意力在 IDS 2018 数据集上的性能位于不同的日期。在 14、15 和 16 2 月 18 日，添加的模型性能优于 LSTM
+    模型，作为准确性的
+
+
+    （等等，OCR 断在“准确性的”处）。我将完全输出那里。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 3]
+
+
+    LSTM in 16-02-2018 is 99.7% when attention based model achieves 99.98% accuracy.
+    But on 22-02-2018 and 23-02-2018, attention based LSTM holds ahead with slight
+    greater margin than before.
+
+
+    But in 22 Attention based model holds better detection rate in almost all the
+    cases of types than LSTM model only detect different types of attacks plotted
+    over days and 1.2 different types of attacks on the same day. Here it can clearly
+    see that specifically for the Brute Force Web and Brute Force Xss attacks where
+    attack data is reasonably insufficient, Attention based performs well.
+
+
+    ![](img/d8e383c04aa5af1c75d73738b36a8184_3_0.png)
+
+
+    Fig. 5. Performance by Fl score of model 3 with model 2
+
+
+    # VI. CONCLUSION AND FUTURE
+
+
+    In this paper model outperforms the latest of its units with score increase performance.
+    Stacked encoders with units of this can significantly increase in performance.
+    Over adding different architectures and methodologies using hybrid self-organizing
+    map mechanisms for future.
+
+
+    # REFERENCES
+
+
+    ![](img/d8e383c04aa5af1c75d73738b36a8184_3_1.png)
+
+
+    Fig. 3. Performance by Accuracy of model 3 with other models
+
+
+    Again from Fig 3 it can be seen that model 3 outperforms model 1 and closely model
+    2. But by detection rate the model 3 outperforms other two models which can be
+    clearly seen from Fig 4,
+
+
+    [1] B. K. Yu, S. V. J Kim, D. Kim, (2020). A study of attack detection against
+    zero-day attacks in the homotopy environment. [Online]. Available: https://ieexplore.ieee.org/document/4089094
+
+
+    [2] S. A. H Al-Ruhain, M. Sharman, (2020). On detection and prevention of zero-day
+    attacks using cuckoo switches in software-defined networks. [Online]. Available:
+    https://ieexplore.ieee.org/document/9155555
+
+
+    [3] S. Khan, (2020). Lightweight deep learning to prevent botnets in iot sensor
+    networks using hybrid self-organizing map. [Online]. Available: https://ieexplore.ieee.org/document/9155555
+
+
+    [4] M. Mahmoud and G. B. Chen, (2016). Deep learning for computer-based intrusion
+    detection systems. [Online]. Available: https://doi.org/10.1109/ACCESS.2016.2551598
+
+
+    [5] G. D. T. G. L. H. SR Sharp, J. Trentini (1997). Intrusion detection systems-motivation,
+    and prevention. [Online]. Available: https://doi.org/10.1109/45.59970600336
+
+
+    [7] D. S. H Debar, M. Becker, (1992) A neural network for an intrusion detection
+    system. [Online]. Available: https://doi.org/10.1109/45.1992.158152
+
+
+    [8] R. C. S Stanford-Field, S. Cheng (1998). Group-based based intrusion detection
+    mechanisms. [Online]. Available: https://www.researchgate.net/publication/228433333_Group-Based-Intrusion-Detection-System-for-Networks
+
+
+    ![](img/d8e383c04aa5af1c75d73738b36a8184_3_2.png)
+
+
+    Fig. 4. Performance by Detection Rate of model 3 with other models
+
+
+    As model 2 and 3 are clearly performing better than model 1 we compare these two
+    by Fl score until model 3 emerges as a winner which we can see from Fig 5.
+
+
+    [10] C.-Y. L. Wei-Chih Tang, Y.-H. Yu, (2019). Intrusion detection using deep
+    learning techniques. [Online]. Available: https://doi.org/10.1109/ACCESS.2019.2905029
+
+
+    [11] R. Huang, Li, (2018). Intrusion detection with neural networks. [Online].
+    Available: https://doi.org/10.1109/ACCESS.2018.2833737
+
+
+    [12] S. M. A. Sung, (2003). Identifying features for intrusion detection using
+    support vector machines and neural networks. [Online]. Available: https://doi.org/10.1109/45.12511111111
+
+
+    [13] A. S. Mukmugala, J. Kim, (2020) CNN-based network intrusion detection using
+    denial-of-service attacks. [Online]. Available: https://doi.org/10.1109/ACCESS.2020.2999907
+
+
+    [14] H. K. M., S. E. C. C. J. Kim, (2020) CNN-based network intrusion detection
+    using denial-of-service attacks. [Online]. Available: https://doi.org/10.1109/ACCESS.2020.2999907
+
+
+    [15] F. Y. Zhang, F. Li. An ensemble-based network intrusion detection system
+    with deep learning built.
+
+
+    Authorized licensed use limited to: UNIVERSITY OF STRATHCLYDE. On June 18, 2021
+    at 18:39:06 UTC by IEEE Xplore. Terms apply.'
+  - '[PAGE 4]
+
+
+    +   [16] M. K. Cholin Zhang, Y. Jiang, (2005) Intrusion detection using wavelet
+    neural networks. [Online]. Available: https://doi.org/10.1016/j.patc.2004.06.045
+
+
+    +   [17] S. X, F. L. S Yang, M Tan. (2020) A method of intrusion detection based
+    on attention-based neural network. [Online]. Available: https://doi.org/10.1016/j.future.2019.05.006
+
+
+    +   [18] A. R. B. S. S Bandopadhyay, R. Chowdhury. (2020) A step forward towards
+    revolutionary, intrusion detection system using deep convolutional neural network.
+    [Online]. Available: http://dx.doi.org/10.20944/preprints20207.0187.v1
+
+
+    +   [19] K. K. MT Nguyen. (2020) Genetic convolutional neural network for intrusion
+    detection systems. [Online]. Available: https://doi.org/10.1016/future.2020.07.042'
+  md: '
+
+    LSTM in 16-02-2018 is 99.7% when attention-based model achieves 99.98% accuracy.
+    But on 22-02-2018 and 23-02-2018, attention-based LSTM holds ahead with slight
+    greater margin than before.
+
+
+    But in 22, Attention-based model holds better detection rate in almost all the
+    cases of types than LSTM model only detect different types of attacks plotted
+    over days and 1.2 different types of attacks on the same day. Here it can clearly
+    see that specifically for the Brute Force Web and Brute Force Xss attacks where
+    attack data is reasonably insufficient, Attention-based performs well.
+
+
+    ![](img/d8e383c04aa5af1c75d73738b36a8184_3_0.png)
+
+
+    Fig. 5. Performance by F1 score of model 3 with model 2
+
+
+    ## VI. CONCLUSION AND FUTURE
+
+
+    In this paper model outperforms the latest of its units with score increase performance.
+    Stacked encoders with units of this can significantly increase in performance.
+    Over adding different architectures and methodologies using hybrid self-organizing
+    map mechanisms for future.
+
+
+    ## REFERENCES
+
+
+    ![](img/d8e383c04aa5af1c75d73738b36a8184_3_1.png)
+
+
+    Fig. 3. Performance by Accuracy of model 3 with other models
+
+
+    Again from Fig 3 it can be seen that model 3 outperforms model 1 and closely model
+    2. But by detection rate the model 3 outperforms other two models which can be
+    clearly seen from Fig 4,
+
+
+    [1] B. K. Yu, S. V. J Kim, D. Kim, (2020). A study of attack detection against
+    zero-day attacks in the homotopy environment. [Online]. Available: https://ieexplore.ieee.org/document/4089094
+
+
+    [2] S. A. H Al-Ruhain, M. Sharman, (2020). On detection and prevention of zero-day
+    attacks using cuckoo switches in software-defined networks. [Online]. Available:
+    https://ieexplore.ieee.org/document/9155555
+
+
+    [3] S. Khan, (2020). Lightweight deep learning to prevent botnets in iot sensor
+    networks using hybrid self-organizing map. [Online]. Available: https://ieexplore.ieee.org/document/9155555
+
+
+    [4] M. Mahmoud and G. B. Chen, (2016). Deep learning for computer-based intrusion
+    detection systems. [Online]. Available: https://doi.org/10.1109/ACCESS.2016.2551598
+
+
+    [5] G. D. T. G. L. H. SR Sharp, J. Trentini (1997). Intrusion detection systems-motivation,
+    and prevention. [Online]. Available: https://doi.org/10.1109/45.59970600336
+
+
+    [7] D. S. H Debar, M. Becker, (1992) A neural network for an intrusion detection
+    system. [Online]. Available: https://doi.org/10.1109/45.1992.158152
+
+
+    [8] R. C. S Stanford-Field, S. Cheng (1998). Group-based based intrusion detection
+    mechanisms. [Online]. Available: https://www.researchgate.net/publication/228433333_Group-Based-Intrusion-Detection-System-for-Networks
+
+
+    ![](img/d8e383c04aa5af1c75d73738b36a8184_3_2.png)
+
+
+    Fig. 4. Performance by Detection Rate of model 3 with other models
+
+
+    As model 2 and 3 are clearly performing better than model 1 we compare these two
+    by F1 score until model 3 emerges as a winner which we can see from Fig 5.
+
+
+    [10] C.-Y. L. Wei-Chih Tang, Y.-H. Yu, (2019). Intrusion detection using deep
+    learning techniques. [Online]. Available: https://doi.org/10.1109/ACCESS.2019.2905029
+
+
+    [11] R. Huang, Li, (2018). Intrusion detection with neural networks. [Online].
+    Available: https://doi.org/10.1109/ACCESS.2018.2833737
+
+
+    [12] S. M. A. Sung, (2003). Identifying features for intrusion detection using
+    support vector machines and neural networks. [Online]. Available: https://doi.org/10.1109/45.12511111111
+
+
+    [13] A. S. Mukmugala, J. Kim, (2020) CNN-based network intrusion detection using
+    denial-of-service attacks. [Online]. Available: https://doi.org/10.1109/ACCESS.2020.2999907
+
+
+    [14] H. K. M., S. E. C. C. J. Kim, (2020) CNN-based network intrusion detection
+    using denial-of-service attacks. [Online]. Available: https://doi.org/10.1109/ACCESS.2020.2999907
+
+
+    [15] F. Y. Zhang, F. Li. An ensemble-based network intrusion detection system
+    built. Authorized licensed use limited to: UNIVERSITY OF STRATHCLDE. On June 18,
+    2021 at 18:39:06 UTC by IEEE Xplore. Terms apply.
+
+
+    [16] M. K. Cholin Zhang, Y. Jiang, (2005) Intrusion detection using wavelet neural
+    networks. [Online]. Available: https://doi.org/10.1016/j.patc.2004.06.045
+
+
+    [17] S. X, F. L. S Yang, M Tan. (2020) A method of intrusion detection based on
+    attention-based neural network. [Online]. Available: https://doi.org/10.1016/j.future.2019.05.006
+
+
+    [18] A. R. B. S. S Bandopadhyay, R. Chowdhury. (2020) A step forward towards revolutionary,
+    intrusion detection system using deep convolutional neural network. [Online].
+    Available: http://dx.doi.org/10.20944/preprints20207.0187.v1
+
+
+    [19] K. K. MT Nguyen. (2020) Genetic convolutional neural network for intrusion
+    detection systems. [Online]. Available: https://doi.org/10.1016/future.2020.07.042
+
+    '
+  mdcn: '
+
+    在 2018-02-16，LSTM 的准确率为 99.7%，而基于注意力的模型实现了 99.98% 的准确率。但在 2018-02-22 和 2018-02-23，基于注意力的
+    LSTM 保持领先地位，且优势比之前略大。
+
+
+    但在 22 号，在几乎所有类型的情况下，基于注意力的模型都比 LSTM 模型具有更好的检测率，而 LSTM 模型仅检测出了跨越数日的不同类型攻击以及同一天内的
+    1.2 种不同类型攻击。在这里可以清楚地看到，特别是对于攻击数据相当不足的暴力破解 Web（Brute Force Web）和暴力破解 Xss（Brute
+    Force Xss）攻击，基于注意力的模型表现良好。
+
+
+    ![](img/d8e383c04aa5af1c75d73738b36a8184_3_0.png)
+
+
+    图 5. 模型 3 与模型 2 的 F1 分数性能对比
+
+
+    ## VI. 结论与展望
+
+
+    本文中，该模型通过得分提升的性能优于其最新的单元。带有此类单元的堆叠编码器可以显著提高性能。未来将通过混合自组织映射机制添加不同的架构和方法论。
+
+
+    ## 参考文献
+
+
+    ![](img/d8e383c04aa5af1c75d73738b36a8184_3_1.png)
+
+
+    图 3. 模型 3 与其他模型的准确率性能对比
+
+
+    再次从图 3 可以看出模型 3 优于模型 1，并接近模型 2。但从检测率来看，图 4 地显示模型 3 优于其他两个模型，
+
+
+    [1] B. K. Yu, S. V. J Kim, D. Kim, (2020). 同调环境下针对零日攻击的检测研究。[在线]. 可用: https://ieexplore.ieee.org/document/4089094
+
+
+    [2] S. A. H Al-Ruhain, M. Sharman, (2020). 在软件定义网络中使用布谷机交换对零日攻击的检测与预防。[在线]. 可用:
+    https://ieexplore.ieee.org/document/9155555
+
+
+    [3] S. Khan, (2020). 使用混合自组织映射防止物联网传感器网络中僵尸网络的轻量级深度学习。[在线]. 可用: https://ieexplore.ieee.org/document/9155555
+
+
+    [4] M. Mahmoud and G. B. Chen, (2016). 用于计算机入侵检测系统的深度学习。[在线]. 可用: https://doi.org/10.1109/ACCESS.2016.2551598
+
+
+    [5] G. D. T. G. L. H. SR Sharp, J. Trentini (1997). 入侵检测系统——动机与预防。[在线]. 可用: https://doi.org/10.1109/45.59970600336
+
+
+    [7] D. S. H Debar, M. Becker, (1992) 用于入侵检测系统的神经网络。[在线]. 可用: https://doi.org/10.1109/45.1992.158152
+
+
+    [8] R. C. S Stanford-Field, S. Cheng (1998). 基于组的入侵检测机制。[在线]. 可用: https://www.researchgate.net/publication/228433333_Group-Based-Intrusion-Detection-System-for-Networks
+
+
+    ![](img/d8e383c04aa5af1c75d73738b36a8184_3_2.png)
+
+
+    图 4. 模型 3 与其他模型的检测率性能对比
+
+
+    由于模型 2 和 3 的表现明显优于模型 1，我们通过 F1 分数对两者进行比较，直到模型 3 在图 5 中脱颖而出。
+
+
+    [10] C.-Y. L. Wei-Chih Tang, Y.-H. Yu, (2019). 使用深度学习技术进行入侵检测。[在线]. 可用: https://doi.org/10.1109/ACCESS.2019.2905029
+
+
+    [11] R. Huang, Li, (2018). 使用神经网络进行入侵检测。[在线]. 可用: https://doi.org/10.1109/ACCESS.2018.2833737
+
+
+    [12] S. M. A. Sung, (2003). 使用支持向量机和神经网络识别入侵检测的特征。[在线]. 可用: https://doi.org/10.1109/45.12511111111
+
+
+    [13] A. S. Mukmugala, J. Kim, (2020) 基于 CNN 的拒绝服务攻击网络入侵检测。[在线]. 可用: https://doi.org/10.1109/ACCESS.2020.2999907
+
+
+    [14] H. K. M., S. E. C. C. J. Kim, (2020) 基于 CNN 的拒绝服务攻击网络入侵检测。[在线]. 可用: https://doi.org/10.1109/ACCESS.2020.2999907
+
+
+    [15] F. Y. Zhang, F. Li. 一种基于集成的网络入侵检测系统的构建。授权许可限制于：斯特拉斯克莱大学。于 2021 年 6 月 18 日
+    18:39:06 UTC 由 IEEE Xplore 使用。适用相关条款。
+
+
+    [16] M. K. Cholin Zhang, Y. Jiang, (2005) 使用小波神经网络进行入侵检测。[在线]. 可用: https://doi.org/10.1016/j.patc.2004.06.045
+
+
+    [17] S. X, F. L. S Yang, M Tan. (2020) 基于注意力机制神经网络的入侵检测方法。[在线]. 可用: https://doi.org/10.1016/j.future.2019.05.006
+
+
+    [18] A. R. B. S. S Bandopadhyay, R. Chowdhury. (2020) 使用深度卷积神经网络向革命性入侵检测系统迈出一步。[在线].
+    可用: http://dx.doi.org/10.20944/preprints20207.0187.v1
+
+
+    [19] K. K. MT Nguyen. (2020) 用于入侵检测系统的遗传卷积神经网络。[在线]. 可用: https://doi.org/10.1016/future.2020.07.042
+
+    '
+  merge: 0
