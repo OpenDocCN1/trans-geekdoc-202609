@@ -1,0 +1,612 @@
+- pgno: 0
+  md: '# # Performance Analysis of Machine Learning Techniques to Predict Hotel booking
+    Cancellations in Hospitality Industry
+
+
+    **Md. Shahriare Sutor**
+
+    Dept. of Management Information Systems\NSTU
+
+    Noakhali, Bangladesh
+
+    shahriare.mis@nstu.edu
+
+
+    **Khair Ahamed**
+
+    Institute of Information Technology
+
+    NSTU
+
+    Noakhali, Bangladesh
+
+    khairahmd6@gmail.com
+
+
+    **Mohammad Zynrul Abedin**
+
+    Dept. of Finance and Banking
+
+    HSTU
+
+    Dinaajpur, Bangladesh
+
+    abedimz@yahoo.com
+
+
+    ***Abstract*—Hotel booking cancellation is a substantial effect on demand management
+    decisions in the hospitality industry. The goal of this work is to investigate
+    the effects of different machine learning methods used in hotel booking cancellation
+    dataset from Kaggle data. Then, different feature transformation techniques were
+    implemented in primary and dataset using feature selection methods. Various classifiers
+    were employed into primary and subsets and explored the best approaches. Among
+    all the methods, we found XGB is the most frequent method to handle datasets.
+    Individual classifiers generated the highest accuracy. This method can also be
+    used as the complementary tool to investigate hotel booking cancellation more
+    effectively.
+
+
+    ***Index Terms*—Hotel Booking Cancellation, Machine Learning, Feature Transformation,
+    Feature Selection, Classification
+
+
+    # I. INTRODUCTION
+
+
+    In the hotel industry, hotel booking cancellation is as a major part for decision
+    making regarding accepted demands. It affects the estimated revenue of the hotel.
+    The authority of hotel management are concerned by customer''s requirement by
+    analyzing these processes. There might be many reasons for hotel booking cancellation
+    such as lack of facilities, unexpected offers, obligations, illnesses, and de-change.
+    According to [6], [7], the cancellation rates are increasing greatly for the dealing
+    tendency of customers. Sometimes, they may evaluate multiple options and policies,
+    and finally reject all of them. To minimize losses, hotel authority employed strict
+    cancellation rules and policies. However, flexibility might be beneficial in certain
+    circumstances because it hurts the quality of service and low refund/non-refundable
+    policies decreases revenue as well as number of bookings [5, 16]. Consequently,
+    some hotels are implemented overfitting strategies to get terrible experience
+    where they deny service provision [12].
+
+
+    In recent years, machine learning is widely used to extract significant information
+    and predict various aspects in the hotel and tourism management field. Various
+    reasons are happened to cancel hotel booking, but they are not specified or accurately.
+    Morales and Wang [11] stated that it is hard to imagine one can predict whether
+    a booking will be cancelled or not with high accuracy. However, several works
+    by Huang et al. [9] developed hotel cancellation. For instance an artificial network
+    (ANN) based customer prediction model where backpropagation (BPN) and general
+    regression neural network (RNN) were generated to predict hotel cancellation.
+    In Western restaurant chain in Taiwan, Anton [3] provided a similar hotel booking
+    strategies strategies of techniques using XGBoost (XGB) to predict which booking
+    are likely to cancel and not make feature selection through classification methods
+    like support vector machine,SVM) and ANN into four hotel datasets and predict
+    the cancellation probability. They [1] proposed the machine learning based decision
+    support system which showed the importance of two methods and evaluated the decision
+    tree, decision forest, jungle like support vector machine to capture the patterns
+    of cancellations and measured predicted precision over time. Sam [13] implemented
+    random forest, SVM, decision tree, and ANN optimized with genetic algorithms in
+    Passenger Name dataset using ANN. In this work, we proposed a hotel booking cancellation
+    method that estimates the revenue using customer instances. Then, various feature
+    selection, and classification methods were implemented and explored the best appropriately.
+    It is estimated the demand of customers and reduced uncertainty in hotel booking
+    cancellation process that is helpful for revenue management, inventory allocation,
+    supplies purchases and pricing decisions as.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# TABLE I: Descriptive Statistics
+
+
+    | Range | Minimum | Maximum | Mean | Std. Deviation | Variance | Skewness | Kurtosis
+    |
+
+    |---|---|---|---|---|---|---|---||
+
+    | Canceled | 0 | 7 | 0.37 | 0.48 | 0.231 | 0.537 | -1.712 |
+
+    | Lead Time | 717 | 737 | 104.01 | 106.83 | 11419.72 | 0.501 | -1.669 |
+
+    | Arrival Year | 00:00:11 | 2015 | DECEMBER | JUNE | 00:00:03.95 | 0.501 | -0.028
+    | -0.995 |
+
+    | Arrival Week | 52 | 33 | 21.37 | 13.85 | 18.501 | -0.160 | -4.095 |
+
+    | Arrival Day | 30 | 31 | 15.80 | 7.81 | 70.773 | -0.007 | 7.174 |
+
+    | Stayed Nights | 19 | 19 | 0.93 | 0.999 | 0.07 | 1.380 | 2.842 |
+
+    | Adults | 55 | 50 | 1.86 | 0.57 | 0.338 | 1.817 | 1352.15 |
+
+    | Children | 10 | 10 | 0.01 | 0.09 | 0.019 | 0.416 | -0.198 |
+
+    | Repeat Guest | 26 | 26 | 0.01 | 0.06 | 0.01 | 5.326 | 23.370 |
+
+    | Previous Customers | 0 | 0 | 0.09 | 0.84 | 0.718 | 6.748 | 67.033 |
+
+    | Previous Hotels Booked | 72 | 72 | 0.14 | 1.49 | 2.442 | 2.350 | 76.745 |
+
+    | Booking Changes | 21 | 21 | 0.32 | 0.64 | 0.452 | 0.026 | 67.968 |
+
+    | Value | 390 | 391 | 0.39 | 7.22 | 15.595 | 30.974 | 119.843 |
+
+    | Required Car Parking | 5406.38 | -6.38 | 0.00 | 101.811 | 503.527 | 10.530 |
+    1013.90 |
+
+    | Total Special | 5 | 8 | 0.06 | 0.07 | 0.057 | 0.629 | 1.493 |
+
+    | Reservation Date | 10 06:00:00 | 2017/07/14 | 2014/09/27 | 0.07 | 0.3706 | 225
+    05:43:17 | -2.903 |
+
+
+    The organization of this paper is as follows: section 2 describes the proposed
+    methodology with dataset description, preprocessing, classification and evaluation
+    process brief. In section 3, the experimental section is shown and the performance
+    of different classifiers. We then summarize our work by indicating future direction
+    about how to improve this procedure in section 5.
+
+
+    columns. We remove the column that contains 94% missing values. Again, the ''reservation''
+    column is also highly correlated (0.9171) with the target. Furthermore, some variables
+    with missing values are also removed for the generation of the model. Machine
+    learning algorithms can''t deal with the categorical variables. This process encodes
+    each categorical variable''s proper value into a numeric value.
+
+
+    # II. METHODOLOGY
+
+
+    This work is adopted via machine learning methods where hotel booking data were
+    processed to obtain good results. Figure 1 shows how numerous models were proposed
+    to investigate this dataset and evaluate the effects of individual models. The
+    proposed approach is much more elaborate as follows:
+
+
+    # A. Data Description
+
+
+    This data was generated by Antonio, Almeida, and Neves [2] that contain two hotel
+    booking information like resort (H1) and hotel (H2). It was gathered from their
+    database using Transacting-Structured Query Language (TSQL) query. All instances
+    containing hotel or customer identification were removed. Then, we combined the
+    datasets with 31 variables where 40,060 observations of H1 and 79,330 observations
+    of H2. However, a city hotel had a higher cancellation rate (38%) than a resort
+    hotel (27.69%). This table contains three years of information from 1st July,
+    2015 to 31st August, 2017. Table 1 shows the descriptive statistics of hotel booking
+    cancellation as follows.
+
+
+    # C. Feature Transformation and Selection
+
+
+    Feature transformation is created new variables from the existing ones [10]. Three
+    properties were found such scaling, standardization and normalization [8]. Scaling
+    the values between 0-1 without affecting the distribution and standardization
+    from mean to mean [1]. Consequently, the distribution follows the bell-shaped
+    curve of [8].
+
+
+    Various feature methods were implemented in the dataset and identified them automatically
+    or manually to generate higher outcomes [7]. Detection of features improves accuracy
+    reduces the chances of overfitting and making the model more simple.
+
+
+    # B. Data Preprocessing and Exploration
+
+
+    Data preprocessing is used to clean and manipulate dataset for future analysis.
+    In addition, different cases as detecting outliers, missing values and purifying
+    data are scrutinized in order to build generalized machine learning model. This
+    dataset contains three missing values with
+
+
+    We adopted three algorithms for instance Correlation-Based Feature Selection (CFS),
+    Info Gain Attribute Evaluation (IGAE), Gain Ratio Attribute Evaluation (GRAE)
+    were also adopted in many previous variables'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/11b7cd183e3ee87be39a3e60f7eac37a_2_0.png)
+
+
+    Fig. 1: Proposed Methodology
+
+
+    and generated better results [14, 15]. In CFS, it shows the correlation with the
+    target values and accepts only highly correlated features using first search method.
+    Therefore, these variables are not maintained by Pearson''s correlation coefficient
+    or Spearman''s, minimum description length (MDL), relief and symmetric uncertainty.
+    GRAE takes the size of branches for identifying features and IGAE checks the dependency
+    between the selected and target variable. Both of them used rankeder algorithm
+    to prioritize individual features and manually set a threshold for selecting features.
+    The threshold is defined as 0.0133 and 0.0153 for the IGAE and GRAE respectively.
+    In Figure 1, it illustrates this feature selection
+
+
+    methods which were implemented into feature transformed and primary dataset to
+    generate 12 subsets from them.
+
+
+    # D. Classification
+
+
+    Classification is a supervising technique that predicts classes or labels by labeling
+    related instances. The goal is scrutinized individual related records and estimated
+    booking cancellation of the customer. We employed different classifiers like Gradient
+    Boosting (GB), Random Forest (RF), XGBoost (XGB), Decision Tree (DT), Logistic
+    Regression (LR), k-nearest Neighbour (KNN) and Gaussian Naive Bayes (GNB) into
+    hotel booking dataset and analyze the performance of individual classifiers to
+    estimate how well they'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'perform and build more efficient model. Therefore, most of
+
+    them were widely applied into different types of datasets and
+
+    learning projects in previous works [3, 4, 1, 15]: Table
+
+    II shows related parameters of machine learning classifiers
+
+    this. We considered 10 cross-validation which is
+
+    to evaluate individual model and not biased to solve the
+
+    offitting issues.
+
+
+    # TABLE II: Associated parameters of machine learning classi-
+
+
+    | Classifier | Parameters |
+
+    |---|---|
+
+    | GB | max_features=2, max_depth=2, random_state=0 Learning_rate=0.1, max_depth=3
+    |
+
+    | XGB | max_depth=none, random_state=0 |
+
+    | DT | |
+
+    | RF | Linear solver, max_iter=1000 |
+
+    | KNN | k=5 |
+
+    | AROC |
+
+
+    # E. Evaluation Metrics
+
+
+    Various evaluation is used to execute machine
+
+    learning models and explored the best model among all
+
+    them. Confusion matrix represent instances as
+
+    positive (TP), false positive (FP), true negative (TN) and
+
+    negative (FN). The performance of the model
+
+    is evaluated by different metrics: Accuracy, AUROC and F-
+
+    Measure in this.
+
+
+    +   * Accuracy: represents the efficiency of the classifier that
+
+    measures the correctness using the following equation:
+
+
+    > Accuracy = \frac{TP + TN}{TP + TN + FP + FN} (1)
+
+
+    +   * AUROC: provides the probabilities how well the classi-
+
+    fiers are separated from negative classes. However, it can
+
+    be determined by following equation where true positive
+
+    rate (TPR) and true negative rate (TNR) are:
+
+
+    > AUROC = \frac{TPR + TN}{TPR + FN} (2)
+
+
+    +   * F-Measure: Precision defines the number of smaller
+
+    instances divided by the total number of instances.
+
+    and recall the performance of correctly classified
+
+    similar records and So, F-measure is the harmonic mean of
+
+    precision and recall that represents as follows:
+
+
+    > Precision = \frac{TP}{TP + FP} (3)
+
+
+    > Recall = \frac{TP}{TP + FN} (4)
+
+
+    > F-Measure = \frac{2 \times Precision \times Recall}{Precision + Recall} (5)
+
+
+    # III. EXPERIMENTAL RESULT AND DISCUSSION
+
+
+    In this experiment, we used scikit learn library to implement
+
+    different feature transformation, selection and classification
+
+    techniques respectively. Table-III show all of the experimental
+
+    results, but GB showed the highest accuracy for
+
+    primary, min and z-transformed datasets. Besides, it
+
+    the best AUROC and f-measure for primary data. Further,
+
+    LR showed the highest AUROC for square-root and f-measure
+
+    min-max, z-transformed and z-squared datasets. XGB showed the highest
+
+    accuracy and AUROC for primary data. However, LR
+
+    showed the highest f-measure for primary data, the highest AUROC
+
+    and f-measure for min-max and z-transformed data. XGB
+
+    sed the highest AUROC and f-measure for square-root data.
+
+    terter, it showed the best AUROC and f-measure for square-root
+
+    min-max and z-transformed datasets.
+
+
+    and z-transformed datasets. XGB showed the maximum accuracy, AU-
+
+    and ROC for primary data and feature transformed datasets.
+
+
+    Therefore, it is really hard to detect the best algorithm for
+
+    all cases. In subsets, GB and LR showed the best classifier for
+
+    primary data and RF showed the best result for transformed data
+
+    In GB subset, XGB showed the best classifier for
+
+    transformed data. In XGB subset, XGB is the best
+
+    classifier for both primary and transformed data. The
+
+    ofprimary data is more important than transformed data.
+
+    Therefore, feature transformation techniques were not more
+
+    better after result comparison between models.
+
+    But, selection provided good outcomes by using
+
+    unwanted features. XGB showed the best accuracy for
+
+    primary GB subset. When, we explored the AUROC and
+
+    f-measure, XGB showed these outcomes for all IGAE
+
+    and transformed data. It resulted, GB and
+
+    XGB were more flexible classifier to generate best
+
+    result for primary data and LR showed the best result
+
+    they are transformed except IGAE subset, different
+
+    classifiers are the topmost result for IGAE subsets.
+
+
+    # IV. CONCLUSION AND FUTURE WORKS
+
+
+    In this work, we investigated hotel booking instances in
+
+    to reduce losses and maximize revenue in the
+
+    hospitability industry. Hence, feature transformation, se-
+
+    lection and classification algorithms were managed to
+
+    the booking classification with high accuracy, AUROC and f-
+
+    measure. This work was mainly evaluating the
+
+    machine learning techniques in hotel booking
+
+    datasets. Besides, few works happened where different
+
+    data analytics approaches have been adopted. The
+
+    pibility of future analysis and research opportunity
+
+    remain in this work. More, advanced machine and and'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# TABLE III: Experimental Results
+
+
+    | CT | Acc | AUROC | F-M | Acc | AUROC | F-M | Acc | AUROC | F-M | Acc | AUROC
+    | F-M |
+
+    |---|---|---|---|---|---|---|---|---|---|---|---||
+
+    | Baseline | | | Min-Max | | | Z-Transformation | | | Square-root | | |
+
+    | CFS | | | | | | | | | | | | |
+
+    | RF | 0.7628 | 0.6835 | 0.7268 | 0.7421 | 0.6750 | 0.7183 | 0.7281 | 0.6750 |
+    0.7183 | 0.5533 | 0.7451 | 0.6750 | 0.7183 |
+
+    | XGB | 0.7628 | 0.6827 | 0.7281 | 0.5529 | 0.5360 | 0.5644 | 0.6870 | 0.6850
+    | 0.6641 | 0.6870 | 0.5239 | 0.5235 | 0.6841 |
+
+    | DT | 0.7628 | 0.6827 | 0.7281 | 0.5111 | 0.4993 | 0.5172 | 0.5113 | 0.4936 |
+    0.5191 | 0.6296 | 0.5132 | 0.4952 | 0.5192 |
+
+    | LR | 0.7713 | 0.6713 | 0.7161 | 0.7571 | 0.7236 | 0.7310 | 0.7111 | 0.4951 |
+    0.5191 | 0.7206 | 0.4733 | 0.5517 | 0.5179 |
+
+    | KNN | 0.6528 | 0.5954 | 0.5021 | 0.4901 | 0.4754 | 0.4974 | 0.5570 | 0.5830
+    | 0.5582 | 0.6194 | 0.5950 | 0.6114 | 0.6167 |
+
+    | GNB | 0.6829 | 0.5986 | 0.5545 | 0.7227 | 0.6643 | 0.7057 | 0.7049 | 0.7438
+    | 0.6922 | 0.7129 | 0.6550 | 0.6584 | 0.685 |
+
+    | GRS | | | | | | | | | | | | | |
+
+    | CFS | 0.7508 | 0.7056 | 0.7225 | 0.7419 | 0.6750 | 0.7183 | 0.7451 | 0.6750
+    | 0.7183 | 0.7451 | 0.6750 | 0.7183 |
+
+    | RF | 0.7529 | 0.7262 | 0.7525 | 0.6870 | 0.5236 | 0.5540 | 0.5533 | 0.5520 |
+    0.5539 | 0.5235 | 0.5529 | 0.6539 |
+
+    | XGB | 0.7314 | 0.6966 | 0.7105 | 0.6570 | 0.6867 | 0.6841 | 0.6881 | 0.6457
+    | 0.6641 | 0.6680 | 0.6457 | 0.6503 |
+
+    | DT | 0.7194 | 0.6966 | 0.7105 | 0.7330 | 0.6982 | 0.7263 | 0.5113 | 0.4951 |
+    0.5191 | 0.7131 | 0.4731 | 0.5179 |
+
+    | LR | 0.7722 | 0.7052 | 0.7512 | 0.7330 | 0.7066 | 0.7291 | 0.7030 | 0.6996 |
+    0.7291 | 0.7687 | 0.7305 | 0.7618 |
+
+    | KNN | 0.6630 | 0.6333 | 0.6881 | 0.7590 | 0.7324 | 0.7563 | 0.7542 | 0.7270
+    | 0.7151 | 0.7393 | 0.7144 | 0.7375 |
+
+    | GNB | 0.6619 | 0.6527 | 0.6111 | 0.7223 | 0.6647 | 0.7059 | 0.7223 | 0.6647
+    | 0.7059 | 0.6390 | 0.6775 | 0.6854 |
+
+    | IGAE | | | | | | | | | | | | | |
+
+    | GAE | 0.7690 | 0.7102 | 0.7514 | 0.7690 | 0.7102 | 0.7514 | 0.7190 | 0.7102
+    | 0.7514 | 0.7690 | 0.7102 | 0.7514 |
+
+    | RF | 0.7263 | 0.6982 | 0.7534 | 0.7208 | 0.7263 | 0.7523 | 0.7190 | 0.7201 |
+    0.7523 | 0.7213 | 0.7253 | 0.7515 |
+
+    | XGB | 0.7915 | 0.7524 | 0.7843 | 0.7915 | 0.7524 | 0.7843 | 0.7915 | 0.7524
+    | 0.7843 | 0.7915 | 0.7524 | 0.7843 |
+
+    | DT | 0.7189 | 0.6982 | 0.7187 | 0.7190 | 0.6968 | 0.7176 | 0.7190 | 0.6984 |
+    0.7188 | 0.7204 | 0.6996 | 0.7202 |
+
+    | LR | 0.7271 | 0.6817 | 0.7185 | 0.7180 | 0.7198 | 0.7377 | 0.7578 | 0.7159 |
+    0.7378 | 0.7131 | 0.7539 | 0.7375 |
+
+    | KNN | 0.6630 | 0.6373 | 0.6881 | 0.7590 | 0.7324 | 0.7563 | 0.7542 | 0.7270
+    | 0.7151 | 0.7393 | 0.7144 | 0.7375 |
+
+    | GNB | 0.6747 | 0.6857 | 0.7263 | 0.6202 | 0.6629 | 0.6206 | 0.5312 | 0.6103
+    | 0.5017 | 0.6390 | 0.6775 | 0.6410 |
+
+
+    ![](img/11b7cd183e3ee87be39a3e60f7eac37a_4_0.png)
+
+
+    ![](img/11b7cd183e3ee87be39a3e60f7eac37a_4_1.png)
+
+
+    ![](img/11b7cd183e3ee87be39a3e60f7eac37a_4_2.png)
+
+
+    ![](img/11b7cd183e3ee87be39a3e60f7eac37a_4_3.png)
+
+
+    Fig. 2: Average Classification Result of (a) and (Min-Max) and (c) Z-Normalization
+    (primary and Square Root Transform Dataset)'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'learning approach will be useful for building kinds of predictive model. In
+    future we gather more data from heterogeneous sources and propose innovative model
+    that can predict hotel booking cancellation more accurately.
+
+
+    # # REFERENCES
+
+
+    +   [1] Nano Antonio, De Almeida, and Luis Nunes. An automated machine learning
+    based decision support system to predict hotel booking cancellations. In: Automated
+    machine learning based decision support system to predict hotel booking cancellations
+    (2019), pp. 1–20.
+
+
+    +   [2] Nano Antonio, De Almeida, and Luis Nunes. "Hotel booking demand datasets".
+    In: Data in brief (2022), pp. 41–49.
+
+
+    +   [3] Nano Antonio, De Almeida, and Luis Nunes. "Predicting hotel booking cancellations
+    with a machine learning model.\ In: 2017 IEEE International Conference on Informatics
+    and Applications (ICMLA). IEEE, 2017
+
+
+    +   [4] Nano Antonio, De Almeida, and Luis Nunes. "Predicting hotel booking cancellations
+    to decrease uncertainty and increase revenue.\ In: Tourism & Management 32 (2017),
+    pp. 25–39.
+
+
+    +   [5] Chih-Chien Chen, Jenny Schwartz, and Patrick Vargas. "The search for the
+    deal: How hotel cancellation policies affect the search and booking decisions
+    of dealing-customers". In: International Journal of Hospitality Management 30.1
+    (2011), pp. 125–135.
+
+
+    +   [6] Chih-Chien Chen and Karen Jia Xieie. "Differentiation of cancellation
+    policies in the US hotel industry.\ In: International Journal of Hospitality Management
+    34 (2013), pp. 66–77.
+
+
+    +   [7] Mananjan Dash and Huan Liu. "Feature selection for classification and
+    regression.\ In: Intelligent data analysis 3.1 (1997), pp. 131–156.
+
+
+    +   [8] Jeff Hale. Scale, Standardize, or normalize with Scikit-Learn. Feb 2020.
+    URL: https://scikit-learn.org/stable/modules/preprocessing.html#scale-standardize-or-normalize-with-scikit-learn
+
+
+    +   [9] Han-Cien Huang, Allen Y Chang, Chiang-Chu Ho, et al. "Using artificial
+    neural networks to establish a customer-cancellation model.\ In: Prezegad Electrotechniki
+    89.1 (2013), pp. 178–180.
+
+
+    +   [10] Hashimoto Tanaka and Hiroasa Morota. "Feature transformation and subset
+    selection.\ In: IEEE Syst Their App 13.2 (1998), pp. 26–28.
+
+
+    +   [11] Dolores Romero Morales and Jimenez Wang. "Forecasting cancellation rates
+    for services revenue management using data mining.\ In: European Journal of Operational
+    Research 202.2 (2010), pp. 554–562.
+
+
+    +   [12] Breffini M Noone and Chung Lee. "Hotel booking: The effect of overcompensation
+    on customers'': the effect of demand to service.\ In: Journal of Hospitality &
+    Tourism Research 35.3 (2011), pp. 334–357.
+
+
+    +   [13] Agustin Sánchez-Medina, C Eleazar, et al. "Machine learning and big data
+    for effective forecasting of hotel booking cancellations.\: International Journal
+    of Hospitality Management 89 (2020), pp. 10256.
+
+
+    +   [14] Md Shahriari Tatu, Anita, and Jamal Uddullah. "Performance analysis of
+    classifying localization sites using protein data mining techniques and neural
+    networks.\ In: 2017 IEEE International Conference on Electrical, Computer and
+    Communication Engineering (ICECE). IEEE, 2017, pp. 860–866.
+
+
+    +   [15] Scott J et al. "Hotel cancellation policies, distributive and procedural
+    fairness, and consumer outrage: The strategy of the loyalty industry.\ In: Journal
+    of Travel & Tourism Marketing 32 (2015), pp. 886–906.'
+  merge: -1
+  img_proc: true
