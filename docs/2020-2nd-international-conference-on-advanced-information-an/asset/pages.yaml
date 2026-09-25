@@ -1,0 +1,642 @@
+- pgno: 0
+  md: '# # Prediction of Liver Disorders using Learning Algorithms: A Comparative
+    Study
+
+
+    Md. Fazle Rabbi*, S. M. Mahed Hasan*, Arifa Islam Champa*, Md. Asif Zaman*, Md.
+    Kamrul Hasan*
+
+
+    *Department of Computer Science & Engineering, Islamic University of Technology
+
+    **Department of Computer Science & Engineering, Rajshahi University of Engineering
+    & Technology, Rajshahi-6204, Bangladesh**
+
+    *****Department of Computer Science & Engineering, Bangladesh International University
+    of Science and Technology
+
+    North South University
+
+
+    Abstract— Liver, a crucial organ of the human body whose principal tasks are to
+    eliminate waste produced by our metabolism, food digest and energy materials.
+    Liver disorder can cause various health problems and treating the patients are
+    compulsory to reduce the risk of these lethal disorders. The diagnosis of liver
+    disorder is extensive and numerous researches have been performed using machine
+    learning (ML). In this paper, we have compared four ML algorithms (Logistic Regression,
+    Decision Tree, Random Forest, and SVM) to classify Liver Patient Dataset (LPDP).
+    Pearson Correlation Coefficient based feature selection (PCS) is applied to eliminate
+    irrelevant features from the dataset. The performance of all the algorithms is
+    analyzed in terms of ROC, F-1 score, precision, and recall. Our experimental results
+    show that having fusion on SVM provides the highest accuracy of 92.19%.
+
+
+    populations [4]. Among them, 2 million people are dying due to liver disorders
+    per year worldwide [5]. Early diagnosis and proper treatments are the only solutions
+    to get rid of this problem. The diagnosis of this disease may include blood tests,
+    CT scans, MRI, ultrasounds to check the damage or tumors. After these, doctors
+    and practitioners decide whether a person is affected or not. The detection of
+    liver disorders is always arduous, as it requires experienced physicians and takes
+    a lot of time. To assist practitioner’s practice, machine learning is an important
+    tool. It can extract valuable information from medical datasets and build a model
+    to identify the patients. Researchers have been done using machine learning and
+    data mining techniques but liver disorder prediction is difficult due to the complex
+    structure and non-linear characteristics of liver datasets. It contains a lot
+    of missing values and outliers that make the prediction difficult.
+
+
+    Keywords—Liver Disease, Classification, Machine Learning, Pearson Correlation
+    Coefficient, Algorithm
+
+
+    # ## I. INTRODUCTION
+
+
+    The liver is the most important organ of our human body, which looks like a football
+    and positions into the right-side of its body. It plays a vital role in the metabolism
+    of toxins, synthesis of proteins, blood production, and produces different types
+    of carbohydrates, fats, and chemicals to digest out food [1]. It is the only organ
+    of vertebrates that can regenerate if at least 25% of the liver remains. it takes
+    8 to 15 days to complete the regeneration process without any loss of functionality!
+    As functionality, the liver is one of the most parts of the body. So, keeping
+    healthy liver is very important for survival. Several fatal diseases such as cirrhosis,
+    hepatitis, fibrosis, fatty liver disease, liver cancer, liver failure, gibber
+    syndrome, anemia, and hechromatosis, etc. There are many reasons for causing liver
+    disorders such as infection [1] hepatitis due to excessive use of alcohol [4]
+    biliary hepatitis [5] type 2 diabetes [6] through shared needles to inject drugs
+    and blood tools [7]. The signs and symptoms of liver disease include jaundice,
+    abdominal pain, itching skin, loss of appetite, and fatigue. [3]. According to
+    stats, around 50 million people suffer from liver disorders, which are approximately
+    4.5% to 9% of general
+
+
+    In this paper, we compared several ML methods, such as Logistic Regression (LR),
+    Decision Tree (DT), Random Forest (RF), and Extra Trees (ET) for the prediction
+    of liver disorder. Previous researches have taken into to improve the prediction
+    accuracy. At the preprocessing stage, categorical values are encoded through label
+    encoding. We have utilized Synthetic Minority Over-sampling Technique (SMOTE)
+    to remove the imbalance in data. After the removal of redundant features, oversampling
+    is used to mitigate the imbalance class distribution problem, and feature selection
+    is used to handle the outliers. After the AdaBoost classifier is used to increase
+    the performance of each classification algorithm.
+
+
+    # ## II. LITERATURE REVIEW
+
+
+    Over the recent years, researches have been performed to classify liver patients.
+    Ramana et al. [6] considered different datasets to predict liver patients. Comparing
+    the experimental results, the bagging classifier proved to be better classifiers
+    with an accuracy of 69.3%.
+
+
+    The remaining part of the research paper is designed as follows: Section II presents
+    related works in the for predicting liver disorder. Section III presents a detailed
+    description of the dataset. Section IV describes our methodology with experiments
+    and results. V Analysis. Finally, VI concludes the paper.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'Anagaw et al. [7] designed a double learning model named
+
+    Complement Naive Bayesian (CNB), where noisy
+
+    were used to construct the model. It reduced time and
+
+    showed better performance than K-Nearest Neighbors
+
+    (KNN) with an accuracy of 71.96%. Rahman
+
+    et al. [8] designed six different classification
+
+    methods to predict liver diseases using Logistic
+
+    Regression (LR), KNN, Decision Tree (DT), Support
+
+    Machines (SVM), NB, and Random Forest (RF). Their\experiment showed that LR achieved
+    the
+
+    accuracy of 75%. Veena et al. [9] implemented
+
+    different data algorithms on Indian Liver
+
+    Dataset using R, a data mining tool. Using
+
+    algorithm, C5.0 achieved accuracy of
+
+    75.19%. [10] proposed a method to
+
+    classify liver patients. Person Correction was used for
+
+    selecting features. While, different
+
+    classifiers were implemented, such as DT, NB, RF, SVM,
+
+    and Artificial Neural Network (ANN). Environment the DT achieved the highest accuracy
+    of 81%.
+
+    Kuzillahi et al. [11] used XGBoost classifier
+
+    with genetic algorithm and with other classifiers
+
+    as, LR, KNN, DT and RF outperformed the data
+
+    classification using Genetic Algorithm (GA) andnMinority Over-sampling Technique
+    (SMOTE)
+
+    GASMOTE. After detecting the outliers
+
+    utizing outlier detection and removing,
+
+    classifications provided thenhighest accuracy of 88%. Ramesh et al. [12]
+
+    with different datasets, using ILPD. To reduce
+
+    dimension of the features, they utilized Principal
+
+    Component Analysis (PCA) and then utilize
+
+    classification methods such as NB, KNN, SVM, DT,
+
+    RF. Moreover, they used boosting and bagging on
+
+    algorithms. Among these adaptive boosting on
+
+    the SVM produced the highest accuracy of 89.1.
+
+
+    +   5 | Alkoph | Alkaline Phosphatase
+
+    6 | Spt | Alanine Aminotransferase
+
+    7 | Sgot | Aspartate Aminotransferase
+
+    8 | TP | Total Proteins
+
+    9 | ALB | Albumin
+
+    10 | A/G | Ratio Albumin and Globulin Ratio
+
+    11 | Class | 1 Positive and 0 Negative
+
+
+    # A. Preprocessing
+
+
+    Data preprocessing is an essential part of classification to
+
+    improve the prediction accuracy. By any
+
+    prediction algorithm might reduce the quality of the data.
+
+    if the dataset contains noisy values, outliers,
+
+    then the overall performance, accuracy
+
+    might lower. Our research is to increase the
+
+    prediction accuracy for classifying liver patients. In
+
+    this research, preprocessing of data includes
+
+    categorical feature values, removal of irrelevant features
+
+    handling of outliers, and oversampling. The Flow of
+
+    our work is shown in Fig: 1.
+
+
+    ![](img/286b6dc2299a3afb809c8e3e15fdc268_1_0.png)
+
+
+    Fig. 1. Flow of Our Research Methodology
+
+
+    # III. ILPD Dataset Description
+
+
+    In our research, we utilized the Indian Liver Patient
+
+    of University of California, Irvine (UCI) machine learning
+
+    repository. The dataset has 583 records and 167 non-cancer
+
+    samples and 416 liver patients. The details of the
+
+    PD dataset is described in Table 1:
+
+
+    # TABLE I. ATTRIBUTES OF ILPD DATASET
+
+
+    | Serial No | Attribute | Description |
+
+    |---|---|---|
+
+    | 1 | Age | Age in Years |
+
+    | 2 | Sex | Gender of Patient |
+
+    | 3 | TB | Total Albumin |
+
+    | 4 | DB | Direct Albumin |
+
+
+    # 1) Label Encoding
+
+
+    In this dataset, attribute Gender contains values,
+
+    Male and Female. Label encoder is used to convert the
+
+    categorical values into numerical labels such as 1 for Male
+
+    and 0 for Female.
+
+    2) Pearson Correlation Based Feature Selection
+
+    (PCC-FS):
+
+    Feature selection reduces the number of features to improve
+
+    model performance. Statistical-based feature selection
+
+    chniques evaluates the relationship between each
+
+    independent variable and the data classification. Variables that
+
+
+    Authorized license used limited to: Central Michigan University. Downloaded on
+    14 May2021 at 14:25:21 UTC by IEEE Xplore. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'have a higher statistical value with the class selected for the next step of
+    classification. In this research, the Correlation Coefficients are used to select
+    the most important features. Pearson Correlation ranging from -1 to 1 specifies
+    the relationship between two variables, which is denoted as Pearson Correlation
+    Coefficient (P). A value near 1 means a stronger positive correlation, and -1
+    indicates a negative correlation. A value near 0 means a weak correlation between
+    the variables. Pearson Correlation Coefficient for a pair (X, Y) of random variables
+    is formulated as:
+
+
+    ```
+
+    $$\rho(X,Y) = \frac{cov(X,Y)}{\sigma_X\sigma_Y}$ (1)
+
+    ```
+
+
+    Where CO(X,Y) denotes the covariance and $\sigma_X$, $\sigma_Y$ are the standard
+    deviation of X and Y.
+
+
+    # 3 Oversampling
+
+
+    Oversampling refers to the random duplication of minority classes. As we have,
+    the HLP dataset has 67 negative samples and 416 positive samples. It may suffer
+    from imbalance class distribution which may cause the majority class to bias the
+    prediction. To overcome this problem, Random OverSampler is used to increase the
+    minority class samples.
+
+
+    # 4 Feature Scaling
+
+
+    Feature scaling normalizes the features values in a specified range. It is one
+    of the most vital steps for building a machine learning model. It reduces the
+    training time and helps achieve convergence for many machine learning and neural
+    network algorithms. Using mean and standard deviation may vary if a dataset contains
+    many outliers. We use the Z-score outlier technique to detect and handle outliers
+    using Robust Scaling. Robust Scaling using the Interquartile Range to handle the
+    outliers as well as the scale data.
+
+
+    # B. Classification
+
+
+    # 1 Logistic Regression (LR)
+
+
+    Logistic Regression (LR), a predictive analysis machine learning algorithm, is
+    based on the notion of probability. It is planned to classify-class (binary) problems
+    where the class is either 0 or 1. It uses the Logistic function to compress the
+    output between 0 and 1. The predicted probability (P) is:
+
+
+    ```
+
+    $P = \frac{1}{1+e^{-(w_0+w_1x_1+w_2x_2-...-w_nx_n)}}$ (2)
+
+    ```
+
+
+    # 2 Decision Tree (DT)
+
+
+    Decision Tree uses to solve classification and regression types in the structure
+    of a tree. The root of the tree refers to the best feature of the dataset attributes,
+    information gain, or Gini index. Each leaf node refers to the attribute or class
+    or dependent variable. Both categorical and numerical data can be handled by this
+    algorithm.
+
+
+    # 3Random Forest (RF)
+
+
+    Random Forest (RF), an ensemble Machine Learning method, can be applied for both
+    regression and classification problems [14]. It constructs several decision trees
+    to get a well-built and precise prediction. RF handles the overfitting problems
+    of DT by using training samples. DT usually picks the best features from the samples,
+    which is an approach that leads to overfitting. But RFs can easily solve the overfitting
+    problem.
+
+
+    # 4 Extra Trees
+
+
+    Extra Trees or Randomized Forest is an ensemble machine learning algorithm like
+    RF. But there are two fundamental differences between ET and RF. One is samples
+    without replacement, and the other is instead of picking the best features, random
+    features. After splitting the tree nodes, trees are constructed by averaging all
+    the tree cases in classification or by aggregating votes cases in classification.
+
+
+    # 5 AdaBoost
+
+
+    Adaptive boosting is an ensemble learning algorithm that constructs a stronger
+    classifier by amending the weaknesses of weak classifiers. It reduces bias and
+    variance and improves performance by setting weights to each algorithm and ensuring
+    correct prediction in each iteration during the training phase. The combination
+    of weak classifier can be expressed as:
+
+
+    ```
+
+    $f(x) = \sum_{t=1}^{T} \alpha_t h_t(x)$ (3)
+
+    ```
+
+
+    Where h(x) is weak classifier. The result of the final (strong) classifier is
+    H(x)=sign(f(x)).
+
+
+    # C Evaluation Metrics
+
+
+    To assess the performance of multiple ML models, we adopted K-fold-validation
+    to partition the dataset into k subsets. At each step, k-1 samples are used for
+    training, and the remaining one subset is used to validate the performance. The
+    final result is obtained by repeating this process and aggregating the results
+    of the test subset. In this paper we used 10-fold cross-validation for assessment.
+    Classification accuracy is a standard evaluation metric for machine learning.
+    We also used different statistical measures such as F-Score, Precision, Recall,
+    and Overall Classifier to evaluate the performance. Confusion Matrix summarizes
+    the performance of machine learning models. Using the confusion matrix, accuracy,
+    F-Score, recall, and precision can be obtained as:
+
+
+    # TABLE II. CONFUSION MATRIX
+
+
+    | | Predicted Positive | Predicted Negative |
+
+    |---|---|---|n| Positive | True Positive (TP) | False Negative (FN) |'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# False Positive (FP) True Negative (TN)
+
+
+    Accuracy = (TN+TP)/(TN+TP+FN+FP)
+
+
+    Precision = TP/(TP+FP)
+
+
+    Recall = TP/(TP+FN)
+
+
+    F1 - Score = 2*TP/(2*TP+FP+FN)
+
+
+    # V. RESULTS AND DISCUSSION
+
+
+    Google Colab [15], a free cloud service, is for the whole entire. To assess the
+    performance of ML algorithms effectively without overfitting-10-fold cross-validation
+    [16]. We split the dataset in a ratio of 80/20 for training and testing [17].
+    In this research, we compared the performance of four (4) algorithms like LR,
+    DT, RF, and ET. By applying data preprocessing without applying the selection
+    techniques, algorithms are utilized for classification. LR, DT, RF, and ET provided
+    an accuracy of 68.75%, 84.86%, 86.9%, and 90.76% respectively, which is depicted
+    in Figure 2. AdaBoost also showed the prediction performance of algorithms. From
+    Figure 3, it can be observed that the overall performance of these algorithms
+    has been enhanced moderately. Accuracy, evaluation measures like ROC, F1-score,
+    precision, and recall values are also compared in Table III.
+
+
+    > Accuracy ROC F1-Score Precision Recall
+
+
+    ![](img/286b6dc2299a3afb809c8e3e15fdc268_3_0.png)
+
+
+    ![](img/286b6dc2299a3afb809c8e3e15fdc268_3_1.png)
+
+
+    Fig. 3. Performance Analysis of AdaBoost Using All Features
+
+
+    TABLE III CLASSIFICATION PERFORMANCE USING ALL
+
+    | Evaluation | Accuracy | ROC | F1-Score | Precision | Recall |
+
+    |---|---|---|---|---||
+
+    | LR | 68.75 | 71.33 | 64.97 | 81.58 |
+
+    | Machine Learning | 84.86 | 84.25 | 80.78 | 89.41 | 93.23 |
+
+    | RF | 86.9 | 82.79 | 80.62 | 96.62 |
+
+    | ET | 90.6 | 90.78 | 87.89 | 91.47 |
+
+    | AdaBoost | 69.71 | 75.22 | 68.57 | 76.63 |
+
+    | Classifier | 81.53 | 83.71 | 80.68 | 75.53 | 94.69 | | 91.5 |
+
+
+    We have noticed that less important features decrease the prediction performance
+    of algorithms. We employed the Pearson Correlation Coefficient to remove the irrelevant
+    feature. By applying data preprocessing with the four (4) algorithms used for
+    predicting liver patients. LR, DT, RF, and ET provided an accuracy of 70.07%,
+    81.14%, 83.38%, and 91.77% respectively, which is depicted in Figure 2. AdaBoost
+    algorithm showed an accuracy of 70.68%, 87.26%, 92.19% respectively, which is
+    illustrated in Figure 5. Accuracy, evaluation measures like ROC, F1-score, precision,
+    and recall values are also compared in Table IV.
+
+
+    TABLE IV. CLASSIFICATION PERFORMANCE USING PCC-FS
+
+    | Evaluation | Accuracy | ROC | F1-Score | Precision | Recall |
+
+    |---|---|---|---|---||
+
+    | LR | 70.03 | 73.87 | 65.89 | 83.89 | 91.57 |
+
+    | Machine Learning | 87.14 | 84.61 | 88.35 | 91.58 |
+
+    | RF | 87.38 | 87.97 | 81.32 | 86.38 |
+
+    | ET | 91.7 | 90.87 | 88.55 | 92.18 |
+
+    | AdaBoost Classifier | 70.68 | 74.38 | 66.52 | 83.34 | | 82.76 | 87.65 | 81.51
+    | 95.64 | | 92.19 | 97.14 | 87.09 | 93.37 |
+
+
+    To justify our work, Table V compares to the previous ones. The table confirms
+    that we get better accuracy than the mentioned literature.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# TABLE V. COMPARISON OF ACCURACY WITH EARLIER STUDIES
+
+
+    | Author (year) | Methods | Accuracy |
+
+    |---|---|---|
+
+    | Ramana (2019) [6] | Bagging | 69.3% |
+
+    | Anagaw (2019) [7] | CNB | 71.36% |
+
+    | Rahman (2019) [8] | LR | 75% |
+
+    | Veena (2019) [9] | C5.0 Boosting | 75.19% |
+
+    | Auxilia (2018) [10] | PCC+DT | |
+
+    | Kuzhillareth (2020) [11] | GA-RF | 88% |
+
+    | Ramesh (2019) [12] | PCA+SVM | 89.1% |
+
+    | Our model | PCC+Adaptive (ET) | 92.19% |
+
+
+    better, and for achieving an reached result, we applied Adaptive Boosting (AdaBoost)
+    over LR, RF, and ET algorithms. AdaBoost with PCC-FS increases the overall performance
+    of these algorithms, as the estimate of the Adaptive method has an accuracy of
+    92.1%. From the comparative analysis, we can say that this will aid the medical
+    practitioners for effective decision making to diagnose liver patients. In the
+    future, we will use deep learning and learning with various feature selection
+    techniques for classifying liver patients.
+
+
+    ![](img/286b6dc2299a3afb809c8e3e15fdc268_4_0.png)
+
+
+    Fig. 4. Performance Analysis of Machine Learning Using PCC-FS
+
+
+    ![](img/286b6dc2299a3afb809c8e3e15fdc268_4_1.png)
+
+
+    Fig. 5. Performance Analysis of Algorithms (Boosting) AdaBoost Using PCC-FS
+
+
+    # REFERENCES
+
+
+    +   [1] "Resegmentation,". Available: https://www.medicaltoday.com/articles/305075-registration.
+    [Accessed: 11-May-2020]
+
+
+    +   [2] "Picture of the ‘Liver,". Available: https://www.medicalatlas.com/diseases-disures-of-the-liver.
+    [Accessed: 11-May-2020]
+
+
+    +   [3] "Liver disease,". Available: https://www.mayoc.org/diseases-conditions/liver-disease/symptoms-syc-20351960.
+    [Accessed: 11-May-2020]
+
+
+    +   [4] Global Burden of Liver Disease, S.K. Karim MD, DM and Rahik Alvi MD, www.globalgastenterology.org.
+
+
+    +   [5] Askarvi, Rahman H, Imran K, Kamash S, “Prediction of liver diseases in
+    the world,” Journal of Hepatology, vol. 70, no. 1, p. 1, Jan. 2019.
+
+
+    +   [6] B. V. Rahman and S. K. Bodur, “Performance Comparison of Classification
+    Algorithms on Medical Data,” 2019 IEEE 10th International Conference on Communications,
+    Informatics and Control Systems (ICICS), Las Vegas NV, USA, 2019, p. 014-015.
+
+
+    +   [7] A. Wang, Y. Chang, “A new method of Bayesian approach for liver disease
+    classification,” Journal of Artificial Intelligence and Human Computing, vol.
+    10, p. 3889–3897, 2021.
+
+
+    +   [8] Rahman, A. K. M. Shari, F. M. & Tamim, Z. Roy, and Hoy, Sayed, “A Comparative
+    Study on Liver Disease Prediction using Machine Learning Techniques,” International
+    Journal of Medical Research, vol. 8, pp. 419–422, 2019.
+
+
+    +   [9] Vicosa, G. & Shehu, D. & Basariya, Deepvi, T. & Trivedi, “Effective Analysis
+    and Diagnosis of Liver Disease,” International Conference on Communication and
+    Signal Processing, April 3-5, 2020, p. 1-5.
+
+
+    +   [10] L. A. Auxilia, Machineupilli, Joseph K and K. A, “Comparative Analysis
+    of Machine Learning Techniques for Indian Liver Patient Prediction,” 2018th International
+    Conference on Electronics and Informatics (ICEI), 2018, p. 47-50.
+
+
+    +   [11] M. A. Kuzhhillareth, Machine Learning Techniques for Indian Liver Patients,
+    2020th International Conference on Advanced Computing and Computing Systems (ICACS),
+    Kolkata, 2020, p. 177-182.
+
+
+    +   [12] Ramesh, D., Auxilia, K., “Ensemble based classifier method for liver
+    disease prediction approach,” Health and Technology, vol. 9, no. 4, p. 533–544,
+    2019.
+
+
+    +   [13] “TCCI machine learning approach,” <Online>. Available: https://www.kaggle.com/datasets/lpd/Indian-Patient-Dataset.
+    [Accessed: 11-May-2020]
+
+
+    +   [14] S. M. Hasan, A. M. Mann, M. P. Uddin and A. H. Hasan, “Comparison of
+    Classification Approaches for Liver Disease Prediction,” 2018th International
+    Conference on Communication, Communication, Material and Electronic Engineering
+    Research (ICER), Dhaka, p. 1-6.
+
+
+    +   [15] A. J. Champala, M. F. Rabi and N. Babu, “Improvement in Hyperspectral
+    Image Classification Using Hybrid Subspace
+
+
+    In this research, for (the) machine learning algorithms are applied on ILPD dataset
+    preprocessing, to overcome the issue of imbalance distribution, an oversampling
+    technique (Random Over) is used. Robust Scaling is used to adjust the feature
+    values in a specific range. The obtained results are comparatively inadequate.
+    Therefore, to optimize the algorithms Pearson Correlation Coefficient (PCC-FS)
+    is for achieving
+
+
+    # VI. CONCLUSION'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'Detection Technique," 2019 International Conference on Sustainable Technologies
+    for Industry 4.0 (STI), Dhaka, Bangladesh, 2019, pp. 1-5.
+
+
+    [17] Box, George E.P., Meyer, Daniel, "An Analysis for Unreplicated Fractional
+    Factorials." Technometrics, vol. 28, no. 1, pp. 11-18, 1986.'
+  merge: -1
+  img_proc: true
