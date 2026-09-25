@@ -1,0 +1,1274 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Mitigation of Fake Data Content Poisoning Attacks
+
+    in NDN Blockchain
+
+
+    Stanisław Baranski
+
+    Faculty of Electronics, Telecommunications and Informatics
+
+    Gdaansk University of Technology
+
+    Gdaansk, Poland
+
+    stanislaw.baranski@pg.edu.pl
+
+
+    Jerzy Konorski
+
+    Faculty of Electronics, Telecommunications and Informatics
+
+    Gdaansk University of Technology
+
+    Gdaansk, Poland
+
+    jekoni@eti.pg.edu
+
+
+    Abstract—Information-content networks struggle with content poisoning attacks
+    (CPAs), whose stronger form called Fake Data CPA, when an intruder uploads content
+    with signed credentials. Following an existing infection approach leveraging the
+    constrained time when content can implement it, we design a blockchain-based mechanism
+    for Proof-of-Time to distinguish between intruder and legitimate publishers, and
+    argue that blockchain solutions implement it. The proposed scheme, using blockchain,
+    provides enough security and detail to be a valuable alternative to the infection
+    approach, superior with respect to order determination, resiliency, and fault
+    tolerance.
+
+
+    **Keywords—** Data Networking, content poisoning, blockchain.
+
+
+    # I. INTRODUCTION
+
+
+    Information-content networks [1] mark a paradigm shift from content-oriented networking.
+    With many desirable features, such as content caching, mobility support, and security
+    they are guaranteed by the ICN transport layer or more effective network used
+    to cache the host-oriented application. An I implementation called Named Data
+    Networking (NDN) will serve as a conceptual framework throughout the rest of this
+    paper. NDN permits routing and forwarding of content to subscribers by exchanging
+    Data and packets, as well as managing access to interested subscribers. A piece
+    of content (a Web object, document, image file or a data stream) is requested
+    by its location name Named Data Object (NDO). Each should be authenticated by
+    the publisher who created it.
+
+
+    The benefit of content caching becomes a double-edged sword when security concerns
+    are taken into account. An intruder who gets to the publisher''s key can create
+    poisoned content with valid signatures. Such content can be easily detected in
+    ICN nodes. The Content Poisoning Attacks (CPAs) in NDN, as well as in other ICN
+    approaches,
+
+
+    can be Corrupted or Fake Data [3]. In both classes, content is illegally modified.
+    In the Corrupted Data CPA [4], [6], an attacker (intruder publisher) does not
+    possess the signature key of a legitimate publisher; thus, the content will not
+    pass a signature verification. However, verification is optional and there are
+    reasons why it may not be performed at every. The first one is economic: signature
+    verification requires a corresponding public key, and not every node can be maintained/access
+    to all possible keys.
+
+
+    Fake Data CPA [6], [7] is the most dangerous case, since an intruder publisher
+    who has the legitimate publisher''s key, however, is indistinguishable from the
+    legitimate publisher—can forge content with successful verification to a subscriber-end.
+    Once a bounce gets propagated across multiple Content Stores at NDN, each subscriber
+    who requests from that receives and verifies the poisoned content. The poisoned
+    content cannot be easily removed as most ICN nodes support not removing/revoking
+    of cache content other than native (e.g., using cache) mechanisms. This approach
+    allows us to prevent fake content by sharing information on suspicious NDOS and
+    filtering them out of the Content Stores—would be hard to perform before in time,
+    before the content is fixed and processed by the interested publisher. The problem
+    is still unsolved, only early solutions exist.
+
+
+    We consider a scenario where an attacker is involved, i.e., unauthorized access
+    to credentials, either through expiration or key revocation by the legitimate
+    publisher (credentials owner). Thus his/her a publisher''s account is restricted
+    to a finite window, in contrast with the legitimate publisher access is unaltered.
+    [7] we leverage the difference between the restricted and unrestricted time access
+    sequences to require each publisher to access to credentials over some time period.
+    We refer to this method of authentication as Proof-of-Time. We extend the traditional
+    authentication model by the following aspect:
+
+
+    access to credentials \ Proof of Time ⇒ authenticity
+
+
+    > *Funded by the National Science Center, Poland, under Grant N-2016/2/B3'
+  - '[PAGE 1]
+
+
+    # 2020 30th International Communication Networks and Applications Conference (ITNAC)
+
+
+    Access to credentials can be proven by creating a certificate or signature that
+    requires the use of the credentials. Proof-Time can be proven by repeating this
+    process over time. Online access to the credentials is secured by making a hash-signed
+    certificate useless.
+
+
+    consensus is not. Care is taken to endow each object with strong enough publisher
+    credentials. However, public-key cryptography is not employed, therefore peer
+    identity management is minimal and the approach carries over to other, solutions.
+
+
+    NDO has its Credibility–the longer a publisher is active, the higher the Credibility
+    Score such in the eyes of an interested subscriber. Ideally, another publisher
+    should be able to achieve Credibility Score to convince the network about its
+    correctness, trustworthiness,
+
+
+    In [7] CPAs are generated by abstracting content as a graph proof. A publisher
+    is required to verify externally (i.e., upload content) to nodes not connected
+    by a trust graph. An infected node is to trust the content, and can propagate
+    along the trust graph if neighbors are infected. Proof-Time is achieved by requiring
+    that such infections be sequential and followed at predicted times. The process
+    may end up in a node that trusts a desirable outcome in the case of an infected
+    publisher) or an (all nodes trust the content, a desirable outcome in the case
+    of network-wide
+
+
+    We assume that the network itself does not contain intruder publishers by illegally
+    revealing their Credibility Scores.
+
+
+    In this paper, we propose an alternative mechanism based on consensus blocks and
+    time-spaced extensions to create Proof-Time infection model that our approach
+    is promising and worthy of research. Our contributions include:
+
+
+    +   - formulating a framework for blockchain consensus to mitigate Fake CPA,
+
+    - designing a novel defense mechanism based on blockchain technology,
+
+    - qualitatively evaluating and the proposed mechanism against the graph infection
+    model in terms of scalability, fault-tolerance, and resiliency.
+
+
+    In Sec II., we review related works. In Sec III., we outline a consensus framework
+    and the notion of blockchain. In Sec IV., we detail our blockchain technology-based
+    solution using the Federated Agreement consensus protocol. Finally, a comparison
+    of the blockchain and graph-infection-based approaches is presented in Sec. VI
+    we concludes the paper.
+
+
+    # II. RELATED WORK
+
+
+    CPAs in the now have been an active research field for several years; see [3];
+    [6] for detailed accounts and surveys for NDN. Among CPAs, those based on consent
+    verification, forarding and blocking are dominant, [8], [9]. We cite-based document
+    environment for CPAs includes Bitcoin and Whisper. This system is a content-oriented
+    service with membership, where editors exchange changes regarding an article to
+    be published are valid until a consensus is reached. Voting might weaken CPAs,
+    but creates a vulnerability to Sybil attacks. A mechanism does not scale well
+    to an Internet-wide data transfer protocol. In LOCKSS, a PDF digital preservation
+    system [10], tight cooperation among participants is invited to vote out bad consensus.
+    Cyclic polls may trigger a sequence of content repairs if a voting
+
+
+    # III. CONSENSUS AND BLOCKCHAIN
+
+
+    We propose a solution based on the leveraging of existing consensus algorithm.
+    Postulate resilience to Byzantine blockchains [11], [12], for an Internet-wide
+    mechanism managed by multiple operators, one can expect all nodes to act reliably
+    and honestly. Thus it is possible to relax the trusted network overlay association
+    with membership-nodes joining and leaving the network at
+
+
+    Consensus protocols to protect Byzantine blockchains are used in open-membership
+    blockchain systems. Data is stored in a blockchain system and secure against intruders
+    as long as they do not control the majority of consensus means. Examples include
+    Bitcoin [14], Ethereum, and Stellar [16]. We use, Stellar, our Federated Agreement
+    (FBA), which is similar to the consensus mechanism described. We also use a simple
+    transaction protocol
+
+
+    with a slight modification that prevents re-Proof-of-transactions, in Sec.-IV.
+
+
+    # IV. PROPOSED SOLUTION
+
+
+    We propose a solution in which all or part of the ICN nodes participate in a blockchain
+    consensus protocol, securing a common database of Proof-of-Time gains along with
+    the Content Store. Event consistency is ensured, i.e., each node has that the
+    other nodes have the same version of the database. An observation is that by using
+    a blockchain system we ensure that publishers can only publish Proof-of-Time.
+    To authenticate, if a legitimate publisher, they must have access to the corresponding
+    credentials over a long enough time, which is unaffordable for an intruder publisher,
+    but affordable for a legitimate one. A publisher wishing to confirm content authority
+    must continually submit a subtlety'
+  md: '
+
+    # Mitigation of Fake Data Content Poisoning Attacks in NDN Blockchain
+
+
+    Stanisław Baranski
+
+    Faculty of Electronics, Telecommunications and Informatics
+
+    Gdaansk University of Technology
+
+    Gdaansk, Poland
+
+    stanislaw.baranski@pg.edu.pl
+
+
+    Jerzy Konorski
+
+    Faculty of Electronics, Telecommunications and Informatics
+
+    Gdaansk University of Technology
+
+    Gdaansk, Poland
+
+    jekoni@eti.pg.edu
+
+
+    Abstract—Information-content networks struggle with content poisoning attacks
+    (CPAs), whose stronger form called Fake Data CPA, when an intruder uploads content
+    with signed credentials. Following an existing infection approach leveraging the
+    constrained time when content can implement it, we design a blockchain-based mechanism
+    for Proof-of-Time to distinguish between intruder and legitimate publishers, and
+    argue that blockchain solutions implement it better. The proposed scheme, using
+    blockchain, provides enough security and detail to be a valuable alternative to
+    the infection approach, superior with respect to order determination, resiliency,
+    and fault tolerance.
+
+
+    **Keywords—** Data Networking, content poisoning, blockchain.
+
+
+    # I. INTRODUCTION
+
+
+    Information-content networks [1] mark a paradigm shift from content-oriented networking.
+    With many desirable features, such as content caching, mobility support, and security
+    they are guaranteed by the ICN transport layer or more effective network used
+    to cache the host-oriented application. An I implementation called Named Data
+    Networking (NDN) will serve as a conceptual framework throughout the rest of this
+    paper. NDN permits routing and forwarding of content to subscribers by exchanging
+    Data and packets, as well as managing access to interested subscribers. A piece
+    of content (a Web object, document, image file or a data stream) is requested
+    by its location name Named Data Object (NDO). Each should be authenticated by
+    the publisher who created it.
+
+
+    The benefit of content caching becomes a double-edged sword when security concerns
+    are taken into account. An intruder who gets to the publisher''s key can create
+    poisoned content with valid signatures. Such content can be easily detected in
+    ICN nodes. The Content Poisoning Attacks (CPAs) in NDN, as well as in other ICN
+    approaches, can be Corrupted or Fake Data [3]. In both classes, content is illegally
+    modified. In the Corrupted Data CPA [4], [6], an attacker (intruder publisher)
+    does not possess the signature key of a legitimate publisher; thus, the content
+    will not pass a signature verification. However, verification is optional and
+    there are reasons why it may not be performed at every. The first one is economic:
+    signature verification requires a corresponding public key, and not every node
+    can be maintained/access to all possible keys.
+
+
+    Fake Data CPA [6], [7] is the most dangerous case, since an intruder publisher
+    who has the legitimate publisher''s key, however, is indistinguishable from the
+    legitimate publisher—can forge content with successful verification to a subscriber-end.
+    Once a bounce gets propagated across multiple Content Stores at NDN, each subscriber
+    who requests from that receives and verifies the poisoned content. The poisoned
+    content cannot be easily removed as most ICN nodes support not removing/revoking
+    of cache content other than native (e.g., using cache) mechanisms. This approach
+    allows us to prevent fake content by sharing information on suspicious NDOS and
+    filtering them out of the Content Stores—would be hard to perform before in time,
+    before the content is fixed and processed by the interested publisher. The problem
+    is still unsolved, only early solutions exist.
+
+
+    We consider a scenario where an attacker is involved, i.e., unauthorized access
+    to credentials, either through expiration or key revocation by the legitimate
+    publisher (credentials owner). Thus his/her a publisher''s account is restricted
+    to a finite window, in contrast with the legitimate publisher access is unaltered.
+    [7] we leverage the difference between the restricted and unrestricted time access
+    sequences to require each publisher to access to credentials over some time period.
+    We refer to this method of authentication as Proof-of-Time. We extend the traditional
+    authentication model by the following aspect:
+
+
+    access to credentials \ Proof of Time ⇒ authenticity
+
+
+    *Funded by the National Science Center, Poland, under Grant N-2016/2/B3*
+
+
+    Access to credentials can be proven by creating a certificate or signature that
+    requires the use of the credentials. Proof-Time can be proven by repeating this
+    process over time. Online access to the credentials is secured by making a hash-signed
+    certificate useless. consensus is not. Care is taken to endow each object with
+    strong enough publisher credentials. However, public-key cryptography is not employed,
+    therefore peer identity management is minimal and the approach carries over to
+    other, solutions.
+
+
+    NDO has its Credibility–the longer a publisher is active, the higher the Credibility.
+    Ideally, another publisher should be able to convince the network about its correctness,
+    trustworthiness. Proof-Time is achieved by requiring that such de-nodes are not
+    disconnected from the network. for an Internet-wide data transfer protocol. We
+    assume that the network itself does not contain intruder publishers by revealing
+    their Credibility Scores.
+
+
+    In this paper, we propose an alternative infection model that our approach is
+    promising and worthy of research. Our contributions include:
+
+
+    - formulating a framework for blockchain to mitigate CPA,
+
+    - designing a novel defense mechanism based on blockchain technology,
+
+    - qualitatively evaluating the proposed mechanism against graph in terms of scalability,
+    fault-tolerance, and resiliency.
+
+
+    In Sec II., we review related works. In Sec III., we outline a framework and the
+    notion of blockchain. In Sec IV., we detail our blockchain-based solution using
+    the Federated Agreement. Finally, a comparison of graph-based approaches is presented
+    in Sec. we concludes the paper.
+
+
+    # II. RELATED WORK
+
+
+    CPAs in the now have been an active research field for several years; see [3];
+    [6] for detailed accounts and surveys for NDN. Among CPAs, those based on consent
+    verification, forarding and blocking are dominant, [8], [9]. We cite-based document
+    environment for CPAs includes Bitcoin and Whisper. This system is a content-oriented
+    service with membership, where editors exchange changes regarding an article to
+    be published are valid until a consensus is reached. Voting might weaken CPAs,
+    but creates a vulnerability to Sybil attacks. A mechanism does not scale well
+    to an Internet-wide. In LOCKSS, a PDF digital preservation system [10], tight
+    cooperation among participants is invited to vote out bad consensus. Cyclic polls
+    may trigger a sequence of content repairs if a voting
+
+
+    # III. CONSENSUS AND BLOCKCHAIN
+
+
+    We propose a solution based on the leveraging of existing consensus algorithm.
+    Postulate resilience to Byzantine blockchains [11], [12], for an Internet-wide
+    mechanism managed by multiple operators, one can expect all nodes to act reliably
+    and honestly. Thus it is possible to relax the trusted network overlay association
+    with membership-nodes joining and leaving the network at. Consensus protocols
+    to protect Byzantine blockchains are used in open-membership blockchain systems.
+    Data is stored in a blockchain system and secure against intruders as long as
+    they do not control the majority of consensus means. Examples include Bitcoin
+    [14], Ethereum, and Stellar [16]. We use, Stellar, our Federated Agreement (FBA),
+    which is similar to the consensus mechanism described. We also use a simple transaction
+    protocol with a slight modification that prevents re-Proof-of-transactions, in
+    Sec.-IV.
+
+
+    # IV. PROPOSED SOLUTION
+
+
+    We propose a solution in which all or part of the ICN nodes participate in a blockchain
+    consensus protocol, securing a common database of Proof-of-Time gains along with
+    the Content Store. Event consistency is ensured, i.e., each node has that the
+    other nodes have the same version of the database. An observation is that by using
+    a blockchain system we ensure that publishers can only publish Proof-of-Time.
+    To authenticate, if a legitimate publisher, they must have access to the corresponding
+    credentials over a long enough time, which is unaffordable for an intruder publisher,
+    but affordable for a legitimate one. A publisher wishing to confirm content authority
+    must continually submit a subtlety
+
+    '
+  mdcn: '
+
+
+    # NDN区块链中伪造数据内容投毒攻击的缓解
+
+
+    Stanisław Baranski
+
+    电子、电信与信息学学院
+
+    格但斯理工大学
+
+    波兰，格但斯
+
+    stanislaw.baranski@pg.edu.pl
+
+
+    Jerzy Konorski
+
+    电子、电信与信息学学院
+
+    格但斯理工大学
+
+    波兰，格但斯
+
+    jekoni@eti.pg.edu
+
+
+    摘要—信息内容网络面临内容投毒攻击（CPA）的困扰，当入侵者上传带有签名凭据的内容时，其更强的形式被称为“伪造数据 CPA”。遵循一种利用内容实施时受限时间的现有感染方法，我们设计了一种基于区块链的“时间证明”（Proof-of-Time）机制来区分入侵者和合法发布者，并认为区块链解决方案能更好地实现该机制。所提出的方案利用区块链提供了足够的安全性和细节，可以作为感染方法的有价值替代方案，且在顺序确定、韧性和容错性方面优于后者。
+
+
+    **关键词—** 数据网络、内容投毒、区块链。
+
+
+    # I. 引言
+
+
+    信息内容网络 [1] 标志着从以内容为导向的范式转变。由于许多理想特性，如内容缓存、移动性支持和安全性，这些特性由 ICN 传输层或用于缓存主机导向应用程序的更有效网络来保证。一种名为命名数据网络（NDN）的
+    ICN 实现将作为本文后续部分的概念框架。NDN 允许通过交换数据和数据包向订阅者路由和转发内容，并管理对感兴趣的订阅者的访问。内容（Web 对象、文档、图像文件或数据流）通过其位置名称命名数据对象（NDO）被请求。每个内容都应由创建它的发布者进行验证。
+
+
+    当考虑到安全问题时，内容缓存的优势变成了一双刃剑。获取了发布者密钥的入侵者可以创建带有有效签名的投毒内容。此类内容在 ICN 节点中很容易被检测。NDN 以及其他
+    ICN 方法中的内容投毒攻击（CPA）可以是损坏数据或伪造数据 [3]。在这两类中，内容被非法修改。在损坏数据 CPA [4], [6] 中，攻击者（入侵者发布者）不拥有合法发布者的签名密钥；因此内容无法通过签名验证。然而，验证是可选的，并且由于某些原因，可能并非每次都执行。其之一是经济因素：签名验证需要相应的公钥，而并不是每个节点都能维护/访问所有可能的密钥。
+
+
+    伪造数据 CPA [6], [7] 是最危险的情况，因为拥有合法发布者密钥的入侵者发布者无法与合法发布者区分——他们可以伪造在订阅者端能够通过成功验证的内容。一旦一个响应包在
+    NDN 的多个内容存储（Content Stores）中传播，请求该内容的订阅者都会接收并验证投毒内容。投毒内容无法被轻易删除，因为大多数 ICN 节点不支持除原生（例如使用缓存）机制之外的删除/撤销缓存内容。这种方法允许我们通过共享可疑
+    NDO 的信息并将其从内容存储中过滤掉来防止伪造内容——这在感兴趣的发布者固定并处理之前很难实现。该问题仍未解决，仅存在早期解决方案。
+
+
+    我们考虑一种涉及攻击者的场景，即通过合法发布者（凭据所有者）的过期或密钥撤销获得未经授权的凭据访问。因此，入侵者的发布者账户被限制在一个有限的时间窗口内，而合法发布者的访问不受影响。[7]
+    我们利用受限和不受限的时间访问序列之间的差异，要求每个发布者在某些时间段内访问凭据。我们将这种认证方法称为“时间证明”。我们通过以下方面扩展了传统的认证模型：
+
+
+    访问凭据 ⇒ 时间证明 ⇒ 真实性
+
+
+    *由波兰国家科学中心资助，拨款号 N-2016/2/B3*
+
+
+    访问凭据可以通过创建一个需要使用凭据的证书或签名来证明。时间证明可以通过随时间重复此过程来证明。通过共识来确保每个对象都具有足够强大的发布者凭据。然而，没有采用公钥加密，因此对等身份管理是极少数的，且该方法可以迁移到其他解决方案。
+
+
+    NDO 有其信誉（Credibility）——发布者活跃时间越长，信誉越高。理想情况下，另一个发布者应该让网络相信其正确性和可信度。时间证明的实现是要求此类节点在全网数据传输协议中不与网络断开。我们假设网络本身通过公开其信誉分，不包含入侵者发布者。
+
+
+    在本文中，我们提出了一种替代的感染模型，证明我们的方法是有前景且值得研究的。我们的贡献包括：
+
+
+    - 制定一个用于缓解 CPA 的区块链框架；
+
+    - 设计一种基于区块链的新型防御机制；
+
+    - 在可扩展性、容错性和韧性方面，定性地评估所提出的机制。
+
+
+    在第 II 节中，我们回顾了相关工作。在第 III 节中，我们概述了框架和区块链的概念。在第 IV 节中，我们详细说明了基于联邦协议（Federated Agreement）的区块链解决方案。最后，在第
+    V 节介绍了基于图方法的对比，并总结全文。
+
+
+    # II. 相关工作
+
+
+    CPA 已成为过去几年的活跃研究领域；详细说明请参见 [3]; [6] 以及 NDN 的综述。在 CPA 中，基于共识验证、转发和阻塞的攻击占据主导地位 [8],
+    [9]。基于引用的 CPA 文档环境包括 Bitcoin 和 Whisper。该系统是一种具有成员制的内容导向服务，其中编辑器交换待发布文章的更改直到达成共识为止有效。投票可能会削弱
+    CPA，但会产生遭受女巫攻击（Sybil attacks）的漏洞。该机制无法良好扩展到全网。在 LOCKSS（一种 PDF 数字保护系统 [10]）中，邀请参与者紧密合作以投票剔除错误的共识。循环投票可能会触发一系列内容修复……
+
+
+    # III. 共识与区块链
+
+
+    我们提出了一种基于利用现有共识算法的解决方案。假设对拜斯庭型区块链具有容错性 [11], [12]，对于一个由多个操作员管理的全网机制，可以预见所有节点都会可靠且诚实地运行。因此，可以放宽信任网络叠加关联，允许成员节点随时加入或离开网络。用于保护拜斯庭型区块链的共识协议用于开放成员制的区块链系统。数据存储在区块链系统中，只要入侵者不控制大多数共识手段，就能防止入侵者。示例包括
+    Bitcoin [14]、Ethereum 和 Stellar [16]。我们使用了 Stellar，我们的联邦协议（FBA），它与描述的共识机制相似。在第
+    IV 节中，我们还使用了一种略微修改的简单交易协议，以防止重放。
+
+
+    # IV. 提出的解决方案
+
+
+    我们提出了一种解决方案，其中所有或部分 ICN 节点参与区块链共识协议，与内容存储一起保护一个时间证明增益的公共数据库。事件一致性得到了保证，即每个节点都拥有其他节点具有相同版本的数据库。观察结果是，通过使用区块链系统，我们确保发布者只能发布时间证明。为了进行认证，如果是合法发布者，他们必须在足够的时间内访问相应的凭据，这对于入侵者发布者来说负担不起的，但对于合法发布者是可以的。想要确认内容权限的发布者必须不断提交一个微调
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    # 2020 30th International Communication Networks and Applications Conference (ITNAC)
+
+
+    prepared transaction, a Proof-of-Time claim, to the blockchain network. The transaction
+    includes (cf. Fig. 1):
+
+    . We propose a more flexible model where authentication can be acquired gradually
+    via Credibility Score (cf. Sec. I), which increases authentication granularity.
+    Different endpoints may be used for different content types, e.g., one can require
+    10-minute, and 12-hour types of Proof-of-Time. Whenever content is published with
+    stolen credentials, the owner has certain time to revoke the credentials and halt
+    the respective authentication process.
+
+
+    +   * a hash of the content authenticity,
+
+    * a signature on the chain that proves access to appropriate credentials,
+
+    * the publisher''s public key used to verify the signature and
+
+    * a hash of the previous block to prevent transaction signing.
+
+
+    ![](img/6e72a9e9092760aad8ec93355f31805a_2_0.png)
+
+
+    Fig. 1. Structure of proof-of-time claim
+
+
+    ![](img/6e72a9e9092760aad8ec93355f31805a_2_1.png)
+
+
+    Fig. 2. Integrated trust and ICN transport layers
+
+
+    The publisher submits the transaction to the nearest node, which includes it in
+    a block and broadcasts to the rest of the network. Once all network nodes approve
+    the block through the consensus protocol described in Sec. IV-G, the publisher
+    can create the new Proof-of-Time transaction joining the previous block. The process
+    is repeated until the required Credibility Score (cf. Sec. IV-B) is reached. In
+    sequel, we detail our blockchain-based solution.
+
+
+    # A. Blockchain Layer
+
+
+    A network can play two roles: of an ICN node participating in routing and caching,
+    and of a blockchain node participating in the consensus protocol and blockchain
+    storage (cf. Fig. 2). Nodes connected to subscribers do not participate in the
+    blockchain, since they do not content trustworthiness. The blockchain layer could
+    also be managed by other than nodes, separating the (content distribution) layer
+    from the trust layer, cf. Fig. 3. ICN nodes can be relieved from the network overhead
+    to avoid unnecessary complexity. Also, a separate system is more for ICN solutions,
+    and legacy systems, the developed trust does not depend on the ICN architecture
+    but with the content hash and publisher credentials. The blockchain trust could
+    be hosted by more powerful devices and possibly different organizations—achieving
+    separation of concerns, which is difficult in the long term. For the rest of the
+    paper we assume the separation of the ICN and blockchain node should play one
+    or both roles depending on the implementation.
+
+
+    ![](img/6e72a9e9092760aad8ec93355f31805a_2_2.png)
+
+
+    Fig. 3. Separated trust and ICN transport layers
+
+
+    # C. Publisher Workflow
+
+
+    To publish the content on the ICN network and authenticate it via the blockchain,
+    a publisher executes the following:
+
+    1. Create a hash of the NDO.
+
+    2. Compute it using the publisher''s key pair.
+
+    3. Create a Proof-of-Time transaction, which includes the hashes of the NDO and
+    of the previous blockchain block, and the signature to prove the private key.
+
+    4. Publish the Proof-of-Time to the blockchain.
+
+    5. Repeat steps 3 and 4 until the required Credibility Score is reached.
+
+
+    # B. Credibility Score
+
+
+    In the graph protocol [7], there are two states of content authenticity: authenticated
+    and not-authenticated, which is somewhat limiting. Content we like weather forecasts
+    should not be authenticated as long as data in a blockchain
+
+
+    # D. Subscriber Workflow
+
+
+    The publishing of the content to an ICN node and the Proof-of-Time to a blockchain
+    is presented in Fig. 4.
+
+
+    To fetch content from the ICN network and authenticate it via the blockchain,
+    a subscriber executes the following:
+
+
+    Authorized licensed use limited to: Carleton University. Download on June 06,
+    2021 at 02:19:44 UTC from IEEE Xplore. Restrictions apply.'
+  - '[PAGE 3]
+
+
+    # 2020 30th International Telecommunication Networks and Applications Conference
+    (ITNAC)
+
+
+    +   1. Send an Interest packet with NDO to the nearest ICN node (subsequently,
+    the ICN returns a Data packet with requested content, signature, and the publisher''s
+    public key)
+
+    2. Send Credibility Score request along with the hash of content and the publisher''s
+    public key to the blockchain node, the Credibility Score is received from the
+    blockchain node)
+
+    3. Decide if the Credibility Score is sufficient to trust the content.
+
+
+    In Fig. 6, we show an example of three blocks Proof-of-Time chains. We claim that
+    blocks are created at 10-minute intervals, and each piece of content creates a
+    Credibility score of 20 minutes. Alice first connects to ICN getting the hash
+    of the DO shown in Fig. 4, the corresponding Proof-of-Time transaction is created
+    and published to the blockchain node. After 10 minutes, she publishes the Proof-of-Time
+    transaction, which repeats after another 10 minutes. Three transactions in a certify
+    certify that Alice has credentials for 20 minutes. Meanwhile, Bob was able to
+    publish only 2 Proof-of-Time chains, which is not enough to trust the content,
+    Carol seeks the second block, which is a break in the Proof-of-Time chain; therefore
+    the content differs from the third block.
+
+
+    The workflow of the Credibility Score is presented in Fig. 5. Proof-of-Time is
+    evaluated by counting the number of transactions to the content hash
+
+
+    ![](img/6e72a9e9092760aad8ec93355f31805a_3_0.png)
+
+
+    Fig. 4. Connection to ICN and Proof-of-Time blockchain
+
+
+    ![](img/6e72a9e9092760aad8ec93355f31805a_3_1.png)
+
+
+    Fig. 6. Blockchain chains
+
+
+    ![](img/6e72a9e9092760aad8ec93355f31805a_3_2.png)
+
+
+    Fig. 5. Fetching and verifying content Credibility Score
+
+
+    # E. Blockchain structure
+
+
+    Blocks are fundamental primitives of every blockchain system. A system consists
+    of a set of transactions
+
+
+    A python algorithm to execute new blocks and check Credibility Score is presented
+    in Listing 1. Line 1 defines the state of finalized Proof-of-Time chains. We allow
+    each piece of content to be authenticated by multiple publishers. Each subscriber
+    can decide which publisher to trust. Two lines define the state of candidates,
+    those that do not have the Proof-of-Time chain. Each blockchain node, upon receiving
+    a new block, executes the method in line 5; it checks if some of the chains have
+    been broken, i.e., whether the Proof-of-Time chains are present in the block (lines
+    9-10). If they are, stored in (lines 12-18) the block, the functionality present
+    in the block, it checks if the previous_block_hash matches the actual hash (line
+    15), then extends the Credibility Score (line 18), and finally stores the current
+    hash as a previous_block_hash.
+
+
+    # G. FBA
+
+
+    A proof-of-work consensus (or any other Nakamoto consensus, is a leader capable
+    of updating'
+  - '[PAGE 4]
+
+
+    blockchain is based on expended expenses (results) is not suitable for the Fake
+    Data CPA problem. however, there are many other algorithms to choose from. We
+    find FBA and its implemented Consensus Protocol (SCP) are the most suitable for
+    our needs. It is fast, lightweight, and asynchronous (a node with high computational
+    power does not any advantage). In contrast to proof, the contribution in FBA is
+    determined by node trustworthiness, similarly as in the graph infection protocol.
+    A new node joining the network cannot contribute to the protocol until node trust
+    starts.
+
+
+    typically chose Liveness, i.e., tolerance of temporary node partitioning. When
+    a conflict occurs, the ledger splits into two different versions until the conflict
+    is resolved, in which it may contain new transactions. On the other hand, Stellar
+    Consensus Protocol (SCP) is backed by a quorum, which has been approved by a network
+    quorum, it cannot be changed. SCP is based on Practical Byzantine fault tolerance
+    [19] and extends its functionality by allowing open membership. In SCP, each node
+    picks itself and a set of trusted nodes to form a quorum, differently for each
+    node. A quorum is defined by allowing trust across all quorums. A quorum-intersection
+    assumption is made where any two quorums have a nonempty intersection.
+
+    In FBA-systems, the majority of nodes determines the consensus on some proposal.
+    The proposal is accepted by the majority, others are rejected or to fail, a final
+    decision is reached. In an open system where nodes can just leave, it is hard
+    to maintain a majority might shifter. To solve this, FBA introduces a process
+    that starts locally and reaches the whole network. The local quorums must overlap
+    with at least one common node to convey the voting elections across different
+    quorums.
+
+
+    Listing 1. Processing a new block
+
+
+    ```
+
+    1 finalized
+
+    2 candidates
+
+    3 previous_block_
+
+    5 def process_new_block(block):
+
+    6 for hash in candidates:
+
+    7 for publisher in candidates[hash]
+
+    8 if (hash, publisher) not in transactions:
+
+    10 finalized[hash] = publisher
+
+    11 candidates[hash]
+
+    12 delete candidates[hash]
+
+    13 for txn in block.transactions:
+
+    14 hash,
+
+    15 previous_block_hash = txn
+
+    16 if previous_block_hash !=:
+
+    18 continue
+
+    9 candidates[hash][publisher] += 1
+
+    21 previous_block_hash = block.hash
+
+    ```
+
+
+    V. COMPARISON
+
+
+    Being as an asynchronous distributed system, consensus protocols face the IPL
+    trilemma [18], where only two of three properties: Fault Tolerance, Liveness,
+    and Safety can be satisfied. The mostly choice is between Liveness and Safety.
+    Stellar guarantees consistency across all nodes in the network, whereas Liveness
+    guarantees eventual consistency and admission of new transactions. Blockchain
+    protocols
+
+
+    +   - Outcome Determination is non-deterministic in terms of a consensus decision:
+    even one sequence of interactions can result in an outcome, which is an unwanted
+    property. In contrast, Blockchain is a deterministic: with a high number of Proof-of-Time
+    clauses it ensures that his/her content will be authenticated, as guaranteed by
+    the Safety property of FBA.'
+  md: '
+
+    # 2020 30th International Communication Networks and Applications Conference (ITNAC)
+
+
+    prepared transaction, a Proof-of-Time claim, to the blockchain network. The transaction
+    includes (cf. Fig. 1):
+
+
+    - We propose a more flexible model where authentication can be acquired gradually
+    via Credibility Score (cf. Sec. I), which increases authentication granularity.
+    Different endpoints may be used for different content types, e.g., one can require
+    10-minute, and 12-hour types of Proof-of-Time. Whenever content is published with
+    stolen credentials, the owner has certain time to revoke the credentials and halt
+    the respective authentication process.
+
+
+    - a hash of the content authenticity,
+
+    - a signature on the chain that proves access to appropriate credentials,
+
+    - the publisher''s public key used to verify the signature and
+
+    - a hash of the previous block to prevent transaction signing.
+
+
+    ![](img/6e72a9e9092760aad8ec93355f31805a_2_0.png)
+
+
+    Fig. 1. Structure of proof-of-time claim
+
+
+    ![](img/6e72a9e9092760aad8ec93355f31805a_2_1.png)
+
+
+    Fig. 2. Integrated trust and ICN transport layers
+
+
+    The publisher submits the transaction to the nearest node, which includes it in
+    a block and broadcasts to the rest of the network. Once all network nodes approve
+    the block through the consensus protocol described in Sec. IV-G, the publisher
+    can create the new Proof-of-Time transaction joining the previous block. The process
+    is repeated until the required Credibility Score (cf. Sec. IV-B) is reached. In
+    sequel, we detail our blockchain-based solution.
+
+
+    ## A. Blockchain Layer
+
+
+    A network can play two roles: of an ICN node participating in routing and caching,
+    and of a blockchain node participating in the consensus protocol and blockchain
+    storage (cf. Fig. 2). Nodes connected to subscribers do not participate in the
+    blockchain, since they do not content trustworthiness. The blockchain layer could
+    also be managed by other than nodes, separating the (content distribution) layer
+    from the trust layer, cf. Fig. 3. ICN nodes can be relieved from the network overhead
+    to avoid unnecessary complexity. Also, a separate system is more for ICN solutions,
+    and legacy systems, the developed trust does not depend on the ICN architecture
+    but with the content hash and publisher credentials. The blockchain trust could
+    be hosted by more powerful devices and possibly different organizations—achieving
+    separation of concerns, which is difficult in the long term. For the rest of the
+    paper we assume the separation of the ICN and blockchain node should play one
+    or both roles depending on the implementation.
+
+
+    ![](img/6e72a9e9092760aad8ec93355f31805a_2_2.png)
+
+
+    Fig. 3. Separated trust and ICN transport layers
+
+
+    ## C. Publisher Workflow
+
+
+    To publish the content on the ICN network and authenticate it via the blockchain,
+    a publisher executes the following:
+
+    1. Create a hash of the NDO.
+
+    2. Compute it using the publisher''s key pair.
+
+    3. Create a Proof-of-Time transaction, which includes the hashes of the NDO and
+    of the previous blockchain block, and the signature to prove the private key.
+
+    4. Publish the Proof-of-Time to the blockchain.
+
+    5. Repeat steps 3 and 4 until the required Credibility Score is reached.
+
+
+    ## B. Credibility Score
+
+
+    In the graph protocol [7], there are two states of content authenticity: authenticated
+    and not-authenticated, which is somewhat limiting. Content we like weather forecasts
+    should not be authenticated as long as data in a blockchain
+
+
+    ## D. Subscriber Workflow
+
+
+    The publishing of the content to an ICN node and the Proof-of-Time to a blockchain
+    is presented in Fig. 4.
+
+
+    To fetch content from the ICN network and authenticate it via the blockchain,
+    a subscriber executes the following:
+
+
+    1. Send an Interest packet with NDO to the nearest ICN node (subsequently, the
+    ICN returns a Data packet with requested content, signature, and the publisher''s
+    public key)
+
+    2. Send Credibility Score request along with the hash of content and the publisher''s
+    public key to the blockchain node, the Credibility Score is received from the
+    blockchain node)
+
+    3. Decide if Credibility Score is sufficient to trust the content.
+
+
+    In Fig. 6, we show an example of three Proof-of-Time chains. We claim that blocks
+    are created at 10-minute intervals, and each piece of content creates a Credibility
+    score of 20 minutes. Alice first connects to ICN getting the hash of content shown
+    in Fig. 4, the corresponding Proof-of-Time transaction is created and published
+    to the blockchain node. After 10 minutes, she publishes the Proof-of-Time transaction,
+    which repeats after another 10 minutes. Meanwhile, Bob was able to publish only
+    two Proof-of-Time chains, which is not enough to trust the content, Carol seeks
+    the second block, which is the Proof-of-Time chain; therefore content differs
+    from the third block. The workflow of Credibility Score is presented in Fig. 5.
+
+
+    ![](img/6e72a9e9092760aad8ec93355f31805a_3_0.png)
+
+
+    Fig. 4. Connection to ICN and Proof-of-Time
+
+
+    ![](img/6e72a9e9092760aad8ec93355f31805a_3_1.png)
+
+
+    Fig. 6. Blockchain chains
+
+
+    ![](img/6e72a9e9092760aad8ec93355f31805a_3_2.png)
+
+
+    Fig. 5. Fetching and verifying content Credibility Score
+
+
+    ## E. Blockchain structure
+
+
+    Blocks are fundamental primitives of every blockchain system. A system consists
+    of a set of transactions. We allow each piece of content to be authenticated by
+    multiple publishers. Each subscriber can decide which publisher to trust. Two
+    lines define the state of candidates, those that do not have the Proof-of-Time
+    chain. Each blockchain node, upon receiving a new block, executes the method in
+    line 5; it checks if some of chains have been broken, i.e. whether the Proof-of-Time
+    chains are present in the block (lines 9-10). If they are, stored in (lines 12-18)
+    the block, it checks if the previous_block_hash matches the actual hash (line
+    15), then extends the Credibility Score (line 18), and finally stores the current
+    hash as previous_block_hash.
+
+
+    ## G. FBA
+
+
+    A proof-of-work consensus (or any other Nakamoto consensus based on expended expenses
+    results) is not suitable for the Fake Data problem; however, there are many other
+    algorithms to choose from. We find FBA and its implemented Consensus Protocol
+    (SCP) are the most suitable for our needs. It is fast, lightweight, and asynchronous
+    (a node with high computational power does not have any advantage). In contrast
+    to proof, the contribution in FBA is determined by node trustworthiness, similarly
+    as in the graph protocol. A new node joining the network cannot contribute to
+    the protocol until node trust starts typically chose Liveness, i.e. tolerance
+    of temporary node partitioning. When a conflict occurs, the ledger splits into
+    two different versions until the conflict is resolved, in which it may contain
+    new transactions. On the other hand, Stellar Consensus Protocol (SCP) is backed
+    by a quorum, which has been approved by a network quorum, cannot be changed. SCP
+    is based on Practical Byzantine fault tolerance [19] and extends its functionality
+    by allowing open membership. In SCP, each node picks itself and a set of trusted
+    nodes to form a quorum, differently for each node. A quorum is defined by allowing
+    trust across all quorums. A quorum-intersection assumption is made where any two
+    quorums have a nonempty intersection.
+
+
+    In FBA-systems, the majority of nodes determines the consensus on some proposal.
+    The proposal is accepted by the majority, others are rejected or to fail, a final
+    decision is reached. In an open system where nodes can just leave, it is hard
+    to maintain a majority might shifter. To solve this, FBA introduces a process
+    that starts locally and reaches the whole network. The local quorums must overlap
+    with at least one common node to convey the voting elections across different
+    quorums.
+
+
+    Listing 1. Processing a new block
+
+
+    ```
+
+    1 finalized
+
+    2 candidates
+
+    3 previous_block_
+
+    5 def process_new_block(block):
+
+    6 for hash in candidates:
+
+    7 for publisher in candidates[hash]
+
+    8 if (hash, publisher) not in transactions:
+
+    10 finalized[hash] = publisher
+
+    11 candidates[hash]
+
+    12 delete candidates[hash]
+
+    13 for txn in block.transactions:
+
+    14 hash,
+
+    15 previous_block_hash = txn
+
+    16 if previous_block_hash !=:
+
+    18 continue
+
+    19 candidates[hash][publisher] += 1
+
+    21 previous_block_hash = block.hash
+
+    ```
+
+
+    ## V. COMPARISON
+
+
+    Being as an asynchronous distributed system, consensus protocols face the IPL
+    trilemma [18], where only two of three properties: Fault Tolerance, Liveness,
+    and Safety can be satisfied. The mostly choice is between Liveness and Safety.
+    Stellar guarantees consistency across all nodes in the network, whereas Liveness
+    guarantees eventual consistency and admission of new transactions. Blockchain
+    protocols
+
+
+    - Outcome Determination is non-deterministic in terms of a consensus decision:
+    even one sequence of interactions can result in an outcome, which is an unwanted
+    property. In contrast, Blockchain is a deterministic: with a high number of Proof-of-Time
+    clauses it ensures that his/her content will be authenticated, as guaranteed by
+    the Safety property of FBA.
+
+    '
+  mdcn: "\n\n# 2020 第30届国际通信网络与应用会议 (ITNAC)\n\n准备就绪的交易，向区块链网络发送的时间证明（Proof-of-Time）声明。该交易包含以下内容（参见图1）：\n\
+    \n- 我们提出了一个更灵活的模型，其中可以通过信誉分（Credibility Score，参见第 I 节）逐渐获得认证，这增加了认证的粒度。对于不同的内容类型可能使用不同的端点，例如，一个可以要求\
+    \ 10 分钟和 12 小时类型的时间证明。当使用被盗的凭据发布内容时，所有者有一定的时间撤销这些凭据并停止相应的认证过程。\n\n- 内容真实性的哈希值，\n\
+    - 链上的签名，证明了对相应凭据的访问，\n- 用于验证签名的发布者公钥，以及\n- 前一个区块的哈希值，以防止交易重复签名。\n\n![](img/6e72a9e9092760aad8ec93355f31805a_2_0.png)\n\
+    \n图 1. 时间证明声明的结构\n\n![](img/6e72a9e9092760aad8ec93355f31805a_2_1.png)\n\n图 2.\
+    \ 集成信誉层与 ICN 传输层\n\n发布者将交易提交给最近的节点，该节点将其纳入区块并广播到网络的其余部分。一旦所有网络节点通过第 IV-G 节描述的共识协议批准该区块，发布者就可以创建一个新的时间证明交易并加入前一个区块。该过程不断重复，直到达到所需的信誉分（参见第\
+    \ IV-B 节）。接下来，我们将详细介绍基于区块链的解决方案。\n\n## A. 区块链层\n\n网络可以扮演两个角色：参与路由和缓存的 ICN 节点，以及参与共识协议和区块链存储的区块链节点（参见图2）。连接到订阅者的节点不参与区块链，因为它们不包含信任内容。区块链层也可以由节点以外的管理，将（内容分发）层与信任层分离，参见图3。ICN\
+    \ 节点可以从网络开销中释放出来，以避免不必要的复杂。此外，独立的系统更适用于 ICN 解决方案和遗留系统，开发的信任并不取决于 ICN 架构，而是取决于内容哈希和发布者凭据。区块链信任可以由更强大的设备和可能的不同组织托管——实现关注点分离，这在长期内是困难的。在本文其余部分，我们假设\
+    \ ICN 和区块链节点的分应该根据实现扮演一个或两个角色。\n\n![](img/6e72a9e9092760aad8ec93355f31805a_2_2.png)\n\
+    \n图 3. 分离的信任层与 ICN 传输层\n\n## C. 发布者工作流\n\n为了在 ICN 网络上发布内容并通过区块链对其进行认证，发布者执行以下操作：\n\
+    1. 创建 NDO 的哈希值。\n2. 使用发布者的密钥对对其进行计算。\n3. 创建时间证明交易，该交易包含 NDO 和前一个区块链区块的哈希值，以及证明私钥的签名。\n\
+    4. 将时间证明发布到区块链。\n5. 重复步骤 3 和 4，直到达到所需的信誉分。\n\n## B. 信誉分\n\n在图 协议 [7] 中，内容真实性有两种状态：已认证和未认证，这具有一定的局限性。我们喜欢的内容如天气预报，只要区块链中的数据就不应经过认证\n\
+    \n## D. 订阅者工作流\n\n将内容发布到 ICN 节点以及将时间证明发布到区块链的过程如图 4 所示。\n\n为了从 ICN 网络获取内容并通过区块链对其进行认证，订阅者执行以下操作：\n\
+    \n1. 向最近的 ICN 节点发送带有 NDO 的兴趣包（Interest packet）（随后，ICN 返回一个包含请求内容、签名和发布者公钥的数据包\
+    \ Data packet）\\\n2. 向区块链节点发送带有内容哈希值和发布者公钥的信誉分请求（从区块链节点接收信誉分）\\ \n3. 判断信誉分是否足以信任该内容。\n\
+    \n在图 6 中，我们展示了三个时间证明链的示例。我们声称区块每隔 10 分钟创建一次，且每份内容都会创建一个 20 分钟的信誉分。Alice 首先连接到\
+    \ ICN 获取图 4 所示的内容哈希值，相应的时间证明交易被创建并发布到区块链节点。10 分钟后，她发布了时间证明交易，并在另一个 10 分钟后重复。与此同时，Bob\
+    \ 只能发布两个时间证明链，这不足以信任该内容；Carol 寻找第二个区块，即时间证明链；因此内容与第三个区块不同。信誉分的工作流如图 5 所示。\n\n\
+    ![](img/6e72a9e9092760aad8ec93355f31805a_3_0.png)\n\n图 4. 连接到 ICN 和时间证明\n\n![](img/6e72a9e9092760aad8ec93355f31805a_3_1.png)\n\
+    \n图 6. 区块链链\n\n![](img/6e72a9e9092760aad8ec93355f31805a_3_2.png)\n\n图 5. 获取并验证信誉分\n\
+    \n## E. 区块链结构\n\n区块是基础性的原语。区块链系统允许通过共识协议来决定内容的一致性。发布者可以被多个认证，决定内容者的状态。区块以 10 分钟为间隔创建，且每份内容创建一个\
+    \ 20 分钟的信誉分。\n\n## G. FBA\n\n基于工作证明的共识（Proof-of-work consensus）在网络中是不合适的，因为它会产生开销问题；然而，有许多其他算法可供选择。FBA\
+    \ 和其实现的共识协议（SCP）是符合我们需求的。它是快速、轻量且异步的。与图 协议相反，新加入的节点无法贡献信任，区块链的活跃性是由多数法定人数（Quorum）支持的。一旦发生冲突，账本会分裂为两个不同的版本。在\
+    \ FBA 系统中，多数节点对某些提议达成共识（Quorum）被接受，其他则被拒绝或失败，最终达成决策。\n\n"
+  merge: 0
+- raw:
+  - '[PAGE 5]
+
+
+    # 2020 30th International Telecommunication Networks and Applications Conference
+    (ITNAC)
+
+
+    Resilience-based approach, GI is the network size and topology, as well as the
+    infection process parameters. On the other hand, the blockchain-based solution
+    using FRI relies upon the existence of connectivity.
+
+
+    Communication Complexity-GI, each node has a fixed number of neighbors, so the
+    complexity is O(N), where N is the set of nodes. In blockchain, each node has
+    to communicate with other nodes, so the communication complexity is O(N²).
+
+
+    Scalability (the total content is capable of processing at-time)—Blockchain has
+    each node process each content sequentially, so the system is as fast as a single
+    network. However, adding nodes increases the total processing capability, which
+    is therefore O(1).
+
+
+    Fault Tolerance-GI in its form does not even fault-tolerant, let alone Byzantine
+    blockchains. Fault tolerate up to Byzantine nodes.
+
+
+    Blockchain therefore outperforms GI regarding Resilience, Determination, and Fault
+    Tolerance, and is in respect to Communication Complexity and Scalability. It also
+    requires, that from SDN and Key Infrastructure (PKI), a blockchain network be
+    deployed.
+
+
+    of Proof-of, which blockchain can protect the network size. The proposed solutions
+    use Stellar and the features Byzantine Agreement consensus protocol, and compares
+    favorably with the GI protocol as to outcome, Resilience, and Fault Tolerance
+    properties, remaining inferior in Communication Complexity and Scalability. We
+    therefore authentication schemes based on blockchain-based Proof it become a viable
+    solution of fake data CPA.
+
+
+    # TABLE I COMPARISON OF GI AND BLOCKCHAIN-BASED SOLUTIONS
+
+
+    | Property | GI | Blockchain |
+
+    |---|---|--|
+
+    | Outcome | Non-deterministic | Deterministic |
+
+    | Resilience | Depends on {Nt} connectivity, infection process parameters | Out-interactions
+    required |
+
+    | Communication complexity | O(N) | O(N²) |
+
+    | Scalability | O(N) | O(1) |
+
+    | Fault-tolerance | up to Byzantine nodes | |
+
+    | Required infrastructure | NDK. | NDK, and blockchain network |
+
+
+    # VI CONCLUSION
+
+
+    Assuming a basic threat model similar to [7], we have developed an alternative
+    to the Fake Data CPA problem in NDK; that is, engage an unauthorized publisher
+    with limited access to stolen content mining. Our blockchain-based approach stems
+    from a realization that content authentication is NDK may be viewed as a consensus
+    for problem which suitable algorithms and infrastructures exist. The time constraint
+    faced by publisher rises to the notice
+
+
+    +   [1] G. Xylomakis, C. N. Veridis, A. Siri, N. Thomas, and C. Tsiopoulos. Analysis
+    of information-centric researching networks. IEEE Transactions on Surveys, vol.
+    15, no. 2, pp. 1024-1049, 2013.
+
+
+    +   [2] L. Zhang, A. Atafaryan, J. Burke, Y. Jackson, K. McFlow, and P. Crawley,
+    Wang, and B. Wang. “Network-based DDoS attacks: A survey.” IEEE Access, 7, 2019.
+
+
+    +   [3] J. Y. Guo, E. Ruik, and L. Zhang. “DDoS and DDos in Decentralized Data
+    Networking,” in 22nd Int. Conf. on Computer Applications and Networks, 2021.
+
+
+    +   [4] S. Chen and J. Lee. “A need for content posing in Naming Networking.”
+    In Proc. IEEE Workshop on Engineering Networking Technologies (SEIENT), 2014.
+
+
+    +   [5] Y. Zhou and J. Chen. “Content posing in data naming: Challenges and potential
+    solutions.” IEEE Communications Magazine, vol. 36, no. 1, pp. 82–87, 2017.
+
+
+    +   [6] Y. Yang and T. T. Chen. “Content posing in Naming Network: A Federated
+    model for implementation.” 2018.
+
+
+    +   [7] J. Konoski. “Mitigating content-stale-sub contents posing in NDK.” In
+    29th Int. on Telecommunications Applications, 2018.
+
+
+    +   [8] D. Silinitopoulos and C. Papadopoulos. “Mitigating posed content with
+    fault-tolerant IEEE networks.” IEEE Access, vol. 6, pp. 21199-21210, 2018.
+
+
+    +   [9] B. K Su and S. Sakia. “Naming NDK-based Byzantine content mitigation in
+    opportunistic networks.” IEEE Transactions on Mobile Computing, vol. 14, no. 6,
+    pp. 1275–1286, 2015.
+
+
+    +   [10] P. Maniantis, S. Stergioglou, R. Mousropoulos, M. Baker, T. J. Jiang,
+    and Y. Mulladi. “Prevent posed entries by rate-limited sampled voting.” IEEE Access,
+    7, 2019.
+
+
+    +   [11] Y. Xiao, J. Wang, J. Li, and Y. H. Hou. “Distributed consensus protocols
+    and algorithms.” In Blockchain in Distributed Systems, Springer, 2019.
+
+
+    +   [12] L. Ramport, R. Shost, and M. Ba Castro. “The Byzantine problem in blockchain.”
+    In: Works of Layer 2, 2019.
+
+
+    +   [13] Y. Wang, J. Luo, and Y. Chen. “Consensus protocols and algorithms,” 2019.
+
+
+    +   [14] [Online]. Available: http://www.bitcoin.com/.
+
+
+    Authorized license used to: Carleton University. Downloaded on 2022/06/21 at 09:18:UTC
+    from IEEE Xplore.'
+  md: "\n# 2020 30th International Telecommunication Networks and Applications Conference\
+    \ (ITNAC)\n\nResilience-based approach, GI is the network size and topology, as\
+    \ well as the infection process parameters. On the other hand, the blockchain-based\
+    \ solution using FRI relies upon the existence of connectivity.\n\nCommunication\
+    \ Complexity-GI, each node has a fixed number of neighbors, so the complexity\
+    \ is O(N), where N is the set of nodes. In blockchain, each node has to communicate\
+    \ with other nodes, so the communication complexity is O(N²).\n\nScalability (the\
+    \ total content is capable of processing at-time)—Blockchain has each node process\
+    \ each content sequentially, so the system is as fast as a single network. However,\
+    \ adding nodes increases the total processing capability, which is therefore O(1).\n\
+    \nFault Tolerance-GI in its form does not even fault-tolerant, let alone Byzantine\
+    \ blockchains. Fault tolerate up to Byzantine nodes.\n\nBlockchain therefore outperforms\
+    \ GI regarding Resilience, Determination, and Fault Tolerance, and is in respect\
+    \ to Communication Complexity and Scalability. It also requires, that from SDN\
+    \ and Key Infrastructure (PKI), a blockchain network be deployed.\n\nThe proposed\
+    \ solutions use Stellar and the features Byzantine Agreement consensus protocol,\
+    \ and compares favorably with the GI protocol as to outcome, Resilience, and Fault\
+    \ Tolerance properties, remaining inferior in Communication Complexity and Scalability.\
+    \ We therefore authentication schemes based on blockchain-based Proof-of, which\
+    \ blockchain can protect the network size it become a viable solution of fake\
+    \ data CPA.\n\n# TABLE I COMPARISON OF GI AND BLOCKCHAIN-BASED SOLUTIONS\n\n|\
+    \ Property | GI | Blockchain |\n|---|---|---|\n| Outcome | Non-deterministic |\
+    \ Deterministic |\n| Resilience | Depends on {Nt} connectivity, infection process\
+    \ parameters | Out-interactions required |\n| Communication complexity | O(N)\
+    \ | O(N²) |\n| Scalability | O(N) | O(1) |\n| Fault-tolerance | up to Byzantine\
+    \ nodes | |\n| Required infrastructure | NDK. | NDK, and blockchain network |\n\
+    \n# VI CONCLUSION\n\nAssuming a basic threat model similar to [7], we have developed\
+    \ an alternative to the Fake Data CPA problem in NDK; that is, engage an unauthorized\
+    \ publisher with limited access to stolen content mining. Our blockchain-based\
+    \ approach stems from a realization that content authentication is NDK may be\
+    \ viewed as a consensus for problem which suitable algorithms and infrastructures\
+    \ exist. The time constraint faced by publisher rises to the notice\n\n- [1] G.\
+    \ Xylomakis, C. N. Veridis, A. Siri, N. Thomas, and C. Tsiopoulos. Analysis of\
+    \ information-centric researching networks. IEEE Transactions on Surveys, vol.\
+    \ 15, no. 2, pp. 1024-1049, 2013.\n- [2] L. Zhang, A. Atafaryan, J. Burke, Y.\
+    \ Jackson, K. McFlow, and P. Crawley, Wang, and B. Wang. “Network-based DDoS attacks:\
+    \ A survey.” IEEE Access, 7, 2019.\n- [3] J. Y. Guo, E. Ruik, and L. Zhang. “DDoS\
+    \ and DDos in Decentralized Data Networking,” in 22nd Int. Conf. on Computer Applications\
+    \ and Networks, 2021.\n- [4] S. Chen and J. Lee. “A need for content posing in\
+    \ Naming Networking.” In Proc. IEEE Workshop on Engineering Networking Technologies\
+    \ (SEIENT), 2014.\n- [5] Y. Zhou and J. Chen. “Content posing in data naming:\
+    \ Challenges and potential solutions.” IEEE Communications Magazine, vol. 36,\
+    \ no. 1, pp. 82–87, 2017.\n- [6] Y. Yang and T. T. Chen. “Content posing in Naming\
+    \ Network: A Federated model for implementation.” 2018.\n- [7] J. Konoski. “Mitigating\
+    \ content-stale-sub contents posing in NDK.” In 29th Int. on Telecommunications\
+    \ Applications, 2018. \n- [8] D. Silinitopoulos and C. Papadopoulos. “Mitigating\
+    \ posed content with fault-tolerant IEEE networks.” IEEE Access, vol. 6, pp. 21199-21210,\
+    \ 2018.\n- [9] B. K Su and S. Sakia. “Naming NDK-based Byzantine content mitigation\
+    \ in opportunistic networks.” IEEE Transactions on Mobile Computing, vol. 14,\
+    \ no. 6, pp. 1275–1286, 2015.\n- [10] P. Maniantis, S. Stergioglou, R. Mousropoulos,\
+    \ M. Baker, T. J. Jiang, and Y. Mulladi. “Prevent posed entries by rate-limited\
+    \ sampled voting.” IEEE Access, 7, 2019.\n- [11] Y. Xiao, J. Wang, J. Li, and\
+    \ Y. H. Hou. “Distributed consensus protocols and algorithms.” In Blockchain in\
+    \ Distributed Systems, Springer, 2019.\n- [12] L. Ramport, R. Shost, and M. Ba\
+    \ Castro. “The Byzantine problem in blockchain.” In: Works of Layer 2, 2019.\n\
+    - [13] Y. Wang, J. Luo, and Y. Chen. “Consensus protocols and algorithms,” 2019.\n\
+    - [14] [Online]. Available: http://www.bitcoin.com/.\n\nAuthorized license used\
+    \ to: Carleton University. Downloaded on 2022/06/21 at 09:18:UTC from IEEE Xplore.\n"
+  mdcn: "\n\n# 2020 第 30 届国际电信网络与应用会议 (ITNAC)\n\n基于韧性的方法，GI 涉及网络规模和拓扑，以及感染过程参数。另一方面，基于区块链的\
+    \ FRI 解决方案依赖于连通性的存在。\n\n通信复杂度-GI，每个节点都有固定数量的邻居，因此其复杂度为 O(N)，其中 N 是节点集。在区块链中，每个节点都必须与其他节点通信，因此通信复杂度为\
+    \ O(N²)。\n\n可扩展性（总内容的即时处理能力）——区块链让每个节点顺序处理每项内容，因此系统速度等同于单节点网络。然而，增加节点会提高总处理能力，因此为\
+    \ O(1)。\n\n容错性-GI 的形式本身甚至不具备容错性，更不用拜占庭区块链了。其容错能力最高支持拜占庭节点。\n\n因此，区块链在韧性、确定性和容错性方面优于\
+    \ GI，在通信复杂度和可扩展性方面持平。此外，它还需要从 SDN（软件定义网络）和关键基础设施（PKI）中部署区块链网络。\n\n所提出的解决方案使用了\
+    \ Stellar 以及拜占庭协议共识协议特性，在结果、韧性和容错性属性方面与 GI 协议相比良好，但在通信复杂性和可扩展性方面仍显逊色。因此，我们验证了基于区块链的证明（Proof-of）身份验证方案，区块链可以保护网络规模，使其成为虚假数据\
+    \ CPA 的可行解决方案。\n\n# 表 I GI 与基于区块链的解决方案对比\n\n| 属性 | GI | 区块链 |\n|---|---|---|\n\
+    | 结果 | 非确定 | 确定性 |\n| 韧性 | 取决于 {Nt} 连通性、感染过程参数 | 需要外部交互 |\n| 通信复杂度 | O(N) | O(N²)\
+    \ |\n| 可扩展性 | O(N) | O(1) |\n| 容错性 | 高至拜占庭节点 | |\n| 所需基础设施 | NDK。 | NDK 和区块链网络\
+    \ |\n\n# VI 结论\n\n假设一个类似于 [7] 的基础威胁模型，我们开发了 NDK（命名数据网络）中虚假数据 CPA 问题的替代方案；即引入对被盗取内容访问权限有限的未授权发布者。我们基于区块链的方法源于一种认识：内容认证在\
+    \ NDK 中可以被视为存在合适算法和基础设施的共共识。发布者面临的时间限制引起了注意\n\n- [1] G. Xylomakis, C. N. Veridis,\
+    \ A. Siri, N. Thomas, and C. Tsiopoulos. Analysis of information-centric researching\
+    \ networks. IEEE Transactions on Surveys, vol. 15, no. 2, pp. 1024-1049, 2013.\n\
+    - [2] L. Zhang, A. Atafaryan, J. Burke, Y. Jackson, K. McFlow, and P. Crawley,\
+    \ Wang, and B. Wang. “Network-based DDoS attacks: A survey.” IEEE Access, 7, 2019.\n\
+    - [3] J. Y. Guo, E. Ruik, and L. Zhang. “DDoS and DDos in Decentralized Data Networking,”\
+    \ in 22nd Int. Conf. on Computer Applications and Networks, 2021.\n- [4] S. Chen\
+    \ and J. Lee. “A need for content posing in Naming Networking.” In Proc. IEEE\
+    \ Workshop on Engineering Networking Technologies (SEIENT), 2014.\n- [5] Y. Zhou\
+    \ and J. Chen. “Content posing in data naming: Challenges and potential solutions.”\
+    \ IEEE Communications Magazine, vol. 36, no. 1, pp. 82–87, 2017.\n- [6] Y. Yang\
+    \ and T. T. Chen. “Content posing in Naming Network: A Federated model for implementation.”\
+    \ 2018.\n- [7] J. Konoski. “Mitigating content-stale-sub contents posing in NDK.”\
+    \ In 29th Int. on Telecommunications Applications, 2018. \n- [8] D. Silinitopoulos\
+    \ and C. Papadopoulos. “Mitigating posed content with fault-tolerant IEEE networks.”\
+    \ IEEE Access, vol. 6, pp. 21199-21210, 2018.\n- [9] B. K Su and S. Sakia. “Naming\
+    \ NDK-based Byzantine content mitigation in opportunistic networks.” IEEE Transactions\
+    \ on Mobile Computing, vol. 14, no. 6, pp. 1275–1286, 2015.\n- [10] P. Maniantis,\
+    \ S. Stergioglou, R. Mousropoulos, M. Baker, T. J. Jiang, and Y. Mulladi. “Prevent\
+    \ posed entries by rate-limited sampled voting.” IEEE Access, 7, 2019.\n- [11]\
+    \ Y. Xiao, J. Wang, J. Li, and Y. H. Hou. “Distributed consensus protocols and\
+    \ algorithms.” In Blockchain in Distributed Systems, Springer, 2019.\n- [12] L.\
+    \ Ramport, R. Shost, and M. Ba Castro. “The Byzantine problem in blockchain.”\
+    \ In: Works of Layer 2, 2019.\n- [13] Y. Wang, J. Luo, and Y. Chen. “Consensus\
+    \ protocols and algorithms,” 2019.\n- [14] [Online]. Available: http://www.bitcoin.com/.\n\
+    \n授权许可用于：卡尔顿大学。下载于 2022/06/21 09:18:UTC，自 IEEE Xplore。\n\n"
+  merge: 0
