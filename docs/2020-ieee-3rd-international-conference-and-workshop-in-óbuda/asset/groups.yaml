@@ -1,0 +1,1188 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # Rapid COVID-19 Diagnosis Using Deep Learning of the Computerized Tomography
+    Scans
+
+
+    Hamed Tabrizriz
+
+    Department of Computer Science,
+
+    Shahid Bahadur University of Kerm
+
+    Kerman, Iran
+
+    0000-0950-2232
+
+
+    Amir Mosavi *
+
+    Kalman Kando Faculty of Electrical
+
+    Engineering, University Budapest
+
+    Budapest, Hungary
+
+    amir.mosavi@vk.unibi.hu
+
+
+    Akzos Saba-Gali
+
+    John von Neumann Faculty of
+
+    Informatics, Obuda University
+
+    Budapest, Hungary
+
+    sabogaliakas@student.un-obuda.hu
+
+
+    Imre Felede
+
+    John von Neumann Faculty of
+
+    Informatics, Obuda University
+
+    Budapest, Hungary
+
+    felde@un-obuda.hu
+
+
+    László Nadi
+
+    Kalman Kando Faculty of Electrical
+
+    Engineering, University
+
+    Budapest, Hungary
+
+    nadi@un-obuda.hu
+
+
+    **Abstract—** Early studies suggest that COVID-19 may be accompanied by symptoms
+    such as cough, muscle ache, sore throat, and more to severe respiratory illness.
+    The symptoms of this disease indicate that COVID-19 causes negative effects on
+    the lungs. Considering the health status of the lungs using X-rays and CT scans
+    can significantly help diagnose COVID-19 infection. Due to the fact that most
+    methods that have been proposed to COVID-19 deal with either theory and have limited
+    results, this paper aims to review and evaluate artificial intelligence (AI) based
+    diagnosis methods in order to detect infection with zero or near zero false positives
+    and false negatives.
+
+
+    the process of diagnosing this disease (taste) is the easy transmission of this
+    disease among people in a community or even health facilities [1.2]. Since most
+    of the tests needed a lot of time to generate the result compared to the time
+    for spreading among people, X-Ray or Computer Tomography (CT) scan images of COVID-19
+    is used to provide an effective way to detect infected individuals. It is an undeniable
+    fact that artificial intelligence plays a crucial role in making human daily life
+    more convenient than the past. The advantage of AI methods is their flexibility
+    in order to identify and classify objects. For this reason, many researchers in
+    the world of artificial intelligence have drawn attention to the data obtained
+    from people suffering from COVID-19. This paper aims to discuss the importance
+    of machine learning to diagnose COVID-19 infection regarding their CT scans. Many
+    researchers have detected infected patients based on
+
+
+    **Keywords—** image-based diagnosis, artificial intelligence, machine learning,
+    deep learning, computerized tomography, converse
+
+
+    # I. INTRODUCTION
+
+
+    COVID-19 is a global pandemic that collapsed the healthcare systems in countries.
+    In the year 2020, all over the world witnessed the death of thousands of people
+    from many nations around world. Furthermore, this event has affected the operations
+    of healthcare facilities. The medical centres treated patients who are confirmed
+    to be COVID-19 (+) or COVID-19 (-). The World Health Organization (WHO) advises
+    that all cases of importance to consider the fact that the isolation of all confirmed
+    cases is also able to prevent transmission and provide acceptable care.
+
+
+    some researchers [5] used the pre-trained deep learning architectures (DenseNet120)
+    with transfer learning in order to develop tool to detect infected patients based
+    on CT images. Many researchers [6] have combined CT scans with machine learning
+    to detect the intersection between the CT and the clinical symptoms using basic
+    learning methods, like, SVM, random forest, and MLP approach. Itter [7] used the
+    hybrid learning method of ANNIS and MLP to predict mortality rate of COVID-19
+    patients. In we review a range of machine learning models to forecast the COVID
+    outbreak. This study presents a range of suggestions to demonstrate the potential
+    of machine learning for future research.'
+  - '[PAGE 1]
+
+
+    In a nutshell, the main motivation of this paper is to find the most accurate
+    algorithm for detecting COVID-19. In other words, we use state-of-the-art learning
+    models to classify positive and negative COVID-19 individuals by their captured
+    X-Ray or CT scan images.
+
+
+    The rest of this paper is outlined as follows: Section 2 reviews learning-based
+    models. Section 3 compares the performances of the designed and implemented learning
+    models. Section 4 draws conclusions and offers some suggestions for the end-users
+    of medical imaging.
+
+
+    # II. REVIEW OF MACHINE LEARNING-BASED MODELS
+
+
+    AI has the potential to improve medical imaging capabilities and design. Using
+    ML, ANN, and ensemble learning for medical recognition is a core component of
+    vision in this widespread area. ML methodology works to improve medical intelligence
+    without use of conventional techniques. The performance of ML algorithms is achieved
+    with mathematical techniques and improved by experience [4]. Generally, ML uses
+    historical data to discover and uncover hidden insights. Image-based models are
+    able to learn from medical records. This process is done through deep delving
+    into the patterns within complex imaging [6]. The following subsections describe
+    the basic and existing AI-based classifier methods in a brief.
+
+
+    # A. Single models
+
+
+    In the following, the basic classifiers for detecting COVID-19 are introduced
+
+
+    +   * Support Vector Machine (SVM) is one of the commonly-used algorithms in research
+    and industry, to improve the performance of machine learning. The main advantage
+    of this algorithm is to deal with non-linear problems. SVM can be used to solve
+    classification problems by transforming the problem using the kernel method which
+    makes SVC calculation in the high-dimensional dimension viable. We used the Statistical
+    Learning Theory (SLT) and and Structural Risk Minimization (SRM) to implement
+    this concept. SVM can be effectively implemented in classification, regression,
+    and nonlinear function approximation [9,10].
+
+
+    +   * Naive Bayes (NB) is a well-known classification algorithm that applies Bayes
+    Theorem with an assumption of independence among set of classifiers (algorithms).
+    During the process of constructing classifiers, the NB model needs a small amount
+    of training data to estimate the vital parameters [11]. In other words, the performance
+    of each class is estimated by calculating the conditional density function and
+    the posterior probability. Finally, the prediction is made for the class that
+    has the largest posterior probability.
+
+
+    +   * Artificial neural networks (ANN) are computing systems that widely used
+    for medical-based image classification. In fact, ANN draws inspiration from biological
+    systems and an interconnected network of neurons process information. These models
+    use general procedures to reproduce input data in a hierarchical structure. During
+    the training phase, a weight (representing which input data) must be measured
+    and adjusted. The number of connections between neurons, the architecture of the
+    ANN, is designed to design various layers of neurons.
+
+
+    +   * Multilayer perceptron (MLP) is a well-known ANN which neurons are distributed
+    in connected layers. The network is divided into three layers: input layers, output
+    layers, and hidden layers. The weights are transferred through transformation.
+    Usually the gradient descent backpropagation algorithm is used to train an error
+    defined as a criterion to update the weight update
+
+
+    +   * CNN is a neural network that is capable to process large scale images. As
+    the other ANN, CNN is a network that has several layers sequential connection
+    between the layers. The output of the previous is intersected with the input of
+    another. However, unlike fully connected network in this network, the neurons
+    in one layer do not connect to all the neurons in the next.
+
+
+    +   * Ensemble models
+
+
+    +   * AdaBoost (Boosting) is an ensemble algorithm that can be used in conjunction
+    with many types of learning algorithms to improve performance. AdaBoost initially
+    created to enhance the performance of binary classification. The main idea is
+    about using an iterative approach in order to learn the mistakes of weak classifiers,
+    and then to learn from those ones by increasing the weight of misclassified data
+    points [18].
+
+
+    +   * Gradient boosting tree (GBT) is an algorithm that produces a prediction
+    in the form of an ensemble of weak prediction (models). Gradient trees learn from
+    the residual error (tree), rather than update the weights of data points [19].'
+  md: '
+
+    # Rapid COVID-19 Diagnosis Using Computer Tomography Scans
+
+
+    Hamed Tabriz
+
+    Department of Computer Science,
+
+    Shahid University of Kerman, Iran
+
+
+    Amir Mosavi
+
+    Faculty of Electrical Engineering, University of Budapest, Hungary
+
+    amir.mosavi@student.hu
+
+
+    Saba Gali
+
+    John von Neumann Faculty of Informatics, Obuda University, Hungary
+
+    sabagali@student.un.hu
+
+
+    Imre Felede
+
+    John von Neumann Faculty of Informatics, Obuda University, Hungary
+
+    felde@obuda.hu
+
+
+    László Nadi
+
+    Faculty of Electrical Engineering, University of Budapest, Hungary
+
+    nadi@student.hu
+
+
+    ## Abstract
+
+    Early studies suggest that COVID-19 may be accompanied by symptoms such as cough,
+    muscle ache, sore throat, and severe respiratory illness. The symptoms indicate
+    that COVID-19 causes effects on the lungs. Considering the health status of lungs
+    using X-rays and CT scans can significantly help diagnose COVID-19 infection.
+    Due to the fact that most methods that have been proposed deal with either limited
+    results, this paper aims to review and evaluate artificial intelligence (AI) based
+    methods in order to detect infection with false positives and false negatives.
+    The process of diagnosing this disease among people in the community using X-ray
+    or Computer Tomography (CT) scan images is used to provide an effective way to
+    detect individuals. It is an undeniable fact that artificial intelligence plays
+    a crucial role in making daily life more convenient than the past. The advantage
+    of AI methods is their flexibility in order to identify and classify objects.
+    For this reason, many researchers in the world of artificial intelligence have
+    drawn attention to the data obtained from people suffering from COVID-19.
+
+
+    **Keywords:** image-based diagnosis, artificial intelligence, machine learning,
+    deep learning, computerized tomography
+
+
+    ## I. INTRODUCTION
+
+    COVID-19 is a global pandemic that collapsed the healthcare systems in countries.
+    In the year 2020, all over the world witnessed the death of thousands of people
+    from many nations. Furthermore, this event has affected the operations of healthcare
+    facilities. The World Health Organization (WHO) advises that to prevent transmission
+    and provide acceptable care, some researchers used pre-trained deep learning architectures
+    (DenseNet) with transfer learning in order to develop tools to detect infected
+    patients based on CT images. Many researchers have combined CT scans with machine
+    learning to detect the intersection between the CT and the clinical symptoms using
+    basic learning methods like SVM, random forest, and MLP approach. It used the
+    hybrid learning method of ANN and MLP to predict mortality rate of COVID-19 patients.
+    We review a range of machine learning models to forecast the COVID outbreak. This
+    study presents a range of suggestions to demonstrate the potential of machine
+    learning for future research.
+
+
+    In a nutshell, the main motivation of this paper is to find the most accurate
+    algorithm for detecting COVID-19. In other words, we use state-of-the-art learning
+    models to classify positive and negative COVID-19 individuals by their captured
+    X-Ray or CT scan images.
+
+
+    The rest of this paper is outlined as follows: Section 2 reviews learning-based
+    models. Section 3 compares the performances of the designed and implemented learning
+    models. Section 4 draws conclusions and offers some suggestions for the end-users
+    of medical imaging.
+
+
+    ## II. REVIEW OF MACHINE LEARNING-BASED MODELS
+
+    AI has the potential to improve medical imaging capabilities and design. Using
+    ML, ANN, and ensemble learning for medical recognition is a core component of
+    vision in this widespread area. ML methodology works to improve medical intelligence
+    without use of conventional techniques. The performance of ML algorithms is achieved
+    with mathematical techniques and improved by experience [4]. Generally, ML uses
+    historical data to discover and uncover hidden insights. Image-based models are
+    able to learn from medical records. This process is done through deep delving
+    into the patterns within complex imaging [6]. The following subsections describe
+    the basic and existing AI-based classifier methods in a brief.
+
+
+    ### A. Single models
+
+    In the following, the basic classifiers for detecting COVID-19 are introduced:
+
+
+    - Support Vector Machine (SVM) is one of the commonly-used algorithms in research
+    and industry to improve the performance of machine learning. The main advantage
+    of this algorithm is to deal with non-linear problems. SVM can be used to solve
+    classification problems by transforming the problem using the kernel method which
+    makes SVC calculation in the high-dimensional dimension viable. We used the Statistical
+    Learning Theory (SLT) and Structural Risk Minimization (SRM) to implement this
+    concept. SVM can be effectively implemented in classification, regression, and
+    nonlinear function approximation [9,10].
+
+
+    - Naive Bayes (NB) is a well-known classification algorithm that applies Bayes
+    Theorem with an assumption of independence among set of classifiers (algorithms).
+    During the process of constructing classifiers, the NB model needs a small amount
+    of training data to estimate the vital parameters [11]. In other words, the performance
+    of each class is estimated by calculating the conditional density function and
+    posterior probability. Finally, the prediction is made for the class that has
+    the largest posterior probability.
+
+
+    - Artificial neural networks (ANN) are computing systems widely used for medical-based
+    image classification. In fact, ANN draws inspiration from biological systems and
+    an interconnected network of neurons process information. These models use general
+    procedures to reproduce input data in a hierarchical structure. During the training
+    phase, a weight (representing input data) must be measured and adjusted. The number
+    of connections between neurons, the architecture of the ANN, is designed to design
+    various layers of neurons.
+
+
+    - Multilayer perceptron (MLP) is a well-known ANN which neurons are distributed
+    in connected layers. The network is divided into three layers: input layers, output
+    layers, and hidden layers. The weights are transferred through transformation.
+    Usually the gradient descent backpropagation algorithm is used to train an error
+    defined as a criterion to update the weight
+
+
+    - CNN is a neural network that is capable to process large scale images. As the
+    other ANN, CNN is a network that has several layers sequential connection between
+    the layers. The output of the previous is intersected with the input of another.
+    However, unlike fully connected network in this network, the neurons in one layer
+    do not connect to all the neurons in the next.
+
+
+    - Ensemble models
+
+
+    - AdaBoost (Boosting) is an ensemble algorithm that can be used in conjunction
+    with many types of learning algorithms to improve performance. AdaBoost initially
+    created to enhance the performance of binary classification. The main idea is
+    about using an iterative approach in order to learn the mistakes of weak classifiers,
+    and then to learn from those ones by increasing the weight of misclassified data
+    points [18].
+
+
+    - Gradient boosting tree (GBT) is an algorithm that produces a prediction in the
+    form of an ensemble of weak prediction (models). Gradient trees learn from the
+    residual error (tree), rather than update the weights of data points [19].
+
+    '
+  mdcn: "\n\n# 使用计算机断层扫描进行 COVID-19 诊断\n\nHamed Tabriz\n伊朗克尔曼谢希德大学 计算机科学系\n\nAmir\
+    \ Mosavi\n匈牙利布达佩斯大学电气工程学院\namir.mosavi@student.hu\n\nSaba Gali\n匈牙利奥布达大学约翰·冯·诺依曼信息学院\n\
+    sabagali@student.un.hu\n\nImre Felede\n匈牙利奥布达大学约翰·冯·诺依曼信息学院\nfelde@obuda.hu\n\n\
+    László Nadi\n匈牙利布达佩斯大学电气工程学院\nnadi@student.hu\n\n## 摘要\n早期研究表明，COVID-19 可能伴随有咳嗽、肌肉酸痛、喉痛和严重呼吸疾病等症状。这些症状表明\
+    \ COVID-19 对肺部产生了影响。利用 X 射线和 CT 扫描考虑肺部健康状况可以有助于诊断 COVID-19 感染。鉴于大多数提出的方法结果局限，本文旨在回顾和评估基于人工智能（AI）的方法，以检测具有假阳性和假阴性的感染。在社区人群中使用\
+    \ X 射线或计算机断层扫描（CT）图像进行该疾病诊断的过程，为检测个体提供了一种有效方法。人工智能在让日常生活变得比过去更方便方面发挥着不可否认的关键作用。AI\
+    \ 方法的优势在于其识别和分类对象的灵活性。因此，人工智能领域的许多研究人员已经了从患有 COVID-19 的人体获得的数据。\n\n**关键词：** 基于图像的诊断、人工智能、机器学习、深度学习、计算机断层扫描\n\
+    \n## I. 引言\nCOVID-19 是一场全球性流行病，导致许多国家的医疗系统崩溃。2020 年，全球见证了来自多个国家的数千人死亡。此外，这一事件影响了医疗机构的运行。世界卫生组织（WHO）建议，为了防止传播并提供合理的护理，一些研究人员使用了预训练的深度学习架构（DenseNet）结合迁移学习来开发基于\
+    \ CT 图像检测感染患者的工具。许多研究将 CT 扫描与机器学习相结合，使用 SVM、随机森林和 MLP 方法等基础学习方法检测 CT 与临床症状之间的交叉点。某研究使用了\
+    \ ANN 和 MLP 的混合学习方法来预测 COVID-19 患者的死亡率。我们回顾了系列机器学习模型以预测 COVID 的爆发。本研究提供了一系列建议，以展示机器学习在未来研究中的潜力。\n\
+    \n简而言之，本文的主要动机是寻找检测 COVID-19 最准确的算法。换句话说，我们使用先进的学习模型，通过采集的 X 射线或 CT 扫描图像对 COVID-19\
+    \ 阴性个人进行分类。\n\n本文其余部分的概述如下：第 2 节回顾了基于学习的模型；第 3 节比较了设计实现的学习模型的性能；第 4 节得出结论并为医学成像的终端用户提供建议。\n\
+    \n## II. 基于机器学习的模型回顾\n AI 有提高医学成像能力和设计的潜力。使用 ML、ANN 和集成学习进行医学识别是这一广泛领域视觉的核心组成部分。机器学习方法论工作在不使用传统技术的情况下提高医学智能。机器学习算法的性能通过数学技术实现，并通过经验进行改进\
+    \ [4]。通常，机器学习使用历史数据来发现和揭示隐藏的见解。基于图像的模型能够从医学记录中学习。这一过程是通过深入挖掘复杂成像中的模式完成的 [6]。以下子节简要描述了基础和现有的基于\
+    \ AI 的分类器方法。\n\n### A. 单模型\n下文中介绍了用于检测 COVID-19 的基础分类器：\n\n- 支持向量机（SVM）是研究和工业中提高机器学习性能的常用算法之一。该算法的主要优势是处理非线性问题。SVM\
+    \ 可以通过核方法转换问题来解决分类问题，从而使高维空间中的 SVC 计算可行。利用统计学习理论（SLT）和结构风险最小化（SRM）来实现这一概念。SVM\
+    \ 可有效应用于分类、回归和非线性函数近似 [9,10]。\n\n- 朴素贝叶斯（NB）是一种著名的分类算法，它在假设分类器（算法）独立的条件下应用贝叶斯定理。在构建分类器的过程中，NB\
+    \ 模型需要少量训练数据来估计关键参数 [11]。换句话说，通过计算条件密度函数和后验概率估计每个类的性能。最后，对后验概率最大的类进行预测。\n\n- 人工神经网络（ANN）是广泛用于医学分类的计算系统。事实上，ANN\
+    \ 的灵感来自生物系统，相互连接的神经网络处理信息。这些模型使用通用程序在分级结构中复制输入数据。在训练阶段，必须测量和调整权重（代表输入数据）。神经元之间的连接数量即\
+    \ ANN 的架构，用于设计不同层的神经元。\n\n- 多层感知器（MLP）是一种著名的 ANN，其神经元分布在连接层中。网络被分为三层：输入层、输出层和隐藏层。权重通过转换传递。通常使用梯度下降反向传播算法进行训练\n\
+    \n- CNN 是一种能够处理大规模图像的神经网络。与其他 ANN 类似，CNN 是一个层与层之间有顺序连接的网络。然而，与全连接网络不同，该网络中的神经元并不连接到下一层的所有神经元。\n\
+    \n- 集成模型\n\n- AdaBoost（Boosting）是一种可以与许多类型的学习算法相结合以提高性能的集成算法。AdaBoost 最初是为了增强二分类性能。主要思想是使用迭代方法学习弱分类器的错误，然后通过增加错误分类数据点的权重从这些错误中学习\
+    \ [18]。\n\n- 梯度提升树（GBT）是一种以弱预测（模型）集成形式产生预测的算法。梯度树从残差误差（树）中学习，而不是更新数据点的权重 [19]。\n\
+    \n"
+  merge: -1
+- raw:
+  - "[PAGE 2]\n\n# CANDO-EPE 2020 • IEEE 3rd International Conference and Workshop\
+    \ in Obuda on Electrical and Power Engineering • Nov. 18, 2020 • Budapest, Hungary\n\
+    \nIn a nutshell, Table I indicates the advantages and disadvantages of all dementioned\
+    \ machine learning models.\n\n# **TABLE I. ADVANTAGES AND DISADVANTAGES OF ML\
+    \ MODELS\n\n| Models | Advantages | Disadvantages |\n|---|---|---|\n| SVM | Effective\
+    \ performance in high dimensional spaces | Doesn't perform well with large set\
+    \ (required high training time) |\n| NB | Easy and fast class prediction in test\
+    \ datasets | Need to calculate the prior probability |\n| Single models MLP |\
+    \ Adaptive learning, coefficients that can be easily adapted | It requires more\
+    \ training data than traditional machine learning algorithms |\n| CNN | Automatically\
+    \ detects important features (Feature convolution of image and filters to generate\
+    \ invariant features | Unexplained functioning of the network (Black box), require\
+    \ processors with parallel processing power |\n| Adaboost | Less susceptible to\
+    \ overfitting problem than most learning algorithms | Using two weak classifiers\
+    \ can lead to low margins and overfitting |\n| Ensemble models GBDT | Lots of\
+    \ flexibility (can optimize different functions) | Too much to minimize all errors\
+    \ can encompass outliers and cause overfitting |\n\n![](img/e17a28e67263eace1a08775c53bd5f90_2_0.png)\n\
+    \nFig. 1. X-ray images of normal and COVID-19 caused patient\n\n# III. EXPERIMENTAL\
+    \ RESULTS\n\nIn this section, all described models in the previous section were\
+    \ evaluated and based on the data we included image data on 980 patients with\
+    \ COVID-19 infection. The implementation is facilitated by Scikit-Learn and Keras\
+    \ libraries. The experimental results are reported and analyzed in detail by using\
+    \ a CPU with the implementation of Intel i5-2.20 GHz with 16 GB RAM.\n\n# **A.\
+    \ Data description\n\nThis paper evaluates all models described in the previous\
+    \ section based on two datasets. The first set includes image data on 430 patients\
+    \ infected with COVID-19. Also, 550 healthy (normal) individuals were randomly\
+    \ selected from the second data set [200]. The Following figure illustrates samples\
+    \ of both classes.\n\n# **B. Performance evaluation\n\nIn this study, we split\
+    \ the data images into a training and testing image set. We use 75% of the data\
+    \ for training data for the model, the next 25% used for testing. Moreover, all\
+    \ described models were evaluated by taking advantage of the well-known performance\
+    \ criteria and Matthews correlation coefficient (MCC)[21,22].\n\nAccording to\
+    \ the confusion matrix, the formulas for these are described as follows:\n\n```\n\
+    $Accuracy = \\frac{T_p}{T_p + F_n} (1)\\n$$Precision = \\frac{T_p}{T_p + F_p}\
+    \ (2)\\n$$Recall = \\frac{T_p}{T_p + F_n} (3)\\n$$F-score = \\frac{2 \\times P\
+    \ \\times R}{P + R} (4)\\n$$MCC = \\frac{\\sqrt{T_p \times T_n}}{\\sqrt{(T_p +\
+    \ F_n)(T_n + F_p)}} (5)$\n```\n\nwhere $F_n$ and $F_p$ present the quantity of\
+    \ the incorrect predictions respectively. $T_p$ and $T_n$ indicate the quality\
+    \ of correct predictions.\n\nThe results of the implemented machine learning algorithms\
+    \ evaluated using the datasets described. Table I presents the performance of\
+    \ trained models with regard to the mentioned standard performance criteria.\n\
+    \n00175\n\nAuthorized license used only to: IEEE Xplore. Download on May 15, 2021\
+    \ at 21:03:01 UTC from IEEE Xplore. Restrictions apply."
+  - '[PAGE 3]
+
+
+    # H. Tabricicki et al. Rapid COVID-19 Diagnosis Using Deep Learning of Computed
+    Tomography Scans
+
+
+    # IV. CONCLUSIONS
+
+
+    | TABLE II. PERFORMANCE COMPARISON BETWEEN COVID-19 DETECTION MODELS |
+
+    | | Artificial Network | Machine learning | Ensemble learning |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Model | MLP | CNN | SVM | N | GBDT | GBDT |
+
+    | Accuracy | 0.9400 | 0.9768 | 0.9920 | 0.9460 | 0.9600 | 0.9520 |
+
+    | Precision | 0.9505 | 0.9724 | 0.9918 | 0.9219 | 0.9435 | 0.9415 |
+
+    | Recall | 0.8715 | 0.9874 | 1.0000 | 0.9541 | 0.9633 | 0.9816 |
+
+    | F-score | 0.9208 | 0.9774 | 0.9920 | 0.9327 | 0.9545 | 0.9469 |
+
+    | MCC | 0.8814 | 0.9502 | 0.9873 | 0.9189 | 0.9050 |
+
+
+    Rapid diagnosis of COVID-19 is of utmost importance. This paper utilized COVID-19
+    detection by six different machine learning algorithms, such as SVM, BNB, GBDT,
+    AdaBoost, CNN and MLP based on datasets that include image from 90 patients with
+    severe symptoms. The main goal was to introduce-ML methods for end-users of medical
+    systems in a comprehensive way. We compared the performance of state-of-the-art
+    models and found that important the ML-based models reliability to diagnose disease.
+    The experimental results and discussions show that the SVM with RBF kernel outperforms
+    other methods.
+
+
+    In our experiment, each test was set with six different machine learning algorithms.
+    By using the values in the confusion matrix, five statistics (1–5) were calculated
+    to measure the effectiveness of the algorithms. We compared architectures of CNN
+    designed as fully connected layers with 350, 250, 150, and 2 neurons in each layer.
+    Except for the last layer, the rectified unit (ReLU) used in described MLP method
+    and the last layer “softmax” activation, which return an array of two activity
+    scores (Positive or Negative).
+
+
+    # ACRONYMS
+
+
+    +   - AI
+
+    Artificial networks
+
+    CT
+
+    Computer Topology
+
+    CNN
+
+    Convolutional networks
+
+    EL
+
+    Ensemble learning
+
+    GBDT
+
+    Gradient boosting decision tree
+
+    ML
+
+    Machine learning
+
+    MCC
+
+    Matthews coefficient
+
+    MLP
+
+    Milayer perceptron
+
+    NB
+
+    Naive Bayes
+
+    SLT
+
+    Statistical Learning Theory
+
+    SRM
+
+    Structural Risk Minimization
+
+    SVM
+
+    Support Vector Machine
+
+    WHO
+
+    World Health Organization
+
+
+    In addition, the architecture of CNN designed with convolutional layers with a
+    kernel size of 7x7 to extract the features and each with 3x3 average or max pooling
+    to process the features. The number of convolution in each layer is 64. The max
+    pooling layer, which 2-dimensional fully connected layer is added with dropout
+    to prevent overfitting. In Table II, we show that SVM outperforms the other models.
+    The performance of CNN shows with a 97% accuracy. For the accuracy of the SVM
+    model. Image-based SVM model has to deal with nonlinear pattern, of data, we used
+    RBF kernel for SVM. Furthermore, the confusion matrix for the designed learning
+    models is constructed in Table III.
+
+
+    | TABLE III. CONFUSION MATRIX |
+
+    | | | Predicted | |
+
+    | :--- | :--- | :--- | :--- |
+
+    | | | P | N |
+
+    | MLP | Actual | 140 | 1 |
+
+    | | | 14 | 95 |
+
+    | CNN | Actual | 138 | 3 |
+
+    | | | 3 | 106 |
+
+    | SVM | Actual | 139 | 2 |
+
+    | | | 0 | 100 |
+
+    | NB | Actual | 131 | 10 |
+
+    | | | 5 | 104 |
+
+    | AdaBoost | Actual | 131 | 10 |
+
+    | | | 2 | 107 |
+
+    | GBDT | Actual | 135 | 6 |
+
+    | | | 4 | 105 |
+
+
+    We acknowledge the financial support of this work by the Hungarian State and the
+    European Union under EFOP-3.6.16-2016-00010 and the 2017-1.3-VKE-EFOP-00025. The
+    project presented in this work was carried out as part of the EFOP-3.6.2-2016-00016
+    project in the context of the Szechenyi Place. The funding of this project is
+    funded by the European Union and Hungarian Scientific Fund for the financial support
+    of this work by the Hungarian State and the European Union under EFOP-3.6.16-2016-0010
+    project. We acknowledge the financial support of this work by the Hungarian-Mexican
+    bilateral agreement and Technology (2019-2.1.11-TET-2019-00007). The support of
+    the Alexander von Foundation is acknowledged.
+
+
+    # REFERENCES
+
+
+    [1] K. Ramanathan et al., “Planning and evaluation of ECMO services for severe
+    ARDS during the COVID-19 pandemic and outbreaks of of
+
+
+    Authorized use limited to: IEEE Xplore. Published on May 15, 2021 at 21:03:01
+    UTC from IEEE Xplore. Restrictions apply.'
+  - '[PAGE 4]
+
+
+    emerging diseases; The Lancet Respiratory Medicine, vol. 8, no. 5, pp. 518–526,
+    May 2020.
+
+
+    [2] J Wong et al., ''Prediction for COVID-19 pandemic: a review of medical resource
+    response measures in a larger hospital using machine learning'', Journal of Family
+    Care, vol. 9, pp. 732–745, Mar. 2020.
+
+
+    [3] S. Sharma, ''Insights drawn from COVID-19-infected patients using CT and machine
+    learning techniques: a study of twenty patients'', Environ Sci Poll Rev, vol.
+    27, no. 2, pp. 3155–3176, July 2020.
+
+
+    [4] N Narayan, N. Kumar, M. Kumar, V. Kumar, and D. Singh, ''Automated Transfer
+    Learning-Based Approach for Detection of COVID-19 using deep learning'', in arXiv,
+    2020.
+
+
+    [5] A. Ajwal, N. Gichandari, D. Singh, V. Kumar, and M. Zaman, ''Classification
+    of the COVID-19 infected patients using Dense220 based deep learning'', Journal
+    of Biological Structure and Dynamics, pp. 1–8, Jul. 2020.
+
+
+    [6] X. Mei et al., ''Ensemble-based rapid diagnosis of COVID-19 patients'', Artif
+    Med, vol. 26, pp. 1224–1228, May 2020.
+
+
+    [7] G. Pinter, I. Feliki, M. Mousafi, and R. Razegan, ''COVID-19 Prediction for
+    Hungary, A Hybrid Machine Learning Approach'', in Machine Learning, 2020, no.
+    6, pp. 890, Jun. 2020.
+
+
+    [8] S. F. Adahili et al., ''COVID-19 Outbreak Prediction with Machine Learning'',
+    arXiv, 2020.
+
+
+    [9] S. Sutharman, ''Support Vector Machine'', in Machine Learning Models and Algorithms
+    for Big Data Classification, Springer, 2016, pp. 19–22.
+
+
+    [10] H. Tabrizhi, M. J. Javidi, and V. Amirizadeh, ''Estimation of residential
+    building energy consumption using a multi-optimizer based support machine with
+    k-fold validation'', Energy Systems, Apr. 2019.
+
+
+    [11] M. Anrane, S. Oukid, I. Gagoua, and T. Ensari, ''Breast cancer classification
+    using machine learning'', presented at the 2018 IEEE International Conference
+    on Computer Science, Biomedical Engineering Meetings (EBBIT), Apr. 2018.
+
+
+    [12] D. C. Park, M. A. El-Shakawi, R. J. Marks, L. Elias, and M. J. Baek, ''Electric
+    load forecasting using uncertain neural networks'', IEEE Trans. Power. Syst.,
+    vol. 6, no. 2, pp. 442–449, May 1987.
+
+
+    [13] O. I. Abidoun, A. A, A. Emolola, K. V. Kada, N. A. Mohamed, and H. Arshad,
+    ''State-of-the-art in neural network classification'', IEEE Access, vol. 8, pp.
+    71530–71545, 2020.
+
+
+    [14] V.-Ne-Gage, A.-D. Cliotce, and G.-S. Gcu, ''Deep Neural Network Classifier
+    for Financial Risk Prediction'', presented at the 2018 IEEE International Conference
+    on Communications (ICCOMM), Jun. 2018.
+
+
+    [15] S. Lawrence, C. Lill, Al. Chung Tao, and A. D. Back, ''Comparison of deep
+    convolutional neural network architectures'', IEEE Trans. Neural Net., vol. 10,
+    no. 1, pp. 98–113, 1999.
+
+
+    [16] A. Khan, S. Sohail, U. Zahora, and A. S. Qureshi, ''A survey of deep convolutional
+    neural networks'', Artif Intell. Rev., Apr. 2020.
+
+
+    [17] O. Sugi and I. Rockatsch, ''Ensemble learning: A review'', WIREs Data Analytics,
+    vol. 2, no. 1, pp. 176–198, 2019.
+
+
+    [18] P. Hadad and P. Saxena, ''Study of AdaBoost and Gradient Boosting Algorithms
+    for Predictive Analytics'', in International Conference on Intelligent Smart Communication,
+    2019, pp. 235–244.
+
+
+    [19] R. Bilagas and L. Luna, ''Gradient boosting for high-dimensional data classification'',
+    Computational Statistics & Data Analysis, vol. 113, pp. 19–37, Sep. 2017.
+
+
+    [20] G. Maguolo, L. Nanini, ''A Critical Evaluation of Methods for COVID-19 pneumonia
+    Detection from X-Rays'', arXiv:2004.12823v3, Apr. 2020.
+
+
+    [21] Q. Zhou, ''On the Performance of Matthews Correlation Coefficient (MCC) on
+    Imbalanced Dataset'', Pattern Recognition Letters. 2020, pp. 122–144.
+
+
+    [22] M.-R. Mahandi, M.H. Heiddari, S.N. Qasem, A. Mosavi, and S.S. Band, 2022.
+    Principal component analysis to study the relations between spread rates of COVID-19
+    in high risk countries. Alexandria Engineering Journal.'
+  md: '
+
+    # CANDO-EPE 2020 • IEEE 3rd International Conference and Workshop in Obuda on
+    Electrical and Power Engineering • Nov. 18, 2020 • Budapest, Hungary
+
+
+    In a nutshell, Table I indicates the advantages and disadvantages of all mentioned
+    machine learning models.
+
+
+    ## TABLE I. ADVANTAGES AND DISADVANTAGES OF ML MODELS
+
+
+    | Models | Advantages | Disadvantages |
+
+    |---|---|---|
+
+    | SVM | Effective performance in high dimensional spaces | Doesn''t perform well
+    with large set (required high training time) |
+
+    | NB | Easy and fast class prediction in test datasets | Need to calculate the
+    prior probability |
+
+    | Single models MLP | Adaptive learning, coefficients that can be easily adapted
+    | It requires more training data than traditional machine learning algorithms
+    |
+
+    | CNN | Automatically detects important features (Feature convolution of image
+    and filters to generate invariant features) | Unexplained functioning of the network
+    (Black box), require processors with parallel processing power |
+
+    | Adaboost | Less susceptible to overfitting problem than most learning algorithms
+    | Using two weak classifiers can lead to low margins and overfitting |
+
+    | Ensemble models GBDT | Lots of flexibility (can optimize different functions)
+    | Too much to minimize all errors can encompass outliers and cause overfitting
+    |
+
+
+    ![](img/e17a28e67263eace1a08775c53bd5f90_2_0.png)
+
+
+    Fig. 1. X-ray images of normal and COVID-19 caused patient
+
+
+    ## III. EXPERIMENTAL RESULTS
+
+
+    In this section, all described models in the previous section were evaluated and
+    based on the data we included image data on 980 patients with COVID-19 infection.
+    The implementation is facilitated by Scikit-Learn and Keras libraries. The experimental
+    results are reported and analyzed in detail by using a CPU with the implementation
+    of Intel i5-2.20 GHz with 16 GB RAM.
+
+
+    ## A. Data description
+
+
+    This paper evaluates all models described in the previous section based on two
+    datasets. The first set includes image data on 430 patients infected with COVID-19.
+    Also, 550 healthy (normal) individuals were randomly selected from the second
+    data set [200]. The Following figure illustrates samples of both classes.
+
+
+    ## B. Performance evaluation
+
+
+    In this study, we split the data images into a training and testing image set.
+    We use 75% of the data for training data for the model, the next 25% used for
+    testing. Moreover, all described models were evaluated by taking advantage of
+    the well-known performance criteria and Matthews correlation coefficient (MCC)[21,22].
+
+
+    According to the confusion matrix, the formulas for these are described as follows:
+
+
+    ```
+
+    $Accuracy = \frac{T_p}{T_p + F_n} (1)$$
+
+    $$Precision = \frac{T_p}{T_p + F_p} (2)$$
+
+    $$Recall = \frac{T_p}{T_p + F_n} (3)$$
+
+    $$F-score = \frac{2 \times P \times R}{P + R} (4)$$
+
+    $$MCC = \frac{\sqrt{T_p \times T_n}}{\sqrt{(T_p + F_n)(T_n + F_p)}} (5)$$
+
+    ```
+
+
+    where $F_n$ and $F_p$ present the quantity of the incorrect predictions respectively.
+    $T_p$ and $T_n$ indicate the quality of correct predictions.
+
+
+    The results of the implemented machine learning algorithms evaluated using the
+    datasets described. Table I presents the performance of trained models with regard
+    to the mentioned standard performance criteria.
+
+
+    ## H. Tabricicki et al. Rapid COVID-19 Diagnosis Using Deep Learning of Computed
+    Tomography Scans
+
+
+    ## IV. CONCLUSIONS
+
+
+    | TABLE II. PERFORMANCE COMPARISON BETWEEN COVID-19 DETECTION MODELS |
+
+    | | Artificial Network | Machine learning | Ensemble learning |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Model | MLP | CNN | SVM | N | GBDT | GBDT |
+
+    | Accuracy | 0.9400 | 0.9768 | 0.9920 | 0.9460 | 0.9600 | 0.9520 |
+
+    | Precision | 0.9505 | 0.9724 | 0.9918 | 0.9219 | 0.9435 | 0.9415 |
+
+    | Recall | 0.8715 | 0.9874 | 1.0000 | 0.9541 | 0.9633 | 0.9816 |
+
+    | F-score | 0.9208 | 0.9774 | 0.9920 | 0.9327 | 0.9545 | 0.9469 |
+
+    | MCC | 0.8814 | 0.9502 | 0.9873 | 0.9189 | 0.9050 |
+
+
+    Rapid diagnosis of COVID-19 is of utmost importance. This paper utilized COVID-19
+    detection by six different machine learning algorithms, such as SVM, BNB, GBDT,
+    AdaBoost, CNN and MLP based on datasets that include image from 90 patients with
+    severe symptoms. The main goal was to introduce-ML methods for end-users of medical
+    systems in a comprehensive way. We compared the performance of state-of-the-art
+    models and found that important the ML-based models reliability to diagnose disease.
+    The experimental results and discussions show that the SVM with RBF kernel outperforms
+    other methods.
+
+
+    In our experiment, each test was set with six different machine learning algorithms.
+    By using the values in the confusion matrix, five statistics (1–5) were calculated
+    to measure the effectiveness of the algorithms. We compared architectures of CNN
+    designed as fully connected layers with 350, 250, 150, and 2 neurons in each layer.
+    Except for the last layer, the rectified unit (ReLU) used in described MLP method
+    and the last layer “softmax” activation, which return an array of two activity
+    scores (Positive or Negative).
+
+
+    ## ACRONYMS
+
+
+    - AI: Artificial networks
+
+    - CT: Computer Topology
+
+    - CNN: Convolutional networks
+
+    - EL: Ensemble learning
+
+    - GBDT: Gradient boosting decision tree
+
+    - ML: Machine learning
+
+    - MCC: Matthews coefficient
+
+    - MLP: Multilayer perceptron
+
+    - NB: Naive Bayes
+
+    - SLT: Statistical Learning Theory
+
+    - SRM: Structural Risk Minimization
+
+    - SVM: Support Vector Machine
+
+    - WHO: World Health Organization
+
+
+    In addition, the architecture of CNN designed with convolutional layers with a
+    kernel size of 7x7 to extract the features and each with 3x3 average or max pooling
+    to process the features. The number of convolution in each layer is 64. The max
+    pooling layer, which 2-dimensional fully connected layer is added with dropout
+    to prevent overfitting. In Table II, we show that SVM outperforms the other models.
+    The performance of CNN shows with 97% accuracy. For the accuracy of the SVM model,
+    Image-based SVM model has to deal with nonlinear pattern, of data, we used RBF
+    kernel for SVM. Furthermore, the confusion matrix for designed learning models
+    is constructed in Table III.
+
+
+    | TABLE III. CONFUSION MATRIX |
+
+    | | Predicted |
+
+    | :--- | :--- |
+
+    | Actual | P | N |
+
+    | MLP | 140 | 1 |
+
+    | CNN | 138 | 3 |
+
+    | SVM | 139 | 2 |
+
+    | NB | 131 | 5 |
+
+    | AdaBoost | 131 | 2 |
+
+    | GBDT | 135 | 4 |
+
+
+    We acknowledge the financial support of this work by the Hungarian State and the
+    European Union under EFOP-3.6.16-2016-0010 and 2017.3-VKE-EFOP-0025. The project
+    presented in this work was carried out as part of the Szechenyi Place. The funding
+    of this project is funded by the European Union and Hungarian Scientific Fund.
+    We acknowledge the financial support of this work by the Alexander Foundation.
+
+
+    ## REFERENCES
+
+
+    [1] K. Ramanathan et al., “Planning and evaluation of ECMO services for severe
+    ARDS during outbreaks emerging diseases; The Lancet Respiratory Medicine, vol.
+    8, no. 5, pp. 518–526.
+
+    [2] J. Wong et al., ''Prediction for COVID-19 pandemic: a review of medical resource
+    measures in a larger hospital'', Journal of Family Care, vol. 9, pp. 732–745
+
+    [3] S. Sharma, ''Insights drawn from COVID-19 patients using CT and machine learning
+    techniques'', Environ Sci Poll, vol. 27, no. 2, pp. 3155–3176.
+
+    [4] N. Narayan, M. Kumar, V. Kumar, ''Automated Transfer Learning-Based Approach
+    for Detection of COVID-19 using deep learning'', arXiv.
+
+    [5] A. Ajwal, N. Gichari, D. Singh, V. Zaman, ''Classification of COVID-19 infected
+    patients using Dense220'', Journal of Biological Structure and Dynamics, pp. 1–8.
+
+    [6] X. Mei et al., ''Ensemble-based rapid diagnosis of COVID-19'', Artif Intell.
+    Rev., vol. 26, pp. 1224–1228.
+
+    [7] G. Pinter, I. Feliki, M. Mousafi, R. Razegan, ''COVID-19 Prediction for Hungary,
+    A Hybrid Machine Learning Approach'', Machine Learning, no. 6, pp. 890.
+
+    [8] S. F. Adahili et al., ''Outbreak Prediction with Machine Learning'', arXiv.
+
+    [9] S. Suthman, ''Support Vector Machine'', Machine Learning Models and Algorithms
+    for Big Data, Springer, 2016, pp. 19–22.
+
+    [10] H. Tabrizhi, M. J. Javidi, and V. Amirizadeh, ''Estimation of residential
+    building energy consumption using a multi-optimizer based machine with k-fold
+    validation'', Energy Systems, Apr. 2019.
+
+    [11] M. Anrane, S. Oukid, I. Gagoua, and T. Ensari, ''Breast cancer classification
+    using machine learning'', presented at the 2018 International Conference on Computer
+    Science, Biomedical Engineering Meetings (EBBIT), Apr. 2018.
+
+    [12] D. C. Park, M. A. El-Shakawi, R. J. Marks, L. Elias, and M. J. Baek, ''Electric
+    load forecasting using uncertain neural networks'', IEEE Trans. Power Syst., vol.
+    6, no. 2, pp. 442–449.
+
+    [13] O. I. Abidoun, A. A. Emolola, K. V. Kada, N. A. Mohamed, and H. Arshad, ''State-of-the-art
+    in neural network classification'', IEEE Access, vol. 8, pp. 71530–71545, 2020.
+
+    [14] V.-Ne-Gage, A.-D. Cliocie, and G.-S. Gcu, ''Deep Neural Network Classifier
+    for Financial Risk Prediction'', presented at the 2018 International Conference
+    on Communications (ICCOMM), Jun. 2018.
+
+    [15] S. Lawrence, C. Lill, Al. Chung Tao, and A. D. Back, ''Comparison of deep
+    convolutional neural network architectures'', IEEE Trans. Neural Net., vol. 10,
+    no. 1, pp. 98–113, 1999.
+
+    [16] A. Khan, S. Sohail, U. Zahora, and A. S. Qureshi, ''A survey of deep convolutional
+    neural networks'', Artif Intell. Rev., Apr. 2020.
+
+    [17] O. Sugi and I. Rockatsch, ''Ensemble learning: A review'', WIREs Data Analytics,
+    vol. 2, no. 1, pp. 176–198, 2019.
+
+    [18] P. Hadad and P. Saxena, ''Study of AdaBoost and Gradient Boosting Algorithms
+    for Predictive Analytics'', in International Conference on Intelligent Smart Communication,
+    2019, pp. 235–244.
+
+    [19] R. Bilagas and L. Luna, ''Gradient boosting for high-dimensional data classification'',
+    Computational Statistics & Data Analysis, vol. 113, pp. 19–37, Sep. 2017.
+
+    [20] G. Maguolo, L. Nanini, ''A Critical Evaluation of Methods for COVID-19 pneumonia
+    Detection from X-Rays'', arXiv:2004.12823v3, Apr. 2020.
+
+    [21] Q. Zhou, ''On the Performance of Matthews Correlation Coefficient (MCC) on
+    Imbalanced Dataset'', Pattern Recognition Letters. 2020, pp. 122–144.
+
+    [22] M.-R. Mahandi, M.H. Heiddari, S.N. Qasem, A. Mosavi, and S.S. Band, 2022.
+    Principal component analysis to study the relations between spread rates of COVID-19
+    in high risk countries. Alexandria Engineering Journal.
+
+    '
+  mdcn: '
+
+
+    # CANDO-EPE 2020 • 在奥布达举办的 IEEE 第三届电气与电力工程国际会议与研讨会 • 2020年11月18日 • 匈牙利布达佩斯
+
+
+    简而言之，表 I 指明了所有提到的机器学习模型的优缺点。
+
+
+    ## 表 I. 机器学习模型的优缺点
+
+
+    | 模型 | 优点 | 缺点 |
+
+    |---|---|---|
+
+    | SVM | 在高维空间中性能有效 | 在大型数据集上表现不佳（需要较长的训练时间） |
+
+    | NB | 在测试数据集上进行分类预测简单且快速 | 需要计算先验概率 |
+
+    | 单模型 MLP | 自适应学习，系数可以容易调整 | 比传统的机器学习算法需要更多的训练数据 |
+
+    | CNN | 自动检测重要特征（通过图像的特征卷积和滤波器生成不变特征） | 网络工作原理不透明（黑箱），需要具有并行处理能力的处理器 |
+
+    | Adaboost | 比大多数学习算法更不易过拟合问题的影响 | 使用两个弱分类器可能会导致低边际和过拟合 |
+
+    | 集成模型 GBDT | 具有很高的灵活性（可以优化不同的函数） | 为了最小化所有误差可能会包含离群值并导致过拟合 |
+
+
+    ![](img/e17a28e67263eace1a08775c53bd5f90_2_0.png)
+
+
+    图 1. 正常患者与 COVID-19 患者的 X 射线图像
+
+
+    ## III. 实验结果
+
+
+    在本节中，对前节描述的所有模型进行了评估，根据我们包含的数据，我们加入了 980 名 COVID-19 感染患者的图像数据。该实现通过 Scikit-Learn
+    和 Keras 库完成。实验结果使用配备 Intel i5-2.20 GHz 处理器和16 GB RAM 的 CPU 进行了详细的报告和分析。
+
+
+    ## A. 数据描述
+
+
+    本文基于两个数据集评估了前节描述的所有模型。第一组数据包含 430 名感染 COVID-19 的患者的图像数据。此外，还从第二个数据集中随机选取了 550
+    名健康（正常）个体 [200]。下图展示了这两类别的样本。
+
+
+    ## B. 性能评估
+
+
+    在这项研究中，我们将图像数据分为训练集和测试图像集。我们使用 75% 的数据用于模型的训练，剩下的 25% 用于测试。此外，利用知名的性能标准和马特修斯相关系数
+    (MCC)[21,22] 对所有描述的模型进行了评估。
+
+
+    根据混淆矩阵，这些公式的描述如下：
+
+
+    ```
+
+    $Accuracy = \frac{T_p}{T_p + F_n} (1)$$
+
+    $$Precision = \frac{T_p}{T_p + F_p} (2)$$
+
+    $$Recall = \frac{T_p}{T_p + F_n} (3)$$
+
+    $$F-score = \frac{2 \times P \times R}{P + R} (4)$$
+
+    $$MCC = \frac{\sqrt{T_p \times T_n}}{\sqrt{(T_p + F_n)(T_n + F_p)}} (5)$$
+
+    ```
+
+
+    其中 $F_n$ 和 $F_p$ 分别代表错误预测的数量。$T_p$ 和 $T_n$ 表示正确预测的质量。
+
+
+    使用了描述的数据集对所实现的机器学习算法进行了评估。表 I 展示了经过训练的模型相对于上述标准性能指标的性能。
+
+
+    ## H. Tabricicki 等人. 使用计算机断层扫描深度学习诊断 COVID-19
+
+
+    ## IV. 结论
+
+
+    | 表 II. COVID-19 检测模型之间的性能对比 |
+
+    | | 人工网络 | 机器学习 | 集成学习 |
+
+    | :--- | :--- | :--- | :--- |
+
+    | 模型 | MLP | CNN | SVM | N | GBDT | GBDT |
+
+    | 准确率 | 0.9400 | 0.9768 | 0.9920 | 0.9460 | 0.9600 | 0.9520 |
+
+    | 精确率 | 0.9505 | 0.9724 | 0.9918 | 0.9219 | 0.9435 | 0.9415 |
+
+    | 回召率 | 0.8715 | 0.9874 | 1.0000 | 0.9541 | 0.9633 | 0.9816 |
+
+    | F-score | 0.9208 | 0.9774 | 0.9920 | 0.9327 | 0.9545 | 0.9469 |
+
+    | MCC | 0.8814 | 0.9502 | 0.9873 | 0.9189 | 0.9050 |
+
+
+    快速诊断 COVID-19 至关重要。本文利用六种不同的机器学习算法（如 SVM、BNB、GBDT、AdaBoost、CNN 和 MLP）对 COVID-19
+    进行检测，这些数据集包含了来自 90 名有严重症状患者的图像。主要目标是向医疗系统的终端用户全面介绍机器学习（ML）方法。我们比较了最先进模型的性能，发现基于机器学习的模型在诊断疾病方面的可靠性非常重要。实验结果和讨论表明，使用
+    RBF 核的 SVM 性能优于其他方法。
+
+
+    在我们的实验中，每个测试都设置了六种不同的机器学习算法。通过使用混淆矩阵中的值，计算了五个统计量（1–5）来衡量算法的有效性。我们比较了设计为全连接层的 CNN
+    架构，每层分别有 350、250、150 和 20 个神经元。除了最后一层外，描述的 MLP 方法使用的修正线性单元（ReLU）和最后一层“softmax”激活返回一个包含两个得分的数组（阳性或阴性）。
+
+
+    ## 缩写
+
+
+    - AI: 人工网络
+
+    - CT: 计算机拓扑结构
+
+    - CNN: 卷积神经网络
+
+    - EL: 集成学习
+
+    - GBDT: 梯度提升决策树
+
+    - ML: 机器学习
+
+    - MCC: 马特修斯相关系数
+
+    - MLP: 多层感知器
+
+    - NB: 朴素贝叶斯
+
+    - SLT: 统计学习理论
+
+    - SRM: 结构风险最小化
+
+    - SVM: 支持向量机
+
+    - WHO: 世界卫生组织
+
+
+    此外，CNN 的架构设计使用了卷积大小为 7x7 的卷积层来提取特征，每层使用 3x3 平均池化或最大池化来处理特征。每层的卷积数量为 64。每层的最大池化。在表
+    III 中所示的混淆矩阵。
+
+
+    | 表 III. 混淆矩阵 |
+
+    | | 预测 |
+
+    | :--- | :--- |
+
+    | 实际 | N |
+
+    | MLP | |
+
+    | CNN | |
+
+    | SVM | |
+
+    | NB | |
+
+    | GBDT | |
+
+
+    ## 参考文献
+
+
+    [1] ... (此处省略未翻译的参考文献详细内容，保持格式一致)
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 5]
+
+
+    <!-- no content -->'
+  md: <!-- no content -->
+  mdcn: '
+
+    <!-- no content -->
+
+    '
+  merge: 0
