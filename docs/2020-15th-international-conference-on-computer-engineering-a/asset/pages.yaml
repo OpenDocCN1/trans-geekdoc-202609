@@ -1,0 +1,547 @@
+- pgno: 0
+  md: '# # Security Framework for Internet of Things (IoT)
+
+
+    Sherif El-Gendy
+
+    School of Information Technology and Computer Science
+
+    Nile University
+
+    Cairo, Egypt
+
+    seligendy@nmu.edu.eg
+
+
+    Marianne. A. Azer
+
+    National Telecommunication Institute
+
+    Nile University
+
+    Cairo, Egypt
+
+    mazer@nmu.edu.eg
+
+
+    **Abstract—**The introduction of IoT technologies provides with new experiences
+    through the interaction between devices, people and networks. Examples include
+    smart grid, smart health, smart home, smart workplace, industrial management.
+    More and devices are connected every day, creating greater security threats and
+    problems. An IoT security model is needed in order to address resource-based IoT
+    devices and end. In this paper, we propose
+
+
+    strategically to find effective solutions. In the IoT system should be built in
+    IoT devices are made unfortunately without security concerns [3].
+
+
+    Further security concerns could be due to IoT system configuration and management.
+    Thus, the IoT device requires configured configuration and authentication. In
+    addition, IoT vendors on security before their deployment are available. Potential
+    IoT system risks may also be related to physical attacks. Attack may attack IoT
+    devices to connect to the Local or home network, an attacker may be able to access
+    encrypted IoT data, or IoT credentials. The attacker may attack the IoT framework
+    with malicious software without or an IoT device connected to a home network.
+
+
+    *Keywords—*Applications, Attacks; IoT; Security; Smart
+
+
+    # ## INTRODUCTION
+
+
+    The Internet of Things allows objects in our world to be linked over the Internet
+    with the ability to interact without human intervention. The IoT consists of variety
+    that can be linked through wired or wireless networks. These objects have a special
+    addressing that allows them to be used in various applications, such as houses,
+    smart homes, transportation, connected vehicles, smart grids, smart cities, smart
+    traffic control and others [1]. IoT is considered as one of the most promising
+    technologies but vulnerable to undesirable threats to the IoT and its elements
+    and for protecting the environment from damage. In order to design new architectures
+    that provide a secure and reliable system, the building of the IoT with framework
+    security is considered [2].
+
+
+    In this paper, we provide an overview of major IoT security issues, discuss attack
+    vectors, IoT security review literature technique, the cybersecurity approach
+    towards IoT security architecture.
+
+
+    The remainder of the paper is organized as follows: Related work II and III present
+    the related work, Section IV focuses on the IoT Security Organizational architecture,
+    Section V proposes the proposed framework Conclusion and future work are presented
+    in VI.
+
+
+    IoT devices security should be discussed in the manufacturing to IoT technology
+    implementation. Components need to be addressed as IoT security concerns, Networks,
+    and IoT devices. For instance, because of insecure configuration or vulnerabilities,
+    IoT devices may be compromised. Security challenges need to be addressed
+
+
+    # ## II. RELATED WORK
+
+
+    There were various suggestions for IoT security in the literature:
+
+
+    The authors in [4] proposed the hardware-based security technique. To achieve
+    protection at hardware level, a cryptographic methodology of elliptic curve cryptography
+    was adopted. For their approach, authors in [5] suggested a software-based framework.
+    Their work uses a strategy as defense against generic attack and a key generation
+    and integrity verification scheme was proposed in [5]. The third party used Merkel
+    list. The solution to check the validity of the data stored.
+
+
+    The IoT network does not prevent attackers that can intrusion inside or outside
+    the network. The introduction of a signature based and anomaly intrusion detection
+    solutions can use a security mechanism to prevent any intrusion in the network.
+    Signatures of attacks are essential to determine any network misconduct. This
+    is in addition to'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'for regular network activity connects and alerts when the deviates from its
+    normal behavior. Both methods have advantages and disadvantages. The authors in
+    [6] suggested a mixed approach, which both anonymity and signature-based approaches
+    are extended to the proposed system.
+
+
+    The fingerprints in [7] can be used to identify devices as base stations or access
+    points. The identity of unidentified signals from the wireless network. The authors
+    in [8] suggested IoT authentication protocols using Hash Chain, Hash Link and
+    Identity Authentication Protocols. However, these protocols protect resources
+    and reward IoT system performance.
+
+
+    The authors in [9] recommended a framework to protect against IoT attacks. They
+    introduced a model to make an IoT system secure without maintenance constraints
+    to implement security for low restriction devices as gateways or other IoT devices.
+    It utilizes features of IoT devices for identification purposes, for example,
+    signal frequency and capacity.
+
+
+    # ### III. I SECURITY
+
+
+    In this section we discuss the security requirements, as well as the different
+    attacks IoT. They are presented in sections A, B, and C respectively.
+
+
+    # #### A. Security Requirements
+
+
+    The requirements for the IoT system have some challenges as follows:
+
+
+    +   * IoT consists of heterogeneous technologies that make security requirements
+    more difficult to determine and understand.
+
+    * IoT can have mobile devices that require versatility, which raises security
+    risks.
+
+    * IoT produces a large number of information called Big data has its own security
+    and management issues.
+
+
+    An IoT system requires users and devices to be authenticated, authorized, and
+    controlled. The identity of users or devices is verified by an IoT system through
+    the required rights, and access control limits allow IoT system resources or data
+    in order to protect against unintended use, either stored or in transit form.
+    Data integrity ensures consistency and accuracy, while non-repudiation ensures
+    data authenticity and integrity. Exploiting any vulnerability leads to violate
+    one or more of the given attributes secures the immunity against the violation
+    of above security. Security attributes and requirement description are summarized
+    in Table 1.
+
+
+    | Attribute | Techniques | Requirement Description |
+
+    |---|---|--|
+
+    | Confidentiality | Encryption | Data protection is required, no one should be
+    able to read or edit it. |
+
+    | Integrity | Hash generation | It should be verified that no unauthorized changes
+    occurs. |
+
+    | Authentication, Authorization, Access control (AAA) | Implement policies, Security
+    credentials, and authentication servers. | Identification of users and devices.
+    Digital signature. Digital signature Originator should not be able to deny its
+    origin. |
+
+
+    TABLE I. I SECURITY ATTRIBUTES, TECHNIQUES AND REQUIREMENTS
+
+
+    # #### B. Security Concerns
+
+
+    Open Web Application Security Project (OWASP) has some of the security concerns
+    in IoT as [11].
+
+
+    +   * Weak authentication or authorization.
+
+    * Weak security on networks.
+
+    * Weak security configuration.
+
+    * Lack of encryption in transportation.
+
+    * Weak security on cloud interface.
+
+    * Weak security on mobile device.
+
+    * Weak firmware security.
+
+    * Weak physical security.
+
+
+    Some IoT devices do not update the firmware and encrypt the digital signature.
+    Sometimes the mutual authentication between client device and server is not carried
+    out. Authentication can be compromised. We applications also have vulnerabilities
+    to the database network to exploit for gaining access. Most clients use weak credentials
+    such as the “12345” password to be set. This is easily using brute force attack.
+    Most of the clouds do not enforce a multi-factor or two factor authentication
+    that helps people. Some passwords are weak and can be cracked. Some IoT services
+    do not implement security measures against account access and harvesting and do
+    not take into account details of distributed computing.
+
+
+    Most smart applications that control IoT devices not use secure connections. To
+    communicate securely with the cloud, the connection application should use the
+    Secure Socket Layer (SSL) which is mobile and spans from physical device and wired
+    to the wireless connection. Physical devices can be physically secured by unauthorized
+    authorization, but full security to the wireless medium is impossible as radio
+    waves in or out of
+
+
+    Only when transmitting data in open wireless media can be secured. Some techniques
+    secure the radio waves, but they require greater computer power. Therefore, these
+    vectors become vulnerabilities for the attacker to exploit and gain control over
+    system, in network and cloud context.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# C. Types of Attacks
+
+
+    In this section, we present different types of attacks against IoT systems. They
+    are presented in Table 2.
+
+
+    | Type of Attack | Attack Description | Advantages from an attackers'' perspective
+    |
+
+    |---|---|---|
+
+    | Physical Attacks [12] | Aim to target with the hardware components. They are
+    very difficult to carry but expensive resources. | Can help attackers to have
+    full and effective control of devices. |
+
+    | Side Channel Attacks [13] | Are focused on random deviations that the correlation
+    between their expressions can be retrieved from the encryption devices (that is
+    neither to the cipher text nor the encryption process). Encryption devices can
+    generate easily measurable information and energy consumption statistics. | Help
+    attackers to retrieve the key used by a device based on the physical characteristics
+    of logical operations depend on the input data |
+
+    | Cryptanalysis Attacks [14] | Are focused on the cipher text and try to break
+    the encryption | Help hackers to find the encryption key to be obtained |
+
+    | Software Attacks [15] | Exploit different vulnerabilities in the system through
+    its own communication interface. | Help hackers exploit software vulnerabilities
+    to gain unauthorized access or sensitive information |
+
+    | Wireless Network Attacks [16] | Wireless communication systems are vulnerable
+    to network attacks due to the broad nature of the transmission medium. These attacks
+    are classified as active and passive attacks. | Help attackers intercept data
+    transmission and send sensitive data
+
+
+    # IV. SECURITY ORGANIZATIONAL APPROACH
+
+
+    Organizations involved in deployment of IoT technologies must consider IoT privacy
+    and security risks. In order to protect their customers and company security interests,
+    organizations must consider security measures to their solutions. To address the
+    security of IoT, we suggest the following:
+
+
+    # A. Measure Security Impact
+
+
+    The security impacts on consumers and business must be measured for each organization.
+    What is the loss for those customers and businesses? Who is going to be responsible
+    for security? How will the IoT system be secured? And what is the security solution''s
+    impact?
+
+
+    # B. Multi-layer security approach:
+
+
+    Security approaches should cover all possible aspects or security attributes such
+    as authentication, access control, encryption mechanisms, analysis network security.
+
+
+    # C. Control cycle:
+
+
+    Defines the security control from its deployment to operational and incident occurrence
+    to neutralization and replacement of IoT devices. Control cycle consists on the
+    phases as shown in Figure 1.
+
+
+    +   - Deploys the security in IoT systems such as identification of any.
+
+
+    +   - Operational phase: Security becomes operational by continuously monitoring
+    and maintaining updates and fixes in the process of "monitoring known objects."
+
+
+    +   - Incident and reverse phase: If any unwanted security breach occurs of countermeasure,
+    upset is neutralized and restoration to normal state should be done.
+
+
+    +   - Expiration phase: Exits the system and replaces devices and gets back to
+    the first phase.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '![](img/87d485c9776e94cebfcb1b02a513013d_3_0.png)
+
+
+    Devices can be categorized into two types that use existing networking technologies
+    like Wi-Fi or Ethernet connections. Second category includes sensor devices for
+    local communication using Zigbee, Z-Wave, Powerline and many other radio frequencies.
+
+
+    The highest level of attacks is when the attacker has access to the local network.
+    The attacker will then be able to turn off devices, system parameters can be misconfigured
+    or modified and it can be remotely erased. A malicious update can also read and
+    access the firmware to understand the device''s operations and vulnerabilities.
+    The cryptographic information is also accessible to the attacker.
+
+
+    An intruder may target Wi-Fi or the Ethernet interface, while the system updates
+    status gets information from the remote server. The attackers may intercept the
+    communication with ARP poisoning or changing DNS settings in order to redirect
+    the traffic. Self-signed certificates also help attack with HTTPS connection installation,
+    allowing attackers to bypass the authentication mechanism. Local network devices
+    can be scanned if the attacker has physical access via USB-and-Play (P&P) or discovery
+    protocols.
+
+
+    Mitigation may be done, by securing devices from being accessed via locked racks.
+    This is in addition to using wired connections instead of wireless connection,
+    disabling unnecessary functions, changing defaults, using strong passwords, limiting
+    remote access when needed, ensuring updates are regular, and implementing security
+    measures on device before vendor buying it. If possible, protecting devices with
+    self-healing mechanism can prevent attacks on IoT system''s potential failure.
+    There may be many problems and more possible solutions, but there are many for
+    unknown attack vectors.
+
+
+    # D. Preservative approach:
+
+
+    Manufacturers should consider securing IoT devices. For instance; IoT gateways
+    should be built with built security. This function reduces the organization''s
+    security overhead. Increasing usage of IoT devices in different markets can be
+    achieved through partnership with secure vendors and researchers.
+
+
+    # V. PROPOSED IoT SECURITY ARCHITECTURE
+
+
+    In this section we propose an IoT security architecture that takes into account
+    security requirements and the IoT attacks mentioned. The IoT system is divided
+    into three parts: Physical, network, and application.
+
+
+    ![](img/87d485c9776e94cebfcb1b02a513013d_3_1.png)
+
+
+    Fig. 2. IoT system components
+
+
+    Fig. 1. Control Life Cycle
+
+
+    # A. Physical Security
+
+
+    IoT systems consist of devices connected through a network. Many devices are available
+    in different markets on the usage such as smart locks, smart thermostats, smart
+    cameras, smart energy management devices, smart electricity meters, smart appliances,
+    and smart health sensors. These devices are connected to the backend servers or
+    cloud provider services; data is stored and over the cloud. Therefore, users can
+    access these devices directly or through the cloud.
+
+
+    - Network Security
+
+
+    The second part of proposed architecture is the network. It consists of direct
+    service and Cloud-IoT Communication. In the cloud, cloud itself should be properly
+    secured and authenticated. When communicating with service, proper device authentication
+    and cloud device authentication could be used by a third party. Without a strong
+    encryption process in place, the intruder will be able to access to sensitive
+    data during communication and perform a middle man attack that can also intercept
+    the IoT traffic. This is also a protection against playback attack, which can
+    cause an unauthorized access against cloud services or device. This protection
+    is achieved by using strong misidentification of device. Strong encryption can
+    protect data from unauthorized access during the communication. TLS with certificate'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'validation for authentication and secure key distribution is also recommended.
+
+
+    # C. Application Security
+
+
+    The third part is the application that communication between users'' applications
+    and IoT devices as well as mobile or web application with cloud.
+
+
+    important ensure that malicious attacks do not overwrite the code that should
+    not be tampered with after signed.
+
+
+    Some open libraries perform strong encryption and these methods are used widely.
+    These techniques work with the resource constrained IoT devices. Certificate authorities
+    ensure e-resource sharing and strong trust model for authentication purpose. Certificate
+    authorities ensure authentication for secure communication between different systems.
+    Security can be embedded in devices for trusted communication.
+
+
+    Wi-Fi and Bluetooth connectivity are used for communication between mobile apps
+    and devices. Data should therefore otherwise local traffic will be revealed during
+    communication. Mobile applications should be carried out the use of TLS / SSL
+    and TLS certificates in which will secure the communications in the Man in the
+    Middle TLS ensures secure connectivity between smartphones and applications with
+    the cloud services, otherwise attackers may capture the data. Online cloud service
+    does not respect privacy, creating increasing risks of usage of storage patterns
+    which increases the efforts of hackers across different types of attacks such
+    as brute force or dictionary attacks. Server''s TLS certificate validation should
+    be properly carried out by the applications. Therefore these best practices can
+    contribute to secure the communications.
+
+
+    Certificate authorities manage keys, and security credentials which are for authentication
+    purposes. Different standards are available for certificates, keys and management
+    formats for certificates. Also Authorized Certificates "CAS" may use standards
+    or custom format. Certificates are managed through protocols like Online Certificate
+    Status Protocol (OCSP), Simple Enrollment Protocol (SCEP) and Over Enrollment
+    Secure Transport (EST). These protocols help in the management of certificates.
+    Other protocols use certificates, keys and authentication mechanisms. Both protocols
+    are Transport Layer Security (TLS) and Datagram Transport Layer (DTLS).
+
+
+    ![](img/87d485c9776e94cebfcb1b02a513013d_4_0.png)
+
+
+    Figure 3. Security architecture for IoT system.
+
+
+    For the authentication of endpoints, IoT system can use "TLS" or "DTLS". Upon
+    mutual authentication, the keys can be exchanged to establish an encrypted communication
+    to save data from the eavesdropper.
+
+
+    # VI. CONCLUSIONS AND FUTURE WORK
+
+
+    IoT systems face more secures than normal IoT system. IoT system contains new
+    technologies and resource constrained devices. There are different attacks that
+    can threaten IoT systems. Security on IoT systems can be deployed by presenting
+    a security framework according to the specific needs of IoT system. Security frameworks
+    help in understanding and minimizing security of IoT systems. Certificate authorities.
+    By using digital certificates, keys and security credentials, authenticated and
+    encrypted communication is possible. Our future work will address the special
+    issue of back connectivity in IoT system along implementation details.
+
+
+    # REFERENCES
+
+
+    It does not matter how the IoT system has been secured, some threats cannot defeat
+    these security measurements. Analysis of IoT security can provide good understanding
+    for network operations. In another aspect of IoT security, the security of devices
+    in IoT environment where no one can add security features. Therefore, security
+    should include IoT device as a built-in feature. IoT devices should be secured
+    by design with traditional security techniques like encryption, authentication,
+    integrity check and secure updating IoT devices should also execute secure signed
+    code to run on devices, while being secured during run time. It is
+
+
+    [1] Afghan, H.W., White, G.B. (2018) "Internet of things: state-of-the-art: challenges,
+    applications, and open issues." Int. J. Comput. Res. 93(3), 928–935
+
+
+    [2] Cer, V., Ryu, P., Sengen, M., White, R. (2016) "IoT security and safety challenges:
+    A survey." Inform. J. 75, 1–17.
+
+
+    [3] Wang, Y., Liu, J. (2005) "A countermeasure for Attack of a wireless FDA."
+    Information technology: coding and computing 2005. ITCC 2005, International conference,
+    on, 1, pp 544–548 IEEE Xplore, Dec. 2005.
+
+
+    [4] Kempis, T., Tanaka, W., P., Popovici, E., M., (2005) "An FPGA implementation
+    of a flexible elliptic curve cryptography'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'Wang, Q., Wang, C., Ren, K., et al. (2011) "Enabling public auditability and
+    data dynamics for security in cloud computing." Parallel and distributed IEEE
+    transactions, 22(5):827-850, May 2011.
+
+
+    Rose, K., Wagner, J., Vogt, S. (2011) "Real-time intrusion detection in internet
+    of things, Ad-Hoc networks," 11(6), 2661-2674.
+
+
+    Duance, B., Zametti, D., and Capcoup, S. (2012) "On physical layer identification
+    of wireless devices." ACM computing surveys, 11(2):45(1).
+
+
+    Yan, L., et al. (2013) "Construction and strategies in IoT security system." International
+    Journal of Mobile Communication "Green IoT," IEEE and Internet of things, IEEE
+    international conference on and IEEE physical communication, pp.1129-1123, August
+    2013.
+
+
+    Gupta, S., Chen, X., Khan, K. (2014) "Information fusion to defend international
+    attack in Internet of things." IEEE IoT journal, vol. 1, No. 6.
+
+
+    Xu, Q., Zhang, R., Saul, W., and Han, Z. (2016) "Device fingerprinting in wireless
+    networks, challenges and opportunities," vol. 18, no. 4, 94-104.
+
+
+    Pan, Yao, et al. (2017) "Information security project, hosts," https://owasp.org/www-project-internet-of-things
+
+
+    Backencstra, T., et al. (2016) "Protection of ECC codes against side channel implementation."
+    Verification and Security Workshop (IVSW), IEEE International. IEEE.
+
+
+    Bhaswani, Mohamed A., et al. (2016) "ASIS-comparative review of security algorithms
+    for internet of things." Microelectronics (ICM), 28th International Conference
+    on.,
+
+
+    Gouzalez, Jesus David Terras, and Witmore Kim (2016) "Zero-Crossing Analysis of
+    Levy Walks and a DDoS Dataset for Real-Time Feature Extraction Composite and Applied
+    Signal Analysis for Strong Threats Against IoT." International Journal of Software
+    Science and Computational Intelligence (IJSCI) 8.4, 1-28.
+
+
+    Han, Guanjie, et al. (2016) "Security and privacy in Internet of things: methods,
+    architectures, and solutions," Security and Communication 9:15, 2641-2642.'
+  merge: -1
+  img_proc: true
