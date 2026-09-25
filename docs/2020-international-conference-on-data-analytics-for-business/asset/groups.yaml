@@ -1,0 +1,1225 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # 2022 International Conference on Data Analytics for Business and Industry: Towards
+    a Sustainable Economy (ICDABI)
+
+
+    # # Machine Learning for Predicting Perovskite Solar Cell Opto-Electronic Properties
+
+
+    Maniel Wolk
+
+    Department of Electrical and
+
+    Computer Engineering
+
+    University of Kentucky
+
+    Lexington, KY
+
+    mwe265@uky.edu
+
+
+    David Chen
+
+    Department of Electrical and
+
+    Computer Engineering
+
+    University of Kentucky
+
+    Lexington, KY
+
+    Zhi.Chen@uky.edu
+
+
+    Sarhan M. Musa, Senior Mehreb, IEEE
+
+    Department of Electrical and Computer
+
+    Engineering
+
+    Prairie View A&M University
+
+    Prairie View, TX
+
+    smmusa@pvamnu.edu
+
+
+    **Abstract—** Perovskite technology has much attention in recent years for potential
+    to replace renewable energy in fossil fuels. Traditional solar cells have shown
+    remarkable increase from 38% to 242% in a span of years. Perovskite solar cells
+    have attracted much attention in research because of the low cost in manufacturing
+    and production. Current silicon photovoltaic devices are more expensive than fossil
+    fuel. The use of Machine Learning (ML) to research and predict the opto-electronic
+    properties of perovskite cells through techniques like Vector Regression (SVR),
+    and Artificial Neural Networks (ANN) can greatly improve the chemical process
+    and manufacturing techniques. These tools used to improve the impact of solar
+    energy on a national scale. In this paper, we explore the current research of
+    the development of perovskite solar cells using ML techniques. Furthermore, we
+    consider the limitations and potential areas of research.
+
+
+    **Keywords—**machine learning, perovskite solar cells, artificial neural networks,
+    support regression, organic electronics
+
+
+    # I. INTRODUCTION
+
+
+    The widespread use of solar energy has been aided due to challenges with silicon
+    photovoltaic technology. Traditional solar cells are more expensive than fossil
+    fuels. This is due to cost of materials required to fabricate and install these.
+    With efforts of creating a cheap affordable alternative of energy are necessary.
+    Perovskite solar cell technology has the potential to expand the widespread use
+    of solar energy. Perovskite solar cells can be fabricated using relatively low
+    materials reducing the overall cost to comparable to other energy sources. They
+    can be fabricated using a number of processes. Using a solution deposition method,
+    perovskites can be created using spin coating, slot coating, to roll manufacturing,
+    and spray coated easily [1]. The main factor in perovskite solar cells which is
+    a candidate for energy production is the ease with which the properties can be
+    changed. Identify applicable factors such as band gap, lattice constant,
+
+
+    # A. Background
+
+
+    ML applies the concept of Artificial Intelligence (AI) to data processing. ML
+    is an algorithm or set of algorithms that allow the computer to automatically
+    learn and predict. This self-improving approach requires no tedious reprogramming
+    in order to become more accurate and precise. Machine learns by observing data
+    and patterns in the data. With patterns, trends can be analyzed for forecasting.
+    There are many methods of learning such as Support Vector Regression, Artificial
+    Network, and Random Forest. These mechanisms of learning are currently being used
+    in the development of perovskite solar cells for high efficiency, material science
+    analysis, and modeling of the quantum mechanics in the perovskite crystals.
+
+
+    # B. Use in Perovskite Research
+
+
+    ML in solar cell research has many useful applications. ML is currently being
+    used to predict the electrical and optical properties of metal halide perovskite
+
+
+    # II. MACHINE LEARNING'
+  - "[PAGE 1]\n\nwhich has not yet been experimented with in a lab[3]\nBy this technique\
+    \ of discovering and narrowing down the\nrange of perovskites for solar panel\
+    \ application, a\nmore focused effort taxing a promising materials will\nexpedite\
+    \ the development of this technology.\n\n# III. TECHNIQUES OF MACHINE LEARNING\n\
+    \n# A. Artificial Neural Network (ANN)\n\nNeural networks are a powerful tool\
+    \ in ML. By using\nof variables and constraints, a machine can trends,\ndebehavior,\
+    \ and predict properties based on\ntnetwork's output on input data. ML structural\
+    \ and\nproperties of metal halide networks using a hierarchical\nconvolutional\
+    \ neural network were studied in [3]. They use\na neural network which predicts\
+    \ the electrical properties\nof perovskites based on preset parameters categorized\n\
+    different groups. The group descriptor, elemental\nand,; based chose the important\
+    \ factors in the\nquality of perovskite cells. With these descriptors as\ninput\
+    \ the neural network was trained to get\naccurate results. The work associates\
+    \ the chemical and\nphysical properties of the cells with the electrical and organic\n\
+    properties in order to capture patterns. The focus of the paper is\nto vary the\
+    \ components. Organic electronics\nare important because of their great\nthermal\
+    \ stability, humidity tolerance, and in some\ncomplex impedance surface [4]. By\
+    \ varying the\nproperties of the perovskites, with which materials\nhave not been\
+    \ tested yet could be predicted. Thereby\nfocusing the research efforts to be\
+    \ cost-effective and\nefficient.\n\nlayer 100 neurons performing elementwise\n\
+    linear activation. The output of the network is a calculation of\nbandgap for\
+    \ that material. To mitigate possible error\nand bias, 80% of the data is selected\
+    \ randomly as input. Fig.\nshow the layout of the neural network used by Saidi\
+    \ and\nis research.\n\n![](img/79d6bf50bde61e9fc616b4daf8215295_1_0.png)\n\nFig.\
+    \ 1: The layout of the neural network used by Saidi and his team.\n\n# B. Device\
+    \ Physics and Machine Learning\n\nThe inner device of perovskites has a profound\n\
+    impact on the power generation of the cell as a whole.\nPredictions and strategies\
+    \ learned from ML to develop-\nperformance perovskite cells were investigated\
+    \ in [5]. The\nfactors of power conversion efficiency are analyzed from a\ndevice\
+    \ level. The differential between the\nperovskite charge and electron transport\
+    \ layer\nare critical for the device power conversion efficiency.\n\nIn this approach\
+    \ circumstances of perovskites we\nkept constant in order to understand the fundamental\
+    \ properties\nof the cell. The lattice structure, the perovskite, and\nnanostructure\
+    \ each determine the nominal properties\nof cell and the enabled predictions to\
+    \ be\naccurate. The network was able to correctly calculate the\nbandgap of the\
+    \ perovskites with organic and inorganic\ncomponents. The elemental group consists\
+    \ of the\nnetwork of first and second ionization energies and\nelectron affinities.\
+    \ These factors are highly important for\ncrystal's bandgap. The proposed group\
+    \ based construc\nfacility to simulate. For example,\nMAPHI can be utilized for\
+    \ perovskite solutions MA and\nPhI medium. The proposed group is focused\nto capture\
+    \ the chemistry of the perovskite and were\ndeemed important by the research team.\
+    \ The configuration\nof these elements in the perovskite such as the lattice and\n\
+    metal-halide-octahedral tilt have a profound effect on\nthe material properties.\n\
+    \nThe scheme of Convolutional Neural Network (CNN)\nemoys an x N input vector\
+    \ containing the number of features\nof the perovskite. This vector first passes\
+    \ through a 1D\nconvolutional layer 64 filters. The data is filtered by\nprocessing\
+    \ it with the kernels of each ID filter. The output is\nthen filtered into a 2D\
+    \ containing 128 filters with a 2D.\nEach 2D filter is composed of five rows and\
+    \ columns matching\nthe number of features. The processing of each of these\n\
+    layers the same vector as the input. The neuron\n\nThis work uses various methods\
+    \ of machine learning\nto correlate the properties of a solar cell, device the\n\
+    properties of the crystals, and the power conversion efficiency.\nThe researchers\
+    \ used different types of machine learning\nands the root mean square error as\
+    \ which one was\nmost accurate. The error is calculated using formula (1).\n\n\
+    ```\n$$\\frac{\\sum (x-\bar{x})^2}{N} = (1)$\n```\n\nTheir results showed the\
+    \ artificial neural network to\nleft least mean square error in its predictions\
+    \ of\nperovskite. The correlation factor calculated\nby (2),\n\n```\n$$\\sum_{i=1}^{N}\
+    \ (x_i-\bar{x})(y_i-\bar{y})/\\sum_{i=1}^{N} (y_i-\bar{y})^2 = (2)$\n```"
+  md: '
+
+    # 2022 International Conference on Data Analytics for Business and Industry: Towards
+    a Sustainable Economy (ICDABI)
+
+
+    ## Machine Learning for Predicting Perovskite Solar Cell Opto-Electronic Properties
+
+
+    Maniel Wolk
+
+    Department of Electrical and Computer Engineering
+
+    University of Kentucky
+
+    Lexington, KY
+
+    mwe265@uky.edu
+
+
+    David Chen
+
+    Department of Electrical and Computer Engineering
+
+    University of Kentucky
+
+    Lexington, KY
+
+    Zhi.Chen@uky.edu
+
+
+    Sarhan M. Musa, Senior Mehreb, IEEE
+
+    Department of Electrical and Computer Engineering
+
+    Prairie View A&M University
+
+    Prairie View, TX
+
+    smmusa@pvamnu.edu
+
+
+    **Abstract—** Perovskite technology has received much attention in recent years
+    for its potential to replace renewable energy in fossil fuels. Traditional solar
+    cells have shown remarkable increase in efficiency from 38% to 24% in a span of
+    years. Perovskite solar cells have attracted much attention in research because
+    of the low cost in manufacturing and production. Current silicon photovoltaic
+    devices are more expensive than fossil fuels. The use of Machine Learning (ML)
+    to research and predict the opto-electronic properties of perovskite cells through
+    techniques like Support Vector Regression (SVR) and Artificial Neural Networks
+    (ANN) can greatly improve the chemical process and manufacturing techniques. These
+    tools are used to improve the impact of solar energy on a national scale. In this
+    paper, we explore the current research of the development of perovskite solar
+    cells using ML techniques. Furthermore, we consider the limitations and potential
+    areas of research.
+
+
+    **Keywords—** machine learning, perovskite solar cells, artificial neural networks,
+    support vector regression, organic electronics
+
+
+    ## I. INTRODUCTION
+
+
+    The widespread use of solar energy has been aided due to challenges with silicon
+    photovoltaic technology. Traditional solar cells are more expensive than fossil
+    fuels. This is due to the cost of materials required to fabricate and install
+    these. Efforts of creating a cheap affordable alternative of energy are necessary.
+    Perovskite solar cell technology has the potential to expand the widespread use
+    of solar energy. Perovskite solar cells can be fabricated using relatively low
+    materials, reducing the overall cost to be comparable to other energy sources.
+    They can be fabricated using a number of processes. Using a solution deposition
+    method, perovskites can be created using spin coating, slot coating, to roll manufacturing,
+    and spray coated easily [1]. The main factor in perovskite solar cells, which
+    is a candidate for energy production, is the ease with which the properties can
+    be changed. Identify applicable factors such as band gap, lattice constant,
+
+
+    ### A. Background
+
+
+    ML applies the concept of Artificial Intelligence (AI) to data processing. ML
+    is an algorithm or set of algorithms that allow the computer to automatically
+    learn and predict. This self-improving approach requires no tedious reprogramming
+    in order to become more accurate and precise. Machine learns by observing data
+    and patterns in the data. With patterns, trends can be analyzed for forecasting.
+    There are many methods of learning such as Support Vector Regression, Artificial
+    Neural Network, and Random Forest. These mechanisms of learning are currently
+    being used in the development of perovskite solar cells for high efficiency, material
+    science analysis, and modeling of the quantum mechanics in the perovskite crystals.
+
+
+    ### B. Use in Perovskite Research
+
+
+    ML in solar cell research has many useful applications. ML is currently being
+    used to predict the electrical and optical properties of metal halide perovskites
+    which have not yet been experimented with in a lab [3]. By this technique of discovering
+    and narrowing down the range of perovskites for solar panel application, a more
+    focused effort taxing a promising materials will expedite the development of this
+    technology.
+
+
+    ## II. MACHINE LEARNING
+
+
+    ## III. TECHNIQUES OF MACHINE LEARNING
+
+
+    ### A. Artificial Neural Network (ANN)
+
+
+    Neural networks are a powerful tool in ML. By using variables and constraints,
+    a machine can trends, debehavior, and predict properties based on the network''s
+    output on input data. ML structural and properties of metal halide networks using
+    a hierarchical convolutional neural network were studied in [3]. They use a neural
+    network which predicts the electrical properties of perovskites based on preset
+    parameters categorized into different groups. The group descriptor, elemental
+    and, based chose the important factors in the quality of perovskite cells. With
+    these descriptors as input, the neural network was trained to get accurate results.
+    The work associates the chemical and physical properties of the cells with the
+    electrical and organic properties in order to capture patterns. The focus of the
+    paper is to vary the components. Organic electronics are important because of
+    their great thermal stability, humidity tolerance, and in some complex impedance
+    surface [4]. By varying the properties of the perovskites, with which materials
+    have not been tested yet could be predicted. Thereby focusing the research efforts
+    to be cost-effective and efficient.
+
+
+    ![](img/79d6bf50bde61e9fc616b4daf8215295_1_0.png)
+
+
+    Fig. 1: The layout of the neural network used by Saidi and his team.
+
+
+    ### B. Device Physics and Machine Learning
+
+
+    The inner device of perovskites has a profound impact on the power generation
+    of the cell as a whole. Predictions and strategies learned from ML to develop-performance
+    perovskite cells were investigated in [5]. The factors of power conversion efficiency
+    are analyzed from a device level. The differential between the perovskite charge
+    and electron transport layer are critical for the device power conversion efficiency.
+
+
+    In this approach, circumstances of perovskites we kept constant in order to understand
+    the fundamental properties of the cell. The lattice structure, the perovskite,
+    and nanostructure each determine the nominal properties of cell and the enabled
+    predictions to be accurate. The network was able to correctly calculate the bandgap
+    of the perovskites with organic and inorganic components. The elemental group
+    consists of the network of first and second ionization energies and electron affinities.
+    These factors are highly important for crystal''s bandgap. The proposed group
+    based facility to simulate. For example, MAPHI can be utilized for perovskite
+    solutions MA and PhI medium. The proposed group is focused to capture the chemistry
+    of the perovskite and were deemed important by the research team. The configuration
+    of these elements in the perovskite such as the lattice and metal-halide-octahedral
+    tilt have a profound effect on the material properties.
+
+
+    The scheme of Convolutional Neural Network (CNN) employs an N input vector containing
+    the number of features of the perovskite. This vector first passes through a 1D
+    convolutional layer 64 filters. The data is filtered by processing it with the
+    kernels of each filter. The output is then filtered into a 2D containing 128 filters
+    with a 2D. Each 2D filter is composed of five rows and columns matching the number
+    of features. The processing of each of these layers the same vector as the input.
+    The 100 neurons performing elementwise linear activation. The output of the network
+    is a calculation of bandgap for that material. To mitigate possible error and
+    bias, 80% of the data is selected randomly as input. Fig. show the layout of the
+    neural network used by Saidi and is research.
+
+
+    This work uses various methods of machine learning to correlate the properties
+    of a solar cell, device the properties of the crystals, and the power conversion
+    efficiency. The researchers used different types of machine learning and the root
+    mean square error as which one was most accurate. The error is calculated using
+    formula (1). Their results showed the artificial neural network to left least
+    mean square error in its predictions of perovskite. The correlation factor calculated
+    by (2).
+
+    '
+  mdcn: '
+
+
+    # 2022年工用数据分析国际会议：迈向可持续经济 (ICDABI)
+
+
+    ## 用于预测钙钛矿太阳能电池光电性的机器学习
+
+
+    Maniel Wolk
+
+    电气与计算机工程系
+
+    肯塔基大学
+
+    列克辛顿，肯塔基州
+
+    mwe265@uky.edu
+
+
+    David Chen
+
+    电气与计算机工程系
+
+    肯塔基大学
+
+    列克辛顿，肯塔基州
+
+    Zhi.Chen@uky.edu
+
+
+    Sarhan M. Musa, Senior Mehreb, IEEE
+
+    电气与计算机工程系
+
+    Prairie View A&M 大学
+
+    Prairie View, 德克萨斯州
+
+    smmusa@pvamnu.edu
+
+
+    **摘要—** 钙钛矿技术因其替代化石燃料再生能源的潜力在近年来引起了广泛关注。传统太阳能电池的效率在几年内从38%显著提升到24%。钙钛矿太阳能电池因其制造和生产成本低而吸引了研究界的关注。目前的硅光伏设备比化石燃料昂贵。利用机器学习（ML）通过支持向量回归（SVR）和人工神经网络（ANN）等技术研究并预测钙钛矿电池的光电性能，可以极大改进化学工艺和制造技术。这些工具被用于从国家范围内提高太阳能的影响。在本文中，我们探索了利用机器学习技术开发钙钛矿太阳能电池的现状。此外，我们考虑了其局限性和潜在的研究领域。
+
+
+    **关键词—** 机器学习，钙钛矿太阳能电池，人工神经网络，支持向量回归，有机电子
+
+
+    ## I. 引言
+
+
+    由于硅光伏技术的挑战，太阳能的广泛利用得到了促进。传统太阳能电池比化石燃料昂贵，这是由于制造和安装这些电池所需的材料成本造成的。创建一种廉价且负担起的替代能源是必要的。钙钛矿太阳能电池技术具有扩大太阳能广泛使用的潜力。钙钛矿太阳能电池可以使用相对廉价的材料制造，使总成本与其他能源相当。它们可以使用多种工艺制造。使用溶液沉积法，可以通过旋涂、狭缝涂布到卷对制造，以及喷涂来轻松地创建钙钛矿
+    [1]。作为能源生产候选的钙钛矿太阳能电池的主要因素是其属性改变的易易性。识别如带隙、晶格常数等适用因素，
+
+
+    ### A. 背景
+
+
+    机器学习将人工智能（AI）的概念应用于数据处理。机器学习是一种算法或一组算法，允许计算机进行自动学习和预测。这种自我改进的方法不需要繁琐的重新编程即可变得更加准确和精确。机器学习通过观察数据和数据中的模式进行学习。通过模式，可以分析趋势以进行预测。有许多学习方法，如支持向量回归、人工神经网络和随机森林。这些学习机制目前正用于高效率钙钛矿太阳能电池的开发、材料科学分析以及钙钛矿晶体中量子力学的建模。
+
+
+    ### B. 在钙钛矿研究中的应用
+
+
+    机器学习在太阳能电池研究中有许多有用应用。机器学习目前用于预测尚未在实验室实验过的金属卤化物钙钛矿的电学光学性能 [3]。通过这种发现和缩小用于太阳能电池板应用的钙钛矿范围的技术，对有前景材料投入集中精力将加速该技术的发展。
+
+
+    ## II. 机器学习
+
+
+    ## III. 机器学习技术
+
+
+    ### A. 人工神经网络 (ANN)
+
+
+    神经网络是机器学习中强大的工具。通过使用变量和约束，机器可以根据网络对输入数据的输出来识别趋势、行为并预测属性。[3] 中使用分层卷积神经网络研究了金属卤化物网络的机器学习结构和属性。他们使用神经网络根据分为不同类别的预设参数预测钙钛矿的电学性能。组描述符、元素和基础选择了钙钛矿电池质量中的重要因素。以这些描述符作为输入，训练了神经网络以获得准确的结果。该工作将电池的化学和物理属性与电学和有机属性联系起来以捕捉模式。论文的重点是改变组件。有机电子由于其良好的热稳定性、湿度耐受性在某些复杂的阻抗表面而变得重要
+    [4]。通过改变钙钛矿的属性，可以预测哪些材料尚未经过测试。从而将研究工作集中在成本效益和高效性上。
+
+
+    ![](img/79d6bf50bde61e9fc616b4daf8215295_1_0.png)
+
+
+    图 1：Saidi 团队使用的神经网络布局。
+
+
+    ### B. 器件物理与机器学习
+
+
+    钙钛矿的内部器件对整个电池的发电有深远影响。[5] 研究了从机器学习中学到的预测和策略，以开发高性能的钙钛矿电池。从器件层面分析了功率转换效率的因素。钙钛矿电荷和电子传输层之间的差异对于器件的功率转换效率至关重要。
+
+
+    在这种方法中，我们保持钙钛矿的情况不变，以理解电池的基本属性。晶格结构、钙钛矿和纳米结构分别决定了电池的额属性，并使预测准确。网络能够正确计算具有有机和无机组件的钙钛矿带隙。元素组由第一、第二电离能和电子亲力的网络组成。这些因素对于晶体的带隙至关重要。所提出的基于小组的模拟。例如，MAPHI
+    可用于钙钛矿溶液 MA 和 PhI 介质。所提小组重点在于捕捉钙钛矿的化学性质，并被研究团队认为很重要。这些元素在钙钛矿中的配置（如晶格和金属-卤化物-八面体角）对材料属性有深远影响。
+
+
+    卷积神经网络（CNN）方案采用包含钙钛矿特征数量的 N 输入向量。该向量首先通过带有 64 个过滤器的 1D 卷积层。通过用每个过滤器的卷积核处理数据进行过滤。输出随后被过滤成包含
+    128 个过滤器的 2D 结构。每个 2D 过滤器由与特征数量匹配的五行五列组成。这些层中的每一层处理与输入相同的向量。100 个神经元执行逐元素线性激活。网络的输出是该材料的带隙计算值。为了减轻可能的误差和偏差，随机选择
+    80% 的数据作为输入。图显示了 Saidi 及其研究使用的神经网络布局。
+
+
+    这项工作使用各种机器学习方法将太阳能电池的属性、晶体属性和功率转换效率相关起来。研究人员使用了不同类型的机器学习，并以均方根误差判断哪种方法最准确。误差使用公式
+    (1) 计算。他们的结果显示人工神经网络在预测钙钛矿时留下的均方误差最小。相关系数通过 (2) 计算。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    showed a correlation for the artificial network; however, the ANN did not have
+    the correlation. The K Nearest Neighbors (NN) and Random Forest (RF) algorithms
+    had the correlation between data and predictions. This indicates that different
+    techniques have strengths and weaknesses. We removed duplicate data to avoid redundant
+    analysis the complex process of a perovskite solar cell. These results can be
+    used to further investigate matters with energy alignment with the perovskite
+    cell. Large differences in energy bands act as a source of error, which limits
+    the overall PCE. Other techniques were able to learn the properties and design
+    new materials that were predicted. Fig. 2 demonstrates how accurately the algorithm
+    predicted the results.
+
+
+    but also unknown materials which have not been fed into the system. The random
+    forest algorithm was also able to predict bandgaps of materials with accuracy.
+
+
+    In Li''s work, random forest machine learning was also implemented to test the
+    algorithm''s accuracy in learning and predicting bandgaps by patterns interconnecting
+    in hierarchical trees. These trees are built from the outermost to the innermost
+    branch. This tree is grown from the bottom up. Method [6] was also able to predict
+    new materials that were not part of the dataset. Because of the limitations of
+    the random forest algorithm, the artificial neural network worked the best for
+    this application.
+
+
+    The algorithms attempted to consider important factors such as the solar cell
+    such as insert current, open circuit voltage, power point and fill factors. The
+    results of both ANN and RF had a correlation factor less than 0.5. The results
+    were not accurate and showed a relatively divergence from measured results. Neither
+    model factored in metal conductivity and conduction back. These factors were not
+    incorporated into the model parameters. These results also yielded a large mean
+    square error for the results. While it further demonstrates that these parameters
+    of the device are critical for optimizing the performance of the solar cell.
+
+
+    ![](img/79d6bf50bde61e9fc616b4daf8215295_2_0.png)
+
+
+    Fig. 2: Predicted PCE from machine learning vs Actual PCE [5].
+
+
+    This research has many potential benefits. For perovskite solar cells has many
+    applications for researchers to explore. The critical aspects of solar cells such
+    as fill factor, power conversion efficiency, open circuit voltage, short circuit
+    voltage, and maximum power can be accurately predicted and simulated without needing
+    expensive equipment and iterative fabrication processes.
+
+
+    # C. Support Vector Regression (SVR)
+
+
+    SVR is a linear technique that generalizes a set of data points into a continuous
+    multivariable function. The support vector machine works with more data points
+    as the input [7]; however sparse matrices are treated with a sigma tube to match
+    the data points. The algorithm training and testing data are independently and
+    distributed from the data and this assumption, the multivariable function formulates
+    a loss to be minimized. When this function is minimized, this is stated to be
+    the best approximation for the data.
+
+
+    ```
+
+    f(x) = wT \sum_{i=1}^{n} w_i x_i + b
+
+    ```
+
+
+    The model was built by designing new set of perovskite materials with predicted
+    bandgaps predicted using their chemical properties and composition. This predicted
+    bandgap was created by synthesizing the perovskites and comparing the results.
+    The perovskites were CsMAPb₃, Cs(MA,FA)₃, and MAPbI₃ with one different bandgap
+    values from the machine. The results of the bandgaps ranged from 1.3-2.2 eV. The
+    experimental results of the cells measured were 1.4 eV (CsMAPb₃), 1.8 eV (Cs(MA,FA)₃),
+    and 1.4 - 1.8 eV (CsMAPbI₃). Other perovskites used for non-metal leads like CsSnI
+    and FASnI were also tested. The predicted bandgaps for MAPbSnI and FASnI, in the
+    dataset, were 1.36 eV and 1.28 eV respectively. The fabricated samples showed
+    bandgap of 1.37 eV (MAPb₃) and 1.4 eV (FASnI). The fabricated CsSnI had a bandgap
+    of 1.15 eV. The fabricated sample had a bandgap of 1.25 eV. This result is es
+    significant because the perovskite was not in the dataset. This demonstrates the
+    ANN can not only accurately the band of known materials,
+
+
+    shows the values are weighted and summed to approximate the function which fits
+    the best data offset by some value b.'
+  - '[PAGE 3]
+
+
+    # 2020 International Conference on Data Analytics for Industry: Way Towards a
+    Sustainable Economy
+
+    (ICABI)
+
+
+    algorithm uses a series of polynomials to create best this function with the data.
+    The higher the order of polynomials, the better the line fits the data. outliers
+    are in marginally labeled. The loss function (4)
+
+
+    ```
+
+    $L(y, f(x)) = 0$ if $|y - f(x)| \le \epsilon$ else factor, otherwise,
+
+    ```
+
+
+    ```
+
+    $L(y, f(x)) = (y - f(x))^2$ if $|y - f(x)| > \epsilon$ factor (4)
+
+    ```
+
+
+    Utilizing certain techniques of ML has limitations and
+
+    aws inherent in the algorithm''s function. When researching
+
+    t effects of varying any parameter of the perovskite in
+
+    learning scheme, other constraints must be met
+
+    [3]. This neglects the complex relationship between
+
+    perovskites on a microscopic and macroscopic scale. While
+
+    organ element of interest, persists with
+
+    mixed halide perovskites varies significantly with
+
+    t elements and fabrication method [10].
+
+    While machine learning may have the ability to predict\particular attributes of
+    these materials, the fundamental
+
+    workings would still be uncertain. This knowledge
+
+    enters a mastery of this area of
+
+    anotechnology. With an artificial network, the
+
+    type and ratio of halide and metallic elements
+
+    can be used in the input layer of the network. With such
+
+    back features, the network can connect
+
+    existing data such as bandgap conversion
+
+    eff, lattice constant, short circuit, and open
+
+    c voltage can be assessed using this algorithm.
+
+
+    must be justified in order to have an accurate approximation
+
+    a collection of data. For non-linear functions, data is
+
+    mapped to a higher dimensional space using the kernel to
+
+    ieve higher accuracy. In this higher dimensional kernel
+
+    space, the formula is as seen in (5)
+
+
+    ```
+
+    $f(x) = \sum_{i=1}^{n} w_i \phi_i(x)$
+
+    ```
+
+
+    in which is used to create the function. Associated
+
+    discovery of lead-free hybrid organic-organic
+
+    perovskites via machine learning is studied [8]. This
+
+    technique was used in conjunction with machine learning
+
+    algebras to research the opto-electronic properties of
+
+    lead perovskites the showed features of
+
+    various organic perovskites to be learned by
+
+    free perovskites. The design showed features the
+
+    alorithm to output the stability, environment,
+
+    chemical properties of the perovskites [8].
+
+    With this ML approach, environmental issues of lead
+
+    perovskites and enhanced developments in photovoltaic
+
+    electronics are simultaneously solved.
+
+
+    Perovskite morphology and the addition of inorganic salts
+
+    tune the properties of perovskite to optimize.
+
+    performance of these salts was shown to change the
+
+    quality of material and improve stability [11].
+
+    The reason behind this has yet to be understood. Machine
+
+    learning using more complex architecture might
+
+    as to why this happens. The perovskite is only one
+
+    the solar cell device. The sublayers of hole transport
+
+    material, electron transport layer, back contact, and metal
+
+    aterials can either increase or diminish
+
+    efficiency of the device. For use of a layer of
+
+    Bathophenicone was shown to have a 10% difference in fill
+
+    factor between the perovskite and the
+
+    iment layer and improved stability with
+
+    cells [5]. Without ML
+
+
+    # IV. AREAS FOR IMPROVEMENT IN RESEARCH
+
+
+    Perovskite solar cell technology is innovative and up to
+
+    coming research. In the span of development, a decade
+
+    power conversion efficiencies have improved from 3.9% to
+
+    %-21%. This new area of research with
+
+    established tools of machine learning showing results.
+
+    However, there is still much research to be done using these
+
+    tools.
+
+
+    The ML algorithms cannot explain the relationship
+
+    tween the material properties of the perovskite and
+
+    ellectric and optical properties [5]. The issue of reported data-
+
+    cusing errors in the machine learning remains an in-
+
+    sue for utilizing this tool. The non-linear nature
+
+    data is intense for the properties of perovskites and
+
+    characteristics. With as any perovskites or one
+
+    of identical material properties then the free free effect
+
+    or or optical properties cannot be investigated with
+
+    these points points that are highly divergent from the
+
+    alгорит''s predicted results illustrate the complex quantum
+
+    mechanical relationship between material science and electrical
+
+    engineering. This area further relating these areas with
+
+    machine learning would greatly accelerate not only our understanding
+
+    ofperovskites, but quantum mechanics, chemistry, and
+
+    interdisciplinary studies as a whole.
+
+
+    The use of powerful machine learning schemes in
+
+    this area of research has significant implications for
+
+    chemistry, quantum mechanics, electrical engineering, and
+
+    material science. The hole transport layer in the
+
+    crystal can be seen and analyzed. Establishing correlations and relationships
+    between
+
+    chemical composition and electrical properties will
+
+    yield qualitative and quantitative information on these
+
+    materials for the electronic devices of present.
+
+    Where fabrication based research
+
+    requires numerous samples to be created, and machine
+
+    learning approach can accelerate existing data and
+
+    research efforts. The low cost and relatively short time
+
+    machine learning in perovskite solar cell research expands the
+
+    population of researchers who can work in this area.'
+  md: '
+
+    showed a correlation for the artificial network; however, the ANN did not have
+    the correlation. The K Nearest Neighbors (NN) and Random Forest (RF) algorithms
+    had the correlation between data and predictions. This indicates that different
+    techniques have strengths and weaknesses. We removed duplicate data to avoid redundant
+    analysis the complex process of a perovskite solar cell. These results can be
+    used to further investigate matters with energy alignment with the perovskite
+    cell. Large differences in energy bands act as a source of error, which limits
+    the overall PCE. Other techniques were able to learn the properties and design
+    new materials that were predicted. Fig. 2 demonstrates how accurately the algorithm
+    predicted the results.
+
+
+    but also unknown materials which have not been fed into the system. The random
+    forest algorithm was also able to predict bandgaps of materials with accuracy.
+
+
+    In Li''s work, random forest machine learning was also implemented to test the
+    algorithm''s accuracy in learning and predicting bandgaps by patterns interconnecting
+    in hierarchical trees. These trees are built from the outermost to the innermost
+    branch. This tree is grown from the bottom up. Method [6] was also able to predict
+    new materials that were not part of the dataset. Because of the limitations of
+    the random forest algorithm, the artificial neural network worked the best for
+    this application.
+
+
+    The algorithms attempted to consider important factors such as the solar cell
+    such as insert current, open circuit voltage, power point and fill factors. The
+    results of both ANN and RF had a correlation factor less than 0.5. The results
+    were not accurate and showed a relatively divergence from measured results. Neither
+    model factored in metal conductivity and conduction back. These factors were not
+    incorporated into the model parameters. These results also yielded a large mean
+    square error for the results. While it further demonstrates that these parameters
+    of the device are critical for optimizing the performance of the solar cell.
+
+
+    ![](img/79d6bf50bde61e9fc616b4daf8215295_2_0.png)
+
+
+    Fig. 2: Predicted PCE from machine learning vs Actual PCE [5].
+
+
+    This research has many potential benefits. For perovskite solar cells has many
+    applications for researchers to explore. The critical aspects of solar cells such
+    as fill factor, power conversion efficiency, open circuit voltage, short circuit
+    voltage, and maximum power can be accurately predicted and simulated without needing
+    expensive equipment and iterative fabrication processes.
+
+
+    ## C. Support Vector Regression (SVR)
+
+
+    SVR is a linear technique that generalizes a set of data points into a continuous
+    multivariable function. The support vector machine works with more data points
+    as the input [7]; however sparse matrices are treated with a sigma tube to match
+    the data points. The algorithm training and testing data are independently and
+    distributed from the data and this assumption, the multivariable function formulates
+    a loss to be minimized. When this function is minimized, this is stated to be
+    the best approximation for the data.
+
+
+    ```
+
+    f(x) = wT \sum_{i=1}^{n} w_i x_i + b
+
+    ```
+
+
+    The model was built by designing new set of perovskite materials with predicted
+    bandgaps predicted using their chemical properties and composition. This predicted
+    bandgap was created by synthesizing the perovskites and comparing the results.
+    The perovskites were CsMAPb₃, Cs(MA,FA)₃, and MAPbI₃ with one different bandgap
+    values from the machine. The results of the bandgaps ranged from 1.3-2.2 eV. The
+    experimental results of the cells measured were 1.4 eV (CsMAPb₃), 1.8 eV (Cs(MA,FA)₃),
+    and 1.4 - 1.8 eV (CsMAPbI₃). Other perovskites used for non-metal leads like CsSnI
+    and FASnI were also tested. The predicted bandgaps for MAPbSnI and FASnI, in the
+    dataset, were 1.36 eV and 1.28 eV respectively. The fabricated samples showed
+    bandgap of 1.37 eV (MAPb₃) and 1.4 eV (FASnI). The fabricated CsSnI had a bandgap
+    of 1.15 eV. The fabricated sample had a bandgap of 1.25 eV. This result is es
+    significant because the perovskite was not in the dataset. This demonstrates the
+    ANN can not only accurately the band of known materials, shows the values are
+    weighted and summed to approximate the function which fits the best data offset
+    by some value b.
+
+
+    # 2020 International Conference on Data Analytics for Industry: Way Towards a
+    Sustainable Economy (ICABI)
+
+
+    algorithm uses a series of polynomials to create best this function with the data.
+    The higher the order of polynomials, the better the line fits the data. outliers
+    are in marginally labeled. The loss function (4)
+
+
+    ```
+
+    L(y, f(x)) = 0 if |y - f(x)| ≤ ε else factor, otherwise,
+
+    ```
+
+
+    ```
+
+    L(y, f(x)) = (y - f(x))^2 if |y - f(x)| > ε factor (4)
+
+    ```
+
+
+    Utilizing certain techniques of ML has limitations and aws inherent in the algorithm''s
+    function. When researching t effects of varying any parameter of the perovskite
+    in learning scheme, other constraints must be met [3]. This neglects the complex
+    relationship between perovskites on a microscopic and macroscopic scale. While
+    organ element of interest, persists with mixed halide perovskites varies significantly
+    with t elements and fabrication method [10]. While machine learning may have the
+    ability to predict particular attributes of these materials, the fundamental workings
+    would still be uncertain. This knowledge enters a mastery of this area of anotechnology.
+    With an artificial network, the type and ratio of halide and metallic elements
+    can be used in the input layer of the network. With such back features, the network
+    can connect existing data such as bandgap conversion eff, lattice constant, short
+    circuit, and open c voltage can be assessed using this algorithm.
+
+
+    must be justified in order to have an accurate approximation a collection of data.
+    For non-linear functions, data is mapped to a higher dimensional space using the
+    kernel to achieve higher accuracy. In this higher dimensional kernel space, the
+    formula is as seen in (5)
+
+
+    ```
+
+    f(x) = \sum_{i=1}^{n} w_i \phi_i(x)
+
+    ```
+
+
+    in which is used to create the function. Associated discovery of lead-free hybrid
+    organic-organic perovskites via machine learning is studied [8]. This technique
+    was used in conjunction with machine learning algebras to research the opto-electronic
+    properties of lead perovskites the showed features of various organic perovskites
+    to be learned by free perovskites. The design showed features the algorithm to
+    output the stability, environment, chemical properties of the perovskites [8].
+    With this ML approach, environmental issues of lead perovskites and enhanced developments
+    in photovoltaic electronics are simultaneously solved.
+
+
+    Perovskite morphology and the addition of inorganic salts tune the properties
+    of perovskite to optimize. performance of these salts was shown to change the
+    quality of material and improve stability with cells [11]. The reason behind this
+    has yet to be understood. Machine learning using more complex architecture might
+    as to why this happens. The perovskite is only one the solar cell device. The
+    sublayers of hole transport material, electron transport layer, back contact,
+    and metal materials can either increase or diminish efficiency of the device.
+    For use of a layer of Bathophenicone was shown to have 10% difference in fill
+    factor between the perovskite and theiment layer and improved stability [5]. Without
+    ML
+
+
+    ## IV. AREAS FOR IMPROVEMENT IN RESEARCH
+
+
+    Perovskite solar cell technology is innovative and up coming research. In the
+    span of development, a decade, power conversion efficiencies have improved from
+    3.9% to 21%. This new area of research with established tools of machine learning
+    showing results. However, there is still much research to be done using these
+    tools.
+
+
+    The ML algorithms cannot explain the relationship between the material properties
+    of the perovskite and ellectric and optical properties [5]. The issue of reported
+    data-cusing errors in the machine learning remains an issue for utilizing this
+    tool. The non-linear nature data is intense for the properties of perovskites
+    and characteristics. With as any perovskites or one of identical material properties
+    then the free free effect or optical properties cannot be investigated with these
+    points that are highly divergent from the algorithm''s results illustrate the
+    complex quantum mechanical relationship between material science and electrical
+    engineering. This area further relating these areas with machine learning would
+    greatly accelerate not only our understanding of perovskites, but quantum mechanics,
+    chemistry, and interdisciplinary studies as a whole.
+
+
+    The use of powerful machine learning schemes in this area of research has significant
+    implications for chemistry, quantum mechanics, electrical engineering, and material
+    science. The hole transport layer in the crystal can be seen and analyzed. Establishing
+    correlations and relationships between chemical composition and electrical properties
+    will yield qualitative and quantitative information on these materials for the
+    electronic devices of present. Where fabrication based research requires numerous
+    samples to be created, and machine learning approach can accelerate existing data
+    and research efforts. The low cost and relatively short time machine learning
+    in perovskite solar cell research expands the population of researchers who can
+    work in this area.
+
+    '
+  mdcn: '
+
+    为人工网络显示出相关性；然而，人工神经网络（ANN）并没有这种相关性。K近邻（NN）和随机森林（RF）算法在数据与预测之间存在相关性。这表明不同的技术各有优劣。我们删除了重复数据，以避免对钙钛矿太阳能电池复杂过程进行冗余分析。这些结果可用于进一步研究与钙钛矿电池能量对齐的问题。能带之间的巨大差异是误差来源，限制了整体光电效率（PCE）。其他技术能够学习性质并设计出预测的新材料。图
+    2 展示了算法预测结果的准确性。
+
+
+    但还包括了未输入到系统的未知材料。随机森林算法也能准确地预测材料的带隙。
+
+
+    在 Li 的工作中，还实现了随机森林机器学习，用以测试该算法通过分层树中相互连接的模式学习和预测带隙的准确性。这些树从最外层向最内层分支构建。这种树是从底部向上生长的。方法
+    [6] 也能预测不在数据集中的新材料。由于随机森林算法的局限性，人工神经网络在该应用中表现最好。
+
+
+    这些算法尝试考虑太阳能电池的重要因素，如注入电流、开路电压、功率点和填充因子。ANN 和 RF 的结果相关系数均小于 0.5。结果不准确，且与测量结果显示出较大的偏散。两种模型都没有考虑金属导电性和反传导。这些因素未被纳入模型参数中。这些结果还导致了结果较大的均方误差。这进一步证明了这些设备参数对于优化太阳能电池的性能至关重要。
+
+
+    ![](img/79d6bf50bde61e9fc616b4daf8215295_2_0.png)
+
+
+    图 2：机器学习预测的 PCE 与实际 PCE 的对比 [5]。
+
+
+    这项研究具有许多潜在收益。钙钛矿太阳能电池对于研究人员探索有许多应用。太阳能电池的关键方面如填充因子、光电效率、开路电压、短路电压和最大功率可以精确预测和模拟，而不需要昂贵的设备和迭代制造过程。
+
+
+    ## C. 支持向量回归 (SVR)
+
+
+    SVR 是一种将一组数据点泛化为连续多元函数的线性技术。支持向量机处理更多数据点输入 [7]；但稀疏矩阵通过 sigma 管道处理以匹配数据点。算法的训练和测试数据与数据独立且同分布，根据这一假设，多元函数形成了一个需要最小化的损失函数。当该函数被最小化时，被认为是对数据的最佳近似。
+
+
+    ```
+
+    f(x) = wT \sum_{i=1}^{n} w_i x_i + b
+
+    ```
+
+
+    该模型通过设计一组新的钙钛矿材料构建，并利用其化学性质和成分预测其带隙。这种预测的带隙是通过合成钙钛矿并比较结果得到的。所使用的钙钛矿为 CsMAPb₃、Cs(MA,FA)₃
+    和 MAPbI₃，其机器预测的带隙值各不同。带隙结果范围在 1.3-2.2 eV 之间。测得的电池实验结果分别为 1.4 eV (CsMAPb₃)、1.8
+    eV (Cs(MA,FA)₃) 和 1.4 - 1.8 eV (CsMAPbI₃)。还测试了用于非金属电极的其他钙钛矿，如 CsSnI 和 FASnI。数据集中
+    MAPbSnI 和 FASnI 的预测带隙分别为1.36 eV 和 1.28 eV。制备样品显示的带隙为 1.37 eV (MAPb₃) 和 1.4 eV
+    (FASnI)。制备的 CsSnI 带隙为 1.15 eV。制备样品带隙为 1.25 eV。这一结果非常显著，因为该钙钛矿不在数据集中。这表明 ANN 不仅能准确预测已知材料的光带，还显示了值通过加权求和来近似最拟合某些值
+    b 偏移数据的函数。
+
+
+    # 2020 年工业数据分析国际会议：迈向可持续经济 (ICABI)
+
+
+    算法使用一系列多项式来根据数据创建最佳函数。多项式的阶数越高，直线对数据的拟合得越好。离群值被边缘标记。损失函数 (4)
+
+
+    ```
+
+    L(y, f(x)) = 0 if |y - f(x)| ≤ ε else factor, otherwise,
+
+    ```
+
+
+    ```
+
+    L(y, f(x)) = (y - f(x))^2 if |y - f(x)| > ε factor (4)
+
+    ```
+
+
+    利用特定的机器学习技术具有局限性，且算法函数存在固有的缺陷。在研究学习方案中钙钛矿任何参数变化的影响时，必须满足其他约束条件 [3]。这忽略了钙钛矿在微观和宏观尺度上的复杂关系。
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 4]
+
+
+    # V. CONCLUSION
+
+
+    Machine Learning (ML) algorithms provide powerful means to explore current trends
+    and patterns in data. Datasets too large for human computation can be collected
+    and analyzed in a timeframe otherwise unthinkable. With this powerful tool, the
+    physics and material properties of perovskites can be assessed. This innovative
+    area of nanotechnology could increase our interest in many areas of science. The
+    perovskites yet explored with machine learning offers further development. With
+    further research techniques in fabrication and production of this technology can
+    be created for the proliferation of renewable and environmentally conscious energy
+    production.
+
+
+    REFERENCES
+
+
+    +   [1] F. Huang, M. Li, P. Siflovic, G. Cao, and J. Tian, "From scalable solution
+    fabrication of perovskite films towards commercialization of solar cells," Energy
+    & Environmental Science, vol. 12, no. 2, pp. 518-549, 2021.
+
+    [2] Q. Xu, Z. Li, M. Li, and W-J. Yan, "Rationalizing Perovskite Data for Machine
+    Learning and Design," The Journal of Physical Chemistry Letters, vol. 29, no.
+    24, pp. 6948-6954, 2018.
+
+    [3] W. A. Saudi, W. Shaddad, and I. E. Castelli, "Machine-learning structural
+    and electrical analysis of perovskites using a hierarchical convolutional neural
+    network," ng Computational Materials, vol. 6, no. 1, 2020.
+
+    [4] H. Belia, R. Youssef, and M. Fatima, "A detailed modeling of photovoltaic
+    module using MATLAB," MNRAS Journal of Astronomy and Geophysics, vol. 33, no.
+    1, pp. 53-61, 2014.
+
+
+    +   [5] J. Li, B. Pradhan, S. Gauss, and J. Thomas, "Perovskite Solar Cells Predictions
+    and Strategies Learned from Machine Learning to Develop High: Perovskite Solar
+    Cells (Adv. Energy Mater. 46,2019), Advanced Energy Materials, vol. 9, no. 46,
+    p. 1906170.
+
+    [6] Q. Xu, Z. Li, M. Li, and W-J. Yan, "Rationalizing Perovskite Data for Machine
+    Learning and Design," The Journal of Physical Chemistry Letters, vol. 29, no.
+    24, pp. 6948-6954, 2018.
+
+    [7] M. Awad and R. Kim, "Support for perovskite efficiency," Efficient Machine
+    Learning, pp. 66-80, 2015.
+
+    [8] S. Li, Q. Zhou, Y. Ouyang, Y. Guo, and J. Wang, "Accelerated discovery of
+    organic-inorganic perovskites via machine learning," Nature Communications, vol.
+    9, no. 1, 2018.
+
+    [9] M. Saliba, J.-P-Correa, C. Wolff, M. Stoltterhof, N. S. Al-Ashrafi, "Cesium-containing
+    triple perovskite solar cells: Efficient Perovskite Solar Cells in Regular (n-i)
+    and Black (n-i phase," Chemistry of Materials, vol. 30, no. 13, pp. 4193-4201,
+    2020.
+
+    [10] M. Saliba, T. Matsui, I.-J. Seo, K. Domanski, J.-P Correa-Baena, M. Kazazrettini,
+    M. Zakereddin, W. Tress, A. Abfate, H. Hagfeld, and M. Grätzel, "Cesium-containing
+    triple perovskite solar cells: improved stability and efficiency," Energy & Environmental
+    Science, vol. 9, no. 6, pp. 1989-1997, 2016.
+
+    [11] M. Saliba, T. Matsui, K. Domanski, J.-J. Seo, A. Imadafe, M. Zakereddin,
+    W. Tress, A. Abfate, H. Hagfeld, and M. Grätzel, "Incorporation of rubidium cations
+    into perovskite solar cells improves photovoltaic performance," Science, vol.
+    354, no. 6309, 2016.
+
+    [12] C. Chen, S. Zhang, W. Wu, W. Zhang, H. Zhu, X. Xiong, Y. Zhang, and W. Chen,
+    "Effect of BCP buffer layer on eliminating charge accumulation for high performance
+    of perovskite solar cells," RSC Advances, vol. 7, no. 57, pp. 35819-35826, 2017.'
+  md: '
+
+    ## V. CONCLUSION
+
+
+    Machine Learning (ML) algorithms provide powerful means to explore current trends
+    and patterns in data. Datasets too large for human computation can be collected
+    and analyzed in a timeframe otherwise unthinkable. With this powerful tool, the
+    physics and material properties of perovskites can be assessed. This innovative
+    area of nanotechnology could increase our interest in many areas of science. The
+    perovskites yet explored with machine learning offers further development. With
+    further research techniques in fabrication and production of this technology can
+    be created for the proliferation of renewable and environmentally conscious energy
+    production.
+
+
+    ## REFERENCES
+
+
+    - [1] F. Huang, M. Li, P. Siflovic, G. Cao, and J. Tian, "From scalable solution
+    fabrication of perovskite films towards commercialization of solar cells," Energy
+    & Environmental Science, vol. 12, no. 2, pp. 518-549, 2021.
+
+    - [2] Q. Xu, Z. Li, M. Li, and W-J. Yan, "Rationalizing Perovskite Data for Machine
+    Learning and Design," The Journal of Physical Chemistry Letters, vol. 29, no.
+    24, pp. 6948-6954, 2018.
+
+    - [3] W. A. Saudi, W. Shaddad, and I. E. Castelli, "Machine-learning structural
+    and electrical analysis of perovskites using a hierarchical convolutional neural
+    network," ng Computational Materials, vol. 6, no. 1, 2020.
+
+    - [4] H. Belia, R. Youssef, and M. Fatima, "A detailed modeling of photovoltaic
+    module using MATLAB," MNRAS Journal of Astronomy and Geophysics, vol. 33, no.
+    1, pp. 53-61, 2014.
+
+    - [5] J. Li, B. Pradhan, S. Gauss, and J. Thomas, "Perovskite Solar Cells Predictions
+    and Strategies Learned from Machine Learning to Develop High: Perovskite Solar
+    Cells (Adv. Energy Mater. 46,2019), Advanced Energy Materials, vol. 9, no. 46,
+    p. 1906170.
+
+    - [6] Q. Xu, Z. Li, M. Li, and W-J. Yan, "Rationalizing Perovskite Data for Machine
+    Learning and Design," The Journal of Physical Chemistry Letters, vol. 29, no.
+    24, pp. 6948-6954, 2018.
+
+    - [7] M. Awad and R. Kim, "Support for perovskite efficiency," Efficient Machine
+    Learning, pp. 66-80, 2015.
+
+    - [8] S. Li, Q. Zhou, Y. Ouyang, Y. Guo, and J. Wang, "Accelerated discovery of
+    organic-inorganic perovskites via machine learning," Nature Communications, vol.
+    9, no. 1, 2018.
+
+    - [9] M. Saliba, J.-P-Correa, C. Wolff, M. Stoltterhof, N. S. Al-Ashrafi, "Cesium-containing
+    triple perovskite solar cells: Efficient Perovskite Solar Cells in Regular (n-i)
+    and Black (n-i phase," Chemistry of Materials, vol. 30, no. 13, pp. 4193-4201,
+    2020.
+
+    - [10] M. Saliba, T. Matsui, I.-J. Seo, K. Domanski, J.-P Correa-Baena, M. Kazazrettini,
+    M. Zakereddin, W. Tress, A. Abfate, H. Hagfeld, and M. Grätzel, "Cesium-containing
+    triple perovskite solar cells: improved stability and efficiency," Energy & Environmental
+    Science, vol. 9, no. 6, pp. 1989-1997, 2016.
+
+    - [11] M. Saliba, T. Matsui, K. Domanski, J.-J. Seo, A. Imadafe, M. Zakereddin,
+    W. Tress, A. Abfate, H. Hagfeld, and M. Grätzel, "Incorporation of rubidium cations
+    into perovskite solar cells improves photovoltaic performance," Science, vol.
+    354, no. 6309, 2016.
+
+    - [12] C. Chen, S. Zhang, W. Wu, W. Zhang, H. Zhu, X. Xiong, Y. Zhang, and W.
+    Chen, "Effect of BCP buffer layer on eliminating charge accumulation for high
+    performance of perovskite solar cells," RSC Advances, vol. 7, no. 57, pp. 35819-35826,
+    2017.
+
+    '
+  mdcn: '
+
+
+    ## V. 结论
+
+
+    机器学习（ML）算法为探索数据中的当前趋势和模式提供了强大的手段。人类通过计算无法处理的大型数据集可以在超乎想象的时间范围内进行收集和分析。通过这一强大的工具，可以对钙钛矿的物理和材料属性进行评估。纳米技术这一创新领域可能会增加我们对许多科学领域的兴趣。尚未通过机器学习进一步探索的钙钛矿提供了进一步发展的空间。随着制造和生产技术的进一步研究，可以创造该技术，以促进再生能源和环保能源生产的普及。
+
+
+    ## 参考文献
+
+
+    - [1] F. Huang, M. Li, P. Siflovic, G. Cao, and J. Tian, "从钙钛矿膜的可扩展溶液制造到太阳能电池商品化,"
+    Energy & Environmental Science, vol. 12, no. 2, pp. 518-549, 2021.
+
+    - [2] Q. Xu, Z. Li, M. Li, and W-J. Yan, "机器学习和设计的钙钛矿数据合理化," The Journal of Physical
+    Chemistry Letters, vol. 29, no. 24, pp. 6948-6954, 2018.
+
+    - [3] W. A. Saudi, W. Shaddad, and I. E. Castelli, "使用分层卷积神经网络对钙钛矿进行机器学习结构和电气分析,"
+    Computational Materials, vol. 6, no. 1, 2020.
+
+    - [4] H. Belia, R. Youssef, and M. Fatima, "使用 MATLAB 对光伏模块进行详细建模," MNRAS Journal
+    of Astronomy and Geophysics, vol. 33, no. 1, pp. 53-61, 2014.
+
+    - [5] J. Li, B. Pradhan, S. Gauss, and J. Thomas, "学习的钙钛矿太阳电池预测和策略以开发高效：钙钛矿太阳电池
+    (Adv. Energy Mater. 46,2019)," Advanced Energy Materials, vol. 9, no. 46, p. 1906170.
+
+    - [6] Q. Xu, Z. Li, M. Li, and W-J. Yan, "机器学习和设计的钙钛矿数据合理化," The Journal of Physical
+    Chemistry Letters, vol. 29, no. 24, pp. 6948-6954, 2018.
+
+    - [7] M. Awad and R. Kim, "对钙钛矿效率的支持," Efficient Machine Learning, pp. 66-80,
+    2015.
+
+    - [8] S. Li, Q. Zhou, Y. Ouyang, Y. Guo, and J. Wang, "通过机器学习加速发现有机-无机钙钛矿," Nature
+    Communications, vol. 9, no. 1, 2018.
+
+    - [9] M. Saliba, J.-P-Correa, C. Wolff, M. Stoltterhof, N. S. Al-Ashrafi, "含钙的三元钙钛矿太阳电池：在常规
+    (n-i) 和黑色 (n-i 相) 中的高效钙钛矿太阳电池," Chemistry of Materials, vol. 30, no. 13, pp. 4193-4201,
+    2020.
+
+    - [10] M. Saliba, T. Matsui, I.-J. Seo, K. Domanski, J.-P Correa-Baena, M. Kazazrettini,
+    M. Zakereddin, W. Tress, A. Abfate, H. Hagfeld, and M. Grätzel, "含钙的三元钙钛矿太阳电池：提高稳定性和效率,"
+    Energy & Environmental Science, vol. 9, no. 6, pp. 1989-1997, 2016.
+
+    - [11] M. Saliba, T. Matsui, K. Domanski, J.-J. Seo, A. Imadafe, M. Zakereddin,
+    W. Tress, A. Abfate, H. Hagfeld, and M. Grätzel, "在钙钛矿太阳电池中引入铷离子提高光伏性能," Science,
+    vol. 354, no. 6309, 2016.
+
+    - [12] C. Chen, S. Zhang, W. Wu, W. Zhang, H. Zhu, X. Xiong, Y. Zhang, and W.
+    Chen, "BCP 缓冲层对消除电荷积累以提高钙钛矿太阳电池性能的影响," RSC Advances, vol. 7, no. 57, pp. 35819-35826,
+    2017.
+
+
+    '
+  merge: 0
