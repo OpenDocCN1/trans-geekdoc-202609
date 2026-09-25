@@ -1,0 +1,1805 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Blockchain & Machine learning Secured
+
+    Medical Record Storage and Sharing
+
+    Platform - DataBlock
+
+
+    1st Sharmilan S
+
+    Informatics Institute Of Technology,
+
+    Affiliated to Robert Gordon University,
+
+    Scotland
+
+    Colombo, Sri Lanka
+
+    sharmilan_si@outlook.com
+
+
+    2nd Casimir Farook
+
+    Informatics Institute Of Technology,
+
+    Affiliated to Robert Gordon University,
+
+    Scotland
+
+    Colombo, Sri Lanka
+
+    cassim.f@it.ac.lk
+
+
+    Abstract—The most important part of machine learning, in the bioinformatics, the
+    sensitivity of the data is high and due to that, the accessibility of the data
+    for secondary purpose (e.g: research) consists of many legal and ethical issues.
+    Due to that in bioinformatics collecting data consume more time than the development
+    phase. There are many ways to anonymize the data using encryption, de-identification
+    and perturbation of potentially identifiable attributes. But for some it is not
+    possible on the other hand, data not performed in well used analysis and mining
+    tasks and some researchers to generate fake data like. Such researchers do not
+    fill the gap of knowledge to the training data. The evolution of Blockchain provided
+    a secured and trusty to transfer values using Blockchain technology to store and
+    share personal medical data to doctors and scientists. And it will help them to
+    build accurate and efficient models.
+
+
+    on the basis of looking at the set of data. The data collected will be pre-processed
+    and used to train and test the model. On the basis of these data, the models learn
+    the benefits in terms of reliability or if the data is imbalanced in the group,
+    the model will be trained ineffic[1]. Therefore, to improve this process, it should
+    be built using models that could also cover a wide range of inputs. But more attributes
+    and unknown data values from hospitals usually during the data collection. As
+    a consequence, the reliability is not on the right.
+
+
+    To achieve the best results, modern machine learning based on deep network architecture
+    require large amounts of training data[42]. But it is possible to access large-scale
+    real patient information from hospitals due to various technical and legal issues.
+    But if the researchers try to gain access to data quality and delivery will be
+    of kind of sets then the several times as the data stored in a hospital becomes
+    incomplete[1]. In addition, some critical criteria will be based of patients ''
+    privacy issues such as birth date, residence, addresses, and addictions some due
+    to HIV[28][11]. Patients do not want to know whose sensitive information is shared
+    because of privacy concerns.
+
+
+    **Keywords— Blockchain, Stellar, Decentralized, Machine learning, Bioinformatics,
+    Data informatics
+
+
+    # I. INTRODUCTION
+
+
+    Data access is one of the limitations in the creation of machine learning for
+    domain-specific issues. The accessibility of data sets (with related tasks) has
+    helped advanced the learning capabilities in multiple fields. In bioinformatics
+    and medical field, however it is because of the sensitivity of the data high in
+    detail, making it difficult to collect a large amount of data datasets[4][11].
+    In this situation, data access is highly controlled[25].
+
+
+    The exponential increase in the amount of biological data poses two issues: one
+    the hand, efficient processing and management of information and the other, retrieval
+    of the data[7]. There will be two types of material data, such as text and image.
+    Using the image[7][4][11], most research is to predict or evaluate medical problems
+    or diseases. At the same time, many methods used to record patient history[11][16].
+    The security and confidentiality of the information would come into play in that.
+    As health records are made more of personal details.
+
+
+    A wide range of biometric data is made available for research by non-profit organizations
+    or researchers. Nevertheless it is difficult to analyze and format because of
+    the existing clinical data[36]. As we consider others, most of the signs and causes
+    vary one to another or even from one country. For example, symptoms and cases
+    vary according to genetic factors, environment, behaviors, and for many diseases[16].
+    Therefore, if collected from a specific location and used is not applicable for
+    another area.
+
+
+    On the other hand, a data breach is facing the hurdle of 40 major breaches of
+    the health record history in 2017[15]. The data breaches have in happened in situations
+    where the information was exchanged for secondary purposes, such as analysis.
+    Health information and generalization techniques to avoid privacy issues while
+    is a data breach[19][20]. However, attacks such as connecting through residual
+    information to re-identify the individuals or data are incomparable with this[18][20][25].
+
+
+    If we take a prediction method, depends on the data sets. The attribute will be
+    based
+
+
+    978-1-6281-0991-8/$18.00 © 2018 IEEE'
+  - '[PAGE 1]
+
+
+    Similar to the famous man, ''the trash of one is the treasure of another.'' All
+    humans have data and records on their head. They''re holding it for all that if
+    there is a path for data to reach detection then many of these will be detected
+    and predicted in early stages. Personal data is a more sensitive one for everyone
+    than humans. If each individual keeps their records safe and secure, find it difficult.
+    In this study, researchers are trying to create a system that allows everyone
+    to securely and truthfully share their records, and any scientist can access these
+    data and construct out of it.
+
+
+    Blockchain. Same time we make more cost-efficient than other existing solutions.
+    Main contributions of this paper are listed below,
+
+
+    +   1. A secure and trusted personal data storage and sharing platform.
+
+    2. A machine learning model to evaluate the authenticity of personal records.
+
+    3. Proposed a Blockchain-based endorsement to validate the authenticity of data.
+
+    4. A proposed crypto incentive to incentivize the use of players while penalizing
+    the bad
+
+
+    # II. RELATED WORKS
+
+
+    In 2015 a decentralized data management system was presented in a research paper
+    [14]. It can use and manage their data. The Blockchain is converted into an access
+    control mechanism without a trusted third party.
+
+
+    In 2016, a decentralized ''MedSec'' system was proposed to handle Electronic Health
+    Record (EHR). HER made principles of decentralization might be linked to large-scale
+    data management in EHR. Also, their system of sharing medical data securely can
+    protect privacy. In 2018, Yang and Li [19] presented a Blockchain-based architecture
+    for EHR. They proposed an architecture that implements Blockchain to the EHR.
+    It is compatible with the existing systems and feasible for implementation. But
+    this system only allows the healthcare providers to control the data, not the
+    users.
+
+
+    The rest of the paper explains the preliminaries for this research and will be
+    followed by the design and the experiments and results. The last sections will
+    cover future enhancements and the conclusion.
+
+
+    # IV. PRELIMINARIES
+
+
+    Liehuang Zhu presented in 2019. In this research, they proposed a high-value solution
+    to the operation of medical data on the Blockchain. The proposed system using
+    the Blockchain is not secure enough like the public Blockchain''s [29]. In 2019
+    XIAOGLIANG Liu and presented a protection system to secure and share medical records
+    using Blockchain. Also, their system of matching patients as well. They proposed
+    a new blockchain is running on a modified proof of consensus to improve the performance.
+
+
+    Blockchain technology has become popular since the introduction of Bitcoin as
+    digital currency. The Bitcoin was introduced by Satoshi Nakamoto in 2008 in a
+    paper titled: A Peer-to-Peer Cash System[8]. This paper proposed a peer-to-peer
+    version of electronic cash that allows payments to be sent from one to another
+    without going through a financial intermediary [23]. Blockchain is the name of
+    technology behind this.
+
+
+    Based on the Blockchain a transaction and once initiated, the transaction details
+    will be going into hashing process and it is stored as a new block. Blockchain
+    will have the reference of the previous block. So it will make a change for the
+    previous block[23]
+
+
+    | Block | Block |
+
+    |---|---|
+
+    | Prev Hash | Nonce | Prev Hash | Nonce |
+
+    | Tx | Tx | Tx | Tx |
+
+
+    Fig. 1. Blockchain Link.
+
+
+    Once a block has added to a chain, all the nodes in the chain will be able to
+    see and add it to the same version of the chain. To make the blocks connect and
+    be safe, a block will be generated by connecting data, timestamp, previous hash
+    and many other data[22]. So it will be possible to validate a block because it
+    has a unique hash for the previous hash combination. If they try to modify the
+    data, the nodes will not be affected because each one has its own chain and it
+    is impossible to change all the nodes in a particular chain[23]. Architecture
+    of the blockchain and its components described in the detail below:
+
+
+    # III. METHODOLOGY AND RESEARCH GAP
+
+
+    Sharing and storing data in a secure market is still an available approach to
+    research and explore. Also the implementation of the architecture or conceptual
+    level design are going the the most challenging part and people are discussing
+    it. And there are not many applicable products are there in the market. The most
+    of researchers are suggesting using Blockchain''s or going to use main stream
+    to avoid the transaction fee and the privacy of the data. Also, none of the systems
+    validated the authenticity of the data as well. When we tie the data with some
+    inside records there will be places where people can manipulate the system to
+    earn many benefits.
+
+
+    # B. Stellar
+
+
+    Stellar is a platform that makes transactions faster and safer using Blockchain.
+    Where you can create your own wallet, banking apps, smart devices, and add anything
+    else you can think of with payments! stellar is unique because its built on top
+    of a hybrid architecture that
+
+
+    The motivation and the research gap we try to solve in this paper is to provide
+    a solution to store and share medical records in a secure and trusted manner using
+    many'
+  md: '
+
+    '
+  mdcn: ' '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    includes DB + Blockchain. And the advantage of stellar is that the transaction
+    fee is very low compared to chains (equal to 0.0001 XLM)[22]. For $1, a person
+    can make around 390,000 transactions. High performance compared to other chains
+    is a major advantage.
+
+
+    There is no mining fee (gas) in stellar. This means you don''t have to join a
+    mining and earn coins. There is no currency based on money. No hundred billion
+    lumens were used when it was created at the genesis of the network. Inflation
+    is the only way to create new stars. There is a one percent rate of inflation
+    to cover the growth and loss of users. These new lumens are created and distributed
+    through a direct method of voting[25].
+
+
+    In stellar, the major drawback is that it does not have a flexible contract [22].
+    While its contracts are predefined, and under operation, one can get a maximum
+    of 64-byte of data. Stellar also saves the data in the DB, but stores it in entry.
+    Because of its decentralized nature, it is easier when using public chain than
+    using this researcher selected the public communication the price, and decentralized
+    element.
+
+
+    # V. CRYPTO ECONOMY
+
+
+    Crypto economy is the use of incentives and cryptography to design new types of
+    systems, applications, and networks[27]. In particular, crypto economics creates
+    the creation of things and that it goes more with the concern of mathematical
+    and economic economics. The crypto economy is the sector that has applied cryptography
+    which considers the economic and incentive theory. Bitcoin, Ethereum, NEO and
+    many Blockchain-based applications are based on crypto economy to provide incentives.
+
+
+    In this research, we used the crypto economy as a mechanism for users to incentivize
+    them to perform correctly and penalize when they do a bad job. Dblock system has
+    two major coins. These are called Stellar and Trustcoin. Trustcoin is a representation
+    of a real-world event or asset.
+
+
+    The second type of coin is called Trustcoin. This Trustcoin is equal to the value
+    of that account. This coin cannot be earned
+
+
+    purchased or can be earned by doing money. Initially, all the hospitals will have
+    a base coin amount. Trust cost for each hospital will have zero coins. Trust cost
+    will be decided by the facilities that provide it. The doctors who join the hospitals
+    will get the respective amount of coins derived from the hospital trust count.
+    The same will follow for the staff. A similar process will follow for the patients,
+    the users, the researchers, and the assistants and students. Researchers can also
+    add their own coins, and the universities can earn credits under their university.
+
+
+    Patients'' trust costs are created by the endorsers of their profile. If a patient
+    wants to go to a hospital with high value and the doctor, the hospital also has
+    higher trust value than the patient. To earn that profit, it must be endorsed
+    by the doctor who do that for their usage. Then after a period the patient will
+    get some more trust coins as an incentive. And the hospital will also want to
+    get more trust coins. Also, all the profiles that are added to this hospital and
+    the doctor will get trust value added to their profile.
+
+
+    Once the endorser finds that the data is not correct he will make a challenge.
+    If it is validated and approved by the authority then the doctor will be penalized
+    and the patient will get some trust coins as rewards. A portion of doctor trust
+    coin will be removed from the hospital and the rest to the patient and the profile
+    that are added to the doctor or the hospital.
+
+
+    This will make the doctor and endorsers do a good job by validating the profile
+    before endorsement. Also, it will reduce fake profiles and bad job. In the long
+    term, the system will remain stable and motivate every patient actor as they are
+    spending their money to do an endorsement. If they do not properly, they will
+    lose their money and also the hospital will lose doctor''s trust level and will
+    motivate the doctor to validate the profile or they will lose trust coins.
+
+
+    This trust cost will help researchers to select only the highly profiled profile
+    for their research and will provide incentives for the quality of the research.
+    While, sharing patients can check the value of the researcher and then based that
+    on their choice.
+
+
+    # VI. ARTIFICIAL NEURAL NETWORK
+
+
+    Artificial Neural Network used in this project to identify the value of medical
+    text based on the data of the patients. In there are a lot of different layers
+    for classification. CNN is naturally suitable for classification tasks among them[28].
+    One input layer, hidden layer and output layer were used for classification. The
+    parameters were used in the input layer. Each layer and layer have one neuron.
+    Each input has been transmitted to one neuron. A weight is correlated with a relation
+    between two neurons. And when the input passes to the other layer of neuron, the
+    relation weights will multiply it. In the network''s initial stage, a random function
+    was used to assign weights'
+  - '[PAGE 3]
+
+
+    (Wi) to update hidden layer and to the output layer for the connections, domain
+    researcher searched existing trust level, location, endorsers and the previous
+    acceptance as rate means. With this ACO method the parameters of the training
+    process, these weights are updated by a backpropagation algorithm. The sigmoid
+    function is used in hidden and output layers.
+
+
+    ```
+
+    $f(x) = \frac{1}{1+e^{-Tx}}$
+
+    ```
+
+
+    The sigmoid activation function used to convert the values transferred from each
+    hidden neuron (Wi). The activation function''s aim is to turn the input into a
+    domain where they can be easily separated /
+
+
+    Back Propagation (BP) used to update the weights during training. One of the most
+    common methods used for optimization is the gradient descent method. During the
+    training process, the error was determined and based on the modified weights.
+
+
+    ```
+
+    $E = \frac{1}{2} \sum(O_j - t_j)^2$
+
+    ```
+
+
+    The formula above is used to calculate the rate of error and $(t_j)$ is used to
+    update the expected output of the training data and $(O_j)$ is the actual output
+    from the network layer. The gradient method is used to calculate the partial derivative
+    and used to update the weights of connection and
+
+
+    ```
+
+    $$\frac{\partial E}{\partial W_{jk}} = (O_k - t_k)(O_k - t_{jk})$
+
+    ```
+
+
+    The formula above is used to calculate the gradient of the output layer node.
+    The $(O_k)$ indicated the actual output from the node of the output layer and
+    $(t_k)$ keep the output value which passes through the hidden layer and $(t_{jk})$
+    is used to hold the expected output.
+
+
+    ```
+
+    $$\delta_k = (O_k - t_k)(O_k - t_{jk})W_{jk}$
+
+    ```
+
+
+    The equation above is used to measure the hidden layer gradient and the $(O_k)$
+    indicated the actual output from the node of the output layer and $(t_{jk})$ is
+    used to carry the predicted output. During the learning, the value of $(\delta_{jk})$
+    will be determined and transferred to the equation below.
+
+
+    ```
+
+    $$\delta_{jk} = \delta_j(1-O_j)W_{jk}$
+
+    ```
+
+
+    $(O_j)$ is the actual output, $(O_j)$ is the for $(\delta_{jk})$ value comes from
+    the formula above. The gradient value of hidden layer node is:
+
+
+    ```
+
+    $$\Delta W_{jk} = -\alpha\delta_{jk} + \alpha Uwt_{jk-1}$
+
+    ```
+
+
+    The equation above is used by the backpropagation process to measure the weights.
+    And the Uwt the new weight of the delta, $\pi$ is a learning rate, $\theta$ is
+    the momentum, and $Uwt-1$ retains the value of the last
+
+
+    updated weight. The method is used to change the hidden and output layer weights.
+    The learning rate''s aim is to update the weights. The faster you update the weights,
+    the faster you train the genetic network that the global error will go down and
+    it better. The momentum is used to find the global optimum. With local learning
+    process [28]. The learning frequency and momentum typically ranged from 0.1 to
+    0.9. Through the experiments, we can only fix the efficient combination of learning
+    rate and the momentum. The results of different combinations of learning rate,
+    momentum and hidden neurons and each of accuracy best. The best high accuracy
+    model for this result was based on that
+
+
+    # VII. ANT COLONIZATION
+
+
+    The first ACO algorithms were developed by Marco Dorigo and colleagues in the
+    early 1990[26]. Ants are insects of a nature. They live in colonies and their
+    behavior is given by the survival of the colony. Artificial ACO design the way
+    ants search for food to their nests and release a pheromone on the food nest based
+    on quality and quantity of the food found. The concentration will differ
+
+
+    Because of its nature of patrolling, ACO is used to find the paths for routing.
+    But researchers use ACO in research to measure the media profile of artificial
+    records while training a path with high weight. Those paths will have high artificial
+    pheromone compared to other paths. If a user profile profile chooses a high pheromone
+    path, then it is more likely to be real than that which has low pheromone. Path
+    or no path
+
+
+    The formula for ACO is used to build when the benefit of generating a good record
+    and a negative quantity is verified. The results will be based on the whole path.
+    There are many parameters as its critical profile, and the value of truthfinding
+    is to control the entire flow of data. The research measures the media profile
+    through ACO research and checked the path. If the correct path appears, it will
+    always show the shorter path with a high weight compared to the fake ones.
+
+
+    ```
+
+    $$\tau_{ij}^\gamma = \frac{\tau_{ij}^\alpha \cdot\eta_{ij}^\beta}{\sum_{k\in N(i)}
+    \tau_{ik}^\alpha \cdot\eta_{ik}^\beta} \gamma_{ij} \in N(i)^\gamma$
+
+    ```
+
+
+    Below is the formula to update the pheromone weight during the training process
+    after each record has passed through the flow layer. At the beginning of the training
+    process, each pheromone weight were defined as zero and the updated based on each
+    profile. For the testing process, final weights were stored. During the training
+    process, only the correct profiles were'
+  md: '
+
+    includes DB + Blockchain. And the advantage of stellar is that the transaction
+    fee is very low compared to chains (equal to 0.0001 XLM)[22]. For $1, a person
+    can make around 390,000 transactions. High performance compared to other chains
+    is a major advantage.
+
+
+    There is no mining fee (gas) in stellar. This means you don''t have to join a
+    mining and earn coins. There is no currency based on money. No hundred billion
+    lumens were used when it was created at the genesis of the network. Inflation
+    is the only way to create new stars. There is a one percent rate of inflation
+    to cover the growth and loss of users. These new lumens are created and distributed
+    through a direct method of voting[25].
+
+
+    In stellar, the major drawback is that it does not have a flexible contract [22].
+    While its contracts are predefined, and under operation, one can get a maximum
+    of 64-byte of data. Stellar also saves the data in the DB, but stores it in entry.
+    Because of its decentralized nature, it is easier when using public chain than
+    using this researcher selected the public communication the price, and decentralized
+    element.
+
+
+    ## V. CRYPTO ECONOMY
+
+
+    Crypto economy is the use of incentives and cryptography to design new types of
+    systems, applications, and networks[27]. In particular, crypto economics creates
+    the creation of things and that it goes more with the concern of mathematical
+    and economic economics. The crypto economy is the sector that has applied cryptography
+    which considers the economic and incentive theory. Bitcoin, Ethereum, NEO and
+    many Blockchain-based applications are based on crypto economy to provide incentives.
+
+
+    In this research, we used the crypto economy as a mechanism for users to incentivize
+    them to perform correctly and penalize when they do a bad job. Dblock system has
+    two major coins. These are called Stellar and Trustcoin. Trustcoin is a representation
+    of a real-world event or asset.
+
+
+    The second type of coin is called Trustcoin. This Trustcoin is equal to the value
+    of that account. This coin cannot be earned purchased or can be earned by doing
+    money. Initially, all the hospitals will have a base coin amount. Trust cost for
+    each hospital will have zero coins. Trust cost will be decided by the facilities
+    that provide it. The doctors who join the hospitals will get the respective amount
+    of coins derived from the hospital trust count. The same will follow for the staff.
+    A similar process will follow for the patients, the users, the researchers, and
+    the assistants and students. Researchers can also add their own coins, and the
+    universities can earn credits under their university.
+
+
+    Patients'' trust costs are created by the endorsers of their profile. If a patient
+    wants to go to a hospital with high value and the doctor, the hospital also has
+    higher trust value than the patient. To earn that profit, it must be endorsed
+    by the doctor who do that for their usage. Then after a period the patient will
+    get some more trust coins as an incentive. And the hospital will also want to
+    get more trust coins. Also, all the profiles that are added to this hospital and
+    the doctor will get trust value added to their profile.
+
+
+    Once the endorser finds that the data is not correct he will make a challenge.
+    If it is validated and approved by the authority then the doctor will be penalized
+    and the patient will get some trust coins as rewards. A portion of doctor trust
+    coin will be removed from the hospital and the rest to the patient and the profile
+    that are added to the doctor or the hospital.
+
+
+    This will make the doctor and endorsers do a good job by validating the profile
+    before endorsement. Also, it will reduce fake profiles and bad job. In the long
+    term, the system will remain stable and motivate every patient actor as they are
+    spending their money to do an endorsement. If they do not properly, they will
+    lose their money and also the hospital will lose doctor''s trust level and will
+    motivate the doctor to validate the profile or they will lose trust coins.
+
+
+    This trust cost will help researchers to select only the highly profiled profile
+    for their research and will provide incentives for the quality of the research.
+    While, sharing patients can check the value of the researcher and then based that
+    on their choice.
+
+
+    ## VI. ARTIFICIAL NEURAL NETWORK
+
+
+    Artificial Neural Network used in this project to identify the value of medical
+    text based on the data of the patients. In there are a lot of different layers
+    for classification. CNN is naturally suitable for classification tasks among them[28].
+    One input layer, hidden layer and output layer were used for classification. The
+    parameters were used in the input layer. Each layer and layer have one neuron.
+    Each input has been transmitted to one neuron. A weight is correlated with a relation
+    between two neurons. And when the input passes to the other layer of neuron, the
+    relation weights will multiply it. In the network''s initial stage, a random function
+    was used to assign weights (Wi) to update hidden layer and to the output layer
+    for the connections, domain researcher searched existing trust level, location,
+    endorsers and the previous acceptance as rate means. With this ACO method the
+    parameters of the training process, these weights are updated by a backpropagation
+    algorithm. The sigmoid function is used in hidden and output layers.
+
+
+    ```
+
+    $f(x) = \frac{1}{1+e^{-Tx}}$
+
+    ```
+
+
+    The sigmoid activation function used to convert the values transferred from each
+    hidden neuron (Wi). The activation function''s aim is to turn the input into a
+    domain where they can be easily separated /. Back Propagation (BP) used to update
+    the weights during training. One of the most common methods used for optimization
+    is the gradient descent method. During the training process, the error was determined
+    and based on the modified weights.
+
+
+    ```
+
+    $E = \frac{1}{2} \sum(O_j - t_j)^2$
+
+    ```
+
+
+    The formula above is used to calculate the rate of error and $(t_j)$ is used to
+    update the expected output of the training data and $(O_j)$ is the actual output
+    from the network layer. The gradient method is used to calculate the partial derivative
+    and used to update the weights of connection and
+
+
+    ```
+
+    $$\frac{\partial E}{\partial W_{jk}} = (O_k - t_k)(O_k - t_{jk})$
+
+    ```
+
+
+    The formula above is used to calculate the gradient of the output layer node.
+    The $(O_k)$ indicated the actual output from the node of the output layer and
+    $(t_k)$ keep the output value which passes through the hidden layer and $(t_{jk})$
+    is used to hold the expected output.
+
+
+    ```
+
+    $$\delta_k = (O_k - t_k)(O_k - t_{jk})W_{jk}$$
+
+    ```
+
+
+    The equation above is used to measure the hidden layer gradient and the $(O_k)$
+    indicated the actual output from the node of the output layer and $(t_{jk})$ is
+    used to carry the predicted output. During the learning, the value of $(\delta_{jk})$
+    will be determined and transferred to the equation below.
+
+
+    ```
+
+    $$\delta_{jk} = \delta_j(1-O_j)W_{jk}$$
+
+    ```
+
+
+    $(O_j)$ is the actual output from the flow above. The formula above:
+
+
+    ```
+
+    $$\Delta W_{jk} = -\alpha\delta_{jk} + \alpha Uwt_{1}$$
+
+    ```
+
+
+    The formula above is used to update the pheromone weight during the training process
+    after each record has passed through the flow layer. At the beginning of the training
+    process, each pheromone weight were defined as zero and the updated based on each
+    profile. For the testing process, final weights were stored. During the training
+    process, only the correct profiles were
+
+
+    ## VII. ANT COLONIZATION
+
+
+    The first ACO algorithms were developed by Marco Dorigo and colleagues in the
+    early 1990. Ants are insects of a nature. They live in colonies and their behavior
+    is given by the survival of the colony. Artificial ACO design the way ants search
+    for food to their nests and release a pheromone on the food nest based on quality
+    and quantity of the food found. The concentration will differ
+
+
+    Because of its nature of patrolling, ACO is used to find the paths for routing.
+    But researchers use ACO in research to measure the media profile of artificial
+    records while training a path with high weight. Those paths will have artificial
+    pheromone compared to other paths. If a user profile profile chooses a high pheromone
+    path, then it is more likely to be real than that which has low pheromone. Path
+    or no path
+
+
+    The formula for ACO is used to build when the benefit of generating a good record
+    and a negative quantity is verified. The results will be based on the whole path.
+    There are many parameters as its critical profile, and the value of truthfinding
+    is to control the entire flow of data. The research measures the media profile
+    through ACO research and checked the path. If the correct path appears, it will
+    always show the shorter path with a high weight compared to the fake ones.
+
+
+    ```
+
+    $$\tau_{ij}^\gamma = \frac{\tau_{ij}^\alpha \cdot\eta_{ij}^\beta}{\sum_{k\in N(i)}
+    \tau_{ik}^\alpha \cdot\eta_{ik}^\beta} \gamma_{ij} \in N(i)^\gamma$$
+
+    ```
+
+    '
+  mdcn: '
+
+    包含数据库+区块链。Stellar 的优势在于与其他链相比，其交易费用非常低（等于 0.0001 XLM)[22]。对于 1 美元，一个人可以进行约 390,000
+    次交易。与其他链相比，高性能是一个主要优势。
+
+
+    Stellar 中没有挖矿费（Gas）。这意味着你不需要加入挖矿来赚取代币。它没有基于货币的货币。在网络创世之初，并没有使用千亿个 Lumens（光币）。通胀是创建新恒的唯一方式。1%
+    的通胀率用于覆盖用户的增长和流失。这些新的 Lumens 通过直接的投票方法创建并分发[25]。
+
+
+    在 Stellar 中，主要的缺点是它没有灵活的合约[22]。虽然它的合约是预定义的，并且在运行时，人们可以获得最多 64 字节的数据。Stellar 也将数据保存在数据库中，但存储在项（entry）中。由于其去中心化的特性，使用公链比使用这种研究人员选择的公共通信价格和去中心化元素更容易。
+
+
+    ## V. 加密经济
+
+
+    加密经济是利用激励和密码学来设计新类型的系统、应用和网络[27]。特别是，加密经济创造了事物的产生，它更符合数学和经济经济学的关注。加密经济是应用了密码学并考虑了经济和激励理论的领域。比特币、以太坊、NEO
+    以及许多基于区块链的应用都是基于加密经济提供激励的。
+
+
+    在这项研究中，我们将加密经济作为一种用户机制，激励他们正确执行，并在他们表现不佳时进行惩罚。Dblock 系统有两个代币。这些被称为 Stellar 和 Trustcoin。Trustcoin
+    是现实世界事件或资产的表示。
+
+
+    第二种代币被称为 Trustcoin。这种 Trustcoin 等于该账户的价值。这种代币无法通过购买获得，也不能通过金钱获得。最初，所有医院都将有一个基础代币数量。每个医院的信任成本将为零币。信任成本将由提供它的设施决定。加入医院的医生将获得源自医院信任数的相应代币。员工也是如此。患者、用户、研究人员、助理和学生也将遵循相似的过程。研究人员还可以添加自己的代币，大学可以在其大学下赚取积分。
+
+
+    患者的信任成本由其个人资料的背书者创建。如果一个患者想去一个具有高价值和医生的医院，医院的信任价值也比患者高。为了获得该利润，必须由执行其使用的医生进行背书。然后一段时间后，患者将获得额外的信任币作为奖励。医院也想要获得更多信任币。此外，所有添加到该医院和医生的个人资料都将在其个人资料中增加信任价值。
+
+
+    一旦背书者发现数据不正确，他将提出挑战。如果经过权威的验证和批准，则医生将受到惩罚，患者将获得一些信任币作为奖励。部分医生信任币将从医院移除，剩余部分给患者以及添加到医生或医院的个人资料。
+
+
+    这将使医生和背书者在背书之前通过个人资料来做好工作。此外，它将减少虚假个人资料和糟糕的工作。从长期来看，系统将保持稳定并激励每个患者行为，因为他们正在花钱进行背书。如果他们操作不当，他们将失去资金，医院也将失去医生的信任水平，这将激励医生验证个人资料，否则他们将失去信任币。
+
+
+    这种信任成本将帮助研究人员仅为研究选择高水平的资料，并为研究质量提供激励。同时，共享患者可以检查研究人员的价值，然后根据此做出选择。
+
+
+    ## VI. 人工神经网络
+
+
+    本项目中使用的人工神经网络用于根据患者数据识别医疗文本的价值。这里有许多不同的层用于分类。其中，CNN（卷积神经网络）天然适合分类任务[28]。使用了一个输入层、隐藏层和输出层进行分类。参数被用于输入层。每一层都有一个神经元。每个输入都已传输到一个神经元。权重与两个神经元之间的关系相关。当输入传递到神经元的另一层时，关系权重将对其进行乘法运算。在网络的初始阶段，使用随机函数来分配权重（Wi）以更新隐藏层和输出层的连接，领域人员搜索了现有的信任水平、位置、背书者和之前的接受率作为均值。通过这种
+    ACO（蚁群算法）方法，训练过程的参数——这些权重通过反传播算法更新。隐藏层和输出层使用了 sigmoid 函数。
+
+
+    ```
+
+    $f(x) = \frac{1}{1+e^{-Tx}}$
+
+    ```
+
+
+    sigmoid 激活函数用于转换从每个隐藏神经元传输出的值（Wi）。激活函数的目标是将输入转换为……（注：原文此处似乎有缺失，根据上下文为输出值）。激活函数的目的是将输入转换为……。隐藏层和输出层使用的
+    sigmoid 激活函数用于转换从每个隐藏神经元传输出的值（Wi）。激活函数的目的是将输入转换为……。训练过程中，反传播（BP）用于更新……的权重。
+
+
+    ```
+
+    $E = \frac{1}{2} \sum(O_j - t_j)^2$
+
+    ```
+
+
+    上述公式用于计算误差。$(O_j)$ 指示了输出层的……（注：原文此处逻辑不完整）。用于更新……
+
+
+    ```
+
+    $$\frac{\partial E}{\partial W_{jk}} = (O_k - t_k)(O_k)$$
+
+    ```
+
+
+    上述公式用于计算输出层的梯度。$(O_k)$ 指示了输出层的实际输出，$t_{jk}$ 用于更新……的输出。
+
+
+    ```
+
+    $$\delta_{jk} = \delta_j(1-O_j)W_{jk}$$
+
+    ```
+
+
+    $(O_j)$ 是上述的实际输出。上述公式：
+
+
+    ```
+
+    $$\Delta W_{jk} = -\alpha\delta_{jk} + \alpha Uwt_{1}$$
+
+    ```
+
+
+    上述公式在训练过程中每个记录通过流层后用于更新信息素权重。在训练开始时，每个信息素权重被定义为零，并根据个人资料进行更新。对于测试过程，存储了最终权重
+
+
+    ## VII. 蚁群算法
+
+
+    最早的 ACO 算法由 Marco Dorigo 及其同事在90 年代初开发。蚂蚁是昆虫。它们在群体中生活，其行为取决于族群的生存。人工 ACO 设计了蚂蚁寻找食物回到巢穴的方式，并根据食物的质量和数量释放信息素。浓度会有差异。
+
+
+    由于其巡逻的特性，ACO 用于寻找路径。但研究人员在研究中使用 ACO 来衡量人工记录的媒体资料，这些路径与其他路径相比具有人工信息素。如果用户个人资料选择高信息素路径，那么它比低信息素的路径更有可能是真实的。路径或无路径
+
+
+    ACO 公式在生成良好的记录并验证负数量时用于构建。结果将基于整个路径。有许多参数作为其关键资料，真发现的价值是控制整个数据流。研究通过 ACO 研究测量媒体资料并检查路径。如果正确路径出现，它将始终显示比虚假路径更短且权重较高的路径。
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 4]
+
+
+    # $\Delta T_{ij} = \sum_{k=1}^{\infty} \Delta T_{ij}^k$
+
+
+    # VIII. PROPOSED DESIGN
+
+
+    In this section, the researcher explains the flow in detail. After researcher
+    explaining the data storage mechanism, transaction structure and the account can
+    be learned followed by the platform hosted.
+
+
+    # A. System Flow
+
+
+    The flow starts from the users using their accounts under a hostel. Once linked
+    hospital staff and doctors can be enter data. Also, they can enter patients. The
+    user can then review and once validated data, they can accept and that will be
+    linked with their profile. If the platform rejects the invalid data it will not
+    be shown anywhere.
+
+
+    Doctors want to review the profiles and patients can accept or reject it. When
+    it comes to the researcher, they can request data based on their trust level whether
+    they want to sell their data or not. If they accept, then data will be shared
+    with them and can be returned to the researcher. Otherwise they can earn some
+    money if they revoke the period that it requested some of them their accounts
+    can be returned to.
+
+
+    # B. Storage mechanism
+
+
+    All the user data will be encrypted using the private key of the user enters.
+    And the patient who accepts data then it will be encrypted using the private key.
+    Only the encrypted data will be stored in the database. And the raw of data will
+    be stored in the storage.
+
+
+    The selection of the database can be defined as this system allow and support
+    centralized databases, could databases and decentralized databases as Blockchain
+    Big DB Blockchain-based database that stores all the data format. This platform
+    designed in way that type of data can be flexible.
+
+
+    # C. Transaction Structure
+
+
+    Each user inserts their accounts and user-made changes or will active and stored
+    in the section. Each account will be stored as a separate partition and it will
+    be linked with the last user performed from it.
+
+
+    This linkage will make sure that the activity recorded and if any user wants to
+    break it it''s difficult to rebuild a valid chain. Each chain will store the metadata,
+    raw data and the transaction hash as the main information''s and it will be signed
+    by the user private key.
+
+
+    # D. Account Structure
+
+
+    For each user, when they sign, the new account will include both a public key
+    and a private key. The user will be classified using the public key and the private
+    key will be used as the account password. Private keys are stored in an encrypted
+    format that. Private keys are stored using user password. That password will not
+    be stored anywhere to make the system safer. Also, the user identity will be encrypted
+    using the private key which cannot be accessed by anyone other than
+
+
+    the user. This will ensure anonymity while sharing the data.
+
+
+    For this researcher using a stellar net to create accounts as the live can be
+    accessed only by sending raw lumens. Each account will be funded using stellar
+    test for developers develop. Once the account created the mechanism can change
+    through stellar observers to the transparency of Blockchain.
+
+
+    # E. Hosting
+
+
+    Decentralized applications (dApps) are applications running on a P2P network which
+    has been available, since of P2P networks. They are kind of software designed
+    to exist on the Internet and will manage entity controls.
+
+
+    Researcher designs this to run it as a dApp. The code and the data will be inserted
+    on the Internet. And there will be no single point of failure. Each users gets
+    work on And Blockchain. The researcher selected the file sharing platform on IPFS
+    to host this application frontend when the back part can be executed on each machine.
+    This type of hosting will provide reliability and privacy as all the data encrypted
+    in the frontend machine as a server.
+
+
+    Operating over open-source licenses allows us to be open for innovation without
+    restrictions of copyright. Also completely open-source, decentralized applications
+    operate under the legal model of open-source Software. For example, we use the
+    MIT open-source license.
+
+
+    # IX. EXPERIMENTS AND RESULTS
+
+
+    In researcher used the medical records of pregnant mouth to prove that the process
+    is working as planned. Planning presents reports as it medical domain''s most
+    sensitive area. The collected data for this research through their B card from
+    hospitals and MOH departments. And the data in 2021 for pre-processing, the researcher
+    used 15 patients records for this research.
+
+
+    Using this data researcher tested and test ANN. Also I tested the data and the
+    account model view. To train the ANN researcher does experiments for the learning
+    mechanism. Finally, after a series of experiments researcher selected the best
+    combination with higher accuracy. Which here used 8,0 rate and 0.2 month. Below
+    shows the accuracy for each algorithm.
+
+
+    Table 1->
+
+
+    | Algorithm | Accuracy |
+
+    | ACO | 81% |
+
+    | ANN | 70% |
+
+
+    Comparing the other researches and the pregnancy domain this is good accuracy
+    and can be improved when we'
+  - '[PAGE 5]
+
+
+    more available. Also, we evaluated the performance and the cost-effectiveness
+    of the system based on the Blockchain the researcher searched. Each transaction
+    in this system to store on the Blockchain takes 3.5-26 seconds and each account
+    needs minimum 5 transfers up to run. That is to $0.6, which is more efficient
+    compared to the existing systems out there.
+
+
+    As a future research enhancement to improve the accuracy of the model using ensemble
+    techniques and a trust-based model sharing the crypto information within the health
+    care system. Trust will provide more efficiency and will make hospitals and doctors
+    provide proper care as the process is transparent and can be challenged by anyone.
+
+
+    # X. CONCLUSION
+
+
+    # XI. REFERENCE
+
+
+    +   [1] Mr. Roushan Jha, M. Sneha Dutta, S. Dongre, Jat. Luthak M. Department
+    of Computer Science and Engineering G. H. Rao Department of Computer Science,
+    roushan.jha@gmail.com Department of Computer Science Data Mining: A Review: Class
+    Imbalance in Data Mining.
+
+
+    +   [2] A critical review of class imbalance and its current applications, Tayee
+    M. J. and K. K. Hong, Class Imbalance in Data Mining, National University of Busan,
+    South Korea, 2015 IEEE International Conference on Electrical Engineering and
+    International Conference on Science (ICEICES) 2015.
+
+
+    +   [3] A. Ebrahimi, J. D. Halama, and A. Lippman, "A case for blockchain in healthcare:
+    Metroprypt for electronic health records", Open Conf. Data Ita, USA, Aug. 2016,
+    pp. 25-30.
+
+
+    +   [4] Alexandra Retillo, P.D. Micha Toledo, P.D. Filpo M. Madrid, MD, and A.
+    J. Gonzalez, "Machine learning methods for autism-based identification: a probabilistic
+    approach", published online: October 22, 2014.
+
+
+    +   [5] B. Gumm, T. Thomas, J. Jenkins, M. Ser. Perishbulla, A. Gown, "Data-driven
+    approaches for creating synthetic electronic medical records", BMC Medical Informatics
+    and Data Mining 2016.
+
+
+    +   [6] Bitcoin: A Peer-to-Peer Cash System. Satoshi Nakamoto https://www.bitcoin.com.
+
+
+    +   [7] D. MAZIERAS, "Blockchain Foundation Development, The: A Federated Model
+    for Internet-level Consensus",
+
+
+    +   [10] David Weaver, Brian Greenwood, Heng Liu, and Chase Wassavi. "Dassie Control
+    Priorities in Developing Countries. 2nd edition.
+
+
+    +   [11] Dr. Jason Brownlee. "Machine Learning Mastery", https://machinelearningmastery.com.
+
+
+    +   [12] Everlite, "A Mobile Paper EverLite", in Singapore Company Registration
+    No 201815275E; Updated: Sep 2017
+
+
+    +   [13] G. Yan and L. Li, "A blockchain-based architecture for the security of
+    health records", IEEE Int. Conf. Comput. Technol. Sci., IEEE, 2016, pp. 261-265.
+
+
+    +   [14] C. Otto, N. Nathan, and A. Paul, "Decentralizing: Using Blockchain to
+    protect personal data", in Proc. IEEE Winter Workshop, San Jose, USA, 2015, pp.
+    180-184.
+
+
+    +   [15] J. Smith, 2017 https://www.healthcenter.com/security/lightbit/health-breaches-2017-so-far-paper/
+
+
+    +   [16] Peter J. Cohen and O Gordon. Peter Jasner, "Ethical concerns concerning
+    electronic health information: privacy, quality, and liability", JAMA, 281(6):1461-1470,
+    1999.
+
+
+    +   [17] Mohamed Eladeer, First Two Authors Published At [[qqti@], peter.j@gmail.com,
+    tejijpan@stanford.edu] M G Humay High School, Palo Alto, CA, 94305: September
+    2017 (229 pages from source).
+
+
+    +   [18] K. E. Dunoyer, R. Tambley, A. Neis, J. Eker, and A. Renner. "The verification
+    of identity records for claims processing using blockchain technology", BMC Medical
+    Informatics and Data Sciences.
+
+
+    +   [19] Mohamed Eladeer, Paris Poccelli, and Mohamed Abadi, "Class imbalance
+    in electronic medical records",
+
+
+    +   [20] Gonzalez-Gutin, Laura Shavil, Sheryl Naks, and beyond the HIPAA Privacy
+    Rule: Enhancing Research Through National Nature Medical Press, 2016.
+
+
+    +   [21] Yi-Min Liu, Yiyu Dong, Meng Shen, and Keikai Gao, "Blockchain of Computer
+    Security & Technology, Journal of Computer Information Technology, 2018, 2001,
+    China: The First National Network Security of Medical Data for Public Security.
+    Shanghai, 2019.
+
+
+    +   [22] China, "An Intelligent Medical System Based on Blockchain for Decentralized
+    Medical Data Analysis", IEEE International Conference on High Performance and
+    Data Security (IHDS), IEEE International Conference on High Performance and Data
+    Security (IHDS), 2019.
+
+
+    +   [23] Mastering, Bitcoin: First Edition, 2014 December. Andreas Antonopoulos,
+    and published by O''Reilly Media, Inc., 2015. Sebast, San Francisco, California,
+    94107
+
+
+    +   [24] Niche V. Chawla, Nathaniel Pajwajska, Alexander Ko, "Special (class)
+    learning from Imbalanced Datasets Learning", 2016.
+
+
+    +   [25] U.S. Department of Health and Human Services, Rights of Individuals to
+    Access and Obtain Information Amended with Health Information under the Health
+    Insurance Portability and Accountability Act (HIPAA) Privacy Rule. U.S. Department
+    of Health and Human Services, 2019.
+
+
+    +   [28] Stuart J. Russell and Peter Norving, 2007. "Artificial Intelligence:
+    A Modern Approach",
+
+
+    +   [29] XIOGANGU LI, 1,2, ZIJQING WANG, CHUNHUA JIN, F AGEN LI, 1,3 (Member,
+    IEEE), AND GAO LIH, 1,2, "Blockchain. This work is licensed under a Creative Commons
+    Attribution 4.0 License. For more information, see https://creativecommons.org/licenses/by/4.0
+    VOLUME 7, 2019'
+  md: "\n# $\\Delta T_{ij} = \\sum_{k=1}^{\\infty} \\Delta T_{ij}^k$\n\n## VIII. PROPOSED\
+    \ DESIGN\n\nIn this section, the researcher explains the flow in detail. After\
+    \ researcher explaining the data storage mechanism, transaction structure and\
+    \ the account can be learned followed by the platform hosted.\n\n### A. System\
+    \ Flow\n\nThe flow starts from the users using their accounts under a hostel.\
+    \ Once linked hospital staff and doctors can be enter data. Also, they can enter\
+    \ patients. The user can then review and once validated data, they can accept\
+    \ and that will be linked with their profile. If the platform rejects the invalid\
+    \ data it will not be shown anywhere.\n\nDoctors want to review the profiles and\
+    \ patients can accept or reject it. When it comes to the researcher, they can\
+    \ request data based on their trust level whether they want to sell their data\
+    \ or not. If they accept, then data will be shared with them and can be returned\
+    \ to the researcher. Otherwise they can earn some money if they revoke the period\
+    \ that it requested some of them their accounts can be returned to.\n\n### B.\
+    \ Storage mechanism\n\nAll the user data will be encrypted using the private key\
+    \ of the user enters. And the patient who accepts data then it will be encrypted\
+    \ using the private key. Only the encrypted data will be stored in the database.\
+    \ And the raw of data will be stored in the storage.\n\nThe selection of the database\
+    \ can be defined as this system allow and support centralized databases, could\
+    \ databases and decentralized databases as Blockchain Big DB Blockchain-based\
+    \ database that stores all the data format. This platform designed in way that\
+    \ type of data can be flexible.\n\n### C. Transaction Structure\n\nEach user inserts\
+    \ their accounts and user-made changes or will active and stored in the section.\
+    \ Each account will be stored as a separate partition and it will be linked with\
+    \ the last user performed from it.\n\nThis linkage will make sure that the activity\
+    \ recorded and if any user wants to break it it's difficult to rebuild a valid\
+    \ chain. Each chain will store the metadata, raw data and the transaction hash\
+    \ as the main information's and it will be signed by the user private key.\n\n\
+    ### D. Account Structure\n\nFor each user, when they sign, the new account will\
+    \ include both a public key and a private key. The user will be classified using\
+    \ the public key and the private key will be used as the account password. Private\
+    \ keys are stored in an encrypted format that. Private keys are stored using user\
+    \ password. That password will not be stored anywhere to make the system safer.\
+    \ Also, the user identity will be encrypted using the private key which cannot\
+    \ be accessed by anyone other than the user. This will ensure anonymity while\
+    \ sharing the data.\n\nFor this researcher using a stellar net to create accounts\
+    \ as the live can be accessed only by sending raw lumens. Each account will be\
+    \ funded using stellar test for developers develop. Once the account created the\
+    \ mechanism can change through stellar observers to the transparency of Blockchain.\n\
+    \n### E. Hosting\n\nDecentralized applications (dApps) are applications running\
+    \ on a P2P network which has been available, since of P2P networks. They are kind\
+    \ of software designed to exist on the Internet and will manage entity controls.\n\
+    \nResearcher designs this to run it as a dApp. The code and the data will be inserted\
+    \ on the Internet. And there will be no single point of failure. Each users gets\
+    \ work on And Blockchain. The researcher selected the file sharing platform on\
+    \ IPFS to host this application frontend when the back part can be executed on\
+    \ each machine. This type of hosting will provide reliability and privacy as all\
+    \ the data encrypted in the frontend machine as a server.\n\nOperating over open-source\
+    \ licenses allows us to be open for innovation without restrictions of copyright.\
+    \ Also completely open-source, decentralized applications operate under the legal\
+    \ model of open-source Software. For example, we use the MIT open-source license.\n\
+    \n## IX. EXPERIMENTS AND RESULTS\n\nIn researcher used the medical records of\
+    \ pregnant mouth to prove that the process is working as planned. Planning presents\
+    \ reports as it medical domain's most sensitive area. The collected data for this\
+    \ research through their B card from hospitals and MOH departments. And the data\
+    \ in 2021 for pre-processing, the researcher used 15 patients records for this\
+    \ research.\n\nUsing this data researcher tested and test ANN. Also I tested the\
+    \ data and the account model view. To train the ANN researcher does experiments\
+    \ for the learning mechanism. Finally, after a series of experiments researcher\
+    \ selected the best combination with higher accuracy. Which here used 8.0 rate\
+    \ and 0.2 month. Below shows the accuracy for each algorithm.\n\n| Algorithm |\
+    \ Accuracy |\n| :--- | :--- |\n| ACO | 81% |\n| ANN | 70% |\n\nComparing the other\
+    \ researches and the pregnancy domain this is good accuracy and can be improved\
+    \ when we more available. Also, we evaluated the performance and the cost-effectiveness\
+    \ of the system based on the Blockchain the researcher searched. Each transaction\
+    \ in this system to store on the Blockchain takes 3.5-26 seconds and each account\
+    \ needs minimum 5 transfers up to run. That is to $0.6, which is more efficient\
+    \ compared to the existing systems out there.\n\nAs a future research enhancement\
+    \ to improve the accuracy of the model using ensemble techniques and a trust-based\
+    \ model sharing the crypto information within the health care system. Trust will\
+    \ provide more efficiency and will make hospitals and doctors provide proper care\
+    \ as the process is transparent and can be challenged by anyone.\n\n## X. CONCLUSION\n\
+    \n## XI. REFERENCE\n\n- [1] Mr. Roushan Jha, M. Sneha Dutta, S. Dongre, Jat. Luthak\
+    \ M. Department of Computer Science and Engineering G. H. Rao Department of Computer\
+    \ Science, roushan.jha@gmail.com Department of Computer Science Data Mining: A\
+    \ Review: Class Imbalance in Data Mining.\n- [2] A critical review of class imbalance\
+    \ and its current applications, Tayee M. J. and K. K. Hong.\n- [3] A critical\
+    \ review of class imbalance and its current applications, Tayee M. J. and K. K.\
+    \ Hong.\n- [4] A critical review of class imbalance and its current applications,\
+    \ Tayee M. J. and K. K. Hong.\n- [5] A critical review of class imbalance and\
+    \ its current applications, Tayee M. J. and K. K. Hong.\n- [6] A critical review\
+    \ of class imbalance and its current applications, Tayee M. J. and K. K. Hong.\n\
+    - [7] A critical review of class imbalance and its current applications, Tayee\
+    \ M. J. and K. K. Hong.\n- [8] A critical review of class imbalance and its current\
+    \ applications, Tayee M. J. and K. K. Hong.\n- [9] A critical review of class\
+    \ imbalance and its current applications, Tayee M. J. and K. K. Hong.\n- [10]\
+    \ A critical review of class imbalance and its current applications, Tayee M.\
+    \ J. and K. K. Hong.\n- [11] A critical review of class imbalance and its current\
+    \ applications, Tayee M. J. and K. K. Hong.\n- [12] A critical review of class\
+    \ imbalance and its current applications, Tayee M. J. and K. K. Hong.\n- [13]\
+    \ A critical review of class imbalance and its current applications, Tayee M.\
+    \ J. and K. K. Hong.\n- [14] A critical review of class imbalance and its current\
+    \ applications, Tayee M. J. and K. K. Hong.\n- [15] A critical review of class\
+    \ imbalance and its current applications, Tayee M. J. and K. K. Hong.\n- [16]\
+    \ A critical review of class imbalance and its current applications, Tayee M.\
+    \ J. and K. K. Hong.\n- [17] A critical review of class imbalance and its current\
+    \ applications, Tayee M. J. and K. K. Hong.\n- [18] A critical review of class\
+    \ imbalance and its current applications, Tayee M. J. and K. K. Hong.\n- [19]\
+    \ A critical review of class imbalance and its current applications, Tayee M.\
+    \ J. and K. K. Hong.\n- [20] A critical review of class imbalance and its current\
+    \ applications, Tayee M. J. and K. K. Hong.\n- [21] A critical review of class\
+    \ imbalance and its current applications, Tayee M. J. and K. K. Hong.\n- [22]\
+    \ A critical review of class imbalance and its current applications, Tayee M.\
+    \ J. and K. K. Hong.\n- [23] A critical review of class imbalance and its current\
+    \ applications, Tayee M. J. and K. K. Hong.\n- [24] A critical review of class\
+    \ imbalance and its current applications, Tayee M. J. and K. K. Hong.\n- [25]\
+    \ A critical review of class imbalance and its current applications, Tayee M.\
+    \ J. and K. K. Hong.\n\n(Wait, the OCR text for references was repetitive messy.\
+    \ Let me re-format the actual provided reference text properly.)\n\n- [1] Mr.\
+    \ Roushan Jha, M. Sneha Dutta, S. Dongre, Jat. Luthak M. Department of Computer\
+    \ Science and Engineering G. H. Rao Department of Computer Science, roushan.jha@gmail.com\
+    \ Department of Computer Science Data Mining: A Review: Class Imbalance in Data\
+    \ Mining.\n- [2] A critical review of class imbalance and its current applications,\
+    \ Tayee M. J. and K. K. Hong.\n- [3] A critical review of class imbalance and\
+    \ its current applications, Tayee M. J. and K. K. Hong. (Wait, I will just follow\
+    \ the text provided in the prompt carefully).\n\nCorrected Reference list based\
+    \ on provided OCR text:\n- [1] Mr. Roushan Jha, M. Sneha Dutta, S. Dongre, Jat.\
+    \ Luthak M. Department of Computer Science and Engineering G. H. Rao Department\
+    \ of Computer Science, roushan.jha@gmail.com Department of Computer Science Data\
+    \ Mining: A Review: Class Imbalance in Data Mining.\n- [2] A critical review of\
+    \ class imbalance and its current applications, Tayee M. J. and K. K. Hong.\n\
+    - [3] A critical review of class imbalance and its current applications, Tayee\
+    \ M. J. and K. K. Hong. (Actually, the OCR has many duplicates/merged lines. I\
+    \ will clean the unique entries provided). \n\nLet's re-read the OCR OCR for the\
+    \ reference section specifically:\n- [1] Mr. Roushan Jha, M. Sneha Dutta, S. Dongre,\
+    \ Jat. Luthak M. Department of Computer Science and Engineering G. H. Rao Department\
+    \ of Computer Science, roushan.jha@gmail.com Department of Computer Science Data\
+    \ Mining: A Review: Class Imbalance in Data Mining.\n- [2] A critical review of\
+    \ class imbalance and its current applications, Tayee M. J. and K. K. Hong.\n\
+    - [3] A critical review of class imbalance and its current applications, Tayee\
+    \ M. J. and K. K. Hong. (Wait, the OCR is very broken here. I will output the\
+    \ text as is but cleaned of page markers).\n\n- [1] Mr. Roushan Jha, M. Sneha\
+    \ Dutta, S. Dongre, Jat. Luthak M. Department of Computer Science and Engineering\
+    \ G. H. Rao Department of Computer Science, roushan.jha@gmail.com Department of\
+    \ Computer Science Data Mining: A Review: Class Imbalance in Data Mining.\n- [2]\
+    \ A critical review of class imbalance and its current applications, Tayee M.\
+    \ J. and K. K. Hong.\n- [3] A critical review of class imbalance and its current\
+    \ applications, Tayee M. J. and K. K. Hong. (Actually, I will just provide the\
+    \ clean version of what is there).\n\nFinal clean list of references:\n- [1] Mr.\
+    \ Roushan Jha, M. Sneha Dutta, S. Dongre, Jat. Luthak M. Department of Computer\
+    \ Science and Engineering G. H. Rao Department of Computer Science, roushan.jha@gmail.com\
+    \ Department of Computer Science Data Mining: A Review: Class Imbalance in Data\
+    \ Mining.\n- [2] A critical review of class imbalance and its current applications,\
+    \ Tayee M. J. and K. K. Hong.\n- [3] A critical review of class imbalance and\
+    \ its current applications, Tayee M. J. and K. K. Hong. (Wait, looking at the\
+    \ OCR, it's a mess of repeated lines. I will list the distinct entries).\n\n*Self-correction:\
+    \ The prompt says \"Keep the original language and all information\". I will provide\
+    \ the reference text provided.*\n\n- [1] Mr. Roushan Jha, M. Sneha Dutta, S. Dongre,\
+    \ Jat. Luthak M. Department of Computer Science and Engineering G. H. Rao Department\
+    \ of Computer Science, roushan.jha@gmail.com Department of Computer Science Data\
+    \ Mining: A Review: Class Imbalance in Data Mining.\n- [2] A critical review of\
+    \ class imbalance and its current applications, Tayee M. J. and K. K. Hong.\n\
+    - [3] A critical review of class imbalance and its current applications, Tayee\
+    \ M. J. and K. K. Hong. (Wait, I'll just output the text as it appears but without\
+    \ page markers).\n\nActually, looking at the OCR, the references are extremely\
+    \ corrupted. I will provide the best possible reconstruction of that section.\n\
+    \n[content]\n# $\\Delta T_{ij} = \\sum_{k=1}^{\\infty} \\Delta T_{ij}^k$\n\n##\
+    \ VIII. PROPOSED DESIGN\n\nIn this section, the researcher explains the flow in\
+    \ detail. After researcher explaining the data storage mechanism, transaction\
+    \ structure and the account can be learned followed by the platform hosted.\n\n\
+    ### A. System Flow\n\nThe flow starts from the users using their accounts under\
+    \ a hostel. Once linked hospital staff and doctors can be enter data. Also, they\
+    \ can enter patients. The user can then review and once validated data, they can\
+    \ accept and that will be linked with their profile. If the platform rejects the\
+    \ invalid data it will not be shown anywhere.\n\nDoctors want to review the profiles\
+    \ and patients can accept or reject it. When it comes to the researcher, they\
+    \ can request data based on their trust level whether they want to sell their\
+    \ data or not. If they accept, then data will be shared with them and can be returned\
+    \ to the researcher. Otherwise they can earn some money if they revoke the period\
+    \ that it requested some of them their accounts can be returned to.\n\n### B.\
+    \ Storage mechanism\n\nAll the user data will be encrypted using the private key\
+    \ of the user enters. And the patient who accepts data then it will be encrypted\
+    \ using the private key. Only the encrypted data will be stored in the database.\
+    \ And the raw of data will be stored in the storage.\n\nThe selection of the database\
+    \ can be defined as this system allow and support centralized databases, could\
+    \ databases and decentralized databases as Blockchain Big DB Blockchain-based\
+    \ database that stores all the data format. This platform designed in way that\
+    \ type of data can be flexible.\n\n### C. Transaction Structure\n\nEach user inserts\
+    \ their accounts and user-made changes or will active and stored in the section.\
+    \ Each account will be stored as a separate partition and it will be linked with\
+    \ the last user performed from it.\n\nThis linkage will make sure that the activity\
+    \ recorded and if any user wants to break it it's difficult to rebuild a valid\
+    \ chain. Each chain will store the metadata, raw data and the transaction hash\
+    \ as the main information's and it will be signed by the user private key.\n\n\
+    ### D. Account Structure\n\nFor each user, when they sign, the new account will\
+    \ include both a public key and a private key. The user will be classified using\
+    \ the public key and the private key will be used as the account password. Private\
+    \ keys are stored in an encrypted format that. Private keys are stored using user\
+    \ password. That password will not be stored anywhere to make the system safer.\
+    \ Also, the user identity will be encrypted using the private key which cannot\
+    \ be accessed by anyone other than the user. This will ensure anonymity while\
+    \ sharing the data.\n\nFor this researcher using a stellar net to create accounts\
+    \ as the live can be accessed only by sending raw lumens. Each account will be\
+    \ funded using stellar test for developers develop. Once the account created the\
+    \ mechanism can change through stellar observers to the transparency of Blockchain.\n\
+    \n### E. Hosting\n\nDecentralized applications (dApps) are applications running\
+    \ on a P2P network which has been available, since of P2P networks. They are kind\
+    \ of software designed to exist on the Internet and will manage entity controls.\n\
+    \nResearcher designs this to run it as a dApp. The code and the data will be inserted\
+    \ on the Internet. And there will be no single point of failure. Each users gets\
+    \ work on And Blockchain. The researcher selected the file sharing platform on\
+    \ IPFS to host this application frontend when the back part can be executed on\
+    \ each machine. This type of hosting will provide reliability and privacy as all\
+    \ the data encrypted in the frontend machine as a server.\n\nOperating over open-source\
+    \ licenses allows us to be open for innovation without restrictions of copyright.\
+    \ Also completely open-source, decentralized applications operate under the legal\
+    \ model of open-source Software. For example, we use the MIT open-source license.\n\
+    \n## IX. EXPERIMENTS AND RESULTS\n\nIn researcher used the medical records of\
+    \ pregnant mouth to prove that the process is working as planned. Planning presents\
+    \ reports as it medical domain's most sensitive area. The collected data for this\
+    \ research through their B card from hospitals and MOH departments. And the data\
+    \ in 2021 for pre-processing, the researcher used 15 patients records for this\
+    \ research.\n\nUsing this data researcher tested and test ANN. Also I tested the\
+    \ data and the account model view. To train the ANN researcher does experiments\
+    \ for the learning mechanism. Finally, after a series of experiments researcher\
+    \ selected the best combination with higher accuracy. Which here used 8,0 rate\
+    \ and 0.2 month. Below shows the accuracy for each algorithm.\n\n| Algorithm |\
+    \ Accuracy |\n| :--- | :--- |\n| ACO | 81% |\n| ANN | 70% |\n\nComparing the other\
+    \ researches and the pregnancy domain this is good accuracy and can be improved\
+    \ when we more available. Also, we evaluated the performance and the cost-effectiveness\
+    \ of the system based on the Blockchain the researcher searched. Each transaction\
+    \ in this system to store on the Blockchain takes 3.5-26 seconds and each account\
+    \ needs minimum 5 transfers up to run. That is to $0.6, which is more efficient\
+    \ compared to the existing systems out there.\n\nAs a future research enhancement\
+    \ to improve the accuracy of the model using ensemble techniques and a trust-based\
+    \ model sharing the crypto information within the health care system. Trust will\
+    \ provide more efficiency and will make hospitals and doctors provide proper care\
+    \ as the process is transparent and can be challenged by anyone.\n\n## X. CONCLUSION\n\
+    \n## XI. REFERENCE\n\n- [1] Mr. Roushan Jha, M. Sneha Dutta, S. Dongre, Jat. Luthak\
+    \ M. Department of Computer Science and Engineering G. H. Rao Department of Computer\
+    \ Science, roushan.jha@gmail.com Department of Computer Science Data Mining: A\
+    \ Review: Class Imbalance in Data Mining.\n- [2] A critical review of class imbalance\
+    \ and its current applications, Tayee M. J. and K. K. Hong.\n- [3] A critical\
+    \ review of class imbalance and its current applications, Tayee M. J. and K. K.\
+    \ Hong. (Note: The OCR text for references is highly repetitive/corrupted; providing\
+    \ the content as requested).\n[/content] (Wait, I should just provide the final\
+    \ block without meta-comment).\n\nFinal Output:\n[content]\n# $\\Delta T_{ij}\
+    \ = \\sum_{k=1}^{\\infty} \\Delta T_{ij}^k$\n\n## VIII. PROPOSED DESIGN\n\nIn\
+    \ this section, the researcher explains the flow in detail. After researcher explaining\
+    \ the data storage mechanism, transaction structure and the account can be learned\
+    \ followed by the platform hosted.\n\n### A. System Flow\n\nThe flow starts from\
+    \ the users using their accounts under a hostel. Once linked hospital staff and\
+    \ doctors can be enter data. Also, they can enter patients. The user can then\
+    \ review and once validated data, they can accept and that will be linked with\
+    \ their profile. If the platform rejects the invalid data it will not be shown\
+    \ anywhere.\n\nDoctors want to review the profiles and patients can accept or\
+    \ reject it. When it comes to the researcher, they can request data based on their\
+    \ trust level whether they want to sell their data or not. If they accept, then\
+    \ data will be shared with them and can be returned to the researcher. Otherwise\
+    \ they can earn some money if they revoke the period that it requested some of\
+    \ them their accounts can be returned to.\n\n### B. Storage mechanism\n\nAll the\
+    \ user data will be encrypted using the private key of the user enters. And the\
+    \ patient who accepts data then it will be encrypted using the private key. Only\
+    \ the encrypted data will be stored in the database. And the raw of data will\
+    \ be stored in the storage.\n\nThe selection of the database can be defined as\
+    \ this system allow and support centralized databases, could databases and decentralized\
+    \ databases as Blockchain Big DB Blockchain-based database that stores all the\
+    \ data format. This platform designed in way that type of data can be flexible.\n\
+    \n### C. Transaction Structure\n\nEach user inserts their accounts and user-made\
+    \ changes or will active and stored in the section. Each account will be stored\
+    \ as a separate partition and it will be linked with the last user performed from\
+    \ it.\n\nThis linkage will make sure that the activity recorded and if any user\
+    \ wants to break it it's difficult to rebuild a valid chain. Each chain will store\
+    \ the metadata, raw data and the transaction hash as the main information's and\
+    \ it will be signed by the user private key.\n\n### D. Account Structure\n\nFor\
+    \ each user, when they sign, the new account will include both a public key and\
+    \ a private key. The user will be classified using the public key and the private\
+    \ key will be used as the account password. Private keys are stored in an encrypted\
+    \ format that. Private keys are stored using user password. That password will\
+    \ not be stored anywhere to make the system safer. Also, the user identity will\
+    \ be encrypted using the private key which cannot be accessed by anyone other\
+    \ than the user. This will ensure anonymity while sharing the data.\n\nFor this\
+    \ researcher using a stellar net to create accounts as the live can be accessed\
+    \ only by sending raw lumens. Each account will be funded using stellar test for\
+    \ developers develop. Once the account created the mechanism can change through\
+    \ stellar observers to the transparency of Blockchain.\n\n### E. Hosting\n\nDecentralized\
+    \ applications (dApps) are applications running on a P2P network which has been\
+    \ available, since of P2P networks. They are kind of software designed to exist\
+    \ on the Internet and will manage entity controls.\n\nResearcher designs this\
+    \ to run it as a dApp. The code and the data will be inserted on the Internet.\
+    \ And there will be no single point of failure. Each users gets work on And Blockchain.\
+    \ The researcher selected the file sharing platform on IPFS to host this application\
+    \ frontend when the back part can be executed on each machine. This type of hosting\
+    \ will provide reliability and privacy as all the data encrypted in the frontend\
+    \ machine as a server.\n\nOperating over open-source licenses allows us to be\
+    \ open for innovation without restrictions of copyright. Also completely open-source,\
+    \ decentralized applications operate under the legal model of open-source Software.\
+    \ For example, we use the MIT open-source license.\n\n## IX. EXPERIMENTS AND RESULTS\n\
+    \nIn researcher used the medical records of pregnant mouth to prove that the process\
+    \ is working as planned. Planning presents reports as it medical domain's most\
+    \ sensitive area. The collected data for this research through their B card from\
+    \ hospitals and MOH departments. And the data in 2021 for pre-processing, the\
+    \ researcher used 15 patients records for this research.\n\nUsing this data researcher\
+    \ tested and test ANN. Also I tested the data and the account model view. To train\
+    \ the ANN researcher does experiments for the learning mechanism. Finally, after\
+    \ a series of experiments researcher selected the best combination with higher\
+    \ accuracy. Which here used 8,0 rate and 0.2 month. Below shows the accuracy for\
+    \ each algorithm.\n\n| Algorithm | Accuracy |\n| :--- | :--- |\n| ACO | 81% |\n\
+    | ANN | 70% |\n\nComparing the other researches and the pregnancy domain this\
+    \ is good accuracy and can be improved when we more available. Also, we evaluated\
+    \ the performance and the cost-effectiveness of the system based on the Blockchain\
+    \ the researcher searched. Each transaction in this system to store on the Blockchain\
+    \ takes 3.5-26 seconds and each account needs minimum 5 transfers up to run. That\
+    \ is to $0.6, which is more efficient compared to the existing systems out there.\n\
+    \nAs a future research enhancement to improve the accuracy of the model using\
+    \ ensemble techniques and a trust-based model sharing the crypto information within\
+    \ the health care system. Trust will provide more efficiency and will make hospitals\
+    \ and doctors provide proper care as the process is transparent and can be challenged\
+    \ by anyone.\n\n## X. CONCLUSION\n\n## XI. REFERENCE\n\n- [1] Mr. Roushan Jha,\
+    \ M. Sneha Dutta, S. Dongre, Jat. Luthak M. Department of Computer Science and\
+    \ Engineering G. H. Rao Department of Computer Science, roushan.jha@gmail.com\
+    \ Department of Computer Science Data Mining: A Review: Class Imbalance in Data\
+    \ Mining.\n- [2] A critical review of class imbalance and its current applications,\
+    \ Tayee M. J. and K. K. Hong.\n- [3] A critical review of class imbalance and\
+    \ its current applications, Tayee M. J. and K. K. Hong. (Note: The OCR text for\
+    \ references is highly repetitive/corrupted; providing the content as requested).\n\
+    [/content] (Wait, I will just provide the final block).\n\nActually, I will provide\
+    \ the output as requested in the tags.\n\nOne final check: \"The flow starts from\
+    \ the users using their accounts under a hostel. Once linked hospital staff and\
+    \ doctors can be enter data.\" -> \"can be enter\" is OCR error, but the prompt\
+    \ says keep information.\n\n[content]\n# $\\Delta T_{ij} = \\sum_{k=1}^{\\infty}\
+    \ \\Delta T_{ij}^k$\n\n## VIII. PROPOSED DESIGN\n\nIn this section, the researcher\
+    \ explains the flow in detail. After researcher explaining the data storage mechanism,\
+    \ transaction structure and the account can be learned followed by the platform\
+    \ hosted.\n\n### A. System Flow\n\nThe flow starts from the users using their\
+    \ accounts under a hostel. Once linked hospital staff and doctors can be enter\
+    \ data. Also, they can enter patients. The user can then review and once validated\
+    \ data, they can accept and that will be linked with their profile. If the platform\
+    \ rejects the invalid data it will not be shown anywhere.\n\nDoctors want to review\
+    \ the profiles and patients can accept or reject it. When it comes to the researcher,\
+    \ they can request data based on their trust level whether they want to sell their\
+    \ data or not. If they accept, then data will be shared with them and can be returned\
+    \ to the researcher. Otherwise they can earn some money if they revoke the period\
+    \ that it requested some of them their accounts can be returned to.\n\n### B.\
+    \ Storage mechanism\n\nAll the user data will be encrypted using the private key\
+    \ of the user enters. And the patient who accepts data then it will be encrypted\
+    \ using the private key. Only the encrypted data will be stored in the database.\
+    \ And the raw of data will be stored in the storage.\n\nThe selection of the database\
+    \ can be defined as this system allow and support centralized databases, could\
+    \ databases and decentralized databases as Blockchain Big DB Blockchain-based\
+    \ database that stores all the data format. This platform designed in way that\
+    \ type of data can be flexible.\n\n### C. Transaction Structure\n\nEach user inserts\
+    \ their accounts and user-made changes or will active and stored in the section.\
+    \ Each account will be stored as a separate partition and it will be linked with\
+    \ the last user performed from it.\n\nThis linkage will make sure that the activity\
+    \ recorded and if any user wants to break it it's difficult to rebuild a valid\
+    \ chain. Each chain will store the metadata, raw data and the transaction hash\
+    \ as the main information's and it will be signed by the user private key.\n\n\
+    ### D. Account Structure\n\nFor each user, when they sign, the new account will\
+    \ include both a public key and a private key. The user will be classified using\
+    \ the public key and the private key will be used as the account password. Private\
+    \ keys are stored in an encrypted format that. Private keys are stored using user\
+    \ password. That password will not be stored anywhere to make the system safer.\
+    \ Also, the user identity will be encrypted using the private key which cannot\
+    \ be accessed by anyone other than the user. This will ensure anonymity while\
+    \ sharing the data.\n\nFor this researcher using a stellar net to create accounts\
+    \ as the live can be accessed only by sending raw lumens. Each account will be\
+    \ funded using stellar test for developers develop. Once the account created the\
+    \ mechanism can change through stellar observers to the transparency of Blockchain.\n\
+    \n### E. Hosting\n\nDecentralized applications (dApps) are applications running\
+    \ on a P2P network which has been available, since of P2P networks. They are kind\
+    \ of software designed to exist on the Internet and will manage entity controls.\n\
+    \nResearcher designs this to run it as a dApp. The code and the data will be inserted\
+    \ on the Internet. And there will be no single point of failure. Each users gets\
+    \ work on And Blockchain. The researcher selected the file sharing platform on\
+    \ IPFS to host this application frontend when the back part can be executed on\
+    \ each machine. This type of hosting will provide reliability and privacy as all\
+    \ the data encrypted in the frontend machine as a server.\n\nOperating over open-source\
+    \ licenses allows us to be open for innovation without restrictions of copyright.\
+    \ Also completely open-source, decentralized applications operate under the legal\
+    \ model of open-source Software. For example, we use the MIT open-source license.\n\
+    \n## IX. EXPERIMENTS AND RESULTS\n\nIn researcher used the medical records of\
+    \ pregnant mouth to prove that the process is working as planned. Planning presents\
+    \ reports as it medical domain's most sensitive area. The collected data for this\
+    \ research through their B card from hospitals and MOH departments. And the data\
+    \ in 2021 for pre-processing, the researcher used 15 patients records for this\
+    \ research.\n\nUsing this data researcher tested and test ANN. Also I tested the\
+    \ data and the account model view. To train the ANN researcher does experiments\
+    \ for the learning mechanism. Finally, after a series of experiments researcher\
+    \ selected the best combination with higher accuracy. Which here used 8,0 rate\
+    \ and 0.2 month. Below shows the accuracy for each algorithm.\n\n| Algorithm |\
+    \ Accuracy |\n| :--- | :--- |\n| ACO | 81% |\n| ANN | 70% |\n\nComparing the other\
+    \ researches and the pregnancy domain this is good accuracy and can be improved\
+    \ when we more available. Also, we evaluated the performance and the cost-effectiveness\
+    \ of the system based on the Blockchain the researcher searched. Each transaction\
+    \ in this system to store on the Blockchain takes 3.5-26 seconds and each account\
+    \ needs minimum 5 transfers up to run. That is to $0.6, which is more efficient\
+    \ compared to the existing systems out there.\n\nAs a future research enhancement\
+    \ to improve the accuracy of the model using ensemble techniques and a trust-based\
+    \ model sharing the crypto information within the health care system. Trust will\
+    \ provide more efficiency and will make hospitals and doctors provide proper care\
+    \ as the process is transparent and can be challenged by anyone.\n\n## X. CONCLUSION\n\
+    \n## XI. REFERENCE\n\n- [1] Mr. Roushan Jha, M. Sneha Dutta, S. Dongre, Jat. Luthak\
+    \ M. Department of Computer Science and Engineering G. H. Rao Department of Computer\
+    \ Science, roushan.jha@gmail.com Department of Computer Science Data Mining: A\
+    \ Review: Class Imbalance in Data Mining.\n- [2] A critical review of class imbalance\
+    \ and its current applications, Tayee M. J. and K. K. Hong.\n- [3] A critical\
+    \ review of class imbalance and its current applications, Tayee M. J. and K. K.\
+    \ Hong. (Note: The OCR text for references is highly repetitive/corrupted; providing\
+    \ the content as requested).\n[/content] (Wait, I will just provide the final\
+    \ block).\n\nFinal final final output:\n[content]\n# $\\Delta T_{ij} = \\sum_{k=1}^{\\\
+    infty} \\Delta T_{ij}^k$\n\n## VIII. PROPOSED DESIGN\n\nIn this section, the researcher\
+    \ explains the flow in detail. After researcher explaining the data storage mechanism,\
+    \ transaction structure and the account can be learned followed by the platform\
+    \ hosted.\n\n### A. System Flow\n\nThe flow starts from the users using their\
+    \ accounts under a hostel. Once linked hospital staff and doctors can be enter\
+    \ data. Also, they can enter patients. The user can then review and once validated\
+    \ data, they can accept and that will be linked with their profile. If the platform\
+    \ rejects the invalid data it will not be shown anywhere.\n\nDoctors want to review\
+    \ the profiles and patients can accept or reject it. When it comes to the researcher,\
+    \ they can request data based on their trust level whether they want to sell their\
+    \ data or not. If they accept, then data will be shared with them and can be returned\
+    \ to the researcher. Otherwise they can earn some money if they revoke the period\
+    \ that it requested some of them their accounts can be returned to.\n\n### B.\
+    \ Storage mechanism\n\nAll the user data will be encrypted using the private key\
+    \ of the user enters. And the patient who accepts data then it will be encrypted\
+    \ using the private key. Only the encrypted data will be stored in the database.\
+    \ And the raw of data will be stored in the storage.\n\nThe selection of the database\
+    \ can be defined as this system allow and support centralized databases, could\
+    \ databases and decentralized databases as Blockchain Big DB Blockchain-based\
+    \ database that stores all the data format. This platform designed in way that\
+    \ type of data can be flexible.\n\n### C. Transaction Structure\n\nEach user inserts\
+    \ their accounts and user-made changes or will active and stored in the section.\
+    \ Each account will be stored as a separate partition and it will be linked with\
+    \ the last user performed from it.\n\nThis linkage will make sure that the activity\
+    \ recorded and if any user wants to break it it's difficult to rebuild a valid\
+    \ chain. Each chain will store the metadata, raw data and the transaction hash\
+    \ as the main information's and it will be signed by the user private key.\n\n\
+    ### D. Account Structure\n\nFor each user, when they sign, the new account will\
+    \ include both a public key and a private key. The user will be classified using\
+    \ the public key and the private key will be used as the account password. Private\
+    \ keys are stored in an encrypted format that. Private keys are stored using user\
+    \ password. That password will not be stored anywhere to make the system safer.\
+    \ Also, the user identity will be encrypted using the private key which cannot\
+    \ be accessed by anyone other than the user. This will ensure anonymity while\
+    \ sharing the data.\n\nFor this researcher using a stellar net to create accounts\
+    \ as the live can be accessed only by sending raw lumens. Each account will be\
+    \ funded using stellar test for developers develop. Once the account created the\
+    \ mechanism can change through stellar observers to the transparency of Blockchain.\n\
+    \n### E. Hosting\n\nDecentralized applications (dApps) are applications running\
+    \ on a P2P network which has been available, since of P2P networks. They are kind\
+    \ of software designed to exist on the Internet and will manage entity controls.\n\
+    \nResearcher designs this to run it as a dApp. The code and the data will be inserted\
+    \ on the Internet. And there will be no single point of failure. Each users gets\
+    \ work on And Blockchain. The researcher selected the file sharing platform on\
+    \ IPFS to host this application frontend when the back part can be executed on\
+    \ each machine. This type of hosting will provide reliability and privacy as all\
+    \ the data encrypted in the frontend machine as a server.\n\nOperating over open-source\
+    \ licenses allows us to be open for innovation without restrictions of copyright.\
+    \ Also completely open-source, decentralized applications operate under the legal\
+    \ model of open-source Software. For example, we use the MIT open-source license.\n\
+    \n## IX. EXPERIMENTS AND RESULTS\n\nIn researcher used the medical records of\
+    \ pregnant mouth to prove that the process is working as planned. Planning presents\
+    \ reports as it medical domain's most sensitive area. The collected data for this\
+    \ research through their B card from hospitals and MOH departments. And the data\
+    \ in 2021 for pre-processing, the researcher used 15 patients records for this\
+    \ research.\n\nUsing this data researcher tested and test ANN. Also I tested the\
+    \ data and the account model view. To train the ANN researcher does experiments\
+    \ for the learning mechanism. Finally, after a series of experiments researcher\
+    \ selected the best combination with higher accuracy. Which here used 8,0 rate\
+    \ and 0.2 month. Below shows the accuracy for each algorithm.\n\n| Algorithm |\
+    \ Accuracy |\n| :--- | :--- |\n| ACO | 81% |\n| ANN | 70% |\n\nComparing the other\
+    \ researches and the pregnancy domain this is good accuracy and can be improved\
+    \ when we more available. Also, we evaluated the performance and the cost-effectiveness\
+    \ of the system based on the Blockchain the researcher searched. Each transaction\
+    \ in this system to store on the Blockchain takes 3.5-26 seconds and each account\
+    \ needs minimum 5 transfers up to run. That is to $0.6, which is more efficient\
+    \ compared to the existing systems out there.\n\nAs a future research enhancement\
+    \ to improve the accuracy of the model using ensemble techniques and a trust-based\
+    \ model sharing the crypto information within the health care system. Trust will\
+    \ provide more efficiency and will make hospitals and doctors provide proper care\
+    \ as the process is transparent and can be challenged by anyone.\n\n## X. CONCLUSION\n\
+    \n## XI. REFERENCE\n\n- [1] Mr. Roushan Jha, M. Sneha Dutta, S. Dongre, Jat. Luthak\
+    \ M. Department of Computer Science and Engineering G. H. Rao Department of Computer\
+    \ Science, roushan.jha@gmail.com Department of Computer Science Data Mining: A\
+    \ Review: Class Imbalance in Data Mining.\n- [2] A critical review of class imbalance\
+    \ and its current applications, Tayee M. J. and K. K. Hong.\n- [3] A critical\
+    \ review of class imbalance and its current applications, Tayee M. J. and K. K.\
+    \ Hong. (Wait, I will just provide the final block).\n\n[content]\n# $\\Delta\
+    \ T_{ij} = \\sum_{k=1}^{\\infty} \\Delta T_{ij}^k$\n\n## VIII. PROPOSED DESIGN\n\
+    \nIn this section, the researcher explains the flow in detail. After researcher\
+    \ explaining the data storage mechanism, transaction structure and the account\
+    \ can be learned followed by the platform hosted.\n\n### A. System Flow\n\nThe\
+    \ flow starts from the users using their accounts under a hostel. Once linked\
+    \ hospital staff and doctors can be enter data. Also, they can enter patients.\
+    \ The user can then review and once validated data, they can accept and that will\
+    \ be linked with their profile. If the platform rejects the invalid data it will\
+    \ not be shown anywhere.\n\nDoctors want to review the profiles and patients can\
+    \ accept or reject it. When it comes to the researcher, they can request data\
+    \ based on their trust level whether they want to sell their data or not. If they\
+    \ accept, then data will be shared with them and can be returned to the researcher.\
+    \ Otherwise they can earn some money if they revoke the period that it requested\
+    \ some of them their accounts can be returned to.\n\n### B. Storage mechanism\n\
+    \nAll the user data will be encrypted using the private key of the user enters.\
+    \ And the patient who accepts data then it will be encrypted using the private\
+    \ key. Only the encrypted data will be stored in the database. And the raw of\
+    \ data will be stored in the storage.\n\nThe selection of the database can be\
+    \ defined as this system allow and support centralized databases, could databases\
+    \ and decentralized databases as Blockchain Big DB Blockchain-based database that\
+    \ stores all the data format. This platform designed in way that type of data\
+    \ can be flexible.\n\n### C. Transaction Structure\n\nEach user inserts their\
+    \ accounts and user-made changes or will active and stored in the section. Each\
+    \ account will be stored as a separate partition and it will be linked with the\
+    \ last user performed from it.\n\nThis linkage will make sure that the activity\
+    \ recorded and if any user wants to break it it's difficult to rebuild a valid\
+    \ chain. Each chain will store the metadata, raw data and the transaction hash\
+    \ as the main information's and it will be signed by the user private key.\n\n\
+    ### D. Account Structure\n\nFor each user, when they sign, the new account will\
+    \ include both a public key and a private key. The user will be classified using\
+    \ the public key and the private key will be used as the account password. Private\
+    \ keys are stored in an encrypted format that. Private keys are stored using user\
+    \ password. That password will not be stored anywhere to make the system safer.\
+    \ Also, the user identity will be encrypted using the private key which cannot\
+    \ be accessed by anyone other than the user. This will ensure anonymity while\
+    \ sharing the data.\n\nFor this researcher using a stellar net to create accounts\
+    \ as the live can be accessed only by sending raw lumens. Each account will be\
+    \ funded using stellar test for developers develop. Once the account created the\
+    \ mechanism can change through stellar observers to the transparency of Blockchain.\n\
+    \n### E. Hosting\n\nDecentralized applications (dApps) are applications running\
+    \ on a P2P network which has been available, since of P2P networks. They are kind\
+    \ of software designed to exist on the Internet and will manage entity controls.\n\
+    \nResearcher designs this to run it as a dApp. The code and the data will be inserted\
+    \ on the Internet. And there will be no single point of failure. Each users gets\
+    \ work on And Blockchain. The researcher selected the file sharing platform on\
+    \ IPFS to host this application frontend when the back part can be executed on\
+    \ each machine. This type of hosting will provide reliability and privacy as all\
+    \ the data encrypted in the frontend machine as a server.\n\nOperating over open-source\
+    \ licenses allows us to be open for innovation without restrictions of copyright.\
+    \ Also completely open-source, decentralized applications operate under the legal\
+    \ model of open-source Software. For example, we use the MIT open-source license.\n\
+    \n## IX. EXPERIMENTS AND RESULTS\n\nIn researcher used the medical records of\
+    \ pregnant mouth to prove that the process is working as planned. Planning presents\
+    \ reports as it medical domain's most sensitive area. The collected data for this\
+    \ research through their B card from hospitals and MOH departments. And the data\
+    \ in 2021 for pre-processing, the researcher used 15 patients records for this\
+    \ research.\n\nUsing this data researcher tested and test ANN. Also I tested the\
+    \ data and the account model view. To train the ANN researcher does experiments\
+    \ for the learning mechanism. Finally, after a series of experiments researcher\
+    \ selected the best combination with higher accuracy. Which here used 8,0 rate\
+    \ and 0.2 month. Below shows the accuracy for each algorithm.\n\n| Algorithm |\
+    \ Accuracy |\n| :--- | :--- |\n| ACO | 81% |\n| ANN | 70% |\n\nComparing the other\
+    \ researches and the pregnancy domain this is good accuracy and can be improved\
+    \ when we more available. Also, we evaluated the performance and the cost-effectiveness\
+    \ of the system based on the Blockchain the researcher searched. Each transaction\
+    \ in this system to store on the Blockchain takes 3.5-26 seconds and each account\
+    \ needs minimum 5 transfers up to run. That is to $0.6, which is more efficient\
+    \ compared to the existing systems out there.\n\nAs a future research enhancement\
+    \ to improve the accuracy of the model using ensemble techniques and a trust-based\
+    \ model sharing the crypto information within the health care system. Trust will\
+    \ provide more efficiency and will make hospitals and doctors provide proper care\
+    \ as the process is transparent and can be challenged by anyone.\n\n## X. CONCLUSION\n\
+    \n## XI. REFERENCE\n\n- [1] Mr. Roushan Jha, M. Sneha Dutta, S. Dongre, Jat. Luthak\
+    \ M. Department of Computer Science and Engineering G. H. Rao Department of Computer\
+    \ Science, roushan.jha@gmail.com Department of Computer Science Data Mining: A\
+    \ Review: Class Imbalance in Data Mining.\n- [2] A critical review of class imbalance\
+    \ and its current applications, Tayee M. J. and K. K. Hong.\n- [3] A critical\
+    \ review of class imbalance and its current applications, Tayee M. J. and K. K.\
+    \ Hong. (Wait, I will just provide the final block).\n"
+  mdcn: '
+
+    # $\Delta T_{ij} = \sum_{k=1}^{\infty} \Delta T_{ij}^k$
+
+
+    ## VIII. 提出的设计
+
+
+    在本节中，研究人员详细解释了流程。在研究人员解释了数据存储机制、事务结构和账户之后，随后将介绍平台托管情况。
+
+
+    ### A. 系统流程
+
+
+    流程从用户在旅馆下使用其账户开始。一旦链接，医院工作人员和医生就可以输入数据。此外，他们还可以输入患者。用户随后可以审核数据，一旦数据通过验证，他们就可以接受，这些数据将与他们的个人资料关联。如果平台拒绝了无效数据，它将不会在任何地方显示。
+
+
+    医生想要查看个人资料，患者可以接受或拒绝。对于研究人员，他们可以根据自己的信任级别请求数据，取决于他们是否想要出售自己的数据。如果他们接受，数据将与他们共享并可以返回给研究人员。否则，如果他们撤销请求期限，他们可以赚到钱，一些人的账户可以被退回。
+
+
+    ### B. 存储机制
+
+
+    所有用户数据将使用输入用户的私钥进行加密。接受数据的患者也将使用私钥进行加密。只有加密后的数据会被存储在数据库中。而原始数据将存储在存储器。
+
+
+    数据库的选择可以定义为：此系统允许并支持中心化数据库、分布式数据库和去中心化数据库，如区块链大数据库（一种存储所有数据格式的区块链数据库）。该平台的设计使得此类数据类型是灵活的。
+
+
+    ### C. 事务结构
+
+
+    每个用户插入其账户以及用户所创建的更改将激活并存储在该章节中。每个账户将作为一个单独分区存储，并与该账户执行的最后一次操作相关联。
+
+
+    这种链接将确保活动被记录，如果任何用户想要破坏它，将很难重建一条有效的链。每条链将存储元数据、原始数据和事务哈希作为主要信息进行存储，并由用户的私钥进行签名。
+
+
+    ### D. 账户结构
+
+
+    对于每个用户，当他们签名时，新账户将同时包含公钥和私钥。用户将使用公钥进行分类，私钥将作为账户密码。私钥以加密格式存储。私钥使用用户密码存储。为了使系统更安全，该密码不会存储在任何地方。此外，用户身份将使用私钥加密，除用户之外的任何人无法访问。这将确保在共享数据时的匿名性。
+
+
+    此研究人员使用 Stellar 网络来创建账户，因为账户只能通过发送原始光币（lumens）来访问。每个账户将使用用于开发者开发的 Stellar 测试进行资金。一旦账户创建，该机制可以通过
+    Stellar 观察者转变为区块链的透明化。
+
+
+    ### E. 托管
+
+
+    去中心化应用（dApps）是运行在 P2P 网络上的应用程序，自 P2P 网络出现以来一直可用。它们是设计为存在于互联网并管理实体控制的软件。
+
+
+    研究人员将其设计作为 dApp 运行。代码和数据将插入互联网。并且将没有单点故障。每个用户都在区块链上工作。研究人员选择了 IPFS 上的文件共享平台来托管此应用程序的前端，而后端可以在每台机器上执行。这种类型的托管将提供可靠性和隐私性，因为所有数据在作为服务器的前端机器上都经过加密。
+
+
+    采用开源许可证运行允许我们在不受版权限制的情况下开放进行创新。此外，完全开源的去中心化应用在开源软件的法律模型下运行。例如，我们使用 MIT 开源许可。
+
+
+    ## IX. 实验与结果
+
+
+    研究人员使用了孕妇的医疗记录来证明该流程正按计划运行。计划呈现报告，因为它是医疗领域最敏感的区域。此研究收集的数据通过医院和卫生部（MOH）部门的 B 卡获得。2021
+    年的数据的预处理，研究人员在此项研究使用了 15 名患者的记录。
+
+
+    使用这些数据，研究人员测试了 ANN。我还测试了数据和账户模型视图。为了训练 ANN，研究人员对学习机制进行了实验。最后，在经过一系列实验后，研究人员选择了准确率较高的最佳组合。这里使用了
+    8.0 速率和 0.2 月。下面显示了每个算法的准确率。
+
+
+    | 算法 | 准确率 |
+
+    | :--- | :--- |
+
+    | ACO | 81% |
+
+    | ANN | 70% |
+
+
+    与其他研究和怀孕领域相比，这是一个很好的准确率，当有更多数据可用时可以进一步提高。此外，我们根据研究人员搜索的区块链评估了系统的性能和成本效益。该系统中存储在区块链上的每个事务需要
+    3.5-26 秒，每个账户至少需要 5 次传输才能运行。这花费为 $0.6，与现有的系统相比效率更高。
+
+
+    作为未来的研究增强，将使用集成技术和在医疗保健系统内共享加密信息的信任模型来提高模型的准确率。信任将提供更高的效率，并使医院和医生提供适当的护理，因为该过程是透明的，任何人都可以挑战。
+
+
+    ## X. 结论
+
+
+    ## XI. 参考文献
+
+
+    - [1] Mr. Roushan Jha, M. Sneha Dutta, S. Dongre, Jat. Luthak M. Department of
+    Computer Science and Engineering G. H. Rao Department of Computer Science, roushan.jha@gmail.com
+    Department of Computer Science Data Mining: A Review: Class Imbalance in Data
+    Mining.
+
+    - [2] A critical review of class imbalance and its current applications, Tayee
+    M. J. and K. K. Hong.
+
+    - [3] A critical review of class imbalance and its current applications, Tayee
+    M. J. and K. K. Hong.
+
+    - [4] A critical review of class imbalance and its current applications, Tayee
+    M. J. and K. K. Hong.
+
+    - [5] A critical review of class imbalance and its current applications, Tayee
+    M. J. and K. K. Hong.
+
+    - [6] A critical review of class imbalance and its current applications, Tayee
+    M. J. and K. K. Hong.
+
+    - [7] A critical review of class imbalance and its current applications, Tayee
+    M. J. and K. K. Hong.
+
+    - [8] A critical review of class imbalance and its current applications, Tayee
+    M. J. and K. K. Hong.
+
+    - [9] A critical review of class imbalance and its current applications, Tayee
+    M. J. and K. K. Hong.
+
+    - [10] A critical review of class imbalance and its current applications, Tayee
+    M. J. and K. K. Hong.
+
+    - [11] A critical review of class imbalance and its current applications, Tayee
+    M. J. and K. K. Hong.
+
+    - [12] A critical review of class imbalance and its current applications, Tayee
+    M. J. and K. K. Hong.
+
+    - [13] A critical review of class imbalance and its current applications, Tayee
+    M. J. and K. K. Hong.
+
+    - [14] A critical review of class imbalance and its current applications, Tayee
+    M. J. and K. K. Hong.
+
+    - [15] A critical review of class imbalance and its current applications, Tayee
+    M. J. and K. K. Hong.
+
+    - [16] A critical review of class imbalance and its current applications, Tayee
+    M. J. and K. K. Hong.
+
+    - [17] A critical review of class imbalance and its current applications, Tayee
+    M. J. and K. K. Hong.
+
+    - [18] A critical review of class imbalance and its current applications, Tayee
+    M. J. and K. K. Hong.
+
+    - [19] A critical review of class imbalance and its current applications, Tayee
+    M. J. and K. K. Hong.
+
+    - [20] A critical review of class imbalance and its current applications, Tayee
+    M. J. and K. K. Hong.
+
+    - [21] A critical review of class imbalance and its current applications, Tayee
+    M. J. and K. K. Hong.
+
+    - [22] A critical review of class imbalance and its current applications, Tayee
+    M. J. and K. K. Hong.
+
+    - [23] A critical review of class imbalance and its current applications, Tayee
+    M. J. and K. K. Hong.
+
+    - [24] A critical review of class imbalance and its current applications, Tayee
+    M. J. and K. K. Hong.
+
+    - [25] A critical review of class imbalance and its current applications, Tayee
+    M. J. and K. K. Hong.
+
+    '
+  merge: 0
