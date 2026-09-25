@@ -1,0 +1,447 @@
+- pgno: 0
+  md: '# 2020 IEEE 5th International Conference on Signal and Image Processing
+
+
+    # # A Brief Review on Deep Learning in Application of Communication Signal
+
+    Processing
+
+
+    Yan Liu, Yongqi Li, Yonggang Zhu, Yingtao
+
+    Niu
+
+
+    Peng Jia*
+
+    Beijing Electro-Mechanical Engineering
+
+    Beijing, China
+
+    e-mail: jiapeng1018@163.com
+
+
+    ¹National University of Defense Technology
+
+    Nanjing, China
+
+    e-mail: 948805160@qq.com
+
+
+    brief review on deep learning in application of communication signal processing.
+
+    Abstract—This paper presents a review of deep learning in application of communication
+    signal processing. As an important branch of artificial intelligence technology,
+    deep learning schemes are independent of the underlying model and can extract
+    meaningful features from the observed data. When applied to communication signal
+    processing, deep learning algorithms provide the following main functions: symbol
+    detection, feature extraction and information transformation. However, several
+    challenges confronted by application of deep learning in communication signal
+    processing are discussed as well.
+
+
+    brief review on deep learning in application of communication signal processing.
+    Section II provides the relevant terminology and concepts. Section III proposes
+    the main functions performed by deep learning algorithms in application of communication
+    signal processing. Unavoidably, several challenges are confronted by application
+    of deep learning technology, which are provided in section IV together with the
+    future research directions.
+
+
+    Keywords—symbol detection; anti-interference; end-to-end; channel state information
+
+
+    # ## I. INTRODUCTION
+
+
+    As an important branch of artificial intelligence technology, deep learning attracts
+    increasing interest and has been successfully applied to computer vision, speech
+    recognition, natural language processing, etc. There are various types of deep
+    learning algorithms with different architectures and characteristics. Deep neural
+    networks (DNN) operate with multiple hidden layers, which can model complex nonlinear
+    functions between the inputs and outputs. Convolutional neural networks (CNN)
+    utilize a kernel to connect the upper and lower layers, which is much similar
+    to biological neural networks. The CNN architectures are invariant to translation,
+    scale, etc. However, either DNN or CNN cannot model sequence data. Recurrent neural
+    networks (RNN) are a type of neural network where the output of one step is the
+    input to the current step in sequence classification.
+
+
+    Deep learning schemes have two major properties [4]. Firstly they are independent
+    of the underlying model and suitable for scenarios where the model is unknown
+    or the model parameters cannot be accurately estimated. Secondly, if the model
+    is extremely complex, deep learning algorithms are able to extract meaningful
+    features from the observed data, which is very difficult to carry out using traditional
+    model-based approaches.
+
+
+    Therefore, deep learning has been widely applied to communication signal processing
+    and achieved noticeable performance. This paper presents a
+
+
+    # ## II. TERMINOLOGY AND CONCEPTS
+
+
+    # ### A. Deep Neural Networks
+
+
+    Deep neural networks map the input vector $x$ to an output vector $y$, where $y=\sigma^{(L)}(B^{(L)}(...B^{(1)}(x))$,
+    where $L$ is the number of layers. $B^{(i)}$ are linear or affine functions, and
+    $\sigma^{(i)}$ are nonlinear functions. The linear functions are given by $B^{(i)}=W^{(i)}x+b^{(i)}$
+    for all $k$, where $W^{(i)}$ and $b^{(i)}$ represent the network weights and biases.
+    The nonlinear functions are some differentiable functions, such as the logistic
+    or sigmoid function. Fig. 1 shows some deep neural networks
+
+
+    ![](img/30c596526eeed5a6092f7c437ca4aa00_0_0.png)
+
+
+    (a) Weighted sum for each output layer
+
+
+    ![](img/30c596526eeed5a6092f7c437ca4aa00_0_1.png)
+
+
+    (b) Feedforward and recurrent connections
+
+
+    978-1-7281-6896-8/20/33.10 © 2020 IEEE
+
+
+    Authorized license used to: Central Michigan University. Download on May 14, 2021
+    at 06:50:12 UTC by IEEE Xplore. Restrictions apply.
+
+
+    51'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# A. Symbol Detection
+
+
+    Feature extraction Convolutional neural networks ordinarily serve as a convolutional
+    feature extractor [5][6][7][8] acting on the input signals. As is known to all,
+    when utilized to image feature extraction, the layer of neural networks is, the
+    more the features represented by convolution kernels are. Similarly, as in Fig.
+    2, in communication signal processing the convolution kernels of the shallow layer
+    play the role of edge gradient detectors. The convolution kernels of the deeper
+    layer can extract more complicated features serving as Gabor-like [6], as shown
+    in Fig. 3.
+
+
+    ![](img/30c596526eeed5a6092f7c437ca4aa00_1_0.png)
+
+
+    # B. Encoding and Decoding
+
+
+    The communication process basically depends on encoding and decoding. Decoding
+    means the encoding from one system to another in the form of code. Can be symbol,
+    sign or letters to represent the secret message. Decoding that the decoder interprets
+    the message received by the source to its own mentality and experience.
+
+
+    ![](img/30c596526eeed5a6092f7c437ca4aa00_1_1.png)
+
+
+    # C. Modulation and Demodulation
+
+
+    To involve data or speech information, one wave has to be imposed as input above
+    the carrier wave. This process of imposing an input signal on a carrier wave is
+    known as modulation. Modulation modifies the shape of a carrier wave to encode
+    data that is needed to be transmitted. There are three types of modulation, frequency
+    modulation, amplitude modulation and phase modulation. Demodulation is defined
+    as extracting the original data or speech information from a modulated carrier
+    wave. Demodulator is an electronic circuit that is used to recover the information
+    from the modulated carrier wave.
+
+
+    ![](img/30c596526eeed5a6092f7c437ca4aa00_1_2.png)
+
+
+    # D. Channel State Information
+
+
+    Channel state information (CSI) is information representing the state of a communication
+    link from the transmit source to the receiver. CSI is fine-grained physical and
+    channel data how the signal is perceived in the channel. In wireless communication
+    systems CSI is one of the most fundamental problems, that represent the propagation
+    characteristics of communication link.
+
+
+    # In. METHODOLOGY
+
+
+    With conventional algorithms, deep learning introduces novel problem-solving mechanism
+    to has achieved performance improvement. The main application of deep learning
+    can be categorized as symbol detection, interference and channel effects modeling.
+
+
+    Classification. These are promising aspects about deep learning serving as classifiers.
+    Deep convolutional neural networks hidden layers serve as classifiers in modulation
+    recognition [6]. In Ref. [10] a jam collects channel statistics and ACKs to build
+    a deep learning classifier that reliably predicts the modulation effective effectiveness.
+
+
+    End-to-end solutions. Deep neural networks-based approaches provide end-to-end
+    solutions to many significant challenges in the domain of communication [11],
+    such as digital backtracking [12]. In Ref [13] an end-to-end'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'wireless communication system using deep neural networks is developed, with
+    DNNs are employed to perform several key functions, including encoding, decoding
+    (as can be seen in Fig. 4), modulation, and demodulation. However, this leads
+    to the interpretability problem of deep learning. Visualizing convolutional networks
+    provides an effective solution to this problem [14].
+
+
+    data is an effective method to negate the effect of deep learning.
+
+
+    # C. Channel Effects Modeling
+
+
+    In Ref. [21] deep learning technology is used to develop CisNet, a novel channel
+    state information sensing and recovery mechanism, which learns a transformation
+    from CSI to a near-optimal compression (or inverse transformation) from codes.
+    CisNet recovers CSI with significantly improved reconstruction quality using compressive
+    sensing (CS) methods. A learning framework with a combination of CNN and RNN (LSTM)
+    [22] is designed to perform deep CSI for 5G wireless communications [23]. Generative
+    adversarial nets (GAN) are also employed to model the channel effects. A conditional
+    GAN is employed to model the channel effects in a data-driven way.
+
+
+    ![](img/30c596526eeed5a6092f7c437ca4aa00_2_0.png)
+
+
+    Figure 4. End-to-end communication system by auto-encoder and auto-decoder, where
+    n is added and GAN is employed to model the channel effects [13].
+
+
+    # B. Anti-interference
+
+
+    Deep learning-based anti-interference methods deepend rely on accurate estimates
+    of interference. Research shows that well trained and RNN architectures can decode
+    sequential keys such as the convolutional codes, and have good generation stability
+    [15]. Performance of interference cancellation for the non-orthogonal signal using
+    DNN is presented in [16]. The multiple processing layers of deep networks can
+    simplify signal processing models efficiently with deterministic problems. DNN
+    can also be integrated into the conventional algorithms and achieve robustness
+    to uncertainty [24].
+
+
+    Deep reinforcement learning [17] is employed to optimize the anti-jamming strategies
+    via self-supervised learning. The algorithm does not need to model the jammer
+    patterns and has the ability to explore the environment. Convolutional networks,
+    such as U-Net [19], can be utilized to mitigate radio frequency interference throughing
+    mitigations [20].
+
+
+    Deep learning is used to learn jamming as a classifier [01]. One efficient anti-jamming
+    strategy is that takes a small number of actions in spectrum access and prevents
+    the jammer from building a reliable classifier. Either deep learning or deep reinforcement
+    learning requires large amounts of data to train the deep neural networks. Obviously
+    polluting the training
+
+
+    The deep-learning-estimator can dynamically track the status without any prior
+    knowledge about the channel and statistical characteristics [25]. Deep learning-based
+    schemes help constructing the cost and low complex channel estimator through the
+    perfect channel estimation method.
+
+
+    # IV. DISCUSSION AND CONCLUSION
+
+
+    Deep learning schemes are independent of the underlying model and able to extract
+    meaningful features from the observed data. When the facing-shot scenario, there
+    are efficient methods to solve this problem. GAN is employed to augment the training
+    dataset with synthetic samples [10]. The meta-learning-based approach can generalize
+    well with small samples [27].
+
+
+    This paper presents a review of deep learning in application of communication
+    signal processing. The relative terminology and concepts of deep learning are
+    presented. Main methods discussed. However, there are several challenges faced
+    by application of deep learning technology in communication scenario, which could
+    be considered as the future research.
+
+
+    Efficient neural network models. The needs of running high quality models on devices
+    are increasing. Small and efficient neural networks [28][29] are necessary in
+    the communication scenario of high concurrency or low energy. Deep learning researchers
+    are working to shrink deep learning models without losing the models'' capabilities
+    [31]. There are different approaches to build small and efficient neural networks,
+    model pruning and quantization, model compression and decomposition, knowledge
+    transfer and distillation [32]. An emerging generation of specialized chips is
+    capable of packing more'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'computational power into tighter spaces, so that AI can be trained and run
+    on far less energy.
+
+
+    Safe neural networks have been found vulnerable to well-designed input samples
+    which are called adversarial examples [33]. The vulnerability to adversarial examples
+    is one of the major risks for applying deep learning in safety-critical communication
+    environment. Under the threat model, adversarial attacks can be categorized into
+    white or black box. Representative defense methods include adversarial training,
+    randomization-based methoding, however, it is difficult to balance efficiency
+    and complexity of the defenses. Therefore, attacks and deep learning deserve deeper
+    investigation in future.
+
+
+    Interpretability is learning for its black box. Various approaches have been made
+    to improve interpretability of deep learning. Deep neural networks are investigated
+    via the information bottleneck [35]. Furthermore, in many applications end-to-end
+    solutions may not be the best. The optimized solution should be composed of data
+    processing processes instead, data processing, feature extraction, classification.
+
+
+    # ACKNOWLEDGMENT
+
+
+    This work has been funded by the Research fund UK-17-03-62.
+
+
+    # REFERENCES
+
+
+    +   [1] Y. Lecun, et al. Nature, 521, 436-444, 2015.
+
+
+    +   [2] Lecun, Y., Bengio, Y., & Hille Weiss, P., Gradient-based learning applied
+    to document recognition. Journal of Machine Learning Research, 8(1), 2276-2280,
+    2007.
+
+
+    +   [3] An attack on recurrent networks to prevent hello jamming attacks. IEEE
+    Transactions on Neural Networks, 30(5):2909-2915, 2019.
+
+
+    +   [4] N. Shisherer, R. Fernandez, Youneda C., et al. VibeNet: A Deep Learning
+    Based Variant Selection for Signal Identification. In IEEE International Conference
+    on Wireless Networks and Communications (SPAWC), Paris, France, 2019.
+
+
+    +   [5] C. Zhang, C. Yu, and H. Han. Adversarial Learning for Specification Verification.
+    IEEE Journal of Signal Processing, 11, 6184-6194, 2020.
+
+
+    +   [6] T. Ito, and Y. Ogosawa. Radio interference mitigation using deep reinforcement
+    learning. arXiv:1806.041056, 2018.
+
+
+    +   [7] M. Schmidt, D. Block, and U. Miller. Deep Learning with convolutional
+    neural networks. 2017. arXiv:1707.00737v1 [cs].
+
+
+    +   [8] S. Shininchai, S. Tan. Deep Learning for Wireless Networks and Segmentation
+    and Precision. arXiv:2011.11786, 2020.
+
+
+    +   [9] C. Li, Q. Xu, and H. Han. Overlapping communication signal recognition
+    with deep learning. The Journal of the American Society of Africa, 12, 4: 2732-2739,
+    2018.
+
+
+    +   [10] T. Perp, E. Sagduyu, Y. Shi. Deep Learning for Launching and Mitigating
+    Wireless Jamming Attacks. 2018. arXiv:1807.02567v2 [cs.IT].
+
+
+    +   [11] Ben Wilbur, Tim O’Shea, Tomaghny R, et al. “DeepSig: Deep Learning for
+    Wireless Communications,” 2018.
+
+
+    https://docs.arxiv.org/abs/deepsig-deep-learning-wireless-communications/
+
+
+    +   [12] C. Hager, H. D. Foster. Nonlinear interference mitigation using deep
+    neural networks. 2017. arXiv:1710.02341v1 [cs.IT].
+
+
+    +   [13] H. Ye, L. Liang, G. Li, et al. Deep Learning End-to-End Wireless Communication
+    Systems Using Generative GAN. 2019. arXiv:1902.00251 [cs.IT].
+
+
+    +   [14] M.D. Zeller, R. Fergus. Visualizing and Understanding Convolutional Neural
+    Networks. CCV 2019: 13th International Conference on Computer Vision. IEEE, 2019.
+
+
+    +   [15] H. Kim, Y. Jiang, J. Ranu, et al. Cooperative algorithms for deep learning.
+    2018 IEEE International Conference on Communications.
+
+
+    +   [16] T. Yu, X. Hu, X. Daverver. Deep learning for interference classification
+    of optical signal based communication. 2018 IEEE Conference on Electromagnetics
+    Research Symposium, Tokyo, Japan, 2018.
+
+
+    +   [17] Xin Liu, Yuan Jiang. Anti-jamming communications using spoof learning:
+    a deep reinforcement network approach. SoftNetworks, vol. 122, 99-107, 2020.
+
+
+    +   [18] O. Ronneberger, P. Fischer, T. Bux: End-to-end deep learning approach
+    for semantic image segmentation. Human Computer and Computer-Assisted Interaction,
+    Springer, Berlin, 224-241, 2015.
+
+
+    +   [19] J. Xu, C. Cao, A. Luuchi, et al. Radio frequency interference mitigation
+    using deep neural networks. Acoustics and Astronomy, 35-, 2019.
+
+
+    +   [20] C. Wen, W. Shi, S. Jin. Deep Learning for Massive MIMO Channel Estimation.
+    IEEE Communications Letters, 7(5):748-751, 2022.
+
+
+    +   [21] S. Hochreiter, J. Schmidmiduber. Long Short-Term Memory. Neural Networks,
+    9:175-1780, 1997.
+
+
+    +   [22] C. Ji, J. Yang, and H. Han. State Information Prediction for 5G Communications:
+    a deep learning approach. IEEE Transactions on Neural Networks and Learning, 2020.
+
+
+    +   [23] J. Goodfellow, J. Pou-Yabian, M. Mirza, et al. Generative Adversarial
+    Nets. Advances in Neural Information Processing Systems, 26, 2014.
+
+
+    +   [24] O. Bao, J. Wang, Y. Shi. Deep Learning based Channel Estimation Using
+    Time Selective Channel Frames. IEEE Transactions on Communications and Neural
+    Networks, 2019.
+
+
+    +   [25] M. Almirmirini, M. Hosseikhani, S.A. Salammohini. Deep learning for channel
+    estimation in OSFS system. IEEE Communications Letters, 24:502-505, 2020.
+
+
+    +   [26] Chelsea Finn. Deep learning for learning. 2017. https://blog.arxiv.org/blog/1707.07018/deep-learning/
+
+
+    +   [27] A.G. Howard, W. Zhu, and H. Lee. Mobile Convolutional Deep Neural Networks
+    for Mobile Applications. 2019.
+
+
+    +   [28] G. Hinton, Y. Vinyals, and D. Dean. Distilling Knowledge in a Neural
+    Network. Neural Networks, 2015.
+
+
+    +   [29] J. Good, et al. Adversarial examples and Defenses for Deep Learning.
+    arXiv:1712.00730v3 [cs.LG].
+
+
+    +   [30] K. Ren, T. Zheng, Z. Qin, et al. Adversarial Attacks and Defenses in
+    Deep Learning, 66(3):346-360, 2020.
+
+
+    +   [31] N. Tabish, N. Zalsky. Deep Learning and the Information Bottleneck Principle.
+    2018. arXiv:1802.06246
+
+
+    54'
+  merge: -1
+  img_proc: true
