@@ -1,0 +1,1033 @@
+- pgno: 0
+  md: '# # Objects Counting in Views Deep Learning and Image Processing
+
+
+    Merouane Labene
+
+    Department of Computer Science
+
+    Mohamed Ben Yahia University
+
+    Jijel, Algeria
+
+    labmene@gmail.com
+
+
+    Chaouki Bouferna
+
+    Department of Computer Science
+
+    Algiers1 University
+
+    Algiers, Algeria
+
+    bouferna@gmail.com
+
+
+    Mokhtar Taffar
+
+    Department of Computer Science
+
+    Mohamed Sebaih Yahia University
+
+    Jijel, Algeria
+
+    bentaffar@yahoo.com
+
+
+    **Abstract—** Counting objects in views is an important field of research that
+    provides appropriate information about objects and their groups in video streams.
+    An adequate technique to achieve this is using digital video processing methods
+    with a detection method called CenterNet for deep learning. This paper presents
+    an adequate technique based on a detection method and optical flow generated between
+    video frames.
+
+
+    Figure 1 shows the architecture of the proposed technique that consists of a combination
+    of a set of concepts that are: Object detection, object counting, optical flow
+    and slicing. Section II describes background information, section III related
+    works, section IV proposed method, and section D describes technique implementation
+    and analysis.
+
+
+    **Keywords—** counting CenterNet, optical flow, video/image processing, deep learning.
+
+
+    # ### I. INTRODUCTION
+
+
+    # ### II. BACKGROUND INFORMATION
+
+
+    Image-processing is the field of handling and analyzing images. There are several
+    hidden information in an image that we unsuccessfully process. The goal of image
+    processing is to use the different properties of an image/frame such as color,
+    correlations between pixels, objects number, and their placements.
+
+
+    OpenCV is a++ library with modules that cover many areas of computer vision (image
+    and video processing). Besides C+(and C) there is great use for Python as a simple
+    scripting language through Python on top of the C++ code [5]. This gives us two
+    advantages: fast performance and ease of use (the actual C++ code working in background,
+    and it is very easy to code in Python). This is OpenCV-Python works, it is a Python
+    wrapper around original C++ implementation.
+
+
+    Deep learning learns multiple levels of representation and abstraction, to help
+    us understand the data. Convolutional Neural Networks (also called CNNs) is one
+    of deep learning architectures that excels in feature recognition which is widely
+    used in pattern recognition tasks.
+
+
+    Optical flow (optical flow code) is the image motion of objects in the scene or
+    camera movements between two consecutive frames. It is a 2D vector field of within-frame
+    translation. It is a classic and well-studied field used in many successful applications
+    for video compression, motion estimation, object tracking and image segmentation
+    [5]
+
+
+    The CenterNet detector [1], used in this paper for object detection by keypoint
+    estimation with help of Hourglass [2] as its backbone, the original task of this
+    last is help post estimation [3]. The Hourglass CenterNet [2] used in this paper
+    is trained on MSCO datasets [4]
+
+
+    Optical flow follows some equations:
+
+
+    +   - The intensities of the object do not change between consecutive frames.
+
+    - Neighboring pixels have similar motion.
+
+
+    Consider a pixel $(x,y)$ in first frame (Check a new dimension, time is added
+    to). It moves by $(dx,dy)$ in frame after time $dt$. Since the pixels are the
+    same and do not change, we can use
+
+
+    $I(x,y,t) = I(x+dx, y+dy, t+dt)$
+
+
+    OpenCV contains several optical flow implementations, we use calc/OpticalFlowFarback
+    method based on [7]. That is one of the best methods for obtaining dense flow
+    fields [5].
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_0_0.png)
+
+
+    Fig.1. The architecture of the technique.
+
+
+    # ### III. Background Processing and CenterNet
+
+
+    The essence of image processing is to use the properties of an image such as color,
+    co-relations between different pixels, object placements, and other details to'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'extract meaningful information such as edges, objects, and contours, which
+    are formally called image features. These features can be used in different applications
+    such as machine vision, security, social media events, and self-driving cars[8].
+
+
+    CenterNet [1] represents objects by one point as their bounding box. In this method,
+    particulars such as size, angle, 3D extension, and orientation are regressed from
+    image features at the center point. Objects are detected with learned keypoint
+    estimation. Authors simply feed the image to a FCNN (Fully Convolutional Neural
+    Network) that generates a heat map. Peaks in this heat map correspond to center
+    objects. Image features predict the object bounding height and width. The model
+    is trained using dense supervised supervision.
+
+
+    # III. RELATED WORKS
+
+
+    The use of image/video processing and object detection methods for object detection
+    and counting has involved a huge attention these years. Object detection and counting
+    have been achieved using these methods [16]:
+
+
+    +   - Matching,
+
+    - Thresholding and generation,
+
+    - Point and edge detections,
+
+    - Frames and detection flow handling,
+
+    - And recent, density methods [17].
+
+
+    It can be said that of the important works in object detection and counting, which
+    has resulted in the auto-video detection system is introduced in [18]. In some
+    works as [19], backward and forward detecting method used to extract moving vehicles
+    in a car camera-based system [20–22] can evaluate objects by the density of elementary
+    objects and then aggregate over density.
+
+
+    There are plenty of डॉक्ट worth improvement in the crowd counting. Instead of
+    counting objects in images/scenes in the previous works
+
+
+    # C. Deep Learning, ConvNets and Keras
+
+
+    The benefits of recent breakthroughs in artificial intelligence have travelled
+    towards the everyday, improving life in numerous domains. Personalized digital
+    assistants, e-commerce recommendations, financial fraud detection, web search
+    and social network discovery as in genomics have even benefited, if not improved,
+    by machine learning. Deep learning (DL) is a popular subset of Machine Learning
+    utilizing Artificial Neural Networks (ANNs) inspired lightly by the structure
+    of neurons in human brain. Formally, the deep refers to the number of layers in
+    the neural network.
+
+
+    CNNs (or ConvNet) are a kind of neural architectures, different types of layers
+    (i.e., principal components) of CNNs are used for visual object classification
+    tasks: ResNet (2018), ResNet (2017), Alex (2013), VGG (2014) and others. The layers
+    are multiple.
+
+
+    Keras (t. keras) is an important part of the core framework for machine learning
+    and deep learning. It performs modular-building models by stacking layers and
+    connecting computational graphs. Keras is useful for fast prototyping (i.e., ignoring
+    the details of implementation and optimization processes) that supports convolution
+    and recurrent layers and combination of both, it runs seamlessly on CPUs and GPUs
+    with any architecture can be designed using this library [14]. In this paper we
+    use a Python implementation of stacked hourglass framework by Keras [15].
+
+
+    # IV. METHODOLOGY
+
+
+    The methodology proposed in this paper uses a combination of a proposed algorithm
+    for ''object filtering and counting'' with the CenterNet [1] detector proposed
+    in framework and an hourglass-based localization to provide quality and accuracy
+    for counting objects in videos.
+
+
+    Algorithm 1 describes the main steps for object detection, line 1 reads the first
+    frame of video frames, line 2 translates the frame from RGB mode (color image)
+    to gray mode, line 3 resizes the frame to match value m (i.e., detection step),
+    this allows us to compute optical flow, counting to different levels (i.e., steps),
+    line 11 performs object detection within actual frame, actual frame position is
+    defined:
+
+
+    ```
+
+    Position(actualframe) = (j × m); j ∈ [1, m]
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'CenterNet [1] Detect objects centers in the actual frame, computes their bounding
+    boxes (objects containers), and identifies them with Hourglass [2] ConvNet, line
+    12 also carries the filtering and counting module (alg 0.2) and displays its returned
+    results.
+
+
+    # Algorithm 1: Object Detection
+
+
+    ```
+
+    Input: Video, frames
+
+    1. frame=first(video_frames)
+
+    2. old_gray=gray(frame)
+
+    3. old_detections=; total=0
+
+    4. while true:
+
+    5.   for step in 1 to do:
+
+    6.     new_frame=next frame
+
+    7.   end
+
+    8.   actual_gray=gray(frame)
+
+    9.   flow=compute(old_gray, actual_gray)
+
+    10. old_detections=actual_gray
+
+    11. detections=CenterNet(frame,predictions,new_frame)
+
+    12. displayOf(frame,old_detections, detections, new_frame, total)
+
+    13. old_detections=detections
+
+    14. end
+
+    ```
+
+
+    Algorithm 2 describes OFC (Object Filtering and Counting), lines 1-12 get video
+    width and height, a random point from the frame that is not detected by any objects,
+    line 13 opens a loop over detections, lines 14-21 calculate the total list of
+    objects, including extracted from using frames that are saved by the system for
+    control, if by a supervisor, or by each detected object, although. The total list
+    is constructed from the first frame to the last one, line 22 calculates the RMSE
+    (Root Mean Squared Error) between optical flows of each object center and the
+    bounding box for deciding objects (static, dynamic), or lines 23-35 decide the
+    objects to RMSE values and fill actual, dynamic lists that represent the total
+    list of the object.
+
+
+    # Algorithm 2: OFC (Object Filtering and Counting)
+
+
+    ```
+
+    Input: Flow, detections, frame, total
+
+    1. w: frame_width and height
+
+    2. old_Flow
+
+    3. while not outside:
+
+    4.   outside=True
+
+    5.   p(x,y)=random_point [∈[0,1], y∈[0,1]}
+
+    6.   for each detection in:
+
+    7.     if p to outside_bounding_box then
+
+    8.       outside=False
+
+    9. end
+
+    10. count=0
+
+    11. end
+
+    12. end while
+
+    13. for each object in:
+
+    14.   if object to old_detections then
+
+    15.     save_img(object) and its area in pixels
+
+    16. if object_class then
+
+    17. total(object_class)+1
+
+    ```
+
+
+    # V. TECHNIQUE ILLUSTRATION AND ANALYSIS
+
+
+    For illustrating the value of our technique we execute in several videos (recording
+    and static camera) using a TensorFlow [13] framework on an Intel(R)C Xeon (for
+    real-time object detection and counting we should use the TensorFlow [13] GPU
+    framework), to provide the best execution environment for models on Networks.
+
+
+    In all frames, static objects are represented by rectangle nodes and dynamic ones
+    by detected rectangles, the background point is represented by red point.
+
+
+    +   * Results for static object
+
+
+    Figure 2(a) shows in the first 04 frames of them that static 02 objects and 02
+    dynamic ones, note that detections are subject of step frame m: 01st detection
+    be in (m + 7) frame at position m the initializer frame by index 0, 02nd in (m
+    + 13)th frame and so on, in this video flow moves slowly and camera moves very
+    slowly (nearly static) in which we see the value of m (the 10) the utility of
+    is to avoid redundant connections in detection process is on CPU time and memory
+    occupation, the making of m is constrained as the same object center in the actual
+    detection rests within its previous frames increasing its count to last one. In
+    the 02nd (21st frame) we have 03 objects that are actual dynamic, until 06th (21th
+    frame) no more object gives a good result on object counting and their.
+
+
+    In Figure 2(b) we keep the value for m (10) the frames, the 03 detections objects
+    in the first (13th frame), static and one dynamic, for deciding objects we use
+    equal optical flow and (m + n)th frame, until 06th (61th frame) the technique
+    detects 04 elephants, in this video where background moves slowly (nearly static
+    camera) and foreground-objects have low speed the technique gives well on object
+    counting and their status.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Frame#10
+
+
+    Actual Status: cat#1
+
+    Actual Dynamics: cat#2
+
+    Total: cat#3
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_3_0.png)
+
+
+    # Frame#20
+
+
+    Actual Status: cat#1
+
+    Actual Dynamics: cat#2
+
+    Total: cat#3
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_3_1.png)
+
+
+    # Frame#30
+
+
+    Actual Status: cat#1
+
+    Actual Dynamics: cat#2
+
+    Total: cat#3
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_3_2.png)
+
+
+    # Frame#40
+
+
+    Actual Status: cat#1
+
+    Actual Dynamics: cat#2
+
+    Total: cat#3
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_3_3.png)
+
+
+    # Frame#50
+
+
+    Actual Status: cat#1
+
+    Actual Dynamics: cat#2
+
+    Total: cat#3
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_3_4.png)
+
+
+    # Frame#60
+
+
+    Actual Status: cat#1
+
+    Actual Dynamics: cat#2
+
+    Total: cat#3
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_3_5.png)
+
+
+    (a)
+
+
+    # elephant#0.97
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_3_6.png)
+
+
+    # elephant#0.97
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_3_7.png)
+
+
+    # elephant#0.68
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_3_8.png)
+
+
+    # Frame#10
+
+
+    Actual Status: elephant#1
+
+    Actual Dynamics: elephant#2
+
+    Total: elephant#3
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_3_9.png)
+
+
+    # elephant#0.94
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_3_10.png)
+
+
+    # Frame#20
+
+
+    Actual Status: elephant#1
+
+    Actual Dynamics: elephant#2
+
+    Total: elephant#3
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_3_11.png)
+
+
+    # elephant#0.95
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_3_12.png)
+
+
+    # Frame#30
+
+
+    Actual Status: elephant#1
+
+    Actual Dynamics: elephant#2
+
+    Total: elephant#3
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_3_13.png)
+
+
+    # elephant#0.96
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_3_14.png)
+
+
+    # Frame#40
+
+
+    Actual Status: elephant#1
+
+    Actual Dynamics: elephant#2
+
+    Total: elephant#3
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_3_15.png)
+
+
+    # elephant#0.93
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_3_16.png)
+
+
+    # Frame#50
+
+
+    Actual Status: elephant#1
+
+    Actual Dynamics: elephant#2
+
+    Total: elephant#3
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_3_17.png)
+
+
+    # elephant#0.92
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_3_18.png)
+
+
+    # Frame#60
+
+
+    Actual Status: elephant#1
+
+    Actual Dynamics: elephant#2
+
+    Total: elephant#3
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_3_19.png)
+
+
+    # elephant#0.91
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_3_20.png)
+
+
+    (b)
+
+
+    > Fig.2. (a) Detection and counting of 04 cats, the step detections are 10, (b)
+    Detection and counting of 04 elephants, the step between is 10 frames.
+
+
+    +   * Results for dynamic camera
+
+
+    08 persons, 07 balls and one tennis racket. The two last detections, sports balls
+    and tennis racket, constitute some erroneous detections due to the Center [1]
+    erroneous detections. We can reduce this drawback with aerosol centroid tracking
+    which we will introduce next section.
+
+
+    In Figure 3(a) where video frames have background moves quickly (dynamic camera)
+    and foreground-objects move towards background we decrease the velocity of m (05
+    frames) for the above constraint imposed m and no incrementing the total count,
+    note that we can ignore (i.e., or) the CPU frame framework is used of TensorFlow
+    [10] CPU frame. In the first detection (06th frame) we have 02 cats, as no, objects
+    under detection it sometimes the detector the small car as and because the background
+    point with small can are on the horizontal and vertical pixels in this region
+    appear as.
+
+
+    In Figure 3(b) where the count seems to increase in both background (camera) and
+    foreground (objects) we decrease the value of m to one, in the first detection
+    (02th frame) the technique detects 05 persons from one static and 04 dynamic,
+    and 13 that are all dynamic, and detection between the background and foreground
+    is 05 and 15 carries with 7 frames, not in, frame 1 at position 0 with frame m
+    +1 at position m are used for the computing input first.
+
+
+    In these three videos the technique gives results on objects counting and counting
+    states.
+
+
+    In static and dynamic camera our technique perform object detection and counting
+    with a good accuracy except in some areas where we have some erroneous detections
+    due to the Center [11] alternate detections.
+
+
+    In 3(b) we decrease the detection m (03 frames) the speed increases on both background
+    and foreground in the video the technique detects 08 persons (athletes) among
+    them (by his hidden) and 07 dynamic and one sports ball in the first detection
+    (04th frame), until the detection (19th frame) the technique detects
+
+
+    Authorized licensed limited to use: San Francisco State Univ. Joined on 20/06/2021
+    at 22:19:26 by IEEE Explorer. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Frame 5
+
+
+    Actual status: car1;
+
+    Actual dynamics: car2;
+
+    Total cars: 2
+
+
+    # Frame 10
+
+
+    Actual status: car1;
+
+    Actual dynamics: car2;
+
+    Total cars: 2
+
+
+    # Frame 15
+
+
+    Actual status: car1;
+
+    Actual dynamics: car2;
+
+    Total cars: 2
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_4_0.png)
+
+
+    # Frame 20
+
+
+    Actual status: car1;
+
+    Actual dynamics: car2;
+
+    Total cars: 2
+
+
+    # Frame 25
+
+
+    Actual status: car1;
+
+    Actual dynamics: car2;
+
+    Total cars: 2
+
+
+    # Frame 30
+
+
+    Actual status: car1;
+
+    Actual dynamics: car2;
+
+    Total cars: 2
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_4_1.png)
+
+
+    # Frame 35
+
+
+    Actual status: person1, sports ball;
+
+    Actual dynamics: person2, sports ball, tennis racket
+
+
+    # Frame 40
+
+
+    Actual status: person4, sports ball;
+
+    Actual dynamics: person5, sports ball, tennis racket
+
+
+    # Frame 45
+
+
+    Actual status: person6, sports ball;
+
+    Actual dynamics: person7, sports ball, tennis racket
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_4_2.png)
+
+
+    # Frame 50
+
+
+    Actual status: person8, sports ball;
+
+    Actual dynamics: person9, sports ball, tennis racket
+
+
+    # Frame 55
+
+
+    Actual status: person6, sports ball;
+
+    Actual dynamics: person10, sports ball, tennis racket
+
+
+    # Frame 60
+
+
+    Actual status: person11, sports ball;
+
+    Actual dynamics: person12, sports ball, tennis racket
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_4_3.png)
+
+
+    # Frame 65
+
+
+    Actual status: car3;
+
+    Actual dynamics: car4, car5;
+
+    Total cars: 3
+
+
+    # Frame 70
+
+
+    Actual status: car6;
+
+    Actual dynamics: car7, car8;
+
+    Total cars: 3
+
+
+    # Frame 75
+
+
+    Actual status: car9;
+
+    Actual dynamics: car10, car11;
+
+    Total cars: 3
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_4_4.png)
+
+
+    # Frame 80
+
+
+    Actual status: car12;
+
+    Actual dynamics: car13, car14;
+
+    Total cars: 3
+
+
+    # Frame 85
+
+
+    Actual status: car15;
+
+    Actual dynamics: car16, car17;
+
+    Total cars: 3
+
+
+    # Frame 90
+
+
+    Actual status: car18;
+
+    Actual dynamics: car19, car20;
+
+    Total cars: 3
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_4_5.png)
+
+
+    > Fig.3.(a): Detection and counting of 02 cars, the step detections between 05
+    frames, (b): Detection and counting of 08 sports balls and one tennis racket,
+    the step detections between 03 frames, (c): Detection and counting of 05 persons
+    and 15 cars, the step detection is between frames.
+
+
+    In addition to confidence that is fixed on 30% in this system (i.e., objects are
+    detected with probabilities, these probabilities explain the membership percentage
+    of the detected objects at each class corresponding to the Coco dataset categories,
+    these probabilities are predicted by the output
+
+
+    layer of the Layer[2] eliminates objects that have a probability without confidence[2]
+    we use another criterion: arethreshold and we can eliminate objects that have
+    small area too (e.g., under 2000 pixels) these objects,,'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'generally, are ambiguous (see Figure 4) and not useful for counting or for
+    an external system to supervise.
+
+
+    counting, we have showed that optical flow handling and ConvNets are well suited
+    towards this goal.
+
+
+    # REFERENCES
+
+
+    +   [1] X. Zhou, D. Wang, and P. Kräbnühil, “Objects as points,” arXiv:1904.07850,
+    2019.
+
+
+    +   [2] H. Law, and J. Deng, “CornetDet: Detecting objects as keyed points,” in:
+    ICCV, 2018.
+
+
+    +   [3] A. Newell, K. Wang, and J. Deng, “Stacked hourglass networks for human
+    pose estimation,” arXiv:1603.06937v2, 2016.,
+
+
+    +   [4] Y. Lin, M. Ma, S. Belongie, J. Haysakawa, P. Person, D. Ramanan, P. Dollár,
+    and C. L. Sunnick, “MaskCNN: meaningful object detection in context,” ICCV, 2017.
+
+
+    +   [5] F. Solstein, Programming Computer Vision with Python, Creative Community,
+    United States License, 2012.
+
+
+    +   [6] A. Mordvitzkii, K. Abid, OpenCV-Python, Tutorials, Documentation, Release
+    1, Nov. 05, 2017.
+
+
+    +   [7] F. Fournier, “Two-frame motion estimation by optical flow,” in: Proceedings
+    of the 13th International Conference on Computer Vision and Image Analysis, pages
+    365–373, 2003.
+
+
+    +   [8] S. Kennedy, “Counting Objects with Python” Pack Publishing Ltd, Ref: 1218187,
+    35 Liberty Street, Birmingham B3 8JQ, UK., 2019-9.
+
+
+    +   [9] G. Feldenhuber, “A tour of deep learning,” Pro-Semantic Data Mining, arXiv:1610.01781v1[cs.LG],
+    2016.
+
+
+    +   [10] A. Goodfellow, “Introduction to Neural Networks,” with MIT Press, 2016.
+
+
+    +   [11] A. Khan, S. U. Zahora, and A. S. Qureshi, “A survey of the recent architectures
+    of deep convolutional networks,” Artificial Intelligence Review, 59(1): 49–82,
+    2018.
+
+
+    +   [12] A. Guilli, S. Paul, Deep Learning with Keras – Implement neural networks
+    with TensorFlow and Keras, Packt Publishing, Birmingham UK.
+
+
+    +   [13] The TensorFlow. [Available]: https://www.tensorflow.org/.
+
+
+    +   [14] K. Chollet, Tutorial on CVPR 6412 – Automated Object Detection, Spring,
+    2018.
+
+
+    +   [15] V. LI. Holder, Household counting on GitHub. [Available]: https://github.com/vli2018/Household-Counting,
+    2018.
+
+
+    +   [17] M.-R. He, Y. Liu, and W. H. Hu, “Dense-based object counting in crowded
+    outdoor scenes,” IEEE Transactions on Pattern Vision, Vol. 40, No. 1, 1991.
+
+
+    +   [18] P. G. Michalopoulos, “Vehicle detection in video image sequence using
+    neural networks,” IEEE Transactions on Computer Vision, Vol. 40, No. 1, 1991.
+
+
+    +   [19] Q. Cai, A. Mitchell, J. K. Aggarwal, “Tracking human in crowded scenes,”
+    in: IEEE IEEE International Conference on Computer Vision (ICCV), 2017.
+
+
+    +   [20] M. Rodriguez, I. Latour, J. Simon, and J. Syed, “Attention-based human
+    detection and tracking in crowds,” in: ICCV, 2011.
+
+
+    +   [21] Y. Wang, and J. Siserman, “Learning to count in images,” in: CVPR, 2018.
+
+
+    +   [22] A. Certe, V. Likh, A. Noble, and A. Zamerman, “Attention mechanism for
+    machine learning,” in: ICCV, 2017.
+
+
+    +   [23] C. Zhang, H. Li, and X. Wang, “Cross-scene counting via deep convolutional
+    neural network,” in: ICCV, 2015.
+
+
+    +   [24] T. N. Mndhuk, G. Korkovich, W. Sahel, and K. Baoska, “Large-scale crowd
+    detection and counting with deep learning,” in: ICCV, 2016.
+
+
+    +   [25] S. Zhang, G. Wu, P. J. Costeria, and J. M. Moura, “Fct-rnn: Deep attention
+    neural networks for counting in city areas,” in: ICCV, 2017.
+
+
+    +   [26] M. Zhao, J. Zhang, C. Wang, and W. Wang, “Locally consistent object constraint
+    with multicnn networks,” arXiv:1904.03372v1[cs.CV], 2019.
+
+
+    Actual-Actions:
+
+    Actual Detections: person:6; car:14
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_5_0.png)
+
+
+    Frame 1
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_5_1.png)
+
+
+    Frame 2
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_5_2.png)
+
+
+    Frame 3
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_5_3.png)
+
+
+    Frame 4
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_5_4.png)
+
+
+    Frame 5
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_5_5.png)
+
+
+    Frame 6
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_5_6.png)
+
+
+    Frame 7
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_5_7.png)
+
+
+    Frame 8
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_5_8.png)
+
+
+    Frame 9
+
+
+    ![](img/52e4806968c75eb1523bd3f1a80480e9_5_9.png)
+
+
+    Frame 10
+
+
+    Fig. 4. Objects counting strategy.
+
+
+    During detection, other objects are also performed, for example an object that
+    is detected -in the same frame but more than time with the same name or different
+    name - but first detection, if we can add overrating between bounding boxes to
+    avoid nearby objects (i.e. intersection''s level), then we keep only the first
+    detection and others are automatically registered.
+
+
+    # VI. CONCLUSIONS
+
+
+    In this approach based on python counting programming has been proposed. Python
+    with very rich library Numpy, TensorFlow, OpenCV which can help to count objects,
+    claim and gain the time of engineering. Object detection and counting process
+    which includes various tasks, processing within counted time and video frames
+    is handling for prevention, surveillance and scientific purposes.
+
+
+    This work demonstrates that the mission of object counting can be achieved via
+    standard image/processing and deep learning methods. Therefore, for others'
+  merge: -1
+  img_proc: true
