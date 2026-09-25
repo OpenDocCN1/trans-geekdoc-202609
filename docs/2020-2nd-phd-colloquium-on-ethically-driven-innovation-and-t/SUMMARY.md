@@ -1,0 +1,2 @@
++   [2020 第二届伦理驱动型创新与社会技术博士研讨会 (PhD EDITS)(印度班加罗尔 2020.11.8-2020.11.8)](README.md)
++   [2020 第二届伦理驱动型创新与社会技术博士研讨会 (PhD EDITS)(印度班加罗尔 2020.11.8-2020.11.8)](2020-2nd-phd-colloquium-on-ethically-driven-innovation-and-t.md)

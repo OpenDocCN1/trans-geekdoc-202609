@@ -1,0 +1,183 @@
+- pgno: 0
+  md: '# # Deep Learning for Cooperative Spectrum Sensing
+
+
+    Shachi P
+
+    Dept. of Electronics and Comm. Eng.
+
+    BMS College of Engineering
+
+    Bengaluru, India
+
+    shachi88@gmail.com
+
+
+    K R Sudindra
+
+    Dept. of Electronics and Comm. Eng.
+
+    BMS College of Engineering
+
+    Bengaluru, India
+
+    skrudhindra@bmscce.ac.in
+
+
+    Suma M
+
+    Dept. of Electronics and Comm. Eng.
+
+    BMS College of Engineering
+
+    Bengaluru, India
+
+    suma.cc@bmscce.ac.in
+
+
+    **Abstract—the performance of spectrum sensing** has available limitations under
+    extreme conditions. With the advent of deep learning results, this paper is an
+    attempt to analyze the performance of cooperative spectrum sensing (CSS) where
+    deep learning is adopted. We focus on convolutional neural network (CNN) based
+    CSS under dynamic channel condition. The system is tested among among secondary
+    users, path with temporal shadowing and fading conditions Rayleigh and Nakagami.
+    The performance is compared with the hard fusion rules – OR, Majority, in accuracy
+    of classification.
+
+
+    among SUs, log-normal path and two different conditions – Rayleigh and Nakagami.
+
+
+    The content of the paper follows the discourse below. Under II, the system model
+    of the cognitive radio scenario is presented. In III, we discuss the data and
+    CNN architecture. Section IV is meant for performance of CNN based soft-fusion
+    CSS. In section V, we conclude results are reported.
+
+
+    **Cooperative spectrum sensing, convolutional neural network, fading.**
+
+
+    # I. INTRODUCTION
+
+
+    The expansion of telecommunication industry is driven by various factors which
+    the radio spectrum is of importance. To reach the wide range of users, spectrum
+    sensing offers a promising solution by harnessing the scarce spectrum resources.
+    However, CSS is a viable method when operating under fading and shadowing radio
+    environments. In a set of secondary users (SUs) cooperate by sharing their sensed
+    data or decision the decision making fusion center. One is referred to
+
+
+    There is significant amount of analysis existing in the literature on CSS. But
+    potential/sub-optimal machine learning/deep learning methods (ML) for CSS was
+    used [1]. This work is for the scenario where secondary user (SU) support machine
+    learning based classification. In deep deep learning based CNN was used. Dynamic
+    channel conditions like multi-fading, shadowing and fading were considered and
+    decision methods were used. In [1][2] ML/DL is used to make the decision algorithm
+    and the data fusion method. We used Application of k-means clustering algorithm,
+    for CSS in generalized fading channel has been proposed to improve in comparison
+    to OR-rule. Two-phase SVM (support vector machine) based CSS is proposed in [4]
+    to train the test set in models.
+
+
+    This work is extension of our work carried out previously [5]. The primary focus
+    of this paper is that we give a comparative performance of CNN based CSS with
+    respect to the well-known decision fusion rules for CSS. The channel characterizes
+    spatial correlation
+
+
+    A cognitive radio scenario consisting of a primary user (PU) and M SUs is the
+    test statistic for classification of the sensed primary signal x(n)at the time
+    n, it can be formed as
+
+
+    ```
+
+    y_i(n) = f_i(n)g_i x(n) + w_i(n)  \quad for i = 1\n                                     (1)
+
+    ```
+
+
+    where, h_ji is that the channel is occupied and h_ji is that channel is for available.
+    The fading gain of the channel is presented as f_i(n) and the noise w_i(n) given
+    in [5]. The spatial correlation factor is incorporated in g_i(n). In our analysis,
+    the coefficient f_i(n) is assumed to follow either Rayleigh or Nakagami-distribution.
+    Here, w_i(n) is the white noise. The received signal samples are normalized as
+    a part of data pre-processing
+
+
+    # II. SYSTEM MODEL
+
+
+    # A. Deep learning architecture
+
+
+    Since the system model under considerations spatial correlation, CNN can be used
+    for our problem to handle the. The number of layers and size of the filters were
+    chosen by random to provide better accuracy of classification.
+
+
+    The CNN architecture for classifying the sensed users is very simple (fig). The
+    first layer is the input convolutional layer with ReLU (linear rectified unit)
+    activation, which is then followed by max-pooling layers acting on the map to
+    help extract the features. ReLU is one of the non-linear activation function.
+    Max-pooling layers help in compressing the feature map after application of ReLU.
+    The output of size 128 is then fed to a fully connected layer by sigmoid activation.
+    The final output layer with softmax activation gives the classification on the
+    status of the primary user''s channel. The optimizer is Adam and the loss function
+    for optimization is cross-entropy.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: "![](img/7563d38c6f247a4481eb0a08d6b58092_1_0.png)\n\nFig. 1 The CNN Architecture\n\
+    \n# II. Simulation setup and Dataset\n\nWe consider the system with M SUs as shown\
+    \ in Fig. 2 and one mobile PU. The mobility of PU is realized by the set of 10\
+    \ positions with respect to the SU as depicted in the figure. The transmitted\
+    \ symbols are uniformly distributed bursts, BPSK modulated with narrowband frequency,\
+    \ which undergoes fading Rayleigh and Nakagamami with m=0.7 realizes noise fading.\
+    \ The transmission power varies, the variance of fading shadow o, path exponent\
+    \ gamma, loss factor beta, distance d are retained as in [5]. The performance\
+    \ is evaluated for noise -10dB SNR.\n\nThe dataset is similar to that of Fig.\
+    \ 5 but it also contains the fading effects of Rayleigh and Nakagamami. Raw/5\
+    \ samples of SUs are generated which are of dimension 5x128000, where the third\
+    \ dimension is 10 samples of IQ samples containing 512. The dataset is divided\
+    \ such that the training and test sample sets are in the ratio of 70/30.\n\n#\
+    \ IV. PERFORMANCE ANALYSIS\n\nThe performance of CNN (i.e. CNN with S-based data)\
+    \ is compared with ED-CNN (i.e. CNN with Energy Detection fusion); it is illustrated\
+    \ in Table-I. The classification accuracy for CNN is given by the ratio of true\
+    \ positive and true negative to the total number of samples. For CNN, it is evaluated\
+    \ under the ROC (Receiver Operating Characteristic) curve. More performance metrics\
+    \ of CNN-SUs are evaluated under Table-II.\n\nAs compared to -124dB noise floor\
+    \ in [5], the classification becomes detectable when noise floor of -114dB is\
+    \ detected. With deut we can compare performance of ED-CNN with CNN with OK-rule.\
+    \ Also, the performance of Rayleigh and Nakagamami scenario is better shown.\n\
+    \nTABLE I CLASSIFICATION ACCURACY\n\n| Fading | Fusion Method | ED-CNN | ED-CNN\
+    \ Majority | ED-CNN OR | CNN-S |\n| --- | --- | --- | --- | --- |\n| Rayleigh\
+    \ Nakagamami | 58.17% | 67.02% | 90.24% | 77.99% |\n| 56.33% | 63% | 84.75% |\
+    \ 77.33% |\n\n![](img/7563d38c6f247a4481eb0a08d6b58092_1_1.png)\n\nFig. 2 Spatial\
+    \ arrangement of PUs and SUs\n\nTABLE II. VALUES OF OTHER PERFORMANCEUATION METRICS\
+    \ OF CNN-CSS\n\n| Classification error | Rayleigh | Nakagamami |\n| --- | ---\
+    \ | --- |\n| Sensitivity | 0.2216 | 0.2233 |\n| 1.0 | 1.0 |\n| Precision | 0.5429\
+    \ | 0.5395 |\n| 0.6991 | 0.6975 |\n| AUC (under curve) | 0.8360 | 0.8250\n\n#\
+    \ V. CONCLUSION AND FUTURE\n\nWith a comprehensive model feature factors affecting\
+    \ wireless communication link like path-loss, large-scale and small-scale fading,\
+    \ we synthesized the dataset of received signal at a set of SUs over period of\
+    \ time. Further, the CNN, in its architecture, is applied to classify the PU signal.\
+    \ The performance is evaluated by comparison of CNN with the same difference with\
+    \ decision fusion based. The study is carried out in higher noise. With comparative\
+    \ analysis, we can identify the CNN architecture or choose a better deep learning\
+    \ algorithm as part of our future work.\n\nREFERENCES\n\n+   [1] K. Th Minh, K.\
+    \ Choi, N. Saqu, and E. Hossain, \"Machine Learning for Spectrum Sensing in Cognitive\
+    \ Radio Network,\" vol. 11, no. 1, pp. 2209–2221, \n\n+   [2] J. Y. Kim, and S.\
+    \ Lee, \"Deep Learning Spectrum Sensing Based on Convolutional Neural Networks,\"\
+    \ IEEE Trans. Veh. Technol., vol. 68, no. 3, pp. 3015–3022, \n\n+   [3] V. Kumar,\
+    \ D. Candal, M. Raj, J. Ragopadhyay, and S. Dubey, \"Deep learning-based spectrum\
+    \ sensing in cognitive networks,\" Communications, 2016, doi: 10.1109/M.COM.2016.2561130,\n\
+    \n+   [4] Elham Ghadzadeh, Aziz Mohammad, Hassan Nakagamami, \"Comparison of CNN\
+    \ and SVM algorithms for spectrum sensing in cognitive radio networks,\" Int.\
+    \ J. Commun. Syst., vol. 32, no. 2, 2018, article:386.\n\n+   [5] P. Shachi, K.\
+    \ R, S. Sudhindra, and N. M. Suma, \"Convolutional Network for Spectrum Sensing\
+    \ in Spatio-Temporal Dataset,\" 2020 Int. Conf. Artif. Intell Signal Process AIPJ,\
+    \ 2020, pp. 1–5, doi: 10.1109/AIPSP.428273.2020.907175."
+  merge: -1
+  img_proc: true
