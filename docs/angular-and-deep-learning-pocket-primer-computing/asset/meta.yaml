@@ -1,0 +1,568 @@
+name: Angular and Deep Learning Pocket Primer (Computing)
+slug: angular-and-deep-learning-pocket-primer-computing
+name_cn: Angular 与深度学习入门指南
+toc:
+- - '#'
+  - Angular 与深度学习入门指南
+- - '##'
+  - 前言
+- - '###'
+  - 目标是什么？
+- - '###'
+  - 我能从书中学到什么？
+- - '###'
+  - 本本书需要多少 Keras 知识？
+- - '###'
+  - 我需要学习书中的理论部分吗？
+- - '###'
+  - 代码示例是如何生成的？
+- - '###'
+  - 启动代码示例：请阅读
+- - '###'
+  - 运行 npm 后遇到错误：我该怎么办？
+- - '###'
+  - 本书的技术准备要求是什么？
+- - '###'
+  - 本书的非技术准备要求是什么？
+- - '###'
+  - 如何设置命令行终端？
+- - '###'
+  - 辅助文件
+- - '###'
+  - 完成此书后的“后续步骤”是什么？
+- - '#'
+  - 学习 TypeScript
+- - '#'
+  - 学习 RxJS 和 Observable（观察者）
+- - '##'
+  - Promises 与 Observables
+- - '#'
+  - Angular 概览
+- - '#'
+  - 特性简介
+- - '#'
+  - Angular 中的单向数据绑定
+- - '##'
+  - Angular 10 与严格模式
+- - '###'
+  - '`--strict` 选项'
+- - '###'
+  - Angular 10 的 Node 和 npm 工具
+- - '##'
+  - Angular 应用的高层视图
+- - '##'
+  - Angular CLI
+- - '###'
+  - 安装 Angular CLI
+- - '###'
+  - 验证安装
+- - '#'
+  - Hello World 应用程序
+- - '#'
+  - Angular 应用程序结构
+- - '##'
+  - src/app 子目录中的主要文件（概述）
+- - '##'
+  - 三个文件的内容
+- - '###'
+  - main.ts 引导文件
+- - '###'
+  - app.component.ts 文件
+- - '###'
+  - app.module.ts 文件
+- - '###'
+  - index.html 页面
+- - '###'
+  - 导出和导入包与类（可选）
+- - '###'
+  - 在 Angular 中使用组件
+- - '####'
+  - 组件中的元数据（MetaData）
+- - '####'
+  - Angular 中的有状态组件与无状态组件
+- - '###'
+  - Angular 中的语法、属性和属性
+- - '####'
+  - Angular 中的属性（Attributes）与属性（Properties）
+- - '###'
+  - Angular 生命周期方法
+- - '###'
+  - '列表 1.5: app.component.ts'
+- - '##'
+  - Angular 中的 CSS3 动画效果
+- - '###'
+  - '列表 1.6: app.component.ts'
+- - '###'
+  - '列表 1.7: app.component.ts'
+- - '#'
+  - Angular 中的基础 SVG 示例
+- - '#'
+  - Angular 中检测鼠标位置
+- - '##'
+  - Angular 与 SVG 中的鼠标跟随
+- - '##'
+  - D3 动画
+- - '###'
+  - 总结
+- - '#'
+  - 第 2 章：UI 控制、用户输入和管道
+- - '###'
+  - Angular 中的 ngFor 指令
+- - '##'
+  - 在 Angular 中显示按钮
+- - '##'
+  - 元素与属性
+- - '##'
+  - Angular 和单选按钮
+- - '##'
+  - 在 Angular 列表中添加项
+- - '##'
+  - 在 Angular 中删除列表中的项
+- - '##'
+  - Angular 指令和子组件
+- - '##'
+  - Angular 中的构造函数和状态存储
+- - '#'
+  - 构造函数中的私有参数：快捷方式
+- - '##'
+  - Angular 中的条件逻辑
+- - '###'
+  - '列表 2.10: app.component.ts'
+- - '##'
+  - 处理用户输入
+- - '##'
+  - 多组件中的点击事件
+- - '##'
+  - 使用 @Input,@Output 和 EventEmitter
+- - '###'
+  - '使用管道 (Pipes) '
+- - '####'
+  - 使用内置管道
+- - '####'
+  - 异步管道 (AsyncPipe)
+- - '####'
+  - 展示型组件 (Presentational Components)
+- - '####'
+  - 'LISTING 2.22: pipe.component.ts'
+- - '####'
+  - 'LISTING 2.23: user.component.ts'
+- - '####'
+  - 'LISTING 2.24: app.module.ts'
+- - '###'
+  - 通过 Observable 读取 JSON 数据
+- - '####'
+  - 'LISTING 2.25: app.component.ts'
+- - '###'
+  - 升级来自早期 Angular 版本的代码
+- - '###'
+  - 'LISTING 2.29: customers.json'
+- - '###'
+  - 'LISTING 2.30: employees.json'
+- - '###'
+  - 'LISTING 2.31: relatives.json'
+- - '###'
+  - 'LISTING 2.32: app.module.ts'
+- - '####'
+  - HTTP 和 Observables
+- - '##'
+  - 在 Angular 中读取 CSV 文件
+- - '###'
+  - 'LISTING 2.33: app.component.ts'
+- - '###'
+  - 总结
+- - '#'
+  - 第 3 章：表单与服务
+- - '##'
+  - Angular 表单概述
+- - '###'
+  - 响应式表单（Reactive Forms）
+- - '###'
+  - 模板驱动表单（Template-driven Forms）
+- - '###'
+  - Angular 表单示例
+- - '##'
+  - 数据绑定与 ngModel
+- - '##'
+  - 使用 FormBuilder 的 Angular 表单
+- - '##'
+  - Angular 响应式表单
+- - '###'
+  - FormGroup 与 FormArray
+- - '###'
+  - Angular 中的其他表单功能
+- - '###'
+  - 什么是 Angular 服务？
+- - '###'
+  - 内置服务
+- - '###'
+  - 服务示例
+- - '###'
+  - 列表 3.8：user.component.ts
+- - '###'
+  - 列表 3.9：user.service.ts
+- - '###'
+  - 列表 3.10：app.component.ts
+- - '##'
+  - 其他与服务相关的用例
+- - '###'
+  - 多个服务实例
+- - '###'
+  - 单例实例
+- - '###'
+  - 服务与组件间通信
+- - '##'
+  - 将服务注入到服务中
+- - '##'
+  - 使用 jQuery 和 Angular 进行 Flickr 图片搜索
+- - '##'
+  - 使用简单服务器进行 HTTP GET 请求
+- - '##'
+  - 使用简单服务器进行 POST 请求
+- - '###'
+  - 在 Angular 中从模拟数据绘制 SVG 折线图（可选）
+- - '##'
+  - 总结
+- - '#'
+  - 第 4 章
+- - '##'
+  - 深度学习简介
+- - '###'
+  - Keras 与 XOR 函数
+- - '#'
+  - 逻辑异或运算符和“真”值
+- - '##'
+  - 什么是超参数？
+- - '##'
+  - 深度学习架构
+- - '##'
+  - 深度学习可以解决的问题
+- - '##'
+  - 深度学习面临的挑战
+- - '##'
+  - 什么是感知机？
+- - '##'
+  - 感知机函数的定义
+- - '#'
+  - 人工神经网络 (ANN) 的结构
+- - '#'
+  - 模型初始化超参数
+- - '##'
+  - 初始化与权重
+- - '##'
+  - 激活超参数
+- - '##'
+  - 损失函数超参数
+- - '##'
+  - 优化器超参数
+- - '#'
+  - 学习率超参数
+- - '##'
+  - 丢弃率（Dropout Rate）超参数
+- - '##'
+  - 什么是反向误差传播？
+- - '##'
+  - 什么是多层感知机（MLP）？
+- - '##'
+  - 激活函数
+- - '##'
+  - 数据点是如何被正确分类的？
+- - '#'
+  - CNN 的高层视角
+- - '#'
+  - 极简 CNN
+- - '##'
+  - 卷积层 (Conv2D)
+- - '##'
+  - ReLU 激活函数
+- - '##'
+  - 最大池化层
+- - '###'
+  - Keras 与 MNIST 数据集
+- - '###'
+  - Keras、CNN 与 MNIST 数据集
+- - '#'
+  - 'Normalize pixel values: from the range 0-255 to the range 0-1'
+- - '#'
+  - predict the label of one image
+- - '##'
+  - 结合音频信号的 CNNs
+- - '##'
+  - 总结
+- - '#'
+  - 第 5 章：深度学习：RNNs 和 LSTMs
+- - '###'
+  - 什么是 RNN？
+- - '###'
+  - RNN 的结构
+- - '###'
+  - 什么是 BPTT？
+- - '#'
+  - 使用 RNN 和 Keras
+- - '#'
+  - number of units in RNN cell
+- - '#'
+  - number of classes to be identified
+- - '##'
+  - Keras Sequential model with RNN and Dense layer
+- - '##'
+  - loss function and optimizer
+- - '##'
+  - 使用 Keras、RNN 和 MNIST
+- - '##'
+  - this code works with TensorFlow 2.1 and Python 3.6
+- - '##'
+  - 'get an instance of the TF built-in dataset:'
+- - '#'
+  - load the mnist dataset
+- - '#'
+  - 'make sure all labels are one-hot encoded:'
+- - '#'
+  - resize the training and test data x_train
+- - '#'
+  - divide pixel values by 255 (normalization)
+- - '#'
+  - 'initialize some standard parameters:'
+- - '#'
+  - 'create a Keras RNN model with: 256 units '
+- - '#'
+  - having 28 timesteps
+- - '#'
+  - 'train the network:'
+- - '#'
+  - evaluate the model
+- - '#'
+  - 'outputs: all RNN states'
+- - '#'
+  - 'states: actual RNN output'
+- - '###'
+  - 什么是 LSTM？
+- - '###'
+  - 什么是 LSTM？
+- - '###'
+  - 什么是 LSTM？
+- - '###'
+  - LSTM 参数调优
+- - '###'
+  - 使用 TensorFlow 和 LSTM（可选）
+- - '###'
+  - 自动编码器
+- - '##'
+  - GAN 高层视角
+- - '##'
+  - VAE-GAN 模型
+- - '##'
+  - 总结
+- - '#'
+  - 第 6 章：Angular 与 TensorFlow.js
+- - '##'
+  - 什么是 TensorFlow.js？
+- - '##'
+  - TensorFlow.js ML 模型
+- - '##'
+  - 带有 TensorFlow.js 的简单 页面
+- - '##'
+  - 在 TensorFlow.js 中处理张量
+- - '##'
+  - TensorFlow.js API
+- - '##'
+  - 使用 TensorFlow.js 进行线性回归
+- - '###'
+  - 值50 的预测：
+- - '###'
+  - 在 tfjs-vis 中创建折线图
+- - '###'
+  - 在 tfjs-vis 中创建柱图
+- - '###'
+  - 在 tfjs-vis 中创建散点图
+- - '###'
+  - 在 tfjs-vis 创建直方图
+- - '###'
+  - TensorFlow.js, tfjs-vis 和回归
+- - '##'
+  - 深度学习与 MNIST 深度学习 数据集
+- - '###'
+  - '1'
+- - '###'
+  - '2'
+- - '###'
+  - '3'
+- - '###'
+  - '4'
+- - '###'
+  - '5'
+- - '###'
+  - '6'
+- - '###'
+  - '7'
+- - '##'
+  - 可能的编译错误
+- - '##'
+  - 总结
+- - '#'
+  - 附录 A：KERAS 简介
+- - '##'
+  - 什么是 Keras？
+- - '##'
+  - 在 TF 2 中使用 Keras 命名空间
+- - '##'
+  - 使用 tf.keras.layers
+- - '##'
+  - 使用 tf.keras.activations
+- - '##'
+  - 使用 tf.keras.datasets
+- - '##'
+  - TF 2 Keras 对比“独立版” Keras
+- - '##'
+  - 创建基于 Keras 的模型
+- - '##'
+  - 训练模型
+- - '##'
+  - 绘制 epoch 数与损失值
+- - '##'
+  - Keras, MLP 与 MNIST
+- - '###'
+  - '列表 A.4: keras_mlp.py'
+- - '#'
+  - '实例化 mnist 并加载数据:'
+- - '#'
+  - 对所有标签进行独编码，以创建最终层
+- - '#'
+  - 'x10 向量:'
+- - '#'
+  - '调整 28x28 图像并规格:'
+- - '#'
+  - '初始化:'
+- - '#'
+  - '定义一个基于 Keras 的模型:'
+- - '#'
+  - '在训练数据上训练:'
+- - '#'
+  - '计算并显示准确率:'
+- - '##'
+  - Keras、CNN 与 cifar10
+- - '###'
+  - '列表 A.5: keras_cnn_cifar10.py'
+- - '#'
+  - 划分训练集和测试集
+- - '#'
+  - 附录 C：TF 2 数据集
+- - '##'
+  - TF 2 数据集概述
+- - '##'
+  - TF 2 tf.data.Datasets
+- - '##'
+  - Dataset vs. Tensors Comparison
+- - '##'
+  - TF 2 Dataset 的基本步骤
+- - '##'
+  - 一个简单的 TF 2 tf.data.Dataset
+- - '#'
+  - make a dataset from a numpy array
+- - '##'
+  - 什么是 Lambda 表达式？
+- - '##'
+  - 在 TF 2 中使用生成器
+- - '##'
+  - 合并 TF 2 tf.Data.Datasets
+- - '###'
+  - 列表 C.3.3：`tf2_concatenate.py`
+- - '##'
+  - TF 2 reduce() 运算符
+- - '###'
+  - 列表 C.3.4：`tf2_reduce.py`
+- - '##'
+  - 在 TF 中使用生成器
+- - '#'
+  - return tf.reshape
+- - '#'
+  - Keras 与指标
+- - '#'
+  - 保存与恢复 Keras 模型
+- - '####'
+  - 'A.8: tf2_keras_save_model.py'
+- - '#'
+  - 将类别向量转换为二分类矩阵
+- - '#'
+  - 你也可以在此处重复块
+- - '#'
+  - 使用 RMSprop 优化器训练模型
+- - '#'
+  - 评估并显示测试的结果
+- - '#'
+  - 在 Keras 中调整图像
+- - '#'
+  - 读取 PNG 或 JPG
+- - '#'
+  - 附录 B：TF 2 简介
+- - '##'
+  - 什么是 TF 2？
+- - '##'
+  - TF 2 用例
+- - '##'
+  - TF 2 架构：简述
+- - '#'
+  - TF 2 安装
+- - '#'
+  - TF 2 和 Python REPL
+- - '#'
+  - 其他基于 TF 2 的工具包
+- - '#'
+  - TF 2 执行模式
+- - '#'
+  - TF 2 张量、数据类型和基本类型
+- - '##'
+  - TF 2 数据类型
+- - '##'
+  - TF 2 基本类型
+- - '#'
+  - TF 2 中的常量
+- - '#'
+  - TF 2 中的变量
+- - '##'
+  - tf.rank() API
+- - '##'
+  - tf.rank()
+- - '##'
+  - TF 2 变量 (Variables) 对比 张量 (Tensors)
+- - '##'
+  - TF 2 中的 @tf.function 是什么？
+- - '##'
+  - '@tf.function 是如何工作的？'
+- - '##'
+  - TF 2 中 @tf.function 的注意事项
+- - '##'
+  - 使用 @tf.function 重载函数
+- - '##'
+  - 什么是 TF 2 中的 AutoGraph？
+- - '##'
+  - TF 2 中的算术运算
+- - '##'
+  - TF 2 算术运算的注意事项
+- - '##'
+  - TF 2 和内置函数
+- - '#'
+  - 在 TF 2 中计算三角值
+- - '#'
+  - 在 TF 2 中计算指数值
+- - '#'
+  - 在 TF 2 中处理字符串
+- - '#'
+  - 字符串数组
+- - '#'
+  - 在 TF 2 中处理张量和操作
+- - '##'
+  - TF 中相乘两个二阶张量
+- - '##'
+  - 将 Python 数组转换为 张量
+- - '##'
+  - TF 中的类型冲突
+- - '##'
+  - TF 2 中的微分和 GradientTape
+- - '###'
+  - 使用 `tf.GradientTape` 的其他张量
+- - '###'
+  - 持久梯度带
+- - '###'
+  - Google Colaboratory
+- - '#'
+  - 总结
