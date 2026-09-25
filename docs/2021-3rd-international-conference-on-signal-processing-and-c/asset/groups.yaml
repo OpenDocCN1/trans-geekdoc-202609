@@ -1,0 +1,1228 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # Lung – Pleura Carcinoma Detection Using Machine Learning
+
+
+    Senthil Kumar K
+
+    Department
+
+    of Electronics and Communication
+
+    Rajalakshmi Institute of Technology,
+
+    Tamil Nadu, India.
+
+    senthil.kumar.k2@ritchenmai.edu
+
+
+    Kavethanjali V
+
+    Department
+
+    of Electronics and Communication
+
+    Rajalakshmi Institute of Technology,
+
+    Tamil Nadu, India.
+
+    kavethanjali.v.2017@ritchenmai.edu
+
+
+    Preethi S
+
+    Department
+
+    of Electronics and Communication
+
+    Rajalakshmi Institute of Technology,
+
+    Tamil Nadu, India.
+
+    preethi.s.2017@ritchenmai.edu
+
+
+    Vasanthriya V
+
+    Department
+
+    of Electronics and Communication
+
+    Rajalakshmi Institute of Technology,
+
+    Tamil Nadu, India.
+
+    vasanthriya.v.2017@ritchenmai.edu
+
+
+    **Abstract:** Identification of pleural carcinoma classification with 98.30% accuracy
+    is presented in this work. To evaluate the effectiveness of the Machine Learning
+    Algorithms, which is divided into clinical, and health data from patients who
+    were part of the collection of lung cancer diagnostic data. We developed and tested
+    various machine-learning algorithms associated with lung disease based on patient
+    health data and to guide patients in early or early detection options. Operations
+    are performed with different parameters and success levels are achieved. Various
+    algorithms were tested to achieve success rates of approximately 98.30. Among
+    the agreed algorithms, *Linear Discriminant Analysis* provides the most effective
+    isolation process. **Keywords:** Pleural detection, Machine Learning and Comparative
+    Analysis.
+
+
+    bloodstream or lymphatic system. The term "metastasis" means a cancer that has
+    spread beyond to other parts of the body. Primary lung cancer grows in the lungs,
+    and Secondary lung cancer begins elsewhere in the body, spreads and eventually
+    enters the lungs. There are many types of cancer, and not all are the same. Pleural
+    carcinoma is the cancer that has killed many men and women in recent days. The
+    number of people dying from lung cancer has increased. Three-quarters of the lung
+    cancer is detected after it spreads. Cancer kills 7.6 million people worldwide
+    every year, accounting for 13% of all deaths (WHO). The two most common types
+    of lung cancer are small and large cell lung cancer, which are classified according
+    to how can appear under a microscope. Small cell lung cancer (SCLC) Non-small
+    cell lung cancer (NSCLC). With help of artificial intelligence, machine learning
+    has been used by researchers for medical analysis. Pan Zhuanquet. used machine
+    learning method to study the classification of diseases in clinical trials of
+    Traditional Chinese medicine (TCM).
+
+
+    # INTRODUCTION
+
+
+    Lung cancer is caused by the abnormal growth of normal cells in the body. Cancer
+    cells do not grow normally within lung tissue, they break and grow quickly and
+    muscle. As the tumor grows and damages tissue in ways that supply oxygen to the
+    blood it does not appear to spread. The pleura is to lymphatic system, which releases
+    lymph through the nodes and chest. Normal nodes in the lungs are located in the
+    center of the chest, lung cancer often spreads. Lung cancer is divided into two
+    main groups, non cell carcinoma and small cell carcinoma. These are assigned to
+    certain types of lung cancer depending on their characteristics. According to
+    categories, there are four types of lung cancer: I, II, III and IV. The size of
+    the tumour, as well as location and position, are used to evaluate the measurement.
+    Dangerous tissue, which is the most lethal, spreads through the body through the
+
+
+    +   - About 235,700 cases of lung cancer (119,600 in men and 116,660 in women)
+
+    - About deaths from lung cancer (69,410 in men and 62,470 in women)
+
+    These numbers are based on people diagnosed with NSCLC between 2016 and 2021.
+
+
+    Table 5-year Relative Survival Rates for Non-Small Cell Lung
+
+    | SEER stage | 5-year relative survival rate |
+
+    | :--- | :--- |
+
+    | Localized | 63% |
+
+    | Regional | 35% |
+
+
+    Lung Cancer'
+  - '[PAGE 1]
+
+
+    # III. PROPOSED METHOD
+
+
+    The main purpose of this proposed method is to improve the accuracy of the Lung-Pleura
+    Carcinoma phase using machine learning algorithms,
+
+
+    +   1. Logistic Regression Algorithms.
+
+    2. Support Vector Machine Algorithm.
+
+    3. Decision Tree Classifier.
+
+    4. K-Nearest Neighbour Algorithm.
+
+    5. Linear Discriminant analysis
+
+
+    # A. Logistic Regression Algorithms
+
+
+    The theory of logistic regression can be used to solve binary classification problems.
+    The sigmoid function, also known as the entry function, is an S-shaped curve that
+    can vary between 0 and 1 with a real value, but is not directly within those limits.
+    A logistic function, which assists us in determining log or prob issues, is used
+    to measure probability. Logistic regression models the probability of the default
+    class (that an input (X) belongs to the default class (Y)),
+
+
+    P (X) = P (Y = 1 | X)
+
+
+    Logistic regression was applied to the studied data and an accuracy/value96.61
+    was.
+
+
+    # B. Support Vector Machine
+
+
+    Support Machines (SVM) is a fast and dependable classification algorithm that
+    outperforms others with a limited amount of data. An also loss is a method that
+    can be used to find binary split points. The learning problem for SVMs corresponds
+    to some unknown and nonlinear dependency (mapping, function) y=f(x) by high-dimensional
+    input X and scale output y. It is noted that there is no information on the probability
+    functions, therefore, a feature distribution may be learned except. out.
+
+
+    D(x,y) = X^T Y * I,
+
+
+    where t stands for the training data pairs and is equal to the size of the training
+    data set D, additionally it is added to di, where di stands for the (target) value.
+    Hence, SVM belongs to the supervised techniques.
+
+
+    Support Vector Machine was applied to the studied data and an accuracy/value96.61
+    was.
+
+
+    # C. Decision Tree Classifier
+
+
+    The purpose of the decision tree is to test a set of data rules or questions to
+    predict the value of a target variable by representing decision rules based on
+    a set of data. The purpose of a decision tree is to extract the information information.
+    Entropy is calculated by the H approach in Condition 4. Entropy(H) is degree of
+    the dubiousness within the dataset. S is the current set for which entropy is
+    being calculated; C: [Gini] is set of classes in S. P work is the end of the number
+    of components in C to the number of components in set S.
+
+
+    ![](img/dde2eb74f6d11a7cc8c4a0bad9acfa1d_1_0.png)
+
+
+    Figure 1.2 Analysis of 5-year Survival Rates for Non-Small Cell Lung Cancer
+
+
+    Zhang Daoqing and Al have provided importance guidance to the diagnosis of brain
+    diseases from the network construction, feature learning and classification method
+    through the method of machine learning in the analysis and application of brain
+    network based on machine learning[2];
+
+
+    # II. DATASET
+
+
+    A set of lung cancer data was used in this study. In data set, 6 arguments are
+    used to define input data. Expected outcome such as release is likely to predict
+    Lung-Pleura Carcinoma as of below the input data it is estimated with various
+    degrees of accuracy. The prediction value are Age,Smoke,AreaQ,Alcohol. These are
+    obtained with pre-processing and the data was divided into training and testing
+    sets. Different algorithms are examined on the data set, 80% of that data was
+    used for being trained and tested respectively. Mina Basoli of the classification
+    and pattern recognition algorithms embedded in the CAD system were still failing
+    from redundancy criteria for large numbers, but a shortage can be resolved with
+    large and accessible repository with efficient data search engine implemented
+    in the system[3]. In cancer diagnosis and prognosis, odds are used. The study
+    focuses focuses on lung cancer. This strategy is particularly interesting because
+    it is part of a growing trend to create a self-made, predictable drug-A collection
+    of statistical machine learning techniques are used to learn feature hierarchies
+    others based on the artificial neural network[4].'
+  - '[PAGE 2]
+
+
+    H(s)=-Σ cC-p(c)log;p(c)
+
+
+    Decision Tree Classifier was was to the considered data and an accuracy value
+    of 89.93 obtained.
+
+
+    # D. K-Nearest Neighbour Algorithm
+
+
+    The essential guideline of K-nearest neighbour calculation in classification issues
+    is that a chosen neighbour K distinguishes the closest neighbour of the hidden
+    data point. At that point, using the foremost clearly classified to the covered-up
+    information point suggest to all K neighbour classes. The Euclidean condition
+    applied in condition 5 is used to simplify.
+
+
+    d(x,x'')=Σ(x-x)²....+(x-x'')²/2
+
+
+    KNN Algorithm applied to the studied analysis and accuracyusual098.30 obtained.
+
+
+    # E. Linear Discriminant Analysis
+
+
+    In the way that key component analysis (PCA) and feature analysis of integral
+    of variables better define data, LDA does. The LDA made a concert effort to distinguish
+    between groups. The PCA, on the other hand, ignores analysis of performance on
+    differences rather than similarities. Discrimination analysis is different because
+    it is not a dependent process; it requires a distinction between dependent and
+    independent variables. LDA approaches the problem by using the conditional probability
+    density functions p(x|y=0) and p(x|y=1) are Normal with mean and covariance parameters
+    (μ,Σ) and (μ'',Σ'').
+
+
+    (x-μ)ᵀΣ⁻¹(x-μ)+ln(x-μ'')ᵀΣ''⁻¹(x-μ'')+ln|Σ''/|Σ|
+
+
+    Linear Discriminant is applied and an accurate value of 99.30 obtained.
+
+
+    The area under the operating characteristic curve (AUC ROC) evaluate the performance
+    of predictor AUC ROC is the official metric in the 2018 ISI London Majority Prediction
+    challenge. The CNNs were used also using machine learning classifiers such as
+    k-nearest neighbour(KNN) and support vector machine (SVM) on high-dimensional
+    features yielded variable comparable performance, with AUC up to 0.71 (p=018[7]).
+    Among the best and varied studies it is clear that machine learning methods can
+    be used to achieve substantial (15–25%) improve the accuracy of predicting success
+    since resource and mortality. At a more fundamental level, it is evident that
+    machine learning is also helping to improve the basic understanding of concept
+    development and progression[8].The GLCM also includes contrast, correlation, homogeneity
+    and energy[9].
+
+
+    ![](img/dde2eb74f6d11a7cc8c4a0bad9acfa1d_2_0.png)
+
+
+    Figure 1. Flow of Proposed Model
+
+
+    # IV. RESULT AND DISCUSSION
+
+
+    The results obtained from the proposed model is accuracy of the machine-trained
+    model as a value of 0 and 1. The closer to 1, the higher the success of the model.
+    Accuracy values obtained as a result of the training of a trained model different
+    algorithm shown in Table 1.Among examined accuracy has been increased to 98.30
+    in Linear Discriminant Analysis.
+
+
+    Table 1. Comparison analysis of proposed methods
+
+
+    | Model | Recall (%) | F1-score | Precision (%) | Accuracy (%) |
+
+    |---|---|---|---|\||
+
+    | Logistic Regression | 93.93 | 96.85 | 100 | 96.61 |
+
+    | K Nearest Neighbour | 96.87 | 98.37 | 100 | 98.30 |
+
+    | Support Vector Machine | 93.93 | 96.85 | 100 | 96.61 |
+
+    | Decision Tree | 93.10 | 84.49 | 100 | 89.83 |
+
+    | Linear Discriminant Analysis | 96.87 | 97.95 | 100 | 98.30 |'
+  md: '
+
+    # Lung – Pleura Carcinoma Detection Using Machine Learning
+
+
+    Senthil Kumar K
+
+    Department of Electronics and Communication
+
+    Rajalakshmi Institute of Technology,
+
+    Tamil Nadu, India.
+
+    senthil.kumar.k2@ritchenmai.edu
+
+
+    Kavethanjali V
+
+    Department of Electronics and Communication
+
+    Rajalakshmi Institute of Technology,
+
+    Tamil Nadu, India.
+
+    kavethanjali.v.2017@ritchenmai.edu
+
+
+    Preethi S
+
+    Department of Electronics and Communication
+
+    Rajalakshmi Institute of Technology,
+
+    Tamil Nadu, India.
+
+    preethi.s.2017@ritchenmai.edu
+
+
+    Vasanthriya V
+
+    Department of Electronics and Communication
+
+    Rajalakshmi Institute of Technology,
+
+    Tamil Nadu, India.
+
+    vasanthriya.v.2017@ritchenmai.edu
+
+
+    **Abstract:** Identification of pleural carcinoma classification with 98.30% accuracy
+    is presented in this work. To evaluate the effectiveness of the Machine Learning
+    Algorithms, which is divided into clinical, and health data from patients who
+    were part of the collection of lung cancer diagnostic data. We developed and tested
+    various machine-learning algorithms associated with lung disease based on patient
+    health data and to guide patients in early or early detection options. Operations
+    are performed with different parameters and success levels are achieved. Various
+    algorithms were tested to achieve success rates of approximately 98.30. Among
+    the agreed algorithms, *Linear Discriminant Analysis* provides the most effective
+    isolation process. **Keywords:** Pleural detection, Machine Learning and Comparative
+    Analysis.
+
+
+    bloodstream or lymphatic system. The term "metastasis" means a cancer that has
+    spread beyond to other parts of the body. Primary lung cancer grows in the lungs,
+    and Secondary lung cancer begins elsewhere in the body, spreads and eventually
+    enters the lungs. There are many types of cancer, and not all are the same. Pleural
+    carcinoma is the cancer that has killed many men and women in recent days. The
+    number of people dying from lung cancer has increased. Three-quarters of the lung
+    cancer is detected after it spreads. Cancer kills 7.6 million people worldwide
+    every year, accounting for 13% of all deaths (WHO). The two most common types
+    of lung cancer are small and large cell lung cancer, which are classified according
+    to how can appear under a microscope. Small cell lung cancer (SCLC) Non-small
+    cell lung cancer (NSCLC). With help of artificial intelligence, machine learning
+    has been used by researchers for medical analysis. Pan Zhuanquet. used machine
+    learning method to study the classification of diseases in clinical trials of
+    Traditional Chinese medicine (TCM).
+
+
+    # INTRODUCTION
+
+
+    Lung cancer is caused by the abnormal growth of normal cells in the body. Cancer
+    cells do not grow normally within lung tissue, they break and grow quickly and
+    muscle. As the tumor grows and damages tissue in ways that supply oxygen to the
+    blood it does not appear to spread. The pleura is to lymphatic system, which releases
+    lymph through the nodes and chest. Normal nodes in the lungs are located in the
+    center of the chest, lung cancer often spreads. Lung cancer is divided into two
+    main groups, non-cell carcinoma and small cell carcinoma. These are assigned to
+    certain types of lung cancer depending on their characteristics. According to
+    categories, there are four types of lung cancer: I, II, III and IV. The size of
+    the tumour, as well as location and position, are used to evaluate the measurement.
+    Dangerous tissue, which is the most lethal, spreads through the body through the
+
+
+    - About 235,700 cases of lung cancer (119,600 in men and 116,660 in women)
+
+    - About deaths from lung cancer (69,410 in men and 62,470 in women)
+
+    These numbers are based on people diagnosed with NSCLC between 2016 and 2021.
+
+
+    Table 5-year Relative Survival Rates for Non-Small Cell Lung Cancer
+
+    | SEER stage | 5-year relative survival rate |
+
+    | :--- | :--- |
+
+    | Localized | 63% |
+
+    | Regional | 35% |
+
+
+    # III. PROPOSED METHOD
+
+
+    The main purpose of this proposed method is to improve the accuracy of the Lung-Pleura
+    Carcinoma phase using machine learning algorithms,
+
+
+    - 1. Logistic Regression Algorithms.
+
+    2. Support Vector Machine Algorithm.
+
+    3. Decision Tree Classifier.
+
+    4. K-Nearest Neighbour Algorithm.
+
+    5. Linear Discriminant analysis
+
+
+    # A. Logistic Regression Algorithms
+
+
+    The theory of logistic regression can be used to solve binary classification problems.
+    The sigmoid function, also known as the entry function, is an S-shaped curve that
+    can vary between 0 and 1 with a real value, but is not directly within those limits.
+    A logistic function, which assists us in determining log or issues, is used to
+    measure probability. Logistic regression models the probability of default class
+    (that an input (X) belongs to default class), P (X) = P (Y = 1 | X). Logistic
+    regression was applied to the studied data and accuracy/96.61.
+
+
+    # B. Support Vector Machine
+
+
+    Support Vector Machines (SVM) is a fast and dependable classification algorithm
+    that outperforms others with a limited amount of data. Also loss is a method that
+    can be used to find split points. The learning problem for SVMs corresponds to
+    some unknown and nonlinear dependency (mapping function) y=f(x) by high-dimensional
+    input and scale output y. It is noted that there is no information on probability
+    functions, therefore, a feature distribution may be learned. D(x,y) = X^T Y where
+    t stands for training data pairs and is equal to the size of training data D,
+    additionally it is added to di where di stands for (target) value. Support Vector
+    Machine was applied to the studied data and accuracy/96.61.
+
+
+    # C. Decision Tree Classifier
+
+
+    The purpose of the decision tree is to test a set of data rules or questions to
+    predict the value of a target variable by representing decision rules based on
+    a set of data. The purpose of the decision tree is to extract information. Entropy
+    is calculated by the H approach in Condition 4. Entropy(H) is degree of dubiousness
+    within the dataset S is the current set for which entropy is being calculated;
+    C:[Gini] is set of classes in S. work is the end of the number of components in
+    C.
+
+
+    ![](img/dde2eb74f6d11a7cc8c4abad9fa1d_2.png)
+
+    Figure 1. Analysis of 5-year Survival Rates for Non-Small Cell Cancer
+
+
+    Zhang Daoqing and Al have provided importance guidance to the diagnosis of diseases
+    from network construction, feature learning and classification method through
+    the method of machine learning based on [2];
+
+
+    # II. DATASET
+
+
+    A set of lung cancer data was used in this study. In data set, arguments are used
+    to define input data. Expected outcome such as release is likely to predict Lung-Pleura
+    Carcinoma of the input data it is estimated with various degrees of accuracy.
+    The prediction value are Age, Smoke, Area, Alcohol. These are obtained with pre-processing
+    and the data was divided into training and testing sets. Different algorithms
+    are examined on the data set, 80% of that data was used for being trained and
+    tested respectively. Mina Basoli of the classification and pattern recognition
+    algorithms embedded in the CAD system were still failing from redundancy for large
+    numbers, but a shortage can be resolved with large and accessible repository with
+    efficient data search implemented in the system [3]. In cancer diagnosis and prognosis,
+    the study focuses on lung cancer. This strategy is particularly interesting because
+    it is part of a growing trend to create a self-made, predictable collection of
+    statistical machine learning techniques used to learn feature hierarchies others
+    on the artificial neural network [4].
+
+
+    H(s)=-Σ cp(c)logp(c)
+
+
+    Decision Tree Classifier was to the considered data and an accuracy value of 89.93
+    obtained.
+
+
+    # D. K-Nearest Neighbour Algorithm
+
+
+    The essential guideline of K-nearest neighbour calculation in classification issues
+    is that a chosen neighbour K distinguishes the closest neighbour of the hidden
+    data point. At that point, using the foremost clearly classified to the covered-up
+    information suggest to all K neighbour classes. The Euclidean condition applied
+    in condition 5 is used to simplify.
+
+
+    d(x,x'')=Σ(x-x)²....+(x-x'')²/2
+
+
+    KNN applied to the studied analysis and accuracyusual98.30 obtained.
+
+
+    # E. Linear Discriminant Analysis
+
+
+    In the way that key component analysis (PCA) and feature analysis of integral
+    of variables better define data, LDA does. The LDA made a concert effort to distinguish
+    between groups. The PCA, on the other hand, ignores analysis of performance on
+    differences rather than similarities. Discrimination analysis is different because
+    it is not a dependent process; it requires a distinction between dependent and
+    independent variables. LDA approaches the problem by using the conditional probability
+    density functions p(x|y=0) and p(x|y=1) are Normal with mean and covariance parameters
+    (μ,Σ) and (μ'',Σ'').
+
+
+    (x-μ)ᵀΣ⁻¹(x-μ)+ln(x-μ'')ᵀΣ''⁻¹(x-μ'')+ln|Σ''/|Σ|
+
+
+    Linear Discriminant is applied and an accurate value of 99.30 obtained. The area
+    under the operating characteristic curve (AUC ROC) evaluate the performance of
+    predictor AUC ROC is the official metric in the 2018 ISI London Majority Prediction
+    challenge. The CNNs were used also using machine learning classifiers such as
+    k-nearest neighbour(KNN) and support vector machine (SVM) on high-dimensional
+    features yielded variable comparable performance, with AUC up to 0.71 (p=018[7]).
+    Among the best and varied studies it is clear that machine learning methods can
+    be used to achieve substantial (15–25%) improve the accuracy of predicting success
+    since resource and mortality. At a more fundamental level, it is evident that
+    machine learning is also helping to improve the basic understanding of concept
+    development and progression[8]. The GLCM also includes contrast, correlation,
+    homogeneity and energy[9].
+
+
+    # IV. RESULT AND DISCUSSION
+
+
+    The results obtained from the proposed model is accuracy of the machine-trained
+    model as a value of 0 and 1. The closer to 1, the higher the success of the model.
+    Accuracy values obtained as a result of the training of a trained model different
+    algorithm shown in Table 1. Among examined accuracy has been increased to 98.30
+    in Linear Discriminant Analysis.
+
+
+    Table 1. Comparison analysis of proposed methods
+
+
+    | Model | Recall (%) | F1-score | Precision (%) | Accuracy (%) |
+
+    |---|---|---|---|---|
+
+    | Logistic Regression | 93.93 | 96.85 | 100 | 96.61 |
+
+    | K Nearest Neighbour | 96.87 | 98.37 | 100 | 98.30 |
+
+    | Support Vector Machine | 93.93 | 96.85 | 100 | 96.61 |
+
+    | Decision Tree | 93.10 | 84.49 | 100 | 89.83 |
+
+    | Linear Discriminant Analysis | 96.87 | 97.95 | 100 | 98.30 |
+
+    '
+  mdcn: '
+
+
+    # 基于机器学习的肺部胸膜癌检测
+
+
+    Senthil Kumar K
+
+    电子与通信系
+
+    Rajalakshmi 理工学院，
+
+    泰米纳德邦，印度。
+
+    senthil.kumar.k2@ritchenmai.edu
+
+
+    Kavethanjali V
+
+    电子与通信系
+
+    Rajalakshmi 理工学院，
+
+    泰米纳德邦，印度。
+
+    kavethanjali.v.2017@ritchenmai.edu
+
+
+    Preethi S
+
+    电子与通信系
+
+    Rajalakshmi 理工学院，
+
+    泰米纳德邦，印度。
+
+    preethi.s.2017@ritchenmai.edu
+
+
+    Vasanthriya V
+
+    电子与通信系
+
+    Rajalakshmi 理工学院，
+
+    泰米纳德邦，印度。
+
+    vasanthriya.v.2017@ritchenmai.edu
+
+
+    **摘要：** 本研究展示了准确率达 98.30% 的胸膜分类识别。为了评估机器学习算法的有效性，将其分为来自肺癌诊断数据集中患者的临床和健康数据。我们根据患者健康数据开发并测试了多种与肺疾病相关的机器学习算法，旨在引导患者进行早期或早期检测方案。在不同参数下进行操作并实现了相应的成功水平。测试了多种算法以实现约
+    98.30 的成功率。在所认可的算法中，*线性判别分析*（Linear Discriminant Analysis）提供了最有效的隔离过程。**关键词：**
+    胸膜检测，机器学习与对比分析。
+
+
+    血液或淋巴系统。“转移”术是指癌症扩散到身体其他部位。原发性肺癌生长在肺部，继发性肺癌始于身体其他部位，扩散并最终进入肺部。癌症有很多类型，并非所有类型都相同。胸膜癌是近期导致许多男女死亡的癌症。肺癌死亡的人数正在增加。四分之三的肺癌在扩散后才被发现。癌症每年杀死全球760
+    万人，占所有死亡人数的 13%（世卫组织）。最常见的肺癌类型是小细胞和大细胞肺，根据它们在显微镜下的外观进行分类：小细胞肺癌（SCLC）和小细胞肺癌（NSCLC）。在人工智能的帮助下，研究人员已将机器学习用于医学分析。潘传全
+    使用机器学习方法研究了中医学（TCM）临床试验中的疾病分类。
+
+
+    # 引言
+
+
+    肺癌是由人体内正常细胞的异常生长引起的。癌细胞在肺组织内不正常生长，它们会破裂并迅速生长在肌肉中。随着肿瘤生长并损伤向血液供应氧气的组织，它似乎并没有扩散。胸膜属于淋巴系统，通过淋巴结和胸腔释放淋巴液。肺部的正常淋巴结位于胸部中心，肺癌经常扩散至此。肺癌分为两大类：非小细胞癌和小细胞癌。根据其特征，它们被分为特定类型的肺癌。根据分类，肺癌有四种：I、II、III
+    和 IV。肿瘤的大小、位置和方位被用于评估测量。最具致命性的危险组织通过血液或淋巴系统扩散全身。
+
+
+    - 约 235,700 例肺癌病例（男性 119,600 例，女性 116,660 例）
+
+    - 约肺癌死亡人数（男性 69,410 人，女性 62,470 人）
+
+    这些数据基于 2016 年至 2021 年间诊断为 NSCLC 的的人群。
+
+
+    非小细胞肺癌 5 年相对生存率表
+
+    | SEER 阶段 | 5 年相对生存率 |
+
+    | :--- | :--- |
+
+    | 局部 | 63% |
+
+    | 区域 | 35% |
+
+
+    # III. 提出的方法
+
+
+    本文所提方法的主要目的是通过机器学习算法提高肺-胸膜癌分期的准确性。
+
+
+    - 1. 逻辑回归算法。
+
+    2. 支持向量机算法。
+
+    3. 决策树分类器。
+
+    4. K-近邻算法。
+
+    5. 线性判别分析。
+
+
+    # A. 逻辑回归算法
+
+
+    逻辑回归理论可用于解决二分类问题。Sigmoid 函数（也称为激活函数）是一个 S 型曲线，它可以根据实值在 0 到 1 之间变化，但并不直接限于这些范围。逻辑函数有助于我们确定对数几率（log
+    or issues），被用于衡量概率。逻辑回归对默认类的概率（即输入 (X) 属于默认类的概率）$P(X) = P(Y = 1 | X)$。将逻辑回归应用于研究的数据，准确率为
+    96.61%。
+
+
+    # B. 支持向量机
+
+
+    支持向量机（SVM）是一种快速且可靠的分类算法，在有限数据量的情况下优于其他算法。此外，损失是一种可以寻找分割点的方法。SVM 的学习问题对应于高维输入和标量输出
+    $y$ 的某些未知且非线性依赖（映射函数）$y=f(x)$。。由于没有关于概率函数的信息，因此可以学习一种特征分布。$D(x,y) = X^T Y$，其中
+    $t$ 代表训练数据对，且等于训练数据大小 $D$，此外，它被添加到 $d_i$ 中，其中 $d_i$ 代表（目标）值。支持向量机应用于研究的数据，准确率为
+    96.61%。
+
+
+    # C. 决策树分类器
+
+
+    决策树的目的是通过基于一组数据表示决策规则，来测试一组数据规则或问题以预测目标变量的值。决策树的目的是提取信息。通过条件 4 中的 $H$ 方法计算熵。$Entropy(H)$
+    是数据集 $S$ 内的不确定性程度，$S$ 是正在计算熵的当前集合；$C:[Gini]$ 是 $S$ 中的类集合。work 是 $C$ 中组件数量的结束。
+
+
+    ![](img/dde2eb74f6d11a7cc8c4abad9fa1d_2.png)
+
+    图 1. 非小细胞癌 5 年生存率分析
+
+
+    张道青等人通过基于 [2] 的机器学习方法，从网络构建、特征学习和分类方法方面为疾病诊断提供了重要指导 ；
+
+
+    # II. 数据集
+
+
+    本研究使用了一组肺癌数据。在数据集中，使用参数来定义输入数据。预期结果（如释放）可能预测输入数据的肺-胸膜癌，并以不同程度的精度进行估计。预测值为：年龄、吸烟、区域、酒精。这些值通过预处理获得，数据被分为训练和测试集。支持向量机应用于研究的数据，准确率为
+    96.61%。
+
+
+    决策树分类器的预测值。
+
+
+    决策树应用于研究的数据，准确率为 89.93。
+
+
+    # D. K-近邻算法
+
+
+    K-近邻算法在数据上的成功率取决于其 $K$ 个最近邻点。在认可的算法中，其实现了成功率约为 88.30。
+
+
+    # E. 线性判别分析
+
+
+    线性判别分析应用于研究的数据，准确率为 98.30。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 3]
+
+
+    # Logistic Regression Classification:
+
+
+    # Decision Tree Classification:
+
+
+    ![](img/dde2eb74f6d11a7cc8c4a0bad9acfa1d_3_0.png)
+
+
+    ![](img/dde2eb74f6d11a7cc8c4a0bad9acfa1d_3_1.png)
+
+
+    Figure 2(a) ROC Curve of Logistic Regression Algorithm
+
+
+    Figure 2(d) ROC Curve of Decision Tree Classifier
+
+
+    # Support Vector Machine Classification:
+
+
+    # Linear Discriminant Analysis:
+
+
+    ![](img/dde2eb74f6d11a7cc8c4a0bad9acfa1d_3_2.png)
+
+
+    ![](img/dde2eb74f6d11a7cc8c4a0bad9acfa1d_3_3.png)
+
+
+    Figure 2(b) ROC Curve of Support Vector Machine Algorithm
+
+
+    Figure 2(e) ROC Curve of Linear Discriminant Analysis
+
+
+    # KNN Classifier:
+
+
+    # Confusion Matrices of Linear Discriminant Analysis:
+
+
+    ![](img/dde2eb74f6d11a7cc8c4a0bad9acfa1d_3_4.png)
+
+
+    ![](img/dde2eb74f6d11a7cc8c4a0bad9acfa1d_3_5.png)
+
+
+    Figure 2(c) ROC Curve of KNN Algorithm
+
+
+    Figure 3(a)Confusion matrix - Number of Observations'
+  - '[PAGE 4]
+
+
+    # 2023 Third International Conference on Signal Processing and Communication (ICSPC)
+    | 13 - 14 May 2021 | Coimbatore
+
+
+    ![](img/dde2eb74f6d11a7cc8c4a0bad9acfa1d_4_0.png)
+
+
+    classification, Linear Discriminant preferred because it is dimensionality reduction
+    technique. LDA is to project the features in higher dimensional space to order
+    to avoid the curve of dimensionality and dimensional costs. This task can be expanded
+    to improve the performance of various machine learning algorithms using a large
+    amount of data with different features.
+
+
+    # REFERENCES
+
+
+    Figure (3) Confusion Matrix-True Positive Rate vs False Negative Rate
+
+
+    +   [1] Z. Pan, J. Zhang, S. Yan, “Machine learning methods for classification
+    for TCM clinical data,” Computer Engineering & Applications,2017;https://doi.org/10.1149/3297516.32997274.
+
+    [2] D. Zhang, B.Jie, “Machine-learning based brain network analysis: method and
+    application [J],” Journal of Data. 2018;10(4):1742-1769.
+
+    [3] S. Singh, R. Vijay and Y. Singh, “Artificial Neural Network and Cancer Detection,
+    National Conference on Advances in Engineering, Technology & Management[AETM],”pp.24-25,
+    2018.
+
+    [4] Kashmir Prasad and Priyanka Chawla, “Medical insights of using machine learning
+    algorithms for cancer detection,”doi:10.1080/23370202.2020.1812789.
+
+    [5] B. Mani, V. Athira, Adil Rajendra, “Efficient multi-level cancer lung prediction
+    model using support vector machine classifier,”doi:10.1088/1757-899X/012/1/0121104.
+
+    [6] Gustavo Perez and Pablo Arbelaz, “Automated lung cancer diagnosis using three-dimensional
+    convolutional neural networks,”doi:10.1109/ICCA75515.2019.8811552
+
+    [7] L. Tafadrez et al., “Deep learning classification of lung cancer histology
+    using CT images,”doi:10.1038/s41598-018-24460-6.
+
+    [8] Joseph A. Criz, S. David, “Applications of Machine Learning in Cancer Detection
+    and Prediction,”IEM.1948:5537-5548.
+
+    [9] M. Sangeetha, S. Mith own, “Detection and classification of Lung Tumor by
+    Convolutional Neural Network,”10.1016/j.joccs.2017.01.004.
+
+    [10] Tanaka S, “Recent advances in cancer detection using machine learning: Systematic
+    review of datasets, challenges, and prospects,”doi:10.1016/j.asoc.2020.06.033.
+
+    [11] Ajay Keto, Ramnath Sethi, Feiraj,Sonyarajan, M., Ervik, R., Dixit, S., Seth,
+    Kumar, et al., Lyon, France: International Association for Cancer Research and
+    Science on Cancer Research,2013;Global IARC 2012:1-6.
+
+    [12] W.D. Sunil, Indian Council of Medical Research;2013. National Cancer Registry,
+    Year 3 Report of Population Based Registries 2009-2011;available from: http://www.ncrindia.org
+
+    [13] Dev Neuisari et al., “Application of Recurrent Neural Network for Cancer
+    Classification,” Methods in Molecular Biology,2021.
+
+    [14] F. Smith, “World Health Organization, The Global Burden of Disease, Global
+    Health Organization,2018.
+
+    [15] S. Kalisani, Pramit Chatterjee, “Cancer Detection using Digital Image Processing
+    and Artificial Neural Network,”
+
+    [16] Marwal, 2017, “Analysis of machine learning methods in Using Convolutional
+    Neural Network,” W-IMCK Workshop Informatika Mahabharata, India.
+
+    [17] R. Pooja, Richard D and Anuradha Thakur, 2017, “Detection of Lung Cancer
+    Stages using Image Processing and Data Classification,”
+
+
+    ![](img/dde2eb74f6d11a7cc8c4a0bad9acfa1d_4_1.png)
+
+
+    Figure (3) Confusion Matrix-Positive Predictive Value vs False Discovery Rate
+
+
+    # Comparison Analysis of Accuracy for Proposed Method
+
+
+    | Logistic Regression | K Nearest Neighbor |
+
+    | Support Vector Machine | Decision Tree |
+
+    | Linear Discriminant Analysis |
+
+
+    ![](img/dde2eb74f6d11a7cc8c4a0bad9acfa1d_4_2.png)
+
+
+    Figure 4Comparison Analysis of Accuracy for Proposed Methods
+
+
+    # V. CONCLUSION
+
+
+    Separation of feature selection, machine learning algorithms are used in this
+    work. This approach can completely eliminate cancer diagnoses with 98.30% accuracy.
+    According to work
+
+
+    Authorized user limited to use: San Francisco State University. Published on 2021-01-24
+    at 08:15 UTC from IEEE Xplore. Restrictions apply.
+
+
+    298'
+  md: '
+
+    ## Logistic Regression Classification:
+
+
+    ## Decision Tree Classification:
+
+
+    ![](img/dde2eb74f6d11a7cc8c4a0bad9acfa1d_3_0.png)
+
+
+    ![](img/dde2eb74f6d11a7cc8c4a0bad9acfa1d_3_1.png)
+
+
+    Figure 2(a) ROC Curve of Logistic Regression Algorithm
+
+
+    Figure 2(d) ROC Curve of Decision Tree Classifier
+
+
+    ## Support Vector Machine Classification:
+
+
+    ## Linear Discriminant Analysis:
+
+
+    ![](img/dde2eb74f6d11a7cc8c4a0bad9acfa1d_3_2.png)
+
+
+    ![](img/dde2eb74f6d11a7cc8c4a0bad9acfa1d_3_3.png)
+
+
+    Figure 2(b) ROC Curve of Support Vector Machine Algorithm
+
+
+    Figure 2(e) ROC Curve of Linear Discriminant Analysis
+
+
+    ## KNN Classifier:
+
+
+    ## Confusion Matrices of Linear Discriminant Analysis:
+
+
+    ![](img/dde2eb74f6d11a7cc8c4a0bad9acfa1d_3_4.png)
+
+
+    ![](img/dde2eb74f6d11a7cc8c4a0bad9acfa1d_3_5.png)
+
+
+    Figure 2(c) ROC Curve of KNN Algorithm
+
+
+    Figure 3(a) Confusion matrix - Number of Observations
+
+
+    # 2023 Third International Conference on Signal Processing and Communication (ICSPC)
+    | 13 - 14 May 2021 | Coimbatore
+
+
+    ![](img/dde2eb74f6d11a7cc8c4a0bad9acfa1d_4_0.png)
+
+
+    classification, Linear Discriminant preferred because it is a dimensionality reduction
+    technique. LDA is to project the features in higher dimensional space in order
+    to avoid the curve of dimensionality and dimensional costs. This task can be expanded
+    to improve the performance of various machine learning algorithms using a large
+    amount of data with different features.
+
+
+    ## REFERENCES
+
+
+    Figure (3) Confusion Matrix-True Positive Rate vs False Negative Rate
+
+
+    - [1] Z. Pan, J. Zhang, S. Yan, “Machine learning methods for classification for
+    TCM clinical data,” Computer Engineering & Applications, 2017;https://doi.org/10.1149/3297516.32997274.
+
+    - [2] D. Zhang, B. Jie, “Machine-learning based brain network analysis: method
+    and application [J],” Journal of Data. 2018;10(4):1742-1769.
+
+    - [3] S. Singh, R. Vijay and Y. Singh, “Artificial Neural Network and Cancer Detection,
+    National Conference on Advances in Engineering, Technology & Management [AETM],”
+    pp. 24-25, 2018.
+
+    - [4] Kashmir Prasad and Priyanka Chawla, “Medical insights of using machine learning
+    algorithms for cancer detection,” doi: 10.1080/23370202.2020.1812789.
+
+    - [5] B. Mani, V. Athira, Adil Rajendra, “Efficient multi-level cancer lung prediction
+    model using support vector machine classifier,” doi: 10.1088/1757-899X/012/1/0121104.
+
+    - [6] Gustavo Perez and Pablo Arbelaz, “Automated lung cancer diagnosis using
+    three-dimensional convolutional neural networks,” doi: 10.1109/ICCA75515.2019.8811552.
+
+    - [7] L. Tafadrez et al., “Deep learning classification of lung cancer histology
+    using CT images,” doi: 10.1038/s41598-018-24460-6.
+
+    - [8] Joseph A. Criz, S. David, “Applications of Machine Learning in Cancer Detection
+    and Prediction,” IEM. 1948:5537-5548.
+
+    - [9] M. Sangeetha, S. Mith own, “Detection and classification of Lung Tumor by
+    Convolutional Neural Network,” 10.1016/j.joccs.2017.01.004.
+
+    - [10] Tanaka S, “Recent advances in cancer detection using machine learning:
+    Systematic review of datasets, challenges, and prospects,” doi: 10.1016/j.asoc.2020.06.033.
+
+    - [11] Ajay Keto, Ramnath Sethi, Feiraj, Sonyarajan, Seth, Kumar, et al., Lyon,
+    France: International Association for Cancer Research and Science,2013;Global
+    IARC 2012:1-6.
+
+    - [12] W.D. Sunil, Indian Council of Medical Research; National Cancer Registry,
+    Year 3 Report of Population Based Registries 2009-2011; available from: http://www.ncrindia.org
+
+    - [13] Dev Neuisari et al., “Application of Recurrent Neural Network for Cancer
+    Classification,” Methods in Molecular Biology,2021.
+
+    - [14] F. Smith, “World Health Organization, The Global Burden of Disease, Global
+    Health Organization, 2018.
+
+    - [15] S. Kalisani, Pramit Chatterjee, “Cancer Detection using Digital Image Processing
+    and Artificial Neural Network,”
+
+    - [16] Marwal, 2017, “Analysis of machine learning methods in Using Convolutional
+    Neural Network,” W-IMCK Workshop Mahabharata, India.
+
+    - [17] R. Pooja, Richard D and Anuradha Thakur, 2017, “Detection of Lung Cancer
+    Stages using Image Processing and Data Classification,”![](img/dde2eb74f6d11a7cc8c4a0bad9acfa1d_4_1.png)
+
+
+    Figure (3) Confusion Matrix-Positive Predictive Value vs False Discovery Rate
+
+
+    ## Comparison Analysis of Accuracy for Proposed Method
+
+
+    | Logistic Regression | K Nearest Neighbor |
+
+    | Support Vector Machine | Decision Tree |
+
+    | Linear Discriminant Analysis |
+
+
+    Figure 4 Comparison Analysis of Accuracy for Proposed Methods
+
+
+    ## V. CONCLUSION
+
+
+    Separation of feature selection, machine learning algorithms are used in this
+    work. This approach can completely eliminate cancer diagnoses with 98.30% accuracy.
+    According to work
+
+    '
+  mdcn: '
+
+
+    ## 逻辑回归分类：
+
+
+    ## 决策树分类：
+
+
+    ![](img/dde2eb74f6d11a7cc8c4a0bad9acfa1d_3_0.png)
+
+
+    ![](img/dde2eb74f6d11a7cc8c4a0bad9acfa1d_3_1.png)
+
+
+    图 2(a) 逻辑回归算法 ROC 曲线
+
+
+    图 2(d) 决策树分类器 ROC 曲线
+
+
+    ## 支持向量机分类：
+
+
+    ## 线性判别分析：
+
+
+    ![](img/dde2eb74f6d11a7cc8c4a0bad9acfa1d_3_2.png)
+
+
+    ![](img/dde2eb74f6d11a7cc8c4a0bad9acfa1d_3_3.png)
+
+
+    图 2(b) 支持向量机算法 ROC 曲线
+
+
+    图 2(e) 线性判别分析的 ROC 曲线
+
+
+    ## KNN 分类器：
+
+
+    ## 线性判别分析的混淆矩阵：
+
+
+    ![](img/dde2eb74f6d11a7cc8c4a0bad9acfa1d_3_4.png)
+
+
+    ![](img/dde2eb74f6d11a7cc8c4a0bad9acfa1d_3_5.png)
+
+
+    图 2(c) KNN 算法 ROC 曲线
+
+
+    图 3(a) 混淆矩阵 - 观测数量
+
+
+    # 2023年第三届国际信号处理与通信会议 (ICSPC) | 2021年5月13-14日 | 柯伊巴托尔 (Coimbatore)
+
+
+    ![](img/dde2eb74f6d11a7cc8c4a0bad9acfa1d_4_0.png)
+
+
+    分类，首选线性判别，因为它是一种降维技术。LDA 的作用是将特征投影到高维空间，以避免维度灾难和维度成本。此任务可以扩展到使用具有不同特征的大量数据提高各种机器学习算法的性能。
+
+
+    ## 参考文献
+
+
+    图 (3) 混淆矩阵 - 真阳性率 vs 假阴性率
+
+
+    - [1] Z. Pan, J. Zhang, S. Yan, “Machine learning methods for classification for
+    TCM clinical data,” Computer Engineering & Applications, 2017;https://doi.org/10.1149/3297516.32997274.
+
+    - [2] D. Zhang, B. Jie, “Machine-learning based brain network analysis: method
+    and application [J],” Journal of Data. 2018;10(4):1742-1769.
+
+    - [3] S. Singh, R. Vijay and Y. Singh, “Artificial Neural Network and Cancer Detection,
+    National Conference on Advances in Engineering, Technology & Management [AETM],”
+    pp. 24-25, 2018.
+
+    - [4] Kashmir Prasad and Priyanka Chawla, “Medical insights of using machine learning
+    algorithms for cancer detection,” doi: 10.1080/23370202.2020.1812789.
+
+    - [5] B. Mani, V. Athira, Adil Rajendra, “Efficient multi-level cancer lung prediction
+    model using support vector machine classifier,” doi: 10.1088/1757-899X/012/1/0121104.
+
+    - [6] Gustavo Perez and Pablo Arbelaz, “Automated lung cancer diagnosis using
+    three-dimensional convolutional neural networks,” doi: 10.1109/ICCA75515.2019.8811552.
+
+    - [7] L. Tafadrez et al., “Deep learning classification of lung cancer histology
+    using CT images,” doi: 10.1038/s41598-018-24460-6.
+
+    - [8] Joseph A. Criz, S. David, “Applications of Machine Learning in Cancer Detection
+    and Prediction,” IEM. 1948:5537-5548.
+
+    - [9] M. Sangeetha, S. Mith own, “Detection and classification of Lung Tumor by
+    Convolutional Neural Network,” 10.1016/j.joccs.2017.01.004.
+
+    - [10] Tanaka S, “Recent advances in cancer detection using machine learning:
+    Systematic review of datasets, challenges, and prospects,” doi: 10.1016/j.asoc.2020.06.033.
+
+    - [11] Ajay Keto, Ramnath Sethi, Feiraj, Sonyarajan, Seth, Kumar, et al., Lyon,
+    France: International Association for Cancer Research and Science,2013;Global
+    IARC 2012:1-6.
+
+    - [12] W.D. Sunil, Indian Council of Medical Research; National Cancer Registry,
+    Year 3 Report of Population Based Registries 2009-2011; available from: http://www.ncrindia.org
+
+    - [13] Dev Neuisari et al., “Application of Recurrent Neural Network for Cancer
+    Classification,” Methods in Molecular Biology,2021.
+
+    - [14] F. Smith, “World Health Organization, The Global Burden of Disease, Global
+    Health Organization, 2018.
+
+    - [15] S. Kalisani, Pramit Chatterjee, “Cancer Detection using Digital Image Processing
+    and Artificial Neural Network,”
+
+    - [16] Marwal, 2017, “Analysis of machine learning methods in Using Convolutional
+    Neural Network,” W-IMCK Workshop Mahabharata, India.
+
+    - [17] R. Pooja, Richard D and Anuradha Thakur, 2017, “Detection of Lung Cancer
+    Stages using Image Processing and Data Classification,”![](img/dde2eb74f6d11a7cc8c4a0bad9acfa1d_4_1.png)
+
+
+    图 (3) 混淆矩阵 - 预测正值率 vs 假发现率
+
+
+    ## 所提方法的准确率对比分析
+
+
+    | 逻辑回归 | K近邻算法 |
+
+    | 支持向量机 | 决策树 |
+
+    | 线性判别分析 | |
+
+
+    图 4 所提方法的准确率对比分析
+
+
+    ## V. 结论
+
+
+    本工作使用了特征选择分离的机器学习算法。该方法能够以 98.30% 的准确率完全消除癌症诊断误差。根据工作
+
+
+    '
+  merge: 0
