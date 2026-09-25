@@ -1,0 +1,1386 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Deep Reinforcement Learning based Wind Farm Cluster Reactive Power Optimization
+    Considering Network Switching
+
+
+    Xianbe Ke
+
+    Northwest Branch of China State Grid Corporation
+
+    Xian, China
+
+
+    Yaqi Sun
+
+    Department of Electrical Engineering Tsinghua University
+
+    Beijing, China
+
+
+    Gang Zhang
+
+    Northwest Branch of China State Grid Corporation
+
+    Xian, China
+
+
+    Wenchuan Wu
+
+    Department of Electrical Engineering Tsinghua University
+
+    Beijing, China
+
+
+    Abstract—For wind farms clusters, the overall performance of reactive power optimization
+    can be improved via optimal network switching. The problem can be precisely modeled
+    as a mixed integer non programming (MINP) model, which is intractable. A deep
+    reinforcement learning (DRL) algorithm is proposed to solve the real-time performance.
+    There are two stages in this solution, the first stage is the offline training
+    of the agent, and the second stage is the deployment of the trained agent and
+    MINP model. Considering the operational constraints, a learning framework with
+    over-behavior penalty and model-guided constraint with symmetric and asymmetric
+    convergence strategies are applied to enhance the training efficiency. Results
+    show that the proposed algorithm can reduce the computation time and the optimal
+    network switching can further improve the wind farms'' safety and economic de-optimization.
+
+
+    problem with high non-convexity and nonlinearity is intractable applying the existing
+    method. Artificial intelligence algorithms proposed by deep reinforcement learning
+    provide possible solutions to this problem.
+
+
+    Many studies have revealed the potential of reinforcement learning in the field
+    of intelligent control, for example, reinforcement learning and Monte Carlo tree
+    search has shown the top player Lee Sedol [5], and the used deep reinforcement
+    algorithm achieved scores higher than human players in various competitions. However,
+    few methods exist to apply reinforcement learning in the field of power system
+    optimization. Melavini Galic et al. introduced a deep learning-based method to
+    solve the problem [7]. Jia Duan et al. proposed a module-based optimal power dispatch
+    method based on deep reinforcement learning [8]. In addition, Zim Yan et al. applied
+    reinforcement learning to the field of grid power frequency control, and proposed
+    a low frequency control (LFC) method, which can well-adjust the frequency error
+    caused by wind power [9]. The methods with continuous and discrete variables like
+    comprehensive optimization of topology and dispatch had been largely explored
+    domain.
+
+
+    Keywords—reinforcement learning, reactive power optimization
+
+
+    # I. INTRODUCTION
+
+
+    Concerning the problem of energy shortage and global warming [1], it is of great
+    significance to develop renewable energy and its importance in the energy structure
+    are the key directions of China structure.
+
+
+    Wind power is one of the renewables with installed capacity. There are a large
+    number of wind farms deployed in the northwest [2]. The distribution of natural
+    resources, generations of wind power have uncertainties, which makes it impossible
+    to control the output of the real-time wind power. Wind power injection has a
+    severe impact on the power system stability. Under certain circumstances it is
+    necessary to balance the wind power to ensure the safety and stability requirement
+    of the power system, resulting in mass waste of energy.
+
+
+    Traditional reactive power optimization models does not take transmission network
+    switching into consideration, which leads to suboptimal utilization of system
+    resources [4]. The optimization considering network switching is a mixed integer
+    nonlinear programming
+
+
+    This work was supported by the Maintenance Company of Gansu Electric Power Company
+    (Project SGGSJ001WJS2005036)
+
+
+    this paper, we adopt deep reinforcement learning with knowledge in the field of
+    power system to meet requirements for security and stability. Offline training
+    reduces the online decision time and provides an adequate solution for reactive
+    power system optimization with wind farm cluster.
+
+
+    In this section, the mathematical model of the problem is established considering
+    the physical constraint and operation. The concepts related to deep reinforcement
+    learning are introduced.
+
+
+    # II. PROBLEM FORMULATION
+
+
+    # A. Mathematical Model and Optimization
+
+
+    The module of reactive power optimization considering network switching is based
+    on the AC reactive power optimization model, and group of binary variables are
+    appended to represent the state of transmission network.'
+  - "[PAGE 1]\n\nThis paper mainly considers the active power loss on transmission\
+    \ lines which should be minimized on the basis of ensuring that the voltage is\
+    \ not out of limit. The objective can be expressed as:\n\n```\n$$\\sum_{i\\in\\\
+    Omega} p_i \\quad (1)$\n```\n\nwhere $p_i$, are the active power injection of\
+    \ node $i$.\n\nThe constraints of the reactive power optimization include:\n\n\
+    +   * Line state constraint\n$x\\theta\\in[0,1] \\quad (2)$\n\n+   * Power flow\
+    \ constraint\n$p_i=(G_iV_i^2-G_{ij}V_iV_j\\cos\\theta_{ij}) \\quad (3)$\n$q_i=(-B_iV_i^2+B_{ij}V_iV_j\\\
+    sin\\theta_{ij}) \\quad (4)$\n\n+   * Power balance constraints\n$p_i-p_i^l=G_{ii}V_i^2+\\\
+    sum_{j\\in\\Omega(i)}p_j \\quad (6)$\n$q_i-q_i^l=-\\frac{1}{2}\\sum_{j\\in\\Omega(i)}b_{ij}V_i^2-B_{ij}V_iV_j+\\\
+    sum_{j\\in\\Omega(i)}q_j \\quad (7)$\n\nwhere $p_i^l$ and $q_i^l$ are the active\
+    \ and reactive load at node $i$, $B_{h,ij}$ and $G_{h,ii}$ are the grounding susceptance\
+    \ and conductance of node $i$ in the equivalent model.\n\n+   * Generator operation\
+    \ constraint\n$p_i^l\\le p_i\\le p_i^u \\quad (8)$\n$q_i^l\\le q_i\\le q_i^u \\\
+    quad (9)$\n\nwhere $p_i^l$ and $p_i^u$ are the upper and lower bound of the active\
+    \ power output of the generator at node $i$.\n\n+   * Security constraints\n$-\t\
+    heta^u\\le\\theta_i\\le\\theta^u \\quad (10)$\n\n```\n$p_i^2+q_i^2\\le(S_i^u)^2\
+    \ \\quad (11)$\n```\n\n```\n$V^l\\leV_i\\leV^u \\quad (12)$\n```\n\n# B. Principle\
+    \ of Deep Reinforcement Learning\n\nThe model of reinforcement learning is based\
+    \ on Markov decision process, which contains the following elements:\n\n+   1)\
+    \ Episode: refers to a period of history data in which an agent interacts with\
+    \ the environment from initial state to terminal state, containing the state,\
+    \ the action taken, and the reward obtained in each iteration.\n\n+   2) Environment:\
+    \ an external object that interacts with the agent. The agent distinguishes the\
+    \ agent's change, and environment returns the reward of the action;\n\n+   3)\
+    \ State: information which determines the decision. The set of state variables\
+    \ is defined as $S$. The state space of the environment in this paper includes:\
+    \ a) voltage and phase angle of wind turbines, b) load of the system, d) status\
+    \ of the alternative circuit breaker are binary variables, 0 means open, e) active\
+    \ power loss of the whole system:\n\n+   4) Action: a operation that the agent\
+    \ can execute. The set of actions is defined as $A$. The action space is divided\
+    \ into slow action space and fast action space; a) reactive power adjustment of\
+    \ the wind turbines, b) terminal voltage adjustment of transmission lines by line\n\
+    \n+   5) Policy $\\pi(a|s)$: the mapping from state to action. The agent evaluates\
+    \ the value of each action on the current environment state $s$, and selects actions\
+    \ according to certain rules, for example, greedy method;\n\n+   6) State transition\
+    \ probability $p(s'|s,a)$: the probability that the environment state transitions\
+    \ from $s'$ to $s$ after the agent executes an action $a$ on the state:\n\n+ \
+    \  7) Reward: a scalar quantity to evaluate the quality of action. After the agent\
+    \ executes an action/or under the guidance of policy the environment returns the\
+    \ remuneration for the current state $s$ so that the agent can modify its policy.\
+    \ In this paper, the reward is composed of economic factors and voltage safety\
+    \ factors. The reward calculation formula is follows:\n\n```\n$$\\sum_{i\\in\\\
+    Omega}(p_i+\\max|V_i|-1|/\\beta) \\quad (13)$\n```\n\n3107"
+  - '[PAGE 2]
+
+
+    β is the conversion factor of emotion and voltage safety.
+
+
+    To estimate the quality of a strategy, define the state-action value function
+    $Q^*(s,a)$:
+
+
+    ```
+
+    $Q^*(s,a) = \mathbb{E}_{s'' \sim p} [r(s,a'') + \gamma V^*(s'')] \quad (14)$
+
+    ```
+
+
+    State-action value function is the basis for strategy optimization. The continuously
+    estimates the revision of the state-action value function through interaction
+    with the environment.
+
+
+    Q-learning is a learning method based on value function, which absorbs the advantages
+    of Monte Carlo method and dynamic programming algorithm [10]. It updates the value
+    function using the following formula:
+
+
+    ```
+
+    $Q^*(s,a) = Q^*(s,a) + \alpha(r + \gamma Q^*(s'',a'') - Q^*(s,a)) \quad (15)$
+
+    ```
+
+
+    The information we need is the current status $s$, the state-action value function
+    in the next state $Q^*(s'',a'')$. The main idea is to optimize the value in each
+    iteration to bridge the gap between the actual reward $r + \gamma Q^*(s'',a'')$
+    and the estimated $Q^*(s,a)$, which is similar to the mechanism of human learning.
+
+
+    Q-learning is very effective for dealing with problems with a finite number of
+    discrete states, but for problems with a large number of states or continuous
+    states, it is obviously impossible to obtain each state-action value function
+    enumeration. In order to calculate the value $Q^*(s,a)$, we use a function $Q(s,a)$
+    to approximate its value, value function approximation:
+
+
+    ```
+
+    $Q(s,a) = Q^*(s,a) \quad (16)$
+
+    ```
+
+
+    The $Q(s,a)$ is usually a neural network Q-network parameters are defined by $\Phi$.
+    The learning process is to learn a parameter $\phi$ to make the output of the
+    network $Q(s,a)$ as close to the real value function $r + \gamma Q^*(s'',a'')$
+    as possible.
+
+
+    However, there are two problems. One is that the training process is unstable[10];
+    the other is that the sample is divided into target and evaluate net. The parameters
+    of the target are fixed for a period of time while the parameters of the evaluate
+    net used to estimate the value function is changing during training stage. This
+    approach stabilizes the parameters and reduces oscillation of
+
+
+    algorithm.
+
+
+    The other method is experience replay. Different from the information using exploration
+    directly, this method uses experience pool to store the obtained data. Batch processing
+    is adopted to randomly sample data from the experience pool for training. This
+    means the correlation between adjacent samples prevents the agent from falling
+    into the local optimum and reduces the variance during parameter update.
+
+
+    # Algorithm: DQN
+
+
+    +   1. Initialize state space $s$, action space $a$, time discount factor rate
+    $\gamma$;
+
+    2. Randomly initialize the experience pool capacity $N$;
+
+    3. Copy $\phi$ to the target network parameters $\Phi$;
+
+    4. While value function does not converge:
+
+    5. Initialize the state $s$;
+
+    6. While not terminal:
+
+    7. Choose an action $a$
+
+    8. Execute $a$, get reward $r$ and next state $s''$
+
+    9. Put $(s,a,r,s'')$ into experience pool
+
+    10. Sampling $s,a,rr''$ in batches to train data
+
+
+    $y = \frac{rr, r + \gamma Q^*(s'',a'')}{ss'', arg Q(s,a)}$, not terminal,
+
+
+    +   12. Train the network with the loss function $(y - Q^*(s,a))^2$;
+
+    13. Update state $s$;
+
+    14. Every steps, copy the parameters of $\phi$ to target net
+
+    15. Output: $Q^*(s,a)$
+
+
+    # III. INACTIVE IN REACTIVE POWER OPTIMIZATION
+
+
+    The primary requirement of power system is stability and reliability. For this
+    reason, special design is required for adaptive protection mechanism considering
+    power system characteristics.
+
+
+    # A. Over-limit Behavior Penalty
+
+
+    Voltage control policy is to maintain the deviation of the bus voltage within
+    a value certain range, the terminal voltage adjustment of the generator is limited
+    by the bus voltage. In addition, there are upper and lower limits of generator,
+    which cannot be further increased or decreased when the generator output reaches
+    the limit. If no penalize on over-limit actions, invalid or fallacious in-formation
+    will enter the experience pool.
+
+
+    In order to fix the over-limit actions, a penalty mechanism for over-limit actions
+    is introduced into the reward, and the reward is divided into state reward and
+    reward choice. The calculation of state reward remains as same as that in (13)
+    while the choice reward relates to whether an over-limit action is taken, the
+    calculation of which is follows:
+
+
+    ```
+
+    choice reward \begin{cases} zero reward (0) , over-limit minus penalty (-5) ,
+    not over \end{cases} \quad (17)
+
+    ```'
+  md: '
+
+    # Deep Reinforcement Learning based Wind Farm Cluster Reactive Power Optimization
+    Considering Network Switching
+
+
+    Xianbe Ke
+
+    Northwest Branch of China State Grid Corporation
+
+    Xian, China
+
+
+    Yaqi Sun
+
+    Department of Electrical Engineering Tsinghua University
+
+    Beijing, China
+
+
+    Gang Zhang
+
+    Northwest Branch of China State Grid Corporation
+
+    Xian, China
+
+
+    Wenchuan Wu
+
+    Department of Electrical Engineering Tsinghua University
+
+    Beijing, China
+
+
+    Abstract—For wind farms clusters, the overall performance of reactive power optimization
+    can be improved via optimal network switching. The problem can be precisely modeled
+    as a mixed integer non programming (MINP) model, which is intractable. A deep
+    reinforcement learning (DRL) algorithm is proposed to solve the real-time performance.
+    There are two stages in this solution, the first stage is the offline training
+    of the agent, and the second stage is the deployment of the trained agent and
+    MINP model. Considering the operational constraints, a learning framework with
+    over-behavior penalty and model-guided constraint with symmetric and asymmetric
+    convergence strategies are applied to enhance the training efficiency. Results
+    show that the proposed algorithm can reduce the computation time and the optimal
+    network switching can further improve the wind farms'' safety and economic de-optimization.
+
+
+    The problem with high non-convexity and nonlinearity is intractable applying the
+    existing method. Artificial intelligence algorithms proposed by deep reinforcement
+    learning provide possible solutions to this problem.
+
+
+    Many studies have revealed the potential of reinforcement learning in the field
+    of intelligent control, for example, reinforcement learning and Monte Carlo tree
+    search has shown the top player Lee Sedol [5], and the used deep reinforcement
+    algorithm achieved scores higher than human players in various competitions. However,
+    few methods exist to apply reinforcement learning in the field of power system
+    optimization. Melavini Galic et al. introduced a deep learning-based method to
+    solve the problem [7]. Jia Duan et al. proposed a module-based optimal power dispatch
+    method based on deep reinforcement learning [8]. In addition, Zim Yan et al. applied
+    reinforcement learning to the field of grid power frequency control, and proposed
+    a low frequency control (LFC) method, which can well-adjust the frequency error
+    caused by wind power [9]. The methods with continuous and discrete variables like
+    comprehensive optimization of topology and dispatch had been largely explored
+    domain.
+
+
+    Keywords—reinforcement learning, reactive power optimization
+
+
+    # I. INTRODUCTION
+
+
+    Concerning the problem of energy shortage and global warming [1], it is of great
+    significance to develop renewable energy and its importance in the energy structure
+    are the key directions of China structure.
+
+
+    Wind power is one of the renewables with installed capacity. There are a large
+    number of wind farms deployed in the northwest [2]. The distribution of natural
+    resources, generations of wind power have uncertainties, which makes it impossible
+    to control the output of the real-time wind power. Wind power injection has a
+    severe impact on the power system stability. Under certain circumstances it is
+    necessary to balance the wind power to ensure the safety and stability requirement
+    of the power system, resulting in mass waste of energy.
+
+
+    Traditional reactive power optimization models does not take transmission network
+    switching into consideration, which leads to suboptimal utilization of system
+    resources [4]. The optimization considering network switching is a mixed integer
+    nonlinear programming-this work was supported by the Maintenance Company of Gansu
+    Electric Power Company (Project SGGSJ001WJS2005036)
+
+
+    this paper, we adopt deep reinforcement learning with knowledge in the field of
+    power system to meet requirements for security and stability. Offline training
+    reduces the online decision time and provides an adequate solution for reactive
+    power system optimization with wind farm cluster.
+
+
+    In this section, the mathematical model of the problem is established considering
+    the physical constraint and operation. The concepts related to deep reinforcement
+    learning are introduced.
+
+
+    # II. PROBLEM FORMULATION
+
+
+    ## A. Mathematical Model and Optimization
+
+
+    The module of reactive power optimization considering network switching is based
+    on the AC reactive power optimization model, and group of binary variables are
+    appended to represent the state of transmission network.
+
+
+    This paper mainly considers the active power loss on transmission lines which
+    should be minimized on the basis of ensuring that the voltage is not out of limit.
+    The objective can be expressed as:
+
+
+    $$\sum_{i\in\Omega} p_i \quad (1)$$
+
+
+    where $p_i$, are the active power injection of node $i$.
+
+
+    The constraints of the reactive power optimization include:
+
+
+    - Line state constraint
+
+    $x\theta\in[0,1] \quad (2)$
+
+
+    - Power flow constraint
+
+    $p_i=(G_iV_i^2-G_{ij}V_iV_j\cos\theta_{ij}) \quad (3)$
+
+    $q_i=(-B_iV_i^2+B_{ij}V_iV_j\sin\theta_{ij}) \quad (4)$
+
+
+    - Power balance constraints
+
+    $p_i-p_i^l=G_{ii}V_i^2+\sum_{j\in\Omega}p_j \quad (6)$
+
+    $q_i-q_i^l=-\frac{1}{2}\sum_{j\in\Omega}B_{ij}V_iV_j+\sum_{j\in\Omega}q_j \quad
+    (7)$
+
+    where $p_i^l$ and $q_i^l$ are the active and reactive load at node $i$, $B_{ij}$
+    and $G_{ii}$ are susceptance and conductance of node $i$.
+
+
+    - Generator operation constraint
+
+    $p_i^l\le p_i\le p_i^u \quad (8)$
+
+    $q_i^l\le q_i\le q_i^u \quad (9)$
+
+    where $p_i^l$ and $q_i^u$ are the upper and lower bound of the active power output
+    of generator at node $i$.
+
+
+    - Security constraints
+
+    $-\theta_i^u\le\theta_i\le\theta_i^u \quad (10)$
+
+    $p_i^2+q_i^2\le\theta_i^u \quad (11)$
+
+    $V_i^l\le V_i\le V_i^u \quad (12)$
+
+
+    ## B. Principle of Deep Reinforcement Learning
+
+
+    The model of reinforcement learning is based on Markov decision process, which
+    contains the following elements:
+
+
+    - Episode: refers to a period of history in which agent interacts with environment
+    from initial state to terminal state, containing the state, the action taken,
+    and reward obtained in each iteration
+
+    - Environment: an external object that interacts with the agent. The agent distinguishes
+    the agent''s change, and environment returns the reward of the action
+
+    - State: information which determines the decision. The set of state variables
+    is defined as $S$. The state space of environment includes: a) voltage and phase
+    angle of wind turbines, b) load of system, d) status of circuit breaker are binary
+    variables, 0 means open, e) active power loss of whole system
+
+    - Action: a operation that the agent can execute. The set of actions is defined
+    as $A$. The action space is divided into slow action space and fast action space;
+    a) reactive power adjustment of wind turbines, b) terminal voltage adjustment
+    of transmission lines
+
+    - Policy $\pi(a|s)$: the mapping from state to action. The agent evaluates the
+    value of each action on current environment state $s$, and selects actions according
+    to certain rules, for example, greedy method
+
+    - State transition probability $p(s''|s,a)$: the probability that the environment
+    state transitions from $s''$ to $s$ after the agent executes an action $a$ on
+    the state
+
+    - Reward: a scalar quantity to evaluate the quality of action. After the agent
+    executes an action under guidance of policy the environment returns the remuneration
+    for the current state $s$ so that the agent can modify its policy. In this paper,
+    the reward is composed of economic factors and voltage safety. The reward calculation
+    formula follows:
+
+
+    $$\sum_{i\in\Omega}(p_i+\max|V_i|-1/\beta) \quad (13)$$
+
+
+    $\beta$ is the conversion factor of emotion and voltage safety.
+
+
+    To estimate the quality of a strategy, define the state-action value function
+    $Q^*(s,a)$:
+
+
+    $$Q^*(s,a) = \mathbb{E}_{s'' \sim p} [r(s,a'') + \gamma V^*(s'')] \quad (14)$$
+
+
+    State-action value function is the basis for strategy optimization. The continuously
+    estimates the revision of the state-action value function through interaction
+    with the environment.
+
+
+    Q-learning is a learning method based on value function, which absorbs the advantages
+    of Monte Carlo method and dynamic programming algorithm [10]. It updates the value
+    function using the following formula:
+
+
+    $$Q^*(s,a) = Q^*(s,a) + \alpha(r + \gamma Q^*(s'',a'') - Q^*(s,a)) \quad (15)$$
+
+
+    The information we need is the current status $s$, the state-action value function
+    in the next state $Q^*(s'',a'')$. The main idea is to optimize the value in each
+    iteration to bridge the gap between the actual reward $r + \gamma Q^*(s'',a'')$
+    and the estimated $Q^*(s,a)$, which is similar to the mechanism of human learning.
+
+
+    Q-learning is very effective for dealing with problems with a finite number of
+    discrete states, but for problems with a large number of states or continuous
+    states, it is obviously impossible to obtain each state-action value function
+    enumeration. In order to calculate the value $Q^*(s,a)$, we use a function $Q(s,a)$
+    to approximate its value, value function approximation:
+
+
+    $$Q(s,a) = Q^*(s,a) \quad (16)$$
+
+
+    The $Q(s,a)$ is usually a neural network Q-network parameters are defined by $\Phi$.
+    The learning process is to learn a parameter $\phi$ to make the output of the
+    network $Q(s,a)$ as close to the real value function $r + \gamma Q^*(s'',a'')$
+    as possible.
+
+
+    However, there are two problems. One is that the training process is unstable;
+    the other is that the sample is divided into target and evaluate net. The parameters
+    of the target are fixed for a period of time while the parameters of evaluate
+    net is changing during training.
+
+
+    The other method is experience replay. Different from the information using directly,
+    this method uses experience pool to store obtained data. Batch processing is adopted
+    to randomly sample from experience pool for training. This means the correlation
+    between adjacent samples reduces the variance during parameter update.
+
+
+    # Algorithm: DQN
+
+
+    1. Initialize state space $s$, action space $a$, time discount factor $\gamma$;
+
+    2. Randomly initialize the experience pool capacity $N$;
+
+    3. Copy $\phi$ to the target network $\Phi$;
+
+    4. While value function does not converge:
+
+    5. Initialize the state $s$;
+
+    6. While not terminal:
+
+    7. Choose an action $a$
+
+    8. Execute $a$, get reward $r$ and next state $s''$
+
+    9. Put $(s,a,r,s'')$ into experience pool
+
+    10. Sampling $s,a,rr''$ in batches to train data
+
+    $y = \frac{r + \gamma Q^*(s'',a'')}{ss''}$, not terminal,
+
+    11. Train the network with the loss function $(y - Q^*(s,a))^2$;
+
+    12. Update state $s$;
+
+    13. Every steps, copy the parameters of $\phi$ to target net
+
+    14. Output: $Q^*(s,a)$
+
+
+    # III. INACTIVE IN REACTIVE POWER OPTIMIZATION
+
+
+    The primary requirement of power system is stability and reliability. For this
+    reason, special design is required for adaptive protection mechanism considering
+    power system characteristics.
+
+
+    ## A. Over-limit Behavior Penalty
+
+
+    Voltage control policy is to maintain the deviation of the bus voltage within
+    a value certain range, the terminal voltage adjustment of the generator is limited
+    by the bus voltage. In addition, there are upper and lower limits of generator,
+    which cannot be further increased or decreased when the generator output reaches
+    the limit. If no penalize on over-limit actions, invalid or fallacious information
+    will enter the experience pool.
+
+
+    In order to fix the over-limit actions, a penalty mechanism for over-limit actions
+    is introduced into the reward, and the reward is divided into state reward and
+    reward choice. The calculation of state reward remains as same as that in (13)
+    while the choice reward relates to whether an over-limit action is taken, the
+    calculation of which is follows:
+
+
+    $$choice reward \begin{cases} zero reward (0) , over-limit minus penalty (-5)
+    , not over \end{cases} \quad (17)$$
+
+    '
+  mdcn: '
+
+
+    # 考虑网络切换的深度强化学习风电场集群无功功率优化
+
+
+    Ke Xianbe
+
+    中国国家电网公司西北分公司
+
+    中国 西安
+
+
+    Sun Yaqi
+
+    清华大学电气工程系
+
+    中国北京
+
+
+    Zhang Gang
+
+    中国国家电网公司西北分公司
+
+    中国 西安
+
+
+    Wu Wenchuan
+
+    清华大学电气工程系
+
+    中国北京
+
+
+    摘要——对于风电场集群，通过最优网络切换可以提高无功优化的整体性能。该问题可以精确地建模为混合整数非线性（MINP）模型，而该模型是难以求解的。提出了一种深度强化学习（DRL）算法来解决实时性能。该方案包含两个阶段：第一阶段是智能体的离线训练，第二阶段是训练好的智能体MINP模型的部署。考虑到运行约束，采用了具有越行为惩罚的学习框架以及具有对称和非对称收敛策略的模型引导约束，以提高训练效率。结果表明，所提算法可以缩短计算时间，最优网络切换可以进一步提高风电场的安全经济优化水平。
+
+
+    具有高非凸性和非线性的问题，现有方法难以处理。深度强化学习提出的人工智能算法为该问题提供了可能的解决方案。
+
+
+    许多研究揭示了强化学习在智能控制领域的潜力，例如，强化学习和蒙特卡洛树搜索帮助顶级棋手李世石[5]，使用的深度强化学习算法在各种比赛中取得了高于人类选手的得分。然而，将强化学习应用于电力系统优化领域的方法很少。Melavini
+    Galic等人引入了一种基于深度学习的方法来解决问题[7]。Duan Jia等人提出了基于深度强化学习的模块化最优潮流调度方法[8]。此外，Yan Zim等人将强化学习应用于电网频率控制领域，提出了一种低频控制（LFC）方法，可以很好地调节风电引起的频率误差[9]。涉及连续和离散变量的方法（如拓扑与调度综合优化）已得到探索。
+
+
+    关键词——强化学习，无功优化
+
+
+    # I. 引言
+
+
+    针对能源短缺和全球变暖问题[1]，开发可再生能源及其在能源结构中的重要性是中国结构调整的关键方向。
+
+
+    风电是装机容量最大的可再生能源之一。西北地区部署了大量的风电场[2]。由于资源的分布，风电发电具有不确定性，使得无法控制实时风电的输出。风电接入对电力系统的稳定性有严重影响。在某些情况下，必须平衡风电以确保电力系统的安全稳定要求，导致了能量的大量浪费。
+
+
+    传统的无功优化模型没有考虑输电网络切换，导致系统资源利用率并非最优[4]。考虑网络切换的优化是一个混合整数非线性规划——本工作得到了甘肃电力公司维护公司（项目号SGGSJ001WJS2005036）的支持。
+
+
+    本文，我们采用了结合电力系统知识的深度强化学习来满足安全稳定要求。离线训练缩短了在线决策时间，并为风电场集群无功系统优化提供了充分的解决方案。
+
+
+    在本节中考虑物理约束和运行建立了问题的数学模型。引入了深度强化学习的相关概念。
+
+
+    # II. 问题建模
+
+
+    ## A. 数学模型与优化
+
+
+    考虑网络切换的无功优化模块基于交流无功优化模型，并添加一组二进制变量来表示输电网的状态。
+
+
+    本文主要考虑输线上的有功损耗，在确保电压不超过限值的情况下使其最小化。目标可以表示为：
+
+
+    $$\sum_{i\in\Omega} p_i \quad (1)$$
+
+
+    其中$p_i$是节点$i$的有功功率注入。
+
+
+    无功优化的约束包括：
+
+
+    - 线路状态约束
+
+    $x\in[0,1] \quad (2)$
+
+
+    - 潮流约束
+
+    $p_i=(G_iV_i^2-G_{ij}V_j\cos\theta_{ij}) \quad (3)$
+
+    $q_i=(-B_iV_i^2+B_{ij}V_j\sin\theta_{ij}) \quad (4)$
+
+
+    - 功率平衡约束
+
+    $p_i-p_i^l=G_{ii}V_i^2+\sum_{j\in\Omega}p_j \quad (6)$
+
+    $q_i-q_i^l=-\frac{1}{2}\sum_{j\in\Omega}B_{ij}V_iV_j \quad (7)$
+
+    其中$p_i^l$和$q_i^l$是节点$i$的有功和无功负载，$B_{ij}$和$G_{ii}$是节点的电纳和电导。
+
+
+    - 发电机运行约束
+
+    $p_i^l\le p_i\le p_i^u \quad (8)$
+
+    $q_i^l\le q_i\le q_i^u \quad (9)$
+
+    其中$p_i^l$和$p_i^u$是节点$i$有功功率输出的上下限。
+
+
+    - 安全约束
+
+    $-\theta_i^u\le\theta_i\le\theta_i^u \quad (10)$
+
+    $p_i^2+q_i^2\le\theta_i^u \quad (11)$
+
+    $V_i^l\le V_i\le V_i^u \quad (12)$
+
+
+    ## B. 深度强化学习原理
+
+
+    强化学习模型基于马尔可夫决策过程，包含以下元素：
+
+
+    - 回合（Episode）：指智能体从初始状态到终止状态的历史期间，包含状态、采取的动作以及迭代获得的奖励。
+
+    - 环境：与智能体交互的外部对象。环境根据智能体的变化返回奖励。
+
+    - 状态：决定决策的信息。状态变量集定义为$S$。环境状态空间包括：a) 风电机的电压和相位；b) 系统的负载；d) 断路器状态（二进制变量）；e) 系统的有功损耗。
+
+    - 动作：智能体可以执行的操作。动作集定义为$A$。动作空间分为慢动作和快动作；a) 风电机的无功调节；b) 输线的电压调节。
+
+    - 策略$\pi(a|s)$：从状态到动作的映射。智能体评估当前环境状态$s$下每个动作的价值，并根据某些规则（例如贪婪方法）选择动作。
+
+    - 状态转移概率$p(s''|s,a)$：智能体在状态执行动作$a$后，环境状态从$s$转移到$s''$的概率。
+
+    - 奖励：评估动作质量的标量。智能体在策略指导下执行动作后，环境返回当前状态的报酬以便修改策略。本文，奖励由经济因素和电压安全组成。奖励计算公式如下：
+
+
+    $$\sum_{i\in\Omega}(p_i+\max|V_i|-1/\beta) \quad (13)$$
+
+
+    $\beta$是经济与电压安全的转换因子。
+
+
+    为了估计策略的质量，定义状态动作价值函数$Q^*(s,a)$：
+
+
+    $$Q^*(s,a) = \mathbb{E}_{s'' \sim p} [r(s,a'') + \gamma V^*(s'')] \quad (14)$$
+
+
+    状态动作价值函数是策略优化的基础。通过与环境交互连续估计状态动作价值函数。
+
+
+    Q学习是一种基于价值函数的学习方法，吸收了蒙特卡洛方法和动态规划算法的优点[10]。使用以下公式更新价值函数：
+
+
+    $$Q^*(s,a) = Q^*(s,a) + \alpha(r + \gamma Q^*(s'',a'') - Q^*(s,a)) \quad (15)$$
+
+
+    我们需要的信息是当前状态$s$，以及下一状态的状态动作价值函数$Q^*(s'',a'')$。主要思想是在每次迭代中优化价值，以弥补实际奖励$r + \gamma
+    Q^*(s'',a'')$与估计值$Q^*(s,a)$之间的差距，这类似于人类的学习机制。
+
+
+    Q学习处理有限离散状态的问题非常有效，但对于大量状态或连续状态的问题，显然无法获得每个状态动作价值函数的枚举。为了计算值$Q^*(s,a)$，我们使用函数$Q(s,a)$来近似其值，即价值函数近似：
+
+
+    $$Q(s,a) = Q^*(s,a) \quad (16)$$
+
+
+    $Q(s,a)$通常是一个神经网络，Q网络参数由$\Phi$定义。学习过程是学习一个参数$\phi$，使得网络输出$Q(s,a)$尽可能接近真实的价值函数$r
+    + \gamma Q^*(s'',a'')$。
+
+
+    然而，存在两个问题。一个是训练过程不稳定；另一个是样本分为目标和评估网络。目标网络一段时间内固定，而评估网络在训练期间变化。
+
+
+    另一种方法是经验回放。不同于直接使用信息，该方法使用经验池存储数据。采用批量处理。这意味着减少了相邻样本之间的相关性。
+
+
+    # 算法 DQN
+
+
+    1. 初始化状态空间$s$，动作空间$a$，折扣因子$\gamma$；
+
+    2. 随机初始化经验池容量$N$；
+
+    3. 将$\phi$拷贝到目标网络$\Phi$；
+
+    4. 当价值函数未收敛时：
+
+    5. 初始化状态$s$；
+
+    6. 当未终止时：
+
+    7. 选择动作$a$；
+
+    8. 执行$a$，获得奖励$r$和下一状态$s''$；
+
+    9. 将$(s,a,r,s'')$放入经验池；
+
+    10. 批量采样$s,a,rr''$进行训练数据$y = r + \gamma Q^*(s'',a'')$（未终止）；
+
+    11. 使用损失函数$(y - Q^*(s,a))^2$训练网络；
+
+    12. 更新状态$s$；
+
+    13. 每隔若干步，将$\phi$拷贝到目标网络；
+
+    14. 输出：$Q^*(s,a)$
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 3]
+
+
+    When calculating the total reward, whether the action has caused the constraint
+    to exceed the bound will be prioritized to determine the reward for the action.
+    If the action is not over-limit, simulation will be performed on operating indicators
+    such as power loss and node voltage to calculate the state, which will be merged
+    into the total reward; otherwise, the reward is directly output. The flow chart
+    for calculating rewards shows Fig. 1.
+
+
+    ![](img/cf7065e69b6b14dd79340a2bc93afda4_3_0.png)
+
+
+    Fig. 1. Reward calculation process
+
+
+    The over-limit penalty introduced by choice rewards can guide the agent to avoid
+    over-limit behavior when the generator or node voltage reaches the lower bounds,
+    improving the training efficiency and the rationality of the results.
+
+
+    # B. Model-guided control
+
+
+    Neural network training is relatively sensitive to reward settings and can entirely
+    output a wrong action, which may lead to long-term effects on power system. For
+    the purpose of ensuring the performance in real environment, this paper adopts
+    the model-guided control strategy. The trained algorithm outputs the two actions
+    in the Q-network set. According to the simulation results, the action with the
+    greater return will be selected from candidate action set. The execution flow
+    chart of the strategy shows in Fig. 2.
+
+
+    ![](img/cf7065e69b6b14dd79340a2bc93afda4_3_1.png)
+
+
+    Fig. 2. Model-guided control
+
+
+    This method can prevent the agent from relying on the judgement of the Q-network,
+    which can increase the fault tolerance of the algorithm.
+
+
+    # IV. CASE STUDY
+
+
+    Numerical study is performed to verify the effectiveness of reactive power optimization
+    considering line switching.
+
+
+    # A. Test Conditions
+
+
+    In order to simulate the real power system environment, this paper uses the Python-based
+    PYPOWER platform, PYPOWER is a Python library that can solve power flow and optimal
+    power flow (OPF).
+
+
+    The IEEE-238 bus system used in this study carries 33 generators, 38 lines and
+    5 transformers. The generators are installed at 11 nodes. The range of active
+    power generation is 10300MW, and those of reactive power is -535MVar to 1776MVar.
+    The total active load and reactive load in the system are 2850MW and 580MVar respectively,
+    and this load level is treated as the rated load.
+
+
+    ![](img/cf7065e69b6b14dd79340a2bc93afda4_3_2.png)
+
+
+    Fig. 3. IEEE 22-bus system
+
+
+    # B. Comparative Analysis
+
+
+    We model the generators at each bus as wind turbines to simulate condition when
+    the wind farm is connected to the grid. In order to test the ability of the algorithm
+    to control reactive power optimization when the output of wind turbines is, we
+    set the operating level of the system to 40% of the rated load.
+
+
+    | TABLE I. HYPER-PARAMETER SETTING |
+
+    | Hyper-parameters | Value |
+
+    | Learning rate | 0.001 |
+
+    | Memory size | 32000 |
+
+    | Batch size | 256 |
+
+    | Epoch length | 64 |
+
+
+    During the training stage, DDQN algorithm shows good convergence properties. The
+    algorithm nearly converges to the optimal value after about 200 episodes.
+
+
+    ![](img/cf7065e69b6b14dd79340a2bc93afda4_3_3.png)
+
+
+    Fig. 4. Active power loss curve in training
+
+
+    For the purpose of verifying the effectiveness of the algorithm, comparative analysis
+    has been performed between the configuration when line switching is in the action
+    space. The two agents are trained for the same time, and perform reactive power
+    optimization on the transmission network respectively.'
+  - '[PAGE 4]
+
+
+    # IEEE2020
+
+    Oct. 30 - Nov. 1, 2020, Wuhan, China
+
+
+    ![](img/cf7065e69b6b14dd79340a2bc93afda4_4_0.png)
+
+
+    Fig.5. Active power reward and loss in online-running stage.
+
+
+    It can be seen from Fig.5 that the deep reinforcement learning algorithm rewards
+    the decision-making time during online operation through the offlining training
+    procedure.
+
+
+    # V. CONCLUSION
+
+
+    In this paper, a reactive power optimization method considering switching is proposed
+    to address the impact of random power injection on the transmission network. DDQN,
+    an algorithm with frequency experience methods, helps to solve nonlinear and non-convex
+    model. Taking into account the requirements of stability and security, a penalty
+    for over-limit voltage-based control is added to the algorithm. Numerical analysis
+    shows that the results of reactive power optimization after considering switching
+    can be improved and the online operating time also within the acceptable range.
+
+
+    It has been revealed from Fig.5 that the reward of algorithm and the effect of
+    reactive power optimization have improved after adding line switch to the control
+    methods. Reactive power optimization that transmission network switching into
+    has lower active power and higher reward. Furthermore, the variation trend of
+    reward and active power is basically opposite, which indicates the designed reward
+    function conforms to the actual conditions.
+
+
+    ![](img/cf7065e69b6b14dd79340a2bc93afda4_4_1.png)
+
+
+    Fig.6. The voltage optimization result with without line switching in action stage.
+
+
+    To further study the cost of the algorithm, we will give the time of the algorithm
+    under different load levels.
+
+
+    # TABLE II. CALCULATION TIME FOR DIFFERENT SCENARIOS
+
+
+    | Operating level | Training time | Online running time |
+
+    |---|---|--|
+
+    | 40% | | 9.5s |
+
+    | 50% | | 12.4s |
+
+    | 60% | 2491.5s | 13.5s |
+
+    | 70% | | 10.7s |
+
+
+    +   [1] Robert G. Watts, Global Awareness and the Future of the Earth., Margaret
+    Clayton, 2007.
+
+    [2] Y. Zhang, W. Ningbo, K. Ding, Q. Zhou, P. Gao and Z. Zhang, “The Key Technology
+    of Control System of Wind Power and Load,” 2019 14th International Conference
+    on IEEE Smart Grid Building and Services (ISGBS), Wuhan, China.
+
+    [3] K. Gao et al., “The Study of Switching-Complementary Power Generation Grid,”
+    2018 International Conference on Virtual Reality and Intelligence Systems (VICRS),
+    China, 225–238.
+
+    [4] Y. Zhang, H. Zhang, A. Bose, A. Zhou, “LINEAR-OPF Model With Reactive Power
+    and Voltage Magnitude: A Pathway to Improve the ON-DC in IEEE Power Systems, vol.
+    30, no. 2, pp. 1734–1744.
+
+    [5] S. Liu, J. Zhou, K. Kimura, A. Altomaugh, A. Huang, G. Gue, T. Lifter, B.
+    Baker, M. Lai, A. Bolton, Y. Lillicramp, F. Hu, F. Li, G. van den Dries, T. de
+    Hassiele, “Mastering the game of go without human assistance,” Nature, 550, 354–359.
+
+    [6] G. M. Belloche, V. Nodal, J. Vern, and M. Bowling, “Reinforcement Learning
+    Environment: An Application Platform for Intelligent Agents,” JOURNAL OF ARTIFICIAL
+    INTELLIGENCE, vol. 25, pp. 227–239, 2020.
+
+    [7] M. Galvic, “Reinforcement learning for electric power system and control problems:
+    A review and perspectives,” IEEE TRANSACTIONS ON INDUSTRIAL ELECTRONICS vol. 66,
+    no. 6, pp. 2390–2403, 2020.
+
+    [8] D. Bajaj, H. Haifeng, Z. Xiao, D. Ruisheng, Z. Bei, D. Shi, L. Xiao, W. Zhouwei,
+    and Y. Sui, “A Deep Reinforcement Learning Based Active Power Distribution with
+    Demand Constraints,”
+
+    [9] Z. Yan and Y. Xu, “Data-Driven Load Frequency Control for Stochastic Power
+    Systems: A Deep Reinforcement Learning Method With Convolutional Search,” IEEE
+    TRANSACTIONS ON POWER SYSTEMS, vol. 34, pp. 1653–1656, 2019.
+
+    Richard S. Sutton and Andrew G. Barto, Reinforcement Learning: Introduction,2nd
+    ed. Cambridge: MIT Press, 2018.'
+  md: '
+
+    When calculating the total reward, whether the action has caused the constraint
+    to exceed the bound will be prioritized to determine the reward for the action.
+    If the action is not over-limit, simulation will be performed on operating indicators
+    such as power loss and node voltage to calculate the state, which will be merged
+    into the total reward; otherwise, the reward is directly output. The flow chart
+    for calculating rewards shows Fig. 1.
+
+
+    ![](img/cf7065e69b6b14dd79340a2bc93afda4_3_0.png)
+
+
+    Fig. 1. Reward calculation process
+
+
+    The over-limit penalty introduced by choice rewards can guide the agent to avoid
+    over-limit behavior when the generator or node voltage reaches the lower bounds,
+    improving the training efficiency and the rationality of the results.
+
+
+    ## B. Model-guided control
+
+
+    Neural network training is relatively sensitive to reward settings and can entirely
+    output a wrong action, which may lead to long-term effects on power system. For
+    the purpose of ensuring the performance in real environment, this paper adopts
+    the model-guided control strategy. The trained algorithm outputs the two actions
+    in the Q-network set. According to the simulation results, the action with the
+    greater return will be selected from candidate action set. The execution flow
+    chart of the strategy shows in Fig. 2.
+
+
+    ![](img/cf7065e69b6b14dd79340a2bc93afda4_3_1.png)
+
+
+    Fig. 2. Model-guided control
+
+
+    This method can prevent the agent from relying on the judgement of the Q-network,
+    which can increase the fault tolerance of the algorithm.
+
+
+    ## IV. CASE STUDY
+
+
+    Numerical study is performed to verify the effectiveness of reactive power optimization
+    considering line switching.
+
+
+    ### A. Test Conditions
+
+
+    In order to simulate the real power system environment, this paper uses the Python-based
+    PYPOWER platform, PYPOWER is a Python library that can solve power flow and optimal
+    power flow (OPF).
+
+
+    The IEEE-238 bus system used in this study carries 33 generators, 38 lines and
+    5 transformers. The generators are installed at 11 nodes. The range of active
+    power generation is 10300MW, and those of reactive power is -535MVar to 1776MVar.
+    The total active load and reactive load in the system are 2850MW and 580MVar respectively,
+    and this load level is treated as the rated load.
+
+
+    ![](img/cf7065e69b6b14dd79340a2bc93afda4_3_2.png)
+
+
+    Fig. 3. IEEE 22-bus system
+
+
+    ### B. Comparative Analysis
+
+
+    We model the generators at each bus as wind turbines to simulate condition when
+    the wind farm is connected to the grid. In order to test the ability of the algorithm
+    to control reactive power optimization when the output of wind turbines is, we
+    set the operating level of the system to 40% of the rated load.
+
+
+    | TABLE I. HYPER-PARAMETER SETTING |
+
+    | Hyper-parameters | Value |
+
+    | :--- | :--- |
+
+    | Learning rate | 0.001 |
+
+    | Memory size | 32000 |
+
+    | Batch size | 256 |
+
+    | Epoch length | 64 |
+
+
+    During the training stage, DDQN algorithm shows good convergence properties. The
+    algorithm nearly converges to the optimal value after about 200 episodes.
+
+
+    ![](img/cf7065e69b6b14dd79340a2bc93afda4_3_3.png)
+
+
+    Fig. 4. Active power loss curve in training
+
+
+    For the purpose of verifying the effectiveness of the algorithm, comparative analysis
+    has been performed between the configuration when line switching is in the action
+    space. The two agents are trained for the same time, and perform reactive power
+    optimization on the transmission network respectively.
+
+
+    # IEEE2020
+
+    Oct. 30 - Nov. 1, 2020, Wuhan, China
+
+
+    ![](img/cf7065e69b6b14dd79340a2bc93afda4_4_0.png)
+
+
+    Fig. 5. Active power reward and loss in online-running stage.
+
+
+    It can be seen from Fig.5 that the deep reinforcement learning algorithm rewards
+    the decision-making time during online operation through the offlining training
+    procedure.
+
+
+    ## V. CONCLUSION
+
+
+    In this paper, a reactive power optimization method considering switching is proposed
+    to address the impact of random power injection on the transmission network. DDQN,
+    an algorithm with frequency experience methods, helps to solve nonlinear and non-convex
+    model. Taking into account the requirements of stability and security, a penalty
+    for over-limit voltage-based control is added to the algorithm. Numerical analysis
+    shows that the results of reactive power optimization after considering switching
+    can be improved and the online operating time also within the acceptable range.
+
+
+    It has been revealed from Fig.5 that the reward of algorithm and the effect of
+    reactive power optimization have improved after adding line switch to the control
+    methods. Reactive power optimization that transmission network switching into
+    has lower active power and higher reward. Furthermore, the variation trend of
+    reward and active power is basically opposite, which indicates the designed reward
+    function conforms to the actual conditions.
+
+
+    ![](img/cf7065e69b6b14dd79340a2bc93afda4_4_1.png)
+
+
+    Fig. 6. The voltage optimization result with without line switching in action
+    stage.
+
+
+    To further study the cost of the algorithm, we will give the time of the algorithm
+    under different load levels.
+
+
+    | TABLE II. CALCULATION TIME FOR DIFFERENT SCENARIOS |
+
+
+    | Operating level | Training time | Online running time |
+
+    | :--- | :--- | :--- |
+
+    | 40% | | 9.5s |
+
+    | 50% | | 12.4s |
+
+    | 60% | 2491.5s | 13.5s |
+
+    | 70% | | 10.7s |
+
+    '
+  mdcn: '
+
+
+    在计算总奖励时，将优先考虑动作是否导致约束超过界限，以确定该动作的奖励。如果动作未超限，将对功率损耗和节点电压等运行指标进行仿真以计算状态，并将其合并到总奖励中；否则，直接输出奖励。奖励计算的流程图1所示。
+
+
+    ![](img/cf7065e69b6b14dd79340a2bc93afda4_3_0.png)
+
+
+    图1. 奖励计算过程
+
+
+    由选择奖励引入的超限惩罚可以引导智能体在发电机或节点电压达到下限时避免超限行为，提高训练效率和结果的合理性。
+
+
+    ## B. 模型引导的控制
+
+
+    神经网络训练对奖励设置相对敏感，可能会输出完全错误的动作，这可能对电系统产生长期影响。为了确保在真实环境中的性能，本文采取了模型引导的控制策略。训练后的算法输出
+    Q 网络集中的两个动作。根据仿真结果，将从候选动作集中选择回报较大的动作。该策略的执行流程图如图2所示。
+
+
+    ![](img/cf7065e69b6b14dd79340a2bc93afda4_3_1.png)
+
+
+    图2. 模型引导的控制
+
+
+    这种方法可以防止智能体依赖 Q 网络的判断，从而增加算法的容错性。
+
+
+    ## IV. 案例研究
+
+
+    通过数值研究来验证考虑线路开关的无功优化的有效性。
+
+
+    ### A. 测试条件
+
+
+    为了模拟真实的电系统环境，本文使用了基于 Python 的 PYPOWER 平台，PYPOWER 是一个可以求解潮流和最优潮流（OPF）的 Python 库。
+
+
+    本研究使用的 IEEE-238 节点系统包含 33 台发电机、38 条线路和 5 台变压器。发电机安装在 11 个节点上。有功功率发电范围为 10300MW，无功功率范围为
+    -535MVar 到 1776MVar。系统的总有功负载和无功负载分别为 2850MW 和 580MVar，该负载水平被视为额定负载。
+
+
+    ![](img/cf7065e69b6b14dd79340a2bc93afda4_3_2.png)
+
+
+    图3. IEEE 22 节点系统
+
+
+    ### B. 比较分析
+
+
+    我们将每个节点上的发电机建模为风力发电机，以模拟风场接入电网的情况。为了测试算法在风力发电机输出时控制无功优化的能力，我们将系统的运行水平设置为额定负载的
+    40%。
+
+
+    | 表 I. 超参数设置 |
+
+    | 超参数 | 值 |
+
+    | :--- | :--- |
+
+    | 学习率 | 0.001 |
+
+    | 内存大小 | 32000 |
+
+    | 批量大小 | 256 |
+
+    | Epoch 长度 | 64 |
+
+
+    在训练阶段，DDQN 算法表现出良好的收敛性。算法在约 200 个回合后几乎收敛到最优值。
+
+
+    ![](img/cf7065e69b6b14dd79340a2bc93afda4_3_3.png)
+
+
+    图4. 训练中的有功损耗曲线
+
+
+    为了验证算法的有效性，在线路开关处于动作空间时的配置进行了比较分析。两个智能体经过相同时间的训练，分别对输电电网进行无功优化。
+
+
+    # IEEE2020
+
+    2020年10月30日 -11月1日，中国武汉
+
+
+    ![](img/cf7065e69b6b14dd79340a2bc93afda4_4_0.png)
+
+
+    图5. 在线运行阶段的有功奖励和损失。
+
+
+    从图5可以看出，深度强化学习算法通过离线训练程序奖励了在线运行期间的决策时间。
+
+
+    ## V. 结论
+
+
+    本文提出了一种考虑开关的无功优化方法，以解决随机功率注入对输电电网的影响。DDQN 作为一种具有频率经验方法的算法，有助于求解非线性和非凸模型。考虑到稳定性和安全性要求，算法中增加了基于超限电压控制的惩罚。数值分析表明，考虑开关后的无功优化结果可以得到改进，在线运行时间也在接受范围内。
+
+
+    从图5可以发现，在控制方法中加入线路开关后，算法的奖励和无功优化的效果得到了提高。输电电网切换后的无功优化具有更低的有功功率和更高的奖励。此外，奖励和有功功率的变化趋势基本相反，这表明设计的奖励函数符合实际情况。
+
+
+    ![](img/cf7065e69b6b14dd79340a2bc93afda4_4_1.png)
+
+
+    图6. 动作阶段有无线路开关的电压优化结果。
+
+
+    为了进一步研究算法的成本，我们将给出不同负载水平下的算法时间。
+
+
+    | 表 II. 不同场景的计算时间 |
+
+
+    | 运行水平 | 训练时间 | 在线运行时间 |
+
+    | :--- | :--- | :--- |
+
+    | 40% | | 9.5s |
+
+    | 50% | | 12.4s |
+
+    | 60% | 2491.5s | 13.5s |
+
+    | 70% | | 10.7s |
+
+
+    '
+  merge: 0
