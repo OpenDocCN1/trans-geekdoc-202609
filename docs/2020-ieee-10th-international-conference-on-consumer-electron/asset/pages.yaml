@@ -1,0 +1,497 @@
+- pgno: 0
+  md: '# # Deep Learning Methods for Indian Sign Language Recognition
+
+
+    **Pratik Likhar** **Neel Kamal Bhagat** **Dr. Ratha G N**
+
+    Department of Electrical Engineering Department of Electrical Engineering Department
+    of Electrical Engineering
+
+    Institute of Sign Language Bangalore Institute of Sign Language Bangalore Institute
+    of Sign Language Bangalore\Bengaluru, India Bengaluru, India Bengaluru, India
+
+    pratiklikhar@iiscac.in neelbaghat@iiscac.in ratha@iiscac.in
+
+
+    Abstract—Indian Sign Language is the language used by specially people in India.
+    Generally people have no understanding of the sign language which hampers the
+    communication between them and others. To bridge this gap we have used two approaches
+    to solve this problem. One using the depth-RGB data captured using a Microsoft
+    Kinect and predicting the gestures in real time. For segmenting the hand obtained
+    through 3D reconstruction and affine transformation we map the depth and RGB information.
+    Convolutional neural networks were used to segment the 36 static gestures from
+    Indian Sign Language and trained a classification accuracy of 98.31%. The test
+    model also showed a good performance with classification accuracy of 97.71%. LSTM
+    with a convolutional kernel was used for training 10 dynamic gestures.
+
+
+    to gesture, it is a challenging task to recognize gestures in IS. This turn increases
+    the complexity while employing features like Hough Transform [3] and Scale Invariant
+    Feature Transform [4]. We know that background complexity also plays a huge role
+    in the accuracy of predictions. We have also seen that techniques using colour
+    segmentation and Otus Technique [5] may be employed, but they have limitations
+    with respect to the background. In this paper we have used two approaches. First
+    using depth-based segmentation (Kinect RGB-D) and the second using semantic segmentation
+    (normal RGB data). The problem of lock of one to making between the RGB pixels
+    and depth information provides the segmentation of the hand. This task is tackled
+    in Section IV of A paper. Furthermore, semantic segmentation can be very problematic
+    when using depth information. This enables us to get rid of the bulky RGB-D camera
+    and use a normal RGB camera. But there is a tradeoff for using its computational
+    complexity. For utilizing method method CNNs were used to learn the deep learning
+    architecture as we were already segmenting the hand regions using
+
+
+    Methods—Indian Sign Language, U-Net, ResNet, Semantic Segmentation, CNN, LSTM,
+    Kinect
+
+
+    # I. INTRODUCTION
+
+
+    Indian sign language is the language used in India that contains standard hand
+    gestures which are used by impaired people for communication. The general people
+    have no knowledge of the sign gestures as these gestures are extremely complex
+    and which turn hampers the knowledge sharing between impaired people and the general
+    people. In spite of surge in the research work in the fields of computer vision
+    and deep learning, the recognition of ISL gestures has been very limited. Our
+    paper focuses on establishing a benchmark for recognizing ISL gestures in real
+    time. As we know that ISL uses but
+
+
+    dynamic gestures with augmentation. For utilizing method CNNs were we used LSTMs
+    with a convolutional kernel. A total of 10 dynamic gestures were trained and 1080
+    videos were generated for the purpose of training. For semantic segmentation we
+    have used U-Net with ResNet as the backbone. This method consists of multiple
+    convolutional layers. We used the same data a priori for training the U-Net. This
+    paper is an extension of work originally presented in Digital Image Communication:
+    Techniques and Applications (DICTA), Perth, 2019 [1] This differs from the previous
+    work as we have introduced a new method for Indian Sign Language Recognition which
+    does not require a depth camera for inference. This paper is related to the previous
+    related work. Section III explains the dataset and the methodology used to achieve
+    generation. Section IV explains the performance of'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'segmentation using depth information from the Kinect camera and different architectures
+    used to train the models include CNNs and the U-Net. V presents the results we
+    have obtained and VI concludes the paper.
+
+
+    # II. RELATED WORK
+
+
+    until now, we have seen that of work has been done to recognise hand signs with
+    very little text in the context of Indian Sign Language. A database of 240 images
+    was made for 24 students by Singh et al. [66]. They adopted the methodology in
+    which they extracted the features from the images and performed clustering based
+    on the Euclidean distance. Their achieved a classification accuracy of 97% but
+    most gesture were invariant to the background conditions and hands were of static
+    kind. As a Human Interaction framework was developed by Pei et al [67] achieved
+    98% on 16 gestures. The involved processing of using filtering, gaussian blurring
+    and morphological transformations. After processing, the images were submitted
+    to a CNN to between different motions and a Kalman estimator was used to move
+    the cursor in case it detected the signals. Real Time RGB-D sensor was developed
+    by Liao et al [68] when submitted to a dual channel convolutional neural network
+    which achieved a classification accuracy of 99.4% on 24 gestures from the Indian
+    Sign Language. Again the paper discussed the outcomes of training Otmino et al.
+    [9] recognized hands from the background Gradient Descriptor for the images and
+    Scale Invariant Feature Transformcriptors for the RGB images. The combined information
+    was then used by a Support Vector Machine which achieved a classification accuracy
+    of 90.2% on the Indian Sign Language database. For,anov et al. [10] utilized a
+    R3DCNN Recurrent Convolutional Neural Network with temporal constraints which
+    recognized the dynamic gestures. RGB and depth-stereo sensors were used to collect
+    the data. They have learned the model as that R3DCNN which achieved a classification
+    accuracy of 83.8%. A hierarchical CNN based design was proposed by Ok et al. [12].
+    This model utilized two convolutional neural networks, a lightweight one for detecting
+    and a fully 3D CNN to predict the model managed to achieve a classification accuracy
+    of 94.04 on EgoBenchmark and 83.82 on the NVIDIA benchmark. For dynamic gestures
+    Xiao et al. [13] proposed using a Dense Image Network (DNN) which encodes the
+    dynamic gesture to a conservative structure which splits its spatio-temporal advantage.
+    We showed that the result of the CNN was 91 for a CNN feature where detection
+    is done in a more effective way. Method was proposed by Kopuklu et al. [14] in
+    which the
+
+
+    flow data along with the RGB image was fed to a Deep Neural Network which achieved
+    an accuracy of 84.7% on the NVIDIA camera. This model also accomplished a classification
+    accuracy of 96.28% on Jester benchmark and 57.4% on CharIam benchmark. Mukesh
+    [15] trained a CNN using a handheld dataset and achieved a classification accuracy
+    of 85.51%. Again this model was not tested in real time.
+
+
+    As far as is concerned this is the first attempt at creating real time LSTM gesture
+    recognition without using the depth. The semantic augmentation approach eliminates
+    the possibility of using a depth sensor. Our models perform well over all background
+    conditions and hands of use.
+
+
+    # III. Details of the Dataset
+
+
+    We created our dataset for training and using Microsoft Kinect camera. The dataset
+    was collected from 5 subjects having an average age of 25 and included both genders.
+    We obtained data for the static and dynamic gestures. 45000 images and 45000 depth
+    maps were obtained for static gestures. The segmentation method explained in section
+    IV-A was for mapping the RGB pixels to the depth map. Fig. 1 shows of the RGB-D
+    pairs for sets E, G, M and T captured during proper macam.
+
+
+    ![](img/b00a05762311a26ba003512b16164439_1_0.png)
+
+
+    Fig. 1. LSTM gestures for RGB images and depth maps.
+
+
+    For dynamic gestures we captured 1080 records belonging to 10 dynamic gestures
+    used in Indian Sign Language. The words chosen for the name are Airplane, Lock,
+    Licence, Love, Mul, Maths, Wifi and Fin. We recorded the gestures used for digits
+    0-9 and alphabets A-Z used in the Indian Sign Language System.
+
+
+    # B. Techniques to train
+
+
+    In our dataset the hands were centered in an area, and we know that the CNNs are
+    not scale, rotation and translation invariant this can lead to a decline in performance
+    of the model in real time. To achieve better results we used data augmentation.
+    Further the static gestures were captured in two lighting conditions so to ensure
+    the real performance. For creating the dynamic gestures, we used'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/b00a05762311a26ba003512b16164439_2_0.png)
+
+
+    Fig. 2. ISL Signs for numbers and alphabets.
+
+
+    Here ConvLayer refers to the convolutional layers, MPLayer refers to the max-pooling
+    layer, fc refers to the fully connected dense and ReLU refers to the activation
+    function for the convolutional and dense layers. The last layer uses the softmax
+    activation for classification. Categorical crossentropy was used as the function.
+    Fig. 5 depicts the whole workflow of our architecture.
+
+
+    captured at different frame rates, i.e. 15, 18, 21, 24, 27, 30, 33 and 39 fps
+    to introduce variability in the training data allowing them to learn temporal
+    features.
+
+
+    # IV. METHODOLOGY
+
+
+    The purpose of this section is to discuss the methodology adopted for mapping
+    gesture to the depth map, and the architectures adopted for training the CNN models
+    and the U-Net model.
+
+
+    ![](img/b00a05762311a26ba003512b16164439_2_1.png)
+
+
+    Fig. 4. Architecture for training depth or RGB CNN model
+
+
+    # A. Mapping depth and RGB pixels
+
+
+    We used Computer Vision techniques to map depth and RGB information. In Fig. 3,
+    we converted 2D depth map to 3D coordinate system by using extrinsic parameters
+    such as distortion length, principal point and focal length. Using extrinsic parameters
+    and translation vectors of the depth, 3D camera coordinate system is converted
+    to the 3D world coordinate system. The map is further converted from 3D world
+    coordinate system to 3D RGB frame coordinate system by using extrinsic parameters
+    of the RGB and the intrinsic parameters of the RGB.
+
+
+    ![](img/b00a05762311a26ba003512b16164439_2_2.png)
+
+
+    Fig. 5. ISL recognition flow diagram
+
+
+    The architecture was used while transfer learning the American Sign Language.
+    The weights from the convolutional layer were the same as the depth and RGB layers
+    were reinstated to arbitrary small numbers. Another model was trained using both
+    the depth and RGB layers. Fig. 6 shows the architecture for us.
+
+
+    ![](img/b00a05762311a26ba003512b16164439_2_3.png)
+
+
+    Fig. 3. Depth frame conversion from depth frame coordinate to RGB coordinate system
+
+
+    ![](img/b00a05762311a26ba003512b16164439_2_4.png)
+
+
+    Fig. 6. CNN architecture for training RGB-D images simultaneously
+
+
+    The depth and RGB images are passed through two different channels until you get
+    20 sets of 30 feature maps matching depth and RGB 18. After these channels were
+    fused into one after another they were followed with more convolutional layers,
+    max-pooling layers and fully connected layers. Liao et al. [8] used similar strategy
+    as us.
+
+
+    # B. Training architectures for static gestures using Kinect(D) Camera
+
+
+    For static gestures, we trained three convolutional neural networks. We first
+    trained a model using the RGB depth images. The architecture was both for the
+    aforementioned methods. The architecture for the same is shown in Fig. 4.
+
+
+    # C. Training architectures for dynamic gestures using Kinect(D) Camera
+
+
+    For training dynamic gestures we adopted the strategy. We first trained LSTMs
+    with convolutional'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'kernels for depth and RGB videos. The architecture for the same is shown in
+    Fig. 7.
+
+
+    ![](img/b00a05762311a26ba003512b16164439_3_0.png)
+
+
+    Fig. 7. Channel architecture for video training
+
+
+    We also downsampled the video by considering every 6 frame and discarded the others.
+    This was done to remove the repetitive frames as stated by Amin Ullah al. [16]
+    downsampling by 5 or 6 times does not decrease the temporal resolution.
+
+
+    The architecture for the dual channel LSTM is shown in Fig. 8. The depth and RGB
+    records represent two unique channels of convolutional LSTMs at the same depth
+    before adding layers
+
+
+    ![](img/b00a05762311a26ba003512b16164439_3_1.png)
+
+
+    Fig. 8. Dual channel architecture for video training
+
+
+    ![](img/b00a05762311a26ba003512b16164439_3_2.png)
+
+
+    Fig. 9. Example of a U-Net architecture for 32x32 pixels in the lower resolution.
+    Each box represents a multiscale feature map. The white boxes depict copied feature
+    map and arrows depict different operations.
+
+
+    # D. Training architecture for static based gestures using normal mode (RGB) Camera
+
+
+    > $L_{local} = -\frac{1}{N} \sum_{n=1}^{C} (1-\gamma_{nc})^2 \gamma_{nc} \hat{\gamma}_{nc}$
+
+
+    is with high confidence the true coefficient becomes close to 0 in turn does not
+    contribute to the total loss. This loss function focuses more on the samples that
+    are misclassified rather than the easy examples.
+
+
+    Olaf Ronneberger et al [17] developed U-Net for medical imaging. The architecture
+    for the same consists of two paths, the first is the encoder path or the decoder.
+    The encoder consists of convolutional and max pooling layers. It is used to capture
+    the spatial feature of the image the second path is the expanding path as the
+    decoder. The decoder is used for precise localization which transposed convolutions.
+    The highlighted feature of a U-Net is that it only contains layers and no deconvolution
+    enables the networks to connect input of any size. Fig. 9 represents a typical
+    U-Net architecture.
+
+
+    ResNet101 was used as the backbone for U-Net. Fig. 10 represents the ResNet 101
+    architecture in which we have 101 convolutional layers.
+
+
+    ![](img/b00a05762311a26ba003512b16164439_3_3.png)
+
+
+    U-Net performs well in case of semantic segmentation they they combine the spatial
+    information from the downsampling path with the contextual information in the
+    upsampling path to output a highly precise segmentation mask. The loss function
+    used in this potential loss function was
+
+
+    Fig. 10. ResNet- 101 Architecture
+
+
+    Here $\gamma_{nc}$ is a tunable parameter. We can analyze the implications of
+    gamma and understand the loss function in the following manner. Let the model
+    says how it handles a hard sample with set low penalty on the true class, that
+    is that $\gamma_{nc}$ has a low value, in that case the compression coefficient
+    becomes close to 1, which turn preserves the sample''s contribution to the total
+    loss. Let''s say an'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: "# V. TRAINING AND RESULTS\n\nThe two models were trained on NVIDIA Tesla K80\
+    \ GPU. The U-Net model was trained on NVIDIA GeForce GTX1080. This section discusses\
+    \ the results obtained after training models in section IV-B, IV-C and IV-D. For\
+    \ CNN models, the dataset was used with 70:30 between training and testing data.\
+    \ For the U-Net model, the dataset was used in the ratio 80 between training+validation\
+    \ and testing data. training+validation data was further used in the ratio 80:20\
+    \ between training data and testing data.\n\n+   * The hyperparameters used for\
+    \ training CNN models were:\n  * Epochs: 40 for static gestures and 30 for dynamic\
+    \ basic gestures\n  * Batch Size: 32\n  * Optimizer: Adam\n  * Learning Rate:\
+    \ 0.01\n  * Weight Initializers: Xavier/Zeros\n\n+   * The hyperparameters used\
+    \ for training U-Net model were:\n  * Epochs: 40\n  * Batch Size: 2\n  * Optimizer:\
+    \ Adam\n  * Learning Rate: 0.01\n  * Weight Initializers: Xavier/Zeros\n\n# A.\
+    \ Predictions for CNN based models\n\nWe observed the training and testing accuracies\
+    \ for the deep CNN were 97.43% and 99.44% respectively. The testing accuracies\
+    \ for the RGB images were 97.21% and 99.75%. The RGB+depth CNN model was giving\
+    \ an accuracy of 97.8% for the training set and 99.6% on the testing set. The\
+    \ depth-only model performed clearly better than depth only and RGB based models.\
+    \ For real time, based 50 people having the age group ranging from 5 to 50 years\
+    \ were involved. The three methods predicted almost for all of them. We tried\
+    \ training the unsegmented images and the training accuracy came out to be 95.87%\
+    \ after depth only in real time we saw a decline in performance. We also tried\
+    \ to transfer learning from the Language dataset and the classification accuracy\
+    \ in that was 97.71% which is almost equal to the accuracy obtained by the authors\
+    \ in [1]. For dynamic gestures the only LSTM with convolution achieved a classification\
+    \ accuracy of 97.52% on the training data. The RGB LSTM model achieved a classification\
+    \ accuracy of 98.11 on the test data. The depth+RGB LSTM model achieved a classification\
+    \ accuracy of 99.08% on training data. The performance of depth+RGB LSTM model\
+    \ showed a decline on the test data giving a classification accuracy of 78.3%.\
+    \ For depth only and RGB only LSTM models the classification accuracy was the\
+    \ same for test data.\n\n# B. Predictions for U-net model\n\nThe U-Net model trained\
+    \ on RESNET 101 as backbone achieved the final IOU score of 0.9920 and a F score\
+    \ of 0.9997\n\nthe training data. Final IOU score and F score for the validation\
+    \ data was found to be 0.9844 and 0.9866. The model performed well on the test\
+    \ data giving the IOU score and F score of 0.9787 and 0.98087 respectively. Real\
+    \ time Fig. 11 shows the prediction of the model on the image having label G,\
+    \ the ground truth mask for label G and the predicted mask for label G. Fig. 12\
+    \ shows the prediction of the image having label L, the ground truth mask for\
+    \ label L and the predicted mask for label L.\n\n![](img/b00a05762311a26ba003512b16164439_4_0.png)\n\
+    \nFig. 11. Image for class G, Ground Truth Mask for class G and Predicted Mask\
+    \ for class G\n\n![](img/b00a05762311a26ba003512b16164439_4_1.png)\n\nFig. 12.\
+    \ Image for class G, Ground Truth Mask for class L and Predicted Mask for class\
+    \ L\n\nFig. 13 gives us of IOU, loss and F scores for both training and validation\
+    \ data. Note that the expected mask for label L to be for the image having label\
+    \ G This is why we are achieving both segmentation and at the same time. Fig.\
+    \ 13 depicts the real time performance of the U-Net model using a normal RGB camera.\
+    \ For real time we usedargmax of the output(dimension of the output is 37480640,\
+    \ where we are getting 37 masks for each pixel) denoted the class which belongs\
+    \ and then assigned the class which was assigned the most over pixels.\n\n![](img/b00a05762311a26ba003512b16164439_4_2.png)\n\
+    \nFig. 13. IOU score, Model Loss and F score versus epochs\n\nAgain the performance\
+    \ we measured on a system with a GPU is NVIDIA GeForce (GTX 1080). The model was\
+    \ able to predict the gestures at 20 fps. For a system with no GPU the model around\
+    \ 4 seconds to process a frame. Significant improvement is needed in terms of\
+    \ time using the normal RGB camera on a system with relatively lower hardware\
+    \ specifications."
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/b00a05762311a26ba003512b16164439_5_0.png)
+
+
+    # VI. CONCLUSION AND FUTURE WORK
+
+
+    In this paper we have presented a method to implement real time Indian Sign Language
+    recognition using multiple methods. Using a depth-RGB based camera and a normal
+    RGB camera, we achieved high-accuracy semantic segmentation. The usage of semantic
+    segmentation approach completes the necessity of using depth camera and segmentation.
+    The U-Net model achieved an IOU score of 0.9920 and an F1 score of 0.9957. For
+    the depth-RGB trained models challenges like different lighting conditions and
+    data augmentation helped in case of static gestures. For dynamic gestures, the
+    pretence of data was not at few values so that the model can learn the features.
+    In cases of models based on dynamic gestures, we showed high variance for the
+    model performance further research can be done to improve it. Some research needs
+    to be done on improving the real time performance of the U-Net model on systems
+    with lower hardware specifications. We can also take the opportunity to develop
+    a real time sentence prediction model based on this paper.
+
+
+    # ACKNOWLEDGMENT
+
+
+    We are very grateful to the staff at Digital Signal Laboratory of Electrical Engineering,
+    Institute of Science Bangalore for their support. We like to thank all the interns
+    in DSP for their valuable contribution at various stages of the research.
+
+
+    # REFERENCES
+
+
+    +   [1] N. K. Bhagat, V. Vishnu and S. Rath, "Indian Sign Language Gesture Recognition
+    using Image Processing and Deep Learning," 2019 Digital Image Computing: Techniques
+    and Applications (DICTA), Perth, Australia, 2019, 1-8, doi: 10.1109/DICTA47822.2019.8945850.
+
+    [2] Q. Wu, Y. Liu, S. Ji and F. Li, "The depth of learning in complex scenes,"
+    2017 Chinese International Conference on Computing (CAC), 2017, pp. 6522-6527.
+
+    [3] D. Ballard, Generalizing the height transform to detect arbitrary shapes,
+    Pattern Recognition, vol. 13, no. 2, pp. 11122, 1991.
+
+    [4] D. G. Lowe, Distance Features from Scale-Invariant Keypoints, International
+    Journal of Computer Vision, vol. 43, no. 2, pp. 9-72, 2004.
+
+    [5] B. Bhavana, G. M. Surya Murali and G. V. Lakshmi],h, "Gesture Recognition
+    Using Our''s Method," 2017 IEEE International Conference on Computational Intelligence
+    and Computing Research (CICR), 2017, pp: 1-4.
+
+
+    +   [6] J. Singh and K. Das, "Indian Sign Language Recognition Using Weighted
+    Euclidean Based Classification Technique," International Journal of Advanced Computer
+    Science and Applications, vol. 10, no. 2, 2019.
+
+
+    +   [7] Pei Xu, A real time gesture recognition and human-computer interaction.
+    In: Proceedings of the Computer Vision and Pattern Recognition, 2017.
+
+
+    +   [8] B. Lin, J. Li and G. Ouyang, "Hand Gesture Recognition with Generalized
+    Hough Transform and DC-CNN Using," 2018 IEEE International Conference on Computer
+    Science and Technology (ICIST), Odesa, 2018, pp. 88-94.
+
+
+    +   [9] M. Pacholski, X. Yang, S. Gupta, K. Rin, S. Tune, and J. Kantz, "Continuous
+    Gesture Recognition of Dynamic Gestures Using 3D Convolutional Recurrent Neural
+    Networks," 2018 IEEE Conference on Computer Vision and Pattern Recognition (CVPR),
+    pp. 475-484.
+
+
+    +   [10] A. Kodriger and G. C. Rodriguez, "Hand Spelling Recognition from RGB
+    Images Using Kernel Descriptors," IEEE Transactions on Graphics, Patterns and
+    Images, 2013.
+
+
+    +   [11] A. Karpathy, G.Shesky, T.Leung, and L. Lei-Fei, "Scale-large video classification
+    with convolutional neural networks," 2014.
+
+
+    +   [12] Okan Akl, Ahmet Gurdangar, Nishant Selvi, Ken Ghor, "Real-time Gesture
+    Detection and Classification using Convolutional Neural Networks," in 2019 IEEE
+    International Conference on Computer Vision and Pattern Recognition.
+
+
+    +   [13] Xianhua Chen, Ke Ge Motion Recognition: Video-Temporal Feature Extraction
+    with Spatial Attention Network, on 19 May 2018.
+
+
+    +   [14] O. Okkaya, N. Rose, and G. Molij, "M Fusion Frames: Deep Learning Strategy
+    for Hand Recognition, 2018 IEEE/CVPR Conference on Computer Vision and Pattern
+    Recognition Workshops
+
+
+    +   [15] Mukesh Kumar Majumder, Sign Language Recognition, method using Deep Learning,
+    in International Science, Bangalore, 2017.
+
+
+    +   [16] M. S. Ahmed and M. S. Abdullah, "Action Recognition in Video Sequences
+    using Deep Bi-LSTM Network with CNN Features," IEEE Access, vol. 6, pp. 1155-1166,
+    2018.
+
+
+    +   [17] J. Ronneauer, M. Philipp, S. Koller, J. Kramer, L. Jaimeano, and L. Giuseppe,
+    T. Camillo, C. Lee, and K. Vijay, J. Warsaw & Harwood, Joseph and Zenith, Jennifer.,
+    2018: U-Net for MAV-based Inspection; in Implication of Fusion in Multi-class
+    Segmentation'
+  merge: -1
+  img_proc: true
