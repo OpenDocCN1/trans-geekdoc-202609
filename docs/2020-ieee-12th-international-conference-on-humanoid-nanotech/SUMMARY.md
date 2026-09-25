@@ -1,0 +1,2 @@
++   [2020 IEEE 第12届人形机器人、纳米技术、信息技术、通信与控制、环境与管理国际会议 (HNICEM)(菲律宾马尼拉 2020.12.3-2020.12.7)](README.md)
++   [2020 IEEE 第12届人形机器人、纳米技术、信息技术、通信与控制、环境与管理国际会议 (HNICEM)(菲律宾马尼拉 2020.12.3-2020.12.7)](2020-ieee-12th-international-conference-on-humanoid-nanotech.md)

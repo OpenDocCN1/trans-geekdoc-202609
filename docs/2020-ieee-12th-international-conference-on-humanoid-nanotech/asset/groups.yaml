@@ -1,0 +1,1596 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # Variety Classification of Lactuca Seeds Using Single-Kernel RGB Images and
+    Spectro-Textural Morphological Based Machine Learning
+
+
+    Ronnie Conception II
+
+    Electronics and Communications
+
+    De Salle University
+
+    Manila, Philippines
+
+    ronnie_conception@dsu.edu.ph
+
+
+    Sandy Lauquio
+
+    Electronics and Communications
+
+    Engineering Department
+
+    De Salle University
+
+    Manila, Philippines
+
+    sandy_lauquio@dsu.edu.ph
+
+
+    Khamsyn Sphenhet
+
+    Mechanical Engineering Department
+
+    De Salle University
+
+    Manila, Philippines
+
+    khamsyn_sphenhet@dsu.edu.ph
+
+
+    Jelnel Alandrino
+
+    Electronics and Communications
+
+    Engineering Department
+
+    De Salle University
+
+    Manila, Philippines
+
+    jelnel_alandrino@dsu.edu.ph
+
+
+    Elmer Dadados
+
+    Manufacturing Engineering and
+
+    Management Department
+
+    De Salle University
+
+    Manila, Philippines
+
+    elmer.dadados@dsu.edu.ph
+
+
+    Argel Bandala
+
+    Electronics and Communications
+
+    Engineering Department
+
+    De Salle University
+
+    Manila, Philippines
+
+    argel.bandala@dsu.edu.ph
+
+
+    **Abstract—** lettuce has become popular now the use of specific seeds under control
+    environment relies on the phenotypic classification of seed germination. Lettuce
+    cultivars are defined by leaf characteristics which are not easily explained by
+    the same spectro-textural morphological features. Visual inspection of lettuce
+    seeds leads to the classification that is needed for seed phenomenology. To overcome
+    this limitation, a machine learning approach was incorporated with computational
+    intelligence. In this study, we used a Huawei P50 mobile phone camera to capture
+    single-kernel RGB images to total 100 samples for each variety with different
+    spectral resolution in the used seeds. Twenty-six morphological features were
+    extracted and selected using feature selection with extra classes (FT-ETC). Decision
+    tree and SVM learning models were used with texture, and morphological features
+    as inputs to classify the lettuce seed variety. DTC and SVM showed high accuracy
+    with sensitivity of 99% using 100 cross and hold validation. DTC achieved the
+    fastest time with SVM 48.157% best. This developed FT-DTC model is highly necessary
+    for controlled-environment cultivation and seed breeding.
+
+
+    **Keywords—** computer, lettuce seeds, machine learning, seed germination
+
+
+    # I. INTRODUCTION
+
+
+    Lettuce are natural popular plant feature. It contains embryonic structure within
+    a botanical envelope seed is the final product of plant reproduction that contains
+    genetic information through fusion of primary endosperm. A seed is what contains
+    the cotyledons, radicle, hypocotyl, micropyle, and endosperm. However, seed considers
+    seed coat only which is the outermost layer to human vision.
+
+
+    Just like other crops, lettuce seeds are highly sensitive during the end of flowering.
+    For most varieties, lettuce happens after 55 days of cultivation. It is recorded
+    that there is one seed that can be reaped from a single lettuce crop. However,
+    not all seeds have the same dormant period.
+
+
+    Lettuce leaf can have a genetic indicator in determining its variant [1-6]. The
+    genotypes of lettuce include freise, bibb lettuce, iceberg, and crop. Red lettuce
+    includes leaves of reddish and orange. On the other hand, have red or green colors
+    which makes it difficult to research on these particular varieties. Rationally,
+    when lettuce variant is needed, the cultivation of its leaves are on the first
+    stage of life cycle (germinating) it must be precisely classified. Ascertainment
+    of lettuce seed varieties is the main challenge for farmers worldwide.
+
+
+    +   * Classification of seeds is needed for crop phase [, sowing, breeding], and
+    packaging [10]. Single-kernel seed has been detected using 1000 to 250 nm wavelength
+    of fluorescence in near infrared (FT-NIR) [11]. The FT-DTC model uses a specific
+    wavelength to traverse the epidermis of classifying and viable non-kernel seed.
+    Hyperspectral imaging (HI) has been used to classify various species of *Lactuca
+    sativa* [12], waterwatermelon seeds to classify crop variety using short wave
+    infrared (SWIR) and least square support vector machine learning [13], out, seeds
+    were recorded in 8744 in 7734 nm by deep convolutional neural network (DNN) [14],
+    for classification frozen seeds through reflectance analysis [15], detection of
+    fungus in seeds [16], and for CRISPR/Cas9-induced mutation through SVM and extreme
+    machine learning (ML) [17]. Multispectral imaging has been employed in classification
+    with white corn kernels'
+  - '[PAGE 1]
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_1_0.png)
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_1_1.png)
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_1_2.png)
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_1_3.png)
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_1_4.png)
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_1_5.png)
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_1_6.png)
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_1_7.png)
+
+
+    [18 and used burger vulgaris seed [19]. On the other hand, digital RGB imagery
+    has been utilized to classify rice grain phenotypes, predicting color and texture
+    of wheat, raeseed, flaxed, and white mustard seed [21], visual classification
+    of haploid and diploid seeds [22], by deep classification through multilayer classifier
+    [23], Citrus intra-specific diversity analysis [24], identifying Takong 9 seeds
+    through backpropagation neural network (BPNN) [25], discriminating bell pepper
+    and chili fuzzy logic (26). We used RGB, SWIR, and various near infrared imagery
+    in identifying wheat kernels [27] and seeds [28]. VGG16 deep neural network architecture
+    has been used in discriminating wheat kernel representation. However,
+
+
+    Fig. 1. Architecture of the feature-based machine learning model in variety classification
+    of Lettuce sativa seeds using single-kernel RGB images and spectral-morphological
+    traits.
+
+
+    classification. In this study, the use of hyperspectral data has been used more
+    often than consumer-grade imagery due to the high cost of agricultural equipment.
+
+
+    Despite the absence of comparative approaches used in seed classification and
+    integration, computer vision and computational intelligence have a high promise
+    for improving accuracy in the long term. As result of this, the present study
+    has indicated the use of the de-camera camera integrated with a machine learning
+    model in classifying lettuce types, this is the first, but it is still an open
+    research area.
+
+
+    Fig. 2. Magnificent exterior structure of a grand rapish and (B) Chinese lettuce-leaf
+    seeds.
+
+
+    In this study, variety grand and Chinese lettuce-leaf seeds were used. For machine
+    learning models, K-nearest neighbors (KNN), classification tree (DTC), naive Bayes
+    (NB), and support vector machine (SVM) were configured to differentiate seeds
+    in grand rapid or Chinese lettuce-leaf on the selected spectral-morphological
+    features.
+
+
+    # A. Seed Material and Image Acquisition
+
+
+    Grand and Chinese lettuce-leaf are the two varieties of lettuce to be examined
+    in this study to verify its variability in the market (21). 200 filtered seeds
+    were captured using a digital camera-based approach using a 57 megapixel smartphone
+    camera with a camera lens distance of 6 inches at an arm radius under daylight
+    condition and light-gray background to capture the dark color of the seeds.
+
+
+    The images were processed using an image extractor with 50, exposure time of 1.00
+    ms, 0 f exposure speed. Image properties include spatial resolution of 2992 x
+    2992 pixels (96 dpi) and bit depth of 24-bit RGB. Color compression and 0.95 ratio
+    were compressed for each seed in JPG format for the local machine for analysis.
+
+
+    # B. Seed Roundness, Compactness, and Shape Factors
+
+
+    The input to the feature-based classification seed variety machine learning model
+    is image of single-kernel leaf (Fig. 1). It is processed by color thresholding,
+    spectral-morphological extraction and hybrid selection, and the development of
+    the vision-based classification model.
+
+
+    Extended seed phenotypes in this study reports multiple parameters analyzed in
+    high level for morphological traits. Combination of extended seed phenotypes including
+    solidity (S), roundness (R), compactness (C), and shape factor (SF)
+
+
+    The primary output of this model is the classification labeling of lettuce seed
+    variants. Or to extended seed phenotype of solidity, compactness, and shape factors
+    were also addressed in this study as secondary output.
+
+
+    # II. MATERIALS AND METHODS'
+  md: '
+
+    # Variety Classification of Lactuca Seeds Using Single-Kernel RGB Images and Spectro-Textural
+    Morphological Based Machine Learning
+
+
+    Ronnie Conception II
+
+    Electronics and Communications
+
+    De Salle University
+
+    Manila, Philippines
+
+    ronnie_conception@dsu.edu.ph
+
+
+    Sandy Lauquio
+
+    Electronics and Communications
+
+    Engineering Department
+
+    De Salle University
+
+    Manila, Philippines
+
+    sandy_lauquio@dsu.edu.ph
+
+
+    Khamsyn Sphenhet
+
+    Mechanical Engineering Department
+
+    De Salle University
+
+    Manila, Philippines
+
+    khamsyn_sphenhet@dsu.edu.ph
+
+
+    Jelnel Alandrino
+
+    Electronics and Communications
+
+    Engineering Department
+
+    De Salle University
+
+    Manila, Philippines
+
+    jelnel_alandrino@dsu.edu.ph
+
+
+    Elmer Dadados
+
+    Manufacturing Engineering and
+
+    Management Department
+
+    De Salle University
+
+    Manila, Philippines
+
+    elmer.dadados@dsu.edu.ph
+
+
+    Argel Bandala
+
+    Electronics and Communications
+
+    Engineering Department
+
+    De Salle University
+
+    Manila, Philippines
+
+    argel.bandala@dsu.edu.ph
+
+
+    **Abstract—** lettuce has become popular now the use of specific seeds under control
+    environment relies on the phenotypic classification of seed germination. Lettuce
+    cultivars are defined by leaf characteristics which are not easily explained by
+    the same spectro-textural morphological features. Visual inspection of lettuce
+    seeds leads to the classification that is needed for seed phenomenology. To overcome
+    this limitation, a machine learning approach was incorporated with computational
+    intelligence. In this study, we used a Huawei P50 mobile phone camera to capture
+    single-kernel RGB images to total 100 samples for each variety with different
+    spectral resolution in the used seeds. Twenty-six morphological features were
+    extracted and selected using feature selection with extra classes (FT-ETC). Decision
+    tree and SVM learning models were used with texture, and morphological features
+    as inputs to classify the lettuce seed variety. DTC and SVM showed high accuracy
+    with sensitivity of 99% using 100 cross and hold validation. DTC achieved the
+    fastest time with SVM 48.157% best. This developed FT-DTC model is highly necessary
+    for controlled-environment cultivation and seed breeding.
+
+
+    **Keywords—** computer, lettuce seeds, machine learning, seed germination
+
+
+    # I. INTRODUCTION
+
+
+    Lettuce are natural popular plant feature. It contains embryonic structure within
+    a botanical envelope seed is the final product of plant reproduction that contains
+    genetic information through fusion of primary endosperm. A seed is what contains
+    the cotyledons, radicle, hypocotyl, micropyle, and endosperm. However, seed considers
+    seed coat only which is the outermost layer to human vision.
+
+
+    Just like other crops, lettuce seeds are highly sensitive during the end of flowering.
+    For most varieties, lettuce happens after 55 days of cultivation. It is recorded
+    that there is one seed that can be reaped from a single lettuce crop. However,
+    not all seeds have the same dormant period.
+
+
+    Lettuce leaf can have a genetic indicator in determining its variant [1-6]. The
+    genotypes of lettuce include freise, bibb lettuce, iceberg, and crop. Red lettuce
+    includes leaves of reddish and orange. On the other hand, have red or green colors
+    which makes it difficult to research on these particular varieties. Rationally,
+    when lettuce variant is needed, the cultivation of its leaves are on the first
+    stage of life cycle (germinating) it must be precisely classified. Ascertainment
+    of lettuce seed varieties is the main challenge for farmers worldwide.
+
+
+    - Classification of seeds is needed for crop phase [, sowing, breeding], and packaging
+    [10]. Single-kernel seed has been detected using 1000 to 250 nm wavelength of
+    fluorescence in near infrared (FT-NIR) [11]. The FT-DTC model uses a specific
+    wavelength to traverse the epidermis of classifying and viable non-kernel seed.
+    Hyperspectral imaging (HI) has been used to classify various species of *Lactuca
+    sativa* [12], waterwatermelon seeds to classify crop variety using short wave
+    infrared (SWIR) and least square support vector machine learning [13], out, seeds
+    were recorded in 8744 in 7734 nm by deep convolutional neural network (DNN) [14],
+    for classification frozen seeds through reflectance analysis [15], detection of
+    fungus in seeds [16], and for CRISPR/Cas9-induced mutation through SVM and extreme
+    machine learning (ML) [17]. Multispectral imaging has been employed in classification
+    with white corn kernels [18 and used burger vulgaris seed [19].
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_1_0.png)
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_1_1.png)
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_1_2.png)
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_1_3.png)
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_1_4.png)
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_1_5.png)
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_1_6.png)
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_1_7.png)
+
+
+    On the other hand, digital RGB imagery has been utilized to classify rice grain
+    phenotypes, predicting color and texture of wheat, raeseed, flaxed, and white
+    mustard seed [21], visual classification of haploid and diploid seeds [22], by
+    deep classification through multilayer classifier [23], Citrus intra-specific
+    diversity analysis [24], identifying Takong 9 seeds through backpropagation neural
+    network (BPNN) [25], discriminating bell pepper and chili fuzzy logic (26). We
+    used RGB, SWIR, and various near infrared imagery in identifying wheat kernels
+    [27] and seeds [28]. VGG16 deep neural network architecture has been used in discriminating
+    wheat kernel representation.
+
+
+    Fig. 1. Architecture of the feature-based machine learning model in variety classification
+    of Lettuce sativa seeds using single-kernel RGB images and spectral-morphological
+    traits.
+
+
+    classification. In this study, the use of hyperspectral data has been used more
+    often than consumer-grade imagery due to the high cost of agricultural equipment.
+
+
+    Despite the absence of comparative approaches used in seed classification and
+    integration, computer vision and computational intelligence have a high promise
+    for improving accuracy in the long term. As result of this, the present study
+    has indicated the use of the de-camera integrated with machine learning model
+    in classifying lettuce types, this is the first, but it is still an open research
+    area.
+
+
+    Fig. 2. Magnificent exterior structure of a grand rapid and (B) Chinese lettuce-leaf.
+
+
+    In this study, variety grand and Chinese lettuce-leaf seeds were used. For machine
+    learning models, K-nearest neighbors (KNN), classification tree (DTC), naive Bayes
+    (NB), and support vector machine (SVM) were configured to differentiate seeds
+    in grand or Chinese lettuce-leaf on the selected spectral-morphological features.
+
+
+    # II. MATERIALS AND METHODS
+
+
+    ### A. Seed Material and Image Acquisition
+
+
+    Grand and Chinese lettuce-leaf are the two varieties of lettuce to be examined
+    in this study to verify its variability in the market (21). 200 filtered seeds
+    were captured using a digital camera-based approach using a 57 megapixel smartphone
+    camera with a camera lens distance of 6 inches at an arm radius under daylight
+    condition and light-gray background to capture the dark color of the seeds.
+
+
+    The images were processed using an image extractor with 50, exposure time of 1.00
+    ms, 0 f exposure speed. Image properties include spatial resolution of 2992 x
+    2992 pixels (96 dpi) and bit depth of 24-bit RGB. Color compression and 0.95 ratio
+    were compressed for each seed in JPG format for the local machine for analysis.
+
+
+    ### B. Seed Roundness, Compactness, and Shape Factors
+
+
+    The input to the feature-based classification seed variety machine learning model
+    is image of single-kernel leaf (Fig. 1). It is processed by color thresholding,
+    spectral-morphological extraction and hybrid selection, and the development of
+    the vision-based classification model.
+
+
+    Extended seed phenotypes in this study reports multiple parameters analyzed in
+    high level for morphological traits. Combination of extended seed phenotypes including
+    solidity (S), roundness (R), compactness (C), and shape factor (SF)
+
+
+    The primary output of this model is the classification labeling of lettuce seed
+    variants. Or to extended seed phenotype of solidity, compactness, and shape factors
+    were also addressed in this study as secondary output.
+
+    '
+  mdcn: '
+
+
+    # 基于单粒 RGB 图像和光谱-纹理形态的机器学习的生菜品种分类
+
+
+    Ronnie Conception II
+
+    电子与通信专业
+
+    De Salle 大学
+
+    菲律宾，马尼拉
+
+    ronnie_conception@dsu.edu.ph
+
+
+    Sandy Lauquio
+
+    电子与通信工程系
+
+    De Salle 大学
+
+    菲律宾，马尼拉
+
+    sandy_lauquio@dsu.edu.ph
+
+
+    Khamsyn Sphenhet
+
+    机械工程系
+
+    De Salle 大学
+
+    菲律宾，马尼拉
+
+    khamsyn_sphenhet@dsu.edu.ph
+
+
+    Jelnel Alandrino
+
+    电子与通信工程系
+
+    De Salle 大学
+
+    菲律宾，马尼拉
+
+    jelnel_alandrino@dsu.edu.ph
+
+
+    Elmer Dadados
+
+    制造工程与管理系
+
+    De Salle 大学
+
+    菲律宾，马尼拉
+
+    elmer.dadados@dsu.edu.ph
+
+
+    Argel Bandala
+
+    电子与通信工程系
+
+    De Salle 大学
+
+    菲律宾，马尼拉
+
+    argel.bandala@dsu.edu.ph
+
+
+    **摘要—** 生菜已变得流行，现在受控环境下特定特定子的使用依赖于种子萌发的表型分类。生菜栽培品种由叶片特征定义，而这些特征无法通过相同的光谱-纹理形态特征解释。对生菜种子的肉眼检查会导致种子现象学所需的分类。为了克服这一局限性，引入了结合计算智能的机器学习。在研究中，我们使用华为
+    P50 手机摄像头捕获单粒 RGB 图像，每个品种共采集 100 个样本，所用种子具有不同的光谱分辨率。使用带有额外类别的特征选择（FT-ETC）提取并选择了
+    26 个形态特征。使用决策树（DTC）和 SVM 学习模型，以纹理形态特征作为输入对生菜种子品种进行分类。通过 100 次交叉和保留验证，DTC 和 SVM
+    显示出高准确率，灵敏度达 99%。DTC 达到最快速度，SVM 最佳为48.157%。这种开发的 FT-DTC 模型对于受控环境栽培和育种具有高度必要。
+
+
+    **关键词—** 计算机、生菜种子、机器学习、种子萌发
+
+
+    # I. 引言
+
+
+    生菜是自然界流行的植物。它在植物包囊内含有胚胎结构，是植物繁殖的最终产品，通过初胚的融合包含遗传信息。种子包含了子叶、根尖、胚轴、孔和胚乳。然而，种子仅考虑种皮，这是人类视觉可见的最外层。
+
+
+    与其他作物一样，生菜种子在花期末期非常敏感。对于大多数品种，生菜在栽培 55 天后成熟。据记载，单株生菜可以收获一颗种子。然而，并非所有种子都有相同的休眠期。
+
+
+    生菜叶片可以作为确定其变种的遗传指标 [1-6]。生菜的基因型包括球生菜、bibb 生菜、冰球生菜和品种。红生菜包括红色和橙色的叶片。另一方面，具有红色或绿色，这使得对这些特定品种的研究变得困难。理性，当需要生菜变种时，其叶片的培养处于生命周期的第一阶段（萌发），必须进行精确分类。确定生菜种子品种是全球农民面临的主要挑战。
+
+
+    - 种子分类用于作物阶段 [, 播种、育种] 以及包装 [10]。已利用近红外（FT-NIR）中 1000 到 250 nm 波长的荧光检测单粒种子 [11]。FT-DTC
+    模型使用特定波长通过表皮来分类活非核种子。高光谱成像（HI）已用于分类不同物种的*Lactuca sativa* 生菜 [12]，利用短波红外（SWIR）和最小二乘支持向量机机器学习对西瓜种子进行作物品种分类
+    [13]，通过深度卷积神经网络（DNN）在 7734 nm 下记录了 8744 个种子 [14]，通过反射分析对冷冻种子进行分类 [15]，种子真菌检测 [16]，以及通过
+    SVM 和极端机器学习（ML）进行 CRISPR/Cas9 诱导突变检测 [17]。多光谱成像已应用于白玉米粒分类 [18] 并用于普通汉堡种子 [19]。
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_1_0.png)
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_1_1.png)
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_1_2.png)
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_1_3.png)
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_1_4.png)
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_1_5.png)
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_1_6.png)
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_1_7.png)
+
+
+    另一方面，数字 RGB 图像已用于分类水米表型，预测小麦、油菜、亚麻和白芥末种子的颜色和纹理 [21]，通过多层分类器对单倍体和二倍体种子进行深度分类 [22]，柑橘种内多样性分析
+    [24]，通过反向传播神经网络（BPNN）识别 Takong 9 种子 [25]，通过模糊逻辑区分灯笼和辣椒 (26)。我们在识别小麦粒 [27] 和种子
+    [28] 中使用了 RGB、SWIR 和各种近红外图像。VGG16 深度神经网络架构已用于区分小麦粒表示。
+
+
+    图 1. 使用单粒 RGB 图像和光谱形态特征进行生菜（Lactuca sativa）种子品种分类的基于特征的机器学习模型架构。
+
+
+    分类。在研究中，由于农业设备成本高昂，高光谱数据的使用比消费级图像更频繁。
+
+
+    尽管在种子分类和集成中缺乏比较方法，但计算机视觉和计算智能在长期提高提高准确性方面具有巨大潜力。结果，本研究表明了使用集成相机的机器学习模型对生菜类型进行分类，这是首次，但仍是一个开放领域。
+
+
+    图 2. 生菜（A）和中国生菜（B）精美的外部结构。
+
+
+    # II. 材料与方法
+
+
+    ### A. 种子材料与图像采集
+
+
+    大生菜和中国生菜是本研究检查的两种生菜品种，以验证其市场变异性 [21]。使用 5700 万像素手机相机拍摄了 200 颗过滤后的种子，相机镜头距离为 6
+    英寸，在日光条件下并在浅灰色背景下以捕捉深色种子。
+
+
+    使用图像提取器进行处理，参数为 50，曝光时间为 1.00 ms，光圈为 0。图像属性包括空间分辨率 2992 x 2992 像素（96 dpi），位深为
+    24 位 RGB。每个种子均以 JPG 格式以 0.95 比例进行压缩，用于本地机器进行分析。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    structure based on the ratios of lengths and biomass area L as the major axis
+    length (4-7).
+
+
+    MATLAB R2020 to obtain the morphological features. The same dataset used to obtain
+    the features with the Haralick algorithm. Gray level co-occurrence matrix (GLCM)
+    is calculated the surface patterns that are homogeneous. The digital roughness
+    in extracting features. For the RGB images were utilized. With 22 features were
+    used for the 280 samples, including length, width, convexity, perimeter, diameter,
+    contrast, correlation, energy, entropy, homotopy, RGB color roughness, compactness,
+    solidity, and shape factors 1 to 4.
+
+
+    S = A/C
+
+
+    R = 4πA/p^2
+
+
+    CO = Ed/I
+
+
+    SF1 = L/A
+
+
+    SF2 = I/A
+
+
+    SF3 = A/(0.25πL^2)
+
+
+    SF4 = A/(0.25nL^2)
+
+
+    Feature importance using extra features (FI-EC) determines the two most significant
+    attributes for the lettuce seed types. The eight most significant features were
+    determined by the algorithm as by importance level. Only the four most significant
+    features were used to train the classifiers; these are: blue, solidity, correlation,
+    and compactness.
+
+
+    # C. Seed Segmentation
+
+
+    Seed segmentation is necessary to remove non-ROI pixels and highlight seed spots
+    (Fig. 3). Color thresholding in the RGB space was used to segment the seeds. Color
+    has three channels, namely red, green and blue, on which a histogram with illumination
+    invariance properties can be derived by the number of pixels colors on a fixed
+    range that are dependent on the number of beans [29].
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_2_0.png)
+
+
+    Fig. 5. Eight most significant features as selected by FI-EC
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_2_1.png)
+
+
+    Fig. 3. RGB color spectrum projection for lettuce segmentation
+
+
+    # E. Seed Variant Classification Using FeatureBased Machine Learning
+
+
+    The segmented as thresholded in the RGB color space translated the images with
+    a black background (Figs. 4 and 4b). Binarization was conducted to obtain a black
+    and white images that are necessary for phenotype extraction (Figs. 4c and 4d).
+
+
+    The four selected features were split into 80-20 for training and testing, standardized
+    using the standardization algorithm. The independent variables were scaled (Changed)
+    using the standardization algorithm (8) on a scale where X is the original value,
+    μ and σ is the standard deviation.
+
+
+    > $X_{changed} = \frac{X-\mu}{\sigma}
+
+
+    Four machine learning: K-nearest neighbor (KNN), decision tree classifier (DTC),
+    Naive Bayes (NB), and support vector machine (SVM) were used to train the training
+    data. These estimators were selected as they have proven effective in classifying
+    applications. The default hyperparameters were used in the algorithms which yielded
+    accurate results without the need for further optimization. The DTC tree produced
+    (Fig. 6) used only the blue feature in classifying the two seed types.
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_2_2.png)
+
+
+    Fig. 4. Thresholded images of grand rapid and Chinese loose-leaf lettuce (a,b),
+    and its corresponding binarized image (c,d)
+
+
+    # D. D. Seed Phenotype Extraction and Selection
+
+
+    | B=-0.29 |
+
+    | gain=0.55 |
+
+    | value=[82, 7] |
+
+    | True | False |
+
+
+    Extracting the phenotypes was done using the segmented binary images as input
+    data for the regions function in
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_2_3.png)
+
+
+    Fig. 6. Decision tree classifier classification'
+  - '[PAGE 3]
+
+
+    # F. Model Evaluation Metrics and Statistical Analysis
+
+
+    For cross-validation accuracy, and F1-score of KNN, DTC, NB and SV were discriminated.
+    For hold-out validation, error, sensitivity, specificity, false positive rate,
+    and F1-score were differentiated. The confusion matrix is also used to graphically
+    highlight the classification performance that were considered at ≤ 0.05. Minitab
+    19 platform (Minitab, LLC) was used in performing statistical analysis. Python
+    is the programming language used for computational modeling for seed variant classification.
+
+
+    (Fig. 5) being the only texture feature in the four most significant seed features
+    could significantly affect the classification performance of machine learning
+    models.
+
+
+    # B. Classification of Lettuce Seeds Using Feature-Based Machine Learning
+
+
+    The use of feature-based learning models in classifying lettuce seed variant is
+    successful as yielded high accuracy and almost negligible error (Tables 2 and
+    3). One encoding was used to representively represent lettuce seed variants, namely
+    for grand and for Chinese lettuce-loose. The use of 20% of sampled single-kernel
+    images was sufficient for KNN classification. The model classified one Chinese
+    loose-leaf grand as grand (Fig. 7a and 7c), and DTC and SV seed variants classified
+    perfectly (Fig. 7b and 7d). Thus DTC and SV are the best classification models
+    in terms of accuracy.
+
+
+    # III. RESULTS AND DISCUSSION
+
+
+    # A. Lettuce Seed Phenotypic Traits
+
+
+    Seed structure exhibits phenotypic traits in this study for grand and Chinese
+    loose-leaf lettuce including area, major area and minor axis. Convex area, eccentricity,
+    perimeter, weight, entropy, homogeneity, and red and green leaflets. Listed in
+    Table 1 are the highlights of Correlation analysis for the two seed variants.
+    It was observed that area and eccentricity, R-G and G-B leaflets have very strong
+    correlations. Conversely, besides area, and homogeneity and texture features have
+    very high relationships. It is also notable that the two seed variants differ
+    significantly in the degree of correlation of perimeter and equivalent density
+    (Table 1) is a common discriminator from the previous study which showed weaker
+    spectro-morphological features of the Chinese loose-leaf seeds when compared with
+    the grand radius trait.
+
+
+    | Seed Variant | Leaf Area | Major Area | Perimeter | Equivalent Density | Homogeneity
+    | R-G | G-B | Green Leaflets |
+
+    |---|---|---|---|---|---|---|---||
+
+    | Grand radius | 0.899 | -0.943 | 0.745 | 0.528 | -1.000 | 0.712 | 0.009 | 0.995
+    |
+
+    | Chinese loose-leaf | 0.998 | -0.156 | 0.740 | 0.217 | -0.176 | -0.118 | 0.992
+    | 0.991 |
+
+
+    TABLE I CORRELATION COEFFICIENTS EXTRACTED FROM CORRELATION ANALYSIS OF SEED PHENOTYPEIC
+    TRAITS
+
+
+    The normalized RGB color for grand radius trait with 90.64%, 89.92% and 97.28%
+    discriminated in R, G, and B respectively. In the result of feature analysis with
+    extra traits classifier (Fig. 5) that RGB leaflets have-high similarity and weight
+    in discriminating seed variants compared to texture and morphological features.
+    However, blue is the only spectral marker used in classification models. Furthermore,
+    it is deemed essential that spectral traits of seeds are of high importance. Based
+    on extracted texture values, equivalent density of Chinese loose-leaf seeds are
+    54.994% and 0.09% higher than the grand radius seed traits. Correlation and entropy
+    of grand radius seed traits are slightly higher than the variant with 16.93% and
+    0.01% respectively. On the other hand, homogeneity trait of both seed variants
+    has the same average value. In line with this, it was confirmed that correlation
+    in discriminating lettuce seed variants is also defined as well in the result
+    of FI-ETC
+
+
+    In discriminating the feature-based models on cross-validation strategy, DTC and
+    SV perfectly sweep the mean accuracy and F1-score (Table 2). The other hand, KNN
+    performed with 0.6278 and 0.6581 F1-score respectively. Thus, DTC and SV variance
+    NB is not lower than KNN, meaning that using the variance as good indicator in
+    discriminating them is better.
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_3_0.png)
+
+
+    Fig. 7. Confusion matrices for classifying lettuce seed variant using (a) KNN,
+    (b) DTC, (c) NB and (d) SV'
+  - '[PAGE 4]
+
+
+    # TABLE II. MODEL PERFORMANCE BASED ON CROSS-VALIDATION STRATEGY
+
+
+    | Model | Accuracy Mean | Accuracy Variance | F-score Mean | F-score Variance
+    |
+
+    |---|---|---|---||
+
+    | KNN | 0.9813 | 0.0400 | 0.9810 | 0.0406 |
+
+    | DTC | 1.0000 | 0.0000 | 1.0000 | 0.0000 |
+
+    | NB | 0.9753 | 0.0373 | 0.9842 | 0.0355 |
+
+    | SVM | 1.0000 | 0.0000 | 1.0000 | 0.0000 |
+
+
+    # TABLE III. MODEL PERFORMANCE BASED ON HELD-OUT VALIDATION STRATEGY
+
+
+    | Model | Accuracy Error | Sensitivity | Precision | FPR | F-score |
+
+    |---|---|---|---|---|---||
+
+    | KNN | 0.9750 | 0.0250 | 0.9760 | 0.9454 | 0.0546 | 0.9749 |
+
+    | DTC | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 |
+
+    | NB | 0.9750 | 0.0250 | 0.9760 | 0.9444 | 0.0556 | 0.9741 |
+
+    | SVM | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 |
+
+
+    # **C. Characterization of Roundness, Compactness, Solidity, and Shape Factors**
+
+
+    Surface graphs in Fig 8 were configured using design interpolation method with
+    distance of 4 and defined x- and y-axis. Seed roughness from the interaction of
+    area and parameter (2) is substantial when seedget adds its compactness and solidity.
+    The rate of growth in seedness is reduced when solidity is less than 0.15 and
+    compactness is less than 1. It means that seed length is roughly equivalent when
+    diameter and major axis length on other hand. Roundness deviates by a factor of
+    79.988 of its normal for every increase in compactness values and by a factor
+    of 242.063 for every increase in solidity.
+
+
+    Seed shapes shape the morphological characteristics based on length and area (4-7),
+    however, in the surface graphs of Fig. 8 only length and area are included as
+    they are secondary defined by this-. Shape 1 peaks when both length and major
+    axis length are approaching their maximum (8b). Shape 2 peaks when either length
+    or major axis length is approaching its maximum and gain (8c). In shape relations
+    a factor 4 represents a plateau characteristic as it is directly defined by seed
+    shape (6,7), except when length is approaching its maximum and major axis length
+    intersects it (8d, 8e).
+
+
+    Seed shapes shape the morphological characteristics based on length and area (4-7),
+    however, in the surface graphs of Fig. 8 only length and area are included as
+    they are secondary defined by this-. Shape 1 peaks when both length and major
+    axis length are approaching their maximum (8b). Shape 2 peaks when either length
+    or major axis length is approaching its maximum and gain (8c). In shape relations
+    a factor 4 represents a plateau characteristic as it is directly defined by seed
+    shape (6,7), except when length is approaching its maximum and major axis length
+    intersects it (8d, 8e).
+
+
+    Hence, there is substantial unfluatingness solidity for solidity range of 0.3
+    to 0.6 and compactness is less than 1. This range of surface graphs are good indicators
+    of seed lettuce variants.
+
+
+    Shape 1 has high correlation with seed roughness (R² of 0.733).
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_4_0.png)
+
+
+    Fig. 8. Surface graphs of (a) roundness, compactness and solidity and (b-e) shape
+    factors in correlation with seed major and minor axis lengths
+
+
+    # IV. CONCLUSION AND RECOMMENDATION
+
+
+    Two lettuce varieties, rapid grandi and lettuce-leaf, were discriminated and classified
+    using feature-based learning models for spectral, textural, and morphological
+    phenotypic traits. There are 22 raw seed traits extracted using RGB color space
+    and four from it using seed importance factor. The effectiveness of roundness,
+    compactness, and solidity were set as input to KNN, DTC, NB and SVM for single-level
+    image classification. Decision-based classification model used KNN, NB and SVM
+    in classification showed better results than other models.
+
+
+    Hence, the developed model is useful for lettuce variety classification, and is
+    very useful for low-budget agriculturalists in purifying seed selection and breeding
+    programs. It is recommended to include more lettuce varieties to improve the model
+    Likewise, which is essential for intensive seed breeding.
+
+
+    # ACKNOWLEDGMENT
+
+
+    The authors would like to acknowledge the support of the Department of Science
+    and the Philippines and The Intelligent Systems Laboratory (DOT) of De La Salle
+    University, Philippines.
+
+
+    # REFERENCES
+
+
+    [1] R. G. Du Luna, E. P Pados, and A. Bandala, "Automated Image Capturing System
+    for Deep Learning-based Tomato Leaf Leaf'
+  md: '
+
+    structure based on the ratios of lengths and biomass area L as the major axis
+    length (4-7).
+
+
+    MATLAB R2020 to obtain the morphological features. The same dataset used to obtain
+    the features with the Haralick algorithm. Gray level co-occurrence matrix (GLCM)
+    is calculated for the surface patterns that are homogeneous. The digital roughness
+    in extracting features. For the RGB images were utilized. With 22 features were
+    used for the 280 samples, including length, width, convexity, perimeter, diameter,
+    contrast, correlation, energy, entropy, homotopy, RGB color roughness, compactness,
+    solidity, and shape factors 1 to 4.
+
+
+    S = A/C
+
+
+    R = 4πA/p^2
+
+
+    CO = Ed/I
+
+
+    SF1 = L/A
+
+
+    SF2 = I/A
+
+
+    SF3 = A/(0.25πL^2)
+
+
+    SF4 = A/(0.25nL^2)
+
+
+    Feature importance using extra features (FI-EC) determines the two most significant
+    attributes for the lettuce seed types. The eight most significant features were
+    determined by the algorithm as by importance level. Only the four most significant
+    features were used to train the classifiers; these are: blue, solidity, correlation,
+    and compactness.
+
+
+    ## C. Seed Segmentation
+
+
+    Seed segmentation is necessary to remove non-ROI pixels and highlight seed spots
+    (Fig. 3). Color thresholding in the RGB space was used to segment the seeds. Color
+    has three channels, namely red, green and blue, on which a histogram with illumination
+    invariance properties can be derived by the number of pixels colors on a fixed
+    range that are dependent on the number of beans [29].
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_2_0.png)
+
+
+    Fig. 5. Eight most significant features as selected by FI-EC
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_2_1.png)
+
+
+    Fig. 3. RGB color spectrum projection for lettuce segmentation
+
+
+    ## E. Seed Variant Classification Using Feature-Based Machine Learning
+
+
+    The segmented as thresholded in the RGB color space translated the images with
+    a black background (Figs. 4 and 4b). Binarization was conducted to obtain a black
+    and white images that are necessary for phenotype extraction (Figs. 4c and 4d).
+
+
+    The four selected features were split into 80-20 for training and testing, standardized
+    using the standardization algorithm. The independent variables were scaled (Changed)
+    using the standardization algorithm (8) on a scale where X is the original value,
+    μ and σ is the standard deviation.
+
+
+    > $X_{changed} = \frac{X-\mu}{\sigma}$
+
+
+    Four machine learning: K-nearest neighbor (KNN), decision tree classifier (DTC),
+    Naive Bayes (NB), and support vector machine (SVM) were used to train the training
+    data. These estimators were selected as they have proven effective in classifying
+    applications. The default hyperparameters were used in the algorithms which yielded
+    accurate results without the need for further optimization. The DTC tree produced
+    (Fig. 6) used only the blue feature in classifying the two seed types.
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_2_2.png)
+
+
+    Fig. 4. Thresholded images of grand rapid and Chinese loose-leaf lettuce (a,b),
+    and its corresponding binarized image (c,d)
+
+
+    ## D. D. Seed Phenotype Extraction and Selection
+
+
+    | B=-0.29 |
+
+    | gain=0.55 |
+
+    | value=[82, 7] |
+
+    | True | False |
+
+
+    Extracting the phenotypes was done using the segmented binary images as input
+    data for the regions function in
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_2_3.png)
+
+
+    Fig. 6. Decision tree classifier classification
+
+
+    ## F. Model Evaluation Metrics and Statistical Analysis
+
+
+    For cross-validation accuracy, and F1-score of KNN, DTC, NB and SV were discriminated.
+    For hold-out validation, error, sensitivity, specificity, false positive rate,
+    and F1-score were differentiated. The confusion matrix is also used to graphically
+    highlight the classification performance that were considered at ≤ 0.05. Minitab
+    19 platform (Minitab, LLC) was used in performing statistical analysis. Python
+    is the programming language used for computational modeling for seed variant classification.
+    (Fig. 5) being the only texture in the four most significant features could affect
+    the classification performance of learning models.
+
+
+    ## B. Classification of Lettuce Seeds Using Feature-Based Machine Learning
+
+
+    The use of feature-based models in classifying seed variant is successful as yielded
+    high accuracy and negligible error (Tables 2 and 3). One encoding was used to
+    represent lettuce seed variants, namely for grand and Chinese-loose. The use of
+    20% of sampled single-kernel images was sufficient for KNN. The model classified
+    Chinese-leaf as grand (Fig. 7a), and DTC and SV seed variants perfectly (Fig.
+    7b). Thus DTC and SV are the best models in terms of accuracy.
+
+
+    # III. RESULTS AND DISCUSSION
+
+
+    ### A. Lettuce Seed Phenotypic Traits
+
+
+    Seed structure exhibits phenotypic traits in this study for grand and Chinese-leaf
+    including area, major area and minor axis. Convexity, perimeter, weight, entropy,
+    homogeneity, and red and green leaflets are Listed in Table 1. It was observed
+    that area and eccentricity, R-G and G leaflets have very strong correlations.
+    Conversely, besides area, and homogeneity is notable that the two seed variants
+    differ significantly in the degree of perimeter and equivalent density (Table
+    1) is a common from the previous study showed weaker morphological features of
+    the Chinese-leaf seeds compared with the grand radius trait.
+
+
+    | Seed Variant | Leaf Area | Major Area | Perimeter | Equivalent Density | Homogeneity
+    | R-G | G-B | Greenlets |
+
+    |---|---|---|---|---|---|---|---|
+
+    | Grand radius | 0.899 | -0.943 | 0.745 | 0.528 | -1.000 | 0.712 | 0.009 | 0.995
+    |
+
+    | Chinese loose-leaf | 0.998 | -0.156 | 0.740 | 0.217 | -0.176 | -0.118 | 0.992
+    | 0.991 |
+
+
+    TABLE I CORRELATION COEIENTS EXTRACTED FROM CORRELATION ANALYSIS OF SEED PHENOTYPE
+    TRAITS
+
+
+    The normalized RGB color for grand radius trait with 90.64%, 89.92% and 97.28%
+    discriminated in R, G, and B. In the result of feature analysis with extra traits
+    (Fig. 5) that RGB leaflets have high similarity and weight in discriminating seed
+    variants compared to texture and morphological features. However, blue is the
+    only spectral marker used in models. Furthermore, it is deemed that spectral traits
+    of seeds are of importance. Based on extracted texture values, equivalent density
+    of Chinese-leaf seeds are 54.994% and 0.09% higher than the grand seed traits.
+    Correlation and entropy of grand radius traits are slightly higher than variant
+    with 16.93% and 0.01% respectively. On the other hand, homogeneity trait of both
+    seed variants has the same average value. In line with this, it was confirmed
+    that correlation in discriminating lettuce variants is also defined as well in
+    the result of FI-ETC In discriminating the feature-based models on cross-validation
+    strategy, DTC and SV perfectly sweep the mean accuracy and F1-score (Table 2).
+    The other hand, KNN performed with 0.6278 and 0.6581 F1-score respectively. Thus,
+    variance is not lower than KNN, meaning that using the variance as good indicator
+    in discriminating them is better.
+
+
+    ![](img/6a4ac3cfece5952d98699919277c8227_3_0.png)
+
+
+    Fig. 7. Confusion matrices for classifying lettuce seed variant using (a) KNN,
+    (b) DTC, (c) NB and (d) SV
+
+
+    ## TABLE II. MODEL PERFORMANCE BASED ON CROSS-VALIDATION STRATEGY
+
+
+    | Model | Accuracy Mean | Accuracy Variance | F-score Mean | F-score Variance
+    |
+
+    |---|---|---|---|---|
+
+    | KNN | 0.9813 | 0.0400 | 0.9810 | 0.0406 |
+
+    | DTC | 1.0000 | 0.0000 | 1.0000 | 0.0000 |
+
+    | NB | 0.9753 | 0.0373 | 0.9842 | 0.0355 |
+
+    | SVM | 1.0000 | 0.0000 | 1.0000 | 0.0000 |
+
+
+    ## TABLE III. MODEL PERFORMANCE BASED ON HELD-OUT VALIDATION STRATEGY
+
+
+    | Model | Accuracy Error | Sensitivity | Precision | FPR | F-score |
+
+    |---|---|---|---|---|---|
+
+    | KNN | 0.9750 | 0.0250 | 0.9760 | 0.9454 | 0.0546 | 0.9749 |
+
+    | DTC | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 |
+
+    | NB | 0.9750 | 0.0000 | 1.0000 | 0.0000 | 0.0000 |
+
+    | SVM | 1.0000 | 0.0000 | 1.0000 | 0.0000 | 0.0000 |
+
+
+    [1] R. G. Du Luna, E. P Pados, and A. Bandala, "Automated Image Capturing System
+    for Deep Learning-based Tomato Leaf Leaf
+
+    '
+  mdcn: "\n基于长度和生物量面积比例的结构，其中 $L$ 为主轴长度 (4-7)。\n\n使用 MATLAB R2020 获取形态学特征。使用相同的数据通过\
+    \ Haralick 算法获取特征。对于均匀的表面模式计算了灰度共生矩阵 (GLCM)。在提取特征时使用了数字粗糙度。利用 RGB 图像。对于 280 个样本使用了\
+    \ 22 个特征，包括长度、宽度、凸性、周长、直径、对比度、相关性、能量、熵、同态、RGB 颜色粗糙度、紧凑性、密度以及形状因子 1 到 4。\n\n$S\
+    \ = A/C$\n\n$R = 4\\piA/p^2$\n\n$CO = Ed/I$\n\n$SF1 = L/A$\n\n$SF2 = I/A$\n\n\
+    $SF3 = A/(0.25\\piL^2)$\n\n$SF4 = A/(0.25nL^2)$\n\n额外特征重要性确定了生菜种子两种最重要的属性。算法根据重要性水平确定了八个最显著的特征。仅使用四个最显著的特征训练分类器；这些特征是：蓝色、密度、相关性和紧凑性。\n\
+    \n## C. 种子分割\n\n种子分割对于去除非感兴趣（ROI）像素和突出种子点是必要的（图 3）。使用 RGB 空间中的颜色阈值分割来分割种子。颜色有三个通道，即红、绿、蓝，通过依赖于豆数量的固定范围内像素颜的数量，可以推导出具有光照不变特性的直方图\
+    \ [29]。\n\n![](img/6a4ac3cfece5952d98699919277c8227_2_0.png)\n\n图 5. FI-EC 选出的八个最显著特征\n\
+    \n![](img/6a4ac3cfece5952d98699919277c8227_2_1.png)\n\n图 3. 用于生菜分割的 RGB 色谱投影\n\
+    \n## E. 基于特征机器学习的种子变种分类\n\n将 RGB 颜色空间内经过阈值处理的分割图像转换为黑色背景图像（图 4 和 4b）。进行二值化以获得表型提取所需的黑白图像（图\
+    \ 4c 和 4d）。\n\n将四个选定的特征分为 80-20 比例用于训练和测试，并使用标准化算法进行标准化。独立变量使用标准化算法 (8) 进行缩放（变化），其中\
+    \ $X$ 是原始值，$\\mu$ 和 $\\sigma$ 是标准差。\n\n> $X_{changed} = \\frac{X-\\mu}{\\sigma}$\n\
+    \n使用了四种机器学习：K 近邻算法 (KNN)、决策树分类器 (DTC)、朴素贝叶斯 (NB) 和支持向量机 (SVM) 来训练数据。选择这些估计器是因为它们在分类应用中被证明是有效的。算法使用了默认超参数，产生了准确的结果，无需进一步优化。DTC\
+    \ 树产生（图 6）在分类两种种子类型时仅使用了蓝色特征。\n\n![](img/6a4ac3cfece5952d98699919277c8227_2_2.png)\n\
+    \n图 4. 奶油球生菜和中国散叶生菜的阈值图像 (a,b) 以及对应的二值化图像 (c,d)\n\n## D. D. 种子表型提取与选择\n\n| B=-0.29\
+    \ |\n| gain=0.55 |\n| value=[82, 7] |\n| True | False |\n\n表型的提取是使用分割后的二值图像作为\
+    \ `regions` 函数的输入数据完成的\n\n![](img/6a4ac3cfece5952d98699919277c8227_2_3.png)\n\n\
+    图 6. 决策树分类\n\n## F. 模型评估与统计分析\n\n交叉验证准确率和 KNN、DTC、SV 的 F1 分数。留出验证误差、灵敏度、特异性和 F1\
+    \ 分数。混淆矩阵也用于图形化显示小于 0.05。Minitab 19 平台 (Minitab, LLC) 用于执行统计分析。Python 语言用于种子变种分类的计算建模。四个最显著特征会影响模型的性能。\n\
+    \n B. 基于特征机器学习的生菜分类\n\n基于特征的模型在分类种子变种方面是成功的，产生了高准确率和忽略不计的误差（表 2 和 3）。使用编码表示生菜种子变种，即奶油球和中国散叶。20%\
+    \ 的单核图像对于 KNN 是足够的。模型将中国散叶完美分类（图 7a），因此在准确性方面，DTC 和 SV 是最佳模型。\n\n# III. 结果与讨论\n\
+    \n### A. 生菜种子表型状\n\n本研究显示了奶油球和中国散叶种子的表型状，包括面积、长轴面积、凸性、周长、重量、熵、同态红色和绿色（见表 1）。观察到面积、R-G\
+    \ 和 G 之间具有很强的相关性。相反，除了面积外，同态性（表 1）显示两种种子变种在周长和等密度方面存在显著差异。\n\n| 种子变种 | 面积 | 长轴面积\
+    \ | 周长 | 等密度 | R-G | G-B |\n|---|---|---|---|---|---|---|\n| 奶油球 | 0.899 | -0.943\
+    \ | 0.745 | 0.528 | -1.000 | 0.712 | 0.009 | 0.995 |\n| 中国散叶 | 0.998 | -0.156\
+    \ | 0.740 | 0.217 | -0.176 | -0.118 | 0.992 | 0.991 |\n\n表 I 从种子表型状分析中提取的相关系数\n\
+    \n奶油球状的归一化 RGB 颜色在 R、G、B 中分别为 90.64%、89.92% 和 97.28%。在额外特征分析结果（图 5）中，RGB 叶在区分种子变种方面具有高相似性和权重。然而，蓝色是模型中唯一的光谱标记。此外，根据提取的纹理值，中国散叶种子的等密度比奶油球种子状高出\
+    \ 54.994% 和 0.09%。奶油球状的相关性和熵略高于变种。另一方面，两种种子变种的同态性具有相同值。生菜变种的相关性在 FI-ETC 结果中也定义良好。在交叉验证策略的基于特征的模型中，DTC\
+    \ 和 SV 完美覆盖了平均准确率和 F1 分数（表 2）。另一方面，KNN 的 F1 分数分别为 0.6278 和 0.6581。因此，方差小于 KNN，意味着使用方差作为区分它们的指标更好。\n\
+    \n![](img/6a4ac3cfece5952d98699919277c8227_3_0.png)\n\n图 7. 使用 (a) KNN、(b) DTC、(c)\
+    \ NB 和 (d) SV 分类生菜变种的混淆矩阵\n\n## 表 II 基于交叉验证策略的模型性能\n\n| 模型 | 准确率平均 | 准确率方差 | F1\
+    \ 分数平均 | F1 分数方差 |\n|---|---|---|---|---|\n| KNN | 0.9813 | 0.0400 | 0.9810 |\
+    \ 0.0406 |\n| DTC | 1.0000 | 0.0000 | 1.0000 | 0.0000 |\n| NB | 0.9753 | 0.0373\
+    \ | 0.9842 | 0.0355 |\n| SVM | 1.0000 | 0.0000 | 1.0000 | 0.0000 |\n\n## 表 III\
+    \ 基于留出验证策略的模型性能\n\n| 模型 | 准确率误差 | 灵敏度 | 精确率 | FPR | F1 分数 |\n|---|---|---|---|---|---|\n\
+    | KNN | 0.9750 | 0.0250 | 0.9760 | 0.9454 | 0.0546 | 0.9749 |\n| DTC | 1.0000\
+    \ | 0.0000 | 1.0000 | 1.0000 | 0.0000 | 1.0000 |\n| NB | 0.9750 | 0.0000 | 1.0000\
+    \ | 0.0000 | 0.0000 |\n| SVM | 1.0000 | 0.0000 | 1.0000 | 0.0000 | 0.0000 |\n\n\
+    [1] R. G. Du Luna, E. P Pados, and A. Bandala, \"Automated Image Capturing System\
+    \ for Deep Learning-based Tomato Leaf Leaf\"\n\n"
+  merge: 0
+- raw:
+  - '[PAGE 5]
+
+
+    Detection and Recognition, TECNCON 2018 - IEEE 2018 IEEE Conference.,
+
+
+    S. C. Laughlin, R. S. Conception, J. D. Alejandro, R. R. Tobias, and E. Darius,
+    "Life stage classification of fruit attributes using machine learning feature
+    estimators and selection methods," International Journal of Advances in Machine
+    Learning, vol. 10, no. 2, pp. 171-180,
+
+
+    R. S. Conception, S. C. Laughlin, R. R. Tobias, E. P. Darius, A. A. Bentley, and
+    E. Sybing, "Identification of Fruit Quality Using Spectroscopy and Visible Band
+    Green Intelligence, 2020 International Conference on Advanced Robotics and Intelligence
+    (AIRIS)," 2020.
+
+
+    R. Conception, S. C. Laughlin, J. D. Alejandro, E. Darius, and E. Sybing, "Classification
+    Using Supervised Neural Networks Based on Machine Feature Analysis of Hybrid and
+    Leaf Co-Occurrence Matrix," ACS Journal of Agricultural and Food Chemistry, vol.
+    58,, pp. 475-486, 2020.
+
+
+    S. C. Laughlin, R. S. Conception, J. D. Alejandro, R. R. Tobias, E. Darius, and
+    E. Bentley, "Application of Machine Learning Algorithms Learned from Model-Based
+    Lettuce Stage Classification in Small Analytics," International Journal of Advances
+    in Machine Learning, vol. 11, no. 2, pp. 442-449, 2022.
+
+
+    R. Conception, S. C. Laughlin, J. D. Alejandro, R. R. Tobias, E. Sybing, and E.
+    Darius, "Life stage identification by polymorphic varieties using color hyperspectral
+    imaging," International Journal of Advances in Informatics, vol. 6, no. 3, pp.
+    261-277, 2020.
+
+
+    T. G. S. Rao and N. Vadekar, "AgroNet for fruits and weeds classification: A seed
+    based in automatic farming," Comput. Electron, vol. 148, no. 1, pp. 1-9, 2021.
+
+
+    A. Yunus and A. Fadeed, "Preface: International Conference on Recent Trends in
+    Physics (ICRTP 2016)," Int. Conf. Inf. Tech. Vol. Ind., 809, no.1, 2017.
+
+
+    L. J. Wang, "Seed-to-seed for plant breeding using seed quality based on machine
+    vision technology," Sens. Rep., vol. 9, no. 1, pp. 1-15, 2019.
+
+
+    G. Liu, Y. Li, H. Su, F. Zheng, and Q. Shu, "Single-kernel NIR spectroscopy for
+    detecting super sweet corn (Mays mays) seed viability using multivariate data
+    analysis," Sensors (Sensors), vol. 18, no. 8, 2018.
+
+
+    W. Kong, C. Zhang, W. Huang, F. Liu, and Y. He, "Application of hyperspectral
+    imaging for the seed quality evaluation of maize seeds," Sensors (Sensors), vol.
+    18, no. 1, pp. 1-16, 2018.
+
+
+    Y. Seo, et al., "Optimized Multivariate Analysis for the Discrimination of Cucumber
+    Mosaic Fruit Water-Infected Seeds," Journal of Food Analysis, vol. 86, no. 2,
+    pp. 95-102, 2019.
+
+
+    N. Wu, et al., "Variety of oat seeds using hyperspectral imaging: Investigating
+    the representation ability of deep convolutional neural network," RSC. Adv., vol.
+    9, no. 22, pp. 12635-12664, 2021.
+
+
+    [15] J. Zhang, L. Dai, and F. Chen, "Selection of frozen corn seeds using hyperspectral/NIR
+    reflectance imaging technique," Molecules, vol. 24, 12,
+
+
+    [16] I. Back, et al., "Selection of optimal hyperspectral wavebands for detection
+    of discoloured, diseased seeds," Sens. Rep., vol. 5, no. 9, pp. 1-15, 2018.
+
+
+    [17] X. Peng, Y. Chen, X. Liu, X. Feng, and Y. He, "Discrimination of CRISPR-induced
+    mutants of seeds using near-infrared hyperspectral imaging," Sens. Rep., vol.
+    9, no. 1, pp. 1-10,
+
+
+    [18] K. Sutton, M. Manley, and P. J. Williams, "Classification of wheat seeds
+    with defects using hyperspectral imaging," Food. Chem., vol. 323, 2020.
+
+
+    [19] J. Salim and B. Boit, "Classification of bean seeds (Vigna bean) using hyperspectral
+    image analysis," Sensors, vol. 19, 4050, 2019.
+
+
+    [20] K. Tan, P. Sukaskawan, and Y. Punasad, "Using digital image analysis to classify
+    the quality of rice grain variety using statistical approach," Comput. Electron.
+    vol. 116, 105333, 2020.
+
+
+    [21] W. Yuan, N. Wijewarande, J. Seks, B. Gai, Y. Ge, and G. L. Yu, "Evaluation
+    of Soybean Seeds Through Color and Texture Features of Canary Based Imaging, Sens.
+    Rep., vol. 9, no. 1, pp. 1-17, †19.
+
+
+    [22] Y. Altuna, C. Omer, and A. F. Kocaman, "Identification of hybrid and diploid
+    seeds using convolutional neural networks and a learning approach," Comput. Electron.
+    Agr., vol. 163, no. 4, pp. 1-11, 2021.
+
+
+    [23] M. Mori and J. Ioka, "Classification of multicolored bean seeds using deep
+    machine learning techniques," Comput. Electron. Agr., vol. 174, 105998, 2021.
+
+
+    [24] M. La Bianco, O. Grillo, C. Onilla, G. Gomez, and G. Bacchetta, "Identification
+    of quality in corn seeds analysed with machine vision techniques," Food Plant,
+    vol. 19, no. 2, pp. 183-190, 2017.
+
+
+    [25] S. Y M. Chen, "A novel method of identifying paddy seed varieties by application
+    of image processing and fuzzy logic," Sens. Rep., vol. 9, no. 2, pp. 4832-4839,
+    2020.
+
+
+    [26] E. J. Elias, O. R. Erbaldo, A. R. Jordan, and J. Seeks, "Classification of
+    wheat kernels using hyperspectral imaging," IEEE Access, vol. 8, pp. 22493-22505,
+    2020.
+
+
+    [27] K. Nallaperula, et al., "Analysis of suitable color space for visually plausible-free
+    screen reconstruction from image," 2013 IEEE Int. Conf. Comput. Intell. Comput.
+    Res. IEEE ICCIC 2013, March, 2013.'
+  md: '
+
+    Detection and Recognition, TECNCON 2018 - IEEE 2018 IEEE Conference.,
+
+
+    S. C. Laughlin, R. S. Conception, J. D. Alejandro, R. R. Tobias, and E. Darius,
+    "Life stage classification of fruit attributes using machine learning feature
+    estimators and selection methods," International Journal of Advances in Machine
+    Learning, vol. 10, no. 2, pp. 171-180,
+
+
+    R. S. Conception, S. C. Laughlin, R. R. Tobias, E. P. Darius, A. A. Bentley, and
+    E. Sybing, "Identification of Fruit Quality Using Spectroscopy and Visible Band
+    Green Intelligence, 2020 International Conference on Advanced Robotics and Intelligence
+    (AIRIS)," 2020.
+
+
+    R. Conception, S. C. Laughlin, J. D. Alejandro, E. Darius, and E. Sybing, "Classification
+    Using Supervised Neural Networks Based on Machine Feature Analysis of Hybrid and
+    Leaf Co-Occurrence Matrix," ACS Journal of Agricultural and Food Chemistry, vol.
+    58,, pp. 475-486, 2020.
+
+
+    S. C. Laughlin, R. S. Conception, J. D. Alejandro, R. R. Tobias, E. Darius, and
+    E. Bentley, "Application of Machine Learning Algorithms Learned from Model-Based
+    Lettuce Stage Classification in Small Analytics," International Journal of Advances
+    in Machine Learning, vol. 11, no. 2, pp. 442-449, 2022.
+
+
+    R. Conception, S. C. Laughlin, J. D. Alejandro, R. R. Tobias, E. Sybing, and E.
+    Darius, "Life stage identification by polymorphic varieties using color hyperspectral
+    imaging," International Journal of Advances in Informatics, vol. 6, no. 3, pp.
+    261-277, 2020.
+
+
+    T. G. S. Rao and N. Vadekar, "AgroNet for fruits and weeds classification: A seed
+    based in automatic farming," Comput. Electron, vol. 148, no. 1, pp. 1-9, 2021.
+
+
+    A. Yunus and A. Fadeed, "Preface: International Conference on Recent Trends in
+    Physics (ICRTP 2016)," Int. Conf. Inf. Tech. Vol. Ind., 809, no.1, 2017.
+
+
+    L. J. Wang, "Seed-to-seed for plant breeding using seed quality based on machine
+    vision technology," Sens. Rep., vol. 9, no. 1, pp. 1-15, 2019.
+
+
+    G. Liu, Y. Li, H. Su, F. Zheng, and Q. Shu, "Single-kernel NIR spectroscopy for
+    detecting super sweet corn (Mays mays) seed viability using multivariate data
+    analysis," Sensors (Sensors), vol. 18, no. 8, 2018.
+
+
+    W. Kong, C. Zhang, W. Huang, F. Liu, and Y. He, "Application of hyperspectral
+    imaging for the seed quality evaluation of maize seeds," Sensors (Sensors), vol.
+    18, no. 1, pp. 1-16, 2018.
+
+
+    Y. Seo, et al., "Optimized Multivariate Analysis for the Discrimination of Cucumber
+    Mosaic Fruit Water-Infected Seeds," Journal of Food Analysis, vol. 86, no. 2,
+    pp. 95-102, 2019.
+
+
+    N. Wu, et al., "Variety of oat seeds using hyperspectral imaging: Investigating
+    the representation ability of deep convolutional neural network," RSC. Adv., vol.
+    9, no. 22, pp. 12635-12664, 2021.
+
+
+    [15] J. Zhang, L. Dai, and F. Chen, "Selection of frozen corn seeds using hyperspectral/NIR
+    reflectance imaging technique," Molecules, vol. 24, 12,
+
+
+    [16] I. Back, et al., "Selection of optimal hyperspectral wavebands for detection
+    of discoloured, diseased seeds," Sens. Rep., vol. 5, no. 9, pp. 1-15, 2018.
+
+
+    [17] X. Peng, Y. Chen, X. Liu, X. Feng, and Y. He, "Discrimination of CRISPR-induced
+    mutants of seeds using near-infrared hyperspectral imaging," Sens. Rep., vol.
+    9, no. 1,
+
+
+    [18] K. Sutton, M. Manley, and P. J. Williams, "Classification of wheat seeds
+    with defects using hyperspectral imaging," Food. Chem., vol. 323, 2020.
+
+
+    [19] J. Salim and B. Boit, "Classification of bean seeds (Vigna bean) using hyperspectral
+    image," Sensors, vol. 19, 4050, 2019.
+
+
+    [20] K. Tan, P. Sukaskawan, and Y. Punasad, "Using digital image analysis to classify
+    the quality of rice grain variety using statistical approach," Comput. Electron.
+    vol. 116, 105333, 2020.
+
+
+    [21] W. Yuan, N. Wijewarande, J. Seks, B. Gai, Y. Ge, and G. L. Yu, "Evaluation
+    of Soybean Seeds Through Color and Texture Features Canary Based Imaging, Sens.
+    Rep., vol. 9, no. 1, pp. 1-17, 2019.
+
+
+    [22] Y. Altuna, C. Omer, and A. F. Kocaman, "Identification of hybrid and diploid
+    seeds using convolutional neural networks and a learning approach," Comput. Electron.
+    Agr., vol. 163, no. 4, pp. 1-11, 2021.
+
+
+    [23] M. Mori and J. Ioka, "Classification of multicolored bean seeds using deep
+    learning techniques," Comput. Electron. Agr., vol. 174, 105998, 2021.
+
+
+    [24] M. La Bianco, O. Grillo, C. Onilla, G. Gomez, and G. Bacchetta, "Identification
+    of quality in corn seeds analysed with machine vision techniques," Food Plant,
+    vol. 19, no. 2, pp. 183-190, 2017.
+
+
+    [25] S. Y M. Chen, "A novel method of identifying paddy seed varieties by application
+    of image processing and fuzzy logic," Sens. Rep., vol. 9, no. 2, pp. 4832-4839,
+    2020.
+
+
+    [26] E. J. Elias, O. R. Erbaldo, A. R. Jordan, and J. Seeks, "Classification of
+    wheat kernels using hyperspectral imaging," IEEE Access, vol. 8, pp. 22493-22505,
+    2020.
+
+
+    [27] K. Nallaperula, et al., "Analysis of suitable color space for visually plausible-free
+    screen reconstruction from image," 2013 IEEE Int. Conf. Comput. Intell. Comput.
+    Res. IEEE ICCIC 2013, March, 2013.
+
+    '
+  mdcn: '
+
+
+    检测与识别，TECNCON 2018 - IEEE 2018 IEEE 会议，
+
+
+    S. C. Laughlin, R. S. Conception, J. D. Alejandro, R. R. Tobias, and E. Darius,
+    "使用机器学习特征估计器和选择方法进行水果属性生命阶段分类，《国际机器学习进展学报》，vol. 10, no. 2, pp. 171-180，
+
+
+    R. S. Conception, S. C. Laughlin, R. R. Tobias, E. P. Darius, A. A. Bentley, and
+    E. Sybing, "利用光谱学和可见光绿智能识别果实质量，2020年先进机器人与智能国际会议 (AIRIS)”，2020年。
+
+
+    R. Conception, S. C. Laughlin, J. D. Alejandro, E. Darius, and E. Sybing, "基于混合与叶片共现矩阵机器特征分析的监督神经网络分类，《ACS
+    农业与食品化学杂志》，vol. 58,, pp. 475-486, 2020年。
+
+
+    S. C. Laughlin, R. S. Conception, J. D. Alejandro, R. R. Tobias, E. Darius, and
+    E. Bentley, "小规模分析中从基于模型的生菜阶段分类中学到的机器学习的应用，《国际机器学习进展学报》，vol. 11, no. 2, pp. 442-449,
+    2022年。
+
+
+    R. Conception, S. C. Laughlin, J. D. Alejandro, R. R. Tobias, E. Sybing, and E.
+    Darius, "利用彩色高光谱成像进行多态品种的生命阶段识别，《国际信息学进展学报》，vol. 6, no. 3, pp. 261-277, 2020年。
+
+
+    T. G. S. Rao and N. Vadekar, "用于水果和杂草分类的 AgroNet：一种基于种子的自动农业，《计算机与电子》，vol. 148,
+    no. 1, pp. 1-9, 2021年。
+
+
+    A. Yunus and A. Fadeed, "前言：物理近期趋势国际会议 (ICRTP 2016)，《工业技术国际会议信息》，809, no.1, 2017年。
+
+
+    L. J. Wang, "基于机器视觉技术的种子质量植物育种（种子到种子），《传感器报告》，vol. 9, no. 1, pp. 1-15, 2019年。
+
+
+    G. Liu, Y. Li, H. Su, F. Zheng, and Q. Shu, "利用多变量数据分析通过单粒近红外光谱检测超甜玉米 (Mays mays)
+    种子活力，《传感器 (Sensors)》，vol. 18, no. 8, 2018年。
+
+
+    W. Kong, C. Zhang, W. Huang, F. Liu, and Y. He, "高光谱成像在玉米种子质量评估中的应用，《 (Sensors)》，vol.
+    18, no. 1, pp. 1-16, 2018年。
+
+
+    Y. Seo, et al., "用于区分黄瓜病毒果实水浸种子的优化多变量分析，《食品分析杂志》，vol. 86, no. 2, pp. 95-102, 2019年。
+
+
+    N. Wu, et al., "利用高光谱成像分类燕麦种子：研究深度卷积神经网络的表征能力，《RSC. Adv.》，vol. 9, no. 22, pp.
+    12635-12664, 2021年。
+
+
+    [15] J. Zhang, L. Dai, and F. Chen, "使用高光谱/近红外反射成像技术筛选冻玉米种子，《分子》，vol. 24, 12,
+
+
+    [16] I. Back, et al., "用于检测变色病种的最优高光谱波段选择，《传感器报告》，vol. 5, no. 9, pp. 1-15, 2018。
+
+
+    [17] X. Peng, Y. Chen, X. Liu, X. Feng, and Y. He, "利用近红外高光谱成像区分 CRISPR 诱导的种子突变，《传感器报告》，vol.
+    9, no. 1,
+
+
+    [18] K. Sutton, M. Manley, and P. J. Williams, "利用高光谱成像对缺陷小麦种子分类，《食品化学》，vol. 323,
+    2020年。
+
+
+    [19] J. Salim and B. Boit, "利用高光谱图像对豆类（豇豆）分类，《传感器》，vol. 19, 4050, 2019年。
+
+
+    [20] K. Tan, P. Sukaskawan, and Y. Punasad, "使用数字图像分析通过统计方法对水米品种进行分类，《计算机与电子》，vol.
+    116, 105333, 2020年。
+
+
+    [21] W. Yuan, N. Wijewarande, J. Seks, B. Gai, Y. Ge, and G. L. Yu, "通过金丝雀成像颜色和纹理特征评估大种子，《传感器报告》，vol.
+    9, no. 1, pp. 1-17, 2019年。
+
+
+    [22] Y. Altuna, C. Omer, and A. F. Kocaman, "利用卷积神经网络识别杂交和二倍种子，《计算机与农业》，vol. 163,
+    no. 4, pp. 1-11, 2021年。
+
+
+    [23] M. Mori and J. Ioka, "利用深度学习技术对彩色豆分类，《计算机与农业》，vol. 174, 105998, 2021年。
+
+
+    [24] M. La Bianco, O. Grillo, C. Onilla, G. Gomez, and G. Bacchetta, "利用机器视觉技术识别玉米种子质量，《食品》，vol.
+    19, no. 2, pp. 183-190, 2017年。
+
+
+    [25] S. Y M. Chen, "应用图像处理和模糊逻辑识别水稻品种的新方法，《传感器报告》，vol. 9, no. 2, pp. 4832-4839,
+    2020年。
+
+
+    [26] E. J. Elias, O. R. Erbaldo, A. R. Jordan, and J. Seeks, "利用高光谱成像对小麦粒分类，《IEEE
+    Access》，vol. 8, pp. 22493-22505, 2020年。
+
+
+    [27] K. Nallaperula, et al., "用于从图像重建视觉合理屏幕的合适色彩空间分析，2013年 IEEE 智能与计算研究国际会议 IEEE
+    ICCIC 2013，3月, 2013年。"
+
+
+    '
+  merge: 1
