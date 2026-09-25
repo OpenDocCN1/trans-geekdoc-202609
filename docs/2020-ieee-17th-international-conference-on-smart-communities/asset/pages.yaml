@@ -1,0 +1,367 @@
+- pgno: 0
+  md: '# A Deep Learning Classifier for Crack Detection with Underground Pipes
+
+
+    Saffeer M. Khan
+
+    Department of Electrical Engineering
+
+    Arkansas Tech University
+
+    Russellville, Arkansas, USA
+
+    mkhan33@gmail.com
+
+
+    Syed A. Haider
+
+    Department of Computer &
+
+    Information Sciences
+
+    State University of New York at
+
+    Fredonia, NY
+
+    haider@fredonia.edu
+
+
+    Ishaq Unwala
+
+    College of Science and Engineering
+
+    University of Houston Clear Lakes
+
+    Houston, Texas, USA
+
+    unwala@gmail.com
+
+
+    **Abstract—**Underground utilities especially sewer pipes are prone to cracks
+    due to aging, shifting soil, increased traffic, congestion, and improper installation.
+    A major challenge in operation is the effective monitoring and inspection of sewer
+    networks. The video signal standard condition monitoring system based on a passing
+    robot closed circuit television (CCTV) camera carries through the pipe. The CCTV
+    feed is recorded and interpreted by human operators who determine it corresponds
+    to the location of cracks and other structural defects. This process is time and
+    cost intensive. In this research, we propose deep learning for success in vision
+    based object detection. In this project, we collect crack data from extensive
+    field inspections. The noisy data is processed using the convolutional networks.
+    We test the proposed model with validation data to determine its accuracy and
+    effectiveness. Cracks can be effectively detected in underground pipes.
+
+
+    long lifespan, weightless, resistance to chemical reaction with wastewater, and
+    ease of installation. In United States, PVC pipes have been adopted as industry
+    standards in accordance with ASTM D1784 [2].nThe operators conduct periodic inspection
+    and maintenance based on condition of the pipe and its future. For periodic inspection,
+    the Association of Sewer Service Companies (NASCO) has adopted a system based
+    on passing-closed circuit television (CCTV) camera mounted on the pipe. The robot
+    observes, and records the video. This system needs a 4 x 4 track with generator,
+    fiber optic cable, and a control system to properly navigate and identify defects.
+    The existing systems are man-intensive. The accuracy of
+
+
+    **Keywords—**monitoring, sewer inspection, CCTV, deep learning, convolutional
+    neural networks.
+
+
+    # I. INTRODUCTION
+
+
+    The aging sewer infrastructure in United States is prone to develop cracks and
+    other structural defects due to various effects such as age, improper installation
+    and effective design, internal operation, external connection, and manufacturing
+    processes [1]. Factors that contribute to crack formation include soil movement,
+    acidic soil, root tree intrusion, and chemical reactions with the toxic effluents
+    and leachants. Cracked sewer pipes are prone to infiltration and can cause inflow
+    (I&I) of groundwater and sanitary overflows (SSOs). As the underground sewer pipes
+    are out of view, it is difficult to prevent SSOs and accumulation of toxic sediments.
+
+
+    To prevent SSOs, utility companies focus on technology that can maintain the conditions
+    of their underground piping in an efficient, and cost-effective manner. A major
+    element of this strategy is periodic inspection of their underground assets which
+    lead to pipe cleaning and reactive maintenance of defective section pipes.
+
+
+    Historically, vitrified clay pipes (V) used as sewer pipes due to their high compressive
+    strength and resistance to chemical reactions with sewage. Despite their high
+    strength, they crack over time and fail due to root ingress. The Polyvinyl Chloride
+    (PVC) pipes are now widely used in sewer systems.
+
+    The main reasons for the change to PVC pipes is their
+
+
+    There is to reduce the reliance on an operator to detect cracks and other structural
+    defects in pipes. In recent years, research has been done using image processing
+    and segmentation algorithms such as multilayer perceptron (MLP) using neural networks
+    [3]. Conventional computer vision techniques to automate process and analyze images
+    have also been focus of research [4]. Deep learning using residual convolutional
+    network (R-CNN) has also been used
+
+
+    In this paper, we present our findings on using deep learning CNNs to detect cracks
+    in video images from actual data collected from field inspection of sewer pipes
+    with a CCTV mounted wire-robot. We tested various filters to preprocess the data
+    and analyze the configurations of CNN using technical parameters such as batch
+    activation, double convolution, normalization, and max-pooling. The novel contribution
+    of this work is that authors have found that only deep learning can learn the
+    complex features of cracks in video images from live sewer pipes.
+
+
+    The remainder of the paper is organized as follows. Section II summarizes the
+    related work; Section III covers the approach and findings from the project. Section
+    IV presents the data analysis and approach Section V concludes the paper and directions
+    of future work.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# II. RELATED WORK
+
+
+    Recent work has looked using neural networks to detect changes in water pipes
+    by pressure and (or) flow analysis. The [5] actual situations in Guangzhou China
+    were analyzed using a neural network. The work development of a fast technology.
+    Vision-based techniques have also been used for automatic detection in pipes using
+    conventional image processing techniques such as illumination, and defect textures.
+    An Aggregated Residual Network was proposed the effectiveness of using CNNs. Their
+    proposed methodology achieved human-like recognition and defect detection of percentages
+    over 99.5 and over 97.3%, respectively [6]
+
+
+    techniques.
+
+
+    # III. PROPOSED APPROACH
+
+
+    The work report describes a CNN architecture to detect changes in sewer pipes.
+    The data was collected from actual installations in several neighborhoods of a
+    residential area where sewer networks are aging. All pipes are 620 mm (diameter).
+    VCP and robot CCTV passed through the pipes are shown in Fig. 1. The recorded
+    video was converted for processing through the deep CNN model. The details of
+    the dataset and the approach are given in the following paragraphs:
+
+
+    The details of the data are given in Table I. Data was obtained through a robot
+    fitted. The robot was guided and operated. When a crack appeared to inspect in
+    the crack. The CCTV video was recorded at 25 frames per second, we extracted every
+    fifth frame. The reasons for this are twofold:
+
+
+    In videos of actual sewers were manually checked to recognize and classify the
+    defects. These methods were error-prone and inefficient. The authors studied feature
+    classification to detect sewer defects using deep learning. A deep learning model
+    based on two-level hierarchical convolutional neural network was trained on a
+    dataset with over 40,000 images.
+
+
+    +   1) Observed class imbalance in the data. To reduce the imbalance, the class
+    with more frames was sampled and the class with less frames was not. Once sampled,
+    both classes were relatively represented in data.
+
+
+    In our group has looked using deep learning model to detect cracks in PVC pipes
+    with data collected in laboratory setting. The experiment was conducted by autonomous
+    robot to validate our proposed model on two phase feature learning and a classification
+    phase. The feature learning method composed of two-dimensional convolutional layers,
+    max-pooling layer, and a flattened layer. The classification phase included two
+    fully connected layers and a classifier. With this model, the data analysis showed
+    an accuracy of 89.4% in training and 83.3% in validation.
+
+
+    TABLE I: Empirical Data – Pipes and Frames
+
+
+    | Original Frames | Sampled Frames |
+
+    |---|---||
+
+    | Raw Data – Pipe 1 | 21662 | 818 |
+
+    | Raw Data – Pipe 2 | 822 | - |
+
+    | Raw Data – Pipe 3 | 27443 | 1057 |
+
+    | Raw Data – Pipe 4 | 314 | 314 |
+
+
+    2) A lot of redundancy was observed in images. The operator spent time to inspect
+    with a crack. Crack was detected using deep learning.
+
+
+    To automatically detect cracks in sewer pipes, we used using filters of features
+    to remove the background noise. The algorithms were developed using Hough transform
+    to process the images. Image processing techniques were also used to detect defects
+    in crack and steel surfaces, using CNNs [10]. These methods showed robust performance
+    for cracks and poor lighting conditions compared to classical image processing
+
+
+    The CCTV cameras have very high resolution and there is a lot of noise present
+    in Fig. 1. The main problem originates from low resolution and also artifacts
+    that are present in the pipes, joints penetrating then small pipes joined to the
+    pipe. All these add to noise. A joint in the pipe may be mistaken as a crack when
+    the image is rotated, for instance. We used Keras to model our Deep Learning Neural
+    Network. It is commonly accepted concept that the more data the better trained
+    will
+
+
+    To improve the accuracy of CNN models, collecting and annotating large datasets
+    is done manually and laboriously. To address imbalance in the data (difference
+    between number of images with cracks and without), data augmentation techniques
+    have been effectively used. This can be accomplished by enlarging the dataset
+    through
+
+
+    ![](img/edd12b82b4d119595aaf9394ca5c21b4_1_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'jitters, and translations etc. We use random rotation to augment the images
+    of cracked pipes. Experiments were performed on Intel® Xeon(R) CPU E-1385 v6 @
+    4.10GHz × 8 with integrated graphics and 64GB of RAM.
+
+
+    | | | |
+
+    |---|---|--|
+
+    | 0 | 0 | 0 |
+
+    | 0 | 0 | 0 |
+
+    | 0 | 0 | 0 |
+
+
+    ![](img/edd12b82b4d119595aaf9394ca5c21b4_2_0.png)
+
+
+    Fig. 4. a) Accuracy b) Loss
+
+
+    total number of images that we worked with around 800 after under-sampling of
+    the "nocracks" class.
+
+
+    Another reason for model accuracy and validation accuracy is that the images show
+    cracks a tunnel whiskers with cracks showing the section of the pipe that is focused
+    on. In addition to this, a significant number of images also show the pipe (tunnel)
+    in where a crack looks very similar to a pipe, as shown in Fig. 3, right image.
+
+
+    ![](img/edd12b82b4d119595aaf9394ca5c21b4_2_1.png)
+
+
+    Fig. 2. Frame from video captured by a CCTV monitored robot.
+
+
+    # IV. DATA ANALYSIS AND RESULTS
+
+
+    As explained, the images contained additional artifacts, roots and joint pipes.
+    These are particularly problematic because they resemble cracks in many instances.
+    Some of the images were not discernable even with human observation.
+
+
+    ![](img/edd12b82b4d119595aaf9394ca5c21b4_2_2.png)
+
+
+    During testing, more than 100 images were tested, the model was able to predict
+    cracks in images with more than 99% accuracy. The results are signification considering
+    low-resolution and addition resolution in the images.
+
+
+    # V. CONCLUSION
+
+
+    Crack detection in underground sewers is an important modern-day utility for operators
+    due to public health and environmental protection measures. The existing methods
+    for pre-inspection of sewers based on expertise and human effort of operators
+    to detect cracks of the pipe are inefficient and costly. A better alternative
+    would be to use an automated system for classifying the images inside the pipes
+    for monitoring applications. Deep learning models using CNNs due to their robust
+    performance in image processing and classification offer promise to develop an
+    extent method.
+
+
+    Fig. 3. Filtered images Gaussian Blur and Sobel Edge Detection...
+
+
+    To remove ambient noise in the images we had to come up with a solution which
+    allows us to expose cracks. This was done by applying Gaussian Blur to the images
+    with kernel size of 3 and then Sobel so that the edges are highlighted.
+
+
+    Enhanced images into the neural network as input. Fig. 4 shows the accuracy over
+    50 epochs. We observed validation accuracy ranging from 0.96. The reason is in
+    data imbalance due to redundant images, and the amount of data. We have an inherent
+    imbalance in data which we reduced by sampling. While it was effective, the data
+    remains unbalanced to extent.
+
+
+    # REFERENCES
+
+
+    +   [1] D. Priddy., “Why Do PVC & CPVC Pipes Occasionally Fail?", Plastic Fibers
+    Lab, Midland, MI document, available at
+
+
+    Authorized licensed use limited to: University of Prince Edward Island. Downloaded
+    on 2021/07/02 at 08:36:08 from IEEE X. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'http://www.californifornia.org/parklinterker/files/WhyCPVC-Occaif.pdf
+
+
+    [2] D. Murray, Palgurt, G. Skipper, and S. Donovan, Demonstration of Innovative
+    Sewer System Technology: SL-RAT, US EPA Office of Research and Development, Washington,
+    DC, EPA8000-R-14-9031, 2014.
+
+
+    [3] M. Hamidi, H. Hengchaei, Efficient Algorithm for Crash Detection in Sewer
+    Images from Closed-Circuit Television Inspections, Journal of Infrastructure Systems,
+    Vol. 20, No. 2, 2014.
+
+
+    [4] Y. Cha, and W. Choi, "Deep Learning-Based Crack Detection Using Convolutional
+    Neural Networks," Computer-Aided Civil and Infrastructure Engineering, Vol. 32,
+    No. 5, pp. 361-376, March 2017.
+
+
+    [5] W. Shen, T. Yu, W. Zhong, C. Yi and S. Wen, "Countermeasures of fast detection
+    of pipe bursts in Guangzhou based on neural network technology," 2011 International
+    Conference on Electric Technology (ICETCE), Lushan, 2011, pp. 5824-5828.
+
+
+    [6] A. Niparkar and A. Solanki, "Detection of Pipes by Differentiated Residual
+    Blocks of Convolutional Neural Network," 2019 IEEE 4th International Conference
+    on Signal and Image Processing (ICIP), Wuxi, China, 2019, pp. 269-273.
+
+
+    [7] Q. Xue, D. Li, J. Xu, Z. Yu and J. Wang, "Automatic Detection and Classification
+    of Sewer Defects via Hierarchical Deep," in IEEE Transactions on Automation Science
+    and Engineering, vol. 16, no. 4, pp. 1836-1847, 2019.
+
+
+    [8] M. S. Khan, K. Zheng, N. Wu and I. Unwala, "Robotics and Deep Learning Framework
+    for Structural Health Monitoring of Utility Pipes," International Conference on
+    Robotics and Control (ICRC), Houston, USA, 2019, pp. B3-1-B3-5.
+
+
+    [9] Y. Cha and W. Choi, Deep Learning-Based Crack Detection Using Convolutional
+    Neural Networks," Computer-Aided Civil and Infrastructure Engineering, Vol. 32,
+    No. 5, pp. 361-376, March 2017.
+
+
+    [10] D. Antunesen, E. Stole, and D. Soukup, Single Multi-Object Detection Using
+    a Split-Shared CNN, Computer Vision Open Access, 2019.
+
+
+    [11] Video pipeline inspection image available: http://www.cuesine.com/Contact-Parts-Service.html
+
+
+    [12] Sewer System Evaluation - St. Louis, Missouri. Image available: https://www.gonalez.com/services/sewer.'
+  merge: -1
+  img_proc: true
