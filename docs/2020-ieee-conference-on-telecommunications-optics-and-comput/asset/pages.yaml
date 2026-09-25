@@ -1,0 +1,495 @@
+- pgno: 0
+  md: '# Application of machine learning in business district operation
+
+
+    University of Electronic Science and Technology of China
+
+    Chengdu, 611731, China
+
+
+    — Since the concept of "artificial intelligence" was first proposed in Dartmouth
+    Conference in 1956, the discipline of artificial intelligence has entered an era
+    of deep sparsity. Recently, the emergence of new technology such as big data,
+    cloud computing and Internet of Things has prompted the rapid development of artificial
+    intelligence technology represented by deep neural.
+
+
+    Keywords—consumption association, analysis association, artificial intelligence
+
+
+    In recent years, with the rapid development of big data, cloud computing, Internet
+    of Things and other technologies, the application of artificial intelligence has
+    become increasingly widespread, especially in fields such as natural language
+    processing, computer vision and data mining. For example, in field of computer
+    vision, target detection can be used to construct a face recognition system.
+
+
+    business district are different, the per capita consumption of each store and
+    customer demand date can be taken as key performance indicators. Finally, cluster
+    the stores in the business district according to these key performance indicators.
+
+
+    # 2) The clustering process of stores
+
+
+    # (1) Extraction of key performance indicators
+
+
+    To obtain the per capita consumption amount of each store in the district, the
+    data shall be grouped according to store ID and then the per capita consumption
+    of each store shall be calculated according to the consumption date of each store
+    and the customer amount per person. By calculating it it is possible to distinguish
+    high consumption stores from low consumption stores in the business clustering
+    process.
+
+
+    To calculate the time consumption of each store in the business circle, the original
+    data should be processed according to consumption distribution subdivided into
+    working days and rest days, as to distinguish the types of stores. With more consumption
+    records on working days are daily stores, with more consumption records on weekends
+    are weekend stores. Therefore, it is necessary to replace the consumption of customers
+    in the data with working days and rest days. The consumption records of all-person
+    should be grouped by store ID and then the consumption on working days and rest
+    days of each store can be counted successively. Finally, the data containing three
+    key performance indicators can be obtained.
+
+
+    # I. PROJECT OBJECT
+
+
+    Now we have a set of customer consumption over a period of time in the business
+    district. The data contains store ID, consumption date, customer demand, consumption
+    amount and bank number. The data set to be analyzed using machine learning models.
+    In this project, two project objectives are listed as:
+
+
+    +   1) Classify the stores in the business district based on the customer consumption
+    record.
+
+    2) Based on the customer consumption records, analyze the consumption situation
+    of each store in the business district in order to provide better relevant indicators.
+
+
+    # (2) Reduction of dimension
+
+
+    This three-dimensional data is divided by the store ID and includes the per capita
+    consumption amount of each store, the consumption performance on working days
+    and rest days. The three-dimensional data set is directly clustered, the obtained
+    result is three-dimensional which is difficult to visualize the result. Therefore,
+    it is necessary to reduce the dimension of the three-dimensional array to two
+    before clustering. Then the result after clustering can be displayed in the two-dimensional
+    plane.
+
+
+    # B. Methods
+
+
+    # (1) Classification of stores
+
+
+    The first goal of the project is to complete the classification of all stores
+    in the business district. Observing the data set we can find that the data only
+    contains ID of stores, without the specific classification of the store, so the
+    task is to build an unsupervised learning model. The clustering model can be used
+    to solve the classification problem of unsupervised learning.
+
+
+    The data set of customer consumption in the business district contains date
+
+
+    In order to retain the data characteristics of the original data as much as possible,
+    principal component analysis can be used to reduce the dimension of the data set.
+
+
+    # The dimensionality reduction of principle'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'component analysis is as follows:
+
+
+    +   b) Input training set,
+
+
+    +   c) Calculate the covariance matrix $XX^T$ of samples.
+
+
+    +   d) Eigenvalue decompose the covariance matrix $XX^T$.
+
+
+    +   e) Take the eigenvectors corresponding to the maximum $k$ eigenvalues: $w_1,
+    w_2, \dots, w_k$.
+
+
+    +   f) Multiply the original data set by projection matrix
+
+    The product of matrix $X$ and $W$ is the data
+
+    set $X''$ after dimension reduction. $W = [w_1, w_2, \dots, w_k]^T$
+
+
+    +   g) Output the data set $X''$ after dimension reduction.
+
+
+    +   (c) Clustering of data
+
+
+    After the data is reduced to two dimensions, the two-dimensional data set can
+    be directly clustered. Since the set does not contain outliers, K-means clustering
+    method can be selected to cluster the data set.
+
+
+    The process of K-means clustering is as follows:
+
+
+    +   a) Randomly select $k$ points in the data set as the cluster center.
+
+
+    +   b) The remaining points are grouped into the nearest cluster based on their
+    distance from the cluster center.
+
+
+    +   c) Calculate the mean of each cluster as the new cluster center
+
+
+    +   d) Repeat step 2 and 3 until the cluster center no changes
+
+
+    When determining the number of $k$ clusters, the method can be used to judge and
+    calculate the sum of squared errors of all points when $k$ was taken as different
+    values:
+
+
+    ```
+
+    $SSE = \sum_{i=1}^{k} |p_i - m_i|^2$
+
+    ```
+
+
+    $C_i$ represents the $i$th cluster. $p_i$ is the point in the cluster, and $m_i$
+    is the center of $C_i$.
+
+
+    As the number of $k$ increases, the sum of squared errors decreases gradually.
+    When $k$ reaches the true clustering number, the increase of $k$ will decrease
+    the degree of error of each cluster, the sum of squares will decrease gradually.
+    However, when $k$ exceeds the true clustering number, the degree amplitude will
+    decrease sharply, and the sum of squared errors will remain flat. In other words,
+    we need to determine the most appropriate $k$ value that follows the downward
+    trend of the sum of squared errors. This $k$ value obtained is the optimal clustering
+    of K-means clustering.
+
+
+    After K-means clustering of the data, the results can be visually output.
+
+
+    # (2) Aggregation of stores
+
+
+    # Idea of the association of stores
+
+
+    The second goal of the project is to analyze the correlation of the consumption
+    of each store in the business district. The original data set contains the consumption
+    store ID, customer number and other information in each record. Given that the
+    card of customer number is unique, it can be considered that the same store is
+    consuming during different
+
+
+    Therefore, the original data set contains the store
+
+    card number and grouped according to the list of all stores
+
+    consumed by each customer consumption. The newly
+
+    data set generated, Apriori algorithm can be used to
+
+    find item sets, so analyze frequent items and stores
+
+    consumption in the business district.
+
+
+    # 2) Process of association analysis of
+
+
+    The original data set contains only
+
+    information about the store, the customer number\and the amount of consumption
+    per person in the business
+
+    dist. The original data set cannot be analyzed directly by
+
+    association rules model, so data needs to be prepared andnintegrated. Given, when
+    the card number of customer is
+
+    with different customers, it can be considered that the
+
+    same customer consumes during different consumption
+
+    stores. The original data set can be set
+
+    aggregated and grouped according to the card number
+
+    to generate the record and list of all stores
+
+    consumed by customer consumption. The newly
+
+    data set can be generated by association rule model to find the
+
+    frequent item sets of customer stores, so to find the list
+
+    of stores consumption in the business district.
+
+
+    # (b) Association rule analysis
+
+
+    Association rules reflects the interpretation and
+
+    correlation between one and other things, which can be
+
+    used to see the meaning between association data
+
+    from large number of data.
+
+
+    We need to minimize the association between
+
+    the difference through the newly generated
+
+    data and find the frequent item sets of stores.
+
+    Since the amount of data is not large, Apriori algorithm
+
+    can be used to find frequent item sets of stores.
+
+    Setting the threshold of support, item sets,
+
+    remove data sets whose support is less than 0.4
+
+    probability. In order to facilitate the visualization and analysis of
+
+    subsequent results, Apriori algorithm is used to find
+
+    frequent binomial sets in the data set of consumption.
+
+
+    The flow of Apriori algorithm is as follows:
+
+
+    Input: data set support threshold a
+
+
+    Output: Maximum frequent k item set
+
+
+    +   a) Scan the entire data set to obtain all the data that have
+
+    appeared as the candidate frequent item set.
+
+
+    +   b) Mining frequent item sets'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '(i) Scan data to calculate the support degree of candidate frequent k items
+
+
+    (ii) Remove candidate sets whose support is lower than threshold α, and obtain
+    frequent k items. If the frequent k item is empty, the result is returned as the
+    algorithm, and the algorithm will end. If frequent 4 item is empty, the obtained
+    of frequent 4 item sets will be returned as the result, and the algorithm will
+    end.
+
+
+    (iii) Based on frequent k item sets, the candidate frequent k items will be generated.
+
+
+    c) Set k=k+1, and go to Step 2.
+
+
+    Final,二进制 sets will be visualized, and conclusions will be drawn.
+
+
+    # C. Visualization of store classification
+
+
+    (1) Results of store classification
+
+    After three-dimensional data containing key performance indicators is reduced
+    to two dimensions by principal component analysis, the K-means method is used
+    to classify the new two-dimensional data.
+
+
+    By changing the cluster k value, we can calculate that k=
+
+
+    SSE= 25788. k=3, SSE= 17304. k=4, SSE= 135430. k=5, SSE= 100466.
+
+
+    According to the change of sum of squared errors, when we find that k=3, the sum
+    of squared errors decreases slowly. The method shows that the k value suddenly
+    slows down the downward trend. Therefore, k=3 is the optimal clustering number
+    of K-means clustering. The clustering results obtained when k=3 were imported
+    into the Power BI software, and the results were shown in Figure 1:
+
+
+    ![](img/66617a3e87f5e451d5141f1e1c7fda6b_2_0.png)
+
+
+    Figure 1: Clustering results
+
+
+    consumption frequency of the store. The vertical axis reflects the unit price
+    of customers of each store. The higher the value of the vertical axis, the higher
+    the unit price of customers of the store, the lower the unit of customers of the
+    stores.
+
+
+    The points are divided into white, grey and black clusters. Among them, the consumption
+    frequency of stores represented by white points, that is represented by red points,
+    and represented by black points. The value of the vertical axis reflects the unit
+    price of customers of each store. The higher the value of the horizontal axis,
+    the higher the price of customers of the store. For example, stores represented
+    by black spots have higher unit price but lower consumption frequency, while white
+    spots can increase increase consumption frequency and gain more profits. The stores
+    represented by white point show that the unit price of this type of store is lower,
+    and customer loyalty is higher, so we can increase the size of higher-priced goods,
+    and so as increase the unit price of customers and gain more profits.
+
+
+    # (2) Results of association set
+
+
+    After the original association set is aggregated and grouped by the consumer card
+    number we can obtain the list of all stores consumed by each consumer. The association
+    rule method is used to analyze the necessary set list. Frequent itemsets of stores
+    are found using Apri algorithm. The method imported the new obtained data into
+    Power BI software and the results were shown in Figure 2:
+
+
+    ![](img/66617a3e87f5e451d5141f1e1c7fda6b_2_1.png)
+
+
+    Figure 2: Association rule results
+
+
+    Figure 2 shows the correlation of consumption between different stores in the
+    store of Sankey. The width of the branch represents the representation of consumption
+    between this store and other stores. The more the correlation there between this
+    store and other stores. According to the branches of stores with IDS of 7, 15,
+    37 and 56 it means that these four stores have a greater correlation with other
+    stores in the business.
+
+
+    Therefore, with IDS of 7, 15, 37 and 56 can have more operational activities,
+    to increase the customer level and profitability for these stores in the business.
+
+
+    According to Figure 1, it is found that 60 stores in the business district are
+    clustered into 3 clusters K-means clustering in Figure 1, white, gray and black
+    respectively represent the different clusters. The distance between the points
+    of same cluster is relatively close and the similarity is relatively high, while
+    the distance between the points of different clusters is relatively far and the
+    similarity is relatively low. Therefore, the effect of clustering is:
+
+
+    The horizontal axis reflects the consumption frequency of each store. The lower
+    the value of the horizontal axis, the higher the frequency of the store.
+
+
+    Conclusion: Based on the original data set of consumer in the business district,
+    the data set was aggregated and grouped by the consumer card number to obtain
+    the list of all stores consumed by each'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'consumer. For newly generated data sets, using the Apriori algorithm to find
+    two sets in the consumers store, and then use the association rule to find consumption
+    correlations each store in the business circle. The final results are presented
+    in a Sankey diagram, as fairly, some promotional suggestions are put forward.
+    Project 2 has been achieved successfully.
+
+
+    2) Completing the association analysis of the consumption situation of each store
+    in the business district.
+
+
+    The original consumption data set of the business district contains the store
+    ID, consumer number and other. To complete the association analysis, the original
+    data set can be aggregated and grouped by consumer to include the list of all
+    stores consumed by each consumer. The association rule mines the newly generated
+    data set. The few binomial sets in the list of customers are found through Apriori
+    algorithm, and the refined few items are imported into the format of Sankey diagram.
+
+
+    # II. CONCLUSION
+
+
+    # A. Project Conclusion
+
+
+    In this practice, based on the data set of situation of customers in a business
+    district, the work was completed:
+
+
+    +   1) Finishing of all stores in the business district
+
+    Original consumption data set only contains customer consumption amount, customer
+    consumption date, customer time and other data, so it is necessary to process
+    the original data set. Aggregate and group the customers of all stores by the
+    store ID, and calculate the per capita consumption amount, person-working days
+    and rest of each store as the performance indicators. Since there is no clear
+    classification of each store in the data set, this classification problem followed
+    by the unsupervised learning model. Cluster model can be used to classify the
+    customers in the business district. For the visualization of the results, the
+    three-dimensional data set was reduced to two dimensions by principal analysis,
+    and then two-dimensional data set was clustered by K-means to classify all sample
+    points under different k values. It is found that the clustering effect is best
+    when k = 3. Finally, the clustering results are imported into the Power BI software
+    and presented in the Sankey diagram.
+
+
+    According to the Sankey diagram, it branches of stores with IDS of 7, 15, 37 and
+    56 are within the business district, this means that these stores have the best
+    performance. Therefore, the business district can hold the ability of promotion
+    in order to increase the customer flow and performance for the stores business
+    district.
+
+
+    # B. Future Tasks
+
+
+    The business district customer data set also contains information such as daily
+    consumption time per person. Other key performance indicators can be added when
+    classifying the stores in the business district, such as the consumption pattern
+    of customers in non-meal time, and so on. Then, the newly generated high-dimensional
+    data set is reduced to two dimensions by principal analysis. The clustering results
+    of consumption-person of stores in meal time and non-meal time in this business
+    district can be further divided into restaurants, entertainment stores, and so.
+
+
+    Aiming at the association analysis of stores, this practical training is to aggregate
+    and group the original data set according to the consumer number. The original
+    data set can be aggregated and grouped by the date of each customer, and the association
+    rule model can be used to analyze the consumption correlation of customers in
+    the business district.
+
+
+    # REFERENCES
+
+
+    +   [1] Michael J. Data Dimension Reduction[J]. Water Air & Soil Pollution, 2008,
+    18(1):189-199.
+
+
+    +   [2] Zhang Y., Wang K. K-neighbor classification[J]. Pattern Recognition, 2002,
+    35(10):2311-2318.
+
+
+    +   [3] Wong J A H - Algorithm. K-Means Clustering Algorithm[J]. Journal of the
+    Royal Statistical Society, AS: 136: 1979, 28(1):100-105.'
+  merge: -1
+  img_proc: true
