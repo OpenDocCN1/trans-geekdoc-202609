@@ -1,0 +1,255 @@
+- pgno: 0
+  md: '# # Machine Learning Approaches Optimizing Semiconductor Manufacturing Processes
+
+
+    Tsuyoshi Moriya
+
+    Tokyo Electron Limited, Tokyo, Japan, tsuyoshi.moriya@tel.com
+
+
+    # ## Abstract
+
+
+    This study was geared towards the optimization of semiconductor manufacturing
+    processes through machine learning (ML) based on a regression algorithm. The nonuniformity
+    of plasma-enhanced atomic layer deposition (PEALD) film thickness and PEALD film
+    stress and the thickness etching profiles were demonstrated herein to successfully
+    achieve their targets.
+
+    (Keywords): Machine learning, plasma processing, and materials informatics)
+
+
+    # ## Introduction
+
+
+    In semiconductor manufacturing, a variety of tuning controls control the processes.
+    Optimization of these processes is a serious problem due to the associated complexity
+    thereof as well as the correlation between tuning parameter. ML has recently drawn
+    the attention of engineers due to its promising characteristics as a powerful
+    tool for the optimization of parameters [1–6].
+
+    ML technique used is based on a regression algorithm for optimization, particularly
+    for the deposition process and the plasma distribution control knob, the latter
+    being related to the uniformity of film thickness and etch rate within a wafer,
+    which are important properties in semiconductor manufacturing.
+
+
+    # ## Experiment
+
+
+    The ML approach adopted herein is given by algorithm of building regression models
+    with parameters as explanatory variables, and the uniformity of film thickness
+    and etch rate as objective variables. The experimental flow for the model is achieved
+    in the following steps:
+
+
+    +   1. Constructing a model with a dataset with the regression algorithm. The
+    initial dataset is given by the design of experiments (DOE).
+
+    2. Finding parameter combinations that satisfy the inputting target value of the
+    objective variables and their models into the optimization algorithm.
+
+    3. Optimizing the parameter combination outputs and comparing the experimental
+    results with the optimized values.
+
+
+    4. Registering the results of the experiment as a new learning dataset.
+
+
+    Steps 1–4 were repeated until the desired result was achieved, as shown by the
+    diagram in Fig. 1. In general, the optimization process starts from a small dataset
+    and improves as data increase.
+
+
+    This ML approach enabled the optimization of three different processes: film-thickness
+    nonuniformity of PEALD SiO₂, film stress of PEALD SiO2 and parameters of the tuning
+    distribution.
+
+
+    By definition, film-thickness nonuniformity refers to the lr of thickness at 49
+    points within a wafer. Nonuniformity aims to achieve a target value of zero. The
+    base process is shown in Ref. [7]. In the experiment, capacitively coupled plasmas
+    (CCPs) were ignited in an Ar/O2 gas mixture at 450Hz, RF power duration, and four
+    gas rates were used.
+
+
+    Process optimization was performed by an engineer and by application of the ML
+    algorithm. After the fourth iteration, the uniformity and degree of convergence
+    were evaluated. The engineer did not refer to the ML approach by the whole experiment
+    and the database for ML. During the film stress optimization of PEALD SiO₂, the
+    RF power, duration, and four gas rates were used, then as other parameters were.
+    In this study, the film stress was from –100 MPa to zero.
+
+
+    The process knobs were optimized for the control processes. Here turning profile
+    was profiled to control the take-off of the thickness profile, which had not been
+    achieved by conventional optimization methods. Figure 3 displays the target profiles,
+    which could be described as flat, very edge high, and edge high. These processes
+    were controlled by the prepared plasma electrode. Figure 2 shows the experimental
+    setup of the prepared plasma electrode. In the Ar/O2 gas mixture, at a frequency
+    of 13.56 MHz. Moreover, the plasma distribution was controlled by tuning the respective
+    capacities of the center and outer (ring) electrodes.
+
+
+    2021 Electron Devices Technology and Manufacturing Conference (EDTM)'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'Two experiments were carried out to evaluate the applicability of ML in process
+    tuning: (a) plasma etching for carbon films and (b) PEALD for SiO2 films. Profiles
+    of the thickness were measured at 49 points within the wafer, where each RF power,
+    pressure, gas flow rate and capacitance at each electrode were tuned.
+
+
+    In some cases, the ML approach can be used as a supplement. For example, the engineer
+    can proceed with the experiment by referring to the results of the ML approach.
+    Once the key parameter is suggested via ML, the desired target in the extrapolation
+    area is achievable by human judgment.
+
+
+    # Results
+
+
+    Fundamentally, learning can be transferred when the process conditions are similar.
+    Thus, it is possible to build a database using data that are relatively easily
+    obtain.
+
+
+    # A. Optimization of Film-Thickness Nonuniformity
+
+
+    # Conclusion
+
+
+    As mentioned earlier, the PEALD film-thickness nonuniformity within a wafer was
+    carried out by an engineer and by the ML approach, separately. Each variation
+    of nonuniformity was attributed to the DOE initial conditions. The nonuniformity
+    of each trial by the ML approach is shown in Fig. 4.
+
+
+    The nonuniformity of PEALD film thickness and stress, the carbon etching and PEALD
+    thickness profiles were optimized with the ML approach and successfully achieved
+    their targets. Even if the database does not cover the target, the ML approach
+    is still useful because it exploration of a new process.
+
+
+    The engineer could not settle the nonuniformity after the five trials, which were
+    effectively settled by the ML approach. Moreover, the range of nonuniformity by
+    the ML approach at the second trial was 0.7%. These results suggest that the ML
+    approach can find the optimum condition and settle the variation.
+
+
+    # References
+
+
+    +   [1] Y. Mo, S.-P. Ong, and G. Ceder, Chem. Mat., 24, no. 1, p. 15, 2012.
+
+
+    +   [2] Y. Hinata, H. Hatakeyama, Y. Kumagai, L. A. Burton, H. Sano, Y. Muraba,
+    S. Imura, and H. Hiramatsu, I. Tanaka, H. Hosono, and F. Oba, Nat. Commun., 7,
+    11962-1, 2016.
+
+
+    +   [3] O. Sasai, C. Oses, T. Coher, E. Gossett, S. Sartarlo, and A. Trohaft,
+    Nat. Commun., 8, 1567, 2017.
+
+
+    +   [4] C. Toher, C. Oses, and S. Sartarlo, arXiv:1805.03509, 2018.
+
+
+    +   [5] B. Sanchez-Lelneg and A. Aspuri-Guzik, Science, vol. 361, no. 6440, p.
+    360, 2018.
+
+
+    +   [6] M. Chopra, Z. Zhang, J. Ekerdit, and Roger T Bonner, in Proceedings of
+    the SPIE 9781, 97811, 2016.
+
+
+    +   [7] S. Iwashita, N. Moriya, T. Tokuchi, M. Kagaya, N. Nero, and T. Hasegawa,
+    J. Sci. Technol. A 36, p. 02155, 2018.
+
+
+    # B. Stress Optimization
+
+
+    Similarly stress optimization was performed by the engineer and the ML approach,
+    with the results shown in Fig. 5. The condition obtained by the ML approach in
+    uniformity optimization of TiO2 was transferred to this. After 52 attempts of
+    optimizing the process based on the engineer''s knowledge (◇), the engineer was
+    able to achieve the target stress of -100 MPa. In contrast, the conditions created
+    by the ML approach ◊ met the target stress.
+
+
+    # C. Optimizing Knot Profiles
+
+
+    Figure 6 shows the results of the carbon etching profiles, which are defined as
+    the differences in film thickness before and after plasma etching with three profiles.
+    Figure 6 (a) shows the predicted profiles used by length model, and (b) shows
+    the experimental results optimized by ML.
+
+
+    Such tendency indicates the sensitivity of process distribution with the O2 flow
+    rate. The O2 flow was suggested as the key parameter tuning the take-off position
+    by the ML approach. Figure 7 shows the O2 flow dependence of the carbon etching
+    processes.
+
+
+    ![](img/741341f6459e68630f5ad09048515893_1_0.png)
+
+
+    Fig. 1. Schematic flow of the optimization process.
+
+
+    Authorized licensed used to Carleton: Carleton University. Download on June 02,
+    2021 at 23:23:46 UTC from IEEE X. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/741341f6459e68630f5ad09048515893_2_0.png)
+
+
+    Fig. 2. Conceptual diagram of the separated plasma electrode for the deposition
+    chamber.
+
+
+    ![](img/741341f6459e68630f5ad09048515893_2_1.png)
+
+
+    Fig. 5. Experimental results of PEALD film stress optimization by an engineer
+    (●) and by the ML approach (○). Only the ML approach is to achieve the target
+    stress of -100 MPa.
+
+
+    ![](img/741341f6459e68630f5ad09048515893_2_2.png)
+
+
+    Fig. 3. Target profiles of plasma etching etchings for the carbon columns.
+
+
+    ![](img/741341f6459e68630f5ad09048515893_2_3.png)
+
+
+    ![](img/741341f6459e68630f5ad09048515893_2_4.png)
+
+
+    ![](img/741341f6459e68630f5ad09048515893_2_5.png)
+
+
+    Fig. 6. (a) Predictive carbon etching profiles by learned models. (b) Experimental
+    results of etching profiles optimized by the ML approach.
+
+
+    ![](img/741341f6459e68630f5ad09048515893_2_6.png)
+
+
+    Fig. 4. Comparison of the nonuniformity of PEALD film thickness obtained by the
+    engineer and by the ML approach for five trials.
+
+
+    ![](img/741341f6459e68630f5ad09048515893_2_7.png)
+
+
+    Fig. 7. O2 flow rate dependence of the carbon etching profiles.'
+  merge: -1
+  img_proc: true
