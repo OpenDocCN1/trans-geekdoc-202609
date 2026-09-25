@@ -1,0 +1,1804 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # A Machine learning based Indoor Localization
+
+
+    Acheref Gadghadhi
+
+    Research Laboratory SE & ICT
+
+    ENICarthage
+
+    Tunisia
+
+    acheref.gadghadhi@enicaru-t..com
+
+
+    Yassine Hachiahi
+
+    Research Laboratory SE & ICT
+
+    ENICarthage
+
+    Tunisia
+
+    yassine.hachiahi@ipeim.mnp.tn
+
+
+    Hassen Zairi
+
+    Research Laboratory SE & ICT
+
+    ENICarthage
+
+    Tunisia
+
+    hassen.zairi@gmail.com
+
+
+    **Abstract—** Since many years, researchers and engineers are looking for a precise
+    Indoor Positioning System (IPS) in various scenarios. Several methods were used
+    in order to reach this goal. Deterministic methods in IPS, based on the received
+    signal strength (RSS), use the RSS value into a distance estimate, and then calibrate
+    it by triangulation to get coordinate values. RSS is generally unstable due to
+    the high amount of variation in indoor environments.
+
+
+    In this paper, we propose a new approach for IPS. We compare our method with the
+    one using fusion of three anchors. The results are substantially better than the
+    classic method.
+
+
+    **Indoor Terms—**Positioning System (IPS), RSS, Neural Networks, Learning
+
+
+    approximation and machine learning. The results prove that these approximation
+    methods fit better to this problem. In this work, we propose a position estimation
+    using neural networks, and compare it to the results in [14]. The position estimation
+    is performed with two neural network (NN) architecture, the first one is based
+    on RSS measures as input. While the second is based on RSS measures as input.
+    As well, we give a comparison between the proposed methods and the method presented
+    by the authors in [14]. The parameter focusing on the comparison, the distance
+    error for each estimated position, and the method performance in accuracy.
+
+
+    In a first time, we perform the performance of three inputs, one hidden neural
+    network, to reach the precision in [14], in the same conditions. Next, we will
+    compare three inputs to four neural network and detect that increasing the number
+    of beacons gives a better precision.
+
+
+    # I. INTRODUCTION
+
+
+    Desperate of the need for high quality and research results, reliable products
+    and tools for indoor localization are still unavailable. While indoor localization
+    based service demand continues to increase in smart cities [1]. Recent years have
+    witnessed much improvement in indoor research accuracy, and setting up a localization
+    systems configuration. Otherwise, these are widely used indoor localization scheme
+    achieve satisfactory performance similar to GPS in outdoor environments [2].
+
+
+    A variety of methods have been proposed, such as [3], ultra-wideband (UWB), radio
+    frequency identification (RFID) [5], micro-electromechanical systems (MEMS) [6],
+    wireless local area networks (WLAN) [7], computer vision [8], magnetic field [9],
+    infrared signal [11] and [12].
+
+
+    The RSS techniques are one of the most popular algorithms for positioning of moving
+    target targets the sensors mentioned you to perform the collection of the data.
+    RSS is the average power received at a sensor where the power is originated from
+    the emits source. It is assumed that the received power follows an exponential
+    decay, which is a function of the transmitted power, path loss constant, and the
+    distance between the source and sensor [13]. By collecting the rsi data from the
+    sensors and de-noising the distance is estimated much more accurately. This is
+    done by using some analytic mathematical methods. In [15], the authors have discussed
+    the demerits of these two approximation techniques, although
+
+
+    # II. LOCALIZATION
+
+
+    An indoor localization system must contain a group of sensors to ensure the collection
+    of necessary information for localization in different forms (acoustic, electric,
+    etc.) [15]. These sensors with other element are very important for the installation
+    of the localization infrastructure. The configuration consists of various parameters
+    and the techniques we use to acquire the position of the mobile to move. The case
+    of localization systems ensures the existence of one or more bases at fixed locations,
+    the received signals is used from the mobile, to measure the parameter of the
+    localization [16]. The quality of the collected data is depends on the type and
+    of the elements used for the localization (the type and the quality of the sensors),
+    on the other hand the environment of the experiments affects effectively on the
+    collection of the data. This is due to the propagation of signals is interfered
+    with a few influencing effects, from those we can count with different dimensions,
+    radiation rate, climatic conditions, obstacles (static or dynamic) (see [3] for
+    a survey).
+
+
+    # A. RSS based localization
+
+
+    Since our work is devoted to localization using the rsi parameter, we will use
+    on trilateration technique using'
+  - '[PAGE 1]
+
+
+    # 2020 44th International Conference on Advanced Systems and Emerging Technologies
+    (IC_ASET)
+
+
+    rssi parameter. The received signal indication (rssi) method is of the classic
+    classification techniques used in local networks or in mobile radio networks [13].
+    Its principle consists of measuring the distance between the transmitter and receiving
+    system by calculating the energy of received signal. In general, three base stations
+    are required to perform the localization[17]. Assuming that the parameters are
+    known, the distance d separating each base station from the mobile can be
+
+
+    The Friis transmission equation is given by Equation 3.
+
+
+    ```
+
+    $d_c = \sqrt{\frac{P_tg_t\lambda^2}{(4\pi)^2P_r}}$ (3)
+
+    ```
+
+
+    $d_c$ is the distance between the transmitter and the receiver, $P_t$ and $P_r$
+    are respectively the transmitted and received power, $G_t$ and $G_r$ are the gains
+    of transmitter and receiver and $\lambda$ is the wavelength.
+
+
+    In a previous work [15], the authors studied the distance estimation using polynomial
+    approximation and Neural Networks. The methods used a very interesting accommodation
+    to experimental results.
+
+
+    ![](img/c713304737ca36799d5f26bfab1d1a82_1_0.png)
+
+
+    Fig. 1: localization principle using received signal indication (rssi).
+
+
+    # C. Position estimation
+
+
+    In this section we will saw in the previous section, the estimation of the distance
+    is the first for the estimation of position[19]. The estimated distance between
+    each base station (d1, d2, d3) and the robot use a system of 3 units with which
+    are the coordinates of the robot (x,y), three equations represent the formulas
+    of 3 circles of radius estimated distances.
+
+
+    Using the Cartesian formula of a circle, and the estimated distances d1, d2 and
+    d3 (which represents the distance between the base stations (1,2,3) and the mobile
+    object) can obtain three equations with unknowns (see Eq. 4). Therefore, it is
+    possible to estimate the coordinates. It should also be noted that in the ideal
+    case, there is a direct LOS (Line Of Sight), the position estimation is mathematically
+    perfect (if we ignore all the disturbing factors). But in the real case, there
+    are disturbances of different types (acoustic, electromagnetic, ...), which makes
+    it impossible to obtain a null error, and also significantly enhances the accuracy
+    of the estimation. This is what our research does in this way to minimize as much
+    as possible the error of the position estimation (going through the distance estimation[17]).
+
+
+    ```
+
+    $d_1^2 = (x-x_1)^2 + (y-y_1)^2$
+
+    $d_2^2 = (x-x_2)^2 + (y-y_2)^2$
+
+    $d_3^2 = (x-x_3)^2 + (y-y_3)^2$ (4)
+
+    ```
+
+
+    However, the number of the base stations can be more than 3.in this case it will
+    be multilation, the estimation of position is from a system of n estimated equations.
+
+
+    In relation of this, we have taken a riis dataset [14] to perform our work on
+    the estimation of the coordinates. In the mentioned paper, the authors used a
+    mathematical method based on the elimination of the weights reference measures
+    and use other three measures to perform the estimation of the distances. This
+    leads to the estimation of the position method to estimate the position (coordinates).
+    For our work, we compute the coordinates using the neural networks.
+
+
+    # III. RELATED WORK
+
+
+    There are different ways to estimate the distance from the measured ri. Taking
+    the estimation of the Friis transmission relation [1] for free space propagation,
+    as well as calculating the received signal, we can estimate the distance between
+    the base station and the mobile robot[18]. Equations 2.1 and 2.2 show the dB to
+    milliwatt and the millwatt to dbm
+
+
+    Several works were published in the problems of localization index using the ri
+    parameter. In [17] a method based on collaboration between nodes base accuracy
+    is used. In recent works [20], the Friis method was adopted for the localization,
+    but the accuracy of the estimation was low, 3 meters. As mentioned in the previous
+    paper, we use the rssi dataset from [14], in this paper we use decision to decide,
+    as the result the maximum estimation error for this method is about 1.74 meta
+    after 0.7 meters. These values are relatively accurate compared to indoor dimensions.
+    In order to minimize the error accuracy, we propose to use the same riis dataset
+    and estimate the distance using the neural networks.
+
+
+    ```
+
+    $P(mW) = 10$ (1)
+
+    ```
+
+
+    ```
+
+    $P(dBm) = 10\log\frac{P(mW)}{mW}$ (2)
+
+    ```
+
+
+    34'
+  md: '
+
+    # A Machine learning based Indoor Localization
+
+
+    Acheref Gadghadhi
+
+    Research Laboratory SE & ICT
+
+    ENICarthage
+
+    Tunisia
+
+    acheref.gadghadhi@enicaru-t..com
+
+
+    Yassine Hachiahi
+
+    Research Laboratory SE & ICT
+
+    ENICarthage
+
+    Tunisia
+
+    yassine.hachiahi@ipeim.mnp.tn
+
+
+    Hassen Zairi
+
+    Research Laboratory SE & ICT
+
+    ENICarthage
+
+    Tunisia
+
+    hassen.zairi@gmail.com
+
+
+    **Abstract—** Since many years, researchers and engineers are looking for a precise
+    Indoor Positioning System (IPS) in various scenarios. Several methods were used
+    in order to reach this goal. Deterministic methods in IPS, based on the received
+    signal strength (RSS), use the RSS value into a distance estimate, and then calibrate
+    it by triangulation to get coordinate values. RSS is generally unstable due to
+    the high amount of variation in indoor environments.
+
+
+    In this paper, we propose a new approach for IPS. We compare our method with the
+    one using fusion of three anchors. The results are substantially better than the
+    classic method.
+
+
+    **Indoor Terms—** Positioning System (IPS), RSS, Neural Networks, Learning approximation
+    and machine learning. The results prove that these approximation methods fit better
+    to this problem. In this work, we propose a position estimation using neural networks,
+    and compare it to the results in [14]. The position estimation is performed with
+    two neural network (NN) architecture, the first one is based on RSS measures as
+    input. While the second is based on RSS measures as input. As well, we give a
+    comparison between the proposed methods and the method presented by the authors
+    in [14]. The parameter focusing on the comparison, the distance error for each
+    estimated position, and the method performance in accuracy.
+
+
+    In a first time, we perform the performance of three inputs, one hidden neural
+    network, to reach the precision in [14], in the same conditions. Next, we will
+    compare three inputs to four neural network and detect that increasing the number
+    of beacons gives a better precision.
+
+
+    # I. INTRODUCTION
+
+
+    Desperate of the need for high quality and research results, reliable products
+    and tools for indoor localization are still unavailable. While indoor localization
+    based service demand continues to increase in smart cities [1]. Recent years have
+    witnessed much improvement in indoor research accuracy, and setting up a localization
+    systems configuration. Otherwise, these are widely used indoor localization scheme
+    achieve satisfactory performance similar to GPS in outdoor environments [2].
+
+
+    A variety of methods have been proposed, such as [3], ultra-wideband (UWB), radio
+    frequency identification (RFID) [5], micro-electromechanical systems (MEMS) [6],
+    wireless local area networks (WLAN) [7], computer vision [8], magnetic field [9],
+    infrared signal [11] and [12].
+
+
+    The RSS techniques are one of the most popular algorithms for positioning of moving
+    target targets the sensors mentioned you to perform the collection of the data.
+    RSS is the average power received at a sensor where the power is originated from
+    the emits source. It is assumed that the received power follows an exponential
+    decay, which is a function of the transmitted power, path loss constant, and the
+    distance between the source and sensor [13]. By collecting the rsi data from the
+    sensors and de-noising the distance is estimated much more accurately. This is
+    done by using some analytic mathematical methods. In [15], the authors have discussed
+    the demerits of these two approximation techniques, although
+
+
+    # II. LOCALIZATION
+
+
+    An indoor localization system must contain a group of sensors to ensure the collection
+    of necessary information for localization in different forms (acoustic, electric,
+    etc.) [15]. These sensors with other element are very important for the installation
+    of the localization infrastructure. The configuration consists of various parameters
+    and the techniques we use to acquire the position of the mobile to move. The case
+    of localization systems ensures the existence of one or more bases at fixed locations,
+    the received signals is used from the mobile, to measure the parameter of the
+    localization [16]. The quality of the collected data is depends on the type and
+    of the elements used for the localization (the type and the quality of the sensors),
+    on the other hand the environment of the experiments affects effectively on the
+    collection of the data. This is due to the propagation of signals is interfered
+    with a few influencing effects, from those we can count with different dimensions,
+    radiation rate, climatic conditions, obstacles (static or dynamic) (see [3] for
+    a survey).
+
+
+    # A. RSS based localization
+
+
+    Since our work is devoted to localization using the rsi parameter, we will use
+    on trilateration technique using 2020 44th International Conference on Advanced
+    Systems and Emerging Technologies (IC_ASET) rssi parameter. The received signal
+    indication (rssi) method is of the classic classification techniques used in local
+    networks or in mobile radio networks [13]. Its principle consists of measuring
+    the distance between the transmitter and receiving system by calculating the energy
+    of received signal. In general, three base stations are required to perform the
+    localization[17]. Assuming that the parameters are known, the distance d separating
+    each base station from the mobile can be
+
+
+    The Friis transmission equation is given by Equation 3.
+
+
+    ```
+
+    $d_c = \sqrt{\frac{P_tg_t\lambda^2}{(4\pi)^2P_r}}$ (3)
+
+    ```
+
+
+    $d_c$ is the distance between the transmitter and the receiver, $P_t$ and $P_r$
+    are respectively the transmitted and received power, $G_t$ and $G_r$ are the gains
+    of transmitter and receiver and $\lambda$ is the wavelength.
+
+
+    In a previous work [15], the authors studied the distance estimation using polynomial
+    approximation and Neural Networks. The methods used a very interesting accommodation
+    to experimental results.
+
+
+    ![](img/c713304737ca36799d5f26bfab)
+
+
+    # C. Position estimation
+
+
+    In this section we will saw in the previous section, the estimation of the distance
+    [17]. The position estimation is performed with two neural network (NN) architecture,
+    the first one is based on RSS measures as input. While the second is based on
+    RSS measures as input. As well, we give a comparison between the proposed methods
+    and the method presented by the authors in [14]. The parameter focusing on the
+    comparison, the distance error for each estimated position, and the method performance
+    in accuracy.
+
+
+    In a first time, we perform the performance of three inputs, one hidden neural
+    network, to reach the precision in [14], in the same conditions. Next, we will
+    compare three inputs to four neural network and detect that increasing the number
+    of beacons gives a better precision.
+
+
+    However, the number of base stations can be more than 3. In this case it will
+    be multilation, the estimation of position from n estimated equations.
+
+
+    In relation of this, we have taken a riis dataset from [14] to perform our work
+    on the coordinates. In the mentioned paper, the authors used a mathematical method
+    based on the elimination of the weights reference and use other three measures
+    to perform the estimation of the distances. This leads to the estimation of the
+    position (coordinates). For our work, we compute the coordinates using the neural
+    networks.
+
+
+    # III. RELATED WORK
+
+
+    There are different ways to estimate the distance from the measured ri. Taking
+    the estimation of the Friis transmission relation [1] for free space propagation,
+    as well as calculating the received signal, we can estimate the distance between
+    the base station and the mobile robot[18]. Equations 2.1 and 2.2 show the dB to
+    milliwatt and the millwatt to dbm
+
+
+    Several works were published in the problems of localization index using the ri
+    parameter. In [17] a method based on collaboration between nodes base accuracy
+    is used. In recent works [20], the Friis method was adopted for the localization,
+    but the accuracy of the estimation was low, 3 meters. As mentioned in the previous
+    paper, we use the rssi dataset from [14], in this paper we use decision to decide,
+    as the result the maximum estimation error for this method is about 1.74 meta
+    after 0.7 meters. These values are relatively accurate compared to indoor dimensions.
+    In order to minimize the error accuracy, we propose to use the same riis dataset
+    and estimate the distance using the neural networks.
+
+
+    ```
+
+    $P(mW) = 10$ (1)
+
+    ```
+
+
+    ```
+
+    $P(dBm) = 10\log\frac{P(mW)}{mW}$ (2)
+
+    ```
+
+
+    The received signal indication (rssi) method is of the classic classification
+    techniques used in local networks or in mobile radio networks [13]. Its principle
+    consists of measuring the distance between the transmitter and receiving system
+    by calculating the energy of received signal. In general, three base stations
+    are required to perform the localization[17]. Assuming that the parameters are
+    known, the distance d separating each base station from the mobile can be
+
+
+    The received signal indication (rssi) method is of the classic classification
+    techniques used in local networks or in mobile radio networks [13]. Its principle
+    consists of measuring the distance between the transmitter and receiving system
+    by calculating the energy of received signal. In general, three base stations
+    are required to perform the localization[17]. Assuming that the parameters are
+    known, the distance d separating each base station from the mobile can be
+
+
+    The received signal indication (rssi) method is of the classic classification
+    techniques used in local networks or in mobile radio networks [13]. Its principle
+    consists of measuring the distance between the transmitter and receiving system
+    by calculating the energy of received signal. In general, three base stations
+    are required to perform the localization[17]. Assuming that the parameters are
+    known, the distance d separating each base station from the mobile can be
+
+
+    The received signal indication (rssi) method is of the classic classification
+    techniques used in local networks or in mobile radio networks [13]. Its principle
+    consists of measuring the distance between the transmitter and receiving system
+    by calculating the energy of received signal. In general, three base stations
+    are required to perform the localization[17]. Assuming that the parameters are
+    known, the distance d separating each base station from the mobile can be
+
+
+    The received signal indication (rssi) method is of the classic classification
+    techniques used in local networks or in mobile radio networks [13]. Its principle
+    consists of measuring the distance between the transmitter and receiving system
+    by calculating the energy of received signal. In general, three base stations
+    are required to perform the localization[17]. Assuming that the parameters are
+    known, the distance d separating each base station from the mobile can be
+
+
+    The received signal indication (rssi) method is of the classic classification
+    techniques used in local networks or in mobile radio networks [13]. Its principle
+    consists of measuring the distance between the transmitter and receiving system
+    by calculating the energy of received signal. In general, three base stations
+    are required to perform the localization[17]. Assuming that the parameters are
+    known, the distance d separating each base station from the mobile can be
+
+
+    The received signal indication (rssi) method is of the classic classification
+    techniques used in local networks or in mobile radio networks [13]. Its principle
+    consists of measuring the distance between the transmitter and receiving system
+    by calculating the energy of received signal. In general, three base stations
+    are required to perform the localization[17]. Assuming that the parameters are
+    known, the distance d separating each base station from the mobile can be
+
+
+    The received signal indication (rssi) method is of the classic classification
+    techniques used in local networks or in mobile radio networks [13]. Its principle
+    consists of measuring the distance between the transmitter and receiving system
+    by calculating the energy of received signal. In general, three base stations
+    are required to perform the localization[17]. Assuming that the parameters are
+    known, the distance d separating each base station from the mobile can be
+
+
+    The received signal indication (rssi) method is of the classic classification
+    techniques used in local networks or in mobile radio networks [13]. Its principle
+    consists of measuring the distance between the transmitter and receiving system
+    by calculating the energy of received signal. In general, three base stations
+    are required to perform the localization[17]. Assuming that the parameters are
+    known, the distance d separating each base station from the mobile can be
+
+
+    The received signal indication (rssi) method is of the classic classification
+    techniques used in local networks or in mobile radio networks [13]. Its principle
+    consists of measuring the distance between the transmitter and receiving system
+    by calculating the energy of received signal. In general, three base stations
+    are required to perform the localization[17]. Assuming that the parameters are
+    known, the distance d separating each base station from the mobile can be
+
+
+    The received signal indication (rssi) method is of the classic classification
+    techniques used in local networks or in mobile radio networks [13]. Its principle
+    consists of measuring the distance between the transmitter and receiving system
+    by calculating the energy of received signal. In general, three base stations
+    are required to perform the localization[17]. Assuming that the parameters are
+    known, the distance d separating each base station from the mobile can be
+
+
+    The received signal indication (rssi) method is of the classic classification
+    techniques used in local networks or in mobile radio networks [13]. Its principle
+    consists of measuring the distance between the transmitter and receiving system
+    by calculating the energy of received signal. In general, three base stations
+    are required to perform the localization[17]. Assuming that the parameters are
+    known, the distance d separating each base station from the mobile can be
+
+
+    ```
+
+    $d_1^2 = (x-x_1)^2 + (y-y_1)^2$
+
+    $d_2^2 = (x-x_2)^2 + (y-y_2)^2$
+
+    $d_3^2 = (x-x_3)^2 + (y-y_3)^2$ (4)
+
+    ```
+
+
+    Fig. 1: localization principle using signal indication (rssi).
+
+    '
+  mdcn: '
+
+
+    # 基于机器学习的室内定位
+
+
+    Acheref Gadghadhi
+
+    SE & ICT 研究实验室
+
+    ENICarthage
+
+    突尼斯
+
+    acheref.gadghadhi@enicaru-t..com
+
+
+    Yassine Hachiahi
+
+    SE & ICT 研究实验室
+
+    ENICarthage
+
+    突尼斯
+
+    yassine.hachiahi@ipeim.mnp.tn
+
+
+    Hassen Zairi
+
+    SE & ICT 研究实验室
+
+    ENICarthage
+
+    突尼斯
+
+    hassen.zairi@gmail.com
+
+
+    **摘要—** 多年来，人员和工程师一直在各种场景下寻找精确的室内定位系统（IPS）。为了实现这一目标，人们使用了多种方法。基于接收信号强度（RSS）的确定性
+    IPS 使用 RSS 值进行距离估计，然后通过三角测量法进行校准以获得坐标值。由于室内环境变化巨大，RSS 通常是不稳定的。
+
+
+    在本文中，我们提出了一种新的 IPS 方法。我们将我们的方法与使用三个锚点融合的方法进行了比较。结果优于经典方法。
+
+
+    **室内术语—** 定位系统（IPS）、RSS、神经网络、学习近似和机器学习。结果证明这些近似方法更适合此问题。在这项工作中，我们提出了使用神经网络进行位置估计，并将其与
+    [14] 中的结果进行了比较。位置估计通过两种神经网络（NN）架构执行，第一个基于 RSS 测量值输入；而第二个也基于 RSS 测量值输入。此外，我们对所提方法与
+    [14] 作者提出的方法进行了比较。重点关注的参数是每个估计位置的距离误差以及该方法在准确性方面的性能。
+
+
+    我们首次在相同条件下，执行了三个输入、一个隐藏神经网络的性能，以达到 [14] 中的精度。接下来，我们将比较三个输入与四个神经网络的比较，并发现增加信标的数量可以获得更高的精度。
+
+
+    # I. 引言
+
+
+    由于对高质量研究结果的迫切需求，目前仍然缺乏可靠的室内定位产品和工具。然而，在智能城市中，基于室内定位的服务需求不断增加 [1]。近年来，室内研究的精度以及定位系统的配置设置得到了极大改进。尽管如此，这些广泛使用的室内定位方案已实现与户外环境中类似于
+    GPS 的满意性能 [2]。
+
+
+    目前已经提出了多种方法，例如 [3]、超宽带（UWB）、射频识别（RFID） [5]、微机电系统（MEMS） [6]、无线局域网（WLAN） [7]、计算机视觉
+    [8]、磁场 [9]、红外信号 [11] 和 [12]。
+
+
+    RSS 技术是移动目标定位最流行的算法之一，上述传感器允许您执行数据采集。RSS 是传感器接收到的平均功率，该功率源于发射源。假设接收功率遵循指数衰减，接收功率是发射功率、路径损耗常数以及源与传感器之间距离的函数
+    [13]。通过收集传感器的 rsi 数据并去噪，可以更准确地估计距离。这是通过使用一些分析数学方法实现的。在 [15] 中，作者讨论了这两种近似技术的缺点，尽管
+
+
+    # II. 定位
+
+
+    室内定位系统必须包含一组传感器，以确保以不同形式（声学、电学等）收集定位所需的必要信息 [15]。这些传感器与其他元件对于定位基础设施的安装至关重要。配置由各种参数和我们用于获取移动物体位置的技术组成。定位系统的情况确保了固定位置存在一个或多个基站，利用移动设备的接收信号来测量定位参数
+    [16]。所采集数据的质量取决于用于定位的元件类型和质量（传感器的类型和质量），另一方面，实验环境会有效影响数据的采集。这是由于信号传播受到一些影响因素的干扰，这些可以分为不同的维度：辐射率、气候条件、障碍物（静态或动态）（综述请参见
+    [3]）。
+
+
+    # A. 基于 RSS 的定位
+
+
+    由于我们的工作致力于使用 rsi 参数进行定位，我们将使用基于 2020 年第 44 届先进系统与新兴技术国际会议（IC_ASET）的 rssi 参数的三角测量技术。接收信号指示（rssi）方法是本地网络或移动无线电网络中常用的分类技术之一
+    [13]。其原理是通过计算接收信号的能量来测量发射系统和接收系统之间的距离。通常，需要三个基站来执行定位 [17]。假设参数已知，每个基站与移动设备之间的距离
+    $d$ 可以为：
+
+
+    Friis 传输方程由公式 3 给出。
+
+
+    ```
+
+    $d_c = \sqrt{\frac{P_tg_t\lambda^2}{(4\pi)^2P_r}}$ (3)
+
+    ```
+
+
+    $d_c$ 是发射器和接收器之间的距离，$P_t$ 和 $P_r$ 分别是发射和接收功率，$G_t$ 和 $G_r$ 是发射器和接收器的增益，$\lambda$
+    是波长。
+
+
+    在之前的工作 [15] 中，作者研究了使用多项式近似和神经网络的距离估计。这些方法对实验结果具有非常有趣的适应性。
+
+
+    ![](img/c713304737ca36799d5f26bfab)
+
+
+    # C. 位置估计
+
+
+    在本节中，我们将看到上一节中提到的距离估计 [17]。位置估计通过两种神经网络（NN）架构执行，第一个基于 RSS 测量值输入；而第二个也基于 RSS 测量值输入。此外，我们对所提方法与
+    [14] 作者提出的方法进行了比较。重点关注的参数是每个估计位置的距离误差以及该方法在准确性方面的性能。
+
+
+    我们首次在相同条件下，执行了三个输入、一个隐藏神经网络的性能，以达到 [14] 中的精度。接下来，我们将比较三个输入与四个神经网络的比较，并发现增加信标的数量可以获得更高的精度。
+
+
+    然而，基站的数量可以大于 3。在这种情况下，将是位置的多次估计。
+
+
+    在此关系中，我们使用了来自 [14] 的 riis 数据来执行我们的工作。在提到的论文中，作者使用了基于权重的数学方法，并使用其他测量值进行估计。对于我们的工作，我们使用神经网络计算坐标。
+
+
+    # III. 相关工作
+
+
+    有不同的方法来估计测量的 ri 距离。取 Friis 传输关系 [1] 对于自由空间，通过计算接收信号，我们可以估计基站和移动设备之间的距离 [18]。公式
+    2.1 和 2.2 显示了毫瓦和分贝。
+
+
+    许多关于使用 ri 参数进行定位的工作已发表。在 [17] 中，采用了 Friis 方法进行定位，但估计的精度较低。在之前的论文中，我们使用来自 [14]
+    的 rssi 数据，在本文中我们决定，该方法的最大估计误差约为 0.7 米。这些值与室内维度相对准确。为了最小化误差，我们建议使用相同的 riis 数据和神经网络估计距离。
+
+
+    ```
+
+    $P(mW) = 10$ (1)
+
+    ```
+
+
+    ```
+
+    $P(dBm) = 10\log\frac{P(mW)}{mW}$ (2)
+
+    ```
+
+
+    接收信号指示（rssi）方法是本地网络或移动无线电网络中常用的分类技术之一。其原理是通过计算接收信号的能量来测量发射系统和接收系统之间的距离。通常，需要三个基站来执行定位
+    [17]。假设参数已知，每个基站与移动设备之间的距离 $d$ 可以：
+
+
+    接收信号指示（rssi）方法是本地网络或移动无线电网络中常用的分类技术之一。其原理是通过计算接收信号的能量来测量发射系统和接收系统之间的距离。通常，需要三个基站来执行定位
+    [17]。假设参数已知，每个基站与移动设备之间的距离 $d$ 可以：
+
+
+    接收信号指示（rssi）方法是本地网络或移动无线电网络中常用的分类技术之一。其原理是通过计算接收信号的能量来测量发射系统和接收系统之间的距离。通常，需要三个基站来执行定位
+    [17]。假设参数已知，每个基站与移动设备之间的距离 $d$ 可以：
+
+
+    接收信号指示（rssi）方法是本地网络或移动无线电网络中常用的分类技术之一。其原理是通过计算接收信号的能量来测量发射系统和接收系统之间的距离。通常，需要三个基站来执行定位
+    [17]。假设参数已知，每个基站与移动设备之间的距离 $d$ 可以：
+
+
+    接收信号指示（rssi）方法是本地网络或移动无线电网络中常用的分类技术之一。其原理是通过计算接收信号的能量来测量发射系统和接收系统之间的距离。通常，需要三个基站来执行定位
+    [17]。假设参数已知，每个基站与移动设备之间的距离 $d$ 可以：
+
+
+    接收信号指示（rssi）方法是本地网络或移动无线电网络中常用的分类技术之一。其原理是通过计算接收信号的能量来测量发射系统和接收系统之间的距离。通常，需要三个基站来执行定位
+    [17]。假设参数已知，每个基站与移动设备之间的距离 $d$ 可以：
+
+
+    接收信号指示（rssi）方法是本地网络或移动无线电网络中常用的分类技术之一。其原理是通过计算接收信号的能量来测量发射系统和接收系统之间的距离。通常，需要三个基站来执行定位
+    [17]。假设参数已知，每个基站与移动设备之间的距离 $d$ 可以：
+
+
+    接收信号指示（rssi）方法是本地网络或移动无线电网络中常用的分类技术之一。其原理是通过计算接收信号的能量来测量发射系统和接收系统之间的距离。通常，需要三个基站来执行定位
+    [17]。假设参数已知，每个基站与移动设备之间的距离 $d$ 可以：
+
+
+    接收信号指示（rssi）方法是本地网络或移动无线电网络中常用的分类技术之一。其原理是通过计算接收信号的能量来测量发射系统和接收系统之间的距离。通常，需要三个基站来执行定位
+    [17]。假设参数已知，每个基站与移动设备之间的距离 $d$ 可以：
+
+
+    接收信号指示（rssi）方法是本地网络或移动无线电网络中常用的分类技术之一。其原理是通过计算接收信号的能量来测量发射系统和接收系统之间的距离。通常，需要三个基站来执行定位
+    [17]。假设参数已知，每个基站与移动设备之间的距离 $d$ 可以：
+
+
+    接收信号指示（rssi）方法是本地网络或移动无线电网络中常用的分类技术之一。其原理是通过计算接收信号的能量来测量发射系统和接收系统之间的距离。通常，需要三个基站来执行定位
+    [17]。假设参数已知，每个基站与移动设备之间的距离 $d$ 可以：
+
+
+    接收信号指示（rssi）方法是本地网络或移动无线电网络中常用的分类技术之一。其原理是通过计算接收信号的能量来测量发射系统和接收系统之间的距离。通常，需要三个基站来执行定位
+    [17]。假设参数已知，每个基站与移动设备之间的距离 $d$ 可以：
+
+
+    接收信号指示（rssi）方法是本地网络或移动无线电网络中常用的分类技术之一。其原理是通过计算接收信号的能量来测量发射系统和接收系统之间的距离。通常，需要三个基站来执行定位
+    [17]。假设参数已知，每个基站与移动设备之间的距离 $d$ 可以：
+
+
+    接收信号指示（rssi）方法是本地网络或移动无线电网络中常用的分类技术之一。其原理是通过计算接收信号的能量来测量发射系统和接收系统之间的距离。通常，需要三个基站来执行定位
+    [17]。假设参数已知，每个基站与移动设备之间的距离 $d$ 可以：
+
+
+    接收信号指示（rssi）方法是本地网络或移动无线电网络中常用的分类技术之一。其原理是通过计算接收信号的能量来测量发射系统和接收系统之间的距离。通常，需要三个基站来执行定位
+    [17]。假设参数已知，每个基站与移动设备之间的距离 $d$ 可以：
+
+
+    接收信号指示（rssi）方法是本地网络或移动无线电网络中常用的分类技术之一。其原理是通过计算接收信号的能量来测量发射系统和接收系统之间的距离。通常，需要三个基站来执行定位
+    [17]。假设参数已知，每个基站与移动设备之间的距离 $d$ 可以：
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    The application performed in [14] using wireless sensors, based on IEEE sensors
+    for wireless communication, the thee probe with connector UFL (MMCX) external
+    antenna is for experiences.
+
+    The rsi dataset collected in [14] is presented in the table below :
+
+
+    the collected rsi of all the base stations are used for the estimation of.
+
+    For each part (3 and 4 inputs) a comparison of the results presented in [14].
+
+
+    | y | N1 | N2 | N3 | N4 |
+
+    |---|---|---|---|---||
+
+    | 2.50 | 99.00 | 45.00 | 38.00 | 37.00 |
+
+    | 2.50 | 80.00 | 45.33 | 36.66 | 37.00 |
+
+    | 2.50 | 76.00 | 41.66 | 36.33 | 37.33 |
+
+    | 3.00 | 86.00 | 38.00 | 36.00 | 37.00 |
+
+    | 3.50 | 65.00 | 39.00 | 36.00 | 36.33 |
+
+    | 4.00 | 67.00 | 39.00 | 36.00 | 36.33 |
+
+    | 5.00 | 58.00 | 42.66 | 36.66 | 37.33 |
+
+    | 5.50 | 59.00 | 39.00 | 36.00 | 37.00 |
+
+    | 6.50 | 44.00 | 43.33 | 36.66 | 37.00 |
+
+    | 7.50 | 65.00 | 45.00 | 38.00 | 43.00 |
+
+    | 8.00 | 26.00 | 42.33 | 38.00 | 43.66 |
+
+
+    A. Position estimation previously, a technique of localization where the coordinates
+    estimation is based on base station. Using the data from the 3 stations, and coordinates
+    will be estimated. In this paper we use a neural network architecture where from
+    the learning base, we obtained the estimated coordinates.
+
+
+    At each position, each rsi measure is taken from each base station. For each measure,
+    the distance between the position, and the base station from which the estimation
+    is taken. Given the 4 estimations at each position, the marginal value is estimated.
+    After that, the formula is applied in order to predict the coordinates.
+
+
+    # IV. POSITION ESTIMATION USING NEURAL NETWORK
+
+
+    Machine learning is a collection of computational methods that use experience
+    to enhance performance, or to get predictions. It is a data-driven approach to
+    solve problems. Artificial neural networks (ANNs) are computer systems loosely
+    inspired by the biological neural networks that connect the brains of humans or
+    nodes called artificial neurons. An ANN is based on a set of neurons and each
+    connection between artificial neurons can transmit a signal from one to the other
+    which directly estimates parameters (coordinates) according to a database. Data
+    filtering is considered as a learning process, and for all new systems the estimated
+    result according to the learning of the base.
+
+
+    ![](img/c713304737ca36799d5f26bfab1d1a82_2_0.png)
+
+
+    For this architecture we use the rsi measures from the base station N1,N2 and
+    N3 to train the network (inputs), and we have the target values for each measure.
+    In the table II we performed the training with varying numbers of the hidden layers
+    (3 and 4 neurons). The table III shows the error in each position and the error
+    by the detection method used in [14].
+
+
+    As mentioned in, we use the rsi dataset in [14] to estimate the coordinates between
+    a transmitter and a receiving ANN.
+
+    For this approach we used metlab neural network to estimate the positions (coordinates)
+    from the rsi dataset collected, the base is composed of the collected rsi dataset
+    and the couples of the real position.
+
+    in the first place, the rsi collected from the first 3 base stations are used
+    as input to the network, and after
+
+
+    ![](img/c713304737ca36799d5f26bfab1d1a82_2_1.png)
+
+
+    estimated position in function of the real position, the table II and III) present
+    a comparison between the estimation based decision tree techniques based on the
+    neural networks. Our networks shows the error of the distance at each position
+    indicated in the table III, that we see several values that do not exceed the
+    0.1m, also there is free value that exceed the 0.5m distance error. In the other
+    hand, from the results in [14] on the distance error,'
+  - '[PAGE 3]
+
+
+    # TABLE II: 3 Inputs ANN
+
+
+    | Inputs | | | | 3 Architecture | | | 4 Architecture | | |
+
+    |---|---|---|---|---|---|---|---|---|---|---|n| 35.66 | RSSI1 | RSSI2 | 48 | 25
+    | 9 | 8.8519 | 0.0000 | 0.1483 | 2.3888 | 7.6909 | 1.1369 |
+
+    | 35.66 | 35.37 | | 46 | 25 | 7 | 8.5584 | -0.0113 | 0.0769 | 2.0547 | 7.8103
+    | -2.7e-1 |
+
+    | 41.66 | 41.36 | | 36 | 25 | 6 | 7.2547 | -0.1156 | -0.1548 | 6.2610 | 7.1739
+    | -1.5e-1 |
+
+    | 37.66 | 37.66 | | 36 | 25 | 5 | 4.2029 | 0.0699 | -0.2960 | 6.0160 | 7.0082
+    | -8.8e-2 |
+
+    | 37.66 | 37.39 | | 36 | 25 | 4 | 5.7035 | 0.1638 | 0.2963 | 4.9308 | 5.8514 |
+    1.9101 |
+
+    | 37.66 | 37.19 | | 36 | 25 | 3 | 4.386 | 0.5070 | 0.1938 | 3.3835 | 5.3888 |
+    -1.01e-01 |
+
+    | 42.36 | 42.56 | | 36 | 25 | 2 | 6.1829 | -0.1167 | -0.5145 | 6.3199 | 0.6642
+    | -1.06e-2 |
+
+    | 42.33 | 36.33 | | 36 | 25 | 1 | 6.2808 | 0.7416 | 0.1761 | 5.1997 | 5.7742 |
+    -3.76e-2 |
+
+    | 44.66 | 44.66 | | 36 | 25 | | 5.5110 | 2.9321 | -0.0110 | 5.3819 | 3.0431 |
+    -4.03e-02 |
+
+    | 48.33 | 48.33 | | 36 | 25 | | 5.2607 | -0.0160 | 0.0067 | 5.5839 | 5.0005 |
+    -1.81e-01 |
+
+    | 45.66 | 45.36 | | 36 | 25 | 3 | 6.5802 | 1.9523 | 0.0082 | 6.4732 | 2.6688 |
+    0.0694 |
+
+    | 45.66 | 42.33 | | 38 | 25 | 2 | 7.4215 | 1.9727 | 0.0784 | 0.2072 | 2.3380 |
+    -3.0e-01 |
+
+
+    # TABLE III: Distance errors
+
+
+    | Distance Error | Distance Error ANN | 3 Architecture | 4 Architecture |
+
+    |---|---|---|--|
+
+    | 0.19 | 0.1480 | | 1.1144 |
+
+    | 0.38 | 0.1856 | | 0.7103 |
+
+    | 1.18 | 0.2220 | | 0.2220 |
+
+    | 0.66 | 0.3031 | | 0.3248 |
+
+    | 0.74 | 0.3844 | | 0.2426 |
+
+    | 0.71 | 0.3385 | | |
+
+    | 0.89 | 0.1747 | | 0.0872 |
+
+    | 0.30 | 0.1760 | | 0.3808 |
+
+    | 0.68 | 0.0687 | | 0.0471 |
+
+    | 0.66 | 0.0654 | | 0.0103 |
+
+    | 0.14 | 0.0933 | | 0.1062 |
+
+    | 1.74 | 0.0830 | | 0.0785 |
+
+    | 0.45 | 0.0756 | | 0.1201 |
+
+
+    # B. Position estimation using RSSI input
+
+
+    In this section we use the coordinates estimation by the neural networks based
+    on the 4 results input. The table shows the outputs representing the position
+    estimation for network. We have established the estimation with network parameters
+    (4 and 7) in the hidden layer, the data are better than those obtained using the
+    3 inputs, the average of the distance error is 0.24 for the one with 4 neurons
+    on the hidden layer, and 0.077 for the one with 7. The table shows
+
+
+    ![](img/c713304737ca36799d5f26bfab1d1a82_3_0.png)
+
+
+    In the figures 5 we show the estimated position against the real position, the
+    majority of the positions are confirm with the position layer, we have 2 marginal
+    values in the first position (2.5, 9) and the 13th position (7.5, 12). The last
+    in value is also the maximum measurement by a distance 1.74meter 0.25m on the
+    input. The table shows by neural network with best average of distance (5 neurons
+    on hidden layer) and the neural methods
+
+
+    The figure 6 shows the nodes position and the measurement result in |
+
+
+    The estimation performed in this work is doing that the rss measurement are in
+    the same condition and the same node arrangement as in [14]the observed shows
+    huge improvement in the estimation accuracy compared to their iteration. When
+    also, from using the 4 nodes (bases) it gives a better estimation than the measurement
+    from just 3 nodes as inputs, we assume that by increasing the number of neurons
+    detectors the performance (of inputs of the neural networks) we have a better
+    estimation which minimizes the error and increases the accuracy. For the neural
+    networks architecture, the dataset size is
+
+
+    the majority of the error estimation exceeded 0.5 m, the value is 1.74 which is
+    highly valuable relative to the rsi measures are. The mean value for the decision
+    tree methods are 0.7m for the neural networks methods we have 0.26m for the architecture
+    with 3 neurons on the hidden layer, and 0.24m for the architecture with 4 neurons
+    in the hidden layer. These average values show'
+  - '[PAGE 4]
+
+
+    # 2020 44th International Conference on Advanced Systems and Emergent Technologies
+    (IC_ASET)
+
+
+    # TABLE IV: ANN with 5 neurons in the hidden layer
+
+
+    | RSSI1 | RSSI2 | RSSI3 | RSS4 | X | Y | YEstimated | Error | YError |
+
+    |---|---|---|---|---|---|---|---||
+
+    | 36 | 45 | 27 | 9 | 37 | 2.519 | 8.18 | -0.017 | -0.819 |
+
+    | 36 | 45 | 37 | 6 | 25 | 2.288 | 7.99 | -0.209 | -1.068 |
+
+    | 36 | 41 | 36 | 6 | 37 | 7.333 | 7 | -1.107 | -1.007 |
+
+    | 36 | 37 | 36 | 6 | 39 | 2.499 | 5 | 5.238 | -1.188 |
+
+    | 37 | 37 | 36 | 5 | 36 | 4.999 | 5 | 1.127 | -3.098 |
+
+    | 37 | 39 | 36 | 4 | 63 | 4.999 | 5 | 4.078 | -3.482 |
+
+    | 38 | 42 | 36 | 5 | 5 | 3.666 | 5 | 5.482 | -3.538 |
+
+    | 42 | 43 | 36 | 6 | 37 | 7.333 | 5 | 5.904 | -2.658 |
+
+    | 44 | 36 | 36 | 5 | 39 | 3.565 | 5 | 2.92E-09 | -3.35E-10 |
+
+    | 45 | 36 | 37 | 5 | 43 | 5.5 | 3 | 5.128 | -3.462 |
+
+    | 45 | 36 | 37 | 6 | 32 | 2.499 | 9 | 1.982 | -9.318 |
+
+    | 45 | 39 | 38 | 7 | 5 | 44 | 7.2785 | 0.2214 | 0.117 |
+
+
+    # TABLE V: Distances errors
+
+
+    | Distance error | Distance error (4 neurons) | Distance error (5 neurons) |
+
+    |---|---|---|
+
+    | DT | 0.19 | 0.144 | 0.8201554 |
+
+    | 0.88 | 0.113 | 4.7291E-08 |
+
+    | 1.18 | 0.3220 | 1.4972E-07 |
+
+    | 0.66 | 0.1321 | 5.8475E-07 |
+
+    | 0.74 | 0.3248 | 1.3305E-07 |
+
+    | 0.71 | 0.3269 | 1.1436E-07 |
+
+    | 0.89 | 0.0872 | 6.8253E-07 |
+
+    | 0.8 | 0.3904 | 1.33617E-07 |
+
+    | 0.68 | 0.3808 | 5.6931E-03 |
+
+    | 0.08 | 0.0471 | 2.4121E-09 |
+
+    | 0.66 | 0.1043 | 3.6916E-04 |
+
+    | 0.14 | 0.0692 | 1.0064E-07 |
+
+    | 1.74 | 0.0795 | 3.25685E-05 |
+
+    | 0.45 | 0.1201 | 4.82005E-07 |
+
+
+    ![](img/c713304737ca36799d5f26bfab1d1a82_4_0.png)
+
+
+    Fig. 6: Position Estimation using DT methods [14]
+
+
+    ![](img/c713304737ca36799d5f26bfab1d1a82_4_1.png)
+
+
+    Fig. 5: Input ANN with 5 neurons in the hidden layer
+
+
+    small, it does not require a large network to fit this data [15], also the cost
+    of neuron number usually depends on the number of input targets, and the number
+    of neurons on the hidden layer must be at least equal to the inputs number and
+    at most twice this numbers, otherwise may cause an over-fitting if the number
+    of neurons is 2 times the number of inputs.
+
+
+    the comparison position results with these methods (the ANN and the Decision tree)
+    from the experience in [14]. We used an Artificial Neural Network with three inputs,
+    to estimate the position, and calculate the mean value for all the position objects
+    the same work is performed for the four ANN architecture, for every 4 inputs we
+    estimated the position and calculate the mean error for these estimated position.
+    Finally we gave the introduced methods which were given in [14]. These methods
+    give a better accuracy and a reduction of the calculation rate, which reduces
+    the number of numerous operations and the calculation cost, also prove that by
+    increasing the number of sensors, we get a better accuracy.
+
+
+    # V. CONCLUSION
+
+
+    In this work, we performed localisation techniques based on rssi using the neural
+    networks techniques. We
+
+
+    As perspective of our results, we will use IPS techniques in order to locate in
+    containing objects. This cannot be performed using analytic equations due to the
+    fact that a line of sight is required in order to apply formulas. We will try
+    to combine given results in [15] with these results and compare our approaches.
+
+
+    37'
+  md: '
+
+    The application performed in [14] using wireless sensors, based on IEEE sensors
+    for wireless communication, the thee probe with connector UFL (MMCX) external
+    antenna is for experiences.
+
+    The rsi dataset collected in [14] is presented in the table below:
+
+
+    the collected rsi of all the base stations are used for the estimation of.
+
+    For each part (3 and 4 inputs) a comparison of the results presented in [14].
+
+
+    | y | N1 | N2 | N3 | N4 |
+
+    |---|---|---|---|---|
+
+    | 2.50 | 99.00 | 45.00 | 38.00 | 37.00 |
+
+    | 2.50 | 80.00 | 45.33 | 36.66 | 37.00 |
+
+    | 2.50 | 76.00 | 41.66 | 36.33 | 37.33 |
+
+    | 3.00 | 86.00 | 38.00 | 36.00 | 37.00 |
+
+    | 3.50 | 65.00 | 39.00 | 36.00 | 36.33 |
+
+    | 4.00 | 67.00 | 39.00 | 36.00 | 36.33 |
+
+    | 5.00 | 58.00 | 42.66 | 36.66 | 37.33 |
+
+    | 5.50 | 59.00 | 39.00 | 36.00 | 37.00 |
+
+    | 6.50 | 44.00 | 43.33 | 36.66 | 37.00 |
+
+    | 7.50 | 65.00 | 45.00 | 38.00 | 43.00 |
+
+    | 8.00 | 26.00 | 42.33 | 38.00 | 43.66 |
+
+
+    ## A. Position estimation
+
+
+    previously, a technique of localization where the coordinates estimation is based
+    on base station. Using the data from the 3 stations, and coordinates will be estimated.
+    In this paper we use a neural network architecture where from the learning base,
+    we obtained the estimated coordinates.
+
+
+    At each position, each rsi measure is taken from each base station. For each measure,
+    the distance between the position, and the base station from which the estimation
+    is taken. Given the 4 estimations at each position, the marginal value is estimated.
+    After that, the formula is applied in order to predict the coordinates.
+
+
+    ## IV. POSITION ESTIMATION USING NEURAL NETWORK
+
+
+    Machine learning is a collection of computational methods that use experience
+    to enhance performance, or to get predictions. It is a data-driven approach to
+    solve problems. Artificial neural networks (ANNs) are computer systems loosely
+    inspired by the biological neural networks that connect the brains of humans or
+    nodes called artificial neurons. An ANN is based on a set of neurons and each
+    connection between artificial neurons can transmit a signal from one to the other
+    which directly estimates parameters (coordinates) according to a database. Data
+    filtering is considered as a learning process, and for all new systems the estimated
+    result according to the learning of the base.
+
+
+    ![](img/c713304737ca36799d5f26bfab1d1a82_2_0.png)
+
+
+    For this architecture we use the rsi measures from the base station N1, N2 and
+    N3 to train the network (inputs), and we have the target values for each measure.
+    In the table II we performed the training with varying numbers of the hidden layers
+    (3 and 4 neurons). The table III shows the error in each position and the error
+    by the detection method used in [14].
+
+
+    As mentioned in, we use the rsi dataset in [14] to estimate the coordinates between
+    a transmitter and a receiving ANN. For this approach we used metlab neural network
+    to estimate the positions (coordinates) from the rsi dataset collected, the base
+    is composed of the collected rsi dataset and the couples of the real position.
+    in the first place, the rsi collected from the first 3 base stations are used
+    as input to the network, and after
+
+
+    ![](img/c713304737ca36799d5f26bfab1d1a82_2_1.png)
+
+
+    estimated position in function of the real position, the table II and III) present
+    a comparison between the estimation based decision tree techniques based on the
+    neural networks. Our networks shows the error of the distance at each position
+    indicated in the table III, that we see several values that do not exceed the
+    0.1m, also there is free value that exceed the 0.5m distance error. In the other
+    hand, from the results in [14] on the distance error,
+
+
+    ## TABLE II: 3 Inputs ANN
+
+
+    | Inputs | | | | 3 Architecture | | | | 4 Architecture | | | |
+
+    |---|---|---|---|---|---|---|---|---|---|---|---|
+
+    | n | 35.66 | RSSI1 | RSSI2 | 48 | 25 | 9 | 8.8519 | 0.0000 | 0.1483 | 2.3888
+    | 7.6909 | 1.1369 |
+
+    | 35.66 | 35.37 | | 46 | 25 | 7 | 8.5584 | -0.0113 | 0.0769 | 2.0547 | 7.8103
+    | -2.7e-1 |
+
+    | 41.66 | 41.36 | | 36 | 25 | 6 | 7.2547 | -0.1156 | -0.1548 | 6.2610 | 7.1739
+    | -1.5e-1 |
+
+    | 37.66 | 37.66 | | 36 | 25 | 5 | 4.2029 | 0.0699 | -0.2960 | 6.0160 | 7.0082
+    | -8.8e-2 |
+
+    | 37.66 | 37.39 | | 36 | 25 | 4 | 5.7035 | 0.1638 | 0.2963 | 4.9308 | 5.8514 |
+    1.9101 |
+
+    | 37.66 | 37.19 | | 36 | 25 | 3 | 4.386 | 0.5070 | 0.1938 | 3.3835 | 5.3888 |
+    -1.01e-1 |
+
+    | 42.36 | 42.56 | | 36 | 25 | 2 | 6.1829 | -0.1167 | -0.5145 | 6.3199 | 0.6642
+    | -1.06e-2 |
+
+    | 42.33 | 36.33 | | 36 | 25 | 1 | 6.2808 | 0.7416 | 0.1761 | 5.1997 | 5.7742 |
+    -3.76e-2 |
+
+    | 44.66 | 44.66 | | 36 | 25 | | 5.5110 | 2.9321 | -0.0110 | 5.3819 | 3.0431 |
+    -4.03e-2 |
+
+    | 48.33 | 48.33 | | 36 | 25 | | 5.2607 | -0.0160 | 0.0067 | 5.5839 | 5.0005 |
+    -1.81e-1 |
+
+    | 45.66 | 45.36 | | 36 | 25 | 3 | 6.5802 | 1.9523 | 0.0082 | 6.4732 | 2.6688 |
+    0.0694 |
+
+    | 45.66 | 42.33 | | 38 | 25 | 2 | 7.4215 | 1.9727 | 0.0784 | 0.2072 | 2.3380 |
+    -3.0e-1 |
+
+
+    ## TABLE III: Distance errors
+
+
+    | Distance Error | Distance Error ANN | 3 Architecture | 4 Architecture |
+
+    |---|---|---|---|
+
+    | 0.19 | 0.1480 | | 1.1144 |
+
+    | 0.38 | 0.1856 | | 0.7103 |
+
+    | 1.18 | 0.2220 | | 0.2220 |
+
+    | 0.66 | 0.3031 | | 0.3248 |
+
+    | 0.74 | 0.3844 | | 0.2426 |
+
+    | 0.71 | 0.3385 | | |
+
+    | 0.89 | 0.1747 | | 0.0872 |
+
+    | 0.30 | 0.1760 | | 0.3808 |
+
+    | 0.68 | 0.0687 | | 0.0471 |
+
+    | 0.66 | 0.0654 | | 0.0103 |
+
+    | 0.14 | 0.0933 | | 0.1062 |
+
+    | 1.74 | 0.0830 | | 0.0785 |
+
+    | 0.45 | 0.0756 | | 0.1201 |
+
+
+    ## B. Position estimation using RSSI input
+
+
+    In this section we use the coordinates estimation by the neural networks based
+    on the 4 results input. The table shows the outputs representing the position
+    estimation for network. We have established the estimation with network parameters
+    (4 and 7) in the hidden layer, the data are better than those obtained using the
+    3 inputs, the average of the distance error is 0.24 for the one with 4 neurons
+    on the hidden layer, and 0.077 for the one with 7. The table shows
+
+
+    ![](img/c713304737ca36799d5f26bfab1d1a82_3_0.png)
+
+
+    In the figures 5 we show the estimated position against the real position, the
+    majority of the positions are confirm with the position layer, we have 2 marginal
+    values in the first position (2.5, 9) and the 13th position (7.5, 12). The last
+    in value is also the maximum measurement by a distance 1.74meter 0.25m on the
+    input. The table shows by neural network with best average of distance (5 neurons
+    on hidden layer) and the neural methods
+
+
+    The figure 6 shows the nodes position and the measurement result in |
+
+
+    The estimation performed in this work is doing that the rss measurement are in
+    the same condition and the same node arrangement as in [14]the observed shows
+    huge improvement in the estimation accuracy compared to their iteration. When
+    also, from using the 4 nodes (bases) it gives a better estimation than the measurement
+    from just 3 nodes as inputs, we assume that by increasing the number of neurons
+    (of inputs the neural networks) we have a better estimation which minimizes the
+    error and increases the accuracy. For the neural architecture, the dataset size
+    the majority of the error exceeded 0.5 m, the value is 1.74 which is highly valuable
+    to the rsi measures are. The mean value for the decision tree methods are 0.7m
+    for neural networks we have 0.26m for the architecture with 3 neurons on the hidden
+    layer, and 0.24m for the architecture with 4 neurons in the hidden layer. These
+    average values show
+
+
+    2020 44th International Conference on Advanced Systems and Emergent Technologies
+    (ICSET)
+
+
+    ## TABLE IV: ANN with 5 neurons in the hidden layer
+
+
+    | RSSI1 | RSSI2 | RSSI3 | RSSI4 | X | Y | Estimated | Error |
+
+    |---|---|---|---|---|---|---|---|
+
+    | 36 | 45 | 27 | 9 | 37 | 2.519 | 8.18 | -0.017 |
+
+    | 36 | 45 | 37 | 6 | 25 | 2.288 | 7.99 | -0.009 |
+
+    | 36 | 41 | 36 | 6 | 37 | 7.333 | 7 | -1.107 |
+
+    | 36 | 37 | 36 | 6 | 39 | 2.499 | 5 | 5.238 |
+
+    | 37 | 37 | 36 | 5 | 36 | 4.999 | 5 | 1.127 |
+
+    | 37 | 39 | 36 | 4 | 63 | 4.999 | 5 | 4.078 |
+
+    | 38 | 42 | 36 | 5 | 36 | 3.666 | 5 | 5.482 |
+
+    | 42 | 43 | 36 | 6 | 37 | 7.333 | 5 | 5.904 |
+
+    | 44 | 36 | 36 | 5 | 39 | 3.565 | 5 | 2.92 |
+
+    | 45 | 36 | 37 | 5 | 43 | 5.5 | 3 | 5.128 |
+
+    | 45 | 36 | 37 | 6 | 32 | 2.499 | 9 | 1.982 |
+
+    | 45 | 39 | 38 | 7 | 5 | 44 | 7.2785 | 0.2214 |
+
+
+    ## TABLE V: Distances errors
+
+
+    | Distance error | Distance error (4 neurons) | Distance error (5 neurons) |
+
+    |---|---|---|
+
+    | DT | 0.19 | 0.144 | 0.8201554 |
+
+    | 0.88 | 0.113 | 4.7291E-08 |
+
+    | 1.18 | 0.3220 | 1.4972E-07 |
+
+    | 0.66 | 0.1321 | 5.8475E-07 |
+
+    | 0.74 | 0.3248 | 1.3305E-07 |
+
+    | 0.71 | 0.3269 | 1.1436E-07 |
+
+    | 0.89 | 0.0872 | 6.8253E-07 |
+
+    | 0.8 | 0.3904 | 1.33617E-07 |
+
+    | 0.68 | 0.3808 | 5.6931E-03 |
+
+    | 0.08 | 0.0471 | 2.4121E-09 |
+
+    | 0.66 | 0.1043 | 3.6916E-04 |
+
+    | 0.14 | 0.0692 | 1.0064E-07 |
+
+    | 1.74 | 0.0795 | 3.25685E-05 |
+
+    | 0.45 | 0.1201 | 4.82005E-07 |
+
+
+    ![](img/c713304737ca36799d5f26bfab1d1a82_4_0.png)
+
+
+    Fig. 6: Position Estimation using DT methods [14]
+
+
+    ![](img/c713304737ca36799d5f26bfab1d1a82_4_1.png)
+
+
+    Fig. 5: Input ANN with 5 neurons in the hidden layer
+
+
+    small, it does not require a large network to fit this data [15], also the cost
+    of neuron number usually depends on the number of input targets, and the number
+    of neurons on the hidden layer must be at least equal to the inputs number and
+    at most twice this numbers, otherwise may cause an over-fitting if the number
+    of neurons is 2 times the number of inputs.
+
+
+    the comparison position results with these methods (the ANN and the Decision tree)
+    from the experience in [14]. We used an Artificial Neural Network with three inputs,
+    to estimate the position, and calculate the mean value for all the position objects
+    the same work is performed for the four ANN architecture, for every 4 inputs we
+    estimated the position and calculate the mean error for these estimated position.
+    Finally we gave the introduced methods which were given in [14]. These methods
+    give a better accuracy and a reduction of the calculation rate, which reduces
+    the number of numerous operations and the calculation cost, also prove that by
+    increasing the number of sensors, we get a better accuracy.
+
+
+    ## V. CONCLUSION
+
+
+    In this work, we performed localisation techniques based on rssi using the neural
+    networks techniques. We
+
+    '
+  mdcn: '
+
+    该应用在 [14] 中通过无线传感器执行，基于用于无线通信的 IEEE 传感器，带有 UFL (MMCX) 接口的三探头外部天线用于实验。
+
+    在 [14] 中收集的 rsi 数据集如表所示：
+
+
+    所有基站采集的 rsi 被用于估计。
+
+    对于每个部分（3 和 4 个输入），对 [14] 中提出的结果进行了对比。
+
+
+    | y | N1 | N2 | N3 | N4 |
+
+    |---|---|---|---|---|
+
+    | 2.50 | 99.00 | 45.00 | 38.00 | 37.00 |
+
+    | 2.50 | 80.00 | 45.33 | 36.66 | 37.00 |
+
+    | 2.50 | 76.00 | 41.66 | 36.33 | 37.33 |
+
+    | 3.00 | 86.00 | 38.00 | 36.00 | 37.00 |
+
+    | 3.50 | 65.00 | 39.00 | 36.00 | 36.33 |
+
+    | 4.00 | 67.00 | 39.00 | 36.00 | 36.33 |
+
+    | 5.00 | 58.00 | 42.66 | 36.66 | 37.33 |
+
+    | 5.50 | 59.00 | 39.00 | 36.00 | 37.00 |
+
+    | 6.50 | 44.00 | 43.33 | 36.66 | 37.00 |
+
+    | 7.50 | 65.00 | 45.00 | 38.00 | 43.00 |
+
+    | 8.00 | 26.00 | 42.33 | 38.00 | 43.66 |
+
+
+    ## A. 位置估计
+
+
+    此前，一种基于基站坐标估计的定位技术。通过使用来自 3 个基站的数据，将估计坐标。在本文中，我们使用了一种神经网络架构，从学习基中获得了估计的坐标。
+
+
+    在每个位置，都会从每个基站获取一个 rsi 测量值。对于每次测量，计算该位置与进行估计的基站之间的距离。在每个位置有 4 个估计值的情况下，估计出边际值。之后，应用公式来预测坐标。
+
+
+    ## IV. 使用神经网络进行位置估计
+
+
+    机器学习是利用经验来增强性能或获取预测的计算方法的集合。它是一种解决问题的数据驱动方法。人工神经网络（ANNs）是受生物神经网络松弱启发的计算机系统，这些网络连接人类大脑或被称为人工神经元的节点。ANN
+    基于一组神经元，人工神经元之间的每个连接都可以从一个神经元传输信号到另一个，并根据数据库直接估计参数（坐标）。数据过滤被视为一个学习过程，对于所有新系统，根据基准的学习得出估计结果。
+
+
+    ![](img/c713304737ca36799d5f26bfab1d1a82_2_0.png)
+
+
+    对于这种架构，我们使用来自基站 N1、N2 和 N3 的 rsi 测量值来训练网络（输入），并且有每个测量值的目标值。在表 II 中，我们使用不同数量隐藏层（3
+    和 4 个神经元）进行了训练。表 III 显示了每个位置的误差以及 [14] 中使用的检测方法的误差。
+
+
+    如所述，我们使用 [14] 中的 rsi 数据集来估计发射器和接收端 ANN 之间的坐标。对于这种方法，我们使用 metlab 神经网络从收集的 rsi 数据集中估计位置（坐标），该基准由收集的
+    rsi 数据集和真实位置的对组成。首先，从前 3 个基站采集的 rsi 用作网络的输入，并在
+
+
+    ![](img/c713304737ca36799d5f26bfab1d1a82_2_1.png)
+
+
+    根据真实位置估计的位置（表 II 和 III）展示了基于神经网络的估计与基于决策树技术的估计之间的对比。我们的网络显示了表 III 所示每个位置的距离误差，我们看到许多值没有超过
+    0.1m，也有一些自由值超过了 0.5m 的距离误差。另一方面，根据 [14] 中关于距离误差的结果，
+
+
+    ## 表 II：3 输入 ANN
+
+
+    | 输入 | | | | 3 架构 | | | | 4 架构 | | | | |
+
+    |---|---|---|---|---|---|---|---|---|---|---|---|---|
+
+    | n | 35.66 | RSSI1 | RSSI2 | 48 | 25 | 9 | 8.8519 | 0.0000 | 0.1483 | 2.3888
+    | 7.6909 | 1.1369 |
+
+    | 35.66 | 35.33 | 46 | 25 | 7 | 8.5584 | -0.0113 | 0.0769 | 2.0547 | 7.8103 |
+    -2.7e1 |
+
+    | 41.66 | 41.36 | 36 | 25 | 6 | 7.2547 | -0.1156 | -0.1548 | 6.2610 | 7.1739 |
+    -1.5e1 |
+
+    | 37.66 | 37.66 | 36 | 25 | 5 | 4.2029 | 0.0699 | -0.2960 | 6.0160 | 7.0082 |
+    -8.8e2 |
+
+    | 37.66 | 37.39 | 36 | 25 | 4 | 5.7035 | 0.1638 | 0.2963 | 4.9308 | 5.8514 | 1.9101
+    |
+
+    | 37.66 | 37.19 | 36 | 25 | 3 | 4.386 | 0.5070 | 0.1938 | 3.3835 | 5.3888 | -1.0e1
+    |
+
+    | 42.36 | 42.56 | 36 | 25 | 2 | 6.1829 | -0.1167 | -0.5145 | 6.3199 | 0.6642 |
+    -1.06e2 |
+
+    | 42.33 | 36.33 | 36 | 25 | 1 | 6.2808 | 0.7416 | 0.1761 | 5.1997 | 5.7742 | -3.76e2
+    |
+
+    | 44.66 | 44.66 | 36 | 25 | | 5.5110 | 2.9321 | -0.0110 | 5.3819 | 3.0431 | -4.03e2
+    |
+
+    | 48.33 | 48.33 | 36 | 25 | | 5.2607 | -0.0160 | 0.0067 | 5.5839 | 5.0005 | -1.8e1
+    |
+
+    | 45.66 | 45.36 | 36 | 25 | 3 | 6.5802 | 1.9523 | 0.0082 | 6.4732 | 2.6688 | 0.0694
+    |
+
+    | 45.66 | 42.33 | 38 | 25 | 2 | 7.4215 | 1.9727 | 0.0784 | 0.2072 | 2.3380 | -3.0e1
+    |
+
+
+    ## 表 III：距离误差
+
+
+    | 距离误差 | ANN 距离误差 | 3 架构 | 4 架构 |
+
+    |---|---|---|---|
+
+    | 0.19 | 0.1480 | | 1.1144 |
+
+    | 0.38 | 0.1856 | | 0.7103 |
+
+    | 1.18 | 0.2220 | | 0.2220 |
+
+    | 0.66 | 0.3031 | | 0.3248 |
+
+    | 0.74 | 0.3844 | | 0.2426 |
+
+    | 0.71 | 0.3385 | | |
+
+    | 0.89 | 0.1747 | | 0.0872 |
+
+    | 0.30 | 0.1760 | | 0.3808 |
+
+    | 0.68 | 0.0687 | | 0.0471 |
+
+    | 0.66 | 0.0654 | | 0.0103 |
+
+    | 0.14 | 0.0933 | | 0.1062 |
+
+    | 1.74 | 0.0830 | | 0.0785 |
+
+    | 0.45 | 0.0756 | | 0.1201 |
+
+
+    ## B. 使用 RSSI 输入进行位置估计
+
+
+    在本节中，我们使用基于 4 个结果输入的神经网络进行坐标估计。该表显示了代表网络位置估计的输出。我们在隐藏层中通过网络参数（4 和 7）建立了估计，数据优于使用
+    3 个输入获得的数据，隐藏层具有 4 个神经元的平均距离误差为 0.24，具有 7 个神经元的为 0.077。表显示了
+
+
+    ![](img/c713304737ca36799d5f26bfab1d1a82_3_0.png)
+
+
+    图 5 显示了相对于真实位置的估计位置，大部分位置与真实位置一致，除非是第一个位置（2.5, 9）和第 13 个位置（7.5, 12）。最后一个值也是最大距离
+    1.74 米。表显示了具有隐藏层 5 个神经元的 ANN 具有最佳距离平均值。图 6 显示了位置结果与 [14] 中的测量结果相同。同样，使用 3 个节点时，我们假设通过增加神经元的数量可以最小化误差并提高精度。对于这种架构，大部分误差超过了
+    0.5m，该值为 1.74，对于具有隐藏层 4 个神经元的架构非常有价值。这些平均值显示2020 第 44 届国际先进系统与新兴技术会议 (ICSET)。
+
+
+    ## 表 IV：5 神经元 ANN
+
+
+    | RSSI1 | RSSI2 | RSSI3 | RSSI4 | X | Y | 估计 | 误差 |
+
+    |---|---|---|---|---|---|---|---|
+
+    | 36 | 45 | 27 | 9 | 37 | 2.519 | 8.18 | -0.017 |
+
+    | 36 | 45 | 37 | 6 | 25 | 2.288 | 7.99 | -0.009 |
+
+    | 36 | 41 | 36 | 6 | 37 | 7.333 | 7 | -1.107 |
+
+    | 36 | 37 | 36 | 6 | 39 | 2.499 | 5 | 5.238 |
+
+    | 37 | 37 | 36 | 5 | 36 | 4.999 | 5 | 1.127 |
+
+    | 37 | 39 | 36 | 4 | 63 | 4.999 | 5 | 4.078 |
+
+    | 38 | 42 | 36 | 5 | 36 | 3.666 | 5 | 5.482 |
+
+    | 42 | 43 | 36 | 6 | 37 | 7.333 | 5 | 5.904 |
+
+    | 44 | 36 | 36 | 5 | 39 | 3.565 | 5 | 2.92 |
+
+    | 45 | 36 | 37 | 5 | 43 | 5.5 | 3 | 5.128 |
+
+    | 45 | 36 | 37 | 6 | 32 | 2.499 | 9 | 1.982 |
+
+    | 45 | 39 | 38 | 7 | 5 | 44 | 7.2785 | 0.2214 |
+
+
+    ## 表 V：距离误差
+
+
+    | 距离误差 | 距离误差 (4 神经元) | 距离误差 (5 神经元) |
+
+    |---|---|---|
+
+    | DT | 0.19 | 0.144 | 0.8201554 |
+
+    | 0.88 | 0.113 | 4.7291E-08 |
+
+    | 1.18 | 0.3220 | 1.4972E-07 |
+
+    | 0.66 | 0.1321 | 5.8475E-07 |
+
+    | 0.74 | 0.3248 | 1.3305E-07 |
+
+    | 0.71 | 0.3269 | 1.1436E-07 |
+
+    | 0.89 | 0.0872 | 6.8253E-07 |
+
+    | 0.8 | 0.3904 | 1.33617E-07 |
+
+    | 0.68 | 0.3808 | 5.6931E-03 |
+
+    | 0.08 | 0.0471 | 2.4121E-09 |
+
+    | 0.66 | 0.1043 | 3.6916E-04 |
+
+    | 0.14 | 0.0692 | 1.0064E-07 |
+
+    | 1.74 | 0.0795 | 3.25685E-05 |
+
+    | 0.45 | 0.1201 | 4.82005E-07 |
+
+    '
+  merge: 0
+- raw:
+  - "[PAGE 5]\n\n# REFERENCES\n\n[1] Wu, S.; Chen, T.; Wu, Y.; Mathis, M. Smart cities\
+    \ in Taiwan: A perspective on big data applications. Statistics 2018, 10, \n\n\
+    [2] R-S, S., and S-H. Comparison of CNN Applications for RSSI-Fingerprint Index\
+    \ Location. IEEE Electronics, 2019, 8,Division of Electrical and Computer Engineering,\
+    \ Donguk University, Seoul, korea.\n\n[3] Davision, P.; Pich, R. Survey of Selected\
+    \ Positioning Methods. IEEE Commun.Surv. Top.,2017, 19, 1431730.\n\n[4] Qin, A.;\
+    \ Zhou, F.; Rahman, W.; Wang, Z.; Zhang, Y.; Wang, S. Study of indoor positioning\
+    \ using UWB base-configuration. In Proceedings of the 2017 IEEE 2nd Advanced Information\
+    \ Technology, Electronics and Automation Control Conference (AEAC), Chengdu, China,\
+    \ 2017 pp. 195843.\n\n[5] Saab, S. S.; Nakas, Z. A. RFID Positioning System Using\
+    \ Passive Tags. IEEE Trans. Ind. Elect., 2011, 58, 19610.\n\n[6] Wu, J.; Zhang,\
+    \ Y.; Wang, Z.; Li, L. Indoor positioning using inertial MEMS methods: Design\
+    \ and recognition. In Proceedings of the 2016 IEEE International Conference on\
+    \ Telecommunication, Networking, Control and Systems (ICCS), Chengdu, China, 2016\
+    \ pp. 30375.\n\n[7] Tian, Y.; Zhang, J.; Li, J.; Dong, W.; Wang, X. A weighted\
+    \ least-squares method using received signal strength measurements for WLAN indoor\
+    \ positioning. In Proceedings of the 2017th International Conference on Wireless\
+    \ Personal and Mobile Communications (WPMC), Bali, Indonesia, 2017 Dec. 31034.\n\
+    \n[8] Kim, J.; Jun, H. Vision-based positioning using augmented indoor navigation.\
+    \ IEEE Trans. Commun., 2008, 54, 954962.\n\n[9] Pavska, A.; Angelopoulos, A.D.;\
+    \ Psotis, M.; Angel, G.; Moscha, A. Indoor Positioning Using Low-Frequency Magnetic\
+    \ Fields. IEEE Trans. Ind. Elect., 2016, 63, 2457268.\n\n[10] Qi, J.; Liu, G.P.\
+    \ A High-accuracy Indoor Positioning Using Wireless Sensor Networks. Sensors,\
+    \ 2017, 17, 2754.\n\n[11] Raharajuana, T.; Mawson, P.; Nguyen, T.; Colomnicier,\
+    \ F.; Boyron, M.; Dipert, J.; Viot, L. Local Positioning Using Flickering Indoor\
+    \ Facilities. IEEE, 2017, 17, 2548.\n\n[12] Li, G.; G, Z.; Xu, Y.; Li, J. and\
+    \ Yang, P. Indoor Positioning Algorithm Based on the Improved RSSI Signal Model.\
+    \ Sensors,2018, 18, 2820(maijor).\n\n[13] Zakhart, R.; & Bueller, H. HANDBOOK\
+    \ OF POSITIONING Location Theory and Applications. Published by John Wiley & Sons,\
+    \ Inc. New York, Sept, 2011.\n\n[14] Cheriet, A.; Olin, M.; & Azzi, K.Localization\
+    \ in a Wireless Sensor Network Using RSSI and a decision tree. electrotechnical\
+    \ journal, 2013,0003-7, 9:8.\n\n[15] A Gadhabhabhi, Y Yachdadi and H Zairi, Location\
+    \ estimation using Particle Filter and Neural Network based on RSSI technique,\
+    \ STA conference, PP24-29, Tunisia, 2019.\n\n[16] H Liu, H Darling, P Banerjee\
+    \ and J Liu. Survey of Indoor Positioning Techniques and Systems. IEEE Systems.\
+    \ Man. and Cybernetics Volume: 37, pp. 1067–1080, Nov. 2007.\n\n[17] S-B Kota,\
+    \ S Verma and R-K Abbed. RSSI WSN localization with Analysis of Energy Consumption\
+    \ and Communication, International Journal of Computer Applications (2017) 8887,\
+    \ Volume 50 - No. 11, July, 2017.\n\n[18] J Xu, W Liu, F Lang, Y Zhang and C Wang,\
+    \ Distance Measurement Model Based on RSSI in WSN, Wireless Sensor Network, Vol.\
+    \ 2, 606- 613, 2001.\n\n[19] Langendoek, K., & Reijers, N. Distributed location\
+    \ in wireless sensor networks: a quantitative comparison, Sensors, 3, pp. 95–98,\
+    \ 2003.\n\n[20] Hamid, A. H. F. B. A., Rashid, R. A., Faisal, N., Yusuf, S. S.,\
+    \ & Latiff, S. A. L.,Development of IEEE 802.15.4 based Sensor Network Platform\
+    \ for Image, International Journal of Engineering & Technology IETpp.112-118,\
+    \ 2019"
+  md: "\n# REFERENCES\n\n[1] Wu, S.; Chen, T.; Wu, Y.; Mathis, M. Smart cities in\
+    \ Taiwan: A perspective on big data applications. Statistics 2018, 10, \n\n[2]\
+    \ R-S, S., and S-H. Comparison of CNN Applications for RSSI-Fingerprint Index\
+    \ Location. IEEE Electronics, 2019, 8, Division of Electrical and Computer Engineering,\
+    \ Donguk University, Seoul, korea.\n\n[3] Davision, P.; Pich, R. Survey of Selected\
+    \ Positioning Methods. IEEE Commun.Surv. Top., 2017, 19, 1431-143730.\n\n[4] Qin,\
+    \ A.; Zhou, F.; Rahman, W.; Wang, Z.; Zhang, Y.; Wang, S. Study of indoor positioning\
+    \ using UWB base-configuration. In Proceedings of the 2017 IEEE 2nd Advanced Information\
+    \ Technology, Electronics and Automation Control Conference (AEAC), Chengdu, China,\
+    \ 2017 pp. 195--43.\n\n[5] Saab, S. S.; Nakas, Z. A. RFID Positioning System Using\
+    \ Passive Tags. IEEE Trans. Ind. Elect., 2011, 58, 1961-10.\n\n[6] Wu, J.; Zhang,\
+    \ Y.; Wang, Z.; Li, L. Indoor positioning using inertial MEMS methods: Design\
+    \ and recognition. In Proceedings of the 2016 IEEE International Conference on\
+    \ Telecommunication, Networking, Control and Systems (ICCS), Chengdu, China, 2016\
+    \ pp. 3037-35.\n\n[7] Tian, Y.; Zhang, J.; Li, J.; Dong, W.; Wang, X. A weighted\
+    \ least-squares method using received signal strength measurements for WLAN indoor\
+    \ positioning. In Proceedings of the 2017th International Conference on Wireless\
+    \ Personal and Mobile Communications (WPMC), Bali, Indonesia, 2017 Dec. 3103-34.\n\
+    \n[8] Kim, J.; Jun, H. Vision-based positioning using augmented indoor navigation.\
+    \ IEEE Trans. Commun., 2008, 54, 9549-962.\n\n[9] Pavska, A.; Angelopoulos, A.D.;\
+    \ Psotis, M.; Angel, G.; Moscha, A. Indoor Positioning Using Low-Frequency Magnetic\
+    \ Fields. IEEE Trans. Ind. Elect., 2016, 63, 2457-268. \n\n[10] Qi, J.; Liu, G.P.\
+    \ A High-accuracy Indoor Positioning Using Wireless Sensor Networks. Sensors,\
+    \ 2017, 17, 2754.\n\n[11] Raharajuana, T.; Mawson, P.; Nguyen, T.; Colomnicier,\
+    \ F.; Boyron, M.; Dipert, J.; Viot, L. Local Positioning Using Flickering Indoor\
+    \ Facilities. IEEE, 2017, 17, 2548.\n\n[12] Li, G.; G, Z.; Xu, Y.; Li, J. and\
+    \ Yang, P. Indoor Positioning Algorithm Based on the Improved RSSI Signal Model.\
+    \ Sensors, 2018, 18, 2820 (major).\n\n[13] Zakhart, R.; & Bueller, H. HANDBOOK\
+    \ OF POSITIONING Location Theory and Applications. Published by John Wiley & Sons,\
+    \ Inc. New York, Sept, 2011.\n\n[14] Cheriet, A.; Olin, M.; & Azzi, K. Localization\
+    \ in a Wireless Sensor Network Using RSSI and a decision tree. electrotechnical\
+    \ journal, 2013, 0003-7, 9:8.\n\n[15] A Gadhabhabhi, Y Yachdadi and H Zairi, Location\
+    \ estimation using Particle Filter and Neural Network based on RSSI technique,\
+    \ STA conference, PP24-29, Tunisia, 2019.\n\n[16] H Liu, H Darling, P Banerjee\
+    \ and J Liu. Survey of Indoor Positioning Techniques and Systems. IEEE Systems.\
+    \ Man. and Cybernetics Volume: 37, pp. 1067–1080, Nov. 2007.\n\n[17] S-B Kota,\
+    \ S Verma and R-K Abbed. RSSI WSN localization with Analysis of Energy Consumption\
+    \ and Communication, International Journal of Computer Applications (2017) 8887,\
+    \ Volume 50 - No. 11, July, 2017.\n\n[18] J Xu, W Liu, F Lang, Y Zhang and C Wang,\
+    \ Distance Measurement Model Based on RSSI in WSN, Wireless Sensor Network, Vol.\
+    \ 2, 606- 613, 2001.\n\n[19] Langendoek, K., & Reijers, N. Distributed location\
+    \ in wireless sensor networks: a quantitative comparison, Sensors, 3, pp. 95–98,\
+    \ 2003.\n\n[20] Hamid, A. H. F. B. A., Rashid, R. A., Faisal, N., Yusuf, S. S.,\
+    \ & Latiff, S. A. L., Development of IEEE 802.15.4 based Sensor Network Platform\
+    \ for Image, International Journal of Engineering & Technology IETpp. 112-118,\
+    \ 2019\n"
+  mdcn: "\n\n# 参考文献\n\n[1] Wu, S.; Chen, T.; Wu, Y.; Mathis, M. 台湾智慧城市：大数据应用视角。Statistics\
+    \ 2018, 10, \n\n[2] R-S, S., and S-H. 用于 RSSI-指纹索引定位的 CNN 应用比较。IEEE Electronics,\
+    \ 2019, 8, 韩国东国大学电气与计算机工程系，首尔，韩国。\n\n[3] Davision, P.; Pich, R. 选定定位方法综述。IEEE\
+    \ Commun.Surv. Top., 2017, 19, 1431-143730.\n\n[4] Qin, A.; Zhou, F.; Rahman,\
+    \ W.; Wang, Z.; Zhang, Y.; Wang, S. 使用 UWB 基础配置室内定位的研究。2017年 IEEE 第二届先进信息技术、电子与自动化控制会议\
+    \ (AEAC) 论文集，中国成都，2017 pp. 195--43.\n\n[5] Saab, S. S.; Nakas, Z. A. 使用被动标签的 RFID\
+    \ 定位系统。IEEE Trans. Ind. Elect., 2011, 58, 1961-10.\n\n[6] Wu, J.; Zhang, Y.; Wang,\
+    \ Z.; Li, L. 使用惯性 MEMS 方法的室内定位：设计与识别。2016年 IEEE 国际电信、网络、控制与系统会议 (ICCS) 论文集，中国成都，2016\
+    \ pp. 3037-35.\n\n[7] Tian, Y.; Zhang, J.; Li, J.; Dong, W.; Wang, X. 使用接收信号强度测量的\
+    \ WLAN 室内定位的加权最小二乘法。2017年国际无线个人与移动通信会议 (WPMC) 论文集，印度尼西亚巴厘岛，2017年12月. 3103-34.\n\
+    \n[8] Kim, J.; Jun, H. 基于增强室内导航的视觉定位。IEEE Trans. Commun., 2008, 54, 9549-962.\n\
+    \n[9] Pavska, A.; Angelopoulos, A.D.; Psotis, M.; Angel, G.; Moscha, A. 使用低频磁场的室内定位。IEEE\
+    \ Trans. Ind. Elect., 2016, 63, 2457-268. \n\n[10] Qi, J.; Liu, G.P. 基于无线传感器网络的高精度室内定位。Sensors,\
+    \ 2017, 17, 2754.\n\n[11] Raharajuana, T.; Mawson, P.; Nguyen, T.; Colomnicier,\
+    \ F.; Boyron, M.; Dipert, J.; Viot, L. 利用闪烁室内设施进行定位。IEEE, 2017, 17, 2548.\n\n\
+    [12] Li, G.; G, Z.; Xu, Y.; Li, J. 和 Yang, P. 基于改进 RSSI 信号模型的室内定位算法。Sensors, 2018,\
+    \ 18, 2820 (主要).\n\n[13] Zakhart, R.; & Bueller, H. 定位手手册：位置理论与应用。由 John Wiley\
+    \ & Sons, Inc. 纽约出版，2011年9月。\n\n[14] Cheriet, A.; Olin, M.; & Azzi, K. 使用 RSSI\
+    \ 和决策树在无线传感器网络中的定位。electrotechnical journal, 2013, 0003-7, 9:8.\n\n[15] A Gadhabhabhi,\
+    \ Y Yachdadi 和 H Zairi. 基于 RSSI 技术的粒子滤波和神经网络位置估计。STA 会议，PP24-29, 突尼斯，2019。\n\n\
+    [16] H Liu, H Darling, P Banerjee 和 J Liu. 室内定位技术与系统综述。IEEE Systems. Man. and\
+    \ Cybernetics 卷: 37, pp. 1067–1080, 2007年11月.\n\n[17] S-B Kota, S Verma 和 R-K\
+    \ Abbed. 能量消耗与通信分析的 RSSI WSN 定位。国际计算机应用杂志 (2017) 8887, 第 50 卷 - 第 11 期，2017年7月.\n\
+    \n[18] J Xu, W Liu, F Lang, Y Zhang 和 C Wang. WSN 中基于 RSSI 的距离测量模型。无线传感器网络，第 2\
+    \ 卷，606- 613，2001.\n\n[19] Langendoek, K., & Reijers, N. 无线传感器网络中的分布式定位：定量比较。Sensors,\
+    \ 3, pp. 95–98, 2003.\n\n[20] Hamid, A. H. F. B. A., Rashid, R. A., Faisal, N.,\
+    \ Yusuf, S. S., & Latiff, S. A. L. 用于图像的 IEEE 802.15.4 传感器网络平台开发。国际工程与技术杂志 IETpp.\
+    \ 112-118, 2019\n\n"
+  merge: 0
