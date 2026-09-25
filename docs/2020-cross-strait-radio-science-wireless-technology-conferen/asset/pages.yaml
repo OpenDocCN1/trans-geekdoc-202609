@@ -1,0 +1,218 @@
+- pgno: 0
+  md: "# # Human Counting and Action Recognition with WiFi via Deep Learning\n\nJianwei\
+    \ Xi, Zimheng Xu, Liangqin Chen and Juan Li\nSchool of Physics and Information\
+    \ Engineering, Fuzhou University, Fuzhou, Fujian, China\nEmail: 1324662834@qq.com,\
+    \ zhmxu@fzu.edu.cn, and chenlq020@fzu.edu.cn\n\n**Abstract**—For simultaneously\
+    \ recognizing the indoor people's number and actions, a system based on deep learning\
+    \ human counting and action recognition using state information (CSI) of WiFi\
+    \ signal is proposed. A phase difference correction algorithm was proposed for\
+    \ the original CSI and the deep neural network was used to extract the features\
+    \ of the classification. The experimental results show that the recognition of\
+    \ people's number is 99%, and the average accuracy in the recognition of two-person\
+    \ actions is 95.5%, which has a good recognition effect.\n\n*Index Terms*—Human\
+    \ counting, Action recognition, Deep learning, Channel state\n\nphase difference\
+    \ correction algorithm was proposed for the original CSI and then the corrected\
+    \ difference was entered into the deep neural network for indoor people's number\
+    \ and their actions with no more than 2 phase.\n\n# II. SYSTEM DESIGN\n\nThe system\
+    \ framework is shown in Fig. I, which is composed of three modules: CSI acquisition,\
+    \ phase difference correction, and people's number and action recognition by deep\
+    \ learning network.\n\n![](img/e452d0839c6bce664c4670de95b1652e_0_0.png)\n\nFig.1\
+    \ System framework\n\n# I. INTRODUCTION\n\nWith the application of WiFi devices,\
+    \ WiFi-based human perception technology has gradually become a research focus\
+    \ in recent years. The CARM*system uses the phase information of channel state\
+    \ (CSI) to extract the velocity and characteristics of the human body to recognize\
+    \ the hidden Markov model using the KNN algorithm to detect walking, running,\
+    \ waving, and the classification of the three actions by CSI. However, these systems\
+    \ require accurate feature extraction and data processing which make them complicated\
+    \ and inefficient.\n\nTo remedy this problem, [4], a 15-layer deep network was\
+    \ proposed for multi-user activity recognition. However, it will lead to phase\
+    \ shift as gradient descent or gradient learning algorithm to simply adding layers\
+    \ to a deep network. The Wispy system in [4] detects the number of moving objects\
+    \ by extracting the amplitude of CSI and using machine learning algorithms. To\
+    \ sum, it can be seen that the methods introduced in the above can only classify\
+    \ the actions or only count the number of people, which cannot simultaneously\
+    \ detect the people's number and actions which limits them in the fields of safety\
+    \ monitoring application. \r\n\r\nTo address the problem, this paper presents\
+    \ a system based on a deep learning network for human counting and action recognition\
+    \ using CSI of WiFi signal.\n\n# A. Phase Difference Correction\n\nAccording to\
+    \ [5], the phase difference of CSI is equal to the phase of the variances between\
+    \ two adjacent antennas, therefore the human actions are affected from phase difference.\
+    \ Fig. 2 (a) shows the phase difference of a single person performing sitting\
+    \ down. It can be seen that the phase difference fluctuation time is more than\
+    \ 2 seconds, after the waveform is stable, which shows the characteristics of\
+    \ human activity. However, as shown in Fig. 2 (b), the phase difference extracted\
+    \ during sampling may be affected by a phase shift. To solve this problem, a phase\
+    \ difference correction algorithm was proposed in this paper\n\nThe main ideas\
+    \ of the algorithm are as follows, First,"
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'considering the difference between two adjacent packets is less, a threshold
+    was used to find the transition point. The data packet with phase difference exceeds
+    the threshold is recorded as a jump point, as the $I_1$ and $I_2$ shown in Fig.
+    2 (b). Secondly, the data packet is divided into segments, the segments between
+    skipping points, and the period after $I_2$. The phase difference of each segment
+    is subtracted from its average phase difference, and finally, a continuous phase
+    difference is obtained. Fig. 2 (c) shows the phase difference correction. It can
+    be seen that the corrected phase difference is almost the same as the original
+    ones shown in Fig. 2 (b). The proposed method can be
+
+
+    # B. Design of Resnet-11 Network Framework
+
+
+    Fig. 3 shows the network structure of a basic residual block (RB) in Resnet-11,
+    $x$ is the input of the basic residual, the residual mapping function $F(x)$ is
+    formed by two dimensional convolutions, and the output $H(x)$ is the identity
+    mapping. The main idea of the residual network is to find the residual mapping
+    function through a shortcut connection (i.e the curve in Fig. 3) and make the
+    difference $F(x)$ learn from the output and input, which causes $F(x)$ to approach
+    0, and then an identity mapping $H(x)=x$. As result, the problem of gradient assimilation
+    as the network depth increases will be solved.
+
+
+    ```
+
+    $\Delta H_{k,n}^i = \Delta H_{k,n}^i - \Delta H_{k,n}^{i-1} > e,\n$\Delta H_{k,n}$
+    marked as non-jump point.
+
+    ```
+
+
+    ```
+
+    $\phi_k^i = \Delta L_k - \frac{t_i-t_1}{t_2-t_1}\Delta H_k^i, i=t_1, t_2, \dots,
+    t_n$.
+
+    ```
+
+
+    ```
+
+    $\phi_k^j = \Delta L_k - \frac{t_2-t_j}{t_2-t_1}\Delta H_k^j, j=t_1, \dots, t_2$.
+
+    ```
+
+
+    ```
+
+    $\phi_k^i = \Delta L_k - \frac{t_i-t_2}{t_n-t_2}\Delta H_k^i, i=t_2, \dots, t_n$.
+
+    ```
+
+
+    ```
+
+    $\phi_k'' = [\phi_k^j, \phi_k^i]$.
+
+    ```
+
+
+    where $\Delta H_k^n$ is the phase difference of the $n^{th}$ data packet of the
+    $k^{th}$ scatter antenna, the $i^{th}$ pair is the time corresponding to the transition
+    point $I_1$, $t_2$ is the time difference and $\phi_k''$ is the CSI phase difference
+    after correction.
+
+
+    ![](img/e452d0839c6bce664c4670de95b1652e_1_0.png)
+
+
+    (a) Phase difference of a single person performing a sitting down action
+
+
+    ![](img/e452d0839c6bce664c4670de95b1652e_1_1.png)
+
+
+    Fig. 4 shows the network used in this paper which has 11 convolutional layers,
+    including (Conv 2) and identical convolutional layers. The parameters of each
+    convolutional layer are also marked in the figure. CSI difference data sample
+    method has the size of $330\times300$, when there are 3 receiving antennas as
+    the number of channels is 30, and 3000 is the number of subscribers and data packets.
+    At the end of the network, two subtasks are composed of two convolutional layers
+    and a fully connected layer (FC) to classify the number of people and attributes
+    at the same time. A pooling operation was used after the first layer, and averaging
+    operations were used for the last convolutional layer of the two subtasks, respectively.
+
+
+    ![](img/e452d0839c6bce664c4670de95b1652e_1_2.png)
+
+
+    (b) Uncorrected phase difference
+
+
+    (c) Corrected phase difference
+
+
+    ![](img/e452d0839c6bce664c4670de95b1652e_1_3.png)
+
+
+    Fig. 2 Phase difference
+
+
+    Fig. 4 Resnet 11 network structure diagram'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# III. EXPERIMENT AND RESULT ANALYSIS
+
+
+    # A. Data Collection
+
+
+    In this paper, two desktop computers equipped with an Intel 5300 network card
+    and an operation rate tool-HSI are used as transmitters and receivers, respectively.
+    The data collection device works in 5G using one transmitting antenna and two
+    receiving antennas with a transmitting rate of 50 packets per second, and the
+    data collection time was 6s. Six participated in the experiment, with height range:
+    1.52m-1.78m, performing three types of activities: no one, one person, and two
+    people. The experiment actions are 7 actions in total, includes one person activity
+    which is walking, sitting, and two-person activity which is one person sitting
+    with one person, one person walking with one person sitting and two persons. There
+    are 85 samples collected in the experiment including.
+
+
+    # IV. CONCLUSIONS
+
+
+    This paper built a multi-task learning system based on WiFi signal and deep residual
+    network, presented a method for simultaneous recognition of indoor people''s number
+    and actions based on the channel information phase. This method proposed a phase
+    difference correction algorithm for CSI phase difference and classified features
+    by a deep residual network. Experimental results show that the average accuracy
+    of people and activity recognition are 99% and 95.5%, which can provide intelligent
+    perception in scenarios with less than 2 people.
+
+
+    # B. Experimental Setup
+
+
+    The ResNet-11 network was implemented under the framework of PyTorch the initial
+    learning rate was set to 0.001, and trained by the Adam optimizer through learning
+    rate adjustment function which was reduced by 0.5 every 25 epochs. The experiment
+    ran for 200 epochs and the batch size was 64. The experimental samples were mixed
+    uniformly and divided into training and test samples according to the ratio of
+    4:1, the former was for training the deep network and the latter was for verifying
+    the performance of network.
+
+
+    # REFERENCES
+
+
+    # C. Result Analysis
+
+
+    The detection results are shown in Fig,5, the 15-layer convolutional network (d-cnn)
+    in the paper, and the proposed method in this paper. As shown in the figure, the
+    detection results of the d-cnn in the two subtasks of detection and activity recognition
+    are 65.7% and 90% respectively, which presented the work results. The MAIS system
+    outperforms the d-cnn method, the accuracy of rate recognition was only 90%. In
+    contrast, the method we proposed in this paper was superior to the above two which
+    achieved 99% accuracy for people detection and 95.8% for activity recognition.
+
+
+    ![](img/e452d0839c6bce664c4670de95b1652e_2_0.png)
+
+
+    Fig. 5 Recognition accuracy results'
+  merge: -1
+  img_proc: true
