@@ -1,0 +1,1054 @@
+- pgno: 0
+  md: '# # Marco Metodológico para la integración de la tecnología Blockchain en la
+    industria del Café
+
+
+    # # Methodological Framework for the integration of Blockchain Technology in Coffee
+    Industry
+
+
+    Juan Mosquera
+
+
+    Sistemas Informáticos y Computación
+
+
+    Unidad Técnica Particular de Loja
+
+
+    Loja, Ecuador
+
+
+    jmosquera@utlp.edu
+
+
+    Nelson Piedra
+
+
+    Knowledge-Based Systems Research Group
+
+
+    Unidad Técnica Particular de Loja
+
+
+    Loja, Ecuador
+
+
+    nopiedra@utlp.edu
+
+
+    **Resumen -** En los últimos años la tecnología blockchain ha logrado una aplicación
+    móvil en múltiples industrias debido a sus características únicas que son la transparencia,
+    trazabilidad, interoperabilidad, integridad entre otras. Este trabajo presenta
+    un marco metodológico para la integración de la tecnología blockchain en la industria
+    del café. Para ello se propone una metodología para la implementación de esta
+    tecnología en esta industria, el análisis detallado de los aspectos de producción,
+    definición de una arquitectura para el desarrollo y soluciones de blockchain tecnología.
+    Esta investigación plantea que las características de la tecnología blockchain
+    sugieren que se puede establecer una solución que permita la transparencia y trazabilidad
+    en el proceso productivo realizado por la industria del café.
+
+
+    gestionar diversos desafios relacionados con garantizar la producción de calidad,
+    y lograr que este sector sea atractivo y rentable para los pequeños agricultores
+    [1].
+
+
+    En este contexto, el mercado del café es una industria global. Según el Departamento
+    de Agricultura de Estados Unidos (USDA) existen alrededor de 60.000 millones de
+    gramos de café generados alrededor del mercado hasta el 21 de junio de 2020 [6].
+    Un aumento en el precio de café de [8. La Organización Internacional del Café
+    (ICA) reporta que el año 2017 y 2018 hubo un aumento en la producción mundial
+    de café [7].
+
+
+    El café se cultiva en Ecuador ha tenido mucho tiempo en las últimas décadas que
+    ha ocupado un lugar importante de desarrollo de la agricultura. En Ecuador existen
+    alrededor de 60.000 agricultores de café a lo largo del país. Esto tiene una capacidad
+    de exportación de aproximadamente 80.000 sacos de café por año [8]. Las variedades
+    de café con mayor demanda se espera exportar Washed Arabica, Natural y Robusta.
+    Las variedades de café que más se consumen en el mundo son el café suave,, considerado
+    en el resultado del mercado como un café de gran calidad.
+
+
+    **Abstract -** In recent years, blockchain technology has showed remarkable application
+    in multiple industries due to its inherent characteristics such as transparency,
+    traceability, interoperability, integrity, and among others. This work presents
+    a methodological framework for the integration of blockchain technology in the
+    coffee industry. For this, several necessary steps are proposed to implement this
+    technology in this industry, the detailed analysis of production aspects, definition
+    of an architecture for the development and solutions of blockchain technology.
+    This suggests that the characteristics of blockchain technology can be used to
+    establish a solution that allows transparency and traceability in the production
+    process carried out the coffee industry.
+
+
+    **Palabras clave -** Blockchain, trazabilidad, Aplicación descentralizada, Industria
+    del Café, Agricultura
+
+
+    **Keywords -** Blockchain, Traceability, Decentralized Applications, Coffee Industry,
+    Agricultural
+
+
+    Durante los últimos años la implementación de las tecnologías emergentes Blockchain
+    (BC) y Distributed Ledger ha liderado un impacto en una variedad de dominios,
+    desde los financieros hasta los de Internet, las educación, las cadenas de producción
+    y suministros. La tecnología blockchain se constituye en un libro en el cual se
+    registran. Estos sistemas permiten garantizar la integridad de las transacciones
+    [2], [3] en un entorno distribuido. Existen números funcionando en varios países;
+    por ejemplo: aplicaciones relacionadas con el gobierno, la identificación digital,
+    el registro de tierras, entre otras [4], [5].
+
+
+    # I. INTRODUCCIÓN
+
+
+    En la actualidad muchos países en el mundo se han impulsado la innovación en el
+    sector agrícola con el objetivo de lograr
+
+
+    Como resultado, se ha desarrollado cada vez más aplicaciones descentralizadas
+    basadas en BC para numerosos servicios entre otros. Estas aplicaciones implementan'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'programas informáticos descentralizados especializados llamados Smart Contracts
+    (SC) que se implementan en el mercado de BC. Estos SC están abiertos para una
+    amplia gama de desafíos y utilizados para cualquier tipo de sistemas de usuarios
+    finales donde se ejecutan en forma de códigos de bytes sin alterar asociados.
+
+
+    En este trabajo pretende lograr la trazabilidad y transparencia de la industria
+    del utilizando tecnología blockchain. Para lo cual se hace uso de Ethereum como
+    plataforma con el objetivo de desarrollar una aplicación descentralizada. El documento
+    describe la técnica utilizada el enfoque metodológico, los resultados obtenidos
+    del estudio, finalmente conclusiones y trabajos futuros.
+
+
+    # II. TRABAJOS RELACIONADOS
+
+
+    Con el desarrollo y seguimiento de nuevas tecnologías, entre esta tecnología blockchain,
+    en la actualidad existe un interés global por integrar esta tecnología en el sector
+    agroalimentario. Para mejorar el proceso productivo, aumentar la productividad,
+    valorar y rastrable de los productos que se han incrementado durante los últimos
+    años, así también el interés del consumidor por la procedencia de los mismos.
+    Se están desarrollando soluciones en la tecnología de precisión, sistemas de comercio
+    electrónico, sistemas de trazabilidad para lograr la transparencia de la cadena
+    de suministro.
+
+
+    Astill y al [10] proponen una definición para la trazabilidad que contribuyen
+    a la transparencia en la cadena de alimentos, los autores realizan un análisis
+    detallado de la tecnología mediante la revisión de relación con transparencia,
+    trazabilidad y sostenibilidad en la cadena de suministros. Los autores definiendo
+    varias tecnologías que constituyen la transparencia de la cadena de suministros
+    entre los alimentos.
+
+
+    En [11] Rubio, Tarazona y Centeras, realizan la propuesta de un prototipo de aplicación
+    para la cadena de suministro, con soporte integra grandes volúmenes de datos (big
+    data) con blockchain para lograr la gestión de la cadena de suministro de las
+    empresas involucradas; para presente presenta su propuesta la cual es abordada
+    mediante un caso de estudio, en este trabajo se propone una arquitectura para
+    integrar gran día de la cadena de suministro.
+
+
+    En relacionado con estas arquitecturas de soluciones blockchain, Liu y AI [12],
+    realizan la implementación de patrones de diseño en la construcción de contratos
+    inteligentes. Los autores hablan mediante un caso de estudio relacionado con la
+    cadena de suministros. blockchain. El trabajo aborda el diseño de soluciones inteligentes,
+    mediante aplicar patrones de diseño encontrados en contratos inteligentes.
+
+
+    En [13] los autores realizan un análisis de la aplicación de la tecnología blockchain
+    en el sector agroalimentario, para lo cual se propone una revisión de propuestas
+    y soluciones blockchain a este sector que buscan y se encuentran en producción,
+    los autores realizan un análisis amplio del uso de blockchain el sector objeto.
+
+
+    En [14], realizan una revisión de la literatura académica de aplicaciones y servicios
+    basados en la tecnología blockchain, los autores analizan varias ventajas de esta
+    tecnología blockchain, entre algunos de los sectores que mencionan el sector financiero,
+    cadena de suministros, sector energético, gobierno eléctrico. De estos casos destacan
+    las ventajas que consigue la aplicación de la tecnología blockchain en la industria.
+
+
+    En lugar Bueno-Almeidaa et al [15] realizan una investigación con el objetivo
+    de obtener los beneficios que consiga la aplicación de la tecnología blockchain
+    en la cadena de suministro. Analizan un caso de uso real, por ejemplo, herramientas
+    y métodos para mejorar la autenticidad de los productos alimenticios. Además,
+    realizan varios casos de uso y la propuesta de blockchain para la producción de
+    alimentos.
+
+
+    Por parte Liao y Gineschi [16], realizan el análisis de varias aplicaciones blockchain
+    desarrolladas para diversas industrias, realizan el análisis de las plataformas
+    blockchain para el desarrollo de soluciones, los autores presentan un análisis
+    de los beneficios encontrados en los casos analizados.
+
+
+    En Yan, Chen y Liu [17] proponen la aplicación de un caso de éxito de la tecnología
+    blockchain en la cadena de suministros de la multivitaminart, los autores analizan
+    los beneficios obtenidos al implantar la tecnología blockchain en la cadena de
+    suministros de los que destacan la reducción de los riesgos relacionados con la
+    seguridad alimentaria uno entre los otros productos donde se encuentra el alimento,
+    otros resaltan la eficiencia al momento de gestionar la cadena de suministro.
+
+
+    Wang y Liu [18] proponen un marco para la aplicación de tecnología blockchain
+    en el almacenamiento de información de productos relacionados con productos, analizan
+    las ventajas de la tecnología tradicional y blockchain. También presentan varios
+    aspectos de los sistemas analizados y proponen
+
+
+    De forma similar Roy, Gayeshi y Ghosh [19] realizan una investigación sobre la
+    tecnología blockchain para la gestión de información de la cadena de suministros,
+    además de realizar una propuesta contextual de una solución enfocada al ámbito
+    de su investigación. También también también de un enfoque tradicional en comparación
+    a la solución que emplea tecnología blockchain.
+
+
+    En [20] se propone un medio mediante el cual se buscar la certificación de los
+    ingredientes empleados en una receta, por lo cual proponen la presencia de una
+    entidad'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'certificadora para las certificaciones de productos empleando tokens para dicho
+    propósito.
+
+
+    Esta fase es de vital importancia en función de las definidas en la presente fase
+    se establece una proporcionalidad de la arquitectura de la solución. Además de
+    incluir varias características del producto, que se consideran importantes, a
+    fin de definir y registrar y permitir un progreso a la industria sobre la que
+    se trabaja. Sin embargo, esta fase se sigue a continuación facilitar el proceso
+    de producción, actores y otros aspectos.
+
+
+    En [21] los autores proponen un sistema de metodología basado en blockchain en
+    su propuesta de análisis de la información que se genera en una de las fases que
+    forman parte del proceso para posteriormente realizar un análisis de los datos
+    que son parte de la solución mediante un método de registro de datos con nodos.
+
+
+    La propuesta presentada en este trabajo establece una metodología integral que
+    contempla el análisis de la industria, el análisis tecnológico, y finalmente la
+    ejecución de la solución mediante la integración efectiva de la tecnología, adaptada
+    a las necesidades y características de la industria.
+
+
+    # B. De la cadena de valor
+
+
+    En esta fase se realiza a lo establecido en la primera fase se realiza el análisis
+    del proceso con el objetivo de definir la cadena de valor. La cadena de valor
+    es el conjunto de fases que resultan en un producto o servicio
+
+
+    En la siguiente sección se describe una metodología para la integración de la
+    blockchain en la industria.
+
+
+    Además, se definen los actores que forman parte del proceso productivo entre los
+    cuales se pueden encontrar agrícolas, productores, transportistas, entre otros
+    muchos.
+
+
+    # III. Metodología
+
+
+    La integración de la blockchain en la industria y en la cadena de suministro debe
+    estar alineada con el proceso productivo. Para ello en este trabajo se propone
+    un marco metodológico que se divide en 4 etapas que comprenden la definición del
+    alcance, la definición de la cadena de valor, la definición de una función en
+    una arquitectura de blockchain y finalmente el desarrollo de la aplicación descentralizada.
+
+
+    En esta etapa es importante definir la información que desea registrar en cada
+    fase del proceso productivo definida, la información que posiblemente podría necesaria
+
+
+    +   - Información relacionada con la siembra del producto, entre los cuales se
+    podrán encontrar la fecha de la siembra, lugar y variedad
+
+
+    +   - Información relacionada con la producción o mercados, entre los cuales podrán
+    encontrarse referentes al proceso siguiente, temperatura, lugar donde se realizó
+    el producto
+
+
+    +   - Información relacionada al transporte, entre los cuales podrán encontrarse
+    referentes al envío y recepción de productos, por ejemplo fechas, identificación
+    de vehículo, entre otros datos.
+
+
+    +   - Otra información de las fases definidas en la cadena de valor, por ejemplo
+    el intercambio, venta, etc.
+
+
+    A continuación, en la figura 1, se presenta la metodología propuesta por los autores
+    para la integración de la blockchain en la industria del cual siendo posible usar
+    un modelo general en el sector agrouario y alimentario.
+
+
+    ![](img/cfc3096c2400a0b12b787e5556e76b72_2_0.png)
+
+
+    Figura 1 Metodología propuesta para la integración de blockchain en el sector
+    agrouario
+
+
+    # C. Definición de la arquitectura de la solución mediante análisis de las tecnologías.
+
+
+    Es recomendable que se considere necesario el análisis de la industria, es decir
+    realizar el análisis proceso de producción puesto estos aspectos ayudan al sistema.
+    Además de permitir comprender y resolver aspectos importantes al momento de ejecutar
+    el proceso de integración de la tecnología.
+
+
+    Previo a la definición de la arquitectura para la solución es necesario el análisis
+    de la tecnología disponible para el desarrollo de la solución. Entre los tipos
+    de tecnologías que se deben analizar las plataformas blockchain, frameworks de
+    frontend interfaz de la solución es el medio mediante el cual los usuarios podrán
+    interactuar con la aplicación descentralizada.
+
+
+    # A. Definición del alcance
+
+
+    En esta fase se realiza la definición del producto sobre el cual se conducirá
+    el proceso de integración y se define el alcance de la solución.
+
+
+    Sin las características a tener en cuenta decidir qué plataformas blockchain algunas
+    de estas características son [23]
+
+
+    +   - Tipo de blockchain requerido
+
+    - Soporte de lenguajes o SDKs
+
+    - Protocolo de consenso'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '+   * Soporte de contratos inteligentes
+
+    * Escalabilidad de la plataforma
+
+
+    Según un estudio realizado por Fluence Labs, [25] entre las plataformas blockchain
+    más populares para el desarrollo de aplicaciones descentralizadas son las siguientes:
+
+
+    +   * Ethereum
+
+    * EOS
+
+    * Tron
+
+    * Hyperledger
+
+
+    Mientras que en lo relacionado con frameworks para el desarrollo de aplicaciones
+    descentralizadas se encuentran:
+
+
+    +   * React
+
+    * Vuejs
+
+    * Angular
+
+
+    Una vez definidas las tecnologías es posible establecer la arquitectura del sistema,
+    usando una arquitectura principal del resultado de la siguiente fase.
+
+
+    En la figura 2 se presenta una arquitectura genérica para una aplicación Ethereum,
+    cuyas principales son una sección local y una remota. La sección local es el equipo
+    que tiene acceso a la aplicación descentralizada. Mientras tanto la sección remota
+    se relaciona con la Red Ethereum.
+
+
+    ![](img/cfc3096c2400a0b12b787e5556e76b72_3_0.png)
+
+
+    el mantenimiento referido a la solución así lograr disponibilidad, confiabilidad
+    y asegurar la usabilidad.
+
+
+    # IV. DESARROLLO
+
+
+    En esta sección se describe el diseño de estudio propuesto conforme da una de
+    las fases presentadas previamente en la metodología.
+
+
+    # A. De fase de definición del alcance
+
+
+    Como previamente se mencionó este trabajo busca integrar la tecnología blockchain
+    en la industria del software mediante algunas características del que son: el
+    origen, la calidad, la especie, el precio, entre otros [27].
+
+
+    # B. De fase de definición de la cadena de valor
+
+
+    Para el desarrollo de esta fase los autores realizaron trabajos relacionados con
+    la cadena de suministros y proceso del café, mediante la validación de expertos
+    sobre la cadena de valor para cada uno de ellos. Entre otros trabajos realizados
+    por los autores se encuentra que en la tabla 1 se puede observar los actores y
+    actividades propuestas por ellos.
+
+
+    Diaz et al [29] en su trabajo, analizan la cadena de suministro de café colombiano,
+    en esta etapa caracterizan 6 actores principales que forman parte de esta cadena
+    de suministros de los cuales se identifican: agricultores, procesadores y de producción,
+    consumidores nacionales y extranjeros, y también detallan las funciones o actividades
+    realizadas por cada uno de ellos. En la tabla 1 se puede observar los actores
+    y actividades propuestas por ellos.
+
+
+    TABLA I. ACTIVIDADES Y FUNCIONES POR ACTOR
+
+
+    | Actores Principales | Actividades |
+
+    | :--- | :--- |
+
+    | Pequeños productores | * Siembra
+
+    * Cosecha
+
+    * Despulpado
+
+    * Lavado (Lavado en húmedo)
+
+    * Secado (Procesamiento en seco)
+
+    * Embalaje |
+
+    | Transportistas | * Transporte |
+
+    | Procesadores de grano verde | * Pilado
+
+    * Selección
+
+    * Embalaje |
+
+    | Procesadores de café soluble | * Tostado
+
+    * Molido
+
+    * Embalaje |
+
+    | Consumidores Extranjeros Consumidores Nacionales | * Consumo |
+
+
+    # D. De arquitectura de la descentralizada
+
+
+    Establecidas la arquitectura y aspectos relacionados con la información y la que
+    se desarrolla, después de la codificación, despliegue, ejecución de pruebas y
+    mantenimiento de la misma.
+
+
+    Es de caso configurar una plataforma que soporte contratos inteligentes, en esta
+    fase se diseñan y desarrollan. Los contratos inteligentes son programas informáticos
+    que pueden llevar a cabo una serie de tareas determinadas en función de instrucciones
+    [5].
+
+
+    Es importante destacar que el mantenimiento de la solución depende de las tecnologías
+    utilizadas, y es importante que'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'Por otra parte Viere, von Enden y Schaltegge [30] en su trabajo realizan el
+    análisis de la cadena de suministro del café, otros autores dibujan 7 fases en
+    las que concuerdan:
+
+
+    +   * Cultivo;
+
+    * Procesamiento en seco;
+
+    * Procesamiento húmedo;
+
+    * Refinamiento;
+
+    * Tostado;
+
+    * Venta; y;
+
+    * Consumo
+
+
+    +   * La fase de cosecha: en esta fase, una vez que el agricultor cosecha la cereza,
+    se realiza la cosecha. La información que podría considerarse registrada en esta
+    fase en que se realizó la cosecha, por ejemplo como de cosecha, detalles, otros
+    aspectos.
+
+
+    +   * La fase de pre-procesamiento: en esta fase, la cosecha cosechada, el agricultor
+    finaliza el proceso. Existen dos métodos: un proceso seco (Secado) y uno húmedo
+    (pulping, fermentation, lavado). Completados cualquiera de los procesos, la siguiente
+    actividad es la de la cere procesada. En fase de pre-procesamiento, la información
+    que podría registrar está vinculada al lote, por ejemplo, si fue tratada por un
+    proceso seco o húmedo (hidratado), así como la fecha y el día que se llevó a cabo
+    este proceso.
+
+
+    Del mismo modo en [31] realizan el análisis de la cadena de suministro del café
+    en el Perú algunas fases que destacan los autores muestran:
+
+
+    +   * Lavado;
+
+    * Secado;
+
+    * Inspección;
+
+    * Clasificado;
+
+    * Trillado;
+
+    * Empacado; y;
+
+    * Carga.
+
+
+    +   * La fase de procesamiento: en esta fase, se lleva a cabo la transformación
+    de la cereza. Los actores en esta fase son el agricultor, trillador, molino, entre
+    otros actores que podrían ser considerados.
+
+
+    Esta comienza con el trillado de la cereza, se selecciona y empaca posteriormente
+    el siguiente paso es el tostado de la cereza. En algunas presentaciones, el grano
+    se secciona y dispone para la espera. Mientras que en otras se realiza la molienda
+    empacada posteriormente para la venta de café. La información que podría generarse
+    se referirá a la fecha y lugar de ejecución de cada fase, además de las características
+    de cada una, por ejemplo, el tipo de tostado realizado.
+
+
+    Así en función de los trabajos manejados y expertos se establecieron las siguientes
+    fases para la cadena de valor: la cosecha, el pre-procesamiento, el empaque; el
+    transporte (envío y recepción), lo cual se puede observarse en la figura 3.
+
+
+    | Production | Harvesting | Pre-processing |
+
+    | :--- | :--- | :--- |
+
+    || Production | Harvesting | Pre-processing |
+
+    | Transporting | Packaging | Processing |
+
+
+    Figura 3 Metodología para la integración de blockchain en el sector agrouario
+
+
+    Las fases mencionadas son descritas a su continuación:
+
+
+    +   * La fase de plantación: constituye el inicio de la cadena de suministro de
+    café. En esta fase, el agricultor realiza la planta de café para su posterior
+    crecimiento y cosecha. En esta fase, la información generada corresponde a detalles
+    de la plantación, como la fecha en que se le llevó a cabo, el nombre de la finca,
+    el nombre del agricultor, la especie de café.
+
+
+    Además, podrían registrar detalles para permitir la geolocalización de la finca
+    e información adicional sobre la plantación.
+
+
+    +   * La fase de transporte: este proceso consiste en transportar la cereza cruda,
+    pre-procesada o procesada, en caso de ser necesario este proceso para que el flujo
+    de producción continúe.
+
+
+    De este modo la información generada en esta fase corresponde al envío y recepción
+    del producto en cualquiera de los puntos previamente indic, así como detalles
+    adicionales como la fecha de transporte, el actor encargado de este proceso es
+    el transportista.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Plataformas
+
+
+    | Caracteristica | Ethereum | Hyperledger Fabric | Hyperledger Sawtooth |
+
+    | --- | --- | --- | --- |
+
+    | Token criptomonedas | Ether ETH= | No | No |
+
+    | Tipo de industria | Todas | Todas | Sector Financiero |
+
+    | Tipo blockchain | Publica | Consorcio | Consorcio |
+
+    | Escalabilidad | Permitida | Permitida | Permitida |
+
+    | Popularidad y estado de desarrollo | Muy popular, estado activo | Activo | Activo
+    |
+
+
+    TABLA III. COMPARATIVA ENTRE PLATAFORMAS
+
+
+    # Plataformas
+
+
+    | Caracteristica | Corda | Quorum |
+
+    | --- | --- | --- |
+
+    | Fundador | David E Ritter | Lori Beer |
+
+    | Contratos inteligentes | Si (Kotlin, Java) | Si (Solidity) |
+
+    | Algoritmos de consenso | Pluggable, Trusted Solo, BFT | Pluggable Raft Consensus
+    Istanbul PoS PoET |
+
+    | Token criptomonedas | Ether (ETH) | No |
+
+    | Tipo de industria | Sector Financiero | Todas |
+
+    | Publica | Privada |
+
+    | Escalabilidad | Permitida | No Permitida |
+
+    | Popularidad y estado de desarrollo | Activo | Activo |
+
+
+    ![](img/cfc3096c2400a0b12b787e5556e76b72_5_0.png)
+
+
+    Figura 4 Flujo de información entre procesos
+
+
+    Adenas, se ha considerado necesario el flujo de información para los procesos
+    de este modo lograr una mejor comprensión y establecer las transacciones a nivel
+    de blockchain.
+
+
+    # C. Desarrollo de la fase de definición de arquitectura de la solución
+
+
+    Previo a la definición de las plataformas blockchain y frameworks para el caso
+    de aplicación, se ha realizado un análisis de las plataformas más populares.
+
+
+    En actualidad existen diversas plataformas blockchain, entre las más populares
+    son Ethereum, Hyperledger Fabric, Ric 3 y Quorum. Dichas plataformas utilizan
+    ampliamente de soluciones enfocadas en la industria [32]–35].
+
+
+    | Caracteristica | Ethereum | Hyperledger Fabric | Hyperledger Sawtooth |
+
+    | --- | --- | --- | --- |
+
+    | Fundador | Vitalik Buterin | Linux Linux Foundation |
+
+    | Contratos inteligentes | Si (Solidity) | Si (Java, Golang) | Si (C++, Golang)
+    |
+
+    | Algoritmos de consenso | PoW, PoS | Pluggable, Trusted Solo, Crash Fault Tolerant
+    | PoET, BFT |
+
+
+    TABLA II. COMPARATIVA ENTRE PLATAFORMAS (1)
+
+
+    # Plataformas
+
+
+    TABLA IV. COMPARATIVA ENTRE FRAMEWORKS FRONT
+
+
+    # Caracteristicas
+
+
+    | Plat. | Descripción | Dev | Facilidad de aprendizaje |
+
+    | --- | --- | --- | --- |
+
+    | React | Una eficiente, declarativa y flexible de JavaScript para construir interfaces
+    de usuario | Facebook | Media |
+
+    | Vuejs | Un framework progresivo, adaptable de forma incremental para construir
+    interfaces graficas en la web | 2013 | Alta |
+
+
+    En relacion con los frameworks para el frontend de las soluciones más populares
+    se reactan: React, Angular y Vue.js. En la tabla IV se realiza una comparación
+    entre estos frameworks.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Características
+
+
+    | Plat. | Descripción | Dev | Facilidad de aprendizaje |
+
+    |---|---|---|---|
+
+    | Angular | Un framework, Movil y escritorio | Evan You | Media (Typescript) |
+
+
+    https://www.trufflesuite.com/ganache. En la figura se muestra el gráfico que también
+    ofrece.
+
+
+    ![](img/cfc3096c2400a0b12b787e5556e76b72_6_0.png)
+
+
+    En el framework desarrollado se ha optado por React debido a la compatibilidad
+    de librerías necesarias para la conexión con la tecnología blockchain y la curva
+    de aprendizaje de este framework.
+
+
+    Mediante la figura 5 se presenta la arquitectura para el desarrollo de la descentralizada
+    para este caso de estudio.
+
+
+    ```
+
+    ```
+
+    0x81B2C3D4E5F6G7H8I9J0A1B2C3D4E5F6G7H8I9J0 98.95 ETH
+
+    0xA1B2C3D4E5F6G7H8I9J0A1B2C3D4E5F6G7H8I9J0 100.00 ETH
+
+    0xB2C3D4E5F6G7H8I9J0K1A2B3C4D5E6F7G8H9I0J1 85.00 ETH
+
+    0xC3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2 100.00 ETH
+
+    0xD4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2 100.00 ETH
+
+    0xE5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4 100.00 ETH
+
+    0F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6 95.00 ETH
+
+    ```
+
+    ```
+
+
+    Figura 6 El entorno gráfico de Ganache
+
+
+    ![](img/cfc3096c2400a0b12b787e5556e76b72_6_1.png)
+
+
+    Figura 5 arquitectura para el desarrollo descentralizada
+
+
+    # D. El desarrollo de la arquitectura para descentralizada
+
+
+    +   - Remix IDE: es un compilador de interfaz de desarrollo que permite realizar
+    entre varias funciones de la prueba y de contratos inteligentes. Para acceder
+    a él debe realizar la siguiente dirección: remix.ethereum.org. El ejemplo destaca
+    que esta herramienta es muy fundamental para Ethereum. En la figura 7 se observa
+    el desarrollo de desarrollo por remix, el cual seadena de despliegue de contratos.
+
+
+    Definidos los aspectos cubiertos con la arquitectura en el caso de uso, como la
+    definición del flujo de trabajo con la caracterización del proceso, la arquitectura
+    para la solución, esta fase es del desarrollo del descentralizado.
+
+
+    En el caso de aplicación se elige la arquitectura blockchain de Ethereum de este
+    modo es importante destacar que esta plataforma admite soporta contratos inteligentes.
+    De en esta fase se debe realizar el análisis y desarrollo de contratos inteligentes.
+    En el caso del lenguaje de contratos inteligentes es Solidity.
+
+
+    Para realizar el despliegue de los contratos inteligentes es necesario una herramienta
+    que permita ejecutar este proceso, una de las alternativas disponibles es Truffle.
+    Truffle es un entorno para el desarrollo de contratos inteligentes que permite
+    la ejecución y establecer pipelines blockchain en la máquina virtual de Ethereum
+    (EVM).
+
+
+    Cuando se desarrollan contratos inteligentes es importante realizar pruebas antes
+    de la fase de producción, de este modo se garantiza el funcionamiento de la solución
+    y se evitan costos innecesarios con errores. Existen varias formas de realizar
+    pruebas de contratos, ya que esto depende de qué de servicios se están ofreciendo.
+
+
+    ![](img/cfc3096c2400a0b12b787e5556e76b72_6_2.png)
+
+
+    Las principales herramientas para la ejecución y prueba de contratos inteligentes
+    se detallan a continuación:
+
+
+    ![](img/cfc3096c2400a0b12b787e5556e76b72_6_3.png)
+
+
+    Ganache, es una aplicación para simular una red blockchain de Ethereum, además
+    prove una con interfaz gráfica mediante la cual se puede comparar el funcionamiento
+    de contratos y observar las transacciones que se están llevando a cabo, esta aplicación
+    se encuentra disponible para Windows, Linux y Mac y obtenerla se puede realizar
+    mediante el enlace presentado a continuación
+
+
+    También, existe una variedad de red de pruebas (tests-net) que permiten la realización
+    de la aplicación descentralizada a la puesta en marcha de la red principal de
+    Ethereum.
+
+
+    Entre estas redes de prueba se encuentra Ropsten, Rinkey y Kovan, con más información:
+
+
+    +   - Reby es un blockchain que emplea el mecanismo de consenso de PoA, la ventaja
+    de usar esta red de prueba es la facilidad para obtener otros mediante el faucet.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '+   Kovan, en ampliar el algoritmo de consenso PoA, para obtener otros iguales
+    al que Rinkeby pueden ser solicitados.
+
+
+    +   Roeplein, en ampliar el algoritmo de consenso PoW, en este caso es posible
+    realizar la minería para obtener otros para realizar las transacciones mediante
+    una red de prueba.
+
+
+    Es importante mencionar también el despliegue de las pruebas de aplicación descentralizada
+    enmando las redes de prueba, luego seguir la solución en la red mainnet realizar
+    una inversión de recursos.
+
+    transparencia, confianza entre las partes del ideal es fundamental.
+
+
+    Para la integración de la blockchain en el café y cualquier industria del mercado
+    agrícola, se propone un enfoque que inicialice la industria, puesto se considera
+    que es vital conocer sobre la industria y la situación actual para luego definir
+    una solución de acorde a las verdaderas capacidades presentadas por esta industria.
+
+
+    En el caso de Ethereum se establece un establecimiento para poder acceder a la
+    red, no obstante, se requiere de tener equipos adecuados puesto en la actualidad
+    en la red mainnet la información almacenada supera Terabets (TB) en referencia
+    al peso. Así el establecimiento de un nodo requiere costos de hardware de mantenimiento
+    y gastos de ancho de banda para permitir la operación del mismo sin energía, internet,
+    etc.
+
+    La integración de la blockchain en el ámbito agropecuario no actualmente trata
+    de aspectos de tecnología y de desarrollo, engloba aspectos sociales, de considerar
+    mejorar a los actores de la cadena para que puedan obtener beneficio de la tecnología
+    y los beneficios que les traería ampliamente. Además, es importante de valor analizar
+    la situación actual del sector puesto para considerar soluciones que incluyan
+    presentar presente como problema de calidad y competitividad los cuales puedan
+    orientar a los agricultores a mejores cooperativas.
+
+
+    En el caso de Ethereum como Servicio (Infura) el cual es un servicio de prove
+    un nodo necesita de establecer una infraestructura física de este modo poder acceder
+    a la red mainnet.
+
+    Como trabajo futuro pretende integrar tecnologías para la ejecución de contratos.
+    Un contrato inteligente se refiere al lenguaje de código (codigo y funciones)
+    y datos, los que están en la cadena de bloques que se ejecuta automáticamente
+    cuando se cumplen ciertas condiciones. Los contratos inteligentes siguen siendo
+    una tarea desafiante.
+
+
+    Un vez probados los contratos inteligentes y el proceso siguiente es el despliegue
+    del frontend. En este caso el framework más popular a nivel de aplicaciones descentralizadas
+    es Web3. Para medir la resultado de la cumplimiento de los contratos por Ethereum
+    existen los archivos JSON de contratos detallados con detalles del despliegue
+    los que se define la dirección donde se almacena en la red y el contrato y sobre
+    lo más importante es el contrato en formato ABI, el cual es un formato admitido
+    por Web3.
+
+    Además, se plantea explorar como trabajo futuro una solución utilizar un lenguaje
+    de Web3 a servicios de registro de contratos en Ethereum.
+
+
+    Web3 es una API de Javascript que permite la interacción local con un nodo Ethereum
+    proporcionando métodos remoto mediante HTTP, IPCTo o WebSockets.
+
+    Finalmente, a detalle de los frameworks y metodologías analizadas en el sector
+    de trabajos relacionados, esta propuesta se centra en una solución ideal que pueda
+    adapte a cualquier industria o producto, en el presente caso se ha como caso práctico
+    a la industria del café, no obstante, no podría aceptarse en el sector cafacadero,
+    de lácteo, de otros industrias.
+
+
+    Para poder implementar la aplicación descentralizada se necesita de un navegador,
+    este se puede instalar mediante un plugin para interactuar de forma sencilla con
+    los navegadores mas populares y los usuarios con aplicaciones descentralizadas[Ethereum].
+
+    Existe existe para Ethereum: Mist sin embargo de la comunidad. No obstante posee
+    de mantenimiento de las mismas funcionalidades que promete MetaMask, y de la que
+    este trabajo presente un desarrollo activo de parte de la comunidad.
+
+
+    # V. CONCLUSIONES Y TRABAJOS FUTU
+
+
+    Las diferentes soluciones descentralizadas basadas en Blockchains proporcionan
+    un mecanismo para almacenar y calcular datos distribuidos de forma segura. Estas
+    plataformas distribuidas pueden ser útiles en dominios la
+
+
+    # REFERENCIAS BIBLIÁFICA
+
+
+    +   [1] Food and Agriculture Organization of the United Nations-FAO, E in Agriculture:
+    blockchain for Agriculture. Opportunities and Challenges. Bankok: 2019.
+
+
+    +   [2] X, Xao, L. Wei, and M. Staples, Architecture for Blockchain Applications.
+
+
+    +   [4] D. Dasupta, J. M. Shin, and K. Datta, "A survey of blockchain in security
+    perspective?., J. Bank. Financ. Technol., 012345678, 2018.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '[5] J. Bashir, Mastering Blockchain, Second Ed. Birmingham: Pact Publishing
+    Ltd., 2018. [22]
+
+
+    [6] USDA, ''Coffee: World Markets and Trade'', 2020. [23]
+
+
+    [7] ICO, ''Crop Production by Country'', 2020.
+
+
+    [8] E. Espinosa, ''Coffee/Annual Report Ecuador'', Quito, 2020.
+
+
+    [9] IBM, ''IBM Foot Growth by 2020'', [2019]. Disponible en: https://www.ibm.com/en-us/blockchain/solutions
+
+
+    [10] J. Astilli, ''Transparency in supply chain: A review of enhancing solution
+    technologies'', Sec. Food Tech. Sci, vol. 91, niềm December 2018, pp. 240–247.
+
+
+    [11] M. A. Rubio, G. M. Tarrazona, and L. Contreras, ''Big Data and Blockchain
+    for Opening a New Architecture of Coffee Supply'', vol. 6, June 2018, pp. 659–699.
+
+
+    [12] Y. Liu, Q. X. Lu, Z. Hu, and Y. Yao, ''Designing patterns in supply chain:
+    A case study on a blockchain-based traceability application'', Lett. Comput. Sci
+    (Including Sect. Letter. Art. Intel. Inf. Not. Bioinformatics), 2019, vol. 10974,
+    pp. 92–99.
+
+
+    [13] F. Antoncei, S. Figorigilli, C. Cusa, F. Pallotino, L. Raso, and P. Meseni,
+    ''Review on the application of blockchain in the coffee industry'', J. Food Agri.
+    Sci, vol. 91, June 2019, pp. 6128–6139.
+
+
+    [14] I. Konstantou, G. Simountinos, C. Tompelas, P. Veras, Y. Petersen, and D.
+    Schwarz, ''Blockchain for Business Applications: A Systematic Review'', in Business
+    Systems, vol. 2, Springer International, 2018, pp. 384–399.
+
+
+    [15] O. Bermero-Almida, M. Contreras, E. Ferroz-Gález, R. Cabezezas-Zambrano,
+    and Y. Bazán-Vera, ''Blockchain in agriculture: A systematic literature review'',
+    Comput. Inf. Inf. Vol., 883, pp. 45–56.
+
+
+    [16] L. Liotin and D. Gunesco, ''The blockchain: integrating technology within
+    supply chain operations'', in Supply Chain Management and Logistics, 2020, pp.
+    57–89.
+
+
+    [17] B. Tan, J. Yan, S. X, and Y. Lu, ''Impact of Blockchain on Supply Chain:
+    The Case of Walnut'', International Publishing, 2018, pp. 167–177.
+
+
+    [18] Z. Wang and J. P. Liu, ''Application of blockchain in agricultural product
+    traceability system'', 11634 LNCS. International Publishing, 2019.
+
+
+    [19] S. K. Roy, R. Ganguly, and S. Gulmani, ''G of Transformation of Supply Chain
+    Using Blockchain: A Short Review'', Springer Singapore, 2020, pp. 583–593.
+
+
+    [20] R. dos Santos, T. Nieto, E. Yamada, and J. Ribeiro, ''GTR-Track Raw Material
+    Evaluation of Recipe Based Products Using Smart Contracts'', Informatics, vol.
+    6, no. 1, pp. 11, mar. 2019.
+
+
+    [21] J. Hua, X. Wang, M. Kang, H. Wang, and F. Y. Wang, ''Blockchain Based Provenance
+    for Agricultural Products: A Distributed Platform with Disaggregated and Shared
+    Blockchain'', IEEE Intl. Veh. Symp Proc., vol. 2018-Júnem, pp. 97–101.
+
+
+    R. Rwindey and J. Hodson, ''Review of agricultural value chains in developing
+    countries: A framework and assessment'', Austain, vol. 10, 2018.
+
+
+    A. Takyar, ''Top Blockchain Platforms of 2020'', [En linea]. Disponible en: https://www.leewayerty.com/blockchain-platforms-for-blockchain-chains;
+    [Consultado: July-2020].
+
+
+    E. Ponnamare, ''Developer Web Survey 2019'', [Medium, 2019]. [En linea]. Disponible
+    en: https://medium.com/network-dev/developer-survey-2019-9437a913b422c5b9; [Consultado:
+    July-2020].
+
+
+    E. Ponnamare, ''Developer Web Developer Report 2020'', [Medium, 2020]. [En linea].
+    Disponible en: https://medium.com/network-dev/developer-web-developer-report-2020-5a41as879.
+
+
+    R. Gardiner, ''Free for Traceable Smart Contracts'', July, 2018.
+
+
+    E. Carbival, J. Rivera, E. Ramos, and Y. Yamaguchi, ''Strategic Routing Toward
+    A Sustainable Coffee Supply Chain: A Research in Coffee'', Human Systems Engineering
+    and Design, vol. 11, 2020, pp. 99.
+
+
+    V. R. George, H. O. Hahn, P. Y, and A. K. Babu, ''Food quality traceability for
+    using restaurants and food supply chain index'', Clean Prod., vol. 240, p. 118021,
+    2019.
+
+
+    J. T. Dias, D. J. Gutierrez, and H. Y. Bolivar, ''Application for decision making
+    in logistics supply functions: chain blockchain green coffee'', Proc. Oper. Manage.
+    SMELO, 2016, pp. 578–588.
+
+
+    T. Viere, J. Even, and U. Schläger, ''Life Cycle and Chain Management in Environmental
+    Management Accounting: A Coffee Case Study'', pp. 23–31, 2021.
+
+
+    J. Gomez, G. Albuquerque, E. Ramos, and C. Yamaguchi, ''An Order for Full Lifecycle
+    Model based on Supply Chain: Coffee''s Case Study in Cusco, Peru, 2020, pp. 922–928.
+
+
+    R. Moladi, Solidity Programming Elements. Birmingham: Pact Publishing. 2018.
+
+
+    A. Lee, ''Blockchain Technology: Beyond Bitcoin'', n. 2.
+
+
+    T. Laurence, Blockchain for dummies, vol. 2. John Wiley & Sons, 2019.
+
+
+    Web3, ''Web3'', [2020]. [En linea]. Disponible en: https://github.com/web3/
+
+
+    Metamask, ''Metamask extension'', 2020. [En linea]. Disponible en: https://github.com/Metamask/metamask-extension.
+
+
+    Piedra, N., Tovar, E., Contreras-Palacios, R., Lopez-Vargas, J., and Chiezaza,
+    J. A. (2014). Consuming and producing linked open data: the case of Opensource:
+    Program.'
+  merge: -1
+  img_proc: true
