@@ -1,0 +1,489 @@
+- pgno: 0
+  md: The IoT is an integral part of interconnected systems of different physical
+    attributes, machines utilized in home, vehicles and different devices formed and
+    finalized, which is viewed as a genuine plum brought by sensors and actuators,
+    and the network of networks gathers things and drive information, effectuating
+    opening doors for and conceivable joining of ongoing physical world into structures,
+    achieving efficiency, financial improvement and reducing human endeavors [4]
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# II. PREVIOUS WORK
+
+
+    Many of previous studies on applying different technologies in agriculture have
+    been done in order to increase productivity and facilitating agricultural processes.
+
+
+    In this study [2] precision agriculture is to provide the right amount of resources
+    such as water, light and pesticides, and how to provide these resources for each
+    duration of time. The implementation of the features for precision agriculture
+    is done by sensing all resources from the drone and taking the appropriate decision
+    to control the actuators. Actuators such as soil moisture, temperature, humidity,
+    and light intensity are also used in this system to send data to thinkcloud, and
+    an android application is developed.
+
+
+    This study [5] proposed an embedded based system for soil monitoring and irrigation
+    of the field and get information via a mobile application to help farmers increase
+    the agriculture production. The system gets information from various sensors through
+    the WiFi and provides it in real time which can then automate a crop that suits
+    the soil. An automated irrigation system that switches ON or OFF based on the
+    soil moisture. This system, it controls the crop and helps the farmer to manage
+    and suggest pesticides. Raspberry Pi 2 is used in this system with MCP308 as an
+    analog to digital converter to receive data from the sensor and deliver to Raspberry
+    Pi.
+
+
+    This study [6] is used in Arduino for building a farm automation system which
+    uses DHT11 sensor to control Temperature and Humidity along with a soil moisture
+    and water level sensor to monitor and control the water tank of irrigation. It
+    is used to Arduino with ESP8266 Wi-Fi module to send data for processing and visualizing.
+
+
+    In this study [7] GSM technology is used to develop an advanced system for agriculture.
+    The parameters that provide growth and health of crops such as temperature, and
+    soil moisture are monitored through GSM. The system is used to Arduino to accomplish
+    this system as a controller by connecting the to GSM module to send data to his
+    phone.
+
+
+    In this study [8] proposed a system of smart agriculture to solve the problem
+    of scarcity during the migration of people from rural to urban areas. Using various
+    features like GPS based remote control monitoring and sensing many parameters
+    as temperature, humidity, intruder, scarcity, and leaf ness to control a proper
+    irrigation technique, by deploying sensor nodes in different locations of the
+    farm with camera PIR sensor is used to protect the plant from any animals.
+
+
+    In study [9] a smart irrigation system is used to water the farm efficiently to
+    handle issue of water scarcity. The system based on soil moisture, temperature,
+    and pH
+
+
+    sensors for the required Arduino. Atmega microcontroller controls the system which
+    gets data from the sensors to drive a servomotor and pump for irrigation. This
+    system has the ability to collect the data to a server that can be accessed via
+    an android application to suggest irrigation based on the soil type and control
+    using Bayes algorithm on the database which is a machine learning algorithm. For
+    estimating rain uses forecasting from the web and crops accordingly.
+
+
+    Based on the above literature, the proposed system is useful for farmers in the
+    rural area, it could be helpful and set up by any individual ever for those who
+    don''t have experience with cultivation. Furthermore, this system can be used
+    in a small area and at houses. This system is cost-effective and time-saving.
+
+
+    # III. RESEARCH METHOD
+
+
+    The main design of this work is to design a trendy system for farmers especially
+    in the rural area to help farmers to be informative and sharing their time by
+    getting benefit of the available technologies. To design this system uses sensors
+    such as soil moisture, pH, and can be set for getting of irrigation, pH level,
+    and intruder detection. Raspberry Pi is the main controller to control the difference
+    between the field and monitoring through Blynk IoT cloud platform. Based on the
+    soil moisture value controls the water pump on and off, the farmer adds the appropriate
+    food and controls pH level. The system has ability to identify which type of intruder
+    among human, animal, bird. All this will be visualized on the mobile phone application.
+
+
+    # A. Proposed System
+
+
+    In this system, sensors are used such as soil moisture, DHT11, PIR, and pH sensors
+    are connected to Raspberry Pi. The sent values are collected in a farmer''s smartphone
+    through Blynk IoT and its application to visualize the data remotely. If the sent
+    value value goes beyond the threshold values set in the crop range (40%) during
+    time test, but should be the irrigation will be turned ON/OFF by the relay circuit
+    and it is connected to a driver circuit which supplies to the required water the
+    water pump by Raspberry Pi and its sensors from home. PIR sensors detect motion
+    on the field, the camera can capture the type of object among human, animal, bird.
+    The system uses just a few bytes to connect cloud and mobile application through
+    internet connectivity. The system also monitors the quality of the soil so it
+    can easily detect suitable fertilizers will be visualized in the mobile application.
+    The farmer will be informed about the field condition through his smartphone remotely
+    saving valuable time for
+
+
+    # IV. SYSTEM DESIGN
+
+
+    Authorized license used to: Carleton University. On May 28, 2021 at 04:33:08 UTC
+    from IEEE Explorer. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'Fig. 1. shows the block diagram of the proposed system.
+
+
+    # C. System Overview
+
+    Blynk an IoT platform that allows user to quickly build interfaces for controlling
+    and monitoring a hardware projects from IOS or Android devices. After downloading
+    Blynk application, user can create a project dashboard and arrange widgets, buttons,
+    sliders, and other widgets on the screen. With the widgets, user can turn pins
+    virtually ON or OFF or display data from sensors.
+
+
+    ![](img/7b79ab3cbd4ece83eed8e44a74753068_2_0.png)
+
+
+    Fig. 1. System diagram.
+
+
+    # B. System Operations
+
+    In there are three operations:
+
+    Auto Irrigation: When the system starts Raspberry Pi as a main controller others
+    gives order to switch on motor pump to start recording the current value of moisture
+    sensor less than the threshold value. The controller checks whether it is still
+    under threshold value or to give order for motor pump to keep it on or make it
+    switch off. Figure below shows the flowchart of this operation as shown in Fig.
+    2.
+
+
+    ![](img/7b79ab3cbd4ece83eed8e44a74753068_2_1.png)
+
+
+    Fig. 2. Auto irrigation flowchart.
+
+
+    ![](img/7b79ab3cbd4ece83eed8e44a74753068_2_2.png)
+
+
+    Fertilizers Suggestion: based on output of the pH sensor as a dynamic parameter
+    and specific crop we are targeting to cultivate, the system is going to give the
+    appropriate fertilizer for the crop to get higher productivity. The normal level
+    above (5.8-7), if the pH level less, or greater, the user gives the suggestion
+    of appropriate fertilizer on the pH level, as shown in Fig. 3.
+
+
+    ![](img/7b79ab3cbd4ece83eed8e44a74753068_2_3.png)
+
+
+    Fig. 3. Fertilizers suggestion flowchart.
+
+
+    Motion Detection: when there is a motion in the room, PIR sensor detects and signals
+    to the controller to record a video at the same time intruder is moving. Then
+    Flow Lite machine learning algorithm uses this video to classify the detected
+    intruder and inform the user that intruder is a human, animal, bird, or unidentified
+    as shown in Fig. 4.
+
+
+    ![](img/7b79ab3cbd4ece83eed8e44a74753068_2_4.png)
+
+
+    Fig. 4. Motion detection flowchart.
+
+
+    Flow Lite which is basically a toolkit for running machine learning inference
+    on a device, so we can take any machine learning model and use the Tensor Flow
+    converter to convert it to a format that will work on'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'embedded or a mobile devices, and then the Tensor Flow
+
+    Lite interpreter will run the model and inference in the
+
+    devices. A method of convolution neural network
+
+    alg for object detection is used, to detect any intruder
+
+    in the field and then the user gets notified of the intruder type.
+
+
+    mobile application shows that "Pump ON as shown in the
+
+    next figures.
+
+
+    Sensors are used in this work to collect data from the
+
+    field to let the controller take suitable decisions. DHT11
+
+    is used to collect temperature and humidity data, also
+
+    moisture sensor detecting the amount of water in the soil
+
+    to control the water pump, while PIR and Pi camera are used
+
+    for object detection to provide the user with intruder type,
+
+    and finally sensor for measuring acidity level of the soil
+
+    (Fig. 5) to help suggesting a suitable fitler as shown in
+
+    Table.
+
+
+    ![](img/7b79ab3cbd4ece83eed8e44a74753068_3_0.png)
+
+
+    Fig. 7. The value less than threshold (LED ON).
+
+
+    ![](img/7b79ab3cbd4ece83eed8e44a74753068_3_1.png)
+
+
+    Fig. 5. The pH range.
+
+
+    ![](img/7b79ab3cbd4ece83eed8e44a74753068_3_2.png)
+
+
+    Fig. 8. The value greater than threshold (LED OFF).
+
+
+    | Fertilizer | Effect on soil pH |
+
+    |---|---|
+
+    | Ca(OH)2 & Slaked lime | Increase |
+
+    | Nitrate | Increase |
+
+    | Potassium Carbon | decrease |
+
+    | Urea | decrease |
+
+
+    TABLE2. FERTIZERS TYPES
+
+
+    # C. Fertilizers Suggestion
+
+
+    The pH value is also displayed on the mobile
+
+    application based on its value and soil type and the
+
+    required crops user gets informed about the appropriate
+
+    fertilizer for the mobile application.
+
+
+    The first experiment was done for acidic solution with a
+
+    pH value less than (7) using an orange juice which
+
+    sensor gave the result which was displayed
+
+    in the mobile application and user got notification
+
+    that was acidic, and suggested for the appropriate
+
+    fertilizer, checking the pH
+
+    will be done until reaching the suitable value.
+
+
+    # V. RESULTS AND DISCUSSION
+
+
+    # A. System and User Interface
+
+
+    At the time when the process started all
+
+    gave their values. Temperature, Humidity, Moisture, pH,
+
+    PIR, and camera have been displayed via Blynk application
+
+    the smartphone and Fig.6 shows the electronic system and
+
+    the mobile application.
+
+
+    ![](img/7b79ab3cbd4ece83eed8e44a74753068_3_3.png)
+
+
+    Fig. 9. Soil is acid (based on orange juice pH value).
+
+
+    ![](img/7b79ab3cbd4ece83eed8e44a74753068_3_4.png)
+
+
+    Fig. 6. System and user interface.
+
+
+    The second experiment was done for a neutral solution
+
+    with a pH value of (7) using a drinking water which has
+
+    p value of (7) and the sensor gave the result which
+
+    displayed in themobile application and user got notification
+
+    that was neutral.
+
+
+    # B. Auto Irrigation
+
+
+    The moisture controls the water flow based on the
+
+    ty of crop. When it becomes the threshold value,
+
+    the pump (LED) switches off and the mobile application
+
+    shows for tester that "Pump is OFF", in the pump (LED) and
+
+    system will keep switching on the pump (LED)'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '![](img/7b79ab3cbd4ece83eed8e44a74753068_4_0.png)
+
+
+    undefined and result will be displayed on the mobile application as shown in figures
+    13,14,15, and 16.
+
+
+    Fig. 10. Soil is neutral (based on drinking water pH value).
+
+
+    ![](img/7b79ab3cbd4ece83eed8e44a74753068_4_1.png)
+
+
+    The third experiment was based on basic solution with a pH value greater than
+    (7) by using a soapy water which has pH value of (12) and the sensor gave the
+    result which was displayed in the mobile application and user got notification
+    that soil is basic, and suggestion for the appropriate fertilizers. After user
+    applying the fertilizer, checking the pH value will be done again till reaching
+    the suitable value.
+
+
+    ![](img/7b79ab3cbd4ece83eed8e44a74753068_4_2.png)
+
+
+    Fig. 11. Soil is basic (based on soapy water pH value).
+
+
+    ![](img/7b79ab3cbd4ece83eed8e44a74753068_4_3.png)
+
+
+    Fig. 13. System showing the intruder is a person.
+
+
+    # D. Motion Detection
+
+
+    When there intruder detected, user directly gets urgent notification on his mobile
+    application "Intruder Detected" then in result of the signal that collected from
+    the PIR sensor. The system switches the camera on, and simultaneously runs the
+    algorithm for object detection as shown infig. 12.
+
+
+    ![](img/7b79ab3cbd4ece83eed8e44a74753068_4_4.png)
+
+
+    ![](img/7b79ab3cbd4ece83eed8e44a74753068_4_5.png)
+
+
+    ![](img/7b79ab3cbd4ece83eed8e44a74753068_4_6.png)
+
+
+    Fig. 12. System showing intruder detected and imagescaptured.
+
+
+    Fig. 14. System showing the intruder is an animal.
+
+
+    After user got notified that there is an intruder, Tensor Flow Lite with machine
+    learning algorithm for object detection is used to detect all the objects in the
+    video and then classifies that intruder as human, animal, bird, or'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'the soil on its pH value helping users to utilize appropriate fertilizer and
+    suitable for increasing productivity of their crops. Using machine learning algorithm
+    for object detection results in decreasing the system and internet connectivity
+    requirement system needs to send few bytes to cloud system and then to user mobile
+    application, rather than images and videos to cloud or user for visualizing.
+
+
+    Bylink IoT platform acts as a mediate between the physical devices (sensors and
+    controller) and the user''s mobile application to give the user the ability to
+    visualize data from his home.
+
+
+    # VII. FUTURE SCOPE
+
+
+    Using parameters such as temperature and humidity can help to predict the climate
+    condition for better cultivation. Also connecting the system with other applications
+    to provide other useful information for the user such as market status for crops.
+    Furthermore, optimum fertilizing every crop gets its exact amount of fertilizer
+    precisely. Finding and identifying the insects leads to protecting crops whereas
+    productivity.
+
+
+    # REFERENCES
+
+
+    +   1. Hegde, N.G. Water and security in India. A presentation by Narayan Hegde,
+    BAIF at the Indian Science Congress 2012, https://www.baif.org/articles/water-security-and-in-india,
+    on 2020/3/28.
+
+    2. Nair, M. and Gokhande, A., 2018. Precision agriculture application. In 2nd
+    International Conference on Electronics and Informatics (ICEI) (pp. 342-345).
+    IEEE.
+
+    3. National Investment Profile. Water for Agriculture and Energy: Sudan. http://www.com/fileadmin/user
+    upload/agrida/NIP_Sudan.pdf, on 14/01/2020.
+
+    4. Bhatt, J.P. and N. Thamidurai, 2019. Utilization of IoT and AI for agricultural
+    applications. Int. J. Eng. Adv. Technol., 8, 2731-2735
+
+    5. Anaritha, N., Devi, J., Dya, M. and Janani, V., 2017. April IoT based smart
+    monitoring system for agricultural production. In 2017 IEEE International Innovations
+    Conference on Agriculture and Rural Development (IARDR) (pp. 209-214). IEEE.
+
+    6. Ahmed, M. E., E. Abdallah, K. H. B., and Elshahir I. L., ''Farm Automation
+    based on IoT'', 2018 International Conference on Communication, Electrical, and
+    Electronics Engineering (IEEE), Kharkiv, 2018, pp. 1-4, doi:10.1109/ICEEE.2018.8851533
+
+    7. Arif, A., Soma, N., and Adhadari, S., 2018. Advanced Smart Agriculture System
+    Using GSM Technology. In 2018 International Conference on Communication and Signal
+    Processing (ICSP) (pp. 628-629). IEEE.
+
+    8. Suma, N., Samson, S. R., Saranya, S., Shanjunriya, G. and Subhashini, E., 2017.
+    IoT based smart monitoring system for irrigation. International Journal of Research
+    in Innovations Trends in computing and science, 5(2), pp.177-181.
+
+    9. Padala, P., Malhan, S., Dhabir, K., Kumar, S. and Jawahale, D., 2017. Smart
+    drip irrigation system for agricultural farming. In 2017 International Conference
+    for Convergence in Technology (I2CT) (pp. 659-662). IEEE.
+
+    10. Paper figures.
+
+    https://docs.google.com/file/d/1sc8EamMwXQyQPuU7ARueBhnx/view?usp=sharing
+
+
+    ![](img/7b79ab3cbd4ece83eed8e44a74753068_5_0.png)
+
+
+    Fig. 15 Showing the intruder is a bird.
+
+
+    ![](img/7b79ab3cbd4ece83eed8e44a74753068_5_1.png)
+
+
+    Fig. 16. Showing the intruder is unidentified.
+
+
+    # VI. CONCLUSION
+
+
+    This work provided a real-time system, user-friendly, time-saving and more efficient
+    than the existing methods. Measuring many parameters in one system such as soil
+    moisture, temperature, humidity, pH, and can signal values, doing some processing
+    results improving irrigation ensuring that the specific cropsgets their water
+    precisely. Suggesting fertilizers for'
+  merge: -1
+  img_proc: true
