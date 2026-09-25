@@ -1,0 +1,6614 @@
+<p><img src="rsrc2YG.jpg" /></p>
+<p><span id="part0000.xhtml"></span></p>
+<div>
+<img src="rsrc2YG.jpg" class="s8" />
+</div>
+<p><span id="part0001.xhtml"></span></p>
+<div class="sH-1">
+<img src="rsrc2YH.jpg" class="sH-0" />
+</div>
+<p><span id="part0002.xhtml"></span></p>
+<div id="part0002.xhtml#toc0_About_this_Book" class="sS">
+About this Book
+</div>
+<div class="sU">
+The PHP Hypertext Preprocessor (PHP) is a programming language that allows web developers to create dynamic content that interacts with databases. PHP is basically used for developing web-based software applications. This tutorial will help you understand the basics of PHP and how to put it in practice.
+</div>
+<div id="part0002.xhtml#toc1_Audience" class="sW">
+Audience
+</div>
+<div class="sU">
+This tutorial has been designed to meet the requirements of all those readers who are keen to learn the basics of PHP.
+</div>
+<div id="part0002.xhtml#a2NS" class="sW">
+Prerequisites
+</div>
+<div class="sU">
+This book assumes you have no prior knowledge on Programming knowledge and assume you are at a beginner level.
+</div>
+<div id="part0002.xhtml#toc3_How_to_use_this_Book" class="s11">
+How to use this Book
+</div>
+<div class="sU">
+This book contains PHP Language Basics, Exercises and Examples which are part of the PHP Bootcamp Program. This bootcamp has helped many students to become PHP Full Stack Web Developer in Just 30 days.
+</div>
+<div class="sU">
+<a href="https://srini.link/phpbootcamp" class="s2RC">&gt;&gt;&gt;Check out more about this program here.</a> ..
+</div>
+<div id="part0002.xhtml#a2NU" class="s15">
+Copyright &amp; Disclaimer
+</div>
+<div class="sU">
+© Copyright 2019 by SrinivasIT.com.
+</div>
+<div class="sU">
+All the content and graphics published in this e-book are the property of SrinivasIT.com. The user of this e-book is prohibited to reuse, retain, copy, distribute or republish any contents or a part of contents of this e-book in any manner without written consent of the publisher.
+</div>
+<div class="sU">
+We strive to update the contents of our website and tutorials as timely and as precisely as possible, however, the contents may contain inaccuracies or errors. SrinivasIT.com provides no guarantee regarding the accuracy, timeliness or completeness of our website or its contents including this tutorial. If you discover any errors on our website or in this tutorial, please notify us at <a href="mailto:contact@phpbootcamp.com" class="s2RC">contact@SrinivasIT.com</a> .
+</div>
+<div id="part0002.xhtml#toc5_Found_Typos___Broken_Link" class="s11">
+Found Typos &amp; Broken Link
+</div>
+<div class="sU">
+If you found any typos and broken links in the course or book, then please let me know using this email address.
+</div>
+<div class="sU">
+<a href="mailto:contact@phpbootcamp.com" class="s2RC">contact@SrinivasIT.com</a>
+</div>
+<div id="part0002.xhtml#a2NW" class="s11">
+Support
+</div>
+<div class="sU">
+You can reach me for technical discussions and other support related queries from here.
+</div>
+<div class="sU">
+<a href="mailto:support@phpbootcamp.com" class="s2RC">support@SrinivasIT.com</a>
+</div>
+<div class="sU">
+Thanks for your support!
+</div>
+<p><span id="part0003.xhtml"></span></p>
+<div class="sS">
+Free Courses
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td><div class="s1V">
+<a href="https://php.link/html1"><img src="rsrc2YJ.jpg" class="s1U" /></a>
+</div></td>
+<td><div class="s1Z">
+<a href="https://srini.link/html-free-course" class="s2V3">Learn HTML in 1 Hour</a>
+</div></td>
+</tr>
+<tr class="even">
+<td><div>
+<a href="https://php.link/css1"><img src="rsrc2YK.jpg" class="s27" /></a>
+</div></td>
+<td><div class="s1Z">
+<a href="https://srini.link/css-free-course" class="s2V3">Learn CSS in 1 Hour</a>
+</div></td>
+</tr>
+<tr class="odd">
+<td><div>
+<a href="https://php.link/javascript1"><img src="rsrc2YM.jpg" class="s27" /></a>
+</div></td>
+<td><div class="s1Z">
+<a href="https://srini.link/js-free-course" class="s2V3">Learn JAVASCRIPT in 1 Hour</a>
+</div></td>
+</tr>
+</tbody>
+</table>
+<p><span id="part0004.xhtml"></span></p>
+<div class="s2Y">
+Table of Contents
+</div>
+<div class="sH-1">
+<img src="rsrc2YN.jpg" class="sH-0" />
+</div>
+<div id="part0004.xhtml#Table_of_Contents" class="s33">
+<a href="#part0002.xhtml" class="s2RC">About this Book</a>
+</div>
+<div class="s33">
+<a href="#part0002.xhtml#toc1_Audience" class="s2RC">Audience</a>
+</div>
+<div class="s33">
+<a href="#part0002.xhtml#a2NS" class="s2RC">Prerequisites</a>
+</div>
+<div class="s33">
+<a href="#part0002.xhtml#toc3_How_to_use_this_Book" class="s2RC">How to use this Book</a>
+</div>
+<div class="s33">
+<a href="#part0002.xhtml#a2NU" class="s2RC">Copyright &amp; Disclaimer</a>
+</div>
+<div class="s33">
+<a href="#part0002.xhtml#toc5_Found_Typos___Broken_Link" class="s2RC">Found Typos &amp; Broken Link</a>
+</div>
+<div class="s33">
+<a href="#part0002.xhtml#a2NW" class="s2RC">Support</a>
+</div>
+<div class="s33">
+<a href="#part0005.xhtml" class="s2RC">1 PHP Basics</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#toc7_1.1Installation_of_PHP" class="s2RC">1.1</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#toc7_1.1Installation_of_PHP" class="s2RC">Installation of PHP</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#toc8_1.2Echo" class="s2RC">1.2</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#toc8_1.2Echo" class="s2RC">Echo</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#toc9_1.3Hello_Program_with_PHP" class="s2RC">1.3</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#toc9_1.3Hello_Program_with_PHP" class="s2RC">Hello Program with PHP</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#a2P1" class="s2RC">1.4</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#a2P1" class="s2RC">Comments</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#toc11_1.5Functions" class="s2RC">1.5</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#toc11_1.5Functions" class="s2RC">Functions</a>
+</div>
+<div class="s33">
+<a href="#part0005.xhtml#a2P3" class="s2RC">2</a> <span class="s2T9">​</span> <a href="#part0005.xhtml#a2P3" class="s2RC">Data Basics</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#a2P4" class="s2RC">2.1</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#a2P4" class="s2RC">Variables</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#toc14_2.2Strings" class="s2RC">2.2</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#toc14_2.2Strings" class="s2RC">Strings</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#a2P6" class="s2RC">2.3</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#a2P6" class="s2RC">Numbers</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#toc16_2.4Arrays" class="s2RC">2.4</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#toc16_2.4Arrays" class="s2RC">Arrays</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#a2P8" class="s2RC">2.5</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#a2P8" class="s2RC">Objects</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#toc18_2.6Constants" class="s2RC">2.6</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#toc18_2.6Constants" class="s2RC">Constants</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#a2PA" class="s2RC">2.7</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#a2PA" class="s2RC">Boolean</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#toc20_2.8Date_and_Time" class="s2RC">2.8</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#toc20_2.8Date_and_Time" class="s2RC">Date and Time</a>
+</div>
+<div class="s33">
+<a href="#part0005.xhtml#a2PC" class="s2RC">3</a> <span class="s2T9">​</span> <a href="#part0005.xhtml#a2PC" class="s2RC">Expressions</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#a2PD" class="s2RC">3.1</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#a2PD" class="s2RC">Assignments</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#a2PE" class="s2RC">3.2</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#a2PE" class="s2RC">Arithmetic</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#toc24_3.3Comparison" class="s2RC">3.3</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#toc24_3.3Comparison" class="s2RC">Comparison</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#a2PG" class="s2RC">3.4 Logical</a>
+</div>
+<div class="s33">
+<a href="#part0005.xhtml#a2PH" class="s2RC">4</a> <span class="s2T9">​</span> <a href="#part0005.xhtml#a2PH" class="s2RC">Statements</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#a2PJ" class="s2RC">4.1</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#a2PJ" class="s2RC">If Statements</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#a2PK" class="s2RC">4.2</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#a2PK" class="s2RC">Switch Statements</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#a2PM" class="s2RC">4.3</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#a2PM" class="s2RC">While Statements</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#a2PN" class="s2RC">4.4</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#a2PN" class="s2RC">For Statements</a>
+</div>
+<div class="s33">
+<a href="#part0005.xhtml#toc37_5General" class="s2RC">5</a> <span class="s2T9">​</span> <a href="#part0005.xhtml#toc37_5General" class="s2RC">General</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#toc32_5.1Exceptions" class="s2RC">5.1</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#toc32_5.1Exceptions" class="s2RC">Exceptions</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#a2PS" class="s2RC">5.2</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#a2PS" class="s2RC">Debug</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#a2PT" class="s2RC">5.3</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#a2PT" class="s2RC">Files</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#a2PU" class="s2RC">5.4</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#a2PU" class="s2RC">Includes &amp; Requires</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#toc36_5.5_Libraries" class="s2RC">5.5 Libraries</a>
+</div>
+<div class="s33">
+<a href="#part0005.xhtml#toc42_6Forms" class="s2RC">6</a> <span class="s2T9">​</span> <a href="#part0005.xhtml#toc42_6Forms" class="s2RC">Forms</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#toc38_6.1GET" class="s2RC">6.1</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#toc38_6.1GET" class="s2RC">GET</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#a2PY" class="s2RC">6.2</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#a2PY" class="s2RC">POST</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#a2PZ" class="s2RC">6.3</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#a2PZ" class="s2RC">Cookies</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#a2R0" class="s2RC">6.4</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#a2R0" class="s2RC">Session</a>
+</div>
+<div class="s33">
+<a href="#part0005.xhtml#a2R1" class="s2RC">7</a> <span class="s2T9">​</span> <a href="#part0005.xhtml#a2R1" class="s2RC">Snippets</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#a2R2" class="s2RC">7.1</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#a2R2" class="s2RC">Regex</a>
+</div>
+<div class="s33">
+<a href="#part0005.xhtml#a2R3" class="s2RC">8</a> <span class="s2T9">​</span> <a href="#part0005.xhtml#a2R3" class="s2RC">Projects</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#toc45_8.1Save_Student_Registration_Form_Data_to_File" class="s2RC">8.1</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#toc45_8.1Save_Student_Registration_Form_Data_to_File" class="s2RC">Save Student Registration Form Data to File</a>
+</div>
+<div class="s3C">
+<a href="#part0005.xhtml#toc46_8.2Online_Test" class="s2RC">8.2</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#toc46_8.2Online_Test" class="s2RC">Online Test</a>
+</div>
+<div class="s4N">
+<a href="#part0005.xhtml#toc47_8.3Online_Calculator" class="s2RC">8.3</a> <span class="s2RD">​</span> <a href="#part0005.xhtml#toc47_8.3Online_Calculator" class="s2RC">Online Calculator</a>
+</div>
+<div class="s4T-0">
+<img src="rsrc2YP.jpg" class="s4T-1" />
+</div>
+<div class="s4V">
+
+</div>
+<div class="s4Z-1">
+<img src="rsrc2YR.jpg" class="s4Z-0" />
+</div>
+<p><span id="part0005.xhtml"></span></p>
+<div class="s58">
+<div id="part0005.xhtml#a2NX">
+1 PHP Basics
+</div>
+</div>
+<div class="s5A">
+<span class="s2RW">1.1</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#toc7_1.1Installation_of_PHP" class="class-0"></span> <span class="s2RW">Installation of PHP</span>
+</div>
+<div class="s5C">
+Installation of PHP
+</div>
+<div class="sU">
+To run PHP on your local system you need to install HTTP Web Server.
+</div>
+<div class="sU">
+PHP is not like Java or C where you can install the libraries and run PHP on command prompt.
+</div>
+<div class="sU">
+PHP is a server side programming and used in web. It is designed to run from Web Server like IIS or Apache HTTP Server.
+</div>
+<div class="sH-1">
+<img src="rsrc2YS.jpg" class="sH-0" />
+</div>
+<div class="s5M">
+How PHP Works?
+</div>
+<div class="sU">
+When user type the filename.php path in the browser url:
+</div>
+<div class="sU">
+Browser will go to server where HTTP servers are running.
+</div>
+<div class="sU">
+Web Server will listen to the request.
+</div>
+<div class="sU">
+It will execute the PHP code on the server.
+</div>
+<div class="sU">
+Take the output generated by the PHP Server.
+</div>
+<div class="sU">
+Send it back to the browser.
+</div>
+<div class="sU">
+Browser displays the output.
+</div>
+<div class="s5X">
+Things to Note:
+</div>
+<div class="sU">
+You need a Web Server to run PHP code.
+</div>
+<div class="sU">
+Server executes php on the server and returns the output of the code.
+</div>
+<div class="sU">
+You won’t be able to see PHP code on the browser.
+</div>
+<div class="sU">
+Browser pass the user data from browser to server and fetch the data back from server.
+</div>
+<div class="sU">
+<img src="rsrc2YP.jpg" class="s64" /> Inserting into Database, Sending Email, Checking the login credentials is all done by php program at the server.
+</div>
+<div class="sU">
+No one can see your php code.
+</div>
+<div class="s67">
+Why need a Web Server?
+</div>
+<div class="sU">
+Try this exercise.
+</div>
+<div class="sU">
+Create a sample file name index.php
+</div>
+<div class="sU">
+Add the following PHP code.
+</div>
+<div class="sU">
+&lt;?php echo “Hello PHP!”; ?&gt;
+</div>
+<div class="sU">
+Open the index.php file in the browser.
+</div>
+<div class="sU">
+Watch how browser just show the PHP code.
+</div>
+<div class="sU">
+Browser does not understand PHP nor it understand how to interpret it.
+</div>
+<div class="sU">
+That’s the job of a WebServer.
+</div>
+<div class="sU">
+Webserver interpret the PHP code and send the output to the browser.
+</div>
+<div class="sU">
+That is the reason you need a Web Server to execute PHP code.
+</div>
+<div class="s67">
+Understand WAMP Server
+</div>
+<div class="sU">
+You can choose install the following software individually:
+</div>
+<div class="sU">
+Apache – <a href="https://httpd.apache.org/" class="s2U7">https://httpd.apache.org/</a>
+</div>
+<div class="sU">
+PHP – <a href="http://php.net/software.php" class="s2U7">http://php.net/software.php</a>
+</div>
+<div class="sU">
+MySQL – <a href="https://www.mysql.com/" class="s2U7">https://www.mysql.com/</a>
+</div>
+<div class="sU">
+phpMyAdmin – <a href="https://www.phpmyadmin.net/" class="s2U7">https://www.phpmyadmin.net/</a>
+</div>
+<div class="sU">
+<span class="s2RS">Apach</span> <span class="s2RT">e</span>  is the Web Server
+</div>
+<div class="sU">
+<span class="s2RS">PH</span> <span class="s2RT">P</span>  is the libraries that helps to run the php code
+</div>
+<div class="sU">
+<span class="s2RS">MySQ</span> <span class="s2RT">L</span>  is the Database to store the data.
+</div>
+<div class="sU">
+<span class="s2RS">phpMyAdmi</span> <span class="s2RT">n</span>  is the admin client to access your database.
+</div>
+<div class="sU">
+Instead of installing all the software there is a package which combines all the software together and give a Web Environment to build web applications.
+</div>
+<div class="s70-1">
+<img src="rsrc2YT.jpg" class="s70-0" />
+</div>
+<div class="sU">
+That is WAMP. – Windows Web Development Environment
+</div>
+<div class="s73">
+WampServer is a Windows web development environment. It allows you to create web applications with Apache2, PHP and a MySQL database. Alongside, PhpMyAdmin allows you to manage easily your databases.
+</div>
+<div class="sU">
+For Mac use this Software – <a href="https://www.mamp.info/en/" class="s2U7">https://www.mamp.info/en/</a>
+</div>
+<div class="sU">
+When you install WAMP you get:
+</div>
+<div class="sU">
+Apache2
+</div>
+<div class="sU">
+PHP
+</div>
+<div class="sU">
+MySQL
+</div>
+<div class="sU">
+phpMyAdmin
+</div>
+<div class="sU">
+All 4 software are installed on your local machine which provides an environment to develop web application.
+</div>
+<div class="s67">
+Visit &amp; Download WAMP Server
+</div>
+<div class="sU">
+<span class="s2RS">Step 1</span> <span class="s2RT">:</span> Visit WAMP Site – <a href="http://www.wampserver.com/en/" class="s2U7">http://www.wampserver.com/en/</a>
+</div>
+<div class="sU">
+<span class="s2RS">Step 2</span> <span class="s2RT">:</span>  Click on Download from Menu
+</div>
+<div class="sU">
+<span class="s2RS">Step 3</span> <span class="s2RT">:</span> Install <span class="s2RS">64-bi</span> <span class="s2RT">t</span> OR <span class="s2RS">32- bi</span> <span class="s2RT">t</span> based on your Windows Machine.
+</div>
+<div class="sH-1">
+<img src="rsrc2YU.jpg" class="sH-0" />
+</div>
+<div class="sU">
+<span class="s2RS">Step 4:</span> <span class="s2RT"> </span> Instructions Page. Click on the Download Link to download the WAMP Server.
+</div>
+<div class="sH-1">
+<img src="rsrc2YV.jpg" class="sH-0" />
+</div>
+<div class="sU">
+<span class="s2RS">Step 5:</span> <span class="s2RT"> </span> Install the supported Libraries.
+</div>
+<div class="sH-1">
+<img src="rsrc2YW.jpg" class="sH-0" />
+</div>
+<div class="sU">
+<span class="s2RS">Step 6</span> <span class="s2RT">:</span>  It will redirect to sourceforge.net and download it from there.
+</div>
+<div class="sU">
+File Name should be –<span class="s2T3"> </span> <span class="s2RS">wampserver3.1.3_x64.exe</span>
+</div>
+<div class="sH-1">
+<img src="rsrc2YX.jpg" class="sH-0" />
+</div>
+<div class="sU">
+<span class="s2RS">Step 7</span> <span class="s2RT">:</span>  WAMP Server is downloaded.
+</div>
+<div class="sH-1">
+<img src="rsrc2YY.jpg" class="sH-0" />
+</div>
+<div class="s67">
+Install WAMP
+</div>
+<div class="sU">
+<span class="s2RS">Step 1</span> <span class="s2RT">:</span>  Locate the downloaded Software “wampserver3.1.3_x64”
+</div>
+<div class="s88-0">
+<img src="rsrc2YZ.jpg" class="s88-1" />
+</div>
+<div class="sU">
+It will have this icon. Even you can find this icon in the       system tray once the software is installed.
+</div>
+<div class="sU">
+<span class="s2RS">Step 2</span> <span class="s2RT">:</span>  Double Click to Start the Installation process.
+</div>
+<div class="s8E-1">
+<img src="rsrc2Z0.jpg" class="s8E-0" />
+</div>
+<div class="sU">
+<span class="s2RS">Step 3</span> <span class="s2RT">:</span>  Accept the Agreement. and Click Next.
+</div>
+<div class="sH-1">
+<img src="rsrc2Z1.jpg" class="sH-0" />
+</div>
+<div class="sU">
+<span class="s2RS">Step 4</span> <span class="s2RT">:</span>  Do not change the default path. It will be installed in C:\WAMP64
+</div>
+<div class="sH-1">
+<img src="rsrc2Z2.jpg" class="sH-0" />
+</div>
+<div class="sU">
+<span class="s2RS">Step 5</span> <span class="s2RT">:</span> Click Next
+</div>
+<div class="sH-1">
+<img src="rsrc2Z3.jpg" class="sH-0" />
+</div>
+<div class="sU">
+<span class="s2RS">Step 6:</span> <span class="s2RT"> </span> Verify the path where the software is installed and click on Install.
+</div>
+<div class="sH-1">
+<img src="rsrc2Z4.jpg" class="sH-0" />
+</div>
+<div class="sU">
+<span class="s2RS">Step 7:</span> <span class="s2RT"> </span> Close all the Browsers and Select the Default Browser.
+</div>
+<div class="sH-1">
+<img src="rsrc2Z5.jpg" class="sH-0" />
+</div>
+<div class="sU">
+<span class="s2RS">Step 7:</span> <span class="s2RT"> </span> Select the Notepad
+</div>
+<div class="sH-1">
+<img src="rsrc2Z6.jpg" class="sH-0" />
+</div>
+<div class="sH-1">
+<img src="rsrc2Z7.jpg" class="sH-0" />
+</div>
+<div class="sU">
+<span class="s2RS">Step 8: </span> <span class="s2RT"> </span> Click Finish and Note the Software Versions.
+</div>
+<div class="sH-1">
+<img src="rsrc2Z8.jpg" class="sH-0" />
+</div>
+<div class="s67">
+Install Microsoft VC Checker
+</div>
+<div class="sU">
+Next Step is to check if the Microsoft VC++ Package is missing from windows system.
+</div>
+<div class="sU">
+<span class="s2RS">Step 1</span> <span class="s2RT">:</span>  Download the VC Checker Software.
+</div>
+<div class="sU">
+<a href="http://wampserver.aviatechno.net/files/tools/check_vcredist.exe" class="s2U7">http://wampserver.aviatechno.net/files/tools/check_vcredist.exe</a>
+</div>
+<div class="sU">
+<span class="s2RS">Step 2:</span> It will download the <span class="s2RS">check_vcredist.ex</span> <span class="s2RT">e</span> software
+</div>
+<div class="sU">
+<span class="s2RS">Step 3:</span> Install <span class="s2RS">check_vcredist.ex</span> <span class="s2RT">e</span> software.
+</div>
+<div class="s8E-1">
+<img src="rsrc2Z9.jpg" class="s8E-0" />
+</div>
+<div class="sU">
+<span class="s2RS">Step 4:</span> <span class="s2RT"> </span> Click on Check
+</div>
+<div class="sH-1">
+<img src="rsrc2ZA.jpg" class="sH-0" />
+</div>
+<div class="sU">
+<span class="s2RS">Step 5:</span> <span class="s2RT"> </span> Install the VC and then Run Again to make sure you all the supported Libraries.
+</div>
+<div class="sH-1">
+<img src="rsrc2ZB.jpg" class="sH-0" />
+</div>
+<div class="sU">
+Download from here:
+</div>
+<div class="sU">
+<a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads" class="s2U7">https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads</a>
+</div>
+<div class="s67">
+Verify WAMP
+</div>
+<div class="sU">
+WAMP Server is installed in “C:\wamp64” folder.
+</div>
+<div class="sU">
+<span class="s2RS">Step 1</span> <span class="s2RT">:</span>  Run the WAMP Server
+</div>
+<div class="sA5">
+Run the file: C:\wamp64\wampmanager.exe
+</div>
+<div class="sU">
+Goto C:\wamp64 folder and run the<br />
+WAMP Server – wampmanager.exe
+</div>
+<div class="sU">
+See the Server running with GREEN color icon in the system tray.
+</div>
+<div class="sAB-1">
+<img src="rsrc2ZC.jpg" class="sAB-0" />
+</div>
+<div class="sU">
+Click on the ICON and you should see this menu.
+</div>
+<div class="sAG-1">
+<img src="rsrc2ZD.jpg" class="sAG-0" />
+</div>
+<div class="sU">
+<span class="s2RS">Step 2</span> <span class="s2RT">:</span>  Click on Localhost on the Menu
+</div>
+<div class="sU">
+Browser will open the URL – localhost
+</div>
+<div class="sU">
+You should see this page.
+</div>
+<div class="sH-1">
+<img src="rsrc2ZE.jpg" class="sH-0" />
+</div>
+<div class="sU">
+This confirms that WAMP server is installed properly.
+</div>
+<div class="sU">
+<span class="s2RS">Step 3</span> <span class="s2RT">:</span>  Recheck if you have the following things working:
+</div>
+<div class="sU">
+WAMP Icon in Green color in system tray
+</div>
+<div class="sU">
+Click on Localhost in the WAMP menu
+</div>
+<div class="sU">
+WAMP displays the localhost page correctly.
+</div>
+<div class="s67">
+Stop WAMP
+</div>
+<div class="sU">
+<span class="s2RS">Step 1</span> <span class="s2RT">:</span>  Click on the System Tray WAMP Icon and Select Stop Services.
+</div>
+<div class="sAG-1">
+<img src="rsrc2ZF.jpg" class="sAG-0" />
+</div>
+<div class="sU">
+<span class="s2RS">Step 2</span> <span class="s2RT">:</span>  WAMP Icon Turns to RED.
+</div>
+<div class="sB5-1">
+<img src="rsrc2ZG.jpg" class="sB5-0" />
+</div>
+<div class="sU">
+<span class="s2RS">Step 3</span> <span class="s2RT">:</span>  Type “localhost” in the Browser URL
+</div>
+<div class="sU">
+This should show error page in chrome.
+</div>
+<div class="sH-1">
+<img src="rsrc2ZH.jpg" class="sH-0" />
+</div>
+<div class="sU">
+This confirms that WAMP Server is Stopped.
+</div>
+<div class="s67">
+Start WAMP
+</div>
+<div class="sU">
+<span class="s2RS">Step</span> <span class="s2RT">1</span> : Click on the System Tray WAMP Icon and Select Star Services.
+</div>
+<div class="sAG-1">
+<img src="rsrc2ZJ.jpg" class="sAG-0" />
+</div>
+<div class="sU">
+<span class="s2RS">Step</span> <span class="s2RT">2</span> : WAMP Icon Turns to GREEN
+</div>
+<div class="sBN-1">
+<img src="rsrc2ZK.jpg" class="sBN-0" />
+</div>
+<div class="sU">
+Step 3: Type “localhost” in the Browser URL
+</div>
+<div class="sU">
+This should show the home page for localhost
+</div>
+<div class="sH-1">
+<img src="rsrc2ZM.jpg" class="sH-0" />
+</div>
+<div class="s67">
+Check WAMP Version
+</div>
+<div class="sU">
+Open the WAMP Menu from System Tray and you can find the WAMP Version.
+</div>
+<div class="sAG-1">
+<img src="rsrc2ZN.jpg" class="sAG-0" />
+</div>
+<div class="s67">
+Verify the WAMP Folder
+</div>
+<div class="sU">
+You should have this two folders in C:\
+</div>
+<div class="sU">
+C:\wamp64
+</div>
+<div class="sU">
+C:\wamp64\www
+</div>
+<div class="sU">
+WAMP Log file is inside this folder:
+</div>
+<div class="sU">
+C:\wamp64\logs
+</div>
+<div class="s67">
+Check PHP Version
+</div>
+<div class="sU">
+You can check the PHP version by opening the localhost when WAMP server is running.
+</div>
+<div class="sU">
+It will show the PHP Version.
+</div>
+<div class="sH-1">
+<img src="rsrc2ZP.jpg" class="sH-0" />
+</div>
+<div class="s5X">
+Change the PHP Version
+</div>
+<div class="sU">
+Open the WAMP Menu -&gt; PHP -&gt; Versions
+</div>
+<div class="sU">
+You can change the PHP version from here.
+</div>
+<div class="sH-1">
+<img src="rsrc2ZR.jpg" class="sH-0" />
+</div>
+<div class="sCK">
+Check MySQL Version
+</div>
+<div class="sU">
+Open the WAMP Menu -&gt; SQL -&gt; Versions
+</div>
+<div class="sU">
+You can change the SQL version from here.
+</div>
+<div class="sCT-0">
+<img src="rsrc2ZS.jpg" class="sCT-1" />
+</div>
+<div class="s67">
+Check phpMyAdmin Version
+</div>
+<div class="sU">
+Open the WAMP Menu -&gt; phpMyAdmin
+</div>
+<div class="sH-1">
+<img src="rsrc2ZT.jpg" class="sH-0" />
+</div>
+<div class="s67">
+Check Apache HTTP Version
+</div>
+<div class="sU">
+Open the WAMP Menu -&gt; Apache-&gt; Versions
+</div>
+<div class="sU">
+You can change the Apache version from here.
+</div>
+<div class="sD5-1">
+<img src="rsrc2ZU.jpg" class="sD5-0" />
+</div>
+<div class="s5A">
+<span class="s2RW">1.2</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#toc8_1.2Echo" class="class-0"></span> <span class="s2RW">Echo</span>
+</div>
+<div class="sD8">
+First PHP Program
+</div>
+<div class="sDA">
+<span class="s2RG">php file name should end with</span> <span class="s2SU">“</span> <span class="s2RE">.ph</span> <span class="s2RF">p</span> <span class="s2RG">” extension</span>
+</div>
+<div class="sDC">
+You should write the php code with in this starting and ending symbols.
+</div>
+<div class="sDC">
+&lt;?php
+</div>
+<div class="sDC">
+?&gt;
+</div>
+<div class="sDA">
+<span class="s2RE">&lt;?ph</span> <span class="s2RF">p</span> <span class="s2RG"> – tells server to interpret the code from here</span>
+</div>
+<div class="sDA">
+<span class="s2RE">?</span> <span class="s2RF">&gt;</span> <span class="s2RG"> – server will stop interpreting the code.</span>
+</div>
+<div class="sDC">
+You should write the PHP code inside this block
+</div>
+<div class="sDC">
+&lt;?php
+</div>
+<div class="sDC">
+//PHP CODE
+</div>
+<div class="sDC">
+?&gt;
+</div>
+<div class="sA5">
+SYNTAX:  
+</div>
+<div class="sDC">
+&lt;body&gt;
+</div>
+<div class="sDC">
+&lt;?php
+</div>
+<div class="sDC">
+?&gt;
+</div>
+<div class="sDC">
+&lt;/body&gt;
+</div>
+<div class="sDC">
+All the statements you write between the php block should end with “;”
+</div>
+<div class="s73">
+<span class="s2Y6">Add semicolor ‘;</span> <span class="s2Y7">’</span>  at the end of the line.
+</div>
+<div class="sU">
+Step 1: Create the php file
+</div>
+<div class="sDC">
+Goto Folder: C:\wamp64\www
+</div>
+<div class="sDC">
+Create Folder: \php\basics\echo\ex1
+</div>
+<div class="sDC">
+Final Folder: C:\wamp64\www\php\basics\echo\ex1
+</div>
+<div class="sDA">
+<span class="s2RE">Create file with name</span> <span class="s2RF">:</span> <span class="s2RG">index.php</span><br />
+<span class="s2RE">Folder</span> <span class="s2RF">:</span> <span class="s2RG">C:\wamp64\www\php\basics\echo\ex1</span>
+</div>
+<div class="sE4-0">
+<img src="rsrc2ZV.jpg" class="sE4-1" />
+</div>
+<div class="sE6">
+Step 2: Add the code in index.php
+</div>
+<div class="sDC">
+You can use the Brackets Software to open the file.
+</div>
+<div class="sE9">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sEB">
+&lt;html&gt;
+</div>
+<div class="sEB">
+&lt;head&gt;
+</div>
+<div class="sEB">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sEB">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sEB">
+    &lt;meta name="description" content="Page Description"&gt;
+</div>
+<div class="sEB">
+    &lt;title&gt;Page Title&lt;/title&gt;
+</div>
+<div class="sEB">
+&lt;/head&gt;
+</div>
+<div class="sEB">
+&lt;body&gt;
+</div>
+<div class="sEB">
+    &lt;h1&gt;Heading&lt;/h1&gt;
+</div>
+<div class="sEB">
+    &lt;p&gt;Paragraph Text&lt;/p&gt;
+</div>
+<div class="sEB">
+    &lt;!-- PHP Code --&gt;
+</div>
+<div class="sEB">
+    &lt;?php echo "Hello PHP!"; ?&gt;
+</div>
+<div class="sE9">
+&lt;/body&gt;
+</div>
+<div class="sEB">
+&lt;/html&gt;
+</div>
+<div class="sE6">
+Step 3: Access the index.php from browser
+</div>
+<div class="sDC">
+Type the URL: http://localhost/php/basics/echo/ex1/index.php
+</div>
+<div class="sE4-0">
+<img src="rsrc2ZW.jpg" class="sE4-1" />
+</div>
+<div class="sE6">
+Step 4: Understanding echo
+</div>
+<div class="sDA">
+<span class="s2RE">ech</span> <span class="s2RF">o</span> <span class="s2RG"> is a function to print the data on the browser.</span>
+</div>
+<div class="sDC">
+There is no parenthesis () required to call the method and pass data to the method.
+</div>
+<div class="sDC">
+echo “some text to print”;
+</div>
+<div class="sDC">
+echo ‘some text to print’;
+</div>
+<div class="sDC">
+You use single quote or double quotes and statement should end with semi colon “;”.
+</div>
+<div class="sDA">
+<span class="s2RG">You even use</span> <span class="s2RE">print</span> <span class="s2RG">function</span>
+</div>
+<div class="sDC">
+print “some text to print”;
+</div>
+<div class="sDC">
+print ‘some text to print’;
+</div>
+<div class="sE6">
+Sample Example
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/basics-php/echo/downloads/php-echo-em1.zip" class="s2RH">Download the Example</a>
+</div>
+<div class="sE9">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sEB">
+&lt;html&gt;
+</div>
+<div class="sEB">
+&lt;head&gt;
+</div>
+<div class="sEB">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sEB">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sEB">
+    &lt;meta name="description" content="Learning PHP"&gt;
+</div>
+<div class="sEB">
+    &lt;title&gt;Echo - PHP&lt;/title&gt;
+</div>
+<div class="sEB">
+&lt;/head&gt;
+</div>
+<div class="sEB">
+&lt;body&gt;
+</div>
+<div class="sEB">
+    &lt;h1&gt;How to Print on the Browser with PHP&lt;/h1&gt;
+</div>
+<div class="sEB">
+    &lt;p&gt;You can use echo and print functions to print!&lt;/p&gt;
+</div>
+<div class="sE9">
+    &lt;!-- PHP Code --&gt;
+</div>
+<div class="sEB">
+    &lt;?php echo "This is message you see printed with echo function"; ?&gt;
+</div>
+<div class="sE9">
+    &lt;p&gt;&lt;?php echo "I am inside the paragraph"; ?&gt;&lt;/p&gt;
+</div>
+<div class="sE9">
+    &lt;h2&gt;
+</div>
+<div class="sEB">
+        &lt;?php print "Called from h2 tag"; ?&gt;
+</div>
+<div class="sEB">
+    &lt;/h2&gt;
+</div>
+<div class="sE9">
+&lt;/body&gt;
+</div>
+<div class="sFW">
+&lt;/html&gt;
+</div>
+<div class="sE4-0">
+<img src="rsrc2ZX.jpg" class="sE4-1" />
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/basics-php/echo/em1/after" class="s2RH">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 1
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/basics-php/echo/downloads/php-echo-ex1.zip" class="s2RH">Download the Exercise 1</a>
+</div>
+<div class="sDA">
+<span class="s2RE">Exercise 1:</span> <span class="s2RF"> </span> <span class="s2RG">Put the echo inside the &lt;head&gt; &lt;script&gt; tag and print alert(‘This is called from php’);</span>
+</div>
+<div class="sDC">
+See if the alert works?
+</div>
+<div class="sE4-0">
+<img src="rsrc2ZY.jpg" class="sE4-1" />
+</div>
+<div class="sGB-1">
+<img src="rsrc2ZZ.jpg" class="sGB-0" />
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/basics-php/echo/ex1/after" class="s2RH">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 2
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/basics-php/echo/downloads/php-echo-ex2.zip" class="s2RH">Download the Exercise 2</a>
+</div>
+<div class="sDA">
+<span class="s2RE">Exercise 2:</span> <span class="s2RF"> </span> <span class="s2RG">Write all the below HTML content using the php echo.</span>
+</div>
+<div class="sEB">
+&lt;h1&gt;Heading&lt;/h1&gt;
+</div>
+<div class="sEB">
+&lt;p&gt;Paragraph Text&lt;/p&gt;
+</div>
+<div class="sEB">
+&lt;ul&gt;
+</div>
+<div class="sEB">
+    &lt;li&gt;Item 1&lt;/li&gt;
+</div>
+<div class="sEB">
+    &lt;li&gt;Item 2&lt;/li&gt;
+</div>
+<div class="sEB">
+    &lt;li&gt;Item 3&lt;/li&gt;
+</div>
+<div class="sEB">
+&lt;/ul&gt;
+</div>
+<div class="sGU-1">
+<img src="rsrc300.jpg" class="sGU-0" />
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/basics-php/echo/ex2/after" class="s2RH">Live Preview</a>
+</div>
+<div class="s5A">
+<span class="s2RW">1.3</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#toc9_1.3Hello_Program_with_PHP" class="class-0"></span> <span class="s2RW">Hello Program with PHP</span>
+</div>
+<div class="sD8">
+Hello Program
+</div>
+<div class="sA5">
+You should know the following things:
+</div>
+<div class="sU">
+<a href="https://phpbootcampdocs.com/course/echo-php/" class="s2UE">How to write and Execute the php Code.</a>
+</div>
+<div class="sU">
+<a href="https://phpbootcampdocs.com/course/install-php/" class="s2UE">How to start and stop WAMP Server.</a>
+</div>
+<div class="sU">
+<a href="https://phpbootcampdocs.com/course/echo-php/" class="s2UE">How to view the php file from the browser.</a>
+</div>
+<div class="sE6">
+Importance of ‘www’ folder in WAMP Folder
+</div>
+<div class="sDC">
+You can execute the php code only from the ‘www’ folder inside the c:\wamp64 folder.
+</div>
+<div class="sE4-0">
+<img src="rsrc301.jpg" class="sE4-1" />
+</div>
+<div class="sDC">
+Write a simple hello program with the following files:
+</div>
+<div class="sDC">
+index.php
+</div>
+<div class="sDC">
+css include
+</div>
+<div class="sDC">
+js include
+</div>
+<div class="sDC">
+Use css style file
+</div>
+<div class="sDC">
+Write one Function in the Javascript and use it.
+</div>
+<div class="sDC">
+Print some text with the php echo function.
+</div>
+<div class="sE6">
+Sample Example
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/basics-php/hello/downloads/php-hello-em1.zip" class="s2RH">Download the Example</a>
+</div>
+<div class="sA5">
+index.php
+</div>
+<div class="sE9">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sEB">
+&lt;html&gt;
+</div>
+<div class="sEB">
+&lt;head&gt;
+</div>
+<div class="sEB">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sEB">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sEB">
+    &lt;meta name="description" content="Learning PHP"&gt;
+</div>
+<div class="sEB">
+    &lt;title&gt;Hello World Program!&lt;/title&gt;
+</div>
+<div class="sE9">
+    &lt;!-- Include CSS file --&gt;
+</div>
+<div class="sEB">
+    &lt;link rel="stylesheet" type="text/css" href="styles.css" media="screen" /&gt;
+</div>
+<div class="sE9">
+    &lt;!-- Include JS File --&gt;
+</div>
+<div class="sEB">
+    &lt;script type='text/javascript' src="scripts.js"&gt;&lt;/script&gt;
+</div>
+<div class="sE9">
+&lt;/head&gt;
+</div>
+<div class="sEB">
+&lt;body&gt;
+</div>
+<div class="sEB">
+    &lt;h1&gt;Welcome to PHP Application&lt;/h1&gt;
+</div>
+<div class="sE9">
+    &lt;div&gt;
+</div>
+<div class="sEB">
+    &lt;!-- on hover on this link to get a red line --&gt;
+</div>
+<div class="sEB">
+    &lt;a href="#" onclick="greet('Welcome to PHP'); "&gt;Click Me!&lt;/a&gt;
+</div>
+<div class="sEB">
+    &lt;/div&gt;
+</div>
+<div class="sEB">
+    &lt;hr&gt;
+</div>
+<div class="sE9">
+    &lt;div&gt;
+</div>
+<div class="sEB">
+        &lt;?php
+</div>
+<div class="sE9">
+            echo "Hello World PHP! This is printed
+</div>
+<div class="sEB">
+                  with the two and
+</div>
+<div class="sEB">
+                  multiple lines without any issues.";
+</div>
+<div class="sEB">
+        ?&gt;
+</div>
+<div class="sEB">
+    &lt;/div&gt;
+</div>
+<div class="sE9">
+&lt;/body&gt;
+</div>
+<div class="sEB">
+&lt;/html&gt;
+</div>
+<div class="sJE">
+styles.css
+</div>
+<div class="sJG">
+a:hover{
+</div>
+<div class="sEB">
+    text-decoration: underline;
+</div>
+<div class="sEB">
+    text-color: red;
+</div>
+<div class="sEB">
+}
+</div>
+<div class="sE9">
+h1 {
+</div>
+<div class="sEB">
+    text-align: center;
+</div>
+<div class="sEB">
+}
+</div>
+<div class="sJE">
+scripts.js
+</div>
+<div class="sE9">
+function greet(message){
+</div>
+<div class="sEB">
+    alert(message);
+</div>
+<div class="sFW">
+}
+</div>
+<div class="sJY-0">
+<img src="rsrc302.jpg" class="sJY-1" />
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/basics-php/hello/em1/after" class="s2RH">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 1
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/basics-php/hello/downloads/php-hello-ex1.zip" class="s2RH">Download the Exercise 1</a>
+</div>
+<div class="sDA">
+<span class="s2RE">Exercise 1:</span> <span class="s2RG">Print the</span> <span class="s2RE">&lt;body</span> <span class="s2RF">&gt;</span> <span class="s2RG">tag with echo.</span>
+</div>
+<div class="sE4-0">
+<img src="rsrc303.jpg" class="sE4-1" />
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/basics-php/hello/ex1/after" class="s2RH">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 2
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/basics-php/hello/downloads/php-hello-ex2.zip" class="s2RH">Download the Exercise 2</a>
+</div>
+<div class="sDA">
+<span class="s2RE">Exercise 2:</span> <span class="s2RF"> </span> <span class="s2RG">Write the complete HTML page with echo.</span>
+</div>
+<div class="sDC">
+Understand that you can write anything on the page with echo.
+</div>
+<div class="sKE-1">
+<img src="rsrc304.jpg" class="sKE-0" />
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/basics-php/hello/ex2/after" class="s2RH">Live Preview</a>
+</div>
+<div class="s5A">
+<span class="s2RW">1.4</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#a2P1" class="class-0"></span> <span class="s2RW">Comments</span>
+</div>
+<div class="sD8">
+Usage of Comments
+</div>
+<div class="sDC">
+You can use the special notation to comment the code inside the php.
+</div>
+<div class="sDC">
+Comments helps to document about the code with a single or multiple line.
+</div>
+<div class="sDC">
+Comments are ignored by the Web Server and it is not displayed and not sent to the browser.
+</div>
+<div class="sDC">
+You will not see php comments in the final HTML output.
+</div>
+<div class="sDC">
+There are two types of Comments in PHP:
+</div>
+<div class="sDC">
+Single Line Comments
+</div>
+<div class="sDC">
+Multi Line Comments
+</div>
+<div class="sDA">
+<span class="s2RE">// –</span> <span class="s2RF"> </span> <span class="s2RG">This is Single Line Comments. Use to comment one line.</span>
+</div>
+<div class="sDA">
+<span class="s2RE"># –</span> <span class="s2RF"> </span> <span class="s2RG">This is Single Line Comments. Use to comment one line.</span>
+</div>
+<div class="sDA">
+<span class="s2RE">/* –</span> <span class="s2RF"> </span> <span class="s2RG">is used to indicate the comments are starting.</span>
+</div>
+<div class="sDA">
+<span class="s2RE">*</span> <span class="s2RF">/</span> <span class="s2RG"> – is used to indicate the comments are ended.</span>
+</div>
+<div class="sDA">
+<span class="s2RG">Anything between</span> <span class="s2RE">/</span> <span class="s2RF">*</span> <span class="s2RG">and</span> <span class="s2RE">*</span> <span class="s2RF">/</span> <span class="s2RG">will not be executed by the server.</span>
+</div>
+<div class="sDC">
+Browser will never see php comments because it is ignored by the server.
+</div>
+<div class="sA5">
+SYNTAX:  
+</div>
+<div class="sDC">
+&lt;body&gt;
+</div>
+<div class="sDC">
+&lt;?php
+</div>
+<div class="sDC">
+// This is a Single Line Comments
+</div>
+<div class="sDC">
+# This is also a Single Line Comments
+</div>
+<div class="sDC">
+/*
+</div>
+<div class="sDC">
+This is a multi line comments which
+</div>
+<div class="sDC">
+you cannot see on the browser
+</div>
+<div class="sDC">
+*/
+</div>
+<div class="sDC">
+?&gt;
+</div>
+<div class="sDC">
+&lt;/body&gt;
+</div>
+<div class="sE6">
+Sample Example
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/basics-php/comments/downloads/php-comments-em1.zip" class="s2RH">Download the Example</a>
+</div>
+<div class="sE9">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sEB">
+&lt;html&gt;
+</div>
+<div class="sEB">
+&lt;head&gt;
+</div>
+<div class="sEB">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sEB">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sEB">
+    &lt;meta name="description" content="Learning PHP"&gt;
+</div>
+<div class="sEB">
+    &lt;title&gt;Comments PHP&lt;/title&gt;
+</div>
+<div class="sEB">
+&lt;/head&gt;
+</div>
+<div class="sJG">
+&lt;body&gt;
+</div>
+<div class="sEB">
+    &lt;?php
+</div>
+<div class="sE9">
+        //This is Single Line Comments
+</div>
+<div class="sE9">
+        # This is also a Single Line Comments
+</div>
+<div class="sE9">
+        /*
+</div>
+<div class="sEB">
+         * This is a multi line comments
+</div>
+<div class="sEB">
+         * can go many lines.
+</div>
+<div class="sEB">
+         */
+</div>
+<div class="sE9">
+    ?&gt;
+</div>
+<div class="sEB">
+&lt;/body&gt;
+</div>
+<div class="sFW">
+&lt;/html&gt;
+</div>
+<div class="sE4-0">
+<img src="rsrc305.jpg" class="sE4-1" />
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/basics-php/comments/em1/after" class="s2RH">Live Preview</a>
+</div>
+<div class="sU">
+<img src="rsrc2YP.jpg" class="sN5" /> <span class="s2T1">Exercise 1</span>
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/basics-php/comments/downloads/php-comments-ex1.zip" class="s2RH">Download the Exercise 1</a>
+</div>
+<div class="sDA">
+<span class="s2RE">Exercise 1:</span> <span class="s2RF"> </span> <span class="s2RG">Put the php opening tag on top and start the multi line comments and then close it at the end of HTML.</span>
+</div>
+<div class="sDC">
+Guess the output.
+</div>
+<div class="sE4-0">
+<img src="rsrc306.jpg" class="sE4-1" />
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/basics-php/comments/ex1/after" class="s2RH">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 2
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/basics-php/comments/downloads/php-comments-ex2.zip" class="s2RH">Download the Exercise 2</a>
+</div>
+<div class="sDA">
+<span class="s2RE">Exercise 2:</span> <span class="s2RF"> </span> <span class="s2RG">Start the opening /* at the start of the HTML page and do not close it. See if it raise any issue.</span>
+</div>
+<div class="sE4-0">
+<img src="rsrc307.jpg" class="sE4-1" />
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/basics-php/comments/ex2/after" class="s2RH">Live Preview</a>
+</div>
+<div class="s5A">
+<span class="s2RW">1.5</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#toc11_1.5Functions" class="class-0"></span> <span class="s2RW">Functions</span>
+</div>
+<div class="sD8">
+Usage of Fuctions
+</div>
+<div class="sDC">
+Functions is a block of statements that performs an action.
+</div>
+<div class="sDA">
+<span class="s2RG">You can pass parameters to functions and it can return a value from the function using</span> <span class="s2SU">“</span> <span class="s2RE">retur</span> <span class="s2RF">n</span> <span class="s2RG">” keyword.</span>
+</div>
+<div class="sA5">
+Syntax of Function Declaration:
+</div>
+<div class="sDC">
+function nameOfFunction(Parameters){
+</div>
+<div class="sDC">
+return someValue;
+</div>
+<div class="sDC">
+}
+</div>
+<div class="sA5">
+Example 1:
+</div>
+<div class="sDC">
+function area($width, $height){
+</div>
+<div class="sDC">
+return width * height;
+</div>
+<div class="sDC">
+}
+</div>
+<div class="sDC">
+echo “Area: ” . area(10,20);
+</div>
+<div class="sDA">
+<span class="s2RF">.</span> <span class="s2RG"> – Dot character is used to append two strings together.</span>
+</div>
+<div class="sE6">
+Sample Example
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/basics-php/functions/downloads/php-functions-em1.zip" class="s2RH">Download the Example</a>
+</div>
+<div class="sE9">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sEB">
+&lt;html&gt;
+</div>
+<div class="sEB">
+&lt;head&gt;
+</div>
+<div class="sEB">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sEB">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sEB">
+    &lt;meta name="description" content="Learning PHP"&gt;
+</div>
+<div class="sEB">
+    &lt;title&gt;Functions PHP&lt;/title&gt;
+</div>
+<div class="sEB">
+&lt;/head&gt;
+</div>
+<div class="sEB">
+&lt;body&gt;
+</div>
+<div class="sEB">
+    &lt;?php
+</div>
+<div class="sE9">
+        // Print message using functions
+</div>
+<div class="sEB">
+        function printMessage(){
+</div>
+<div class="sEB">
+            echo "&lt;h1&gt;Welcome to PHP&lt;/h1&gt;";
+</div>
+<div class="sEB">
+        }
+</div>
+<div class="sE9">
+        //Return value from functions
+</div>
+<div class="sEB">
+        function add($a, $b){
+</div>
+<div class="sEB">
+            return $a + $b;
+</div>
+<div class="sEB">
+        }
+</div>
+<div class="sE9">
+        // using "." to append data.
+</div>
+<div class="sEB">
+        echo "Addition of two value: " . add(5, 10 );
+</div>
+<div class="sE9">
+    ?&gt;
+</div>
+<div class="sE9">
+    &lt;?php printMessage(); ?&gt;
+</div>
+<div class="sE9">
+&lt;/body&gt;
+</div>
+<div class="sFW">
+&lt;/html&gt;
+</div>
+<div class="sPZ-0">
+<img src="rsrc308.jpg" class="sPZ-1" />
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/basics-php/functions/em1/after" class="s2RH">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 1
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/basics-php/functions/downloads/php-functions-ex1.zip" class="s2RH">Download the Exercise 1</a>
+</div>
+<div class="sDA">
+<span class="s2RE">Exercise 1:</span> <span class="s2RF"> </span> <span class="s2RG">Define a add function in &lt;head&gt; section and use them in the &lt;body&gt; section.</span>
+</div>
+<div class="sR7-1">
+<img src="rsrc309.jpg" class="sR7-0" />
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/basics-php/functions/ex1/after" class="s2RH">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 2
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/basics-php/functions/downloads/php-functions-ex2.zip" class="s2RH">Download the Exercise 2</a>
+</div>
+<div class="sDA">
+<span class="s2RE">Exercise 2:</span> <span class="s2RF"> </span> <span class="s2RG">Create two functions and call one function from another function.</span>
+</div>
+<div class="sRF-0">
+<img src="rsrc30A.jpg" class="sRF-1" />
+</div>
+<div class="sRH">
+<a href="https://phpbootcampdemo.com/php/basics-php/functions/ex2/after" class="s2RH">Live Preview</a>
+</div>
+<div class="sH-1">
+<img src="rsrc30B.jpg" class="sH-0" />
+</div>
+<div class="sRP">
+<span class="s2T8">2</span> <span class="s2RX-1">          </span> <span id="part0005.xhtml#a2P3" class="class-1"></span> <span class="s2T8">Data Basics</span>
+</div>
+<div class="sRS">
+<span class="s2RW">2.1</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#a2P4" class="class-0"></span> <span class="s2RW">Variables</span>
+</div>
+<div class="sD8">
+Usage of Variables
+</div>
+<div class="sDC">
+Variables are used to store information which are used inside the program.
+</div>
+<div class="sDC">
+Variables in php are defined with dollar ($) sign in front of it.
+</div>
+<div class="sE4-0">
+<img src="rsrc30C.jpg" class="sE4-1" />
+</div>
+<div class="sDC">
+Here are the rules for defining the Variables:
+</div>
+<div class="sDC">
+Variable should start with dollar($) sign. Example : $message.
+</div>
+<div class="sDC">
+Letters, numbers and underscore is allowed inthe variable name.
+</div>
+<div class="sDC">
+After $ it should not be a number. Example: $123name is wrong.
+</div>
+<div class="sDC">
+Variables are case sensitive. $message and $Message are not same.
+</div>
+<div class="s5M">
+Examples of Variables:
+</div>
+<div class="sDC">
+$index = 0;
+</div>
+<div class="sDC">
+$firstName = ‘WPFreelancer’;
+</div>
+<div class="sDC">
+$firstName = “WPFreelancer”;
+</div>
+<div class="sDC">
+$price = 10;
+</div>
+<div class="sDC">
+$price = 10.50;
+</div>
+<div class="sDC">
+$result = true;
+</div>
+<div class="sDC">
+$fullName = $firstName;
+</div>
+<div class="sDA">
+<span class="s2RE">$</span> <span class="s2RF"> </span> <span class="s2RG">is used to indicate it is a variable.</span>
+</div>
+<div class="sDA">
+<span class="s2RF">=</span> <span class="s2RG">  is the assignment operator used to assign the value to the variable.</span>
+</div>
+<div class="sDA">
+<span class="s2RE">; semicolo</span> <span class="s2RF">r</span> <span class="s2RG"> is used to end the assignment statement.</span>
+</div>
+<div class="s5M">
+Showing variable with echo
+</div>
+<div class="sDC">
+$siteName = “WPFreelancer”;
+</div>
+<div class="sDC">
+echo “This is the $siteName for WordPress”;
+</div>
+<div class="sDC">
+echo “This is the site name” . $siteName;
+</div>
+<div class="sDA">
+<span class="s2RG">You can add the variables inside the</span> <span class="s2SU"> </span> <span class="s2V1">double quotes onl</span> <span class="s2V2">y</span> <span class="s2RG"> with the variable names.</span>
+</div>
+<div class="sDC">
+“.” DOT symbol can be used to add the variable to the strings.
+</div>
+<div class="sE6">
+Sample Example
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/data-php/variables/downloads/php-data-php-variables-em1.zip" class="s2RH">Download the Example</a>
+</div>
+<div class="sJG">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sEB">
+&lt;html&gt;
+</div>
+<div class="sEB">
+&lt;head&gt;
+</div>
+<div class="sEB">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sEB">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sEB">
+    &lt;meta name="description" content="Page Description"&gt;
+</div>
+<div class="sEB">
+    &lt;title&gt;Variables&lt;/title&gt;
+</div>
+<div class="sEB">
+    &lt;?php
+</div>
+<div class="sE9">
+        //Declaring &amp; Initalizing a Variable
+</div>
+<div class="sEB">
+        $message = "";
+</div>
+<div class="sE9">
+        //Assigning value to the Variables
+</div>
+<div class="sEB">
+        $message = "Say Hello to Variables!";
+</div>
+<div class="sE9">
+        //Displaying the Variables via the Javascript
+</div>
+<div class="sEB">
+        echo "&lt;script&gt;console.log('" . $message . "');&lt;/script&gt;";
+</div>
+<div class="sE9">
+    ?&gt;
+</div>
+<div class="sE9">
+&lt;/head&gt;
+</div>
+<div class="sE9">
+&lt;body&gt;
+</div>
+<div class="sEB">
+&lt;h1&gt;Variables&lt;/h1&gt;
+</div>
+<div class="sEB">
+&lt;?php
+</div>
+<div class="sEB">
+    $counter = 100;
+</div>
+<div class="sE9">
+    echo "This is counter: $counter &lt;br&gt;";
+</div>
+<div class="sEB">
+    echo "counter: ". $counter . "&lt;br&gt;";
+</div>
+<div class="sEB">
+    echo 'This is the message - $message &lt;br&gt;';
+</div>
+<div class="sEB">
+    echo "This is the message - $message &lt;br&gt;";
+</div>
+<div class="sE9">
+?&gt;
+</div>
+<div class="sEB">
+&lt;/body&gt;
+</div>
+<div class="sTJ">
+&lt;/html&gt;
+</div>
+<div class="sE4-0">
+<img src="rsrc30D.jpg" class="sE4-1" />
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/data-php/variables/em1/after" class="s2RH">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 1
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/data-php/variables/downloads/php-data-php-variables-ex1.zip" class="s2RH">Download the Exercise 1</a>
+</div>
+<div class="sDA">
+<span class="s2RE">Exercise 1:</span> <span class="s2RF"> </span> <span class="s2RG">Define all the Variables and Initialize them in the head section and then display them in the body section.</span>
+</div>
+<div class="sTX-1">
+<img src="rsrc30E.jpg" class="sTX-0" />
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/data-php/variables/ex1/after" class="s2RH">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 2
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/data-php/variables/downloads/php-data-php-variables-ex2.zip" class="s2RH">Download the Exercise 2</a>
+</div>
+<div class="sDA">
+<span class="s2RE">Exercise 2:</span> <span class="s2RF"> </span> <span class="s2RG">Write a function to add two strings with a “,” and return the new string. call this function from body.</span>
+</div>
+<div class="sU5-0">
+<img src="rsrc30F.jpg" class="sU5-1" />
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/data-php/variables/ex2/after" class="s2RH">Live Preview</a>
+</div>
+<div class="s5A">
+<span class="s2RW">2.2</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#toc14_2.2Strings" class="class-0"></span> <span class="s2RW">Strings</span>
+</div>
+<div class="sU9">
+Usage of String
+</div>
+<div class="sDC">
+Strings in PHP can be enclosed with Single Quote or Double Quotes.
+</div>
+<div class="sDC">
+You can use Single quotes inside the double quotes and vice-versa.
+</div>
+<div class="sDA">
+<span class="s2RE">. – DOT</span> <span class="s2RF"> </span> <span class="s2RG">Symbol is used to concatenate two strings together.</span>
+</div>
+<div class="sDC">
+Variable when used inside the Double Quote then it will resolve into the variable value.
+</div>
+<div class="sDA">
+<span class="s2RG">This is called as</span> <span class="s2SU"> </span> <span class="s2X3">Interpolatio</span> <span class="s2X4">n</span> <span class="s2RG">.</span>
+</div>
+<div class="sDC">
+Interpolation of Variables only happens with Double Quotes and it does not work with Single Quotes.
+</div>
+<div class="sDC">
+That’s why you must always use Single Quotes and only use Double Double quotes when you need interpolation feature.
+</div>
+<div class="sE6">
+Define a Variable with NULL
+</div>
+<div class="sDC">
+$message = NULL;
+</div>
+<div class="sDC">
+or
+</div>
+<div class="sDC">
+$message = null;
+</div>
+<div class="sDC">
+NULL or null is a special keyword that is used to define a empty variable.
+</div>
+<div class="sE6">
+String Examples
+</div>
+<div class="sDC">
+$firstName = ‘WPFreelancer’;
+</div>
+<div class="sDC">
+$firstName = “WPFreelancer”;
+</div>
+<div class="sDC">
+$fullName = $first . ” – ” . $last;
+</div>
+<div class="sDC">
+$fullName = “$first  – $last”;
+</div>
+<div class="sDC">
+$places = “”; //Empty String
+</div>
+<div class="sDC">
+$numPrice = 10.20;
+</div>
+<div class="sDC">
+$SubTotal = “Price: ” . $numPrice;
+</div>
+<div class="sE6">
+Sample Example
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/data-php/strings/downloads/php-data-php-strings-em1.zip" class="s2RH">Download the Example</a>
+</div>
+<div class="sE9">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sEB">
+&lt;html&gt;
+</div>
+<div class="sEB">
+&lt;head&gt;
+</div>
+<div class="sEB">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sEB">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sEB">
+    &lt;meta name="description" content="Page Description"&gt;
+</div>
+<div class="sEB">
+    &lt;title&gt;String&lt;/title&gt;
+</div>
+<div class="sE9">
+&lt;/head&gt;
+</div>
+<div class="sE9">
+&lt;body&gt;
+</div>
+<div class="sEB">
+&lt;h1&gt;String&lt;/h1&gt;
+</div>
+<div class="sEB">
+&lt;?php
+</div>
+<div class="sEB">
+    $fullName = 'WPFreelancer';
+</div>
+<div class="sEB">
+    $site = "http://$fullName.com/";
+</div>
+<div class="sEB">
+    echo "Visit us at $site &lt;br&gt;";
+</div>
+<div class="sE9">
+    $message = "Welcome to";
+</div>
+<div class="sEB">
+    echo $message . " " . $site;
+</div>
+<div class="sEB">
+?&gt;
+</div>
+<div class="sEB">
+&lt;/body&gt;
+</div>
+<div class="sFW">
+&lt;/html&gt;
+</div>
+<div class="sVP-1">
+<img src="rsrc30G.jpg" class="sVP-0" />
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/data-php/strings/em1/after" class="s2RH">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 1
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/data-php/strings/downloads/php-data-php-strings-ex1.zip" class="s2RH">Download the Exercise 1</a>
+</div>
+<div class="sDA">
+<span class="s2RE">Exercise 1:</span> <span class="s2RF"> </span> <span class="s2RG">Convert a string to uppercase and lowercase. Display the text on body.</span>
+</div>
+<div class="sDA">
+<span class="s2RG">Lowercase Function:</span> <span class="s2SU"> </span> <span class="s2RE">strtolowe</span> <span class="s2RF">r</span> <span class="s2RG">( $variable );</span><br />
+<span class="s2RG">Uppercase Function:</span> <span class="s2SU"> </span> <span class="s2RE">strtouppe</span> <span class="s2RF">r</span> <span class="s2RG">( $variable );</span><br />
+<span class="s2RE">Example</span> <span class="s2RF">:</span> <span class="s2RG"> $site = strtolower( $site );</span>
+</div>
+<div class="sE4-0">
+<img src="rsrc30H.jpg" class="sE4-1" />
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/data-php/strings/ex1/after" class="s2RH">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 2
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/data-php/strings/downloads/php-data-php-strings-ex2.zip" class="s2RH">Download the Exercise 2</a>
+</div>
+<div class="sDA">
+<span class="s2RE">Exercise 2:</span> <span class="s2RF"> </span> <span class="s2RG">Substring “WP” from “WPFreelancer” word using the String function.</span>
+</div>
+<div class="sDC">
+substr($variable, startIndex, length);
+</div>
+<div class="sDA">
+<span class="s2RE">Example</span> <span class="s2RF">:</span> <span class="s2RG"> $newValue = substr($fullName, 0, 2);</span>
+</div>
+<div class="sW8-0">
+<img src="rsrc30J.jpg" class="sW8-1" />
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/data-php/strings/ex2/after" class="s2RH">Live Preview</a>
+</div>
+<div class="s5A">
+<span class="s2RW">2.3</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#a2P6" class="class-0"></span> <span class="s2RW">Numbers</span>
+</div>
+<div class="sWC">
+Usage of Numbers
+</div>
+<div class="sDC">
+Numbers can also be called as Integers.
+</div>
+<div class="sDC">
+Integers are positive or negative numbers.
+</div>
+<div class="sDC">
+Floating number is represented with number separated with “.” as decimals.
+</div>
+<div class="sDC">
+So, there are two types of numbers in PHP:
+</div>
+<div class="sDC">
+Integers
+</div>
+<div class="sDC">
+100
+</div>
+<div class="sDC">
+-200
+</div>
+<div class="sDC">
+Floating Point
+</div>
+<div class="sDC">
+10.34
+</div>
+<div class="sDC">
+Numbers are not wrapped with quotes or they do not include “,”
+</div>
+<div class="sDC">
+You can append the – (minus) symbol in front of the number to indicate it is negative number.
+</div>
+<div class="sDC">
+Most common methods used with Integer:
+</div>
+<div class="sDC">
+round() – This will round the decimals
+</div>
+<div class="sDC">
+intval() – This will convert string integer to integer.
+</div>
+<div class="sA5">
+Examples:
+</div>
+<div class="sDC">
+$price = 10;
+</div>
+<div class="sDC">
+$total = 10.20;
+</div>
+<div class="sE6">
+Sample Example
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/data-php/numbers/downloads/php-data-php-numbers-em1.zip" class="s2RH">Download the Example</a>
+</div>
+<div class="sE9">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sEB">
+&lt;html&gt;
+</div>
+<div class="sEB">
+&lt;head&gt;
+</div>
+<div class="sEB">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sEB">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sEB">
+    &lt;meta name="description" content="Page Description"&gt;
+</div>
+<div class="sEB">
+    &lt;title&gt;Numbers&lt;/title&gt;
+</div>
+<div class="sE9">
+&lt;/head&gt;
+</div>
+<div class="sE9">
+&lt;body&gt;
+</div>
+<div class="sEB">
+&lt;h1&gt;Numbers&lt;/h1&gt;
+</div>
+<div class="sEB">
+&lt;?php
+</div>
+<div class="sEB">
+    $length = 10;
+</div>
+<div class="sEB">
+    $breath = 10;
+</div>
+<div class="sE9">
+    $area = $length * $breath;
+</div>
+<div class="sEB">
+    echo "Area: $length x $breath = $area";
+</div>
+<div class="sEB">
+?&gt;
+</div>
+<div class="sEB">
+&lt;/body&gt;
+</div>
+<div class="sFW">
+&lt;/html&gt;
+</div>
+<div class="sXN-1">
+<img src="rsrc30K.jpg" class="sXN-0" />
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/data-php/numbers/em1/after" class="s2RH">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 1
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/data-php/numbers/downloads/php-data-php-numbers-ex1.zip" class="s2RH">Download the Exercise 1</a>
+</div>
+<div class="sDA">
+<span class="s2RE">Exercise 1:</span> <span class="s2RF"> </span> <span class="s2RG">Write a function to round a given decimal number and display the output.</span>
+</div>
+<div class="sDA">
+<span class="s2RE">Tips:</span> <span class="s2RG">Use the round(value)</span>
+</div>
+<div class="sE4-0">
+<img src="rsrc30M.jpg" class="sE4-1" />
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/data-php/numbers/ex1/after" class="s2RH">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 2
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/data-php/numbers/downloads/php-data-php-numbers-ex2.zip" class="s2RH">Download the Exercise 2</a>
+</div>
+<div class="sDA">
+<span class="s2RE">Exercise 2:</span> <span class="s2RF"> </span> <span class="s2RG">Convert String to Integer and add two string numbers and add two integers numbers.</span>
+</div>
+<div class="sY5-0">
+<img src="rsrc30N.jpg" class="sY5-1" />
+</div>
+<div class="s73">
+<a href="https://phpbootcampdemo.com/php/data-php/numbers/ex2/after" class="s2RH">Live Preview</a>
+</div>
+<div class="s5A">
+<span class="s2RW">2.4</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#toc16_2.4Arrays" class="class-0"></span> <span class="s2RW">Arrays</span>
+</div>
+<div class="sY9">
+Usage of Arrays
+</div>
+<div class="sYB">
+Arrays is a data type that holds one or more items called as elements.
+</div>
+<div class="sYB">
+Each element could be combination of data types.
+</div>
+<div class="sYB">
+length is used to indicate the number of elements in the array.
+</div>
+<div class="sYB">
+Every element of the array can be accessed with an index number.
+</div>
+<div class="sYB">
+First element of Array starts with 0 index.
+</div>
+<div class="sE6">
+Define an Array
+</div>
+<div class="sYB">
+$arrayName = array( $value1, $value2 );
+</div>
+<div class="sYK">
+Examples:
+</div>
+<div class="sYB">
+$colorName = array(‘red’, ‘white’, ‘yellow’);
+</div>
+<div class="sU">
+<span class="s2R9">$newColors = array();</span><br />
+<span class="s2R9">$newColors[0] = $colorName[0];</span><br />
+<span class="s2R9">$newColors[1] = $colorName[1];</span>
+</div>
+<div class="sU">
+<span class="s2R9">$age = array(10, 40, 34);</span><br />
+<span class="s2R9">$studentage[0] = $age[0];</span><br />
+<span class="s2R9">$studentage[1] = 50;</span>
+</div>
+<div class="sYS">
+Print Arrays
+</div>
+<div class="sYB">
+print_r($arrayName);
+</div>
+<div class="sE6">
+Sample Example
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/data-php/arrays/downloads/php-data-php-arrays-em1.zip" class="s2RA">Download the Example</a>
+</div>
+<div class="sYY">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sZ0">
+&lt;html&gt;
+</div>
+<div class="sZ0">
+&lt;head&gt;
+</div>
+<div class="sZ0">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="description" content="Page Description"&gt;
+</div>
+<div class="sZ0">
+    &lt;title&gt;Arrays&lt;/title&gt;
+</div>
+<div class="sZ7">
+&lt;/head&gt;
+</div>
+<div class="sZ7">
+&lt;body&gt;
+</div>
+<div class="sZ0">
+&lt;h1&gt;Arrays&lt;/h1&gt;
+</div>
+<div class="sZ0">
+&lt;?php
+</div>
+<div class="sZ0">
+    //Define an Array
+</div>
+<div class="sZ0">
+    $colorNames = array('red', 'green', 'white');
+</div>
+<div class="sZ7">
+    //Print an Array
+</div>
+<div class="sZ0">
+    print_r($colorNames);
+</div>
+<div class="sZ0">
+    echo "&lt;br&gt;";
+</div>
+<div class="sZ7">
+    //Loop thru the arrays
+</div>
+<div class="sZ0">
+    foreach ($colorNames as &amp;$value) {
+</div>
+<div class="sZ0">
+        echo $value . "&lt;br&gt;";
+</div>
+<div class="sZ0">
+    }
+</div>
+<div class="sZ7">
+    //Define an Empty Array
+</div>
+<div class="sZ0">
+    $age = array();
+</div>
+<div class="sZ0">
+    $age[0] = 10;
+</div>
+<div class="sZ0">
+    $age[1] = 20;
+</div>
+<div class="sZ0">
+    $age[3] = 30;
+</div>
+<div class="sZ7">
+    //Print Array
+</div>
+<div class="sZ0">
+    print_r($age);
+</div>
+<div class="sZ7">
+?&gt;
+</div>
+<div class="sZ7">
+&lt;/body&gt;
+</div>
+<div class="sZY">
+&lt;/html&gt;
+</div>
+<hr />
+<div class="s104-1">
+<img src="rsrc30P.jpg" class="s104-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/data-php/arrays/em1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 1
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/data-php/arrays/downloads/php-data-php-arrays-ex1.zip" class="s2RA">Download the Exercise 1</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 1:</span> <span class="s2R8"> </span> <span class="s2R9">Create an Array with String, Number and Boolean and display them.</span>
+</div>
+<div class="sH-1">
+<img src="rsrc30R.jpg" class="sH-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/data-php/arrays/ex1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 2
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/data-php/arrays/downloads/php-data-php-arrays-ex2.zip" class="s2RA">Download the Exercise 2</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 2:</span> <span class="s2R8"> </span> <span class="s2R9">Do the following exercise with Arrays</span>
+</div>
+<div class="sYB">
+Define an Empty Array
+</div>
+<div class="sYB">
+Add 1 Element
+</div>
+<div class="sYB">
+Display the Length
+</div>
+<div class="sYB">
+Add 2 Element
+</div>
+<div class="sYB">
+Show the two Elements
+</div>
+<div class="sYB">
+Show the Length of the Array
+</div>
+<div class="sYB">
+Use count( $arrayName) method to show the length of an array.
+</div>
+<div class="s10U-1">
+<img src="rsrc30S.jpg" class="s10U-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/data-php/arrays/ex2/after" class="s2RA">Live Preview</a>
+</div>
+<div class="s5A">
+<span class="s2RW">2.5</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#a2P8" class="class-0"></span> <span class="s2RW">Objects</span>
+</div>
+<div class="sY9">
+Usage of Classes and Objects
+</div>
+<div class="sYB">
+Class is a collection of Variables and Functions together.
+</div>
+<div class="sYB">
+Object is an instance of a Class used to store values in the class variables and access them via the functions.
+</div>
+<div class="sYB">
+Instead of defining methods and variables separately you can create a class and store them.
+</div>
+<div class="sYB">
+You need to create an instance of class to access it.
+</div>
+<div class="sU">
+<span class="s2R7">-&gt;</span> <span class="s2R8"> </span> <span class="s2R9">symbol is used to access the variable or methods in the object.</span>
+</div>
+<div class="sU">
+<span class="s2R7">$thi</span> <span class="s2R8">s</span> <span class="s2R9"> is a special object that will help to access the existing object of a class.</span>
+</div>
+<div class="sYK">
+Class Syntax:
+</div>
+<div class="sYB">
+class Student{
+</div>
+<div class="sYB">
+private $id, $name, $age;
+</div>
+<div class="sU">
+<span class="s2R9">public function __construct($id, $name, $age){</span><br />
+<span class="s2R9">$this-&gt;id = $id;</span><br />
+<span class="s2R9">$this-&gt;name = $name;</span><br />
+<span class="s2R9">$this-&gt;age = $age;</span><br />
+<span class="s2R9">}</span>
+</div>
+<div class="sU">
+<span class="s2R9">public function getName(){</span><br />
+<span class="s2R9">return $this-&gt;name;</span><br />
+<span class="s2R9">}</span>
+</div>
+<div class="sU">
+<span class="s2R9">public function setName($name){</span><br />
+<span class="s2R9">$this-&gt;name = $name;</span><br />
+<span class="s2R9">}</span>
+</div>
+<div class="sU">
+<span class="s2R9">public function getStudentDetails(){</span><br />
+<span class="s2R9">$details = “ID: ” . $this-&gt;id . ” NAME: ” . $this-&gt;name . ” AGE:” . $this-&gt;age;</span><br />
+<span class="s2R9">return $details;</span><br />
+<span class="s2R9">}</span>
+</div>
+<div class="sYB">
+}
+</div>
+<div class="sYK">
+Create Instance of Class
+</div>
+<div class="sU">
+<span class="s2R9">$studentObj = new Student(1, “WP”, 20);</span><br />
+<span class="s2R9">echo $studentObj-&gt;getStudentDetails();</span>
+</div>
+<div class="sE6">
+Sample Example
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/data-php/objects/downloads/php-data-php-objects-em1.zip" class="s2RA">Download the Example</a>
+</div>
+<div class="sYY">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sZ0">
+&lt;html&gt;
+</div>
+<div class="sZ0">
+&lt;head&gt;
+</div>
+<div class="sZ0">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="description" content="Page Description"&gt;
+</div>
+<div class="sZ0">
+    &lt;title&gt;Classes and Objects&lt;/title&gt;
+</div>
+<div class="sZ0">
+    &lt;?php
+</div>
+<div class="sZ0">
+            class Student{
+</div>
+<div class="sZ7">
+                private $id, $name, $age;
+</div>
+<div class="sZ7">
+                public function __construct($id, $name, $age){
+</div>
+<div class="sZ0">
+                    $this-&gt;id = $id;
+</div>
+<div class="sZ0">
+                    $this-&gt;name = $name;
+</div>
+<div class="sZ0">
+                    $this-&gt;age = $age;
+</div>
+<div class="sZ0">
+                }
+</div>
+<div class="sZ7">
+                public function getName(){
+</div>
+<div class="sZ0">
+                    return $this-&gt;name;
+</div>
+<div class="sZ0">
+                }
+</div>
+<div class="sZ7">
+                public function setName($name){
+</div>
+<div class="sZ0">
+                    $this-&gt;name = $name;
+</div>
+<div class="sZ0">
+                }
+</div>
+<div class="sZ7">
+                public function getStudentDetails(){
+</div>
+<div class="sZ0">
+                    $details = "ID: " . $this-&gt;id . " NAME: " . $this-&gt;name . " AGE:" . $this-&gt;age;
+</div>
+<div class="sZ0">
+                    return $details;
+</div>
+<div class="sZ0">
+                }
+</div>
+<div class="sZ7">
+            }
+</div>
+<div class="sZ0">
+    ?&gt;
+</div>
+<div class="sZ7">
+&lt;/head&gt;
+</div>
+<div class="sZ7">
+&lt;body&gt;
+</div>
+<div class="sZ0">
+&lt;h1&gt;Classes and Objects&lt;/h1&gt;
+</div>
+<div class="sZ0">
+&lt;?php
+</div>
+<div class="sZ0">
+    $studentObj = new Student(1, "WP", 20);
+</div>
+<div class="sZ0">
+    echo $studentObj-&gt;getStudentDetails();
+</div>
+<div class="sZ0">
+?&gt;
+</div>
+<div class="sZ7">
+&lt;/body&gt;
+</div>
+<div class="sZY">
+&lt;/html&gt;
+</div>
+<hr />
+<div class="s12S-0">
+<img src="rsrc30T.jpg" class="s12S-1" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/data-php/objects/em1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 1
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/data-php/objects/downloads/php-data-php-objects-ex1.zip" class="s2RA">Download the Exercise 1</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 1:</span> <span class="s2R8"> </span> <span class="s2R9">Create a Product Class with productName and price variables and create one function to access the price.</span>
+</div>
+<div class="s12S-0">
+<img src="rsrc30U.jpg" class="s12S-1" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/data-php/objects/ex1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 2
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/data-php/objects/downloads/php-data-php-objects-ex2.zip" class="s2RA">Download the Exercise 2</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 2:</span> <span class="s2R8"> </span> <span class="s2R9">Create a Calculator class and pass two values and create add and minus function.</span>
+</div>
+<div class="s12S-0">
+<img src="rsrc30V.jpg" class="s12S-1" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/data-php/objects/ex2/after" class="s2RA">Live Preview</a>
+</div>
+<div class="s5A">
+<span class="s2RW">2.6</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#toc18_2.6Constants" class="class-0"></span> <span class="s2RW">Constants</span>
+</div>
+<div class="sY9">
+Usage of Constant
+</div>
+<div class="sYB">
+Constant are like variables but once you define the constant with a fixed value you cannot change it later.
+</div>
+<div class="sH-1">
+<img src="rsrc30W.jpg" class="sH-0" />
+</div>
+<div class="sYB">
+Constant variables values are fixed and cannot be changed later.
+</div>
+<div class="sYB">
+define() is a method used to define a constant.
+</div>
+<div class="sYB">
+constant does not need $ dollar because it is not like a variable.
+</div>
+<div class="sYK">
+Example:
+</div>
+<div class="sYB">
+define(‘AGE’, 20);
+</div>
+<div class="sYB">
+echo AGE;
+</div>
+<div class="sYB">
+You don’t need $ to access it.
+</div>
+<div class="sYB">
+Typically, constant is defined in UPPERCASE to differentiate easy between variables and constants.
+</div>
+<div class="sE6">
+Sample Example
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/data-php/constants/downloads/php-data-php-constants-em1.zip" class="s2RA">Download the Example</a>
+</div>
+<div class="sZ7">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sZ0">
+&lt;html&gt;
+</div>
+<div class="sZ0">
+&lt;head&gt;
+</div>
+<div class="sZ0">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="description" content="Page Description"&gt;
+</div>
+<div class="sZ0">
+    &lt;title&gt;Constants&lt;/title&gt;
+</div>
+<div class="sZ0">
+    &lt;?php
+</div>
+<div class="sZ7">
+       //Define a Constant
+</div>
+<div class="sZ0">
+        define('MESSAGE', "Welcome to PHP!");
+</div>
+<div class="sZ0">
+        define('AGE', 20);
+</div>
+<div class="sZ7">
+    ?&gt;
+</div>
+<div class="sZ7">
+&lt;/head&gt;
+</div>
+<div class="sZ7">
+&lt;body&gt;
+</div>
+<div class="sZ0">
+&lt;h1&gt;Constants&lt;/h1&gt;
+</div>
+<div class="sZ0">
+&lt;?php
+</div>
+<div class="sZ0">
+    echo MESSAGE . ". I am " . AGE . " years old!";
+</div>
+<div class="sZ0">
+?&gt;
+</div>
+<div class="sZ0">
+&lt;/body&gt;
+</div>
+<div class="sZY">
+&lt;/html&gt;
+</div>
+<hr />
+<div class="s14G-1">
+<img src="rsrc30X.jpg" class="s14G-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/data-php/constants/em1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 1
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/data-php/constants/downloads/php-data-php-constants-ex1.zip" class="s2RA">Download the Exercise 1</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 1:</span> <span class="s2R8"> </span> <span class="s2R9">Define String, Number and Boolean Constant and display them.</span>
+</div>
+<div class="sH-1">
+<img src="rsrc30Y.jpg" class="sH-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/data-php/constants/ex1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 2
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/data-php/constants/downloads/php-data-php-constants-ex2.zip" class="s2RA">Download the Exercise 2</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 2:</span> <span class="s2R8"> </span> <span class="s2R9">Try to change the value of Constant and observe the error.</span>
+</div>
+<div class="sH-1">
+<img src="rsrc30Z.jpg" class="sH-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/data-php/constants/ex2/after" class="s2RA">Live Preview</a>
+</div>
+<div class="s5A">
+<span class="s2RW">2.7</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#a2PA" class="class-0"></span> <span class="s2RW">Boolean</span>
+</div>
+<div class="sY9">
+Usage of Boolean
+</div>
+<div class="sYB">
+Boolean Variables helps to make decisions or store a decision based on an expression.
+</div>
+<div class="sYB">
+Boolean values can be true or false.
+</div>
+<div class="sYB">
+You can use boolean variable as a condition to check if the value is true or false.
+</div>
+<div class="sU">
+<span class="s2R9">$result = 2 &gt; 1;</span><br />
+<span class="s2R9">$message = ($result) ? “CORRECT”: “WRONG”;</span>
+</div>
+<div class="sE6">
+Sample Example
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/data-php/boolean/downloads/php-data-php-boolean-em1.zip" class="s2RA">Download the Example</a>
+</div>
+<div class="sZ7">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sZ0">
+&lt;html&gt;
+</div>
+<div class="sZ0">
+&lt;head&gt;
+</div>
+<div class="sZ0">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="description" content="Page Description"&gt;
+</div>
+<div class="sZ0">
+    &lt;title&gt;Constants&lt;/title&gt;
+</div>
+<div class="sZ7">
+&lt;/head&gt;
+</div>
+<div class="sZ7">
+&lt;body&gt;
+</div>
+<div class="sZ0">
+&lt;h1&gt;Constants&lt;/h1&gt;
+</div>
+<div class="sZ0">
+&lt;?php
+</div>
+<div class="sZ0">
+    $result = 2 &gt; 1;
+</div>
+<div class="sZ0">
+    $message = ($result) ? "CORRECT" : "INCORRECT";
+</div>
+<div class="sZ0">
+    echo "Is 2 &gt; 1? - $message";
+</div>
+<div class="sZ0">
+?&gt;
+</div>
+<div class="sZ0">
+&lt;/body&gt;
+</div>
+<div class="sZY">
+&lt;/html&gt;
+</div>
+<hr />
+<div class="s15X-1">
+<img src="rsrc310.jpg" class="s15X-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/data-php/boolean/em1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 1
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/data-php/boolean/downloads/php-data-php-boolean-ex1.zip" class="s2RA">Download the Exercise 1</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 1:</span> <span class="s2R8"> </span> <span class="s2R9">Guess the Output.</span>
+</div>
+<div class="sH-1">
+<img src="rsrc311.jpg" class="sH-0" />
+</div>
+<div class="s168-1">
+<img src="rsrc312.jpg" class="s168-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/data-php/boolean/ex1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 2
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/data-php/boolean/downloads/php-data-php-boolean-ex2.zip" class="s2RA">Download the Exercise 2</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 2:</span> <span class="s2R8"> </span> <span class="s2R9">Create a Constant and use the constant to check the condition.</span>
+</div>
+<div class="s16G-1">
+<img src="rsrc313.jpg" class="s16G-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/data-php/boolean/ex2/after" class="s2RA">Live Preview</a>
+</div>
+<div class="s5A">
+<span class="s2RW">2.8</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#toc20_2.8Date_and_Time" class="class-0"></span> <span class="s2RW">Date and Time</span>
+</div>
+<div class="sY9">
+Usage of Date and Time
+</div>
+<div class="sYB">
+date() is a class library available to access the date.
+</div>
+<div class="sYB">
+We need to pass the format of the date to get the system date.
+</div>
+<div class="sYB">
+$today = date(‘Y-m-d’); //2018-01-01
+</div>
+<div class="sYB">
+$today = date(‘l, F, d, Y’); //Thusday, Jun 21, 2018
+</div>
+<div class="sYB">
+By default, $today will have user system date.
+</div>
+<div class="sYK">
+TimeStamp:
+</div>
+<div class="sYB">
+$todaytime = time();
+</div>
+<div class="sYB">
+echo $todaytime();
+</div>
+<div class="sE6">
+Sample Example
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/data-php/datetime/downloads/php-data-php-datetime-em1.zip" class="s2RA">Download the Example</a>
+</div>
+<div class="sYY">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sZ0">
+&lt;html&gt;
+</div>
+<div class="sZ0">
+&lt;head&gt;
+</div>
+<div class="sZ0">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="description" content="Page Description"&gt;
+</div>
+<div class="sZ0">
+    &lt;title&gt;Date and Time&lt;/title&gt;
+</div>
+<div class="sZ0">
+&lt;/head&gt;
+</div>
+<div class="sZ0">
+&lt;body&gt;
+</div>
+<div class="sZ0">
+&lt;h1&gt;Date and Time&lt;/h1&gt;
+</div>
+<div class="sZ0">
+&lt;?php
+</div>
+<div class="sZ0">
+    echo "Today is " . date('Y-m-d');
+</div>
+<div class="sZ0">
+    echo "&lt;br&gt;";
+</div>
+<div class="sZ0">
+    echo "Today is " . date('d/M/Y');
+</div>
+<div class="sZ0">
+    echo "&lt;br&gt;";
+</div>
+<div class="sZ0">
+    $formatdate = date('l, F d, Y');
+</div>
+<div class="sZ0">
+    echo "Full Length Date: " . $formatdate;
+</div>
+<div class="sZ0">
+?&gt;
+</div>
+<div class="sZ0">
+&lt;/body&gt;
+</div>
+<div class="sZY">
+&lt;/html&gt;
+</div>
+<hr />
+<div class="s17P-0">
+<img src="rsrc314.jpg" class="s17P-1" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/data-php/datetime/em1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 1
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/data-php/datetime/downloads/php-data-php-datetime-ex1.zip" class="s2RA">Download the Exercise 1</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 1:</span> <span class="s2R8"> </span> <span class="s2R9">Print tomorrow date with this function strtotime(‘tomorrow’);</span>
+</div>
+<div class="sYB">
+Format the Date with date function
+</div>
+<div class="s17X">
+echo date( 'd/M/Y', strtotime('+5 days'));
+</div>
+<div class="s181-1">
+<img src="rsrc315.jpg" class="s181-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/data-php/datetime/ex1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 2
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/data-php/datetime/downloads/php-data-php-datetime-ex2.zip" class="s2RA">Download the Exercise 2</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 2:</span> <span class="s2R8"> </span> <span class="s2R9">Print the</span> <span class="s2SA">‘</span> <span class="s2R7">first day of next mont</span> <span class="s2R8">h</span> <span class="s2R9">‘ and format with date function.</span>
+</div>
+<div class="sYK">
+Tip:
+</div>
+<div class="s17X">
+$futuredate = strtotime('first day of next month');
+</div>
+<div class="s18B-1">
+<img src="rsrc316.jpg" class="s18B-0" />
+</div>
+<div class="s18D">
+<a href="https://phpbootcampdemo.com/php/data-php/datetime/ex2/after" class="s2RA">Live Preview</a>
+</div>
+<div class="s18F-0">
+<img src="rsrc2YP.jpg" class="s18F-1" />
+</div>
+<div class="s18H">
+
+</div>
+<div class="s18F-0">
+<img src="rsrc317.jpg" class="s18F-1" />
+</div>
+<div class="s18P">
+<span class="s2T8">3</span> <span class="s2RX-1">          </span> <span id="part0005.xhtml#a2PC" class="class-1"></span> <span class="s2T8">Expressions</span>
+</div>
+<div class="sRS">
+<span class="s2RW">3.1</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#a2PD" class="class-0"></span> <span class="s2RW">Assignments</span>
+</div>
+<div class="sY9">
+Usage of Assignment Expressions
+</div>
+<div class="sYB">
+Operators are used to perform some operation on the variables and they are represented with some symbols.
+</div>
+<div class="sYB">
+Expressions are evaluated into a result value or final value or single value.
+</div>
+<div class="sYB">
+There are couple of Expressions:
+</div>
+<div class="sYK">
+Assignment Expressions
+</div>
+<div class="sYB">
+Arithmetic Expressions
+</div>
+<div class="sYB">
+Comparison Expressions
+</div>
+<div class="sYB">
+Logical Expressions
+</div>
+<div class="sYB">
+We will look at Assignment Expressions in this topic.
+</div>
+<div class="sYW">
+Expressions uses Operators to perform the activity.
+</div>
+<div class="sH-1">
+<img src="rsrc318.jpg" class="sH-0" />
+</div>
+<div class="sU">
+<span class="s2R8">=</span> <span class="s2R9"> is the</span> <span class="s2SA"> </span> <span class="s2R7">assignment operato</span> <span class="s2R8">r</span> <span class="s2R9"> which assigns the value to the variable.</span>
+</div>
+<div class="sYB">
+message = “something”; is a assignment expression that assign value to the message variable.
+</div>
+<div class="sE6">
+Compound Assignment Operators
+</div>
+<div class="sYB">
+Compound assignment operators helps to do more than one operators job. It combines two operators together to perform an action.
+</div>
+<div class="sYB">
+Compound Assignment Operators are:
+</div>
+<div class="sYB">
+.=
+</div>
+<div class="sYB">
++=
+</div>
+<div class="sYB">
+-=
+</div>
+<div class="sYB">
+*=
+</div>
+<div class="sYB">
+/=
+</div>
+<div class="sYB">
+%=
+</div>
+<div class="sYB">
+$message = ‘WP’. ‘Freelancer’;
+</div>
+<div class="sYB">
+OR
+</div>
+<div class="sU">
+<span class="s2R9">$message = ‘WP’;</span><br />
+<span class="s2R9">$message .= ‘Freelancer’;</span>
+</div>
+<div class="sU">
+<span class="s2R9">counter</span> <span class="s2R7">+</span> <span class="s2R8">=</span> <span class="s2R9">1;</span><br />
+<span class="s2R9">counter = counter + 1;</span>
+</div>
+<div class="sU">
+<span class="s2R9">counter</span> <span class="s2R7">-</span> <span class="s2R8">=</span> <span class="s2R9">1;</span><br />
+<span class="s2R9">counter = counter – 1;</span>
+</div>
+<div class="sU">
+<span class="s2R9">counter</span> <span class="s2R7">*</span> <span class="s2R8">=</span> <span class="s2R9">1;</span><br />
+<span class="s2R9">counter = counter * 1;</span>
+</div>
+<div class="sE6">
+Sample Example
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/expressions-php/assignments/downloads/php-expressions-php-assignments-em1.zip" class="s2RA">Download the Example</a>
+</div>
+<div class="sYY">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sZ0">
+&lt;html&gt;
+</div>
+<div class="sZ0">
+&lt;head&gt;
+</div>
+<div class="sZ0">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="description" content="Page Description"&gt;
+</div>
+<div class="sZ0">
+    &lt;title&gt;Assignment Expressions&lt;/title&gt;
+</div>
+<div class="sZ0">
+&lt;/head&gt;
+</div>
+<div class="sZ7">
+&lt;body&gt;
+</div>
+<div class="sZ0">
+&lt;h1&gt;Assignment Expressions&lt;/h1&gt;
+</div>
+<div class="sZ0">
+&lt;?php
+</div>
+<div class="sZ0">
+    $firstName = "WP";
+</div>
+<div class="sZ0">
+    $lastName = "Freelancer";
+</div>
+<div class="sZ0">
+    $fullName = $firstName . ", " . $lastName;
+</div>
+<div class="sZ0">
+    echo "Name $fullName &lt;br&gt;";
+</div>
+<div class="sZ7">
+    $counter = 10;
+</div>
+<div class="sZ0">
+    echo "Counter: $counter &lt;br&gt;";
+</div>
+<div class="sZ0">
+    $counter += $counter;
+</div>
+<div class="sZ0">
+    echo "Counter+=: $counter &lt;br&gt;";
+</div>
+<div class="sZ0">
+    $counter -= 10;
+</div>
+<div class="sZ0">
+    echo "Counter-=: $counter &lt;br&gt;";
+</div>
+<div class="sZ0">
+ 
+</div>
+<div class="sZ0">
+?&gt;
+</div>
+<div class="sZ0">
+&lt;/body&gt;
+</div>
+<div class="sZY">
+&lt;/html&gt;
+</div>
+<hr />
+<div class="s1AN-0">
+<img src="rsrc319.jpg" class="s1AN-1" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/expressions-php/assignments/em1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 1
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/expressions-php/assignments/downloads/php-expressions-php-assignments-ex1.zip" class="s2RA">Download the Exercise 1</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 1:</span> <span class="s2R8"> </span> <span class="s2R9">Guess the difference between the two assignments.</span>
+</div>
+<div class="sYB">
+$counter++ and $counter += counter;
+</div>
+<div class="s1AY-1">
+<img src="rsrc31A.jpg" class="s1AY-0" />
+</div>
+<div class="sH-1">
+<img src="rsrc31B.jpg" class="sH-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/expressions-php/assignments/ex1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 2
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/expressions-php/assignments/downloads/php-expressions-php-assignments-ex2.zip" class="s2RA">Download the Exercise 2</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 2</span> <span class="s2R8">:</span> <span class="s2R9"> What is the result of $counter -= $counter and $counter -= 10; when $counter = 10;</span>
+</div>
+<div class="s1B9-0">
+<img src="rsrc31C.jpg" class="s1B9-1" />
+</div>
+<div class="sH-1">
+<img src="rsrc31D.jpg" class="sH-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/expressions-php/assignments/ex2/after" class="s2RA">Live Preview</a>
+</div>
+<div class="s5A">
+<span class="s2RW">3.2</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#a2PE" class="class-0"></span> <span class="s2RW">Arithmetic</span>
+</div>
+<div class="sY9">
+Usage of Arithmetic Expressions
+</div>
+<div class="sYB">
+Expressions are evaluated into a result value or final value or single value.
+</div>
+<div class="sYB">
+There are couple of Expressions:
+</div>
+<div class="sYB">
+Assignment Expressions
+</div>
+<div class="sYK">
+Arithmetic Expressions
+</div>
+<div class="sYB">
+Comparison Expressions
+</div>
+<div class="sYB">
+Logical Expressions
+</div>
+<div class="sYB">
+We will look at Assignment Expressions in this topic.
+</div>
+<div class="sYW">
+Expressions uses Operators to perform the activity.
+</div>
+<div class="sH-1">
+<img src="rsrc31E.jpg" class="sH-0" />
+</div>
+<div class="sU">
+<span class="s2R8">+</span> <span class="s2R9">is the</span> <span class="s2SA"> </span> <span class="s2R7"> arithmetic operato</span> <span class="s2R8">r</span> <span class="s2R9">which is used to perform mathematics calculations.</span>
+</div>
+<div class="sYB">
+Arithmetic Operators are:
+</div>
+<div class="sYB">
++
+</div>
+<div class="sYB">
+–
+</div>
+<div class="sYB">
+*
+</div>
+<div class="sYB">
+/
+</div>
+<div class="sYB">
+%
+</div>
+<div class="sYB">
+++
+</div>
+<div class="sYB">
+—
+</div>
+<div class="sU">
+<span class="s2R9">//Increment by 1</span><br />
+<span class="s2R9">counte</span> <span class="s2SA">r</span> <span class="s2R7">+</span> <span class="s2R8">+</span> <span class="s2R9">;</span><br />
+<span class="s2R9">counter = counter + 1;</span>
+</div>
+<div class="sU">
+<span class="s2R9">//Decrement by 1</span><br />
+<span class="s2R9">counte</span> <span class="s2SA">r</span> <span class="s2R8">—</span> <span class="s2R9">;</span><br />
+<span class="s2R9">counter = counter – 1;</span>
+</div>
+<div class="sYB">
+Order of Precedence:
+</div>
+<div class="sYB">
+++
+</div>
+<div class="sYB">
+—
+</div>
+<div class="sYB">
+* / %
+</div>
+<div class="sYB">
++ –
+</div>
+<div class="sYB">
+Anything mentioned in () will get higher precedence over anything.
+</div>
+<div class="sYB">
+(5 + 2) * 2; //Result – 14
+</div>
+<div class="sE6">
+Sample Example
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/expressions-php/arithmetic/downloads/php-expressions-php-arithmetic-em1.zip" class="s2RA">Download the Example</a>
+</div>
+<div class="sYY">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sZ0">
+&lt;html&gt;
+</div>
+<div class="sZ0">
+&lt;head&gt;
+</div>
+<div class="sZ0">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="description" content="Page Description"&gt;
+</div>
+<div class="sZ0">
+    &lt;title&gt;Arithmetic Expressions&lt;/title&gt;
+</div>
+<div class="sZ0">
+&lt;/head&gt;
+</div>
+<div class="sZ7">
+&lt;body&gt;
+</div>
+<div class="sZ0">
+&lt;h1&gt;Arithmetic Expressions&lt;/h1&gt;
+</div>
+<div class="sZ0">
+&lt;?php
+</div>
+<div class="sYY">
+    $counter = 10;
+</div>
+<div class="sZ7">
+    echo "Counter: $counter &lt;br&gt;";
+</div>
+<div class="sZ0">
+    $counter++;
+</div>
+<div class="sZ0">
+    echo "Counter++: $counter &lt;br&gt;";
+</div>
+<div class="sZ7">
+    $counter = 10;
+</div>
+<div class="sZ0">
+    echo "Counter: $counter &lt;br&gt;";
+</div>
+<div class="sZ0">
+    $counter--;
+</div>
+<div class="sZ0">
+    echo "Counter--: $counter &lt;br&gt;";
+</div>
+<div class="sZ7">
+    $counter = (10 - 5) * 2;
+</div>
+<div class="sZ0">
+    echo "(10 - 5) * 2: $counter &lt;br&gt;";
+</div>
+<div class="sYY">
+?&gt;
+</div>
+<div class="sZ0">
+&lt;/body&gt;
+</div>
+<div class="sZY">
+&lt;/html&gt;
+</div>
+<hr />
+<div class="s70-1">
+<img src="rsrc31F.jpg" class="s70-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/expressions-php/arithmetic/em1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 1
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/expressions-php/arithmetic/downloads/php-expressions-php-arithmetic-ex1.zip" class="s2RA">Download the Exercise 1</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 1:</span> <span class="s2R8"> </span> <span class="s2R9">Find a 15 is even or odd using Modulus (%) symbol.</span>
+</div>
+<div class="s17X">
+$counter = 15%2;
+</div>
+<div class="s1DK-0">
+<img src="rsrc31G.jpg" class="s1DK-1" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/expressions-php/arithmetic/ex1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 2
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/expressions-php/arithmetic/downloads/php-expressions-php-arithmetic-ex2.zip" class="s2RA">Download the Exercise 2</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 2</span> <span class="s2R8">:</span> <span class="s2R9"> Try to apply the ++ to the following things:</span>
+</div>
+<div class="sYB">
+1++;
+</div>
+<div class="sYB">
+echo “$counter++”;
+</div>
+<div class="sYB">
+++1;
+</div>
+<div class="sYB">
+$message = “Hello”;
+</div>
+<div class="sYB">
+$message++;
+</div>
+<div class="sYB">
+$result = true;
+</div>
+<div class="sYB">
+$result++;
+</div>
+<div class="sYB">
+Some of the things won’t work so comment them and run the code.
+</div>
+<div class="s1E3-1">
+<img src="rsrc31H.jpg" class="s1E3-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/expressions-php/arithmetic/ex2/after" class="s2RA">Live Preview</a>
+</div>
+<div class="s5A">
+<span class="s2RW">3.3</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#toc24_3.3Comparison" class="class-0"></span> <span class="s2RW">Comparison</span>
+</div>
+<div class="sY9">
+Usage of Comparison Expressions
+</div>
+<div class="sYB">
+Expressions are evaluated into a result value or final value or single value.
+</div>
+<div class="sYB">
+There are couple of Expressions:
+</div>
+<div class="sYB">
+Assignment Expressions
+</div>
+<div class="sYB">
+Arithmetic Expressions
+</div>
+<div class="sYK">
+Comparison Expressions
+</div>
+<div class="sYB">
+Logical Expressions
+</div>
+<div class="sYB">
+We will look at Comparison Expressions in this topic.
+</div>
+<div class="sYW">
+Expressions uses Operators to perform the activity.
+</div>
+<div class="sYB">
+Comparison expression always evaluate into a true or false value.
+</div>
+<div class="sH-1">
+<img src="rsrc31J.jpg" class="sH-0" />
+</div>
+<div class="s1EM">
+<span class="s2R8">&gt;</span> <span class="s2R9">is the</span> <span class="s2R7">comparison operato</span> <span class="s2R8">r</span> <span class="s2R9">which compares the two values.</span>
+</div>
+<div class="sYB">
+message variable will be have a true or false.
+</div>
+<div class="sE6">
+Comparison Operations:
+</div>
+<div class="sYB">
+&lt; – Less than
+</div>
+<div class="sYB">
+&gt; – Greater than
+</div>
+<div class="sYB">
+== – Equal to
+</div>
+<div class="sYB">
+=== – Equal value and Equal Data Type
+</div>
+<div class="sYB">
+!== – Not Equal Value and Equal Data Type
+</div>
+<div class="sYB">
+!= – Not Equal
+</div>
+<div class="sYB">
+&gt;= – Greater than and Equal
+</div>
+<div class="sYB">
+&lt;= – Less than and Equal
+</div>
+<div class="sU">
+Conditional (Ternary) Operator
+</div>
+<div class="sYB">
+PHP has a conditional operator that assigns a value to a variable based on some condition.
+</div>
+<div class="sU">
+<span class="s2R9">$variablename = ($condition) ? value1:value2</span><br />
+<span class="s2R9">$counter = (10&lt;=10) ? 10 : 0;</span>
+</div>
+<div class="sE6">
+Sample Example
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/expressions-php/comparison/downloads/php-expressions-php-comparison-em1.zip" class="s2RA">Download the Example</a>
+</div>
+<div class="sYY">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sZ0">
+&lt;html&gt;
+</div>
+<div class="sZ0">
+&lt;head&gt;
+</div>
+<div class="sZ0">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="description" content="Page Description"&gt;
+</div>
+<div class="sZ0">
+    &lt;title&gt;Comparison Expressions&lt;/title&gt;
+</div>
+<div class="sZ0">
+&lt;/head&gt;
+</div>
+<div class="sZ7">
+&lt;body&gt;
+</div>
+<div class="sZ0">
+&lt;h1&gt;Comparison Expressions&lt;/h1&gt;
+</div>
+<div class="sZ0">
+&lt;?php
+</div>
+<div class="sYY">
+    $counter = 10 == 10;
+</div>
+<div class="sZ0">
+    echo $counter; //1 = true and 0 = false
+</div>
+<div class="sZ7">
+    echo "&lt;br&gt;";
+</div>
+<div class="sZ0">
+    $result = 15 &lt;= 21;
+</div>
+<div class="sZ0">
+    $message = ($result)? "YES": "NO";
+</div>
+<div class="sZ0">
+    echo $message;
+</div>
+<div class="sYY">
+?&gt;
+</div>
+<div class="sZ0">
+&lt;/body&gt;
+</div>
+<div class="sZY">
+&lt;/html&gt;
+</div>
+<hr />
+<div class="sH-1">
+<img src="rsrc31K.jpg" class="sH-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/expressions-php/comparison/em1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 1
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/expressions-php/comparison/downloads/php-expressions-php-comparison-ex1.zip" class="s2RA">Download the Exercise 1</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 1:</span> <span class="s2R8"> </span> <span class="s2R9">Learn how to compare NULL in the string with === operator.</span>
+</div>
+<div class="sH-1">
+<img src="rsrc31M.jpg" class="sH-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/expressions-php/comparison/ex1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 2
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/expressions-php/comparison/downloads/php-expressions-php-comparison-ex2.zip" class="s2RA">Download the Exercise 2</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 2</span> <span class="s2R8">:</span> <span class="s2R9"> Find empty string from 2 strings.</span>
+</div>
+<div class="sH-1">
+<img src="rsrc31N.jpg" class="sH-0" />
+</div>
+<div class="sH-1">
+<img src="rsrc31P.jpg" class="sH-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/expressions-php/comparison/ex2/after" class="s2RA">Live Preview</a>
+</div>
+<div id="part0005.xhtml#a2PG" class="s1GF">
+3.4 Logical
+</div>
+<div class="sY9">
+Usage of Logical Expressions
+</div>
+<div class="sYB">
+Expressions are evaluated into a result value or final value or single value.
+</div>
+<div class="sYB">
+There are couple of Expressions:
+</div>
+<div class="sYB">
+Assignment Expressions
+</div>
+<div class="sYB">
+Arithmetic Expressions
+</div>
+<div class="sYB">
+Comparison Expressions
+</div>
+<div class="sYK">
+Logical Expressions
+</div>
+<div class="sYB">
+We will look at Logical Expressions in this topic.
+</div>
+<div class="sYW">
+Expressions uses Operators to perform the activity.
+</div>
+<div class="sYB">
+Logical Operators are used to check the if the condition is true or false based on many conditions.
+</div>
+<div class="sH-1">
+<img src="rsrc31R.jpg" class="sH-0" />
+</div>
+<div class="s1EM">
+<span class="s2R7">&amp;&amp;</span> <span class="s2R8"> </span> <span class="s2R9">is the</span> <span class="s2SA"> </span> <span class="s2R7">logical operato</span> <span class="s2R8">r</span> <span class="s2R9"> which checks left side and right side value and decides if the condition is true or false.</span>
+</div>
+<div class="sU">
+<span class="s2R9">(5 &gt; 3) – true</span><br />
+<span class="s2R9">(8 &lt; 5) – false</span><br />
+<span class="s2R9">true &amp;&amp; false = false</span>
+</div>
+<div class="sU">
+<span class="s2R9">result variable will have</span> <span class="s2R7">false</span> <span class="s2R9">boolean value.</span>
+</div>
+<div class="sU">
+Logical Operations:
+</div>
+<div class="sYB">
+&amp;&amp; – AND
+</div>
+<div class="sYB">
+|| – OR
+</div>
+<div class="sYB">
+! – NOT
+</div>
+<div class="sU">
+Order of Precedence
+</div>
+<div class="sYB">
+Order of precedence decides which operates evaluates first.
+</div>
+<div class="sYB">
+NOT
+</div>
+<div class="sYB">
+AND
+</div>
+<div class="sYB">
+OR
+</div>
+<div class="sE6">
+Sample Example
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/expressions-php/logical/downloads/php-expressions-php-logical-em1.zip" class="s2RA">Download the Example</a>
+</div>
+<div class="sZ7">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sZ0">
+&lt;html&gt;
+</div>
+<div class="sZ0">
+&lt;head&gt;
+</div>
+<div class="sZ0">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="description" content="Page Description"&gt;
+</div>
+<div class="sZ0">
+    &lt;title&gt;Logical Expressions&lt;/title&gt;
+</div>
+<div class="sZ0">
+&lt;/head&gt;
+</div>
+<div class="sZ7">
+&lt;body&gt;
+</div>
+<div class="sZ0">
+&lt;h1&gt;Logical Expressions&lt;/h1&gt;
+</div>
+<div class="sZ0">
+&lt;?php
+</div>
+<div class="sZ7">
+    $input1 = 10;
+</div>
+<div class="sZ0">
+    $input2 = 20;
+</div>
+<div class="sZ0">
+    $result = ($input1 &lt; $input2) || ($input1 == $input2);
+</div>
+<div class="sZ7">
+    echo $input1 . " &lt;= " . $input2 . " is " . $result;
+</div>
+<div class="sZ0">
+?&gt;
+</div>
+<div class="sZ0">
+&lt;/body&gt;
+</div>
+<div class="sZY">
+&lt;/html&gt;
+</div>
+<hr />
+<div class="s1J1-1">
+<img src="rsrc31S.jpg" class="s1J1-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/expressions-php/logical/em1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 1
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/expressions-php/logical/downloads/php-expressions-php-logical-ex1.zip" class="s2RA">Download the Exercise 1</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 1:</span> <span class="s2R8"> </span> <span class="s2R9">Guess the Output from below code.</span>
+</div>
+<div class="s1J9-1">
+<img src="rsrc31T.jpg" class="s1J9-0" />
+</div>
+<div class="s1JB">
+<a href="https://phpbootcampdemo.com/php/expressions-php/logical/ex1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 2
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/expressions-php/logical/downloads/php-expressions-php-logical-ex2.zip" class="s2RA">Download the Exercise 2</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 2</span> <span class="s2R8">:</span> <span class="s2R9"> Guess the output from the below code.</span>
+</div>
+<div class="sH-1">
+<img src="rsrc31U.jpg" class="sH-0" />
+</div>
+<div class="s1JK">
+<a href="https://phpbootcampdemo.com/php/expressions-php/logical/ex2/after" class="s2RA">Live Preview</a>
+</div>
+<div class="s18F-0">
+<img src="rsrc2YP.jpg" class="s18F-1" />
+</div>
+<div class="s1JP">
+
+</div>
+<div class="s18F-0">
+<img src="rsrc31V.jpg" class="s18F-1" />
+</div>
+<div class="s1JV">
+<span class="s2T8">4</span> <span class="s2RX-1">          </span> <span id="part0005.xhtml#a2PH" class="class-1"></span> <span class="s2T8">Statements</span>
+</div>
+<div class="sRS">
+<span class="s2RW">4.1</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#a2PJ" class="class-0"></span> <span class="s2RW">If Statements</span>
+</div>
+<div class="sY9">
+Usage of if Statements
+</div>
+<div class="sYB">
+if statement are used to check a condition and make a decision based on the result of the condition.
+</div>
+<div class="sYB">
+It can choose some action when the condition is true and also take some action when it false.
+</div>
+<div class="sYB">
+You can nest multiple conditions together and decide to choose one action based on multiple conditions.
+</div>
+<div class="sYK">
+Syntax:
+</div>
+<div class="sYB">
+if ( condition1 ){
+</div>
+<div class="sYB">
+// Statements
+</div>
+<div class="sYB">
+} else if( condition1 || condition2 ){
+</div>
+<div class="sYB">
+// Statements
+</div>
+<div class="sYB">
+} else {
+</div>
+<div class="sYB">
+// Statements
+</div>
+<div class="sYB">
+}
+</div>
+<div class="sYK">
+Example 1:
+</div>
+<div class="sYB">
+if( $marks &gt; 35 ){
+</div>
+<div class="sYB">
+echo “Your’re Passed!”;
+</div>
+<div class="sYB">
+}else{
+</div>
+<div class="sYB">
+echo “Better Luck Next Time!”;
+</div>
+<div class="sYB">
+}
+</div>
+<div class="sYK">
+Example 2:
+</div>
+<div class="sYB">
+if( $marks &gt; 35 &amp;&amp; $marks &lt; 60 ){
+</div>
+<div class="sYB">
+echo “You are Passed with Grade C”;
+</div>
+<div class="sYB">
+}else if ( $marks &gt; 60 &amp;&amp; $marks &lt; 80 ){
+</div>
+<div class="sYB">
+echo “You are Passed with Grade B”;
+</div>
+<div class="sYB">
+}else if ( $marks &gt; 80 ){
+</div>
+<div class="sYB">
+echo “You are Passed with Grade A”;
+</div>
+<div class="sYB">
+}else{
+</div>
+<div class="sYB">
+echo “Try Again!”;
+</div>
+<div class="sYB">
+}
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/statements-php/if/downloads/php-statements-php-if-em1.zip" class="s2RA">Download the Example</a>
+</div>
+<div class="sYY">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sZ0">
+&lt;html&gt;
+</div>
+<div class="sZ0">
+&lt;head&gt;
+</div>
+<div class="sZ0">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="description" content="Page Description"&gt;
+</div>
+<div class="sZ0">
+    &lt;title&gt;If Statements&lt;/title&gt;
+</div>
+<div class="sZ0">
+    &lt;?php
+</div>
+<div class="sZ0">
+        $dayOfWeek = "Wednesday";
+</div>
+<div class="sZ7">
+        $result = "";
+</div>
+<div class="sZ0">
+        $dayOfWeek = strtolower($dayOfWeek);
+</div>
+<div class="sZ7">
+        if( $dayOfWeek == 'monday' || $dayOfWeek == 'mon'){
+</div>
+<div class="sZ0">
+            $result = "First Day of Week";
+</div>
+<div class="sZ0">
+        }else if( $dayOfWeek == 'tuesday' || $dayOfWeek == 'tue' ){
+</div>
+<div class="sZ0">
+            $result = "Second Days of Week";
+</div>
+<div class="sZ0">
+        }else if( $dayOfWeek == 'wednesday' || $dayOfWeek == 'wed' ){
+</div>
+<div class="sZ0">
+            $result = "Mid Week";
+</div>
+<div class="sZ0">
+        }else if( $dayOfWeek == 'thursday' || $dayOfWeek == 'thurs'){
+</div>
+<div class="sZ0">
+            $result = "Preparing for Weekend";
+</div>
+<div class="sZ0">
+        }else if( $dayOfWeek == 'friday' || $dayOfWeek == 'fri'){
+</div>
+<div class="sZ0">
+            $result = "It's Friday!";
+</div>
+<div class="sZ0">
+        }else if( $dayOfWeek == 'saturday' || $dayOfWeek == 'sat' ){
+</div>
+<div class="sZ0">
+            $result = "Enjoying Day!";
+</div>
+<div class="sZ0">
+        }else if( $dayOfWeek == 'sunday' || $dayOfWeek == 'sun'){
+</div>
+<div class="sZ0">
+            $result = "Resting Day!";
+</div>
+<div class="sZ0">
+        }else{
+</div>
+<div class="sZ0">
+            $result = "Cannot find that Value!";
+</div>
+<div class="sZ0">
+        }
+</div>
+<div class="sZ0">
+    ?&gt;
+</div>
+<div class="sZ7">
+&lt;/head&gt;
+</div>
+<div class="sZ7">
+&lt;body&gt;
+</div>
+<div class="sZ0">
+&lt;h1&gt;If Statements&lt;/h1&gt;
+</div>
+<div class="sZ0">
+&lt;?php
+</div>
+<div class="sZ0">
+    echo "This is the result: " . $result;
+</div>
+<div class="sZ7">
+?&gt;
+</div>
+<div class="sZ0">
+&lt;/body&gt;
+</div>
+<div class="sZY">
+&lt;/html&gt;
+</div>
+<hr />
+<div class="s1N3-1">
+<img src="rsrc31W.jpg" class="s1N3-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/statements-php/if/em1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 1
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/statements-php/if/downloads/php-statements-php-if-ex1.zip" class="s2RA">Download the Exercise 1</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 1:</span> <span class="s2R8"> </span> <span class="s2R9">Set the inputVariable number between 1 to 10 and check if that variable is between 1 to 10 with if Statement.</span>
+</div>
+<div class="s1NB-1">
+<img src="rsrc31X.jpg" class="s1NB-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/statements-php/if/ex1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 2
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/statements-php/if/downloads/php-statements-php-if-ex2.zip" class="s2RA">Download the Exercise 2</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 2:</span> <span class="s2R8"> </span> <span class="s2R9">Enter the age of the user in the InputVariable and decides if he is kid, man (age &gt; 21) or senior citizen (age &gt; 55).</span>
+</div>
+<div class="s1NK-1">
+<img src="rsrc31Y.jpg" class="s1NK-0" />
+</div>
+<div class="s1JB">
+<a href="https://phpbootcampdemo.com/php/statements-php/if/ex2/after" class="s2RA">Live Preview</a>
+</div>
+<div class="s5A">
+<span class="s2RW">4.2</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#a2PK" class="class-0"></span> <span class="s2RW">Switch Statements</span>
+</div>
+<div class="sY9">
+Usage of Switch Statements
+</div>
+<div class="sYB">
+switch statement are used to check a value and make a decision based on the result of the value matching.
+</div>
+<div class="sYK">
+Syntax:
+</div>
+<div class="sYB">
+switch( $variable ){
+</div>
+<div class="sYB">
+case value:
+</div>
+<div class="sYB">
+//Statement
+</div>
+<div class="sYB">
+break;
+</div>
+<div class="sYB">
+case value:
+</div>
+<div class="sYB">
+//Statement
+</div>
+<div class="sYB">
+break;
+</div>
+<div class="sYB">
+default:
+</div>
+<div class="sYB">
+//Statement
+</div>
+<div class="sYB">
+break;
+</div>
+<div class="sYB">
+}
+</div>
+<div class="sYK">
+Example 1:
+</div>
+<div class="sYB">
+switch ( $dayOfWeek ){
+</div>
+<div class="sYB">
+case ‘Mon’:
+</div>
+<div class="sYB">
+echo “Welcome Monday”;
+</div>
+<div class="sYB">
+break;
+</div>
+<div class="sYB">
+case ‘Tuesday’:
+</div>
+<div class="sYB">
+echo “Welcome Tuesday”;
+</div>
+<div class="sYB">
+break;
+</div>
+<div class="sYB">
+default:
+</div>
+<div class="sYB">
+echo “Try Again!”;
+</div>
+<div class="sYB">
+break;
+</div>
+<div class="sYB">
+}
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/statements-php/switch/downloads/php-statements-php-switch-em1.zip" class="s2RA">Download the Example</a>
+</div>
+<div class="sYY">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sZ0">
+&lt;html&gt;
+</div>
+<div class="sZ0">
+&lt;head&gt;
+</div>
+<div class="sZ0">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="description" content="Page Description"&gt;
+</div>
+<div class="sZ0">
+    &lt;title&gt;Switch Statements&lt;/title&gt;
+</div>
+<div class="sZ0">
+    &lt;?php
+</div>
+<div class="sZ0">
+        $dayOfWeek = "Friday";
+</div>
+<div class="sZ7">
+        $result = "";
+</div>
+<div class="sZ0">
+        $dayOfWeek = strtolower($dayOfWeek);
+</div>
+<div class="sZ7">
+        switch($dayOfWeek){
+</div>
+<div class="sZ0">
+            case 'monday':
+</div>
+<div class="sZ0">
+                $result = "First Day of Week";
+</div>
+<div class="sZ0">
+                break;
+</div>
+<div class="sZ0">
+            case 'tuesday':
+</div>
+<div class="sZ0">
+                $result = "Second Days of Week";
+</div>
+<div class="sZ0">
+                break;
+</div>
+<div class="sZ0">
+            case 'wednesday':
+</div>
+<div class="sZ0">
+                $result = "Mid Week";
+</div>
+<div class="sZ0">
+                break;
+</div>
+<div class="sZ0">
+            case 'thursday':
+</div>
+<div class="sZ0">
+                $result = "Preparing for Weekend";
+</div>
+<div class="sZ0">
+                break;
+</div>
+<div class="sZ0">
+            case 'friday':
+</div>
+<div class="sZ0">
+                $result = "It's Friday!";
+</div>
+<div class="sZ0">
+                break;
+</div>
+<div class="sZ0">
+            case 'saturday':
+</div>
+<div class="sZ0">
+                $result = "Enjoying Day!";
+</div>
+<div class="sZ0">
+                break;
+</div>
+<div class="sZ0">
+            case 'sunday':
+</div>
+<div class="sZ0">
+                $result = "Resting Day!";
+</div>
+<div class="sZ0">
+                break;
+</div>
+<div class="sZ0">
+            default:
+</div>
+<div class="sZ0">
+                $result = "Cannot find that Value!";
+</div>
+<div class="sZ0">
+        }
+</div>
+<div class="sZ0">
+    ?&gt;
+</div>
+<div class="sZ7">
+&lt;/head&gt;
+</div>
+<div class="sZ7">
+&lt;body&gt;
+</div>
+<div class="sZ0">
+&lt;h1&gt;Switch Statements&lt;/h1&gt;
+</div>
+<div class="sZ0">
+&lt;?php
+</div>
+<div class="sZ0">
+    echo "This is the result: " . $result;
+</div>
+<div class="sZ0">
+?&gt;
+</div>
+<div class="sZ0">
+&lt;/body&gt;
+</div>
+<div class="sZY">
+&lt;/html&gt;
+</div>
+<hr />
+<div class="s1S2-0">
+<img src="rsrc31Z.jpg" class="s1S2-1" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/statements-php/switch/em1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 1
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/statements-php/switch/downloads/php-statements-php-switch-ex1.zip" class="s2RA">Download the Exercise 1</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 1:</span> <span class="s2R8"> </span> <span class="s2R9">Set InputVariable number between 1 to 10 and check if the variable is between 1 to 10 as requested with the switch Statement.</span>
+</div>
+<div class="s1SA-0">
+<img src="rsrc320.jpg" class="s1SA-1" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/statements-php/switch/ex1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 2
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/statements-php/switch/downloads/php-statements-php-switch-ex2.zip" class="s2RA">Download the Exercise 2</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 2:</span> <span class="s2R8"> </span> <span class="s2R9">Set a Variable to user age and decides if he is kid, man (age &gt; 21) or senior citizen (age &gt; 55). Use the Switch Statement.</span>
+</div>
+<div class="sYK">
+Tips:
+</div>
+<div class="sYB">
+switch(true){
+</div>
+<div class="sYB">
+case ($input &gt; 21):
+</div>
+<div class="sYB">
+//Statements
+</div>
+<div class="sYB">
+break;
+</div>
+<div class="sYB">
+}
+</div>
+<div class="s1SS-0">
+<img src="rsrc321.jpg" class="s1SS-1" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/statements-php/switch/ex2/after" class="s2RA">Live Preview</a>
+</div>
+<div class="s5A">
+<span class="s2RW">4.3</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#a2PM" class="class-0"></span> <span class="s2RW">While Statements</span>
+</div>
+<div class="sY9">
+Usage of While Loop
+</div>
+<div class="sYB">
+While statement are used to loop a block code and run it until a condition is met.
+</div>
+<div class="sYW">
+Running the same block of code until the condition is satisfied.
+</div>
+<div class="sYK">
+Syntax:
+</div>
+<div class="sYB">
+while( condition ) {
+</div>
+<div class="sYB">
+//Statements
+</div>
+<div class="sYB">
+}
+</div>
+<div class="sYK">
+Example 1:
+</div>
+<div class="sYB">
+$counter = 0;
+</div>
+<div class="sYB">
+while ( $counter &lt; = 10 ){
+</div>
+<div class="sYB">
+$counter++;
+</div>
+<div class="sYB">
+}
+</div>
+<div class="sYK">
+Syntax:
+</div>
+<div class="sYB">
+do{
+</div>
+<div class="sYB">
+//Statement
+</div>
+<div class="sYB">
+}while ( condition );
+</div>
+<div class="sYK">
+Example 1:
+</div>
+<div class="sYB">
+$counter = 0;
+</div>
+<div class="sYB">
+do{
+</div>
+<div class="sYB">
+$counter++;
+</div>
+<div class="sYB">
+} while ( $counter &lt; = 10 );
+</div>
+<div class="sU">
+<span class="s2R7">break;</span> <span class="s2R8"> </span> <span class="s2R9">– break is the keyword used to break the loop and come out of the loop and execute statements after the while loop.</span>
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/statements-php/while/downloads/php-statements-php-while-em1.zip" class="s2RA">Download the Example</a>
+</div>
+<div class="sZ7">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sZ0">
+&lt;html&gt;
+</div>
+<div class="sZ0">
+&lt;head&gt;
+</div>
+<div class="sZ0">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="description" content="Page Description"&gt;
+</div>
+<div class="sZ0">
+    &lt;title&gt;Boolean Expressions&lt;/title&gt;
+</div>
+<div class="sZ0">
+    &lt;script&gt;
+</div>
+<div class="sZ0">
+ 
+</div>
+<div class="sZ0">
+       var result = 2 &gt; 1;
+</div>
+<div class="sZ0">
+       var message = (result) ? "CORRECT": "WRONG";
+</div>
+<div class="sZ0">
+ 
+</div>
+<div class="sZ0">
+    &lt;/script&gt;
+</div>
+<div class="sZ7">
+&lt;/head&gt;
+</div>
+<div class="sZ7">
+&lt;body&gt;
+</div>
+<div class="sZ0">
+&lt;h1&gt;Boolean Expression&lt;/h1&gt;
+</div>
+<div class="sZ0">
+    &lt;script type="text/javascript"&gt;
+</div>
+<div class="sZ0">
+        document.write(message);
+</div>
+<div class="sZ0">
+    &lt;/script&gt;
+</div>
+<div class="sZ0">
+&lt;/body&gt;
+</div>
+<div class="sZY">
+&lt;/html&gt;
+</div>
+<hr />
+<div class="s1UB-0">
+<img src="rsrc322.jpg" class="s1UB-1" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/statements-php/while/em1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 1
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/statements-php/while/downloads/php-statements-php-while-ex1.zip" class="s2RA">Download the Exercise 1</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 1:</span> <span class="s2R8"> </span> <span class="s2R9">Define CONSTANTS INPUT1 and INPUT2 and print all the numbers between them. Print only maximum of 10 numbers.</span>
+</div>
+<div class="sU">
+<span class="s2R7">break; –</span> <span class="s2R8"> </span> <span class="s2R9">is a keyword that can be used in the loop to break from the loop.</span>
+</div>
+<div class="sU">
+<span class="s2R7">continue;</span> <span class="s2R8"> </span> <span class="s2R9">– is a keyword that can be used in the loop to continue the loop by skipping the below statements.</span>
+</div>
+<div class="sYK">
+Tip:
+</div>
+<div class="sU">
+<span class="s2R9">if( $counter &gt;= 10){</span><br />
+<span class="s2R7">    break;</span><br />
+<span class="s2R9">}</span>
+</div>
+<div class="s1UR-0">
+<img src="rsrc323.jpg" class="s1UR-1" />
+</div>
+<div class="s1JB">
+<a href="https://phpbootcampdemo.com/php/statements-php/while/ex1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 2
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/statements-php/while/downloads/php-statements-php-while-ex2.zip" class="s2RA">Download the Exercise 2</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 2:</span> <span class="s2R8"> </span> <span class="s2R9">Define TWO CONSTANT and print</span> <span class="s2SA"> </span> <span class="s2R7">EVE</span> <span class="s2R8">N</span> <span class="s2R9"> numbers only between them. Print only maximum of 10 numbers.</span>
+</div>
+<div class="s1UZ-1">
+<img src="rsrc324.jpg" class="s1UZ-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/statements-php/while/ex2/after" class="s2RA">Live Preview</a>
+</div>
+<div class="s5A">
+<span class="s2RW">4.4</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#a2PN" class="class-0"></span> <span class="s2RW">For Statements</span>
+</div>
+<div class="sY9">
+Usage of For Loop
+</div>
+<div class="sYB">
+for Loop are used to loop a block code and run it until a condition is met.
+</div>
+<div class="sYW">
+Running the same block of code until the condition is satisfied.
+</div>
+<div class="sYK">
+Syntax:
+</div>
+<div class="sYB">
+for( counter initialization; condition; increments ) {
+</div>
+<div class="sYB">
+//Statements
+</div>
+<div class="sYB">
+}
+</div>
+<div class="sYK">
+Example 1:
+</div>
+<div class="sYB">
+for($counter = 0; $counter &lt;= 10; $counter++){
+</div>
+<div class="sYB">
+echo $counter;
+</div>
+<div class="sYB">
+}
+</div>
+<div class="s1VE">
+for($counter = 0, $input1 = 10; $counter &lt;= 10; $counter++, $input1++){
+</div>
+<div class="sYB">
+echo $input1;
+</div>
+<div class="sYB">
+}
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/statements-php/for/downloads/php-statements-php-for-em1.zip" class="s2RA">Download the Example</a>
+</div>
+<div class="sYY">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sZ0">
+&lt;html&gt;
+</div>
+<div class="sZ0">
+&lt;head&gt;
+</div>
+<div class="sZ0">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="description" content="Page Description"&gt;
+</div>
+<div class="sZ0">
+    &lt;title&gt;For Statements&lt;/title&gt;
+</div>
+<div class="sZ0">
+&lt;/head&gt;
+</div>
+<div class="sZ7">
+&lt;body&gt;
+</div>
+<div class="sZ0">
+&lt;h1&gt;For Statements&lt;/h1&gt;
+</div>
+<div class="sZ0">
+&lt;?php
+</div>
+<div class="sZ0">
+    for($counter=0; $counter&lt;=10; $counter++){
+</div>
+<div class="sZ0">
+        echo "For Counter: " . $counter . "&lt;br&gt;" ;
+</div>
+<div class="sZ0">
+    }
+</div>
+<div class="sZ7">
+?&gt;
+</div>
+<div class="sZ7">
+&lt;/body&gt;
+</div>
+<div class="sZY">
+&lt;/html&gt;
+</div>
+<hr />
+<div class="s1W7-1">
+<img src="rsrc325.jpg" class="s1W7-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/statements-php/for/em1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 1
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/statements-php/for/downloads/php-statements-php-for-ex1.zip" class="s2RA">Download the Exercise 1</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 1:</span> <span class="s2R8"> </span> <span class="s2R9">Define two constant number with default value and print all the numbers between them. Print only maximum of 10 numbers.</span>
+</div>
+<div class="sU">
+<span class="s2R7">break; –</span> <span class="s2R8"> </span> <span class="s2R9">is a keyword that can be used in the loop to break from the loop.</span>
+</div>
+<div class="sU">
+<span class="s2R7">continue;</span> <span class="s2R8"> </span> <span class="s2R9">– is a keyword that can be used in the loop to continue the loop by skipping the below statements.</span>
+</div>
+<div class="s1WH-0">
+<img src="rsrc326.jpg" class="s1WH-1" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/statements-php/for/ex1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 2
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/statements-php/for/downloads/php-statements-php-for-ex2.zip" class="s2RA">Download the Exercise 2</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 2:</span> <span class="s2R8"> </span> <span class="s2R9">Define two constant with default value and print</span> <span class="s2SA"> </span> <span class="s2R7">EVE</span> <span class="s2R8">N</span> <span class="s2R9"> numbers only between them. Print only maximum of 10 numbers.</span>
+</div>
+<div class="sYB">
+Use the Loop like this:
+</div>
+<div class="s1WU-1">
+<img src="rsrc327.jpg" class="s1WU-0" />
+</div>
+<div class="s1WY-1">
+<img src="rsrc328.jpg" class="s1WY-0" />
+</div>
+<div class="s1X0">
+<a href="https://phpbootcampdemo.com/php/statements-php/for/ex2/after" class="s2RA">Live Preview</a>
+</div>
+<div class="s18F-0">
+<img src="rsrc2YP.jpg" class="s18F-1" />
+</div>
+<div class="s18H">
+
+</div>
+<div class="s18F-0">
+<img src="rsrc329.jpg" class="s18F-1" />
+</div>
+<div class="s1X7">
+<span class="s2T8">5</span> <span class="s2RX-1">          </span> <span id="part0005.xhtml#toc37_5General" class="class-1"></span> <span class="s2T8">General</span>
+</div>
+<div class="sRS">
+<span class="s2RW">5.1</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#toc32_5.1Exceptions" class="class-0"></span> <span class="s2RW">Exceptions</span>
+</div>
+<div class="sY9">
+Usage of Try Catch Blocks
+</div>
+<div class="sYB">
+There are 3 types of error you can find in PHP:
+</div>
+<div class="sYB">
+Syntax Errors
+</div>
+<div class="sYB">
+Runtime Errors
+</div>
+<div class="sYB">
+Logic Errors
+</div>
+<div class="sU">
+<span class="s2R7">Syntax error</span> <span class="s2R8">s</span> <span class="s2R9"> is where you forgot to follow the rules of PHP. It will cause error when you execute the program.</span>
+</div>
+<div class="sU">
+<span class="s2R7">Runtime Error</span> <span class="s2R8">s</span> <span class="s2R9"> could be when it is running the program the PHP interpreter could not understand how to proceed and throws and error.</span>
+</div>
+<div class="sU">
+<span class="s2R7">Logic Error</span> <span class="s2R8">s</span> <span class="s2R9"> are logically error that are cause because the program instructions are not logically correct.</span>
+</div>
+<div class="sYB">
+Exceptions in programming are referred as Runtime Errors.
+</div>
+<div class="sYB">
+When Runtime Errors happens there is a way to catch those errors and pass it to the application and make a clean exit from the program.
+</div>
+<div class="sYB">
+This is called as Exception Handling.
+</div>
+<div class="sYB">
+The process of making sure the code will not break and if it does it know the reason for it and make a clean exit.
+</div>
+<div class="sYB">
+To handle Runtime errors in the PHP we have try-catch blocks. Using this we can catch the errors and decide what to do next.
+</div>
+<div class="sYK">
+SYNTAX:
+</div>
+<div class="sYB">
+try{
+</div>
+<div class="sYB">
+//Statements
+</div>
+<div class="sYB">
+}catch(Exception $exceptionObj) {
+</div>
+<div class="sYB">
+//Statments
+</div>
+<div class="sYB">
+}
+</div>
+<div class="sYK">
+Example:
+</div>
+<div class="sU">
+<span class="s2R7">tr</span> <span class="s2R8">y</span> <span class="s2R9">{</span>
+</div>
+<div class="sYB">
+$firstName = “”;
+</div>
+<div class="sU">
+<span class="s2R9">if( $firstName == “” )</span> <span class="s2R7">throw new Exception(</span> <span class="s2R9">“Name is empty” );</span>
+</div>
+<div class="sU">
+<span class="s2SA">}</span> <span class="s2R7">catc</span> <span class="s2R8">h</span> <span class="s2R9">(Exception $e){</span>
+</div>
+<div class="sYB">
+echo “Message: ” . $e-&gt;getMessage();
+</div>
+<div class="sU">
+<span class="s2SA">}</span> <span class="s2R7">finall</span> <span class="s2R8">y</span> <span class="s2R9">{</span>
+</div>
+<div class="sYB">
+echo “This is from the Finally Block”;
+</div>
+<div class="sYB">
+}
+</div>
+<div class="sU">
+<span class="s2R7">try {} bloc</span> <span class="s2R8">k</span> <span class="s2R9"> will have all the statements</span>
+</div>
+<div class="sU">
+<span class="s2R7">thro</span> <span class="s2R8">w</span> <span class="s2R9"> is a keyword to throw an error from the program. Once the program throw an error it will stop processing the next steps. It will jump to catch {} block.</span>
+</div>
+<div class="sU">
+<span class="s2R7">catch {} bloc</span> <span class="s2R8">k</span> <span class="s2R9"> will be executed once the throw is called. The program will execute out from the catch block safely.</span>
+</div>
+<div class="sU">
+<span class="s2R7">finally{} bloc</span> <span class="s2R8">k</span> <span class="s2R9"> will execute every time irrespective of error or not. It is good place to close all open connections. Handle clean exit.</span>
+</div>
+<div class="s1J9-1">
+<img src="rsrc32A.jpg" class="s1J9-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/general-php/exceptions/downloads/php-general-php-exceptions-em1.zip" class="s2RA">Download the Example</a>
+</div>
+<div class="sYY">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sZ0">
+&lt;html&gt;
+</div>
+<div class="sZ0">
+&lt;head&gt;
+</div>
+<div class="sZ0">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="description" content="Page Description"&gt;
+</div>
+<div class="sZ0">
+    &lt;title&gt;Exceptions&lt;/title&gt;
+</div>
+<div class="sZ0">
+&lt;/head&gt;
+</div>
+<div class="sZ7">
+&lt;body&gt;
+</div>
+<div class="sZ0">
+&lt;h1&gt;Exceptions&lt;/h1&gt;
+</div>
+<div class="sZ0">
+&lt;?php
+</div>
+<div class="sZ0">
+    try{
+</div>
+<div class="sZ0">
+ 
+</div>
+<div class="sZ0">
+        throw new Exception("Error in the try block!");
+</div>
+<div class="sZ7">
+    }catch(Exception $e){
+</div>
+<div class="sZ7">
+        echo "Exception: ". $e -&gt;getMessage();
+</div>
+<div class="sZ7">
+    }finally{
+</div>
+<div class="sZ7">
+        echo" &lt;br&gt; This is from the Finally Block!";
+</div>
+<div class="sZ7">
+    }
+</div>
+<div class="sZ7">
+?&gt;
+</div>
+<div class="sZ7">
+&lt;/body&gt;
+</div>
+<div class="sZY">
+&lt;/html&gt;
+</div>
+<hr />
+<div class="s1Z7-0">
+<img src="rsrc32B.jpg" class="s1Z7-1" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/general-php/exceptions/em1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 1
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/general-php/exceptions/downloads/php-general-php-exceptions-ex1.zip" class="s2RA">Download the Exercise 1</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 1:</span> <span class="s2R8"> </span> <span class="s2R9">Define one constant number and raise error if the number is not integer.</span>
+</div>
+<div class="sYK">
+Tip:
+</div>
+<div class="s17X">
+if( !is_numeric(INPUTVALUE ) )
+</div>
+<div class="s1ZH-0">
+<img src="rsrc32C.jpg" class="s1ZH-1" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/general-php/exceptions/ex1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 2
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/general-php/exceptions/downloads/php-general-php-exceptions-ex2.zip" class="s2RA">Download the Exercise 2</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 2:</span> <span class="s2R8"> </span> <span class="s2R9">Define a number between 1 to 100.</span>
+</div>
+<div class="sYB">
+Show the following message on the page:
+</div>
+<div class="sYB">
+If the input is between 1 to 100 – less than 100.
+</div>
+<div class="sYB">
+If the input is greater than 100 – greater than 100.
+</div>
+<div class="sYB">
+If the input is not number – throw an error
+</div>
+<div class="sH-1">
+<img src="rsrc32D.jpg" class="sH-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/general-php/exceptions/ex2/after" class="s2RA">Live Preview</a>
+</div>
+<div class="s5A">
+<span class="s2RW">5.2</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#a2PS" class="class-0"></span> <span class="s2RW">Debug</span>
+</div>
+<div class="sY9">
+Step 1: Write PHP Code with Errors
+</div>
+<div class="sYK">
+Try the following Errors:
+</div>
+<div class="sYB">
+$inputValue = 10;echo inputValue;
+</div>
+<div class="sYB">
+echo “This is a String” + “another String”;
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/general-php/debug/downloads/php-general-php-debug-em1.zip" class="s2RA">Download the Exercise 1</a>
+</div>
+<div class="sYY">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sZ0">
+&lt;html&gt;
+</div>
+<div class="sZ0">
+&lt;head&gt;
+</div>
+<div class="sZ0">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="description" content="Page Description"&gt;
+</div>
+<div class="sZ0">
+    &lt;title&gt;Debugging&lt;/title&gt;
+</div>
+<div class="sZ0">
+&lt;/head&gt;
+</div>
+<div class="sZ7">
+&lt;body&gt;
+</div>
+<div class="sZ0">
+&lt;h1&gt;Debugging&lt;/h1&gt;
+</div>
+<div class="sZ0">
+&lt;?php
+</div>
+<div class="sZ7">
+    $inputValue = 10;
+</div>
+<div class="sZ0">
+    echo inputValue;
+</div>
+<div class="sZ7">
+?&gt;
+</div>
+<div class="sZ7">
+&lt;/body&gt;
+</div>
+<div class="sZ0">
+&lt;/html&gt;
+</div>
+<div class="sH-1">
+<img src="rsrc32E.jpg" class="sH-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/general-php/debug/em1/after" class="s2RA">Live Preview 1</a>
+</div>
+<div class="sE6">
+Exercise 1:
+</div>
+<div class="sYB">
+Add Sum() method in the php file and do not create that function. This will cause the program to fail.
+</div>
+<div class="sU">
+Exercise 2:
+</div>
+<div class="sYB">
+Write echo statement before the sum() method and echo after the sum() method.
+</div>
+<div class="sYB">
+Find out the error by seeing the echo messages.
+</div>
+<div class="sU">
+Step 2: Debug
+</div>
+<div class="sYB">
+Using echo you need to write the trace logs.
+</div>
+<div class="sYB">
+See which the last echo that was executed.
+</div>
+<div class="s5A">
+<span class="s2RW">5.3</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#a2PT" class="class-0"></span> <span class="s2RW">Files</span>
+</div>
+<div class="sY9">
+Usage of Files
+</div>
+<div class="sYB">
+You can read files on the server using the PHP libraries.
+</div>
+<div class="sYB">
+Modes used during opening the file:
+</div>
+<div class="sU">
+<span class="s2R7">r</span> <span class="s2R8">b</span> <span class="s2R9"> – Open the file for reading purpose.</span>
+</div>
+<div class="sU">
+<span class="s2R7">w</span> <span class="s2R8">b</span> <span class="s2R9"> – Create a new file and if already exists then it overwrite it.</span>
+</div>
+<div class="sU">
+<span class="s2R7">a</span> <span class="s2R8">b</span> <span class="s2R9"> – Create the file and append the data is already existed.</span>
+</div>
+<div class="sU">
+<span class="s2R7">x</span> <span class="s2R8">b</span> <span class="s2R9"> – Create a new file and if already exists then it does not create.</span>
+</div>
+<div class="sYB">
+Here are the methods to open and close a file
+</div>
+<div class="sU">
+<span class="s2R7">fope</span> <span class="s2R8">n</span> <span class="s2R9">($path, $mode)</span>
+</div>
+<div class="sU">
+<span class="s2R7">fclos</span> <span class="s2R8">e</span> <span class="s2R9">($file)</span>
+</div>
+<div class="sU">
+<span class="s2R7">feo</span> <span class="s2R8">f</span> <span class="s2R9">($file) – To check if the file is at the end.</span>
+</div>
+<div class="sYB">
+Method to read and write into the file:
+</div>
+<div class="sU">
+<span class="s2R7">frea</span> <span class="s2R8">d</span> <span class="s2R9">($file, $length) – length is used to specify number of bytes to read.</span>
+</div>
+<div class="sU">
+<span class="s2R7">fget</span> <span class="s2R8">s</span> <span class="s2R9">($file) – Read a line</span>
+</div>
+<div class="sU">
+<span class="s2R7">fwrit</span> <span class="s2R8">e</span> <span class="s2R9">($file, $data) – Write the $data value to the file.</span>
+</div>
+<div class="sU">
+Sample Example
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/general-php/files/downloads/php-general-php-files-em1.zip" class="s2S2">Download the Example</a>
+</div>
+<div class="sYY">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sZ0">
+&lt;html&gt;
+</div>
+<div class="sZ0">
+&lt;head&gt;
+</div>
+<div class="sZ0">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="description" content="Page Description"&gt;
+</div>
+<div class="sZ0">
+    &lt;title&gt;Files&lt;/title&gt;
+</div>
+<div class="sZ0">
+&lt;/head&gt;
+</div>
+<div class="sZ7">
+&lt;body&gt;
+</div>
+<div class="sZ0">
+&lt;h1&gt;Files&lt;/h1&gt;
+</div>
+<div class="sZ0">
+&lt;?php
+</div>
+<div class="sZ7">
+    //Create a local file and name it "readme.txt"
+</div>
+<div class="sZ7">
+    /*
+</div>
+<div class="sZ0">
+     * READ A FILE - rb mode
+</div>
+<div class="sZ0">
+     *
+</div>
+<div class="sZ0">
+     */
+</div>
+<div class="sZ0">
+    $file = fopen('readme.txt', 'rb');
+</div>
+<div class="sZ0">
+    $line = "";
+</div>
+<div class="sZ0">
+    while( !feof($file) ){
+</div>
+<div class="sZ0">
+        $line = fgets($file);
+</div>
+<div class="sZ0">
+        echo $line;
+</div>
+<div class="sZ0">
+    }
+</div>
+<div class="sZ0">
+    fclose($file);
+</div>
+<div class="sZ7">
+    /*
+</div>
+<div class="sZ0">
+     * WRITE A FILE - wb mode
+</div>
+<div class="sZ0">
+     *
+</div>
+<div class="sZ0">
+     */
+</div>
+<div class="sZ0">
+    $file = fopen("newfile.txt", "wb");
+</div>
+<div class="sZ0">
+    fwrite( $file,  "&lt;br&gt;&lt;h1&gt;It is a long established fact that a reader
+</div>
+<div class="sZ0">
+                     will be distracted by the readable
+</div>
+<div class="sZ0">
+                    content of a page when looking at its layout.&lt;/h1&gt;");
+</div>
+<div class="sZ0">
+    fclose( $file );
+</div>
+<div class="sZ7">
+?&gt;
+</div>
+<div class="sZ7">
+&lt;/body&gt;
+</div>
+<div class="sZY">
+&lt;/html&gt;
+</div>
+<hr />
+<div class="sH-1">
+<img src="rsrc32F.jpg" class="sH-0" />
+</div>
+<div class="s1DK-0">
+<img src="rsrc32G.jpg" class="s1DK-1" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/general-php/files/em1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 1
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/general-php/files/downloads/php-general-php-files-ex1.zip" class="s2RA">Download the Exercise 1</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 1:</span> <span class="s2R8"> </span> <span class="s2R9">Write a new file newfile.txt with some content. Read the same file and display the output on the browser.</span>
+</div>
+<div class="sH-1">
+<img src="rsrc32H.jpg" class="sH-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/general-php/files/ex1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 2
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/general-php/files/downloads/php-general-php-files-ex2.zip" class="s2RA">Download the Exercise 2</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 2:</span> <span class="s2R8"> </span> <span class="s2R9">Append some text to an existing file with</span> <span class="s2SA">‘</span> <span class="s2R7">a</span> <span class="s2R8">b</span> <span class="s2R9">‘ mode.</span>
+</div>
+<div class="sH-1">
+<img src="rsrc32J.jpg" class="sH-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/general-php/files/ex2/after" class="s2RA">Live Preview</a>
+</div>
+<div class="s5A">
+<span class="s2RW">5.4</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#a2PU" class="class-0"></span> <span class="s2RW">Includes &amp; Requires</span>
+</div>
+<div class="sY9">
+Usage of Includes and Requires
+</div>
+<div class="sYB">
+PHP allows to break the code into small pieces of file and then include then in the main page.
+</div>
+<div class="sYB">
+These are statements that can be used:
+</div>
+<div class="sYB">
+include
+</div>
+<div class="sYB">
+include_once
+</div>
+<div class="sYB">
+require
+</div>
+<div class="sYB">
+require_once
+</div>
+<div class="sYB">
+include and require both help to include the file into another file.
+</div>
+<div class="sU">
+<span class="s2R9">If the included file is not available then</span> <span class="s2SA"> </span> <span class="s2R7">includ</span> <span class="s2R8">e</span> <span class="s2R9"> statement will ignore and continue to execute the other part of the code.</span>
+</div>
+<div class="sU">
+<span class="s2R9">if the included file is not available then</span> <span class="s2SA"> </span> <span class="s2R7">requir</span> <span class="s2R8">e</span> <span class="s2R9"> statement will stop the execution of the program.</span>
+</div>
+<div class="sYB">
+require_once or include_once will not import if the file is already included.
+</div>
+<div class="sE6">
+Sample Example
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/general-php/includes/downloads/php-general-php-includes-em1.zip" class="s2RA">Download the Example</a>
+</div>
+<div class="sYK">
+File: index.php
+</div>
+<div class="sZ7">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sZ0">
+&lt;html&gt;
+</div>
+<div class="sZ0">
+&lt;head&gt;
+</div>
+<div class="sZ0">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="description" content="Page Description"&gt;
+</div>
+<div class="sZ0">
+    &lt;title&gt;Includes&lt;/title&gt;
+</div>
+<div class="sZ0">
+&lt;/head&gt;
+</div>
+<div class="sZ7">
+&lt;body&gt;
+</div>
+<div class="sZ0">
+&lt;h1&gt;Includes&lt;/h1&gt;
+</div>
+<div class="sZ0">
+&lt;?php
+</div>
+<div class="sZ7">
+    include 'functions.php';
+</div>
+<div class="sZ0">
+    echo add(1, 2);
+</div>
+<div class="sZ7">
+    require 'display.php';
+</div>
+<div class="sZ0">
+?&gt;
+</div>
+<div class="sZ7">
+&lt;/body&gt;
+</div>
+<div class="sZ0">
+&lt;/html&gt;
+</div>
+<div class="sYK">
+File: functions.php
+</div>
+<div class="s17X">
+&lt;?php
+</div>
+<div class="s24E">
+function add($a, $b){
+</div>
+<div class="s24G">
+return $a + $b;
+</div>
+<div class="s24E">
+}
+</div>
+<div class="s17X">
+?&gt;
+</div>
+<div class="sYK">
+File: display.php
+</div>
+<div class="s17X">
+&lt;?php
+</div>
+<div class="s24E">
+echo '&lt;br&gt;&lt;h1&gt;This is displayed from display.php&lt;/h1&gt;';
+</div>
+<div class="s24R">
+?&gt;
+</div>
+<hr />
+<div class="sH-1">
+<img src="rsrc32K.jpg" class="sH-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/general-php/includes/em1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 1
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/general-php/includes/downloads/php-general-php-includes-ex1.zip" class="s2RA">Download the Exercise 1</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 1:</span> <span class="s2R8"> </span> <span class="s2R9">Use the same code from above and delete the display.php and functions.php in this exercise and see the error.</span>
+</div>
+<div class="sYB">
+Observe the Warning and Fatal Error. Warning is coming from include and Fatal Error from require.
+</div>
+<div class="sH-1">
+<img src="rsrc32M.jpg" class="sH-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/general-php/includes/ex1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 2
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/general-php/includes/downloads/php-general-php-includes-ex2.zip" class="s2RA">Download the Exercise 2</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 2:</span> <span class="s2R8"> </span> <span class="s2R9">Put all the HTML code in index.html and include that file in the index.php</span>
+</div>
+<div class="sH-1">
+<img src="rsrc32N.jpg" class="sH-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/general-php/includes/ex2/after" class="s2RA">Live Preview</a>
+</div>
+<div id="part0005.xhtml#toc36_5.5_Libraries" class="s25D">
+5.5 Libraries
+</div>
+<div class="sY9">
+Usage of Libraries
+</div>
+<div class="sYB">
+You can create a library file and put all the functions that you commonly use in this library file.
+</div>
+<div class="sYB">
+This is the common practice for any web development where you break the main program into smaller chunks of code and then include them in the main program.
+</div>
+<div class="sU">
+<span class="s2R9">You can use</span> <span class="s2SA"> </span> <span class="s2TT">include</span> <span class="s2TU"> </span> <span class="s2R9">statement to import this functions file in your page so that you can access those functions.</span>
+</div>
+<div class="sE6">
+Sample Example
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/general-php/libraries/downloads/php-general-php-libraries-em1.zip" class="s2RA">Download the Example</a>
+</div>
+<div class="sYY">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sZ0">
+&lt;html&gt;
+</div>
+<div class="sZ0">
+&lt;head&gt;
+</div>
+<div class="sZ0">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="description" content="Page Description"&gt;
+</div>
+<div class="sZ0">
+    &lt;title&gt;Libraries&lt;/title&gt;
+</div>
+<div class="sZ0">
+&lt;/head&gt;
+</div>
+<div class="sZ7">
+&lt;body&gt;
+</div>
+<div class="sZ0">
+&lt;h1&gt;Libraries&lt;/h1&gt;
+</div>
+<div class="sZ0">
+&lt;?php
+</div>
+<div class="sZ7">
+    include 'calculator.php';
+</div>
+<div class="sZ7">
+    define('INPUTVALUE1', 50);
+</div>
+<div class="sZ0">
+    define('INPUTVALUE2', 23);
+</div>
+<div class="sZ7">
+    echo 'Calculator : '. INPUTVALUE1 . ' AND ' . INPUTVALUE2 . '&lt;br&gt;';
+</div>
+<div class="sZ0">
+    echo 'Addition: '. add(INPUTVALUE1, INPUTVALUE2) . '&lt;br&gt;';
+</div>
+<div class="sZ0">
+    echo 'Minus: '. minus(INPUTVALUE1, INPUTVALUE2) . '&lt;br&gt;';
+</div>
+<div class="sZ0">
+    echo 'Multiply: '. multiply(INPUTVALUE1, INPUTVALUE2) . '&lt;br&gt;';
+</div>
+<div class="sZ7">
+?&gt;
+</div>
+<div class="sZ7">
+&lt;/body&gt;
+</div>
+<div class="sZ0">
+&lt;/html&gt;
+</div>
+<div class="s26A">
+FileName: functions.php
+</div>
+<div class="s17X">
+&lt;?php
+</div>
+<div class="s26D">
+function add($a, $b){
+</div>
+<div class="s24G">
+return $a + $b;
+</div>
+<div class="s24E">
+}
+</div>
+<div class="s26D">
+function minus($a, $b){
+</div>
+<div class="s24G">
+return $a - $b;
+</div>
+<div class="s24E">
+}
+</div>
+<div class="s26D">
+function multiply($a, $b){
+</div>
+<div class="s24G">
+return $a * $b;
+</div>
+<div class="s24E">
+}
+</div>
+<div class="s26R">
+?&gt;
+</div>
+<hr />
+<div class="s26W-1">
+<img src="rsrc32P.jpg" class="s26W-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/general-php/libraries/em1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 1
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 1:</span> <span class="s2R8"> </span> <span class="s2R9">Create your own Library and use it. Continue using it for other projects as well.</span>
+</div>
+<div class="s271">
+Follow this practice to split the project into small files and include them.
+</div>
+<div class="sH-1">
+<img src="rsrc2YP.jpg" class="sH-0" />
+</div>
+<div class="s274">
+
+</div>
+<div class="sH-1">
+<img src="rsrc32R.jpg" class="sH-0" />
+</div>
+<div class="s279">
+<span class="s2T8">6</span> <span class="s2RX-1">          </span> <span id="part0005.xhtml#toc42_6Forms" class="class-1"></span> <span class="s2T8">Forms</span>
+</div>
+<div class="sRS">
+<span class="s2RW">6.1</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#toc38_6.1GET" class="class-0"></span> <span class="s2RW">GET</span>
+</div>
+<div class="sY9">
+Usage of Form GET Method
+</div>
+<div class="sYB">
+GET is type of method used by the form to pass the form data to the page that is mentioned in the action of the form.
+</div>
+<div class="sYB">
+GET method will send the data in the url.
+</div>
+<div class="sH-1">
+<img src="rsrc32S.jpg" class="sH-0" />
+</div>
+<div class="sYB">
+When you define a form here are the important things:
+</div>
+<div class="sU">
+<span class="s2R7">actio</span> <span class="s2R8">n</span> <span class="s2R9"> attribute – This define to which file this form data has to be sent to.</span>
+</div>
+<div class="sU">
+<span class="s2R7">metho</span> <span class="s2R8">d</span> <span class="s2R9"> attribute are of two types – GET and POST.</span>
+</div>
+<div class="sYB">
+GET means data is visible in the URL bar.
+</div>
+<div class="sYB">
+POST means data is hidden.
+</div>
+<div class="sYB">
+Using GET we can send limited data and using POST we can send huge data.
+</div>
+<div class="sU">
+<span class="s2R9">&lt;input&gt; type has a</span> <span class="s2SA"> </span> <span class="s2R7">nam</span> <span class="s2R8">e</span> <span class="s2R9"> attribute which helps to define the name of the element. This name is like a variable that holds the data what user enters.</span>
+</div>
+<div class="sU">
+<span class="s2R7">name attribut</span> <span class="s2R8">e</span> <span class="s2R9"> for form element is posted to the next page.</span>
+</div>
+<div class="sU">
+<span class="s2R9">&lt;input</span> <span class="s2SA"> </span> <span class="s2R7">type=”submit</span> <span class="s2R8">”</span> <span class="s2R9">&gt; will show a submit button when clicked the form will be submit the data the file. This action is taken care by the browser.</span>
+</div>
+<div class="sE6">
+How to Read the GET Variables from the URL
+</div>
+<div class="sYB">
+If the URL is something like:
+</div>
+<div class="sU">
+<span class="s2R9">http://site.com/display.php</span> <span class="s2SA">?</span> <span class="s2R7">input_tex</span> <span class="s2R8">t</span> <span class="s2R9">=hello</span> <span class="s2SA">&amp;</span> <span class="s2R7">input_emai</span> <span class="s2R8">l</span> <span class="s2R9">=test@test.com</span>
+</div>
+<div class="sU">
+<span class="s2R9">$text = $_GET[</span> <span class="s2SA">‘</span> <span class="s2R7">input_tex</span> <span class="s2R8">t</span> <span class="s2R9">‘];</span><br />
+<span class="s2R9">$emailid = $_GET[</span> <span class="s2SA">‘</span> <span class="s2R7">input_emai</span> <span class="s2R8">l</span> <span class="s2R9">‘];</span>
+</div>
+<div class="sYB">
+URL will have the name=value pairs separated with &amp;.
+</div>
+<div class="sYB">
+$_GET[] is an array that gets created automatically with the GET parameters which you can access it and check if any value is there or not.
+</div>
+<div class="sYB">
+$_GET[] is super global variable which is always available even it is empty it is available.
+</div>
+<div class="sYB">
+When you click the submit button the form data is passed to display.php which read the parameters and display the output.
+</div>
+<div class="sYB">
+Browser will also go from index.php page to display.php page.
+</div>
+<div class="sH-1">
+<img src="rsrc32T.jpg" class="sH-0" />
+</div>
+<div class="sE6">
+Sample Example
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/forms-php/get/downloads/php-forms-php-get-em1.zip" class="s2RA">Download the Example</a>
+</div>
+<div class="sZ7">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sZ0">
+&lt;html&gt;
+</div>
+<div class="sZ0">
+&lt;head&gt;
+</div>
+<div class="sZ0">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="description" content="Page Description"&gt;
+</div>
+<div class="sZ0">
+    &lt;title&gt;Forms - GET&lt;/title&gt;
+</div>
+<div class="sZ0">
+&lt;/head&gt;
+</div>
+<div class="sZ7">
+&lt;body&gt;
+</div>
+<div class="sZ0">
+&lt;h1&gt;Form - GET&lt;/h1&gt;
+</div>
+<div class="sZ0">
+&lt;form action="display.php" method="get"&gt;
+</div>
+<div class="sZ0">
+    &lt;fieldset&gt;
+</div>
+<div class="sZ0">
+        &lt;legend&gt;Student Enquiry Form&lt;/legend&gt;
+</div>
+<div class="sZ0">
+        &lt;p&gt;
+</div>
+<div class="sZ0">
+            &lt;label for="input_text"&gt;Text:&lt;/label&gt;
+</div>
+<div class="sZ0">
+            &lt;input name ="input_text" type="text" placeholder="Text"&gt;
+</div>
+<div class="sZ0">
+        &lt;/p&gt;
+</div>
+<div class="sZ0">
+        &lt;p&gt;
+</div>
+<div class="sZ0">
+            &lt;label for="input_email"&gt;Email:&lt;/label&gt;
+</div>
+<div class="sZ0">
+            &lt;input name ="input_email" type="email" placeholder="test@domain.com"&gt;
+</div>
+<div class="sZ0">
+        &lt;/p&gt;
+</div>
+<div class="sZ0">
+    &lt;/fieldset&gt;
+</div>
+<div class="sZ0">
+    &lt;p&gt;&lt;input type="submit"&gt;    &lt;input type="reset"&gt;&lt;/p&gt;
+</div>
+<div class="sZ0">
+&lt;/form&gt;
+</div>
+<div class="sZ0">
+&lt;/body&gt;
+</div>
+<div class="sZ0">
+&lt;/html&gt;
+</div>
+<div class="sYK">
+FileName: display.php
+</div>
+<div class="sYY">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sZ0">
+&lt;html&gt;
+</div>
+<div class="sZ0">
+&lt;head&gt;
+</div>
+<div class="sZ0">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="description" content="Page Description"&gt;
+</div>
+<div class="sZ0">
+    &lt;title&gt;Forms - GET&lt;/title&gt;
+</div>
+<div class="sZ0">
+&lt;/head&gt;
+</div>
+<div class="sZ7">
+&lt;body&gt;
+</div>
+<div class="sZ7">
+&lt;h1&gt;Form - GET&lt;/h1&gt;
+</div>
+<div class="sZ0">
+&lt;a href="index.php"&gt;Back to Home Page&lt;/a&gt;&lt;br&gt;
+</div>
+<div class="sZ0">
+&lt;?php
+</div>
+<div class="sZ7">
+    $name = $_GET['input_text'];
+</div>
+<div class="sZ0">
+    $email = $_GET['input_email'];
+</div>
+<div class="sZ7">
+    echo "Name: $name and Email: $email";
+</div>
+<div class="sZ0">
+?&gt;
+</div>
+<div class="sZ0">
+&lt;/body&gt;
+</div>
+<div class="sZY">
+&lt;/html&gt;
+</div>
+<hr />
+<div class="sH-1">
+<img src="rsrc32U.jpg" class="sH-0" />
+</div>
+<div class="sH-1">
+<img src="rsrc32V.jpg" class="sH-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/forms-php/get/em1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 1
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/forms-php/get/downloads/php-forms-php-get-ex1.zip" class="s2RA">Download the Exercise 1</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 1:</span> <span class="s2R8"> </span> <span class="s2R9">Create a Form that accepts two numbers and show the calculation of those two numbers on another page.</span>
+</div>
+<div class="s2A3-1">
+<img src="rsrc32W.jpg" class="s2A3-0" />
+</div>
+<div class="s2A7-1">
+<img src="rsrc32X.jpg" class="s2A7-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/forms-php/get/ex1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 2
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/forms-php/get/downloads/php-forms-php-get-ex2.zip" class="s2RA">Download the Exercise 2</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 2:</span> <span class="s2R8"> </span> <span class="s2R9">Show the result on the same page and redirect to same page.</span>
+</div>
+<div class="sYB">
+Tips:
+</div>
+<div class="sYB">
+Check if the values are not empty
+</div>
+<div class="s17X">
+if( !empty( $_GET['input_text1'] ) &amp;&amp; !empty( $_GET['input_text2'] ) ){
+</div>
+<div class="s2AJ-0">
+<img src="rsrc32Y.jpg" class="s2AJ-1" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/forms-php/get/ex2/after" class="s2RA">Live Preview</a>
+</div>
+<div class="s5A">
+<span class="s2RW">6.2</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#a2PY" class="class-0"></span> <span class="s2RW">POST</span>
+</div>
+<div class="sY9">
+Usage of Form POST Method
+</div>
+<div class="sYB">
+POST is type of method used by the form to pass the form data to the page that is mentioned in the action of the form.
+</div>
+<div class="sYB">
+POST method will send the data as an attachment. It is not visible in the URL.
+</div>
+<div class="sH-1">
+<img src="rsrc32Z.jpg" class="sH-0" />
+</div>
+<div class="sYB">
+When you define a form here are the important things:
+</div>
+<div class="sU">
+<span class="s2R7">actio</span> <span class="s2R8">n</span> <span class="s2R9"> attribute – This define to which file this form data has to be sent to.</span>
+</div>
+<div class="sU">
+<span class="s2R7">metho</span> <span class="s2R8">d</span> <span class="s2R9"> attribute are of two types – GET and POST.</span>
+</div>
+<div class="sYB">
+GET means data is visible in the URL bar.
+</div>
+<div class="sYB">
+POST means data is hidden.
+</div>
+<div class="sYB">
+Using GET we can send limited data and using POST we can send huge data.
+</div>
+<div class="sU">
+<span class="s2R9">&lt;input&gt; type has a</span> <span class="s2SA"> </span> <span class="s2R7">nam</span> <span class="s2R8">e</span> <span class="s2R9"> attribute which helps to define the name of the element. This name is like a variable that holds the data what user enters.</span>
+</div>
+<div class="sU">
+<span class="s2R7">name attribut</span> <span class="s2R8">e</span> <span class="s2R9"> for form element is posted to the next page.</span>
+</div>
+<div class="sU">
+<span class="s2R9">&lt;input</span> <span class="s2SA"> </span> <span class="s2R7">type=”submit</span> <span class="s2R8">”</span> <span class="s2R9">&gt; will show a submit button when clicked the form will be submit the data the file. This action is taken care by the browser.</span>
+</div>
+<div class="sU">
+How to Read the POST Variables
+</div>
+<div class="sYB">
+POST variable are not visible in the URL.
+</div>
+<div class="sU">
+<span class="s2R9">$text = $_POST[</span> <span class="s2SA">‘</span> <span class="s2R7">input_tex</span> <span class="s2R8">t</span> <span class="s2R9">‘];</span><br />
+<span class="s2R9">$emailid = $_POST[</span> <span class="s2SA">‘</span> <span class="s2R7">input_emai</span> <span class="s2R8">l</span> <span class="s2R9">‘];</span>
+</div>
+<div class="sYB">
+$_POST[] is an array that gets created automatically with the POST parameters which you can access it and check if any value is there or not.
+</div>
+<div class="sYB">
+$_POST[] is super global variable which is always available even it is empty it is available.
+</div>
+<div class="sYB">
+When you click the submit button the form data is passed to display.php which read the parameters and display the output.
+</div>
+<div class="sYB">
+Browser will also go from index.php page to display.php page.
+</div>
+<div class="sH-1">
+<img src="rsrc330.jpg" class="sH-0" />
+</div>
+<div class="sE6">
+Sample Example
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/forms-php/post/downloads/php-forms-php-post-em1.zip" class="s2RA">Download the Example</a>
+</div>
+<div class="sYY">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sZ0">
+&lt;html&gt;
+</div>
+<div class="sZ0">
+&lt;head&gt;
+</div>
+<div class="sZ0">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="description" content="Page Description"&gt;
+</div>
+<div class="sZ0">
+    &lt;title&gt;Forms - POST&lt;/title&gt;
+</div>
+<div class="sZ0">
+&lt;/head&gt;
+</div>
+<div class="sZ7">
+&lt;body&gt;
+</div>
+<div class="sZ0">
+&lt;h1&gt;Form - POST&lt;/h1&gt;
+</div>
+<div class="sZ0">
+&lt;form action="display.php" method="post"&gt;
+</div>
+<div class="sZ0">
+    &lt;fieldset&gt;
+</div>
+<div class="sZ0">
+        &lt;legend&gt;Student Enquiry Form&lt;/legend&gt;
+</div>
+<div class="sZ0">
+        &lt;p&gt;
+</div>
+<div class="sZ0">
+            &lt;label for="input_text"&gt;Text:&lt;/label&gt;
+</div>
+<div class="sZ0">
+            &lt;input name ="input_text" type="text" placeholder="Text"&gt;
+</div>
+<div class="sZ0">
+        &lt;/p&gt;
+</div>
+<div class="sZ0">
+        &lt;p&gt;
+</div>
+<div class="sZ0">
+            &lt;label for="input_email"&gt;Email:&lt;/label&gt;
+</div>
+<div class="sZ0">
+            &lt;input name ="input_email" type="email" placeholder="test@domain.com"&gt;
+</div>
+<div class="sZ0">
+        &lt;/p&gt;
+</div>
+<div class="sZ0">
+    &lt;/fieldset&gt;
+</div>
+<div class="sZ0">
+    &lt;p&gt;&lt;input type="submit"&gt;    &lt;input type="reset"&gt;&lt;/p&gt;
+</div>
+<div class="sZ0">
+&lt;/form&gt;
+</div>
+<div class="sZ0">
+&lt;/body&gt;
+</div>
+<div class="sZ0">
+&lt;/html&gt;
+</div>
+<div class="sYK">
+FileName: display.php
+</div>
+<div class="sZ7">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sZ0">
+&lt;html&gt;
+</div>
+<div class="sZ0">
+&lt;head&gt;
+</div>
+<div class="sZ0">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="description" content="Page Description"&gt;
+</div>
+<div class="sZ0">
+    &lt;title&gt;Forms - POST&lt;/title&gt;
+</div>
+<div class="sZ0">
+&lt;/head&gt;
+</div>
+<div class="sZ7">
+&lt;body&gt;
+</div>
+<div class="sZ7">
+&lt;h1&gt;Form - POST&lt;/h1&gt;
+</div>
+<div class="sZ0">
+&lt;a href="index.php"&gt;Back to Home Page&lt;/a&gt;&lt;br&gt;
+</div>
+<div class="sZ0">
+&lt;?php
+</div>
+<div class="sZ7">
+    $name = $_POST['input_text'];
+</div>
+<div class="sZ0">
+    $email = $_POST['input_email'];
+</div>
+<div class="sZ7">
+    echo "Name: $name and Email: $email";
+</div>
+<div class="sZ0">
+?&gt;
+</div>
+<div class="sZ0">
+&lt;/body&gt;
+</div>
+<div class="sZ0">
+&lt;/html&gt;
+</div>
+<hr />
+<div class="s2D2-1">
+<img src="rsrc331.jpg" class="s2D2-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/forms-php/post/em1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 1
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/forms-php/post/downloads/php-forms-php-post-ex1.zip" class="s2RA">Download the Exercise 1</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 1:</span> <span class="s2R8"> </span> <span class="s2R9">Create a Form that accepts two numbers and show the calculation of those two numbers on another page. Use POST Method.</span>
+</div>
+<div class="s2DA-0">
+<img src="rsrc332.jpg" class="s2DA-1" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/forms-php/post/ex1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 2
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/forms-php/post/downloads/php-forms-php-post-ex2.zip" class="s2RA">Download the Exercise 2</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 2:</span> <span class="s2R8"> </span> <span class="s2R9">Show the result on the same page and redirect to same page. Use POST Method.</span>
+</div>
+<div class="sYB">
+Tips:
+</div>
+<div class="sYB">
+Check if the values are not empty
+</div>
+<div class="s17X">
+if( !empty( $_POST['input_text1'] ) &amp;&amp; !empty( $_POST['input_text2'] ) ){
+</div>
+<div class="s2DN-1">
+<img src="rsrc333.jpg" class="s2DN-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/forms-php/post/ex2/after" class="s2RA">Live Preview</a>
+</div>
+<div class="s5A">
+<span class="s2RW">6.3</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#a2PZ" class="class-0"></span> <span class="s2RW">Cookies</span>
+</div>
+<div class="sY9">
+Usage of Cookies
+</div>
+<div class="sYB">
+Cookies are information that you can store at clients browser.
+</div>
+<div class="sYB">
+Cookies are stored in a file at the client system in name=value pair format.
+</div>
+<div class="sYB">
+Cookies helps to track what user is doing on the web page and send that information to server so that server knows what client did on the web page.
+</div>
+<div class="sYB">
+For every request, browser sends the cookies to server and if there are any changes to cookies then that information is also sent to the server.
+</div>
+<div class="sYB">
+Cookies helps to store information and capture the user actions on the web page inside it. This information is then sent to server.
+</div>
+<div class="sYB">
+Cookies last until the browser is closed. We can also manually set the expiration time for any cookie.
+</div>
+<div class="sYB">
+Some of the browser disable cookies in that case cookies will not work and also user can choose to change browser setting to not store cookies.
+</div>
+<div class="sYB">
+Cookies can help to change the view of the page based on the user actions.
+</div>
+<div class="sE6">
+How to Set a Cookie
+</div>
+<div class="sU">
+<span class="s2R9">$name = ‘WPFreelancer.com’;</span><br />
+<span class="s2R9">$value = 20;</span><br />
+<span class="s2R9">$expire = strtotime(‘+1 year’);</span><br />
+<span class="s2R9">$path = ‘/’;</span><br />
+<span class="s2R9">//Its a name=value pair.</span><br />
+<span class="s2R9">setcookie($name, $value, $expire, $path);</span>
+</div>
+<div class="sE6">
+How to Get a Cookie
+</div>
+<div class="s17X">
+$_COOKIE[$cookie_name]
+</div>
+<div class="sE6">
+How to Delete a Cookie
+</div>
+<div class="sYB">
+By setting the time last year all the cookies with that name are deleted.
+</div>
+<div class="sU">
+<span class="s2R9">$expire = strtotime(‘-1 year’);</span><br />
+<span class="s2R9">setcookie(‘WPFreelancer.com’, ”, $expire, ‘/’);</span>
+</div>
+<div class="sE6">
+Sample Example
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/forms-php/cookies/downloads/php-forms-php-cookies-em1.zip" class="s2RA">Download the Example</a>
+</div>
+<div class="sZ7">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sZ0">
+&lt;html&gt;
+</div>
+<div class="sZ0">
+&lt;head&gt;
+</div>
+<div class="sZ0">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="description" content="Page Description"&gt;
+</div>
+<div class="sZ0">
+    &lt;title&gt;Cookies&lt;/title&gt;
+</div>
+<div class="sZ0">
+&lt;/head&gt;
+</div>
+<div class="sZ7">
+&lt;body&gt;
+</div>
+<div class="sZ0">
+&lt;h1&gt;Cookies&lt;/h1&gt;
+</div>
+<div class="sZ0">
+&lt;?php
+</div>
+<div class="sZ7">
+    $cookie_name = "user";
+</div>
+<div class="sZ0">
+    $cookie_value = "WPFreelancer";
+</div>
+<div class="sZ0">
+    setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
+</div>
+<div class="sYY">
+    if(!isset($_COOKIE[$cookie_name])) {
+</div>
+<div class="sZ7">
+        echo "Welcome '" . $cookie_value . "'. Nice to meet you!";
+</div>
+<div class="sZ7">
+    } else {
+</div>
+<div class="sZ7">
+        echo "Hey, '" . $cookie_value . "' you are back&lt;br&gt;";
+</div>
+<div class="sZ0">
+        echo "Value is: " . $_COOKIE[$cookie_name];
+</div>
+<div class="sZ7">
+    }
+</div>
+<div class="sYY">
+?&gt;
+</div>
+<div class="sZ0">
+&lt;/body&gt;
+</div>
+<div class="sZY">
+&lt;/html&gt;
+</div>
+<hr />
+<div class="s2F5-0">
+<img src="rsrc334.jpg" class="s2F5-1" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/forms-php/cookies/em1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 1
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/forms-php/cookies/downloads/php-forms-php-cookies-ex1.zip" class="s2RA">Download the Exercise 1</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 1:</span> <span class="s2R8"> </span> <span class="s2R9">Ask user to enter the cookie name on one page and check on the other page if the cookie is new or old.</span>
+</div>
+<div class="s2FD-1">
+<img src="rsrc335.jpg" class="s2FD-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/forms-php/cookies/ex1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 2
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/forms-php/cookies/downloads/php-forms-php-cookies-ex2.zip" class="s2RA">Download the Exercise 2</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 2:</span> <span class="s2R8"> </span> <span class="s2R9">Add and check the cookie from same page.</span>
+</div>
+<div class="s2FN-1">
+<img src="rsrc336.jpg" class="s2FN-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/forms-php/cookies/ex2/after" class="s2RA">Live Preview</a>
+</div>
+<div class="s5A">
+<span class="s2RW">6.4</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#a2R0" class="class-0"></span> <span class="s2RW">Session</span>
+</div>
+<div class="sY9">
+Usage of Sessions
+</div>
+<div class="sYB">
+Sessions is an array that is stored at the server based on the session id.
+</div>
+<div class="sYB">
+session id are generated when the user first time visit the site and this session id are stored in the cookie.
+</div>
+<div class="sYB">
+So, every time user make request to the server, this cookie is passed to the server with the sessionid and based this session id server is able to maintain an active session of the user.
+</div>
+<div class="sYB">
+If a session is already created for that specific user then PHP will not create a duplicate session.
+</div>
+<div class="sYB">
+By default, PHP uses a cookie to store a session ID in each browser. Then, the browser passes the cookie to the server with each request.
+</div>
+<div class="sU">
+Start Session
+</div>
+<div class="sYB">
+session_start();
+</div>
+<div class="sYB">
+is used to start a session.
+</div>
+<div class="sU">
+Create a Session Variable
+</div>
+<div class="sU">
+<span class="s2R9">session_start();</span><br />
+<span class="s2R9">$_SESSION[“firstname”] = “WPFreelancer”;</span>
+</div>
+<div class="sU">
+Read a Session Variable
+</div>
+<div class="sU">
+<span class="s2R9">session_start();</span><br />
+<span class="s2R9">echo</span> <span class="s2R9">$_SESSIO</span> <span class="s2SA">N[</span> <span class="s2R9">“firstname</span> <span class="s2SA">”</span> <span class="s2R9">];</span>
+</div>
+<div class="sU">
+Delete a Session Variable
+</div>
+<div class="sU">
+<span class="s2R9">session_start();</span><br />
+<span class="s2R9">if(isset($_SESSION[</span> <span class="s2SA">“</span> <span class="s2R9">firstnam</span> <span class="s2SA">e</span> <span class="s2R9">“])){</span><br />
+<span class="s2R9">unset($_SESSION[</span> <span class="s2SA">“</span> <span class="s2R9">firstnam</span> <span class="s2SA">e</span> <span class="s2R9">“]);</span><br />
+<span class="s2R9">}</span>
+</div>
+<div class="sE6">
+Sample Example
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/forms-php/sessions/downloads/php-forms-php-sessions-em1.zip" class="s2RA">Download the Example</a>
+</div>
+<div class="sYY">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sZ0">
+&lt;html&gt;
+</div>
+<div class="sZ0">
+&lt;head&gt;
+</div>
+<div class="sZ0">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="description" content="Page Description"&gt;
+</div>
+<div class="sZ0">
+    &lt;title&gt;Sessions&lt;/title&gt;
+</div>
+<div class="sZ0">
+&lt;/head&gt;
+</div>
+<div class="sZ7">
+&lt;body&gt;
+</div>
+<div class="sZ0">
+&lt;h1&gt;Sessions&lt;/h1&gt;
+</div>
+<div class="sZ0">
+&lt;?php
+</div>
+<div class="sZ7">
+    session_start();
+</div>
+<div class="sZ7">
+    //Create a Session
+</div>
+<div class="sZ0">
+    $_SESSION["firstname"] = "WPFreelancer";
+</div>
+<div class="sZ7">
+    echo $_SESSION["firstname"];
+</div>
+<div class="sYY">
+?&gt;
+</div>
+<div class="sZ0">
+&lt;/body&gt;
+</div>
+<div class="sZY">
+&lt;/html&gt;
+</div>
+<hr />
+<div class="s2GZ-0">
+<img src="rsrc337.jpg" class="s2GZ-1" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/forms-php/sessions/em1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 1
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/forms-php/sessions/downloads/php-forms-php-sessions-ex1.zip" class="s2RA">Download the Exercise 1</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 1:</span> <span class="s2R8"> </span> <span class="s2R9">Delete the session and print it again.</span>
+</div>
+<div class="s2H7-1">
+<img src="rsrc338.jpg" class="s2H7-0" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/forms-php/sessions/ex1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 2
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/forms-php/sessions/downloads/php-forms-php-sessions-ex2.zip" class="s2RA">Download the Exercise 2</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 2:</span> <span class="s2R8"> </span> <span class="s2R9">Create a form and accept a session value and store it and display it.</span>
+</div>
+<div class="s2HF-0">
+<img src="rsrc339.jpg" class="s2HF-1" />
+</div>
+<div class="s1X0">
+<a href="https://phpbootcampdemo.com/php/forms-php/sessions/ex2/after" class="s2RA">Live Preview</a>
+</div>
+<div class="s18F-0">
+<img src="rsrc2YP.jpg" class="s18F-1" />
+</div>
+<div class="s2HK">
+
+</div>
+<div class="s18F-0">
+<img src="rsrc33A.jpg" class="s18F-1" />
+</div>
+<div class="s1X7">
+<span class="s2T8">7</span> <span class="s2RX-1">          </span> <span id="part0005.xhtml#a2R1" class="class-1"></span> <span class="s2T8">Snippets</span>
+</div>
+<div class="sRS">
+<span class="s2RW">7.1</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#a2R2" class="class-0"></span> <span class="s2RW">Regex</span>
+</div>
+<div class="sY9">
+Usage of Regex
+</div>
+<div class="sYB">
+Regular Expression are special searching pattern that is very powerful to search for matching patter in text strings.
+</div>
+<div class="sYB">
+To start using the Regular expression we need to get the data between forward slash and then use the method preg_match() on the data and this pattern to search.
+</div>
+<div class="sYB">
+You create a pattern and then use method preg_match() to match on the data.
+</div>
+<div class="sYB">
+preg_match() method will return true or false.
+</div>
+<div class="sYK">
+SYNTAX:
+</div>
+<div class="sYB">
+preg_match($pattern, $data);
+</div>
+<div class="sYB">
+$pattern = “/WP/’;
+</div>
+<div class="sYB">
+$sitename = “WP Freelancer”;
+</div>
+<div class="sYB">
+$found = preg_match($pattern, $sitename);
+</div>
+<div class="sYB">
+$found will have true or false.
+</div>
+<div class="sYB">
+Some patters:
+</div>
+<div class="sYB">
+. – Any Single Character
+</div>
+<div class="sYB">
+\w – Any Letter, number or underscore
+</div>
+<div class="sYB">
+\W – Any character
+</div>
+<div class="sYB">
+\d – Any Digit
+</div>
+<div class="sYB">
+\s – White Space Character
+</div>
+<div class="sYB">
+\S – Any Character that is not whitespace.
+</div>
+<div class="sE6">
+Sample Example
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/snippets-php/regex/downloads/php-snippets-php-regex-em1.zip" class="s2RA">Download the Example</a>
+</div>
+<div class="sYY">
+&lt;!DOCTYPE html&gt;
+</div>
+<div class="sZ0">
+&lt;html&gt;
+</div>
+<div class="sZ0">
+&lt;head&gt;
+</div>
+<div class="sZ0">
+    &lt;meta charset="utf-8"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</div>
+<div class="sZ0">
+    &lt;meta name="description" content="Page Description"&gt;
+</div>
+<div class="sZ0">
+    &lt;title&gt;Regular Expressions&lt;/title&gt;
+</div>
+<div class="sZ0">
+&lt;/head&gt;
+</div>
+<div class="sZ7">
+&lt;body&gt;
+</div>
+<div class="sZ0">
+&lt;h1&gt;Regular Expressions&lt;/h1&gt;
+</div>
+<div class="sZ0">
+&lt;?php
+</div>
+<div class="sZ7">
+    $pattern = '/WP/';
+</div>
+<div class="sZ0">
+    $sitename = "WPFreelancer";
+</div>
+<div class="sZ0">
+    $found = preg_match($pattern, $sitename);
+</div>
+<div class="sZ0">
+    echo $found;
+</div>
+<div class="sZ7">
+?&gt;
+</div>
+<div class="sZ0">
+&lt;/body&gt;
+</div>
+<div class="sZY">
+&lt;/html&gt;
+</div>
+<hr />
+<div class="s2K3-0">
+<img src="rsrc33B.jpg" class="s2K3-1" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/snippets-php/regex/em1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 1
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/snippets-php/regex/downloads/php-snippets-php-regex-ex1.zip" class="s2RA">Download the Exercise 1</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 1:</span> <span class="s2R8"> </span> <span class="s2R9">Search incase sensitive search for the same string.</span>
+</div>
+<div class="sYB">
+Regular Expression: $pattern = ‘/wp/i’;
+</div>
+<div class="s2K3-0">
+<img src="rsrc33B.jpg" class="s2K3-1" />
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/snippets-php/regex/ex1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="sE6">
+Exercise 2
+</div>
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/snippets-php/regex/downloads/php-snippets-php-regex-ex2.zip" class="s2RA">Download the Exercise 2</a>
+</div>
+<div class="sU">
+<span class="s2R7">Exercise 2:</span> <span class="s2R8"> </span> <span class="s2R9">Match a pincode p-104848 in the string.</span>
+</div>
+<div class="sYB">
+Regular Expression: $pattern = ‘/p-\d/’;
+</div>
+<div class="s2K3-0">
+<img src="rsrc33B.jpg" class="s2K3-1" />
+</div>
+<div class="s2KH">
+<a href="https://phpbootcampdemo.com/php/snippets-php/regex/ex2/after" class="s2RA">Live Preview</a>
+</div>
+<div class="s18F-0">
+<img src="rsrc2YP.jpg" class="s18F-1" />
+</div>
+<div class="s2KM">
+
+</div>
+<div class="s18F-0">
+<img src="rsrc33C.jpg" class="s18F-1" />
+</div>
+<div class="s2KT">
+<span class="s2T8">8</span> <span class="s2RX-1">          </span> <span id="part0005.xhtml#a2R3" class="class-1"></span> <span class="s2T8">Projects</span>
+</div>
+<div class="sRS">
+<span class="s2RW">8.1</span> <span class="s2RX-0">  </span> <span id="part0005.xhtml#toc45_8.1Save_Student_Registration_Form_Data_to_File" class="class-0"></span> <span class="s2RY">Save Student Registration Form Data to File</span>
+</div>
+<div class="s2KW">
+In this Project, you will write a simple application where user will his details and when submitted the data is save in a text file in append mode.
+</div>
+<hr />
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/projects-php/project1/downloads/php-projects-php-project1-ex1.zip" class="s2S2">Download the Exercise 1</a>
+</div>
+<div>
+<img src="rsrc33D.jpg" class="s2M2" />
+</div>
+<hr />
+<div>
+<img src="rsrc33E.jpg" class="s2M7" />
+</div>
+<hr />
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/projects-php/project1/ex1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="s2MB">
+EXERCISE 1:
+</div>
+<div class="sU">
+The above program will throw error when checkbox is not checked. This is on purpose.
+</div>
+<div class="sU">
+You need find out first if the parameter exists in that array $_GET and then assign the value to variable.
+</div>
+<div class="sU">
+Use the empty method to check if the variable is empty before inserting.
+</div>
+<div class="s2MB">
+EXERCISE 2:
+</div>
+<div class="sU">
+Make a function to save the content and save it in functions.php
+</div>
+<div class="sU">
+Include the functions.php file and call this function.
+</div>
+<div class="s5A">
+<span class="s2RW">8.2</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#toc46_8.2Online_Test" class="class-0"></span> <span class="s2RY">Online Test</span>
+</div>
+<div class="s2MM">
+In this Project, you will write a simple application online test with some question. Once user provide the answer he immediately verify the result.
+</div>
+<hr />
+<div class="s2MR">
+<a href="https://phpbootcampdemo.com/php/projects-php/project2/downloads/php-projects-php-project2-ex1.zip" class="s2S2">Download the Exercise 1</a>
+</div>
+<div>
+<img src="rsrc33F.jpg" class="s2MV" />
+</div>
+<hr />
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/projects-php/project2/ex1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="s2MB">
+EXERCISE 1:
+</div>
+<div class="sU">
+Change the $_GET to $_POST and perform the same operation.
+</div>
+<div class="s2MB">
+EXERCISE 2:
+</div>
+<div class="sU">
+Display the result on the next page.
+</div>
+<div class="s5A">
+<span class="s2RW">8.3</span> <span class="s2RX-0">   </span> <span id="part0005.xhtml#toc47_8.3Online_Calculator" class="class-0"></span> <span class="s2RY">Online Calculator</span>
+</div>
+<div class="s2N4">
+In this Project, you will write a simple calculator application where user will enter the values and our program will calculate various math formulas.
+</div>
+<hr />
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/projects-php/project3/downloads/php-projects-php-project3-ex1.zip" class="s2RA">Download the Exercise 1</a>
+</div>
+<div>
+<img src="rsrc33G.jpg" class="s2NA" />
+</div>
+<hr />
+<div class="sYW">
+<a href="https://phpbootcampdemo.com/php/projects-php/project3/ex1/after" class="s2RA">Live Preview</a>
+</div>
+<div class="s2MB">
+EXERCISE 1:
+</div>
+<div class="sU">
+Add some Math formulas and add to the table.
+</div>
+<div class="s2MB">
+EXERCISE 2:
+</div>
+<div class="s2NH">
+Add some styling to the table.
+</div>
