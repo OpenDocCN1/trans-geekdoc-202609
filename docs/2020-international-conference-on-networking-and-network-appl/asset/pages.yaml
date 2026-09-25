@@ -1,0 +1,582 @@
+- pgno: 0
+  md: '# 2020 International Conference on Networking and Network Applications (NaNA)
+
+
+    # # Deep Learning as a Service Based on Encrypted Data
+
+
+    Xinhong Hei¹
+
+    College of Computer Science and Engineering
+
+    Xi''an University of Technology
+
+    Xi''an, China
+
+    heixong@xaut.edu.cn
+
+
+    Xiaoling Liang², Yichuan Wang², Wenjiang Ji²
+
+    Lei Zhu²
+
+    ²College of Computer Science and Engineering
+
+    Xi''an University of Technology
+
+    Xi''an, China
+
+    chuan@xaut.edu.cn
+
+
+    **Abstract—** With the widespread promotion of 4G/5G network technology and the
+    development of Internet of Things (IoT), more and enterprises begin to make use
+    of their powerful computing and technology to perform deep neural networks for
+    help them classification, regression, recognition, NLP and others. This not only
+    brings convenience to people, but also causes leakage of users'' private data.
+    In this paper, we propose a method to design a deep learning model based on Secure
+    multi-party computation (MPC). In the process, we realize that the only model
+    exists on the encrypted data of users, and in the experimental part, we show that
+    the classification accuracy of the encrypted model is 99.21%, which is close to
+    the unencrypted result. The classification accuracy is lower than the test result,
+    but better than the existing deep learning network model that can realize data
+    privacy.
+
+
+    *Keywords:* Network; Homomorphic encryption; IoT; Deep learning; MPC
+
+
+    **Introduction.** The concept of artificial intelligence has been pushed to a
+    new height in history, and deep learning is a branch of artificial intelligence.
+    According to the report, many companies, including Google, Facebook, baidu, and
+    alibaba, have also benefited from its field which focuses on the technologies
+    of these goals and targets. In recent, deep learning is now making remarkable
+    progress. With the rapid development of cloud service, these enterprises provide
+    the corresponding deep learning model in the cloud to provide services for users
+    according to the different requirements for users. On the one hand, it provides
+    users with powerful services. On the other hand, after uploading their data, such
+    as photos, video, and so on, to the cloud computing, users will face the risk
+    of privacy leakage caused by their subsequent usage. In this case, we know that
+    the neural network model will get better with the increase and diversification
+    of the dataset. In areas such
+
+
+    as finance and health, laws or regulations do not allow the personal data, so
+    we may not be able to get a good deep learning model based on limited data [1].
+    With modern society paying and more attention to privacy, to ensure the privacy
+    of data and the effectiveness of algorithms in the process of learning has become
+    a major problem in the field of machine learning.
+
+
+    The appearance of homomorphic encryption makes the application of ciphertext in
+    field of learning possible. Rivest was the first to forward the concept of homomorphic
+    encryption in 1978 [8]. Homomorphic encryption is a form of encryption, which
+    allows people to perform algebraic operations on ciphertext to obtain the result
+    of encryption. The ciphertext will be decrypted to obtain the result. There are
+    many homomorphic encryption algorithms available, and most are additive, such
+    as Bacon and Paillier [3], as well as RSA [4] and ElGamal that support homomorphic
+    encryption. In 2009, [5], Gentry Li proposed a homomorphic encryption algorithm
+    based on ideal lattice, which became a solution that can realize all attributes
+    of homomorphic encryption. Although it is widely used in machine learning, but
+    it cannot be applied in the process of the scheme itself, has computational model
+    and high security.
+
+
+    Although the theory of homomorphic encryption can perform calculations, but in
+    the practice, we should pay attention to the characteristics of the encryption:
+    only support input data; the depth of computation needs to be fixed, and the addition
+    cannot be carried out indefinitely. Homomorphic encryption does not support multiplication
+    and comparison. Therefore, homomorphic encryption cannot be applied to deep learning.
+
+
+    In the following paragraphs, we will discuss these problems provide solutions.
+    And our contributions are follows:
+
+
+    +   - We combine deep learning with homomorphic encryption algorithm and a deep
+    learning network'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: "model based secure Multi-party computing (MPC) to ensure data privacy when\
+    \ users use the code deep learning model.\n\nOur experimental results using the\
+    \ convolutional neural network show that the classification rate of the encrypted\
+    \ Mist dataset can reach 99.21%, which is very close to the result without plaintext,\
+    \ also close to the accuracy of state-of-the-art model. The classification rate\
+    \ of cipher-10 encrypted dataset can reach 98.5%, higher than the result in plaintext,\
+    \ and better than the existing deep learning network that can realize data privacy\
+    \ and the unit sample takes an average of 11 seconds to complete an inference\
+    \ in the cloud without parallel optimization.\n\nThe rest of this paper is organized\
+    \ as follows:\n\nIn the second section, we introduce Paillier encryption and how\
+    \ to optimize it on real numbers. In section 3, we analyze the characteristics\
+    \ of the convolutional neural network and each layer of the network to compare\
+    \ with homomorphic encryption. In section 4, we introduce the data interaction\
+    \ architecture based on MPC. In section 5, we present the method of pretreatment\
+    \ and inference in the cloud are through experiments, and the experimental comparison\
+    \ results with other relevant models.\n\n# II. HOMOMORPHIC CRYPTOSY\n\nIn essence,\
+    \ homomorphic encryption refers to such encryption by adding and multiplying operations\
+    \ on the ring, and then encptions the ciphertext after the result is equivalent.\
+    \ Because of this, people can allow a third party to process the data without\
+    \ revealing the information. Below we introduce the working steps and properties\
+    \ of Paillier algorithm.\n\n# A. Key generation\n\nTake two large primes p and\
+    \ q, and calculate their product N and the least common multiple $\\lambda$ of\
+    \ p-1 and q-1\n\n```\n$N = pq$\n$\\lambda = \text{lcm}(p-1, q-1)$\n```\n\nIf an\
+    \ integer $g \\in Z_N^*$ is randomly selected, $Z_{N^2}^*$ represents the set\
+    \ of all Numbers in $Z_{N^2}$ that are interpolate with $N^2$, and $Z_{N}^*$ is\
+    \ the integer less than $N^2$, where $\\lambda$ is the private key and $(N, g)$\
+    \ is the public key.\n\n# B. The encryption process\n\nIf $m \\in Z_N$ is the\
+    \ ciphertext to be encrypted, the encryption algorithm is as follows:\n\n```\n\
+    $c = E[m,r] = g^m r^n \\pmod{N^2}$\n```\n\nAmong them:\n\n$m \\in Z_N^*$ is a\
+    \ randomly selected integer, c is the encrypted data. For the same plaintext $c$,\
+    \ c will be generated by the different ciphertext $c$ but the same can be restored\
+    \ after decryption\n\n# Decryption process\n\nIf $c \\in Z_{N^2}$ is the ciphertext\
+    \ to be decrypted, the decryption algorithm is as follows:\n\n```\n$L(u) = \\\
+    frac{u-1}{N}$\n$L(c^\\lambda \\mod N^2) = L(g^m \\mod N^2) \\mod N$\n```\n\nWhere,\
+    \ $L(\\cdot)$ is defined as:\n\n```\n$L(u) = \\frac{u-1}{N} \\quad (5)\n```\n\n\
+    ```\n$D[E[m_i,r_i]E[m_j,r_j]] = m_i + m_j \\pmod N \\quad (7)\n```\n\n# D. Processing\
+    \ of real numbers\n\nPaillier encryption is only defined for non-negative integers\
+    \ less than N. Since we want to use signed integers and floating point numbers,\
+    \ values should be encoded as a valid before encryption. The preprocessing of\
+    \ negative and floating point numbers is:\n\n+   Signed integers are relatively\
+    \ easy: we utilize the modular arithmetic properties of the Paillier encryption.\
+    \ - We choose to represent integers between -N/3 and N/3 for decoding the resulting\
+    \ result. And we can detect negative values by dividing by that.\n\nRepresent\
+    \ floating point numbers is a harder task. We use a variant of fixed-precision\
+    \ arithmetic by multiplying the factor by a large number (e.g. $10^6$) and rounding\
+    \ the resulting result.\n\nThe complete process of real numbers scheme is available\
+    \ at data6.esiro.au.\n\n# III. CONVOLUTION NEURAL NETWORK\n\nCNN (Convolution\
+    \ Neural Network), a class of forward neural network that includes convolutional\
+    \ computing and a deep structure, is one of the representative of deep learning\
+    \ [7-8]. The convolutional neural network has representation ability and can run\
+    \ shift-invariant classification of input according to its hierarchical structure.\
+    \ it is also known as 'Shift-invariant Artificial Neural Networks (SIANNN)' [9].\
+    \ Below, we introduce Layers in CNN respectively:"
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '1) Input layer: The input layer is of the entire neural network. In the convolutional
+    network for image processing, it generates the pixel matrices of an image.
+
+
+    2) Convolutional layer: The convolutional layer generally uses filters to extract
+    abstract features. The forward propagation of the filter is the process of calculating
+    the nodes in the output layer''s input matrix matrix. Generally, the filter uses
+    3x3 or 5x5. Let''s show you how a 2x2*3 node becomes a 1x1 output unit. In formula
+    (8), the weight of the first node of the output unit nodes, represents the first
+    corresponding element. In formula (9), is the activation function. So the value
+    of the first node is identity. Finally, the forward propagation of the convolutional
+    layer is to move a filter from the upper left corner of the current layer to the
+    lower right, and calculate each corresponding identity during the movement.
+
+
+    ```
+
+    $y = \sum w_{ij}x_{ij} + b$
+
+    ```
+
+
+    ```
+
+    $g(t) = f(y)$
+
+    ```
+
+
+    3) Pooling layer: The function of pooling layer is to reduce the size of activation
+    matrix. Effectively pooling is used to average pooling and max pooling. Because
+    we apply the property of homomorphic encryption to CNN, but do not support the
+    operation of taking the maximum value, the pooling layer of subsequent models
+    will use all averaging pooling.
+
+
+    4) Full connection layer: Each node in this is connected to all nodes in the next
+    layer. We can use the convolutional layer and pooling layer mentioned above as
+    the process of image feature extraction. After feature extraction, full connection
+    layer is needed to complete classification.
+
+
+    5) Activation layer: Activation functions are used to realize nonlinearity. There
+    are several activation functions such as $ReLU(x) = max(0,x)$, $Tanh(2x-1)$. The
+    activation function [1-12] is used in our model.
+
+
+    According to the above introduction of concepts in CNN, we find that the forward
+    propagation of CNN network performs two kinds of operations: weighted sum and
+    addition multiplication for homomorphic encryption. In the weighted sum, it is
+    very similar to the property of Paillier which is introduced in the previous section.
+    According to the description of third section, we use code to encapsulate, so
+    that the ciphertext can be added directly, and the final result is the same as
+    obtained by performing the same operation. Because the activation function is
+    nonlinear, it does not meet the property of homomorphic encryption mentioned above.
+    Next, we propose a solution to this problem.
+
+
+    # IV. THE PRACTICAL APPLICATION
+
+
+    # A. MPC
+
+
+    In order to combine the Paillier algorithm with CNN, we must solve the problem
+    that the nonlinear activation function cannot satisfy the addition of homomorphic
+    encryption and the property of scalar multiplication homomorphism.
+
+
+    Thus, we draw Secure multi-party Computation (Secure Multi-party Computation referred
+    as MPC). The root of MPC lie in Yao [13-14] which belongs to the millions of people
+    who want to find out who is worth without revealing the amount of which. In terms,
+    secure multi-party computation is a sub-domain of cryptography, which allows multiple
+    parties to process data without trust, the results, and that neither party can
+    get any information than what it deserves in others.
+
+
+    Based on the above considering the actual application scenario, we design our
+    own interactive structure. Structure in Figure 1 shows the architecture of party
+    A and B [12]. The model owner can upload the model to the cloud, at the same time,
+    the user can upload the encrypted data to the cloud for inference using the model,
+    we return the result of the ciphertext to the user, the user has a key for encryption
+    and decryption.
+
+
+    ![](img/41a65dda49972fe2c7a242e2bc64b079_2_0.png)
+
+
+    Fig. 1 Data transfer architecture.
+
+
+    # B. Activation function processing
+
+
+    We define E(x) and D(x) as encryption and decryption, respectively, and define
+    A(x) as:
+
+
+    ```
+
+    $A(x) = \begin{cases} D(x) & 1 \ D(x) & 0 \end{cases} (10)
+
+    ```
+
+
+    In next cloud model, we can remove the activation function, and when the cloud
+    returns to the layer containing activation functions (convolution and full connection
+    layer), the calculation result of the convolutional layer is with formula (8)
+    or the weighted sum of the unit is returned to the cloud for settlement, and the
+    calculation result of x*A(x) is returned to the next layer of cloud input network
+    for calculation. This operation until the last layer generates and decrypts it.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# V. EXPERIMENT
+
+
+    In this section we introduce our experiment. We implement our scheme using Python3.6
+    on a server with Intel(R) i7 CPU, 32G RAM, Nvidia GTX 2080Ti GPU. For simplicity,
+    this experiment was tested on a computer, regardless of linkage and delivery time.
+
+
+    generated after encrypting each pixel point. In fact, the encrypted image has
+    lost its original information intuitively. However, to prevent the attacker from
+    analyzing the original image through histogram, we have listed its histogram,
+    in the third column of Fig. 4. It can be seen that the attacker cannot obtain
+    the statistical features of the original image from the histogram. Thus, the security
+    of uploading the sample can be guaranteed without the disclosure of private keys.
+
+
+    # A. Model training
+
+
+    MNIST handwritten character [14] was used to train the CNN network model which
+    is shown in Fig. 2. The MNIST dataset contains 60000 handwritten digits. Each
+    image is a 28*28 pixel array, where value of each is a positive integer in the
+    range [0,255]. We used the training part of this dataset, consisting of 50,000
+    images, to train the CNNs and the remaining 10,000 images for testing.
+
+
+    ![](img/41a65dda49972fe2c7a242e2bc64b079_3_0.png)
+
+
+    Fig. 2 CNN network architecture
+
+
+    In the training process, batchsize=128, learning-rate=0.001, convolution kernel
+    size (3,3,20),(3,5) were selected, using the pooling layer (2,2), and the stride
+    length was 1. In order to enhance the generalization ability of the model, each
+    pixel point is divided by 25, so that the value of the sample is between [0,1].
+    The test dataset can reach a high accuracy of 99.62%, as shown in Fig. 3. This
+    is of great importance to the substance process on the experiment sample. Finally,
+    we trained the model locally to simulate the role of the cloud service provider.
+
+
+    ![](img/41a65dda49972fe2c7a242e2bc64b079_3_1.png)
+
+
+    Fig. 4. Sample, encrypted sample and encrypted sample histogram
+
+
+    After loading the data from the cloud, the output of each layer of the model interacts
+    with the local area, and the time for encryption and decryption has the greatest
+    impact on the overall efficiency. According to the description in [1], it is necessary
+    to note to maintain a persistent connection with the server, the attacker as user
+    sends data to the cloud easily according to the result of the model parameters,
+    so the inference process, we can show the full layer connection with the attacker
+    with probability to join false neurons, or disturb neurons [14].
+
+
+    ![](img/41a65dda49972fe2c7a242e2bc64b079_3_2.png)
+
+
+    Fig. 5 Different layers of data dimensions
+
+
+    ![](img/41a65dda49972fe2c7a242e2bc64b079_3_3.png)
+
+
+    Fig. 3 Accuracy and loss curve during training
+
+
+    # B. Model inference processes
+
+
+    In the sample of MNIST, we used the Paillier homomorphic encryption to process
+    each pixel once and then input the model for inference. But to facilitate analysis,
+    here must ensure that the encrypted number [0,255], and we can use the cipher
+    image to decrypt, but Paillier encryption in the ciphertext gets very large, so
+    we can here the ciphertext for data 8-bit operation, guarantees in the image show
+    each pixel gray value is between [0,255]. As shown in Fig. 4, the first column
+    is our original handwritten character, and the second is the ciphertext sample
+
+
+    It seems that the main factor determining the inference time of the model is the
+    amount of data to be encrypted and decrypted as well as the number of times. According
+    to our algorithm, the data quantity refers to the data dimension of each layer
+    either the convolution and bias parameters of the model itself in inference. As
+    shown in Fig. 5, we list the data size of each layer after the removing the activation
+    layer. The number of encryption and decryption is related to the number of layers
+    of Model as well. To, only need to process the data when it is uploaded to the
+    cloud. The rest of the model needs to interact with the local interface for decryption
+    except the activation layer. Number of times it needs to be decrypted is equal
+    to the number of model layers.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'Next, we discuss the optimization of encryption and decryption efficiency.
+    In order to improve the encryption and decryption time, we use GMPY to optimize
+    the homomorphism algorithm code. GMPY is superior to the C-Coded Python implementation
+    which supports multiple-precision arithmetic. GMPY adds support for MR (the corrected
+    real floating-point arithmetic) and MPC (complex floating-point libraries), which
+    also updates the API and naming conventions to be more consistent and supports
+    additional functions.
+
+
+    We compare the time to encrypt a sample with and without GMPY. Table I shows the
+    results of homomorphic encryption when keylength=302. It can be seen that in the
+    case of not affecting the CPU and RAM memory, encryption and decryption time have
+    a very significant difference. In the experiments, we are using GMPY optimized
+    library for encryption and decryption work.
+
+
+    # TABLE I. WHEN KEYLENGTH=302, THE EFFECT OF GMPY ON THE ENCRYPTION TIME OF A
+    SAMPLE
+
+
+    | Lib | RAM | Time |
+
+    |---|---|---||
+
+    | No GMPY | 10.6% | 166MB | 233.5s |
+
+    | GMPY | 10.6% | 166MB | 24.37s |
+
+
+    # TABLE II. THE IN OF KEY LENGTH ON THE EFFICIENCY OF SAMPLE ENCRYPTION AND DECRYPTION
+
+
+    | Key length | 512 | 768 | 1024 | 2048 |
+
+    |---|---|---|---|---||
+
+    | 1 sample/s | 0.281 | 0.589 | 1.167 | 2.707 | 24.39 |
+
+    | 64 samples | 13.175 | 37.506 | 72.286 | 146.562 | 529.103 |
+
+
+    We have noticed that current asymmetric encryption is mainly based on the factorization
+    of large prime numbers, and it is that encryption and decryption time increases
+    rapidly with the increase of key length, the corresponding security also increases.
+    In addition, the key length should not be too large to maintain the efficiency
+    of the plaintext. According to the above, the gray value of the sample will be
+    processed [0,1] before entering the model, so in the model process value, the
+    generation is more important. For security, the key length is set 512 bit in the
+    experiment. In the industrial production environment, the length of key length
+    can be appropriately increased to the requirements of security.
+
+
+    # TABLE III. DATA DIMENSIONS, PARAMETERS, DECRYPTION TIME IN DIFFERENT LAYERS
+
+
+    | Layer (type) | Output Shape | Param | Decrypt Time (seconds) |
+
+    |---|---|---|--|
+
+    | Input | (28, 28) | 1 | 0 |
+
+    | Conv layer | (26, 26) | 200 | 2.073 |
+
+    | Activation layer | (26, 26) | | |
+
+    | Pooling layer | (25, 25) | | 2.511 |
+
+    | Conv layer | (23, 23) | 9050 | 5.291 |
+
+    | Activation layer | (23, 23) | | |
+
+    | Pooling layer | (11, 11) | | |
+
+    | Flatten layer | (6050,) | | |
+
+    | Dense layer | (256,) | 149056 | 0.055 |
+
+    | Activation layer | (256,) | | |
+
+    | Dense layer | (10,) | | 0.002 |
+
+    | Activation layer | (10,) | | |
+
+    | Total samples: 1,580,776 | Total time: 11.143 |
+
+
+    # TABLE IV. COMPARISON OF MODEL ACCURACY
+
+
+    | Model | Our | CryptoNet |
+
+    |---|---|--|
+
+    | Min-Accuracy | 99.21% | 98.95% |
+
+    | Cipher-Accuracy | 91.35% | Not Provide |
+
+
+    We used the test set for model classification, and the result accuracy was 99.2%.
+    As mentioned, the model accuracy can reach 99.6% under plaintext. In order to
+    verify the feasibility of the system method, we also used the dataset [17] to
+    train on a more complex CNN structure, and the plaintext accuracy reached 92.23%.
+    Finally, the ciphertext accuracy could be 91.5.
+
+
+    In this work, we compared with similar homomorphic encryption method, we can see
+    that basic encryption can achieve good effect, but with the complexity of network
+    structure, the model can still maintain good accuracy, as based on our work, on
+    the network depth of model accuracy is not high, but CryptoNet performs to decrypt
+    in plenty. In addition, if we add some sample complexity to the ciphertext, the
+    decryption can be done by increasing the size of the batchsize in the inference,
+    we do not need to increase the cost of the extra time, in fact if we increase
+    the size of the batchsize, but with the help of the technology work, our face
+    has increased, and the various methods of problem, this can be solved easily.
+    For using CUDA parallel programming, going computing to GPU will greatly improve
+    the efficiency of time.
+
+
+    # VI. CONCLUSION
+
+
+    In this paper, we combine deep learning with homomorphic encryption algorithm
+    and design deep'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'learning network based on secure Multi-party computing to ensure data privacy
+    when users use the deep learning model. Onasets and CNN model of varying complexity
+    we all get results, which further verifies the feasibility of deep learning as
+    a service based on encrypted data. The classification accuracy of the encrypted
+    kind of dataset reaches 99.21% and 91.35%. We will try to use the encrypted data
+    to train CNN, and then use the encryption method.
+
+
+    # ACKNOWLEDGMENT
+
+
+    This research was supported by the National K&R Program of China (2018YFB01150),
+    National Science Funds of China (6270236, 6173313, 61702411), National Science
+    Funds of Shaanxi (2017JQ06020, 2017JQ06041), Key Research and Development Program
+    of Shaanxi Province (2020GY-039, 2017ZXMG098, 2017DB-0414).
+
+
+    # REFERENCES
+
+
+    +   [1] Shoki, R., and Shimizu, H. "Privacy-Preserving Deep Learning.\ "ACM Conference
+    on Computer and Communications Systems (CCS)\,ACM, 2015.
+
+
+    +   [2] RIVEST, J.R., and privacy homomorphism. "Foundations of cryptography"
+    (1978).
+
+
+    +   [3] Paillier P. Public-key cryptosystems based on composite degree residosity
+    class[C]// International Conference on Theory & Application of Cryptographic Techniques.
+    Berlin, Heidelberg, 1999.
+
+
+    +   [4] R. Rivet, A Shamir and Adleman. A Method for Obtaining Digital Public-Key
+    Cryptosystems, Communications of the ACM, Vol. 21, No 2, pp. 120–126, 1978.
+
+
+    +   [5] GENTRY C. Fully homomorphic encryption using ideal lattices[C]// ACM Symposium
+    on Theory of Computing (STOC 2009). Bethesda,MD,USA,BLP.2009 169–178.
+
+
+    +   [6] Milagre, Vincent, G. Bonorum, and C. Fontaine "Practical Networks for
+    Somewhat Homomorphic Encryption (SHE) Schemes on Binary Circuits." IEEE Transactions
+    on Computers (2018)1–1.
+
+
+    +   [7] Goodfellow, L., Bengio, Y., Courville, A.. Deep learning (L.). Cambridge:
+    MIT press, 2016: 326–366
+
+
+    +   [8] He, K., Zhang, L., Xu, Y., Shao, Z., Sun, Y., Lin, T., Wang, X., Ren,
+    Q., and Yu, J. 2015. Deep learning in convolutional neural networks. arXiv preprint:1593.04316.
+
+
+    +   [9] Zhang, W., 2018. Shift-invariant neural network recognition and its architecture.
+    In Proceedings of annual conference of the IEEE Society of Japan.
+
+
+    +   [10] Hu, Weibo., Takashi, H., and M. Ghemi. "Crypto-DL Deep Neural Networks
+    over Encrypted Data," "2017."
+
+
+    +   [11] Wu, Haibin, and Xu, G. Max-Pooling Dropout for Regularization of Neural
+    Networks. "International Conference on Information Processing Systems, Chicago,
+    2015.
+
+
+    +   [12] Halishner, S. H. Seung (2001). Permitted and Forbidden Sets in Similarity
+    Threshold.Linear Neural Networks, 14(2):263–280.
+
+
+    +   [13] Yao, X. Neural Computing with Homomorphic Encryption in Proceedings of
+    the 3rd Annual Symposium on Foundations of Computer Science, pp. 160–164, Chicago,
+    IL, USA, 1996.
+
+
+    +   [14] Wang Q Z, Gao G. Neural network recognition for privacy-protected data].
+    Journal of Cryptography Research, 2019,21:252–268.
+
+
+    +   [15] Li, Y., and Peng, et al. "Crypto-Net: Neural Networks over Encrypted
+    Data." Computer enc:2014
+
+
+    +   [16] Ho-Pheu, Tien "CIFAR10 to Compare Visual Recognition between Deep Neural
+    Networks and Humans (2018).
+
+
+    +   [17] Gupta, T. K. Laasar, and M. Nayak. Confidential-Machine Learning on Encrypted
+    Data. "International Conference on Information Security & Cryptography Springer,
+    Berlin, Heidelberg, 2012.'
+  merge: -1
+  img_proc: true
