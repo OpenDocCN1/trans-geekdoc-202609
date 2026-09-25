@@ -1,0 +1,1670 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Dengue Prediction using Machine Learning Algorithms
+
+
+    Dhiman Saha
+
+
+    Department of Computer Science and Engineering,
+
+    Rangampur Science and Technology,
+
+    Rangampur, Bangladesh
+
+    dhiman001@yahoo.com
+
+
+    Sohrab Hossain
+
+
+    Department of Computer Science and Engineering,
+
+    East Delta University,
+
+    Chittagong, Bangladesh
+
+    sohrab_haha6@yahoo.com
+
+
+    Tannusi Mitta
+
+
+    Department of Computer Science and Engineering
+
+    East University,
+
+    Dhaka, Bangladesh
+
+    mitta.ce12@gmail.com
+
+
+    Md. Abdul Mutallah Mobeia
+
+
+    Department of Pharmacy,
+
+    University of Science and Technology
+
+    Chittagong,
+
+    Chittagong, Bangladesh
+
+    motalab@gmail.com
+
+
+    Ihsak Saha
+
+
+    University of Science and Technology Chittagong,
+
+    Chittagong, Bangladesh
+
+    isaksaha6@yahoo.com
+
+
+    Ravina Chakma
+
+
+    Department of Computer Science and Engineering
+
+    East Delta University,
+
+    Chittagong, Bangladesh
+
+    ravinaravi@gmail.com
+
+
+    **Abstract-** Dengue disease is caused by the Aedes virus. The World Health Organization
+    (WHO) reports an annual incidence of 100-400 million infections in 2019 which
+    is the largest number of dengue cases reported and projected to date. It can be
+    turned into life-threatening hemorrhagic fever which every occurs annually. This
+    paper focuses on predicting dengue fever and its subtypes in the early stage of
+    disease progression to ensure well-suited supportive care and therapy. We utilized
+    a dataset of 101,000 cases which were reported to the WHO in 2019. Because such
+    an outbreak can create havoc in society. Because the cost of dengue is high, it
+    is crucial to reduce the causality. In this study, we developed a model to predict
+    dengue fever. A patient dataset, containing information of the patient''s medical
+    history and laboratory results, contains raw data of types of dengue fever from
+    the Department of Chittagong Medical College Hospital. The dataset was split into
+    70:30 ratio (70 for training and 30 for tests purposes). We applied machine learning
+    forest (RF) in the proposed classification model. Finally, the decision tree resulted
+    in an average accuracy of 79%, which is high for medical form.
+
+
+    **Keywords—** Dengue Fever Prediction; Artificial Intelligence; Machine Learning;
+    Clinical Decision Support
+
+
+    I. INTRODUCTION
+
+    Dengue fever is a dangerous disease. It is spread by the Aedes mosquito at their
+    larva stage when they carry the dengue virus. The virus spreads when they bite
+    human blood. It seems like a typical flu fever at the immediate stage. The significant
+    symptoms do not appear at the early stage and only become visible when the victim
+
+
+    reaches a critical stage. Seremiological studies show that if the virus infects
+    anyone, then the immune system gets and the body enters dengue fever. Various
+    clinical symptoms and anomalies are detected in the laboratories of dengue patients.
+    These are similar to other normal fever like typhoid, murine fever, or just a
+    fever. The dengue fever must be treated precisely at the primary stage [2]
+
+
+    The dengue fever has four different serotypes, such as (DENV) DENV 1-4. A patient,
+    bitten by the Aedes mosquitoes, suffers under a rash which involves fever, muscle
+    pain, headache, and nausea [1]. Furthermore, people can face severe symptoms when
+    they are bitten more than one time. Patients from cases of dengue hemorrhagic
+    fever (DHF) are likely to get dengue shock syndrome (DSS) [4]. By infection of
+    DHF or DSS [5], epidemicity has been set to reach as much as 10-40% in case of
+    occurrence.
+
+
+    The standard machine learning algorithms for predictions include support vector
+    machine [8], decision tree [9-11], k-means [12], naive Bayes, sequential optimization
+    and random forest [13, 15, 26]. However, the results of the methods were performed
+    based on the classified outstanding dataset and of'
+  - '[PAGE 1]
+
+
+    demographic regions. Moreover, one of the research combined patient medical history,
+    clinical and personal data for the classification. Beside, recent research was
+    carried out on fever prediction in Bangladesh. As the DENV has epidemic patterns,
+    it is important to identify the high-risk regions of potential outbreak and to
+    collect data from affected patients. Furthermore, with 101,000 cases reported
+    in Bangladesh, two densely populated cities (Dhaka and Chittagong) were targeted
+    for this study.
+
+
+    We presented a machine machine learning (ML) model to predict dengue using the
+    collected data. For this purpose, a dataset of 209 patients was gathered in 2019
+    from the distinct medical colleges used. We then proceeded to derive the final
+    dataset of 23 attributes belonging to the machine learning algorithms for dengue
+    prediction. This research aims to assist the public in the self-diagnosis of dengue
+    fever for consulting an expert and minimizing the doctor''s burden in advance.
+    If our model succeeds with satisfactory accuracy then it will act as a treatment
+    guide for the patients.
+
+
+    Sharef, Nurhafidah Mohd, et al [21] evaluated a using a neural network with nonlinear
+    regression and backpropagation. The study achieved 99% accuracy:
+
+
+    TABLE I. Review of Dengue Related Research Papers
+
+
+    | Area | Algorithm | Accuracy |
+
+    | --- | --- | --- |
+
+    | Marimuto, T [14] | Model for mining the dengue sequences | Association rules,
+    support vector machine | SVM: 96.7% |
+
+    | Rao, K, N [15] | Prediction of the occurrence of dengue | Decision tree (DT)
+    | - |
+
+    | Sharma, H [16] | Implemented mining from different state of India | Association
+    rules, k-means | 94% |
+
+    | Shaukat, K [17] | Implemented different algorithms and performed comparisons
+    of them | Naive Bayes (NB) | NB: 88% |
+
+    | Batha, R [18] | Predicted the outbreak of dengue based on environmental factors
+    | Support machine (SVM) | 95% |
+
+    | Subitha, N [19] | Detecting dengue using spatial mining | backpropagation |
+    BPN: 95% |
+
+    | Sudom, N [20] | Proposed a spatial clustering method for identifying the risk
+    of dengue infection | ArcGIS10.1 | Unsupervised algorithm |
+
+    | Sharef, Nurhafidah Mohd, et al [21] | Analyzed and evaluating of dengue prediction
+    | Backpropagation and nonlinear regression | BPN: 93% |
+
+
+    Marimuto, T., et al [14] presented a computational model to map the gene sequences
+    for clustering among the dengue viruses. They established classification and association
+    rules through the standards used and achieved 96.74% accuracy.
+
+
+    Rao, K., N., et al [15] suggested a method found out association rules using the
+    decision tree. They proposed the role of association rules for predicting the
+    disease by analyzing the affected features of affected patients. Their model achieved
+    99% accuracy.
+
+
+    Shaukat, K., et al [16] proposed a classification and clustering model to detect
+    dengue using the patients'' data from various states of India.
+
+
+    Batha, R., et al [18] proposed a model using the support vector machine based
+    on environmental features. The model used features and applied C-SVM using the
+    Gaussian kernel for better accuracy. The executed model achieved better accuracy
+    than their predictions.
+
+
+    Subitha, N., et al [19] have described the mining model for dengue fever. They
+    implemented KNN. In this paper, they improved the performance of mining. They
+    have applied the model to segment microscopic blood image using a neural network
+    to improve results about dengue fever. Backpropagation network applied to classification
+    result. it 98% accuracy,
+
+
+    A brief overview of dengue-related research was presented in Table I. We observed
+    that the methods focused on publicly secondary data. Their achieving accuracy
+    of the study model has no relation to the origin and the area of implementation
+    are between different geographic locations. Moreover, most of the datasets had
+    limited features, which in this study, we added relevant features to the patient''s
+    personal, diagnostic, and symptom data.
+
+
+    In this paper, we proposed a model (fig 1) to predict different types of dengue
+    fever such as normal fever, extreme dengue fever. The model started with patients''
+    data collection process followed by data processing, and then machine learning
+    algorithms are to evaluate the result to the highest accuracy of prediction.'
+  - '[PAGE 2]
+
+
+    ![](img/7cabec6c4ba1b05a89d665c53a5229a7_2_0.png)
+
+
+    Fig. 1. Flow chart of data prediction model
+
+
+    The phases of the model are described below:
+
+
+    # A. Data Collection Process
+
+
+    A total of 209 patients (Table II) were collected from two major cities of Bangladesh
+    named Dhaka Medical College Hospital. The patients'' fever are categorized into
+    three types: normal fever, normal dengue, and severe dengue. Balanced which reduces
+    the challenge of underfitting the model accuracy.
+
+
+    | Class | Male | Female | Total |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Normal | 35 | 40 | 75 |
+
+    | Normal Deng | 35 | 39 | 74 |
+
+    | Extreme Deng | 40 | 20 | 60 |
+
+    | **Total** | **110** | **99** | **209** |
+
+
+    Table III illustrates the values of the dataset.
+
+
+    | Variables | Description | Possible Values (Color) |
+
+    | :--- | :--- | :--- |
+
+    | Sex | gender of patients | 0=Female, 1=Male |
+
+    | Work | activity of patients | 1=Moderately, 2=Active |
+
+    | Cough | Cough/Squeezing | 0=No, 1=Yes |
+
+    | BP | blood pressure | different values |
+
+    | Bpdias | Blood Pressure | different values |
+
+    | Pulse | pulse rate | different values |
+
+    | Fever | level of fever | 2=High, 1=normal, 0=none |
+
+    | Low-level platelet | level of platelet | 2=High, 1=normal, 0=none |
+
+    | Headache | headache | 2=High, 1=normal, 0=none |
+
+    | Muscle pain | pain in body | 1=True, 0=False |
+
+    | Bleeding | bleeding with stool | 2=High, 1=normal, 0=none |
+
+    | Low level of plasma | level of plasma | 1=True, 0=False |
+
+    | Skin Rash | rash in body | 1=True, 0=False |
+
+    | Vomiting | vomiting in fever | 1=True, 0=False |
+
+
+    # B. Preprocessing
+
+
+    Data processing is one of the most common tasks in many ML applications. This
+    technique is used to transform raw data into a clean and effective format. To
+    do this, the data needs to be cleaned, standardized, and noise-free. The entire
+    process is known as preprocessing. The normalized dataset of this study is shown
+    in Table IV.
+
+
+    | | Diarrhea | Diarrhea frequency | True = 1, False = 0 |
+
+    | :--- | :--- | :--- | :--- |
+
+    | | IgG | Test of IgG | High=2,normal=1, normal=0 |
+
+    | | IgM | Test of IgM | High=2,normal=1, normal=0 |
+
+    | | NS1 | Test of NS1 | normal=0 |
+
+    | | Abdominal pain | abdominal pain | True = 1, False = 0 |
+
+    | | Fatigue | Tiredness/weakness | True = 1, False = 0 |
+
+    | | Photophobia | Photophobia | True = 1, False = 0 |
+
+    | | Rapid Breathing | Rapid breathing | True = 1, False = 0 |
+
+    | Type | Types of Dengue | Normal Fever = 0, Normal Fever = 1, Extreme Fever =
+    2 |
+
+
+    TABLE IV. Normalized Dataset
+
+
+    | | | | | | | | | | | | | | | | | | | | | | | |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+    :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | Age | 45 | 121 | 80 | 90 | 78 | 65 | 35 | 15 | 0 | 1 | 2 | 1 | 0 | 0 | 0 | 1
+    | 1 | 1 | 1 | 1 | 0 |
+
+    | 75 | 21 | 128 | 80 | 100 | 81 | 65 | 1 | 1 | 2 | 1 | 0 | 0 | 1 | 1 | 1 | 1 |
+    1 | 1 | 1 | 0 |
+
+    | 50 | 18 | 108 | 90 | 81 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1
+    | 1 | 1 | 1 |
+
+    | 35 | 10 | 105 | 80 | 61 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1
+    | 1 | 1 | 1 |
+
+    | 15 | 0 | 90 | 75 | 35 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+    1 | 1 | 1 |
+
+    | 42 | 18 | 109 | 80 | 81 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 1 | 1 | 1
+    | 1 | 1 | 0 |
+
+    | 62 | 11 | 95 | 80 | 1 | 1 | 1 | 1 | 1 | 0 | 1 | 0 | 1 | 1 | 1 | 1 | 1 | 1 |
+    1 | 1 | 0 |
+
+    | 65 | 11 | 110 | 80 | 1 | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 1 | 1 |
+    1 | 1 | 0 |
+
+    | 70 | 20 | 120 | 90 | 1 | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 1 | 1 |
+    1 | 1 | 0 |
+
+    | 80 | 25 | 130 | 90 | 1 | 1 | 1 | 1 | 1 | 0 | 0 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+    1 | 1 | 0 |
+
+    | 48 | 14 | 65 | 67 | 0 | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+    0 | 0 | 0 |
+
+
+    # C. Feature Selection
+
+
+    Feature selection is the process of reducing the number of input variables when
+    developing a predictive model. It is desirable to reduce the number of input variables
+    to reduce the computational cost of modeling, and in some cases, improve the performance
+    of the model. In ours, we have matching datasets, and we use the "median" method
+    to remove these variables. We use fit and transform() to normalize and standardize
+    our data.
+
+
+    # D. Data Split
+
+
+    After preprocessing, we split our dataset into different ratios of train and test
+    dataset using in-function train_test_split(). We get the best performance with
+    a ratio of 70% training and 30% testing dataset.'
+  md: '
+
+    # Dengue Prediction using Machine Learning Algorithms
+
+
+    Dhiman Saha
+
+    Department of Computer Science and Engineering,
+
+    Rangampur Science and Technology,
+
+    Rangampur, Bangladesh
+
+    dhiman001@yahoo.com
+
+
+    Sohrab Hossain
+
+    Department of Computer Science and Engineering,
+
+    East Delta University,
+
+    Chittagong, Bangladesh
+
+    sohr_haha6@yahoo.com
+
+
+    Tannusi Mitta
+
+    Department of Computer Science and Engineering
+
+    East University,
+
+    Dhaka, Bangladesh
+
+    mitta.ce12@gmail.com
+
+
+    Md. Abdul Mutallah Mobeia
+
+    Department of Pharmacy,
+
+    University of Science and Technology
+
+    Chittagong,
+
+    Chittagong, Bangladesh
+
+    motalab@gmail.com
+
+
+    Ihsak Saha
+
+    University of Science and Technology Chittagong,
+
+    Chittagong, Bangladesh
+
+    isaksaha6@yahoo.com
+
+
+    Ravina Chakma
+
+    Department of Computer Science and Engineering
+
+    East Delta University,
+
+    Chittagong, Bangladesh
+
+    ravinaravi@gmail.com
+
+
+    **Abstract-** Dengue disease is caused by the Aedes virus. The World Health Organization
+    (WHO) reports an annual incidence of 100-400 million infections in 2019 which
+    is the largest number of dengue cases reported and projected to date. It can be
+    turned into life-threatening hemorrhagic fever which every occurs annually. This
+    paper focuses on predicting dengue fever and its subtypes in the early stage of
+    disease progression to ensure well-suited supportive care and therapy. We utilized
+    a dataset of 101,000 cases which were reported to the WHO in 2019. Because such
+    an outbreak can create havoc in society. Because the cost of dengue is high, it
+    is crucial to reduce the causality. In this study, we developed a model to predict
+    dengue fever. A patient dataset, containing information of the patient''s medical
+    history and laboratory results, contains raw data of types of dengue fever from
+    the Department of Chittagong Medical College Hospital. The dataset was split into
+    70:30 ratio (70 for training and 30 for tests purposes). We applied machine learning
+    forest (RF) in the proposed classification model. Finally, the decision tree resulted
+    in an average accuracy of 79%, which is high for medical form.
+
+
+    **Keywords—** Dengue Fever Prediction; Artificial Intelligence; Machine Learning;
+    Clinical Decision Support
+
+
+    ## I. INTRODUCTION
+
+
+    Dengue fever is a dangerous disease. It is spread by the Aedes mosquito at their
+    larva stage when they carry the dengue virus. The virus spreads when they bite
+    human blood. It seems like a typical flu fever at the immediate stage. The significant
+    symptoms do not appear at the early stage and only become visible when the victim
+    reaches a critical stage. Epidemiological studies show that if the virus infects
+    anyone, then the immune system gets and the body enters dengue fever. Various
+    clinical symptoms and anomalies are detected in the laboratories of dengue patients.
+    These are similar to other normal fever like typhoid, murine fever, or just a
+    fever. The dengue fever must be treated precisely at the primary stage [2].
+
+
+    The dengue fever has four different serotypes, such as (DENV) DENV 1-4. A patient,
+    bitten by the Aedes mosquitoes, suffers under a rash which involves fever, muscle
+    pain, headache, and nausea [1]. Furthermore, people can face severe symptoms when
+    they are bitten more than one time. Patients from cases of dengue hemorrhagic
+    fever (DHF) are likely to get dengue shock syndrome (DSS) [4]. By infection of
+    DHF or DSS [5], epidemicity has been set to reach as much as 10-40% in case of
+    occurrence.
+
+
+    The standard machine learning algorithms for predictions include support vector
+    machine [8], decision tree [9-11], k-means [12], naive Bayes, sequential optimization
+    and random forest [13, 15, 26]. However, the results of the methods were performed
+    based on the classified outstanding dataset and of demographic regions. Moreover,
+    one of the research combined patient medical history, clinical and personal data
+    for the classification. Beside, recent research was carried out on fever prediction
+    in Bangladesh. As the DENV has epidemic patterns, it is important to identify
+    the high-risk regions of potential outbreak and to collect data from affected
+    patients. Furthermore, with 101,000 cases reported in Bangladesh, two densely
+    populated cities (Dhaka and Chittagong) were targeted for this study.
+
+
+    We presented a machine machine learning (ML) model to predict dengue using the
+    collected data. For this purpose, a dataset of 209 patients was gathered in 2019
+    from the distinct medical colleges used. We then proceeded to derive the final
+    dataset of 23 attributes belonging to the machine learning algorithms for dengue
+    prediction. This research aims to assist the public in self-diagnosis of dengue
+    fever for minimizing the doctor''s burden. If our model succeeds with satisfactory
+    accuracy then it will act as treatment guide for the patients. Sharef, Nurhafidah
+    Mohd [21] evaluated a neural network with nonlinear regression and backpropagation.
+    The study achieved 99% accuracy.
+
+
+    TABLE I. Review of Dengue Related Papers
+
+
+    | Paper | Area | Algorithm | Accuracy |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Marimuto, T., [14] | Model for dengue sequences | Association rules, support
+    vector machine | 96.7% |
+
+    | Rao, K., N., [15] | Prediction of occurrence of dengue | Decision tree (DT)
+    | - |
+
+    | Sharma, H., [16] | Implementation from different state of India | Association
+    rules, k-means | 94% |
+
+    | Shaukat, K., [17] | Implemented different algorithms | Naive Bayes (NB) | 88%
+    |
+
+    | Batha, R., [18] | Predicted the outbreak of dengue based on environmental factors
+    | Support machine (SVM) | 95% |
+
+    | Subitha, N., [19] | Detecting dengue using spatial mining | backpropagation
+    (BPN) | 95% |
+
+    | Sudom, N., [20] | Proposed a spatial method for identifying risk of infection
+    | Unsupervised algorithm | 10.1 |
+
+    | Sharef, Nurhafidah Mohd, [21] | Analyzed and evaluating of dengue prediction
+    | Backpropagation and nonlinear regression (BPN) | 93% |
+
+
+    ![](img/7cabec6c4ba1b05a89d665c3a529a7_2_0.png)
+
+
+    Fig. 1. Flow chart of data prediction model
+
+
+    The phases of the model are described below:
+
+
+    ### A. Data Collection Process
+
+
+    A total of 209 patients (Table II) were collected from two major cities of Bangladesh
+    named Dhaka Medical Hospital. The patients'' fever are categorized into three
+    types: normal fever, normal dengue, and severe dengue. Balanced reduces the challenge
+    of underfitting the model accuracy.
+
+
+    | Class | Male | Female | Total |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Normal | 35 | 40 | 75 |
+
+    | Normal Deng | 35 | 39 | 74 |
+
+    | Extreme Deng | 40 | 20 | 60 |
+
+    | **Total** | **110** | **99** | **209** |
+
+
+    Table III illustrates the values of the dataset.
+
+
+    | Variables | Description | Possible Values (Color) |
+
+    | :--- | :--- | :--- |
+
+    | Sex | gender of patients | 0=Female, 1=Male |
+
+    | Work | activity of patients | 1=Moderately, 2=Active |
+
+    | Cough | Cough/Squeezing | 0=No, 1=Yes |
+
+    | BP | blood pressure | different values |
+
+    | Bpdias | Blood Pressure | different values |
+
+    | Pulse | pulse rate | different values |
+
+    | Fever | level of fever | 2=High, 1=normal, 0=none |
+
+    | Low-level platelet | level of platelet | 2=High, 1=normal, 0=none |
+
+    | Headache | headache | 2=High, 1=normal, 0=none |
+
+    | Muscle pain | pain in body | 1=True, 0=False |
+
+    | Bleeding | bleeding with stool | 2=High, 1=normal, 0=none |
+
+    | Low level of plasma | level of plasma | 1=True, 0=False |
+
+    | Skin | rash in body | 1=True, 0=False |
+
+    | Vomiting | vomiting in fever | 1=True, 0=False |
+
+
+    ### B. Preprocessing
+
+
+    Data processing is one of the most common tasks in many applications. This technique
+    is used to transform raw data into clean and effective format. To do this, the
+    data needs to be cleaned, standardized, and noise-free. The entire process is
+    known as preprocessing.
+
+
+    | Type | Frequency | Frequency |
+
+    | :--- | :--- | :--- |
+
+    | Diarrhea | True = 1, False = 0 |
+
+    | IgG | High = 2, normal = 1 |
+
+    | IgM | High = 2, normal = 1 |
+
+    | NS1 | normal = 0 |
+
+    | Abdominal pain | True = 1, False = 0 |
+
+    | Fatigue/Tiredness | True = 1, False = 0 |
+
+    | Photophobia | True = 1, False = 0 |
+
+    | Rapid breathing | True = 1, False = 0 |
+
+    | Types of Dengue | Normal = 0, Normal Fever = 1, Extreme Fever = 2 |
+
+
+    TABLE IV. Normalized Dataset
+
+
+    | Age | Diarrhea | IgG | IgM | NS1 | Abdominal pain | Fatigue/Tiredness | Photophobia
+    | Rapid breathing |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | 45 | 1 | 0 | 0 | 0 | 1 | 1 | 1 | 1 |
+
+    | 75 | 1 | 0 | 0 | 0 | 1 | 1 | 1 | 1 |
+
+    | 50 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+
+    | 35 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+
+    | 15 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
+    | 42 | 0 | 0 | 0 | 0 | 1 | 1 | 1 | 1 |
+
+    | 62 | 0 | 1 | 1 | 0 | 1 | 1 | 1 | 1 |
+
+    | 65 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 1 |
+
+    | 70 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 1 |
+
+    | 80 | 0 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+
+    | 48 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
+
+    ### C. Feature Selection
+
+
+    Feature selection is the process of reducing the number of input variables when
+    developing a predictive model. It is desirable to reduce the number of input variables
+    to reduce the computational cost of modeling, and in some cases, improve the performance
+    of the model. In ours, we have matching datasets, and we use the "median" method
+    to remove these variables. We use fit and transform() to normalize and standardize
+    our data.
+
+
+    ### D. Data Split
+
+
+    After preprocessing, we split our dataset into different ratios of train and test
+    dataset using in-function train_test_split(). We get the best performance with
+    a ratio of 70% training and 30% testing dataset.
+
+    '
+  mdcn: "\n\n# 使用机器学习算法进行登革热预测\n\nDhiman Saha\n计算机科学与工程系\nRangampur科学技术大学\nRangampur,\
+    \ 孟加拉\ndhiman001@yahoo.com\n\nSohrab Hossain\n计算机科学与工程系\nEast Delta University\n\
+    Chittagong, 孟加拉\nsohr_haha6@yahoo.com\n\nTannusi Mitta\n计算机科学与工程系\nEast University\n\
+    Dhaka, 孟加拉\nmitta.ce12@gmail.com\n\nMd. Abdul Mutallah Mobeia\n药学院\n科学技术大学\nChittagong\n\
+    Chittagong, 孟加拉\nmotalab@gmail.com\n\nIhsak Saha\nChittagong科学技术大学\nChittagong,\
+    \ 孟加拉\nisaksaha6@yahoo.com\n\nRavina Chakma\n计算机科学与工程系\nEast Delta University\n\
+    Chittagong, 孟加拉\nravinaravi@gmail.com\n\n**摘要-** 登革热是由伊蚊病毒引起的。世界卫生组织（WHO）报告显示，2019年每年有1亿至4亿例感染，这是迄为止报告和预测的登革热病例数量最多。它可能演变为危生命的出血性热，且每年都会发生。本文重点关注在疾病进展的早期预测登革热及其亚型，以确保获得合适的支持性护理和治疗。我们利用了2019年向世界卫生组织报告的101,000例病例的数据集。因为这种爆发会给社会造成巨大混乱。由于登革热的成本很高，降低死亡率至关重要。在这项研究中，我们开发了一个预测登革热的模型。患者数据集包含患者的病史和实验室结果信息，包含了来自Chittagong医学院医院的登革热类型原始数据。数据集按70:30的比例划分（70%用于训练，30%用于测试）。我们在提出的分类模型中应用了机器学习森林（RF）。最后，决策树的平均准确率为79%，这对于医学模型来说是一个高水平。\n\
+    \n**关键词—** 登革热预测；人工智能；机器学习；临床决策支持\n\n## I. 引言\n\n登革热是一种危险的疾病。它通过携带登革病毒的伊蚊幼虫阶段传播。病毒在叮咬人类血液时扩散。在初期阶段，它看起来像典型的流感发热。显著症状在早期并不出现，只有当患者进入关键阶段时才会可见。流行病学研究显示，如果病毒感染任何人，免疫系统就会产生反应，身体进入登革热状态。在登革热患者的实验室中可以检测出各种临床症状和异常。这些与伤寒、鼠疫热或普通发热等正常发热相似。登革热必须在初期阶段进行精确治疗\
+    \ [2]。\n\n登革热有四种血型，如 (DENV) DENV 1-4。被伊蚊叮咬的患者会遭受皮疹，并伴有发热、肌肉疼痛、头痛和恶心 [1]。此外，人们在被叮咬多次后可能会面临严重症状。登革热出血性热（DHF）病例可能会发生登革热休克综合征（DSS）[4]。通过DHF或DSS的感染\
+    \ [5]，一旦发生，其流行率可能高达10-40%。\n\n用于预测的标准机器学习算法包括支持向量机 [8]、决策树 [9-11]、k均值 [12]、朴素贝叶斯、序列优化和随机森林\
+    \ [13, 15, 26]。然而，这些方法的结果是基于分类的优秀数据集和人口统计区域进行的。此外，其中一项研究结合了患者病史、临床和个人数据进行分类。此外，近期对孟加拉的发热预测进行了研究。由于DENV具有流行病模式，识别潜在爆发的高风险地区并从受影响患者那里收集数据非常重要。此外，由于孟加拉报告了101,000例病例，本研究针对了两个人口稠密的城市（达卡和吉塔洪格）。\n\
+    \n我们展示了一种机器学习（ML）模型，利用收集的数据来预测登革热。为此，我们在2019年从使用的不同医学院收集了209名患者的数据集。然后我们推导出了属于登革热预测机器学习算法的23个属性的最终数据集。这项研究旨在帮助公众自诊诊断，以减轻医生的负担。如果我们的模型以满意的准确率成功，它将作为患者的治疗指南。Sharef,\
+    \ Nurhafidah Mohd [21] 评估了带有非线性回归和反向传播的神经网络。该研究达到了99%的准确率。\n\n表 I. 登革热相关论文回顾\n\
+    \n| 论文 | 领域 | 算法 | 准确率 |\n| :--- | :--- | :--- | :--- |\n| Marimuto, T., [14]\
+    \ | 登革热序列模型 | 关联规则、支持向量机 | |\n| Rao, K., [15] | 登革热的发生 | 决策树 (DT) | |\n| Sharma,\
+    \ H., [16] | 不同的状态 | k-均值类 | 94% |\n| Shaukat, K., [17] | 不同的实施 | 朴素贝叶斯 (NB) |\
+    \ 88% |\n| Batha, R., [18] | 基于环境因素预测 | 支持向量机 (SVM) | 95% |\n| Sudom, N., [19]\
+    \ | 识别登革热 | 无监督学习 | 95% |\n| Sharef, Nurhafidah Mohd [21] | 评估登革热 | 反向传播 (BPN)\
+    \ | 93% |\n\n图 1. 登革热流程图\n\n### A. 数据收集\n\n由于孟加拉报告了101,000例病例，我们针对两个人口稠密的城市（达卡和吉塔洪格）进行了本研究。表\
+    \ II 显示了发热病例分类：\n\n| 类别 | 数量 |\n| :--- | :--- |\n| 男性 | 35 |\n| 女性 | 40 |\n| 正常\
+    \ | 35 |\n| **总计** | **40** |\n\n### B. 预处理\n\n预处理是许多应用中常见的任务。这种技术用于将原始数据转换为干净、标准化的格式。这样做需要数据进行清洗、去噪。\n\
+    \n| 类型 | 频率 |\n| :--- | :--- |\n| 登革热 | 1 |\n| 登革热 | 0 |\n| 登革热 | 2 |\n\n### C.\
+    \ 特征选择\n\n特征选择是在开发预测模型时减少输入变量数量的过程。减少输入变量的数量可以降低建模成本，在某些情况下可以提高模型性能。在我们的研究中，我们使用了匹配的数据并使用中位数法来移除这些变量。\n\
+    \n | 变量 | 说明 |\n| :--- | :--- |\n| 年龄 | 频率 |\n| 腹泻 | 频率 |\n| IgG | 频率 |\n| IgM\
+    \ | 频率 |\n| NS1 | 频率 |\n| 腹痛 | 频率 |\n| 疲劳/饥饿 | 频率 |\n| 光敏感 | 频率 |\n| 呼吸困难 | 频率\
+    \ |\n| 性别 | 频率 |\n| 咳嗽 | 频率 |\n| 脉搏 | 频率 |\n| 发热 | 频率 |\n| 肌肉痛 | 频率 |\n| 出血 |\
+    \ 频率 |\n| 头痛 | 频率 |\n| 血血板 | 频率 |\n| 疼痛 | 频率 |\n| 皮疹 | 频率 |\n| 呕吐 | 频率 |\n\n表\
+    \ IV. 归化数据集\n\n| 年龄 | 腹泻 | IgG | IgM | NS1 | 腹痛 | 疲劳/饥饿 | 光敏感 | 呼吸困难 |\n| :---\
+    \ | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 45 | 1 | 0 | 0\
+    \ | 0 | 1 | 1 | 1 | 1 |\n| 75 | 1 | 0 | 0 | 0 | 1 | 1 | 1 | 1 |\n| 50 | 1 | 1\
+    \ | 1 | 1 | 1 | 1 | 1 | 1 |\n| 35 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |\n| 15 | 0\
+    \ | 0 | 0 | 0 | 0 | 0 | 0 | 0 |\n| 42 | 0 | 0 | 0 | 0 | 1 | 1 | 1 | 1 |\n| 62\
+    \ | 0 | 1 | 1 | 0 | 1 | 1 | 1 | 1 |\n| 65 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 1 |\n\
+    | 70 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 1 |\n| 80 | 0 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |\n\
+    | 48 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |\n\n### D. 数据划分\n\n预处理后，我们使用内置函数 `train_test_split()`\
+    \ 将数据集划分为不同比例的训练集和测试集。我们在70%训练和30%测试的比例下获得了最佳性能。\n\n"
+  merge: -1
+- raw:
+  - '[PAGE 3]
+
+
+    # E. Patients'' Fever Classification
+
+
+    Decision tree and random forest algorithms were used to predict fevers. CART (classification
+    and regression) were used to split the decision tree for an imperfect fever dataset.
+    If a label is randomly selected according to the distribution of labels in the
+    set. An attribute with the lowest impurity is chosen to split the node.
+
+
+    in Figure 2. It is to note that rapid breathing has the lowest impurity and is
+    selected as a root node for the decision tree. If a node has Gini index 0 it will
+    give a decision and cannot be divided. All the leaves give fever class.
+
+
+    a) Equation of Gini Impurity
+
+
+    Gini index is a statistical measure of inequality ranging from 0 (absolute) to
+    1 (absolute). Gini impurity of a node is the probability that a randomly chosen
+    sample in a node would be incorrectly labeled if it was labeled by the distribution
+    of samples in the node. The decision tree tries to minimize when splitting each
+    node. The equation (1) formulas the Gini index, where D is the 209 patients dataset,
+    P is the total probability of a patient belongs to a fever class, and n is the
+    number of fever classes. Gini (D) measures the impurity for the whole dataset.
+
+
+    b) Equation of Random Forest
+
+
+    A decision tree is prone to overfitting, which means that it learns rules for
+    the train set, and those rules are not generalized well the train set. To overcome
+    this, random forest (RF) algorithm works as it merges numerous decision trees
+    into a single ensemble. As a result, it generated different datasets from its
+    original dataset (D-209) using the bootstrap method, and constructed n decision
+    trees. The final value was calculated by averaging all the predicted values of
+    the m trees in the forest.
+
+
+    ```
+
+    Gini(D) = 1 - \sum_{i \in D} n_i^2
+
+    ```
+
+
+    If D splits on A two subsets D1 and D2 then Gini index for a particular attribute
+    is shown in (2):
+
+
+    ```
+
+    Gini(D) = \frac{|D1|}{|D|}Gini(D1) + \frac{|D2|}{|D|}Gini(D2)
+
+    ```
+
+
+    In equation (3), we calculate the reduction of impurity for a particular attribute,
+
+
+    ```
+
+    \DeltaGini(D) = Gini(D) - Gini(A)
+
+    ```
+
+
+    ```
+
+    RF_fi = \frac{\sum_{D \in all trees} norm_{fiID}}{m}
+
+    ```
+
+
+    where, rf sub(i) is importance of feature i calculated from all the trees in the
+    RF, rf sub(d) is normalized importance for feature in D, and m is total number
+    of trees. The importance of each feature was derived in equation (5):
+
+
+    ```
+
+    fr_i = \frac{\sum_{D \in nodes} bn_i(D)}{\sum_{D \in nodes} bn(m)}
+
+    ```
+
+
+    where, fr sub(i) is importance of feature i, bn sub(D) is the importance of node
+    D. For creating a node in RF, a node importance was calculated using gini impurity
+    (6):
+
+
+    ```
+
+    bn_d = wt(d)Gini(D) - wt(left)Gini(left) - wt(right)Gini(right)
+
+    ```
+
+
+    where, bn(d) is the importance of binary node d, wt(d) is weighted number of samples
+    reaching node d, left(d) and right(d) is right child node of node D after split.
+
+
+    # F. Experimental Setup
+
+
+    Python 3.8 was used as the ML language in this study. With this, ''jupyter notebook'',
+    was incorporated as a web application to Python. Other library functions were
+    used:
+
+
+    Skikit-learn. used for implementing library functions for ML algorithms k-means,
+    decision trees, classification, regression, SVM, XGBoost, CatBoost,,
+
+
+    ![](img/7cabec6c4ba1b05a89d665c53a5229a7_3_0.png)
+
+
+    Our dataset contains 23 attributes. After calculating Gini impurity for all the
+    attributes, the fever was generated'
+  - '[PAGE 4]
+
+
+    NumPy. Used for scientific computing with Python as it
+
+    can compute functions for a multidimensional
+
+    object.
+
+
+    Pandas. Used as a data analysis tool for Python.
+
+    Matplotlib used in Jupyter notebook and Python
+
+    scripts provide MATLAB-like interactive plots.
+
+
+    The ROC area under the curve (ROC AUC) in this curve
+
+    graph shows the highest threshold.
+
+
+    # IV. RESULT AND DISCUSSION
+
+
+    A receiving characteristic curve or ROC curve
+
+    is one kind of graphical representation using a plot
+
+    demonstrates the ability of a binary classifier
+
+    system based on a threshold [22 - 24]. It is a probability
+
+    curve, and the area (ROC) represents the
+
+    degree of separation; it is plotted by the positive rate
+
+    (TPR) on the y-axis against the false positive rate (FPR)
+
+    on the x-axis at various thresholds. The test sensitivity, recall, or probability
+
+    detection process. A false-positive rate represents
+
+    probability of false alarm [27-30].
+
+
+    The confusion matrix is used to describe the
+
+    performance of a classification model. Table V shows
+
+    comparative result derived from the confusion matrix
+
+    training and test data of DT and RF.
+
+
+    | Algorithms | Precision | Recall | F-Measure |
+
+    |---|---|---||
+
+    | DT Training | 0.82 | 0.82 | 0.82 |
+
+    | DT Test | 0.79 | 0.79 | 0.79 |
+
+    | RF Training | 1.00 | 1.00 | 1.00 |
+
+    | RF test | 0.67 | 0.67 | 0.74 |
+
+
+    TABLE V. Comparative Results
+
+
+    ![](img/7cabec6c4ba1b05a89d665c53a5229a7_4_0.png)
+
+
+    Fig. 3. ROC curve of test data accuracy
+
+
+    ![](img/7cabec6c4ba1b05a89d665c53a5229a7_4_1.png)
+
+
+    Fig. 4. ROC curve of multiclass
+
+
+    We derived the result values of the classification
+
+    parameters (Table V) as the following:
+
+
+    ```
+
+    TPR = Recall/TP/(TP+FN)
+
+    ```
+
+
+    ```
+
+    FPR = TN/(TN+FP)
+
+    ```
+
+
+    ```
+
+    Precision= TP/(TP+FP)
+
+    ```
+
+
+    ```
+
+    F-measure=2*TP/(2TP+FP)
+
+    ```
+
+
+    ```
+
+    Accuracy= (TP+TN)/(P+N)
+
+    ```
+
+
+    After the result evaluation, it the random
+
+    fever training accuracy was decreased in the testing model
+
+    from 70% to 68% whereas the decision tree training
+
+    accuracy increased from 71% to
+
+    79%. Finally, the decision tree predicts with better accuracy
+
+    an other classifier.
+
+
+    where, true positive(TP), false positive(FP), false
+
+    negative(FN), and true negative(TN) are parameters of
+
+    confusion matrix [31-33]
+
+
+    # V. CONCLUSION
+
+
+    Figure 3 shows the ROC curve of test data accuracy.
+
+    ROC curve in figure 4 depicts the comparative
+
+    analysis between TPR and FPR. The pink line represents
+
+    the micro-average with a 0.85 F1 score; the blue line represents
+
+    the macro-average with a 0.83 score. The other lines
+
+    show 3 class areas individually.
+
+
+    This paper proposed an ML-based model to predict
+
+    dengue fever. Data of 209 patients collected from
+
+    Dhaka and Chittagong medical hospitals. Patients''
+
+    personal data
+
+
+    Finally, an accuracy of 79% was achieved using the
+
+    decision tree, and finalized for our model to
+
+    classify three types of dengue fever. This model will be
+
+    useful for the patients to follow up on the disease, and
+
+    the medical practitioners can quickly diagnose the fever
+
+    base on the patient''s data.
+
+
+    In the future, we will seek additional and
+
+    risk factors for dengue fever which to be included in the
+
+    dataset. Beside and location-based data also be
+
+    added for effective generation and classification.'
+  - '[PAGE 5]
+
+
+    # REFERENCES
+
+
+    +   [1] S. Hosain, S. R. J. Kaiser, V. Alam, M. H. Hoque, and H. Sarker, "A Rule-Based
+    Expert System to Coronary Disease Under Uncertainty," in Computing Science, Communication
+    and Singapore, 2020, p. 143–159. Springer Ireland.
+
+
+    +   [2] J. Lee, T. Ma, and N. Kim, "Forecasting dengue fever in Brazil: An analysis
+    of climate conditions," (Iee) On Climate, Article, no. 14, p. 8–19, 2020. doi:10.22029/22116
+
+
+    +   [3] S. Kim and Y. Park, "Neural Network Model for Dengue Stage Detection,"
+    (Iee) Journal of Computer Engineering and Literature, vol. 1, no. 1, p. 11–20,
+    2021.
+
+
+    +   [4] J. Xu, of Prediction of Dengue Cases in 2020 Cities Based on Machine Learning
+    Methods," (Iee) International Journal of Environmental Research and Public Health,
+    Article, no. 17, p. 12, 2020.
+
+
+    +   [5] C. Davi, et al., "Dengue Prediction Using Human Genetic Data and Machine
+    Learning," (Iee) Transactions on Medical and Biology, vol. 39, p. 755–760, 2019.
+
+
+    +   [6] A. Alyssa, J. L. Lee, F. R. Santana, A. Eras, and P. Gambia, "A Multi-Stage
+    Machine Learning Approach to Predict Dengue Incidence: A Case Study," (Iee) IEEE
+    Access, Article, no. 8, p. 52173–52185, 2020.
+
+
+    +   [7] S. Chen, et al., "An automated machine learning approach for predicting
+    dengue outbreaks using climate patterns," (Iee) Landscape Ecology, Article, no.
+    34, p. 96, 2021.
+
+
+    +   [8] X. L. Zheng, Z. B. Zhang, Y. He, and F. Gu, "Seasonality Analysis and
+    Modeling of Dengue Outbreak based on climatic and environmental factors," (Iee)
+    Diseases of Poverty, vol. 8, no. 1, p. 9–18, 2019.
+
+
+    +   [9] S. Kim, T. Lee, and J. H. Lee, "Using ensemble clustering algorithm to
+    detect dengue patterns from spatio-temporal data," Parasites and Vectors, vol.
+    14, no. 1, p. 10–20, 2020.
+
+
+    +   [10] M. G. Ma, F. H. Noble, and P. Shabari, "Characterization of patterns
+    of dengue patients using unsupervised machine learning approach," (Iee) IEEE Access,
+    vol. 8, p. 43583–43590, 2020.
+
+
+    +   [11] A. Martimurali, V. J. I. Oliveira, E. C. Bahramanian, and "A Neural Network
+    Model for Prediction of Dengue Sequences," (Iee) Journal of Computer Engineering
+    and Applications, vol. 11, no. 2, p. 45–52, 2020.
+
+
+    +   [12] N. K. Rao, S. V. Rao, N. P. Ji, I. R. Lee, and C. Chen, "Automatic Detection
+    and Characterization of Dengue Outbreak using Data Mining Techniques," International
+    Journal of Research Research in Communication Technology, vol. 3, no. 3, p. 340–343,
+    2016.
+
+
+    +   [13] K. Siddhalat, N. Massood, A. B. Shafiat, K. Jabbar, H. Shabir, and S.
+    J. a. p. Shabari, "Dengue fever in children of sub-saharan africa," 2017 IEEE
+    International Conference on Techniques in Control, Optimization and Signal Processing
+    (ICCOSP), p. 1–5.
+
+
+    +   [14] A. N. Hasan and N. Salim, "Modeling of dengue outbreak in Malaysia: a
+    comparison of neural network and nonlinear regression model," 2008 International
+    Symposium on Information Technology, 2008, vol. 3, p. 1–4: IEEE.
+
+
+    +   [15] M. Ali, and C. T. Tumbidiriya, "Diagnosis for dengue fever using spatial
+    data mining," International Journal of Medical Trends and Analytics, vol. 4, no.
+    8, p. 2646–2651, 2013.
+
+
+    +   [16] N. Sodhem, S. Thamphanakul, P. Kong, and K. J. T. Tohera, "A Machine
+    Learning Approach to identify dengue fever from Insect Infection Strategy," Journal.
+    article,
+
+
+    +   [17] N. M. Sharma, A. N. Hasan, K. Kasim, and M. I. J. D. I. M. Nasir, "Temporal
+    Analysis for Dengue Outbreak Prediction and Accuracy Assessment," International
+    Journal of Digital Information Management, Article, no. 17, p. 3, 2020.
+
+
+    +   [18] A. Ahmed, F. Tujaina, J. R. Sharma, H. Hossain, and D. Sarma, "A Rule-Based
+    Expert System to Predict Dengue Outbreak in Bangladesh," International Conference
+    on Computer and Information Technology (ICCIT), 2022, p. 522–527.
+
+
+    +   [19] D. Sarma, History of Dengue Epidemic Method. International Journal of
+    Medical Research and Health, 5(1):196–2011.
+
+
+    +   [20] D. Sarma, History of Dengue Epidemic Method. International Journal of
+    Medical Research and Health, 5(1):196–2011.
+
+
+    +   [21] S. Hossain, A. Bakhem, M. Hoque, and H. Sarker, "Dengue Prediction using
+    Spatio-Temporal Data," in Computer Science, Communication, and Singapore, 2020,
+    p. 277–289.
+
+
+    +   [22] H. Alquahibat, et al., "Cyber Intrusion Detection using Machine Learning
+    Techniques," in Computer Science, Communication and Singapore, 2020, p. 121–131:
+    Springer.
+
+
+    +   [23] S. Ahmed, et al., "A Comparison Between Distributed Database Approach
+    and Data Warehousing," International Journal of Scientific & Engineering Research,
+    Article 5(1):196-201.
+
+
+    +   [24] M. N. Alam, D. Sarma, F. I. Lima, S. R. A. – Elifahi and H. Hossain,
+    "Machine Learning Approaches for Dengue Outbreak Prediction in 3rd Annual International
+    Conference on Smart and Emerging Technologies (ICSEIT), India, 2020, p. 1173–1179.
+
+
+    +   [25] D. Wang, A. Islam, S. M. Alam, M. J. Alam, and S. Hossain, "Bank Fraud
+    Detection Using Connectionist Algorithm," 2022 International Conference on Computer
+    and Applications (ICICRA), Indonesia, 2022, p. 460–465.
+
+
+    +   [26] M. J., M. Mitra, and K. F. T. Tohera, "Bengali Sign Gestures Recognition
+    using Convolutional Neural Network," 2023 5th International Conference on Computer
+    Science and Engineering (ICCSE),ingata, 2023, p. 636–641.
+
+
+    +   [27] D. Sarma, Asymmetric Key Book Encryption Scheme, International Journal
+    of Computer Applications, vol. 175, p. 8887.'
+  md: '
+
+    ## E. Patients'' Fever Classification
+
+
+    Decision tree and random forest algorithms were used to predict fevers. CART (classification
+    and regression) were used to split the decision tree for an imperfect fever dataset.
+    If a label is randomly selected according to the distribution of labels in the
+    set, an attribute with the lowest impurity is chosen to split the node.
+
+
+    In Figure 2, it is to note that rapid breathing has the lowest impurity and is
+    selected as a root node for the decision tree. If a node has Gini index 0 it will
+    give a decision and cannot be divided. All the leaves give fever class.
+
+
+    ### a) Equation of Gini Impurity
+
+
+    Gini index is a statistical measure of inequality ranging from 0 (absolute) to
+    1 (absolute). Gini impurity of a node is the probability that a randomly chosen
+    sample in a node would be incorrectly labeled if it was labeled by the distribution
+    of samples in the node. The decision tree tries to minimize when splitting each
+    node. The equation (1) formulas the Gini index, where D is the 209 patients dataset,
+    P is the total probability of a patient belongs to a fever class, and n is the
+    number of fever classes. Gini (D) measures the impurity for the whole dataset.
+
+
+    ### b) Equation of Random Forest
+
+
+    A decision tree is prone to overfitting, which means that it learns rules for
+    the train set, and those rules are not generalized well the train set. To overcome
+    this, random forest (RF) algorithm works as it merges numerous decision trees
+    into a single ensemble. As a result, it generated different datasets from its
+    original dataset (D-209) using the bootstrap method, and constructed n decision
+    trees. The final value was calculated by averaging all the predicted values of
+    the m trees in the forest.
+
+
+    ```
+
+    Gini(D) = 1 - \sum_{i \in D} n_i^2
+
+    ```
+
+
+    If D splits on A two subsets D1 and D2 then Gini index for a particular attribute
+    is shown in (2):
+
+
+    ```
+
+    Gini(D) = \frac{|D1|}{|D|}Gini(D1) + \frac{|D2|}{|D|}Gini(D2)
+
+    ```
+
+
+    In equation (3), we calculate the reduction of impurity for a particular attribute:
+
+
+    ```
+
+    \DeltaGini(D) = Gini(D) - Gini(A)
+
+    ```
+
+
+    ```
+
+    RF_fi = \frac{\sum_{D \in all trees} norm_{fiID}}{m}
+
+    ```
+
+
+    where, rf sub(i) is importance of feature i calculated from all the trees in the
+    RF, rf sub(d) is normalized importance for feature in D, and m is total number
+    of trees. The importance of each feature was derived in equation (5):
+
+
+    ```
+
+    fr_i = \frac{\sum_{D \in nodes} bn_i(D)}{\sum_{D \in nodes} bn(m)}
+
+    ```
+
+
+    where, fr sub(i) is importance of feature i, bn sub(D) is the importance of node
+    D. For creating a node in RF, a node importance was calculated using gini impurity
+    (6):
+
+
+    ```
+
+    bn_d = wt(d)Gini(D) - wt(left)Gini(left) - wt(right)Gini(right)
+
+    ```
+
+
+    where, bn(d) is the importance of binary node d, wt(d) is weighted number of samples
+    reaching node d, left(d) and right(d) is right child node of node D after split.
+
+
+    ## F. Experimental Setup
+
+
+    Python 3.8 was used as the ML language in this study. With this, ''jupyter notebook''
+    was incorporated as a web application to Python. Other library functions were
+    used:
+
+
+    - Scikit-learn: used for implementing library functions for ML algorithms k-means,
+    decision trees, classification, regression, SVM, XGBoost, CatBoost.
+
+
+    ![](img/7cabec6c4ba1b05a89d665c53a5229a7_3_0.png)
+
+
+    Our dataset contains 23 attributes. After calculating Gini impurity for all the
+    attributes, the fever was generated.
+
+
+    - NumPy: Used for scientific computing with Python as it can compute functions
+    for a multidimensional object.
+
+    - Pandas: Used as a data analysis tool for Python.
+
+    - Matplotlib: used in Jupyter notebook and Python scripts provide MATLAB-like
+    interactive plots.
+
+
+    The ROC area under the curve (ROC AUC) in this curve graph shows the highest threshold.
+
+
+    ## IV. RESULT AND DISCUSSION
+
+
+    A receiving characteristic curve or ROC curve is one kind of graphical representation
+    using a plot demonstrates the ability of a binary classifier system based on a
+    threshold [22 - 24]. It is a probability curve, and the area (ROC) represents
+    the degree of separation; it is plotted by the positive rate (TPR) on the y-axis
+    against the false positive rate (FPR) on the x-axis at various thresholds. The
+    test sensitivity, recall, or probability detection process. A false-positive rate
+    represents probability of false alarm [27-30].
+
+
+    The confusion matrix is used to describe the performance of a classification model.
+    Table V shows comparative result derived from the confusion matrix training and
+    test data of DT and RF.
+
+
+    | Algorithms | Precision | Recall | F-Measure |
+
+    |---|---|---|---|
+
+    | DT Training | 0.82 | 0.82 | 0.82 |
+
+    | DT Test | 0.79 | 0.79 | 0.79 |
+
+    | RF Training | 1.00 | 1.00 | 1.00 |
+
+    | RF test | 0.67 | 0.67 | 0.74 |
+
+
+    TABLE V. Comparative Results
+
+
+    ![](img/7cabec6c4ba1b05a89d665c53a5229a7_4_0.png) Fig. 3. ROC curve of test data
+
+
+    ![](img/7cabec6c4ba1b05a89d665c53a5229a7_4_1.png) Fig. 4. ROC curve of multiclass
+
+
+    We derived the result values of classification parameters (Table V) as the following:
+
+
+    - TPR = Recall/(TP+FN)
+
+    - FPR = TN/(TN+FP)
+
+    - Precision = TP/(TP+FP)
+
+    - F-measure = 2*Precision*Recall/(Precision+Recall)
+
+    - Accuracy = (TP+TN)/(Total)
+
+
+    After the result evaluation, the random training accuracy decreased from 70% to
+    68% whereas the decision tree accuracy increased from 71% to 79%. Finally, the
+    decision tree predicts with better accuracy other classifier, where true positive
+    (TP), false positive (FP), false negative (FN), and true negative (TN) are parameters
+    of confusion matrix [31-33].
+
+
+    ## V. CONCLUSION
+
+
+    Figure 3 shows the ROC curve of test data accuracy. ROC curve in figure 4 depicts
+    the comparative analysis between TPR and FPR. The pink line represents the micro-average
+    with 0.85 score; the blue line represents the macro-average with 0.83 score. The
+    other lines show class individually. This paper proposed an ML-based model to
+    predict fever. Data of 209 patients collected from Dhaka and Chittagong hospitals.
+    Finally, an accuracy of 79% was achieved using the decision tree, and finalized
+    for our model to classify three types of dengue. This model will be useful for
+    patients to follow up on the disease, and medical practitioners can quickly diagnose
+    the patient''s data. In the future, we will seek additional risk factors and location-based
+    data added for effective generation.
+
+
+    ## REFERENCES
+
+
+    [1] S. Hosain, S. R. Kaiser, V. Alam, M. Hoque, and H. Sarker, "A Rule-Based Expert
+    System to Disease Under Uncertainty," in Computing Science, Ireland, 2020, p.
+    143–159.
+
+    [2] J. Lee, T. Ma, and N. Kim, "Forecasting dengue fever in Brazil: An analysis
+    of climate conditions," IEEE Access, no. 14, p. 8–19, 2020. doi:10.2229/22116.
+
+    [3] S. Kim and Y. Park, "Neural Network Model for Stage Detection," Journal of
+    Computer Engineering and Applications, vol. 1, no. 1, p. 11–20, 2021.
+
+    [4] J. Xu, "Prediction of Dengue Cases in 2020 Based on Machine Learning Methods,"
+    International Journal of Environmental Research and Public Health, no. 17, p.
+    12, 2020.
+
+    [5] C. Davi, et al., "Dengue Prediction Using Human Genetic Data and Machine Learning,"
+    Transactions on Medical and Biology, vol. 39, p. 755–760, 2019.
+
+    [6] A. Alyssa, J. Lee, F. R. Santana, and P. Gambia, "A Multi-Stage Machine Learning
+    Approach to Predict Dengue Incidence: A Case Study," IEEE Access, no. 8, p. 52173–52185,
+    2020.
+
+    [7] S. Chen, et al., "An automated machine learning approach for predicting dengue
+    outbreaks using climate patterns," Landscape Ecology, no. 34, p. 96, 2021.
+
+    [8] X. L. Zheng, Z. B. Zhang, Y. He, and F. Gu, "Seasonality Analysis and Modeling
+    of Dengue Outbreak based on climatic and environmental factors," Diseases of Poverty,
+    vol. 8, no. 1, p. 9–18, 2019.
+
+    [9] S. Kim, T. Lee, and J. H. Lee, "Using ensemble clustering algorithm to detect
+    dengue patterns from spatio-temporal data," Parasites and Vectors, vol. 14, no.
+    1, p. 10–20, 2020.
+
+    [10] M. G. Ma, F. H. Noble, and P. Shabari, "Characterization of patterns of dengue
+    patients using unsupervised machine learning approach," IEEE Access, vol. 8, p.
+    43583–43590, 2020.
+
+    [11] A. Martimurali, V. J. I. Oliveira, E. C. Bahramanian, and "A Neural Network
+    Model for Prediction of Dengue Sequences," Journal of Computer Engineering and
+    Applications, vol. 11, no. 2, p. 45–52, 2020.
+
+    [12] N. K. Rao, S. V. Rao, N. P. Ji, I. R. Lee, and C. Chen, "Automatic Detection
+    and Characterization of Dengue Outbreak using Data Mining Techniques," International
+    Journal of Research Research in Communication Technology, vol. 3, no. 3, p. 340–343,
+    2016.
+
+    [13] K. Siddhalat, N. Massood, A. B. Shafiat, K. Jabbar, H. Shabir, and S. J.
+    p. Shabari, "Dengue fever in children of sub-saharan africa," 2017 IEEE International
+    Conference on Techniques in Control, Optimization and Signal Processing (ICCOSP),
+    p. 1–5.
+
+    [14] A. N. Hasan and N. Salim, "Modeling of dengue outbreak in Malaysia: a comparison
+    of neural network and nonlinear regression model," 2008 International Symposium
+    on Information Technology, Springer.
+
+    '
+  mdcn: '
+
+
+    ## E. 患者发热分类
+
+
+    使用了决策树和随机森林算法来预测发热。CART（分类与回归）被用于对不完善的发热数据集划分决策树。如果根据集合中标签的分布随机选择一个标签，则选择纯度最低的属性来划分节点。
+
+
+    在图 2 中，需要注意的是呼吸快速的纯度最低，并被选为决策树的根节点。如果一个节点的基尼指数为 0，则它将给出决策且不能被划分。所有叶子节点都给出发热类别。
+
+
+    ### a) 基尼不纯度（Gini Impurity）公式
+
+
+    基尼指数是一种衡量不平等的统计指标，范围从 0（绝对）到 1（绝对）。节点的基尼不纯度是指如果按照节点内样本分布进行标记，则节点中随机选择的样本被错误标记的概率。决策树在划分每个节点时试图最小化该不纯度。公式
+    (1) 公式化了基尼指数，其中 D 是 209 名患者数据集，P 是患者属于发热类的总概率，n 是发热类别的数量。Gini (D) 衡量整个数据集的不纯度。
+
+
+    ### b) 随机森林公式
+
+
+    决策树容易过拟合，这意味着它学习了训练集的规则，而这些规则在训练集上的泛化性较差。为了克服这个问题，随机森林（RF）算法通过将许多决策树合并为一个单一集成来工作。结果，它使用自助法（bootstrap）从原始数据集（D-209）生成了不同的数据集，并构建了
+    n 棵决策树。最终值通过对森林中 m 棵树的所有预测值取平均值计算。
+
+
+    ```
+
+    Gini(D) = 1 - \sum_{i \in D} n_i^2
+
+    ```
+
+
+    如果 D 分分为子集 D1 和 D2，则特定属性的基尼指数如 (2) 所示：
+
+
+    ```
+
+    Gini(D) = \frac{|D1|}{|D|}Gini(D1) + \frac{|D2|}{|D|}Gini(D2)
+
+    ```
+
+
+    在公式 (3) 中，我们计算特定属性的不纯度减少：
+
+
+    ```
+
+    \DeltaGini(D) = Gini(D) - Gini(A)
+
+    ```
+
+
+    ```
+
+    RF_fi = \frac{\sum_{D \in all trees} norm_{fiID}}{m}
+
+    ```
+
+
+    其中，rf sub(i) 是从 RF 中所有树计算出的特征 i 的重要性，rf sub(d) 是 D 中特征的归一化重要性，m 是树的总数。每个特征的重要性在公式
+    (5) 中得出：
+
+
+    ```
+
+    fr_i = \frac{\sum_{D \in nodes} bn_i(D)}{\sum_{D \in nodes} bn(m)}
+
+    ```
+
+
+    其中，fr sub(i) 是特征 i 的重要性，bn sub(D) 是节点 D 的重要性。在 RF 中创建节点时，使用基尼不纯度 (6) 计算节点重要性：
+
+
+    ```
+
+    bn_d = wt(d)Gini(D) - wt(left)Gini(left) - wt(right)Gini(right)
+
+    ```
+
+
+    其中，bn(d) 是二节点 d 的重要性，wt(d) 是到达节点 d 的权重样本数，left(d) 和 right(d) 是节点 D 划分后的左右子节点。
+
+
+    ## F. 实验设置
+
+
+    本研究使用 Python 3.8 作为机器学习语言。在此基础上，''jupyter notebook'' 被集成为 Python 的 Web 应用程序。使用了其他库函数：
+
+
+    - Scikit-learn：用于实现机器学习算法库函数，如 k-means、决策树、分类、回归、SVM、XGBoost、CatBoost。
+
+
+    ![](img/7cabec6c4ba1b05a89d665c53a5229a7_3_0.png)
+
+
+    我们的数据集包含 23 个属性。在计算所有属性的基尼不纯度后，生成了发热结果。
+
+
+    - NumPy：用于科学计算，它可以计算多维对象。
+
+    - Pandas：作为 Python 数据分析工具。
+
+    - Matplotlib：用于 Jupyter notebook 和 Python 脚本，提供交互式图表。
+
+
+    ROC 曲线下面积（AUC）在图中显示了最高阈值。
+
+
+    ## IV. 结果与讨论
+
+
+    接收曲线或 ROC 曲线是一种图形表示形式，展示了基于阈值的二分类器的能力 [22-24]。它是一个概率曲线，面积（ROC）代表分离程度；通过 y 轴上的正性率（TPR）相对于
+    x 轴上的负性率（FPR）进行绘制。敏感度、召回率或概率检测过程。
+
+
+    混淆矩阵用于描述分类模型的性能。表 V 显示了来自 DT 和 RF 的混淆矩阵训练和测试结果。
+
+
+    | 算法 | 精确 (Precision) | 召回率 (Recall) | F值 (F-Measure) |
+
+    |---|---|---|---|
+
+    | DT 训练 | 0.82 | 0.82 | 0.82 |
+
+    | DT 测试 | 0.79 | 0.79 | 0.79 |
+
+    | RF 训练 | 1.00 | 1.00 | 1.00 |
+
+    | RF 测试 | 0.67 | 0.67 | 0.74 |
+
+
+    表 V. 比较结果
+
+
+    ![](img/7cabec6c4ba1b05a89d665c53a5229a7_4_0.png) 图 3. 测试数据的 ROC 曲线
+
+
+    ![](img/7cabec6c4ba1b05a89d665c53a5229a7_4_1.png) 图 4. 多分类 ROC 曲线
+
+
+    根据分类参数（表 V）得出的结果值如下：
+
+
+    - TPR = Recall/(TP+FN)
+
+    - FPR = TN/(TN+FP)
+
+    - Precision = TP/(TP+FP)
+
+    - F-measure = Precision*Recall/(Precision+Recall)
+
+    - Accuracy = (TP+TN)/(Total)
+
+
+    评估显示，随机训练准确率从 70% 下降到 68%，而决策树准确率从 71% 增加到 79%。最后，决策树预测具有更好的准确率，其中真性（TP）、假性（FP）、假性（FN）和真负性（TN）
+    [31-33]。
+
+
+    ## V. 结论
+
+
+    图 3 显示测试数据的 ROC 曲线。图 4 描述了 TPR 和 FPR 之间的比较分析。粉色线代表 0.85 的微平均；蓝色线代表 0.83 的宏平均。其他线条单独显示。本文提出了一种基于机器学习的模型来预测发热。从达卡和奇塔洪医院收集了
+    209 名患者的数据。最后，使用决策树实现了 79% 的准确率，该模型将有助于医疗人员快速诊断患者。未来，我们将寻求额外的风险因素和位置数据。
+
+
+    ## 参考文献
+
+
+    [1] S. Hosain, S. R. Kaiser, V. Alam, M. Hoque, and H. Sarker, "基于规则的不确定性专家系统,"
+    in Computing Science, 2020, p. 143–159.
+
+    [2] J. Lee, T. Ma, and N. Kim, "巴西登热预测：气候状况分析," IEEE Access, no. 14, p. 8–19,
+    2020. doi:10.2229/22116.
+
+    [3] S. Kim and Y. Park, "用于阶段检测的模型," Journal of Computer Engineering and Applications,
+    vol. 1, no. 1, p. 11–20, 2021.
+
+    [4] J. Xu, "基于机器学习方法的2020年登革病例预测," International Journal of Environmental Research
+    and Public Health, no. 17, p. 12, 2020.
+
+    [5] C. Davi, et al., "利用人类遗传数据和机器学习预测登热," Transactions on Medical and Biology,
+    vol. 39, p. 755–760, 2019.
+
+    [6] A. Alyssa, J. Lee, F. R. Santana, and P. Gambia, "预测登热发病的多阶段机器学习方法：案例研究,"
+    IEEE Access, no. 8, p. 52173–52185, 2020.
+
+    [7] S. Chen, et al., "利用气候模式预测登热爆发的自动机器学习方法," Landscape Ecology, no. 34, p. 96,
+    2021.
+
+    [8] X. L. Zheng, Z. B. Zhang, Y. He, and F. Gu, "基于气候和环境因素的登热爆发季节性分析和建模," Diseases
+    of Poverty, vol. 8, no. 1, p. 9–18, 2019.
+
+    [9] S. Kim, T. Lee, and J. H. Lee, "使用集成聚类算法从时空数据中检测登热模式," Parasites and Vectors,
+    vol. 14, no. 1, p. 10–20, 2020.
+
+    [10] M. G. Ma, F. H. Noble, and P. Shabari, "使用无监督机器学习方法表征登热患者模式," IEEE Access,
+    vol. 8, p. 43583–43590, 2020.
+
+    [11] A. Martimurali, V. J. I. Oliveira, E. C. Bahramanian, and "预测登热序列的神经网络模型,"
+    Journal of Computer Engineering and Applications, vol. 11, no. 2, p. 45–52, 2020.
+
+    [12] N. K. Rao, S. V. Rao, N. P. Ji, I. R. Lee, and C. Chen, "利用数据挖掘技术自动检测和表征登热爆发,"
+    International Journal of Research Research in Communication Technology, vol. 3,
+    no. 3, p. 340–343, 2016.
+
+    [13] K. Siddhalat, N. Massood, A. B. Shafiat, K. Jabbar, H. Shabir, and S. J.
+    p. Shabari, "撒哈拉以南非洲儿童的登热," 2017 IEEE 控制优化与信号处理技术会议, p. 1–5.
+
+    [14] A. N. Hasan and N. Salim, "马来西亚登热爆发建模：神经网络与非线性回归模型的比较," 2008 信息技术国际研讨会, Springer.
+
+
+    '
+  merge: 0
