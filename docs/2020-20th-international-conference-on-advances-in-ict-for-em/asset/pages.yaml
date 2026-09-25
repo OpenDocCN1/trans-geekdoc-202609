@@ -1,0 +1,669 @@
+- pgno: 0
+  md: '# # Low-resource Speech Recognition using Deep Learning
+
+
+    Hurunaka Karunathilaka, Viraj Belgama, Thilini Nadudagege, Ruvan Weerasinghe
+
+    *University of Colombo School of Computing, Sri Lanka
+
+    †hurunakakarunathilaka@gmail.com, **@ucse.cmb.ac.lk, ^@indusc.cmb.ac.lk, &aw@ucsc.cmb.ac.lk
+
+
+    **Abstract**—Automatic speech recognition has progressed significantly in the
+    past decades for most of the European languages, but still, it is a prominent
+    research area for most of the low-resource languages. This paper presents a study
+    to build an automatic speech recognition (ASR system) using the Kaldi toolkit
+    for Sinhala language, a language with a large lexical variety. We explore various
+    neural architectures such as DNN, TDNN, TDNN-LSTM and LSTM to enhance the effectiveness
+    of the deep learning approach. A statistical model of GMM-HMM is also trained
+    for comparison. For the language, a corpus containing more than 200 sentences
+    from Sinhala was used. The experiments are conducted with a balanced training
+    dataset of twenty-five hours of speech data. The results show that deep neural
+    network achieved better performance than the statistical baseline by 12.48% on
+    the test set.
+
+
+    **Index Terms**—Speech recognition, Deep neural network, Kaldi
+
+
+    # I. INTRODUCTION
+
+
+    Over the past few decades, there has been a curiosity in making computers understand
+    what only humans can understand. The remarkable development in machine learning
+    paradigms has helped to achieve unbelievable success in speech recognition, natural
+    language processing, processing images, etc. Many of the researchers are interested
+    in developing speech recognition because it is used to enable interactions between
+    humans and robots. Speech has been the most efficient and convenient mode of communication,
+    including commercial products like Google Assistant, Siri from Apple and Alexa
+    are rapidly using this ASR technology [3]. Languages spoken by smaller populations,
+    that have fewer contributions towards research development, have not seen the
+    same level of investment and development. Sinhala is a low-resource language.
+
+
+    (ASR) tool to utilize to enhance recognition. The objective of this research is
+    to develop an ASR system for Sinhala language. For that we intend to follow, a
+    deep learning approach and a deep neural architecture which performs well for
+    the Sinhala speech. For acoustic modeling, Deep Neural Networks have been the
+    state-of-the-art method and have shown significant improvement for English and
+    other European languages [5], [6]. We use various DNN models for Sinhala speech
+    recognition. The performances of each DNN model will be evaluated with the traditional
+    statistical model which is GMM-HMM.
+
+
+    The paper is organized as follows: Section II mentions relevant work, Section
+    III describes the methodology and training recipe Section IV describes the results
+    and evaluation Section V presents the conclusions and
+
+
+    # II. RELEVANT WORK
+
+
+    A typical ASR system''s goal is to transform the input into sequence of words.
+    The internal process of an ASR consists of several stages: feature extraction
+    which is transforming the audio into a sequence of vectors of acoustic features;
+    acoustic modeling which converts speech to phonemes and natural language modeling
+    which defines what kind of word and sequences are expected in the target language
+    and their probabilities.
+
+
+    Since different approaches for pattern matching speech recognition have been experienced
+    [7]. From template-based, dynamic time warping, statistical-based, and neural
+    network-based approaches, some of the above have been discussed extensively. Several
+    attempts have been made for building speech recognition systems for Sinhala using
+    the statistical GMM-HMM approach [8]–[11]. In the research work which has been
+    done in an initial approach to speech recognition, however, 4% of WER has been
+    achieved. However, the model was 100% speaker-dependent. The work needs to be
+    speaker independent [8], [9]. But, the accuracy of this ASR system depends on
+    the number of data it can handle. Here, this work proposes a speaker independent
+    ASR system for general domain. Recently, neural-based (ANN) acoustic models have
+    shown significant performance improvement over GMM. An in-depth overview of the
+    usage of deep networks to achieve a successful model for speech recognition is
+    presented by four research groups in the research article by Hinton et al. (2013)
+    [12]. The authors of here have shown
+
+
+    Sinhala is the one of the official languages used by a large majority of Sri Lanka.
+    This language has a rich lexical variety which has resulted in a vast vocabulary.
+    Unavailability of an on-resource speech recognition system has hindered achievable
+    performance of local systems and services from most commercial-off-the-shelf (COTS).
+    Therefore, many organizations, including both local and global establishments,
+    can make use of a Sinhala Automatic Speech Recognition'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'pre-training is more helpful in deep neural nets than shallow ones, when limited
+    amounts of labeled training data are available. It also has reducing over-fitting,
+    and the time required for discriminative fine-tuning with back-propagation. Alexey
+    Karpov (2017) have shown that the number of layers has only a slight influence
+    on the speech recognition and increasing the number of hidden units leads to increasing
+    WER when data is small. Xu and Liang (2015) reported that constructing deep LSTM
+    architectures outperform shallow LSTM networks and DNNs. By Wei-Nheng Hsu et al.
+    (2016) it also suggests that deep grid LSTM architectures outperform the vanilla
+    LSTM model. Introduction to Time Delay Neural Networks (TDNN) presents research
+    work by Daniel Pavel et al. (2015), where the researchers have achieved a significant
+    improvement in the field of speech recognition.
+
+
+    TDNN architecture is effective in learning better temporal dependencies in both
+    small and large datasets. Although DNNs outperformed the statistical models in
+    numerous languages based ASR, some recent tests[16], [17], [19] investigated on
+    low resource languages such as Turkish, Assamese, Bengali speech recognition,
+    shows that the use of DNNs for acoustic modeling has resulted in a small improvement
+    compared to GMM-HMM.
+
+
+    # III. APPROACH
+
+
+    # A. Data Preparation
+
+
+    The speech corpus used in this research is collected from females and 20 males
+    from the USCT LTRI, and it is 25 hours of speech. The data is used for training,
+    validation, and testing, where sets of the speech (22.1, 21.6, and 700) of audio
+    files were recorded from test and validation sets as the speakers were reading
+    some script/sents pre-processed and possibly that can bias the performance of
+    the model by giving a too-to-low error rate.
+
+
+    # B. Feature Extraction
+
+
+    First, the audio files were pre-processed to obtain a vector of numeric values,
+    which are often referred to as ''Mel frequency spectrograms'', which contains
+    the acoustic information. Then the speech features were extracted from Mel Frequency
+    Frequency
+
+
+    ![](img/59c760b9b61b24fc4c06cb7d0749ecc2_1_0.png)
+
+
+    Fig. 1. High-level architecture of the research design
+
+
+    Cepstral Coefficients (MFCC) features after normalizing by a standard 13-dimensional
+    cepstral mean variance.
+
+
+    # C. Getting alignments from GMM-HMM model
+
+
+    For a supervised training of neural networks, a set of labeled data is required.
+    Since it is difficult to annotate the labels for each feature to its corresponding
+    phone, the alignments are generated by training the GMM-HMM statistical model
+    as displayed in figure 2. Then, the DNN training is bootstrapped using labeled
+    frames which present the phone-to-audio alignment.
+
+
+    ![](img/59c760b9b61b24fc4c06cb7d0749ecc2_1_1.png)
+
+
+    Fig. 2. DNN is bootstrapped on the alignments from GMM-HMM model
+
+
+    A speaker recognizes the audio signal into successive frames where each frame
+    outputs corresponding phones and then recognizes the recognized phones into a
+    text. This research design develops a method that takes the speakers of audio
+    as signals and the texts to corresponding. Figure 1 demonstrates the high level
+    research design.
+
+
+    The GMM-HMM model that is trained on the same data is also taken as the baseline
+    model to evaluate the performance of DNN-HMM models. The block diagram of an acoustic
+    model of the GMM is presented in figure 3. Mobile HMMs act as building blocks
+    to the triplets since they depend only on the contextual information of a single
+    phone. Phone HMMs represent the phone variant in the context of following phones
+    typically.
+
+
+    A pass of alignment is repeated after each phone to pass the correct predictions
+    between the text transcriptions and audio to have the proper latest alignments
+    for the latest model in each case.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# D. Acoustic Modeling with DNNs
+
+
+    The two main approaches for developing ASR systems can be considered as DNN-HMM
+    [21] and End-to-end (E2E) DNN. DNN-HMM is a hybrid architecture which uses DNNs
+    for acoustic modeling with a HMM enriches with the strong learning power of DNNs
+    and the sequential modeling of HMMs. The End-to-end DNN is a single integrated
+    approach lacks flexibility. ASR systems suffer from limitations such as over-fitting
+    when the training data is limited. Hence, we use the DNN-HMM for approach.
+
+
+    This section will shortly describe the neural network architectures that were
+    used for the experiments. All the experiments were conducted using the Kaldi toolkit.
+    All deep networks and the decoding of the models were carried out on a single
+    GPU - GeForce RTX 2080 Ti of 10.8GB
+
+
+    +   1 Pre-trained DNN: According to [12], supervised optimization from pre-trained
+    networks yields vastly better performance than randomly initialized weights in
+    neural network. For our approach, the pre-trained weights were obtained by training
+    a Deep Belief Network (DBN). The features are then connected to a fully connected
+    feed forward network which is trained directly with training and validation data.
+
+
+    +   2 Feed Forward Neural Networks: Pre-training DNN models with many layers helps
+    but the computational time is also more stable than a regular layer feed-forward
+    network. However, fully connected feed forward networks with randomly initialized
+    weights were experimented on the training and validation data. The other network
+    settings were kept as same as for the pre-trained DNNs.
+
+
+    +   3 Time Delay Neural Networks: In research such as [22], [15] and [23], time-delay
+    neural networks with sub-sampling have been proposed for effective modeling of
+
+
+    ![](img/59c760b9b61b24fc4c06cb7d0749ecc2_2_0.png)
+
+
+    ![](img/59c760b9b61b24fc4c06cb7d0749ecc2_2_1.png)
+
+
+    long contexts of speech. DNNs represent a mapping between past and present values.
+    Although the same memory capture can be achieved by RNNs, when learning time dependencies
+    with RNNs, the "vanishing/exploding" gradient problem is avoided.
+
+    Unsupervised training
+
+
+    +   4 DNN+LSTM: The next choice of neural architecture was a DNN network followed
+    by an LSTM layer. In research that has been conducted for Russian Mandarin Chinese
+    [23] uses embeddings of LSTMs for better results as well. Experiments of this
+    architecture were conducted using both DNN and TDNN factored neural networks.
+
+
+    # E. Language Model and Lexicon
+
+
+    Modeling the way words are connected to form sentences in one language. A tri
+    gram model was built using the corpus, lexicon, silence functions and non-silent
+    phonemes. For this, SRI Language Toolkit [20] was used.
+
+
+    The lexicon for our research is of type graphene. Our large lexicon contains 220K
+    entries with one unique grapheme prefix. This lexicon was used to generate the
+    transcripts of the UCSC LTRI phonetically balanced corpus. Translated into English
+    letters following the rules of phonetic translation. For this, the "SubIn" subtitle
+    translation software was used. The length of the used non-silent phone set was
+    47.
+
+
+    # IV. RESULTS AND EVALUATION
+
+
+    The performance of this ASR was evaluated in terms of accuracy on the records
+    taken in a quiet environment. The accuracy was calculated using the Word Error
+    Rate (WER), which is the standard measure to assess the'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'performance of an ASR system.
+
+    Test dataset also contains five and two
+
+    male speakers who made their total of 150 sentences.
+
+    of the validation and testing data is 1.6 hours long.
+
+
+    # Baseline GMM-HMM model
+
+
+    As described in Section III part, a GMM-HMM model was
+
+    trained on the training data set to generate alignments.
+
+    After monophone training, the algorithms were
+
+    passed through three other processes, fine-tune the
+
+    by modifying HMM models and the total number of Gaussians.
+
+    It was observed through cycling training and iphone
+
+    and monophone passes after the process. The lowest WER were
+
+    berved in table 1.
+
+
+    # TABLE I
+
+    RESULTS OF GMM-HMM MODEL
+
+
+    | Training Pass | WER% Valid set | WER% Test set |
+
+    |--- |--- |--- |
+
+    | Monophone | 42.64 | 48.07 |
+
+    | Iphone Pass 1 | 3.81 | 42.88 |
+
+    | Iphone Pass 2 | 3.92 | 42.69 |
+
+    | Iphone Pass 3 | 3.80 | 42.64 |
+
+
+    From table 1, the lowest WER for baseline GMM-HMM model is 42.64%.
+
+
+    # D. DNN Acoustic
+
+
+    The MFCC and CMV were built using the
+
+    alignments produced by the last phase in the
+
+    GMM-HMM to train the training data set using each
+
+    neural network architecture.
+
+    The results generated using the RBM pre-trained deep
+
+    networks with sigmoid activation function and a learning
+
+    grate of 0.008 are shown in table 2.
+
+
+    model. However, the results did not clearly show how
+
+    unsupervised generative model achieved the final performance of
+
+    tour targeted model.
+
+    The results generated for the non-pretrained models with the
+
+    same configurations as in the pre-trained models
+
+    shown in table 3.
+
+
+    # TABLE III
+
+    RESULTS OF NON PRE-TRAINED DNN MODELS
+
+
+    | #hidden layers | units per layer | WER% Valid set | WER% Test set |
+
+    |--- |--- |--- |--- |
+
+    | 2 | 256 | 35.4 | 40.52 |
+
+    | 3 | 512 | 35.68 | 40.32 |
+
+    | 3 | 1024 | 37.56 | 40.28 |
+
+    | 4 | 256 | 35.69 | 40.27 |
+
+    | 4 | 512 | 37.78 | 39.91 |
+
+    | 4 | 1024 | 35.89 | 39.93 |
+
+    | 5 | 256 | 31.65 | 40.09 |
+
+    | 5 | 512 | 35.88 | 40.06 |
+
+    | 5 | 1024 | 36.61 | 40.05 |
+
+    | 6 | 256 | 35.12 | 40.22 |
+
+    | 6 | 512 | 35.58 | 40.19 |
+
+    | 6 | 1024 | 37.15 | 40.15 |
+
+    | 7 | 256 | 35.58 | 41.60 |
+
+    | 7 | 1024 | 37.26 | 41.29 |
+
+
+    The WER from feed forward network results was to be 39.6%, which is 0.23% lower
+    than the pretrained DNN. This was observed with 6 layers having 512 hidden layers.
+    According to the results in table 3, the two architectures surpassed the performance
+    of the baseline model.
+
+    The experiments on the two network types of TDNNs
+
+
+    # TABLE II
+
+    RESULTS OF PRE-TRAINED DNN MODELS
+
+
+    | TDNN network type | #hidden layers units per layer | WER% Valid set | WER% Test
+    set |
+
+    |--- |--- |--- |--- |--- |
+
+    | Non factorized | 6 | 128 | 34.2 | 40.49 |
+
+    | | | 512 | 35.2 | 39.97 |
+
+    | | | 1024 | 37.1 | 40.36 |
+
+    | Factorized | 9 | 1024 | 32.6 | 35.48 |
+
+    | | | 256 | 28.6 | 35.16 |
+
+    | | | 13 | 512 | 30.09 | 35.16 |
+
+    | | | 1024 | 27.5 | 35.45 |
+
+
+    The best so was observed from the TDNN (TDNN-F) network type, which is 35.16%.
+    With comparison to baseline, and pre-trained models, the WER was decreased by
+    7.48%, 4.76%, and 4.53%.\As described in Section II, another variation of TDNN
+    network was experimented by using LSTM on the top of TDNN and TDNN-F layers. However,
+    when an LSTM was used to develop the TDNN-F model which gained 35.16%, the WER
+    was improved. The overall results observed from these experiments are shown in
+    table X
+
+
+    The lowest WER is observed to be 39.92 with 3 hidden layers, and is 2.72% lower
+    than the WER of the baseline'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# TABLE. V
+
+    RESULTS OF TDNN+LSTM MODELS
+
+
+    | # of TDNN layers | # of LSTM layers | layer dimensions | WER% Valid | WER% Test
+    |
+
+    |---|---|---|---|--|
+
+    | 4 | | 512 - TDNN 384 - LSTM | 4.40 | 36.23 |
+
+    | | | 256 - TDNN 384 - LSTM | 4.80 | 36.33 |
+
+    | 13 | | 256 - TDNN 384 - LSTM | 4.35 | 35.87 |
+
+
+    can be obtained from the factored TDNN setting with 13 TDNN layers, having 256
+    hidden units. This is the best WER among all the models built. Later, with the
+    hybrid approach - TDNN+LSTM, the WER increased significantly compared to the limited
+    dataset. Furthermore, factored TDNN have proven their efficiency in speech recognition
+    with limited data. When evaluating results, it was observed that if the test corpus
+    differs from training data, the models are able more of the words correctly.
+
+
+    # V. CONCLUSION AND FUTURE WORK
+
+
+    In this research, we have developed a speech recognition system for the Sinhala
+    language using a deep learning approach for acoustic modeling. The results show
+    that the deep learning improved the performance of the statistical GMM-HMM by
+    a 7.8% on the test data. When Time Delay Neural Networks were used as the acoustic
+    model, it resulted in the lower WER of 36.15%. This addition to the main conclusion
+    of this research is that TDNN perform better than regard forward DNNs, pre-trained
+    DNNs
+
+
+    # TABLE VI
+
+    SUMMARY OF THE BEST RESULTS OBTAINED FROM ALL THE MODELS
+
+
+    | DNN model | WER% Test set |
+
+    |---|--|
+
+    | Baseline GMM-HMM | 42.64 |
+
+    | Pre-trained DNN | 39.92 |
+
+    | Non-pre-trained DNN | 39.69 |
+
+    | TDNN | 35.16 |
+
+    | TDNN+F LSTM | 35.87 |
+
+
+    Table VI shows us the best and lowest WERs obtained from each model for the test
+    dataset. Clearly distinguish how the models have practically affected the test
+    audio, a comparison of two translated have been made in five. Further investigations
+    can be conducted to improve robust model that will deliver better cases Since
+    the lowest WER was obtained from factored TDNN models, experimenting with different
+    numbers of layers, contexts, and other configurations can lead to a more phonetically
+    balanced vocal vocoder. In addition to that, with an extensive corpus, experimenting
+    on TDNN networks connecting CNN, LSTM, and BLSTM is further needed to enhance
+    this research.
+
+
+    Clearly distinguish how the models have practically affected the test audio, a
+    comparison of two translated have been made in five.
+
+
+    ![](img/59c760b9b61b24fc4c06cb7d0749ecc2_4_0.png)
+
+
+    # ACKNOWLEDGMENT
+
+
+    Fig. 5. ten represents the results and text in red that are incorrectly labeled,
+    while the text in blue represents the segmentation issues and deviations
+
+
+    The authors would like to express their sincere gratitude to the Language Research
+    Laboratory of University of Colombo for providing insight and expertise. We are
+    also immensely grateful to anyone who has contributed by an award of the approach
+    presented in this research.
+
+
+    When evaluating the baseline GMM-HMM model, it was 42.64%. By manually comparing
+    results, it can observe that the translated sentences from pre-trained (39.92)
+    and regular DNN (39.69) are comparatively similar. However, these two DNN models
+    have a difference of 2.22% and 2.95%.
+
+    The results obtained from TDNN models were dramatically better than other models.
+    This proves the efficiency of TDNN network towards the task of speech recognition.
+    The best WER obtained from TDNN, which was 35.16
+
+
+    +   1. Pauer, Dunlop, Adams, Raubaud, Gies, Burget, Lukic, Ghelberg, Olendl, Nor
+    Grady, Hannekmaa, Mikko, Petric, Seeger, Varel, Karel., Pytannen Š,ov, Silvestijö,
+    Jan. (2011): The speech recognition spotlight: IEEE 2011 International Conference
+    on Speech and Language Processing.
+
+    2. Language Research Laboratory - Initiative: Applied Linguistics, University
+    of Colombo School of Computing for providing insight and expertise.
+
+    3. Joraa, Shrija, Singh, Rithika. (2012): Speech recognition technique: A Review.
+    International Journal of Computer Applications, 60: 34-34.
+
+    4. Jurafski, Daniel, Martin, James. (2008): Speech and Language Processing: An
+    Introduction to Natural Language Processing, Computational Linguistics, Pearson
+    Education.
+
+    5. Dominique Frey, Öhde, Müller, Ina. Niada. New Paradigm in Speech Recognition
+    for Low-Resource Languages. IEEE International Conference on Information Systems
+    and Engineering Intelligence, 2017 Marrakech, Morocco, 2017-0184444
+
+
+    05th - November 2020
+
+
+    20th International Conference on Advances in ICT for Emerging Regions (ICT 2020)
+
+
+    Authorized license used to: Carleton University. Download on June 05, 2021 at
+    13:19:17 UTC from IEEE Xplore. Restrictions
+
+
+    # REFERENCES'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'Hirunika Karunathila, Viraj Velgama, Thilini Nadudingage, Ruan Weerasinghe
+
+
+    +   [66] Markovska, Nikita, Kripakova, Ivan, Karpov, Alexander, Skeleton. (2018).
+    Deep Neural Networks in Speech Recognition. Speech Conference, 54-67. doi:10.1109/ICASASSP.2018.8623594-5033
+
+
+    +   [67] Sakumada, Tatsunori, Fujimura, P. D., and Hashimoto, R. (2015). A Survey
+    of Modern Approaches to Speech Recognition Systems. International Journal of Computer
+    Applications, 115, 23-30. doi:10.5120/ijca.2015.1152302024
+
+
+    +   [68] Waramarajiga, D. and Gamangi, S. (2012). Improving speech recognition
+    for voice dialogue conference. International Conference on Advances in ICT (ICTER
+    2012), Colombo, October 2012, pp. 3-6.
+
+
+    +   [69] Manamperiya, Wangaesha, Karathilage, Dinesha, and Madumhani, Thilini
+    & Gunadasera, Rohan. (2018). Deep Learning for Interactive Voice Response Systems
+    Accessed Through Mobile Phone Devices.
+
+
+    +   [70] Nadududingage, Thilini, Weerasinghe, Ruan. (2011). Convolutional Speech
+    Recognition.
+
+
+    +   [71] Gunarajawardena, Madhuwa and Meegama, Gayan. (2015). Real time Translation
+    of Speech Recognition to Uncode Text.
+
+
+    +   [72] Hinton, Geoffrey, Lee, Yu, Dahl, Mohamed, Abdelrahman Jaitly, Naydeau,
+    Andrew, Vbeshout, Vincent, Nguyen, Pyatkovsky. (2009). Deep Neural Networks for
+    Acoustic Modeling: The Shared View. In IEEE International Conference on Audio
+    Signal Processing, IEEE. 29, 82-97. doi:10.1109/ICASSP.2009.2205597
+
+
+    +   [73] Li, Xiangliang, Wang, Xu. (2015). Constructing short-term memory recurrent
+    networks for efficient speech recognition.
+
+
+    +   [74] Lin, Hao, Zhang, Y., and Chen, James. (2016). A prioritized gated long-term-memory
+    RNN for speech recognition. 467-473, doi:10.1109/ICLT.2016.7846035
+
+
+    +   [75] Pasindiev, Sergey. (2015). Time delay neural network architecture for
+    efficient modeling of long contexts. INTERSPPEECH (2015).
+
+
+    +   [76] Turkish Speech Recognition Based OnDeep Neural Network-UssenAbreKIMANU*1,
+    OsmanBUYUK.
+
+
+    +   [17] Development of Assuasive Speech Recognition System-Baha Deka I.2., S.R.
+    Namala, I. Sumarayandra
+
+
+    +   [18] Bangladesh Speech Recognition for Voice Search Islam Rahman Saur, Shakawat
+    Amin, Shafkat K., Mujibur Rahman
+
+
+    +   [19] Yang, Mohammad, G. Gul, S., and Varhan, Yash, Raza, Nasir. (2016). Continuous
+    Speech Recognition using ASR based on Deep Neural Networks. 10.1109/ICASSP.2016.7452.2119
+
+
+    +   [20] Gul, S., and Mohammad, Yang. (2017). A Survey on Convolutional Deep Learning
+    for Open Learning. Application. IEEE_HDMM-SPEECH RECOGNITION TECHNIQUES: A REVIEW.
+    International Journal of Computer Applications, 170(4),1442-1450.
+
+
+    +   [21] Ying Zhang, Mohammad Pezhadi, Philemon Rafael, Saizheng Zhang, Chen,
+    Yu. (2019). Time Delay Recurrent Neural Network for Speech Recognition. Journal
+    of Physics: Conference Series, 1229, 012078. doi:10.1088/1745-6597/1229/1/012078
+
+
+    +   [22] Li, Xiangliang, Xu, Dongcheng. (2019). Time Delay Recurrent Neural Network
+    for Speech Recognition. Journal of Physics: Conference Series, 1229, 012078. doi:10.1088/1745-6597/1229/1/012078
+
+
+    +   [23] Huang, Xiangrong, Zhang, Wei, Xu, Yan, Ruitian, Chen, Yu. Time Delay
+    Neural Network for Efficient Acoustic Modeling. Journal of Physics: Conference
+    Series, 1229, 012078. doi:10.1088/1745-6597/1229/1/012078
+
+
+    +   [24] Deep Learning for Graduated Problem Solving in Students. International
+    Journal of Artificial Intelligence and Knowledge-Based Systems. 6, 107-116. doi:10.1142/S02785021150048
+
+
+    +   [25] Povey, Daniel Chen, Gaofeng, Wang, Yiming, Ke, Xu, Haidun, Simpson, Andreas.
+    (2016). Semi-supervised Low-Rank Matrix Factorization for Deep Networks. 3743-3747,
+    2016. doi:10.2147/Interspeech.2016.7417
+
+
+    +   [26] SRIL: Language Modeling Toolkit*. Available: http://www.sri.com/projects/srln/.
+    [Accessed: 24- Oct: 2020]
+
+
+    +   [27] Sinhala Transliterator*. Available: http://translation.sinhala.subasa.lk/.
+    [Accessed: 24: Oct: 2020]
+
+
+    20th 2nd International Conference on Advances in ICT for Emerging Regions (ICTER
+    2020)
+
+
+    05th - 06th November 2020'
+  merge: -1
+  img_proc: true
