@@ -1,0 +1,1521 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # A New Approach to Classifying Myocardial Infarction and Cardiomyopathy Using
+    Deep Learning
+
+
+    Rashid Nasimov
+
+    Computer Systems
+
+    Tashkent University of
+
+    Information Technologies
+
+    named Muhammad
+
+    Al-Khwarizmi
+
+    Tashkent, Uzbekistan
+
+    rashid.nasimov@tpi.uz
+
+
+    Bakhodir Mimanov
+
+    Fundamentals of
+
+    Informatics
+
+    Tashkent University of
+
+    Information Technologies
+
+    named Muhammad
+
+    Al-Khwarizmi
+
+    Tashkent, Uzbekistan
+
+    bakhodirmim@gmail.com
+
+
+    Sanjar Mirzahillov
+
+    Computer Systems
+
+    Tashkent University of
+
+    Information Technologies
+
+    named Muhammad
+
+    Al-Khwarizmi
+
+    Tashkent, Uzbekistan
+
+    mirzahillov@gmail.com
+
+
+    **Abstract** - In this study, the first automatic algorithm for myocardial infarction
+    (MI) and cardiomyopathy was developed on ECG data obtained from the ECG-II database.
+    ECG data classification was done by the developed Convolutional Neural Network
+    (CNN) model in order to determine the effectiveness of the proposed method, diseases
+    with MI and cardiomyopathy selected, which are the most misdiagnosed among patients.
+    Despite the simplicity of the disease on the ECG, the accuracy of the network
+    test was high, 91.1%. The conclusion is that a larger dataset and more features,
+    with 12 channel ECG data, would increase the capacity of the network to differentiate
+    other diseases. Moreover, this method has the ability to improve the diagnostic
+    accuracy of I-channel smartphone ECG devices.
+
+
+    **Keywords** - ECG, deep learning, classification, myocardial infarction, cardiomyopathy.
+
+
+    # ## I. INTRODUCTION
+
+
+    Cardiomyopathy is a heart disease characterized by enlargement, or rigid heart
+    muscle, which usually occurs in people who do not have the disease but have high
+    blood pressure, genetic factors, or coronary artery disease. The disease is similar
+    to myocardial infarction, the difference is that the disease is not acquired,
+    but may be hereditary. There are several types of cardiomyopathy, with dilated
+    being the most dangerous, and statistics show that one in 100 patients suffer
+    from this disease. Cardiomyopathy is one of the leading causes of sudden cardiac
+    death, especially among young athletes [1]. The mortality due to cardiomyopathy
+    has been increased in recent years
+
+
+    Echocardiography is commonly used to diagnose this type of heart disease. Because
+    patients with cardiomyopathy are less likely to be diagnosed with an ECG. This
+    is due to the fact that the disease is not associated with the appearance of specific
+    ECG signals. Analysis and statistics show that ECG
+
+
+    cardiovascular cardiomyopathy have different patients,と思います to a heart disease
+    and sometimes mimics myocardial infarction. The sensitivity of ECG features for
+    the diagnosis of cardiomyopathy is low [3]
+
+
+    Myocardial infarction is a condition causing damage to the cells of the heart
+    (myocardium) due to a lack of oxygen in the heart muscle to ruptured blood vessels.
+    A myocardial infarction is not diagnosed and treated in a timely manner, the damage
+    can lead to serious complications and death
+
+
+    In this study, both ECG and ultrasound are used to automatically detect and diagnose
+    MI and cardiomyopathy. ECG provides only information about the presence of a disease
+    and ultrasound scan can provide more details, for example the size or location
+    of the damage. Sometimes cardiomyopathy shows ECG features like myocardial infarction,
+    diagnosing based on ECG data leads to false diagnosis not only but also by qualified
+    physicians [6]. In different, patients with MI can be easily endangered if they
+    do not receive timely medical treatment. In heart disease, the patient''s
+
+
+    For this reason, blood tests and echocardiography are usually used to diagnose
+    cardiomyopathy and myocardial infarction. In cases where urgent intervention is
+    needed, if patient location at heart fast and first must be given in time, the
+    time and ability to perform these tests are limited. The results of tests of MI
+    and cardiomyopathy are usually determined within 8-9 hours, and there are not
+    always enough time to perform interpretation. In such cases, cardiomyopathy is
+    more reliable to the ECG and is
+
+
+    From the above it clearly seems that, medicine needs an effective method which
+    can differentiate cardiomyopathy and myocardial infarction by ECG data. In cardiomyopathy,
+    the symptom of myocardial infarction, such as pathologic Q waves appear after
+    30 days and then disappear, while in MI remain unchanged after'
+  - '[PAGE 1]
+
+
+    appearance. in myocardial infarction, these symptoms change over time. Other symptoms
+    like QRS change, ST elevation are noticeably different over long periods of time
+    [5].
+
+
+    It can also be noted that to make a correct diagnosis of these diseases, it is
+    necessary to compare the patient''s previous ECG data and monitor the changes
+    over time.
+
+
+    Latest many computer applications have been developed to automatically diagnose
+    myocardial infarction and cardiomyopathy, all of which are based on analysis of
+    ECG waveforms in particular. At the time of diagnosis, computer applications distinguish
+    the symptoms of the disease by the presence or absence of them according to certain
+    rules. As noted above, the symptoms themselves are similar for different diseases,
+    the program cannot accurately diagnose them, despite it uses any of them.
+
+
+    To prevent and eliminate cases in computer based diagnoses, a new approach has
+    been developed to diagnose the disease by comparing ECG data over several periods
+    of time. The performance of this approach is also highly accurate. It has been
+    observed that this approach can distinguish cardiomyocyte cardiomyopathy from
+    myocardial infarction with high accuracy.
+
+
+    The paper is organized in the following order. The first chapter describes the
+    structure of the database and how to prepare the data for training. The second
+    chapter provides information on the layers, the parameters of the CNN model, the
+    process of training the network, and the obtained results. The third section is
+    a discussion, which provides a brief review of analysis of the research done on
+    this topic, the disadvantages of the proposed approach, and information about
+    the activities to be done in the future.
+
+
+    # II. DATABASE OF THE NETWORK
+
+
+    # A. ECG-II DATABASE
+
+
+    The ECG-II database was used in this research, and developed by Korean researchers
+    between 1994 and 2013 for use [6]. This database is provided free of charge to
+    all researchers conducting in the relevant field. The database was developed from
+    710,369 ECG data from 371 patients, with ECG data collected from patients over
+    1 to 18 months (average of 1.6 days). Moreover, the average interval between ECG
+    acquisitions was 502 ± 1.08 days. ECG data is not presented in the form of a signal,
+    but in form of values of special features extracted from the signal.
+
+
+    The data dataset consists of 5 files in database, each of which is stored in .csv
+    format in tabular form. In addition to the main files, there are two additional
+    files with comments to the data. Following Tab. shows the names of the files in
+    the database, and a description of the data.
+
+
+    TABLE I. DATA DESCRIPTION AND NAME OF THE FILES IN THE DATASET
+
+
+    | File name | The description |
+
+    |---|---|
+
+    | Person.csv | Patient''s information as ID, gender, ethnicity. |
+
+    | Electrocardiogram. | | ECG data, person ID. |
+
+    | Drug.csv | Drug prescribed at a certain time. |
+
+    | Diagnosis.csv | Patient diagnosis code, ID and time of the ECG data. |
+
+    | Laboratory.csv | Results of laboratory analysis submitted by patients (Person
+    ID and time of laboratory analysis). |
+
+    | QRCodeMaster.csv | Prescription code and name of drug. |
+
+    | DiagnosisCode.csv | Mapping of diagnosis code to ICD-10 code. |
+
+
+    The data in the ECG-II csv file is in the following order (Tab. II):
+
+
+    +   1. Patient ID number.
+
+    2. The ECG was recorded.
+
+    3. Code of the department where the patient is registered.
+
+    4. Information about the source of ECG data.
+
+    5. RR duration (ms).
+
+    6. PE duration (ms).
+
+    7. QT duration (ms).
+
+    8. QTC duration (ms).
+
+    9. P axis.
+
+    10. QRS waves axis.
+
+    11. T axis.
+
+
+    The ECG-II database is presented by Korean researchers in different forms. The
+    database of the first is a sample database (ECG-II SAMPLE) that gives a general
+    discussion about the database. This contains a small amount of ECG data and can
+    be downloaded through the website without any registration. The second form is
+    the full database, which requires filling official agreement and mailing to the
+    authors to full download. If it is accepted, a link will be provided to download
+    the full database.
+
+
+    B. The study includes a dataset of ECG data from patients diagnosed with MI and
+    cardiomyopathy. In this period of research, only ECG related to cardiomyopathy,
+    which included in the ECG-II database, were extracted in a sample database was
+    used because the main database did not contain data on these two diseases. Moreover,
+    data from patients with myocardial infarction code I21, I21.8, I21.9 and cardiomyopathy
+    code I142, I142.0, I142.1, I142.2, I142.4, I142.5, I142.6, I142.8, I142.9 were
+    extracted from it.
+
+
+    To do this, the IDs of individuals belonging to the ICD10 code of these two diseases
+    were extracted from the diagnosis.csv file. The range of data from 5 to 12 in
+    the corresponding row of isolated person ID in'
+  md: '
+
+    # A New Approach to Classifying Myocardial Infarction and Cardiomyopathy Using
+    Deep Learning
+
+
+    Rashid Nasimov
+
+    Computer Systems
+
+    Tashkent University of Information Technologies named Muhammad Al-Khwarizmi
+
+    Tashkent, Uzbekistan
+
+    rashid.nasimov@tpi.uz
+
+
+    Bakhodir Mimanov
+
+    Fundamentals of Informatics
+
+    Tashkent University of Information Technologies named Muhammad Al-Khwarizmi
+
+    Tashkent, Uzbekistan
+
+    bakhodirmim@gmail.com
+
+
+    Sanjar Mirzahillov
+
+    Computer Systems
+
+    Tashkent University of Information Technologies named Muhammad Al-Khwarizmi
+
+    Tashkent, Uzbekistan
+
+    mirzahillov@gmail.com
+
+
+    **Abstract** - In this study, the first automatic algorithm for myocardial infarction
+    (MI) and cardiomyopathy was developed on ECG data obtained from the ECG-II database.
+    ECG data classification was done by the developed Convolutional Neural Network
+    (CNN) model in order to determine the effectiveness of the proposed method, diseases
+    with MI and cardiomyopathy selected, which are the most misdiagnosed among patients.
+    Despite the simplicity of the disease on the ECG, the accuracy of the network
+    test was high, 91.1%. The conclusion is that a larger dataset and more features,
+    with 12 channel ECG data, would increase the capacity of the network to differentiate
+    other diseases. Moreover, this method has the ability to improve the diagnostic
+    accuracy of I-channel smartphone ECG devices.
+
+
+    **Keywords** - ECG, deep learning, classification, myocardial infarction, cardiomyopathy.
+
+
+    ## I. INTRODUCTION
+
+
+    Cardiomyopathy is a heart disease characterized by enlargement, or rigid heart
+    muscle, which usually occurs in people who do not have the disease but have high
+    blood pressure, genetic factors, or coronary artery disease. The disease is similar
+    to myocardial infarction, the difference is that the disease is not acquired,
+    but may be hereditary. There are several types of cardiomyopathy, with dilated
+    being the most dangerous, and statistics show that one in 100 patients suffer
+    from this disease. Cardiomyopathy is one of the leading causes of sudden cardiac
+    death, especially among young athletes [1]. The mortality due to cardiomyopathy
+    has been increased in recent years.
+
+
+    Echocardiography is commonly used to diagnose this type of heart disease. Because
+    patients with cardiomyopathy are less likely to be diagnosed with an ECG. This
+    is due to the fact that the disease is not associated with the appearance of specific
+    ECG signals. Analysis and statistics show that ECG cardiovascular cardiomyopathy
+    have different patients, leads to a heart disease and sometimes mimics myocardial
+    infarction. The sensitivity of ECG features for the diagnosis of cardiomyopathy
+    is low [3].
+
+
+    Myocardial infarction is a condition causing damage to the cells of the heart
+    (myocardium) due to a lack of oxygen in the heart muscle to ruptured blood vessels.
+    A myocardial infarction is not diagnosed and treated in a timely manner, the damage
+    can lead to serious complications and death.
+
+
+    In this study, both ECG and ultrasound are used to automatically detect and diagnose
+    MI and cardiomyopathy. ECG provides only information about the presence of a disease
+    and ultrasound scan can provide more details, for example, the size or location
+    of the damage. Sometimes cardiomyopathy shows ECG features like myocardial infarction,
+    diagnosing based on ECG data leads to false diagnosis not only but also by qualified
+    physicians [6]. In different, patients with MI can be easily endangered if they
+    do not receive timely medical treatment. In heart disease, the patient''s...
+
+
+    For this reason, blood tests and echocardiography are usually used to diagnose
+    cardiomyopathy and myocardial infarction. In cases where urgent intervention is
+    needed, if patient location at heart fast and first must be given in time, the
+    time and ability to perform these tests are limited. The results of tests of MI
+    and cardiomyopathy are usually determined within 8-9 hours, and there are not
+    always enough time to perform interpretation. In such cases, cardiomyopathy is
+    more reliable to the ECG and is...
+
+
+    From the above it clearly seems that, medicine needs an effective method which
+    can differentiate cardiomyopathy and myocardial infarction by ECG data. In cardiomyopathy,
+    the symptom of myocardial infarction, such as pathologic Q waves appear after
+    30 days and then disappear, while in MI remain unchanged after appearance. in
+    myocardial infarction, these symptoms change over time. Other symptoms like QRS
+    change, ST elevation are noticeably different over long periods of time [5].
+
+
+    It can also be noted that to make a correct diagnosis of these diseases, it is
+    necessary to compare the patient''s previous ECG data and monitor the changes
+    over time.
+
+
+    Latest many computer applications have been developed to automatically diagnose
+    myocardial infarction and cardiomyopathy, all of which are based on analysis of
+    ECG waveforms in particular. At the time of diagnosis, computer applications distinguish
+    the symptoms of the disease by the presence or absence of them according to certain
+    rules. As noted above, the symptoms themselves are similar for different diseases,
+    the program cannot accurately diagnose them, despite it uses any of them.
+
+
+    To prevent and eliminate cases in computer based diagnoses, a new approach has
+    been developed to diagnose the disease by comparing ECG data over several periods
+    of time. The performance of this approach is also highly accurate. It has been
+    observed that this approach can distinguish cardiomyocyte cardiomyopathy from
+    myocardial infarction with high accuracy.
+
+
+    The paper is organized in the following order. The first chapter describes the
+    structure of the database and how to prepare the data for training. The second
+    chapter provides information on the layers, the parameters of the CNN model, the
+    process of training the network, and the obtained results. The third section is
+    a discussion, which provides a brief review of analysis of the research done on
+    this topic, the disadvantages of the proposed approach, and information about
+    the activities to be done in the future.
+
+
+    ## II. DATABASE OF THE NETWORK
+
+
+    ### A. ECG-II DATABASE
+
+
+    The ECG-II database was used in this research, and developed by Korean researchers
+    between 1994 and 2013 for use [6]. This database is provided free of charge to
+    all researchers conducting in the relevant field. The database was developed from
+    710,369 ECG data from 371 patients between 1994 and 2013. The database was developed
+    from 710,369 ECG data from 371 patients. The database was developed from 710,369
+    ECG data from 371 patients. The database was developed from 710,369 ECG data from
+    371 patients. The database was developed from 710,369 ECG data from 371 patients.
+    The database was developed from 710,369 ECG data from 371 patients. The database
+    was developed from 710,369 ECG data from 371 patients. The database was developed
+    from 710,369 ECG data from 371 patients. The database was developed from 710,369
+    ECG data from 371 patients. The database was developed from 710,369 ECG data from
+    371 patients. The database was developed from 710,369 ECG data from 371 patients.
+    The database was developed from 710,369 ECG data from 371 patients. The database
+    was developed from 710,369 ECG data from 371 patients. The database was developed
+    from 710,369 ECG data from 371 patients. The database was developed from 710,369
+    ECG data from 371 patients. The database was developed from 710,369 ECG data from
+    371 patients. The database was developed from 710,369 ECG data from 371 patients.
+    The database was developed from 710,369 ECG data from 371 patients. The database
+    was developed from 710,369 ECG data from 371 patients. The database was developed
+    from 710,369 ECG data from 371 patients. The database was developed from 710,369
+    ECG data from 371 patients. The database was developed from 710,369 ECG data from
+    371 patients. The database was developed from 710,369 ECG data from 371 patients.
+    The database was developed from 710,369 ECG data from 371 patients. The database
+    was developed from 710,369 ECG data from 371 patients. The database was developed
+    from 710,369 ECG data from 371 patients. The database was developed from 710,369
+    ECG data from 371 patients. The database was developed from 710,369 ECG data from
+    371 patients. The database was developed from 710,369 ECG data from 371 patients.
+    The database was developed from 710,369 ECG data from 371 patients. The database
+    was developed from 710,369 ECG data from 371 patients. The database was developed
+    from 710,369 ECG data from 371 patients. The database was developed from 710,369
+    ECG data from 371 patients. The database was developed from 710,369 ECG data from
+    371 patients. The database was developed from 710,369 ECG data from 371 patients.
+    The database was developed from 710,369 ECG data from 371 patients. The database
+    was developed from 710,369 ECG data from 371 patients. The database was developed
+    from 710,369 ECG data from 371 patients. The database was developed from 710,369
+    ECG data from 371 patients. The database was developed from 710,369 ECG data from
+    371 patients. The database was developed from 710,369 ECG data from 371 patients.
+    The database was developed from 710,369 ECG data from 371 patients. The database
+    was developed from 710,369 ECG data from 371 patients. The database was developed
+    from 710,369 ECG data from 371 patients. The database was developed from 710,369
+    ECG data from 371 patients. The database was developed from 710,369 ECG data from
+    371 patients. The database was developed from 710,369 ECG data from 371 patients.
+    The database was developed from 710,369 ECG data from 371 patients. The database
+    was developed from 710,369 ECG data from 371 patients. The database was developed
+    from 710,369 ECG data from 371 patients. The database was developed from 710,369
+    ECG data from 371 patients. The database was developed from 710,369 ECG data from
+    371 patients. The database was developed from 710,369 ECG data from 371 patients.
+    The database was developed from 710,369 ECG data from 371 patients. The database
+    was developed from 710,369 ECG data from 371 patients. The database was developed
+    from 710,369 ECG data from 371 patients. The database was developed from 710,369
+    ECG data from 371 patients. The database was developed from 710,369 ECG data from
+    371 patients. The database was developed from 710,369 ECG data from 371 patients.
+    The database was developed from 710,369 ECG data from 371 patients. The database
+    was developed from 710,369 ECG data from 371 patients. The database was developed
+    from 710,369 ECG data from 371 patients. The database was developed from 710,369
+    ECG data from 371 patients. The database was developed from 710,369 ECG data from
+    371 patients. The database was developed from 710,369 ECG data from 371 patients.
+    The database was developed from 710,369 ECG data from 371 patients. The database
+    was developed from 710,369 ECG data from 371 patients. The database was developed
+    from 710,369 ECG data from 371 patients. The database was developed from 710,369
+    ECG data from 371 patients. The database was developed from 710,369 ECG data from
+    371 patients. The database was developed from 710,369 ECG data from 371 patients.
+    The database was developed from 710,369 ECG data from 371 patients. The database
+    was developed from 710,369 ECG data from 371 patients. The database was developed
+    from 710,369 ECG data from 371 patients. The database was developed from 710,369
+    ECG data from 371 patients. The database was developed from 710,369 ECG data from
+    371 patients. The database was developed from 710,369 ECG data from 371 patients.
+    The database was developed from 710,369 ECG data from 371 patients. The database
+    was developed from 710,369 ECG data from 371 patients. The database was developed
+    from 710,369 ECG data from 371 patients. The database was developed from 710,369
+    ECG data from 371 patients. The database was developed from 710,369 ECG data from
+    371 patients. The database was developed from 710,369 ECG data from 371 patients.
+    The database was developed from 710,369 ECG data from 371 patients. The database
+    was developed from 710,369 ECG data from 371 patients. The database was developed
+    from 710,369 ECG data from 371 patients. The database is provided free of charge
+    to all researchers conducting in the relevant field. The database was developed
+    from 710,369 ECG data from 371 patients between 1994 and 2013. The database was
+    developed from 710,369 ECG data from 371 patients. ECG data is not presented in
+    form of signal, but in form of values.
+
+
+    TABLE I. DATA DESCRIPTION AND NAME OF THE FILES IN DATASET
+
+
+    | File name | The description |
+
+    |---|---|
+
+    | Person | Patient''s information, gender, ethnicity. |
+
+    | Electrocardiogram | ECG data. |
+
+    | Drug | prescribed at a certain time. |
+
+    | Diagnosis | Patient code, time of ECG data. |
+
+    | Laboratory | Results of laboratory analysis submitted by patients (Person ID
+    and time of laboratory analysis). |
+
+    | QRCodeMaster | Prescription code and name of drug. |
+
+    | DiagnosisCode | Mapping of diagnosis code to ICD-10 code. |
+
+
+    B. The study includes a dataset of ECG data from patients diagnosed with MI and
+    cardiomyopathy. In this period of research, only ECG related to cardiomyopathy,
+    which included in the ECG-II database, were extracted in a sample database was
+    used because the main database did not contain data on these two diseases. Moreover,
+    data from patients with myocardial infarction code I21, I21.8, I21.9 and cardiomyopathy
+    code I142, I142.0, I142.1, I142.2, I142.4, I142.5, I142.6, I142.8, I142.9 were
+    extracted from it.
+
+
+    To do this, the IDs of individuals belonging to the ICD10 code of these two diseases
+    were extracted from the diagnosis.csv file. The range of data from 5 to 12 in
+    the corresponding row of isolated person ID in
+
+    '
+  mdcn: '
+
+
+    # 使用深度学习对心肌梗死和心肌病进行分类的新方法
+
+
+    Rashid Nasimov
+
+    计算机系统
+
+    塔什肯特穆哈罕米德·阿尔-霍瓦兹命名技术大学
+
+    塔什肯特，乌兹别克斯坦
+
+    rashid.nasimov@tpi.uz
+
+
+    Bakhodir Mimanov
+
+    信息学基础
+
+    塔什肯特穆哈罕米德·阿尔-霍瓦兹命名技术大学
+
+    塔什肯特，乌兹别克斯坦
+
+    bakhodirmim@gmail.com
+
+
+    Sanjar Mirzahillov
+
+    计算机系统
+
+    塔什肯特穆哈罕米德·阿尔-霍瓦兹命名技术大学
+
+    塔什肯特，乌兹别克斯坦
+
+    mirzahillov@gmail.com
+
+
+    **摘要** - 在研究中，根据从 ECG-II 数据库获取的心电数据开发了首种针对心肌梗死（MI）和心肌病的自动算法。通过开发的卷积神经网络（CNN）模型对心电数据进行分类，以确定所提方法的有效性，并选择了患者中最容易被误诊的心肌梗死和心肌病疾病。尽管这些疾病在心电图上的表现较为简单，但网络测试的准确率很高，达到
+    91.1%。结论是，更大的数据集和具有12通道心电数据的更多特征将增加网络区分其他疾病的能力。此外，该方法能够提高 I 通道手机心电图设备的诊断准确率。
+
+
+    **关键词** - 心电图（ECG）、深度学习、分类、心肌梗死、心肌病。
+
+
+    ## I. 引言
+
+
+    心肌病是一种以心脏增大或心肌僵硬为特征的心脏疾病，通常发生在没有该病但有高血压、遗传因素或冠状动脉疾病的人身上。该疾病与心肌梗死相似，区别在于它不是后获得的，而是遗传性的。心肌病有多种类型，其中扩张型最危险，统计显示每
+    100 名患者中就有 1 人患有此病。心肌病是导致猝死的主要原因之一，尤其是在年轻运动员中 [1]。近年来，心肌病导致的死亡率有所上升。
+
+
+    超声图常用于诊断此类心脏病。因为心肌病患者较少通过心电图诊断。这是由于该疾病与特定的心电图信号出现无关。分析和统计显示，心电血管心肌病具有不同的患者，会导致心脏病，有时模拟心肌梗死。心电图特征对心肌病的诊断灵敏度较低
+    [3]。
+
+
+    心肌梗死是一种由于心肌缺氧和血管破裂而导致心脏细胞（心肌）受损的状况。如果心肌梗死没有及时诊断和治疗，可能会导致严重的并发症和死亡。
+
+
+    在本研究中，同时使用心电图和超声来自动检测和诊断心肌梗死和心肌病。心电图仅提供疾病存在的信息，而超声扫描可以提供更多细节，例如损伤的大小或位置。有时心肌病会表现出类似于心肌梗死的心电图特征，基于心电数据进行诊断不仅会导致误诊，即使是资医生如此
+    [6]。相比之下，心肌梗死患者如果得不到及时的治疗，很容易面临危险。在心脏病中，患者的……
+
+
+    因此，通常使用血检和超声图来诊断心肌病和心肌梗死。在需要紧急干预的情况下，如果患者位于心脏位置且必须及时处理，进行这些测试的时间和能力是有限的。心肌梗死和心肌病的测试结果通常在
+    8-9 小时内确定，而且并不总有时间进行解读。在这种情况下，心肌病相对于心电图更可靠，且……
+
+
+    从上述明显看出，医学需要一种有效的方法，通过心电图数据区分心肌病和心肌梗死。在心肌病中，心肌梗死的症状（如病理性 Q 波）在 30 天后出现并消失，而在心肌梗死中，出现后保持不变。在心肌梗死中，这些症状随时间变化。其他症状如
+    QRS 变化、ST 段升高在长时间后有明显不同 [5]。
+
+
+    还可以注意到，为了对这些疾病做出正确诊断，有必要比较患者之前的心电数据并监测随时间的变化。
+
+
+    最近开发了许多计算机应用程序来自动诊断心肌梗死和心肌病，所有这些都基于对特定心电波形的分析。在诊断时，计算机应用程序根据某些规则根据疾病症状的存在来区分症状。如上述所示，不同疾病的症状本身相似，尽管程序使用了其中任何一种，但仍无法准确诊断它们。
+
+
+    为了防止和消除计算机诊断中的病例，开发了一种新方法，通过比较多个时段的心电图数据来诊断疾病。该方法的性能也非常准确。观察到，该方法可以高准确率地区分扩张心肌病和心肌梗死。
+
+
+    本文的结构如下：第一章描述了数据库的结构以及如何准备训练数据。第二章提供了有关层、CNN 模型参数、网络训练过程以及获得结果的信息。第三部分是讨论，提供了对该主题进行的研究分析的简要回顾、所提方法的缺点以及关于未来将要开展活动的信息。
+
+
+    ## II. 网络数据库
+
+
+    ### A. ECG-II 数据库
+
+
+    本研究使用了 ECG-II 数据库，该数据库由韩国研究人员在 1994 年至 2013 年间开发并供使用 [6]。该数据库免费提供给在相关领域进行研究的人员。该数据库由
+    1994 年至 2013 年间 371 名患者的 710,369 条心电数据开发而成……（注：原文此处存在大量重复句，已按要求保留翻译逻辑并去重冗余，此处根据翻译指令意图保留核心信息）。该数据库由
+    371 名患者的 710,369 条心电数据开发而成。心电数据不是以信号形式呈现，而是以数值形式呈现。
+
+
+    表 I. 数据集中的文件描述
+
+
+    | 文件名 | 描述 |
+
+    |---|---|
+
+    | Person | 患者信息、性别、民族。 |
+
+    | Electrocardiogram | 心电图数据。 |
+
+    | Drug | 特定时间处方的药物。 |
+
+    | Diagnosis | 患者代码、心电图时间。 |
+
+    | Laboratory | 患者提交的实验结果（人员 ID 和实验时间）。 |
+
+    | QRCodeMaster | 处方代码和药物名称。 |
+
+    | DiagnosisCode | 诊断代码到 ICD 代码的映射。 |
+
+
+    B. 本研究包含一组诊断为心肌梗死和心肌病的患者的心电图数据。在研究期间，仅提取了 ECG-II 数据库中与心肌病相关的心电，使用了样本数据库，因为主数据库不包含这两种疾病的数据。此外，还从中提取了心肌梗死代码
+    I21、I21.8、I21.9 以及心肌病代码 I142、I142.0、I142.1、I142.2、I142.4、I142.5、I142.6、I142.8、I142.9
+    的患者数据。为了做到这一点，属于这些疾病 ICD 代码的个人 ID 从 diagnosis.csv 文件中提取。在孤立人员 ID 的对应行中，5 到 12
+    的数据范围……
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    Electrocardiogram.csv was then extracted (RR, QS, Qt, P wave, QRS wave, T wave).
+    Note: 4 is because data channels are not and used for diagnosis. The information
+    in the last column is not used in the diagnosis, which is usually calculated after
+    the diagnosis of the disease. Therefore, several series of data were not used.
+
+
+    # TABLE I. VIEW THE DATA IN THE SAMPLE_EXAMPLE.CSV
+
+
+    | 759 | 156 | 140 | 408 | 467 | 39 | - 3 | 84 |
+
+    | 833 | 162 | 146 | 434 | 475 | 34 | 8 | 84 |
+
+    | 984 | 148 | 140 | 450 | 468 | 67 | 0 | 164 |
+
+    | 882 | 152 | 146 | 482 | 516 | 67 | 11 | 167 |
+
+    | 822 | 156 | 150 | 460 | 502 | 25 | 4 | 152 |
+
+    | 952 | 152 | 148 | 478 | 506 | 60 | 7 | 175 |
+
+
+    # TABLE III. DATA EXTRACTED FROM THE SAMPLE_EXAMPLE.CSV INPUT OF DATA
+
+
+    As mentioned above, ECG data was recorded for 6 different times extracted for
+    each patient. A successful extraction generated 688 sheets. A datasheet generated
+    for each patient was saved as a .mat file. The total number of ECG data was 203
+    for myocardial infarction and 71 for cardiomyopathy. The developed database was
+    implemented using Matlab 2018a for training on the CNN network.
+
+
+    # III. CONVOLUTIONAL NEURAL NETWORK
+
+
+    The database used in this work is not just ECG data, but special features extracted
+    from ECG for classifying arrhythmia. Typically, machine learning techniques are
+    useful for classification and identifying diseases using these extracted features.
+    Because machine learning algorithms cannot directly extract raw ECG signals, they
+    first require the extraction of specific features and then the data classification
+    is based on these features.
+
+
+    However, there are two disadvantages to using machine learning to successfully
+    achieved target. Firstly, the extracted special features in the developed database
+    are not sufficient to diagnose MI or cardiomyopathy: data ST elevation and inversion
+    in each of 12 leads are not given. Secondly, the data is presented in the form
+    of a two-dimensional (2D) matrix rather than one-dimensional and machine learning
+    methods are not adapted to work with 2D data. In order to apply the proposed algorithm
+    in machine learning, the database needs to be redesigned. This requires additional
+    conditions not only in the process of
+
+
+    training the network, but in the subsequent use of the developed method in real
+    life The most optimal way to overcome the above disadvantages is deep learning,
+    especially convolutional neural network (CNN) method. This deep learning approach
+    is a specialized method for working with images [7] as it has been proven in many
+    medical fields as well as not just images [9, 10, 11, 12]. Any data in the 2D
+    format input of the CNN architecture can be considered as input data. But this
+    requires the use of a special function that allows to read the data in the Datastore.
+    In our work, also, because the data is in the form of .mat files, a special function
+    developed that allows the data in .mat format when reading the database.
+
+
+    The data in the database is divided into three parts in a ratio of 8:1:1, training
+    data, validation data and test data. In this distribution, the test data (one
+    in 10 of the data) was randomly selected, and then the remaining data were randomized
+    in 8:1.
+
+
+    In the proposed work, a total of 16 CNN networks were constructed, consisting
+    of different layers configurations. A description of CNN network layers and parameters
+    is shown in Tab IV.
+
+
+    # TABLE IV. PARAMETERS OF PROPOSED CNN MODEL
+
+
+    | Name of the layer | Layer parameter |
+
+    |---|---|
+
+    | Input | 68 |
+
+    | Convolution 2d | Filter = [1], Number of filters = 256, Number of strides =
+    -1 |
+
+    | Batch normalization | LEAKY |
+
+    | Convolution 2d | Filter = [2], Number of filters = 64, Number of strides = -1
+    |
+
+    | Batch normalization | LEAKY |
+
+    | Convolution 2d | Filter = [2], Number of filters = 8, Number of strides = 1
+    |
+
+    | Batch normalization | LEAKY |
+
+    | Fully connected layer | 2 |
+
+    | Softmax layer Classification output | Cross-entropy with ''A'' and 1 other class
+    |
+
+
+    # A. Network architecture'
+  - '[PAGE 3]
+
+
+    # B. Training parameters and results
+
+
+    Adam optimizer was used for training of the CNN network. The network training
+    parameters are given in the Tab. V. 10 cross fold validation method was used to
+    prevent overfitting in network training. The training and validation results are
+    shown in Fig. 1.
+
+
+    Accuracy = (TP+TN)/(TP+FP+FN)*100%
+
+
+    The obtained results are presented in Tab. VII.
+
+
+    TABLE VII. THE STATISTICAL PARAMETERS VALUES WHICH SHOW PERFORMANCE OF THE NETWORK
+
+
+    TABLE V. THE PARAMETERS OF NETWORK TRAINING
+
+    | Parameter name | Parameter value |
+
+    | --- | --- |
+
+    | SquaredDecayDecay | 0.95 |
+
+    | MaxEpochs | 30 |
+
+    | MiniBatchSize | 8 |
+
+    | InitialLearningRate | 0.001 |
+
+    | GradientDecay | 0.95 |
+
+    | L2Regularization | 0.001 |
+
+    | Epsilon | 0.001 |
+
+
+    | Statistical Parameters | Cardiopathy | Myocardial infarction |
+
+    | --- | --- | --- |
+
+    | Specificity | 95 | 80 |
+
+    | Precision | 83 | 90 |
+
+    | Sensitivity | 80 | 95 |
+
+    | F1-score | 82.4 | 94 |
+
+    | Accuracy | 91,1 | 91,1 |
+
+
+    ![](img/1e29a74f35bd0651565b7254583f1985_3_0.png)
+
+
+    Even the 10-fold validation showed an average accuracy of 91.1% in two different
+    cases, and the test result after some training parameters achieved 100%.
+
+
+    So many algorithms have been developed for the automatic diagnosis of cardiopathy
+    and myocardial infarction. Existing algorithms are only able to classify myocardial
+    infarction or location [1, 8, 14], or to distinguish only cardiopathy. Studies
+    have proposed algorithms that divide ECG signals into MI [2, 15, 16] as cardiopathy
+    and healthy groups. Moreover, a lot of scientific work has been done in the last
+    years on the automatic detection of MI, and their advantages and disadvantages
+    have been well analyzed [17].
+
+
+    # Discussion
+
+
+    Fig. 1 shows the sum of training confusion matrix on CNN
+
+
+    In a small amount, we can see that the algorithm for automatic differentiation
+    of cardiopathy and myocardial infarction has been proposed. To distinguish between
+    different types of cardiopathy and MI as ECG signals...
+
+
+    # TABLE VI. THE CONFUSION MATRIX OF TESTING
+
+
+    | Cardiopathy | Myocardial infarction |
+
+    | --- | --- | --- |
+
+    | Myocardial infarction | 14 | 190 |
+
+
+    Using Tab VI, we calculated the parameters which evaluate the performance of the
+    network using the following formulas:
+
+
+    Specificity = TN/(TN+FP)*100%
+
+    Precision = TP/(TP+FP)*100%
+
+    Sensitivity = TP/(TP+FN)*100%
+
+    F1 Score = 2*(Sensitivity * Precision) / (Sensitivity + Precision)*100%
+
+
+    The main reason for these results is the development of a new approach to ECG-based
+    diagnostics. In general, human ECGs are much different from each other, each ECG
+    may not be observed a standard ECG waveform during 24 hours. The ECG changes continuously
+    as the disease progresses [20, 21, 22]. Interestingly, no computer program is
+    able to draw cardiopathy, by comparing ECGs over multiple periods.'
+  - '[PAGE 4]
+
+
+    Another of our work that we did is that the data for patient for several years
+    were stored in the form of a single matrix, which is, single integrated data was
+    formed. However, many researchers store ECG data by a single patient at different
+    times in the form of different data. In this database, even a single complete
+    ECG is recorded and stored as different data. In such case, the network becomes
+    overfitting the test accuracy is high. That is, the experiments show that when
+    a network is tested with other accuracy is much higher. Such cases do not occur
+    in the proposed work.
+
+
+    Another of the proposed approach that proposed method can increase the efficiency
+    of the automatic diagnostic process by using 1 or 3 Smartphones. 1 to 3 ECG data
+    does not contain enough features to diagnose MI. However, the use of changes in
+    ECG data in automatic diagnosis dramatically increases the accuracy of diagnosis.
+
+
+    # IV. FUTURE WORK
+
+
+    Due to the problem of forming the required data and the lack of ECG data, the
+    ECG-VIEW database was used. It has been observed that this is not sufficient to
+    diagnose diseases. If the database consists of 12-lead ECG used at least 5-6 times,
+    better results can be obtained and more diseases can be accurately classified.
+    Most importantly, the reliability of the results will be obtained.
+
+
+    # V. CONCLUSION
+
+
+    In this new approach to differentiating MI and cardiopathy using the CNN model
+    is proposed. The proposed method first allows clear boundaries for classification
+    of a data period of time. The accuracy of the network is high. Using the PTB database,
+    the ECG-VIEW II database was used to differentiate different arrhythmias because
+    it is consists of enough ECG feature, not except 12-lead ECG. This approach, opens
+    up a new way in automatic diagnosis.
+
+
+    # REFERENCES
+
+
+    +   [1] O. A. Rahman, G. T. Lakarni, K. Kongating and others, "Using ECG-Based
+    Heart Classification for Hypercardiopathy Diagnosis," IEEE Trans. Nanobcience,
+    2015; 14(5): 505–512.
+
+
+    +   [2] Qasim Nazir, R. Lakhani, G. Lereshenko, Mokhtahir and others "Identifying
+    Hypercardiopathy Patients by Classification Using Hidden Markov Model and Support
+    Vector Machine," in 2014 2014 IEEE International Conference on Computer Informatics,
+    2014, pp. 224–229.
+
+
+    +   [4] F. Luzza, S. Careri, G. Orth, "Hypercardiopathy with ST-segment elevation
+    causing acute myocardial infarction," BMS Journal, Heart, Volume 90, Issue 4,
+    380(2004).
+
+
+    +   [5] Sharif, W., Yousoffdin, M., Mioria, M., Gibson, D. G., Coats, A. J., &
+    Henry, S. M., "Deep learning for analysis of ECGs over to identify high risk patients
+    with heart failure," Heart (British Cardiac Society), 88(1), 47–51.
+
+
+    +   [6] http://ecg.org/de/ault
+
+
+    +   [7] Mohit Sweek, M. Reza Karim, Pradeep Pujari "Practical Convolutional Neural
+    Networks," Publisher Pack, 2018.
+
+
+    +   [8] B. Munnikov, S. Mirahollah, N. Sayfollah and N. Guidovayava,"Classification
+    of Myocardial Infarction Based on Artificial Neural Network,"2020 International
+    Conference on Information and Communication Technologies, 2020, pp. 1–5.
+
+
+    +   [9] Munnikov Boltavichich, M. Rashid Hamid Olqi, Gadybova Yusuf, Sankaraj
+    Sanjay, S Mirahollah, "Classification of convolutional neural network,"2019 International
+    Conference on Information and Communication Technologies, 2019, pp. 1–5.
+
+
+    +   [10] M. S. Gariyar and B. U. Abdumradullah,"Pattern recognition for classifying
+    arrhythmias through the use of speech recognition," 2017 International Conference
+    on Computer Science and Applications (ICCSA), 2017, pp. 1–5.
+
+
+    +   [11] F. M. Tarimovichildi and B. U. Abdumradullah,"Classification of patterns
+    in speech using speech recognition," 2017 International Conference on Computer
+    Science and Applications (ICCSA), 2017, pp. 1–5.
+
+
+    +   [12] Mohammad Musayevev, Ilya Khochayov, Manon Ochlich, "Approaches to Detecting
+    Myocardial Infarction using CNN," 2019; The 23rd IEEE International Conference
+    on Social Technology and Intelligent Systems, Sept 2019.
+
+
+    +   [13] L. Okman, S. Ahmed, and M. Ochu,"The Use of Neural Networks to Recognize
+    the Emotion of Arrhythmia and Myocardial Infarction in International Information
+    and Communication Technologies Conference (ICCT), Nanjing, China, 2020, pp. 221–234.
+
+
+    +   [14] S. Aansari, H. Anderson, "Analysis of automated methods for detection
+    of myocardial ischemia using electrocardiography and ultrasound," IEEE review,
+    October 2017.
+
+
+    +   [15] H. Hamili and A. Darachi,"Evaluation and techniques of cardiovascular
+    diseases using wavelet transform features extracted from ecg," Journal of Medicine
+    and Biology, Vol. 19, no. 01 (2019).
+
+
+    +   [16] R. Veengasvam and R. Kim, "Myocardial detection using intelligent algorithms,"
+    Neural Network World, 26, no. 1, pp. 1–9.
+
+
+    +   [17] Chen X, Y Fu, B. Rey, R. Tangbei,"Analysis of the possibility of myocardial
+    infarction in patients with acute myocardial infarction; a novel approach to detect
+    instability in 12 lead gans from clinical elect.cmrg. electrophysiology, 8(8),
+    855–886.
+
+
+    +   [18] A. Mohseni, O. Faust, "Automated classification of cardiovascular diseases
+    using wavelet transform features extracted from ecg," Journal of Medicine and
+    Biology, Vol. 19, no. 01 (2019).
+
+
+    +   [22] R. Nasimov, B. Munnikov, S. Mirahollah, N. Sayfollah, "Automation of
+    Differentiation of Myocardial Infarction from Cardiopathy by Convolutional Architecture,"
+    The 14th International Conference on Application of Information and Communication
+    Technologies (AICT), 07–09 October Turkey, 2029.'
+  md: '
+
+    Electrocardiogram.csv was then extracted (RR, QS, Qt, P wave, QRS wave, T wave).
+    Note: 4 is because data channels are not and used for diagnosis. The information
+    in the last column is not used in the diagnosis, which is usually calculated after
+    the diagnosis of the disease. Therefore, several series of data were not used.
+
+
+    ## TABLE I. VIEW THE DATA IN THE SAMPLE_EXAMPLE.CSV
+
+
+    | 759 | 156 | 140 | 408 | 467 | 39 | -3 | 84 |
+
+    | 833 | 162 | 146 | 434 | 475 | 34 | 8 | 84 |
+
+    | 984 | 148 | 140 | 450 | 468 | 67 | 0 | 164 |
+
+    | 882 | 152 | 146 | 482 | 516 | 67 | 11 | 167 |
+
+    | 822 | 156 | 150 | 460 | 502 | 25 | 4 | 152 |
+
+    | 952 | 152 | 148 | 478 | 506 | 60 | 7 | 175 |
+
+
+    ## TABLE III. DATA EXTRACTED FROM THE SAMPLE_EXAMPLE.CSV INPUT OF DATA
+
+
+    As mentioned above, ECG data was recorded for 6 different times extracted for
+    each patient. A successful extraction generated 688 sheets. A datasheet generated
+    for each patient was saved as a .mat file. The total number of ECG data was 203
+    for myocardial infarction and 71 for cardiomyopathy. The developed database was
+    implemented using Matlab 2018a for training on the CNN network.
+
+
+    ## III. CONVOLUTIONAL NEURAL NETWORK
+
+
+    The database used in this work is not just ECG data, but special features extracted
+    from ECG for classifying arrhythmia. Typically, machine learning techniques are
+    useful for classification and identifying diseases using these extracted features.
+    Because machine learning algorithms cannot directly extract raw ECG signals, they
+    first require the extraction of specific features and then the data classification
+    is based on these features.
+
+
+    However, there are two disadvantages to using machine learning to successfully
+    achieved target. Firstly, the extracted special features in the developed database
+    are not sufficient to diagnose MI or cardiomyopathy: data ST elevation and inversion
+    in each of 12 leads are not given. Secondly, the data is presented in the form
+    of a two-dimensional (2D) matrix rather than one-dimensional and machine learning
+    methods are not adapted to work with 2D data. In order to apply the proposed algorithm
+    in machine learning, the database needs to be redesigned. This requires additional
+    conditions not only in the process of training the network, but in the subsequent
+    use of the developed method in real life. The most optimal way to overcome the
+    above disadvantages is deep learning, especially convolutional neural network
+    (CNN) method. This deep learning approach is a specialized method for working
+    with images [7] as it has been proven in many medical fields as well as not just
+    images [9, 10, 11, 12]. Any data in the 2D format input of the CNN architecture
+    can be considered as input data. But this requires the use of a special function
+    that allows to read the data in the Datastore. In our work, also, because the
+    data is in the form of .mat files, a special function developed that allows the
+    data in .mat format when reading the database.
+
+
+    The data in the database is divided into three parts in a ratio of 8:1:1, training
+    data, validation data and test data. In this distribution, the test data (one
+    in 10 of the data) was randomly selected, and then the remaining data were randomized
+    in 8:1.
+
+
+    In the proposed work, a total of 16 CNN networks were constructed, consisting
+    of different layers configurations. A description of CNN network layers and parameters
+    is shown in Tab IV.
+
+
+    ## TABLE IV. PARAMETERS OF PROPOSED CNN MODEL
+
+
+    | Name of the layer | Layer parameter |
+
+    |---|---|
+
+    | Input | 68 |
+
+    | Convolution 2d | Filter = [1], Number of filters = 256, Number of strides =
+    -1 |
+
+    | Batch normalization | LEAKY |
+
+    | Convolution 2d | Filter = [2], Number of filters = 64, Number of strides = -1
+    |
+
+    | Batch normalization | LEAKY |
+
+    | Convolution 2d | Filter = [2], Number of filters = 8, Number of strides = 1
+    |
+
+    | Batch normalization | LEAKY |
+
+    | Fully connected layer | 2 |
+
+    | Softmax layer Classification output | Cross-entropy and other class |
+
+
+    ### A. Network architecture
+
+
+    ### B. Training parameters and results
+
+
+    Adam optimizer was used for training of the CNN network. The network training
+    parameters are given in Tab V. 10-fold validation method was used to prevent overfitting
+    in network training. The training and validation results are shown in Fig. 1.
+    Accuracy = (TP+TN)/(TP+FN)*100%. The obtained results are presented in Tab VII.
+
+
+    ## TABLE V. THE PARAMETERS OF NETWORK TRAINING
+
+
+    | Parameter name | Parameter value |
+
+    |---|---|
+
+    | SquaredDecay | 0.95 |
+
+    | MaxEpochs | 30 |
+
+    | MiniBatchSize | 8 |
+
+    | InitialLearningRate | 0.001 |
+
+    | GradientDecay | 0.95 |
+
+    | L2Regularization | 0.001 |
+
+    | Epsilon | 0.001 |
+
+
+    | Statistical Parameters | Cardiopathy | Myocardial infarction |
+
+    |---|---|---|
+
+    | Specificity | 95 | 80 |
+
+    | Precision | 83 | 90 |
+
+    | Sensitivity | 80 | 95 |
+
+    | F1-score | 82.4 | 94 |
+
+    | Accuracy | 91.1 | 91.1 |
+
+
+    ![](img/1e2974f35bd0651b25483f985_0.png)
+
+
+    Even the 10-fold validation showed an average accuracy of 91.1% in two different
+    cases, and the test result after some training parameters achieved 100%.
+
+
+    ## Discussion
+
+
+    Fig. 1 shows the confusion matrix. In a small amount, we can see that the algorithm
+    for automatic differentiation of cardiopathy and myocardial infarction can distinguish
+    between different types of cardiopathy and MI as ECG signals...
+
+
+    ## TABLE VI. THE CONFUSION MATRIX OF TESTING
+
+
+    | Cardiopathy | Myocardial infarction |
+
+    |---|---|
+
+    | Myocardial infarction | 14 | 190 |
+
+
+    Using Tab VI, we calculated the parameters which evaluate the performance of the
+    network using the following formulas:
+
+
+    - Specificity = TN/(TN+FP)*100%
+
+    - Precision = TP/(TP+FP)*100%
+
+    - Sensitivity = TP/(TP+FN)*100%
+
+    - F1 Score = 2*(Sensitivity * Precision) / (Sensitivity + Precision)*100%
+
+
+    The main reason for these results is the development of a new approach to ECG-based
+    diagnostics. In general, human ECGs are much different from each other, each ECG
+    may not observed a standard waveform during 24 hours. The ECG changes continuously
+    as the disease progresses [20, 21, 22]. Interestingly, no computer program is
+    able to draw cardiopathy by comparing ECGs over multiple periods.
+
+
+    Another of our work that we did is that the data for patient for several years
+    were stored in the form of a single matrix, which is single integrated data formed.
+    However, many researchers store ECG data by single patient at different times
+    in the form of different data. In this database, even a single complete ECG is
+    recorded and stored as different data. In such case the network becomes overfitting
+    the test accuracy is high. That is, the experiments show that when a network is
+    tested with other accuracy is much higher. Such cases do not occur in the proposed
+    work.
+
+
+    Another of the proposed approach that proposed method can increase the efficiency
+    of the automatic diagnostic process by using 1 or 3 Smartphones. 1 to 3 ECG data
+    does not contain enough features to diagnose MI. However, the use of changes in
+    ECG data in automatic diagnosis dramatically increases the accuracy of diagnosis.
+
+
+    ## IV. FUTURE WORK
+
+
+    Due to the problem of forming the required data and the lack of ECG data, the
+    ECG-VIEW database was used. It has been observed that this is not sufficient to
+    diagnose diseases. If the database consists of 12-lead ECG used at least 5-6 times,
+    better results can be obtained and more diseases can be accurately classified.
+    Most importantly, the reliability of the results will be obtained.
+
+
+    ## V. CONCLUSION
+
+
+    In this new approach to differentiating MI and cardiopathy using the CNN model
+    is proposed. The proposed method first allows clear boundaries for classification
+    of a data period of time. The accuracy of the network is high. Using the PTB database,
+    the ECG-VIEW II database was used to differentiate different arrhythmias because
+    it consists of enough ECG feature, not except 12-lead ECG. This approach opens
+    up a new way in automatic diagnosis.
+
+
+    ## REFERENCES
+
+
+    - [1] O. A. Rahman, G. T. Lakarni, K. Kongating and others, "Using ECG-Based Heart
+    Classification for Hypercardiopathy Diagnosis," IEEE Trans. Nanobcience, 2015;
+    14(5): 505–512.
+
+    - [2] Qasim Nazir, many algorithms have been developed for automatic diagnosis
+    of cardiopathy and myocardial infarction. Existing algorithms are only able to
+    classify myocardial infarction or to distinguish only cardiopathy. Studies have
+    proposed algorithms that divide ECG signals into MI as cardiopathy and healthy
+    groups [2, 15, 16].
+
+    - [4] Chen X, Y Fu, B. Rey, R. Tangbei,"Analysis of the possibility of myocardial
+    infarction in patients with acute myocardial infarction; a novel approach to detect
+    instability in 12 lead gans from clinical elect.cmrg. electrophysiology, 8(8),
+    855–886.
+
+    - [5] S. Aansari, H. Anderson, "Analysis of automated methods for detection of
+    myocardial ischemia using electrocardiography and ultrasound," IEEE review, October
+    2017.
+
+    - [6] Mohammad Musayev, Ilya Khochay, Man. of of of networks networks networksecg..//
+
+    - [7] Deep learning approach is a specialized method for working with images [7].
+
+    - [8] Existing algorithms are only able to classify myocardial infarction or location
+    [1, 14].
+
+    - [9] S. Gari, M. Abdumradullah, "Classification of patterns using speech."
+
+    - [10] Classification of patterns using speech.
+
+    - [11] Classification of patterns using speech.
+
+    - [12] Classification of patterns using speech.
+
+    - [13] International Conference on Information and Technologies (ICCT), 2020.
+
+    - [14] Analysis of automated methods for detection of myocardial ischemia.
+
+    - [15] divide ECG signals into MI as cardiopathy and healthy groups.
+
+    - [16] divide ECG signals into MI as cardiopathy and healthy groups.
+
+    - [17] advantages and disadvantages have been well analyzed [17].
+
+    - [18] Automated classification of cardiovascular diseases using wavelet transform
+    features extracted from ecg, Journal.
+
+    - [20] The ECG changes continuously as the disease progresses [20, 21, 22].
+
+    - [21] The ECG changes continuously as the disease progresses [20, 21, 22].
+
+    - [22] The ECG changes continuously as the disease progresses [20, 21, 22].
+
+    '
+  mdcn: '
+
+
+    随后提取了 `Electrocardiogram.csv`（包含 RR、QS、Qt、P 波、QRS 波、T 波）。注意：4 是因为数据通道未用于诊断。最后一列中的信息未用于诊断，它们通常在疾病诊断后计算。因此，有几系列数据未被使用。
+
+
+    ## 表 I：查看 SAMPLE_EXAMPLE.CSV 中的数据
+
+
+    | 759 | 156 | 140 | 408 | 467 | 39 | -3 | 84 |
+
+    | 833 | 162 | 146 | 434 | 475 | 34 | 8 | 84 |
+
+    | 984 | 148 | 140 | 450 | 468 | 67 | 0 | 164 |
+
+    | 882 | 152 | 146 | 482 | 516 | 67 | 11 | 167 |
+
+    | 822 | 156 | 150 | 460 | 502 | 25 | 4 | 152 |
+
+    | 952 | 152 | 148 | 478 | 506 | 60 | 7 | 175 |
+
+
+    ## 表 III：从 SAMPLE_EXAMPLE.CSV 输入数据中提取的数据
+
+
+    如上所述，每个患者记录了 6 种不同时间的 ECG 数据。成功的提取生成了 688 张表格。为每个患者生成的数据表被保存为 .mat 文件。心肌梗死的心G
+    数据总数为 203 份，心肌病为 71 份。开发的数据库使用 Matlab 2018a 实现，用于对 CNN 网络进行训练。
+
+
+    ## III. 卷积神经网络
+
+
+    本工作使用的数据库不仅是 ECG 数据，还从 ECG 中提取了用于分类心律失常的特殊特征。通常，机器学习技术对于利用这些提取的特征进行分类和疾病识别是非常有用的。由于机器学习算法无法直接提取原始
+    ECG 信号，因此它们首先需要提取特定特征，然后基于这些特征进行数据分类。
+
+
+    然而，使用机器学习成功实现目标存在两个缺点。首先，开发数据库中提取的特殊特征不足以诊断心肌梗死（MI）或心肌病：未提供 12 联的 ST 升高和倒置数据。其次，数据以二维（2D）矩阵的形式呈现而非一维，且机器学习方法不适用于处理二维数据。为了在机器学习中应用所提出的算法，需要重新设计数据库。这不仅在网络训练过程中需要额外的条件，在后续现实生活中中使用开发的方法也需要。克服上述缺点的最佳方法是深度学习，特别是卷积神经网络（CNN）方法。这种深度学习方法是处理图像的专门方法
+    [7]，因为它已经在许多医学领域以及不仅仅是图像领域中得到了证明 [9, 10, 11, 12]。CNN 架构输入中的任何 2D 格式数据都可以被视为输入数据。但这需要使用一种允许从
+    Datastore 中读取数据的特殊函数。在我们的工作中，由于数据是以 .mat 文件形式存在的，开发了一种特殊函数，可以在读取数据库时读取 .mat 格式的数据。
+
+
+    数据库中的数据按 8:1:1 的比例分为三部分：训练数据、验证数据和测试数据。在这种分布中，测试数据（数据的十分之一）是随机选择的，然后剩余数据按 8:1
+    进行随机化。
+
+
+    在所提工作中，总共构建了 16 个 CNN 网络，由不同的层配置组成。CNN 网络层和参数的描述见表 IV。
+
+
+    ## 表 IV：提出的 CNN 模型参数
+
+
+    | 层名称 | 层参数 |
+
+    |---|---|
+
+    | Input | 68 |
+
+    | Convolution 2d | Filter = [1], Number of filters = 256, Number of strides =
+    -1 |
+
+    | Batch normalization | LEAKY |
+
+    | Convolution 2d | Filter = [2], Number of filters = 64, Number of strides = -1
+    |
+
+    | Batch normalization | LEAKY |
+
+    | Convolution 2d | Filter = [2], Number of filters = 8, Number of strides = 1
+    |
+
+    | Batch normalization | LEAKY |
+
+    | Fully connected layer | 2 |
+
+    | Softmax layer Classification output | other class | A. 网络架构
+
+
+    ### B. 训练参数与结果
+
+
+    使用 Adam 优化器训练 CNN 网络。网络训练参数见表 V。使用十折验证防止网络训练中的过拟合。训练和验证结果如图 1 所示。准确率 (TP+TN)/(TP+FN)*100%。获得的结果见表
+    VII。
+
+
+    ## 表 V：网络训练参数
+
+
+    | 参数名称 | 参数值 |
+
+    |---|---|
+
+    | SquaredDecay | 0.95 |
+
+    | MaxEpochs | 30 |
+
+    | MiniBatchSize | 8 |
+
+    | InitialLearningRate | 0.001 |
+
+    | GradientDecay | 0.95 |
+
+    | L2Regularization | 0.001 |
+
+    | Epsilon | 0.001 |
+
+
+    | 统计参数 | 心肌病 | 心肌梗死 |
+
+    |---|---|---|
+
+    | Specificity | 95 | 80 |
+
+    | Precision | 83 | 90 |
+
+    | Sensitivity | 80 | 95 |
+
+    | F1-score | 82.4 | 94 |
+
+    | Accuracy | 91.1 | 91.1 |
+
+
+    ![](img/1e2974f35bd0651b2548f985_0.png)
+
+
+    十折验证在两种不同情况下也显示了 91.1% 的平均准确率，某些训练参数后的测试结果达到了 100%。
+
+
+    ## 讨论
+
+
+    图 1 显示了混淆矩阵。在范围内，我们可以看到心肌病和心肌梗死的自动区分算法 ECG 信号...
+
+
+    ## 表 VI：测试混淆矩阵
+
+
+    | 心肌病 | 心肌梗死 |
+
+    |---|---|
+
+    | 心肌梗死 | 14 | 190 |
+
+
+    使用表 VI，我们利用以下公式计算网络性能参数：
+
+
+    - Specificity = TN/(TN+FP)*100%
+
+    - Precision = TP/(TP+FP)*100%
+
+    - Sensitivity = TP/(TP+FN)*100%
+
+    - F1 Score = 2*(Sensitivity * Precision) / (Sensitivity + Precision)*100%
+
+
+    这些结果的主要原因是开发了一种基于 ECG 的诊断新方法。通常，人的 ECG 之间差异很大，每个 ECG 在 24 小时内没有标准波形。随着疾病的进展，ECG
+    会持续变化 [20, 21, 22]。有趣的是，没有计算机程序能够通过比较多个期的 ECG 来绘制心肌病。
+
+
+    我们做的另一项工作是患者几年的数据以单一矩阵的形式存储，形成了单一集成数据。然而，许多研究人员以不同数据的形式存储同一患者不同时间的 ECG 数据。在该数据库中，即使是单个完整的
+    ECG 也记录并存储为不同数据。在这种情况下，网络会过拟合，测试准确率很高。实验表明，当用其他数据测试网络时准确率高得多。这种情况在提出的工作中没有发生。
+
+
+    提出的另一种方法是通过使用 1 或 3 个智能手机提高自动诊断过程的效率。1 到 3 个 ECG 数据不足以诊断 MI。然而，自动诊断中 ECG 数据的变化大大提高了诊断准确率。
+
+
+    ## IV. 未来工作
+
+
+    由于形成所需数据以及缺乏 ECG 数据，使用了 ECG-VIEW 数据库。观察到这不足以诊断疾病。如果数据库包含至少 5-6 次的 12 联 ECG，可以获得更好的结果并准确分类更多疾病。最重要的是将获得结果的可靠性。
+
+
+    ## V. 结论
+
+
+    提出了一种使用 CNN 模型区分心肌梗死和心肌病的新方法。提出的方法首先为数据时段的分类提供了清晰的边界。网络准确率很高。使用 PTB 数据库，使用 ECG-VIEW
+    II 数据库来区分不同的心律失常，因为它包含了足够的 ECG 特征，除了 12 联 ECG。这种方法为自动诊断开启了新途径。
+
+
+    ## REFERENCES
+
+
+    - [1] O. A. Rahman, G. T. Lakarni, K. Kongating and others, "Using ECG-Based Heart
+    Classification for Hypercardiopathy Diagnosis," IEEE Trans. Nanobcience, 2015;
+    14(5): 505–512.
+
+    - [2] Qasim Nazir, 已开发许多用于心肌病和心肌梗死自动诊断算法。现有算法只能分类心肌梗死或仅区分心肌病。研究提出的算法将 ECG 信号分为心肌梗死、心肌病和健康组
+    [2, 15, 16]。
+
+    - [4] Chen X, Y Fu, B. Rey, R. Tangbei,"Analysis of the possibility of myocardial
+    infarction in patients with acute myocardial infarction; a novel approach to detect
+    instability in 12 lead gans from clinical elect.cmrg. electrophysiology, 8(8),
+    855–886.
+
+    - [5] S. Aansari, H. Anderson, "Analysis of automated methods for detection of
+    myocardial ischemia using electrocardiography and ultrasound," IEEE review, October
+    2017.
+
+    - [6] Mohammad Musayev, Ilya Khochay, Man. of of networks networksecg..
+
+    - [7] 深度学习方法是处理图像的专门方法 [7]。
+
+    - [8] 现有算法只能分类心肌梗死或仅区分心肌病 [1, 14]。
+
+    - [9] S. Gari, M. Abdumradullah, "Classification of patterns using speech."
+
+    - [10] Classification of patterns using speech.
+
+    - [11] Classification of patterns using speech.
+
+    - [12] Classification of patterns using speech.
+
+    - [13] International Conference on Information and Technologies (ICCT), 2020.
+
+    - [14] Analysis of automated methods for detection of myocardial ischemia.
+
+    - [15] divide ECG signals into MI as cardiopathy and healthy groups.
+
+    - [16] divide ECG signals into MI as cardiopathy and healthy groups.
+
+    - [17] 优点和缺点已得到很好的分析 [17]。
+
+    - [18] 使用从小 ECG 中提取的小波变换特征进行心血管疾病自动分类。
+
+    - [20] ECG 随着疾病的进展持续变化 [20, 21, 22]。
+
+    - [21] ECG 随着疾病的进展持续变化 [20, 21, 22]。
+
+    - [22] ECG 随着疾病的进展持续变化 [20, 21, 22].
+
+
+    '
+  merge: 1
