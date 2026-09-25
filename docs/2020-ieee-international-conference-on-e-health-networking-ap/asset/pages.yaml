@@ -1,0 +1,634 @@
+- pgno: 0
+  md: '# # Automatic Diagnostic of the Presence of Exudates in Retinal Images Using
+    Deep Learning
+
+
+    Deuismar D. Sousa¹, Antonio O. de Carvalho Filho¹, Ricardo A. L. Rabelo², Joel
+    J. P. C. Rodrigues²,,³
+
+
+    ¹Federal University of Piauí (UFPI), Picos – PI, Brazil
+
+    ²University of Piauí (UFPI), Teresina – PI, Brazil
+
+    ³Instituto de Telecomacoes, Portugal
+
+
+    {deuismar, antonio, recasouza}@ufpi.edu.br; joeljr@ieee.org
+
+
+    **Abstract—** Diabetes is one of the fastest-growing chronic diseases that affects
+    vision. Diabetic retinopathy, a complication of diabetes, and if not treated properly,
+    can lead to blindness. Early diagnosis of diabetic retinopathy has no cure, but
+    if detected in early stages, there is a hope that the patient will not reach blindness.
+    Detection of retinal exudates is essential. We proposed deep learning model with
+    a Convolutional Neural Network to detect exudates with or absence. The results
+    are around 99.52% sensitivity, 100% specificity, and 99.76% accuracy for 1,608
+    images. Thus, the authors propose a method that can integrate a system.
+
+
+    Index Terms—** Automatic Diagnosis, August, Exudates, Diabetic Retinopathy
+
+
+    # ## I. INTRODUCTION
+
+
+    Diabetic is a chronic metabolic disease characterized by high blood glucose levels.
+    This condition can damage blood vessels, eyes, kidneys, and nerves [1]. According
+    to the Brazilian Diabetic Society, Latin America have more than 26 million people
+    with diabetes in 2017 and 45 million by 2045. It is estimated that in 3 people
+    1 people have Diabetic Retinopathy (DR). DR is a complication of diabetes and
+    is characterized by lesions on the retina of individuals with diabetes for more
+    than ten years.
+
+
+    Proliferative and non-proliferative stages of DR are [2]. The non-proliferative
+    stage is the first signs of DR and is characterized by aneurysms, hemorrhage,
+    and exudates in the retina [3]. The proliferative stage occurs at a more advanced
+    stage of DR and presents with severe visual loss. With the diagnosis of DR in
+    its non-proliferative stage, there is high chance that the patient will not reach
+    total blindness.
+
+
+    The manual diagnosis of exudates'' presence in the retina is a time-consuming
+    process since it requires time and effort on the part of the professional. Demanding
+    a set of effective rules can cause tiredness to the specialist, leaving him prone
+    to mistakes that may be costly [5]. Thus, automating your diagnosis can save time,
+    provide fast and accurate results, in addition to assisting ophthalmologists in
+
+
+    making the test decision process or acting as a form of screening [6].
+
+
+    In recent years, there has been a growing interest in the development and use
+    of image processing techniques. The main objectives are to increase the accuracy
+    of the diagnosis and provide a second opinion to doctors. As an alternative to
+    assist in imaging, Computer Assisted Systems (CAD) [7].
+
+
+    Today AI makes great strides in solving problems that have bothered the artificial
+    intelligence community for best many years. It has proven to be good at deciphering
+    complex structures in highly complex data and can be applied in several different
+    contexts. Deep learning methods are capable of transforming raw neural networks.
+
+
+    We used a deep learning model with retinal images. The result is the ability to
+    classify exudates in retinal images, providing a second opinion to specialists
+    and decreasing their efforts.
+
+
+    This work includes the design and implementation of a deep learning model based
+    on Convolutional Neural Networks (CNN) and the application of network data to
+    algorithms, followed by applying normalization to make them standard size, in
+    equal dimensions and the same color field, before using a parameter iteration.
+    The application of the network, on one hand, is to handle the output data before
+    extracting the next layer. We also include the method
+
+
+    # ## II. RELATED WORKS
+
+
+    Deep learning techniques are widespread in all areas. In the medical field, it
+    is needed. In this section, we will use brief abstracts of works that directly
+    correlate to the proposed proposed in method.
+
+
+    The literature present some methods and techniques to use Neural Networks [9]
+    [10] [11] [12] or using other methods [13] [14] [15]. These works techniques for
+    extracting characteristics, in addition'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# 2020 IEEE International Conference on E-Networking, Application & Services
+    (HEALTHCOM)
+
+
+    to presenting to remove exudates in the image, to train a model and perform tests.
+    This process involves steps, making it challenging to implement it in a real clinical
+    system. Another essential factor is possible removal of exudate in the image,
+    reducing the essential characteristics for solving the problem.
+
+
+    Our work requires the application of image normalization, specifically algorithms
+    to extract the regions that can be confused with exudates. After studying the
+    problem, we found that most exudates are the optic disc. The two classes of images
+    we use (with exudates and without exudates) have the optic disc. Therefore, it
+    was unnecessary to remove them, so we managed to decrease the changes of having
+    any problem with the loss of features.
+
+
+    # C. Convolutional Network
+
+
+    CNN''s are type of Artificial Neural Networks based on hierarchical feedforward
+    architectures that connect different levels of convolution and maximum grouping
+    layers. Each layer operates at itself to produce a change of representations for
+    the layers used.
+
+
+    Neural Networks can be used to help and save people, as solve complex problems
+    in districts of real life. They can learn and model relationships between data
+    and outputs. So, CNN''s can improve decisions in different applications, computer
+    vision and others. There are factors that motivate the use of Convolutional Networks
+    in different branches of computing, and in our case, it is not
+
+
+    There are two factors, which we consider, and which motivate the use of Convolutional
+    Networks in different branches of computing. The first is that architectures can
+    be easily implemented, just needing to know the field of vision, where we can
+    use deep learning for pattern recognition will be applied
+
+
+    Other factor is that they are automatically trained; this makes it possible to
+    show the training set in different classes. She can find important results and
+    obtain the ideal performance to perform such task.
+
+
+    # III. Method
+
+
+    Our method consists of: i) acquisition of the dataset, images; ii) pre-processing
+    on the images, by the data increase. To model and implement the CNN architecture,
+    which need some adjustment until the best result is obtained; iii) train the model;
+    iv) we classified the set of test images. Figure 1 describes a summary of the
+    steps of the methodology.
+
+
+    # A. Image Acquisition
+
+
+    The MESSIDOR [16] image database is a public database created to facilitate studies
+    for computer-assisted diagnosis. The dataset contains a medical diagnosis for
+    each eye, but no manual annotation on the images, as the lesions'' contours or
+    departments acquired the image.
+
+
+    Along with images, a file is provided containing the respective diagnosis of DR
+    for each. Anomalies are differentiated by degree of DR. The grade ranges from
+    0 to 3, where 0 means there are no signs of DR, and 2 and 3 show some of exudates
+    and hemorrhages.
+
+
+    Figure 2 shows the image of the retina optic disc with exudates, and Figure 3
+    without the presence of exudates.
+
+
+    We selected a total of 2 thousand images. For the development of this work, 1046
+    images were selected from this set. 500 images with the presence of exudates and
+    546 images without signs of DR. Level 1 images were not used, as their diagnosis
+    refers to microaneurysms, not applied to this work.
+
+
+    # B. Pre-processing
+
+
+    The data set is initially available in the dimensions of 140x960, 224x2048, and
+    234x1536. To scale all images, we applied a crop and resize to 46-pixel squares,
+    so that regions that relate to the retina are not cut. Parallel to this step,
+    all images are converted from RGB to grayscale. It is interesting to note that
+    unlike the works presented here, this was the only type of pre-processing applied
+    to the images.
+
+
+    The intention is to normalize the data that will be passed to train the network.
+
+
+    +   1) Convolution: The first part of our network is the convolutional layers.
+    In Figure 4, for part 1, 2, 3 and 4 the convolutional layers have 16, 32, 64 and
+    128 filters, and are activated with the Rectified Linear Unit (ReLU).
+
+
+    +   2) Maximum Pooling: The negative part of the convolution is the excessive
+    increase of data. To decrease this, we apply a top pooling layer of size 2x2 after
+    two convolutional layers. Group 4 of the 9 weights of the filters in the network
+    can reduce the amount of data in the network.
+
+
+    +   3) Normalization: The distribution of the inputs after each layer during training,
+    as the previous layers parameters, making training stronger. We propose a method
+    that incorporates the normalization of this data into the normalization for each
+    training stage. Batch normalization allows us to use much higher learning rates
+    and to be careful with startup and training problems from occurring.
+
+
+    Authorized license used to: University of East Island. Downloaded on May 28, 2021
+    at 07:57:07 UTC IEEEplore. All rights reserved.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# 2020 IEEE International Conference on E-health Networking, Application &
+    Services (HEALTHCOM)
+
+
+    ![](img/4c3bd83a60f671afa276cef387fd0dbb_2_0.png)
+
+
+    Fig. 1. Proposed method.
+
+
+    ![](img/4c3bd83a60f671afa276cef387fd0dbb_2_1.png)
+
+
+    Fig. 2. (a) image of the retina with exudates and (b) image of the retina without
+    exudates.
+
+
+    ![](img/4c3bd83a60f671afa276cef387fd0dbb_2_2.png)
+
+
+    Fig. 3. (a) original image, and (b) image resulting from this step.
+
+
+    4) Dispersion Layer: The layers of data dispersion provide a technique that helps
+    prevent overfitting the network. To avoid overfitting, the dispersion layer deactivates
+    dReLU training units. Some units are returned to the network, with all their input
+    and output. In the proposed model, 4 layers with a dispersion of 0.25 and the
+    last with a dispersion of 0 are used.
+
+
+    5) Layer: The dense layers that we use in the network with ReLU activation, except
+    for the last. We have two neurons that recognize the rest of the network''s mapping
+    and produces the necessary output to classify the images, and its activation is
+    done by the Softmax function. We use this function because it can convert any
+    real numbers into a vector of probabilities. In our context, the probabilities
+    correspond to the possibility that an input image belongs to a specific class.
+
+
+    # D. Training
+
+
+    Some pre-trained models assist in the initialization of the network values. However,
+    in this work, training was performed
+
+
+    from scratch, i.e., no pre-trained models were used, and the weights of the convolutional
+    filters were randomly started at the beginning of each training. We obtained the
+    best result with 100 training seasons.
+
+
+    An essential step that serves a lot of attention is selecting input for training.
+    We had a limited amount of images to train a deep model. CNNs are efficient in
+    learning with a large amount of input data. Therefore, observing the number of
+    images available for training, we adopted rotation as an alternative:
+
+
+    +   1) Data augmentation: The 500 images with exudate''s were rotated 10 times,
+    starting with degree 0, which represents the original image and adding 30 degrees
+    to the expensive iteration, 5000 images. The 546 images, without the presence
+    of exudates, were rotated 9 times, adding 30 degrees to the iteration, 4914 images.
+
+
+    Figure 6 shows what our image looked after we applied the rotations. Figure 6(a)
+    is the image without the rotation. The images of 6(b) and Figure 6(c) show the
+    result after applying 30 and 60 degrees, respectively; at the end of this stage,
+    the new set has 9914 images.
+
+
+    From the set of images, we divided them into training (70%), validation (10%)
+    and test (20%). Randomly divided so that images from both classes are present
+    in all sets.
+
+
+    # E. Evaluation of results
+
+
+    Statistical metrics used in CAD systems such as sensitivity (Sens), specificity
+    (Spec), and accuracy (Acc), to validate the results. These metrics were used using
+    a confusion matrix. The matrix is formed by four values, where the main diagonal
+    shows the values correctly classified, as shown in Figure 7.
+
+
+    The VP value represents the numbers of images classified as exudates; FP, the
+    number of images classified as exudates but do not have exudates; FN, the number
+    of images classified as healthy, but have exudates; and VN represents the number
+    of images correctly classified without signs of DR, that is, health. Sensitivity
+    (Sens), evaluates the test''s ability to detect the disease when it is present.
+    As shown in Equation 1
+
+
+    Authorized academic license used to: University of Prince Edward Island. Download
+    on May 28, 2021 at 20:57:07 UTC from IEEE Xplore. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# 2020 IEEE International Conference on e-health Networking, Application &
+    Services (HEALTHCOM)
+
+
+    ![](img/4c3bd83a60f671afa276cef387fd0dbb_3_0.png)
+
+
+    Fig. 4. Proposed architecture model.
+
+
+    ![](img/4c3bd83a60f671afa276cef387fd0dbb_3_1.png)
+
+
+    Fig. 5. Operation of the maximum grouping used.
+
+
+    ![](img/4c3bd83a60f671afa276cef387fd0dbb_3_2.png)
+
+
+    Fig. 7. Confusion matrix.
+
+
+    Specificity (Spe), assesses the test''s ability to ward off the disease when it
+    is absent. As shown in Equation 2,
+
+
+    ```
+
+    $Spe = \frac{TN}{TN + FP}$
+
+    ```
+
+
+    Accuracy (Acc) is the proportion of correct answers, that is, VN and VP, by the
+    total amount of the test sample. As shown in Equation 3,
+
+
+    ```
+
+    $Sen = \frac{TP}{TP + FN}$
+
+    ```
+
+
+    ```
+
+    $Acc = \frac{TP + TN}{TP + FP + FN + TN}$
+
+    ```
+
+
+    ![](img/4c3bd83a60f671afa276cef387fd0dbb_3_3.png)
+
+
+    Fig. 6. (a) original image, and (b) image after the end of this step.
+
+
+    Authorized licensed use limited to: University of Prince Edward Island. Downloaded
+    on May 28, 2021 at 20:57:07 UTC from IEEE Xplore. Restrictions apply.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# IV. RESULTS AND DISCUSSIONS
+
+
+    For a system to assist in the diagnosis of DR, it is necessary to find the right
+    balance between the assessment metrics. All experiments were performed using the
+    same amount of images for training and testing. Table I shows the results of the
+    experiments until reaching the best result.
+
+
+    # TABLE III
+
+    COMPARISON WITH OTHER MODELS IN THE LITERATURE.
+
+
+    | Experiment | Sen (%) | Spe (%) | Acc (%) |
+
+    |---|---|---|--|
+
+    | VGG16 | 97.06 | 97.90 | 97.90 |
+
+    | VGG19 | 97.38 | 98.97 | 98.16 |
+
+    | Xception | 96.95 | 98.74 | 97.28 |
+
+    | Our | 99.52 | 100.00 | 99.76 |
+
+
+    # TABLE I
+
+    RESULTS OF EXPERIMENTS USING THE NUMBER OF IMAGES.
+
+
+    | Experiment | Sen (%) | Spe (%) | Acc (%) |
+
+    |---|---|---|--|
+
+    | 1st | 20 | 92.59 | 89.56 | 91.02 |
+
+    | 2nd | 40 | 64.21 | 98.88 | 82.05 |
+
+    | 3rd | 60 | 88.54 | 92.57 | 88.05 |
+
+    | 4th | 80 | 94.53 | 97.00 | 97.12 |
+
+    | 5th | 100 | 99.52 | 100.00 | 99.76 |
+
+
+    The first experiment was carried out using part 1 of the Network shown in Figure
+    4 with 20 seasons, with no seasons lost, but success in increasing the metrics.
+    The second experiment was carried out by adding part 2 of the Network. The third
+    experiment was done using parts 1, 2, and 3 of the Network layers. In this experiment,
+    the number of seasons was also increased, but the best result was obtained with
+    30 seasons. The fourth experiment was done using part 4 of the proposed architecture,
+    but with 0 data normalization layers. The result was accuracy of 97.27%. In the
+    fifth experiment, after each convolution we added a normalization layer. The result
+    was accuracy of 99.76% for the test set. All tests performed showed same number
+    of images.
+
+
+    overfitting, inhibiting its ability to adapt to new data with parameters for later
+    layers.
+
+
+    The comparison with other works is a delicate task because the used techniques;
+    ii) image base used, using the same base, and the training cases can be defined.
+    Thus, the comparison here considers only the quantitative values to show that
+    the proposed method is comparison with the other works in related literature.
+
+
+    # TABLE IV
+
+    COMPARISON WITH RELATED WORKS.
+
+
+    | Work | Sen (%) | Spe (%) | Acc (%) |
+
+    |---|---|---|--|
+
+    | [9] | | 88.96 | 91.92 |
+
+    | [10] | 63 | | |
+
+    | [11] | 94.28 | 98.52 | 81 |
+
+    | [12] | | | 78 |
+
+    | [15] | 96.7 | | |
+
+    | [16] | | | 89.90 |
+
+    | Our | 99.52 | 100 | 99.76 |
+
+
+    # TABLE II
+
+    RESULTS WITHOUT DATA NORMALIZATION.
+
+
+    | Experiment | Sen (%) | Spe (%) | Acc (%) |
+
+    |---|---|---|--|
+
+    | 1st | 20 | 67.43 | 57.57 | 60.5 |
+
+    | 2nd | 40 | 75.21 | 52.5 | 63.8 |
+
+    | 3rd | 60 | 77.54 | 53.2 | 67.29 |
+
+
+    In Table III, we presented the results obtained with deep learning models well
+    recognized in retina, such as VGG16, VGG19] and Xception [20]. For comparison
+    purposes, the same set of images was used for all experiments, both training and
+    testing. For these we use the same training and test set to validate our method.
+
+
+    In Table IV, we briefly present, a comparison between our results obtained with
+    other works. As can be seen, we obtained better or equal result about the others.
+    It is important to note that the general precision of our method better than all
+    the others.
+
+
+    As shown in Table III, our method achieve more promising results than those commonly
+    used in the literature. We believe that this is possible because the model is
+    capable of extracting characteristics through the 8 layers of convolution, also
+    added to the data and normalization layers that make the method less conducive
+    to DI,
+
+
+    In the case of deep learning systems, most of the time needed elements to be implemented,
+    we need to overcome this difficulty. Therefore, it can be used in large regions,
+    including public health systems, such as the Unified Health system in Brazil.
+
+
+    # V. CONCLUSION
+
+
+    Deep learning is continually growing; due to this innovation and the emergence
+    of new applications and techniques, which proposes a new type of intelligent automation.
+    In addition to quantifying measuring the exposed problem, the method shown here
+    is possible to obtain good results with limited resources and hardware,
+
+
+    Because it requires time and effort for part of specialists, manual diagnosis
+    of eyes'' presence is a process that causes'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# 2020 International Conference on e-Health Networking, Application & Services
+    (HEALTHCOM)
+
+
+    discomfort and can lead to concerns on your part. The related works present different
+    ways to automate this diagnosis, but some steps are needed to extract extract
+    data from images. We had having a few samples in the training set, which we created
+    by rotating versions of the original images.
+
+
+    However, our work has reference in the computational and medical field since these
+    now technologies provide professionals to assist in the diagnosis of DR, making
+    the proposed method beneficial for society, being able to be applied in clinical
+    settings, as a second option to the doctor or in the screening patients.
+
+
+    # ACKNOWLEDGMENT
+
+
+    The proposed method was supported by the following institutions: FAPEPI http://www.fapepi.pi.gov.br
+    (5492.5515.9848/2015); CAPES http://www.capes.br, and the CNPq http://www.cnpq.br
+    (43524/2018-3).
+
+
+    # REFERENCES
+
+
+    +   [1] WHO; ''World health organization. What is diabetes?'' 8 March, 2018. [Online].
+    Available: https://www.who.int/news-room/fact-sheets/detail/diabetes
+
+    [2] S. Jung and S. Khan, ''Deep learning based diabetic retinopathy detection
+    from images,'' Biometrics, vol. 97, pp. 1454–1460, 2018. [Online]. Available:
+    https://www.scienceiencedirect.com/science/article/pii/S0147-78361730465X
+
+    [3] A. M. Miller, N. V. Gibson, and A. Kalidindi, ''Diabetic retinopathy,retinopathy,''
+    Primary Clinics in Ophthalmology; vol. 42, no. 3, pp. 451–464, 2015. [Online].
+    Available: https://www.scienceiencedirect.com/science/article/pii/S014778361530093X
+
+    [4] SBD, ''Sociedade brasileira de diabetes. Diabeticidade,'' 2014-2015, accessed
+    9 May 2018. [Online]. Available: https://sbd.org.br/
+
+    [5] A. O. de Carvalho Filho, F. W. de Santos, A. Silva, A. C. Silva, and G. Gomes,
+    ''Automated detection of exudate nodules using threshold clustering, genetic algorithm
+    and diversity index,'' Artificial Intelligence in Medicine, vol. 60, no. 3, pp.
+    161–170, 2015.
+
+    [6] K. Y. Win and S. Chaouay, ''Detection of exudates using histogram analysis
+    for digital images,'' in 2016 International Symposium on Signal Processing and
+    Communication Systems (ISSPACS), Oct. 2016, pp. 1–4.
+
+    [7] F. S. S. Oliveira, A. C. de Rocha, F. A. Silva, A. C. de Silva, and ''Classification
+    of breast regions as mass and normal based on digital mammograms using taxonomic
+    indexes and svm,'' Computers in Biology and Medicine, vol. 57, pp. 42–53, 2019.
+
+    [8] Y. Wang, J. Liu, and C. Huito, ''Deep learning,'' Future vision, vol. 52,
+    7553, 2019.
+
+    [9] P. Fernandes and L. Lonoraç, ''Detection of exudates in fundus images using
+    deep neural networks,'' in 2019 9th International Symposium on Signal and Image
+    Processing (ISISP), 2019, pp. 185–189.
+
+    [10] S. Yu, D. Xiao, and K. Kanagasajan, ''Exudate detection for diabetic retinopathy
+    with convolutional neural networks,'' 2017 39th International Conference of IEEE
+    Engineering in Biology and Society (EMBIOC), July 2017, pp. 1744–1747.
+
+    [11] P. Prentikas and S. Lonoraç, ''Detection of exudates in fundus images using
+    deep neural networks and anatomical landmark detection fusion,'' Computer Methods
+    and Programs in Biomedicine, vol. 137, pp. 282–292, 2016. [Online]. Available:
+    https://www.scienceiencedirect.com/science/article/pii/S016700751630013X
+
+    [12] A. Soares, M. Mirmidi, B. Thomas, and R. Markham, ''Automated identification
+    of retinal exudates in digital colour,'' British Journal of Ophthalmology, vol.
+    87, no. 10, pp. 1220–1235, 2003. [Online]. Available: https://bjo.bmj.com/content/87/10/1220
+
+
+    [13] H. Barangi, R. Andal, and A. Huaj, ''Automated eye detection improved by
+    naf/ove-based classifiers,'' 25th IEEE International Symposium on Computer-Based
+    Medical Systems (CBMS), June 2012,
+
+
+    [14] A. Sepahr, N. D. Ali, A. Buyassarnov, S. Barkaman, T. Tikman, K. T. Ye, and
+    A. Moe, ''Machine learning approach to automate diabetic retinopathy detection
+    from images of patients,'' Medical Journal of optics, vol. 57, no. 2, pp. 124–135,
+    2020.
+
+
+    [15] A. Weiss, E. Guason, and S. Han, ''Automated tracing of optic disc using
+    neural networks,'' Journal of Medical Systems, vol. 33, no. 1, pp. 73, 2000. [Online].
+    Available: https://doi.org/10.1007/s00092-000-0016-6-14
+
+
+    [16] F. Chen, X. Liu, and Q. Keng, ''Deep learning: A review and open-based survey
+    of convolutional neural networks,'' 2018. [Online]. Available: https://doi.org/10.1109/JSPPR.2017.2749557
+
+
+    [17] R. J. van Kamp, ''Biologically-inspired convolutional neural networks,''
+    2018. [Online]. Available: https://doi.org/10.1109/CVPR.2018.0004157
+
+
+    [18] L. Sooffe and S. Szegcsdy, ''Attention-based mechanism for reducing internal
+    covariate shift,'' 2017.
+
+
+    [19] S. Ren, K. H. Girshick, and J. Sun, ''Faster-net: Towards real-time object
+    detection with proposal networks,'' In Advances in neural information processing
+    systems (NIPS), 2015.
+
+
+    [20] F. Chollet, ''Deep learning with depthwise separable convolutions,'' CoRR
+    abs, vol. 1806.012357, 2016. [Online]. Available: https://arxiv.org/abs/1806.012357'
+  merge: -1
+  img_proc: true
