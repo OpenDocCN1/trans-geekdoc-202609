@@ -1,0 +1,2 @@
++   [2020年第二届人工智能与先进制造国际会议 (AIAM)(英国曼彻斯特 2020.10.15-2020.10.17)](README.md)
++   [2020年第二届人工智能与先进制造国际会议 (AIAM)(英国曼彻斯特 2020.10.15-2020.10.17)](2020-2nd-international-conference-on-artificial-intelligence.md)

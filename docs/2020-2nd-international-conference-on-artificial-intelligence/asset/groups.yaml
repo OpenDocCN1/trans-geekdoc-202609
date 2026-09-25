@@ -1,0 +1,874 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # 2020 22nd International Conference on Artificial Intelligence and Advanced Manufacturing
+    (AIAM)
+
+
+    # Design of Simulation Model and Research on Output Characteristics of Solar Cells
+    Based on Deep Learning
+
+
+    Dong Zhong*, Dayang Fang*
+
+
+    *Shanwei Polytechnic, Shanwei, Guangdong, 516600, Guilin University of Technology,
+    Guilin, 541004, China
+
+    *scientificai@163.com
+
+
+    **Abstract—** With increasingly prominent problems of energy and environment,
+    solar energy is a new form with the greatest development potential in the world.
+    As a new type of renewable energy, solar energy because of its high intensity
+    surpasses other energy sources. Solar photovoltaic generation is a direct form
+    of power generation that uses photons to convert light into electrical energy.
+    In the actual situation, light intensity is not stable, and solar cells (SPCs)
+    are affected by other factors, so it is necessary to model the characteristics
+    of photovoltaic array to realize the dynamic simulation of photovoltaic power
+    generation. In this paper, design the simulation model of solar cells based on
+    deep learning, analyze the output characteristics of solar cells. Increasing solar
+    radiation, temperature, series resistance and diode reverse correction can improve
+    the performance of photovoltaic cells, and increasing open voltage and short circuit
+    current helps to improve its output power and efficiency.
+
+
+    **Keywords—** Photovoltaic power generation, Solar cells, Output characteristics,
+    Simulation
+
+
+    # I. INTRODUCTION
+
+
+    With increasingly severe concern about energy and environmental problems, the
+    development of clean energy is essential. As a new type of renewable energy, solar
+    energy is an ideal renewable energy due to its high utilization rate compared
+    to other energy sources. Photovoltaic power generation is the process of photoelectric
+    effect, using solar cells to convert solar energy into electrical energy [2].
+    With its increasing popularity, solar energy, as a new form with much potential
+    in the world, has become one of the main sources of clean energy in recent years
+    [3]. Photovoltaic cells are the core part which has the effect of converting solar
+    energy into electricity. However, the conversion efficiency of photovoltaic cells
+    is still limited by the complex characteristics of the devices. Solar energy has
+    become a hot research and development field of new energy with advantages of harmless,
+    huge, and long-term. The high production cost and low efficiency limit its capability
+    [4].
+
+
+    to the high cost of photovoltaic cells and the difficulty of practical experiments,
+    simulation has become the main way to study this field [5]. In the actual situation,
+    light intensity is not stable, and solar cells is vulnerable to other factors,
+    so it is necessary to model the characteristics of photovoltaic array to realize
+    the dynamic simulation of photovoltaic power generation [6]
+
+
+    Since the efficiency of solar cell generation is affected by light intensity and
+    ambient temperature, a solar cell model will be established to study the effects
+    of light intensity and ambient characteristics [7]. Solar energy is a direct form
+    of power generation that uses solar panels to convert solar energy into electrical
+    energy. The surface of the solar cell has a thin metal layer and chip. A constant
+    value will be generated between the metal and the other side of the sheet, which
+    is the characteristics of solar cells. Due to its many advantages, solar energy
+    has become a hot spot in this field. Research in the field of photovoltaic power
+    generation has broad significance. Deep learning based on human brain analysis
+    forms more high-level features, improving the learning of the underlying data,
+    improving the recognition and classification [8]. This paper introduces the principle
+    of solar photovoltaic cells, designs the simulation model of solar cells based
+    on deep, and analyzes the output characteristics of solar cells
+
+
+    # II. THE MODEL OF SOLAR PHOTOVOLTAIC CELLS
+
+
+    Solar cell is a photovoltaic conversion device made by using the photoelectric
+    effect of semiconductor materials, and it is the smallest power unit and component
+    in photovoltaic power generation. Its characteristics are to refer to their electrical
+    output [9]. Considering the influence of weather conditions on the output of solar
+    cells which may be much lower than the average value, it is necessary to ensure
+    that the design of photovoltaic array and the design of storage battery work in
+    coordination under various conditions [11]. In order to evaluate the power generation
+    performance of SPC, it is necessary to quantitatively analyze some'
+  - '[PAGE 1]
+
+
+    characteristic parameters that characterize its power generation capacity and
+    their influencing factors. measurement of irradiance high sensitivity, the irradiance
+    intensity is the most important factor affecting the power generation of solar
+    cells. Secondly, the measurement of irradiance should have uniform to light with
+    different frequencies, as to reflect the effect of sunlight shining on solar cells
+    in the environment most and accurately.
+
+
+    solar cells matches the load impedance has not changed.
+
+
+    Referring to the characteristic data of conventional energy storage system, the
+    priority order of energy storage system is shown in Table 1. Because the energy
+    storage systems 1 and 2 have relatively large capacity and relatively high energy,
+    they can be used as energy systems that bear the base load.
+
+
+    # TABLE I OF ENERGY STORAGE SYSTEM
+
+
+    | Energy storage system | 1 | 2 | 3 | 4 |
+
+    |---|---|---|---|---|n| P | 450 | 546 | 385 | 3120 |
+
+    | μ | 14.85 | 13.56 | 26.87 | 30.71 |
+
+
+    ![](img/976a933ef3a16e501c98a3c18cb50633_1_0.png)
+
+
+    The equivalent circuit of a typical energy storage battery
+
+
+    is shown in Figure 1. $R_{solution}$ is the solution resistance, $R_{electrolyte}$
+    is the charge resistance, and $C_{electrolyte}$ is the double layer capacitance.
+
+
+    ![](img/976a933ef3a16e501c98a3c18cb50633_1_1.png)
+
+
+    Figure 1 Equivalent circuit of energy storage battery system
+
+
+    Add a Gaussian noise $\omega(t)$ to the original power signal $P_n(t)$ to obtain
+    a common signal $P(t)$,
+
+
+    ![](img/976a933ef3a16e501c98a3c18cb50633_1_2.png)
+
+
+    $P(t) = P_e(t) + \omega(t)_{(1)}$
+
+
+    Decompose the signal functional components $P^{(i)}(t)$ to obtain the intrinsic
+
+
+    $P(t) = r_n(t) + \sum c_i(t)_{(2)}$
+
+
+    In the formula, $r_n(t)$ is the residual signal; $c_i(t)$ is the intrinsic mode
+    of the function $i=1,2,...,n$.
+
+
+    Characteristic curves under working conditions can reflect the interaction between
+    load and battery, and characteristics under different working conditions can reflect
+    the influence of external factors on battery output, illumination intensity, solar
+    temperature and weighting of solar cells. Various factors affect the output power
+    of solar cells, especially the solar irradiation on the surface and the environment.
+    When designing, it is necessary to choose an optimal configuration based on plane
+    radiation intensity. The maximum output power of solar cells. Short current and
+    open-circuit voltage change with variations in ambient temperature and resistance,
+    so it is costly to operate at its maximum power point. But at the same time, output
+    voltage and solar cells are constantly changing.
+
+
+    The nominal voltage of the battery can be divided by the nominal voltage of the
+    solar cells in series by the solar module, and so voltage is generated to regulate
+    the output required by the system. The output current and output voltage of the
+    battery represents the electrical characteristics of the solar cell, In fact,
+    the output characteristics are the design basis for the design of the solar system.
+    In fact, the operation of the solar system depends on various conditions, so the
+    battery can be used normally for a long time. In the process of charging and discharging
+    the battery, lead-acid electrolytes evolve and release gas. In other words, some
+    solar applications, the power generated by the solar cell cannot be converted
+    without conversion. Since the contact between the front and back electrodes and
+    the material has a certain resistance, current flowing through the load plates
+    will inevitably cause loss. However, the principle that maximum output power of
+
+
+    The terminal voltage of each capacitor is $U_c$ and the capacitance value $C_c$.
+    Assuming that the capacitor bank is composed of n capacitors, the total energy
+    is:
+
+
+    $E_c = \frac{1}{2} C_c \cdot U_c^2 (3)$
+
+
+    In the actual situation, the working voltage of the capacitor has a range, $U_{min}-U_{max}$,
+    then the maximum energy of storage capacitor bank is:
+
+
+    388'
+  md: '
+
+    # 2020 22nd International Conference on Artificial Intelligence and Advanced Manufacturing
+    (AIAM)
+
+
+    # Design of Simulation Model and Research on Output Characteristics of Solar Cells
+    Based on Deep Learning
+
+
+    Dong Zhong*, Dayang Fang*
+
+
+    *Shanwei Polytechnic, Shanwei, Guangdong, 516600, Guilin University of Technology,
+    Guilin, 541004, China
+
+    *scientificai@163.com
+
+
+    **Abstract—** With increasingly prominent problems of energy and environment,
+    solar energy is a new form with the greatest development potential in the world.
+    As a new type of renewable energy, solar energy because of its high intensity
+    surpasses other energy sources. Solar photovoltaic generation is a direct form
+    of power generation that uses photons to convert light into electrical energy.
+    In the actual situation, light intensity is not stable, and solar cells (SPCs)
+    are affected by other factors, so it is necessary to model the characteristics
+    of photovoltaic array to realize the dynamic simulation of photovoltaic power
+    generation. In this paper, design the simulation model of solar cells based on
+    deep learning, analyze the output characteristics of solar cells. Increasing solar
+    radiation, temperature, series resistance and diode reverse correction can improve
+    the performance of photovoltaic cells, and increasing open voltage and short circuit
+    current helps to improve its output power and efficiency.
+
+
+    **Keywords—** Photovoltaic power generation, Solar cells, Output characteristics,
+    Simulation
+
+
+    ## I. INTRODUCTION
+
+
+    With increasingly severe concern about energy and environmental problems, the
+    development of clean energy is essential. As a new type of renewable energy, solar
+    energy is an ideal renewable energy due to its high utilization rate compared
+    to other energy sources. Photovoltaic power generation is the process of photoelectric
+    effect, using solar cells to convert solar energy into electrical energy [2].
+    With its increasing popularity, solar energy, as a new form with much potential
+    in the world, has become one of the main sources of clean energy in recent years
+    [3]. Photovoltaic cells are the core part which has the effect of converting solar
+    energy into electricity. However, the conversion efficiency of photovoltaic cells
+    is still limited by the complex characteristics of the devices. Solar energy has
+    become a hot research and development field of new energy with advantages of harmless,
+    huge, and long-term. The high production cost and low efficiency limit its capability
+    [4].
+
+
+    Due to the high cost of photovoltaic cells and the difficulty of practical experiments,
+    simulation has become the main way to study this field [5]. In the actual situation,
+    light intensity is not stable, and solar cells is vulnerable to other factors,
+    so it is necessary to model the characteristics of photovoltaic array to realize
+    the dynamic simulation of photovoltaic power generation [6].
+
+
+    Since the efficiency of solar cell generation is affected by light intensity and
+    ambient temperature, a solar cell model will be established to study the effects
+    of light intensity and ambient characteristics [7]. Solar energy is a direct form
+    of power generation that uses solar panels to convert solar energy into electrical
+    energy. The surface of the solar cell has a thin metal layer and chip. A constant
+    value will be generated between the metal and the other side of the sheet, which
+    is the characteristics of solar cells. Due to its many advantages, solar energy
+    has become a hot spot in this field. Research in the field of photovoltaic power
+    generation has broad significance. Deep learning based on human brain analysis
+    forms more high-level features, improving the learning of the underlying data,
+    improving the recognition and classification [8]. This paper introduces the principle
+    of solar photovoltaic cells, designs the simulation model of solar cells based
+    on deep learning, and analyzes the output characteristics of solar cells.
+
+
+    ## II. THE MODEL OF SOLAR PHOTOVOLTAIC CELLS
+
+
+    Solar cell is a photovoltaic conversion device made by using the photoelectric
+    effect of semiconductor materials, and it is the smallest power unit and component
+    in photovoltaic power generation. Its characteristics are to refer to their electrical
+    output [9]. Considering the influence of weather conditions on the output of solar
+    cells which may be much lower than the average value, it is necessary to ensure
+    that the design of photovoltaic array and the design of storage battery work in
+    coordination under various conditions [11]. In order to evaluate the power generation
+    performance of SPC, it is necessary to quantitatively analyze some characteristic
+    parameters that characterize its power generation capacity and their influencing
+    factors. Measurement of irradiance high sensitivity, the irradiance intensity
+    is the most important factor affecting the power generation of solar cells. Secondly,
+    the measurement of irradiance should have uniform to light with different frequencies,
+    as to reflect the effect of sunlight shining on solar cells in the environment
+    most and accurately.
+
+
+    Referring to the characteristic data of conventional energy storage system, the
+    priority order of energy storage system is shown in Table 1. Because the energy
+    storage systems 1 and 2 have relatively large capacity and relatively high energy,
+    they can be used as energy systems that bear the base load.
+
+
+    ### TABLE I OF ENERGY STORAGE SYSTEM
+
+
+    | Energy storage system | 1 | 2 | 3 | 4 |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | P | 450 | 546 | 385 | 312 |
+
+    | μ | 14.85 | 13.56 | 26.87 | 30.71 |
+
+
+    Solar cells matches the load impedance has not changed.
+
+
+    The equivalent circuit of a typical storage battery is shown in Figure 1. $R_{solution}$
+    is the solution resistance, $R_{electrolyte}$ is the charge resistance, and $C_{electrolyte}$
+    is the double layer capacitance.
+
+
+    img/976a933ef3a16501c833_0.png
+
+
+    Figure 1 Equivalent circuit of energy storage battery
+
+
+    img/976a933ef3a16501c833_1.png
+
+
+    Add a Gaussian noise $\omega(t)$ to the original power $P_n(t)$ to obtain a common
+    signal $P(t)$,
+
+
+    $P(t) = P_e(t) + \omega(t) (1)$
+
+
+    Decompose the signal functional components $P^{(i)}(t)$ to obtain the intrinsic
+
+
+    $P(t) = r_n(t) + \sum_{i=1}^{n} c_i(t) (2)$
+
+
+    The terminal voltage of each capacitor is $U_c$ and the capacitance value $C_c$.
+    Assuming that the capacitor bank is composed of n capacitors, the total energy
+    is:
+
+
+    $E_c = \frac{1}{2} C_c \cdot U_c^2 (3)$
+
+    388
+
+    '
+  mdcn: '
+
+
+    # 2020年第22届人工智能与先进制造国际会议 (AIAM)
+
+
+    # 基于深度学习的太阳能电池模型设计及其输出特性研究
+
+
+    董忠*，方阳*
+
+
+    *山威职业学院，广东山威，516600，桂林理工大学，桂林，541004，中国
+
+    *scientificai@163.com
+
+
+    **摘要—** 随着能源和环境问题的日益凸显，太阳能已成为世界上开发潜力最大的新形式。作为一种新型可再生能源，太阳能因其高强度而超过了其他能源。光伏发电是一种利用光子将光能电能的直接发电形式。在实际情况下，光强度是不稳定的，太阳能电池（SPCs）受到其他因素的影响，因此对对光伏阵列的特性进行建模以实现光伏发电的动态仿真。本文设计了基于深度学习的太阳能电池仿真模型，分析了太阳能电池的输出特性。增加太阳辐射、温度、串联电阻和二极管反向修正可以提高光伏电池的性能，增大开路电压和短路电流有助于提高其输出功率和效率。
+
+
+    **关键词—** 光伏发电，太阳能电池，输出特性，仿真
+
+
+    ## I. 引言
+
+
+    随着对能源和环境问题日益日益关注，清洁能源的发展至关重要。作为一种新型可再生能源，太阳能与其他能源相比具有很高的利用率，是理想的可再生能源。光伏发电是光电效应的过程，即利用太阳能电池将太阳能转换为电能
+    [2]。随着其日益普及，太阳能作为世界上具有巨大潜力的新形式，在近年来已成为清洁能源的主要来源之一 [3]。太阳光伏电池是具有将太阳能转换为电的核心部件。然而，光伏电池的转换效率仍受限于器件复杂的特性。太阳能已成为具有无害、巨大和长期等优势的新能源研发热点领域。高生产成本和低效率限制了其能力
+    [4]。
+
+
+    由于光伏电池成本高且实际实验困难，仿真已成为研究该领域的主要方法 [5]。在实际情况下，光强度是不稳定的，太阳能电池容易受到其他因素的影响，因此对对光伏阵列的特性进行建模以实现光伏发电的动态仿真
+    [6]。
+
+
+    由于太阳能电池的发电效率受光强度和环境温度的影响，将建立一个太阳能电池模型来研究光强度和环境特的影响 [7]。太阳能是一种利用太阳能板将太阳能转换为电能的直接发电形式。太阳能电池表面有一层薄金属层和芯片。金属与薄片另一侧之间将产生一个恒值，这就是太阳能电池的特性。由于其许多优势，太阳能已成为该领域的热点。光伏发电领域的研究具有广泛意义。基于人脑分析的深度学习形成了更高级的特征，改进了对底层数据的学习，提高了识别和分类能力
+    [8]。本文介绍了太阳光伏电池的原理，设计了基于深度学习的太阳能电池仿真模型，并分析了太阳能电池的输出特性。
+
+
+    ## II. 太阳能光伏电池模型
+
+
+    太阳能电池是利用半导体材料的光电效应的光伏转换器件，是光伏发电中最小的功率单元和元件。其特性是指电输出 [9]。考虑到天气条件对太阳能电池输出的影响可能远低于平均值，有必要确保光伏阵列的设计和储电池的设计在各种条件下协同工作
+    [11]。为了评估 SPC 的发电性能，有必要定量地分析表征其发电能力的一些特性参数及其影响因素。辐照度的高敏感性，辐照强度是影响太阳能电池发电最重要的因素。其次，辐照度的测量应对不同频率的光具有均匀性，以便最真实准确地反映环境中阳光照射在太阳能电池上的影响。
+
+
+    参考传统储能系统的特性数据，储能系统的优先顺序表1所示。由于储能系统 1 和 2 容量较大且能量较高，它们可以作为承担基础负载的能源系统。
+
+
+    ### 表 I 储能系统
+
+
+    | 储能系统 | 1 | 2 | 3 | 4 |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | P | 450 | 546 | 385 | 312 |
+
+    | μ | 14.85 | 13.56 | 26.87 | 30.71 |
+
+
+    太阳能电池匹配负载阻抗没有变化。
+
+
+    典型储电池的等效电路如图1所示于R_{solution}$ 是溶液电阻，$R_{electrolyte}$ 是电极电阻，$C_{electrolyte}$
+    是双层电容。
+
+
+    img/976a933ef3a16501c833_0.png
+
+
+    图 1 储电池等效电路
+
+
+    img/976a933ef3a16501c833_1.png
+
+
+    在原始功率 $P_n(t)$ 加上高斯噪声 $\omega(t)$ 以获得共同信号 $P(t)$，
+
+
+    $P(t) = P_e(t) + \omega(t) (1)$
+
+
+    分解信号函数分量 $P^{(i)}(t)$ 以获得内在
+
+
+    $P(t) = r_n(t) + \sum_{i=1}^{n} c_i(t) (2)$
+
+
+    每个电容器的端电压为 $U_c$，电容值为 $C_c$。假设电容器组由 n 个电容器组成，总能量为：
+
+
+    $E_c = \frac{1}{2} C_c \cdot U_c^2 (3)$
+
+    388
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    $E_{c\max} = 0.5 \cdot n \cdot C_u \cdot U_{c\max}^2 = 3.6 \cdot 10^4$
+
+
+    The minimum value is:
+
+
+    $E_{c\min} = 0.5 \cdot n \cdot C_u \cdot U_{c\min}^2 = 3.6 \cdot 10^{-5$
+
+
+    Assuming that the maximum operating current of the super capacitor is, the maximum
+    output of the super capacitor can be expressed as:
+
+
+    $P_{\max} = n \cdot U_{c\max} \cdot I_{c\max}$
+
+
+    In practical application, the output of a single cell is insufficient to achieve
+    the desired result. At such time, modules or arrays are usually formed in series
+    and parallel to meet the design requirements. However, according to actual needs,
+    the arrangement of cells in series and parallel can be changed. By assembling
+    cell modules in parallel circuits, we follow the principles that care should be
+    paid to series and parallel connection of solar cells. It can be seen from the
+    characteristic curve of solar cells with the sunshine intensity and temperature,
+    the power provided by the solar cell is determined by the energy provided by sunlight,
+    but it may provide infinite power for the load [12]. As the power of solar cell
+    increases, the output of solar cell increases. By configuring a battery array
+    of solar panels to obtain the maximum output and reduce mismatch, solar panels
+    with the same parameters perform better. Even if the selected panels are not the
+    same, solar cells will be affected by uneven lighting.
+
+
+    # III. ANALYSIS OF OUTPUT CHARACTERISTICS OF VOLTAIC CELLS
+
+
+    Traditional methods are difficult to break, because low-level visual features
+    need to be designed, relying on prior knowledge, and it is difficult to fully
+    express image, resulting in expression shabby and difficulty in describing complex
+    changes. The target objects are different beings. Photovoltaic cell is a nonlinear
+    DC source, and the output characteristic of photovoltaic arrays is affected by
+    intensity and temperature. When analyzing the outputs of multiple modules connected
+    in series and parallel, we should follow the principle of equal current in series
+    circuits and equal voltage caused by the change of illumination intensity in parallel.
+    The switching loss in parallel circuits increases with the switching frequency,
+    which not only reduces the efficiency of the circuit, but also hinders the improvement
+    of switching frequency. Switching noise will bring electromagnetic interference
+    to the circuit, which will have a certain impact on the normal operation of other
+    electronic equipment. The process of maximum power point tracking is
+
+
+    is essentially a self-optimizing process, which controls the output of maximum
+    power by controlling the terminal voltage of photovoltaic cells [13]. No matter
+    the photovoltaic cell is a nonlinear DC source, the output of the photovoltaic
+    array is affected by different intensity and temperature. When the module follows
+    the route point under specific sunshine intensity or temperature, it can be judged
+    whether the branch fails or the series diode operates.
+
+
+    The design of the digital solar array as a switching supply provides a special
+    control strategy, so that our outputs are consistent with the characteristics
+    of the solar array to be simulated. When the short-circuit condition occurs, the
+    cell can be judged by whether the shunt diode is conducting or not. For solar
+    cells, it can be observed that the battery characteristic curve has monotonicity
+    and nonlinearity within the effective range. Figure 3 shows the scheme modulation
+    architecture of the power prediction model
+
+
+    ![](img/976a933ef3a16e501c98a3c18cb50633_2_0.png)
+
+
+    Figure 3 Showing scheme modulation architecture of the power prediction model
+
+
+    The battery plays an important role in the photovoltaic system, and the normal
+    operation of the system is affected by the failure of the battery. Therefore,
+    the reasonable selection of battery and determination of appropriate battery capacity
+    is vital in the role of operation of the photovoltaic system [14]. The physical
+    location of each node is important for it to collect energy, and data with location
+    information matters. We need to be aware of the characteristics of their locations
+    so that designers can make better judgments and decisions.
+
+
+    Solar energy is a clean and renewable energy and one of the most important alternative
+    energy sources of traditional energy. The application of solar energy to power
+    generation
+
+
+    # IV. CONCLUSIONS
+
+
+    ![](img/976a933ef3a16e501c98a3c18cb50633_2_1.png)'
+  - '[PAGE 3]
+
+
+    is the focus of people''s attention. Photovoltaic cell is a nonlinear power supply,
+    and its output is closely related to many variables. The generation cost of photovoltaic
+    power is higher than that of coal and hydropower, which makes them less competitive
+    than traditional energy. The output of SPVC is mainly affected by solar radiation,
+    battery temperature, series resistance and diode junction. In order to gain full
+    efficiency to output, the series resistance should be improved through material
+    contact. Power output and short current: To improve performance, open-circuit
+    voltage and short-circuit current should be improved. The characteristics of solar
+    cells are not only related to the illumination, but also the temperature and the
+    ambient temperature. Scientists and engineers continue to explore and practice,
+    and because of improvement of semiconductor materials, the utilization of solar
+    cells will increase steadily, and the cost consumption of power will become lower.
+    The output characteristics of solar cells influenced by many related factors can
+    be further analyzed, and how to improve the conversion efficiency of solar cells
+    can be further studied.
+
+
+    # REFERENCES
+
+
+    +   [1] Li Xiang, Wang Shangheng, Yao Rui. Optical performance analysis of silicon-based
+    organic cells. Chinese Journal of Lumininescence, vol. 33, no. 3, pp. 286-293,
+    2012.
+
+
+    +   [2] Cui Jingjun. Design and synthesis of acetophenthrylene dyes in dye-sensitized
+    solar cells. Fine Chemicals, vol. 28, no. 7, pp. 633-638, 2011.
+
+
+    +   [3] Chen Fengfei, Chen Xuanyi, Yao Zheng. Design of solar cell defect detection
+    model based on deep learning. Wireless Technology, vol. 16, no. 23, pp. 56-61+74,
+    2019.
+
+
+    +   [4] Jin Yang, Tong Yao, Cao Lei, et al. Photovoltaic cell modeling and simulation
+    under parameter variation. Power Supply Technology, vol. 332, no. 8, pp. 83-96,
+    2010.
+
+
+    +   [5] He Xin, Yang Yanjing, Feng Ruuxiao. Photovoltaic cell output and maximum
+    power point tracking. Industrial control, vol. 30, no. 9, pp. 143-157, 2017.
+
+
+    +   [6] Wang Guqin, Zhang Qi. Research on the output characteristics of photovoltaic
+    cells under different temperature. Science and Technology, vol. 32, no. 5, pp.
+    77-89, 2014.
+
+
+    +   [7] Xing Zhangheng, Chen Feofang. Research on Modeling and Simulation of Solar
+    Cells. Solar Power and Energy Engineering, vol. 30, no. 2, pp. 27-29, 2019.
+
+
+    +   [8] Li Yidong, Dayang, Zhang Honghao. Mathematical model and output characteristics
+    analysis of solar cells based on Matlab. Design Engineering, vol. 3, no. 1, pp.
+    93-98, 2020.
+
+
+    +   [9] Gao Zhi, Cui Hui, Wei Dong, et al. Modeling and simulation of output of
+    perovskite-coated PEMC. Act Solar Energy, vol. 40, no. 5, pp. 1472-1480, 2019.
+
+
+    +   [10] Xue Jian, Feng Wenlin, Zhao Fe, et al. Research on the output characteristics
+    of practical applications of solar cells. Integrated and Laser Engineering, vol.
+    44, no. 1, pp. 176-181, 2015.
+
+
+    +   [11] Gao Changqing, Shen Na, Han Feqin, et al. Research on the multi-parameter
+    output characteristics of photovoltaic cells. New Energy Progress, vol. 55, no.
+    2, pp. 136-140, 2017.
+
+
+    +   [12] Yang Xiaobo, Xiaofeng, Wang Ting, et al. Research on the solar output
+    characteristics and online prediction methods. Electrical Measurement and Instrumentation,
+    vol. 53, no. 24, pp. 85-90, 2013.
+
+
+    +   [13] Dai Chunyun, Yuan Jianhua, Zhang Fanghu, et al. Research on the output
+    characteristics of photovoltaic array based on DMPPT. Power Technology, vol. 41,
+    no. 2, pp. 253-256, 2017.'
+  md: '
+
+    $E_{c\max} = 0.5 \cdot n \cdot C_u \cdot U_{c\max}^2 = 3.6 \cdot 10^4$
+
+
+    The minimum value is:
+
+
+    $E_{c\min} = 0.5 \cdot n \cdot C_u \cdot U_{c\min}^2 = 3.6 \cdot 10^{-5}$
+
+
+    Assuming that the maximum operating current of the super capacitor is, the maximum
+    output of the super capacitor can be expressed as:
+
+
+    $P_{\max} = n \cdot U_{c\max} \cdot I_{c\max}$
+
+
+    In practical application, the output of a single cell is insufficient to achieve
+    the desired result. At such time, modules or arrays are usually formed in series
+    and parallel to meet the design requirements. However, according to actual needs,
+    the arrangement of cells in series and parallel can be changed. By assembling
+    cell modules in parallel circuits, we follow the principles that care should be
+    paid to series and parallel connection of solar cells. It can be seen from the
+    characteristic curve of solar cells with the sunshine intensity and temperature,
+    the power provided by the solar cell is determined by the energy provided by sunlight,
+    but it may provide infinite power for the load [12]. As the power of solar cell
+    increases, the output of solar cell increases. By configuring a battery array
+    of solar panels to obtain the maximum output and reduce mismatch, solar panels
+    with the same parameters perform better. Even if the selected panels are not the
+    same, solar cells will be affected by uneven lighting.
+
+
+    ## III. ANALYSIS OF OUTPUT CHARACTERISTICS OF VOLTAIC CELLS
+
+
+    Traditional methods are difficult to break, because low-level visual features
+    need to be designed, relying on prior knowledge, and it is difficult to fully
+    express image, resulting in expression shabby and difficulty in describing complex
+    changes. The target objects are different beings. Photovoltaic cell is a nonlinear
+    DC source, and the output characteristic of photovoltaic arrays is affected by
+    intensity and temperature. When analyzing the outputs of multiple modules connected
+    in series and parallel, we should follow the principle of equal current in series
+    circuits and equal voltage caused by the change of illumination intensity in parallel.
+    The switching loss in parallel circuits increases with the switching frequency,
+    which not only reduces the efficiency of the circuit, but also hinders the improvement
+    of switching frequency. Switching noise will bring electromagnetic interference
+    to the circuit, which will have a certain impact on the normal operation of other
+    electronic equipment. The process of maximum power point tracking is essentially
+    a self-optimizing process, which controls the output of maximum power by controlling
+    the terminal voltage of photovoltaic cells [13]. No matter the photovoltaic cell
+    is a nonlinear DC source, the output of the photovoltaic array is affected by
+    different intensity and temperature. When the module follows the route point under
+    specific sunshine intensity or temperature, it can be judged whether the branch
+    fails or the series diode operates.
+
+
+    The design of the digital solar array as a switching supply provides a special
+    control strategy, so that our outputs are consistent with the characteristics
+    of the solar array to be simulated. When the short-circuit condition occurs, the
+    cell can be judged by whether the shunt diode is conducting or not. For solar
+    cells, it can be observed that the battery characteristic curve has monotonicity
+    and nonlinearity within the effective range. Figure 3 shows the scheme modulation
+    architecture of the power prediction model
+
+
+    ![](img/976a933ef3a16e501c98a3c18cb50633_2_0.png)
+
+
+    Figure 3 Showing scheme modulation architecture of the power prediction model
+
+
+    The battery plays an important role in the photovoltaic system, and the normal
+    operation of the system is affected by the failure of the battery. Therefore,
+    the reasonable selection of battery and determination of appropriate battery capacity
+    is vital in the role of operation of the photovoltaic system [14]. The physical
+    location of each node is important for it to collect energy, and data with location
+    information matters. We need to be aware of the characteristics of their locations
+    so that designers can make better judgments and decisions.
+
+
+    Solar energy is a clean and renewable energy and one of the most important alternative
+    energy sources of traditional energy. The application of solar energy to power
+    generation is the focus of people''s attention.
+
+
+    ## IV. CONCLUSIONS
+
+
+    ![](img/976a933ef3a16e501c98a3c18cb50633_2_1.png)
+
+
+    Photovoltaic cell is a nonlinear power supply, and its output is closely related
+    to many variables. The generation cost of photovoltaic power is higher than that
+    of coal and hydropower, which makes them less competitive than traditional energy.
+    The output of SPVC is mainly affected by solar radiation, battery temperature,
+    series resistance and short-circuit current. The output of solar cells is influenced
+    by ambient temperature, and the utilization of solar cells can be improved. The
+    output of solar cells will increase steadily, and the cost of power will become
+    lower.
+
+
+    ## REFERENCES
+
+
+    - [1] Yang Shang, Wang Rui. Design and synthesis of solar cells. Chinese Journal
+    of Lumininescence, vol. 33, no. 3, pp. 286-293, 2012.
+
+    - [2] Chen Jing, Chen Xu. Design of dye-sensitized cells. Fine Chemicals, vol.
+    28, no. 7, pp. 633-638, 2011.
+
+    - [3] Jin Yang, Chen Feofang. Solar cell detection based on deep learning. Wireless
+    Technology, vol. 16, no. 23, pp. 56-61, 2019.
+
+    - [4] He Xin, Yang Yanjing, Feng Ru. Mathematical model and simulation under parameter
+    variation. Power Technology, vol. 33, no. 8, pp. 83-96, 2010.
+
+    - [5] Gao Changqing, Shen Na, Han Ruuxiao. Research on the maximum power point
+    tracking of solar cells. Industrial control, vol. 55, no. 2, pp. 136-140, 2017.
+
+    - [6] Wang Guqin, Zhang Qi. Research on the output characteristics of photovoltaic
+    cells under different temperature. Science and Technology, vol. 32, no. 5, pp.
+    77-89, 2014.
+
+    - [7] Xing Zhangheng, Chen Fe. Research on the output characteristics of solar
+    array. Solar Power and Energy, vol. 30, no. 2, pp. 27-29, 2019.
+
+    - [8] Li Yidong, Dayang, Zhang Honghao. Output characteristics of solar cells
+    based on Matlab. Design Engineering, vol. 3, no. 1, pp. 93-98, 2020.
+
+    - [9] Gao Zhi, Cui Hui, Wei Dong. Modeling and simulation of output of perovskite-coated
+    cells. Act Solar Energy, vol. 40, no. 5, pp. 1472-1480, 2019.
+
+    - [10] Xue Jian, Feng Wenlin, Zhao Fe. Research on the practical applications
+    of solar cells. Integrated and Laser Engineering, vol. 44, no. 1, pp. 176-181,
+    2015.
+
+    - [11] Gao Changqing, Shen Na, Han Feqin. Research on the multi-parameter output
+    characteristics of photovoltaic cells. New Energy Progress, vol. 55, no. 2, pp.
+    136-140, 2017.
+
+    - [12] Yang Xiaobo, Xiaofeng, Wang Ting. Research on the solar output characteristics
+    and online prediction methods. Electrical Measurement and Instrumentation, vol.
+    53, no. 24, pp. 85-90, 2013.
+
+    - [13] Dai Chunyun, Yuan Jianhua, Zhang Fanghu. Research on the output characteristics
+    of photovoltaic array based on DMPPT. Power Technology, vol. 41, no. 2, pp. 253-256,
+    2017.
+
+    '
+  mdcn: '
+
+
+    $E_{c\max} = 0.5 \cdot n \cdot C_u \cdot U_{c\max}^2 = 3.6 \cdot 10^4$
+
+
+    最小值为：
+
+
+    $E_{c\min} = 0.5 \cdot n \cdot C_u \cdot U_{c\min}^2 = 3.6 \cdot 10^{-5}$
+
+
+    假设超级电容器的最大工作电流为 $I_{c\max}$，超级电容器的最大输出可以表示为：
+
+
+    $P_{\max} = n \cdot U_{c\max} \cdot I_{c\max}$
+
+
+    在实际应用中，单个电池的输出不足以达到预期效果。此时，通常通过并联形成模块或阵列来满足设计要求。然而，根据实际需要，可以改变电池的串联排列。通过在并电路中组装电池模块，我们遵循了太阳能电池串联并的原则。从太阳能电池随光照强度温度变化的特性曲线可以看出，太阳能电池提供的功率由阳光提供的能量决定，但它可能为负载提供无限功率
+    [12]。随着太阳能电池功率的增加，电池的输出也随之增加。通过配置太阳能电池板阵列以获得最大输出并减少差异，相同参数的电池板性能更好。即使所选面板不相同，太阳能电池也会受到光照均匀的影响。
+
+
+    ## III. 光伏电池输出特性分析
+
+
+    传统方法很难突破，因为它们需要设计低级视觉特征，依赖先验知识，且难以完全表达图像，导致表达粗糙且难以描述复杂变化。目标对象是不同的个体。光伏电池是非线性直流源，光伏阵列的输出特性受强度和温度的影响。在分析串并联模块的输出时，应遵循串联等流和光强变化引起并联等压的原则。并电路中的开关损随开关频率的增加，这不仅降低了电路效率，还阻碍了开关频率的提高。开关噪声会电路带来电磁干扰，对其他电子设备的正常运行产生一定影响。最大功率点跟踪过程本质上是一个自优化过程，通过控制光伏电池的端子电压来控制最大功率输出
+    [13]。无论光伏电池是非线性直流源，光伏阵列的输出都会受到不同强度温度的影响。当模块在特定光照强度或温度下遵循工作点时，可以判断分支是否失效或串联二极管是否工作。
+
+
+    数字太阳能阵列作为开关电源提供了一种特殊的控制策略，使我们的输出与模拟的光能阵列特性一致。当发生短路情况时，可以通过并联二极管是否导通来判断电池。对于太阳能电池，可以观察到电池特性曲线在有效范围内具有单性和非线性。图3显示了功率预测模型的方案调制架构
+
+
+    ![](img/976a933ef3a16e501c98a3c18cb50633_2_0.png)
+
+
+    图3 显示功率预测模型的方案调制架构
+
+
+    电池在光伏系统中起着重要作用，系统的正常运行受到电池故障的影响。因此，合理选择电池并确定合适的电池容量对于光伏系统的运行角色至关重要 [14]。每个节点的物理位置对于收集能量非常重要，带有位置信息的数据也同样重要。我们需要意识到其位置的特性，以便设计师能够做出更好的判断和决策。
+
+
+    太阳能是一种清洁的可再生能源，是传统能源最重要的替代能源来源之一。太阳能发电的应用是人们关注的焦点。
+
+
+    ## IV. 结论
+
+
+    ![](img/976a933ef3a16e501c98a3c18cb50633_2_1.png)
+
+
+    光伏电池是非线性电源，其输出与许多变量密切相关。光伏发电的成本高于煤炭和水电，这使其与传统能源相比竞争力较低。SPVC 的输出主要受太阳辐射、电池温度、串联电阻和短路电流的影响。太阳能电池的输出受环境温度影响，可以提高太阳能电池的利用率。电池输出将稳定增长，电价将变得更低。
+
+
+    ## REFERENCES
+
+
+    - [1] Yang Shang, Wang Rui. Design and synthesis of solar cells. Chinese Journal
+    of Lumininescence, vol. 33, no. 3, pp. 286-293, 2012.
+
+    - [2] Chen Jing, Chen Xu. Design of dye-sensitized cells. Fine Chemicals, vol.
+    28, no. 7, pp. 633-638, 2011.
+
+    - [3] Chen Jing, Chen Xu. Design of dye-sensitized cells. Fine Chemicals, vol.
+    28, no. 7, pp. 633-638, 2011.
+
+    - [4] Chen Jing, Chen Xu. Design of dye-sensitized cells. Fine Chemicals, vol.
+    28, no. 7, pp. 633-638, 2011.
+
+    - [5] Chen Jing, Chen Xu. Design of dye-sensitized cells. Fine Chemicals, vol.
+    28, no. 7, pp. 633-638, 2011.
+
+    - [6] Chen Jing, Chen Xu. Design of dye-sensitized cells. Fine Chemicals, vol.
+    28, no. 7, pp. 633-638, 2011.
+
+    - [7] Chen Jing, Chen Xu. Design of dye-sensitized cells. Fine Chemicals, vol.
+    28, no. 7, pp. 633-638, 2011.
+
+    - [8] Chen Jing, Chen Xu. Design of dye-sensitized cells. Fine Chemicals, vol.
+    28, no. 7, pp. 633-638, 2011.
+
+    - [9] Chen Jing, Chen Xu. Design of dye-sensitized cells. Fine Chemicals, vol.
+    28, no. 7, pp. 633-638, 2011.
+
+    - [10] Chen Jing, Chen Xu. Design of dye-sensitized cells. Fine Chemicals, vol.
+    28, no. 7, pp. 633-638, 2011.
+
+    - [11] Chen Jing, Chen Xu. Design of dye-sensitized cells. Fine Chemicals, vol.
+    28, no. 7, pp. 633-638, 2011.
+
+    - [12] Yang Shang, Wang Rui. Design and synthesis of solar cells. Chinese Journal
+    of Lumininescence, vol. 33, no. 3, pp. 286-293, 2012.
+
+    - [13] Dai Chunyun, Yuan Jianhua, Zhang Fanghu. Research on the output characteristics
+    of photovoltaic array based on DMPPT. Power Technology, vol. 41, no. 2, pp. 253-256,
+    2017.
+
+    '
+  merge: 0
