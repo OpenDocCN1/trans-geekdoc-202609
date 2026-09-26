@@ -1,0 +1,783 @@
+<p><span id="titlepage.xhtml"></span></p>
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewbox="0 0 412 547" preserveaspectratio="none">
+<image width="412" height="547" href="cover.jpg"></image>
+</svg>
+</div>
+<p><span id="SUMMARY.html"></span></p>
+<div class="page">
+<h1 class="calibre2">Table of Contents</h1>
+<ol>
+<li><a href="#index.html" class="pcalibre calibre5 pcalibre2 pcalibre1">Introduction</a></li>
+<li><a href="#README.html" class="pcalibre calibre5 pcalibre2 pcalibre1">入门级</a>
+<ol>
+<li><a href="#why_php.html" class="pcalibre calibre5 pcalibre2 pcalibre1">为什么学PHP</a></li>
+<li><a href="#html.html" class="pcalibre calibre5 pcalibre2 pcalibre1">语义化HTML</a></li>
+<li><a href="#dev_server.html" class="pcalibre calibre5 pcalibre2 pcalibre1">搭建开发环境服务器</a></li>
+<li><a href="#php_provide_dynamic_content.html" class="pcalibre calibre5 pcalibre2 pcalibre1">PHP让内容动起来</a></li>
+<li><a href="#separate_view_and_logic.html" class="pcalibre calibre5 pcalibre2 pcalibre1">表现与业务逻辑分离</a></li>
+<li><a href="#pdo_mysql.html" class="pcalibre calibre5 pcalibre2 pcalibre1">PDO MySQL</a></li>
+<li><a href="#project_directory_structure_starter.html" class="pcalibre calibre5 pcalibre2 pcalibre1">目录规划意识的觉醒</a></li>
+<li><a href="./0/sql_injection.html" class="pcalibre calibre5 pcalibre2 pcalibre1">SQL注入攻击</a></li>
+<li><a href="./0/xss.html" class="pcalibre calibre5 pcalibre2 pcalibre1">XSS攻击</a></li>
+<li><a href="./0/register_and_login.html" class="pcalibre calibre5 pcalibre2 pcalibre1">注册与登录</a></li>
+<li><a href="./0/css.html" class="pcalibre calibre5 pcalibre2 pcalibre1">CSS：让网页漂亮起来</a></li>
+<li><a href="./0/robots_and_favicon.html" class="pcalibre calibre5 pcalibre2 pcalibre1">细节：404、robots和favicon</a></li>
+<li><a href="./0/business_model.html" class="pcalibre calibre5 pcalibre2 pcalibre1">商业模式</a></li>
+<li><a href="./0/prod_server.html" class="pcalibre calibre5 pcalibre2 pcalibre1">搭建生产环境服务器</a></li>
+<li><a href="./0/release.html" class="pcalibre calibre5 pcalibre2 pcalibre1">手动上线</a></li>
+<li><a href="#show_me_the_money.html" class="pcalibre calibre5 pcalibre2 pcalibre1">学会了本章，你的收入应达到</a></li>
+</ol></li>
+<li><a href="./1/README.html" class="pcalibre calibre5 pcalibre2 pcalibre1">初级</a>
+<ol>
+<li><a href="./1/txt.html" class="pcalibre calibre5 pcalibre2 pcalibre1">不只是网页，还有txt</a></li>
+<li><a href="./1/object.html" class="pcalibre calibre5 pcalibre2 pcalibre1">new一个对象</a></li>
+<li><a href="./1/phpcs.html" class="pcalibre calibre5 pcalibre2 pcalibre1">书写规范</a></li>
+<li><a href="./1/phpunit.html" class="pcalibre calibre5 pcalibre2 pcalibre1">单元测试</a></li>
+<li><a href="./1/git.html" class="pcalibre calibre5 pcalibre2 pcalibre1">git版本管理</a></li>
+<li><a href="./1/release.html" class="pcalibre calibre5 pcalibre2 pcalibre1">脚本上线</a></li>
+<li><a href="./2/exception.html" class="pcalibre calibre5 pcalibre2 pcalibre1">异常</a></li>
+<li><a href="./1/show_me_the_money.html" class="pcalibre calibre5 pcalibre2 pcalibre1">学会了本章，你的收入应达到</a></li>
+</ol></li>
+<li><a href="./2/README.html" class="pcalibre calibre5 pcalibre2 pcalibre1">中级</a>
+<ol>
+<li><a href="./2/namespace.html" class="pcalibre calibre5 pcalibre2 pcalibre1">命名空间</a></li>
+<li><a href="./2/rest.html" class="pcalibre calibre5 pcalibre2 pcalibre1">REST</a></li>
+<li><a href="./2/load_balancing.html" class="pcalibre calibre5 pcalibre2 pcalibre1">多台服务器负载均衡</a></li>
+<li><a href="./2/phone_and_pad.html" class="pcalibre calibre5 pcalibre2 pcalibre1">网页如何支持手机和平板</a></li>
+<li><a href="./2/app.html" class="pcalibre calibre5 pcalibre2 pcalibre1">如何支持手机APP</a></li>
+<li><a href="./2/show_me_the_money.html" class="pcalibre calibre5 pcalibre2 pcalibre1">学会了本章，你的收入应达到</a></li>
+</ol></li>
+</ol>
+</div>
+<p><span id="index.html"></span></p>
+<div class="page">
+<h1 id="index.html#calibre_toc_1" class="book-chapter">Introduction</h1>
+<div id="index.html#section-gitbook_10" class="normal">
+<h1 id="index.html#php-55-web" class="calibre2">PHP 5.5 Web零基础教程：开发一个在线阅读网站</h1>
+<p>从零开始，教你HTML、PHP、MySQL、CSS、JavaScript，开发一个在线阅读网站（可以当短篇小说网站、新闻网站），并且赚钱。</p>
+<p>基于兴趣，想做什么就动手做，边做边学，理论后来再总结，自然醍醐灌顶。</p>
+<p>本书是开源书籍，采用markdown语法，书放在<a href="http://github.com" class="pcalibre calibre5 pcalibre2 pcalibre1">github.com</a>。代码也是开源的，也在github上。图片放在免费的七牛云存储<a href="https://portal.qiniu.com/signup?code=3lafkpsz7yes1" class="pcalibre calibre5 pcalibre2 pcalibre1">qiniu.com</a>上。例子中的文章来自简书的<a href="http://jianshu.io/users/30f22635968e/latest_articles" class="pcalibre calibre5 pcalibre2 pcalibre1">Ryekee</a>、<a href="http://jianshu.io/users/9fc68a490b8a/latest_articles" class="pcalibre calibre5 pcalibre2 pcalibre1">游苏赋</a>，在此先说声“谢谢”:)</p>
+<p>如果发现错别字或者有意见建议，欢迎反馈，可以在简书里直接评论，或者在github Issues里面提，电子书修改更新还是很方便的。</p>
+<p>GitBook在线阅读与下载：<a href="https://www.gitbook.io/book/sinkcup/php-web-tutorial-create-online-reader" class="pcalibre calibre5 pcalibre2 pcalibre1">https://www.gitbook.io/book/sinkcup/php-web-tutorial-create-online-reader</a></p>
+<p>简书在线阅读：<a href="http://jianshu.io/notebooks/104779/latest" class="pcalibre calibre5 pcalibre2 pcalibre1">http://jianshu.io/notebooks/104779/latest</a></p>
+<p>书的github：<a href="https://github.com/sinkcup/php-web-tutorial-create-online-reader" class="pcalibre calibre5 pcalibre2 pcalibre1">https://github.com/sinkcup/php-web-tutorial-create-online-reader</a></p>
+<p>代码的github：<a href="https://github.com/sinkcup/php-ebook-online-reader" class="pcalibre calibre5 pcalibre2 pcalibre1">https://github.com/sinkcup/php-ebook-online-reader</a></p>
+<p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" class="pcalibre calibre5 pcalibre2 pcalibre1">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。</p>
+</div>
+</div>
+<p><span id="README.html"></span></p>
+<div class="page">
+<h1 id="README.html#calibre_toc_2" class="book-chapter">入门级</h1>
+<div id="README.html#section-gitbook_1" class="normal">
+<h1 class="calibre2">入门级</h1>
+<p>本章教你做一个能运行的网站，并且带来收入，学完以后编程就入门了，但离高手还很远。</p>
+</div>
+</div>
+<p><span id="why_php.html"></span></p>
+<div class="page">
+<h1 id="why_php.html#calibre_toc_3" class="book-chapter">为什么学PHP</h1>
+<div id="why_php.html#section-gitbook_9" class="normal">
+<h1 id="why_php.html#php" class="calibre2">为什么学PHP</h1>
+<p>如果是想做网站，那看这本书就对了。</p>
+<h2 class="calibre9">哪些国际公司使用PHP</h2>
+<p>todo</p>
+<h2 class="calibre9">哪些国内公司使用PHP</h2>
+<p>todo</p>
+</div>
+</div>
+<p><span id="html.html"></span></p>
+<div class="page">
+<h1 id="html.html#calibre_toc_4" class="book-chapter">语义化HTML</h1>
+<div id="html.html#section-gitbook_3" class="normal">
+<h1 id="html.html#html" class="calibre2">语义化HTML</h1>
+<p>打开浏览器，访问一个网站，看到了漂亮的网页。比如豆瓣（<a href="http://douban.com" class="pcalibre calibre5 pcalibre2 pcalibre1">douban.com</a>）是这样的：</p>
+<p>右键“查看页面源代码”，看到了一行行的文本。是这样的：</p>
+<p>把这些代码复制下来，保存成index.html文件，用浏览器打开，看到了和访问douban.com一样的内容。如图：</p>
+<p>这就是HTML，写的时候是一行行的文本，用浏览器打开，就会渲染成图形化的界面。</p>
+<p>下面开始开发一个“在线阅读网站”，可以用来当小说网站、博客、新闻网站等等。</p>
+<p>先来规划一下产品要做哪些功能？</p>
+<ul>
+<li><p>首页：显示文章列表，列表里显示每篇文章的标题、摘要。</p></li>
+<li><p>详情页：显示整篇文章。</p></li>
+<li><p>发表页：给出文本框，录入保存文章。</p></li>
+</ul>
+<p>首页的HTML代码如下：</p>
+<pre class="calibre11"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE html
+    PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;
+    &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;zh-Hans&quot; lang=&quot;zh-Hans&quot;&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;/&gt;
+        &lt;title&gt;在线阅读&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;在线阅读&lt;/h1&gt;
+        &lt;div&gt;&lt;a href=&quot;./add_article.html&quot;&gt;写文章&lt;/a&gt;&lt;/div&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&quot;./get_article.html?id=1&quot;&gt;论不同的科学上网的方式对数据造
+成的影响&lt;/a&gt;
+                &lt;p&gt;摘要：通过对不同的科学上网的方式的体验和说明，试图探寻其造成&gt;这种现象的背后的原因。并为其他研究者提供理论依据。 1) GoAgent  口感偏硬，数据刚&gt;朗，不经任何的加工和修饰，尤其是在 Windows 下使用，一口咬下去让人头皮发麻。即便&gt;最新的产品通过 rc4 稍稍润饰，但仍旧无法洗去那钻……&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://tech.163.com/11/0401/15/70IJH2KI000915BF.html&quot; target=&quot;_blank&quot;&gt;奇虎360上市 员工平均身价580万&lt;/a&gt;
+                &lt;p&gt;“360员工全部进入北京二环以内。”现场一位北京记者的一句戏言，引发现场爆发出欢呼。奇虎总裁齐向东对本报表示，360此举，确实创造了中国互联网的员工&gt;致富神话。据了解，入职9个月以上的员工一般就能拿到股份，一般员工持股4000股左右，&gt;按照每股34美元减去相关费用计算，获利约70多万元人民币……&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;http://www.douban.com/note/214971831/&quot; target=&quot;_blank&quot;&gt;你想在一个暮气沉沉的大公司里写一天用不上的代码然后回家撸撸就睡？&lt;/a&gt;
+                &lt;p&gt;在我们这里，你可以得到什么？
+                1.跟对一个老大，参与一个伟大的公司的创业；
+                2.在它伟大之前，就得以在一个甚至能输出价值观的牛逼公司里骄傲地工
+作；
+                3.虽然我们相信你不会舍得早早从这样的公司退休，但还是为你准备了一
+份上市时就足以让你退休、足以让你彻底沦为一个废物的股份/期权；
+                4.每人一把Herman Miller的Embody，或okamura的contessa。
+
+                 来吧，小伙子们，这多半是你们一生一次的机会，把个人简历投到这里吧：
+                 laoluomobile@gmail.com
+
+                  罗永浩
+                  &lt;/p&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>在浏览器中打开是这样的：</p>
+<p>能看懂这些代码吗？如果看不懂，自学一下HTML语法就行了，很简单，预计需要1至2天时间。教程在这里：《梦之都HTML教程》<a href="http://www.dreamdu.com/xhtml/" class="pcalibre calibre5 pcalibre2 pcalibre1">www.dreamdu.com</a>。</p>
+<p>自学：2天。</p>
+<p>注意：截图的Firefox右上角有个“0错误/0警告”，这是Firefox扩展HTML Validator，能保证你写出100%标准的HTML，特别方便，推荐安装。下载页面：<a href="http://users.skynet.be/mgueury/mozilla/" class="pcalibre calibre5 pcalibre2 pcalibre1">http://users.skynet.be/mgueury/mozilla/</a>。</p>
+<p>学完HTML，知道语义化是什么意思了，会写最简洁的HTML了，那咱们继续。</p>
+<p>刚才的代码是首页，其他还有详情页、发表页，在这里：</p>
+<p>代码下载：<a href="https://github.com/sinkcup/php-ebook-online-reader/tree/0.1.0" class="pcalibre calibre5 pcalibre2 pcalibre1">https://github.com/sinkcup/php-ebook-online-reader/tree/0.1.0</a></p>
+<p>下载以后，你就可以看到截图里的精彩内容，知道如何“在北京买房”、“9个月挣到70w”、“30岁退休”，当然了，为了吸引青年男女，特意放了几篇XXOO相关的文章，其中有一篇是老罗写的，很精彩又不低俗，人格担保，你懂的。</p>
+<h2 class="calibre9">总结一下</h2>
+<h3 class="calibre13">我的技术水平</h3>
+<table>
+<thead>
+<tr class="header">
+<th>HTML</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>语义化：最简HTML</td>
+</tr>
+</tbody>
+</table>
+<h3 class="calibre13">已解决的问题</h3>
+<ul>
+<li><p>零基础如何学习HTML</p>
+<p>自学<a href="http://www.dreamdu.com/xhtml/" class="pcalibre calibre5 pcalibre2 pcalibre1">《梦之都HTML教程》</a>。</p></li>
+<li><p>如何写出100%标准的HTML</p>
+<p>使用Firefox扩展<a href="http://users.skynet.be/mgueury/mozilla/" class="pcalibre calibre5 pcalibre2 pcalibre1">HTML Validator</a>即可。</p></li>
+<li><p>【人在北京，30 岁了，实在买不起房，对生活感到悲观，怎么办？】</p>
+<p>胖狗同学：事实上，我是为这个被折叠的答案来写一篇回复的，我只想说，楼主在精神上没准备好买房（虽然我很不爱这么定义一个人），即使他的收入增长50%，到了30万，他还会抱怨买不起房…… <a href="http://zhi.hu/WAJ1" class="pcalibre calibre5 pcalibre2 pcalibre1">http://zhi.hu/WAJ1</a>（分享自知乎）</p></li>
+</ul>
+<h3 class="calibre13">待解决的问题</h3>
+<ul>
+<li><p>这些HTML代码都在电脑上存着，本地能打开，但别的电脑、手机如何访问呢？</p>
+<p>且听下回分解。</p></li>
+</ul>
+</div>
+</div>
+<p><span id="dev_server.html"></span></p>
+<div class="page">
+<h1 id="dev_server.html#calibre_toc_5" class="book-chapter">搭建开发环境服务器</h1>
+<div id="dev_server.html#section-gitbook_2" class="normal">
+<h1 class="calibre2">搭建开发环境服务器</h1>
+<p>这些HTML代码都在电脑上存着，本地能打开，但别的电脑、手机如何访问呢？</p>
+<p>安装HTTP server即可，常见的有nginx、apache。本书以流行的nginx为例。</p>
+<p>看过《计算机互联网导论》的童鞋可能知道，计算机有很多种：电脑、服务器、手机、平板、路由器等等，其中电脑是面向个人桌面的，分为两种：PC和Mac，PC上面主要安装Windows系统、Linux系统，Mac上面主要是OS X。引用那本书的两个数据表格：</p>
+<h2 class="calibre9">电脑操作系统市场占有率</h2>
+<table>
+<thead>
+<tr class="header">
+<th>硬件</th>
+<th>OS</th>
+<th>市场占有率</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>x86 PC</td>
+<td>Windows（个人使用￥400起，公司商业使用￥1988起）</td>
+<td>90%</td>
+</tr>
+<tr class="even">
+<td>x86 PC</td>
+<td>Linux（￥0）</td>
+<td>1%</td>
+</tr>
+<tr class="odd">
+<td>x86 Mac</td>
+<td>OS X（￥0）</td>
+<td>8%</td>
+</tr>
+</tbody>
+</table>
+<h2 class="calibre9">各大公司使用的服务器操作系统</h2>
+<table>
+<thead>
+<tr class="header">
+<th>硬件</th>
+<th>OS</th>
+<th>谁在用</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>x86-64 server（arm-64正在起步）</td>
+<td>Linux server</td>
+<td>Google、Facebook、腾讯、阿里、百度、小米、锤子、360等绝大部分互联网公司</td>
+</tr>
+<tr class="even">
+<td>x86-64 server</td>
+<td>Windows server</td>
+<td>微软、事业单位、传统行业等非技术公司</td>
+</tr>
+</tbody>
+</table>
+<p>很明显，服务器大部分都是Linux的，因为系统免费又开源，可以自行修改定制；硬件可自由选择，便宜；命令行界面适合脚本编程实现自动化。</p>
+<p>不过大陆高校与技术前沿脱节比较严重，编程教科书、机房都是Windows的，没有Linux，也没有Mac。如果你热爱编程，经过几年的实践，自然就去接触到Linux服务器自动化部署、代码自动化测试发布，这就是自动化，不再喜欢在界面上点来点去了。而且这时候你所在的公司也不一样了，到了前沿技术公司，没有Windows，只有Linux和OS X，和服务器环境一致或接近，比如Google、豆瓣、小米、饿了么，甚至二三线公司比如安居客。</p>
+<p>举个例子，大家也许就明白了：“学校机房需要给1000台电脑安装盗版Office、QQ等几十个软件，你会怎么做？跑到每台电脑上点下一步？1天之内能完成吗？这时候就知道自动化的意义了。”。</p>
+<p>有的童鞋看到这个问题乐了，休息一下，请看这里：<a href="http://zhi.hu/31MG" class="pcalibre calibre5 pcalibre2 pcalibre1">zhi.hu/31MG</a></p>
+<p>回到正题，现在假设你是一个编程菜鸟，热爱图形界面，痛恨命令行。没关系，本章就是面向菜鸟的，大家都是从这个阶段过来的，在大陆的Windows教育下，菜鸟热爱图形界面是正常的，不丢人。那你很可能用的是Windows，如果用的是Linux或OS X，那说明你爱钻研，领先同龄人好几年。</p>
+<p>入门时，如何快速搭建开发环境？</p>
+<p>Windows：下载wnmp（<a href="http://www.getwnmp.org/" class="pcalibre calibre5 pcalibre2 pcalibre1">getwnmp.org</a>），图形界面的，点下一步安装，右键使用管理员权限启动即可。</p>
+<p>Ubuntu（Linux有很多版本，本书以流行的Ubuntu为例）：一个命令即可</p>
+<pre class="calibre11"><code>sudo apt-get install nginx php5-fpm php5-mysqlnd</code></pre>
+<p>Mac：</p>
+<pre class="calibre11"><code>brew install nginx</code></pre>
+<p>安装过程不再截图，不再详述，因为“DIY、装系统、装软件、Android刷机”对于计算机爱好者来说，是小意思。如果你刚刚大一，对这些不熟，没关系，多装几次就熟了，有问题“Google一下，你就知道的太多了”。如果装过几次，你发现自己对“CPU、内存、显卡、固态硬盘、系统、软件、网站”不感兴趣，嫌麻烦不爱折腾，那说明你真的不爱好计算机，千万不要学编程，立即停止阅读本书，转专业还来得及，钻研感兴趣的方向，否则工作几年差距越来越大，别人感兴趣，自然爱折腾爱钻研，进入BAT一线公司（<a href="http://zhi.hu/3yYh" class="pcalibre calibre5 pcalibre2 pcalibre1">应届一本本科生起薪12w</a>），逐渐成为高级工程师、架构师、技术专家，或者去创业9个月挣70w，而你在一个不感兴趣的行业里，一直是入门级工程师打杂，只能在二线公司（新浪、网易、搜狐，应届本科生月薪几千），甚至在三流四流公司，一直工资低，碌碌无为。</p>
+<p>装好以后，用浏览器访问<a href="http://localhost/" class="pcalibre calibre5 pcalibre2 pcalibre1">http://localhost/</a>，看到一个简单的网页，是这样的：</p>
+<p>这个网页在哪呢？找到以后，把上次下载的网站代码放进去，换掉它，就行了吧？</p>
+<p>对。</p>
+<p>Windows：在C:\Wnmp\html\，把index.php删除，然后把index.html等等放进去。</p>
+<p>Linux：在/usr/share/nginx/html/，修改权限，然后把index.html等等放进去。</p>
+<pre class="calibre11"><code>sudo chmod -R 777 /usr/share/nginx/html</code></pre>
+<p>这时候用浏览器访问<a href="http://localhost/" class="pcalibre calibre5 pcalibre2 pcalibre1">http://localhost/</a>，就看到网站了。不过localhost代表本机，别人还是访问不了。所以别人要通过IP访问，比如我的电脑IP是192.168.1.107，那访问<a href="http://192.168.1.107/" class="pcalibre calibre5 pcalibre2 pcalibre1">http://192.168.1.107/</a>即可。如图：</p>
+<p>注意：这是内网IP，在同一个内网里可以访问，比如学校等大局域网环境。如果想对外提供网站服务，需要一个公网IP。那时候就需要购买云服务器了，那是另一个话题“搭建生产环境服务器”，以后再说。</p>
+<p>IP都是数字太难记了，现在网站都是用域名啊。如何使用域名访问本网站呢？</p>
+<p>很简单，域名是由域名注册商出售的，在google中搜索domain即可，各家价格都差不多，.com后缀约$8/年，还有很多有意思的后缀，比如<a href="http://douban.fm" class="pcalibre calibre5 pcalibre2 pcalibre1">douban.fm</a>、<a href="http://zhi.hu" class="pcalibre calibre5 pcalibre2 pcalibre1">zhi.hu</a>、<a href="http://github.io" class="pcalibre calibre5 pcalibre2 pcalibre1">github.io</a>、<a href="http://jianshu.io" class="pcalibre calibre5 pcalibre2 pcalibre1">jianshu.io</a>。但国内域名注册商大部分都不正规，你购买了域名，会发现实际管理员邮箱是商家的，最重要的资产是域名转移码，都不在你手里，这就很危险，你买的东西却不属于你，仍然属于商家。而在国外购买域名就很正规，管理员邮箱、转移码都是你的。</p>
+<p>常见的国外域名注册商支持支付宝的有：<a href="http://www.godaddy.com/China" class="pcalibre calibre5 pcalibre2 pcalibre1">godaddy.com</a>、<a href="http://www.resellerclub.com" class="pcalibre calibre5 pcalibre2 pcalibre1">resellerclub.com</a>，支持VISA的就很多了，比如register.com、name.com。</p>
+<p>网站正式运营的时候，需要购买顶级域名。现在只是学习开发，那申请一个免费的二级域名即可。提供免费二级域名的商家很多，比如在花生壳<a href="http://oray.com/" class="pcalibre calibre5 pcalibre2 pcalibre1">oray.com</a>，注册登录后，进入我的控制台——域名管理——壳域名——添加域名即可。比如我申请了一个sinkcup.wicp.net，指向192.168.1.107，如图：</p>
+<p>现在一个网站就诞生啦！点“写文章”，然后“发表”，观察发生了什么。</p>
+<h2 class="calibre9">总结一下</h2>
+<h3 class="calibre13">我的技术水平</h3>
+<table>
+<thead>
+<tr class="header">
+<th>HTML</th>
+<th>服务器部署</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>语义化：最简HTML</td>
+<td>管理员权限GUI或CLI安装包</td>
+</tr>
+</tbody>
+</table>
+<h3 class="calibre13">已解决的问题</h3>
+<ul>
+<li><p>如何提供网站服务</p>
+<p>安装HTTP server即可。</p></li>
+<li><p>通过IP访问网站，很难记怎么办</p>
+<p>购买顶级域名，或者申请免费的二级域名。</p></li>
+<li><p>奇虎360上市 员工平均身价580万</p>
+<p>“360员工全部进入北京二环以内。”现场一位北京记者的一句戏言，引发现场爆发出欢呼。奇虎总裁齐向东对本报表示，360此举，确实创造了中国互联网的员工致富神话。据了解，入职9个月以上的员工一般就能拿到股份，一般员工持股4000股左右，按照每股34美元减去相关费用计算，获利约70多万元人民币。网易新闻，与你分享。<a href="http://163.fm/WqOc6mR" class="pcalibre calibre5 pcalibre2 pcalibre1">http://163.fm/WqOc6mR</a></p></li>
+</ul>
+<h3 class="calibre13">待解决的问题</h3>
+<ul>
+<li><p>哪里能找到《计算机互联网导论》这本书？</p>
+<p>找不到……我正在写的，还没写完……有一本讲互联网的书《浪潮之巅》，很精彩，推荐阅读，但不是面向大一新生互联网入门的，所以我才想到写一本导论。如果大家喜欢现在情况，而不是“第一台计算机是什么时候诞生的”这种导论……欢迎联系我，参加试读。</p></li>
+<li><p>发表的文章怎么不见了？</p>
+<p>且听下回分解。</p></li>
+</ul>
+</div>
+</div>
+<p><span id="php_provide_dynamic_content.html"></span></p>
+<div class="page">
+<h1 id="php_provide_dynamic_content.html#calibre_toc_6" class="book-chapter">PHP让内容动起来</h1>
+<div id="php_provide_dynamic_content.html#section-gitbook_5" class="normal">
+<h1 id="php_provide_dynamic_content.html#php" class="calibre2">PHP让内容动起来</h1>
+<p>发表的文章怎么不见了？</p>
+<p>因为那是静态HTML网页，不能处理数据。这时候就需要PHP了。</p>
+<p>首先要配置一下nginx服务器，当发现请求了PHP文件时，就传递给PHP程序进行处理。</p>
+<p>Windows：无需配置。wnmp已经默认配置好了，启动PHP和nginx即可。</p>
+<p>Linux：按照下面的图片进行修改。</p>
+<pre class="calibre11"><code>sudo vi /etc/nginx/sites-enabled/default</code></pre>
+<p>修改完毕，重启nginx。</p>
+<pre class="calibre11"><code>sudo /etc/init.d/nginx reload</code></pre>
+<p>然后开始写代码。修改“发表页”add_article.html的表单，提交到PHP。代码如下：</p>
+<pre class="calibre11"><code>&lt;h1&gt;写文章&lt;/h1&gt;
+&lt;form action=&quot;add_article_submit.php&quot; method=&quot;post&quot;&gt;</code></pre>
+<p>add_article_submit.php收到数据，保存到哪里呢？最简单的方法：本地文件。代码如下：</p>
+<pre class="calibre11"><code>&lt;?php
+$input = $_POST;
+$file = &#39;./articles.json&#39;;
+$data = array();
+if (file_exists($file)) {
+    $tmp = file_get_contents($file); //读取文件，变成字符串
+    if(!empty($tmp)) {
+        $data = json_decode($tmp, true); //json解码成array
+    }
+}
+$data[] = $input;
+file_put_contents($file, json_encode($data)); //把字符串保存到文件
+echo &#39;保存成功&#39;;</code></pre>
+<p>能看懂这些代码吗？如果看不懂，学一下PHP语法，很简单。看这里：《PHP官方手册：第一个 PHP 页面》<a href="http://www.php.net/manual/zh/tutorial.firstpage.php" class="pcalibre calibre5 pcalibre2 pcalibre1">http://www.php.net/manual/zh/tutorial.firstpage.php</a></p>
+<p>自学：0.5天。</p>
+<p>然后把这些代码下载下来：<a href="https://github.com/sinkcup/php-ebook-online-reader/tree/0.2.0" class="pcalibre calibre5 pcalibre2 pcalibre1">https://github.com/sinkcup/php-ebook-online-reader/tree/0.2.0</a></p>
+<p>在浏览器里访问，尝试录入一篇文章。如图：</p>
+<p>然后回到首页，刷新，看到文章列表，可以点进去阅读，如图：</p>
+<h2 class="calibre9">总结一下</h2>
+<h3 class="calibre13">我的技术水平</h3>
+<table>
+<thead>
+<tr class="header">
+<th>HTML</th>
+<th>PHP</th>
+<th>数据存储</th>
+<th>HTTP协议</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>语义化：最简HTML</td>
+<td>让内容动起来</td>
+<td>文件存数据</td>
+<td>GET、POST</td>
+</tr>
+</tbody>
+</table>
+<h3 class="calibre13">已解决的问题</h3>
+<ul>
+<li><p>提交的内容跑哪里去了？</p>
+<p>可以存到本地文件里</p></li>
+<li><p>GET和POST有什么区别？该用哪个？</p>
+<p>简单的说：GET表示读，POST表示写。</p></li>
+<li><p>【阿里 IPO 后员工套现 410 亿美元，对杭州这个城市会有怎样的影响？】</p>
+<p>匿名用户：现身说法，房子有了，目前的代步车是mini，套现后换辆路虎揽胜，还有让妻子去香港生孩子，这就是我的计划。<a href="http://zhi.hu/4OKR" class="pcalibre calibre5 pcalibre2 pcalibre1">http://zhi.hu/4OKR</a>（分享自知乎）</p></li>
+</ul>
+<h3 class="calibre13">待解决的问题</h3>
+<ul>
+<li><p>PHP和HTML混写，很乱啊，怎么解决？</p>
+<p>且听下回分解。</p></li>
+<li><p>保存之后，在Firefox中页面怎么乱码了？</p>
+<p>且听下回分解。</p></li>
+</ul>
+</div>
+</div>
+<p><span id="separate_view_and_logic.html"></span></p>
+<div class="page">
+<h1 id="separate_view_and_logic.html#calibre_toc_7" class="book-chapter">表现与业务逻辑分离</h1>
+<div id="separate_view_and_logic.html#section-gitbook_7" class="normal">
+<h1 class="calibre2">表现与业务逻辑分离</h1>
+<h2 id="separate_view_and_logic.html#phphtml" class="calibre9">PHP和HTML混写，很乱啊，怎么解决？</h2>
+<p>一个页面分成两个文件即可，一个PHP做逻辑，一个HTML做模板。</p>
+<p>比如“首页”<code class="pcalibre6 pcalibre5 calibre20">index.php</code>分成：<code class="pcalibre6 pcalibre5 calibre20">index.php</code>和<code class="pcalibre6 pcalibre5 calibre20">index.html</code>。<code class="pcalibre6 pcalibre5 calibre20">index.php</code>代码如下：</p>
+<pre class="calibre11"><code>&lt;?php
+$articles = array();
+$file = &#39;./articles.json&#39;;
+if (file_exists($file)) {
+    $tmp = file_get_contents($file);
+    if (!empty($tmp)) {
+        $articles = json_decode($tmp, true);
+    }
+}
+
+$d = array(); //d 是 data的意思，后续会用到
+$d[&#39;articles&#39;] = $articles;
+require_once __DIR__ . &#39;/index.html&#39;;</code></pre>
+<p><code class="pcalibre6 pcalibre5 calibre20">index.html</code>代码如下：</p>
+<pre class="calibre11"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE html
+    PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;
+    &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;zh-Hans&quot; lang=&quot;zh-Hans&quot;&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;/&gt;
+        &lt;title&gt;在线阅读&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;在线阅读&lt;/h1&gt;
+        &lt;div&gt;&lt;a href=&quot;./add_article.html&quot;&gt;写文章&lt;/a&gt;&lt;/div&gt;
+        &lt;?php
+            if (!empty($d[&#39;articles&#39;])) {
+                echo &#39;&lt;ul&gt;&#39;;
+                foreach ($d[&#39;articles&#39;] as $k=&gt;$v) {
+                    $id = $k + 1;
+                    echo &#39;&lt;li&gt;&lt;a href=&quot;./get_article.php?id=&#39; . $id . &#39;&quot;&gt;&#39; . $v[&#39;title&#39;] . &#39;&lt;/a&gt;&#39;;
+                    echo &#39;&lt;p&gt;&#39; . mb_substr($v[&#39;content&#39;], 0, 100, &#39;UTF-8&#39;) . &#39;……&lt;/p&gt;&lt;/li&gt;&#39;;
+                }
+                echo &#39;&lt;/ul&gt;&#39;;
+            }
+        ?&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<h2 id="separate_view_and_logic.html#firefox" class="calibre9">保存之后，在Firefox中页面怎么乱码了？</h2>
+<p>打开<code class="pcalibre6 pcalibre5 calibre20">add_article_submit.php</code>的源代码看一下，只输出了“保存成功”，那这不是一个网页。一个正常的网页需要包含DOCTYPE html、head、body等内容，其中head里的charset声明了编码，这样浏览器才能正常显示。所以添加一个<code class="pcalibre6 pcalibre5 calibre20">notice.html</code>模板即可。代码如下：</p>
+<pre class="calibre11"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE html
+    PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;
+    &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;zh-Hans&quot; lang=&quot;zh-Hans&quot;&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;/&gt;
+        &lt;title&gt;提示：&lt;?=$d[&#39;notice&#39;][&#39;msg&#39;]?&gt;&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;提示：&lt;?=$d[&#39;notice&#39;][&#39;msg&#39;]?&gt;&lt;/h1&gt;
+        &lt;p&gt;&lt;a href=&quot;/&quot;&gt;回到首页&lt;/a&gt;&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>截图如下：</p>
+<p>代码下载：<a href="https://github.com/sinkcup/php-ebook-online-reader/tree/0.3.0" class="pcalibre calibre5 pcalibre2 pcalibre1">https://github.com/sinkcup/php-ebook-online-reader/tree/0.3.0</a></p>
+<h2 class="calibre9">总结一下</h2>
+<h3 class="calibre13">我的技术水平</h3>
+<table>
+<thead>
+<tr class="header">
+<th>HTML</th>
+<th>PHP</th>
+<th>数据存储</th>
+<th>HTTP协议</th>
+<th>程序员的自我修养</th>
+<th>装备</th>
+<th>等级</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>语义化</td>
+<td>让内容动起来</td>
+<td>单机文件</td>
+<td>GET、POST</td>
+<td></td>
+<td>PC + Windows</td>
+<td>0.2</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>表现与业务分离</td>
+<td></td>
+<td>charset</td>
+<td>Unicode</td>
+<td></td>
+<td>0.3</td>
+</tr>
+</tbody>
+</table>
+<h3 class="calibre13">已解决的问题</h3>
+<ul>
+<li><p>PHP和HTML混写，很乱啊，怎么解决？</p>
+<p>把HTML单独保存，PHP中require即可，这样就实现了表现与业务逻辑分离。</p></li>
+<li><p>保存之后，在Firefox中页面怎么乱码了？</p>
+<p>HTML中需要声明charset，浏览器才知道用什么编码解析。</p></li>
+<li><p>ANSI与ASCII的区别，UTF-8与Unicode的区别，GB2312、CP936、GBK、GB18030的区别，为什么技术公司的程序（Android、iOS、Linux、OS X、Windows）都使用Unicode？</p>
+<p>请自行学习。</p></li>
+<li><p>【百万年薪的人都是怎么过日子的？】</p>
+<p>匿名用户：感谢大家的关注。很多朋友对选对行业……<a href="http://zhi.hu/3Rv9" class="pcalibre calibre5 pcalibre2 pcalibre1">http://zhi.hu/3Rv9</a>（分享自知乎）</p></li>
+</ul>
+<h3 class="calibre13">待解决的问题</h3>
+<ul>
+<li><p>查看<code class="pcalibre6 pcalibre5 calibre20">get_article.php</code>的代码，读一篇文章，却把所有文章取了出来，再取其中一篇，这样浪费性能啊，如果文章有成千上万篇，那怎么办？</p>
+<p>且听下回分解。</p></li>
+</ul>
+</div>
+</div>
+<p><span id="pdo_mysql.html"></span></p>
+<div class="page">
+<h1 id="pdo_mysql.html#calibre_toc_8" class="book-chapter">PDO MySQL</h1>
+<div id="pdo_mysql.html#section-gitbook_4" class="normal">
+<h1 id="pdo_mysql.html#pdo-mysql" class="calibre2">PDO MySQL</h1>
+<h2 class="calibre9">如果文章有成千上万篇，该怎样保存？</h2>
+<p>数据保存有多种方式，比如单机文件（JSON、txt）、单机数据库（SQLite、Access）、网络数据库（MySQL/MariaDB、Oracle、SQL Server）等等，根据项目需要进行选型。做Web一般采用开源并且免费的MySQL/MariaDB，本书也以MySQL为例。</p>
+<p>学校里应该学过SQL，如果没学过，请先自学《SQL 教程》<a href="http://www.w3school.com.cn/sql/" class="pcalibre calibre5 pcalibre2 pcalibre1">http://www.w3school.com.cn/sql/</a>。</p>
+<p>自学：1天。</p>
+<p>假设这个在线阅读项目叫做“reader”，需要一个“文章”表“articles”。建库建表代码如下：</p>
+<pre class="calibre11"><code>CREATE DATABASE `reader` DEFAULT CHARACTER SET utf8;
+USE `reader`;
+CREATE TABLE `articles` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `author` varchar(20) DEFAULT NULL,
+  `title` varchar(50) DEFAULT NULL,
+  `content` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;</code></pre>
+<p>然后修改<code class="pcalibre6 pcalibre5 calibre20">add_article_submit.php</code>，把文章保存到数据库中即可。代码如下：</p>
+<pre class="calibre11"><code>&lt;?php
+$input = $_POST;
+$dsn = &#39;mysql:host=127.0.0.1;port=3306;dbname=reader;charset=utf8&#39;;
+$user = &#39;root&#39;;
+$password = &#39;1&#39;;
+$db = new PDO($dsn, $user, $password); //连接数据库
+
+$sql = &#39;INSERT INTO `articles` (`author`, `title`, `content`) VALUES (&#39; . &#39;\&#39;&#39; . $input[&#39;author&#39;] . &#39;\&#39;,\&#39;&#39; . $input[&#39;title&#39;] . &#39;\&#39;,\&#39;&#39; . $input[&#39;content&#39;] . &#39;\&#39;);&#39;;
+
+$stmt = $db-&gt;query($sql); //执行SQL
+$id = $db-&gt;lastInsertId(); //获得自增id
+
+if (!empty($id)) {
+    $notice = &#39;保存成功&#39;;
+} else {
+    $notice = &#39;出错了&#39;;
+}
+$d = array();
+$d[&#39;notice&#39;] = array(
+    &#39;msg&#39; =&gt; $notice,
+);
+require_once __DIR__ . &#39;/notice.html&#39;;</code></pre>
+<p>然后首页<code class="pcalibre6 pcalibre5 calibre20">index.php</code>把这些文章查出来即可，代码如下：</p>
+<pre class="calibre11"><code>&lt;?php
+$dsn = &#39;mysql:host=127.0.0.1;port=3306;dbname=reader;charset=utf8&#39;;
+$user = &#39;root&#39;;
+$password = &#39;1&#39;;
+$db = new PDO($dsn, $user, $password);
+
+$sql = &#39;SELECT `id`, `author`, `title`, `content` FROM `articles` LIMIT 10&#39;;
+
+$stmt = $db-&gt;query($sql);
+$stmt-&gt;setFetchMode(PDO::FETCH_ASSOC);
+$articles = $stmt-&gt;fetchAll();
+
+$d = array();
+$d[&#39;articles&#39;] = $articles;
+require_once __DIR__ . &#39;/index.html&#39;;</code></pre>
+<p>然后单篇阅读页<code class="pcalibre6 pcalibre5 calibre20">get_article.php</code>，根据id，查出一篇即可，这样比查出来所有文章合理多了。代码如下：</p>
+<pre class="calibre11"><code>&lt;?php
+$input = $_GET;
+$d = array();
+if (!isset($input[&#39;id&#39;]) || empty($input[&#39;id&#39;])) {
+    $d[&#39;notice&#39;] = array(
+        &#39;msg&#39; =&gt; &#39;出错了：缺少参数&#39;,
+    );
+    require __DIR__ . &#39;/notice.html&#39;;
+    exit;
+}
+
+$dsn = &#39;mysql:host=127.0.0.1;port=3306;dbname=reader;charset=utf8&#39;;
+$user = &#39;root&#39;;
+$password = &#39;1&#39;;
+$db = new PDO($dsn, $user, $password);
+
+$sql = &#39;SELECT `author`, `title`, `content` FROM `articles` WHERE id=&#39; . $input[&#39;id&#39;] . &#39; LIMIT 1&#39;;
+
+$stmt = $db-&gt;query($sql);
+$stmt-&gt;setFetchMode(PDO::FETCH_ASSOC);
+$r = $stmt-&gt;fetchAll();
+
+if (empty($r)) {
+    $d[&#39;notice&#39;] = array(
+        &#39;msg&#39; =&gt; &#39;出错了：查无此文&#39;,
+    );
+    require __DIR__ . &#39;/notice.html&#39;;
+    exit;
+}
+
+$d = array();
+$d[&#39;article&#39;] = $r[0];
+require_once __DIR__ . &#39;/get_article.html&#39;;</code></pre>
+<p>代码下载：<a href="https://github.com/sinkcup/php-ebook-online-reader/tree/0.4.1" class="pcalibre calibre5 pcalibre2 pcalibre1">https://github.com/sinkcup/php-ebook-online-reader/tree/0.4.1</a></p>
+<p>现在可以发表、查看首页、单篇阅读，功能都实现了。</p>
+<h2 class="calibre9">总结一下</h2>
+<h3 class="calibre13">我的技术水平</h3>
+<table>
+<thead>
+<tr class="header">
+<th>HTML</th>
+<th>PHP</th>
+<th>数据存储</th>
+<th>HTTP协议</th>
+<th>程序员的自我修养</th>
+<th>装备</th>
+<th>等级</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>语义化</td>
+<td>让内容动起来</td>
+<td>单机文件</td>
+<td>GET、POST</td>
+<td></td>
+<td>PC + Windows</td>
+<td>0.2</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>表现与业务分离</td>
+<td></td>
+<td>charset</td>
+<td>Unicode</td>
+<td></td>
+<td>0.3</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>PDO</td>
+<td>MySQL</td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.4</td>
+</tr>
+</tbody>
+</table>
+<h3 class="calibre13">已解决的问题</h3>
+<ul>
+<li><p>如何用PHP操作MySQL数据库？</p>
+<p>使用PDO即可。</p></li>
+<li><p>PDO、php_mysqli和php_mysql的区别是什么？</p>
+<p>请自学了解。注意：php_mysql已废弃。</p></li>
+<li><p>【没钱，对现在的年轻人意味着什么？】</p>
+<p>luckystar神探：来，讲个故事。 从前有个骚年叫小明。不是姚小明，不是黄小明，也不是郭小明。就是一个普普通通的、扎人堆里找不出来的小明。 男，二十多岁，家境普通。口头禅是「还不是因为老子穷」。 高中时，和…… <a href="http://zhi.hu/1P8D" class="pcalibre calibre5 pcalibre2 pcalibre1">http://zhi.hu/1P8D</a>（分享自知乎）</p></li>
+</ul>
+<h3 class="calibre13">待解决的问题</h3>
+<ul>
+<li><p>访问index.php是正常网页，但访问index.html看到了什么？</p>
+<p>请进行实验。且听下回分解。</p></li>
+<li><p><code class="pcalibre6 pcalibre5 calibre20">index.php</code>、<code class="pcalibre6 pcalibre5 calibre20">get_article.php</code>等多个文件里都连了数据库，如果密码变了，每个地方都要改，怎么办？</p>
+<p>且听下回分解。</p></li>
+</ul>
+</div>
+</div>
+<p><span id="project_directory_structure_starter.html"></span></p>
+<div class="page">
+<h1 id="project_directory_structure_starter.html#calibre_toc_9" class="book-chapter">目录规划意识的觉醒</h1>
+<div id="project_directory_structure_starter.html#section-gitbook_6" class="normal">
+<h1 class="calibre2">目录规划意识的觉醒</h1>
+<h2 id="project_directory_structure_starter.html#indexphpindexhtml" class="calibre9">访问index.php是正常网页，但访问index.html看到了什么？</h2>
+<p>如上图所示，访问<code class="pcalibre6 pcalibre5 calibre20">index.html</code>会看到代码片段，而不是正常的网页，这会给用户带来困惑。所以应该只允许访问<code class="pcalibre6 pcalibre5 calibre20">index.php</code>、<code class="pcalibre6 pcalibre5 calibre20">add_article.html</code>、<code class="pcalibre6 pcalibre5 calibre20">get_article.php</code>等文件，其他文件一律禁止访问，比如<code class="pcalibre6 pcalibre5 calibre20">index.html</code>这种模板文件。</p>
+<p>如何禁止访问呢？</p>
+<p>把允许访问的文件放在一个目录，修改HTTP Server的根目录指向这里即可。</p>
+<p>本来项目里没有目录，所有文件都放在一起，是这样的：</p>
+<pre class="calibre11"><code>add_article_submit.php
+get_article.html
+get_article.php
+index.html
+index.php</code></pre>
+<p>改成下面的目录结构：</p>
+<pre class="calibre11"><code>htdocs/
+    add_article_submit.php
+    get_article.php
+    index.php
+res/
+    /layout/
+        get_article.html
+        index.html</code></pre>
+<p>然后找到nginx的配置文件，在这里：</p>
+<ul>
+<li><p>Windows：<code class="pcalibre6 pcalibre5 calibre20">C:\Wnmp\Conf\nginx.conf</code></p></li>
+<li><p>Linux： <code class="pcalibre6 pcalibre5 calibre20">/etc/nginx/sites-enabled/default</code></p></li>
+</ul>
+<p>修改其中的server-&gt;root，重启nginx即可。如图所示：</p>
+<p>目录变了，包含就变了，记得<code class="pcalibre6 pcalibre5 calibre20">index.php</code>等php文件中的代码要改。以前是：</p>
+<pre class="calibre11"><code>require_once __DIR__ . &#39;/index.html&#39;;</code></pre>
+<p>要改成：</p>
+<pre class="calibre11"><code>require_once __DIR__ . &#39;/../res/layout/index.html&#39;;</code></pre>
+<p>然后访问<code class="pcalibre6 pcalibre5 calibre20">index.html</code>会出现404错误，即“不存在”。而访问<code class="pcalibre6 pcalibre5 calibre20">index.php</code>是可以的，如图所示：</p>
+<h2 class="calibre9">多个文件里都连了数据库，如果密码变了，每个地方都要改，怎么办？</h2>
+<p>同一件事情，重复做很多次，浪费了时间，是编程的大忌，违反了DRY原则（don't repeat yourself）。使用配置文件即可解决此问题。</p>
+<p>配置文件用什么格式？打开PHP安装后的目录，会发现lib/php.ini文件，这是PHP的配置文件，由此可知PHP原生支持ini格式。本书也采用ini格式。配置文件当然也不应该让用户访问，所以单独建一个conf目录，现在项目目录结构如下：</p>
+<pre class="calibre11"><code>conf/
+    db.ini
+htdocs/
+    add_article.html
+    get_article.php
+    index.php
+res/
+    /layout/
+        get_article.html
+        index.html</code></pre>
+<p>db.ini的内容如下：</p>
+<pre class="calibre11"><code>host=&quot;127.0.0.1&quot;
+port=&quot;3306&quot;
+dbname=&quot;reader&quot;
+charset=&quot;utf8&quot;
+username=&quot;root&quot;
+password=&quot;1&quot;</code></pre>
+<p>然后每个php页面解析配置文件，连接数据库，执行SQL。代码如下：</p>
+<pre class="calibre11"><code>$conf = parse_ini_file(__DIR__ . &#39;/../conf/db.ini&#39;);
+$dsn = &#39;mysql:host=&#39; . $conf[&#39;host&#39;] . &#39;;port=&#39; . $conf[&#39;port&#39;] . &#39;;dbname=&#39; . $conf[&#39;dbname&#39;] . &#39;;charset=&#39; . $conf[&#39;charset&#39;];
+$db = new PDO($dsn, $conf[&#39;username&#39;], $conf[&#39;password&#39;]);</code></pre>
+<p>如图所示：</p>
+<p>可以看到，如果数据库地址、用户名、密码改了，只用改db.ini即可，很方便。</p>
+<p>代码下载：<a href="https://github.com/sinkcup/php-ebook-online-reader/tree/0.5.0" class="pcalibre calibre5 pcalibre2 pcalibre1">https://github.com/sinkcup/php-ebook-online-reader/tree/0.5.0</a></p>
+<h2 class="calibre9">总结一下</h2>
+<h3 class="calibre13">我的技术水平</h3>
+<table>
+<thead>
+<tr class="header">
+<th>HTML</th>
+<th>PHP</th>
+<th>数据存储</th>
+<th>HTTP协议</th>
+<th>程序员的自我修养</th>
+<th>装备</th>
+<th>等级</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>语义化</td>
+<td>让内容动起来</td>
+<td>单机文件</td>
+<td>GET、POST</td>
+<td></td>
+<td>PC + Windows</td>
+<td>0.2</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>表现与业务分离</td>
+<td></td>
+<td>charset</td>
+<td>Unicode</td>
+<td></td>
+<td>0.3</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>PDO</td>
+<td>MySQL</td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.4</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>目录规划</td>
+<td></td>
+<td></td>
+<td>DRY</td>
+<td></td>
+<td>0.5</td>
+</tr>
+</tbody>
+</table>
+<h3 class="calibre13">已解决的问题</h3>
+<ul>
+<li><p>访问index.php是正常网页，但访问index.html看到了什么？</p>
+<p>用户看到了代码片段，这是不对的，目录规划隔离即可。</p></li>
+<li><p>多个文件里都连了数据库，如果密码变了，每个地方都要改，怎么办？</p>
+<p>谨记DRY，使用ini配置文件。当然还可以使用PHP array、PHP object、JSON，请自行了解。</p></li>
+<li><p>【锤子手机 Smartisan T1 正式发售版的实际使用体验如何？】</p>
+<p>喻梦萱：谢邀。。。 11日早上收到的，优先码来源是自己购买的发布会门票。总体感觉是…美哭了…非常非常精致。… <a href="http://zhi.hu/5h2M" class="pcalibre calibre5 pcalibre2 pcalibre1">http://zhi.hu/5h2M</a>（分享自知乎）</p></li>
+</ul>
+<h3 class="calibre13">待解决的问题</h3>
+<ul>
+<li><p>单引号能保存吗？会导致什么后果？</p>
+<p>请按照截图进行实验。且听下回分解。</p></li>
+</ul>
+</div>
+</div>
+<p><span id="show_me_the_money.html"></span></p>
+<div class="page">
+<h1 id="show_me_the_money.html#calibre_toc_10" class="book-chapter">学会了本章，你的收入应达到</h1>
+<div id="show_me_the_money.html#section-gitbook_8" class="normal">
+<h1 class="calibre2">学会了本章，你的收入应达到</h1>
+<p>学会了本章，你的月薪应达到</p>
+</div>
+</div>
