@@ -1,0 +1,2 @@
++   [加密货币交易指南：初学者山寨币与比特币前 9：成为去中心化投资专家策略蓝图、密码学、区块链、DeFi、挖矿与以太坊。加密货币思维！](README.md)
++   [加密货币交易指南：初学者山寨币与比特币前 9：成为去中心化投资专家策略蓝图、密码学、区块链、DeFi、挖矿与以太坊。加密货币思维！](cryptocurrency-trading-guideto-altcoins-bitcoin-for-beginner_0.md)
