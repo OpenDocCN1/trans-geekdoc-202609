@@ -1,0 +1,2 @@
++   [比特币、区块链技术与加密货币初学者指南 (2合1)：去中心化加密货币世界详解以及 DeFi、NFT、山寨币和以太坊为何具有革命性](README.md)
++   [比特币、区块链技术与加密货币初学者指南 (2合1)：去中心化加密货币世界详解以及 DeFi、NFT、山寨币和以太坊为何具有革命性](bitcoin-blockchain-technology-cryptocurrency-for-beginners-2_0.md)

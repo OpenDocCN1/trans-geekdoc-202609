@@ -1,0 +1,5487 @@
+- pgno: 0
+  md: '# # MySQL & ORACLE IN PHPnPROGRAMMING
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_0_0.png)
+
+
+    KELVIN STRONG'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Overview
+
+
+    PHP is a programming language to develop dynamic pages for the world wide web.
+    HTML or hypertext markup language is the base for developing web pages but pages
+    created in HTML are static. PHP allows HTML pages to interact with a database
+    and do things like adding data or retrieving data from one.
+
+
+    In addition, PHP can be used to verify user input and provide protection to pages.
+    The prerequisite to understanding PHP is HTML. JavaScript allows dynamism on pages
+    however, JavaScript is not server based. It works within the client browser. PHP
+    on the other hand is server based. The fact is one needs HTML, JavaScript and
+    scripting language like PHP to complete a professional looking and working page.
+
+
+    This book is about PHP. One may want to consider my book on JavaScript if they
+    need a refresher on that subject.
+
+
+    The webpage for this book is located at: http://beamato.jitbooks
+
+
+    Before we start:
+
+
+    To run a PHP script which is a server based script one will need the following:
+
+
+    A note pad editor or similar to save files with the extention "php". and
+
+
+    A location to put the script when complete. This can be a hosted site of which
+    there are many (free or inexpensive hosting sites) that allow PHP scripts. On
+    a standalone computer it is possible to download a free PHP editor software. For
+    this book was developed using the EasyPHP editor (version 17) and server which
+    can be downloaded and installed for free at the time of writing this book. PHP
+    has different versions and the current version is 7. This book is written for
+    both version 5 and 7. There are some significant differences between these two
+    versions. However, many hosting sites are still using version 5 series.
+
+
+    The default database that is included in most hosting sites for PHP is MySQL and
+    the free editors such as the one mentioned above also come with such database.
+    In addition to this database book will explore connection to the Oracle database.
+    The Oracle database being used with this book is the stand alone windows version
+    11.2g Express version which can be downloaded for free at http://www.oracle.com.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# # Chapter 1. Introduction
+
+
+    The first program by an unwritten tradition in any language is "Hello World".
+    The way to do that in PHP is as follows:
+
+
+    Using notepad with a file extention ".php" create a file called (hello.php). Put
+    the following lines in that file.
+
+
+    ```
+
+    <?php
+
+    print "Hello World!!!";
+
+    ?>
+
+    ```
+
+
+    The print can also be replaced by the word echo.
+
+
+    Now if one wants to wrap this within HTML tags that is fine such as:
+
+
+    ```
+
+    <html>
+
+    <body>
+
+    <?php
+
+    print "Hello World!!!";
+
+    ?>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    The <? starts the PHP part of the code and ?> ends it. Both of them are mandatory.
+    If this code is put on a server that does not have PHP, every line of this code
+    will be visible to the user.
+
+
+    This is actually the first program in PHP in this book.
+
+
+    ```
+
+    <html>
+
+    <body>
+
+    <?php
+
+    phpinfo();
+
+    ?>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    The above code will give the PHP configuration information for the php installation
+    on the client''s PHP server.
+
+
+    All settings will be displayed starting with the version number. Free or inexpensive
+    hosting sites at the time of writing have version 5.4 or higher for PHP on their
+    servers. Backward compatibility is an important part of programming and even though
+    the current version of PHP is higher than this knowledge of features in the old
+    and new is very important.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'If the current version of PHP which is (7) is the sample output from phpinfo()
+    will be as follows:
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_3_0.png)
+
+
+    | Name | Value |
+
+    | --- | --- |
+
+    | System | Windows NT PC v6.2 build 8230 (Intel) Windows Business Edition KB663
+    |
+
+    | Date | 01 Jul-2012 14:29:22 UTC |
+
+    | Configure | -d |
+
+    | Architecture | x86 |
+
+    | Command Line | --with-config-file-path="C:\php" --enable-opcache --enable-mbstring
+    --enable-curl --enable-filter=gd --with-zlib --with-openssl --with-readline --with-readline
+    --with-iconv --enable-pcntl --enable-process-control --enable-shared-memory --enable-xml
+    --enable-xmlreader --with-libgd --with-libjpeg2 --with-libcurl --enable-fixed-strings
+    --with-libxml |
+
+    | PHP API | 2.0-Handler |
+
+    | Script API | C |
+
+    | Directory | C:\php |
+
+    | Upload max_filesize | 2M |
+
+    | Post max_size | 8M |
+
+    | Configuration File | C:\Program Files\PHP\PHP5.4.2\htroot\phpinfo.ini |
+
+    | Start Time | 01 Jul-2012 14:29:22 UTC |
+
+    | Server Software | Microsoft IIS |
+
+    | Server Version |  |
+
+    | PHP Version | 5.4.2 |
+
+    | Zend Engine | (with) Zend Engine v3.0.0, Copyright (c) 1999-2012, The Zend Group*
+    |
+
+    | Engine Type | NTS |
+
+    | Core | 5.4.2 (modified 01 Jul-2012 14:29:22 UTC) |
+
+    | Generator | PHP Support |
+
+    | Configuration File | C:\Program Files\PHP\PHP5.4.2\htroot\php.ini |
+
+    | Core Variables | |
+
+    | PHP SAPI | |
+
+    | Memory Limit | 128M |
+
+
+    It is advised to write code in small letters unless a function is specific about
+    letters. Keep in mind that the default setting of keyboards is small letters.
+    Hello.php file can be modified to print the same words "Hello World" in red and
+    in bold, italic and underlined. Note that all HTML code can be passed through
+    the PHP file:
+
+
+    ```
+
+    <html>
+
+    <body>
+
+    <php
+
+    print "<font color=red> <b><i><u>Hello World!</i></u></font>";
+
+    ?>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    Clarity of code can be enhanced by putting spaces between code lines or between
+    modules of similar code by function.
+
+
+    Comments can be added to scripts. There are two types of comments. For one single
+    line and the'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'other for multiple lines.
+
+
+    The one for single line is: //
+
+
+    The one for multiple line is: /* ...... * /
+
+
+    Always comment a code in which ever language the program is written.
+
+
+    # Variables:
+
+
+    Like any programming language PHP is not exempt from variables and like the other
+    languages variables are containers of data. Popular x, y and z taking on different
+    values is also available in PHP.
+
+
+    Variables are given reasonable names that identify what they stand for or what
+    is expected. No reserved words of PHP can be used as a variable.
+
+
+    Variable names are case sensitive. Following the $ sign which is required for
+    a variable name in PHP the name must begin with a letter (A-Z or a-z) or an underscore
+    (_). The name cannot start with a number. This rule is not new many languages
+    have this but the $ sign is a requirement is a must in PHP. No spaces are allowed
+    within the name except for the underscore.
+
+
+    There are four main categories of variables in PHP - numbers, strings, arrays
+    and objects.
+
+
+    # Number variables consist of the following:
+
+
+    Integer - 1,2,3, -1, -etc
+
+
+    Floating point - 1.0, -19.2 etc
+
+
+    Date types in PHP consist of numbers and strings are not specifically defined
+    as a variable type.
+
+
+    # Strings:
+
+
+    A variable is a string if it consists of characters enclosed within a pair of
+    either single or double quotation marks.
+
+
+    Example: "Hello World"
+
+
+    ```
+
+    "Hello, $name"
+
+    ```
+
+
+    ```
+
+    "1"
+
+    ```
+
+
+    ```
+
+    "21.07.17"
+
+    ```
+
+
+    ```
+
+    "2017"
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Arrays:
+
+
+    Arrays by definition store data in index format. The data is entered using keys
+    and retrieved using these keys. The arrays can be single or of multiple dimensions.
+
+
+    Example:
+
+
+    | John | Adam | Smith | Mary | Sally |
+
+
+    Where John is at index 0 and Adam at key 1 and so forth until Sally is at index
+    at 4. The size of this single dimension array is 5 (0-4).
+
+
+    The arrays that use their keys are called a indexed array. An array that uses
+    strings keys is called an associative array.
+
+
+    Arrays are an important part of any programming language.
+
+
+    # Object:
+
+
+    Objects are considered as an advanced feature. To define an object, its structure
+    called the class has to be defined. Then instances of that structure are created.
+
+
+    The concept of object oriented programming as seen in C++ or Java etc is an example
+    of this type of variable.
+
+
+    For example: if there is a variable called car then car, length is an example
+    of the feature of the car object.
+
+
+    Values are assigned to variables in PHP using the "=" assignment operator.
+
+
+    Example:
+
+
+    ```
+
+    $ x = 1.5;
+
+    ```
+
+
+    ```
+
+    $ y = "John";
+
+    ```
+
+
+    To print out the result we use the print function.
+
+
+    Example:
+
+
+    ```
+
+    print "The number is $x";
+
+    ```
+
+
+    Now let us create a PHP program that will print the name and address of a person
+    by the name John.
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_5_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '```
+
+    <html>
+
+    <head><title>Address</title></head>
+
+    <body>
+
+    <?php
+
+    $name = "John";
+
+    $street = "101, Orchard Lane";
+
+    $city="Columbia";
+
+    $state="SC";
+
+    $zip=29208;
+
+    print "The address of $name\n\nis:<br>$street <br><br>$city<br>$state- $zip";
+
+    ?>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    The result will be shown in the browser that is attached to the PHP editor that
+    is being used. In the case of this book, the EasyPHP (http://www.easyphp.org)
+    editor has been used and the output using that editor is as follows:'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'The address of John is:
+
+    101, Orchard Lane
+
+    Columbia
+
+    SC
+
+    29208
+
+
+    The location of the script will vary according to the editor. In EasyPHP editor
+    it is possible to run this script under the projects folder in the older versions
+    (12 through 14) or in the eds-www folder if in version 17.
+
+
+    If an error occurs and it will from time to time-- read the error message, go
+    back to the code written in notepad or editor or correct the code in and around
+    the line number given in the error message.
+
+
+    Single quotes mean the item within them should be taken literally. Double quotes
+    means that the values of the item within the quotes should be taken.
+
+
+    For example:
+
+
+    $name = ''John'' and $name = "John" will give the same result.
+
+
+    but
+
+
+    $name = "$firstname" and $name = "$firstname" will give two results.
+
+
+    Value of firstname= John and $firstname.
+
+
+    It is possible to assign to a variable the value of another variable as:
+
+
+    $name = $firstname;
+
+
+    It is best to use double quotes and that is what will be used throughout the rest
+    of this book. In addition to the print function there is another function called
+    echo() which will print results or messages to the screen.
+
+
+    If one is using the EasyPHP editor version (17) which has PHP 7 in it along with
+    PHP 5.6 the interface will look like this.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '![](img/d7e83bd680bb691d653bca3af472a71a_8_0.png)
+
+
+    The two options above are for starting the apache server. The settings icon under
+    HTTP server will allow one one to switch between PHP 5.6 and PHP 7.1.3 in this
+    case just by selecting the version from the drop menu and clicking restart.
+
+
+    At the time of writing this book most hosting websites - especially the low cost
+    and free ones still have PHP version 5 on their servers. This book will show the
+    output of both versions and highlight where there are significant changes in the
+    new version of PHP.
+
+
+    Unless otherwise stated the code seen in this book will work for both old and
+    new versions of PHP.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Chapter 2. HTML and PHP Form
+
+
+    HTML is required to put PHP to full use. PHP programs can have HTML within it
+    and HTML script can have PHP embedded in it.
+
+
+    The first script in this chapter will request the name and phone number of a person.
+    The form will have a box to enter the name and phone number and some radio buttons
+    to choose the title of the person''s name.
+
+
+    The way it works is like this:
+
+
+    An HTML form/page requests the user to input data. It requests the PHP script
+    on the server to process the data request which ultimately will be added to a
+    database.
+
+
+    HTML or a webpage has limited capability to interact with the server when it comes
+    to processing. It transfers this task using the <form action = </form> method.
+
+
+    Let us now write the HTML code for the HTML webpage.
+
+
+    ```
+
+    <html>
+
+    <head><title>Feedback form</title></head>
+
+    <body>
+
+    <form action="feedback.php">
+
+    Mr.<input type="radio" name="title" value="Mr."/>
+
+    Mrs.<input type="radio" name="title" value="Mrs."/>
+
+    <br>
+
+    Ms.<input type="radio" name="title" value="Ms."/>
+
+    <br>
+
+    <p>Please complete the feedback form</p>
+
+    <p>
+
+    Name: <input type="text" name="name" size="20">
+
+    <p>
+
+    Phone: <input type="text" name="name" size="20">
+
+    <p>
+
+    <input type="submit" name="submit" value="Send my
+
+    response" />
+
+    </form>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    The output of this HTML file is as follows: Please note that the feedback.html
+    file and its associated feedback.php file is kept in the same location. However,
+    this is not a requirement. The files are in separate folders path to the PHP file
+    must be included in the <form action > statement.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: 'The feedback html file has three parts- selection of title, name and phone.
+    The <form action> statement that this file will connect to a script file for further
+    processing. The <form action> is closed by a </form> Now that this html file is
+    transferring data to a PHP file- the PHP file must be able to capture the data
+    being transferred.
+
+
+    Observe the <form action> statement, it is missing a method. There are two methods-
+    get and post. What is the difference between the two methods?
+
+
+    The GET method sends all the data gathered as a part of the URL. The POST method
+    transmits the data invisibly. Thus choosing GET method might make some vital information
+    visible when the submit button is clicked. There is also a limitation on the amount
+    of data that can be sent with GET.
+
+
+    The method of transfer from the feedback.html file will be POST. The following
+    change must be made to the feedback.html code in the previous page.
+
+
+    <form action="feedback.php" method="post">
+
+
+    The following is the code for the feedback.php file:
+
+    ```php
+
+    $title=$_POST[''title''];
+
+    $name=$_POST[''name''];
+
+    $phone=$_POST[''phone''];
+
+    print("Thank you,$title$name for your feedback.");\nprint("<p> Your phonumber,$phone
+    has been added to our database.");
+
+    ?>
+
+    ```
+
+
+    Note that in the feedback.php file above there should be receiving variables to
+    take on the data that are being sent from the feedback.html file.
+
+
+    In the case above the variable names are the same as that of the data being received
+    but this is not
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_10_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: 'a requirement. The names of the fields could x, y or z.
+
+
+    Note that feedback.php has no HTML code. This code can be modified as follows
+    to include HTML code.
+
+
+    ```
+
+    <html>
+
+    <head><title>Feedback</title></head>
+
+    <body>
+
+    <?php
+
+    $title=$_POST[''title''];
+
+    $name=$_POST[''name''];
+
+    print("<p> Your $title
+
+    ```
+
+
+    More advanced HTML can be used to create response page that is more appealing.
+    But our emphasis here is on the PHP code.
+
+
+    Note that HTML code can be included within the print function and in advanced
+    PHP scripts HTML is usually used dynamically.
+
+
+    The output from the feedback.php file is as follows:'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: 'Thank you, Mr. John West for your feedback. 201-5555 has been added to our
+    database.
+
+
+    If the method is used in the feedback.html file then be used to transfer data
+    to the feedback.php form then to retrieve the data $_GET[fieldname] method should
+    be used. Older versions of PHP such as those before version 4.1 used to use $_HTTP_POST_VARS
+    and $_HTTP_GET_VARS.
+
+
+    Let us look at another HTML file. This HTML page will request the price, quantity,
+    discount and unfortunately of the three different items of a supplier. Let us
+    call these different items as widget1, widget2 and widget3. The HTML code looks
+    as follows:
+
+
+    ```
+
+    <html>
+
+    <head>
+
+    <title>Price Checker</title>
+
+    </head>
+
+    <body>
+
+    <form action="price.php" method="post">
+
+    Widget1:<input type="radio" name="item" value="widget1"/>
+
+    Widget2:<input type="radio" name="item" value="widget2/>
+
+    Widget3:<input type="radio" name="item" value="widget3/>
+
+    <p>Quantity:<input type="text" name="price" size="20"></p>
+
+    <p>Discount:<input type="text" name="discount" size="20"></p>
+
+    <p>Tax:<input type="text" name="tax" size="20"></p>
+
+    <input type="submit" name="submit" value="Send my response />
+
+    </form>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    The associated php file called price.php is as follows:
+
+
+    ```
+
+    <?php
+
+    $item=$_POST[''item''];
+
+    $quantity=$_POST[''quantity''];
+
+    $price=$_POST[''price''];
+
+    $discount=$_POST[''discount''];
+
+    $tax=$_POST[''tax''];
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '```
+
+    $Tax = ($Tax/100);
+
+    $taxrate=1+$tax;
+
+    $total = ($Quantity * $price)-$discount;
+
+    $final=$total*$taxrate;
+
+    print("<p>You have chosen item</p>");
+
+    print("<p>The quantity ordered is $quantity, at $price.</p>");
+
+    print("<p>The discount is $discount.</p>");
+
+    print("<p>The tax is $tax.</p>");
+
+    print("<p>The final cost is $final</p>");
+
+    print("<p>Thank you.</p>");
+
+    ```
+
+
+    The resulting pages look as follows:
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_13_0.png)
+
+
+    The above is the price.html page. The values entered are widget1 at quantity 10
+    and a price of $20 with no discount and tax at 5%.
+
+
+    Here the 5 is divided by 100 and then 1 is added to get the tax rate. The total
+    is calculated by multiply quantity with price and subtracting the discount. In
+    this case the discount is 0.
+
+
+    Final cost is calculated by multiplying the tax rate and total cost above. The
+    output of the price.php file is as follows:'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '![](img/d7e83bd680bb691d653bca3af472a71a_14_0.png)
+
+
+    In the example above we have seen the use of numbers in a PHP program and the
+    mathematical operations on them. The example above also illustrated the use of
+    brackets to take into account the mathematical precedence order.
+
+
+    Numbers can be formatted using many number functions in PHP. Some of the most
+    used number functions are:
+
+
+    +   - round() -
+
+
+    +   - Example:
+
+
+    +   - round(4,5) = 4
+
+
+    +   - round(4.567,2) = 4.57 means rounding to two places after decimal
+
+
+    +   - $x = 200.152
+
+
+    +   - round($x,2); (will give 200.15)
+
+
+    +   - number_format() -
+
+
+    +   - Example:
+
+
+    +   - number_format(400.43567,2) = 400.44
+
+
+    +   - number_format(450,2) = 450.00
+
+
+    +   - number_format(567890321) = 567,890,321
+
+
+    This last example cannot be done by round().
+
+
+    +   - rand() -
+
+
+    +   - Example:'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '$x = rand(); will give a random number
+
+
+    if there is a preference for a range of random numbers then:
+
+
+    $x = rand(0, 1000) will give numbers within the 0 to 1000 range.
+
+
+    The rand() function works in version of PHP which are 4.2 or higher. Older version
+    than 4.2 had srand() function instead.
+
+
+    getrandmax()
+
+
+    will get the largest random number that can be created using rand().
+
+
+    ciel()
+
+
+    This function is part of the rand() function and rounds every number to the next
+    highest integer.
+
+    (PHP 5)
+
+
+    floor()
+
+
+    This function rounds every number to the next lowest integer.
+
+
+    abs()
+
+
+    Example:
+
+
+    $x = abs(-25); will give 25
+
+
+    $x = abs(25); will give 25
+
+
+    PHP supports trigonometry, exponent, base conversion and logarithmic functions.
+
+
+    Let us modify our feedback form that we used earlier in this chapter. This time
+    we are going to
+
+    a a first name and last name box in addition to the rest.
+
+
+    The code for this is follows:
+
+
+    ```
+
+    <html>
+
+    <head><title>Feedback form</title></head>
+
+    <body>
+
+    <form action="feedback.php" method="post">
+
+    Mr.<input type="radio" name="title" value="Mr."/>
+
+    Mrs.<input type="radio" name="title" value="Mrs."/>
+
+    Ms.<input type="radio" name="title" value="Ms."/>
+
+    <br>
+
+    <p>Please complete the feedback form</p>
+
+    <p>First Name: <input type="text" name="firstname"
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '```
+
+    size="20">
+
+    <p> Last Name:<input type="text" name="lastname"
+
+    size="20">
+
+    <p>Phone:<input type="text" name="phone" size="20">
+
+    <p>
+
+    <input type="submit" name="submit" value="Send my response"/>
+
+    </form>
+
+    <body>
+
+    </html>
+
+    ```
+
+
+    Notice the title of the form remains as feedback. The only differences are:
+
+
+    +   1. Addition of last name and first name text boxes.
+
+    2. The name value for each of the name boxes have been changed. These name values
+    will transferred in the post method to the PHP file.
+
+
+    The feedback webpage will look like this:
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_16_0.png)
+
+
+    Now let us modify the feedback.php form to match the webpage above. The code will
+    look like this.
+
+
+    ```
+
+    <?php
+
+    $title=\$_POST[''title''];
+
+    $firstname=\$_POST[''firstname''];
+
+    $lastname=\$_POST[''lastname''];
+
+    $phone=\$_POST[''phone''];
+
+    print"Thank you,$title $firstname Lastname for your
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: 'feedback";
+
+    print\<p> Your phonumber,$phone has been added to our database;\n?>
+
+
+    The code is not much different than the original feedback.php file. We have two
+    names first and last name and in the first print function we put $firstname $lastname.
+    If a dot is required between names dot can be put in formatting reasons.
+
+
+    We want a full name we put to add together the first and last name. PHP does allow
+    the same effect without using the usual dot between two string variables. This
+    is because of the way PHP deals with variables.
+
+
+    The result of the code above when using the new feedback.html web page is as follows.
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_17_0.png)
+
+
+    In PHP there is a term known as magic quotes. If it is turned on in the settings-(check
+    phpinfo() as shown earlier) these magic quotes will automatically escape problematic
+    characters. This means that single and double quotation marks in strings are preceded
+    by a backslash.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: 'The three types of magic quotes are:
+
+
+    GPC magic quotes that affect data transmitted via the get or post method and data
+    stored in cookies.
+
+
+    Runtime magic quotes that affect data retrieved from databases and command line
+    actions.
+
+
+    Sybase magic quotes are a special type and are less of an issue.
+
+
+    The default setting is to have magic quotes off. To resolve this, use the following
+    function:
+
+
+    stripslashes() in the following manner:
+
+
+    ```
+
+    $string = stripslashes($string);
+
+    ```
+
+
+    In the feedback.php file above this could be used as follows:
+
+
+    ```
+
+    $firstname = $_POST[''firstname''];
+
+    $firstname = stripslashes($firstname);
+
+    ```
+
+
+    Using this function without knowing the settings will not affect the PHP script.
+
+
+    Some of the functions that may be useful are follows:
+
+
+    urlencode() -
+
+
+    Example:
+
+
+    ```
+
+    $string = urlencode($string);
+
+    ```
+
+
+    Used to encode a string before passing it in a get or post method to a PHP file.
+
+
+    urldecode() -
+
+
+    Used to decode an encoded string passed.
+
+
+    str_replace() -
+
+
+    Parts of a string can be replaced. This is similar to substrings.
+
+
+    Example:
+
+
+    ```
+
+    $name = str_replace($x, $y, $sz);
+
+    ```
+
+
+    If
+
+
+    ```
+
+    $x = "E.";
+
+    ```
+
+
+    ```
+
+    $y = "Edward";
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '$z=" John E. Smith";
+
+
+    Then the "E." will be replaced by the word Edward in the original name of John
+    E.Smith.
+
+
+    The new name will be John Edward Smith.
+
+
+    The function can be used to catch those words in a response or feedback form that
+    might be considered offensive.
+
+
+    strlen() -
+
+
+    This returns the number of characters in a string. This will include punctuation
+    and spaces.
+
+
+    str_replace() -
+
+
+    This is the same as the str_replace except that it is a case sensitive version
+    of the same.
+
+
+    str_word_count() -
+
+
+    This returns the number of words in a given string using space as a delimiter.
+    Note that this function is available in PHP version 4.3 and higher only.
+
+
+    strstr() -
+
+
+    This searches a string for the first occurrence of the search pattern given to
+    the function.
+
+
+    strpos() -
+
+
+    This searches a string and returns the numeric position of the search pattern
+    given to the function.
+
+
+    strcmp() -
+
+
+    This is used to compare two strings by returning a whole number.
+
+
+    strnatcmmp() -
+
+
+    This is similar to strcmp() but considered to be more precise linguistically.
+
+
+    strcasecmp() and strnatcasecmp() -
+
+
+    These are case insensitive companions of strcmp() and strnatcmmp().
+
+
+    trim() -
+
+
+    Example:'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '```
+
+    $firstname=trim(\$_POST[''firstname'']); It is usually set when the register_globals
+    setting is set to off. Check phpinfo() settings as shown earlier.
+
+    ```
+
+
+    But using this function when not knowing the settings will not hurt the PHP script.
+
+    trim() function can be further divided into two functions - rtrim() which removes
+    spaces found at the end of a string variable and ltrim() which handles spaces
+    at the beginning the string variable.
+
+    This is used to remove spaces before and after the text.
+
+
+    # ucfirst() -
+
+
+    Makes first letter of the string capital.
+
+
+    # ucwords() -
+
+
+    Makes the first letter of words in a string capital.
+
+
+    # strtoupper() -
+
+
+    Makes an entire string uppercase.
+
+
+    # strtolower() -
+
+
+    Makes an entire string to lowercase.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: "# Chapter 3. Control & Loops\n\nIn every programming language there is a control\
+    \ and loop structure. The IF statement is the most common one.\n\nThe basic structure\
+    \ of an IF statement in PHP is as follows:\n\n```\nif (condition)\n{\n    statement(s);\n\
+    }\n```\n\nThe IF condition can be further enhanced by the use of the else in the\
+    \ following manner.\n\n```\nif (condition)\n{\n    statement(s);\n} else {\n \
+    \   other statement(s);\n}\n```\n\nLet us look at an example. The HTML file for\
+    \ the user login page is as follows.\n\n```\n<html>\n<head>\n<title>User Login\
+    \ Form</title></head>\n<body>\n<form action=\"login.php\" method=\"post\">\n<p>\n\
+    Please login, </p>\n<p> Username: <input type=\"text\" name=\"username\" size=\"\
+    20\">\\p>\n<p> Password: <input type=\"password\" name=\"password\" size=\"20\"\
+    >\\p>\n<p>\n<input type=\"submit\" name=\"submit\" value=\"Send my details\"\\\
+    </p>\n</form>\n</body></html>\n```\n\nIn the code above, a user has to enter his/her\
+    \ username and associated password. The password is kept hidden. The HTML file\
+    \ above will call upon a PHP file by the name user login. The name of the HTML\
+    \ file is login.html. The page will look like this."
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: "![](img/d7e83bd680bb691d653bca3af472a71a_22_0.png)\n\nPlease complete the feedback\
+    \ form\n\nUsername: administrator\n\nPassword: ************\n\nSend my details\n\
+    \nNow let us assume the username should not be less than ten (10) characters and\
+    \ the password also should not be less than ten (10) characters. Further, let\
+    \ the password for administrator username be administrator.\n\nThe logic behind\
+    \ this code will be as follows:\n\n+   1. User types in administrator for username.\n\
+    2. User types in administrator for password.\n3. If username and password length\
+    \ is greater than 10 then the code will check if the username and password matches.\n\
+    4. The code accepts inputs and thanks the user.\n\n+   5. If the username and\
+    \ password do not match then a message stating login is a failure is shown.\n\n\
+    A point to note is that the password is hardcoded. In real life the username and\
+    \ password will be stored in a database.\nThe PHP code for login.php is below.\n\
+    \n```\n<?php\n$username=$_POST['username'];\n$password=$_POST['password'];\n$x\
+    \ = strlen($username);\n$y = strlen($password);\nif (($x < 10) || ($y < 10)) {\n\
+    \  print(\"The username/password entered is incorrect\";\n} else {\n  if (($username==\"\
+    administrator\") && ($password\n```"
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: "```\n===\"administrator\")\n{\n    print(\"Thank you for logging in, \\$username.\"\
+    );\n} else {\n    print(\"Wrong username or password\");\n}\n?>\n```\n\nIn the\
+    \ code above the lines:\n\n$sx = strlen($username);\n$sy = strlen($password);\n\
+    if ($sx < 10) || ($sy < 10))\n\nchecks to see the length of the string is 10 or\
+    \ more. If the username and password is wrong.\nThe else statement goes to check\
+    \ the password and username values if the length of both of them are correct.\n\
+    \nThe second statement writes a message that the username or password is wrong\
+    \ if the values of the two variables do not match the hard coded combination.\n\
+    \nIF statements can be nested just like else statements. The example above illustrates\
+    \ the ability to control the flow of logic in a PHP code.\n\nIt is similar to\
+    \ the many well known languages such as C++, Java etc.\nThe previous example also\
+    \ shows in commercial terms that the username and password values have to come\
+    \ from a stored location such as a database.\n\nThe && & || are known as comparison\
+    \ operators. The \"===\" is also a comparison operator. It is not the same as\
+    \ \"==\" which assigns a value to a variable.\n\nThe comparison operators in PHP\
+    \ are:\n\n| Operator | Usage |\n|---|---|\n| == | Equality |\n| != | Inequality\
+    \ |\n| < | Less than |\n| > | Greater than |\n| <= | Less than or equal to |\n\
+    | >= | Greater than or equal to |\n| ! | Negation |"
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '| And | And |
+
+    |---|---|
+
+    |&& | And |
+
+    |Or | Or |
+
+    ||| | Or |
+
+    |XOR | Or not |
+
+
+    When using comparison operators, the brackets are very important. The simple rule
+    in programming is if one opens a bracket make sure to close it however lower in
+    the code that may be.
+
+
+    PHP has itself control structure also. This should not be confused with the following
+    in the above code:
+
+
+    The choice of just writing statements or with an else statement in the above case
+    depends on the programmer. Most students learning programming first time are comfortable
+    with just if statements.
+
+
+    The above code can be rewritten with the itself control structure.
+
+
+    ```
+
+    <?php
+
+    $username=$_POST[''username''];
+
+    $password=$_POST[''password''];
+
+    $x = strlen($username);
+
+    $y = strlen($password);
+
+
+    if (($x < 10) || ($y < 10))
+
+    {
+
+    print "The username/password entered is incorrect";
+
+    } else(($Username=="administrator") && ($Password=="administrator"))
+
+    {
+
+    print "Thank you for logging in, $username."
+
+    }
+
+    else {
+
+    print "Wrong username or password";
+
+    }
+
+    ?>
+
+    ```
+
+
+    Like the IF statement, the switch condition is an example of a control structure.
+    The switch condition takes only one possible condition, which is the value of
+    a variable. For example:'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: "```\nswitch ($variable) {\n    case \"value1\":\n        statement(s);\n  \
+    \      break;\n    case \"value2\":\n        statement(s);\n        break;\n \
+    \   case \"value3\":\n        statement(s);\n        break;\n}\n```\n\nThis is\
+    \ the same as saying if the value is value 1 in that case do the statements follow\
+    \ the \":\" if not the value is value 2 do the statements after that \":\" etc.\
+    \ The break tells PHP to exit finding the correct match.\n\nLook at the following\
+    \ PHP code.\n\n```\n<php\n$x = $_POST['choice'];\nswitch($x){\n    case 1:\n \
+    \       if ($x==1){\n            print \"You have chosen item 1.\";\n        }\n\
+    \        break;\n    case 2:\n        if ($x==2){\n            print \"You have\
+    \ chosen item 2.\";\n        }\n        break;\n}\nprint \"You have not chosen\
+    \ anything!\";\n?>\n```\n\nIn the code above a switch is used instead of an if\
+    \ statement to select one of two items. The items will be selected from an HTML\
+    \ page similar to the one below.\n\n```\n<html>\n<head><title>Switch</title></head>\n\
+    <body>\n<form action=\"switch.php\" method=\"post\">\n<p>Please complete the feedback\
+    \ form</p>\n<p>Your choice:\\p>\n<select name=\"choice\">\n<option value=\"1\"\
+    >Item 1</option>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '```
+
+    <option value="2">Item 2</option>
+
+    <p>
+
+    <input type="submit" name="submit" value="Send the choice">
+
+    </form>
+
+    <body>
+
+    </html>
+
+    ```
+
+
+    The above HTML page will give a drop down selection option called choice. Choice
+    will have two options. Item 1 and Item 2. A more descriptive name or option can
+    be given in a more elaborate example.
+
+
+    For now, the web page will allow the user to select one of two chooses and click
+    the submit button.
+
+
+    The switch.php file will be called by the action statement in the HTML page and
+    the PHP file will take the value of choice supplied and choose between item 1
+    and item 2 to display.
+
+
+    Notice that in the HTML file for each option is given in the option statement.
+    It is this value is being sent as a choice to the PHP file.
+
+
+    The selection option in HTML is very handy. However, its limitation is that an
+    extensive list of options might be annoying when displayed on the web browser
+    screen.
+
+
+    A loop in PHP repeats a certain set of statements until the condition is not true
+    anymore. The for loop is an example of a looping control structure in PHP. The
+    structure of a for loop is as follows:
+
+
+    ```
+
+    for ($x=1; $x<=10; $x++) {
+
+    print $x;
+
+    }
+
+    ```
+
+
+    Here in the loop there is a initial point which is $x=1 and a condition that is
+    $x<=10 (less than 10). If the condition is met, increment by 1 the value of x
+    and print the value of x each time.
+
+
+    Thus the numbers will go from 1 through 10 inclusive.
+
+
+    The while loop is designed to work as long as the condition is true. The condition
+    is checked in every iteration just like the for loop.
+
+
+    In a do...while loop the loop statements are executed at least one time.
+
+
+    Let us look at some PHP scripts that use the above loops.
+
+
+    ```
+
+    <?php
+
+    for($x=0;$x<=10;$x++++)
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '```
+
+    print "$x<br>";
+
+    ?
+
+    ```
+
+
+    In this code the value of $x could be obtained from a form if an an associated
+    web page was made.
+
+
+    The output of this with with <br> or break in place is as follows.
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_27_0.png)
+
+
+    If we make a webpage for the above PHP script, the code could look like the one
+    in the table below.
+
+
+    The PHP script will be modified in the table that follows the one below to accept
+    the incoming values for x and then to print the values.
+
+
+    The example here shows steps 2 instead of 1.
+
+
+    The variable names used in the PHP file could have been descriptive so keep in
+    this mind choosing variable names.
+
+
+    We have three variables here and they are: xmin, xmax and xstep.
+
+
+    ```
+
+    <html>
+
+    <head><title>loop form</title></head>
+
+    <body>
+
+    <form action="loop.php" method="post">
+
+    <p> Value for X starting point: <input type="text"\ name="xmin" size="20">
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: "```\n<p> Value for maximum value of X:<input type=\"text\" name=\"xmax\" size=\"\
+    20\">\n<p>Increment step for each value of X:<input type=\"text\" name=\"xstep\"\
+    \ size=\"20\">\n<p>\n<input type=\"submit\" name=\"submit\">\n</form>\n<body>\n\
+    </html>\n```\n\nThe PHP code is as follows:\n\n```\n<?php\n$x = $_POST['xmin'];\n\
+    $y = $_POST['xmax'];\n$z = $_POST['xstep'];\nfor($x=$x; $x<$y; $x=$x+$z) {\n \
+    \   print \"$x<br>\";\n}\n?>\n```\n\nThe webpage will look as follows:\n\n![](img/d7e83bd680bb691d653bca3af472a71a_28_0.png)\n\
+    \nThe following PHP code demonstrates the loop.\n\n```\n<?php\n$x=0;\nwhile ($x<10)\
+    \ {\n    $x=$x+1;\n    print \"$x\";\n}\n?>\n```\n\nThe while loop has the initial\
+    \ point outside the while loop and the increment steps within its"
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: 'statement body.
+
+
+    The loop continues until condition is not true. The output of this 1...10.
+
+
+    The following code demonstrates the do...while loop.
+
+
+    ```
+
+    <?php
+
+    $x=0;
+
+    do
+
+    |
+
+    $x=$x+1;
+
+    print("$x");
+
+    }while ($x<10);
+
+    ?>
+
+    ```
+
+
+    The output will be the same as the while loop. 1...10.
+
+
+    In addition to the break statement in PHP there is an Exit and die statement.
+    The break statement was seen in the switch.
+
+
+    Instead of exiting the current structure, the Exit and die language constructs
+    terminate the execution of the PHP script.
+
+
+    All PHP code after the instance of either Exit or die will never be executed.
+    HTML code after the use of these two constructs will not be sent to the web browser.
+
+
+    The die construct will be used frequently in code that accesses files and databases.
+    Exit is used often with the header() function.'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# Chapter 4. Arrays
+
+
+    An Array was mentioned as a variable type in the beginning of the book. An array
+    can consist of numbers and strings. The array is given a name similar to a variable
+    and the it has the ability to hold more than one value.
+
+
+    Example: An array can be made to include a list of cars as shown below.
+
+
+    ```
+
+    $car1 = ''Toyota'';
+
+    ```
+
+
+    ```
+
+    $car2 = ''GM'';
+
+    ```
+
+
+    ```
+
+    $car3 = ''Ford'';
+
+    ```
+
+
+    ```
+
+    $car4 = ''Nissan'';
+
+    ```
+
+
+    Array variable naming is as follows:
+
+
+    +   1. Start with a $ sign.
+
+
+    +   2. Continue with a letter or underscore.
+
+
+    +   3. Finish with any combination of letters or numbers or the underscore.
+
+
+    An array variable has an index starts. An array stands out from other variables
+    with the presence of the [brackets]. Thus, $car[] is an array variable.
+
+
+    The $car[3] stands for a specific element of the array at index position 3.
+
+
+    To create an array in PHP using the cars example as follows:
+
+
+    ```
+
+    $car = array(''Toyota'', ''GM'', ''Ford'', ''Nissan'');
+
+    ```
+
+
+    The indexes are automatically assigned by PHP server. Here the model Toyota is
+    indexed at 0. Array indexation automatically starts with 0. This can be changed
+    if needed.
+
+
+    In the car example, we can specifically put the model Toyota at index position
+    1 by doing the following.
+
+
+    ```
+
+    $car =array(1=>''Toyota'', 2=>''GM'', 3=>''Ford'', 4=>''Nissan'');
+
+    ```
+
+
+    For most purposes leaving the PHP server to index the values in the default manner
+    will sufficient.
+
+
+    ```
+
+    <?php
+
+    print("This script will print an array of cars");
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '```
+
+    $car = array (''Toyota'', ''GM'', ''Ford'', ''Nissan'');
+
+    print "$car<p>";
+
+    print_r($car);
+
+    ?>
+
+    ```
+
+
+    The output from running this code will be as follows:
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_31_0.png)
+
+
+    The output above tells the following:
+
+
+    +   1. Array values cannot be printed using the print function used in the previous
+    chapters.
+
+    2. Array values can be printed using the print_r() function instead.
+
+    3. When using the print_r() function the array prints out with its index position
+    shown in number format.
+
+
+    There is no requirement that index positions should be numbers. Words can be used.
+    Let us modify the above PHP code to illustrate this:
+
+
+    ```
+
+    <?php
+
+    print"This script will print an array of cars";
+
+    $car = array (''Yaris''=>''Toyota'', ''Spark''=>''GM'',
+
+    ''Escort''=>''Ford'', ''Pathfinder''=>''Nissan''); print_r($car); ?>
+
+    ```
+
+
+    The output of this code will be:
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_31_1.png)
+
+
+    The output is more descriptive as the models are attached to the various car companies
+    in this output. In the default setting for an array the elements of the array
+    are referred to by the index number as follows: $car[2].
+
+
+    The range()function can be used to create an array of items based on a range of
+    values. For example:
+
+
+    ```
+
+    $num = range(1,20);
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '$Alp = range(''a'', ''Y'');
+
+
+    The range function will allow for steps such as:
+
+
+    $sum = range(10,20,2);
+
+
+    The var_dump() function when used with an array the values and structure of the
+    array is shown. Let us look at a code that will demonstrate these two functions
+    next.
+
+
+    ```
+
+    <?php
+
+    print("This script will print an array of cars;");
+
+    $car = array(Yaris=>''Toyota'', ''Spark''=>''GM'',
+
+    ''Escort''=>''Ford'', ''Pathfinder''=>''Nissan'');
+
+    var_dump($car);
+
+    print(''<br>'');
+
+    $sum=range(10,20,2);
+
+    print(''<br>'');
+
+    $Alp=range(''a'',''Z'');
+
+    print_r($sum);
+
+    print(''<br>'');
+
+    print_r($Alp);
+
+    ?>
+
+    ```
+
+
+    The output will be as follows:
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_32_0.png)
+
+
+    An array whose keys are called an indexed array and those with keys that strings
+    is called associative array. These two types have been illustrated in the examples
+    above.
+
+
+    It is possible to add more elements to an array. In the above examples the car
+    array was used. Once an array is defined in PHP it is possible to add more elements
+    by using the equal to sign and the name of the array with the [brackets].
+
+
+    Example:
+
+
+    $car[]=''Mazda'';
+
+
+    $car[]=''Hyundai'';
+
+
+    If a key is not specified in the brackets, then each new entry or element of the
+    array will be appended to the existing list. If a key is mentioned in the brackets
+    any value at that key index'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: 'will be removed and the new element added to that location.
+
+
+    ```
+
+    <?php
+
+    print("This script will print an array of cars";
+
+    $Car = array(''Toyota'', ''GM'', ''Ford'', ''Nissan'');
+
+    $Car[1] = ''Mazda'';
+
+    $Car[3] = ''Hyundai'';
+
+    print_r($Car);
+
+    ?>
+
+    ```
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_33_0.png)
+
+
+    The output will add the new companies to end of the list as shown above. Let us
+    modify the above script as follows.
+
+
+    ```
+
+    <?php
+
+    print("This script will print an array of cars";
+
+    $Car = array(''Toyota'', ''GM'', ''Ford'', ''Nissan'');
+
+    $num1 = count($Car);
+
+    print("The original array has " . $num1 . "<p>");
+
+    $Car[1] = ''Mazda'';
+
+    $Car[3] = ''Hyundai'';
+
+    print_r($Car);
+
+    $num2 = count($Car);
+
+    print("<p>The new array has " . $num2 . "<br>");
+
+    ?>
+
+    ```
+
+
+    The output of the code is as follows.
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_33_1.png)
+
+
+    The additional function in the above code is count() which is used to count the
+    number of elements in the $Car[] array.
+
+
+    To delete an individual element from an array use the unset() function.
+
+
+    For example:
+
+
+    ```
+
+    unset($Car[4]);
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '```
+
+    unset($xyz[''name'']);
+
+    ```
+
+
+    Applied to the entire array the whole array will be deleted. To reset an array-
+    that is to empty it without deleting the array variable altogether use the array()
+    function.
+
+
+    For example:
+
+
+    ```
+
+    $car =array();
+
+    Let look at the following code.
+
+    ```
+
+
+    ```
+
+    <?php
+
+    print"This script will print an array of cars";
+
+    $car = array(''Toyota'', ''GM'', ''Ford'', ''Nissan'');
+
+    unset($car[2]);
+
+    print_r($car);
+
+    ?>
+
+    ```
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_34_0.png)
+
+
+    The value at index value 2 is now deleted.
+
+
+    PHP has a function to merge two arrays. The function array_merge($array1,$array2)
+    can be used for this purpose. The names of the two arrays have to be entered into
+    the brackets of the function.
+
+
+    For Example:
+
+
+    $car1[]=''Toyota'',''GM'',''Ford'';
+
+    $car2[]=''Nissan'',''Mazda'',''VW'',''Hyundai'';
+
+
+    Writing the code in this following manner will merge the two arrays.
+
+
+    ```
+
+    <?php
+
+    print"This script will print an array of cars";
+
+    $car1[]=''Toyota'',''GM'',''Ford'';
+
+    $car2[]=''Nissan'',''Mazda'',''VW'',''Hyundai'';
+
+    $car3=array_merge($car1,$car2);
+
+    print_r($car3);
+
+    ?>
+
+    ```
+
+
+    The above merge of two arrays can also be achieved by writing as follows.'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '$car3 = $car1 + $car2;
+
+
+    There is only one way to retrieve an array element that is by indicating the key
+    index value. If all elements of an array has to be printed a loop will be needed.
+
+
+    For example:
+
+
+    ```
+
+    <?php
+
+    $salary = array (''Adam''=>1000, ''Smith''=>2000, ''Mary''=>=
+
+    2500, ''Sally''=>1800);
+
+    print("The original array looks like this. <br>");
+
+    foreach($salary as $emp => $amount){
+
+    print("$emp:$amount<br>");
+
+    }
+
+    ?>
+
+    ```
+
+
+    The output for this code will look like this.
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_35_0.png)
+
+
+    The loop is a special version of for. Notice in this example the key is a word
+    and the value is a number unlike the earlier example of car models where both
+    key and value were text.
+
+
+    If the output expected the values of the array and not the index or key along
+    with it then the above code can be modified as in the table below.
+
+
+    The difference is in the foreach loop where the index reference is dropped and
+    the value is mentioned.
+
+
+    The print is only of the array and not the index value. Note if the array has
+    no shown index such as $name = array (''Tom'',''Harry'',''Smith'',''Adam''); Then
+    this method shown below will work.
+
+
+    ```
+
+    <?php
+
+    $salary = array (''Adam''=>1000, ''Smith''=>2000, ''Mary''=>=
+
+    2500, ''Sally''=>1800);
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: "```\nprint(\"The original array looks like this.<br>\");\nforeach($salary as\
+    \ $amount){\n    print(\\$amount<br>\");\n}\n```\n\nLet us look at an example\
+    \ without a key shown.\n\n```\n<?php\n$name = array('Tom','Harry','Smith','Adam');\n\
+    print(\"The original array looks like this.<br>\");\nforeach($name as $emp){\n\
+    \    print(\\$emp<br>\");\n}\n?>\n```\n\nThe output is as follows.\n\n![](img/d7e83bd680bb691d653bca3af472a71a_36_0.png)\n\
+    \nSorting arrays can be done by using the following functions.\n\nsort() - This\
+    \ sorts by values but does not maintain the key values.\n\nrsort() - This reverses\
+    \ the values and does not maintain the key values.\n\nasort() - These sorts by\
+    \ values and does maintain the key values.\n\narsort() - The values are sorted\
+    \ in inverse manner and it does maintain the key values.\n\nksort() - The sorting\
+    \ is by keys and it maintains the key values.\n\nkrsort() - Sorting is by keys\
+    \ in inverse and it maintain the key values.\n\nLet us look at an example:\n\n\
+    ```\n<?php\n```"
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: "```\n$salary = array('Adam'=>1000, 'Smith'=>2000, \n'Mary'=>2500, 'Sally'=>1800);\n\
+    print(\"The original array looks like this:<br>\");\nforeach($salary as $emp =\
+    \ $salary) {\n    print(\\$emp-amount<br>\");\n}\nprint(\"The sort using sort\
+    \ looks like this:<br>\");\nsort($salary);\nforeach($salary as $emp = $salary)\
+    \ {\n    print(\\$emp-amount<br>\");\n}\nprint(\"The sort using rsort looks like\
+    \ this:<br>\");\nrsort($salary);\nforeach($salary as $emp = $salary) {\n    print(\\\
+    $emp-amount<br>\");\n}?\n```\n\nThe output will be as follows.\n\n![](img/d7e83bd680bb691d653bca3af472a71a_37_0.png)\n\
+    \nThe code for the other sort functions is below.\n\n```\n<php\n$salary = array('Adam'=>1000,\
+    \ 'Smith'=>2000, \n'Mary'=>2500, 'Sally'=>1800);\nprint(\"The sort using asort()\
+    \ looks like this:<br>\");\nasort($salary);\nforeach($salary as $emp = $salary)\
+    \ {\n    print(\\$emp-amount<br>\");\n}\nprint(\"The sort using arsort() looks\
+    \ like this:<br>\");\narsort($salary);\nforeach($salary as $emp = $salary) {\n\
+    \    print(\\$emp-amount<br>\");\n}\n?\n```\n\nThe output is as follows."
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: "![](img/d7e83bd680bb691d653bca3af472a71a_38_0.png)\n\nThe original array looks\
+    \ like this.\nAdam:1000\nSmith:2000\nMary:2500\nSally:1800\nThe sort using as()\
+    \ looks like this:\nAdam:1000\nSally:1800\nSmith:2000\nMary:2500\nThe sort using\
+    \ asort() looks like this:\nMary:2500\nSally:1800\nSmith:2000\nAdam:1000\n\nTo\
+    \ sort by keys, we use the last sort functions listed earlier as follows.\n\n\
+    ```\n<?php\n$salary = array('Adam'=>1000, 'Smith'=>2000, 'Mary'=>2500, 'Sally'=>1800);\n\
+    print(\"The sort using ksort looks like this:<br>\");\nksort($salary);\nforeach($salary\
+    \ as $emp => $amount) {\n    print(\"$emp:$amount<br>\");\n}\nprint(\"The sort\
+    \ using krsort looks like this:<br>\");\nkrsort($salary);\nforeach($salary as\
+    \ $emp => $amount) {\n    print(\"$emp:$amount<br>\");\n}\n?>\n```\n\nThe output\
+    \ will be as follows."
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '![](img/d7e83bd680bb691d653bca3af472a71a_39_0.png)
+
+
+    The sort using ksort() looks like this:
+
+    Adam:1000
+
+    Mary:2500
+
+    Sally:1800
+
+    Smith:2000
+
+    nThe sort using krsort() looks like this:
+
+    Smith:2000
+
+    Sally:1800
+
+    Mary:2500
+
+    Adam:1000
+
+
+    The shuffle() function randomly reorganizes the order of an array.
+
+
+    The following code can be used to see its working.
+
+
+    ```
+
+    <?php
+
+    $salary = array (''Adam''=>1000, ''Smith''=>2000, ''Mary''=>2500, ''Sally''=>1800);
+
+    print"The shuffle() looks like this:<br>";
+
+    shuffle($salary);
+
+    foreach($salary as $emp => $amount) {
+
+    print"$emp:$amount<br>";
+
+    }?>
+
+    ```
+
+
+    The output looks like this.
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_39_1.png)
+
+
+    If the code is run after another order will be seen. In other words, it shuffles
+    randomly and reorganizes the order of an array.
+
+
+    There are times when one of the following has to be done:
+
+    1. Convert an array into a string to pass its values to a URL.'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '+   2. Convert an array into a string to store the information in a database.
+
+
+    +   3. Convert a string into an array to convert comma delimited text field into
+    separate parts.
+
+
+    There are two functions explode and implode to do these things. Let us look at
+    an example.
+
+
+    In this example we will create two files. One is an HTML file that will serve
+    the second file which is in PHP a bunch of words to alphabetize. The words will
+    be separated by a comma. The separator can be other than a comma, also, for example
+    just empty space.
+
+
+    The HTML file code looks like this.
+
+
+    ```
+
+    <html>
+
+    <body>
+
+    Enter some words separated by commas. <br>
+
+    <p>
+
+    <form action="array.php" method="post">
+
+    <input type="text" name="words" size="100">
+
+    <p>
+
+    <input type="submit" name="submit" value="Submit">
+
+    </form>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    The webpage will look like this.
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_40_0.png)
+
+
+    The associated PHP file is as follows:
+
+
+    ```
+
+    <?php
+
+    $words=explode('','', $_POST[''words'']);
+
+    sort($words);
+
+    $string = implode(''<br>'',$words);
+
+    print("<p> The alphabetized version of the list entered:
+
+    <br> $string</p>");
+
+    ?>
+
+    ```
+
+
+    The output of running this code is as follows.'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '![](img/d7e83bd680bb691d653bca3af472a71a_41_0.png)
+
+
+    The alphabetized version of the list entered is:
+
+    Max
+
+    Sally
+
+    Harry
+
+    Tom
+
+
+    The words are received from the HTML page and then converted into an array which
+    is sorted.
+
+    The sorting done here is without a need to maintain a key value association. One
+    may try to other sorts as an experiment.
+
+
+    Then a new string is created from the sorted array and the string is then printed.
+
+
+    Let us look at an example of this HTML code.
+
+
+    ```
+
+    <html><head><title>Price Checker</title></head><body><form action="array.php"
+    method="post">
+
+    Widget<input type="radio" name="item[]" value="Widget1.\/>
+
+    Widget2<input type="radio" name="item[]" value="Widget2.\/>
+
+    Widget3<input type="radio" name="item[]" value="Widget3.\/>
+
+    <p><input type="submit" name="submit" value="Send my response\></p></form></body></html>
+
+    ```
+
+
+    The output of this is as follows.
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_41_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: "The code is not new. The difference here is the item[] used in the check box\
+    \ options. This will create an associated array in the PHP file being called.\
+    \ The code for the associated PHP file is as follows.\n\n```\n<?php\nprint\"This\
+    \ is to demonstrate the use of arrays in a form.\n<p>\";\n$w=$_POST['item'];\n\
+    foreach ($w as $item) {\n  print\"$item<br>\";\n}\n?>\n```\n\nThe output of the\
+    \ PHP file is as follows.\n\n![](img/d7e83bd680bb691d653bca3af472a71a_42_0.png)\n\
+    \nThis is to demonstrate the use of arrays in a form\nWidget2.\n\nIn the purpose\
+    \ of these two codes is to show how an array can be created from a form.\n\nLastly,\
+    \ arrays can be multidimensional. These can be simple and naturally some be more\
+    \ complex. The purpose of such an array is to provide more information than a\
+    \ standard array.\n\nLet us create a multidimensional array.\n\n$programming=array('C+','Java');\n\
+    \n$hardware = array('Networking','Security');\n\nWe have two arrays for one programming\
+    \ and one for hardware subjects. Both being on two different subjects can be kept\
+    \ under a second array called books.\n\n$books = array ('Software' =>=$programming,\
+    \ 'Hardware' => $hardware);\n\nThus we have created a multidimensional array.\n\
+    \nTo point to an element in an array array array is at best the same way as done\
+    \ for a single dimensional array by using the index or key number."
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: 'So a command print "Print the second book in programming is ($books[''Software''][1]);"
+
+
+    will print the word Java.
+
+
+    Let us look at the full PHP code.
+
+
+    ```
+
+    ```php
+
+    $programming =array(''C++'',''Java'');
+
+    $Shardware = array(''Networking'', ''Security'');
+
+    $books = array('' Software '' =>$programming, ''Hardware''
+
+    => $Shardware);
+
+    print "The second book in programming is
+
+    ($books[''Software''][1])"<p>
+
+    print "The first book in networking is ($books[''Hardware'']
+
+    [0])";
+
+    ?
+
+    ```
+
+    ```
+
+
+    The output will be as follows.
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_43_0.png)
+
+
+    We modify the above script to use the print_r () seen in the beginning of this
+    chapter or
+
+    var_dump() function to print out the multidimensional array.
+
+
+    The code is as follows.
+
+
+    ```
+
+    ```php
+
+    $programming =array(''C++'',''Java'');
+
+    $Shardware = array(''Networking'', ''Security'');
+
+    $books = array('' Software '' =>$programming, ''Hardware''
+
+    => $Shardware);
+
+    print "The second book in programming is
+
+    ($books[''Software''][1])"<p>
+
+    print "The first book in networking is ($books[''Hardware'']
+
+    [0])";
+
+    ```
+
+    ```
+
+
+    print_r($books);'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '```
+
+    print<p>";
+
+    var_dump($books);
+
+    ?>"
+
+    ```
+
+
+    The output is as follows.
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_44_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '# Chapter 5. Web Application Components
+
+
+    The subject of PHP files needs knowledge of HTML in the minimum. In addition to
+    this knowledge of Cascading Style Sheets (CSS), Java script and Structured Query
+    Language can greatly enhance the ability to create dynamic, rich looking web pages.
+
+
+    This book does not go into development of CSS or Java Script in detail. However,
+    an essential background will be given in SQL in the database part of this book.
+
+
+    In this chapter some important components of making a web application will be
+    looked at.
+
+
+    External files may be used in a PHP program. For example, to create a header or
+    footer for a page. To do this first create a header.html and footer.html file
+    or the files can be PHP files too.
+
+
+    These external files can be included in a PHP program by using one of two functions-
+    include() and require().
+
+
+    They are used in the following manner.
+
+
+    ```
+
+    include(''footer.html'');
+
+    ```
+
+
+    or
+
+
+    ```
+
+    include(''footer.php'');
+
+    ```
+
+
+    or
+
+
+    ```
+
+    require(''header.html'');
+
+    ```
+
+
+    or
+
+
+    ```
+
+    require(''header.php'');
+
+    ```
+
+
+    The code will be executed at the point where these functions are called. After
+    execution the code will continue from the line below below the include or require
+    function. The difference between the two functions is that when using include()
+    if there is an error the PHP server will give a warning but will continue to run
+    other code lines.
+
+
+    In case of require() if the execution of the included file fails the program terminates.
+
+
+    The example above assumes that the PHP program using include () or require() is
+    in the same folder as the file being called. If not the absolute or relative paths
+    to the file must be provided within the brackets of the function.
+
+
+    An example of a relative path is - require(''./footer.html'');
+
+
+    An example of an absolute path is - require(''c:\users\desktop\header.php'');'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '```
+
+    <html>
+
+    <body>
+
+    <center><b>Welcome to my page</b></center>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    Assume a header.html file as shown above. The associated PHP program calling this
+    header is as follows.
+
+
+    ```
+
+    <php
+
+    include(''header.html'');
+
+    print("This is my page.");\n?>
+
+    ```
+
+
+    The output is as follows.
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_46_0.png)
+
+
+    These two functions can be used in handy to reduce duplication of work.
+
+
+    Date and time can be displayed in PHP by using the date() function. This function
+    returns date\and time information in a format based on the arguments given to
+    it.
+
+
+    The options available are as follows.
+
+
+    +   - Y means year in 4-digit format.
+
+    - y means year in 2-digit format.
+
+
+    +   - n - means month as one or two digits as 4.
+
+
+    +   - m - means month as two digits as 05.
+
+
+    +   - F - means month in full form of the name of the month as August.
+
+
+    +   - M - mean month in three letter format such as Aug.
+
+
+    +   - j - means day of the month in 1 or 2 digits such as 8.
+
+
+    +   - d - means the day of the month in 2-digit format such as 08.
+
+
+    +   - l means the day of the week such as Sunday.'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: 'D - means the day of the week in three letter format such as - Sun.
+
+
+    w - means the day of the week as a single digit - such as 0 for Sunday.
+
+
+    z - means the day of the year from 0 to 365.
+
+
+    t - means the number of days in the month - 31 (for August).
+
+
+    S - means the English ordinal suffix for a day as 2 characters - rd.
+
+
+    g - means the hour in 12-hour format as 1 or 2 digits such as - 6.
+
+
+    G - means the hour in 24-hour format as 1 or 2 digits such as 14.
+
+
+    H - means the hour in 12-hour format as 2 digits such as 08.
+
+
+    I - means the hour in 24-hour format as 2 digits such as 14.
+
+
+    i - means minutes such as 35.
+
+
+    s - means seconds such as 15.
+
+
+    a - means am or pm.
+
+
+    A - means AM or PM.
+
+
+    U - means seconds since epoch such as 1048623008.
+
+
+    Let us look at this PHP code.
+
+
+    ```
+
+    <?php
+
+    $x =date(''l,F,Y'');
+
+    $y = date(''h:i:s'');
+
+    print "$x<p>$$y";
+
+    ?>
+
+    ```
+
+
+    The output will be as follows.'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '![](img/d7e83bd680bb691d653bca3af472a71a_48_0.png)
+
+
+    It is also possible to write print date(L,F,Y); to get a result.
+
+
+    A timestamp in PHP representing how many seconds have elapsed since midnight of
+    January 1 1970. The time() function returns a timestamp for the current moment.
+    The mtime() function can return a timestamp for a particular date and time.
+
+
+    For example:
+
+
+    $x=mtime(6,12,30); where 6 is the hour, 12 is the minutes and 30 is the seconds.
+
+
+    An important function in PHP programs is the ability to send email. Sending mail
+    in PHP is done by the mail(). The PHP function works in tandem with the servers
+    application such as the sendmail on Unix or a SMTP(Simple Mail Transfer Protocol)
+    server to send out emails.
+
+
+    mail(''mailto'',''subject'',''body of message'', ''From: email address of Sender);
+
+
+    It is important to check with the host service before using a mail service. There
+    may be additional requirements from the host service if the service package is
+    a shared owned.
+
+
+    ```
+
+    <php
+
+    $x = $_POST[''email''];
+
+    $y = $_POST[''password''];
+
+    $body="Thank you for registering at my webpage. Your email address is $x and the
+    password you entered is $y";
+
+    mail($x,Registration,$body,''From:admin@yyy.com'');
+
+    complete,$body,From:admin
+
+    ?>
+
+    ```
+
+
+    This is a sample of code sending mail. It is assumed here that a form or HTML
+    page will supply the email and password of the user. The body thanks the user
+    for the registration and send the email with the admin''s email as sender''s email.
+    Use of mail on shared servers should be used with caution. It is possible to have
+    a server or domain marked as a source of spam affecting legitimate emails.'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: 'Cookies are aware for a server to store information about the user. Many websites
+    require cookies to be enabled before the contents are displayed.
+
+
+    Cookies have to be sent from the server to the client machine before any other
+    information.
+
+
+    Cookies are sent using the setcookie() function. For example:
+
+
+    ```
+
+    setcookie(''Cookiename'', This is a test cookie'');
+
+    ```
+
+
+    There may be a limit of the number of cookies that can be sent from a server to
+    a single user.
+
+    Cookie names should follow the naming rules of PHP.
+
+
+    ```
+
+    <php
+
+    $cookies=false;
+
+    setcookie(''color'',$_POST[''color'']);
+
+    $cookies=true;
+
+    if($cookies) { print("Your preference has been saved."); }
+
+    >
+
+    ```
+
+
+    The HTML code for the above PHP file is as follows.
+
+
+    The HTML page will call the cookie.php file and pass on to it the preference of
+    the user.
+
+
+    The resulting output is as follows.'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: 'Your preference has been saved.
+
+
+    To retrieve a value from a cookie, use the $_COOKIE[''cookiename''] method.
+
+
+    ```
+
+    <?php
+
+    print $_COOKIE[''cookie''];
+
+    ?>
+
+    ```
+
+
+    The output will be red since I have chosen red.
+
+
+    Next we look like adding some parameters to the cookie. The parameters to be added
+    are expiration, path, domain and term secure.
+
+
+    ```
+
+    setcookie(color,$_POST[''color''],time()+60,'''','''',1);
+
+    ```
+
+
+    This follows: setcookie(''name'',''value'',''expiration'',''path'',''domain'',secure);
+
+
+    The path and domain are used to limit a cookie to a specific folder in a website
+    or to a specific domain such as www.xyz.com. The path could be something like
+    this ''/userpages/
+
+
+    In the example above both path and domain have been disregarded. Look at the code
+    below.
+
+
+    ```
+
+    <?php
+
+    $cookies=false;
+
+    setcookie(color,$_POST[''color''],time()+60,'''','''',0);
+
+    $cookies=true;
+
+    print("Your preference has been saved.");
+
+    }
+
+    ?>
+
+    ```
+
+
+    and using the same html file as before (reproduced here for convenience).
+
+
+    ```
+
+    <html>
+
+    <head><title>Cookie Example</title></head>
+
+    <body>
+
+    <form action="cookie.php" method="post">
+
+    Yellow<input type="radio" name="color"
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '```
+
+    value="Yellow"/>
+
+    <input type="radio" name="color" value="Red"/>
+
+    Blue<input type="radio" name="color" value="Blue"/>
+
+    <br>
+
+    Please complete the feedback form and send your
+
+    preference of color. </p>
+
+    <p>
+
+    <input type="submit" name="submit" value="color">
+
+    </form></body></html>
+
+    ```
+
+
+    The output is as follows:
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_51_0.png)
+
+
+    The duration of cookie is 60 seconds from the current time. If 1 hour is needed
+    then it will
+
+    ime()+3600 and so forth. The number 0 for secure means that cookie is not send
+    over a
+
+    secure connection. The alternative is for 1 HTTPS connection.
+
+
+    After 60 seconds or 1 minute if the cookie is read using the $_COOKIE[''color'']
+    option no value
+
+    ill be found. An error message will be displayed.
+
+
+    To delete a cookie setcookie() can be used in the following manner.'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: "setcookie('cookiename','', );\n\nsetcookie('cookiename','', time()-60);\n\n\
+    which is stating an expiration date in the past.\n\nLet us look at this code.\n\
+    \n```\n<?php\n$Cookies=false;\nif(isset($_POST['submit'])){\n  setcookie('color',$_POST['color'],time()+60,'',0);\n\
+    \  $Cookies=true;\n}\n?>\n<html>\n<head>\n<title>Cookie Example</title></head>\n\
+    <body>\n<form action=\"php\" method=\"post\">\nYellow<input type=\"radio\" name=\"\
+    color\" value=\"Yellow\"/>\nRed<input type=\"radio\" name=\"color\" value=\"Red\"\
+    />\nBlue<input type=\"radio\" name=\"color\" value=\"Blue\"/>\n<br>\nnPlease complete\
+    \ the feedback form and send your\npreference of color.</p>\n<p>\n<input type=\"\
+    submit\" name=\"submit\" value=\"color\">\n</form>\n<?php\nif($Cookies) {\n  print\
+    \ \"Your preference has been saved.\";\n}\n?>\n</body>\n</html>\n```\n\nBasically\
+    \ the code above is a combination of the cookie PHP file and its HTML page. The\
+    \ only addition is the line isset($_POST['submit']){ this condition and function\
+    \ PHP allows us to write a PHP file for the cookies as a single file instead of\
+    \ two different files.\nThe isset function checks if the submit button in the\
+    \ HTML form has been clicked or not. If yes it will continue with the lines inside\
+    \ the bracket which is the creation of the cookie. Most hosting sites of websites\
+    \ will allow for this kind of mix of PHP and HTML in a single PHP file. It is\
+    \ also possible to have PHP within HTML files. Check with the hosting service\
+    \ before signing up or after any configurations they may require. This advice\
+    \ is for those who use shared hosting."
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: "A session provides a way to track data for a user over a number of pages. Cookie\
+    \ stores data on\nthe client and a session stores it on the server. In addition\
+    \ to this a session has the\ncharacteristics.\n\n+   1. They are more secure,\
+    \ as the data is on the server only.\n\n+   2. They allow for storage of more\
+    \ information than a cookie.\n\n+   3. They can be made to work even if cookies\
+    \ are not accepted by the user of the website.\n\nA session is like the English\
+    \ meaning of the word (a period of time-like a class session). A\nrandom session\
+    \ ID is created when a session starts. This is a reference to that particular\
+    \ session\n its stored data.\n\nThe session ID is sent to the web browser as a\
+    \ cookie and following PHP pages will use this\ncookie to get the session ID to\
+    \ access its data.\n\nTo start or create a session in PHP we start with the session_start()\
+    \ function. This function must\nbe of the first lines on every PHP page that uses\
+    \ sessions.\n\nThe cookie which is stored on the browser will have a name such\
+    \ as PHPSESSID and a value such\nas 3bcc37dc87cb4b54d63f9a23b41f1.\n\nOnce the\
+    \ session starts one can record data to it by assigning values to the\nSESSIONarray.\n\
+    \n$_SESSION['color'] = 'Yellow';\n\n$_SESSION['age'] = 35;\n\nThe data is written\
+    \ to a temporary file stored on the server. Let us look at the following code.\n\
+    \nThis code is for a login box.\n\n```\n<?php\nif(isset($_POST['submit'])){\n\
+    \  if ($_POST['username']=='admin' &&\n  $_POST['password']=='admin') {\n    session_start();\n\
+    \    $_SESSION['username']='admin';\n    $_SESSION['login']=time();\n    print(\"\
+    You are logged in\");\n    exit();\n  }\nn\n```"
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '```
+
+    }
+
+    ?>
+
+    <html>
+
+    <head><title>Session Example</title></head>
+
+    <body>
+
+    <form action="session.php" method="post">
+
+    <p>
+
+    Username:<input type="text" name="username"
+
+    size="20">
+
+    <p>
+
+    Password:<input type="text" name="password" size
+
+    ="20">
+
+    <p>
+
+    <input type="submit" name="submit" value="Submit">
+
+    </form>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    The login box will look as follows.
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_54_0.png)
+
+
+    This code starts with the isset function seen in the last cookie example. This
+    checks if the submit button is hot not.
+
+
+    The next statement checks if the password and username are required. If it is
+    it will print a message and exit() function will stop execution of any further
+    code. Alternatively if there is a webpage to be directed to one can use the header
+    () function as follows-header(Location:welcome.php); followed by exit(); Make
+    the change in the above code.
+
+
+    If the username and password entered is incorrect the program will display an
+    empty form for further login attempt.
+
+
+    So we have started the session for login page. To access session variables we
+    let first create the welcome.php file so that the user logs in they will get this
+    page.
+
+    From this page we will access the logged in period of the user.
+
+
+    The welcome page looks like this in terms of code.
+
+
+    ```
+
+    <?php
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '```
+
+    session_start();
+
+    print("Welcome to my webpage!<p>");
+
+    print($_SESSION[''username'']);
+
+    print("<p>You have logged in since:<<p>");
+
+    print(date(''g:i'',$_SESSION[''login'']));
+
+    print("<p><a href="logout.php">Logout</a></p>");
+
+    ?>
+
+    ```
+
+
+    This code will print the message with the username and the time and give an option
+    to logout.
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_55_0.png)
+
+
+    The logout page script looks as follows.
+
+
+    ```
+
+    <?php
+
+    print("You have logged out!<p>");
+
+    ?>
+
+    ```
+
+
+    The logout script will be changed shortly. The last point in sessions is how to
+    delete a session.
+
+
+    To do this start with session_start() and then delete the session variables which
+    in our example is username and login time using the unset() function.
+
+
+    unset($_SESSION);
+
+
+    Finally the data is removed from the server using the session_destroy() function.
+    Therefore, the above logout script will look as follows.
+
+
+    ```
+
+    <?php
+
+    session_start();
+
+    unset($_SESSION);
+
+    session_destroy();
+
+    print("You have logged out!!<p>");
+
+    print("Thank you for visiting my page.");
+
+    ?>
+
+    ```
+
+
+    After you see the logout page try to hit the back button and see what happens.'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: 'The output is as follows:
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_56_0.png)
+
+
+    A point to note is that sessions might be implemented slightly differently on
+    web hosting hosting is of shared type. Thus it is important to check with the
+    web host faq table or technical support on how it is configured for such kind
+    of hosting.
+
+
+    Functions in PHP can be user made. The functions thus far have already been defined
+    in PHP.
+
+
+    A defined function is useful when there is no known function that does a particular
+    task. Function like in all programming languages decrease repetition of code and
+    actually decreases the size overall lines of code.
+
+
+    The format of making a function is as follows:
+
+
+    ```
+
+    function function_name() {
+
+    }
+
+    ```
+
+
+    The function names follow the same rules of variable names except there is no
+    $ sign for a function. The statements within the { } can be any valid PHP statement.
+
+
+    Let us now look a user made function. This one is called make_car_menu and we
+    name it is obvious that this function is related to cars.
+
+
+    ```
+
+    <?php
+
+    function make_car_menu() {
+
+    $car=
+
+    array(1=>Nissan''
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: 'The function make_car_menu is defined a car array variable and using the foreach
+    loop we are printing the menu items for the select option. Notice an important
+    part of this code- 1) It is written in a single PHP file. 2) Whenever there are
+    two " in a print or PHP statement the outer quotations should be "" but inner
+    quotations should be single ('''')type.
+
+
+    The output of this code is a single selection option drop down list as shown below.
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_57_0.png)
+
+
+    As in programming never forget to close the brackets that are opened. The form
+    action here is used to create a form to display the option as this program does
+    not have a complete web page.
+
+
+    Now us write a new program. This program will display a certain number of years
+    based on the current year. The program is different in the sense that arguments
+    will be passed via a function to create a select list starting with the current
+    year and going for three years hence.
+
+
+    The following code is how arguments can be passed to a function in PHP.
+
+
+    ```
+
+    <?php
+
+    function make_year_menu($startyear,$num){
+
+    print("<select name=''year>");
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: "```\nfor ($y=$startyear;$y<($startyear+$num);$y++) {\n    print(\"<option value=\\\
+    \\$y>$$y</option>\");\n}\nprint(\\</select>\");\nprint(\"<form action=\" method=\"\
+    post\">\\n$startyear=date('Y');\nmake_year_menu($($startyear,3);\nprint(\\</form>\"\
+    );\n?>\n```\n\nThe output of the code above is as follows:\n\n![](img/d7e83bd680bb691d653bca3af472a71a_58_0.png)\n\
+    \nThe code finds the current year through the line $startyear=<date('Y'); It is\
+    \ also possible to modify this code further to ask how many years hence has to\
+    \ be displayed. A loop is used to create the select options. Arguments are passed\
+    \ to the function from outside the function in the part of the program.\n\nFunctions\
+    \ can return a value. In the following program the sum of two numbers will be\
+    \ calculated. The program is written as a single PHP file.\n\nThe inputs are taken\
+    \ from two text boxes in the form inside the PHP file.\n\n```\n<?php\nfunction\
+    \ sum($num1,$num2) {\n    $sum=$num1+$num2;\n    return $sum;\n}\n\nif (isset($_POST['num1'],$_POST['num2']))\
+    \ {\n    $sum=sum($_POST['num1'],$_POST['num2']);\n    print(\"<p>The sum of these\
+    \ numbers is <b>\\$sum</b></p>\");\n}\n?>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: "```\nprint('<form action='function.php\\' method='post'><p>');\nprint('First\
+    \ Number:<input type='text\\' name='num1\\' size=5\\><p>');\nprint('Second Number:<input\
+    \ type='text\\' name='num2\\' size=5\\><p>');\nprint('<input type='submit\\' name='submit\\\
+    ' value='ADD\\'>\nprint('</form>');');\n```\n\nThe function has been used before.\
+    \ When a single file of PHP code is written with a form and a button function\
+    \ can be used to see if the submit button has been clicked.\n\nThe function has\
+    \ two parameters num1 and num2. The names can be anything meaningful. The function\
+    \ passes the values of the variables num1 and num2 as input by the user. The sum\
+    \ is calculated in the function and then displayed using the print statement in\
+    \ isset function.\n\nThe output will look like this:\n\n![](img/d7e83bd680bb691d653bca3af472a71a_59_0.png)\n\
+    \nVariables have a feature called scope. This is very important when defining\
+    \ variables. The scope is based on the location of the variables in the code.\n\
+    \nScope of a variable is defined as the realm in which it exists.\n\nVariables\
+    \ defined in a function exist only within that function. In the same manner a\
+    \ variable outside a function can be referenced by the function by passing it\
+    \ as an argument as seen in the last two examples or by using the global statement.\n\
+    \nLet us modify the example of adding two numbers to calculate the price of two\
+    \ items and the final price after a tax rate of 5%.\n\n```\n<?php\n$tax=5;\nfunction\
+    \ sum($price1,$price2) {\n  global $tax;\n  $sum=$price1 + $price2;\n  $taxrate=$tax/100)\
+    \ +1;\n  $sum=$sum * $taxrate;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '```
+
+    return $sum;
+
+    }
+
+    if (isset(\$_POST[''submit''])) {
+
+    $sum=\$_POST[''price1'']+\$_POST[''price2''];
+
+    print("<p>The total price of these two items is <b>\$sum</b></p>");
+
+    }
+
+    nprint("<form action=''function.php'' method=''post''><p>");
+
+    print(""<p>First item price:<input type=''text'' name=''price1'' size=5></p>");
+
+    print(""<p>Second item price:<input type=''text'' name=''price2'' size=5></p>");
+
+    print(""<input type=''submit'' name=''submit'' value=''Calculate''>");
+
+    print("</form>");
+
+    ?>
+
+    ```
+
+
+    The code takes from the user the price of two items and add them. After adding
+    the prices, then calculates the taxrate based on the global variable tax.
+
+
+    Taxrate is multiplied by sum to display the final price. An important part of
+    defining variables is its location and hence its scope.'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '# Chapter 6. Files and Directories
+
+
+    The first step to understanding the importance of a database is files and directories.
+    There are two ways to store data with PHP and with most programming languages.
+    They are files & directories or a database.
+
+
+    In a web hosting environment especially one that is shared by the host provider
+    might be a little strict when it comes to files.
+
+
+    A file such as a file (.csv, .txt) have certain permission settings on the web
+    host. The directory also will have these permissions.
+
+
+    The permission options de-fact are read, write and executable. In addition to
+    these options can be set in three different ways based on the user. The owner
+    gets automatic write and read rights whereas others and groups are given only
+    read permission.
+
+
+    Irrespective of the type of hosting (Unix or Windows) the hosting service might
+    limitations for security reasons on allowing access to write on files and directories
+    in case of shared hosting. This needs to be studied upfront before creating a
+    PHP program based on files and directories for storage and retrieval.
+
+
+    As mentioned in the previous line files, directories and a database basically
+    store data and allow them to be retrieved.
+
+
+    To write to a file using PHP the following functions can be used:
+
+
+    fopen() to open a file for writing in a particular mode.
+
+
+    fwrite() to actually write the data to the file.
+
+
+    fclose() to close the connection to the file.
+
+
+    fopen() function has several modes of opening a file to write. They are:
+
+
+    +   - r - for reading only. The reading will start at the beginning of the file.
+
+
+    +   - r+ - for reading or writing. Either will start at the beginning of the file.
+
+
+    w - for writing only. If the file does not exist, then it will be created and
+    overwrite any existing content.
+
+
+    w+ - for reading or writing. If the file does not exist, then it will be created
+    and overwrite any existing contents when writing.
+
+
+    a - for writing only. The file will be created if it does not exist and new data
+    will be appended to the end of the file.'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: "a+ - for reading or writing. The file will be created if it does not exist\
+    \ and new data will be appended to the end of the file.\n\nx - for writing only.\
+    \ The file will be created if it does not exist but if the file exists then nothing\
+    \ will be done.\n\nx+ - for reading or writing. The file will be created if it\
+    \ does not exist but nothing will be done if the file already exists.\n\nIf the\
+    \ file is not in the same location as the PHP file, the path to the file should\
+    \ be included in the code. Let us look at the following code where some data will\
+    \ be written to a text file called data.txt.\n\n```\n<html>\n<body>\n  <?php\n\
+    \  if (isset($_POST['submit'])) {\n    if($fx=fopen('data.txt','ab')) {\n    \
+    \  $data=\\$_POST['data'];\n      fwrite($fx,$data,'in');\n      fclose($fx);\n\
+    \    }\n  }\n  ?>\n  <form action=\"file.php\" method=\"post\">\n  <p>\n    <textarea\
+    \ name=\"data\" rows=\"5\" columns=\"30\"> Enter your data here.</textarea>\n\
+    \  <p>\n    <input type=\"submit\" name=\"submit\" value=\"Write the data\">\n\
+    \  </p>\n  </form>\n</body>\n</html>\n```\n\nIn the code above the text area allows\
+    \ for data to be entered. The data entered as an example is This is a statement.\n\
+    \ndata.txt file is created since it did not exist and writing was in the form\
+    \ of an append. The 'ab' means append using binary mode. The 'b' is optional.\n\
+    \nThe result is as follows:"
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: "```\nlocalhost/scripts/file.php X\n← C localhost/scripts/file.php\n:: Apps\
+    \ New Tab\nThis is a statement.\n\nWrite the data\n```\n\n```\ndata.txt - Notepad\n\
+    File Edit Format View Help\nThis is a statement.\n```\n\nThe code can be made\
+    \ more accurate by using $data=trim(\\$_POST['data']);\nand using the empty function\
+    \ in the following manner.\n\nif(!empty(\\$_POST['data']));\n\nLet us rewrite\
+    \ the code shown above to include these two statements. The second one will\n\
+    sure that there is some data in the text area to be written or appended to the\
+    \ data file.\n\n```\n<html>\n<body>\n<?php\nif (isset(\\$_POST['submit'])) {\n\
+    \  if (!empty(\\$_POST['data']))) {\n    if($fx = fopen('data.txt','ab')) {\n\
+    \      $data=trim(\\$_POST['data']);\n      fwrite($fx,$data);\n      fclose($fx);\n\
+    \    }\n  }\n}\n?>\n<form action=\"file.php\" method=\"post\">\n<p>\n<textarea\
+    \ name=\"data\" rows=\"5\" columns=\"30\">\n</textarea>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: "```\n<p>\n<input type=\"submit\" name=\"submit\" value=\"Write the data\">\n\
+    </form>\n<body>\n</html>\n```\n\nThis code is the same as the one seen before\
+    \ it adds an empty text area box. If the box is left empty nothing will be appended\
+    \ to the file. However, if the data is written in the text area box it will be\
+    \ written to the data.txt file. The line if(empty($_POST['data'])) checks if the\
+    \ data is present in the text area box.\n\nIf two users were submitting data to\
+    \ a single file, there could be some problems. An important of writing to a file\
+    \ is locking. This is not issue when using databases they have their own in built\
+    \ locking mechanisms.\n\nThe lock type has to be mentioned after the fopen() statement.\
+    \ The lock types are as follows:\n\n+   - LOCK_SH - shared lock for reading purposes.\n\
+    \n+   - LOCK_EX - Exclusive lock for writing purposes.\n\n+   - LOCK_UN - Non\
+    \ blocking lock.\n\nSo the above writing script data.txt file can be modified\
+    \ as follows:\n\n```\n<html>\n<body>\n<?php\nif (isset($_POST['submit'])) {\n\
+    \  if(empty($_POST['data']))) {\n    if($fx=fopen('data.txt','ab')) {\n      $data=trim($_POST['data']);\n\
+    \      flock($fx,LOCK_EX);\n      fwrite($fx,$data,\"\\n\\n      flock($fx,LOCK_UN);\n\
+    \      fclose($fx);\n    }\n  }\n}\n?>\n<form action=\"file.php\" method=\"post\"\
+    >\n<p>\n<textarea name=\"data\" rows=\"5\" columns=\"30\">\n```"
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: "```\n</textarea>\n<p>\n<input type=\"submit\" name=\"submit\" value=\"Write\
+    \ the data\">\n</form>\n<body>\n</html>\n```\n\nIn terms of writing there will\
+    \ be no difference in the data.txt file. The lock used here is an exclusive lock.\
+    \ Another user cannot write to data.txt while you submit the data. The locks are\
+    \ to be unlocked allowing others to use the same file.\n\nReading a file is as\
+    \ important as writing to the file. The function that can be used to read files\
+    \ in a single swoop file().\n\nThe file() function uses an array to enter data\
+    \ read from the file. Let us look at the code to read the data entered into the\
+    \ data.txt file used so far in this chapter. This data .txt file has three statements\
+    \ entered into it using the script above for writing.\n\nThe statements are: This\
+    \ is the first statement. This is the second statement. This is the third statement.\n\
+    \nThe code is as follows:\n\n```\n<?php\n$data=file(data.txt);\n$n=count($data);\n\
+    foreach($data as $key->$value) {\n  print\"$value<p>\";\n}\n?>\n```\n\nPlease\
+    \ note that the variable $data is an array and we are printing the result as shown\
+    \ in the chapter on arrays.\n\nThe output is as follows:"
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: 'This is the first statement.
+
+
+    This is the second statement.
+
+
+    This is the third statement.
+
+
+    Creating a directory in PHP is done using the mkdir function. The format for this
+    function is as follows:
+
+
+    mkdir(''directory_name'', permissions);
+
+
+    Permissions are ignored on Windows based servers. Please note the policy of the
+    web host before creating directories or using files for storing and retrieving
+    data.
+
+    It is my strong opinion that these functions in a professional setting be using
+    a database.
+
+
+    Let us create a code that will ask for the directory name and file name to be
+    then put some text in the file in that directory. The code for that is as follows:
+
+
+    ```
+
+    <html>
+
+    <body>
+
+    <?php
+
+    if(isset($_POST[''submit''])) {
+
+    $dirname=trim($_POST[''dirname'']);
+
+    mkdir(trim($dirname),0777);
+
+    $filename=trim($_POST[''filename'']);
+
+    $data=trim($_POST[''data'']);
+
+    if($fx = fopen(''C:\Program Files (x86)\EasyPHP-
+
+    Dev-Server\n14.1.VC3\data\localweb\scripts\$dirname\$filename'',''ab'')) {
+
+    fwrite($fx,$data);
+
+    fclose($fx);
+
+    }
+
+    }
+
+    ?>
+
+    <form action="file.php" method="post">
+
+    <p>
+
+    Directory name: <input type="text" name="dirname" size
+
+    ="20">
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '```
+
+    <p>
+
+    File name:<<input type="text" name="filename" size="20">
+
+    <p>
+
+    Text to be entered into file:<input type="text" name="data"
+
+    size="50">
+
+    <p>
+
+    <input type="submit" name="submit" value="Write the data">
+
+    </form></body></html>
+
+    ```
+
+
+    This code will create the directory using mkdirdir(). The path to the file needs
+    to be carefully entered. A wrong/or \ will cause problems with the code.'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '# Chapter 7. Intro to Databases
+
+
+    The database that comes with PHP developer kit or in in free or shared hosting
+    is the MySQL database. There are exceptions. In this chapter we will look into
+    the basics of the SQL (Structured Query Language) needed to operate any database.
+
+
+    SQL has four important commands with respect to manipulating data in tables in
+    a database. These four commands are:
+
+
+    +   - Select - to retrieve data from the tables of a database.
+
+
+    +   - Insert - to add data to a table in the database.
+
+
+    +   - Update - to change data in a table of the database.
+
+
+    +   - Delete - to remove data in a row of a table of the database.
+
+
+    Further to these are commands for creating a database, table, view, index, procedure.
+
+
+    Web hosting sites there is a control panel to create a database and the tables
+    associated with them. In Unix/Linux hosting the most popular control panel currently
+    in the market is the C-Panel. It may look like the one below.
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_68_0.png)
+
+
+    The administration of the databases in the case of Unix/Linux based C-Panels is
+    done using the PHPMyAdmin option. In cases of hosting all be familiar with the
+    faq''s of the hosting being used.
+
+
+    In the grades table below we insert as follows:
+
+
+    | sid | name | prelim | midterm | final |
+
+    | 100 | Albert | 100 | 78 | 89 |'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: 'Insert into grades values (''100'',''Albert'',100,78,89);
+
+
+    The alphanumeric/char characters need to be within single quotes.
+
+
+    Numbers do not have within quotes.
+
+
+    It is very important in an insert statement to follow the same sequence of fields
+    as in the table.
+
+
+    One can skip a particular field or leave the value for a particular field blank
+    as follows:
+
+
+    Insert into grades values (''100'',''Albert'',null,78,89);
+
+
+    The value of the prelim in the example above can be later filled in using the
+    update statement as follows:
+
+
+    Let us add one row into the table.
+
+
+    insert into grades values (''101'',''Robert'',98,93,85);
+
+
+    To delete a table or row of the table we use the following command:
+
+
+    ```
+
+    delete grades sid=''100'';
+
+    ```
+
+
+    This will delete only the row where sid = 100 and no other row. Deleting should
+    be used carefully.
+
+
+    delete grades;
+
+
+    will result in all rows being deleted. Another way to remove all data in a table
+    is truncate.
+
+
+    truncate table grades;
+
+
+    To completely remove the table from the database- including structure and values
+    use the drop command as follows:
+
+
+    drop table grades;
+
+
+    These commands (drop, truncate, delete) must be used with caution in real life
+    when working in a company or organization. The following is a summary of the commands
+    that one needs to use a database.'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: '# DDL: Data Definition language
+
+
+    | | |
+
+    |---|---|
+
+    | Create | Creates a new table. |
+
+    | Alter | Modifies an object such as a table. |
+
+    | Drop | Deletes a table. |
+
+    | Truncates | Removes the values of the fields of a table but leaves the structure
+    of the table intact. |
+
+
+    # DML: Data Manipulation language
+
+
+    | | |
+
+    |---|---|
+
+    | Select | Retrieves parts of a table in response to a user''s query. |
+
+    | Insert | Puts values into a table. |
+
+    | Update | Modifies rows in a table. |
+
+    | Delete | Removes rows from a table. |
+
+
+    # DCL: Data control language
+
+
+    | | |
+
+    |---|---|
+
+    | Grant | Gives a privilege to a user such as permission to view or modify a table
+    in a database. |
+
+    | Revoke | Removes a privilege from a user. |
+
+
+    Look at the table below: The name of the table is staff.
+
+
+    | sid | name | job | salary | location |
+
+    |---|---|---|---|---|
+
+    | 100 | Robert | Manager | 8000 | Atlanta |
+
+    | 101 | Albert | Administrator | 3000 | Atlanta |
+
+    | 102 | Sally | Secretary | 2000 | Atlanta |
+
+    | 103 | Martha | Receptionist | 1500 | Atlanta |
+
+    | 104 | John | Accountant | 5000 | Atlanta |
+
+    | 105 | Sandy | Trainee | 1000 | Atlanta |
+
+
+    In this table all fields are of type text except for salary which is of type number.
+    Let us run some select against this table.
+
+
+    ```
+
+    * select from staff;
+
+    ```
+
+
+    This will give the all values of the table staff.'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: 'select sid, name, job from staff;
+
+
+    | sid | name | job |
+
+    | 100 | Robert | Manager |
+
+    | 101 | Albert | Administrator |
+
+    | 102 | Sally | Secretary |
+
+    | 103 | Martha | Receptionist |
+
+    | 104 | John | Accountant |
+
+    | 105 | Sandy | Trainee |
+
+
+    select sid, name job from staff
+
+    where
+
+    salary > 3000;
+
+
+    | sid | name | job |
+
+    | 100 | Robert | Manager |
+
+    | 104 | John | Accountant |
+
+
+    If salary of 3000 is to include the select query will look like this:
+
+
+    select sid, name job from staff
+
+    where
+
+    salary >= 3000;
+
+
+    The comparison operators are therefore:
+
+
+    | = | to compare values of two variables |
+
+    | != | Not equal to. |
+
+    | > | Greater than. |
+
+    | < | Less than. |
+
+    | >= | Greater than and equal to. |
+
+    | <= | Less than and equal to. |
+
+
+    | != | <> | Compares two values are equal or not. If values are not equal then
+    condition becomes true. |
+
+
+    Logical operators in SQL are as follows:
+
+
+    | AND | Multiple conditions each |'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '| | of which has to be satisfied. |
+
+    | OR | Any of the conditions need to be satisfied. |
+
+    | ALL | Used to compare a value to all values in another value-set. |
+
+    | ANY | Used to compare a value to any applicable value in the list as per the
+    condition |
+
+    | BETWEEN | Used to search for values that are within a set of values, given the
+    minimum value and the maximum value. |
+
+    | EXISTS | Used to search for the presence of a row in a specified table that
+    meets a certain criterion. |
+
+    | IN | Used to compare a value to a list of literal values that have been specified.
+    |
+
+    | LIKE | Used to compare a value to similar values using wildcard operators. |
+
+    | NOT | Used with other logical operators to negate the effect the logical operator.
+    |
+
+    | IS NULL | To compare and find if a value is null. |
+
+    | UNIQUE | searches each row of table for uniqueness. |
+
+
+    Let us look at some examples using the following table: The name of the staff
+    is.
+
+
+    | sid | name | job | salary | location |
+
+    | 100 | Robert | Manager | 8000 | Atlanta |
+
+    | 101 | Albert | Administrator | 3000 | Atlanta |
+
+    | 102 | Sally | Secretary | 2000 | Atlanta |
+
+    | 103 | Martha | Receptionist | 1500 | Chicago |
+
+    | 104 | John | Accountant | 5000 | Chicago |'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '| 105 | Sandy | Trainee | 1000 | Miami |
+
+    |---|---|---|---|---|n| 106 | James | Lawyer | 7000 | Miami |
+
+
+    ```
+
+    select name from staff
+
+    where
+
+    salary > 7000
+
+    and location = ''Atlanta'';
+
+    ```
+
+
+    The only person would be: Robert
+
+    name
+
+    Robert
+
+
+    If the "and" was replaced by "or" the result would be different.
+
+
+    | name |
+
+    |---|n| Robert |
+
+    | Albert |
+
+    | Sally |
+
+
+    The reason is that only one condition has to be satisfied. Robert does make than
+    7000 and is located in Atlanta but both Albert and Sally are also located in the
+    same place but they do not make a monthly salary greater than 7000.
+
+
+    ```
+
+    select name from staff
+
+    where
+
+    salary is null;
+
+    ```
+
+
+    In the example above the query is searching for a null value in salary column.
+    Null means nothing. In a database nothing is something and that something is called
+    Null. The query will not find any names as there is no name with null salary values.
+
+
+    Let us repeat the staff table for convenience:
+
+
+    | sid | name | job | salary | location |
+
+    |---|---|---|---|---|n| 100 | Robert | Manager | 8000 | Atlanta |
+
+    | 101 | Albert | Administrator | 3000 | Atlanta |
+
+    | 102 | Sally | Secretary | 2000 | Atlanta |
+
+    | 103 | Martha | Receptionist | 1500 | Chicago |
+
+    | 104 | John | Accountant | 5000 | Chicago |
+
+    | 105 | Sandy | Trainee | 1000 | Miami |
+
+    | 106 | James | Lawyer | 7000 | Miami |
+
+
+    ```
+
+    select * from staff
+
+    where
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: 'location in (''Miami'', ''Chicago'');
+
+
+    Notice that when values are text -they have to be enclosed within single quotes.
+    Numbers do not have to. If we change the last line of this query to location not
+    in (''Miami'', ''Chicago'') then only names of those located in cities other than
+    Miami or Chicago will be shown. The result of this query will be on those located
+    in two cities.
+
+
+    | sid | name | job | salary | location |
+
+    |---|---|---|---|--|
+
+    | 103 | Martha | Receptionist | 1500 | Chicago |
+
+    | 104 | John | Accountant | 5000 | Chicago |
+
+    | 105 | Sandy | Trainee | 1000 | Miami |
+
+    | 106 | James | Lawyer | 7000 | Miami |
+
+
+    Let us look at this query:
+
+
+    +   * from staff
+
+    where
+
+    salary > 3000
+
+    and salary < 6000;
+
+
+    The query is requesting those who have a salary between 3000 and less than 6000.
+    The query will produce the following result:
+
+
+    | sid | name | job | salary | location |
+
+    |---|---|---|---|--|
+
+    | 101 | Albert | Administrator | 3000 | Atlanta |
+
+    | 104 | John | Accountant | 5000 | Chicago |
+
+
+    The same query could be written as follows:
+
+
+    +   * from staff
+
+    where
+
+    salary between 3000 and 6000;
+
+
+    The following query takes a look at the "like" operator:
+
+
+    +   Select * from staff
+
+    Where
+
+    Name like ''R%'';
+
+
+    This will give the following result:
+
+
+    | sid | name | job | salary | location |
+
+    |---|---|---|---|--|
+
+    | 100 | Robert | Manager | 8000 | Atlanta |
+
+
+    It is the only name that starts with an R. Martha too has the alphabet "r" but
+    it is not at the'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: 'starting position.
+
+
+    It is possible to call a select query from another query. The following is an
+    example that shows this along with the use of the "Exists" operator.
+
+
+    select name from staff
+
+    where exists
+
+    (select name from staff where salary > 5000); The result will be:
+
+
+    | name |
+
+    | Robert |
+
+    | Albert |
+
+    | Sally |
+
+    | Martha |
+
+    | John |
+
+    | Sandy |
+
+    | James |
+
+
+    If we change the query slightly and try the query below, we will get no responses.
+
+
+    select name from staff
+
+    where exists
+
+    (select name from staff where salary > 8000);
+
+
+    An example of the use of the "ALL" operator:
+
+
+    select * from staff
+
+    where
+
+    location = all (select location from staff where salary = 3000);
+
+
+    | sid | name | job | salary | location |
+
+    | 100 | Robert | Manager | 8000 | Atlanta |
+
+    | 101 | Albert | Administrator | 3000 | Atlanta |
+
+    | 102 | Sally | Secretary | 2000 | Atlanta |
+
+
+    The result will be the info for all the staff in the location of Atlanta.
+
+
+    An example of the use of the "ANY" operator:
+
+
+    select * from staff
+
+    where
+
+    location = any (select location from staff where salary = 3000);
+
+
+    | sid | name | job | salary | location |
+
+    | 100 | Robert | Manager | 8000 | Atlanta |'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '| 101 | Albert | Administrator | 3000 | Atlanta |
+
+    | 102 | Sally | Secretary | 2000 | Atlanta |
+
+
+    When using any database, it is best to use small letters for field names and queries.
+
+
+    Change the query as follows:
+
+
+    ```
+
+    select * from staff
+
+    where
+
+    location = any (select location from where salary > 3000);
+
+    ```
+
+
+    Each location with a salary greater than 3000 will be found. In this case all
+    three cities have at least one person having a salary greater than 3000. Thus
+    the first part of the query will print all the rows in the table. There will be
+    seven rows.
+
+
+    The commands given thus can work in the databases such as MySQL, Oracle and Microsoft''s
+    Access.
+
+
+    If an editor is used to develop PHP scripts on your computer before uploading
+    to the website, then the first thing to do is find if it comes with PHPMyAdmin
+    or not.
+
+
+    The examples in this book were developed using the EasyPHP editor which is available
+    at the following website: http://www.easyphp.org. current version of PHP at the
+    time of writing this book version 7 and its interface was shown in chapter 1.
+    The interface below is for PHP 5 series.
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_76_0.png)
+
+
+    Click on the MySQL Administration-PHPMyAdmin module or in version 7 start database
+    before clicking on PHPMyAdmin in the middle of the interface page.
+
+
+    A page that looks like this will appear.'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: 'As be seen the databases can be created using the new link on the left hand
+    side above. C-Panel on all Unix/Linux based hosting will give a similar screen
+    also.
+
+
+    The menu on top of the above picture lists one databases associated with their
+    account or installation in addition to adding SQL commands, Export and import
+    allows for back up databases and input of bulk data.
+
+
+    Using a developer software such as EasyPHP one can mimic a real hosting environment.
+    The most important part of this is to find the path of the database. This will
+    be different slightly technical facts sheet. To create a table such as staff click
+    on the structure tab and put in the name and number of columns as shown below.
+
+
+    To complete the table creation, enter the data types and field lengths of each
+    field of the staff table and select sid as the primary key. Primary key is a field
+    whose value does not repeat and is required. The fields of the staff table introduced
+    earlier are sid name, job, salary and location. Out of these all are text except
+    for salary which is a number.
+
+
+    The following shows the table field details.'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: '![](img/d7e83bd680bb691d653bca3af472a71a_78_0.png)
+
+
+    The table will be created after the save button is clicked. The result on the
+    left hand side of the phpMyAdmin screen will be similar to the one below.
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_78_1.png)
+
+
+    These steps are very similar to those done on actual web hosting but expect minor
+    differences in the way or look of the interfaces.'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: "# Chapter 8. PHP for MySQL Database\n\nIn this chapter, the emphasis is to\
+    \ write a PHP code targeting a MySQL database and table. If this script is being\
+    \ run first on an editor on a standalone computer or notebook, then the path to\
+    \ the database is the first thing to be found out.\n\nThis information will be\
+    \ available in the FAQ's part of the hosting service in case code is being written\
+    \ directly on the shared hosting location.\n\nIn the previous chapter, a staff\
+    \ table was shown. This table will be used in this chapter to demonstrate the\
+    \ select, insert, update and delete queries.\n\nThe first step in getting data\
+    \ from a table in the database or adding data to it is to connect to MySQL in.\
+    \ The examples that follow are for PHP version 5 series. For version 7 check of\
+    \ end chapter.\n\nTo this end the function mysql_connect is used to connect to\
+    \ MySQL in PHP when the target opened has to be closed in programming so the mysql_close()\
+    \ function plays this role.\n\n```\n<html>\n<body>\n<?php\nif($conn=mysql_connect('localhost','root','''))\
+    \ {\n  print(\"Connected to MySQL.\");\n  mysql_close();\n} else {\n  print(\"\
+    Could not connect to MySQL.\");\n}\n?>\n</body>\n</html>\n```\n\nThe connection\
+    \ mechanism is shown above in the PHP script. The line mysql_connect('localhost','root','')\
+    \ will be slightly different on the webhost being used. The localhost is followed\
+    \ by a username and password.\n\nIn the case of a developer software on a standalone\
+    \ machine the username is usually root but this needs to be verified in the help\
+    \ manual of PHP editor being used.\n\nNow the second step after connecting to\
+    \ MySQL, is to connect to the selected database followed by the table to do some\
+    \ action. Let us start our example of the action by selecting the select or retrieval\
+    \ option.\n\n```\n<html>\n<body>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: '```
+
+    <?php
+
+    $link_id = mysql_connect(''localhost'',''root'')
+
+    or die ("Could not connect: " . mysql_error());
+
+    mysql_select_db(''hottungal'', $link_id);
+
+    $SQL = "SELECT * FROM staff";
+
+    $result_id = mysql_query($SQL, $link_id);
+
+    or die ("Statement failed: " . mysql_error());
+
+    $X=mysql_num_rows($result_id);
+
+    print "<p>Total number of entries retrieved: $X</p>";
+
+    print "<table>";
+
+    while ($row = mysql_fetch_array($result_id)) ) {
+
+    print "<tr><td>" . $row[''id''] . "</td><td>" . $row[''name''] . "</td><td>" .
+    $row[''job''] . "</td><td>" . $row[''salary''] . "</td></tr>";
+
+    }
+
+    mys_close($link_id);
+
+    print "</table>";
+
+    ?>
+
+    <body>
+
+    </html>
+
+    ```
+
+
+    We are using the staff table used in the previous chapter to retrieve all the
+    rows in it. There are (7) rows in that table. The meaning of the lines of code
+    above are as follows:
+
+
+    $link_id = mysql_connect(''localhost'',''root'') or die ("Could not connect: "
+    , mysql_error());
+
+
+    Connect to My SQL. If not give an error and the program stops there.
+
+
+    mysql_select_db(''hottungal'', $link_id);
+
+
+    Having connected to MySQL look for the database.
+
+
+    $SQL = "SELECT * FROM staff";
+
+
+    Write the query that needs to be run in the database.
+
+
+    $result_id = mysql_query($SQL, $link_id) or die ("Statement failed: " . mysql_error());
+
+
+    Run the query and save the result in a variable or give an error.
+
+
+    $X=mysql_num_rows($result_id);
+
+
+    This line will give the number of rows of available for this query.
+
+
+    while ($row = mysql_fetch_array($result_id)) {
+
+
+    print "<tr><td>" . $row[''id''] . "</td><td>" . $row[''name''] . "</td><td>" .
+    $row[''job''] . "</td><td></tr>";'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '```
+
+    <td>"${row[''''salary'']}"</td><td>"${row[''''location'']}"</td></tr>;\n}
+
+    ```
+
+
+    The rows of the query will be printed through a loop. Here the while loop is used.
+    Each column or field expected in the query is put within rows of a table. Here
+    the quotations are very important. Usual errors are not enclosing the elements
+    in the correct quotations.
+
+
+    ```
+
+    mysql_close($link_id);
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: 'The database has to be closed and so is the table. The result of running this
+    code is as follows:
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_82_0.png)
+
+
+    If all the fields are needed, just write the one that are to displayed and leave
+    the rest alone.
+
+
+    If the query has a condition - say for find all the employees and their information
+    if their salary is greater than 3000 the code can be written as follows:
+
+
+    ```
+
+    <html>
+
+    <body>
+
+    <?php
+
+    $link_id = mysqli_connect(''localhost''
+
+    ```
+
+
+    The result will be as follows:'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: '| Total number of entries retrieved: | | | |
+
+    |---|---|---|---|
+
+    | 225 | Bob | 1500 | Chicago |
+
+    | 223 | Alice | 1300 | Chicago |
+
+    | 225 | Dave | 1200 | Miami |
+
+
+    There is no change except in the SQL line.
+
+
+    Inserting data is an important part of a database table. If there is no data,
+    then there is nothing to retrieve and the database will be practically useless.
+
+
+    To demonstrate the method to insert data into a table in MySQL using PHP let us
+    create a PHP file as follows:
+
+
+    The PHP file has at the end of it that will allow one to enter values for each
+    of the field in the table. The insert function is used to check if the staff button
+    is hit and if the values entered into the form will be inserted into the database.
+    One can write a friendly message after the mysql_query($sql, $link_id) or die
+    ("Statement failed: " . mysql_error());; line.
+
+
+    It is very important to watch for quotation errors in the insert line. The result
+    of data'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: "can be observed by browsing the table using PHPMyAdmin.\n\nThe following is\
+    \ an example of a PHPMyAdmin browse search for the code.\n\n| Edit | Copy | Delete\
+    \ | name location |\n|---|---|---|---|---||\n| [ ] Edit | | | | 101 Rubber 1000\
+    \ | Athens |\n| [ ] Edit | | | | 102 Alabat 1000 | Chicago |\n| [ ] Edit | | |\
+    \ 103 Maths Reception 1000 | Athens |\n| [ ] Edit | | | 104 San Francisco 1000\
+    \ | Atlanta |\n| [ ] Edit | | | 105 Unity 1000 | Miami |\n| [ ] Edit | | | 106\
+    \ Ghost Lancer 1000 | Denver |\n\nTo demonstrate the update method in PHP code\
+    \ for MySQL let us keep in mind that the last field is the prime key.\n\nThe next\
+    \ code allows for all other fields to be upgradable. The code is as follows:\n\
+    \n```\n<html>\n<body>\nif (isset($_POST['submit'])) {\n  $link_id = mysqli_connect(\"\
+    localhost\"\n```\n\nIn the above code the form part is the same as in the case\
+    \ of the insert code. The change is in the query and the format used to set the\
+    \ update fields. The primary key is."
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: 'A new function mysql_affected_rows() is used here and this is used when /delete
+    is to be done in PHP. The result can be observed by browsing the table in PHPMyAdmin
+    as follows:
+
+
+    | id | name | job | salary | location |
+
+    |---|---|---|---|---|n| 100 | Delia | Manager | 5000 | Atlanta |
+
+    | 101 | Debora | Salesman | 3000 | Frankfurt |
+
+    | 102 | Sally | Secretary | 2000 | Atlanta |
+
+    | 103 | Martha | Receptionist | 4000 | Chicago |
+
+    | 104 | James | Accountant | 6000 | Chicago |
+
+    | 105 | Sandy | Trainee | 1000 | Miami |
+
+    | 106 | Jarrer | Lawyer | 7000 | Miami |
+
+    | 107 | Robert | Advisor | 4500 | Dayton |'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: "Last but not the least code for deleting from a database is as follows:\n\n\
+    ```\n<html>\n<body>\n&lt;?php\nif (isset($_POST['submit'])) {\n  $link_id = mysql_connect('localhost',\
+    \ 'root', '') or (\n    die(\"Could not connect: \" . $mysql_error())\n  );\n\
+    \  mysql_select_db(\"thotungal\", $link_id);\n  $sql = \"delete from staff where\
+    \ sid='$_POST['sid']}'\n  limit 1\";\n  $r = mysql_query($sql, $link_id) or (\n\
+    \    die(\"Statement failed: \" . $mysql_error())\n  );\nn  if (mysql_affected_rows()=1)\n\
+    \    print(\"Row has been deleted.\");\n  }\n  mysql_close($link_id);\n}\n?>\n\
+    <form action=\"database.php\" method=\"post\">\n  sid:<input type=\"text\" name=\"\
+    sid\" size=\"20\"><p>\n  <input type=\"submit\" name=\"submit\" value=\"Update\
+    \ database\"><p>\n</form>\n</body>\n&lt;/</html>\n```\n\nIn the code above deleting\
+    \ a row from the query ends with the words LIMIT 1. This makes sure only one row\
+    \ at most is removed.\n\nDelete and update functions are to be used carefully\
+    \ in databases. Generally, this function is limited to certain roles. However,\
+    \ on internet users will need to update or delete their info.\n\nThe mysql_affected_rows()\
+    \ function is used with the delete code. There is a lot of similarity between\
+    \ the code for update and delete.\n\nThe result of the delete can be observed\
+    \ through PHPMyAdmin as follows:\n\n| id | name | job | salary | location |\n\
+    |---|---|---|---|---|\n| 100 | Manager | 5000 | Atlanta |\n| 101 | Administrator\
+    \ | 3000 | Atlanta |\n| 102 | Secretary | 2000 | Atlanta |\n| 103 | Representative\
+    \ | 4000 | Chicago |\n| 104 | Accountant | 5000 | Chicago |\n| 105 | Trainee |\
+    \ 5000 | Miami |\n| 106 | Lawyer | 7000 | Miami |"
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: 'The row that was deleted in the above was the one that was entered in the insert
+    code with
+
+    sid=107.
+
+
+    The above code for delete can be modified to truncate the table leaving the structure
+    but no data
+
+    the table. The code lines that will make this happens is as follows:
+
+
+    ```
+
+    $link_id = mysql_connect(''localhost'',''root'') or die("Could not connect: "
+    , mysql_error());
+
+    mysql_select_db("thottangal",$link_id);
+
+    $sql = "truncate table staff";
+
+    ```
+
+
+    One could modify the code lines to drop the table.
+
+
+    However, both truncate and drop are functions reserved for the administrator of
+    the database and
+
+    therefore in real situations unless specific permissions have been given the programmer
+    might
+
+    not be able to execute code to these functions.
+
+
+    # Version 7 PHP:
+
+
+    Version 7 of PHP is a new release in PHP and one of the areas that has been affected
+    by new
+
+    functions is in the way to deal with MySQL. The new functions are termed as mysqli
+    i
+
+    stands for improvement. The good news is that for those who are familiar with
+    the previous ways
+
+    of connecting to MySQL, can, easily migrate to the new functions because there
+    is similarity in
+
+    the connection will be made.
+
+
+    mysqli_connect() replaces mysql_connect()
+
+
+    mysqli_query() replaces mysql_query()
+
+
+    mysqli_fetch_array() replaces mysqli_fetch_array()
+
+
+    In short instead of mysql the new functions start as mysqli_. Let us look at an
+    example of
+
+    selecting from the data using the new mysqli functions in PHP 7.
+
+
+    ```
+
+    <html><body>
+
+    <?php
+
+    $link_id = mysqli_connect(''localhost'',''root'',''thottangal'');
+
+    or die("Could not connect: " , mysqli_error());
+
+    $sql = "SELECT * FROM staff";
+
+    $result_id = mysqli_query($link_id, $sql);
+
+    nor die("Statement failed: " , mysqli_error($sql)) );
+
+    $x=mysqli_num_rows($result_id);
+
+    print "<table>Number of entries retrieved: " .$x . "</table>";
+
+    print "<table border=1 width=800">
+
+
+    while ( $row = mysqli_fetch_array($result_id) ) {
+
+    print "<tr><td>" .$row[''id''] ."</td>";
+
+    print "<td>" .$row[''name''] ."</td></tr>";
+
+    }
+
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: '```
+
+    <td>$row[''job'']</td><td>$row[''salary'']</td></tr>
+
+    <td>$row[''location'']</td></tr>;
+
+    )
+
+    mysql_free_result($result_id);
+
+    mysqli_close($link_id);
+
+    print(''<table>'');
+
+    </body></html>
+
+    ```
+
+
+    The flow of logic is the same as in the previous version 5. Link_id makes connection
+    to the database. The difference is here that there are four elements to be entered
+    within mysqli_connect brackets. The last one is the name of database. The remaining
+    elements holds true for local install for purposes and be slightly different on
+    the hosting site. This value needs to be obtained from the technical support of
+    shared hosting site if that is the website is located below to fit version.
+
+
+    After giving the query to $sql the number of rows obtained from the array created
+    by mysqli_fetch_array is array. The array is printed out as shown in the code
+    above. The program is closed by freeing the query from memory and then closing
+    the connection. The function mysqli_fetch_array can handle arrays with string
+    or number keywords.
+
+
+    Thus the version in PHP 5 and 7 are very similar except in the examples mentioned
+    in the two paragraphs above. Now let try to insert a row into the database. The
+    same code from version 5 is modified below to fit version.
+
+
+    ```
+
+    <html>
+
+    <body>
+
+    <?php
+
+    if (isset($_POST[''submit''])) {
+
+    $link_id = mysqli_connect(''localhost'',''root'',''thottugal'')
+
+    or die("Could not connect: " . mysqli_connect_error());
+
+    $sql = "insert into staff(id,name,salary,location) VALUES(".$_POST[''id''],\'',''.$_POST[''name''],\'',''.$_POST[''salary''],\'',''.$_POST[''location''].\)";
+
+    mysqli_query($link_id,$sql) or die(" Statement failed: " . mysqli_error($sql));
+
+    mysqli_close($link_id);
+
+    }
+
+    ?>
+
+    <form action="database.php" method="post">
+
+    <id:<input type="text" name="id" size="20"><p>
+
+    <name:<input type="text" name="name" size="50"><p>
+
+    <job:<input type="text" name="job" size="30"><p>
+
+    salary:<input type="text" name="salary" size="10"><p>
+
+    location:<input type="text" name="location" size="30"><p>
+
+    <input type="submit" name="submit" value="add to database">
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: '```
+
+    <p>
+
+    </form>
+
+    </body></html>
+
+    ```
+
+
+    Like in the previous version we connect to the database and execute the query
+    and close the link.
+
+    The single PHP file has a form to display and use isset() function after verifying
+    the hitting of the submit button insertion will take place. Let us look at the
+    code for update.
+
+
+    ```
+
+    <html>
+
+    <body>
+
+    <?php
+
+    if (isset(\$_POST[''submit''])) {
+
+    \$link_id = mysqli_connect(''localhost'',''root'',''thottangal'')
+
+    nor die("Could not connect: " . mysqli_error());
+
+    \$Sql = "update staff set name=".\$_POST[''name'']",
+
+    job=".\$_POST[''job'']",salary=".\$_POST[''salary'']",
+
+    location=".\$_POST[''location'']" where
+
+    sid=".\$_POST[''sid'']";
+
+    \$result = mysqli_query(\$link_id, \$Sql) or die("Statement failed: " . mysqli_error(\$link_id));
+
+    if ($result) {
+
+    print "Table updated.";
+
+    }
+
+    }
+
+    <form action="database.php" method="post">
+
+    <input type="text" name="sid" size="20">\p>
+
+    name:<input type="text" name="name" size="50">\p>
+
+    job:<input type="text" name="job" size="30">\p>
+
+    salary:<input type="text" name="salary" size="10">\p>
+
+    location:<input type="text" name="location" size="30">\p>
+
+    <p>
+
+    <input type="submit" name="submit" value="Update
+
+    database"\p><p></form></body></html>
+
+    ```
+
+
+    The difference compared the same code when used with PHP version 5 is that the
+    mysql_affected_rows has been replaced by an if statement in addition to using
+    an i after the mysql_functions.
+
+
+    To delete a row, replace the query in Sql by "delete from staff where sid={\$_POST[''sid'']}
+    limit 1" and remove the input text boxes for everything except the sid which is
+    the primary key.
+
+
+    The message under the if condition should be if ($r) { print"Row deleted" }'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: '# Chapter 9. PHP for an Oracle Database'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: 'In the previous chapter the database discussed was MySQL. In this chapter let
+    us take a look at the Oracle database with respect to PHP. The Oracle database
+    being discussed here is the express version 11.2. Appendix II shows how to install
+    it if it is not on the client or standalone machine being to be used.
+
+
+    To use PHP with Oracle some configuration changes will be needed for the user
+    with password. The code for this book was developed using the WAMP editor EasyPHP
+    and this has several versions. It is not required to have the latest but the minimum
+    version of this editor that will run the code in this book that runs PHP 5 and
+    above. The configuration change required to connect to Oracle using or a similar
+    one is shown in Appendix III and IV.
+
+
+    It is very important to write down the default values of the Oracle installation.
+    In the example(s) of this chapter the database installed is called orcl. The hr
+    user and tables associated with that user is going to be used
+
+
+    Let us create a table called in the oracle database under the hr user. To do this
+    the sql plus from the apps menu in windows under Oracle. The interface will look
+    like this. If the account is locked, login as the sybase and use the following
+    - alter our account unlock; then connect to hr.
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_92_0.png)
+
+
+    To create the employee table, using the following command:
+
+
+    ```
+
+    create employee (sid varchar2(10), name varchar2(50), manager varchar2(10) constraint
+    sid_pk primary key = (sid));
+
+    ```
+
+
+    This will create the employee table with sid as the primary key. For the purpose
+    of this book this simple will be sufficient. Many on SQL might be helpful if SQL
+    with Oracle is new to you.
+
+
+    If the changes to PHP.ini (configuration file) as discussed in Appendix III and
+    IV has been done and saved, it is time to get the PHP connectors for Oracle. PHP
+    program is being connected to the Oracle database using the PHP OCI8 extension.
+
+
+    This extension of writing this book can be used to Oracle 12,11, 10 and 9 databases.
+    PHP by itself is independent of the Oracle database.
+
+
+    To connect to the OCI8 PHP class library provides the following functions oci_connect(),
+    oci_pconnect and oci_new_connect(). If a no persistent connection is required
+    then use oci_connect(). This is also cached. This improves efficiency of connection.
+
+
+    The cache used by oci_connect is removed after the script has been run or when
+    the connection resource has closed.
+
+
+    The oci_new_connect is not cached while oci_pconnect() is cached and can be used
+    across'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: "requests. Oci_close() function is required with any of the three functions\
+    \ mentioned thus far.\nAfter creating the employee table above using the create\
+    \ statement. The values have to be\ninserted.\n\nThe easiest way is using the\
+    \ insert row\ninsert into employee values('101','Albert','103');\nand similarly\
+    \ the other rows of data as shown in the picture in the previous page.\n\nAfter\
+    \ Oracle has been installed find the tnsnames.ora file which is usually in the\
+    \ network/admin/\nfolder. This file give the sid value of the database. The default\
+    \ is oci as mentioned earlier in\nthis chapter. The port is 1521 and will be the\
+    \ Local Host if it is the installation of\nOracle 11.2 express on a standalone\
+    \ computer or notebook.\n\nThe oci_connect() function has three parts: username,\
+    \ password and connection_string.\nThe username we are connecting to a table under\
+    \ hr user is hr and password is hr and\nconnection string is oci- the sid or name\
+    \ of database.\nMake sure the sid name is exactly like it is stated in tnsnames.file.\n\
+    The oci_parse() is used to parse a query.\nThe oci_execute() is used to execute\
+    \ a statement.\nici_fetch_close() will close the connection to the database.\n\
+    \nIt might be noticed all these steps are similar to the way PHP connects to MySQL\
+    \ database. Now\nlet us look at the following code.\n\n```\n<?php\n$db = oci_connect('hr',\
+    \ 'hr', 'oci');\nif (!$db) {\n    trigger_error('Unable to connect to database',\n\
+    \    e_user_error);\n}\n$sql = 'select * from employee\\';\n$stmt = oci_parse($db,\
+    \ $sql);\noci_execute($stmt);\n$count = 0;\nprint(\"<table>\");\nwhile ($row =\
+    \ oci_fetch_array($stmt, OCI_BOTH)) != false {\n    print(\"<tr><td>\" .$row['0']\
+    \ .\"</td><td>\" .$row['1'] .\"</td>\");\n    print(\"<tr><td>\" .$row['2'] .\"\
+    </td><td>\" </tr>\");\n    $count++;\n}\nprint(\"</table>\");\nprint $count .\
+    \ \".record(s) found.\\noci_free_statement($stmt);\n```"
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: "```\noci_close($db);\n?>\n</body>\n</html>\n```\n\nThe output will be as follows:\n\
+    \n![](img/d7e83bd680bb691d653bca3af472a71a_94_0.png)\n\nThe oci_free_statement()\
+    \ function is used mainly with the select query as a large amount of data will\
+    \ be involved and it is best to clear the memory after the execution of such a\
+    \ query.\n\nIn the above code, oci_fetch_array has two parameters-the statement\
+    \ being parsed and the type of array keys. OCI_BOTH stands for both string and\
+    \ numerical keys for an array. If the key is a string, OCI_ASSOC can be used instead.\
+    \ The row[0] indicates the first column of the oracle table in the array.\n\n\
+    If the column heading of each table needs to be used, keep in mind that names\
+    \ can be case sensitive. The default is that the column headings are in capital\
+    \ letters. Thus the above code can be modified as follows if column headings instead\
+    \ of numbers are required as array keys.\n\n```\nwhile ($row = oci_fetch_array($stmt,\
+    \ OCI_BOTH)) != \nfalse {\n    print(\"<td>\" . $row['SID'] . \"</td><td>\" .\
+    \ $row['NAME'] . \"</td><td></td>\");\n}\n```\n\nThe rest of the code is the same.\
+    \ There is a term called hmlentities in PHP. Its purpose is to convert all special\
+    \ characters into HTML entities. One of them is the string or the other parameter\
+    \ must be selected from the ones below:\n\nENT_COMPAT - convert double quotes\
+    \ and leave single quotes.\n\nENT_QUOTES - convert both double and single quotes.\n\
+    \nENT_IGNORE - discard invalid code unit sequences instead of returning an empty\
+    \ string. This should be used carefully to security issues.\n\nENT_SUBSTITUTE\
+    \ - replace invalid code unit sequences with unicode replacement"
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: "character U + FFD (UTF-8) or &#FFFD instead of returning an empty string.\n\
+    ENT_DISALLOWED - to replace invalid code points for the given document type with\
+    \ a replacement character U + FFD (UTF-8) or &#FFFD instead of leaving them as\
+    \ is. Usefull in XML documents with embedded external contents.\n\nLet us modify\
+    \ the above code to use html entities to print out the result of the employee\
+    \ table.\n\n```\n<?php\n$db = oci_connect('hr', 'hr', 'orcl');\nif (!$db) {\n\
+    \    trigger_error('Unable to connect to database', $e_user_error);\n}\n\n$sql\
+    \ = 'select * from employee';\n$stmt = oci_parse($db, $sql);\noci_execute($stmt);\n\
+    $count = 0;\nprint(\"<table border=1\\\");\nwhile ($row = oci_fetch_array($stmt,\
+    \ OCI_ASSOC+OCI_RETURN_NULLS)) != false) {\n    echo(\"<tr>\\\");\n    foreach\
+    \ ($row as $item) {\n        echo(\"<td>\" . htmlspecialchars($item, ENT_QUOTES,\
+    \ \"UTF-8\") . \"</td>\\\");\n    }\n    echo(\"</tr>\\\");\n    $count++;\n}\n\
+    print(\"</table>\\\");\nprint(\"Count: \" . $count . \".record(s) found.\\\");\n\
+    oci_free_statement($stmt);\noci_close($db);\n?>\n<body>\n</html>\"\n```\n\nThe\
+    \ output will be the same as the previous code. The difference here is there is\
+    \ no need to mention the key values in numeric or non numeric manner.\n\nLet us\
+    \ now look at a code to insert data into the Oracle database.\n\n```\n<?php\n\
+    $db = oci_connect('hr', 'hr', 'orcl');\nif (!$db) {\n    trigger_error('Unable\
+    \ to connect to database', $e_user_error);\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: "```\n$sql = \"insert into employee (sid,name,manager) values\n('104','Adam','102');\"\
+    ;\n$stmt = oci_parse($db, $sql);\noci_execute($stmt, OCI_NO_AUTO_COMMIT);\noci_commit($db);\n\
+    oci_close($db);\n?>\n<body>\n</html>\n```\n\nThe executed statement is followed\
+    \ by a commit to confirm the insertion into the database table.\nici_execute()\
+    \ takes two parameters. The first is the parse statement as seen above and the\
+    \ second is one method. The methods are available in oci_execute():\nOCI_COMMIT_ON_SUCCESS\
+    \ - this will automatically commit outstanding changes for connection when the\
+    \ statement has succeeded. This is the default.\nOCI_DEFAULT - this an old method\
+    \ which might be available in the version of OCI8 being used usage of this is\
+    \ not advised since 5.2 of PHP.\nOCI_NO_AUTO_COMMIT - like the one used in the\
+    \ example does not commit changes. If this is needed then oci_commit() has to\
+    \ be used similar to the example above. If not used any changes will be rolled\
+    \ back by the program exits.\nThe insert in the example could be done by another\
+    \ method. This method involves using the OCI8 function called oci_bind_by_name().\n\
+    ici_bind_by_name() binds a PHP variable to an Oracle place holder. This binding\
+    \ improves database performance and is also a way to avoid SQL injection security\
+    \ issues. SQL injection is a type of computer attack and also a way in which malicious\
+    \ code is embedded in a poorly-designed application and passed to the backend\
+    \ database. Bind variables are not treated as part of the SQL statement hence\
+    \ decreases the SQL injection issues. The code is as follows:\n\n```\n<?php\n\
+    $db = oci_connect('hr', 'hr', 'orcl');\nif (!$db) {\n    trigger_error('Unable\
+    \ to connect to database', E_USER_ERROR);\n}\n$sql = \"insert into employee (sid,name,manager)\
+    \ values\n(sid_by,name_by_name,manager_by)\";\n$stmt = oci_parse($db, $sql);\n\
+    $sid='104';\n$name='Adam';\n$manager='102';\noci_bind_by_name($stmt, \"sid_by\"\
+    , $sid);\noci_bind_by_name($stmt, \"name_bv\", $name);\noci_bind_by_name($stmt,\
+    \ \"manager_bv\", $manager);\n```"
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: '```
+
+    oci_execute($stmt,OCI_NO_AUTO_COMMIT);
+
+    oci_commit($Db);
+
+    oci_close($Db);
+
+    ?>
+
+    <body>
+
+    </html>
+
+    ```
+
+
+    The code creates three bind variables denoted by the _bv ending and values to
+    the insert statement is sent via reference in the bind statement associated with
+    $sql.
+
+
+    The code for updating a row in an oracle database table is as follows:
+
+
+    ```
+
+    <?php
+
+    $Db = oci_connect(''hr'', ''hr'', ''orcl'');
+
+    if (!$Db) {
+
+    ntrigger_error(''Unable to connect to database,\ne_user_error());
+
+    }
+
+    $sql = "update employee set manager=''102''\nsid=''103";
+
+    $stmt = oci_parse($Db, $sql);
+
+    oci_execute($stmt,OCI_NO_AUTO_COMMIT);
+
+    oci_commit($Db);
+
+    oci_close($Db);
+
+    ?>
+
+    ```
+
+
+    The code for deleting rows or dropping a table can be obtained from the above
+    provided permission to do these are given by the administrator.
+
+
+    ```
+
+    <?php
+
+    $Db = oci_connect(''hr'', ''hr'', ''orcl'');
+
+    if (!$Db) {
+
+    trigger_error(''Unable to connect to database,\ne_user_error());
+
+    }
+
+    $sql = "delete employee where sid=''103";
+
+    $stmt = oci_parse($Db, $sql);
+
+    oci_execute($stmt,OCI_NO_AUTO_COMMIT);
+
+    oci_commit($Db);
+
+    oci_close($Db);
+
+    ?>
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: '# Chapter 10. Regular Expressions
+
+
+    Regular expressions are found in all programming languages to take into consideration
+    the format of some inputs. For example, the postal code or zip code in many countries
+    are not in the same format as in the United States.
+
+
+    PHP supports two types of regular expressions - POSIX extended and PCRE which
+    is Pearl compatible. Note: The information below is applicable PHP version 5 only.
+    Even in version 5 some will not accept the functions below. Functions in PHP 7
+    are shown at the end of this chapter.
+
+
+    POSIX has six functions in PHP and that they are:
+
+
+    ereg() - Match a pattern and is case sensitive.
+
+
+    regi() - Match a pattern and is not case sensitive.
+
+
+    ereg_replace() - Matches and replaces a pattern and is case sensitive.
+
+
+    egi_replace() - Matches and replaces a pattern and is not case sensitive.
+
+
+    split() - Splits a string using a pattern and is case sensitive.
+
+
+    spliti() - Splits a string using a pattern and is not case sensitive.
+
+
+    Metacharacters help to create patterns to test the input string against.
+
+
+    +   . is a period meaning any single character?
+
+
+    +   ^ is a caret which means beginning of a string.
+
+
+    +   $ means end of a string.
+
+
+    +   | means alternatives (or).
+
+
+    +   () means group.
+
+
+    Quantifiers:
+
+
+    +   ? - zero or one occurrences.
+
+
+    +   * - zero or more occurrences.
+
+    + - One or more occurrences.
+
+
+    +   (x) - Exactly x occurrences.'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: "{x, y} - Between x and y ocurences (both are inclusive)\n\n{x, } - At least\
+    \ x occurrences.\n\n# Character classes:\n\n+   - [a-z] - any lowercase letter.\n\
+    \n+   - [a-z A-Z] - any letter.\n\n+   - [0-9] - any number.\n\n+   - [\\f\\r\\\
+    t\\v] - any white space.\n\n+   - [aeiou] - any vowel.\n\n+   - [[:alnum:]] -\
+    \ any letter or number.\n\n+   - [[:alpha:]] - any letter (same as [a-zA-Z])\n\
+    \n+   - [[:blank:]] - any tabs or spaces.\n\n+   - [[:digit:]] - any number.\n\
+    \n+   - [[:lower:]] - any lowercase letter.\n\n+   - [[:upper:]] - any uppercase\
+    \ letter.\n\n+   - [[:punct:]] - any punctuation character.\n\n+   - [[:space:]]\
+    \ - any white space.\n\nA literal is a value that is written exactly as it is\
+    \ interpreted. For example, the letter \"b\" matches the letter b.\n\nNow let\
+    \ us write a program that will match the input using a five-digit postal code.\
+    \ The postal code consists of only numbers.\n\n```\n<html>\n<body>\n<?php\nif\
+    \ (isset($_POST['submit'])) {\n  $Pattern = $_POST['pattern'];\n  print $Pattern;\n\
+    \  $zipcode = $_POST['zipcode'];\n  print $zipcode;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: "```\nif (eregi($pattern,$zipcode)) {\n    print\"The zipcode is a five-digit\
+    \ number\";\n} else {\n    print\"The zipcode is not a five-digit number\";\n\
+    }\n?>\n<form action=\"expression.php\" method=\"post\">\npattern:<input type=\"\
+    text\" name=\"pattern\" size=\"20\">\n<p>\ncode:<input type=\"text\" name=\"zipcode\"\
+    \ size=\"20\">\n<p>\n<input type=\"submit\" name=\"submit\" value=\"Check zipcode\"\
+    ><<p>\n</form>\n<body>\n</html>\n```\n\nNow if the pattern is entered and see\
+    \ if the pattern is ^([0-9]{5})$ which stands for the five digit zip code then\
+    \ enter a number it will be a positive answer if the numbers match or if it does\
+    \ not then a negative number will be given.\n\nModify the code and see if the\
+    \ pattern is ^ http://www. , and enter a URL to compare the pattern against. Note\
+    \ that the error messages and input boxes will have to be modified to pass on\
+    \ the correct information.\n\n# PHP 7:\n\nIn the new version of PHP\n\neregi()\
+    \ and see eg function (s) replaced by preg_match().\n\nereg_replace() replaced\
+    \ by preg_replace()\n\nsplit() replaced by preg_split()\n\nLet look at some examples.\n\
+    \n```\n<?php\n// The \"i\" after the pattern delimiter indicates a case-insensitive\
+    \ search\nif (preg_match(\"/PHP is easy./i\", \"PHP is easy.\")) {\n    echo \"\
+    A match was found.\";\n} else {\n    echo \"A match was not found.\";\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: "```\n}\n?>\n```\n\n```\n<?php\n// get host name from URL\npreg_match(\"@(https?://\\\
+    /)?([^/]+)?@/i\",\n\n    \"http://www.xyz.com/index.html\", $matches);\n$host\
+    \ = $matches[1];\nprint $host;\n?>\n```\n\nThis will print www.xyz.com."
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: '# Appendix I. Workshop
+
+
+    The end of any book in programming is only as good as the understanding derived
+    from it. The following questions are examples of knowledge that should have been
+    obtained from this book or from similar ones.
+
+
+    +   1. Name any two functions to print a message in PHP?
+
+
+    Answer: echo(), print();
+
+
+    +   2. How can an external file be included in a PHP program?
+
+
+    Answer: The function include() or require() can be used to include an external
+    file. The difference is in the way function can give error messages while continuing
+    to run the code but require() will terminate the program upon encountering any
+    errors.
+
+
+    +   3. What is the difference between GET and POST methods of transferring data?
+
+
+    Answer: GET is used to transfer small amounts of data and this data will be visible
+    during transfer. POST does not display the values being sent to the PHP program.
+
+
+    +   4. How are arrays declared in PHP?
+
+
+    Answer: $fruit = array(''apple'', ''grape'', ''lemon'');
+
+
+    +   5. Which function will give the number of elements of an array?
+
+
+    Answer: count(). As in count($array);
+
+
+    +   6. What is the difference between a session and a cookie?
+
+
+    Answer: Sessions are stored in the server and cookies are stored in the client
+    machines. Cookies have expiration time. Sessions are closed when the browser is
+    closed. Users do not have access to data stored in the session.
+
+
+    +   7. How are cookies created and read?
+
+
+    Answer: A cookie is created by using the setcookie() function and retrieved using
+    the $_COOKIE[''cookie name''] function. Within the setcookie() function the name
+    of the cookie, value and duration should be included.
+
+
+    +   8. Name different ways to write a loop in PHP.
+
+
+    Answer: While, For and do..while.
+
+
+    +   9. What is the first step in trying to connect to MySQL database using PHP?'
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: 'Answer: Connection to MySQL. Then the database.
+
+
+    10. What is the function of explode()?
+
+
+    Answer: Explode splits a string into an array by string.
+
+
+    11. What is the role of trim()?
+
+
+    Answer: Removes whitespaces from both ends of a string.
+
+
+    12. How can a user be redirected to another webpage?
+
+
+    Answer: Use the header function.
+
+
+    13. How to find the length of a string?
+
+
+    Answer: Use the strlen() function.
+
+
+    14. An array with a string key is called \_\_\_
+
+
+    Answer: Associative array.
+
+
+    15. Which function can be used to check if a form has been submitted in a PHP
+    program?
+
+
+    Answer: isset() used with an if statement.
+
+
+    16. How to send mail in PHP?
+
+
+    Answer: Use the mail() function - mail($to,$subject,$message,$Sheaders);
+
+
+    17. What is one encryption function that can be used in PHP?
+
+
+    Answer: MDS.
+
+
+    18. What is meant by the term pear?
+
+
+    Answer: PEAR is a framework and distribution system for reusable PHP components.The
+    project seeks to provide a structured library of code, maintain a system for distributing
+    code and for managing code packages, and promote a standard coding style.PEAR
+    is broken into three classes: PEAR Core Components, PEAR Packages, and PECL Packages.
+
+
+    19. What is the difference between PHP and Javascript?
+
+
+    Answer: PHP is server based while Javascript is client based.'
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: '20. Which extension needs to be activated to use PHP with Oracle?
+
+
+    Answer: oci8 extension in the PHP configuration file needs to be uncommented.'
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: '# Practical Workshop
+
+
+    1. Create a table named staff under the user HR in an Oracle database. It should
+    have six columns - id, name, job, manager, salary and location. All the variables
+    are text or varchar2 except for salary which is a number. The primary key is id.
+
+
+    Using PHP insert any six rows of values to this table.
+
+
+    +   2. Using PHP display all rows whose salary is greater than 1000.
+
+
+    +   3. Write a program that will read an array of numbers and puts them in an
+    ascending order.
+
+
+    +   4. Develop a PHP page that will save the page preferences of the user and
+    allow him to use the page for about fifteen minutes.
+
+
+    +   5. Develop a PHP webpage that allows one to enter a postal code, telephone
+    number and country code in three letters based on the American, Canadian, European
+    and any Asian format. The program must be able to give appropriate messages to
+    guide the user.'
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: '# Appendix II. Installing Oracle Database
+
+
+    Check all your applications and see if Oracle is installed. On a windows machine
+    we look as usual from the start button onto the applications or programs. Expand
+    any oracle installation and find the SQL plus option.
+
+
+    If Oracle is not one of your applications, then de go to oracle.com and download
+    section and based on your Windows or Linux details download the appropriate version
+    for your computer. At the time of writing this book the only expression version
+    was 11G version 2.
+
+
+    If one has any older version such Oracle 10 Express or Oracle 9i the codes in
+    this book will also work. Installing at the time of writing this book is not required
+    for content of this book.
+
+
+    Please note that internet connection will be required to complete the registration
+    and installation of the Oracle database.
+
+
+    After installation and registration, the internet connection will not be required
+    for operating the database. At the time of writing this book the oracle website
+    looked like this.
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_106_0.png)
+
+
+    Follow the downloads to database and then to oracle database. The following screen
+    will come up.'
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: 'Note that there are two versions for windows. Choose the one that is relevant
+    to your machine. Make sure both files are downloaded.
+
+
+    Click on see all for more details. Oracle requires down loaders of their products
+    to register. This is a free profile registration.
+
+
+    The next screen if one clicks will all look like this. One needs to accept the
+    license before downloading the appropriate software. Once the files are downloaded
+    make sure there is internet connection on the computer before preparing to install
+    the software.
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_107_0.png)
+
+
+    Installation of the windows based edition of Oracle release 11.2 looks similar
+    to the following screen shots. Make sure to write down the details of each screen.'
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: '![](img/d7e83bd680bb691d653bca3af472a71a_108_0.png)
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_108_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: '![](img/d7e83bd680bb691d653bca3af472a71a_109_0.png)
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_109_1.png)
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_109_2.png)
+
+
+    Make sure to note down the password and name of database created. This should
+    be kept somewhere safe.'
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: '![](img/d7e83bd680bb691d653bca3af472a71a_110_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: '# # Appendix III. PHP with Oracle
+
+
+    To make changes to the EasyPHP WAMP click on the E icon on the desktop and choose
+
+    configuration and PHP. This is for version 12 -14 using PHP 5 to 5.6.
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_111_0.png)
+
+
+    This will open the PHP configuration file. Go to the line
+
+
+    ```
+
+    extension=php_mysqli.dll
+
+    ;extension=php_oci8.dll
+
+    extension=php_oci8_11g.dll
+
+    ```
+
+
+    which says extension=php_oci8_11g.dll and uncomment it. That remove the "; in
+    front of it.
+
+    Note the previous line should be left as is. This is because we are activating
+    the extension of oci8
+
+    for 11g version. Save the file with file save and restart the machine or EasyPHP
+
+    editor and that is it. If PHP has been installed separately then the PHP.ini configuration
+    file
+
+    to the same above after any original file is made.
+
+
+    Confirm with any administrator if the computer is not a standalone before making
+    changes to any
+
+    configuration files. Check Appendix IV for PHP?'
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: '# # Appendix IV. Easy PHP interface
+
+
+    In this section we look at the different features or interfaces of the editor
+    used to write programs in this book. The editor is Easy PHP and it can be downloaded
+    from http://www.easyphp.org.
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_112_0.png)
+
+
+    The interface can be obtained after installing the latest version of EasyPHP editor.
+    Upto version 17 there is no need for an internet connection to complete the installation.
+    Once the shortcut appears on the desktop right click and open. As the "E" icon
+    appears on the navigation bar of the screen right click and choose open dashboard.
+    This will lead to the interface above.
+
+
+    To start using the editor click on start HTTP server and if database is required
+    then click on start Database Server. Note that the default version of PHP in version
+    17 is 5.6 and so if that is not what is needed change settings under the HTTP
+    server. This is the third button after the red one. Choose version and click ok.
+
+
+    The portable directory is where the scripts are and it is from here the PHP scripts
+    have to be run. The files are located in the eds-www directory under c drive or
+    the chosen under EasyPHP. Use a notepad to edit the PHP programs and keep it in
+    this directory. It will appear under portable directory.
+
+
+    The MySQL administration allows one to bring up the PHMyAdmin to create databases
+    or tables. The entire administration of the MySQL database is done from here.
+
+
+    There is no access to other databases as Oracle from this interface. Perhaps in
+    later versions of the editor there might be. To activate the OCI8 feature for
+    connection to Oracle it is important to find the PHP.ini file. There will two
+    of them in this version of the editor as there are two versions of PHP associated
+    with it. Find the PHP.ini file for the property you want and to do this go the
+    installation folder of EasyPHP. On the computer used for this book it was located
+    at:
+
+
+    ```
+
+    C:\Program Files (x86)\EasyPHP-Devserver-17\eds\binaries\php
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: 'for the version 7 and version 5. Choose the folder for the version of PHP you
+    want and then find the PHP.ini file and uncomment (remove ;) the line dealing
+    with OCI18 dll. If there are two lines, then uncomment the one associated with
+    Oracle express version if that is the version of the database installed on the
+    computer being used.
+
+
+    The default version of the PHP on this editor (version 7) is PHP 5.6. There is
+    an online quick editor that can be used to paste code and test.
+
+
+    ![](img/d7e83bd680bb691d653bca3af472a71a_113_0.png)
+
+
+    This is pretty hand for those who are new to PHP or for those who do not like
+    to create files in notepad etc.
+
+
+    Just keep in mind so far this online editor is for version 5.6 and one can be
+    sure in newer versions of this editor in the future one cans see more up to date
+    online editors.'
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: '# Appendix V. References
+
+
+    I compiled this book for a laboratory class associated with an undergraduate course
+    in web development.
+
+
+    The following sources were referenced:
+
+
+    Programming PHP, 3rd Edition, Creating Dynamic Web Pages ,By Rasmus Lerdorf, Kevin
+    Tatroe, Peter MacIntyre, O''Reilly Media,February 2013.
+
+
+    Begining PHP and MySQL, From Novice to Professional, Gilmore, W Jason, Apress,
+    2010
+
+
+    Oracle with PHP: php.net/manual/en/function.oci-connect.php'
+  merge: -1
+  img_proc: true
