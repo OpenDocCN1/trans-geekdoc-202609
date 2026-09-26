@@ -1,0 +1,1497 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # The American Journal of Cardiology 237 (2025) 35–40
+
+
+    Contents lists available at ScienceDirect
+
+
+    # # The American Journal of Cardiology
+
+
+    journal homepage: www.elsevier.com/locate/ajc
+
+
+    # # A Multicenter Evaluation of the Impact of Therapies on Deep Learning-Based
+    Electrographic Hypertrophic Cardiopathy
+
+
+    Lovepeed S. Dhingra, MBBSᵃᵇ,¹¹, Veer Sangha, BSᵃᵇ,¹,², Arya Aminoroyna, MD, MPHᶜ,
+    Robyn Ryder, MD ᵈ, Andrew Galla, MD ⁵, Adel H Ali, MD ⁶, Nandini Mehta, MD⁷, Harman
+    L Kranmul, MD, SM⁸, Soumonk Sen, MD ⁹, Christopher K. Kramer, MD¹⁰, Matthew W.
+    Martinez, MD¹¹, Milind Y. Desai, MDᵃᵇ¹¹, Evangelos K. Okimono, MD, PhD¹², Rohan
+    Khera, MD, MSᵃᵇ¹³
+
+
+    ᵃ Section of Cardiology, Department of Medicine, Yale School of Medicine, New
+    Haven, Connecticut
+
+    ᵇ Department of Engineering Science, University of Oxford, United Kingdom
+
+    ᶜ Department of Cardiology, Albany Medical Center, New York, New York
+
+    ⁴ Sports and Hypertrophic Cardiopathy, Morrison Medical Center, Morristown, New
+    Jersey
+
+    ⁵ Heart, Vascular and Thoracic Institute, Cleveland, Ohio
+
+    ⁶ Center for Excellence Yale Haven Hospital, New Haven, Connecticut
+
+    ⁷ Cardiovascular Division, Department of Medicine, University of Virginia Charlottesville,
+    Virginia
+
+    ⁸ Biometrics and Data Science, Yale School of Medicine, New Haven, Connecticut
+
+    ⁹ Section of Informatics, Department of Biostatistics, Yale School of Medicine,
+    New Haven, Connecticut
+
+
+    **Keywords:** hypertrophic cardiomyopathy artificial intelligence septal reduction
+    therapy mavacamanten
+
+
+    # ARTICLE INFO
+
+
+    Article History:
+
+    Received 24 January 2024
+
+    Revised 16 October 2024
+
+    Accepted 17 November 2024
+
+
+    Artificial intelligence—enhanced electrocardiography (AI-ECG) can identify hypertrophic
+    cardiomyopathy (HCM) on 12lead ECGs and offers a novel way to monitor treatment
+    response. Whether the surgical or cutaneous reduction of the septum (SRT) or HCM
+    therapies, mavacamanten offers an alternative. We aimed to assess the utility
+    of AI-ECG as a strategy to evaluate biologic responses to SRT and HCM across three
+    sites: Yale Haven Health System (YHHS), Cleveland Clinic Foundation (CCF), and
+    Atlantic Health System (AHS) for AI-electrocardiography images from patients with
+    mavacamanten at 70 days after SRT, 100 days at YHHS, and 145 days at AHS. There
+    was no significant difference in AI-ECG scores (mean 0.55 [interquartile range
+    0.24 to 0.77] vs SRT [mean 0.59 to 0.70]). The AI-ECG score did not improve after
+    SRT (mean 0.61 [0.38 to 0.79] to 0.69 [0.52 to 0.93]) or with mavacamanten (mean
+    0.41 [0.22 to 0.77], which significantly decreased from 0.28 to 0.11 and 0.08
+    [0.01 to 0.50] by the Wilcoxon-rank test) at the end of a median follow-up period
+    of 237 days. In conclusion, we observed a potential for improved AI-ECG scores
+    with SRT, in contrast to decrease with mavacamanten. Our approach suggests the
+    benefit of point-of-care monitoring of pathophysiology during medical therapy
+    in HCM using ECG technologies.
+
+
+    Artificial intelligence—enhanced electrocardiography (AI-ECG) interpretation identify
+    hypertrophic cardiomyopathy (HCM) on 12-lead ECGs and represents a novel way to
+    monitor treatment response. HCM is a genetically determined disease that affects
+    1 in 200 people worldwide and is the leading cause of sudden cardiac death. In
+    HCM patients, mavacamanten is the first cardiac myosin inhibitor to show efficacy
+    in reducing ventricular hypertrophy and improving function. Before the emergence
+    of mavacamanten, septal reduction therapy (SRT), which includes alcohol septal
+    ablation and ventricular myotomy, was the key treatment for patients experiencing
+
+
+    The study was supported in part by National Institutes of Health (Maryland, Maryland)
+    under grants R01AG09881, R01HL117658, and K2HL153775 to Dr. Khera and R17HL07952-01
+    to Dr. Smith. The SRT team collected data from YHHS (Yale Haven Health System,
+    New Haven, CT). Some data was previously presented at the 2023 AHA Scientific
+    Session. The funders had no role in the design and conduct of the protocol, preparation,
+    review, or approval of the manuscript; and decision to submit for publication.
+
+
+    *Corresponding author: Tel Dhingra (203-688-2430)
+
+    * E-mail: rokhera@yale.edu (R. Khera)
+
+    ¹ Dhingra and Sangha contributed equally to this study.
+
+
+    https://doi.org/10.1016/j.jac.2024.11.028
+
+    0022-9149(24)024 Elsevier Ltd. All rights reserved, including those for this text
+    and data, AI, and similar technologies.'
+  - '[PAGE 1]
+
+
+    S.L. Dhingra et al./ The American Journal of Cardiology 237 (2022) 35–40
+
+
+    symptomatic limitations of obstructive HCM (OHCM) depepite medical therapy.
+
+
+    The YNHMS represents the referral center in southern England, consisting of 5
+    hospitals and a large medical group across Connecticut, New York, and Island serving
+    over 2.7 million patients. CCC is the largest private medical group in the United
+    States, with 15 hospitals and over 200 patient locations, serving over 1 million
+    patients annually in northeast Ohio. The AHA is a 7-hospital network with 200
+    patient locations, serving over 1.5 million patients per year.
+
+
+    Conventionally, the serious monitoring in patients with HCM has involved advanced
+    cardiac imaging, including cardiac resonance imaging and high counts, which can
+    be limited by access and costs. Recently, AI-HCM has shown promise in tracking
+    longitudinal changes in disease and treatment. In a phase 2 clinical trial of
+    SRT, the AI-HCM echocardiogram showed efficacy in patients receivingavacam. However,
+    there has not been a comprehensive assessment of the effect of SRT on the modification
+    of cardiac structure. Current deep learning-based approaches for evaluation have
+    only been tested in highly selected patients enrolled in trials. These approaches
+    have also relied
+
+
+    between 2013 and 2023. We included 100 adults and 145 patients who underwent SRT
+    at each site and identified by the site-specific physicians (MD and MM,). The
+    ECGs of patients before and after SRT were analyzed using visual inspection and
+    with Epic Electronic Health Record at each site.
+
+
+    We leveraged a deep-based strategy to evaluate evaluate SRT for HCM. For this,
+    we developed a model that detects HCM from 12-lead ECGs and evaluated ECGs from
+    patients who underwent SRT at 3 distinct institutions. We used macamavent at 1
+    of these institutions as a positive control.
+
+
+    For patients who underwent SRT sites, we identified the last ECG before SRT and
+    the most recent ECG to HCM after the procedure. We also identified a corresponding
+    control group that included patients who underwent coronary artery bypass graft
+    (CABG) and surgical aortic valve replacement (SAVR) without using echocardiographic
+    procedures on the HCM problem without those in HCM.
+
+
+    The Yale Institutional Review Board approved the study and waited for informed
+    consent the study involves secondary analysis of data. Patients who opted out
+    of research at the Yale New Health System (YNHHS) were not included.
+
+
+    In this group, we included the closest ECGs recorded before the procedure and
+    the most recent ECG available after procedure. Furthermore, YNHMS identified all
+    ECG from
+
+
+    We included ECGs from patients who underwent SRT at 3 geographically distinct
+    study sites: (1) YNHHS, New Haven, Connecticut; (2) Cleveland Clinic Foundation
+    (CCF), Cleveland, Ohio; and (3) Atlantic Health System (AHS), Morristown, New
+    Jersey Figure.
+
+
+    The study represents deployment of a previously developed AI-HCM model that detects
+    HCM on ECG images. Briefly, the model was developed in the YNHHS using ECG images
+    from patients with cardiac resonance imaging-confirmed HCM who had not received
+    macamavent or underwent SRT and validated in a
+
+
+    # Methods
+
+
+    ![](img/f036dfb5fabdd06b9a8d4c47129c5257_1_0.png)
+
+
+    Figure 1. Study design and population. A multicenter evaluation of the cases in
+    the intelligence-enabled electrocardiogram hypertrophic cardiomyopathy cases after
+    reduction therapy and macamavent treatment.'
+  - '[PAGE 2]
+
+
+    L. Dinhari et al. / The American Journal of Cardiology 2027 (23) 35–40
+
+
+    # Table 1
+
+    Demographic characteristics of the study population
+
+
+    | Characteristic | YNHS | TFS | CFH | YNHH |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | Number | 70 | 45 | 68 | 65 |
+
+    | Age, SRT, Median (years) | 70 (59-72) | 65 (52-70) | 62 (48-86) | 65 (59-94)
+    |
+
+    | Female, Sex, N (%) | 32 (46) | 48 (83) | 62 (125) | 28 (43) |
+
+    | Race, White, N (%) | 56 (80) | 90 (100) | 13 (6) | 7 (11) |
+
+    | Other, N (%) | 14 (20) | | 2 (3) | 8 (12) |
+
+
+    *ASH: Athens Health System; Cleveland Clinic Foundation; YNHFS: Yale New Health
+    System.
+
+
+    demographic method. This method used a receiver operating characteristic curve
+    of 0.95 (95% confidence interval 0.93 to 0.97), with 92% sensitivity and 88% specificity
+    for identifying HCM. The performance of other AI-ECG models that were developed
+    for raw data but could detect HCM on images is available for free use here at
+    https://www.ynhs.edu/ai-ecg-model/.
+
+
+    In this study, the AI-ECG model based on images identified 70 patients with HCM
+    using voltage calibration of 10 mV/cm, with 12 leads recorded in 4 channels, each
+    of 2.5 seconds, representing leads I, II, and III; aVR, aVL, aVF, V1, V2, V3,
+    and V4, V5. A full 10-second recording was used and represented as a digital image.
+    These images were converted to grayscale and downsampled to 300 pixels, regardless
+    of original resolution using Python library.
+
+
+    For the external study, SCF, CFH, and AES models were applied to digital screenshots
+    or smartphone photographs of HCM prints. These images followed a similar format
+    as PNG images, each with 6 leads, each of 2 seconds. Each lead was shown, varied
+    in the background color (gray, orange, pink, or green), of minimum 12 leads (leads
+    I, II, III and V1 to V6). Patient identifiers were either cropped or masked before
+    the model performance.
+
+
+    For each model, the output AI-ECG score or the HCM score of the patient with HCM
+    was the AI-ECG HCM score from the electrocardiographic HCM disease phenotype.¹¹
+    For each patient, the HCM score recorded before the SRT with the latest available
+    ECG was compared with HCM scores in patients with HCM without CABG or SRT at YNHFS.
+
+
+    In a positive control, we sought to evaluate the longitudinal effect of macromaven
+    on the AI-ECG HCM score. On macromaven, the AI-ECG HCM scores of the patients
+    before and after initiation of macromaven were compared. We calculated the mean
+    score of all ECGs up to 3 years before treatment, representing the baseline, and
+    longitudinally tracked the change in the AI-ECG HCM score while the baseline patients
+    were variables. Using a linear regression analysis, we analyzed the difference
+    between baseline and latest ECG score.
+
+
+    Continuous variables were reported as number (percentage), continuous variables
+    were reported as median (interquartile range [IQR]). The AI-ECG HCM score for
+    each patient before and after the interventions were used along with the Wilcoxon
+    rank-sum test. To compare the clinical impact of SRT versus other major cardiac
+    non-surgical procedures on the AI-ECG score, we ran a linear regression analysis.
+    The change in AI-ECG score before and after the intervention for each patient
+    was dependent on the type of procedure.
+
+
+    The statistical significance level was set at p<.05. All statistical analyses
+    were executed using Python 3.11.2 and R version 4.2.0.
+
+
+    # Results
+
+
+    A total of 70 patients underwent SRT at YNHFS, with a median age of 70 years (SRT
+    69 to 75). Of these patients, 32 (46%) were
+
+
+    and 14 (20%) received macromaven. At YNHFS, 100 patients underwent SRT, for ventricular
+    way macromaven, with a median age of 62 years (SRT 62 to 70), of 48 patients (48%)
+    were
+
+
+    In patients, the AI-ECG HCM score was recorded before initiation of macromaven.
+    The latest AI-ECG HCM-score recorded before SRT was 0.55 (0.24 to 0.77). After,
+    the latest ECG acquired during 0.39 years (62 days to 1.5 years) later, there
+    was no improvement in the score (0.66 (0.40 to 0.71) by Wilcoxon rank-sum test-figure,
+    Table 2).
+
+
+    At YNHFS, the AI-ECG score did not change in 18 patients who underwent alcohol
+    septal ablation (0.56 (0.43 to 0.71) or 0.74 (p=0.01) to 0.78 (p=0.08), for 6
+    patients who underwent alcohol septal ablation, and 52 patients who underwent
+    ventricular myectomy, with a median age of 62 years (SRT 68 to 90). Of 48 patients
+    (48%) were those without macromaven (Table 1).
+
+
+    In the procedure control for YNHFS, patients without macromaven non-surgical cardiac
+    procedures, which included 66 patients with CABG (median age of 72 years (69 to
+    71), 271 [0.271 to 1.07]) and 231 patients who underwent SRT (median age 74 years
+    (81 to 81), 337 [311], with ECGs recorded before and after
+
+
+    In 100 patients, the AI-ECG HCM score increased after treatment from 0.13 (0.06
+    to 0.36) to 0.49 (0.62 to 0.79) (p=0.003). The AI-ECG score also increased from
+    0.52 (0.35 to 0.65) in 62 patients (out of 65). For 45 patients with 5 to 15 years
+    before SRT (0.61 (0.49 to 0.70), p=0.001) acquired a mean of 64 days (111 to 133)
+    after the SRT (procedure 1).'
+  md: '
+
+    # The American Journal of Cardiology 237 (2025) 35–40
+
+
+    Contents lists available at ScienceDirect
+
+
+    ## The American Journal of Cardiology
+
+    journal homepage: www.elsevier.com/locate/ajc
+
+
+    ## A Multicenter Evaluation of the Impact of Therapies on Deep Learning-Based
+    Electrographic Hypertrophic Cardiopathy
+
+
+    Lovepeed S. Dhingra, MBBSᵃᵇ,¹¹, Veer Sangha, BSᵃᵇ,¹², Arya Aminoroyna, MD, MPHᶜ,
+    Robyn Ryder, MD ᵈ, Andrew Galla, MD ⁵, Adel H Ali, MD ⁶, Nandini Mehta, MD⁷, Harman
+    L Kranmul, MD, SM⁸, Soumonk Sen, MD ⁹, Christopher K. Kramer, MD¹⁰, Matthew W.
+    Martinez, MD¹¹, Milind Y. Desai, MDᵃᵇ¹¹, Evangelos K. Okimono, MD, PhD¹², Rohan
+    Khera, MD, MSᵃᵇ¹³
+
+
+    ᵃ Section of Cardiology, Department of Medicine, Yale School of Medicine, New
+    Haven, Connecticut
+
+    ᵇ Department of Engineering Science, University of Oxford, United Kingdom
+
+    ᶜ Department of Cardiology, Albany Medical Center, New York, New York
+
+    ⁴ Sports and Hypertrophic Cardiopathy, Morrison Medical Center, Morristown, New
+    Jersey
+
+    ⁵ Heart, Vascular and Thoracic Institute, Cleveland, Ohio
+
+    ⁶ Center for Excellence Yale Haven Hospital, New Haven, Connecticut
+
+    ⁷ Cardiovascular Division, Department of Medicine, University of Virginia Charlottesville,
+    Virginia
+
+    ⁸ Biometrics and Data Science, Yale School of Medicine, New Haven, Connecticut
+
+    ⁹ Section of Informatics, Department of Biostatistics, Yale School of Medicine,
+    New Haven, Connecticut
+
+
+    **Keywords:** hypertrophic cardiomyopathy artificial intelligence septal reduction
+    therapy mavacamanten
+
+
+    ## ARTICLE INFO
+
+
+    Article History:
+
+    Received 24 January 2024
+
+    Revised 16 October 2024
+
+    Accepted 17 November 2024
+
+
+    Artificial intelligence—enhanced electrocardiography (AI-ECG) can identify hypertrophic
+    cardiomyopathy (HCM) on 12-lead ECGs and offers a novel way to monitor treatment
+    response. Whether the surgical or cutaneous reduction of the septum (SRT) or HCM
+    therapies, mavacamanten offers an alternative. We aimed to assess the utility
+    of AI-ECG as a strategy to evaluate biologic responses to SRT and HCM across three
+    sites: Yale Haven Health System (YHHS), Cleveland Clinic Foundation (CCF), and
+    Atlantic Health System (AHS) for AI-electrocardiography images from patients with
+    mavacamanten at 70 days after SRT, 100 days at YHHS, and 145 days at AHS. There
+    was no significant difference in AI-ECG scores (mean 0.55 [interquartile range
+    0.24 to 0.77] vs SRT [mean 0.59 to 0.70]). The AI-ECG score did not improve after
+    SRT (mean 0.61 [0.38 to 0.79] to 0.69 [0.52 to 0.93]) or with mavacamanten (mean
+    0.41 [0.22 to 0.77], which significantly decreased from 0.28 to 0.11 and 0.08
+    [0.01 to 0.50] by the Wilcoxon-rank test) at the end of a median follow-up period
+    of 237 days. In conclusion, we observed a potential for improved AI-ECG scores
+    with SRT, in contrast to decrease with mavacamanten. Our approach suggests the
+    benefit of point-of-care monitoring of pathophysiology during medical therapy
+    in HCM using ECG technologies.
+
+
+    Artificial intelligence—enhanced electrocardiography (AI-ECG) interpretation identify
+    hypertrophic cardiomyopathy (HCM) on 12-lead ECGs and represents a novel way to
+    monitor treatment response. HCM is a genetically determined disease that affects
+    1 in 200 people worldwide and is the leading cause of sudden cardiac death. In
+    HCM patients, mavacamanten is the first cardiac myosin inhibitor to show efficacy
+    in reducing ventricular hypertrophy and improving function. Before the emergence
+    of mavacamanten, septal reduction therapy (SRT), which includes alcohol septal
+    ablation and ventricular myotomy, was the key treatment for patients experiencing...
+
+
+    The study was supported in part by National Institutes of Health (Maryland, Maryland)
+    under grants R01AG09881, R01HL117658, and K2HL153775 to Dr. Khera and R17HL07952-01
+    to Dr. Smith. The study collected data from YHHS (Yale Haven Health System, New
+    Haven, CT). Some data was previously presented at 2023 AHA Scientific Session.
+    The funders had no role in the design and conduct of the study, preparation, review
+    or decision to submit for publication.
+
+
+    *Corresponding author: rokhera@yale.edu
+
+    ¹Dhingra and Sangha contributed equally to this study.
+
+
+    Symptomatic limitations of obstructive HCM (HCM) despite medical therapy. The
+    YHHS represents the referral center in southern Connecticut, consisting of 9 large
+    medical groups serving over 2.7 million patients. CCF is the largest private medical
+    group in the United States, with 5 hospital locations serving over 1 million patients
+    annually. AHS is a 7-hospital network serving over 1.5 million patients per year.
+
+
+    Conventionally, monitoring in patients with HCM has involved advanced cardiac
+    imaging, including cardiac resonance imaging and echocardiogram, which can be
+    limited by access and costs. Recently, AI-HCM has shown promise in tracking longitudinal
+    changes in disease. In a phase 2 clinical trial of SRT, the has showed efficacy
+    in patients receiving mavacamanten. Current deep learning-based approaches for
+    evaluation have only been tested in highly selected patients between 2013 and
+    2023. We included 100 adults and 145 patients who underwent SRT at each site and
+    identified by site-specific physicians (MD and MM). The ECGs of patients before
+    and after SRT were analyzed using visual inspection and leveraged a deep-based
+    strategy to evaluate SRT. For this, we developed a model that detects HCM from
+    12-lead ECGs and evaluated ECGs from patients who underwent SRT at 3 distinct
+    institutions.
+
+
+    For patients who underwent SRT, we identified the last ECG before SRT and the
+    most recent ECG after HCM. We also identified a corresponding control group that
+    included patients who underwent coronary artery bypass (CABG) and surgical aortic
+    valve replacement (SAVR) without HCM. The Yale Institutional Review Board approved
+    the study and waited for informed consent. Patients who opted out of research
+    at the Yale Haven Health System (YHHS) were not included.
+
+
+    In this group, we included the ECGs recorded before the procedure and the most
+    recent available after procedure. Furthermore, YHHS identified all ECG from patients
+    who underwent SRT at 3 geographically distinct study sites: (1) YHHS, New Haven,
+    Connecticut; (2) Cleveland Clinic Foundation (CCF), Cleveland, Ohio; and (3) Atlantic
+    Health System (AHS), Morristown, New Jersey.
+
+
+    The study represents deployment of a previously developed AI-HCM model that detects
+    HCM on ECG images. Briefly, the model was developed in YHHS using ECG images from
+    patients with cardiac resonance-confirmed HCM who had not received mavacamanten
+    or underwent SRT and validated in
+
+
+    ## Methods
+
+
+    ![](img/f036dfb5fabdd069a8d4c47129c5257_1_0.png)
+
+
+    Figure 1. Study design and population. A multicenter evaluation of the cases in
+    the intelligence-enabled electrocardiogram hypertrophic cardiomyopathy cases after
+    reduction therapy and mavacamanten.
+
+
+    ## Table 1
+
+    Demographic characteristics of the study population
+
+
+    | Characteristic | YHHS | CCF | AHS | Total/Other |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | Number | 70 | 68 | 65 | 45* |
+
+    | Age, SRT, Median (years) | 70 (59-72) | 62 (48-86) | 65 (59-94) | 65 (52-70)
+    |
+
+    | Female, Sex, N (%) | 32 (46) | 62 (125) | 28 (43) | 48 (83) |
+
+    | Race, White, N (%) | 56 (80) | 13 (6) | 7 (11) | 90 (100) |
+
+    | Other, N (%) | 14 (20) | | 2 (3) | 8 (12) |
+
+
+    *AHS: Atlantic Health System; Cleveland Clinic Foundation; YNHFS: Yale New Health
+    System.
+
+
+    Demographic method. This method used a receiver operating characteristic curve
+    of 0.95 (95% confidence interval 0.93 to 0.97), with 92% sensitivity and specificity.
+    For this, we developed a model that detects HCM from 12-lead ECGs and evaluated
+    ECGs from patients who underwent SRT at 3 distinct institutions as a positive
+    control. For patients who underwent SRT, we identified the last ECG before SRT
+    and the most recent ECG after HCM. We also identified a corresponding control
+    group that included patients who underwent coronary artery bypass (CABG) and surgical
+    aortic valve replacement (SAVR) without HCM. The Yale Institutional Review Board
+    approved the study and waited for informed consent. Patients who opted out of
+    research at the Yale Haven Health System (YHHS) were not included.
+
+
+    In this group, we included the ECGs recorded before the procedure and the most
+    recent available after procedure. Furthermore, YHHS identified all ECG from patients
+    who underwent SRT at 3 geographically distinct study sites: (1) YHHS, New Haven,
+    Connecticut; (2) Cleveland Clinic Foundation (CCF), Cleveland, Ohio; and (3) Atlantic
+    Health System (AHS), Morristown, New Jersey.
+
+
+    The study represents deployment of a previously developed AI-HCM model that detects
+    HCM on ECG images. Briefly, the model was developed in YHHS using ECG images from
+    patients with cardiac resonance-confirmed HCM who had not received mavacamanten
+    or underwent SRT and validated in
+
+
+    demographic method. This method used a receiver operating characteristic curve
+    of 0.95 (95% confidence interval 0.93 to 0.97), with 92% sensitivity and specificity.
+    For this, we developed a model that detects HCM from 12-lead ECGs and evaluated
+    ECGs from patients who underwent SRT at 3 distinct institutions as a positive
+    control. For patients who underwent SRT, we identified the last ECG before SRT
+    and the most recent ECG after HCM. We also identified a corresponding control
+    group that included patients who underwent coronary artery bypass (CABG) and surgical
+    aortic valve replacement (SAVR) without HCM. The Yale Institutional Review Board
+    approved the study and waited for informed consent. Patients who opted out of
+    research at the Yale Haven Health System (YHHS) were not included.
+
+
+    demographic method. This method used a receiver operating characteristic curve
+    of 0.95 (95% confidence interval 0.93 to 0.97), with 92% sensitivity and specificity.
+    For this, we developed a model that detects HCM from 12-lead ECGs and evaluated
+    ECGs from patients who underwent SRT at 3 distinct institutions as a positive
+    control. For patients who underwent SRT, we identified the last ECG before SRT
+    and the most recent ECG after HCM. We also identified a corresponding control
+    group that included patients who underwent coronary artery bypass (CABG) and surgical
+    aortic valve replacement (SAVR) without HCM. The Yale Institutional Review Board
+    approved the study and waited for informed consent. Patients who opted out of
+    research at the Yale Haven Health System (YHHS) were not included.
+
+
+    demographic method. This method used a receiver operating characteristic curve
+    of 0.95 (95% confidence interval 0.93 to 0.97), with 92% sensitivity and specificity.
+    For this, we developed a model that detects HCM from 12-lead ECGs and evaluated
+    ECGs from patients who underwent SRT at 3 distinct institutions as a positive
+    control. For patients who underwent SRT, we identified the last ECG before SRT
+    and the most recent ECG after HCM. We also identified a corresponding control
+    group that included patients who underwent coronary artery bypass (CABG) and surgical
+    aortic valve replacement (SAVR) without HCM. The Yale Institutional Review Board
+    approved the study and waited for informed consent. Patients who opted out of
+    research at the Yale Haven Health System (YHHS) were not included.
+
+
+    ## Results
+
+
+    A total of 70 patients underwent SRT at YHHS, 32 (46%) were female, 56 (80%) were
+    white, and 14 (20%) were other. The median age at SRT was 70 (59-72). 68 patients
+    underwent SRT at CCF, 48 (83%) were female, 90 (100%) were white. The median age
+    at SRT was 62 (48-86). 65 patients underwent SRT at AHS, 28 (43%) were female,
+    7 (11%) were white, and 8 (12%) were other. The median age at SRT was 65 (59-94).
+
+
+    In patients, mavacamanten is the first cardiac myosin inhibitor to show efficacy
+    in reducing ventricular hypertrophy and improving function. Before the emergence
+    of mavacamanten, septal reduction therapy (SRT), which includes alcohol septal
+    ablation and ventricular myotomy, was the key treatment for patients experiencing...
+
+
+    Artificial intelligence—enhanced electrocardiography (AI-ECG) can identify hypertrophic
+    cardiomyopathy (HCM) on 12-lead ECGs and offers a novel way to monitor treatment
+    response. Whether the surgical or cutaneous reduction of the septum (SRT) or HCM
+    therapies, mavacamanten offers an alternative. We aimed to assess the utility
+    of AI-ECG as a strategy to evaluate biologic responses to SRT and HCM across three
+    sites: Yale Haven Health System (YHHS), Cleveland Clinic Foundation (CCF), and
+    Atlantic Health System (AHS) for AI-electrocardiography images from patients with
+    mavacamanten at 70 days after SRT, 100 days at YHHS, and 145 days at AHS. There
+    was no significant difference in AI-ECG scores (mean 0.55 [interquartile range
+    0.24 to 0.77] vs SRT [mean 0.59 to 0.70]). The AI-ECG score did not improve after
+    SRT (mean 0.61 [0.38 to 0.79] to 0.69 [0.52 to 0.93]) or with mavacamanten (mean
+    0.41 [0.22 to 0.77], which significantly decreased from 0.28 to 0.11 and 0.08
+    [0.01 to 0.50] by the Wilcoxon-rank test) at the end of a median follow-up period
+    of 237 days. In conclusion, we observed a potential for improved AI-ECG scores
+    with SRT, in contrast to decrease with mavacamanten. Our approach suggests the
+    benefit of point-of-care monitoring of pathophysiology during medical therapy
+    in HCM using ECG technologies.
+
+    '
+  mdcn: '
+
+
+    # 《美国心脏学杂志》 237 (2025) 35–40
+
+
+    ScienceDirect 提供可用目录列表
+
+
+    ## 《美国心脏学杂志》
+
+    期刊首页：www.elsevier.com/locate/ajc
+
+
+    ## 各种疗法对基于深度学习的心电肥厚心肌病影响的多中心评估
+
+
+    Lovepeed S. Dhingra, MBBSᵃᵇ,¹¹, Veer Sangha, BSᵃᵇ,¹², Arya Aminoroyna, MD, MPHᶜ,
+    Robyn Ryder, MD ᵈ, Andrew Galla, MD ⁵, Adel H Ali, MD ⁶, Nandini Mehta, MD⁷, Harman
+    L Kranmul, MD, SM⁸, Soumonk Sen, MD ⁹, Christopher K. Kramer, MD¹⁰, Matthew W.
+    Martinez, MD¹¹, Milind Y. Desai, MDᵃᵇ¹¹, Evangelos K. Okimono, MD, PhD¹², Rohan
+    Khera, MD, MSᵃᵇ¹³
+
+
+    ᵃ 康耶鲁大学医学院医学科心脏病分科，康涅狄格州新哈文
+
+    ᵇ 牛津大学工程科学系
+
+    ᶜ 纽约州纽约市奥尔巴尼医学中心心脏病科
+
+    ⁴ 新泽西州莫里斯特敦医学中心运动与肥厚心肌病中心
+
+    ⁵ 俄亥俄州克利夫兰心脏血管与胸外科研究所
+
+    ⁶ 康涅狄格州新哈文耶鲁港医院卓越中心
+
+    ⁷ 弗吉尼亚州夏洛特斯堡大学医学系心血管分科
+
+    ⁸ 康涅狄格州新哈文耶鲁大学医学院生物计量学与数据科学
+
+    ⁹ 康涅狄格州新哈文耶鲁大学医学院生物统计系信息学分科
+
+
+    **关键词：** 肥厚心肌病，人工智能，隔膜减少疗法，马马替定
+
+
+    ## 文章信息
+
+
+    文章历史：
+
+    接收：2024年1月24日
+
+    修回：2024年10月16日
+
+    录取：2024年11月17日
+
+
+    人工智能增强的心电图（AI-ECG）可以识别12 导联心电图上的肥厚心肌病（HCM），并为监测治疗反应提供了一种新方法。无论是手术或经皮隔膜减少术（SRT）还是
+    HCM 治疗，马马替定都提供了一种替代方案。我们旨在评估 AI-ECG 作为评估 SRT 和 HCM 生物学反应策略的实用性，涵盖了三个中心：耶鲁港健康系统（YHHS）、克利夫兰医学基金会（CCF）和大西洋健康系统（AHS），针对接受马马替定的患者，在
+    SRT 后 70 天、YHHS 后 100 天以及 AHS 后 145 天的 AI 心电图进行分析。AI-ECG 分数之间没有显著差异（均值 0.55 [四分位距
+    0.24 至 0.77] 对 SRT [均值 0.59 至 0.70]）。在中位随访期 237 天结束，AI-ECG 分数在 SRT 后未改善（均值从 0.61
+    [0.38 至 0.79] 变为 0.69 [0.52 至 0.93]），在使用马马替定后也没有改善（均值 0.41 [0.22 至 0.77]，根据 Wilcoxon
+    秩检验，从 0.28 显著下降至 0.11 和 0.08 [0.01 至 0.50]）。结论是，我们观察到 SRT 有提高 AI-ECG 分数的潜力，而马马替定则相反。我们的方法方法表明，使用心电图技术在
+    HCM 药物治疗期间对病理生理学进行现场监测具有益处。
+
+
+    人工智能增强的心电图（AI-ECG）解读可以识别12 导联心电图上的肥厚心肌病（HCM），代表了监测治疗反应的新方法。HCM 是一种遗传性疾病，影响全球每
+    200 人中的一人，是心性猝死的主要原因。在 HCM 患者中，马马替定是第一个显示出减轻心室肥大和改善功能的心肌球蛋白抑制剂。在马马替定出现之前，隔膜减少术（SRT，包括酒精隔膜消融和心室肌切术）是……患者的关键治疗方法。
+
+
+    研究部分获得美国国家健康研究院（马里兰州马里兰州）的支持，资助号为 R01AG09881, R01HL117658 和 K2HL153775（资助 Khera
+    博士），R17HL07952-01（资助 Smith 博士）。研究收集了来自 YHHS（康涅狄格州新哈文耶鲁港健康系统）的数据。部分数据曾在2023 年 AHA科学会议上发表。资助者对研究的设计、执行、准备、评审或提交发表没有参与。
+
+
+    *通讯作者：rokhera@yale.edu
+
+    ¹Dhingra 和 Sangha 对本研究贡献相同。
+
+
+    尽管接受药物治疗，阻塞性 HCM (HCM) 仍有症状局限性。YHHS 是康涅狄格州南部的转诊中心，由 9 个大型医疗集团组成，服务超过 270 万患者。CCF
+    是美国最大的私人医疗集团，拥有 5 个医院地点，每年服务超过 100 万患者。AHS 是一个拥有 7 家医院的网络，每年服务超过 150 万患者。
+
+
+    通常，HCM 患者的监测涉及先进的心脏成像，包括心脏磁共振成像和超声心动图，这些可能受到获取和成本的限制。最近，AI-HCM 在追踪疾病的长期变化方面显示出潜力。在
+    SRT 的二期临床试验中，其在接受马马替定的患者中显示了疗效。目前基于深度学习的评估方法仅在 2013 年至 2023 年间高度筛选的患者中经过测试。我们纳入了每个中心
+    100 名成年人和 145 名接受 SRT 的患者，并由各中心医生（MD 和 MM）进行识别。患者 SRT 前后的心电图使用视觉检查进行分析，并利用深度学习策略来评估
+    SRT。为此，我们开发了一个从 12 导联心电图中检测 HCM 的模型，并评估了来自三个不同机构接受 SRT 的患者的心电图。
+
+
+    对于接受 SRT 的患者，我们识别了 SRT 前最后的心电图和 HCM 后最新的心电图。我们还确定了一个相应的对照组，包括接受过冠状动脉旁路（CABG）和手术主动瓣置换术（SAVR）但没有
+    HCM 的患者。耶鲁机构审查委员会批准了该研究并等待知情同意。在耶鲁港健康系统（YHHS）选择退出研究的患者未被纳入。
+
+
+    在此组中，我们纳入了手术前记录的心电图和手术后最新的心电图。此外，YHHS 识别了在 3 个地理不同的研究地点接受 SRT 的患者的所有心电图：(1) 康涅狄格州新哈文
+    YHHS；(2) 俄亥俄州克利夫兰克利夫兰医学基金会（CCF）；(3) 新泽西州莫里斯特敦大西洋健康系统（AHS）。该研究代表了此前开发的在心电图上检测 HCM
+    的 AI 模型的部署。简而言之，该模型是在 YHHS 使用心脏共振确认 HCM 的未接受马马替定或接受 SRT 的患者的心电图开发的。
+
+
+    ## 方法
+
+
+    ![](img/f036dfb54dd069a8d4c47129_0.png)
+
+
+    图 1。研究设计和人群。接受疗法和马马替定的肥厚心肌病病例的多中心评估。
+
+
+    ## 表 1
+
+    人群的人口统计学特征
+
+
+    | 特征 | YHHS | CCF | AHS | 总计 |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | 人数 | 70 | 68 | 65 | 45* |
+
+    | 年龄， SRT，中位数 (年) | 70 (59-72) | 62 (48-86) | 65 (59-94) | 65 (52-70) |
+
+    | 女性，人数 (%) | 32 (46) | 62 (*) | 28 (43) | 48 (83) |
+
+    | 种族，白人，人数 (%) | 56 (80) | 13 (6) | 7 (11) | 90 (100) |
+
+    | 其他，人数 (%) | 14 (20) | 2 (3) | 8 (12) | |
+
+
+    *AHS：大西洋健康系统；克利夫兰医学基金会；YHFS：耶鲁港健康系统。人口统计学方法。该方法使用了受者工作特征曲线，0.95（95% 置信区间 0.93
+    至 0.97），具有 92% 的灵敏度和特异性。为此，我们开发了一个从 12 导联心电图中检测 HCM 的模型，并评估了来自三个不同机构患者的心电图。
+
+
+    ## 结果
+
+
+    总共有 70 名患者在 YHHS 接受 SRT，其中 32 (46%) 为女性，56 (80%) 为白人，14 (20%) 为其他。SRT 的中位年龄为 70
+    (59-72)。CCF 有 68 名患者接受 SRT，48 (83%) 为女性，90 (100%) 为白人。SRT 的中位年龄为 62 (48-86)。AHS
+    有 65 名患者接受 SRT，28 (43%) 为女性，7 (11%) 为白人，8 (12%) 为其他。SRT 的中位年龄为 65 (59-94)。
+
+
+    在患者中，马马替定是第一个显示出减轻心室肥大和改善功能的心肌球蛋白抑制剂。在马马替定出现之前，隔膜减少术（SRT，包括酒精隔膜消融和心室肌切术）是……患者的关键治疗方法。
+
+
+    人工智能增强的心电图（AI-ECG）可以识别12 导联心电图上的肥厚心肌病（HCM），并为监测治疗反应提供了一种新方法。无论是手术或经皮隔膜减少术（SRT）还是
+    HCM 治疗，马马替定都提供了一种替代方案。我们旨在评估 AI-ECG 作为评估 SRT 和 HCM 生物学反应策略的实用性，涵盖了三个中心：耶鲁港健康系统（YHHS）、克利夫兰医学基金会（CCF）和大西洋健康系统（AHS），针对接受马马替定的患者，在
+    SRT 后 70 天、YHHS 后 100 天以及 AHS 后 145 天的 AI 心电图进行分析。AI-ECG 分数之间没有显著差异（均值 0.55 [四分位距
+    0.24 至 0.77] 对 SRT [均值 0.59 至 0.70]）。在中位随访期 237 天结束，AI-ECG 分数在 SRT 后未改善（均值从 0.61
+    [0.38 至 0.79] 变为 0.69 [0.52 至 0.93]），在使用马马替定后也没有改善（均值 0.41 [0.22 至 0.77]，根据 Wilcoxon
+    秩检验，从 0.28 显著下降至 0.11 和 0.08 [0.01 至 0.50]）。结论是，我们观察到 SRT 有提高 AI-ECG 分数的潜力，而马马替定则相反。我们的方法方法表明，使用心电图技术在
+    HCM 药物治疗期间对病理生理学进行现场监测具有益处。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 3]
+
+
+    # YNHMS
+
+
+    # CCF
+
+
+    # AHS
+
+
+    ![](img/f036dfb5fabdd06b9a8d4c47129c5257_3_0.png)
+
+
+    Figure 2. AI-ECG HCM score after septal reduction. Box and whiskers for artificial
+    intelligence–enabled echocardiographic hypertrophic cardiomyopathy scores (AI-ECG
+    HCM score) of closest echocardiograms before and after septal reduction.
+
+
+    Table 2
+
+    Artificial intelligence-enabled hypertrophic cardiomyopathy scores in echocardiograms
+    before and after septal reduction and mayaven treatment
+
+
+    | Intervention | Health System | Pre-intervention AI-ECG HCM Score, Median (IQR)
+    | Post-intervention AI-ECG HCM Score, Median (IQR) | p Value by Wilcoxon Signed-Rank
+    Test |
+
+    |---|---|---|---||
+
+    | Septal reduction therapy | YNHMS | 0.55 (0.24–0.77) | 0.59 (0.40–0.75) | 0.428
+    |
+
+    | | CCF | 0.61 (0.32–0.79) | 0.69 (0.52–0.79) | 0.003 |
+
+    | | AHS | 0.52 (0.35–0.69) | 0.41 (0.46–0.72) | -0.001 |
+
+    | Macavamen | | | 0.28 (0.11–0.50) | -0.001 |
+
+
+    *AHS: Atlantic Health System; CCF: Cleveland Clinic Foundation; YNHMS: Yale New
+    Haven Health System
+
+
+    adjusted linear regression model: $\beta = 0.01$ [0.04 to 0.06]. The baseline
+    AI-ECG HCM score before starting macavamen, the mean of all echocardiograms recorded
+    within 3 months before macavamen, was 0.46 [IQR 0.21 to 0.72]. The median AI-ECG
+    HCM score in the last week before macavamen was 0.52 (IQR 0.27–0.77) of a follow-up
+    period of 23 days (IQR 140 to 330), which significantly decreased by 0.28 (IQR
+    0.01 to 0.05) (p=0.001); Table 2.
+
+
+    effects of SRT and cardiac-specific myosin inhibition may reflect the different
+    mechanisms for modification of the HCM strain.$^{17,18}$ While septal reduction
+    offers obstructive phylogeny, it also works with macavamen, so by removing the
+    obstruction without modifying the pathology of diseased cardiomyocytes$^{16}$
+    This significant decrease in the AI-ECG score in patients treated with macavamen
+    alone with known myocardial remodeling and associated energetics.$^{6}$ The HCM
+    score on macavamen was also consistent with the spectrum of septal reduction.
+
+
+    In 18 patients with AI-ECG HCM score below the baseline score, the difference
+    in baseline and baseline ECG scores was a mean of -0.09 (IQR 0.01 to 0.05) or
+    equal to the mean, the change in AI-ECG HCM scores for macavamen was a mean of
+    -0.09 (IQR 0.23 to 0.03); The difference in the changes between these two groups
+    based on pretreatment was not statistically significant ($P_{value}$ = 0.117)$^{19}$
+
+
+    # Discussion
+
+
+    In three large medical centers, the electrocardiographic profile of HCM measured
+    by AI-ECG displayed no improvement in images of patients who underwent SRT. The
+    AI-ECG HCM score significantly improved in a cohort of real-world patients with
+    HCM macavamen, reflecting the effect of the drug in the post analysis of a phase
+    2 clinical trial.$^{9,10}$ This work highlights the differences between SRT and
+    myosin inhibition on the electrocardiographic marker of HCM.
+
+
+    A strength of our work is that it includes multiple images of AI-ECG to show the
+    improvement. It demonstrates the potential value and scalability of an image-based
+    AI-ECG for disease monitoring in HCM and other disorders. The ECG image-based
+    models for HCM can be used by health systems globally using their underlying data
+    and by clinicians who may only have access to ECGs or portable images.
+
+
+    Using the use of deep learning has been proposed for the detection of HCM,$^{12}$
+    the use of AI-tracking for signal-based models has been applied to patients receiving
+    macavamen in a phase 2 clinical trial sought evaluating the electrocardiographic
+    HCM phenotype on macavamen therapy$^{13,15}$ finding a consistent with our ECG
+    image-based assessment of a real-world cohort of patients at YNHMS. The context
+    is'
+  - '[PAGE 4]
+
+
+    ![](img/f036dfb5fabdd06b9a8d4c47129c5257_4_0.png)
+
+
+    HCM scores in macavencom therapy, we did not directly compare these changes with
+    the findings in clinical and symptoms. Nevertheless, given the consistency of
+    our results observed in 5 clinical trials, the changes in the ECG-HCM score may
+    be expected to reflect changes in left ventricular outflow tract and gradients.
+    The AI-phenotype in patients with HCM may change longitudinally over the course
+    of disease, or response to treatment. However, we included the ECG record before
+    the SRT procedures across the stages of disease including including initial. There
+    may be acute inflammation or edema immediately after the AI-phenotype. However,
+    we used the most recent ECG data for each subject, with the SRT to SRT-ECG score
+    separated by 50 days to ensure the AI-HCM score which we used. Nevertheless, the
+    changes in the AI-HCM score were not different from other changes after non-SRT
+    cardiac events (CABC) and SAV. First, our study did not evaluate the long-term
+    effects of the current recent days of rhythm in the left ventricular outflow tract
+    obstruction after alcohol septal ablation. Second a larger study of AI-HCM score
+    after alcohol septal ablation may be necessary to investigate these matters.
+
+
+    Our study demonstrates a measurable difference in the myocardial effects of HCM
+    and cardiac inhibition detection on ECG images. Our approach provides a point-of-care
+    for the monitoring of physiological improvement in HCM after medical therapy.
+
+
+    # Declaration of interest
+
+
+    Mr Sangha and D Khera are authors of US Provisional Patent Application No. 63/346,610,
+    (Methods and formats for detection of hidden cardiovascular disease from electrocardiographic
+    images using deep learning). Dr. Khera received support from the National Institutes
+    of Health (NIH), and Blood Foundation of America (under grant No. R01AI202859,
+    R01HL176858, and K23H135375) and the Duke Charitable Foundation (under award 20220065).
+    He received support from the Blavatnik Foundation for Innovation at Technology.
+    Mr. Sangha received support from the National Institutes of Health. David Myers
+    Squibb, No Nordisk, is an Associate Editor at JAMA. In de to 63/346,610, Dr Khera
+    is a owner of US Provisional Patent Applications 63/177,117, 63/428,569, and 63/484,420.
+    Dr Khera and Dr. Okonomous are conformers of Evidence-based, health care provision
+    to the platform Neithi With
+
+
+    cardiovascular care. Dr. Okonomous is a consultant of the US Patent Application
+    63/508,315 and 63/177,117 and has served as a consultant at Cardio Logistics Ltd.
+    Dr. Krum worked for the Center for Medical Affairs Services to support quality
+    measurement programs, and was a recipient of a grant from John Johnson, Yale University,
+    to support clinical trial data sharing, agreement with Yale University, the Shenzhen
+    Center for cardiovascular research, and University of Florida for innovation and
+    health promotion; collaborators from the National Center for Cardiovascular Diseases
+    in receiving payments from the Arnold & Porter Law Firm for work on the Sifadei
+    glitazone images and James Law for work on the Select Vec IV integration, and
+    Feng Jensen Law for work to Vioxx changes; a Cardiac Scientific Advisory Board
+    for Utah; was a member of the IBM National Health Life Sciences Board; is a member
+    of the Board of Directors of the American Society of Echocardiography; and is
+    the co-founder of Refactor, a health care AI-driven data management company. Mr.
+    Okonomous founded AI-HCM, Inc., a wave-backed startup focused on cardiovascular
+    diagnostics.
+
+
+    Loveh D. Singh: Writing draft, Visualization, Supervision, Methodology, Formal
+    analysis, Data curation, Conceptualization. Vera Sangh: Writing draft, visualization,
+    Methodology, Formal analysis, Formalization, Data curation. Ayra Aryamovska: Writing
+    draft, Formalization, Validation. Robin Brody: Writing & editing, Validation,
+    Inspection. Andrew Gabriel: Writing & editing, Validation. Inspection. Adel Hel:
+    Writing & editing, Validation. Natalie Nehr: Writing & editing, Validation, Supervision,
+    Methodology. Haribhan Mitchell: Writing & editing, Validation, Supervision, Methodology.
+    Sonk: Writing & editing, Validation, Investigation, Data curation. Christopher
+    M. Kramer: Matthew W. Writing & editing, Validation, Investigation. Milind Y.
+    Desai: Writing & editing, Validation, Investigation, curation. Evangelos K. Okonomous:
+    Writing & editing, Original draft, Visualization, Validation, Methodology, Conceptualization.
+    Rohan Khera: Writing & editing, Validation, Visualization, Validation.
+
+
+    # CRediT contribution statement'
+  md: '
+
+    # YNHMS
+
+
+    # CCF
+
+
+    # AHS
+
+
+    ![](img/f036dfb5fabdd06b9a8d4c47129c5257_3_0.png)
+
+
+    Figure 2. AI-ECG HCM score after septal reduction. Box and whiskers for artificial
+    intelligence–enabled echocardiographic hypertrophic cardiomyopathy scores (AI-ECG
+    HCM score) of closest echocardiograms before and after septal reduction.
+
+
+    Table 2
+
+    Artificial intelligence-enabled hypertrophic cardiomyopathy scores in echocardiograms
+    before and after septal reduction and mavacamen treatment
+
+
+    | Intervention | Health System | Pre-intervention AI-ECG HCM Score, Median (IQR)
+    | Post-intervention AI-ECG HCM Score, Median (IQR) | p Value by Wilcoxon Signed-Rank
+    Test |
+
+    |---|---|---|---|---|
+
+    | Septal reduction therapy | YNHMS | 0.55 (0.24–0.77) | 0.59 (0.40–0.75) | 0.428
+    |
+
+    | | CCF | 0.61 (0.32–0.79) | 0.69 (0.52–0.79) | 0.003 |
+
+    | | AHS | 0.52 (0.35–0.69) | 0.41 (0.46–0.72) | -0.001 |
+
+    | Mavacamen | | | 0.28 (0.11–0.50) | -0.001 |
+
+
+    *AHS: Atlantic Health System; CCF: Cleveland Clinic Foundation; YNHMS: Yale New
+    Haven Health System
+
+
+    adjusted linear regression model: $\beta = 0.01$ [0.04 to 0.06]. The baseline
+    AI-ECG HCM score before starting mavacamen, the mean of all echocardiograms recorded
+    within 3 months before mavacamen, was 0.46 [IQR 0.21 to 0.72]. The median AI-ECG
+    HCM score in the last week before mavacamen was 0.52 (IQR 0.27–0.77) of a follow-up
+    period of 23 days (IQR 140 to 330), which significantly decreased by 0.28 (IQR
+    0.01 to 0.05) (p=0.001); Table 2.
+
+
+    effects of SRT and cardiac-specific myosin inhibition may reflect the different
+    mechanisms for modification of the HCM strain.$^{17,18}$ While septal reduction
+    offers obstructive phylogeny, it also works with mavacamen, so by removing the
+    obstruction without modifying the pathology of diseased cardiomyocytes$^{16}$
+    This significant decrease in the AI-ECG score in patients treated with mavacamen
+    alone with known myocardial remodeling and associated energetics.$^{6}$ The HCM
+    score on mavacamen was also consistent with the spectrum of septal reduction.
+
+
+    In 18 patients with AI-ECG HCM score below the baseline score, the difference
+    in baseline and baseline ECG scores was a mean of -0.09 (IQR 0.01 to 0.05) or
+    equal to the mean, the change in AI-ECG HCM scores for mavacamen was a mean of
+    -0.09 (IQR 0.23 to 0.03); The difference in the changes between these two groups
+    based on pretreatment was not statistically significant ($P_{value}$ = 0.117)$^{19}$
+
+
+    # Discussion
+
+
+    In three large medical centers, the electrocardiographic profile of HCM measured
+    by AI-ECG displayed no improvement in images of patients who underwent SRT. The
+    AI-ECG HCM score significantly improved in a cohort of real-world patients with
+    HCM mavacamen, reflecting the effect of the drug in the post analysis of a phase
+    2 clinical trial.$^{9,10}$ This work highlights the differences between SRT and
+    myosin inhibition on the electrocardiographic marker of HCM.
+
+
+    A strength of our work is that it includes multiple images of AI-ECG to show the
+    improvement. It demonstrates the potential value and scalability of an image-based
+    AI-ECG for disease monitoring in HCM and other disorders. The ECG image-based
+    models for HCM can be used by health systems globally using their underlying data
+    and by clinicians who may only have access to ECGs or portable images.
+
+
+    Using the use of deep learning has been proposed for the detection of HCM,$^{12}$
+    the use of AI-tracking for signal-based models has been applied to patients receiving
+    mavacamen in a phase 2 clinical trial sought evaluating the electrocardiographic
+    HCM phenotype on mavacamen therapy$^{13,15}$ finding a consistent with our ECG
+    image-based assessment of a real-world cohort of patients at YNHMS. The context
+    is
+
+
+    ![](img/f036dfb5fabdd06b9a8d4c47129c5257_4_0.png)
+
+
+    HCM scores in mavacamen therapy, we did not directly compare these changes with
+    the findings in clinical and symptoms. Nevertheless, given the consistency of
+    our results observed in 5 clinical trials, the changes in the ECG-HCM score may
+    be expected to reflect changes in left ventricular outflow tract and gradients.
+    The AI-phenotype in patients with HCM may change longitudinally over the course
+    of disease, or response to treatment. However, we included the ECG record before
+    the SRT procedures across the stages of disease including including initial. There
+    may be acute inflammation or edema immediately after the AI-phenotype. However,
+    we used the most recent ECG data for each subject, with the SRT to SRT-ECG score
+    separated by 50 days to ensure the AI-HCM score which we used. Nevertheless, the
+    changes in the AI-HCM score were not different from other changes after non-SRT
+    cardiac events (CABC) and SAV. First, our study did not evaluate the long-term
+    effects of the current recent days of rhythm in the left ventricular outflow tract
+    obstruction after alcohol septal ablation. Second a larger study of AI-HCM score
+    after alcohol septal ablation may be necessary to investigate these matters.
+
+
+    Our study demonstrates a measurable difference in the myocardial effects of HCM
+    and cardiac inhibition detection on ECG images. Our approach provides a point-of-care
+    for the monitoring of physiological improvement in HCM after medical therapy.
+
+
+    # Declaration of interest
+
+
+    Mr Sangha and D Khera are authors of US Provisional Patent Application No. 63/346,610,
+    (Methods and formats for detection of hidden cardiovascular disease from electrocardiographic
+    images using deep learning). Dr. Khera received support from the National Institutes
+    of Health (NIH), and Blood Foundation of America (under grant No. R01AI202859,
+    R01HL176858, and K23H135375) and the Duke Charitable Foundation (under award 20220065).
+    He received support from the Blavatnik Foundation for Innovation at Technology.
+    Mr. Sangha received support from the National Institutes of Health. David Myers
+    Squibb, No Nordisk, is an Associate Editor at JAMA. In de to 63/346,610, Dr Khera
+    is a owner of US Provisional Patent Applications 63/177,117, 63/428,569, and 63/484,420.
+    Dr. Khera and Dr. Okonomous are conformers of Evidence-based, health care provision
+    to the platform Neithi With cardiovascular care. Dr. Okonomous is a consultant
+    of the US Patent Application 63/508,315 and 63/177,117 and has served as a consultant
+    at Cardio Logistics Ltd. Dr. Krum worked for the Center for Medical Affairs Services
+    to support quality measurement programs, and was a recipient of a grant from John
+    Johnson, Yale University, to support clinical trial data sharing, agreement with
+    Yale University, the Shenzhen Center for cardiovascular research, and University
+    of Florida for innovation and health promotion; collaborators from the National
+    Center for Cardiovascular Diseases in receiving payments from the Arnold & Porter
+    Law Firm for work on the Sifade glitazone images and James Law for work on the
+    Select IV integration, and Feng Jensen Law for work on Vioxx changes; Cardiac
+    Scientific Advisory Board for Utah; was a member of the IBM National Health Sciences
+    Board; is a member of the Board of Directors of the American Society of Echocardiography;
+    and is the co-founder of Refactor, a health care-driven data management company.
+    Mr. Okonomous founded AI-HCM, Inc., a wave-backed startup focused on cardiovascular
+    diagnostics.
+
+
+    # CRediT contribution statement
+
+    Loveh D. Singh: Writing draft, Visualization, Supervision, Methodology, Formal
+    analysis, Data curation, Conceptualization. Vera Sangh: Writing draft, visualization,
+    Methodology, Formal analysis, Formalization, Data curation. Ayra Aryamovska: Writing
+    draft, Formalization, Validation. Robin Brody: Writing & editing, Validation,
+    Inspection. Andrew Gabriel: Writing & editing, Validation, Inspection. Adel Hel:
+    Writing & editing, Validation. Natalie Nehr: Writing & editing, Validation, Supervision,
+    Methodology. Haribhan Mitchell: Writing & editing, Validation, Supervision, Methodology.
+    Sonk: Writing & editing, Validation, Investigation, Data curation. Christopher
+    M. Kramer: Matthew W. Writing & editing, Validation, Investigation. Milind Y.
+    Desai: Writing & editing, Validation, Investigation, curation. Evangelos K. Okonomous:
+    Writing & editing, Original draft, Visualization, Validation, Methodology, Conceptualization.
+    Rohan Khera: Writing & editing, Validation, Visualization, Validation.
+
+    '
+  mdcn: '
+
+
+    # YNHMS
+
+
+    # CCF
+
+
+    # AHS
+
+
+    ![](img/f036dfb5fabdd06b9a8d4c47129c5257_3_0.png)
+
+
+    图 2 隔膜缩小术后的 AI-ECG HCM 评分。显示隔膜缩小术前后最接近的心声图中人工智能辅助的肥厚性心肌评分（AI-ECG HCM 评分）的箱线和须线。
+
+
+    表 2
+
+    隔膜缩小术和马伐替米（mavacamen）治疗前后心声图中人工智能辅助的肥厚性心肌评分
+
+
+    | 干预措施 | 医疗系统 | 干预前 AI-ECG HCM 评分，中位数 (IQR) | 干预后 AI-ECG HCM 评分，中位数 (IQR) | Wilcoxon
+    秩检验 p 值 |
+
+    |---|---|---|---|---|
+
+    | 隔膜缩小治疗法 | YNHMS | 0.55 (0.24–0.77) | 0.59 (0.40–0.75) | 0.428 |
+
+    | | CCF | 0.61 (0.32–0.79) | 0.69 (0.52–0.79) | 0.003 |
+
+    | | AHS | 0.52 (0.35–0.69) | 0.41 (0.46–0.72) | -0.001 |
+
+    | 马伐替米 | | | 0.28 (0.11–0.50) | -0.001 |
+
+
+    *AHS: 大西洋健康系统；CCF: 克利夫兰医学中心基金会；YNHMS: 耶鲁新海港健康系统
+
+
+    调整线性回归模型：$\beta = 0.01$ [0.04 至 0.06]。开始使用马伐替米前的线 AI-ECG HCM 评分（马伐替米前 3 个月内记录的所有心声的平均值）为
+    0.46 [IQR 0.21 至 0.72]。马伐替米前最后一周的 AI-ECG HCM 评分中位数为 0.52 (IQR 0.27–0.77)，在 23
+    天的随访期（IQR 140 至 330）内显著下降了 0.28 (IQR 0.01 至 0.05) (p=0.001)；表 2。
+
+
+    SRT 和心脏特异性肌球抑制的作用可能反映了改变 HCM 应力变的不同机制$^{17,18}$。虽然隔膜缩小提供了梗阻性治疗，但它与马伐替米共同作用，因此在不改变病变心肌细胞病理的情况下消除了阻塞$^{16}$
+    对于已知心肌重构和相关能量变化的仅接受马伐替米治疗患者，其 AI-ECG 评分显著下降$^{6}$。马伐替米治疗的 HCM 评分与隔膜缩小的谱也一致。
+
+
+    在 18 名 AI-ECG HCM 评分低于基线评分的患者中，基线和基线 ECG 评分的差异平均值为 -0.09 (IQR 0.01 至 0.05)，或等于平均值，马伐替米
+    AI-ECG HCM 评分的变化平均值为 -0.09 (IQR 0.23 至 0.03)；基于预处理的这两组之间变化之间的差异没有统计学意义（$P_{value}$
+    = 0.117）$^{19}$
+
+
+    # 讨论
+
+
+    在三个大型医疗中心，通过 AI-ECG 测量的 HCM 心电图谱显示，接受 SRT 的患者图像没有改善。在接受马伐替米治疗的 HCM 真实世界患者中，AI-ECG
+    HCM 评分显著改善，反映了该药物在 2 期临床试验后期分析中的效果$^{9,10}$。这项工作强调了 SRT 和肌球蛋白抑制在 HCM 心电图标记物方面的差异。
+
+
+    我们工作的一个优势是包含了多幅 AI-ECG 图像以显示改善。它证明了基于图像的 AI-ECG 在 HCM 及其他疾病监测中的潜在价值和可扩展性。全球医疗系统可以使用其基础数据，而可能只能访问
+    ECG 或便携式图像的临床医生可以使用 HCM 的 ECG 图像模型。
+
+
+    已提出使用深度学习用于检测 HCM$^{12}$，在旨在评估马伐替米治疗下心电图 HCM 表型的 2 期临床试验中，已应用于接受马伐替米的患者信号追踪 AI
+    模型$^{13,15}$，发现与我们在 YNHMS 真实世界患者队列的 ECG 图像评估结果一致。背景是
+
+
+    ![](img/f036dfb5fabdd06b9a8d4c47129c5257_4_0.png)
+
+
+    马伐替米治疗中的 HCM 评分，我们没有直接将这些变化与临床和症状进行比较。尽管如此，鉴于我们在 5 项临床试验中观察到的结果一致性，ECG-HCM 评分的变化可能反映了左心室流出道道梯度的变化。HCM
+    患者的 AI 表型可能会随着疾病进展或治疗反应而发生纵向变化。然而，我们包含了疾病各个阶段（包括初始） SRT 程序前的 ECG 记录。在 AI 表型后可能会出现急性炎症或水肿。然而，我们使用了每个受试者最新的
+    ECG 数据，SRT 到 SRT-ECG 评分之间间隔 50 天，以确保我们使用的 AI-HCM 评分准确。尽管如此，AI-HCM 评分的变化与其他非 SRT
+    心脏事件（CABC）和 SAV 后的变化没有区别。首先，我们的研究没有评估酒精隔膜消融术后左心室流出道阻塞当前近期节律的长期影响。其次，可能需要更大规模的酒精隔膜消融后
+    AI-HCM 评分研究来调查这些问题。
+
+
+    我们的研究证明了 HCM 心肌效应和 ECG 图像心脏抑制检测之间可衡量的差异。我们的方法为医疗治疗后 HCM 生理改善的监测提供了即时性。
+
+
+    # 利益声明
+
+
+    Sangha 先生和 D Khera 是美国临时专利申请第 63/346,610 的作者（使用深度学习从心电图图像检测隐性心血管疾病的方法和格式）。Khera
+    博士获得了美国国立健康研究院 (NIH) 和美国血液基金会（资助号为 R01AI202859, R01HL176858, 和 K23H135375）以及杜克慈善基金会（资助号
+    20220065）的支持。他受到了 Blavatnik 基金会的支持。Sangha 先生是美国健康研究院的研究员。Khera 先生是美国临时专利申请 63/346,610
+    的作者。
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 5]
+
+
+    Resources, Management, Methodology, Investigation, Funding—acquisition, Data,
+    Conceptualization.
+
+
+    # Data Availability
+
+
+    The data set cannot be made publicly available because it contains health records.
+    Sharing data without proper consent could compromise patient privacy and violate
+    the institutional review board''s approval for the study. The code is available
+    from the authors upon request.
+
+
+    # Ethical Approval
+
+
+    The Yale institutional review board reviewed the study, approved the protocol,
+    and words were used without permit because the students represent sensitive analysis
+    of data.
+
+
+    # Supplementary materials
+
+
+    Supplementary material associated with this article can be found in the link:
+    https://doi.org/10.1016/j.jcm.2024.112028.
+
+
+    # References
+
+
+    +   1. Sangha V, Dhingra EO, Olikonoym A, Skilanka N, Sen V, Sroukhan SK, Kemaa
+    R. Identification of hypertrophic cardiomyopathy using electrocardiogram with
+    deep learning methods. Artificial Intelligence in medicine. https://doi.org/10.1016/j.aiicsm.2023.107344.
+    Accessed on February 28, 2023.
+
+    2. Ko Wij, Sitsient KC, Attia J, Carter KA, Shimmer SR, Dennis SJ, Ackerman M,
+    Hernandez J, Ramirez RA, Freedman Novic PA. Detection of hypertrophic cardiomyopathy
+    using a convolutional neural-enhanced electrocardiogram. J Am Card Cardiol 2020;75:722–733.
+
+    3. Goto S, Johnson J, Ye R, Horikawa M, Michalis L, Katsuyama Y, Gihara H, Takagi
+    H, Nishimura K, Uchida S, Umezawa T. Comparison of echocardiography and electrocardiogram
+    for hypertrophic cardiomyopathy detection. Circ Heart Failure 2023;10:e135–e140.
+
+    4. Tison GH, Sitsient KC, Abreau A, Attia J, Zargaval P, Subramaniyan A L, Seidler
+    T A. Assessment of disease status and treatment response with artificial intelligence-enhanced
+    electrocardiography in hypertrophic cardiomyopathy. European Heart Journal 2023;44:3142–3155.
+
+    5. Semancian C, Ingles J, Larson M, Burns BJ. New perspectives on the prevalence
+    of hypertrophic cardiomyopathy: a systematic review. Genetics in Cardiology 2023;101.
+
+    6. Sabaterolina M, Pérez-Sánchez I, Hernández del Rincón JP, Gimeno JR. Genetics
+    of hypertrophic cardiomyopathy: a review update. Clin Genet 2018;95:3–14.
+
+    7. Oliva L, Cuevares A, Barrios-Villas R, Abraham TP, Maas A, García-Pavia F,
+    Saberi S, Lakalidis W, Weaver MW, Avesten K, Wojakowska M, Weng MR.
+
+    8. Jiménez-Gomez L, Alvarez K, Myers J, Hernandez M, Solmon SD, Seifert AJ, Zhang
+    L W, Bhattacharyya M, Edeberg JM, Wallman C, Lester SJ, Wang A, Ho JC, De Courty
+    Y. EXPLORER-HCM Studies: Treatment of obstructive hypertrophic cardiomyopathy
+    using mavacam-based echocardiography (HCMRAM): a randomized, multic.
+
+    9. Treatment of obstructive hypertrophic cardiomyopathy using mavacam-based echocardiography
+    (HCMRAM): a randomized, double-blind, controlled trial. European Heart Journal
+    2021;42:1436–1450.
+
+    10. Elboordi P, Antonimus G, Reyes MY. Evaluation of treatment for hypertrophic
+    cardiomyopathy and future drugs. Drugs in Heart Failure 2022;17:185–196.
+
+    11. Argenzo A, Maritti A, Capelli F, Del Franco A, Mazzacur C, Cecchi O, Polini
+    G, Leonardi F, Rossini L, De Rora WR, De Winter T, Filbert M, Garcia-Pavia F,
+    Garcia-García A, Magini L, Napoli P, Pinto R,, Pinto A, Vasquez L, Santas V A,
+    J SC. ESC Guidelines for the management of hypertrophic cardiomyopathy. European
+    Heart Journal 2023;44:2097–2212.
+
+    12. Da Y, Ma K, Sahi S. Treatment strategies for hypertrophic cardiomyopathy:
+    alcohol sept ablation and step-by-step technique. J Am J Cardiol 2022;15:2014–2025.
+
+    13. Jan SS, Lu X, Lee J, Sutton MF, Lee ED, Jang J, Wei S, Vasquez PJ, Cohen J.
+    Clinical and economic outcomes of treating obstructive hypertrophic cardiomyopathy.
+    Journal of Clinical Cardiology 2022;15:1015–1020.
+
+    14. To AC, Dahan Y, Myers M. Cardiac magnetic resonance in hypertrophic cardiomyopathy.
+    European Heart Journal 2023;44:3893–3905.
+
+    15. Simoneelli C, Sessa A, Attia J, Biorin JS, Prowthal D, Thomas A, Agwal P,
+    Airth B, Lujan Y, Stevens J, Wang A, Seifert AJ, Edeberg JM, Wallman C, T, Tison
+    GH. Artificial intelligence-enhanced electrocardiography in hypertrophic cardiomyopathy.
+    European Heart Journal 2023;44:3142.
+
+    16. Pillow. Python Imaging. Available at: https://www.pillow.org/projects/pillow/.
+    Accessed on February 29, 2023.
+
+    17. Hindes D D, Ramirez A, Arga Y, Capavella V, Carr-White G, Lucashik P, Seifert
+    KR, Kramer SM, Deniz MW, Neubauer S, Washniak K, Taylor J.
+
+    18. De Devries JR, In A, Hiller GE. The European Medicines Agency assessment of
+    obstructive hypertrophic cardiomyopathy in EXPLORER-HCM: results from a post hoc
+    machine learning analysis. European Heart Journal 2023;44:e844–e848.
+
+    19. Abraham T, Seifert AJ, Anderson W, Lands LI W, Gura K, Olhovov I. Assessment
+    of obstructive hypertrophic cardiomyopathy treatment endpoint in EXPLORER-HCM:
+    results from a post hoc machine learning analysis. Artificial Intelligence in
+    Medicine 2023;107:107311.
+
+    20. Vodenický M, Mach M, Horvatová A, Palencik J, Zemanek D, Permisová T. The
+    bluish consequence of left ventricular outflow gradient in hypertrophic cardiomyopathy.
+    European Heart Journal 2023;44:3142–3155.
+
+    21. Keskin IF. An unusual complication of using alcohol septal ablation: left
+    anterior of ascending coronary causing cardiac tamponade: a case report and review.
+    J J Heart Rep 2021;38:101–105.'
+  md: '
+
+    Resources, Management, Methodology, Investigation, Funding-acquisition, Data,
+    Conceptualization.
+
+
+    ## Data Availability
+
+
+    The data set cannot be made publicly available because it contains health records.
+    Sharing data without proper consent could compromise patient privacy and violate
+    the institutional review board''s approval for the study. The code is available
+    from the authors upon request.
+
+
+    ## Ethical Approval
+
+
+    The Yale institutional review board reviewed the study, approved the protocol,
+    and words were used without permit because the students represent sensitive analysis
+    of data.
+
+
+    ## Supplementary materials
+
+
+    Supplementary material associated with this article can be found in the link:
+    https://doi.org/10.1016/j.jcm.2024.112028.
+
+
+    ## References
+
+
+    - 1. Sangha V, Dhingra EO, Olikonoym A, Skilanka N, Sen V, Sroukhan SK, Kemaa
+    R. Identification of hypertrophic cardiomyopathy using electrocardiogram with
+    deep learning methods. Artificial Intelligence in medicine. https://doi.org/10.1016/j.aiicsm.2023.107344.
+    Accessed on February 28, 2023.
+
+    - 2. Ko Wij, Sitsient KC, Attia J, Carter KA, Shimmer SR, Dennis SJ, Ackerman
+    M, Hernandez J, Ramirez RA, Freedman Novic PA. Detection of hypertrophic cardiomyopathy
+    using a convolutional neural-enhanced electrocardiogram. J Am Card Cardiol 2020;75:722–733.
+
+    - 3. Goto S, Johnson J, Ye R, Horikawa M, Michalis L, Katsuyama Y, Gihara H, Takagi
+    H, Nishimura K, Uchida S, Umezawa T. Comparison of echocardiography and electrocardiogram
+    for hypertrophic cardiomyopathy detection. Circ Heart Failure 2023;10:e135–e140.
+
+    - 4. Tison GH, Sitsient KC, Abreau A, Attia J, Zargaval P, Subramaniyan A L, Seidler
+    T A. Assessment of disease status and treatment response with artificial intelligence-enhanced
+    electrocardiography in hypertrophic cardiomyopathy. European Heart Journal 2023;44:3142–3155.
+
+    - 5. Semancian C, Ingles J, Larson M, Burns BJ. New perspectives on the prevalence
+    of hypertrophic cardiomyopathy: a systematic review. Genetics in Cardiology 2023;101.
+
+    - 6. Sabaterolina M, Pérez-Sánchez I, Hernández del Rincón JP, Gimeno JR. Genetics
+    of hypertrophic cardiomyopathy: a review update. Clin Genet 2018;95:3–14.
+
+    - 7. Oliva L, Cuevares A, Barrios-Villas R, Abraham TP, Maas A, García-Pavia F,
+    Saberi S, Lakalidis W, Weaver MW, Avesten K, Wojakowska M, Weng MR.
+
+    - 8. Jiménez-Gomez L, Alvarez K, Myers J, Hernandez M, Solmon SD, Seifert AJ,
+    Zhang L W, Bhattacharyya M, Edeberg JM, Wallman C, Lester SJ, Wang A, Ho JC, De
+    Courty Y. EXPLORER-HCM Studies: Treatment of obstructive hypertrophic cardiomyopathy
+    using mavacam-based echocardiography (HCMRAM): a randomized, multic.
+
+    - 9. Treatment of obstructive hypertrophic cardiomyopathy using mavacam-based
+    echocardiography (HCMRAM): a randomized, double-blind, controlled trial. European
+    Heart Journal 2021;42:1436–1450.
+
+    - 10. Elboordi P, Antonimus G, Reyes MY. Evaluation of treatment for hypertrophic
+    cardiomyopathy and future drugs. Drugs in Heart Failure 2022;17:185–196.
+
+    - 11. Argenzo A, Maritti A, Capelli F, Del Franco A, Mazzacur C, Cecchi O, Polini
+    G, Leonardi F, Rossini L, De Rora WR, De Winter T, Filbert M, Garcia-Pavia F,
+    Garcia-García A, Magini L, Napoli P, Pinto R, Pinto A, Vasquez L, Santas V A,
+    J SC. ESC Guidelines for the management of hypertrophic cardiomyopathy. European
+    Heart Journal 2023;44:2097–2212.
+
+    - 12. Da Y, Ma K, Sahi S. Treatment strategies for hypertrophic cardiomyopathy:
+    alcohol sept ablation and step-by-step technique. J Am J Cardiol 2022;15:2014–2025.
+
+    - 13. Jan SS, Lu X, Lee J, Sutton MF, Lee ED, Jang J, Wei S, Vasquez PJ, Cohen
+    J. Clinical and economic outcomes of treating obstructive hypertrophic cardiomyopathy.
+    Journal of Clinical Cardiology 2022;15:1015–1020.
+
+    - 14. To AC, Dahan Y, Myers M. Cardiac magnetic resonance in hypertrophic cardiomyopathy.
+    European Heart Journal 2023;44:3893–3905.
+
+    - 15. Simoneelli C, Sessa A, Attia J, Biorin JS, Prowthal D, Thomas A, Agwal P,
+    Airth B, Lujan Y, Stevens J, Wang A, Seifert AJ, Edeberg JM, Wallman C, T, Tison
+    GH. Artificial intelligence-enhanced electrocardiography in hypertrophic cardiomyopathy.
+    European Heart Journal 2023;44:3142.
+
+    - 16. Pillow. Python Imaging. Available at: https://www.pillow.org/projects/pillow/.
+    Accessed on February 29, 2023.
+
+    - 17. Hindes D D, Ramirez A, Arga Y, Capavella V, Carr-White G, Lucashik P, Seifert
+    KR, Kramer SM, Deniz MW, Neubauer S, Washniak K, Taylor J.
+
+    - 18. De Devries JR, In A, Hiller GE. The European Medicines Agency assessment
+    of obstructive hypertrophic cardiomyopathy in EXPLORER-HCM: results from a post
+    hoc machine learning analysis. European Heart Journal 2023;44:e844–e848.
+
+    - 19. Abraham T, Seifert AJ, Anderson W, Lands LI W, Gura K, Olhovov I. Assessment
+    of obstructive hypertrophic cardiomyopathy treatment endpoint in EXPLORER-HCM:
+    results from a post hoc machine learning analysis. Artificial Intelligence in
+    Medicine 2023;107:107311.
+
+    - 20. Vodenický M, Mach M, Horvatová A, Palencik J, Zemanek D, Permisová T. The
+    bluish consequence of left ventricular outflow gradient in hypertrophic cardiomyopathy.
+    European Heart Journal 2023;44:3142–3155.
+
+    - 21. Keskin IF. An unusual complication of using alcohol septal ablation: left
+    anterior of ascending coronary causing cardiac tamponade: a case report and review.
+    J J Heart Rep 2021;38:101–105.
+
+    '
+  mdcn: '
+
+
+    资源、管理、方法论、调查、资金获取、数据、概念化。
+
+
+    ## 数据可用性
+
+
+    由于该数据集包含健康记录，因此无法公开。在未获得适当的情况下共享数据可能会损害患者隐私，并违反机构审查委员会对该研究的批准。代码根据要求向作者提供。
+
+
+    ## 伦理批准
+
+
+    耶鲁大学机构审查委员会审查了该研究并批准了实验方案，由于学生代表了数据的敏感分析，因此使用了相关词汇。
+
+
+    ## 补充材料
+
+
+    本文相关的补充材料可通过链接找到：https://doi.org/10.1016/j.jcm.2024.112028。
+
+
+    ## 参考文献
+
+
+    - 1. Sangha V, Dhingra EO, Olikonoym A, Skilanka N, Sen V, Sroukhan SK, Kemaa
+    R. 利用深度学习方法的心电图识别肥厚性心肌病. 医学中的人工智能. https://doi.org/10.1016/j.aiicsm.2023.107344.
+    访问于2023年2月28日.
+
+    - 2. Ko Wij, Sitsient KC, Attia J, Carter KA, Shimmer SR, Dennis SJ, Ackerman
+    M, Hernandez J, Ramirez RA, Freedman Novic PA. 利用卷积神经网络增强的心电图检测肥厚性心肌病. 美国心脏血管病杂志
+    2020;75:722–733.
+
+    - 3. Goto S, Johnson J, Ye R, Horikawa M, Michalis L, Katsuyama Y, Gihara H, Takagi
+    H, Nishimura K, Uchida S, Umezawa T. 超声心图与心电图在肥厚性心肌病检测中的对比. 心衰循环 2023;10:e135–e140.
+
+    - 4. Tison GH, Sitsient KC, Abreau A, Attia J, Zargaval P, Subramaniyan A L, Seidler
+    T A. 人工智能增强心电图评估肥厚性心肌病的疾病状态和治疗反应. 欧洲心脏杂志 2023;44:3142–3155.
+
+    - 5. Semancian C, Ingles J, Larson M, Burns BJ. 肥厚性心肌病发病率的新观点：系统综述. 心血管遗传学 2023;101.
+
+    - 6. Sabaterolina M, Pérez-Sánchez I, Hernández del Rincón JP, Gimeno JR. 肥厚性心肌病的遗传学：综述更新.
+    临床遗传学 2018;95:3–14.
+
+    - 7. Oliva L, Cuevares A, Barrios-Villas R, Abraham TP, Maas A, García-Pavia F,
+    Saberi S, Lakalidis W, Weaver MW, Avesten K, Wojakowska M, Weng MR.
+
+    - 8. Jiménez-Gomez L, Alvarez K, Myers J, Hernandez M, Solmon SD, Seifert AJ,
+    Zhang L W, Bhattacharyya M, Edeberg JM, Wallman C, Lester SJ, Wang A, Ho JC, De
+    Courty Y. EXPLORER-HCM 研究：基于 mavacam 的超声心图治疗阻塞性肥厚性心肌病 (HCMRAM): 随机、多中心.
+
+    - 9. 基于 mavacam 的超声心图治疗阻塞性肥厚性心肌病 (HCMRAM): 随机、双盲、对照试验. 欧洲心脏杂志 2021;42:1436–1450.
+
+    - 10. Elboordi P, Antonimus G, Reyes MY. 肥厚性心肌病的治疗评估及未来药物. 心衰中的药物 2022;17:185–196.
+
+    - 11. Argenzo A, Maritti A, Capelli F, Del Franco A, Mazzacur C, Cecchi O, Polini
+    G, Leonardi F, Rossini L, Pinto R, De Winter T, Filbert M, Garcia-Pavia F, Garcia-A,
+    Pinto L, Santas V. ESC 肥厚性心肌病管理指南. 欧洲心脏杂志 2023;44:2097–2212.
+
+    - 12. Da Y, Ma K, Sahi S. 肥厚性心肌病的治疗策略：酒精隔膜消融术. 美国心脏血管病杂志 2022;15:2014–2025.
+
+    - 13. Jan SS, Lu X, Lee J, Sutton MF, Lee ED, Jang J, Wei S, Vasquez PJ, Cohen
+    J. 阻塞性肥厚性心肌病的临床与经济结局. 临床心脏杂志 2022;15:1015–1020.
+
+    - 14. To AC, Dahan Y, Myers M. 肥厚性心肌病的心磁共振. 欧洲心脏杂志 2023;44:3893–3905.
+
+    - 15. Simoneelli C, Sessa A, Attia J, Biorin JS, Prowthal D, Thomas A, Agwal P,
+    Airth B, Lujan Y, Stevens J, Wang A, Seifert AJ, Edeberg JM, Wallman C, T, Tison
+    GH. 人工智能增强心电图于肥厚性心肌病. 欧洲心脏杂志 2023;44:3142.
+
+    - 16. Pillow. Python 图像处理. 访问地址：https://www.pillow.org/projects/pillow/. 访问于2023年2月29日.
+
+    - 17. Hindes D D, Ramirez A, Arga Y, Capavella V, Carr-White G, Lucashik P, Seifert
+    KR, Kramer SM, Deniz MW, Neubauer S, Washniak K, Taylor J.
+
+    - 18. De Devries JR, In A, Hiller GE. 欧洲药品管理局对 EXPLORER-HCM 中阻塞性肥厚性心肌病的评估. 欧洲心脏杂志
+    2023;44:e844–e848.
+
+    - 19. Abraham T, Seifert AJ, Anderson W, Lands LI W, Gura K, Olhovov I. EXPLORER-HCM
+    中阻塞性肥厚性心肌病治疗终点的事后机器学习分析. 医学中的人工智能 2023;107:107311.
+
+    - 20. Vodenický M, Mach M, Horvatová A, Palencik J, Zemanek D, Permisová T. 肥厚性心肌病左心室流出梯度导致的蓝色后果.
+    欧洲心脏杂志 2023;44:3142–3155.
+
+    - 21. Keskin IF. 酒精隔膜消融术的一种罕见并发症：左前回状动脉导致心包积血：病例报告与综述. 心脏报告 2021;38:101–105.
+
+
+    '
+  merge: 0
