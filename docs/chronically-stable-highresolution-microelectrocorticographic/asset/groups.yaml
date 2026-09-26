@@ -1,0 +1,2256 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # Chronically Stable, High-Resolution Micro-Electrocorticographic Brain-Computer
+    Interfaces for Real-Time Motor Decoding
+
+
+    Erda Zhou, Xiner Wang, Jizhi Liang, Yang Liu, Qinrong Wang, Xingchen Ran, Lei
+    Xia, Xiang Zhou, Changjiang Liu, Liuyang Sun, Li Peng, Liang Chen, Ying Mao, Zehan
+    Wu,* Tiger H. Tao,* and Zhithao Chao*
+
+
+    Brain-computer interfaces (BCIs) enable communication between individuals and
+    computers or other devices by decoding brain activity, by reconstructing speech
+    and motor functions for patients with neurological disorders. This study presents
+    a high-resolution micro-electrocardiography (µECG) based on a flexible, high-density
+    µECG electrode array, capable of chronically stable and real-time motor decoding.
+    Leveraging micro-manufacturing technology, the µECG achieved a 64-fold increase
+    in electrode density compared to conventional electrode arrays, enhancing spatial
+    resolution while featuring scalability. Over a 23-day experiment, high-resolution
+    µECG fine spatial specificity demonstrated to improve decoding performance while
+    reduced implanted devices. These advancements provide a pathway to overcome the
+    limitations of conventional BCI. During waking, the µECG enabled stable control
+    after 7 min of model training. Furthermore, during 19.8 h, the participant achieved
+    robust control with a rate of 1.1 bits per second (bps) under full voluntary control,
+    and the rate reached up to 4.5 bps with enhanced user interface. These results
+    show that the µECG achieves comparable performance to intracortical electroencephalography
+    (iEEG) BCIs without such invasiveness, making a breakthrough in the clinical flexibility
+    of BCIs.
+
+
+    # ## 1. Introduction
+
+
+    Motor impairments caused by neurological disorders such as stroke, spinal cord
+    injury, and amyotrophic lateral sclerosis limits patients'' independence and mobility,
+    which drastically affects their quality of life and expectancy. While some computer-aided
+    technologies offer potential, they are often inefficient and difficult to use,
+    providing less-than-satisfactory experience [1]. BCI allows patients to interact
+    with devices directly by their brain activity, offering more effective approaches
+    to reconstruct motor function and regain safe independence in daily life [2–5].
+    The overall performance of BCI depends on the acquisition methods used for signals,
+    such as electroencephalography (EEG), iEEG, and ECo, which suffer from signal
+    attenuation across the cortical surface, dura, skull, and scalp [6,7]. Due to
+    suboptimal signal quality (to-noise ratio,
+
+
+    > E. Zhou, X. Wang, J. Liang, C. Liu, L. Sun
+
+    2020 X-Lab
+
+    Shanghai Institute of Microsystem and Information Technology
+
+    Chinese Academy of Sciences
+
+    E. Zhou, X. Wang, J. Liang, Z. Zhou
+
+    School of Graduate Study
+
+    University of Chinese Academy of Sciences
+
+    Beijing 100049, China
+
+    E-mail: zzhou@mail.siac.com
+
+    Y. Liu, Q. Wang, X. Ran, L. Peng, T. H. Tao
+
+    Neeroys Co., Ltd.
+
+    Shanghai 20023, China
+
+    X. Zhou, L. Chen, Y. Mao, Z. Wu
+
+    Department of Neurology
+
+    HnHushan Hospital of Fudan University
+
+    Shanghai 200030, China
+
+    E-mail: zhwu08@fudan.edu.cn
+
+    L. Sun, Zhou
+
+    School of Integrated Circuits
+
+    University of Chinese Academy of Sciences
+
+    Beijing 100049, China
+
+    T. H. Tao
+
+    Guangdong Institute of Intelligence Science and Technology
+
+    Zhuigang, Guangzhou 590301, China
+
+    T. Tao
+
+    Tianqiao and Cherry Chinese Institute for Translation Research
+
+    Shanghai, China
+
+
+    The ORCID identifier (for the authors) of this article can be found here at https://doi.org/10.1002/advs.202506663
+
+    © 2025 The Author(s). Advanced Science published by Wiley-VCH GmbH. This is an
+    open access article under the terms of the Creative Commons License, which permits
+    use, distribution, and reproduction in any medium, provided the original content
+    is properly cited.
+
+    DOI: 10.1002/advs.202506663
+
+
+    Adv. Sci. 2025, 12, e06663 (1 of 11)'
+  - '[PAGE 1]
+
+
+    # ADVANCED SCIENCE NEWS
+
+    www.advancedsciencenews.com
+
+
+    # ADVANCED SCIENCE NEWS
+
+    www.advancedsciencenews.com
+
+
+    SNR and spatial resolution, EEG BCIs are typically restricted to simple decoding
+    tasks and suffer from high latency[8–10]. In contrast, iEEG acquired via microelectrode
+    arrays (MEAs) exhibit excellent (signal and neural) multiresolution, but are constrained
+    by invasive techniques and limited brain coverage[11–13]. CoEEG recorded by electrode
+    arrays on the cerebral cortex balances signal quality and waviness, which has
+    shown great potential for motor and imagery decoding (Table S1, Supporting Information).
+
+
+    # 2. Results
+
+
+    The workflow of the high-resolution µBCG we proposed is outlined in Figure 1.
+    During each session, high-spatial µBCG signals are acquired by an implanted interface
+    (Figure 1b; S2, Supporting Information). Subsequently, the neural data undergoes
+    preprocessing where the spectral power density (PSD) of the high-gamma (HG) band
+    is extracted as feature vectors per electrode channel. Short-term memory (LSTM)
+    networks with attention-mechanism (Figure 2; S3, Supporting Information) are designed
+    to predict actual movements or sensory intentions from the feature matrix. Additionally,
+    an interactive interface provides visual feedback to enhance functional learning
+    through a cloud-to-edge architecture, orchestrating raw data to edge devices,
+    thereby preserving high-resolution features for model training and neural computing
+    tasks.
+
+
+    However, the density and throughput of conventional clinical BCIs are inherently
+    limited due to manufacturing constraints, impeding neural decoding advancements.
+    Additionally, device miniaturization necessitates large craniotomies, excisional
+    surgery. Recent high-throughput and high density µBCG electrode arrays represent
+    a technology that remains promising in this address[23–24]. Nevertheless, clinical
+    vivo and clinical validation of flexible µBCGs for motor or imagery decoding remains
+    the main challenge terms of electrode density, stability, and decoding performance.
+
+
+    The electrode array, serving as the core component of the BCI system, features
+    an electrode density of 850 µm and electrode-interface spacing of 1250 µm. Performance
+    was characterized by low impedance (< 1 MΩ at 1 kHz) and root-mean-square (RMS)
+    noise < 2 µV in phosphate-buffered solution (Figure S4, Supporting Information).
+    The µBCG signal is recorded during neural data acquisition. A single session is
+    acquired by the electrode array through a flexible printed circuit (FPC).
+
+
+    In this study, we developed a flexible µBCG electrode array with 64 channels.
+    The array''s flexibility, mesh-constructed design covers substantial cortical
+    area (Figure S1, Supporting Information), while thickened traces provide sufficient
+    mechanical robustness for stability, stable acquisition of high-fidelity neural
+    signals. We conducted a 20-day in-vivo experiment, where real-time motor decoding
+    with an accuracy of 0.84 was achieved in a laboratory dog.
+
+
+    For imagery decoding, a progressive calibration approach was used to ensure all
+    participants could attain full voluntary control within 30 days.
+
+
+    The decoding performance was evaluated using real-time motor and imagery-based
+    decoding. Following 7 days of data collection and decoder training, the participant
+    performed tasks such as evoked Ping-Pong and some games which showed brain activity
+    during awake wake-up state. In a 12-day in-vivo paradigm, but days paradigms were
+    tested with accumulation, iEEG-BCG-level metrics were evaluated with reduced duration[14].
+    These results provide evidence for the feasibility of leveraging high-resolution
+    µBCGs with neural plasticity to achieve chronical stable motor reconstruction.
+
+
+    The experimental results revealed impressive stability with only a 5.49% decrease
+    in decoding efficiency over 20 days in a lab (Figure S5, Supporting Information).
+    For each session, we evaluate the PSD to assess the signal quality.
+
+
+    Frequency characteristics of signals from each channel remain consistent across
+    sessions (Figure S6, Supporting Information), and the SNR at >20 Hz (Figure 1d),
+    comparing the stability of the µBCG. By comparing the two methods, we demonstrate
+    that the µBCG accurately captured and tracked the trends of its capabilities,
+    and this stability was maintained throughout the entire experiment.
+
+
+    Z Zhou
+
+    State Key Laboratory of Transducer
+
+    Shanghai Institute of Microsystem and Information Technology
+
+    Chinese Academy of Sciences
+
+    Shanghai 200050, China
+
+
+    Adv. Sci. 2023, 12, e06663
+
+
+    © 2023 The Author(s). Advanced science published by Wiley-VCH Germany'
+  md: '
+
+    # Chronically Stable, High-Resolution Micro-Electrocorticographic Brain-Computer
+    Interfaces for Real-Time Motor Decoding
+
+
+    Erda Zhou, Xiner Wang, Jizhi Liang, Yang Liu, Qinrong Wang, Xingchen Ran, Lei
+    Xia, Xiang Zhou, Changjiang Liu, Liuyang Sun, Li Peng, Liang Chen, Ying Mao, Zehan
+    Wu,* Tiger H. Tao,* and Zhithao Chao*
+
+
+    Brain-computer interfaces (BCIs) enable communication between individuals and
+    computers or other devices by decoding brain activity, by reconstructing speech
+    and motor functions for patients with neurological disorders. This study presents
+    a high-resolution micro-electrocorticography (µECG) based on a flexible, high-density
+    µECG electrode array, capable of chronically stable and real-time motor decoding.
+    Leveraging micro-manufacturing technology, the µECG achieved a 64-fold increase
+    in electrode density compared to conventional electrode arrays, enhancing spatial
+    resolution while featuring scalability. Over a 23-day experiment, high-resolution
+    µECG fine spatial specificity demonstrated to improve decoding performance while
+    reduced implanted devices. These advancements provide a pathway to overcome the
+    limitations of conventional BCI. During waking, the µECG enabled stable control
+    after 7 min of model training. Furthermore, during 19.8 h, the participant achieved
+    robust control with a rate of 1.1 bits per second (bps) under full voluntary control,
+    and the rate reached up to 4.5 bps with enhanced user interface. These results
+    show that the µECG achieves comparable performance to intracortical electroencephalography
+    (iEEG) BCIs without such invasiveness, making a breakthrough in the clinical flexibility
+    of BCIs.
+
+
+    ## 1. Introduction
+
+
+    Motor impairments caused by neurological disorders such as stroke, spinal cord
+    injury, and amyotrophic lateral sclerosis limits patients'' independence and mobility,
+    which drastically affects their quality of life and expectancy. While some computer-aided
+    technologies offer potential, they are often inefficient and difficult to use,
+    providing less-than-satisfactory experience [1]. BCI allows patients to interact
+    with devices directly by their brain activity, offering more effective approaches
+    to reconstruct motor function and regain safe independence in daily life [2–5].
+    The overall performance of BCI depends on the acquisition methods used for signals,
+    such as electroencephalography (EEG), iEEG, and ECo, which suffer from signal
+    attenuation across the cortical surface, dura, skull, and scalp [6,7]. Due to
+    suboptimal signal quality (to-noise ratio, SNR) and spatial resolution, EEG BCIs
+    are typically restricted to simple decoding tasks and suffer from high latency[8–10].
+    In contrast, iEEG acquired via microelectrode arrays (MEAs) exhibit excellent
+    (signal and neural) multiresolution, but are constrained by invasive techniques
+    and limited brain coverage[11–13]. CoEEG recorded by electrode arrays on the cerebral
+    cortex balances signal quality and waviness, which has shown great potential for
+    motor and imagery decoding (Table S1, Supporting Information).
+
+
+    ## 2. Results
+
+
+    The workflow of the high-resolution µBCG we proposed is outlined in Figure 1.
+    During each session, high-spatial µBCG signals are acquired by an implanted interface
+    (Figure 1b; S2, Supporting Information). Subsequently, the neural data undergoes
+    preprocessing where the spectral power density (PSD) of the high-gamma (HG) band
+    is extracted as feature vectors per electrode channel. Short-term memory (LSTM)
+    networks with attention-mechanism (Figure 2; S3, Supporting Information) are designed
+    to predict actual movements or sensory intentions from the feature matrix. Additionally,
+    an interactive interface provides visual feedback to enhance functional learning
+    through a cloud-to-edge architecture, orchestrating raw data to edge devices,
+    thereby preserving high-resolution features for model training and neural computing
+    tasks.
+
+
+    However, the density and throughput of conventional BCIs are inherently limited
+    due to manufacturing constraints, impeding decoding. Recent high-throughput high-density
+    µBCGs represent a technology that remains promising in this address[23–24]. Nevertheless,
+    clinical validation necessitates large craniotomies.
+
+
+    The electrode array, serving as the core component of the BCI, features an electrode
+    density of 850 µm and electrode-spacing of 1250 µm. Performance was characterized
+    by low impedance (< 1 MΩ at 1 kHz) and root-mean-square (RMS) noise < 2 µV in
+    phosphate-buffered solution (S4, Supporting Information). The µBCG signal is recorded
+    during data acquisition.
+
+
+    In this study, we developed a flexible µBCG electrode array with 64 channels.
+    The array''s flexibility, mesh-constructed design covers substantial cortical
+    area (S1, Supporting Information), while thickened traces provide sufficient mechanical
+    robustness for stability, stable acquisition of high-fidelity neural signals.
+    A single session is acquired through a flexible printed circuit (FPC).
+
+
+    The experimental results revealed impressive stability with only a 5.49% decrease
+    in decoding efficiency over 20 days in a lab (S5, Supporting Information). For
+    each session, we evaluate the PSD to assess the signal quality. Frequency characteristics
+    of signals from each channel remain consistent across sessions (S6, Supporting
+    Information), and the SNR at >20 Hz (Figure 1d), comparing the stability of the
+    µBCG. By comparing the two methods, we demonstrate that the µBCG accurately captured
+    and tracked the trends of its capabilities, and this stability was maintained
+    throughout the entire experiment.
+
+
+    The decoding performance was evaluated using real-time motor and imagery-based
+    decoding. We conducted a 20-day in-vivo experiment, where real-time motor decoding
+    with an accuracy of 0.84 was achieved in a laboratory dog. Following 7 days of
+    data collection and decoder training, the participant performed tasks such as
+    evoked Ping-Pong and some games which showed brain activity during awake-up state.
+    In a 12-day in-vivo paradigm, but paradigms were tested with accumulation, iEEG-BCG-level
+    metrics were evaluated with reduced duration[14]. These results provide evidence
+    for the feasibility of leveraging high-resolution µBCGs with neural plasticity
+    to achieve chronical stable motor reconstruction.
+
+
+    For imagery decoding, a progressive calibration approach was used to ensure all
+    participants could attain full control within 30 days.
+
+    '
+  mdcn: '
+
+
+    # 用于实时运动解码的长期稳定高分辨率微电极脑机接口
+
+
+    Erda Zhou, Xiner Wang, Jizhi Liang, Yang Liu, Qinrong Wang, Xingchen Ran, Lei
+    Xia, Xiang Zhou, Changjiang Liu, Liuyang Sun, Li Peng, Liang Chen, Ying Mao, Zehan
+    Wu,* Tiger H. Tao,* and Zhithao Chao*
+
+
+    脑机接口（BCIs）通过解码脑活动、重建神经系统疾病患者的语音和运动功能实现个体与计算机或其他设备的通信。本研究介绍了一种基于柔性高密度 µECG 电极列的高分辨率微电极图（µECG），能够实现长期稳定的实时运动解码。利用微制造技术，µECG
+    的电极密度比传统电极列提高了 64 倍，在具有扩展性的同时提高了空间分辨率。在为期 23 天的实验中，高分辨率 µECG 的精细空间特异性证明在减少植入设备的同时提高了解码性能。这些进展为克服传统
+    BCI 的局限性提供了途径。在清醒期间，µECG 在经过 7 min 模型训练后实现了稳定控制。此外，在 19.8 小时内，参与者在完全自主控制下实现了 1.1
+    位/秒（bps）的稳健控制，在增强用户界面后，该速率达到了 4.5 bps。这些结果表明，µECG 在没有此类侵入性的情况下实现了与皮层内电图（iEEG）BCI
+    相当性能，在 BCI 的临床灵活性方面取得了突破。
+
+
+    ## 1. 引言
+
+
+    中风、脊髓损伤和肌萎侧索硬化症等神经系统疾病导致的运动障碍限制了患者的独立性和活动能力，严重影响了他们的生活质量和寿命。虽然一些计算机辅助技术具有潜力，但它们通常效率低下且难以使用，提供的体验并不理想
+    [1]。BCI 允许患者通过其脑活动直接与设备交互，为重建运动功能和在日常生活中恢复安全独立提供了更有效的方法 [2–5]。BCI 的整体性能取决于用于信号采集的方法，如脑电图（EEG）、皮层内电图（iEEG）和皮层电（ECo），这些信号在跨皮层表面、硬膜、颅骨和头皮时会发生衰减
+    [6,7]。由于信号质量（信噪比，SNR）和空间分辨率欠佳，EEG BCI 通常局限于简单的解码任务，并存在高延迟问题 [8–10]。相比之下，通过微电极列（MEAs）采集的
+    iEEG 表现出优的（信号和神经）多分辨率，但受限于侵入性技术和有限的脑覆盖范围 [11–13]。通过在大脑皮层的电极列记录的 CoEEG 平衡了信号质量和柔性性，这在运动和想象解码方面显示出巨大潜力（表
+    S1，补充信息）。
+
+
+    ## 2. 结果
+
+
+    我们提出的高分辨率 µBCG 工作流程如图 1 所示。在每个会话中，通过植入式接口采集高空间 µBCG 信号（图 1b；S2，补充信息）。随后，神经数据经过预处理，提取每个电极通道的高伽马（HG）频谱功率密度（PSD）作为特征向量。设计了带有注意力机制的长短期记忆（LSTM）网络（图
+    2；S3，补充信息），用于从特征矩阵中预测实际运动或感官意图。此外，交互式界面通过云边协同架构提供视觉反馈，将原始数据调度到边缘设备，从而为模型训练和神经计算任务保留高分辨率特征。
+
+
+    然而，由于制造限制，传统 BCI 的密度和吞吐量受到限制，阻碍了解码。最近的高吞吐量高密度 µBCG 代表在该领域仍具前景的技术 [23–24]。然而，临床验证需要大型开颅术。
+
+
+    电极列作为 BCI 的核心组件，其电极密度为 850 µm，电极间距为 1250 µm。性能特征为低阻抗（1 kHz 下 < 1 MΩ）和磷酸盐缓冲溶液中的方根（RMS）噪声
+    < 2 µV（S4，补充信息）。在数据采集期间记录 µG 信号。
+
+
+    在本研究中，我们开发了一个具有 64 通道的柔性 µBCG 电极列。该阵列的柔性和网格结构设计覆盖了大量的皮层区域（S1，补充信息），而加厚的迹线提供了足够的机械稳健性，以稳定采集高保真神经信号。单个会话通过柔性打印电路（FPC）进行采集。
+
+
+    实验结果显示了令人印象深刻的稳定性，在实验室中 20 天的解码效率仅下降了 5.49%（S5，补充信息）。对于每个会话，我们评估 PSD 以衡量信号质量。每个通道的信号频率特性在不同会话之间保持一致（S6，补充信息），并比较
+    >20 Hz 处的 SNR（图 1d）了 µBCG 的稳定性。通过比较两种方法，我们证明了 µBCG 准确捕捉并跟踪了其能力的趋势，且这种稳定性在整个实验过程中得到了维持。
+
+
+    使用实时运动和基于想象的解码评估了性能。我们进行了为期 20 天的体内实验，在实验室狗中实现了准确率为 0.84 的实时运动解码。在经过 7 天的数据收集和解码器训练后，参与者执行了如诱发乒乓球和某些游戏任务，显示了清醒状态下的脑活动。在
+    12 天的体内范式中，范式通过累积进行测试，并在缩短时长的情况下评估了 iEEG-BCG 级指标 [14]。这些结果为利用具有神经可塑性的高分辨率 µBCG
+    实现长期稳定的运动重建的可行性提供了证据。
+
+
+    对于想象解码，使用了渐进式校准方法以确保所有参与者在 30 天内达到完全控制。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    # Chronically Stable In Vivo Motor Decoding
+
+
+    # BCI Operating System
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_2_0.png)
+
+
+    a
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_2_1.png)
+
+
+    b
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_2_2.png)
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_2_3.png)
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_2_4.png)
+
+
+    c
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_2_5.png)
+
+
+    d
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_2_6.png)
+
+
+    e
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_2_7.png)
+
+
+    f
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_2_8.png)
+
+
+    Figure 1. Overview and long-term performance of the high-resolution µECoG BCIs.
+    b) The schematic and workflow (the scale bar is 1 cm for the µECoG BCIs). The
+    image displays zoom-in of the internal structure of the µECoG electrode arrays
+    (scale bar is 500 µm). c) Electrode implants in the long-term experiment lasting
+    7 weeks. The blue markers and the red line indicate the mean values of each session
+    and the blue shaded area indicates the standard deviations. d) SNR of µECoG signals
+    in each session during the long-term experiment. Accuracy (correlation coefficient,
+    CC) for all sessions. For each session, the box plot represents quartiles with
+    med (blue lines) and mean values (square red markers) and the whiskers denote
+    minimum and maximum values. The fitted normal distribution of in-session accuracy
+    is shown to'
+  - '[PAGE 3]
+
+
+    # ADVANCED
+
+    NEWS
+
+
+    www.advancedsciencews.com
+
+
+    # ADVANCED
+
+    SCIENCE
+
+
+    www.advancedsciencews.com
+
+
+    motional. Longitudinal analysis over 203 days demonstrated consistently accuracy:
+    0.87 in the X-direction, 0.82 in the Y-direction and 0.83 in the Z-direction,
+    and 0.86 in the Y-direction and 0.78 in the Z-direction for speed. Additionally,
+    the performance showed high reliability with a standard deviation of 0.03 in the
+    X-direction, 0.02 in the Y-direction and 0.04 in the Z-direction, 0.03 in the
+    Y-direction and 0.06 in the Z-direction (Figure 1e, Supporting Information). Notably,
+    the Y-electrode exhibited sufficient stability to greater movement magnitude.
+    Following the in experiment, immunohistochemical analysis was conducted. Histopathological
+    analysis (Figure 11, Supporting Information) quantitatively confirmed no evidence
+    of neural loss or inflammation compared to controls (mid-sagittal plane reference).
+    Quantitative analysis confirmed no significant atrophy/microglia proliferation-inflammatory
+    markers (Figure 1g). These findings substantiates the stability of muECG electrodes.
+
+
+    in throughput. To eliminate the effects induced by the implanted regions, subsets
+    of electrodes with varying grids gradually contracted toward the center of the
+    muECG electrode array to explore this issue (Figure 2). To evaluate density effect
+    on motor performance, uniformly distributed subsets of varying densities were
+    fixed within a cortical area. Macroscopically, as density increased, decoding
+    accuracy and variability decreased, suggesting that higher density can enhance
+    decoding performance. The decoding accuracies in all channels reached their maximum
+    at an electrode density of 64 cells/cm². To identify the point where electrode
+    density saturates, decoding was further reduced. Reduced accuracy showed a gradual
+    decline with diminishing connectivity and a sharp drop at a sampling grid size
+    of 60 cells (Figure 2d). These findings demonstrate that high-density muECG offers
+    optimal performance for recording cortical activity during natural movements.
+
+
+    Previous studies have demonstrated that ECoG exhibits stable spatial configurations
+    with complex temporal dynamics, particularly in the 70-350 Hz range, benefiting
+    from sub-sampling and spatial resolution. However, to improve decoding performance,
+    in-few studies on motor decoding have been conducted [27]. Therefore, elucidating
+    the critical role of electrode density in decoding performance, we increased the
+    electrode density and in a 2 x 2 cm area, we gained higher power of the signal
+    from each electrode. As electrode density increased, neural activity was represented
+    with greater resolution, enabling more precise identification of cortical regions
+    (Figure 2a). Functional areas were also easily located between adjacent electrodes
+    by electrode-cell density.
+
+
+    In decoding performance, the projected trajectories in three-dimensional space,
+    aligned the real trajectories reported (Figure 2f, Figure 13 and Supporting Information).
+    Enhancement in decoding performance improved the consistency between predicted
+    and real movements. In applications motion synthesis or prosthetic control, this
+    may improve users'' feedback, enhancing ease of use and overall performance. Furthermore,
+    it has been found that machine learning performance improves from increasing electrode
+    density and reducing artifacts.
+
+
+    the right of each. Immunohistochemical staining was performed on tissues of the
+    implanted electrode and the control site (mirror symmetry with the implanted site
+    adjacent to the mid-sagittal plane) after the in vivo experiment (scale bars are
+    100 μm). G of cell counting (the data were normalized to the control site) and
+    statistical analysis (for the data followed a normal distribution, two-sided paired-tests
+    were used, otherwise Wilcoxon sign-rank tests were conducted for significance,
+    p. < 0.05, n = 16 of neurons (Neuron), microglia (Iba-1), and others (GAPF).
+
+
+    Current research on ECoG-based BMI for motor decoding focuses on collecting neural
+    activity from the motor cortex (M1) to decode multi-joint and multi-directional
+    movements. Due to insufficient resolution, the consistency of the sampling density
+    of neural activity encoding remains limited.
+
+
+    Adv. Sci. 2023, 12, e06663
+
+
+    © 2023 The Author(s). Published science by Wiley-VCH Germany'
+  - '[PAGE 4]
+
+
+    # # ADVANCED
+
+    SCIENCE NEWS
+
+
+    # # ADVANCED
+
+    SCIENCE
+
+
+    www.advancedsciencenews.com
+
+
+    www.advancedscience.com
+
+
+    a Selected electrodes Unselected electrodes
+
+
+    b Selected electrodes Unselected electrodes
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_4_0.png)
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_4_1.png)
+
+
+    Time (s)
+
+
+    High gamma power (db)
+
+
+    Electrode density (Log(Channels/cm²))
+
+
+    Subsample grid size (n×n)
+
+
+    c Position: X-Direction Y-Direction Z-Direction
+
+
+    d Position: X-Direction Y-Direction Z-Direction
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_4_2.png)
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_4_3.png)
+
+
+    Speed: X-Direction Y-Direction Z-Direction
+
+
+    Speed: X-Direction Y-Direction Z-Direction
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_4_4.png)
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_4_5.png)
+
+
+    Electrode density (Log(Channels/cm²))
+
+
+    Subsample grid size (n×n)
+
+
+    e Predicted position Predicted speed Real
+
+
+    f Predicted position Predicted speed Real
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_4_6.png)
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_4_7.png)
+
+
+    Figure 2. Improvement of motor decoding performance via increasing electrode power
+    (the mean value of
+
+    the 70–150 Hz frequency band within a 100 ms bin) for $\muCoG recorded by subsets
+    with increasing electrode density. The spatial
+
+    resolution is obviously improved. (a) The electrode density is kept while the
+    subsample grid size (b) is greatly reduced to the center of the
+
+    $\muCoG$ array to simulate the reduction of brain coverage. The coverage of gamma
+    power is as shown (a, c, d). Influence of increasing electrode
+
+    density and reducing subsample size (b) improves accuracy and variability. The
+    blue pent markers indicate mean values for decoding
+
+    oders show standard deviations, and red squares denote normalized coefficients
+    of variables. (e) Examples of real and
+
+    predicted trajectories of kinematic features (position and speed) decoded using
+    subsets with different densities (c) and
+
+    subsample grid size (d).
+
+
+    Adv. Sci. 2025, 12, e02661
+
+
+    2025 The Author(s). Advanced Science published by Wiley/VCH GmbH'
+  - '[PAGE 5]
+
+
+    # ADVANCED NEWS
+
+
+    # ADVANCED NEWS
+
+
+    www.advancedsciencews.com
+
+
+    www.advancedsciencews.com
+
+
+    features movements in different joints and directions makes mainly unclear. Although
+    there is a lack of regarding why high-resolution mCoG decoding performance. Our
+    results show that the developed mCoG array provides high-spatial resolution to
+    address these questions. To validate the functionality of the mCoG BCIs for multi-joint
+    motor decoding, the decoding of the movements, pace and timing were jointly recorded
+    using vision-based motion capture techniques (Figure 3a). Before the implantation
+    of the mCoG array, the subject was trained using MRI, and we had one session (Figure
+    3b) where movements were simultaneously decoded from mCoG in real-time (Figure
+    3c: Move S1, Supporting Information). A random forest model was constructed using
+    logistic regression to identify the subset of electrodes that provided optimal
+    decoding performance. In each session, the reduction in G caused by each channel
+    was used to measure the importance of each electrode. Some electrodes were deemed
+    to contribute minimally to the decoding. Despite M1''s established model, intra-functional
+    hotspots may span spatial movements of decoding to different domains.
+
+
+    implantation period (Figure 3e: Figures S16 and S17, Supporting Information).ة,
+    the high-contribution subset yielded significantly higher decoding accuracy across
+    all three dimensions (Figure 3e: Figures S18 and S19, Supporting Information).
+    These findings suggest that the high-resolution mCoG''s decoding may extend spatial
+    specificity especially in highly, task-related brain regions (Figures S20 and
+    S21, Supporting Information).
+
+
+    Built on validated-term biosafety and efficacy of the developed mCoG BCI, complemented
+    by case designs in short-term trials, we compared intracortical and non-invasive
+    trials. The functional reach of the brain regions was particularly awakened during
+    playing the Ping-Pong and swing games (Figure 4). In the first time, the patient
+    used a joystick to play the games with the mCoG. In the second time, the electrodes
+    were disconnected from the decoder. However, the connection between the joystick
+    and the decoder remained fully controllable via the mCoG signals. In the Ping-Pong
+    game, one dimensional movements were used to control the movement of the racket
+    and a decoding accuracy of 0.90 was achieved (Move S2, Supporting Information).
+    For the swing game, two-dimensional kinematics simultaneously governed movement
+    direction, and increased complexity compared to the Ping-Pong game due to complex
+    arm movements and inhibitory effects. Mean decoding accuracy 0.73 in the X and
+    Y direction and in the (Figure 4).
+
+
+    With motor encoding in different directions, the previously mentioned method was
+    employed to select the optimal subset in each session. The frequency with each
+    electrode appeared in the optimal subset was considered its contribution to the
+    actual distribution of the electrodes (Figure 34). Crucially, electrodes to all
+    three directional subsets showed consistent distribution movement capacity without
+    significant conflicts and contribution magnitudes. The number of electrodes contributing
+    to decoding kinematic features in the X and Y directions were more widely distributed
+    than those in the Z direction. This discrepancy may be due to the larger amplitude
+    of joint movement in the X and Y. To further analyze, the network related electrode
+    signals were plotted during session for different directions (Figure S15, Supporting
+    Information). Notably, the same electrode exhibited slight specificity in its
+    importance for decoding different directions. While single electrodes reveal multidirectional
+    movement capacity across tuned micro-architectures.
+
+
+    To demonstrate the mCoG BCI''s utility in motor-implemented tasks via device control,
+    we achieved high-precision control tasks. Pre-surgical (MRI) motor imagery-related
+    cortencies, post-implantation computed topography (CT) reconstructed electrodes
+    for an accumulation of 19.87 hours (Figure 4e). These trials consist of the Center-pair
+    (8 targets) and the Web-grid targets (Figure 5). On the first day, the patient
+    was able to fully control the center via the mCoG BCI (without any additional
+    assistance to perform the Center-pair task). The performance significantly improved
+    over the short period (Figure 4f, Move S3, S4, Supporting Information).
+
+
+    # 3. Conclusion
+
+
+    In summary, we developed a stable, high-density flexible mCoG BCI via MEMS fabrication,
+    implanted
+
+
+    Adv. Sci. 2023, 12, e06663
+
+
+    e06663 (6 of 11)
+
+
+    © 2025 The Author(s). All rights reserved by Wiley-VCH GmbH'
+  md: '
+
+    # Chronically Stable In Vivo Motor Decoding
+
+
+    # BCI Operating System
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_2_0.png)
+
+
+    a
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_2_1.png)
+
+
+    b
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_2_2.png)
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_2_3.png)
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_2_4.png)
+
+
+    c
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_2_5.png)
+
+
+    d
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_2_6.png)
+
+
+    e
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_2_7.png)
+
+
+    f
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_2_8.png)
+
+
+    Figure 1. Overview and long-term performance of the high-resolution µECoG BCIs.
+    b) The schematic and workflow (the scale bar is 1 cm for the µECoG BCIs). The
+    image displays zoom-in of the internal structure of the µECoG electrode arrays
+    (scale bar is 500 µm). c) Electrode implants in the long-term experiment lasting
+    7 weeks. The blue markers and the red line indicate the mean values of each session
+    and the blue shaded area indicates the standard deviations. d) SNR of µECoG signals
+    in each session during the long-term experiment. Accuracy (correlation coefficient,
+    CC) for all sessions. For each session, the box plot represents quartiles with
+    med (blue lines) and mean values (square red markers) and the whiskers denote
+    minimum and maximum values. The fitted normal distribution of in-session accuracy
+    is shown to motional. Longitudinal analysis over 203 days demonstrated consistently
+    accuracy: 0.87 in the X-direction, 0.82 in the Y-direction and 0.83 in the Z-direction,
+    and 0.86 in the Y-direction and 0.78 in the Z-direction for speed. Additionally,
+    the performance showed high reliability with a standard deviation of 0.03 in the
+    X-direction, 0.02 in the Y-direction and 0.04 in the Z-direction, 0.03 in the
+    Y-direction and 0.06 in the Z-direction (Figure 1e, Supporting Information). Notably,
+    the Y-electrode exhibited sufficient stability to greater movement magnitude.
+    Following the in experiment, immunohistochemical analysis was conducted. Histopathological
+    analysis (Figure 11, Supporting Information) quantitatively confirmed no evidence
+    of neural loss or inflammation compared to controls (mid-sagittal plane reference).
+    Quantitative analysis confirmed no significant atrophy/microglia proliferation-inflammatory
+    markers (Figure 1g). These findings substantiates the stability of muECG electrodes.
+
+
+    in throughput. To eliminate the effects induced by the implanted regions, subsets
+    of electrodes with varying grids gradually contracted toward the center of the
+    muECG electrode array to explore this issue (Figure 2). To evaluate density effect
+    on motor performance, uniformly distributed subsets of varying densities were
+    fixed within a cortical area. Macroscopically, as density increased, decoding
+    accuracy and variability decreased, suggesting that higher density can enhance
+    decoding performance. The decoding accuracies in all channels reached their maximum
+    at an electrode density of 64 cells/cm². To identify the point where electrode
+    density saturates, decoding was further reduced. Reduced accuracy showed a gradual
+    decline with diminishing connectivity and a sharp drop at a sampling grid size
+    of 60 cells (Figure 2d). These findings demonstrate that high-density muECG offers
+    optimal performance for recording cortical activity during natural movements.
+
+
+    Previous studies have demonstrated that ECoG exhibits stable spatial configurations
+    with complex temporal dynamics, particularly in the 70-350 Hz range, benefiting
+    from sub-sampling and spatial resolution. However, to improve decoding performance,
+    in-few studies on motor decoding have been conducted [27]. Therefore, elucidating
+    the critical role of electrode density in decoding performance, we increased the
+    electrode density and in a 2 x 2 cm area, we gained higher power of the signal
+    from each electrode. As electrode density increased, neural activity was represented
+    with greater resolution, enabling more precise identification of cortical regions
+    (Figure 2a). Functional areas were also easily located between adjacent electrodes
+    by electrode-cell density.
+
+
+    In decoding performance, the projected trajectories in three-dimensional space,
+    aligned the real trajectories reported (Figure 2f, Figure 13 and Supporting Information).
+    Enhancement in decoding performance improved the consistency between predicted
+    and real movements. In applications motion synthesis or prosthetic control, this
+    may improve users'' feedback, enhancing ease of use and overall performance. Furthermore,
+    it has been found that machine learning performance improves from increasing electrode
+    density and reducing artifacts.
+
+
+    the right of each. Immunohistochemical staining was performed on tissues of the
+    implanted electrode and the control site (mirror with the implanted site adjacent
+    to the mid-sagittal plane) after the in vivo experiment (scale bars are 100 μm).
+    G cell counting (the data were normalized to the control site) and statistical
+    analysis (for the data followed a normal distribution, two-sided paired-tests
+    were used, otherwise Wilcoxon sign-rank tests were conducted for significance,
+    p < 0.05, n = 16 of neurons (Neuron), microglia (Iba), and others (GAP). Current
+    research on ECoG-based BMI for motor decoding focuses on collecting neural activity
+    from the motor cortex (M1) to decode multi-joint and multi-directional movements.
+    Due to insufficient resolution, the consistency of the sampling density of neural
+    activity remains limited. Adv. Sci. 2023, 12, e0663 © 2023 The Author(s). Published
+    by Wiley-VCH Germany
+
+
+    - Selected electrodes
+
+    Unselected electrodes
+
+
+    - Selected electrodes
+
+    Unselected electrodes
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_4_0.png)
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_4_1.png)
+
+
+    Time (s)
+
+    High gamma power (db)
+
+    Electrode density (Log(Channels/cm²))
+
+    Subsample grid size (n×n)
+
+
+    - Position: X-Direction Y-Direction Z-Direction
+
+    - Position: X-Direction Y-Direction Z-Direction
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_4_2.png)
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_4_3.png)
+
+
+    Speed: X-Direction Y-Direction Z-Direction
+
+    Speed: X-Direction Y-Direction Z-Direction
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_4_4.png)
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_4_5.png)
+
+
+    Electrode density (Log(Channels/cm²))
+
+    Subsample grid size (n×n)
+
+
+    - Predicted position Predicted speed Real
+
+    - Predicted position Predicted speed Real
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_4_6.png)
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_4_7.png)
+
+
+    Figure 2. Improvement of motor decoding performance via increasing electrode power
+    (the mean value of the 70–150 Hz band within a 100 ms bin) for µCoG recorded by
+    subsets with increasing electrode density. The spatial resolution is obviously
+    improved. (a) The electrode density is kept while the subsample grid size (b)
+    is greatly reduced to the center of the µCoG array to simulate the reduction of
+    brain coverage. The coverage of gamma power is as shown (a, c, d). Influence of
+    increasing electrode density and reducing subsample size (b) improves accuracy
+    and variability. The blue pent markers indicate mean values for decoding oders
+    show standard deviations, and red squares denote normalized coefficients of variables.
+    (e) Examples of real and predicted trajectories of kinematic features (position
+    and speed) decoded using subsets with different densities (c) and subsample grid
+    size (d).
+
+
+    Adv. Sci. 2025, 12, e02661 2025 The Author(s). Advanced Science published by Wiley/VCH
+    GmbH
+
+
+    features in different joints and directions makes mainly unclear. Although there
+    is a lack of regarding why high-resolution mCoG decoding performance. Our results
+    show that the developed mCoG array provides high-spatial resolution to address
+    these questions. To validate the functionality of the mCoG BCIs for multi-joint
+    motor decoding, the decoding of the movements, pace and timing were jointly recorded
+    using vision-based motion capture techniques (Figure 3a). Before the implantation
+    of the mCoG array, the subject was trained using MRI, and we had one session (Figure
+    3b) where movements were simultaneously decoded from mCoG in real-time (Figure
+    3c: Move S1, Supporting Information). A random forest model was constructed using
+    logistic regression to identify the subset of electrodes that provided optimal
+    decoding performance. In each session, the reduction in G caused by each channel
+    was used to measure the importance of each electrode. Some electrodes were deemed
+    to contribute minimally to the decoding. Despite M1''s established model, intra-functional
+    hotspots may span spatial movements of decoding to different domains.
+
+
+    implantation period (Figure 3e: Figures S16 and S17, Supporting Information).
+    , the high-contribution subset yielded significantly higher decoding accuracy
+    across all three dimensions (Figure 3e: Figures S18 and S19, Supporting Information).
+    These findings suggest that the high-resolution mCoG''s decoding may extend spatial
+    specificity especially in highly, task-related brain regions (S20 and S21). Built
+    on validated-term biosafety and efficacy of the developed mCoG, complemented by
+    case designs in short-term, we compared intracortical and non-invasive trials.
+    The functional reach of the brain regions was particularly awakened during playing-
+    games. With motor encoding in different directions, the previously mentioned method
+    was employed to select the optimal subset in each session. The frequency with
+    each electrode appeared in the optimal subset was considered its contribution
+    to the actual distribution of the electrodes. Crucially, electrodes to all directional
+    subsets showed consistent movement capacity without significant conflicts and
+    contribution magnitudes. The number of electrodes contributing to decoding kinematic
+    features in the X and Y directions were more widely distributed than those in
+    the Z direction. This discrepancy may be due to the larger amplitude of joint
+    movement in the X and Y. To further analyze, the network related electrode signals
+    were plotted during session for different directions (Figure S15, Supporting Information).
+    Notably, the same electrode exhibited slight specificity in its importance for
+    decoding different directions. While single electrodes reveal multidirectional
+    movement capacity across tuned micro-architectures.
+
+
+    To demonstrate the mCoG BCI''s utility in motor-implemented tasks via device control,
+    we achieved high-precision control tasks. Pre-surgical (MRI) motor imagery-related
+    cortencies, post-implantation computed topography (CT) reconstructed electrodes
+    for an accumulation of 19.87 hours (Figure 4e). These trials consist of the Center-pair
+    (8 targets) and the Web-grid targets (Figure 5). On the first day, the patient
+    was able to fully control the center via the mCoG BCI (without any additional
+    assistance to perform the Center-pair task). The performance significantly improved
+    over the short period (Figure 4f, Move S3, S4, Supporting Information). In the
+    Ping-Pong game, one dimensional movements decoding accuracy of 0.90 was achieved
+    (Move S2, Supporting Information). For the swing game, two-dimensional kinematics
+    simultaneously governed movement direction, and increased complexity compared
+    to the Ping-Pong game due to complex arm and inhibitory effects.
+
+
+    # 3. Conclusion
+
+
+    In summary, we developed a stable, high-density flexible mCoG BCI via MEMS fabrication,
+    implanted
+
+
+    Adv. Sci. 2023, 12, e0663
+
+
+    e0663 (6 of 11)
+
+
+    © 2025 The Author(s). All rights reserved by Wiley-VCH GmbH
+
+    '
+  mdcn: '
+
+
+    # 体内长期稳定性的运动解码
+
+
+    # BCI 操作系统
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_2_0.png)
+
+
+    a
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_2_1.png)
+
+
+    b
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_2_2.png)
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_2_3.png)
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_2_4.png)
+
+
+    c
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_2_5.png)
+
+
+    d
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_2_6.png)
+
+
+    e
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_2_7.png)
+
+
+    f
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_2_8.png)
+
+
+    图 1. 高分辨率 µECoG BCI 的概述和长期性能。b) 示意图和工作流（µECoG BCI 的比例尺为 1 cm）。图像显示了 µECoG 电极阵列内部结构的放大图（比例尺为
+    500 µm）。c) 持续 7 周的长期实验中的电极植入。蓝色标记和红线表示每个会话的平均值，蓝色阴影区域表示标准差。d) 长期实验期间每个会话 µECoG
+    信号的信噪比（SNR）。所有会话的准确率（相关系数，CC）。对于每个会话，箱线图表示带有位数（蓝色线）和平均值（红色方形标记）的分位数，须线表示最小值和最大值。显示了运动内准确率的拟合正态分布。
+    203 天的纵向分析证明了一致的准确率：X 方向 0.87，Y 方向 0.82，Z 方向 0.83；速度方面 Y 方向为 0.86，Z 方向为 0.78。此外，性能表现出高可靠性，X
+    方向的标准差为 0.03，Y 方向 0.02，Z 方向 0.04；速度方面 Y 方向为 0.03，Z 方向为 0.06（图 1e，补充信息）。值得注意的是，Y
+    电极表现出足够的稳定性来应对更大的运动幅度。实验后，进行了免疫组织化学分析。病理组织学分析（图 11，补充信息）定量地证实了与对照组（中矢状面基准）相比，没有神经丢失或炎症的证据。定量分析证实没有明显的萎缩/小胶质细胞增殖炎症标记（图
+    1g）。这些发现证实了 µECG 电极的稳定性。
+
+
+    在吞吐量。为了消除由植入区域引起的影响，具有不同网格的电极子集逐渐向 µECG 电极阵列中心收缩，以探索这一问题（图 2）。为了评估密度对运动性能的影响，在皮层区域内固定了不同密度的均匀分布子集。宏观上，随着密度的增加，解码准确率和变异性增加，表明更高的密度可以提高解码性能。所有通道的解码准确率在密度
+    64 cells/cm² 时达到最大值。为了确定电极密度的饱和点，解码进一步降低。准确率随采样量的减少而逐渐下降，并在网格大小为 60 cells 时出现下降（图
+    2d）。这些发现表明高密度 µECG 在自然运动期间记录提供了最佳性能。
+
+
+    之前的研究表明 ECoG 具有稳定的空间配置，特别是在 70-350 Hz 范围内，受益于子采样和空间分辨率。然而，为了提高解码性能，少数研究对运动解码进行了研究
+    [27]。因此为了阐明电极密度在解码性能中的关键作用，我们增加了电极密度并在 2 x 2 cm 区域获得了每个电极更高的功率。随着电极密度的增加，神经活动以更高的分辨率表示，能够更精确地识别皮层区域（图
+    2a）。功能区域也通过相邻电极密度更容易定位。解码性能在三维空间中的投影轨迹与报告的真实轨迹一致（图 2f, 图 13 和补充信息）。解码性能的增强提高了预测运动与真实运动之间的一致性。在合成应用中，这可能会提高用户的反馈、易用性和整体性能。此外，发现增加电极密度和减少伪影可以提高机器学习性能。在体内实验后，对植入电极和对照位（与植入位相邻的中矢状面）的组织进行了免疫组织化学染色（比例尺为
+    100 μm）。细胞计数（数据归一化到对照位）和统计分析（对于遵循正态分布的数据，使用了双侧配对检验，否则使用 Wilcoxon 符号检验进行显著性分析，p
+    < 0.05，n = 16）显示了神经元（Neuron）、小胶质细胞（Iba）和其他（GAP）。目前基于 ECoG 的运动解码侧重于收集运动皮层（M1）的神经活动，以解码多关节和多方向运动。由于分辨率不足，神经活动的采样一致性仍然有限。Adv.
+    Sci. 2023, 12, e0663 © 2023 作者(s)。由 Wiley-VCH Germany 出版。
+
+
+    - 选定的电极
+
+    - 未选定的电极
+
+
+    - 选定的电极
+
+    - 未选定的电极
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_4_0.png)
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_4_1.png)
+
+
+    时间 (s)
+
+    高 gamma 功率 (db)
+
+    密度 (Log(Channels/cm²))
+
+    采样网格大小 (n×n)
+
+
+    - 位置：X 方向 Y 方向 Z 方向
+
+    - 位置：X 方向 Y 方向 Z 方向
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_4_2.png)
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_4_3.png)
+
+
+    速度：X 方向 Y 方向 Z 方向
+
+    速度：X 方向 Y 方向 Z 方向
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_4_4.png)
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_4_5.png)
+
+
+    密度 (Log(Channels/cm²))
+
+    采样网格大小 (n×n)
+
+
+    - 预测位置 预测速度 真实
+
+    - 预测位置 预测速度 真实
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_4_6.png)
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_4_7.png)
+
+
+    图 2. 通过增加电极功率（由增加密度密度的子集记录的 µCoG 在 100 ms 内 70–150 Hz 带段的平均值）提高运动解码性能。空间分辨率明显提高。(a)
+    保持电极密度，同时将采样网格大小（b）大幅缩小到 µCoG 阵列中心，以模拟大脑覆盖范围的减少。gamma 功率的覆盖所示（a, c, d）。增加电极密度和减少采样大小（b）的影响提高了准确率和变异性。蓝色五形标记表示解码顺序的平均值，显示标准差，红色方形表示变量的归一化系数。(e)
+    使用不同密度子集（c）和采样网格大小（d）解码的运动特征（位置和速度）的真实和预测轨迹示例。
+
+
+    Adv. Sci. 2025, 12, e02661 2025 作者(s)。Advanced Science 由 Wiley/VCH GmbH 出版
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 6]
+
+
+    # ADVANCED
+
+    SCIENCE
+
+    www.advancedsciencenames.com
+
+
+    # ADVANCED
+
+    SCIENCE
+
+    www.advancedscience.com
+
+
+    # a
+
+
+    # b
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_6_0.png)
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_6_1.png)
+
+
+    # c
+
+
+    # d
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_6_2.png)
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_6_3.png)
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_6_4.png)
+
+
+    # e
+
+
+    # f
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_6_5.png)
+
+
+    Figure 3. Multi-joint motor decoding and the fine spatial structure of motor encoding,
+    a) Definition of coordinates and acquisition of real movement trajectories of
+    joints. b) Spatial distribution of normalized contributions of electrode channels
+    to motor decoding on brain MRI reconstruction using 3D Slicer [13] c) Examples
+    of real versus predicted trajectories in multi-joint motor decoding. d) Spatial
+    distribution of normalized contributions to the motor decoding in three directions
+    respectively. The encoding of movements in M1 exhibits spatial specificity at
+    millimetre-scale, and the fine spatial structure is decoded via µECoG electrodes.
+    e) Signal correlation between conventional clusters and high band of inter-electrode
+    subsets with high and low count f) µECoG signals by high count subset electrodes
+    significantly higher accuracy for instantaneous position and speed decoding (position
+    decoding, p = 7.17e-2, n = 39; speed decoding, p = 1.37e-6; ***=0.0001, n = 39).'
+  - '[PAGE 7]
+
+
+    # ADVANCED SCIENCE NEWS
+
+
+    # ADVANCED SCIENCE
+
+
+    www.advancedsciencews.com
+
+
+    www.advancedsciencews.com
+
+
+    # a
+
+
+    # Intraoperative motor decoding
+
+
+    # b
+
+
+    # Ping-Pong
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_0.png)
+
+
+    # Ping-Pong
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_1.png)
+
+
+    # Snake
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_2.png)
+
+
+    # Snake
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_3.png)
+
+
+    # c
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_4.png)
+
+
+    # d
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_5.png)
+
+
+    # e
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_6.png)
+
+
+    # f
+
+
+    # Short-term motor imagery decoding
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_7.png)
+
+
+    # g
+
+
+    # Center-out
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_8.png)
+
+
+    # h
+
+
+    # Movement trajectory
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_9.png)
+
+
+    # Center-out
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_10.png)
+
+
+    # i
+
+
+    # Webgrids
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_11.png)
+
+
+    # j
+
+
+    # Game control
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_12.png)
+
+
+    # Webgrids
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_13.png)
+
+
+    Figure 4. Clinical intraoperative control and short term stability of the CoG
+    BCI for real-time motor imagery decoding. (a) Schematic of paradigms for intraoperative
+    control of the µECG BCI for real-time motor decoding. (b) Real-time motor decoding
+    performance of the intraoperative experiment. (c) Reconstruction of functional
+    brain areas on fMRI during motor imagery decoding. (d) Approximate location of
+    the µECG electrode on the right cortical surface of the participant. (e) Stability
+    of short-term control of the µECG BCI for real-time motor imagery decoding. (f)
+    The number of accumulated trials during the 12-day experiment. (g) Following day
+    adaptation training, the participant demonstrated full voluntary control of the
+    µECG BCI to perform the Center-out paradigm, with bit rate improving throughout
+    the experiment. (h) Bits of rates (party controlling the µECG BCI) for Webgrids
+    paradigm across days. (i) After completing adaptation training for the Center-out
+    and Webgrids paradigms, the participant utilized the µECG BCI to engage in video
+    games.
+
+
+    Adv. Sci. 2023, 12, e06663
+
+
+    © 2023 The Author(s). Advanced Science published by Wiley-VCH GmbH'
+  - '[PAGE 8]
+
+
+    # ADVANCED SCIENCE
+
+
+    # ADVANCED SCIENCE
+
+
+    acquisition of spotemporal-resolution solutions. This system EEG-comparable decoding
+    performance with reduced invasiveness, establishing clarity for uECG-based electrodes.
+    The revealed correlation between electrodes and density performance provides a
+    critical reference for future electrode array designs. Furthermore, the scalability
+    and density of uECG blocks offer further stability for precision location, cortical
+    mapping, and even future home-use neuroprosthetic control. We used uECG blocks
+    to enable functional integration into neural decoding methods using uECG systems
+    restoring multifunctional neural capabilities – meaningful communication functions
+    – promote translational neuroethrehabilitation pathways.
+
+
+    Immunochemistry Studies. At the conclusion of the observation, the brain samples
+    were collected in vitro. The brain slices were trimmed to 10 x 10 x 0.2 mm and
+    placed into labeled bottles. The slices were then dried using a dehydator, to
+    a gradient of alcohol, and finally embedded in paraffin. The paraffin sections
+    were stained with glial fibrillary acidic protein (GFAP) to identify astrocytes,
+    Abcam2760 for calcium-binding neuronal protein 1 (calII) to label neurons, and
+    NeuN (Abcam17787, USA). The immunohistochemistry sections were then photographed
+    using a microscope to analyze the electrode-tissue interface.
+
+
+    # 4. Experimental Section
+
+
+    Fabrication of uECG Array. The high-density uECG electrodes were fabricated using
+    a sandwich structure with electrodes embedded in flexible polyimide (PI), which
+    follows a similar process as previously described for the investigation of electrophysiological
+    array activities and multimodal neural decoding (2021). A 7 $\mu$m PI layer was
+    deposited, followed by the deposition of gold. After sputtering an adhesion layer
+    (A S5214, USA), each electrode was etched to define the recording sites. It was
+    then spin-coated and covered with an additional 13 $\mu$m PI layer to encapsulate
+    the array.
+
+
+    Intraoperative. Participants in the study were only involved when a clinical necessity
+    arose for safe surgery to treat the motor and M1 area. Each participant, confirmed
+    that their involvement in the research was voluntary and were informed of the
+    risks. They received comprehensive information and provided written consent. The
+    study received approval from the Wuhan Hospital Institutional Review Board (Application
+    No: YY-2022-09118) and followed the guidelines of the Helsinki Declaration.
+
+
+    We designed two tasks: the ping-pong-game and the Shake-game. In the ping-pong
+    game, the participant used on the left and right sides of the screen to catch
+    a ping-pong ball at a constant speed. The paddle could only be moved up or down.
+    The game ended when the ball fell off the screen. In the Shake-game, the ball
+    moved randomly, and the participant had to move the paddle in four directions
+    to catch the ball. The uECG signals were transformed into two features, and the
+    game score increased.
+
+
+    Implantation. The implanted device comprises four components: a uECG array, an
+    electrode, a package system, and a connector unit. The connector used was the
+    uECG block, which was connected to the electrode array. The electrode array was
+    then bonded to the package to facilitate signal transmission and allow simultaneous
+    acquisition of all channels. Finally, a customized enclosure serves as the encapsulation
+    for the package and is fixed to the skull.
+
+
+    Post-operative. To evaluate the long-term stability and functionality of the uECG
+    block, we performed an in vivo experiment in a control animal. A male lab dog
+    was used. The animal was provided by Phaseega Diagnostic Laboratories (Shanghai,
+    China), Co., a laboratory institution accredited by the Chinese National Accreditation
+    Committee. The experimental protocol was approved by the Animal Care and Use Committee
+    (IACUC) of this institution, with application number PJC-22-0184-1. Post-operative
+    recordings were collected for six months and determined to monitor long-term physiological
+    changes.
+
+
+    Participants. In the study, eight participants were recruited for the research.
+    Prior to the procedure, each participant was informed that the involvement in
+    the research was voluntary and the task was to perform in gait analysis. Kinematic
+    features were assessed using two methods: by sensing an inertial measurement unit
+    (IMU) on the dog''s knee, which was fixed to the leg, and by extracting features
+    from multiple joints using video data, deploying motion capture and DeepLabCut
+    [9].
+
+
+    Neural recording. High-resolution uECG signals were amplified and filtered by
+    a digital processing unit connected to a 24-channel data acquisition system, the
+    Cspur NeuroServer (NeuralCI, USA). In the in vivo experiment, the signals were
+    recorded from the dura and skin, and similarly, in the intraoperative experiment,
+    the reference and ground electrodes were placed on the dura motor cortex.
+
+
+    The uECG signals were recorded at a sampling rate of 1000 Hz. All sessions were
+    timestamped with start and end times to facilitate data analysis. To calculate
+    the data, the high and low state features of the uECG were extracted and the ratio-to-peak
+    value of the high state to the low state were calculated [11].
+
+
+    Ade. Adv. Sci. 2023, 12, e00663
+
+
+    © 2025 The Author(s). Advanced Science published by Wiley-VCH Germany GmbH'
+  md: '
+
+    # ADVANCED SCIENCE
+
+    www.advancedsciencenames.com
+
+
+    # ADVANCED SCIENCE
+
+    www.advancedscience.com
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_6_0.png)
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_6_1.png)
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_6_2.png)
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_6_3.png)
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_6_4.png)
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_6_5.png)
+
+
+    Figure 3. Multi-joint motor decoding and the fine spatial structure of motor encoding,
+    a) Definition of coordinates and acquisition of real movement trajectories of
+    joints. b) Spatial distribution of normalized contributions of electrode channels
+    to motor decoding on brain MRI reconstruction using 3D Slicer [13] c) Examples
+    of real versus predicted trajectories in multi-joint motor decoding. d) Spatial
+    distribution of normalized contributions to the motor decoding in three directions
+    respectively. The encoding of movements in M1 exhibits spatial specificity at
+    millimetre-scale, and the fine spatial structure is decoded via µECoG electrodes.
+    e) Signal correlation between conventional clusters and high band of inter-electrode
+    subsets with high and low count f) µECoG signals by high count subset electrodes
+    significantly higher accuracy for instantaneous position and speed decoding (position
+    decoding, p = 7.17e-2, n = 39; speed decoding, p = 1.37e-6; ***=0.0001, n = 39).
+
+
+    # ADVANCED SCIENCE NEWS
+
+
+    # ADVANCED SCIENCE
+
+    www.advancedsciencews.com
+
+
+    ## Intraoperative motor decoding
+
+
+    ## Ping-Pong
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_0.png)
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_1.png)
+
+
+    ## Snake
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_2.png)
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_3.png)
+
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_4.png)
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_5.png)
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_6.png)
+
+
+    ## Short-term motor imagery decoding
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_7.png)
+
+
+    ## Center-out
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_8.png)
+
+
+    ## Movement trajectory
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_9.png)
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_10.png)
+
+
+    ## Game control
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_11.png)
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_12.png)
+
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_13.png)
+
+
+    Figure 4. Clinical intraoperative control and short-term stability of µECoG BCI
+    for real-time motor imagery decoding. (a) Schematic of paradigms for intraoperative
+    control of µECoG BCI for real-time motor decoding. (b) Real-time motor decoding
+    performance. (c) Reconstruction of functional areas during motor imagery. (d)
+    Approximate location of µECoG electrode on the right cortical surface. (e) Stability
+    of short-term control of µECoG BCI for real-time motor imagery decoding. (f) The
+    number of accumulated trials during the experiment. (g) Following adaptation training,
+    the participant demonstrated voluntary control of µECoG BCI to perform the Center-out
+    paradigm, with bit rate improving throughout the experiment. (h) Bit rates (µECoG
+    BCI) across days (i) After completing training for Center-out paradigms, the participant
+    utilized the µECoG BCI to engage in video games.
+
+
+    Adv. Sci. 2023, 12, e00663
+
+
+    © 2023 The Author(s). Advanced Science published by Wiley-VCH GmbH
+
+
+    # ADVANCED SCIENCE
+
+
+    Acquisition of temporal-resolution solutions. This system revealed comparable
+    decoding performance with reduced invasiveness. The correlation between electrodes
+    and decoding performance provides a critical reference for future electrode array
+    designs. Furthermore, the scalability and density of µECoG blocks offer further
+    stability for precision location, cortical mapping, and even future home-use neurohetic
+    control. We used µECoG blocks to enable functional integration into neural rehabilitation
+    methods.
+
+
+    ## 4. Experimental Section
+
+
+    ### Immunohistochemistry Studies
+
+    At the conclusion of the observation, brain samples were collected in vitro. The
+    brain slices were trimmed to 10 x 0.2 mm and placed into labeled bottles. The
+    slices were then dried using a gradient of alcohol and finally embedded in paraffin.
+    The paraffin sections were stained with glial fibrillary acidic protein (GFAP)
+    to identify astrocytes (Abcam #2760), calcium-binding neuronal protein 1 (calII)
+    to label neurons, and NeuN (Abcam #1787, USA). The immunohistochemistry sections
+    were then photographed using a microscope to analyze the electrode-tissue interface.
+
+
+    ### Fabrication of µECG Array
+
+    The high-density µECG electrodes were fabricated using a sandwich structure with
+    electrodes embedded in flexible polyimide (PI), which follows a similar process
+    as previously described for the investigation of electrophysiological activity
+    and multimodal neural decoding (2021). A 7 µm PI layer was deposited, followed
+    by the deposition of gold. After sputtering an adhesion layer (AS5214, USA), each
+    electrode was etched to define the recording sites. It was then spin-coated and
+    covered with an additional 13 µm PI layer to encapsulate the array.
+
+
+    ### Intraoperative
+
+    Participants in the study were only involved when a clinical necessity arose for
+    safe surgery to treat the M1 area. Each participant confirmed that their involvement
+    in the research was voluntary and were informed of the risks. They received comprehensive
+    information and provided written consent. The study received approval from the
+    Wuhan Hospital Institutional Review Board (Application No: YY-2022-09118) and
+    followed the guidelines of the Helsinki Declaration.
+
+
+    We designed two tasks: the ping-pong-game and the Shake-game. In the ping-pong
+    game, the participant used the left and right sides of the screen to catch a ping-pong
+    ball at a constant speed. The paddle could only be moved up or down. The game
+    ended when the ball fell off the screen. In the Shake-game, the ball moved randomly,
+    and the participant had to move the paddle in four directions to catch the ball.
+    The µECG signals were transformed into two features, and the game score increased.
+
+
+    ### Implantation
+
+    The implanted device comprises four components: a µECG array, an electrode, a
+    package system, and a connector unit. The connector used was the µECG block, which
+    was connected to the electrode array. The electrode array was then bonded to the
+    package to facilitate signal transmission and allow simultaneous acquisition of
+    all channels. Finally, a customized enclosure serves as the encapsulation for
+    for the package and is fixed to the skull.
+
+
+    ### Post-operative
+
+    To evaluate the long-term stability and functionality of the µECG block, we performed
+    an in vivo experiment in a control animal. A male lab dog was used. The animal
+    was provided by Phaseega Diagnostic Laboratories (Shanghai, China), Co., a laboratory
+    institution accredited by the Chinese National Accreditation Committee. The experimental
+    protocol was approved by the Animal Care and Use Committee (IACUC) of this institution,
+    with application number PJC-22-0184-1. Post-operative recordings were collected
+    for six months and determined to monitor long-term physiological changes.
+
+    '
+  mdcn: "\n\n# 高级科学\nwww.advancedsciencenames.com\n\n# 高级科学\nwww.advancedscience.com\n\
+    \n![](img/eabcb7c8d93e35a8e5279ef4020b7a79_6_0.png)\n![](img/eabcb7c8d93e35a8e5279ef4020b7a79_6_1.png)\n\
+    \n![](img/eabcb7c8d93e35a8e5279ef4020b7a79_6_2.png)\n![](img/eabcb7c8d93e35a8e5279ef4020b7a79_6_3.png)\n\
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_6_4.png)\n\n![](img/eabcb7c8d93e35a8e5279ef4020b7a79_6_5.png)\n\
+    \n图3. 多关节运动解码与运动编码的精细空间结构，a) 坐标定义与关节真实运动轨迹的获取。b) 使用 3D Slicer 在脑 MRI 重构上电极通道对运动解码的归一化贡献的空间分布\
+    \ [13] c) 多关节运动解码中真实轨迹与预测轨迹的示例。d) 分别在三个方向上运动解码的归一化贡献的空间分布。M1 中的运动编码表现出毫米级的空间特异性，精细空间结构通过\
+    \ µECoG 电极进行解码。e) 传统簇与具有高、低计数的电极子集高频之间的信号相关性 f) 高计数子集电极的 µECoG 信号在瞬时位置和速度解码方面的准确性显著提高（位置解码，p\
+    \ = 7.17e-2, n = 39；速度解码，p = 1.37e-6；***=0.0001, n = 39）。\n\n# 高级科学新闻\n\n# 高级科学\n\
+    www.advancedsciencews.com\n\n## 术中运动解码\n\n## 乒球\n![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_0.png)\n\
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_1.png)\n\n## 贪蛇游戏\n![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_2.png)\n\
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_3.png)\n\n![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_4.png)\n\
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_5.png)\n![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_6.png)\n\
+    \n## 短期运动想象解码\n![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_7.png)\n\n## 中心向外式\n\
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_8.png)\n\n## 运动轨迹\n![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_9.png)\n\
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_10.png)\n\n## 游戏控制\n![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_11.png)\n\
+    ![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_12.png)\n![](img/eabcb7c8d93e35a8e5279ef4020b7a79_7_13.png)\n\
+    \n图4. 用于实时运动想象解码的 µECoG BCI 的临床术中控制和短期稳定性。(a) 用于实时运动解码的 µECoG BCI 术中控制的机理/范式示意图。(b)\
+    \ 实时运动解码性能。(c) 运动想象期间功能区的重建。(d) µECoG 电极在右侧皮层表面的的大略位置。(e) 用于实时运动想象解码的 µECoG BCI\
+    \ 短期控制的稳定性。(f) 实验期间的累积试验次数。(g) 经过适应训练后，参与者展示了自愿控制 µECoG BCI 执行中心向外范式的能力，比特率在整个过程中不断提高。(h)\
+    \ 比特率\n\nAdvanced Science 2023, Wiley \n\n用于实时运动想象解码的 µECoG BCI 的临床术中控制和短期稳定性。Advanced\
+    \ Science 2023, Wiley \n\n用于运动解码的 µECG 块。高级科学\n\n## 4. 实验章节\n\n### 免疫组织化学研究\n\
+    在观察结束后，收集了脑样本。切片经过脱水并最终包埋。使用胶质纤维酸性蛋白 (GFAP) 进行染色以识别星胶质细胞，钙结合神经蛋白 1 (calII) 标记神经元，以及\
+    \ NeuN (Abcam #1787)。通过显微镜拍摄这些切片以分析电极-组织界面。\n\n### µECG阵列的制备\n高密度 µECG 电极采用柔性聚酰胺\
+    \ (PI) 明治结构制备，方法与之前描述电生理活动相似。沉积了 7 µm PI 层，随后溅射粘附层（AS5214, USA），对每个电极进行刻蚀以定义记录位点。然后进行旋覆并覆盖一层\
+    \ 13 µm PI 层以封装阵列。\n\n### 术中\n研究参与者仅在治疗 M1 区域出现临床需要时参与。每个参与者确认自愿参与研究并被告知风险。他们收到了详细信息并签署了同意书。该研究获得武汉医院伦理委员会的批准（申请号：YY-2022-09118），并遵循赫尔辛基宣言。\n\
+    \n我们设计了两个任务：乒球游戏和贪蛇游戏。在乒球游戏中，参与者利用屏幕左右两侧捕捉以恒定速度移动的乒球。球拍只能上下移动。球掉出屏幕时游戏结束。在贪蛇游戏中，球随机移动，参与者必须向四个方向移动球拍来捕捉球。ECG信号被转换为两个特征，游戏得分不断增加。\n\
+    \n### 植入\n植入设备由四个部分：µECG阵列、电极、封装系统和连接器单元。使用的连接器是 µECG 块，它连接到电极阵列。然后将电极阵列接到封装上，以便传输信号并同时采集所有通道。最后，定制外壳作为封装的封装并固定在颅骨上。\n\
+    \n### 术后\n为了评估 µECG 块的长期稳定性和功能，我们在实验动物中进行了体内实验。使用了一只雄性实验犬。动物由上海费格诊断有限公司（上海）提供，该机构是经中国国家认可委员会认证的实验室。实验方案获得该机构动物护理和使用委员会\
+    \ (IACUC) 的批准，申请号为 PJC-22-0184-1。术后记录收集了六个月，被认为能够监测长期生理变化。\n\n"
+  merge: 0
+- raw:
+  - '[PAGE 9]
+
+
+    # ADVANCED SCIENCE
+
+
+    www.advancedscience.com
+
+
+    Feature Extraction and Motor Decoder. After decomposing the muECG signals, channels
+    greater than 1 m were excluded and processed using a Butterworth filter with a
+    frequency of 50 Hz and its harmonics. A common reference was used across all channels
+    to reduce artifacts and common noise. The muECG signals were bandpass filtered
+    and aliased to reduce the time required for analysis to bin 100 ms. The muECG
+    signals were extracted (S22 and S23, Supporting Information). Mean values of the
+    HAEG features were calculated using sliding window aliasing to provide a continuous
+    representation of motor events (S24 and S23, Supporting Information) [34]). By
+    feeding the training data into the decoder, the real and kinematic features (events)
+    were extracted and classified.
+
+
+    It employed a recurrent neural network (RNN) with three LSTM layers for motor
+    decoding. The input to the decoder was kinematic features at each time step. Each
+    of the LSTM layers had 300, 100, and 50, fully connected units as layer. The output
+    of the decoder was the predicted kinematic parameters. It used L2 penalty as the
+    function, with an initial learning rate of 0.1. The dataset was used for training
+    and test in a 2:3 ratio. Performance was evaluated using decayed time and accuracy
+    to show the robustness of the decoder (S26, S27, Supporting Information). In short-term
+    view, it was used to interpret the motor imagery and motor imagery decoding (S25,
+    S27, Supporting Information).
+
+
+    Performance Indicators of Motor and Motor Imagery Decoding. The performance was
+    evaluated based on the kinematic features extracted from muECG within 100 ms.
+    To quantify the accuracy of motor decoding, we calculated Correlation coefficients
+    between predicted and actual movements. For a more detailed view of accuracy,
+    we evaluated the performance of various subsets at different intervals. A sliding
+    window was used, resulting in an in-accuracy curve to analyze the short-term stability
+    of motor decoding.
+
+
+    For motor imagery decoding, the hit (BR) was calculated for each trial, according
+    to the follows:
+
+
+    ```
+
+    BR = \frac{\max(S,0)}{T}
+
+    ```
+
+
+    Where, S is the number of selectable targets, successful trials, failed trials,
+    and T is the time for the paradigms, respectively excluding the time that were
+    considered failed, with the content demanded in the decoding.
+
+
+    Decoder Selection for Motor Decoding. The contribution of muECG decoders was assessed
+    to evaluate the spatial organization of electro-decoder features. We implemented
+    a two-stage approach of electro-decoder selection. In the first stage, we constructed
+    decoders using only kinematic features and linked- features. The feature importance
+    for each electrode channel was calculated based on the reduction of Gini index.
+    In the second stage, we selected a decoder with five channels that had high importance.
+    This was used for motor decoding, and additional electrode channels were added.
+    This process was repeated for motor decoding as the number of electrode channels
+    increased in the subset. The results according to the response of each channel
+    were considered to have contributed to decoding in stage.
+
+
+    Statistics. To assess the significance of muECG electrodes, we calculated the
+    cross-correlation function[36] of the cross-signals divided into two segments,
+    and the peaks of the cross-correlation were compared with a random distribution.
+
+
+    for performing tests, we assessed the samples for normality and variance. The
+    paired-test was applied to groups of samples that followed a normal distribution
+    with equal variances; the Wilcoxon rank-sum test was used. All data analyses were
+    performed using MATLAB (R2024, MathWorks).
+
+
+    # Supporting Information
+
+
+    Supporting Information is available from the Wiley Library or from the author.
+
+
+    # Acknowledgements
+
+
+    # Conflict of Interest
+
+
+    The authors declare no conflict of interest
+
+
+    # Author Contributions
+
+
+    E. Z. and Z. W. contributed equally to this work. Z. T., H. T., Z. W., and L.C.
+    conceived the idea. Z. T., H. T., L.C., E. P., and Y. M designed the experiments.
+    X. W. and Z. W. performed the muECG extraction. Z. W., L. C., and Z. W. integrated
+    the data. Y. L., J. Y., K. R., L. X., Z. W., and X. Z. performed the experiments.
+    E. Z., Q. R., K. X., L. C., and analyzed the data. E. Z., Z. T., and H. T. wrote
+    the paper. All authors discussed the results and provided comments for the manuscript.
+
+
+    # Data Availability
+
+
+    The data that supports the findings of this study are available from the corresponding
+    author. The data are not publicly due to privacy or ethical restrictions.
+
+
+    # Keywords
+
+
+    brain-computer interfaces, multi-channel electro-mechanical systems, high-resolution
+    electro-cardiography, real-time motor decoding
+
+
+    Received: July 12, 2025
+
+    Revised: July 27, 2025
+
+    Published: September 6, 2025
+
+
+    +   1. Z. Rug, M. A.-B. Bonno, G. Osseleri, A. Demertzi, L. Heine, M. Thonnard,
+    V. Binard, F. Fellas, S. Laureys, Brain Injury 2015, 29, 1056.
+
+
+    Adv. Science. 2025, e12663
+
+
+    e06663 (10 of 11)
+
+
+    © 2025 The Author, Advanced Science published by Wiley-VCH GmbH'
+  - '[PAGE 10]
+
+
+    # ADVANCED SCIENCE NEWS
+
+
+    www.advancedsciencenews.com
+
+
+    [2] H. Eduyele, Y. Zhang, F. Muhammad-Sukki, Q. T. Vien, H. Morris-Cafero, O.
+    M. Agroman, IEEE Access 2022, 10, 49153
+
+
+    [3] A. Gupta, V. Valladhan, F. Wagner, Commun. Biol. 2023, 14, 6
+
+
+    [4] S. S. Fisher, J. Journey, D. M. Weiss, M. C. Cunningham, L. J. Hughes, A.
+    Richter, M. V. Lee, E. M. B. Benson, G. A. Stuart, Science 2021, 372, 831
+
+
+    [5] H. Lorach, A. V. Spagnolo, M. Martel, S. Karangas, N. Inik, M. J. White, S.
+    J. Lee, S. J. Harvey, R. I, I. I.,,..........,.,,,,,, D, W. D, D. L,,,,,,,,,,,,,,,,,..,,  2022,
+    60027
+
+
+    [6] G. Buacchi, A.. Casastocchi,,...,,.. Res 2222, 11,  12
+
+
+    [8] B. Xu, Wang, L. Ding, D. Chen, W. Zhang, H. Li, A. Song, IEEE Trans. Neural
+    Syst. Rehab. 2019, 29, 1741
+
+
+    [9] K. Wang and J. Lee, Nature 2021, 604, 991
+
+
+    [10] M. Xia, S. Wu, W. Wang, H. Lee, IEEE Trans. Neural Syst. Rehab. 2020, 28,
+    27
+
+
+    [11] D. S. Stanley, K. Cao, C. N Nuyukian, S. I. Ryu, K. V. Shenoy, Neural Eng.
+    2013, 1, 05069
+
+
+    [12] D. R. Flint, A. Wright, M. R. Schoen, M. W. Slutzk, IEEE J. Neural Eng. 2013,
+    10, 056005
+
+
+    [13] L. C. Wang, J. J. B. Seruva, G. M. Heis, J. Mukluk, M. Saleh, A. H. Caplan,
+    A. Brainer, D. Chen, R. D Pen, J. Donoghue, Nature 2006, 442, 164
+
+
+    [14] C. Pandinaritt, P. Nuyukian, Q. J. Blake, L. Booth, S. J. Baird, R. H. Lee,
+    K. V. Shenoy, ellife 2017, 6, 18554
+
+
+    [15] Z. C. Chao, Y. Nagaska, N. Fuji, Neuroreng. 2010, 3, 1189
+
+
+    [16] T. Milekovec, F. Fischer, T. Pistiot, J. Ruscher, A. Schulz-Bonrage, IEEE
+    Eng. 2012, 9, 046003
+
+
+    [17] D. T. Bundy, B. Mudwa, P. Safra, E. C. Lejardt, J. Neural Eng. 2021, 19,
+    026001
+
+
+    [18] D. B. Silversmith, R. Abri, N. H. Hardy, N. Natraj, A. Tu-Chan, E. F. Chang,
+    K. Ganguly, Nat. Biotechnol. 2021, 39, 326
+
+
+    [19] N. Natraj, S. Seiko, R. Abri, M. Miao, H. Yan, G. Graham, A. Tu-Chan, E.
+    F. Chang, Nature Communications 2022, 6, 15009
+
+
+    [20] C-H. Kuo, G-Tu, L-C. Lee, J. Wu, W. Kasimo, K. E. Weaver, C-Lo, Y-Chen, W-C.
+    Huang, J. G Ojjemann, Neuro Methods 2024, 411, 110251
+
+
+    [21] S. L. Metzger, K. T. Littlejohn, A. B. Silva, A. D. M. S. Pearson, R. Wang,
+    M. E. Daugherty, J. R. Liu, P. Wu, M. A. Berger, I. Zhurvalea, A. Tu-Chan, K.
+    Ganguly, A. J. Kmanifanch, Fate Change 2019, 57
+
+
+    [22] K. Anumanchathula, J. Chartier, E. F. Change, 2019, 568, 493
+
+
+    [23] C-H. Lee, C. Wang, A. J. Williams, T. L. Lucas, C. Yong, J. Jiteli, Neural
+    Eng. 2019, 17, 046006
+
+
+    [24] Y. Zhou, Zhang, Z. Zhao, Y. E. Yang, M. J. Long, D. Green, W. O. Doyle, D.
+    G. Zuskai, Sci. Adv. 2022, 8, 261027
+
+
+    [25] A. Zhou, J. Rousnais, 2019, 39, 2299
+
+
+    [26] R. Thompson, C-H. Lee, A. L. Orsinb, B. Kent, J. L. Li, A. Rogers, P. Besasan,
+    C. Pegani, J. Jiteli, IEEE Neural Eng. 2021, 18, 086011
+
+
+    [27] S. Durairav, K. Cho, C-H. Chang, M. Trupang, K. Bak, S. J. Lee, L. A. Afifi,
+    F. J. Muller, S. Wiener, S. Sinha, V. Chen, G. V. Guan, Nature Commun. 2023, 14,
+    6938
+
+
+    [28] Z. Shi, F. Zheng, Z. Zhou, M. Li, F. Yan, H. Zheng, K. Tao, Chen, H. T, T.
+    Liu, Y. Y. Mao, Adv. 2019, 6, 180617
+
+
+    [29] K. K. Wang, J. Li, Y. J. Sun, N. R. Murphy, M. Smyth, Math. Nat. 2021, 203(1),
+    1785
+
+
+    [30] D. M. Brandman, H. Jman, S. Maib, M. Burckhardt, B. E. Shanahan, G. Gianicobello,
+    A. A. Sarma, J. J. Milton, C. E. Ivas-Vargas, B. Pierre, C. Pandinaritt, D. S.
+    Stanley, R. F. Fisher, B. L. Alvarez, E. N. Eskandar, P. J. Miller, A. S. K, K.
+    V. Shenoy, Neural Eng. 2013, 1, 056005
+
+
+    [31] M. K. O''Malley, A. Gupta, M. Gen, Y. Li, Journal of Dynamic Systems, Measurement
+    and Control, 2006, 128, 7
+
+
+    [32] Y. T-Kuo, H-Y. W. Chen, C-F. Chang, Y-C. Lo, S-H. Lin, P-C. Chen, Y-Y. Chen,
+    API Bioeng. 2005, 9, 026106
+
+
+    [33] W. Wu, J. Chen, S. F. Jaw, J. Jaszczuk, S. S. Siao, Neuro-sci. 2008, 28,
+    11526
+
+
+    [34] Y-Y. Chen, T-S. Kuo, F-S. Jaw, J. Neurosci 2004, 39, 1730
+
+
+    [35] F. Fedorov, R. Beichel, J. Kalpathmy-Cramer, J. Finet, J-C. Finley-Robin,
+    S. Pujol, C. Bauer, D. Jennings, F. Fennessy, M. Sonka, J. Buatti, A. Elsayed,
+    M. Miller, S. Pierpoint, R. Kikinis, Resonance Imaging Medicine 2012, 30, 1323
+
+
+    [36] L. S. Hamilton, D. L. Chang, M. B. Lee, E. F. Chang, Front.Neuron-form 2017,
+    7, 12'
+  md: '
+
+    # ADVANCED SCIENCE
+
+
+    www.advancedscience.com
+
+
+    Feature Extraction and Motor Decoder. After decomposing the muECG signals, channels
+    greater than 1 m were excluded and processed using a Butterworth filter with a
+    frequency of 50 Hz and its harmonics. A common reference was used across all channels
+    to reduce artifacts and common noise. The muECG signals were bandpass filtered
+    and aliased to reduce the time required for analysis to bin 100 ms. The muECG
+    signals were extracted (S22 and S23, Supporting Information). Mean values of the
+    HAEG features were calculated using sliding window aliasing to provide a continuous
+    representation of motor events (S24 and S23, Supporting Information) [34]). By
+    feeding the training data into the decoder, the real and kinematic features (events)
+    were extracted and classified.
+
+
+    It employed a recurrent neural network (RNN) with three LSTM layers for motor
+    decoding. The input to the decoder was kinematic features at each time step. Each
+    of the LSTM layers had 300, 100, and 50, fully connected units as layer. The output
+    of the decoder was the predicted kinematic parameters. It used L2 penalty as the
+    function, with an initial learning rate of 0.1. The dataset was used for training
+    and test in a 2:3 ratio. Performance was evaluated using decayed time and accuracy
+    to show the robustness of the decoder (S26, S27, Supporting Information). In short-term
+    view, it was used to interpret the motor imagery and motor imagery decoding (S25,
+    S27, Supporting Information).
+
+
+    Performance Indicators of Motor and Motor Imagery Decoding. The performance was
+    evaluated based on the kinematic features extracted from muECG within 100 ms.
+    To quantify the accuracy of motor decoding, we calculated Correlation coefficients
+    between predicted and actual movements. For a more detailed view of accuracy,
+    we evaluated the performance of various subsets at different intervals. A sliding
+    window was used, resulting in an in-accuracy curve to analyze the short-term stability
+    of motor decoding.
+
+
+    For motor imagery decoding, the hit (BR) was calculated for each trial, according
+    to the follows:
+
+
+    ```
+
+    BR = \frac{\max(S,0)}{T}
+
+    ```
+
+
+    Where, S is the number of selectable targets, successful trials, failed trials,
+    and T is the time for the paradigms, respectively excluding the time that were
+    considered failed, with the content demanded in the decoding.
+
+
+    Decoder Selection for Motor Decoding. The contribution of muECG decoders was assessed
+    to evaluate the spatial organization of electro-decoder features. We implemented
+    a two-stage approach of electro-decoder selection. In the first stage, we constructed
+    decoders using only kinematic features and linked-features. The feature importance
+    for each electrode channel was calculated based on the reduction of Gini index.
+    In the second stage, we selected a decoder with five channels that had high importance.
+    This was used for motor decoding, and additional electrode channels were added.
+    This process was repeated for motor decoding as the number of electrode channels
+    increased in the subset. The results according to the response of each channel
+    were considered to have contributed to decoding in stage.
+
+
+    Statistics. To assess the significance of muECG electrodes, we calculated the
+    cross-correlation function[36] of the cross-signals divided into two segments,
+    and the peaks of the cross-correlation were compared with a random distribution.
+
+
+    for performing tests, we assessed the samples for normality and variance. The
+    paired-test was applied to groups of samples that followed a normal distribution
+    with equal variances; the Wilcoxon rank-sum test was used. All data analyses were
+    performed using MATLAB (R2024, MathWorks).
+
+
+    # Supporting Information
+
+
+    Supporting Information is available from the Wiley Library or from the author.
+
+
+    # Acknowledgements
+
+
+    # Conflict of Interest
+
+
+    The authors declare no conflict of interest
+
+
+    # Author Contributions
+
+
+    E. Z. and Z. W. contributed equally to this work. Z. T., H. T., Z. W., and L.C.
+    conceived the idea. Z. T., H. T., L.C., E. P., and Y. M designed the experiments.
+    X. W. and Z. W. performed the muECG extraction. Z. W., L. C., and Z. W. integrated
+    the data. Y. L., J. Y., K. R., L. X., Z. W., and X. Z. performed the experiments.
+    E. Z., Q. R., K. X., L. C., and analyzed the data. E. Z., Z. T., and H. T. wrote
+    the paper. All authors discussed the results and provided comments for the manuscript.
+
+
+    # Data Availability
+
+
+    The data that supports the findings of this study are available from the corresponding
+    author. The data are not publicly due to privacy or ethical restrictions.
+
+
+    # Keywords
+
+
+    brain-computer interfaces, multi-channel electro-mechanical systems, high-resolution
+    electro-cardiography, real-time motor decoding
+
+
+    Received: July 12, 2025
+
+    Revised: July 27, 2025
+
+    Published: September 6, 2025
+
+
+    - 1. Z. Rug, M. A.-B. Bonno, G. Osseleri, A. Demertzi, L. Heine, M. Thonnard,
+    V. Binard, F. Fellas, S. Laureys, Brain Injury 2015, 29, 1056.
+
+
+    Adv. Science. 2025, e12663
+
+
+    e06663 (10 of 11)
+
+
+    © 2025 The Author, Advanced Science published by Wiley-VCH GmbH
+
+
+    # ADVANCED SCIENCE NEWS
+
+
+    www.advancedsciencenews.com
+
+
+    - [2] H. Eduyele, Y. Zhang, F. Muhammad-Sukki, Q. T. Vien, H. Morris-Cafero, O.
+    M. Agroman, IEEE Access 2022, 10, 4953
+
+    - [3] A. Gupta, V. Valladhan, F. Wagner, Commun. Biol. 2023, 14, 6
+
+    - [4] S. S. Fisher, J. Journey, D. M. Weiss, L. C. Cunningham, A. Richter, E.
+    M. Benson, G. A. Stuart, Science 2021, 37, 831
+
+    - [5] H. Lorach, A. V. Spagnolo, M. Martel, S. Karangas, N. Inik, M. J. White,
+    S. J. Harvey, 2022, 12
+
+    - [6] G. Buacchi, A. Casocchi, Res 2022, 11
+
+    - [7] B. Xu, Wang, L. Ding, D. Chen, W. Zhang, H. Li, A. Song, IEEE Trans. Neural
+    Syst. Rehab. 2019, 29, 1741
+
+    - [8] K. Wang and J. Lee, Nature 2021, 604
+
+    - [9] M. Xia, S. Wu, W. Wang, IEEE Trans. Neural Syst. Rehab. 2020, 28
+
+    - [10] D. S. Stanley, K. Cao, C. Nuyukian, S. I. Ryu, K. V. Shenoy, Neural Eng.
+    2013, 1, 0569
+
+    - [11] D. R. Flint, A. Wright, M. R. Schoen, M. W. Slut, IEEE Neural Eng. 2013,
+    10, 05605
+
+    - [12] L. C. Wang, J. B. Seruva, G. Heis, M. Mukluk, M. Saleh, A. Caplan, R. D.
+    Donoghue, Nature 2006, 442, 164
+
+    - [13] C. Pandinar, P. Nuyukian, Q. J. Blake, L. Booth, R. H., K. Shenoy, 2017,
+    6, 1854
+
+    - [14] Z. C. Chao, Y. Nagaska, N. Fuji, Neuro. 2010, 3, 1189
+
+    - [15] T. Milek, F. Fischer, T. Pistiot, J. Ruscher, A. Schulz, IEEE Eng. 2012,
+    9, 04603
+
+    - [16] D. T. Bundy, B. Mudwa, P. Safra, E. C. Lejardt, J. Neural Eng. 2021, 19,
+    02601
+
+    - [17] D. B. Silversmith, R. Abri, N. Hardy, N. Natraj, E. F. Chang, K. Ganguly,
+    Nat. Biotechnol. 2021, 39, 326
+
+    - [18] N. Natraj, S. Seiko, R. Abri, M. Miao, H. Yan, G. Graham, A. Tu-Chan, Nature
+    Communications 2022, 6, 15009
+
+    - [19] C-H. Kuo, G-Tu, L-C. Lee, J. Wu, W. Kasimo, E. Weaver, C-Lo, Y-C. Huang,
+    J. Ojjemann, Neuro Methods 2024, 411, 10251
+
+    - [20] S. L. Metzger, K. T. Littlejohn, A. B. Silva, A. D. S. Pearson, R. Wang,
+    M. E. Daugherty, J. R. Liu, P. Wu, M. A. Berger, I. Zhurval, A. Tu-Chan, K. Ganguly,
+    A. J. Kmanif, Fate 2019, 57
+
+    - [21] K. Anumanchula, J. Chartier, E. F. Change, 2019, 568, 493
+
+    - [22] C-H. Lee, C. Wang, A. J. Williams, T. L. Lucas, C. Yong, Neural Eng. 2019,
+    17, 04606
+
+    - [23] Y. Zhou, Zhang, Z. Zhao, Y. E. Yang, M. J. Long, D. Green, W. O. Doyle,
+    D. G. Zuskai, Sci. Adv. 2022, 8, 261027
+
+    - [24] A. Zhou, J. Rousnais, 2019, 39, 2299
+
+    - [25] R. Thompson, C-H. Lee, A. L. Orsinb, B. Kent, J. L. Li, A. Rogers, P. Besasan,
+    C. Pegani, IEEE Neural Eng. 2021, 18, 086011
+
+    - [26] S. Durairav, K. Cho, C-H. Chang, M. Trupang, K. Bak, S. J. Lee, L. A. Afifi,
+    F. J. Muller, S. Wiener, S. Sinha, V. Chen, G. V. Guan, Nature Commun. 2023, 14,
+    6938
+
+    - [27] Z. Shi, F. Zheng, Z. Zhou, M. Li, F. Yan, H. Zheng, K. Tao, Chen, H. T,
+    T. Liu, Y. Y. Mao, Adv. 2019, 6, 180617
+
+    - [28] K. K. Wang, J. Li, Y. J. Sun, N. R. Murphy, M. Smyth, Math. Nat. 2021,
+    203(1), 1785
+
+    - [29] D. R. Flint, A. Wright, M. R. Schoen, M. W. Slut, IEEE Neural Eng. 2013,
+    10, 05605
+
+    - [30] L. C. Wang, J. B. Seruva, G. Heis, M. Mukluk, M. Saleh, A. Caplan, R. D.
+    Donoghue, Nature 2006, 442, 164
+
+    - [31] C. Pandinar, P. Nuyukian, Q. J. Blake, L. Booth, R. H., K. Shenoy, 2017,
+    6, 1854
+
+    - [32] Z. C. Chao, Y. Nagaska, N. Fuji, Neuro. 2010, 3, 1189
+
+    - [33] T. Milek, F. Fischer, T. Pistiot, J. Ruscher, A. Schulz, IEEE Eng. 2012,
+    9, 04603
+
+    - [34] D. T. Bundy, B. Mudwa, P. Safra, E. C. Lejardt, J. Neural Eng. 2021, 19,
+    02601
+
+    - [35] D. B. Silversmith, R. Abri, N. Hardy, N. Natraj, E. F. Chang, K. Ganguly,
+    Nat. Biotechnol. 2021, 39, 326
+
+    - [36] N. Natraj, S. Seiko, R. Abri, M. Miao, H. Yan, G. Graham, A. Tu-Chan, Nature
+    Communications 2022, 6, 15009
+
+    '
+  mdcn: "\n\n# 高级科学\n\nwww.advancedscience.com\n\n特征提取与运动解码器。在分解 muECG 信号后，排除了通道大于\
+    \ 1 m 的通道，并使用频率为 50 Hz 及其谐波的巴特沃滤波器进行处理。所有通道均使用共同参考以减少伪迹和共同噪声。muECG 信号经过带通滤波和混叠，以将分析所需的时间缩短至\
+    \ 100 ms 一个桶。提取了 muECG 信号（S22 和 S23，补充信息）。使用滑动窗口混叠计算 HAEG 特征的平均值，以提供运动事件连续表示（S24\
+    \ 和 S23，补充信息）[34]。通过将训练数据输入解码器，提取并分类了真实特征和运动特征（事件）。\n\n它采用了一个具有三个 LSTM 层的循环神经网络（RNN）用于运动解码。解码器的输入是每个时间步的运动特征。每个\
+    \ LSTM 层分别具有 300、100 和 50 个全连接单元作为层。解码器的输出是预测的运动参数。它使用 L2 惩罚作为函数，初始学习率为 0.1。数据集按\
+    \ 2:3 的比例用于训练和测试。使用衰减时间和准确率评估性能，以展示解码器的鲁健性（S26, S27，补充信息）。短期，它用于解释运动想象和运动想象解码（S25,\
+    \ S27，补充信息）。\n\n运动与运动想象解码的性能指标。基于 100 ms 内从 muECG 提取的运动特征进行评估。为了量化运动解码的准确性，我们计算了预测运动与实际运动之间的相关系数。为了更详细地查看准确性，我们评估了不同间隔下子集的性能。使用滑动窗口得到了不准确曲线，以分析运动解码的短期稳定性。\n\
+    \n对于运动想象解码，根据以下公式计算每次试验的命中率（BR）：\n\n```\nBR = \\frac{\\max(S,0)}{T}\n```\n\n其中，S\
+    \ 分别代表可选目标数、成功试验数、失败试验数，T 是范式时间，排除了被视为失败的且符合解码内容要求的时间。\n\n运动解码的解码器选择。通过评估 muECG\
+    \ 解码器的贡献来评价电极解码器特征的空间组织。我们实现了两阶段电极解码器选择方法。在第一阶段，我们仅使用运动特征和链接特征构建解码器。根据 Gini 指数的减少量计算每个电极通道的重要性。在第二阶段，我们选择了一个具有五个高性通道的解码器。用于运动解码，并添加额外的电极通道。随着子集中电极通道数量的增加，重复此运动解码过程。根据每个通道的响应认为其对阶段性解码做出了贡献。\n\
+    \n统计学。为了评估 muECG 电极的显著性，我们计算了分为两个部分的交叉信号的互相关函数[36]，并将互相关峰值与随机分布进行比较。\n\n为了进行测试，我们评估了样本的正态性和方差。对符合正态分布且方差相同的样本组应用配对检验；使用\
+    \ Wilcoxon 秩和检验。所有数据分析均使用 MATLAB (R2024, MathWorks) 完成。\n\n# 补充信息\n\n补充信息可从 Wiley\
+    \ 库或作者处获得。\n\n# 致谢\n\n# 利益冲突\n\n作者声明没有利益冲突\n\n# 作者贡献\n\nE. Z. 和 Z. W. 对本工作贡献相同。Z.\
+    \ T., H. T., Z. W., 和 L.C. 构思了想法。Z. T., H. T., L.C., E. P., 和 Y. M 设计了实验。X. W.\
+    \ 和 Z. W. 执行了 muECG 提取。Z. W., L. C. 整合了数据。Y. L., J. Y., K. R., L. X., Z. W. 执行了实验。E.\
+    \ Z., Q. R., K. X., L. C. 分析了数据。E. Z., Z. T., 和 H. T. 撰写了论文。所有作者讨论了结果并提供了意见。\n\
+    \n# 数据可用性\n\n支持本研究的数据可联系作者获取。由于隐私或道德限制不公开。\n\n# 关键词\n\n脑机接口，多通道机电，高分辨率心电，实时运动解码\n\
+    \n接收：2025年7月12日\n修回：2025年7月27日\n发表：2025年9月6日\n\n(第 11 页) \n© 2025 作者，Advanced\
+    \ Science 由 Wiley-VCH 出版\n\n# 高级科学新闻\n\nwww.advancedsciencews.com\n\n（注：参考文献列表未根据要求翻译内容，保留原始英文格式及链接信息）\n\
+    \n"
+  merge: 0
